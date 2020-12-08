@@ -1,0 +1,70 @@
+---
+title: azimuth
+slug: Web/CSS/azimuth
+tags:
+  - CSS
+  - 'CSS:Referencias'
+  - Todas_las_Categorías
+translation_of: Archive/Web/CSS/azimuth
+---
+<p>
+</p><p>&lt;&lt; <a href="es/Referencia_CSS">Referencia CSS</a>
+</p><p><br>
+</p>
+<h3 id="Resumen" name="Resumen"> Resumen </h3>
+<p>En combinación con <code><a href="es/CSS/elevation">elevación</a></code>, <code>azimuth</code> permite posicionar en el espacio/lugar diferentes fuentes de audio para una presentación auditiva (<small>aural</small>). Es importante ya que es un medio natural de definir varias fuentes de audio que pueden ser colocadas en lugares diferentes en la escena auditiva. Una salida estéreo produce una escena lateral, mientras que los cascos o los sistemas de múltiples altavoces permiten obtener una audición en 3D.
+</p>
+<ul><li> {{ Cssxref("initial", "Valor inicial") }}: al centro
+</li><li> Se aplica a: todos los elementos
+</li><li> {{ Cssxref("inheritance", "Herencia") }}: sí
+</li><li> Porcentajes: N/A
+</li><li> Medio: {{ Cssxref("Medio:audio", "auditivo") }}
+</li><li> {{ Cssxref("computed value", "Valor calculada") }}: ángulo normalizado
+</li></ul>
+<h3 id="Sintaxis" name="Sintaxis"> Sintaxis </h3>
+<pre class="eval">azimuth: <i>angle</i> | [[ left-side | far-left | left |
+    center-left | center | center-right | right |
+    far-right | right-side ] || behind ] | leftwards |
+    rightwards | inherit
+</pre>
+<h3 id="Valores" name="Valores"> Valores </h3>
+<dl><dt> ángulo (<code>angle</code>) </dt><dd> La posición de la fuente audible se describe por un ángulo comprendido en tre <code>-360deg</code> y <code>360deg</code>. El valor <b><code>0deg</code></b> se encuentra directamente en el centro del escenario auditivo (valor por defecto), <b><code>90deg</code></b> es a la derecha, <b><code>180deg</code></b> es detrás y <b><code>270deg</code></b> o <b><code>-90deg</code></b> es a la izquierda.
+</dd></dl>
+<h4 id="Palabras_claves_de_posici.C3.B3n" name="Palabras_claves_de_posici.C3.B3n"> Palabras claves de posición </h4>
+<ul><li> <b>left-side</b> = <code>270deg</code>.
+</li><li> <b>left-side behind</b> = <code>270deg</code>.
+</li><li> <b>far-left</b> = <code>300deg</code>.
+</li><li> <b>far-left behind</b> = <code>240deg</code>.
+</li><li> <b>left</b> = <code>320deg</code>.
+</li><li> <b>left behind</b> = <code>220deg</code>.
+</li><li> <b>center-left</b> = <code>340deg</code>.
+</li><li> <b>center-left behind</b> = <code>200deg</code>.
+</li><li> <b>center</b> = <code>0deg</code>.
+</li><li> <b>center behind</b> = <code>180deg</code>.
+</li><li> <b>center-right</b> = <code>20deg</code>.
+</li><li> <b>center-right behind</b> = <code>160deg</code>.
+</li><li> <b>right</b> = <code>40deg</code>.
+</li><li> <b>right behind</b> = <code>140deg</code>.
+</li><li> <b>far-right</b> = <code>60deg</code>.
+</li><li> <b>far-right behind</b> = <code>120deg</code>.
+</li><li> <b>right-side</b> = <code>90deg</code>.
+</li><li> <b>right-side behind</b> = <code>90deg</code>.
+</li><li> <b>behind</b> = <code>180deg</code>. También utilizado como modificador de otras palabras claves de posicionamiento, como encima.
+</li><li> <b>leftwards</b>: Mueve el sonido 20 grados en el sentido inverso (izquierda) al del reloj, en relación al ángulo actual.
+</li><li> <b>rightwards</b>: Mueve el sonido 20 grado en el sentido del reloj, en relación al ángulo actual.
+</li></ul>
+<h3 id="Ejemplos" name="Ejemplos"> Ejemplos </h3>
+<pre>h1   { azimuth: 30deg }
+td.a { azimuth: far-right }          /*  60deg */
+#12  { azimuth: behind far-right }   /* 120deg */
+p.comment { azimuth: behind }        /* 180deg */
+</pre>
+<h3 id="Especificaciones" name="Especificaciones"> Especificaciones </h3>
+<ul><li> <a class="external" href="http://www.w3.org/TR/CSS21/aural.html#spatial-props">CSS 2.1</a>
+</li></ul>
+<h3 id="Compatibilidad_con_navegadores" name="Compatibilidad_con_navegadores"> Compatibilidad con navegadores </h3>
+<p>Por definir.
+</p>
+<h3 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n"> Ver también </h3>
+<p>{{ Cssxref("elevation") }}
+</p>{{ languages( { "en": "en/Image/Azimuth.png", "en": "en/CSS/azimuth", "fr": "fr/CSS/azimuth", "pl": "pl/CSS/azimuth", "zh-cn": "cn/CSS/azimuth" } ) }}

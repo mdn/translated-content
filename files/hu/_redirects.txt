@@ -1,0 +1,14 @@
+# FROM-URL	TO-URL
+/hu/docs/A_Mozilla_fejleszt%C5%91i_centrum_tartalma	/hu/docs/Mozilla_fejleszt%C5%91i_centrum_-_Tartalom
+/hu/docs/Developer_Guide	/hu/docs/Mozilla/Developer_guide
+/hu/docs/Fajlok_hasznalata_webes_alkalmazasokban	/hu/docs/Web/API/File/Fajlok_hasznalata_webes_alkalmazasokban
+/hu/docs/HTML	/hu/docs/Web/HTML
+/hu/docs/HTML/Element	/hu/docs/Web/HTML/Element
+/hu/docs/HTML/Element/br	/hu/docs/Web/HTML/Element/br
+/hu/docs/JavaScript	/hu/docs/Web/JavaScript
+/hu/docs/JavaScript_1.5_k%C3%A9zik%C3%B6nyv	/hu/docs/Web/JavaScript/Guide
+/hu/docs/Kezd%C5%91lap	/hu/docs/Web
+/hu/docs/Kiterjeszt%C3%A9sek	/hu/docs/Mozilla/Add-ons
+/hu/docs/MDN/Getting_started	/hu/docs/MDN/Contribute/Getting_started
+/hu/docs/Web/JavaScript/JavaScript_1.5_k%C3%A9zik%C3%B6nyv	/hu/docs/Web/JavaScript/Guide
+/hu/docs/en	/en-US/

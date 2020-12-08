@@ -1,0 +1,132 @@
+---
+title: Más características de los árboles
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Más_características_de_los_árboles
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Tree_Features
+---
+<p>Aquí veremos más características de los árboles.</p>
+
+<h3 id=".C3.81rboles_jer.C3.A1rquicos" name=".C3.81rboles_jer.C3.A1rquicos">Árboles jerárquicos</h3>
+
+<p>El elemento <code><a href="es/XUL/Elementos/tree">tree</a></code> también puede utilizarse para crear listas jerárquicas, similares a las encontradas en un administrador de archivos o a una lista de marcadores de un navegador. Para lograr esto deben realizarse dos cosas:</p>
+
+<p>Primero debe marcarse como contenedor al elemento <code><a href="es/XUL/Elementos/tree">treeitem</a></code> que contenga hijos, esto se consigue agregándole el atributo <code><a href="es/XUL/Atributos/container">container</a></code> (contenedor) de la siguiente manera:</p>
+
+<pre>&lt;treeitem container="true"/&gt;
+</pre>
+
+<p>Esto permite al usuario hacer doble-clic sobre el árbol para expandir y contraer las filas internas. Puede hacerse que las filas hijas sean visibles desde un principio simplemente agregando el atributo <code><a href="es/XUL/Atributos/open">open</a></code> (abierto). Cuando el usuario expanda o contraiga el árbol, éste atributo cambiará para reflejar el estado actual.</p>
+
+<p>El segundo cambio a realizar es colocar el atributo <code><a href="es/XUL/Atributos/primary">primary</a></code> (primario) en la primer columna. Esto provocará la aparición de un pequeño triángulo o un signo “+�? delante de las celdas en esa columna. Esto indicará que esas celdas pueden expandirse, además las filas hijas tendrán sangrado. Note que el usuario no puede ocultar la primer columna.</p>
+
+<p>Cada hijo puede especificarse poniendo un elemento <code>treechildren</code> dentro de <code>treeitem</code>, si se coloca dentro de <code>treerow</code> no funcionará.</p>
+
+<p>Puede repetirse este proceso para crear árboles profundamente anidados. En esencia, un elemento <code>treeitem</code> puede contener ya sea filas simples -declaradas con el elemento <code>treerow</code>- o una colección de filas que se declaran con el elemento <code>treechildren</code>.</p>
+
+<p>El siguiente es un ejemplo sencillo:</p>
+
+<h4 id="Ejemplo" name="Ejemplo">Ejemplo</h4>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;tree flex="1"&gt;
+  &lt;treecols&gt;
+      &lt;treecol id="nombre" label="Nombre" primary="true" flex="3"/&gt;
+      &lt;treecol id="apellido" label="Apellido" flex="7"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem container="true" open="true"&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Tipos"/&gt;
+      &lt;/treerow&gt;
+
+      &lt;treechildren&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="Pepe"/&gt;
+            &lt;treecell label="Carpintero"/&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+        &lt;treeitem&gt;
+          &lt;treerow&gt;
+            &lt;treecell label="Lito"/&gt;
+            &lt;treecell label="Albañil"/&gt;
+          &lt;/treerow&gt;
+        &lt;/treeitem&gt;
+      &lt;/treechildren&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre>
+
+<p><img alt="Image:advtrees1.jpg"></p>
+
+<p>Esto ha creado un árbol jerárquico. Como puede verse en la imagen, un pequeño símbolo “+�? o “-�? apareció junto a la primer fila, indicando que contiene filas hijas. El usuario puede abrir o cerrar la lista hacienda doble-clic en esa fila. Note como la fila Tipos necesita solamente una columna y es un ítem de posición para sus hijos.</p>
+
+<p>El elemento <code><a href="es/XUL/Elementos/treeitem">treeitem</a></code> externo contiene un elemento <code><a href="es/XUL/Elementos/treerow">treerow</a></code> y un elemento <code><a href="es/XUL/Elementos/treechildren">treechildren</a></code>, el primero crea los datos para la fila madre y el último contiene las filas hijas.</p>
+
+<p>También pueden anidarse filas profundamente. Debe recordarse que hay que utilizar el atributo <code><a href="es/XUL/Atributos/container">container</a></code> en las filas que contienen filas hijas. La simple presencia de filas hijas no es suficiente indicación ya que puede haber un contenedor que no contenga hijos pero aún debe ser tratado como contenedor. Por ejemplo, un directorio sin archivos dentro debe ser tratado como contenedor aunque esté vacío.</p>
+
+<h3 id="M.C3.A1s_sobre_las_columnas_del_.C3.A1rbol" name="M.C3.A1s_sobre_las_columnas_del_.C3.A1rbol">Más sobre las columnas del árbol</h3>
+
+<p>Un atributo adicional que puede colocarse al árbol es <code><a href="es/XUL/Atributos/enableColumnDrag">enableColumnDrag</a></code> (habilitar arrastre de columna, note las iniciales en mayúscula). Si se encuentra habilitado el usuario podrá arrastrar los encabezados de columna para reconfigurar el orden de las mismas,</p>
+
+<p>El usuario también querrá cambiar el ancho de las columnas, esto se logra poniendo un elemento <code><a href="es/XUL/Elementos/splitter">splitter</a></code> (divisor) entre cada elemento <code><a href="es/XUL/Elementos/treecol">treecol</a></code>. Aparecerá una pequeña muesca entre cada encabezado de columna, la cual podrá ser arrastrada por el usuario para cambiar el ancho de la columna. Para esconder la muesca puede fijarse en 0 el atributo CSS max-width del divisor, a pesar de lo cual el ancho de la columna seguirá siendo modificable. La hoja de estilos globales proporciona una clase <code>tree-splitter</code>, la cual realiza esto.</p>
+
+<p>Puede establecerse el ancho mínimo y máximo de una columna utilizando las propiedades de estilo <code><a href="es/XUL/Atributos/minwidth">minwidth</a></code> y <code><a href="es/XUL/Atributos/maxwidth">maxwidth</a></code> en el encabezado de la columna.</p>
+
+<p>La columna puede estar oculta de manera predeterminada si se coloca un atributo <code><a href="es/XUL/Atributos/hidden">hidden</a></code> (oculto) con el valor true. El usuario podrá escoger si ve la columna seleccionándola en el menú desplegable que se encuentra al final de la fila encabezado.</p>
+
+<p>Como con todos los elementos, puede utilizarse el atributo <code><a href="es/XUL/Atributos/persist">persist</a></code> (persistir) para almacenar el estado de las columnas entre sesiones. Esto es, una vez que el usuario se decide por una disposición de columnas de su agrado, esta será automáticamente almacenada para la próxima vez. Será necesario guardar un cierto número de atributos como se indica en el siguiente ejemplo:</p>
+
+<h4 id="Ejemplo_2" name="Ejemplo_2">Ejemplo</h4>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advtrees_2.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;tree enableColumnDrag="true" flex="1"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="corredor" label="Corredor" flex="2" persist="width ordinal hidden"/&gt;
+    &lt;splitter class="tree-splitter"/&gt;
+    &lt;treecol id="ciudad" label="Ciudad de origen" flex="2" persist="width ordinal hidden"/&gt;
+    &lt;splitter class="tree-splitter"/&gt;
+    &lt;treecol id="horainicio" label="Hora de inicio" flex="1" persist="width ordinal hidden"/&gt;
+    &lt;splitter class="tree-splitter"/&gt;
+    &lt;treecol id="horafin" label="Hora de finalización" flex="1" persist="width ordinal hidden"/&gt;
+  &lt;/treecols&gt;
+
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Joshua Granville"/&gt;
+        &lt;treecell label="Vancouver"/&gt;
+        &lt;treecell label="7:06:00"/&gt;
+        &lt;treecell label="9:10:26"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Robert Valhalla"/&gt;
+        &lt;treecell label="Seattle"/&gt;
+        &lt;treecell label="7:08:00"/&gt;
+        &lt;treecell label="9:15:51"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+</pre>
+
+<p>En este caso deberán marcarse como persistentes tres atributos de las columnas:</p>
+
+<ul>
+ <li>el atributo <code><a href="es/XUL/Atributos/width">width</a></code> para guardar el ancho de las mismas,</li>
+ <li>el atributo <code><a href="es/XUL/Atributos/ordinal">ordinal</a></code> que contiene la posición de la columna,</li>
+ <li>el atributo <code><a href="es/XUL/Atributos/hidden">hidden</a></code> que indica si la columna es visible o no.</li>
+</ul>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Árboles" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Selección_en_un_árbol">Siguiente  »</a></p>
+</div>

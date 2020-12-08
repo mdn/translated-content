@@ -1,0 +1,155 @@
+---
+title: Notificaciones Observer
+slug: Archive/Add-ons/Observer_Notifications
+translation_of: Mozilla/Tech/XPCOM/Observer_Notifications
+---
+<p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/es/docs/Escuela_XUL/Objetos_XPCOM">« Anterior</a><a href="/es/docs/Escuela_XUL/Manejo_de_preferencias">Siguiente  »</a></p>
+</div><p></p>
+
+<p>Sometimes you need your code to send a message to other parts of your code. For example, you might want to notify that a task is completed, and then several different actions must be performed. You could do that by calling all those functions directly, but XPCOM offers you a better and cleaner way to achieve that using observers and the observer service.</p>
+
+<p>An observer is an object that is responsible to observe (wait for) notifications and then to carry out subsequent actions. To create an observer, you need to implement the <a href="/en/XPCOM_Interface_Reference/nsIObserver" title="en/nsIObserver">nsIObserver</a> interface. The interface has only one method observe() which takes three parameters. The first parameter (subject) can be any XPCOM object, the second parameter is a notification topic, and the final parameter is a string that further describes the notification.</p>
+
+<p>This example code shows you what an implementation of the nsIObserver interface looks like:</p>
+
+<div style="border-width: 1px;" class="code panel">
+<div class="codeContent panelContent">
+<pre class="brush: js">let testObserver = {
+  observe : function(aSubject, aTopic, aData) {
+    if (aTopic == "xulschoolhello-test-topic") {
+      window.alert("Data received: " + aData);
+    }
+  }
+}</pre>
+</div>
+</div>
+
+<p>In order for this observer to work, you need to use the <a href="/en/XPCOM_Interface_Reference/nsIObserverService" title="en/XPCOM Interface Reference/nsIObserverService">observer service</a> that provides methods for you to add, remove, notify and enumerate observers.</p>
+
+<p>Adding an observer to the observer service is simple, invoking the <a href="/en/XPCOM_Interface_Reference/nsIObserverService/addObserver" title="en/XPCOM Interface Reference/nsIObserverService/addObserver">addObserver</a> method with three parameters. The first parameter is an observer object, the second parameter is a notification topic, and the third parameter is a boolean which indicates whether the observer service should hold a weak reference to the observer. You should normally set the third parameter to <em>false</em>.</p>
+
+<div style="border-width: 1px;" class="code panel">
+<div class="codeContent panelContent">
+<pre class="brush: js">let observerService = Components.classes["@mozilla.org/observer-service;1"].
+    getService(Components.interfaces.nsIObserverService);
+
+observerService.addObserver(testObserver, "xulschoolhello-test-topic", false);</pre>
+</div>
+</div>
+
+<div style="border-width: 1px;" class="panel">
+<div class="panelContent">
+<div class="note">You should come up with a notification topic that is unique so you know it will not conflict with Firefox or other extensions topics.</div>
+</div>
+</div>
+
+<p>To remove an observer for a specific topic, you use the <a href="/en/XPCOM_Interface_Reference/nsIObserverService/removeObserver" title="en/XPCOM Interface Reference/nsIObserverService/removeObserver">removeObserver</a> method. The method takes the observer object and notification topic as parameters.</p>
+
+<div style="border-width: 1px;" class="code panel">
+<div class="codeContent panelContent">
+<pre class="brush: js">observerService.removeObserver(testObserver, "xulschoolhello-test-topic");</pre>
+</div>
+</div>
+
+<p>After you have registered some observers to listen to a notification topic, you can then use the <a href="/en/XPCOM_Interface_Reference/nsIObserverService/notifyObservers" title="en/XPCOM Interface Reference/nsIObserverService/notifyObservers">notifyObservers</a> method to send a notification to all of them. The method takes three parameters. The first parameter can be any XPCOM object to pass to those observers (can be null), the second parameter is the notification topic and the last parameter is an additional string to pass to those observers (can be null).</p>
+
+<div style="border-width: 1px;" class="code panel">
+<div class="codeContent panelContent">
+<pre class="brush: js">observerService.notifyObservers(null, "xulschoolhello-test-topic", "hello");</pre>
+</div>
+</div>
+
+<h2 id="Non-chrome_to_chrome_communication">Non-chrome to chrome communication</h2>
+
+<p>Non-chrome to chrome communication is one of the main uses of observers. By non-chrome we mean JavaScript Code Modules or XPCOM. As we saw in previous sections, you can use JavaScript Code Module and XPCOM objects very easily from the chrome. But given that chrome is window-dependent and non-chrome objects are not, it's tricky to send a message to the chrome. You would have to invoke a method for the chrome objects in all windows. It's much easier to use observers in this case.</p>
+
+<p>Let's see the following example code on how to send out a notification from non-chrome code.</p>
+
+<div style="border-width: 1px;" class="code panel">
+<div class="codeContent panelContent">
+<pre class="brush: js">/**
+ * Notifies all the registered observers with the test notification topic.
+ */
+notifyTest : function() {
+  let observerService = Components.classes["@mozilla.org/observer-service;1"].
+      getService(Components.interfaces.nsIObserverService);
+  let subject = Components.classes["@mozilla.org/supports-string;1"].
+      createInstance(Components.interfaces.nsISupportsString);
+
+  // assign some text to data attribute
+  subject.data = "This is a test.";
+  // notify all registered observers
+  observerService.notifyObservers(
+    subject, "xulschoolhello-test-topic", "hello");
+}</pre>
+</div>
+</div>
+
+<p>In the <em>notifyTest</em> method, the <em>notifyObservers</em> call is used to notify all registered observers about the notification topic "xs-hw-test-topic". The input parameter is an instance of <em>nsISupportsString</em> with some text and the last input parameter is a string "Hello".</p>
+
+<p>In a chrome browser overlay file, we register an observer to listen to the notification topic "xs-hw-test-topic" when the window loads. Keep in mind that <strong>you have to remove observers that are not longer needed</strong>. Not doing so will result in memory leaks. Therefore, the registered observer is unregistered when the browser window is unloaded.</p>
+
+<div style="border-width: 1px;" class="code panel">
+<div class="codeContent panelContent">
+<pre class="brush: js">/**
+ * Controls the browser overlay for the Hello World extension.
+ */
+XULSchoolChrome.BrowserOverlay = {
+  /* Observer service. */
+  _observerService : null,
+
+  /**
+   * Initializes this object.
+   */
+  init : function() {
+    this._observerService = Components.classes["@mozilla.org/observer-service;1"].
+       getService(Components.interfaces.nsIObserverService);
+    this._observerService.addObserver(this, "xulschoolhello-test-topic", false);
+  },
+
+  /**
+   * Unitializes this object.
+   */
+  uninit : function() {
+    this._observerService.removeObserver(
+      this, "xulschoolhello-test-topic");
+  },
+
+  /**
+   * Observes the registered notification topics.
+   * @param aSubject The nsISupports object associated with the notification.
+   * @param aTopic The notification topic.
+   * @param aData The additional string associated with the notification.
+   */
+  observe : function(aSubject, aTopic, aData) {
+    if (aTopic == "xulschoolhello-test-topic") {
+      aSubject.QueryInterface(Ci.nsISupportsString);
+      window.alert("Subject: " + aSubject.data);  // =&gt; "This is a test"
+      window.alert("Data: " + aData);  // =&gt; "Hello"
+    }
+  }
+}
+
+window.addEventListener(
+  "load", function() { XULSchoolChrome.BrowserOverlay.init(); }, false);
+window.addEventListener(
+  "unload", function() { XULSchoolChrome.BrowserOverlay.uninit(); }, false);</pre>
+</div>
+</div>
+
+<p>In the <em>observe</em> method the notification topic is verified because you can have one observer listening to several topics. You may notice that we explicitly set the interface of the <em>aSubject</em> object to <em>nsISupportsString</em> using the <em>QueryInterface</em> method. This is because the first parameter of the <em>observe</em> method is typed as <em>nsISupports </em>(the generic interface, as seen before), therefore its properties and methods cannot be accessed unless the correct interface is set to it.</p>
+
+<p>When the <em>notifyTest</em> method is called, all observers registered with <em>xulschoolhello-test-topic</em> will get notified and display two alerts. If there are 2 Firefox windows open, the observer will be notified in both and the alerts will show up on both.</p>
+
+<p>You can always listen for multiple notification topics using the same observer. Also, be careful not to add the same observer to a notification topic more than once, otherwise the same code in the observer will be run several times when a notification is sent.</p>
+
+<h2 id="Useful_Firefox_notifications">Useful Firefox notifications</h2>
+
+<p>We have covered sending and receiving custom notification topics using observers and the observer service. In Firefox, there are many built-in observer topics that you can observe as well. The <a href="/en/Observer_Notifications" title="en/Observer Notifications">Observer Notifications</a> page lists some useful topics and is definitely worth spending time studying it.</p>
+
+<p></p><div style="text-align: right;" class="prevnext">
+    <p><a style="float: left;" href="/es/docs/Escuela_XUL/Objetos_XPCOM">« Anterior</a><a href="/es/docs/Escuela_XUL/Manejo_de_preferencias">Siguiente  »</a></p>
+</div><p></p>
+
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast.</span></p>

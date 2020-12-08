@@ -1,0 +1,88 @@
+---
+title: SmsManager
+slug: DOM/SmsManager
+translation_of: Archive/B2G_OS/API/MozSmsManager
+---
+<p>{{ ApiRef() }}</p>
+<p>{{ non-standard_header() }}</p>
+<p>Tarjoaa tuen lähettää ja hallinnoida SMS-viestejä laitteella, jossa on WebSMS. Nykyisin toteutettu objektina <code>MozSmsManager</code>.</p>
+<h2 id="Metodit">Metodit</h2>
+<dl>
+ <dt>
+  <code>delete(jsval param)</code></dt>
+ <dd>
+  Poistaa viestin ja palauttaa {{ domxref("SmsRequest") }} -objektin (jossa <code>SmsRequest.result</code> on Boolean-arvo, joka kertoo, onko viesti poistettu). Viestitunnistetta tai {{ domxref("SmsMessage") }} -objektia voidaan käyttää parametrina.</dd>
+ <dt>
+  <code>getMessage(long id)</code></dt>
+ <dd>
+  Hakee <code>id</code>-tunnisteella määritellyn viestin ja palauttaa {{ domxref("SmsRequest") }} -objektin, jossa <code>SmsRequest.result</code> on {{ domxref("SmsMessage") }}.</dd>
+ <dt>
+  <code>getMessages(SmsFilter filter, boolean reverse)</code></dt>
+ <dd>
+  Hakee viestit, jotka on määritelty käyttäen {{ domxref("SmsFilter") }} -objektia. Järjestys voidaan kääntää päinvastaiseksi käyttämällä boolean-muuttujaa toisena parametrina. Palautetaan {{ domxref("SmsRequest") }} -objekti, jossa <code>SmsRequest.result</code> on {{ domxref("SmsCursor") }}.</dd>
+ <dt>
+  <code>getNumberOfMessagesForText(DOMString text)</code></dt>
+ <dd>
+  Palauttaa tietyn moniosaisen SMS-viestien lukumäärän (160-merkkiä yksittäinen SMS-viesti).</dd>
+ <dt>
+  <code>markMessageRead(long id, boolean aValue)</code></dt>
+ <dd>
+  Merkitsee määritellyllä <code>id</code>-tunnisteella varustetun viestin luetuksi tai lukemattomaksi riippuen <code>aValue</code>-boolean-arvosta. Palautetaan {{ domxref("SmsRequest") }} -objekti.</dd>
+ <dt>
+  <code>send(DOMString[] number, DOMString message)</code></dt>
+ <dd>
+  Lähettää viestin määriteltyyn numeroon. Jos <code>number</code> on {{ domxref("DOMString") }} (vain yksi numero), palautetaan {{ domxref("SmsRequest") }} -objekti. Jos <code>number</code> on {{ domxref("DOMString", "DOMStrings") }} -taulukko (useita numeroita), palautetaan {{ domxref("SmsRequest") }} -objektien taulukko.</dd>
+</dl>
+<h2 id="Tapahtumat">Tapahtumat</h2>
+<dl>
+ <dt>
+  <code>ondelivered</code></dt>
+ <dd>
+  Käsittelijä "delivered"-tapahtumalle; tämä {{ domxref("SMSEvent") }} aina kun SMS-viesti on toimitettu vastaanottajalle.</dd>
+ <dt>
+  <code>onreceived</code></dt>
+ <dd>
+  Käsittelijä "received"-tapatumalle; tämä {{ domxref("SMSEvent") }} lähetetään aina kun SMS-viesti vastaanotetaan.</dd>
+ <dt>
+  <code>onsent</code></dt>
+ <dd>
+  Käsittelijä "sent"-tapahtumalle; tämä {{ domxref("SMSEvent") }} lähetetään aina kun SMS-viesti lähetetään.</dd>
+</dl>
+<h2 id="Selainyhteensopivuus">Selainyhteensopivuus</h2>
+<p>Ilmeisestä syystä tukea odotetaan pääasiassa mobiiliselaimilta.</p>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Ominaisuus</th>
+    <th>Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Perustuki</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatGeckoMobile("12.0") }} {{ property_prefix("moz") }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+   </tr>
+   <tr>
+    <td><code>markMessageRead</code> method</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatGeckoMobile("15.0") }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<h2 id="Spesifikaatio">Spesifikaatio</h2>
+<p>Ei ole minkään spesifikaation osa; ehdotuksen otaksutaan kuitenkin perustuvatn asiakirjaan <a class="link-https" href="https://wiki.mozilla.org/WebAPI/WebSMS" title="https://wiki.mozilla.org/WebAPI/WebSMS">WebSMS design document</a>.</p>
+<h3 id="Katso_myös">Katso myös</h3>
+<ul>
+ <li>{{ domxref("window.navigator.mozSms") }}</li>
+</ul>

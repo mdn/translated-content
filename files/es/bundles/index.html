@@ -1,0 +1,65 @@
+---
+title: Estructura de un paquete de instalación
+slug: Bundles
+tags:
+  - Herramientas_API
+translation_of: Archive/Mozilla/Bundles
+---
+<p> </p>
+<p>Las <a href="es/Paquete_de_aplicaci%c3%b3n_XUL">Aplicaciones XULRunner</a>, <a href="es/Extensiones">extensiones</a>, y <a href="es/Temas">temas</a> comparten todos una estructura de directorios común, y en algunos casos el mismo paquete puede ser usado como una aplicación XULRunner independiente además de como una extensión instalable en otra aplicación. La estructura básica de un paquete (bundles) puede incluir cualquiera de los siguientes ficheros:</p>
+<pre class="eval">/<a href="es/Install.rdf">install.rdf</a><i>Manifiesto de instalación de tema/extensión</i>
+/<a href="es/Paquete_de_aplicaci%c3%b3n_XUL">application.ini</a><i>Manifiesto de lanzamiento de la aplicación</i>
+/components/*<i>Componentes y ficheros XPT</i>       (&gt;=1.7)
+<a href="es/Creando_una_extensi%c3%b3n#Archivos_Por_Defecto">/defaults/preferences/*.js</a><i>Opciones por defecto</i>             (&gt;=1.7)
+/plugins/*<i>Plugins NPAPI</i>                    (&gt;=1.8)
+/<a href="es/Chrome.manifest">chrome.manifest</a><i>Manifiesto de registro de Chrome</i> (&gt;=1.8)
+/<a href="es/Iconos_de_la_ventana">chrome/icons/default/*</a><i>Iconos de la ventana</i>             (&gt;=1.8)
+</pre>
+<p>Por supuesto, una extensión no necesita (y normalmente no tendrá) todos estos directorios. Los temas están limitados por razones de seguridad y normalmente no pueden proporcionar un <a href="es/Chrome.manifest">chrome.manifest</a> que registre un tema y un fichero JAR.</p>
+<p> </p>
+<h3 id="Subdirectorios_espec.C3.ADficos_de_una_plataforma" name="Subdirectorios_espec.C3.ADficos_de_una_plataforma">Subdirectorios específicos de una plataforma</h3>
+<p>En algunos casos una única extensión o aplicación puede necesitar incluir componentes binarios o plugins para múltiples plataformas, o los autores de temas pueden querer incluir varios ficheros JAR específicos a una plataforma. Para facilitar las cosas en el primer caso, el cargador de la extensión/aplicación tendrá unos subdirectorios especiales previstos específicamente para los ficheros concretos de una plataforma (a partir del Toolkit/Gecko 1.8, Firefox/Thunderbird 1.5). La cadena de texto de la plataforma es definida por el proceso de compilación del toolkit con un único valor para la combinación del sistema operativo, arquitectura del procesador y el compilador. El formato de la cadena de texto de la plataforma es:</p>
+<pre class="eval"><i>{OS_TARGET}</i>_<i>{<a href="es/XPCOM_ABI">TARGET_XPCOM_ABI</a>}</i>
+</pre>
+<p>Todos los ficheros que son cargados desde el directorio principal de la extensión son cargados desde el subdirectorio</p>
+<pre class="eval">/platform/<i>{cadena de texto de la plataforma}</i>
+</pre>
+<p>si existe. Por ejemplo, si un vendedor de plugins que busque el dejarlo disponible para un usuario de ordenadores con Linux, Macintosh y Windows, este proporcionará los siguientes ficheros:</p>
+<pre class="eval">/platform/Linux_x86-gcc3/plugins/libMyPlugin.so
+/platform/WINNT_x86-msvc/plugins/MyPlugin.dll
+/platform/Darwin_ppc-gcc3/plugins/libMyPlugin.dylib
+</pre>
+<p>Dado que los ficheros XPT no dependen de la plataforma, cualquier fichero XPT asociado entraría en el directorio de componentes genérico:</p>
+<pre class="eval">/components/MyPlugin.xpt
+</pre>
+<p>Si una extensión tiene código específico a una plataforma no binaria (como el código que utiliza la base de registros de Windows desde un script), también puede utilizar el identificador del sistema operativo como subdirectorio de plataforma:</p>
+<pre class="eval">/platform/WINNT/components/registerDoctype.js
+</pre>
+<p>Cuando un fichero JAR específico a una plataforma es usado, cada directorio de plataforma debe tener su propio fichero <code>chrome.manifest</code>:</p>
+<pre class="eval">chrome.manifest
+chrome/mytheme-base.jar
+platform/Darwin/chrome.manifest
+platform/Darwin/chrome/mytheme-mac.jar
+platform/WINNT/chrome.manifest
+platform/WINNT/chrome/mytheme-win.jar
+</pre>
+<p>El proceso de arranque analiza en primer lugar el directorio base, después los directorios de plataforma aplicables (en primer lugar /{OS_TARGET}/, a continuación /{OS_TARGET}_{<a href="es/XPCOM_ABI">TARGET_XPCOM_ABI</a>}/). Cuando las preferencias por defecto se definen en varios directorios, los que se cargan al final tienen prioridad sobre los que se cargan antes.</p>
+<h3 id="Ficheros_de_extensi.C3.B3n_espec.C3.ADficos_a_una_aplicaci.C3.B3n" name="Ficheros_de_extensi.C3.B3n_espec.C3.ADficos_a_una_aplicaci.C3.B3n">Ficheros de extensión específicos a una aplicación</h3>
+<p>Además de los ficheros de extensión listados más arriba, las aplicaciones pueden leer ficheros suplementarios desde extensiones. Por ejemplo, <a href="es/Firefox_1.5">Firefox 1.5</a> y superiores pueden leer los plugins de búsqueda de Sherlock desde /searchplugins/*.src <a href="es/Firefox_2">Firefox 2</a> y superiores además pueden leer <a href="es/Creaci%c3%b3n_de_plugins_MozSearch">Plugins MozSearch y OpenSearch</a> desde</p>
+<pre class="eval">/searchplugins/*.xml
+</pre>
+<p>y los diccionarios Myspell desde</p>
+<pre class="eval">/dictionaries/*.{aff|dic}
+</pre>
+<h3 id="Referencias_oficiales_de_Herramienta_API" name="Referencias_oficiales_de_Herramienta_API">Referencias oficiales de <a href="es/Herramienta_API">Herramienta API</a></h3>
+<p></p><p>
+  </p><ul>
+    <li><a href="/en/Bundles" title="en/Bundles">Structure of an Installable Bundle</a>: describes the common structure of installable bundles, including extensions, themes, and XULRunner applications</li>
+    <li><a href="/en/Extension_Packaging" title="en/Extension_Packaging">Extension Packaging</a>: specific information about how to package extensions</li>
+    <li><a href="/en/Theme_Packaging" title="en/Theme_Packaging">Theme Packaging</a>: specific information about how to package themes</li>
+    <li><a href="/en/Multiple_Item_Packaging" title="en/Multiple_Item_Packaging">Multiple-item Extension Packaging</a>: specific information about multiple-item extension XPIs</li>
+    <li><a href="/en/XUL_Application_Packaging" title="en/XUL_Application_Packaging">XUL Application Packaging</a>: specific information about how to package XULRunner applications</li>
+    <li><a href="/en/Chrome_Registration" title="en/Chrome_Registration">Chrome Registration</a></li>
+    <li><a href="/en-US/docs/Mozilla/Tech/XUL/Printing">Printing in XUL Apps</a></li>
+  </ul>
+<p></p><p></p>

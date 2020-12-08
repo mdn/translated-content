@@ -1,0 +1,138 @@
+---
+title: Crear un asistente
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Creando_un_asistente
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - para_revisar
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Wizard
+---
+<p>Muchas aplicaciones usan un asistente para ayudar al usuario a realizar tareas complicadas. XUL proporciona una forma de crear fácilmente un asistente.</p>
+
+<h3 id="El_asistente" name="El_asistente">El asistente</h3>
+
+<p>Un asistente es un tipo especial de diálogo que contiene una serie de páginas. Los botones de navegación entre páginas aparecen en la parte inferior del diálogo. Los asistentes se utilizan habitualmente para ayudar al usuario en la realización de tareas complejas. Cada página contiene una única cuestión o varias preguntas relacionadas. Después de la última página, se lleva a cabo la operación.</p>
+
+<p>XUL proporciona un elemento <code><a href="/es/XUL/Elementos/wizard" title="es/XUL/Elementos/wizard">wizard</a></code> que permite crear asistentes. Los atributos colocados en el asistente se usan para controlar la navegación de éste. Al crear un asistente se usa la etiqueta <code><a href="/es/XUL/Elementos/wizard" title="es/XUL/Elementos/wizard">wizard</a></code> en lugar de la etiqueta <code><a href="/es/XUL/Elementos/window" title="es/XUL/Elementos/window">window</a></code>.</p>
+
+<p>El contenido del elemento <code><a href="/es/XUL/Elementos/wizard" title="es/XUL/Elementos/wizard">wizard</a></code> incluye el contenido de cada página del asistente. Las páginas del asistente se crean mediante el elemento <code> </code><code><a href="/es/XUL/Elementos/wizardpage" title="es/XUL/Elementos/wizardpage">wizardpage</a></code>. Puedes colocar cualquier contenido que desees dentro de cada <code><a href="/es/XUL/Elementos/wizardpage" title="es/XUL/Elementos/wizardpage">wizardpage</a></code>.</p>
+
+<div class="note">Ten en cuenta que actualmente los asistentes solo funcionan adecuadamente desde URLs chrome.</div>
+
+<p>El asistente consta de varias secciones y, por supuesto, el diseño  del asistente puede variar según el sistema operativo de cada plataforma. El asistente se mostrará generalmente con el aspecto de la plataforma del usuario. El aspecto típico incluirá un título en la parte superior, un grupo de botones de navegación en la parte inferior y el contenido de la página en medio de ambos.</p>
+
+<p>El título a lo largo de la parte superior se crea usando el atributo <code><a href="/es/XUL/Atributos/title" title="es/XUL/Atributos/title">title</a></code>, muy parecido al que podría usarse para una ventana normal. Los botones de navegación son creados automáticamente. </p>
+
+<h4 id="Un_ejemplo_de_asistente" name="Un_ejemplo_de_asistente">Un ejemplo de asistente</h4>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_wizard_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_wizard_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;wizard id="example-window" title="Select a Dog Wizard"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;wizardpage&gt;
+    &lt;description&gt;
+      Esta asistente le ayudará a seleccionar el tipo de perro que más le conviene."
+    &lt;/description&gt;
+    &lt;label value="¿Por qué quiere un perro?"/&gt;
+    &lt;menulist&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem label="Para que la gente se vaya"/&gt;
+        &lt;menuitem label="Para que asuste a un gato"/&gt;
+        &lt;menuitem label="Necesito un buen amigo"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menulist&gt;
+  &lt;/wizardpage&gt;
+
+  &lt;wizardpage description="Detalles del perro"&gt;
+    &lt;label value="Proporcione detalles adicionales sobre el perro que le gustaría:"/&gt;
+    &lt;radiogroup&gt;
+      &lt;caption label="Tamaño"/&gt;
+      &lt;radio value="small" label="Pequeño"/&gt;
+      &lt;radio value="large" label="Grande"/&gt;
+    &lt;/radiogroup&gt;
+    &lt;radiogroup&gt;
+      &lt;caption label="Género"/&gt;
+      &lt;radio value="male" label="Macho"/&gt;
+      &lt;radio value="female" label="Hembra"/&gt;
+    &lt;/radiogroup&gt;
+  &lt;/wizardpage&gt;
+
+&lt;/wizard&gt;
+</pre>
+
+<div class="float-right">
+<div class="float-right"><img alt="Image:wizard1.jpg" class="internal" src="/@api/deki/files/970/=Wizard1.jpg"></div>
+</div>
+
+<p>El asistente tiene dos páginas, una que tiene un menú desplegable y la otra botones redondos. El asistente será formateado automáticamente, con un título en la parte de arriba y botones en la parte de abajo. El usuario puede navegar entre las páginas con los botones de 'Anterior' (<em>Back</em>) y 'Posterior' (<em>Next</em>). Estos botones se activan y desactivan ellos mismos cuando es necesario. En la última página, además de estos anteriores, aparecerá el botón de Terminar/Finalizar. Todo esto es automático, no hay que hacer nada para manipular las páginas.</p>
+
+<p>El atributo <code><a href="/es/XUL/Atributos/description" title="es/XUL/Atributos/description">description</a></code> puede ser opcionalmente colocado en un elemento <code><a href="/es/XUL/Elementos/wizardpage" title="es/XUL/Elementos/wizardpage">wizardpage</a></code> a fin de proporcionar un subtítulo para esa página. En el ejemplo anterior, está puesto en la segunda página, pero no en la primera.</p>
+
+<h3 id="Gesti.C3.B3n_de_los_cambios" name="Gesti.C3.B3n_de_los_cambios">Gestión de los cambios en las página</h3>
+
+<p>Generalmente, desearás que se haga algo una vez se presione el botón Finalizar. Se puede definir un atributo <code>onwizardfinish</code>, dentro del elemento <code><a href="/es/XUL/Elementos/wizard" title="es/XUL/Elementos/wizard">wizard</a></code> para que sea así. Colócalo en un script que realice cualquier tarea que desees y que después devuelva 'true'. Este script se puede usar para guardar la información que incluye el usuario durante el asistente. Por ejemplo:</p>
+
+<pre>&lt;wizard id="example-window" title="Select a Dog Wizard"
+  onwizardfinish="return saveDogInfo();"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+</pre>
+
+<p>Cuando el usuario haga clic sobre el botón Finalizar, es llamada la función <code>saveDogInfo()</code>, la cual se definirá en un archivo de script para guardar la información que se ha incluido. Si la función devuelve 'true', el asistente se cierra. Si devuelve 'false', entonces el asistente no se cerrará, lo que suele ocurrir, por ejemplo, si la función <code>saveDogInfo()</code> encuentra una entrada que no es válida.</p>
+
+<p>Existen otros atributos relacionados <code><a href="/es/XUL/Atributos/onwizardback" title="es/XUL/Atributos/onwizardback">onwizardback</a></code>, <code><a href="/es/XUL/Atributos/onwizardnext" title="es/XUL/Atributos/onwizardnext">onwizardnext</a></code> y <code><a href="/es/XUL/Atributos/onwizardcancel" title="es/XUL/Atributos/onwizardcancel">onwizardcancel</a></code>, que son llamados cuando los botones Volver, Siguiente y Cancelar son presionados respectivamente. Estas funciones son llamadas sin considerar qué página se está mostrando actualmente.</p>
+
+<p>Para llamar un código diferente dependiendo de qué página se encuentra el usuario, se utilizan los atributos <code><a href="/es/XUL/Atributos/onpagerewound" title="es/XUL/Atributos/onpagerewound">onpagerewound</a></code> o <code><a href="/es/XUL/Atributos/onpageadvanced" title="es/XUL/Atributos/onpageadvanced">onpageadvanced</a></code> en un elemento <code><a href="/es/XUL/Elementos/wizardpage" title="es/XUL/Elementos/wizardpage">wizardpage</a></code>. Funcionan de manera parecida a las otras funciones con la excepción que se puede usar código diferente en cada página. Esto te permite validar la información incluida en cada página antes de que continúe el usuario.</p>
+
+<p>Un tercer método consiste en usar los atributos <code><a href="/es/XUL/Atributos/onpagehide" title="es/XUL/Atributos/onpagehide">onpagehide</a></code> y <code><a href="/es/XUL/Atributos/onpageshow" title="es/XUL/Atributos/onpageshow">onpageshow</a></code> en el elemento <code><a href="/es/XUL/Elementos/wizardpage" title="es/XUL/Elementos/wizardpage">wizardpage</a></code>. Estos se llamarán cuando la página se oculte o se muestre, independientemente de qué botón se pulse (excepto cuando se presiona Cancel: tienes que usar <code><a href="/es/XUL/Atributos/onwizardcancel" title="es/XUL/Atributos/onwizardcancel">onwizardcancel</a></code> para comprobarlo).</p>
+
+<p>Estos tres métodos deberían proporcionar suficiente flexibilidad para gestionar la navegación tanto como necesites. La siguiente tabla es un resumen  de las funciones de los atributos que se llaman cuando el usuario pulsa Siguiente ('Next'), en el orden en que son comprobados. En el momento en que uno devuelva false, se cancelará la navegación.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Atributo</th>
+   <th>Etiqueta</th>
+   <th>Llamada</th>
+  </tr>
+  <tr>
+   <td>pagehide</td>
+   <td>wizardpage</td>
+   <td>Llamada a la página que el usuario esta dejando.</td>
+  </tr>
+  <tr>
+   <td>pageadvanced</td>
+   <td>wizardpage</td>
+   <td>Llamada a la página que el usuario esta dejando.</td>
+  </tr>
+  <tr>
+   <td>wizardnext</td>
+   <td>wizard</td>
+   <td>Llamado en el asitente.</td>
+  </tr>
+  <tr>
+   <td>pageshow</td>
+   <td>wizardpage</td>
+   <td>Llamada a la página que el usuario esta entrando.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Un proceso similar ocurre para el botón Volver.</p>
+
+<div class="note">Siempre que trates de usar una función en el evento anterior, como con pageadvanced, deberías usar
+<p><code>return funcName()</code> en lugar de solo la llamada <code>funcName()</code>o no funcionará como se espera, por ejemplo</p>
+
+<pre class="eval"> &lt;wizardpage pageadvanced='return funcName()'&gt;&lt;/wizardpage&gt;&lt;/code&gt;
+</pre>
+</div>
+
+<p><br>
+ </p><div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Diálogos_Abrir_y_Guardar" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Más_asistentes">Siguiente  »</a></p>
+</div>

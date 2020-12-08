@@ -1,0 +1,44 @@
+---
+title: Διαμορφώνοντας το script b2g.sh
+slug: Archive/B2G_OS/Developing_Firefox_OS/Διαμορφώνοντας_το_script_b2g.sh
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Customizing_the_b2g.sh_script
+---
+<div class="summary">
+ <p>Στο τηλέφψνο, η εφαρμογή <code><a href="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture">b2g</a></code> (που παρέχει τα API του Firefox OS ανάμεσα σε άλλα πράγματα) εκκινείται μέσω του <span style="line-height: 1.5;">script </span><code style="font-weight: bold; font-size: 14px;">/system/bin/b2g.sh</code><span style="line-height: 1.5;"> . Μπορείτε να διαμορφώσετε αυτό το script για να αλλάξετε τη συμπεριφορά του Firefox OS και αυτό το άρθρο εξηγεί το πως.</span></p>
+</div>
+<h2 id="Set_environment_variables">Set environment variables</h2>
+<p>If you just want to set an environment variable for a single run of B2G, then you can do the following:</p>
+<pre class="brush: bash">adb shell stop b2g
+adb shell "export ENV_VAR=value &amp;&amp; /system/bin/b2g.sh"
+</pre>
+<p>If you want to use the same environment variables all of the time, then you can edit <code>b2g.sh</code>, as described in the next section.</p>
+<h2 id="Επεξεργάζοντας_το_b2g.sh">Επεξεργάζοντας το b2g.sh</h2>
+<p>For debugging, you may want to set environment variables to get logging information or to otherwise affect how the <code>b2g</code> program runs. You can do this by editing the <code>b2g.sh</code> script. There aren't any tools included on the phone to edit the file in place, so you'll need to copy it to your computer first.</p>
+<ol>
+ <li>Connect the phone to your computer, open a terminal window, and execute the following command to edit the script:
+  <pre>adb pull /system/bin/b2g.sh</pre>
+ </li>
+ <li>Edit the script to make the changes you want. For example, suppose you'd like to see some logging output (which requires a debug build), then you might add something like:
+  <pre>export NSPR_LOG_FILE=/data/local/tmp/mylog.txt
+export NSPR_LOG_MODULES=Layers:5
+</pre>
+ </li>
+ <li>Εκτελέστε τις ακόλουθες εντολές για να αποθηκεύσετε το ενημερωμένο script <code>b2g.sh</code> σας στο τηλέφωνο και να επανεκκινήστε το <code>b2g</code>:
+  <pre>adb shell stop b2g
+adb remount
+adb push b2g.sh /system/bin
+adb shell chmod 0755 /system/bin/b2g.sh
+adb shell start b2g
+</pre>
+ </li>
+</ol>
+<div class="note">
+ <p><strong>Σημείωση: </strong>Το <code>/data/local/tmp</code> είναι το μόνο μέρος στο filesystem που είναι εγγράψιμο από τις περιεχόμενες διεργασίες.</p>
+</div>
+<h2 id="Δείτε_επίσης">Δείτε επίσης</h2>
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko" title="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">Αναπτύσσοντας και εγκαθιστώντας το Firefox OS</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture">Επισκόπηση αρχιτεκτονικής του Firefox OS</a></li>
+ <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko" title="/en-US/docs/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">Αποσφαλμάτωση στο Firefox OS</a></li>
+</ul>
+<p> </p>

@@ -1,0 +1,201 @@
+---
+title: Analizar microformatos en JavaScript
+slug: Archive/Estándares_Web/Analizar_microformatos_en_JavaScript
+tags:
+  - Firefox 3
+  - Microformats
+translation_of: Archive/Web_Standards/Parsing_microformats_in_JavaScript
+---
+<p> Firefox 3 introduces a new API for <a href="es/Using_microformats">managing</a> and parsing microformats. This article examines the generic microformat parsing API, which handles the heavy lifting of pulling data out of a microformat. This API is primarily intended to be used when implementing new microformats.</p>
+
+<h2 id="Methods" name="Methods">Methods</h2>
+
+<h3 id="dateTimeGetter.28.29" name="dateTimeGetter.28.29">dateTimeGetter()</h3>
+
+<p>Specifically retrieves a date from a microformat node. After getting the text, it is normalized into an ISO 8601 date.</p>
+
+<pre class="eval">normalizedDate = Microformats.parser.dateTimeGetter(propnode, parentnode);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt>propnode</dt>
+ <dd>The DOM node to check.</dd>
+ <dt>parentnode</dt>
+ <dd>The property's parent node. If it is a subproperty, this is the parent property node. Otherwise this is the microformat node.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>A string containing the normalized date.</p>
+
+<h3 id="defaultGetter.28.29" name="defaultGetter.28.29">defaultGetter()</h3>
+
+<p>Uses the microformat patterns to decide what the correct text for a given microformat property is. This includes looking at thing such as <code>abbr</code>, <code>img</code> and <code>alt</code>, <code>area</code> and <code>alt</code>, and value excerpting.</p>
+
+<pre class="eval">propertyValue = Microformats.parser.defaultGetter(propnode, parentnode, datatype);
+</pre>
+
+<h6 id="Parameters_2" name="Parameters_2">Parameters</h6>
+
+<dl>
+ <dt>propnode</dt>
+ <dd>The DOM node to check.</dd>
+ <dt>parentnode</dt>
+ <dd>The property's parent node. If it is a subproperty, this is the parent property node. Otherwise this is the microformat node.</dd>
+ <dt>datatype</dt>
+ <dd>"HTML" if the search should be done using <code>innerHTML()</code>, or "text" to use <code>innerText()</code>. The default is "text".</dd>
+</dl>
+
+<h6 id="Return_value_2" name="Return_value_2">Return value</h6>
+
+<p>A string containing the property's value.</p>
+
+<h3 id="emailGetter.28.29" name="emailGetter.28.29">emailGetter()</h3>
+
+<p>Specifically retrieves an email address from a microformat node. This removes the subject if one is specified, as well as the <code>mailto:</code> prefix.</p>
+
+<pre class="eval">email = Microformats.parser.emailGetter(propnode, parentnode);
+</pre>
+
+<h6 id="Parameters_3" name="Parameters_3">Parameters</h6>
+
+<dl>
+ <dt>propnode</dt>
+ <dd>The DOM node to check.</dd>
+ <dt>parentnode</dt>
+ <dd>The property's parent node. If it is a subproperty, this is the parent property node. Otherwise this is the microformat node.</dd>
+</dl>
+
+<h6 id="Return_value_3" name="Return_value_3">Return value</h6>
+
+<p>A string containing the email address.</p>
+
+<h3 id="HTMLGetter.28.29" name="HTMLGetter.28.29">HTMLGetter()</h3>
+
+<p>Retrieves all the HTML from a particular DOM node.</p>
+
+<pre class="eval">html = Microformats.parser.HTMLGetter(propnode, parentnode);
+</pre>
+
+<h6 id="Parameters_4" name="Parameters_4">Parameters</h6>
+
+<dl>
+ <dt>propnode</dt>
+ <dd>The DOM node to check.</dd>
+ <dt>parentnode</dt>
+ <dd>The property's parent node. If it is a subproperty, this is the parent property node. Otherwise this is the microformat node.</dd>
+</dl>
+
+<h6 id="Return_value_4" name="Return_value_4">Return value</h6>
+
+<p>An object containing a function you can call to get the string and the HTML.</p>
+
+<p></p><div class="note"><strong>Nota:</strong> This doesn't return the HTML as a string, but an object with a few functions you can call to retrieve the HTML and do other tasks.</div><p></p>
+
+<p>The functions you can call on the returned object are:</p>
+
+<pre class="eval">string = html.toString();
+</pre>
+
+<p>Returns a string using <code>innerText()</code>.</p>
+
+<pre class="eval">string = html.toHTML();
+</pre>
+
+<p>Returns the node's HTML using <code>innerHTML()</code>.</p>
+
+<pre class="eval">string = html.replace(a, b);
+</pre>
+
+<p>Returns a string in which all occurrences of a in the HTML are replaced with b.</p>
+
+<pre class="eval">string = html.match(a);
+</pre>
+
+<p>Performs the specified matching operation on the HTML and returns the result.</p>
+
+<h3 id="iso8601FromDate" name="iso8601FromDate">iso8601FromDate</h3>
+
+<p>Converts a JavaScript date object into an ISO 8601 formatted date.</p>
+
+<pre class="eval">isoDate = Microformats.parser.iso8601FromDate(date, punctuation)
+</pre>
+
+<h6 id="Parameters_5" name="Parameters_5">Parameters</h6>
+
+<dl>
+ <dt>date</dt>
+ <dd>The JavaScript <code>Date</code> object to convert.</dd>
+ <dt>punctuation</dt>
+ <dd><code>true</code> if the date should have "-" and "/" in it.</dd>
+</dl>
+
+<h6 id="Return_value_5" name="Return_value_5">Return value</h6>
+
+<p>A string containing the ISO 8601 formatted date.</p>
+
+<h3 id="textGetter.28.29" name="textGetter.28.29">textGetter()</h3>
+
+<p>Retrieves all the text from a particular DOM node, including all tags. This calls <code><a href="#defaultGetter.28.29">defaultGetter()</a></code> internally.</p>
+
+<pre class="eval">text = Microformats.parser.textGetter(propnode, parentnode);
+</pre>
+
+<h6 id="Parameters_6" name="Parameters_6">Parameters</h6>
+
+<dl>
+ <dt>propnode</dt>
+ <dd>The DOM node to check.</dd>
+ <dt>parentnode</dt>
+ <dd>The property's parent node. If it is a subproperty, this is the parent property node. Otherwise this is the microformat node.</dd>
+</dl>
+
+<h6 id="Return_value_6" name="Return_value_6">Return value</h6>
+
+<p>A string containing all the text from the specified microformat node, including the tags.</p>
+
+<h3 id="telGetter.28.29" name="telGetter.28.29">telGetter()</h3>
+
+<p>Specifically retrieves a telephone number from a microformat node. This handles the fact that telephone numbers use "value" as the name of one of their subproperties, but "value" is also used for <a class="external" href="http://microformats.org/wiki/hcard#Value_excerpting">value excerpting</a>.</p>
+
+<pre class="eval">tel = Microformats.parser.telGetter(propnode, parentnode);
+</pre>
+
+<h6 id="Parameters_7" name="Parameters_7">Parameters</h6>
+
+<dl>
+ <dt>propnode</dt>
+ <dd>The DOM node to check.</dd>
+ <dt>parentnode</dt>
+ <dd>The property's parent node. If it is a subproperty, this is the parent property node. Otherwise this is the microformat node.</dd>
+</dl>
+
+<h6 id="Return_value_7" name="Return_value_7">Return value</h6>
+
+<p>A string containing the telephone number.</p>
+
+<h3 id="uriGetter.28.29" name="uriGetter.28.29">uriGetter()</h3>
+
+<p>Specifically retrieves a URI from a microformat node. This is done by looking at an <code>href</code>, <code>img</code>, <code>object</code>, or <code>area</code> to get the fully-qualified URI.</p>
+
+<pre class="eval">uri = Microformats.parser.uriGetter(propnode, parentnode);
+</pre>
+
+<h6 id="Parameters_8" name="Parameters_8">Parameters</h6>
+
+<dl>
+ <dt>propnode</dt>
+ <dd>The DOM node to check.</dd>
+ <dt>parentnode</dt>
+ <dd>The property's parent node. If it is a subproperty, this is the parent property node. Otherwise this is the microformat node.</dd>
+</dl>
+
+<h6 id="Return_value_8" name="Return_value_8">Return value</h6>
+
+<p>A string containing the fully-qualified URI.</p>
+
+<h2 id="See_also" name="See_also">See also</h2>
+
+<p><a href="es/Using_microformats">Using microformats</a>, <a href="es/Describing_microformats_in_JavaScript">Describing microformats in JavaScript</a></p>

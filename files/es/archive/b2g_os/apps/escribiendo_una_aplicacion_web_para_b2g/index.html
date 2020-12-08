@@ -1,0 +1,29 @@
+---
+title: Escribiendo una aplicación web para B2G
+slug: Archive/B2G_OS/Apps/Escribiendo_una_aplicacion_web_para_B2G
+tags:
+  - Firefox OS
+  - aplicaciones
+  - aplicación
+translation_of: Web/Apps/Fundamentals/Quickstart
+---
+<p>Las aplicaciones de B2G son solo aplicaciones Web escritas con HTML, CSS y JavaScript. Las puedes publicar en la Web tal como publicarías cualquier otro sitio Web. Con el fin de hacer instalable el sitio Web como una aplicación Web en el dispositivo, solo tienes que adornarlo con un manifiesto y conectar un botón de instalación tal como se explica a continuación.</p>
+<p>Los siguientes temas son puntos de partida recomendados:</p>
+<ul>
+  <li><a href="/es/docs/Aplicaciones/Comenzando_aplicaciones">Comenzar con el desarrollo de aplicaciones</a></li>
+  <li><a href="/es/docs/Aplicaciones/Manifest">Manifiesto de la aplicación</a></li>
+</ul>
+<p>Por supuesto, ¡no dudes en <a href="/es/docs/Aplicaciones">profundizar aún más en Open Web Apps</a>!</p>
+<h2 id="Instalando_la_aplicación_Web">Instalando la aplicación Web</h2>
+<p>Con la aplicación y el manifiesto publicados en la Web, necesitas hacer que Gecko sea conciente de ello. Al momento de la instalación, Gecko busca el manifiesto y agrega las entradas necesarias para la pantalla de inicio, etc.</p>
+<p>Para instalar una aplicación, llamar a la  <a href="/en-US/docs/Apps/Apps_JavaScript_API/navigator.mozApps.install"><code>API navigator.mozApps.install</code></a>. Aquí un ejemplo de un botón de instalación que podrías incluir en tu aplicación cuando la estas organizando:</p>
+<pre>&lt;script&gt;
+var manifest_url = "http://my.webapp.com/manifest.json";
+&lt;/script&gt;
+
+&lt;button onclick="navigator.mozApps.install(manifest_url); return false;"&gt;
+  ¡Instala esta impresionante aplicación en tu pantalla de inicio!
+&lt;/button&gt;
+</pre>
+<p>Nota: El botón de instalación podría estar también en el app market, tal como el <a href="/en-US/docs/Apps/Submitting_an_app">Firefox Marketplace</a>, pero a menudo es muy importante tener un un botón "Instalar como una apliación web" en la página principal de tu sitio.</p>
+<p>Ahora visita tu sitio web en el navegador de B2G y pulsa el botón de instalación.</p>

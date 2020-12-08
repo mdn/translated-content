@@ -1,0 +1,85 @@
+---
+title: Diálogos Abrir y Guardar
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Diálogos_Abrir_y_Guardar
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Open_and_Save_Dialogs
+---
+<p>Un tipo común de diálogo es aquello donde el usuario puede elegir un archivo para abrirlo o guardarlo.</p>
+
+<h3 id="Selectores_de_archivos" name="Selectores_de_archivos">Selectores de archivos</h3>
+
+<p>Un selector de archivos es un diálogo que permite al usuario seleccionar un archivo. Generalmente se utiliza para las órdenes de menú: Abrir y Guardar, pero se pueden utilizar en cualquier lugar en que el usuario necesita elegir un archivo. Para implementar el selector de archivos se utiliza la interfaz <a href="es/NsIFilePicker">nsIFilePicker</a> de <a href="es/XPCOM">XPCOM</a>.</p>
+
+<p>Se puede usar el selector de archivos de un modo de los tres siguientes:</p>
+
+<ul>
+ <li>Abrir: se le pide al usuario que seleccione un archivo.</li>
+ <li>Seleccionar carpeta/directorio: se le pide al usuario que seleccione una carpeta.</li>
+ <li>Guardar: se le pide al usuario que seleccione un nombre para guardar el archivo.</li>
+</ul>
+
+<p>La apariencia del diálogo será distinta en cada tipo y variará en cada plataforma. Cuando el usuario ha seleccionado un archivo o una carpeta, lo puede leer o escribir en él.</p>
+
+<p>La interfaz del selector de archivo nsIFilePicker es la encargada de mostrar el diálogo en uno de los tres modos. Usando la interfaz se puede configurar una serie de características del diálogo. Cuando se cierra el diálogo, se pueden usar las funciones de la interfaz para obtener el archivo que fue seleccionado.</p>
+
+<h4 id="Creando_un_selector_de_archivo" name="Creando_un_selector_de_archivo">Creando un selector de archivo</h4>
+
+<p>Para empezar, debes crear un componente selector de archivos e iniciarlo.</p>
+
+<pre>var nsIFilePicker = Components.interfaces.nsIFilePicker;
+var fp = Components.classes["@mozilla.org/filepicker;1"]
+      .createInstance(nsIFilePicker);
+fp.init(window, "Select a File", nsIFilePicker.modeOpen);
+</pre>
+
+<p>Primero, se crea un nuevo objeto selector de archivos y es almacenado en la variable ‘fp’. La función ‘init’ se usa para iniciar el selector de archivos. Esta función toma tres argumentos, la ventana que está abriendo el diálogo, el título del diálogo y el modo. Aquí el modo es <code>modeOpen</code> (modoAbrir) el cual es usado para un diálogo Abrir. También se puede usar <code>modeGetFolder</code> (modoObtenerCarpeta) y <code>modeSave</code> (modoGuardar) para los otros dos modos. Estos modos son constantes de la interfaz <code>nsIFilePicker</code>.</p>
+
+<h4 id="Directorio_y_filtros_por_defecto" name="Directorio_y_filtros_por_defecto">Directorio y filtros por defecto</h4>
+
+<p>Hay dos características del diálogo que se pueden configurar antes de que se muestre.</p>
+
+<ul>
+ <li>La primera es el directorio por defecto que se muestra cuando el diálogo es abierto.</li>
+ <li>La segunda es un filtro que indica la lista de archivos que se muestran en el diálogo. Este se puede usar, por ejemplo, para ocultar todos los archivos menos los archivos HTML.</li>
+</ul>
+
+<p>Se puede configurar el directorio por defecto con la propiedad <code>displayDirectory</code> del objeto selector de archivos. El directorio debe ser un objeto <code><a href="es/NsILocalFile">nsILocalFile</a></code>. Si no asignas ningún valor, un directorio por defecto será escogido automáticamente. Para agregar filtros, se llama la función <code>apeendFilters()</code> para configurar los tipos de archivos que se desea mostrar.</p>
+
+<pre>fp.appendFilters(nsIFilePicker.filterHTML | nsIFilePicker.filterImages);
+fp.appendFilters(nsIFilePicker.filterText | nsIFilePicker.filterAll);
+</pre>
+
+<p>El primer ejemplo agrega filtros para archivos HTML e imágenes. Al usuario se le permitirá seleccionar sólo esos tipos de archivos. La forma de realizar esto depende de la plataforma. En algunas plataformas, cada filtro será separado y el usuario podrá seleccionar entre archivos HTML e imágenes. El segundo ejemplo agrega filtros para archivos de texto y para todos los archivos. Luego el usuario tiene la opción de elegir entre mostrar solo los archivos de texto o todos los archivos.</p>
+
+<p>También se puede usar <code>filterXML</code> y <code>filterXUL</code> para filtrar archivos XML y XUL. Si se desea crear un filtro en particular se puede utilizar la función <code>appendFilter()</code> de la siguiente manera:</p>
+
+<pre>fp.appendFilter("Audio Files","*.wav; *.mp3");
+</pre>
+
+<p>Esta línea agregará un filtro para archivos WAV y MP3. El primer argumento es el título del tipo de archivos y el segundo es una lista de máscaras de archivos separadas por punto y coma. Se puede agregar más o menos máscaras como sea necesario. También se puede llamar la función appendFilters tantas veces como sea necesario para agregar filtros adicionales. El orden en que se agregan determina su prioridad. Generalmente, el primero que se agrega es seleccionado por defecto.</p>
+
+<h4 id="Conseguir_el_archivo_seleccionado" name="Conseguir_el_archivo_seleccionado">Conseguir el archivo seleccionado</h4>
+
+<p>Finalmente, se puede mostrar el diálogo llamando la función ‘show’. No toma ningún parámetro pero devuelve un código de estado que indica que eligió el usuario. Note que la función no devuelve hasta que el usuario haya seleccionado un archivo. La función devuelve una de las tres siguientes constantes:</p>
+
+<ul>
+ <li><strong>returnOK</strong>: el usuario seleccionó un archivo y presionó Aceptar. El archivo seleccionado será almacenado en la propiedad ‘file’ del selector de archivos.</li>
+ <li><strong>returnCancel</strong>: el usuario presionó Cancelar.</li>
+ <li><strong>returnReplace</strong>: en el modo guardar (save), este valor de retorno indica que el usuario ha seleccionado un archivo para reemplazarlo. (returnOK será devuelto cuando el usuario haya ingresado un nombre nuevo para el archivo).</li>
+</ul>
+
+<p>Se debería revisar el valor retornado para luego recuperar el objeto del archivo desde el selector de archivos usando la propiedad <code>file</code>.</p>
+
+<pre>var res = fp.show();
+if (res == nsIFilePicker.returnOK){
+  var thefile = fp.file;
+  // --- do something with the file here ---
+}
+</pre>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Creando_Diálogos" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Creando_un_asistente">Siguiente  »</a></p>
+</div>

@@ -1,0 +1,101 @@
+---
+title: Cambios en los temas de Firefox 3
+slug: Cambios_en_los_temas_de_Firefox_3
+tags:
+  - Themes
+  - páginas_a_traducir
+translation_of: Archive/Themes/Theme_changes_in_Firefox_3
+---
+<ul id="nav-access"> <li><a href="#pageContent">Saltar al contenido principal</a></li> <li><a href="#searchInput">Saltar al cuadro de búsqueda</a></li>
+</ul>
+<div class="globalWrap">
+<div class="body">&lt;noscript&gt;<div id="noscript"><p>Some features of this site require JavaScript.</p></div>&lt;/noscript&gt;
+<div class="pageContent PageDW-ThemechangesinFirefox3" id="pageContent">
+<div class="pageTitle">
+<h1 id="Este_artículo_describe_los_cambios_hechos_al_actualizar_al_tema_de_Firefox_para_trabajar_en_Firefox_3.">Este artículo describe los cambios hechos al actualizar al tema de Firefox para trabajar en: <a href="../../../../en/Firefox_3" rel="internal">Firefox 3</a>.</h1>
+<div class="note"><strong>Nota:</strong> Se puede utilizar el artículo <a href="../../../../en/Updating_themes_for_Firefox_3" rel="internal">Actualizar temas para Firefox 3</a> como guía para actualizar temas.<br>
+Si alguien con experiencia en la creación de temas quisiera escribir algún artículo, adelante!</div>
+<div id="section_1">
+<h2 class="editable" id="Los_cambios_del_navegador_requieren_actualizar_los_temas">Los cambios del navegador requieren actualizar los temas</h2>
+<p>Existen diversos archivos que fueron cambiados o borrados del navegador que pueden requerir que realices cambios a tu tema. La siguiente tabla muestra tanto el archivo XUL cambiado como el archivos CSS correspondientes al tema que debes de actualizar.</p>
+<table class="standard-table"> <tbody> <tr> <td class="header">Filename</td> <td class="header">CSS File</td> <td class="header">Details</td> </tr> <tr> <td> </td> <td> </td> <td> </td> </tr> </tbody>
+</table>
+</div>
+<div id="section_2">
+<h2 class="editable" id="Cambios_en_el_tema_por_defecto">Cambios en el tema por defecto</h2>
+<p>La siguiente tabla muestra los cambios hechos en el tema por defecto de Firefox 3; puedes utilizar esta información como apoyo para tener una idea de los cambios que necesitas hacer.</p>
+<div id="section_3">
+<h3 class="editable" id="Lista_de_todos_los_archivos">Lista de todos los archivos</h3>
+<div id="section_4">
+<h4 class="editable" id="En_todas_las_plataformas">En todas las plataformas</h4>
+<table class="standard-table"> <tbody> <tr> <td class="header">Archivo</td> <td class="header">Descripción del cambio</td> </tr> <tr> <td><code>browser/themes/*/browser/browser.css</code></td> <td>El ancho del indicador del 'drag and drop' ya no es calculado durante el arrastre (tabbrowser.xml). En vez de eso la propiedad '-moz-margin-start' debe ser agregada a .tab-drop-indicator-bar, con el valor de la mitad del ancho de la imagen indicadora. También, la visibilidad del indicador ahora es controlada is now controlled by setting collapsed in tabbrowser.xml. Como resultado, la propiedad 'display' debe ser eliminada de .tab-drop-indicator-bar (incluyendo for dragging="true").</td> </tr> </tbody>
+</table>
+</div>
+<div id="section_5">
+<h4 class="editable" id="En_Mac_OS_X">En Mac OS X</h4>
+<table class="standard-table"> <tbody> <tr> <td class="header">Archivo</td> <td class="header">Descripción del cambio</td> </tr> <tr> <td><code>browser/themes/pinstripe/browser/tabbrowser/tabDragIndicator.png</code></td> <td>Se removieron los pixeles blancos superfluos de los bordes, por lo tanto la imagen es más pequeña. Puede o no afectar a otros temas Mac que lo usen.</td> </tr> <tr> <td><code>browser/themes/pinstripe/browser/browser.css</code></td> <td>.tabbrowser-tab[first-tab="true"] &gt; .tab-image-left ya no tiene un margin-left. En vez de eso .tabs-left now displayed and given the same width as the former margin-left. It was already done this way in Winstripe.</td> </tr> </tbody>
+</table>
+</div>
+</div>
+<div id="section_6">
+<h3 class="editable" id="Cambios_en_browser">Cambios en <code>browser</code></h3>
+</div>
+<div id="section_7">
+<h3 class="editable" id="Cambios_en_global">Cambios en <code>global</code></h3>
+<div id="section_8">
+<h4 class="editable" id="En_todas_las_plataformas_2">En todas las plataformas</h4>
+<p>El fondo amarillo para la barra de dirección es obsoleto; en lugar de ello, los temas deben darle formato al nuevo elemento <code>#identity-box</code> dependiendo de su clase <code>verifiedDomain</code>/<code>verifiedIdentity</code>.</p>
+<p>El botón Ir ahora está localizado dentro de la barra de dirección, por lo tanto su imagen (<code><a class=" external" rel="freelink">chrome://browser/skin/Go-arrow.png</a></code>) tiene que ser más pequeña. El código requerido para mostrar y ocultar el botón Ir y otros iconos de la barra de dirección es:</p>
+<pre class="eval">#urlbar[pageproxystate="invalid"] &gt; #urlbar-icons &gt; :not(#go-button) ,
+#urlbar[pageproxystate="valid"] &gt; #urlbar-icons &gt; #go-button {
+  visibility: collapse;
+}
+</pre>
+<div id="section_9">
+<h5 class="editable" id="Imágenes_agregadas">Imágenes agregadas</h5>
+<p>Agrega las siguientes imágenes:</p>
+<dl><dt><code><a class=" external" rel="freelink">chrome://global/skin/icons/information-16.png</a></code> </dt><dd>Utilizada cuando se presentan avisos de información. </dd><dt><code><a class=" external" rel="freelink">chrome://global/skin/icons/warning-16.png</a></code> </dt><dd>Utilizada cuando de muestran alertas. </dd></dl></div>
+<div id="section_10">
+<h5 class="editable" id="Imágenes_eliminadas">Imágenes eliminadas</h5>
+<p>Las siguientes imágenes fueron eliminadas:</p>
+<dl><dt><code><a class=" external" rel="freelink">chrome://mozapps/skin/extensions/question.png</a></code> </dt><dd>Ya no es utilizada. </dd></dl></div>
+</div>
+<div id="section_11">
+<h4 class="editable" id="En_Mac_OS_X_2">En Mac OS X</h4>
+<p>Los temas de Mac OS X para Firefox 3 deben agregar estas dos clases al final del archivo <code><a class=" external" rel="freelink">chrome://global/skin/wizard.css</a></code>:</p>
+<pre class="eval">.wizard-buttons-btm {
+  padding: <em>X</em>px;
+}
+
+.wizard-label-box {
+  display: none;
+}
+</pre>
+<p>El valor numérico de X, el número de pixeles de relleno (padding) en <code>.wizard-buttons-btm</code>, debe ser el mismo valor que el de el margen para <code>.wizard-buttons-box-2</code>.</p>
+<div id="section_12">
+<h5 class="editable" id="Cambios_de_imágenes">Cambios de imágenes</h5>
+<p><a class=" external" rel="freelink">chrome://global/skin/icons/loading_16.gif</a> fue reemplazado por  <a class=" external" rel="freelink">chrome://global/skin/icons/loading_16.png</a> .</p>
+</div>
+</div>
+</div>
+<div id="section_13">
+<h3 class="editable" id="Cambios_en_mozapps">Cambios en <code>mozapps</code></h3>
+</div>
+</div>
+<h2 class="editable" id="Vea_también">Vea también</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="ui-msg-wrap" id="MTMessage" style="display: none;">
+<div class="ui-msg ui-errormsg" id="MTMessageStyle">
+<div class="ui-msg-opt">
+<ul> <li><a class="dismiss" href="#">dismiss message</a></li> <li><a class="details" href="#" id="MTMessageDetailsLink">view details</a></li>
+</ul>
+<div class="ui-msg-autoclose"><span id="MTMessageUnpaused" style="display: inline;">Message will close by itself in seconds</span> <span id="MTMessagePaused" style="display: none;">Message timer has been stopped</span></div>
+</div>
+<div class="ui-msg-desc" id="MTMessageDetails" style="display: none;">
+<p>Viewing Details:</p>
+</div>
+</div>
+</div>

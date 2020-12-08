@@ -1,0 +1,90 @@
+---
+title: Function.prototype.isGenerator()
+slug: Web/JavaScript/Referencia/Objetos_globales/Function/isGenerator
+translation_of: Archive/Web/JavaScript/Function.isGenerator
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p>El método <code><strong>isGenerator()</strong></code> determina si una función es un <a href="/es/docs/Web/JavaScript/Guide/Iterators_and_Generators">generador</a>.</p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="syntaxbox"><code><var>fun</var>.isGenerator()</code></pre>
+
+<h2 id="Descripción">Descripción</h2>
+
+<p>El método <code>isGenerator()</code> determina si una función es un <a href="/es/docs/Web/JavaScript/Guide/Iterators_and_Generators">generador</a>. Fue parte de una propuesta del proceso de estandarización "Harmony", pero no fue incluido en la especificación ECMAScript 6.</p>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<pre class="brush: js">function f() {}
+
+function* g() {
+  yield 42;
+}
+
+console.log('f.isGenerator() = ' + f.isGenerator()); // f.isGenerator() = false
+console.log('g.isGenerator() = ' + g.isGenerator()); // g.isGenerator() = true
+</pre>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<p>No es parte de ninguna especificación. Implementado en JavaScript 1.8.6.</p>
+
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("5.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile("5.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li><a href="/es/docs/Web/JavaScript/Guide/Iterators_and_Generators">Iterators and generators</a></li>
+</ul>

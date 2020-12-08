@@ -1,0 +1,226 @@
+---
+title: ZTE OPEN C
+slug: Archive/B2G_OS/Phone_guide/ZTE_OPEN_C
+tags:
+  - Dispositivos
+  - Gaia
+  - Guia(2)
+  - Móvil
+  - Open C
+  - Smarthpone
+  - Teléfono(2)
+  - Teléfonos(2)
+  - zte
+translation_of: Archive/B2G_OS/Phone_guide/ZTE_OPEN_C
+---
+<div class="summary">
+<p><span class="seoSummary">El ZTE Open C con Firefox OS es un móvil con Firefox OS mejorado por ZTE que ofrece un hardware más potente, incluyendo una cámara de 3MP y pantalla de 4 pulgadas con una calida WVGA, y viene instalado con Firefox OS 1.3. Este artículo proporciona información acerca del dispositivo, incluyendo como actualizarlo y detalles de como solucionar problemas.</span></p>
+</div>
+
+<div class="note">
+<p><strong>Nota: Las instrucciones no son válidas para el ZTE Open. Si tienes un ZTE Open debes ir al link del <a href="https://developer.mozilla.org/en-US/Firefox_OS/Phone_guide/ZTE_OPEN">ZTE Open</a></strong></p>
+</div>
+
+<div class="note">
+<p><strong>Nota: La herramienta de actualización que es necesaria para desbloquear el dispositivo (mirar abajo) solo está disponible para Windows en este momento. Sin embargo, hay una manera más complicada de desbloquear el dispositivo en OS X o Linux que es descrita más abajo.</strong></p>
+</div>
+
+<p>El ZTE Open C es el primer dispositivo con <a href="https://blog.mozilla.org/futurereleases/2014/05/08/firefox-os-update-adds-new-features-including-dual-sim-support-and-enhancements-for-music-lovers-and-gamers/">las últimas actualizaciones de Firefox os de mediados de 2014</a> ofreciendo nuevas características incluyendo un acceso al reproductor de música desde la pantalla de bloqueo o la barra de notificaciones y compartir archivos por Bluetooth, permitiendo transferir varios archivos simultaneamente. Los usuarios pueden desplazarse por el dispositivo más rápido con las carpetas inteligentes que agrupan apicaciones o búsquedas de aplicaciones automaticamente en categorías, un sistema de scroll mejorado y aplicaciones del sistema que se inician más rápido.(ej: calendario, contactos, cámara...)</p>
+
+<h2 id="Obtén_tu_dispositivo">Obtén tu dispositivo</h2>
+
+<p>El dispositivo está disponible para comprar en ebay a un precio de 70$</p>
+
+<ul>
+ <li><a href="http://item.ebay.com/291125433026">ZTE eBay US store</a></li>
+ <li><a href="http://item.ebay.co.uk/171301269724">ZTE eBay UK store</a> (los clientes de Europa deben utilizar esta tienda)</li>
+ <li><a href="http://cgi.ebay.de/ws/eBayISAPI.dll?ViewItem&amp;item=131151681046&amp;ssPageName=STRK:MESE:IT">ZTE eBay DE store</a></li>
+ <li><a href="http://www.ebay.com/itm/111326263156">ZTE eBay RU and EU stores</a></li>
+</ul>
+
+<div class="note">
+<p><strong>Nota: Clientes de Francia deben echar un vistazo a <a href="https://developer.mozilla.org/fr/Firefox_OS/Guide_Telephone_Developpeur/ZTE_OPEN_C#Acheter_l%27appareil">la página francesa de MDN para obtener sus respectivos proveedores.</a></strong></p>
+</div>
+
+<div class="note">
+<p><strong>Nota: Los dispositivos no vienen con ninguna aplicación específica de cada operador o sus servicios y están liberados para todas las variantes de los primeros clientes.</strong></p>
+</div>
+
+<h2 id="Especificaciones_del_dispositivo">Especificaciones del dispositivo</h2>
+
+<p>Puedes encontrar más información de sus especificaciones en el listado de <a href="https://developer.mozilla.org/en-US/Firefox_OS/Phone_guide/Phone_specs">especifiaciones del telefono y dispositivo.</a></p>
+
+<h2 id="Actualizando_el_software">Actualizando el software</h2>
+
+<div class="note">
+<p><strong>Nota: La comunidad francesa de Mozilla proporciona <a href="http://builds.firefoxos.mozfr.org/doc/en/devices/zte-open-c">builds actualizadas del ZTE Open C.</a></strong></p>
+</div>
+
+<p>Para actualizar el software de tu ZTE Open C, la forma más facil usar las builds disponibles en la página de ZTE. Para encontrar esto, ve <a href="http://www.ztedevice.com/support/">al centro de soporte de ZTE</a>, selecciona tu región en la columna derecha, en la columa del centro selecciona <em>Smartphones</em>, y Open C (estándar europeo) o Open C (estándar americano), dependiendo de donde viniera el dispositivo que compraste. Sólo pudimos encontrar el ZTE Open C en España a partir de Agosto del 2014. Luego clickea en <em>Seleccionar</em> para ir a la página de descarga.</p>
+
+<p>Cuandp vayas a descargar una build, deberás encontrar un PDF en un ZIP explicando como instalar la build.</p>
+
+<h2 id="Actualización_manual.">Actualización manual.</h2>
+
+<p>Si quieres actualizar Gecko o Gaia tú mismo, el proceso es un poco complicado, porque el teléfono está bloqueado por defecto (no hay permisos root). Para desbloquear tu teléfono, puedes usar <a href="http://en.comebuy.com/developer-firefox-os-open-c.html">la herramienta de actualización del Open C.</a></p>
+
+<div class="note">
+<p><strong>Nota: Esta herramienta de actualización solo está disponible para Windows por ahora.</strong></p>
+</div>
+
+<p>Si quieres desbloquear tu móvil desde OS X o Linux, esto es lo que tienes que hacer:</p>
+
+<ol>
+ <li>Descarga la build desde el link de Comebuy.com</li>
+ <li>Extrae la build del paso 1 y deberás encontrar un archivo boot.img dentro del zip.</li>
+ <li>
+  <p>Añade las siguientes líneas en  in /etc/udev/android.rules :</p>
+
+  <pre>SUBSYSTEM=="usb", ATTR{idVendor}=="19d2", ATTR{idProduct}=="1350", MODE="0666", GROUP="plugdev"
+SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="d00d", MODE="0666", GROUP="plugdev"</pre>
+ </li>
+ <li>Para entrar en el modo fastboot usa los siguientes comandos en tu terminal:
+  <pre class="brush: bash" id="comment_text_2"> adb reboot-bootloader</pre>
+ </li>
+ <li>Para flashear el archivo boot.img del paso 2 al dispositivo, usa este comando:
+  <pre class="brush: bash" id="comment_text_2"> fastboot flash boot boot.img</pre>
+  si lo prefieres, para verificar que fumciona antes de flashear, deberás usar:
+
+  <pre class="brush: bash" id="comment_text_2"> fastboot boot boot.img </pre>
+ </li>
+ <li>Para reiniciar el dispositivo usa:
+  <pre class="brush: bash" id="comment_text_2"> fastboot reboot </pre>
+ </li>
+ <li>Ahora deberás tener el móvil desbloqueado y funcionando:
+  <pre class="brush: bash" id="comment_text_2">adb shell getprop ro.secure</pre>
+  deberás volver al paso 0.</li>
+</ol>
+
+<h3 id="Actualizando_Gecko_y_Gaia">Actualizando Gecko y Gaia</h3>
+
+<p>Una vez que tu móvil esté en modo fastboot, podrás <a href="https://developer.mozilla.org/en-US/Firefox_OS/Building_and_installing_Firefox_OS">construir e instalar una nueva versión de Firefox OS/B2G</a> y los componenetes Gecko y Gaia.</p>
+
+<ol>
+ <li>Comienza en <a href="https://developer.mozilla.org/en-US/Firefox_OS/Firefox_OS_build_prerequisites">instrucciones</a>, y trata al Open C como al Flame en términos de configuración: esto es debido a que el Flame y el Open c están basados en Android Jellybean.
+
+  <div class="warning">
+  <p><strong>Cuidado: Esto no significa que puedas flashear una imagen del Flame. Hacer esto provocará un brick permanente en tu móvil que no podrá ser solucionado.</strong></p>
+  </div>
+ </li>
+ <li>Durante el paso de configuración, necesitarás un archivo manifest para el Open C. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1016867">Descargalo desde aquí </a>y guardalo en cualquier lugar de tu disco local como openc.xml.</li>
+ <li>Limpia el  directorio B2G, borrando los directorios innecesarios:
+  <pre class="brush: bash" id="comment_text_2">rm -rf objdir-gecko/ out/ backup-flame/</pre>
+ </li>
+ <li><u>Opcional:</u> Antes de continuar, puedes escoger la versión de Gecko y Gaia que quieres construir. Para hacer eso, abre el archivo openc.xml, localiza las etiquetas gecko git, gaia y gonk-misc, y modifica el valor de su revisión para coincidir con la versión que quieres. Ejemplo: puedes construir la versión 2.2 de Gecko y Gaia, con lo siguiente:
+  <pre class="brush: xml">&lt;project name="gecko.git" path="gecko" remote="mozillaorg" revision="v2.2"/&gt;
+(...)
+&lt;project name="gaia" path="gaia" remote="mozillaorg" revision="v2.2"/&gt;
+&lt;project name="gonk-misc" path="gonk-misc" remote="b2g" revision="v2.2"/&gt;</pre>
+ </li>
+ <li>Ahora configura Firefox OS con los siguientes comandos: (Nota: el directorio no puede contener espacios, de otra manera no funcionará)
+  <pre class="brush: bash  language-html">./config.sh flame /PATH/TO/openc.xml</pre>
+ </li>
+ <li>Puedes construir el componente Gecko y flashearlo en tu teléfono usando lo siguiente:
+  <pre class="brush: bash  language-html">./build.sh gecko
+./flash.sh gecko</pre>
+
+  <div class="note">
+  <p><strong>Nota: El último paso del comando flash.sh es para reiniciar el dispositivo, pero la secuencia de inicio no se completará (se congelará cuando salga el zorro animado). No te preocupes, esto es normal.</strong></p>
+  </div>
+ </li>
+ <li>Ahora puedes actualizar Gaia, para que la nueva versión de Gecko funcione con la nueva versión de Gaia en tu dispositivo :
+  <pre class="brush: bash  language-html">cd gaia
+make reset-gaia</pre>
+ </li>
+ <li>Finalmente, puede que necesites <a href="https://developer.mozilla.org/es/Firefox_OS/Guia_para_desarrollador_de_telefonos_moviles_Boot_to_Gecko_developer/ZTE_OPEN_C$edit#Font_fix">actualizar las fuentes</a>.</li>
+</ol>
+
+<div class="warning">
+<p><strong>Cuidado: Intentar flashear una imagen del Flame dejará tu móvil brickeado.</strong></p>
+</div>
+
+<p> </p>
+
+<h3 id="Actualizando_Gaia">Actualizando Gaia</h3>
+
+<p> </p>
+
+<p>Para actualizar solo Gaia, dejando Gecko solo, necesitas clonar el repositorio de Gaia desde Github, luego flashealo en tu dispositivo.</p>
+
+<ol dir="ltr">
+ <li>Asegurate de que tienes <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Installing_ADB">ADB </a>instalado.</li>
+ <li>Ve a <a href="https://github.com/mozilla-b2g/gaia">https://github.com/mozilla-b2g/gaia, </a>luego haz click en el botón "fork", situado en la esquina derecha arriba para forkearlo en tu repositorio.</li>
+ <li>Clona el código desde tu repositorio forkeado en tu escritorio ejecutando lo siguiente en tu terminal:
+  <pre class="brush: bash  language-html">git clone https://github.com/your-github-username/gaia.git</pre>
+ </li>
+ <li><code>Usa el comando cd en el directorio resultante</code>.</li>
+ <li>En tu teléfono, <a href="https://developer.mozilla.org/en-US/Firefox_OS/Debugging/Developer_settings#Debugging_via_USB">activa la depuración remota</a> (elige ADB y la opción Devtools)</li>
+ <li>Ahora conecta tu móvil al ordenador vía USB; asegurate de que es reconocido metiendo dispositivos adb en tu terminal.</li>
+ <li>Ejecuta los siguientes comandos para reiniciar tu móvil y actualiza con el nuevo código fuente de Gaia.
+  <pre class="brush: bash  language-html">make reset-gaia</pre>
+ </li>
+</ol>
+
+<h3 id="Arreglar_fuentes">Arreglar fuentes</h3>
+
+<p>Después de actualizar Gecko/Gaia, puede que encuentres diferencias entre las fuentes de Gecko y Gaia. Para arreglar esto, descarga <a href="https://people.mozilla.org/%7Emwu/fira-font-update.zip">nuestra actualización de fuentes</a>, extraelo, accede al directorio creado tras la extracción, y ejecuta el script flash.sh.                                                                                                      <br>
+ <br>
+ Otra opción es usar <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/update_system_fonts.sh">el script para actualizar las fuentes del sistema</a>, que descarga y flashea las fuentes del sistema automaticamente.</p>
+
+<h3 id="Imágenes_del_sistema">Imágenes del sistema</h3>
+
+<p>Si no quieres compilar Gecko y Gaia por ti mismo, puedes usar una imágen compabitle del Flame ofrecida por Mozilla. Siempre que tu teléfono haya sido desbloqueado con la herramienta de ZTE, puedes flashear una imágen del sistema desde el <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/">directorio de imágenes de prueba (nightly builds).</a> Este proceso borrará todos tus datos; para hacer una copia de seguridad de tu perfil de usuario usa <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/backup_restore_profile.py">este script </a>antes de flashear el nuevo sistema.</p>
+
+<p>Elige tu sabor favorito entre <em>mozilla-centra, aurora, o vanilla</em> y elige el entorno Gecko. Todas los directorios de imagen son llamados como "2014-10-06-xx-yy-zz-mozilla-<em>your_flavor</em>-<em>device_codename</em>" así que necesitarás buscar "2014-10-06-xx-yy-zz-mozilla-your_flavor-<strong>flame</strong>". La imágen de B2G que está dentro del directorio específico de Gecko tiene una versión y lenguaje básico, "b2g-34.0a2.en-US.android-arm.tar.gz" es la versión Gecko 34 y el lenguaje es inglés americano por defecto, descarga "Gaia.zip" si quieres actualizar Gaia también.</p>
+
+<p>Para flashear estos archivos en el dispositivo necesitarás un script llamado <strong>shallow_flash</strong>; puedes encontrarlo <a href="https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/shallow_flash.sh">aquí</a>, descarga el script y ejecútalo vía terminal.</p>
+
+<p>En Mac y Cygwin</p>
+
+<pre class="brush: bash  language-html">./shallow_flash.sh -g gaia.zip -G b2g-XX.XX.en-US.android-arm.tar.gz</pre>
+
+<p>En Linux</p>
+
+<pre class="brush: bash  language-html">./shallow_flash.sh -ggaia.zip -Gb2g-XX.XX.en-US.android-arm.tar.gz</pre>
+
+<p> </p>
+
+<h2 id="He_bloqueado_(brick)_mi_teléfono">He bloqueado (brick) mi teléfono</h2>
+
+<p>Si tu equipo no responde, deberías desbloquearlo (unbrick) utilizando las builds oficiales y las intrucciones para flashearlo vía tarjeta SD, en la página oficial de ZTE.</p>
+
+<ul>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/65229ec9-3165-424e-a7dd-3759356325fd.html?type=software">ZTE Open C (Ebay) - España</a></li>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/92f36c98-9cc0-42d6-8f23-8834b4a6849c.html?type=software">ZTE Open C (Ebay) - UK Estandar Americano</a></li>
+ <li><a href="http://www.ztedevices.com/support/smart_phone/46d40c52-bed4-4cdc-9df9-01719cdf0a70.html?type=software">ZTE Open C (Ebay) - UK Estándar Europeo</a></li>
+ <li><a href="http://www.ztefrance.com/assistance/">ZTE French Website - Francés</a></li>
+</ul>
+
+<p>Sin embargo, si la partición de tu sistema es defectuosa, tendrás que repararlo usando directamente el acceso fastboot. Asumiendo que estás utilizando Ubuntu GNU/Linux:</p>
+
+<ol>
+ <li>Descarga la<a href="download.ztedevice.com/UpLoadFiles/product/550/4443/soft/2014061214153128.zip"> imágen del sistema de recuperación </a>desde la página de soporte de ZTE y extrae el archivo update.zip en tu escritorio.</li>
+ <li>Extrae el archivo recovery.img desde update.zip.</li>
+ <li>Crea un directorio small-system/ en el escritorio y copia dentro el archivo <strong>build.prop</strong>, y los directorios <strong>lib/ </strong>y <strong>bin/ </strong>que encontrarás en el archivo update.zip.</li>
+ <li>Instala el paquete <code>android-tools-fsutils</code> ( o instala <code><a href="http://forum.xda-developers.com/attachment.php?attachmentid=2431494&amp;d=1386115975">ext4_utils</a></code> desde la fuente en <a href="http://forum.xda-developers.com/galaxy-s2/general/ref-unpacking-repacking-stock-rom-img-t1081239">XDAdevelopers</a>.</li>
+ <li>Crea tu  <code>small-system.img</code>:
+  <pre class="brush: bash  language-html">./make_ext4fs -l 40M small-system.img ~/Desktop/small-system/</pre>
+ </li>
+ <li>Mueve el archivo small-system.img a tu escritorio y enciende el dispositivo en modo <em>fastboot</em> presionando el botón <em>power y el botón de bajar volumen</em> a la vez.</li>
+ <li>Conecta el dispositivo a tu ordenador (los dispositivos fastboot se deberían mostrar) y flasea small-system.img
+  <pre class="brush: bash  language-html">fastboot flash system small-system.img</pre>
+ </li>
+ <li>Entonces enciende el móvil en modo <em>recovery</em> usando recovery.img:
+  <pre class="brush: bash  language-html">fastboot boot recovery.img</pre>
+ </li>
+ <li>En el menú de booteo, selecciona la entrada <em>apply udate from ADB</em> (usando <em>volúmen arriba</em> y <em>volumen abajo</em> para navegar y <em>power</em> para seleccionar) y entonces:
+  <pre class="brush: bash  language-html">adb sideload update.zip</pre>
+ </li>
+ <li>
+  <p class="brush: bash  language-html">Al finalizar el proceso, sólo tienes que reiniciar tu dispositivo.</p>
+ </li>
+</ol>
+
+<div class="note">
+<p><strong>Nota: Puedes hacer <a href="https://support.mozilla.org/en-US/questions/1003136">referencia a esta entrada de soporte </a>para más información.</strong></p>
+</div>

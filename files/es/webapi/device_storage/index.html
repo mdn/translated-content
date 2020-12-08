@@ -1,0 +1,226 @@
+---
+title: Device Storage API
+slug: WebAPI/Device_Storage
+translation_of: Archive/B2G_OS/API/Device_Storage_API
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('privileged') }}</p>
+<h2 id="Resumen">Resumen</h2>
+<p>La API de Device Storage es usada para acceder al sistema de archivos dentro de una aplicación Web. Acceder al sistema de archivos puede ser muy susceptible, por ese motivo, esta API está disponible sólo para aplicaciones con privilegios.</p>
+<div class="note">
+  <p><strong>Nota:</strong> El acceso a un dispositivo de almacenamiento es lento debido a la limitación en el nivel físico. En muchos casos puede resultar más rápido usar una base de datos <a href="/en-US/docs/IndexedDB" title="/en-US/docs/IndexedDB">IndexedDB</a> para almacenar archivos en lugar del dispositivo de almacenamiento físico.</p>
+</div>
+<h2 id="Acceso_a_un_almacenamiento">Acceso a un almacenamiento</h2>
+<h3 id="Punto_de_entrada">Punto de entrada</h3>
+<p>Es posible acceder a un área de almacenamiento usando el método {{domxref("window.navigator.getDeviceStorage()","navigator.getDeviceStorage()")}}. Acepta un parámetro de cadena que representa el nombre del alamacenamiento al cual se quiere tener acceso. El método devuelve un objeto {{domxref("DeviceStorage")}} que es usado para acceder al área de almacenamiento relacionada.</p>
+<p>Firefox OS proporciona el siguiente nombre de almacenamiento:</p>
+<ul>
+  <li><code>apps</code>: Esta área de almacenamiento es usada para almacenar los datos de usuario necesarios para las aplicaciones. Como se trata de datos confidenciales, acceder a esta área de almacenamiento requiere algunos privilegios extra y está disponible sólamente para aplicaciones certificadas.</li>
+  <li><code>music</code>: Esta es el área de almacenamiento donde son almacenados música y sonidos.</li>
+  <li><code>pictures</code>: Esta es el área de almacenamiento donde se almacenan las fotos.</li>
+  <li><code>sdcard</code>: Esta es el área de almacenamiento que brinda acceso al SDCard del dispositivo.</li>
+  <li><code>videos</code>: Esta es el área de almacenamiento donde son almacenados los videos.</li>
+</ul>
+<pre class="brush: js">var pics = navigator.getDeviceStorage('pictures');</pre>
+<p>Para ser capaz de usar cada una de las áreas de almacenamiento, la aplicación debe declararlas en su archivo de manifiesto. Por ejemplo, si la aplicación quiere acceder al área de almacenamiento de la <code>sdcard</code>, debe tener el permiso "<code>device-storage:sdcard</code>" en su manifiesto.</p>
+<pre class="brush: js">"permissions": {
+  "device-storage:videos":{ "access": "readonly" },
+  "device-storage:pictures":{ "access": "readwrite" }
+}</pre>
+<h2 id="El_uso_de_un_almacenamiento">El uso de un almacenamiento</h2>
+<p>Una vez que una aplicación tenga acceso de un área de almacenamiento, es posible agregar, obtener y eliminar archivos dentro del área.</p>
+<h3 id="Agregar_un_archivo">Agregar un archivo</h3>
+<p>Se puede agregar una archivo utilizando el método {{domxref("DeviceStorage.addNamed()","addNamed")}} o {{domxref("DeviceStorage.add()","add")}}. La primera permite establecer un nombre explícito para guardar un archivo mientras que la segunda crea un nombre automáticamente cuando se guarda el archivo. Ambos nombres son asíncronos y devuelven un objeto {{domxref("DOMRequest")}} para manejar el <code>success</code> o <code>error</code> de la operación. Esto debe considerar importante que tanto agregar, escribir y leer archivos en un soporte físico es un proceso lento.</p>
+<p>Esos dos métodos esperan un {{domxref("Blob")}} como su primer parámetro. Este objeto será convertido en un archivo y almacenado. Al crear un objeto {{domxref("Blob")}}, es obligatorio darle un tipo. Este tipo, que es un mime type, es importante porque algunas áreas de almacenamiento tienen restricciones basadas en el tipo:</p>
+<ul>
+  <li><code>music</code> sólo acepta el {{domxref("Blob")}} con un mime type válido de audio</li>
+  <li><code>pictures</code> sólo acepta el {{domxref("Blob")}} con un mime type válido de imagen</li>
+  <li><code>videos</code> sólo acepta el {{domxref("Blob")}} con un mime type válido de video</li>
+</ul>
+<pre class="brush: js">var sdcard = navigator.getDeviceStorage("sdcard");
+var file   = new Blob(["Este es un archivo de texto."], {type: "text/plain"});
+
+var request = sdcard.addNamed(file, "mi-archivo.txt");
+
+request.onsuccess = function () {
+  var name = this.result.name;
+  console.log('El archivo "' + name + '" se escribió correctamente en el área de almacenamiento sdcard');
+}
+
+// Un error suele producirse si un archivo con el mismo nombre ya existe
+request.onerror = function () {
+  console.warn('No se puede escribir el archivo: ' + this.error);
+}
+</pre>
+<div class="note">
+  <p><strong>Nota:</strong> El repositorio en un área de almacenamiento está implícito. No es posible crear explícitamente un repositorio vacío. Si quiere usar una estructura de repositorio tiene que hacerlo parte del nombre del archivo a almacenar. Así que si quiere almacenar el archivo <code>bar</code> dentro del repositorio <code>foo</code>, tiene que usar el método {{domxref("DeviceStorage.addNamed()","addNamed")}} con el nombre completo de la ruta del archivo <code>addNamed(<em>blob</em>, "foo/bar")</code>. Esto también se aplica cuando quiere recuperar un archivo con su nombre (véase más adelante).</p>
+  <p>Como el archivo es agregado en un área de almacenamiento restringido por razones de seguridad, un nombre de ruta de archivo no puede empezar con "<code>/</code>" ni "<code>../</code>" (y "<code>./</code>" no tiene sentido).</p>
+</div>
+<h3 id="Obtener_un_archivo">Obtener un archivo</h3>
+<p>Se puede recuperar un archivo de dos maneras: usando su nombre o iterando toda la lista de archivos.</p>
+<p>La manera más fácil es recuperar un archivo por su nombre usando los métodos {{domxref("DeviceStorage.get()","get")}} y {{domxref("DeviceStorage.getEditable","getEditable")}}. La primera proporciona un objeto {{domxref("File")}} (que actúa como un archivo de sólo lectura) mientras que la segunda proporciona un objeto {{domxref("FileHandle")}} (que permite actualizar el archivo subyacente). Ambos métodos son asíncronos y devuelven un objeto {{domxref("DOMRequest")}} para manejar el <code>success</code> o <code>error</code> de la operación.</p>
+<pre class="brush: js">var sdcard = navigator.getDeviceStorage('sdcard');
+
+var request = sdcard.get("mi-archivo.txt");
+
+request.onsuccess = function () {
+  var file = this.result;
+  console.log("Obtenido el archivo: " + file.name);
+}
+
+request.onerror = function () {
+  console.warn("No se puede obtener el archivo: " + this.error);
+}
+</pre>
+<p>La otra forma de recuperar archivos es explorar el contenido del área de almacenamiento. Esto es posible usando los métodos {{domxref("DeviceStorage.enumerate()","enumerate")}} y {{domxref("DeviceStorage.enumerateEditable()","enumerateEditable")}}. El primero proporciona objetos {{domxref("File")}} mientras que el segundo proporciona objetos {{domxref("FileHandle")}}. Ambos métodos son asíncronos y devuelven un objeto {{domxref("DOMCursor")}} para recorrer a lo largo de la lista de archivos. Un {{domxref("DOMCursor")}} es nada menos que un objeto {{domxref("DOMRequest")}} con potencia extra para recorrer a lo largo de la lista de cosas (archivos en ese caso) en forma asíncrona.</p>
+<pre class="brush: js">var pics = navigator.getDeviceStorage('pictures');
+
+// Exploremos todas las imágenes disponibles
+var cursor = pics.enumerate();
+
+cursor.onsuccess = function () {
+  var file = this.result;
+  console.log("Archivo encontrado: " + file.name);
+
+  // Una vez que encontremos el archivo verifiquemos si hay otros resultados
+  if (!this.done) {
+    // Entonces nos movemos al siguiente resultado, que llama al cursor
+    // success con el siguiente archivo como resultado.
+    this.continue();
+  }
+}
+
+cursor.onerror = function () {
+  console.warn("Archivo no encontrado: " + this.error);
+}
+</pre>
+<p>Es posible limitar el número de resultados pasando dos parámetros opcionales a los m´todos {{domxref("DeviceStorage.enumerate()","enumerate")}} y {{domxref("DeviceStorage.enumerateEditable()","enumerateEditable")}}.</p>
+<p>El primer parámetro puede ser una cadena que representa una subcarpeta para buscar dentro.</p>
+<p>El segundo parámetro puede ser un objeto con una propiedad <code>since</code>, que permite limitar la búsqueda a un determinado periodo de tiempo.</p>
+<pre class="brush: js">var pics = navigator.getDeviceStorage('pictures');
+
+// Recuperamos fotos de la semana pasada
+var param = {
+  since: new Date((+new Date()) - 7*24*60*60*1000)
+}
+
+var cursor = pics.enumerate(param);
+
+cursor.onsuccess = function () {
+  var file = this.result;
+  console.log("Foto tomada en: " + file.<code class="language-js">lastModifiedDate</code>);
+
+  if (!this.done) {
+    this.continue();
+  }
+}
+</pre>
+<h3 id="Eliminar_un_archivo">Eliminar un archivo</h3>
+<p>Un archivo se puede eliminar del área de almacenamiento usando simplemente el método {{domxref("DeviceStorage.delete()","delete")}}. Este método sólo necesita el nombre del archivo a eliminar. Como todos los demás métodos de la interfaz {{domxref("DeviceStorage")}}, este también es asíncrono y devuelve un objeto {{domxref("DOMRequest")}} para manejar el <code>success</code> o <code>error</code> de la operación.</p>
+<pre class="brush: js">var sdcard = navigator.getDeviceStorage('sdcard');
+
+var request = sdcard.delete("mi-archivo.txt");
+
+request.onsuccess = function () {
+  console.log("Archivo eliminado");
+}
+
+request.onerror = function () {
+  console.log("No se puede eliminar el archivo: " + this.error);
+}
+</pre>
+<h2 id="Información_de_almacenamiento">Información de almacenamiento</h2>
+<p>Además de acceder a los archivos, un área de almacenamiento proporciona algunos métodos para obtener fácilmente información importante.</p>
+<h3 id="Espacio_disponible">Espacio disponible</h3>
+<p>Una de las cosas más importantes a saber cuando se almacenan archivos en un dispositivo es la cantidad de espacio disponible. La interfaz {{domxref("DeviceStorage")}} proporciona tres funciones útiles dedicadas al espacio:</p>
+<ul>
+  <li>{{domxref("DeviceStorage.freeSpace()","freeSpace()")}} para obtener la cantidad de espacio libre disponible para almacenar nuevos archivos;</li>
+  <li>{{domxref("DeviceStorage.freeSpace()","usedSpace()")}} para obtener la cantidad de espacio utilizado para almacenar archivos;</li>
+  <li>{{domxref("DeviceStorage.available()","available()")}} para obtener la cantidad total de espacio dedicado al área de almacenamiento.</li>
+</ul>
+<p>Como esos métodos son asíncronos, devuelven un objeto {{domxref("DOMRequest")}} para manejar los success o error de la operación.</p>
+<pre class="brush: js">var videos = navigator.getDeviceStorage('videos');
+
+var request = videos.usedSpace();
+
+request.onsuccess = function () {
+  // El resultado es expresado en bytes, permite convertirlo en megabytes
+  var size = this.result / 1000000;
+
+  console.log("Los videos en tu dispositivo ocupan un total de " + size.toFixed(2) + "Mb de espacio.");
+}
+
+request.onerror = function () {
+  console.warn("No se puede obtener el espacio utilizado por videos: " + this.error);
+}
+</pre>
+<h3 id="Escuchar_los_cambios">Escuchar los cambios</h3>
+<p>Como muchas aplicaciones pueden usar un mismo área de almacenamiento al mismo tiempo, a veces es útil para una aplicación ser consciente de un cambio en ese área de almacenamiento. También es útil para una aplicación que quiere realizar la acción asíncrona sin la retransmisión de todos los objetos {{domxref("DOMRequest")}} que devuelven por cada método de la interfaz {{domxref("DeviceStorage")}}.</p>
+<p>Para ese fin, un evento {{event("change")}} se activa cada vez que se crea, modifica o elimina un archivo. Este evento se puede capturar usando la propiedad {{domxref("DeviceStorage.onchange","onchange")}} o el método {{domxref("EventTarget.addEventListener()","addEventListener()")}}. El controlador de eventos recibe un objeto {{domxref("DeviceStorageChangeEvent")}} que es un objeto {{domxref("Event")}} regular con dos propiedades adicionales:</p>
+<ul>
+  <li>{{domxref("DeviceStorageChangeEvent.reason")}} que da la razón del cambio (<code>created</code>, <code>modified</code> o <code>deleted</code>)</li>
+  <li>{{domxref("DeviceStorageChangeEvent.path")}} que brinda la ruta completa del archivo afectado por el cambio.</li>
+</ul>
+<pre class="brush: js">var sdcard = navigator.getDeviceStorage('sdcard');
+
+sdcard.onchange = function (change) {
+  var reason = change.reason;
+  var path   = change.path;
+
+  console.log('El archivo "' + path + '" ha sido ' + reason);
+}
+</pre>
+<h2 id="Especificación">Especificación</h2>
+<p>No es parte de ninguna especificación.</p>
+<h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
+<p>{{ CompatibilityTable() }}</p>
+<div id="compat-desktop">
+  <table class="compat-table">
+    <tbody>
+      <tr>
+        <th>Característica</th>
+        <th>Chrome</th>
+        <th>Firefox (Gecko)</th>
+        <th>Internet Explorer</th>
+        <th>Opera</th>
+        <th>Safari</th>
+      </tr>
+      <tr>
+        <td>Soporte básico</td>
+        <td>{{ CompatUnknown() }}</td>
+        <td>{{ CompatUnknown() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div id="compat-mobile">
+  <table class="compat-table">
+    <tbody>
+      <tr>
+        <th>Característica</th>
+        <th>Android</th>
+        <th>Firefox Mobile (Gecko)</th>
+        <th>IE Mobile</th>
+        <th>Opera Mobile</th>
+        <th>Safari Mobile</th>
+      </tr>
+      <tr>
+        <td>Soporte básico</td>
+        <td>{{ CompatUnknown() }}</td>
+        <td>{{ CompatUnknown() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2 id="Véase_también">Véase también</h2>
+<ul>
+  <li>{{domxref("window.navigator.getDeviceStorage()","navigator.getDeviceStorage()")}}</li>
+  <li>{{domxref("DeviceStorage")}}</li>
+  <li>{{domxref("DeviceStorageChangeEvent")}}</li>
+</ul>

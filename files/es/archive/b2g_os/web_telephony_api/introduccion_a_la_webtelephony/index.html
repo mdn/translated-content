@@ -1,0 +1,64 @@
+---
+title: Introducción a la WebTelephony
+slug: Archive/B2G_OS/Web_Telephony_API/Introduccion_a_la_WebTelephony
+translation_of: Archive/B2G_OS/Web_Telephony_API/Using_the_Web_Telephony_API
+---
+<p><span id="result_box" lang="es"><span class="hps">La base</span> <span class="hps">de acceder a la</span> <span class="hps">funcionalidad del teléfono</span> <span class="hps">es</span> <span class="hps">simplemente a través de</span> <code>navigator.mozTelephony</code><span>,</span> <span class="hps">que es</span> <span class="hps">parte de la <a class="link-https" href="https://wiki.mozilla.org/WebAPI/WebTelephony">WebTelephony API</a></span><span>.</span> <span class="hps">Una vez que tenga</span> <span class="hps">una referencia a</span> <span class="hps">ese objeto</span> <span class="hps">se puede</span> <span class="hps">empezar a hacer</span> <span class="hps">y</span> <span class="hps">de recibir</span> <span class="hps">llamadas.</span> <span class="hps">Aquí hay algunos</span> <span class="hps">ejemplos</span><span>:</span></span></p>
+<pre class="brush: js">// Objeto telephony
+var tel = navigator.mozTelephony;
+
+// <span id="result_box" lang="es"><span class="hps">Comprueba</span> <span class="hps">si el teléfono</span> <span class="hps">está silenciado</span> <span class="hps atn">(</span><span>propiedad</span> <span class="hps">de lectura/escritura)</span></span>
+console.log(tel.muted);
+
+// <span id="result_box" lang="es"><span class="hps">Comprueba si el</span> <span class="hps">altavoz</span> <span class="hps">está activado</span> <span class="hps atn">(</span><span>propiedad</span> de lectura<span class="hps">/escritura)</span></span>
+console.log(tel.speakerEnabled);
+
+// <span class="short_text" id="result_box" lang="es"><span class="hps">Realizar una llamada</span></span>
+var call = tel.dial("123456789");
+
+// <span class="short_text" id="result_box" lang="es"><span class="hps">Eventos para</span> <span class="hps">esa llamada</span></span>
+call.onstatechange = function (event) {
+    /*
+        Valores posibles del estado:
+        "dialing", "ringing", "busy", "connecting", "connected",
+        "disconnecting", "disconnected", "incoming"
+    */
+    console.log(event.state);
+};
+
+// <span class="short_text" id="result_box" lang="es"><span class="hps">Opciones anteriores</span> <span class="hps">como eventos</span> <span class="hps">directos</span></span>
+
+      // Conectar llamada
+       call.onconnected = function ();
+
+      // Desconectar llamada
+      call.ondisconnected = function ();
+
+      // Resivir una llamada
+      tel.onincoming = function (event) {
+      var incomingCall = event.call;
+
+    // <span class="short_text" id="result_box" lang="es"><span class="hps">Obtener el</span> <span class="hps">número de</span> <span class="hps">la llamada entrante</span></span>
+    console.log(incomingCall.number);
+
+    // <span class="short_text" id="result_box" lang="es"><span class="hps">Responder a la llamada</span></span>
+    incomingCall.answer();
+};
+
+// Desconectar llamada
+call.hangUp();
+
+
+// <span id="result_box" lang="es"><span class="hps">Iteración</span> <span class="hps">sobre las llamadas</span><span>,</span> <span class="hps">y</span> <span class="hps">la adopción de medidas</span> <span class="hps">en función de su</span> <span class="hps">estado de cambiado</span></span>
+tel.oncallschanged = function (event) {
+    tel.calls.forEach(function (call) {
+        // Registrar el estado de cada llamada
+        console.log(call.state);
+    });
+};
+</pre>
+<h2 id="Ver_también">Ver también</h2>
+<ul>
+ <li><a href="/en-US/docs/Web/Guide/Telephony">WebTelephony</a></li>
+ <li><a class="link-https" href="https://wiki.mozilla.org/WebAPI/WebTelephony" title="https://wiki.mozilla.org/WebAPI/WebTelephony">WebTelephony API</a> (<span class="short_text" id="result_box" lang="es"><span class="hps">documento en diseño</span></span>)</li>
+</ul>

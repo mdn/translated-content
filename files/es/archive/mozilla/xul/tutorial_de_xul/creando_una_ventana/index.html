@@ -1,0 +1,105 @@
+---
+title: Creando una ventana
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Creando_una_ventana
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_a_Window
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Archivos_Manifest" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Añadiendo_botones">Siguiente  »</a></p>
+</div>
+
+<h3 id="Creando_un_archivo_XUL" name="Creando_un_archivo_XUL">Creando un archivo XUL</h3>
+
+<p>Un archivo XUL puede tener cualquier nombre, pero debería tener una extensión .xul. El archivo XUL más simple tiene la siguiente estructura:</p>
+
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window
+    id="findfile-window"
+    title="Find Files"
+    orient="horizontal"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+&lt;!-- Otros elementos irán aquí --&gt;
+&lt;/window&gt;
+</pre>
+
+<p>Esta ventana no hará nada, ya que no contiene ningún elemento UI (Interfaz de Usuario), éstos serán añadidos en la siguiente sección. A continuación veremos línea por línea el código de arriba:</p>
+
+<ol>
+ <li><strong>&lt;?xml version="1.0"?&gt;</strong><br>
+  Esta línea simplemente define que éste es un archivo XML, normalmente deberíamos añadir esta línea al inicio de cada fichero xul, al igual que pondríamos la etiqueta HTML al principio de un archivo HTML.</li>
+ <li><strong>&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;</strong><br>
+  Esta línea se usa para especificar la hoja de estilos a utilizar por el archivo, y es la sintaxis que los ficheros XML utilizan para importar hojas de estilo. En este caso, nosotros importaremos los estilos ubicados en el apartado global de un paquete de temas. No especificaremos ningún fichero así Mozilla determinará que ficheros del directorio utilizar. En este caso, el todo-importante fichero global.css es seleccionado. Este fichero contiene todas las declaraciones por defecto para todos los elementos XUL. Como XML no sabe cuantos elementos debe visualizar, el fichero lo indica. Generalmente, deberemos poner esta línea en la parte superior de cada archivo XUL. También podemos importar otra hoja de estilos utilizando una sintaxis parecida. Normalmente importamos la hoja de estilo global desde dentro de nuestro archivo de estilos.</li>
+ <li><strong>&lt;window</strong><br>
+  Esta línea declara que estamos describiendo una <a href="es/XUL/Elementos">window</a>. Cada ventana de la interfaz de usuario es descrita en un fichero por separado. Esta etiqueta es parecida a la etiqueta BODY en HTML que engloba todo el contenido. Los atributos de la ventana serán colocados aquí, en este caso hay cuatro. En el ejemplo cada atributo es colocado en una línea distinta pero esto no debe ser hacer necesariamente.</li>
+ <li><strong>id="findfile-window"</strong><br>
+  El atributo <code><a href="es/XUL/Atributos">id</a></code> es usado como un identificador, de esta manera la ventana puede ser llamada desde scripts. Usualmente colocarás el atributo <code>id</code> a todos los elementos. El nombre lo eliges tú.</li>
+ <li><strong>title="Find Files"</strong><br>
+  Este atributo muestra el texto que aparecerá en la barra de títulos cuando se muestre la ventana. En el ejemplo aparecerá "Find Files".</li>
+ <li><strong>orient="horizontal"</strong><br>
+  Este atributo indica el orden de los ítems dentro de la ventana. El valor <code>horizontal</code> indica que los ítems serán colocados a través de la ventana. También puedes usar el valor <code> vertical</code> que ordenará los ítems en una columna. Este es el valor por defecto, asi que tal vez desees no utilizar este atributo si deseas mostrar los datos en columnas.</li>
+ <li><strong>xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;</strong><br>
+  Esta línea declara el nombre para XUL, que deberías colocar dentro de la etiqueta window para indicar que todo eso es XUL. Esta dirección no será descargada, Mozilla la reconocerá internamente.</li>
+ <li><strong><span class="nowiki">&lt;!-- Otros elementos van aquí --&gt;</span></strong><br>
+  Escribe en este bloque otros elementos (botones, menúes, y otros componentes de interfaz) que aparecen en la ventana. Pondremos algo de eso en el siguiente tomo de la sección..</li>
+ <li><strong>&lt;/window&gt;</strong><br>
+  Finalmente, debemos cerrar la etiqueta al final del fichero.</li>
+</ol>
+
+<h3 id="Abriendo_una_ventana" name="Abriendo_una_ventana">Abriendo una ventana</h3>
+
+<p>Al fin de abrir una ventana XUL, varios métodos son aplicables. Si se está solo en el estado del desarrollo, se puede escribir la URL (empezando con chrome:, file: o cualquier otro tipo de URL) en la barra de dirección de Mozilla. También se puede hacer doble clic sobre el archivo en la pantalla 'Abrir archivo', suponiendo que los archivos XUL están asociados a Mozilla. La ventana XUL aparecerá en la ventana del navegador en lugar de en una nueva ventana, pero suele ser suficiente durante los principios del desarrollo.</p>
+
+<p>El camino correcto, naturalmente, es de abrir la ventana utilizando a JavaScript. No es necesaria una sintaxis nueva se puede usar la función <a href="es/DOM/window.open">window.open()</a> igual que para los documentos <a href="es/HTML">HTML</a>. Aún así, una opción adicional, llamada 'chrome' es necesaria para indicar al navegador que el documento a abrir es <a href="es/DOM/window.open">chrome</a>. Ésta se abrirá sin barra de herramientas, ni menúes o cualquier otra cosa de las que suele tener de normal un navegador. La sintaxis se describe a continuación:</p>
+
+<pre>window.open(url,windowname,flags);
+
+donde el argumento 'flags' contiene "chrome" como en este ejemplo:
+
+window.open("chrome://navigator/content/navigator.xul", "bmarks", "chrome,width=600,height=300");
+</pre>
+
+<div class="highlight">
+<h5 id="Nuestro_ejemplo_de_b.C3.BAsqueda" name="Nuestro_ejemplo_de_b.C3.BAsqueda">Nuestro ejemplo de búsqueda</h5>
+
+<p>Empezaremos por crear el archivo básico para el dialogo de búsqueda. Lo llamaremos 'findfile.xul' y lo pondremos en el directorio especificado en el archivo 'findfile.manifest' (el cual hemos creado en la sección anterior). Ponerle la plantilla mostrada arriba de esta página y guardarlo.</p>
+</div>
+
+<p>Podemos usar el parámetro en línea de comando '-chrome' para especificar que archivo XUL tendrá que abrir Mozilla al empezar. Si no se ha especificado, la ventana por defecto será abierta (habitualmente la ventana del navegador). Por ejemplo, podríamos abrir el dialogo de búsqueda con una de las siguientes órdenes:</p>
+
+<pre>mozilla -chrome chrome://findfile/content/findfile.xul
+
+mozilla -chrome resource:/chrome/findfile/content/findfile.xul
+</pre>
+
+<p>Si utilizamos esta orden en línea (suponiendo que se pueda hacer en nuestra plataforma), el dialogo de búsqueda de archivo será abierto por defecto en lugar de la ventana de Mozilla. Pero como no hemos puesto ningún elemento gráfico, no la veremos. Colocaremos algunos elementos en la sección siguiente.</p>
+
+<p>Para ver aún así el efecto, lo siguiente abrirá la ventana de marcadores:</p>
+
+<pre class="eval"><span class="highlightred">Para Mozilla</span>
+mozilla -chrome <a class="external" rel="freelink">chrome://communicator/content/bookma...rksManager.xul</a>
+
+<span class="highlightred">Para Firefox</span>
+firefox -chrome <a class="external" rel="freelink">chrome://browser/content/bookmarks/b...rksManager.xul</a>
+</pre>
+
+<p>El argumento '-chrome' no da al archivo ningún privilegio adicional. En su lugar, causa que el archivo especificado se abra como una ventana en el nivel superior sin ningun atributo del browser chrome, como el campo de direcciones o menus. Solo las URLs chrome tienen privilegios adicionales.</p>
+
+<div class="note">Para escribir y ver inmediatamente los resultados en Mozilla, puede probar con <a class="external" href="http://ted.mielczarek.org/code/mozilla/extensiondev/">este editor XUL</a>.</div>
+
+<h3 id="Problemas" name="Problemas">Problemas</h3>
+
+<ul>
+ <li>Si la ventana XUL no se muestra en el escritorio pero tiene un icono en la barra de tareas, revisaremos la declaración 'xml-stylesheet'. Nos aseguraremos de haber incluido correctamente la hoja de estilo:</li>
+</ul>
+
+<pre class="eval"> &lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+</pre>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Archivos_Manifest" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Añadiendo_botones">Siguiente  »</a></p>
+</div>

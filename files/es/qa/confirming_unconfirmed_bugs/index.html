@@ -1,0 +1,44 @@
+---
+title: Confirmando bugs sin confirmar
+slug: QA/Confirming_unconfirmed_bugs
+translation_of: Mozilla/QA/Confirming_unconfirmed_bugs
+---
+<p>Los bugs que son de nuevos reporteros van a estar inicialmente marcados como SIN CONFIRMAR. Para cambiar un bug de SIN CONFIRMAR a NUEVO, necesitaremos tu ayuda para verificar si este es válido. Un bug puede ser movido de SIN CONFIRMAR a NUEVO si:</p>
+<ul>
+ <li>Está bien reportado, según los <a href="/En/Bug_writing_guidelines" title="En/Bug writing guidelines">Lineamientos para la Redacción de Bugs</a>.</li>
+ <li>Es reportado sobre una versión actual (versión fechada en las últimas tres semanas).</li>
+ <li>No es una copia de uno de los Bugs <a class="link-https" href="https://bugzilla.mozilla.org/duplicates.cgi">Frecuentemente Reportados</a>.</li>
+</ul>
+<p>Nota: No es necesario que puedas reproducir el bug para poder confirmarlo.</p>
+<p>Para ayudar a confirmar bugs, tienes que hacer lo siguiente:</p>
+<h2 id="Get_Set_Up" name="Get_Set_Up">Consigue configurar</h2>
+<ul>
+ <li>Descarga la <a class="external" href="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/">Última Versión de Firefox </a>. </li>
+ <li>Revisa una de las siguientes listas de bugs SIN CONFIRMAR-  <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_severity=blocker;bug_severity=critical;bug_severity=major;resolution=---;op_sys=Linux;query_format=advanced;bug_status=UNCONFIRMED;product=Firefox;list_id=3438245" title="https://bugzilla.mozilla.org/buglist.cgi?bug_severity=blocker;bug_severity=critical;bug_severity=major;resolution=---;op_sys=Linux;query_format=advanced;bug_status=UNCONFIRMED;product=Firefox;list_id=3438245">Sólo Linux</a> - <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&amp;rep_platform=Macintosh&amp;op_sys=Mac+OS+X&amp;product=suite,firefox,thunderbird,toolkit,core">Sólo PPC Mac </a>-  <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&amp;rep_platform=PC&amp;op_sys=Mac+OS+X&amp;product=suite,firefox,thunderbird,toolkit,core">Sólo Intel Mac</a> - <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_severity=blocker;bug_severity=critical;bug_severity=major;resolution=---;op_sys=Windows%20NT;op_sys=Windows%202000;op_sys=Windows%20XP;op_sys=Windows%20Server%202003;op_sys=Windows%20Server%202008;op_sys=Windows%20Vista;op_sys=Windows%207;op_sys=Windows%208;op_sys=Windows%208%20Metro;query_format=advanced;bug_status=UNCONFIRMED;product=Firefox;list_id=3438239" title="https://bugzilla.mozilla.org/buglist.cgi?bug_severity=blocker;bug_severity=critical;bug_severity=major;resolution=---;op_sys=Windows%20NT;op_sys=Windows%202000;op_sys=Windows%20XP;op_sys=Windows%20Server%202003;op_sys=Windows%20Server%202008;op_sys=Windows%20Vista;op_sys=Windows%207;op_sys=Windows%208;op_sys=Windows%208%20Metro;query_format=advanced;bug_status=UNCONFIRMED;product=Firefox;list_id=3438239">Sólo Windows</a> - <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_severity=blocker;bug_severity=critical;bug_severity=major;resolution=---;op_sys=All;query_format=advanced;bug_status=UNCONFIRMED;product=Firefox;list_id=3438253" title="https://bugzilla.mozilla.org/buglist.cgi?bug_severity=blocker;bug_severity=critical;bug_severity=major;resolution=---;op_sys=All;query_format=advanced;bug_status=UNCONFIRMED;product=Firefox;list_id=3438253">Todos</a> (notar que "Todos" no significa bugs sin confirmar reportados en la "Plataforma: Todos", sino que significa cada bug inconfirmado).</li>
+ <li>Por favor revisa primero la lista de bugs que correspondan a tu plataforma. Es recomendable clickear en el botón "Sev" para ordenar por orden de severidad. </li>
+</ul>
+<p>Es recomendable usar los links Atrás/Adelante (Back/Forward) para moverse dentro de las listas, en vez de recargarlas cada vez que quieras buscar un nuevo bug.</p>
+<h2 id="Get_the_Right_Privileges" name="Get_the_Right_Privileges">Consigue los privilegios adecuados</h2>
+<p>Para poder confirmar los bugs necesitas el privilegio "Puedes confirmar".</p>
+<p>Si has sido activo en Bugzilla, lo mas seguro es que tengas este privilegio. Revisa tus <a class="link-https" href="https://bugzilla.mozilla.org/userprefs.cgi?tab=permissions" style="line-height: 1.5;" title="https://bugzilla.mozilla.org/userprefs.cgi?tab=permissions">Preferencias en Bugzilla</a>. Si tus permisos dicen "Puedes confirmar un bug" ("Can confirm a bug"), entonces estas listo. </p>
+<p>Si no tienes este privilegio, entonces puedes solicitarlo siguiendo <a href="https://bugzilla.mozilla.org/page.cgi?id=get_permissions.html" style="line-height: 1.5;" title="https://bugzilla.mozilla.org/page.cgi?id=get_permissions.html">estos pasos</a>.</p>
+<h2 id="Confirm_the_Unconfirmed" name="Confirm_the_Unconfirmed">Confirma lo inconfirmado</h2>
+<p>1. <strong>Intenta determinar si el bug se encuentra duplicado.</strong> Use <a class="link-https" href="https://bugzilla.mozilla.org/query.cgi">este método</a> para buscar en la base de datos. </p>
+<p>2. <strong>Intente reproducir el bug.</strong>Si es posible reproducir el bug, entonces anota el hecho de que puedes reproducirlo, y agrega este comentario al campo de <strong>Comentarios Adicionales:</strong></p>
+<pre class="eval">1. Tu versión de Mozilla (el título de la barra del navegador)
+2. Tu plataforma
+3. Tu sistema operativo
+</pre>
+<p>Si no puedes reproducir el bug, entonces anota en los comentarios de que intentaste reproducirlo y no pudiste. Si otros también están de acuerdo de que el bug es irreproducible, puedes marcarlo como INVÁLIDO (INVALID) o WORKSFORME, y decirle al que lo reportó que lo reabra si puede proporcionar pasos para reproducirlo en la nueva versión. Un texto ejemplo para los problemas coumunes de bugs puede ser encontrado al fondo de <a class="external" href="http://www-archive.mozilla.org/quality/browser/prescreening.html" style="line-height: 1.5; text-decoration: underline;">esta</a> página.</p>
+<p>3. <strong>Has que el bug sea fácil de entender.</strong>Mira los<span style="line-height: 1.5;"> </span><a href="/En/Bug_writing_guidelines" style="line-height: 1.5;" title="En/Bug writing guidelines">lineamientos para la Redacción de Bugs</a> para saber el tipo de información que es de ayuda en un bug, incluyendo pasos para la reproducción y una buena descripción.</p>
+<p>4. <strong>Verifica el Producto y el Componente.</strong> Si el reporte de bug es clasificado incorrectamente, muévelo hacia el correcto Producto y Componente. Asegúrate de clickear en el botón que dice "reasignar el bug al dueño del componente seleccionado" ("reassign the bug to owner of the selected component.")</p>
+<p>5. <strong>Verifica el resumen del bug.</strong> Actualiza el resumen para que sea descriptivo, y contenga las suficientes palabras claves para que las personas que lo busquen lo encuentren.</p>
+<p>6. <strong>Cambia el estatus a NUEVO.</strong> Deberías confirmar un bug cuando <em>no está en el Componente general.</em></p>
+<h2 id="Optional.2C_but_Helpful" name="Optional.2C_but_Helpful">Opcional, pero de ayuda</h2>
+<ul>
+ <li><strong>Agrega Palabras Clave.</strong> Si estas familiarizado con las <a class="link-https" href="https://bugzilla.mozilla.org/describekeywords.cgi">palabras claves y sus significados</a>, por favor agrega las palabras claves que consideres correctas.</li>
+ <li><strong>Actualiza la <strong><a class="link-https" href="https://bugzilla.mozilla.org/page.cgi?id=fields.html#bug_severity" style="text-decoration: underline;">severidad</a> </strong></strong>según corresponda con las pautas de Bugzilla.</li>
+ <li><strong>Agrega un seguimiento de pila (<strong>stack trace</strong>)</strong>  para los bugs que generan crash.</li>
+ <li>Escribe un <a class="external" href="http://www.mozilla.org/newlayout/bugathon.html">caso de prueba reducido</a>.</li>
+ <li>Encuentra un URL que demuestre el problema.</li>
+</ul>

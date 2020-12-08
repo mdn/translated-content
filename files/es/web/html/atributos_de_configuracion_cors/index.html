@@ -1,0 +1,123 @@
+---
+title: Atributos de configuración CORS
+slug: Web/HTML/Atributos_de_configuracion_CORS
+translation_of: Web/HTML/Attributes/crossorigin
+---
+<p><span class="seoSummary">En HTML5, algunos elementos HTML que dan soporte para <a href="/en-US/docs/HTTP/Access_control_CORS">CORS</a>, tales como {{ HTMLElement("img") }} o {{ HTMLElement("video") }}, tienen un atributo <code>crossorigin</code>  (propiedad <code>crossOrigin</code>), que les permite configurar las peticiones CORS de los datos que se cargan.</span> Estos atributos están enumerados, y tienen los siguientes valores posibles:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Palabra clave</td>
+   <td class="header">Descripción</td>
+  </tr>
+  <tr>
+   <td><code>anonymous</code></td>
+   <td>CORS, las solicitudes de este elemento no tendrán establecido el indicador de credenciales.</td>
+  </tr>
+  <tr>
+   <td><code>use-credentials</code></td>
+   <td>CORS, las solicitudes de este elemento tendrán marcado el indicador de credenciales; esto significa que la solicitud proporcionará credenciales.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Por defecto, es decir cuando el atributo no es específicado, CORS no se usa. La palabra clave "anonymous" indica que no habrá intercambio de credenciales de usuario a través de las cookies, ni por parte del cliente con certificados SSL o autenticación HTTP como se describe en la sección de terminología de la especificación CORS.</p>
+
+<p>Una clave inválida y un string vacío serán gestionados como  una clave anónima.</p>
+
+<p>Especificaciones</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>13</td>
+   <td>{{ CompatGeckoDesktop("8.0") }}</td>
+   <td>11</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+  <tr>
+   <td>{{ HTMLElement("video")}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatGeckoDesktop("12.0") }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatGeckoMobile("8.0") }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+  <tr>
+   <td>{{ HTMLElement("video")}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatGeckoMobile("12.0") }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li><a href="/En/HTTP_access_control" title="en/HTTP access control">HTTP access control</a></li>
+</ul>

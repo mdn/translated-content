@@ -1,0 +1,79 @@
+---
+title: Depurar B2G usando gdb
+slug: Archive/B2G_OS/Debugging/Depurar_B2G_usando_gdb
+translation_of: Archive/B2G_OS/Debugging/Debugging_B2G_using_gdb
+---
+<p></p><div class="overheadIndicator draft">
+    <p><strong>Borrador</strong><br>
+    Esta página no está completa.</p>
+
+</div><p></p>
+<p>Depurar Firefox OS usando gdb es fácil. Este artículo lo ayudará a hacerlo aún más fácil.</p>
+<h2 id="Iniciar_el_depurador_en_modo_proceso_único">Iniciar el depurador en modo proceso único</h2>
+<div class="note">
+  <p><strong>Nota:</strong> Antes de ejecutar el depurador, podría configurar un archivo <code>.userconfig</code> para personalizar ciertas cosas. Vea <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file" title="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file">Personalización con el archivo .userconfig</a> para más detalles.</p>
+</div>
+<p>Para reiniciar Firefox OS y ejecutarlo bajo el control de gdb, simplemente use el script <code>run-gdb.sh</code>:</p>
+<pre>./run-gdb.sh
+</pre>
+<div class="note">
+  <p><strong>Nota:</strong> Si desea depurar en el emulador, asegúrese de no tener teléfonos conectados; esto puede causar conflctos con la habilidad de gdb de conectarse al emulador.</p>
+</div>
+<p>Si ya se está ejecutando Firefox OS y desea adjuntarlo sin reiniciarlo, puede hacer algo como:</p>
+<pre>./run-gdb.sh attach
+</pre>
+<h2 id="Depurar_tareas_fuera_del_proceso">Depurar tareas fuera del proceso</h2>
+<p>Because of the threaded nature of Firefox OS, you often need to be able to debug tasks other than the main B2G task. To do this, the simplest way is to use the b2g-ps command to find out the PID of the process that you need to debug:</p>
+<pre>$ adb shell b2g-ps
+b2g              root      106   1     189828 56956 ffffffff 40101330 S /system/b2g/b2g
+Browser          app_0     4308  106   52688  16188 ffffffff 400db330 S /system/b2g/plugin-container
+</pre>
+<p>Aquí, Browser es el proceso hijo usado como el "proceso contenido" para la aplicación navegador. Así que si quiere depurar el proceso contenido, en este ejemplo, debería hacer:</p>
+<pre>$ ./run-gdb attach 4308</pre>
+<p>A veces es útil ser notificado inmediatamente de la creación de cualquier proceso hijo. Esto puede lograrse iniiando run-gdb.sh con la variable de entorno MOZ_DEBUG_CHILD_PROCESS:</p>
+<pre>MOZ_DEBUG_CHILD_PROCESS=1 ./run-gdb.sh</pre>
+<p>Habiendo hecho esto, lanzar una aplicación OOP en Firefox OS mostrará el PID de plugin-container para la nueva tarea y esperará 30 segundos, tiempo suficiente para hacer</p>
+<pre>$ ./run-gdb attach &lt;pid&gt;</pre>
+<p>como se mencionaba anteriormente.</p>
+<p>Si está tratando de depurar algo que ocurre durante el booteo, deberá lanzar la instancia del depurador para la nueva aplicación con bastante rapidez. Una vez que el nuevo depurador fue lanzado, debería presionar inmediatamente "c" para continuar ejecutando la nueva tarea.</p>
+<h2 id="Soporte">Soporte</h2>
+<h3 id="Que_nivel_de_funcionalidad_se_espera">Que nivel de funcionalidad se espera</h3>
+<p>Al menos las siguientes caracterísiticas de depuración deberían funcionar definitivamente. Si no lo hacen, lo más probable es que un simple ajuste a la configuración las haga funcionar:</p>
+<ul>
+  <li>Símbolos para todas las librerías (excepto quizás algunos drivers en ciertos teléfonos con Android)</li>
+  <li>Backtraces with full debug info (except for optimized-away argument values)</li>
+  <li>Breakpoints: you should be able to break on a symbol, or on a file:line, or on an address. All should work.</li>
+  <li>Single-stepping ('s' and 'n' should both work)</li>
+</ul>
+<p>Las siguientes características de depuración <strong>not</strong> están soportadas. No intente usarlas.</p>
+<ul>
+  <li>Watchpoints.</li>
+</ul>
+<h3 id="Solución_de_problemas">Solución de problemas</h3>
+<p>Hay unas pocas cosas que intentar cuando GDB no está funcionando como se describe anteriormente.</p>
+<h4 id="Asegúrese_que_el_clon_de_B2G_está_actualizado">Asegúrese que el clon de B2G está actualizado</h4>
+<p>Siempre tenga en mente que para actualizar su clon de B2G debe ejecutar estos <strong>dos</strong> comandos:</p>
+<pre>git pull
+./repo sync</pre>
+<p>Olvidarse de <code>git pull</code> aquí es una típica razón por la que se terminará con un <code>run-gdb.sh</code> viejo y no se beneficiará de las mejoras recientes.</p>
+<h4 id="Asegúrese_de_adjuntarse_al_proceso_correcto">Asegúrese de adjuntarse al proceso correcto</h4>
+<p>Adjuntarse al proceso equivocado (ej. proceso principal de B2G en lugar del proceso Browser) podría explicar por que los breakpoints no se alcanzan.</p>
+<h4 id="Asegúrese_que_los_símbolos_se_leyeron_correctamente">Asegúrese que los símbolos se leyeron correctamente</h4>
+<p>En gdb, use <code>info shared</code> para verificar que los símbolos se leyeron correctamente:</p>
+<pre>(gdb) info shared
+From        To          Syms Read   Shared Object Library
+0xb0001000  0xb0006928  Yes         out/target/product/otoro/symbols/system/bin/linker
+0x40051100  0x4007ed74  Yes         /hack/b2g/B2G/out/target/product/otoro/symbols/system/lib/libc.so
+0x401ab934  0x401aba2c  Yes         /hack/b2g/B2G/out/target/product/otoro/symbols/system/lib/libstdc++.so
+...</pre>
+<p>La columna <code>Syms Read</code> debería decir <code>Yes</code> en todas partes. Quizás en algún teléfono android podría ver <code>Yes (*)</code> para algunas librerías del sistema o drivers; eso debería estar bien. No se debería ver ningún <code>No.</code></p>
+<p>Si se ve un <code>No</code>, ese es el primer problema y debe resolverlo antes de buscar otra cosa.</p>
+<p>Busque cualquer mensaje de error en la salida de terminal justo después de tipear el comando <code>run-gdb.sh</code>.</p>
+<p>También verifique en esa salida de terminal output que el comando GDB esté correcto. En particular, el último argumento de la línea de comando debería ser la ruta al ejecutable de b2g. Aquí hay un ejemplo correcto:</p>
+<pre>prebuilt/linux-x86/toolchain/arm-linux-androideabi-4.4.x/bin/arm-linux-androideabi-gdb -x /tmp/b2g.gdbinit.bjacob /hack/b2g/B2G/objdir-gecko/dist/bin/b2g</pre>
+<p>Verifique el valor de estas variables de GDB: <code>solib-search-path</code> y <code>solib-absolute-prefix:</code></p>
+<pre>(gdb) show solib-search-path
+The search path for loading non-absolute shared library symbol files is /hack/b2g/B2G/objdir-gecko/dist/bin:out/target/product/otoro/symbols/system/lib:out/target/product/otoro/symbols/system/lib/hw:out/target/product/otoro/symbols/system/lib/egl:out/target/product/otoro/symbols/system/bin:out/target/product/otoro/system/lib:out/target/product/otoro/system/lib/egl:out/target/product/otoro/system/lib/hw:out/target/product/otoro/system/vendor/lib:out/target/product/otoro/system/vendor/lib/hw:out/target/product/otoro/system/vendor/lib/egl.
+(gdb) show solib-absolute-prefix
+The current system root is "out/target/product/otoro/symbols".</pre>
+<p>Si necesita ayuda, intente el canal de IRC #b2g. Si piensa que encontró un error, infórmelo en <a href="https://github.com/mozilla-b2g/B2G/issues" title="https://github.com/mozilla-b2g/B2G/issues">B2G issue tracker</a>.</p>

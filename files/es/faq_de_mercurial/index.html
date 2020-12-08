@@ -1,0 +1,237 @@
+---
+title: FAQ de Mercurial
+slug: FAQ_de_Mercurial
+tags:
+  - Desarrollando_Mozilla
+  - Mercurial
+  - Todas_las_Categorías
+translation_of: Mercurial/Using_Mercurial
+---
+<h3 id=".C2.BFEn_qu.C3.A9_se_diferencia_Mercurial_de_CVS.3F">¿En qué se diferencia Mercurial de CVS?</h3>
+<ul> <li>"En mucho". Deberías leer y comprender <a href="/es/lo_básico_de_Mercurial" title="es/lo_básico_de_Mercurial">lo básico de Mercurial</a> antes de hacerte cargo de trabajo con Mercurial en el que tengas interés.</li>
+</ul>
+<ul> <li>Los cambios en Mercurial son atómicos.</li>
+</ul>
+<ul> <li>En Mercurial, el etiquetado es rápido y O(1).</li>
+</ul>
+<ul> <li>Mercurial facilita a todos bifurcar el repositorio central (la orden es <code>hg clone</code>).</li>
+</ul>
+<ul> <li>Mercurial hace que ramificar sea rápido y fácil y mantiene la fusión muy coherente (ver <a href="/es/Publicar_clones_en_Mercurial" title="es/Publicar_clones_en_Mercurial">Publicar clones en Mercurial</a>).</li>
+</ul>
+<ul> <li>Con Mercurial tendrás un <em>clon</em> completo, totalmente armado y operacional del repositorio entero de Mozilla en tu disco duro. Puedes trabajar localmente y aplicarle cambios sin afectar a nadie más. Para promocionar los cambios al repositorio principal, usa <code>hg push</code>.</li>
+</ul>
+<ul> <li><a class="external" href="http://hgbook.red-bean.com/hgbookch12.html#x16-26700012">Las colas de Mercurial (inglés)</a> pueden ayudarte a hacer malabarismos con los parches. Es como <a class="external" href="http://savannah.nongnu.org/projects/quilt">Quilt (inglés)</a>. La idea tras Quilt es ésta: <blockquote> <p>Los scripts permiten manejar una serie de parches manteniendo un registro de los cambios que hace cada parche. Los parches pueden ser aplicados, des-aplicados, refrescados, etc.</p> <p>El concepto filosófico clave es que tu salida principal son parches. No archivos ".c", no archivos ".h", sino parches. Así que los parches son el objeto de primera categoría aquí.</p> </blockquote></li>
+</ul>
+<ul> <li>Cuando CVS encuentra conflictos al fusionar, pone marcadores de conflicto en tu archivo. Cuando Mercurial encuentra conflictos al fusionar, lanza un <a class="external" href="http://www.selenic.com/mercurial/wiki/index.cgi/MergeProgram">programa de fusión (inglés)</a>. Esto es como un dolor de cervicales.</li>
+</ul>
+<ul> <li>En muchos casos en los que CVS actúa por archivo o por directorio, Mercurial actúa por repositorio. Por ejemplo, un solo conjunto de cambios de Mercurial puede contener archivos a muchos archivos a lo largo del árbol.</li>
+</ul>
+<ul> <li><strong>Esperamos que Mercurial nos permita volver a pensar la manera en la que trabajamos</strong>. Los equipos e individuos deberían poder ramificar y fusionar mucho más fácilmente - sin abrir incidencias para el equipo técnico. La gente de fuera de la comunidad que sean desarrolladores experimentados deberían ser capaces de hacer cosas sorprendentes con esto. Las compañías que mantienen bifurcaciones de Mozilla deberían poder trabajar mejor, también. Todo está por ver, no obstante.</li>
+</ul>
+<h3 id=".C2.BFC.C3.B3mo_instalo_Mercurial.3F">¿Cómo instalo Mercurial?</h3>
+<p>Si usas <code>apt-get</code>, <code>emerge</code>, <code>port</code>, o <code>yum</code> para instalar software, limítate a hacer lo normal. Si obtienes como resultado una versión antigua (pre-1.0 -- compruébalo con <code>hg version</code>), puedes actualizarlo usando <code>easy_install</code> como sigue (usando <code>apt-get</code> en este ejemplo):</p>
+<pre class="eval">sudo apt-get install python-setuptools python-dev build-essential
+sudo easy_install -U mercurial
+</pre>
+<p>En caso contrario, los <a class="external" href="http://www.selenic.com/mercurial/wiki/index.cgi/BinaryPackages">paquetes binarios de Mercurial (inglés)</a> están hechos para ti. Revisa también {{ interwiki('wikimo', 'Mercurial_on_Windows', 'wikimo:Mercurial on Windows') }} (inglés).</p>
+<h4 id="Programa_de_fusi.C3.B3n">Programa de fusión</h4>
+<p>Tras instalar, <strong>elige un <a class="external" href="http://www.selenic.com/mercurial/wiki/index.cgi/MergeProgram">programa de fusión (inglés)</a></strong>. En serio. Hazlo ahora. Si no lo haces, Mercurial elegirá uno por ti y te lo plantará en tus narices cuando menos lo esperes.</p>
+<p>Algo razonable para hacer es configurar <code>ui.merge=internal:merge</code> en el archivo de configuración de Mercurial (ver más abajo), lo que hace que Mercurial intente fusionar los cambios y añadir los marcadores de conflicto (al estilo CVS) a los archivos que no pueda fusionar.</p>
+<p>Puedes ver la lista de conflictos de fusión buscando "merging ... failed!" en la salida de update.</p>
+<h4 id="Configuraci.C3.B3n">Configuración</h4>
+<p>Deberías configurar Mercurial antes de descargar el código. Tu archivo de configuración de Mercurial (<code>~/.hgrc</code>) debería tener al menos la siguiente configuración:</p>
+<pre class="eval">[ui]
+username = Tu Nombre Real &lt;<a class=" link-mailto" href="mailto:user@example.com">user@example.com</a>&gt;
+merge = <em>tu-programa-de-fusión</em>
+
+[diff]
+git = 1
+
+[defaults]
+diff=-p -U 8
+</pre>
+<p>En Windows, estos valores se pueden añadir a <code>C:\Archivos de Programa\Mercurial\Mercurial.ini</code>. En los sistemas tipo Unix, debería estar en tu archivo <code>$HOME/.hgrc</code>.</p>
+<p>Puedes configurar el editor a usar para los mensajes de fusión usando la opción <code>editor</code> en la sección <code>{{ mediawiki.external('ui') }}</code> o estableciendo la variable de entorno <code>EDITOR</code>.</p>
+<h3 id=".C2.BFC.C3.B3mo_gestiona_Mercurial_los_finales_de_l.C3.ADnea.3F">¿Cómo gestiona Mercurial los finales de línea?</h3>
+<p>La versión Windows de Mercurial no convierte automáticamente los finales de línea entre los estilos de Windows y Unix. Todos nuestros repositorios usan finales de línea Unix. Necesitamos una manera de solucionar esto en Windows, pero de momento no sabemos cómo.</p>
+<p>(¿Qué tal si insertamos un control previo al commit que rechace los cambios que contienen CR con un mensaje de error informativo apropiado? Posiblemente querremos hacer excepciones para ciertos tipos de archivo (como poco, archivos binarios, por supuesto), pero podemos ajustar el control según consideremos necesario. Mercurial 1.0 añade un control estándar para esto en la extensión win32text que podríamos usar/adaptar --jwatt).</p>
+<h2 id=".C2.BFC.C3.B3mo_puedo....3F">¿Cómo puedo...?</h2>
+<h3 id=".C2.BFC.C3.B3mo_puedo_descargar_Mozilla.3F">¿Cómo puedo descargar Mozilla?</h3>
+<p>El desarrollo principal (trunk) de Mozilla 2 está ubicado en <a class=" external" href="http://hg.mozilla.org/mozilla-central/">http://hg.mozilla.org/mozilla-central/</a> . Revisa <a href="/es/Código_fuente_de_Mozilla_(Mercurial)" title="es/Código_fuente_de_Mozilla_(Mercurial)">Código fuente de Mozilla (Mercurial)</a> para instrucciones sobre cómo descargar el código fuente de Mozilla 2 de Mercurial.</p>
+<h3 id=".C2.BFC.C3.B3mo_puedo_editar_y_actualizar_archivos.3F">¿Cómo puedo editar y actualizar archivos?</h3>
+<p>Puedes editar archivos a voluntad en el directorio de trabajo, exactamente igual que con CVS.</p>
+<p>La orden común para actualizar un árbol es:</p>
+<pre class="eval">hg pull -u
+</pre>
+<p>No es posible actualizar sólo un directorio; tienes que actualizar el árbol entero.</p>
+<h3 id=".C2.BFC.C3.B3mo_detecto_cambios_y_aplico_parches_en_archivos.3F">¿Cómo detecto cambios y aplico parches en archivos?</h3>
+<ul> <li><code>hg diff</code> muestra las diferencias del árbol completo por defecto. Usa <code>hg diff &lt;dir&gt;</code> para ver las diferencias sólo del directorio dado. No olvides hacer <code>hg add</code> de cualquier archivo nuevo que estés añadiendo antes de generar el parche.</li>
+</ul>
+<ul> <li>Si estás cambiando archivos binarios o renombrando archivos puedes querer usar parches al estilo git con <code>hg diff -g</code> para conservar ese tipo de información en el parche.</li>
+</ul>
+<ul> <li>Al aplicar un parche generado por Mercurial, usa <code>patch -p1</code>, no <code>patch -p0</code> (esto se debe a un fallo de la salida del diff de Mercurial — se refiere a los directorios ficticios "a" y "b". No preguntes).</li>
+</ul>
+<ul> <li>Si tienes un parche de estilo git con renombrados o cambios binarios puedes usar <code>hg import --no-commit</code> para aplicar el parche a tu árbol o usar <code>hg qimport</code> para importar el parche en mq.</li>
+</ul>
+<p>Las opciones de diff preferidas son <code>hg diff -p -U 8</code> que incluye 8 líneas de contexto y muestra la función relevante del bloque. Puedes convertir estas opciones en predeterminadas en el <a href="/es/Mercurial#Configuraci.C3.B3n" title="es/Mercurial#Configuraci.C3.B3n">archivo de configuración de Mercurial</a>.</p>
+<h3 id=".C2.BFC.C3.B3mo_aplico_cambios.3F">¿Cómo aplico cambios?</h3>
+<h4 id="Configuraci.C3.B3n_necesaria">Configuración necesaria</h4>
+<p>Antes de aplicar ningún cambio, añade estas líneas a tu archivo <code>~/.hgrc</code>:</p>
+<pre class="eval">[ui]
+username = Tu nombre &lt;<a class=" link-mailto" href="mailto:tu.email@example.com">tu.email@example.com</a>&gt;
+</pre>
+<p>Para subir los cambios a <a href="/es/mozilla-central" title="es/mozilla-central">mozilla-central</a> y otros repositorios alojados en mozilla tienes que tener acceso de escritura (committer), y debes editar el archivo <code><em>(tu-raíz-hg-local)</em>/.hg/hgrc</code> (observa que éste <strong>NO</strong> es tu <code>~/.hgrc</code>) para añadir esta línea:</p>
+<pre class="eval">[paths]
+default = <span>http://hg.mozilla.org/mozilla-central/</span>
+<strong>default-push = <span>ssh://hg.mozilla.org/mozilla-central/</span></strong>
+</pre>
+<p>También tienes que decirle a SSH qué nombre de usuario utilizar al conectar con hg.mozilla.org. Éste debería ser el nombre de usuario asociado a tu cuenta LDAP en Mozilla. Puedes hacer esto bien complicando ligeramente la ruta de aplicación por defecto, o default-push, (convirtiéndola en <a class=" link-mailto" href="mailto:user@host.name">user@host.name</a>@hg.mozilla.org) o bien añadiendo líneas a tu ~/.ssh/config:</p>
+<pre class="eval">Host hg.mozilla.org
+User <a class=" link-mailto" href="mailto:usuario@host.dominio">usuario@host.dominio</a>
+</pre>
+<h4 id="Comprueba_lo_que_vas_a_aplicar">Comprueba lo que vas a aplicar</h4>
+<p>A continuación, para comprobar si realmente vas a aplicar los cambios que quieres aplicar (especialmente importante al hacer fusiones y otros cambios complejos):</p>
+<pre class="eval">hg status
+hg diff
+</pre>
+<p><code>status</code> muestra los archivos que han cambiado en tu directorio de trabajo comparado con lo que hay en tu repositorio (las revisiones padre, que puedes ver usando <code>hg parents</code>). <code>hg diff</code> muestra los cambios reales en esos archivos, como diffs unificados. Puedes añadir la opción -U8 para ver más contexto.</p>
+<h4 id="Aplica_al_repositorio_local">Aplica al repositorio local</h4>
+<p>Como siguiente paso, aplicarás tus cambios <em>a tu repositorio local</em>:</p>
+<pre class="eval">hg commit
+</pre>
+<p>Esto aplica los cambios informado por <code>hg status</code>. Puedes limitar la aplicación a archivos o directorios específicos usando <code>hg commit <em>nombres_de_archivo</em></code>. Puedes aplicar los cambios en nombre de alguna otra persona usando <code>hg commit -u "Algún otro &lt;<a class=" link-mailto" href="mailto:algun_otro@example.com">algun_otro@example.com</a>&gt;"</code>. Revisa <code>hg help commit</code> para obtener más detalles.</p>
+<h4 id="Comprueba_lo_que_vas_a_subir">Comprueba lo que vas a subir</h4>
+<p>Antes de que subas (push), probablemente quieras comprobar qué conjuntos de cambios se subirán. Puedes hacer esto usando la orden <code>outgoing</code>:</p>
+<pre class="eval">hg outgoing
+</pre>
+<p>Esto te dará una lista de conjuntos de cambio que se subirán al repositorio remoto predeterminado. Añade un argumento de repositorio para ver los cambios salientes (outgoing) en ese otro repositorio.</p>
+<h4 id="Subir_al_repositorio_central">Subir al repositorio central</h4>
+<p>Para subir esos cambios hasta el repositorio central:</p>
+<pre class="eval">hg push
+</pre>
+<p>Obtendrás un mensaje de error sin importancia cada vez que subas:</p>
+<pre class="eval">remote: Could not chdir to home directory : No such file or directory
+</pre>
+<p>Ignóralo sin más.</p>
+<h3 id=".C2.BFC.C3.B3mo_act.C3.BAo_ante_.22abort:_push_creates_new_remote_heads.21.22.3F">¿Cómo actúo ante "abort: push creates new remote heads!"?</h3>
+<p>Hagas lo que hagas, no hagas 'push -f' como sugiere el mensaje (probablemente falle de todas formas, pero ni lo intentes).</p>
+<p>Alguien ha subido nuevos cambios desde tu última descarga. A continuación has aplicado tu parche localmente y estás intentando subir ese cambio al repositorio principal, el cual tiene un último cambio distinto de aquél desde el que comenzaste.</p>
+<p>Hay dos cosas que puedes hacer. La más sencilla es fusionar tus cambios: ejecuta hg pull, luego hg merge. Resuelve cualquier conflicto que surja, y luego aplica la fusión resultante: hg commit -m "Merge commit for bug 123456". Luego haz hg push normalmente. Esto tiene el desafortunado efecto colateral de dejar un feo cambio por fusión en el historial de revisiones y, lo que es peor, hará tu parche más difícil de retrotraer si tuviste que resolver conflictos.</p>
+<p>Sin embargo, es lo más sencillo, y es muy seguro. Hay otra manera de afrontar el problema, pero es considerablemente más arcana -- hay un arreglo/reemplazo en progreso.</p>
+<p>{{ Warning("Esta aproximación funciona casi bien, pero hay algunos informes de parches que han sido tragados en varias ocasiones. Toma precauciones para hacer copias de tus parches (quizá obteniendo un diff: hg log -p -r 12345 para mostrar el parche de la revisión 12345) hasta que estés seguro de que las cosas funcionan como esperas.") }}</p>
+<p>Lo más avanzado que puedes hacer es importar el cambio en <a class="external" href="http://www.selenic.com/mercurial/wiki/index.cgi/MqExtension">mq</a>, extraerlo de la cola, actualizar, y volver a aplicarlo de nuevo antes de subirlo:</p>
+<pre class="eval">% <strong>hg log -l 5</strong>
+415[tip]   d1accb6ee840   2008-04-30 09:57 -0700   vladimir
+  b=430873; fast path drawImage with a canvas as source
+414   3a3ecbb4873e   2008-04-30 09:55 -0700   vladimir
+  cvs sync
+% <strong>hg qimport -r 415</strong>
+% <strong>hg qtop</strong>
+415.diff
+% <strong>hg qpop</strong>
+Patch queue now empty
+% <strong>hg pull -u</strong>
+<em>... varios mensajes de descarga/actualización ...</em>
+% <strong>hg qpush</strong>
+applying 415.diff
+Now at: 415.diff
+<em>Corrige los conflictos según sea necesario; si has corregido alguno, ejecuta hg qrefresh primero</em>
+% <strong>hg qrm -r 415.diff</strong>
+<em>qrm -r significa "elimina este parche de mi cola, pero conserva la revisión"</em>
+% <strong>hg log -l 5</strong>
+<em>verifica que el registro tiene buena pinta, con tu cambio arriba del todo</em>
+% <strong>hg push</strong>
+</pre>
+<p>Si ya has usado mq para gestionar tus parches, asegúrate de que descargas/actualizas justo antes de aplicar y subir tu parche. Si tienes problemas con lo anterior, no hay nada malo en hacer una fusión simple como se ha descrito anteriormente.</p>
+<h3 id=".C2.BFC.C3.B3mo_veo_lo_que_har.C3.A1n_estas_.C3.B3rdenes_antes_de_ejecutarlas.3F">¿Cómo veo lo que harán estas órdenes antes de ejecutarlas?</h3>
+<p>Si quieres ver lo que hará <code>hg commit</code>, ejecuta <code>hg diff</code> primero.</p>
+<p>Si quieres ver lo que subirá <code>hg push</code>, ejecuta <code>hg outgoing</code> primero.</p>
+<p>Si quieres ver lo que descargará <code>hg pull</code>, ejecuta <code>hg incoming</code> primero.</p>
+<p>Estos pares de órdenes aceptan todos argumentos parecidos, y hay buenos motivos para ello. Es buena idea usarlos siempre mientras estás aprendiendo a usar Mercurial. E incluso una vez ya eres un experto, ejecutar siempre outgoing antes de push es una buena idea.</p>
+<h3 id=".C2.BFC.C3.B3mo_puedo_personalizar_el_formato_de_los_parches_que_crea_Mercurial.3F">¿Cómo puedo personalizar el formato de los parches que crea Mercurial?</h3>
+<p>Edita tu archivo <code>~/.hgrc</code> y añade unas líneas como éstas:</p>
+<pre class="eval">[defaults]
+diff=-U 8 -p
+qdiff=-U 8
+
+[diff]
+git=true
+</pre>
+<p>La sección <code>{{ mediawiki.external('defaults') }}</code> afecta a la salida predeterminada de las órdenes <code>hg diff</code> y <code>hg qdiff</code>. Las opciones se comportan igual que si estuvieran en la línea de órdenes. Prueba <code>hg help diff</code> para más información.</p>
+<p>La sección <code>{{ mediawiki.external('diff') }}</code> afecta a todos los parches generados por Mercurial, incluso aquellos generados para el uso interno de Mercurial. Necesitas llevar mucho más cuidado con esto, pero se recomienda <code>git=true</code>. Sin él, Mercurial no puede comparar (diff) archivos binarios y no lleva un registro del bit de modo de ejecución.</p>
+<h2 id="Revertir_cambios">Revertir cambios</h2>
+<h3 id="Revertir_todo_el_.C3.A1rbol_a_una_revisi.C3.B3n_buena_conocida">Revertir todo el árbol a una revisión buena conocida</h3>
+<p>Es fácil, tan fácil como usar un mazo. Pero normalmente es matar moscas a cañonazos.</p>
+<pre class="eval">$ hg pull -u
+$ <strong>hg revert --all -r a0193d83c208</strong>       <em># usa aquí la id de tu revisión buena conocida</em>
+$ hg commit                             <em># Sé educado, incluye la id de revisión en tu mensaje acompañando al cambio</em>
+$ hg push
+</pre>
+<p>Hay una alternativa más precisa:</p>
+<h3 id="Revertir_un_.C3.BAnico_conjunto_de_cambios">Revertir un único conjunto de cambios</h3>
+<p>Supón que el conjunto de cambios <code>f8f4360bf155</code> ha estropeado algo.</p>
+<pre class="eval">$ hg pull -u
+$ <strong>hg backout f8f4360bf155</strong>               <em># usa la id de revisión del cambio erróneo aquí</em>
+</pre>
+<p>Esto crea y aplica un nuevo conjunto de cambios que revierte todos los cambios en la revisión.</p>
+<p>Si ves este mensaje:</p>
+<pre class="eval">the backout changeset is a new head - do not forget to merge
+</pre>
+<p>Esto significa que necesitas fusionar, porque tu historial ahora tiene este aspecto:</p>
+<pre class="eval">   <strong>TÚ</strong> ---&gt; o  9123b7791b52 - Kaitlin Jones &lt;<a class=" link-mailto" href="mailto:kaitlin@example.net">kaitlin@example.net</a>&gt; - Backed out changeset f8f4360bf155
+           |
+<strong>TRUNK</strong> ---&gt; | o  4e5bfb83643f - Simon Montagu &lt;<a class=" link-mailto" href="mailto:smontagu@example.org">smontagu@example.org</a>&gt; - imported patch 435856
+           | |
+           | o  6ee23de41631 - Phil Ringnalda &lt;<a class=" link-mailto" href="mailto:philringnalda@example.com">philringnalda@example.com</a>&gt; - Bug 438526 - Opening links w
+           | |
+           | o  22baa05d0e8a - Robert O'Callahan &lt;<a class=" link-mailto" href="mailto:robert@example.org">robert@example.org</a>&gt; - Remove DOM testcase from exclusi
+           | |
+           | o  c1aec2094f7e - Robert Longson &lt;<a class=" link-mailto" href="mailto:longsonr@example.com">longsonr@example.com</a>&gt; - Bug 437448. New-style nsSVGString
+           | |
+           | o  306726089e22 - Robert Longson &lt;<a class=" link-mailto" href="mailto:longsonr@example.com">longsonr@example.com</a>&gt; - Bug 437448. New-style nsSVGString
+           | |
+           | o  ba9b9a7c52a5 - Robert Longson &lt;<a class=" link-mailto" href="mailto:longsonr@example.com">longsonr@example.com</a>&gt; - Bug 437448. New-style nsSVGString
+           |/
+           o  f8f4360bf155 - Robert O'Callahan &lt;<a class=" link-mailto" href="mailto:robert@example.org">robert@example.org</a>&gt; - Bug 421436. Remove hack that gives
+           |
+           ⋮ (the past)
+</pre>
+<p>Tu conjunto de cambios de reversión está basado en una revisión antigua. No tiene los cambios más recientes.</p>
+<p>Maneja esto como cualquier otra fusión. Si nunca has hecho antes una fusión, consigue ayuda (podría ser trivial o convertirse en un dolor de cabeza mayúsculo. Hay más información sobre cómo fusionar en otras partes de esta FAQ).</p>
+<h2 id="Ayuda">Ayuda</h2>
+<h3 id=".C2.A1Ayuda.2C_no_puedo_subir_los_cambios.21">¡Ayuda, no puedo subir los cambios!</h3>
+<p>Si estás intentando subir los cambios y no puedes, prueba esto primero:</p>
+<pre class="eval">$ ssh hg.mozilla.org
+</pre>
+<p>Si ves un resultado como:</p>
+<pre class="eval">Permission denied (publickey,gssapi-with-mic).
+</pre>
+<p>puede deberse a las siguientes razones:</p>
+<ul> <li>necesitas <a href="#.C2.BFC.C3.B3mo_aplico_cambios.3F">configurar tu nombre de usuario correctamente</a></li> <li>no tienes la clave privada correcta en ~/.ssh</li> <li>no tienes una cuenta en hg.mozilla.org (si deberías tenerla, <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org">cursa un bug</a> en mozilla.org:Server Operations).</li>
+</ul>
+<p>Si ves un resultado como:</p>
+<pre class="eval">You are not allowed to use this system, go away!
+</pre>
+<p>entonces necesitas <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=mozilla.org">cursar un bug</a> en mozilla.org:Server Operations.</p>
+<p>Debes esperar que la orden SSH te desconecte inmediatamente, ya que no se supone que debas tener acceso a ninguna shell. Puede que te devuelva como resultado:</p>
+<pre class="eval">Could not chdir to home directory : No such file or directory
+</pre>
+<p>lo que no tiene consecuencias (aunque algunas personas lo verán y otras no).</p>
+<p>Si ves un resultado como:</p>
+<pre class="eval">ssl required
+</pre>
+<p>entonces necesitas <a href="#.C2.BFC.C3.B3mo_aplico_cambios.3F">configurar el valor de tu <em>default-push</em> correctamente</a>.</p>
+<h2 id="Cosas_que_han_cambiado">Cosas que han cambiado</h2>
+<ul> <li>Bonsai ha sido reemplazado por el <a class="external" href="http://hg.mozilla.org/mozilla-central/">visor web de Hg</a>. Le faltan algunas características de bonsai que estarían bien, incluyendo marcado, enlaces por número de línea y gráficas. Hay algunas diferencias de terminología:</li>
+</ul>
+<p>bonsai blame == hg annotate<br>
+bonsai log == hg revisions<br>
+también puedes visualizar el repositorio usando el enlace "manifest".</p>
+<ul> <li>MXR para mozilla-central está <a class="external" href="http://mxr.mozilla.org/mozilla-central/">ya disponible</a>.</li>
+</ul>
+<ul> <li>No hay integración de Bugzilla para Mercurial.</li>
+</ul>
+<ul> <li><a href="/es/Características_deseadas_de_Mercurial" title="es/Características_deseadas_de_Mercurial">Características deseadas de Mercurial</a>.</li>
+</ul>
+
+<p>{{ languages( { "en": "en/Mercurial_FAQ" } ) }}</p>

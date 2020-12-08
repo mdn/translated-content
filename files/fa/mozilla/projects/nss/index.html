@@ -1,0 +1,176 @@
+---
+title: Network Security Services
+slug: Mozilla/Projects/NSS
+translation_of: Mozilla/Projects/NSS
+---
+<p><strong><font><font>خدمات امنیت شبکه</font></font></strong><font><font> ( </font></font><strong><font><font>NSS</font></font></strong><font><font> ) مجموعه ای از کتابخانه های طراحی شده برای پشتیبانی از توسعه کراس پلت فرم از برنامه های امنیتی و کلاینت و سرور است. </font><font>برنامه های ساخته شده با NSS می توانند از SSL v3، TLS، PKCS # 5، PKCS # 7، PKCS # 11، PKCS # 12، S / MIME، X.509 v3 و دیگر استانداردهای امنیتی پشتیبانی کند.</font></font></p>
+
+<p><font><font>برای اطلاعات دقیق در مورد استانداردهای پشتیبانی، به </font></font><a href="/en-US/docs/Overview_of_NSS" title="Overview_of_NSS"><font><font>بررسی اجمالی از NSS</font></font></a><font><font> . </font><font>برای یک لیست از سوالات متداول، به </font></font><a href="/en-US/docs/NSS_FAQ" title="NSS_FAQ"><font><font>پرسش های متداول</font></font></a><font><font> مراجعه کنید </font><font>.</font></font></p>
+
+<p><font><font>NSS تحت مجوز عمومی Mozilla موجود است. </font><font>برای اطلاعات در مورد دانلود منتشر شده NSS به عنوان فایل های tar، به </font></font><a href="https://developer.mozilla.org/en-US/docs/NSS_Sources_Building_Testing"><font><font>دانلود منبع PKI</font></font></a><font><font> مراجعه کنید </font><font>.</font></font></p>
+
+<p><font><font>اگر شما یک توسعه دهنده هستید و مایل به مشارکت در NSS هستید، ممکن است بخواهید که اسناد سطح بالا را </font></font><a href="/en-US/docs/An_overview_of_NSS_Internals" title="/ en-US / docs / An_overview_of_NSS_Internals"><font><font>از جزئیات داخلی NSS</font></font></a><font><font> و </font></font><a href="/en-US/docs/Getting_Started_With_NSS" title="/ en-US / docs / Getting_Started_With_NSS"><font><font>شروع به کار با NSS</font></font></a><font><font> بخوانید </font><font>.</font></font></p>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 class="Documentation" id="Documentation" name="Documentation"><font><font>مستندات</font></font></h2>
+
+    <h3 id="اطلاعات_پس_زمینه"><font><font>اطلاعات پس زمینه</font></font></h3>
+
+    <dl>
+     <dt><a href="/en-US/docs/Overview_of_NSS"><font><font>بررسی NSS</font></font></a></dt>
+     <dd><font><font>خلاصه ای از NSS و قابلیت های آن را ارائه می دهد.</font></font></dd>
+     <dt><a href="/en-US/docs/NSS_FAQ"><font><font>سوالات متداول NSS</font></font></a></dt>
+     <dd><font><font>پرسش های اساسی در مورد NSS پاسخ می دهد.</font></font></dd>
+     <dt><a href="/en-US/docs/Introduction_to_Public-Key_Cryptography"><font><font>مقدمه ای بر رمزنگاری عمومی کلید</font></font></a></dt>
+     <dd><font><font>مفاهیم اساسی رمزنگاری عمومی کلید که NSS را پایه گذاری می کنند را توضیح می دهد.</font></font></dd>
+     <dt><a href="/en-US/docs/Introduction_to_SSL"><font><font>معرفی SSL</font></font></a></dt>
+     <dd><font><font>پروتکل SSL را معرفی می کند، از جمله اطلاعاتی درباره رمزهای رمزنگاری پشتیبانی شده توسط SSL و مراحل مربوط به دستکاری SSL.</font></font></dd>
+    </dl>
+
+    <h3 id="شروع_شدن"><font><font>شروع شدن</font></font></h3>
+
+    <dl>
+     <dt><a href="/en-US/docs/NSS/NSS_Releases" title="NSS_releases"><font><font>انتشارات NSS</font></font></a></dt>
+     <dd><font><font>این صفحه حاوی اطلاعاتی درباره نسخه های فعلی و گذشته NSS است.</font></font></dd>
+     <dt><a href="/en-US/docs/NSS_Sources_Building_Testing"><font><font>دریافت کد منبع و ساخت آن</font></font></a></dt>
+     <dd><font><font>دستورالعمل در مورد نحوه ساخت NSS در سیستم عامل های پشتیبانی شده مختلف.</font></font></dd>
+     <dt><a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/Mercurial"><font><font>کد منبع موزیلا را با استفاده از Mercurial دریافت کنید</font></font></a></dt>
+     <dd><font><font>اطلاعات در مورد کار با Mercurial.</font></font></dd>
+     <dt><a href="/en-US/docs/Mozilla/Developer_guide/Source_Code/CVS"><font><font>دریافت کد منبع موزیلا با استفاده از CVS (نامعتبر)</font></font></a></dt>
+     <dd><font><font>مستندات CVS قدیمی ضعیف</font></font></dd>
+    </dl>
+
+    <h3 id="API_های_NSS"><font><font>API های NSS</font></font></h3>
+
+    <dl>
+     <dt><a href="/en-US/docs/Introduction_to_Network_Security_Services"><font><font>مقدمه ای بر خدمات امنیتی شبکه</font></font></a></dt>
+     <dd><font><font>یک مرور کلی از کتابخانه های NSS و آنچه شما باید بدانید که از آنها استفاده می کنید را ارائه می دهد.</font></font></dd>
+     <dt><a href="NSS/SSL_functions"><font><font>توابع عمومی NSS SSL</font></font></a></dt>
+     <dd><font><font>خلاصه API های SSL صادر شده توسط کتابخانه های اشتراک NSS.</font></font></dd>
+     <dt><a href="/en-US/docs/NSS_reference"><font><font>NSS SSL مرجع</font></font></a></dt>
+     <dd><font><font>API برای فراخوانی عملیات SSL استفاده می شود.</font></font></dd>
+     <dt><a href="NSS/NSS_API_GUIDELINES"><font><font>راهنمای NSS API</font></font></a></dt>
+     <dd><font><font>توضیح می دهد که چگونه کتابخانه ها و کد ها سازماندهی شده اند و دستورالعمل هایی برای توسعه کد (کنفرانس نامگذاری، اداره خطا، ایمنی موضوع، و غیره)</font></font></dd>
+     <dt><a href="NSS/nss_tech_notes"><font><font>نکات فنی NSS</font></font></a></dt>
+     <dd><font><font>پیوند به یادداشت های فنی NSS، که آخرین اطلاعات مربوط به ویژگی های NSS جدید و مستندات تکمیلی را برای موضوعات پیشرفته در برنامه نویسی با NSS ارائه می دهد.</font></font></dd>
+    </dl>
+
+    <h3 id="ابزار،_تست_و_سایر_مشخصات_فنی"><font><font>ابزار، تست و سایر مشخصات فنی</font></font></h3>
+
+    <dl>
+     <dt><a href="/en-US/docs/Mozilla/Projects/NSS/Building"><font><font>دستورالعمل ساخت NSS</font></font></a></dt>
+     <dd>Describe how to check out and build NSS releases.</dd>
+    </dl>
+
+    <dl>
+     <dt><a href="/en-US/docs/Mozilla/Projects/NSS/NSS_Developer_Tutorial">NSS Developer Tutorial</a></dt>
+     <dd>How to make changes in NSS. Coding style, maintaining ABI compatibility.</dd>
+    </dl>
+
+    <dl>
+     <dt><a href="NSS/Tools">NSS Tools</a></dt>
+     <dd>Tools for developing, debugging, and managing applications that use NSS.</dd>
+     <dt><a href="NSS/NSS_Sample_Code">Sample Code</a></dt>
+     <dd>Demonstrates how NSS can be used for cryptographic operations, certificate handling, SSL, etc.</dd>
+     <dt><a href="NSS/NSS_Third-Party_Code">Third-Party Code</a></dt>
+     <dd>A list of third-party code included in the NSS library.</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/testnss_32.html">NSS 3.2 Test Suite</a></dt>
+     <dd><strong>Archived version.</strong> Describes how to run the standard NSS tests.</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/performance_reports.html">NSS Performance Reports</a></dt>
+     <dd><strong>Archived version.</strong> Links to performance reports for NSS 3.2 and later releases.</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/nss-3.11/nss-3.11-algorithms.html">Encryption Technologies Available in NSS 3.11</a></dt>
+     <dd><strong>Archived version.</strong> Lists the cryptographic algorithms used by NSS 3.11.</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/loadable_certs.html">NSS 3.1 Loadable Root Certificates</a></dt>
+     <dd><strong>Archived version.</strong> Describes the scheme for loading root CA certificates.</dd>
+     <dt><a href="https://www-archive.mozilla.org/projects/security/pki/nss/db_formats.html">cert7.db</a></dt>
+     <dd><strong>Archived version.</strong> General format of the cert7.db database.</dd>
+    </dl>
+
+    <h3 id="PKCS_11_information">PKCS #11 information</h3>
+
+    <ul>
+     <li><a href="/en-US/docs/PKCS11" title="PKCS11">Documentation on PKCS #11 modules</a></li>
+     <li><a href="/en-US/docs/PKCS11_Implement">Implementing PKCS #11 for NSS</a></li>
+     <li><a href="/en-US/docs/PKCS11_Module_Specs" title="PKCS11_Module_Specs">The strings NSS uses to load PKCS #11 modules</a></li>
+     <li><a href="/en-US/docs/PKCS11_FAQ">PKCS #11 FAQ</a></li>
+     <li><a href="/en-US/docs/PKCS11_Jar_Install">Using the JAR Installation Manager to Install a PKCS #11 Cryptographic Module</a></li>
+     <li><a href="https://www-archive.mozilla.org/projects/security/pki/pkcs11/">PKCS #11 Conformance Testing - Archived version</a></li>
+    </ul>
+
+    <dl>
+    </dl>
+
+    <h3 id="CA_certificates_pre-loaded_into_NSS">CA certificates pre-loaded into NSS</h3>
+
+    <ul>
+     <li><a href="https://www.mozilla.org/projects/security/certs/policy/">Mozilla CA certificate policy</a></li>
+     <li><a href="https://www.mozilla.org/projects/security/certs/included/">List of pre-loaded CA certificates</a>
+      <ul>
+       <li>Consumers of this list must consider the trust bit setting for each included root certificate. <a href="https://www.imperialviolet.org/2012/01/30/mozillaroots.html">More Information</a>, <a href="https://github.com/agl/extract-nss-root-certs">Extracting roots and their trust bits</a></li>
+      </ul>
+     </li>
+    </ul>
+
+    <dl>
+    </dl>
+
+    <h3 id="NSS_is_built_on_top_of_Netscape_Portable_Runtime_(NSPR)">NSS is built on top of Netscape Portable Runtime (NSPR)</h3>
+
+    <dl>
+     <dt><a href="NSPR">Netscape Portable Runtime</a></dt>
+     <dd>NSPR project page.</dd>
+     <dt><a href="/en-US/docs/Mozilla/Projects/NSPR/Reference">NSPR Reference</a></dt>
+     <dd><font><font>اسناد API NSPR</font></font></dd>
+    </dl>
+
+    <h3 id="اطلاعات_اضافی"><font><font>اطلاعات اضافی</font></font></h3>
+
+    <ul>
+     <li><a href="/en-US/docs/JavaScript_crypto" title="JavaScript_Crypto"><font><font>با استفاده از object.crypto از جاوا اسکریپت</font></font></a></li>
+     <li><a href="/en-US/docs/HTTP_Delegation" title="HTTP_Delegation"><font><font>اعطای پرونده HTTP برای OCSP</font></font></a></li>
+     <li><a href="/en-US/docs/TLS_Cipher_Suite_Discovery" title="TLS_Cipher_Suite_Discovery"><font><font>TLS Cipher Suite Discovery</font></font></a></li>
+     <li><a href="/en-US/docs/NSS_Certificate_Download_Specification" title="NSS_Certificate_Download_Specification"><font><font>مشخصات فنی دانلود استاندارد NSS</font></font></a></li>
+     <li><a href="/en-US/docs/NSS/FIPS_Mode_-_an_explanation" title="FIPS Mode - یک توضیح"><font><font>FIPS Mode - یک توضیح</font></font></a></li>
+     <li><a href="/en-US/docs/NSS_Key_Log_Format" title="NSS Key Log Format"><font><font>فرمت فایل های ورودی کلیدی</font></font></a></li>
+     <li><font><font>مشاهده </font></font><a href="/en-US/docs/tag/NSS" title="/ en-US / docs / tag / NSS"><font><font>تمام مقالات مربوط به NSS در MDN</font></font></a></li>
+    </ul>
+
+    <h3 id="برنامه_ریزی"><font><font>برنامه ریزی</font></font></h3>
+
+    <p><font><font>اطلاعات مربوط به برنامه ریزی NSS را می توانید در </font></font><a class="external" href="https://wiki.mozilla.org/NSS"><font><font>wiki.mozilla.org</font></font></a><font><font> پیدا کنید </font><font>، از جمله:</font></font></p>
+
+    <ul>
+     <li><a class="external" href="https://wiki.mozilla.org/FIPS_Validation"><font><font>اعتبار FIPS</font></font></a></li>
+     <li><a class="external" href="https://wiki.mozilla.org/NSS:Roadmap"><font><font>صفحه نقشه راه NSS</font></font></a></li>
+     <li><a href="https://fedoraproject.org/wiki/User:Mitr/NSS:DeveloperFriendliness" title="https://fedoraproject.org/wiki/User:Mitr/NSS:DeveloperFriendliness"><font><font>پروژه بهبود NSS</font></font></a></li>
+    </ul>
+   </td>
+   <td>
+    <h2 class="Community" id="Community" name="Community"><font><font>جامعه</font></font></h2>
+
+    <ul>
+     <li><font><font>مشاهده انجمن های امنیتی موزیلا ...</font></font></li>
+    </ul>
+
+    <p><font><font>{{DiscussionList ("dev-security"، "mozilla.dev.security")}}</font></font></p>
+
+    <ul>
+     <li><font><font>مشاهده انجمن های رمزنگاری موزیلا ...</font></font></li>
+    </ul>
+
+    <p><font><font>{{DiscussionList ("dev-tech-crypto"، "mozilla.dev.tech.crypto")}}</font></font></p>
+
+    <h2 class="Related_Topics" id="Related_Topics" name="Related_Topics"><font><font>مطالب مرتبط</font></font></h2>
+
+    <ul>
+     <li><a href="/en-US/docs/Security" title="امنیت"><font><font>امنیت</font></font></a></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

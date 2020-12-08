@@ -1,0 +1,58 @@
+---
+title: SMILE
+slug: Mozilla/Tech/Toolkit_API/SMILE
+tags:
+  - Interfaces
+  - NeedsTranslation
+  - SMILE
+  - SeaMonkey
+  - TopicStub
+  - XPCOM
+  - XPCOM API Reference
+translation_of: Mozilla/Tech/Toolkit_API/SMILE
+---
+<p> </p>
+
+<div class="overheadIndicator smMinVerHeader standardNote">
+<p>This article covers features introduced in <a class="new" href="https://developer.mozilla.org/en-US/docs/SeaMonkey_2_for_developers" rel="nofollow">SeaMonkey 2</a></p>
+</div>
+
+<p> </p>
+
+<p>SMILE is a JavaScript library designed to help developers build extensions using terminology and interfaces that are familiar to them.</p>
+
+<p>SMILE is about making it easier for extension developers to be productive, by minimizing some of the XPCOM formality and adding some "modern" JavaScript ideas. We want to start with areas that will provide the most benefit.</p>
+
+<p>SMILE has a <code><span class="lang lang-en"><a class="external" href="http://mxr.mozilla.org/comm-central/source/suite/smile/public/smileIApplication.idl" rel="external nofollow" title="http://mxr.mozilla.org/comm-central/source/suite/smile/public/smileIApplication.idl">smileIApplication</a> </span></code> interface that implements all the functions of <code><span class="lang lang-en"><a class="external" href="http://mxr.mozilla.org/comm-central/source/mozilla/toolkit/components/exthelper/extIApplication.idl" rel="external nofollow" title="http://mxr.mozilla.org/comm-central/source/mozilla/toolkit/components/exthelper/extIApplication.idl">extIApplication</a></span></code>. The library has also been implemented in Firefox ("<a class="internal" href="/en/Toolkit_API/FUEL" title="en/FUEL">FUEL</a>") and in Thunderbird ("<a class="internal" href="/en/Toolkit_API/STEEL" title="en/Thunderbird/STEEL">STEEL</a>").</p>
+
+<h3 id="Objects" name="Objects">Objects</h3>
+
+<h4 id="extIApplication_Objects">extIApplication Objects</h4>
+
+<ul>
+ <li><a href="/en/Toolkit_API/extIConsole" title="en/FUEL/Console">extIConsole</a></li>
+ <li><a href="/en/Toolkit_API/extIEventItem" title="en/FUEL/EventItem">extIEventItem</a></li>
+ <li><a href="/en/Toolkit_API/extIEventListener" title="en/FUEL/EventListener">extIEventListener</a></li>
+ <li><a href="/en/Toolkit_API/extIEvents" title="en/FUEL/Events">extIEvents</a></li>
+ <li><a href="/en/Toolkit_API/extIExtension" title="en/FUEL/Extension">extIExtension</a></li>
+ <li><a href="/en/Toolkit_API/extIExtensions" title="en/FUEL/Extensions">extIExtensions</a></li>
+ <li><a href="/en/Toolkit_API/extIPreference" title="en/FUEL/Preference">extIPreference</a></li>
+ <li><a href="/en/Toolkit_API/extIPreferenceBranch" title="en/FUEL/PreferenceBranch">extIPreferenceBranch</a></li>
+ <li><a href="/en/Toolkit_API/extISessionStorage" title="en/FUEL/SessionStorage">extISessionStorage</a></li>
+</ul>
+
+<h4 id="smileIApplication_Objects">smileIApplication Objects</h4>
+
+<ul>
+ <li><a class="internal" href="/en/Toolkit_API/SMILE/smileIBookmarkRoots" title="en/Toolkit API/SMILE/smileIBookmarkRoots">smileIBookmarkRoots</a></li>
+ <li><a class="internal" href="/en/Toolkit_API/SMILE/smileIWindow" title="en/Toolkit API/SMILE/smileIWindow">smileIWindow</a></li>
+ <li><a class="internal" href="/en/Toolkit_API/SMILE/smileIBrowserTab" title="en/Toolkit API/SMILE/smileIBrowserTab">smileIBrowserTab</a></li>
+ <li><a class="internal" href="/en/Toolkit_API/SMILE/smileIApplication" title="en/Toolkit API/SMILE/smileIApplication">smileIApplication</a></li>
+</ul>
+
+<h3 id="XPCOM" name="XPCOM">XPCOM</h3>
+
+<p>Although the <a class="internal" href="/en/Toolkit_API/extIApplication" title="en/Toolkit API/extIApplication">extIApplication</a> object is preloaded into XUL scripts, it is not preloaded into JavaScript XPCOM code. The object needs to be accessed like any other XPCOM service:</p>
+
+<pre>var Application = Components.classes["@mozilla.org/smile/application;1"].getService(Components.interfaces.smileIApplication);
+</pre>

@@ -1,0 +1,1549 @@
+---
+title: source-editor.jsm
+slug: Mozilla/JavaScript_code_modules/source-editor.jsm
+translation_of: Mozilla/JavaScript_code_modules/source-editor.jsm
+---
+<div class="warning">
+<p>This component has been removed from the platform in Firefox 28.</p>
+</div>
+
+<p>{{ fx_minversion_header("11.0") }}</p>
+
+<p>The <code>source-editor.jsm</code> JavaScript code module implements an editor specifically tailored for editing source code; its primary purpose is to provide support for web developer tools to display and edit web site code. The editor provided is <a class="external" href="http://www.eclipse.org/orion" title="http://www.eclipse.org/orion">Eclipse Orion</a>.</p>
+
+<p>To use it, you first need to import the code module into your JavaScript scope:</p>
+
+<pre class="eval"><span class="nowiki">Components.utils.import("resource:///modules/source-editor.jsm");</span>
+</pre>
+
+<div class="warning"><strong>Warning:</strong> Much of the functionality of the source editor is implemented by a secondary code module (by default, <code>source-editor-orion.jsm</code>). You <strong>must not</strong> directly import that code module; it is essentially an implementation detail. Its functionality is all exposed through <code>source-editor.jsm</code>.</div>
+
+<h2 id="Method_overview">Method overview</h2>
+
+<h3 id="Initialization_and_destruction">Initialization and destruction</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#destroy()" title="en/JavaScript_code_modules/source-editor.jsm#destroy()">destroy</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#init()" title="en/JavaScript_code_modules/source-editor.jsm#init()">init</a>({{ domxref("Element") }} aElement, <a href="/en/JavaScript/Reference/Global_Objects/Object" title="en/JavaScript/Reference/Global_Objects/Object">Object</a> aConfig, <a href="/en/JavaScript/Reference/Global_Objects/Function" title="/en/JavaScript/Reference/Global_Objects/Function">Function</a> aCallback);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Search_operations">Search operations</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a> <a href="/en/JavaScript_code_modules/source-editor.jsm#find()" title="en/JavaScript_code_modules/source-editor.jsm#find()">find</a>(<a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a> aString, [optional] <a href="/en/JavaScript/Reference/Global_Objects/Object" title="en/JavaScript/Reference/Global_Objects/Object">Object</a> options);</code> {{ fx_minversion_inline("12.0") }}</td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a> <a href="/en/JavaScript_code_modules/source-editor.jsm#findNext()" title="en/JavaScript_code_modules/source-editor.jsm#findNext()">findNext</a>(Boolean aWrap);</code> {{ fx_minversion_inline("12.0") }}</td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a> <a href="/en/JavaScript_code_modules/source-editor.jsm#findPrevious()" title="en/JavaScript_code_modules/source-editor.jsm#findPrevious()">findPrevious</a>(Boolean aWrap);</code> {{ fx_minversion_inline("12.0") }}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Event_management">Event management</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#addEventListener()" title="en/JavaScript_code_modules/source-editor.jsm#addEventListener()">addEventListener</a>(<a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a> aEventType, <a href="/en/JavaScript/Reference/Global_Objects/Function" title="en/JavaScript/Reference/Global_Objects/Function">Function</a> aCallback);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#removeEventListener()" title="en/JavaScript_code_modules/source-editor.jsm#removeEventListener()">removeEventListener</a>(</code><code><a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a></code><code> aEventType, </code><code><a href="/en/JavaScript/Reference/Global_Objects/Function" title="en/JavaScript/Reference/Global_Objects/Function">Function</a></code><code> aCallback);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Undo_stack_operations">Undo stack operations</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>Boolean <a href="/en/JavaScript_code_modules/source-editor.jsm#canRedo()" title="en/JavaScript_code_modules/source-editor.jsm#canRedo()">canRedo</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>Boolean <a href="/en/JavaScript_code_modules/source-editor.jsm#canUndo()" title="en/JavaScript_code_modules/source-editor.jsm#canUndo()">canUndo</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#endCompoundChange()" title="en/JavaScript_code_modules/source-editor.jsm#endCompoundChange()">endCompoundChange</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>Boolean <a href="/en/JavaScript_code_modules/source-editor.jsm#redo()" title="en/JavaScript_code_modules/source-editor.jsm#redo()">redo</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#resetUndo()" title="en/JavaScript_code_modules/source-editor.jsm#resetUndo()">resetUndo</a>();</code> {{ gecko_minversion_inline("12.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#startCompoundChange()" title="en/JavaScript_code_modules/source-editor.jsm#startCompoundChange()">startCompoundChange</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>Boolean <a href="/en/JavaScript_code_modules/source-editor.jsm#undo()" title="en/JavaScript_code_modules/source-editor.jsm#undo()">undo</a>();</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Display_management_operations">Display management operations</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#focus()" title="en/JavaScript_code_modules/source-editor.jsm#focus()">focus</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getTopIndex()" title="en/JavaScript_code_modules/source-editor.jsm#getTopIndex()">getTopIndex</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>Boolean <a href="/en/JavaScript_code_modules/source-editor.jsm#hasFocus()" title="en/JavaScript_code_modules/source-editor.jsm#hasFocus()">hasFocus</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#setTopIndex()" title="en/JavaScript_code_modules/source-editor.jsm#setTopIndex()">setTopIndex</a>(<a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a> aTopIndex);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Content_management_operations">Content management operations</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getCharCount()" title="en/JavaScript_code_modules/source-editor.jsm#getCharCount()">getCharCount</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getIndentationString()" title="en/JavaScript_code_modules/source-editor.jsm#getIndentationString()">getIndentationString</a>();</code> {{ fx_minversion_inline("13") }}</td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getLineDelimiter()" title="en/JavaScript_code_modules/source-editor.jsm#getLineDelimiter()">getLineDelimiter</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getLineCount()" title="en/JavaScript_code_modules/source-editor.jsm#getLineCount()">getLineCount</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getLineEnd()" title="en/JavaScript_code_modules/source-editor.jsm#getLineEnd()">getLineEnd</a>(</code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> </code><code>aLineIndex</code><code>, Boolean aIncludeDelimiter</code><code>);</code> {{ fx_minversion_inline("14") }}</td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getLineStart()" title="en/JavaScript_code_modules/source-editor.jsm#getLineStart()">getLineStart</a>(</code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> </code><code>aLineIndex);</code> {{ fx_minversion_inline("14") }}</td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getMode()" title="en/JavaScript_code_modules/source-editor.jsm#getMode()">getMode</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getText()" title="en/JavaScript_code_modules/source-editor.jsm#getText()">getText</a>([optional] </code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> aStart, [optional] </code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> aEnd);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getSelectedText()" title="en/JavaScript_code_modules/source-editor.jsm#getSelectedText()">getSelectedText</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#setMode()" title="en/JavaScript_code_modules/source-editor.jsm#setMode()">setMode</a>(</code><code><a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a></code><code> aMode);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#setText()" title="en/JavaScript_code_modules/source-editor.jsm#setText()">setText</a>(</code><code><a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a> </code><code>aText, [optional] </code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> aStart, [optional] </code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> aEnd);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Selection_operations">Selection operations</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#dropSelection()" title="en/JavaScript_code_modules/source-editor.jsm#dropSelection()">dropSelection</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getCaretOffset()" title="en/JavaScript_code_modules/source-editor.jsm#getCaretOffset()">getCaretOffset</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Object" title="en/JavaScript/Reference/Global_Objects/Object">Object</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getCaretPosition()" title="en/JavaScript_code_modules/source-editor.jsm#getCaretPosition()">getCaretPosition</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Object" title="en/JavaScript/Reference/Global_Objects/Object">Object</a></code><code> <a href="/en/JavaScript_code_modules/source-editor.jsm#getSelection()" title="document.getSelection">getSelection</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#setCaretOffset()" title="IA2 Interfaces">setCaretOffset</a>(</code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> aOffset);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#setCaretPosition()" title="en/JavaScript_code_modules/source-editor.jsm#setCaretPosition()">setCaretPosition</a>(</code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> aLine, [optional] </code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> aColumn, [optional] </code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> aAlign);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#setSelection()" title="en/JavaScript_code_modules/source-editor.jsm#setSelection()">setSelection</a>(</code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> aStart, </code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> aEnd);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Breakpoint_management">Breakpoint management</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="/en/JavaScript_code_modules/source-editor.jsm#addBreakpoint()" title="en/JavaScript_code_modules/source-editor.jsm#addBreakpoint()">addBreakpoint</a>(</code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> aLineIndex, [optional] </code><code><a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a></code><code> aCondition);</code> {{ fx_minversion_inline("13") }}</td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Array" title="Array">Array</a> <a href="/en/JavaScript_code_modules/source-editor.jsm#getBreakpoints()" title="en/JavaScript_code_modules/source-editor.jsm#getBreakpoints()">getBreakpoints</a>();</code> {{ fx_minversion_inline("13") }}</td>
+  </tr>
+  <tr>
+   <td><code>Boolean <a href="/en/JavaScript_code_modules/source-editor.jsm#removeBreakpoint()" title="en/JavaScript_code_modules/source-editor.jsm#removeBreakpoint()">removeBreakpoint</a>(</code><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code><code> aLineIndex)</code><code>;</code> {{ fx_minversion_inline("13") }}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Properties">Properties</h2>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Attribute</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>dirty</code></td>
+   <td><code>Boolean</code></td>
+   <td>Set this value to <code>false</code> whenever you save the text; the editor will update it to <code>true</code> when the content is changed. You can then use this value to detect when the contents of the text are different from your most recent save. In addition, when this value changes, the "{{ anch("DirtyChanged") }}" event is sent. {{ gecko_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>editorElement</code></td>
+   <td>{{ domxref("Element") }}</td>
+   <td>The element containing the editor. When using the default Orion editor, this is a XUL {{ XULElem("iframe") }} element. <strong>Read only.</strong></td>
+  </tr>
+  <tr>
+   <td><code>lastFind</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/Object" title="en/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a></td>
+   <td>
+    <p>An object describing the result of the last find operation performed using the {{ manch("find") }}, {{ manch("findNext") }}, or {{ manch("findPrevious") }} method. <strong>Read only.</strong></p>
+
+    <p>This object has the following properties:</p>
+
+    <table class="standard-table" style="width: auto;">
+     <tbody>
+      <tr>
+       <td class="header">Property</td>
+       <td class="header">Type</td>
+       <td class="header">Description</td>
+      </tr>
+      <tr>
+       <td><code>str</code></td>
+       <td><code><a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a></code></td>
+       <td>The last string that was searched for.</td>
+      </tr>
+      <tr>
+       <td><code>index</code></td>
+       <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+       <td>An integer value indicating the result of the most recent find operation; this is the index into the text at which <code>str</code> was found, or -1 if the string wasn't found.</td>
+      </tr>
+      <tr>
+       <td><code>lastFound</code></td>
+       <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+       <td>The index of the previous location at which <code>str</code> was found, for multiple find operations (such as {{ manch("find") }} followed by {{ manch("findNext") }}). This can be -1 if the string was never found.</td>
+      </tr>
+      <tr>
+       <td><code>ignoreCase</code></td>
+       <td><code>Boolean</code></td>
+       <td><code>true</code> if the search was case sensitive; otherwise <code>false</code>.</td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+   <td><code>readOnly</code></td>
+   <td><code>Boolean</code></td>
+   <td>Set this value to <code>true</code> to make the editor read only, thereby preventing the user from making changes. Set it to <code>false</code> to allow editing.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Constants">Constants</h2>
+
+<h3 id="Preference_name_constants">Preference name constants</h3>
+
+<p>These constants define the names of preferences used by the source editor.</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.PREFS.COMPONENT</code></td>
+   <td>"devtools.editor.component"</td>
+   <td>A string indicating the name of the source editor engine to use; this is "orion" by default. The source editor code module loads a module by the name "source-editor-&lt;component&gt;.jsm" and exposes its API as part of the <code>SourceEditor</code> object.</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.PREFS.EXPAND_TAB</code></td>
+   <td>"devtools.editor.expandtab"</td>
+   <td>A Boolean value that indicates whether or not to automatically expand tabs out to a series of spaces.</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.PREFS.TAB_SIZE</code></td>
+   <td>"devtools.editor.tabsize"</td>
+   <td>An integer value that specifies the number of spaces per tab.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Editor_mode_constants">Editor mode constants</h3>
+
+<p>These constants are used to set the syntax highlighting mode for the editor by calling its {{ manch("setMode") }} method, or in the configuration object when first initializing the editor using its {{ manch("init") }} method.</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.MODES.CSS</code></td>
+   <td>"css"</td>
+   <td>Cascading Style Sheet.</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.MODES.HTML</code></td>
+   <td>"html"</td>
+   <td>HTML document.</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.MODES.JAVASCRIPT</code></td>
+   <td>"js"</td>
+   <td>JavaScript source code.</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.MODES.TEXT</code></td>
+   <td>"text"</td>
+   <td>UTF-8 text document.</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.MODES.XML</code></td>
+   <td>"xml"</td>
+   <td>XML document.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Theme_constants">Theme constants</h3>
+
+<p>These constants are used to identify the available themes that can be used by the syntax highlighter. Only one is provided by default at this time.</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.THEMES.MOZILLA</code></td>
+   <td>"mozilla"</td>
+   <td>The default Mozilla syntax highlighter theme.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Configuration_defaults_constants">Configuration defaults constants</h3>
+
+<p>These constants represent the default values for each of the available configuration options. See {{ anch("The editor configuration object") }} for details on configuring the editor.</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.contextMenu</code></td>
+   <td>"sourceEditorContextMenu"</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.expandTab</code></td>
+   <td><code>true</code></td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.highlightCurrentLine</code></td>
+   <td><code>true</code> {{ fx_minversion_inline("13") }}</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.initialText</code></td>
+   <td>""</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.keys</code></td>
+   <td><code>null</code></td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.mode</code></td>
+   <td><code>SourceEditor.MODES.TEXT</code></td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.readOnly</code></td>
+   <td><code>false</code></td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.showAnnotationRuler</code></td>
+   <td><code>false</code> {{ fx_minversion_inline("13") }}</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.showLineNumbers</code></td>
+   <td><code>false</code> {{ fx_minversion_inline("13") }}</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.showOverviewRuler</code></td>
+   <td><code>false</code></td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.tabSize</code></td>
+   <td>4</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.theme</code></td>
+   <td><code>SourceEditor.THEMES.MOZILLA</code></td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.DEFAULTS.undoLimit</code></td>
+   <td>200</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Event_name_constants">Event name constants</h3>
+
+<p>These constants provide the names of the editor events for which you can listen.</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.EVENTS.BLUR</code></td>
+   <td>"{{ anch("Blur") }}"</td>
+   <td>Fired when the editor loses focus. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.EVENTS.BREAKPOINT_CHANGE</code></td>
+   <td>"{{ anch("BreakpointChange") }}"</td>
+   <td>Fired when a new breakpoint is added, or when an existing breakpoint is removed. This happens both when the API is used to make the change or when the UI is used to do it. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.EVENTS.CONTEXT_MENU</code></td>
+   <td>"{{ anch("ContextMenu") }}"</td>
+   <td>Fired when the editor's context menu is invoked, but before it's opened.</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.EVENTS.DIRTY_CHANGED</code></td>
+   <td>"{{ anch("DirtyChanged") }}"</td>
+   <td>Fired when the dirty state of the editor is changed. The dirty state indicates whether or not there are unsaved changes to the text. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.EVENTS.FOCUS</code></td>
+   <td>"{{ anch("Focus") }}"</td>
+   <td>Fired when the editor gains focus. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.EVENTS.MOUSE_MOVE</code></td>
+   <td>"{{ anch("MouseMove") }}"</td>
+   <td>Fired when the user moves the mouse over a line annotation. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.EVENTS.MOUSE_OUT</code></td>
+   <td>"{{ anch("MouseOut") }}"</td>
+   <td>Fired when the mouse pointer leaves a line annotation. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.EVENTS.MOUSE_OVER</code></td>
+   <td>"{{ anch("MouseOver") }}"</td>
+   <td>Fired when the mouse pointer enters a line annotation. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.EVENTS.SELECTION</code></td>
+   <td>"{{ anch("Selection") }}"</td>
+   <td>Fired when the current selection in the editor changes.</td>
+  </tr>
+  <tr>
+   <td><code>SourceEditor.EVENTS.TEXT_CHANGED</code></td>
+   <td>"{{ anch("TextChanged") }}"</td>
+   <td>Fired when the editor's content changes.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods">Methods</h2>
+
+<h3 id="addBreakpoint">addBreakpoint</h3>
+
+<p>Adds a breakpoint to be triggered at a certain line in the code, under an optional condition.</p>
+
+<div class="note"><strong>Note:</strong> Implementing actual support for debugger features such as breakpoints is up to you. The editor simply tracks their existence and marks them with annotations in the editor.</div>
+
+<pre>void addBreakpoint(
+  Number aLineIndex,
+  [optional] String aCondition
+);
+</pre>
+
+<h6 id="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aLineIndex</code></dt>
+ <dd>The 0-based line number at which to place the breakpoint.</dd>
+ <dt><code>aCondition</code> {{ optional_inline() }}</dt>
+ <dd>A string describing the condition under which the breakpoint should be triggered. This information is simply recorded as part of the breakpoint annotation. <span style="color: #ff0000;"><strong><span style="background-color: #ffff00;">NEED LINK TO TEXT ABOUT HANDLING BREAKPOINT CONDITIONS HERE.</span></strong></span></dd>
+</dl>
+
+<h3 id="addEventListener()">addEventListener()</h3>
+
+<p>Adds a new event listener to the editor. You can listen for any of the events listed in {{ anch("Event name constants") }}. To stop listening for the event, call {{ manch("removeEventListener") }}.</p>
+
+<pre>void addEventListener(
+  String aEventType,
+  Function aCallback
+);
+</pre>
+
+<h6 id="Parameters_2">Parameters</h6>
+
+<dl>
+ <dt><code>aEventType</code></dt>
+ <dd>The name of the event type to listen for; see {{ anch("Event name constants") }} for possible values.</dd>
+ <dt><code>aCallback</code></dt>
+ <dd>The function to call when the specified event occurs.</dd>
+</dl>
+
+<h3 id="canRedo()">canRedo()</h3>
+
+<p>Determines whether or not there are changes that can be redone.</p>
+
+<pre>Boolean canRedo();
+</pre>
+
+<h6 id="Parameters_3">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value">Return value</h6>
+
+<p><code>true</code> if there are changes that can be redone, otherwise <code>false</code>.</p>
+
+<h3 id="canUndo()">canUndo()</h3>
+
+<p>Determines whether or not there are changes that can be undone.</p>
+
+<pre>Boolean canUndo();
+</pre>
+
+<h6 id="Parameters_4">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_2">Return value</h6>
+
+<p><code>true</code> if there are changes that can be undone, otherwise <code>false</code>.</p>
+
+<h3 id="destroy()">destroy()</h3>
+
+<p>Destroys the editor, releasing resource it's allocated and removing event handlers it's installed. You should call this method when you're done using the editor object.</p>
+
+<pre>void destroy();
+</pre>
+
+<h6 id="Parameters_5">Parameters</h6>
+
+<p>None.</p>
+
+<h3 id="dropSelection()">dropSelection()</h3>
+
+<p>Deselects the currently selected text.</p>
+
+<pre>void dropSelection();
+</pre>
+
+<h6 id="Parameters_6">Parameters</h6>
+
+<p>None.</p>
+
+<h3 id="endCompoundChange()">endCompoundChange()</h3>
+
+<p>Ends a compound change that was previously started by calling {{ manch("startCompoundChange") }}. All changes made to the text between the two calls is considered to be a single edit for the purposes of undo operations.</p>
+
+<pre>void endCompoundChange();
+</pre>
+
+<h6 id="Parameters_7">Parameters</h6>
+
+<p>None.</p>
+
+<h3 id="find()">find()</h3>
+
+<p>Finds a string in the editor's text.</p>
+
+<pre>Number find(
+  [optional] String aString
+  [optional] Object aOptions
+);
+</pre>
+
+<h6 id="Parameters_8">Parameters</h6>
+
+<dl>
+ <dt><code>aString</code> {{ optional_inline() }}</dt>
+ <dd>The string for which to search. If not specified, the currently selected text in the editor is used as the search string.</dd>
+ <dt><code>aOptions</code> {{ optional_inline() }}</dt>
+ <dd>An optional object containing properties customizing the search operation. See {{ anch("Find options") }} for details.</dd>
+</dl>
+
+<h6 id="Return_value_3">Return value</h6>
+
+<p>Returns an integer indicating the offset into the text at which the first character of the found string is located, or -1 if the string wasn't found.</p>
+
+<h6 id="Find_options">Find options</h6>
+
+<p>The <code>aOptions</code> object can customize the search operation. It may have the following properties:</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>backwards</code></td>
+   <td><code>Boolean</code></td>
+   <td>If <code>true</code>, the search begins at <code>start</code> (or the end of the text, if <code>start</code> is not specified) and progresses toward the beginning of the text. Otherwise the search progresses forward. The default is <code>false</code>.</td>
+  </tr>
+  <tr>
+   <td><code>ignoreCase</code></td>
+   <td><code>Boolean</code></td>
+   <td>If <code>true</code>, the search is performed in a case-insensitive manner; otherwise case is considered. The default is <code>false</code>.</td>
+  </tr>
+  <tr>
+   <td><code>start</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>An integer value indicating the offset into the text at which to begin the find operation. The default is 0 if <code>backwards</code> is <code>false</code>, or <code>text.length</code> if <code>backwards</code> is true.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="findNext()">findNext()</h3>
+
+<p>Finds the next occurrence of the search operation started by the last call to {{ manch("find") }}.</p>
+
+<div class="note"><strong>Note:</strong> This ignores the value you specified for <code>backwards</code> in the original search; it always searches forward.</div>
+
+<pre>Number findNext(
+  Boolean aWrap
+};
+</pre>
+
+<h6 id="Parameters_9">Parameters</h6>
+
+<dl>
+ <dt><code>aWrap</code></dt>
+ <dd>If <code>true</code>, the search operation will wrap around to the beginning of the text. Otherwise, the search stops if the end of the text is reached.</dd>
+</dl>
+
+<h6 id="Return_value_4">Return value</h6>
+
+<p>The offset into the text at which the next occurrence of the string begins, or -1 if the string isn't found.</p>
+
+<h3 id="findPrevious()">findPrevious()</h3>
+
+<p>Finds the previous occurrence of the search operation started by the last call to {{ manch("find") }}.</p>
+
+<div class="note"><strong>Note:</strong> This ignores the value you specified for <code>backwards</code> in the original search; it always searches backward.</div>
+
+<pre>Number findNext(
+  Boolean aWrap
+};
+</pre>
+
+<h6 id="Parameters_10">Parameters</h6>
+
+<dl>
+ <dt><code>aWrap</code></dt>
+ <dd>If <code>true</code>, the search operation will wrap around to the end of the text. Otherwise, the search stops if the beginning of the text is reached.</dd>
+</dl>
+
+<h6 id="Return_value_5">Return value</h6>
+
+<p>The offset into the text at which the next occurrence of the string begins, or -1 if the string isn't found.</p>
+
+<h3 id="focus()">focus()</h3>
+
+<p>Makes the editor the focus for user input.</p>
+
+<pre>void focus();
+</pre>
+
+<h6 id="Parameters_11">Parameters</h6>
+
+<p>None.</p>
+
+<h3 id="getBreakpoints">getBreakpoints</h3>
+
+<p>Returns an array of all of the breakpoints currently set on the code in the editor instance.</p>
+
+<pre>Array getBreakpoints();
+</pre>
+
+<h6 id="Parameters_12">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_6">Return value</h6>
+
+<p>An <code><a href="/en/JavaScript/Reference/Global_Objects/Array" title="Array">Array</a></code> of all of the breakpoints in the editor instance. Each breakpoint is an <a href="/en/JavaScript/Reference/Global_Objects/Object" title="en/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a> with the following properties:</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>line</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>The 0-based line number on which the breakpoint is set.</td>
+  </tr>
+  <tr>
+   <td><code>condition</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/String" title="String">String</a></code></td>
+   <td>The condition string that was specified when the breakpoint was set.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="getCaretOffset()">getCaretOffset()</h3>
+
+<p>Returns the current caret position (insertion point) as an offset into the text.</p>
+
+<pre>Number getCaretOffset();
+</pre>
+
+<h6 id="Parameters_13">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_7">Return value</h6>
+
+<p>The 0-based offset into the text at which newly-typed characters will be inserted.</p>
+
+<h3 id="getCaretPosition()">getCaretPosition()</h3>
+
+<p>Returns an object describing the position of the caret (insertion point) in terms of its line number and column.</p>
+
+<pre>Object getCaretPosition();
+</pre>
+
+<h6 id="Parameters_14">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_8">Return value</h6>
+
+<p>The returned object describes the caret position:</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>line</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>The 0-based line number on which the caret is located.</td>
+  </tr>
+  <tr>
+   <td><code>col</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>The 0-based column number on which the caret is located.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="getCharCount()">getCharCount()</h3>
+
+<p>Returns the number of characters in the editor's content.</p>
+
+<pre>Number getCharCount();
+</pre>
+
+<h6 id="Parameters_15">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_9">Return value</h6>
+
+<p>The number of characters in the editor's text.</p>
+
+<h3 id="getIndentationString">getIndentationString</h3>
+
+<p>Returns a string containing the character or characters that are inserted when the user presses the tab key.</p>
+
+<pre>String getIndentationString();
+</pre>
+
+<h6 id="Parameters_16">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_10">Return value</h6>
+
+<p>If tabs are configured to be expanded into spaces (that is, the <code>expandTab</code> property is <code>true</code>), the returned string is comprised of the number of spaces specified by the <code>tabSize</code> property when the editor was initialized by calling {{ manch("init") }}. Otherwise, the returned string is simply "\t".</p>
+
+<h3 id="getLineCount()">getLineCount()</h3>
+
+<p>Returns the number of lines of text in the editor.</p>
+
+<pre>Number getLineCount();
+</pre>
+
+<h6 id="Parameters_17">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_11">Return value</h6>
+
+<p>The number of lines of text in the document being edited.</p>
+
+<h3 id="getLineDelimiter()">getLineDelimiter()</h3>
+
+<p>Returns a string containing the character or characters that are used as the end of each line of text. This may be, for example, "\n", "\r", or "\r\n".</p>
+
+<pre>String getLineDelimiter();
+</pre>
+
+<h6 id="Parameters_18">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_12">Return value</h6>
+
+<p>A string containing the character or characters that delineate lines of text.</p>
+
+<h3 id="getLineEnd">getLineEnd</h3>
+
+<p>Returns the character offset of the character after the specified line number in the text.</p>
+
+<pre>Number getLineEnd(
+  Number aLineIndex,
+  [optional] Boolean aIncludeDelimiter
+);
+</pre>
+
+<h6 id="Parameters_19">Parameters</h6>
+
+<dl>
+ <dt><code>aLineIndex</code></dt>
+ <dd>Zero-based offset to the line number to which to return the end offset.</dd>
+ <dt><code>aIncludeDelimiter</code> {{ optional_inline() }}</dt>
+ <dd>If <code>false</code>, the returned offset is to the first character of the end-of-line delimiter if the specified line (this is the default). If <code>true</code>, the returned offset is the offset to the first character of the following line.</dd>
+</dl>
+
+<h6 id="Return_value_13">Return value</h6>
+
+<p>The offset to the last character in the specified line, or -1 if the specified line number is out of range.</p>
+
+<h3 id="getLineStart">getLineStart</h3>
+
+<p>Returns the character offset of the first character of the specified line in the text.</p>
+
+<pre>Number getLineStart(
+  Number aLineIndex
+);
+</pre>
+
+<h6 id="Parameters_20">Parameters</h6>
+
+<dl>
+ <dt><code>aLineIndex</code></dt>
+ <dd>Zero-based offset to the line number to which to return the end offset.</dd>
+</dl>
+
+<h6 id="Return_value_14">Return value</h6>
+
+<p>The offset to the first character in the specified line, or -1 if the specified line number is out of range.</p>
+
+<h3 id="getMode()">getMode()</h3>
+
+<p>Returns the current syntax highlighting mode for the document's contents.</p>
+
+<pre>String getMode();
+</pre>
+
+<h6 id="Parameters_21">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_15">Return value</h6>
+
+<p>A string indicating the type of file being edited, as previously set using either the <code>mode</code> property when configuring the editor, or by a call to {{ manch("setMode") }}. See {{ anch("Editor mode constants") }} for possible values.</p>
+
+<h3 id="getSelectedText()">getSelectedText()</h3>
+
+<p>Returns the currently-selected text.</p>
+
+<pre>String getSelectedText();
+</pre>
+
+<h6 id="Parameters_22">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_16">Return value</h6>
+
+<p>The currently-selected text in the editor.</p>
+
+<h3 id="getSelection()">getSelection()</h3>
+
+<p>Returns an object indicating the offsets to the first and last characters that are currently selected.</p>
+
+<pre>Object getSelection();
+</pre>
+
+<h6 id="Parameters_23">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_17">Return value</h6>
+
+<p>An object describing the currently selected range of text in the editor:</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>start</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>0-based offset to the first character in the current selection.</td>
+  </tr>
+  <tr>
+   <td><code>end</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>0-based offset to the end of the current selection. The character at this offset is <strong>not</strong> included in the selection; it's essentially the first character after the selection.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>If there's no selection, the current caret position is returned for both <code>start</code> and <code>end</code>.</p>
+
+<h3 id="getText()">getText()</h3>
+
+<p>Returns the text in the specified range within the editor, or all of the editor's text if no range is given.</p>
+
+<pre>String getText(
+  [optional] Number aStart,
+  [optional] Number aEnd
+);
+</pre>
+
+<h6 id="Parameters_24">Parameters</h6>
+
+<dl>
+ <dt><code>aStart</code> {{ optional_inline() }}</dt>
+ <dd>The offset to the first character to retrieve.</dd>
+ <dt><code>aEnd</code> {{ optional_inline() }}</dt>
+ <dd>The offset to the last character to retrieve. If this isn't provided, all text from <code>aStart</code> (or the beginning of the document, if that wasn't provided either) to the end of the text is returned.</dd>
+</dl>
+
+<h6 id="Return_value_18">Return value</h6>
+
+<p>A string containing the specified range of text (or all of the text, if a range wasn't provided).</p>
+
+<h3 id="getTopIndex()">getTopIndex()</h3>
+
+<p>Returns the line number of the first line currently visible in the editor, based on the current scroll position of the editor.</p>
+
+<pre>Number getTopIndex();
+</pre>
+
+<h6 id="Parameters_25">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_19">Return value</h6>
+
+<p>The line number of the first visible line; this is a 0-based value, so the first line of the document is line number 0.</p>
+
+<h3 id="init()">init()</h3>
+
+<p>Initializes the editor. You must call this, and wait until your callback is called, before calling any other Source Editor methods.</p>
+
+<pre>void init(
+  Element aElement,
+  Object aConfig
+  Function aCallback
+);
+</pre>
+
+<h6 id="Parameters_26">Parameters</h6>
+
+<dl>
+ <dt><code>aElement</code></dt>
+ <dd>The DOM {{ domxref("element") }} in which to place the editor.</dd>
+ <dt><code>aConfig</code></dt>
+ <dd>An object containing a set of properties used to configure the editor. See {{ anch("The editor configuration object") }} for details.</dd>
+ <dt><code>aCallback</code></dt>
+ <dd>A function that will be called when the editor has been fully loaded and initialized.</dd>
+</dl>
+
+<h3 id="hasFocus()">hasFocus()</h3>
+
+<p>Determines whether or not the editor is currently focused.</p>
+
+<pre>Boolean hasFocus();
+</pre>
+
+<h6 id="Parameters_27">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_20">Return value</h6>
+
+<p><code>true</code> if the editor is currently focused, otherwise <code>false</code>.</p>
+
+<h3 id="redo()">redo()</h3>
+
+<p>Redoes the most recently undone change in the editor.</p>
+
+<pre>Boolean redo();
+</pre>
+
+<h6 id="Parameters_28">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_21">Return value</h6>
+
+<p><code>true</code> if a change was redone, otherwise <code>false</code>.</p>
+
+<h3 id="removeBreakpoint">removeBreakpoint</h3>
+
+<p>Removes the breakpoint from the specified line of code.</p>
+
+<pre>Boolean removeBreakpoint(
+  Number aLineIndex
+);
+</pre>
+
+<h6 id="Parameters_29">Parameters</h6>
+
+<dl>
+ <dt>aLineIndex</dt>
+ <dd>The 0-based line number from which to remove the breakpoint.</dd>
+</dl>
+
+<h6 id="Return_value_22">Return value</h6>
+
+<p><code>true</code> if a breakpoint was removed, otherwise <code>false</code>.</p>
+
+<h3 id="removeEventListener()">removeEventListener()</h3>
+
+<p>Removes an event listener (previously established by calling {{ manch("addEventListener") }} from the editor.</p>
+
+<pre>void removeEventListener(
+  String aEventType,
+  Function aCallback
+);
+</pre>
+
+<h6 id="Parameters_30">Parameters</h6>
+
+<dl>
+ <dt><code>aEventType</code></dt>
+ <dd>The name of the event type to stop listening for; see {{ anch("Event name constants") }} for possible values.</dd>
+ <dt><code>aCallback</code></dt>
+ <dd>The function to stop calling when the specified event occurs.</dd>
+</dl>
+
+<h3 id="resetUndo">resetUndo</h3>
+
+<p>Resets the undo stack, removing all possible undo and redo operations from the stack.</p>
+
+<pre>void resetUndo();
+</pre>
+
+<h6 id="Parameters_31">Parameters</h6>
+
+<p>None.</p>
+
+<h3 id="setCaretOffset()">setCaretOffset()</h3>
+
+<p>Sets the current caret position (insertion point) for newly-entered text.</p>
+
+<pre>void setCaretOffset(
+  Number aOffset
+);
+</pre>
+
+<h6 id="Parameters_32">Parameters</h6>
+
+<dl>
+ <dt><code>aOffset</code></dt>
+ <dd>The 0-based offset into the text at which to place the caret.</dd>
+</dl>
+
+<h3 id="setCaretPosition()">setCaretPosition()</h3>
+
+<p>Sets the current caret position given a line number and column number.</p>
+
+<pre>void setCaretPosition(
+  Number aLine,
+  [optional] Number aColumn,
+  [optional] Number aAlign
+);
+</pre>
+
+<h6 id="Parameters_33">Parameters</h6>
+
+<dl>
+ <dt><code>aLine</code></dt>
+ <dd>The 0-based line number on which to place the caret.</dd>
+ <dt><code>aColumn</code> {{ optional_inline() }}</dt>
+ <dd>The 0-based column number at which to place the caret; if you don't provide this parameter, the caret is placed at the beginning of the line specified by <code>aLine</code>.</dd>
+ <dt><code>aAlign</code> {{ optional_inline() }}</dt>
+ <dd>How to position the line with respect to the viewport when scrolling the line into view. This may be one of <code>SourceEditor.VERTICAL_ALIGN.TOP</code>, <code>SourceEditor.VERTICAL_ALIGN.CENTER</code>, and <code>SourceEditor.VERTICAL_ALIGN_BOTTOM</code>. See {{ anch("Alignment constants") }} for details. The default is <code>SourceEditor.VERTICAL_ALIGN.TOP</code>.</dd>
+</dl>
+
+<h3 id="setMode()">setMode()</h3>
+
+<p>Sets the current syntax highlighting mode for the text being edited.</p>
+
+<pre>void setMode(
+  String aMode
+);
+</pre>
+
+<h6 id="Parameters_34">Parameters</h6>
+
+<dl>
+ <dt><code>aMode</code></dt>
+ <dd>A string indicating the file type being edited. See {{ anch("Editor mode constants") }} for possible values.</dd>
+</dl>
+
+<h3 id="setSelection()">setSelection()</h3>
+
+<p>Selects the specified range of text.</p>
+
+<pre>void setSelection(
+  Number aStart,
+  Number aEnd
+);
+</pre>
+
+<h6 id="Parameters_35">Parameters</h6>
+
+<dl>
+ <dt><code>aStart</code></dt>
+ <dd>The 0-based offset to the first character to select in the text.</dd>
+ <dt><code>aEnd</code></dt>
+ <dd>The offset to the first character after the range you wish to select.</dd>
+</dl>
+
+<h6 id="Remarks">Remarks</h6>
+
+<p>It's important to note that the character at offset <code>aEnd</code> is <strong>not</strong> included in the selection.</p>
+
+<h3 id="setText()">setText()</h3>
+
+<p>Replaces a range of text in the editor with the specified string. If you don't specify a range, the entire text is replaced.</p>
+
+<pre>void setText(
+  String aString,
+  [optional] Number aStart,
+  [optional] Number aEnd
+);
+</pre>
+
+<h6 id="Parameters_36">Parameters</h6>
+
+<dl>
+ <dt><code>aString</code></dt>
+ <dd>The text to put into the editor.</dd>
+ <dt><code>aStart</code> {{ optional_inline() }}</dt>
+ <dd>The 0-based offset to the first character in the text to replace.</dd>
+ <dt><code>aEnd</code> {{ optional_inline() }}</dt>
+ <dd>The offset to the last character to replace. If you don't specify this value, the entire string from <code>aStart</code> (or the first character in the text, if you don't specify <code>aStart</code>) to the end of the text is replaced.</dd>
+</dl>
+
+<h3 id="setTopIndex()">setTopIndex()</h3>
+
+<p>Scrolls the text as necessary to place the specified line number at the top of the view.</p>
+
+<pre>void setTopIndex(
+  Number aTopIndex
+);
+</pre>
+
+<h6 id="Parameters_37">Parameters</h6>
+
+<dl>
+ <dt><code>aTopIndex</code></dt>
+ <dd>The 0-based line number to place at the top of the editor's view.</dd>
+</dl>
+
+<h3 id="startCompoundChange()">startCompoundChange()</h3>
+
+<p>Begins a compound change in the editor. All changes made between a call to <code>startCompoundChange()</code> and its corresponding call to {{ manch("endCompoundChange") }} are considered to be a single operation on the undo stack.</p>
+
+<pre>void startCompoundChange();
+</pre>
+
+<h6 id="Parameters_38">Parameters</h6>
+
+<p>None.</p>
+
+<h3 id="undo()">undo()</h3>
+
+<p>Undoes the most recent change made in the editor.</p>
+
+<pre>Boolean undo();
+</pre>
+
+<h6 id="Parameters_39">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value_23">Return value</h6>
+
+<p><code>true</code> if a change was undone or <code>false</code> if there were no changes to undo.</p>
+
+<h2 id="The_editor_configuration_object">The editor configuration object</h2>
+
+<p>When you call {{ manch("init") }} to initialize the editor, you pass in an object that contains properties configuring the editor's features. That object may contain any combination of the following properties:</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>contextMenu</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/String" title="String"><code>String</code></a> | {{ domxref("Element") }}</td>
+   <td>A reference to the context menu to display when the user right-clicks in the editor. This may be either a string providing the ID of a XUL {{ XULElem("menupopup") }} or an {{ domxref("Element") }} object of type {{ XULElem("menupopup") }}. See <span style="color: #ff0000;"><strong><span style="background-color: #ffff00;">XXXXX</span></strong></span> for details on how to work with the context menu. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>expandTab</code></td>
+   <td><code>Boolean</code></td>
+   <td>A Boolean value indicating whether or not tab characters should be expanded out to spaces. This value is overridden by the user preference named by <code>SourceEditor.PREFS.EXPAND_TAB</code>.</td>
+  </tr>
+  <tr>
+   <td><code>highlightCurrentLine</code></td>
+   <td><code>Boolean</code></td>
+   <td>A Boolean value indicating whether or not to highlight the line on which the text caret is currently located. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>initialText</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/String" title="String"><code>String</code></a></td>
+   <td>The default initial text to be in the editor when it's created. By default, this is the empty string, indicating there should be no text on startup. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>keys</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a></td>
+   <td>An array of objects defining custom keyboard bindings. See <span style="color: #ff0000;"><strong><span style="background-color: #ffff00;">XXXXX</span></strong></span> for details. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>mode</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/String" title="String"><code>String</code></a></td>
+   <td>A string indicating the default syntax highlighting mode; by default, the content is assumed to be plain text. See {{ anch("Editor mode constants") }} for permitted values.</td>
+  </tr>
+  <tr>
+   <td><code>placeholderText</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/String" title="String"><code>String</code></a></td>
+   <td>The default initial text to be in the editor when it's created; by default, an empty string. This is deprecated starting in Firefox 13; use <code>initialText</code> instead. {{ deprecated_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>readOnly</code></td>
+   <td><code>Boolean</code></td>
+   <td>A Boolean value indicating whether or not the source editor should be read only. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>showAnnotationRuler</code></td>
+   <td><code>Boolean</code></td>
+   <td>A Boolean value indicating whether or not to display the annotations gutter/ruler. See <span style="color: #ff0000;"><strong><span style="background-color: #ffff00;">XXXXX</span></strong></span> for details. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>showLineNumbers</code></td>
+   <td><code>Boolean</code></td>
+   <td>A Boolean value indicating whether or not the line numbers gutter should be displayed. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>showOverviewRuler</code></td>
+   <td><code>Boolean</code></td>
+   <td>A Boolean value indicating whether or not to show the overview gutter/ruler. This presents an overview of the current annotations in the editor, such as the breakpoints. {{ fx_minversion_inline("13.0") }}</td>
+  </tr>
+  <tr>
+   <td><code>tabSize</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number"><code>Number</code></a></td>
+   <td>A number indicating how many spaces each tab character should occupy. This default can be overridden by the user preference named by <code>SourceEditor.PREFS.TAB_SIZE</code>.</td>
+  </tr>
+  <tr>
+   <td><code>theme</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/String" title="String"><code>String</code></a></td>
+   <td>A string indicating the default syntax highlighting theme to use; you may use one of the predefined values listed in {{ anch("Theme constants") }}, or you may provide your own CSS file reference.</td>
+  </tr>
+  <tr>
+   <td><code>undoLimit</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number"><code>Number</code></a></td>
+   <td>A number indicating how many steps the undo stack should hold.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>See {{ anch("Configuration defaults constants") }} for a list of the default values for these configuration options.</p>
+
+<h2 id="Events">Events</h2>
+
+<p>There are a number of events that can be sent by the source editor, as listed in {{ anch("Event name constants") }}. This section provides details on each of those events and their properties.</p>
+
+<h3 id="ContextMenu">ContextMenu</h3>
+
+<p>The "ContextMenu" event is sent when the editor's context menu is invoked, and has the following properties.</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>x</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>The X-coordinate at which the mouse cursor was located when the context menu was invoked. This value is relative to the document being edited; that is, 0 is the top of the very first line of text in the document, regardless of vertical scroll position.</td>
+  </tr>
+  <tr>
+   <td><code>y</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>The Y-coordinate at which the mouse cursor was located when the context menu was invoked. This value is relative to the document being edited; that is, 0 is the left edge of the document, regardless of horizontal scroll position.</td>
+  </tr>
+  <tr>
+   <td><code>screenX</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>The X-coordinate at which the mouse cursor was located when the context menu was invoked, relative to the screen. This value comes from the DOM contextmenu's <code>event.screenX</code> property.</td>
+  </tr>
+  <tr>
+   <td><code>screenY</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>The Y-coordinate at which the mouse cursor was located when the context menu was invoked, relative to the screen. This value comes from the DOM contextmenu's <code>event.screenY</code> property.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="TextChanged">TextChanged</h3>
+
+<p>The "TextChanged" event is sent when the contents of the editor change. It has the following properties:</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>start</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>The character offset into the document at which the change occurred.</td>
+  </tr>
+  <tr>
+   <td><code>removedCharCount</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>The number of characters removed from the document.</td>
+  </tr>
+  <tr>
+   <td><code>addCharCount</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number">Number</a></code></td>
+   <td>The number of characters added to the document.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Selection">Selection</h3>
+
+<p>The "Selection" element is sent when the selection within the editor changes. It has the following properties:</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>oldValue</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Object" title="en/JavaScript/Reference/Global_Objects/Object">Object</a></code></td>
+   <td>The previously-selected range of text.</td>
+  </tr>
+  <tr>
+   <td><code>newValue</code></td>
+   <td><code><a href="/en/JavaScript/Reference/Global_Objects/Object" title="en/JavaScript/Reference/Global_Objects/Object">Object</a></code></td>
+   <td>The newly-selected range of text.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The objects used for <code>oldValue</code> and <code>newValue</code> each have two properties of type <a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number"><code>Number</code></a>: <code>start</code> and <code>end</code>, describing the start and end positions of the range of characters.</p>
+
+<p>The "Focus" event is sent when the editor is focused. It has no properties.</p>
+
+<p>The "Blur" event is sent when the editor loses focus. It has no properties.</p>
+
+<h3 id="MouseMove">MouseMove</h3>
+
+<p>The "MouseMove" event is sent when the user moves the mouse pointer over a line of text content. It has the following properties:</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>event</code></td>
+   <td>{{ domxref("MouseEvent") }}</td>
+   <td>The DOM "mousemove" event.</td>
+  </tr>
+  <tr>
+   <td><code>x</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number"><code>Number</code></a></td>
+   <td>The X-coordinate of the mouse pointer relative to the document being edited; that is, 0 is the top of the very first line of text in the document, regardless of vertical scroll position..</td>
+  </tr>
+  <tr>
+   <td><code>y</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number"><code>Number</code></a></td>
+   <td>The Y-coordinate of the mouse pointer relative to the document being edited; that is, 0 is the left edge of the very first column of text in the document, regardless of horizontal scroll position.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="MouseOver">MouseOver</h3>
+
+<p>The "MouseOver" event is sent when the user moves the mouse pointer enters a line of text content. It has the following properties:</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>event</code></td>
+   <td>{{ domxref("MouseEvent") }}</td>
+   <td>The DOM "mouseover" event.</td>
+  </tr>
+  <tr>
+   <td><code>x</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number"><code>Number</code></a></td>
+   <td>The X-coordinate of the mouse pointer relative to the document being edited; that is, 0 is the top of the very first line of text in the document, regardless of vertical scroll position.</td>
+  </tr>
+  <tr>
+   <td><code>y</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number"><code>Number</code></a></td>
+   <td>The Y-coordinate of the mouse pointer relative to the document being edited; that is, 0 is the left edge of the very first column of text in the document, regardless of horizontal scroll position.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="MouseOut">MouseOut</h3>
+
+<p>The "MouseOut" event is sent when the user moves the mouse pointer over a line of text content. It has the following properties:</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>event</code></td>
+   <td>{{ domxref("MouseEvent") }}</td>
+   <td>The DOM "mouseout" event.</td>
+  </tr>
+  <tr>
+   <td><code>x</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number"><code>Number</code></a></td>
+   <td>The X-coordinate of the mouse pointer relative to the document being edited; that is, 0 is the top of the very first line of text in the document, regardless of vertical scroll position..</td>
+  </tr>
+  <tr>
+   <td><code>y</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/Number" title="Number"><code>Number</code></a></td>
+   <td>The Y-coordinate of the mouse pointer relative to the document being edited; that is, 0 is the left edge of the very first column of text in the document, regardless of horizontal scroll position.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The "BreakpointChange" event is sent when a breakpoint is changed. This can be any of the following changes:</p>
+
+<ul>
+ <li>One or more new breakpoints were added, using either the API or editor user interface.</li>
+ <li>One or more breakpoints were removed, using either the API or editor user interface.</li>
+</ul>
+
+<p>The event has the following properties:</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>added</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a></td>
+   <td>An array of breakpoint objects representing all of the breakpoints that have been added; see {{ anch("Breakpoint objects") }} for details.</td>
+  </tr>
+  <tr>
+   <td><code>removed</code></td>
+   <td><a href="/en/JavaScript/Reference/Global_Objects/Array" title="Array"><code>Array</code></a></td>
+   <td>An array of breakpoint objects representing all of the breakpoints that have been removed; see {{ anch("Breakpoint objects") }} for details.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The "DirtyChanged" event is sent when the dirty state of the editor changes. This state indicates whether or not there have been changes to the text since the last time the content was saved. This event has the following properties:</p>
+
+<table class="standard-table" style="width: auto;">
+ <tbody>
+  <tr>
+   <td class="header">Property</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>oldValue</code></td>
+   <td><code>Boolean</code></td>
+   <td>The previous state of the dirty flag.</td>
+  </tr>
+  <tr>
+   <td><code>newValue</code></td>
+   <td><code>Boolean</code></td>
+   <td>The new state of the dirty flag.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>If the dirty flag is <code>true</code>, the document has not been saved since the last time its text was changed. You can set the dirty state of the document by setting the value of the <code>dirty</code> attribute.</p>

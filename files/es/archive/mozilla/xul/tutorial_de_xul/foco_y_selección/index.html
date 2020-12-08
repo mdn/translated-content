@@ -1,0 +1,179 @@
+---
+title: Foco y Selección
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Foco_y_Selección
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Focus_and_Selection
+---
+<p>Esta sección describe como gestionar el foco y la selección de los elementos.</p>
+
+<h3 id="Elementos_con_foco" name="Elementos_con_foco">Elementos con foco</h3>
+
+<p>El elemento con foco se refiere al elemento que actualmente recibe los eventos de entrada. Si hay tres campos de texto en una ventana, el que tiene el foco es en el que el usuario puede introducir texto. Sólo un elemento por ventana puede tener el foco en un momento dado.</p>
+
+<p>El usuario puede cambiar el foco haciendo clic en un elemento o usando la tecla TAB. Cuando la tecla TAB es presionada, el foco pasa al siguiente elemento. Para ir al elemento anterior puede pulsarse Mayúsculas + Tab.</p>
+
+<h4 id="Reordenaci.C3.B3n_del_orden_de_tabulaci.C3.B3n" name="Reordenaci.C3.B3n_del_orden_de_tabulaci.C3.B3n">Reordenación del orden de tabulación</h4>
+
+<p>Puedes cambiar el orden en que los elementos reciben el foco cuando el usuario presiona TAB si especificas un valor para el atributo tabindex en cada elemento. El valor de este atributo debe ser un número. Cuando el usuario presiona la tecla TAB, el foco cambiará al elemento con el tabindex inmediatamente superior al elemento actual. Esto significa que puedes ordenar los elementos si les asignas índices en forma secuencial. Normalmente, sin embargo, no especificarás un valor para el atributo tabindex. Si no lo especificas, presionar la tecla TAB pondrá el foco en el siguiente elemento marcado en el código. Sólo necesitas especificarlo si deseas usar un orden distinto. Aquí hay un ejemplo:</p>
+
+<p><strong>Ejemplo 1:</strong> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_1.xul">Ver en funcionamiento</a></p>
+
+<pre class="eval">&lt;button label="Botón 1" tabindex="2"/&gt;
+&lt;button label="Botón 2" tabindex="1"/&gt;
+&lt;button label="Botón 3" tabindex="3"/&gt;
+</pre>
+
+<h4 id="El_evento_enfoque" name="El_evento_enfoque">El evento enfoque</h4>
+
+<p>El evento onfocus (enfoque) se usa para responder cuando un elemento recibe el foco. El evento onblur (desenfocado) se usa para responder cuando el foco se retira de un elemento. Ambos eventos funcionan igual que sus equivalentes en HTML. Puedes usar estos gestores para iluminar un elemento o mostrar un texto de ayuda en la barra de estado. El siguiente ejemplo puede ser usado para aplicar una función a la gestión del evento de enfoque.</p>
+
+<p><strong>Ejemplo 2</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_2.xul">Ver en funcionamiento</a></p>
+
+<pre class="eval">&lt;script&gt;
+function displayFocus()
+{
+  var elem=document.getElementById('sbar');
+  elem.setAttribute('value','Introduce tu número de teléfono.');
+}
+&lt;/script&gt;
+
+&lt;textbox id="tbox1"/&gt;
+&lt;textbox id="tbox2" onfocus="displayFocus();"/&gt;
+&lt;description id="sbar" value=""/&gt;
+</pre>
+
+<p>El evento onfocus, cuando ocurra, llamará a la función displayFocus(). Esta función cambiará el valor de la etiqueta. Podemos extender este ejemplo para eliminar ese texto cuando el elemento pierde el foco. Generalmente, usarás los eventos de enfoque y desenfocado para actualizar partes de la interfaz cuando el usuario seleccione elementos. Por ejemplo, calculando un total cuando usuario introduzca valores en otros campos, o usando los eventos de foco para validar ciertos valores. No muestres diálogos de alerta durante los eventos de foco ya que generalmente esto incomodará o distraerá al usuario y por ello se considera un diseño de interfaz bastante pobre.</p>
+
+<p>También puedes añadir gestores de eventos dinámicamente usando la función del DOM addEventListener. Puedes usarla para cualquier tipo de elemento. Toma tres parametros, el tipo de evento, la función a ejecutar cuando ocurre el evento y un booleano indicando si debe ser capturado o no.</p>
+
+<h4 id="Obtenci.C3.B3n_del_elemento_actualmente_enfocado" name="Obtenci.C3.B3n_del_elemento_actualmente_enfocado">Obtención del elemento actualmente enfocado</h4>
+
+<p>El elemento enfocado actualmente se registra en un objeto llamado despachador de comandos (command dispatcher), del cual sólo hay una instancia en cada ventana. El despachador de comandos es responsable de mantener controlado el elemento que tiene el foco cuando el usuario usa el interfaz. El despachador de comandos también tiene otras tareas, que serán discutidas en un próxima sección sobre los comandos. Por ahora, miraremos algunas de las características relacionadas con la focalización.</p>
+
+<p>Puedes obtener el despachador de comandos de la ventana usando la propiedad commandDispatcher del documento. Desde ahí, puedes saber el elemento enfocado actualmente con el atributo focusedElement del despachador. El siguiente ejemplo ilustra cómo hacerlo.</p>
+
+<p><strong>Ejemplo 3</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_3.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_3.xul">Ver en funcionamiento</a></p>
+
+<pre class="eval">&lt;window id="focus-example" title="Ejemplo de Foco"
+       onload="init();"
+       xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt;
+
+  &lt;script&gt;
+  function init()
+  {
+    addEventListener("focus",setFocusedElement,true);
+  }
+
+  function setFocusedElement()
+  {
+    var focused = document.commandDispatcher.focusedElement;
+    document.getElementById("focused").value = focused.tagName;
+  }
+  &lt;/script&gt;
+
+  &lt;hbox&gt;
+    &lt;label control="username" value="Nombre de usuario:"/&gt;
+    &lt;textbox id="username"/&gt;
+  &lt;/hbox&gt;
+
+  &lt;button label="Hola"/&gt;
+  &lt;checkbox label="Recuerda esta decisión"/&gt;
+  &lt;label id="focused" value="-Sin Foco-"/&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>En este ejemplo, el gestor de eventos del foco se adjunta a la ventana. Queremos usar un gestor de eventos capturador, así que debemos usar el método addEventListener. Este registrará un gestor de eventos capturador con la ventana, que se encargará de llamar al método setFocusedElement(). Este método coge el elemento que contiene el foco actualmente del despachador de comandos y pone el valor de la etiqueta con el nombre del elemento. Cuando el foco cambia de elemento, la etiqueta mostrará el nombre del elemento que contiene el foco. Algunas cosas que cabe mencionar son las siguientes:</p>
+
+<ul>
+ <li>Primero, cuando la caja de texto tiene el foco, el nombre del elemento es ‘html:input’, no ‘textbox’ como cabría esperar. Esto es así porque las cajas de texto en XUL están implementadas usando el control input de HTML, así que el evento de foco es recibido por ese elemento.</li>
+ <li>Segundo, haciendo clic en la etiqueta de la caja de texto cambia el foco a la caja de texto. Esto sucede porque el elemento etiqueta tiene un atributo control apuntando al id de la caja de texto.</li>
+ <li>Finalmente, la otra etiqueta que muestra el nombre del elemento, no tiene un atributo control, así que hacer clic sobre ella no tiene ningún efecto para el cambio de foco. Sólo los elementos focalizables pueden obtener el foco.</li>
+</ul>
+
+<h4 id="Hacer_una_etiqueta_enfocable" name="Hacer_una_etiqueta_enfocable">Hacer una etiqueta enfocable</h4>
+
+<p>Si tuvieras que crear un elemento personalizado, tendrías que definir si este nuevo elemento puede obtener el foco o no. Para ello, puedes usar una propiedad de estilo especial : -moz-user-focus. Esta propiedad controla si un elemento puede ser focalizable. Por ejemplo, podrías crear una etiqueta focalizable como en el siguiente ejemplo.</p>
+
+<p><strong>Ejemplo 4</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_4.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_4.xul">Ver en funcionamiento</a></p>
+
+<pre class="eval">&lt;label id="focused" style="-moz-user-focus: normal;"
+         onkeypress="alert('Etiqueta Focalizada');" value="Focalizame"/&gt;
+</pre>
+
+<p>La propiedad de estilo está puesta como normal. También puedes ponerla como ignore para que el elemento no sea focalizable. Esta propiedad no debe ser usada para deshabilitar un elemento, para ello puedes usar el atributo disabled ya que se diseñó específicamente para ello. Una vez la etiqueta del ejemplo obtiene el foco, puede responder a pulsaciones del teclado. Naturalmente, la etiqueta no da ninguna indicación de estar focalizada, ya que normalmente no debería poder obtener el foco.</p>
+
+<h4 id="Cambio_del_foco" name="Cambio_del_foco">Cambio del foco</h4>
+
+<p>Hay distintas formas de cambiar el elemento actualmente enfocado. La más simple es llamando al método focus del elemento XUL que deseas tener enfocado. El método blur sería usado para desfocalizar un elemento. El siguiente ejemplo muestra su uso.</p>
+
+<p><strong>Ejemplo 5</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_5.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_focus_5.xul">Ver en funcionamiento</a></p>
+
+<pre class="eval">&lt;textbox id="addr"/&gt;
+
+&lt;button label="Foco" oncommand="document.getElementById('addr').focus()"/&gt;
+</pre>
+
+<p>Opcionalmente puedes usar los métodos advanceFocus y rewindFocus del despachador de comandos. Estos métodos mueven el foco al siguiente o anterior elemento respectivamente. Esto es lo que pasa cuando se presiona TAB o Mayúsculas+TAB.</p>
+
+<p>Para las cajas de texto, un atributo especial focused se añade cuando el elemento tiene el foco. Puedes comprobar la presencia del atributo para determinar si el elemento está enfocado, ya sea mediante un guión o desde una hoja de estilos. Tendrá el valor true si la caja de texto tiene el foco y si no lo tuviera el atributo ni siquiera estará presente.</p>
+
+<h4 id="Comportamientos_espec.C3.ADficos_de_plataforma" name="Comportamientos_espec.C3.ADficos_de_plataforma">Comportamientos específicos de plataforma</h4>
+
+<dl>
+ <dt>Max OS X</dt>
+ <dd>Hay una preferencia llamada "Acceso Total al Teclado" (Full Keyboard Access, FKA). Nota que XUL es fiel a esto. Esto quiere decir que cuando la preferencia FKA está<em>off</em>, sólo las cajas de texto y las listas/árboles son enfocables con el teclado, así como de tu teclado utilizando el método focus.</dd>
+</dl>
+
+<h3 id="Manejo_de_cambios_de_texto" name="Manejo_de_cambios_de_texto">Manejo de cambios de texto</h3>
+
+<p>Hay dos eventos que pueden ser utilizados cuando el usuario cambia el valor de una caja de texto. Naturalmente, estos eventos sólo serán enviados a la caja de texto que tiene el foco.</p>
+
+<ul>
+ <li>El evento input es disparado siempre que el texto del campo es modificado. El valor nuevo será diferente del viejo. Puedes querer utilizar este evento en lugar de usar eventos de tecla, ya que algunas teclas como Mayúsculas no cambian el valor. Además, el evento input no se disparará si se pulsa una tecla de letra cuando ya no caben más letras en la caja de texto.</li>
+ <li>El evento change es similar en que se dispara sólo cuando el campo cambia. Sin embargo sólo se dispara una vez la caja de texto pierde el foco, es decir, una vez por cada conjunto de cambios.</li>
+</ul>
+
+<h3 id="Selecci.C3.B3n_de_texto" name="Selecci.C3.B3n_de_texto">Selección de texto</h3>
+
+<p>Cuando trabajamos con cajas de texto, seguramente deseemos obtener el texto seleccionado en lugar de todo el texto. También es posible que necesitemos cambiar la selección actual.</p>
+
+<p>Las cajas de texto en XUL soportan una forma de obtener y modificar la selección. La forma más sencilla es seleccionar todo el texto de la caja. Esto involucra usar el método select de la caja de texto.</p>
+
+<pre class="eval">tbox.select();
+</pre>
+
+<p>Sin embargo, podrías querer seleccionar tan sólo una parte del texto. Para hacerlo puedes usar la función setSelectionRange. Toma dos parametros, el primero es la posición del caracter inicial y el segundo es la posición del caracter inmediatamente posterior al fin de la selección. Los valores comienzan en 0, así que la posición del primer caracter es 0, la del segundo 1 …</p>
+
+<pre class="eval">tbox.setSelectionRange(4,8);
+</pre>
+
+<p>Este ejemplo seleccionará el quinto, sexto, séptimo y octavo caracteres. Si tan sólo hubiera seis caracteres, sólo el quinto y el sexto serían seleccionados, sin provocar ningún error.</p>
+
+<p>Si usas el mismo valor para ambos parametros, el inicio y fin de la selección cambia a la misma posición. Esto equivale a cambiar la posición del cursor dentro de la caja de texto. Por ejemplo, la siguiente línea puede usarse para mover el cursor al inicio del texto.</p>
+
+<pre class="eval">tbox.setSelectionRange(0,0);
+</pre>
+
+<p>Puedes obtener la selección actual usando las propiedades <code>selectionStart</code> y <code>selectionEnd</code>. Estas propiedades contienen los valores de inicio y final de la selección actual respectivamente. Si ambas contienen el mismo valor, significa que no hay ningún texto seleccionado, y los valores serán la posición actual del cursor. Una vez que tienes la posición inicial y final puedes extraer la subcadena del texto completo.</p>
+
+<p>Puedes obtener y modificar el contenido de una caja de texto usando la propiedad value.</p>
+
+<p>Otra propiedad de las cajas de texto bastante útil es <code>textLength</code>, la cual nos dirá el número de caracteres del campo.</p>
+
+<h3 id="Selecci.C3.B3n_de_otros_elementos" name="Selecci.C3.B3n_de_otros_elementos">Selección de otros elementos</h3>
+
+<p>Muchos otros elementos proporcionan métodos para obtener los elementos seleccionados dentro de ellos. Listas, menús y cajas de pestañas tienen la propiedad selectedIndex que podemos usar para obtener el índice del elemento actualmente seleccionado.</p>
+
+<p>Si asignas un valor a la propiedad selectedIndex puedes cambiar el elemento seleccionado.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Atajos_de_teclado" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Comandos">Siguiente  »</a></p>
+</div>
+
+<p><span class="comment">Categorías</span></p>
+
+<p><span class="comment">links interwikis</span></p>

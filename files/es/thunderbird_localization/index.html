@@ -1,0 +1,100 @@
+---
+title: Localización de Thundebird
+slug: Thunderbird_Localization
+tags:
+  - Localización
+  - Thunderbird 3
+  - Traducción
+  - thunderbird
+translation_of: Mozilla/Projects/Thunderbird/Thunderbird_Localization
+---
+<p>Esta página está dirigida a todos los traductores (tanto presentes como futuros) de Thunderbird, el cliente de correo electrónico y grupos de noticias de Mozilla. Esta página abarca muchos aspectos que un traductor de Thunderbird debe tener en cuenta, como por ejemplo, conocer las herramientas necesarias y saber cómo obtener información sobre los eventos de traducción más importantes, así como otros artículos de interés.</p>
+
+<h2 id="Crear_una_localización_de_Thundebird">Crear una localización de Thundebird</h2>
+
+<p><a href="/en/Bootstrapping_a_New_Locale" title="En/Creating_a_new_localization_(Mercurial)">Crear una nueva localización (Mercurial)</a> - En este artículo se describe cómo puedes crear una nueva localización para Thunderbird.</p>
+
+<h3 id="Sobre_los_repositorios_y_las_ramas">Sobre los repositorios y las ramas</h3>
+
+<p>Hay 3 repositorios activos para el desarrollo de Thunderbird. El trabajo de desarrollo de Thunderbird se fusiona de una rama a otra cada seis semanas.</p>
+
+<ul>
+ <li>comm-central - También conocido como Trunk or "Daily"
+  <ul>
+   <li>En esta rama tiene lugar el desarrollo de forma regular de Thunderbird. Las cadenas que hay que traducir en esta rama pueden cambiar en cualquier momento.</li>
+   <li>Sólo se espera que un reducido grupo de localizadores trabaje en esta rama.</li>
+  </ul>
+ </li>
+ <li>comm-aurora - También conocido como "Earlybird"
+  <ul>
+   <li>En esta rama comienza a estabilizarse el desarrollo de una versión concreta de Thunderbird.</li>
+   <li>No está permitido añadir nuevas características o funcionalidades y las cadenas que hay que traducir están "congeladas".</li>
+   <li>Los localizadores deben hacer todo el trabajo posible en esta rama y lograr el cierre de la versión.</li>
+   <li>El trabajo realizado aquí se fusiona automáticamente con la rama beta cada 6 semanas.</li>
+  </ul>
+ </li>
+ <li>comm-beta - También conocido como canal "Beta"
+  <ul>
+   <li>Aquí es donde se previsualiza el desarrollo de Thunderbird a una gran cantidad de usuarios.</li>
+   <li>Se realiza la estabilización final de la aplicación.</li>
+   <li>Se realiza muy poco trabajo de localización aquí.</li>
+  </ul>
+ </li>
+</ul>
+
+<p>La mayoría de los localizadores trabajan en la rama comm-aurora. En lo que se refiere a las cadenas, este repositorio/rama se mantiene estable durante un período de seis semanas. Cuando se finaliza aquí el trabajo significa que está listo para la primera beta y no tendrás que trabajar la rama beta. Tu trabajo, a partir de este punto, se llevara a la versión final de Thunderbird automáticamente.</p>
+
+<h3 id="Requisitos_de_localización">Requisitos de localización</h3>
+
+<p>No hay restricciones importantes sobre los cambios que pueden realizar los traductores. Sin embargo, tenemos que trabajar juntos para proporcionar los motores de búsqueda adecuados a los usuarios de Thunderbird y conseguir un equilibrio perfecto entre los motores de búsqueda y su conjunto de opciones. Para más información, puedes consultar esta <a href="/en/Thunderbird_Localization/Productization" title="en/Thunderbird_Localization/Productization">página</a>.</p>
+
+<h3 id="Panel_de_localización.">Panel de localización.</h3>
+
+<p>El <a href="https://l10n.mozilla.org/teams/">panel de localización</a> de Thunderbird proporciona a los localizadores una visión precisa del estado actual de sus localizaciones. Puedes ver más información detallada en la página del <a href="https://wiki.mozilla.org/Thunderbird:Localization:Dashboard">panel de localización</a>.</p>
+
+<p>Las traducciones se añaden al panel de localización a petición cuando se ha alcanzado un alto nivel de finalización (&gt; 80%), tal y como se muestra por la salida <a href="/en/Compare-locales">compare-locales</a>. Para solicitar que se añada una traducción al panel de localización, abre una <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird&amp;component=Build%20Config">nueva incidencia</a> en el producto Thunderbird, en el componente Build Config.</p>
+
+<h2 id="Obtener_información_relevante_sobre_la_localización_de_Thunderbird">Obtener información relevante sobre la localización de Thunderbird</h2>
+
+<h3 id="Grupos_de_noticias_y_Listas_de_correo">Grupos de noticias y Listas de correo</h3>
+
+<p>Los traductores de Thunderbird deben leer los grupos de noticias de localización (<a class="external" href="http://groups.google.de/group/mozilla.dev.l10n.announce" title="http://groups.google.de/group/mozilla.dev.l10n.announce">mozilla.dev.l10n.announce</a> <a class="external text" href="http://groups.google.de/group/mozilla.dev.l10n" rel="nofollow" title="http://groups.google.de/group/mozilla.dev.l10n">mozilla.dev.l10n</a>) para estar informados de los temás de Thunderbird que les puedan resultar interesantes, tanto los más específicos como los generales. Tambien se les anima a leer el grupo de noticias de desarrollo de Thunderbird (<a class="external text" href="http://groups.google.de/group/mozilla.dev.apps.thunderbird" rel="nofollow" title="http://groups.google.de/group/mozilla.dev.apps.thunderbird">mozilla.dev.apps.thunderbird</a>) para mantenerse informado de las últimas novedades relacionadas con el desarrollo de Thunderbird.</p>
+
+<p>También se puede acceder a estos grupos de noticias a través de las listas <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-l10n-announce" title="https://lists.mozilla.org/listinfo/dev-l10n-announce">dev-l10n-announce@lists.mozilla.org</a> y <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-l10n" title="https://lists.mozilla.org/listinfo/dev-l10n">dev-l10n@lists.mozilla.org</a> (listas de correo de localización) o de la lista de correo <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-apps-thunderbird" title="https://lists.mozilla.org/listinfo/dev-apps-thunderbird">dev-apps-thunderbird@lists.mozilla.org</a> (lista de correo de desarrollo), que reflejan los grupos de noticias mencionados anteriormente. Puedes suscribirte o darte de baja de estas listas de correo a través de la interfaz web que se encuentra en <a class="link-https" href="https://lists.mozilla.org/listinfo" title="https://lists.mozilla.org/listinfo">lists.mozilla.org</a>.</p>
+
+<h3 id="Bugzilla"><span class="mw-headline">Bugzilla</span></h3>
+
+<p>Los localizadores deberían echarle un vistazo a la dirección de correo <a class="link-mailto" href="mailto:thunderbird@localization.bugs" rel="freelink">thunderbird@localization.bugs</a> (o a su alias :tb-l10n) para mantenerse informados de los bugs que puedan afectar a la localización de Thunderbird. Para poder acceder a ella, solo tienes que añadir la dirección de correo a la sección "User Watching" de tus <a class="link-https" href="https://bugzilla.mozilla.org/userprefs.cgi?tab=email" title="https://bugzilla.mozilla.org/userprefs.cgi?tab=email">preferencias de correo</a> en bugzilla.</p>
+
+<h3 id="Algunos_enlaces_útiles">Algunos enlaces útiles</h3>
+
+<ul>
+ <li><a class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?product=MailNews+Core&amp;product=Thunderbird&amp;keywords_type=allwords&amp;keywords=l12y&amp;bug_status=UNCONFIRMED,NEW,ASSIGNED,REOPENED" rel="nofollow" title="https://bugzilla.mozilla.org/buglist.cgi?product=MailNews+Core&amp;product=Thunderbird&amp;keywords_type=allwords&amp;keywords=l12y&amp;bug_status=UNCONFIRMED,NEW,ASSIGNED,REOPENED">Errores abiertos que contienen la palabra clave l12y (localizabilidad</a><a class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?product=MailNews+Core&amp;product=Thunderbird&amp;keywords_type=allwords&amp;keywords=l12y&amp;bug_status=UNCONFIRMED,NEW,ASSIGNED,REOPENED" rel="nofollow" title="https://bugzilla.mozilla.org/buglist.cgi?product=MailNews+Core&amp;product=Thunderbird&amp;keywords_type=allwords&amp;keywords=l12y&amp;bug_status=UNCONFIRMED,NEW,ASSIGNED,REOPENED">)</a></li>
+ <li><a class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?product=MailNews+Core&amp;product=Thunderbird&amp;bug_status=UNCONFIRMED,NEW,ASSIGNED,REOPENED&amp;emailcc1=1&amp;emailtype1=exact&amp;email1=thunderbird@localization.bugs" rel="nofollow" title="https://bugzilla.mozilla.org/buglist.cgi?product=MailNews+Core&amp;product=Thunderbird&amp;bug_status=UNCONFIRMED,NEW,ASSIGNED,REOPENED&amp;emailcc1=1&amp;emailtype1=exact&amp;email1=thunderbird%40localization.bugs">Errores abiertos que necesitan la atención del localizador  (thunderbird@localization.bugs esta en CC para ese error)</a></li>
+</ul>
+
+<h2 id="Locale_Tiers"><span class="mw-headline">Locale Tiers </span></h2>
+
+<p>Los niveles de traducción reflejan las traducciones que necesitan estar en un buen estado para su liberación. Hay 10 traducciones en el nivel 1, que son las más importantes para Thunderbird debido al número de usuarios de Thunderbird o a su potencial de crecimiento.</p>
+
+<p>Estas localizaciones se tratan como ciudadanos de primera clase, son igual de importantes que la locale es-US, lo que quiere decir que cualquier traducción de nivel 1 que no cumpla los requisitos mínimos puede bloquear una versión final de Thunderbird.</p>
+
+<h3 id="Nivel_1">Nivel 1</h3>
+
+<p>Las siguientes localizaciones son P1 (prioridad 1) en orden de prioridad:</p>
+
+<pre>* de             -  Alemán
+* fr             -  Fracnés
+* ja, ja-JP-mac  -  Japonés
+* en-GB          -  Inglés británico
+* es-ES          -  Español (Continente europeo)
+* it             -  Italiano
+* pl             -  Polaco
+* ru             -  Ruso
+* nl             -  Holandés
+* pt-BR          -  Portugués brasileño
+</pre>
+
+<h3 id="Nivel_2">Nivel 2</h3>
+
+<p>El resto de localizaciones admitidas se encuentra en la categoria Nivel 2.</p>

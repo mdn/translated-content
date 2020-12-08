@@ -1,0 +1,104 @@
+---
+title: Entendiendo el código base de Gaia
+slug: Archive/B2G_OS/Developing_Gaia/Entendiendo_el_codigo_base_de_Gaia
+translation_of: Archive/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase
+---
+<div class="summary">
+ <p><span class="seoSummary">Before you start to make your own changes to the <a href="https://github.com/mozilla-b2g/gaia/">Gaia codebase</a>, you should understand the basics of how it is all structured, and what coding conventions are used. This article covers both of these points.</span></p>
+</div>
+<h2 id="Gaia_branches">Gaia branches</h2>
+<p>There are many different branches in the Gaia codebase, and depending on what work you are doing (or what device you have) you might not just want to download, hack and make the master branch. Here is a brief guide to the most common repos you'll likely be interested in:</p>
+<ul>
+ <li><strong>master</strong> — the latest development branch. You'll want to use this branch if you are developing (or fixing bugs on) new features, or you want to run the latest Gaia on your phone or emulator</li>
+ <li><strong>v2.1</strong>, <strong>v2.0</strong>, <strong>v1.4</strong>, etc. — feature freeze versions of Gaia 2.1, 2.0, 1.4, etc. You'll want to use these branches if you are fixing a bug in a specific Gaia version, or want to develop an app and make sure it supports a specific Gaia version (for example, you might be using the Firefox OS Building Blocks with modifications, and want to make sure your layout still works across different Gaia versions.)</li>
+ <li><strong>v1.3t</strong> — the low-memory version of Gaia, developed for running on low-memory devices such as the Tarako or Spice Fire One. If you want to develop an app for such devices, this is the branch you should work with.</li>
+</ul>
+<h2 id="Gaia_codebase_structure">Gaia codebase structure</h2>
+<p>The following section outlines all the most important parts of the Gaia codebase.</p>
+<h3 id="apps">apps/</h3>
+<p>This directory contains all of the main Gaia apps, both apps shown in the homescreen — such as calendar and camera — and underlying apps — such as system, homescreen, and keyboard.<br>
+ <br>
+ The apps work in slightly different ways, but all have a number of common features, including:</p>
+<ul>
+ <li><code>index.html</code>: the central file for each app</li>
+ <li><code>manifest.webapp</code>: the manifest file defines the app</li>
+ <li><code>locales</code>: localisation strings for that app</li>
+ <li><code>test</code>: unit and integration tests particular to that app</li>
+ <li><code>js</code>, <code>style</code>: scripts and styles for that app</li>
+ <li><code>resources</code>: images, sounds and other assets</li>
+</ul>
+<div class="note">
+ <p><strong>Note</strong>: You can find more information about the apps actually work on our <a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps">Gaia apps guide</a>.</p>
+</div>
+<h3 id="build">build/</h3>
+<p>This directory contains build scripts.</p>
+<h3 id="dev_apps">dev_apps/</h3>
+<p>This directory contains other apps that are included by customization. For example you could include custom apps that you want to include in custom builds in here.</p>
+<div class="note">
+ <p><strong>Note</strong>: For more information about Gaia customization, read our <a href="/en-US/Firefox_OS/Developing_Firefox_OS/Market_customizations_guide">Market customizations guide</a>.</p>
+</div>
+<h3 id="keyboard">keyboard/</h3>
+<p>The keyboard directory contains keyboard dictionaries and layouts for different languages.</p>
+<h3 id="locales">locales/</h3>
+<p>This directory contains a JSON file, <code>languages_all.json</code>, which defines what languages are supported on Gaia. For more insight into how apps are localized, read <a href="/en-US/Apps/Build/Localization/Getting_started_with_app_localization">Getting started with app localization</a>.</p>
+<h3 id="shared">shared/</h3>
+<p>This directory contains a number of resources that multiple apps make use of; the most notable parts of these are:</p>
+<ul>
+ <li><code>gaia/shared/js</code>: JavaScript libraries that perform common functions</li>
+ <li><code>l10n.js</code>: A localisation library that detects your device's locale, and replaces localisable strings in your apps with the strings found in the apps locales folders. Localisable strings to be replaced are contained in elements with <code>data-l10n-id</code> attributes.</li>
+ <li><code>gaia/shared/locales</code>: Localised resources for different locales.</li>
+ <li><code>gaia/shared/resources</code>: Common assets such as icons, ringtones and alarm sound tracks.</li>
+ <li><code>gaia/shared/style</code>: stylesheets and other styling resources for common building blocks such as buttons, progress bars, toolbars, tabs, etc. For more information on these, see <a href="/en-US/Apps/Design/Firefox_OS_building_blocks">Firefox OS Building Blocks</a>.</li>
+ <li><code>gaia/shared/style_unstable</code>: unstable or experimental styling resources.</li>
+ <li><code>gaia/shared/test</code>: JavaScript to define integration and unit tests.</li>
+</ul>
+<h3 id="tools">tools/</h3>
+<p>The tools directory contains tools for build scripts and tests.</p>
+<h2 id="Gaia_coding_style">Gaia coding style</h2>
+<p>Gaia follows the <a href="http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">Google JavaScript coding style</a>.</p>
+<p>Background information:</p>
+<ul>
+ <li>Coding Style: <a href="/en-US/docs/Mozilla/Developer_guide/Coding_Style#General_practices">General practices</a></li>
+ <li>Coding Style: <a href="/en-US/docs/Mozilla/Developer_guide/Coding_Style#JavaScript_practices">JavaScript practices</a></li>
+ <li>Coding Style: <a href="/en-US/docs/Mozilla/Developer_guide/Coding_Style#Naming_and_Formatting_code">Naming and formatting code</a></li>
+</ul>
+<h3 id="Specific_rules">Specific rules</h3>
+<ol>
+ <li>Make sure HTML files are declared with <code>&lt;!DOCTYPE html&gt;</code> (that is, as HTML5 documents). If you don't, Internet Explorer 9 and later will load them in compatibility mode.</li>
+ <li>Include the <code>"use strict";</code> statement (just like that, including the quotes) to the top of your JavaScript files to put them into strict mode.</li>
+ <li>Always use two spaces for indentation, rather than tabs.</li>
+ <li>Please use line breaks to separate logical bits of code!</li>
+ <li>Multi-word file names should use the "underscore" character to separate words, <code>like_this.js</code>.</li>
+ <li>Use single quotes instead of double quotes for strings.</li>
+ <li>Use expanded conditional structures:
+  <pre class="brush: js">Bad
+if (expression) doSomething();
+
+Correct
+if (expression) {
+  doSomething();
+}</pre>
+ </li>
+ <li>If you're working on the <a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">System app</a>, check out the <a href="https://groups.google.com/forum/#!msg/mozilla.dev.gaia/rEhSrw6XmT4/UNvE7qW9pgYJ">guidance listed here</a>.</li>
+</ol>
+<h3 id="Per_commit_coding_style_check">Per commit coding style check</h3>
+<p>Gaia uses <a href="http://www.jshint.com/">jshint</a> to automatically check JS coding styles before each commit (via a git pre-commit hook). Once you submit a Pull Request to the Gaia repository, the Travis (Github Continuous Integration) server will run this linter to double check all styles are right.</p>
+<p>The precommit hook script is in <a href="https://github.com/mozilla-b2g/gaia/blob/master/tools/pre-commit">gaia/tools/pre-commit</a> and will be copied to project's <code>.git/hooks</code> folder once a <code>make</code> command is executed.</p>
+<div class="note">
+ <p><strong>Note</strong>: We used to use <a href="https://developers.google.com/closure/utilities/docs/linter_howto">gjslint</a> to check coding styles, but we have since deprecated its use as jshint is stricter and produces better results. We’ve been using JSHint since Firefox OS 1.4, and gjslint is now only recommended for legacy files that have not yet been moved to JSHint.</p>
+</div>
+<h3 id="Running_linting_checks_manually_via_Gaia">Running linting checks manually via Gaia</h3>
+<p>Before submitting a patch we recommend you run JSHint on it manually to check for any style errors.<br>
+ <br>
+ You should look in the <a href="https://github.com/mozilla-b2g/gaia/tree/master/build/jshint">gaia/build/jshint</a> directory for more details about jshint in Gaia; Gaia provides the build script for you. You can run:</p>
+<pre class="brush: bash">$ make lint</pre>
+<p>to automatically run both the gjslint and jshint style checks. Or you can run</p>
+<pre class="brush: bash">$ make hint</pre>
+<p>to just run the jshint style check.</p>
+<div class="note">
+ <p><strong>Note</strong>: If you want to install jshint yourself, without using Gaia, you can use the following:</p>
+ <pre class="brush: bash">npm install jshint -g
+jshint myfile.js
+</pre>
+</div>
+<p> </p>

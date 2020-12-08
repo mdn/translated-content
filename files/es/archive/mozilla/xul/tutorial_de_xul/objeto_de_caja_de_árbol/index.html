@@ -1,0 +1,190 @@
+---
+title: Objeto de caja de árbol
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Objeto_de_caja_de_árbol
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/Tree_Box_Objects
+---
+<p> </p>
+
+<p>Ésta sección describe el objeto caja del árbol usada para gestionar como un árbol es mostrado.</p>
+
+<h3 id="Sobre_el_objeto_caja_del_.C3.A1rbol" name="Sobre_el_objeto_caja_del_.C3.A1rbol">Sobre el objeto caja del árbol</h3>
+
+<p>Box objects were described in an <a href="es/Tutorial_de_XUL/Objetos_de_caja">sección</a>. The tree box object is a specialized box object used specifically for trees. The tree box implements the <a class="external" href="http://www.xulplanet.com/references/objref/TreeBoxObject.html">TreeBoxObject</a> interface.</p>
+
+<h4 id="Redibujando_el_.C3.A1rbol" name="Redibujando_el_.C3.A1rbol">Redibujando el árbol</h4>
+
+<p>We already saw the <code>rowCountChanged()</code> function of the tree box object in the previous section. It is used to indicate that one or more rows have been added to the tree or removed from the tree. The tree will redraw the affected area. You don't need to call the <code>rowCountChanged()</code> function when a row has simply changed in some way, for example if a cell's label changes. In this case, there are other drawing functions that can be used. The simplest is to call <code>invalidateRow()</code> which will redraw a specific row in the tree. The tree will call the view to get the updated data and update the contents of the tree on screen.</p>
+
+<p>Other redrawing functions are</p>
+
+<ul>
+ <li><code>invalidateCell()</code> to redraw only a single cell</li>
+ <li><code>invalidateColumn()</code> to redraw a column</li>
+ <li><code>invalidateRange()</code> to redraw a range of rows</li>
+ <li><code>invalidate()</code> to redraw the entire tree.</li>
+</ul>
+
+<p>Note that redrawing does not occur until the calling script ends since Mozilla does not redraw in the background.</p>
+
+<h4 id="Desplegando_el_.C3.A1rbol" name="Desplegando_el_.C3.A1rbol">Desplegando el árbol</h4>
+
+<p>You can also scroll the tree using four different methods, similar to those available for <a href="es/Tutorial_de_XUL/Manipulando_listas#Lista_desplegable">listboxes</a>. The <code>scrollToRow()</code> function may be used to scroll to a particular row. Here is a simple example.</p>
+
+<p><strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;script&gt;
+function doScroll(){
+  var value = document.getElementById("tbox").value;
+  var tree = document.getElementById("thetree");
+
+  var boxobject = tree.boxObject;
+  boxobject.QueryInterface(Components.interfaces.nsITreeBoxObject);
+  boxobject.scrollToRow(value);
+}
+&lt;/script&gt;
+
+&lt;tree id="thetree" rows="4"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="row" label="Row" primary="true" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem label="Row 0"/&gt;
+    &lt;treeitem label="Row 1"/&gt;
+    &lt;treeitem label="Row 2"/&gt;
+    &lt;treeitem label="Row 3"/&gt;
+    &lt;treeitem label="Row 4"/&gt;
+    &lt;treeitem label="Row 5"/&gt;
+    &lt;treeitem label="Row 6"/&gt;
+    &lt;treeitem label="Row 7"/&gt;
+    &lt;treeitem label="Row 8"/&gt;
+    &lt;treeitem label="Row 9"/&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+
+&lt;hbox align="center"&gt;
+  &lt;label value="Scroll to row:"/&gt;
+  &lt;textbox id="tbox"/&gt;
+  &lt;button label="Scroll" oncommand="doScroll();"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>Note that we use the rows attribute on the <code><a href="es/XUL/Elementos/tree">tree</a></code> to specify that only four rows are displayed at a time. This makes it easier to see how the example works. Also, notice that the first row is 0.</p>
+
+<p>The <code>doScroll()</code> function gets the box object and calls the <code>scrollToRow()</code> function with an argument set to the value of the textbox. You might notice that the tree box object can be retieved in the same way as other box objects using the <a class="external" href="http://www.xulplanet.com/references/objref/BoxObject.html">boxObject</a> property, however we need to call <code>QueryInterface()</code> to cast the box object to the more specific tree box object. The functions of the more general box object are also available to trees.</p>
+
+<p>Additional scroll methods include the <code>scrollByLines()</code>, <code>scrollByPages()</code> and <code>ensureRowIsVisible()</code> functions.</p>
+
+<p>The <code>scrollByLines()</code> scrolls up or down by a certain number of rows. Use a positive number to go down and a negative number to go up. The <code>scrollByPages()</code> function scrolls by a number of pages and is called automatically when the user presses the page up or page down keys while the tree is focused. A page is equal to the number of visible rows. For example if the tree shows 10 rows at a time, a page will be equivalent to 10 rows. This is a convenient method since when the user resizes a flexible tree, the page size will grow and shrink, so you don't need to calculate the page size manually. This isn't too hard to calculate manually anyway since the tree box object also provides a <code>getPageLength()</code> function which returns the number of rows in a page. In the scrolling example above, <code>getPageLength()</code> would return four.</p>
+
+<div class="note">
+<p>Note that in Firefox 1.0 and Mozilla 1.7 and earlier, the <code>getPageLength()</code> function is called <code>getPageCount()</code> instead. The name was changed to <code>getPageLength()</code> since it was confusing before since it doesn't return the number of pages, but the size of each page. You could determine the number of pages by dividing the total number of rows by the page length.</p>
+</div>
+
+<p>The <code>ensureRowIsVisible()</code> function will scroll to a row just as <code>scrollToRow()</code> does, but does not scroll if the row is already visible.</p>
+
+<h3 id="Coordenadas_de_celda" name="Coordenadas_de_celda">Coordenadas de celda</h3>
+
+<p>Some of the most interesting functions of the tree box object are several functions which may be used to get the parts of the tree at specific coordinates and vice versa.</p>
+
+<ul>
+ <li>The <code>getCellAt()</code> function may be used to get the cell at specific pixel location</li>
+ <li>The <code>getRowAt()</code> function may be used to get a row at a specific location. The <code>getRowAt()</code> function takes two arguments, the x and y coordinates to use.</li>
+</ul>
+
+<pre>tree.boxObject.getRowAt( 50, 100 );
+</pre>
+
+<p>This example will return the index of the row with a horizontal position of 50 and a vertical position of 100. Naturally, it doesn't really matter what the value of the x coordinate is since rows always take up the entire horizontal space of the tree.</p>
+
+<div class="note">One important thing to note is that the coordinates are measured from the upper left corner of the containing document, not the edge of the tree itself.</div>
+
+<p>This makes it easy to pass event coordinates directly to these functions, as in the following example of the <code>getCellAt()</code> function.</p>
+
+<p><strong>Ejemplo 2</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treeboxobject_2.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;script&gt;
+function updateFields(event){
+  var row = {}, column = {}, part = {};
+  var tree = document.getElementById("thetree");
+
+  var boxobject = tree.boxObject;
+  boxobject.QueryInterface(Components.interfaces.nsITreeBoxObject);
+  boxobject.getCellAt(event.clientX, event.clientY, row, column, part);
+
+  if (column.value &amp;&amp; typeof column.value != "string")
+    column.value = column.value.id;
+
+  document.getElementById("row").value = row.value;
+  document.getElementById("column").value = column.value;
+  document.getElementById("part").value = part.value;
+}
+&lt;/script&gt;
+
+&lt;tree id="thetree" flex="1" onmousemove="updateFields(event);"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="utensil" label="Utensil" primary="true" flex="1"/&gt;
+    &lt;treecol id="count" label="Count" flex="1"/&gt;
+  &lt;/treecols&gt;
+  &lt;treechildren&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Fork"/&gt;
+        &lt;treecell label="5"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Knife"/&gt;
+        &lt;treecell label="2"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+    &lt;treeitem&gt;
+      &lt;treerow&gt;
+        &lt;treecell label="Spoon"/&gt;
+        &lt;treecell label="8"/&gt;
+      &lt;/treerow&gt;
+    &lt;/treeitem&gt;
+  &lt;/treechildren&gt;
+&lt;/tree&gt;
+
+&lt;label value="Row:"/&gt;
+&lt;label id="row"/&gt;
+&lt;label value="Column:"/&gt;
+&lt;label id="column"/&gt;
+&lt;label value="Child Type:"/&gt;
+&lt;label id="part"/&gt;
+</pre>
+
+<p>The <code>getCellAt()</code> function takes five arguments, the coordinates to look up and three out parameters. An out parameter is used since the function needs to return more that one value. You will see a number of interfaces that use out parameters in the <a class="external" href="http://www.xulplanet.com/references/objref/">XULPlanet object reference</a>. These are indicated by the word 'out' before the argument. For these, you will need to supply an empty object and the function will fill in the 'value' property with the necessary value.</p>
+
+<p>The three out parameters will be filled in with the row, the column and a child type. The row is the index of the row the mouse is over, since we call it with the event coordinates of a <code>mousemove</code> event. If the coordinate is not over a row, the row value will be set to -1. The column is a column object in Mozilla 1.8 and later. In earlier versions, columns are identified with a string, the id of the column. In later versions, a separate column object exists, which can be queried for column data.</p>
+
+<p>The following line is used so that the example above will work in all versions.</p>
+
+<pre>if (column.value &amp;&amp; typeof column.value != "string")
+  column.value = column.value.id;
+</pre>
+
+<p>If the column is a string, we are running on Mozilla 1.7 or earlier, but for later versions we get the column id from the column object. If you are writing code for multiple versions, you should check for this as above.</p>
+
+<p>The last argument to <code>getCellAt()</code> is the child type which is filled in with a string depending on what part of the cell the coordinate is at. If you move the mouse around in the previous example, you might notice the label change between 'text' and 'cell'. The value 'text' indicates the area where the text would be drawn and the value 'cell' indicates the area around the text, for example, the margin on the left side where the open and close twisties are normally drawn. If there was a twisty, however, the value would be 'twisty' instead. This is convenient since you could determine whether the user clicked on a twisty instead of another part of the row. In fact, this is what the underlying tree code does when the user double clicks the twisty. The final value that may be returned is 'image' if there is an image in the tree cell and the coordinate corresponds to a location where the image is. Of course, in many cases you may not care what part of the cell the coordinate is on and just want the row and column.</p>
+
+<p>To go in reverse and get the cell at a specific coordinate, use the <code>getCoordsForCellItem()</code> function. It takes seven arguments, as described below.</p>
+
+<pre>var x = {}, y = {}, width = {}, height = {};
+if (typeof tree.columns != "undefined") column = tree.columns[column];
+tree.boxObject.getCoordsForCellItem( row, column, part, x, y, width, height );
+</pre>
+
+<p>The row, column, and part arguments are similar to those returned from the <code>getCellAt()</code> function. Again, the column should be either a string or a column object depending on which version you are using. The cell part type may be used to get the coordinates of either the text, the entire cell, the twisty or the image in the cell. The same values as the <code>getCellAt()</code> function are used. The <code>getCoordsForCellItem()</code> function returns the x and y coordinates in addition to the width and height, all as out parameters.</p>
+
+<p>Next, we'll look at RDF which can be used to automatically populate trees and other elements.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Detalles_de_Vistas_de_un_árbol" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Introducción_a_RDF">Siguiente  »</a></p>
+</div>

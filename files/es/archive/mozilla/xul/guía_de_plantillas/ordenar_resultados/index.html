@@ -1,0 +1,100 @@
+---
+title: Ordenar resultados
+slug: Archive/Mozilla/XUL/Guía_de_plantillas/Ordenar_resultados
+tags:
+  - Guía_de_plantillas_XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Template_Guide/Sorting_Results
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/XUL:Guía_de_plantillas:Modificaciones_RDF" style="float: left;">« Anterior</a><a href="/es/docs/XUL:Guía_de_plantillas:Atributos_adicionales_para_las_plantillas">Siguiente  »</a></p>
+</div>
+
+<p>The template content builder uses a separate component to insert generated nodes into the content tree. This is done when inserting the nodes when they are first created as well as when a new result is available. This additional component is called the sort service. It is responsible for determining where to insert nodes into the XUL document. Since the component is called the 'sort service' it is also used to sort the generated results. Since an RDF graph doesn't specify any order to results -- unless the items are in an RDF Seq -- the template builder will handle the results in any order. You may have noticed in the examples that results that are not in a Seq are not output in any particular order.</p>
+
+<p>The sort service may be used to order the results in some particular order, generally, ascending or descending based on the value of some predicate pointing out of the result node. The sort service also supports a third sort order, natural order, which is the default. It causes items to appear without any extra sorting in the order they are added. However, if the results are items in a Seq they will appear in the order listed in the Seq. For instance, the photos are listed in the same order in <a class="external" href="http://developer.mozilla.org/samples/xultemp/template-guide-ex19.xul">this example</a> as they appear in the Seq in the <a class="external" href="http://developer.mozilla.org/samples/xultemp/template-guide-photos4.rdf">datasource</a>.</p>
+
+<p>This method of sorting a Seq works best for simple rule conditions since it is obvious how the starting ref relates to the end member results (they are just the children), or for extended syntax rules that follow a similar pattern. For more complex rules, this natural sorting will not work, because the sort service assumes that the starting ref resource is the container and the end results are the children. In this case, the natural order of the results will just be the order that the template builder generates the results.</p>
+
+<p>For ascending or descending sorts, this doesn't matter, since it will ignore whether results are containers and just sort by a value, alphabetically or numerically depending on the type of data.</p>
+
+<p>The sort service only applies to content builders. The tree builder uses a different and much simpler means of sorting since there is no content to insert. It supports the same three types of sorting, natural, ascending or descending. In the latter two sort types, the tree builder sorts by the value in a column. For instance, if the photos were displayed in a two column tree showing the title and description, you could sort by either title or description. The user can change the sort column and direction by clicking the column headers, however, you can programmatically change the sort as well.</p>
+
+<h3 id="Sorting_Tree_Results">Sorting Tree Results</h3>
+
+<p>We'll examine sorting of trees first since trees are the most common element used with sorted items. Using a tree builder, you can sort the results in a tree by a column. To do this, place a sort attribute on a &lt;treecol&gt; element referring to the variable to sort by for that column.</p>
+
+<pre>&lt;treecol id="name" label="Name" sort="?name" flex="1"/&gt;
+&lt;treecol id="date" label="Date" sort="?date" flex="1"/&gt;
+</pre>
+
+<p>In this example, the first column will be sorted by the ?name variable and the second column by the ?date variable. When the sort is ascending, the tree rows will be sorted in alphabetical order. When the sort is descending, the tree rows will be sorted in the reverse order. For natural sorting, the rows will be sorted according to the natural order in the RDF datasource. Only one column applies a sort at a time. If the tree is sorted by name, and the user clicks on the date column header, the sort will change to the date column.</p>
+
+<p>There are two additional attributes used for sorting, which you may set on a column to specify the initial sort. These attributes are modified when the user changes the sort. The sortDirection attribute may be used to specify the initial sort direction for a column. Only one column should have this attribute set, as a tree may only be sorted by one column at a time. The value should be either 'ascending', 'descending' or 'natural'. This last value is the default if the attribute is not specified. The sortActive attribute may be set to true or false and specifies which column the tree is sorted by. Only one column should have the sortActive attribute set to true at a time. The tree will change both attributes as necessary automatically when the column headers are clicked or the tree is sorted by other means.</p>
+
+<p>If you don't want to allow sorting by a certain column, you can leave out the sort attribute. Only specify this attribute on columns that you wish to allow the user to sort by.</p>
+
+<p>Here is a <a class="external" href="http://developer.mozilla.org/samples/xultemp/template-guide-ex41.xul">complete example</a> of sorting a tree.</p>
+
+<p>The sort attribute should be set to the variable that holds the values to sort by. Usually, this would be the same variable that is used to generate the label for the cells in that column, however this is not actually necessary. For instance, in the example the second column sorts by date, but if you were to use a different variable such as ?description, assuming a &lt;binding&gt; set it, the tree would sort by the value of the description variable for each row. In almost all situations however, you would normally sort using the same variable used for the label value. However, one situation where this is not desirable is if the displayed values would not generate the correct order as there is a lower representation that is more accurate. For example, the date 'May 15' would appear after 'August 24' when sorted purely alphabetically but before it when sorted chronologically.</p>
+
+<p>Another way to sort by dates is to use the the parseType="Date" construct in the RDF datasource. This marks a literal as being a date value rather than a string. The builder will recognize this and sort chronologically instead. This also has the advantage that the dates will be displayed according to the user's current locale (meaning that the date is formatted so as to be suitable for the user's language). Here is a sample of how to specify this in the RDF/XML datasource:</p>
+
+<pre>&lt;rdf:RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:r="http://www.xulplanet.com/rdf/"
+     xmlns:nc="http://home.netscape.com/NC-rdf#"&gt;
+  &lt;rdf:Description rdf:about="http://www.xulplanet.com/ndeakin/images/t/palace.jpg"&gt;
+    &lt;r:date nc:parseType="Date"&gt;1125966767295&lt;r:date&gt;
+  &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;
+</pre>
+
+<p>You can also specify parseType="Integer" for numbers which will allow sorting numerically. By specifing different types for different values, you can sort alphabetically, numerically or by date.</p>
+
+<p>If you are using the simple rule syntax, there are no variables, so you need to specify the full predicate including the rdf: prefix in the sort attribute. For instance:</p>
+
+<pre>&lt;treecol id="name" label="Name" sort="rdf:http://purl.org/dc/elements/1.1/title" flex="1"/&gt;
+</pre>
+
+<p>Note that all of this discussion about sorting only applies to tree builders. For other elements or content trees, a different sorting mechanism must be used which will be discussed next.</p>
+
+<h3 id="Content_Sorting">Content Sorting</h3>
+
+<p>For content builders (templates that do not use flags="dont-build-content"), sorting is done using a different means. Instead of sorting on a variable generated during the template generation, sorting for content builders may only be performed using a triple pointing out of the member variable. There is no connection between the generated variables and the resource used for sorting, so it doesn't have to be one used in the template.</p>
+
+<p>You specify the resource used for sorting with the sortResource attribute on the root element, as follows:</p>
+
+<pre>&lt;hbox datasources="template-guide-photos5.rdf"
+      sortResource="http://purl.org/dc/elements/1.1/title"
+      sortDirection="ascending"
+      ref="http://www.xulplanet.com/rdf/myphotos"&gt;
+  &lt;template&gt;
+    &lt;vbox class="box-padded" uri="rdf:*"&gt;
+      &lt;image src="rdf:*"/&gt;
+      &lt;label value="rdf:http://purl.org/dc/elements/1.1/title"/&gt;
+    &lt;/vbox&gt;
+  &lt;/template&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>In <a class="external" href="http://developer.mozilla.org/samples/xultemp/template-guide-ex42.xul">this example</a>, the generated items will be sorted by title. The sortDirection attribute specifies the sort direction and may be set to "descending" for a reverse sort. The sortDirection attribute functions similarly to how the tree builder uses it. With a tree builder, each column has its own sort specified using the sort attribute, and the sortActive attribute is used to indicate the column that is currently sorted. For other content, there are no columns and only one sort is applicable, so the sortActive attribute is not necessary.</p>
+
+<p>When the template builder generates a result, the sort service uses the value of the sortResource predicate for the result to determine where in the content the generated output should be inserted. When the RDF datasource changes, and a new result is available, the sort service inserts the new content at the right location.</p>
+
+<p>Unlike with trees, you can sort using a secondary resource with the sortResource2 attribute which is used in the same manner as the sortResource attribute. If the values for the sortResource predicate are the same for two results, the sortResource2 predicate is used to further clarify the order. You can only have one secondary resource, that is, there is no sortResource3 attribute.</p>
+
+<p>To change the sorting for a template's generated contents, you can either change the sort related attributes and rebuild the template, or for listboxes and menus, you can call the sort service's sort method:</p>
+
+<pre>var listbox = document.getElementById("aListBox");
+
+var sortService = Components.classes["@mozilla.org/xul/xul-sort-service;1"].
+                    getService(Components.interfaces.nsIXULSortService);
+sortService.sort(listbox, "http://purl.org/dc/elements/1.1/title", "descending");
+</pre>
+
+<p>This code will sort a listbox by title in a descending order. The arguments to the sort method specify the root node (the listbox), the sort resource and the sort direction.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/XUL:Guía_de_plantillas:Modificaciones_RDF" style="float: left;">« Anterior</a><a href="/es/docs/XUL:Guía_de_plantillas:Atributos_adicionales_para_las_plantillas">Siguiente  »</a></p>
+</div>

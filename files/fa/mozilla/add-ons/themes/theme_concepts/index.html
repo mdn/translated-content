@@ -1,0 +1,232 @@
+---
+title: Theme concepts
+slug: Mozilla/Add-ons/Themes/Theme_concepts
+translation_of: Mozilla/Add-ons/Themes/Theme_concepts
+---
+<div>{{AddonSidebar()}}</div>
+
+<p>Themes developed using the <a href="/en-US/Add-ons/WebExtensions">WebExtensions API</a> in Firefox enable you to change the look of the browser by adding images to the header area of the Firefox browser; this is the area behind the menu bar, toolbars, address bar, search bar, and tab strip.</p>
+
+<p>These theme options can be implemented as static themes (although the theme images themselves may be animated) or as dynamic themes created in a browser extension.</p>
+
+<div class="note">
+<p>If you have a lightweight theme it will be converted to this new theme format automatically before lightweight themes are deprecated. You do not need to port your th eme. However, please feel free to update your themes to use any of the new features described here.</p>
+</div>
+
+<h2 id="Static_themes">Static themes</h2>
+
+<p>Static themes are specified using the same resources as a browser extension: a <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file to define the theme components with those components stored in the same folder as the manifest.json file or a sub folder. These resources are then packed in a zip for publication on <a href="https://addons.mozilla.org">addons.mozilla.org</a> (AMO) or for self-distribution. For more information on self-distribution, visit <a href="/en-US/docs/Mozilla/Add-ons/Distribution">Signing and distributing your add-on</a>.</p>
+
+<p>You can also use the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Themes/Using_the_AMO_theme_generator">theme generator</a> on AMO to create a static theme. Additionally, <a href="https://color.firefox.com">Firefox Color</a> can be used to preview customizations to the browser's theme with options to share and export a theme.</p>
+
+<div class="note">
+<p>A theme and browser extension functionality cannot be defined in one package, such as including a theme to complement an extension. You can, however, programmatically include a theme in an extension using the Theme API. See <a href="#Dynamic_themes">Dynamic themes</a>.</p>
+</div>
+
+<h3 id="Defining_a_theme">Defining a theme</h3>
+
+<p>To create a theme (in this example a simple, single image theme):</p>
+
+<ul>
+ <li>Create a folder in a suitable location on your computer.</li>
+ <li>Add the theme image file to the folder:
+  <pre>&lt;mytheme&gt;
+ &lt;your_header_image&gt;.&lt;type&gt;</pre>
+ </li>
+ <li>Create a file called manifest.json in the folder and edit its content as follows:
+  <pre class="brush: json">{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "&lt;your_theme_name&gt;",
+  "theme": {
+    "images": {
+      "theme_frame": "&lt;your_header_image&gt;.&lt;type&gt;"
+    },
+    "colors": {
+      "frame": "#FFFFFF",
+      "tab_background_text": "#000"
+    }
+  }
+}
+</pre>
+  Where:
+
+  <ul>
+   <li><code>"frame":</code> is the heading area background color for your theme.</li>
+   <li><code>"</code><code>tab_background_text</code><code>":</code> the color of the text in the heading area.</li>
+  </ul>
+ </li>
+ <li>Package your theme and submit it to AMO, <a href="/en-US/Add-ons/WebExtensions/Publishing_your_WebExtension">following these instructions</a>. Themes can be submitted to AMO for hosting or for self-distribution.</li>
+</ul>
+
+<h3 id="Static_theme_approaches">Static theme approaches</h3>
+
+<p>There are two approaches you can take to theming the header area of Firefox: using a single image or using multiple images. You could combine the two, but it’s easier to treat them separately.</p>
+
+<h4 id="Single_image_themes">Single image themes</h4>
+
+<p>This is the basic or minimal theming option, where you define:</p>
+
+<ul>
+ <li>a single image, which is anchored to the top right of the header area.</li>
+ <li>A color for the text in the header.</li>
+</ul>
+
+<p>The area your header image needs to fill is a maximum of 200 pixels high. The maximum image width is determined by the resolution of the monitor Firefox is displaying on and how much of the monitor Firefox is using. Practically, this means you would need to allow for a width of up to 5120 pixels wide (for the next generation of 5k monitors). However, rather than creating a very wide image, a better approach is to use a narrower image with a transparent left edge so that it fades to the background color. For example, we could use this image<br>
+ <img alt="An image of a weta (the common name for a group of about 70 insect species in the families Anostostomatidae and Rhaphidophoridae, endemic to New Zealand) with the left edge fading to total transparency." src="https://mdn.mozillademos.org/files/15215/weta.png" style="height: 200px; width: 406px;"><br>
+ combined with a complementary background color, to create this effect in the header<br>
+ <img alt="A single image theme using the weta.png image" src="https://mdn.mozillademos.org/files/15217/basic_theme.png" style="height: 113px; width: 679px;"></p>
+
+<p>See details about this theme in the <a href="https://github.com/mdn/webextensions-examples/tree/master/themes">themes</a> example <a href="https://github.com/mdn/webextensions-examples/tree/master/themes/weta_fade">weta_fade</a>.</p>
+
+<p>Obviously, you can still provide a single wide image if you prefer.</p>
+
+<h4 id="Multiple_image_themes">Multiple image themes</h4>
+
+<p>As an alternative to creating a single image theme, you have the option to use multiple images. These images can be individually anchored to locations within the header, with the option to apply tiling to each image.</p>
+
+<p>Depending on the effect you want to create you may need to suppress the mandatory <code>"</code><code>theme_frame</code><code>":</code> image with an empty or transparent image. You would use an empty or transparent image if, for example, you wanted to tile a centrally justified image, such as<br>
+ <img alt="An image of a weta (the common name for a group of about 70 insect species in the families Anostostomatidae and Rhaphidophoridae, endemic to New Zealand) with the left and right edges fading to total transparency." src="https://mdn.mozillademos.org/files/15219/weta_for_tiling.png" style="height: 200px; width: 270px;"><br>
+ to create this effect<br>
+ <img alt="A single image theme using the additional images option to align an image to the center of the heading and tile it. " src="https://mdn.mozillademos.org/files/15221/tiled_theme.png" style="height: 113px; width: 679px;"><br>
+ Here you specify the weta image like this:</p>
+
+<pre class="brush: json" dir="ltr">"images": {
+  "theme_frame": "empty.png",
+  "additional_backgrounds": [ "weta_for_tiling.png"]
+},</pre>
+
+<p dir="ltr">and the images tiling with:</p>
+
+<pre class="brush: json" dir="ltr">"properties": {
+  "additional_backgrounds_alignment": [ "top" ],
+  "additional_backgrounds_tiling": [ "repeat"  ]
+},</pre>
+
+<p>Full details of how to setup this theme can be found in the <a href="https://github.com/mdn/webextensions-examples/tree/master/themes">themes</a> example <a href="https://github.com/mdn/webextensions-examples/tree/master/themes/weta_tiled">weta_tiled</a>. Full detais of the alignment and tiling options can be found in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">"theme" key description</a>.</p>
+
+<p>Alternatively, you can use multiple images, say combining the original weta image with this one anchored to the left of the header<br>
+ <img alt="An image of a weta (the common name for a group of about 70 insect species in the families Anostostomatidae and Rhaphidophoridae, endemic to New Zealand) with the right edge fading to total transparency." src="https://mdn.mozillademos.org/files/15223/weta-left.png" style="height: 200px; width: 406px;"><br>
+ to create this effect<br>
+ <img alt="A theme using the additional images option to place two mirrored image to the left and right of the browser header." src="https://mdn.mozillademos.org/files/15225/multi_image_theme.png" style="height: 113px; width: 679px;"></p>
+
+<p>Where the images are specified with:</p>
+
+<pre class="brush: json" dir="ltr">"images": {
+  "theme_frame": "empty.png",
+  "additional_backgrounds": [ "weta.png", "weta-left.png"]
+},</pre>
+
+<p dir="ltr">and their alignment by:</p>
+
+<pre class="brush: json" dir="ltr">"properties": {
+  "additional_backgrounds_alignment": [ "right top" , "left top" ]
+},</pre>
+
+<p>Full details of how to setup this theme can be found in the <a href="https://github.com/mdn/webextensions-examples/tree/master/themes">themes</a> example <a href="https://github.com/mdn/webextensions-examples/tree/master/themes/weta_mirror">weta_mirror</a>. Full details of the alignment options can be found in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme">"theme" key description</a>.</p>
+
+<h3 id="Static_animated_themes">Static animated themes</h3>
+
+<p>It is possible to create an animated theme using an APNG format image, as in the <a href="https://github.com/mdn/webextensions-examples/tree/master/themes">themes</a> example <a href="https://github.com/mdn/webextensions-examples/tree/master/themes/animated">animated</a>. However, remember that rapid animations, such as the one in the example might be too distracting for a practical theme.</p>
+
+<p dir="ltr">You can also animate themes programmatically, which we discuss in <a href="#Dynamic_themes">Dynamic themes</a>.</p>
+
+<h3 dir="ltr" id="Updating_static_themes">Updating static themes</h3>
+
+<p dir="ltr">If your static theme is hosted on AMO, you can upload a new version using the <a href="https://addons.mozilla.org/en-US/developers/">Developer Hub </a>with the following steps:</p>
+
+<ol dir="ltr">
+ <li>Visit the product page for your theme through the <a href="https://addons.mozilla.org/en-US/developers/">Developer Hub</a></li>
+ <li>Select "Upload New Version" on the left</li>
+ <li>Upload your packaged file for validation or modify it using the theme generator</li>
+</ol>
+
+<p>For self-hosted static themes, a new version can be updated through AMO by following the above steps or be handled by you through an updateURL or external application updates. A new version will need to be signed through the Developer Hub.</p>
+
+<div class="note">
+<p> If you are uploading a packaged file, the version number must be higher than the current version number</p>
+</div>
+
+<h2 id="Dynamic_themes">Dynamic themes</h2>
+
+<p>As an alternative to defining a static theme, you can use the {{WebExtAPIRef("theme")}} API to control the theme used in Firefox from within a browser extension. There are a couple of use cases for this option:</p>
+
+<ul>
+ <li>To bundle a theme with a browser extension, as an added extra.</li>
+ <li>Create a dynamic theme that changes under programmatic control.</li>
+</ul>
+
+<p>And, obviously, you can combine the two and bundle a programmatically controlled theme with your extension.</p>
+
+<p>Using the {{WebExtAPIRef("theme")}} API is straightforward. First, request "theme"<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"> permission</a> in the extension's<a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"> manifest.json</a> file. Next, you build a JSON object containing the same information you would use in a static theme’s manifest.json, Finally, pass the JSON object in a {{WebExtAPIRef("theme.update()")}} call.</p>
+
+<p>For example, the following code, from the <a href="https://github.com/mdn/webextensions-examples/tree/master/dynamic-theme">dynamic theme example</a> defines the content for the day and night elements of the dynamic theme:</p>
+
+<pre class="brush: js" dir="ltr">const themes = {
+  'day': {
+    images: {
+     theme_frame: 'sun.jpg',
+    },
+    colors: {
+     frame: '#CF723F',
+     tab_background_text: '#111',
+    }
+  },
+  'night': {
+    images: {
+     theme_frame: 'moon.jpg',
+    },
+    colors: {
+     frame: '#000',
+     tab_background_text: '#fff',
+    }
+  }
+};</pre>
+
+<p>The theme.Theme object is then passed to {{WebExtAPIRef("theme.update()")}} to change the header theme, as in this code snippet from the same example:</p>
+
+<pre class="brush: js" dir="ltr">function setTheme(theme) {
+  if (currentTheme === theme) {
+    // No point in changing the theme if it has already been set.
+    return;
+  }
+  currentTheme = theme;
+  browser.theme.update(themes[theme]);
+}</pre>
+
+<p dir="ltr">Learn more about dynamic themes and see an additional example in the following video:</p>
+
+<p dir="ltr">{{EmbedYouTube("ycckyrUN0AY")}}</p>
+
+<p dir="ltr"></p>
+
+<p dir="ltr">If you have not built a browser extension before, check out <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first extension</a> for a step-by-step guide.</p>
+
+<h2 id="Cross-browser_compatibility">Cross-browser compatibility</h2>
+
+<p>There is currently limited compatibility between themes in the major browsers. Opera takes an entirely different approach, and Microsoft Edge themes are not yet open to developers.</p>
+
+<p>There is good compatibility between Firefox static themes and Chrome themes, providing the ability to port a single header image theme from Firefox to Chrome. However, noting that<code> "frame":</code> and <code>"tab_background_text":</code> only support RGB color array definition on Chrome.</p>
+
+<p>So, in the single image theme example (weta_fade) could be supported in Chrome using the following manifest.json file:</p>
+
+<pre class="brush: json" dir="ltr">{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "&lt;your_theme_name&gt;",
+  "theme": {
+    "images": {
+      "theme_frame": "weta.png"
+    },
+    "colors": {
+      "frame": [ 173 , 176 , 159 ],
+      "tab_background_text": [ 0 , 0 , 0 ]
+    }
+  }
+}</pre>
+
+<p>Also, note that Chrome tiles the <code>“theme_frame”:</code> image from the left of the header area.</p>
+
+<p dir="ltr"><img alt="The basic theme example using the Chrome compatible manifest.json keys, showing the differences in how those keys are implemented." src="https://mdn.mozillademos.org/files/15227/basic_in_chrome.png" style="height: 113px; width: 679px;"></p>
+
+<p>For more information, see the notes on <a href="/en-US/Add-ons/WebExtensions/manifest.json/theme#Chrome_compatibility">Chrome compatibility</a>.</p>

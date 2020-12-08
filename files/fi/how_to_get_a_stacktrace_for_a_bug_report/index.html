@@ -1,0 +1,97 @@
+---
+title: Kuinka saadaan pinovedos vikailmoitusta varten
+slug: How_to_get_a_stacktrace_for_a_bug_report
+tags:
+  - Bugzilla
+translation_of: Mozilla/How_to_get_a_stacktrace_for_a_bug_report
+---
+<p>Jos lähetät Bugzillalla vikailmoituksen kaatumisesta, siihen tulisi myös liittää pinovedos (stacktrace, call stack). Pinovedos kertoo Mozillan kehittäjille, mikä kaatui ja tarjoaa lähtökohdan kaatumisen syyn selvittämiseksi. Tässä artikkelissa kuvataan, kuinka Mozillan kaatumisenilmoitusohjelmalla (Crash Reporter, Breakpad) hankitaan kaatumistunnus (Crash ID), jonka avulla kehittäjämme voivat hankkia pinovedoksen. Tässä artikkelissa kerrotaan myös vaihtoehtoisia tapoja pinovedoksen hankkimiseen, jos et pysty hankkimaan kaatumistunnusta.</p>
+
+<h2 id="Vaatimukset">Vaatimukset</h2>
+
+<p>Tarvitset binääripaketin Firefoxista <a class="external external-icon" href="https://www.mozilla.org/en-US/firefox/">Mozilla.org:sta</a>. Myös SeaMonkey ja Thunderbird tukevat kaatumisilmoitusta.</p>
+
+<p>Mozillan kaatumisilmoitusten palvelimella on nykyisellään virheenkorjaustietoja (debug information) ainoastaan Mozillan jakeluista ja siksi kaatumisilmoitus ei toimi, jos käytät esimerkiksi Linux-jakelun mukana tullutta versiota tai olet itse kääntänyt ohjelman lähdekoodista. Näissä tapauksissa on käytettävä yhtä alla luetelluista <a href="#Alternative_ways_to_get_a_stacktrace">vaihtoehtoisista tavoista</a>.</p>
+
+<div class="note"><strong>Huomaa: </strong>Kun täytät kaatumisilmoitusta, on tärkeää tietää, tapahtuuko kaatuminen myös <a class="external" href="http://support.mozilla.com/kb/Safe+Mode" title="http://support.mozilla.com/kb/Safe+Mode">Firefoxin vikasietotilassa</a>. Tämä auttaa kehittäjiä päättelemään, aiheuttaako kaatumisen mahdollisesti jokin <a class="external" href="http://support.mozilla.com/kb/Troubleshooting+extensions+and+themes" title="http://support.mozilla.com/kb/Troubleshooting+extensions+and+themes">laajennus</a> tai <a class="external" href="http://support.mozilla.com/kb/Troubleshooting+plugins" title="http://support.mozilla.com/kb/Troubleshooting+plugins">liitännäinen</a>.</div>
+
+<h2 id="Kaatumistunnuksen_hankkiminen_Mozillan_kaatumisilmoitusohjelmalla">Kaatumistunnuksen hankkiminen Mozillan kaatumisilmoitusohjelmalla</h2>
+
+<table>
+ <tbody>
+  <tr>
+   <td>
+    <p><strong>1. Lähetä kaatumisen jälkeen ilmoitus järjestelmäämme.</strong></p>
+
+    <p>Mozillan kaatumisilmoitusohjelman ikkunan pitäisi ilmestyä automaattisesti, kun Firefox kaatuu. Jos sinulla on mitään lisätietoja kaatumisesta, kuten mitä olit tekemässä kun kaatuminen tapahtui, kirjoita nämä lisätietokenttään. Varmista, että <strong>valintaruutu "Lähetä Mozillalle kaatumisilmoitus, jotta ongelma voidaan korjata"</strong><strong> on valittu</strong> ja napsauta uudelleenkäynnistys-painiketta. Kaatumisenilmoitusohjelman pitäisi nyt lähettää kaatumisilmoitus ja Firefoxin tulisi käynnistyä uudelleen.</p>
+
+    <div class="note">"Lisätietoja"-painikketta napsauttamalla saat lisää informaatiota kaatumisesta. Nämä tietot eivät kuitenkaan ole hyödyllisiä vikailmoituksessa.</div>
+   </td>
+   <td>
+    <p style="text-align: center;"><img alt="reporter.jpg" class="internal lwrap" src="../../../../@api/deki/files/2854/=reporter.jpg?size=webview" style="float: left; height: 307px; width: 300px;"></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table>
+ <tbody>
+  <tr>
+   <td>
+    <p><strong>2. Kerro meille lähettämäsi kaatumisilmoituksen kaatumistunnus (Crash ID).</strong></p>
+
+    <p>Voit tarkastella kaikkia lähetettyjä ilmoituksia<strong> kirjoittamalla "about:crashes" Firefox osoitepalkkiin</strong> ja painamalla enter. Firefox avaa luettelon lähetetyistä kaatumisilmoituksista, jossa näkyy myös kaatumistunnus. Kopioi kaksi tai kolme kaatumisen ajankohtaan parhaiten sopivista kaatumistunnuksista ja liitä ne Bugzillan vikailmoitukseen. Tarkistathan, että ilmoituksen lähetysaika ajoittuu kaatumisen ajankohtaan, jottta et turhaan lähetä kaatumistunnuksia, joilla ei ole mitään tekemistä tämän kaatumisen kanssa.</p>
+
+    <div class="note">Voit liittää kaatumistunnuksen alkuun "bp-", jolloin Bugzilla muodostaa tunnuksista linkit: <strong>bp-</strong>a70759c6-1295-4160-aa30-bc4772090918</div>
+   </td>
+   <td>
+    <p style="text-align: center;"><img alt="crashlist.jpg" class="internal lwrap" src="../../../../@api/deki/files/2855/=crashlist.jpg?size=webview" style="float: left; height: 403px; width: 450px;"></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Kaatumistunnuksen_hankkiminen_jos_Firefox_kaatuu_jo_käynnistyksessä">Kaatumistunnuksen hankkiminen jos Firefox kaatuu jo käynnistyksessä</h3>
+
+<p>Jos Firefox kaatuu jo käynnistyessään voit silti tarkastella lähetettyjä kaatumisilmoituksia. Kaatumisilmoituksia pääsee tarkastelemaan kaikilla Firefoxin profiileilla, joten jos <a class="external external-icon" href="https://support.mozilla.org/fi/kb/profiilien-hallinta-luo-ja-poista-profiileja">uusi profiili</a> ei kaada Firefoxia, voit tarkastella sen avulla kaatumisilmoituksia "about:crashes" -sivulla <a class="external" href="#How_to_get_a_crash_ID_with_the_Mozilla_Crash_Reporter" title="#How_to_get_a_crash_ID_with_the_Mozilla_Crash_Reporter">yllä kuvatulla tavalla</a>.</p>
+
+<h4 id="Kaatumistunnuksen_löytäminen_Firefoxin_ollessa_suljettu">Kaatumistunnuksen löytäminen Firefoxin ollessa suljettu</h4>
+
+<p>Jos et voi käynnistää Firefoxia ollenkaan, löydät kaatumisilmoitukset käyttöjärjestelmästäsi riippuen jostain seuraavista sijainneista:</p>
+
+<p>Windows : <span class="filename">%APPDATA%\Mozilla\Firefox\Crash Reports\submitted\</span><br>
+ OS X : <span class="filename">~/Library/Application Support/Firefox/Crash Reports/submitted/</span><br>
+ Linux : <span class="filename">~/.mozilla/firefox/Crash Reports/submitted/</span></p>
+
+<p>Kansion jokainen tiedosto sisältää yhden lähetetyn kaatumisilmoituksen kaatumistunnuksen. Voit tarkastella tiedoston luonti- tai muokkausaikaa päätelläksesi, mitkä kaatumisilmoitukset liittyvät vikailmoitukseesi.</p>
+
+<h2 id="Vaihtoehtoisia_tapoja_pinovedoksen_hankkimiseen">Vaihtoehtoisia tapoja pinovedoksen hankkimiseen</h2>
+
+<p>Jos Mozillan kaatumisenilmoitusohjelma ei ilmesty tai ei ole käytetävissä, on pinovedos hankittava käsin:</p>
+
+<h4 id="Windows">Windows</h4>
+
+<p>Pinovedoksen hankkimiseen löydät ohjeet artikkelista <a class="internal" href="/en-US/docs/Mozilla/How_to_get_a_stacktrace_with_WinDbg">Create a stacktrace with Windbg</a>.</p>
+
+<p>Prosessin täydellisen tilannevedoksen hankkiminen kuvataan artikkelissa <a href="/en-US/docs/Mozilla/How_to_get_a_process_dump_with_Windows_Task_Manager">How to get a process dump with Windows Task Manager [en-US]</a></p>
+
+<h4 id="OS_X">OS X</h4>
+
+<p>Suorita /Applications/Utilities/Console.app.  Laajenna "~/Library/Logs" ja "CrashReporter". Etsi sitten "firefox-bin" -lokeja.</p>
+
+<h4 id="Linux">Linux</h4>
+
+<p>Huomaa, että useimmissa distroissa pakkaus, jolle on löydettävä symbolit, on jotain sen tyyppistä kuin "xulrunner", ei "firefox".</p>
+
+<h2 id="Where_did_my_crash_get_submitted.3F" name="Where_did_my_crash_get_submitted.3F">Kaatumisilmoitustiedostot koneellasi</h2>
+
+<p>Kun kaatumisilmoitusohjelma (Breakpad) havaitsee kaatumisen, se ensin kirjoittaa kaatumisilmoitustiedostot (esim. .dump ja .extra -tiedostot) 'Crash Reports' -kansion alikansioon 'pending'.</p>
+
+<p>Jos Breakpad onnistuu lähettämään kaatumisilmoituksen palvelimelle, oletusarvoisesti 'pending' kansiossa olevat kaatumiseen liittyvät tiedostot poistetaan ja 'submitted' kansioon lisätään tekstitiedosto (.txt), joka sisältää kaatumistunnuksen, jolla palvelin tallensi kaatumisilmoituksen. Jos haluat, että Breakpad jättää .dump ja .extra -tiedostot koneellesi, jotta voit tarkastella niitä paikallisesti, aseta ympäristömuuttuja MOZ_CRASHREPORTER_NO_DELETE_DUMP arvoon 1.</p>
+
+<ul>
+ <li>Ubuntu:  <a class="external external-icon" href="https://wiki.ubuntu.com/MozillaTeam/Bugs#Obtain%20a%20backtrace%20from%20an%20apport%20crash%20report%20(using%20gdb)">Instructions from the Ubuntu Team</a></li>
+ <li>openSUSE:  <a class="external external-icon" href="https://en.opensuse.org/openSUSE:Bugreport_application_crashed">General instructions from openSUSE</a></li>
+ <li>Fedora: <a class="external external-icon" href="https://fedoraproject.org/wiki/StackTraces">Capturing Stack Traces</a></li>
+ <li>Gentoo: <a class="external external-icon" href="https://wiki.gentoo.org/wiki/Debugging_with_GDB">Debugging using GDB</a></li>
+</ul>

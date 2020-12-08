@@ -1,0 +1,57 @@
+---
+title: '-moz-stack-sizing'
+slug: Web/CSS/-moz-stack-sizing
+tags:
+  - CSS
+  - No estandar
+  - Referencia CSS
+  - XUL
+translation_of: Archive/Web/CSS/-moz-stack-sizing
+---
+<p>{{Non-standard_header}}{{CSSRef}} {{gecko_minversion_header("1.9.1")}}</p>
+
+<h2 id="Resumen">Resumen</h2>
+
+<p><code>-moz-stack-sizing</code> es una propiedad de CSS extendido. Normalmente, una {{XULElem("stack")}} cambiará su tamaño para que todos los elementos hijo sean completamente visibles. Por ejemplo, al mover un hijo de la pila lo suficientemente a la derecha anchará la plia para que el hijo permanezca visible.</p>
+
+<p>Si quieres evitar que la pila cambie de tamaño automáticamente puedes establecer <code>-moz-stack-sizing</code> a <code>ignore</code> en el hijo. La propiedad no se estable en la misma pila si no que se establece en los hijos de la pila. Esto permite ignorar a ciertos elementos hijos pero no a otros.</p>
+
+<p class="note"><strong>Nota:</strong> En versiones anteriores de Gecko  era posible solucionar el problema estableciendo un valor negativo muy grande como margen derecho e inferior para la pila y de igual manera unos márgenes inferior y derecho con grandes valores positivos para los hijos cuyo tamaño no quería ignorar. (El problema no afecta los hijos que se muevan en la parte inferior o izquierda de la pila.)</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Síntaxis">Síntaxis</h2>
+
+<pre class="brush:css">/* Palabras clave de los valores */
+-moz-stack-sizing: stretch-to-fit;
+-moz-stack-sizing: ignore;
+
+/* valores gloables */
+-moz-stack-sizing: inherit;
+-moz-stack-sizing: initial;
+-moz-stack-sizing: unset;
+</pre>
+
+<h3 id="Valores">Valores</h3>
+
+<dl>
+ <dt>stretch-to-fit</dt>
+ <dd>El hijo influirá en el tamaño de la pila.</dd>
+ <dt>ignore</dt>
+ <dd>La pila no tendrá en cuenta el hijo al calcular su tamaño..</dd>
+</dl>
+
+<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<pre class="brush:css">.mainsheet {
+  -moz-stack-sizing: ignore;
+}
+</pre>
+
+<h2 id="Ver_además">Ver además</h2>
+
+<p>{{bug("346189")}}</p>

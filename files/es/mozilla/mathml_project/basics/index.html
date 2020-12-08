@@ -1,0 +1,821 @@
+---
+title: Bases de MathML
+slug: Mozilla/MathML_Project/Basics
+translation_of: Mozilla/MathML_Project/Basics
+---
+<h2 id="Bases_de_MathML">Bases de MathML</h2>
+<p>Este documento muestra algunas de las construcciones básicas de MathML. Está confeccionado para mostrarse correctamente con la tipografía/fuente Symbol. Puedes ver su fuente. No obstante,  los documentos de MathML tienden a ser verborrágicos y puede ser que te extravíes intentando localizar fragmentos de MathML con la vista usual de código fuente. Se ha hecho esta demo con el fin de ilustrar los siguientes aspectos. Puedes hacer un clic derecho sobre cualquier fragmento matemático de interés a lo largo de este documento. El menú contextual no aparecerá. En realidad, el fragmento matemático hará zoom y, si haces clic una segunda vez, verás el <em>WYSIWYG</em> de lenguaje de marcado de MathML; y, si tu haces clic por tercera vez, el fragmento regresará a su estado original. Este modo de tres estados busca limitar los conflictos con otros agentes que compitan por el mouse.</p>
+<p>Con MathML se puede construir conjuntos tales como (procede a hacer clic sobre cualquiera de estas ecuaciones para probar el zoom) <math> <mrow> <mo>{</mo> <mrow> <mn>0</mn> <mo>,</mo> <mn>1</mn> <mo>,</mo> <mn>2</mn> <mo>,</mo> <mn>3</mn> <mo>,</mo> <mn>4</mn> </mrow> <mo>}</mo> </mrow> </math> o <math> <mrow> <mo>{</mo> <mrow> <mrow> <mo>⌊</mo> <mfrac> <mi>a</mi> <mi>b</mi> </mfrac> <mo>⌋</mo> </mrow> <mo stretchy="true">|</mo> <mrow> <mrow> <msup> <mi>a</mi> <mn>2</mn> </msup> <mo>+</mo> <msup> <mi>b</mi> <mn>2</mn> </msup> </mrow> <mo>≤</mo> <mn>3</mn> </mrow> </mrow> <mo>}</mo> </mrow> </math>, escribir el cálculo <math> <mrow> <mfrac> <mrow> <mi>d</mi> <mi>y</mi> </mrow> <mrow> <mi>d</mi> <mi>x</mi> </mrow> </mfrac> <mo>=</mo> <mfrac> <mn>1</mn> <msup> <mi>y</mi> <mn>2</mn> </msup> </mfrac> </mrow> </math>, formar expresiones complejas <math> <mrow> <mrow> <munder> <mo movablelimits="false">lim</mo> <mrow> <mi>n</mi> <mo>→</mo> <mi>N</mi> </mrow> </munder> <msup> <mrow> <mo>(</mo> <mrow> <mn>1</mn> <mo>+</mo> <mfrac> <mn>1</mn> <mi>n</mi> </mfrac> </mrow> <mo>)</mo> </mrow> <mi>n</mi> </msup> </mrow> <mo>−</mo> <msup> <mi>e</mi> <mi>N</mi> </msup> </mrow> </math>, <math> <mrow> <mi>k</mi> <mo>=</mo> <mfrac> <mrow> <mfrac> <mrow> <msup> <mo>∂</mo> <mn>2</mn> </msup> <mi>z</mi> </mrow> <mrow> <mo>∂</mo> <msup> <mi>x</mi> <mn>2</mn> </msup> </mrow> </mfrac> <mfrac> <mrow> <msup> <mo>∂</mo> <mn>2</mn> </msup> <mi>z</mi> </mrow> <mrow> <mo>∂</mo> <msup> <mi>y</mi> <mn>2</mn> </msup> </mrow> </mfrac> <mo>-</mo> <msup> <mrow> <mo>(</mo> <mfrac> <mrow> <msup> <mo>∂</mo> <mn>2</mn> </msup> <mi>z</mi> </mrow> <mrow> <mo>∂</mo> <mi>x</mi> <mo>∂</mo> <mi>y</mi> </mrow> </mfrac> <mo>)</mo> </mrow> <mn>2</mn> </msup> </mrow> <mrow> <msup> <mrow> <mo>(</mo> <mn>1</mn> <mo>+</mo> <msup> <mrow> <mo>(</mo> <mfrac> <mrow> <mo>∂</mo> <mi>z</mi> </mrow> <mrow> <mo>∂</mo> <mi>x</mi> </mrow> </mfrac> <mo>)</mo> </mrow> <mn>2</mn> </msup> <mo>+</mo> <msup> <mrow> <mo>(</mo> <mfrac> <mrow> <mo>∂</mo> <mi>z</mi> </mrow> <mrow> <mo>∂</mo> <mi>y</mi> </mrow> </mfrac> <mo>)</mo> </mrow> <mn>2</mn> </msup> <mo>)</mo> </mrow> <mn>2</mn> </msup> </mrow> </mfrac> </mrow> </math>, escribir ecuaciones de vectores <math mathvariant="bold"> <mrow> <mi>Y</mi> <mo>=</mo> <mrow> <mrow> <mi>a</mi> <mo>⁢</mo> <mi>X</mi> </mrow> <mo>+</mo> <mi>b</mi> </mrow> </mrow> </math>, etcétera.</p>
+<p>Nota cómo las anotaciones matemáticas aparecen en el flujo de texto principal y responden a medida de que reajustas la ventana. También puedes escribir ecuaciones representadas como la siguiente</p>
+<p><math display="block"> <mrow> <mrow> <mi>x</mi> <mover> <mo>→</mo> <mtext>mapea a</mtext> </mover> <mi>y</mi> <mo>=</mo> <msub> <mi>f</mi> <mi>n</mi> </msub> <mo>⁡</mo> <mrow> <mo>(</mo> <mi>x</mi> <mo>)</mo> </mrow> </mrow> <mo>=</mo> <msup> <mrow> <mo>(</mo> <mrow> <mn>1</mn> <mo>+</mo> <mfrac> <mn>1</mn> <msup> <mi>x</mi> <mi>n</mi> </msup> </mfrac> </mrow> <mo>)</mo> </mrow> <mi>n</mi> </msup> </mrow> </math> <math display="block"> <mrow> <msubsup> <mo>∫</mo> <mi>a</mi> <mi>b</mi> </msubsup> <mi>f</mi> <mrow> <mo>(</mo> <mi>x</mi> <mo>)</mo> </mrow> <mi>d</mi> <mi>x</mi> </mrow> <mrow> <mo>=</mo> <mfrac> <mrow> <mi>b</mi> <mo>-</mo> <mi>a</mi> </mrow> <mn>6</mn> </mfrac> <mrow> <mo>[</mo> <mi>f</mi> <mrow> <mo>(</mo> <mi>a</mi> <mo>)</mo> </mrow> <mo>+</mo> <mn>4</mn> <mi>f</mi> <mrow> <mo>(</mo> <mfrac> <mrow> <mi>a</mi> <mo>+</mo> <mi>b</mi> </mrow> <mn>2</mn> </mfrac> <mo>)</mo> </mrow> <mo>+</mo> <mi>f</mi> <mrow> <mo>(</mo> <mi>b</mi> <mo>)</mo> </mrow> <mo>]</mo> </mrow> <mo>-</mo> <mfrac> <msup> <mrow> <mo>(</mo> <mi>b</mi> <mo>-</mo> <mi>a</mi> <mo>)</mo> </mrow> <mn>5</mn> </msup> <mrow> <mn>4</mn> <mo>!</mo> <mn>5</mn> <mo>!</mo> </mrow> </mfrac> <msup> <mi>f</mi> <mrow> <mo>(</mo> <mn>4</mn> <mo>)</mo> </mrow> </msup> <mrow> <mo>(</mo> <mi>η</mi> <mo>)</mo> </mrow> <mo>,</mo> <mspace width="1em"></mspace> <mi>a</mi> <mo>≤</mo> <mi>η</mi> <mo>≤</mo> <mi>b</mi> </mrow> </math> <math display="block"> <mrow> <mrow> <mo>|</mo> <mi>x</mi> <mo>|</mo> </mrow> <mo>=</mo> <mo>{</mo> <mtable> <mtr> <mtd columnalign="right"> <mrow> <mo>-</mo> <mi>x</mi> </mrow></mtd><mtd columnalign="left">si <mspace width="thinmathspace"></mspace><mi>x</mi> <mo>&lt;</mo> <mn>0</mn> </mtd> </mtr> <mtr> <mtd columnalign="right"> <mi>x</mi> </mtd><mtd columnalign="left"><mtext>de lo contrario</mtext> </mtd></mtr></mtable></mrow></math>Tambien puedes escribir construcciones matemáticas bidimensionales [2D] como las matrices. El ejemplo siguiente muestra el
+ <i>
+  paso i</i>
+ -th de la multiplicación de una  matriz
+ <i>
+  A</i>
+ por un a vector
+ <i>
+  x</i>
+ (nota cómo <math> <msub> <mi>a</mi><mrow><mi>i</mi><mn>1</mn></mrow> </msub> <mo>,</mo> <mo>...</mo> <mo>,</mo> <msub> <mi>a</mi><mrow><mi>i</mi><mi>n</mi></mrow> </msub> <mo>,</mo> <msub><mi>x</mi><mn>1</mn></msub>  </math>están en la misma línea de base, otros alineamientos son posibles): <math display="block"> <mrow> <mi>i</mi><mtext>-th row</mtext> <mrow> <mo>[</mo> <mtable align="baseline3" rowlines="none solid solid none"> <mtr> <mtd> <msub> <mi>a</mi><mrow><mn>1</mn><mn>1</mn></mrow> </msub> </mtd> <mtd> <msub> <mi>a</mi><mrow><mn>1</mn><mn>2</mn></mrow> </msub> </mtd> <mtd> <msub> <mi>a</mi><mrow><mn>1</mn><mn>3</mn></mrow> </msub> </mtd> <mtd> <mo>...</mo> </mtd> <mtd> <msub> <mi>a</mi><mrow><mn>1</mn><mi>n</mi></mrow> </msub> </mtd> </mtr> <mtr> <mtd> <mo>:</mo> </mtd> <mtd> <mo>:</mo> </mtd> <mtd> <mo>:</mo> </mtd> <mtd> <mo>...</mo> </mtd> <mtd> <mo>:</mo> </mtd> </mtr> <mtr> <mtd> <msub> <mi>a</mi><mrow><mi>i</mi><mn>1</mn></mrow> </msub> </mtd> <mtd> <msub> <mi>a</mi><mrow><mi>i</mi><mn>2</mn></mrow> </msub> </mtd> <mtd> <msub> <mi>a</mi><mrow><mi>i</mi><mn>3</mn></mrow> </msub> </mtd> <mtd> <mo>...</mo> </mtd> <mtd> <msub> <mi>a</mi><mrow><mi>i</mi><mi>n</mi></mrow> </msub> </mtd> </mtr> <mtr> <mtd> <mo>:</mo> </mtd> <mtd> <mo>:</mo> </mtd> <mtd> <mo>:</mo> </mtd> <mtd> </mtd> <mtd> <mo>:</mo> </mtd> </mtr> <mtr> <mtd> <msub> <mi>a</mi><mrow><mi>n</mi><mn>1</mn></mrow> </msub> </mtd> <mtd> <msub> <mi>a</mi><mrow><mi>n</mi><mn>2</mn></mrow> </msub> </mtd> <mtd> <msub> <mi>a</mi><mrow><mi>n</mi><mn>3</mn></mrow> </msub> </mtd> <mtd> <mo>...</mo> </mtd> <mtd> <msub> <mi>a</mi> <mrow> <mi>n</mi> <mi>n</mi> </mrow> </msub> </mtd> </mtr> </mtable> <mo>]</mo> </mrow> <mrow> <mo symmetric="false">[</mo> <mtable align="baseline1"> <mtr> <mtd> <msub><mi>x</mi><mn>1</mn></msub> </mtd> </mtr> <mtr> <mtd> <msub><mi>x</mi><mn>2</mn></msub> </mtd> </mtr> <mtr> <mtd> <msub><mi>x</mi><mn>3</mn></msub> </mtd> </mtr> <mtr> <mtd> <mo>:</mo> </mtd> </mtr> <mtr> <mtd> <msub><mi>x</mi><mi>n</mi></msub> </mtd> </mtr> </mtable> <mo symmetric="false">]</mo> </mrow> </mrow> </math></p>
+<p>En Mozilla, MathML corre dentro del navegador principal por lo tanto responde a otras operaciones del navegador tales como el zoom (intenta Ver -&gt; Ampliación/Zoom de texto), y puedes hacer hiperenlaces <math href="http://en.wikipedia.org/wiki/Pythagorean_theorem"> <mrow> <mrow> <msup> <mi>a</mi> <mn>2</mn> </msup> <mo>+</mo> <msup> <mi>b</mi> <mn>2</mn> </msup> </mrow> <mo>=</mo> <msup> <mi>c</mi> <mn>2</mn> </msup> </mrow> </math>, aplicar estilos con <span style="">effectos <math> <mrow> <mrow> <msup> <mi>a</mi> <mn>2</mn> </msup> <mrow> <mo>+</mo> </mrow> <msup> <mi>b</mi> <mn>2</mn> </msup> </mrow> <mrow> <mo>=</mo> </mrow> <msup> <mi>c</mi> <mn>2</mn> </msup> </mrow> </math> </span>, o usar colores <math> <mrow> <mrow> <msup mathcolor="red"> <mi>a</mi> <mn>2</mn> </msup> <mo>+</mo> <msup mathcolor="green"> <mi>b</mi> <mn>2</mn> </msup> </mrow> <mo mathbackground="yellow">=</mo> <msup mathcolor="purple"> <mi>c</mi> <mn>2</mn> </msup></mrow></math>en formas variadas.<math display="block"> <mrow mathcolor="red"> <mfrac> <mrow> <mi>p</mi><mo>(</mo><mi>x</mi><mo>)</mo> </mrow> <mrow> <mi>q</mi><mo>(</mo><mi>x</mi><mo>)</mo> </mrow> </mfrac> <mo>=</mo> <mfrac> <mrow mathcolor="blue"> <msub><mi>a</mi><mn>0</mn></msub> <mo>+</mo> <msub><mi>a</mi><mn>1</mn></msub><mi>x</mi> <mo>+</mo> <msub><mi>a</mi><mn>2</mn></msub> <msup><mi>x</mi><mn>2</mn></msup> <mo>+</mo> <mo>...</mo> <mo>+</mo> <msub><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub> <msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup> </mrow> <mrow mathcolor="green"> <msub><mi>b</mi><mn>0</mn></msub> <mo>+</mo> <msub><mi>b</mi><mn>1</mn></msub><mi>x</mi> <mo>+</mo> <msub><mi>b</mi><mn>2</mn></msub> <msup><mi>x</mi><mn>2</mn></msup> <mo>+</mo> <mo>...</mo> <mo>+</mo> <msub><mi>b</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub> <msup><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup> </mrow> </mfrac> <mo>.</mo> </mrow> </math></p>
+<p>También puedes hacer otras cosas extrañas y riesgosas que no son adaptables, advierte Bongo, tales como mezclar MathML con otros <em>markups</em>.<math display="block"> <mrow><mi>Lagartija</mi> <mo>+</mo> <mi>Bongo</mi> <mo>=</mo> <mfrac> <mtext> <img alt="logo-star" height="200" src="http://www.mozilla.org/images/logo-star.gif" width="197"> </mtext> <mrow> <mo>∫</mo> <munderover> <mtext> <img alt="mozilla-16" height="16" src="http://www.mozilla.org/images/mozilla-16.png" width="16"> </mtext> <mi>a</mi> <mi>b</mi> </munderover> <mi>d</mi> <mi>x</mi> </mrow> </mfrac> <mo>+</mo> <mpadded depth="65px" voffset="-65px"> <mtext> <img alt="mathboard" height="137" src="https://developer.mozilla.org/@api/deki/files/4238/=mathboard.png" width="184"> </mtext> </mpadded> </mrow> </math></p>
+<div style="display: none;">
+ <h2 id="MathML_and_Javascript" name="MathML_and_Javascript">MathML and Javascript</h2>
+ <h3 id="HTML_Content">HTML Content</h3>
+ <pre class="brush: html">&lt;p&gt;
+And you can turn to JavaScript and the DOM for dynamic operations.
+&lt;/p&gt;
+
+&lt;div style="text-align:center"&gt;
+Fill the gaps in this matrix with resizable input fields.
+&lt;/div&gt;
+&lt;math class="inputmath" display="block"&gt;
+&lt;mrow&gt;
+&lt;mi&gt;A&lt;/mi&gt;
+&lt;mo&gt;=&lt;/mo&gt;
+&lt;mo&gt;[&lt;/mo&gt;
+&lt;mtable&gt;
+&lt;mtr&gt;
+&lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;
+&lt;mtd&gt;
+&lt;mtext&gt;&lt;input id="input12" value="?" size="1"/&gt;&lt;/mtext&gt;
+&lt;/mtd&gt;
+&lt;/mtr&gt;
+&lt;mtr&gt;
+&lt;mtd&gt;
+&lt;mtext&gt;&lt;input id="input21" value="?" size="1"/&gt;&lt;/mtext&gt;
+&lt;/mtd&gt;
+&lt;mtd&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/mtd&gt;
+&lt;/mtr&gt;
+&lt;/mtable&gt;
+&lt;mo&gt;]&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;/math&gt;
+&lt;div style="text-align:center"&gt;
+Left size:
+&lt;a class="control" href="javascript:incrementInput('input21', 1);" title="increase input"&gt;+&lt;/a&gt;
+&lt;a class="control" href="javascript:incrementInput('input21',-1);" title="decrease input"&gt;-&lt;/a&gt;
+
+ &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;
+
+ Right size:
+&lt;a class="control" href="javascript:incrementInput('input12', 1);" title="increase input"&gt;+&lt;/a&gt;
+&lt;a class="control" href="javascript:incrementInput('input12',-1);" title="decrease input"&gt;-&lt;/a&gt;
+&lt;br/&gt;
+ (click these control buttons to see their effects.)
+ &lt;/div&gt;
+
+&lt;p&gt;
+Each entry of the following matrix represents
+&lt;math&gt;
+&lt;msup&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msup&gt;
+&lt;/math&gt; for some &lt;i&gt;n&lt;/i&gt;.
+When you left-click any individual entry, it should toggle between its expanded and
+unexpanded forms. You can also &lt;a href="javascript:unexpand();"&gt;unexpand all&lt;/a&gt; or
+&lt;a href="javascript:expand();"&gt;expand all&lt;/a&gt;.
+&lt;/p&gt;
+
+&lt;div&gt;
+&lt;math display="block"&gt;
+&lt;mtable&gt;
+&lt;mtr&gt;
+&lt;mtd&gt;
+&lt;mtable align="axis" columnalign="left left left"&gt;
+&lt;mtr&gt;
+&lt;mtd&gt;
+&lt;maction id="a11" actiontype="toggle" selection="2"&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;0&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mn&gt;1&lt;/mn&gt;
+&lt;/maction&gt;
+&lt;/mtd&gt;
+&lt;mtd&gt;
+&lt;maction id="a12" actiontype="toggle" selection="2"&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;1&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;/maction&gt;
+&lt;/mtd&gt;
+&lt;mtd&gt;
+&lt;maction id="a13" actiontype="toggle" selection="2"&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;/maction&gt;
+&lt;/mtd&gt;
+&lt;/mtr&gt;
+&lt;mtr&gt;
+&lt;mtd&gt;
+&lt;maction id="a21" actiontype="toggle" selection="2"&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;1&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;/maction&gt;
+&lt;/mtd&gt;
+&lt;mtd&gt;
+&lt;maction id="a22" actiontype="toggle" selection="2"&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;/maction&gt;
+&lt;/mtd&gt;
+&lt;mtd&gt;
+&lt;maction id="a23" actiontype="toggle" selection="2"&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;/maction&gt;
+&lt;/mtd&gt;
+&lt;/mtr&gt;
+&lt;mtr&gt;
+&lt;mtd&gt;
+&lt;maction id="a31" actiontype="toggle" selection="2"&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;/maction&gt;
+&lt;/mtd&gt;
+&lt;mtd&gt;
+&lt;maction id="a32" actiontype="toggle" selection="2"&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;/maction&gt;
+&lt;/mtd&gt;
+&lt;mtd&gt;
+&lt;maction id="a33" actiontype="toggle" selection="2"&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;6&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;/maction&gt;
+&lt;/mtd&gt;
+&lt;/mtr&gt;
+&lt;mtr&gt;
+&lt;mtd&gt;
+&lt;maction id="a41" actiontype="toggle" selection="2"&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;/maction&gt;
+&lt;/mtd&gt;
+&lt;mtd&gt;
+&lt;maction id="a42" actiontype="toggle" selection="2"&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;6&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;/maction&gt;
+&lt;/mtd&gt;
+&lt;mtd&gt;
+&lt;maction id="a43" actiontype="toggle" selection="2"&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;5&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;5&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;5&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;10&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;10&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;3&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mn&gt;5&lt;/mn&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;mo&gt;&amp;InvisibleTimes;&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mi&gt;y&lt;/mi&gt;
+&lt;mn&gt;5&lt;/mn&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;/maction&gt;
+&lt;/mtd&gt;
+&lt;/mtr&gt;
+&lt;/mtable&gt;
+&lt;/mtd&gt;
+&lt;/mtr&gt;
+&lt;/mtable&gt;
+&lt;/math&gt;
+&lt;/div&gt;
+
+</pre>
+ <h3 id="CSS_Content">CSS Content</h3>
+ <pre class="brush: css">.control {
+text-decoration: none;
+font-weight: bold;
+font-size: 200%;
+}
+input {
+color: red;
+}
+[class="inputmath"] {
+border: 1px dotted;
+}
+</pre>
+ <h3 id="JavaScript_Content">JavaScript Content</h3>
+ <pre class="brush: js">function setSelection(id,value) {
+document.getElementById(id).setAttribute("selection",value);
+}
+function expand()
+{
+  setSelection("a11","2");  setSelection("a12","2");  setSelection("a13","2");
+  setSelection("a21","2");  setSelection("a22","2");  setSelection("a23","2");
+  setSelection("a31","2");  setSelection("a32","2");  setSelection("a33","2");
+  setSelection("a41","2");  setSelection("a42","2");  setSelection("a43","2");
+}
+function unexpand()
+{
+  setSelection("a11","1");  setSelection("a12","1");  setSelection("a13","1");
+  setSelection("a21","1");  setSelection("a22","1");  setSelection("a23","1");
+  setSelection("a31","1");  setSelection("a32","1");  setSelection("a33","1");
+  setSelection("a41","1");  setSelection("a42","1");  setSelection("a43","1");
+}
+
+function incrementInput(inputID, increment)
+{
+  var inputElement = document.getElementById(inputID);
+  var size = parseInt(inputElement.size) + increment;
+  if (size &lt;= 0)
+    size = 1
+  inputElement.size = size;
+}</pre>
+</div>
+<p>{{ EmbedLiveSample('MathML_and_Javascript', '100%', '400px') }}</p>
+<p>Y podría haber más cosas...</p>
+<div style="display: none;">
+ <h2 id="MathML_Button" name="MathML_Button">MathML Button</h2>
+ <h3 id="HTML_Content_2">HTML Content</h3>
+ <pre class="brush: html">&lt;div style="text-align: center"&gt;
+  &lt;button style="white-space: normal;"&gt;
+     &lt;span style="color: brown;"&gt;
+
+       For example, &lt;b&gt;click&lt;/b&gt; this MathML continued fraction&lt;br/&gt;
+       inside this HTML button&lt;br /&gt;
+     &lt;/span&gt;
+&lt;math&gt;
+&lt;mrow&gt;
+&lt;mfrac&gt;
+&lt;mi&gt;&amp;pi;&lt;/mi&gt;
+&lt;mn&gt;4&lt;/mn&gt;
+&lt;/mfrac&gt;
+&lt;mo&gt;=&lt;/mo&gt;
+&lt;mfrac numalign="left"&gt;
+&lt;mstyle scriptlevel="0"&gt;
+&lt;mn&gt;1&lt;/mn&gt;
+&lt;/mstyle&gt;
+&lt;mstyle scriptlevel="0"&gt;
+&lt;mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mfrac numalign="left"&gt;
+&lt;mstyle scriptlevel="0"&gt;
+&lt;msup&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
+&lt;/mstyle&gt;
+&lt;mstyle scriptlevel="0"&gt;
+&lt;mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mfrac numalign="left"&gt;
+&lt;mstyle scriptlevel="0"&gt;
+&lt;msup&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
+&lt;/mstyle&gt;
+&lt;mstyle scriptlevel="0"&gt;
+&lt;mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mfrac numalign="left"&gt;
+&lt;mstyle scriptlevel="0"&gt;
+&lt;msup&gt;&lt;mn&gt;5&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
+&lt;/mstyle&gt;
+&lt;mstyle scriptlevel="0"&gt;
+&lt;mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mfrac numalign="left"&gt;
+&lt;mstyle scriptlevel="0"&gt;
+&lt;msup&gt;&lt;mn&gt;7&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;
+&lt;/mstyle&gt;
+&lt;mstyle scriptlevel="0"&gt;
+&lt;mn&gt;2&lt;/mn&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mo mathvariant="bold"&gt;...&lt;/mo&gt;
+&lt;/mstyle&gt;
+&lt;/mfrac&gt;
+&lt;/mrow&gt;
+&lt;/mstyle&gt;
+&lt;/mfrac&gt;
+&lt;/mrow&gt;
+&lt;/mstyle&gt;
+&lt;/mfrac&gt;
+&lt;/mrow&gt;
+&lt;/mstyle&gt;
+&lt;/mfrac&gt;
+&lt;/mrow&gt;
+&lt;/mstyle&gt;
+&lt;/mfrac&gt;
+&lt;/mrow&gt;
+&lt;/math&gt;
+  &lt;/button&gt;
+&lt;/div&gt;<span style="display: none;">
+</span></pre>
+</div>
+<p>{{ EmbedLiveSample('MathML_Button', '100%', '300px') }}</p>
+<p>Para más información sobre MathML en Mozilla, mira la <a href="http://www.mozilla.org/projects/mathml/">página del Proyecto MathML</a>. Hay enlaces a más ejemplos, <a href="http://www.mozilla.org/projects/mathml/screenshots/">capturas de pantalla</a> e instrucciones sobre cómo <a href="http://www.mozilla.org/projects/mathml/fonts/">descargar fuentes tipográficas</a> para varias plataformas. Dichas fuentes son requeridas para visualizar otros ejemplos además de las construcciones básicas mostradas aquí.</p>
+<div style="display: none;">
+ <h2 id="MathML_Background_Image" name="MathML_Background_Image">MathML Background Image</h2>
+ <h3 id="HTML_Content_3">HTML Content</h3>
+ <pre class="brush: html">&lt;div class="background"&gt;&lt;/div&gt;
+&lt;math display="block"&gt;
+&lt;mrow&gt;
+&lt;msub&gt;
+&lt;mi&gt;Z&lt;/mi&gt;
+&lt;mi&gt;&amp;alpha;&lt;/mi&gt;
+&lt;/msub&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mi&gt;f&lt;/mi&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;=&lt;/mo&gt;
+
+&lt;mfrac&gt;
+&lt;mn&gt;1&lt;/mn&gt;
+&lt;mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;mi&gt;i&lt;/mi&gt;
+&lt;mo&gt;&amp;ThinSpace;&lt;/mo&gt;
+&lt;mi&gt;cos&lt;/mi&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mfrac&gt;
+&lt;mrow&gt;
+&lt;mi&gt;&amp;alpha;&lt;/mi&gt;
+&lt;mi&gt;&amp;pi;&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/mfrac&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;/mfrac&gt;
+
+&lt;mrow&gt;
+&lt;msub&gt;
+&lt;mo&gt;&amp;int;&lt;/mo&gt;
+&lt;mi&gt;C&lt;/mi&gt;
+&lt;/msub&gt;
+&lt;mfrac&gt;
+&lt;mrow&gt;
+&lt;mi&gt;f&lt;/mi&gt;
+&lt;mo stretchy='false'&gt;(&lt;/mo&gt;
+&lt;mi&gt;i&lt;/mi&gt;
+&lt;mi&gt;z&lt;/mi&gt;
+&lt;mo stretchy='false'&gt;)&lt;/mo&gt;
+&lt;msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mo&gt;-&lt;/mo&gt;
+&lt;mi&gt;z&lt;/mi&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;mi&gt;&amp;alpha;&lt;/mi&gt;
+&lt;/msup&gt;
+&lt;/mrow&gt;
+&lt;mrow&gt;
+&lt;msup&gt;
+&lt;mi&gt;e&lt;/mi&gt;
+&lt;mrow&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;mi&gt;&amp;pi;&lt;/mi&gt;
+&lt;mi&gt;z&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;/msup&gt;
+&lt;mo&gt;-&lt;/mo&gt;
+&lt;mn&gt;1&lt;/mn&gt;
+&lt;/mrow&gt;
+&lt;/mfrac&gt;
+&lt;/mrow&gt;
+&lt;mi&gt;d&lt;/mi&gt;
+&lt;mi&gt;z&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;/math&gt;</pre>
+ <h3 id="CSS_Content_2">CSS Content</h3>
+ <pre class="brush: css">[class="background"] {
+  background-image: url(http://www.mozilla.org/images/mozilla-banner.gif);
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 58px;
+}
+</pre>
+</div>
+<p>{{ EmbedLiveSample('MathML_Background_Image', '100%', '300px') }}</p>

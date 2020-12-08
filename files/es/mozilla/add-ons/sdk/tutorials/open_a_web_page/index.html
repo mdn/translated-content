@@ -1,0 +1,48 @@
+---
+title: Abrir una página web
+slug: Mozilla/Add-ons/SDK/Tutorials/Open_a_Web_Page
+tags:
+  - Add-on SDK
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Open_a_Web_Page
+---
+<div class="note">Para realizar los pasos que se describen a continuación es necesario tener <a href="/en-US/Add-ons/SDK/Tutorials/Installation">instalado el SDK </a>y conocimientos <a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx">básico de <code>cfx</code></a>.</div>
+
+<p>Para abrir una nueva página web, se usa el módulo <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code></a>:</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.open("http://www.example.com");
+</pre>
+
+<p>Esta función es asíncrona, por lo tanto no se tendrá inmediatamanete un <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#Tab">objeto</a> <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs#Tab"><code>tab</code> </a> el cual se pueda examinar. Para hacer esto, se pasa una función de retrollamada en <code>open()</code>. La retrollamada es asignada a pa propiedad <code>onReady</code>, y pasará la pestaña como argumento:</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.open({
+  url: "http://www.example.com",
+  onReady: function onReady(tab) {
+    console.log(tab.title);
+  }
+});
+</pre>
+
+<p>Incluso ahora, no se tiene acceso directo a ningún contenido dentro de la pestaña.</p>
+
+<p>Para acceder al contenido de la pstaña se necesita adjuntar un script a la pestaña usando <code>tab.attach()</code>. Este add-on carga una página, luego adjunta un script a la página el cual le agrega un borde rojo:</p>
+
+<pre class="brush: js">var tabs = require("sdk/tabs");
+tabs.open({
+  url: "http://www.example.com",
+  onReady: runScript
+});
+
+function runScript(tab) {
+  tab.attach({
+    contentScript: "document.body.style.border = '5px solid red';"
+  });
+}
+</pre>
+
+<h2 id="Conozca_más">Conozca más</h2>
+
+<p>Para conocer más sobre las pestañas en el SDK, puede dirigirse a la <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs">referencia de </a><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code> en la API</a>.</p>
+
+<p>Para conocer mas sobre la ejecución de scripts en las pestañas, puede diregirse a<a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs#attach%28options%29"> </a><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs#attach%28options%29">usando <code>tab.attach()</code></a><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs#attach%28options%29"> en el tutorial</a>.</p>

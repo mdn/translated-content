@@ -1,0 +1,190 @@
+---
+title: Aplicaciones empaquetadas
+slug: Mozilla/Marketplace/Publishing/Packaged_apps
+translation_of: Archive/Mozilla/Marketplace/Options/Packaged_apps
+---
+<p>Una <strong>aplicación empaquetada</strong> es una <em>Open Web App</em> que tiene todos sus recursos (HTML, CSS, JavaScript, manifiesto y demás) empaquetados en un archivo zip, en lugar de tenerlos en un servidor web. Una aplicación empaquetada es simplemente un archivo zip con el <a href="/en-US/docs/Web/Apps/Manifest">manifiesto de la aplicacion </a>en su directorio raíz. El manifiesto debe ser llamado <code>manifest.webapp</code>.</p>
+
+<p>Una direferencia de una aplicación alojada es que una aplicación empaquetada, es que debe especificar una ruta de arranque en el manifiesto en tanto que se trata de un campo opcional en una aplicación alojada.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> Actualmente (Enero 2013) Firefox Marketplace solamente soporta aplicaciones empaquetadas para Firefox OS.</p>
+</div>
+
+<h2 id="Propósito_de_las_aplicaciones_empaquetadas.">Propósito de las aplicaciones empaquetadas.</h2>
+
+<p>El propósito de una aplicación empaquetada, es tener una forma viable de proveer aplicaciones que tengan acceso a APIs sensibles en el dispositivo. Las aplicaciones deben ser verificadas por la tienda donde es distribuida (como Firefox Markerplace). La tienda revisa la aplicación y si la encuentra aceptable, firma el archivo zip de la aplicación con su llave privada. Esto da a los usuarios de la aplicación más seguridad de que han sido revisados problemas potenciales de seguridad, privacidad y capacidad.</p>
+
+<h2 id="Tipos_de_aplicaciones_empaquetadas.">Tipos de aplicaciones empaquetadas.</h2>
+
+<p>Aplicaciones privilegiadas</p>
+
+<dl>
+ <dd>Una <em>aplicación privilegiada</em> es aprobada por la Firefox Marketplace usando un proceso especial. Esto significa que provee más seguridad a los usuarios cuando la aplicación quiere accesar a ciertas APIs sensibles del dispositivo. Esto equivale a las aplicaciones nativas en plataformas como iOS o Android. Para especificar que se trata de una aplicación privilegiada agregue el campo <a href="/en-US/docs/Web/Apps/Manifest#type"><code>type</code></a> a su archivo <code>manifest.webapp</code>  y establezca el valor de <code>privileged</code>.</dd>
+ <dd>Una aplicación privilegiada tiene las siguientes características :
+ <ul>
+  <li>Es aprobada por una tienda de aplicaciones después de la revisión de código o equivalente.</li>
+  <li>Los recursos de la aplicación son firmados por la tienda de aplicaciones.</li>
+  <li>Permite usar ciertas APIs Web sensibles a las que contenido no confiable no puede accesar.</li>
+  <li>Aplica <a href="/en-US/docs/Security/CSP/Introducing_Content_Security_Policy">Politicas de seguridad de contenido</a> (CSP). Una aplicacion con privilegios utiliza estas CSP:
+   <pre>"default-src *; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'"</pre>
+  </li>
+  <li>Implementa otros requisitos relacionados con la seguridad. Vea <a href="https://wiki.mozilla.org/Apps/Security">Seguridad</a> para mas informacion.</li>
+ </ul>
+ </dd>
+ <dt>Aplicación certificada</dt>
+ <dd>Una aplicacion certificada está destinada a una función crítica del sistema como el marcado por defecto o la configuración del sistema en un teléfono inteligente. Este tipo de aplicación podría ser usada para funciones críticas en un teléfono con Firefox OS. No está destinada para aplicaciones de terceros por lo que la mayoría de desarrolladores no pueden utilizarlas. Una aplicación certificada es una aplicación empaquetada similar a una con privilegios, excepto que todos los permisos del dispositivos son implícitos, lo que significa que son habilitados sin la aprobación explícita del usuario. A Una aplicación certificada debe ser aprovada por el fabricante (OEM) o compañía (carrier) para tener la aprobación implícta para usar APIs críticas. Para especificar que una aplicación es certificada, agregue el campo <a href="/en-US/docs/Web/Apps/Manifest#type"><code>type</code></a> a su archivo <code>manifest.webapp</code> y establecer su valor a <code>certified</code>.</dd>
+ <dd>Las siguientes son las CSP de una aplicación certificada, las cuales, son lígeramente direfentes de las de una con privilegios:
+ <pre>"default-src *; script-src 'self'; object-src 'none'; style-src 'self'"</pre>
+ Esto hace parecer que las reglas en las CSP son ligeramente más flexibles para las aplicaciones con privilegios que en las aplicaciones certificadas. Si quiere saber las razones de esto, vea <a href="https://wiki.mozilla.org/Apps/Security#Default_CSP_policy">las Políticas CSP por defecto </a>y <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=768029">Bug 768029</a>.</dd>
+ <dt>Aplicaciones empaquetadas planas</dt>
+ <dd>Usted también puede hacer una simple aplicación empaquetada en un archivo zip. La tienda la firma, pero no implementa el proceso especial de autenticación como en las aplicaciones certificadas o con privilegios. Estas aplicaciones no pueden usar ciertas Web APIs sensibles. Tampoco está sujeta a las CSP como las aplicaciones certificadas o con privilegios. Este tipo de aplicación puede ser útil si quiere que todos los recursos de su aplicación estén disponibles cuando el usuario la usa por primera vez sin descargarlos. Este tipo de aplicación empaquetada no requiere el campo <code>type</code> en su archivo <code>manifest.webapp</code> por que el valor por defecto para <code>type</code> (<code>web</code>) es correcto.</dd>
+</dl>
+
+<h2 id="Diferencias_con_las_aplicaciones_hospedadas">Diferencias con las aplicaciones hospedadas</h2>
+
+<p>Las aplicaciones empaquetadas tienen las mismas capacidades que las aplicaciones web de código abierto normales (aplicaciones "alojadas"), pero las aplicaciones empaquetadas tienen algunas diferencias:</p>
+
+<ul>
+ <li>No tienen origen en Internet. La política de una aplicación por origen (<em>one-app-per-origin</em>) que gobierna a las aplicaciones hospedadas no aplica para las aplicaciones empaquetadas.</li>
+ <li>Las aplicaciones empaquetadas usan un protocolo interno especial en el archivo zip: <code>app://&lt;uuid&gt;</code>. Ejemplo: Cuando usted carga el contenido de <code>/index.html</code> en una aplicacion empaquetada, en realidad esta cargando algo como lo siguiente: (el UUID sera diferente):
+  <pre>app://550e8400-e29b-41d4-a716-446655440000/index.html</pre>
+
+  <p>El UUID es generado al azar en el momento de la instalacion, lo cual significa que es único en cada dispositivo en la que es instalada la aplicación. El protocolo  <code>app://</code> será útil en futuras versiones en tiempo de ejecución, pagos y flujos de OAuth.</p>
+ </li>
+ <li>El archivo del manifiesto debe ser llamado <code>manifest.webapp</code>.</li>
+ <li>Los recursos son accedidos desde un archivo zip, el cual es almacenado en el dispositivo donde son instalados.</li>
+ <li>Son instalados con una funcion API <code>mozApps</code> diferente: <code>installPackage()</code>.</li>
+ <li>Aplican una <a href="/en-US/docs/Security/CSP/Introducing_Content_Security_Policy">CSP</a> para todo el contenido de la aplicación (una aplicación también puede usar una CPS, pero no la requiere).</li>
+ <li>También pueden incrustar contenido remoto en <code>iframes</code>, pero dicho contenido no tendrá acceso a APIs privilegiadas ni las CSP por defecto le serán aplicadas.</li>
+ <li>Tienen un proceso de actualizacion para obtener las nuevas versiones para los usuarios; las aplicaciones hospedades no lo necesitan de este proceso.</li>
+</ul>
+
+<p>Las aplicaciones empaquetadas también pueden hacer cosas como acceder a bases de datos en un servidor web como una aplicación hospedada.</p>
+
+<h2 id="Usando_APIs_Web_sensibles">Usando APIs Web sensibles</h2>
+
+<p>Hay Web APIs que pueden ser usadas maliciosamente por lo que el acceso a estas debe ser controlado. Para cada API sensible a la que se quiera acceder, ustede debe agregar una entrada al campo <code>permissions</code> en el  <a href="/en-US/docs/Web/Apps/Manifest">manifiesto de la aplicación</a>.</p>
+
+<p>Algunas APIs sensibles pueden ser accedidas por aplicaciones hospedadas normales, pero otras APIs requieren que usted use una aplicación empaquetada (con privilegios o certificada). Vea <a href="/en-US/docs/Web/Apps/App_permissions">Permisos de aplicaciones</a> para una tabla que describe los requisitos..</p>
+
+<h2 id="Aplicaciones_empaquetadas_de_la_tienda_de_Firefox_(Firefox_Marketplace).">Aplicaciones empaquetadas de la tienda de Firefox (Firefox Marketplace).</h2>
+
+<p>La tienda de Firefox (Firefox Marketplace) maneja a las aplicaciones empaquetadas de forma diferente que las aplicaciones hospedadas. Cuando usted manda una aplicación empaquetada, su archivo zip es almacenado en los servidores de la Tienda y genera un nuevo manifiesto llamado el "mini-manifiesto" que está basado en el manifiesto de la aplicación que se encuentra en el archivo zip. Cuando un usuario installa su aplicación, el mini-manifiesto es pasado a la función <code>installPackage()</code> en la aplicación instalada. El mini-manifiesto existe para propósitos de instalación y actualización y no es usado cuando la aplicación se ejecuta.</p>
+
+<h2 id="Prueba_de_instalación_de_una_aplicación_empaquetada_(con_Simulador)">Prueba de instalación de una aplicación empaquetada (con Simulador)</h2>
+
+<p>Para instalar una aplicación empaquetada en un dispositivo Firefox OS usando el simulador, vea la  <a href="/en-US/docs/Tools/Firefox_OS_Simulator#Push_to_device">sección "Push to Device" en la guía del Simulador</a>.</p>
+
+<h2 id="Prueba_de_instalación_de_una_aplicación_empaquetada_(sin_Simulador)">Prueba de instalación de una aplicación empaquetada (sin Simulador)</h2>
+
+<p>Si quieres probar localmente la instalación de tu aplicación empaquetada, aquí hay otra forma de hacerlo. Usa los siguietnes pasos para instalar una aplicación empaquetada en un teléfono usando un servidor Web que está en tu red local. Puede ser un servidor local que se ejecute en la computadora en la que estás desarrollandol. Esto también de dará una idea de cómo funciona la instalación de aplicaciones empaquetadas.</p>
+
+<h3 id="Requisitos">Requisitos</h3>
+
+<ul>
+ <li>El servidor Web debe estar en la misma red que el teléfono y debe de estar habilitado para recibir peticiones de la red local.</li>
+ <li>El teléfono debe ejecutar Firefox OS y tener el Wi-fi encendido.</li>
+ <li>Modifique las rutas usadas en el siguiente código de ejemplo para que coincidan con su servidor..</li>
+ <li>Obtenga la dirección IP de su servidor y úsela en lugar de <strong><code>&lt;server-ip&gt;</code></strong> en los siguientes ejemplos. Si el servidor no utiliza un puerto estándar, use este también. Ejemplo de una dirección IP sin un puerto estándar:
+  <pre>10.10.12.1:8080</pre>
+ </li>
+</ul>
+
+<h3 id="Pasos">Pasos</h3>
+
+<ol>
+ <li>Tenga su aplicación empaquetada disponible y dele el nombre de <code>package.zip</code>. Este archivo tiene todos los recursos, incluyendo el archivo del manifiesto.</li>
+ <li>Cree un archivo llamado <code>package.manifest</code> y agregue el siguiente contenido. Este es un mini-manifiesto usado por aplicaciones empaquetadas dentro del archivo zip. Vea <a href="#Mini-manifest_fields">Campos del mini-manifiesto</a> si quiere más información acerca de los mini-manifiestos.
+  <pre class="brush: js">{
+  "name": "My App",
+  "package_path": "http://<strong>&lt;server-ip&gt;</strong>/package.zip",
+  "version": "1.0"
+}</pre>
+ </li>
+ <li>Cree un archivo llamado <code>install.html</code> con el siguiente contenido . Este contiene el código JavaScript que llama a la aplicación empaquetada (<a href="/en-US/docs/Web/API/Apps.installPackage"><code>installPackage()</code></a>) y a las funciones <em>callbacks</em> para las notificaciones de éxito o falla.
+  <pre class="brush: html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;p&gt;Packaged app installation page&lt;/p&gt;
+    &lt;script&gt;
+      // This URL must be a full url.
+      var manifestUrl = 'http://<strong>&lt;server-ip&gt;</strong>/package.manifest';
+      var req = navigator.mozApps.installPackage(manifestUrl);
+      req.onsuccess = function() {
+        alert(this.result.origin);
+      };
+      req.onerror = function() {
+        alert(this.error.name);
+      };
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+ </li>
+ <li>Copie el archivo <code>package.zip</code>, <code>package.manifest</code>, e <code>install.html</code> dentro de la carpeta raíz del documento en el servidor.</li>
+ <li>Utilice el navegador en el teléfono para abrir  <code>http://<strong>&lt;server-ip&gt;</strong>/install.html</code> y confirme la entrada para instalar la aplicación. El script le dará una la indicación de que la instalación fue exitosa o falló.</li>
+</ol>
+
+<div class="note">
+<p><strong>Nota:</strong> Si usted quiere probar aplicaciones certificadas (descritas anteriormente) encienda el "modo de desarrolador" ("developer mode")  en el dispositivo que quiera instalar la aplicación (con Firefox OS) y asegúrese de especificar el <a href="/en-US/docs/Web/Apps/Manifest#type"><code>type</code></a> correcto en su archivo <code>manifest.webapp</code>.</p>
+</div>
+
+<h2 id="Campos_del_mini-manifiesto">Campos del mini-manifiesto</h2>
+
+<p>Aqui hay un ejemplo de los campos del mini-manifiesto (mini-manifest):</p>
+
+<pre class="brush: js">{
+  "name": "My app",
+  "package_path": "http://thisdomaindoesnotexist.org/myapp.zip",
+  "version": "1.0",
+  "size": 172496,
+  "release_notes": "First release",
+  "developer": {
+    "name": "Developer Name",
+    "url": "http://thisdomaindoesnotexist.org/"
+  },
+  "locales": {
+    "fr_FR": {
+      "name": "Mon application"
+    },
+    "se_SE": {
+      "name": "Min balla app"
+    }
+  },
+  "icons": {
+    "16": "/icons/16.png",
+    "32": "/icons/32.png",
+    "256": "/icons/256.png"
+  }
+}
+</pre>
+
+<p>Cuando el Firefox Marketplace genera un mini-manifiesto para tu aplicacion,  extrae informacion desde tu manifiesto de la aplicacion para algunos campos. Usted puede encontrar documentación para estos campos en el  <a href="/en-US/docs/Web/Apps/Manifest">manifiesto de la aplicación</a>. Los campos únicos del mini-manifiesto son <code>package_path</code>, <code>release_notes</code>, y <code>size</code>. Los campos <code>name</code>, <code>version</code>, <code>developer</code>, y <code>locales</code> en su manifiesto de la aplicación deben ser exactamente los mismos que en su mini-manifiesto.</p>
+
+<p>Aquí hay información sobre el mini-manifiesto que se relaciona con su uso a nivel local para sus propias pruebas::</p>
+
+<dl>
+ <dt><code>name</code></dt>
+ <dd>(requerido) El nombre de la aplicación. La longitud máxima es de 128 caracteres.</dd>
+ <dt><code>package_path</code></dt>
+ <dd>(Requerido) Una URL completa donde el zip de la aplicación puede ser encontrado.</dd>
+ <dt><code>version</code></dt>
+ <dd>La versión de la aplicación.</dd>
+ <dt><code>size</code></dt>
+ <dd>El tamaño del zip de la aplicación en bytes. No es necesario para las pruebas locales pero se utiliza para mostrar una barra de progreso durante la instalación.</dd>
+ <dt><code>release_notes</code></dt>
+ <dd>Información acerca del lanzamiento de la aplicación. En el Marketplace esta información proviene de la página web que es parte del proceso de envío..</dd>
+ <dt><code>developer</code></dt>
+ <dd>Información acerca del desarrolador, contiene los campos <code>name</code> y <code>url</code>.</dd>
+ <dt><code>locales</code></dt>
+ <dd>Información de localización.</dd>
+ <dt><code>icons</code></dt>
+ <dd>Iconos usados por la aplicación.</dd>
+</dl>
+
+<h2 id="Actualizando_aplicaciones_empaquetadas">Actualizando aplicaciones empaquetadas</h2>
+
+<p>Para información sobre actualizar aplicaciones, vea <a href="/en-US/docs/Web/Apps/Updating_apps">Actualizando aplicaciones</a>.</p>
+
+<h2 id="Ejemplo_de_aplicación_empaquetada">Ejemplo de aplicación empaquetada</h2>
+
+<p><a href="https://github.com/robnyman/Firefox-OS-Boilerplate-App" title="https://github.com/robnyman/Firefox-OS-Boilerplate-App">Firefox OS Boilerplate App</a></p>

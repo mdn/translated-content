@@ -1,0 +1,376 @@
+---
+title: Atajos de teclado
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Atajos_de_teclado
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Keyboard_Shortcuts
+---
+<p>Puedes usar manejadores de evento de teclado para responder al teclado. Sin embargo, sería tedioso hacer eso para cada botón y elemento de menú.</p>
+
+<h3 id="Creaci.C3.B3n_de_un_atajo_de_teclado" name="Creaci.C3.B3n_de_un_atajo_de_teclado">Creación de un atajo de teclado</h3>
+
+<p>XUL provee métodos en los cuales puede definir atajos de teclado. Ya vimos en <a href="/es/Tutorial_de_XUL/Menús_de_Barras_Simples" title="es/Tutorial de XUL/Menús de Barras Simples">la sección de menús</a> que podemos definir un atributo llamado <code>accesskey</code> que específica la tecla que un usuario debe presionar para activar el menú o un elemento del mismo. En el ejemplo que está debajo, el menú Archivo puede ser seleccionado presionando 'Alt' y 'F' (o cualquier otra combinación de teclas para una plataforma específica). Una vez que el menú Archivo está abierto, el menú Cerrar puede ser seleccionado presionando la tecla C.</p>
+
+<p><strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;menubar id="sample-menubar"&gt;
+  &lt;menu id="file-menu" label="Archivo" accesskey="f"&gt;
+    &lt;menupopup id="file-popup"&gt;
+      &lt;menuitem id="close-command" label="Cerrar" accesskey="c"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menubar&gt;
+</pre>
+
+<p>Tambié puede usar el atributo <code><a href="/Es/XUL/Atributos#accesskey" title="Es/XUL/Atributos#accesskey">accesskey</a></code> en botones. Cuando la tecla es presionada en este caso, el botón es seleccionado.</p>
+
+<p>Quizás quiera configurar atajos de teclado más generales. Por ejemplo, presionar Control+C para copiar texto al porta papeles. Aunque a veces atajos como estos no siempre son válidos, usualmente funcionarán cada vez que la ventana esté abierta. Usualmente, un atajo del teclado estará permitido en cualquier momento y puede ver ver si deberí estar haciendo algo con algún programa. Por ejemplo, copiar texto al portapapeles sólo debería funcionar cuando hay algún texto seleccionado.</p>
+
+<h4 id="El_elemento_.27tecla.27" name="El_elemento_.27tecla.27">El elemento 'key'</h4>
+
+<p>XUL provee de un elemento, <code><a href="/es/XUL/Elementos#key" title="es/XUL/Elementos#key">key</a></code>, que permite definir atajos de teclado para una ventana. Tiene atributos para especificar la tecla que debería ser presionada y qué teclas modificadoras (tales como Shift o Control) necesitan ser presionadas simultáneamente. A continuación se muestra un ejemplo:</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="sample-key" modifiers="shift" key="R"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>En este ejemplo se define un atajo de teclado que es activado cuando el usuario presiona las teclas 'Shift' y 'R' simultáneamente. El atributo <code><a href="/Es/XUL/Atributos#key" title="Es/XUL/Atributos#key">key</a></code> (tiene el mismo nombre que el elemento) se emplea para indicar qué tecla debe apretarse, en este caso la 'R'. Se puede asignar cualquier caracter (de teclado) a este atributo para requerir que se apriete una tecla en particular. Los modificadores que deben apretarse se indican con el atributo <code><a href="/Es/XUL/Atributos#modifiers" title="Es/XUL/Atributos#modifiers">modifiers</a></code>. Se pueden establecer varios, (ej: <code>modifiers="control alt") </code>asignando como valor una lista separada con espacios de teclas de modificadoras; se listan a continuación:</p>
+
+<dl>
+ <dt>alt </dt>
+ <dd>El usuario debe pulsar la tecla Alt. En Macintosh, es la tecla Option.</dd>
+ <dt>control </dt>
+ <dd>El usuario debe pulsar la tecla Control.</dd>
+ <dt>meta </dt>
+ <dd>El usuario debe pulsar la tecla Meta. En Macintosh, es la tecla Command.</dd>
+ <dt>shift </dt>
+ <dd>El usuario debe pulsar la tecla Mayúsculas.</dd>
+ <dt>accel </dt>
+ <dd>El usuario debe pulsar la tecla especial acelerador. La tecla usada por los atajos de teclado en la plataforma del usuario. Habitualmente, éste debería ser el valor que utilizases.</dd>
+</dl>
+
+<p>Tu teclado no tendrá necesariamente todas las teclas, en cuyo caso serán mapeadas a las teclas modificadoras que tengas.</p>
+
+<p>El elemento <code><a href="/es/XUL/Elementos#key" title="es/XUL/Elementos#key">key</a></code> debe colocarse dentro de un elemento <code><a href="/es/XUL/Elementos#keyset" title="es/XUL/Elementos#keyset">keyset</a></code>; en caso contrario no funcionará. Este elemento esta diseñado para contener un conjunto de elementos <code>key</code>, lo cual sirve para agrupar todas las definiciones de teclas en un solo sitio en cada archivo. Cualquier elemento <code>key</code> fuera de un <code>keyset </code>no funcionará.<br>
+  </p>
+
+<p>Cada plataforma generalmente utiliza una tecla diferente para los atajos de teclado. Por ejemplo, Windows usa la tecla Control y Macintosh usa la tecla Command. Sería conveniente definir elementos key por separado para cada plataforma. Afortunadamente, hay una solución. El modificador accel hace referencia a la tecla usada para atajos de teclado específica de cada plataforma. Funciona igual que otros modificadores, pero no será la misma en todas las plataformas.</p>
+
+<p><strong>Algunos ejemplos adicionales:</strong></p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="copy-key" modifiers="control" key="C"/&gt;
+  &lt;key id="explore-key" modifiers="control alt" key="E"/&gt;
+  &lt;key id="paste-key" modifiers="accel" key="V"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<h4 id="El_atributo_c.C3.B3digo_de_tecla_.28keycode.29" name="El_atributo_c.C3.B3digo_de_tecla_.28keycode.29">El atributo código de tecla (keycode)</h4>
+
+<p>El atributo <code><a href="/Es/XUL/Atributos#key" title="Es/XUL/Atributos#key">key</a></code> se utiliza para especificar la tecla que debe ser pulsada. Sin embargo, habrá casos en los que quieras referirte a teclas que no pueden ser especificadas con un caracter (como la tecla Enter o las teclas de función F1..F12). El atributo <code>key</code> sólo puede ser utilizado para caracteres imprimibles. Otro atributo, <a href="/Es/XUL/Atributos#keycode" title="Es/XUL/Atributos#keycode">keycode</a> puede ser utilizado para caracteres no imprimibles.</p>
+
+<p>El atributo <a href="/Es/XUL/Atributos#keycode" title="Es/XUL/Atributos#keycode">keycode</a> debería ser establecido a un código especial que represente la tecla que quieres. A continuación hay una lista de teclas. No todas las teclas están disponibles en todos los teclados.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td>VK_CANCEL</td>
+   <td>VK_BACK</td>
+   <td>VK_TAB</td>
+   <td>VK_CLEAR</td>
+  </tr>
+  <tr>
+   <td>VK_RETURN</td>
+   <td>VK_ENTER</td>
+   <td>VK_SHIFT</td>
+   <td>VK_CONTROL</td>
+  </tr>
+  <tr>
+   <td>VK_ALT</td>
+   <td>VK_PAUSE</td>
+   <td>VK_CAPS_LOCK</td>
+   <td>VK_ESCAPE</td>
+  </tr>
+  <tr>
+   <td>VK_SPACE</td>
+   <td>VK_PAGE_UP</td>
+   <td>VK_PAGE_DOWN</td>
+   <td>VK_END</td>
+  </tr>
+  <tr>
+   <td>VK_HOME</td>
+   <td>VK_LEFT</td>
+   <td>VK_UP</td>
+   <td>VK_RIGHT</td>
+  </tr>
+  <tr>
+   <td>VK_DOWN</td>
+   <td>VK_PRINTSCREEN</td>
+   <td>VK_INSERT</td>
+   <td>VK_DELETE</td>
+  </tr>
+  <tr>
+   <td>VK_0</td>
+   <td>VK_1</td>
+   <td>VK_2</td>
+   <td>VK_3</td>
+  </tr>
+  <tr>
+   <td>VK_4</td>
+   <td>VK_5</td>
+   <td>VK_6</td>
+   <td>VK_7</td>
+  </tr>
+  <tr>
+   <td>VK_8</td>
+   <td>VK_9</td>
+   <td>VK_SEMICOLON</td>
+   <td>VK_EQUALS</td>
+  </tr>
+  <tr>
+   <td>VK_A</td>
+   <td>VK_B</td>
+   <td>VK_C</td>
+   <td>VK_D</td>
+  </tr>
+  <tr>
+   <td>VK_E</td>
+   <td>VK_F</td>
+   <td>VK_G</td>
+   <td>VK_H</td>
+  </tr>
+  <tr>
+   <td>VK_I</td>
+   <td>VK_J</td>
+   <td>VK_K</td>
+   <td>VK_L</td>
+  </tr>
+  <tr>
+   <td>VK_M</td>
+   <td>VK_N</td>
+   <td>VK_O</td>
+   <td>VK_P</td>
+  </tr>
+  <tr>
+   <td>VK_Q</td>
+   <td>VK_R</td>
+   <td>VK_S</td>
+   <td>VK_T</td>
+  </tr>
+  <tr>
+   <td>VK_U</td>
+   <td>VK_V</td>
+   <td>VK_W</td>
+   <td>VK_X</td>
+  </tr>
+  <tr>
+   <td>VK_Y</td>
+   <td>VK_Z</td>
+   <td>VK_NUMPAD0</td>
+   <td>VK_NUMPAD1</td>
+  </tr>
+  <tr>
+   <td>VK_NUMPAD2</td>
+   <td>VK_NUMPAD3</td>
+   <td>VK_NUMPAD4</td>
+   <td>VK_NUMPAD5</td>
+  </tr>
+  <tr>
+   <td>VK_NUMPAD6</td>
+   <td>VK_NUMPAD7</td>
+   <td>VK_NUMPAD8</td>
+   <td>VK_NUMPAD9</td>
+  </tr>
+  <tr>
+   <td>VK_MULTIPLY</td>
+   <td>VK_ADD</td>
+   <td>VK_SEPARATOR</td>
+   <td>VK_SUBTRACT</td>
+  </tr>
+  <tr>
+   <td>VK_DECIMAL</td>
+   <td>VK_DIVIDE</td>
+   <td>VK_F1</td>
+   <td>VK_F2</td>
+  </tr>
+  <tr>
+   <td>VK_F3</td>
+   <td>VK_F4</td>
+   <td>VK_F5</td>
+   <td>VK_F6</td>
+  </tr>
+  <tr>
+   <td>VK_F7</td>
+   <td>VK_F8</td>
+   <td>VK_F9</td>
+   <td>VK_F10</td>
+  </tr>
+  <tr>
+   <td>VK_F11</td>
+   <td>VK_F12</td>
+   <td>VK_F13</td>
+   <td>VK_F14</td>
+  </tr>
+  <tr>
+   <td>VK_F15</td>
+   <td>VK_F16</td>
+   <td>VK_F17</td>
+   <td>VK_F18</td>
+  </tr>
+  <tr>
+   <td>VK_F19</td>
+   <td>VK_F20</td>
+   <td>VK_F21</td>
+   <td>VK_F22</td>
+  </tr>
+  <tr>
+   <td>VK_F23</td>
+   <td>VK_F24</td>
+   <td>VK_NUM_LOCK</td>
+   <td>VK_SCROLL_LOCK</td>
+  </tr>
+  <tr>
+   <td>VK_COMMA</td>
+   <td>VK_PERIOD</td>
+   <td>VK_SLASH</td>
+   <td>VK_BACK_QUOTE</td>
+  </tr>
+  <tr>
+   <td>VK_OPEN_BRACKET</td>
+   <td>VK_BACK_SLASH</td>
+   <td>VK_CLOSE_BRACKET</td>
+   <td>VK_QUOTE</td>
+  </tr>
+  <tr>
+   <td>VK_HELP</td>
+   <td> </td>
+   <td> </td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Por ejemplo, para crear un atajo con las teclas 'Alt y F5':</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="test-key" modifiers="alt" keycode="VK_F5"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>El siguiente ejemplo muestra algunos atajos de teclado más:</p>
+
+<pre>&lt;keyset&gt;
+  &lt;key id="copy-key" modifiers="accel" key="C"/&gt;
+  &lt;key id="find-key" keycode="VK_F3"/&gt;
+  &lt;key id="switch-key" modifiers="control alt" key="1"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>La primera tecla es invocada cuando el usuario pulsa su atajo específico de la plataforma y C. El segundo es invocado cuando el usuario pulsa F3. El tercero es invocado al pulsar las teclas Control, Alt y 1 a la vez. Si quieres distinguir entre teclas de la parte principal del teclado y el teclado numérico, utiliza las teclas VK_NUMPAD (como VK_NUMPAD1).</p>
+
+<div class="note">
+<p>Consulta la <a class="external" href="http://www.mozilla.org/access/keyboard/">Mozilla Keyboard Planning FAQ and Cross Reference</a> para más información sobre selección atajos de teclado para usar en aplicaciones.</p>
+</div>
+
+<h3 id="Usando_los_atajos_de_teclado" name="Usando_los_atajos_de_teclado">Usando los atajos de teclado</h3>
+
+<p>Ahora que sabemos cómo definir atajos de teclado, veremos cómo podemos usarlos. Hay dos formas. La primera es la más simple y sólo requiere que utilices el manejador de evento keypress en el elemento <code><a href="/es/XUL/Elementos#key" title="es/XUL/Elementos#key">key</a></code>. Cuando el usuario pulsa la tecla, el script será invocado. A continuación se muestra un ejemplo:</p>
+
+<pre class="eval">&lt;keyset&gt;
+  &lt;key id="copy-key" modifiers="accel" key="C" oncommand="DoCopy();"/&gt;
+&lt;/keyset&gt;
+</pre>
+
+<p>La función <code>DoCopy</code> será llamada cuando el usuario presione las teclas especificadas en el elemento <code><a href="/es/XUL/Elementos#key" title="es/XUL/Elementos#key">key</a></code>, que en este ejemplo, son las teclas para copiar al portapapeles (como Control+C). Esto funcionará mientras la ventana esté abierta. La función <code>DoCopy</code> debería comprobar si hay texto seleccionado y en ese caso copiarlo al portapapeles. Nota que las cajas de texto tienen los atajos del portapapeles ya incluidos, por lo que no tienes que implementarlos por ti mismo.</p>
+
+<h4 id="Asignaci.C3.B3n_de_un_atajo_de_teclado_a_un_men.C3.BA" name="Asignaci.C3.B3n_de_un_atajo_de_teclado_a_un_men.C3.BA">Asignación de un atajo de teclado a un menú</h4>
+
+<p>Si estás asignando un atajo de teclado que ejecuta a un comando que ya existe en un menú, puedes asociar el elemento <code><a href="/es/XUL/Elementos#key" title="es/XUL/Elementos#key">key</a></code> directamente con el comando del menú. Para hacer esto, añade un atributo <code><a href="/Es/XUL/Atributos#key" title="Es/XUL/Atributos#key">key</a></code> al <code><a href="/es/XUL/Elementos#menuitem" title="es/XUL/Elementos#menuitem">menuitem</a></code>. Establece su valor al <code><a href="/Es/XUL/Atributos#id" title="Es/XUL/Atributos#id">id</a></code> de la tecla que quieras usar. El siguiente ejemplo muestra esto.</p>
+
+<p><strong>Ejemplo 2</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_keyshort_2.xul">Ver en funcionamiento</a></p>
+
+<div class="float-right"><img alt="Image:keyshort1.jpg" class="internal" src="/@api/deki/files/1147/=Keyshort1.jpg"></div>
+
+<pre class="eval">&lt;keyset&gt;
+  &lt;key id="paste-key" modifiers="accel" key="V"
+          oncommand="alert('Paste invoked')"/&gt;
+&lt;/keyset&gt;
+
+&lt;menubar id="sample-menubar"&gt;
+  &lt;menu id="edit-menu" label="Edit" accesskey="e"&gt;
+    &lt;menupopup id="edit-popup"&gt;
+      &lt;menuitem id="paste-command"
+         accesskey="p" key="paste-key"
+         label="Paste" oncommand="alert('Paste invoked')"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+&lt;/menubar&gt;
+</pre>
+
+<p>El atributo <code><a href="/Es/XUL/Atributos#key" title="Es/XUL/Atributos#key">key</a></code> del elemento menuitem, cuyo valor aquí es <code>paste-key</code> es igual al valor del atributo <code>id</code> de la tecla definida. Puedes usar esto para teclas adicionales así como para definir atajos de teclado para cualquier número de elementos.</p>
+
+<p>También verás que se ha añadido un texto junto a la opción "Paste" para indicar que el comando de menú puede ser invocado mediante Control + V. Esto se realiza automáticamente basándose en los modificadores del elemento <code>key</code>. Los atajos de teclado asociados a los menús funcionarán aunque el menú no esté abierto.</p>
+
+<p>Una característica adicional de las definiciones de teclas es que las puedes desactivar fácilmente. Par hacer esto, añade un atributo <code><a href="/Es/XUL/Atributos#disabled" title="Es/XUL/Atributos#disabled">disabled</a> al elemento &lt;code&gt;key</code> y establece su valor a <code>true</code>. Esto desactiva el atajo de teclado para que no pueda ser invocado. Es útil cambiar el atributo <code>disabled</code> utilizando un script.</p>
+
+<div class="highlight">
+<h4 id="Nuestro_ejemplo" name="Nuestro_ejemplo">Nuestro ejemplo</h4>
+
+<p>Vamos a añadir atajos de teclado al diálogo encontrar archivos. Añadiremos cuatro, para los comandos Cortar (Cut), Copiar (Copy) y Pegar (Paste) y otro para el comando Cerrar (Close) cuando el usuario pulse Escape.</p>
+
+<pre class="eval"><span class="highlightred">  &lt;keyset&gt;   &lt;key id="cut_cmd" modifiers="accel" key="X"/&gt;   &lt;key id="copy_cmd" modifiers="accel" key="C"/&gt;   &lt;key id="paste_cmd" modifiers="accel" key="V"/&gt;   &lt;key id="close_cmd" keycode="VK_ESCAPE" oncommand="window.close();"/&gt;  &lt;/keyset&gt; </span>
+
+&lt;vbox flex="1"&gt;
+ &lt;toolbox&gt;
+  &lt;menubar id="findfiles-menubar"&gt;
+   &lt;menu id="file-menu" label="File" accesskey="f"&gt;
+     &lt;menupopup id="file-popup"&gt;
+       &lt;menuitem label="Open Search..." accesskey="o"/&gt;
+       &lt;menuitem label="Save Search..." accesskey="s"/&gt;
+       &lt;menuseparator/&gt;
+       &lt;menuitem label="Close" accesskey="c" <span class="highlightred">key="close_cmd"</span>
+         oncommand="window.close();"/&gt;
+     &lt;/menupopup&gt;
+   &lt;/menu&gt;
+   &lt;menu id="edit-menu" label="Edit" accesskey="e"&gt;
+     &lt;menupopup id="edit-popup"&gt;
+       &lt;menuitem label="Cut" accesskey="t" <span class="highlightred">key="cut_cmd"</span>/&gt;
+       &lt;menuitem label="Copy" accesskey="c" <span class="highlightred">key="copy_cmd"</span>/&gt;
+       &lt;menuitem label="Paste" accesskey="p" <span class="highlightred">key="paste_cmd"</span> disabled="true"/&gt;
+     &lt;/menupopup&gt;
+   &lt;/menu&gt;
+  &lt;/menubar&gt;
+ &lt;/toolbox&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>Ahora podemos usar esos atajos para activar los comandos. Por supuesto, los comandos del portapapeles no harán nada porque no hemos escrito esos scripts.</p>
+</div>
+
+<h3 id="Los_eventos_de_tecla" name="Los_eventos_de_tecla">Los eventos de tecla</h3>
+
+<p>Hay tres eventos de teclado que pueden ser utilizados si las funcionalidades descritas antes no estuvieran disponibles. Estos eventos son:</p>
+
+<dl>
+ <dt>keypress </dt>
+ <dd>Llamado cuando una tecla es pulsada y despulsada mientras un elemento tiene el foco. Puedes usar esta tecla para comprobar los caracteres permitidos en un campo.</dd>
+ <dt>keydown </dt>
+ <dd>Llamado cuando una tecla es pulsada (aunque todavía no se haya despulsado) mientras un elemento tiene el foco.</dd>
+ <dt>keyup </dt>
+ <dd>Llamado cuando una tecla es despulsada mientras un elemento tiene el foco.</dd>
+</dl>
+
+<p>Los eventos de tecla son sólo enviados al elemento que tiene el foco. Típicamente, esto incluye cajas de texto, botones, checkboxes y elementos así. Si no hay ningún elemento focalizado, el evento de la tecla será dirigido al propio documento XUL. En este caso, puedes añadir un escuchador de eventos (event listener) a la etiqueta <code><a href="/es/XUL/Elementos#window" title="es/XUL/Elementos#window">window</a></code>. Aunque normalmente, si quieres responder a teclas globalmente, utilizarás un atajo de teclado como se ha descrito antes.</p>
+
+<p>El <a href="/es/DOM/event" title="es/DOM/event">objeto evento</a> de tecla tiene dos propiedades que registran la tecla que ha sido pulsada. La propiedad <code><a href="/es/DOM/event.keyCode" title="es/DOM/event.keyCode">keyCode</a></code> registra el código de la tecla y puede ser comparada con una de las constantes de la anterior tabla de esta sección. La propiedad <code><a href="/es/DOM/event.charCode" title="es/DOM/event.charCode">charCode</a></code> es utilizada para caracteres imprimibles y registrará el código de caracter de la tecla que fue pulsada.</p>
+
+<div class="highlight"><strong>Nuestro ejemplo:</strong> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-keyshort.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-keyshort.xul">Ver en funcionamiento</a></div>
+
+<p>Seguimos con poner un gestor de <a href="/es/Tutorial_de_XUL/Foco_y_Selección" title="es/Tutorial_de_XUL/Foco_y_Selección">foco y selección</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Más_gestores_de_eventos" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Foco_y_Selección">Siguiente  »</a></p>
+</div>

@@ -1,0 +1,135 @@
+---
+title: Agregar eventos y comandos
+slug: Mozilla/Tech/XUL/Escuela_XUL/Agregar_eventos_y_comandos
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/Adding_Events_and_Commands
+---
+<p>{{LegacyAddonsNotice}}{{AddonSidebar}}</p>
+
+<p>{{ PreviousNext("Escuela_XUL/Agregar_barras_de_herramientas_y_botones_para_éstas", "Escuela_XUL/El_modelo_de_caja") }}</p>
+
+<h2 id="Event_handlers">Event handlers</h2>
+
+<p>Just like with HTML, most JavaScript code execution is triggered by event handlers attached to DOM elements. The most commonly used event is the <a href="/en/DOM/window.onload" title="en/DOM/window.onload">onload event</a>, which is used in overlays and other windows to detect when the window has loaded and then run initialization code:</p>
+
+<pre class="brush: js">// rest of overlay code goes here.
+window.addEventListener(
+  "load", function() { XulSchoolChrome.BrowserOverlay.init(); }, false);
+</pre>
+
+<p>You can do something similar with the <a href="/en/DOM/window.onunload" title="en/DOM/window.onunload">onunload event</a>, to do any cleanup you may need.</p>
+
+<div class="note">Please read <a href="/en/XUL_School/Appendix_A:_Add-on_Performance" title="en/XUL School/Appendix A: Add-on Performance">Appendix A</a> for recommendations on how to use the load event to initialize your add-on without having a negative performance impact on Firefox.</div>
+
+<p>Another way to attach event handlers, just like HTML, is to place the handler in the XUL code:</p>
+
+<pre>&lt;overlay id="xulschoolhello-browser-overlay"
+  onload="XulSchoolChrome.BrowserOverlay.init();"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+</pre>
+
+<p>We prefer the first method because it keeps a better separation of content and behavior. Also, note that the <a href="/en/DOM/element.addEventListener" title="en/DOM/element.addEventListener">addEventListener</a> method receives the event name without the "on" prefix, while element attributes do have the prefix. There's a long <a href="/en/XUL/Events" title="en/XUL/Events">list of events</a> you can listen to, and which you use depend on the situation. Elements only implement the events that are relevant to them, but there are several events that are implemented for most elements. These are some notable events you should keep in mind:</p>
+
+<ul>
+ <li><a href="/en/XUL/Attribute/oncommand" title="en/XUL/Attribute/oncommand">oncommand</a>. This is one of the most important and commonly used events in XUL. It's very useful because it represents the most common action for input controls such as menu items, buttons and checkboxes. For a button, it represents the action of the user clicking on it, or focusing it with the keyboard and then pressing the ENTER key. It's an abstraction of the main way to interact with a control element.</li>
+ <li><a href="/en/XUL/Attribute/onselect" title="en/XUL/Attribute/onselect">onselect</a>. Fired when the selection in a tree or listbox changes.</li>
+ <li><a href="/en/XUL/Attribute/onclick" title="en/XUL/Attribute/onclick">onclick</a>. Triggered when the user clicks on the element, including right clicks. You shouldn't normally use this event to trigger actions on input controls such as buttons. Use oncommand instead.</li>
+ <li><a href="/en/DOM/element.onfocus" title="en/DOM/element.onfocus">onfocus</a> and <a href="/en/DOM/element.onblur" title="en/DOM/element.onblur">onblur</a>. Used when an element receives or loses focus when the user is navigating with the keyboard. You can combine these with <a href="/en/CSS/-moz-user-focus" title="en/CSS/-moz-user-focus">-moz-user-focus</a> to add custom focus behavior to elements that normally wouldn't have it.</li>
+ <li><a href="/En/DragDrop/Drag_and_Drop" title="en/DragDrop/Drag and Drop">Drag and drop</a>. Drag and drop operations involve several events. Since drag and drop is a complicated thing to manage, there are some high level wrappers that facilitate working with it. Also keep in mind that there are 2 drag and drop APIs, the newest (and preferred) one introduced in Firefox 3.5.</li>
+</ul>
+
+<p>Event handlers can take an <em>event</em> argument, which is an <a href="/en/DOM/event" title="en/DOM/event">Event</a> object that holds information on the event. You can get information on key modifiers (in case the user was holding a modifier key like Alt while performing the event), screen coordinates for mouse events, and most importantly, the target element for the event. For example:</p>
+
+<pre>&lt;button label="&amp;xulschoolhello.defaultGreeting.label;"
+  oncommand="XulSchoolChrome.BrowserOverlay.changeGreeting(event);" /&gt;
+</pre>
+
+<p>Then on the Javascript code you would have something like this:</p>
+
+<pre class="brush: js">changeGreeting : function(aEvent) {
+  // more stuff
+  aEvent.target.setAttribute("label", someNewGreeting);
+}
+</pre>
+
+<p>The target in this example is the button element, so clicking on it will change its text. The advantage of using the <em>event</em> argument is that the method is not dependent of the specific button, so it can also be used for other elements.</p>
+
+<p>For more advanced event handling, you should read about <a href="/en/XUL_Event_Propagation" title="en/XUL Event Propagation">Event Propagation</a>. In a nutshell, events propagate from the root of the DOM tree all the way down to the target element and then all the way up back to the root, in the capture and bubble phases, respectively. You can capture and cancel events during any of these phases, provided that they aren't canceled before they reach the point where you intended to capture them. The <em>addEventListener</em> method allows you to control the phase where you want to handle an event, with the last argument of the function.</p>
+
+<div class="note">In general, you should avoid adding event handlers in the capturing phase, or canceling events. This can lead to unexpected behavior for the user since most events have a default behavior associated to them.</div>
+
+<h3 id="Custom_events">Custom events</h3>
+
+<p>This is a very powerful tool that you should know, even if it isn't that frequently used. The DOM <a href="/en/DOM/document.createEvent" title="en/DOM/document.createEvent">createEvent</a> function allows you to create custom events that you can dispatch and capture.</p>
+
+<p>Custom events serve as a good communication mechanism, specially when dealing with a somewhat common problem: communication between window XUL and web page content. It isn't hard for XUL code to control the content on pages being loaded or displayed, as we will see later on, but it can be hard for your extension XUL code to receive information from pages in a secure manner. This is because it would be very insecure to have a website JS controlling the behavior of Firefox and running JavaScript code with chrome privileges.</p>
+
+<p>Suppose your extension interacts with pages from a website, and you want some actions on this site to trigger actions in your extension. One way to solve this is to have the actions on the site to generate a custom event that can be easily recognized by your extension. You can capture the events in the XUL  overlay, since they'll bubble all the way up:</p>
+
+<pre class="brush: js">// in the overlay code.
+document.addEventListener(
+  "XSHelloGreetingEvent", function(aEvent) { /* do stuff*/ }, false);
+</pre>
+
+<p>Be careful when doing this! You should at least validate the URL of the page that is generating the custom event, so that you know that it's coming from the right place. You should also avoid this kind of events to trigger actions that could be destructive to the user's data, because a malicious site could try to trigger these events and cause damage. There's a reason for the division between remote content and local chrome, so make sure you respect it.</p>
+
+<p>There's a section further ahead on Intercepting Page Loads which complements this section very well. This should give you a solid foundation to handle interaction between web content and XUL.  Additional information on custom events and how they can be used to effect communication between web content and XUL can be found in the <a href="/en/Code_snippets/Interaction_between_privileged_and_non-privileged_pages" title="en/Code snippets/Interaction between
+privileged and non-privileged pages">Interaction between privileged and non-privileged pages</a> code snippets, which describe and provide examples of this sort of communication.</p>
+
+<h2 id="Broadcasters">Broadcasters</h2>
+
+<p>Keeping a consistent UI is another important aspect of extension behavior. Maybe your extension needs to disable or enable a series of controls when the user logs in or out of a service, or when Firefox detects it's <a href="/en/Online_and_offline_events" title="en/Online and offline events">online or offline</a>. It's common that you need to change several elements at the same time, and this can be difficult to manage through JavaScript. The <a href="/en/XUL/broadcaster" title="en/XUL/broadcaster">broadcaster</a> element can help you out in these cases.</p>
+
+<p>First you need to add a <em>broadcaster</em> element to your XUL code, as a child of a <a href="/en/XUL/broadcasterset" title="en/XUL/broadcasterset">broadcasterset</a> element.</p>
+
+<pre>&lt;broadcasterset id="xulschoolhello-broadcasterset"&gt;
+  &lt;broadcaster id="xulschoolhello-online-broadcaster" /&gt;
+&lt;/broadcasterset&gt;
+</pre>
+
+<p>These elements are completely invisible, so you can put them anywhere. It is recommended that you have them at the top of the XUL code, along with script declarations and other invisible elements with as <em>popupset</em> and <em>commandset</em>.</p>
+
+<p>Then you need to identify which of your XUL elements will be linked to this broadcaster, using the <a href="/en/XUL/Attribute/observes" title="en/XUL/Attribute/observes">observes attribute</a>:</p>
+
+<pre>&lt;menuitem id="xulschoolhello-hello-menu-item"
+  label="&amp;xulschoolhello.hello.label;"
+  accesskey="&amp;xulschoolhello.helloItem.accesskey;"
+  <strong>observes="xulschoolhello</strong><strong>-online-broadcaster"</strong>
+  oncommand="XULSchoolChrome.BrowserOverlay.sayHello(event);" /&gt;
+</pre>
+
+<p>The attribute value is set to be the <em>id</em> of the <em>broadcaster</em> element, indicating that this element will observe all attribute changes that happen in the <em>broadcaster</em>. You can have as many elements as you want observing a <em>broadcaster</em>.</p>
+
+<p>With that set, all you need to do now is set or remove attributes in the <em>broadcaster</em> using JavaScript. All nodes observing it will automatically have those attribute values set or removed as well. You can override pre-existing values, such as the <em>label</em> attribute value in the example.</p>
+
+<pre class="brush: js">let onlineBroadcaster = document.getElementById("xulschoolhello-online-broadcaster");
+
+onlineBroadcaster.setAttribute("label", "Something");
+</pre>
+
+<p>You can also have finer-grained control to this behavior by adding the <a href="/en/XUL/observes" title="en/XUL/observes">observes</a> element as a child to your observer node. This allows you to choose which attributes you want it to observe.</p>
+
+<p>Broadcasters allow you to easily maintain consistency among numerous elements without having to add much code. They also save you the trouble of having to know if a given element is present in the DOM or not. For example, if you have a customizable toolbar, you can't be sure if a given button is present or not, so it's easier to use a <em>broadcaster</em>. This way you only need to set values to the broadcaster instead of having to check if the button is there or not.</p>
+
+<h2 id="Commands">Commands</h2>
+
+<p>The <a href="/en/XUL/Attribute/command" title="en/XUL/Attribute/command">command</a> element is a specialized type of <em>broadcaster</em>, meant to be used with the <em>oncommand</em> event. This is the recommended way of centralizing common UI behavior in Firefox and extensions. Commands are heavily used in Firefox, as a quick look into the DOM Inspector should show.</p>
+
+<p>Their behavior is identical as <em>broadcaster</em> elements, but they should be used when <em>oncommand</em> is one of the shared attributes. Our menu example is in fact better suited for a command.</p>
+
+<pre>&lt;commandset id="xulschoolhello-commandset"&gt;
+  &lt;command id="xulschoolhello-hello-command"
+    oncommand="XULSchoolChrome.BrowserOverlay.sayHello(event);" /&gt;
+  &lt;!-- More commands. --&gt;
+&lt;/commandset&gt;
+&lt;!-- More code here... --&gt;
+&lt;menuitem id="xulschoolhello-hello-menu-item"
+  label="&amp;xulschoolhello.hello.label;"
+  accesskey="&amp;xulschoolhello.helloItem.accesskey;"
+  command="xulschoolhello-hello-command" /&gt;
+</pre>
+
+<p>Commands allow you to keep your JavaScript calls in a single place, avoiding code repetition and possible bugs. Your UI can easily scale this way. You can create an extension that adds toolbar buttons, statusbar buttons and menu items, all with equivalent behavior, and without having to repeat lots of XUL code in the process. Commands and broadcasters also facilitate working with complex form windows and dialogs. You should always keep them in mind when adding the event-driven code for your extension.</p>
+
+<p>{{ PreviousNext("Escuela_XUL/Agregar_barras_de_herramientas_y_botones_para_éstas", "Escuela_XUL/El_modelo_de_caja") }}</p>
+
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast.</span></p>

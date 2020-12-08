@@ -1,0 +1,145 @@
+---
+title: Instalación
+slug: Mozilla/Add-ons/SDK/Tutorials/Installation
+tags:
+  - Guía
+  - Principiante
+translation_of: Mozilla/Add-ons/SDK/Tools/jpm#Installation
+---
+<h2 id="Requerimientos_previos">Requerimientos previos</h2>
+
+<p>Para desarrollar add-ons usando el SDK Add-o, necesitaras:</p>
+
+<ul>
+ <li><a href="http://www.python.org/">Python</a> 2.5, 2.6 o 2.7. Hay que tener encuenta que las versiones 3.x de Python no son soportadas en ninguna plataforma. Asegurte que Python se encuentre en la ruta del sistema.</li>
+ <li>Firefox.</li>
+ <li>El propio SDK: puedes decargar la última versión estable del SDK como un <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/jetpack/jetpack-sdk-latest.tar.gz">tarball</a> o como un <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/jetpack/jetpack-sdk-latest.zip">archivo zip</a>.</li>
+</ul>
+
+<h2 id="Instalación">Instalación</h2>
+
+<h3 id="Instalación_en_OS_X_FreeBSD_Linux">Instalación en OS X, FreeBSD, Linux</h3>
+
+<p>Extrae el contenido del archivo en el lugar de tu preferencia, y navega hasta el directorio principal del SDK con una shell/command prompt. Por ejemplo:</p>
+
+<pre>tar -xf addon-sdk.tar.gz
+cd addon-sdk
+</pre>
+
+<p>Luego, si eres un usuario Bash, ejecuta:</p>
+
+<pre>source bin/activate
+</pre>
+
+<p>Si no eres un usuario Bash, debes ejecutar:</p>
+
+<pre>bash bin/activate
+</pre>
+
+<p>En la línea de entrada de tu terminal ahora deberías tener un prefijo con el nombre del directorio raíz del SDK:</p>
+
+<pre>(addon-sdk)~/mozilla/addon-sdk &gt;
+</pre>
+
+<p>La orden <code>activate</code> establece algunas variables de entorno necesarias para el SDK. Establece las variables solo para la terminal actual. Si abres una terminal nueva, el SDK no estará activo hasta que ejecutes nuevamente <code>activate</code>. Si deseas una activación permanente, dirigete a <a href="/es/docs/Mozilla/Add-ons/SDK/Tutorials/Installation#Establecer_activate_permanentemente">Establecer activate permanentemente</a> mas abajo.</p>
+
+<h3 id="Instalación_en_OS_X_usando_Homebrew">Instalación en OS X usando Homebrew</h3>
+
+<p>Si usas Mac, puedes usar <a href="http://brew.sh/">Homebrew</a> para instalar el SDK, usando la siguiente orden:</p>
+
+<pre>brew install mozilla-addon-sdk</pre>
+
+<p>Una vez que el proceso se haya completado satisfactoriamente, puedes usar el programa <code>cfx</code> en tu línea de órdenes en cualquier momento: no necesitas ejecutar bin/activate.</p>
+
+<h3 id="Instalación_en_Windows">Instalación en Windows</h3>
+
+<p>Extrae el contenido del archivo en el lugar de tu peferencia, y navega hasta el directorio principal de SDK con la terminal. Por ejemplo:</p>
+
+<pre>7z.exe x addon-sdk.zip
+cd addon-sdk
+</pre>
+
+<p>Luego ejecuta:</p>
+
+<pre>bin\activate
+</pre>
+
+<p>En la línea de entrada de tu terminal ahora deberías tener un prefijo con el nombre completo del directorio raíz del SDK:</p>
+
+<pre>(C:\Users\mozilla\sdk\addon-sdk) C:\Users\Work\sdk\addon-sdk&gt;
+</pre>
+
+<p>La orden <code>activate</code> establece algunas variables de entorno necesarias para el SDK. Establece las variables solo para la terminal actual. Si abres una terminal nueva, el SDK no estará activo hasta que ejecutes nuevamente <code>activate</code>. Si deseas una activación permanente, dirigete a <a href="/es-ES/Add-ons/SDK/Tutorials/Installation#Establecer_activate_permanentemente">Estableciendo activate permanentemente</a> mas abajo.</p>
+
+<h2 id="Verificar_congruencia">Verificar congruencia</h2>
+
+<p>Ejecuta esto en tu terminal:</p>
+
+<pre class="language-html"><code class="language-html">cfx</code></pre>
+
+<p>Esto debería arrojar una salida cuyas primeras lineas deberían verse algo parecido a esto, seguidas de muchas línas de información útil:</p>
+
+<pre class="language-html">Usage: cfx [options] [command]</pre>
+
+<p>Este es el  <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/cfx">programa de la línea de órdnes<code> cfx</code></a>. Es tu principal interfaz con el Add-on SDK. Lo usas para ejecutar Firefox y probar tu add-on, empaquetar tu add-on para distribuirlo, ver documentación, y ejecutar pruebas unitarias.</p>
+
+<p>Si no puedes ver esto, dirigete a la página <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Troubleshooting">Resolución de problemas</a>.</p>
+
+<h2 id="Próximos_Pasos">Próximos Pasos</h2>
+
+<p>Ahora, dale un vistazo al tutorial <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx">Comenzando con cfx</a>, en el cual se explica como crear add-ons usando la herramienta<code> cfx</code>.</p>
+
+<h2 id="Tópicos_avanzados">Tópicos avanzados</h2>
+
+<h3 id="Usar_el_SDK_desde_Git">Usar el SDK desde Git</h3>
+
+<p>El SDK es desarrollado en GitHub. En vez de usar versiones en archivos comprimidos, puedes echar un vistazo al <a href="https://github.com/mozilla/addon-sdk">repositorio GitHub</a>: con esto puedes usar la última versión de desarrollo en vez de usar el lanzamiento oficial.</p>
+
+<p>Si usas la última versión de desarrollo, debes usarla con la versión Nightly de Firefox, y no podrás enviar a <a href="https://addons.mozilla.org/">addons.mozilla.org</a> (AMO) ningún add-ons que desarrolles, porque AMO solicita que uses el lanzamiento oficial.</p>
+
+<h4 id="Desarrollar_add-ons_para_AMO_desde_Git">Desarrollar add-ons para AMO desde Git</h4>
+
+<p>Si deseas desarrollar add-ons que puedan ser admitidos en AMO usando Git, entonces deberás:</p>
+
+<ul>
+ <li>usar el último lanzamiento etiquetado en git de las fuentes de addon-sdk</li>
+ <li>ejecutar la orden <code>git archive</code> para ampliar algunos atributos de marcado de posición de git dentro de un directorio activo clonado de git.</li>
+</ul>
+
+<pre>git checkout 1.17
+
+git archive 1.17 python-lib/cuddlefish/_version.py | tar -xvf -</pre>
+
+<h3 id="Establecer_activate_permanentemente">Establecer <code>activate</code> permanentemente</h3>
+
+<p>La orden <code>activate</code> establece algunas variables de entorno necesarias para el SDK. Establece las variables solo para la terminal actual. Si abres una terminal nueva, el SDK no estará activo hasta que ejecutes nuevamente <code>activate</code>.</p>
+
+<p>Esto significa que puedes tener multiples copias del SDK en diferentes partes del disco y cambiar entre ellas, o incluso tenerlas activas al mismo tiempo en diferentes terminales.</p>
+
+<p>Estableciendo estas variables de forma permanente en tu entorno para que cada nueva terminal pueda leerlas, podrás hacer que la activación sea permanente. Por lo tanto no tendrás que ejecutar <code>activate</code> cada vez que habrás una nueva terminal.</p>
+
+<p>Debido a que el conjunto exacto de variables pueden cambiar en nuevas versiones del SDK, lo mejor es consultar la secuencia de órdenes de activación para determinar cuales variables deben ser establecidas. La activación usa diferentes secuencias de órdenes de activación para entornos bash (Linux and OS X) y ambientes Windows .</p>
+
+<h4 id="Windows">Windows</h4>
+
+<p>En Windows, <code>bin\activate</code> usa <code>activate.bat</code>, y puedes hacer la activación permanente usando la herramienta <code>setx</code> d<span class="rangySelectionBoundary" id="selectionBoundary_1422498066697_8666912371422392" style="line-height: 0; display: none;">﻿</span>e la terminal o el Panel de Control.</p>
+
+<p><strong>Pasos para el establecimiento permanente:</strong></p>
+
+<p style="margin-left: 40px;">Paso 0. Abre el Panel de Control &gt; Sistema &gt; Avanzado &gt; Variables de Entorno.<br>
+ Paso 1. Agrega el directorio Python y el directorio SDK\bin a la Variable de la Ruta del Sistema.<br>
+ Path=...;C:\PYTHON26\;C:\Users\Omid\Documents\FirefoxAddons\addon-sdk-1.15\bin<br>
+ Paso 2. Agrega una Variable de usuario llamada CUDDLEFISH_ROOT y establece su valor a "C:\Users\Omid\Documents\FirefoxAddons\addon-sdk-1.15"<br>
+ <span class="rangySelectionBoundary" id="selectionBoundary_1422498317458_12282345591345756" style="line-height: 0; display: none;">﻿</span>Paso 3. Agrega una Variable de usuario llamada PYTHONPATH y establece su valor a "C:\Users\Omid\Documents\FirefoxAddons\addon-sdk-1.15\python-lib"<br>
+ Paso 4. Agrega una Variable de usuario llamada VIRTUAL_ENV y establece su valor a "C:\Users\Omid\Documents\FirefoxAddons\addon-sdk-1.15"</p>
+
+<h4 id="Linux_OS_X">Linux / OS X</h4>
+
+<p>En Linux y OS X, <code>source bin/activate</code> usan la secuencia de órdenes bash <code>activate</code>, y puedes hacer la activación permanente usando tu <span class="rangySelectionBoundary" id="selectionBoundary_1422498499239_3642049718896089" style="line-height: 0; display: none;">tu </span> <code>~/.bashrc</code> (en Linux) o <code>~/.bashprofile</code> (en OS X).</p>
+
+<p>Como alternativa a esto, puedes crear un enlace simbólico al programa <code>cfx</code> en tu directorio <code>~/bin</code>:</p>
+
+<pre>ln -s PATH_TO_SDK/bin/cfx ~/bin/cfx
+</pre>
+
+<p>Si usaste Homebrew para instalar SDK, las variables de entorno ya estan establecidas permanentemente.</p>

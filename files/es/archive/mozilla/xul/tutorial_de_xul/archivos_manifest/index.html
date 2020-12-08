@@ -1,0 +1,155 @@
+---
+title: Archivos Manifest
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Archivos_Manifest
+tags:
+  - Todas_las_Categorías
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Manifest_Files
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:La_URL_chrome" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Creando_una_ventana">Siguiente  »</a></p>
+</div>
+
+<p><br>
+ En esta sección veremos como incluir ficheros XUL y chrome en un un paquete y crear un archivo <em>Manifest</em> para ellos.</p>
+
+<h3 id="Paquetes" name="Paquetes">Paquetes</h3>
+
+<p>Un paquete es un conjunto de ficheros XUL y scripts que definen la funcionalidad de una interfaz de usuario. Los paquetes se pueden instalar dentro de Mozilla y referenciar con una URL del chrome. Un paquete puede contener cualquier tipo de ficheros que pueden estar separados en distintos subdirectorios dentro del paquete. Un paquete puede estar contenido como un directorio o como un fichero JAR.</p>
+
+<h3 id="Archivos_Manifest" name="Archivos_Manifest">Archivos Manifest</h3>
+
+<p>Un archivo manifest describe un paquete y mapea su localización en disco a una URL. El archivo manifest en el directorio chrome se examinará al iniciarse la aplicación Mozilla para comprobar los paquetes instalados. Esto significa que todo lo que necesitamos hacer para instalar un nuevo paquete es añadir un nuevo archivo manifest en el directorio chrome de la aplicación o en el directorio chrome específico del usuario. Este último es el utilizado preferentemente, dado que es posible que no tengamos suficientes permisos para escribir en el directorio de la aplicación.</p>
+
+<p>Si únicamente intenta probar código XUL con privilegios en el navegador Firefox, puede hacerlo fácilmente utilizando un archivo manifest con sólo una linea:</p>
+
+<ol>
+ <li>Cree un nuevo directorio en algún lugar. Por ejemplo, en una maquina Windows, puede usar C:\testfiles</li>
+ <li>Cree un nuevo fichero <strong>ASCII</strong><sup>1</sup> llamado test.manifest en el directorio chrome. Realmente no importa cómo se llame el fichero, tan solo que tenga la extensión .manifest. <sub>(1. No funciona con UTF-8 com BOM.)</sub></li>
+ <li>Añada la linea siguiente en él:</li>
+</ol>
+
+<pre class="eval"> content tests <a class="external" rel="freelink">file:///C:/testfiles/</a>
+</pre>
+
+<p>La ruta al fichero deberá apuntar al directorio creado anteriormente. Si no está seguro de cual es la ruta, abra el directorio en el navegador y copie la URL de la barra de dirección.</p>
+
+<p>¡Ya está! Ahora, todo lo que necesita hacer es añadir algunos ficheros XUL dentro del nuevo directorio y será capaz de cargarlos escribiéndolos en una URL chrome de la forma <a class="external" rel="freelink">chrome://tests/content/</a>&lt;filename&gt;. Por supuesto, necesitará reiniciar el navegador para que los cambios tengan efecto. Si el fichero no carga, asegúrese de que la ruta del fichero es correcta.</p>
+
+<p>La sintaxis básica de las lineas en un archivo manifest para contener paquetes es:</p>
+
+<p>'content &lt;nombrepaquete&gt; &lt;rutaarchivo&gt;'</p>
+
+<p>El primer campo 'content' indica un paquete contenido. Para los temas utilizamos 'skin', mientras que para la configuración regional utilizamos 'locale'. El &lt;nombrepaquete&gt; es en nuestro ejemplo de arriba 'tests', lo cual significa que el primer campo en la URL chrome es 'tests' como en <a class="external" rel="freelink">chrome://tests/content/sample.xul</a>. Si el nombre del paquete fuera 'browser', la URL chrome sería <a class="external" rel="freelink">chrome://browser/content/</a>. El campo final es la ruta donde se localiza el archivo. Esta puede ser una ruta de archivo local utilizando una URL de archivo, o un archivo JAR utilizando una URL jar, la cual describiremos a continuación. Puede especificar múltiples paquetes incluyendo otras lineas en el fichero manifest.</p>
+
+<p>El fichero browser.manifest usado por Firefox es algo parecido a esto:</p>
+
+<pre>content branding jar:browser.jar!/content/branding/ xpcnativewrappers=yes
+content browser jar:browser.jar!/content/browser/ xpcnativewrappers=yes
+overlay chrome://global/content/viewSource.xul chrome://browser/content/viewSourceOverlay.xul
+overlay chrome://global/content/viewPartialSource.xul chrome://browser/content/viewSourceOverlay.xul
+overlay chrome://browser/content/pageInfo.xul chrome://pippki/content/PageInfoOverlay.xul
+</pre>
+
+<p>Aqui se estan listando dos paquetes, 'branding' y 'browser'. Además se están especificando tres recubrimeintos (overlays ), lo cual permite combinar contenidos de distintos paquetes. Las extensiones harán mayor uso de los recubrimientos (overlays), dado que ellas fusionan su UI con la del navegador.</p>
+
+<p>Las rutas de fichero para los paquetes branding y browser utilizan URLs jar dado que el contenido está empaquetado en un archivo. Un archivo JAR puede crearse con una utilidad ZIP. Para un archivo JAR localizado en el directorio chrome, la sintaxis es muy simple:</p>
+
+<p>jar:&lt;filename.jar&gt;!/&lt;ruta_en_el_archivo&gt;</p>
+
+<p>Para el paquete browser, el archivo es browser.jar, situado junto al fichero manifest en el directorio chrome. La ruta 'content/browser' especifica la ruta donde se localizan los ficheros XUL dentro del archivo. No necesita especificar la ruta si no tiene directorio en el archivo. En este caso la hay, dado que los ficheros para el paquete branding se almacenan en diferentes rutas del mismo archivo.</p>
+
+<p>Para el paquete 'tests' creado, los archivos no se encuentran empaquetados por lo que utilizaremos una ruta directa. Ello facilita la labor del desarrollador puesto que no se precisa empaquetar todos los archivos cada vez que se realiza un cambio. Sin embargo, en el momento de la distribución del paquete o la extensión, es preferible hacerlo empaquetado para evitar la instalación de varios pequeños archivos.</p>
+
+<p>La parte <em>xpcnativewrappers=yes</em> del final del manifiesto es un señalador que puede usarse opcionalmente. En <em>javascript</em> es posible sobreescribir las funciones preconstruidas en el código. Si se especifica el señalador <em>xpcnativewrappers</em>, indicará que el <em>script</em> que se ejecuta en un contexto con privilegios no utiliza las versiones sobrecargadas sino las versiones originales. De otro modo, si la extensión intentara llamadas a las versiones modificadas pudiera no funcionar correctamente, o peor aún, crear problemas en la seguridad. Este señalador fue añadido para prevenir estos problemas y debería utlizarse siempre en nuevas extensiones, pero se ha respetado por compatibilidad de antiguas extensiones.</p>
+
+<h3 id="Temas_y_configuraci.C3.B3n_regional" name="Temas_y_configuraci.C3.B3n_regional">Temas y configuración regional</h3>
+
+<p>La estructura para los temas y la configuración regional es similar a la del paquete de contenido, excepto que es necesario especificar el paquete de contenido para el cual se está proporcionando dicho tema o configuración regional. Por ejemplo:</p>
+
+<pre>skin browser classic/1.0 jar:classic.jar!/skin/classic/browser/
+locale browser en-US jar:en-US.jar!/locale/browser/
+</pre>
+
+<p>A las líneas anteriores se les ha añadido un campo extra para indicar que tanto el tema y la configuración regional se aplican al navegador. El nombre del tema es 'classic/1.0'. Es este caso se usa un número de versión como parte del nombre del tema pero es opcional si vas a crear tu propio tema. Mozilla no utiliza el número de versión de manera especial ya que dicho número simplemente forma parte del nombre del tema. La configuración regional es 'en-US'. Sus URL chrome son mapeadas a <a class="external" rel="freelink">chrome://browser/skin</a> y <a class="external" rel="freelink">chrome://browser/locale</a>. Si estás creando tu propio tema o configuración regional para el navegador, todo lo que necesitas hacer es crear un fichero manifest con una de estas dos líneas en él, modificándolas para que se adapten al tema o a la configuración regional.</p>
+
+<h3 id="Nuestro_dialogo_de_ejemplo_para_buscar_archivos" name="Nuestro_dialogo_de_ejemplo_para_buscar_archivos">Nuestro dialogo de ejemplo para buscar archivos</h3>
+
+<p>Vamos a crear un fichero manifest para el cuadro de diálogo para buscar archivos que desarrollaremos. Puedes combinar los tres tipos anteriores en un único fichero si lo deseas. Esto se puede hacer cuando se crea una extensión con todas sus partes incluidas en un solo fichero. Lo haremos así para el cuadro de diálogo. Crea un fichero llamado findfile.manifest en el directorio chrome y añade lo siguiente a dicho fichero:</p>
+
+<pre>content findfile file:///findfile/content/
+skin findfile classic/1.0 file:///findfile/skin/
+locale findfile en-US file:///findfile/locale/
+</pre>
+
+<p>Crea los nuevos directorios listados anteriormente. No importa dónde, pero asegúrate de que la rutas de los ficheros en el fichero manifest apuntan a dichos directorios. Naturalmente, lo lógico sería usar los directorios apropiados para tu sistema. Si se va a distribuir el paquete, se necesitaría empaquetarlo en un fichero JAR y modificar estas rutas. En este caso, sólo vamos a crearlo para demostrar el uso del fichero manifest y para preparar los directorios para los ejemplo que veremos en las siguiente secciones.</p>
+
+<p>Nótese que el segundo campo de las líneas del tema y de la configuración regional especifica 'findfile'. Esto significa que el tema y la configuración regional modifican el paquete findfile especificado en la primera línea. Las tres rutas anteriores especifican subdirectorios para cada parte. Seguramente querrás crear estos subdirectorios para mantener los ficheros de cada parte separados.</p>
+
+<h3 id="Instalaci.C3.B3n_de_un_paquete" name="Instalaci.C3.B3n_de_un_paquete">Instalación de un paquete</h3>
+
+<p>Para instalar una aplicación, necesitarás crear un instalador para ella o incluirlo como parte de otra aplicación. El método usado depende de qué clase de aplicación estés creando. Para las extensiones, necesitarás crear un fichero de instalación llamado install.rdf, el cual describe lo que será instalado, el autor de la extensión y con qué versiones del navegador u otras aplicaciones es compatible. También se necesita una estructura de directorios específica ya que las extensiones están limitadas a donde los ficheros deben de ser instalados. Una extensión es empaquetada en un fichero XPI. XPI es la abreviatura de XPInstall y es usada por Mozilla para instalar componentes. Al igual que los ficheros JAR, un fichero XPI sólo es un fichero ZIP al que se le ha cambiado la extensión por lo que puedes crear y ver los ficheros XPI con cualquier herramienta ZIP.</p>
+
+<p>El administrador de extensiones de Firefox maneja automáticamente las extensiones instaladas empaquetadas en ficheros XPI. Se recomienda subir las extensiones al <a class="link-https" href="https://addons.mozilla.org/">sitio Add-ons de Mozilla</a>, donde los usuarios pueden localizarlas para instalarlas. Aunque pueden ser instaladas desde cualquier lugar, de modo predeterminado no se permiten instalaciones desde otros sitios.</p>
+
+<p>También es posible utilizar un script de instalación escrito en JavaScript para instalar ficheros. Esto permite copiar los ficheros a cualquier ubicación y realizar otras tareas de administración de ficheros. Sin embargo, las aplicaciones instaladas a través de script no serán listadas por el administrador de extensiones ni existe ningún método automatizado para desinstalarlas. Por esta razón, los scripts de instalación no se usan tan asiduamente.</p>
+
+<p>Las aplicaciones independientes pueden ser empaquetadas utilizando XULRunner. Esto crea un fichero ejecutable por separado para que la aplicación pueda ser distribuida independientemente del navegador.</p>
+
+<p>Para más información sobre la creación de extensiones, véase <a href="/es/Extensiones" title="es/Extensiones">Extensiones</a>. Para más información sobre XULRunner, véase <a href="/es/XULRunner" title="es/XULRunner">XULRunner</a>.</p>
+
+<h3 id="Aplicaciones_antiguas" name="Aplicaciones_antiguas">Aplicaciones antiguas</h3>
+
+<p>Si estás creando aplicaciones para las versiones antiguas de Mozilla, es decir, anteriores a Firefox 1.5 o a Mozilla 1.8, el proceso se vuelve un poco más complicado. A continuación se explica cómo configurar un paquete para las primeras versiones. Se puede obviar esta sección si lo que se van a crear son nuevas extensiones o aplicaciones XUL.</p>
+
+<div class="note"><strong>Nota</strong>: Este antiguo proceso también se aplica al nuevo SeaMonkey 1.0. El código base aún no ha adoptado el formao <em>"Manifest"</em>.</div>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+         xmlns:chrome="<span class="nowiki">http://www.mozilla.org/rdf/chrome#</span>"&gt;
+
+  &lt;RDF:Seq about="urn:mozilla:package:root"&gt;
+    &lt;RDF:li resource="urn:mozilla:package:<span style="color: #ff0000;"><span class="highlightred">mi_aplicacion</span></span>"/&gt;
+  &lt;/RDF:Seq&gt;
+
+  &lt;RDF:Description about="urn:mozilla:package:<span style="color: #ff0000;"><span class="highlightred">mi_aplicacion</span></span>"
+          chrome:displayName="<span style="color: #00ccff;"><span class="highlightblue">titulo</span></span>"
+          chrome:author="<span style="color: #00ccff;"><span class="highlightblue">autor</span></span>"
+          chrome:name="<span style="color: #ff0000;"><span class="highlightred">mi_aplicacion</span></span>"
+          chrome:extension="true"/&gt;
+
+&lt;/RDF:RDF&gt;
+</pre>
+
+<pre class="eval">content,install,url,<span class="highlightred"><a class="external" rel="freelink">file:///main/app/</a></span>
+</pre>
+
+<ol>
+ <li>Crea un directorio cualquiera. La mayoría de la gente lo crearía como subdirectorio del directorio chrome de Mozilla aunque no es imprescindible. El directorio puede estar en cualquier lugar en disco. Pon los ficheros XUL en este directorio.</li>
+ <li>Crea un fichero llamado contents.rdf y ponlo en dicho directorio. Copia el texto mostrado a continuación en este fichero. Este fichero será usado para conocer el identificador de la aplicación, su nombre, autor, versión, etc...</li>
+ <li>Cambia las partes resaltadas del fichero anterior por tus datos. El texto en rojo '<span style="color: #ff0000;">mi_aplicacion</span>' debería corresponder al ID de la aplicación. Te lo puedes inventar pero usualmente el ID corresponde al nombre de la aplicación. Reemplaza el texto resaltado en <span style="color: #00ccff;">azul</span> con el título de la aplicación y el autor.</li>
+ <li>Si el campo 'chrome:extension' es true, la aplicación es una extensión de Mozilla Firefox Extension y será mostrada en la ventana de extensiones del navegador. Si es false, no aparecerá.</li>
+ <li>Guarda el fichero contents.rdf y asegúrate de que está en el directorio creado en el paso 1.</li>
+ <li>Abre el fichero &lt;directorio_mozilla&gt;/chrome/installed-chrome.txt, donde &lt;directorio_mozilla&gt; es el directorio deon está instalado Mozilla. Sal de Mozilla antes de hacer esto.</li>
+ <li>A continuación vas a registrar la nueva aplicación con Mozilla para que ésta sepa dónde encontrarla. Añade una línea al final de installed-chrome.txt apuntando al nuevo directorio creado en el paso 1. Cambia el texto resaltado a continuación por la ruta del directorio. Asegúrate de que la URL acaba con una barra (/) y que dejas una nueva línea al final de la línea. Si no estás seguro de qué URL es, abre el directorio creado en el paso 1 en Mozilla y copia la URL desde el campo de localización. Date cuenta de que la referencia debe ser siempre un directorio, no un fichero.</li>
+ <li>Borra el fichero &lt;directorio_mozilla&gt;/chrome/chrome.rdf.</li>
+ <li>Ejecuta Mozilla. Deberías ver cualquier fichero XUL ubicado en el directorio utilizando una URL de la forma <strong>chrome://<span class="highlightred">id_aplicacion</span>/content/fichero.xul</strong> donde fichero.xul es el nombre del fichero. El fichero XUL principal debería ser id_aplicacion.xul, el cual puede ser cargado usando la URL abreviada <strong>chrome://<span class="highlightred">id_aplicacion</span>/content/</strong>.</li>
+</ol>
+
+<p>Si estás creando temas y/o configuraciones regionales, repite los pasos anteriores, exceptuando que el formato del fichero contents.rdf es ligeramente diferente. Mira el contenido de los ficheros contents.rdf en otras aplicaciones para más detalles.</p>
+
+<h3 id="Localizaci.C3.B3n_de_fallos" name="Localizaci.C3.B3n_de_fallos">Localización de fallos</h3>
+
+<p>Crear un paquete chrome puede resultar con frecuencia un arte y es difícil detectar errores. A continuación se muestran unos cuantos trucos en caso de que te atasques.</p>
+
+<ul>
+ <li>Abre el fichero &lt;directorio_mozilla&gt;/chrome/chrome.rdf. Ahí deberías encontrar referencias a tu ID de aplicación. Si no es el caso, algo ha ido mal durante el registro. Si está ahí, probablemente estés usando una URL chrome incorrecta cuando cargas el fichero.</li>
+ <li>Intenta borrar el fichero &lt;directorio_mozilla&gt;/chrome/chrome.rdf. Será regenerado. Elimina por completo también el directorio &lt;directorio_mozilla&gt;/chrome/overlayinfo/ si estás usando overlays.</li>
+ <li>Asegúrate de que la URL que añadiste en el fichero installed-chrome.txt acaba con una barra y que hay un retorno de carro después de ella.</li>
+ <li>En Windows, las URL del sistema de ficheros tienen de la forma <a class="external" rel="freelink">file:///C</a>|/files/app/, donde C es la letra de unidad.</li>
+ <li>Asegúrate de que el fichero contents.rdf está en el directorio correcto y de que está bien escrito. Abre el fichero contents.rdf en Mozilla para ver si lo analiza como un XML bien formado. Si no, verás un error sobre un fondo amarillo.</li>
+ <li>Si estás utilizando una compilación de depuración de Mozilla, cierta información será mostrada en el terminal cuando empiece a comprobar las aplicaciones chrome. Comprueba si tu aplicación aparece en este listado.</li>
+</ul>
+
+<p>En la siguiente sección empezaremos a mirar el lenguaje XUL.</p>

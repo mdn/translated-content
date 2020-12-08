@@ -1,0 +1,106 @@
+---
+title: '::-ms-fill'
+slug: 'Web/CSS/::-ms-fill'
+tags:
+  - CSS
+  - No estándar(2)
+  - Pseudo-lemento
+  - Referencia
+translation_of: 'Archive/Web/CSS/::-ms-fill'
+---
+<div>{{CSSRef}}{{Non-standard_header}}</div>
+
+<h2 id="Resumen">Resumen</h2>
+
+<p>El <a href="/es/docs/Web/CSS/Pseudo-elements" title="es/CSS/Pseudo-elements">pseudo-elemento </a>CSS <strong><code>::-ms-fill</code></strong> CSS representa la porción rellena de un elemento {{HTMLElement("progress")}}. Es un pseudo-elemento no estándar y específico de Internet Explorer 10+, de ahí el prefijo del vendedor.</p>
+
+<h2 id="Síntaxis">Síntaxis</h2>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<p>No es parte de ninguna especificación. Microsoft tiene una <a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh465757.aspx">descripción en MSDN</a>.</p>
+
+<h2 id="Ejemplo">Ejemplo</h2>
+
+<h3 id="Contenido_CSS">Contenido CSS</h3>
+
+<pre class="brush: css">progress::-ms-fill {
+  background-color: orange;
+}</pre>
+
+<h3 id="Contenido_HTML">Contenido HTML</h3>
+
+<pre class="brush: html">&lt;progress value="10" max="50"&gt;
+</pre>
+
+<h3 id="Salida">Salida</h3>
+
+<p>{{EmbedLiveSample("Example", 300, 50)}}</p>
+
+<p>Una barra de progreso a la que se aplique ese estilo tendrá una apariencia similar a la siguiente:</p>
+
+<p><img alt="Progress Bar with Orange Fill" src="https://mdn.mozillademos.org/files/13484/progress_bar.png" style="height: 44px; width: 308px;"></p>
+
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>10.0</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Ver_además">Ver además</h2>
+
+<ul>
+ <li>{{ cssxref("::-moz-progress-bar") }}</li>
+ <li>{{ cssxref("::-webkit-progress-bar") }}</li>
+ <li>{{ cssxref("::-webkit-progress-value") }}</li>
+ <li>{{ cssxref("::-webkit-progress-inner-element") }}
+  <ul>
+  </ul>
+ </li>
+</ul>

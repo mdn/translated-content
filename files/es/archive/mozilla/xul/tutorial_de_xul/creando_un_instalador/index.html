@@ -1,0 +1,95 @@
+---
+title: Creando un instalador
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Creando_un_instalador
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Creating_an_Installer
+---
+<p> </p>
+
+<p>Esta sección describe como empaquetar una aplicación de XUL en un instalador.</p>
+
+<h3 id="Paquetes_de_XPInstall" name="Paquetes_de_XPInstall">Paquetes de XPInstall</h3>
+
+<p>Mozilla proporciona un mecanismo que se puede utilizar para empaquetar ventanas de XUL, scripts, skins y otros archivos en un solo instalador. Usted puede colocar este instalador en alguna parte para que los usuarios la puedan descargar. Un script simple puede ser usado para tener descargado el paquete e instalarlo. Este mecanismo se llama <a href="es/XPInstall">XPInstall</a> (plataforma cruzada de instalación).</p>
+
+<p>Los instaladores de XPInstall se empaquetan en archivos JAR. Dentro del archivo JAR, usted puede agregar todos los archivos que usted desea haber instalado. Además, los instaladores deben contener un script de instalación (un archivo llamado install.js) que se pueda utilizar para escribir el proceso de la instalación. Este script tiene acceso a varias funciones de instalación que se pueden utilizar para instalar archivos y componentes.</p>
+
+<p>Los instaladores del archivo JAR tienen típicamente la extensión .xpi (se pronuncia zippy) para distinguirlos de otros archivos. Los instaladores serán utilizados generalmente para instalar los componentes de Mozilla tales como skins nuevos, plugins y nuevos paquetes.Texto de Código</p>
+
+<p>Hay varios pasos implicados en abrir un instalador e instalar los componentes. Éstos se describen gradualmente abajo.</p>
+
+<ol>
+ <li>Crea una pagina web desde la cual el usuario pueda descargar el software que se instalará. Esta página contendrá un ‘disparador de la instalación’ que es una pequeña parte del script que abre la instalación.</li>
+ <li>Se le presenta al usuario un diálogo indicando que el paquete está siendo instalado. Es posible que el ‘disparador de la instalación’ abra múltiples instaladores. En este caso, serán presentados en una lista. El usuario puede elegir continuar o cancelar.</li>
+ <li>Si el usuario elige continuar, se descargará el instalador del archivo XPI. Una barra de progreso se exhibe al usuario durante este proceso.</li>
+ <li>El archivo install.js es extraído del archivo de la instalación y se ejecutara. Este script abrirá las funciones del instalador que indicarán qué partes del archivo deben ser instalados.</li>
+ <li>Una vez que el script esté completo, el nuevo paquete ya habrá sido instalado. Si los paquetes múltiples están siendo instalados, sus scripts funcionarán en secuencia.</li>
+</ol>
+
+<h3 id="Disparadores_.28triggers.29_de_instalaci.C3.B3n" name="Disparadores_.28triggers.29_de_instalaci.C3.B3n">Disparadores (triggers) de instalación</h3>
+
+<p>Según lo indicado arriba, el proceso de la instalación es empezado por un ‘disparador de instalación’. Esto implica el uso del objeto global especial InstallTrigger. Este contiene varios métodos que se pueden utilizar para comenzar una instalación. Usted puede utilizar este objeto en el contenido local o remoto, significando que es conveniente para una descarga directa del sitio web.</p>
+
+<p>Vamos a crear un ejemplo de un disparador de instalación. Esto involucra el uso de la función InstallTrigger.install. Esta función tiene dos parámetros, el primero es una lista de los paquetes a instalar, y el segundo es una función de rellamada que será usada cuando la instalación se complete. Aquí está un ejemplo:</p>
+
+<pre>function doneFn ( name , result ){
+  alert("The package " + name + " was installed with a result of " + result);}
+
+var xpi = new Object();
+xpi["Calendar"] = "calendar.xpi";
+InstallTrigger.install(xpi,doneFn);
+</pre>
+
+<p>Primero, definimos una función de rellamada doneFn que será ejecutada cuando la instalación se complete. Usted puede nombrar la función como prefiera. Esta función tiene dos parámetros. El primero es el nombre del paquete que acaba de ser instalado. Esto es importante si usted está instalando múltiples componentes. El segundo es un código de resultado. Si el resultado es 0, la instalación terminó con éxito. Si el resultado no es cero, quiere decir que hubo un error y el valor es el código del error. La función doneFn solo mostrará un mensaje de alerta al usuario.</p>
+
+<p>Después, creamos un vector xpi que contendrá el nombre (calendario) y URL (calendar.xpi) del instalador. Usted puede agregar una línea similar para cada paquete que desee instalar. Finalmente, ejecutamos la función de instalación.</p>
+
+<p>Cuando esta sección del script se ejecute, el archivo calendar.xpi será instalado.</p>
+
+<div class="highlight">
+<p>Vamos intentar esto con el diálogo de búsqueda de archivos.</p>
+
+<pre>function doneFn ( name , result ){
+  if (result) alert("An error occured: " + result);
+}
+
+var xpi = new Object();
+xpi["Find Files"] = "findfile.xpi";
+InstallTrigger.install(xpi,doneFn);
+</pre>
+</div>
+
+<h3 id="El_archivo_de_XPI" name="El_archivo_de_XPI">El archivo de XPI</h3>
+
+<p>Se requiere que el archivo XPI contenga un archivo llamado install.js que es un archivo <a href="es/JavaScript">JavaScript</a> que se ejecuta durante la instalación. Los archivos restantes son los archivos que se instalarán. Estos archivos típicamente están colocados dentro de un directorio dentro del archivo pero no es obligatorio. Los archivos cromo (chrome), deben estar estructurados como el directorio chrome.</p>
+
+<p>A menudo, los únicos archivos colocados en un archivo XPI serán el script de instalación (install.js) y un archivo JAR. Este archivo JAR contiene todos los archivos usados por la aplicación. Los componentes proporcionados con Mozilla se almacenan de esta manera.</p>
+
+<p>Debido a que el archivo XPI es un archivo tipo ZIP, usted puede crear y agregar archivos usando una aplicación que manipule estos archivos.</p>
+
+<p>Para el diálogo de búsqueda de archivos, crearemos una estructura en el archivo como el siguiente:</p>
+
+<div class="highlight">
+<pre>install.js
+findfile
+  content
+    contents.rdf
+    findfile.xul
+    findfile.js
+  skin
+    contents.rdf
+    findfile.css
+  locale
+    contents.rdf
+    findfile.dtd
+</pre>
+</div>
+
+<p>Se ha agregado un directorio para cada parte del paquete, del contenido, del skin y del ‘locale’. Los archivos contents.rdf también se han agregado porque serán necesarios para registrar los archivos 'chrome'.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Presentación_dinámica" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Instalando_Scripts">Siguiente  »</a></p>
+</div>

@@ -1,0 +1,24 @@
+---
+title: Actualización de aplicaciones
+slug: Mozilla/Marketplace/Publishing/Updating_apps
+translation_of: Archive/Mozilla/Marketplace/Publishing/Updating_apps
+---
+<div class="note">
+ <p><strong>Nota:</strong> Si cambias el nombre de tu aplicacion despues de que haya sido aprobada por el Marketplace, tendrás que volver a enviarla para que sea aprobada.</p>
+</div>
+<h2 id="Actualización_de_aplicaciones_alojadas">Actualización de aplicaciones alojadas</h2>
+<p>Una aplicación respeta las reglas habituales de almacenamiento en caché y, tal vez en ocasiones, utilice mecanismos más avanzados para una mejora en el inicio, como <a href="/es/docs/Recursos_offline_en_firefox">HTML5 AppCache</a>. Una vez dicho esto, no hay nada especial a tener en cuenta cuando actualicemos los recursos normales que utiliza una aplicación.</p>
+<p>Sin embargo, las aplicaciones de código abierto son diferentes por el modo de manejar el manifiesto (<em>manifest</em>). Podría ser que ciertos cambios en el manifiesto requieran aprobación del usuario. Dependiendo de la implementación del tiempo de ejecución de la Web, puede resultar confuso si ha habido alguna actualización o no.</p>
+<p>Una forma sencilla de manejar este asunto consiste en añadir un campo <code>version</code> en el manifiesto de la aplicación. Más adelante podrás comprobar la versión examinando el valor de retorno de la función <a href="/en-US/docs/Web/API/Apps.getInstalled"><code>navigator.mozApps.getInstalled()</code></a>. Si la versión que el usuario tiene instalada no está actualizada, podrás lanzar una actualización utilizando <a href="/en-US/docs/Web/API/Apps.install"><code>navigator.mozApps.install()</code></a>.</p>
+<p>El tiempo de ejecución de la Web no utiliza el valor <code>version</code>, de modo que puedes utilizar cualquier esquema de versión que desees.</p>
+<p>Ten también en cuenta que se detectarán los cambios que hagas a un manifest que provoquen errores u otros daños si subes el manifest a Firefox Marketplace. Aquellos errores graves provocarán que se la aplicación desaparezca del listado. Los errores menos graves marcarán la aplicación para que sea revisada de nuevo.</p>
+<h2 id="Actualización_de_aplicaciones_empaquetadas">Actualización de aplicaciones empaquetadas</h2>
+<p>Las <a href="/es/docs/Web/Apps/Developing/Packaged_apps/Packaged_apps">aplicaciones empaquetadas</a> tienen un proceso de actualización diferente al de las aplicaciones alojadas. Para actualizar una aplicación empaquetada, debes subir una nueva versión del archivo zip de la aplicación a Firefox Marketplace. Entonces, la aplicación actualizada se revisa y se publica en Marketplace. Este proceso lanza una actualización en el teléfono Firefox OS. El usario del teléfono también puede solicitar una actualización utilizando la aplicación de Configuración.</p>
+<p>Si quieres más detalles sobre el proceso de actualización de una aplicación empaquetada, continúa leyendo.</p>
+<h3 id="Más_detalles_sobre_la_actualización_de_aplicaciones_empaquetadas">Más detalles sobre la actualización de aplicaciones empaquetadas</h3>
+<p>Aquí tienes más detalles sobre el proceso de actualización de las aplicaciones empaquetadas. Puede que necesites esta información si vas a implementar un mercado de aplicaciones.</p>
+<ul>
+ <li>Cuando la aplicación empaquetada actualizada se publica, el <a href="/es/docs/Web/Apps/Developing/Packaged_apps/Packaged_apps#Aplicaciones_empaquetadas_de_la_tienda_de_Firefox_(Firefox_Marketplace).">mini-manifiesto</a> <em>(mini-manifest</em>) se actualiza para conducir al archivo zip actualizado (el mini-manifiesto no forma parte del manifiesto principal de la aplicación). El encabezamiento <code>ETag</code> header se modifica, y esto lanza una actualización en el teléfono Firefox OS.</li>
+ <li>En el teléfono, Firefox OS hace, una vez al día, una comprobación buscando cambios en una aplicación. Para esto, comprueba la URL del mini-manifiesto. Luego, comprueba la URL en el campo <code>package_path</code> en el mini-manifiesto. Este proceso se realiza utilizando el método <code>checkForUpdate()</code> en el objeto <a href="/en-US/docs/Web/API/App"><code>App</code></a>. Cuando la cabecera <code>ETag</code> se modifica, sabe que la aplicación ha sido actualizada. Después comprueba si el archivo zip ha cambiado.</li>
+ <li>Firefox OS busca actualizaciones de aplicaciones por tandas.</li>
+</ul>

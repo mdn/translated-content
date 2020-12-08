@@ -1,0 +1,136 @@
+---
+title: Divisores
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Divisores
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/Splitters
+---
+<p>Ahora podemos ver como añadir divisores/separadores a una ventana.</p>
+
+<h3 id="Divisi.C3.B3n_de_una_caja" name="Divisi.C3.B3n_de_una_caja">División de una caja</h3>
+
+<p>Hay momentos en los cuales se necesita tener dos secciones en la ventana donde el usuario pueda dimensionar las partes. Un ejemplo es la ventana del navegador de Mozilla, donde se puede cambiar el tamaño del panel lateral desplazando la línea de intersección de los cuadros. También se puede esconder, picando la cruz del panel.</p>
+
+<h4 id="El_elemento_separador" name="El_elemento_separador">El elemento separador</h4>
+
+<p>Ésta funcionalidad es cumplida utilizando un elemento llamado un <code><a href="es/XUL/splitter">splitter</a></code>. Este elemento crea una barra fina entre los dos cuadros, lo cual permite dimensionar estos. Se puede poner un separador donde se quiera o necesite para permitir dimensionar los elementos situados antes o después de él en una misma caja.</p>
+
+<p>Cuando un separador se coloca en una caja horizontal, permite dimensionar horizontalmente. Si se coloca en una caja vertical, permite dimensionar verticalmente.</p>
+
+<p>La sintaxis de un separador es la siguiente:</p>
+
+<pre>&lt;splitter
+    id="identifier"
+    state="open"
+    collapse="before"
+    resizebefore="closest"
+    resizeafter="closest"&gt;
+</pre>
+
+<p>Los atributos son los que siguientes:</p>
+
+<dl>
+ <dt><a href="es/XUL/Atributos/id">id</a></dt>
+ <dd>El identificador único de este separador.</dd>
+</dl>
+
+<dl>
+ <dt><a href="es/XUL/Atributos/state">state</a></dt>
+ <dd>Indica el estado del separador. Se pone en <code>open</code>, que es la opción por defecto, si se quiere que el panel dimensionable esté inicialmente abierto o en <code>collapsed</code> para que uno de los paneles sea completamente reducido y que el otro ocupe (colapse) todo el espacio.</dd>
+</dl>
+
+<dl>
+ <dt><a href="es/XUL/Atributos/collapse">collapse</a></dt>
+ <dd>Indica de que lado el panel debe reducirse cuando el separador es agarrado o iniciado en estado de colapse. Se definirá en <code>before</code> para designar elemento anterior al separador y en <code>after</code> para el elemento posterior. Poniéndolo en <code>none</code>, lo cual es la opción por defecto, el separador al ser agarrado no reducirá los paneles.</dd>
+</dl>
+
+<dl>
+ <dt><a href="es/XUL/Atributos/resizebefore">resizebefore</a></dt>
+ <dd>Cuando un separador es desplazado, los elementos a su izquierda (o encima) cambian de dimensiones. Éste atributo indica cual de los elementos puede dimensionarse. Para que el elemento inmediatamente a la izquierda del separador sea dimensionado, se definirá en <code>closest</code> (el valor por defecto) y en <code>farthest</code> para que sea el elemento más lejos a la izquierda (el primer elemento en la caja) el que sea dimensionado.</dd>
+</dl>
+
+<dl>
+ <dt><a href="es/XUL/Atributos/resizeafter">resizeafter</a></dt>
+ <dd>Cuando un separador es desplazado, los elementos a su derecha (o debajo) cambian de dimensiones. Éste atributo indica cual de los elementos puede dimensionarse. Para que el elemento inmediatamente a su derecha sea dimensionado, se definirá en <code>closest</code> (el valor por defecto) y en <code>farthest</code> para que sea el elemento más lejos a derecha (el último elemento en la caja) el que sea dimensionado. Éste atributo también se puede definir en <code>grow</code>, en este caso los elementos a su derecha no cambiarán de tamaño al mover el separador, pero si la caja entera.</dd>
+</dl>
+
+<p>Si se pone el atributo <code><a href="es/XUL/Atributos/collapse">collapse</a></code>, se añadirá también el elemento <code><a href="es/XUL/grippy">grippy</a></code> dentro del <code>splitter</code> para permitir que el usuario pueda utilizar el separador.</p>
+
+<h4 id="Ejemplo_con_separador" name="Ejemplo_con_separador">Ejemplo con separador</h4>
+
+<p>Aquí un ejemplo que puede ayudar:</p>
+
+<p><strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_splitter_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_splitter_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;vbox flex="1"&gt;
+  &lt;iframe id="content-1" width="60" height="20" src="w1.html"/&gt;
+  &lt;splitter collapse="before" resizeafter="farthest"&gt;
+    &lt;grippy/&gt;
+  &lt;/splitter&gt;
+  &lt;iframe id="content-2" width="60" height="20" src="w2.html"/&gt;
+  &lt;iframe id="content-3" width="60" height="20" src="w3.html"/&gt;
+  &lt;iframe id="content-4" width="60" height="20" src="w4.html"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:splitter-ex1.jpg"></div>
+
+<p>Aquí, cuatro marcos han sido creados y un separador colocado entre el primero y el segundo. El atributo de <code><a href="es/XUL/Atributos/collapse">colapso</a></code> se ha definido en el valor <code>before</code>, para que si el separador es agarrado, el primer cuadro desaparezca y que el divisor y los marcos restantes se desplacen a la izquierda. El punto del cursor para mover el separador es centrado en relación a él-mismo.</p>
+
+<p>Al separador se le ha dado un valor <code><a href="es/XUL/Atributos/resizeafter">resizeafter</a></code> de <code>farthest</code>. Ésto hace que cuando el separador es movido, el elemento más lejos a su derecha cambiará de tamaño, en este caso el cuadro 4.</p>
+
+<p>A value has not been specified for <code><a href="es/XUL/Atributos/resizebefore">resizebefore</a></code> so it will default to a value of <code>closest</code>. In this case, there is only one frame before the splitter, so frame 1 will change size.</p>
+
+<p>Frames 2 and 3 will only change size if you drag the splitter far enough to the right that frame 4 has reached its minimum size.</p>
+
+<div class="float-right"><img alt="Image:splitter-ex2.jpg"></div>
+
+<p>This image shows the 4 panels with the splitter in a collapsed state.</p>
+
+<div class="float-right"><img alt="Image:splitter-ex3.jpg"></div>
+
+<p>This image shows the 4 panels with the splitter resized to the right. Notice how the middle two panels have not changed size. Only panel 1 and panel 4 have changed size. You can just see part of the fourth panel. If you continue to drag the splitter to the right, the other two panels will shrink.</p>
+
+<p>You can use the style properties such as <code>min-width</code>, <code>max-height</code> on the iframes to specify minimum or maximum widths or heights in the box. If you do, the splitter will detect this and not allow the user to drag the splitter past the minimum and maximum sizes.</p>
+
+<p>For example, if you specified a minimum width of 30 pixels on panel 4 above, it would not shrink below that size. The other two panels would have to shrink. If you set the minimum width of panel 1 to 50 pixels, you would only be able to drag the splitter 10 pixels to the left (as it starts at 60 pixels wide). You can still collapse the splitter however.</p>
+
+<p>You can also place more than one splitter in a box if you want, in which case you could collapse different parts of it. Similarly, you do not have to collapse just iframes. Any element can be collapsed.</p>
+
+<h3 id="Nuestro_ejemplo_de_b.C3.BAsqueda" name="Nuestro_ejemplo_de_b.C3.BAsqueda">Nuestro ejemplo de búsqueda</h3>
+
+<div class="highlight">
+<p>Let's see what the find file dialog looks like with a splitter in it. One possibility would be to add the results of the search in the dialog. We'll add an area in-between the search criteria and the buttons along the bottom. A splitter will allow you to collapse, or hide, the search results.</p>
+
+<pre class="eval">&lt;/tabbox&gt;
+
+ <span class="highlightred">&lt;iframe src="results.html"/&gt;
+ &lt;splitter resizeafter="grow"/&gt;</span>
+
+ &lt;hbox&gt;
+</pre>
+
+<p>Here, a splitter and an iframe have been added to the dialog. We don't need the <code><a href="es/XUL/spacer">spacer</a></code> after the <code><a href="es/XUL/tabbox">tabbox</a></code> any more so we can remove it. The content of the frame is contained in a file called 'results.html'. Create this file and put whatever you want in it for now. The iframe will be replaced <a href="es/Tutorial_de_XUL/%c3%81rboles">más tarde</a> with a results list when we know how to create it. For now, it serves to demonstrate the splitter.</p>
+
+<p>The splitter has been set to a <code>collapse</code> value of <code>before</code> meaning that the element just before the splitter will collapse. Here, it is the iframe. As the images below show, when the grippy is clicked, the iframe is collapsed and the buttons shuffle up.</p>
+
+<p>The <code>resizeafter</code> attribute has been set to <code>grow</code> so that the elements after the splitter push themselves down when the splitter is dragged down. This results in the content of the frame growing to any size. It should be noted that the window does not resize itself automatically. You'll also notice that this is a horizontal splitter because it has been placed in a vertical box.</p>
+
+<p>Estado normal:</p>
+
+<p><img alt="Image:splitter1.png"></p>
+
+<p>Estado colapsado:</p>
+
+<p><img alt="Image:splitter2.png"></p>
+
+<p><strong>Nuestro ejemplo</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-splitter.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-splitter.xul">Ver en funcionamiento</a></p>
+</div>
+
+<p><br>
+ </p><div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Paneles_de_contenidos" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Barras_de_desplazamiento">Siguiente  »</a></p>
+</div>

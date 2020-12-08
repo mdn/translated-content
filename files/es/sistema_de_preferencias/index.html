@@ -1,0 +1,65 @@
+---
+title: Sistema de preferencias
+slug: Sistema_de_preferencias
+tags:
+  - Sistema_de_preferencias
+  - Todas_las_Categorías
+  - XUL
+  - páginas_a_traducir
+translation_of: Mozilla/Preferences/Preferences_system
+---
+<p>Este documento describe el nuevo sistema de preferencias del Toolkit de Aviary. Usando este sistema es posible crear ventanas de preferencias que se muestren y funcionen apropiadamente en varias plataformas (Windows, MacOS X y GNOME).</p>
+
+<p><strong>Ten en cuenta</strong> que el sistema de preferencias solo está disponible desde Firefox/Thunderbird 1.5 (incluyendo sus versiones alpha y beta). No puedes usarlo en las aplicaciones y extensiones basadas en Firefox 1.0.</p>
+
+<p>El nuevo sistema esta implementado mediante unos pocos elementos y atributos en <a href="es/XUL">XUL</a>. Puedes encontrar información sobre estos, simplemente haciendo clic en alguno de los enlaces a continuación:</p>
+
+<div class="moreinfo">  <p><strong>Documentación sobre el <a href="/es/docs/Sistema_de_preferencias">Sistema de preferencias</a>:</strong></p>  <ul>    <li>Introducción: <a href="/es/docs/Sistema_de_preferencias/Comenzando">Comenzando</a> | <a href="/es/docs/Sistema_de_preferencias/Ejemplos">Ejemplos</a> | <a href="/es/docs/Sistema_de_preferencias/Problemas">Problemas</a></li>    <li>Referencia: <code><a href="/es/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code> | <code><a href="/es/docs/Mozilla/Tech/XUL/prefpane" title="prefpane">prefpane</a></code> | <code><a href="/es/docs/Mozilla/Tech/XUL/preferences" title="preferences">preferences</a></code> | <code><a href="/es/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> | <a href="/es/docs/Sistema_de_preferencias/Nuevos_atributos">Nuevos atributos</a></li>  </ul></div>
+
+<h3 id="Uso" name="Uso">Uso</h3>
+
+<p><span class="comment">this will eventually be moved from here</span></p>
+
+<p>El código para una típica ventana de preferencias sería algo así:</p>
+
+<pre>&lt;prefwindow id="appPreferences"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;prefpane id="pane1" label="&amp;pane1.title;"&gt;
+    &lt;preferences&gt;
+      &lt;preference id="pref1" name="pref.name" type="bool"/&gt;
+    &lt;/preferences&gt;
+
+   .. UI elements that refer to the preferences above, e.g.:
+    &lt;checkbox id="check1" preference="pref1"
+              label="&amp;check1.label;" accesskey="&amp;check1.accesskey;"/&gt;
+  &lt;/prefpane&gt;
+
+  &lt;prefpane id="pane2" label="&amp;pane2.title;" src="chrome://uri/to/pane.xul"/&gt;
+&lt;/prefwindow&gt;
+</pre>
+
+<p>La hoja de contenido puede ser especificada en línea, o mediante un enlace externo que cargue dicho contenido en la misma, de manera dinámica.Presta especial atención al HIGs de las plataformas en las que estés desarrollando y al usar el preprocesador de XUL si fuera necesario para configurar apropiadamente los diferentes titulos de ventana. Debes especificar también el ancho de la ventana (en el em) así como hacer un uso correcto del preprocesador para cada plataforma que uses , así como la altura (en el em) para aquellas plataformas en donde el tamaño de la ventana no cambie cuando se cambie al panel seleccionado.(p.ej. Windows).</p>
+
+<h3 id="Uso_en_aplicaciones_XULRunner" name="Uso_en_aplicaciones_XULRunner">Uso en aplicaciones XULRunner</h3>
+
+<p>Cuando abras el diálogo de preferencias en una aplicación XULRunner, asegúrate de comprobar lo siguiente:</p>
+
+<ul>
+ <li>Las preferencias boleanas browser.preferences.animateFadeIn y browser.preferences.instantApply deben ser definidas en las preferencias por defecto (véase <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=350528" title="FIXED: XULRunner needs to ship with some additional preferences">error 350528</a>). Ejemplo:</li>
+</ul>
+
+<pre class="eval">pref("browser.preferences.animateFadeIn", false);
+pref("browser.preferences.instantApply", true);
+</pre>
+
+<ul>
+ <li>Al llamar a openDialog() para abrir las preferencias de diálogo, "toolbar" debe incluirse en la secuencia de las características. Ejemplo:</li>
+</ul>
+
+<pre class="eval">var features = "chrome,titlebar,toolbar,centerscreen,modal";
+window.openDialog(url, "Preferences", features);
+</pre>
+
+<h3 id="Bugzilla" name="Bugzilla">Bugzilla</h3>
+
+<p>El componente para bugs (no disponible en las opciones de la interfaz de usuario en Firefox/Thunderbird ) se encuentra en Herramientas:Preferencias (<a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Toolkit">archivar un bug</a> <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Toolkit&amp;component=Preferences&amp;resolution=---&amp;chfieldto=Now">lista de bugs</a>)</p>

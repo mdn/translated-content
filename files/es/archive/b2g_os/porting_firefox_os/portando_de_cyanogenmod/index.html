@@ -1,0 +1,239 @@
+---
+title: Portando en CyanogenMod
+slug: Archive/B2G_OS/Porting_Firefox_OS/Portando_de_CyanogenMod
+translation_of: Archive/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/es/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/es/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<p class="summary">Firefox OS es tradicionalmente compilado encima de <a href="https://android.googlesource.com/">AOSP</a>. Esto no significa que nosotros solamente usemos AOSP. <span id="result_box" lang="es"><span class="hps">Varias</span> <span class="hps">ramas (forks) de</span> <span class="hps">AOSP</span> <span class="hps">existen</span> <span class="hps">que tienen como objetivo</span> <span class="hps">apoyar</span> <span class="hps">una amplia</span> <span class="hps">gama de hardware</span></span>. <a href="http://www.cyanogenmod.org/">CyanogenMod</a>, el fork mas popular de AOSP, incluye cientos de añadiduras, modificaciones, y hacks para dar soporte a <a href="http://get.cm/">cientos de disposivitos Android al por menor</a>. <span class="seoSummary">Este articulo explica como portar Firefox OS usando CyanogenMod.</span></p>
+
+<p>Cuando compilamos Firefox OS encima de CyanogenMod podemos dar soporte al mismo numero de despositivos que CyanogenMod soporta. Debido a la gran cantidad de dispositivos soportados por CyanogenMod, <span id="result_box" lang="es"><span class="hps">es muy probable</span> <span class="hps">que ya tengas</span> <span class="hps">un dispositivo para el cual puedas compilar</span><span>.</span></span></p>
+
+<div class="warning"><strong>Importante</strong>: Esta guía es solamente para usuarios avanzados; debes de saber al menos cómo compilar CyanogenMod o AOSP.</div>
+
+<p>Si nunca has compilado CyanogenMod para tu dispositivo entonces te sugerimos insistentemente que <a href="https://wiki.cyanogenmod.org/w/Build_Guides">aprendas como hacerlo</a> antes de portar Firefox OS. Esto tiene dos propositos: aprenderás como usar las herramientas necesarias para portar Firefox OS, y verificarás la calidad del 'port' de CyanogenMod.</p>
+
+<p>Más explícitamente, ésta guía asume que tu dispositivo esta desbloqueado y tiene CyanogenMod instalado. Esta guia <em>no</em> te enseñara como rootear y/o desbloquear tu dispositivo, o como preparar tu maquina para compilar o como usar git para solucionar los fallos de combinación.</p>
+
+<p>Un resumen de los pasos a seguir es el siguiente:</p>
+
+<ol>
+ <li>Descargar el codigo fuente</li>
+ <li>Modificar los 'repos' del dispositivo</li>
+ <li>Modicar el núcleo</li>
+ <li>Compilar e Instalar</li>
+</ol>
+
+<h2 id="Descargar_el_código_de_fuente">Descargar el código de fuente</h2>
+
+<div class="warning"><strong>Para hacer:</strong> Convinar el manifiesto de mozilla-b2g: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1211870">Bugzilla: 1211870</a>.</div>
+
+<p>Tenemos varias herramientas útiles para construir Firefox OS, todas ellas contenidas en un simple repositorio. Descárga estas herramientas por <strong><code>git</code></strong> para crear tu directorio de trabajo.</p>
+
+<pre><code>git clone https://github.com/cm-b2g/B2G.git &amp;&amp; cd B2G</code>
+</pre>
+
+<p>Hecho esto, necesitamos descargar el código fuente:</p>
+
+<pre><code>./config.sh cm-porting</code>
+</pre>
+
+<p>El archivo <strong><code>config.sh</code></strong>  inicializa la herramienta <code>repo usando el manifiesto </code> <strong><code>base-l-cm.xml</code></strong>  que se encuentra en el repositorio <strong><code>b2g-manifest</code></strong>.  Éste archivo XML es en realidad una lista de repositorios específicos del SO necesarios para construir B2G OS.  Luego, utiliza la herramienta <strong><code>repo</code></strong> para descargar todo el código de fuente.</p>
+
+<p>La descarga de estos repositorios, muchos de los cuales tienen varias gigas,  tomará bastante tiempo, así que te recomendamos hacer esto en la noche si tienes una conección lenta, o justo después del almuerzo si tienes una conección rápida.</p>
+
+<p>Este paso también crea un archivo <strong><code>.config</code></strong> que podrás editar después.</p>
+
+<h2 id="Manifiesto_local_para_tu_dispositivo">Manifiesto local para tu dispositivo</h2>
+
+<p>El manifiesto anterior no contiene ningún repositorio específico de dispositivo, asunto diferente al típico manifiesto. Necesitaremos entonces crear un <strong><code>local_manifest.xml</code></strong> con todos los repositorios de tu dispositivo. La manera más rápida de hacerlo es usando <strong><code>breakfast</code></strong>, un herramienta automática escrita por CyanogenMod para crear un manifiesto local y descargar los repositorios adicionales directamente de la cuenta de CyanogenMod en GitHub.</p>
+
+<pre><code>. build/envsetup.sh &amp;&amp; breakfast 123</code>
+</pre>
+
+<p>Reemplace 123 por el nombre clave de su dispositivo.</p>
+
+<p>Si tu dispositivo no está oficialmente soportado por CyanogenMod, pero hay un 'port' no oficial, tu puedes crear el archivo <strong><code>local_manifest.xml</code></strong> manualmente en la carpeta  <strong><code>.repo/local_manifests</code></strong>.</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;manifest&gt;
+     &lt;remote name="xyz" fetch="git://github.com/xyz/" revision="cm-12.1" /&gt;
+     &lt;project name="device_oem_123" path="device/oem/123" remote="xyz" /&gt;
+     &lt;project name="device_oem_1xx-common" path="device/oem/1xx-common" remote="xyz" /&gt;
+     &lt;project name="kernel_oem_1xx" path="kernel/oem/1xx" remote="xyz" /&gt;
+     &lt;project name="vendor_oem" path="vendor/oem" remote="xyz" /&gt;
+&lt;/manifest&gt;</code>
+</pre>
+
+<p>Recuerda correr <strong><code>repo sync</code></strong> cuando hayas creado tu manifiesto.</p>
+
+<h2 id="Modificar_los_'repos'_del_dispositivo">Modificar los 'repos' del dispositivo</h2>
+
+<p>Parte de la configuración de un dispositivo se encuentra en los archivos XML de superposición, usados por el sistema de construcción AOSP para establecer las opciones por defecto en las apps de Android. Firefox OS no los usa así que podemos reimplementar algunas de estas opciones, tales como el botón de inicio de la pantalla, el almacenamiento emulado, etc.</p>
+
+<p>Podemos establecer opciones predeterminadas más sanas mediante la inclusión de dos archivos desde <strong><code>vendor/cm</code></strong>. La primera línea podría ser agregada en la parte superior de <strong><code>device.mk</code></strong> y la segunda en la parte inferior de <strong><code>BoardConfig.mk</code></strong>:</p>
+
+<pre><code># Extra mk import at the top of device.mk
+$(call inherit-product, vendor/cm/config/common_full.mk)
+
+# Extra mk import at the bottom of BoardConfig.mk
+include vendor/cm/BoardConfig.mk</code>
+</pre>
+
+<p>Todavía se necesitan más opciones, ya que muchas son propiamente específicas del dispositivo . A continuación encontrarás una lista de adiciones y eliminaciones específicas de dispositivos comunes. Esta lista no es exhaustiva, pero agregando las dos líneas mencionadas arriba y configurando todas las de abajo,  tendrás un sistema funcional.</p>
+
+<pre><code># for Gecko to use the correct resolution assets
+# Valid options are: 1.5 | 2 | 2.25
+GAIA_DEV_PIXELS_PER_PX := 2.25</code>
+</pre>
+
+<pre><code># for Gecko to use the correct boot animation
+# Valid options are: hvga | fwvga | qHD | 720p | 1080p
+BOOTANIMATION_ASSET_SIZE := 1080p</code>
+</pre>
+
+<pre><code># for Gecko to support separate internal storage partition
+# This is for legacy devices only. You must prvide your own volume.cfg file
+GECKO_BOARD_SEPARATE_STORAGE_PARTITON := true</code>
+</pre>
+
+<pre><code># for Gecko to support virtual home button
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.moz.has_home_button=0</code>
+</pre>
+
+<pre><code># for Gecko to support usb mass storage
+# You may need to add mass_storage to init.oem.usb.rc
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+-    persist.sys.usb.config=mtp
++    persist.sys.usb.config=mass_storage</code>
+</pre>
+
+<pre><code># for Gecko to support NFC
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.moz.nfc.enabled=true
+
+PRODUCT_PACKAGES += \
+    nfcd</code>
+</pre>
+
+<pre><code># Changes in init.device.rc
+-on property:init.svc.bootanim=running
+-on property:init.svc.bootanim=stopped
+-on property:service.bootanim.exit=1
++on property:sys.boot_completed=1</code>
+</pre>
+
+<h2 id="Modificar_el_núcleo">Modificar el núcleo</h2>
+
+<p>Necesitamos habilitar en el núcleo algunas características de seguridad adicionales para Firefox OS. Estas características no estaban presentes en núcleos Android hasta Marshmallow así que muchos dispositivos necesitarán algunos parches 'backported' adicionales para el núcleo. Más información al respecto en <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=790923">Bugzilla: 790923</a>.</p>
+
+<p>Es suficiente tomar la mejor selección de parches para tu núcleo; el sistema de compilación habilitará automáticamente las nuevas características. Para un trabajo de ejemplo ver el <a href="https://github.com/cm-b2g/android_kernel_lge_msm8974/commits/b2g/cm-12.1-YOG7D">LGE MSM8994 kernel</a>.</p>
+
+<div class="warning"><strong>Importante</strong>: Este paso es obligatorio. Firefox OS no arrancará sin estas características de seguridad.</div>
+
+<h2 id="Compilar_e_instalar">Compilar e instalar</h2>
+
+<p>¿Recuerdas el archivo <strong><code>.config</code></strong> creado anteriormente? Ahora necesitamos reemplazar <strong><code>cm-porting</code></strong> con el nombre clave de tu dispositivo.</p>
+
+<pre><code>$ grep -r PRODUCT_NAME device/oem/123</code>
+</pre>
+
+<p>Nota: No uses el valor en cm.mk, usa el que está en <strong><code>device.mk</code></strong>, este debería ser algo como <strong><code>full_123</code></strong>. Puedes hacer el reemplazo manualmente o con <strong><code>sed</code></strong>:</p>
+
+<pre><code>$ sed -i "s/cm-porting/full_123/g" .config</code>
+</pre>
+
+<p>Ahora es momento de comenzar la compilación:</p>
+
+<pre><code>$ ./bldcm.sh</code>
+</pre>
+
+<p>Esto tomará, en todo caso, de 30 minutos a un par de horas dependiendo de tu PC, así que podría ser un buen momento para ir a la tienda y preparar algo de comer, o ayudar en las tareas de la casa.</p>
+
+<h3 id="Instalar_Firefox_OS_a_través_de_fastboot">Instalar Firefox OS a través de fastboot</h3>
+
+<p>Si tu dispositivo soporta <strong><code>fastboot</code></strong>, puedes simplemente mandar las imágenes de partición directamente al dispositivo:</p>
+
+<pre><code>cd out/target/product/123/
+fastboot flash boot boot.img
+fastboot flash recovery recovery.img
+fastboot flash system system.img
+fastboot flash userdata userdata.img</code>
+</pre>
+
+<h3 id="Instalar_Firefox_OS_através_del_recovery">Instalar Firefox OS através del recovery</h3>
+
+<p>Si tu dispositivo no soporta fastboot entonces puedes usar <strong><code>update.zip</code></strong> en su lugar. Este puede ser inicializado por el dispositivo a través de <strong><code>adb sideload</code></strong>. Una vez allí, deberás mandar el archivo .zip:</p>
+
+<pre><code>adb sideload out/target/product/123/fota/fullimg/update.zip</code>
+</pre>
+
+<h2 id="Solución_de_problemas">Solución de problemas</h2>
+
+<p>¿Algo no funciona? ¡Es momento de remangarse la camisa!</p>
+
+<p>Lo primero que debes hacer es determinar si la característica está funcionando en CyanogenMod. Puede que simplemente falte  alguna configuración para Firefox OS.</p>
+
+<p>Si la característica no funciona en CyanogenMod entonces significa que debes implementarla para tu 'port'. Sería bueno si también presionas tu revisión yendo atrás en el código.</p>
+
+<h3 id="Cámara">Cámara</h3>
+
+<p>Algunas partes de Android fueron removidas del proceso de compilación por ser innecesarias. Si tu cámara  arrojaburbujas de queja sobre la pérdida de funciones, verifica los marcos o la base para ver si las funciones fueron removidas. Podría ser posible traerlas de vuelta.</p>
+
+<h3 id="WiFi">WiFi</h3>
+
+<p>El dispositivo podría no ver ciertos Puntos de Acceso si no están en un canal oficial. Este parecería ser un problema de CyanogenMod o incluso de AOSP, ya que este afecta distintos tipos de hardware y diferentes OEMs.</p>

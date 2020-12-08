@@ -1,0 +1,187 @@
+---
+title: Marcado XML en los microresúmenes
+slug: Marcado_XML_en_los_microresúmenes
+tags:
+  - Esbozos
+  - Microresúmenes
+  - Todas_las_Categorías
+translation_of: Archive/Mozilla/Microsummary_topics/XML_grammar_reference
+---
+<p></p><div class="overheadIndicator draft">
+    <p><strong>Borrador</strong><br>
+    Esta página no está completa.</p>
+
+</div><p></p>
+<h2 id="Introducci.C3.B3n" name="Introducci.C3.B3n">Introducción</h2>
+<p>Un generador de microrresúmenes es un documento XML que describe la forma de recuperar información específica desde una página web para ser presentada de forma resumida como un marcador cuyo título cambia basándose en el contenido de la página que referencia.</p>
+<p>Este artículo proporciona información detallada sobre la gramática XML usada para construir generadores de microrresúmenes, describiendo cada elemento y sus atributos. Puedes ver una introducción de cómo crear un microrresumen leyendo el artículo <a href="es/Crear_un_microrresumen">Crear un microrresumen</a>.</p>
+<h2 id="Ejemplo" name="Ejemplo">Ejemplo</h2>
+<p>A continuación se muestra el generador de microrresúmenes creado en el tutorial <a href="es/Crear_un_microrresumen">Crear un microrresumen</a>.</p>
+<pre class="eval">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;generator xmlns="<span class="nowiki">http://www.mozilla.org/microsummaries/0.1</span>" name="Firefox Download Count"&gt;
+  &lt;template&gt;
+    &lt;transform xmlns="<span class="nowiki">http://www.w3.org/1999/XSL/Transform</span>" version="1.0"&gt;
+      &lt;output method="text"/&gt;
+      &lt;template match="/"&gt;
+        &lt;value-of select="id('download-count')"/&gt;
+        &lt;text&gt; Fx downloads&lt;/text&gt;
+      &lt;/template&gt;
+    &lt;/transform&gt;
+  &lt;/template&gt;
+  &lt;pages&gt;
+    &lt;include&gt;<span class="nowiki">http://(www\.)?spreadfirefox\.com/(index\.php)?</span>&lt;/include&gt;
+  &lt;/pages&gt;
+&lt;/generator&gt;
+</pre>
+<h2 id="Espacio_de_nombres" name="Espacio_de_nombres">Espacio de nombres</h2>
+<p>El URI del espacio de nombres para los documentos XML generadores de microrresúmenes es:</p>
+<pre class="eval"><span class="nowiki">http://www.mozilla.org/microsummaries/0.1</span>
+</pre>
+<p>Todos los elementos en un documento generador de microrresúmenes deben de estar en este espacio de nombres excepto los descendientes del elemento <code><a href="#The_.3Ctemplate.3E_element">&lt;template&gt;</a></code>, el cual debe de estar en el espacio de nombres de XSLT:</p>
+<pre class="eval"><span class="nowiki">http://www.w3.org/1999/XSL/Transform</span>
+</pre>
+<h2 id="El_elemento_.3Cgenerator.3E" name="El_elemento_.3Cgenerator.3E">El elemento <code>&lt;generator&gt;</code></h2>
+<p>El elemento <code>&lt;generator&gt;</code> es la etiqueta raíz para todos los generadores de microrresúmenes y debe de contener el resdo del código XML que describen al generador.</p>
+<p><b>Atributos:</b></p>
+<dl>
+ <dt>
+  <code>name</code> (requirido)</dt>
+ <dd>
+  Un nombre descriptibo y legible para el microrresumen creado por el generador.</dd>
+ <dt>
+  <code>uri</code> (opcional)</dt>
+ <dd>
+  Un URI único válido que identifique al generador. Sólo es relevante para los generadores creados dinámicamente por el código y las extensiones de Firefox. Los generadores instalados desde el web vía <code>nsSidebar::addMicrosummaryGenerator</code> son identificados por la URL remota desde la que son descargados. Para éstos, Firefox ignorará el valor de este atributo.</dd>
+</dl>
+<p><b>Elementos hijos:</b></p>
+<dl>
+ <dt>
+  <code><a href="#The_.3Ctemplate.3E_element">&lt;template&gt;</a></code> (requerido)</dt>
+ <dd>
+  Especifica cómo transformar páginas en sus microrresúmenes.</dd>
+ <dt>
+  <code><a href="#The_.3Cpages.3E_element">&lt;pages&gt;</a></code> (requerido)</dt>
+ <dd>
+  Identifica el conjunto de páginas que el generador es capaz de resumir.</dd>
+ <dt>
+  <code><a href="#The_.3Cupdate.3E_element">&lt;update&gt;</a></code> (opcional)</dt>
+ <dd>
+  Especifica cada cuanto tiempo debe Firefox actualizar los microrresúmenes.</dd>
+</dl>
+<h2 id="El_elemento_.3Ctemplate.3E" name="El_elemento_.3Ctemplate.3E">El elemento <code>&lt;template&gt;</code></h2>
+<p>El elemento <code>&lt;template&gt;</code> contiene la hoja de estilos XSLT que transforma páginas web en sus microrresúmenes.</p>
+<p><b>Atributos:</b></p>
+<p>
+ <i>
+  Ninguno.</i>
+</p>
+<p><b>Elementos hijos:</b></p>
+<dl>
+ <dt>
+  <code>&lt;stylesheet&gt;</code> o <code>&lt;transform&gt;</code> (requeridos)</dt>
+ <dd>
+  La hoja de estilos XSLT que realiza la transformación.</dd>
+</dl>
+<p>Para cada <a href="es/XSLT">XSLT</a>, debes especificar el elemento hijo de hojas de estilo usando o bien <code>&lt;stylesheet&gt;</code> o bien la etiqueta <code>&lt;transform&gt;</code>, las cuales son intercambiables.</p>
+<div class="note">
+ <p><b>Nota:</b> Aunque el elemento &lt;template&gt; debe de estar en el espacio de nombres del microrresumen (<span class="nowiki">http://www.mozilla.org/microsummaries/0.1</span>), sus elementos <code>&lt;stylesheet&gt;</code>/<code>&lt;transform&gt;</code> deben de estar en el espacio de nombres de XSLT (<span class="nowiki">http://www.w3.org/1999/XSL/Transform</span>).</p>
+</div>
+<h2 id="El_elemento_.3Cpages.3E" name="El_elemento_.3Cpages.3E">El elemento <code>&lt;pages&gt;</code></h2>
+<p>El elemento <code>&lt;pages&gt;</code> identifica el conjunto de páginas que el generador es capaz de resumir.</p>
+<p><b>Atributos:</b></p>
+<p>
+ <i>
+  Ninguno.</i>
+</p>
+<p><b>Elementos hijo:</b></p>
+<dl>
+ <dt>
+  <code><a href="#The_.3Cinclude.3E_element">&lt;include&gt;</a></code> (opcional)</dt>
+ <dd>
+  Una expresión regular que coincide con las URLs de las páginas que el generador es capaz de resumir.</dd>
+ <dt>
+  <code><a href="#The_.3Cexclude.3E_element">&lt;exclude&gt;</a></code> (opcional)</dt>
+ <dd>
+  Una expresión regular que coincide con las URLs de las páginas que el generador es incapaz de resumir.</dd>
+</dl>
+<p>El elemento <code>&lt;pages&gt;</code> puede contener cero o más elementos hijos <code>&lt;include&gt;</code> y <code>&lt;exclude&gt;</code>, cada uno de los cuales puede contener una expresión regular compatible con JavaScript. No debe de contener ningún otro elemento y no tiene ningún attributo.</p>
+<p>Cuando un generador es examinado para determinar si es capaz o no de resumir una página, las expresiones regulares proporcionadas por los elementos hijos son evaluadas con la URL de la página. Un generador es considerado capaz de resumir una página si al menos una de las expresiones <code>&lt;include&gt;</code> coincide con la URL de la página y ninguna de las expresiones <code>&lt;exclude&gt;</code> coincide con la URL de la página.</p>
+<p>El orden en el que los elementos hijos aparecen en el elemento <code>&lt;pages&gt;</code> no es relevante. Los espacios en blanco entre los elementos hijos y las expresiones regulares tampoco importan; no se consideran parte de la expresión regular y no afectan a la evaluación de dichas expresiones.</p>
+<p>El siguiente ejemplo identifica un generador como aquel capaz de resumir todas las páginas del sitio web <code>www.example.com</code> excepto las páginas llamadas <code>about.html</code>:</p>
+<pre class="eval">&lt;pages&gt;
+  &lt;include&gt;
+    <span class="nowiki">^http://www\.example\.com/</span>
+  &lt;/include&gt;
+  &lt;exclude&gt;/about\.html&lt;/exclude&gt;
+&lt;/pages&gt;
+</pre>
+<div class="note">
+ <b>Nota:</b> Las expresiones regulares diseñadas para coincidir con el comienzo de las URLs de las páginas deberían de empezar con el acento circunflejo(^) para asegurar que no coinciden por error con las URLs que simplemente contienen la URL con la que pretenden coincidir. Por ejemplo, la expresión regular <code><span class="nowiki">http://www\.example\.com/</span></code> coincidirá tanto con la URL <code><span class="nowiki">http://www.example.com/</span></code> como en la URL <code><span class="nowiki">http://www.evil.com/http://www.example.com/</span></code>, pero la expresión regular <code><span class="nowiki">^http://www\.example\.com/</span></code> sólo coincidirá con la primera de las anteriores dos URLs.</div>
+<p>Véase la referencia <a href="es/Core_JavaScript_1.5_Reference/Global_Objects/RegExp">Core_JavaScript_1.5_Reference:Global_Objects:RegExp</a> para detalles sobre la sintaxis válida de las expresiones regulares para los generadores y el tutorial <a href="es/Crear_expresiones_regulares_para_generadores_de_microrres%c3%bamenes">Crear expresiones regulares para generadores de microrresúmenes</a> para seguir paso a paso las instrucciones sobre cómo escribir expresiones regulares que coincidan con URLs.</p>
+<h2 id="El_elemento_.3Cinclude.3E" name="El_elemento_.3Cinclude.3E">El elemento <code>&lt;include&gt;</code></h2>
+<p>El elemento <code>&lt;include&gt;</code> identifica un conjunto de páginas que el generador es capaz de resumir. Debe de ser hijo del elemento <code>&lt;pages&gt;</code> y debe de contener una expresión regular compatible con JavaScript.</p>
+<p>Para más información sobre el uso de este elemento, véase la entrada para <a href="#The_.3Cpages.3E_element">#The_&lt;pages&gt;_element</a>.</p>
+<h2 id="El_elemento_.3Cexclude.3E" name="El_elemento_.3Cexclude.3E">El elemento <code>&lt;exclude&gt;</code></h2>
+<p>El elemento <code>&lt;exclude&gt;</code> identifica un conjunto de páginas que el generador no es capaz de resumir. Debe ser hijo del elemento <code>&lt;pages&gt;</code> y debe de contener una expresión regular compatible con JavaScript.</p>
+<p>Para más información sobre el uso de este elemento, véase la entrada para <a href="#The_.3Cpages.3E_element">#The_&lt;pages&gt;_element</a>.</p>
+<h2 id="El_elemento_.3Cupdate.3E" name="El_elemento_.3Cupdate.3E">El elemento <code>&lt;update&gt;</code></h2>
+<p>El elemento opcional <code>&lt;update&gt;</code> especifica cada cuánto tiempo debe Firefox actualizar los microrresúmenes generados por el generador. El elemento puede ser usado para especificar tanto un intervalo absoluto de actualización como una serie de intervalos condicionales basados en el contenido de la página que está siendo resumida.</p>
+<p><b>Atributos:</b></p>
+<dl>
+ <dt>
+  <code>interval</code> (opcional)</dt>
+ <dd>
+  Es el intervalo de tiempo absoluto (en minutos) que debe de transcurrir entre las actualizaciones.</dd>
+</dl>
+<p><b>Child Elements:</b></p>
+<dl>
+ <dt>
+  <code><a href="#The_.3Ccondition.3E_element">&lt;condition&gt;</a></code> (opcional)</dt>
+ <dd>
+  Una expresión XPath booleana junto con el intervalo de tiempo (en minutos) que debe de transcurrir entre las actualizaciones si la expresión se evalua a true.</dd>
+</dl>
+<p>El atributo <code>interval</code> define un intervalo absoluto en minutos. Su valor debe de ser un número mayor o igual que 1. Los valores decimales (p.e.: 5.5 minutos) están permitidos aunque probablemente no sean útiles.</p>
+<p>El elemento <code>&lt;update&gt;</code> puede contener cualquier número de elementos hijos <code>&lt;condition&gt;</code>.</p>
+<p>Firefox determina qué intervalo aplicar a un microrresumen generado por un generador de acuerdo a las siguiente reglas:</p>
+<ol>
+ <li>Firefox procesa cada elemento hijo <code>&lt;condition&gt;</code> en el orden en el que aparecen en el documento. Para cada uno, Firefox evalúa la expresión XPath booleana del elemento contra la página que va a ser resumida. Si la expresión se evalúa a <code>true</code>, Firefox aplicará el intervalo de ese elemento y detendrá el procesado de los elementos hijos. Así, la primera <code>&lt;condition&gt;</code> que coincida determinará el intervalo de actualización.</li>
+</ol>
+<ol>
+ <li>Si no hay elementos hijos <code>&lt;condition&gt;</code> o si ninguna de sus expresiones se evalúa a <code>true</code>, Firefox aplicará el valor del atributo <code>interval</code> del elemento <code>&lt;update&gt;</code>.</li>
+</ol>
+<ol>
+ <li>Si el elemento <code>&lt;update&gt;</code> no incluye un atributo <code>interval</code>, Firefox aplicará el intervalo especificado por la entrada browser.microsummary.updateInterval en las preferencias.</li>
+</ol>
+<ol>
+ <li>Si esa entrada no ha sido establecida, Firefox aplicará su intervalo de actualización por defecto, el cual dura 30 minutos.</li>
+</ol>
+<p><b>Notas:</b></p>
+<ul>
+ <li>Independientemente del intervalo absoluto o condicional de actualización especificado por este elemento, Firefox nunca actualizará los microrresúmenes con una frecuencia superior a un minuto.</li>
+ <li>Dado que Firefox comprueba los microrresúmenes caducados cada 15 segundos, es posible que la actualización de un microrresumen comience hasta 15 segundos después de lo que indica su intervalo.</li>
+ <li>Firefox respeta la caché del navegador cuando actualiza los microrresúmenes por lo que no recargará una página para actualizar su microrresumen si la caché contiene una copia reciente de la página.</li>
+</ul>
+<h2 id="El_elemento_.3Ccondition.3E" name="El_elemento_.3Ccondition.3E">El elemento <code>&lt;condition&gt;</code></h2>
+<p>El elemento opcional <code>&lt;condition&gt;</code> especifica una expresión XPath booleana junto con un intervalo de tiempo condicional (en minutos) que debe de transcurrir entre las actualizaciones si la expresión se evalúa a true cuando se evalúa contra la página que va a ser resumida. Debe de ser hijo del elemento <code>&lt;update&gt;</code>.</p>
+<p><b>Atributos:</b></p>
+<dl>
+ <dt>
+  <code>expression</code> (requerido)</dt>
+ <dd>
+  Una expresión XPath booleana para ser evaluada contra la página que va a ser resumida.</dd>
+ <dt>
+  <code>interval</code> (requerido)</dt>
+ <dd>
+  Un intervalo de tiempo, en minutos, que debe de transcurrir entre las actualizaciones si la expresión se evalúa a <code>true</code>.</dd>
+</dl>
+<p><b>Elementos hijos:</b></p>
+<p>
+ <i>
+  Ninguno.</i>
+</p>
+<p>Para más información acerca del uso de este elemento, véase la entrada para <a href="#The_.3Cupdate.3E_element">#The_&lt;update&gt;_element</a>.</p>
+<h2 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h2>
+<ul>
+ <li><a href="es/Crear_un_microrresumen">Crear un microrresumen</a></li>
+ <li><a href="es/XSLT">XSLT</a></li>
+</ul>

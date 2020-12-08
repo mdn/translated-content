@@ -1,0 +1,73 @@
+---
+title: Compatibilidad de navegadores
+slug: Mozilla/Persona/Browser_compatibility
+translation_of: Archive/Mozilla/Persona/Browser_compatibility
+---
+<h2 id="Navegadores_compatibles">Navegadores compatibles</h2>
+<p><strong>Persona</strong> está desarrollado, probado y es compatible con los siguientes navegadores. Gracias a la biblioteca JavaScript multiplataforma de <em>Persona</em>, los usuarios no necesitan complementos para poderlo usar.</p>
+<table>
+  <tbody>
+    <tr>
+      <th colspan="3" scope="row" style="text-align: center; background-color: #d3d7cf;"><strong>Navegadores de escritorio</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Internet Explorer</strong></th>
+      <td colspan="2" rowspan="1" style="background-color: #8ae234;">8.0<sup>*</sup>, 9.0<sup>†</sup></td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Firefox</strong></th>
+      <td colspan="2" style="background-color: #8ae234;">Actual estable, Beta, Aurora, Nightly, y versiones ESR<br>
+        Versión anterior estable</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Chrome</strong></th>
+      <td colspan="2" style="background-color: #8ae234;">Última versión estable</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Safari</strong></th>
+      <td colspan="2" style="background-color: #8ae234;">Última versión estable</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Opera</strong></th>
+      <td colspan="2" style="background-color: #8ae234;">Última versión estable<sup>‡</sup></td>
+    </tr>
+    <tr>
+      <th colspan="3" scope="row" style="text-align: center; background-color: #d3d7cf;"><strong>Navegadores en iOS</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Mobile Safari</strong></th>
+      <td colspan="2" rowspan="1" style="background-color: #8ae234;">iOS 5.x — 6.x</td>
+    </tr>
+    <tr>
+      <th colspan="3" scope="row" style="text-align: center; background-color: #d3d7cf;"><strong>Navegadores en Android</strong></th>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Navegador predeterminado</strong></th>
+      <td colspan="2" rowspan="1" style="background-color: #8ae234;">2.x — 4.x</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Firefox</strong></th>
+      <td colspan="2" style="background-color: #8ae234;">Actual estable, Beta, Aurora, y versiones<br>
+        Versión anterior estable</td>
+    </tr>
+    <tr>
+      <th scope="row"><strong>Chrome</strong></th>
+      <td colspan="2" style="background-color: #8ae234;">Última versión estable</td>
+    </tr>
+  </tbody>
+</table>
+<p><sup>*</sup>: En Windows XP. <sup>†</sup>: En Windows Vista y Windows 7. <sup>‡</sup>: Siempre que se pueda.</p>
+<h2 id="Navegadores_no_compatibles">Navegadores no compatibles</h2>
+<ul>
+  <li>No son compatibles las versiones 6.0 y 7.0 de Internet Explorer. Se pedirá a los usuarios actualizar su navegador.</li>
+  <li>Google Chrome Frame no es compatible y no funcionará. Es posible que se añada más adelante (<a href="https://github.com/mozilla/browserid/issues/796" title="https://github.com/mozilla/browserid/issues/796">Problema #796</a>).</li>
+  <li>Los navegadores de terceros en iOS no son compatibles y no funcionarán. Es posible que se añada más adelante (<a href="https://github.com/mozilla/browserid/issues/1870" title="https://github.com/mozilla/browserid/issues/1870">Problema #1870</a>, <a href="https://github.com/mozilla/browserid/issues/2034" title="https://github.com/mozilla/browserid/issues/2034">Problema #2034</a>).</li>
+</ul>
+<h2 id="Otros_navegadores">Otros navegadores</h2>
+<p>Aunque no se indique explicitamente, cualquier navegador que incluya tanto {{ domxref("window.postMessage()") }} y {{ domxref("Storage", "localStorage") }} debería funcionar. Estas APIs están disponibles en la mayoría de los navegadores desde marzo de 2010.</p>
+<h2 id="Problemas_conocidos">Problemas conocidos</h2>
+<ul>
+  <li>Los navegadores deben aceptar cookies de terceros para una funcionalidad completa (<a href="https://github.com/mozilla/browserid/issues/1352" title="https://github.com/mozilla/browserid/issues/1352">Problema #1352</a>).</li>
+  <li>Los usuarios de Android 2.x que no tengan un navegador predeterminado puede que no sean capaces de iniciar sesión (<a href="https://github.com/mozilla/browserid/issues/1854" title="https://github.com/mozilla/browserid/issues/1854">Problema #1854</a>).</li>
+  <li>Cuando se fuerza a emular IE8, Internet Explorer 9 puede que falle en iniciar sesión en algunos sitios.</li>
+</ul>

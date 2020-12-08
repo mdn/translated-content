@@ -1,0 +1,128 @@
+---
+title: for each...in
+slug: Web/JavaScript/Reference/Statements/for_each...in
+translation_of: Archive/Web/JavaScript/for_each...in
+---
+<div>{{jsSidebar("Statements")}}</div>
+
+<div class="warning">
+<p style="direction: rtl;">טענת "<code>for each...in" </code>הוצאה משימוש בסטנדרט (ECMA-357 (<a href="/en-US/docs/Archive/Web/E4X" title="/en-US/docs/E4X">E4X</a>. התמיכה ב-E4X אמנם הוסרה, אך טענת ה"<code>for each...in" </code>לא תבוטל ולא תוסר מטעמי תאימות לגרסאות קודמות. עם זאת, מומלץ להשתמש בטענת "<a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of" title="/en-US/docs/JavaScript/Reference/Statements/for...of">for...of</a>" במקום. (ע"ע {{ bug("791343")}} ). </p>
+</div>
+
+<p style="direction: rtl;">טענה מסוג:</p>
+
+<p style="direction: rtl;"><code><strong>for each...in</strong></code></p>
+
+<p style="direction: rtl;">("עבור כל... ב...")</p>
+
+<p style="direction: rtl;">חגה סביב  כל הערכים של כל "פריטי הרכוש" (properties) של משתנה נתון. עבור כל אחד מפריטי הרכוש תבוצע טענה מוגדרת.</p>
+
+<h2 id="תחביר" style="direction: rtl;">תחביר</h2>
+
+<pre class="syntaxbox"><code>for each (<em>variable</em> in <em>object</em>) {
+  <em>statement</em>
+}</code></pre>
+
+<dl>
+ <dt style="direction: rtl;"><code>variable</code></dt>
+ <dd style="direction: rtl;">המשתנה שיחוג סביב הערכים של פרטי הרכוש. ניתן (אך לא חובה)  להצהיר על משתנה זה עם מילת המפתח var. המשתנה הזה הוא פנימי לפונקציה, ולא ללולאה עצמה.</dd>
+</dl>
+
+<dl>
+ <dt style="direction: rtl;"><code>object</code></dt>
+ <dd style="direction: rtl;">האובייקט שסביב פריטי הרכוש שלו יש לחוג. </dd>
+</dl>
+
+<dl>
+ <dt style="direction: rtl;"><code>statement</code></dt>
+ <dd style="direction: rtl;">טענה שיש לבצע עבור כל אחד מפריטי הרכוש. על מנת לבצע יותר מטענה אחת בתוך הלולאה, יש להשתמש בטענת בלוק (<code>{ ... }</code>) כדי לקבץ את הטענות הללו יחדיו.</dd>
+</dl>
+
+<h2 id="תיאור" style="direction: rtl;">תיאור</h2>
+
+<p style="direction: rtl;"> </p>
+
+<p>Some built-in properties are not iterated over. These include all built-in methods of objects, e.g. <code>String</code>'s <code>indexf</code></p>
+
+<p>method. However, all user-defined properties are iterated over.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Using_for_each...in">Using <code>for each...in</code></h3>
+
+<p><strong>Warning:</strong> Never use a loop like this on arrays. Only use it on objects. See <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a> for more details.</p>
+
+<p>The following snippet iterates over an object's properties, calculating their sum:</p>
+
+<pre class="brush:js">var sum = 0;
+var obj = {prop1: 5, prop2: 13, prop3: 8};
+
+for each (var item in obj) {
+  sum += item;
+}
+
+console.log(sum); // logs "26", which is 5+13+8</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>Not part of a current ECMA-262 specification. Implemented in JavaScript 1.6 and deprecated.</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("1.8")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile("1.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in" title="JavaScript/Reference/Statements/for...in">for...in</a></code> - a similar statement that iterates over the property <em>names</em>.</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...of" title="/en-US/docs/JavaScript/Reference/Statements/for...of">for...of</a></code> - a similar statement that iterates over the property <em>values</em> but can only be used for iteratable types, so not for generic objects</li>
+ <li><code><a href="/en-US/docs/JavaScript/Reference/Statements/for" title="JavaScript/Reference/Statements/for">for</a></code></li>
+</ul>

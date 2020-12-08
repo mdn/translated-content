@@ -1,0 +1,63 @@
+---
+title: Εγκαθιστώντας το firefox OS σε μία κινητή συσκευή
+slug: Archive/B2G_OS/Εγκατάσταση_σε_κινητή_συσκευή
+translation_of: Archive/B2G_OS/Installing_on_a_mobile_device
+---
+<div class="warning">
+  <p><strong>Προσοχή: </strong>Αυτή είναι μία ημιτελής μετάφραση</p>
+</div>
+<p>Μόλις  χτίσετε το Boot to Gecko για μια κινητή συσκευή, μπορείτε να το εγκαταστήσετε. Αυτό το άρθρο θα σας οδηγήσει στην διαδικασία.</p>
+<div class="note">
+  <strong>Σημείωση:</strong> Την πρώτη φορά που θα φλασάρετε το κινητό σας, <strong>πρέπει</strong> να έχει εγκατεστημένο το Android 4 (Ice Cream Sandwich)</div>
+<h2 id="Flashing_your_phone">Flashing your phone</h2>
+<p>To flash everything to your phone, simply connect your phone and type:</p>
+<pre>./flash.sh
+</pre>
+<p>That's it. The B2G you've currently got built will flash onto your device.</p>
+<h3 id="Configuring_the_udev_rule_for_your_device">Configuring the udev rule for your device</h3>
+<p>On Linux, if you get this,</p>
+<pre>&lt; waiting for device &gt;</pre>
+<p>that probably means that you haven't added a udev rule for the fastboot device, which is not the same as the one for adb. You can get the USB vendor ID by running <code>lsusb</code> now, but typically it's Google's: 18d1, so adding this line in your <code>/etc/udev/rules.d/51-android.rules</code> would work:</p>
+<pre>SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666", GROUP="plugdev"</pre>
+<div class="note">
+  <strong>Note:</strong> If you get a very helpful <code>libusb</code> error "-3" on Linux, it means you need to be root to have the needed access to the USB device. Run the script again using <code>sudo</code>.</div>
+<div class="note">
+  <strong>Note 2</strong>: If you have a Unagi phone, you need two lines like this - one for the original phone vendor's ID, and one for Google's.</div>
+<h3 id="Special_notes_for_the_Samsung_Galaxy_S2">Special notes for the Samsung Galaxy S2</h3>
+<p>If your phone is a Galaxy S2 and you are using heimdall 1.3.2 (the latest version; use <code>heimdall version</code> to check), you may see an alarming error "FACTORYFS upload failed!" followed by "Heimdall flashing failed" and some additional information. This is actually a success condition, and you can ignore the advice.</p>
+<p>To get rid of this strange behavior, grab a <a class="link-https" href="https://github.com/Benjamin-Dobell/Heimdall" title="https://github.com/Benjamin-Dobell/Heimdall">source copy</a> of heimdall, downgrading to the 1.3.1 release ("<code>git checkout fbbed42c1e5719cc7a4dceeba098981f19f37c06</code>"), then compile it  according to the <code>README</code>, then install that to make the error go away. However, this isn't strictly necessary.</p>
+<p>All versions of heimdall are unable to flash a system.img larger than 100MB. Do:</p>
+<pre>ls -l ./out/target/product/galaxys2/system.img
+</pre>
+<p>to see how big yours is. If it's too large, ask in IRC for advice; there are ways to do it in two stages.</p>
+<h2 id="Added_step_for_the_Samsung_Galaxy_S2">Added step for the Samsung Galaxy S2</h2>
+<p>If you're flashing onto the Galaxy S2, there is an additional step to follow. Gaia does not get flashed automatically by the <code>flash.sh</code> script; you'll need to also do:</p>
+<pre>./flash.sh gaia
+</pre>
+<h2 id="Flashing_specific_partitions_to_fastboot_phones">Flashing specific partitions to fastboot phones</h2>
+<p>You can flash specific partitions to fastboot phones (that is, any phone other than the Samsung Galaxy S2). For example:</p>
+<pre>./flash.sh system
+./flash.sh boot
+./flash.sh user
+</pre>
+<h2 id="Updating_specific_modules">Updating specific modules</h2>
+<p>You can update specific components of B2G by specifying their names when flashing. For example:</p>
+<pre>./flash.sh gaia
+./flash.sh gecko
+</pre>
+<p>In order to update only one application you can use BUILD_APP_NAME environment variable:</p>
+<pre>BUILD_APP_NAME=calendar ./flash.sh gaia</pre>
+<h2 id="Next_steps">Next steps</h2>
+<p>At this point, your phone should be running Boot to Gecko! It's time to experiment, <a href="/en/Mozilla/Boot_to_Gecko/Writing_apps_for_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Writing_apps_for_Boot_to_Gecko">write some code</a>, <a href="/en/Mozilla/Boot_to_Gecko/Testing_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Testing_Boot_to_Gecko">test</a>, or <a href="/en/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">do some debugging</a>!</p>
+<div class="note">
+  <strong>Note:</strong> A helpful usage tip: if your build of B2G starts up with the lock screen requesting a pass code to unlock the phone, the default code is 0000.</div>
+<h2 class="note" id="Troubleshooting">Troubleshooting</h2>
+<p>Here are a some tips for what to do if your device doesn't work right after installing B2G, or updating it to a new version</p>
+<h3 class="note" id="If_the_UI_doesnt_start_up">If the UI doesn't start up</h3>
+<p>If you update your phone and the user interface doesn't start up, you can reset it to clear out out-of-date configuration and the like. This may bring it back to life. Here's how:</p>
+<pre>cd gaia
+make reset-gaia
+</pre>
+<h3 class="note" id="image_is_too_large_error_message_on_.flash.sh_execution">"image is too large" error message on ./flash.sh execution</h3>
+<p>It might mean that you phone needs to be rooted first before flashing it. As b2g needs to be written on root partition, your phone needs to be rooted in order to install it.</p>
+<p> </p>

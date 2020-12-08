@@ -1,0 +1,79 @@
+---
+title: Instalar Firefox OS en un dispositivo móvil
+slug: Archive/B2G_OS/Installing_on_a_mobile_device
+tags:
+  - Firefox OS
+  - Flashear
+  - Galaxy S2
+  - i9100
+translation_of: Archive/B2G_OS/Installing_on_a_mobile_device
+---
+<p></p>
+<p>Una vez que se ha construido Boot to Gecko para un <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Have_a_compatible_device_or_use_an_emulator" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites#Have_a_compatible_device_or_use_an_emulator">dispositivo móvil compatible</a>, puede instalarlo. Este artículo le guiará a través del proceso.</p>
+<div class="note">
+ <strong>Nota:</strong> La primera vez que flashea su teléfono, <strong>deberá </strong>tener Android 4 (Ice Cream Sandwich) instalado. De lo contrario el proceso no funcionará correctamente. Una vez que usted ha hecho su primera instalación de B2G, sin embargo, sólo tiene que actualizar en la parte superior de la misma.</div>
+<h2 id="Instalando_ADB">Instalando ADB</h2>
+<p><strong>En OSX:</strong></p>
+<p>Si tienes homebrew en OSX:</p>
+<pre>brew install android-platform-tools
+</pre>
+<p>De lo contrario descargue las Herramientas para Desarrolladores Android y agrega los binarios a tu PATH.</p>
+<p><strong>En Ubuntu:</strong></p>
+<pre>sudo apt-get install android-tools-adb</pre>
+<h2 id="Flasheando_su_telefono">Flasheando su telefono</h2>
+<p>Para actualizar todo a su teléfono, sólo tiene que conectar el teléfono y el tipear:</p>
+<pre>./flash.sh
+</pre>
+<p>Eso es todo. El B2G que tienes actualmente en construcción flasheara el dispositivo.</p>
+<h3 id="Configuración_de_la_regla_de_udev_para_su_dispositivo">Configuración de la regla de udev para su dispositivo</h3>
+<p>En Linux, si obtine,</p>
+<pre>&lt; waiting for device &gt;</pre>
+<p>probablemente significa que usted no ha añadido una regla udev para el dispositivo fastboot, que no es el mismo que el de adb. Usted puede obtener el ID de proveedor USB al ejecutar lsusb ahora, pero por lo general es de Google: 18d1, por lo que añadir esta línea en el archivo / etc/udev/rules.d/51-android.rules funcionaría:</p>
+<pre>SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666", GROUP="plugdev"</pre>
+<div class="note">
+ <strong>Nota: </strong>Si usted recibe un error libusb muy útil "-3" en Linux, esto significa que usted tiene que ser root para tener el acceso necesario para el dispositivo USB. Ejecute el script de nuevo usando sudo.</div>
+<div class="note">
+ <strong>Nota 2</strong>: Si tienes un un teléfono Keon Geeksphone o Unagi, necesita dos líneas como esta - una para la identificación del proveedor original del teléfono y otra para la de Google.</div>
+<h3 id="Notas_especiales_para_el_Samsung_Galaxy_S2">Notas especiales para el Samsung Galaxy S2</h3>
+<p>Si el teléfono es un Galaxy S2 y utiliza Heimdall 1.3.2 (la versión más reciente, use <code>heimdall version</code> para comprobar), es posible que vea un error alarmante "FACTORYFS upload failed!" seguido de "Heimdall flashing failed" y alguna información adicional. Esto es realmente una condición de finalización satisfactoria, y se puede hacer caso omiso de los consejos.</p>
+<div>
+  </div>
+<div>
+ Para deshacerse de este extraño comportamiento, tomar una <a href="https://github.com/Benjamin-Dobell/Heimdall" title="https://github.com/Benjamin-Dobell/Heimdall">copia de origen</a> de Heimdall, degradar a la versión 1.3.1 (<code>"git checkout fbbed42c1e5719cc7a4dceeba098981f19f37c06"</code>), luego compilarlo según el README, a continuación, instalarlo para que el error desaparezca. Sin embargo, esto no es estrictamente necesario.</div>
+<div>
+  </div>
+<div>
+ Todas las versiones de Heimdall son incapaces de flashear una system.img mayor que 100 MB. hacer:</div>
+<pre>ls -l ./out/target/product/galaxys2/system.img
+</pre>
+<p>para ver qué tan grande es el suyo. Si es demasiado grande, pregunte en el IRC para aconsejarlo; hay maneras de hacerlo en dos etapas.</p>
+<h2 id="Paso_añadido_para_el_Samsung_Galaxy_S2">Paso añadido para el Samsung Galaxy S2</h2>
+<p>Si está flasheando el Galaxy S2, hay un paso adicional a seguir. Gaia no consigue flashear automáticamente por el script flash.sh, necesitará hacer también:</p>
+<pre>./flash.sh gaia
+</pre>
+<h2 id="Flasheando_particiones_específicas_para_teléfonos_fastboot">Flasheando particiones específicas para teléfonos fastboot</h2>
+<p>Usted puede flashear particiones específicas para teléfonos fastboot (es decir, cualquier teléfono que no sea el Samsung Galaxy S2). Por ejemplo:</p>
+<pre>./flash.sh system
+./flash.sh boot
+./flash.sh user
+</pre>
+<h2 id="Actualización_de_módulos_específicos">Actualización de módulos específicos</h2>
+<p>Puede actualizar los componentes específicos de B2G especificando sus nombres cuando flashea. Por ejemplo:</p>
+<pre>./flash.sh gaia
+./flash.sh gecko
+</pre>
+<p>Para actualizar sólo una aplicación puede utilizar la variable de entorno BUILD_APP_NAME:</p>
+<pre>BUILD_APP_NAME=calendar ./flash.sh gaia</pre>
+<h2 id="Próximos_pasos">Próximos pasos</h2>
+<p>En este punto, el teléfono debe estar ejecutando Boot to Gecko! Es hora de experimentar, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Application_development" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Application_development">escribir algo de código</a>, <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing">prueba</a>, o <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Debugging" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Debugging">hacer algo de depuración!</a></p>
+<div class="note">
+ <strong>Note:</strong> Un consejo útil de uso: si su estructura de B2G se inicia con la pantalla de bloqueo solicitar un código de acceso para desbloquear el teléfono, el código por defecto es 0000.</div>
+<h2 class="note" id="Solución_de_problemas">Solución de problemas</h2>
+<p>Aquí hay algunos consejos sobre qué hacer si el dispositivo no funciona correctamente después de instalar B2G, o actualizar a una nueva versión</p>
+<h3 class="note" id="Si_la_interfaz_de_usuario_no_se_inicia">Si la interfaz de usuario no se inicia</h3>
+<p>Si actualizas el teléfono y la interfaz de usuario no inicia, puede restablecerla para limpiar configuración fuera de fecha y similares. Esto puede traer de vuelta a la vida. He aquí cómo:</p>
+<pre>cd gaia
+make reset-gaia
+</pre>
+<h3 class="note" id="la_imagen_es_demasiado_grande_mensaje_de_error_en_la_ejecución_.flash.sh">"la imagen es demasiado grande" mensaje de error en la ejecución ./flash.sh</h3>
+<p>Podría significar que el teléfono necesita ser arraigada primero antes de flashear ella. Como b2g tiene que ser escrito en la partición root, el teléfono debe estar enraizado con el fin de instalarlo.</p>

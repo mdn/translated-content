@@ -1,0 +1,74 @@
+---
+title: Barras de desplazamiento
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Barras_de_desplazamiento
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - para_revisar
+translation_of: Archive/Mozilla/XUL/Tutorial/Scroll_Bars
+---
+<p>Ahora, aprenderemos a añadir barras de desplazamiento en una ventana.</p>
+
+<h3 id="A.C3.B1adiendo_barras_de_desplazamiento" name="A.C3.B1adiendo_barras_de_desplazamiento">Añadir barras de desplazamiento</h3>
+
+<p>Una barra de desplazamiento sirve para que un usuario pueda moverse en un documento grande. También puedes usarla cuando tienes que buscar un valor que está dentro de un cierto rango. Las barras de desplazamiento pueden crearse de varias formas. En XUL, puede crearse una usando la etiqueta <code><code><a href="/es/docs/Mozilla/Tech/XUL/scrollbar" title="scrollbar">scrollbar</a></code></code>. Algunos elementos, como cajas de texto, también añadirán barras de desplazamiento cuando el contenido de dentro es demasiado grande</p>
+
+<p>En esta sección, hablaremos de la creación de una barra de desplazamiento independiente. El usuario pondrá el valor ajustando la barra de desplazamiento. Probablemente no usarás esto a menudo. Una barra de desplazamiento está compuesta de varias partes: el deslizador, que es la parte principal de la barra de desplazamiento con la caja ajustable, y los dos botones de flecha. Una barra de desplazamiento crea todos estos elementos automáticamente.</p>
+
+<p><img alt="Imagen:BarraDesplazamiento.jpg" class="internal" src="/@api/deki/files/1107/=BarraDesplazamiento.jpg"></p>
+
+<p>La sintaxis de una barra de desplazamiento es la siguiente:</p>
+
+<pre>&lt;scrollbar
+    id="barrahori"
+    orient="horizontal"
+    curpos="50"
+    maxpos="400"
+    increment="2"
+    pageincrement="10"/&gt;
+</pre>
+
+<p>Los atributos son los siguientes:</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> <code>id</code></dt>
+ <dd>El identificador único de la barra de desplazamiento</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-orient"><a href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Attribute/orient">orient</a></code> <code>orient</code></dt>
+ <dd>Especifica la dirección de la barra de desplazamiento. Por defecto es <code>horizontal</code>, que crea una barra de desplazamiento que se extiende de izquierda a derecha. También puedes especificar <code>vertical</code> que crea una barra de desplazamiento que se extiende de arriba abajo.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-curpos"><a href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Attribute/curpos">curpos</a></code> <code>curpos</code></dt>
+ <dd>Indica la posición actual de la barra de desplazamiento (la caja que puedes deslizar hacia adelante y hacia atrás.) El rango de valores se extiende de 0 al valor de maxpos. Este valor no es necesario. El valor por defecto es 0.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-maxpos"><a href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Attribute/maxpos">maxpos</a></code> <code>maxpos</code></dt>
+ <dd>Indica la posición máxima de la barra de desplazamiento. Es un valor numérico. El valor por defecto es 100.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-increment"><a href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Attribute/increment">increment</a></code> <code>increment</code></dt>
+ <dd>Este valor especifica cuánto cambia el valor de <code>curpos</code> cuando el usuario pulsa sobre una de las flechas de barra de desplazamiento. El valor por defecto es 1.</dd>
+</dl>
+
+<dl>
+ <dt><code id="a-pageincrement"><a href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Attribute/pageincrement">pageincrement</a></code> <code>pageincrement</code></dt>
+ <dd>Este valor especifica cuánto cambia el valor <code>curpos</code> cuando el usuario hace clic sobre las páginas con la barra de desplazamiento, que puede hacerse pulsando sobre la bandeja entre la caja y las flechas. El valor por defecto es 10.</dd>
+</dl>
+
+<p>El ejemplo dado en la sintaxis anterior creará una barra de desplazamiento que puede extenderse de un valor de 0 a 100. El valor 100 podría ser el número de líneas en una lista, pero podría ser lo que quieras. El valor inicial en este ejemplo es 20. Al hacer clic sobre una de las flechas de barra de desplazamiento, el valor se cambiará por 1 encima de o abajo. Pero paginando por la barra de desplazamiento, el valor se cambiará por 10.</p>
+
+<p>Cuando el usuario haga clic sobre las flechas de la barra de desplazamiento, se moverá la cantidad especificada por el valor <code>increment</code>. El aumento del valor de este atributo hará que la barra de desplazamiento se mueva más lejos con cada clic. La posición más a la izquierda o superior de la barra de desplazamiento tiene el valor 0 y la posición más a la derecha o inferior de la barra de desplazamiento tiene el valor dado por <code>maxpos</code>.</p>
+
+<p>Ajustando los valores de la barra de desplazamiento, puedes tener el thumb posicionado donde quieras y el cambio cuando el usuario haga clic en las flechas tal y como desees.</p>
+
+<p>A continuación, aprenderemos a <a href="/es/Tutorial_de_XUL/Barra_de_Herramientas" title="es/Tutorial_de_XUL/Barra_de_Herramientas">crear barras de herramientas</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Divisores" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Barra_de_Herramientas">Siguiente  »</a></p>
+</div>

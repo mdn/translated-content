@@ -1,0 +1,185 @@
+---
+title: TelephonyCall
+slug: Archive/B2G_OS/API/TelephonyCall
+translation_of: Archive/B2G_OS/API/TelephonyCall
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/es/docs/Web/API/Archive"><code>Archive</code></a></strong></li></ol></section><p></p>
+<p></p><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> No estándar</strong><br>
+      This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p>
+      </div><p></p>
+<p></p><div class="warning">
+    <p style="text-align: center;">This API is available on <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> for <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">internal applications</a> only.</p>
+</div><p></p>
+<h2 id="Resumen">Resumen</h2>
+<p>Representa una llamada telefonica, <span id="result_box" lang="es"><span class="hps">proporciona</span> <span class="hps">información sobre la llamada</span> <span class="hps">y ofreciendo</span> <span class="hps">mecanismos</span> <span class="hps">para controlar</span> <span class="hps">y</span> <span class="hps">detectar</span> <span class="hps">los cambios en</span> <span class="hps">su estado.</span></span></p>
+<h2 id="Propiedades">Propiedades</h2>
+<dl>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/number" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.number</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>
+  <span id="result_box" lang="es"><span class="hps">Cadena que indica el</span> <span class="hps">número de teléfono</span> <span class="hps">correspondiente a la llamada</span><span>.</span></span></dd>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/state" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.state</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>
+  <span id="result_box" lang="es"><span class="hps">Una</span> <span class="hps">cadena que indica el</span> <span class="hps">estado de la llamada</span><span>.</span></span></dd>
+</dl>
+<h3 id="Controladores_de_eventos">Controladores de eventos</h3>
+<dl>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/onalerting" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.onalerting</code></a></dt>
+ <dd>
+  A function to be called when the call alerts. <strong>What does this mean?</strong></dd>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/onbusy" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.onbusy</code></a></dt>
+ <dd>
+  <span id="result_box" lang="es"><span class="hps">Una función</span> <span class="hps">que se llamará cuando</span> <span class="hps">se recibe una</span> <span class="hps">señal de ocupado</span> <span class="hps">al intentar</span> <span class="hps">marcar.</span></span></dd>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/onconnected" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.onconnected</code></a></dt>
+ <dd>
+  <span id="result_box" lang="es"><span class="hps">Una función</span> <span class="hps">que se llamará</span> <span class="hps">una vez que se</span> <span class="hps">conecte la llamada</span><span>.</span></span></dd>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/onconnecting" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.onconnecting</code></a></dt>
+ <dd>
+  <span id="result_box" lang="es"><span class="hps">Una función</span> <span class="hps">que se llamará</span> <span class="hps">después de marcar</span><span>,</span> <span class="hps">a la espera de</span> <span class="hps">una conexión.</span></span></dd>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/ondialing" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.ondialing</code></a></dt>
+ <dd>
+  <span id="result_box" lang="es"><span class="hps">Una función</span> <span class="hps">que se llamará</span> <span class="hps">cuando la llamada</span> <span class="hps">comienza a marcar</span> <span class="hps">el </span></span><a href="/es/docs/Web/API/TelephonyCall/number" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>number</code></a>.</dd>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/ondisconnected" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.ondisconnected</code></a></dt>
+ <dd>
+  <span id="result_box" lang="es"><span class="hps">Una función</span> <span class="hps">que se llamará</span> <span class="hps">después de</span> <span class="hps">que la llamada haya</span> <span class="hps">terminado</span> <span class="hps">de desconectar.</span></span></dd>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/ondisconnecting" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.ondisconnecting</code></a></dt>
+ <dd>
+  <span id="result_box" lang="es"><span class="hps">Una función</span> <span class="hps">que se llamará cuando</span> <span class="hps">la llamada</span> <span class="hps">comienza a</span> <span class="hps">desconectar.</span></span></dd>
+ <dt>
+  <span lang="es"><span class="hps"><span style="color: #ff0000;">TelephonyCall.onincoming</span></span></span></dt>
+ <dd>
+  <span id="result_box" lang="es"><span class="hps">Una</span> <span class="hps">función a llamar</span> <span class="hps">cuando se detecta</span> <span class="hps">una llamada entrante.</span></span></dd>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/onstatechange" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.onstatechange</code></a></dt>
+ <dd>
+  A function to be called when the <a href="/es/docs/Web/API/TelephonyCall/state" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>state</code></a> of the call changes.</dd>
+</dl>
+<h2 id="Metodos">Metodos</h2>
+<dl>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/answer" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.answer()</code></a></dt>
+ <dd>
+  Responde a una llamada entrante</dd>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/hangUp" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.hangUp()</code></a></dt>
+ <dd>
+  Cuelga la llamada</dd>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/hold" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.hold()</code></a></dt>
+ <dd>
+  <span id="result_box" lang="es"><span class="hps">Permite</span> <span class="hps">poner</span> <span class="hps">una llamada en espera</span><span>.</span></span></dd>
+ <dt>
+  <a href="/es/docs/Web/API/TelephonyCall/resume" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>TelephonyCall.resume()</code></a></dt>
+ <dd>
+  <span id="result_box" lang="es"><span class="hps">Permite</span> <span class="hps">recuperar</span> <span class="hps">una llamada</span> <span class="hps">en espera</span>.</span></dd>
+</dl>
+<p><code>TelephonyCall</code> <span id="result_box" lang="es"><span class="hps">también</span> <span class="hps">hereda métodos de</span></span> <a href="/es/docs/Web/API/EventTarget" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a>:</p>
+<p></p><dl>
+ <dt><a href="/en-US/docs/Web/API/EventTarget/addEventListener" title="The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target."><code>EventTarget.addEventListener()</code></a></dt>
+ <dd>Register an event handler of a specific event type on the <code>EventTarget</code>.</dd>
+ <dt><a href="/en-US/docs/Web/API/EventTarget/removeEventListener" title="The EventTarget.removeEventListener() method removes from the EventTarget an event listener previously registered with EventTarget.addEventListener(). The event listener to be removed is identified using a combination of the event type, the event listener function itself, and various optional options that may affect the matching process; see Matching event listeners for removal"><code>EventTarget.removeEventListener()</code></a></dt>
+ <dd>Removes an event listener from the <code>EventTarget</code>.</dd>
+ <dt><a href="/en-US/docs/Web/API/EventTarget/dispatchEvent" title="Dispatches an Event at the specified EventTarget, (synchronously) invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) also apply to events dispatched manually with dispatchEvent()."><code>EventTarget.dispatchEvent()</code></a></dt>
+ <dd>Dispatch an event to this <code>EventTarget</code>.</dd>
+</dl>
+
+<h3 id="Additional_methods_for_Mozilla_chrome_code">Additional methods for Mozilla chrome code</h3>
+
+<p>Mozilla extensions for use by JS-implemented event targets to implement on* properties. See also <a href="/en-US/docs/Mozilla/WebIDL_bindings">WebIDL bindings</a>.</p>
+
+<ul>
+ <li>void <strong>setEventHandler</strong>(DOMString type, EventHandler handler) <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></li>
+ <li>EventHandler <strong>getEventHandler</strong>(DOMString type) <span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span></li>
+</ul><p></p>
+<h2 id="Especificaciones">Especificaciones</h2>
+<p><span id="result_box" lang="es"><span class="hps">Se trata de</span> <span class="hps">una implementación no</span> <span class="hps">estándar, pero</span> <span class="hps">se está discutiendo</span> <span class="hps">en el W3C</span><span>, como parte</span> <span class="hps">del</span></span> <a href="http://www.w3.org/2012/sysapps/" title="http://www.w3.org/2012/sysapps/">Grupo de trabajo de aplicación del sistea</a>.</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><a class="external" href="https://wiki.mozilla.org/WebAPI/WebTelephony" hreflang="en" lang="en" title="La especificación 'Web Telephony'">Web Telephony</a></td>
+   <td><span class="spec-Draft">Draft</span></td>
+   <td>Editor Draft (WIP).</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Compatibilidad_de_navegador">Compatibilidad de navegador</h2>
+<p><span id="result_box" lang="es"><span class="hps">Por razones obvias</span><span>, el apoyo</span> <span class="hps">se espera</span> <span class="hps">principalmente en</span> <span class="hps">los navegadores móviles</span><span>.</span></span></p>
+<p></p><p class="warning"><strong><a href="https://github.com/mdn/browser-compat-data">We're converting our compatibility data into a machine-readable JSON format</a></strong>.
+            This compatibility table still uses the old format,
+            because we haven't yet converted the data it contains.
+            <strong><a href="/es/docs/MDN/Contribute/Structures/Compatibility_tables">Find out how you can help!</a></strong></p>
+
+<div class="htab">
+    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
+    <ul>
+        <li class="selected"><a>Escritorio</a></li>
+        <li><a>Móvil</a></li>
+    </ul>
+</div><p></p>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Caracteristica</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>Soporte basico</td>
+    <td><span style="color: #f00;">Sin soporte</span></td>
+    <td><span style="color: #f00;">Sin soporte</span></td>
+    <td><span style="color: #f00;">Sin soporte</span></td>
+    <td><span style="color: #f00;">Sin soporte</span></td>
+    <td><span style="color: #f00;">Sin soporte</span></td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Caracteristica</th>
+    <th>Android</th>
+    <th>Firefox Mobil (Gecko)</th>
+    <th>IE Mobil</th>
+    <th>Opera Mobil</th>
+    <th>Safari Mobil</th>
+   </tr>
+   <tr>
+    <td>Soporte basico</td>
+    <td><span style="color: #f00;">Sin soporte</span></td>
+    <td>12.0 (12.0)</td>
+    <td><span style="color: #f00;">Sin soporte</span></td>
+    <td><span style="color: #f00;">Sin soporte</span></td>
+    <td><span style="color: #f00;">Sin soporte</span></td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<h2 id="Ver_también">Ver también</h2>
+<ul>
+ <li><a href="/en/DOM/Using_the_Telephony_API" title="en/DOM/Using the Telephony API">Uso de la API de telefonía</a></li>
+ <li><a href="/es/docs/Web/API/Telephony">Telephony</a></li>
+ <li><a href="/es/docs/Web/API/CallEvent">CallEvent</a></li>
+ <li><a href="/es/docs/Web/API/Navigator.mozTelephony">window.navigator.mozTelephony</a></li>
+</ul>

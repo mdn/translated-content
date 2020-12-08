@@ -1,0 +1,195 @@
+---
+title: Comprensiones de arreglo
+slug: Web/JavaScript/Referencia/Operadores/Array_comprehensions
+tags:
+  - JavaScript
+  - No estandar
+  - Obsoleto
+  - Operador
+  - Referencia
+translation_of: Archive/Web/JavaScript/Array_comprehensions
+---
+<div>{{jsSidebar("Operators")}}</div>
+
+<div class="warning"><strong>No es un estándar. ¡No utilizar!</strong><br>
+La sintaxis de <em>array comprehensions</em> no es estándar y ha sido removida desde Firefox 58. Para usos futuros, considera utilizar: {{jsxref("Array.prototype.map")}}, {{jsxref("Array.prototype.filter")}}, {{jsxref("Functions/Arrow_functions", "arrow functions", "", 1)}} o {{jsxref("Operators/Spread_operator", "spread syntax", "", 1)}}.</div>
+
+<p>{{Obsolete_Header(58)}}</p>
+
+<p>La sintaxis de <strong><em>array comprehension</em></strong> era una expresión JavaScript, la cual permitía crear rápidamente un nuevo arreglo basado en otro existente. Sin embargo, ha sido removida del estándar y de la implementación de Firefox. ¡No lo utilices!</p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="syntaxbox">[for (x of iterable) x]
+[for (x of iterable) if (condition) x]
+[for (x of iterable) for (y of iterable) x + y]
+</pre>
+
+<h2 id="Descripción">Descripción</h2>
+
+<p>Dentro de las comprensiones de arreglo son permitidos estos dos tipos de componentes:</p>
+
+<ul>
+ <li>{{jsxref("Statements/for...of", "for...of")}}</li>
+ <li>{{jsxref("Statements/if...else", "if")}}</li>
+</ul>
+
+<p>La iteración for-of es siempre el primer componente. Son permitidas múltiples iteraciones for-of o sentencias if.</p>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<h3 id="Comprensiones_de_arreglo_simples">Comprensiones de arreglo simples</h3>
+
+<pre class="brush:js">[for (i of [ 1, 2, 3 ]) i*i ];
+// [ 1, 4, 9 ]
+
+var abc = [ "A", "B", "C" ];
+[for (letters of abc) letters.toLowerCase()];
+// [ "a", "b", "c" ]</pre>
+
+<h3 id="Comprensiones_de_arreglo_con_sentencia_if">Comprensiones de arreglo con sentencia if</h3>
+
+<pre class="brush: js">var years = [ 1954, 1974, 1990, 2006, 2010, 2014 ];
+[for (year of years) if (year &gt; 2000) year];
+// [ 2006, 2010, 2014 ]
+[for (year of years) if (year &gt; 2000) if(year &lt; 2010) year];
+// [ 2006], lo mismo de arriba:
+[for (year of years) if (year &gt; 2000 &amp;&amp; year &lt; 2010) year];
+// [ 2006]
+</pre>
+
+<h3 id="Comprensiones_de_arreglo_comparado_a_map_y_filter">Comprensiones de arreglo comparado a <code>map</code> y <code>filter</code></h3>
+
+<p>Una manera sencilla de entender la sintaxis de comprensión de arreglo, es compararla con los métodos de Array {{jsxref("Array.map", "map")}} y {{jsxref("Array.filter", "filter")}}:</p>
+
+<pre class="brush: js">var numbers = [ 1, 2, 3 ];
+
+numbers.map(function (i) { return i * i });
+numbers.map(i =&gt; i*i);
+[for (i of numbers) i*i ];
+// todos son [ 1, 4, 9 ]
+
+numbers.filter(function (i) { return i &lt; 3 });
+numbers.filter(i =&gt; i &lt; 3);
+[for (i of numbers) if (i &lt; 3) i];
+// todos son [ 1, 2 ]
+</pre>
+
+<h3 id="Comprensiones_de_arreglo_con_dos_arreglos">Comprensiones de arreglo con dos arreglos</h3>
+
+<p>Utilizando dos iteraciones for-of para trabajar con dos arreglos:</p>
+
+<pre class="brush: js">var numbers = [ 1, 2, 3 ];
+var letters = [ "a", "b", "c" ];
+
+var cross = [for (i of numbers) for (j of letters) i+j];
+// [ "1a", "1b", "1c", "2a", "2b", "2c", "3a", "3b", "3c" ]
+
+var grid = [for (i of numbers) [for (j of letters) i+j]];
+// [
+//  ["1a", "1b", "1c"],
+//  ["2a", "2b", "2c"],
+//  ["3a", "3b", "3c"]
+// ]
+
+[for (i of numbers) if (i &gt; 1) for (j of letters) if(j &gt; "a") i+j]
+// ["2b", "2c", "3b", "3c"], lo mismo de arriba:
+
+[for (i of numbers) for (j of letters) if (i &gt; 1) if(j &gt; "a") i+j]
+// ["2b", "2c", "3b", "3c"]
+
+[for (i of numbers) if (i &gt; 1) [for (j of letters) if(j &gt; "a") i+j]]
+// [["2b", "2c"], ["3b", "3c"]], no lo mismo de arriba:
+
+[for (i of numbers) [for (j of letters) if (i &gt; 1) if(j &gt; "a") i+j]]
+// [[], ["2b", "2c"], ["3b", "3c"]]
+</pre>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<p>Estuvo inicialmente en el borrador de ECMAScript 6, pero se eliminó en la revisión 27 (Agosto 2014). Por favor ver revisiones mas viejas de ES6 para semánticas de especificación. Se espera que haya una versión actualizada en un nuevo borrador de ES2016 / ES7.</p>
+
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{ CompatGeckoDesktop("30") }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{ CompatGeckoMobile("30") }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Notas_de_implementación_específicas_de_SpiderMonkey">Notas de implementación específicas de SpiderMonkey</h2>
+
+<ul>
+ <li>{{jsxref("Statements/let", "let")}} como identificador no es soportado ya que let solo está disponible actualmente en la versión 1.7 de JS y etiquetas de rutinas XUL.</li>
+ <li>Desestructurar en comprensiones todavía no está soportado ({{bug(980828)}}).</li>
+</ul>
+
+<h2 id="Diferencias_con_las_comprensiones_de_los_viejos_JS1.7JS1.8">Diferencias con las comprensiones de los viejos JS1.7/JS1.8</h2>
+
+<ul>
+ <li>Las comprensiones de ES7 crean un ámbito por nodo "for" en lugar de tomar la comprensión como un todo.
+  <ul>
+   <li>Viejo: <code>[()=&gt;x for (x of [0, 1, 2])][1]() // 2</code></li>
+   <li>Nuevo: <code>[for (x of [0, 1, 2]) ()=&gt;x][1]() // 1, cada iteración crea un enlace fresco para x.</code></li>
+   <li>Las comprensiones de ES7 empiezan con "for" en lugar de la expresión de asignación.
+    <ul>
+     <li>Viejo: <code>[i * 2 for (i of numbers)]</code></li>
+     <li>Nuevo: <code>[for (i of numbers) i * 2]</code></li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>Las comprensiones de ES7 pueden tener múltiples componentes <code>if</code> y <code>for</code>.</li>
+ <li>Las comprensiones de ES7 solo trabajan con <code>{{jsxref("Statements/for...of", "for...of")}}</code> y no con iteraciones <code>{{jsxref("Statements/for...in", "for...in")}}</code>.</li>
+</ul>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{jsxref("Statements/for...of", "for...of")}}</li>
+ <li>{{jsxref("Operators/Generator_comprehensions", "Generator comprehensions", "" ,1)}}</li>
+</ul>

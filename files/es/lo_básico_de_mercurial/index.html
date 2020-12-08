@@ -1,0 +1,48 @@
+---
+title: lo básico de Mercurial
+slug: lo_básico_de_Mercurial
+tags:
+  - Desarrollando_Mozilla
+  - Mercurial
+  - NecesitaRevisiónGramatical
+  - NecesitaRevisiónTécnica
+  - Todas_las_Categorías
+translation_of: Mozilla/Mercurial/Basics
+---
+<p>Voy a contarte algunas cosas sobre <a href="es/Mercurial">Mercurial</a> que te evitarán mucha frustación. Esta página es cínica y orientada a la supervivencia, pero aún así sostengo que Mercurial es mucho mejor que CVS. —<a>jorendorff</a> 16:06, 12 May 2008 (PDT)
+</p>
+<h3 id="Expectativas" name="Expectativas"> Expectativas </h3>
+<p><b>Mercurial no es CVS.</b> Las órdenes no son las mismas. Los conceptos no son los mismos.
+</p><p><b>Esta pistola está cargada.</b> Te puedes disparar en el pie. Puedes perder trabajo. La herramienta intenta protegerte, pero aún así puede suceder. Los dos modos de equivocarse más comunes son: (a) ejecutas una orden sin saber lo que va a hacer; (b) ejecutas <code>hg commit</code> o <code>hg qrefresh</code> con una idea equivocada de la situación de tu directorio de trabajo. Así que accidentalmente confirmas cambios que no querías confirmar (commit); o accidentalmente subes una fusión errónea (broken merge); etc. A menudo no es inmediatamente obvio que ha sucedido algo malo.
+</p><p>La advertencia te permite ser precavido. No hagas estas cosas. No ejecutes órdenes sin saber lo que van a hacer —<code>hg help</code> es tu amigo. No confirmes cambios sin hacer primero un diff y pensarlo dos veces. Y no te dejes caer en el "modo diversión" y dejes de prestar atención al hecho de que estás jugando con tu propio trabajo pendiente de subir.
+</p><p><b>Mercurial no es polvo mágico.</b> Mercurial es flexible, potente, y divertido. Te permite intentar cosas que nunca habrías probado en CVS. Pero, por supuesto, no todo tiene porque acabar siendo una buena idea (por ejemplo, nosotros intentamos compartir colas de parches. Y resultó ser una porquería).
+</p>
+<h3 id="Evitar_los_problemas" name="Evitar_los_problemas"> Evitar los problemas </h3>
+<p><b>Usa Mercurial 1.0 o posterior</b> (<code>hg version</code> para comprobarlo).
+</p><p><b>Aprende a manejarte</b> Usa órdenes de sólo-lectura (como <code>hg status</code>, <code>hg head</code>, <code>hg parents</code>, <code>hg log</code>, <code>hg diff</code>) para comprobar el estado de tu repositorio. Ésta es una habilidad fundamental.
+</p><p><b>Configura un <a class="external" href="http://www.selenic.com/mercurial/wiki/index.cgi/MergeProgram">programa de fusión (un <i>merge program</i>)</a> y asegúrate de que sabes cómo usarlo. HAZLO YA</b>. En caso contrario acabarás cargándote tu repositorio en algún momento.
+</p><p>CVS deja marcadores de conflicto en tus archivos en ocasiones. Mercurial no: en su lugar, quiere que corrijas los conflictos <i>inmediatamente</i>, usando un programa de fusión (como <code>kdiff3</code>) que abrirá para ti.
+</p><p>Esto puede favorecer los errores. Por defecto, Mercurial usa el primer programa de fusión que encuentra en tu sistema, y la mayoría de los programas de fusión son bastante difíciles de usar correctamente. Mercurial no hace un buen trabajo detectando las fusiones canceladas y rechazando proseguir, así que limitarse a cerrar una ventana puede ponerte sin querer en una mala situación. Hay historias de hombres maduros que han salido huyendo de árboles hg completos que contenía muchas horas de trabajo, echándole la culpa a un comportamiento inexplicable de hg, debido todo a una fusión errónea.
+</p><p><b>Si una fusión falla, asegúrate de que Mercurial sabe que ha fallado</b>. Cuando estás comenzando a aprender los fundamentos, las fusiones a menudo salen mal. Podrías ver este mensaje:
+</p>
+<pre class="eval">0 files updated, 0 files merged, 0 files removed, 1 files unresolved
+There are unresolved merges, you can redo the full merge using:
+  hg update -C 2
+  hg merge 1
+</pre>
+<p>Esto significa que algunos conflictos no se resolvieron durante la fusión. Si no sabes exactamente cuáles son y cómo corregirlos, usa esa orden <code>hg update -C</code> para decirle a Mercurial que has desistido de esa fusión.
+</p><p>Si no lo haces, Mercurial no se enterará, y la próxima vez que confirmes cambios, creará un conjunto de cambios (changeset) con la fusión. Esto es mal. El resultado puede parecerse mucho a destruir accidentalmente un puñado de trabajo, pero el daño puede deshacerse.
+</p><p>Si <code>hg parents</code> muestra dos padres, estás fusionando.
+</p><p><b>Si usas colas de Mercurial (Mercurial Queues), haz una copia de seguridad de tu trabajo</b>. ¡<code>hg qrefresh</code> reemplaza de manera destructiva el parche antiguo con el nuevo! Usa <code>hg qinit -c</code> para crear un repositorio de respaldo separado para tus parches y <code>hg qcommit -m backup</code> regularmente.
+</p><p><b>No uses colas de Mercurial en un repositorio del que alguien podría descargar</b>.
+</p>
+<h3 id="Recuperarse" name="Recuperarse"> Recuperarse </h3>
+<p>¡Vaya! ¡Mercurial te acaba de cortar el brazo!
+</p><p><b>No pruebes cosas al azar para ver si lo arreglan mágicamente</b>. Recuerda que tienes las de perder, y <i>desconecta la sierra eléctrica</i> mientras aún te quede un brazo bueno.
+</p><p><b>Consigue ayuda en el IRC</b>. Prueba <a class="link-irc" href="irc://irc.mozilla.org/hg">#hg</a> o <a class="link-irc" href="irc://irc.mozilla.org/developers">#developers</a> en el IRC de Mozilla o <a class="link-irc" href="irc://irc.freenode.net/mercurial">#mercurial en freenode</a>.
+</p>
+<div class="noinclude">
+</div>
+<div class="noinclude">
+</div>
+{{ languages( { "ja": "ja/Mercurial_basics", "en": "en/Mercurial_basics" } ) }}

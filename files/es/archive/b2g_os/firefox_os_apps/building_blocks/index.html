@@ -1,0 +1,195 @@
+---
+title: Firefox OS Building Blocks
+slug: Archive/B2G_OS/Firefox_OS_apps/Building_blocks
+tags:
+  - Design
+  - Design patterns
+  - Firefox OS
+  - NeedsTranslation
+  - TopicStub
+  - UI
+  - building blocks
+translation_of: Archive/B2G_OS/Firefox_OS_apps/Building_blocks
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+
+<ol>
+  <li class="toggle">
+      <details>
+          <summary>Build and install</summary>
+          <ol>
+            <li><strong><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS">Build and install overview</a></strong></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary">B2G OS build process summary</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/B2G_OS_build_prerequisites">Build prerequisites</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Preparing_for_your_first_B2G_build">Preparing for your first build</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building">Building B2G OS</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_installer_add-on">B2G installer add-on</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Building_for_Flame_on_OS_X">Building B2G OS for Flame on Mac OS X</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Choosing_how_to_run_Gaia_or_B2G">Choosing how to run Gaia or B2G OS</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/Compatible_Devices">Compatible Devices</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Installing_on_a_mobile_device">Installing B2G OS on a mobile device</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_update_packages">Creating and applying B2G OS update packages</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building/FOTA_community_builds">Building and installing FOTA community builds</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Building_and_installing_B2G_OS/B2G_Build_Variables_Reference_Sheet">B2G build variables reference sheet</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Porting B2G OS</summary>
+          <ol>
+            <li><strong><a href="/es/docs/Mozilla/B2G_OS/Porting_B2G_OS">Porting overview</a></strong></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Porting_B2G_OS/basics">Porting basics</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Porting_B2G_OS/Porting_on_CyanogenMod">Porting on CyanogenMod</a></li>
+          </ol>
+      </details>
+  </li>
+  <li class="toggle">
+      <details>
+          <summary>Developing Gaia</summary>
+          <ol>
+            <li><strong><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia">Developing Gaia overview</a></strong></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Running_the_Gaia_codebase">Running the Gaia codebase</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Mulet">Run Gaia on desktop using Mulet</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Understanding_the_Gaia_codebase">Understanding the Gaia codebase</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Making_Gaia_code_changes">Making Gaia code changes</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Testing_Gaia_code_changes">Testing Gaia code changes</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Submitting_a_Gaia_patch">Submitting a Gaia patch</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Build_System_Primer">Gaia build system primer</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Different_ways_to_run_Gaia">Different ways to run Gaia</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/make_options_reference">Make options reference</a></li>
+            <li><a href="/es/docs/Mozilla/B2G_OS/Developing_Gaia/Gaia_tools_reference">Gaia tools reference</a></li>
+          </ol>
+      </details>
+  </li>
+  <li><a href="/es/docs/Mozilla/B2G_OS/API">B2G OS APIs</a></li>
+</ol>
+</section><p></p>
+
+<div class="summary">
+<p>The Firefox OS Building Blocks are reusable UI components (also called 'common controls') that reflect OS-wide design patterns. Building Blocks are used to create the interfaces of all <a href="/en-US/Firefox_OS/Platform/Gaia">Gaia</a> default apps. You are free to make use of these components in your own Firefox OS apps, or general Web apps.</p>
+</div>
+
+<h2 id="Using_the_Firefox_OS_Building_Blocks">Using the Firefox OS Building Blocks</h2>
+
+<p>The code for the Firefox OS Building Blocks can be found in the <a href="https://github.com/mozilla-b2g/gaia">Gaia Github repo</a> under <a href="https://github.com/mozilla-b2g/gaia/tree/master/shared/style">shared/style</a>. Here, you can find a CSS file that contains the CSS for that particular Building Block, and a sub directory containing the HTML fragments and image assets. If you are creating your own standalone Web app, you can simply copy the CSS, HTML and image asset files across into your own project; if your app is intended to be installed on Firefox OS only (or you want to use these features only when the app is being used on Firefox OS), then you can link to the versions available inside Gaia.</p>
+
+<p>The pages for the individual Building Block implementations can be found under the pages for each building block — see next section. These contain instructions on how to implement each one.</p>
+
+<div class="note">
+<p><strong>Note</strong>: The version 2.0 building block code is used in Firefox OS releases 2.0 through 2.2. Version 2.3 sees an update, with the building blocks being reimplemented using <a href="/en-US/docs/Web/Web_Components">Web components</a> — these provide the same functionality, but implemented in a much more powerful, flexible way. You'll see 2.3 pages appear underneath the main building block pages covering these Web components as soon as the information is available.</p>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: We also have an old guide covering the <a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x">v1.x building blocks</a> used in older versions of Firefox OS. This is mainly for legacy information.</p>
+</div>
+
+<h2 id="Web_components_preliminary_setup">Web components preliminary setup</h2>
+
+<p>This section details the preliminary setup needed to use Gaia Web components.</p>
+
+<h3 id="Web_components_browser_support">Web components browser support</h3>
+
+<p>To use <a href="https://github.com/gaia-components">Gaia Web components</a> at all, you need to run them using a browser that supports Web components. The state of support is as follows:</p>
+
+<ul>
+ <li>Firefox: Supported since Firefox 23 (33 on Android), but preffed off. To enable Web components, go to <code>about:config</code> and enable the <code>dom.webcomponents.enabled</code> pref.</li>
+ <li>Chrome: Supported since Chrome 33 (39 on Android).</li>
+ <li>Opera: Supported since Opera 20 (24 on Android).</li>
+ <li>Android browser: Supported since 4.4.4.</li>
+ <li>Safari/iOS Mobile and IE/IE mobile: Nope.</li>
+</ul>
+
+<p>Web components are supported in Firefox OS from v2.1 onwards, although most of them weren't actually implemented until v2.3. Be aware also that currently Web components won't work for Firefox OS apps below internal (certified) level. This restriction should be lessened in the future.</p>
+
+<div class="note">
+<p><strong>Note</strong>: If your app is certified, the components will just work. You don't need to set a specific manifest permission.</p>
+</div>
+
+<h3 id="Web_components_installation_notes">Web components installation notes</h3>
+
+<p>Gaia Web components are installed in your app using the <a href="http://bower.io/">Bower</a> package manager. To install this, you first need <a href="http://nodejs.org/">Node.js/npm</a> and <a href="http://www.git-scm.com/">Git</a> installed. Once they are installed you can install Bower with</p>
+
+<pre class="brush: bash">npm install -g bower</pre>
+
+<p>At this point you could also install the Gaia Fira Sans font that Firefox OS uses in your app , with the following command:</p>
+
+<pre class="brush: bash">bower install gaia-components/gaia-fonts</pre>
+
+<p>You can then make use of the font by including the following in your head (along with a <code>font-family</code> of <code>FiraSans</code>):</p>
+
+<pre class="brush: html">&lt;link rel="stylesheet" type="text/css" href="bower_components/gaia-fonts/style.css"&gt;&lt;/link&gt;</pre>
+
+<h2 id="Firefox_OS_Building_Blocks">Firefox OS Building Blocks</h2>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Action_menu">Action menu</a></dt>
+ <dd>An action menu presents a list of actions, related to the app's content, from which the user may make a selection.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Banners">Banners</a></dt>
+ <dd>Banners (Status, in older versions of Firefox OS) provide information to the user in a transitory fashion, typically to confirm an action or to alert the user to a system event.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Buttons">Buttons</a></dt>
+ <dd>Buttons are used to perform explicit actions. Buttons may be text or images.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Context_menu">Context menu</a></dt>
+ <dd>Accessed via a tap and hold gesture (sometimes called a <em>long press</em>), the Context Menu (called the Object Menu in older versions of Firefox OS) allows users to perform actions on objects without having to leave their current view.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Dialog">Dialog</a></dt>
+ <dd>A Dialog (Confirm, in older versions of Firefox OS) provides the user with some important information, asks the user to take or confirm an action, or allows the user to make a choice or enter some information.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Drawer">Drawer</a></dt>
+ <dd>The drawer is a scalable way for users to navigate between views or filter views. The drawer can also include links to app settings or other tools.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Header">Header</a></dt>
+ <dd>A header is a dedicated space at the top of the screen, most often used to display the view title. It can also include navigation, action buttons and other controls.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Input_area">Input area</a></dt>
+ <dd>An input area is a data entry field, and can be as simple as a text only entry field, or as complex as a multipart entry field with text entry, value selections, and buttons.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Layout">Layout</a></dt>
+ <dd>The Layout utility will help you to create common layout structures for your Firefox OS apps. Note that Layout is only available in Firefox OS 2.1 and above.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/List_items">List items</a></dt>
+ <dd>List items are typically used to navigate to a new screen, or to display information or controls.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Picker">Picker</a></dt>
+ <dd>The Picker is designed to select a group of items as attachments for messaging and email.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Progress_and_activity">Progress and activity</a></dt>
+ <dd>Progress and activity indicators provide the user with visual feedback that a process (such as a resource loading) is active.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Scrolling">Scrolling</a></dt>
+ <dd>Scrolling areas allow the user to move text and/or images across the device's display.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Search">Search</a></dt>
+ <dd>Search is used to filter a list or find context-specific content.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Slider">Slider</a></dt>
+ <dd>A Slider (which was called Seekbar in older Firefox OS versions) is used to select a value from a continuous or discrete range of values by dragging the handle.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Select_mode">Select mode</a></dt>
+ <dd>Select Mode (which was called Edit Mode in older Firefox OS versions) is designed to select and perform actions on items.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Subheader">Subheader</a></dt>
+ <dd>Subheaders are used to describe a subsection of content.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Switches">Switches</a></dt>
+ <dd>Switches (such as checkboxes, etc.) allow users to activate and deactivate items. Switches are also used to select items within a list.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Tab_Filter">Tab/Filter</a></dt>
+ <dd>A Tab/Filter gives the user a way to easily switch between views or to filter a set of data.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Toolbars">Toolbars</a></dt>
+ <dd>Toolbars contain actions, indicators and navigation elements associated with the current view.</dd>
+ <dt><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/Value_selector">Value selector</a></dt>
+ <dd>Value Selectors let the user choose from among a list of possible values.</dd>
+</dl>
+</div>
+</div>
+
+<div class="note">
+<p><strong>Note</strong>: For a detailed guide to the design pattern followed by the building blocks when the Arabic locale (bidirectional) is selected, read <a href="/en-US/Apps/Design/Firefox_OS_in_Arabic">Firefox OS in Arabic</a>.</p>
+</div>
+
+<h2 id="Cross_browser_CSS">Cross browser CSS</h2>
+
+<p>Arnau March wrote a CSS file called <a href="https://github.com/mdn/gaia-2.0-bb/blob/gh-pages/cross_browser_css/cross_browser.css">cross browser CSS</a>, containing rules to allow Firefox 2.0 building blocks to render properly across different browsers (ie 9, Firefox 18, Chrome 24, Safari 5.1.) If you want to write hosted apps that look ok across different browsers, include this CSS in your project.</p>
+
+<h2 id="Browse_Firefox_OS_Building_Block_implementations_by_version">Browse Firefox OS Building Block implementations by version</h2>
+
+<p>The pages below list links to pages covering the Firefox OS Building Block implementations as they appear in different versions of Firefox OS.</p>
+
+<ul>
+ <li><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/2.3">Firefox OS 2.3 Web components</a></li>
+ <li><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/2.0">Firefox OS 2.0 building blocks</a> (covers Firefox OS 2.0–2.2.)</li>
+ <li><a href="/en-US/Apps/Design/Firefox_OS_building_blocks/1.x">Firefox OS 1.x building blocks</a> (covers older versions of Firefox OS.)</li>
+</ul>

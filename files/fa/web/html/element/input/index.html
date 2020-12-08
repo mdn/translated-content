@@ -1,0 +1,1376 @@
+---
+title: <input>
+slug: Web/HTML/Element/Input
+translation_of: Web/HTML/Element/input
+---
+<div class="summary">
+<p><font><font>HTML </font></font><strong><code><font><font>&lt;ورودی&gt;</font></font></code><font><font> عنصر</font></font></strong><font><font> استفاده می شود برای ایجاد کنترل های تعاملی برای اشکال مبتنی بر وب به منظور شرایط داده ها از کاربر. </font><font>معناشناسی </font></font><code><font><font>&lt;ورودی&gt;</font></font></code><font><font> بسته به ارزش آن </font></font><code><font><font>نوع</font></font></code><font><font> ویژگی.</font></font></p>
+</div>
+
+<ul class="htmlelt">
+ <li><dfn><a href="/en-US/docs/HTML/Content_categories"><font><font>دسته بندی های مطالب</font></font></a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content"><font><font> جریان محتوا</font></font></a><font><font> ، ذکر شده است، submittable، resettable، عنصر فرم ارتباط، </font></font><a href="/en-US/docs/HTML/Content_categories#Phrasing_content"><font><font>محتوا جملهبندی</font></font></a><font><font> . </font></font><br>
+  <font><font>اگر {{htmlattrxref ("</font></font>input<font><font>", "</font></font>type<font><font>")}} است نه </font></font><code><font><font>پنهان</font></font></code><font><font> ارزش، عنصر labellable، محتوای قابل لمس.</font></font></li>
+ <li><dfn><font><font>مجاز محتوای</font></font></dfn><font><font> هیچ، آن است {{</font></font>Glossary<font><font> ("عنصر خالی", "</font></font>empty element<font><font>")}}.</font></font></li>
+ <li><dfn><font><font>حذف برچسب</font></font></dfn><font><font> باید یک برچسب شروع کرده اند و باید یک تگ پایانی ندارد.</font></font></li>
+ <li><dfn><font><font>مجاز عناصر پدر و مادر</font></font></dfn><font><font> هر عنصر است که می پذیرد </font></font><a href="/en-US/docs/HTML/Content_categories#Phrasing_content"><font><font>محتوای جملهبندی</font></font></a><font><font> .</font></font></li>
+ <li><dfn><font><font>DOM رابط</font></font></dfn><font><font> {{domxref ("HTMLInputElement")}}</font></font></li>
+</ul>
+
+<h2 id="خواص"><font><font>خواص</font></font></h2>
+
+<p><font><font>این عنصر شامل </font></font><a href="/en-US/docs/HTML/Global_attributes"><font><font>ویژگی های کلی</font></font></a><font><font> .</font></font></p>
+
+<dl>
+ <dt><font><font>{{htmlattrdef ("</font></font>type<font><font>")}}</font></font></dt>
+ <dd><font><font>نوع کنترل برای نمایش. </font><font>نوع پیش فرض متن است، اگر این ویژگی مشخص نشده است. </font><font>مقادیر ممکن عبارتند از:</font></font>
+ <ul>
+  <li><code><font><font>دکمه</font></font></code><font><font> : یک دکمه را فشار با هیچ رفتار پیش فرض.</font></font></li>
+  <li><code><font><font>چک باکس</font></font></code><font><font> : جعبه چک. </font><font>شما باید با استفاده از </font></font><strong><font><font>ارزش</font></font></strong><font><font> ویژگی برای تعریف ارزش ارائه شده توسط این آیتم استفاده کنید. </font><font>استفاده از </font></font><strong><font><font>چک</font></font></strong><font><font> ویژگی برای نشان که آیا این آیتم انتخاب شده است. </font><font>شما همچنین می توانید استفاده از </font></font><strong><font><font>نامشخص</font></font></strong><font><font> ویژگی به نشان می دهد که چک باکس است در حالت نامشخص (در اکثر سیستم عامل، این تساوی یک خط افقی در سراسر چک باکس).</font></font></li>
+  <li><code><font><font>رنگ</font></font></code><font><font> : {{HTMLVersionInline ("5")}} کنترل برای تعیین رنگ. </font><font>UI جمع کننده رنگ ندارد ویژگی های مورد نیاز دیگر از پذیرش رنگ ساده به عنوان متن ( </font></font><a href="http://www.w3.org/TR/html5/forms.html#color-state-(type=color)"><font><font>اطلاعات بیشتر</font></font></a><font><font> ).</font></font></li>
+  <li><code><font><font>تاریخ</font></font></code><font><font> : {{HTMLVersionInline ("5")}} کنترل برای ورود به یک تاریخ (سال، ماه، روز و، با هیچ زمان).</font></font></li>
+  <li><code><font><font>تاریخ ساعت</font></font></code><font><font> : {{HTMLVersionInline ("5")}} کنترل برای ورود به تاریخ و زمان (ساعت، دقیقه، دوم، و کسری از ثانیه) بر اساس منطقه محلی UTC تنظیم شده است.</font></font></li>
+  <li><code><font><font>تاریخ ساعت محلی</font></font></code><font><font> : {{HTMLVersionInline ("5")}} کنترل برای ورود به تاریخ و زمان، با هیچ منطقه زمان.</font></font></li>
+  <li><code><font><font>ایمیل</font></font></code><font><font> : {{HTMLVersionInline ("5")}} درست برای ویرایش یک آدرس ایمیل. </font><font>مقدار ورودی دارای اعتبار است که شامل هر دو رشته خالی یا یک معتبر آدرس ایمیل تنها قبل از ارسال. </font><font>{{cssxref (": معتبر")}} و {{cssxref (": نامعتبر")}} CSS شبه کلاس ها به عنوان مناسب استفاده شود.</font></font></li>
+  <li><code><font><font>فایل</font></font></code><font><font> : کنترل که اجازه می دهد کاربر را انتخاب کنید یک فایل. </font><font>با استفاده از </font></font><strong><font><font>شرایط</font></font></strong><font><font> ویژگی برای تعریف انواع فایل هایی که کنترل می توانید انتخاب کنید.</font></font></li>
+  <li><code><font><font>پنهان</font></font></code><font><font> : کنترل است که نشان داده نمی شود، اما که مقدار آن به سرور را مشاهده کنید.</font></font></li>
+  <li><code><font><font>تصویر</font></font></code><font><font> : گرافیکی دکمه ارسال. </font><font>شما باید با استفاده </font></font><strong><font><font>SRC</font></font></strong><font><font> ویژگی برای تعریف منبع تصویر و </font></font><strong><font><font>ALT</font></font></strong><font><font> ویژگی برای تعریف متن جایگزین. </font><font>شما می توانید با استفاده از </font></font><strong><font><font>ارتفاع</font></font></strong><font><font> و </font></font><strong><font><font>عرض</font></font></strong><font><font> ویژگی برای تعریف اندازه تصویر در پیکسل.</font></font></li>
+  <li><code><font><font>ماه</font></font></code><font><font> : {{HTMLVersionInline ("5")}} کنترل برای ورود به یک ماه و سال، با هیچ منطقه زمان.</font></font></li>
+  <li><code><font><font>تعداد</font></font></code><font><font> : {{HTMLVersionInline ("5")}} کنترل برای وارد کردن شماره ممیز شناور.</font></font></li>
+  <li><code><font><font>رمز عبور</font></font></code><font><font> : درست متن تک خط که ارزش پنهان است. </font><font>استفاده از </font></font><strong><font><font>MAXLENGTH</font></font></strong><font><font> ویژگی برای تعیین حداکثر طول ارزش است که می تواند وارد شود.</font></font></li>
+  <li><code><font><font>رادیو</font></font></code><font><font> : یک دکمه رادیویی. </font><font>شما باید با استفاده از </font></font><strong><font><font>ارزش</font></font></strong><font><font> ویژگی برای تعریف ارزش ارائه شده توسط این آیتم استفاده کنید. </font><font>استفاده از </font></font><strong><font><font>چک</font></font></strong><font><font> ویژگی برای نشان که آیا این آیتم به صورت پیش فرض انتخاب شده است. </font><font>دکمه های رادیویی که همان مقدار برای </font></font><strong><font><font>نام</font></font></strong><font><font> ویژگی در همان "گروه دکمه رادیویی" می باشد. </font><font>تنها با یک دکمه رادیویی در یک گروه را می توان در یک زمان انتخاب شده است.</font></font></li>
+  <li><code><font><font>محدوده</font></font></code><font><font> : {{HTMLVersionInline ("5")}} کنترل برای وارد کردن شماره که مقدار دقیق آن مهم نیست. </font><font>این کنترل نوع استفاده از مقادیر پیش فرض زیر اگر صفات مربوطه مشخص نشده است:</font></font>
+   <ul>
+    <li><code><font><font>دقیقه</font></font></code><font><font> : 0</font></font></li>
+    <li><code><font><font>حداکثر</font></font></code><font><font> : 100</font></font></li>
+    <li><code><font><font>ارزش</font></font></code><font><font> : </font></font><code><font><font>دقیقه</font></font></code><font><font> + ( </font></font><code><font><font>حداکثر</font></font></code><font><font> - </font></font><code><font><font>دقیقه</font></font></code><font><font> ) / 2، یا </font></font><code><font><font>دقیقه</font></font></code><font><font> اگر </font></font><code><font><font>حداکثر</font></font></code><font><font> کمتر از است </font></font><code><font><font>دقیقه</font></font></code></li>
+    <li><code><font><font>گام</font></font></code><font><font> : 1</font></font></li>
+   </ul>
+  </li>
+  <li><code><font><font>تنظیم مجدد</font></font></code><font><font> : یک دکمه که بازنشانی محتویات فرم به مقادیر پیش فرض.</font></font></li>
+  <li><code><font><font>جستجو</font></font></code><font><font> : {{HTMLVersionInline ("5")}} فیلد متنی تک خط برای ورود به رشته جستجو. </font><font>خط میشکند صورت خودکار از ارزش ورودی حذف شده است.</font></font></li>
+  <li><code><font><font>ارسال</font></font></code><font><font> : یک دکمه که تسلیم فرم.</font></font></li>
+  <li><code><font><font>تلفن</font></font></code><font><font> : {{HTMLVersionInline ("5")}} کنترل برای وارد کردن شماره تلفن. </font><font>خط میشکند صورت خودکار از ارزش ورودی برداشته شود، اما هیچ نحو دیگر اجرا شده است. </font><font>شما می توانید ویژگی های از قبیل استفاده از </font></font><strong><font><font>الگوی</font></font></strong><font><font> و </font></font><strong><font><font>MAXLENGTH</font></font></strong><font><font> برای محدود کردن مقادیر وارد شده در کنترل. </font><font>{{cssxref (": معتبر")}} و {{cssxref (": نامعتبر")}} CSS شبه کلاس ها به عنوان مناسب استفاده شود.</font></font></li>
+  <li><code><font><font>متن</font></font></code><font><font> : درست متن تک خط. </font><font>خط میشکند صورت خودکار از ارزش ورودی حذف شده است.</font></font></li>
+  <li><code><font><font>زمان</font></font></code><font><font> : {{HTMLVersionInline ("5")}} کنترل برای ورود به یک مقدار زمان با هیچ منطقه زمان.</font></font></li>
+  <li><code><font><font>آدرس</font></font></code><font><font> : {{HTMLVersionInline ("5")}} زمینه برای ویرایش یک URL. </font><font>مقدار ورودی دارای اعتبار است که شامل هر دو رشته خالی یا یک URL مطلق معتبر قبل از ارسال. </font><font>خط میشکند و منجر و یا فرار فضای سفید به طور خودکار از ارزش ورودی حذف شده است. </font><font>شما می توانید ویژگی های از قبیل استفاده از </font></font><strong><font><font>الگوی</font></font></strong><font><font> و </font></font><strong><font><font>MAXLENGTH</font></font></strong><font><font> برای محدود کردن مقادیر وارد شده در کنترل. </font><font>{{cssxref (": معتبر")}} و {{cssxref (": نامعتبر")}} CSS شبه کلاس ها به عنوان مناسب استفاده شود.</font></font></li>
+  <li><code><font><font>هفته</font></font></code><font><font> : {{HTMLVersionInline ("5")}} کنترل برای ورود به عضویت متشکل از تعداد هفته سال و تعداد هفته با هیچ منطقه زمان.</font></font></li>
+ </ul>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("</font></font>accept<font><font>")}}</font></font></dt>
+ <dd><font><font>اگر مقدار از </font></font><strong><font><font>نوع</font></font></strong><font><font> ویژگی است </font></font><code><font><font>فایل</font></font></code><font><font> ، این ویژگی را نشان می دهد نوع فایل که سرور می پذیرد. </font><font>در غیر این صورت آن را نادیده گرفته است. </font><font>مقدار باید یک لیست با کاما از هم جدا از منحصر به فرد specifiers نوع محتوا:</font></font>
+ <ul>
+  <li><font><font>پسوند فایل با شروع با شخصیت STOP (U + 002E). </font><font>(به عنوان مثال: ".JPG، فعلی، doc است")</font></font></li>
+  <li><font><font>نوع MIME پرونده معتبر بدون پسوند</font></font></li>
+  <li><code><font><font>صوتی / *</font></font></code><font><font> نمایندگی فایل های صوتی {{HTMLVersionInline ("5")}}</font></font></li>
+  <li><code><font><font>ویدئو / *</font></font></code><font><font> نمایندگی فایل های ویدئویی {{HTMLVersionInline ("5")}}</font></font></li>
+  <li><code><font><font>تصویر / *</font></font></code><font><font> فایل های نمایندگی تصویر {{HTMLVersionInline ("5")}}</font></font></li>
+ </ul>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("accesskey")}} {{HTMLVersionInline (4)}} تنها، {{obsoleteGeneric ("درون خطی"، "HTML5")}}</font></font></dt>
+ <dd><font><font>تک شخصیت است که کاربر می تواند فشار دهید برای تغییر تمرکز ورودی به کنترل. </font><font>این ویژگی جهانی در HTML5 است.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("mozactionhint")}} {{غیر standard_inline}}</font></font></dt>
+ <dd><font><font>مشخص "اشاره عمل" مورد استفاده برای تعیین چگونگی برچسب کلید را وارد کنید در دستگاه های تلفن همراه با صفحه کلید مجازی. </font><font>ارزش پشتیبانی می شوند </font></font><code><font><font>به</font></font></code><font><font> ، </font></font><code><font><font>انجام</font></font></code><font><font> ، </font></font><code><font><font>بعدی</font></font></code><font><font> ، </font></font><code><font><font>جستجو</font></font></code><font><font> ، و </font></font><code><font><font>ارسال</font></font></code><font><font> . </font><font>این به طور خودکار دریافت به رشته مناسب نقشه برداری (و حروف حساس).</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("autocapitalize")}} {{غیر standard_inline}}</font></font></dt>
+ <dd><font><font>این یک ویژگی غیر استاندارد استفاده شده توسط سیستم عامل iOS صفری موبایل که کنترل اینکه آیا و چگونه ارزش متن باید به طور خودکار با حروف بزرگ آن را به عنوان وارد / ویرایش توسط کاربر است. </font><font>مقادیر غیر بد دانسته دسترس در iOS 5 و بعد می باشد. </font><font>مقادیر ممکن عبارتند از:</font></font>
+ <ul>
+  <li><code><font><font>هیچ</font></font></code><font><font> : کاملا غیر فعال سرمایه اتوماتیک</font></font></li>
+  <li><code><font><font>جملات</font></font></code><font><font> : به صورت خودکار اولین حرف از جملات.</font></font></li>
+  <li><code><font><font>کلمات</font></font></code><font><font> : به صورت خودکار اولین حرف از کلمه است.</font></font></li>
+  <li><code><font><font>شخصیت</font></font></code><font><font> : به صورت خودکار تمام شخصیت های سرمایه گذاری.</font></font></li>
+  <li><code><font><font>در</font></font></code><font><font> : {{deprecated_inline ()}} توصیه از سیستم عامل iOS 5.</font></font></li>
+  <li><code><font><font>خاموش</font></font></code><font><font> : {{deprecated_inline ()}} توصیه از سیستم عامل iOS 5.</font></font></li>
+ </ul>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("تکمیل خودکار")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>این ویژگی نشان می دهد که آیا ارزش کنترل می تواند به صورت خودکار توسط مرورگر به پایان رسید. </font><font>این صفت نادیده گرفته اگر مقدار از </font></font><strong><font><font>نوع</font></font></strong><font><font> صفت </font></font><code><font><font>پنهان، رمز عبور، </font></font></code> <code><font><font>چک باکس</font></font></code><font><font> ، </font></font><code><font><font>رادیو</font></font></code><font><font> ، </font></font><code><font><font>فایل</font></font></code><font><font> ، یا یک نوع دکمه ( </font></font><code><font><font>دکمه</font></font></code><font><font> ، </font></font><code><font><font>ارائه</font></font></code><font><font> ، </font></font><code><font><font>تنظیم مجدد</font></font></code><font><font> ، </font></font><code><font><font>تصویر</font></font></code><font><font> ). </font><font>مقادیر ممکن عبارتند از:</font></font>
+ <ul>
+  <li><code><font><font>خاموش</font></font></code><font><font> : کاربر باید به صراحت ارزش به این زمینه برای هر استفاده را وارد کنید، و یا سند روش تکمیل خودکار خود را فراهم می کند. </font><font>مرورگر به صورت خودکار تکمیل ورود نیست.</font></font></li>
+  <li><code><font><font>در</font></font></code><font><font> : مرورگر به طور خودکار می تواند ارزش بر اساس ارزش است که کاربر در طول استفاده قبلی وارد تکمیل.</font></font></li>
+ </ul>
+
+ <p><font><font>اگر </font></font><strong><font><font>تکمیل خودکار</font></font></strong><font><font> صفت در یک عنصر ورودی مشخص نشده است، پس از آن مرورگر با استفاده از </font></font><strong><font><font>تکمیل خودکار</font></font></strong><font><font> مقدار ویژگی از </font></font><code><font><font>&lt;ورودی&gt;</font></font></code><font><font> صاحب فرم عنصر. </font><font>صاحب فرم یا است </font></font><code><font><font>فرم</font></font></code><font><font> عنصر که این </font></font><code><font><font>&lt;ورودی&gt;</font></font></code><font><font> عنصر از نوادگان یا عنصر فرم که است </font></font><strong><font><font>ID</font></font></strong><font><font> توسط مشخص </font></font><strong><font><font>فرم</font></font></strong><font><font> صفت عناصر ورودی. </font><font>برای کسب اطلاعات بیشتر، نگاه کنید به {{htmlattrxref ("تکمیل خودکار"، "فرم")}} ویژگی در {{روی HTMLElement ("فرم")}}.</font></font></p>
+
+ <p><strong><font><font>تکمیل خودکار</font></font></strong><font><font> ویژگی نیز تعیین می فایرفاکس خواهد شد، بر خلاف سایر مرورگرها، </font></font><a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing"><font><font>اصرار دولت غیر فعال پویا و (در صورت وجود) checkedness پویا</font></font></a><font><font> از {{روی HTMLElement ("ورودی")}} در سراسر بارهای صفحه. </font><font>ویژگی تداوم به طور پیش فرض فعال است. </font><font>تنظیم مقدار از </font></font><strong><font><font>تکمیل خودکار</font></font></strong><font><font> ویژگی به </font></font><code><font><font>فعال</font></font></code><font><font> غیر فعال کردن این ویژگی. </font><font>این کار حتی زمانی که </font></font><strong><font><font>تکمیل خودکار</font></font></strong><font><font> ویژگی به طور معمول به {{روی HTMLElement ("ورودی")}} به موجب آن صدق نمی کند </font></font><strong><font><font>نوع</font></font></strong><font><font> . </font><font>مشاهده {{اشکال (654072)}}.</font></font></p>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("رقم")}} {{غیر standard_inline}}</font></font></dt>
+ <dd><font><font>این یک ویژگی غیر استاندارد پشتیبانی شده توسط صفری است که مورد استفاده برای کنترل اینکه آیا autocorrection باید فعال زمانی که کاربر وارد شده است / ویرایش ارزش متن {{روی HTMLElement ("ورودی")}}. </font><font>مقادیر ویژگی ممکن است:</font></font>
+ <ul>
+  <li><code><font><font>در</font></font></code><font><font> : فعال کردن autocorrection</font></font></li>
+  <li><code><font><font>خاموش</font></font></code><font><font> : autocorrection غیر فعال کردن</font></font></li>
+ </ul>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("فوکوس خودکار")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>این ویژگی بولی شما اجازه می دهد مشخص است که یک کنترل فرم باید تمرکز ورودی هنگامی که بارهای صفحه، مگر اینکه کاربر را لغو، به عنوان مثال با تایپ کردن در یک کنترل متفاوت است. </font><font>تنها یک عنصر فرم در یک سند می تواند داشته </font></font><strong><font><font>فوکوس خودکار</font></font></strong><font><font> ویژگی، که یک بولی. </font><font>این را نمی توان اعمال اگر </font></font><strong><font><font>نوع</font></font></strong><font><font> صفت به راه </font></font><code><font><font>پنهان</font></font></code><font><font> (که شده است، شما نمی توانید به طور خودکار تمرکز به کنترل پنهان است).</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("ذخیره خودکار")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>این ویژگی باید به عنوان یک ارزش منحصر به فرد تعریف شده است. </font><font>اگر ارزش نوع ویژگی است </font></font><code><font><font>جستجو</font></font></code><font><font> ، ارزش عبارت جستجوی قبلی در کرکره در سراسر بار صفحه ادامه خواهد داشت.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("چک")}}</font></font></dt>
+ <dd>
+ <p><font><font>هنگامی که ارزش </font></font><strong><font><font>نوع</font></font></strong><font><font> ویژگی است </font></font><code><font><font>رادیو</font></font></code><font><font> یا </font></font><code><font><font>چک باکس</font></font></code><font><font> ، حضور این ویژگی بولی نشان می دهد که کنترل به طور پیش فرض انتخاب شده. </font><font>در غیر این صورت آن را نادیده گرفته است.</font></font></p>
+
+ <p><font><font>فایرفاکس خواهد شد، بر خلاف سایر مرورگرها، به طور پیش فرض، </font></font><a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing"><font><font>اصرار پویا بررسی دولت</font></font></a><font><font> از {{روی HTMLElement ("ورودی")}} در سراسر بارهای صفحه. </font><font>با استفاده از {{htmlattrxref ("تکمیل خودکار"، "ورودی")}} ویژگی برای کنترل این ویژگی.</font></font></p>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("غیر فعال")}}</font></font></dt>
+ <dd>
+ <p><font><font>این ویژگی بولی نشان می دهد که کنترل فرم در دسترس است برای تعامل نیست. </font><font>به طور خاص، </font></font><code><font><font>کلیک</font></font></code><font><font> رویداد </font></font><a class="external" href="https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute"><font><font>خواهد شد اعزام نمی</font></font></a><font><font> در کنترل غیر فعال است. </font><font>همچنین، ارزش یک کنترل غیر فعال است با فرم ارسال نشده است.</font></font></p>
+
+ <p><font><font>فایرفاکس خواهد شد، بر خلاف سایر مرورگرها، به طور پیش فرض، </font></font><a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing"><font><font>اصرار دولت معلول پویا</font></font></a><font><font> از {{روی HTMLElement ("ورودی")}} در سراسر بارهای صفحه. </font><font>با استفاده از {{htmlattrxref ("تکمیل خودکار"، "ورودی")}} ویژگی برای کنترل این ویژگی.</font></font></p>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("فرم")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>عنصر فرم که عنصر ورودی با (آن همراه </font></font><em><font><font>صاحب فرم</font></font></em><font><font> ). </font><font>ارزش ویژگی باید داشته باشد </font></font><strong><font><font>ID</font></font></strong><font><font> از {{روی HTMLElement ("فرم")}} عنصر در همان سند. </font><font>اگر این ویژگی مشخص نشده است، این </font></font><code><font><font>&lt;ورودی&gt;</font></font></code><font><font> عنصر باید از نسل {{روی HTMLElement ("فرم")}} عنصر باشد. </font><font>این ویژگی شما را قادر به قرار دادن </font></font><code><font><font>&lt;ورودی&gt;</font></font></code><font><font> عناصر در هر نقطه در یک سند، نه فقط به عنوان فرزندان عناصر فرم خود را. </font><font>ورودی تنها می توان با یک فرم در ارتباط است.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("formaction")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>URI از برنامه ای است که پردازش اطلاعات ارائه شده توسط عنصر ورودی، اگر آن یک دکمه یا عکس ارسال کنید. </font><font>اگر مشخص شده، آن را لغو می {{htmlattrxref ("عمل"، "فرم")}} ویژگی از صاحب فرم عنصر است.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("formenctype")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>اگر عنصر ورودی دکمه ارسال و یا تصویر است، این ویژگی نوع محتوا است که برای ارائه به صورت به سرور مشخص می کند. </font><font>مقادیر ممکن عبارتند از:</font></font>
+ <ul>
+  <li><code><font><font>نرم افزار / X-WWW-فرم-urlencoded</font></font></code><font><font> : مقدار پیش فرض اگر ویژگی مشخص نشده است.</font></font></li>
+  <li><code><font><font>چند / فرم داده</font></font></code><font><font> : با استفاده از این ارزش اگر شما با استفاده از {{روی HTMLElement ("ورودی")}} عنصر با {{htmlattrxref ("نوع"، "ورودی")}} مجموعه نسبت به </font></font><code><font><font>فایل</font></font></code><font><font> .</font></font></li>
+  <li><code><font><font>متن / ساده</font></font></code></li>
+ </ul>
+
+ <p><font><font>اگر این ویژگی مشخص است، آن را لغو می {{htmlattrxref ("Enctype فرم"، "فرم")}} ویژگی از صاحب فرم عنصر است.</font></font></p>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("formmethod")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>اگر عنصر ورودی دکمه ارسال و یا تصویر است، این ویژگی به روش HTTP که مرورگر استفاده می کند برای ارسال فرم مشخص می کند. </font><font>مقادیر ممکن عبارتند از:</font></font>
+ <ul>
+  <li><code><font><font>ارسال</font></font></code><font><font> : داده ها از فرم در بدن از فرم شامل است و به سرور ارسال می شود.</font></font></li>
+  <li><code><font><font>دریافت</font></font></code><font><font> ها: داده ها از فرم به اضافه </font></font><strong><font><font>فرم</font></font></strong><font><font> نسبت URI، با "؟" </font><font>به عنوان یک جدا، و URI نتیجه به سرور ارسال می شود. </font><font>با استفاده از این روش هنگامی که فرم هیچ عوارض جانبی و تنها حاوی کاراکترهای اسکی.</font></font></li>
+ </ul>
+
+ <p><font><font>اگر مشخص شده، این ویژگی را لغو می {{htmlattrxref ("روش"، "فرم")}} ویژگی از صاحب فرم عنصر است.</font></font></p>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("formnovalidate")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>اگر عنصر ورودی دکمه ارسال و یا تصویر است، این ویژگی بولی مشخص می کند که به شکل نیست به اعتبار زمانی که آن را مشاهده کنید. </font><font>اگر این ویژگی مشخص است، آن را لغو می {{htmlattrxref ("novalidate"، "فرم")}} ویژگی از صاحب فرم عنصر است.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("formtarget")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>اگر عنصر ورودی دکمه ارسال و یا تصویر است، این ویژگی یک نام یا کلمه کلیدی نشان می دهد که در آن به نمایش پاسخ این است که پس از ارسال فرم دریافت است. </font><font>این نام، و یا کلمه کلیدی برای، است </font></font><em><font><font>زمینه مرور</font></font></em><font><font> (به عنوان مثال، تب، پنجره، و یا فریم های درون خطی). </font><font>اگر این ویژگی مشخص است، آن را لغو می {{htmlattrxref ("هدف"، "فرم")}} ویژگی از صاحب فرم عناصر است. </font><font>کلمات کلیدی زیر دارای معانی خاص:</font></font>
+ <ul>
+  <li><font><font>_ </font></font><code><font><font>خود</font></font></code><font><font> : بار پاسخ به زمینه مرور همان یک جریان. </font><font>این مقدار به طور پیش فرض است اگر ویژگی مشخص نشده است.</font></font></li>
+  <li><code><font><font>_blank</font></font></code><font><font> : بار پاسخ به یک محیط جدید مرور که نامش ذکر نشده.</font></font></li>
+  <li><code><font><font>_parent</font></font></code><font><font> : بار پاسخ به زمینه مرور پدر و مادر از یک جریان. </font><font>اگر هیچ پدر و مادر وجود دارد، این گزینه رفتار به همان شیوه به عنوان </font></font><code><font><font>_self</font></font></code><font><font> .</font></font></li>
+  <li><code><font><font>_top</font></font></code><font><font> : بار پاسخ به زمینه مرور در سطح بالا (که شده است، زمینه مرور است که از اجداد یک جریان، و هیچ پدر و مادر). </font><font>اگر هیچ پدر و مادر وجود دارد، این گزینه رفتار به همان شیوه به عنوان </font></font><code><font><font>_self</font></font></code><font><font> .</font></font></li>
+ </ul>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("ارتفاع")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>اگر مقدار از </font></font><strong><font><font>نوع</font></font></strong><font><font> ویژگی است </font></font><code><font><font>تصویر</font></font></code><font><font> ، این ویژگی ارتفاع تصویر نمایش داده شده برای دکمه تعریف می کند.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("تدریجی")}} {{غیر standard_inline}}</font></font></dt>
+ <dd><font><font>این یک ویژگی غیر استاندارد پشتیبانی شده توسط صفری که فقط شامل زمانی که است </font></font><strong><font><font>نوع</font></font></strong><font><font> است </font></font><code><font><font>جستجو</font></font></code><font><font> . </font><font>اگر ویژگی حال حاضر، صرف نظر از آنچه ارزش خود را است، {{روی HTMLElement ("ورودی")}} آتش سوزی </font></font><a href="/en-US/docs/Web/Events/search"><code><font><font>جستجو</font></font></code></a><font><font> وقایع را به عنوان کاربر ویرایش ارزش متن. </font><font>این رویداد تنها پس از ایست-اجرای تعریف کرده است از ضربه زدن به کلید جدید ترین سپری اخراج. </font><font>کلید جدید تنظیم مجدد ایست. </font><font>به عبارت دیگر، شلیک رویداد debounced است. </font><font>اگر ویژگی وجود ندارد، </font></font><a href="/en-US/docs/Web/Events/search"><code><font><font>جستجو</font></font></code></a><font><font> رویداد تنها اخراج وقتی که کاربر به صراحت با دادن یک (مثلا با کلید Enter در حالی که در زمینه فشار دادن).</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("inputmode")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>اشاره به مرورگر است که برای آن صفحه کلید برای نمایش. </font><font>این ویژگی صدق زمانی که ارزش </font></font><strong><font><font>نوع</font></font></strong><font><font> متن، رمز عبور، ایمیل، و یا URL است. </font><font>مقادیر ممکن عبارتند از:</font></font>
+ <ul>
+  <li><code><font><font>کلمه به کلمه</font></font></code><font><font> : عدد و الفبایی، محتوای غیر نثر مانند نام کاربری و کلمه عبور.</font></font></li>
+  <li><code><font><font>لاتین</font></font></code><font><font> : ورودی لاتین اسکریپت در زبان مورد نظر کاربر با ایدز تایپ مانند پیش بینی متن را فعال کنید. </font><font>برای ارتباط انسان-به-کامپیوتر مانند جعبه جستجو.</font></font></li>
+  <li><code><font><font>لاتین نام</font></font></code><font><font> : عنوان </font></font><em><font><font>لاتین</font></font></em><font><font> ، اما برای نام انسان است.</font></font></li>
+  <li><code><font><font>لاتین نثر</font></font></code><font><font> : به عنوان </font></font><em><font><font>لاتین</font></font></em><font><font> ، اما با ایدز تایپ تهاجمی تر. </font><font>برای انسان به انسان ارتباطی مانند پیام های فوری برای ایمیل.</font></font></li>
+  <li><code><font><font>تمام عرض لاتین</font></font></code><font><font> : عنوان </font></font><em><font><font>لاتین نثر</font></font></em><font><font> ، اما برای زبان دوم کاربر.</font></font></li>
+  <li><code><font><font>کانا</font></font></code><font><font> : کانا یا ورودی romaji، به طور معمول ورودی هیراگانا، با استفاده از شخصیت های تمام عرض، با پشتیبانی از تبدیل به کانجی. </font><font>در نظر گرفته شده برای ورودی متن ژاپنی.</font></font></li>
+  <li><code><font><font>کاتاکانا</font></font></code><font><font> : ورودی کاتاکانا، با استفاده از شخصیت های تمام عرض، با پشتیبانی از تبدیل به کانجی. </font><font>در نظر گرفته شده برای ورودی متن ژاپنی.</font></font></li>
+  <li><code><font><font>عددی</font></font></code><font><font> : ورودی عددی، از جمله کلید برای رقم 0 تا 9، ترجیح شخصیت هزاران جدا کاربر، و شخصیت برای نشان اعداد منفی. </font><font>در نظر گرفته شده برای کدهای عددی، به عنوان مثال شماره کارت اعتباری. </font><font>برای اعداد واقعی، ترجیح می دهند با استفاده از &lt;نوع ورودی = "تعداد"&gt;</font></font></li>
+  <li><code><font><font>تلفن</font></font></code><font><font> : ورودی تلفن، از جمله ستاره و کلید پوند. </font><font>استفاده از &lt;ورودی نوع = "تلفن"&gt; در ​​صورت امکان به جای.</font></font></li>
+  <li><code><font><font>ایمیل</font></font></code><font><font> : ورودی ایمیل. </font><font>استفاده از &lt;ورودی نوع = "ایمیل"&gt; در ​​صورت امکان به جای.</font></font></li>
+  <li><code><font><font>آدرس</font></font></code><font><font> : URL ورودی. </font><font>استفاده از &lt;ورودی نوع = "URL"&gt; در ​​صورت امکان به جای.</font></font></li>
+ </ul>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("فهرست")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>شناسایی یک لیست از گزینه های از پیش تعریف شده به پیشنهاد به کاربر. </font><font>مقدار باید باشد </font></font><strong><font><font>ID</font></font></strong><font><font> از {{روی HTMLElement ("کنترل DataList")}} عنصر در همان سند. </font><font>مرورگر تنها گزینه هایی که مقادیر معتبر برای این عنصر ورودی می باشد. </font><font>این صفت زمانی که نادیده گرفته </font></font><strong><font><font>نوع</font></font></strong><font><font> مقدار ویژگی است </font></font><code><font><font>پنهان</font></font></code><font><font> ، </font></font><code><font><font>چک باکس</font></font></code><font><font> ، </font></font><code><font><font>رادیو</font></font></code><font><font> ، </font></font><code><font><font>فایل</font></font></code><font><font> ، یا یک نوع فشار دهید.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("حداکثر")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>حداکثر ارزش (عددی یا تاریخ-زمان) را برای این آیتم، که نباید کمتر از حداقل (آن </font></font><strong><font><font>دقیقه</font></font></strong><font><font> ویژگی) ارزش.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("MAXLENGTH")}}</font></font></dt>
+ <dd><font><font>اگر مقدار از </font></font><strong><font><font>نوع</font></font></strong><font><font> ویژگی است </font></font><code><font><font>متن</font></font></code><font><font> ، </font></font><code><font><font>ایمیل</font></font></code><font><font> ، </font></font><code><font><font>جستجو</font></font></code><font><font> ، </font></font><code><font><font>رمز عبور</font></font></code><font><font> ، </font></font><code><font><font>تلفن</font></font></code><font><font> ، و یا </font></font><code><font><font>URL</font></font></code><font><font> ، این ویژگی به حداکثر تعداد کاراکتر (در نقاط کد یونیکد) که کاربر می تواند وارد مشخص. </font><font>برای دیگر انواع کنترل، آن را نادیده گرفته است. </font><font>این می تواند ارزش بیش از </font></font><strong><font><font>اندازه</font></font></strong><font><font> ویژگی. </font><font>اگر آن مشخص نشده است، کاربر می تواند تعداد نامحدودی از حرف وارد نمایید. </font><font>مشخص نتایج تعداد منفی در رفتار پیش فرض. </font><font>که شده است، کاربر می تواند تعداد نامحدودی از حرف وارد نمایید. </font><font>محدودیت ارزیابی شده است تنها زمانی که ارزش صفت تغییر کرده است.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("دقیقه")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>حداقل ارزش (عددی یا تاریخ-زمان) را برای این آیتم، که نباید بیشتر از حداکثر (آن </font></font><strong><font><font>حداکثر</font></font></strong><font><font> ویژگی) ارزش.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("minlength")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>اگر مقدار از </font></font><strong><font><font>نوع</font></font></strong><font><font> ویژگی است </font></font><code><font><font>متن</font></font></code><font><font> ، </font></font><code><font><font>ایمیل</font></font></code><font><font> ، </font></font><code><font><font>جستجو</font></font></code><font><font> ، </font></font><code><font><font>رمز عبور</font></font></code><font><font> ، </font></font><code><font><font>تلفن</font></font></code><font><font> ، و یا </font></font><code><font><font>URL</font></font></code><font><font> ، این ویژگی حداقل تعداد کاراکتر (در نقاط کد یونیکد) که کاربر می تواند وارد مشخص. </font><font>برای دیگر انواع کنترل، آن را نادیده گرفته است.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("چند")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>این ویژگی بولی نشان می دهد که آیا کاربر می تواند بیش از یک مقدار را وارد کنید. </font><font>این ویژگی صدق زمانی که </font></font><strong><font><font>نوع</font></font></strong><font><font> صفت قرار است به </font></font><code><font><font>ایمیل</font></font></code><font><font> و یا </font></font><code><font><font>فایل</font></font></code><font><font> . </font><font>در غیر این صورت آن را نادیده گرفته است.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("نام")}}</font></font></dt>
+ <dd><font><font>نام کنترل، که با داده های فرم را مشاهده کنید.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("الگوی")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>یک عبارت منظم که ارزش کنترل است در برابر بررسی می شود. </font><font>الگوی باید کل ارزش، نه فقط برخی از زیر مجموعه مطابقت. </font><font>استفاده از </font></font><strong><font><font>عنوان</font></font></strong><font><font> ویژگی برای توصیف الگوی برای کمک به کاربر. </font><font>این ویژگی صدق زمانی که ارزش </font></font><strong><font><font>نوع</font></font></strong><font><font> ویژگی است </font></font><code><font><font>متن</font></font></code><font><font> ، </font></font><code><font><font>جستجو</font></font></code><font><font> ، </font></font><code><font><font>تلفن</font></font></code><font><font> ، </font></font><code><font><font>آدرس</font></font></code><font><font> و یا </font></font><code><font><font>ایمیل</font></font></code><font><font> . </font><font>در غیر این صورت آن را نادیده گرفته است. </font><font>زبان عبارت منظم همان را جاوا اسکریپت است. </font><font>الگوی توسط اسلش رو به جلو احاطه نیست.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("حفره یا سوراخ")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>اشاره به کاربر از آنچه می تواند در کنترل وارد شده است. </font><font>متن حفره یا سوراخ باید بازده حمل و یا خط تغذیه نیست. </font><font>این ویژگی صدق زمانی که ارزش </font></font><strong><font><font>نوع</font></font></strong><font><font> ویژگی است </font></font><code><font><font>متن</font></font></code><font><font> ، </font></font><code><font><font>جستجو</font></font></code><font><font> ، </font></font><code><font><font>تلفن</font></font></code><font><font> ، </font></font><code><font><font>آدرس</font></font></code><font><font> و یا </font></font><code><font><font>ایمیل</font></font></code><font><font> . </font><font>در غیر این صورت آن را نادیده گرفته است.</font></font>
+ <div class="note"><strong><font><font>توجه:</font></font></strong><font><font> آیا استفاده نمی </font></font><code><font><font>حفره یا سوراخ</font></font></code><font><font> نسبت به جای {{روی HTMLElement ("برچسب")}} عنصر. </font><font>اهداف خود متفاوت است: {{روی HTMLElement ("برچسب")}} ویژگی را توصیف نقش عنصر فرم. </font><font>که است، آن را نشان می دهد که چه نوع از اطلاعات است انتظار می رود، </font></font><code><font><font>حفره یا سوراخ</font></font></code><font><font> ویژگی یک اشاره در مورد فرمت محتوای باید باشد. </font><font>موارد که در آن وجود دارد </font></font><code><font><font>حفره یا سوراخ</font></font></code><font><font> صفت هرگز به کاربر نمایش داده، به طوری که فرم باید بدون آن قابل فهم باشد.</font></font></div>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("فقط خواندنی")}}</font></font></dt>
+ <dd><font><font>این ویژگی بولی نشان می دهد که کاربر می تواند ارزش های کنترل را تغییر دهید.</font></font>
+ <p><font><font>{{HTMLVersionInline ("5")}} این صفت اگر مقدار از نادیده گرفته </font></font><strong><font><font>نوع</font></font></strong><font><font> صفت </font></font><code><font><font>پنهان</font></font></code><font><font> ، </font></font><code><font><font>محدوده</font></font></code><font><font> ، </font></font><code><font><font>رنگ</font></font></code><font><font> ، </font></font><code><font><font>چک باکس</font></font></code><font><font> ، </font></font><code><font><font>رادیو</font></font></code><font><font> ، </font></font><code><font><font>فایل</font></font></code><font><font> ، یا یک نوع فشار دهید.</font></font></p>
+ </dd>
+ <dt><font><font>{{htmlattrdef ("نیاز")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>این ویژگی مشخص می کند که کاربر باید در یک مقدار قبل از ارسال فرم را پر کنید. </font><font>این می تواند مورد استفاده قرار گیرد که </font></font><strong><font><font>نوع</font></font></strong><font><font> صفت </font></font><code><font><font>پنهان</font></font></code><font><font> ، </font></font><code><font><font>تصویر</font></font></code><font><font> ، و یا یک نوع دکمه ( </font></font><code><font><font>ارسال</font></font></code><font><font> ، </font></font><code><font><font>تنظیم مجدد</font></font></code><font><font> ، و یا </font></font><code><font><font>دکمه</font></font></code><font><font> ). </font><font>{{cssxref (": اختیاری")}} و {{cssxref (": نیاز")}} CSS شبه کلاس خواهد شد به میدان به عنوان مناسب استفاده شود.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("selectionDirection")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>جهت است که در آن انتخاب رخ داده است. </font><font>این است "رو به جلو" اگر انتخاب از ساخته شده بود به سمت چپ به راست در محل LTR و یا راست به چپ در محلی RTL، و یا "عقب مانده" اگر انتخاب در جهت مخالف ساخته شده است. </font><font>این می تواند "هیچ" اگر جهت انتخاب ناشناخته است.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("اندازه")}}</font></font></dt>
+ <dd><font><font>اندازه اولیه از کنترل. </font><font>این مقدار است در پیکسل مگر اینکه ارزش </font></font><strong><font><font>نوع</font></font></strong><font><font> ویژگی است </font></font><code><font><font>متن</font></font></code><font><font> یا </font></font><code><font><font>رمز عبور</font></font></code><font><font> ، که در این صورت، آن را یک عدد صحیح از شخصیت است. </font><font>شروع در HTML5، این ویژگی فقط زمانی که </font></font><strong><font><font>نوع</font></font></strong><font><font> صفت به راه </font></font><code><font><font>متن</font></font></code><font><font> ، </font></font><code><font><font>جستجو</font></font></code><font><font> ، </font></font><code><font><font>تلفن</font></font></code><font><font> ، </font></font><code><font><font>آدرس</font></font></code><font><font> ، </font></font><code><font><font>ایمیل</font></font></code><font><font> ، و یا </font></font><code><font><font>رمز عبور</font></font></code><font><font> . </font><font>در غیر این صورت آن را نادیده گرفته است. </font><font>علاوه بر این، اندازه باید بزرگتر از صفر باشد. </font><font>اگر شما یک اندازه مشخص نیست، یک مقدار به طور پیش فرض از 20 استفاده شده است.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("چک کردن غلط املایی")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>تنظیم مقدار این ویژگی به </font></font><code><font><font>درست</font></font></code><font><font> نشان می دهد که عنصر نیاز به املا و دستور زبان آن بررسی می شود. </font><font>ارزش </font></font><code><font><font>به طور پیش فرض</font></font></code><font><font> نشان می دهد که عنصر است با توجه به رفتار پیش فرض، احتمالا در عنصر پدر و مادر خود را بر اساس به عمل </font></font><code><font><font>چک کردن غلط املایی</font></font></code><font><font> ارزش. </font><font>ارزش </font></font><code><font><font>نادرست</font></font></code><font><font> نشان می دهد که عنصر باید بررسی شود.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("SRC")}}</font></font></dt>
+ <dd><font><font>اگر مقدار از </font></font><strong><font><font>نوع</font></font></strong><font><font> ویژگی است </font></font><code><font><font>تصویر</font></font></code><font><font> ، این ویژگی URI برای محل از یک تصویر به روی گرافیکی نمایش دکمه ارسال را مشخص. </font><font>در غیر این صورت آن را نادیده گرفته است.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("گام")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>با این نسخهها کار میکند </font></font><strong><font><font>دقیقه</font></font></strong><font><font> و </font></font><strong><font><font>حداکثر</font></font></strong><font><font> نسبت به محدود کردن افزایش که در آن یک مقدار عددی یا تاریخ-زمان می تواند مجموعه ای. </font><font>این می تواند رشته </font></font><code><font><font>هر</font></font></code><font><font> و یا تعداد ممیز شناور مثبت است. </font><font>اگر این ویژگی است به تنظیم نشده </font></font><code><font><font>هر</font></font></code><font><font> ، کنترل تنها ارزش می پذیرد در تقسیم عددی بر مضرب ارزش گام بیشتر از حداقل.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("tabindex")}}-عنصر خاص در {{HTMLVersionInline (4)}}، جهانی در {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>موقعیت عنصر در tabbing منظور ناوبری برای سند جاری.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("usemap")}} {{HTMLVersionInline (4)}} تنها، {{obsoleteGeneric ("درون خطی"، "HTML5")}}</font></font></dt>
+ <dd><font><font>نام {{روی HTMLElement ("نقشه")}} عنصر به عنوان یک تصویر نقشه.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("مقدار")}}</font></font></dt>
+ <dd><font><font>مقدار اولیه از کنترل. </font><font>این ویژگی اختیاری به جز زمانی که ارزش است </font></font><strong><font><font>نوع</font></font></strong><font><font> ویژگی است </font></font><code><font><font>رادیو</font></font></code><font><font> یا </font></font><code><font><font>چک باکس</font></font></code><font><font> . </font></font><br>
+ <font><font>توجه داشته باشید که زمانی که بارگیری مجدد صفحه، مارمولک خانگی و اینترنت اکسپلورر </font></font><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186"><font><font>خواهد شد مقدار مشخص شده در کد HTML فوق به چشم پوشی</font></font></a><font><font> ، اگر مقدار قبل از بازنگری تغییر یافت.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("عرض")}} {{HTMLVersionInline ("5")}}</font></font></dt>
+ <dd><font><font>اگر مقدار از </font></font><strong><font><font>نوع</font></font></strong><font><font> ویژگی است </font></font><code><font><font>تصویر</font></font></code><font><font> ، این ویژگی عرض تصویر نمایش داده شده برای دکمه تعریف می کند.</font></font></dd>
+ <dt><font><font>{{htmlattrdef ("X-moz-errormessage")}} {{غیر standard_inline}}</font></font></dt>
+ <dd><font><font>این فرمت موزیلا اجازه می دهد تا شما را به مشخص پیغام خطا برای نمایش زمانی که یک میدان می کند با موفقیت اعتبار نیست.</font></font></dd>
+</dl>
+
+<h2 id="یادداشت"><font><font>یادداشت</font></font></h2>
+
+<h3 id="ورودی_فایل"><font><font>ورودی فایل</font></font></h3>
+
+<div class="note">
+<p><strong><font><font>توجه داشته باشید:</font></font></strong><font><font> شروع در {{مارمولک خانگی ("2.0")}}، خواستار </font></font><code><font><font>کلیک ()</font></font></code><font><font> روش در {{روی HTMLElement ("ورودی")}} عنصر از نوع "فایل" باز می شود جمع کننده فایل و کاربر فایل را انتخاب کنید اجازه می دهد. </font><font>مشاهده </font></font><a href="/en-US/docs/Using_files_from_web_applications"><font><font>با استفاده از فایل ها از برنامه های کاربردی وب</font></font></a><font><font> برای مثال و جزئیات بیشتر.</font></font></p>
+</div>
+
+<p><font><font>شما می توانید مقدار یک جمع کننده فایل از یک اسکریپت تنظیم نشده. </font><font>انجام کاری مانند زیر اثر ندارد:</font></font></p>
+
+<pre class="brush: js">ور E = getElementById ("someFileInputElement")؛
+e.value = "غذ"؛
+</pre>
+
+<h3 id="پیام_های_خطا"><font><font>پیام های خطا</font></font></h3>
+
+<p><font><font>اگر می خواهید فایرفاکس به ارائه یک پیام خطای سفارشی در زمانی که یک میدان قادر به اعتبارسنجی، شما می توانید با استفاده از </font></font><code><font><font>X-moz-errormessage</font></font></code><font><font> ویژگی به انجام این کار:</font></font></p>
+
+<pre class="brush: html">&lt;نوع ورودی = "ایمیل" X-moz-errormessage = "لطفا یک آدرس ایمیل معتبر را مشخص کنید."&gt;
+</pre>
+
+<p><font><font>توجه داشته باشید، با این حال، که این استاندارد نیست و یک اثر در مرورگرهای دیگر ندارد.</font></font></p>
+
+<h2 id="نمونه"><font><font>نمونه</font></font></h2>
+
+<h3 id="جعبه_ورودی_ساده"><font><font>جعبه ورودی ساده</font></font></h3>
+
+<pre class="brush: html">&lt;! - ورودی عمومی -&gt;
+&lt;نوع ورودی = "متن" نام = "ورودی" مقدار = "در اینجا تایپ کنید"&gt;
+</pre>
+
+<p><input><img alt="" class="ife_marker" id="input_ife_marker_0" style="border: 0pt none; cursor: pointer; display: inline; height: 19px; width: 14px;" title="حداکثر طول فیلد نامشخص است"></p>
+
+<h3 id="سناریو_مورد_استفاده_مشترک"><font><font>سناریو مورد استفاده مشترک</font></font></h3>
+
+<pre class="brush: html">&lt;! - فرم مشترک است که شامل تگ های ورودی -&gt;
+&lt;اقدام فرم = روش "getform.php" = "دریافت"&gt;
+    نام: &lt;نوع ورودی = "متن" نام = "FIRST_NAME" /&gt; &lt;br /&gt;
+     تاریخ و زمان آخرین نام: &lt;نوع ورودی = "متن" نام = "LAST_NAME" /&gt; &lt;br /&gt;
+        فرستادن به ایمیل: &lt;ورودی نوع = "ایمیل" نام = "USER_EMAIL" /&gt; &lt;br /&gt;
+&lt;نوع ورودی = "ارسال" مقدار = "ارسال" /&gt;
+&lt;/ FORM&gt;
+</pre>
+
+<h3 id="با_استفاده_از_mozactionhint_در_فایرفاکس_موبایل"><font><font>با استفاده از mozactionhint در فایرفاکس موبایل</font></font></h3>
+
+<p><font><font>شما می توانید {{htmlattrxref ("mozactionhint"، "ورودی")}} نسبت به تعیین متن برای برچسب کلید وارد کنید بر روی صفحه کلید مجازی هنگامی که فرم شما در فایرفاکس موبایل ارائه استفاده کنید. </font><font>به عنوان مثال، به یک "بعدی" برچسب، شما می توانید این کار:</font></font></p>
+
+<pre class="brush: html">&lt;نوع ورودی = "متن" mozactionhint = "بعدی" نام = "sometext" /&gt;
+</pre>
+
+<p><font><font>نتیجه این است:</font></font></p>
+
+<p><a href="/@api/deki/files/4970/=mozactionhint.png"><img alt="mozactionhint.png" class="default internal" src="/@api/deki/files/4970/=mozactionhint.png?size=webview" style="border: 1px solid black; height: 350px; width: 210px;"></a></p>
+
+<h2 id="Specifications" name="Specifications"><font><font>مشخصات</font></font></h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col"><font><font>مشخصات</font></font></th>
+   <th scope="col"><font><font>وضعیت</font></font></th>
+   <th scope="col"><font><font>توضیح</font></font></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><font><font>{{SpecName ('HTML WHATWG'، 'ورودی-element.html #-ورودی-عنصر'، '&lt;ورودی&gt;')}}</font></font></td>
+   <td><font><font>{{Spec2 ('HTML WHATWG')}}</font></font></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><font><font>{{SpecName ('HTML5 W3C'، 'forms.html #-ورودی-عنصر'، '&lt;ورودی&gt;')}}</font></font></td>
+   <td><font><font>{{Spec2 ('HTML5 W3C')}}</font></font></td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><font><font>{{SpecName ('HTML4.01'، 'تعامل / # forms.html H-17.4'، '&lt;FORM&gt;')}}</font></font></td>
+   <td><font><font>{{Spec2 ('HTML4.01')}}</font></font></td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="سازگاری_مرورگر"><font><font>سازگاری مرورگر</font></font></h2>
+
+<p><font><font>{{CompatibilityTable}}</font></font></p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th><font><font>خصوصیات</font></font></th>
+   <th><font><font>کروم</font></font></th>
+   <th><font><font>فایرفاکس (مارمولک خانگی)</font></font></th>
+   <th><font><font>اینترنت اکسپلورر</font></font></th>
+   <th><font><font>اپرا</font></font></th>
+   <th><font><font>سیاحت اکتشافی در افریقا</font></font></th>
+  </tr>
+  <tr>
+   <td><font><font>حمایت عمومی</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>2 یا قبل از آن</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = دکمه</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>3</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = چک باکس</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}} </font></font><br>
+    <font><font>{{CompatGeckoDesktop ("1.9.2")}} برای </font></font><code><font><font>رشد نامحدود</font></font></code><font><font> ارزش</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = رنگ</font></font></td>
+   <td><font><font>21.0</font></font></td>
+   <td>
+    <p><font><font>{{CompatGeckoDesktop ("29.0")}} (نه برای ویندوز لمسی نشده)</font></font></p>
+   </td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>11.01</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = تاریخ</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatNo}} </font></font><br>
+    <font><font>{{unimplemented_inline ("825294")}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}} (به رسمیت شناخته شده اما هیچ UI)</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = تاریخ ساعت</font></font></td>
+   <td>
+    <p><font><font>{{CompatNo}} </font></font><br>
+     <font><font>(به رسمیت شناخته شده اما هیچ UI)</font></font></p>
+   </td>
+   <td><font><font>{{CompatNo}} </font></font><br>
+    <font><font>{{unimplemented_inline ("825294")}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}} (به رسمیت شناخته شده اما هیچ UI)</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = تاریخ ساعت محلی</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatNo}} </font></font><br>
+    <font><font>{{unimplemented_inline ("825294")}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}} (به رسمیت شناخته شده اما هیچ UI)</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = ایمیل</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = فایل</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>3.02</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = پنهان</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = تصویر</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>مارمولک خانگی 2.0 تنها x و y می فرستد مختصات زمانی که کلیک، دیگر نمی به نام / مقدار این عنصر</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = ماه</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatNo}} </font></font><br>
+    <font><font>{{unimplemented_inline ("446510")}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}} (به رسمیت شناخته شده اما هیچ UI)</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = تعداد</font></font></td>
+   <td><font><font>6.0 (محلی سازی در کروم 11)</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("29.0")}}</font></font></td>
+   <td><font><font>10 </font></font><br>
+    <font><font>(به رسمیت شناخته شده اما هیچ UI)</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = رمز عبور</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = رادیو</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}} </font></font><br>
+    <font><font>{{CompatGeckoDesktop ("1.9.2")}} برای </font></font><code><font><font>رشد نامحدود</font></font></code><font><font> ارزش</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = دامنه</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("23.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>10.62 (11.01 اضافه شده پشتیبانی از مقدار پیش فرض)</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = تنظیم مجدد</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = جستجو</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>11.01</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = ارسال</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = تلفن</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>11.01</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = متن</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = زمان</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatNo}} </font></font><br>
+    <font><font>{{unimplemented_inline ("825294")}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}} (به رسمیت شناخته شده اما هیچ UI)</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = URL</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = هفته</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatNo}} </font></font><br>
+    <font><font>{{unimplemented_inline ("825294")}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}} (به رسمیت شناخته شده اما هیچ UI)</font></font></td>
+  </tr>
+  <tr>
+   <td>
+    <p><font><font>شرایط = [فرمت فایل]</font></font></p>
+   </td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+  </tr>
+  <tr>
+   <td>
+    <p><font><font>شرایط = [نوع MIME پرونده]</font></font></p>
+   </td>
+   <td><font><font>هشت</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("16.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>شرایط = صوتی / *</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}} </font></font><br>
+    <font><font>فیلترها برای پسوند فایل های صوتی زیر: .aac، .aif، .flac، .iff، .m4a، .m4b، .mid، .midi، MP3، .mpa، .mpc ، .oga، .ogg، .ra، .ram، .snd، پنل های ال، .WMA</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>شرایط = ویدیو / *</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}} </font></font><br>
+    <font><font>فیلترها برای پسوند فایل تصویری زیر: .AVI، دیویکس،. FLV، .m4v، .mkv، ویدئویی، .mp4، .mpeg، .MPG، .ogm، .ogv ، .ogx، .rm، .rmvb، .smil، .webm، WMV، .xvid</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>شرایط = تصویر / *</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}} </font></font><br>
+    <font><font>فیلترها برای پسوند فایل تصویر زیر: .jpe، .JPG، .jpeg، با فرمت .gif فعلی، bmp و، .ico، .svg، .svgz، .tif، .tiff ، .ai، .drw، .pct، .psp، .xcf، فایل PSD، .raw</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>= [شرایط. </font><font>+ EXT]</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("37.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>ویژه accesskey</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>6</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>mozactionhint</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>تکمیل خودکار</font></font></td>
+   <td><font><font>17.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>5</font></font></td>
+   <td><font><font>9.6</font></font></td>
+   <td><font><font>5.2</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>فوکوس خودکار</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>9.6</font></font></td>
+   <td><font><font>5.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>بررسی</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>غیر فعال</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>6</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>فرم</font></font></td>
+   <td><font><font>9.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>formaction</font></font></td>
+   <td><font><font>9.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>5.2</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>formenctype</font></font></td>
+   <td><font><font>9.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>formmethod</font></font></td>
+   <td><font><font>9.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>5.2</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>formnovalidate</font></font></td>
+   <td><font><font>5.0 (در 6.0 تنها با DOCTYPE HTML5 کار، پشتیبانی اعتبار در 7.0 غیر فعال و دوباره فعال در 10.0 بود)</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>formtarget</font></font></td>
+   <td><font><font>9.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>5.2</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>ارتفاع</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("16.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>افزایشی</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>inputmode</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>فهرست</font></font></td>
+   <td><font><font>20.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>9.6</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>حداکثر</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("16.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>MAXLENGTH</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7")}}</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>دقیقه</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("16.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>minlength</font></font></td>
+   <td><font><font>40.0</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>چندین</font></font></td>
+   <td><font><font>1.0 (پشتیبانی برای نوع = فایل و نوع = ایمیل از 5.0)</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.9.2")}} برای </font></font><strong><font><font>نوع</font></font></strong><font><font> = فایل </font></font><br>
+    <font><font>{{CompatVersionUnknown}} برای </font></font><strong><font><font>نوع</font></font></strong><font><font> = ایمیل</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>1.0 (پشتیبانی 10.62 برای نوع = فایل و به عنوان از 11.01 نوع = ایمیل)</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نام</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>الگو</font></font></td>
+   <td><font><font>5.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>9.6</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>حفره یا سوراخ</font></font></td>
+   <td><font><font>10.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>11.00</font></font></td>
+   <td><font><font>5.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>فقط خواندنی</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>6 (از دست رفته برای </font></font><strong><font><font>نوع</font></font></strong><font><font> از </font></font><code><font><font>چک باکس</font></font></code><font><font> ، </font></font><code><font><font>رادیو</font></font></code><font><font> )</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>ضروری</font></font></td>
+   <td><font><font>5.0 (پشتیبانی از عنصر انتخاب به عنوان 10)</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("2.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>9.6</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>اندازه</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>چک کردن غلط املایی</font></font></td>
+   <td><font><font>10.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.9.2")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>11.0</font></font></td>
+   <td><font><font>چهار</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>SRC</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>2</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>گام</font></font></td>
+   <td><font><font>6.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("16.0")}}</font></font></td>
+   <td><font><font>10</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>5.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>tabindex</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("1.7 و یا قبل از آن")}}</font></font></td>
+   <td><font><font>6 (عناصر با tabindex&gt; 0 می پیمایش نمی شود)</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>عرض</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("16.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>1.0</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th><font><font>خصوصیات</font></font></th>
+   <th><font><font>آندروید</font></font></th>
+   <th><font><font>فایرفاکس موبایل (مارمولک خانگی)</font></font></th>
+   <th><font><font>اینترنت اکسپلورر موبایل</font></font></th>
+   <th><font><font>اپرا موبایل</font></font></th>
+   <th><font><font>صفری موبایل</font></font></th>
+  </tr>
+  <tr>
+   <td><font><font>حمایت عمومی</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = دکمه</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = چک باکس</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = رنگ</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoDesktop ("27.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = تاریخ</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>5.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نوع = تاریخ ساعت</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = تاریخ ساعت محلی</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = ایمیل</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>3.1 (بدون اعتبار سنجی اما می دهد یک صفحه کلید خاص)</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = فایل</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}} [1]</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = پنهان</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = تصویر</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = ماه</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = تعداد</font></font></td>
+   <td><font><font>2.3 (بدون اعتبار سنجی اما می دهد یک صفحه کلید خاص)</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("29.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>4.0 (بدون اعتبار سنجی اما می دهد یک صفحه کلید خاص)</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = رمز عبور</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = رادیو</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = دامنه</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>5.0</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = تنظیم مجدد</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = جستجو</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>چهار</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = ارسال</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = تلفن</font></font></td>
+   <td><font><font>2.3</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>3.1</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = متن</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = زمان</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = URL</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>3.1 (بدون اعتبار سنجی اما می دهد یک صفحه کلید خاص)</font></font></td>
+  </tr>
+  <tr>
+   <td style="white-space: nowrap;"><font><font>نوع = هفته</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>شرایط = [نوع MIME پرونده]</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>شرایط = صوتی / *</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>شرایط = تصویر / *</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>شرایط = ویدیو / *</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>= [شرایط. </font><font>+ EXT]</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("37.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>ویژه accesskey</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>تکمیل خودکار</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>فوکوس خودکار</font></font></td>
+   <td><font><font>3.2</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>بررسی</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>غیر فعال</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>فرم</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>formaction</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>5.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>formenctype</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>formmethod</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>5.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>formnovalidate</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>formtarget</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>5.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>ارتفاع</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("16.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>فهرست</font></font></td>
+   <td><font><font>{{CompatNo}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>حداکثر</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("16.0")}} (UI ممکن unimplemented باقی می ماند)</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>MAXLENGTH</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>دقیقه</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("16.0")}} (UI ممکن unimplemented باقی می ماند)</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>minlength</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>چندین</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>نام</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>1.0</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>الگو</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>حفره یا سوراخ</font></font></td>
+   <td><font><font>2.3</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>11.10</font></font></td>
+   <td><font><font>4</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>فقط خواندنی</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>ضروری</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>اندازه</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+   <td><font><font>{{CompatVersionUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>چک کردن غلط املایی</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("2.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>11.0</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>SRC</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>گام</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("16.0")}} (UI ممکن unimplemented باقی می ماند)</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>10.62</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>tabindex</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+  <tr>
+   <td><font><font>عرض</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatGeckoMobile ("16.0")}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+   <td><font><font>{{CompatUnknown}}</font></font></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p><font><font>[1]: </font></font><a href="http://blog.uploadcare.com/post/97884147203/you-cannot-upload-files-to-a-server-using-mobile-safari"><font><font>ارسال فایل شکسته شد</font></font></a><font><font> برای IOS 8.0 و 8.0.1 در موبایل صفری. </font><font>اشکال در IOS 8.0.2 ثابت شد.</font></font></p>
+
+<p><font><font>صفری موبایل برای IOS اعمال سبک به طور پیش فرض از </font></font><code><font><font>{{cssxref ("کدورت")}}: 0.4</font></font></code><font><font> به متن غیر فعال {{روی HTMLElement ("ورودی")}} عناصر. </font><font>سایر مرورگرهای اصلی در حال حاضر نمی اشتراک این سبک به طور پیش فرض خاص است.</font></font></p>
+
+<p><font><font>در Safari موبایل برای IOS، تنظیم </font></font><code><font><font>{{cssxref ("صفحه نمایش")}}: بلوک</font></font></code><font><font> در {{روی HTMLElement ("ورودی")}} از </font></font><code><font><font>نوع = "تاریخ"</font></font></code><font><font> ، </font></font><code><font><font>نوع = "زمان"</font></font></code><font><font> ، </font></font><code><font><font>نوع = "تاریخ ساعت محلی "</font></font></code><font><font> ، و یا </font></font><code><font><font>نوع = "ماه"</font></font></code><font><font> باعث می شود که متن درون {{روی HTMLElement ("ورودی")}} برای تبدیل شدن به صورت عمودی به misaligned.</font></font></p>
+
+<p><font><font>به عنوان Chrome v39، </font></font><code><font><font>&lt;ورودی نوع = "تاریخ"&gt;</font></font></code><font><font> مدل دهید با </font></font><code><font><font>{{cssxref ("صفحه نمایش")}}: جدول سلول. </font><font>{{cssxref ("عرض")}}: 100٪؛</font></font></code><font><font> . یک دارای {{cssxref ("دقیقه عرض")}} اعمال شده توسط کروم و نمی توان آن را باریک تر از این حداقل عرض تبدیل </font></font><a href="https://code.google.com/p/chromium/issues/detail?id=346051"><font><font>ببینید کروم اشکال # 346051.</font></font></a></p>
+
+<h3 id="یادداشت_مارمولک_خانگی"><font><font>یادداشت مارمولک خانگی</font></font></h3>
+
+<p><font><font>فایرفاکس خواهد شد، بر خلاف سایر مرورگرها، به طور پیش فرض، </font></font><a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing"><font><font>اصرار دولت غیر فعال پویا و (در صورت وجود) checkedness پویا</font></font></a><font><font> از {{روی HTMLElement ("ورودی")}} در سراسر بارهای صفحه. </font><font>تنظیم مقدار از {{htmlattrxref ("تکمیل خودکار"، "ورودی")}} نسبت به </font></font><code><font><font>فعال</font></font></code><font><font> غیر فعال کردن این ویژگی. </font><font>این کار حتی زمانی که {{htmlattrxref ("تکمیل خودکار"، "ورودی")}} ویژگی به طور معمول به {{روی HTMLElement ("ورودی")}} به موجب آن {{htmlattrxref ("نوع"، "ورودی صدق نمی کند ")}}. </font><font>مشاهده {{اشکال (654072)}}.</font></font></p>
+
+<p><font><font>شروع در مارمولک خانگی 9.0 {{geckoRelease ("9.0")}}، فایرفاکس برای آندروید کاربران امکان می دهد ضبط تصاویر با استفاده از دوربین خود و ارسال آنها، بدون نیاز به مرورگر را ترک کنند. </font><font>توسعه دهندگان وب می توانید این ویژگی را به سادگی مشخص تنظیم اجرای </font></font><code><font><font>شرایط</font></font></code><font><font> مقدار ویژگی به "تصویر / *" در خود </font></font><code><font><font>فایل</font></font></code><font><font> ورودی، مثل این:</font></font></p>
+
+<p><code><font><font>&lt;ورودی نوع = "فایل" شرایط = "تصویر / *"&gt;</font></font></code></p>
+
+<p><font><font>فایرفاکس برای آندروید مجموعه به طور پیش فرض {{cssxref ("تصویر پس زمینه")}} شیب در همه </font></font><code><font><font>نوع = "متن"</font></font></code><font><font> ، </font></font><code><font><font>نوع = "فایل"</font></font></code><font><font> ، </font></font><code><font><font>نوع = "را فشار دهید"</font></font></code><font><font> ، و </font></font><code><font><font>نوع = "ارسال"</font></font></code><font><font> ورودی. </font><font>این را می توان با استفاده از غیرفعال </font></font><code><font><font>تصویر پس زمینه: هیچ کدام</font></font></code><font><font> .</font></font></p>
+
+<p><font><font>فایرفاکس برای آندروید همچنین مجموعه به طور پیش فرض {{cssxref ("مرز")}} در تمام </font></font><code><font><font>&lt;ورودی نوع = "فایل"&gt;</font></font></code><font><font> عناصر.</font></font></p>
+
+<h4 id="محلی_کردن"><font><font>محلی کردن</font></font></h4>
+
+<p><font><font>ورودی مجاز برای برخی از &lt;ورودی&gt; انواع در منطقه بستگی دارد. </font><font>در برخی از مناطق، 1،000.00 یک شماره تلفن معتبر است، در حالی که در دیگر مناطق راه معتبر برای ورود به این تعداد 1.000،00 است.</font></font></p>
+
+<p><font><font>فایرفاکس با استفاده از فن آوری هوشمند زیر برای تعیین مکان به اعتبار ورودی کاربر (حداقل برای نوع = "تعداد"):</font></font></p>
+
+<ul>
+ <li><font><font>سعی کنید به زبان مشخص شده توسط 'زبان' / 'XML: زبان' ویژگی در عنصر یا هر یک از پدر و مادر خود را.</font></font></li>
+ <li><font><font>سعی کنید به زبان مشخص شده توسط هر هدر HTTP Content-زبان و یا</font></font></li>
+ <li><font><font>اگر هیچ موردی مشخص، استفاده از زبان مرورگر.</font></font></li>
+</ul>
+
+<h2 id="همچنین_ببینید"><font><font>همچنین ببینید</font></font></h2>
+
+<ul>
+ <li><font><font>دیگر عناصر مرتبط با فرم: {{روی HTMLElement ("فرم")}}، {{روی HTMLElement ("را فشار دهید")}}، {{روی HTMLElement ("کنترل DataList")}}، {{روی HTMLElement ("افسانه")}}، {{روی HTMLElement ("برچسب")}}، {{روی HTMLElement ("انتخاب کنید")}}، {{روی HTMLElement ("optgroup")}}، {{روی HTMLElement ("گزینه")}}، {{روی HTMLElement ("ناحیه ی متن ")}}، {{روی HTMLElement (" کرک ")}}، {{روی HTMLElement (" از فیلدها ")}}، {{روی HTMLElement (" خروجی ")}}، {{روی HTMLElement (" پیشرفت ")}} و { {روی HTMLElement ("متر")}}.</font></font></li>
+ <li><a class="external" href="http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text"><font><font>صلیب مرورگر متن حفره یا سوراخ HTML5</font></font></a></li>
+</ul>
+
+<p><font><font>{{HTMLRef}}</font></font></p>

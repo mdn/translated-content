@@ -1,0 +1,487 @@
+---
+title: HTTP Cache
+slug: Mozilla/HTTP_cache
+translation_of: Mozilla/HTTP_cache
+---
+<div class="geckoVersionNote">
+<p style="margin-bottom: 0in;">Este documento describe la <strong>Nueva caché HTTP versión 2</strong>.</p>
+</div>
+
+<p style="margin-bottom: 0in;"></p>
+
+<p style="margin-bottom: 0in;">El código reside en <a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/cache2/">/network/cache2</a>.</p>
+
+<p style="margin-bottom: 0in;"></p>
+
+<h2 id="API" style="margin-bottom: 0in;">API</h2>
+
+<p>Aquí hay una descripción detallada de la API de caché HTTP v2, con ejemplos incluidos.  Este documento sólo contiene lo que no se puede encontrar o puede no estar claro directamente de los comentarios de los <a href="http://mxr.mozilla.org/mozilla-central/find?text=&amp;string=cache2/nsICache">archivos IDL.</a></p>
+
+<ul>
+ <li>La API de caché es <strong>completamente thread-safe</strong> y <strong>non-blocking</strong>.</li>
+ <li><strong>No hay soporte IPC</strong>.  Solo es accesible en el proceso predeterminado de Chrome.</li>
+ <li>
+  <p>Cuando no hay perfil, la nueva caché HTTP funciona, pero todo se almacena solo en la memoria que no obedece a ningún límite en particular.</p>
+ </li>
+</ul>
+
+<div class="warning">
+<p>Está fuertemente codificado para <strong>NO USAR </strong>más la <strong>ANTIGUA</strong> API de <strong> </strong>caché - <code>nsICacheService</code> y otros.  Pronto será completamente obsoleto y eliminado (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=913828">bug 913828</a>).</p>
+</div>
+
+<h3 id="nsICacheStorageService_2" style="margin-bottom: 0in;"><a name="nsICacheStorageService"><strong>nsICacheStorageService</strong></a></h3>
+
+<ul>
+ <li>
+  <p style="margin-bottom: 0in;">El punto de entrada de la memoria caché HTTP. Accesible solo como un servicio, totalmente seguro para subprocesos y programable.</p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;"><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/cache2/nsICacheStorageService.idl">https://dxr.mozilla.org/mozilla-central/source/netwerk/cache2/nsICacheStorageService.idl</a></p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;"><span style="display: none;"> </span><code><span style="color: #b22222;">"@mozilla.org/netwerk/cache-storage-service;1"</span></code></p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;">Proporciona métodos para acceder a los objetos de “almacenamiento” – ver <a href="#nsICacheStorage"><code>nsICacheStorage </code></a>  más abajo – para obtener más acceso a las entradas de caché – ver <a href="#nsICacheStorage"><code>nsICacheEntry</code></a> más abajo – por URL específica.</p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;">Actualmente hay 3 tipos de almacenamientos, todos los métodos de acceso devuelve un objeto <a href="#nsICacheStorage"><code>nsICacheStorage</code></a> :</p>
+
+  <ul>
+   <li>
+    <p style="margin-bottom: 0in;"><strong>memory-only</strong> (<code>memoryCacheStorage</code>): Almacena datos solo en memoria caché, los datos en este almacenamiento nunca se guardan en disco.</p>
+   </li>
+   <li>
+    <p style="margin-bottom: 0in;"><strong>disk</strong> (<code>diskCacheStorage</code>): Almacena datos en el disco, pero para entradas existentes <u>además busca dentro del storage de memory-only; </u></p>
+
+    <p style="margin-bottom: 0in;">cuando se le indica a través de un argumento especial, t<u>ambién busca principalmente en la cache de aplicacion.</u></p>
+   </li>
+   <li>
+    <p style="margin-bottom: 0in;"><strong>application cache</strong> (<code>appCacheStorage</code>): Cuando un cliente tiene un objeto <code>nsIApplicationCache</code>  especifico (i.e. una version particular de app cache en un grupo ) en manos, este almacenamiento provee acceso de lectura y escritura a los registros en la aplicacion de Cache, cuando la app de Cache no ha sido especificada, el almacenamiento opera, sobre todas las app de cache.</p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;">El servicio también proporciona métodos para limpiar todo el disco y el contenido de la memoria caché o purgar cualquier estructura intermedia de memoria:</p>
+
+  <ul>
+   <li>
+    <p style="margin-bottom: 0in;"><code>clear </code>– after it returns, all entries are no longer accessible through the cache APIs; the method is fast to execute and non-blocking in any way; the actual erase happens in background</p>
+   </li>
+   <li>
+    <p style="margin-bottom: 0in;"><code>purgeFromMemory </code>– removes (schedules to remove) any intermediate cache data held in memory for faster access (more about the <a href="#Intermediate_memory_caching">intermediate cache</a> below)</p>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+<h3 id="nsILoadContextInfo_2" style="margin-bottom: 0in;"><a name="nsILoadContextInfo">nsILoadContextInfo</a></h3>
+
+<ul>
+ <li>
+  <p style="margin-bottom: 0in;">Distingue el scope del almacenamiento demandado para abrir.</p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;">Argumento obligatorio de <code>*Storage</code>  metodos de <code>nsICacheStorageService</code>.</p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;"><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/public/nsILoadContextInfo.idl">https://dxr.mozilla.org/mozilla-central/source/netwerk/base/public/nsILoadContextInfo.idl</a></p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;"><span style="font-weight: normal;">Es una interaz de ayuda que se ajusta siguiendo 4 argumentos en uno solo</span><span style="font-weight: normal;">:</span></p>
+
+  <ul>
+   <li>
+    <p style="margin-bottom: 0in; font-weight: normal;"><strong>private-browsing</strong> boolean flag</p>
+   </li>
+   <li>
+    <p style="margin-bottom: 0in; font-weight: normal;"><strong>anonymous load</strong> boolean flag</p>
+   </li>
+   <li>
+    <p style="margin-bottom: 0in;"><span style="font-weight: normal;"><strong>app ID</strong> number (<code>0</code> for no app)</span></p>
+   </li>
+   <li>
+    <p style="margin-bottom: 0in;"><span style="font-weight: normal;"><strong>is-in-browser</strong> boolean flag</span></p>
+   </li>
+  </ul>
+ </li>
+ <li>
+  <div class="note">
+  <p style="margin-bottom: 0in;">Helper functions to create nsILoadContextInfo objects:</p>
+
+  <ul>
+   <li>
+    <p style="margin-bottom: 0in;">C++ consumers: functions at <code>LoadContextInfo.h</code> exported header</p>
+   </li>
+   <li>
+    <p style="margin-bottom: 0in;">JS consumers: <code>resource://gre/modules/LoadContextInfo.jsm</code> module methods</p>
+   </li>
+  </ul>
+  </div>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;">Dos objectos de almacenamiento creados con el mismo set de  <code>nsILoadContextInfo  </code>argumentos son identicos, conteniedo las mismas entredas de cache.</p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;">Two storage objects created with in any way different <code>nsILoadContextInfo </code>arguments are strictly and completely distinct and cache entries in them do not overlap even when having the same URIs.</p>
+ </li>
+</ul>
+
+<h3 id="nsICacheStorage_2" style="margin-bottom: 0in;"><a name="nsICacheStorage"><strong>nsICacheStorage</strong></a></h3>
+
+<ul>
+ <li>
+  <p style="margin-bottom: 0in;"><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/cache2/nsICacheStorage.idl"><span style="font-weight: normal;">https://dxr.mozilla.org/mozilla-central/source/netwerk/cache2/nsICacheStorage.idl</span></a></p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;">Obtained from call to one of the <code>*Storage</code> methods on <a href="#nsICacheStorageService"><code>nsICacheStorageService</code></a>.</p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;"><span style="font-weight: normal;">Represents a distinct storage area (or scope) to put and get cache entries mapped by URLs into and from it.</span></p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;"><em><span style="font-weight: normal;">Similarity with the old cache</span></em><span style="font-weight: normal;">: this interface may be with some limitations considered as a mirror to <code>nsICacheSession</code>, but less generic and not inclining to abuse.</span></p>
+ </li>
+ <li>
+  <div class="warning">
+  <p style="margin-bottom: 0in;"><span style="font-weight: normal;"><strong>Unimplemented or underimplemented functionality:</strong></span></p>
+
+  <p><span style="font-weight: normal;">asyncEvictStorage (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=977766">bug 977766</a>)</span>, asyncVisitStorage (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=916052">bug 916052</a>)</p>
+  </div>
+ </li>
+</ul>
+
+<h3 id="nsICacheEntryOpenCallback_2" style="margin-bottom: 0in;"><a name="nsICacheEntryOpenCallback"><strong>nsICacheEntryOpenCallback</strong></a></h3>
+
+<ul>
+ <li>
+  <p style="margin-bottom: 0in; font-weight: normal;"><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/cache2/nsICacheEntryOpenCallback.idl">https://dxr.mozilla.org/mozilla-central/source/netwerk/cache2/nsICacheEntryOpenCallback.idl</a></p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in; font-weight: normal;">The result of <code>nsICacheStorage.asyncOpenURI</code> is always and only sent to callbacks on this interface.</p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in; font-weight: normal;">These callbacks are ensured to be invoked when <code>asyncOpenURI</code> returns <code>NS_OK</code>.</p>
+ </li>
+ <li>
+  <div class="warning">
+  <p style="margin-bottom: 0in; font-weight: normal;"><strong>Important difference in behavior from the old cache:</strong> when the cache entry object is already present in memory or open as “force-new” (a.k.a “open-truncate”) this callback is invoked sooner then the <code>asyncOpenURI </code>method returns (i.e. immediately); there is currently no way to opt out of this feature (watch <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=938186">bug 938186</a>).</p>
+  </div>
+ </li>
+</ul>
+
+<h3 id="nsICacheEntry_2" style="margin-bottom: 0in;"><a name="nsICacheEntry"><strong>nsICacheEntry</strong></a></h3>
+
+<ul>
+ <li>
+  <p style="margin-bottom: 0in;"><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/cache2/nsICacheEntry.idl">https://dxr.mozilla.org/mozilla-central/source/netwerk/cache2/nsICacheEntry.idl</a></p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;"><span style="font-weight: normal;">Obtained asynchronously or pseudo-asynchronously by a call to <code><a href="#nsICacheStorage">nsICacheStorage</a>.asyncOpenURI</code>.</span></p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in; font-weight: normal;">Provides access to a cached entry data and meta data for reading or writing or in some cases both, see below.</p>
+ </li>
+</ul>
+
+<h4 id="Ciclo_de_vida_de_un_nuevo_ingreso">Ciclo de vida de un nuevo ingreso</h4>
+
+<ul>
+ <li>
+  <p style="margin-bottom: 0in;"><span style="font-weight: normal;">Como una entrada es inicialmente vacia (ningun dato o metado es almacenado en este).</span></p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in;">El argumento <code>aNew </code>en <code>onCacheEntryAvailable</code> es <code>true</code> para este y nuevos ingresos.</p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in; font-weight: normal;">Only one consumer (the so called "<em>writer</em>") may have such an entry available (obtained via <code>onCacheEntryAvailable</code>).</p>
+ </li>
+ <li>
+  <p style="margin-bottom: 0in; font-weight: normal;">Other parallel openers of the same cache entry are blocked (wait) for invocation of their <code>onCacheEntryAvailable</code> until one of the following occurs:</p>
+
+  <ul>
+   <li>The <em>writer </em>simply throws the entry away: other waiting opener in line gets the entry again as "<em>new</em>", the cycle repeats.
+
+    <div class="note">
+    <p>This applies in general, writers throwing away the cache entry means a failure to write the cache entry and a new writer is being looked for again, the cache entry remains empty (a.k.a. "new").</p>
+    </div>
+   </li>
+   <li>The <em>writer </em>stored all necessary meta data in the cache entry and called <code>metaDataReady</code> on it: other consumers now get the entry and may examine and potentially modify the meta data and read the data (if any) of the cache entry.</li>
+   <li>When the <em>writer</em> has data (i.e. the response payload) to write to the cache entry, it <strong>must </strong>open the output stream on it <strong>before </strong>it calls <code>metaDataReady</code>.</li>
+  </ul>
+ </li>
+ <li>When the <em>writer</em> still keeps the cache entry and has open and keeps open the output stream on it, other consumers may open input streams on the entry. The data will be available as the <em>writer</em> writes data to the cache entry's output stream immediately, even before the output stream is closed. This is called <a href="#Concurrent_read_and_write"><strong>concurrent read/write</strong></a>.</li>
+</ul>
+
+<h4 id="Concurrent_read_and_write" style="margin-bottom: 0in; font-weight: normal;"><a name="Concurrent read and write">Concurrent read and write</a></h4>
+
+<div class="warning">
+<p><strong>Important difference in behavior from the old cache:</strong> the cache now supports reading a cache entry data while it is still being written by the first consumer - the <em>writer</em>.</p>
+</div>
+
+<p>This can only be engaged for resumable responses that (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=960902#c17">bug 960902</a>) don't need revalidation. Reason is that when the writer is interrupted (by e.g. external canceling of the loading channel) concurrent readers would not be able to reach the remaning unread content.</p>
+
+<div class="note">
+<p>This could be improved by keeping the network load running and being stored to the cache entry even after the writing channel has been canceled.</p>
+</div>
+
+<p>When the <em>writer</em> is interrupted, the first concurrent <em>reader</em> in line does a range request for the rest of the data - and becomes that way a new <em>writer</em>. The rest of the <em>readers</em> are still concurrently reading the content since output stream for the cache entry is again open and kept by the current <em>writer</em>.</p>
+
+<h4 id="Lifetime_of_an_existing_entry_with_only_a_partial_content" style="margin-bottom: 0in; font-weight: normal;">Lifetime of an existing entry with only a partial content</h4>
+
+<ul>
+ <li>Such a cache entry is first examined in the <code>nsICacheEntryOpenCallback.onCacheEntryCheck</code> callback, where it has to be checked for completeness.</li>
+ <li>In this case, the <code>Content-Length</code> (or different indicator) header doesn't equal to the data size reported by the cache entry.</li>
+ <li>The consumer then indicates the cache entry needs to be revalidated by returning <code>ENTRY_NEEDS_REVALIDATION </code>from <code>onCacheEntryCheck</code>.</li>
+ <li>This consumer, from the point of view the cache, takes a role of the <em>writer</em>.</li>
+ <li>Other parallel consumers, if any, are blocked until the <em>writer</em> calls <code>setValid</code> on the cache entry.</li>
+ <li>The consumer is then responsible to validate the partial content cache entry with the network server and attempt to load the rest of the data.</li>
+ <li>When the server responds positively (in case of an HTTP server with a 206 response code) the <em>writer </em>(in this order) opens the output stream on the cache entry and calls <code>setValid</code> to unblock other pending openers.</li>
+ <li>Concurrent read/write is engaged.</li>
+</ul>
+
+<h4 id="Lifetime_of_an_existing_entry_that_doesnt_pass_server_revalidation" style="margin-bottom: 0in; font-weight: normal;">Lifetime of an existing entry that doesn't pass server revalidation</h4>
+
+<ul>
+ <li>Such a cache entry is first examined in the <code>nsICacheEntryOpenCallback.onCacheEntryCheck</code> callback, where the consumer finds out it must be revalidated with the server before use.</li>
+ <li>The consumer then indicates the cache entry needs to be revalidated by returning <code>ENTRY_NEEDS_REVALIDATION </code>from <code>onCacheEntryCheck</code>.</li>
+ <li>This consumer, from the point of view the cache, takes a role of the <em>writer</em>.</li>
+ <li>Other parallel consumers, if any, are blocked until the <em>writer</em> calls <code>setValid</code> on the cache entry.</li>
+ <li>The consumer is then responsible to validate the partial content cache entry with the network server.</li>
+ <li>The server responses with a 200 response which means the cached content is no longer valid and a new version must be loaded from the network.</li>
+ <li>The <em>writer</em> then calls <code>recreate </code>on the cache entry. This returns a new empty entry to write the meta data and data to, the <em>writer</em> exchanges its cache entry by this new one and handles it as a new one.</li>
+ <li>The <em>writer</em> then (in this order) fills the necessary meta data of the cache entry, opens the output stream on it and calls <code>metaDataReady</code> on it.</li>
+ <li>Any other pending openers, if any, are now given this new entry to examine and read as an existing entry.</li>
+</ul>
+
+<h3 id="Adding_a_new_storage" style="margin-bottom: 0in;">Adding a new storage</h3>
+
+<p>Should there be a need to add a new distinct storage for which the current scoping model would not be sufficient - use one of the two following ways:</p>
+
+<ol>
+ <li><em>[preffered]</em> Add a new <code>&lt;Your&gt;Storage</code> method on <code>nsICacheStorageService</code> and if needed give it any arguments to specify the storage scope even more.  Implementation only should need to enhance the context key generation and parsing code and enhance current - or create new when needed - <code>nsICacheStorage</code> implementations to carry any additional information down to the cache service.</li>
+ <li><em>[<strong>not</strong> preferred]</em> Add a new argument to <a href="#nsILoadContextInfo"><code>nsILoadContextInfo</code></a>; <strong>be careful here</strong>, since some arguments on the context may not be known during the load time, what may lead to inter-context data leaking or implementation problems. Adding more distinction to <code>nsILoadContextInfo</code> also affects all existing storages which may not be always desirable.</li>
+</ol>
+
+<p>See context keying details for more information.</p>
+
+<h3 id="Code_examples">Code examples</h3>
+
+<p>TBD</p>
+
+<h4 id="Opening_an_entry">Opening an entry</h4>
+
+<h4 id="Creating_a_new_entry">Creating a new entry</h4>
+
+<h4 id="Recreating_an_already_open_entry">Recreating an already open entry</h4>
+
+<h2 id="Implementation">Implementation</h2>
+
+<h3 id="Threading">Threading</h3>
+
+<p>The cache API is fully thread-safe.</p>
+
+<p>The cache is using a single background thread where any IO operations like opening, reading, writing and erasing happen.  Also memory pool management, eviction, visiting loops happen on this thread.</p>
+
+<p>The thread supports several priority levels. Dispatching to a level with a lower number is executed sooner then dispatching to higher number layers; also any loop on lower levels yields to higher levels so that scheduled deletion of 1000 files will not block opening cache entries.</p>
+
+<ol>
+ <li><strong>OPEN_PRIORITY:</strong> except opening priority cache files also file dooming happens here to prevent races</li>
+ <li><strong>READ_PRIORITY:</strong> top level documents and head blocking script cache files are open and read as the first</li>
+ <li><strong>OPEN</strong></li>
+ <li><strong>READ:</strong> any normal priority content, such as images are open and read here</li>
+ <li><strong>WRITE:</strong> writes are processed as last, we cache data in memory in the mean time</li>
+ <li><strong>MANAGEMENT:</strong> level for the memory pool and CacheEntry background operations</li>
+ <li><strong>CLOSE:</strong> file closing level</li>
+ <li><strong>INDEX:</strong> index is being rebuild here</li>
+ <li><strong>EVICT:</strong> files overreaching the disk space consumption limit are being evicted here</li>
+</ol>
+
+<p>NOTE: Special case for eviction - when an eviction is scheduled on the IO thread, all operations pending on the OPEN level are first merged to the OPEN_PRIORITY level. The eviction preparation operation - i.e. clearing of the internal IO state - is then put to the end of the OPEN_PRIORITY level.  All this happens atomically. This functionality is currently pending in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=976866">bug 976866</a>.</p>
+
+<h3 id="Storage_and_entries_scopes">Storage and entries scopes</h3>
+
+<p>A <em>scope key</em> string used to map the storage scope is based on the arguments of <code><a href="#nsILoadContextInfo">nsILoadContextInfo</a></code>. The form is following (currently pending in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=968593">bug 968593</a>):</p>
+
+<pre class="bz_comment_text notranslate" id="comment_text_0">a,b,i1009,p,</pre>
+
+<ul>
+ <li>Regular expression: <code>(.([^,]+)?,)*</code></li>
+ <li>The first letter is an identifier, identifiers are to be alphabetically sorted and always terminate with ','</li>
+ <li>a - when present the scope is belonging to an <strong>anonymous</strong> load</li>
+ <li>b - when present the scope is <strong>in browser element</strong> load</li>
+ <li>i - when present must have a decimal integer value that represents an app ID the scope belongs to, otherwise there is no app (app ID is considered <code>0</code>)</li>
+ <li>p - when present the scope is of a <strong>private browsing </strong>load, this never persists</li>
+</ul>
+
+<p><code><strong>CacheStorageService </strong></code>keeps a global hashtable mapped by the <em>scope key</em>. Elements in this global hashtable are hashtables of cache entries. The cache entries are mapped by concantation of Enhance ID and URI passed to <code>nsICacheStorage.asyncOpenURI</code>.  So that when an entry is beeing looked up, first the global hashtable is searched using the <em>scope key</em>. An entries hashtable is found. Then this entries hashtable is searched using &lt;enhance-id:&gt;&lt;uri&gt; string. The elemets in this hashtable are CacheEntry classes, see below.</p>
+
+<p>The hash tables keep a strong reference to <code>CacheEntry</code> objects. The only way to remove <code>CacheEntry</code> objects from memory is by exhausting a memory limit for <a href="##Intermediate_memory_caching">intermediate memory caching</a>, what triggers a background process of purging expired and then least used entries from memory. Another way is to directly call the <code>nsICacheStorageService.purge </code>method. That method is also called automatically on the <span style="color: #b22222;"><code>"memory-pressure"</code></span> indication.</p>
+
+<p>Access to the hashtables is protected by a global lock. We also - in a thread-safe manner - count the number of consumers keeping a reference on each entry. The open callback actually doesn't give the consumer directly the <code>CacheEntry</code> object but a small wrapper class that manages the 'consumer reference counter' on its cache entry. This both mechanisms ensure thread-safe access and also inability to have more then a single instance of a <code>CacheEntry</code> for a single &lt;scope+enhanceID+URL&gt; key.</p>
+
+<p><code><strong>CacheStorage</strong></code>, implementing the <code><a href="#nsICacheStorage">nsICacheStorage</a></code> interface, is forwarding all calls to internal methods of <code>CacheStorageService</code> passing itself as an argument.  <code>CacheStorageService</code> then generates the <em>scope key</em> using the <code><a href="#nsILoadContextInfo">nsILoadContextInfo</a></code> of the storage. <span style="color: #696969;">Note: CacheStorage keeps a thread-safe copy of <code>nsILoadContextInfo</code> passed to a <code>*Storage</code> method on <code>nsICacheStorageService</code>.</span></p>
+
+<h3 id="Invoking_open_callbacks">Invoking open callbacks</h3>
+
+<p><code><strong>CacheEntry</strong></code>, implementing the <code><a href="#nsICacheEntry">nsICacheEntry</a></code> interface, is responsible for managing the cache entry internal state and to properly invoke <code>onCacheEntryCheck</code> and <code>onCacheEntryAvaiable</code> callbacks to all callers of <code>nsICacheStorage.asyncOpenURI</code>.</p>
+
+<ul>
+ <li>Keeps a FIFO of all openers.</li>
+ <li>Keeps its internal state like NOTLOADED, LOADING, EMPTY, WRITING, READY, REVALIDATING.</li>
+ <li>Keeps the number of consumers keeping a reference to it.</li>
+ <li>Refers a <code>CacheFile</code> object that holds actual data and meta data and, when told to, persists it to the disk.</li>
+</ul>
+
+<p>The openers FIFO is an array of <code>CacheEntry::Callback</code> objects. <code>CacheEntry::Callback</code> keeps a strong reference to the opener plus the opening flags.  <code>nsICacheStorage.asyncOpenURI</code> forwards to <code>CacheEntry::AsyncOpen</code> and triggers the following pseudo-code:</p>
+
+<p><a name="CacheStorage::AsyncOpenURI"><strong>CacheStorage::AsyncOpenURI - the API entry point</strong></a>:</p>
+
+<ul>
+ <li>globally atomic:
+  <ul>
+   <li>look a given <code>CacheEntry</code> in <code>CacheStorageService</code> hash tables up</li>
+   <li>if not found: create a new one, add it to the proper hash table and set its state to NOTLOADED</li>
+   <li>consumer reference ++</li>
+  </ul>
+ </li>
+ <li>call to <a href="#CacheEntry::AsyncOpen">CacheEntry::AsyncOpen</a></li>
+ <li>consumer reference --</li>
+</ul>
+
+<p><a name="CacheEntry::AsyncOpen"><strong>CacheEntry::AsyncOpen</strong> (entry atomic)</a>:</p>
+
+<ul>
+ <li>the opener is added to FIFO, consumer reference ++ (dropped back after an opener is removed from the FIFO)</li>
+ <li>state == NOTLOADED:
+  <ul>
+   <li>state = LOADING</li>
+   <li>when OPEN_TRUNCATE flag was used:
+    <ul>
+     <li><code>CacheFile</code> is created as 'new', state = EMPTY</li>
+    </ul>
+   </li>
+   <li>otherwise:
+    <ul>
+     <li><code>CacheFile</code> is created and load on it started</li>
+     <li><code><a href="#CacheEntry::OnFileReady">CacheEntry::OnFileReady</a></code> notification is now expected</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>state == LOADING: just do nothing and exit</li>
+ <li>call to <a href="#CacheEntry::InvokeCallbacks">CacheEntry::InvokeCallbacks</a></li>
+</ul>
+
+<p><a name="CacheEntry::InvokeCallbacks"><strong>CacheEntry::InvokeCallbacks</strong> (entry atomic):</a></p>
+
+<ul>
+ <li>called on:
+  <ul>
+   <li>a new opener has been added to the FIFO via an <code><strong><a href="#CacheEntry::AsyncOpen">AsyncOpen</a></strong></code> call</li>
+   <li>asynchronous result of <a href="#CacheEntry::OnFileReady"><strong><code>CacheFile</code> open</strong></a></li>
+   <li>the <a href="#CacheEntry::OnHandleClosed"><strong><em>writer</em> throws the entry away</strong></a></li>
+   <li>the <strong>output stream </strong>of the entry has been <strong>opened </strong>or <strong>closed</strong></li>
+   <li><code><strong>metaDataReady </strong></code>or <code><strong>setValid </strong></code>on the entry has been called</li>
+   <li>the entry has been <strong>doomed</strong></li>
+  </ul>
+ </li>
+ <li>state == EMPTY:
+  <ul>
+   <li>on OPER_READONLY flag use: onCacheEntryAvailable with <code>null </code>for the cache entry</li>
+   <li>otherwise:
+    <ul>
+     <li>state = WRITING</li>
+     <li>opener is removed from the FIFO and remembered as the current '<em>writer</em>'</li>
+     <li>onCacheEntryAvailable with <code>aNew = true </code>and this entry is invoked (on the caller thread) for the <em>writer</em></li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>state == READY:
+  <ul>
+   <li>onCacheEntryCheck with the entry is invoked on the first opener in FIFO - on the caller thread if demanded</li>
+   <li>result == RECHECK_AFTER_WRITE_FINISHED:
+    <ul>
+     <li>opener is left in the FIFO with a flag <code>RecheckAfterWrite</code></li>
+     <li>such openers are skipped until the output stream on the entry is closed, then <code>onCacheEntryCheck</code> is re-invoked on them</li>
+     <li><span style="color: #696969;">Note: here is a potential for endless looping when RECHECK_AFTER_WRITE_FINISHED is abused</span></li>
+    </ul>
+   </li>
+   <li>result == ENTRY_NEEDS_REVALIDATION:
+    <ul>
+     <li>state = REVALIDATING, this prevents invocation of any callback until <code>CacheEntry::SetValid</code> is called</li>
+     <li>continue as in state ENTRY_WANTED (just bellow)</li>
+    </ul>
+   </li>
+   <li>result == ENTRY_WANTED:
+    <ul>
+     <li>consumer reference ++ (dropped back when the consumer releases the entry)</li>
+     <li>onCacheEntryAvailable is invoked on the opener with <code>aNew = false </code>and the entry</li>
+     <li>opener is removed from the FIFO</li>
+    </ul>
+   </li>
+   <li>result == ENTRY_NOT_WANTED:
+    <ul>
+     <li><code>onCacheEntryAvailable</code> is invoked on the opener with <code>null </code>for the entry</li>
+     <li>opener is removed from the FIFO</li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li>state == WRITING or REVALIDATING:
+  <ul>
+   <li>do nothing and exit</li>
+  </ul>
+ </li>
+ <li>any other value of state is unexpected here (assertion failure)</li>
+ <li>loop this process while there are openers in the FIFO</li>
+</ul>
+
+<p><a name="CacheEntry::OnFileReady"><strong>CacheEntry::OnFileReady</strong> (entry atomic):</a></p>
+
+<ul>
+ <li>load result == failure or the file has not been found on disk (is new): state = EMPTY</li>
+ <li>otherwise: state = READY since the cache file has been found and is usable containing meta data and data of the entry</li>
+ <li>call to <a href="#CacheEntry::InvokeCallbacks">CacheEntry::InvokeCallbacks</a></li>
+</ul>
+
+<p><a name="CacheEntry::OnHandleClosed"><strong>CacheEntry::OnHandleClosed</strong> (entry atomic):</a></p>
+
+<ul>
+ <li>Called when any consumer throws the cache entry away</li>
+ <li>If the handle is not the handle given to the current <em>writer</em>, then exit</li>
+ <li>state == WRITING: the writer failed to call <code>metaDataReady</code> on the entry - state = EMPTY</li>
+ <li>state == REVALIDATING: the writer failed the re-validation process and failed to call <code>setValid</code> on the entry - state = READY</li>
+ <li>call to <a href="#CacheEntry::InvokeCallbacks">CacheEntry::InvokeCallbacks</a></li>
+</ul>
+
+<p><strong><a name="All consumers release the reference">All consumers release the reference</a>:</strong></p>
+
+<ul>
+ <li>the entry may now be purged (removed) from memory when found expired or least used on overrun of the <a href="#Intermediate_memory_caching">memory pool</a> limit</li>
+ <li>when this is a disk cache entry, its cached data chunks are released from memory and only meta data is kept</li>
+</ul>
+
+<h3 id="Intermediate_memory_caching_of_frequently_used_metadata_a.k.a._disk_cache_memory_pool"><a name="Intermediate_memory_caching">Intermediate memory caching </a>of frequently used metadata (a.k.a. disk cache memory pool)</h3>
+
+<div class="note">
+<p>This is a description of this feature status that is currently only a patch in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=986179">bug 986179</a>. Current behavior is simpler and causes a serious memory consumption regression (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=975367">bug 975367</a>).</p>
+</div>
+
+<p>For the disk cache entries we keep some of the most recent and most used cache entries' meta data in memory for immediate zero-thread-loop opening. The default size of this meta data memory pool is only 250kB and is controlled by a new <code>browser.cache.disk.metadata_memory_limit</code> preference. When the limit is exceeded, we purge (throw away) first <strong>expired</strong> and then <strong>least used </strong>entries to free up memory again. </p>
+
+<p>Only <code>CacheEntry</code> objects that are already loaded and filled with data and having the 'consumer reference == 0' (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=942835#c3">bug 942835</a>) can be purged.</p>
+
+<p>The 'least used' entries are recognized by the lowest value of <a href="https://wiki.mozilla.org/User:Jesse/NewFrecency?title=User:Jesse/NewFrecency">frecency</a> we re-compute for each entry on its every access. The decay time is controlled by the <code>browser.cache.frecency_half_life_hours</code> preference and defaults to 6 hours. The best decay time will be based on results of <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=986728">an experiment</a>.</p>
+
+<p>The memory pool is represented by two lists (strong refering ordered arrays) of <code>CacheEntry</code> objects:</p>
+
+<ol>
+ <li>Sorted by expiration time (that default to 0xFFFFFFFF)</li>
+ <li>Sorted by frecency (defaults to 0)</li>
+</ol>
+
+<p>We have two such pools, one for memory-only entries actually representing the memory-only cache and one for disk cache entries for which we only keep the meta data.  Each pool has a different limit checking - the memory cache pool is controlled by <code>browser.cache.memory.capacity</code>, the disk entries pool is already described above. The pool can be accessed and modified only on the cache background thread.</p>
+
+<div id="cke_pastebin" style="">"@mozilla.org/netwerk/cache-storage-service;1"</div>

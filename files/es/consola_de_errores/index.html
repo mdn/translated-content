@@ -1,0 +1,77 @@
+---
+title: Consola de errores
+slug: Consola_de_errores
+tags:
+  - Desarrollo web
+  - 'Desarrollo_Web:Herramientas'
+  - 'Extensiones:Herramientas'
+  - Herramientas
+  - JavaScript
+  - 'JavaScript:Herramientas'
+  - extensiones
+  - para_revisar
+translation_of: Archive/Mozilla/Error_console
+---
+<p> </p>
+<p><span class="goog-gtc-unit" id="goog-gtc-unit-1"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">La Consola de errores es una herramienta disponible en la mayoría de las aplicaciones basadas en Mozilla que se utiliza para informar de errores en el chrome de la aplicación y en las páginas web que abre el usuario.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-2"><span class="goog-gtc-translatable goog-gtc-from-human goog-gtc-ph-missing" dir="ltr" style="">En ella se informa sobre errores y avisos relacionados con <a>JavaScript</a>, errores de<a href="/es/CSS" title="CSS"> CSS</a> y mensajes arbitrarios procedentes del código de chrome.</span></span>  <span class="goog-gtc-unit" id="goog-gtc-unit-3"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">En Firefox, la Consola de errores se puede abrir desde el menú Herramientas o presionando Ctrl-Shift-J.</span></span></p>
+<div class="geckoVersionNote">
+ <p><span class="goog-gtc-unit" id="goog-gtc-unit-4"><span class="goog-gtc-translatable goog-gtc-from-tm goog-gtc-from-tm-score-100" dir="ltr" style=""></span></span></p><div class="geckoVersionHeading">
+Gecko 2.0 note
+<div style="font-size: 9px; line-height: 1; font-style: italic;">(Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1)</div>
+</div><p></p>
+ <p><span class="goog-gtc-unit" id="goog-gtc-unit-5"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">La Consola de errores está deshabilitada de manera predeterminada en Firefox 4.</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-6"><span class="goog-gtc-translatable goog-gtc-from-tm goog-gtc-from-tm-score-100-fuzzy goog-gtc-ph-missing" dir="ltr" style="">Puedes volver a habilitarla cambiando la preferencia </span></span><code>devtools.errorconsole.enabled</code> a <code>true</code><span class="goog-gtc-unit" id="goog-gtc-unit-6"><span class="goog-gtc-translatable goog-gtc-from-tm goog-gtc-from-tm-score-100-fuzzy goog-gtc-ph-missing" dir="ltr" style=""> y reiniciando el navegador.</span></span></p>
+</div>
+<p><span class="goog-gtc-unit" id="goog-gtc-unit-7"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Para obtener información sobre qué excepciones JavaScript se registran en la Consola de errores y cómo hacer que todas las excepciones se registren también, lee el artículo <a>Excepción al iniciar sesión en JavaScript</a> .</span></span> <span class="goog-gtc-unit" id="goog-gtc-unit-8"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Consulta<a href="/en/Setting_up_extension_development_environment#Development_preferences" title="en/Setting_up_extension_development_environment#Development_preferences"> </a><a class="internal">Configuración del entorno de desarrollo de extensiones#Preferencias de desarrollo</a><a href="/en/Setting_up_extension_development_environment#Development_preferences" title="en/Setting_up_extension_development_environment#Development_preferences"> </a>para conocer las preferencias que se deben establecer si se desea ver los errores de Firefox y las extensiones de la Consola de errores.</span></span></p>
+<p><span class="goog-gtc-unit" id="goog-gtc-unit-9"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Antes de </span></span><a href="/en/Gecko" title="en/Gecko">Gecko</a> <span class="goog-gtc-unit" id="goog-gtc-unit-9"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style=""><a href="/en/Gecko" title="en/Gecko"> </a>1.8.1 (</span></span><a href="/en/Firefox_2_for_developers" title="en/Firefox_2_for_developers">Firefox 2</a><span class="goog-gtc-unit" id="goog-gtc-unit-9"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">), se llamaba Consola JavaScript (ver <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=265.871" title="ERROR: '265.871' is not a valid bug number nor an alias to a bug.">error 265.871</a>).</span></span></p>
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h4 id="Types_of_errors" name="Types_of_errors"><span class="goog-gtc-unit" id="goog-gtc-unit-10"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">Tipos de errores</span></span></h4>
+    <dl>
+     <dt>
+      <span class="goog-gtc-unit" id="goog-gtc-unit-11"><span class="goog-gtc-translatable goog-gtc-from-tm goog-gtc-from-tm-score-100" dir="ltr" style="">Error</span></span></dt>
+     <dd>
+      <small><span class="goog-gtc-unit" id="goog-gtc-unit-12"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">suele ser un error de sintaxis que evita que el programa se compile.</span></span></small></dd>
+    </dl>
+    <dl>
+     <dt>
+      <span class="goog-gtc-unit" id="goog-gtc-unit-13"><span class="goog-gtc-translatable goog-gtc-from-tm goog-gtc-from-tm-score-100" dir="ltr" style="">Advertencia</span></span></dt>
+     <dd>
+      <small><span class="goog-gtc-unit" id="goog-gtc-unit-14"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">por lo general permite que el programa se compile, pero advierte sobre una mala codificación y sugiere fallas de diseño.</span></span></small></dd>
+    </dl>
+    <dl>
+     <dt>
+      <span class="goog-gtc-unit" id="goog-gtc-unit-15"><span class="goog-gtc-translatable goog-gtc-from-tm goog-gtc-from-tm-score-100" dir="ltr" style="">Mensaje</span></span></dt>
+     <dd>
+      <small><span class="goog-gtc-unit" id="goog-gtc-unit-16"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">muy similar a la advertencia, se utiliza muy poco.</span></span></small></dd>
+    </dl>
+    <h4 id="Manipulating_data_displayed_in_Error_Console" name="Manipulating_data_displayed_in_Error_Console"><span class="goog-gtc-unit" id="goog-gtc-unit-17"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Manipulación de los datos mostrados en la Consola de errores</span></span></h4>
+    <p><span class="goog-gtc-unit" id="goog-gtc-unit-18"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">A través del <a>servicio de la Consola</a> se puede acceder a la información que se muestra en la Consola de errores y manipularla.</span></span></p>
+    <p><span class="goog-gtc-unit" id="goog-gtc-unit-19"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Las extensiones pueden escribir en la Consola de errores desde JavaScript utilizando </span></span><code><a href="../en/Components.utils.reportError" rel="internal" title="en/Components.utils.reportError">Components.utils.reportError</a></code>,<span class="goog-gtc-unit" id="goog-gtc-unit-19"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style=""> o si te sientes cómodo con el registro en la consola que proporciona el sistema operativo, </span></span><code><a href="../en/DOM/window.dump" rel="internal" title="en/DOM/window.dump">dump()</a></code><span class="goog-gtc-unit" id="goog-gtc-unit-19"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">.</span></span></p>
+    <p><span class="goog-gtc-unit" id="goog-gtc-unit-20"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Para abrir la Consola de errores dentro de una ventana del navegador o del correo, utiliza la función <code>toJavaScriptConsole()</code> .</span></span></p>
+   </td>
+   <td>
+    <h4 id="Alternatives" name="Alternatives"><span class="goog-gtc-unit" id="goog-gtc-unit-21"><span class="goog-gtc-translatable goog-gtc-from-tm goog-gtc-from-tm-score-100" dir="ltr" style="">Alternativas</span></span></h4>
+    <dl>
+     <dt>
+      <a class="link-https" href="https://addons.mozilla.org/firefox/addon/1815" title="https://addons.mozilla.org/firefox/addon/1815"><span class="goog-gtc-unit" id="goog-gtc-unit-22"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Consola <sup>2</sup></span></span></a></dt>
+     <dd>
+      <small><span class="goog-gtc-unit" id="goog-gtc-unit-23"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">Esta extensión proporciona un sustituto para la Consola de errores, corrigiendo muchos de sus errores e implementando solicitudes de mejora que se pedían desde hacía tiempo.</span></span></small></dd>
+    </dl>
+    <dl>
+     <dt>
+      <a class="link-https" href="https://addons.mozilla.org/firefox/addon/1843" title="https://addons.mozilla.org/firefox/addon/1843"><span class="goog-gtc-unit" id="goog-gtc-unit-24"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">Firebug</span></span></a></dt>
+     <dd>
+      <small><span class="goog-gtc-unit" id="goog-gtc-unit-25"><span class="goog-gtc-translatable goog-gtc-from-human" dir="ltr" style="">La extensión para Firefox también integra la Consola de errores con <a class="external" href="http://www.google.com/url?q=http%3A%2F%2Fwww.getfirebug.com%2Ferrors.html&amp;sa=D&amp;sntz=1&amp;usg=AFQjCNEYvYzWWL7-46LSUGmffFQqclA32g">varias mejoras</a><a class="external" href="http://www.getfirebug.com/errors.html" title="http://www.getfirebug.com/errors.html"> </a>.</span></span></small></dd>
+    </dl>
+    <h4 id="Related_Topics" name="Related_Topics"><span class="goog-gtc-unit" id="goog-gtc-unit-26"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style="">Temas relacionados</span></span></h4>
+    <dl>
+     <dd>
+      <span class="goog-gtc-unit" id="goog-gtc-unit-27"><span class="goog-gtc-translatable goog-gtc-from-mt" dir="ltr" style=""><a href="/es/JavaScript" title="es/JavaScript">JavaScript</a> , <a href="/es/CSS" title="es/CSS">CSS</a> , <a href="/es/Desarrollo_Web" title="es/Desarrollo_Web">Desarrollo we</a></span></span></dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p> </p>

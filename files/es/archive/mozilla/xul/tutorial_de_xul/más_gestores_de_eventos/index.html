@@ -1,0 +1,168 @@
+---
+title: Más gestores de eventos
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Más_gestores_de_eventos
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Event_Handlers
+---
+<p>In this section, the event object is examined and additional events are described.</p>
+
+<h3 id="El_objeto_de_evento" name="El_objeto_de_evento">El objeto de evento</h3>
+
+<p>Each event handler has a single argument which holds an <a href="es/DOM/event">event</a> object. In the attribute form of event listener, this event is an implied argument to the script code which can be refered to using the name 'event'. In the <code><a href="es/DOM/element.addEventListener">addEventListener</a></code> form, the first argument to the listener function will be the event object. The event object has a number of properties which can be examined during an event. The full list can be found in the <a class="external" href="http://xulplanet.com/references/objref/Event.html">referencia al objeto en planeta XUL</a>.</p>
+
+<p>We already saw the event's <code><a href="es/DOM/event.target">target</a></code> property in the last section. It holds a reference to the element where the event occured. A similar property <code><a href="es/DOM/event.currentTarget">currentTarget</a></code> holds the element that is currently having its event listeners handled. In the example below, <code><a href="es/DOM/event.currentTarget">currentTarget</a></code> is always the vbox, whereas <code><a href="es/DOM/event.target">target</a></code> would be the specific element, either the button or checkbox, that was activated. <strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;vbox oncommand="alert(event.currentTarget.tagName);"&gt;
+  &lt;button label="OK"/&gt;
+  &lt;checkbox label="Show images"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<h4 id="La_evento_de_parada_de_propagaci.C3.B3n" name="La_evento_de_parada_de_propagaci.C3.B3n">La evento de parada de propagación</h4>
+
+<p>Once you handle an event, regardless of where in the propagation the event is, you will likely want to stop the event from being sent to further elements, essentially stopping the capturing or bubbling phases from continuing. Depending on how you attach the event listener to an element, there are different ways of doing this.</p>
+
+<p>Recall that the capturing phase occurs before the bubbling phase, so any capturing listeners will trigger before any bubbling listeners. If a capturing event stops the event propagation, none of the later capturing listeners, nor any of the bubbling listeners will ever receive notification about the events. To stop event propagation, call the event object's <code><a href="es/DOM/event.stopPropagation">stopPropagation</a></code> method, as in the following example.</p>
+
+<p><strong>Ejemplo 2</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_2.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;hbox id="outerbox"&gt;
+  &lt;button id="okbutton" label="OK"/&gt;
+&lt;/hbox&gt;
+
+&lt;script&gt;
+function buttonPressed(event){
+  alert('Button was pressed!');
+}
+
+function boxPressed(event){
+  alert('Box was pressed!');
+  event.stopPropagation();
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command',buttonPressed,true);
+
+var outerbox = document.getElementById("outerbox");
+outerbox.addEventListener('command',boxPressed,true);
+&lt;/script&gt;
+</pre>
+
+<p>Here, an event listener has been added to the button and another event listener has been added to the box. The <code><a href="es/DOM/event.stopPropagation">stopPropagation</a></code> method has been called in the box's listener, so the button's listener never gets called. If this call was removed, both listeners would be called and both alerts would appear.</p>
+
+<h4 id="Prevent_Default_Action" name="Prevent_Default_Action">Prevent Default Action</h4>
+
+<p>If no event handlers have been registered for an event, then after completing the capturing and bubbling phases, the element will handle the event in a default way. What will happen depends on the event and the type of element. For example, the 'popupshowing' event is sent to a popup just before it is displayed. The default action is to display the popup. If the default action is prevented, the popup will not be displayed. The default action can be prevented with the event object's <code><a href="es/DOM/event.preventDefault">preventDefault</a></code> method, as in the example below.</p>
+
+<p><strong>Ejemplo 3</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_3.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_3.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;button label="Tipos" type="menu"&gt;
+  &lt;menupopup onpopupshowing="event.preventDefault();"&gt;
+    &lt;menuitem label="Vidrio"/&gt;
+    &lt;menuitem label="Plástico"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre>
+
+<p>Alternatively, for attribute event listeners, you can just return false from the code. Note that preventing the default action is not the same as stopping event propagation with the <code><a href="es/DOM/event.stopPropagation">stopPropagation</a></code> method. Even if the default action has been prevented, the event will still continue to propagate. Similarly, calling the <code><a href="es/DOM/event.stopPropagation">stopPropagation</a></code> method won't prevent the default action. You must call both methods to stop both from occuring.</p>
+
+<p>Note that once propagation or the default action has been prevented, neither may be re-enabled again for that event.</p>
+
+<p>The following sections list some of the events that may be used. A full list is provided in the <a class="external" href="http://www.xulplanet.com/references/elemref/ref_EventHandlers.html">referencia al gestor de evento en planeta XUL</a>.</p>
+
+<h3 id="Eventos_del_rat.C3.B3n" name="Eventos_del_rat.C3.B3n">Eventos del ratón</h3>
+
+<p>There are several events which can be used to handle mouse specific actions, which are described briefly below:</p>
+
+<dl>
+ <dt>click</dt>
+ <dd>Called when the mouse is pressed and released on an element.</dd>
+</dl>
+
+<dl>
+ <dt>dblclick</dt>
+ <dd>Called when the a mouse button is double clicked.</dd>
+</dl>
+
+<dl>
+ <dt>mousedown</dt>
+ <dd>Called when a mouse button is pressed down on an element. The event handler will be called as soon as a mouse button is pressed, even if it hasn't been released yet.</dd>
+</dl>
+
+<dl>
+ <dt>mouseup</dt>
+ <dd>Called when a mouse button is released on an element.</dd>
+</dl>
+
+<dl>
+ <dt>mouseover</dt>
+ <dd>Called when the mouse pointer is moved onto an element. You could use this to highlight the element, however CSS provides a way to do this automatically so you shouldn't do it with an event. You might, however, want to display some help text on a status bar.</dd>
+</dl>
+
+<dl>
+ <dt>mousemove</dt>
+ <dd>Called when the mouse pointer is moved while over an element. The event may be called many times as the user moves the mouse so you should avoid performing lengthy tasks frorm this handler.</dd>
+</dl>
+
+<dl>
+ <dt>mouseout</dt>
+ <dd>Called when the mouse pointer is moved off of an element. You might then unhighlight the element or remove status text.</dd>
+</dl>
+
+<p>There are also a set of drag related events, which occur when the user holds down a mouse button and drags the mouse around. Those events are described in <a href="es/Drag_and_Drop">Drag and Drop</a>.</p>
+
+<h4 id="Propiedades_del_bot.C3.B3n_del_rat.C3.B3n" name="Propiedades_del_bot.C3.B3n_del_rat.C3.B3n">Propiedades del botón del ratón</h4>
+
+<p>When a mouse button event occurs, a number of additional properties are available to determine which mouse buttons were pressed and the location of the mouse pointer. The event's <code><a href="es/DOM/event.button">button</a></code> property can be used to determine which button was pressed, where possible values are 0 for the left button, 1 for the right button and 2 for the middle button. If you've configured your mouse differently, these values may be different.</p>
+
+<p>The <code><a href="es/DOM/event.detail">detail</a></code> property holds the number of times the button has been clicked quickly in sequence. This allows you to check for single, double or triple clicks. Of course, if you just want to check for double clicks, you can also use the dblclick event instead. The click event will be fired once for the first click, again for the second click, and again for the third click, but the dblclick event will only be fired once for a double click.</p>
+
+<p>The <code><a href="es/DOM/event.button">button</a></code> and <code><a href="es/DOM/event.detail">detail</a></code> properties only apply to the mouse button related events, not mouse movement events. For the mousemove event, for example, both properties will be set to 0.</p>
+
+<h4 id="Propiedades_de_la_posici.C3.B3n_del_rat.C3.B3n" name="Propiedades_de_la_posici.C3.B3n_del_rat.C3.B3n">Propiedades de la posición del ratón</h4>
+
+<p>However, all mouse events will be supplied with properties that hold the coordinates of the mouse position where the event occured. There are two sets of coordinates. The first is the <code><a href="es/DOM/event.screenX">screenX</a></code> and <code><a href="es/DOM/event.screenY">screenY</a></code> properties and are relative to the top left corner of the screen. The second set, <code><a href="es/DOM/event.clientX">clientX</a></code> and <code><a href="es/DOM/event.clientY">clientY</a></code>, are relative to the top left corner of the document. Here is an example which displays the current mouse coordinates:</p>
+
+<p><strong>Ejemplo 4</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_4.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advevents_4.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;script&gt;
+
+function updateMouseCoordinates(event){
+  var text = "X:" + event.clientX + " Y:" + event.clientY;
+  document.getElementById("xy").value = text;
+}
+&lt;/script&gt;
+
+&lt;label id="xy"/&gt;
+&lt;hbox width="400" height="400" onmousemove="updateMouseCoordinates(event);"/&gt;
+</pre>
+
+<p>In this example, the size of the box has been set explicity so the effect is easier to see. The event handler gets the <code><a href="es/DOM/event.clientX">clientX</a></code> and <code><a href="es/DOM/event.clientY">clientY</a></code> properties and creates a string from them. This string is then assigned to the value property of the label. Note that the event argument must be passed to the <code>updateMouseCoordinates</code> function. If you move the mouse quickly across the border of the box, you might notice that the coordinates don't generally stop right at 400. This is because the mousemove events occur at intervals depdending on the speed at which the mouse moves and the mouse is usually moved some distance past the border by the time the next event fires. Obviously, it would be much too inefficient to send a mousemove event for every pixel the mouse is moved.</p>
+
+<h4 id="Element_Relative_Coordinates" name="Element_Relative_Coordinates">Element Relative Coordinates</h4>
+
+<p>You will often want to get the coordinates of an event relative to the element where the element occured rather than the entire window. You can do this by subtracting the element's position from the event position, as in the following code.</p>
+
+<pre>var element = event.target;
+var elementX = event.clientX - element.boxObject.x;
+var elementY = event.clientY - element.boxObject.y;
+</pre>
+
+<p>XUL elements have a box object that can be retrieved using the <code><a href="es/XUL/Propiedades#boxObject">boxObject</a></code> property. We'll learn more about the box object in <a href="es/Tutorial_de_XUL/Objetos_de_caja">una sección más adelante</a>, but it holds information pertaining to how the element is displayed, including the x and y position of the element. In this example code, these coordinates are subtracted from the event coordinates to get the event position relative to the element.</p>
+
+<h3 id="Load_Events" name="Load_Events">Load Events</h3>
+
+<p>The load event is sent to the document (la etiqueta de la <code><a href="es/XUL/Elementos#window">ventana - &lt;code&gt;window</a></code>&lt;/code&gt;) once the XUL file has finished loading and just before the content is displayed. This event is commonly used to initialize fields and perform other tasks that need to be done before the user can use the window. You should use a load event to do these kinds of things as opposed to adding script at the top level outside a function. This is because the XUL elements may not have loaded or fully initialized yet, so some things may not work as expected. To use a load event, place an <code><a href="es/XUL/Atributos#onload">onload</a></code> attribute on the <code><a href="es/XUL/Elementos#window">window</a></code> tag. Call code within the load handler which will initialize the interface as necessary.</p>
+
+<p>There is also an unload event which is called once the window has closed, or in a browser context, when the page is switched to another URL. You can use this event to save any changed information, for example.</p>
+
+<p><br>
+ Next, we'll find out how to add <a href="es/Tutorial_de_XUL/Atajos_de_teclado">atajos de teclado</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Añadiendo_los_gestores_de_eventos" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Atajos_de_teclado">Siguiente  »</a></p>
+</div>

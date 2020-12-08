@@ -1,0 +1,131 @@
+---
+title: Vigilancia de plugins
+slug: Vigilancia_de_plugins
+tags:
+  - Firefox 3
+  - Plugins
+  - Todas_las_Categorías
+  - páginas_a_traducir
+translation_of: Archive/Plugins/Monitoring_plugins
+---
+<p>{{ Fx_minversion_header(3) }}</p>
+
+<h3 id="Summary" name="Summary">Sumario</h3>
+
+<p>Un nuevo componente del sistema plugin está ahora disponible para medir cuanto le toma a los plugins (e.g., Adobe Flash) ejecutar sus tareas. Este componente reporta el tiempo de ejecución del plugin usando el <a href="/es/NsIObserverService" title="es/NsIObserverService">observador de servicios</a> a quién esté registrado para recibir las notificaciones. Este artículo discute como los desarrolladores pueden hacer uso de esta nueva característica.</p>
+
+<h3 id="Runtime_Data" name="Runtime_Data">Datos de tiempos de ejecución (Runtime Data)</h3>
+
+<p>La información de tiempo de ejecución reportada es siempre en fracciones de segundo. Debido a que el componente mide el tiempo reloj que le toma al plugin ejecutar las órdenes, el valor incluye ambos tiempos de CPU, el tiempo requerido para el proceso al igual que el tiempo para operaciones de disco. Por lo tanto es técnicamente incorrecto decir que el tiempo de ejecución es una medida del uso del CPU, sin embargo, es una buena representación of todos los recursos que están siendo consumidos por el plugin.</p>
+
+<h3 id="Usage" name="Usage">Uso</h3>
+
+<p>Para hacer uso del nuevo componente debes registrarte para recibir sus notificaciones de tiempo de ejecución usando el <a href="/es/NsIObserverService" title="es/NsIObserverService">observador de servicios</a>. El tema de la notificación es <code>experimental-notify-plugin-call</code>. Si eres nuevo con el observador de servicios de Mozilla, quizás quieras familiarizarte con este antes de proseguir. Puedes hallar más información sobre el observador de servicios <a href="/es/NsIObserverService" title="es/NsIObserverService">aquí</a> y <a href="/es/NsIObserver" title="es/NsIObserver">aquí</a>.</p>
+
+<p>Abajo hay un número de recortes de JavaScript que podrían ser útiles para desarrolladores que intenten usar esta característica:</p>
+
+<h4 id="Registration" name="Registration">Registro</h4>
+
+<p>Para registrarse en las notificaciones de tiempo de ejecución con el observador de servicios debes crear una clase con un método <code>observe</code> que reciba 3 parámetros (<code>tema</code><span style="font-family: monospace;">,</span> <code>asunto</code> y <code>dato</code>) así como un método <code>register</code> que contenga el siguiente código:</p>
+
+<p> </p>
+
+<pre class="eval">var observerService = Components.classes["@mozilla.org/observer-service;1"]
+                        .getService (Components.interfaces.nsIObserverService);
+observerService.addObserver(this, "experimental-notify-plugin-call", false);
+</pre>
+
+<p> </p>
+
+<p> </p>
+
+<h4 id="Observing" name="Observing">Observando</h4>
+
+<p>Como se discutió arriba, para especificar que quieres hacer cuando llegue una notificación tu clase debe tener un método <code>observe</code>, recibiendo 3 parámetros (<code>tema</code>, <code>asunto</code> y <code>dato</code>). El <code>asunto</code> contiene el asunto de la notificación - <code>experimental-notify-plugin-call</code> en este caso, el  <code>dato</code> es el tiempo de ejecución en milisegundos y el <code>tema</code> es siempre <code>null</code> y no debería ser usado.</p>
+
+<p>Aquí hay un ejemplo que muestra el tiempo de ejecución en una caja de alerta al usuario si el tiempo de ejecución excede el medio segundo:</p>
+
+<p> </p>
+
+<pre class="eval"> observe: function(subject, topic, data) {
+   if (topic == "experimental-notify-plugin-call" ) {
+     if (data &gt; 0.500) {
+       alert("Runtime is: " + data);
+     }
+   }
+ }
+</pre>
+
+<p> </p>
+
+<p><strong>NOTA: Este es solo un ejemplo simplificado y el uso de  <code>alert()</code> es muy moderado ya que el componente puede enviar cientos de notificaciones por segundo y puede provocar que el browser deje de funcionar si un número excesivo de cajas de alerta son desplegadas.</strong></p>
+
+<p>Además note que en el ejemplo de arriba una sentencia if se asegura que el tema de la notificación entrante es el correcto. Esto es muy útil en casos donde tu clase está registrada para recibir notificaciones para más de un tema con el observador de servicios.</p>
+
+<h4 id="Clean_Up" name="Clean_Up">Limpieza</h4>
+
+<p>Para eliminar el registro de tu clase con observador de servicios - cuando ya no quieras recibir más notificaciones de tiempos de ejecución - tu clase debe incluir un método <code>unregister</code> que contenga el siguiente código:</p>
+
+<p> </p>
+
+<pre class="eval">var observerService = Components.classes["@mozilla.org/observer-service;1"]
+                       .getService(Components.interfaces.nsIObserverService);
+observerService.removeObserver(this, "experimental-notify-plugin-call");
+</pre>
+
+<p> </p>
+
+<p> </p>
+
+<h4 id="Skeleton_Observer_Class" name="Skeleton_Observer_Class">Esqueleto (estructura) de clases para el observador</h4>
+
+<p>Abajo está un esqueleto de clase que podrías usar para recibir notificaciones de tiempos de ejecución:</p>
+
+<p> </p>
+
+<pre class="eval"> function PluginObserver() {
+   this.registered = false;
+   this.register();	//takes care of registering this class with observer services as an observer for plugin runtime notifications
+ }
+
+ PluginWatcherObserver.prototype = {
+   observe: function(subject, topic, data) {
+
+     if (topic == "experimental-notify-plugin-call") //In case your class is registered to listen to other topics
+       //This gets executed each time a runtime notification arrives
+       // --YOUR CODE GOES HERE--
+     }
+
+
+   },
+   //Takes care of registering the observer services for the "experimental-notify-plugin-call" topic
+   register: function() {
+     if (this.registered == false) { //This check prevents double registration -- something you want to avoid!!
+       var observerService = Components.classes["@mozilla.org/observer-service;1"]
+                                       .getService(Components.interfaces.nsIObserverService);
+       observerService.addObserver(this, "experimental-notify-plugin-call", false);
+       this.registered = true;
+     }
+   },
+   //Unregisters from the observer services
+   unregister: function() {
+     if (this.registered == true) {
+       var observerService = Components.classes["@mozilla.org/observer-service;1"]
+                                       .getService(Components.interfaces.nsIObserverService);
+       observerService.removeObserver(this, "experimental-notify-plugin-call");
+       this.registered = false;
+     }
+   }
+ }
+</pre>
+
+<p> </p>
+
+<h3 id="Additional_Resources" name="Additional_Resources">Recursos adicionales</h3>
+
+<p>Más información sobre el observador de servicios:</p>
+
+<ul>
+ <li><a href="/es/NsIObserverService" title="es/NsIObserverService">nsIObserverService</a></li>
+ <li><a href="/es/NsIObserver" title="es/NsIObserver">nsIObserver</a></li>
+</ul>

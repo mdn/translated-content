@@ -1,0 +1,37 @@
+---
+title: Setting up to debug Firefox OS using Firefox developer tools
+slug: Archive/B2G_OS/Debugging/Setting_up
+translation_of: Archive/B2G_OS/Debugging/Setting_up
+---
+<div class="summary">
+ <p>Firefox OS supports the same remote debugging protocol that Firefox mobile supports on Android. This means you can use the Firefox development tools to debug Gaia applications running on a Firefox OS device or emulator. In order to debug Firefox OS running on your device or on the Firefox OS Simulator, you need to use Firefox 18 or later; in addition, there are settings that need to be changed both in your desktop browser's configuration and on your Firefox OS device or simulator.</p>
+</div>
+<div class="note">
+ <p><strong>Note</strong>: If you want to debug apps on a Firefox OS device, and you are running Firefox 1.2+, your best option is to use the <a href="/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a> instead.</p>
+</div>
+<h2 id="Firefox_desktop">Firefox desktop</h2>
+<p>You need to be sure you have a build of Firefox 18 or later in order to have remote debugging support. If you don't already have a recent copy of Firefox, download the latest <a href="http://nightly.mozilla.org/" title="http://nightly.mozilla.org/">Nightly</a> build to get access to all the latest features.</p>
+<p>Once you're running an appropriate version of Firefox on your computer, type <code>about:config</code> in the URL bar and change the value of <code>devtools.debugger.remote-enabled</code> to <code>true</code>. Then you'll need to restart Firefox to get remote debugging enabled. After restarting Firefox, the Web Developer menu will have a new option, <em>Tools &gt; Connect...</em></p>
+<h2 id="Enabling_debugging">Enabling debugging</h2>
+<p>When using the <a href="/en-US/docs/Tools/Firefox_OS_Simulator" title="Tools/Firefox OS Simulator">Firefox OS Simulator</a> (or B2G Desktop), setting up for debugging is pretty easy. You don't need to do any port forwarding like you do when debugging on a physical device. Simply open your device's <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Developer settings</a> and enable <em>Remote Debugging</em>.</p>
+<div class="warning">
+ <p>Note: This no longer works on Firefox OS devices as of January 10, 2013. As of this date device builds of Firefox OS have debugging disabled. There will eventually be a way to build your own build with it re-enabled, but this doesn't exist yet. This document will be updated once that happens. In addition, the preference for turning off out-of-process support has been removed. For now, you'll need to do your debugging in the Firefox OS Simulator.</p>
+</div>
+<p>If using a real Firefox OS device, open the <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Developer settings</a> and:</p>
+<ul>
+ <li>Turn on <em>Remote Debugging</em>.</li>
+ <li>Turn off <em>Out-of-process</em> support, until <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=797627" title="Remote Debugging Protocol needs a way to contact B2G subprocesses">error 797627</a> is fixed. Without doing so, only system scripts can be debugged.</li>
+</ul>
+<div class="note">
+ <p><strong>Note:</strong> If you flash your device, you'll need to redo these configuration changes.</p>
+</div>
+<p>Now you're ready to <a href="/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">use the debugger</a>!</p>
+<h2 id="Enabling_console_logging_on_a_Firefox_OS_device">Enabling console logging on a Firefox OS device</h2>
+<p>On production builds of Firefox OS, console logging (for example <a href="/es/docs/Web/API/Console/log" title='Vea "Mostrando texto en la consola" en la documentación de console para mas detalles.'><code>console.log()</code></a>) is disabled by default. In order to enable it, go to your device's <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Developer settings</a> and enable <em>Console Enabled</em>.</p>
+<p>Note: read <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging">On-device console logging</a> for more details about how to use console logging on Firefox OS.</p>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Debugging" title="/en-US/docs/Mozilla/Firefox_OS/Debugging">Debugging on Firefox OS</a></li>
+ <li><a href="/en-US/docs/Tools/Debugger" title="/en-US/docs/Tools/Debugger">Debugger</a></li>
+ <li><a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Developer_settings">Developer settings on Firefox OS</a></li>
+</ul>

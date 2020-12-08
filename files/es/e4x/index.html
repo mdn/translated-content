@@ -1,0 +1,25 @@
+---
+title: E4X
+slug: E4X
+tags:
+  - E4X
+  - JavaScript
+translation_of: Archive/Web/E4X
+---
+<p><strong>ECMAScript for XML</strong> (<strong>E4X</strong>) es una extensión del lenguaje de programación que añade la implementación de XML nativo a <a href="/es/JavaScript" title="es/JavaScript">JavaScript</a>. Esto proporciona el acceso al documento de XML de manera que sea natural para los programadores de ECMAScript. El objetivo es proporcionar una alternativa, una sintaxis más simple para tener acceso a documentos XML a través de las interfaces <a href="/es/DOM" title="es/DOM">DOM</a>.</p>
+<p>E4X está regulado por Ecma International dentro del <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm">estándar ECMA-357 </a>(actualmente en su segunda edición, diciembre 2005).</p>
+<p>E4X se implementa (al menos parcialmente) en <a href="/es/SpiderMonkey" title="es/SpiderMonkey">SpiderMonkey</a> (<a href="/es/Gecko" title="es/Gecko">Gecko</a> con motor de JavaScript ) y dentro de <a href="/es/Rhino" title="es/Rhino">Rhino</a> (JavaScript con motor escrito en Java).</p>
+<div class="note"> <p><strong>Nota:</strong> en navegadores basados del Gecko 1.8, como Firefox 1.5, E4X ya puede usarse parcialmente por los autores de páginas web. Para disponer completamente de E4X, el elemento <code>&lt;script&gt;</code> necesita tener el tipo del MIME "text/javascript;e4x=1" (ej. tener un atributo en el formulario <code>type="text/javascript;e4x=1"</code>). La diferencia entre los dos modos es que sin el tipo MIME "e4x=1", cualquiera de los literales de comentario (<code><span class="nowiki">&lt;!--...--&gt;</span></code>) en instrucciones XML/HTML son ignorados por compatibilidad hacia atrás con el truco de ocultar el comentario, y las secciones CDATA (<code>&lt;![CDATA[...]]&gt;</code>) no son procesadas como literales CDATA (que conduce a un error de sintaxis JS en el HTML ya que el elemento <code>&lt;script&gt;</code> de HTML produce una sección CDATA implícita, y por lo tanto no puede contener explícitamente secciones CDATA).</p>
+</div>
+<h3 id="Known_bugs_and_limitations" name="Known_bugs_and_limitations">Errores conocidos y limitaciones</h3>
+<ul> <li>Actualmente no es posible acceder al objeto DOM a través de E4X (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=270553" title="E4x&lt;->DOM">error 270553</a>)</li> <li>E4X no implementa el procesamiento la declaración (<code>&lt;?xml version=...?&gt;</code>) (ver <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=336551" title='E4X: Implement ability to process new XML("&amp;amp;lt;?xml...?> ...")'>error 336551</a>). Puedes obtener un SyntaxError "xml is a reserved identifier" (a pesar de que el XML sea un string).</li>
+</ul>
+<p>Solución:</p>
+<pre class="brush: js">var response = xmlhttprequest.responseText; // bug 270553
+response = response.replace(/^&lt;\?xml\s+version\s*=\s*(["'])[^\1]+\1[^?]*\?&gt;/, ""); // bug 336551
+var e4x = new XML(response);
+</pre>
+<h3 id="Resources" name="Resources">Recursos</h3>
+<ul> <li>Consulta la lista de <a href="/Special:Tags?tag=E4X&amp;language=es" title="Special:Tags?tag=E4X&amp;language=es">páginas relacionadas E4X</a> en MDC.</li> <li><a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-357.htm">Estándar ECMA-357</a></li> <li><a class="external" href="/presentations/xtech2005/e4x" title="presentations/xtech2005/e4x">Presentación de Brendan</a></li> <li><a class="external" href="http://www.faqts.com/knowledge_base/index.phtml/fid/1762">E4X en faqts.com</a></li> <li><a href="/en/E4X_Tutorial" title="en/E4X_Tutorial">Tutorial de E4X sobre procesamiento de</a><a class="internal" href="/En/E4X/Processing_XML_with_E4X" title="En/E4X/Processing XML with E4X"> XML con E4X</a> en MDC.</li> <li><a href="/en/E4X_for_templating" title="En/E4X for templating">E4X para creación de plantillas</a></li> <li><a class="external" href="http://rephrase.net/days/07/06/e4x">Referencia rápida para E4X en rephrase.net</a></li>
+</ul>
+<p></p>

@@ -1,0 +1,58 @@
+---
+title: Creating localizable web content
+slug: Mozilla/Localization/Web_Localizability/Creating_localizable_web_content
+tags:
+  - Desarrollo web
+  - Internacionalizacón
+  - Localizabilidad
+  - Localización
+translation_of: Mozilla/Localization/Web_Localizability/Creating_localizable_web_content
+---
+<h3 id="Contenido_del_texto">Contenido del texto</h3>
+
+<ul>
+ <li>Revise que el texto es objetivamente correcto para una audiencia internacional (es decir, menciones a productos específicos de Estados Unidos como motores de búsqueda o diccionarios deberían ser adaptados).</li>
+ <li>Busque cadenas que sean difíciles de traducir debido a que sea confusa, use juegos de palabras o use colonialismos. Dependiendo del contexto, encontrar una cadena alternativa o documente una explicación de la cadena para los localizadores.</li>
+ <li>Compruebe que en páginas nuevas no se enlaza a subpáginas con anclas. Es decir: una página nueva es anunciada con solo 100 palabras pero realmente es contenido adicional de una página existente en inglés. Sucede en cosas como la sección de preguntas frecuentes (FAQs) o páginas de video, por ejemplo. Para vídeo, utilice el código para mostrar el vídeo en un reproductor de vídeo superpuesto en la página en lugar de enlazar con una sección de vídeo en inglés.</li>
+</ul>
+
+<h3 id="Customizaciones_por_local">Customizaciones por local</h3>
+
+<ul>
+ <li>Compruebe si hay enlaces alternativos para páginas localizadas (por ejemplo, enlaces a MDN, <a href="https://addons.mozilla.org">Addons.mozilla.org</a>, u otros recursos externos,  si existen equivalentes traducidos que podamos utilizar). Si hay alternativas, utilicelas añadiendo el parametro $lang; en las urls</li>
+ <li>Evalue el impacto de las nuevas páginas en todas nuestras propiedades web, especialmente enlaces a sitios de la comunidad y redirecciones. En ocasiones se puede dejar cierta libertad de modificación a un bloque de texto para que los localizadores enlacen a recursos locales relevantes.</li>
+</ul>
+
+<h3 id="Imágenes">Imágenes</h3>
+
+<ul>
+ <li>Revise que las imágenes no vayan a ser un problema para la audiencia (referencias culturales, posicionamiento, reflejar para rtl, texto en imágenes,...) e identifiqué que tamaños y margenes pueden ser ajustados con CSS o se tienen que arreglar para todos los locales excepto Inglés</li>
+ <li>
+  <p>No use texto en íconos</p>
+
+  <p><strong>Imágenes 1&amp;2. Mal:</strong> <img alt="do-64.png" class="default internal" src="/@api/deki/files/3802/=do-64.png"><img alt="donot-64.png" class="default internal" src="/@api/deki/files/3803/=donot-64.png"></p>
+
+  <p><strong>Imagen 3. Bien:</strong> <img alt="error-64.png" class="default internal" src="/@api/deki/files/3804/=error-64.png"></p>
+
+  <p><strong>Imagen 4. Bien:</strong> <img alt="information-64.png" class="default internal" src="/@api/deki/files/3805/=information-64.png"></p>
+
+  <p>Este icono es reconocido como el símbolo internacional para información. Puede quedarse así.</p>
+ </li>
+ <li>
+  <p>Use capturas de pantalla localizadas si es posible</p>
+
+  <p>Capturas de pantalla son gráficos informativos importantes, a menudo explicando como lograr algo en una aplicación de escritorio o Web. Como tal, deben ser percibidas como una parte esencial del contenido y deben ser localizado.</p>
+
+  <p><strong>Imagen 1. Mal.</strong></p>
+
+  <p><img alt="tut_custom_1.jpg" class="default internal" src="/@api/deki/files/3812/=tut_custom_1.jpg"></p>
+
+  <p>Si la captura de pantalla muestra la aplicación con la que el sitio web se relaciona directamente (Firefox en mozilla.com/firefox), intente usar capturas de pantalla de la versión localizada.</p>
+
+  <p><strong>Image 2. Aceptable.</strong></p>
+
+  <p><img alt="tut_PSpalette.jpg" class="default internal" src="/@api/deki/files/3814/=tut_PSpalette.jpg"></p>
+
+  <p>Sin embargo, si la captura de pantalla muestra una aplicación o sitio web de terceros, es aceptable utilizar la versión inglés si no hay una versión con el idioma a localizar disponible.</p>
+ </li>
+</ul>

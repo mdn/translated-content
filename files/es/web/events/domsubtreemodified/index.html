@@ -1,0 +1,27 @@
+---
+title: DOMSubtreeModified
+slug: Web/Events/DOMSubtreeModified
+tags:
+  - DOM
+  - DOM Events
+  - Eventos del DOM
+  - ejemplos
+  - eventos
+translation_of: Archive/Events/DOMSubtreeModified
+---
+<p>{{ draft() }}</p>
+
+<h3 id="Example" name="Example">Resumen</h3>
+
+<p>Se produce cuando se añaden o eliminan nodos en el subárbol de un documento o elemento.</p>
+
+<h3 id="Example" name="Example">Ejemplo</h3>
+
+<p>Siguiente código mostrará la hora de la última modificación del DOM en el  título de la página.</p>
+
+<div class="warning">Hay que ser muy cuidadoso, con este evento es muy fácil crear un bucle infinito si tu decides que el nodo que cambia esta dentro de un manejador.</div>
+
+<pre class="brush: js">document.body.addEventListener('DOMSubtreeModified', function () {
+  document.title = 'DOM Changed at ' + new Date();
+}, false);
+</pre>

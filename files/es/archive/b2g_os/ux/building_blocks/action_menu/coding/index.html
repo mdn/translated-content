@@ -1,0 +1,80 @@
+---
+title: 'Coding guide: Action menus'
+slug: Archive/B2G_OS/UX/Building_blocks/Action_menu/Coding
+translation_of: Archive/B2G_OS/Firefox_OS_apps/Building_blocks/1.x/Action_menu/Coding
+---
+<p>Here you can find examples of how to create <a href="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Action_menu" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Action_menu">action menus</a> on Firefox OS, as well as downloads for the CSS and image resources used by the built-in apps on Firefox OS. You can copy these resources into your app and make use of them to build apps that match these apps' appearances.</p>
+
+<div class="note">
+<p><strong>Note:</strong> Object menus are implemented using the same code; the only difference is that you never use a title in an <a href="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Object_menu" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Object_menu">object menu</a>.</p>
+</div>
+
+<h2 id="Implementing_action_menus">Implementing action menus</h2>
+
+<p>To implement an action menu using the style shown here, place the CSS and media files into your app and then import the CSS using the {{cssxref("@import")}} at-rule:</p>
+
+<pre class="brush: css">@import url(resources/action_menu.css);</pre>
+
+<p>Make sure the media files are in the location expected by the CSS (either by placing them in a corresponding location or by revising the CSS).</p>
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="With_title" name="With_title">With title</h3>
+
+<h4 id="HTML_to_create_the_menu">HTML to create the menu</h4>
+
+<p>The HTML below creates the dialog with four buttons, one of which is disabled.</p>
+
+<pre class="brush: html">&lt;form role="dialog" data-type="action" onsubmit="return false;" id="sample-menu"&gt;
+  &lt;header id="sample-title"&gt; Title &lt;/header&gt; &lt;!-- this header is optional --&gt;
+  &lt;menu&gt;
+    &lt;button id="button1"&gt; Action 1 &lt;/button&gt;
+    &lt;button id="button2" disabled&gt; Action 2 (disabled) &lt;/button&gt;
+    &lt;button id="button3"&gt; Action 3 &lt;/button&gt;
+    &lt;button id="cancel"&gt; Cancel &lt;/button&gt;
+  &lt;/menu&gt;
+&lt;/form&gt;
+</pre>
+
+<h4 id="JavaScript_content">JavaScript content</h4>
+
+<p>The JavaScript below simply adds code to some of the buttons to change the title of the dialog when clicked.</p>
+
+<pre class="brush: js">var btn = document.querySelector("#button1");
+btn.addEventListener("click", function() {
+  var title = document.getElementById("sample-title");
+  title.innerHTML="Button 1";
+});
+
+var btn = document.querySelector("#button3");
+btn.addEventListener("click", function() {
+  var title = document.getElementById("sample-title");
+  title.innerHTML="Button 3";
+});
+</pre>
+
+<h4 id="Working_demo">Working demo</h4>
+
+<p>You can try out the action menu in this live demonstration.</p>
+
+<h3 id="Without_title" name="Without_title">Without title</h3>
+
+<h4 id="HTML_to_create_the_menu_2">HTML to create the menu</h4>
+
+<p>The HTML below creates the dialog with four buttons, one of which is disabled.</p>
+
+<pre class="brush: html">&lt;form role="dialog" data-type="action" onsubmit="return false;" id="sample-menu"&gt;
+  &lt;menu&gt;
+    &lt;button id="button1"&gt; Action 1 &lt;/button&gt;
+    &lt;button id="button2" disabled&gt; Action 2 (disabled) &lt;/button&gt;
+    &lt;button id="button3"&gt; Action 3 &lt;/button&gt;
+    &lt;button id="cancel"&gt; Cancel &lt;/button&gt;
+  &lt;/menu&gt;
+&lt;/form&gt;
+</pre>
+
+<h4 id="Working_demo_2">Working demo</h4>
+
+<p>You can try out the action menu in this live demonstration.</p>
+
+<p> </p>

@@ -1,0 +1,116 @@
+---
+title: nsIDownload
+slug: nsIDownload
+tags:
+  - Firefox 3
+  - Interfaces
+  - Todas_las_Categorías
+  - páginas_a_traducir
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDownload
+---
+<div><div class="blockIndicator obsolete obsoleteHeader"><p><strong><span class="icon-only-inline" title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> Obsoleto</strong><br>Esta funcionalidad es obsoleta. Aunque puede aún funcionar en algunos navegadores, se desalienta su uso ya que puede ser removida en cualquier momento. Evite usarla.</p></div></div>
+
+<p> La interfaz <code>nsIDownload</code> describe un objeto descarga. Los objetos descarga son usados por el Administrador de Descargas (ver <code><a href="es/NsIDownloadManager">nsIDownloadManager</a></code> para manejar archivos que están en cola para ser descargados, están siendo descargados y han terminado de ser descargados).</p>
+
+<div class="note"><strong>Nota:</strong> Una vez que la descarga esta completada, el Administrador de Descargas deja de actualizar el objeto <code>nsIDownload</code>. Los estdos de completado son: <code>nsIDownloadManager::DOWNLOAD_FINISHED</code>, <code>nsIDownloadManager::DOWNLOAD_FAILED</code>, y <code>nsIDownloadManager::DOWNLOAD_CANCELED</code>.</div>
+
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/downloads/public/nsIDownload.idl" rel="custom">toolkit/components/downloads/public/nsIDownload.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.9 (Firefox 3)</span></div>
+</div><p></p>
+
+<p>Inherits from: <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITransfer" title="">nsITransfer</a></code></p>
+
+<h2 id="Atributos" name="Atributos">Atributos</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Attribute</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>targetFile</code></td>
+   <td><code><a href="es/NsILocalFile">nsILocalFile</a></code></td>
+   <td>Indica la localización donde estará el archivo descargado (o está, si la descarga se ha completado).<em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>percentComplete</code></td>
+   <td><code><a href="es/PRint32">PRint32</a></code></td>
+   <td>El porcentaje de la transferencia que se ha completado, o -1 si el tamaño del archivo es desconocido.<em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>amountTransferred</code></td>
+   <td><code><a href="es/PRUint64">PRUint64</a></code></td>
+   <td>El número de bytes que se han descargado hasta ahora.<em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>size</code></td>
+   <td><code><a href="es/PRUint64">PRUint64</a></code></td>
+   <td>El tamaño total del archivo en bytes o <code>LL_MAXUINT</code>, si el tamaño es desconocido.<em>Sólo lectura'<strong>Read only.</strong></em></td>
+  </tr>
+  <tr>
+   <td><code>source</code></td>
+   <td><code><a href="es/NsIURI">nsIURI</a></code></td>
+   <td>La URI origen del archivo.<em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>cancelable</code></td>
+   <td><code><a href="es/NsICancelable">nsICancelable</a></code></td>
+   <td>Un objeto que puede ser usado para cancelar la descarga. Una vez que la descarga se ha completado, esta valor se pone a <code>null</code>.<em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>displayName</code></td>
+   <td><code><a href="es/AString">AString</a></code></td>
+   <td>Una descripción, legible por el usuario, de la transferencia.<em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>startTime</code></td>
+   <td><code>long long</code></td>
+   <td>La hora a la que empezó la transferencia.<em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>speed</code></td>
+   <td><code>double</code></td>
+   <td>La velocidad de la transferencia en bytes por segundo.<em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>MIMEInfo</code></td>
+   <td><code><a href="es/NsIMIMEInfo">nsIMIMEInfo</a></code></td>
+   <td>Este atributo opcional ofrece información relevante del MIME del archivo destino incluyendo el tipo MIME, la aplicación de ayuda y si la aplicación de ayuda debe o no ser llamada al terminar la descarga.</td>
+  </tr>
+  <tr>
+   <td><code>id</code></td>
+   <td><code>unsigned long</code></td>
+   <td>La ID única por la que se identifica en la base de datos.</td>
+  </tr>
+  <tr>
+   <td><code>state</code></td>
+   <td><code>short</code></td>
+   <td>El estado actual de la transferencia. Ver <a href="es/NsIDownloadManager#Constants">the nsIDownloadManager constants list</a>.</td>
+  </tr>
+  <tr>
+   <td><code>referrer</code></td>
+   <td><code><a href="es/NsIURI">nsIURI</a></code></td>
+   <td>La URI referente de la descarga. Esto es sólo válido para descargas HTTP y puede ser <code>null</code>.</td>
+  </tr>
+  <tr>
+   <td><code>resumable</code></td>
+   <td><code>boolean</code></td>
+   <td>Indica si la descarga puede ser reanudada después de haberse puesto en pausa. Esto es sólo aplicable si la descarga se hace sobre HTTP/1.1 o FTP y el servidor lo admite.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h2>
+
+<p><code><a href="es/NsIDownloadManager">nsIDownloadManager</a></code>, <code><a href="es/NsIDownloadProgressListener">nsIDownloadProgressListener</a></code>, <code><a href="es/NsIXPInstallManagerUI">nsIXPInstallManagerUI</a></code></p>

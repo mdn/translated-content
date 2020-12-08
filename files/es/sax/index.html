@@ -1,0 +1,114 @@
+---
+title: SAX
+slug: SAX
+tags:
+  - Complementos
+  - Todas_las_Categorías
+  - extensiones
+translation_of: Archive/SAX
+---
+<p>
+</p><p><b>SAX</b> (Simple API for XML, API simple para XML) es una API de análisis. SAX fue la primera API para XML ampliamente adoptada en Java y más tarde implementada en muchos otros entornos de programación. A partir de <a href="es/Firefox_2">Firefox 2</a> es posible utilizar los analizadores SAX para aplicaciones y extensiones XUL. Para más información, veáse la <a class="external" href="http://www.saxproject.org/">página de SAX</a>.
+</p><p><br>
+</p>
+<h3 id="Inicio_rápido"> Inicio rápido </h3>
+<p>La funcionalidad de un analizador SAX está disponible a través del componente lector de XML. Para crear uno, utiliza el siguiente trozo de código:
+</p>
+<pre class="eval">var xmlReader = Components.classes["@mozilla.org/saxparser/xmlreader;1"]
+                          .createInstance(Components.interfaces.nsISAXXMLReader);
+</pre>
+<p>Después de que hayas creado un analizador SAX, necesitarás asociar los manejadores de eventos que te interesen y arrancar el proceso de análisis. Todas las funcionalidades están disponible a través de la interfaz <a href="https://dxr.mozilla.org/mozilla-central/source/parser/xml/public/nsISAXXMLReader.idl" rel="custom">nsISAXXMLReader</a>.
+</p><p><br>
+</p>
+<h4 id="Estableciendo_los_manejadores"> Estableciendo los manejadores </h4>
+<p>Los manejadores son objetos definidos por el usuario que implementan las interfaces de manejadores SAX y dependiendo de la clase de información que necesita obtener desde el analizador. Una vez comenzado el proceso de análisis, los manejadores asociados serán llamados por el analizador (callbacks) con el contenido de XML que está siendo analizado. Los siguientes manejadores están disponibles:
+</p>
+<table class="fullwidth-table">
+<tbody><tr> <th>Interfaz</th> <th>Propósito</th>
+</tr>
+<tr> <td><a href="https://dxr.mozilla.org/mozilla-central/source/parser/xml/public/nsISAXContentHandler.idl" rel="custom">nsISAXContentHandler</a></td> <td>Es notificada sobre el contenido lógico de un documento (p.e.: elementos, atributos, espacios en blanco e instrucciones de proceso).</td>
+</tr>
+<tr> <td><a href="https://dxr.mozilla.org/mozilla-central/source/parser/xml/public/nsISAXDTDHandler.idl" rel="custom">nsISAXDTDHandler</a></td> <td>Es notificada sobre eventos básicos relacionados con DTDs.</td>
+</tr>
+<tr> <td><a href="https://dxr.mozilla.org/mozilla-central/source/parser/xml/public/nsISAXErrorHandler.idl" rel="custom">nsISAXErrorHandler</a></td> <td>Es notificada sobre errores en el flujo de entrada.</td>
+</tr>
+<tr> <td><a href="https://dxr.mozilla.org/mozilla-central/source/parser/xml/public/nsISAXLexicalHandler.idl" rel="custom">nsISAXLexicalHandler</a></td> <td>Manejador ampliado de SAX2 para eventos léxicos (p.e.: comentarios y nodos de tipo CDATA, declaraciones DTD y entidades).</td>
+</tr>
+</tbody></table>
+<p>A continuación se muestra un ejemplo de una implementación de un manejador de contenidos más comúnmente usado:
+</p>
+<pre>function print(s) {
+  dump(s + "\n");
+}
+
+xmlReader.contentHandler = {
+  // nsISAXContentHandler
+  startDocument: function() {
+    print("startDocument");
+  },
+
+  endDocument: function() {
+    print("endDocument");
+  },
+
+  startElement: function(uri, localName, qName, /*nsISAXAttributes*/ attributes) {
+    var attrs = [];
+    for(var i=0; i&lt;attributes.length; i++) {
+      attrs.push(attributes.getQName(i) + "='" +
+                 attributes.getValue(i) + "'");
+    }
+
+    print("startElement: namespace='" + uri + "', localName='" +
+          localName + "', qName='" + qName + "', attributes={" +
+          attrs.join(",") + "}");
+  },
+
+  endElement: function(uri, localName, qName) {
+    print("endElement: namespace='" + uri + "', localName='" +
+          localName + "', qName='" + qName + "'");
+  },
+
+  characters: function(value) {
+    print("characters: " + value);
+  },
+
+  processingInstruction: function(target, data) {
+    print("processingInstruction: target='" + target + "', data='" +
+          data + "'");
+  },
+
+  ignorableWhitespace: function(whitespace) {
+    // don't care
+  },
+
+  startPrefixMapping: function(prefix, uri) {
+    // don't care
+  },
+
+  endPrefixMapping: function(prefix) {
+    // don't care
+  },
+
+  // nsISupports
+  QueryInterface: function(iid) {
+    if(!iid.equals(Components.interfaces.nsISupports) &amp;&amp;
+       !iid.equals(Components.interfaces.nsISAXContentHandler))
+      throw Components.results.NS_ERROR_NO_INTERFACE;
+    return this;
+  }
+};
+</pre>
+<h4 id="Iniciar_el_análisis"> Iniciar el análisis </h4>
+<p>El componente XML Reader puede analizar XMLs a partir de una cadena de texto (un <a href="es/NsIInputStream">nsIInputStream</a>) o asíncronamente a través de la interfaz <a href="es/NsIStreamListener">nsIStreamListener</a>. Abajo se muestra un ejemplo de análisis a partir de una cadena:
+</p>
+<pre class="eval">xmlReader.parseFromString("&lt;f:a xmlns:f='g' d='1'&gt;&lt;BBQ/&gt;&lt;/f:a&gt;", "text/xml");
+</pre>
+<p>Esta llamada desemboca en la siguiente salida (asumiendo que se ha usado el manejador de contenidos mostrado antes):
+</p>
+<pre>startDocument
+startElement: namespace='g', localName='a', qName='f:a', attributes={d='1'}
+startElement: namespace='', localName='BBQ', qName='BBQ', attributes={}
+endElement: namespace='', localName='BBQ', qName='BBQ'
+endElement: namespace='g', localName='a', qName='f:a'
+endDocument
+</pre>

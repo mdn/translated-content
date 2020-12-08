@@ -1,0 +1,153 @@
+---
+title: Window.requestAnimationFrame()
+slug: Web/API/Window/requestAnimationFrame
+translation_of: Web/API/window/requestAnimationFrame
+---
+<div>{{APIRef}}</div>
+
+<div>El método <strong><code>window.requestAnimationFrame</code></strong> informa al navegador que quieres realizar una animación y solicita que el navegador programe el repintado de la ventana para el próximo ciclo de animación. El método acepta como argumento una función a la que llamar antes de efectuar el repintado.</div>
+
+<div></div>
+
+<div class="note"><strong>Nota:</strong> Si no quieres que tu animación se detenga, debes asegurarte de  llamar a su vez a <code>requestAnimationFrame() </code>desde tu callback.</div>
+
+<p>Debes llamar a este método cuando estés preparado para actualizar tu animación en la pantalla para pedir que se programe el repintado. Ésto puede suceder hasta 60 veces por segundo en pestañas en primer plano, pero se puede ver reducido a velocidades inferiores en pestañas en segundo plano.</p>
+
+<p>El método indicado como callback recibe un único argumento que indica el tiempo en el que está programado que se ejecute el ciclo de animación.</p>
+
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+
+<pre class="syntaxbox notranslate"><em>requestID</em> = window.mozRequestAnimationFrame(<em>callback</em>);   // Firefox
+window.msRequestAnimationFrame(<em><code>callback</code></em>);                // IE 10 PP2+
+window.webkitRequestAnimationFrame(callback<em>[, element]</em>); // Chrome/Webkit
+</pre>
+
+<h3 id="Parameters" name="Parameters">Parámetros</h3>
+
+<dl>
+ <dt><code>callback</code></dt>
+ <dd>Parámetro que especifica la función a la cual llamar llegado el momento de actualizar tu animación para el próximo repintado.</dd>
+</dl>
+
+<h3 id="Valor_devuelto">Valor devuelto</h3>
+
+<p>Un valor entero <code>long</code>, es un entero de tipo long que identifica de manera exclusiva la entrada en la lista de callbacks. Es siempre un distinto de cero, pero no debes realizar ninguna otra suposición acerca de su valor. Puedes pasar este valor a {{ domxref("window.cancelAnimationFrame()") }} para cancelar la petición de actualización del callback.</p>
+
+<h2 id="Notes" name="Notes">Ejemplo</h2>
+
+<pre class="brush: js notranslate">(function() {
+  var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                              window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+  window.requestAnimationFrame = requestAnimationFrame;
+})();
+
+<code>var start = null;
+var element = document.getElementById('SomeElementYouWantToAnimate');
+
+function step(timestamp) {
+  if (!start) start = timestamp;
+  var progress = timestamp - start;
+  element.style.transform = 'translateX(' + Math.min(progress / 10, 200) + 'px)';
+  if (progress &lt; 2000) {
+    window.requestAnimationFrame(step);
+  }
+}
+
+window.requestAnimationFrame(step);</code></pre>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad entre Navegadores</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>21.0 {{ property_prefix("webkit") }}</td>
+   <td>14.0 {{ property_prefix("moz") }}</td>
+   <td>10.0</td>
+   <td>{{ CompatNo() }}</td>
+   <td>6.0 {{ property_prefix("webkit") }}</td>
+  </tr>
+  <tr>
+   <td><code>requestID</code> return value</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatGeckoDesktop("11.0") }} {{ property_prefix("moz") }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>BlackBerry Browser</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{ CompatNo() }}</td>
+   <td>10.0 {{ property_prefix("webkit") }}</td>
+   <td>
+    <p>0.16 {{ property_prefix("webkit") }}</p>
+   </td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>6.0 {{ property_prefix("webkit") }}</td>
+  </tr>
+  <tr>
+   <td><code>requestID</code> return value</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td></td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatGeckoMobile("11.0") }} {{ property_prefix("moz") }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h3 id="Specification" name="Specification">Notas para Gecko</h3>
+
+<p>Antes que Gecko 11.0 {{ geckoRelease("11.0") }}, <code>mozRequestAnimationFrame()</code> se podía llamar sin parámetros. Esta opción ya no está soportada ya que no es probable que se convierta en parte del estándar.</p>
+
+<h3 id="Notas_para_Chrome">Notas para Chrome</h3>
+
+<p>En estos momentos, la llamada correcta en Chrome para cancelar la petición es <code>window.webkitCancelAnimationFrame()</code>. La antigua versión, <code>window.webkitCancelRequestAnimationFrame()</code>, está obsoleta se sigue soportando por ahora.</p>
+
+<h2 id="Specification" name="Specification">Especificaciones</h2>
+
+<p>{{ spec("http://www.w3.org/TR/animation-timing/#requestAnimationFrame", "Timing control for script-based animations: requestAnimationFrame", "WD") }}</p>
+
+<h2 id="Véase_también">Véase también</h2>
+
+<ul>
+ <li>{{ domxref("window.mozAnimationStartTime") }}</li>
+ <li>{{ domxref("window.cancelAnimationFrame()") }}</li>
+ <li><a class="external" href="http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html">mozRequestAnimationFrame</a> - Blog post</li>
+ <li><a class="external" href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame for smart animating</a> - Blog post</li>
+ <li><a class="external" href="http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/">Animating with javascript: from setInterval to requestAnimationFrame</a> - Blog post</li>
+ <li><a class="external" href="http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx">Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1</a> - Blog post</li>
+</ul>

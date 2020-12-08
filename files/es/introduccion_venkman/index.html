@@ -1,0 +1,261 @@
+---
+title: Introduccion a Venkman
+slug: Introduccion_Venkman
+translation_of: Archive/Mozilla/Venkman/Introduction
+---
+<p></p><div class="warning warningHeader">
+    <p><strong>Advertencia:</strong> <strong>The content of this article may be out of date.</strong> </p>
+</div><p></p>
+<h4 id="Es_una_version_BETA_de_traduccion_falta_revisar_formato_de_titulos_y_toda_la_ultima_seccion_de_'Fundamentos_de_Depuracion"><span style="background-color: #00ff00;">Es una version BETA de traduccion, falta revisar formato de titulos y toda la ultima seccion de 'Fundamentos de Depuracion</span></h4>
+<p><span lang="es">Una nueva y poderosa herramienta está disponible para los desarrolladores web para usar en varios productos basados ??en Mozilla , incluyendo Firefox , Mozilla Suite y Netscape 7.x El depurador JavaScript , también llamado Venkman , ha sido una parte del navegador de Mozilla y de la comunidad de sus desarrolladores web y scripts por algún tiempo. Este artículo proporciona una visión general y algunos ejemplos prácticos de cómo utilizar el depurador JavaScript en aplicaciones web y los guiones de páginas web. Esta introducción es el primero de una serie de artículos sobre Venkman y depuración de JavaScript. Incluso si usted ya está usando Venkman , las características , procedimientos y consejos descritos aquí le harán un desarrollador y depurador web más seguro.</span></p>
+<p><span lang="es">Venkman es a la vez, un depurador gráfico y de consola. Características tales como la gestión del punto de interrupción , la inspección de la pila de llamadas , y la inspección de la variable / objeto están disponibles en la interfaz de usuario y tambien desde comandos de la consola , lo que le permite trabajar de la forma que más acostumbre. La consola interactiva también permite la ejecución de código JavaScript arbitrario. Los atajos de teclado de Venkman son los mismos que los principales entornos de depuración visual , y los usuarios gdb deberían estar familiarizados con los comandos de Venkman <code>/break, /step, /next, /finish, /frame</code>, and <code>/where</code> . </span></p>
+<p><span lang="es">En Windows, el depurador de JavaScript se compara favorablemente con Visual InterDev y otras grandes herramientas de desarrollo web. En otras plataformas , incluyendo Mac OS y Unix , es el único que ofrece este grado de flexibilidad , profundidad y poder en un entorno de depuración visual.</span></p>
+<h3 id="Starting_the_Debugger" name="Starting_the_Debugger">Iniciar el depurador</h3>
+<p><span id="result_box" lang="es">El depurador JavaScript está automáticamente preinstalado en Mozilla 1.x , pero debe instalarse por separado en Firefox y otros productos basados en Gecko , como Thunderbird y Netscape 7.x. Afortunadamente , la tecnología XPInstall hace posible la instalación de nuevos módulos de aplicación en Firefox con sólo hacer clic en un hipervínculo </span></p>
+<p><span id="result_box" lang="es">Si aún no tiene Venkman o desea actualizar , usted puede conseguir fácilmente la última versión de <a href="https://addons.mozilla.org/en-US/firefox/addon/216">https://addons.mozilla.org/en-US/firefox/addon/216</a>. El proceso de instalación es de dos pasos. En primer lugar, desde el navegador que se desea que aloje a la aplicación depurador, visite la página de complementos de Firefox y haga clic en el enlace de "instalar" para la versión más reciente. Cuando la descarga se haya completado , reinicie el navegador ( algunos usuarios de Windows también pueden necesitar tambien reiniciar su ordenador).  A continuación, puede acceder al depurador a través de un item  nuevo del <span id="result_box" lang="es">menú Herramientas creado </span>dinámicamente en ese navegador , o bien reiniciar el navegador con una opción especial de depurador.</span></p>
+<p><br>
+ Para ver la versión de Venkman usted tiene , el tipo / versión en la vista Sesión Interactiva . Para obtener más información acerca de las últimas mejoras y versiones, consulte el Desarrollo Page Venkman Hay dos formas de iniciar el depurador:<br>
+ Desde Firefox , puede iniciar seleccionando JavaScript Debugger del menú Herramientas ( menú Herramientas-&gt; Desarrollo Web en Mozilla 1.x y Netscape).<br>
+ También puede iniciar el navegador con la opción de línea de comandos -venkman , que inicia Venkman inicialmente en lugar frente de la aplicación.<br>
+ <br>
+ ( Tenga en cuenta que Venkman muestra datos de uso cuando se inicia : " . Inicio local Grabado X, global YYY" Estos datos vienen de un contador integrado en la aplicación Para obtener más información acerca de este contador y los datos , véase el punto 2.2 en el Venkman FAQ.)</p>
+<p><img align="none" alt="Figure 1.  El depurador JavaScript." class="internal" src="/@api/deki/files/946/=Venkintro-start.png"></p>
+<p><span id="result_box" lang="es">Cuando inicie  Venkman por primera vez , las vistas básicas están dispuestas como en la imagen anterior , aunque se puede personalizar el diseño y la presencia de las diferentes vistas que le apetezca, como se describe en la sección <a href="#View_Customization">View Customization</a> a continuación. Las secuencias de comandos que han sido cargados por el motor de JavaScript aparecen en la ventana Loaded Scripts ( para más información sobre cómo se cargan y se accede a scripts en Venkman , consulte "<a href="#Loading_Scripts_into_the_Debugger">Loading Scripts into the Debugger</a>").</span></p>
+<p><img alt="Figura 2 . Controles de Vista" class="internal" src="/@api/deki/files/950/=Venkintro-view.png" style="float: right;"></p>
+<p><span id="result_box" lang="es">La barra de menú , barra de herramientas, y todas las vistas se pueden contraer o esconder , que le da un gran control sobre el entorno de depuración. El <a href="#Source_Code_View">Source Code View</a> está vacío hasta que se seleccione una secuencia de comandos, y <a href="#The_Interactive_Session_View">The Interactive Session View</a> se inicia con la información básica de inicio.</span><br>
+ <br>
+ Cada una de las vistas tiene una etiqueta, un botón flotante que le permite mostrar la vista en su propia ventana , y un botón de cierre que la oculta hasta que usted desea que se muestre de nuevo, como se ve en la Figura 2 .<br>
+ <br>
+ La siguiente sección describe estas vistas y su uso dentro de la interfaz en su conjunto.</p>
+<h3 id="Getting_Acquainted_with_Venkman.27s_User_Interface" name="Getting_Acquainted_with_Venkman.27s_User_Interface"><span id="result_box" lang="es"><span title="Getting Acquainted with Venkman's User Interface
+">Familiarización con la interfaz de usuario de Venkman</span></span><br>
+  </h3>
+<h3 id="Barra_de_Herramientas"><span title="Toolbar">Barra de Herramientas</span></h3>
+<p><img align="none" alt="Figure 3. The Venkman Toolbar" class="internal" src="/@api/deki/files/948/=Venkintro-toolbar.png"></p>
+<p><span id="result_box" lang="es">La barra de herramientas se encuentra en la parte superior del depurador. La barra de herramientas contiene iconos para <span id="result_box" lang="es">los comandos </span> detener, continuar , pasar por encima , pasar adentro , salir , perfilar  y de impresión prolija. Estos comandos se explican por sí mismo , con la posible excepción de detener , lo que hace que el depurador se detenga cuando se ejecuta la siguiente línea de código JavaScript , y el botón de perfil , que se puede utilizar para medir los tiempos de ejecución de los scripts. Cuando se habilita el perfil haciendo clic en este botón, aparecerá una marca de verificación verde aparecerá junto al botón y <span id="result_box" lang="es">se recogen datos </span>de perfil para cada función , y se puede ahorrar eligiendo Guardar perfil de datos como ... en el menú Perfil.</span></p>
+<div class="figure float-right">
+ <p><img alt="Image:venkintro-stop-checked.png" class="internal" src="/@api/deki/files/947/=Venkintro-stop-checked.png"><br>
+  <strong>Figure 4.</strong><br>
+  Stop Button<br>
+  Waiting for<br>
+  Execution</p>
+</div>
+<p><span id="result_box" lang="es">También tenga en cuenta que cuando usted está actualmente ejecutando JavaScript y haga clic en el botón Stop, el código JavaScript se detiene inmediatamente. Si no está ejecutando JavaScript y haga clic en el botón Detener , se mostrará "..." , como en la figura 4 , para indicar que el depurador se detendrá en la siguiente instrucción , pero no tiene ninguna parte para detener aún.</span><br>
+ <br>
+ Este modo de parada rápida refleja un escenario común en la depuración de JavaScript , que es de inspeccionar y depurar secuencias de comandos mientras se están ejecutando , como en una página donde los elementos se mueven alrededor dinámicamente con DHTML. También puede utilizar los comandos disponibles en el menú Depurar y desde la consola para parar en los errores o en excepciones.<br>
+ <br>
+ El botón Continuar a la derecha del botón de parada desestima el modo de parada y especifica que los scripts se deben ejecutar con normalidad, sin detenerse en cada declaración que se ejecuta.<br>
+ <br>
+ El botón Pretty Print cambia el modo de impresión prolija. En el modo de impresión Pretty, el contenido de la vista de origen contendrá el texto de origen descompilada para la función seleccionada . Este es el mismo texto que se obtendría a partir del método toSource del prototipo de función .Si el texto fuente que se está depurando está mal formateado, Pretty Print puede ayudar a hacer más fácil la lectura mediante la inserción de saltos de línea y espacios en blanco en los lugares apropiados .<br>
+ <br>
+ Cuando Pretty Print está habilitado, se verá una marca de verificación verde en el botón de barra de herramientas y el item de menú también se verá marcado.</p>
+<h4 id="The_Loaded_Scripts_View" name="The_Loaded_Scripts_View"><span id="result_box" lang="es"><span title="The Loaded Scripts View">Vista de los scripts cargados</span></span></h4>
+<p><img align="none" alt="Figure 5. The Loaded Scripts View. Active files and functions" class="internal" src="/@api/deki/files/943/=Venkintro-scripts.png"></p>
+<p><span id="result_box" lang="es">La Vista de Scripts Cargados se encuentra en la parte superior izquierda de la ventana. Cuando un archivo es cargado por el navegador , aparecerá en esta vista , y cuando se descarga es eliminado . Los archivos se enumeran en orden alfabético , agrupados por tipo de archivo. Los nombres de archivo se visualizan después de un <span id="result_box" lang="es">icono de una sola letra de </span>color que representa la extensión de archivo. La figura 6 muestra la tabla de iconos y tipos de archivos .En el momento de escribir este documento, el orden y la agrupación de los nombres de archivo no se pueden cambiar .</span></p>
+<div class="figure float-right">
+ <table class="standard-table">
+  <tbody>
+   <tr class="header">
+    <th>Icono</th>
+    <th>Tipo de Archivo</th>
+   </tr>
+   <tr>
+    <td><img alt="J" class="internal" src="/@api/deki/files/939/=Venkintro-file-js.png"></td>
+    <td>.js</td>
+   </tr>
+   <tr>
+    <td><img alt="H" class="internal" src="/@api/deki/files/938/=Venkintro-file-html.png"></td>
+    <td>.html, .htm</td>
+   </tr>
+   <tr>
+    <td><img alt="Z" class="internal" src="/@api/deki/files/942/=Venkintro-file-xul.png"></td>
+    <td>.xul</td>
+   </tr>
+   <tr>
+    <td><img alt="X" class="internal" src="/@api/deki/files/941/=Venkintro-file-xml.png"></td>
+    <td>.xml</td>
+   </tr>
+   <tr>
+    <td><img alt="?" class="internal" src="/@api/deki/files/940/=Venkintro-file-unknown.png"></td>
+    <td>All other files</td>
+   </tr>
+   <tr>
+    <td><img alt="." class="internal" src="/@api/deki/files/937/=Venkintro-file-function.png"></td>
+    <td>JavaScript function</td>
+   </tr>
+  </tbody>
+ </table>
+ <p><strong>Figure 6.</strong><br>
+  Iconos de la vista Scripts</p>
+</div>
+<p><span id="result_box" lang="es">El nombre de la función <span id="result_box" lang="es">"especial" </span> __ toplevel__ se visualiza para los scripts que no son parte de una función real. Al hacer clic en un nombre de archivo que lleva al comienzo  de ese archivo , mientras que al hacer clic en un nombre de función le lleva al inicio de la función.</span><br>
+ <br>
+ La columna Line en esta vista muestra el número de línea que esta función comienza. El selector de columna para este punto de vista ( el cuadro selector de la columna de árbol en la parte superior derecha ) se puede utilizar para mostrar una columna Longitud . Esta columna muestra el tamaño de las funciones en líneas . Tanto la línea y la columna Longitud están en blanco para los nombres de archivos.<br>
+ <br>
+ Si una función tiene un punto de interrupción en el mismo, un pequeño punto rojo aparecerá en el icono de la función , así como en el icono de los archivo padres.</p>
+<h4 id="La_vista_de_Variables_Locales">La vista de Variables Locales</h4>
+<p><img align="right" alt="Figure 7. The Local Variables View" class="internal" src="/@api/deki/files/949/=Venkintro-vars.png"></p>
+<p>La vista variables locales esta en la porción izquierda de la ventana , en la parte inferior . Cuando se detiene el depurador, muestra valores de variables para la función actual. El objetode 'scope' tiene todos los argumentos y variables locales , y el objeto 'this'  tiene el valor de la palabra clave this .</p>
+<div class="figure float-left">
+ <table class="standard-table">
+  <tbody>
+   <tr>
+    <td><strong>e</strong></td>
+    <td>Propiedad enumerable</td>
+   </tr>
+   <tr>
+    <td><strong>r</strong></td>
+    <td>Propiedad de solo lectura</td>
+   </tr>
+   <tr>
+    <td><strong>p</strong></td>
+    <td>Permanente (no eliminable)</td>
+   </tr>
+   <tr>
+    <td><strong>A</strong></td>
+    <td>Alias a otra propiedad</td>
+   </tr>
+   <tr>
+    <td><strong>a</strong></td>
+    <td>Argumento de una funcion</td>
+   </tr>
+   <tr>
+    <td><strong>v</strong></td>
+    <td>Declareda con <code>var</code></td>
+   </tr>
+  </tbody>
+ </table>
+ <p><strong>Figure 8. Indicadores de propiedades</strong></p>
+</div>
+<p><span id="result_box" lang="es">Las propiedades de ambos  <span id="result_box" lang="es">objetos 'scope' y 'this' </span>aparecen en orden alfabético , agrupados por tipo de datos. La Figura 9 muestra los iconos que representan los tipos de datos .</span></p>
+<p>Las propiedades  del tipo de objetos se muestran con el nombre de su función constructora entre llaves como su valor. Puede encontrar el código fuente del constructor seleccionando " Buscar Constructor " en el menú contextual de la propiedad. Usted puede encontrar el lugar donde el objeto se instancia con el comando "Buscar Creador " . De forma predeterminada , las propiedades de la función de tipo no se muestran , con el fin de ahorrar espacio en la vista. Si a usted le gustaría tener esto a la vista , marque la casilla " Incluir funciones"  en el menú contextual de la vista. Es posible que tenga que cerrar y volver a abrir los objetos que había abierto para ver el cambio .<br>
+ <br>
+ Las propiedades que se muestran en una fuente gris negrita se definen en un objeto a partir de la cadena de prototipo , y no en el objeto que se está inspeccionando actualmente . Si usted desea inspeccionar prototipos y predecesoras cadenas del objeto , marque la casilla " Incluir propiedades ECMA "  en el menú contextual de la vista. Si una propiedad aparece en una fuente roja en negrilla, se produjo una excepción cuando Venkman trató de leer el valor. El objeto de excepción aparecerá como el valor de la propiedad .</p>
+<div class="figure float-right">
+ <table class="standard-table">
+  <tbody>
+   <tr class="header">
+    <th>Icon</th>
+    <th>Data Type</th>
+    <th>Icon</th>
+    <th>Data Type</th>
+   </tr>
+   <tr>
+    <td><img alt="X" class="internal" src="/@api/deki/files/958/=Venkintro-watch-void.png"></td>
+    <td>Void (undefined) value</td>
+    <td><img alt="null" class="internal" src="/@api/deki/files/955/=Venkintro-watch-null.png"></td>
+    <td>Null value</td>
+   </tr>
+   <tr>
+    <td><img alt="t/f" class="internal" src="/@api/deki/files/951/=Venkintro-watch-bool.png"></td>
+    <td>Boolean value</td>
+    <td><img alt="`'" class="internal" src="/@api/deki/files/957/=Venkintro-watch-string.png"></td>
+    <td>String value</td>
+   </tr>
+   <tr>
+    <td><img alt="#" class="internal" src="/@api/deki/files/954/=Venkintro-watch-int.png"></td>
+    <td>Integer value</td>
+    <td><img alt="##" class="internal" src="/@api/deki/files/952/=Venkintro-watch-double.png"></td>
+    <td>Double value</td>
+   </tr>
+   <tr>
+    <td><img alt="*" class="internal" src="/@api/deki/files/956/=Venkintro-watch-object.png"></td>
+    <td>Object value</td>
+    <td><img alt="f" class="internal" src="/@api/deki/files/953/=Venkintro-watch-function.png"></td>
+    <td>Function value</td>
+   </tr>
+  </tbody>
+ </table>
+ <p><strong>Figure 9.</strong> Iconos de tipos de dato</p>
+</div>
+<p><span id="result_box" lang="es">El selector de columna para este punto de vista ( el cuadro selector de la columna de árbol en la parte superior derecha ) se puede utilizar para mostrar <span id="result_box" lang="es">columnas</span> Tipo y Indicadores. La columna de referencia contiene una descripción textual del tipo de objeto. 'Flages' enumera una o más indicadores aplicables a este objeto. Los indicadores se muestran enumerados en la Figura 8 .</span><br>
+ <br>
+ Si un elemento visible en la vista de variables locales se modifica a través de la vista de Sesión Interactiva , la modificación se reflejará inmediatamente en la Vista de variables locales .<br>
+ <br>
+ En el momento de escribir estas líneas, las variables locales de Vista de ordenación predeterminado y agrupación no son ajustables.</p>
+<h4 id="The_Call_Stack_View" name="The_Call_Stack_View"><span id="result_box" lang="es">Vista de la Pila de llamadas</span></h4>
+<p><img align="right" alt="Figure 10. The Call Stack View" class="internal" src="/@api/deki/files/945/=Venkintro-stack.png"></p>
+<p><span id="result_box" lang="es">La vista  de Pila de llamadas se encuentra <span id="result_box" lang="es">por defecto, </span>en la parte izquierda <span id="result_box" lang="es">inferior </span> de la ventana. Cuando se detiene el depurador, la vista Pila de llamadas muestra la lista de las funciones activas. La función en la parte superior de laesta vista  es aquel donde el depurador se detiene , la función debajo de él es la <span id="result_box" lang="es">función </span>que llama , debajo se encuentra la <span id="result_box" lang="es"><span id="result_box" lang="es">función </span></span> que llama a la <span id="result_box" lang="es"><span id="result_box" lang="es">función </span></span>que llama , y así sucesivamente. Estos elementos se denominan marcos de pila .</span><br>
+ <br>
+ Haciendo doble clic en un marco de pila cambiará el marco "actual". Esto hará que la fuente de la función que se muestra en la vista Código fuente , la vista variables locales cambiará para mostrar las variables locales al marco de pila seleccionada, y el guión evaluado en la vista Sesión Interactiva estará en relación con el marco seleccionado .<br>
+ <br>
+ Si usted desea copiar la pila de llamadas actual al portapapeles , seleccione " volcado de pila a la Sesión Interactiva " en el menú contextual , o tipee  '/where' en la vista Sesión Interactiva . A continuación, puede copiar el texto desde la vista Sesión Interactiva .<br>
+ <br>
+ Si usted desea evitar que en el futuro , Venkman se pare en un marco de pila en particular, marque " No Debug" desde el menú contextual del marco de pila .</p>
+<h4 id="Source_Code_View" name="Source_Code_View">Vista de Codigo Fuente</h4>
+<p><img align="none" alt="Figure 11. The Source Code View. Source code, line numbers, and breakpoints." class="internal" src="/@api/deki/files/944/=Venkintro-source.png"></p>
+<p><span id="result_box" lang="es">La vista de Código Fuente es un visor de archivos de sólo lectura. Los archivos y funciones específicas dentro de ellos se pueden visualizar al seleccionar el archivo o la función nombre apropiado en la Vista de script .</span><br>
+ <br>
+ Cuando la ejecución del script es interrumpido por el depurador , la línea del archivo donde se produjo la interrupción se muestra automáticamente en la vista código fuente. La línea en cuestión se resaltará en amarillo para que sea fácil de localizar.<br>
+ <br>
+ Al hacer clic en el margen izquierdo de esta visión se establecerá un punto de interrupción en esa línea. Si el punto de interrupción se establece con éxito ,  se mostrará la letra " B " en un fondo rojo al margen,  y tanto las vistas de Scripts Loaded y Sesión Interactiva proporcionarán retroalimentación. El punto de interrupción se puede borrar haciendo clic en el margen de nuevo ( en la letra " B"). No se pueden establecer Puntos de interrupción  en las líneas que no contienen código ejecutable , como líneas en blanco y comentarios. Para estas líneas , la vista Sesión Interactiva mostrará un mensaje de error que explica por qué el punto de interrupción , no se podría establecer .<br>
+ <br>
+ Los Puntos de interrupción también se pueden configurar y borrar desde  la vista Sesión Interactiva, con los comandos break y fbreak .El comando break toma un patrón de archivo y número de línea . Cualquier archivo cargado que coincida con el patrón de archivo , y contiene una línea ejecutable en el número de la línea solicitada tendrá un conjunto de punto de interrupción . Si no hay archivos cargados coincidentes con el patrón de archivo o número de línea , un mensaje de error se imprime en la consola y el comando falla. El comando fbreak es idéntico , con la excepción de que si no hay archivos coincidentes, se registra un "punto de ruptura futuro"  para el patrón y la línea. La próxima vez que se carga un archivo que coincida con el patrón y la línea, un punto de interrupción se configurará . De esta manera, fbreak permite establecer puntos de interrupción en los archivos que aún no están cargados , así como establecer puntos de interrupción que se desencadenan cuando se carga un archivo .</p>
+<h4 id="The_Interactive_Session_View" name="The_Interactive_Session_View">Vista de Sesion Interactiva</h4>
+<p><img align="none" alt="Figure 12. The Interactive Session View. Command line interface to the debugger" class="internal" src="/@api/deki/files/936/=Venkintro-console.png"></p>
+<p><span id="result_box" lang="es">Otro vista básica en Venkman es la deSesión Interactiva, que le permite interactuar con el depurador desde una línea de comandos.</span><br>
+ <br>
+ Los comandos se introducen en el cuadro de texto , y las respuestas se añaden al final de la salida. Escriba /commands en la zona de entrada ( el cuadro de texto ) para listar todos los comandos disponibles. El comando /help se puede utilizar para obtener información adicional acerca de un comando específico . Puede escribir /help next, por ejemplo, para ver cómo se utiliza el comando /next.<br>
+ <br>
+ El área de entrada soporta historial de comandos y el completado con tabulador para nombres de comandos. La historia de comandos recuerda los últimos 20 comandos introducidos . Las flechas hacia arriba y hacia abajo se pueden usar para revisar estos comandos anteriores. La implementación del tabulador permite al usuario escribir la primera parte de un comando, y presiona el tabulador dos veces para ver las terminaciones posibles . Si sólo hay un comando coincide , será auto - completado en la primera ficha .</p>
+<h3 id="View_Customization" name="View_Customization">Vista  Personalizacion</h3>
+<p><span id="result_box" lang="es">Venkman ofrece un control casi total sobre la disposición y visualización de puntos de vista dentro de la aplicación . El depurador se construye sobre un marco de aplicación que le permite arrastrar y soltar , cambiar el tamaño y cambiar todas las vistas disponibles , e incluso crear nuevas vistas o módulos para el depurador si usted elige , aunque este último es un tema avanzado y un tema para un próximo artículo.</span><br>
+ <br>
+ Para eliminar una vista de Venkman , simplemente haga clic en el botón Cerrar en la parte superior derecha de ese punto de vista . Cuando la vista se hace necesario de nuevo - por ejemplo, cuando se abre un archivo fuente desde la vista Scripts Cargados y la vista de codigo fuente  reaparece donde estaba la última posicionado . Para hacer reaparecer una vista  de forma explícita , selecciónelo de la Ver-&gt; Mostrar / Ocultar menú del depurador. Usted también puede hacer que las vistas floten en sus propias ventanas separadas. Para hacer flotar una vista, haga clic en el botón de flotador en la parte superior izquierda de esta opinión.<br>
+ <br>
+ Usted puede acceder a cualquiera de las vistas básicas con las función de submenus Mostrar / Ocultar del menú View. La lista que se muestra incluye  todas las vistas básicas en Venkman. A medida que usted cambia  cuales vistas se muestran y donde aparecen en la interfaz de usuario, sus preferencias se almacenan y se mantienen en todas las sesiones.</p>
+<p> </p>
+<h3 id="Loading_Scripts_into_the_Debugger" name="Loading_Scripts_into_the_Debugger">Cargando scripts en el Debugger</h3>
+<p><span id="result_box" lang="es">Tanto si inicia Venkman primero o el componente del navegador, cuando se <span id="result_box" lang="es">pone en marcha </span>el conjunto de aplicaciones Mozilla  , el motor de JavaScript empieza a mantener la pista  y compilar todos los scripts que se cargan en páginas web y en las diversas interfaces de usuario propios de Mozilla . El motor informa a Venkman sobre los scripts que conoce , y los scripts se cargan en la vista "Scripts Loaded" en el depurador.</span><br>
+ <br>
+ Si desea cargar nuevos scripts en -digamos desde una página web que está tratando de solucionar problemas - puede hacerlo con sólo abrir la página web en la ventana del navegador normal , momento en el cual el compilador pone la fuente JavaScript y rellena los Scripts Loaded ventana con la nueva entrada.<br>
+ <br>
+ Usando Archivo- &gt; Abrir en Venkman se abrirá un archivo local en el depurador, y el uso de Archivo-&gt; Abrir dirección se abrirá y mostrará todo el contenido HTML de la página solicitada. Probablemente , ninguno de ellos es lo que realmente quieres . Puesto que el motor JavaScript rellena automáticamente la lista Scripts Cargados en el depurador con JavaScript que se ejecuta como el navegador abre páginas web , por lo general basta con navegar por los sitios cuyos guiones usted está interesado en la depuración.</p>
+<p> </p>
+<h3 id="Debugging_Basics" name="Debugging_Basics">Fundamentos de Depuracion</h3>
+<p><span id="result_box" lang="es">En esta sección se ofrece un breve ejemplo de una sesión de depuración con el fin de que se familiarice con algunos de los comandos básicos y operaciones del depurador.</span></p>
+<p><span id="result_box" lang="es">Nota: En un momento dado , el depurador necesitaba iniciarse antes de los scripts que se iban a depurar . Esta limitación se resolvio y ahora el compilador de JavaScript hace que todas las secuencias de comandos que se acceden a través del navegador,  esten disponibles para el depurador. Consulte Carga de scripts en el depurador para más información sobre cómo encontrar y cargar scripts en Venkman .</span></p>
+<ol>
+ <li>Comience Venkman</li>
+ <li>Inicie una ventana de navegador y vaya a http://wp.netscape.com/fishcam/dhtmltank.html .</li>
+</ol>
+<p>Tenga en cuenta que en Mozilla y Netscape 7.x 1.x , el depurador contiene un menú Ventana al igual que otros componentes principales en la suite de aplicaciones . Desde este menú, se puede acceder al navegador , el correo y otras aplicaciones.</p>
+<ol>
+ <li>Tipee /break animator-0.03 121 en el depurador.</li>
+</ol>
+<p>El comando de consola  /break se utiliza para establecer los puntos de interrupción y la lista. El primer parámetro es el nombre del archivo que contiene el código JavaScript que quieras detener. El segundo parámetro es el número de línea. No es necesario especificar el nombre completo del archivo. En este ejemplo, estamos estableciendo un punto de interrupción en la función que se llama cuando el navegador se inicia la ventana fishcam DHTML.<span lang="es"> Alternativamente, usted puede seleccionar animator-0.03.js de la vista scripts cargados, localizar la función de pausa en la línea 119 , y haga clic en el margen izquierdo . Establecer puntos de interrupción de esta manera es equivalente a usar el comando /break en la consola. En cualquier caso, un icono de punto de interrupción roja aparece en la vista Código fuente .</span></p>
+<ol>
+ <li><span lang="es">Tipee  /break en el depurador.</span></li>
+</ol>
+<p><span lang="es">Si usted no proporciona argumentos para el comando / descanso, todos los puntos de interrupción se enumeran en la vista Sesión Interactiva .</span></p>
+<ol>
+ <li><span lang="es">En la página fishcam , pulse el enlace de "pausa" .</span></li>
+ <li><span lang="es">Usted debe impactar el punto de interrupción que acaba de establecer en el paso 3 .</span></li>
+</ol>
+<p><span lang="es">En la sesión interactiva , el contexto se convierte en animador - 0.03.js y el ámbito de aplicación es la función de pausa . También habrá "Paramos para punto de interrupción " en rojo en la sesión interactiva , junto con el nombre de archivo, número de línea, y el fragmento de código fuente desde donde se detuvo </span></p>
+<p> </p>
+<p>Figura 13 . ( A partir del paso 5 ) se detuvo en un punto de interrupción .</p>
+<ol>
+ <li>En el campo de entrada de la sesión interactiva , escriba this.fPaused</li>
+ <li>Venkman evalúa la expresión , que le da [ boolean ] doble fondo . Pulse en Paso a paso para seguir los pasos hasta que haya terminado la depuración de la función y los peces ha detenido .</li>
+ <li> </li>
+ <li>Además que intervenir , que se ejecutará una sola línea de código JavaScript y parar, Paso a paso se puede utilizar para pasar por encima de una llamada de función inminente , y devolver el control al depurador cuando se devuelve la llamada . Step Out se ejecuta hasta que la corriente llamada de función se cierra.</li>
+ <li>Haga clic en el enlace de "pausa " de nuevo en la página fishcam para reanudar la demo .</li>
+ <li>Esto inicia el DHTML abajo del otro código base en start () y hace que los peces comienzan a nadar de nuevo .</li>
+ <li>Como se puede ver , se trata de una introducción muy modesto para la funcionalidad del depurador de JavaScript y la complejidad que los scripts pueden tener . Pero los pasos descritos aquí le puede dar una sensación básica para el depurador si aún no lo ha tenido alguna experiencia con él , y servir de base para los ejemplos más interesantes y prácticos en los artículos que siguen a éste.</li>
+ <li>La mejor manera de conocer a Venkman , por supuesto, es para jugar un rato con él - para configurarlo de la manera que tiene más sentido para usted, para tratar de secuencias de comandos de carga y establecer puntos de interrupción , la evaluación de expresiones en la Sesión Interactiva View, viendo los valores de las variables a medida que cambian cuando los scripts se ejecutan , obteniendo datos del perfil.</li>
+ <li>extensiones de depuración</li>
+ <li>Aunque a primera vista podría parecer que Venkman no puede depurar extensiones , hacerlo es , de hecho, totalmente compatible ; es sólo desactivada por defecto.</li>
+ <li>Para depurar la extensión con Venkman ( archivos XUL y sus archivos adjuntos JS ) , que tendrá que cargar el navegador y archivos de extensión en Venkman desmarcando Test&gt; Excluir archivos del navegador .</li>
+</ol>
+<p><span title="Resources">Recursos</span></p>
+<p><br>
+ <span title="Resources">El uso de puntos de interrupción en Venkman - siguiente artículo sobre Venkman .<br>
+ La página principal del Venkman en el MDC .</span></p>
+<div class="originaldocinfo">
+ <h3 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h3>
+ <ul>
+  <li>Authors: Ian Oeschger, Robert Ginda</li>
+ </ul>
+</div>
+<p></p>

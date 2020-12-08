@@ -1,0 +1,49 @@
+---
+title: window.navigator.mozSms
+slug: DOM/window.navigator.mozSms
+translation_of: Archive/B2G_OS/API/Navigator/mozSms
+---
+<p>{{ ApiRef() }}</p>
+<p>{{ non-standard_header() }}</p>
+<h2 id="Summary" name="Summary">Yhteenveto</h2>
+<p>Palauttaa {{ domxref("SmsManager") }} -objektin, jota voit käyttää SMS-viestien vastaanottamiseen ja lähettämiseen.</p>
+<h2 id="Syntax" name="Syntax">Syntaksi</h2>
+<pre class="eval">var sms = window.navigator.mozSms;
+</pre>
+<h2 id="Selainyhteensopivuus">Selainyhteensopivuus</h2>
+<p>Ilmeisistä syistä tuke otaksutaan pääasiassa mobiiliselaimissa.</p>
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Ominaisuus</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Perustuki</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatGeckoMobile("12.0") }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+ </tbody>
+</table>
+<p> </p>
+<h2 id="Asetukset_saatavuus">Asetukset &amp; saatavuus</h2>
+<ul>
+ <li>WebSMS on oletuksena pois käytöstä ja voidaan ottaa käyttöön asettamalla asetuksen <code>dom.sms.enabled</code> arvoon true.</li>
+ <li>Asetuksen <code>dom.sms.whitelist</code> on määriteltävä pilkulla erotellun valkoisen listan sallituista tietokonenimistä, jotka saavat käyttää WebSMS Api:a. Tämä merkkijono on oletuksena tyhjä.</li>
+ <li>WebSMS on ainoa käytettävissä oleva sertifikoitu sovellus Firefox OS:ssä (B2G).</li>
+</ul>
+<h2 id="Specification" name="Specification">Spesifikaatio</h2>
+<p>Ei ole minkään spesifikaation osa; On kuitenkin odotettu <a class="link-https" href="https://wiki.mozilla.org/WebAPI/WebSMS" title="https://wiki.mozilla.org/WebAPI/WebSMS">WebSMS-suunnitteluasiakirjaan</a> perustuvaa ehdotusta.</p>
+<h2 id="Katso_myös">Katso myös</h2>
+<ul>
+ <li><a href="/en-US/docs/API/WebSMS" title="/en-US/docs/API/WebSMS">WebSMS API</a></li>
+ <li>{{ domxref("SmsManager") }}</li>
+ <li>{{ domxref("window.navigator.mozTelephony") }} puhelujen ohjaamiseen.</li>
+</ul>

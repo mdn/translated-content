@@ -1,0 +1,204 @@
+---
+title: Almacenamiento
+slug: Almacenamiento
+tags:
+  - Toolkit API
+  - para_revisar
+translation_of: Mozilla/Tech/XPCOM/Storage
+---
+<p> </p>
+<p>Almacenamiento en <a href="/es/Firefox_2_para_desarrolladores" title="es/Firefox_2_para_desarrolladores">Firefox 2</a> es un API de base de datos y una forma de respaldo en <a class="external" href="http://www.sqlite.org/">sqlite</a>. Es un recurso sólo disponible para peticiones seguras, lo que significa su uso exclusivo para código <a href="/es/Chrome" title="es/Chrome">chrome</a> y <a href="/es/Extensiones" title="es/Extensiones">extensiones</a>, no así para páginas web. Actualmente está "descongelada", lo que significa que la API está sujeta a cambiar en cualquier momento. Es probable que la API sufra algunas modificaciones entre la versión Alfa 2 y la versión final de Firefox 2, así como entre Firefox 2 y Firefox 3.</p>
+<p>Aunque a veces se confunde el Almacenamiento con el <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/almacenamiento">WHATWG DOM #scs-del-lado-del-cliente</a> (una característica de Firefox 2 que permite el almacenamiento persistente de datos) la API Almacenamiento, está reservada sólo para extensiones de autoría y componentes de Firefox.</p>
+<p>El presente documento abarca la API mozStorage y algunas peculiaridades de sqlite. No cubre SQL o el sqlite "regular". Para esos casos usted debe consultar sus manuales de SQL. Es recomendable que revise también su <a class="external" href="http://www.sqlite.org/docs.html">documentación de sqlite</a> y especialmente el <a class="external" href="http://www.sqlite.org/lang.html">lenguaje de consultas de sqlite</a>. Para acceder a la ayuda de la API mozStorage, debe consultar en mozilla.dev.apps.firefox o al servicio de informaciones en <a href="/news.mozilla.org" title="news.mozilla.org">news.mozilla.org</a>. En caso de querer reportar errores, use el <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Toolkit&amp;component=Storage">Bugzilla</a> (Producto: "Herramientas", Componente: "Almacenamiento").</p>
+<p>Revise <a href="/es/Almacenamiento/Funcionamiento" title="es/Almacenamiento/Funcionamiento">Almacenamiento:Funcionamiento</a> para indagar sobre el buen funcionamiento de la conexión a su base de datos.</p>
+<h4 id="Comenzando">Comenzando</h4>
+<p>mozStorage está diseñada como muchos otros sistemas de bases de datos. El procedimiento general para usarlo es:</p>
+<ul> <li>Abrir una conexión a la base de datos de su elección.</li> <li>Crear las definiciones para ejecutar la conexión.</li> <li>Enlazar tantos parámetros a las definiciones como sea necesario.</li> <li>Ejecutar las definiciones.</li> <li>"Resetear" (reiniciar) las definiciones.</li>
+</ul>
+<h4 id="Abriendo_una_Conexión">Abriendo una Conexión</h4>
+<p>La primera inicialización del servicio de almacenamiento debe hacerse en el hilo principal (un "hilo" es una unidad básica de ejecución). Se producirá un error si usted lo inicializa por cualquier otro hilo. Por lo tanto, si usted quisiera usar el servicio desde otro hilo, verifique llamando al getService desde el hilo principal para asegurarse que el servicio ha sido creado.</p>
+<p>Ejemplo en C++ de la apertura de una conexión para "asdf.sqlite" en el directorio raiz del usuario:</p>
+<pre>nsCOMPtr&lt;nsIFile&gt; dbFile;
+rv = NS_GetSpecialDirectory(NS_APP_USER_PROFILE_50_DIR,
+                            getter_AddRefs(dbFile));
+NS_ENSURE_SUCCESS(rv, rv);
+rv = dbFile-&gt;Append(NS_LITERAL_STRING("asdf.sqlite"));
+NS_ENSURE_SUCCESS(rv, rv);
+
+mDBService = do_GetService(MOZ_STORAGE_SERVICE_CONTRACTID, &amp;rv);
+NS_ENSURE_SUCCESS(rv, rv);
+rv = mDBService-&gt;OpenDatabase(dbFile, getter_AddRefs(mDBConn));
+NS_ENSURE_SUCCESS(rv, rv);
+</pre>
+<p><code>MOZ_STORAGE_SERVICE_CONTRACTID</code> está definido en <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/build/mozStorageCID.h" rel="custom">storage/build/mozStorageCID.h</a></code>, y su valor es <code>"@mozilla.org/storage/service;1"</code></p>
+<p>Ejemplo en JavaScript:</p>
+<pre>var file = Components.classes["@mozilla.org/file/directory_service;1"]
+                     .getService(Components.interfaces.nsIProperties)
+                     .get("ProfD", Components.interfaces.nsIFile);
+file.append("asdf.sqlite");
+
+var storageService = Components.classes["@mozilla.org/storage/service;1"]
+                        .getService(Components.interfaces.mozIStorageService);
+var mDBConn = storageService.openDatabase(file);
+</pre>
+<dl> <dd> <div class="note">Nota: La función OpenDatabase está sujeta a cambios. Esta deberá ser destacada y simplificada al máximo para hacerla menos accesible a problemas.</div> </dd>
+</dl>
+<div class="note">Atención: Evite la tendencia a darle a su base de datos la terminación ".sdb" (por 's'qlite 'd'ata 'b'ase). Esta extensión está     reservada en Windows para una "Base de datos de Aplicación Compatible" y sus modificaciones son guardadas automáticamente como parte del sistema para restaurar su funcionalidad.</div>
+<h4 id="Crear_una_sentencia">Crear una sentencia</h4>
+<p>Existen dos formas de crear una sentencia. Si no hay parámetros y la sentencia no devuelve nada, use <code>mozIStorageConnection.executeSimpleSQL</code>.</p>
+<pre>C++:
+rv = mDBConn-&gt;ExecuteSimpleSQL(NS_LITERAL_CSTRING("CREATE TABLE foo (a INTEGER)"));
+
+JS:
+mDBConn.executeSimpleSQL("CREATE TABLE foo (a INTEGER)");
+</pre>
+<p>En otro caso, se debería componer una sentencia utilizando <code>mozIStorageConnection.createStatement</code>:</p>
+<pre>C++:
+nsCOMPtr&lt;mozIStorageStatement&gt; statement;
+rv = mDBConn-&gt;CreateStatement(NS_LITERAL_CSTRING("SELECT * FROM foo WHERE a = ?1"),
+                              getter_AddRefs(statement));
+NS_ENSURE_SUCCESS(rv, rv);
+
+JS:
+var statement = mDBConn.createStatement("SELECT * FROM foo WHERE a = ?1");
+</pre>
+<p>Este ejemplo utiliza un comodín "?1" para un parámetro que será referenciado más tarde (véase la siguiente sección).</p>
+<p>Tras componer la sentencia se pueden enlazar parámetros a ella, ejecutarla y reiniciarla una y otra vez. Si una sentencia se ejecuta muchas veces, el uso de una sentencia precompilada derivará en una mejora notable del rendimiento ya que la consulta SQL no necesita ser analizada sintácticamente cada vez.</p>
+<p>Si está familiarizado con sqlite, sabrá que las sentencias preparadas son invalidadas cuando el esquema de la base de datos cambia. Afortunadamente, mozIStorageStatement detecta el error y recompilará la sentencia según se necesite. Por tanto, una vez que se ha creado una sentencia, no es necesario preocuparse ante un cambio de esquema. Todas las sentencias continuarán trabajando de forma transparente.</p>
+<h4 id="Asignando_parámetros">Asignando parámetros</h4>
+<p>Por lo general es mejor asignar todos los parámetros por separado en lugar de intentar construir cadenas SQL al vuelo que contengan los parámetros. Entre otras cosas, esto evita ataques de inyección SQL, ya que un parámetro asignado nunca podrá ser ejecutado como SQL.</p>
+<p>Se pueden asignar parámetros cualquier sentencia que tenga comodines. Los comodines son accedidos mediante índice empezando por "?1", luego "?2"... Para asignar dichos comodines hay que usar funciones de sentencia BindXXXParameter(0) BindXXXParameter(1)...</p>
+<dl> <dd> <div class="note">Cuidado: Los índices en los comodines empiezan en 1. Los enteros pasados a las funciones de asignación cuentan desde 0. Esto significa que "?1" se corresponde al parámetro 0, "?2" al 1, etc...</div> </dd>
+</dl>
+<p>Un comodín puede aparecer múltiples veces en la cadena SQL y todas sus instancias serán reemplazadas con el valor asignado. Los parámetros no asignados se interpretarán como NULL.</p>
+<p>Las funciones de asignación disponibles en <code>mozIStorageStatement</code> (véase <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozIStorageStatement.idl" rel="custom">storage/public/mozIStorageStatement.idl</a></code>) son:</p>
+<ul> <li><code>bindUTF8StringParameter(in unsigned long aParamIndex, in AUTF8String aValue)</code></li> <li><code>bindStringParameter(in unsigned long aParamIndex, in AString aValue)</code></li> <li><code>bindDoubleParameter(in unsigned long aParamIndex, in double aValue)</code></li> <li><code>bindInt32Parameter(in unsigned long aParamIndex, in long aValue)</code></li> <li><code>bindInt64Parameter(in unsigned long aParamIndex, in long long aValue)</code></li> <li><code>bindNullParameter(in unsigned long aParamIndex)</code></li> <li><code>bindBlobParameter(in unsigned long aParamIndex, [array,const,size_is(aValueSize)] in octet aValue, in unsigned long ValueSize)</code> (para datos binarios)</li>
+</ul>
+<p>Ejemplo C++:</p>
+<pre>nsCOMPtr&lt;mozIStorageStatement&gt; statement;
+rv = mDBConn-&gt;CreateStatement(NS_LITERAL_CSTRING("SELECT * FROM foo WHERE a = ?1 AND b &gt; ?2"),
+                              getter_AddRefs(statement));
+NS_ENSURE_SUCCESS(rv, rv);
+rv = statement-&gt;BindUTF8StringParameter(0, "hello"); // "hello" will be substituted for "?1"
+NS_ENSURE_SUCCESS(rv, rv);
+rv = statement-&gt;BindInt32Parameter(1, 1234); // 1234 will be substituted for "?2"
+NS_ENSURE_SUCCESS(rv, rv);
+</pre>
+<p>Ejemplo Javascript:</p>
+<pre>var statement = mDBConn.createStatement("SELECT * FROM foo WHERE a = ?1 AND b &gt; ?2");
+statement.bindUTF8StringParameter(0, "hello");
+statement.bindInt32Parameter(1, 1234);
+</pre>
+<h4 id="Ejecutar_una_sentencia">Ejecutar una sentencia</h4>
+<p>La forma principal de ejecutar una sentencia es con <code>mozIStorageStatement.executeStep</code>. Esta función te permite enumerar todas las filas resultantes que la sentencia ha producido y te avisará cuando ya no haya más resultados.</p>
+<p>Tras llamar a <code>executeStep</code> se pueden usar las funciones <em>get</em> de mozIStorageValueArray (véase <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozIStorageValueArray.idl" rel="custom">storage/public/mozIStorageValueArray.idl</a></code>. mozIStorageStatement implementa mozIStorageValueArray. Estas funciones son:</p>
+<ul> <li><code>long getInt32(in unsigned long aIndex);</code></li> <li><code>long long getInt64(in unsigned long aIndex);</code></li> <li><code>double getDouble(in unsigned long aIndex);</code></li> <li><code>AUTF8String getUTF8String(in unsigned long aIndex);</code></li> <li><code>AString getString(in unsigned long aIndex);</code></li> <li><code>void getBlob(in unsigned long aIndex, out unsigned long aDataSize, [array,size_is(aDataSize)] out octet aData);</code> aviso: los datos serán NULL si dataSize es 0.</li> <li><code>boolean getIsNull(in unsigned long aIndex);</code> Devuelve true si la celda es NULL (distinta de cadena vacía)</li>
+</ul>
+<p>Se puede obtener el tipo de un valor con <code>mozIStorageValueArray.getTypeOfIndex</code> el cual devuelve el tipo de la columna especificada. Cuidado: sqlite no es una base de datos tipada. Se puede poner cualquier tipo en cualquier celda sin importar el tipo declarado para la columna. Si se pide un tipo diferente, sqlite hará lo que pueda para convertirlo y devolverá algún valor predeterminado si le es imposible. Por tanto, es imposible obtener errores a la hora de recuperar tipos aunque puede que te lleguen datos raros.</p>
+<p>El código de C++ puede además usar las funciones <code>AsInt32</code>, <code>AsDouble</code>, etc... que devuelven el valor como valor devuelto de C++ más apropiado. Aunque hay que tener cuidado ya que no tendrás errores si el índice es inválido. Es imposible obtener cualquier otro error debido a que sqlite siempre convertirá los tipos, incluso cuando al hacerlo dejen de tener sentido.</p>
+<p>Ejemplo C++:</p>
+<pre>PRBool hasMoreData;
+while (NS_SUCCEEDED(statement-&gt;ExecuteStep(&amp;hasMoreData)) &amp;&amp; hasMoreData) {
+  PRInt32 value = statement-&gt;AsInt32(0);
+  // use the value...
+}
+</pre>
+<p>Ejemplo Javascript:</p>
+<pre>while (statement.executeStep()) {
+  var value = statement.GetInt32(0);
+  // use the value...
+}
+</pre>
+<p><code>mozIStorageStatement.execute()</code> en una función apropiada cuando no se esperan datos al ejecutar la sentencia. Itera una vez la sentencia y la reinicia. Esto puede ser útil para sentencias de inserción ya que simplifica el código:</p>
+<pre>var statement = mDBConn.createStatement("INSERT INTO my_table VALUES (?1)");
+statement.bindInt32Parameter(52);
+statement.execute();
+</pre>
+<h4 id="Reiniciar_una_sentencia">Reiniciar una sentencia</h4>
+<p>Es importante reiniciar sentencias que ya no van a ser usadas más. Las sentencias de escritura no reiniciadas mantendrán bloqueadas las tablas e impedirán a otras sentencias acceder a ellas. Las sentencias de lectura no reiniciadas impedirán la escritura.</p>
+<p>Cuando un objeto sentencia es liberado, su sentencia de base de datos correspondiente es cerrada. Si estás usando C++ y sabes que todas las referencias serán destruidas, no tienes porque reiniciar explícitamente la sentencia. Además, si usas <code>mozIStorageStatement.execute()</code>, tampoco necesitas reiniciar explícitamente la sentencia; esta función la reiniciará por ti. En otro caso, hay que llamar a <code>mozIStorageStatement.reset()</code>.</p>
+<p>Los que utilicen JavaScript deben asegurarse de que las sentencias son reiniciadas, siendo particularmente cuidadoso con las excepciones. Seguro que querrás estar seguro de que reinicias tus sentencias incluso cuando una excepción es lanzada o de lo contrario los siguientes accesos a la base de datos no serán posibles. El reinicio de una sentencia es un proceso relativamente sencillo y no ocurrirá nada si ya estaba reiniciada, por lo que no hay que preocuparse por reinicios innecesarios.</p>
+<pre>var statement = connection.createStatement(...);
+try {
+  // uso de la sentencia...
+} finally {
+  statement.reset();
+}
+</pre>
+<p>Los que usen C++ deben de hacer lo mismo. Existe un objeto de ámbito en <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozStorageHelper.h" rel="custom">storage/public/mozStorageHelper.h</a></code> llamado mozStorageStatementScoper que asegura que una sentencia dada es reiniciada cuando se sale del ámbito al que pertenece. Es muy recomendable usar este objeto si es posible.</p>
+<pre>void someClass::someFunction()
+{
+  mozStorageStatementScoper scoper(mStatement)
+  // uso de la sentencia
+}
+</pre>
+<h4 id="Transacciones">Transacciones</h4>
+<p>mozIStorageConnection posee funciones para comenzar y finalizar transacciones. Si no se usan transacciones de modo explícito, se creará una implícita para cada sentencia. Esto tiene consecuencias más directas relacionadas con el rendimiento. Existe algo así para cada transacción, especialmente para las confirmaciones (commits). Por tanto al final se notará una mejora en el rendimiento cuando se realicen múltiples sentencias en una fila si se ponen en una transacción. Véase <a href="/es/Storage/Performance" title="es/Storage/Performance">Storage:Performance</a> para más información relacionada con el rendimiento.</p>
+<p>La gran diferencia entre otros sistemas de base de datos es que sqlite no soporta transacciones anidadas. Esto significa que una vez se ha abierto una transacción no se puede abrir otra. Se puede comprobar <code>mozIStorageConnection.transactionInProgress</code> para ver si una transacción está actualmente en progreso.</p>
+<p>También se puede ejecutar "BEGIN TRANSACTION" y "END TRANSACTION" directamente como sentencias SQL (esto es lo que hace la conexión cuando se llaman a las funciones). Sin embargo, el uso de <code>mozIStorageConnection.beginTransaction</code> y las funciones relacionadas se recomienda <em>encarecidamente</em> ya que guarda el estado de la transacción en la conexión. De otro modo el atributo <code>transacionInProgress</code> tendrá un valor erróneo.</p>
+<p>sqlite posee varios tipos de transacciones:</p>
+<ul> <li>mozIStorageConnection.TRANSACTION_DEFERRED: El predeterminado. El bloqueo de la base de datos se adquiere cuando se necesita (generalmente la primera vez que se ejecuta una sentencia en la transacción).</li>
+</ul>
+<ul> <li>mozIStorageConnection.TRANSACTION_IMMEDIATE: Obtiene un bloqueo de lectura inmediato sobre la base de datos.</li>
+</ul>
+<ul> <li>mozIStorageConnection.TRANSACTION_EXCLUSIVE: Obtiene un bloqueo de escritura inmediato sobre la base de datos.</li>
+</ul>
+<p>Se puede pasar este tipo de transacción a <code>mozIStorageConnection.beginTransactionAs</code> para determinar qué clase de transacción se necesita, teniendo en mente que si otra transacción se ha iniciado esta operación no tendrá éxito. Generalmente, el tipo predeterminado TRANSACTION_DEFERRED es suficiente y no se debería usar el resto de tipos a menos que realmente sepas por qué lo necesitas. Para más información, véase la documentación de sqlite sobre <a class="external" href="http://www.sqlite.org/lang_transaction.html">BEGIN TRANSACTION</a> y<a class="external" href="http://www.sqlite.org/lockingv3.html">bloqueos</a>.</p>
+<pre>var ourTransaction = false;
+if (mDBConn.transactionInProgress) {
+  ourTransaction = true;
+  mDBConn.beginTransactionAs(mDBConn.TRANSACTION_DEFERRED);
+}
+
+// ... uso de la conexión ...
+
+if (ourTransaction)
+  mDBConn.commitTransaction();
+</pre>
+<p>En C++ se puede usar la clase de ayuda mozStorageTransaction definida en <code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozStorageHelper.h" rel="custom">storage/public/mozStorageHelper.h</a></code>. Esta clase comenzará una transacción del tipo especificado utilizando la conexión especificada cuando se alcance el ámbito y confirmará o deshará la transacción cuando salga del ámbito. Si ya había una transacción en progreso, la clase de ayuda de transacciones no hará nada.</p>
+<p>También tiene funciones para confirmaciones explícitas. El uso típico es cuando se crea la clase para que deshaga los cambios de modo predeterminado para luego confirmar explícitamente la transacción cuando el proceso haya concluido con éxito.</p>
+<pre>nsresult someFunction()
+{
+  // deferred transaction (the default) with rollback on failure
+  mozStorageTransaction transaction(mDBConn, PR_FALSE);
+
+  // ... uso de la conexión ...
+
+  // todo ha ido bien, ahora confirmamos explícitamente
+  return transaction.Commit();
+}
+</pre>
+<h4 id="Cómo_corromper_la_base_de_datos">Cómo corromper la base de datos</h4>
+<ul> <li>Léete este documento: <a class="external" href="http://www.sqlite.org/lockingv3.html">Concurrencia y bloqueo de ficheros en sqlite versión 3</a>, especialmente la sección de corrupción.</li>
+</ul>
+<ul> <li>Abriendo más de una conexión al mismo fichero con nombres que no son exactamente el mismo que determinaría <code>strcmp</code>. Esto incluye "my.db" y "../dir/my.db" o, en Windows (sin distinguir minúsculas y mayúsculas) "my.db" y "My.db". Sqlite intentará manejar muchos de estos casos, aunque no deberías fiarte de ello.</li>
+</ul>
+<ul> <li>Accediendo a una base de datos desde un enlace simbólico o duro.</li>
+</ul>
+<ul> <li>Abriendo conexiones a la misma base de datos desde más de un hilo (véase "Thread safety" más abajo).</li>
+</ul>
+<ul> <li>Accediendo a una conexión o sentencia desde más de un hilo (véase "Thread safety" más abajo).</li>
+</ul>
+<ul> <li>Abriendo la base de datos desde un programa externo cuando aún está abierta en Mozilla. El cacheo rompe el bloqueo normal de ficheros en sqlite, el cual permite que esto sea hecho de forma segura.</li>
+</ul>
+<h4 id="Seguridad_en_hilos">Seguridad en hilos</h4>
+<p>Tanto el servicio mozStorage como sqlite son seguros a nivel de hilo. Sin embargo ningún otro objeto de mozStorage o de sqlite u operación es segura.</p>
+<ul> <li>El servicio de almacenamiento debe ser creado en el hilo principal. si se quiere acceder al servicio desde otro hilo debería asegurarse que se llama a getService desde el hilo principal con antelación.</li>
+</ul>
+<ul> <li>No se puede acceder a una conexión o a una sentencia desde múltiples hilos. Dichos objetos de almacenamiento ni sus representaciones en sqlite son seguros a nivel de hilo. Incluso si se utiliza bloqueo y se asegura que sólo un único hilo está haciendo algo a la vez pueden haber problemas. Este caso no ha sido comprobado y pueden haber algún que otro estado interno para hilos en sqlite. Se recomienda encarecidamente no hacer esto.</li>
+</ul>
+<ul> <li>No se puede acceder a una única base de datos desde múltiples conexiones desde diferentes hilos. Normalmente sqlite permite esto. Sin embargo, nosotros hacemos <code>sqlite3_enable_shared_cache(1);</code> (véase <a class="external" href="http://www.sqlite.org/sharedcache.html">modo compartido de caché en sqlite</a>) el cual crea múltiples compartidas a la misma caché. Esto es importante para el rendimiento, sin embargo no existe bloqueo para el acceso a la caché, lo que significa que se romperá si se usa desde más de un hilo.</li>
+</ul>
+<h4 id="Bloqueo_en_SQLite">Bloqueo en SQLite</h4>
+<p>SQLite bloquea por completo la base de datos, es decir, se devolverá un SQLITE_BUSY a aquellos que estén leyendo e intenten escribir y lo mismo ocurrirá con aquellos que estén escribiendo e intenten leer. Una sentencia se considera activa desde el primer step() hasta que reset() es llamado. execute() llama tanto a step() como a reset(). Un problema común ocurre cuando se olvida reiniciar con reset() una sentencia después de haberla iterado con step().</p>
+<p>Mientras que una conexión SQLite dada es capaz de manejar múltiples sentencias abiertas, su modelo de bloqueo limita lo que dichas sentencias pueden hacer concurrentemente (leer o escribir). De hecho es posible que múltiples sentencias estén activas leyendo a la vez. Sin embargo no es posible que múltiples sentencias estén leyendo y escribiendo a la vez <em>en la misma tabla</em>, incluso si son derivadas de la misma conexión.</p>
+<p>SQLite posee un modelo de bloqueo a dos niveles: a nivel de conexión y a nivel de tabla. La mayoría de la gente estará familiarizada con el bloqueo a nivel de conexión (base de datos): múltiples lectores aunque sólo un escritor. Lo que bloquea el nivel de tabla (Árbol-B) es lo que puede a veces ser confundido (internamente, cada tabla en la base de datos posee su propio Árbol-B, por lo que "tabla" y "Árbol-B" son técnicamente sinónimos).</p>
+<h5 id="Bloqueo_a_nivel_de_tabla">Bloqueo a nivel de tabla</h5>
+<p>Se podría pensar que si sólo se tiene una conexión y se bloquea la base de datos para escritura, se podrían usar múltiples sentencias para hacer todo lo que se quisiera. No del todo cierto. Hay que ser consciente del bloqueo a nivel de tabla (Árbol-B) el cual es mantenido por manejadores de sentencias a través de la base de datos (p.e. sentencias SELECT abiertas).</p>
+<p>La regla general es esta: un manejador de sentencia puede <strong>no</strong> modificar una tabla (Árbol-B) la cual otros manejadores de sentencia están leyendo (tienen abiertos cursores sobre ella), incluso si ese manejador de sentencia comparte la misma conexión (contexto de transacción, bloqueo de base de datos, etc...) con otros manejadores de sentencias. <em>Intentar hacerlo provocará el bloqueo (o devolverá SQLITE_BUSY)</em>.</p>
+<p>Este problema generalmente aparece cuando se intenta iterar una tabla con una sentencia y modificar registros dentro de ella utilizando otra sentencia. Esto no funcionará (o conlleva una alta probabilidad de no funcionar, dependiendo de la implicación del optimizador (véase más abajo)). La sentencia de modificación provocará bloqueo ya que la sentencia de lectura tiene un cursor abierto en la tabla.</p>
+<h5 id="Trabajar_con_problemas_de_bloqueo">Trabajar con problemas de bloqueo</h5>
+<p>La solución es seguir (1) como se describe arriba. Teóricamente, (2) realmente no debería funcionar con SQLite 3.x. En este escenario, el bloqueo de la base de datos entra en juego (con múltiples conexiones) además del bloque de la tabla. La conexión 2 (conexión de modificación) no será capaz de modificar (escribir) en la base de datos mientras que la conexión 1 esté leyendo. La conexión 2 necesita un acceso exclusivo para ejecutar un comando SQL de modificación, acceso que no puede obtener mientras la conexión 1 tenga sentencias activas leyendo la base de datos (la conexión 1 posee un bloque de lectura compartido durante este tiempo el cual prohibe a cualquier otra conexión obtener un acceso exclusivo).</p>
+<p>Otra opción es usar una tabla temporal. Crear una tabla temporal que contenga los resultados de la tabla en cuestión, iterarla (poniendo el bloqueo de la tabla de la sentencia de lectura en la tabla temporal) para que luego la sentencia de modificación pueda hacer cambios en la tabla real sin ningún problema. Esto puede ser hecho con sentencias derivadas de una única conexión (contexto de transacción). Este escenario a veces sucede en segundo plano ya que cosas como ORDER BY pueden producir tablas temporales internamente. Sin embargo, no es seguro asumir que el optimizador hará esto en todos los casos. Crear una tabla temporal explícitamente es la única forma segura de realizar esta última opción.</p>
+
+<p></p>

@@ -1,0 +1,76 @@
+---
+title: Expression closures
+slug: Web/JavaScript/Referencia/Operadores/Expression_closures
+tags:
+  - Funciones
+  - JavaScript
+  - Referencia
+translation_of: Archive/Web/JavaScript/Expression_closures
+---
+<div class="warning"><strong>Non-standard. Do not use!</strong><br>
+La sintaxis de cierre de la expresion es  una caracteristica obsoleta de SpiderMonkey y <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1083458">sera removida</a>. Par usos futuros, considere usar <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">funciones arrow</a>.</div>
+
+<div>{{jsSidebar("Operators")}}</div>
+
+<p>Los cierres de expresiones son una sintaxis de la función abreviada para escribir funciones simples.</p>
+
+<h2 id="Sintasis">Sintasis</h2>
+
+<pre class="syntaxbox">function [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]])
+   <em>expression</em>
+</pre>
+
+<h3 id="Parametros">Parametros</h3>
+
+<dl>
+ <dt><code>nombre</code></dt>
+ <dd>El nombre  de la función. Puede ser omitido, en este caso la funcion es <em>anonima</em>.  El nombre es unicamente local para el cuerpo de la función. </dd>
+ <dt><code>parametroN</code></dt>
+ <dd>El nombre de una argumento para pasar a la función. Una funcion puede tener hasta 255 argumentos. </dd>
+ <dt><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">expresión</span></font></dt>
+ <dd>La expresion que comprende el cuerpo de la función. </dd>
+</dl>
+
+<h2 id="Descripción">Descripción</h2>
+
+<p>Esta  adición no es más que una abreviatura para escribir funciones simpres, dando al lenguage algo similar a un tipica <a class="external" href="http://en.wikipedia.org/wiki/Lambda_calculus#Lambda_calculus_and_programming_languages">Notacion Lambda</a>.</p>
+
+<p>JavaScript 1.7 y superiores:</p>
+
+<pre class="brush: js">function(x) { return x * x; }</pre>
+
+<p>JavaScript 1.8:</p>
+
+<pre class="brush: js">function(x) x * x</pre>
+
+<p>Esta sintasis le permite dejar de lado las llaves y la declaración 'return', haciendolos implicitos. No hay ningun beneficio adicional por escribir código de esta manera, aparte de que sea sintácticamente mas corto.</p>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<p>Una abreviatura para binding event listeners:</p>
+
+<pre class="brush: js"> document.addEventListener('click', function() false, true);
+</pre>
+
+<p>Usando esta notación con algunas de las funciones array desde JavaScript 1.6:</p>
+
+<pre class="brush: js">elems.some(function(elem) elem.type == 'text');
+</pre>
+
+<h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
+
+<div class="hidden">La tabla de compatibilidad en este pagina es generada desde una estructura de datos. Si le gustaria contribuir a la data, por favor valide esto <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> y envienos una solicitud de extracción.</div>
+
+<p>{{Compat("javascript.operators.expression_closures")}}</p>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{jsxref("Functions_and_function_scope", "Functions and function scope")}}</li>
+ <li>{{jsxref("Function")}}</li>
+ <li>{{jsxref("Statements/function", "function statement")}}</li>
+ <li>{{jsxref("Operators/function", "function expression")}}</li>
+ <li>{{jsxref("Statements/function*", "function* statement")}}</li>
+ <li>{{jsxref("Operators/function*", "function* expression")}}</li>
+ <li>{{jsxref("GeneratorFunction")}}</li>
+</ul>

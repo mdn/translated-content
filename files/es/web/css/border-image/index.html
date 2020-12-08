@@ -1,0 +1,199 @@
+---
+title: border-image
+slug: Web/CSS/border-image
+tags:
+  - CSS
+  - CSS Borders
+  - CSS Property
+  - Reference
+translation_of: Web/CSS/border-image
+---
+<div>{{CSSRef("CSS Borders")}}</div>
+
+<h2 id="Resumen">Resumen</h2>
+
+<p>La propiedad de CSS   <code>border-image</code> permite utilizar una imágen para definir los bordes de los elementos. Esto hace que dibujarlos sea más simple y elimina la necesidad de utilizar muchas cajas en algunos casos.</p>
+
+<p>La propiedad <code>border-image</code> es usada en lugar de la sentencia {{cssxref("border-style")}}. Por eso es muy importante tener en cuenta el valor dado por la sentencia {{cssxref("border-image-source")}}, que se puede establecer ya sea por la propiedad <code>border-image-source</code> o la abreviatura <code>border-image</code>, en caso de que su valor sea nulo (none), o si la imágen no se puede visualizar, se utilizarán los estilos de borde.</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="syntaxbox"><a href="/en-US/docs/CSS/Value_definition_syntax" title="CSS/Value_definition_syntax">Etiquetado formal</a>: {{csssyntax("border-image")}}</pre>
+
+<h3 id="Valores">Valores</h3>
+
+<p>A continuación vea las respectivas propiedades para los diferentes valores.</p>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<h3 id="Bitmap_repeated_(repeat)">Bitmap repeated (repeat)</h3>
+
+<p>La imágen es cortada para rellenar el area del borde, repitiendose si es necesario.</p>
+
+<pre class="brush:css">.example {
+  border: 30px solid transparent;
+  -moz-border-image:url("/files/4127/border.png") 30 30 repeat; /* Old firefox */
+  -webkit-border-image:url("/files/4127/border.png") 30 30 repeat; /* Safari */
+  -o-border-image:url("/files/4127/border.png") 30 30 repeat; /* Opera */
+  border-image:url("/files/4127/border.png") 30 30 repeat;
+}
+</pre>
+
+<p>Resultado:<br>
+ <img alt="border image repeat demo" src="/files/4129/repeat.png" style="height: 118px; width: 349px;"></p>
+
+<h3 id="Bitmap_repeated_(round)">Bitmap repeated (round)</h3>
+
+<p>La opción 'round' es una variación de la opción 'repeat', la cual distribuye las partes de tal manera que los extremos se conecten bién.</p>
+
+<pre class="brush: css">.example {
+  border: 30px solid transparent;
+  -moz-border-image:url("/files/4127/border.png") 30 30 round; /* Old firefox */
+  -webkit-border-image:url("/files/4127/border.png") 30 30 round; /* Safari */
+  -o-border-image:url("/files/4127/border.png") 30 30 round; /* Opera */
+  border-image:url("/files/4127/border.png") 30 30 round;
+}</pre>
+
+<p>Resultado:<br>
+ <img alt="border image round demo" src="/files/4131/round.png" style="height: 155px; width: 349px;"></p>
+
+<h3 id="Bitmap_stretched">Bitmap stretched</h3>
+
+<p>La opción 'stretch' estira la imágen para rellenar todo el borde del área</p>
+
+<pre class="brush:css">.example {
+  border: 30px solid transparent;
+  -moz-border-image:url("/files/4127/border.png") 30 30 stretch; /* Old firefox */
+  -webkit-border-image:url("/files/4127/border.png") 30 30 stretch; /* Safari */
+  -o-border-image:url("/files/4127/border.png") 30 30 stretch; /* Opera */
+  border-image:url("/files/4127/border.png") 30 30 stretch;
+}</pre>
+
+<p>Resultado:<br>
+ <img alt="border image stretch demo" src="/files/4133/stretch.png" style="height: 118px; width: 349px;"></p>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Backgrounds', '#border-image', 'border-image')}}</td>
+   <td>{{Spec2('CSS3 Backgrounds')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Firefox (Gecko)</th>
+   <th>Chrome</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>
+    <p>{{CompatGeckoDesktop("1.9.1")}}{{property_prefix("-moz")}} [1]</p>
+
+    <p>Without prefix since {{CompatGeckoDesktop("15")}}</p>
+   </td>
+   <td>
+    <p>7.0{{property_prefix("-webkit")}}</p>
+
+    <p>Without prefix since 16.0</p>
+   </td>
+   <td>
+    <p><span style="line-height: 1.5;">11</span></p>
+   </td>
+   <td>
+    <p>10.5 / 11.0{{property_prefix("-o")}} [2]</p>
+
+    <p>Without prefix since 15.0</p>
+   </td>
+   <td>
+    <p>3.0{{property_prefix("-webkit")}}</p>
+
+    <p>Without prefix since 6.0</p>
+   </td>
+  </tr>
+  <tr>
+   <td>optional <code>&lt;border-image-slice&gt;</code></td>
+   <td>{{CompatGeckoDesktop("15")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>fill</code> keyword</td>
+   <td>{{CompatGeckoDesktop("15")}}</td>
+   <td>Yes</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>Yes (6)</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>iOS Safari</th>
+   <th>Opera Mini</th>
+   <th>Opera Mobile</th>
+   <th>Android Browser</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>
+    <p>3.2{{property_prefix("-webkit")}}</p>
+
+    <p>Without prefix since {{CompatGeckoMobile("15")}}</p>
+   </td>
+   <td>{{CompatNo}}</td>
+   <td>11.0{{property_prefix("-o")}}</td>
+   <td>2.1{{property_prefix("-webkit")}}</td>
+  </tr>
+  <tr>
+   <td>optional <code>&lt;border-image-slice&gt;</code></td>
+   <td>{{CompatGeckoMobile("15")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>fill</code> keyword</td>
+   <td>{{CompatGeckoMobile("15")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>Yes(18)</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<ul>
+ <li>[1] An earlier version of the specification was implemented, prefixed, in Gecko versions prior to 15.</li>
+ <li>[2] For Opera, the prefixed property was added <em>after</em> the non-prefixed.</li>
+</ul>

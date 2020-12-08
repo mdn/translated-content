@@ -1,0 +1,83 @@
+---
+title: XPCOM
+slug: Mozilla/XPCOM/XPCOM
+tags:
+  - Todas_las_Categorías
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM
+---
+<div class="callout-box">
+  <strong>Introducción a XPCOM (en)</strong><br>
+  <p>Tutorial en cinco partes de <a class="external" href="http://www-128.ibm.com/developerworks">IBM developer Works</a>: <a class="external" href="http://www-128.ibm.com/developerworks/webservices/library/co-xpcom.html">Parte I</a>, <a class="external" href="http://www-128.ibm.com/developerworks/webservices/library/co-xpcom2.html">Parte II</a>, <a class="external" href="http://www-128.ibm.com/developerworks/webservices/library/co-xpcom3.html">Parte III</a>, <a class="external" href="http://www-128.ibm.com/developerworks/webservices/library/co-xpcom4/index.html">Parte IV</a>, <a class="external" href="http://www-128.ibm.com/developerworks/webservices/library/co-xpcom5.html">Parte V</a></p>
+</div>
+<div>
+  <strong> XPCOM </strong>(cross platform component object model) es un COM multi-plataforma, similar a Microsoft COM. Gracias a sus múltiples "<a href="https://developer.mozilla.org/en-US/docs/XPCOM/Language_Bindings">language bindings</a>", los componentes XPCOM pueden ser usados e implementados no sólo en C/C<sup>++</sup>, sino también en diversos lenguajes tales como JavaScript, Java y Python. La definición de interfaces en XPCOM ha desarrollado su propio dialecto IDL, el <a href="https://developer.mozilla.org/en-US/docs/XPIDL">XPIDL</a>.</div>
+<div>
+   </div>
+<div>
+   Así mismo, XPCOM proporciona un conjunto básico de componentes; por ejemplo, las estructuras básicas: cadenas, matrices, etc. La mayoría de los componentes XPCOM no forman parte de este conjunto básico sino que son proporcionados por otras partes de la plataforma (p.e. <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko?redirectlocale=en-US&amp;redirectslug=Gecko">Gecko</a> o <a href="https://developer.mozilla.org/en-US/docs/Necko">Necko</a>), por una aplicación o por una extensión.</div>
+<p> </p>
+<table class="topicpage-table">
+  <tbody>
+    <tr>
+      <td>
+        <h4 id="Documentaci.C3.B3n" name="Documentaci.C3.B3n"><a href="/Special:Tags?tag=XPCOM&amp;language=es" title="Special:Tags?tag=XPCOM&amp;language=es">Documentación</a></h4>
+        <dl>
+          <dt>
+            <a href="/es/Tutorial_de_XUL/Interfaces_XPCOM" title="es/Tutorial_de_XUL/Interfaces_XPCOM">Intrefaces XPCOM</a></dt>
+          <dd>
+            <small>En esta sección, vamos a echar un pequeño vistazo a XPCOM (Cross-platform Component Object Model o Modelo de Objeto de Componentes Multiplataforma), el sistema de objetos que utiliza Mozilla.</small></dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/en/Creating_XPCOM_Components" title="en/Creating_XPCOM_Components">Creating XPCOM Components (en)</a></dt>
+          <dd>
+            <small>Este manual proporciona informacion sobre como contruir un componente XPCOM que controle el comportamiento de navegación.</small></dd>
+        </dl>
+        <dl>
+          <dt>
+            <a href="/es/Cómo_crear_un_componente_XPCOM_en_JavaScript" title="es/Cómo_crear_un_componente_XPCOM_en_JavaScript">Cómo crear un componente XPCOM en JavaScript</a></dt>
+          <dd>
+            <small>This is a "Hello World" tutorial for creating an XPCOM component in JavaScript. This tutorial does not describe how and why XPCOM works the way it does, or what every bit of the example code does.</small></dd>
+        </dl>
+        <dl>
+          <dt>
+            <a class="external" href="http://www.mozilla.org/scriptable/avoiding-leaks.html">Usando XPCOM en JavaScript sin perdidas (en)</a></dt>
+          <dd>
+            <small>Usando XPCOM en JavaScript (tambien llamado XPConnect) es una forma donde la adminsitracion de memoria no es la mas indicada. Apesar de esto, es facil escribir codigo en JavaScript que tenga perdidas, ya que algunos objetos con los que tratas en el fondo estan includos en la referencia.</small></dd>
+        </dl>
+        <p><span class="comment">; <a href="/es/XPCOM:Cadenas" title="es/XPCOM:Cadenas"> XPCOM</a>: &lt;small&gt;Referencia sobre las cadenas en XPCOM.&lt;/small&gt;  ; <a href="/es/XPCOM_Glue" title="es/XPCOM Glue">XPCOM Glue</a>&lt;br /&gt; : &lt;small&gt;El XPCOM Glue permite usar las funciones y clases de la utilidad XPCOM, sin tener dependencia de partes del XPCOM (xpcom_core.{dll,so,dylib}).&lt;/small&gt;</span> <span class="alllinks"><a href="/Special:Tags?tag=XPCOM&amp;language=es" title="Special:Tags?tag=XPCOM&amp;language=es">Ver todos...</a></span></p>
+      </td>
+      <td>
+        <h4 id="Comunidad" name="Comunidad">Comunidad</h4>
+        <ul>
+          <li>En MozillaES
+            <ul>
+              <li><a class="external" href="http://www.mozillaes.org/index.php?option=com_forum&amp;Itemid=122&amp;page=viewforum&amp;f=15">Desarrollo</a> Mozilla y <a class="external" href="http://www.mozillaes.org/index.php?option=com_forum&amp;Itemid=122&amp;page=viewforum&amp;f=2">herramientas</a>.</li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li><a class="external" href="http://torresburriel.com/mailman/listinfo/xul_torresburriel.com">Lista sobre XUL en español</a></li>
+        </ul>
+        <ul>
+          <li>Los foros de Mozilla en inglés.</li>
+        </ul>
+        <p></p><ul>
+  <li><a href="https://lists.mozilla.org/listinfo/dev-tech-xpcom"> como lista de correo</a></li>
+
+
+  <li><a href="http://groups.google.com/group/mozilla.dev.tech.xpcom"> como grupo de noticias</a></li>
+  <li><a href="http://groups.google.com/group/mozilla.dev.tech.xpcom/feeds"> como RSS</a></li>
+</ul><p></p>
+        <p> </p>
+        <h4 id="Temas_relacionados" name="Temas_relacionados">Temas relacionados</h4>
+        <dl>
+          <dd>
+            <a href="/es/XUL" title="es/XUL">XUL</a>, <a href="/es/JavaXPCOM" title="es/JavaXPCOM">JavaXPCOM</a>, <a href="/es/PyXPCOM" title="es/PyXPCOM">PyXPCOM</a>, <a href="/es/XPConnect" title="es/XPConnect">XPConnect</a>, <a href="/es/JavaScript" title="es/JavaScript">JavaScript</a>.</dd>
+        </dl>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p></p>

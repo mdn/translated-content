@@ -1,0 +1,26 @@
+---
+title: XPIDL
+slug: Mozilla/Tech/XPIDL
+tags:
+  - Todas_las_Categorías
+  - XPCOM
+  - xpidl
+translation_of: Mozilla/Tech/XPIDL
+---
+<p>
+</p><p><b>XPIDL</b> es un lenguaje de descripción de interface usado para especificar clases en la interface <a href="es/XPCOM">XPCOM</a>.
+</p><p>Los lenguajes de descripción de interface (IDL, por Interface Description Languages) son usados para describir interfaces independientemente del lenguaje y de la máquina. Los IDLs permiten definir interfaces que pueden luego ser procesadas por herramientas para autogenerar especificaciones de interface dependientes del lenguaje.
+</p><p>Una de estas herramientas es <a href="es/XPIDL/xpidl">xpidl</a>, que es usada para generar archivos de encabezado para C++ (.h), información 'typelib', y mucho más.
+</p>
+<h2 id="Escribiendo_archivos_de_interfaz_XPIDL">Escribiendo archivos de interfaz XPIDL</h2>
+<p>XPIDL se asemeja bastante a <a class="external" href="http://www.omg.org/gettingstarted/omg_idl.htm">OMG IDL</a>, con sintaxis extendida para manejar IIDs y tipos adicionales. Hay algunos ejemplos en la <a class="external" href="http://lxr.mozilla.org/mozilla/source/xpcom/base">xpcom/base</a> y en los directorios <a class="external" href="http://lxr.mozilla.org/mozilla/source/xpcom/ds">xpcom/ds</a> del árbol Mozilla.
+</p>
+<ul><li> <a class="external" href="http://www.mozilla.org/scriptable/xpidl/syntax.html">XPIDL syntax</a> (Desactualizado)
+</li><li> <a href="es/XPIDL/Sintaxis">XPIDL:Sintaxis</a> (XPIDL <a class="external" href="http://en.wikipedia.org/wiki/Extended_Backus-Naur_form">EBNF</a>)
+</li><li> <a class="external" href="http://www.mozilla.org/scriptable/xpidl/idl-authors-guide/index.html">XPIDL Author's Guide</a> (Actualizado en su mayoría)
+</li></ul>
+<h2 id="Recursos">Recursos</h2>
+<ul><li> <a class="external" href="http://www.mozilla.org/scriptable/xpidl/notes/">Algunas notas en desórden</a>, que incluyen una <a class="external" href="http://www.mozilla.org/scriptable/xpidl/notes/keywords.txt">lista de palabras clave (keywords)</a>
+</li><li> <a href="es/XPIDL/xpidl">xpidl</a> es una herramienta para generar encabezados de C++, interfaces de Java, typelibs <a href="es/XPConnect">XPConnect</a>, y documentación HTML desde los archivos XPIDL
+</li></ul>
+{{ languages( { "fr": "fr/XPIDL", "ja": "ja/XPIDL", "en": "en/XPIDL" } ) }}

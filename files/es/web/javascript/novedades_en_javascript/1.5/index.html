@@ -1,0 +1,47 @@
+---
+title: Novedades en Javascript 1.5
+slug: Web/JavaScript/Novedades_en_JavaScript/1.5
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.5
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>JavaScript versión 1.5 provee las siguientes nuevas características y mejoras:</p>
+
+<h2 id="Errores_en_tiempo_de_ejecución">Errores en tiempo de ejecución</h2>
+
+<p>Los errores en tiempo de ejecución son ahora reportados como <a href="/es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones" title="es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones">excepciones</a>.</p>
+
+<h2 id="Mejoras_para_el_formato_de_números"><strong>Mejoras para el formato de números</strong></h2>
+
+<p>El formato de números ha sido mejorado para incluir los métodos <code>Number.prototype.toExponential</code>, <code>Number.prototype.toFixed</code> y <code>Number.prototype.toPrecision</code>. Véase la página <a href="/es/Guía_JavaScript_1.5/Objetos_base_predefinidos/Objeto_Number" title="es/Guía_JavaScript_1.5/Objetos_base_predefinidos/Objeto_Number">Objeto <em>Number</em></a>.</p>
+
+<h2 id="Mejoras_en_expresiones_regulares"><strong>Mejoras en expresiones regulares </strong></h2>
+
+<p>Las siguientes mejoras para expresiones regulares han sido añadidas:</p>
+
+<ul>
+ <li>Cuantificadores: — +, *, ? y {} —ahora pueden seguirse por un <code>?</code> para forzarlos ha no ser avaros {{ mediawiki.external('greedy') }}. Vea la entrada <strong>?</strong> en la página <a href="/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales" title="es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales">Escribir un patrón de expresiones regulares</a>.</li>
+ <li>Paréntesis sin captura: <code>(?:x)</code>:pueden ser usados en vez de paréntesis con captura <code>(x)</code>. Cuando son utilizados, las sub expresiones de compatibilidad {{ mediawiki.external('match') }} no están disponibles como referencias de respaldo {{ mediawiki.external('back-references') }}. Vea la entrada <strong>(?:x)</strong> en la página: <a href="/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales" title="es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales">Escribir un patrón de expresiones regulares</a>.</li>
+ <li>Aserciones predictivas {{ mediawiki.external('lookahead assertions') }} positivas y negativas son soportadas. Las dos aseguran una comparación dependiente de lo que sigue en la cadena de texto que está siendo cotejada. Ver las entradas para <code>x(?=y) y x(?!y)</code> en la página: <a href="/es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales" title="es/Guía_JavaScript_1.5/Escribir_un_patrón_de_expresión_regular#Uso_de_caracteres_especiales">Escribir un patrón de expresiones regulares</a>.</li>
+ <li>La bandera {{ mediawiki.external('flag') }} m ha sido añadida para especificar que la expresión regular deberá cotejarse sobre múltiples líneas. Véase la página <a href="/es/Guía_JavaScript_1.5/Trabajar_con_expresiones_regulares/Ejecutar_una_busqueda_global,_discriminar_mayúsculas_y_minúsculas_y_considerar_entrada_multilínea" title="es/Guía_JavaScript_1.5/Trabajar_con_expresiones_regulares#Ejecutar_una_busqueda_global,_discriminar_mayúsculas_y_minúsculas_y_considerar_entrada_multilínea">Ejecutar una búsqueda global, discriminar mayúsculas y minúsculas y considerar entrada multilínea</a>.</li>
+</ul>
+
+<h2 id="Declaraciones_de_funciones_condicionales"><strong>Declaraciones de funciones condicionales</strong></h2>
+
+<p>Las funciones ahora pueden ser declaradas dentro de una cláusula if. Véase la página: <a href="/es/Guía_JavaScript_1.5/Definiendo_Funciones" title="es/Guía_JavaScript_1.5/Definiendo_Funciones">Definiendo Funciones</a>.</p>
+
+<h2 id="Expresiones_funcionales"><strong>Expresiones funcionales</strong></h2>
+
+<p>Las funciones ahora pueden ser declaradas dentro de una expresión. Véase la página: <a href="/es/Guía_JavaScript_1.5/Definiendo_Funciones" title="es/Guía_JavaScript_1.5/Definiendo_Funciones">Definiendo Funciones</a>.</p>
+
+<h2 id="Cláusulas_Catch_múltiples"><strong>Cláusulas Catch múltiples</strong></h2>
+
+<p>Las múltiples cláusulas Catch en una sentencia try...catch son soportadas. Véase la página: <a href="/es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones/try...catch" title="es/Guía_JavaScript_1.5/Sentencias_de_manejo_de_excepciones/try...catch"><em>El bloque catch</em></a>.</p>
+
+<h2 id="Obtenedores_y_Modificadores"><strong>Obtenedores y Modificadores</strong></h2>
+
+<p>Los editores de JavaScript ahora pueden añadir obtenedores {{ mediawiki.external('getters') }} y modificadores {{ mediawiki.external('setters') }} a sus objetos. Esta característica está disponible únicamente en la implementación C de JavaScript. Véase la página: <a href="/es/Guía_JavaScript_1.5/Crear_nuevos_objetos/Definiendo_las_funciones_get_y_set" title="es/Guía_JavaScript_1.5/Crear_nuevos_objetos/Definiendo_las_funciones_get_y_set">Definiendo obtenedores y modificadores</a>.</p>
+
+<h2 id="Constantes"><strong>Constantes</strong></h2>
+
+<p>Constantes definidas como sólo de lectura son soportadas. Esta característica está disponible únicamente en la implementación C de JavaScript. Véase la página: <a href="/es/Guía_JavaScript_1.5/Constantes" title="es/Guía_JavaScript_1.5/Constantes">Constantes</a>.</p>

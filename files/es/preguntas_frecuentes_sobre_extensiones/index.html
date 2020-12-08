@@ -1,0 +1,53 @@
+---
+title: Preguntas frecuentes sobre Extensiones
+slug: Preguntas_frecuentes_sobre_Extensiones
+tags:
+  - Complementos
+  - Todas_las_Categorías
+  - extensiones
+translation_of: Archive/Mozilla/Extension_Frequently_Asked_Questions
+---
+<p>Esta es una recopilación de respuestas breves a los problemas más frecuentes del desarrollo de <a href="/es/Extensiones" title="es/Extensiones">extensiones</a>. Están escritas pensando principalmente en Firefox, pero la mayoría de ellas- si no todas- son fácilmente aplicables a SeaMonkey, Thunderbird o cualesquiera de las demás aplicaciones.</p>
+<p>Si estás buscando còmo empezar a programar una extensión, prueba con el tutorial <a href="/es/Creando_una_extensi%C3%B3n" title="es/Creando_una_extensión">Creando una extensión</a> o <a class="external" href="http://kb.mozillazine.org/Getting_started_with_extension_development">Primeros pasos (en)</a>.</p>
+<p>Asegúrate de <a class="external" href="http://kb.mozillazine.org/Setting_up_extension_development_environment">configurar el entorno de desarrollo (en)</a> correctamente antes de empezar.</p>
+<h3 id="Depuraci.C3.B3n">Depuración</h3>
+<p>Deberías <a class="external" href="http://kb.mozillazine.org/Setting_up_extension_development_environment">configurar el entorno de desarrollo</a> antes de empezar a depurar tu extensión.</p>
+<h3 id=".C2.BFC.C3.B3mo_puedo_encontrar_los_errores_de_mi_c.C3.B3digo.3F">¿Cómo puedo encontrar los errores de mi código?</h3>
+<p>Después de <a class="external" href="http://kb.mozillazine.org/Setting_up_extension_development_environment">activar la opción <strong>javascript.options.showInConsole</strong> (poniéndola a <strong>true</strong>)</a>, podrás leer los errores en la consola de JavaScript. A pesar de su nombre, en esta consola se mostrarán todo tipo de errores (no solo de JavaScript).</p>
+<h3 id=".C2.BFC.C3.B3mo_puedo_monitorizar_qu.C3.A9_est.C3.A1_haciendo_mi_extensi.C3.B3n.3F">¿Cómo puedo monitorizar qué está haciendo mi extensión?</h3>
+<p>Puedes usar las funciones <a href="/es/DOM/window.alert" title="es/DOM/window.alert">alert()</a> o <a href="/es/DOM/window.dump" title="es/DOM/window.dump">dump()</a> o <a href="/es/NsIConsoleService" title="es/NsIConsoleService">nsIConsoleService</a>.</p>
+<h3 id=".C2.BFPor_qu.C3.A9_no_se_ejecuta_correctamente_mi_script.3F">¿Por qué no se ejecuta correctamente mi script?</h3>
+<p>Si tu script no hace lo que debiera, lo primero que debes hacer es comprobar  la consola de JavaScript (lee <a href="#.C2.BFC.C3.B3mo_puedo_encontrar_los_errores_de_mi_c.C3.B3digo.3F">más arriba</a>).</p>
+<p>Un error muy común es intentar acceder al DOM de una ventana antes de que haya terminado de cargarse. Esto ocurre si colocas el código de inicialización fuera de cualquier función (en el programa principal). La solución es usar un <em>listener</em> del evento <code>load</code> que retrase la ejecución de ese código hasta que la ventana haya terminado de cargarse:</p>
+<pre class="eval">function exampleBrowserStartup(event)
+{
+  // place your startup code here
+}
+window.addEventListener("load", exampleBrowserStartup, false);
+</pre>
+<h4 id="El_acceso_al_documento_de_la_p.C3.A1gina_web_no_funciona">El acceso al documento de la página web no funciona</h4>
+<p>Para acceder al documento de la página web en uso desde un browser.xul, debes usar <code>content.document</code>, en lugar de simplemente <code>document</code> (que es el documento de la ventana del propio navegador). Lee <a href="/es/Working_with_windows_in_chrome_code#Content_windows" title="es/Working_with_windows_in_chrome_code#Content_windows">Trabajando con ventanas en código chrome</a> para más información.</p>
+<p>Al mismo tiempo, la configuración por defecto de <a href="/es/XPCNativeWrapper" title="es/XPCNativeWrapper">XPCNativeWrapper</a> impide el acceso a objetos definidos por script en la página web y algunas otras cosas.</p>
+<h4 id="Tengo_un_error_parseando_el_XML.2C_y_el_fichero_parece_correcto">Tengo un error parseando el XML, y el fichero parece correcto</h4>
+<p>Un motivo muy frecuente de errores de parseo (resaltados en &lt;font color="red"&gt;rojo&lt;/font&gt; con texto como este: &lt;font color="red"&gt;-------------^&lt;/font&gt; subrayándolos) es la presencia en tu script de un carácter o valor de atributo que tiene un significado especial en XML. Por ejemplo:</p>
+<pre class="eval">&lt;button oncommand="window.open('<span>http://example.com/</span>q?param1=value<strong>&amp;param2</strong>=val2')"/&gt;
+</pre>
+<p>o</p>
+<pre class="eval">&lt;script&gt;function lesser(a,b) { return <strong>a &lt; b</strong> ? a : b; }&lt;/script&gt;
+</pre>
+<p>El problema puede resolverse de distintas formas:</p>
+<ol> <li>Escribir el caràcter con la representación apropiada en XML. (Por ejemplo: "&amp;" -&gt; "&amp;amp;", "&lt;" -&gt; "&amp;lt;")</li> <li>(En caso de tratarse de un nodo de texto, como un script) etiquetar el texto con CDATA: <pre>&lt;script&gt;&lt;![CDATA[
+   function lesser(a,b) {
+     return a &lt; b ? a : b;
+   }
+ ]]&gt;&lt;/script&gt;</pre> </li> <li>Colocar el script en un fichero separado, e incluirlo usando: <pre>&lt;script type="application/x-javascript" src="our.js"/&gt;</pre> </li>
+</ol>
+<h3 id="C.C3.B3digo_de_ejemplo">Código de ejemplo</h3>
+<p>La forma más sencilla de descubrir cómo codificar lo que necesitas, es buscar una extensión (o una parte del propio Mozilla) que lo haga y mirar su código. (Los fichero XPI y JAR están comprimidos en formato ZIP).</p>
+<p>También puedes encontrar alguna documentación. Busca en <a href="/Special:Tags?tag=Extensiones&amp;language=es" title="Special:Tags?tag=Extensiones&amp;language=es">Artículos sobre extensiones en MDC</a> y <a class="external" href="http://kb.mozillazine.org/Category:Example_code">Página de ejemplos de código en MozillaZine</a>.</p>
+<h3 id=".C2.BFD.C3.B3nde_puedo_encontrar_m.C3.A1s_ayuda.3F">¿Dónde puedo encontrar más ayuda?</h3>
+<p>Puedes buscar más información en la <a href="/es/Extensiones/Comunidad" title="es/Extensiones/Comunidad">página de la Comunidad</a> y en la <a href="/Special:Tags?tag=Extensiones:Herramientas&amp;language=es" title="Special:Tags?tag=Extensiones:Herramientas&amp;language=es">categoría Herramientas</a>.</p>
+<p>Antes de pedir ayuda, asegúrate de configurar las <a href="#Depuraci.C3.B3n">preferencias de depuración</a> y <a href="#.C2.BFC.C3.B3mo_puedo_encontrar_los_errores_de_mi_c.C3.B3digo.3F">comprobar la consola de JavaScript</a>. Tampoco olvides hacer al menos una búsqueda por internet antes de preguntar, y... ¡leer esta lista de preguntas!</p>
+<p> </p>
+
+<p>{{ languages( { "de": "de/Erweiterungen_FAQ", "en": "en/Extension_Frequently_Asked_Questions", "fr": "fr/Foire_aux_questions_sur_les_extensions", "it": "it/Domande_frequenti_sulle_Estensioni", "ja": "ja/Extension_Frequently_Asked_Questions", "pl": "pl/Cz\u0119sto_zadawane_pytania_dotycz\u0105ce_rozszerze\u0144", "ru": "ru/FAQ_\u043f\u043e_\u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043d\u0438\u044f\u043c" } ) }}</p>

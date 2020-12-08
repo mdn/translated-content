@@ -1,0 +1,48 @@
+---
+title: navigator.mozSocial
+slug: Web/API/Navigator/mozSocial
+translation_of: Archive/mozSocial
+---
+<p>{{non-standard_header()}}</p>
+<p>{{fx_minversion_header("17.0")}}</p>
+<p>{{ ApiRef() }}</p>
+<p>El objeto <code>MozSocial</code> , regresado por la propiedad <code>navigator.mozSocial</code> , esta disponible dentro del tablero del proveedor de medios de comunicación para proporcionar la funcionalidad que pueda necesitar.</p>
+<div class="note">
+ <p><strong>Nota:</strong> Aunque mozilla espera enviar eventualmente este API para su  estandarización, aun no se ha hecho.</p>
+</div>
+<h2 id="Atributos">Atributos</h2>
+<dl>
+ <dt>
+  {{domxref("MozSocial.isVisible")}}</dt>
+ <dd>
+  Regresa un valor Booleano; el resultado es <code>true</code> si el contenido es visible, de otra manera es <code>false</code>.</dd>
+</dl>
+<h2 id="Métodos">Métodos</h2>
+<dl>
+ <dt>
+  {{domxref("MozSocial.closePanel()")}}</dt>
+ <dd>
+  Cierra el tablero flotante abierto actualmente.</dd>
+ <dt>
+  {{domxref("MozSocial.getAttention()")}}</dt>
+ <dd>
+  Realiza algunas acciones diseñadas para obtener la atención del usuario; el mismo comportamiento puede variar de plataforma a plataforma. Esto puede mostrar un efecto visual, reproducir una notificación audible, parpadear la pantalla, o utilizar alguna otra técnica.</dd>
+ <dt>
+  {{ domxref("MozSocial.getWorker()") }}</dt>
+ <dd>
+  Regresa una referencia al trabajador de servicios; una vez el  contenido tiene esta referencia, puede llamar a su método <code>postMessage()</code> para comunicarse con el servicio.</dd>
+ <dt>
+  {{domxref("MozSocial.openChatWindow()")}}</dt>
+ <dd>
+  Abre una ventana de chat que es anclada al pie de la ventana del navegador. Se espera que cada ventana de chat sea un chat singular, pero su funcionalidad va a variar dependiento del proveedor.</dd>
+ <dt>
+  {{domxref("MozSocial.openPanel()")}}</dt>
+ <dd>
+  Abre un tablero flotante adjunto a la barra lateral en una vertical dada para compensar. Esto puede ser, por ejemplo, utilizado para mostrar la conversación actual correspondiente a una notificación en la barra lateral.</dd>
+ <dd>
+   </dd>
+ <dt>
+  Vease Tambien</dt>
+ <dd>
+  Social API</dd>
+</dl>

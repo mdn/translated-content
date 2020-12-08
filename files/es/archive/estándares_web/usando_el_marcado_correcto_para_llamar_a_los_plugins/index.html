@@ -1,0 +1,268 @@
+---
+title: Usando el marcado correcto para llamar a los plugins
+slug: Archive/Estándares_Web/Usando_el_marcado_correcto_para_llamar_a_los_plugins
+tags:
+  - HTML
+  - Plugins
+  - Todas_las_Categorías
+translation_of: Archive/Web_Standards/Using_the_Right_Markup_to_Invoke_Plugins
+---
+<p>Este artículo habla de cómo llamar correctamente a un plugin usando HTML. Habla de los elementos object y embed y muestra detalles sobre cómo llamar a aplicaciones Java con HTML en aplicaciones web.</p>
+
+<h3 id="El_elemento_.3Cobject.3E:_Est.C3.A1ndares_W3C_y_los_navegadores" name="El_elemento_.3Cobject.3E:_Est.C3.A1ndares_W3C_y_los_navegadores">El elemento &lt;object&gt;: Estándares W3C y los navegadores</h3>
+
+<p>El elemento object es parte de la especificación HTML 4.01, y es el mecanismo recomendado para llamar a los plugins. Su uso esta condicionado a unas pocas advertencias de las que esta sección habla.</p>
+
+<p>Tradicionalmente, el elemento object ha sido usando de forma diferente por Microsoft Internet Explorer y los navegadores basados en Mozilla como Netscape 7. En IE, el elemento object es usado para llamar a un plugin creado con la arquitectura ActiveX. Aquí vemos un ejemplo de este tipo de uso por parte de IE:</p>
+
+<pre>&lt;!-- IE ONLY CODE --&gt;
+&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"
+width="366" height="142" id="myFlash"&gt;
+    &lt;param name="movie" value="javascript-to-flash.swf" /&gt;
+    &lt;param name="quality" value="high" /&gt;
+    &lt;param name="swliveconnect" value="true" /&gt;
+&lt;/object&gt;
+</pre>
+
+<p>En el ejemplo de arriba, el atributo <code>classid</code> que va junto al elemento object apunta a un URN "clsid:" seguido de un único identificador de un control ActiveX (en el ejemplo de arriba, la cadena que comienza por "D27..."). Esto es, de hecho, el identificador único del plugin de Macromedia's Flash, y los desarrolladores se supone que conocen esos identificadores únicos para llamar al componente de su elección. El atributo <code>codebase</code> usado arriba apunta a la localización donde está el archivo CAB que contiene el control del ActiveX. En este contexto, el atributo codebase se usa como <strong>mecanismo de obtención</strong> (es decir, una forma de obtener el controlador si no esta presente). Si el control de ActiveX de Flash no está instalado, IE irá entonces a la URL indicada en el atributo codebase y obtendrá el control de ActiveX. Los elementos <code>param</code> adicionales (que son "hijos" del elemento object) especifican los parámetros de configuración para el plugin de Flash. Por ejemplo, <code>param name="movie"</code> indica al plugin de Flash la localización del archivo SWF para empezar a reproducirlo.</p>
+
+<p>Con la salida de Netscape 7.1, este tipo de uso de elementos object de ActiveX está soportado con el uso del Microsoft® Windows Media Player. Sólo el Windows Media Player está soportado como control de ActiveX en Netscape 7.1. Los detalles se indican en <a href="es/Windows_Media_en_Netscape">otro artículo</a>.</p>
+
+<p>Navegadores como Netscape 7 no renderizarán el plugin Flash si se usa el marcado de arriba, porque Netscape 7 no soporta llamadas a componentes ActiveX o basados en ActiveX, con la excepción del Windows Media Player en Netscape 7.1. Los navegadores basados en Mozilla soportan la arquitectura de plugin de Netscape, los cuales no estan basados en COM como el ActiveX (y por ello, no son llamados vía identificador único) sino basados en el tipo MIME. Los navegadores basados en Mozilla suportan el uso del elemento object junto con el tipo MIME. A continuación se muestra un ejemplo de este uso, una vez más para el plugin de Macromedia Flash:</p>
+
+<pre>&lt;object type="application/x-shockwave-flash" data="javascript-to-flash.swf"
+width="366" height="142" id="myFlash"&gt;
+    &lt;param name="movie" value="javascript-to-flash.swf" /&gt;
+    &lt;param name="quality" value="high" /&gt;
+    &lt;param name="swliveconnect" value="true" /&gt;
+    &lt;p&gt;You need Flash -- get the latest version from
+    &lt;a href= "http://www.macromedia.com/downloads/"&gt;here.&lt;/a&gt;&lt;/p&gt;
+&lt;/object&gt;
+</pre>
+
+<p>En el ejemplo anterior, <code>application/x-shockwave-flash</code> es el tipo MIME de Flash e invocará la arquitectura Flash específica de Netscape en navegadores basados en Mozilla. Los punteros de atributos que apuntan al fichero SWF a ejecutar, y los parámetros de configuración (los elementos <code>param</code>) son ambos usados de una forma consistente por IE y por los navegadores basados en Mozilla como Netscape 7. De hecho, lo visto anteriormente también funcionará para IE, que interpreta las invocaciones de tipo MIME para ciertos tipos MIME como Flash<em>además</em> de las invocaciones del estilo ActiveX <code>classid</code>.</p>
+
+<p>Debido a que el uso de los tipos MIME para Flash funcionará tanto para IE como para Netscape 7, se puede usar el código anterior el plugin de Flash tanto en IE como en Netscape 7. Sin embargo, hay algunas advertencias que los desarrolladores deben tener en cuenta cuando usen el elemento <code>object</code> en navegadores basados en Mozilla como es Netscape 7 y en IE:</p>
+
+<h4 id="Advertencias" name="Advertencias">Advertencias</h4>
+
+<ul>
+ <li>Si se usa un único elemento <code>object</code> para ambos navegadores (como en el ejemplo anterior), <strong>no será posible facilitar un<em>mecanismo de obtención</em> multiplataforma para descargas en flujo</strong>. No se puede usar el atributo <code>codebase</code> para enlazarlo a un fichero CAB firmado para el componente ActiveX ya que no funcionará en los navegadores basados en Mozilla tales como Netscape 7. Y lo que es más importante, el uso que IE hace del atributo <code>codebase</code> como mecanismo de obtención en sí no es estrictamente correcto conforme la especificación HTML 4.01, la cual dice que el atributo <code>codebase</code> debería ser usado para cualificar URNs referenciadas por los atributos <code>data</code>, <code>archivo</code> y <code>classid</code>. Los futuros navegadores de Netscape basados en el código fuente de Mozilla permitirán el uso del elemento especial <code>param</code> para especificar de dónde obtener los plugins que no estén instalados, pero esta característica no está disponible en Netscape 7 sino que está siendo discutida en Mozilla <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=167601" title='FIXED: [object] Support &amp;amp;lt;param name="PLUGINURL" ...>'>error 167601</a>.</li>
+</ul>
+
+<ul>
+ <li><strong>IE no muestra correctamente los elementos <code>object</code> anidados de acuerdo a la especificación HTML 4.01</strong>. Conforme a la especificación, se pueden anidar elementos y los navegadores deberían detenerse cuando encuentren un elemento que puedan visualizar y sino, seguir buscando en los niveles más internos hasta encontrar alguno. IE lo muestra todo, como si estuviera puesto en fila y no anidado. De este modo IE en el siguiente ejemplo, en lugar de pararse en el control ActiveX mostrará la animación dos veces ya que reconoce el tipo MIME para Flash:</li>
+</ul>
+
+<pre>&lt;!-- Usage Will Not Work As Intended --&gt;
+&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"
+width="366" height="142" id="myFlash"&gt;
+    &lt;param name="movie" value="javascript-to-flash.swf" /&gt;
+    &lt;param name="quality" value="high" /&gt;
+    &lt;param name="swliveconnect" value="true" /&gt;
+
+	&lt;object type="application/x-shockwave-flash" data="javascript-to-flash.swf"
+	 width="366" height="142" id="myFlashNSCP"&gt;
+		&lt;param name="movie" value="javascript-to-flash.swf" /&gt;
+    		&lt;param name="quality" value="high" /&gt;
+    		&lt;param name="swliveconnect" value="true" /&gt;
+		&lt;p&gt;You need Flash -- get the latest version from
+		 &lt;a href="http://www.macromedia.com/downloads/"&gt;
+		here.&lt;/a&gt;&lt;/p&gt;
+	&lt;/object&gt;
+
+&lt;/object&gt;
+</pre>
+
+<ul>
+ <li><strong>Los diseñadores Web tienen que especificar un<em>mecanismo de obtención</em> en los navegadores basados en Mozilla (el navegador no descargará automáticamente los plugins no instalados si no se especifica de dónde descargarlos a través del atributo <code>codebase</code></strong>. Si no se especifica ningún atributo <code>codebase</code> y el plugin no está instalado, el navegador mostrará sólo el texto alternativo más interno. Sino, se intentará descargar el plugin que falta a través del servicio Netscape Plugin Finder. Este comportamiento es correcto de acuerdo a la especificación HTML 4.01 aunque obliga a los diseñadores web a especificar diligentemente<em>mecanismos de obtención</em>. Como mínimo, los diseñadores Web tendrán que anidar un texto alternativo dentro de sus elementos <code>&lt;object&gt;</code> diciéndole a los usuarios dónde pueden obtener el componente que falta. Añadir una conveniente capa adicional de la forma de recuperación automática es el tema de una <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=180411" title="Plugin Finder Service is not invoked for OBJECT element">error 180411</a> en el código abierto de Mozilla.</li>
+</ul>
+
+<ul>
+ <li><strong>Algunos plugins no entienden parte de los elementos <code>param</code> que su documentación sugiere deberían ser configurados en los navegadores basados en Mozilla.</strong> Un ejemplo son las versiones del reproductor de Macromedia Flash hasta Flash Player 6 r.47, el cual no comprende el elemento parámetro <code>&lt;param name="movie" value="animation.swf"&gt;</code>, que se supone dice al reproductor Flash qué animación debería empezar a reproducir. Para que funcione, se anima a los desarrolladores a que usen el atributo <code>data</code> del elemento <code>object</code>: <code>&lt;object type="application/x-shockwave-flash" data="animation.swf"..../&gt;</code>. El hecho de que el reproductor Flash no comprenda este <code>param</code> es un fallo de Macromedia Flash Player del que se habla en la <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=180378" title='macromedia.com - Flash ought to support &amp;amp;lt;param name="movie..."> in addition to data attribute'>error 180378</a>.</li>
+</ul>
+
+<h4 id="Recomendaciones" name="Recomendaciones">Recomendaciones</h4>
+
+<p>Para superar el inconveniente de no poder anidar elementos <code>object</code> en IE y de no existir el modo de usar simplemente un elemento <code>object</code> de modo multiplataforma (con mecanismos de obtención específicos de la arquitectura), la mejor solución es escribir elementos <code>object</code> dinámicamente basándose en la arquitectura. Por ejemplo, en los navegadores que soportan ActiveX como IE, creando un elemento con un atributo <code>classid</code> y en navegadores que soportan la arquitectura de plugins de Netscape, usando un tipo MIME. A continuación se muestra un ejemplo en JavaScript que ilustra esto:</p>
+
+<pre>if (window.ActiveXObject)
+{
+
+// browser supports ActiveX
+// Create object element with
+// download URL for IE OCX
+
+document.write('&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"');
+document.write(' codebase="http://download.macromedia.com');
+document.write('/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"');
+document.write(' width="366" height="142" id="myFlash"&gt;');
+document.write(' &lt;param name="movie" value="javascript-to-flash.swf" /&gt;');
+document.write(' &lt;param name="quality" value="high" /&gt;');
+document.write(' &lt;param name="swliveconnect" value="true" /&gt;');
+document.write('&lt;\/object&gt;');
+
+}
+
+else
+{
+
+// browser supports Netscape Plugin API
+
+document.write('&lt;object id="myFlash" data="javascript-to-flash.swf"');
+document.write(' type="application/x-shockwave-flash"');
+document.write(' width="366" height="142"&gt;');
+document.write('&lt;param name="movie" value="javascript-to-flash.swf" /&gt;');
+document.write('&lt;param name="quality" value="high" /&gt;');
+document.write('&lt;param name="swliveconnect" value="true" /&gt;');
+document.write('&lt;p&gt;You need Flash for this.');
+document.write(' Get the latest version from');
+document.write(' &lt;a href="http://www.macromedia.com/downloads"&gt;here&lt;\/a&gt;.');
+document.write('&lt;\/p&gt;');
+document.write('&lt;\/object&gt;');
+
+}
+</pre>
+
+<p>Véase también: <a class="external" href="http://www.alistapart.com/articles/flashsatay/">Flash Satay</a></p>
+
+<h4 id="El_elemento_object_y_Java" name="El_elemento_object_y_Java">El elemento object y Java</h4>
+
+<p>Los navegadores basados en Mozilla como Netscape 6.x, Netscape 7 y CompuServe 7 vienen con el <a class="external" href="http://java.sun.com/j2se/downloads.html">plugin para Java que Sun proporciona</a>. Los usuarios que instalen Netscape 6.x o Netscape 7 tienen la opción de instalar o no Java. A diferencia de Netscape Communicator 4.x, Netscape 6.x y 7 que no tienen por defecto una máquina virtual Java -- ellos dependen del plugin de Sun. Durante la época de Netscape Communicator 4.x, Netscape Communications solía desarrollar una máquina virtual Java que soportaba Java 1.5.0 y anterior. Ahora, con Netscape 6 y 7, la máquina virtual Java es un plugin de Sun. Netscape ya no desarrolla o incluye una máquina virtual Java por defecto con el nevegador.</p>
+
+<p>El plugin para Java de Sun puede ser invocado por el elemento <code>object</code>, como cualquier otro plugin. Una vez más, Internet Explorer típicamente invoca el plugin de forma que el elemento <code>object</code> es usado conjuntamente con el atributo <code>classid</code> que apunta a un identificador único ActiveX. Cada versión superior del plugin tiene un identificador único. Este es un ejemplo del tipo de etiqueta que JRE 1.4.1 invocará en IE, usando el identificador único para JRE 1.4.1:</p>
+
+<pre>&lt;!-- IE ONLY CODE --&gt;
+&lt;object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
+     width="460" height="160"
+codebase="http://java.sun.com/products/plugin/autodl/jinstall-1_4_1-windows-i586.cab#version=1,4,1"&gt;
+     &lt;param...&gt;
+     &lt;param...&gt;
+&lt;/object&gt;
+</pre>
+
+<p>La invocación anterior no funcionará en navegadores basados en Mozilla como Netscape 7 a causa de la razón vista anteriormente: <code>classid</code> usado conjuntamente con el identificador único hace referencia a una arquitectura (ActiveX) que el código de Mozilla (y, por lo tanto, Netscape 7) no soporta. Puedes invocar el plugin de Java para Netscape 7 y otros navegadores basados en Mozilla usando el tipo MIME para Java apropiado. Aquí se muestra un ejemplo:</p>
+
+<pre>&lt;object type="application/x-java-applet;jpi-version=1.4.1_01"
+width="460" height="160"&gt;
+	&lt;param name="code" value="Animator.class" /&gt;
+	&lt;param name="imagesource" value="images/Beans" /&gt;
+	&lt;param name="backgroundcolor" value="0xc0c0c0" /&gt;
+	&lt;param name="endimage" value="10" /&gt;
+	&lt;param name="soundsource" value="audio"&gt;
+	&lt;param name="soundtrack" value="spacemusic.au" /&gt;
+	&lt;param name="sounds" value="1.au|2.au|3.au|4.au|5.au|6.au|7.au|8.au|9.au|0.au" /&gt;
+	&lt;param name="pause" value="200" /&gt;
+	&lt;p&gt;You need the Java Plugin.
+         Get it from &lt;a href="http://java.sun.com/products/plugin/index.html"&gt;here.&lt;/a&gt;&lt;/p&gt;
+&lt;/object&gt;
+</pre>
+
+<p>El código anterior menciona una versión específica de un tipo MIME, y si el navegador basado en Mozilla como Netscape 7 no tiene instalado JRE 1.4.1_01, el texto alterno es mostrado. No es necesario siempre dar una versión específica de un tipo MIME. Si no te estás aprovechando de las características específicas de alguna versión concreta, un tipo MIME más genérico como <code>application/x-java-vm</code> funcionará igual de bien. Los parámetros de configuración para el applet, incluyendo la clase que contiene el punto de entrada inicial (Animator.class, referenciado por el elemento <code>param</code>), son específicos en muchos elementos <code>param</code>.</p>
+
+<p>Los navegadores basados en Mozilla como Netscape 7 también permiten el uso de un atributo especial <code>classid</code>. Este es el especial <code>classid</code> "java:". Aquí vemos un ejemplo usando este método de invocación:</p>
+
+<pre>&lt;object classid="java:NervousText.class" width="534" height="50"&gt;
+	&lt;param name="text" value="Java 2 SDK, Standard Edition v1.4" /&gt;
+	&lt;p&gt;You need the Java Plugin.
+	   Get it from
+	   &lt;a href="http://java.sun.com/products/plugin/index.html"&gt;here.
+	   &lt;/a&gt;
+	&lt;/p&gt;
+&lt;/object&gt;
+</pre>
+
+<p>el <code>classid</code> "java:" te permite referenciar la clase que proporciona el punto de entrada inicial. El resto de los parámetros de configuración funcionan gracias a los elementos <code>param</code>.</p>
+
+<h4 id="Applet.2C_la_elecci.C3.B3n_t.C3.ADpica" name="Applet.2C_la_elecci.C3.B3n_t.C3.ADpica">Applet, la elección típica</h4>
+
+<p>El elemento <code>applet</code> continúa siendo el más soportado, y sigue siendo la forma más popular de invocar applets en Java. En Netscape 7 y CompuServe 7, el elemento <code>applet</code> invoca directamente el plugin de Java. Aquí vemos un ejemplo:</p>
+
+<pre>&lt;applet code="NervousText.class" width="534" height="50"&gt;
+	&lt;param name="text" value="Java(TM) 2 SDK, Standard Edition v1.4" /&gt;
+&lt;/applet&gt;
+</pre>
+
+<p>El elemento <code>applet</code> ha sido despreciado en la especificación HTML 4.01, pero una ventaja de usarlo es que en navegadores basados en Mozilla como Netscape 7, si has perdido Java, un mecanismo automático de obtención lo reemplaza. El navegador usará el Netscape's Plugin Finder Service para descargar el plugin de Java. La sección <a href="#References">References</a> reúne recursos de como usar el elemento applet.</p>
+
+<h4 id="El_elemento_embed" name="El_elemento_embed">El elemento embed</h4>
+
+<p>El elemento <code>embed</code> ha sido usado para invocar plugins desde los primeros tiempos de los navegadores Netscape. Típicamente, el elemento <code>embed</code> es anidado con un elemento <code>object</code>, tal que el otro elemento <code>object</code> invoca un control ActiveX para IE, mientras que el elemento interno <code>embed</code> invoca un plugin de Netscape. Aquí vemos un ejemplo de este uso:</p>
+
+<pre>&lt;object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0"
+width=366 height=142 id="myFlash"&gt;
+	&lt;param name="movie" value="javascript_to_flash.swf" /&gt;
+	&lt;param name="quality" value="high" /&gt;
+	&lt;param name="swliveconnect" value="true" /&gt;
+		&lt;embed src="javascript_to_flash.swf" quality="high" width="366" height="142"
+    		type="application/x-shockwave-flash"
+    		pluginspage="http://www.macromedia.com/downloads/"
+    		name="myFlash" swliveconnect="true"&gt;
+    		&lt;/embed&gt;
+&lt;/object&gt;
+</pre>
+
+<p>Enlaces a las normas que marcan el uso del elemento <code>embed</code> pueden ser vistas en la sección <a href="#References">References</a>. El elemento <code>embed</code> es habitualmente el elemento más ampliamente usado para invocar plugins en navegadores Netscape. Es importante indicar, sin embargo, que el elemento <code>embed</code> no es parte de la especificación HTML 4.01, por lo que no es un estándar W3C. Algunas advertencias que marcan el uso del elemento <code>embed</code> son:</p>
+
+<ul>
+ <li>No incluyas un atributo <code>name</code> con el elemento <code>object</code>, especialmente si tiene el mismo nombre que el elemento <code>embed</code>. Sin embargo hacerlo también viola el estándar HTML 4.01, algunos generadores de código dan atributos <code>name</code> al elemento <code>object</code>. Navegadores basados en Mozilla no te permitirán el acceso al elemento llamado <code>embed</code> a través de métodos JavaScript DOM 0 si el elemento <code>object</code> tiene el mismo <code>name</code>. Utiliza el atributo <code>id</code> con el elemento <code>object</code>. El atributo <code>id</code> del elemento <code>object</code> puede tener el mismo valor que el atributo <code>name</code> del elemento <code>embed</code>.</li>
+ <li>Verás que el elemento <code>embed</code> permite parámetros de configuración pasados a través de atributos a medida, como <code>swliveconnect="true"</code>. Éstos son análogos a los elementos <code>param</code> usados por el elemento <code>object</code>. Plugins de otras compañías requerirán que diferentes parámetros de configuración sean pasados a través del elemento <code>embed</code>, y aprender éstos es aconsejable.</li>
+</ul>
+
+<p>Nótese que el <strong>mecanismo de obtención</strong> para el elemento <code>embed</code> -- esto es, la forma en como un plugin se obtiene si se ha perdido -- viene a través del atributo <code>pluginspage</code>. Este atributo apunta a una página para coger el plugin si éste no se detecta por el navegador. El atributo <code>pluginurl</code> es otro atributo que puede ser usado, y puede ser usado para apuntar directamente a un archivo <a href="es/XPInstall">XPInstall</a> para una descarga más racionalizada. Para el elemento <code>embed</code> en concreto, estos atributos en Netscape 7 y Mozilla son mandados por la opción Plugin Finder Service. Debajo de Editar | Preferencias | Navegador | Aplicaciones de ayuda es una opción para usar el Plugin Finder Service de Netscape. Si el usuario ha seleccionado<em>Siempre usar Netscape Plugin Finder Service para obtener Plugins</em> entonces si estos atributos son o no especificados no produce ninguna diferencia -- el navegador<em>siempre</em> consultará con el Plugin Finder Service para determinar si tiene un plugin para manejar el tipo MIME perdido. Si esta opción no está marcada, el Plugin Finder Service será usado sólo si el autor de la página web<em>NO</em> especifica cualquiera de estos atributos.</p>
+
+<h3 id="Informaci.C3.B3n_del_documento_original" name="Informaci.C3.B3n_del_documento_original">Información del documento original</h3>
+
+<ul>
+ <li>Autor(es): Arun K. Ranganathan, Netscape Communications</li>
+ <li>Última actualización: 14. Nov 2002</li>
+ <li>Información de Copyright: Copyright © 2001-2003 Netscape. Todos los derechos reservados.</li>
+ <li>Link: <a class="external" href="http://devedge-temp.mozilla.org/viewsource/2002/markup-and-plugins/index_en.html" rel="freelink">http://devedge-temp.mozilla.org/view.../index_en.html</a></li>
+</ul>
+
+<h4 id="Referencias" name="Referencias">Referencias</h4>
+
+<h5 id="General_--_Especificaciones" name="General_--_Especificaciones">General -- Especificaciones</h5>
+
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/REC-html40">Especificación HTML 4.01</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/xhtml1/">Especificación XHTML 1.0</a></li>
+</ul>
+
+<h5 id="El_elemento_.3Cobject.3E" name="El_elemento_.3Cobject.3E">El elemento <code>&lt;object&gt;</code></h5>
+
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/REC-html40/struct/objects.html#edef-OBJECT">Especificación en el elemento Object HTML 4.01</a></li>
+</ul>
+
+<h5 id="El_elemento_.3Cembed.3E" name="El_elemento_.3Cembed.3E">El elemento <code>&lt;embed&gt;</code></h5>
+
+<ul>
+ <li><a href="es/Gecko_Plugin_API_Reference/Plug-in_Basics">Plugin API Reference on EMBED element</a> <a class="external" href="http://devedge-temp.mozilla.org/library/manuals/2002/plugin/1.0/intro.html#1002612">on devedge-temp</a></li>
+</ul>
+
+<h5 id="Java" name="Java">Java</h5>
+
+<ul>
+ <li><a class="external" href="http://www.w3.org/TR/REC-html40/struct/objects.html#edef-APPLET">HTML 4.01 Applet Definition (Deprecated)</a></li>
+ <li><a class="external" href="http://java.sun.com/products/plugin/index.html">Java Plugin Homepage</a></li>
+ <li><a class="external" href="http://java.sun.com/products/plugin/versions.html">Sun Documentation on OBJECT, EMBED, and APPLET and Different Plugin Versions</a></li>
+ <li><a class="external" href="http://java.sun.com/products/plugin/1.4.1/demos/applets.html">Sun Demonstration of Web Pages using Applet Element</a></li>
+ <li><a class="external" href="http://java.sun.com/products/plugin/1.4.1/demos/plugin/applets.html">Sun Demonstration of Web Pages Using OBJECT/EMBED Elements</a></li>
+</ul>
+
+<h5 id="Bugs_y_futuras_direcciones_en_Netscape_y_Mozilla" name="Bugs_y_futuras_direcciones_en_Netscape_y_Mozilla">Bugs y futuras direcciones en Netscape y Mozilla</h5>
+
+<ul>
+ <li><a href="es/Windows_Media_in_Netscape">Windows Media in Netscape</a> Netscape 7.1 and the Windows Media ActiveX control</li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=180378" title='macromedia.com - Flash ought to support &amp;amp;lt;param name="movie..."> in addition to data attribute'>error 180378</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=167601" title='FIXED: [object] Support &amp;amp;lt;param name="PLUGINURL" ...>'>error 167601</a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=180411" title="Plugin Finder Service is not invoked for OBJECT element">error 180411</a></li>
+</ul>
+
+<p><span class="comment">Categorías</span></p>
+
+<p><span class="comment">Interwiki, vínculos a otros idiomas</span></p>

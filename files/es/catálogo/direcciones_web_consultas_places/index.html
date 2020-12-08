@@ -1,0 +1,345 @@
+---
+title: Direcciones web de consultas Places
+slug: Catálogo/Direcciones_web_consultas_Places
+tags:
+  - Firefox
+  - Firefox Desktop
+  - Guía
+  - Herramientas
+  - Intermedio
+translation_of: Mozilla/Tech/Places/Places_query_URIs
+---
+<p></p>
+
+<p>Este artículo describe los parámetros que se pueden usar al crear direcciones web del tipo <code>place</code>. Estas direcciones web ejecutan consultas <a href="/en/Places" title="Places">Places</a>.</p>
+
+<p>Se puede usar una dirección web del tipo <code>place</code> como marcador. Por ejemplo, desde la biblioteca de Firefox se puede ir a <em>Otros marcadores</em>, luego hacer clic en el botón <em>Organizar</em> y luego elegir <em>Nuevo marcador…</em> En el campo <em>Dirección</em> se puede ingresar una dirección web del tipo <code>place</code> para crear una consulta. Una vez creado esta carpeta de marcador inteligente, se puede arrastrar el mismo a la barra de direcciones y soltarlo allí, para que, al hacerle clic, aparezca un menú desplegable conteniendo los resultados de dicha consulta.</p>
+
+<p>La siguiente dirección web del tipo <code>place</code> es la que se usa en el marcador inteligente <em>Más visitadas</em>, el cual pertenece al conjunto de marcadores inteligentes creados al comenzar a usar Firefox 3:</p>
+
+<pre class="eval">place:queryType=0&amp;sort=8&amp;maxResults=10
+</pre>
+
+<p>Los parámetros usados en esta consulta son:</p>
+
+<dl>
+ <dt><code>queryType=0</code></dt>
+ <dd>Esto indica que la consulta debería tener en cuenta sólo el historial del usuario y no los marcadores.</dd>
+ <dt><code>sort=8</code></dt>
+ <dd>El parámetro <code>sort</code> indica que los resultados de la consulta deben ser mostrados en el orden numérico inverso, según la cantidad de visitas. En otras palabras, las páginas más visitadas deberían aparecer primero, y las páginas menos visitadas, últimas.</dd>
+ <dt><code>maxResults=10</code></dt>
+ <dd>Este parámetro especifica que se tiene que mostrar un máximo de 10 resultados en la consulta.</dd>
+</dl>
+
+<p>Si se quiere cambiar esta consulta para que sólo se tenga en cuenta las visitas de hoy, entonces se puede cambiar a:</p>
+
+<pre class="eval">place:queryType=0&amp;sort=8&amp;maxResults=10&amp;beginTimeRef=1&amp;beginTime=0
+</pre>
+
+<p>Estos son los nuevos parámetros agregados acá:</p>
+
+<dl>
+ <dt><code>beginTimeRef=1</code></dt>
+ <dd>Indica que el parámetro <code>beginTime</code> que sigue se refiere a la medianoche de hoy.</dd>
+ <dt><code>beginTime</code></dt>
+ <dd>Especifica la cantidad de tiempo, en microsegundos, desde la medianoche en la que se comenzó a registrar las visitas. Al especificar <em>0</em> como valor, se indica que se quiere tener en cuenta todas las visitas ocurridas hoy.</dd>
+</dl>
+
+<h2 id="Query_parameters" name="Query_parameters">Parámetros de consulta</h2>
+
+<p>Esta es una lista de los parámetros disponibles para usar.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Parámetro</th>
+   <th>Tipo</th>
+   <th>Descripción</th>
+  </tr>
+  <tr>
+   <td><code>beginTime</code></td>
+   <td><code>unsigned long</code></td>
+   <td>El tiempo, en microsegundos, del resultado más antiguo.</td>
+  </tr>
+  <tr>
+   <td><code>beginTimeRef</code></td>
+   <td><code>unsigned long</code></td>
+   <td>Indica el tiempo de referencia especificado en <code>beginTime</code>:
+    <dl>
+     <dt>0</dt>
+     <dd>El "Tiempo Unix", contando a partir del 1º de enero de 1970, con huso horario GMT/UTC. Este es el valor predeterminado.</dd>
+     <dt>1</dt>
+     <dd>Este tiempo es relativo a la última medianoche. Esto es útil para consultas relacionadas al día de hoy.</dd>
+     <dt>2</dt>
+     <dd>Este tiempo es relativo a ahora mismo.</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td><code>endTime</code></td>
+   <td><code>unsigned long</code></td>
+   <td>La hora, en microsegundos, del último resultado.</td>
+  </tr>
+  <tr>
+   <td><code>endTimeRef</code></td>
+   <td><code>unsigned long</code></td>
+   <td>Indica el tipo de referencia especificado en <code>endTime</code>. Los valores son los mismos que para <code>beginTime</code>.</td>
+  </tr>
+  <tr>
+   <td><code>terms</code></td>
+   <td><code>cadena</code></td>
+   <td>El término a consultar.</td>
+  </tr>
+  <tr>
+   <td><code>minVisits</code></td>
+   <td><code>long</code></td>
+   <td>Filtra resultados basados en el mínimo número de visitas. Especificar <em>-1</em> (el valor predeterminado) para mostrar todos los resultados, o cualquier otro número para incluir sólo los resultados con una cantidad mayor de visitas al valor ingresado.</td>
+  </tr>
+  <tr>
+   <td><code>maxVisits</code></td>
+   <td><code>long</code></td>
+   <td>Filtra resultados basados en el máximo número de visitas. Sólo los elementos que hayan sido visitados menos veces que el número ingresado serán incluidos en los resultados. Especificar <em>-1</em> (el valor predeterminado) para no filtrar.</td>
+  </tr>
+  <tr>
+   <td><code>onlyBookmarked</code></td>
+   <td><code>lógico</code></td>
+   <td>Si el valor es <code>true</code>, entonces sólo los elementos en marcadores serán incluidos en los resultados.</td>
+  </tr>
+  <tr>
+   <td><code>domainIsHost</code></td>
+   <td><code>lógico</code></td>
+   <td>Si el valor es <code>true</code>, entonces el dominio <code>domain</code> debe ser una coincidencia exacta. De lo contrario, todo lo que termine en <code>domain</code> es considerado una coincidencia.</td>
+  </tr>
+  <tr>
+   <td><code>domain</code></td>
+   <td><code>cadena</code></td>
+   <td>Consulta por elementos que coincidan con este servidor o nombre de dominio. Ver el parámetro <code>domainIsHost</code> para más información.</td>
+  </tr>
+  <tr>
+   <td><code>folder</code></td>
+   <td><code>cadena</code></td>
+   <td>La carpeta a consultar. Puede ser una de las siguientes:
+    <dl>
+     <dt>PLACES_ROOT</dt>
+     <dd>La carpeta raíz de Places.</dd>
+     <dt>BOOKMARKS_MENU</dt>
+     <dd>El menú <em>Marcadores</em>.</dd>
+     <dt>TOOLBAR</dt>
+     <dd>La barra de marcadores.</dd>
+     <dt>TAGS</dt>
+     <dd>Etiquetas</dd>
+     <dt>UNFILED_BOOKMARKS</dt>
+     <dd>Otros marcadores</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td><code>!annotation</code></td>
+   <td><code>lógico</code></td>
+   <td>Indica si incluir o rechazar elementos que coincidan la anotación especificada por <code>annotation</code>. Si el valor es <code>true</code>, entonces los elementos que no tengan la anotación especificada serán rechazados.</td>
+  </tr>
+  <tr>
+   <td><code>annotation</code></td>
+   <td><code>cadena</code></td>
+   <td>La anotación a coincidir al consultar.</td>
+  </tr>
+  <tr>
+   <td><code>uri</code></td>
+   <td><code>cadena</code></td>
+   <td>La dirección web a consultar.</td>
+  </tr>
+  <tr>
+   <td><code>uriIsPrefix</code></td>
+   <td><code>lógico</code></td>
+   <td>Si el valor es <code>false</code>, entonces la <code>uri</code> debe ser una coincidencia exacta; este es el valor predeterminado. Si el valor es <code>true</code>, entonces cualquier entrada que comience con la dirección web especificada, será considerada una coincidencia.</td>
+  </tr>
+  <tr>
+   <td><code>tag</code> </td>
+   <td><code>cadena</code></td>
+   <td>.</td>
+  </tr>
+  <tr>
+   <td><code>!tags</code> </td>
+   <td>.</td>
+   <td>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Operadores_de_consulta">Operadores de consulta</h2>
+
+<p>Los siguientes atributos permiten controlar los resultados con más precisión.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>Operador</th>
+   <th>Tipo</th>
+   <th>Descripción</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>OR</code></td>
+   <td> </td>
+   <td>Este es el operador lógico OR ["O"].</td>
+  </tr>
+  <tr>
+   <td><code>applyOptionsToContainers</code></td>
+   <td> </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>excludeItemIfParentHasAnnotation</code> <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 13.0 / Thunderbird 13.0 / SeaMonkey 2.10)">Obsoleto Gecko 13.0</span></td>
+   <td><code>cadena</code></td>
+   <td>Los elementos cuyas raíces tengan este valor como anotación, son rechazadas de los resultados de la consulta. Este parámetro es ignorado para consultas sobre el historial. Por ejemplo, se pueden rechazar entradas de marcadores dinámicos especificando <em>livemark/[dirección de la fuente web]</em> acá.</td>
+  </tr>
+  <tr>
+   <td><code>excludeItems</code></td>
+   <td><code>lógico</code></td>
+   <td>Si el valor es <code>true</code>, entonces todas las direcciones web y separadores son rechazados de los resultados de la consulta de marcadores, así sólo se muestran las carpetas y las consultas. Si el valor es <code>false</code>, entonces se muestran todos los elementos; este es el valor predeterminado.</td>
+  </tr>
+  <tr>
+   <td><code>excludeQueries</code></td>
+   <td><code>lógico</code></td>
+   <td>Si el valor es <code>true</code>, entonces las consultas son rechazadas de los resultados; sin embargo, las consultas de carpetas individuales como la carpeta de marcadores symlinks todavía serán incluidas. El valor predeterminado <code>false</code> indica que las consultas deberían ser incluidas en los resultados.</td>
+  </tr>
+  <tr>
+   <td><code>excludeReadOnlyFolders</code></td>
+   <td><code>lógico</code></td>
+   <td>Si el valor es <code>true</code>, entonces las carpetas de sólo lectura serán rechazadas de los resultados. Esto sólo afecta en los casos en los cuales el nodo de resultados de la carpeta actual aparece en su carpeta anterior. El valor predeterminado es <code>false</code>.</td>
+  </tr>
+  <tr>
+   <td><code>expandQueries</code></td>
+   <td><code>lógico</code></td>
+   <td>Si el valor es <code>true</code>, entonces las direcciones web <code>place</code> aparecerán como contenedores en los resultados, con los contenidos rellenados con la consulta guardada. Esto no hace nada si <code>excludeQueries</code> tiene como valor <code>true</code>. El valor predeterminado es <code>false</code>, lo cual provoca que las direcciones web <code>place</code> aparezcan como elementos normales.</td>
+  </tr>
+  <tr>
+   <td><code>group</code></td>
+   <td> </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>includeHidden</code></td>
+   <td><code>lógico</code></td>
+   <td>Si el valor es <code>true</code>, entonces los elementos que normalmente se ocultarían en una consulta del historial (como el contenido de iframes así también como imágenes) son incluidos en los resultados. El valor predeterminado es <code>false</code>.</td>
+  </tr>
+  <tr>
+   <td><code>maxResults</code></td>
+   <td><code>unsigned long</code></td>
+   <td>El número máximo de resultados para aparecer. Esto no funciona al ordernar por título. El resultado es <em>0</em>, lo que significa que se muestran todos los resultados.</td>
+  </tr>
+  <tr>
+   <td><code>originalTitle</code></td>
+   <td><code>cadena</code></td>
+   <td>Recupera el título original de la página.</td>
+  </tr>
+  <tr>
+   <td><code>queryType</code></td>
+   <td><code>unsigned short</code></td>
+   <td>El tipo de búsqueda para usar al consultar la base de datos. Este atributo se tiene en cuenta por nodos de consulta. Es ignorado para consultas de carpeta individual.
+    <dl>
+     <dt>0</dt>
+     <dd>Historial</dd>
+     <dt>1</dt>
+     <dd>Marcadores</dd>
+     <dt>2</dt>
+     <dd>Tanto historial como marcadores (<strong>No implementado aún</strong> -- ver <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=378798" title="Unified (history &amp; bookmarks) search support in the library">error 378798</a>)</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td><code>resolveNullBookmarkTitles</code></td>
+   <td><code>lógico</code></td>
+   <td>Si el valor es <code>true</code>, entonces los marcadores con títulos en blanco, recuperarán sus títulos desde el historial, de ser posible. Esto no aplica a marcadores con títulos vacíos. El valor predeterminado es <code>false</code>.</td>
+  </tr>
+  <tr>
+   <td><code>showSessions</code></td>
+   <td><code>lógico</code></td>
+   <td>Si el valor es <code>true</code>, entonces la información de sesión es usada para agrupar elementos del historial. Esto sólo hace diferencia al ordenar por fecha. El valor predeterminado es <code>false</code>.</td>
+  </tr>
+  <tr>
+   <td><code>sort</code></td>
+   <td><code>unsigned short</code></td>
+   <td>El orden para usar en los resultados.
+    <dl>
+     <dt>0</dt>
+     <dd>Orden original del marcador</dd>
+     <dt>1</dt>
+     <dd>Ordenado por título, de la <em>A</em> a la <em>Z</em></dd>
+     <dt>2</dt>
+     <dd>Ordenado por título, de la <em>Z</em> a la <em>A</em></dd>
+     <dt>3</dt>
+     <dd>Ordenado por fecha de visita, lo más reciente a lo último</dd>
+     <dt>4</dt>
+     <dd>Ordenado por fecha de visita, lo más reciente primero</dd>
+     <dt>5</dt>
+     <dd>Ordenado por dirección web, de la <em>A</em> a la <em>Z</em></dd>
+     <dt>6</dt>
+     <dd>Ordenado por dirección web, de la <em>Z</em> a la <em>A</em></dd>
+     <dt>7</dt>
+     <dd>Ordenado por cantidad de visitas, ascendiente</dd>
+     <dt>8</dt>
+     <dd>Ordenado por cantidad de visitas, descendiente</dd>
+     <dt>9</dt>
+     <dd>Ordenado por palabra clave, de la <em>A</em> a la <em>Z</em></dd>
+     <dt>10</dt>
+     <dd>Ordenado por palabra clave, de la <em>Z</em> a la <em>A</em></dd>
+     <dt>11</dt>
+     <dd>Ordenado por fecha agregada, lo más reciente a lo último</dd>
+     <dt>12</dt>
+     <dd>Ordenado por fecha agregada, lo más reciente primero</dd>
+     <dt>13</dt>
+     <dd>Ordenado por última fecha modificada, lo más reciente a lo último</dd>
+     <dt>14</dt>
+     <dd>Ordenado por última fecha modificada, lo más reciente primero</dd>
+     <dt>17</dt>
+     <dd>Ordenado por etiquetas, ascendiente</dd>
+     <dt>18</dt>
+     <dd>Ordenado por etiquetas, descendiente</dd>
+     <dt>19</dt>
+     <dd>Ordenado por anotación, ascendiente</dd>
+     <dt>20</dt>
+     <dd>Ordenado por anotación, descendiente</dd>
+    </dl>
+   </td>
+  </tr>
+  <tr>
+   <td><code>sortingAnnotation</code></td>
+   <td><code>cadena</code></td>
+   <td>La anotación para usar al ordenar por anotación.</td>
+  </tr>
+  <tr>
+   <td><code>type</code></td>
+   <td><code>unsigned short</code></td>
+   <td>El tipo de resultados a mostrar.
+    <dl>
+     <dt>0</dt>
+     <dd>Resultados como direcciones web (resultados "URI", uno por cada dirección web visitada en el rango)</dd>
+     <dt>1</dt>
+     <dd>Resultados como visitas (resultados "visita", con uno por cada vez que una página fue visitada - esto devolverá frecuentemente múltiples resultados para una misma dirección web)</dd>
+     <dt>2</dt>
+     <dd>Resultados como visitas totales (como en "visita", pero muestra todos los atributos para cada resultado)</dd>
+     <dt>3</dt>
+     <dd>Resultados como consulta de fecha (muestra resultados para un rango de fechas dado)</dd>
+     <dt>4</dt>
+     <dd>Resultados como consulta de sitio (muestra la última visita para cada dirección web en un servidor dado)</dd>
+     <dt>5</dt>
+     <dd>Resultados como consulta de fecha+sitio (muestra la lista de servidores visitados en un período dado)</dd>
+     <dt>6</dt>
+     <dd>Resultados como consulta de etiqueta (muestra una lista de marcadores con una etiqueta dada)</dd>
+     <dt>7</dt>
+     <dd>Resultados como contenedores de etiquetas (muestra marcadores con una etiqueta dada; para la misma dirección web usa la última modificada - el atributo <code>folder=tag_folder_id</code> tiene que estar presente en la consulta.)</dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also" name="See_also">Ver también</h2>
+
+<ul>
+ <li><a href="/en/Querying_Places" title="en/Querying_Places">Querying Places</a></li>
+</ul>
+
+<p></p>

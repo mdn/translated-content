@@ -1,0 +1,470 @@
+---
+title: mozIStorageConnection
+slug: mozIStorageConnection
+tags:
+  - Interfaces
+  - Storage
+  - Todas_las_Categorías
+  - páginas_a_traducir
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageConnection
+---
+<p> </p>
+<p> <span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The mozIStorageConnection interface
+represents a database connection attached to a specific file or to
+in-memory data storage.">La interfaz de mozIStorageConnection representa una conexión de base de datos adjuntos a un archivo específico o de datos en memoria de almacenamiento. </span><span style="background-color: rgb(255, 255, 255);" title="It is the primary
+interface for interacting with a database, including creating prepared
+statements, executing SQL, and examining database errors.">Es la principal interfaz para interactuar con una base de datos, incluyendo la creación de comandos preparados, la ejecución de SQL, y el examen de los errores de base de datos.</span><br>
+ <br>
+ <span style="background-color: rgb(255, 255, 255);" title="See Storage for an
+introduction">Véase el <a href="/es/Storage" title="es/Storage">almacenamiento</a> de una introducción</span></span></p>
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/storage/public/mozIStorageConnection.idl" rel="custom">storage/public/mozIStorageConnection.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.9 (Firefox 3)</span></div>
+</div><p></p>
+<p><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Inherits from">Hereda de:</span></span> <a href="/es/nsISupports" title="es/nsISupports">nsISupports</a></p>
+<h2 id="Method_overview" name="Method_overview"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Method overview">Método de vista</span></span></h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#close.28.29">close</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>mozIStorageStatement <a href="#createStatement.28.29">createStatement</a>(in <a href="/es/AUTF8String" title="es/AUTF8String">AUTF8String</a> aSQLStatement);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#executeSimpleSQL.28.29">executeSimpleSQL</a>(in <a href="/es/AUTF8String" title="es/AUTF8String">AUTF8String</a> aSQLStatement);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#tableExists.28.29">tableExists</a>(in <a href="/es/AUTF8String" title="es/AUTF8String">AUTF8String</a> aTableName);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#indexExists.28.29">indexExists</a>(in <a href="/es/AUTF8String" title="es/AUTF8String">AUTF8String</a> aIndexName);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#beginTransaction.28.29">beginTransaction</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#beginTransactionAs.28.29">beginTransactionAs</a>(in PRInt32 transactionType);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#commitTransaction.28.29">commitTransaction</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#rollbackTransaction.28.29">rollbackTransaction</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#createTable.28.29">createTable</a>(in string aTableName, in string aTableSchema);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#createFunction.28.29">createFunction</a>(in <a href="/es/AUTF8String" title="es/AUTF8String">AUTF8String</a> aFunctionName, in long aNumArguments, in <a href="/es/MozIStorageFunction" title="es/MozIStorageFunction">mozIStorageFunction</a> aFunction);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#createAggregateFunction.28.29">createAggregateFunction</a>(in <a href="/es/AUTF8String" title="es/AUTF8String">AUTF8String</a> aFunctionName, in long aNumArguments, in <a href="/es/MozIStorageAggregateFunction" title="es/MozIStorageAggregateFunction">mozIStorageAggregateFunction</a> aFunction);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeFunction.28.29">removeFunction</a>(in <a href="/es/AUTF8String" title="es/AUTF8String">AUTF8String</a> aFunctionName);</code></td>
+  </tr>
+  <tr>
+   <td><code>mozIStorageProgressHandler <a href="#setProgressHandler.28.29">setProgressHandler</a>(in PRInt32 aGranularity, in <a href="/es/MozIStorageProgressHandler" title="es/MozIStorageProgressHandler">mozIStorageProgressHandler</a> aHandler);</code></td>
+  </tr>
+  <tr>
+   <td><code>mozIStorageProgressHandler <a href="#removeProgressHandler.28.29">removeProgressHandler</a>();</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#preload.28.29">preload</a>();</code> <span class="icon-only-inline" title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Attributes" name="Attributes"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Attributes">Atributos</span></span></h2>
+<table class="standard-table" style="width: 1150px; height: 248px;">
+ <tbody>
+  <tr>
+   <td class="header"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Attribute">Atributo</span></span></td>
+   <td class="header"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Type">Tipo</span></span></td>
+   <td class="header"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Description">Descripción</span></span></td>
+  </tr>
+  <tr>
+   <td><code>connectionReady</code></td>
+   <td><code>boolean</code></td>
+   <td><span class="medium_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Indicates whether or not the connection is
+            open or ready to use.">Indica si la conexión está abierta o lista para usar. </span><span style="background-color: rgb(255, 255, 255);" title="This is false if the connection failed to open or if it has been
+            closed.">Esto es </span></span>pérfido<span class="medium_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="This is false if the connection failed to open or if it has been
+            closed."> si la conexión no pudo abrir o si se ha cerrado.</span></span></td>
+  </tr>
+  <tr>
+   <td><code>databaseFile</code></td>
+   <td><code>nsIFile</code></td>
+   <td><span class="medium_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The current database file.">El archivo de base de datos actual. </span></span><code>NULL</code><span class="goog-zippy-collapsed" id="romanspan" style="display: none;"><img alt="" class="buttons square13 zippy-plus" id="romanimg" src="http://www.google.es/images/cleardot.gif"><span id="romantext">Mostrar forma romanizada</span></span>
+    <div class="almost_half_cell" style="">
+     <div dir="ltr" style="">
+      <div id="tts_button" style="display: block;" title="Escuchar
+            traducción">
+       &lt;object width="18" height="18" id="tts_flash" data="<a class="external" href="http://www.gstatic.com/translate/sound_player.swf" rel="freelink">http://www.gstatic.com/translate/sound_player.swf</a>" type="application/x-shockwave-flash"&gt; &lt;param name="movie" value="<a class="external" href="http://www.gstatic.com/translate/sound_player.swf" rel="freelink">http://www.gstatic.com/translate/sound_player.swf</a>"/&gt; &lt;param name="flashvars" value="sound_name=&amp;amp;sound_name_cb=_TTSSoundFile"/&gt; &lt;param name="wmode" value="transparent"/&gt; &lt;param name="allowScriptAccess" value="always"/&gt;&lt;/object&gt;</div>
+      <span class="short_text" id="result_box"><span style="" title="">si La Conexión de la Base de Datos en sí refiere una base de la uña de Datos en la memoria.</span></span></div>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>lastInsertRowID</code></td>
+   <td><code>long long</code></td>
+   <td><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The row ID from the last SQL INSERT
+            operation.">El identificador de fila de la última operación </span></span><code>INSER</code><code>T</code><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The row ID from the last SQL INSERT
+            operation."> de SQL. </span></span></td>
+  </tr>
+  <tr>
+   <td><code>lastError</code></td>
+   <td><code>long</code></td>
+   <td><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The last sqlite error code that occurred.">El último código de error SQLite que se produjo.</span></span></td>
+  </tr>
+  <tr>
+   <td><code>lastErrorString</code></td>
+   <td><code><a href="/es/AUTF8String" title="es/AUTF8String">AUTF8String</a></code></td>
+   <td><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The English error string reported by the
+            sqlite library for the last sqlite operation.">La cadena de error Inglés reportados por la librería SQLite para el funcionamiento de SQLite pasado.</span></span></td>
+  </tr>
+  <tr>
+   <td><code>schemaVersion</code></td>
+   <td><code>long</code></td>
+   <td><span class="medium_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The schema version of the database.">La versión del esquema de la base de datos. </span><span style="background-color: rgb(255, 255, 255);" title="This should not be
+            used until the database is ready.">Esto no debe ser utilizado hasta la base de datos está listo. </span><span style="background-color: rgb(255, 255, 255);" title="The version will be reported as 0 if not set.">La versión será reportado como 0 si no se establece. </span><span style="background-color: rgb(255, 255, 255);" title="since Gecko 1.9 M8">desde Gecko 1.9 M8</span></span></td>
+  </tr>
+  <tr>
+   <td><code>transactionInProgress</code></td>
+   <td><code>boolean</code></td>
+   <td>
+    <p><span class="medium_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Returns true if there is a transaction in
+            progress on the database; otherwise returns false.">Devuelve </span></span><code>true</code><span class="medium_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Returns true if there is a transaction in
+            progress on the database; otherwise returns false."> si hay una transacción en curso sobre la base de datos, de lo contrario devuelve </span></span><code>false</code><span class="medium_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Returns true if there is a transaction in
+            progress on the database; otherwise returns false.">.</span></span></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Constants" name="Constants"><span class="short_text" id="result_box"><span style="background-color: rgb(235, 239, 249);" title="Constants">Constantes</span></span></h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header"><span class="short_text" id="result_box"><span style="background-color: rgb(235, 239, 249);" title="Constants">Constante</span></span></td>
+   <td class="header"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Value">Valor</span></span></td>
+   <td class="header"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Description">Descripción</span></span></td>
+  </tr>
+  <tr>
+   <td><code>TRANSACTION_DEFERRED</code></td>
+   <td>0</td>
+   <td><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Default.">Predeterminado. </span><span style="background-color: rgb(255, 255, 255);" title="The database lock
+            is acquired when needed.">El bloqueo de la base de datos se adquiere cuando sea necesario.</span></span></td>
+  </tr>
+  <tr>
+   <td><code>TRANSACTION_IMMEDIATE</code></td>
+   <td>1</td>
+   <td><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Get a read lock on the database
+            immediately.">Obtener un bloqueo de lectura sobre la base de datos inmediatamente.</span></span></td>
+  </tr>
+  <tr>
+   <td><code>TRANSACTION_EXCLUSIVE</code></td>
+   <td>2</td>
+   <td><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Get a write lock on the database
+            immediately.">Obtener un bloqueo de escritura sobre la base de datos inmediatamente.</span></span></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Methods" name="Methods"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Methods">Métodos</span></span></h2>
+<h3 id="close.28.29" name="close.28.29">close()</h3>
+<p><span class="medium_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Closes a database connection.">Cierra una conexión de base de datos. </span><span style="background-color: rgb(255, 255, 255);" title="C++ callers should simply set the database
+variable to NULL.">C + + que llaman simplemente debe establecer la variable de la base de datos como </span></span><code>NULL</code><span class="medium_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="C++ callers should simply set the database
+variable to NULL.">. </span><span style="background-color: rgb(255, 255, 255);" title="since Gecko 1.9 M8">desde Gecko 1.9 M8</span></span></p>
+<p><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="You need to call">Tienes que llamar</span></span> <a href="/es/MozIStorageStatement#finalize.28.29" title="es/MozIStorageStatement#finalize.28.29">finalize()</a> en la <a href="/es/Storage#Statements" title="es/Storage#Statements"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="statement">declaración</span></span></a> <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="if you have created one before attempting to
+close or you will get an">si ha creado uno antes de intentar cerrar o usted recibirá un</span></span> <code>NS_ERROR_FILE_IS_LOCKED</code> <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="exception">excepción</span></span>.</p>
+<pre class="eval">void close();
+</pre>
+<h6 id="Parameters" name="Parameters"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Parameters">Parámetros</span></span></h6>
+<p><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="None.">Ninguno.</span></span></p>
+<h3 id="createStatement.28.29" name="createStatement.28.29">createStatement()</h3>
+<p><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Creates a">Crea un</span></span> <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">mozIStorageStatement</a></code> <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="for the given SQL expression">para la expresión de SQL dada</span></span>. <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The expression may use">La expresión puede utilizar</span></span> <code>"?"</code> <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="to indicate sequentially numbered arguments">para indicar los argumentos numerados secuencialmente</span></span> (?1, ?2, etc) or <code>":name"</code> y <code>"$var"</code> <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="to indicate named arguments">para indicar el nombre argumentos</span></span>.</p>
+<pre class="eval"> mozIStorageStatement createStatement(
+   in AUTF8String aSQLStatement
+ );
+</pre>
+<h6 id="Parameters_2" name="Parameters_2"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Parameters">Parámetros</span></span></h6>
+<dl>
+ <dt>
+  <code>aSQLStatement</code></dt>
+ <dd>
+  <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The SQL statement to execute.">La instrucción SQL a ejecutar.</span></span></dd>
+</dl>
+<h6 id="Return_value" name="Return_value">Return value</h6>
+<p><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Returns a new">Devuelve una nueva</span></span> <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageStatement" title="">mozIStorageStatement</a></code> <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="to be used to execute the specified
+statement">que se utilizará para ejecutar la instrucción especificada</span></span>.</p>
+<h3 id="executeSimpleSQL.28.29" name="executeSimpleSQL.28.29">executeSimpleSQL()</h3>
+<p><span class="short_text" id="result_box"><span title="Executes an SQL
+expression.">Ejecuta una expresión SQL. </span><span style="background-color: rgb(255, 255, 255);" title="By default, it
+doesn't expect any arguments at all.">De forma predeterminada, que no espera ningún argumento en absoluto.</span></span></p>
+<pre class="eval"> void executeSimpleSQL(
+   in AUTF8String aSQLStatement
+ );
+</pre>
+<h6 id="Parameters_2" name="Parameters_2"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Parameters">Parámetros</span></span></h6>
+<dl>
+ <dt>
+  <code>aSQLStatement</code></dt>
+ <dd>
+  <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The SQL statement to execute.">La instrucción SQL a ejecutar.</span></span></dd>
+</dl>
+<h3 id="tableExists.28.29" name="tableExists.28.29">tableExists()</h3>
+<p><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="This method reports whether the given table
+exists or not.">Este método reporta si los informes de la tabla dada existe o no.</span></span></p>
+<pre class="eval"> boolean tableExists(
+   in AUTF8String aTableName
+ );
+</pre>
+<h6 id="Parameters_2" name="Parameters_2"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Parameters">Parámetros</span></span></h6>
+<dl>
+ <dt>
+  <code>aTableName</code></dt>
+ <dd>
+  <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The SQL table whose existence should be
+    checked.">La tabla de SQL cuya existencia debe estar marcada.</span></span></dd>
+</dl>
+<h6 id="Return_value_2" name="Return_value_2">Return value</h6>
+<p><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Returns true if the table exists, false
+otherwise.">Devuelve </span></span><code>true</code><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Returns true if the table exists, false
+otherwise."> si la tabla existe, </span></span><code>false</code><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Returns true if the table exists, false
+otherwise."> en caso contrario. </span></span></p>
+<h3 id="indexExists.28.29" name="indexExists.28.29">indexExists()</h3>
+<p><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="This method determines whether or not the
+given index exists.">Este método determina si el índice dado existe.</span></span></p>
+<pre class="eval"> boolean indexExists(
+   in AUTF8String aIndexName
+ );
+</pre>
+<h6 id="Parameters_2" name="Parameters_2"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Parameters">Parámetros</span></span></h6>
+<dl>
+ <dt>
+  <code>aIndexName</code></dt>
+ <dd>
+  <span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="The index to check.">El índice de comprobar.</span></span></dd>
+</dl>
+<h6 id="Return_value_3" name="Return_value_3">Return value</h6>
+<p>Returns <code>true</code> if the index exists, <code>false</code> otherwise.</p>
+<h3 id="beginTransaction.28.29" name="beginTransaction.28.29">beginTransaction()</h3>
+<p><span class="medium_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Starts a new transaction.">Inicia una nueva transacción. </span><span style="background-color: rgb(255, 255, 255);" title="By default, SQLite defers transactions.">De forma predeterminada, SQLite aplaza transacciones. </span><span style="background-color: rgb(255, 255, 255);" title="If a transaction is
+already active, this method throws an exception.">Si la transacción ya está activa, este método produce una excepción.</span></span></p>
+<p></p><div class="blockIndicator note"><strong>Nota:</strong> Use of <code>beginTransaction()</code> and related methods is strongly recommended because it stores the transaction state in the connection. Otherwise, the attribute <code>transactionInProgress</code> will have the wrong value.</div><p></p>
+<pre class="eval"> void beginTransaction();
+</pre>
+<h3 id="beginTransactionAs.28.29" name="beginTransactionAs.28.29">beginTransactionAs()</h3>
+<p>This method starts a new transaction of the given transaction type.</p>
+<pre class="eval"> void beginTransactionAs(
+   in PRInt32 transactionType
+ );
+</pre>
+<h6 id="Parameters_6" name="Parameters_6">Parameters</h6>
+<dl>
+ <dt>
+  <code>transactionType</code></dt>
+ <dd>
+  The type of transaction (<code>TRANSACTION_DEFERRED</code>, <code>TRANSACTION_IMMEDIATE</code> or <code>TRANSACTION_EXCLUSIVE</code>).</dd>
+</dl>
+<h3 id="commitTransaction.28.29" name="commitTransaction.28.29">commitTransaction()</h3>
+<p>This method commits the current transaction.</p>
+<pre class="eval"> void commitTransaction();
+</pre>
+<h6 id="Parameters_7" name="Parameters_7">Parameters</h6>
+<p>None.</p>
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_STORAGE_NO_TRANSACTION</code></dt>
+ <dd>
+  No transaction is active.</dd>
+</dl>
+<h3 id="rollbackTransaction.28.29" name="rollbackTransaction.28.29">rollbackTransaction()</h3>
+<p>This method rolls back the current transaction. This is essentially an "undo," and returns the database to the state it was in before the transaction began.</p>
+<pre class="eval"> void rollbackTransaction();
+</pre>
+<h6 id="Parameters_8" name="Parameters_8">Parameters</h6>
+<p>None.</p>
+<h6 id="Exceptions_thrown_2" name="Exceptions_thrown_2">Exceptions thrown</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_STORAGE_NO_TRANSACTION</code></dt>
+ <dd>
+  No transaction is active.</dd>
+</dl>
+<h3 id="createTable.28.29" name="createTable.28.29">createTable()</h3>
+<p>This method creates a table with the given table name and schema.</p>
+<p></p><div class="blockIndicator note"><strong>Nota:</strong> At some point in the near future, this method will check to be sure the schema is the same as what is specified, but that is not currently done.</div><p></p>
+<pre class="eval"> void createTable(
+   in string aTableName,
+   in string aTableSchema
+ );
+</pre>
+<p> </p>
+<h6 id="Parameters_9" name="Parameters_9">Parameters</h6>
+<dl>
+ <dt>
+  <code>aTableName</code></dt>
+ <dd>
+  The name of the table to create; table names may consist of the letters A-Z in either upper or lower case, the underscore, and the digits 0-9. The first character must be a letter.</dd>
+ <dt>
+  <code>aTableSchema</code></dt>
+ <dd>
+  The table's schema. This should be specified using the same syntax the <code>CREATE TABLE</code> statement uses. For example: <code>"foo INTEGER, bar STRING"</code>.</dd>
+</dl>
+<h6 id="Exceptions_thrown_3" name="Exceptions_thrown_3">Exceptions thrown</h6>
+<dl>
+ <dt>
+  <code>NS_ERROR_FAILURE</code></dt>
+ <dd>
+  Table already exists or the requested table couldn't be created.</dd>
+</dl>
+<h3 id="createFunction.28.29" name="createFunction.28.29">createFunction()</h3>
+<p>Creates a new SQLite function. since Gecko 1.9 M8</p>
+<pre class="eval"> void createFunction(
+   in AUTF8String aFunctionName,
+   in long aNumArguments,
+   in mozIStorageFunction aFunction
+ );
+</pre>
+<h6 id="Parameters_10" name="Parameters_10">Parameters</h6>
+<dl>
+ <dt>
+  <code>aFunctionName</code></dt>
+ <dd>
+  The name of function to create, as seen in SQL.</dd>
+ <dt>
+  <code>aNumArguments</code></dt>
+ <dd>
+  The number of arguments the function takes. Pass <code>-1</code> for variable-argument functions.</dd>
+ <dt>
+  <code>aFunction</code></dt>
+ <dd>
+  The instance of <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageFunction" title="">mozIStorageFunction</a></code> that implements the function.</dd>
+</dl>
+<h3 id="createAggregateFunction.28.29" name="createAggregateFunction.28.29">createAggregateFunction()</h3>
+<p>This method creates a new SQLite aggregate function. since Gecko 1.9 M8</p>
+<pre class="eval"> void createAggregateFunction(
+   in AUTF8String aFunctionName,
+   in long aNumArguments,
+   in mozIStorageAggregateFunction aFunction
+ );
+</pre>
+<h6 id="Parameters_11" name="Parameters_11">Parameters</h6>
+<dl>
+ <dt>
+  <code>aFunctionName</code></dt>
+ <dd>
+  The name of the aggregate function to create, as seen in SQL.</dd>
+ <dt>
+  <code>aNumArguments</code></dt>
+ <dd>
+  The number of arguments the function takes. Pass <code>-1</code> for variable-argument functions.</dd>
+ <dt>
+  <code>aFunction</code></dt>
+ <dd>
+  The instance of <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageAggregateFunction" title="">mozIStorageAggregateFunction</a></code> that implements the function.</dd>
+</dl>
+<h3 id="removeFunction.28.29" name="removeFunction.28.29">removeFunction()</h3>
+<p>Deletes a custom SQLite function; it works with both standard and aggregate functions. since Gecko 1.9 M8</p>
+<pre class="eval"> void removeFunction(
+   in AUTF8String aFunctionName
+ );
+</pre>
+<h6 id="Parameters_12" name="Parameters_12">Parameters</h6>
+<dl>
+ <dt>
+  <code>aFunctionName</code></dt>
+ <dd>
+  The name of the function to remove.</dd>
+</dl>
+<h3 id="setProgressHandler.28.29" name="setProgressHandler.28.29">setProgressHandler()</h3>
+<p>This method sets a progress handler. Only one handler can be registered at a time; if you need more than one, you need to chain them yourself. since Gecko 1.9 M8</p>
+<pre class="eval"> mozIStorageProgressHandler setProgressHandler(
+   in PRInt32 aGranularity,
+   in mozIStorageProgressHandler aHandler
+ );
+</pre>
+<p> </p>
+<h6 id="Parameters_13" name="Parameters_13">Parameters</h6>
+<dl>
+ <dt>
+  <code>aGranularity</code></dt>
+ <dd>
+  The number of SQL virtual machine steps between progress handler callbacks.</dd>
+ <dt>
+  <code>aHandler</code></dt>
+ <dd>
+  The instance of <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIStorageProgressHandler" title="">mozIStorageProgressHandler</a></code>.</dd>
+</dl>
+<h6 id="Return_value_4" name="Return_value_4">Return value</h6>
+<p>Returns the previous registered handler.</p>
+<h3 id="removeProgressHandler.28.29" name="removeProgressHandler.28.29">removeProgressHandler()</h3>
+<p>Removes a progress handler. since Gecko 1.9 M8</p>
+<pre class="eval"> mozIStorageProgressHandler removeProgressHandler();
+</pre>
+<h6 id="Parameters_14" name="Parameters_14">Parameters</h6>
+<p>None.</p>
+<h6 id="Return_value_5" name="Return_value_5">Return value</h6>
+<p>Returns the previous registered handler.</p>
+<h3 id="preload.28.29" name="preload.28.29">preload()</h3>
+<p><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Preloads the database cache by loading pages
+from the start of the database file until the memory cache (the size of
+which is specified by PRAGMA cache_size=size) is full or the entire
+file is read.">Precarga el caché de la base de datos mediante la carga de las páginas desde el principio del archivo de base de datos hasta la caché de memoria (el tamaño de las que se especifica en </span></span><code>PRAGMA</code><span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Preloads the database cache by loading pages
+from the start of the database file until the memory cache (the size of
+which is specified by PRAGMA cache_size=size) is full or the entire
+file is read."> cache_size = tamaño) está lleno o la totalidad del expediente que se lee.</span></span></p>
+<div class="warning">
+ <strong>Advertencia</strong>: Este método ha sido <strong>eliminado</strong> en Firefox 3.</div>
+<p><span class="long_text" id="result_box"><span title="The cache
+must be active on the database for this to work.">El caché debe estar activo en la base de datos para que esto funcione. </span><span style="background-color: rgb(255, 255, 255);" title="This means that you
+must have a transaction open on the connection, or have a transaction
+open on another connection that shares the same pager cache.">Esto significa que debe tener una transacción abierta en la conexión, o tiene una transacción abierta en otro contexto, que comparte la misma caché de localizador. </span><span style="background-color: rgb(255, 255, 255);" title="This cached data
+will go away when the transaction is closed.">Estos datos almacenados en caché se marchará cuando se cierra la transacción. </span></span><br>
+ <br>
+ <span class="long_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="This preload
+operation can dramatically speed up read operations because the data is
+loaded as one large block.">Esta operación precarga puede acelerar las operaciones de lectura porque los datos se carga un gran bloque.</span></span><span class="long_text" id="result_box"><span title="Normally, pages are read in on
+demand, which can cause many disk seeks.">Normalmente, las páginas se lee en la carta, que puede causar muchos de disco busca.</span></span><span id="zippyspan" style="display: block;"><img alt="" class="buttons square13 zippy-plus" id="zippyicon" src="http://www.google.es/images/cleardot.gif" style="margin-right: 0.33em; cursor: pointer;"></span></p>
+<pre class="eval"> void preload();
+</pre>
+<h6 id="Parameters_15" name="Parameters_15">Parameters</h6>
+<p>None.</p>
+<h3 id="Example:_Creating_a_statement_without_parameters" name="Example:_Creating_a_statement_without_parameters"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Example: Creating a statement without
+parameters">Ejemplo: Creación de una declaración sin parámetros</span></span></h3>
+<h4 id="C.2B.2B" name="C.2B.2B">C++</h4>
+<pre class="eval">rv = mDBConn-&gt;ExecuteSimpleSQL(NS_LITERAL_CSTRING("CREATE TABLE foo (a INTEGER)"));
+</pre>
+<h4 id="JavaScript" name="JavaScript">JavaScript</h4>
+<pre class="eval">mDBConn.executeSimpleSQL("CREATE TABLE foo (a INTEGER)");
+</pre>
+<h3 id="Example:_Creating_a_statement_that_has_parameters" name="Example:_Creating_a_statement_that_has_parameters"><span class="short_text" id="result_box"><span style="background-color: rgb(255, 255, 255);" title="Example: Creating a statement that has
+parameters">Ejemplo: Creación de una declaración que tiene parámetros</span></span></h3>
+<h4 id="C.2B.2B_2" name="C.2B.2B_2">C++</h4>
+<pre>nsCOMPtr&lt;mozIStorageStatement&gt; statement;
+rv = mDBConn-&gt;CreateStatement(NS_LITERAL_CSTRING("SELECT * FROM foo WHERE a = ?1"),
+                              getter_AddRefs(statement));
+NS_ENSURE_SUCCESS(rv, rv);
+</pre>
+<h4 id="JavaScript_2" name="JavaScript_2">JavaScript</h4>
+<pre class="eval">var statement = mDBConn.createStatement("SELECT * FROM foo WHERE a = ?1");
+</pre>
+<h2 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h2>
+<ul>
+ <li><a href="/es/Storage" title="es/Storage">Storage</a> <span class="short_text" id="result_box"><span style="" title="">introducción mozStorage y con el artículo</span></span></li>
+ <li><a href="/es/MozIStorageStatement" title="es/MozIStorageStatement">mozIStorageStatement</a> Create and execute SQL statements on a SQLite database.</li>
+ <li><a href="/es/MozIStorageValueArray" title="es/MozIStorageValueArray">mozIStorageValueArray</a> Wraps an array of SQL values, such as a result row.</li>
+ <li><a href="/es/MozIStorageFunction" title="es/MozIStorageFunction">mozIStorageFunction</a> Create a new SQLite function.</li>
+ <li><a href="/es/MozIStorageAggregateFunction" title="es/MozIStorageAggregateFunction">mozIStorageAggregateFunction</a> Create a new SQLite aggregate function.</li>
+ <li><a href="/es/MozIStorageProgressHandler" title="es/MozIStorageProgressHandler">mozIStorageProgressHandler</a> Monitor progress during the execution of a statement.</li>
+ <li><a href="/es/MozIStorageStatementWrapper" title="es/MozIStorageStatementWrapper">mozIStorageStatementWrapper</a> Storage statement wrapper</li>
+</ul>
+<p></p>

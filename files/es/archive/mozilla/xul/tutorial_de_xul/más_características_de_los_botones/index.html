@@ -1,0 +1,102 @@
+---
+title: Más características de los botones
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Más_características_de_los_botones
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Button_Features
+---
+<p>En esta sección, veremos algunas características adicionales de los botones.</p>
+
+<h3 id="A.C3.B1adiendo_una_imagen" name="A.C3.B1adiendo_una_imagen">Añadiendo una imagen</h3>
+
+<p>Usted puede agregar una imagen a un botón especificando una URL en el atributo <code><a href="es/XUL/Atributos#image">imagen</a></code>. La imagen se carga desde la URL, la cual puede ser relativa o absoluta, entonces la imagen se muestra sobre el botón.</p>
+
+<p>El botón de arriba tendrá <code><a href="es/XUL/Atributos#label">label</a></code> y <code><a href="es/XUL/Atributos#image">imagen</a></code> 'happy.png'. La imagen aparecerá a la izquierda de la etiqueta. Usted puede cambiar la posición usando otros dos atributos. Esto se explicará en un momento.</p>
+
+<p><strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;button label="Ayuda" image="happy.png"/&gt;
+</pre>
+
+<h4 id="Bot.C3.B3n_con_imagen_CSS" name="Bot.C3.B3n_con_imagen_CSS">Botón con imagen CSS</h4>
+
+<p>Another way to specify the image is by using the CSS <a href="es/Css/xref">list-style-image</a> style property on the button. This is designed to allow the 'skin' (in this case, the appearance of the image) to be changed without changing the XUL file. An example is shown below.</p>
+
+<p><strong>Ejemplo 2</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_2.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;button id="find-button"
+  label="Busca" style="list-style-image: url('happy.png')"/&gt;
+</pre>
+
+<p>In this case, the image 'happy.png' is displayed on the button. The <code><a href="es/XUL/Atributos#style">estilo</a></code> attribute functions similar to its HTML counterpart. In general, it can be used on all XUL elements. Note that you really should put the style declarations in a separate style sheet.</p>
+
+<h3 id="Posicionando_las_im.C3.A1genes" name="Posicionando_las_im.C3.A1genes">Posicionando las imágenes</h3>
+
+<p>By default, the image on a button will appear to the left of the text label. There are two attributes that can be used to control this position.</p>
+
+<p>The <code><a href="es/XUL/Atributos#dir">dirección</a></code> attribute controls the direction of the image and text. By setting this attribute to the value <code>reverse</code>, the image will be placed on the right side of the text. By using the value <code>normal</code>, or leaving the attribute out entirely, the image will be placed on the left side of the text.</p>
+
+<p>The <code><a href="es/XUL/Atributos#orient">orientación</a></code> attribute can be used to place the image above or below the text. The default value is <code>horizontal</code> which is used to place the image on the left or right. You can also use the value <code>vertical</code> to place the image above or below. In this case, the dir attribute controls the placement above or below. The same values are used, where <code>normal</code> means place the image above the text, and <code>reverse</code> means place the image below the text.</p>
+
+<p><strong>Ejemplo 3</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_3.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_3.xul">Ver en funcionamiento</a></p>
+
+<div class="float-right"><img alt="Image:advbtns1.png"></div>
+
+<pre>&lt;button label="Left" image="happy.png"/&gt;
+&lt;button label="Right" image="happy.png" dir="reverse"/&gt;
+&lt;button label="Above" image="happy.png" orient="vertical"/&gt;
+&lt;button label="Below" image="happy.png" orient="vertical" dir="reverse"/&gt;
+</pre>
+
+<p> </p>
+
+<p>The example here shows all four types of alignment of buttons. Note that the two attributes are not specified when the default value can be used.</p>
+
+<h3 id="Botones_con_contenido_extra" name="Botones_con_contenido_extra">Botones con contenido extra</h3>
+
+<p>Buttons may have arbitrary markup contained inside them, and it will be rendered inside the button. You probably wouldn't use this very often, but you might use it when creating custom elements.</p>
+
+<p>For example, the following will create a button where two of the words are red:</p>
+
+<p><strong>Ejemplo 4</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_4.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_4.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;button&gt;
+  &lt;description value="This is a"/&gt;
+  &lt;description value="rather strange" style="color: red;"/&gt;
+  &lt;description value="button"/&gt;
+&lt;/button&gt;
+</pre>
+
+<p>Any XUL element may be placed inside the <code><a href="es/XUL/Elementos#button">botón</a></code>. HTML elements will be ignored, so you need to wrap them inside a <code><a href="es/XUL/Elementos#description">descripción</a></code> element. If you specify the <code><a href="es/XUL/Atributos#label">label</a></code> attribute on the button, it will override any content placed inside the button.</p>
+
+<h4 id="Bot.C3.B3n_con_men.C3.BA_emergente" name="Bot.C3.B3n_con_men.C3.BA_emergente">Botón con menú emergente</h4>
+
+<p>You can place a <code><a href="es/XUL/Elementos#menupopup">menupopup</a></code> inside the button to cause a menu to drop down when the button is pressed, much like the <code><a href="es/XUL/Elementos#menulist">menulist</a></code>. However, in this case you must set the <code><a href="es/XUL/Atributos#button.type">type</a></code> attribute to the value <code>menu</code>.</p>
+
+<p><strong>Ejemplo 5</strong>:</p>
+
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_5.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advbtns_5.xul">Ver en funcionamiento</a></p>
+
+<div class="float-right"><img alt="Image:advbtns2.png"></div>
+
+<pre>&lt;button type="menu" label="Device"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Impresora"/&gt;
+    &lt;menuitem label="Ratón"/&gt;
+    &lt;menuitem label="Teclado"/&gt;
+  &lt;/menupopup&gt;
+&lt;/button&gt;
+</pre>
+
+<p>In this example, the user may click the button to pop up a menu containing three items. Note that selecting one of these menu items doesn't change the label on the button, unlike a <code><a href="es/XUL/Elementos#menulist">menulist</a></code>. This type of button is intended to be used like a menu, with scripts attached to each item to perform a task. We'll see more on menus later.</p>
+
+<p>You can also set the <code><a href="es/XUL/Atributos#button.type">type</a></code> attribute to the value <code>menu-button</code>. This also creates a button with a menu, but the appearance will be different. The image to the right shows the difference. The left one is a 'menu' and the second one is a 'menu-button'. It has an arrow indicating the presence of a menu. For the 'menu', the user may click anywhere on the button to show the menu. For the 'menu-button', the user must click the arrow to show the menu.</p>
+
+<p>Seguimos con como <a href="es/Tutorial_de_XUL/El_modelo_de_caja">los elementos XUL son colocados en una ventana</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Usando_espaciadores" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:El_modelo_de_caja">Siguiente  »</a></p>
+</div>

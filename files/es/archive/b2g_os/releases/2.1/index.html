@@ -1,0 +1,40 @@
+---
+title: Firefox OS 2.1 para desarrolladores
+slug: Archive/B2G_OS/Releases/2.1
+tags:
+  - '2.1'
+  - B2G
+  - Firefox OS
+  - Notas de la versión
+translation_of: Archive/B2G_OS/Releases/2.1
+---
+<div class="summary">
+ <p><span class="seoSummary"><strong style="line-height: 1.5;">Firefox OS 2.1 está en una etapa de pre-lanzamiento en este momento</strong><span style="line-height: 1.5;">. Su componente Gecko está basado en </span><strong style="line-height: 1.5;">Firefox 33/34</strong><span style="line-height: 1.5;">. En esta página se detallan las características para desarrolladores recientemente implementadas en Gecko específicamente para</span> Firefox OS 2.1.</span></p>
+</div>
+<div class="note">
+ <p><strong>Nota</strong>: Para las características generales de Gecko que están también presentes en Firefox OS Gecko, consulta las <a href="/en-US/docs/Mozilla/Firefox/Releases/33" title="/en-US/docs/Mozilla/Firefox/Releases/28">notas de Firefox 33 para desarrolladores</a> y <a href="/en-US/docs/Mozilla/Firefox/Releases/34" title="/en-US/docs/Mozilla/Firefox/Releases/28">notas de Firefox 34 para desarrolladores</a>.</p>
+</div>
+<h2 id="Cambios_en_la_plataforma">Cambios en la plataforma</h2>
+<p>Firefox OS tenia una política de seguridad de "Aplicación individual (single app) por origen", pero esto ha cambiado desde Firefox 34/Firefox OS 2.1 (leer <a href="https://developer.mozilla.org/en-US/Apps/Build/installable_apps_for_Firefox_OS/App_manifest_FAQ#Can_I_have_more_than_one_app_at_my_origin.3F">FAQ</a> para mas información). Si usted necesita compatibilidad con las versiones anteriores, considere alojar tus aplicaciones en orígenes separados; una estrategia posible es <a href="/en-US/Marketplace/Publishing/Adding_a_subdomain">crear diferentes subdominios</a> para tus aplicaciones.</p>
+<h2 id="Cambios_en_la_API_Web">Cambios en la API <span style="font-size: 2.14285714285714rem;">Web </span><span style="font-size: 2.14285714285714rem;"> </span></h2>
+<ul>
+ <li>Los event handlers de emparejamiento de la <a href="/en-US/docs/WebAPI/WebBluetooth">API</a> <a href="/en-US/docs/WebAPI/WebBluetooth">Web Bluetooth </a>— <a href="/es/docs/Web/API/BluetoothAdapter/ondevicepaired" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>BluetoothAdapter.ondevicepaired</code></a> y <a href="/es/docs/Web/API/BluetoothAdapter/ondeviceunpaired" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>BluetoothAdapter.ondeviceunpaired</code></a> — han sido añadidos (ver <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1036234" title="FIXED: Implement pairing in BluetoothAdapter (event handlers)">error 1036234</a>).</li>
+ <li>Métodos de emparejamiento actualizados de la <a href="/en-US/docs/WebAPI/WebBluetooth">API</a> <a href="/en-US/docs/WebAPI/WebBluetooth">Web Bluetooth </a> han sido añadidos (ver <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1036233" title="FIXED: Implement pairing in BluetoothAdapter (methods)">error 1036233</a>):
+  <ul>
+   <li>Promise&lt;void&gt; <a href="/es/docs/Web/API/BluetoothAdapter/pair" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>BluetoothAdapter.pair</code></a>(DOMString aAddress)</li>
+   <li>Promise&lt;void&gt; <a href="/es/docs/Web/API/BluetoothAdapter/unpair" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>BluetoothAdapter.unpair</code></a>(DOMString aAddress)</li>
+   <li>sequence&lt;BluetoothDevice&gt; <a href="/es/docs/Web/API/BluetoothAdapter/getPairedDevices" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>BluetoothAdapter.getPairedDevices</code></a></li>
+  </ul>
+ </li>
+ <li>Compatibilidad para la <a href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html">API</a> <a href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html">Web Speech </a>está pendiente: un parche ha sido enviado (ver <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1032964" title="[B2G][SpeechRTC][User Story]: Enabling Voice input in Firefox OS">error 1032964</a>).</li>
+ <li><span class="author-g-41mtsa1hor7b107c i">La API FileHandle ha sido renombrada como MutableFile, y LockedFile como FileHandle (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1006485" title="FIXED: FileHandle: Rename FileHandle to MutableFile and LockedFile to FileHandle">error 1006485</a>).</span></li>
+</ul>
+<h2 id="Mira_también">Mira también</h2>
+<ul>
+ <li>Notas de Firefox OS 2.1 (Estará enlazada una vez se publique.)</li>
+</ul>
+<h2 id="Versiones_Antiguas">Versiones Antiguas</h2>
+<p></p><div class="multiColumnList">
+<ul>
+<li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/2.0">Firefox OS 2.0 for developers</a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.4">Firefox OS 1.4 for developers</a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.3">Firefox OS 1.3 for developers</a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.2">Firefox OS 1.2 for developers</a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.1">Firefox OS 1.1 for developers</a></li><li><a href="/en-US/docs/Mozilla/Firefox_OS/Releases/1.0.1">Firefox OS 1.0.1 for developers</a></li></ul>
+</div><p></p>

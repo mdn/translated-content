@@ -1,0 +1,178 @@
+---
+title: Crear una extensión dinámica en la barra de estado
+slug: Crear_una_extensión_dinámica_en_la_barra_de_estado
+tags:
+  - Complementos
+  - Todas_las_Categorías
+  - extensiones
+translation_of: Archive/Creating_a_dynamic_status_bar_extension
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Crear_una_extensión_en_la_barra_de_estado" style="float: left;">« Anterior</a><a href="/es/docs/Añadir_preferencias_a_una_extensión">Siguiente  »</a></p>
+</div><p></p>
+
+<p><br>
+ Este artículo está basado en el artículo <a href="es/Crear_una_extensi%c3%b3n_en_la_barra_de_estado">Crear una extensión en la barra de estado</a>, el cual crea un panel estático en la barra de estado de Firefox, mejorándolo con la actualización dinámica de su contenido con información traída de la web cada pocos minutos. Concretamente, el ejemplo muestra un stock quote en la barra de estado y, cuando el ratón se mueve sobre él, muestra una ayuda emergente que contiene información más detallada sobre el stock.</p>
+
+<p>Los conceptos tratados en el ejemplo anterior no se explicarán de nuevo aquí. En vez de eso, descarga el código de ejemplo o ve al anterior ejemplo para más detalles.</p>
+
+<h2 id="Descargar_el_ejemplo" name="Descargar_el_ejemplo">Descargar el ejemplo</h2>
+
+<p>Puedes descargar una copia de este ejemplo para echarle un vistazo o para utilizarlo como base para tu propia extensión. O si ya tienes el código del artículo [[Crear una extensión en la barra de estado] puedes seguir este tutorial para actualizar dicho código existente con nuevas características.</p>
+
+<p><a class="external" href="http://developer.mozilla.org/samples/extension-samples/stockwatcher.zip">Descargar el ejemplo</a></p>
+
+<h2 id="Actualizar_el_manifiesto_de_instalaci.C3.B3n" name="Actualizar_el_manifiesto_de_instalaci.C3.B3n">Actualizar el manifiesto de instalación</h2>
+
+<p>Reemplaza todas las ocurrencias del ID del primer ejemplo ("status-bar-sample-1") con el ID del nuevo ejemplo ("stockwatcher") y actualiza los metadatos para describir nuestra nueva extensión.</p>
+
+<p>Véase <a href="es/Manifiestos_de_instalaci%c3%b3n">Manifiestos de instalación</a> para más detalles.</p>
+
+<h2 id="Actualizar_el_manifiesto_chrome" name="Actualizar_el_manifiesto_chrome">Actualizar el manifiesto chrome</h2>
+
+<p>El manifiesto <a href="es/Chrome">chrome</a> sólo necesita una pequeña modificación desde el ejemplo anterior. Simplemente reemplaza el ID del primer ejemplo ("status-bar-sample-1") con el nombre del nuevo ejemplo ("stockwatcher").</p>
+
+<p>Si necesitas un repaso, visita la sección <a href="es/Manifiesto_Chrome">Manifiesto Chrome</a>.</p>
+
+<h2 id="Escribir_el_fichero_XUL" name="Escribir_el_fichero_XUL">Escribir el fichero XUL</h2>
+
+<p>Ahora necesitaremos complicar un poquito el fichero XUL para poder añadir una referencia al código Javascript que hará el trabajo real:</p>
+
+<pre class="eval"> &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+ &lt;!DOCTYPE overlay &gt;
+ &lt;overlay id="stockwatcher-overlay"
+   xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+ &lt;script type="application/x-javascript"
+   src="<span class="nowiki">chrome://stockwatcher/content/stockwatcher.js</span>"/&gt;
+
+ &lt;!-- Firefox --&gt;
+ &lt;statusbar id="status-bar"&gt;
+   &lt;statusbarpanel id="stockwatcher"
+     label="Loading..."
+     tooltiptext="Current value"
+     onclick="StockWatcher.refreshInformation()"
+   /&gt;
+ &lt;/statusbar&gt;
+
+ &lt;/overlay&gt;
+</pre>
+
+<p>También has de percatarte de que la definición del panel de la barra de estado incluye ahora una nueva propiedad, <code>onclick</code> que referencia a la función Javascript que será ejecutada en el momento en el que el usuario pinche sobre el panel de la barra de estado. Nuestra extensión actualizará la información de stock cuando el usuario pinche en el panel.</p>
+
+<h2 id="Escribir_el_c.C3.B3digo_JavaScript" name="Escribir_el_c.C3.B3digo_JavaScript">Escribir el código JavaScript</h2>
+
+<p>La tarea de obtener el stock quote y actualizar el visor del panel de la barra de estado es manejado por el código JavaScript en el fichero <code>stockwatcher.js</code></p>
+
+<p>A diferencia de nuestro anterior ejemplo, éste está implementado como un objeto. Lo hacemos así porque en futuros ejemplos de esta serie haremos cosas que son más fáciles de hacer si nuestra extensión está implementada así.</p>
+
+<p>Usamos la función del DOM <code>window.addEventListener()</code> para decirle a Firefox que llame a la función <code>StockWatcher.startup()</code> cuando se abra una nueva ventana del navegador:</p>
+
+<pre class="eval"> window.addEventListener("load", function(e) { StockWatcher.startup(); }, false);
+</pre>
+
+<p>Nuestra nueva extensión posee dos funciones principales: <code>startup()</code> y <code>refreshInformation()</code>. La función <code>refreshInformation()</code> contiene otra función llamada <code>infoReceived()</code>. Las siguientes secciones las diseccionarán una a una.</p>
+
+<h3 id="startup.28.29" name="startup.28.29">startup()</h3>
+
+<p>La función <code>startup()</code> es llamada cuando se abre una nueva ventana del navegador. <span class="comment">We end up reloading data from each of the windows once in 10 minutes - fixing this by creating a JS component responsible for communication with the server is a good idea for one of the future articles</span></p>
+
+<pre class="eval">   startup: function()
+   {
+     this.refreshInformation();
+     window.setInterval(this.refreshInformation, 10*60*1000);
+   },
+</pre>
+
+<p>Esta función comienza llamando a nuestra función <code>refreshInformation()</code> la cual es responsable de recuperar y mostrar la información del stock ticker en el panel de la barra de estado. Hacemos esto ya que una vez cargada la información del stock es mostrada tan pronto como sea posible.</p>
+
+<p>Tras hacer esto, instalamos una rutina de intervalo en la ventana del navegador llamando a <code><a href="es/DOM/window.setInterval">window.setInterval()</a></code>. Esto configura nuestra rutina para que sea llamada cada 10 minutos (el intervalo de tiempo se especifica en milisegundos).</p>
+
+<h3 id="refreshInformation.28.29" name="refreshInformation.28.29">refreshInformation()</h3>
+
+<p>La función <code>refreshInformation()</code> es llamada siempre que queramos actualizar la información del stock. Es llamada cuando el usuario hace clic sobre el panel de la barra de estado, cuando nuestra extensión es añadida a la ventana del navegador y periódicamente por el manejador del intervalo para actualizar la información.</p>
+
+<pre class="eval">   refreshInformation: function()
+   {
+     var httpRequest = null;
+     var fullUrl = "<a class="external" href="http://quote.yahoo.com/d/quotes.csv?f=sl1d1t1c1ohgv&amp;e=.csv&amp;s=GOOG" rel="freelink">http://quote.yahoo.com/d/quotes.csv?...&amp;e=.csv&amp;s=GOOG</a>";
+
+     ...
+
+     httpRequest = new XMLHttpRequest();
+
+     httpRequest.open("GET", fullUrl, true);
+     httpRequest.onload = infoReceived;
+     httpRequest.send(null);
+   }
+ }
+</pre>
+
+<p>La variable <code>httpRequest</code> contendrá un objeto <code><a href="es/XMLHttpRequest">XMLHttpRequest</a></code>. Este objeto es usado para configurar y ejecutar una petición HTTP en un servidor web el cual usaremos para conseguir los datos del stock quote.</p>
+
+<p>La variable <code>fullUrl</code> es la URL completa que se usa cuando se pide un stock quote. En este caso, utilizamos los valores separados por comas devueltos por Yahoo para analizar fácilmente los datos de stock quote para Google (símbolo de ticker GOOG).</p>
+
+<p><code>refreshInformation()</code> incrusta otra función, <code>infoReceived()</code>, que explicaremos en breve y de modo separado.</p>
+
+<p>Lo primero que hacemos es crear un nuevo objeto <code>XMLHttpRequest</code> para poder procesar nuestra petición. Abrimos la petición, especificando que deseamos realizar un comando HTTP "GET" con la URL <code>fullUrl</code>. El valor booleano <code>true</code> como tercer parámetro indica que queremos realizar la petición asíncronamente.</p>
+
+<p>Al establecer la propiedad <code>httpRequest.onload</code> a nuestra función <code>infoReceived()</code> hacemos que la petición llame a <code>infoReceived()</code> cuando se reciba una respuesta desde el servidor. Finalmente, enviamos la petición al servidor y volvemos.</p>
+
+<h3 id="infoReceived.28.29" name="infoReceived.28.29">infoReceived()</h3>
+
+<p>Cuando el servidor responda nuestra petición, nuestra función <code>infoReceived()</code> que está incrustada dentro de <code>refreshInformation()</code> será llamada automáticamente.</p>
+
+<p>Incrustamos esta función dentro de <code>refreshInformation()</code> para que el ámbito de su variable incluya a las variables usadas por dicha función. Debido a la forma en la que funciona JavaScript, si <code>infoReceived()</code> estuviese fuera de <code>refreshInformation()</code> entonces no tendría acceso al mismo ámbito de variable. De hecho, incluso el valor <code>this</code> no coincidiría por lo que no podemos obtener las mismas variables y funciones de ese modo.</p>
+
+<pre class="eval">     function infoReceived()
+     {
+       var samplePanel = document.getElementById('stockwatcher');
+       var output = httpRequest.responseText;
+
+       if (output.length)
+       {
+         // Remove whitespace from the end of the string;
+         // this gets rid of the end-of-line characters
+
+         output = output.replace(/\W*$/, "");
+
+         // Build the tooltip string
+
+         var fieldArray = output.split(","); <span class="comment">assert that fieldArray[0] == "GOOG"</span>
+         samplePanel.label = "GOOG: " + fieldArray[1];
+         samplePanel.tooltipText = "Chg: " + fieldArray[4] + " | " +
+             "Open: " + fieldArray[5] + " | " +
+             "Low: " + fieldArray[6] + " | " +
+             "High: " + fieldArray[7] + " | " +
+             "Vol: " + fieldArray[8];
+       }
+     }
+</pre>
+
+<p>Lo primero que hacemos aquí es asignar el panel de la barra de estado a la variable <code>samplePanel</code> llamando a la función del DOM <code><a href="es/DOM/document.getElementById">document.getElementById()</a></code>. Necesitamos esto para poder hacer cambios en el mismo panel de la barra de estado.</p>
+
+<p>Luego recuperaremos el resultado devuelto por el servidor web en la variable <code>output</code> desde la propiedad <code>XMLHttpRequest.responseText</code> property.</p>
+
+<p>El texto recibido del servidor tendrá este aspecto:</p>
+
+<pre class="eval"> "GOOG",414.20,"5/1/2006","1:36pm",-3.74,417.85,419.44,412.19,4760215
+</pre>
+
+<p>Luego analizaremos el texto. Usaremos la función <code>split()</code> para dividir los valores separados por comas en partes individuales, con cada campo en un elemento separado en el array <code>fieldArray</code>. En el índice 0 estará el símbolo del mismo ticker el cual no necesitamos debido a que sabemos el stock que estamos utilizando.</p>
+
+<p>La etiqueta del panel de la barra de estado se establece para que indique el valor actual del stock, el cual está almacenado en <code>fieldArray[1]</code>, estableciendo la propiedad <code>samplePanel.label</code>.</p>
+
+<p>Luego estableceremos la ayuda emergente para el panel de la barra de estado asignándole una cadena apropiada a la propiedad <code>samplePanel.tooltipText</code>. La cadena se construye a partir de una combinación de cadenas estáticas y varios elementos del array <code>fieldArray</code>.</p>
+
+<h2 id="Verlo_en_acci.C3.B3n" name="Verlo_en_acci.C3.B3n">Verlo en acción</h2>
+
+<p>Ahora puedes instalar y probar la extensión. Deberías ver algo parecido a esto:</p>
+
+<p><img alt="Image:stockwatcher.png"></p>
+
+<p>En este pantallazo tenemos también el anterior ejemplo ejecutándose, mostrando el texto "Hello World".</p>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Crear_una_extensión_en_la_barra_de_estado" style="float: left;">« Anterior</a><a href="/es/docs/Añadir_preferencias_a_una_extensión">Siguiente  »</a></p>
+</div><p></p>

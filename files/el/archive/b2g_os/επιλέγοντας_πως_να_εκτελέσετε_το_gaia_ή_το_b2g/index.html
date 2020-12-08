@@ -1,0 +1,58 @@
+---
+title: Επιλέγοντας πως να εκτελέσετε το Gaia ή το B2G
+slug: Archive/B2G_OS/Επιλέγοντας_πως_να_εκτελέσετε_το_Gaia_ή_το_B2G
+translation_of: Archive/B2G_OS/Choosing_how_to_run_Gaia_or_B2G
+---
+<p>{ B2GMain() }}</p>
+<p>Ανάλογα με τις συγκεκριμένες σας ανάγκες, έχετε μια ποικιλία επιλογών να σκεφτείτε όταν πειραματίζεστε με το Firefox OS ή τη διεπαφή χρήστη <a href="/en/Mozilla/Boot_to_Gecko/Introduction_to_Gaia" title="en/Mozilla/Boot_to_Gecko/Introduction_to_Gaia">Gaia</a>. Μπορείτε να διαλέξετε ανάμεσα από τις ακόλουθες επιλογές: κάθε μια έχει τα πλεονεκτήματα και τα μειονεκτήματα της για να τα σκεφτείτε ενώ κάποιες είναι πιο ευέλικτες από κάποιες άλλες.</p>
+<h2 id="Εκτελώντας_το_B2G_στον_υπολογιστή">Εκτελώντας το B2G στον υπολογιστή</h2>
+<p>Είναι δυνατό να έχετε ένα εξομοιωτή του Firefox OS και να εκτελέσετε το Gaia σ' αυτόν. Το λογισμικό αυτό βασίζεται στον Firefox αλλά συμπεριφέρεται πιο πολύ σαν την εμπειρία του Firefox OS σε συσκευή. Αυτό τον καιρό η Mozilla παρέχει <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Hacking">nightly εκδόσεις αυτής της εφαρμογής</a> για τους προγραμματιστές. Εάν είστε εξοικειωμένος με την ανάπτυξη του βασικού κώδικα του Firefox ή των C++ projects, μπορείτε να αναπτύξετε αυτή την εφαρμογή μόνος σας.</p>
+<h3 id="Πλεονεκτήματα">Πλεονεκτήματα</h3>
+<ul>
+ <li>Ο εξομοιωτής παρέχει προβολή στο μέγεθος ενός κινητού.</li>
+ <li>Η εμπειρία είναι παρόμοια με αυτή μιας πραγματικής κινητής συσκευής στις  περισσότερες περιπτώσεις.</li>
+ <li>Τα περισσότερα (αλλά όχι όλα) API της συσκευής είναι διαθέσιμα.</li>
+</ul>
+<h3 id="Μειονεκτήματα">Μειονεκτήματα</h3>
+<ul>
+ <li>Χρειάζεται να έχετε εγκταταστήσει ένα σύστημα βασισμένο σε C/C++.</li>
+ <li>Χρειάζεται να αναπτύξετε το Gecko και τον εξομοιωτή μόνος σας.</li>
+ <li>Τα εργαλεία προγραμματιστή του Firefox δεν είναι διαθέσιμα.</li>
+</ul>
+<h3 id="Γιατί_να_εκτελέσετε_τον_εξομοιωτή_B2G">Γιατί να εκτελέσετε τον εξομοιωτή B2G</h3>
+<p>This is a good middle-of-the-road testing and development solution. It's a good way to get a better feel for how your app or other code will work in a device-like environment without actually having to flash a phone every time you want to test something.</p>
+<div class="note">
+ <strong>Note:</strong> Before shipping an app, you will absolutely want to test on real hardware!</div>
+<h3 class="note" id="Simulator_varieties">Simulator varieties</h3>
+<p>There are several varieties of the Firefox OS Simulator available:</p>
+<dl>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Using_Firefox_OS_Simulator" title="/en-US/docs/Mozilla/Boot_to_Gecko/Using_Firefox_OS_Simulator">Firefox OS Simulator add-on</a></dt>
+ <dd>
+  This extension is the primary tool for testing apps running on Firefox OS, and is the recommended solution for most users. It includes support for developer tools, adding apps to the test environment, and so forth.</dd>
+ <dt>
+  Developer desktop builds</dt>
+ <dd>
+  These builds of the simulator are stand-alone applications that are primarily intended to help core Firefox OS developers to verify technical features.</dd>
+ <dt>
+  Localizer desktop builds</dt>
+ <dd>
+  The localizer builds are primarily useful for localization teams to work on and test their localizations of Firefox OS and of Firefox OS apps.</dd>
+</dl>
+<h2 id="Running_B2G_on_a_mobile_device">Running B2G on a mobile device</h2>
+<p>The most thorough way to test your B2G or Gaia development work, or your web app, is to build and install Firefox OS on a real mobile device. This is also the most complicated process.</p>
+<h3 id="Advantages">Advantages</h3>
+<ul>
+ <li>You get the full mobile device experience.</li>
+ <li>All device APIs are available.</li>
+ <li>You can experience your code's performance in real device usage.</li>
+</ul>
+<h3 id="Disadvantages">Disadvantages</h3>
+<ul>
+ <li>You need a full C/C++ build system installed.</li>
+ <li>You need to build Gecko and Gaia yourself.</li>
+ <li>You need a compatible mobile device on which to install the B2G operating system.</li>
+ <li>You need to flash the device with B2G, removing whatever operating system is currently installed.</li>
+</ul>
+<h3 id="Why_to_run_B2G_on_a_mobile_device">Why to run B2G on a mobile device</h3>
+<p>This is, obviously, the most accurate way to test any code or web project on B2G or Gaia. By running on actual mobile hardware, you can ensure that your project performs well and looks good, and uses all device APIs correctly. In addition, you should <strong>always</strong> test on real hardware before shipping any code; failing to do so can have unfortunate effects that can be hard to predict.</p>

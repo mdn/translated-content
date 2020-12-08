@@ -1,0 +1,37 @@
+---
+title: Compilar Firefox con código en Rust
+slug: Mozilla/Firefox/Compilar_Firefox_con_codigo_en_Rust
+tags:
+  - Compilación
+  - Gecko
+  - rust
+translation_of: Archive/Mozilla/Firefox/Building_Firefox_with_Rust_code
+---
+<div>{{FirefoxSidebar}}</div><p>En mayo de 2015, <a href="https://www.rust-lang.org/">el lenguaje de programación Rust</a> alcanzó su objetivo de estabilidad 1.0 y se comenzaron diversos experimentos que consistieron en escribir partes de Gecko en Rust. Esta página contiene una guía de orientación aproximada para las personas que trabajan en esta área.</p>
+
+<p>Consulte el <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1135640">informe n.º 1135640</a> (<em>oxidation</em>) para ver el seguimiento integral de la integración de componentes en el lenguaje Rust.</p>
+
+<h2 id="Activación_del_código_en_Rust">Activación del código en Rust</h2>
+
+<p>Con el trabajo realizado en el <a class="bz_bug_link
+          bz_status_RESOLVED  bz_closed" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1161339" title="RESOLVED FIXED - Support rust files in moz.build SOURCES">informe n.º 1161339</a> se implementó compatibilidad básica para compilar código en Rust. Esta compatibilidad está activada para las compilaciones oficiales de la mayoría de las plataformas, con la excepción de las compilaciones que realice localmente. Si en su «path» tiene «rustc», puede añadir:</p>
+
+<pre>ac_add_options --enable-rust</pre>
+
+<p>… a su archivo <a href="/en-US/docs/Configuring_Build_Options">mozconfig</a> y la compilación probablemente funcionará. Normalmente apuntamos a versiones estables de Rust pero, en ocasiones, para admitir algunas plataformas nuevas se necesitan versiones especiales de las herramientas de compilación. Si aún no tiene Rust, utilice la herramienta «<a href="https://www.rustup.rs/">rustup</a>» para instalarlo.</p>
+
+<h2 id="Poner_a_prueba_el_código_en_Rust">Poner a prueba el código en Rust</h2>
+
+<p>En el árbol hay una sencilla prueba unitaria de vinculación. Es posible utilizarla para comprobar que Rust esté activado y funcione correctamente con su configuración de compilaciones.</p>
+
+<pre>./mach gtest rust.*</pre>
+
+<p>Revise que la prueba <strong>rust.CallFromCpp</strong> se supere, junto con cualquier otra que haya.</p>
+
+<h2 id="Adición_de_código_en_Rust">Adición de código en Rust</h2>
+
+<p>Para agregar código nuevo en Rust se requiere añadir el archivo .rs de nivel superior para agruparlo en un cajón (<em>crate</em>) de SOURCES en moz.build.</p>
+
+<p>Debido a límites de Cargo y al sistema de compilaciones de Firefox, por el momento solo admitimos cajones sencillos, sin dependencias. No empleamos Cargo, sino que creamos un archivo rlib a partir de todos los archivos rust enumerados en SOURCES. El compilador de Rust buscará los módulos internos según los nombres de archivo de código fuente, pero las referencias de <code>extern crate</code> no se resolverán.</p>
+
+<p>El sistema de compilaciones generará un cajón especial para una «biblioteca unificada de Rust», compilada como una biblioteca estática (<code>librul.a</code>) que a su vez se enlaza en <code>XUL</code>, de modo que todos sus símbolos públicos estén disponibles para el código en C++.</p>

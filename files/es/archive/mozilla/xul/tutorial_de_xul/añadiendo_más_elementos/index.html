@@ -1,0 +1,98 @@
+---
+title: Añadiendo más elementos
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Añadiendo_más_elementos
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_More_Elements
+---
+<p>Concluiremos la discusión de cajas adicionando algunas al diálogo de encontrar archivos.</p>
+
+<h3 id="A.C3.B1adiendo_elementos_al_ejemplo_de_encontrar_archivos" name="A.C3.B1adiendo_elementos_al_ejemplo_de_encontrar_archivos">Añadiendo elementos al ejemplo de encontrar archivos</h3>
+
+<p>Vamos a agregar ahora algunos elementos al diálogo de encontrar archivos. Primero, vamos a adicionar la capacidad de búsqueda por otra información, tal como el tamaño y la fecha del archivo.</p>
+
+<pre class="eval">&lt;hbox&gt;
+  <span class="highlightred">&lt;menulist id="searchtype"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Name"/&gt;
+      &lt;menuitem label="Size"/&gt;
+      &lt;menuitem label="Date Modified"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;menulist id="searchmode"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Is"/&gt;
+      &lt;menuitem label="Is Not"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;</span>
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+&lt;/hbox&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:boxfinal1.png"></div>
+
+<p>Dos <a href="es/Tutorial_de_XUL/Controles_de_listas#Listas_desplegables">cajas de listas desplegables</a> son añadidas al diálogo. Un <a href="es/Tutorial_de_XUL/Usando_espaciadores">espaciador</a> ha sido adicionado en medio de cada elemento para separarlos. Estos espaciadores han dado un ancho específico de 10 pixeles cada uno. Usted notará que si la ventana es redimensionada, la caja de texto crece pero los otros componentes no. Igualmente notará que la etiqueta fué removida.</p>
+
+<p>Si usted redimensiona la ventana verticalmente, el elemento no cambia su tamaño. Esto es debido a que está dentro de cajas horizontales. Lo mas apropiado sería que los botones de Encontrar y Cancelar permanecieran siempre al fondo de la ventana. Esto es fácil de hacer agregando un espaciador en medio de las dos cajas horizontales.</p>
+
+<pre class="eval"><span class="highlightred">&lt;spacer style="height: 10px"/&gt;</span>
+&lt;hbox&gt;
+  &lt;menulist id="searchtype"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Nombre"/&gt;
+      &lt;menuitem label="Medida"/&gt;
+      &lt;menuitem label="Fecha de modificación"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;menulist id="searchmode"&gt;
+    &lt;menupopup&gt;
+      &lt;menuitem label="Es"/&gt;
+      &lt;menuitem label="No es"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menulist&gt;
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+&lt;/hbox&gt;
+
+<span class="highlightred">&lt;spacer style="height: 10px" flex="1"/&gt;</span>
+
+&lt;hbox&gt;
+</pre>
+
+<p>Ahora cuando el diálogo es redimensionado, los dos botones se moverán ya que estan siempre a lo largo del fondo del diálogo. El primer <a href="es/XUL/Elemento">espaciador</a> añade espacio extra en medio de la etiqueta del título y los elementos del criterio de búsqueda.</p>
+
+<p>Se vería mejor si hubiera un borde al rededor de los criterios de búsqueda. Hay dos formas de hacer esto. Podemos utilizar la propiedad CSS <code>border</code> de CSS o podemos utilizar el elemento <code><a href="es/XUL/Elemento">caja de grupo</a></code>. Este primer método puede requerir que coloquemos el estilo en la caja como tal. Sin embargo, vamos a utilizar el último método. Un <a href="es/Tutorial_de_XUL/Cajas_de_grupo">caja de grupo</a> tiene la ventaja de que dibuja una caja con un bonito estilo biselado, adecuado para el tema actual.</p>
+
+<p>Vamos a cambiar la caja dentro de un <code>groupbox</code>:</p>
+
+<p><span class="nowiki">Aquí inserta texto sin formato</span> <span class="highlightred">&lt;groupbox orient="horizontal"&gt;</span></p>
+
+<pre class="eval">  <span class="highlightred"><span class="nowiki">&lt;caption label="Search Criteria"/&gt;</span></span>
+  &lt;menulist id="searchtype"&gt;
+  .
+  .
+  .
+  &lt;spacer style="width: 10px;"/&gt;
+  &lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;
+<span class="highlightred">&lt;/groupbox&gt;</span>
+</pre>
+
+<div class="float-right"><img alt="Image:boxfinal2.png"></div>
+
+<p>Existen otros problemas cosméticos como tal. Podemos también tener que el groupbox crece de tal forma que se extiende verticalmente al final de la caja. También, podemos modificar algunos de los márgenes de tal forma que los elementos queden mejor posicionados.</p>
+
+<p>Veremos más ejemplos del modelo de caja y algunos de sus rasgos a medida que continuemos agregando elementos durante el tutorial.</p>
+
+<p>Ejemplo de encontrar archivos <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxfinal.xul">Ver en funcionamiento</a></p>
+
+<p>Seguido, veremos como <a href="es/Tutorial_de_XUL/Pilas_y_barajas">crear pilas</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Cajas_de_grupo" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Pilas_y_barajas">Siguiente  »</a></p>
+</div>

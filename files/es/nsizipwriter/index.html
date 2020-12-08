@@ -1,0 +1,517 @@
+---
+title: nsIZipWriter
+slug: NsIZipWriter
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIZipWriter
+---
+<p> The <code>nsIZipWriter</code> interface provides an easy way for scripts to archive data in the Zip file format. Operations on the archive can be performed one by one, or queued for later execution.</p>
+
+<p>Once all the operations you wish to perform are added to the queue, a call to <code><a href="#processQueue.28.29">processQueue()</a></code> will perform the operations in the order they were added to the queue. Operations performed on the queue throw any errors that occur out to the observer.</p>
+
+<p>Attempting to perform a synchronous operation on the interface while the background queue is in progress will throw an <code>NS_ERROR_IN_PROGRESS</code> exception.</p>
+
+<p>File and directory names should use slashes ("/") as separators and should not begin with a slash.</p>
+
+<p></p><div class="blockIndicator note"><strong>Nota:</strong> Although it isn't necessary to add directory entries in order to add file entries within them, some Zip utilities may have problems with that, so it may be best to add the directory entries explicitly first.</div><p></p>
+
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/modules/libjar/zipwriter/public/nsIZipWriter.idl" rel="custom">modules/libjar/zipwriter/public/nsIZipWriter.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.9 (Firefox 3)</span></div>
+</div><p></p>
+
+<p>Inherits from: <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
+
+<p>Implemented by: <code>@mozilla.org/zipwriter;1</code>. To create an instance, use:</p>
+
+<pre class="eval">var zipWriter = Components.classes["@mozilla.org/zipwriter;1"]
+                          .createInstance(Components.interfaces.nsIZipWriter);
+</pre>
+
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#addDirectoryEntry.28.29">addDirectoryEntry</a>(in AUTF8String aZipEntry, in PRTime aModTime, in boolean aQueue);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#addEntryChannel.28.29">addEntryChannel</a>(in AUTF8SZtring aZipEntry, in PRTime aModTime, in PRInt32 aCompression, in <a href="/en/nsIChannel" title="en/nsIChannel">nsIChannel</a> aChannel, in boolean aQueue)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#addEntryFile.28.29">addEntryFile</a>(in AUTF8SZtring aZipEntry, in PRInt32 aCompression, in nsIFile aFile, in boolean aQueue)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#addEntryStream.28.29">addEntryStream</a>(in AUTF8SZtring aZipEntry, in PRTime aModTime, in PRInt32 aCompression, in <a href="/en/nsIInputStream" title="en/nsIInputStream">nsIInputStream</a> aStream, in boolean aQueue)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#close.28.29">close</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en/nsIZipEntry" title="en/nsIZipEntry">nsIZipEntry</a> <a href="#getEntry.28.29">getEntry</a>(in <a href="/en/AUTF8String" title="en/AUTF8String">AUTF8String</a> aZipEntry);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a href="#hasEntry.28.29">hasEntry</a>(in AUTF8String aZipEntry);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#open.28.29">open</a>(in <a href="/en/nsIFile" title="en/nsIFile">nsIFile</a> aFile, in PRInt32 aIoFlags);</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#processQueue.28.29">processQueue</a>(in nsIRequestObserver aObserver, in nsISupports aContext)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeEntry.28.29">removeEntry</a>(in AUTF8String aZipEntry, in boolean aQueue)</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Attributes" name="Attributes">Attributes</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Attribute</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>comment</code></td>
+   <td><code><a href="/en/ACString" title="en/ACString">ACString</a></code></td>
+   <td>Gets or sets the comment associated with the currently open Zip file. Throws <code>NS_ERROR_NOT_INITIALIZED</code> if there isn't an open Zip file.</td>
+  </tr>
+  <tr>
+   <td><code>inQueue</code></td>
+   <td><code>boolean</code></td>
+   <td><code>true</code> if operations are being performed in the background queue, or <code>false</code> if background operations are not in progress. <em>Read-only.</em></td>
+  </tr>
+  <tr>
+   <td><code>file</code></td>
+   <td><code><a href="/en/nsIFile" title="en/nsIFile">nsIFile</a></code></td>
+   <td>The Zip file being written to. <em>Read-only.</em></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Constants" name="Constants">Constants</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>COMPRESSION_NONE</code></td>
+   <td>0</td>
+   <td>Don't compress the file.</td>
+  </tr>
+  <tr>
+   <td><code>COMPRESSION_FASTEST</code></td>
+   <td>1</td>
+   <td>Use the fastest compression method when adding the file to the archive.</td>
+  </tr>
+  <tr>
+   <td><code>COMPRESSION_DEFAULT</code></td>
+   <td>6</td>
+   <td>Use the default compression method when adding the file to the archive.</td>
+  </tr>
+  <tr>
+   <td><code>COMPRESSION_BEST</code></td>
+   <td>9</td>
+   <td>Use the best compression method when adding the file to the archive.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">Methods</h2>
+
+<h3 id="addDirectoryEntry.28.29" name="addDirectoryEntry.28.29">addDirectoryEntry()</h3>
+
+<p>Adds a new directory entry to the Zip file.</p>
+
+<p></p><div class="blockIndicator note"><strong>Nota:</strong> Although it isn't necessary to add directory entries in order to add file entries within them, some Zip utilities may have problems with that, so it may be best to add the directory entries explicitly first.</div><p></p>
+
+<pre class="eval"> void addEntryDirectory(
+   in AUTF8String aZipEntry,
+   in PRTime aModTime,
+   in boolean aQueue
+ );
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aZipEntry</code></dt>
+ <dd>The path of the directory entry to add to the Zip file.</dd>
+ <dt><code>aModTime</code></dt>
+ <dd>The modification time of the entry in microseconds.</dd>
+ <dt><code>aQueue</code></dt>
+ <dd>If <code>true</code>, the operation is queued for later execution. If <code>false</code>, the operation is performed immediately.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown" name="Exceptions_thrown">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>No Zip file is open.</dd>
+ <dt><code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+ <dd>The specified path already exists in the Zip file.</dd>
+ <dt><code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>The Zip writer is already performing another operation.</dd>
+</dl>
+
+<h3 id="addEntryChannel.28.29" name="addEntryChannel.28.29">addEntryChannel()</h3>
+
+<p>Adds data from a channel to the Zip file.</p>
+
+<pre class="eval"> void addEntryChannel(
+   in AUTF8String aZipEntry,
+   in PRTime aModTime,
+   in PRInt32 aCompression,
+   in nsIChannel aChannel,
+   in boolean aQueue
+ );
+</pre>
+
+<h6 id="Parameters_2" name="Parameters_2">Parameters</h6>
+
+<dl>
+ <dt><code>aZipEntry</code></dt>
+ <dd>The path of the file entry to add to the Zip file. This is the path it will be located at within the Zip file.</dd>
+</dl>
+
+<p></p><div class="blockIndicator note"><strong>Nota:</strong> You must use forward slashes in the path.</div><p></p>
+
+<dl>
+ <dt><code>aModTime</code></dt>
+ <dd>The modification time of the entry in microseconds.</dd>
+ <dt><code>aCompression</code></dt>
+ <dd>One of the <a href="#Constants">compression constants</a>, indicating the compression method to use.</dd>
+ <dt><code>aChannel</code></dt>
+ <dd>The channel from which to get the data.</dd>
+ <dt><code>aQueue</code></dt>
+ <dd>If <code>true</code>, the operation is queued for later execution. If <code>false</code>, the operation is performed immediately.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown_2" name="Exceptions_thrown_2">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>No Zip file is open.</dd>
+ <dt><code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+ <dd>The specified path already exists in the Zip file.</dd>
+ <dt><code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>The Zip writer is already performing another operation.</dd>
+</dl>
+
+<h3 id="addEntryFile.28.29" name="addEntryFile.28.29">addEntryFile()</h3>
+
+<p>Adds a new file or directory to the Zip file. If the specified file is a directory, this call is equivalent to:</p>
+
+<pre class="eval"> addDirectoryEntry(aZipEntry, aFile.lastModifiedTime, aQueue);
+</pre>
+
+<pre class="eval"> void addEntryFile(
+   in AUTF8String aZipEntry,
+   in PRInt32 aCompression,
+   in nsIFile aFile,
+   in boolean aQueue
+ );
+</pre>
+
+<h6 id="Parameters_3" name="Parameters_3">Parameters</h6>
+
+<dl>
+ <dt><code>aZipEntry</code></dt>
+ <dd>The path of the file entry to add to the Zip file. This is the path it will be located at within the Zip file.</dd>
+</dl>
+
+<p></p><div class="blockIndicator note"><strong>Nota:</strong> You must use forward slashes in the path.</div><p></p>
+
+<dl>
+ <dt><code>aCompression</code></dt>
+ <dd>One of the <a href="#Constants">compression constants</a>, indicating the compression method to use.</dd>
+ <dt><code>aFile</code></dt>
+ <dd>The file from which to get the data and modification time.</dd>
+ <dt><code>aQueue</code></dt>
+ <dd>If <code>true</code>, the operation is queued for later execution. If <code>false</code>, the operation is performed immediately.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown_3" name="Exceptions_thrown_3">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>No Zip file is open.</dd>
+ <dt><code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+ <dd>The specified path already exists in the Zip file.</dd>
+ <dt><code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>The Zip writer is already performing another operation.</dd>
+</dl>
+
+<h3 id="addEntryStream.28.29" name="addEntryStream.28.29">addEntryStream()</h3>
+
+<p>Adds data from an input stream to the Zip file.</p>
+
+<pre class="eval"> void addEntryStream(
+   in AUTF8String aZipEntry,
+   in PRTime aModTime,
+   in PRInt32 aCompression,
+   in nsIInputStream aStream,
+   in boolean aQueue
+ );
+</pre>
+
+<h6 id="Parameters_4" name="Parameters_4">Parameters</h6>
+
+<dl>
+ <dt><code>aZipEntry</code></dt>
+ <dd>The path of the file entry to add to the Zip file. This is the path it will be located at within the Zip file.</dd>
+</dl>
+
+<p></p><div class="blockIndicator note"><strong>Nota:</strong> You must use forward slashes in the path.</div><p></p>
+
+<dl>
+ <dt><code>aModTime</code></dt>
+ <dd>The modification time of the entry in microseconds.</dd>
+ <dt><code>aCompression</code></dt>
+ <dd>One of the <a href="#Constants">compression constants</a>, indicating the compression method to use.</dd>
+ <dt><code>aStream</code></dt>
+ <dd>The input stream from which to get the data.</dd>
+ <dt><code>aQueue</code></dt>
+ <dd>If <code>true</code>, the operation is queued for later execution. If <code>false</code>, the operation is performed immediately.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown_4" name="Exceptions_thrown_4">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>No Zip file is open.</dd>
+ <dt><code>NS_ERROR_FILE_ALREADY_EXISTS</code></dt>
+ <dd>The specified path already exists in the Zip file.</dd>
+ <dt><code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>The Zip writer is already performing another operation.</dd>
+</dl>
+
+<h3 id="close.28.29" name="close.28.29">close()</h3>
+
+<p>Closes the Zip file.</p>
+
+<pre class="eval"> void close();
+</pre>
+
+<h6 id="Parameters_5" name="Parameters_5">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Exceptions_thrown_5" name="Exceptions_thrown_5">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>No Zip file is open.</dd>
+ <dt><code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>The Zip writer is already performing another operation.</dd>
+</dl>
+
+<p>Other errors may be thrown if a failure to complete the Zip file occurs.</p>
+
+<h3 id="getEntry.28.29" name="getEntry.28.29">getEntry()</h3>
+
+<p>Returns a specified entry in the current Zip file.</p>
+
+<pre class="eval"> nsIZipEntry getEntry(
+   in AUTF8String aZipEntry,
+ );
+</pre>
+
+<h6 id="Parameters_6" name="Parameters_6">Parameters</h6>
+
+<dl>
+ <dt><code>aZipEntry</code></dt>
+ <dd>The path of the file entry to get.</dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>An <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIZipEntry" title="">nsIZipEntry</a></code> object describing the specified entry, or <code>null</code> if there is no such entry.</p>
+
+<h3 id="hasEntry.28.29" name="hasEntry.28.29">hasEntry()</h3>
+
+<p>Determines whether or not a specific entry exists in the Zip file.</p>
+
+<pre class="eval"> boolean hasEntry(
+   in AUTF8String aZipEntry,
+ );
+</pre>
+
+<h6 id="Parameters_7" name="Parameters_7">Parameters</h6>
+
+<dl>
+ <dt><code>aZipEntry</code></dt>
+ <dd>The path of the file entry to check for.</dd>
+</dl>
+
+<h6 id="Return_value_2" name="Return_value_2">Return value</h6>
+
+<p><code>true</code> if there is an entry with the given path in the Zip file, otherwise returns <code>false</code>.</p>
+
+<h3 id="open.28.29" name="open.28.29">open()</h3>
+
+<p>Opens the specified Zip file.</p>
+
+<pre class="eval"> void open(
+   in nsIFile aFile,
+   in PRInt32 aIoFlags
+ );
+</pre>
+
+<h6 id="Parameters_8" name="Parameters_8">Parameters</h6>
+
+<dl>
+ <dt><code>aFile</code></dt>
+ <dd>The Zip file to open.</dd>
+ <dt><code>aIoFlags</code></dt>
+ <dd>The open flags for the Zip file, from <code>prio.h</code>.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown_6" name="Exceptions_thrown_6">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_ALREADY_INITIALIZED</code></dt>
+ <dd>A Zip file is already open.</dd>
+ <dt><code>NS_ERROR_INVALID_ARG</code></dt>
+ <dd>The <code>aFile</code> parameter is null.</dd>
+ <dt><code>NS_ERROR_FILE_NOT_FOUND</code></dt>
+ <dd>The specified file was not found and the flags didn't permit creating it. Or the directory for the file does not exist.</dd>
+ <dt><code>NS_ERROR_FILE_CORRUPTED</code></dt>
+ <dd>The specified file is not a recognizable Zip file.</dd>
+</dl>
+
+<p>Other errors may be thrown upon failing to open the file, such as if the file is corrupt or in an unsupported format.</p>
+
+<h3 id="processQueue.28.29" name="processQueue.28.29">processQueue()</h3>
+
+<p>Processes all queued items until the entire queue has been processed or an error occurs. The observer is notified when the first operation begins and when the last operation completes.</p>
+
+<p>Any failures are passed to the observer.</p>
+
+<p>The Zip writer will be busy until the queue is complete or an error halts processing of the queue early. In the event of an early failure, the remaining items stay in the queue; calling <code>processQueue()</code> again will continue where operations left off.</p>
+
+<pre class="eval"> void processQueue(
+   in nsIRequestObserver aObserver,
+   in nsISupports aContext
+ );
+</pre>
+
+<h6 id="Parameters_9" name="Parameters_9">Parameters</h6>
+
+<dl>
+ <dt><code>aObserver</code></dt>
+ <dd>The observer to receive notifications from the queue.</dd>
+ <dt><code>aContext</code></dt>
+ <dd>The context to pass to the observer.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown_7" name="Exceptions_thrown_7">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>No Zip file is open.</dd>
+ <dt><code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>The queue is already in progress.</dd>
+</dl>
+
+<h3 id="removeEntry.28.29" name="removeEntry.28.29">removeEntry()</h3>
+
+<p>Removes an entry from the Zip file.</p>
+
+<pre class="eval"> void removeEntry(
+   in AUTF8String aZipEntry,
+   in boolean aQueue
+ );
+</pre>
+
+<h6 id="Parameters_10" name="Parameters_10">Parameters</h6>
+
+<dl>
+ <dt><code>aZipEntry</code></dt>
+ <dd>The path of the entry to remove from the Zip file.</dd>
+ <dt><code>aQueue</code></dt>
+ <dd><code>true</code> to place the remove operation into the queue, or <code>false</code> to process it at once.</dd>
+</dl>
+
+<h6 id="Exceptions_thrown_8" name="Exceptions_thrown_8">Exceptions thrown</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_INITIALIZED</code></dt>
+ <dd>No Zip file is open.</dd>
+ <dt><code>NS_ERROR_IN_PROGRESS</code></dt>
+ <dd>The queue is already in progress.</dd>
+ <dt><code>NS_ERROR_FILE_NOT_FOUND</code></dt>
+ <dd>No entry with the given path exists.</dd>
+</dl>
+
+<p>Other errors may occur if updating the Zip file fails.</p>
+
+<h2 id="Examples" name="Examples">Examples</h2>
+
+<h3 id="Adding_a_comment_to_a_Zip_file" name="Adding_a_comment_to_a_Zip_file">Adding a comment to a Zip file</h3>
+
+<pre>var zipWriter = Components.Constructor("@mozilla.org/zipwriter;1", "nsIZipWriter");
+var zipW = new zipWriter();
+
+zipW.open(myZipFilePath, PR_RDWR | PR_CREATE_FILE | PR_TRUNCATE);
+zipW.comment = "This is a comment.";
+zipW.close();
+</pre>
+
+<p><code>PR_RDWR</code> and friends are constants that are not in any interface (see <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=433295">Bug 433295</a>), so for the code above to work you need something like:</p>
+
+<pre>const PR_RDONLY      = 0x01;
+const PR_WRONLY      = 0x02;
+const PR_RDWR        = 0x04;
+const PR_CREATE_FILE = 0x08;
+const PR_APPEND      = 0x10;
+const PR_TRUNCATE    = 0x20;
+const PR_SYNC        = 0x40;
+const PR_EXCL        = 0x80;
+</pre>
+
+<p>See <a href="/en/PR_Open#Parameters" title="en/PR_Open#Parameters">PR_Open Documentation</a> or <a class="external" href="http://developer.mozilla.org/en/docs/Code_snippets:File_I/O">File I/O Snippets</a> for details.</p>
+
+<h3 id="Adding_a_file_to_a_Zip_archive" name="Adding_a_file_to_a_Zip_archive">Adding a file to a Zip archive</h3>
+
+<p>This code synchronously adds the file specified by the <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code> <code>theFile</code> to the Zip archive.</p>
+
+<pre>var zipWriter = Components.Constructor("@mozilla.org/zipwriter;1", "nsIZipWriter");
+var zipW = new zipWriter();
+
+zipW.open(myZipFilePath, PR_RDWR | PR_CREATE_FILE | PR_TRUNCATE);
+zipW.addEntryFile("Path/For/This/File/In/Zip Archive", Components.interfaces.nsIZipWriter.COMPRESSION_DEFAULT, theFile, false);
+zipW.close();
+</pre>
+
+<p>The argument <code>nyZipFilePath</code> isn't a path but rather it has to be an <code>nsIFile</code> instance specifying the location of the new zip file. The file need not exist, but the directory that contains it (nsIFile.parent) must exist.</p>
+
+<h3 id="Other_examples" name="Other_examples">Other examples</h3>
+
+<p>For other examples, take a look at the unit tests in the source tree:</p>
+
+<ul>
+ <li><code><a href="https://dxr.mozilla.org/mozilla-central/source/modules/libjar/zipwriter/test/unit" rel="custom">modules/libjar/zipwriter/test/unit</a></code></li>
+</ul>
+
+<h2 id="See_also" name="See_also">See also</h2>
+
+<ul>
+ <li><code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIZipReader" title="">nsIZipReader</a></code></li>
+ <li><code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile" title="">nsIFile</a></code></li>
+ <li><code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIChannel" title="">nsIChannel</a></code></li>
+ <li><code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIInputStream" title="">nsIInputStream</a></code></li>
+</ul>

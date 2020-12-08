@@ -1,0 +1,38 @@
+---
+title: Atender las cargas de página
+slug: Mozilla/Add-ons/SDK/Tutorials/Listen_for_Page_Load
+tags:
+  - Add-on SDK
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials/Listen_for_Page_Load
+---
+<div class="note">Para realizar los pasos que se describen a continuación es necesario tener <a href="/en-US/Add-ons/SDK/Tutorials/Installation">instalado el SDK </a>y conocimientos <a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_With_cfx">básico de <code>cfx</code></a>.</div>
+
+<p>Se pueden obtener notificaciones sobre la carga de nuevas paǵinas a través del módulo <a href="/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code></a>. El siguiente add-on escucha el evento integrado de la pestaña <code>ready</code>  y simplemente registra el URL de cada pestaña en la medida que el/la usuario/a realiza la carga:</p>
+
+<pre class="brush: js">require("sdk/tabs").on("ready", logURL);
+
+function logURL(tab) {
+  console.log(tab.url);
+}
+</pre>
+
+<p>No se obtiene acceso directo a ningún contenido de la pestaña.</p>
+
+<p>Para acceder al contenido de la pestaña se necesita adjuntar un script a la pestaña usando <code>tab.attach()</code>. Este add-on adjunto un script para abrir todas las pestañas. El script agrega un borde rojo al documento de la pestaña:</p>
+
+<pre class="brush: js">require("sdk/tabs").on("ready", runScript);
+
+function runScript(tab) {
+  tab.attach({
+    contentScript: "if (document.body) document.body.style.border = '5px solid red';"
+  });
+}
+</pre>
+
+<p>(Este ejemplo es solo para mostrar la idea: para implementar algo como esto, se debería usar <a href="/en-US/Add-ons/SDK/High-Level_APIs/page-mod"><code>page-mod</code></a>, y especificar un "*" como el patron de coincidencia.)</p>
+
+<h2 id="Conozca_más">Conozca más</h2>
+
+<p>Para conocer más sobre las pestañas en el SDK, puede dirigirse a la <a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs">referencia de </a><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs"><code>tabs</code> en la API</a>. Puede escuchar varios eventos relacionados con las pestañas incluyendo <code>open</code>, <code>close</code>, y <code>activate</code>.</p>
+
+<p>Para conocer mas sobre la ejecución de scripts en las pestañas, puede diregirse a<a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs#attach%28options%29"> </a><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs#attach%28options%29">usando <code>tab.attach()</code></a><a href="https://developer.mozilla.org/en-US/Add-ons/SDK/High-Level_APIs/tabs#attach%28options%29"> en el tutorial</a>.</p>

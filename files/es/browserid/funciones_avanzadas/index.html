@@ -1,0 +1,43 @@
+---
+title: Funciones Avanzadas
+slug: BrowserID/Funciones_Avanzadas
+---
+<div class="note">
+ In all example code in this page, <code>gotAssertion</code> is the callback argument to <code>navigator.id.get()</code>.</div>
+<h2 id="Persistent_Login">Persistent Login</h2>
+<p>The <code>navigator.id.get()</code> API takes a set of options as an optional parameter. By using two of these options, <code>allowPersistent</code> and <code>silent</code>, you can enable the user to stay logged into your web site until the certificate signed by their identity provider expires.</p>
+<h3 id="allowPersistent"><code>allowPersistent</code></h3>
+<p>You use <code>allowPersistent</code> like this:</p>
+<pre class="brush: js">navigator.id.get(gotAssertion, {allowPersistent: true});</pre>
+<p>This option causes a new checkbox to appear in the BrowserID dialog asking the user if they want to stay signed in. If the user checks the box to stay signed in, then the browser creates an assertion and passes it to <code>gotAssertion </code>as normal, but remembers the user selection.</p>
+<h3 id="silent"><code>silent</code></h3>
+<p>You use <code>silent</code> like this:</p>
+<pre class="brush: js">navigator.id.get(gotAssertion, {silent: true});"}</pre>
+<p>With this option the browser will not display any dialog to the user, but will call <code>gotAssertion</code> without any user intervention. If the user had checked the box to stay signed in, and the user's certificate has not yet expired, then the browser will silently generate a new assertion and pass it into <code>gotAssertion</code>. Otherwise, the browser will pass <code>null</code> into <code>gotAssertion</code>.</p>
+<h3 id="Supporting_Persistent_Login">Supporting Persistent Login</h3>
+<p>First, on page load, call <code>navigator.id.get({silent: true})</code><code>: </code></p>
+<pre class="brush: js">$(function() {\n  navigator.id.get(gotAssertion, {silent: true});\n});</pre>
+<p>Next, inside <code>gotAssertion</code>, if the assertion is not <code>null</code> and validates, log the user in, otherwise call <code>loggedOut()</code>:</p>
+<pre class="brush: js">function gotAssertion(assertion) {
+  if (assertion !== null) {
+    // Send assertion to the server for validation
+    if (!validateAssertionOnServer(assertion) loggedOut();
+    else loggedIn();
+  }
+  else {
+    loggedOut();
+  }
+}</pre>
+<p>Finally, <code>loggedOut()</code> updates the page to indicate that the user is logged out. In particular, the page needs to display a "Sign In" button whose click handler will call <code>navigator.id.get({allowPersistent: true})</code>:</p>
+<pre class="brush: js"><span>$(<span class="string">'#browserid' }}</span></span><span>).click(</span><span class="keyword">function</span><span>() {
+  </span><span>navigator.id.get(gotAssertion</span>, {allowPersistent: true}<span>);</span>
+<span>  <span class="keyword">return</span><span> </span><span class="keyword">false</span><span>;</span></span>
+<span>});</span></pre>
+<h3 id="Example_Code">Example Code</h3>
+<p>You can see a sample implementation of this at <a class="external" href="http://myfavoritebooze.org/" title="http://myfavoritebooze.org/">http://myfavoritebooze.org/</a>, whose <a class="link-https" href="https://github.com/lloyd/myfavoritebooze.org/">source code is available on GitHub</a>.</p>
+<h2 id="Requiring_a_Specific_Email">Requiring a Specific Email</h2>
+<p>BrowserID enables a user to have multiple identities, and choose which one to sign in with. If a user has multiple email addresses which can be verified using BrowserID, then when a web site calls <code>navigator.id.get()</code>, the user will be presented with all their addresses, and asked which one to use.</p>
+<p>Sometimes, though, a web site knows which email the user needs to choose. For example, if Alice shares a photo with Bob using a BrowserID-enabled photo-sharing site, the web site needs to authenticate Bob against the exact email address Alice used to invite him. If Bob chooses the wrong email from multiple choices the invitation will fail.</p>
+<p>In this situation the web site can require that the user use a particular email address by setting the <code>requiredEmail</code> option as an argument to <code>navigator.id.get()</code>. For example:</p>
+<pre class="brush: js">navigator.id.get(gotAssertion, {requiredEmail: \"bob@example.com\"});</pre>
+<p>Even if Bob has multiple email addresses, he'll only be presented with "<a class="link-mailto" href="mailto:bob@example.com" rel="freelink">bob@example.com</a>". The web site's <code>gotAssertion()</code> function is guaranteed to be called with either an assertion for "<a class="link-mailto" href="mailto:bob@example.com" rel="freelink">bob@example.com</a>", or with a null assertion.</p>

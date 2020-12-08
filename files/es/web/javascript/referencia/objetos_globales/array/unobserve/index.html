@@ -1,0 +1,127 @@
+---
+title: Array.unobserve()
+slug: Web/JavaScript/Referencia/Objetos_globales/Array/unobserve
+translation_of: Archive/Web/JavaScript/Array.unobserve
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p>El método Array<strong>.unobserve()</strong> se utiliza para eliminar observadores asignados por {{jsxref("Array.observe()")}}.</p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="syntaxbox"><code>Array.unobserve(<var>arr</var>, <var>callback</var>)</code></pre>
+
+<h3 id="Parámetros">Parámetros</h3>
+
+<dl>
+ <dt><code>arr</code></dt>
+ <dd>El array para parar la observación.</dd>
+ <dt><code>callback</code></dt>
+ <dd>La referencia al observador para dejar de llamar <span id="result_box" lang="es"><span class="hps">cada vez que</span> <span class="hps">se realizan cambios</span> <span class="hps">en el a</span></span>rray <strong>arr</strong>.</dd>
+</dl>
+
+<h2 id="Descripción">Descripción</h2>
+
+<p><code>Array.unobserve()</code> debe ser llamado después de  {{jsxref("Array.observe()")}} con el fin de eliminar un observador de un array.</p>
+
+<p><span id="result_box" lang="es"><span class="hps">El callback (llamada de retorno)</span> <span class="hps">debe</span> <span class="hps">ser una referencia a</span> <span class="hps">una función y no</span> <span class="hps">una función anónima</span><span>, ya que</span> <span class="hps">esta referencia</span> <span class="hps">se utilizará para</span> borrar <span class="hps">el</span> <span class="hps">observador</span> <span class="hps">anterior.</span> <span class="hps">Es inútil</span> <span class="hps">llamar</span> a </span><strong>Array.unobserve()</strong><span lang="es"><span class="hps"> con</span> <span class="hps">una función anónima</span> <span class="hps">como</span> <span class="hps">callback</span><span>, porque no va a</span> <span class="hps">eliminar ningún </span><span class="hps">observador.</span></span></p>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<h3 id="Dejando_de_observar_un_array">Dejando de observar un array</h3>
+
+<pre class="brush: js">var arr = [1, 2, 3];
+
+var observer = function(changes) {
+  console.log(changes);
+}
+
+Array.observe(arr, observer);
+​
+arr.push(4);
+// [{type: "splice", object: &lt;arr&gt;, index: 3, removed:[], addedCount: 1}]
+
+Array.unobserve(arr, observer);
+
+arr.pop();
+// The callback wasn't called</pre>
+
+<h3 id="Utilizando_una_función_anónima">Utilizando una función anónima</h3>
+
+<pre class="brush: js">var persons = ['Khalid', 'Ahmed', 'Mohammed'];
+
+Array.observe(persons, function (changes) {
+  console.log(changes);
+});
+
+persons.shift();
+// [{type: "splice", object: &lt;arr&gt;, index: 0, removed: [ "Khalid" ], addedCount: 0 }]
+
+Array.unobserve(persons, function (changes) {
+  console.log(changes);
+});
+
+persons.push('Abdullah');
+// [{type: "splice", object: &lt;arr&gt;, index: 2, removed: [], addedCount: 1 }]
+// The callback will always be called
+</pre>
+
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatChrome("36")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera("23")}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome("36")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera("23")}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Véase_también">Véase también</h2>
+
+<ul>
+ <li>{{jsxref("Array.observe()")}} {{non-standard_inline}}</li>
+ <li>{{jsxref("Object.observe()")}} {{non-standard_inline}}</li>
+ <li>{{jsxref("Object.unobserve()")}} {{non-standard_inline}}</li>
+</ul>

@@ -1,0 +1,140 @@
+---
+title: '-moz-border-top-colors'
+slug: Web/CSS/-moz-border-top-colors
+tags:
+  - CSS
+  - No estándar(2)
+  - Propiedad CSS
+  - Referencia CSS
+translation_of: Archive/Web/CSS/-moz-border-top-colors
+---
+<div>{{Non-standard_header}}{{CSSRef}}</div>
+
+<p>En la aplicaciones de Mozilla como Firefox la propiedad CSS {{cssxref("-moz-border-top-colors")}} establece una lista de colores para el borde inferior.</p>
+
+<p>Cuando un elemento tiene un borde que es mayor de un único pixel CSS, cada línea de pixels usa el siguiente color especificado con esta propiedad, desde fuera hacia adentro. Esto elimina la necesidad de cajas anidadas. Si el borde es mayor que el número colores especificados, la parte restante del borde mantendrá el último color interno especificado</p>
+
+<p>{{cssinfo}}</p>
+
+<p>No se aplica</p>
+
+<ol>
+ <li>Si {{Cssxref("border-style")}} es <code>dashed</code> o <code>dotted</code>.</li>
+ <li>En tablas con <code>border-collapse: collapse</code>.</li>
+</ol>
+
+<p> </p>
+
+<h2 id="Síntaxis">Síntaxis</h2>
+
+<p> </p>
+
+<pre class="brush:css">/* Valores de &lt;color&gt; único */
+-moz-border-top-colors: #f0f0f0;
+
+/* Valores de color &lt;color&gt; múltiple */
+-moz-border-top-colors: #f0f0f0 #a0a0a0 #505050 #000000;
+
+/* Valores gloables */
+-moz-border-top-colors: inherit;
+-moz-border-top-colors: initial;
+-moz-border-top-colors: unset;
+</pre>
+
+<h3 id="Valores">Valores</h3>
+
+<p>Acepta una lista de colores separados por espacios en blanco.</p>
+
+<dl>
+ <dt>&lt;color&gt;</dt>
+ <dd>Especifica el color de una línea de pixels para el borde inferiror. <code>transparent</code> (transparente) es un color válido. Ver  valores de {{cssxref("&lt;color&gt;")}} para ver las posibles unidades.</dd>
+ <dt>none</dt>
+ <dd>Valor por defecto, si se establece no se muestra ningún color  ni se usa {{cssxref("border-color")}}</dd>
+</dl>
+
+<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Ejemplo">Ejemplo</h2>
+
+<pre class="brush:html">&lt;div id="example"&gt;Ejemplo&lt;/div&gt;
+</pre>
+
+<pre class="brush:css">#example {
+  padding: 20px;
+  background-color: gray;
+  border: 10px solid black;
+  -moz-border-top-colors: #e00 #c30 #c50 #c60 #c70 #c80 #c90 #ca0 #cb0 #cc0;
+  -moz-border-right-colors: red #f60 #f80 #f90 #fa0 #fb0 #fc0 #fd0 #fe0 #ff0;
+  -moz-border-bottom-colors: red #f60 #f80 #f90 #fa0 #fb0 #fc0 #fd0 #fe0 #ff0;
+  -moz-border-left-colors: #e00 #c30 #c50 #c60 #c70 #c80 #c90 #ca0 #cb0 #cc0;
+}
+</pre>
+
+<p>{{EmbedLiveSample("Example", 120, 90)}}</p>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<p>Esta propiedad no forma parte de ninguna especificación.</p>
+
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("1.7")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Ver_además">Ver además</h2>
+
+<ul>
+ <li>{{cssxref("border-color")}}</li>
+ <li>{{Cssxref("-moz-border-right-colors")}}</li>
+ <li>{{Cssxref("-moz-border-bottom-colors")}}</li>
+ <li>{{Cssxref("-moz-border-left-colors")}}</li>
+</ul>

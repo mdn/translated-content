@@ -1,0 +1,62 @@
+---
+title: CameraManager
+slug: Archive/B2G_OS/API/CameraManager
+tags:
+  - API
+  - B2G
+  - Certified Only
+  - DOM
+  - DOM Reference
+  - Firefox OS
+  - Graphics
+  - JavaScript
+  - NeedsTranslation
+  - Non-standard
+  - Reference
+  - Référence(2)
+  - TopicStub
+  - WebAPI
+  - camera
+translation_of: Archive/B2G_OS/API/CameraManager
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/es/docs/Mozilla/Firefox_OS/API/Camera_API">Camera API</a></strong></li><li><strong><a href="/es/docs/Mozilla/Firefox_OS/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Páginas relacionadas a Camera API</summary><ol><li><a href="/es/docs/Mozilla/Firefox_OS/API/CameraCapabilities"><code>CameraCapabilities</code></a></li><li><a href="/es/docs/Mozilla/Firefox_OS/API/CameraControl"><code>CameraControl</code></a></li><li><a href="/es/docs/Mozilla/Firefox_OS/API/CameraManager"><code>CameraManager</code></a></li></ol></details></li></ol></section><p></p>
+
+<p></p><div class="warning">
+    <p style="text-align: center;">This API is available on <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> for <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">privileged or certified applications</a> only.</p>
+</div><p></p>
+
+<p><span class="seoSummary">The <strong><code>CameraManager</code></strong> interface provides access to any cameras available on the device being used.</span></p>
+
+<h2 id="Properties">Properties</h2>
+
+<p><em>This interface doesn't implements, nor inherits any property.</em></p>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+ <dt><a href="/es/docs/Web/API/CameraManager/getCamera" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>CameraManager.getCamera()</code></a></dt>
+ <dd>Gets a camera instance based on its identifier.</dd>
+ <dt><a href="/es/docs/Web/API/CameraManager/getListOfCameras" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>CameraManager.getListOfCameras()</code></a></dt>
+ <dd>Returns an <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> of all camera identifiers available on the device.</dd>
+</dl>
+
+<h2 id="Specification" name="Specification">Specification</h2>
+
+<p></p><p>Not part of any specification as yet; this will probably be replaced by WebRTC when it gains more widespread support on mobile devices.</p><p></p>
+
+<h2 id="Permissions">Permissions</h2>
+
+<p></p><p>Up until Firefox OS 1.4, The Camera API was a certified API, so not accessible to third party apps. From Firefox OS 2.0 onwards, the permission level has been downgraded to privileged, so it is now available for developers to use in their apps.</p>
+
+<pre class="brush: json">"permissions": {
+  "camera": {
+    "description": "Required for accessing cameras on the device."
+  }
+}</pre><p></p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/es/docs/Web/API/CameraControl" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>CameraControl</code></a></li>
+ <li><a href="/es/docs/Web/API/Navigator/mozCamera" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>navigator.mozCamera</code></a></li>
+</ul>

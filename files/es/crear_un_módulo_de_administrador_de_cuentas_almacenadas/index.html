@@ -1,0 +1,122 @@
+---
+title: Crear un módulo de Administrador de Cuentas almacenadas
+slug: Crear_un_módulo_de_Administrador_de_Cuentas_almacenadas
+tags:
+  - Firefox 3
+  - páginas_a_traducir
+translation_of: Mozilla/Creating_a_login_manager_storage_module
+---
+<p>{{ Fx_minversion_header(3) }} The Login Manager manages and stores user passwords. Extensions can replace the built-in password storage with their own implementation. This can be useful if you want to integrate Firefox password management with an existing password management system, or use your own password storage format or database.</p>
+
+<p>If you just want to use the Login Manager in your extensions, refer to the article <a href="es/Using_nsILoginManager">Using nsILoginManager</a>.</p>
+
+<p>Overriding the built-in Login Manager storage consists of two tasks:</p>
+
+<ol>
+ <li>Implement the {{ Interface("nsILoginManagerStorage") }} interface.</li>
+ <li>Register that interface in a specific category.</li>
+</ol>
+
+<div class="note">Some work has already been done to integrate the Login Manager with the Mac OS X keychain ({{ Bug(106400) }}) and Gnome Keyring Manager ({{ Bug(309807) }}). You should start with the existing code if you want to implement that in your extension.</div>
+
+<h3 id="Sample_JavaScript_implementation" name="Sample_JavaScript_implementation">Sample JavaScript implementation</h3>
+
+<p>The following code snippet is a JavaScript component that implements a dummy {{ Interface("nsILoginManagerStorage") }} interface. See <a href="es/How_to_Build_an_XPCOM_Component_in_Javascript">How_to_Build_an_XPCOM_Component_in_Javascript</a> for more details about JavaScript components.</p>
+
+<pre>const Cc = Components.classes;
+const Ci = Components.interfaces;
+
+Components.utils.import("resource://gre/modules/XPCOMUtils.jsm");
+
+function SampleLoginManagerStorage() {}
+SampleLoginManagerStorage.prototype = {
+  classDescription: "Sample nsILoginManagerStorage implementation",
+  contractID: "@example.com/login-manager/storage/sample;1",
+  classID: Components.ID("{364a118c-747a-4f6d-ac63-2d2998e5a5c1}"),
+  QueryInterface: XPCOMUtils.generateQI([Ci.nsILoginManagerStorage]),
+
+  // This registers the category for overriding the built-in nsILoginManagerStorage
+  _xpcom_categories: [
+    {
+      category: "login-manager-storage",
+      entry: "nsILoginManagerStorage"
+    }
+  ],
+
+
+ // Console logging service, used for debugging.
+  __logService : null,
+  get _logService() {
+    if (!this.__logService)
+      this.__logService = Cc["@mozilla.org/consoleservice;1"].
+                            getService(Ci.nsIConsoleService);
+    return this.__logService;
+  },
+  log: function (message) {
+    dump("SampleLoginManager: " + message + "\n");
+    this._logService.logStringMessage("SampleLoginManager: " + message);
+  },
+  // Logs function name and arguments for debugging
+  stub: function(arguments) {
+    var args = [];
+    for (let i = 0; i &lt; arguments.length; i++)
+      args.push(arguments[i])
+    this.log("Called " + arguments.callee.name + "(" + args.join(",") + ")");
+  },
+
+  init: function SLMS_init() {
+    this.stub(arguments);
+  },
+  initWithFile: function SLMS_initWithFile(aInputFile, aOutputFile) {
+    this.stub(arguments);
+  },
+  addLogin: function SLMS_addLogin(login) {
+    this.stub(arguments);
+  },
+  removeLogin: function SLMS_removeLogin(login) {
+    this.stub(arguments);
+  },
+  modifyLogin: function SLMS_modifyLogin(oldLogin, newLogin) {
+    this.stub(arguments);
+  },
+  getAllLogins: function SLMS_getAllLogins(count) {
+    this.stub(arguments);
+  },
+  removeAllLogins: function SLMS_removeAllLogins() {
+    this.stub(arguments);
+  },
+  getAllDisabledHosts: function SLMS_getAllDisabledHosts(count) {
+    this.stub(arguments);
+  },
+  getLoginSavingEnabled: function SLMS_getLoginSavingEnabled(hostname) {
+    this.stub(arguments);
+  },
+  setLoginSavingEnabled: function SLMS_setLoginSavingEnabled(hostname, enabled) {
+    this.stub(arguments);
+  },
+  findLogins: function SLMS_findLogins(count, hostname, formSubmitURL, httpRealm) {
+    this.stub(arguments);
+  },
+  countLogins: function SLMS_countLogins(aHostname, aFormSubmitURL, aHttpRealm) {
+    this.stub(arguments);
+  }
+};
+
+function NSGetModule(compMgr, fileSpec)
+  XPCOMUtils.generateModule([SampleLoginManagerStorage]);
+
+</pre>
+
+<h3 id="Sample_C.2B.2B_Implementation" name="Sample_C.2B.2B_Implementation">Sample C++ Implementation</h3>
+
+<p>{{ Bug(309807) }} contains a complete example. The category registration looks like this:</p>
+
+<pre>  nsCOMPtr&lt;nsICategoryManager&gt; cat =
+      do_GetService(NS_CATEGORYMANAGER_CONTRACTID);
+  NS_ENSURE_STATE(cat);
+
+  cat-&gt;AddCategoryEntry("login-manager-storage", "nsILoginManagerStorage",
+                        kYourContractID, PR_TRUE, PR_TRUE, nsnull);
+</pre>
+
+<p>Don't forget to unregister the category on unload.</p>

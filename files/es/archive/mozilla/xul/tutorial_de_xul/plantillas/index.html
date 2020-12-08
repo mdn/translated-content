@@ -1,0 +1,191 @@
+---
+title: Plantillas
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Plantillas
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Templates
+---
+<p>En esta sección descubriremos cómo poblar elementos con datos.</p>
+
+<h3 id="Poblando_elementos" name="Poblando_elementos">Poblando elementos</h3>
+
+<p>XUL provee un método con el cual creamos elementos a partir de datos proporcionados por RDF, ya sea desde un archivo RDF o desde un origen de datos interno. Mozilla suministra muchas fuentes de datos, como ser marcadores, histórico y mensajes de correo. En la <a href="es/Tutorial_de_XUL/Fuentes_de_datos_RDF">próxima sección</a> se ofrecerán más detalles sobre esto.</p>
+
+<p>Normalmente los elementos tales como treeitem y menuitem serán poblados con datos. Sin embargo, si se desea pueden usarse otros elementos, aunque éstos son mas útiles en casos especiales. A pesar de ello comenzaremos con estos otros elementos ya que los árboles y los menús requieren mas código.</p>
+
+<p>Para permitir la creación de elementos basados en datos RDF se necesitará proporcionar una plantilla simple, la cual será duplicada por cada elemento creado. Esencialmente, se provee únicamente el primer elemento y los restantes son construidos sobre la base de éste.</p>
+
+<p>La plantilla es creada empleando el elemento <code><a href="es/XUL/Elementos/template">template</a></code> (<a class="external" href="http://www.xulplanet.com/references/elemref/ref_template.html">en</a>), dentro del mismo pueden ubicarse los elementos que se desee utilizar para cada elemento a construir. El elemento <code>template</code> debe ser colocado dentro del contenedor que contendrá los elementos construidos. Por ejemplo, si se utiliza un árbol debe colocarse el elemento <code>template</code> dentro de un elemento <code><a href="es/XUL/Elementos/tree">tree</a></code> (<a class="external" href="http://www.xulplanet.com/references/elemref/ref_tree.html">en</a>).</p>
+
+<h4 id="Ejemplo_de_plantilla_simple" name="Ejemplo_de_plantilla_simple">Ejemplo de plantilla simple</h4>
+
+<p>Tomemos un simple ejemplo donde queremos crear un botón por cada marcador de primer nivel. Mozilla ofrece una fuente de datos de marcadores por lo que ésta puede emplearse para adquirir los datos. Este ejemplo únicamente obtendrá los marcadores de primer nivel (o carpetas de marcadores) por lo que crearemos botones. Para los marcadores hijos deberemos usar un elemento que muestre datos de manera jerárquica, como un árbol o un menú.</p>
+
+<div class="note">
+<p>Tanto este ejemplo como cualquier otro que haga referencia a fuentes de datos RDF internas únicamente funcionará si se lo carga desde una URL chrome, ya que por razones de seguridad Mozilla no permite el acceso a ellas desde otras procedencias.</p>
+</div>
+
+<p>Para ver este ejemplo se necesitará crear un paquete chrome y cargar el archivo desde allí, (se puede hacer fácilmente mirando en <a href="es/Tutorial_de_XUL/Archivos_Manifest">archivos de manifiesto</a>) entonces se podrá ingresar la URL chrome en la barra de direcciones del navegador.</p>
+
+<p><strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+  &lt;template&gt;
+    &lt;button uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p><img alt="Image:templates1.jpg"></p>
+
+<p>Aquí se ha creado una caja vertical que contiene una columna de botones, uno por cada marcador de primer nivel. Puede verse que la plantilla contiene un solo <code><a href="es/XUL/Elementos/button">botón</a></code> (<a class="external" href="http://www.xulplanet.com/references/elemref/ref_button.html">en</a>), éste es utilizado como base para todos los botones que serán creados. En la imagen se observa que se creó un conjunto de botones, uno por cada marcador.</p>
+
+<p>Intente añadir un nuevo marcador en el navegador manteniendo la ventana de ejemplo abierta. Notará que los botones del ejemplo son inmediatamente actualizados, puede ser necesario enfocar la ventana para que se produzca este cambio.</p>
+
+<h4 id="Contenedor_y_fuentes_de_dato" name="Contenedor_y_fuentes_de_dato">Contenedor y fuentes de dato</h4>
+
+<p>La plantilla es colocada dentro de la caja vertical, la caja posee dos atributos especiales que le permiten ser utilizada para plantillas, los cuales se emplean para especificar el origen de los datos. El primer atributo de la caja es <code>datasources</code>, el cual se usa para declarar la fuente de datos RDF que proveerá los datos para crear los elementos, en éste caso <code>rdf:bookmarks</code>. Se habrá adivinado que esto significa que se utilizará la fuente de datos de marcadores, esta fuente es proveída por Mozilla. Para utilizar un origen de datos propio, en el atributo <code>datasources</code> debe especificarse la URL de un archivo RDF, tal como se indica en el siguiente ejemplo:</p>
+
+<pre>&lt;box datasources="chrome://zoo/contenidos/animales.rdf"
+     ref="http://www.algun-zoo-ficticio.com/todos-los-animales"&gt;
+</pre>
+
+<p>Incluso pueden especificarse múltiples fuentes de datos al mismo tiempo separándolas con un espacio en el valor del atributo. Esto puede aprovecharse para mostrar datos desde varios orígenes.</p>
+
+<p>El atributo <code>ref</code> indica la parte de la fuente de datos desde donde se quiere obtener los datos. En el ejemplo de los marcadores, el valor <code>NC:BookmarksRoot</code> es utilizado para indicar la raíz de la jerarquía de marcadores. Otros valores posibles dependerán del origen de datos utilizado, si se utiliza un archivo RDF propio como origen de datos, el valor corresponderá al valor de un atributo <code>about</code> en un elemento <code>Bag</code> RDF, un elemento <code>Seq</code> o un elemento <code>Alt</code>.</p>
+
+<h4 id="Dentro_de_la_plantilla" name="Dentro_de_la_plantilla">Dentro de la plantilla</h4>
+
+<p>Al añadir estos dos atributos a la caja de arriba se permitirá la generación de elementos utilizando la plantilla. Sin embargo, los elementos dentro de la plantilla necesitan ser declarados de otra forma. En el ejemplo anterior puede observarse que el botón posee un atributo <code>uri</code> y un valor inusual para el atributo <code>label</code>.</p>
+
+<p>El valor de un atributo dentro de la plantilla que comience con 'rdf:' indica que el valor debe ser obtenido de la fuente de datos, éste es el caso del atributo <code>label</code> en el ejemplo anterior. El resto del valor hace referencia a la propiedad name en la fuente de datos. Esto se construye tomando la URL del área de denominación utilizada por la fuente de datos y agregando la propiedad name. Si no puede comprender esto intente volver a leer la última parte de la <a href="es/Tutorial_de_XUL/Introducci%c3%b3n_a_RDF">sección anterior</a>, la cual explica cómo se pueden referenciar los recursos en RDF. Aquí usamos únicamente el nombre del marcador pero hay muchos otros campos disponibles.</p>
+
+<p>La etiqueta de los botones es fijada a esta URI especial ya que queremos que las etiquetas en los botones contengan los nombres de los marcadores. Podríamos haber puesto una URI en cualquiera de los atributos del botón, o de cualquier otro elemento. Los valores de estos atributos son reemplazados con datos alimentados por la fuente de datos la cual es, en éste caso, la de marcadores. Por ello terminamos con las etiquetas de los botones conteniendo los nombres de los marcadores.</p>
+
+<p>El siguiente ejemplo muestra cómo podríamos establecer otros atributos de un botón empleando una fuente de datos. Naturalmente, esto asume que la fuente de datos provee los recursos apropiados. Si un recurso en particular no puede ser encontrado el valor del atributo será una cadena de texto vacía.</p>
+
+<pre>&lt;button class="rdf:http://www.ejemplo.com/rdf#clase"
+        uri="rdf:*"
+        label="rdf:http://www.ejemplo.com/rdf#name"/&gt;
+        crop="rdf:http://www.ejemplo.com/rdf#crop"/&gt;
+</pre>
+
+<p>Como puede verse, es posible generar listas de elementos dinámicamente con los atributos proporcionados por un origen de datos diferente. El atributo uri es empleado para especificar el elemento a partir del cual se iniciará la generación de contenido. El primer contenido se generará una vez mientras que el contenido en el interior será generado para cada recurso. Veremos más de esto al crear <a href="es/Tutorial_de_XUL/%c3%81rboles_y_plantillas">plantillas para árboles</a>.</p>
+
+<h4 id="M.C3.A1s_ejemplos" name="M.C3.A1s_ejemplos">Más ejemplos</h4>
+
+<p>Al agregar estas características en el contenedor dentro del cual se encuentra la plantilla, que es en este caso una caja, y a los elementos dentro de la plantilla, podremos generar listas de contenido interesantes a partir de datos externos. Claro que podemos poner más de un elemento dentro de una plantilla y añadir las referencias RDF especiales a los atributos en cualquiera de estos elementos. El siguiente ejemplo lo demuestra.</p>
+
+<p><strong>Ejemplo 2</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_2.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+  &lt;template&gt;
+    &lt;vbox uri="rdf:*"&gt;
+      &lt;button label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+      &lt;label value="rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+    &lt;/vbox&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>Esto crea una caja vertical con un botón y una etiqueta por cada marcador. El botón tendrá el nombre del marcador y la etiqueta su URL.</p>
+
+<p>Los elementos que son creados no son funcionalmente diferentes a aquellos insertados directamente en el archivo XUL. Para cada elemento creado a través de una plantilla se añadirá el atributo id, el cual tendrá un valor que identifica el recurso. Esto puede emplearse para identificar el recurso creado.</p>
+
+<p>También es posible especificar en el mismo atributo múltiples valores de recurso separándolos con un espacio, igual que en ejemplo debajo y en <a class="external" href="http://www.xulplanet.com/tutorials/xultu/templateex.html">más acerca de la sintaxis de recursos</a> (XULPlanet).</p>
+
+<p><strong>Ejemplo 3</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_3.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_3.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot"
+     flex="1"&gt;
+  &lt;template&gt;
+    &lt;label uri="rdf:*" value="rdf:http://home.netscape.com/NC-rdf#Name rdf:http://home.netscape.com/NC-rdf#URL"/&gt;
+  &lt;/template&gt;
+&lt;/vbox&gt;
+</pre>
+
+<h3 id="C.C3.B3mo_son_construidas_las_plantillas" name="C.C3.B3mo_son_construidas_las_plantillas">Cómo son construidas las plantillas</h3>
+
+<p>Cuando un elemento posee el atributo <code>datasources</code> se está indicando que se espera que el elemento sea construido a partir de una plantilla. Note que el rótulo <code>template</code> no es el que determina si el contenido se construirá, es el atributo <code>datasources</code>. Si este atributo está presente, un objeto llamado Builder (constructor) se añadirá al elemento. Este objeto es el responsable de construir el contenido a partir de la plantilla. En JavaScript puede accederse al objeto constructor mediante la propiedad <code>builder</code>, aunque normalmente esto será necesario solo si se desea que el constructor regenere el contenido en situaciones donde esto no se haga automáticamente.</p>
+
+<p>Existen dos tipos diferentes de constructores. El primero es un constructor de contenidos y se utiliza en la mayoría de los casos, y el otro es un constructor de árboles que se usa únicamente para árboles.</p>
+
+<p>El constructor de contenidos toma el contenido dentro del elemento template y lo duplica por cada fila. Por ejemplo, si en el ejemplo anterior el usuario tenía diez marcadores, diez elementos <code><a href="es/XUL/Elementos/label">label</a></code> (<a class="external" href="http://www.xulplanet.com/references/elemref/ref_label.html">en</a>) serán creados y añadidos al elemento <code><a href="es/XUL/Elementos/vbox">vbox</a></code> (<a class="external" href="http://www.xulplanet.com/references/elemref/ref_vbox.html">en</a>). Si se utilizaran funciones DOM para recorrer el árbol, podrán encontrarse estos elementos y ver sus propiedades. Los elementos serán visibles pero no la plantilla, aunque aún existe en el documento árbol. Además, la <code>id</code> de cada una de las etiquetas se establecerá con el recurso RDF para esa fila.</p>
+
+<p>Este constructor siempre comienza en el lugar donde se ha especificado uri=“rdf:*�?. Si el atributo <code>uri</code> en un elemento posterior al elemento árbol, los elementos fuera se crearán una sola vez. En el siguiente ejemplo se creará una caja horizontal (<code><a href="es/XUL/Elementos/hbox">hbox</a></code>), la cual será llenada con una etiqueta por cada ítem.</p>
+
+<pre>&lt;template&gt;
+  &lt;hbox&gt;
+    &lt;label uri="rdf:*" value="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;/hbox&gt;
+&lt;/template&gt;
+</pre>
+
+<p>Si hubiera otros contenidos dentro del elemento con el atributo <code>datasources</code> pero fuera de la plantilla, ésos contenidos también aparecerán. Así puede mezclarse contenidos estáticos y contenidos dinámicos de una plantilla.</p>
+
+<h4 id="Constructor_de_.C3.A1rbol" name="Constructor_de_.C3.A1rbol">Constructor de árbol</h4>
+
+<p>El constructor de árboles, por otro lado, no genera los elementos DOM para las filas. En cambio, obtendrá la información directamente de la fuente de datos RDF cuando la necesite. Ya que usualmente se espera que los árboles muestren miles de filas de datos, este método es mucho más eficiente. Crear un elemento por cada celda sería muy costoso. Sin embargo, el trueque es que los árboles únicamente pueden mostrar texto y, como no se crean elementos, no podrán utilizarse propiedades CSS para diseñar celdas de árboles.</p>
+
+<p>El constructor de árboles se utiliza solamente con árboles. Los otros elementos utilizan el constructor de contenido. Esto no causa problema alguno, ya que no se prevé que otros elementos -como los menús- contengan demasiados ítems. También es posible utilizar el constructor de contenido con los árboles, y por cada fila se crearán un elemento <code><a href="es/XUL/Elementos/treeitem">treeitem</a></code> y sus elementos relacionados.</p>
+
+<h3 id="Reglas.2C_l.C3.ADneas_o_delineaci.C3.B3n" name="Reglas.2C_l.C3.ADneas_o_delineaci.C3.B3n">Reglas, líneas o delineación</h3>
+
+<p>En la imagen del anterior ejemplo se habrá notado que el tercer botón es simplemente un botón con un guión adentro, éste es un separador en la lista de marcadores. De la manera en que la venimos usando, la fuente de datos RDF de marcadores suministra los separadores como si fueran comunes marcadores. Lo que realmente querríamos lograr es mostrar un pequeño espacio en lugar de un botón para los separadores, esto significa que queremos crear dos tipos diferentes de contenido, uno para los marcadores regulares y otro para los separadores.</p>
+
+<p>Podemos hacer esto empleando el elemento <code><a href="es/XUL/Elementos/rule">rule</a></code> (<a class="external" href="http://www.xulplanet.com/references/elemref/ref_rule.html">en</a>). Definimos una regla/línea por cada variación en los elementos que queremos crear. En nuestro caso, necesitaremos un delineación para los marcadores y otro para los separadores. Los atributos puestos en el elemento <code>rule</code> determinan cuales reglas se aplican a qué recurso RDF.</p>
+
+<p>Al buscarse qué delineación aplican a los datos, cada regla es revisada en secuencia buscando coincidencias. Esto significa que el orden en que se definen las delineación es importante, ya que los primeros tendrán precedencia sobre los posteriores.</p>
+
+<p>El siguiente ejemplo demuestra el ejemplo anterior con dos reglas:</p>
+
+<p><strong>Ejemplo 4</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_4.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_templates_4.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;window id="ventana-ejemplo
+  title="Lista de marcadores"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+ &lt;vbox datasources="rdf:bookmarks" ref="NC:BookmarksRoot" flex="1"&gt;
+   &lt;template&gt;
+
+    &lt;rule rdf:type="http://home.netscape.com/NC-rdf#BookmarkSeparator"&gt;
+     &lt;spacer uri="rdf:*" height="16"/&gt;
+    &lt;/rule&gt;
+
+    &lt;rule&gt;
+      &lt;button uri="rdf:*" label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+    &lt;/rule&gt;
+
+  &lt;/template&gt;
+ &lt;/vbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p><img alt="Image:templates2.jpg"></p>
+
+<p>Al utilizar dos delineaciones hemos permitido que el contenido de la plantilla sea generado selectivamente. En la primer regla se seleccionan separadores de marcadores, como puede observarse en el atributo <code>rdf:type</code>. La segunda delineación no posee atributos, por lo que todos los datos corresponden.</p>
+
+<p>Todos los atributos puestos en el rótulo tag se usan como criterio de correspondencia. En este caso, la fuente de datos <code>bookmarks</code> provee una propiedad <code>rdf:type</code> para distinguir separadores. Este atributo es fijado en un valor especial para los separadores en la fuente de datos RDF de marcadores, así es como podemos distinguirlos de los marcadores que no son separadores. Una técnica similar puede ser utilizada para cualquier atributo que pudiera existir en un elemento RDF <code>Description</code>.</p>
+
+<p>El valor URL específico dado al primer lineamiento en el ejemplo de arriba se utiliza para separadores. Esto significa que los separadores seguirán la regla uno y generarán un elemento <code><a href="es/XUL/Elementos/spacer">spacer</a></code>, el que mostrará un hueco de 16 píxeles. Los elementos que no sean separadores no coincidirán con la regla uno y caerán en la regla dos, la cual no posee atributos por lo que cualquier dato coincide. Esto es, por supuesto, lo que queremos que le suceda al resto de la información.</p>
+
+<p>Se habrá notado también que como quisimos obtener un atributo del área de denominación RDF (<code>rdf:type</code>) tuvimos que añadir una declaración del área de denominación al rótulo <code><a href="es/XUL/Elementos/window">window</a></code>. Si no hubiéramos hecho esto el atributo (type) se habría buscado en el área de denominación XUL, y como éste atributo no existe en ella la regla no tendría correspondencias. Si se utilizan atributos en un área de denominación propia se deberá añadir una declaración a la misma para corresponderlos.</p>
+
+<p>Debería adivinarse qué sucedería si se eliminara la segunda delineación. Como resultado se vería un solo espacio y ningún marcador ya que los mismos no coincidirían con ninguna de las reglas.</p>
+
+<p>Puesto de manera simple, una delineación corresponde si todos los atributos puestos en el elemento <code>rule</code> coinciden los atributos correspondientes en el recurso RDF. En el caso de un archivo RDF, los recursos serían los elementos <code>Description</code>.</p>
+
+<p>Sin embargo hay pequeñas excepciones. No puede haber correspondencias basadas en los atributos id, <code>rdf:property</code> o <code>rdf:instanceOf</code>, aunque ya que pueden utilizarse atributos propios de áreas de denominación propias esto no debe importar mucho.</p>
+
+<p>Note que una plantilla sin reglas en ella, como en el primer ejemplo, en realidad es funcionalmente un equivalente a una plantilla con un solo lineamiento sin atributos en él.</p>
+
+<p>A continuación veremos cómo utilizar plantillas con los árboles.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Introducción_a_RDF" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Árboles_y_plantillas">Siguiente  »</a></p>
+</div>

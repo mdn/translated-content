@@ -1,0 +1,105 @@
+---
+title: Telephony
+slug: Archive/B2G_OS/API/Telephony
+translation_of: Archive/B2G_OS/API/Telephony
+---
+<p>{{ Apiref() }}</p>
+<p>Tarjoaa tuen puhelintoimintaa tukevalle laitteelle puhelujen valinnassa, vastaamisessa ja hallinoinnissa.</p>
+<h2 id="Attribuutit">Attribuutit</h2>
+<dl>
+ <dt>
+  {{ domxref("Telephony.active") }}</dt>
+ <dd>
+  Objekti {{ domxref("TelephonyCall") }} osoittaa puhelun, joka on parhaillaan käynnissä. Aktiivi puhelu on se, joka vastaanottaa syötteen mikrofonista ja kaikki {{ domxref("Telephony.startTone()") }} -metodin tuottamat äänet.</dd>
+ <dt>
+  {{ domxref("Telephony.calls") }}</dt>
+ <dd>
+  {{ domxref("TelephonyCall") }} -objektien taulukko, yksi jokaiselle puhelulle, joka on parhaillaan yhdistettynä.</dd>
+ <dt>
+  {{ domxref("Telephony.muted") }}</dt>
+ <dd>
+  Asetetaan arvoon <code>true</code> mikrofonin mykistämiseksi tai <code>false</code> mikrofonin ottamiseksi käyttöön.</dd>
+ <dt>
+  {{ domxref("Telephony.oncallschanged") }}</dt>
+ <dd>
+  Käsittelijä "callschanged"-tapahtumalle; tämä {{ domxref("CallEvent") }} -tapahtuma lähetetään aina kun {{ domxref("Telephony.calls", "calls") }} -luettelo muuttuu.</dd>
+ <dt>
+  {{ domxref("Telephony.onincoming") }}</dt>
+ <dd>
+  Käsittelijä "incoming"-tapahtumalle; tämä {{ domxref("CallEvent") }} lähetetään aina kun uusi puhelu on tulossa.</dd>
+ <dt>
+  {{ domxref("Telephony.speakerEnabled") }}</dt>
+ <dd>
+  Aseta arvoon <code>true</code> kaiutintoiminnallisuuden käyttöönottamiseksi tai arvoon <code>false</code> sen ottamiseksi pois käytöstä.</dd>
+</dl>
+<h2 id="Metodit">Metodit</h2>
+<dl>
+ <dt>
+  {{ domxref("Telephony.dial()") }}</dt>
+ <dd>
+  Soittaa määriteltyyn puhelinnumeroon, joka on määritelty merkkijonona.</dd>
+ <dt>
+  {{ domxref("Telephony.startTone()") }}</dt>
+ <dd>
+  Aloittaa määrätyn DTMF-äänen tuottamisen.</dd>
+ <dt>
+  {{ domxref("Telephony.stopTone()") }}</dt>
+ <dd>
+  Lopettaa parhaillaan kuuluvan DTMF-äänen.</dd>
+</dl>
+<h3 id="Specification" name="Specification">Spesifikaatio</h3>
+<p>Ei ole minkään spesifikaation osa; ehdotuksen otaksutaan kuitenkin perustuvan asiakirjaan <a class="link-https" href="https://wiki.mozilla.org/WebAPI/WebTelephony" title="https://wiki.mozilla.org/WebAPI/WebTelephony">WebTelephony design document</a>.</p>
+<h3 id="Selainyhteensopivuus">Selainyhteensopivuus</h3>
+<p>Ilmeisestä syystä tukea odotetaan pääasiassa mobiiliselamille.</p>
+<p>{{ CompatibilityTable() }}</p>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Ominaisuus</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>Perustuki</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Ominaisuus</th>
+    <th>Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Perustuki</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatGeckoMobile("12.0") }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+    <td>{{ CompatNo() }}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<h2 id="Katso_myös">Katso myös</h2>
+<ul>
+ <li><a href="/en/DOM/Using_the_Telephony_API" title="en/DOM/Using the Telephony API">Using the Telephony API</a></li>
+ <li>{{ domxref("TelephonyCall") }}</li>
+ <li>{{ domxref("CallEvent") }}</li>
+ <li>{{ domxref("window.navigator.mozTelephony") }}</li>
+</ul>

@@ -1,0 +1,317 @@
+---
+title: nsIDragService
+slug: nsIDragService
+tags:
+  - páginas_a_traducir
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDragService
+---
+<p></p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/nsIDragService.idl" rel="custom">widget/nsIDragService.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+Implements the Drag Service for handling drag and drop operations.
+</span>
+
+<div style="background: #eee; padding: 2px;">
+Inherits from: <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code>
+<span style="text-align: right; float: right;">Last changed in Gecko 43 (Firefox 43 / Thunderbird 43 / SeaMonkey 2.40)</span></div>
+</div><p></p>
+
+<div class="note"><strong>Note:</strong> Using this interface directly from add-on code is deprecated. Add-ons should use the standard <a href="/En/DragDrop/DataTransfer" title="En/DragDrop/DataTransfer"><code>dataTransfer</code></a> drag and drop API instead. The only exception is <code><a href="https://developer.mozilla.org/es/docs/nsIDragService#getCurrentSession()">getCurrentSession()</a></code>, since there's currently no way to check for a drag in progress using standard DOM methods or properties.</div>
+
+<h2 id="Method_overview" name="Method_overview">Method overview</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#endDragSession()">endDragSession</a>( in PRBool aDoneDrag ) ;</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="/en/XPCOM_Interface_Reference/nsIDragService#dragMoved()" title="en/nsIDragService#dragMoved()">dragMoved</a>(in long aX, in long aY);</code>  <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#fireDragEventAtSource()">fireDragEventAtSource</a>(in unsigned long aMsg);</code>  <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 43 / Thunderbird 43 / SeaMonkey 2.40)">Obsoleto Gecko 43</span></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#fireDragEventAtSource()">fireDragEventAtSource</a>(in mozilla::EventMessage aEventMessage);</code>  <span class="inlineIndicator noscript noscriptInline" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span></td>
+  </tr>
+  <tr>
+   <td><code>nsIDragSession <a href="#getCurrentSession()">getCurrentSession</a>( ) ;</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#invokeDragSession()">invokeDragSession</a>( in nsIDOMNode aDOMNode, in nsISupportsArray aTransferables, in nsIScriptableRegion aRegion, in unsigned long aActionType );</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#invokeDragSessionWithImage()">invokeDragSessionWithImage</a>(in nsIDOMNode aDOMNode, in nsISupportsArray aTransferableArray, in nsIScriptableRegion aRegion, in unsigned long aActionType, in nsIDOMNode aImage, in long aImageX, in long aImageY, in nsIDOMDragEvent aDragEvent, in nsIDOMDataTransfer aDataTransfer);</code> </td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#invokeDragSessionWithSelection()">invokeDragSessionWithSelection</a>(in nsISelection aSelection, in nsISupportsArray aTransferableArray, in unsigned long aActionType, in nsIDOMDragEvent aDragEvent, in nsIDOMDataTransfer aDataTransfer);</code> </td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#startDragSession()">startDragSession</a>( ) ;</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#suppress()">suppress</a>();</code> </td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#unsuppress()">unsuppress</a>();</code> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Constants" name="Constants">Constants</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constant</td>
+   <td class="header">Value</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>DRAGDROP_ACTION_NONE</code></td>
+   <td><code>0</code></td>
+   <td>No action.</td>
+  </tr>
+  <tr>
+   <td><code>DRAGDROP_ACTION_COPY</code></td>
+   <td><code>1</code></td>
+   <td>The drag and drop operation should copy the object.</td>
+  </tr>
+  <tr>
+   <td><code>DRAGDROP_ACTION_MOVE</code></td>
+   <td><code>2</code></td>
+   <td>The drag and drop operation should move the object.</td>
+  </tr>
+  <tr>
+   <td><code>DRAGDROP_ACTION_LINK</code></td>
+   <td><code>4</code></td>
+   <td>The drag and drop operation should link the object.</td>
+  </tr>
+  <tr>
+   <td><code>DRAGDROP_ACTION_UNINITIALIZED</code></td>
+   <td><code>64</code></td>
+   <td>The action is not initialized. </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods">Methods</h2>
+
+<p></p><div><span class="indicatorInHeadline noscript noscriptMethod" title="This method may only be called from C++; don't use it from JavaScript.">Native code only!</span><h3 id="dragMoved">dragMoved</h3></div><p></p>
+
+<p></p>
+
+<p>Programmatically changes the drag position of the drag session. This is used on Mac and Windows to update the position of a popup being used as a drag image during the drag operation. It's not used on GTK, which handles the drag popup itself.</p>
+
+<pre>[noscript] void dragMoved(
+  in long aX,
+  in long aY
+);
+</pre>
+
+<h6 id="Parameters_2">Parameters</h6>
+
+<dl>
+ <dt><code>aX</code></dt>
+ <dd>The X coordinate to which to move the popup being dragged.</dd>
+ <dt><code>aY</code></dt>
+ <dd>The Y coordinate to which to move the popup being dragged.</dd>
+</dl>
+
+<h3 id="endDragSession()" name="endDragSession()">endDragSession()</h3>
+
+<p>Tells the Drag Service to end a drag session. This is called when an external drag occurs.</p>
+
+<pre class="eval">void endDragSession(
+  in PRBool aDoneDrag
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aDoneDrag </code> </dt>
+ <dd>If <code>aDoneDrag</code> is <code>true</code>, the drag has finished, otherwise the drag has just left the window.</dd>
+</dl>
+
+<h3 id="fireDragEventAtSource()">fireDragEventAtSource()</h3>
+
+<p></p><div class="blockIndicator obsolete obsoleteHeader"><p><strong><span class="icon-only-inline" title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> Obsoleto Gecko 43 (Firefox 43 / Thunderbird 43 / SeaMonkey 2.40)</strong><br>Esta funcionalidad es obsoleta. Aunque puede aún funcionar en algunos navegadores, se desalienta su uso ya que puede ser removida en cualquier momento. Evite usarla.</p></div><p></p>
+
+<p>Fire a drag event at the source of the drag. This was changed in Gecko 43, see the following section.</p>
+
+<pre class="eval">void fireDragEventAtSource(
+  in unsigned long aMsg
+); <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 43 / Thunderbird 43 / SeaMonkey 2.40)">Obsoleto Gecko 43</span>
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aMsg</code></dt>
+ <dd>One of the <code>NS_DRAGDROP_*</code> contants which was defined in <code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/BasicEvents.h" rel="custom">widget/BasicEvents.h</a></code></dd>
+</dl>
+
+<p></p>
+
+<p>Fire a drag event at the fource of the drag. This is available only from native code since Gecko 43.</p>
+
+<pre>[noscript] void fireDragEventAtSource(
+  in mozilla::EventMessage aEventMessage
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aEventMessage</code></dt>
+ <dd>One of the event messages between <code>eDragDropEventFirst</code> and <code>eDragDropEventLast</code> defined in <code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/EventMessageList.h" rel="custom">widget/EventMessageList.h</a></code></dd>
+</dl>
+
+<h3 id="getCurrentSession()" name="getCurrentSession()">getCurrentSession()</h3>
+
+<p>Returns the current <a href="/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDragSession">nsIDragSession</a>.</p>
+
+<pre class="eval">nsIDragSession getCurrentSession();
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value" name="Return_value">Return value</h6>
+
+<p>The current drag session, or null if no drag is in progress.</p>
+
+<h3 id="invokeDragSession()" name="invokeDragSession()">invokeDragSession()</h3>
+
+<p>Starts a modal drag session with an array of transferables</p>
+
+<pre class="eval">void invokeDragSession(
+  in nsIDOMNode aDOMNode,
+  in nsISupportsArray aTransferables,
+  in nsIScriptableRegion aRegion,
+  in unsigned long aActionType
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aDOMNode</code></dt>
+ <dd>The source node on which the drag gesture was started.</dd>
+ <dt><code>aTransferables</code></dt>
+ <dd>An array of transferables to be dragged.</dd>
+ <dt><code>aRegion</code></dt>
+ <dd>A region containing rectangles for cursor feedback, in window coordinates.</dd>
+ <dt><code>aActionType</code></dt>
+ <dd>Specified which of copy/move/link are allowed.</dd>
+</dl>
+
+<p></p><h3 id="invokeDragSessionWithImage()">invokeDragSessionWithImage()</h3><p></p>
+
+<p>Starts a modal drag session using an image.</p>
+
+<p>A custom image may be specified using the <code>aImage</code> argument. If this is supplied, the <code>aImageX</code> and <code>aImageY</code> arguments specify the offset within the image where the cursor would be positioned. That is, when the image is drawn, it is offset up and left the amount so that the cursor appears at that location within the image. If <code>aImage</code> is <code>null</code>, <code>aImageX</code> and <code>aImageY</code> are not used and the image is instead determined from the source node <code>aDOMNode</code>, and the offset calculated so that the initial location for the image appears in the same screen position as where the element is located. The node must be within a document.</p>
+
+<p>Currently, supported images are all DOM nodes. If this is an HTML <code>&lt;image&gt;</code> or <code>&lt;canvas&gt;</code> element, the drag image is taken from the image data. If the element is in a document, it will be rendered at its displayed size, otherwise, it will be rendered at its real size. For other types of elements, the element is rendered into an offscreen buffer in the same manner as it is currently displayed. The document selection is hidden while drawing. The <code>aDragEvent</code> must be supplied as the current screen coordinates of the event are needed to calculate the image location.</p>
+
+<pre class="eval">void invokeDragSessionWithImage(
+  in nsIDOMNode aDOMNode,
+  in nsISupportsArray aTransferableArray,
+  in nsIScriptableRegion aRegion,
+  in unsigned long aActionType,
+  in nsIDOMNode aImage,
+  in long aImageX,
+  in long aImageY,
+  in nsIDOMDragEvent aDragEvent,
+  in nsIDOMDataTransfer aDataTransfer
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aDOMNode</code></dt>
+ <dd>The source node on which the drag gesture was started.</dd>
+ <dt><code>aTransferables</code></dt>
+ <dd>An array of transferables to be dragged.</dd>
+ <dt><code>aRegion</code></dt>
+ <dd>A region containing rectangles for cursor feedback, in window coordinates.</dd>
+ <dt><code>aActionType</code></dt>
+ <dd>Specified which of copy/move/link are allowed.</dd>
+ <dt><code>aImage</code></dt>
+ <dd>Image object.</dd>
+ <dt><code>aImageX</code></dt>
+ <dd>X position of image.</dd>
+ <dt><code>aImageY</code></dt>
+ <dd>Y position of image.</dd>
+ <dt><code>aDragEvent</code></dt>
+ <dd>The drag gesture event that initiated the drag.</dd>
+ <dt><code>aDataTransfer</code> </dt>
+ <dd>A data transfer object that is available on the current drag session.</dd>
+</dl>
+
+<p></p><h3 id="invokeDragSessionWithSelection()">invokeDragSessionWithSelection()</h3><p></p>
+
+<p>Start a modal drag session using the selection as the drag image. The <code>aDragEvent</code> must be supplied as the current screen coordinates of the event are needed to calculate the image location.</p>
+
+<pre class="eval">void invokeDragSessionWithSelection(
+  in nsISelection aSelection,
+  in nsISupportsArray aTransferableArray,
+  in unsigned long aActionType,
+  in nsIDOMDragEvent aDragEvent,
+  in nsIDOMDataTransfer aDataTransfer
+);
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<dl>
+ <dt><code>aSelection</code></dt>
+ <dd>The selection that is to be dragged.</dd>
+ <dt><code>aTransferableArray</code></dt>
+ <dd>An array of transferables to be dragged.</dd>
+ <dt><code>aActionType</code></dt>
+ <dd>Specified which of copy/move/link are allowed</dd>
+ <dt><code>aDragEvent</code></dt>
+ <dd>The drag gesture event that initiated the drag.</dd>
+ <dt><code>aDataTransfer</code> </dt>
+ <dd>A data transfer object that is available on the current drag session.</dd>
+</dl>
+
+<h3 id="startDragSession()" name="startDragSession()">startDragSession()</h3>
+
+<p>Tells the Drag Service to start a drag session. This is called when an external drag occurs</p>
+
+<pre class="eval">void startDragSession();
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<p>None.</p>
+
+<p></p><h3 id="suppress()">suppress()</h3><p></p>
+
+<p>Increase dragging suppress level by one. This disables dragging if it is not already disabled.</p>
+
+<pre class="eval">void suppress();
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<p>None.</p>
+
+<p></p><h3 id="unsuppress()">unsuppress()</h3><p></p>
+
+<p>Decrease dragging suppress level by one. If level is zero, dragging is re-enabled.</p>
+
+<pre class="eval">void unsuppress();
+</pre>
+
+<h6 id="Parameters" name="Parameters">Parameters</h6>
+
+<p>None.</p>
+
+<p></p>

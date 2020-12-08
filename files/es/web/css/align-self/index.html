@@ -1,0 +1,137 @@
+---
+title: align-self
+slug: Web/CSS/align-self
+tags:
+  - Cajas Flexibles CSS
+  - Propiedad CSS
+  - Referencia
+translation_of: Web/CSS/align-self
+---
+<p>{{CSSRef}}</p>
+
+<h2 id="Resumen">Resumen</h2>
+
+<p>La propiedad <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>align-self</code></strong> alinea los elementos flexibles de la línea flexible actual, reemplazando el valor de {{cssxref("align-items")}}. Si el límite transversal de alguno de los elementos está definido como <code>auto</code>, el valor de <code>align-self</code> es ignorado.</p>
+
+<p>{{cssinfo}}</p>
+
+<p>Véase <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS" title="/en/CSS/Using_CSS_flexible_boxes">Usando las cajas flexibles CSS</a> para más propiedades e información.</p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="brush:css">/* Valores clave */
+align-self: auto;
+align-self: flex-start;
+align-self: flex-end;
+align-self: center;
+align-self: baseline;
+align-self: stretch;
+
+/* Valores globales */
+align-self: inherit;
+align-self: initial;
+align-self: unset;
+</pre>
+
+<h3 id="Valores">Valores</h3>
+
+<dl>
+ <dt><code>auto</code></dt>
+ <dd>Se calcula acorde al valor de {{cssxref("align-items") }} del padre, o al de <code>stretch</code> si el elemento no tiene padre.</dd>
+ <dt><code>flex-start</code></dt>
+ <dd>El límite transversal inicial del elemento flexible es unido al borde transversal inicial de la línea.</dd>
+ <dt><code>flex-end</code></dt>
+ <dd>El límite transversal final del elemento flexible es unido al borde transversal final de la línea.</dd>
+ <dt><code>center</code></dt>
+ <dd>Los límites del elemento flexible son centrados dentro de la línea en su eje transversal. Si el tamaño transversal del elemento es superior al del contenedor, se excederá por igual hacia ambas direcciones.</dd>
+ <dt><code>baseline</code></dt>
+ <dd>Todos los elementos flexibles son ajustados de modo que sus bases estén alineadas. El elemento con la distancia mayor entre su límite transversal inicial y su base es combinado con el borde transversal de la línea.</dd>
+ <dt><code>stretch</code></dt>
+ <dd>Las elementos flexibles son estirados de modo que el tamaño transversal de sus límites sea el mismo de la línea, manteniendo sus restricciones de anchura y altura.</dd>
+</dl>
+
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Box Alignment', '#align-self-property', 'align-self') }}</td>
+   <td>{{ Spec2('CSS3 Box Alignment') }}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>21.0{{property_prefix("-webkit")}}<br>
+    36.0</td>
+   <td>{{CompatGeckoDesktop("20.0")}}<sup>[1]</sup></td>
+   <td>11.0</td>
+   <td>12.10</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>12.10</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Firefox soporta solamente flexbox de una línea hasta Firefox 27. Para activar soporte a flexbox, en Firefox 18 y 19, el usuario debe cambiar la preferencia <code>layout.css.flexbox.enabled</code> a <code>true</code> en la página <code>about:config</code>.</p>
+
+<p>Además del soporte sin prefijo, Gecko 48.0 (Firefox 48.0 / Thunderbird 48.0 / SeaMonkey 2.45) añadió soporte a la versión con prefijo <code>-webkit</code> de la propiedad, por razones de compatibilidad, usando la preferencia <code>layout.css.prefixes.webkit</code>, con valor predeterminado <code>false</code>. Desde Gecko 49.0 (Firefox 49.0 / Thunderbird 49.0 / SeaMonkey 2.46) el valor predeterminado de esta preferencia es <code>true</code>.</p>
+
+<h2 id="Véase_también">Véase también</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS" title="CSS/Using_CSS_flexible_boxes">Usando las cajas flexibles CSS</a></li>
+</ul>

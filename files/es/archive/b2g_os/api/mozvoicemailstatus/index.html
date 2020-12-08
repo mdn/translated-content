@@ -1,0 +1,67 @@
+---
+title: MozVoicemailStatus
+slug: Archive/B2G_OS/API/MozVoicemailStatus
+translation_of: Archive/B2G_OS/API/MozVoicemailStatus
+---
+<section class="Quick_links" id="Quick_Links">
+<ol>
+ <li><strong><code>Archive</code></strong></li>
+ <li data-default-state="open"><a href="#"><strong>Related pages for Voicemail API</strong></a>
+  <ol>
+   <li><a href="/en-US/docs/Mozilla/Firefox_OS/API/MozVoicemail"><code>MozVoicemail</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/Firefox_OS/API/MozVoicemailEvent"><code>MozVoicemailEvent</code></a></li>
+   <li><a href="/en-US/docs/Mozilla/Firefox_OS/API/MozVoicemailStatus"><code>MozVoicemailStatus</code></a></li>
+  </ol>
+ </li>
+</ol>
+</section>
+
+<div class="warning">
+<p style="text-align: center;">This API is available on <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> for <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">internal applications</a> only.</p>
+</div>
+
+
+
+<h2 id="Summary">Summary</h2>
+
+<p>The <code>MozVoicemailStatus</code> API provides access to a voicemail status.</p>
+
+<h2 id="Interface_overview">Interface overview</h2>
+
+<pre>interface MozVoicemailStatus
+{
+  readonly attribute unsigned long serviceId;
+  readonly attribute boolean hasMessage;
+  readonly attribute long messageCount;
+  readonly attribute DOMString returnNumber;
+  readonly attribute DOMString returnMessage;
+};</pre>
+
+<h2 id="Properties">Properties</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Web/API/MozVoicemailStatus/serviceId" title="The documentation about this has not yet been written; please consider contributing!"><code>MozVoicemailStatus.serviceId</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>A number indicating the voicemail service ID.</dd>
+ <dt><a href="/en-US/docs/Web/API/MozVoicemailStatus/hasMessage" title="The documentation about this has not yet been written; please consider contributing!"><code>MozVoicemailStatus.hasMessage</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>A boolean indicating if there are messages available within the voicemail box.</dd>
+ <dt><a href="/en-US/docs/Web/API/MozVoicemailStatus/messageCount" title="The documentation about this has not yet been written; please consider contributing!"><code>MozVoicemailStatus.messageCount</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>A number indicating the total message count.</dd>
+ <dt><a href="/en-US/docs/Web/API/MozVoicemailStatus/returnNumber" title="The documentation about this has not yet been written; please consider contributing!"><code>MozVoicemailStatus.returnNumber</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>A string representing the return call number for the voicemail status.</dd>
+ <dt><a href="/en-US/docs/Web/API/MozVoicemailStatus/returnMessage" title="The documentation about this has not yet been written; please consider contributing!"><code>MozVoicemailStatus.returnMessage</code></a> <span class="inlineIndicator readOnly readOnlyInline" title="This value may not be changed.">Read only </span></dt>
+ <dd>A string representing a displayable return call message for the voicemail status.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<p>None.</p>
+
+<h2 id="Specification">Specification</h2>
+
+<p>Not part of any specification yet.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/MozVoicemail" title="The documentation about this has not yet been written; please consider contributing!"><code>MozVoicemail</code></a></li>
+</ul>

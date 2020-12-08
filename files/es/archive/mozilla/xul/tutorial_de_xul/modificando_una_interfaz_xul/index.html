@@ -1,0 +1,157 @@
+---
+title: Modificando una interfaz XUL
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Modificando_una_interfaz_XUL
+tags:
+  - DOM
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/Modifying_a_XUL_Interface
+---
+<p>El DOM proporciona funciones variadas para modificar el documento.</p>
+
+<h3 id="Creaci.C3.B3n_de_nuevos_elementos" name="Creaci.C3.B3n_de_nuevos_elementos">Creación de nuevos elementos</h3>
+
+<p>You can create new elements using the <code><a href="es/DOM/document#document.createElement">createElement()</a></code> function of the document. It takes one argument, the tag name of the element to create. You can then set attributes of the element using the <code><a href="es/DOM/element#element.setAttribute">setAttribute()</a></code> function and append it to the XUL document using the <code><a href="es/DOM/element#element.appendChild">appendChild()</a></code> function. For example, the following will add a button to a XUL window: <strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;script&gt;
+function addButton(){
+  var aBox = document.getElementById("aBox");
+  var button = document.createElement("button");
+  button.setAttribute("label","A new Button");
+  aBox.appendChild(button);
+}
+&lt;/script&gt;
+
+&lt;box id="aBox" width="200"&gt;
+  &lt;button label="Añade" oncommand="addButton();"/&gt;
+&lt;/box&gt;
+</pre>
+
+<ul>
+ <li>This script first gets a reference to the box with <code><a href="es/DOM/document#document.getElementById">getElementById()</a></code>, which is the container to add a new button to.</li>
+ <li>The <code><a href="es/DOM/document#document.createElement">createElement()</a></code> function creates a new button.</li>
+ <li>We assign the label 'A new Button' to the button using the <code><a href="es/DOM/element#element.setAttribute">setAttribute()</a></code> function.</li>
+ <li>The <code><a href="es/DOM/element#element.appendChild">appendChild()</a></code> function of the box is called to add the button to it.</li>
+</ul>
+
+<p>The <code><a href="es/DOM/document#document.createElement">createElement()</a></code> function will create the default type of element for the document. For XUL documents, this generally means that a XUL element will be created. For an HTML document, an HTML element will be created, so it will have the features and functions of an HTML element instead. The <code><a href="es/DOM/document#document.createElementNS">createElementNS()</a></code> function may be used to create elements in a different namespace.</p>
+
+<p>The <code><a href="es/DOM/element#element.appendChild">appendChild()</a></code> function is used to add an element as a child of another element. Three related functions are the <code><a href="es/DOM/element#element.insertBefore">insertBefore()</a></code>, <code><a href="es/DOM/element#element.replaceChild">replaceChild()</a></code> and <code><a href="es/DOM/element#element.removeChild">removeChild</a></code> functions. The syntax of these functions is as follows:</p>
+
+<pre>parent.appendChild(child);
+parent.insertBefore(child, referenceChild);
+parent.replaceChild(newChild, oldChild);
+parent.removeChild(child);
+</pre>
+
+<p>It should be fairly straightforward from the function names what these functions do.</p>
+
+<ul>
+ <li>The <code><a href="es/DOM/element#element.insertBefore">insertBefore()</a></code> function inserts a new child node before an existing one. This is used to insert into the middle of a set of children instead of at the end like <code><a href="es/DOM/element#element.appendChild">appendChild()</a></code> does.</li>
+ <li>The <code><a href="es/DOM/element#element.replaceChild">replaceChild()</a></code> function removes an existing child and adds a new one in its place at the same position.</li>
+ <li>Finally the <code><a href="es/DOM/element#element.removeChild">removeChild()</a></code> function removes a node.</li>
+</ul>
+
+<p>Note that for all these functions, the reference child or child to remove must already exist or an error occurs.</p>
+
+<p>It is often the case that you want to remove an existing element and add it somewhere else. If so, you can just add the element without removing it first. Since a node may only be in one place at a time, the insertion call will always remove the node from its existing location first. This is a convenient way to move nodes around in the document.</p>
+
+<h4 id="Copying_Nodes" name="Copying_Nodes">Copying Nodes</h4>
+
+<p>To copy nodes however, you may call the <code><a href="es/DOM/element#element.cloneNode">cloneNode()</a></code> function. This function makes a copy of an existing node so that you can add it somewhere else. The original node will stay where it is. It takes one boolean argument which indicates whether to copy all of the node's children or not. If false, only the node is copied, such that the copy won't have any children. If true, all of the children are copied as well. This is done recursively, so for large tree structures make sure that this is desired before passing true to the <code><a href="es/DOM/element#element.cloneNode">cloneNode()</a></code> function. Here is an example:</p>
+
+<p><strong>Ejemplo 2</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_2.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;hbox height="400"&gt;
+  &lt;button label="Copy"
+          oncommand="this.parentNode.appendChild(this.nextSibling.cloneNode(true));"/&gt;
+
+  &lt;vbox&gt;
+    &lt;button label="First"/&gt;
+    &lt;button label="Second"/&gt;
+  &lt;/vbox&gt;
+&lt;/hbox&gt;
+</pre>
+
+<p>When the Copy button is pressed..</p>
+
+<ul>
+ <li>we retrieve the <code><a href="es/DOM/element#element.nextSibling">nextSibling</a></code> of the <code><a href="es/XUL/Elementos#button">botón</a></code>, which will be the <code><a href="es/XUL/Elementos#vbox">vbox</a></code> element.</li>
+ <li>a copy of this element is made using the <code><a href="es/DOM/element#element.cloneNode">cloneNode()</a></code> function</li>
+ <li>and the copy is appended using <code><a href="es/DOM/element#element.appendChild">appendChild()</a></code>.</li>
+</ul>
+
+<p>Note that some elements, such as <code><a href="es/XUL/Elementos#listbox">listbox</a></code> and <code><a href="es/XUL/Elementos#menulist">menulist</a></code> provide some additional specialized modification functions which you should use instead when you can. Ésto se describe en la <a href="es/Tutorial_de_XUL/Manipulando_listas">próxima sección</a>.</p>
+
+<h3 id="Manipulaci.C3.B3n_de_elementos_b.C3.A1sicos" name="Manipulaci.C3.B3n_de_elementos_b.C3.A1sicos">Manipulación de elementos básicos</h3>
+
+<p>The main XUL elements such as buttons, checkboxes and radio buttons may be manipulated using a number of script properties. The properties available are listed in the <a href="es/XUL/Referencia">referencia al element</a> as those available are different for each element. Common properties that you will manipulate include the <code><a href="es/XUL/Propiedades#label">label</a></code>, <code><a href="es/XUL/Propiedades#value">value</a></code>, <code><a href="es/XUL/Propiedades#checked">checked</a></code> and <code><a href="es/XUL/Propiedades#disabled">disabled</a></code> properties. They set or clear the corresponding attribute as necessary.</p>
+
+<h4 id="Ejemplos_de_propiedades_label_y_value" name="Ejemplos_de_propiedades_label_y_value">Ejemplos de propiedades <code>label</code> y <code>value</code></h4>
+
+<p>Here is a simple example which changes the label on a button:</p>
+
+<p><strong>Ejemplo 3</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_3.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_3.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;button label="Hola" oncommand="this.label = 'Adiós';"/&gt;
+</pre>
+
+<p>Cuando el botón es apretado, el <a href="es/XUL/Propiedades#label">label</a> es cambiado. This technique will work for a variety of different elements that have labels. For a textbox, you can do something similar for the <code><a href="es/XUL/Propiedades#value">value</a></code> property.</p>
+
+<p><strong>Ejemplo 4</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_4.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_4.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;button label="Añade" oncommand="this.nextSibling.value += '1';"/&gt;
+&lt;textbox/&gt;
+</pre>
+
+<p>This example adds a '1' to the textbox each time the button is pressed. The <code><a href="es/DOM/element#element.nextSibling">nextSibling</a></code> property navigates from the button (this) to the next element, the textbox. The '+=' operator is used to add to the current value so a 1 will be added onto the end of the existing text. Note that you can still enter text into the textbox. You can also retrieve the current label or value using these properties, as in the following example:</p>
+
+<p><strong>Ejemplo 5</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_5.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_5.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;button label="Hola" oncommand="alert(this.label);"/&gt;
+</pre>
+
+<h4 id="Toggling_a_checkbox" name="Toggling_a_checkbox">Toggling a checkbox</h4>
+
+<p>Checkboxes have a <code><a href="es/XUL/Propiedades#checked">checked</a></code> property which may be used to check or uncheck the <code><a href="es/XUL/Elementos#checkbox">checkbox</a></code>. It should be easy to determine how this is used. In this next example, we reverse the state of the <code><a href="es/XUL/Propiedades#checked">checked</a></code> property whenever the button is pressed. Note that while the <code><a href="es/XUL/Propiedades#label">label</a></code> and <code><a href="es/XUL/Propiedades#value">value</a></code> properties are strings, the <code><a href="es/XUL/Propiedades#checked">checked</a></code> property is a boolean property which will be set either true or false.</p>
+
+<p><strong>Ejemplo 6</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_6.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_6.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;button label="Change" oncommand="this.nextSibling.checked = !this.nextSibling.checked;"/&gt;
+&lt;checkbox label="Check for messages"/&gt;
+</pre>
+
+<p>Radio buttons may be selected as well using properties, however since only one in a group may be selected at a time, the others must all be unchecked when one is checked. You don't have to do this manually of course. The radiogroup's <code><a href="es/XUL/Propiedades#selectedIndex">selectedIndex</a></code> property may be used to do this. The <code><a href="es/XUL/Propiedades#selectedIndex">selectedIndex</a></code> property may be used to retrieve the<em>index</em> of the selected radio button in the group and well as change it.</p>
+
+<h4 id="Cambio_de_un_elemento_desactivado_o_activado" name="Cambio_de_un_elemento_desactivado_o_activado">Cambio de un elemento desactivado o activado</h4>
+
+<p>It is common to disable particular fields that don't apply in a given situation. For example, in a preferences dialog, one might have the choice of several possibilities, but one choice allows additional customization. Here is an example of how to create this type of interface.</p>
+
+<p><strong>Ejemplo 7</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_7.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_dommodify_7.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;script&gt;
+function updateState(){
+  var name = document.getElementById("name");
+  var sindex = document.getElementById("group").selectedIndex;
+  name.disabled = sindex == 0;
+}
+&lt;/script&gt;
+
+&lt;radiogroup id="group" onselect="updateState();"&gt;
+  &lt;radio label="Random name" selected="true"/&gt;
+  &lt;hbox&gt;
+    &lt;radio label="Specify a name:"/&gt;
+    &lt;textbox id="name" value="Jim" disabled="true"/&gt;
+  &lt;/hbox&gt;
+&lt;/radiogroup&gt;
+</pre>
+
+<p>In this example a function updateState() is called whenever a select event is fired on the radio group. This will happen whenever a radio button is selected. This function will retrieve the currently selected <code><a href="es/XUL/Elementos#radio">radio</a></code> element using the <code><a href="es/XUL/Propiedades#selectedIndex">selectedIndex</a></code> property. Note that even though one of the radio buttons is inside an <code><a href="es/XUL/Elementos#hbox">hbox</a></code>, it is still part of the radio group. If the first radio button is selected (index of 0), the textbox is enabled by setting its <code><a href="es/XUL/Propiedades#disabled">disabled</a></code> property to true. If the second radio button is selected, the textbox is enabled.</p>
+
+<p>La sección siguiente proporciona más detalles sobre la <a href="es/Tutorial_de_XUL/Manipulando_listas">manipulación de listas</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Modelo_de_objeto_de_documento" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Manipulando_listas">Siguiente  »</a></p>
+</div>

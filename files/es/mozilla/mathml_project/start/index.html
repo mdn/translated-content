@@ -1,0 +1,96 @@
+---
+title: MathML en acción
+slug: Mozilla/MathML_Project/Start
+tags:
+  - MathML
+translation_of: Mozilla/MathML_Project/Start
+---
+<h2 id="MathML_en_acción">MathML en  acción</h2>
+<p>¿Ves elegantes ecuaciones a lo largo de esta página? ¿No? Que mal, aquí tienes una <a href="https://developer.mozilla.org/@api/deki/files/5690/=start.png">captura de pantalla</a>  de lo que te estás perdiendo. <a href="./">Descarga </a>una versión de Mozilla habilitada para usar MathML para remediar esta situación.</p>
+<p>¿Ahora ya tienes una versión de Mozilla habilitada para usar MathML pero lo que ves en las capturas de pantalla no es lo que obtienes? En ese caso, probablemente te faltan algunas <a href="fonts/">fuentes MathML </a>importantes.</p>
+<p>Ahora que estas bien equipado, deberías poder ver esta ecuación incorporada con varios acentos: <math> <mrow> <mover> <mi>x</mi> <mo>^</mo> </mover> <mo>+</mo> <mover> <mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow> <mo>^</mo> </mover> <mo>+</mo> <mover> <mrow><mi>x</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow> <mo>^</mo> </mover><mo></mo></mrow></math><math><mrow><mover><mi></mi><mo></mo></mover><mo></mo><mover><mrow><mi></mi><mo></mo><mi></mi></mrow><mo></mo></mover><mo></mo><mover><mrow><mi></mi><mo></mo><mi></mi><mo></mo><mi></mi></mrow><mo></mo></mover><mo>.</mo> </mrow> </math>Al lado de esta tienes esta pequeña fórmula, <math> <mrow> <mo>det</mo> <mo lspace="0" rspace="0" symmetric="false">|</mo> <mfrac linethickness="0"> <mi>a</mi> <mi>c</mi> </mfrac> <mfrac linethickness="0"> <mi>b</mi> <mi>d</mi> </mfrac> <mo lspace="0" rspace="0" symmetric="false">|</mo> <mo>=</mo> <mi>a</mi> <mi>d</mi> <mo>-</mo> <mi>b</mi> <mi>c</mi> <mo>,</mo> </mrow></math>la cual también puede ser compuesta en displaystyle como <math display="block"> <mrow> <mo>det</mo> <mo>|</mo> <mtable> <mtr> <mtd> <mi>a</mi> </mtd> <mtd> <mi>b</mi> </mtd> </mtr> <mtr> <mtd> <mi>c</mi> </mtd> <mtd> <mi>d</mi> </mtd> </mtr> </mtable> <mo>|</mo> <mo>=</mo> <mi>a</mi> <mi>d</mi> <mo>-</mo> <mi>b</mi> <mi>c</mi> <mo>.</mo> </mrow> </math></p>
+<p>La composición matemática es difícil. <a href="./">MathML en Mozilla</a> busca cumplir con las <a href="http://www.w3.org/Math/">especificaciones MathML</a> de modo que
+ <i>
+  What</i>
+ <i>
+  You See Is What You Markup</i>
+ (Lo Que Ves Es Lo Que Marcas), o dicho de otra manera
+ <i>
+  What</i>
+ <i>
+  You See Is What You Made</i>
+ (Lo Que Ves Es Lo Que Haces), o de forma más corta "WYSIWYM". ¡La diferencia entre estas dos es el marcado! <math display="block"> <msup> <mrow> <mo minsize="3" symmetric="false">(</mo> <mo>...</mo> <msup> <mrow> <mo minsize="2" symmetric="false">(</mo> <msup> <mrow> <mo symmetric="false">(</mo> <msub> <mi>a</mi> <mn>0</mn> </msub> <mo>+</mo> <msub> <mi>a</mi> <mn>1</mn> </msub> <mo symmetric="false">)</mo> </mrow> <msub> <mi>n</mi> <mn>1</mn> </msub> </msup> <mo>+</mo> <msub> <mi>a</mi> <mn>2</mn> </msub> <mo minsize="2" symmetric="false">)</mo> </mrow> <msub> <mi>n</mi> <mn>2</mn> </msub> </msup> <mo>+</mo> <mo>...</mo> <mo>+</mo> <msub> <mi>a</mi> <mi>p</mi> </msub> <mo minsize="3" symmetric="false">)</mo> </mrow> <msub> <mi>n</mi> <mi>p</mi> </msub> </msup> </math> <math display="block"> <msup> <mrow> <mo>(</mo> <mo>...</mo> <msup> <mrow> <mo>(</mo> <msup> <mrow> <mo>(</mo> <msub> <mi>a</mi> <mn>0</mn> </msub> <mo>+</mo> <msub> <mi>a</mi> <mn>1</mn> </msub> <mo>)</mo> </mrow> <msub> <mi>n</mi> <mn>1</mn> </msub> </msup> <mo>+</mo> <msub> <mi>a</mi> <mn>2</mn> </msub> <mo>)</mo> </mrow> <msub> <mi>n</mi> <mn>2</mn> </msub> </msup> <mo>+</mo> <mo>...</mo> <mo>+</mo> <msub> <mi>a</mi> <mi>p</mi> </msub> <mo>)</mo> </mrow> <msub> <mi>n</mi> <mi>p</mi> </msub> </msup> </math></p>
+<p>Las raíces de esta ecuación en negrita <math> <mstyle mathvariant="bold"> <msup> <mi>y</mi> <mn>3</mn> </msup> <mo>+</mo> <mi>p</mi> <mi>y</mi> <mo>+</mo> <mi>q</mi> <mo>=</mo> <mn>0</mn> </mstyle> </math> también están en negrita <math display="block"> <mstyle mathvariant="bold"> <mi>y</mi> <mo>=</mo> <mroot> <mrow> <mo>-</mo> <mfrac> <mi>q</mi> <mn>2</mn> </mfrac> <mo>+</mo> <mroot> <mrow> <mfrac> <msup> <mi>q</mi> <mn>2</mn> </msup> <mn>4</mn> </mfrac> <mo>+</mo> <mfrac> <msup> <mi>p</mi> <mn>3</mn> </msup> <mn>27</mn> </mfrac> </mrow> <mn>2</mn> </mroot> </mrow> <mn>3</mn> </mroot> <mo>+</mo> <mroot> <mrow> <mo>-</mo> <mfrac> <mi>q</mi> <mn>2</mn> </mfrac> <mo>-</mo> <mroot> <mrow> <mfrac> <msup> <mi>q</mi> <mn>2</mn> </msup> <mn>4</mn> </mfrac> <mo>+</mo> <mfrac> <msup> <mi>p</mi> <mn>3</mn> </msup> <mn>27</mn> </mfrac> </mrow> <mn>2</mn> </mroot> </mrow> <mn>3</mn> </mroot> <mo>.</mo> </mstyle> </math></p>
+<p>Mientras que las raíces de la ecuación <math> <mrow> <mi>a</mi> <msup> <mi>x</mi> <mn>2</mn> </msup> <mo>+</mo> <mi>b</mi> <mi>x</mi> <mo>+</mo> <mi>c</mi> <mo>=</mo> <mn>0</mn> <mo>,</mo> </mrow> </math> haz clic en cualquier parte del área amarilla para acercar y alejar:</p>
+<div style="display: none;">
+ <h2 id="Zoomable_Math" name="Zoomable_Math">Zoomable Math</h2>
+ <h3 id="HTML_Content">HTML Content</h3>
+ <pre class="brush: html">    &lt;p&gt;
+      &lt;math display="block"&gt;
+        &lt;mstyle id="zoomableMath" mathbackground="yellow"&gt;
+          &lt;mrow&gt;
+            &lt;mi&gt;x&lt;/mi&gt;
+            &lt;mo&gt;=&lt;/mo&gt;
+            &lt;mfrac&gt;
+              &lt;mrow&gt;
+                &lt;mrow&gt;
+                  &lt;mo&gt;-&lt;/mo&gt;
+                  &lt;mi&gt;b&lt;/mi&gt;
+                &lt;/mrow&gt;
+                &lt;mo&gt;&amp;#xB1;&lt;/mo&gt;
+                &lt;msqrt&gt;
+                  &lt;mrow&gt;
+                    &lt;msup&gt;
+                      &lt;mi&gt;b&lt;/mi&gt;
+                      &lt;mn&gt;2&lt;/mn&gt;
+                    &lt;/msup&gt;
+                    &lt;mo&gt;-&lt;/mo&gt;
+                    &lt;mrow&gt;
+                      &lt;mn&gt;4&lt;/mn&gt;
+                      &lt;mi&gt;a&lt;/mi&gt;
+                      &lt;mi&gt;c&lt;/mi&gt;
+                    &lt;/mrow&gt;
+                  &lt;/mrow&gt;
+                &lt;/msqrt&gt;
+              &lt;/mrow&gt;
+              &lt;mrow&gt;
+                &lt;mn&gt;2&lt;/mn&gt;
+                &lt;mi&gt;a&lt;/mi&gt;
+              &lt;/mrow&gt;
+            &lt;/mfrac&gt;
+          &lt;/mrow&gt;
+        &lt;/mstyle&gt;
+      &lt;/math&gt;
+    &lt;/p&gt;
+
+</pre>
+ <h3 id="JavaScript_Content">JavaScript Content</h3>
+ <pre class="brush: js">      function zoomToggle()
+      {
+      if (this.hasAttribute("mathsize")) {
+      this.removeAttribute("mathsize");
+      } else {
+      this.setAttribute("mathsize", "200%");
+      }
+      }
+
+      function load()
+      {
+      document.getElementById("zoomableMath").
+      addEventListener("click", zoomToggle, false);
+      }
+
+      window.addEventListener("load", load, false);</pre>
+</div>
+<p style="text-align: center;">{{ EmbedLiveSample('Zoomable_Math') }}</p>
+<p>Considere un marcado interesante como este <math display="block"><mrow><mo>{</mo> <mtable> <mtr> <mtd> <mrow> <msub> <mi>u</mi> <mi>t</mi> </msub> <mo>+</mo> <msub> <mrow> <mi>f</mi> <mo>(</mo> <mi>u</mi> <mo>)</mo> </mrow> <mi>x</mi> </msub> <mo>=</mo> <mn>0</mn> </mrow> </mtd> </mtr> <mtr> <mtd> <mrow> <mi>u</mi> <mo stretchy="false">(</mo> <mn>0</mn> <mo>,</mo> <mi>x</mi> <mo stretchy="false">)</mo> <mo>=</mo> <mrow> <mo>{</mo> <mtable> <mtr> <mtd> <mrow> <msup> <mi>u</mi> <mo>-</mo> </msup> </mrow> </mtd> <mtd> <mrow> <mtext>if </mtext> <mi>x</mi> <mo>&lt;</mo> <mn>0</mn> </mrow> </mtd> </mtr> <mtr> <mtd> <mrow> <msup> <mi>u</mi> <mo>+</mo> </msup> </mrow> </mtd> <mtd> <mrow> <mtext>if </mtext> <mi>x</mi> <mo>&gt;</mo> <mn>0</mn> </mrow></mtd></mtr></mtable></mrow></mrow></mtd></mtr></mtable></mrow></math>u otros marcados complejos como estos <math display="block"> <mrow> <msub> <mover> <mi>Ell</mi> <mo>^</mo> </mover> <mi>Y</mi> </msub> <mo stretchy="false">(</mo> <mi>Z</mi> <mo>;</mo> <mi>z</mi> <mo>,</mo> <mi>τ</mi> <mo stretchy="false">)</mo> <mo>:=</mo> <msub> <mo>∫</mo> <mi>Y</mi> </msub> <mo>(</mo> <munder> <mo>∏</mo> <mi>l</mi> </munder> <mfrac> <mrow> <mrow> <mo>(</mo> <mfrac> <msub> <mi>y</mi> <mi>l</mi> </msub> <mrow> <mn>2</mn> <mi>π</mi> <mi mathvariant="normal">i</mi> </mrow> </mfrac> <mo>)</mo> </mrow> <mrow> <mi>θ</mi> <mo>(</mo> <mfrac> <msub> <mi>y</mi> <mi>l</mi> </msub> <mrow> <mn>2</mn> <mi>π</mi> <mi mathvariant="normal">i</mi> </mrow> </mfrac> <mo>-</mo> <mi>z</mi> <mo>)</mo> </mrow> <msup> <mi>θ</mi> <mo>′</mo> </msup> <mo stretchy="false">(</mo> <mn>0</mn> <mo stretchy="false">)</mo> </mrow> <mrow> <mi>θ</mi> <mo stretchy="false">(</mo> <mo>-</mo> <mi>z</mi> <mo stretchy="false">)</mo> <mrow> <mi>θ</mi> <mo>(</mo> <mfrac> <msub> <mi>y</mi> <mi>l</mi> </msub> <mrow> <mn>2</mn> <mi>π</mi> <mi mathvariant="normal">i</mi> </mrow> </mfrac> <mo>)</mo> </mrow> </mrow> </mfrac> <mo>)</mo> <mo>×</mo> <mo>(</mo> <munder> <mo>∏</mo> <mi>k</mi> </munder> <mfrac> <mrow> <mrow> <mi>θ</mi> <mo>(</mo> <mfrac> <msub> <mi>e</mi> <mi>k</mi> </msub> <mrow> <mn>2</mn> <mi>π</mi> <mi mathvariant="normal">i</mi> </mrow> </mfrac> <mo>-</mo> <mo stretchy="false">(</mo> <msub> <mi>α</mi> <mi>k</mi> </msub> <mo>+</mo> <mn>1</mn> <mo stretchy="false">)</mo> <mi>z</mi> <mo>)</mo> </mrow> <mi>θ</mi> <mo stretchy="false">(</mo> <mo>-</mo> <mi>z</mi> <mo stretchy="false">)</mo> </mrow> <mrow> <mrow> <mi>θ</mi> <mo>(</mo> <mfrac> <msub> <mi>e</mi> <mi>k</mi> </msub> <mrow> <mn>2</mn> <mi>π</mi> <mi mathvariant="normal">i</mi> </mrow> </mfrac> <mo>-</mo> <mi>z</mi> <mo>)</mo> </mrow> <mi>θ</mi> <mo stretchy="false">(</mo> <mo>-</mo> <mo stretchy="false">(</mo> <msub> <mi>α</mi> <mi>k</mi> </msub> <mo>+</mo> <mn>1</mn> <mo stretchy="false">)</mo> <mi>z</mi> <mo stretchy="false">)</mo> </mrow> </mfrac> <mo>)</mo> </mrow> </math> <math display="block"> <mrow> <mi>π</mi> <mo stretchy="false">(</mo> <mi>n</mi> <mo stretchy="false">)</mo> <mo>=</mo> <munderover> <mo>∑</mo> <mrow> <mi>m</mi> <mo>=</mo> <mn>2</mn> </mrow> <mi>n</mi> </munderover> <mrow> <mo>⌊</mo> <msup> <mrow> <mo>(</mo> <mrow> <munderover> <mo>∑</mo> <mrow> <mi>k</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mi>m</mi> <mo>-</mo> <mn>1</mn> </mrow> </munderover> <mrow> <mo minsize="1.5">⌊</mo> <mo>(</mo> <mi>m</mi> <mo>/</mo> <mi>k</mi> <mo>)</mo> <mo minsize="2">/</mo> <mo>⌈</mo> <mi>m</mi> <mo>/</mo> <mi>k</mi> <mo>⌉</mo> <mo minsize="1.5">⌋</mo> </mrow> </mrow> <mo>)</mo> </mrow> <mrow> <mo>-</mo> <mn>1</mn> </mrow> </msup> <mo>⌋</mo> </mrow> </mrow> </math> <math display="block"> <mrow> <msub> <mrow> <mo>‖</mo> <mi>ϕ</mi> <mo>‖</mo> </mrow> <mrow> <msubsup> <mi>W</mi> <mi>s</mi> <mi>k</mi> </msubsup> <mo stretchy="false">(</mo> <msub> <mi>Ω</mi> <mi>g</mi> </msub> <mo stretchy="false">)</mo> </mrow> </msub> <mo>≝</mo> <msup> <mrow> <mo>(</mo> <munder> <mo>∑</mo> <mrow> <mo>|</mo> <mi>α</mi> <mo>|</mo> <mo>≦</mo> <mi>k</mi> </mrow> </munder> <msubsup> <mfenced close="‖" open="‖"> <mfrac> <mrow> <msup> <mo>∂</mo> <mi>α</mi> </msup> <mi>ϕ</mi> </mrow> <mrow> <mo>∂</mo> <msup> <mi>ξ</mi> <mi>α</mi> </msup> </mrow> </mfrac> </mfenced> <mrow> <msup> <mi>L</mi> <mi>s</mi> </msup> <mo stretchy="false">(</mo> <msub> <mi>Ω</mi> <mi>g</mi> </msub> <mo stretchy="false">)</mo> </mrow> <mi>s</mi> </msubsup> <mo>)</mo> </mrow> <mrow> <mn>1</mn> <mo>/</mo> <mi>s</mi> </mrow> </msup> </mrow> </math></p>
+<p>Para más ejemplos, ve a los enlaces en le página del <a href="./">Proyecto MathML</a>, y sí estás <a href="build.html">construyendo</a> tu propio binario de Mozilla, ve el directorio
+ <i>
+  mozilla</i>
+ <i>
+  /layout/mathml/tests</i>
+ .</p>
+<p>Ahora, ¿Qué sigue? Mientras pruebas MathML en Mozilla, ¿Qué hacer con esas cosas que parecen no funcionar según la especificación MathML? ¿O con esas cosas que simplemente parecen molestas, y que desearías poder hacer un poco mejor? ¿O con esas cosas que antes funcionaban y ya no funcionan mas (regresiones)? En cualquiera de las casos, dirígete a <a href="../../quality/bug-writing-guidelines.html">Bugzilla</a> para reportar las anomalías. Bugzilla tiene gran memoria para estas cosas, además, ¿cómo serían tus problemas solucionados si no son reportados?</p>
+<p><a href="../../get-involved.html">Involucrarse</a> es parte de tu contribución al enriquecimiento de <a href="../../newlayout/">Gecko</a> con un procesador de MathML de estándares elegantes y obediente. Tu puedes dar tu opinión <a href="authoring.html">colocando contenido con MathML en la web</a>, reportando bugs en <a href="../../quality/bug-writing-guidelines.html">Bugzilla</a>, y, sí puedes ayudar con código, <a href="http://lxr.mozilla.org/seamonkey/source/layout/mathml/">inspeccionando o mejorando el código existente </a>y/o escogiendo un elemento en la lista de <a href="update.html">tareas pendientes</a>.</p>
+<div id="cke_pastebin" style="position: absolute; top: 1775.63px; width: 1px; height: 1px; overflow: hidden; left: -1000px;">
+  </div>

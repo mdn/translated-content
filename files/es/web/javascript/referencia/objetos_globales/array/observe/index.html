@@ -1,0 +1,133 @@
+---
+title: Array.observe()
+slug: Web/JavaScript/Referencia/Objetos_globales/Array/observe
+tags:
+  - Método(2)
+  - Vector
+translation_of: Archive/Web/JavaScript/Array.observe
+---
+<div>{{JSRef}}</div>
+
+<p>El método <strong><code>Array.observe()</code></strong> se utiliza para poder observar en forma asincrónica los cambios ocurridos en un vector, similar a {{jsxref("Object.observe()")}} para los objetos. Provee un flujo ordenado por orden de ocurrencia de los cambios ocurridos en el vector. Es equivalente a invocar <code>Object.observe()</code> con la lista de tipos aceptados: <code>["add", "update", "delete", "splice"]</code>.</p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="syntaxbox"><code>Array.observe(<var>arr</var>, <var>callback</var>)</code></pre>
+
+<h3 id="Parámetros">Parámetros</h3>
+
+<dl>
+ <dt><code>arr</code></dt>
+ <dd>El vector a ser observado.</dd>
+ <dt><code>callback</code></dt>
+ <dd>La función invocada con cada cambio dentro del vector con el siguiente argumento:
+ <dl>
+  <dt><code>changes</code></dt>
+  <dd>Un vector de objetos, cada uno representando un cambio. Las propiedades de estos objetos son:
+  <ul>
+   <li><strong><code>name</code></strong>: El nombre de la propiedad que ha cambiado.</li>
+   <li><strong><code>object</code></strong>: El vector modificado, despues de la modificación.</li>
+   <li><strong><code>type</code></strong>: Una cadena de caracteres indicando el tipo de cambio que ocurrió. Estos tipos son: <code>"add"</code>, <code>"update"</code>, <code>"delete"</code>, o <code>"splice"</code>.</li>
+   <li><strong><code>oldValue</code></strong>: El valor antes de ser modificado. Solo para  los tipos <code>"update"</code> o <code>"delete"</code>.</li>
+   <li><strong><code>index</code></strong>: La posición del vector en la que ocurrio el cambio. Sólo para el tipo <code>"splice"</code>.</li>
+   <li><strong><code>removed</code></strong>: Un vector con los elementos borrados. Sólo para el tipo "splice".</li>
+   <li><strong><code>addedCount</code></strong>: La cantidad de elementos agregados. Sólo para el tipo "splice".</li>
+  </ul>
+  </dd>
+ </dl>
+ </dd>
+</dl>
+
+<h2 id="Descripción">Descripción</h2>
+
+<p>La función callback es invocada cada vez que ocurre un cambio en el vector, recibiendo como parámetro, un vector con todos los cambios ocurridos en el orden en que estos fueron realizados.</p>
+
+<div class="note">
+<p>Changes done via Array methods, such as <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">Array.prototype.pop()</a> will be reported as <code>"splice"</code> changes. Index assignment changes which do not change the length of the array may be reported as <code>"update"</code> changes.</p>
+
+<p>Los cambios realizados por medio de los metodos del objeto Array, como <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop">Array.prototype.pop()</a>, seran reportados como del tipo "splice". Los cambios realizados por indice, que no modifican la cantidad de elementos del vector, podrian ser reportados con el tipo "update".</p>
+</div>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<h3 id="Mostrando_en_consola_los_diferentes_tipos_de_modificaciones">Mostrando en consola los diferentes tipos de modificaciones</h3>
+
+<pre class="brush: js">var arr = ['a', 'b', 'c'];
+
+Array.observe(arr, function(changes) {
+  console.log(changes);
+});
+
+arr[1] = 'B';
+// [{type: 'update', object: &lt;arr&gt;, name: '1', oldValue: 'b'}]
+
+arr[3] = 'd';
+// [{type: 'splice', object: &lt;arr&gt;, index: 3, removed: [], addedCount: 1}]
+
+arr.splice(1, 2, 'beta', 'gamma', 'delta');
+// [{type: 'splice', object: &lt;arr&gt;, index: 1, removed: ['B', 'c', 'd'], addedCount: 3}]
+</pre>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<p><a href="https://github.com/arv/ecmascript-object-observe">Strawman proposal for ECMAScript 7</a>.</p>
+
+<h2 id="Compatibilidad_de_Navegadores">Compatibilidad de Navegadores</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome("36")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li><a href="//stackoverflow.com/q/29269057/778272">Under what condition would Array.observe's “add” event trigger?</a></li>
+ <li>{{jsxref("Array.unobserve()")}} {{experimental_inline}}</li>
+ <li>{{jsxref("Object.observe()")}} {{experimental_inline}}</li>
+</ul>

@@ -1,0 +1,126 @@
+---
+title: CameraManager.getCamera()
+slug: Archive/B2G_OS/API/CameraManager/getCamera
+translation_of: Archive/B2G_OS/API/CameraManager/getCamera
+---
+<div><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/es/docs/Mozilla/Firefox_OS/API/Camera_API">Camera API</a></strong></li><li><strong><a href="/es/docs/Mozilla/Firefox_OS/API/Archive"><code>Archive</code></a></strong></li><li class="toggle"><details open><summary>Páginas relacionadas a Camera API</summary><ol><li><a href="/es/docs/Mozilla/Firefox_OS/API/CameraCapabilities"><code>CameraCapabilities</code></a></li><li><a href="/es/docs/Mozilla/Firefox_OS/API/CameraControl"><code>CameraControl</code></a></li><li><a href="/es/docs/Mozilla/Firefox_OS/API/CameraManager"><code>CameraManager</code></a></li></ol></details></li></ol></section><div class="warning">
+    <p style="text-align: center;">This API is available on <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> for <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">privileged or certified applications</a> only.</p>
+</div></div>
+
+<h2 id="Resumen">Resumen</h2>
+
+<p>Este método es usado para acceder a una de las camaras validas en el dispositivo basado en el identificador. Puedes obtener una lista de las camaras validas para ser llamadas por el método <a href="/es/docs/Web/API/CameraManager/getListOfCameras" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>CameraManager.getListOfCameras()</code></a> .</p>
+
+<h2 id="Sintaxis_(pre_Firefox_OS_2.2)">Sintaxis (pre Firefox OS 2.2)</h2>
+
+<pre>CameraManager.getCamera(camera, cameraConfiguration, onsuccess[, onerror]);</pre>
+
+<h3 id="Parametros">Parametros</h3>
+
+<dl>
+ <dt><code>camera</code></dt>
+ <dd>Especifica la camara que desea usarse (el dispositivo puede tener mas de una camara).</dd>
+ <dt><code>cameraConfiguration</code></dt>
+ <dd>Un objeto permite al conjunto de opciones de la camara por esta camara: mode, previewSize y recorderProfile</dd>
+ <dt><code>onsuccess</code></dt>
+ <dd>una función de llamada que toma un objeto <a href="/es/docs/Web/API/CameraControl" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>CameraControl</code></a> como parametro.</dd>
+ <dt><code>onerror</code></dt>
+ <dd>Una opcional función de llamada que acepta una cadena de error como un parametro.</dd>
+</dl>
+
+<h2 id="Ejemplo">Ejemplo</h2>
+
+<pre class="brush: js">var options = {
+  mode: 'picture',
+  recorderProfile: 'jpg',
+  previewSize: {
+    width: 352,
+    height: 288
+  }
+};
+
+var camera = navigator.mozCameras.getListOfCameras()[0];
+
+function onSuccess(camera) {
+  // Do stuff with the camera
+};
+
+function onError(error) {
+  console.warn(error);
+};
+
+navigator.mozCameras.getCamera(camera, options, onSuccess, onError);
+</pre>
+
+<h2 id="Sintaxis_(Firefox_OS_2.2)">Sintaxis (Firefox OS 2.2+)</h2>
+
+<pre>Promise CameraManager.getCamera(camera, cameraConfiguration);</pre>
+
+<h3 id="Parametros_2">Parametros</h3>
+
+<dl>
+ <dt><code>camera</code></dt>
+ <dd>Especifica la camara que deseas usar (El dispositivo puede tener mas de una camara).</dd>
+ <dt><code>cameraConfiguration</code></dt>
+ <dd>Un objeto permite al conjunto de opciones de la camara por esta camara: mode, previewSize y recorderProfile</dd>
+</dl>
+
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
+
+<p>retorna un <a href="/es/docs/Web/API/Promise" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>Promise</code></a>.  La función Promise's <code>.then()</code> acepta dos argumentos en la función:</p>
+
+<dl>
+ <dt><code>onsuccess</code></dt>
+ <dd>Una función de llamada que toma un objeto como parametro. Este objeto tiene la propiedad camara como objeto <a href="/es/docs/Web/API/CameraControl" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>CameraControl</code></a> y la configuracion de la propiedad como actual cameraConfiguration del dispositivo.</dd>
+ <dt><code>onerror</code></dt>
+ <dd>Una opcional función de llamada que acepta una cadena de error como un parametro.</dd>
+</dl>
+
+<h2 id="Ejemplo_2">Ejemplo</h2>
+
+<pre class="brush: js">var options = {
+  mode: 'picture',
+  recorderProfile: 'jpg',
+  previewSize: {
+    width: 352,
+    height: 288
+  }
+};
+
+var camera = navigator.mozCameras.getListOfCameras()[0];
+
+function onSuccess(cameraObj) {
+  var cameraControl = cameraObj.camera;
+  // Do stuff with the cameraControl
+};
+
+function onError(error) {
+  console.warn(error);
+};
+
+navigator.mozCameras.getCamera(camera, options).then(onSuccess, onError);
+</pre>
+
+<h2 id="Specification" name="Specification">Especificaciones</h2>
+
+<p>no forma parte de cualquier especificación aun; este propablemente será reemplazado por  <a href="/en-US/docs/WebRTC">WebRTC</a> cuando este gane mas soporte generalizado en dispositivos moviles .</p>
+
+<h2 id="Permisos">Permisos</h2>
+
+<p>Hasta Firefox OS 1.4, la api de la camara es una api certificada, pero no es accesible para aplicaciones  de tercera partes. Para Firefox OS 2.0 en adelante, el nivel de permisos han sido degradado a privilegiado, pero este es ahora valido para desarrolladores  que usen en sus aplicaciones.</p>
+
+<pre class="brush: json">"type": "privileged"</pre>
+
+<pre class="brush: json">"permissions": {
+  "camera": {
+    "description": "Required for accessing cameras on the device."
+  }
+}</pre>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li><a href="/es/docs/Web/API/CameraManager/getListOfCameras" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>CameraManager.getListOfCameras()</code></a></li>
+ <li><a href="/es/docs/Web/API/CameraControl" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>CameraControl</code></a></li>
+ <li><a href="/es/docs/Web/API/Navigator/mozCamera" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>navigator.mozCamera</code></a></li>
+</ul>

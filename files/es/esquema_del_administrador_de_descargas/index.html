@@ -1,0 +1,108 @@
+---
+title: Esquema del Administrador de descargas
+slug: Esquema_del_Administrador_de_descargas
+tags:
+  - Firefox 3
+translation_of: Archive/Mozilla/The_Download_Manager_schema
+---
+<p>
+</p><p>El Administrador de Descargas utiliza una tabla SQLite para hacer seguimiento de las descargas en progreso así como las descargas en cola y las terminadas.
+</p><p>La tabla se mantiene en un archivo de base de datos llamado "downloads.sqlite", en una tabla llamada "moz_downloads". La versión actual del esquema de la base de datos es 8.
+</p><p>Esta información está disponible usando el método <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager" title="">nsIDownloadManager</a></code> para leer los objetos <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownload" title="">nsIDownload</a></code> para cada entrada de descargas. Sin embargo, si crees que que prefieres ir directamente a la tabla, puedes hacerlo usando el API <a href="es/Storage">Storage</a>.
+</p>
+<h3 id="El_esquema_de_la_tabla" name="El_esquema_de_la_tabla">El esquema de la tabla</h3>
+<table class="standard-table"> <tbody><tr>
+<th>Nombre del campo
+</th><th>Tipo
+</th><th>Descripción
+</th></tr>
+<tr>
+<td>id
+</td><td>INTEGER
+</td><td>Un ID único para la descarga. Este campo es la clave primaria para la tabla.
+</td></tr>
+<tr>
+<td>nombre
+</td><td>TEXT
+</td><td>El nombre del archivo de la descarga.
+</td></tr>
+<tr>
+<td>origen
+</td><td>TEXT
+</td><td>La URI origen de la descarga.
+</td></tr>
+<tr>
+<td>destino
+</td><td>TEXT
+</td><td>La URI destino final de la descarga.
+</td></tr>
+<tr>
+<td>tempPath
+</td><td>TEXT
+</td><td>El path del archivo temporal usado para la descarga.
+</td></tr>
+<tr>
+<td>startTime
+</td><td>INTEGER
+</td><td>La hora de comienzo de la descarga.
+</td></tr>
+<tr>
+<td>endTime
+</td><td>INTEGER
+</td><td>La hora de final de la descarga.
+</td></tr>
+<tr>
+<td>state
+</td><td>INTEGER
+</td><td>El estado actual de la descarga. Ver <a href="es/NsIDownloadManager#Constants">the constants list in the <code>nsIDownloadManager</code> documentation</a>.
+</td></tr>
+<tr>
+<td>referrer
+</td><td>TEXT
+</td><td>El que refiere la descarga (página de donde proviene).
+</td></tr>
+<tr>
+<td>entityID
+</td><td>TEXT
+</td><td>El ID identificador de <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIResumableChannel" title="">nsIResumableChannel</a></code> usado para implementar el canal de descarga. Esta información es usada para reanudar la descarga cuando ha sido pausada.
+</td></tr>
+<tr>
+<td>currBytes
+</td><td>INTEGER
+</td><td>La cantidad actual de bytes que han sido descargados. Por defecto es 0, no puede ser nulo.
+</td></tr>
+<tr>
+<td>maxBytes
+</td><td>INTEGER
+</td><td>El número total de bytes que hay que descargar. Por defecto es -1, no puede ser nulo.
+</td></tr>
+<tr>
+<td>mimeType
+</td><td>TEXT
+</td><td>El tipo MIME del archivo.
+</td></tr>
+<tr>
+<td>preferredApplication
+</td><td>TEXT
+</td><td>La aplicación preferida para abrir el archivo una vez finalizada la descarga.
+</td></tr>
+<tr>
+<td>preferredAction
+</td><td>INTEGER
+</td><td>La constante de acción servida por <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMIMEInfo" title="">nsIMIMEInfo</a></code> que representa la acción a tomar al terminar la descarga. Por defecto es 0 (guardar en disco), no puede ser nulo.
+</td></tr>
+<tr>
+<td>autoResume
+</td><td>INTEGER
+</td><td>0 si la descarga del archivo no debe ser automáticamente reanudada, 1 si debe serlo. Por defecto es 0, no puede ser nulo.
+</td></tr>
+</tbody></table>
+<h3 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h3>
+<ul><li> <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager" title="">nsIDownloadManager</a></code>
+</li><li> <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManagerUI" title="">nsIDownloadManagerUI</a></code>
+</li><li> <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener" title="">nsIDownloadProgressListener</a></code>
+</li></ul>
+<p><br>
+</p>
+<div class="noinclude">
+</div>

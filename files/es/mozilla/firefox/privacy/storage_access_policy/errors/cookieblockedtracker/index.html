@@ -1,0 +1,97 @@
+---
+title: 'Blocked: Storage access requests from trackers'
+slug: Mozilla/Firefox/Privacy/Storage_access_policy/Errors/CookieBlockedTracker
+translation_of: Mozilla/Firefox/Privacy/Storage_access_policy/Errors/CookieBlockedTracker
+---
+<h2 id="Mensaje">Mensaje</h2>
+
+<p>Firefox:</p>
+
+<pre class="syntaxbox"> <span class="tlid-translation translation" lang="es"><span title="">CookieBlockedTracker = La solicitud de acceso a cookies o almacenamiento en "X" se bloqueó porque provenía de un rastreador y el bloqueo de contenido está habilitado.</span></span>
+</pre>
+
+<h2 id="¿Qué_salió_mal"><span class="tlid-translation translation" lang="es"><span title="">¿Qué salió mal</span></span>?</h2>
+
+<p><span class="tlid-translation translation" lang="es"><span title="">Se bloqueó una solicitud de acceso a cookies o almacenamiento porque el navegador la identificó como proveniente de un rastreador y el bloqueo de contenido está habilitado</span></span> .</p>
+
+<p><span class="tlid-translation translation" lang="es"><span title="">El permiso puede ser cambiado o eliminado por</span></span>:</p>
+
+<ul>
+ <li>Going to <em>Preferences &gt; Content Blocking </em>and either
+
+  <ul>
+   <li>adding an exception with the <em>Manage Exceptions</em>… button</li>
+   <li>choosing the <em>Custom</em> Content Blocking and unchecking the <em>Tracker</em> checkbox</li>
+  </ul>
+ </li>
+</ul>
+
+<p>If the blocked resource doesn't need authentication, you can fix the warning message by adding a <code>crossorigin="anonymous"</code> attribute to the relevant element.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://support.mozilla.org/en-US/kb/content-blocking">Content blocking</a> on <a href="https://support.mozilla.org">support.mozilla.org</a></li>
+ <li><a href="/en-US/docs/Web/HTML/CORS_settings_attributes">The <code>crossorigin</code> attribute</a></li>
+</ul>
+
+<div class="boxed translate-source hidden"><textarea>&lt;div&gt;{{FirefoxSidebar}}&lt;/div&gt;
+
+&lt;h2 id="Message"&gt;Message&lt;/h2&gt;
+
+&lt;p&gt;Firefox:&lt;/p&gt;
+
+&lt;pre class="syntaxbox"&gt;CookieBlockedTracker=Request to access cookies or storage on “X” was blocked because it came from a tracker and content blocking is enabled.
+&lt;/pre&gt;
+
+&lt;h2 id="What_went_wrong"&gt;What went wrong?&lt;/h2&gt;
+
+&lt;p&gt;A request to access cookies or storage was blocked because the browser identified it as coming from a tracker and content blocking is enabled.&lt;/p&gt;
+
+&lt;p&gt;The permission can be changed or removed by:&lt;/p&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;Going to &lt;em&gt;Preferences &amp;gt; Content Blocking &lt;/em&gt;and either
+
+  &lt;ul&gt;
+   &lt;li&gt;adding an exception with the &lt;em&gt;Manage Exceptions&lt;/em&gt;… button&lt;/li&gt;
+   &lt;li&gt;choosing the &lt;em&gt;Custom&lt;/em&gt; Content Blocking and unchecking the &lt;em&gt;Tracker&lt;/em&gt; checkbox&lt;/li&gt;
+  &lt;/ul&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If the blocked resource doesn't need authentication, you can fix the warning message by adding a &lt;code&gt;crossorigin="anonymous"&lt;/code&gt; attribute to the relevant element.&lt;/p&gt;
+
+&lt;h2 id="See_also"&gt;See also&lt;/h2&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;&lt;a href="https://support.mozilla.org/en-US/kb/content-blocking"&gt;Content blocking&lt;/a&gt; on &lt;a href="https://support.mozilla.org"&gt;support.mozilla.org&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="/en-US/docs/Web/HTML/CORS_settings_attributes"&gt;The &lt;code&gt;crossorigin&lt;/code&gt; attribute&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</textarea></div>
+
+<article class="localized">
+<header>
+<h3 id="Traducción_en_Español">Traducción en Español:</h3>
+</header>
+
+<div class="guide-links"><a href="/es/docs/MDN/Community" rel="noopener">¿Necesitas ayuda?</a> • <a href="/es/docs/MDN/Contribute/Editor" rel="noopener">Guía editorial</a> • <a href="/es/docs/MDN/Contribute/Content/Style_guide" rel="noopener">Guía de estilo</a></div>
+
+<div class="editor-wrapper" id="editor-wrapper">
+<div class="draft-container">
+<div class="draft-old"></div>
+
+<div class="draft-status">Autoguardado activado.</div>
+</div>
+
+<div class="ckeditor-container editor-container dirty">
+<div class="editor">
+<div class="editor-tools"></div>
+<textarea>&lt;p&gt;La solicitud para acceder a la cookie o al almacenamiento en "https://www.dominio.com/" se bloqueó porque provenía de un rastreador y el bloqueador de contenido está habilitado.&lt;/p&gt;</textarea>
+
+<div style="height: 172px;">
+<div style="border: 1px solid rgb(182, 182, 182); width: 617px; position: fixed; top: 0px;"></div>
+</div>
+</div>
+</div>
+</div>
+</article>

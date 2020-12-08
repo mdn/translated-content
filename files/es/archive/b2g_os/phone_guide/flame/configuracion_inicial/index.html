@@ -1,0 +1,122 @@
+---
+title: Configuración Inicial
+slug: Archive/B2G_OS/Phone_guide/Flame/Configuracion_Inicial
+tags:
+  - B2G
+  - Firefox OS
+  - Flame
+  - developer phone
+  - dispositivo de referencia(2)
+  - reference device
+  - teléfono desarrollador
+translation_of: Archive/B2G_OS/Phone_guide/Flame/Initial_setup
+---
+<div class="summary">
+<p><span id="result_box" lang="es"><span class="hps">Después de conseguir</span> <span class="hps">un Flame</span><span>, hay un par</span> <span class="hps">de pasos que usted</span> <span class="hps">debe asegurarse de que</span> <span class="hps">usted sigue</span> <span class="hps">para su sistema</span> <span class="hps">operativo particular</span></span>, <span id="result_box" lang="es"><span class="hps">antes de empezar a</span> <span class="hps">tratar de</span> <span class="hps">actualizar su dispositivo</span></span> Flame, <span id="result_box" lang="es"><span class="hps">por ejemplo</span></span> para actualizar la versión de Firefox OS de su Flame, <span class="short_text" id="result_box" lang="es"><span class="hps">o instalar</span> <span class="hps">aplicaciones</span> <span class="hps">a su teléfono</span></span>. <span class="short_text" id="result_box" lang="es"><span class="hps">Ambos</span> <span class="hps">están cubiertos</span> <span class="hps">en los artículos siguientes</span></span>, <span id="result_box" lang="es"><span class="hps">pero se debe</span> <span class="hps">trabajar a través de</span> <span class="hps">este artículo</span> <span class="hps">primero</span><span>.</span></span></p>
+</div>
+
+<h2 id="Todos_los_sistemas_operativos">Todos los sistemas operativos</h2>
+
+<p><span class="short_text" id="result_box" lang="es"><span class="hps">Necesita instalar</span> <span class="hps">ADB</span> <span class="hps">y</span> <span class="hps">Fastboot</span> <span class="hps">en su ordenador</span></span> — <span id="result_box" lang="es"><span class="hps">estos son</span> <span class="hps">aplicaciones que</span> <span class="hps">le permiten</span> <span class="hps">interactuar con su</span> <span class="hps">teléfono desde la computadora</span> <span class="hps">cuando</span> <span class="hps">los dos están conectados</span> <span class="hps">a través de cable</span> <span class="hps">de carga USB</span> <span class="hps">del teléfono</span></span>. <span id="result_box" lang="es"><span class="hps">Son necesarios para</span> <span class="hps">que pueda flashear</span> <span class="hps">el teléfono a una</span> <span class="hps">nueva</span> <span class="hps">versión de Firefox</span> <span class="hps">OS</span></span>, <span id="result_box" lang="es"><span class="hps">recuperarse de</span> <span class="hps">un estado no interactivo</span><span>, instalando</span> <span class="hps">aplicaciones</span> <span class="hps">a su teléfono</span><span>,</span> <span class="hps">etc.</span></span></p>
+
+<div class="note">
+<p><strong>Nota</strong>: <span id="result_box" lang="es"><span class="hps">Si estás en</span> <span class="hps">Ubuntu</span> <span class="hps">puede</span> <span class="hps">instalar</span> <span class="hps">ADB</span> <span class="hps">y</span> <span class="hps">Fastboot</span> <span class="hps">simplemente usando</span></span> <code>sudo apt-get install android-tools-adb android-tools-fastboot</code> <span class="short_text" id="result_box" lang="es"><span class="hps">en la línea</span> <span class="hps">de comandos</span></span>.</p>
+</div>
+
+<div class="note">
+<p><strong>Nota</strong>: <span id="result_box" lang="es"><span class="hps">Si usted está en</span> <span class="hps">Mac</span> <span class="hps">OS</span> <span class="hps">puede instalar</span> <span class="hps">ADB</span> <span class="hps">y</span> <span class="hps">Fastboot</span> <span class="hps">simplemente usando</span> <span class="hps">Homebrew</span> <span class="hps">en la línea</span> <span class="hps">de comandos</span></span>. Mire <a href="//developer.mozilla.org/en-US/Firefox_OS/Debugging/Installing_ADB">Instalando y usando ADB</a>.</p>
+</div>
+
+<p>ADB y Fastboot se encuentra disponible en <a class="external external-icon" href="http://developer.android.com/sdk/index.html" title="Android Developer Tookit">Android Developer Toolkit</a>:</p>
+
+<ol>
+ <li>Vaya al link anterior.</li>
+ <li>Presione el botón <em>Download Eclipse ADT</em>.</li>
+ <li><span class="short_text" id="result_box" lang="es"><span class="hps">Acepte</span><span class="hps"> las</span> <span class="hps">condiciones de la licencia</span></span>.</li>
+ <li><span id="result_box" lang="es"><span class="hps">Elija</span> <span class="hps">entre la versión</span> <span class="hps">de 32 bits y</span> <span class="hps">64</span> <span class="atn hps">bits</span></span> (elija 32-bit si no estás seguro).</li>
+ <li>Clic en el botón final <em>Download Eclipse ADT with the Android SDK...</em>.</li>
+ <li><span id="result_box" lang="es"><span class="hps">Una vez</span> <span class="hps">finalizada la descarga</span><span>,</span> <span class="hps">descomprima</span> <span class="hps">el contenido del archivo</span> <span class="hps">zip</span> <span class="hps">en el escritorio</span> <span class="hps">de su ordenador.</span></span></li>
+ <li><span id="result_box" lang="es"><span class="hps">El</span> <span class="hps">nombre de la carpeta</span> <span class="hps">es</span> <span class="hps">un poco complicado</span><span>;</span> <span class="hps">cambiarle el nombre a</span> <span class="hps">simplemente</span></span> <em>adt.</em></li>
+</ol>
+
+<p><span id="result_box" lang="es"><span class="hps">ADB</span> <span class="hps">es una herramienta</span> <span class="hps">que se ejecuta desde</span> <span class="hps">la línea de comandos</span><span>.</span></span> <span class="short_text" id="result_box" lang="es"><span class="hps">Si</span> <span class="hps">usted abre su</span> <span class="hps">terminal / simbolo de sistema</span></span>, vaya a <code>adt/sdk/platform-tools</code> y ejecute el comando <code>adb</code>, <span id="result_box" lang="es"><span class="hps">debería ver</span> <span class="hps">una carga de</span> <span class="hps">la información</span> <span class="hps">arrojada</span> <span class="hps">de vuelta a usted</span> <span class="hps">acerca de lo</span> <span class="hps">que puede hacer con</span> <span class="hps">ADB</span></span>. Ejecutando <code>adb devices</code> <span class="short_text" id="result_box" lang="es"><span class="hps">debe devolver</span> <span class="hps">la línea</span></span> <code>List of devices attached</code>, <span id="result_box" lang="es"><span class="hps">y nada más,</span> <span class="hps">porque</span> <span class="hps">no tienes</span> <span class="hps">ningún dispositivo</span> <span class="hps">aún</span> <span class="hps">conectado</span><span>.</span></span></p>
+
+<p><span id="result_box" lang="es"><span class="hps">En este punto,</span> <span class="hps">es necesario establecer</span> <span class="hps">la variable PATH</span> <span class="hps">para que apunte a</span> <span class="hps">la herramienta</span> <span class="hps">ADB</span><span>,</span> </span><span class="short_text" id="result_box" lang="es"><span class="hps">para que pueda</span> <span class="hps">ejecutarlo desde</span> <span class="hps">cualquier lugar</span></span><span lang="es"><span>, no sólo</span> <span class="hps">cuando se está en</span> <span class="hps">el directorio</span> <span class="hps">exacto en que</span> está <span class="hps">el ADB</span><span>.</span></span></p>
+
+<p><span class="short_text" id="result_box" lang="es"><span class="hps">Para hacer esto</span> <span class="hps">en Windows</span> <span class="hps">8</span></span> (<span id="result_box" lang="es"><span class="hps">Windows 7</span> <span class="hps">será muy similar</span><span>, pero</span> <span class="hps">con pocas diferencias de</span> <span class="hps">opciones de menú</span></span>):</p>
+
+<ul>
+ <li><span id="result_box" lang="es"><span class="hps">Haga clic derecho sobre</span> <span class="hps">el botón</span> <span class="hps">de Windows en la</span> <span class="hps">parte inferior</span> <span class="hps">izquierda y seleccione</span></span> <em>Panel de Control </em> &gt; <em>Sistema y Seguridad</em> &gt; <em>Sistema</em> &gt; <em>Configuración avanzada del sistema</em> &gt; <em>Variables de Entorno</em>.</li>
+ <li>En la lista <em>Variables de sistema</em>, encuentra la llamada <em>Path</em>, seleccionela, entonces clic en <em>Editar...</em></li>
+ <li>En el campo de texto <em>Valor de la variable value</em> <span class="short_text" id="result_box" lang="es"><span class="hps">del</span> <span class="hps">cuadro de diálogo resultante</span></span>, <span id="result_box" lang="es"><span class="hps">asegúrese de que se encuentra</span> <span class="hps">al final de</span> <span class="hps">la gran</span> <span class="hps">cadena de caracteres</span> <span class="hps">en el cuadro</span></span>, <span class="short_text" id="result_box" lang="es"><span class="hps">a continuación, escriba</span> <span class="hps">un punto y coma</span></span> (;) <span id="result_box" lang="es"><span class="hps">seguido de la ubicación</span> <span class="hps">de la herramienta</span> <span class="hps">adb</span> <span class="hps">en su sistema</span></span>, <span class="short_text" id="result_box" lang="es"><span class="hps">que debe ser</span></span> <em>C:\Users\[TU NOMBRE DE USUARIO]\Desktop\adt\sdk\platform-tools</em>.<br>
+  <br>
+  <span id="result_box" lang="es"><span class="hps">Así que si</span> <span class="hps">su nombre de usuario</span> <span class="hps">es</span> <span class="hps">jamessmith</span><span>, introduciría</span></span> ;<em>C:\Users\jamessmith\Desktop\adt\sdk\platform-tools</em>.</li>
+ <li>Presione <em>OK</em> <span id="result_box" lang="es"><span class="hps">en todos</span> <span class="hps">los cuadros de diálogo</span> <span class="hps">que se abrió</span> <span class="hps">en</span> <span class="hps">esta sección.</span></span></li>
+ <li><span class="short_text" id="result_box" lang="es"><span class="hps">Cierre el</span> <span class="hps">símbolo del sistema</span></span>, <span class="short_text" id="result_box" lang="es"><span class="hps">abra</span> <span class="hps">uno nuevo,</span> <span class="hps">y pruebe</span> <span class="hps">escribiendo</span></span> <code>adb devices</code>. <span class="short_text" id="result_box" lang="es"><span class="hps">Si sale</span></span> <code>List of devices attached</code>, todo ha salido bien.! <span class="short_text" id="result_box" lang="es"><span class="hps">También tendrá</span> <span class="hps">que seguir las</span> <span class="hps">instrucciones de la sección</span></span> <a href="#Pasos_extra_para_Windows">Pasos extra para Windows</a> de abajo.</li>
+</ul>
+
+<div class="note">
+<p><strong>Nota</strong>: <span id="result_box" lang="es"><span class="hps">Para abrir</span> <span class="hps">el símbolo del sistema</span><span>, haga clic en</span> <span class="hps">el botón derecho en</span> <span class="hps">el botón</span> <span class="hps">de Windows en la</span> <span class="hps">parte inferior</span> <span class="hps">izquierda y seleccione</span> <span class="hps">la línea de comandos</span><span>.</span></span></p>
+</div>
+
+<p>En Mac/Linux:</p>
+
+<ul>
+ <li><span id="result_box" lang="es"><span class="hps">En el explorador</span><span>, vaya a</span> <span class="hps">la carpeta de inicio</span></span> (<span class="short_text" id="result_box" lang="es"><span class="hps">la que tiene el</span> <span class="hps">icono de la casa</span></span>).</li>
+ <li><span class="short_text" id="result_box" lang="es"><span class="hps">Si no puede</span> <span class="hps">ver</span> <span class="hps">archivos ocultos</span></span> (<span id="result_box" lang="es"><span class="hps">por ejemplo</span><span>, </span><span class="hps">archivos</span> <span class="hps">con puntos</span> <span class="atn hps">(</span><span>.</span><span>)</span> <span class="hps">en el inicio</span></span>), vaya<span class="short_text" id="result_box" lang="es"><span class="hps"> a</span> <span class="hps">la terminal</span> <span class="hps">y escriba el comando</span></span> <code>defaults write com.apple.finder AppleShowAllFiles YES</code>, entonces reinicie el explorador.</li>
+ <li>Abra su archivo <code>.bash_profile</code> o <code>.bashrc</code> en un editor de texto plano como Text Wrangler or Sublime Text (<span class="short_text" id="result_box" lang="es"><span class="hps">tiene que ser</span> <span class="hps">un editor de</span> <span class="hps">texto sin formato</span></span>).</li>
+ <li><span class="short_text" id="result_box" lang="es"><span class="hps">Dentro del archivo</span><span>,</span> <span class="hps">añada una nueva línea</span></span> <code>PATH=/Users/<em>[Tu nombre de usuario]</em>/Desktop/adt/sdk/platform-tools:$PATH</code></li>
+ <li><span class="short_text" id="result_box" lang="es"><span class="hps">Guarde y cierre el archivo.</span></span></li>
+ <li><span class="short_text" id="result_box" lang="es"><span class="hps">Reinicie</span> <span class="hps">su terminal</span></span>, <span class="short_text" id="result_box" lang="es"><span class="hps">y pruebe</span> <span class="hps">escribiendo</span></span> <code>adb devices</code>. <span class="short_text" id="result_box" lang="es"><span class="hps">Si sale</span></span> <code>List of devices attached</code>, todo ha salido bien.</li>
+</ul>
+
+<h2 id="Habilitando_depuración_remota">Habilitando depuración remota</h2>
+
+<p><span id="result_box" lang="es"><span class="hps">Asegúrese de</span> <span class="hps">depuración remota</span> <span class="hps">segura</span> <span class="hps">está activado en</span> <span class="hps">tu</span></span> Flame, usando la opción <em>Depuración Remota/Depuración via USB</em> en <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Ajustes de desarrollador</a> en el dispositivo (<span id="result_box" lang="es"><span class="hps">opción</span> <span class="hps">es diferente,</span> <span class="hps">dependiendo de si</span> <span class="hps">usted tiene</span> <span class="hps">Firefox</span> <span class="hps">1.3</span> <span class="hps">e inferior</span><span>,</span> <span class="hps">o Firefox</span> <span class="hps">1.4+</span> <span class="hps">instalado</span></span>).</p>
+
+<h2 id="Pasos_extra_para_Linux">Pasos extra para Linux</h2>
+
+<p><span class="short_text" id="result_box" lang="es"><span class="hps">Dependiendo de su</span> <span class="hps">distro</span> <span class="hps">Linux</span></span>, <span class="short_text" id="result_box" lang="es"><span class="hps">es probable que</span> <span class="hps">tenga que</span></span> <a href="/en-US/Firefox_OS/Firefox_OS_build_prerequisites#For_Linux.3A_configure_the_udev_rule_for_your_phone">agregar una regla udev</a> para su teléfono.</p>
+
+<p><span id="result_box" lang="es"><span class="hps">Para descubrir</span> <span class="hps">el ID de</span> <span class="hps">proveedor de su</span> <span class="hps">dispositivo</span></span>, <span id="result_box" lang="es"><span class="hps">conectar</span> <span class="hps">su teléfono</span> <span class="hps">a través de USB</span> <span class="hps">y utilice el comando</span></span> <code>lsusb</code> <span id="result_box" lang="es"><span class="hps">para ver</span> <span class="hps">los</span> <span class="hps">dispositivos detectados</span> <span class="hps">en el subsistema</span> <span class="hps">USB.</span></span> <span class="short_text" id="result_box" lang="es"><span class="hps">Encuentre su</span> <span class="hps">teléfono en la lista</span></span>, <span id="result_box" lang="es"><span class="hps">y tome nota de</span> <span class="hps">las cuatro</span> <span class="hps">primeras</span> <span class="hps">cifras</span> <span class="hps">inmediatamente seguido de</span></span> "ID". <span class="short_text" id="result_box" lang="es"><span class="hps">Un ID</span> <span class="hps">común para</span> <span class="hps">Flame</span> <span class="hps">es</span></span> <code>05c6</code>, <span class="short_text" id="result_box" lang="es"><span class="hps">por lo que una</span> <span class="hps">regla</span> <span class="hps">udev</span> <span class="hps">en este caso</span> <span class="hps">sería:</span></span></p>
+
+<pre>SUBSYSTEM=="usb", ATTRS{idVendor}=="05c6", MODE="0666"
+</pre>
+
+<p><span id="result_box" lang="es"><span class="hps">Si el dispositivo</span> <span class="hps">muestra un número</span> <span class="hps">diferente, utilice</span> <span class="hps">en su lugar.</span> <span class="hps">Por ejemplo:</span></span></p>
+
+<pre>SUBSYSTEM=="usb", ATTRS{idVendor}=="18d1", MODE="0666"
+</pre>
+
+<p><span class="short_text" id="result_box" lang="es"><span class="hps">Asegúrese de</span> <span class="hps">ejecutar el comando</span></span> <code>udevadm control --reload-rules</code> (<span id="result_box" lang="es"><span class="hps">podría</span> <span class="hps">ser automática</span> <span class="hps">dependiendo de su configuración</span></span>), <span id="result_box" lang="es"><span class="hps">a continuación, desconecte</span> <span class="hps">y</span> <span class="hps">vuelva a conectar</span> <span class="hps">el dispositivo</span> <span class="hps">antes de continuar.</span></span></p>
+
+<h2 id="Pasos_extra_para_Windows">Pasos extra para Windows</h2>
+
+<p><span class="short_text" id="result_box" lang="es"><span class="hps">Para acceder al</span> <span class="hps">dispositivo Flame</span> <span class="hps">con</span></span> <a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a> <span class="short_text" id="result_box" lang="es"><span class="hps">y</span> <span class="hps">herramientas</span> <span class="hps">Mozilla</span> </span><span class="short_text" lang="es"><span class="hps">dev</span> <span class="hps">como</span></span> <a href="/en-US/Firefox_OS/Using_the_App_Manager">App Manager</a>/<a href="/en-US/docs/Tools/WebIDE">WebIDE</a>, <span id="result_box" lang="es"><span class="hps">se requiere</span> <span class="hps">un controlador USB</span><span>.</span> <span class="hps">Siga</span> <span class="hps">los pasos descritos en</span> <span class="hps">las</span> <span class="hps">secciones</span> <span class="hps">siguientes para</span> <span class="hps">instalarlo.</span></span></p>
+
+<h3 id="Descargando_el_controlador">Descargando el controlador</h3>
+
+<p><a href="http://cds.w5v8t3u9.hwcdn.net/Alcatel_USB_Driver_Q_4.0.0_2013_11_11_noinstall.zip">Descargue el controlador de Windows desde esta ubicación</a>. <span id="result_box" lang="es"><span class="hps">Una vez descargado,</span> <span class="hps">extraer</span> <span class="hps">el contenido del</span> <span class="hps">archivo ZIP en</span> <span class="hps">un lugar adecuado</span> <span class="hps">en su disco duro</span><span>.</span></span></p>
+
+<div class="note">
+<p><strong>Nota</strong>: Android Debug Bridge (<a href="/en-US/Firefox_OS/Debugging/Installing_ADB">ADB</a>) <span id="result_box" lang="es"><span class="hps">se debe instalar</span> <span class="hps">primero</span><span>:</span> <span class="hps">ver</span> <span class="hps">instrucciones anteriores</span> <span class="hps">si no</span> <span class="hps">has</span> <span class="hps">hecho esto ya</span><span>.</span></span></p>
+</div>
+
+<h3 id="Instalando_el_controlador_USB">Instalando el controlador USB</h3>
+
+<p><span id="result_box" lang="es"><span class="hps">En este punto</span><span>, conecte el dispositivo</span> Flame <span class="hps">al ordenador mediante</span> <span class="hps">un cable USB.</span></span></p>
+
+<p>Para instalar el controlador abra el directorio <code>Alcatel_USB_Driver_Q_4.0.0_2013_11_11_noinstall</code>  <span id="result_box" lang="es"><span class="hps">dentro del</span> <span class="hps">archivo ZIP</span> <span class="hps">extraídos y</span> <span class="hps">haga doble clic sobre</span> <span class="hps">el ejecutable</span></span> <code>DriverInstaller.exe</code>. <span id="result_box" lang="es"><span class="hps">Es posible que reciba</span> <span class="hps">una advertencia</span> <span class="hps">en este punto que</span> <span class="hps">el ejecutable</span> <span class="hps">es de</span> <span class="hps">un editor desconocido</span><span>.</span></span> <span id="result_box" lang="es"><span class="hps">Si es así</span><span>, seleccione el botón</span></span> <em>Si</em> <span id="result_box" lang="es"><span class="hps">y</span> <span class="hps">se pondrá en marcha</span> <span class="hps">el ejecutable</span><span>.</span></span></p>
+
+<p><img alt="Simple dialog box showing a picture of a phone along with install and uninstall buttons." src="https://mdn.mozillademos.org/files/8079/driver-install.png" style="display: block; height: 523px; margin: 0px auto; width: 358px;"></p>
+
+<p>Clic en el botón <em>Install</em> para instalar el controlador.</p>
+
+<p><span id="result_box" lang="es"><span class="hps">Después de que el</span> <span class="hps">controlador</span> <span class="hps">se ha instalado</span><span>, puede comprobar</span> <span class="hps">que está trabajando</span> <span class="hps">abriendo</span> <span class="hps">una ventana de</span> <span class="hps">línea de comandos</span> <span class="hps">y escribiendo</span></span> <code>adb devices</code>.</p>
+
+<p><span class="short_text" id="result_box" lang="es"><span class="hps">Esto debe</span> <span class="hps">listar</span></span> <span class="short_text" id="result_box" lang="es"><span class="hps">el dispositivo conectado con</span> <span class="hps">una salida</span> <span class="hps">algo como:</span></span></p>
+
+<pre>List of devices attached
+3561d02a          device</pre>
+
+<p><span id="result_box" lang="es"><span class="hps">Si el dispositivo</span> <span class="hps">no aparece</span> <span class="hps">aquí</span><span>, compruebe</span> <span class="hps">en el Administrador</span> <span class="hps">de dispositivos de Windows</span><span>.</span></span> <span id="result_box" lang="es"><span class="hps">Su</span> Flame<span class="hps"> puede</span> <span class="hps">aparecer</span> <span class="atn hps">como "</span><span>ACER</span> <span class="hps">ADB</span> <span class="hps">Interface"</span><span>.</span></span> <span id="result_box" lang="es"><span class="hps">Puede</span> <span class="hps">confirmar esto</span> <span class="hps">desconectando</span> <span class="hps">el dispositivo</span> <span class="hps">y ver</span> <span class="hps">si</span> <span class="hps">desaparece del</span> <span class="hps">administrador de dispositivos</span><span>.</span></span> <span id="result_box" lang="es"><span class="hps">Desinstale el</span> <span class="hps">software del controlador</span> <span class="hps">haciendo clic derecho</span> <span class="atn hps">sobre</span></span> "ACER ADB Interface" <span class="short_text" id="result_box" lang="es"><span class="hps">y haciendo clic en</span> <span class="hps">desinstalar.</span></span>  <span id="result_box" lang="es"><span class="hps">Asegúrese</span> <span class="hps">de marcar la casilla</span> <span class="hps">en el</span> <span class="hps">cuadro de diálogo para</span> <span class="hps">eliminar</span> <span class="hps">el software del controlador</span><span>.</span> <span class="hps">Ahora</span> <span class="hps">vuelva a ejecutar</span> <span class="hps">el instalador</span> <span class="hps">anteriormente.</span></span> <span id="result_box" lang="es"><span class="hps">Es recomendable</span> <span class="hps">establecer el</span> <span class="hps">tiempo de espera</span> <span class="hps">de pantalla en su</span> Flame <span class="hps">a algo</span> <span class="hps">alto</span></span> (<em>Ajustes</em> &gt; <em>Pantalla</em> &gt; <em>Screen timeout</em>) <span id="result_box" lang="es"><span class="hps">en Windows</span> <span class="hps">aparece a veces</span> <span class="hps">para volver a instalar</span> <span class="hps">los controladores predeterminados</span> <span class="hps">cuando la pantalla</span> <span class="hps">se apaga.</span></span></p>

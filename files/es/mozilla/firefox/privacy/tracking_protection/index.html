@@ -1,0 +1,80 @@
+---
+title: Protección contra el rastreo
+slug: Mozilla/Firefox/Privacy/Tracking_Protection
+tags:
+  - bloqueo
+  - navegación privada
+  - privacidad
+  - rastreo
+  - seguimiento
+translation_of: Mozilla/Firefox/Privacy/Tracking_Protection
+---
+<div>{{FirefoxSidebar}}</div><h2 id="¿Qué_es_la_protección_contra_el_rastreo">¿Qué es la protección contra el rastreo?</h2>
+
+<p>A partir de la versión 42, Firefox para PC y Firefox para Android cuentan con protección contra el rastreo integrada. En las ventanas de Navegación Privada (o pestañas privadas, en Firefox para Android), Firefox bloqueará el contenido de dominios que rastrean la navegación de los usuarios entre diferentes sitios.</p>
+
+<p>A veces, algunos contenidos bloqueados son parte de la estructura de la página, y los usuarios notarán problemas de disposición de elementos cuando Firefox realice estos bloqueos. Otras veces los usuarios no notarán nada, si la estructura de la página está diseñada de tal manera que los espacios vacíos dejados por los elementos bloqueados los ocupen otros contenidos.</p>
+
+<p>Cuando Firefox bloquee contenido, registrará un mensaje como el siguiente en la consola web:</p>
+
+<pre>The resource at "http://some/url" was blocked because tracking protection is enabled.</pre>
+
+<p>Nótese que en Firefox para Android uno puede acceder a la salida de la consola usando el depurador remoto.</p>
+
+<p>La interfaz de usuario de Firefox indica a los usuarios cuándo se ha producido un bloqueo de contenido y les permite desbloquearlo en esa sesión. Si lo desean, también pueden desactivar completamente la protección contra el rastreo. Descubre más en <a href="https://support.mozilla.org/es/kb/navegacion-privada-con-proteccion-contra-el-rastreo">este artículo.</a></p>
+
+<h2 id="¿Cómo_elige_Firefox_qué_bloquear">¿Cómo elige Firefox qué bloquear?</h2>
+
+<p>El contenido se bloquea en base al dominio desde el que se carga.</p>
+
+<p>Firefox se lanza junto con una lista de sitios en los que se ha detectado actividades de rastreo entre diferentes sitios web. Cuando la protección está activada, Firefox bloqueará el contenido de todos los sitios que se encuentran en esa lista.</p>
+
+<p>Por norma general,, los sitios que hacen este tipo de rastreo son analíticos y de publicidad de terceras partes.</p>
+
+<h2 id="¿Qué_significa_esto_para_tu_sitio">¿Qué significa esto para tu sitio?</h2>
+
+<p>Lo más común es que cuando la protección contra rastreo esté activada:</p>
+
+<ul>
+ <li>el contenido servido por rastreadores de terceros no será visible para los usuarios;</li>
+ <li>tu sitio no podrá usar publicidad de terceros o servicios de analíticas cuando estén haciendo seguimiento de tus usuarios.</li>
+</ul>
+
+<p>Lo menos común es que si otras partes de tu sitio dependen de la carga de estos rastreadores, entonces estas partes no funcionarán cuando la protección esté habilitada. Por ejemplo, si tu sitio incluye una llamada (<em>callback</em>) que se ejecuta cuando se carga el contenido de un sitio que rastrea, entonces no se ejecutará esa llamada.</p>
+
+<p>Por ejemplo, no deberías usar Google Analytics de la siguiente forma:</p>
+
+<pre class="brush:html example-bad">&lt;a href="http://www.example.com" onclick="trackLink('http://www.example.com', event);"&gt;Visit example.com&lt;/a&gt;
+&lt;script&gt;
+function trackLink(url,event) {
+    event.preventDefault();
+    ga('send', 'event', 'outbound', 'click', url, {
+     'transport': 'beacon',
+     'hitCallback': function() {
+       document.location = url;
+     }
+   });
+}
+&lt;/script&gt;</pre>
+
+<p>En cambio, deberías tener cuenta la posibilidad de que no se cargue Google Analytics. Para ello, comprueba si se ha iniciado el objeto <code>ga</code>:</p>
+
+<pre class="brush:html example-good">&lt;a href="http://www.example.com" onclick="trackLink('http://www.example.com', event);"&gt;Visit example.com&lt;/a&gt;
+&lt;script&gt;
+function trackLink(url,event) {
+    event.preventDefault();
+    if (window.ga &amp;&amp; <span class="pl-smi">ga</span>.loaded) {
+         ga('send', 'event', 'outbound', 'click', url, {
+         'transport': 'beacon',
+         'hitCallback': function() { document.location = url; }
+       });
+    } else {
+        document.location = url;
+    }
+}
+&lt;/script&gt;
+</pre>
+
+<p>Encontrarás más información sobre esta técnica en <a href="https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/">este artículo (en inglés).</a></p>
+
+<p>Nótese que, de cualquier manera, la dependencia de terceras partes no es una buena práctica, ya que implica que tu sitio no funcione si la tercera parte va lenta o es inaccesible, o si un complemento bloquea ese elemento rastreador.</p>

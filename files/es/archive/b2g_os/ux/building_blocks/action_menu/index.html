@@ -1,0 +1,46 @@
+---
+title: Menú de acciones
+slug: Archive/B2G_OS/UX/Building_blocks/Action_menu
+translation_of: Archive/B2G_OS/Firefox_OS_apps/Building_blocks/1.x/Action_menu
+---
+<p>Un menú de acciones, como indica su nombre, muestra un listado de acciones, relativas al contenido de la aplicación, a traves del cual el usuario puede elegir qué hacer. Visita la <a href="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Action_menu/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Action_menu/Coding">Guía de código</a> para saber cómo implementar un menú de acciones en tu aplicación.</p>
+<h2 id="Caracteristicas">Caracteristicas</h2>
+<ul>
+  <li>Abiertos desde botones dentro del contenido de la aplicacion, estos botones aparecen a menudo dentro de barras de herramientas (por ejemplo, el boton de "Compartir" de las aplicaciones de navegador).</li>
+  <li>Los menus de acciones contienen uno o mas elementos.</li>
+  <li>Estos menus se expanden en altura para acomodarese a sus elementos ,hasta el máximo de la altura de la pantalla. Una vez que se alcanza el máximo, el contenido se muestra con scroll vertical. Generalmente, una buena práctica es intentar no incluro más de cinco elementos mas el titulo del menú.</li>
+  <li>La cadena del tíutulo es opcional.</li>
+  <li>El menu se cierra por una de dos:
+    <ul>
+      <li>Seleccionar una de las acciones.</li>
+      <li>Pulsar el boton de "Cancelar".</li>
+    </ul>
+  </li>
+</ul>
+<h2 id="Visuales">Visuales</h2>
+<table class="fxosScreenGrid">
+  <tbody>
+    <tr>
+      <td>
+        <h3 id="Estado_de_reposo">Estado de reposo</h3>
+        <p><img alt="" src="https://mdn.mozillademos.org/files/4641/action-menu-idle.png" style="width: 320px; height: 480px;"></p>
+        <p>El boton de acciones abierto, esperando a que el usuario presione una seleccion.</p>
+      </td>
+      <td>
+        <h3 id="Estado_pulsado">Estado pulsado</h3>
+        <p><img alt="" src="https://mdn.mozillademos.org/files/4635/action-menu.png" style="width: 320px; height: 480px;"></p>
+        <p>Aspecto del menu mientras el dedo del usuario presiona la "Opcion 03".</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Variaciones">Variaciones</h2>
+<p>Existen dos variaciones basicas en el menu de acciones: que el menu tenga o no una cadena de titulo en la parte superior.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5381/action-menu-variaciones.jpg" style="width: 1023px; height: 532px;"></p>
+<h2 id="Interaccion">Interaccion</h2>
+<p>El diagrama muestra como trabaja el flujo de interaccion del ususario con el menu de acciones.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/4649/action-menu-flow-1.png" style="width: 731px; height: 1169px;"></p>
+<h2 id="Ver_tambien">Ver tambien</h2>
+<ul>
+  <li><a href="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Action_menu/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Action_menu/Coding">Guia de codigo de menus de acciones</a></li>
+</ul>

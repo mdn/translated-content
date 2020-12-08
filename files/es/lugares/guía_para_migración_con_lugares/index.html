@@ -1,0 +1,645 @@
+---
+title: Guía para migración con lugares
+slug: Lugares/Guía_para_migración_con_lugares
+tags:
+  - páginas_a_traducir
+translation_of: Mozilla/Tech/Places/Places_Developer_Guide
+---
+<p> This document is for extension and application developers who want to use the bookmarks and history APIs in Firefox 3. It provides code samples for many common use-cases, such as CRUD operations, searching, and observing.</p>
+
+<h2 id="Overview" name="Overview">Overview</h2>
+
+<p><a href="/en-US/docs/Places" title="en/Places">Places</a> is the umbrella term for a set of APIs for managing browsing history and URI metadata first introduced in Firefox 3. It encompasses history, bookmarks, tags, favicons, and annotations. There are two models of identity in the system: URIs, and unique integer identifiers for items in the bookmark system. Some of the APIs are URI-centric, some use item ids. The API signature and context usually make clear which is required.</p>
+
+<h2 id="Bookmarks" name="Bookmarks">Bookmarks</h2>
+
+<p>The toolkit bookmarks service is <a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/places/public/nsINavBookmarksService.idl" rel="custom">nsINavBookmarksService</a>:</p>
+
+<pre class="brush: js">var bookmarks = Cc["@mozilla.org/browser/nav-bookmarks-service;1"]
+                .getService(Ci.nsINavBookmarksService);
+</pre>
+
+<p>This service provides methods for adding, editing and deleting items in the bookmarks collection.</p>
+
+<h3 id="Types" name="Types">Types in the Bookmark System</h3>
+
+<p>There are the four types of items in the bookmarks system, and their identifiers in the IDL:</p>
+
+<ul>
+ <li>Bookmark: nsINavBookmarksService.TYPE_BOOKMARK</li>
+ <li>Folder: nsINavBookmarksService.TYPE_FOLDER</li>
+ <li>Separator: nsINavBookmarksService.TYPE_SEPARATOR</li>
+ <li>Dynamic Container: nsINavBookmarksService.TYPE_DYNAMIC_CONTAINER</li>
+</ul>
+
+<h3 id="Identification" name="Identification">Identifying Items in the Bookmark System</h3>
+
+<p>Items in the bookmarks collection are identified by an id unique to the user's profile. Most of the APIs provided by the bookmarks service use an item's id to identify what to act on.</p>
+
+<p>The bookmarks datastore is hierarchical, modeling folders and their contents. The ids of several significant folders are made available as attributes of <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavBookmarksService" title="">nsINavBookmarksService</a></code>.</p>
+
+<ul>
+ <li>nsINavBookmarksService.placesRoot - The root folder of hierarchy.</li>
+ <li>nsINavBookmarksService.bookmarksMenuFolder - The contents of this folder are visible in the Bookmarks menu.</li>
+ <li>nsINavBookmarksService.toolbarFolder - The contents of this folder are visible on the Bookmarks toolbar.</li>
+ <li>nsINavBookmarksService.unfiledBookmarksFolder - Items that have been "starred", but not places in any folder.</li>
+ <li>nsINavBookmarksService.tagsFolder - Subfolders of this folder are tags, and their children are URIs that have been tagged with that folder's name.</li>
+</ul>
+
+<h3 id="Other_Bookmarks_APIs" name="Other_Bookmarks_APIs">Other Bookmarks APIs</h3>
+
+<p>Note: This document covers the toolkit Places services. However, Firefox developers can take advantage of several helper APIs that are browser-specific:</p>
+
+<ul>
+ <li><a href="/en-US/docs/Toolkit_API/FUEL" title="en/FUEL">FUEL</a> - A collection of wrapper APIs for easing access to a number of Firefox utilities and services</li>
+ <li><a href="https://dxr.mozilla.org/mozilla-central/source/browser/components/places/public/nsIPlacesTransactionsService.idl" rel="custom">nsIPlacesTransactionsService</a> - A Firefox service for modifying bookmarks in a transactional manner, providing facilities for undo/redo</li>
+ <li><a href="/en-US/docs/Places_utilities_for_JavaScript" title="en/Places_utilities_for_JavaScript">Places utilities for JavaScript</a> - Accessors and helper functions for Firefox and extensions</li>
+</ul>
+
+<h3 id="Creating" name="Creating">Creating Bookmarks, Folders and Other Items</h3>
+
+<p>Creating a Bookmark</p>
+
+<pre class="brush: js">// create an nsIURI for the URL to be bookmarked.
+var bookmarkURI = Cc["@mozilla.org/network/io-service;1"]
+                  .getService(Ci.nsIIOService)
+                  .newURI("http://www.mozilla.com", null, null);
+
+var bookmarkId = bookmarks.insertBookmark(
+  bookmarks.toolbarFolder, // The id of the folder the bookmark will be placed in.
+  bookmarkURI,             // The URI of the bookmark - an nsIURI object.
+  bookmarks.DEFAULT_INDEX, // The position of the bookmark in its parent folder.
+  "my bookmark title");    // The title of the bookmark.
+</pre>
+
+<p>Creating a Folder</p>
+
+<pre class="brush: js">var folderId = bookmarks.createFolder(
+  bookmarks.toolbarFolder, // The id of the folder the new folder will be placed in.
+  "my folder title",       // The title of the new folder.
+  bookmarks.DEFAULT_INDEX);    // The position of the new folder in its parent folder.
+</pre>
+
+<p>Creating a Separator</p>
+
+<pre class="brush: js">var separatorId = bookmarks.insertSeparator(
+  bookmarks.toolbarFolder, // The id of the folder the separator will be placed in.
+  bookmarks.DEFAULT_INDEX);    // The position of the separator in its parent folder.
+</pre>
+
+<p>Creating a Livemark</p>
+
+<pre class="brush: js">var IOService = Cc["@mozilla.org/network/io-service;1"]
+                .getService(Ci.nsIIOService);
+
+var siteURI = IOService.newURI("http://www.mozilla.com", null, null);
+var feedURI = IOService.newURI("http://www.mozilla.org/news.rdf", null, null);
+
+var livemarks = Cc["@mozilla.org/browser/livemark-service;2"]
+                .getService(Ci.nsILivemarkService);
+
+livemarks.createLivemark(bookmarks.toolbarFolder, // The id of the folder the livemark will be placed in
+  "My Livemark Title",        // The title of the livemark
+  siteURI,                    // The URI of the site. A nsIURI object.
+  feedURI,                    // The URI of the actual feed. A nsIURI object.
+  bookmarks.DEFAULT_INDEX);   // The position of the livemark in its parent folder.
+</pre>
+
+<h3 id="Reading" name="Reading">Accessing Bookmarks and Related Items</h3>
+
+<h4 id="Item_Properties" name="Item_Properties">Accessing Item Properties</h4>
+
+<p>For all items:</p>
+
+<ul>
+ <li>String getItemTitle(aItemId) - Returns an item's title</li>
+ <li>Int64 getItemIndex(aItemId) - Returns an item's position in it's parent folder</li>
+ <li>PRTime getItemType(aItemId) - Returns the type of an item (bookmark, folder, separator)</li>
+ <li>PRTime getItemDateAdded(aItemId) - Returns the time in microseconds that an item was added</li>
+ <li>PRTime getItemLastModified(aItemId) - Returns the time in microseconds that an item was last modified</li>
+ <li>Int64 getFolderIdForItem(aItemId) - Returns the id of the folder containing the given item.</li>
+ <li>String getItemGUID(aItemId) <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 14.0 / Thunderbird 14.0 / SeaMonkey 2.11)">Obsoleto Gecko 14.0</span> - Returns a globally unique identifier for the item. This is mainly for use by extensions that sync bookmark data between different profiles.</li>
+</ul>
+
+<p>For bookmarks:</p>
+
+<ul>
+ <li>nsIURI getBookmarkURI(aItemId) - Returns the URI of a bookmark item</li>
+ <li>String getKeywordForBookmark(aItemId) - Returns a bookmark's keyword, or null</li>
+</ul>
+
+<p>For folders:</p>
+
+<ul>
+ <li>Int64 getChildFolder(aFolderId, aSubfolderTitle) - Returns the id of the first subfolder matching the given title.</li>
+ <li>Int64 getIdForItemAt(aFolderId, aPosition) - Returns the id of the item at the given position (throws if there's no item there).</li>
+ <li>Bool getFolderReadonly(aFolderId)</li>
+</ul>
+
+<h4 id="Folder_Contents" name="Folder_Contents">Accessing Folder Contents</h4>
+
+<p>Queries in Places are executed through the main history service. The example below shows how to enumerate a bookmark folder's contents, and how to access the properties of the items themselves.</p>
+
+<pre class="brush: js">var history = Cc["@mozilla.org/browser/nav-history-service;1"]
+	 .getService(Ci.nsINavHistoryService);
+var query = history.getNewQuery();
+query.setFolders([myFolderId], 1);
+var result = history.executeQuery(query, history.getNewQueryOptions());
+// The root property of a query result is an object representing the folder you specified above.
+var folderNode = result.root;
+// Open the folder, and iterate over its contents.
+folderNode.containerOpen = true;
+for (var i=0; i &lt; folderNode.childCount; ++i) {
+	var childNode = folderNode.getChild(i);
+	 // Some item properties.
+	var title = childNode.title;
+	var id = childNode.itemId;
+	var type = childNode.type;
+
+	// Some type-specific actions.
+	if (type == Ci.nsINavHistoryResultNode.RESULT_TYPE_URI) {
+		var uri = childNode.uri;
+	}
+	else if (type == Ci.nsINavHistoryResultNode.RESULT_TYPE_FOLDER) {
+		childNode.QueryInterface(Ci.nsINavHistoryContainerResultNode);
+		childNode.containerOpen = true;
+		// now you can iterate over a subfolder's children
+	}
+}
+</pre>
+
+<p>ther available node types are documented in the <a class="external" href="http://mxr.mozilla.org/seamonkey/source/toolkit/components/places/public/nsINavHistoryService.idl">IDL</a>.</p>
+
+<h4 id="Searching" name="Searching">Searching Bookmarks</h4>
+
+<p>Queries are executed through the history service. The example below shows how to search through all bookmarks, and to iterate over the results.</p>
+
+<pre class="brush: js">var bookmarks = Cc["@mozilla.org/browser/nav-bookmarks-service;1"]
+                .getService(Ci.nsINavBookmarksService);
+var history = Cc["@mozilla.org/browser/nav-history-service;1"]
+              .getService(Ci.nsINavHistoryService);
+
+var query = history.getNewQuery();
+
+// Specify folders to be searched
+var folders = [bookmarks.toolbarFolder, bookmarks.bookmarksMenuFolder,
+               bookmarks.unfiledBookmarksFolder];
+query.setFolders(folders, folders.length);
+
+// Specify terms to search for, matches against title, URL and tags
+query.searchTerms = "firefox";
+
+var options = history.getNewQueryOptions();
+options.queryType = options.QUERY_TYPE_BOOKMARKS;
+
+var result = history.executeQuery(query, options);
+
+// The root property of a query result is an object representing the folder you specified above.
+var resultContainerNode = result.root;
+
+// Open the folder, and iterate over its contents.
+resultContainerNode.containerOpen = true;
+for (var i=0; i &lt; resultContainerNode.childCount; ++i) {
+  var childNode = resultContainerNode.getChild(i);
+
+  // Accessing properties of matching bookmarks
+  var title = childNode.title;
+  var uri = childNode.uri;
+}
+</pre>
+
+<h3 id="Updating" name="Updating">Updating Bookmark Items</h3>
+
+<p>For all items:</p>
+
+<ul>
+ <li>setItemTitle(aItemId, aTitle) - Changes an item's title.</li>
+ <li>setItemIndex(aItemId, aIndex) - Changes an item's position. NOTE: This does not re-index the whole folder - use moveItem for a managed solution.</li>
+ <li>setItemDateAdded(aItemId, aDateAdded) - Set the date the item was first added, in microseconds.</li>
+ <li>setItemLastModified(aItemId, aLastModified) - Set the date the item was last modified, in microseconds.</li>
+ <li>setItemGUID(aItemId, aGUID) <span class="inlineIndicator obsolete obsoleteInline" title="(Firefox 14.0 / Thunderbird 14.0 / SeaMonkey 2.11)">Obsoleto Gecko 14.0</span> - Returns a globally unique identifier for the item. This is mainly for use by extensions that sync bookmark data between different profiles.</li>
+ <li>moveItem (aFolderId, aNewParentId, aIndex) - Move an item from one folder to another.</li>
+</ul>
+
+<p>For bookmarks:</p>
+
+<ul>
+ <li>changeBookmarkURI(aItemId, aURI) - Change a bookmark's URI.</li>
+ <li>setKeywordForBookmark(aItemId, aKeyword) - Set the keyword for a bookmark.</li>
+</ul>
+
+<h3 id="Deleting" name="Deleting">Deleting Bookmark Items</h3>
+
+<p>With the bookmarks service:</p>
+
+<ul>
+ <li>removeItem(aItemId) - Works for all types</li>
+ <li>removeFolder(aItemId) - Works for folders and livemarks</li>
+ <li>removeFolderChildren(aItemId) - Works for folders and livemarks</li>
+</ul>
+
+<h3 id="Observing" name="Observing">Observing Bookmark Events</h3>
+
+<p>The <code>nsINavBookmarkObserver</code> interface is used for observing bookmarks activity such as item additions, changes and deletions.</p>
+
+<pre class="brush: js">// Create a bookmark observer
+var observer = {
+  onBeginUpdateBatch: function() {
+    // This method is notified when a batch of changes are about to occur.
+    // Observers can use this to suspend updates to the user-interface, for example
+    // while a batch change is occurring.
+  },
+  onEndUpdateBatch: function() {
+    this._inBatch = false;
+  },
+  onItemAdded: function(id, folder, index) {
+  },
+  onItemRemoved: function(id, folder, index) {
+  },
+  onItemChanged: function(id, property, isAnnotationProperty, value) {
+    // isAnnotationProperty is a boolean value that is true of the changed property is an annotation.
+    // You can access a bookmark item's annotations with the &lt;code&gt;nsIAnnotationService&lt;/code&gt;.
+  },
+  onItemVisited: function(id, visitID, time) {
+    // The visit id can be used with the History service to access other properties of the visit.
+    // The time is the time at which the visit occurred, in microseconds.
+  },
+  onItemMoved: function(id, oldParent, oldIndex, newParent, newIndex) {
+    // oldParent and newParent are the ids of the old and new parent folders of the moved item.
+  },
+  QueryInterface: function(iid) {
+    if (iid.equals(Ci.nsINavBookmarkObserver) ||
+        iid.equals(Ci.nsISupports)) {
+      return this;
+    }
+    throw Cr.NS_ERROR_NO_INTERFACE;
+  },
+};
+
+// Register the observer with the bookmarks service
+var bmsvc = Cc["@mozilla.org/browser/nav-bookmarks-service;1"]
+            .getService(Ci.nsINavBookmarksService);
+bmsvc.addObserver(observer, false);
+
+// Un-register the observer when done.
+bmsvc.removeObserver(observer);
+
+</pre>
+
+<h3 id="HTML_Import.2FExport" name="HTML_Import.2FExport">HTML Import/Export</h3>
+
+<p>The <code>nsIPlacesImportExportService</code> service is used for import and export of bookmarks in the <a class="external" href="http://msdn.microsoft.com/en-us/library/aa753582(VS.85).aspx">Netscape Bookmarks HTML</a> format. Note that this service is only currently available for Firefox, not other toolkit-based applications.</p>
+
+<p>Importing:</p>
+
+<ul>
+ <li>importHTMLFromFile (nsILocalFile aFile, boolean aIsInitialImport) - This imports all the bookmarks in the specified file into the current bookmarks collection. If aIsInitialImport is true, all pre-existing bookmarks in the toolbar and menu folders will be deleted.</li>
+</ul>
+
+<div class="note"><strong>Note:</strong> The method <code>importHTMLFromFileToFolder()</code> method was removed in Gecko 14.0 (Firefox 14.0 / Thunderbird 14.0 / SeaMonkey 2.11).</div>
+
+<p>Exporting:</p>
+
+<ul>
+ <li>exportHTMLToFile (nsILocalFile aFile) - This exports all bookmarks in the toolbar, menu and unfiled bookmarks folders into the specified file.</li>
+</ul>
+
+<h3 id="Backup.2FRestore" name="Backup.2FRestore">Backup/Restore</h3>
+
+<p>The new bookmarks system uses the JSON format for storing backups of users' bookmarks. The APIs are available via the PlacesUtils API in the utils.js Javascript module.</p>
+
+<pre class="brush: js">var Ci = Components.interfaces;
+var Cc = Components.classes;
+var Cu = Components.utils;
+
+// Import PlacesUtils
+Cu.import("resource://gre/modules/PlacesUtils.jsm");
+Cu.import("resource://gre/modules/Services.jsm");
+
+// Create the backup file
+var jsonFile = Services.dirsvc.get("ProfD", Ci.nsILocalFile);
+jsonFile.append("bookmarks.json");
+jsonFile.create(Ci.nsILocalFile.NORMAL_FILE_TYPE, 0600);
+
+// Export bookmarks in JSON format to file
+PlacesUtils.backupBookmarksToFile(jsonFile);
+
+// Restore bookmarks from the JSON file
+// NOTE: This *overwrites* all pre-existing bookmarks
+PlacesUtils.restoreBookmarksFromJSONFile(jsonFile);
+</pre>
+
+<h2 id="History" name="History">History</h2>
+
+<p>The toolkit history service is <a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/places/public/nsINavHistoryService.idl" rel="custom">nsINavHistoryService</a>:</p>
+
+<pre class="brush: js">var history = Cc["@mozilla.org/browser/nav-history-service;1"]
+              .getService(Ci.nsINavHistoryService);
+
+</pre>
+
+<p>The history service provides methods for adding, editing, deleting browser history. It's also the jump-off point for querying and searching the history and bookmarks collections.</p>
+
+<p>While nsINavHistory is the main interface for history, there are a couple of other interfaces available for legacy and context-specific uses:</p>
+
+<ul>
+ <li><code>nsIBrowserHistory</code> - Detailed page addition and removal methods</li>
+ <li><code>nsIGlobalHistory2</code> - Simple page detection and addition</li>
+ <li><code>nsIGlobalHistory3</code> - For adding document redirects</li>
+</ul>
+
+<h3 id="Adding" name="Adding">Adding to History</h3>
+
+<p>Places provides a couple of interfaces for adding to, and editing the browsing history. The main interface is nsINavHistoryService. Other interfaces that provide specialized abilities are nsIBrowserHistory and nsIGlobalHistory. Examples of the capabilities of each are provided below.</p>
+
+<pre class="brush: js">// Places deals in URIs, so here's a helper for creating them.
+function uri(spec) {
+  return Cc["@mozilla.org/network/io-service;1"].
+         getService(Ci.nsIIOService).
+         newURI(spec, null, null);
+}
+
+// Adding a basic visit via the core Places history service.
+var history = Cc["@mozilla.org/browser/nav-history-service;1"].
+              getService(Ci.nsINavHistoryService);
+var ourURI = uri("http://www.mozilla.com");
+var visitDate = Date.now() * 1000; // in microseconds
+var referrerURI = null; // or a URI
+var isRedirect = false;
+var visitType = history.TRANSITION_LINK; // the visit is from a link that was clicked
+var sessionId = 0; // can link the visit with a specific browsing session
+history.addVisit(ourURI, visitDate, referrerURI,
+                 visitType, isRedirect, sessionId);
+
+// Add a visit to a URL, with a page title and visited time
+// via nsIBrowserHistory.
+var browserHistory = histsvc.QueryInterface(Ci.nsIBrowserHistory);
+var ourURI = uri("http://www.mozilla.com");
+var pageTitle = "Mozilla";
+var visitDate = Date.now() * 1000; // in microseconds
+browserHistory.addPageWithDetails(ourURI, "Mozilla", visitDate);
+
+// Add a visit to a URL, with extended behavior information
+// via nsIGlobalHistory3.
+var globalHistory = Cc["@mozilla.org/browser/global-history;2"].
+                    getService(Ci.nsIGlobalHistory2);
+var ourURI = uri("http://www.mozilla.com");
+var isRedirect = false;
+var isTopLevel = true;
+globalHistory.addURI(ourURI, isRedirect, isTopLevel, referrerURI);
+globalHistory.setPageTitle(ourURI, "Mozilla");
+</pre>
+
+<h3 id="Deleting_2" name="Deleting_2">Deleting from History</h3>
+
+<pre class="brush: js">// Places deals in URIs, so here's a helper for creating them.
+function uri(spec) {
+  return Cc["@mozilla.org/network/io-service;1"].
+         getService(Ci.nsIIOService).
+         newURI(spec, null, null);
+}
+
+var browserHistory = histsvc.QueryInterface(Ci.nsIBrowserHistory);
+var ourURI = uri("http://www.mozilla.com");
+
+// Remove all visits for a single URL from history
+browserHistory.removePage(ourURI);
+
+// Remove all visits for multiple URLs from history
+var urisToDelete = [ourURI];
+// will call nsINavHistoryObserver.onBeginUpdateBatch/onEndUpdateBatch
+var doNotify = false;
+browserHistory.removePages(urisToDelete, urisToDelete.length, doNotify);
+
+// Remove all visits within a given time period
+var endDate = Date.now() * 1000; // now, in microseconds
+var startDate = endDate - (7 * 86400 * 1000 * 1000); // one week ago, in microseconds
+browserHistory.removePagesByTimeframe(startDate, endDate);
+
+// Remove all pages for a given host
+var entireDomain = true; // will delete from all hosts from the given domain
+browserHistory.removePagesFromHost("mozilla.com", true);
+// Remove all history visits
+browserHistory.removeAllPages();</pre>
+
+<h3 id="Querying" name="Querying">Querying History</h3>
+
+<p>The code sample below queries the browser history for the ten most visited URLs in the browser history.</p>
+
+<pre class="brush: js">var historyService = Components.classes["@mozilla.org/browser/nav-history-service;1"]
+                               .getService(Components.interfaces.nsINavHistoryService);
+var query = historyService.getNewQuery();
+var options = historyService.getNewQueryOptions();
+options.sortingMode = options.SORT_BY_VISITCOUNT_DESCENDING;
+options.maxResults = 10;
+
+// execute the query
+var result = historyService.executeQuery(query, options);
+
+// iterate over the results
+result.root.containerOpen = true;
+var count = result.root.childCount;
+for (var i = 0; i &lt; count; i++) {
+  var node = result.root.getChild(i);
+  // do something with the node properties...
+  var title = node.title;
+  var url = node.uri;
+  var visited = node.accessCount;
+  var lastVisitedTimeInMicrosecs = node.time;
+  var iconURI = node.icon; // is null if no favicon available
+}
+
+result.root.containerOpen = false;
+</pre>
+
+<h3 id="Querying_for_redirects_and_from_visit" name="Querying_for_redirects_and_from_visit">Querying History for redirects and from_visit</h3>
+
+<p>Results of type <code>RESULT_TYPE_FULL_VISIT</code> have information about the visit, such as the referring visit, and how the transition happened (typed, redirect, link, etc). The problem is that it is <strong>not yet implemented</strong> -- see <span class="lang lang-*"><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=320831" rel="external nofollow" title="https://bugzilla.mozilla.org/show_bug.cgi?id=320831">bug 320831</a></span>. So the only solution for now seems to do one own SQL queries to the <a class="external" href="http://www.forensicswiki.org/wiki/Mozilla_Firefox_3_History_File_Format"><code>Places</code> database</a>.</p>
+
+<p>Here is how one can get a connection to the Places database:</p>
+
+<pre class="brush: js">function getPlacesDbConn() {
+    return Components.classes['@mozilla.org/browser/nav-history-service;1'].
+      getService(Components.interfaces.nsPIPlacesDatabase).DBConnection;
+}
+</pre>
+
+<p>And then to get the a redirected visit_id from another visit_id:</p>
+
+<pre class="brush: js">function getFromVisit(visit_id) {
+  var sql = &lt;cdata&gt;&lt;![CDATA[
+    SELECT from_visit FROM moz_places, moz_historyvisits
+    WHERE moz_historyvisits.id = :visit_id AND moz_places.id = moz_historyvisits.place_id;
+  ]]&gt;&lt;/cdata&gt;.toString();
+  var sql_stmt = getPlacesDbConn.createStatement(sql);
+  sql_stmt<span>.params.visit_id = visit_id;  </span>
+
+  var from_visit;
+  try {
+    // Here we can't use the "executeAsync" method since have to return a
+    // result right-away.
+    while (sql_stmt.executeStep()) {
+      from_visit = sql_stmt.row.from_visit;
+    }
+  } finally {
+    sql_stmt.reset();
+  }
+  return from_visit;
+}
+</pre>
+
+<div class="note"><strong>Note:</strong> The <code>&lt;cdata&gt;&lt;![CDATA[ xxx ]]&gt;&lt;/cdata&gt;.toString()</code> notation is E4X and it makes possible to write multi-line strings in JavaScript. This is very useful when writing long SQL statements.</div>
+
+<h3 id="Searching_2" name="Searching_2">Searching History</h3>
+
+<p>Queries are executed through the history service. The example below shows how to search through browser history, and to iterate over the results.</p>
+
+<pre class="brush: js">var history = Cc["@mozilla.org/browser/nav-history-service;1"]
+              .getService(Ci.nsINavHistoryService);
+
+var query = history.getNewQuery();
+
+// Specify terms to search for, matches against title and URL
+query.searchTerms = "firefox";
+
+var result = history.executeQuery(query, history.getNewQueryOptions());
+
+// The root property of a query result is an object representing the folder you specified above.
+var resultContainerNode = result.root;
+
+// Open the result, and iterate over it's contents.
+resultContainerNode.containerOpen = true;
+for (var i=0; i &lt; resultContainerNode.childCount; ++i) {
+  var childNode = resultContainerNode.getChild(i);
+
+  // Accessing properties of matching bookmarks
+  var title = childNode.title;
+  var uri = childNode.uri;
+}
+</pre>
+
+<h3 id="Observing_2" name="Observing_2">Observing History</h3>
+
+<p>The nsINavHistoryObserver interface allows observation of history events such as new visits, page title changes, page expiration and when all history is cleared.</p>
+
+<pre class="brush: js">var history = Cc["@mozilla.org/browser/nav-history-service;1"].
+              getService(Ci.nsINavHistoryService);
+let observer = {
+  onBeginUpdateBatch: function() {
+  },
+  onEndUpdateBatch: function() {
+  },
+  onVisit: function(aURI, aVisitID, aTime, aSessionID, aReferringID, aTransitionType) {
+  },
+  onTitleChanged: function(aURI, aPageTitle) {
+  },
+  onDeleteURI: function(aURI) {
+  },
+  onClearHistory: function() {
+  },
+  onPageChanged: function(aURI, aWhat, aValue) {
+  },
+  onPageExpired: function(aURI, aVisitTime, aWholeEntry) {
+  },
+  QueryInterface: function(iid) {
+    if (iid.equals(Components.interfaces.nsINavHistoryObserver) ||
+        iid.equals(Components.interfaces.nsISupports)) {
+      return this;
+    }
+    throw Cr.NS_ERROR_NO_INTERFACE;
+  }
+};
+
+history.addObserver(observer, false);
+</pre>
+
+<h2 id="New" name="New">New</h2>
+
+<h3 id="Tags" name="Tags">Tagging Service</h3>
+
+<p>The tagging of URIs is provided by <code>nsITaggingService</code>. The service is URI-centric, meaning that consumers can tag URIs directly, without first creating a bookmark. The unique identifier is the URI, and all APIs require URIs as <code>nsIURI</code> objects.</p>
+
+<pre class="brush: js">// Get the tagging service
+var tagssvc = Cc["@mozilla.org/browser/tagging-service;1"]
+              .getService(Ci.nsITaggingService);
+
+// Create a URI to tag
+var IOService = Cc["@mozilla.org/network/io-service;1"]
+                .getService(Ci.nsIIOService);
+var myURI = IOService.newURI("http://www.mozilla.com", null, null);
+
+// Tag the URI
+tagssvc.tagURI(myURI, ["mozilla", "firefox"]);
+
+// Get an array of tags for a URI
+var myTags = tagssvc.getTagsForURI(myURI, {});
+
+// Get an array of URIs for a tag
+var taggedURIs = tagssvc.getURIsForTag("mozilla");
+
+// Get an array of all tags
+var arrayOfAllTags = tagssvc.allTags;
+
+// Remove tags from a URI
+tagssvc.untagURI(myURI, ["mozilla", "firefox"]);
+</pre>
+
+<p><br>
+ This service currently integrates with and is internally dependent upon bookmarks:</p>
+
+<ul>
+ <li>If you tag a URI that is not previously bookmarked, a new bookmark is created in the Unfiled Bookmarks folder.</li>
+ <li>If you delete a bookmark, each tag is removed from it, deleted from the tag data collection. For example, if you delete all your bookmarks, all your tags will also be deleted.</li>
+ <li>If you delete your places.sqlite file, all tags will be deleted (along with all history and bookmarks).</li>
+</ul>
+
+<h3 id="Annotations" name="Annotations">Annotations</h3>
+
+<p>Annotations provide a way to store small bits of arbitrary data for a URI or a bookmark:</p>
+
+<pre class="brush: js">// Get the annotation service
+var annotations = Cc["@mozilla.org/browser/annotation-service;1"]
+                  .getService(Ci.nsIAnnotationService);
+
+// Create a URI to annotate
+var IOService = Cc["@mozilla.org/network/io-service;1"]
+                .getService(Ci.nsIIOService);
+var myURI = IOService.newURI("http://www.mozilla.com", null, null);
+
+// Add an annotation to the URI, that expires when the URI is deleted
+// or expires from the browser history
+annotations.setPageAnnotation(myURI, "myAnnotation", "notes for this URI...",
+                              0, annotations.EXPIRE_WITH_HISTORY);
+
+// Create a bookmark to annotate
+var bookmarks = Cc["@mozilla.org/browser/nav-bookmarks-service;1"]
+                .getService(Ci.nsINavBookmarksService);
+var myBookmark = bookmarks.insertBookmark(bookmarks.toolbarFolder, myURI,
+                                          bookmarks.DEFAULT_INDEX, "my bookmark");
+
+// Add an annotation to the bookmark, that expires only when
+// the bookmark is deleted
+annotations.setItemAnnotation(myBookmark, "myAnnotation", "notes for this bookmark...",
+                              0, annotations.EXPIRE_WITH_HISTORY);
+</pre>
+
+<p>Note the syntactic difference between the URI and bookmark annotation APIs: URI annotation APIs use "Page" in method names whereas bookmark annotation APIs use "Item" in method names.</p>
+
+<h3 id="Saved_Searches" name="Saved_Searches">Saved Searches</h3>
+
+<p>New in Firefox 3 is the ability to save searches of bookmarks or history. These saved searches appear as folders in your bookmarks, with a special icon to signify their difference from normal folders. The contents of these folders are updated when expanded, executing the search against the current history and bookmarks collections.</p>
+
+<p>Saved searches can be formulated as URIs, and added to the bookmarks collection as a normal bookmark. Formulation of search URIs is documented <a class="external" href="/en-US/docs/docs/Places_query_URIs" title="en/docs/Places_query_URIs">here</a>.</p>
+
+<pre class="brush: js">// Formulate a URI to query for the 10 most visited URIs in the browser history
+var mostVisited = "place:queryType=0&amp;sort=8&amp;maxResults=10";
+
+// Create an nsIURI for the URL to be bookmarked.
+var bookmarkURI = Cc["@mozilla.org/network/io-service;1"]
+                  .getService(Ci.nsIIOService)
+                  .newURI(mostVisited, null, null);
+
+// Add the search to the bookmarks toolbar
+var id = bookmarks.insertBookmark(bookmarks.toolbarFolder, bookmarkURI,
+                                  bookmarks.DEFAULT_INDEX, "Most Visited");<span style="line-height: 18px; white-space: normal;">
+</span></pre>

@@ -1,0 +1,123 @@
+---
+title: Manipular marcadores usando el catálogo
+slug: Manipular_marcadores_usando_el_catálogo
+tags:
+  - Places
+  - páginas_a_traducir
+translation_of: Mozilla/Tech/Places/Manipulating_bookmarks_using_Places
+---
+<p></p>
+
+<p>The Places bookmarks service, provided by the <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavBookmarksService" title="">nsINavBookmarksService</a></code> interface, provides methods for creating, deleting, and manipulating bookmarks and bookmark folders. This article offers examples for how to perform common bookmark management tasks using the bookmarks service.</p>
+
+<h3 id="Initiating_the_bookmarks_service" name="Initiating_the_bookmarks_service">Initiating the bookmarks service</h3>
+
+<p>As is the case with nearly all interfaces, before you can use the bookmarks service, you need to get access to it:</p>
+
+<pre class="eval">var bmsvc = Components.classes["@mozilla.org/browser/nav-bookmarks-service;1"]
+                      .getService(Components.interfaces.nsINavBookmarksService);
+</pre>
+
+<h3 id="Creating_a_bookmark_folder" name="Creating_a_bookmark_folder">Creating a bookmark folder</h3>
+
+<p>Creating a new bookmark folder is done using the <code><a href="https://developer.mozilla.org/es/docs/XPCOM_Interface_Reference/nsINavBookmarksService#createFolder()">nsINavBookmarksService.createFolder()</a></code> method. For example, to create a new folder in the Bookmarks menu:</p>
+
+<pre class="eval">var menuFolder = bmsvc.bookmarksMenuFolder; // Bookmarks menu folder
+var newFolderId = bmsvc.createFolder(menuFolder, "Folder name here", -1);
+</pre>
+
+<p>This code locates the Bookmarks menu's folder, then creates a new folder named "Folder name here" in it. Specifying -1 as the index at which to insert the new folder places it at the end of the list.</p>
+
+<p>You can easily change this code to insert the new folder into the bookmarks toolbar by changing <code>bookmarksMenuFolder</code> to <code>toolbarFolder</code>.</p>
+
+<h3 id="Creating_a_new_bookmark" name="Creating_a_new_bookmark">Creating a new bookmark</h3>
+
+<p>To create a new bookmark, use the <code><a href="https://developer.mozilla.org/es/docs/XPCOM_Interface_Reference/nsINavBookmarksService#insertBookmark()">nsINavBookmarksService.insertBookmark()</a></code> method. The URI for the bookmark needs to be specified using an <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code> object.</p>
+
+<pre class="eval">var ios = Components.classes["@mozilla.org/network/io-service;1"]
+                    .getService(Components.interfaces.nsIIOService);
+var uri = ios.newURI(<span class="nowiki">"http://google.com/"</span>, "", "");
+var newBkmkId = bmsvc.insertBookmark(newFolderId, uri, -1, "");
+</pre>
+
+<p>This example instantiates the IO service and uses it to create an <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI" title="">nsIURI</a></code> referring to the Google web site, then calls <code><a href="https://developer.mozilla.org/es/docs/XPCOM_Interface_Reference/nsINavBookmarksService#insertBookmark()">nsINavBookmarksService.insertBookmark()</a></code> to create a new bookmark to Google, placing it at the end of the bookmarks folder referenced by newFolderId.</p>
+
+<h3 id="Finding_bookmark_items" name="Finding_bookmark_items">Finding bookmark items</h3>
+
+<p>If you know the URI of a site and wish to find all bookmarks that link to it, you can use the <code><a href="https://developer.mozilla.org/es/docs/XPCOM_Interface_Reference/nsINavBookmarksService#getBookmarkIdsForURI()">nsINavBookmarksService.getBookmarkIdsForURI()</a></code> method.</p>
+
+<pre class="eval">var ios = Components.classes["@mozilla.org/network/io-service;1"]
+                    .getService(Components.interfaces.nsIIOService);
+var uri = ios.newURI(<span class="nowiki">"http://google.com/"</span>, "", "");
+var bookmarksArray = bmsvc.getBookmarkIdsForURI(uri, {});
+</pre>
+
+<p>After executing this code, the array bookmarksArray contains the IDs of all bookmarks that refer to the specified URI (in this case, <span class="nowiki">"http://google.com"</span>).</p>
+
+<h3 id="Manipulating_existing_items" name="Manipulating_existing_items">Manipulating existing items</h3>
+
+<p>There are a number of convenient methods you can use to make changes to existing bookmarks and bookmark folders. This section covers some of them.</p>
+
+<h4 id="The_item_title" name="The_item_title">The item title</h4>
+
+<p>To change the title of a bookmark or bookmark folder, you use the <code><a href="https://developer.mozilla.org/es/docs/XPCOM_Interface_Reference/nsINavBookmarksService#setItemTitle()">nsINavBookmarksService.setItemTitle()</a></code> method.</p>
+
+<pre class="eval">bmsvc.setItemTitle(newBkmkId, "New title");
+</pre>
+
+<p>This sets the title of the item referenced by the ID newBkmkId to "New title".</p>
+
+<p>You can fetch the current title of an item using the <code><a href="https://developer.mozilla.org/es/docs/XPCOM_Interface_Reference/nsINavBookmarksService#getItemTitle()">nsINavBookmarksService.getItemTitle()</a></code> method:</p>
+
+<pre class="eval">var thisTitle = bmsvc.getItemTitle(newBkmkId);
+alert(thisTitle);
+</pre>
+
+<p>This code will display an alert containing the title of the item referenced by the ID newBkmkId.</p>
+
+<h4 id="The_item_URI" name="The_item_URI">The item URI</h4>
+
+<p>Similarly, you can obtain the URI corresponding to a given bookmark item by calling the <code><a href="https://developer.mozilla.org/es/docs/XPCOM_Interface_Reference/nsINavBookmarksService#getBookmarkURI()">nsINavBookmarksService.getBookmarkURI()</a></code> method.</p>
+
+<pre class="eval">var thisURI = bmsvc.getBookmarkURI(newBkmkId);
+alert(thisURI.spec);
+</pre>
+
+<p>Assuming you've run all the code samples previous to this one, this will output <span class="nowiki">"http://google.com"</span>.</p>
+
+<p>You can use the <code><a href="https://developer.mozilla.org/es/docs/XPCOM_Interface_Reference/nsINavBookmarksService#changeBookmarkURI()">nsINavBookmarksService.changeBookmarkURI()</a></code> method to update the URI for a given bookmark item:</p>
+
+<pre class="eval">uri = ios.newURI(<span class="nowiki">"http://mozilla.com/"</span>, "", "");
+bmsvc.changeBookmarkURI(newBkmkId, uri);
+</pre>
+
+<p>This example changes the bookmark to refer to the Mozilla web site instead of Google.</p>
+
+<p></p><div class="blockIndicator note"><strong>Nota:</strong> All annotations, tags, and so forth are kept when the bookmark's URI is changed.</div><p></p>
+
+<h3 id="Checking_to_see_if_a_URI_is_bookmarked" name="Checking_to_see_if_a_URI_is_bookmarked">Checking to see if a URI is bookmarked</h3>
+
+<p>If you want to see if a given URI is already bookmarked -- for example, to avoid creating a new bookmark for a site that's already bookmarked -- you can use the <code><a href="https://developer.mozilla.org/es/docs/XPCOM_Interface_Reference/nsINavBookmarksService#isBookmarked()">nsINavBookmarksService.isBookmarked()</a></code> method.</p>
+
+<pre class="eval">if (!bmsvc.isBookmarked(<span class="nowiki">"http://www.mozilla.com"</span>)) {
+  var uri = ios.newURI(<span class="nowiki">"http://mozilla.com/"</span>, "", "");
+  bmsvc.insertBookmark(bmsvc.toolbarFolder, uri, -1, "Mozilla");
+}
+</pre>
+
+<p>This example looks to see if the user already has a bookmark for the Mozilla web site, and, if not, creates one, adding it to the user's bookmarks toolbar.</p>
+
+<h3 id="Finding_the_folder_containing_an_item" name="Finding_the_folder_containing_an_item">Finding the folder containing an item</h3>
+
+<p>If you need to know what folder contains an item (this can be especially handy after using <code><a href="https://developer.mozilla.org/es/docs/XPCOM_Interface_Reference/nsINavBookmarksService#getBookmarkIdsForURI()">nsINavBookmarksService.getBookmarkIdsForURI()</a></code> to find bookmarks for a given URI), you can use the <code><a href="https://developer.mozilla.org/es/docs/XPCOM_Interface_Reference/nsINavBookmarksService#getFolderIdForItem()">nsINavBookmarksService.getFolderIdForItem()</a></code> method.</p>
+
+<pre class="eval">var parentFolderId = bmsvc.getFolderIdForItem(newBkmkId);
+</pre>
+
+<h3 id="See_also" name="See_also">See also</h3>
+
+<ul>
+ <li><code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavBookmarksService" title="">nsINavBookmarksService</a></code></li>
+ <li><code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavBookmarkObserver" title="">nsINavBookmarkObserver</a></code></li>
+ <li><a href="es/Places">Places</a></li>
+</ul>

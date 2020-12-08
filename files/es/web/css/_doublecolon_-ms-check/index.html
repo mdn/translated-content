@@ -1,0 +1,114 @@
+---
+title: '::-ms-check'
+slug: 'Web/CSS/::-ms-check'
+tags:
+  - CSS
+  - No estándar(2)
+  - Pseudo-elemento
+  - Referencia
+translation_of: 'Archive/Web/CSS/::-ms-check'
+---
+<div>{{CSSRef}}{{Non-standard_header}}</div>
+
+<h2 id="Resumen">Resumen</h2>
+
+<p>El <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-elemento </a>CSS <strong><code>::-ms-check</code></strong> representa la marca de selección de un {{HTMLElement("input")}} con  <code>type="checkbox"</code> o <code>type="radio"</code>.</p>
+
+<p>No es un elemento estándar y es únicamente soportado por Internet Explorer y Edge, tal y como indica el prefijo  (<code>-ms</code> que indica Microsoft).</p>
+
+<h2 id="Síntaxis">Síntaxis</h2>
+
+<pre class="syntaxbox"><em>selector</em>::-ms-check
+</pre>
+
+<h2 id="Examples" name="Examples">Ejemplos</h2>
+
+<h3 id="Contenido_HTML">Contenido HTML</h3>
+
+<pre class="brush: html">&lt;form&gt;
+    &lt;label for="redButton"&gt;Red&lt;/label&gt;
+    &lt;input type="radio" id="redButton"&gt;&lt;br&gt;
+    &lt;label for="greenCheckbox"&gt;Green&lt;/label&gt;
+    &lt;input type="checkbox" id="greenCheckbox"&gt;
+&lt;/form&gt;</pre>
+
+<h3 id="Contenido_CSS">Contenido CSS</h3>
+
+<pre class="brush: css">input, label {
+    display: inline;
+}
+
+input[type=radio]::-ms-check {
+    color: red; /* Hará que la marca de selección sea roja cuando seleccionemos el botón */
+}
+
+input[type=checkbox]::-ms-check {
+    color: green; /* Hará que la marca de selección sea rverde cuando seleccionemos el botón */
+}
+</pre>
+
+<p>Más abajo tiene disponible un ejemplo para poder probar. El pantallazo a la izquierda muestra que es lo que sucedería al haer click en caso de que no tengas acceso a Internet Explorer o Edge.</p>
+
+<p>{{ EmbedLiveSample('Examples', '', '', 'https://mdn.mozillademos.org/files/13392/ms_check', 'Web/CSS/::-ms-check') }}</p>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<p>No es parte de ninguna especificación.</p>
+
+<p>Microsoft tienes una <a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh465739.aspx">descripcón en MSDN</a> que enumera varias propiedades que se pueden modificar en este pseudo-elemento.</p>
+
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>10.0</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>Firefox OS</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>iOS WebKit</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile"> </div>

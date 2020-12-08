@@ -1,0 +1,98 @@
+---
+title: Thunderbird Localization
+slug: Mozilla/Projects/Thunderbird/Thunderbird_Localization
+tags:
+  - גיור
+  - לוקליזציה
+translation_of: Mozilla/Projects/Thunderbird/Thunderbird_Localization
+---
+<p>This page is aimed at current and future localizers of Thunderbird, Mozilla Messaging's e-mail and usenet client. It covers many aspects a localizer of Thunderbird should be aware of like necessary tools, how to get information about localization-relevant events and various other items of interest.</p>
+
+<h2 id="Creating_a_Thunderbird_localization"><span class="mw-headline">Creating a Thunderbird localization</span></h2>
+
+<p><a href="/en/Bootstrapping_a_New_Locale" title="En/Creating_a_new_localization_(Mercurial)">Creating a new localization (Mercurial)</a> - This article describes how you can create a new localization for Thunderbird.</p>
+
+<h3 id="About_repostories_and_branches">About repostories and branches</h3>
+
+<p>There are 3 active repositories for Thunderbird development. Thunderbird development work is merged from one branch to the next every six weeks.</p>
+
+<ul>
+ <li>comm-central - also known as Trunk or "Daily".
+  <ul>
+   <li>This is where regular Thunderbird development takes place. Strings change at any time.</li>
+   <li>Only a few locales are expected to translate on this branch.</li>
+  </ul>
+ </li>
+ <li>comm-aurora - also known as "Earlybird"
+  <ul>
+   <li>This is where development for a particular release starts to be stabilised.</li>
+   <li>No new features are allowed, and strings are frozen.</li>
+   <li>Locales should do as much of their work as possible on this branch and achieve sign-off.</li>
+   <li>Work done here will automatically be merged to beta and release every 6 weeks.</li>
+  </ul>
+ </li>
+ <li>comm-beta - "Beta" channel
+  <ul>
+   <li>This is where we preview Thunderbird development to a large amount of users.</li>
+   <li>Final stabilisations are performed.</li>
+   <li>Little or no l10n work is done here.</li>
+  </ul>
+ </li>
+</ul>
+
+<p>Most locales will being working on comm-aurora. This repository/branch is stable with respect to strings for each six week period. Completing work here means it is ready for the first beta, and you won't need to work on beta branch. Your work will also automatically be carried forward.</p>
+
+<h3 id="Localization_Requirements">Localization Requirements</h3>
+
+<p>There are not significant restrictions on what locales can change. However, we need to work together on providing search engines for Thunderbird users to use to get the right balance of search engines and the correct options set. For further information <a href="/en/Thunderbird_Localization/Productization" title="en/Thunderbird_Localization/Productization">see this page</a>.</p>
+
+<h3 id="Localization_Dashboard"><span class="mw-headline">Localization Dashboard </span></h3>
+
+<p>The <a class="external text" href="https://l10n.mozilla.org/teams/" rel="nofollow" title="https://l10n.mozilla.org/teams/">localization dashboard</a> for Thunderbird gives localizers a precise overview of the current status of their localization. Detailed information is available on the <a class="link-https" href="https://wiki.mozilla.org/Thunderbird:Localization:Dashboard" title="https://wiki.mozilla.org/Thunderbird:Localization:Dashboard">l10n dashboard page</a>.</p>
+
+<p>A localization will added to the l10n dashboard on request when it has reached a high-level of completion (&gt; 80%) as shown by the <a href="/en/Compare-locales" title="En/Compare-locales">compare-locales</a> output. To request the addition of your locale to the dashboard, <a class="external text" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird&amp;component=Build%20Config" rel="nofollow" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=Thunderbird&amp;component=Build%20Config">file a bug</a> in the Thunderbird product/Build Config component.</p>
+
+<h2 id="Getting_l10n-relevant_information"><span class="mw-headline">Getting l10n-relevant information </span></h2>
+
+<h3 id="Newsgroups_Mailinglists"><span class="mw-headline">Newsgroups &amp; Mailinglists</span></h3>
+
+<p>Localizers of Thunderbird should read the localization newsgroups (<a class="external" href="http://groups.google.de/group/mozilla.dev.l10n.announce" title="http://groups.google.de/group/mozilla.dev.l10n.announce">mozilla.dev.l10n.announce</a> <a class="external text" href="http://groups.google.de/group/mozilla.dev.l10n" rel="nofollow" title="http://groups.google.de/group/mozilla.dev.l10n">mozilla.dev.l10n</a>) to stay informed of Thunderbird-specific and general l10n-related items of interest to them. They are further encouraged to read the Thunderbird development newsgroup (<a class="external text" href="http://groups.google.de/group/mozilla.dev.apps.thunderbird" rel="nofollow" title="http://groups.google.de/group/mozilla.dev.apps.thunderbird">mozilla.dev.apps.thunderbird</a>) to stay informed of recent Thunderbird-related developments.</p>
+
+<p>These newsgroups can also be accessed via the <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-l10n-announce" title="https://lists.mozilla.org/listinfo/dev-l10n-announce">dev-l10n-announce@lists.mozilla.org</a>, <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-l10n" title="https://lists.mozilla.org/listinfo/dev-l10n">dev-l10n@lists.mozilla.org</a> (localization mailinglist) or <a class="link-https" href="https://lists.mozilla.org/listinfo/dev-apps-thunderbird" title="https://lists.mozilla.org/listinfo/dev-apps-thunderbird">dev-apps-thunderbird@lists.mozilla.org</a> (Thunderbird development mailinglist) mailinglists, which mirror the newsgroups mentioned above. You can subscribe to or unsubscribe from these mailinglists via the web interface at <a class="link-https" href="https://lists.mozilla.org/listinfo" title="https://lists.mozilla.org/listinfo">lists.mozilla.org</a>.</p>
+
+<h3 id="Bugzilla"><span class="mw-headline">Bugzilla </span></h3>
+
+<p>Localizers should watch the <a class="link-mailto" href="mailto:thunderbird@localization.bugs" rel="freelink">thunderbird@localization.bugs</a> mail address (or its alias :tb-l10n) to stay current on bugs that might affect Thunderbird localizers. This can be done by adding this mail address to the "User Watching" section of your <a class="link-https" href="https://bugzilla.mozilla.org/userprefs.cgi?tab=email" title="https://bugzilla.mozilla.org/userprefs.cgi?tab=email">Email preferences in bugzilla</a>.</p>
+
+<h3 id="A_few_helpful_links"><span class="mw-headline">A few helpful links </span></h3>
+
+<ul>
+ <li><a class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?product=MailNews+Core&amp;product=Thunderbird&amp;keywords_type=allwords&amp;keywords=l12y&amp;bug_status=UNCONFIRMED,NEW,ASSIGNED,REOPENED" rel="nofollow" title="https://bugzilla.mozilla.org/buglist.cgi?product=MailNews+Core&amp;product=Thunderbird&amp;keywords_type=allwords&amp;keywords=l12y&amp;bug_status=UNCONFIRMED,NEW,ASSIGNED,REOPENED">Open bugs with the l12y (localizability) keyword</a></li>
+ <li><a class="external text" href="https://bugzilla.mozilla.org/buglist.cgi?product=MailNews+Core&amp;product=Thunderbird&amp;bug_status=UNCONFIRMED,NEW,ASSIGNED,REOPENED&amp;emailcc1=1&amp;emailtype1=exact&amp;email1=thunderbird@localization.bugs" rel="nofollow" title="https://bugzilla.mozilla.org/buglist.cgi?product=MailNews+Core&amp;product=Thunderbird&amp;bug_status=UNCONFIRMED,NEW,ASSIGNED,REOPENED&amp;emailcc1=1&amp;emailtype1=exact&amp;email1=thunderbird%40localization.bugs">Open bugs which need localizer attention (thunderbird@localization.bugs has been CC'ed on that bug)</a></li>
+</ul>
+
+<h2 id="Locale_Tiers"><span class="mw-headline">Locale Tiers </span></h2>
+
+<p>Locale tiers reflect locales that we need to have in a good state for release. There are 10 locales in tier 1, which are the most important for Thunderbird, because of their number of Thunderbird users or potential for growth.</p>
+
+<p>These locales are being treated as first-class citizens, as important as en-US, which is to say that any Tier 1 locale that does not meet the requirements may block a final release of Thunderbird.</p>
+
+<h3 id="Tier_1"><span class="mw-headline">Tier 1 </span></h3>
+
+<p>The following are P1 (priority 1) locales in order of priority:</p>
+
+<pre>* de             -  German
+* fr             -  French
+* ja, ja-JP-mac  -  Japanese
+* en-GB          -  British English
+* es-ES          -  Spanish (European continent)
+* it             -  Italian
+* pl             -  Polish
+* ru             -  Russian
+* nl             -  Dutch
+* pt-BR          -  Brazilian Portuguese
+</pre>
+
+<h3 id="Tier_2"><span class="mw-headline">Tier 2 </span></h3>
+
+<p>All other supported locales are in the tier 2 category.</p>

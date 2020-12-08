@@ -1,0 +1,377 @@
+---
+title: Service worker API reference
+slug: Social_API/Service_worker_API_reference
+translation_of: Archive/Social_API/Service_worker_API_reference
+---
+<p></p><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> No estándar</strong><br>
+      This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p>
+      </div><p></p>
+
+<p></p>
+
+<h3 id="service_Worker_de_Servicio_de_Referencia">service Worker de Servicio de Referencia</h3>
+
+<p><span id="result_box" lang="es"><span class="hps">Un</span> <span class="hps">service Worker</span> <span class="hps">hereda todas las</span> <span class="hps">limitaciones</span> <span class="hps">y los comportamientos</span> <span class="hps">disponibles para</span> service Workeres Compartidos de <span class="hps">HTML5.</span></span> Puede crear XMLHttpRequests, usar WebSockets, recibir mensajes de ventanas y del navegador, usar IndexedDB, y publicar mensajes a otras ventanas.</p>
+
+<p>El service Worker puede usar los métodos <code>ononline</code>, <code>onoffline</code>, y <code>navigator.online</code> y las propiedades que están disponibles para todos los service Workeres para obtener una notificación del estado online/offline de los navegadores.</p>
+
+<p>Además de los métodos estándar, los Service Wokers tienen acceso a funciones adicionales, todas las cuales están implementadas usando mensajes enviados y recibidos por un service Worker "puertos de mensaje". Así como los puertos de mensaje <span class="short_text" id="result_box" lang="es"><span class="hps">son</span> <span class="hps">inherentemente</span> <span class="hps">asíncronos</span></span>, cualquier mensaje que necesite una respuesta involucrará dos mensajes - uno para la pregunta y otro para la respuesta. No todos los mensajes requieren respuesta - esto es parte de la especificación del mensaje. Los mensajes que no requieran una respuesta son análogos a un 'evento' no solicitado. Si un mensaje sí requiere una respuesta, entonces la respuesta siempre deberá ser enviada en el mismo puerto de la petición y en general, el 'asunto' de la respuesta será el asunto de la petición con "-respuesta" concatenado.</p>
+
+<p>Se espera que los service Workeres de Servicio provean una función en un ámbito global, nombrado <code>onconnect</code>. El navegador invocará <code>onconnect</code> durante la fase de arranque,pasando un evento. El service Worker debería acceder a la propiedad <code>ports</code> de este evento para extraer una comunicación estable hacia el puerto del navegador, y persiste por el ciclo de vida del service Worker, como esto:</p>
+
+<pre><code>var apiPort;
+var ports = [];
+onconnect = function(e) {
+    var port = e.ports[0];
+    ports.push(port);
+    port.onmessage = function (msgEvent)
+    {
+        var msg = msgEvent.data;
+        if (msg.topic == "social.port-closing") {
+            if (port == apiPort) {
+                apiPort.close();
+                apiPort = null;
+            }
+            return;
+        }
+        if (msg.topic == "social.initialize") {
+            apiPort = port;
+            initializeAmbientNotifications();
+        }
+    }
+}
+
+// send a message to all provider content
+function broadcast(topic, data) {
+  for (var i = 0; i &lt; ports.length; i++) {
+    ports[i].postMessage({topic: topic, data: data});
+  }
+}
+</code></pre>
+
+<p>Cada mensaje tiene un elemento con 2 campos: 'topic' y 'data'. El <em>topic</em> identifica el método o evento que es utilizado, y el <em>data</em> especifica datos adicionales únicos al topic. Todos los métodos estandarizados y eventos tienen topics que comienzan con "social." - esto significa que los servicios son libres de usar topics sin este prefijo como un detalle de implementación privada (por ejemplo, para comunicar algún contenido de un servicio a un service Worker de servicio).</p>
+
+<h3 id="Serialización_de_mensajes">Serialización de mensajes</h3>
+
+<p>Para un mensaje con el asunto <code>topic</code> y los argumentos (arg1:val1, arg2:val2), construye un objeto como:</p>
+
+<pre><code>{ topic: topic, data: { arg1: val1, arg2: val2 } }
+</code></pre>
+
+<h3 id="Mensajes_de_Control_enviados_a_service_Workeres_de_servicios">Mensajes de Control enviados a service Workeres de servicios</h3>
+
+<h4 id="social.initialize"><code>social.initialize</code></h4>
+
+<p>Enviados por el navegador durante el arranque. Cuando el JavaScript de un service Worker ha sido cargado con éxito y evaluado, el navegador enviará un mensaje con este asunto. Cuando el service Worker recibe el <code>social.initalize event</code>, debería enviar ambos, el <code>social.user-profile</code> y, si los Mrcadores de Página son soportados [como en Fx23], el <code>mensaje desocial.page-mark-config</code>.</p>
+
+<h4 id="social.port-closing"><code>social.port-closing</code></h4>
+
+<p>Enviado por el navegador durante el apagado del service Worker, cuando un PuertodeMensaje para el service Worker está a punto de ser cerrado. Este será el último mensaje que el service Worker recibirá en el puerto.</p>
+
+<h3 id="Mensajes_de_Control_enviados_desde_el_service_Worker_de_Servicio_al_navegador">Mensajes de Control enviados desde el service Worker de Servicio al navegador</h3>
+
+<h4 id="social.reload-worker"><code>social.reload-worker</code></h4>
+
+<p>Enviado por el service Worker para solicitar al navegador que re-cargue al service Worker.</p>
+
+<h4 id="social.cookies-get"><code>social.cookies-get</code></h4>
+
+<p>Enviado por el service Worker para solicitar al navagador que responda con una lista del mismo origen de las <em>cookies</em> para el proveedor. El navegador responderá con un mensaje <code>social.cookies-get-response</code>.</p>
+
+<h4 id="social.request-chat"><code>social.request-chat</code></h4>
+
+<p>Enviado por el service Worker para solicitar al navagador que abra un nuevo panel de chat flotante con la URL especificada. La ventana de chat abierta por el service Worker será abierta en un modo minimizado.</p>
+
+<p><em>Argumentos:</em></p>
+
+<p><strong>URL</strong></p>
+
+<blockquote>
+<p>Cadena, requerida. La URL de la página de chat para abrir en la ventana.</p>
+</blockquote>
+
+<h3 id="Control_de_Notificación_de_Ambiente">Control de Notificación de Ambiente</h3>
+
+<h4 id="social.user-profile"><code>social.user-profile</code></h4>
+
+<p>Enviada por el service Worker, para establecer las propiedades para el proveedor de icónico de perfil de usuario de datos usado para el botón de la barra. Si el retrato de usuario y userName no se encuentran, el botón de IU indicará el estado de no-logueado. Cuando esté indicando un estado de no-logueado, los íconos de estado establecidos vía <code>social.ambient-notification</code> serán removidos. Un servicio que no maneja el <em>loguéo</em> de usuarios deberá enviar este mensaje con los alores apropiados para el sitio, como lo son el ícono del sitio, URL principal y el nombre de la marca.</p>
+
+<p><em>Argumentos:</em></p>
+
+<p><strong>iconURL</strong></p>
+
+<blockquote>
+<p>Cadena, requerida. Si es sumistrada, especifíca la URL hacia una imagen 16x16 pixeles usada por el ícono de estado. El iconURL puede ser una URL de datos con una imagen codificada para evitar solicitudes a los http (ejemplo: "data:image/png;base64,...data...").</p>
+</blockquote>
+
+<p><strong>portrait</strong></p>
+
+<blockquote>
+<p>Cadena, opcional. Si es suministrada, especifíca la URL hacia una imagen de 48x48 pixeles del usuario. El retrato puede ser una URL de datos con una imagen codificada para evitar solicitudes a los http.</p>
+</blockquote>
+
+<p><strong>userName</strong></p>
+
+<blockquote>
+<p>Cadena, opcional. El nombre de la cuenta mostrado con el retrato en el menú de proveedor.</p>
+</blockquote>
+
+<p><strong>dispayName</strong></p>
+
+<blockquote>
+<p>Cadena, requerido. Nombre real del usuario usado para propósitos de visualización en varios elementos de IU.</p>
+</blockquote>
+
+<p><strong>profileURL</strong></p>
+
+<blockquote>
+<p>Cadena, requerido. URL a  la página de perfil de un usuario logueado. Este será abierto en una pestaña normal del navegador cuando el nombre de usuario es cliqueado.</p>
+</blockquote>
+
+<h4 id="social.ambient-notification"><code>social.ambient-notification</code></h4>
+
+<p>Enviado por el service Worker, para actualizar o crear un ambiente de íconos de notificaciones. Es enviado uno por cada ícono. Un usuario debe estar logueado para mostrar los íconos de estado, y deberás llamar a <code>social.user-profile</code> antes de llamar <code>social.ambient-notification</code> para establecer los íconos de estado.</p>
+
+<p><em>Argumentos:</em></p>
+
+<p><strong>name</strong></p>
+
+<blockquote>
+<p>Cadena. Un identificador para el ícono. La primera vez que un nombre dado es mostrado, eficazmente crea un nuevo ícono. Si el mismo nombre es usado en llamadas sub-secuentes, el ícono existente es actualizado.</p>
+</blockquote>
+
+<p><strong>iconURL</strong></p>
+
+<blockquote>
+<p>Cadena, opcional. Si es suministrada, especifíca la URL hacia una imagen de 16x16 pixeles usada para el ícono de estado. El iconURL puede ser una URL con una imagen codificada para evitar solicitudes a los http (ejemplo: "data:image/png;base64,...data...")</p>
+</blockquote>
+
+<p><strong>counter</strong></p>
+
+<blockquote>
+<p>Número, opcional. Especifíca un númeroque será sobre-puesto sobre el ícono, típicamente usado para transmitir un concepto <code>unread</code>.</p>
+</blockquote>
+
+<p><strong>contentPanel</strong></p>
+
+<blockquote>
+<p>Cadena, opcional. Especifíca la URL de un contenido que será mostrado en el panel popup para el ícono.</p>
+</blockquote>
+
+<h3 id="Control_de_Notificaciones_Activo">Control de Notificaciones Activo</h3>
+
+<h4 id="social.notification-create"><code>social.notification-create</code></h4>
+
+<p>Enviado por el service Worker, para crear y mostrar un objeto de notificación. Esto solicita que el navegador notifique al usuario de un relevante e inmediato cambio de estado. Ver <a href="https://developer.mozilla.org/en/DOM/navigator.mozNotification">https://developer.mozilla.org/en/DOM/navigator.mozNotification</a> para más detalles. Cuando el usuario cliquea en la notificación, el mensaje <code>social.notification-action</code> es enviado al service Worker. El título de la notificación siempre será el nombre del proveedor.</p>
+
+<p>NOTA: Queremos aumentar el objeto mozNotification definido en los documentos con un "tipo" de campo adicional. Detalles TBD. NOTA: No hay manera de almacenar la duración y tampoco de "cancelar" una notificación (<span class="short_text" id="result_box" lang="es"><span class="hps">la hipótesis</span> <span class="hps">es de que son</span> <span class="hps">de muy corta duración</span></span>). ¿Está bien?</p>
+
+<p><em>Argumentos:</em></p>
+
+<p><strong>id</strong></p>
+
+<blockquote>
+<p>Cadena: Un ID para la notificación. Este ID no será mostrado pero será pasado atrás vía el evento <code>social.notification-action</code> si el usuario cliquea en la notificación.</p>
+</blockquote>
+
+<p><strong>type</strong></p>
+
+<blockquote>
+<p>Cadena: La cadena Tipo deberá ser consistente para cada <strong>tipo</strong> de notificación. Este será usado por algun sistema de notificación para proveer filtraciones de notificaciones al nivel del usuario. Un proveedor deberá elegir cualquier cadena para el tipo, pero deberá mantener los tipos de cadena consistentes y descriptivos para cada tipo de acción. Por ejemplo, las notificaciones de chat deberían siempre de tener la cadena del mismo tipo. Sugerencia/ejemplo que incluye la notificación:</p>
+</blockquote>
+
+<ul>
+ <li>social.providername.chat-request</li>
+ <li>social.providername.friend-request</li>
+ <li>social.providername.activity (e.g. someone posted to your activity stream)</li>
+</ul>
+
+<p><strong>icon</strong></p>
+
+<blockquote>
+<p>Cadena/nulo. La URL de una imagen a ser colocada en una notificación. Mientras que esta puede ser cualquier RL válida, los implementadores están muy recomendados que usen una URL de datos para minimizar la latencia.</p>
+</blockquote>
+
+<p><strong>body</strong></p>
+
+<blockquote>
+<p>Cadena: El cuerpo del mensaje de notificación. este cuerpo será tomado como un super-enlace y podrá ser cliqueado. El marcado de HTML no es soportado.</p>
+</blockquote>
+
+<p><strong>action</strong></p>
+
+<blockquote>
+<p>Cadena: Una acción para ejecutar cuando el usuario hace clic en la notificación. Si ninguna acción es prevista, la notificación no es cliqueable. Acualmente las únicas acciones soportadas son <strong><em>link</em></strong>, <strong><em>callback</em></strong> y <strong><em>openServiceWindow</em></strong>. Si la acción está difinida, actionArgs también deberá ser definida.</p>
+</blockquote>
+
+<p><strong>actionArgs</strong></p>
+
+<blockquote>
+<p>Objeto: Una objeto con argumentos (abajo). Acciones soportadas y sus actionArgs son:</p>
+</blockquote>
+
+<ul>
+ <li>link
+  <ul>
+   <li>toURL: Cadena: URL para abrirse en una nueva pestaña de navegador.</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="social.notification-action"><code>social.notification-action</code></h4>
+
+<p>Enviada al service Worker como una respuesta a la notificación "callback", después de que el usuario ha cliqueado en la notificación.</p>
+
+<p><em>Argumentos:</em></p>
+
+<p><strong>id</strong></p>
+
+<blockquote>
+<p>Cadena: el ID de la notificación que fue cliqueada.</p>
+</blockquote>
+
+<p><strong>action</strong></p>
+
+<blockquote>
+<p>Cadena: La <strong>acción</strong> enviada en <code>social.notification-create</code>.</p>
+</blockquote>
+
+<p><strong>actionArgs</strong></p>
+
+<blockquote>
+<p>Objeto: Las <strong>actionArgs</strong> enviados en <code>social.notification-create</code>.</p>
+</blockquote>
+
+<h3 id="Marcadores_de_página">Marcadores de página</h3>
+
+<p><strong>ESTADO: CON MIRA EN Fx23 (reemplazando Link Recommendation below)</strong></p>
+
+<p>Las Marcas de Página son un simple mecanismo de compartir una URL con un proveedor social. Las Marcas de Página difieren para compartir en que la URL solo es enviada al proveedor. Esta funcionalidad puede manejar casos de uso como el <em>Me Gusta</em> de Facebook, Google +1, Pocket, u otras características como ver-más-tarde. Cuando estan habilitados, y el botón adicional de Marca aparecerá al final de la botonera Social en Firefox. No hay una IU asociada con otro botón que no sea el cambiar la imagen de botón para reflejar el estado de marcado o no-marcado.</p>
+
+<h4 id="social.page-mark-config"><code>social.page-mark-config</code></h4>
+
+<p>Enviado por el service Worker para notificar a Firefox de soporte para las Marcas de Página. Este mensaje puede ser enviado en cualquier momento. Te recomendamos mandarlo cuando se esté manejando el mensaje <code>social.initialize</code>.</p>
+
+<p><em>Argumentos:</em></p>
+
+<p><strong>images</strong></p>
+
+<blockquote>
+<p>Objeto. Debe tener dos llaves de tipo String, 'marked' y 'unmarked', los cuales serán usados como ícono del botón de Marcador de Página. El agente de usuario buscará si la actual página ha sido marcada - si sí, mostrará la imagen 'marked', de otra manera motrará la imagen 'unmarked'. Puede contener una imagen direccionable - web o una URL de datos conteniendo una imagen de datos generada dinamicamente.  Implementadores están fuertemente recomendados de usar una URL de datos para minimizar la latencia. Cada imagen se espera que sea de de 16x16 píxeles.</p>
+</blockquote>
+
+<p><strong>messages</strong></p>
+
+<blockquote>
+<p>Objeto. Debe tener las siguientes llaves de cadena:</p>
+</blockquote>
+
+<ul>
+ <li>'markedTooltip', 'unmarkedTooltip': Las cadenas usadas como la barra de herramientasen el objetivo de clic cuando las imagenes 'marked' y 'unmarked', respectivamente, son mostradas.</li>
+ <li>'markedLabel', 'unmarkedLabel': Cadenas que serán utilizadas para actualizar una etiqueta después de la acción 'marked' o 'unmarked' es hecha, para reflejar la transición desde marked-to-unmarked o vice-versa.</li>
+</ul>
+
+<h4 id="social.page-mark"><code>social.page-mark</code></h4>
+
+<p>Enviado por el navegador hacia el service Worker cuando el usuario 'marca' o 'desmarca' una página. No hay respuesta esperada. El navegador rastreará el estado de la marca de la página separadamente del proveedor. Si el usuario limpia su historial, todas las marcas de página serán removidas.</p>
+
+<p><em>Arguments:</em></p>
+
+<p><strong>url</strong></p>
+
+<blockquote>
+<p>Cadena. La URL de la página es marcada.</p>
+</blockquote>
+
+<p><strong>marked</strong></p>
+
+<blockquote>
+<p>Boolean.</p>
+</blockquote>
+
+<p> </p>
+
+<h3 id="Enlace_de_Control_de_Recomendación">Enlace de Control de Recomendación</h3>
+
+<p> </p>
+
+<p>NOTA: El siguiente mensaje usuario-recomendación fue RECHAZADO y REMOVIDO de Fx23. Fue reemplazado por Page Marks.</p>
+
+<h4 id="social.user-recommend-prompt"><code>social.user-recommend-prompt</code></h4>
+
+<p><strong>ESTADO: RECHAZADO, REMOVIDO de Fx23</strong><strong>, REEMPLAZADO CON social.page-mark-config</strong></p>
+
+<p>Enviado por el navegador para solicitar una vista de la interfaz para la "recomendación de usuario". El service Worker debe responder con una user-recommend-prompt-response</p>
+
+<p>Nota que tipicamente este mensaje solo será enviado cuando un proveedor está activado y la respuesta será usada para todas las URL's. En otras palabras, el proveedor no espera que este mensaje sea enviado cada vez que el agente de usuario navega o muestra una nueva UTL.</p>
+
+<p><em>Arguments:</em></p>
+
+<p>None</p>
+
+<h4 id="social.user-recommend-prompt-response"><code>social.user-recommend-prompt-response</code></h4>
+
+<p><strong>STATUS: </strong><strong>DEPRECATED, REMOVED Fx23</strong></p>
+
+<p>The Worker constructs and posts a user-recommend-prompt-response in response to a <code>social.user-recommend-prompt</code> message received from the browser. See <code>social.user-recommend-prompt</code> for more details.</p>
+
+<p><em>Arguments:</em></p>
+
+<p><strong>images</strong></p>
+
+<blockquote>
+<p>Object. Must have 2 string keys, 'share' and 'unshare', which each value being the URL to an image which will be set as the "src" property of an image contained in the user-facing click target for the "recommend" action. The user agent will track if the current page has been shared - if so, it will show the 'unshare' image, otherwise will show the 'share' image. It can contain a web-addressible image or a data URL containing dynamically-generated image data. Implementors are strongly encouraged to use a data URL to minimize latency. Each image is expected to be 16px wide and 16px high.</p>
+</blockquote>
+
+<p><strong>messages</strong></p>
+
+<blockquote>
+<p>Objeto. Debe tener las siguientes llaves de cadena:</p>
+</blockquote>
+
+<ul>
+ <li>'shareTooltip', 'unshareTooltip': Las cadenas usadas como el <em>tooltip</em> en el objetivo de clic cuando las imagenes de 'share' y 'unshare', respectivamente, son mostradas.</li>
+ <li>'sharedLabel', 'unsharedLabel': Cadenas que serán usadas para actualziar una etiqueta de <em>widget</em> después de que la acción de 'share' o 'unshare' es tomada para reflejar la transición desde shared-to-unshared o vice-versa. Notese que en Fx17, las etiquetas no son visibles pero son usadas como una ayuda de accesibilidad así que un screen-reader o similar puede hacer notar la transición.</li>
+ <li>'unshareLabel': Una cadena a sermostrda en el 'unshare popup' para reflejar que el item ha sido compartido. Ejemplo: "Ya has compartido esto".</li>
+ <li>'portraitLabel': Una cadena usada como la aria-label para la imagen de perfil de usuario sea mostrada como 'unshare popup'. Ejemplo: "Tu imagen de perfil".</li>
+ <li>'unshareConfirmLabel': Una cadena usada como la etiqueta en el botón en la 'unshare popup' usada para modificar el 'unshare'. Ejemplo: "No compartir esto".</li>
+ <li>'unshareConfirmAccessKey': Una cadena usada como la llave de acceso para el boton de No comprtir. Tipicamente esta debería ser una etiqueta en la cadena 'unshareConfirmLabel'.</li>
+ <li>'unshareCancelLabel': Una cadena usada como la etiqueta en el botón en la 'unshare popup' cuando el usuario decide seguir continuando el elemento. Ejemplo: "Cerrar".</li>
+ <li>'unshareCancelAccessKey': Una cadena usada como la llave de acceso para el botón de No compartir.</li>
+</ul>
+
+<h4 id="social.user-recommend"><code>social.user-recommend</code></h4>
+
+<p><strong>ESTADO: RECHAZADA, </strong><strong>REMOVIDO DE Fx23</strong><strong>, REEMPLAZADO CON social.page-mark</strong></p>
+
+<p>Indica que el usuario ha hecho clic en el elemento de interfaz "user recommendation". El mensaje incluye:</p>
+
+<p><em>Argumentos:</em></p>
+
+<p><strong>url</strong></p>
+
+<blockquote>
+<p>Cadena, requerida. La URL que el usuario está viendo, incluída la cadena de busqueda, pero menos cualquier texto de hash, de la raíz de la actual vista del navegador.</p>
+</blockquote>
+
+<p>No es necesaria una respuesta; como fuere, el servicio debe responder en el mismo puerto con una usuario-recomendación-prompt-respuesta si el objetivo de clic debe cambiar su apariencia.</p>
+
+<h4 id="social.user-unrecommend"><code>social.user-unrecommend</code></h4>
+
+<p><strong>ESTADO: RECHAZADO, REMOVIDO DE Fx23</strong></p>
+
+<p>Indíca que al usuario le gustaría volver a su previa recomendación. El mensaje incluye:</p>
+
+<p><em>Argumentos:</em></p>
+
+<p><strong>url</strong></p>
+
+<blockquote>
+<p>Cadena, requerido. La URL que el usuario está viendo, incluyendo la cadena de consulta, pero no los textos de hash, de la raíz del contexto actual de vista del navegador.</p>
+
+<dl>
+</dl>
+</blockquote>
+
+<p> </p>

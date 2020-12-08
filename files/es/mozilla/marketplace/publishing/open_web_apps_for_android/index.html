@@ -1,0 +1,133 @@
+---
+title: 'Open Web Apps for Android: Synthetic APKs'
+slug: Mozilla/Marketplace/Publishing/Open_web_apps_for_android
+translation_of: Archive/Marketplace/Options/Open_web_apps_for_android
+---
+<div class="summary">
+ <p>Los usuarios pueden instalar sus aplicaciones de Marketplace en el navegador de Firefox o Firefox OS, obteniendo el beneficio potentes funciones de web abierta. Sin embargo, para los usuarios de Android puede resultar más cómodo instalar sus aplicaciones como aplicaciones de Android 'normales'. Ahora eres capaz de ofrecer esta característica a los usuarios usando Synthetic APKs (también conocido como tiempo de ejecución de Web para Android), una solución disponible en <a href="https://marketplace.firefox.com/">Firefox Marketplace</a> que crea APKs nativas para la instalación en dispositivos Android.</p>
+</div>
+<h2 id="¿Qué_es_una_Synthetic_APK">¿Qué es una Synthetic APK?</h2>
+<p>Una Synthetic APK es una Open Web App contenida en un paquete de instalación de Android, que puede ser instalado y ejecutado del mismo modo que cualquier otra aplicación Android. El paquete APK consiste en contenido web (en el caso de aplicaciones empaquetadas) o un puntero a contenido web (en el caso de aplicaciones organizadas). Este contenido es después encerrado en una fina envoltura Java/Android que proporciona de integración en el Sistema Operativo nativo.</p>
+<p>Estos paquetes son creados por el <a href="https://github.com/mozilla/apk-factory-service">APK Factory Service</a> que es ejecutado como un servicio web por Marketplace. El APK Factory Service hace uso del <a href="https://github.com/mozilla/apk-factory-library">APK Factory Library</a> para crear el paquete real y del <a href="https://github.com/mozilla/apk-signer">APK Signer</a> para firmar digitalmente el APK. Este servicio está disponible para <a href="/en-US/Marketplace/Publishing/Creating_a_store">su propio Marketplace</a>, si decide crear uno.</p>
+<p>Usted no necesita ningún conocimiento de desarrolo Android, o adoptar medidas de desarrollo adicionales, para usar Synthetic APK: usted simplemente selecciona la opción APK al enviar sus aplicaciones al Marketplace.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Synthetic APKs son soportadas por los dispositivos Android con Firefox 29 o superior instalado.</p>
+</div>
+<p>El tiempo de ejecución de Open Web App en Android sostiene 12 APIs para accedes a capacidades del dispositivo tales como vibración, geolocalización, estado de la batería, y más. Puede verse una<a href="https://wiki.mozilla.org/WebAPI#APIs"> lista completa de APIs soportadas aquí</a>: las APIs que muestran una "A" bajo "Availability" son aquellas APIs disponibles en Android, con elementos verdes indicando que la API está disponible en su totalidad. Usted puede colocar el puntero del ratón sobre los elementos individuales para obtener mensajes con más información.</p>
+<p>El tiempo de ejecución en Android continuará añadiendo soporte para otras APIs en futuras versiones. Algunas de las APIs planeadas son:</p>
+<ul>
+ <li>API de Alarma</li>
+ <li>SimplePush API</li>
+ <li>Actividades Web</li>
+</ul>
+<div class="note">
+ <p><strong>Nota</strong>: Los usuarios de Android pueden estar usando dispositivos con mayores resoluciones (DPI) y  mayores tamaños de pantalla que aquellos encontrados en los dispositivos con Firefox OS. Las aplicaciones que no han usado un diseño de respuesta puede que por ello proporcionen una experiencia pobre, y puede que usted quiera diseñar sus aplicaciones teniendo esto en mente.</p>
+</div>
+<h2 id="Uso_de_synthetic_APKs">Uso de synthetic APKs</h2>
+<p>Esta sección proporciona detalles en el modo en que usted elija para hacer uso de synthetic APKs, cómo afectan a la experiencia de Marketplace, e información sobre actualizaciones de las aplicaciones. </p>
+<h3 id="Activación_de_la_opción_synthetic_APK">Activación de la opción synthetic APK </h3>
+<p>Cuando usted <a href="/en-US/Marketplace/Submission/Submitting_an_app">envía una aplicación al Firefox Marketplace</a>, usted tiene la opción de hacer que su aplicación esté disponible como una aplicación "nativa" para dispositivos Android usando una synthetic APK.</p>
+<h3 id="Envío_una_aplicación">Envío una aplicación</h3>
+<p>Cuando usted envía una aplicación al al Marketplace el APK Factory Service es invocado para crear una synthetic APK firmada en modo de depuración de Android. Esta versión de la APK entonces se hace disponible para que los críticos de la aplicación completen el proceso normal de revisión. Una vez que la aplicación ha sido revisada y aprobada el APK Factory service es invocado de nuevo, esta vez para firmar la synthetic APK con una APK Signing Key única. La Synthetic APK firmada resultante es entonces almacenada en caché para la entrega cuando un usuario decide instalar la aplicación.</p>
+<h3 id="Instalación_de_una_synthetic_APK">Instalación de una synthetic APK</h3>
+<p>Una vez que su aplicación ha sido aprobada, cuando un usuario selecciona su aplicación en el Marketplace en su dispositivo Android la instalación se diferencia ligeramente del proceso habitual, como sigue:</p>
+<ol>
+ <li><a href="https://marketplace.firefox.com/">Firefox Marketplace</a> muestra la información de la aplicación y el botón de instalación como normalmente.</li>
+ <li>Cuando el usuatio selecciona instalar se muestra el diálogo de confirmación de instalación estándar de Marketplace. El diálogo lista los permisos requeridos por aplicaciones privilegiadas e información acerca de la necesidad de habilitar la opción de instalar aplicaciones de "fuentes desconocidas"; el Marketplace incluirá redacción para explicar cualquien duda que los usuarios puedan tener.</li>
+ <li>Cuando el usuario confirma que quiere continuar con la instalación, {{ domxref("Apps.install") }} / {{ domxref("Apps.installPackage") }} son invocados como usted esperaría (dependiendo de si se trata de una aplicación alojada o empaquetada), sin embargo en vez del proceso normal por el cual la versión Open Web APP es instalada, se realiza una llamada al APK Factory Service para solicitar la APK almacenada en caché. La synthetic APK es entonces descargada al dispositivo Android y el proceso de instalación de aplicación estándar de Android es invocado.</li>
+</ol>
+<p>Una vez que la synthetic APK ha sido instalada, el usuario encontrará la aplicación en su menú de aplicaciones y el proceso para usar y eliminar las aplicaciones será el mismo que esperaría de otras aplicaciones Android.</p>
+<h3 id="Mantener_las_aplicaciones_actualizadas">Mantener las aplicaciones actualizadas</h3>
+<p>El Marketplace y la APK Factory también proporcionan un mecanismo para actualizar su aplicación e informar a los usuarios de que la actualización está disponible.</p>
+<p>Si su aplicación está alojada, siempre que usted haga un cambio en su servidor los usuarios se enterarán de esos cambios la siguiente vez que ejecuten su aplicación. Si usted realiza un cambio visible en su aplicación. tal como realizar un cambio en el icono de la aplicación, tras detectar el número de versión actualizada en el manifiesto de la aplicación la APK Factory creará una APK actualizada y notificará a los usuarios de que una actualización está disponible.</p>
+<p>Para aplicaciones empaquetadas usted actualiza el contenido de la aplicación y envía un nuevo archivo empaquetado en zip y el manifiesto actualizado. La APK Factory recogerá esos cambios e informará a sus usuarios de que una aplicación actualizada se encuentra disponible.</p>
+<h2 id="Como_funciona_la_APK_Factory">Como funciona la APK Factory </h2>
+<p>Esta sección describe como la APK Factory crea synthetic APKs.</p>
+<ol>
+ <li>Cuando la APK factory es invocada, como se ha descrito anteriormente, detecta si la aplicación está alojada o empaquetada, entonces pide el archivo de manifiesto de la aplicación del servidor donde se halla alojada (el Firefox Marketplace, o cualquier otro lugar donde la aplicación está alojada):
+  <ul>
+   <li>El manifiesto principal en el caso de aplicaciones alojadas.</li>
+   <li>El manifiesto mini en el caso de aplicaciones empaquetadas.</li>
+  </ul>
+ </li>
+ <li>La APK factory ahora tiene la información que necesita acerca de la aplicación, y solicita:
+  <ul>
+   <li>La URL de almacenamiento de aplicaciones en el caso de aplicaciones alojadas.</li>
+   <li>El archivo zip de la aplicación del marketplace en el caso de aplicaciones empaquetadas.</li>
+  </ul>
+ </li>
+ <li>Ahora el APK Factory service crea la synthetic APK mediante la realización de la transcodificación de algunos metadatos para elementos tales como iconos y requerimientos de seguridad, entonces:
+  <ul>
+   <li>envolviendo la URL de alojamiento en un contenedor Android Java para aplicaciones alojadas.</li>
+   <li>envolviendo el contenido de la aplicación en un contenedor Android Java para aplicaciones empaquetadas.</li>
+  </ul>
+ </li>
+ <li>Una vez creada, la synthetic APK es firmada por un servicio <strong><a href="https://github.com/mozilla/apk-signer">APK Signer</a></strong> seguro:
+  <ul>
+   <li>Para "revisión" las APKs son firmadas en modo de depuración de Android.</li>
+   <li>For "lanzamiento" las APKs son firmadas con una <strong>APK signing key</strong>.</li>
+  </ul>
+ </li>
+ <li>Finalmente, la APK firmada es almacenada en caché para enviar a:
+  <ul>
+   <li>el proceso de revisión de aplicación.</li>
+   <li>un dispositivo Android cuando el usuario solicite su instalación desde Marketplace.</li>
+  </ul>
+ </li>
+</ol>
+<p>Los siguientes diagramas ofrecen una representación alternativa del flujo de trabajo de la APK Factory. Primero, una aplicación empaquetada:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7315/synthapkflow-packaged.png" style="width: 540px; height: 522px; display: block; margin: 0px auto;"></p>
+<p>Ahora, para una aplicación alojada:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7313/synthapkflow-hosted.png" style="width: 678px; height: 525px; margin: 0px auto; display: block;"></p>
+<h2 id="Nombramiento_de_paquetes_y_claves_de_firma_de_APK">Nombramiento de paquetes y claves de firma de APK</h2>
+<p>En la instalación de una synthetic APK el dispositivo Android comprueba el nombre y la firma del paquete Java. Verifica la firma la primera vez que una aplicación es instalada (no exixte una autoridad central con la que lo comprueba) y actualizaciones futuras deberán tener el mismo nombre y firma del paquete. Si el nombre y la firma del paquete no son los mismos el dispositivo Android no actualizará la instalación.</p>
+<h3 id="Nombramiento_de_paquetes">Nombramiento de paquetes</h3>
+<p>El nombre de paquete para una synthetic APK consiste en el sitio de alojamiento y un número de serie único, por ejemplo:</p>
+<ul>
+ <li>para una aplicación alojada: org.mykzilla.p362b12c70d0556c124908a3c125d3d02:</li>
+ <li>para una aplicación empaquetada: com.firefox.marketplace.p0604c71abc0d4091829d19be9a50453c</li>
+</ul>
+<h3 id="Claves_de_firma_de_APK">Claves de firma de APK</h3>
+<p>Cada APK necesita ser identificada por una clave de firma de APK antes de poder ser instalada en un dispositivo Android. Las claves de firma APK son creadas y son propiedad del servicio <strong><a href="https://github.com/mozilla/apk-signer">APK Signer</a></strong>. Estas claves de firma son inestables en sistema, y almacenadas de manera segura en el APK Signer, que es por lo que se considera "seguro".</p>
+<p>Este servicio crea una clave única para cada aplicación, aplicándola a la publicación inicial y a las actualizaciones subsiguientes. La reutilización de la clave en aplicaciones APK actualizadas es importante ya que sin una igualdad en el nombre del paquete y la clave Android no instalará una actualización sobre una versión anterior de la aplicación. Si usted crea su propia versión del Marketplace la APK conservará el mismo nombre y claves, por lo que cualquier versión podrá actualizar la otra.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Mozilla no asume ninguna responsabilidad acerca de la credibilidad de las claves de firma de APK, refiriéndose a que las claves no proporcionen ninguna información acerca de la autenticidad de la aplicación o el desarrollador más allá de que han sido aprobados para su lanzamiento en Marketplace. El servicio no está vinculado a Google o alguna otra autoridad central.</p>
+</div>
+<h2 id="FAQ">FAQ</h2>
+<p>Aquí se encuentran las respuestas a algunas preguntas relizadas frecuentemente acerca de Synthetic APKs.</p>
+<h3 id="¿Qué_pasa_con_la_reinstalación_de_aplicaciones_instaladas_como_favoritas">¿Qué pasa con la reinstalación de aplicaciones instaladas como favoritas?</h3>
+<p>Esto no ha sido aún realizado totalmente, pero el comportamiento esperado es que el marcado de aplicaciones como favoritas dejará de funcionar cuando el usuario actualice a una versión de Firefox para Android con la implementación Synthetic APK (versión 29 o posterior). El usuario entonces tendrá que reinstalar sus aplicaciones para usarlas de nuevo.</p>
+<h3 id="¿Cómo_funcionarán_las_compras_in-app">¿Cómo funcionarán las compras in-app?</h3>
+<p>La APK tiene acceso a la interfaz de usuario de confianza, <a href="/en-US/docs/Web/API/Navigator.mozPay">mozPay</a>, y todos los procesos de pago para compras in-app, por lo que los pagos in-app funcionarán de manera normal.</p>
+<h3 id="¿Cómo_puedo_descargar_una_copia_de_la_APK_de_mi_aplicación">¿Cómo puedo descargar una copia de la APK de mi aplicación?</h3>
+<p>Usted puede descargar una copia de su aplicación usando using wget y el siguiente comando:</p>
+<p><code>https://controller.apk.firefox.com/application.apk?manifestUrl=ESCAPED_URL_TO_MANIFEST</code></p>
+<p>donde ESCAPED_URL_TO_MANIFEST es una URL escapada el manifiesto de la aplicación o mini-manifiesto. Esta URL hace que la APK Factory devuelve la copia almacenada en caché de la APK, o crea una nueva si la aplicación no ha sido enviada al Marketplace. Si la aplicación no ha sido enviada al Marketplace la APK es firmada en modo de depuración.</p>
+<h4 id="Ejemplos">Ejemplos</h4>
+<p>Para una aplicación alojada:</p>
+<p><code>&gt; wget https://controller.apk.firefox.com/application.apk?manifestUrl=http%3A%2F%2Fmykzilla.org%2Fapp%2Fmanifest.webapp -O mykzilla.apk<br>
+ &gt; aapt dump --values badging mykzilla.apk<br>
+ package: name='org.mykzilla.p362b12c70d0556c124908a3c125d3d02' versionCode='1395692586' versionName=''</code></p>
+<p>Para una aplicación empaquetada:</p>
+<p><code>&gt; wget https://controller.apk.firefox.com/application.apk?manifestUrl=https%3A%2F%2Fmarketplace.firefox.com%2Fapp%2Fa22e0277-35bc-434d-9371-1568c75fc726%2Fmanifest.webapp -O cuttherope.apk<br>
+ &gt; aapt dump --values badging cuttherope.apk<br>
+ package: name='com.firefox.marketplace.p0604c71abc0d4091829d19be9a50453c' versionCode='1394154656' versionName='1.3'</code></p>
+<h3 id="¿Puedo_generar_una_synthetic_APK_manualmente_desde_una_URL_diferente">¿Puedo generar una synthetic APK manualmente desde una URL diferente?</h3>
+<p>Sí puede, proporcionando la URL de cualquier ubicación de sus archivos de manifiesto o mini-manifiesto. No obstante, tenga cuidado con esto porque si la synthetic APK es generada desde una URL diferente el nombre de paquete será distinto del creado cuando usted envió la aplicación al Marketplace, por lo que la versión del Marketplace será instalada como una aplicación separada.</p>
+<h3 id="Si_configuro_mi_propia_versión_de_APK_Factory_¿puedo_usar_la_synthetic_APK_que_genera">Si configuro mi propia versión de APK Factory ¿puedo usar la synthetic APK que genera?</h3>
+<p>Usted puede, pero tenga cuidado porque las claves de firma serán diferentes de las asignadas a una versión de la synthetic APK generada por el Marketplace. Como resultado Android rechazará instalar la versión que el usuario intente instalar en segundo lugar. <span style="line-height: 1.5;">(Ver </span><a href="https://developer.mozilla.org/en-US/Marketplace/Publishing/Open_web_apps_for_android#If_I_also_have_an_Android_native_version_of_my_app.2C_can_both_be_installed_on_an_Android_device.3F" style="line-height: 1.5;">Si también tengo una versión nativa de Android de mi aplicación, ¿pueden ambas ser instaladas en un dispositivo Android?</a><span style="line-height: 1.5;"> para más información.)</span></p>
+<h3 id="¿Puedo_enviar_una_synthetic_APK_a_Google_Play_o_a_otra_tienda_de_Android">¿Puedo enviar una synthetic APK a Google Play o a otra tienda de Android? </h3>
+<p>Usted puede enviar una synthetic APK a Google Play o a una tienda alternativa de Android. Sin embargo, es su responsabilidad:</p>
+<ul>
+ <li>Confirmar que su aplicación cumple las políticas de la tienda a la que usted la está enviando. La aprobación para distribución en Marketplace no implica una aprobación para Google Play u otro Marketplace Android.</li>
+ <li>Cuando usted actualice su Open Web App usted tendrá que actualizar la synthetic APK en todas las tiendas a las que usted haya enviado la APK, no hay un proceso automático para enviar APKs actualizadas a tiendas de Android.</li>
+</ul>
+<h3 id="¿Puedo_emplear_mis_claves_de_firma_Android_para_firmar_la_synthetic_APK_y_elegir_el_nombre_del_paquete">¿Puedo emplear mis claves de firma Android para firmar la synthetic APK y elegir el nombre del paquete?</h3>
+<p>Actualmente usted no puede usar sus propias clavez de firma para firmar una synthetic APK o elegir el nombre del paquete. Esta opción está siendo considerada. Si esto es de su interés, únase a la discusión en el <a href="https://lists.mozilla.org/listinfo/dev-marketplace">dev-marketplace mailing list</a>, o el <a href="irc://irc.mozilla.org/marketplace">Marketplace IRC channel</a>.</p>
+<h3 id="Si_también_tengo_una_versión_nativa_de_Android_de_mi_aplicación_¿pueden_ambas_ser_instaladas_en_un_dispositivo_Android">Si también tengo una versión nativa de Android de mi aplicación, ¿pueden ambas ser instaladas en un dispositivo Android?</h3>
+<p>A menos que usted elija usar el nombre de paquete de synthetic APK de su aplicación Android nativa, ambas pueden ser instaladas en un dispositivo Android. Si usted elige usar el mismo nombre de paquete para su aplicación Android nativa (la cual usted firmará con su propia clave) Android rechazará instalar la versión que el usuario intente instalar en segundo lugar. Esto es debido a que los nombres de paquete son iguales pero las claves de firma son diferentes, por lo que Android considera que las aplicaciones son la misma, pero de distintas fuentes. Por lo tanto Android rechazará actualizar una aplicación con la otra, ya que eso permitiría a un desarrollador anular la aplicación de otro. El usuario acabará con la primera versión instalada en su dispositivo.</p>
+<div class="warning">
+ <p>Debido a los problemas que puede causar a los usuarios, es altamente recomendado que usted no reutilice el nombre de paquete que la APK Factory asigna a su aplicación para una versión Android nativa de su aplicación.</p>
+</div>
+<h3 id="¿Cómo_puedo_testeardepurar_APKs">¿Cómo puedo testear/depurar APKs?</h3>
+<p>Estamos trabajando en una serie de herramientas para testear y depurar una aplicación en un dispositivo Adnroid. La versión inicial incluirá  una herramienta de línea de comandos basada en ndos para generar una APK que usted pueda instalar en el dispositivo y depurar usando Firefox's Remote Developer Tools.</p>

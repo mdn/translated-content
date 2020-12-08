@@ -1,0 +1,86 @@
+---
+title: CameraCapabilities
+slug: Web/API/CameraCapabilities
+translation_of: Archive/B2G_OS/API/CameraCapabilities
+---
+<p>{{ Apiref() }}</p>
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+<p>The {{domxref("CameraControl.capabilities")}} property returns a <code>CameraCapabilities</code> object, which describes all the camera's capabilities.</p>
+<h2 id="Properties">Properties</h2>
+<dl>
+ <dt>
+  {{domxref("CameraCapabilities.effects")}} {{readonlyinline}}</dt>
+ <dd>
+  An <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code> of strings identifying the effects (such as <code>normal</code>, <code>sepia</code>, <code>mono</code>, etc.) that the camera supports.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.fileFormats")}} {{readonlyinline}}</dt>
+ <dd>
+  An <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code> of strings identifying the file formats supported by the camera, such as <code>jpeg</code>, <code>rgb565</code>, etc.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.flashModes")}} {{readonlyinline}}</dt>
+ <dd>
+  An <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code> of strings identifying each of the flash modes supported by the camera. Possible values are <code>auto</code>, <code>off</code>, <code>on</code> or <code>torch</code>.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.focusModes")}} {{readonlyinline}}</dt>
+ <dd>
+  An <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code> of strings identifying each of the focus modes supported by the camera such as auto, fixed, macro, etc.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.maxExposureCompensation")}} {{readonlyinline}}</dt>
+ <dd>
+  A number that defines the maximum supported exposure compensation value.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.maxFocusAreas")}} {{readonlyinline}}</dt>
+ <dd>
+  A number that defines the maximum number of focus areas supported by the camera.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.maxMeteringAreas")}} {{readonlyinline}}</dt>
+ <dd>
+  A number that defines the maximum number of metering areas supported by the camera.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.minExposureCompensation")}} {{readonlyinline}}</dt>
+ <dd>
+  A number that defines the minimum supported exposure compensation value.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.pictureSizes")}} {{readonlyinline}}</dt>
+ <dd>
+  An <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code> of objects containing the <code>height</code> and <code>width</code> properties supported for picture taking.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.previewSizes")}} {{readonlyinline}}</dt>
+ <dd>
+  An <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code> of objects containing the <code>height</code> and <code>width</code> properties supported for the video preview stream.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.recorderProfiles")}} {{readonlyinline}}</dt>
+ <dd>
+  An object with attributes for each of the supported recorder profiles.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.sceneModes")}} {{readonlyinline}}</dt>
+ <dd>
+  An <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code> of strings identifying each of the scene modes supported by the camera such as <code>auto</code>, <code>night</code>, <code>beach</code>, etc.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.stepExposureCompensation")}} {{readonlyinline}}</dt>
+ <dd>
+  A number that defines the exposure compensation minimum step-size.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.videoSizes")}} {{readonlyinline}}</dt>
+ <dd>
+  An <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code> of objects containing the <code>height</code> and <code>width</code> properties supported for video recording.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.whiteBalanceModes")}} {{readonlyinline}}</dt>
+ <dd>
+  An <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code> of strings identifiers for each white balance modes supported by the camera such as <code>auto</code>, <code>fluorecent</code>, etc.</dd>
+ <dt>
+  {{domxref("CameraCapabilities.zoomRatios")}} {{readonlyinline}}</dt>
+ <dd>
+  An <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code> of numbers representing all the supported zoom ratios. If the camera has no zoom capabilities, the value is <code>null</code>.</dd>
+</dl>
+<h2 id="Methods">Methods</h2>
+<p>None.</p>
+<h2 id="Specification">Specification</h2>
+<p>Not part of any specification; however, this API should be removed when the <a class="external" href="http://dev.w3.org/2011/webrtc/editor/getusermedia.html" rel="external" title="http://dev.w3.org/2011/webrtc/editor/getusermedia.html">WebRTC Capture and Stream API</a> has been implemented.</p>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li>{{ domxref("CameraControl") }}</li>
+ <li>{{ domxref("CameraManager") }}</li>
+ <li>{{ domxref("window.navigator.mozCameras","navigator.mozCameras") }}</li>
+</ul>

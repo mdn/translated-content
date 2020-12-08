@@ -1,0 +1,123 @@
+---
+title: Compilando Firefox OS
+slug: Archive/B2G_OS/Compilar_Boot_to_Gecko
+translation_of: Archive/B2G_OS/Building
+---
+<div>
+ </div>
+<p>Una vez que hayas <a href="/es/docs/Mozilla/Boot_to_Gecko/Firefox_OS_build_prerequisites" title="en-US/docs/Mozilla/Boot_to_Gecko/B2G_build_prerequisites">preparado tu sistema para compilar </a>y hayas realizado <a href="https://developer.mozilla.org/es/docs/Mozilla/Firefox_OS/Preparing_for_your_first_B2G_build" title="en-US/docs/Mozilla/Boot_to_Gecko/Preparing_for_your_first_B2G_build">la clonación inicial y configurado</a> el código, podrás compilar Boot to Gecko.</p>
+<h2 id="Actualizar_tu_código">Actualizar tu código</h2>
+<p>Si no es la primera vez que compilas B2G, deberías actualizar el código antes de empezar a compilar. Para hacerlo, debes actualizar tanto las herramientas de B2G como las dependencias, usando los siguientes dos comandos:</p>
+<pre>git pull
+./repo sync
+</pre>
+<p>Puedes actualizar partes específicas del repositorio aclarando su nombre:</p>
+<pre>./repo sync gaia
+</pre>
+<p>El comando <code>repo</code> tiene otras opciones disponibles que pueden ser interesantes; <code>repo help</code> te dará mucha información.</p>
+<h2 id="Compilar">Compilar</h2>
+<div class="note">
+ <p><strong>Nota:</strong> Antes de compilar, conviene que prepares un archivo <code>.userconfig</code> para personalizar la compilación. Mira <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file" title="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file">Personalizar el archivo .userconfig</a> para aprender cómo hacerlo.</p>
+</div>
+<p>Para compilar Boot to Gecko, debes usar simplemente la herramienta <code>build.sh</code>:</p>
+<pre>cd B2G
+./build.sh
+</pre>
+<p>Es hora de otra pausa para un café, o posiblemente una siesta (especialmente si es tu primera compilación). Así como en el paso de configuración de la página anterior, si usas un directorio de archivos de sistema de Android previamente extraídos, deberás establecer ANDROIDFS_DIR antes de ejecutar build.sh.</p>
+<h3 id="Compilar_sólo_ciertos_módulos">Compilar sólo ciertos módulos</h3>
+<p>Si sólo quieres compilar un módulo en particular, por ejemplo Gecko, puedes hacerlo incluyendo el nombre:</p>
+<pre>./build.sh gecko
+</pre>
+<p>Si sólo quieres actualizar una de las aplicaciones, puedes hacerlo compilando el módulo <code>gaia</code> y usando la variable de entorno <code>BUILD_APP_NAME</code>:</p>
+<pre>BUILD_APP_NAME=calendar ./build.sh gaia</pre>
+<p>Para ver una lista de los módulos que puedes compilar, haz:</p>
+<pre>./build.sh modules
+</pre>
+<h3 id="Especificar_cuántos_núcleos_de_procesador_usar">Especificar cuántos núcleos de procesador usar</h3>
+<p>Por defecto, el compilador de B2G utiliza el número de procesadores que existan en tu ordenador, y establece dos como el número de tareas a ejecutar en paralelo. Puedes cambiar estos números especificando el parámetro <code>-j</code> cuando ejecutes <code>build.sh</code>. Esto es útil si estás usando el ordenador para otras cosas mientras compilas, y necesitas reducir el uso de CPU. También viene bien cuando tienes problemas con la compilación, ya que ejecutar tareas de una en una facilita la lectura de mensajes y registros.</p>
+<p>Por ejemplo, para compilar ejecutando 2 tareas en paralelo, usa:</p>
+<pre>./build.sh -j2
+</pre>
+<p>El uso más común de esta opción es configurar la compilación para no ejecutar tareas en paralelo, lo cual facilita la lectura de mensajes y la resolución de errores. Para ello, usa:</p>
+<pre>./build.sh -j1
+</pre>
+<h3 id="Construir_para_múltiples_configuraciones_regionales">Construir para múltiples configuraciones regionales</h3>
+<p>Para crear un sistema que incluya varias configuraciones regionales, haz lo siguiente:</p>
+<h4 id="Gaia">Gaia</h4>
+<ol>
+ <li>Escoge el archivo de idioma que quieres usar. Ahora mismo hay dos en Gaia <a href="http://hg.mozilla.org/integration/gaia-nightly/file/e2eed5263e77/shared/resources/languages-dev.json"><code>shared/resources/languages-dev.json</code></a> y <a href="http://hg.mozilla.org/integration/gaia-nightly/file/e2eed5263e77/shared/resources/languages-all.json"><code>shared/resources/languages-all.json</code></a></li>
+ <li>Clona las configuraciones regionales que necesitas desde <a href="http://hg.mozilla.org/gaia-l10n">http://hg.mozilla.org/gaia-l10n</a> a un directorio; nosotros usamos <code>gaia-l10n/</code> . Tendrás que clonar un repositorio para cada uno de las configuraciones regionales incluidas en el archivo de idiomas.</li>
+ <li>En tu sistema, configura <code>LOCALE_BASEDIR</code> como la ruta absoluta al directorio que creaste en el paso 2. Configura <code>LOCALES_FILE</code> como la ruta absoluta al archivo que escogiste en el paso 1.</li>
+</ol>
+<p>Por ejemplo:</p>
+<pre>export LOCALE_BASEDIR=$PWD/gaia-l10n
+export LOCALES_FILE=$PWD/gecko/gaia/shared/resources/languages-dev.json
+</pre>
+<h4 id="Gecko">Gecko</h4>
+<ol>
+ <li>Escoge el archivo de idioma que quieres usar. En Gecko, ahora mismo utilizamos <a href="http://hg.mozilla.org/releases/mozilla-b2g18/file/default/b2g/locales/all-locales">b2g/locales/all-locales</a></li>
+ <li>Clona las configuraciones regionales que necesitas a un directorio; por ejemplo <code>gecko-l10n/</code> .
+  <ul>
+   <li>Para mozilla-central, clona desde <a href="http://hg.mozilla.org/l10n-central/">http://hg.mozilla.org/l10n-central/</a></li>
+   <li>Para mozilla-aurora, clona desde <a href="http://hg.mozilla.org/releases/l10n/mozilla-aurora/">http://hg.mozilla.org/releases/l10n/mozilla-aurora/</a></li>
+   <li>Para mozilla-beta o mozilla-b2g18, clona desde <a href="http://hg.mozilla.org/releases/l10n/mozilla-beta/">http://hg.mozilla.org/releases/l10n/mozilla-beta/</a></li>
+  </ul>
+ </li>
+ <li>Clona <a href="http://hg.mozilla.org/build/compare-locales">compare-locales</a>.</li>
+ <li>
+  <p>En tu sistema, configura <code>L10NBASEDIR</code> como la ruta absoluta al directorio que creaste en el paso 2. Configura <code>MOZ_CHROME_MULTILOCALE</code> como una lista de las configuraciones regionales que clonaste, separadas con espacios.</p>
+  <p>Añade el directorio <code>compare-locales/scripts</code> a tu <code>PATH</code>, y <code>compare-locales/lib</code> a tu <code>PYTHONPATH</code>.</p>
+  Por ejemplo,
+  <pre>export L10NBASEDIR=$PWD/gecko-l10n
+export MOZ_CHROME_MULTILOCALE="ja zh-TW"
+export PATH="$PATH:$PWD/compare-locales/scripts"
+export PYTHONPATH="$PWD/compare-locales/lib"
+</pre>
+  <p>Una vez hayas completado estos pasos, puedes ejecutar build.sh .</p>
+  <p>Al parecer, también es posible <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=818560#c9/">usar .userconfig</a>.</p>
+  <p>Es posible que estas instrucciones cambien a medida de que avanza el proyecto.</p>
+  <h2 id="Errores_conocidos">Errores conocidos</h2>
+  <ul>
+   <li>
+    <h3 id="KeyedVector.h19331_error_indexOfKey_was_not_declared_in_this_scope">KeyedVector.h:193:31: error: indexOfKey was not declared in this scope</h3>
+   </li>
+  </ul>
+  <p>Este error aparece cuando tu versión de gcc es demasiado reciente. Instala una versión 4.6.x de gcc/g++/g++-multilib.</p>
+  <p>Visita <a href="https://developer.mozilla.org/es/docs/Mozilla/Boot_to_Gecko/Firefox_OS_build_prerequisites" title="en-US/docs/Mozilla/Boot_to_Gecko/B2G_build_prerequisites">Prerrequisitos para compilar Firefox OS</a> para más información.</p>
+  <div class="note">
+   <p><strong>Aviso de la comunidad:</strong> Es posible utilizar gcc 4.7.x si modificas ligeramente el código de B2G (gcc te proporcionará instrucciones), pero no te podemos ayudar, ni a modificar el código ni con los errores que te puedas encontrar.</p>
+  </div>
+  <ul>
+   <li>
+    <h3 id="arm-linux-androideabi-g_Internal_error_Killed_(program_cc1plus)">arm-linux-androideabi-g++: Internal error: Killed (program cc1plus)</h3>
+   </li>
+  </ul>
+  <p>Si ves este mensaje, lo más probable es que no tengas suficiente memoria libre. Asegúrate de tener suficiente memoria libre antes de ejecutar<code>./build.sh</code>. Normalmente, 4GB de ram son suficientes para compilar sin problemas.</p>
+  <ul>
+   <li>
+    <h3 id="Si_encuentras_errores_mientras_el_compilador_está_haciendo_tests">Si encuentras errores mientras el compilador está haciendo tests</h3>
+   </li>
+  </ul>
+  <p>A veces (especialmente después de actualizar el compilador o el sistema operativo) puedes encontrarte con errores extraños mientras el compilador está haciendo test tras acabar de compilar. Algo como esto:</p>
+  <pre>Generating permissions.sqlite...
+test -d profile || mkdir -p profile
+run-js-command  permissions
+WARNING: permission unknown:offline-app
+WARNING: permission unknown:indexedDB-unlimited
+build/permissions.js:122: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIPermissionManager.add]
+make[1]: *** [permissions] Error 3
+make: *** [gaia/profile.tar.gz] Error 2</pre>
+  <p>En estos casos, prueba a eliminar el directorio<code> gaia/xulrunner-sdk</code> y haz "pull" para bajarte el código de nuevo:</p>
+  <pre>rm -r gaia/xulrunner-sdk
+</pre>
+  <p>Este comando elimina la copia precompilada de <a href="/en-US/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a> que el compilador se baja automáticamente. Cuando compiles de nuevo, el compilador obtendrá una nueva copia de XULRunner automáticamente.</p>
+  <h2 id="Próximos_pasos">Próximos pasos</h2>
+  <p>Tras compilar, los pasos siguientes dependen de si has compilado Boot to Gecko para el emulador o para un teléfono móvil; lee los artículos siguientes para más información:</p>
+  <ul>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_emulators">Usar los emuladores de B2G</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client">Usar la versión para ordenador de B2G</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Boot_to_Gecko/Installing_Boot_to_Gecko_on_a_mobile_device">Instalar Boot to Gecko en un teléfono móvil</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Boot_to_Gecko/Pandaboard">Instalar Boot to Gecko en un pandaboard</a></li>
+  </ul>
+ </li>
+</ol>

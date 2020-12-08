@@ -1,0 +1,94 @@
+---
+title: Εφαρμογή
+slug: Archive/B2G_OS/API/DOMApplication
+translation_of: Archive/B2G_OS/API/DOMApplication
+---
+<div>
+ {{non-standard_header()}}</div>
+<p>Στο JavaScript API των Ανοιχτών εφαρμογών Ιστού, ένα αντικείμενο <code>App</code> είναι ένα αντικείμενο JavaScript που αντιπροσωπεύει μια εφαρμογή που έχει ή θα μπορούσε να έχει εγκατασταθεί στην αποθήκη της εφαρμογής του χρήστη.</p>
+<h2 id="Properties">Properties</h2>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Description</th>
+   <th scope="col">Type</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>manifest</code></td>
+   <td>The currently stored instance of the <a href="/en-US/docs/Web/Apps/Manifest">manifest</a> of the app.</td>
+   <td><code>object</code></td>
+  </tr>
+  <tr>
+   <td><code>manifestURL</code></td>
+   <td>Where the manifest was found.</td>
+   <td><code>string</code></td>
+  </tr>
+  <tr>
+   <td><code>origin</code></td>
+   <td>The origin of the app (protocol, host, and optional port number). For example: http://example.com</td>
+   <td><code>string</code></td>
+  </tr>
+  <tr>
+   <td><code>installOrigin</code></td>
+   <td>The origin of the site that triggered the installation of the app.</td>
+   <td><code>string</code></td>
+  </tr>
+  <tr>
+   <td><code>installTime</code></td>
+   <td>The time that the app was installed. This is generated using <code>Date().getTime()</code>, represented as the number of milliseconds since midnight of January 1st, 1970.</td>
+   <td><code>integer</code></td>
+  </tr>
+  <tr>
+   <td><code>receipts</code></td>
+   <td>An object containing an array of one or more receipts. Each receipt is a string. If there are no receipts, this is <code>null</code>.</td>
+   <td><code>object</code> or <code>null</code></td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Μέθοδοι">Μέθοδοι</h2>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Μέθοδος</th>
+   <th scope="col">Περιγραφή</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>launch()</code></td>
+   <td>Εκκινεί την εφαρμογή. Δεν επιστρέφει καμία τιμή.</td>
+  </tr>
+  <tr>
+   <td><code>checkForUpdate()</code></td>
+   <td style="vertical-align: top;">
+    <p>Check to see if the app has been updated. Returns a <a href="/en-US/docs/Web/API/DOMRequest"><code>DOMRequest</code></a> object.</p>
+    <p>Για <a href="/en-US/docs/Web/Apps/Packaged_apps">συσκευασμένες εφαρμογές</a>: ελέγξτε για ενημερώσεις και επισημάνετέ το ως <em>downloadavailable</em> εάν χρειαστεί.</p>
+    <p>For hosted apps: check for updates on app manifest and application cache and update it if needed.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Παράδειγμα_αντικειμένου_Εφαρμογής">Παράδειγμα αντικειμένου Εφαρμογής</h2>
+<pre class="brush: js">{
+  manifest: {
+    name: "Add-on Builder",
+    default_locale: "en",
+    installs_allowed_from: [
+      "https://apps-preview-dev.example.com/",
+      "https://apps-preview.example.com/"
+    ],
+    description: "Add-on Builder makes it easy to write, build and test Firefox extensions using common web technologies.",
+    version: "0.9.16.1",
+    developer: {
+      url: "https://builder.addons.mozilla.org/",
+      name: "Mozilla Flightdeck Team"
+    }
+  },
+  origin: "https://builder-addons-dev.example.com",
+  installTime: 1321986882773,
+  installOrigin: "https://apps-preview-dev.example.com",
+  receipts: ["h0dHBzOi8v <em>(most of receipt removed here)</em> Tg2ODtkUp"]
+}</pre>

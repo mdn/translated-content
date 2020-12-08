@@ -1,0 +1,460 @@
+---
+title: Eventos
+slug: Archive/Mozilla/XUL/Events
+translation_of: Archive/Mozilla/XUL/Events
+---
+<p> </p>
+
+<p><a href="https://developer.mozilla.org/es/docs/XUL/Elementos" title="« Referencia de XUL">« Referencia de XUL</a></p>
+
+<p> </p>
+
+<p>The following tables describe the event handler that are valid for most XUL elements. The events listeners can be attached using <a href="/en/DOM/element.addEventListener" title="en/DOM/element.addEventListener"> addEventListener</a> and removed using <a href="/en/DOM/element.removeEventListener" title="en/DOM/element.removeEventListener"> removeEventListener</a>.</p>
+
+<p>Some of the events can be attached using attributes as well. When attaching event listeners using attributes, be aware that only one listener can be attached at a time. Any previously attached listeners are disconnected. The attribute name is the event name with an 'on' prefix.</p>
+
+<h3 id="Inherited_DOM_events" name="Inherited_DOM_events">Inherited DOM events</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Event</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>
+    <p>blur</p>
+   </td>
+   <td>
+    <p>The opposite of the focus event, the blur event is passed after an element loses the focus.<br>
+     <strong>attribute:</strong> onblur</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>change</p>
+   </td>
+   <td>
+    <p>This event is sent when the value of the textbox is changed. The event is not sent until the focus is moved to another element.<br>
+     <strong>attribute:</strong> onchange</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>click</p>
+   </td>
+   <td>
+    <p>This event is sent when a mouse button is pressed and released. You can determine which mouse button was clicked by retrieving the <code>button</code> property of the event object. This event is also sent when the user double-clicks with the mouse. The <code>detail</code> property specifies how many clicks occurred. You can also check for triple-clicks in a similar manner. You should not use this event in XUL to respond to user actions; the <code>command</code> event should be used instead.<br>
+     <strong>attribute:</strong> onclick</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dblclick</p>
+   </td>
+   <td>
+    <p>This event is like the click event except it is only sent when the user double clicks with the mouse. This is an alternative to checking the detail property in the click event.<br>
+     <strong>attribute:</strong> ondblclick</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMMouseScroll</p>
+   </td>
+   <td>
+    <p>This event is sent when the mouse wheel is moved, whether it results in content being scrolled or not.<br>
+     The target of this event is the element that was under the mouse pointer when the mouse wheel was scrolled, similar to the <code>click</code> event.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>focus</p>
+   </td>
+   <td>
+    <p>The focus event is sent to an element when it receives the focus. Once an element has the focus, keyboard events are sent to it. The focus can be changed by clicking on an element or by pressing TAB to switch to the next element is sequence.<br>
+     <strong>attribute:</strong> onfocus</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>keydown</p>
+   </td>
+   <td>
+    <p>The keydown event is sent to an element that has the focus and a key is pressed but not released.<br>
+     <strong>attribute:</strong> onkeydown</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>keypress</p>
+   </td>
+   <td>
+    <p>The keypress event is sent to an element that has the focus and a key is pressed and released. When the user presses a key, the keydown event is first sent, followed by the keypress event and then the keyup event. In a textbox, a user normally can hold down a key to repeat a character In this case, multiple sets of key events are sent as if the user rapidly pressed the same key repeatedly.<br>
+     <strong>attribute:</strong> onkeypress</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>keyup</p>
+   </td>
+   <td>
+    <p>The keyup event is sent to an element that has the focus and a key is released.<br>
+     <strong>attribute:</strong> onkeyup</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>load</p>
+   </td>
+   <td>
+    <p>This event is sent to the window after it has been fully loaded. You should place this event handler on the window element. This event may also be used on the image element, or an element that accepts an image attribute, and will be fired when the image has finished loading. For images, this event does not bubble up the element tree, so it will not conflict with the window's load event.<br>
+     <strong>attribute:</strong> onload</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mousedown</p>
+   </td>
+   <td>
+    <p>This event is sent when the mouse is pressed on an element but not released.<br>
+     <strong>attribute:</strong> onmousedown</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mousemove</p>
+   </td>
+   <td>
+    <p>This event is sent repeatedly as the mouse is moved over an element.<br>
+     <strong>attribute:</strong> onmousemove</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mouseout</p>
+   </td>
+   <td>
+    <p>This mouseout event is sent to an element when the user moves the mouse outside the element. This event is the reverse of mouseover.<br>
+     <strong>attribute:</strong> onmouseout</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mouseover</p>
+   </td>
+   <td>
+    <p>This event is sent to an element when the mouse first moves over an element. You can use this event to provide feedback to the user.<br>
+     <strong>attribute:</strong> onmouseover</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>mouseup</p>
+   </td>
+   <td>
+    <p>This event is sent when the mouse is released on an element.<br>
+     <strong>attribute:</strong> onmouseup</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>select</p>
+   </td>
+   <td>
+    <p>This event is sent to a listbox or tree when an item is selected.<br>
+     <strong>attribute:</strong> onselect</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>unload</p>
+   </td>
+   <td>
+    <p>This event is sent to a window when the window has closed. This is done after the close event. You should place this event handler on the window element.<br>
+     <strong>attribute:</strong> onunload</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Mutation_DOM_events" name="Mutation_DOM_events">Mutation DOM events</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Event</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMAttrModified</p>
+   </td>
+   <td>
+    <p>This event is sent to an element when one of its attributes is modified. In the event handler, you can retrieve the attribute that was modified using the event's attrName property, and you can retrieve the old and new values of the attribute using the event's prevValue and newValue properties.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMNodeInserted</p>
+   </td>
+   <td>
+    <p>This event is sent when a node is added as a child of a element. If you capture this event at the document level, you can be notified of document changes.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMNodeRemoved</p>
+   </td>
+   <td>
+    <p>This event is sent when a node is removed from an element. If you capture this event at the document level, you can be notified of document changes.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>It should be noted that the presence of any mutation event listeners in a document degrades the performance of subsequent DOM operations in that document. In simple tests that can mean that a DOM operation takes between 1.5 and 7 as long as it would without any mutation listener.</p>
+
+<h3 id="Common_XUL_events" name="Common_XUL_events">Common XUL events</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Event</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>
+    <p>broadcast</p>
+   </td>
+   <td>
+    <p>The event handler should be placed on an observer. The broadcast event is sent when the attributes of the element (such as a broadcaster) being listened to are changed.<br>
+     <strong>attribute:</strong> onbroadcast</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>close</p>
+   </td>
+   <td>
+    <p>This event is sent when a request has been made to close the window when the user presses the close button. If you place an event handler on the window element, you can trap the window close. If you return false from the close handler, the window will not close. Return true to have it close normally. Note that this event is only fired when the user presses the close button on the titlebar; use the unload event to capture all attempts to unload the window.<br>
+     <strong>attribute:</strong> onclose</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>command</p>
+   </td>
+   <td>
+    <p>This event handler is called when an element is activated. How it is activated varies for each element and in many cases, there are several ways to activate an element. For example, a button can be activated by clicking on it with the mouse or by pressing ENTER while it has the focus. Menus can be activated by selecting them with the mouse or by pressing a shortcut key. You should always use the command event instead of click because it will be called in all of the needed cases.<br>
+     <strong>attribute:</strong> oncommand</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>commandupdate</p>
+   </td>
+   <td>
+    <p>This event occurs when a command update occurs on a &lt;commandset&gt; element. You would use this to update the disabled status of its commands.<br>
+     <strong>attribute:</strong> oncommandupdate</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>contextmenu</p>
+   </td>
+   <td>
+    <p>This event is sent to an element when the user requests to open the context menu for the element. The action to do this varies by platform, but it will typically be a right click. This handler is usually used to dynamically set the commands on a menu when the user requests to display it, or you can use popupshowing event. Returning false from this event handler prevents the popup from appearing.<br>
+     <strong>attribute:</strong> oncontextmenu</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>drag </p>
+   </td>
+   <td>
+    <p>The drag event is sent to the source node (the node that was dragged) several times a second while the drag is occurring.<br>
+     <strong>attribute:</strong> ondrag</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragdrop</p>
+   </td>
+   <td>
+    <p>This event is sent when the user releases the mouse button to drop an object being dragged. The element, if it accepts the drop, should respond in some manner such inserting the dragged object into itself.<br>
+     <strong>attribute:</strong> ondragdrop</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragend </p>
+   </td>
+   <td>
+    <p>The dragend event is sent to the source node (the node that was dragged) when the drag is finished.<br>
+     <strong>attribute:</strong> ondragend</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragenter</p>
+   </td>
+   <td>
+    <p>The dragenter event is sent when the mouse pointer first moves over an element during a drag. It is similar to the mouseover event but occurs while dragging.<br>
+     <strong>attribute:</strong> ondragenter</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragexit</p>
+   </td>
+   <td>
+    <p>This event is sent when the mouse pointer moves away from an element during a drag. It is also called after a drop on an element. It is similar to the mouseout event but occurs during a drag.<br>
+     <strong>attribute:</strong> ondragexit</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>draggesture</p>
+   </td>
+   <td>
+    <p>This event is sent when the user starts dragging the element, usually by holding down the mouse button and moving the mouse.<br>
+     <strong>attribute:</strong> ondraggesture</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>dragover</p>
+   </td>
+   <td>
+    <p>Related to the mousemove event, this event is sent while something is being dragged over an element. The handler should indicate whether the object being dragged can be dropped.<br>
+     <strong>attribute:</strong> ondragover</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>input</p>
+   </td>
+   <td>
+    <p>This event is sent when a user enters text in a textbox. This event is only called when the text displayed would change, thus it is not called when the user presses non-displayable keys.<br>
+     <strong>attribute:</strong> oninput</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>overflow</p>
+   </td>
+   <td>
+    <p>This event is only sent to a box or other layout element with a CSS overflow property set to a value other than 'visible'. When there is not enough space to display the contents of the element at full size, the overflow event will be fired. Depending on the value of the overflow property, scrollbars may have appeared. For example, if a box has a maximum size of 100 pixels, and only enough space for 80 pixels is available, the overflow event will be sent to the box. If the size changes, for example, by the user resizing the window, the underflow event will be fired when enough space becomes available.<br>
+     <strong>attribute:</strong> onoverflow</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popuphidden</p>
+   </td>
+   <td>
+    <p>This event is sent to a popup after it has been hidden.<br>
+     <strong>attribute:</strong> onpopuphidden</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popuphiding</p>
+   </td>
+   <td>
+    <p>This event is sent to a popup when it is about to be hidden.<br>
+     <strong>attribute:</strong> onpopuphiding</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popupshowing</p>
+   </td>
+   <td>
+    <p>This event is sent to a popup just before it is popped open. This handler is usually used to dynamically set the contents when the user requests to display it. Returning false from this event handler prevents the popup from appearing.<br>
+     <strong>attribute:</strong> onpopupshowing</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>popupshown</p>
+   </td>
+   <td>
+    <p>This is event is sent to a popup after it has been opened, much like the onload event is sent to a window when it is opened.<br>
+     <strong>attribute:</strong> onpopupshown</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>syncfrompreference</p>
+   </td>
+   <td>
+    <p>This event is sent when the element is being changed because a preference changed, or when an element is initialized from a preference. This event will only be sent to elements connected to a preference and in a <a href="/en/XUL/prefwindow" title="en/XUL/prefwindow"> prefwindow</a>. This is not a real event instead it is just a function call and must use the attribute syntax. The script may return a value to set the element to a specific value rather than the value of the preference. This event is usually used to adjust the preference value so that it is more suitable for display in the user interface.<br>
+     <strong>attribute:</strong> onsyncfrompreference</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>synctopreference</p>
+   </td>
+   <td>
+    <p>This event is sent when the element connected to a preference has changed. This event will only be sent to elements connected to a preference and in a <a href="/en/XUL/prefwindow" title="en/XUL/prefwindow"> prefwindow</a>. This is not a real event instead it is just a function call and must use the attribute syntax. The script may return a value to set the preference to a specific value rather than the value of the element.<br>
+     <strong>attribute:</strong> onsynctopreference</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>underflow</p>
+   </td>
+   <td>
+    <p>This event is sent to an element when there becomes enough space to display it at full size. This applies to boxes and other layout elements with a CSS overflow property other than 'visible'. The underflow event can be used to indicate that a scrolling mechanism is no longer necessary.<br>
+     <strong>attribute:</strong> onunderflow</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMMenuItemActive</p>
+   </td>
+   <td>
+    <p>This event is sent when a menu or menuitem is hovered over, or highlighted. This event bubbles.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>DOMMenuItemInactive</p>
+   </td>
+   <td>
+    <p>This event is sent when a menu or menuitem is no longer being hovered over, or highlighted. This event bubbles.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Accessibility_events" name="Accessibility_events">Accessibility events</h3>
+
+<p>These events are used to notify the accessibility system of changes to an element. You would not normally use these yourself.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>Event</th>
+   <th>Description</th>
+  </tr>
+  <tr>
+   <td>
+    <p>CheckboxStateChange</p>
+   </td>
+   <td>
+    <p>This event is sent when a <a href="/en/XUL/checkbox" title="en/XUL/checkbox"> checkbox</a> is checked or unchecked, either by the user or a script. Normally, you would use the command event to listen to checkbox changes, however, the command event is only sent when the user modifies the value, while the CheckboxStateChange event is also sent when a script modifies the checked property of a checkbox. For user changes, the CheckboxStateChange event is sent before the command event. The CheckboxStateChange event does not bubble.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <p>RadioStateChange</p>
+   </td>
+   <td>
+    <p>This event is sent when a <a href="/en/XUL/radio" title="en/XUL/radio"> radio</a> button is selected, either by the user or a script. Normally, you would use the command event to listen to radio button selection changes, however, the command event is only sent when the user changes the selected radio button, while the RadioStateChange event is also sent when a script modifies the selection. For user changes, the RadioStateChange event is sent before the command event. The RadioStateChange event bubbles so you can also attach the event handler to the enclosing <a href="/en/XUL/radiogroup" title="en/XUL/radiogroup"> radiogroup</a>.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>

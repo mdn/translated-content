@@ -1,0 +1,441 @@
+---
+title: nsIURI
+slug: nsIURI
+tags:
+  - páginas_a_traducir
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIURI
+---
+<p><code>nsIURI</code> es un interfaz para un identificador de recursos uniforme con soporte de internacionalización, que ofrece atributos que permiten la configuración y filtrado de componentes de URI y métodos para le ejecución de operaciones básicas en URI´s. Para detalles vea los siguientes RFC´s:</p>
+
+<p>
+ </p><ul>
+  <li><a class="external" href="http://www.ietf.org/rfc/rfc2396.txt" rel="external nofollow" title="http://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>: La especificación de URI</li>
+  <li><a class="external" href="http://www.ietf.org/rfc/rfc3490.txt" rel="external nofollow" title="http://www.ietf.org/rfc/rfc3490.txt">RFC3490</a>: Internacionalizando los nombres de dominios en aplicaciones (IDNA)</li>
+  <li><a class="external" href="http://tools.ietf.org/rfc/rfc3987.txt" rel="external nofollow" title="http://tools.ietf.org/rfc/rfc3987.txt">RFC3987</a>: Identificadores de recursos internacionalizados</li>
+ </ul>
+<p></p>
+
+<p>Las subclases de <code>nsIURI</code>, tales como <span class="lang lang-en"><code><a href="../../../../en/nsIURL" rel="internal">nsIURL</a></code> </span>, imponen estructura adicional sobre la URI.</p>
+
+<p><span class="lang lang-en"><code>nsIURI</code> se define en <span class="lang lang-en"><a class="external" href="http://mxr.mozilla.org/mozilla-central/source/netwerk/base/public/nsIURI.idl" rel="external nofollow" title="http://mxr.mozilla.org/mozilla-central/source/netwerk/base/public/nsIURI.idl"><code>netwerk/base/public/nsIURI.idl</code></a> </span>. Es <span class="lang lang-en"><a href="../../../../en/Interfaces/About_Scriptable_Interfaces" rel="internal">encriptable</a> </span>y se ha mantenido <span class="lang lang-en"><a href="../../../../en/Interfaces/About_Frozen_Interfaces" rel="internal">congelada</a> desde Mozilla 1.0.0 </span>. </span></p>
+
+<p>Heredada de: <span class="lang lang-en"><code><a href="../../../../en/nsISupports" rel="internal">nsISupports</a></code> </span></p>
+
+<p>Para crear un objeto nsIURI, debes usar el método <a href="../../../../en/nsIIOService#newURI%28%29" rel="internal">newURI()</a> de  <span class="lang lang-en"><code><a href="../../../../en/nsIIOService" rel="internal">nsIIOService</a></code></span>, como este:</p>
+
+<div class="dp-highlighter">
+<div class="bar">
+<div class="tools"><a href="/../../../../en/nsIURI#" title="../../../../en/nsIURI#">view plain</a><a href="/../../../../en/nsIURI#" title="../../../../en/nsIURI#">print</a><a href="/../../../../en/nsIURI#" title="../../../../en/nsIURI#">?</a></div>
+</div>
+
+<ol class="dp-c" start="1">
+ <li class="alt"><span><span class="keyword">function</span><span> makeURI(aURL, aOriginCharset, aBaseURI) {  </span></span></li>
+ <li><span>  <span class="keyword">var</span><span> ioService = Components.classes[</span><span class="string">"@mozilla.org/network/io-service;1"</span><span>]  </span></span></li>
+ <li class="alt"><span>                            .getService(Components.interfaces.nsIIOService);  </span></li>
+ <li><span>  <span class="keyword">return</span><span> ioService.newURI(aURL, aOriginCharset, aBaseURI);  </span></span></li>
+ <li class="alt"><span>}  </span></li>
+</ol>
+</div>
+
+<p><strong>Nota:</strong> Esta es la única forma correcta de crear un objeto <code>nsIURI</code>.</p>
+
+<h2 class="editable" id="Componentes_de_un_URI"><span>Componentes de un URI</span></h2>
+
+<div class="editIcon"><a href="/../../../../en/nsIURI#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p><img alt="uri-diagram.png" class="default internal" src="../../../../@api/deki/files/3267/=uri-diagram.png"></p>
+
+<h2 class="editable" id="Vista_rápida_del_método"><span>Vista rápida del método</span></h2>
+
+<div class="editIcon"><a href="/../../../../en/nsIURI#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>nsIURI <a class="internal" href="../../../../en/nsIURI#clone%28%29" rel="internal">clone</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a class="internal" href="../../../../en/nsIURI#equals%28%29" rel="internal">equals</a>(in nsIURI other);</code></td>
+  </tr>
+  <tr>
+   <td><code>boolean <a class="internal" href="../../../../en/nsIURI#schemeIs%28%29" rel="internal">schemeIs</a>(in string scheme);</code></td>
+  </tr>
+  <tr>
+   <td><code>AUTF8String <a class="internal" href="../../../../en/nsIURI#resolve%28%29" rel="internal">resolve</a>(in AUTF8String relativePath);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 class="editable" id="Atributos"><span>Atributos</span></h2>
+
+<div class="editIcon"><a href="/../../../../en/nsIURI#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Atributo</td>
+   <td class="header">Tipo</td>
+   <td class="header">Descripción</td>
+  </tr>
+  <tr>
+   <td><code>spec</code></td>
+   <td><code><a href="../../../../en/nsACString" rel="internal">nsACString</a></code> (UTF-8)</td>
+   <td>
+    <p>Retorna un cadena en representación de la URI. Al usar <code>spec</code> causa que la nueva spec sea evaluada usando las reglas que tiene actualmente el el esquema de la URI. Si la cadena no puede ser analizada como una URI, aparece un <code>NS_ERROR_MALFORMED_URI</code>. (error de URI malformada).</p>
+
+    <div class="warning"><strong>Advertencia:</strong> Ya que la comprobación de la cadena se ha hecho usando el esquema de la URI actual, el uso de spec para un URI con un esquema diferente producirá resultados incorrectos. Por lo tanto, únicamente las implementaciones del manejador de protocolo debieran hacer esto.</div>
+
+    <p>Si la URI almacena información de la <a href="../../../../en/nsIIOService#newURI%28%29" rel="internal">newURI()</a> de la interfaz de <span class="lang lang-en"><code><a href="../../../../en/nsIIOService" rel="internal">nsIIOService</a></code> </span>que la creó, una cadena además a la analizada, el comportamiento de esta información cuando el atributo spec es establecido, no está definido.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>prePath</code></td>
+   <td><code>sololectura <a href="../../../../en/nsACString" rel="internal">nsACString</a></code> (UTF-8)</td>
+   <td>
+    <p>La <code>prePath</code> retorna la cadena antes de la ruta(como en "<a class="external" rel="external nofollow" title="scheme://user:password@host">scheme://user:password@host</a>:port"). Esto es muy útil para sesiones de autenticación o administración.</p>
+
+    <div class="note"><strong>Nota:</strong> Algunos caracteres pueden ser códigos de escape.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>scheme</code></td>
+   <td><code><a href="../../../../en/nsACString" rel="internal">nsACString</a> (US-ASCII)</code></td>
+   <td>
+    <p>La <code>scheme</code> es el protocolo al cual esta URI se refiere. El scheme está restringido a los caractéres de la US-ASCII por <a class="external" href="http://www.ietf.org/rfc/rfc2396.txt" rel="external nofollow" title="http://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>.</p>
+
+    <div class="warning"><strong>Advertencia:</strong> Al usar esto fuera de una implementación de manejador de protocolo es muy desalentador, una vez establecido generalmente lleva a obtener resultados impredecibles.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>userPass</code></td>
+   <td><code><a href="../../../../en/nsACString" rel="internal">nsACString</a></code> (UTF-8)</td>
+   <td>
+    <p><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title="The &quot;username:password&quot; (or
+            username only if the value doesn't contain a ':').">El "username:password" (o </span></span><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title='The optional username, assuming the preHost
+            consists of "username:password".'>nombre de usuario</span></span><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title="The &quot;username:password&quot; (or
+            username only if the value doesn't contain a ':')."> sólo si el valor no contiene una':').</span></span></p>
+
+    <div class="note"><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title="Note: Some characters may be escaped.">Nota: </span></span>Algunos caracteres pueden ser códigos de escape.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>username</code></td>
+   <td><code><a href="../../../../en/nsACString" rel="internal">nsACString</a></code> (UTF-8)</td>
+   <td>
+    <p><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title='The optional username, assuming the preHost
+            consists of "username:password".'>El nombre de usuario opcional, suponiendo que la preHost consiste en "</span></span><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title="The &quot;username:password&quot; (or
+            username only if the value doesn't contain a ':').">username:password</span></span><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title='The optional username, assuming the preHost
+            consists of "username:password".'>".</span></span></p>
+
+    <div class="note"><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title="Note: Some characters may be escaped.">Nota: </span></span>Algunos caracteres pueden ser códigos de escape.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>password</code></td>
+   <td><code><a href="../../../../en/nsACString" rel="internal">nsACString</a></code> (UTF-8)</td>
+   <td>
+    <p><span class="short_text" id="result_box"><span style="background-color: #ebeff9;" title='The optional password, assuming the preHost
+            consists of "username:password".'>La contraseña opcional, suponiendo que la preHost consiste en "usuario:contraseña".</span></span></p>
+
+    <div class="note"><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title="Note: Some characters may be escaped.">Nota: </span></span>Algunos caracteres pueden ser códigos de escape.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>hostPort</code></td>
+   <td><code><a href="../../../../en/nsACString" rel="internal">nsACString</a></code> (UTF-8)</td>
+   <td>
+    <p><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title='The "host:port" part of the URI
+            (or simply the host, if port is -1).'>El "servidor:puerto" parte de la URI (o simplemente el </span></span><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title='The "host:port" part of the URI
+            (or simply the host, if port is -1).'>servidor</span></span><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title='The "host:port" part of the URI
+            (or simply the host, if port is -1).'>, si el puerto es -1).</span></span></p>
+
+    <div class="note">Nota: Los caracteres <strong>no</strong> son códigos de escape.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>host</code></td>
+   <td><code><a href="../../../../en/nsACString" rel="internal">nsACString</a></code> (UTF-8)</td>
+   <td>
+    <p><span class="long_text" id="result_box"><span style="background-color: #ffffff;" title="The host is the Internet domain name to
+            which this URI refers.">El servidor es el nombre de dominio de Internet a los que se refiere este URI. </span><span style="background-color: #ffffff;" title="It could be an IPv4 (or IPv6) address
+            literal.">Podría ser una dirección </span></span><span class="long_text" id="result_box"><span style="background-color: #ffffff;" title="It could be an IPv4 (or IPv6) address
+            literal.">literal </span></span><span class="long_text" id="result_box"><span style="background-color: #ffffff;" title="It could be an IPv4 (or IPv6) address
+            literal.">IPv4 (o IPv6). </span><span style="background-color: #ffffff;" title="If supported, it
+            could be a non-ASCII internationalized domain name.">Si está soportada, podría ser un nombre de dominio </span></span><span class="long_text" id="result_box"><span style="background-color: #ffffff;" title="If supported, it
+            could be a non-ASCII internationalized domain name.">no-ASCII </span></span><span class="long_text" id="result_box"><span style="background-color: #ffffff;" title="If supported, it
+            could be a non-ASCII internationalized domain name.">internacionalizado.</span></span></p>
+
+    <div class="note">Nota: Los caracteres <strong>no</strong> son códigos de escape.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>port</code></td>
+   <td><code>PRInt32</code></td>
+   <td>
+    <p><span class="medium_text" id="result_box"><span style="background-color: #ebeff9;" title="The URI's port.">El puerto de URI's. </span><span style="background-color: #ffffff;" title="A port value of -1
+            corresponds to the protocol's default port (eg. -1 implies port 80 for
+            HTTP URIs).">Un valor de puerto de -1 corresponde al puerto por defecto del protocolo (por ejemplo, -1 implica el puerto 80 para HTTP URIs).</span></span></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>path</code></td>
+   <td><code><a href="../../../../en/nsACString" rel="internal">nsACString</a></code> (UTF-8)</td>
+   <td>
+    <p><span class="medium_text" id="result_box"><span style="background-color: #ffffff;" title="The path, typically including at least a
+            leading '/' (but may also be empty, depending on the protocol).">La ruta, que típicamente incluye al menos una de las principales '/' (aunque también puede estar vacío, dependiendo del protocolo).</span></span></p>
+
+    <div class="note">Nota: Algunos caracteres pueden ser códigos de escape.</div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>asciiSpec</code></td>
+   <td><code>readonly <a href="../../../../en/nsACString" rel="internal">nsACString</a></code> (US-ASCII)</td>
+   <td>
+    <p><span class="medium_text" id="result_box"><span style="background-color: #ffffff;" title="The URI spec with an ASCII compatible
+            encoding.">La especificación URI con una codificación compatible con ASCII. </span><span style="background-color: #ebeff9;" title="The host portion follows the IDNA draft spec.">La porción de host sigue la especificación del proyecto de IDNA. </span><span style="background-color: #ffffff;" title="Other parts are
+            URL-escaped per the rules of">Otras partes son URL con caracteres de escape por las normas de </span></span><a class="external" href="http://www.ietf.org/rfc/rfc2396.txt" rel="external nofollow" title="http://www.ietf.org/rfc/rfc2396.txt">RFC2396</a>. <span class="short_text" id="result_box"><span style="background-color: #ffffff;" title="The result is strictly ASCII.">El resultado es estrictamente ASCII.</span></span></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>asciiHost</code></td>
+   <td><code>readonly <a href="../../../../en/nsACString" rel="internal">nsACString</a></code> (US-ASCII)</td>
+   <td>
+    <p><span class="long_text" id="result_box"><span style="background-color: #ffffff;" title="The URI host with an ASCII compatible
+            encoding.">El servidor URI con una codificación compatible con ASCII. </span><span style="background-color: #ffffff;" title="Follows the IDNA
+            draft spec for converting internationalized domain names (UTF-8) to
+            ASCII for compatibility with existing Internet infrasture.">Sigue la especificación del proyecto de IDNA para convertir los nombres de dominio internacionalizados (UTF-8) a ASCII para la compatibilidad con la infraestructura de Internet existente.</span></span></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>originCharset</code></td>
+   <td><code>readonly <a href="../../../../en/nsACString" rel="internal">nsACString</a></code></td>
+   <td>
+    <p><span class="short_text" id="result_box"><span style="background-color: #ffffff;" title="The charset of the document from which this
+            URI originated.">El juego de caracteres del documento del que se originó este URI. </span><span style="background-color: #ffffff;" title="An empty value implies UTF-8.">Un valor vacío implica UTF-8.</span></span></p>
+
+    <p><span class="long_text" id="result_box"><span style="background-color: #ffffff;" title="If this value is something other than UTF-8
+            then the URI components (eg, spec, prePath, username, etc.) are all
+            fully URL-escaped.">Si este valor es algo distinto de UTF-8 a continuación, los componentes de URI (por ejemplo, spec, prePath, nombre de usuario, etc) son totalmente URL de escape. </span><span style="background-color: #ffffff;" title="Otherwise, the URI
+            components may contain unescaped multibyte UTF-8 characters.">De lo contrario, los componentes de URI pueden contener </span></span><span class="long_text" id="result_box"><span style="background-color: #ffffff;" title="Otherwise, the URI
+            components may contain unescaped multibyte UTF-8 characters.">caracteres </span></span><span class="long_text" id="result_box"><span style="background-color: #ffffff;" title="Otherwise, the URI
+            components may contain unescaped multibyte UTF-8 characters.">sin escape multibyte </span></span><span class="long_text" id="result_box"><span style="background-color: #ffffff;" title="Otherwise, the URI
+            components may contain unescaped multibyte UTF-8 characters.">UTF-8 .</span></span></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>
+
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/base/public/nsIURI.idl" rel="custom">netwerk/base/public/nsIURI.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.0.0 </span></div>
+</div><p></p>
+
+<h3 id="C.C3.B3digo_de_interfaz" name="C.C3.B3digo_de_interfaz">Código de interfaz</h3>
+
+<pre class="eval">[scriptable, uuid(07a22cc0-0ce5-11d3-9331-00104ba0fd40)]
+interface nsIURI : nsISupports
+{
+  attribute AUTF8String spec;
+  readonly attribute AUTF8String prePath;
+  attribute ACString scheme;
+  attribute AUTF8String userPass;
+  attribute AUTF8String username;
+  attribute AUTF8String password;
+  attribute AUTF8String hostPort;
+  attribute AUTF8String host;
+  attribute long port;
+  attribute AUTF8String path;
+
+  boolean equals(in nsIURI other);
+  boolean schemeIs(in string scheme);
+  nsIURI clone();
+  AUTF8String resolve(in AUTF8String relativePath);
+
+  readonly attribute ACString asciiSpec;
+  readonly attribute ACString asciiHost;
+  readonly attribute ACString originCharset;
+};
+</pre>
+
+<p>Esencialmente URI son nombres estructurados para... cualquier cosa. Este interfaz ofrece métodos para crear y cuestionar los componentes básicos de un URI. Las sub clases, incluida ofrecen mayor estructura a los URI. Esta interfaz sigue las especificaciones Berners-Lee en <a class="external" href="http://tools.ietf.org/html/rfc2396" title="http://tools.ietf.org/html/rfc2396">RFC 2396</a>, donde se definen las URI básicas como:</p>
+
+<pre class="eval"><span class="nowiki">ftp://user:password@example.org:12345/path/leaf</span>
+</pre>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Componente</th>
+   <th>Valore en el ejemplo</th>
+  </tr>
+  <tr>
+   <td><code>scheme</code></td>
+   <td><code>ftp</code></td>
+  </tr>
+  <tr>
+   <td><code>userPass</code></td>
+   <td><code>user:password</code></td>
+  </tr>
+  <tr>
+   <td><code>host</code></td>
+   <td><code>example.org</code></td>
+  </tr>
+  <tr>
+   <td><code>port</code></td>
+   <td><code>12345</code></td>
+  </tr>
+  <tr>
+   <td><code>path</code></td>
+   <td><code>/path/leaf</code></td>
+  </tr>
+  <tr>
+   <td><code>prePath</code></td>
+   <td><code><span class="nowiki">ftp://user:password@example.org:12345</span></code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="M.C3.A9todos" name="M.C3.A9todos">Métodos</h3>
+
+<h4 id="equals.28.29" name="equals.28.29">equals()</h4>
+
+<pre class="eval">boolean equals (in nsIURI other);
+</pre>
+
+<p>Compara la URI actual con otra, retornando <code>true </code>si las dos representan el mismo sitio.</p>
+
+<p>Nota: Es más que un comparación de cadena, ya que dos cadenas URI distintas pueden representar el mismo sitio. P.e.: Esta comparación devolverá <code>true</code>  <span class="nowiki">http://example.com:80/ == http://example.com/</span></p>
+
+<h4 id="schemeIs.28.29" name="schemeIs.28.29">schemeIs()</h4>
+
+<pre class="eval">boolean schemeIs(in string scheme);
+</pre>
+
+<p>Una optimización para hacer chequeos de esquema sin pedir los usuarios de nsIURI a GetScheme, con esto se ahorran asignaciones y liberaciones extra de memoria. Retorna <code>True</code>  si el esquema coincide (se ingnoran mayúsculas o minúsculas)</p>
+
+<p>clone()</p>
+
+<pre class="eval">nsIURI clone();
+</pre>
+
+<p><span class="long_text" id="result_box"><span style="background-color: #ffffff;" title="Clones the current URI.">Clona la URI, retornando un nuevo objeto </span><code><span style="background-color: #ffffff;" title="Clones the current URI.">nsIURI</span></code></span></p>
+
+<p><span class="long_text" id="result_box"><span style="background-color: #ffffff;" title="For some protocols, this is more than just an optimization.">Para algunos protocolos, esto es más que una simple optimización. </span><span style="background-color: #ffffff;" title="For example, under
+MacOS, the spec of a file URL does not necessarily uniquely identify a
+file since two volumes could share the same name.">Por ejemplo, en MacOS X, la especificación de una dirección de fichero no implica necesariamente la identificación exclusiva de un archivo, ya que dos volúmenes podrían tener el mismo nombre.</span></span></p>
+
+<h4 id="resolve.28.29" name="resolve.28.29">resolve()</h4>
+
+<pre class="eval">AUTF8String resolve(in AUTF8String relativePath);
+</pre>
+
+<p><span class="medium_text" id="result_box"><span style="background-color: #ffffff;" title="This method resolves a relative string into
+an absolute URI string, using this URI as the base.">Este método resuelve una cadena uri relativa usando esta URI como base. </span></span></p>
+
+<p><span class="medium_text" id="result_box"><span style="background-color: #ffffff;" title="NOTE: some implementations may have no concept of a
+relative URI.">Nota: Algunas implementaciones puede que no tengan el concepto de URI relativo.</span></span></p>
+
+<h3 id="Attributes" name="Attributes">Attributes</h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Attribute</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
+  </tr>
+  <tr>
+   <td><code>spec</code></td>
+   <td><code><a href="/es/NsACString" title="es/NsACString">nsACString</a></code> (UTF-8)</td>
+   <td><span class="medium_text" id="result_box"><span style="background-color: #ffffff;" title="Returns a string representation of the
+            URI.">Devuelve una representación de cadena de la URI. </span><span style="background-color: #ebeff9;" title="Setting the spec
+            causes the new spec to be parsed, initializing the URI.">Configura las spec causada con la nueva spec para ser analizada, inicializa la URI.</span></span></td>
+  </tr>
+  <tr>
+   <td><code>prePath</code></td>
+   <td><code>readonly <a href="/es/NsACString" title="es/NsACString">nsACString</a></code> (UTF-8)</td>
+   <td>El prePath (eg. <a class="external" rel="freelink">scheme://user:password@host</a>:port) retorna la cadena de caracteres que se encuentran antes del path. Esto es útil para la autenticación o para el manejo de sesiones.
+    <p>Some characters may be escaped.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>scheme</code></td>
+   <td><code><a href="/es/NsACString" title="es/NsACString">nsACString</a> (US-ASCII)</code></td>
+   <td>El Esquema es el protocolo al cual la URI se refiere. El Esquema está restringido al conjunto de caracteres US-ASCII definido por el RFC2396.</td>
+  </tr>
+  <tr>
+   <td><code>userPass</code></td>
+   <td><code><a href="/es/NsACString" title="es/NsACString">nsACString</a></code> (UTF-8)</td>
+   <td>La combinación nombre_de_usuario:contraseña (username:password) (o nombre_de_usuario sólo si el valor no contiene ':').
+    <p>Some characters may be escaped.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>username</code></td>
+   <td><code><a href="/es/NsACString" title="es/NsACString">nsACString</a></code> (UTF-8)</td>
+   <td>The optional username, assuming the preHost consists of username:password.
+    <p>Some characters may be escaped.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>password</code></td>
+   <td><code><a href="/es/NsACString" title="es/NsACString">nsACString</a></code> (UTF-8)</td>
+   <td>The optional password, assuming the preHost consists of username:password.
+    <p>Some characters may be escaped.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>hostPort</code></td>
+   <td><code><a href="/es/NsACString" title="es/NsACString">nsACString</a></code> (UTF-8)</td>
+   <td>La combinación host:puerto (host:port) (o simplemente el host, si el puerto es -1).
+    <p>Characters are NOT escaped.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>host</code></td>
+   <td><code><a href="/es/NsACString" title="es/NsACString">nsACString</a></code> (UTF-8)</td>
+   <td>El host es el nombre de dominio de internet al cual se refiere la URI. Puede ser una dirección IPv4 o IPv6. Si es soportado puede ser un nombre de dominio internacionalizado no-ASCII.
+    <p>Characters are NOT escaped.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>port</code></td>
+   <td><code>PRInt32</code></td>
+   <td>Si el valor del puerto es -1 esto corresponde con el puerto por defecto para el protocolo (ejm. -1 implica que se usa el puerto 80 para las URI http).</td>
+  </tr>
+  <tr>
+   <td><code>path</code></td>
+   <td><code><a href="/es/NsACString" title="es/NsACString">nsACString</a></code> (UTF-8)</td>
+   <td>The path, typically including at least a leading '/' (but may also be empty, depending on the protocol).
+    <p>Some characters may be escaped.</p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>asciiSpec</code></td>
+   <td><code>readonly <a href="/es/NsACString" title="es/NsACString">nsACString</a></code> (US-ASCII)</td>
+   <td>The URI spec with an ASCII compatible encoding. Host portion follows the IDNA draft spec. Other parts are URL-escaped per the rules of RFC2396. The result is strictly ASCII.</td>
+  </tr>
+  <tr>
+   <td><code>asciiHost</code></td>
+   <td><code>readonly <a href="/es/NsACString" title="es/NsACString">nsACString</a></code> (US-ASCII)</td>
+   <td>The URI host with an ASCII compatible encoding. Follows the IDNA draft spec for converting internationalized domain names (UTF-8) to ASCII for compatibility with existing internet infrasture.</td>
+  </tr>
+  <tr>
+   <td><code>originCharset</code></td>
+   <td><code>readonly <a href="/es/NsACString" title="es/NsACString">nsACString</a></code></td>
+   <td>The charset of the document from which this URI originated. An empty value implies UTF-8.
+    <p>If this value is something other than UTF-8 then the URI components (e.g., spec, prePath, username, etc.) will all be fully URL-escaped. Otherwise, the URI components may contain unescaped multibyte UTF-8 characters.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>

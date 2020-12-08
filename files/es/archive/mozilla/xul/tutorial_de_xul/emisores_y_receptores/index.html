@@ -1,0 +1,118 @@
+---
+title: Emisores y receptores
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Emisores_y_receptores
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/Broadcasters_and_Observers
+---
+<p>There may be times when you want several elements to respond to events or changes of state easily. To do this, we can use broadcasters.</p>
+
+<h3 id="Command_Attribute_Forwarding" name="Command_Attribute_Forwarding">Command Attribute Forwarding</h3>
+
+<p>We've already seen that elements such as buttons can be hooked up to commands. In addition, if you place the <code><a href="es/XUL/Atributos#disabled">desactivado</a></code> attribute on the <code><a href="es/XUL/Elementos#command">comando</a></code> element, any elements hooked up to it will also become disabled automatically. This is useful way to simplify the amount of code you need to write. The technique also works for other attributes as well. For instance, if you place a <code><a href="es/XUL/Atributos#label">label</a></code> attribute on a <code><a href="es/XUL/Elementos#command">comando</a></code> element, any buttons attached to the command will share the same label.</p>
+
+<p><strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_broadob_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_broadob_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;command id="mi_comando" label="Abrir"/&gt;
+
+&lt;button command="mi_comando"/&gt;
+&lt;checkbox label="Abrir en una ventan nueva" command="mi_comando"/&gt;
+</pre>
+
+<p>In this example, the button does not have a <code><a href="es/XUL/Atributos#label">label</a></code> attribute, however it is attached to a command that does. The button will share the label with the command. The checkbox already has a label, however, it will be overridden by the command's label. The result is that both the button and the checkbox will have the same label 'Open'.</p>
+
+<p>If you were to modify the command's <code><a href="es/XUL/Atributos#label">label</a></code> attribute, the label on the button and checkbox will adjust accordingly. We saw something like this in a previous section where the <code><a href="es/XUL/Atributos#disabled">desactivado</a></code> attribute was adjusted once and propagated to other elements.</p>
+
+<p>This attribute forwarding is quite useful for a number of purposes. For instance, let's say that we want the Back action in a browser to be disabled. We would need to disable the Back command on the menu, the Back button on the toolbar, the keyboard shortcut (Alt+Left for example) and any Back commands on popup menus. Although we could write a script to do this, it is quite tedious. It also has the disadvantage that we would need to know all of the places where a Back action could be. If someone added a new Back button using an extension, it wouldn't be handled. It is convenient to simply disable the Back action and have all the elements that issue the Back action disable themselves. We can use the attribute forwarding of commands to accomplish this.</p>
+
+<h3 id="El_emisor" name="El_emisor">El emisor</h3>
+
+<p>There is a similar element called a <code><a href="es/XUL/Elementos#broadcaster">emisor</a></code>. Broadcasters support attribute forwarding in the same way that commands do. They work the same as commands except that a command is used for actions, while a broadcaster is instead used for holding state information. For example, a <code><a href="es/XUL/Elementos#command">comando</a></code> would be used for an action such as Back, Cut or Delete. A <code><a href="es/XUL/Elementos#broadcaster">emisor</a></code> would be used to hold, for instance, a flag to indicate whether the user was online or not. In the former case, menu items and toolbar buttons would need to be disabled when there was no page to go back to, or no text to cut or delete. In the latter case, various UI elements might need to update when the user switches from offline mode to online mode.</p>
+
+<p>The simplest broadcaster is shown below. You should always use an <code><a href="es/XUL/Atributos#id">id</a></code> attribute so that it can be referred to by other elements.</p>
+
+<pre>&lt;broadcasterset&gt;
+  &lt;broadcaster id="isOffline" label="Offline"/&gt;
+&lt;/broadcasterset&gt;
+</pre>
+
+<p>Any elements that are watching the broadcaster will be modified automatically whenever the broadcaster has its <code><a href="es/XUL/Atributos#label">label</a></code> attribute changed. This results in these elements having a new label. Like other non-displayed elements, the <code><a href="es/XUL/Elementos#broadcasterset">broadcasterset</a></code> element serves as a placeholder for broadcasters. You should declare all your broadcasters inside a <code><a href="es/XUL/Elementos#broadcasterset">broadcasterset</a></code> element so that they are all kept together.</p>
+
+<h3 id="Making_elements_observers" name="Making_elements_observers">Making elements observers</h3>
+
+<p>Elements that are watching the broadcaster are called observers because they observe the state of the broadcaster. To make an element an observer, add an <code><a href="es/XUL/Atributos#observes">observes</a></code> attribute to it. This is analogous to using the <code><a href="es/XUL/Atributos#command">comando</a></code> attribute when attaching an element to a <code><a href="es/XUL/Elementos#command">comando</a></code> element. For example, to make a button an observer of the broadcaster above:</p>
+
+<pre>&lt;button id="offline_button" observes="isOffline"/&gt;
+</pre>
+
+<p>The <code>observes</code> attribute has been placed on the button and its value has been set to the value of the <code>id</code> on the broadcaster to observe. Here the button will observe the broadcaster which has the id <code>isOffline</code>, which is the one defined earlier. If the value of the <code>label</code> attribute on the broadcaster changes, the observers will update the values of their <code><a href="es/XUL/Atributos#label">label</a></code> attributes also.</p>
+
+<p>We could continue with additional elements. As many elements as you want can observe a single broadcaster. You can also have only one if you wanted to but that would accomplish very little since the main reason for using broadcasters is to have attributes forwarded to multiple places. You should only use broadcasters when you need multiple elements that observe an attribute. Below, some additional observers are defined:</p>
+
+<pre>&lt;broadcaster id="offline_command" label="Offline" accesskey="f"/&gt;
+
+&lt;keyset&gt;
+  &lt;key id="goonline_key" observes="offline_command" modifiers="accel" key="O"/&gt;
+&lt;/keyset&gt;
+&lt;menuitem id="offline_menuitem" observes="offline_command"/&gt;
+&lt;toolbarbutton id="offline_toolbarbutton" observes="offline_command"/&gt;
+</pre>
+
+<p>In this example, both the <code><a href="es/XUL/Atributos#label">label</a></code> and the <code><a href="es/XUL/Atributos#accesskey">accesskey</a></code> will be forwarded from the broadcaster to the key, menu item and the toolbar button. The key won't use any of the received attributes for anything, but it will be disabled when the broadcaster is disabled.</p>
+
+<p>You can use a broadcaster to observe any attribute that you wish. The observers will grab all the values of any attributes from the broadcasters whenever they change. Whenever the value of any of the attributes on the broadcaster changes, the observers are all notified and they update their own attributes to match. Attributes of the observers that the broadcaster doesn't have itself are not modified. The only attributes that are not updated are the <code><a href="es/XUL/Atributos#id">id</a></code> and <code><a href="es/XUL/Atributos#persist">persist</a></code> attributes; these attributes are never shared. You can also use your own custom attributes if you wish.</p>
+
+<p>Broadcasters aren't used frequently as commands can generally handle most uses. One thing to point out is that there really is no difference between the <code><a href="es/XUL/Elementos#command">comando</a></code> element and the <code><a href="es/XUL/Elementos#broadcaster">emisor</a></code> element. They both do the same thing. The difference is more semantic. Use commands for actions and use broadcasters for state. In fact, any element can act as broadcaster, as long as you observe it using the <code><a href="es/XUL/Atributos#observes">observes</a></code> attribute.</p>
+
+<h3 id="El_observador" name="El_observador">El observador</h3>
+
+<p>There is also a way to be more specific about which attribute of the broadcaster to observe. This involves an <code><a href="es/XUL/Elementos#observes">observes</a></code> element. Like its attribute counterpart, it allows you to define an element to be an observer. The <code><a href="es/XUL/Elementos#observes">observes</a></code> element should be placed as a child of the element that is to be the observer. An example is shown below:</p>
+
+<p><strong>Ejemplo 2</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_broadob_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_broadob_2.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;broadcasterset&gt;
+  &lt;broadcaster id="isOffline" label="Offline" accesskey="f"/&gt;
+&lt;/broadcasterset&gt;
+
+&lt;button id="offline_button"&gt;
+  &lt;observes element="isOffline" attribute="label"/&gt;
+&lt;/button&gt;
+</pre>
+
+<p>Two attributes have been added to the <code><a href="es/XUL/Elementos#observes">observes</a></code> element. The first, <code><a href="es/XUL/Atributos#element">elemento</a></code>, specifies the id of the broadcaster to observe. The second, <code><a href="es/XUL/Atributos#attribute">atributo</a></code>, specifies the attribute to observe. The result here is that the button will receive its label from the broadcaster, and when the label is changed, the label on the button is changed. The <code><a href="es/XUL/Elementos#observes">observes</a></code> element does not change but instead the element it is inside changes, which in this case is a <code><a href="es/XUL/Elementos#button">botón</a></code>. Notice that the <code><a href="es/XUL/Atributos#accesskey">accesskey</a></code> is not forwarded to the button, since it is not being obseved. If you wanted it to be, another <code><a href="es/XUL/Elementos#observes">observes</a></code> element would need to be added. If you don't use any <code><a href="es/XUL/Elementos#observes">observes</a></code> elements, and instead use the <code><a href="es/XUL/Atributos#observes">observes</a></code> attribute directly on the button, all attributes will be observed.</p>
+
+<h4 id="El_evento_emisor" name="El_evento_emisor">El evento emisor</h4>
+
+<p>There is an additional event handler that we can place on the <code><a href="es/XUL/Elementos#observes">observes</a></code> element which is <code>onbroadcast</code>. The event is called whenever the observer notices a change to the attributes of the broadcaster that it is watching. An example is shown below.</p>
+
+<p><strong>Example 3</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_broadob_3.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_broadob_3.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;broadcasterset&gt;
+  &lt;broadcaster id="colorChanger" style="color: black"/&gt;
+&lt;/broadcasterset&gt;
+
+&lt;button label="Test"&gt;
+  &lt;observes element="colorChanger" attribute="style" onbroadcast="alert('Color changed');"/&gt;
+&lt;/button&gt;
+
+&lt;button label="Observer"
+  oncommand="document.getElementById('colorChanger').setAttribute('style','color: red');"
+/&gt;
+</pre>
+
+<p>Two buttons have been created, one labeled Test and the other labeled Observer. If you click on the Test button, nothing special happens. However, if you click on the Observer button, two things happen. First, the button changes to have red text and, second, an alert box appears with the message 'Color changed'.</p>
+
+<p>What happens is the <code><a href="es/XUL/Atributos#oncommand">oncommand</a></code> handler on the second button is called when the user presses on it. The script here gets a reference to the broadcaster and changes the style of it to have a <code>color</code> that is red. The broadcaster is not affected by the style change because it doesn't display on the screen. However, the first button has an observer which notices the change in style. The <code><a href="es/XUL/Atributos#element">elemento</a></code> and the <code><a href="es/XUL/Atributos#attribute">atributo</a></code> on the <code><a href="es/XUL/Elementos#observes">observes</a></code> tag detect the style change. The style is applied to the first button automatically.</p>
+
+<p>Next, because the broadcast occured, the event handler <code>onbroadcast</code> is called. This results in an alert message appearing. Note that the broadcast only occurs if the attributes on the <code><a href="es/XUL/Elementos#broadcaster">emisor</a></code> element are changed. Changing the style of the buttons directly will not cause the broadcast to occur so the alert box will not appear.</p>
+
+<p>If you tried duplicating the code for the first <code><a href="es/XUL/Elementos#button">botón</a></code> several times, you would end up with a series of alert boxes appearing, one for each button. This is because each button is an observer and will be notified when the style changes.</p>
+
+<p>Seguimos con el uso del <a href="es/Tutorial_de_XUL/Modelo_de_objeto_de_documento">DOM</a> con elementos XUL.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Actualizar_comandos" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Modelo_de_objeto_de_documento">Siguiente  »</a></p>
+</div>

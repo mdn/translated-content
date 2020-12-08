@@ -1,0 +1,32 @@
+---
+title: Timer.jsm
+slug: Mozilla/JavaScript_code_modules/Timer.jsm
+tags:
+  - Add-ons
+  - JavaScript
+  - JavaScript temporizador
+  - modulo
+  - temporizador
+translation_of: Mozilla/JavaScript_code_modules/Timer.jsm
+---
+<p>{{ gecko_minversion_header("22") }}</p>
+
+<p>El modulo de código JavaScript <code>Timer.jsm</code> contiene implementaciones puras de Javascript de <a href="/en-US/docs/DOM/window.setTimeout" title="/en-US/docs/DOM/window.setTimeout"><code>setTimeout</code></a>, <a href="/en-US/docs/DOM/window.clearTimeout" title="/en-US/docs/DOM/window.clearTimeout"><code>clearTimeout</code></a>, <code><a href="/en-US/docs/Web/API/WindowTimers/setInterval">setInterval</a></code>, y <a href="/en-US/docs/Web/API/WindowTimers/clearInterval"><code>clearInterval</code> </a>Que son compatibles con las funciones de ventana DOM, pero que pueden ser usadas por código que no tiene acceso a la ventana DOM(por ejemplo, <a href="/en-US/docs/Mozilla/JavaScript_code_modules" title="/en-US/docs/Mozilla/JavaScript_code_modules">Los módulos de código de Javascript</a> o <a href="/en-US/docs/The_message_manager" title="/en-US/docs/The_message_manager">los scripts de contenido de frames</a>).</p>
+
+<p>Para usar <code>Timer.jsm</code>, primero impórtalo:</p>
+
+<pre class="brush: js">Components.utils.import("resource://gre/modules/Timer.jsm");
+</pre>
+
+<p>Entonces llama a <code>setTimeout</code> y a <code>clearTimeout</code> como lo harías en una ventana DOM, por ejemplo:</p>
+
+<pre class="brush: js">let timeoutID = setTimeout(function() { console.log("¡Hola!"); }, 500);
+
+clearTimeout(timeoutID);
+</pre>
+
+<p>De forma similar, puedes usar <code>setInterval</code> y <code>clearInterval</code> de la siguiente manera:</p>
+
+<pre class="brush: js">let intervalID = setInterval(function() { console.log("¡Sucederá cada 500ms!"); }, 500);
+
+clearInterval(intervalID);</pre>

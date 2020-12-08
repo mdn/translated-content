@@ -1,0 +1,4 @@
+# FROM-URL	TO-URL
+/el/docs/Introduction	/el/docs/Mozilla/Developer_guide/Introduction
+/el/docs/MDN/Getting_started	/el/docs/MDN/Contribute/Getting_started
+/el/docs/en	/en-US/

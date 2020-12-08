@@ -1,0 +1,231 @@
+---
+title: Botón
+slug: Archive/B2G_OS/UX/Building_blocks/Button
+translation_of: Archive/B2G_OS/Firefox_OS_apps/Building_blocks/1.x/Button
+---
+<p>Realiza una acción cuando es pulsado por el usuario. Son objetos de interfaz de usuario que tienen una amplia variedad de estilos. Consulta la <a href="/es/docs/Mozilla/Firefox_OS/UX/Building_blocks/Button/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Button/Coding">Guía de codificación</a> para informarte sobre cómo implementar botones con un aspecto como los que aquí se describen.</p>
+<h2 id="Características">Características</h2>
+<ul>
+  <li>Los botones tienen dos componentes: un objetivo visual y un objetivo de contacto. El objetivo de contacto es siempre más grande, con el fin de reducir los errores de contacto haciendo el botón más fácil de presionar.</li>
+  <li>Los botones tienen dos estado: normal y presionado.</li>
+  <li>Los botones también pueden ser <strong>deshabilitados</strong>, lo que significa que no pueden ser activados por el usuario, y se muestran atenuados para indicar que han sido deshabilitados.</li>
+</ul>
+<p>Hay multiples tipo de botones:</p>
+<dl>
+  <dt>
+    Botones de acción</dt>
+  <dd>
+    Se utilizan cuando solo hay unas pocas acciones y no es necesaria una lista. La acción principal del botón utiliza un color especial resatado para indicar que es la opción principal.</dd>
+  <dt>
+    Botones de lista</dt>
+  <dd>
+    Se utilizan para mostrar una lista de acciones,  o para activar la presentación de un valor de selección.</dd>
+  <dt>
+    Botones de campo de entrada</dt>
+  <dd>
+    Se utilizan para llevar a cabo acciones con campos de entrada.</dd>
+  <dt>
+    Botones especiales/pesonalizados</dt>
+  <dd>
+    Se utilizan para proporcionar acciones específicas incluyendo grabar, llamar y similares.</dd>
+</dl>
+<h2 id="Visualización">Visualización</h2>
+<p>Aquí hay varios ejemplos visuales de cómo deberían verse los botones. No olvides que puedes usar la hoja de estilos y los recursos de imágenes proporcionados en la<a href="/es/docs/Mozilla/Firefox_OS/UX/Building_blocks/Button/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Button/Coding"> Guía de codificación</a> para implementarlos.</p>
+<h3 id="Botones_de_acción">Botones de acción</h3>
+<p>Se utilizan cuando solo hay unas pocas acciones y no es necesaria una lista. La acción principal del botón utiliza un color especial resatado para indicar que es la opción principal.</p>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row"> </th>
+      <th scope="col">Acción principal</th>
+      <th scope="col">Acción secundaria</th>
+      <th scope="col">Borrar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Normal</th>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4693/btn-main-normal.jpg" style="width: 140px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4699/btn-secondary-normal.jpg" style="width: 140px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4687/btn-delete-normal.jpg" style="width: 140px; height: 40px;"></td>
+    </tr>
+    <tr>
+      <th scope="row">Presionado</th>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4691/btn-main-lit.jpg" style="width: 140px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4697/btn-secondary-lit.jpg" style="width: 140px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4685/btn-delete-lit.jpg" style="width: 140px; height: 40px;"></td>
+    </tr>
+    <tr>
+      <th scope="row">Deshabilitado</th>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4689/btn-main-disabled.jpg" style="width: 140px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4695/btn-secondary-disabled.jpg" style="width: 140px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4683/btn-delete-disabled.jpg" style="width: 140px; height: 40px;"></td>
+    </tr>
+  </tbody>
+</table>
+<p>Sobre fondo oscuro, los botones deshabilitados tienen un aspecto especial, como se ve abajo.</p>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row"> </th>
+      <th scope="col">Acción principal</th>
+      <th scope="col">Acción secundaria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Disabled</th>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4701/btn-primary-disabled-dark.jpg" style="width: 140px; height: 40px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4703/btn-secondary-disabled-dark.jpg" style="width: 140px; height: 40px;"></td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="Botones_de_lista">Botones de lista</h3>
+<p>Se utilizan para mostrar una lista de acciones,  o para activar la presentación de un valor de selección.</p>
+<h4 id="Desencadenar_acciones">Desencadenar acciones</h4>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row"> </th>
+      <th scope="col">Desecadenar una acción en la vista actual</th>
+      <th scope="col">Desencadenar una acción en una nueva vista</th>
+      <th scope="col">Mostrar un selector de valores</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Normal</th>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4725/btn-trigger-current-normal.png" style="width: 291px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4731/btn-trigger-new-normal.png" style="width: 290px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4743/btn-trigger-selector-normal.png" style="width: 291px; height: 40px;"></td>
+    </tr>
+    <tr>
+      <th scope="row">Presionado</th>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4727/btn-trigger-current-pressed.png" style="width: 291px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4733/btn-trigger-new-pressed.png" style="width: 289px; height: 39px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4745/btn-trigger-selector-pressed.png" style="width: 291px; height: 40px;"></td>
+    </tr>
+    <tr>
+      <th scope="row">Deshabilitado</th>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4723/btn-trigger-current-disabled.png" style="width: 290px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4729/btn-trigger-new-disabled.png" style="width: 290px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4741/btn-trigger-selector-disabled.png" style="width: 291px; height: 40px;"></td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="Selección_de_valores">Selección de valores</h4>
+<p>Una vez que se abre un selector de valores, necesitarás al menos un botón en el panel de selección de valores para descartar el valor seleccionado. Estos botones deberían tener el siguiente aspecto:</p>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Normal</th>
+      <th scope="col">Presionado</th>
+      <th scope="col">Deshabilitado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4755/btn-selector-normal.png" style="width: 269px; height: 39px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4757/btn-selector-pressed.png" style="width: 269px; height: 39px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4753/btn-selector-disabled.png" style="width: 269px; height: 39px;"></td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="Botones_de_campos_de_entrada">Botones de campos de entrada</h3>
+<p>Los botones de campos de entrada son botones asociados a un campo de entrada, que cuando se presionan, llevan a cabo una acción relacionada con ese campo de entrada.</p>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Normal</th>
+      <th scope="col">Presionado</th>
+      <th scope="col">Deshabilitado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4761/input-field-normal.png" style="width: 320px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4763/input-field-pressed.png" style="width: 320px; height: 40px;"></td>
+      <td><img alt="" src="https://mdn.mozillademos.org/files/4759/input-field-disabled.png" style="width: 320px; height: 40px;"></td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="Botones_especiales">Botones especiales</h3>
+<p>Los botones especiales son botones visuales al estilo icono que se utilizan para propósitos especiales, tales como operar con la cámara del dispositivo, contestar o colgar el teléfono y activar el teclado de llamada. Por supuesto puedes encontrar otras utilidades a estos botones especiales.</p>
+<h4 id="Botones_de_cámara">Botones de cámara</h4>
+<p>Estos botones no tienen estado deshabilitado; simplemente no los muestras si la ocpión de tomar fotos no está disponible.</p>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row"> </th>
+      <th scope="col">Grabar video</th>
+      <th scope="col">Detener grabación video</th>
+      <th scope="col">Tomar foto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Normal</th>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4771/video-record-normal.png" style="width: 100px; height: 45px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4775/video-stop-normal.png" style="width: 100px; height: 45px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4767/camera-normal.png" style="width: 100px; height: 45px;"></td>
+    </tr>
+    <tr>
+      <th scope="row">Presionado</th>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4773/video-record-pressed.png" style="width: 100px; height: 45px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4777/video-stop-pressed.png" style="width: 100px; height: 45px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4769/camera-pressed.png" style="width: 100px; height: 45px;"></td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="Botones_de_teléfono">Botones de teléfono</h4>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="row"> </th>
+      <th scope="col">Descolgar</th>
+      <th scope="col">Colgar</th>
+      <th scope="col">Ocultar teclado</th>
+    </tr>
+    <tr>
+      <th scope="row">Normal</th>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4781/phone-answer-normal.png" style="width: 130px; height: 40px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4787/phone-hangup-normal.png" style="width: 130px; height: 40px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4793/hide-dialer-normal.png" style="width: 130px; height: 40px;"></td>
+    </tr>
+    <tr>
+      <th scope="row">Presionado</th>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4783/phone-answer-pressed.png" style="width: 130px; height: 40px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4789/phone-hangup-pressed.png" style="width: 130px; height: 40px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4795/hide-dialer-pressed.png" style="width: 130px; height: 40px;"></td>
+    </tr>
+    <tr>
+      <th scope="row">Deshabilitado</th>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4779/phone-answer-disabled.png" style="width: 130px; height: 40px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4785/phone-hangup-disabled.png" style="width: 130px; height: 40px;"></td>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4791/hide-dialer-disabled.png" style="width: 130px; height: 40px;"></td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="Botones_personalizados">Botones personalizados</h4>
+<p>Estos son ejemplos de botones personalizados; en este caso, para añadir un contacto.</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="row">Normal</th>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4799/generic-normal.png" style="width: 90px; height: 40px;"></td>
+    </tr>
+    <tr>
+      <th scope="row">Presionado</th>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4801/generic-pressed.png" style="width: 90px; height: 40px;"></td>
+    </tr>
+    <tr>
+      <th scope="row">Deshabilitado</th>
+      <td style="background-color: black;"><img alt="" src="https://mdn.mozillademos.org/files/4797/generic-disabled.png" style="width: 90px; height: 40px;"></td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="Ver_también">Ver también</h2>
+<ul>
+  <li><a href="/es/docs/Mozilla/Firefox_OS/UX" title="/en-US/docs/Mozilla/Firefox_OS/UX">Firefox OS experiencia de usuario</a></li>
+  <li><a href="/es/docs/Mozilla/Firefox_OS/UX/Building_blocks/Button/Coding" title="/en-US/docs/Mozilla/Firefox_OS/UX/Building_blocks/Button/Coding">Estilo de codificación de botones</a></li>
+</ul>

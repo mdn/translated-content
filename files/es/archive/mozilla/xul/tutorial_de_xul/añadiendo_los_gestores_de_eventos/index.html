@@ -1,0 +1,133 @@
+---
+title: Añadiendo los gestores de eventos
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Añadiendo_los_gestores_de_eventos
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Event_Handlers
+---
+<p>The find files dialog so far looks quite good. We haven't cleaned it up much but we have created a simple user interface easily. Next, we will show how to add scripts to it.</p>
+
+<h3 id="Usando_scripts" name="Usando_scripts">Usando scripts</h3>
+
+<p>Para hacer funcional el diálogo de búsqueda de archivos, necesitaremos algunos scripts los cuales se ejecutarán cuando el usuario interactúe con el diálogo. Podríamos querer agregar un script para manejar el botón Buscar, el botón Cancelar y manejar cada comando del menú. Escribimos esto utilizando funciones <a href="/es/JavaScript" title="es/JavaScript">JavaScript</a> muchas de la misma forma que en <a href="/es/HTML" title="es/HTML">HTML</a>.</p>
+
+<p>Puede utilizar el elemento <code><a href="/es/XUL/Elementos#script" title="es/XUL/Elementos#script">script</a></code> para incluir scripts en archivos XUL. Puede incluir el código script directamente en el archivo XUL entre la apertura y cierre de etiquetas <code>script</code> pero es mucho mejor incluir código en un archivo separado ya que de esta manera la ventana XUL cargará ligeramente más rápido. El atributo <code><a href="/Es/XUL/Atributos#src" title="Es/XUL/Atributos#src">src</a></code> es utilizado para enlazar un archivo script externo.</p>
+
+<div class="highlight">
+<h5 id="Nuestro_ejemplo" name="Nuestro_ejemplo">Nuestro ejemplo</h5>
+
+<p>Agreguemos un script al diálogo buscar archivo. Aunque no importe cómo sea llamado el archivo script, generalmente debería ser el mismo que el archivo XUL con una extensión <em>.js</em>. En este caso, findfile.js será utilizado. Agregue la línea debajo sólo <strong>después de la apertura de la etiqueta <code><a href="/es/XUL/Elementos#window" title="es/XUL/Elementos#window">window</a></code> y antes de cualquier otro elemento</strong>.</p>
+
+<pre class="eval"><span class="highlightred">&lt;script src="findfile.js"/&gt;</span>
+</pre>
+
+<div class="note">Nota: Al agregar el elemento <em>script</em> directamente bajo el elemento <em>window</em> su ámbito será el documento completo. Si se anida bajo otra etiqueta su ámbito se restringirá a los elementos anidados en ella, y no sera "visible" para otras zonas de documento.</div>
+
+<p>Crearemos el archivo script más tarde cuando conozcamos qué queremos poner en él. Definiremos algunas funciones en el archivo y podremos llamarlas desde un manejador de eventos.</p>
+</div>
+
+<p>Puede incluir scripts múltiples en un archivo XUL utilizando múltiples etiquetas <code>script</code>, cada una apuntando a un script diferente. Puede utilizar URLs relativas o absolutas. Por ejemplo, puede utilizar URLs de la siguiente forma:</p>
+
+<pre class="eval">&lt;script src="findfile.js"/&gt;
+&lt;script src="<a class="external" rel="freelink">chrome://findfiles/content/help.js</a>"/&gt;
+&lt;script src="<span class="nowiki">http://www.example.com/js/items.js</span>"/&gt;
+</pre>
+
+<p>Este tutorial no intenta describir cómo utilizar JavaScript ya que esto es un tópico extenso y hay variedades de otras fuentes que están disponibles para esto.</p>
+
+<div class="note">Por defecto la consola JavaScript sólo muestra errores desde contenido de red. Para mostrar errores en JavaScript chrome, es necesario cambiar la preferencia <code>javascript.options.showInConsole</code> a verdadero. Puede también cambiar la preferencia <code>javascript.options.strict</code> para la depuración. Estableciendo este valor a verdadero, la sintaxis propensa, pobremente escrita y no estándar causa errores lógicos que son guardados en la consola JavaScript.</div>
+
+<h3 id="Respuesta_a_eventos" name="Respuesta_a_eventos">Respuesta a eventos</h3>
+
+<p>El script contendrá código que responderá a varios eventos disparados por el usuario u otras situaciones. Hay más de treinta eventos diferentes que pueden ser manejados de formas distintas. Un evento típico es que el usuario presione un botón del ratón o presione una tecla. Cada elemento XUL tiene la habilidad de disparar varios eventos en diferentes situaciones. Algunos eventos son disparados solamente por determinados elementos.</p>
+
+<p>Cada evento tiene un nombre, por ejemplo, 'mousemove' es el nombre del evento que es disparado cuando el usuario mueve el ratón sobre un elemento de la Interfaz de Usuario. XUL utiliza el mismo mecanismo de evento definido en <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/">eventos DOM</a>. Cuando una acción ocurre que debería disparar un evento, tal como que el usuario mueva el ratón, se crea un objeto evento correspondiente a tal tipo de evento. Las propiedades de dicho objeto se establecen de modo que ofrezca información asociada a la circunstancia en que se produjo, tal como: la posición del ratón, la(s) tecla(s) que fue(ron) presionada(s), el botón del ratón que se utilizó, etc.</p>
+
+<p>El evento es enviado luego en fases al XUL.</p>
+
+<ul>
+ <li>En la fase de captura, el evento primero es enviado a la ventana, luego al documento, seguido por cada ancestro del elemento XUL donde el evento ocurrió hacia abajo hasta que alcance el elemento.</li>
+ <li>En la fase objetivo, el evento es enviado hacia el elemento objetivo XUL.</li>
+ <li>En la fase burbujeante, el evento es enviado a cada elemento de más atrás hasta que alcance nuevamente la ventana.</li>
+</ul>
+
+<p>Puede responder a un evento durante la captura completa de la fase burbujeante. Una vez que el evento ha finalizado de propagarse, cualquier acción por defecto ocurrirá, la cual está incluida en comportamiento del elemento.</p>
+
+<p>Por ejemplo, cuando el ratón sea movido sobre un botón que está dentro de un cuadro, un evento 'mousemove' es generado, y enviado primero a la ventana, seguido por el documento, y luego al cuadro. Eso completa la fase de captura. Luego, el evento 'mousemove' es enviado al botón. Finalmente, la fase burbujeante es esencialmente lo inverso a la fase de captura. Note que algunos eventos no hacen la fase burbujeante.</p>
+
+<p>Puede adjuntar oyentes a cada elemento a ser oído por los eventos durante cada paso de la propagación de eventos. Debido a la forma en que un evento simple es pasado a todos los ancestros, puede adjuntar un oyente a un elemento específico o a un elemento más grande en la jerarquía. Naturalmente, un evento adjunto a un elemento más grande recibirá la notificación de todos los elementos dentro de él, mientras que un evento adjunto a un botón sólo recibirá eventos preparados para ese botón. Esto es útil si hay varios elementos que querrían manejarse utilizando el mismo código o similar.</p>
+
+<p>El evento más común utilizado es el evento 'command'. El evento command es disparado cuando un usuario activa un elemento, por ejemplo presionando un botón, cambiando una casilla de verificación o seleccionando un ítem desde un menú. El evento command es un evento útil ya que automática maneja distintas formas de activar el elemento. Por ejemplo, el evento command ocurrirá sin importar si el usuario utiliza el ratón para seleccionar un botón o presionar la tecla Enter.</p>
+
+<p>Hay dos formas de adjuntar un evento oyente a un elemento. Primero, utilizando un atributo con script como su valor. Segundo, llamando a un método del evento addEventListener. El primero sólo puede manejar eventos burbujeantes pero tiende a ser más simple de escribir. El último puede manejar eventos en cualquier fase y puede también ser utilizado para adjuntar múltiples oyentes para un evento en un elemento. Utilizando la forma atributo es más común para la mayoría de eventos.</p>
+
+<h3 id="Attribute_Event_Listeners" name="Attribute_Event_Listeners">Atributos controladores de eventos</h3>
+
+<p>Para controlar eventos bajo la forma de atributos se debe asignar un atributo asociado con el evento a controlar en el elemento en en que se desea atraparlo: el atributo será el nombre del evento precedido del prefijo 'on' y se le asignará como valor un llamado a la función o script que se desea ejecutar cuando ocurra el evento. Por ejemplo, para el evento '<em>command</em>' el atributo correspondiente será '<em>oncommand</em>' y para '<em>mouseover</em>' será '<em>onmouseove</em>r'. El código de llamado a la función suele ser muy corto y generalmente llama a un procedimiento que ha sido definido en una etiqueta script o en un archivo separado. A continuación se ofrece un ejemplo de tratamiento de evento en respuesta a pulsar un botón:</p>
+
+<p><strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_1.xul">Ver en funcionamiento</a></p>
+
+<pre class="eval">&lt;button label="OK" oncommand="alert('Se apretó el botón!');"/&gt;
+</pre>
+
+<p>Como el evento command permea las capas contenedoras (es burbujeante), también es posible ubicar el controlador de eventos en un elemento contenedor. En el ejemplo siguiente, el atributo controlador se establece en una caja y ésta atrapa eventos de los dos elementos que contiene.</p>
+
+<p><strong>Ejemplo 2</strong> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_2.xul">Ver en funcionamiento</a></p>
+
+<pre class="eval">&lt;vbox oncommand="alert(event.target.tagName);"&gt;
+  &lt;button label="OK"/&gt;
+  &lt;checkbox label="Muestra las imágenes"/&gt;
+&lt;/vbox&gt;
+</pre>
+
+<p>En este ejemplo, el evento command se filtrará desde el elemento en que ocurra - button o checkbox - hasta el elemento vbox, donde es controlado. Si se hubiese colocado un segundo controlador de eventos (atributo <code>oncommand</code>) en el elemento button, su código sería invocado antes, seguido del manejador situado en el elemento vbox. Los controladores de eventos reciben, como argumento implícito, un objeto event al que se puede hacer referencia en código mediante la variable 'event'. Dicho objeto porta, en sus propiedades, la información que específicamente concierne al evento. Cuando varios elementos comparten un controlador de eventos (como en este ejemplo) es usual utilizar la propiedad 'target' del objeto event (<code>event.target</code>), que alberga una referencia al elemento en el que ocurrió. En el código de ejemplo se hace un llamado a la ventana de mensajes para que muestre el nombre de la etiqueta 'tagName' del elemento en que ocurra. La propiedad target resulta útil para controlar la permeabilidad de eventos burbujeantes, de modo que un conjunto de elementos, buttons por ejemplo, comparta y sea controlado mediante un único script.</p>
+
+<div class="note"><strong>Nota de traducción</strong>: Si se anida controladores de eventos, para un mismo evento, en varias capas; se debe tener cuidado de cancelarlo, una vez controlado en una capa, para evitar que se dispare nuevamente en los controladores situados en las capas contenedoras. A no ser que se desee realizar acciones en cascada.</div>
+
+<p>Se debe notar que la sintaxis para establecer los atibitos controladores es similar a la empleada para asignar eventos en documentos HTML. De hecho, HTML y XUL comparten el mismo mecanismo de definición de eventos. No obstante, <strong>hay una diferencia importante</strong>: mientras que en HTML se usa el evento 'click' (o el atributo <code>onclick</code>) para responder a acciones sobre los buttons, en XUL se debe usar el evento command en su lugar. XUL soporta el evento click, pero este sólo responde a acciones del ratón (mouse), no al uso del teclado. En consecuencia, se debe evitar el uso del evento click en XUL, a no ser que se tenga alguna razón para responder de modo exclusivo a acciones provocadas con el mouse (ratón). Adicionalmente, cuando se deshabilita un elemento, este no disparará eventos command; mientras que el evento click se produce con independencia de que el elemento en que se dispare esté o no habilitado.</p>
+
+<div class="highlight">
+<h5 id="Nuestro_ejemplo_2" name="Nuestro_ejemplo_2">Nuestro ejemplo</h5>
+
+<p>Un gestor command se puede agregar a los botones Buscar y Cancelar del diálogo de búsqueda de archivos. Presionar el botón Buscar debe iniciar la búsqueda. Como aún no vamos a implementar el proceso de búsqueda, dejaremos esta parte fuera por un rato. Presionar el botón Cancelar debe cerrar la ventana. El código de abajo muestra como hacer esto. Mientras estamos aquí, añadimos el mismo código al menuitem Cerrar.</p>
+
+<pre class="eval">&lt;menuitem label="Cerrar" accesskey="c" <span class="highlightred">oncommand="window.close();"</span>/&gt;
+...
+
+&lt;button id="cancel-button" label="Cancelar"
+     <span class="highlightred">oncommand="window.close();</span>"/&gt;
+</pre>
+
+<p>Aquí se añadieron dos gestores. El atributo <code>oncommand</code> fue añadido al menuitem Cerrar. Usando este gestor, el usuario podrá cerrar la ventana dando click al menuitem con el mouse o seleccionándolo con el teclado.El gestor <code>oncommand</code> también fue añadido al botón Cancelar.</p>
+</div>
+
+<h3 id="DOM_Event_Listeners" name="DOM_Event_Listeners">Controladores de eventos asignados mediante métodos del DOM</h3>
+
+<p>Una segunda vía para asignar controladores de eventos a los elementos es usar su método addEventListener. Este camino permite agregarlos dinámicamente y escucharlos durante la fase de captura. A continuación se ilustra la sintaxis:</p>
+
+<p><strong>Ejemplo 3</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_events_3.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;button id="okbutton" label="OK"/&gt;
+
+&lt;script&gt;
+function buttonPressed(event){
+  alert('Se apretó el botón!');
+}
+
+var button = document.getElementById("okbutton");
+button.addEventListener('command', buttonPressed, true);
+&lt;/script&gt;
+</pre>
+
+<p>La función <code><a href="/es/DOM/document.getElementById" title="es/DOM/document.getElementById">getElementById()</a></code> devuelve el elemento cuyo Id sea pasado como parámetro; en este caso, el button <code>"okbutton"</code>. Luego se llama a la función <code><a href="/es/DOM/element.addEventListener" title="es/DOM/element.addEventListener">addEventListener()</a></code> de dicho elemento para agregarle un controlador de eventos: su primer argumento es el nombre del evento al que se va a responder, el segundo es el mombre de la función a llamar cuando el evento ocurra y finalmente, el último argumento debe ser <code>true</code> para controladores en la fase de captura. Si se desea permitir que el evento pase a otras fases se debe asignar el último argumenta como false. La función pasada como segundo argumento, debe a su vez, tener un argumento para pasar el objeto event, como se muestra en la declaración de la función <code>buttonPressed</code> arriba.</p>
+
+<div class="highlight">Nuestro ejemplo hasta aquí: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-events.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-events.xul">Ver en funcionamiento</a></div>
+
+<p>Seguimos con más detalles sobre <a href="/es/Tutorial_de_XUL/Más_gestores_de_eventos" title="es/Tutorial_de_XUL/Más_gestores_de_eventos">los eventos</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Menúes_con_desplazamiento" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Más_gestores_de_eventos">Siguiente  »</a></p>
+</div>

@@ -1,0 +1,151 @@
+---
+title: Element.scrollIntoView()
+slug: Web/API/Element/scrollIntoView
+tags:
+  - Experimental
+  - Expérimental(2)
+  - metodo
+translation_of: Web/API/Element/scrollIntoView
+---
+<div>{{ APIRef("DOM")}}</div>
+
+<p>El método  <code><strong>scrollIntoView()</strong></code> de la interfaz  {{domxref("Element")}} desplaza el contenedor principal del elemento de forma que el elemento sobre el cual se invoca <code>scrollIntoView()</code> sea visible al usuario.</p>
+
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+
+<pre class="syntaxbox notranslate">element.scrollIntoView(); // Equivalente a <code>element.scrollIntoView(true)
+</code>element.scrollIntoView(<em>alignToTop</em>); // Argumentos booleanos
+element.scrollIntoView(<em>scrollIntoViewOptions</em>); // Argumento objeto
+</pre>
+
+<h3 id="Parámetros">Parámetros</h3>
+
+<dl>
+ <dt><em><code>alignToTop</code></em></dt>
+ <dd>Es un valor {{jsxref("Boolean")}}:
+ <ul>
+  <li>Si es <code>true</code>, la parte superior del elemento se alineará con la parte superior del área visible del elemento desplazable antecesor.</li>
+  <li>Si es <code>false</code>, la parte inferior del elemento se alineará con la parte inferior del área visible del elemento desplazable antecesor.</li>
+ </ul>
+ </dd>
+ <dt><em><code>scrollIntoViewOptions</code></em> {{optional_inline}} {{experimental_inline}}</dt>
+ <dd>Un booleano o un objeto con las siguientes opciones:</dd>
+ <dt><code>behavior</code> {{optional_inline}}</dt>
+ <dd>Establece la transición de la animación.<br>
+ Puede ser <code>auto</code> o <code>smooth</code>. Por defecto es <code>auto</code>.</dd>
+ <dt><code>block</code> {{optional_inline}}</dt>
+ <dd>Establece el alineamiento vertical.<br>
+ Puede ser <code>start</code>, <code>center</code>, <code>end</code>, o <code>nearest</code>. Por defecto es <code>start</code>.</dd>
+ <dt><code>inline</code> {{optional_inline}}</dt>
+ <dd>Establece el alineamiento horizontal<br>
+ Puede ser <code>start</code>, <code>center</code>, <code>end</code>, o <code>nearest</code>. Por defecto es <code>nearest</code>.</dd>
+</dl>
+
+<h2 id="Example" name="Example">Ejemplo</h2>
+
+<pre class="brush: javascript notranslate">var element = document.getElementById("box");
+
+element.scrollIntoView();
+element.scrollIntoView(false);
+element.scrollIntoView({block: "end"});
+element.scrollIntoView({block: "end", behavior: "smooth"});
+</pre>
+
+<h2 id="Notas">Notas</h2>
+
+<p>Puede que el desplazamiento no sea llevado completamente a la parte superior o inferior dependiente de la disposición de otros elementos. </p>
+
+<h2 id="Specification" name="Specification">Especificación</h2>
+
+<table>
+ <thead>
+  <tr>
+   <th>Especificación</th>
+   <th>Estado</th>
+   <th>Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSSOM View", "#dom-element-scrollintoview", "Element.scrollIntoView()")}}</td>
+   <td>{{Spec2("CSSOM View")}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
+
+<ul>
+ <li><a class="external" href="http://dev.w3.org/csswg/cssom-view/#dom-element-scrollintoview" title="http://dev.w3.org/csswg/cssom-view/#dom-element-scrollintoview">CSSOM: Scrolling elements into view</a></li>
+</ul>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con navegadores</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Implementación básica</td>
+   <td>1.0</td>
+   <td>{{ CompatGeckoDesktop(1.0) }}</td>
+   <td>6</td>
+   <td>10.0 and possibly older versions</td>
+   <td>4 and possibly older versions</td>
+  </tr>
+  <tr>
+   <td>
+    <p>Implementan<br>
+     <code>scrollIntoViewOptions</code></p>
+   </td>
+   <td>{{CompatNo}}</td>
+   <td>{{ CompatGeckoDesktop(36) }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Implementación básica</td>
+   <td>?</td>
+   <td>{{ CompatGeckoMobile(1.0) }}</td>
+   <td>?</td>
+   <td>?</td>
+   <td>?</td>
+  </tr>
+  <tr>
+   <td>
+    <p>Implementan<br>
+     <code>scrollIntoViewOptions</code></p>
+   </td>
+   <td>{{CompatNo}}</td>
+   <td>{{ CompatGeckoMobile(36) }}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

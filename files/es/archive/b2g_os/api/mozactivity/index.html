@@ -1,0 +1,69 @@
+---
+title: MozActivity
+slug: Archive/B2G_OS/API/MozActivity
+translation_of: Archive/B2G_OS/API/MozActivity
+---
+<p></p><section class="Quick_links" id="Quick_Links"><ol><li><strong><a href="/es/docs/Web/API/Archive"><code>Archive</code></a></strong></li></ol></section><p></p>
+<p></p><div class="overheadIndicator nonStandard nonStandardHeader">
+      <p><strong><span title="This API has not been standardized."><i class="icon-warning-sign"> </i></span> No estándar</strong><br>
+      This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.</p>
+      </div><p></p>
+<p></p><div class="warning">
+    <p style="text-align: center;">This API is available on Firefox or <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> for <a href="/en-US/docs/Mozilla/Firefox_OS/Security/Application_security#App_Types">installed or higher privileged applications</a>.</p>
+</div><p></p>
+<h2 id="Summary">Summary</h2>
+<p>The <code>MozActivity</code> interface allows apps to delegate an activity to another app.</p>
+<p>This interface fully inherits from the <a href="/es/docs/Web/API/DOMRequest" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>DOMRequest</code></a> interface excepts that it has a constructor that it takes a <a href="/es/docs/Web/API/MozActivityOptions" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>MozActivityOptions</code></a> as a parameter.</p>
+<div class="note">
+ <p><strong>Note:</strong> As soon as a MozActivity is instentiated, the system will prompt the user to choose an activity handler. It's not possible to instentiate an activity and wait to use it.</p>
+</div>
+<h2 id="Properties">Properties</h2>
+<p>Inherited from <a href="/es/docs/Web/API/DOMRequest" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>DOMRequest</code></a>:</p>
+<p></p><dl>
+ <dt><a href="/en-US/docs/Web/API/DOMRequest/onsuccess" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMRequest.onsuccess</code></a></dt>
+ <dd>A callback handler called when the operation represented by the <code>DOMRequest</code> is completed.</dd>
+ <dt><a href="/en-US/docs/Web/API/DOMRequest/onerror" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMRequest.onerror</code></a></dt>
+ <dd>A callback handler that gets called when an error occurs while processing the operation.</dd>
+ <dt><a href="/en-US/docs/Web/API/DOMRequest/readyState" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMRequest.readyState</code></a></dt>
+ <dd>A <a href="/en-US/docs/JavaScript/Reference/Global_Objects/String" title="JavaScript/Reference/Global_Objects/String"><code>string</code></a> indicating whether or not the operation is finished running. Its value is either "done" or "pending".</dd>
+ <dt><a href="/en-US/docs/Web/API/DOMRequest/result" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMRequest.result</code></a></dt>
+ <dd>The operation's result.</dd>
+ <dt><a href="/en-US/docs/Web/API/DOMRequest/error" title="The documentation about this has not yet been written; please consider contributing!"><code>DOMRequest.error</code></a></dt>
+ <dd>Error information, if any.</dd>
+</dl><p></p>
+<dl>
+</dl>
+<h2 id="Methods">Methods</h2>
+<p>None.</p>
+<h2 id="Example">Example</h2>
+<pre class="brush: js">var activity = new MozActivity({
+  // The name of the activity the app wants to delegate the action
+  name: "pick",
+
+  // Data requierd by the activity. Each application acting as an activity handler
+  // can have it's own requirement for the activity. If the data does not fulfill
+  // all the requirement of any activity handler, the error event will be sent
+  // otherwise, the event sent depend on the activity handler itself.
+  data: {
+    type: "image/jpeg"
+  }
+});
+
+activity.onsuccess = function() {
+  console.log("Activity successfuly handled");
+
+  var imgSrc = this.result.blob;
+}
+
+activity.onerror = function() {
+  console.log("The activity encouter en error: " + this.error);
+}
+</pre>
+<h2 id="Specification">Specification</h2>
+<p></p><p><em>Web Activities</em> is not part of any specification. However, it has some overlap with the proposed <a href="https://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview-respec.html" title="http://www.w3.org/TR/web-intents/">Web Intents</a> specification. Mozilla actually proposed <em>Web Activities</em> as <a href="https://wiki.mozilla.org/WebAPI/WebActivities" title="https://wiki.mozilla.org/WebAPI/WebActivities">a counter proposal</a> to <em>Web Intents</em>. For more information about this, see discussion on the <a href="http://lists.w3.org/Archives/Public/public-web-intents/2012Jun/0061.html" title="http://lists.w3.org/Archives/Public/public-web-intents/2012Jun/0061.html">Web Intents Task Force ML</a>.</p><p></p>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a href="/es/docs/Web/API/DOMRequest" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>DOMRequest</code></a></li>
+ <li><a href="/es/docs/Web/API/MozActivityOptions" title="La documentación acerca de este tema no ha sido escrita todavía . ¡Por favor  considera contribuir !"><code>MozActivityOptions</code></a></li>
+ <li><a href="/en-US/docs/WebAPI/Web_Activities" title="/en-US/docs/WebAPI/Web_Activities">Web Activities</a></li>
+</ul>

@@ -1,0 +1,653 @@
+---
+title: Manifiesto de instalación
+slug: Manifiesto_de_instalación
+tags:
+  - Complementos
+  - Herramientas_API
+  - Todas_las_Categorías
+  - extensiones
+  - para_revisar
+  - páginas_a_traducir
+translation_of: Archive/Add-ons/Install_Manifests
+---
+<p></p><section class="Quick_links" id="Quick_Links">
+  <ol>
+    <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions"><strong>Browser extensions</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Getting started</summary>
+        <ol>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions">What are extensions?</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension">Your first extension</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension">Your second extension</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Anatomy of an extension</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Examples">Example extensions</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/What_next_">What next?</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Concepts</summary>
+        <ol>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs">Using the JavaScript APIs</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">Content scripts</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Match_patterns">Match patterns</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Working_with_files">Working with files</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Internationalization">Internationalization</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Security_best_practices">Security best practices</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native messaging</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>User interface</summary>
+        <ol>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface">User Interface</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">Toolbar button</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">Address bar button</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">Sidebars</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items">Context menu items</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Options page</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">Extension pages</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications">Notifications</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox">Address bar suggestions</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels">Developer tools panels</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>How to</summary>
+        <ol>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests">Intercept HTTP requests</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page">Modify a web page</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page">Insert external content</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar">Add a button to the toolbar</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page">Implement a settings page</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API">Work with the Tabs API</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API">Work with the Bookmarks API</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API">Work with the Cookies API</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities">Work with contextual identities</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Porting</summary>
+        <ol>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">Porting a Google Chrome extension</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on">Porting a legacy Firefox extension</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions">Embedded WebExtensions</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK">Comparison with the Add-on SDK</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions">Comparison with XUL/XPCOM extensions</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities">Chrome incompatibilities</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Differences_between_desktop_and_Android">Differences between desktop and Android</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Firefox workflow</summary>
+        <ol>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices">User Experience</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox">Temporary Installation in Firefox</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Debugging">Debugging</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Testing_persistent_and_restart_features">Testing persistent and restart features</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android">Developing for Firefox for Android</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">Getting started with web-ext</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference">web-ext command reference</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">Extensions and the Add-on ID</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions">Request the right permissions</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>JavaScript APIs</summary>
+        <ol><li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a></li><li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/API/Alarmas">Alarmas</a></li><li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/API/cookies">cookies</a></li><li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/API/extension">extension</a></li><li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus">contextMenus</a></li><li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></li><li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/API/i18n">i18n</a></li><li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation">webNavigation</a></li></ol>
+      </details>
+    </li>
+
+    <li class="toggle">
+      <details>
+      <summary>Manifest keys</summary>
+
+      </details>
+    </li>
+
+    <li><a href="/es/docs/Mozilla/Add-ons/Themes"><strong>Themes</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Browser themes</summary>
+        <ol>
+          <li><a href="/es/docs/Mozilla/Add-ons/Themes/Theme_concepts">Browser theme concepts</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Lightweight themes</summary>
+        <ol>
+          <li><a href="/es/docs/Mozilla/Add-ons/Themes/Lightweight_themes">Lightweight themes</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/Themes/Lightweight_Themes/FAQ">Lightweight themes FAQ</a></li>
+        </ol>
+      </details>
+    </li>
+    <li><a href="/es/docs/Mozilla/Add-ons/Distribution"><strong>Publishing and Distribution</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Publishing add-ons</summary>
+        <ol>
+          <li><a href="/es/docs/Mozilla/Add-ons/Distribution">Signing and distribution overview</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Package_your_extension_">Package your extension</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/Distribution/Submitting_an_add-on">Submit an add-on</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/Source_Code_Submission">Source code submission</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/Distribution/Resources_for_publishers">Resources for publishers</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/Listing">Creating an appealing listing</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/AMO/Policy/Reviews">Review policies</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/AMO/Policy/Agreement">Developer agreement</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/AMO/Policy/Featured">Featured add-ons</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/Distribution/Retiring_your_extension">Retiring your extension</a></li>
+        </ol>
+      </details>
+    </li>
+    <li class="toggle">
+      <details>
+        <summary>Distributing add-ons</summary>
+        <ol>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Sideloading_add-ons">For sideloading</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_for_desktop_apps">For desktop apps</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/WebExtensions/Alternative_distribution_options/Add-ons_in_the_enterprise">For an enterprise</a></li>
+        </ol>
+      </details>
+    </li>
+    <li><a href="https://discourse.mozilla.org/c/add-ons"><strong>Community and Support</strong></a></li>
+    <li class="toggle">
+      <details>
+        <summary>Channels</summary>
+        <ol>
+          <li><a href="https://blog.mozilla.org/addons">Add-ons blog</a></li>
+          <li><a href="https://discourse.mozilla.org/c/add-ons">Add-on forums</a></li>
+          <li><a href="http://stackoverflow.com/questions/tagged/firefox-addon">Stack Overflow</a></li>
+          <li><a href="/es/docs/Mozilla/Add-ons/#Contact_us">Contact us</a></li>
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section><div class="warning"><p>Add-ons using the techniques described in this document are considered a legacy technology in Firefox. Don't use these techniques to develop new add-ons. Use <a href="/en-US/Add-ons/WebExtensions">WebExtensions</a> instead. If you maintain an add-on which uses the techniques described here, consider migrating it to use WebExtensions.</p><p><strong>Starting from <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Firefox 53</a>, no new legacy add-ons will be accepted on addons.mozilla.org (AMO) for desktop Firefox and Firefox for Android.</strong></p><p><strong>Starting from <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Firefox 57</a>, only extensions developed using WebExtensions APIs will be supported on Desktop Firefox and Firefox for Android. </strong></p><p>Even before Firefox 57, changes coming up in the Firefox platform will break many legacy extensions. These changes include multiprocess Firefox (e10s), sandboxing, and multiple content processes. Legacy extensions that are affected by these changes should migrate to use WebExtensions APIs if they can. See the <a href="https://blog.mozilla.org/addons/2017/02/16/the-road-to-firefox-57-compatibility-milestones/">"Compatibility Milestones" document</a> for more information.</p><p>A wiki page containing <a href="https://wiki.mozilla.org/Add-ons/developer/communication">resources, migration paths, office hours, and more</a>, is available to help developers transition to the new technologies.</p></div><p></p>
+
+<h3 id="Introducci.C3.B3n" name="Introducci.C3.B3n">Introducción</h3>
+
+<p>De aquí en adelante a los <a class="external" href="http://addons.mozilla.org"><em>addon</em></a> les llamaremos <em>complemento</em>. En algunos navegadores Mozilla, dependiendo del idioma español descargado para traducir la interfaz del navegador, se leerá como <em>agregado</em> en <em>Herramientas-&gt;Agregado</em>.</p>
+
+<p>Un manifiesto de instalador es un archivo agregado que la aplicación XUL (Administrador-Habilitado) usa para determinar la información acerca de como un <em>agregado</em> ó <em>complemento</em> (Add-on) ha de ser instalado. Este archivo contiene <em>metadatos</em> que identifican el complemento/agregado, provee información del creador de éste, donde se puede hallar más información acerca del complemento/agregado, con cuales versiones de qué aplicaciones es compatible, como debería ser actualizado y cosas por el estilo.</p>
+
+<p>El formato de un mainfiesto de instalador es RDF/XML.</p>
+
+<p>El archivo debe ser llamado <code>install.rdf</code> y ubicarse en el nivel superior del archivo XPI de un complemento.</p>
+
+<h3 id="Disposicion" name="Disposicion">Disposición</h3>
+
+<p>La disposición básica de un manifiesto de instalador es algo como esto:</p>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+
+&lt;RDF xmlns="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
+     xmlns:em="<span class="nowiki">http://www.mozilla.org/2004/em-rdf#</span>"&gt;
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;!-- properties --&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+
+<p>Algunas propiedades son requeridas, otras son opcionales; algunas tienen cadenas simples, otras son recursos complejos.</p>
+
+<h3 id="Referencia_requerida_en_las_propiedades" name="Referencia_requerida_en_las_propiedades">Referencia de propiedades requeridas</h3>
+
+<p>Su manifiesto de instalador debe especificar estas propiedades correctamente, de lo contrario su agregado/complemento podría no instalarse.</p>
+
+<h4 id="id" name="id">id</h4>
+
+<p>La id de la extension, la cual es un:</p>
+
+<ul>
+ <li>GUID (generada usando guidgen en Windows, uuidgen en Linux and makeuuid en Solaris) (Firefox 1.0)</li>
+ <li><strong>Firefox 1.5 y superiores:</strong> Una cadena con fomato del tipo: <code><a class="link-mailto" href="mailto:nombreextension@organizacion.tld" rel="freelink">nombreextension@organizacion.tld</a></code></li>
+</ul>
+
+<p>Este último formato es significativamente más fácil de generar y manipular. Firefox 1.5 tiene una comprobación para asegurarse que su id caiga dentro de un formato u otro y rechazará la instalació de complemetos/agregados que tengan ids mal formadas.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:id&gt;<a class="link-mailto" href="mailto:miextension@misitio.com" rel="freelink">miextension@misitio.com</a>&lt;/em:id&gt;
+
+&lt;em:id&gt;{daf44bf7-a45e-4450-979c-91cf07434c3d}&lt;/em:id&gt;
+</pre>
+
+<h4 id="version" name="version">versión</h4>
+
+<p>La cadena de versión identificando la versión del complemento que está siendo proveído.</p>
+
+<p>Para Firefox/Thunderbird 1.0, el formato debe cumplir las reglas especificadas en <a class="external" href="http://developer.mozilla.org/en/docs/Extension_Versioning%2C_Update_and_Compatibility"><em>Extensión de versiones, Actualización y Compatibilidad</em></a>. Para Firefox/Thunderbird 1.5, ver <a class="external" href="http://developer.mozilla.org/en/docs/Toolkit_version_format"><em>Herramientas para formato de versión</em></a>.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:version&gt;2.0&lt;/em:version&gt;
+
+&lt;em:version&gt;1.0.2&lt;/em:version&gt;
+
+&lt;em:version&gt;0.4.1.2005090112&lt;/em:version&gt;
+
+</pre>
+
+<p><strong>Firefox 1.5 / XULRunner 1.8</strong> - Complementos/agregados que no usan un formato de versión válido no serán instalados. El formato de la versión es diferente a, pero compatible con, 1.0's.</p>
+
+<p><strong>Para complementos alojados en addons.mozilla.org</strong> - La actualización del sitio web de Mozilla puede reinstalar su complemento/agregado y corregir o rechazar versiones con cadenas de versión malformadas.</p>
+
+<h4 id="type" name="type">tipo</h4>
+
+<p>Un valor de tipo entero representa el tipo de complemento/agregado.</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td>2</td>
+   <td>Extensiones</td>
+  </tr>
+  <tr>
+   <td>4</td>
+   <td>Temas</td>
+  </tr>
+  <tr>
+   <td>8</td>
+   <td>Local</td>
+  </tr>
+  <tr>
+   <td>16</td>
+   <td>Plugin</td>
+  </tr>
+  <tr>
+   <td>32</td>
+   <td><a class="external" href="http://developer.mozilla.org/en/docs/Multiple_Item_Packaging">Paquete o programa de tipos múltiples</a></td>
+  </tr>
+ </tbody>
+</table>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:type&gt;2&lt;/em:type&gt;
+</pre>
+
+<p><em><span style="font-family: Helvetica;"><strong>Nuevo en </strong></span></em><strong>Firefox 1.5</strong> Esta propiedad fue añadida para Firefox 1.5, y es requerida únicamente para otros tipos de complementos/agregados diferentes a Extensiones y Temas.</p>
+
+<h4 id="targetApplication" name="targetApplication">Aplicación destino (targetApplication)</h4>
+
+<p>Un objeto que especifica una aplicación a la cual se dirije este complemento. Esto significa que el complemento trabajará con la aplicación definida por la propiedad id (<code>&lt;em:id&gt;</code>) especificada (para una lista compensiva de IDs de aplicaciones y sus valores máximo y mínimo (min/maxVersions) véase <a class="link-https" href="https://addons.mozilla.org/es-ES/firefox/pages/appversions">"Versiones de aplicaciones válidas para Desarrolladores de complementos/agregados"</a>, desde la versión mínima (<code>&lt;em:minVersion&gt;</code>) hasta e incluyendo la versión máxima (<code>&lt;em:maxVersion&gt;</code>). Estas cadenas para versión tienen el mismo formato que la <a href="#version">propiedad de versión</a> y será comparada con la versión de la aplicación; esto permite al autor de la extensión especificar, cuáles extensiones y con qué versiones de Firefox han sido probadas.</p>
+
+<p>Nota: Las extensiones compatibles con Firefox 3.5 deberán especificar un <em>maxVersion</em> de 3.5 *, por lo que son compatibles con actualizacinoes de seguridad de estabilidad. Para Firefox 3.0, debiera usarse un <em>maxVersion</em> de 3.0.* Las extensiones compatibles únicamente con Firefox o Thunderbird 2.0 deberán especificar un <em>maxVersion</em> de 2.0.0*.</p>
+
+<p>El manifiesto de instalador debe especificar al menos uno de estos objetos y podría especificar más si el complemento/agregado tiene múltiples aplicaciones destino que soportan al Administrador del complemento/agregado. (por ejemplo Firefox y Thunderbird).</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:targetApplication&gt;
+ &lt;Description&gt;
+  &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt; <span class="comment">Firefox</span>
+  &lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;
+  &lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;
+ &lt;/Description&gt;
+&lt;/em:targetApplication&gt;
+</pre>
+
+<h4 id="name" name="name"><span class="lang lang-en"><span style="background-color: #ffffe1; border: 1px solid #818151; font-size: x-small; padding: 2px; white-space: nowrap;">Nuevo en <a href="../../../../en/Firefox_3_for_developers" rel="internal">Firefox 3</a></span></span> Las aplicaciones basadas en Gecko 1.9 te permiten usar la id especial <code>targetApplication </code>id <code class="plain">toolkit@mozilla.org</code> para indicar que el complemento/agregado es compatible con cualquier aplicación tipo toolkit que tenga valores similares de <code>minVersion</code> y <code>maxVersion</code>.</h4>
+
+<h4 id="name" name="name">nombre (name)</h4>
+
+<p>El nombre del complemento, previsto para mostrarlo en el interfaz de usuario (UI = User Interface).</p>
+
+<p><strong>Ejemplos </strong></p>
+
+<pre class="eval">&lt;em:name&gt;Mi Extension&lt;/em:name&gt;
+</pre>
+
+<h3 id="Referencia_de_Propiedades_Opcionales" name="Referencia_de_Propiedades_Opcionales">Referencia de propiedades opcionales</h3>
+
+<p>Podrías necesitar proveer estas propiedades, dependiendo de las capacidades de tu complemento/agregado.</p>
+
+<h4 class="editable" id="localizado_(localized)"><span>localizado (localized)</span></h4>
+
+<p> </p>
+
+<div class="editIcon"><a href="/../../../../en/Install_Manifests#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p> </p>
+
+<p><span class="lang lang-en"><span style="background-color: #ffffe1; border: 1px solid #818151; font-size: x-small; padding: 2px; white-space: nowrap;">Nuevo en <a href="../../../../en/Firefox_3_for_developers" rel="internal">Firefox 3</a></span></span> Te permite localizar el nombre de tu complemento/agregado, descripción, contribuidores y otros metadatos. La descripción de localized debe especificar al menos un<code> em:locale</code> que indique cuáles locales usan esta información.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<p>Esto declara un set de metadatos de un complemento/agregado para mostrar en pantalla cuando la aplicación se está ejecutando en el local de-DE.</p>
+
+<pre>&lt;em:localized&gt;
+  &lt;Description&gt;
+    &lt;em:locale&gt;de-DE&lt;/em:locale&gt;
+    &lt;em:name&gt;Tab Sidebar&lt;/em:name&gt;
+    &lt;em:description&gt;Zeigt in einer Sidebar Vorschaubilder der Inhalte aller offenen Tabs an.&lt;/em:description&gt;
+  &lt;/Description&gt;
+&lt;/em:localized&gt;
+</pre>
+
+<p>Las siguientes propiedades que son descritas en otra parte en ésta página pueden ser incluidas en la propiedad localized:</p>
+
+<ul>
+ <li>name (nombre)</li>
+ <li>description (descripción)</li>
+ <li>creator (creador)</li>
+ <li>homepageURL (URL de la página de inicio)</li>
+ <li>developer (desarrollador)</li>
+ <li>translator (traductor)</li>
+ <li>contributor (contribuidor)</li>
+</ul>
+
+<p>Más documentos pueden hallarse en <a href="../../../../en/Localizing_extension_descriptions" rel="internal">Localización de descripción para extensiones</a>.</p>
+
+<h4 id="description" name="description">descripción (description)</h4>
+
+<p>Una corta descripción del complemento/agregado - Prevista para mostrar en la interfaz de usuario. Esta descripción debe encajar en una corta linea de texto..</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:description&gt;Herramienta Avanzada foo.&lt;/em:description&gt;
+</pre>
+
+<h4 id="creator" name="creator">creator</h4>
+
+<p>El nombre del creador/desarrollador principal - Prevista para mostrar en la interfaz de usuario.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:creator&gt;John Doe&lt;/em:creator&gt;
+</pre>
+
+<p>ó</p>
+
+<pre class="eval">&lt;em:creator&gt;El Equipo Extensión &lt;/em:creator&gt;
+</pre>
+
+<h4 class="editable" id="developer"><span>developer</span></h4>
+
+<div class="editIcon"><a href="/../../../../en/Install_Manifests#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p><span class="lang lang-en"><span style="background-color: #ffffe1; border: 1px solid #818151; font-size: x-small; padding: 2px; white-space: nowrap;">Nuevo en <a href="../../../../en/Firefox_2_for_developers" rel="internal">Firefox 2</a></span></span> El/los nombre(s) de co-desarrolladores. Se deben especificar mas de uno de estos valores para especificar múltiples desarrolladores.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:developer&gt;Jane Doe&lt;/em:developer&gt;
+&lt;em:developer&gt;Koos van der Merwe&lt;/em:developer&gt;
+</pre>
+
+<h4 class="editable" id="translator"><span>translator</span></h4>
+
+<div class="editIcon"><a href="/../../../../en/Install_Manifests#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p><span class="lang lang-en"><span style="background-color: #ffffe1; border: 1px solid #818151; font-size: x-small; padding: 2px; white-space: nowrap;">Nuevo en <a href="../../../../en/Firefox_2_for_developers" rel="internal">Firefox 2</a></span></span> El/los nombre(s) de traductores. Se deben especificar mas de uno de estos valores para especificar múltiples traductores.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:translator&gt;Janez Novak&lt;/em:translator&gt;
+&lt;em:translator&gt;Kari Nordmann&lt;/em:translator&gt;
+</pre>
+
+<h4 id="contributor" name="contributor">contributor</h4>
+
+<p>El/los nombre(s) de contribuidores adicionales. Se deben especificar mas de uno de estos valores para especificar múltiples contribuidores.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+
+&lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+&lt;em:contributor&gt;Jane Doe&lt;/em:contributor&gt;
+&lt;em:contributor&gt;Elvis Presley&lt;/em:contributor&gt;
+</pre>
+
+<h4 id="homepageURL" name="homepageURL">homepageURL</h4>
+
+<p>Un enlace a la página inicio del complemento/agregado - Prevista para mostrar en la interfaz de usuario.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:homepageURL&gt;<span class="nowiki">http://www.foo.com/</span>&lt;/em:homepageURL&gt;
+</pre>
+
+<h4 id="updateURL" name="updateURL">updateURL</h4>
+
+<p>Es un enlace a un archivo de manifiesto para actualización personalizada que especifica la disponibilidad de actualizaciones para el complemento/agregado. El fomato se describe abajo. Si está activado el administrador del complemento/agregado periódicamente verificará con este archivo de manifiesto si hay disponibles versiones más recientes.</p>
+
+<div class="warning"><strong>Atención:</strong> Se recomienda fuertemente que el <code>updateURL</code> sea un enlace HTTPS (seguro). Si no es seguro, las updateURL pueden ser secuestradas por un archivo malicioso- <code>update.rdf</code>- permitiendo a malwares (codigo dañino) infiltrarse en la computadora de los usuarios. Alternativamente, usted puede alojar su extensión en <a class="external" href="http://addons.mozilla.org">AMO</a> y dejar completamente la <code>updateURL</code>. Esto provee actualizaciones seguras automáticamente.</div>
+
+<p><span class="lang lang-en"><span style="background-color: #ffffe1; border: 1px solid #818151; font-size: x-small; padding: 2px; white-space: nowrap;">Nuevo en <a href="../../../../en/Firefox_3_for_developers" rel="internal">Firefox 3</a></span></span> Por razones de seguridad, las aplicaciones en Gecko 1.9 requieren que si al especificar una <code>updateURL</code>, esta debe ser un URL tipo https, o deberás incluir un <code><a href="/../../../../en/Install_Manifests#updateKey" title="../../../../en/Install_Manifests#updateKey">updateKey</a></code>.</p>
+
+<p>Su servidor debe enviar este archivo como <code>text/rdf</code>, text/xml ó aplicación/xml+rdf; o el analizador de actualizaciones no funcionará. </p>
+
+<p>El administrador de complementos/agregados reemplazará los siguientes valores dentro de la URL en caso que desees generar la respuesta RDF dinámicamente, por ejemplo al usar PHP o CGI:</p>
+
+<table>
+ <tbody>
+  <tr>
+   <td><code>%REQ_VERSION%</code></td>
+   <td>La versión de la solicitud. Actualmente 1</td>
+  </tr>
+  <tr>
+   <td><code>%ITEM_ID%</code></td>
+   <td>La <code>id</code> del complemento/agregado que está siendo actualizado</td>
+  </tr>
+  <tr>
+   <td><code>%ITEM_VERSION%</code></td>
+   <td>La <code>versión</code> del complemento/agregado que está siendo actualizado</td>
+  </tr>
+  <tr>
+   <td><code>%ITEM_MAXAPPVERSION%</code></td>
+   <td>La <code>maxVersion</code> del objeto <code>targetApplication</code> que corresponde a la aplicación actual para el complemento/agregado que está siendo actualizado.</td>
+  </tr>
+  <tr>
+   <td><code>%ITEM_STATUS%</code></td>
+   <td><span class="lang lang-en"><span style="background-color: #ffffe1; border: 1px solid #818151; font-size: x-small; padding: 2px; white-space: nowrap;">Nuevo en <a href="../../../../en/Firefox_2_for_developers" rel="internal">Firefox 2</a></span></span> Lista separadas por comas de los complementos, estado de funcionamiento de las aplicaciones. Contiene al menos ya sea <code>userEnabled</code> o <code>userDisabled</code> mas cualquier cantidad de <code>incompatible</code>, <code>blockslisted</code> o <code>needsDependencies</code>.</td>
+  </tr>
+  <tr>
+   <td><code>%APP_ID%</code></td>
+   <td>La <code>id</code> de la aplicación actual</td>
+  </tr>
+  <tr>
+   <td><code>%APP_VERSION%</code></td>
+   <td>La <code>versión</code> de la aplicación para chequear las actualizaciones</td>
+  </tr>
+  <tr>
+   <td><code>%CURRENT_APP_VERSION%</code></td>
+   <td><span class="lang lang-en"><span style="background-color: #ffffe1; border: 1px solid #818151; font-size: x-small; padding: 2px; white-space: nowrap;">Nuevo en <a href="../../../../en/Firefox_3.5_for_developers" rel="internal">Firefox 3.5</a></span></span> La <code>versión</code> de la aplicación actual</td>
+  </tr>
+  <tr>
+   <td><code>%APP_OS%</code></td>
+   <td><span class="lang lang-en"><span style="background-color: #ffffe1; border: 1px solid #818151; font-size: x-small; padding: 2px; white-space: nowrap;">Nuevo en <a href="../../../../en/Firefox_1.5_for_developers" rel="internal">Firefox 1.5</a></span></span> El valor de <code><a href="../../../../en/OS_TARGET" rel="internal">OS_TARGET</a></code> del sistema Firefox, identificando el sistema operativo en el que se está usando.</td>
+  </tr>
+  <tr>
+   <td><code>%APP_ABI%</code></td>
+   <td><span class="lang lang-en"><span style="background-color: #ffffe1; border: 1px solid #818151; font-size: x-small; padding: 2px; white-space: nowrap;">Nuevo en <a href="../../../../en/Firefox_1.5_for_developers" rel="internal">Firefox 1.5</a></span></span> El valor del  <code><a href="../../../../en/XPCOM_ABI" rel="internal">TARGET_XPCOM_ABI</a></code> valor del sistema Firefox, identificando la combinación compilador/arquitectura usada para compilar la aplicación actual.</td>
+  </tr>
+  <tr>
+   <td><code>%APP_LOCALE%</code></td>
+   <td><span class="lang lang-en"><span style="background-color: #ffffe1; border: 1px solid #818151; font-size: x-small; padding: 2px; white-space: nowrap;">Nuevo en <a href="../../../../en/Firefox_3_for_developers" rel="internal">Firefox 3</a></span></span> El local actual de la aplicación.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:updateURL&gt;<span class="nowiki">http://www.foo.com/update.cgi?id=%ITEM_ID%&amp;amp;version=%ITEM_VERSION%</span>&lt;/em:updateURL&gt;
+&lt;em:updateURL&gt;<span class="nowiki">http://www.foo.com/extension/windows.rdf</span>&lt;/em:updateURL&gt;
+</pre>
+
+<p><strong>Para complementos/agregados alojados en addons.mozilla.org:</strong> No debe una propiedad <em>updateURL</em>. Por defecto, las aplicaciones Mozilla que usan el administrador de complementos/agregados (tales como Firefox y Thunderbird) enviarán peticiones de actualización a <code>addons.mozilla.org</code> usando el servicio web predeterminado. Cada vez que usted suba o publique una nueva versión de su complemento/agregado, o cambie los parámetros de compatibilidad mediante la interfaz de autor, su manifiesto de actualización será generado automáticamente.</p>
+
+<p><strong>Formato del manifiesto de actualización:</strong> El manifiesto de actualización es una fuente de datos RDF/XML. Para ejemplos de un manifiesto de actualización, véase <a class="external" href="http://developer.mozilla.org/en/docs/Extension_Versioning%2C_Update_and_Compatibility#Custom_Update_RDF_Format">Versiones de Extensión, Actualización y Compatibilidad</a> y <a class="external" href="http://developer.mozilla.org/en/docs/Enabling_Extension_Updates_%28external%29">Habilitación de actualización de extensiones (externas)</a>.</p>
+
+<h4 class="editable" id="Clave_de_actualización_(updateKey)"><span>Clave de actualización (updateKey</span>)</h4>
+
+<div class="editIcon"><a href="../../../../en/Install_Manifests#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p> </p>
+
+<div style="margin: 10px 0px; padding: 0px 10px; overflow: hidden; background-color: rgb(254, 244, 156); font-weight: bold; text-align: center;">
+<p style="margin: 4px 0px;">Introducido en Gecko 1.9</p>
+
+<div>Aplica para Firefox 3 y Thunderbird 3 o más recientes</div>
+</div>
+
+<div style="margin: 10px 0px; padding: 0px 10px; overflow: hidden; background-color: rgb(254, 244, 156); font-weight: bold; text-align: center;">
+<p style="margin: 4px 0px;"><span class="lang lang-en">Este artículo cubre características introducidas en <a href="../../../../en/Firefox_3_for_developers" rel="internal">Firefox 3</a></span></p>
+</div>
+
+<p> </p>
+
+<p>Para mantener la seguridad de las actualizaciones de los datos rdf que son recuperados de http plan debes usa firmas digitales para verificar el contenido de los datos. Con este fin debes incluir la parte pública de la clave criptográfica en una entrada de updateKey en el archivo install.rdf del complemento/agregado. Esta puede generarse usando la herramienta <a href="../../../../en/McCoy" rel="internal">McCoy</a>. Cualquier linea descontinuada y espacio en blanco como parte de esta entrada será ignorada.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval"> &lt;em:updateKey&gt;MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDK426erD/H3XtsjvaB5+PJqbhj
+               Zc9EDI5OCJS8R3FIObJ9ZHJK1TXeaE7JWqt9WUmBWTEFvwS+FI9vWu8058N9CHhD
+               NyeP6i4LuUYjTURnn7Yw/IgzyIJ2oKsYa32RuxAyteqAWqPT/J63wBixIeCxmysf
+               awB/zH4KaPiY3vnrzQIDAQAB&lt;/em:updateKey&gt;
+</pre>
+
+<h4 id="optionsURL" name="optionsURL">optionsURL</h4>
+
+<p>La <code><a class="external" rel="freelink">chrome://</a></code> URL del cuadro de diálogo de opciones de la extensión. Es útil únicamente para extensiones. Si esta propiedad es especificada, cuando la extensión es seleccionada en la lista de extensiones, el botón de opción está habilitado y mostrará esto:</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:optionsURL&gt;<a class="external" rel="freelink">chrome://miext/content/options.xul</a>&lt;/em:optionsURL&gt;
+</pre>
+
+<h4 id="aboutURL" name="aboutURL">aboutURL</h4>
+
+<p>La <code><a class="external" rel="freelink">chrome://</a></code> URL del cuadro de diálogo acerca de la extensión, Es útil únicamente para extensiones. Si esta propiedad es especificada, cuando la extensión es seleccionada en la lista de extensiones, el enlace acerca de... en el menú contextual del complemento/agregado mostrará este diálogo, mas bien por defecto.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:aboutURL&gt;<a class="external" rel="freelink">chrome://myext/content/about.xul</a>&lt;/em:aboutURL&gt;
+</pre>
+
+<h4 id="iconURL" name="iconURL">iconURL</h4>
+
+<p>Un <code><a class="external" rel="freelink">chrome://</a></code> URL de icono 32x32 para mostrar en la lista de complementos/agregados. Si esta propiedad no es especificada, se usará un icono por defecto.</p>
+
+<pre class="eval">&lt;em:iconURL&gt;<a class="external" rel="freelink">chrome://miext/skin/icon.png</a>&lt;/em:iconURL&gt;
+</pre>
+
+<div class="note"><strong>Nota:</strong> Par que el ejemplo de arriba funcione deberás agregar además una línea de <code>skin package</code> a tu archivo <code>chrome.manifest</code>. Véase <a href="../../../../en/Chrome_Registration#skin" rel="internal">Registro de Chrome#Pieles</a>. Alternativamente puedes ubicar tu icono en el directorio especificado en su linea de <code>content package</code> (contenido del paquete).</div>
+
+<h4 id="hidden" name="hidden">hidden</h4>
+
+<p>Valor booleano que cuando es <code>true</code> (verdadero) provoca que el complemento/agregado no se muestre en la lista de complementos/agregados, cuando es proveído el complemento/agregado se instalará en el <a class="external" href="http://developer.mozilla.org/es/docs/Instalar_el_manifest#Acceso_de_.C3.A1rea_restringida">Area de Acceso Restringido</a> (entonces no trabaja como un complemento/agregado instalado en el perfil). Esto es para la integración de grandes aplicaciones donde no tiene sentido tener una lista de aplicaciones.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:hidden&gt;true&lt;/em:hidden&gt;
+</pre>
+
+<h4 class="editable" id="targetPlatform"><span>targetPlatform</span></h4>
+
+<div class="editIcon"><a href="../../../../en/Install_Manifests#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p><span class="lang lang-en"><span style="background-color: #ffffe1; border: 1px solid #818151; font-size: x-small; padding: 2px; white-space: nowrap;">Nuevo en <a href="../../../../en/Firefox_1.5_for_developers" rel="internal">Firefox 1.5</a></span></span> Una cadena que especifica la plataforma que el complemento/agregado soporta. Contiene uno u otro de los valores de <a href="../../../../en/OS_TARGET" rel="internal">OS_TARGET</a> solo ó combinado con <a href="../../../../en/XPCOM_ABI" rel="internal">TARGET_XPCOM_ABI</a>, separados por un guión bajo (_).</p>
+
+<p>Puedes especificar propiedades para múltiples targetPlatform por manifiesto. Si algún valor concuerda con los parámetros de construcción de la aplicación, será instalado; si no, el usuario recibira un apropiado mensaje de error.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre>&lt;em:targetPlatform&gt;WINNT_x86-msvc&lt;/em:targetPlatform&gt;
+
+&lt;em:targetPlatform&gt;Linux&lt;/em:targetPlatform&gt;
+
+&lt;em:targetPlatform&gt;Darwin_ppc-gcc3&lt;/em:targetPlatform&gt;
+
+&lt;em:targetPlatform&gt;SunOS_sparc-sunc&lt;/em:targetPlatform&gt;
+</pre>
+
+<p>Usualmente, usarías únicamente la parte OS para temas o para extensiones que no son totalmente para plataforma cruzada. Para extensiones que incluyen componentes binarios (compilados), nunca deberá usar el OS solo, sino incluir el <a href="../../../../en/XPCOM_ABI" rel="internal">ABI (s)</a> con el cual compilaste los componentes. Si deseas incluir múltiples versiones de los componentes, deberías también usar <a href="../../../../en/Bundles#Platform-specific_Subdirectories" rel="internal">Subdirectorios de Plataforma-específica.</a></p>
+
+<p><strong>Notas</strong></p>
+
+<ul>
+ <li>En el mismo archivo de manifiesto, podrías incluso mezclar valores con y sin ABI. Si un valor para el OS (sistema operativo) de la aplicación encuentra que requiere algún ABI específico, el ABI se considera importante para el sistema operativo y la aplicación rechazará la instalación del complemento/agregado si no encuentra relación en la combinación OS/ABI. Esto significa que si todos los ejemplos anteriores pudieran ocurrir en un solo manifiesto, el complemento/agregado se instalará en cualquier versión linux de la aplicación, a pesar de su ABI, pero no en una versión Windows Cygwin.</li>
+ <li>Quizás encuentres versiones de Firefox y Thunderbird para las que desconozcas sus ABI (la mayoría puertos hacia plataformas raras ó versiones no oficiales). Estas versiones rechazarán instalar cualquier complemento/agregado que requiera un ABI específico para sus plataformas.</li>
+</ul>
+
+<p>Esta propiedad fué agregada para el Firefox/Thunderbird 1.5. Las versiones previas de estas aplicaciones ignorarán las restricciones e instalarán el complemento/agregado a pesar de la plataforma.</p>
+
+<h4 class="editable" id="requires"><span>requires</span></h4>
+
+<div class="editIcon"><a href="../../../../en/Install_Manifests#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+
+<p><span class="lang lang-en"><span style="background-color: #ffffe1; border: 1px solid #818151; font-size: x-small; padding: 2px; white-space: nowrap;">Nuevo en <a href="../../../../en/Firefox_2_for_developers" rel="internal">Firefox 2</a></span></span> Este apartado tiene una sintaxis similar a la de <code>&lt;em:targetApplication&gt;</code>. Si el complemento/agregado especificado por el apartado <code>&lt;em:id&gt;</code> no es instalado o tienes una versión incompatible, el administrador de extensiones deshabilitará tu extensión y mostrará el mensaje "Requiere items adicionales". Puedes poner tantos apartados <code>&lt;em:requires&gt;</code> como quieras. Tu extensión será deshabilitada si cualquiera de los requisito especificados falla.</p>
+
+<p><strong>Ejemplo</strong></p>
+
+<pre>&lt;em:requires&gt;
+   &lt;Description&gt;
+     &lt;!-- Lightning --&gt;
+     &lt;em:id&gt;{e2fda1a4-762b-4020-b5ad-a41df1933103}&lt;/em:id&gt;
+     &lt;em:minVersion&gt;0.5pre&lt;/em:minVersion&gt;
+     &lt;em:maxVersion&gt;0.5pre&lt;/em:maxVersion&gt;
+   &lt;/Description&gt;
+ &lt;/em:requires&gt;
+</pre>
+
+<p><strong>Notas</strong></p>
+
+<ul>
+ <li>Actualmente, únicamente <code>&lt;em:id&gt;</code>, <code>&lt;em:minVersion&gt;</code>, <code>&lt;em:maxVersion&gt;</code> son analizadas dentro del apartado <code>&lt;em:requires&gt;</code>.</li>
+ <li>No es posible actualmente agregar dependencias que sean especificas para un <code>&lt;em:targetApplication&gt;</code>. Véase <a class="external" href="http://wiki.mozilla.org/Extension_Manager:Extension_Dependencies" rel="external nofollow" title="http://wiki.mozilla.org/Extension_Manager:Extension_Dependencies">wikimo:Administrador de Extensiones: Dependencias de Extensiones</a> para más detalles.</li>
+</ul>
+
+<p>Esta propiedad fué agregada para Firefox/Thunderbird 2. Versiones previas de estas aplicaciones ignorarán las restricciones e instalarán el complemento/agregado a pesar de los requisitos.</p>
+
+<p> </p>
+
+<h3 id="Referencia_de_Propiedades_Obsoletas" name="Referencia_de_Propiedades_Obsoletas">Referencia de propiedades obsoletas</h3>
+
+<p>Estas propiedades eran requeridas en viejas versiones del administrador de complementos/agregados, pero han sido reemplazadas por nuevos y mejores mecanismos.</p>
+
+<h4 id="file" name="file">file</h4>
+
+<p><strong>Firefox 1.0</strong> Esta propiedad apunta a un archivo chrome <code>.jar</code> que contiene paquetes chrome que requieren ser registrados con el registro de chrome.</p>
+
+<p>La propiedad <code>&lt;em:file&gt;</code> tiene un complejo valor de objeto. El <em>uri</em>(Uniform Resource Identifier - Identificador Uniforme de Recurso) del valor es <code>urn:mozilla:extension:file:jarFile.jar</code> donde <code>jarFile.jar</code> es el nombre del archivo jar que contiene el paquete de archivos de chrome. Este podría ser también el nombre de un directorio que contiene los archivos del paquete chrome, des-<em>jar</em>eado (e.g. <code>urn:mozilla:extension:file:directory</code>). En todo caso, el referido paquete de archivos chrome debe estar ubicado en el subdirectorio <code>chrome</code> de los XPI.</p>
+
+<p>Este objeto tiene una propiedad <code>package</code> (con una ruta dentro del archivo jar o del directorio que lleva a la ubicación del archivo <code>contents.rdf</code> que es el responsable del registro del paquete), una propiedad <code>locale</code> (ídem, pero registra el locale) y una propiedad <code>skin</code> (ídem, pero para registrar el material del tema).</p>
+
+<p>En extensiones para Firefox 1.5, esta propiedad ya no es necesaria: el <code><a href="/es/Chrome_Registration" title="es/Chrome_Registration">chrome.manifest</a></code> en el nivel más alto del XPI es usado para ubicar el chrome a registrar. Si no hay chrome.manifest, esta propiedad es aún leída por el administrador de complementos/agregados y un chrome.manifest es generado a partir del antiguo archivo contents.rdf.</p>
+
+<p><strong>Ejemplos</strong></p>
+
+<pre class="eval">&lt;em:file&gt;
+ &lt;Description about="urn:mozilla:extension:file:myext.jar"&gt;
+  &lt;em:package&gt;content/myext/&lt;/em:package&gt;
+  &lt;em:locale&gt;locale/en-US/myext/&lt;/em:locale&gt;
+  &lt;em:skin&gt;skin/classic/myext/&lt;em:skin&gt;
+ &lt;/Description&gt;
+&lt;/em:file&gt;
+</pre>
+
+<p>Un manifiesto de instalador puede especificar múltiples propiedades <code>file</code>; una para cada archivo jar o subdirectorio que contenga el chrome a registrar.</p>
+
+<h3 id="Glosario" name="Glosario">Glosario</h3>
+
+<h3 id="Acceso_de_.C3.A1rea_restringida" name="Acceso_de_.C3.A1rea_restringida">Acceso de área restringida</h3>
+
+<p>Un <em>Area de Acceso Restringido</em> es una ubicación para instalar que puede estar restringida en una cuenta de acceso-restringido, no importando si la ubicación está restringida aún con los privilegios del usuario actual.  (véase <span class="lang lang-en"><a class="external" href="http://mxr.mozilla.org/mozilla-central/source/toolkit/mozapps/extensions/public/nsIExtensionManager.idl#80" rel="external nofollow" title="http://mxr.mozilla.org/mozilla-central/source/toolkit/mozapps/extensions/public/nsIExtensionManager.idl#80">nsIInstallLocation::restricted</a> </span>). Actualmente, la carpeta <code>$APPDIR)/extensions</code> y la ubicación del registro de instalación bajo <code>HKEY_LOCAL_MACHINE</code> (véase <a href="../../../../en/Adding_Extensions_using_the_Windows_Registry" rel="internal">Agregando Extensiones usando el Registro de Windows</a> (para detalles) están restringidas.</p>
+
+<p>Las ubicaciones de instalación <code>($PROFILE)/extensions</code> y <code>HKEY_CURRENT_USER</code>, por otro lado no están restringidas.</p>

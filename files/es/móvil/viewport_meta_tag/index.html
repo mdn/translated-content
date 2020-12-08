@@ -1,0 +1,89 @@
+---
+title: >-
+  Usando la etiqueta meta viewport para controlar la composición en los
+  navegadores móviles
+slug: Móvil/Viewport_meta_tag
+translation_of: Mozilla/Mobile/Viewport_meta_tag
+---
+<h2 id="Antecedentes">Antecedentes</h2>
+
+<p>El {{glossary("viewport")}} del navegador es el área de la ventana en donde el contenido web está visible. Generalmente no es del mismo tamaño que la página renderizada, en donde se brindan barras de desplazamiento para que el usuario pueda acceder a todo el contenido.</p>
+
+<p>Dispositivos con pantallas angostas (p.e. móviles) muestran la página en una ventana virtual o <em>viewport</em>, que es usualmente más ancho que la pantalla y la comprimen de manera que pueda verse completa. El usuario podrá recorrerla y hacer zoom para ver diferentes áreas de la página. Por ejemplo, si una pantalla móvil tiene un ancho 640px, las páginas pueden ser procesadas con un <em>viewport</em> de 980px, y después comprimidas para que entren en 640px.</p>
+
+<p>Esto se hace porque muchas páginas no están optimizadas para dispositivos móviles y se quiebran (o, al menos, se ven mal) cuando son procesadas a un ancho de <em>viewport</em> pequeño. El <em>viewport</em> virtual es una forma de resolver el problema de sitios no optimizados para móviles, logrando que se vean mejor.</p>
+
+<h3 id="Ingresar_el_meta_tag_viewport">Ingresar el meta tag viewport</h3>
+
+<p>Sin embargo, este mecanismo no es tan bueno para páginas que están optimizadas para pantallas pequeñas usando <a href="/en-US/docs/Web/CSS/Media_Queries">media queries</a> - si el <em>viewport</em> tiene, por ejemplo, 980px los media queries que se activan en 640px o 480px o menos nunca serán usados, limitando la efectividad de esas técnicas de diseño <em>responsive</em>.</p>
+
+<p>Para mitigar este problema, Apple introdujo el meta tag "viewport" en Safari para iOS que permite a los desarrolladores controlar su tamaño y escala. Muchos navegadores hoy lo soportan, aunque no es parte de ningún standard. La <a class="external" href="https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">documentación</a> de Apple hace un buen trabajo explicando cómo los desarrolladores web pueden usar esta etiqueta, pero hemos tenido que hacer trabajo de detectives para descubrir exactamente cómo implementarlo en Fennec. Por ejemplo, la documentación de Safari dice que el contenido está "separado por comas", pero los navegadores existentes y las páginas web usan una mezcla entre comas, punto y coma y espacios como valores de separación.</p>
+
+<p>Puede aprenderse más sobre los diferentes navegadores móviles en <a class="external" href="http://www.quirksmode.org/mobile/viewports2.html" title="http://www.quirksmode.org/mobile/viewports2.html">A Tale of Two Viewports</a> en quirksmode.org.</p>
+
+<h2 id="Viewport_básico">Viewport básico</h2>
+
+<p>Un sitio típico optimizado para móvil contiene algo así:</p>
+
+<pre class="notranslate">&lt;meta name="viewport" content="width=device-width, <span id="the-code">user-scalable=no</span>"&gt;</pre>
+
+<p>La propiedad <code>width</code> controla el tamaño del viewport. Puede definirse con un número en pixeles como  <code>width=600</code> o con un valor especial <code>device-width</code> que es el equivalente al ancho de la pantalla en píxeles CSS en una escala de 100%. (Existen valores correspondientes de <code>height</code> y <code>device-height</code>, los cuales pueden ser útiles para páginas con elementos que cambian tamaño o posición basadas en la altura del viewport (height).</p>
+
+<p>La propiedad <code>initial-scale</code> controla el nivel de zoom cuando la página se carga por primera vez. Las propiedades <code>maximum-scale</code>, <code>minimum-scale</code>, y <code>user-scalable</code> controlan la forma en cómo se permite a los usuarios aumentar o disminiuir el zoom en la página.</p>
+
+<h2 id="Un_pixel_no_es_un_pixel">Un pixel no es un pixel</h2>
+
+<p>El iPhone y muchos teléfonos Android populares tienen pantallas de 3 a 4 pulgadas (7–10 cm) con 320—480 píxeles (~160 dpi). Firefox para Maemo se ejecuta en el Nokia N900, el cual físicamente tiene el mismo tamaño, pero 480—800 píxeles (~240 dpi). Debido a esto, la versión más reciente de Fennec mostró muchas páginas alrededor de un tercio más pequeñas (en tamaño real, tamaño físico) que iPhone o Android. Esto causó problemas de usabilidad y lectura en muchos sitios web optimizados con funcionalidad <em>touch</em>. Peter-Paul Koch escribió sobre este problema en <a class="external" href="http://www.quirksmode.org/blog/archives/2010/04/a_pixel_is_not.html">A pixel is not a pixel is not a pixel</a>.</p>
+
+<p>Fennec 1.1 para Maemo usa 1,5 pixels de hardware para cada "pixel" de CSS, siguiendo los criterios de los navegadores en Android basados en WebKit. Esto significa que una página con un valor de <span style="line-height: 16.7999992370605px;"> </span><code style="font-style: normal; line-height: 16.7999992370605px;">initial-scale=1</code><span style="line-height: 16.7999992370605px;"> </span><span style="line-height: 16.7999992370605px;">se mostrará renderizada aproximadamente al mismo tamaño físico en Fennec para Maemo, Safari Mobile para iPhone, y el navegador de Android tanto en teléfonos  </span><a class="external" href="http://developer.android.com/guide/practices/screens_support.html#range" style="line-height: 16.7999992370605px;">HDPI y MDPI</a>. Esto es consistente con la especificación <a class="external" href="http://www.w3.org/TR/CSS2/syndata.html#length-units" style="text-decoration: underline; line-height: 16.7999992370605px;">CSS 2.1</a>, que dice:</p>
+
+<blockquote>
+<p>Si la densidad en pixeles del aparato es muy diferente de aquella típica en pantalla de computadores, el "user agent" deberá reescalar los valores en pixeles. Se recomienda que la unidad de pixel refiera al número total de pixels del aparato que más se aproxime al pixel de referencia. Se recomienda también que el pixel de referencia sea el ángulo visual de un pixel en un aparato con una densidad de pixels de 96dpi y una distancia del lector del largo de un brazo.</p>
+</blockquote>
+
+<p>Para los desarrolladores web, esto supone que 320px es el ancho máximo en modo retrato a scale=1, y todos los dispositivos mencionados anteriormente, deben ajustarse acorde al tamaño la maquetación y las imágenes. Pero recuerda que no todos los móviles tienen el mismo ancho; debes asegurarte además que tus páginas funcionan corectamente en modo apaisado, y en dispositivos más grandes como el iPad o las tablets Android.</p>
+
+<p>En las pantallas de 240-ppp, las páginas con <code>initial-scale=1</code> serán escaladas efectivamente a un 150% tanto en Fennec como en Android WebKit. Su texto será suave y fresco, pero sus imágenes de bitmap probablemente no obtengan ninguna ventaja de la máxima resolución de la pantalla. Para obtener imágenes más finas en estas pantallas, los desarrolladores web deben diseñar imágenes - o maquetaciones completas - al 150% de sus tamaño final (o al 200%, para soportar dispositivos de 320-ppp como por ejemplo el iPhone con pantalla retina) y entonces disminuar la escala usando CSS o las propiedades del viewport.</p>
+
+<p>La relación por defecto depende de la densidad de la pantalla. En una pantalla con una densidad inferior a 200ppp, el ratio es 1.0. En pantallas con densidades entre 200 y 300ppp, el ratio es 1.5. Para pantallas con densidades por encima de 300ppp, el ratio es el entero inferior (<em>densidad</em>/150ppp). Hay que observar que el ratio por defecto es cierto sólo cuando la escala del viewport es igual a 1. En cualquier otro caso, la relación entre los pixels en CSS y en el dispositivo dependen del nivel de zoom en cada momento.</p>
+
+<h2 id="Ancho_del_viewport_y_ancho_de_la_pantalla">Ancho del viewport y ancho de la pantalla</h2>
+
+<p>Muchos sitios establecen su viewport a <code>"width=320, initial-scale=1"</code> para ajustarse de manera precisa a la pantalla del iPhone en modo portrait. Tal y como se menciona arriba, esto causa <a class="external" href="http://starkravingfinkle.org/blog/2010/01/perils-of-the-viewport-meta-tag/">problemas</a> cuando Fennec 1.0 renderiza estos sitios, especialmente en modo landscape. Para arreglar esto, Fennec 1.1 expandirá el ancho del viewport si es necesario para rellenar la pantalla a la escala requerida. Esto encaja con el comportamiento de Android y Mobile Safari, y es especialmente útil en dispositivos de gran pantalla como el iPad (el sitio de Allen Pike <a class="external" href="http://www.antipode.ca/2010/choosing-a-viewport-for-ipad-sites/">Choosing a viewport for iPad</a> tiene una buena explicación para desarrolladores web).</p>
+
+<p>Para páginas que establecen una escala inicial o máxima, esto se traduce en que la propiedad <code>width </code>realmente pasa a ser el ancho <em>mínimo</em> del viewport. Por ejemplo, si tu diseño necesita al menos 500 píxeles de ancho entonces  podrás usar la siguiente anotación. Cuando la pantalla tenga un ancho mayor a 500 píxeles, el navegador extenderá el viewport (en lugar de acercar el zoom) para ajustarlo a la pantalla:</p>
+
+<pre class="notranslate">&lt;meta name="viewport" content="width=500, initial-scale=1"&gt;</pre>
+
+<p>Fennec 1.1 también añade soporte para <code>minimum-scale</code>, <code>maximum-scale</code> y <code>user-scalable </code>con valores por defecto y límites similares a los de <a class="external" href="http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">Safari</a>. Estas propiedades afectan a la escala inicial y al ancho, además de limitar los cambios a nivel de zoom.</p>
+
+<p>Los navegadores para dispositivos móviles responden a los cambios de orientación de manera ligeramente diferente. Por ejemplo, Mobile Safari a menudo solo amplía el zoom de la página cuando se cambia la orientación portrait a la landscape, en lugar de exponer la página como si originalmente se hubiera cargado en landscape. Si los desarrolladores web quieren que su escala establecida permanezca consistente cuando cambie la orientación en un iPhone, deben añadir un valor <code>maximum-scale </code>para prevenir éste efecto de zoom, el cual tiene el (a veces) efecto secundario indeseado de impedir que los usuarios acerquen el zoom:</p>
+
+<pre class="notranslate">&lt;meta name="viewport" content="initial-scale=1, maximum-scale=1"&gt;</pre>
+
+<p>Esto no es necesario en Fennec; cuando el dispositivo cambia de orientación, Fennec actualiza el tamaño de viewport, el diseño de la página, y las propiedades de  JavaScript/CSS como <code>device-width</code>, basadas en las nuevas dimensiones de la pantalla.</p>
+
+<h2 id="Tamaños_Comunes_de_Viewport_en_Equipos_Móviles_y_Tabletas">Tamaños Comunes de Viewport en Equipos Móviles y Tabletas </h2>
+
+<p>Si quieres saber qué tipo de ancho de viewport tienen los equipos móviles y tabletas, hay una lista exhaustiva aquí: <a href="http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/" title="http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/">mobile and tablet viewport sizes</a>. La lista te brinda información tanto del ancho del viewport en los modos de orientación vertical y horizontal ("portrait" y "landscape"), así como del tamaño de la pantalla, sistema operativo y la densidad de píxeles del dispositivo.</p>
+
+<h2 id="Standards">Standards</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Device', '#viewport-meta', '&lt;meta name="viewport"&gt;')}}</td>
+   <td>{{Spec2('CSS3 Device')}}</td>
+   <td>Non-normatively describes the Viewport META element</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Claramente existe demanda por la etiqueta "meta viewport", ya que es soportada por la mayoría de los buscadores móviles y usada por miles de sitios web. Sería bueno contar con un verdadero estándar para que las páginas web puedan controlar las propiedades del viewport. Mientras avance el proceso de estandarización, en Mozilla trabajaremos para asegurarnos de poder implementar cualquier cambio realizado durante dicho proceso.</p>

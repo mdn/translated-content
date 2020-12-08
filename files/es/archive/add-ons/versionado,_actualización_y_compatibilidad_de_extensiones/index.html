@@ -1,0 +1,295 @@
+---
+title: 'Versionado, actualización y compatibilidad de extensiones'
+slug: 'Archive/Add-ons/Versionado,_actualización_y_compatibilidad_de_extensiones'
+tags:
+  - Complementos
+  - Todas_las_Categorías
+  - extensiones
+  - páginas_a_traducir
+translation_of: 'Archive/Add-ons/Extension_Versioning,_Update_and_Compatibility'
+---
+<h2 id="Las_versiones_de_extensiones">Las versiones de extensiones</h2>
+
+<p>Las extensiones deberán especificar su versión utilizando la <a href="/es/Formato_para_la_versi%C3%B3n_del_Toolkit" title="es/Formato_para_la_versión_del_Toolkit">herramienta para el formato de versión</a>. En general son unas cadenas de caracteres cortadas por un punto, algunos ejemplos:</p>
+
+<ul>
+ <li>2.0</li>
+ <li>1.0b1</li>
+ <li>3.0pre1</li>
+ <li>5.0.1.2</li>
+</ul>
+
+<h2 id="Como_determinan_la_compatibilidad_las_aplicaciones" name="Como_determinan_la_compatibilidad_las_aplicaciones">Como determinan la compatibilidad las aplicaciones</h2>
+
+<p>Al instalar extensiones/complementos las aplicaciones (programas) comprueban las entradas <code><a href="/es/Install.rdf#targetApplication" title="es/Install.rdf#targetApplication">targetApplication</a></code> en el archivo de instalación (<code>install.rdf</code>) de la extensión. La identificación (ID) de una entrada debe coincidir con la ID de la aplicación. Además, el número de versión de la aplicación debe encontrarse dentro del rango definido en <code>minVersion</code> y <code>maxVersion</code>.</p>
+
+<p>Si la aplicación tiene una entrada <code>targetApplication</code> pero es para una versión incompatible, la aplicación intentará obtendrá información actualizada sobre su compatibilidad del archivo <code><a href="/es/Install.rdf#updateURL" title="es/Install.rdf#updateURL">updateURL</a></code>.</p>
+
+<p>Si el archivo de instalación tiene entradas en <code><a href="/es/Install.rdf#targetPlatform" title="es/Install.rdf#targetPlatform">targetPlatform</a></code>, la plataforma utilizada para instalar la aplicación debe aparecer listada en ella o se cancelará la instalación.</p>
+
+<p> En las aplicaciones basadas en Gecko 1.9 se puede utilizar una entrada <code>targetApplication</code> con una ID <code><a class="link-mailto" href="mailto:toolkit@mozilla.org" rel="freelink">toolkit@mozilla.org</a></code>; <code>minVersion</code>, y <code>maxVersion</code> que coincidan con la versión de la aplicación. Esto permitirá garantizar que la extensión se podrá instalar en cualquier aplicación basada en Toolkit.</p>
+
+<h3 id="Cancelar_el_control_de_compatibilidad" name="Cancelar_el_control_de_compatibilidad">Cancelar el control de compatibilidad</h3>
+
+<p> Para la evaluación de extensiones se puede hacer que la aplicación ignore los controles de compatibilidad durante la instalación. Lo único que hay que hacer es crear la preferencia <code>extensions.checkCompatibility</code> y darle valor False.</p>
+
+<p>Antes de la versión 1.5 de Firefox, se podía utilizar la preferencia <code>app.extensions.version</code> para que la aplicación ignorase su versión e instalar así extensiones de otra forma incompatibles.</p>
+
+<h2 id="Elecci.C3.B3n_de_minVersion_y_maxVersion" name="Elecci.C3.B3n_de_minVersion_y_maxVersion">Elección de minVersion y maxVersion</h2>
+
+<p><code>minVersion</code> y <code>maxVersion</code> deberían especificar las diferentes versiones de la aplicación que se han probado. No se debe introducir un valor <code>maxVersion</code> superior a la versión disponible ya que no se saben qué cambios podrían introducirse en su interfaz de programación (API) y de usuario. Con la <a href="#Actualizaciones_de_compatibilidad">actualización de compatibilidad</a> no hace falta publicar una versión nueva completa de la extensión, sólo habrá que aumentar su <code>maxVersion</code>.</p>
+
+<p>Generalmente, en <code>maxVersion</code> es permitido sustituir el número de versión secundario de la aplicación por un asterisco '*', por ejemplo: <code>2.0.0.*</code> significaría que admite cualquier actualización secundaria de la versión 2 de la aplicación. Normalmente, la aplicación suele sugerir al autor de extensiones con qué parte de la versión conviene más hacer lo antedicho.</p>
+
+<p>El asterisco '*' no representa una versión por sí mismo. En realidad el * representa un número infinitamente alto, por lo que es más sensato usarlo en <code>maxVersion</code> que en <code>minVersion</code> ya que no suele producir el efecto deseado.</p>
+
+<h2 id="Comprobaci.C3.B3n_autom.C3.A1tica_de_actualizaci.C3.B3n_de_extensiones" name="Comprobaci.C3.B3n_autom.C3.A1tica_de_actualizaci.C3.B3n_de_extensiones">Comprobación automática de actualización de extensiones</h2>
+
+<p>Periódicamente, las aplicaciones buscarán actualizaciones de las extensiones instaladas recuperando el archivo <code><a href="/es/Install.rdf#updateURL" title="es/Install.rdf#updateURL">updateURL</a></code>. La información recuperada puede servir para notificar al usuario que existe una actualización de la extensión e informar a la aplicación de las nuevas versiones compatibles con la extensión.</p>
+
+<h3 id="Actualizaciones_de_compatibilidad" name="Actualizaciones_de_compatibilidad">Actualizaciones de compatibilidad</h3>
+
+<p>Durante la comprobación automática de actualizaciones, las aplicaciones buscan nuevas versiones e información actualizada sobre la compatibilidad de la versión instalada de una extensión. Esto quiere decir que si el manifiesto de la actualización incluye una entrada para la versión actual de la extensión instalada y el <code>targetApplication</code> de la entrada especifica un maxVersion mayor, la aplicación utilizará este valor en lugar del especificado en el archivo <code>install.rdf</code> de la extensión. Esto puede causar que se activen extensiones que estaban desactivadas por ser incompatibles y que se instalen aquellas que normalmente no se instalarían.</p>
+
+<h3 id="Formato_RDF_de_actualizaci.C3.B3n" name="Formato_RDF_de_actualizaci.C3.B3n">Formato RDF de actualización</h3>
+
+<p>Si alberga uno mismo el archivo <code>updateURL</code> del complemento será necesario devolver la información de la versión en un formato RDF. Encontrará un ejemplo de manifiesto de actualización más abajo. Muestra información sobre dos versiones diferentes de la extensión para la 'id' <code><a class="link-mailto" href="mailto:foobar@developer.mozilla.org" rel="freelink">foobar@developer.mozilla.org</a></code>. Las versiones incluidas son 2.2 y 2.5, y cada una especifica la compatibilidad con las versiones de Firefox 1.5 a 2.0.0.*. Para la versión 2.2 se utiliza un enlace de actualización https mientras que para la 2.5 es un enlace regular http con un 'hash' para verificar el archivo recuperado.</p>
+
+<p>Es importante recuperar correctamente la descripción RDF inicial del atributo 'about'. Permite saber de que complemento se trata:</p>
+
+<ul>
+ <li>Para una extensión: <code>urn:mozilla:extension:&lt;id&gt;</code></li>
+ <li>Para un tema:</li>
+</ul>
+
+<p><code>urn:mozilla:theme:&lt;id&gt;</code></p>
+
+<ul>
+ <li>Para cualquier otro tipo de complemento: <code>urn:mozilla:item:&lt;id&gt;</code></li>
+</ul>
+
+<p>En cualquiera de los ejemplos siguientes, la secuencia ordenada de las versiones dentro del elemento &lt;RDF:Seq&gt; es importante, con las versiones más nuevas después que las más antiguas. No hay que escribir todas las versiones intermedias si la última es suministrada.</p>
+
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+  &lt;!-- Esta forma de descripción incluye toda la
+       información de actualización y compatibilidad
+       para un simple complemento con la id
+       foobar@developer.mozilla.org.
+       Un único archivo RDF admite listados con
+       información de varios complementos. --&gt;
+  &lt;RDF:Description about="urn:mozilla:extension:foobar@developer.mozilla.org"&gt;
+    &lt;em:updates&gt;
+      &lt;RDF:Seq&gt;
+
+        &lt;!-- Cada "li" es una versión diferente
+             del mismo complemento --&gt;
+        &lt;RDF:li&gt;
+          &lt;RDF:Description&gt;
+            &lt;em:version&gt;2.2&lt;/em:version&gt; &lt;!-- Esto
+           es el número de la versión del complemento --&gt;
+
+            &lt;!-- Un targetApplication para cada aplicación
+                 compatible con el complemento --&gt;
+            &lt;em:targetApplication&gt;
+              &lt;RDF:Description&gt;
+                &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+                &lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;
+                &lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;
+
+                &lt;!-- Dice donde hay que ir para descargar
+                     esa versión del complemento --&gt;
+                &lt;em:updateLink&gt;https://www.mysite.com/foobar2.2.xpi&lt;/em:updateLink&gt;
+
+                &lt;!-- Una página sobre lo nuevo
+                     de esta actualización --&gt;
+                &lt;em:updateInfoURL&gt;http://www.mysite.com/updateinfo2.2.xhtml&lt;/em:updateInfoURL&gt;
+              &lt;/RDF:Description&gt;
+            &lt;/em:targetApplication&gt;
+          &lt;/RDF:Description&gt;
+        &lt;/RDF:li&gt;
+
+        &lt;RDF:li&gt;
+          &lt;RDF:Description&gt;
+            &lt;em:version&gt;2.5&lt;/em:version&gt;
+            &lt;em:targetApplication&gt;
+              &lt;RDF:Description&gt;
+                &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+                &lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;
+                &lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;
+                &lt;em:updateLink&gt;http://www.mysite.com/foobar2.5.xpi&lt;/em:updateLink&gt;
+                &lt;um:updateHash&gt;sha1:78fc1d2887eda35b4ad2e3a0b60120ca271ce6e6&lt;/em:updateHash&gt;
+              &lt;/RDF:Description&gt;
+            &lt;/em:targetApplication&gt;
+          &lt;/RDF:Description&gt;
+        &lt;/RDF:li&gt;
+
+      &lt;/RDF:Seq&gt;
+    &lt;/em:updates&gt;
+
+    &lt;!-- Una firma sólo es necesaria en el caso de haber
+         incluido un 'updateKey' en el archivo de
+         instalación 'install.rdf' del complemento. --&gt;
+    &lt;em:signature&gt;MIGTMA0GCSqGSIb3DQEBBQUAA4GBAMO1O2gwSCCth1GwYMgscfaNakpN40PJfOWt
+                  ub2HVdg8+OXMciF8d/9eVWm8eH/IxuxyZlmRZTs3O5tv9eWAY5uBCtqDf1WgTsGk
+                  jrgZow1fITkZI7w0//C8eKdMLAtGueGfNs2IlTd5P/0KH/hf1rPc1wUqEqKCd4+L
+                  BcVq13ad&lt;/em:signature&gt;
+  &lt;/RDF:Description&gt;
+&lt;/RDF:RDF&gt;
+</pre>
+
+<p>Mucha gente prefiere este formato alternativo (se ha quitado mucha información en este ejemplo para ver mejor la estructura básica):</p>
+
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+  &lt;!-- Esta forma de descripción incluye toda la
+       información de actualización y compatibilidad
+       para un simple complemento con la id
+       foobar@developer.mozilla.org.
+       Un único archivo RDF admite listados con
+       información de varios complementos. --&gt;
+  &lt;RDF:Description about="urn:mozilla:extension:foobar@developer.mozilla.org"&gt;
+    &lt;em:updates&gt;
+      &lt;RDF:Seq&gt;
+        &lt;!-- El atributo de recurso apunta a una entrada
+             de descripción 'about' que está más abajo.
+             La uri actual puede ser cualquier cosa --&gt;
+        &lt;RDF:li resource="urn:mozilla:extension:foobar@developer.mozilla.org:2.2"/&gt;
+        &lt;RDF:li resource="urn:mozilla:extension:foobar@developer.mozilla.org:2.5"/&gt;
+      &lt;/RDF:Seq&gt;
+    &lt;/em:updates&gt;
+    &lt;em:signature&gt;MIGTMA0GCSqGSIb3DQEBBQUAA4GBAMO1O2gwSCCth1GwYMgscfaNakpN40PJfOWt
+                  ub2HVdg8+OXMciF8d/9eVWm8eH/IxuxyZlmRZTs3O5tv9eWAY5uBCtqDf1WgTsGk
+                  jrgZow1fITkZI7w0//C8eKdMLAtGueGfNs2IlTd5P/0KH/hf1rPc1wUqEqKCd4+L
+                  BcVq13ad&lt;/em:signature&gt;
+  &lt;/RDF:Description&gt;
+
+  &lt;!-- Esto es lo mismo que la descripción con
+       'li' del ejemplo anterior --&gt;
+  &lt;RDF:Description about="urn:mozilla:extension:foobar@developer.mozilla.org:2.2"&gt;
+    &lt;em:version&gt;2.2&lt;/em:version&gt;
+
+    &lt;!-- El contenido de esta parte se ha quitado --&gt;
+
+  &lt;/RDF:Description&gt;
+  &lt;RDF:Description about="urn:mozilla:extension:foobar@developer.mozilla.org:2.5"&gt;
+    &lt;em:version&gt;2.5&lt;/em:version&gt;
+
+    &lt;!-- El contenido de esta parte se ha quitado --&gt;
+
+  &lt;/RDF:Description&gt;
+&lt;/RDF:RDF&gt;
+</pre>
+
+<h3 id="Facilitar_detalles_sobre_las_actualizaciones" name="Facilitar_detalles_sobre_las_actualizaciones">Facilitar detalles sobre las actualizaciones</h3>
+
+<p></p>
+
+<h4 id="En_general" name="En_general">En general</h4>
+
+<p>Podemos dar a conocer a los usuarios las novedades incluidas en la versión actualizada de nuestro complemento. El usuario al recibir una notificación de que hay una nueva versión puede ver de un vistazo esa información que contiene las mejoras y los arreglos de cualquier problema de seguridad.</p>
+
+<p>Para que así sea, hay que agregar una entrada <code>updateInfoURL</code> en el manifiesto de actualización (ver el ejemplo de encima). La página de esta URL será recuperada y mostrada, al usuario, fuera del contexto normal de una página web por lo cual su contenido es mucho más "limpio", lo que significa que hay muy pocas opciones de formatos y que las secuencias de órdenes e imágenes no están permitidas. Como regla general, sólo se admite el uso de las etiquetas siguientes (cualquier otra cosa se ignorará):</p>
+
+<ul>
+ <li>Para cabeceras: h1, h2, h3</li>
+ <li>Para párrafos: p</li>
+ <li>Para listas: ul y ol.</li>
+</ul>
+
+<p>Dentro de las listas se usará la etiqueta habitual '<code>li</code>' para cada ítem de la lista.</p>
+
+<p>Dentro de las etiquetas 'h1', 'h2', 'h3', 'p' y 'li' se utilizará:</p>
+
+<ul>
+ <li>Para texto en negrita: b o strong</li>
+ <li>Para texto en cursiva/itálica: i o em</li>
+</ul>
+
+<p>La página de información recuperada debe ser completamente válida en XHTML, y entregada con el tipo MIME <code>application/xhtml+xml</code>.</p>
+
+<p>Para poder personalizar el texto según la configuración regional/local del usuario se colocará %APP_LOCALE% en updateInfoURL para que esta información esté incluida en la URL, o bien cualquier otras cadenas de substitución admitidas por updateURL, pero no es tan funcional.</p>
+
+<h4 id="Lo_que_ve_el_usuario_final" name="Lo_que_ve_el_usuario_final">Lo que ve el usuario final</h4>
+
+<p>El contenido de <code>updateInfoURL</code> será mostrado al usuario en una pantalla del complemento, con una lista de todas las actualizaciones disponibles. Entonces, el usuario puede hacer clic en el botón "Mostrar la información" y la verá a la derecha. (El botón cambiará a "Esconder la información")</p>
+
+<p><img alt="Image:Example_updateInfoURL2.PNG"></p>
+
+<h3 id="Asegurando_las_actualizaciones" name="Asegurando_las_actualizaciones">Asegurando las actualizaciones</h3>
+
+<p> </p>
+
+<p>Gecko 1.9 has added additional requirements designed to protect users from <a class="external" href="http://en.wikipedia.org/wiki/Man-in-the-middle_attack">man-in-the-middle attacks</a> and the like during add-on updates. In the install.rdf of the already installed add-on <code>updateURL</code> must be specified in one of the following ways:</p>
+
+<ul>
+ <li>The <code><a href="/es/Install.rdf#updateURL" title="es/Install.rdf#updateURL">updateURL</a></code> uses https, or there is no <code>updateURL</code> at all (which defaults to <code>addons.mozilla.org</code> which is https)</li>
+ <li>The <code><a href="/es/Install.rdf#updateURL" title="es/Install.rdf#updateURL">updateURL</a></code> uses http and the <code><a href="/es/Install.rdf#updateKey" title="es/Install.rdf#updateKey">updateKey</a></code> entry is specified which will be used to verify the data in the update manifest.</li>
+</ul>
+
+<p>Si se especifica una actualización de clave/firma (<code>updateKey</code>) en el archivo de instalación ( <code>install.rdf</code>), hay que incluir una <a href="#Manifiesto_de_actualizaci.C3.B3n_de_firma">firma digital</a> en el manifiesto de actualización sino la información será rechazada.</p>
+
+<p>In the update manifest delivered from the <code>updateURL</code> the <code>updateLink</code> must be specified in one of the following ways:</p>
+
+<ul>
+ <li>The <code>updateLink</code> to the XPI file must use https</li>
+ <li>The <code>updateLink</code> can use http and you must include an <code><a href="#Update_Hashes">updateHash</a></code> for the XPI file using sha1, sha256, sha384 or sha512 hash algorithms.</li>
+</ul>
+
+<p>Any entries in the update manifest that do not meet one of those two requirements will be ignored when checking for new versions.</p>
+
+<p>Note that https links to sites with invalid certificates or that redirect to http sites will fail for both the <code>update.rdf</code> and <code>updateLink</code> cases.</p>
+
+<h4 id="Los_cifrados_de_actualizaci.C3.B3n" name="Los_cifrados_de_actualizaci.C3.B3n">Los cifrados de actualización</h4>
+
+<p>Al fin de verificar la integridad del XPI descargado se puede proveer una entrada <code>updateHash</code> (cifrado de actualización) junto a <code>updateLink</code>. Este debe ser un cifrado generado desde los datos del fichero según un algoritmo admitido ('sha1', 'sha256', 'sha384' y 'sha512'). El algoritmo de cifrado utilizado debe anteponerse y separarse del cifrado en sí con '<code>:</code>'.</p>
+
+<pre>  &lt;em:updateHash&gt;sha1:78fc1d2887eda35b4ad2e3a0b60120ca271ce6e6&lt;/em:updateHash&gt;
+</pre>
+
+<p>El valor <code>updateHash</code>, <strong>debe</strong> empezar con la cadena del algoritmo de cifrado, es un error común quitar ese prefijo al poner un valor nuevo en <code>updateHash</code>:\n<em><strong>sha1:</strong>78fc1d2887eda35b4ad2e3a0b60120ca271ce6e6</em>"</p>
+
+<p>Además el cifrado del archivo descargado y el cifrado especificado también deben coincidir, sino dará un error.</p>
+
+<p>Varias herramientas permiten generar un cifrado:</p>
+
+<p>Diversas variantes de Unix incluyen: sha1sum, sha256sum y demás. Los usuarios de Windows pueden utilizar <a class="external" href="http://beeblebrox.org/hashtab/">HashTab</a> para un uso interactivo (fuera de compilación). Tienen también las <a class="external" href="http://gnuwin32.sourceforge.net/packages/coreutils.htm">utilidades para Win</a> (aparte de los clásicos como Cygwin), las cuales son buenas para un uso no-interactivo:</p>
+
+<pre class="eval">sha1sum ARCHIVO
+</pre>
+
+<p>Además de <a class="external" href="http://md5deep.sourceforge.net/">md5deep</a> que es múlti-plataforma</p>
+
+<pre class="eval">sha1deep FILE
+</pre>
+
+<p>OpenSSL también genera cifrado:</p>
+
+<pre class="eval">openssl sha1 FILE
+</pre>
+
+<p>Para los usuarios de Windows, <a class="external" href="http://beeblebrox.org/hashtab/">HashTab</a> es una extensión shell... un simple clic da valores de cifrado para cualquier archivo.</p>
+
+<p>Aquí hay además un <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=395368">bug de mejoras</a> sobre como insertar a McCoy la generación automática de cifrado en archivos XPI.</p>
+
+<p>Y todos los lenguajes (de programación) populares lo ofrecen, por ejemplo: <a class="external" href="http://docs.python.org/lib/module-hashlib.html">Python</a>, Perl: CPAN Digest, <a class="external" href="http://de2.php.net/sha1_file">PHP</a></p>
+
+<h4 id="Firmar_el_manifiesto_de_actualizaci.C3.B3n" name="Firmar_el_manifiesto_de_actualizaci.C3.B3n">Firmar el manifiesto de actualización</h4>
+
+<p> </p>
+
+<p>If you wish to serve your update RDF over regular http, Gecko 1.9 based applications will require that you digitally sign the update manifest to ensure that it's information isn't tampered with between you creating it and applications retrieving it. The <a href="/es/McCoy" title="es/McCoy">McCoy</a> tool should be used to sign the update RDF.</p>
+
+<p>The technical details of the signing mechanism are beyond the scope of this document however the basics are as follows:</p>
+
+<p>The add-on author creates a public/private RSA cryptographic key pair.</p>
+
+<p>The public part of the key is DER encoded and then base 64 encoded and added to the add-on's <code>install.rdf</code> as an <code><a href="/es/Install.rdf#updateKey" title="es/Install.rdf#updateKey">updateKey</a></code> entry.</p>
+
+<p>When the author creates the update rdf file a tool is used to sign it using the private part of the key. Roughly speaking the update information is converted to a string, then hashed using a sha512 hashing algorithm and this hash is signed using the private key. The resultant data is DER encoded then base 64 encoded for inclusion in the update rdf as an <code>em:signature</code> entry.</p>

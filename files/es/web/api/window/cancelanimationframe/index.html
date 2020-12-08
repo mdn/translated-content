@@ -1,0 +1,118 @@
+---
+title: window.cancelAnimationFrame()
+slug: Web/API/Window/cancelAnimationFrame
+translation_of: Web/API/Window/cancelAnimationFrame
+---
+<div>{{APIRef}}{{SeeCompatTable}}</div>
+
+<h2 id="Summary" name="Summary">Resumen</h2>
+
+<p>Cancela la petición de animación previamente programada a través de {{domxref("window.requestAnimationFrame()")}}.</p>
+
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+
+<pre class="syntaxbox">window.cancelAnimationFrame(<em>requestID</em>);
+</pre>
+
+<div class="note">
+<p><strong>Nota:</strong> Antes de Firefox 23, la función es independiente del proveedor con el prefijo <code>window.mozCancelAnimationFrame()</code>. Consulte la tabla de compatibilidad, a continuación, para otras implementaciones de navegador.</p>
+</div>
+
+<h3 id="Parameters" name="Parameters">Parámetros</h3>
+
+<dl>
+ <dt><code>ID de la petición</code></dt>
+ <dd>El valor del ID regresado por la llamada a {{domxref("window.requestAnimationFrame()")}} que solicitó una llamada de vuelta.</dd>
+</dl>
+
+<h2 id="Examples" name="Examples">Ejemplos</h2>
+
+<pre class="brush: js">var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+var start = window.mozAnimationStartTime;  // Only supported in FF. Other browsers can use something like Date.now().
+
+var myReq;
+
+function step(timestamp) {
+  var progress = timestamp - start;
+  d.style.left = Math.min(progress/10, 200) + "px";
+  if (progress &lt; 2000) {
+    myReq = requestAnimationFrame(step);
+  }
+}
+myReq = requestAnimationFrame(step);
+
+window.cancelAnimationFrame(myReq);
+</pre>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad de navegadores</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>21.0 {{property_prefix("webkit")}}<br>
+    24.0</td>
+   <td>{{CompatGeckoDesktop("11.0")}} {{property_prefix("moz")}}<br>
+    23.0</td>
+   <td>10</td>
+   <td>15.0</td>
+   <td>6.0 {{property_prefix("webkit")}}<br>
+    6.1</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>4.4</td>
+   <td>33</td>
+   <td>{{CompatGeckoMobile("11.0")}} {{property_prefix("moz")}}<br>
+    23.0</td>
+   <td>10</td>
+   <td>33</td>
+   <td>7.1</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Specification" name="Specification">Especificación</h2>
+
+<ul>
+ <li>{{spec("http://www.w3.org/TR/animation-timing/#cancelAnimationFrame", "Timing control for script-based animations: cancelAnimationFrame", "WD")}}</li>
+</ul>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{domxref("window.mozAnimationStartTime")}}</li>
+ <li>{{domxref("window.requestAnimationFrame()")}}</li>
+</ul>

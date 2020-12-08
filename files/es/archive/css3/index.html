@@ -1,0 +1,822 @@
+---
+title: CSS3
+slug: Archive/CSS3
+translation_of: Archive/CSS3
+---
+<p><span class="seoSummary"><strong>CSS3</strong> es la última evolución del lenguaje de las <em>Hojas de Estilo en Cascada</em> <em>(</em>Cascading Style Sheets), y pretende ampliar la versión CSS2.1. Trae consigo muchas novedades altamente esperadas , como las esquinas redondeadas, sombras, <a href="/es/docs/CSS/Using_CSS_gradients" title="Using CSS gradients">gradientes</a> , <a href="/es/docs/Web/CSS/Transiciones_de_CSS" title="CSS transitions">transiciones</a> o <a href="/es/docs/Web/CSS/Usando_animaciones_CSS" title="CSS animations">animaciones</a>, y nuevos <a href="/en-US/docs/Web/Guide/CSS/Getting_Started/Layout">layouts</a> como <a href="/en-US/docs/Web/Guide/CSS/Using_multi-column_layouts" title="Using CSS multi-column layouts">multi-columnas</a>, cajas flexibles o maquetas de diseño en cuadrícula (grid layouts).</span></p>
+
+<p>Las partes experimentales son particulares para cada navegador y deberían ser evitadas en entornos de producción, o usadas con extrema precaución, ya que tanto la sintaxis como la semántica pueden cambiar en el futuro.</p>
+
+<h2 id="Los_módulos_y_el_proceso_de_estandarización">Los módulos y el proceso de estandarización</h2>
+
+<p>El Nivel 2 de CSS necesitó 9 años, desde Agosto de 2002 hasta Junio de 2011, para alcanzar el estado de Recomendación. Esto fué debido al hecho de que algunas características secundarias fueron retiradas de las especificaciones globales, con el fin de acelerar la normalización de las características no problemáticas, el <a class="external" href="http://www.w3.org/blog/CSS/" title="http://www.w3.org/blog/CSS/">Grupo de Trabajo CSS</a> de la W3C, en una decisión referida como la <a class="external" href="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/modules" title="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/modules">doctrina Beijing</a>  dividió CSS en componentes más pequeños llamados <em>módulos</em> cada uno de estos módulos es ahora una parte independiente del lenguaje y se dirije a la estandarización a su propio ritmo mientras algunos módulos son ya recomendados de la W3C, otros todavía son borradores iniciales tambíen se añaden nuevos módulos cuando se identifican nuevas necesidades.</p>
+
+<p><a href="/@api/deki/files/6120/=CSS_Modules_and_Snapshots.png" title="CSS_Modules_and_Snapshots.png"><img alt="CSS Modules and Snapshots as defined since CSS3" class="internal lwrap" src="/files/3623/CSS_Modules_and_Snapshots.png" style="float: left; width: 550px;"> </a></p>
+
+<p>Formalmente, no existe un estandar de CSS3 por sí solo cada módulo es estandarizado independientemente, por lo que el estandar CSS consiste en CSS2.1 modificado y extendido por módulos terminados, no necesariamente todos con el mismo nivel numérico por tanto, puede ser definido un panorama del CSS estandar listando (enumerando) CSS2.1 y los módulos maduros.</p>
+
+<p>El consorcio W3 publica periodicamente ciertos <em>snapshots</em>(imágenes), como en <a href="http://www.w3.org/TR/css-beijing/">2007</a> o <a href="http://www.w3.org/TR/css-2010/">2010</a>.</p>
+
+<p>Aunque hoy en día ningún módulo con nivel mayor al 3 es estandarizado, esto cambiará en el futuro. Algunos módulos, como <em>Selectors 4</em> o <em>CSS Borders</em> y <em>Backgrounds</em> nivel 4 tienen ya un borrador de edición pese a que aún  no tienen un estatus de primer borrador de trabajo.</p>
+
+<h2 id="Estado_de_los_módulos_CSS" style="">Estado de los módulos CSS</h2>
+
+<h3 id="Módulos_estables">Módulos estables</h3>
+
+<p>Unos pocos módulos CSS son lo suficientemente estables y han alcanzado uno de los tres niveles de recomendación de <em>CSSWG</em>: Candidato (<em>Candidate</em>), Recomendación (<em>Recommendation</em>), Recomendación propuesta o Recomendación  (<em>Proposed Recommendation</em> <em>or</em> <em>Recommendation</em>). Estos puden ser usados sin un prefijo y son muy estables aunque algunas características aun pueden ser eliminadas de la etapa de <em>Candidate Recommendation</em>.</p>
+
+<p>Estos módulos extienden y mejoran la especificación CSS2.1 la cual construye el núcleo de la especificación. Juntos, son el <em>snapshot </em>actual de la especificación CSS.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td class="thirdColumn greenBg"><strong>{{ SpecName("CSS3 Colors", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Colors") }} desde el 7 de Junio de 2011</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Agrega la propiedad {{ cssxref("opacity") }} y las funciones <code>hsl</code><code>()</code>, <code>hsla()</code>, <code>rgba()</code> and <code>rgb()</code> para crear los valores {{cssxref("&lt;color&gt;")}}. También define la palabra clave <code>currentColor</code> como un color válido.</p>
+
+    <p>Ahora el color transparente es un color real (gracias al soporte para el canal <em>alpha</em>) y es un alias para <code>rgba(0,0,0,0.0)</code> .</p>
+
+    <p>Deja obsoleto las <em>keyworks</em> del sistema de colores (<em>system-color</em>) <a href="http://www.w3.org/TR/CSS2/ui.html#system-colors">las cuales ya no deberían ser usadas en ambientes de producción</a>.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(128,255,128);"><strong>{{ SpecName("CSS3 Selectors", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Selectors") }} desde el 29 de Septiembre de 2011</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Agrega:</p>
+
+    <ul>
+     <li>Atributo substring selector de igualdad, <code>E[attribute^="value"]</code> , <code>E[attribute$="value"]</code> , <code>E[attribute*="value"]</code> .</li>
+     <li>Nuevas pseudo-clases: {{ cssxref(":target") }}, {{ cssxref(":enabled") }} y {{ cssxref(":disabled") }}, {{ cssxref(":checked") }}, {{ cssxref(":indeterminate") }}, {{ cssxref(":root") }}, {{ cssxref(":nth-child") }} y {{ cssxref(":nth-last-child") }}, {{ cssxref(":nth-of-type") }} y {{ cssxref(":nth-last-of-type") }}, {{ cssxref(":last-child") }}, {{ cssxref(":first-of-type") }} y {{ cssxref(":last-of-type") }}, {{ cssxref(":only-child") }} y {{ cssxref(":only-of-type") }},{{ cssxref(":empty") }}, y {{ cssxref(":not") }}.</li>
+     <li>Los Pseudo-elementos ahora son caracterizados por un par de dos puntos en vez de sólo uno: <code>:after</code> ahora es {{ cssxref("::after") }}, <code>:before</code> ahora es {{ cssxref("::before") }}, <code>:first-letter</code> ahora es {{ cssxref("::first-letter") }}, y <code>:first-line</code> ahora es {{ cssxref("::first-line") }}.</li>
+     <li>El nuevo combinador general de hermanos (<em>general sibling combinator</em>) ( <code>h1~pre</code> ).</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>La <a class="external" href="http://dev.w3.org/csswg/selectors4/" title="http://dev.w3.org/csswg/selectors4/">siguiente iteración de la especificación de <em>Selectores</em></a> ya está en progreso, aunque aún no ha alcanzado el estado de primer borrador público de trabajo.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(128,255,128);"><strong>{{ SpecName("CSS3 Namespaces", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Namespaces") }} desde el 29 de Septiembre de 2011</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Añade soporte para los nombres de espacio XML (<em>namespaces</em>) definiendo la noción de nombre CSS cualificado (<em>CSS qualified name</em>), usando la sintaxis ' | ' y agregando la regla CSS {{ cssxref("@namespace") }}.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(128,255,128);"><strong>{{ SpecName("CSS3 Media Queries", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Media Queries") }} desde el 19 de Junio de 2012</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Extiende los tipos anteriores de media ( <code>print</code>, <code>screen</code>, <code>…</code> ) a un lenguaje completo permitiendo queries sobre las capacidades de  <em>media </em>del dispositivo como <code>only screen y color</code>.</p>
+
+    <p>Los <em>Media queries</em> no sólo son usado en documentos CSS sino también en algunos atributos de elementos HTML, como el atributo {{ htmlattrxref("media","link") }} del elemento {{ HTMLElement("link") }}.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>La <a href="http://dev.w3.org/csswg/mediaqueries4">siguiente generación de esta especificación</a> está en progreso, permitiendo adaptar un sitio Web con respecto a los métodos de entrada disponibles en el agente del usuario con las nuevas características <em>media </em>como <code>hover</code> o <code>pointer.</code> También está propuesta la detección de soporte <em>EcmaScript </em>usando <em>media </em><code>script</code>.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(128,255,128);"><strong>{{ SpecName("CSS3 Style", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Style") }} desde el 7 de Noviembre de 2013</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Define formalmente la sintaxis del contenido del atributo global <code><a href="/en/HTML/Global_attributes#attr-style">style</a></code><a href="/en/HTML/Global_attributes#attr-style"> </a>de HTML.</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Backgrounds", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Backgrounds") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Agrega:</p>
+
+    <ul>
+     <li>Soporte en fondos para cualquier tipo de {{cssxref("&lt;image&gt;")}} y no solo las <code>uri()</code> definidas.</li>
+     <li>Soporte para multiples imágenes de fondo.</li>
+     <li>Los valores {{ cssxref("background-repeat") }} <code>space</code> y <code>round</code>, y para la sintaxis de dos-valores de esta propiedad CSS.</li>
+     <li>El valor <code>local</code> de {{ cssxref("background-attachment") }}.</li>
+     <li>Las propiedades CSS de {{ cssxref("background-origin") }}, {{ cssxref("background-size") }} y {{ cssxref("background-clip") }}.</li>
+     <li>Soporte para border curvos con las propiedades CSS {{ cssxref("border-radius") }}, {{ cssxref("border-top-left-radius") }}, {{ cssxref("border-top-right-radius") }}, {{ cssxref("border-bottom-left-radius") }}, y {{ cssxref("border-bottom-right-radius") }}.</li>
+     <li>Soporte para el uso de una {{cssxref("&lt;image&gt;")}} como borde con las propiedades CSS {{ cssxref("border-image") }}, {{ cssxref("border-image-source") }}, {{ cssxref("border-image-slice") }}, {{ cssxref("border-image-width") }}, {{ cssxref("border-image-outset") }}, y {{ cssxref("border-image-repeat") }}.</li>
+     <li>Soporte para sombras de elemento con la propiedad CSS {{ cssxref("box-shadow") }}.</li>
+    </ul>
+
+    <p> </p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>El <a class="external" href="http://dev.w3.org/csswg/css4-background/" title="http://dev.w3.org/csswg/css4-background/">CSS4 Iteración de fondos y Especificación de bordes</a> ya está en progreso; aunque aún no ha alcanzado el estado del Primer Borrador de Trabajo Público, este planea agregar la característica de acortar los bordes (en el  CSS {{ cssxref("border-clip") }}, {{ cssxref("border-clip-top") }}, {{ cssxref("border-clip-right") }}, {{ cssxref("border-clip-bottom") }}, y {{ cssxref("border-clip-left") }} propiedades) o controlar la forma del borde en una esquina (usandopropiedad CSS {{ cssxref("border-corner-shape") }}).</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Multicol", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Multicol") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Se agrega soporte para el diseño fácil de multi-columnas usando CSS {{ cssxref("columns") }}, {{ cssxref("column-count") }}, {{ cssxref("column-fill") }}, {{ cssxref("column-gap") }}, {{ cssxref("column-rule") }}, {{ cssxref("column-rule-color") }}, {{ cssxref("column-rule-style") }}, {{ cssxref("column-rule-width") }}, {{ cssxref("column-span") }}, {{ cssxref("column-width") }}, {{ cssxref("break-after") }}, {{ cssxref("break-before") }}, and {{ cssxref("break-inside") }}.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Speech", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Speech") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Defines the <code>speech</code> media type, an aural formatting model and numerous properties specific for speech-rendering user agents.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Images", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Images") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Se define el tipo de dato {{cssxref("&lt;image&gt;")}}.</p>
+
+    <p>Se extiende la sintaxis  de <code>url()</code> para dar soporte a cortes de imágenes usando <em>media fragments</em>.</p>
+
+    <p>Agregados:</p>
+
+    <ul>
+     <li>La unidad <code>dppx</code> al tipo de dato {{cssxref("&lt;resolution&gt;")}}.</li>
+     <li>La función <code>image()</code> como una alternativa más flexible a  <code>url()</code> para definir una imagen desde una URL.<br>
+      <em><strong>Un riesgo</strong> </em><strong><em>:</em> </strong>Dado el insuficiente soporte por los navegadores<em>, la estandarización de la función <code>image()</code> debe ser postergada a la siguiente iteración de este módulo</em> <em>.</em></li>
+     <li>Soporte para <code>linear-gradient()</code>, <code>repeating-linear-gradient()</code>, <code>radial-gradient()</code> and <code>repeating-radial-gradient()</code>.</li>
+     <li>La capacidad de definir cómo reemplazar el elemento que encaja en sus elementos, usando al propiedad CSS {{ cssxref("object-fit") }}.<br>
+      <em><strong>Un riesgo</strong> </em><strong><em>:</em> </strong> <em> </em>Dado el insuficiente soporte por los navegadores<em>, la estandarización de  {{ cssxref("object-fit") }} y propiedad debe ser posterga a la siguiente iteración de este módulo.</em></li>
+     <li>La capacidad de sobreescribir la resolución y la orientacion de una imagen externa usando el CSS {{ cssxref("image-resolution") }} y {{ cssxref("image-orientation") }} .<br>
+      <em><strong>RIESGO</strong> </em><strong><em>:</em> </strong> <em> debido al bajo soporte de los navegadores, la estandarización de {{ cssxref("image-resolution") }} y {{ cssxref("image-orientation") }} podría posponerse para la próxima iteración</em></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>The <a href="#Images_(Level_4)">CSS Image Values and Replaced Content Level 4</a> which will supersede CSS Image Level 3 is in development and is a {{Spec2("CSS4 Images")}}.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220, 255, 220);"><strong>{{ SpecName("CSS3 Values", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Values") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Makes <code>initial</code> and <code>inherit</code> keywords usable on any CSS property.</p>
+
+    <p>Formally defines the CSS data types of CSS 2.1, that were implicitely defined by their grammar token and some textual precisions.</p>
+
+    <p>Adds:</p>
+
+    <ul>
+     <li>Definition for new font-relative length units: <code>rem</code> and <code>ch</code> .</li>
+     <li>Definition for viewport-relative length units: <code>vw</code>, <code>vh</code>, <code>vmax</code>, and <code>vmin</code> .</li>
+     <li>Precision about the real size of the absolute length units, which are not really absolute, but defined in relation with the <em>reference pixel</em> .</li>
+     <li>Definition for {{ cssxref("&lt;angle&gt;") }}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;resolution&gt;")}}.</li>
+     <li>Normative value to the definition of {{cssxref("&lt;color&gt;")}}, {{cssxref("&lt;image&gt;")}}, and {{ cssxref("&lt;position&gt;") }}.</li>
+     <li>Definition for the {{ cssxref("calc", "calc()") }}, {{ cssxref("attr", "attr()")}}, and <code>toggle()</code> functional notations.<br>
+      <em><strong>At risk:</strong> due to insufficient browser support, standardization of the <code>calc()</code>, <code>attr()</code>, and <code>toggle()</code> functional notations may be postponed to </em> <em>the next iteration of this module</em><em>.</em></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Several types definition, like <code>&lt;ident&gt;</code> and <code>&lt;custom-ident&gt;</code>, have been deferred to CSS Values and Units Module Level 4.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Flexbox", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Flexbox") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Add a flexbox layout to the CSS {{ cssxref("display") }} property and several new CSS properties to control it: {{ cssxref("flex") }}, {{ cssxref("flex-align") }}, {{ cssxref("flex-direction") }}, {{ cssxref("flex-flow") }}, {{ cssxref("flex-item-align") }}, {{ cssxref("flex-line-pack") }}, {{ cssxref("flex-order") }}, {{ cssxref("flex-pack") }}, and {{ cssxref("flex-wrap") }}.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220, 255, 220);"><strong>{{ SpecName("CSS3 Conditional", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Conditional") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Adds features for conditional processing of parts of style sheets, conditioned on capabilities of the browser or the document the style sheet is being applied to. It consists mainly in allowing nested at-rules inside {{ cssxref("@media") }} and the adding of a new CSS at-rule, {{ cssxref("@supports") }}, and a new DOM method {{domxref("CSS.supports()")}}.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220, 255, 220);"><strong>{{ SpecName("CSS3 Text-decoration", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Text-decoration") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Extends:</p>
+
+    <ul>
+     <li>the CSS {{ cssxref("text-decoration") }} property by making it a shorthand for the CSS {{ cssxref("text-decoration-line") }}, {{ cssxref("text-decoration-color") }}, and {{ cssxref("text-decoration-style") }} properties. And adds the {{ cssxref("text-decoration-skip") }}, and {{ cssxref("text-underline-position") }} properties.</li>
+    </ul>
+
+    <p>Adds:</p>
+
+    <ul>
+     <li>Support for East-Asian-script emphasis marks with the CSS {{ cssxref("text-emphasis") }}, {{ cssxref("text-emphasis-style") }}, {{ cssxref("text-emphasis-color") }}, and {{ cssxref("text-emphasis-position") }} properties.</li>
+     <li>Support for script shadows with the CSS {{ cssxref("text-shadow") }} property.</li>
+    </ul>
+
+    <p>Precises:</p>
+
+    <ul>
+     <li>The paint order of the decorations.</li>
+    </ul>
+
+    <p><em><strong>At risk:</strong> due to insufficient browser support, standardization of the <code>text-decoration-skip</code>, line positioning rules and the ability to place both emphasis marks and ruby above the same base text may be postponed to </em> <em>the next iteration of this module</em><em>.</em></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Fonts", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Fonts") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Amends the CSS2.1 Font matching algorithm to be closer to what is really implemented.</p>
+
+    <p>Adds:</p>
+
+    <ul>
+     <li>Support for downloadable fonts via the CSS {{ cssxref("@font-face") }} at-rule.</li>
+     <li>The control of the contextual inter-glyph spacing via the CSS {{ cssxref("font-kerning") }} property.</li>
+     <li>The choice of language-specific glyphs via the CSS {{ cssxref("font-language-override") }} property.</li>
+     <li>The choice of glyphs with specific OpenType features via the CSS {{ cssxref("font-feature-settings") }} property.</li>
+     <li>The control of the aspect ratio to use when fallback fonts are selected via the CSS {{ cssxref("font-size-adjust") }} property.</li>
+     <li>The choice of alternative font faces using the CSS {{ cssxref("font-stretch") }}, {{ cssxref("font-variant-alternates") }}, {{ cssxref("font-variant-caps") }}, {{ cssxref("font-variant-east-asian") }}, {{ cssxref("font-variant-ligatures") }}, {{ cssxref("font-variant-numeric") }}, and {{ cssxref("font-variant-position") }} properties. It also extends the related CSS {{ cssxref("font-variant") }} shorthand property and introduces the {{ cssxref("@font-features-values") }} at-rule.</li>
+     <li>The control of the automatic generation of an oblique or bold face when none are found via the CSS {{ cssxref("font-synthesis") }} property.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(220,255,220);"><strong>{{ SpecName("CSS3 Syntax", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Syntax") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Precises how charsets are determined; minor changes in parsing and tokenization algorithms.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Modules_in_the_refining_phase">Modules in the refining phase</h3>
+
+<p>Specifications that are deemed to be in the <em>refining phase</em> are already fairly stable. Though changes are still expected, they shouldn't create incompatibilities with current implementations; they should mainly define behavior in edge cases.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Basic UI", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Basic UI") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Adds:</p>
+
+    <ul>
+     <li>The ability to tweak the box model using the CSS {{ cssxref("box-sizing") }} property.<br>
+      <strong><em>At risk:</em> </strong> <em> due to insufficient browser support, standardization of the <code>padding</code><code>-box</code> value may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+     <li>Allow the styling of forms according their content using the CSS {{ cssxref(":indeterminate") }}, {{ cssxref(":default") }}, {{ cssxref(":valid") }}, {{ cssxref(":invalid") }}, {{ cssxref(":in-range") }}, {{ cssxref(":out-of-range") }}, {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":read-only") }}, and {{ cssxref(":read-write") }} pseudo-classes and the {{ cssxref("::value") }}, {{ cssxref("::choices") }}, {{ cssxref("::repeat-item") }}, and {{ cssxref("::repeat-index") }} pseudo-elements.<br>
+      <em><strong>At risk:</strong> due to insufficient browser support, standardization of the pseudo-elements {{ cssxref("::value") }}, {{ cssxref("::choices") }}, {{ cssxref("::repeat-item") }}, and {{ cssxref("::repeat-index") }} may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+     <li>Support for icons, defined by the CSS {{ cssxref("icon") }} property simultaneously with the new <code>icon</code> value of the CSS {{ cssxref("content") }} property.<br>
+      <em><strong>At risk:</strong> due to insufficient browser support, standardization of the {{ cssxref("icon") }} property and the <code>icon</code> value may be postponed to CSS4. </em></li>
+     <li>Support for the CSS {{ cssxref("outline-offset") }} property giving more control on the position of the outline.</li>
+     <li>Support for the CSS {{ cssxref("resize") }} property allowing Web authors to control if and how elements should be resized.</li>
+     <li>Support for the CSS {{ cssxref("text-overflow") }} property defining how text overflows, if needed.<br>
+      <em><strong>At risk:</strong> due to insufficient browser support, the 2-value syntax of this property as well as the support for {{cssxref("&lt;string&gt;")}} values may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+     <li>The ability to define the hotspot of a cursor as well as the new <code>none</code>, <code>context-menu</code>, <code>cell</code>, <code>vertical-text</code>, <code>alias</code>, <code>copy</code>, <code>no-drop</code>, <code>not-allowed</code>, <code>nesw-</code><code>resize</code>, <code>nwse-</code><code>resize</code>, <code>col-resize</code>, <code>row-resize</code>, <code>all-scroll</code>, <code>zoom-in</code>, <code>zoom-out</code>, extending the {{ cssxref("cursor") }} property.</li>
+     <li>The ability to specify the sequential navigation order (that is the <em>tabbing order</em> ) using the CSS {{ cssxref("nav-index") }}, {{ cssxref("nav-up") }}, {{ cssxref("nav-right") }}, {{ cssxref("nav-left") }}, {{ cssxref("nav-down") }} properties.<br>
+      <em><strong>At risk:</strong> due to insufficient browser support, standardization of the navigation properties may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+     <li>The ability to control the usage of an IME editor, using the CSS {{ cssxref("ime-mode") }} property.<br>
+      <em><strong>At risk:</strong> due to insufficient browser support, standardization of the {{ cssxref("ime-mode") }} property may be postponed to </em> <em>the next iteration of this module</em> <em>.</em></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>An early list of what could be in the next iteration of the CSS Basic User Interface Module is <a class="external" href="http://wiki.csswg.org/spec/css4-ui" title="http://wiki.csswg.org/spec/css4-ui">available</a>.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Transitions", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Transitions") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Allows the definition of transitions effects between two properties values by adding the CSS {{ cssxref("transition") }}, {{ cssxref("transition-delay") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-property") }}, and {{ cssxref("transition-timing-function") }} properties.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Animations", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Animations") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Allows the definition of animations effects by adding the CSS {{ cssxref("animation") }}, {{ cssxref("animation-delay") }},{{ cssxref("animation-direction") }}, {{ cssxref("animation-duration") }}, {{ cssxref("animation-fill-mode") }}, {{ cssxref("animation-iteration-count") }}, {{ cssxref("animation-name") }}, {{ cssxref("animation-play-state") }}, and {{ cssxref("animation-timing-function") }} properties, as well as the {{ cssxref("@keyframes") }} at-rule.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Transforms", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Transforms") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Adds:</p>
+
+    <ul>
+     <li>the support of bi-dimensional transforms to be applied to any element using the CSS {{ cssxref("transform") }} and {{ cssxref("transform-origin") }} properties. The supported transforms are: <code>matrix</code><code>()</code>, <code>translate()</code>, <code>translateX()</code>, <code>translateY()</code>, <code>scale()</code>, <code>scaleX()</code>, <code>scaleY()</code>, <code>rotate()</code>, <code>skewX()</code>, and <code>skewY()</code>.</li>
+     <li>the support of tri-dimensional transforms to be applied to any element by adding the CSS {{ cssxref("transform-style") }}, {{ cssxref("perspective") }}, {{ cssxref("perspective-origin") }}, and {{ cssxref("backface-visibility") }} properties and extended the {{ cssxref("transform") }} property with the following transforms are: <code>matrix</code> <code>3d()</code>, <code>translate3d()</code>, <code>translateZ()</code>,  <code>scale3d()</code>, <code>scaleZ()</code>, <code>rotate3d()</code>, <code>rotateX</code><code>()</code> ,<code>rotateY</code><code>()</code>, <code>rotateZ()</code>, and <code>perspective()</code>.</li>
+    </ul>
+
+    <p><em><strong>Note:</strong> this specification is a merge of CSS 2D-Transforms, CSS 3D-Transforms and SVG transforms. </em></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255, 255, 220);"><strong>{{ SpecName("CSS3 Fragmentation", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Fragmentation") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Defines how partitions of a Web page should happen, that is page, column breaks, and widows and orphans handling.
+    <p>Adds:</p>
+
+    <ul>
+     <li>Support for defining the behavior of decorations, that is borders and background colors or images, when a box is breaked (at a page, column or line-break) with the CSS {{ cssxref("box-decoration-break") }} property.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Text", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Text") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Extends:</p>
+
+    <ul>
+     <li>the CSS {{ cssxref("text-transform") }} property with the value <code>full-width</code>.</li>
+     <li>the CSS {{ cssxref("text-align") }} property with the value <code>start</code>, <code>end</code>, <code>start end</code>, and <code>match-parent</code> for a better support of documents with multiple directionalities of text.</li>
+     <li>the CSS {{ cssxref("text-align") }} property with a {{cssxref("&lt;string&gt;")}} value to align on that character. This is useful to align number on the decimal point.</li>
+     <li>the CSS {{ cssxref("word-spacing") }} and {{ cssxref("letter-spacing") }} properties with range constraints to control flexibility in justification.</li>
+    </ul>
+
+    <p>Adds:</p>
+
+    <ul>
+     <li>Control on how whitespaces are displayed using the CSS {{ cssxref("text-space-collapse") }} and {{ cssxref("tab-size") }} properties.</li>
+     <li>Control on line breaks and word boundaries using the CSS {{ cssxref("line-break") }}, {{ cssxref("word-break") }}, {{ cssxref("hyphens") }}, {{ cssxref("text-wrap") }}, {{ cssxref("overflow-wrap") }}, and {{ cssxref("text-align-last") }} properties.</li>
+     <li>Control on how justification is happening, in order to support more type of scripts, using the CSS {{ cssxref("text-justify") }} property.</li>
+     <li>Control on edge effect using the CSS {{ cssxref("text-indent") }} and {{ cssxref("hanging-punctuation") }} properties.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>A few features present in early CSS Text Level 3 draft have being <a class="external" href="http://dev.w3.org/csswg/css3-text/#recent-changes" title="http://dev.w3.org/csswg/css3-text/#recent-changes">postponed to the next iteration of this module</a> .</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,255,220);"><strong>{{ SpecName("CSS3 Variables", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Variables") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Defines a mechanism allowing to define variables in CSS.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Modules_in_the_revising_phase">Modules in the revising phase</h3>
+
+<p>Modules that are in the revising phase are much less stable than those in the refining phase. Often the syntax is still under scrutiny and may evolve a lot, in a non-compatible way. Alternative syntax are tested and often implemented.</p>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: rgb(255,160,100);"><strong>{{ SpecName("CSS3 Writing Modes", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Writing Modes") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Defines the writing modes of both horizontal and vertical scripts and precises how the CSS {{ cssxref("direction") }} and {{ cssxref("unicode-bidi") }} properties interact with the new CSS {{ cssxref("text-orientation") }} property, and extends them where needed.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Modules_in_the_exploring_phase">Modules in the exploring phase</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS4 Images", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS4 Images") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">
+    <p>Extends:</p>
+
+    <ul>
+     <li>the <code>image()</code> functional notation to describe the directionality of the image (<code>rtl</code> or <code>ltr</code>), allowing for bidi-sensitive images.</li>
+     <li>the {{ cssxref("image-orientation") }} property by adding the keyword <code>from-image</code>, allowing to follow EXIF data stored into images to be considered.</li>
+    </ul>
+
+    <p>Adds:</p>
+
+    <ul>
+     <li>the <code>image-set()</code> functional notation to allow the definition to equivalent images at different resolution allowing for resolution-negotiated selection of images.</li>
+     <li>the <code>element()</code> functional notation allowing the use of part of the page as image.</li>
+     <li>the <code>cross-fade()</code> functional notation allowing to refer to intermediate images when transitioning between two images and defines the interpolation between two images.</li>
+     <li>the <code>conic-gradient()</code> and <code>repeating-conic-gradient()</code> functional notation describing a new type of gradient.</li>
+     <li>the {{cssxref("image-rendering")}} property that allow to define how resize of the object should be handled.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Device", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Device") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Adds a new at-rule, {{ cssxref("@viewport") }}, allowing to specify the size, zoom factor, and orientation of the viewport that is used as the base for the initial containing block.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Grid", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Grid") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Add a grid layout to the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" title=""><code>display</code></a> property and several new CSS properties to control it: {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid-auto-position")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-template")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template-rows")}}, and {{cssxref("grid-template-columns")}}.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 GCPM", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 GCPM") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Adds the ability to tailor printed version of a document by allowing to control header, footer but also references tables like indexes or tables of content.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Exclusions and Shapes", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Exclusions and Shapes") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Extends the floats mechanism to define exclusion regions in any positioning scheme. Adds the notion of shapes, in which content must flows.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Lists", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Lists") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Extends the list counter mechanism so that list markers can be styled and Web developers can define new list counter schemes.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Regions", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Regions") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Defines a new mechanism allowing content to flow across, eventually non-contiguous, multiple areas called regions.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Device", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Device") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2">Adds a new at-rule, {{ cssxref("@viewport") }}, allowing to specify the size, zoom factor, and orientation of the viewport that is used as the base for the initial containing block.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("Filters 1.0", "", "") }}</strong></td>
+   <td>{{ Spec2("Filters 1.0") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Template", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Template") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Sizing", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Sizing") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS Line Grid", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS Line Grid") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Positioning", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Positioning") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Ruby", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Ruby") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSSOM", "", "") }}</strong></td>
+   <td>{{ Spec2("CSSOM") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Overflow", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Overflow") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Font Loading", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Font Loading") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Display", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Display") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS Scope", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS Scope") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS4 Media Queries", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS4 Media Queries") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS Non-element Selectors", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS Non-element Selectors") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("Geometry Interfaces", "", "") }}</strong></td>
+   <td>{{ Spec2("Geometry Interfaces") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F66;"><strong>{{ SpecName("CSS3 Inline", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Inline") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Modules_in_the_rewriting_phase">Modules in the rewriting phase</h3>
+
+<p>Modules that are in the rewriting phase are outdated and require to be rewritten. The syntax is still under scrutiny and may evolve a lot, in a non-compatible way. Alternative syntaxes are tested and often implemented.</p>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F33;"><strong>{{ SpecName("CSS3 Box", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Box") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F33;"><strong>{{ SpecName("CSS3 Content", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Content") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="fullwidth-table" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td style="width: 30%; background-color: #F33;"><strong>{{ SpecName("CSS3 Inline Layout", "", "") }}</strong></td>
+   <td>{{ Spec2("CSS3 Inline Layout") }}</td>
+  </tr>
+  <tr>
+   <td colspan="2"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

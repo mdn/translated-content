@@ -1,0 +1,171 @@
+---
+title: Comandos
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Comandos
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/Commands
+---
+<p> </p>
+
+<p>Un comando es una operación o función que se puede invocar.</p>
+
+<h3 id="El_elemento_comando" name="El_elemento_comando">El elemento comando</h3>
+
+<p>El elemento <code><a href="/es/XUL/Elementos#command" title="es/XUL/Elementos#command">command</a></code> se usa para crear comandos los cuales pueden ser usados para llevar a cabo operaciones. Usted no necesitaría usar comandos, ya que usted puede invocar un script para manejar las cosas. Sin embargo, un comando tiene la ventaja de que puede ser deshabilitado automáticamente cuando se necesite y puede ser invocado externamente sin necesidad de saber de los detalles de su implementación. Los comandos son una manera adecuada de abstraer operaciones del código. Además los comandos son muy útiles para aplicaciones extensas.</p>
+
+<p>Para empezar, con el fin de implementar los comandos del menú portapapeles, cortar, copiar y pegar usted puede usar comandos. Si no usara comandos, usted necesitaría averiguar cual campo tiene el foco (focus), luego verificar para asegurarse que la operación es la adecuada para ese elemento. Además, los comandos del menú necesitarían ser habilitados y deshabilitados dependiendo de si el elemento enfocado haya seleccionado texto o no, y para las operaciones de pegar (paste), si hay algo adecuado en el portapapeles (clipboard) para pegar. Como puede ver, esto se vuelve complicado. Usando comandos, gran parte del trabajo es manejada para usted. Usted puede usar un comando para cualquier operación. Mozilla los usa para casi todos los comandos del menú. Ademas, campos de texto y otros accesorios tienen un número de comandos ya soportados y que usted puede invocar. Usted debería usarlos cuando la operación depende de cual elemento es enfocado.</p>
+
+<p>Un comando es identificado por su atributo <code><a href="/es/XUL/Atributos#id" title="es/XUL/Atributos#id">id</a></code>. Mozilla usa la convención de que el id del comando comience con '<code>cmd_</code>'. Usted probablemente querrá usar el mismo id si un comando está siendo usado, sin embargo para sus comandos propios, usted puede usar cualquier id de comando que desee. Para evitar conflictos, usted puede desear incluir el nombre de la aplicación en el id del comando. Una manera simple de usar comandos es como sigue:</p>
+
+<p> </p>
+
+<h4 id="Ejemplo_un_s.C3.B3lo_comando" name="Ejemplo:_un_s.C3.B3lo_comando">Ejemplo: un sólo comando</h4>
+
+<p><strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;command id="cmd_openhelp" oncommand="alert('Ayuda!');"/&gt;
+&lt;button label="Ayuda" command="cmd_openhelp"/&gt;
+</pre>
+
+<p>En este ejemplo, en vez de colocar el atributo <code><a href="/Es/XUL/Atributos#oncommand" title="es/XUL/Atributos#oncommand">oncommand</a></code> en el <code><a href="/es/XUL/Elementos#button" title="es/XUL/Elementos#button">button</a></code>, simplemente lo colocamos sobre un elemento <code><a href="/es/XUL/Elementos#command" title="es/XUL/Elementos#command">command</a></code>. Los dos son entonces enlazados usando el atributo <code><a href="/Es/XUL/Atributos#command" title="es/XUL/Atributos#command">command</a></code> el cual tiene el valor del <code><a href="/Es/XUL/Atributos#id" title="es/XUL/Atributos#id">id</a></code> del comando. El resultado es que cuando el botón es presionado, el comando: '<code>cmd_openhelp</code>' es invocado.</p>
+
+<p><br>
+ Hay dos ventajas al usar ésta técnica:</p>
+
+<ul>
+ <li>Primero, que transfiere todas sus operaciones a comandos los cuales pueden ser agrupados juntos en una sección del archivo XUL. Esto significa que el código está todo junto y no esparcido por el código UI.</li>
+</ul>
+
+<ul>
+ <li>La otra ventaja es que muchos botones u otros elementos UI pueden ser enlazados al mismo comando. Para empezar, usted puede tener un <a href="/es/Tutorial_de_XUL/Menús_de_Barras_Simples" title="es/Tutorial de XUL/Menús de Barras Simples">menu item</a>, un <a href="/es/Tutorial_de_XUL/Barra_de_Herramientas" title="es/Tutorial_de_XUL/Barra_de_Herramientas">botón de barra de herramientas</a> y un <a href="/es/Tutorial_de_XUL/Atajos_de_teclado" title="es/Tutorial_de_XUL/Atajos_de_teclado">atajo de teclado</a> todos para la misma operación. En vez de repetir el código tres veces, usted puede enlazar todos los tres al mismo comando. Normalmente, usted solo enlazará elementos que enviarían un evento de comando.</li>
+</ul>
+
+<p>Adicionalmente:</p>
+
+<ul>
+ <li>Si usted coloca el atributo <code><a href="/Es/XUL/Atributos#disabled" title="es/XUL/Atributos#disabled">disabled</a></code> en el comando , el comando será deshabilitado y no será invocado.</li>
+ <li>Cualquier botón y objeto del menú enlazados a éste serán deshabilitados automáticamente.</li>
+ <li>Si usted rehabilita el comando, los botones se habilitan de nuevo.</li>
+</ul>
+
+<h4 id="Ejemplo_toggling_command_disabled" name="Ejemplo:_toggling_command_disabled">Ejemplo: toggling <code>command</code> disabled</h4>
+
+<p><strong>Ejemplo 2</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_commands_2.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;command id="cmd_openhelp" oncommand="alert('Ayuda');"/&gt;
+&lt;button label="Ayuda" command="cmd_openhelp"/&gt;
+&lt;button label="Más ayuda" command="cmd_openhelp"/&gt;
+
+&lt;button label="Desactivado"
+        oncommand="document.getElementById('cmd_openhelp').setAttribute('disabled','true');"/&gt;
+&lt;button label="Activado"
+        oncommand="document.getElementById('cmd_openhelp').removeAttribute('disabled');"/&gt;
+</pre>
+
+<p>En este ejemplo, ambos botones usan el mismo comando. Cuando un botón deshabilitar es presionado, el comando es deshabilitado al colocar su atributo <code><a href="/es/XUL/Atributos#disabled" title="es/XUL/Atributos#disabled">desactivado</a></code>, y ambos botones serán deshabilitados también.</p>
+
+<p>Es normal colocar un grupo de comandos dentro de un elemento</p>
+
+<p><code><a href="/es/XUL/Elementos#commandset" title="es/XUL/Elementos#commandset">commandset</a></code>, junto cerca del inicio del archivo XUL, tal como en el siguiente:</p>
+
+<pre>&lt;commandset&gt;
+  &lt;command id="cmd_open" oncommand="alert('Abrir!');"/&gt;
+  &lt;command id="cmd_help" oncommand="alert('Ayuda!');"/&gt;
+&lt;/commandset&gt;
+</pre>
+
+<p>Un comando es invocado cuando el usuario activa el botón u otro elemento agregado al comando. Usted puede también invocar un comando al llamar el método <code><a href="/es/XUL/M%C3%A9todos#doCommand" title="es/XUL/Métodos#doCommand">doCommand</a></code> cualquier elemento de l<code><a href="/es/XUL/Elementos#command" title="es/XUL/Elementos#command">comando</a></code> o un elemento agregado al comando tal como un botón.</p>
+
+<h3 id="Command_Dispatching" name="Command_Dispatching">Command Dispatching</h3>
+
+<p>Es posible usar comandos sin el elemento <code><a href="/es/XUL/Elementos#command" title="es/XUL/Elementos#command">comando</a></code> elements, o al menos, sin añadir un atributo <code><a href="/es/XUL/Atributos#oncommand" title="es/XUL/Atributos#oncommand">oncommand</a></code> al comando. In this case, the command will not invoke a script directly, but instead, find an element or function which will handle the command. This function may be separate from the XUL itself, and might be handled internally by a widget. In order to find something to handle the command, XUL uses an object called a command dispatcher. This object locates a handler for a command. A handler for a command is called a controller. So, essentially, when a command is invoked, the command dispatcher locates a controller which can handle the command. You can think of the <code><a href="/es/XUL/Elementos#command" title="es/XUL/Elementos#command">comando</a></code> element as a type of controller for the command.</p>
+
+<p>The command dispatcher locates a controller by looking at the currently focused element to see if it has a controller which can handle the command. XUL elements have a <code><a href="/es/XUL/Propiedades#controllers" title="es/XUL/Propiedades#controllers">controladores</a></code> property which is used to check. You can use the <code><a href="/es/XUL/Propiedades#controllers" title="es/XUL/Propiedades#controllers">controladores</a></code> property to add your own controllers. You might use this to have a listbox respond to cut, copy and paste operations, for instance. An example of this will be provided later. By default, only textboxes have a controller that does anything. The textbox controller handles clipboard operations, selection, undo and redo as well as some editing operations. Note that an element may have multiple controllers, which will all be checked.</p>
+
+<p>If the currently focused element does not have a suitable controller, the window is checked next. The window also has a <code><a href="/es/XUL/Propiedades#controllers" title="es/XUL/Propiedades#controllers">controladores</a></code> property which you can modify if desired. If the focus is inside a frame, each frame leading to the top-level window is checked as as well. This means that commands will work even if the focus is inside a frame. This works well for a browser, since editing commands invoked from the main menu will work inside the content area. Note that HTML also has a commands and controller system although you can't use it on unprivileged web pages, but you may use it from, for example, a browser extension. If the window doesn't provide a controller capable of handling the command, nothing will happen.</p>
+
+<p>You can get the command dispatcher using the document's <code>commandDispatcher</code> property, or you can retrieve it from the controllers list on an element or a window. The command dispatcher contains methods for retrieving controllers for commands and for retrieving and modifying the focus.</p>
+
+<h4 id="A.C3.B1adiendo_controladores" name="A.C3.B1adiendo_controladores">Añadiendo controladores</h4>
+
+<p>You can implement your own controllers to respond to commands. You could even override the default handling of a command with careful placement of the controller. A controller is expected to implement four methods, which are listed below:</p>
+
+<dl>
+ <dt>supportsCommand (command) </dt>
+ <dd>this method should return true if the controller supports a command. If you return false, the command is not handled and command dispatcher will look for another controller. A single controller may support multiple commands.</dd>
+ <dt>isCommandEnabled (command) </dt>
+ <dd>this method should return true if the command is enabled, or false if it is disabled. Corresponding buttons will be disabled automatically.</dd>
+ <dt>doCommand (command) </dt>
+ <dd>execute the command. This is where you would put the code to handle the command.</dd>
+ <dt>onEvent (event) </dt>
+ <dd>this method handles an event.</dd>
+</dl>
+
+<h5 id="Ejemplo_implementaci.C3.B3n_del_controlador" name="Ejemplo:_implementaci.C3.B3n_del_controlador">Ejemplo: implementación del controlador</h5>
+
+<p>Let's assume that we want to implement a listbox that handles the delete command. When the user selects Delete from the menu, the listbox deletes the selected row. In this case, you just need to attach a controller to a listbox which will perform the action in its <code>doCommand</code> method.</p>
+
+<p>Try opening the example below (<a href="https://developer.mozilla.org/samples/xultu/examples/commands.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/commands.xul">Ver en funcionamiento</a>) in a browser window and selecting items from the list. You'll notice that the Delete command on the browser's Edit menu is enabled and that selecting it will delete a row. (See <a href="/Talk:es/XUL_Tutorial/Commands" title="Talk:es/XUL_Tutorial/Commands">Discussion</a> about opening this example). The example below isn't completely polished. Really, we should ensure that the selection and focus is adjusted appropriately after a deletion.</p>
+
+<pre>&lt;window id="controller-example" title="Ejemplo de controlador" onload="init();"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;script&gt;
+function init()
+{
+  var list = document.getElementById("laLista");
+
+  var listController = {
+    supportsCommand : function(cmd){ return (cmd == "cmd_delete"); },
+    isCommandEnabled : function(cmd){
+      if (cmd == "cmd_delete") return (list.selectedItem != null);
+      return false;
+    },
+    doCommand : function(cmd){
+      list.removeItemAt(list.selectedIndex);
+    },
+    onEvent : function(evt){ }
+  };
+
+  list.controllers.appendController(listController);
+}
+&lt;/script&gt;
+
+&lt;listbox id="laLista"&gt;
+  &lt;listitem label="Ocean"/&gt;
+  &lt;listitem label="Desert"/&gt;
+  &lt;listitem label="Jungle"/&gt;
+  &lt;listitem label="Swamp"/&gt;
+&lt;/listbox&gt;
+
+&lt;/window&gt;
+</pre>
+
+<p>The controller (listController) implements the four methods described above. The <code>supportsCommand</code> method returns true for the 'cmd_delete' command, which is the name of the command used when the Delete menu item is selected. For other commands, false should be returned since the controller does not handle any other commands. If you wanted to handle more commands, check for them here, since you will often use a single controller for multiple related commands.</p>
+
+<p>The <code>isCommandEnabled</code> method returns true if the command should be enabled. In this case, we check if there is a selected item in the listbox and return true if there is. If there is no selection, false is returned. If you delete all the rows in the example, the Delete command will become disabled. You may have to click the listbox to update the menu in this simple example. The <code>doCommand</code> method will be called when the Delete menu item is selected, and this will cause the selected row in the listbox to be deleted. Nothing needs to happen for the <code>onEvent</code> method, so no code is added for this method.</p>
+
+<h4 id="Override_Default_Controller" name="Override_Default_Controller">Override Default Controller</h4>
+
+<p>We attach this controller to the listbox by calling the <code>appendController</code> method of the listbox's <code><a href="/es/XUL/Propiedades#controllers" title="es/XUL/Propiedades#controllers">controladores</a></code>. The <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIControllers.html">el objeto controlador</a> has a number of methods that may be used to manipulate the controllers. For instance, there is also an <code>insertControllerAt</code> method which inserts a controller into an element before other ones. This might be useful to override commands. For example, the following example will disable pasting into a textbox.</p>
+
+<pre>var tboxController = {
+  supportsCommand : function(cmd){ return (cmd == "cmd_paste"); },
+  isCommandEnabled : function(cmd){ return false; },
+  doCommand : function(cmd){ },
+  onEvent : function(evt){ }
+};
+
+document.getElementById("tbox").controllers.insertControllerAt(0,tboxController);
+</pre>
+
+<p>In this example, we insert the controller at index 0, which means before any others. The new controller supports the 'cmd_paste' command and always indicates that the command is disabled. The default textbox controller never gets called because the command dispatcher found the controller above to handle the command first.</p>
+
+<p>Seguimos con la <a href="/es/Tutorial_de_XUL/Actualizar_comandos" title="es/Tutorial_de_XUL/Actualizar_comandos">actualización de comandos</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Foco_y_Selección" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Actualizar_comandos">Siguiente  »</a></p>
+</div>

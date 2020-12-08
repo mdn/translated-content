@@ -1,0 +1,128 @@
+---
+title: Más funciones de menú
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Más_funciones_de_menú
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - para_revisar
+translation_of: Archive/Mozilla/XUL/Tutorial/More_Menu_Features
+---
+<p>En esta sección, veremos cómo crear submenús y menús con marcas de verificación o <em>checks</em>.</p>
+
+<h3 id="Creando_submen.C3.BAes" name="Creando_submen.C3.BAes">Crear submenús</h3>
+
+<p>Puedes crear submenús dentro de otros menús (menús jerarquizados ) usando los elementos existentes. Recuerda que puedes poner cualquier elemento dentro de un <code>menupopup</code>. Ya hemos visto cómo colocar <code>menuitem</code>s y <code>menuseparator</code>s en <code>menupopup</code>s. Sin embargo , puedes crear submenús simplemente colocando el elemento de <code><a href="/es/XUL/Elementos" title="es/XUL/Elementos">menu</a></code> dentro del elemento del <code><a href="/es/XUL/Elementos" title="es/XUL/Elementos">menupopup</a></code> . Esto funciona porque el elemento del menú es válido aún cuando no esté colocado directamente en la barra de menú. El ejemplo de abajo crea un submenú simple dentro del menú de <strong>File</strong>.</p>
+
+<p><strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_1.xul">Ver en funcionamiento</a></p>
+
+<div class="float-right"><img alt="nested-menu.jpg" class="default internal" src="/@api/deki/files/4817/=nested-menu.jpg"></div>
+
+<pre>&lt;toolbox flex="1"&gt;
+  &lt;menubar id="sample-menubar"&gt;
+    &lt;menu id="file-menu" label="Archivo"&gt;
+      &lt;menupopup id="file-popup"&gt;
+        &lt;menu id="new-menu" label="Nuevo"&gt;
+          &lt;menupopup id="new-popup"&gt;
+            &lt;menuitem label="Ventana"/&gt;
+            &lt;menuitem label="Mensage"/&gt;
+          &lt;/menupopup&gt;
+        &lt;/menu&gt;
+        &lt;menuitem label="Abrir"/&gt;
+        &lt;menuitem label="Guardar"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem label="Salir"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+
+<h3 id="Adici.C3.B3n_de_un_men.C3.BA_al_archivo_de_b.C3.BAsqueda_del_ejemplo" name="Adici.C3.B3n_de_un_men.C3.BA_al_archivo_de_b.C3.BAsqueda_del_ejemplo">Adición de un menú a nuestro ejemplo con el Buscador de archivos</h3>
+
+<p>Agreguemos un menú al dialogo de búsqueda de archivos. Agregaremos solo unos pocos comandos simples a un menú <strong>File</strong> y un menú <strong>Edit</strong>. Este es similar al ejemplo de arriba.</p>
+
+<pre class="eval">&lt;toolbox&gt;
+
+ <span class="highlightred">&lt;menubar id="findfiles-menubar"&gt;
+  &lt;menu id="file-menu" label="Archivo" accesskey="f"&gt;
+    &lt;menupopup id="file-popup"&gt;
+      &lt;menuitem label="Abrir la búsqueda..." accesskey="o"/&gt;
+      &lt;menuitem label="Guardar la búsqueda..." accesskey="s"/&gt;
+      &lt;menuseparator/&gt;
+      &lt;menuitem label="Cerrar" accesskey="c"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+  &lt;menu id="edit-menu" label="Editar" accesskey="e"&gt;
+    &lt;menupopup id="edit-popup"&gt;
+      &lt;menuitem label="Cortar" accesskey="t"/&gt;
+      &lt;menuitem label="Copiar" accesskey="c"/&gt;
+      &lt;menuitem label="Pegar" accesskey="p" disabled="true"/&gt;
+    &lt;/menupopup&gt;
+  &lt;/menu&gt;
+ &lt;/menubar&gt;</span>
+
+&lt;toolbar id="findfiles-toolbar&gt;
+</pre>
+
+<div class="float-right"><img alt="fnd-dlg-sample.jpg" class="default internal" src="/@api/deki/files/4818/=fnd-dlg-sample.jpg"></div>
+
+<p>Aquí hemos agregado dos menús con varios comandos en ellos. Observa cómo la barra de menús fue agregada dentro de la caja. Los tres puntos después de Open y Save son la forma habitual en la que se indica al usuario que se abrirá un dialogo cuando seleccione el comando. Se han agregado claves de acceso para cada menú y elemento de menú. Verás en la imagen que esta letra ha sido subrayada en la etiqueta del menú. Además, el comando Pegar (Paste) ha sido deshabilitado. Asumiremos que no hay nada que pegar.</p>
+
+<p> <strong>Ejemplo de Encontrar archivos </strong> : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-advmenu.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-advmenu.xul">Ver en funcionamiento</a></p>
+
+<h3 id="A.C3.B1adiendo_casillas_seleccionadas_en_los_men.C3.BAes" name="A.C3.B1adiendo_casillas_seleccionadas_en_los_men.C3.BAes">Añadir marcas de verificación (checkmarks) a los menús</h3>
+
+<p>Muchas aplicaciones tienen elementos de menú que tienen marcas de verificación <em><em>o</em> </em><em>checks</em>. Por ejemplo, una característica que este activada tiene una marca de verificación o <em>check</em> al lado del comando y una característica que está deshabilitada no lo tiene. Cuando el usuario selecciona el menú, cambia el estado de la marca o <em>check</em> (habilitado/deshabilitado). Puedes además agregar botones redondos en los elementos del menú.</p>
+
+<p>Las marcas de verificación o <em>checks </em>se crean de manera similar a los elementos <code><a href="../../../../en/XUL/checkbox" rel="custom nofollow">checkbox</a></code> y <code><a href="../../../../en/XUL/radio" rel="custom nofollow">radio</a></code> . Esto implica el uso de dos atributos: <code><a href="/Es/XUL/Atributos#button.type" title="Es/XUL/Atributos#button.type">type</a></code> para indicar el tipo de  marca o <em>check</em> y <code><a href="/Es/XUL/Atributos#menuitem.name" title="Es/XUL/Atributos#menuitem.name">name</a></code> para agrupar comandos. El ejemplo de abajo crea un menú con una marca de verificación.</p>
+
+<p><strong>Ejemplo 2</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_2.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;toolbox&gt;
+  &lt;menubar id="options-menubar"&gt;
+    &lt;menu id="options_menu" label="Opciones"&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem id="backups" label="Hacer copias de seguridad" type="checkbox"/&gt;
+        &lt;menuitem id="backups" label="Enviar un email al administrador" type="checkbox" checked="true"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+
+<p>El atributo <code><a href="/es/XUL/Atributo#button.type" title="es/XUL/Atributo#button.type">type</a></code> se ha agregado con el fin poder marcar o desmarcar un elemento del menú. Al establecer su valor a <code>checkbox</code> , el elemento del menú puede marcarse o desmarcarse seleccionando dicho elemento.</p>
+
+<h4 id="Men.C3.BA_con_botones_de_selecci.C3.B3n" name="Men.C3.BA_con_botones_de_selecci.C3.B3n">Menú con botones circulares</h4>
+
+<p>Además de las marcas estándares, puedes crear <em>checks</em> con estilo circular cambiando el valor de <code><a href="/Es/XUL/Atributos#button.type" title="Es/XUL/Atributos#button.type">type</a></code> a el valor de <code>radio</code>. Un botón circular si usa si se desea agrupar varios elementos del menús pero se puede seleccionar solo uno a la vez. Un ejemplo puede ser a menú de Fuente (font) donde únicamente puede seleccionarse una fuente a la vez. Cuando se selecciona otro elemento, el seleccionado previamente queda deshabilitado.</p>
+
+<p>Con el fin de agrupar un conjunto de elementos del menú, tienes que poner un atributo <code><a href="/Es/XUL/Atributos#menuitem.name" title="Es/XUL/Atributos#menuitem.name">name</a></code> a cada uno. Establece el valor para la misma cadena. El ejemplo siguiente lo muestra:</p>
+
+<p><strong>Ejemplo 3</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_3.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_advmenu_3.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;toolbox&gt;
+  &lt;menubar id="planets-menubar"&gt;
+    &lt;menu id="planet-menu" label="Planetas"&gt;
+      &lt;menupopup&gt;
+        &lt;menuitem id="júpiter" label="Júpiter" type="radio" name="ringed"/&gt;
+        &lt;menuitem id="saturno" label="Saturno" type="radio" name="ringed" checked="true"/&gt;
+        &lt;menuitem id="uranus" label="Uranus" type="radio" name="ringed"/&gt;
+        &lt;menuseparator/&gt;
+        &lt;menuitem id="tierra" label="Tierra" type="radio" name="inhabited" checked="true"/&gt;
+        &lt;menuitem id="luna" label="Luna" type="radio" name="inhabited"/&gt;
+      &lt;/menupopup&gt;
+    &lt;/menu&gt;
+  &lt;/menubar&gt;
+&lt;/toolbox&gt;
+</pre>
+
+<p>Si pruebas a hacer este ejemplo, encontrarás que de los tres primeros elementos del menú, solamente se puede seleccionar uno. Se agrupan juntos porque todos tienen el mismo nombre. El último elemento del menú es Earth, aunque es un botón circular, no es parte de este grupo porque tiene un nombre diferente.</p>
+
+<p>Desde luego, los elementos agrupados deben estar dentro del mismo menú. No se deben ubicar cerca unos de otros en el menú, además no tiene mucho sentido que lo estén.</p>
+
+<p>Seguimos con la <a href="/es/Tutorial_de_XUL/Menús_emergentes" title="es/Tutorial_de_XUL/Menúes_emergentes">creación de menús emergentes</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Menús_de_Barras_Simples" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Menús_emergentes">Siguiente  »</a></p>
+</div>

@@ -1,0 +1,106 @@
+---
+title: Características de una ventana
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Características_de_una_ventana
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Features_of_a_Window
+---
+<p>Ya hemos visto algunas de las características de las ventanas. En esta sección veremos algunas más.</p>
+
+<h3 id="Creando_otra_ventana" name="Creando_otra_ventana">Creando otra ventana</h3>
+
+<p>Puedes crear otra ventana para tu aplicación de la misma manera como lo harías para crear la primera. Solamente crea un segundo archivo XUL con el código de la ventana en él. Como en HTML, puedes usar la función <code><a href="es/DOM/window.open">window.open()</a></code> para abrir la segunda ventana. Esta función devolverá una referencia de la nueva ventana abierta. Puedes usar esta referencia para llamar funciones de la otra ventana.</p>
+
+<p>La función open toma tres argumentos. El primero es la url del archivo que quieres abrir. El segundo es un nombre interno para la nueva ventana. El tercero es una lista de indicadores. El flag ‘chrome’ es importante para abrir la ventana como un archivo chrome. Si no agregas el flag ‘chrome’, el archivo se abrirá como el contenido de una ventana del navegador.</p>
+
+<p>Por ejemplo:</p>
+
+<pre>var myWin =
+window.open("chrome://findfile/content/findfile.xul","findfile","chrome");
+</pre>
+
+<h3 id="Especificando_el_ancho_y_alto" name="Especificando_el_ancho_y_alto">Especificando el ancho y alto</h3>
+
+<p>Deben haber notado que siempre que algunos elementos fueron agregados a una ventana, el ancho de la ventana se expande para hacer caber los nuevos elementos. En realidad la ventana es solo una caja (box) que es flexible y con orientación vertical por defecto. También puedes especificar el ancho y alto directamente en la etiqueta <code><a href="es/XUL/Elementos/window">window</a>. Esto causa que la ventana se muestre con un tamaño específico. Si no se especifica, el tamaño se determinará por los elementos que contiene. </code></p>
+
+<pre>&lt;window
+id="findfile-window"
+title="Find Files"
+width="400"
+height="450"
+
+xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+</pre>
+
+<p>En este ejemplo, la ventana se abrirá con un ancho de 400 píxeles y un alto de 450 píxeles. Incluso si no contiene suficientes elementos como para abarcar este tamaño, de todas maneras la ventana se abrirá con este tamaño y quedará espacio en blanco en el área no ocupada. Si contiene demasiados elementos, la ventana no será lo suficientemente grande como para contener los elementos. El usuario deberá ajustar el tamaño del dialogo. Cuando especificas el alto y ancho de una ventana debes tener cuidado para que la ventana no resulte demasiado chica o demasiado grande. Nota que debes especificar ambos, el ancho y alto. Si especificas solo uno, el otro se tomará como 0. Para que la ventana ajuste automáticamente su tamaño, no especifiques ni el ancho ni el alto. El ancho y alto especifican solo el tamaño inicial de la ventana. El usuario podrá cambiar el tamaño de la ventana, asumiendo que la ventana sea dimensionable (‘resizable’) (ver más abajo).</p>
+
+<h3 id="Otras_caracter.C3.ADsticas_de_las_ventanas" name="Otras_caracter.C3.ADsticas_de_las_ventanas">Otras características de las ventanas</h3>
+
+<p>Los indicadores de abajo se pueden pasar como parte del tercer argumento a la función window.open. Tu sistema operativo puede que no los soporte todos. También puedes usar cualquiera de los indicadores ya existentes, los cuales deberías encontrar en una referencia de JaveScript. Puedes desactivar alguna característica especificándolo con ‘no’, por ejemplo ‘dialog=no’.</p>
+
+<dl>
+ <dt>alwaysLowered </dt>
+ <dd>La ventana aparecerá siempre debajo de otras ventanas.</dd>
+</dl>
+
+<dl>
+ <dt>alwaysRaised </dt>
+ <dd>La ventana aparecerá siempre arriba de otras ventanas.</dd>
+</dl>
+
+<dl>
+ <dt>centerscreen </dt>
+ <dd>La ventana al abrirse se centrará.</dd>
+</dl>
+
+<dl>
+ <dt>dependent </dt>
+ <dd>La ventana aparecerá siempre en relación a la ventana que la abrió. Si la ventana que abrió la nueva ventana se mueve, la nueva ventana se mueve junto a ella.</dd>
+</dl>
+
+<dl>
+ <dt>dialog </dt>
+ <dd>La ventana es un dialogo, el cual puede aparecer diferentemente.</dd>
+</dl>
+
+<dl>
+ <dt>modal </dt>
+ <dd>El dialogo es modal. No se podrá interactuar con la ventana que abrió el dialogo hasta que este se cierre.</dd>
+</dl>
+
+<dl>
+ <dt>resizable </dt>
+ <dd>El usuario puede cambiar el tamaño de la ventana.</dd>
+</dl>
+
+<h3 id="Depurando_una_ventana" name="Depurando_una_ventana">Depurando una ventana</h3>
+
+<p>Otra característica útil solo durante el desarrollo es activar el modo de depuración de una ventana. Para hacerlo, agrega un atributo debug con valor ‘true’ a la ventana. Esto hará que la ventana muestre los ‘box’ y los ‘spacers’ de forma que puedas ver lo que está ocurriendo. Este ejemplo muestra como usarlo.</p>
+
+<pre>&lt;window
+id="findfile-window"
+title="Find Files"
+debug="true"
+xmlns:html="http://www.w3.org/1999/xhtml"
+xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+</pre>
+
+<p>La imagen de abajo muestra el efecto cuando se aplica a una ventana sencilla.</p>
+
+<p> </p>
+
+<ul>
+ <li><a class="external" href="http://xulplanet.com/tutorials/xultu/images/featwin1.jpg">Cajas azules indican cajas horizontales. </a></li>
+ <li><a class="external" href="http://xulplanet.com/tutorials/xultu/images/featwin1.jpg">Cajas rojas indican cajas verticales. Puedes ver la ventana es una caja vertical. </a></li>
+ <li><a class="external" href="http://xulplanet.com/tutorials/xultu/images/featwin1.jpg">Zigzags indican los elementos flexibles. En este caso, el espaciador es flexible entonces un zigzag aparece sobre él. </a></li>
+ <li><a class="external" href="http://xulplanet.com/tutorials/xultu/images/featwin1.jpg">Líneas indican donde están los elementos inflexibles, en este caso el texto, el ’input field’ y los botones. </a></li>
+ <li><a class="external" href="http://xulplanet.com/tutorials/xultu/images/featwin1.jpg">Los cuadrados blancos indican los márgenes de los elementos. </a></li>
+</ul>
+
+<p><span class="external">En la imagen, puede que notes algunas cajas (boxes) adicionales. Esto es debido a que cada elemento XUL está hecho de un número de cajas (boxes), definidas con XBL. Las puedes ignorar. Puedes especificar el atributo debug en cualquier caja, no solo en la ventana (window). </span></p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Ejemplo_de_XBL" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Creando_Diálogos">Siguiente  »</a></p>
+</div>

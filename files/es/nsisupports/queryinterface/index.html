@@ -1,0 +1,43 @@
+---
+title: QueryInterface
+slug: nsISupports/QueryInterface
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsISupports#QueryInterface()
+---
+<p> </p>
+<p> </p>
+<p>« <a href="/en-US/docs/XPCOM_API_Reference">XPCOM API Reference</a></p>
+<h3 id="Resumen" name="Resumen">Resumen</h3>
+<p>El método <code>QueryInterface</code> facilita el tipo de runtime.</p>
+<pre class="eval">void QueryInterface(
+  in nsIIDRef <var>aIID</var>,
+  [iid_is(aIID), retval] out nsQIResult <var>aResult</var>
+);
+</pre>
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
+<dl>
+ <dt>
+  aIID</dt>
+ <dd>
+  [in] El IID del interfaz requerido.</dd>
+</dl>
+<dl>
+ <dt>
+  aResult</dt>
+ <dd>
+  [out] El puntero resultante.</dd>
+</dl>
+<h3 id="Valores_devueltos" name="Valores_devueltos">Valores devueltos</h3>
+<p>Este método no devuelve valor alguno.</p>
+<h3 id="Excepciones" name="Excepciones">Excepciones</h3>
+<dl>
+ <dt>
+  NS_ERROR_NO_INTERFACE</dt>
+ <dd>
+  La interfaz interrogada no está disponible.</dd>
+</dl>
+<h3 id="Observaciones" name="Observaciones">Observaciones</h3>
+<p>El puntero de interfaz, <var>aResult</var>, devuelto por <code>QueryInterface</code> debe ser liberado mediante una llamada a <a href="es/NsISupports/Release">Release</a> cuando ya no se necesite. <code>QueryInterface</code> es un operador <abbr title="if QI(A)->B, then QI(B)->A">simétrico</abbr>, <abbr title="if QI(QI(A)->B)->C, then QI(A)->C">transitivo</abbr>, y <abbr title="QI(A)->A">reflexivo</abbr>.</p>
+<p> </p>
+<div class="noinclude">
+  </div>
+<p></p>

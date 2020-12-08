@@ -1,0 +1,57 @@
+---
+title: 'Apéndice A: Rendimiento de los Add-ons'
+slug: 'Mozilla/Tech/XUL/Escuela_XUL/Apéndice_A:_Rendimiento_de_los_Add-ons'
+translation_of: 'Archive/Add-ons/Overlay_Extensions/XUL_School/Appendix_A:_Add-on_Performance'
+---
+<div class="blockIndicator warning">
+<p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+</div>
+
+<p>{{LegacyAddonsNotice}}{{AddonSidebar}}</p>
+
+<div class="note"><strong>Note:</strong> See the newer article <a href="/en/Extensions/Performance_best_practices_in_extensions" title="en/Extensions/Performance best practices in extensions">Performance best practices in extensions</a> for more up-to-date information about how to optimize the performance of your add-on.</div>
+
+<p>Add-ons can have a noticeable performance impact on Firefox. This is evident when opening a Firefox profile that has many add-ons installed; some profiles can take minutes to load, which is a serious inconvenience for users that gives them a negative view of Firefox. Add-on developers need to make sure that they minimize their add-ons' performance impact, and here are a few simple guidelines that should be followed to achieve that.</p>
+
+<h2 id="Startup">Startup</h2>
+
+<p>This is the area where add-ons have the most noticeable impact. Most add-ons use the load event handler in the main overlay to initialize their objects and sometimes read files or even fetch remote data. The problem with the <em>onload</em> event is that it runs before the main window becomes visible, so all handlers need to complete before the user can see the window. An add-on can normally add a few hundred milliseconds to startup time because of the load handler, and it's not hard to figure out what having several add-ons will do.</p>
+
+<p>Luckily, minimizing your startup time is easy, if you follow these guidelines:</p>
+
+<ol>
+ <li>Do not load or run code before it’s needed. Add-ons can have extra features that are only available depending on user preferences. Other add-ons have most of their features depend on a user being logged in to a service. Don’t load at startup something you won’t need at the time.</li>
+ <li><a href="/../../../../en/Using_JavaScript_code_modules" title="../../../../en/Using_JavaScript_code_modules">JavaScript Code Modules</a>. Use them. JSM provide the cleanest way to separate JS into modules that can be loaded on request, unlike chrome scripts which are generally loaded with the overlay at startup. Keep as much of your code in JSM, make it as modular as you can, and only load modules as you require them. If your add-on is too simple for JSM, don’t worry about it. There’s still one more thing you can do.</li>
+ <li>Do as little as possible in your load handler. Ask yourself: is there anything I can’t run 100 ms or even 500 ms later? If there is, just use an <a href="/../../../../En/nsITimer" title="../../../../En/nsITimer">nsITimer</a> or the <a href="/../../../../en/DOM/window.setTimeout" title="../../../../en/DOM/window.setTimeout">setTimeout</a> function to delay running this code . The Firefox window will be able to load sooner and your startup code will run almost instantaneously afterward, in parallel with the loading of the homepage or the saved tab session. The browser will now load faster, and your code will still load at startup for all practical purposes. The code is simple enough:</li>
+</ol>
+
+<pre class="brush: js">// this is the function that is called in the load event handler.
+init : function() {
+  let that = this;
+  // run this later and let the window load.
+  window.setTimeout(function() { that.postInit(); }, 500);
+},
+
+postInit: function() {
+  // actual init code goes here.
+},
+</pre>
+
+<p>How can you tell it works? The <a class="link-https" href="https://wiki.mozilla.org/Firefox/Projects/StartupPerformance/MeasuringStartup" title="https://wiki.mozilla.org/Firefox/Projects/StartupPerformance/MeasuringStartup">Measuring Startup</a> wiki page includes a relatively simple test you can use to compare a clean Firefox profile vs that profile with your add-on installed.</p>
+
+<h2 id="Page_Loads">Page Loads</h2>
+
+<p>This is another critical route that many add-ons tap into. The <a href="/en/XUL_School/Intercepting_Page_Loads" title="en/XUL School/Intercepting Page Loads">Intercepting Page Loads</a> section details several techniques to do this, and you should read all of them carefully to figure out which one you need. Some of these events are fired multiple times during a single page load, and having inefficient code in the event handlers can cause a noticeable delay that users may have hard time figuring out.</p>
+
+<p>Look at the source samples in the article and notice how they mostly consist of nested <em>if</em> statements. This is what you should do <strong>first</strong> to make sure that you filter out all cases that don't interest you so that your add-on doesn't slow down other requests. A very common filter is the URL of the page, since most add-ons are limited to one or a few domains. Use regular expressions if you need to. Make sure your comparison code is as efficient as possible.</p>
+
+<p>Finally, make sure all of your page load code is as efficient as possible. This can be tricky for some add-ons, like ad or script blockers that need to check a whitelist or blacklist. Nevertheless, loading pages is pretty important in Firefox, and users expect it to be fast. Try your best to keep it that way.</p>
+
+<h2 id="Other_Recommendations">Other Recommendations</h2>
+
+<ul>
+ <li>Always clean up after yourself. Event listeners, observers and other handlers normally have both an add and a remove function. Don't forget to remove what you don't need anymore! Even if you need something during the whole existence of the window, you should clean everything up in the unload event handler.</li>
+ <li>Even the unload event should be handled efficiently. Even if it is not as important as other areas, Firefox shutdown can also be slowed down because of add-ons. If there's anything you can unload before shutdown, or if there's anything you can do to unload things more efficiently, then it's important that you do.</li>
+ <li><strong>Never</strong> use XMLHttpRequest in synchronous mode.</li>
+ <li>If your add-on needs to perform a heavy operation like sorting or a complex mathematical calculation, you should use <a href="/En/Using_web_workers" title="En/Using web workers">DOM Workers</a> to offload the work to other threads.</li>
+</ul>

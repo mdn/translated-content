@@ -1,0 +1,59 @@
+---
+title: La URL chrome
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/La_URL_chrome
+translation_of: Archive/Mozilla/XUL/Tutorial/The_Chrome_URL
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Introducción" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Archivos_Manifest">Siguiente  »</a></p>
+</div>
+
+<p><br>
+ La siguiente sección describe cómo referirse a los documentos XUL y otros archivos chrome.</p>
+
+<h3 id="La_URL_Chrome" name="La_URL_Chrome">La URL Chrome</h3>
+
+<p>Los archivos XUL pueden accederse con una URL HTTP común, igual que los archivos HTML. Sin embargo, se puede hacer referencia a los paquetes que se instalan dentro del sistema chrome de Mozilla con un URL chrome especial. Los paquetes incluidos con Mozilla ya se encuentran instalados, pero tu puedes registrar los tuyos.</p>
+
+<p>Los paquetes instalados tienen la ventaja de que no tienen restricciones de seguridad establecidas, que es necesario para muchas aplicaciones. Otra ventaja sobre otro tipo de URL es que maneja automáticamente múltiples temas e idiomas. Por ejemplo, una URL chrome permite referirse a un archivo del tema como una imagen, sin necesidad de saber cuál es el tema que el usuario está usando. Siempre y cuando los nombres de los archivos sean iguales en cada tema, te puedes referir a ellos usando una URL chrome. Mozilla se encargará de determinar dónde se encuentran los archivos para retornar los datos correctos. Esto significa que realmente no importa dónde se encuentre instalado el paquete para poder acceder a el. Las URL chrome son independientes de donde se encuentren instalados fisicamente los archivos. Esto hace más fácil escribir aplicaciones que tienen muchos archivos ya que no tienes que preocuparte por el detalle de dónde se encuentran localizados.</p>
+
+<p>La sintaxis básica de una URL chrome es la siguiente</p>
+
+<pre>chrome://&lt;nombre del paquete&gt;/&lt;parte&gt;/&lt;archivo.xul&gt;
+</pre>
+
+<p>El texto &lt;nombre del paquete&gt; es el nombre del paquete, como lo puede ser<em>messenger</em> (IM) o el editor HTML. La &lt;parte&gt; es normalmente 'content', 'skin' o 'locale', depende la parte que quieras. &lt;archivo.xul&gt; es simplemente el nombre del archivo.</p>
+
+<p><strong>Ejemplo</strong>: <a class="external" rel="freelink">chrome://messenger/content/messenger.xul</a></p>
+
+<p>El ejemplo se refiere a la ventana messenger. Puedes apuntar a un archivo que es parte del skin reemplazando 'content' con 'skin' y cambiando el nombre del archivo. Similarmente puedes apuntar a un archivo que es parte de locale usando 'locale' en lugar de 'content'.</p>
+
+<p>Cuando abres una URL chrome, Mozilla echa un vistazo a través de su lista de paquetes instalados e intenta localizar el archivo JAR o el directorio que concuerde con el nombre del paquete y la parte. El mapeado entre las URL chrome y los archivos JAR se especifica en el archivo de manifiesto almacenado en el directorio chrome. Si reubicases el archivo<em>messenger.jar</em> en algun otro lugar al original y actualizases el archivo de manifiesto adecuadamente, todo continuaría funcionando correctamente ya que está restringido a su lugar de instalación. Usando URLs chrome podemos permitirle detalles como este a Mozilla. Análogamente, si el usuario cambia su tema, la parte 'skin' de la URL chrome se redirecciona a una colección de archivos diferente, sin que se tengan que hacer cambios en el XUL y en los scripts.</p>
+
+<p>Aquí hay otros ejemplos. Fíjate como ninguna de las URLs de tema o locale establecen especificamente algun directorio.</p>
+
+<pre>chrome://messenger/content/messenger.xul
+chrome://messenger/content/attach.js
+chrome://messenger/skin/icons/folder-inbox.gif
+chrome://messenger/locale/messenger.dtd
+</pre>
+
+<p>Para referirse a algun subdirectorio, solo es necesario agregarlo al final de la URL chrome. Las siguientes URLs se refieren a la ventana de favoritos (bookmarks), presta atención que en ambas se refieren al mismo archivo, pero varía de paquete ya que uno es para la Suite de Mozilla y la otra se usa en Firefox</p>
+
+<pre>chrome://communicator/content/bookmarks/bookmarksManager.xul (Mozilla)
+chrome://browser/content/bookmarks/bookmarksManager.xul (Firefox)
+</pre>
+
+<p>Puedes usar las URLs chrome en cualquier lugar donde se usan las URLs comunes. Incluso puedes escribirlas directamente en la barra de dirección (URL) de la ventana del navegador de Mozilla. Si escribes una de las URL de arriba en la barra de direccion, verás una ventana que aparece donde normalmente iría una pagina web y que en su mayoría es tan funcional como si fuera una ventana separada. Algunas ventanas de dialogo pueden no funcionar correctamente si precisan de argumentos que debe asignar la ventana que la abre.</p>
+
+<p>En ocaciones verás URLs chrome sin el nombre de un archivo especificado, por ejemplo:</p>
+
+<pre>chrome://browser/content/
+</pre>
+
+<p>En este caso, solo el nombre del paquete y la parte son especificados. Este tipo de referencia selecciona automáticamente un archivo apropiado del directorio correspondiente. Para contenido, se selecciona un archivo con el mismo nombre del paquete y con la extension xul. En el ejemplo de arriba, el archivo browser.xul es el que se selecciona. Para messenger, el arhivo seleccionado sería messenger.xul. Cuando creas tus propias aplicaciones, deberías crear un archivo con la ventana principal usando el mismo nombre de tu aplicación, así podrás referirte a ella de una manera más práctica y corta. Esta es una práctica común para que los usuarios solo necesiten saber el nombre del paquete para ejecutar la aplicación. Por supuesto, para una extensión que modifica la interfaz del navegador, el usuario no necesitar saber la URL ya que la extensión se presenta ella misma en la interfaz gráfica.</p>
+
+<p>Para una piel (skin), el archivo &lt;nombre_del_paquete&gt;.css se selecciona; para una configuración regional, el archivo &lt;nombre_del_paquete&gt;.dtd es seleccionado.</p>
+
+<p>Recuerda, chrome URL no está relacionado con su ubicación en el disco. Las dos primeras piezas de chrome URL son el nombre del paquete y la parte (ya sea contenido, piel (skin), o locale). A pesar de que es común colocar los archivos de contenido en un directorio llamado 'content', esto está fuero de convenio alguno, y estos archivos deben ser colocados en una estructura distinta.</p>
+
+<p>En la siguiente sección veremos como crear archivos .manifest y paquetes.</p>

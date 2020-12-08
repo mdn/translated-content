@@ -1,0 +1,111 @@
+---
+title: Añadiendo botones
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Añadiendo_botones
+tags:
+  - Tutorial_de_XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Adding_Buttons
+---
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Creando_una_ventana" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Añadiendo_etiquetas_e_imagenes">Siguiente  »</a></p>
+</div>
+
+<p>En esta sección veremos cómo añadir botones sencillos a una ventana.</p>
+
+<h3 id="A.C3.B1adir_botones_a_una_ventana" name="A.C3.B1adir_botones_a_una_ventana">Añadir botones a una ventana</h3>
+
+<p>La ventana que hemos creado no contiene nada hasta ahora, así es que carece de interés. En esta sección vamos a añadir dos botones: Uno para buscar y otro para cancelar. También aprenderemos una forma fácil de ubicarlos dentro de la ventana.</p>
+
+<p>Al igual que HTML, XUL tiene una serie de etiquetas para crear elementos de interfaz de usuario. La más básica de todas es la etiqueta <code><code><a href="/es/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code>, que sirve para crear un botón simple.</p>
+
+<p>Cada elemento<em>botón</em> tiene dos propiedades asociadas: <code>label</code> e <code>image</code>, mútuamente compatibles: Se puede tener un botón con imagen y/o con etiqueta. Los botones se usan generalmente para las opciones de<em>Aceptar</em> o<em>Cancelar</em> en los cuadros de diálogo, por ejemplo.</p>
+
+<h4 id="Sintaxis_de_los_botones" name="Sintaxis_de_los_botones">Sintaxis de los botones</h4>
+
+<p>La etiqueta <code><code><a href="/es/docs/Mozilla/Tech/XUL/button" title="button">button</a></code></code> tiene la siguiente sintaxis:</p>
+
+<pre>&lt;button
+    id="identificador"
+    class="dialogo"
+    label="Aceptar"
+    image="imagenes/imagen.jpg"
+    disabled="true"
+    accesskey="t"/&gt;
+</pre>
+
+<p>Los atributos son todos opcionales, y se interpretan así:</p>
+
+<dl>
+ <dt><code id="a-id"><a href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Attribute/id">id</a></code> </dt>
+ <dd>Un identificador<em>único</em> (dentro de la página actual) que represente de forma inequívoca al botón. Es muy útil para referirse al botón desde una hoja de estilos CSS o desde un script de código, por ejemplo. Es recomendable rellenar este atributo en<em>todas las etiquetas</em> que uno declare (si no figura explícitamente en cada etiqueta de esta guía es porque se da por sobreentendido).</dd>
+ <dt><code id="a-class"><a href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Attribute/class">class</a></code> </dt>
+ <dd>La clase-estilo del botón. Se usa de la misma manera que en HTML: Sirve para indicar el estilo que el navegador deberá aplicar al botón creado. En el ejemplo precedente se usa la clase <code>dialogo</code>, aunque por lo general uno no suele establecer una clase específica para un botón.</dd>
+ <dt><code id="a-label"><a href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Attribute/label">label</a></code> </dt>
+ <dd>El texto que aparecerá dentro del botón. Por ejemplo:<em>Aceptar</em> or<em>Cancelar</em>. Si no se rellena, el botón aparece sin texto.</dd>
+ <dt><code id="a-image"><a href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Attribute/image">image</a></code> </dt>
+ <dd>La URL de la imagen que aparecerá dentro del botón. Si no se rellena, el botón aparecerá sin imagen. Una forma alternativa de especificar esta imagen es desde una hoja de estilo CSS, mediante una propiedad <code><a href="es/CSS/list-style-image">list-style-image</a></code>.</dd>
+ <dt><code id="a-disabled"><a href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Attribute/disabled">disabled</a></code> </dt>
+ <dd>Indicador de deshabilitado: Si se rellena con valor <code>true</code>, el botón aparecera deshabilitado, lo que quiere decir que no responderá a la acción de pulsar sobre él (y el aspecto, usualmente, será con el texto en gris pálido). Si no se especifica este atributo, el botón está habilitado. También se puede cambiar el estado habilitado/deshabilitado mediante <a href="es/JavaScript">JavaScript</a>.</dd>
+ <dt><code id="a-accesskey"><a href="https://developer.mozilla.org/es/docs/Mozilla/Tech/XUL/Attribute/accesskey">accesskey</a></code> </dt>
+ <dd>En este atributo debe ir una sóla letra que se usará como tecla de acceso directo para pulsar el botón. Esta letra debería pertenecer al valor del atributo <code>label</code>. El aspecto, usualmente, será un subrayado bajo la letra escogida en el botón. Su funcionamiento consiste en que cada vez que el usuario pulse la letra escogida (más un pulsador que pude variar en función de la plataforma; usualmente ALT), desde cualquier lugar de la ventana, el botón recibirá el foco.</dd>
+</dl>
+
+<p>Atención: La etiqueta <code>button</code> en realidad soporta<em>más atributos</em> de los listados aquí, pero el resto se verán <a href="es/XUL_Tutorial/More_Button_Features">más adelante</a>.</p>
+
+<h4 id="Algunos_ejemplos_de_botones" name="Algunos_ejemplos_de_botones">Algunos ejemplos de botones</h4>
+
+<p><span id="Example_1"><a id="Example_1"></a><strong>Example 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_buttons_1.xul">Ver en funcionamiento</a></p>
+
+<div class="float-right"><img alt="Image:buttons1.png"></div>
+
+<pre>&lt;button label="Normal"/&gt;
+&lt;button label="Disabled" disabled="true"/&gt;
+</pre>
+
+<p><br>
+ El ejemplo de arriba genera los botones mostrados en la imagen. El primer botón es un botón normal, el segundo está desabilitado.</p>
+
+<p>Empezaremos creando un simple botón "Buscar" para la función buscar fichero. El ejemplo siguiente nos muestra cómo hacer esto.</p>
+
+<p> </p>
+
+<pre>&lt;button id="find-button" label="Buscar"/&gt;
+</pre>
+
+<div class="note">FireFox no permite abrir ventanas "chrome" desde páginas web, asi que el links "Ver" en el tutorial abriran una ventana de normal de browser.debido a esto, los botones aparecerán ocupando todo el ancho de la ventana. Puedes colocar align="start" a la etiqueta window para que esto no ocurra.</div>
+
+<div class="highlight">
+<h5 id="El_ejemplo_findfile.xul" name="El_ejemplo_findfile.xul">El ejemplo findfile.xul</h5>
+
+<p>Coloquemos este código al archivo que habiamos creado en la sección anterior. El código debe ser colocado entre las etiquetas de <code><code><a href="/es/docs/Mozilla/Tech/XUL/window" title="window">window</a></code></code>. El código que debemos agregar esta aquí abajo en rojo.</p>
+
+<pre class="eval">&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="<a class="external" rel="freelink">chrome://global/skin/</a>" type="text/css"?&gt;
+&lt;window
+    id="findfile-window"
+    title="Find Files"
+    orient="horizontal"
+     xmlns="<span class="nowiki">http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul</span>"&gt;
+
+  <span class="highlightred">&lt;button id="find-button" label="Find"/&gt;</span>
+  <span class="highlightred">&lt;button id="cancel-button" label="Cancel"/&gt;</span>
+
+&lt;/window&gt;
+</pre>
+
+<div class="float-right"><img alt="Image:buttons2.png"></div>
+
+<p>Verás que tambien se agrego el botón Cancel. Le dimos a la ventana una orientación horizontal, de este modo, los botones se muestran uno al lado del otro. Si abres el fichero en Mozilla, obtendras algo como la imagen mostrada aquí.</p>
+</div>
+
+<p> </p>
+
+<div class="note">Nota: No deberíamos poner el texto de <code>label</code> directamente en el fichero XUL. En lugar de eso, deberíamos usar <a href="es/XUL_Tutorial/Localization">entes así, el texto puede ser traducido facilmente.</a>.</div>
+
+<p>En la próxima sección descubriremos <a href="es/XUL_Tutorial/Adding_Labels_and_Images">cómo agregar etiquetas e imágenes a una ventana XUL</a>.</p>
+
+<p><small>Ver también <a href="es/XUL_Tutorial/More_Button_Features">more button fetaures</a></small></p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Creando_una_ventana" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Añadiendo_etiquetas_e_imagenes">Siguiente  »</a></p>
+</div>

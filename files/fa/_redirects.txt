@@ -1,0 +1,26 @@
+# FROM-URL	TO-URL
+/fa/docs/HTML	/fa/docs/Web/HTML
+/fa/docs/HTML/%D8%B5%D9%81%D8%AA%E2%80%8C%D9%87%D8%A7	/fa/docs/HTML/Attributes
+/fa/docs/HTML/%D8%B9%D9%86%D8%B5%D8%B1	/fa/docs/Web/HTML/Element
+/fa/docs/HTML/%D9%85%D9%82%D8%AF%D9%85%D9%87	/fa/docs/Learn/HTML/Introduction_to_HTML
+/fa/docs/HTML/Canvas/%D8%B1%D8%B3%D9%85_%DA%AF%D8%B1%D8%A7%D9%81%DB%8C%DA%A9_%D8%A8%D8%A7_Canvas	/fa/docs/HTML/Canvas/Drawing_Graphics_with_Canvas
+/fa/docs/HTML/Element	/fa/docs/Web/HTML/Element
+/fa/docs/HTML/Element/Heading_Elements	/fa/docs/Web/HTML/Element/Heading_Elements
+/fa/docs/HTML/Element/Input	/fa/docs/Web/HTML/Element/Input
+/fa/docs/HTML/Element/textarea	/fa/docs/Web/HTML/Element/textarea
+/fa/docs/HTML/Introduction	/fa/docs/Learn/HTML/Introduction_to_HTML
+/fa/docs/HTML/Tips_for_authoring_fast-loading_HTML_pages	/fa/docs/Web/HTML/Tips_for_authoring_fast-loading_HTML_pages
+/fa/docs/HTML/Tips_for_authoring_fast-loading_HTML_pages-redirect-1	/fa/docs/Web/HTML/Tips_for_authoring_fast-loading_HTML_pages
+/fa/docs/Learn/CSS/Introduction_to_CSS	/en-US/docs/Learn/CSS/First_steps
+/fa/docs/Learn/CSS/Introduction_to_CSS/%D8%B3%DB%8C%E2%80%8C%D8%A7%D8%B3%E2%80%8C%D8%A7%D8%B3_%DA%86%D8%B7%D9%88%D8%B1_%DA%A9%D8%A7%D8%B1_%D9%85%DB%8C%DA%A9%D9%86%D8%AF	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
+/fa/docs/MDN/Getting_started	/fa/docs/MDN/Contribute/Getting_started
+/fa/docs/Main_page	/en-US/
+/fa/docs/Mozilla/%D9%81%D8%A7%DB%8C%D8%B1%D9%81%D8%A7%DA%A9%D8%B3	/fa/docs/Mozilla/Firefox
+/fa/docs/Web/%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D9%87	/fa/docs/Web/MathML
+/fa/docs/Web/CSS/%D8%A8%D8%A7%D9%84%D8%A7	/fa/docs/Web/CSS/top
+/fa/docs/Web/CSS/%D9%85%D9%88%D9%82%D8%B9%DB%8C%D8%AA	/fa/docs/Web/CSS/position
+/fa/docs/Web/CSS/Adjacent_sibling_selectors	/fa/docs/Web/CSS/Adjacent_sibling_combinator
+/fa/docs/Web/CSS/transform-function/%DA%86%D8%B1%D8%AE%D8%B4	/fa/docs/Web/CSS/transform-function/rotate()
+/fa/docs/Web/Guide/HTML	/fa/docs/Learn/HTML
+/fa/docs/Web/JavaScript/Getting_Started	/fa/docs/Learn/Getting_started_with_the_web/مقدمات_جاوااسکریپت
+/fa/docs/en	/en-US/

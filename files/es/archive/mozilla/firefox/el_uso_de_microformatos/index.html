@@ -1,0 +1,218 @@
+---
+title: El uso de microformatos
+slug: Archive/Mozilla/Firefox/El_uso_de_microformatos
+tags:
+  - Firefox 3
+  - Microformatos
+translation_of: Archive/Mozilla/Firefox/Using_microformats
+---
+<p> Los microformatos permiten a un sitio web ofrecer datos semánticos a los navegadores de forma que sea posible presentar resúmenes de la información en una página sin que sea necesario saber cómo analizar el documento en si mismo. Firefox 3 implementa un objeto global <code>Microformats</code> que permite el acceso a estos microformatos. Este objeto y su API hacen de la búsqueda y lectura de microformatos, algo fácil.</p>
+
+<h2 id="Cargar_el_API_de_Microformatos" name="Cargar_el_API_de_Microformatos">Cargar el API de Microformatos</h2>
+
+<p>El objeto <code>Microformats</code> se crea usando el nuevo cargador de JavaScript integrado en Firefox 3. Para usar este API, primero necesitas cargar el objeto:</p>
+
+<pre class="eval"><span class="nowiki">Components.utils.import("resource://gre/modules/Microformats.js");</span>
+</pre>
+
+<p>Una vez cargado del API de Microformatos, puedes manejar los Microformatos usando los métodos que aquí listamos. Para información sobre cómo analizar los Microformatos, lee: <a href="es/Analizar_microformatos_en_JavaScript">Analizar microformatos en JavaScript</a>.</p>
+
+<h2 id="Microformatos_predefinidos" name="Microformatos_predefinidos">Microformatos predefinidos</h2>
+
+<p>Firefox 3 ofrece varios Microformatos integrados:</p>
+
+<dl>
+ <dt><code><a href="es/El_Microformato_adr">adr</a></code></dt>
+ <dd>Representa una dirección (como una calle o una dirección postal).</dd>
+ <dt><code><a href="es/El_Microformato_geo">geo</a></code></dt>
+ <dd>Representa una localización geográfica usando coordenadas de latitud y longitud.</dd>
+ <dt><code><a href="es/El_Microformato_hCard">hCard</a></code></dt>
+ <dd>Representa la información de contacto de una persona.</dd>
+ <dt><code><a href="es/El_Microformato_hCalendar">hCalendar</a></code></dt>
+ <dd>Representa una entrada en un calendario o la cita en una agenda.</dd>
+ <dt><code><a href="es/El_Microformato_tag">tag</a></code></dt>
+ <dd>Se usa para añadir pestañas a otros Microformatos.</dd>
+</dl>
+
+<h2 id="M.C3.A9todos" name="M.C3.A9todos">Métodos</h2>
+
+<h3 id="add.28.29" name="add.28.29">add()</h3>
+
+<p>Añade un nuevo Microformato al módulo de Microformatos.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> Si ya existe un microformato con el mismo nombre, será reemplazado por el nuevo.</p>
+</div>
+
+<pre class="eval">add(name, definition);
+</pre>
+
+<h6 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h6>
+
+<dl>
+ <dt>name</dt>
+ <dd>El nombre del microformato a añadir al módulo.</dd>
+ <dt>definición</dt>
+ <dd>Una estructura JavaScript que describe el microformato. Ver <a href="es/Crear_microformatos_en_JavaScript">Crear microformatos en JavaScript</a> para más detalles.</dd>
+</dl>
+
+<h3 id="count.28.29" name="count.28.29">count()</h3>
+
+<p>Cuenta el número de microformatos que hay en un documento que cumple con determinado criterio.</p>
+
+<pre class="eval">numMicroformats = Microformats.count(name, rootElement, options);
+</pre>
+
+<h6 id="Par.C3.A1metros_2" name="Par.C3.A1metros_2">Parámetros</h6>
+
+<dl>
+ <dt>name</dt>
+ <dd>El nombre del microformato que queremos contar.</dd>
+ <dt>rootElement</dt>
+ <dd>Requerido. El elemento DOM en dónde empezar la búsqueda. Si deseas buscar en el documento entero, especifica <code>content.document</code>.</dd>
+ <dt>options</dt>
+ <dd>Opcional. Cuando se especifica, este es un objeto JavaScript que contiene cero o más de los siguientes flag:</dd>
+</dl>
+
+<blockquote>
+<dl>
+ <dt>recurseExternalFrames</dt>
+ <dd>Si es <code>true</code>, se incluyen los marcos (frames) hijos en la búsqueda. Por defecto es <code>true</code>.</dd>
+ <dt>showHidden</dt>
+ <dd>Si es <code>true</code>, se añaden microformatos ocultos, en caso contrario, se ignoran. Por defecto es <code>false</code>.</dd>
+ <dt>debug</dt>
+ <dd>Se especifica a <code>true</code> cuando se usa el modo de "debug", en caso contrario es <code>false</code>. Por defecto es <code>false</code>.</dd>
+</dl>
+</blockquote>
+
+<h6 id="Valor_devuelto" name="Valor_devuelto">Valor devuelto</h6>
+
+<p>Un valor entero que indica el número de microformatos que cumplen el criterio especificado.</p>
+
+<h3 id="debug.28.29" name="debug.28.29">debug()</h3>
+
+<p>Devuelve una cadena que describe un objeto microformato.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> Pueds simplemente llamar a <code>debug()</code> en un objeto microformato: <code>microformatObject.debug()</code> en lugar de usar este método, si lo prefieres.</p>
+</div>
+
+<pre class="eval">dumpString = debug(microformatObject)
+</pre>
+
+<h6 id="Par.C3.A1metros_3" name="Par.C3.A1metros_3">Parámetros</h6>
+
+<dl>
+ <dt>microformatObject</dt>
+ <dd>El objeto microformato a descargar.</dd>
+</dl>
+
+<h6 id="Valor_devuelto_2" name="Valor_devuelto_2">Valor devuelto</h6>
+
+<p>Una cadena que describe el contenido del objeto microformato especificado.</p>
+
+<h3 id="get.28.29" name="get.28.29">get()</h3>
+
+<p>Devuelve una matriz de objetos microformato encontrados, que cumplen con el criterio especificado.</p>
+
+<pre class="eval">microformatsArray = Microformats.get(name, rootElement, options, targetArray);
+</pre>
+
+<h6 id="Par.C3.A1metros_4" name="Par.C3.A1metros_4">Parámetros</h6>
+
+<dl>
+ <dt>name</dt>
+ <dd>El nombre del microformato a encontrar.</dd>
+ <dt>rootElement</dt>
+ <dd>Requerido. El elemento DOM donde debe comenzar la búsqueda. Si quieres buscar el documento entero, especifica <code>content.document</code>.</dd>
+ <dt>options</dt>
+ <dd>Opcional. Si se especifica, es un objeto JavaScript que contiene cero o más de los siguientes flag:</dd>
+</dl>
+
+<blockquote>
+<dl>
+ <dt>recurseExternalFrames</dt>
+ <dd>Si es <code>true</code>, se incluyen los marcos hijo que hagan referencia a contenido externo, en la búsqueda. Por defecto es <code>true</code>.</dd>
+ <dt>showHidden</dt>
+ <dd>Si es <code>true</code>, se incluyen los microformatos ocultos, en caso contrario se ignoran. Por defecto es <code>false</code>.</dd>
+ <dt>debug</dt>
+ <dd>Especifica <code>true</code> si se está en modo "debug", en caso contrario es <code>false</code>. Por defecto es <code>false</code>.</dd>
+</dl>
+</blockquote>
+
+<dl>
+ <dt>targetArray</dt>
+ <dd>Opcional. Cuando se especifica, es una matriz de objetos microformatos en donde se añaden lso objetos microformato resultantes de la búsqueda.</dd>
+</dl>
+
+<h6 id="Valor_devuelto_3" name="Valor_devuelto_3">Valor devuelto</h6>
+
+<p>Una nueva matriz de objetos microformato que cumplen con el criterio de búsqueda, o la matriz especificada por microformats con los nuevos microformatos encontrados añadidos.</p>
+
+<h3 id="getNamesFromNode.28.29" name="getNamesFromNode.28.29">getNamesFromNode()</h3>
+
+<p>Devuelve una lista, delimitada por espacios, de nombres de microformatos que corresponde al nodo especificado.</p>
+
+<pre class="eval">nameList = Microformats.getNamesFromNode(node);
+</pre>
+
+<h6 id="Par.C3.A1metros_5" name="Par.C3.A1metros_5">Parámetros</h6>
+
+<dl>
+ <dt>node</dt>
+ <dd>El nodo en el cual leer una lista de nombres de microformatos.</dd>
+</dl>
+
+<h6 id="Valor_devuelto_4" name="Valor_devuelto_4">Valor devuelto</h6>
+
+<p>Si el node especificado es un microformato, el resultado es una cadena conteniendo, delimitados por especios, los nombres de todos los microformatos que corresponden al nodo. Si el nodo no es un microformato, no se devuelve nada.</p>
+
+<h3 id="getParent.28.29" name="getParent.28.29">getParent()</h3>
+
+<p>Devuelve el nodo padre del microformato especificado o hijo de un microformato.</p>
+
+<pre class="eval">parentNode = Microformats.getParent(node);
+</pre>
+
+<h6 id="Par.C3.A1metros_6" name="Par.C3.A1metros_6">Parámetros</h6>
+
+<dl>
+ <dt>node</dt>
+ <dd>El nodo cuyo padre quieres obtener.</dd>
+</dl>
+
+<h6 id="Valor_devuelto_5" name="Valor_devuelto_5">Valor devuelto</h6>
+
+<p>El padre del nodo especificado. No devuelve nada si el node especificado no es un microformato o el hijo de un microformato.</p>
+
+<h3 id="isMicroformat.28.29" name="isMicroformat.28.29">isMicroformat()</h3>
+
+<p>Determina si el nodo DOM especificado es o no un microformato.</p>
+
+<pre class="eval">flag = Microformats.isMicroformat(node);
+</pre>
+
+<h6 id="Par.C3.A1metros_7" name="Par.C3.A1metros_7">Parámetros</h6>
+
+<dl>
+ <dt>node</dt>
+ <dd>El nodo DOM a comprobar si es un microformato.</dd>
+</dl>
+
+<h6 id="Valor_devuelto_6" name="Valor_devuelto_6">Valor devuelto</h6>
+
+<p>Devuelve <code>true</code> si el nodo es un microformato y <code>false</code> en caso contrario.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> Este método<em>no</em> devuelve <code>true</code> si el nodo es hijo de un microformato.</p>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<p> </p>
+
+<ul>
+ <li><a href="http://www.microformats.org/" title="http://www.microformats.org">Microformats.org</a></li>
+</ul>
+
+<p> </p>

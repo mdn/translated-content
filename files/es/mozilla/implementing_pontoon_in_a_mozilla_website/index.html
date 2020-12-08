@@ -1,0 +1,76 @@
+---
+title: Implementando Pontoon en un proyecto de Mozilla
+slug: Mozilla/Implementing_Pontoon_in_a_Mozilla_website
+tags:
+  - Localización
+translation_of: Mozilla/Implementing_Pontoon_in_a_Mozilla_website
+---
+<p><a class="external external-icon" href="https://pontoon.mozilla.org">Pontoon</a> Pontoon es una herramienta basada en web, WYSIWYG (localización de lo que se obtiene) y localización (l10n). En Mozilla, actualmente usamos Pontoon para localizar varios proyectos de Mozilla y la interfaz de la aplicación Firefox OS, conocida como Gaia. Pontoon es una herramienta muy simple e intuitiva que requiere poca o ninguna habilidad técnica para el uso de los localizadores, lo que disminuirá el tiempo de publicación de las versiones localizadas de su proyecto. Aquí discutiremos cómo puedes agregar Pontoon a tu proyecto de Mozilla.</p>
+
+<div class="note">
+<p><strong>¿Te gustaría mejorar Pontoon? </strong>Aprende cómo involucrarte en <a href="https://github.com/mozilla/pontoon">GitHub</a>.</p>
+</div>
+
+<div class="note">
+<p><strong>¿Empezando con tu proyecto l10n?</strong> Mira la wiki en <a href="https://wiki.mozilla.org/L10n:NewProjects">haciendo que tu proyecto sea localizado.</a></p>
+</div>
+
+<h2 id="A._Haz_tu_proyecto_localizable">A. Haz tu proyecto localizable</h2>
+
+<p>Nos damos cuenta de que estos ya se consideran estándar <a class="external external-icon" href="https://mozweb.readthedocs.org/en/latest/reference/l10n.html">buenas practicas</a> para localizar proyectos en Mozilla, pero creemos que es bueno agregarlos aquí como un pequeño recordatorio.</p>
+
+<ol>
+ <li>Asegurate de que tu proyecto sea compatible con uno de los frameworks l10n (<a class="external external-icon" href="https://www.gnu.org/software/gettext/">gettext</a>, <a class="external external-icon" href="https://docs.oasis-open.org/xliff/xliff-core/v2.0/xliff-core-v2.0.html">XLIFF</a>, <a class="external external-icon" href="https://projectfluent.org/">L20n</a>, <a class="external external-icon" href="https://github.com/mozilla-l10n/langchecker/wiki/.lang-files-format">lang</a>, <a class="external external-icon" href="https://en.wikipedia.org/wiki/.properties">properties</a>, etc.).</li>
+ <li>Extrae cadenas localizables en archivos de recursos.</li>
+ <li>Envia archivos de recursos a un repositorio (SVN, HG, Git).
+  <ul>
+   <li>Las carpetas locales individuales deben ubicarse en el mismo nivel de anidamiento del árbol de directorios. La fuente de la fuente necesita ser llamada<code>templates</code>, <code>en-US</code>, <code>en-us</code> o <code>en</code>. Si existen varias carpetas con ese nombre en el repositorio y contienen archivos en un formato de archivo admitido, se usará el primero. Es posible que desees colocar todas las carpetas de configuración regional de forma dedicada <code>locales</code> carpeta para este propósito. El código de configuración regional no debe ser parte del nombre del archivo.</li>
+   <li>Patrón correcto:
+    <pre>/locales/{locale_code}/path/to/file.extension</pre>
+   </li>
+   <li>Patrón incorrecto:
+    <pre>/locales/{locale_code}/path/to/file.{locale_code}.extension</pre>
+   </li>
+  </ul>
+ </li>
+ <li>Asegúrate de que Pontoon tenga acceso de escritura al repositorio.
+  <ul>
+   <li>Si usas GitHub, agrega <a class="external external-icon" href="https://github.com/mozilla-pontoon">mozilla-pontoon</a> o <a href="https://github.com/orgs/mozilla/teams/pontoon-l10n-robots">pontoon-l10n-robots</a> como colaborador de tu proyecto.</li>
+  </ul>
+ </li>
+</ol>
+
+<h2 id="B._opcional_Habilita_la_localización_in-page_de_tu_proyecto_web">B. (opcional) Habilita la localización in-page de tu proyecto web</h2>
+
+<ol>
+ <li>Enlaza un script desde el elemento HTML <code>&lt;body&gt;</code> , por lo que Pontoon puede comunicarce con tu sitio, pueda detectar contenido y hacerlo localizable en su lugar. Solo necesitas hacer esto en el entorno que se usará para la localización in-page, <span class="short_text" id="result_box" lang="es"><span>p.ej.</span> <span>servidor de puesta en escena:</span></span>
+
+  <ul>
+   <li>
+    <pre id="line1"><span>  </span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">src</span>="<a class="attribute-value">https://pontoon.mozilla.org/pontoon.js</a>"</span><span>&gt;&lt;/<span class="end-tag">script</span>&gt;</span></pre>
+   </li>
+  </ul>
+ </li>
+ <li>Si tu sitio usa <a href="/es/docs/Web/HTTP/CSP">CSP</a>,  por favor, asegurate de que lo siguiente está permitido para el dominio <code>pontoon.mozilla.org</code>:
+  <ol>
+   <li>cargar dentro de iframe</li>
+   <li>cargar a distancia CSS</li>
+   <li>cargar imágenes remotas</li>
+  </ol>
+ </li>
+ <li>Si tu sitio usa el <a href="/es/docs/Web/HTTP/Headers/X-Frame-Options">X-Frame-Options</a> Encabezado, asegurate que la carga dentro del iframe esté permitida para el dominio <code>pontoon.mozilla.org</code>.</li>
+ <li>Asegurate de que tu sitio sea compatible con HTTPS. Es gratis, automatizado y abierto. <a href="https://letsencrypt.org/">Vamos a encriptar</a>!</li>
+</ol>
+
+<h2 id="C._Agrega_tu_proyecto_a_Pontoon">C. Agrega tu proyecto a Pontoon</h2>
+
+<p>Tu proyecto ahora está listo para ser configurado en Pontoon. Por favor presenta un error en <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Localization%20Infrastructure%20and%20Tools&amp;component=Administration%20%2F%20Setup">Infraestructura de localización y herramientas :: Administración / Configuración</a> y proporciona la siguiente información:</p>
+
+<ul>
+ <li>Nombre del proyecto</li>
+ <li>URL de repositorio</li>
+ <li>Lista de configuraciones regionales solicitadas</li>
+ <li>URL del sitio web, incluidas todas las URL de las subpáginas (solo si se usa la localización in-page)</li>
+</ul>
+
+<p>Para más detalles,  por favor ponte en contacto con el <a href="mailto:pontoon-team@mozilla.com">Equipo de gestión de proyectos.</a></p>

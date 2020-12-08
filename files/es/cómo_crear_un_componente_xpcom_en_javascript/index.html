@@ -1,0 +1,191 @@
+---
+title: Cómo crear un componente XPCOM en JavaScript
+slug: Cómo_crear_un_componente_XPCOM_en_JavaScript
+tags:
+  - Complementos
+  - Todas_las_Categorías
+  - XPCOM
+  - extensiones
+translation_of: Mozilla/Tech/XPCOM/Guide/Building_components_in_JavaScript
+---
+<p> </p>
+<h2 id="Introducci.C3.B3n" name="Introducci.C3.B3n">Introducción</h2>
+<p>Éste es un tutorial del tipo "Hola Mundo" para crear un componente XPCOM en JavaScript. No se describe cómo funciona XPCOM ni se explica lo que hace cada línea de código. Todo ello se detalla en <a href="/es/XPCOM" title="es/XPCOM">otras páginas</a>.</p>
+<p>En este tutorial mostraremos qué es lo que debes hacer para conseguir un componente funcional en pocos pasos y de forma sencilla.</p>
+<p><strong>Advertencia</strong>: lo expuesto aquí ha sido desarrollado en un Mac. El comportamiento puede variar en otros sistemas operativos.</p>
+<h2 id="Implementaci.C3.B3n" name="Implementaci.C3.B3n">Implementación</h2>
+<p>Éste es un componente de ejemplo, con un único método que devuelve la cadena "Hola MozDev!".</p>
+<h3 id="Definir_la_interfaz" name="Definir_la_interfaz">Definir la interfaz</h3>
+<p>Si quieres usar tu componente desde JavaScript, o en otros componentes XPCOM, debes definir las interfaces que quieres mostrar (si quieres usar tu componente <em>sólo</em> desde Javascript, puedes usar el truco <code>wrappedJSObject</code> para que no necesites definir interfaces como se explica aquí. Mira un ejemplo <a class="external" href="http://kb.mozillazine.org/Dev_:_Extending_the_Chrome_Protocol">aquí (en)</a>).</p>
+<p>Hay muchas interfaces ya definidas en las aplicaciones Mozilla, así que tal vez no necesites definir una nueva. Puedes mirar las interfaces XPCOM existentes de varias formas, en el código fuente Mozilla, o usando <a class="external" href="http://xpcomviewer.mozdev.org/">XPCOMViewer</a>, un GUI para ver los componentes e interfaces registradas. Puedes descargar una versión que trabaje con Firefox 2 desde <a class="external" href="http://downloads.mozdev.org/xpcomviewer/">MozDev</a>.</p>
+<p>Si existe una interfaz que cumpla tus necesidades, no necesitas escribir un IDL, o compilar un typelib, y puedes saltar a la <a href="#Creating_the_Component">siguiente sección</a>.</p>
+<p>Si no encuentras una interfaz pre-existente que te satisfaga, debes definirla. XPCOM usa un dialecto de IDL para definir interfaces, llamado <a href="/es/XPIDL" title="es/XPIDL">XPIDL</a>. A continuación tienes la definición XPIDL para nuestro componente HolaMozDev:</p>
+<p>HolaMozDev.idl</p>
+<pre>#include "nsISupports.idl"
+
+[scriptable, uuid(xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx)]
+interface nsIHolaMozDev : nsISupports
+{
+  string hola();
+};
+</pre>
+<p>Ten en cuenta que tienes que generar un UUID para cada componente XPCOM que crees. Mira <a href="/es/Generating_GUIDs" title="es/Generating_GUIDs">Generating GUIDs</a> para más información.</p>
+<div class="note">
+ Los UUID no pueden ser escritos puesto que se debe garantizar su unicidad. <strong>Deben ser generados</strong> empleando un algoritmo que la garantice.</div>
+<h3 id="Compilar_la_biblioteca_de_tipos" name="Compilar_la_biblioteca_de_tipos">Compilar la biblioteca de tipos</h3>
+<p>La definición de tu interfaz debe compilarse a forma binaria (XPT) para poder ser registrada y usada dentro de las aplicaciones Mozilla. La compilación puede hacerse usando el SDK de Gecko. Puedes averiguar cómo obtener versiones Mac, Linux, y Windows del SDK de Gecko leyendo el artículo <a href="/es/Gecko_SDK" title="es/Gecko_SDK">Gecko SDK</a>.</p>
+<div class="note">
+ <strong>Nota:</strong> la versión Mac del SDK proporcionado para su descarga es sólo para PowerPC. Si necesitas una versión Intel, tendrás que compilarlo tú mismo como se describe en esa página.</div>
+<p>Ejecuta esta orden para compilar la biblioteca de tipos. Aquí, <code>{sdk_dir}</code> es el directorio del SDK de Gecko descomprimido.</p>
+<pre class="eval">{sdk_dir}/bin/xpidl -m typelib -w -v -I {sdk_dir}/idl -e HolaMozDev.xpt HolaMozDev.idl
+</pre>
+<p>(El modificador -I es una i mayúscula, no una L minúscula) Esta orden creará el archivo de la bilioteca de tipos HelloWorld.xpt en el directorio de trabajo actual.</p>
+<h3 id="Crear_el_componente" name="Crear_el_componente">Crear el componente</h3>
+<p>HolaMozDev.js</p>
+<pre>/***********************************************************
+constantes
+***********************************************************/
+
+// referencia a la interfaz definida en nsIHolaMozDev.idl
+const nsIHolaMozDev = Components.interfaces.nsIHolaMozDev;
+
+// referencia requerida a la interfaz base que todos los componentes deben implementar
+const nsISupports = Components.interfaces.nsISupports;
+
+// UUID único identificando nuestro componente
+// puedes obtener el tuyo desde : http://kruithof.xs4all.nl/uuid/uuidgen
+const CLASS_ID = Components.ID("{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx}");
+
+// descripción
+const CLASS_NAME = "Un Componente XPCOM de muestra";
+
+// identificador único textual
+const CONTRACT_ID = "@ejemplo.evelio.net/holamozdev;1";
+
+/***********************************************************
+definición de la clase
+***********************************************************/
+
+// el constructor de clase
+function HolaMozDev() {
+};
+
+// definición de la clase
+HolaMozDev.prototype = {
+
+  // define la función que declaramos en la interfaz
+  hola: function() {
+      return "Hola MozDev!";
+  },
+  //Desde nsISupports
+  QueryInterface: function(aIID)
+  {
+    if (!aIID.equals(nsIHolaMozDev) &amp;&amp;
+        !aIID.equals(nsISupports))
+      throw Components.results.NS_ERROR_NO_INTERFACE;
+    return this;
+  }
+};
+
+/***********************************************************
+la factoría de la clase
+
+Este objeto es miembro del objeto global Components.classes.
+Se deriva del ID de contrato, p.e.:
+
+miHolaMozDev = Components.classes["@ejemplo.evelio.net/holamozdev;1"].
+                          createInstance(Components.interfaces.nsIHolaMozDev);
+
+***********************************************************/
+var FabricaHolaMozDev = {
+  createInstance: function (aOuter, aIID)
+  {
+    if (aOuter != null)
+      throw Components.results.NS_ERROR_NO_AGGREGATION;
+    return (new HolaMozDev()).QueryInterface(aIID);
+  }
+};
+
+/***********************************************************
+definición del módulo (registro xpcom)
+***********************************************************/
+var HolaMozDevModulo = {
+  _firstTime: true,
+  registerSelf: function(aCompMgr, aFileSpec, aLocation, aType)
+  {
+    aCompMgr = aCompMgr.
+        QueryInterface(Components.interfaces.nsIComponentRegistrar);
+    aCompMgr.registerFactoryLocation(CLASS_ID, CLASS_NAME,
+        CONTRACT_ID, aFileSpec, aLocation, aType);
+  },
+
+  unregisterSelf: function(aCompMgr, aLocation, aType)
+  {
+    aCompMgr = aCompMgr.
+        QueryInterface(Components.interfaces.nsIComponentRegistrar);
+    aCompMgr.unregisterFactoryLocation(CLASS_ID, aLocation);
+  },
+
+  getClassObject: function(aCompMgr, aCID, aIID)
+  {
+    if (!aIID.equals(Components.interfaces.nsIFactory))
+      throw Components.results.NS_ERROR_NOT_IMPLEMENTED;
+
+    if (aCID.equals(CLASS_ID))
+      return FabricaHolaMozDev;
+
+    throw Components.results.NS_ERROR_NO_INTERFACE;
+  },
+
+  canUnload: function(aCompMgr) { return true; }
+};
+
+/***********************************************************
+Inicialización del módulo
+
+Cuando la aplicación registra el componente, se llama a esta función.
+
+***********************************************************/
+function NSGetModule(aCompMgr, aFileSpec) { return HolaMozDevModulo; }
+
+</pre>
+<h2 id="Instalaci.C3.B3n" name="Instalaci.C3.B3n">Instalación</h2>
+<h3 id="Para_extensiones:" name="Para_extensiones:">Para extensiones:</h3>
+<ol>
+ <li>Copia HolaMozDev.js y HolaMozDev.xpt al directorio {extensiondir}/components/.</li>
+ <li>Elimina compreg.dat y xpti.dat del directorio de tu perfil de usuario.</li>
+ <li>Reinicia la aplicación.</li>
+</ol>
+<h3 id="Para_Firefox:" name="Para_Firefox:">Para Firefox:</h3>
+<ol>
+ <li>Copia HolaMozDev.js y HolaMozDev.xpt al directorio {objdir}/dist/bin/components, si está corriendo desde el código fuente.</li>
+ <li>Elimina compreg.dat y xpti.dat del directorio components.</li>
+ <li>Elimina compreg.dat y xpti.dat del directorio de tu perfil de usuario.</li>
+ <li>Reinicia la aplicación.</li>
+</ol>
+<h2 id="Usar_tu_componente" name="Usar_tu_componente">Usar tu componente</h2>
+<pre>try {
+        // Esto es necesario para permitir el uso generalizado de componentes en JavaScript
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
+        var miComponente = Components.classes['@ejemplo.evelio.net/holamozdev;1']
+                                    .createInstance(Components.interfaces.nsIHolaMozDev);
+
+        alert(miComponente.hola());
+} catch (unError) {
+        alert("ERROR: " + unError);
+}
+</pre>
+<h2 id="Otros_recursos" name="Otros_recursos">Otros recursos</h2>
+<ul>
+ <li>Dos temas en los foros de mozillazine sobre la implementación de componentes XPCOM en JS con algunas explicaciones, código de ejemplo, y trucos para resolver problemillas (en inglés):
+  <ul>
+   <li><a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=308369" rel="freelink">http://forums.mozillazine.org/viewtopic.php?t=308369</a></li>
+   <li><a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=367298" rel="freelink">http://forums.mozillazine.org/viewtopic.php?t=367298</a></li>
+  </ul>
+ </li>
+ <li><a class="external" href="http://kb.mozillazine.org/Implementing_XPCOM_components_in_JavaScript">Implementing XPCOM components in JavaScript</a> en kb.mozillazine.org</li>
+ <li><a class="external" href="http://www.mozilla.org/scriptable/avoiding-leaks.html">Using XPCOM in JavaScript without leaking</a> - De lectura obligatoria.</li>
+ <li><a class="external" href="http://lxr.mozilla.org/seamonkey/source/xpcom/sample/nsSample.js">Un componente de ejemplo</a></li>
+ <li><a class="external" href="http://www.mozilla.org/scriptable/js-components-status.html">Older JS+XPCOM notes</a> - incluye información acerca de wrappedJSObject.</li>
+</ul>

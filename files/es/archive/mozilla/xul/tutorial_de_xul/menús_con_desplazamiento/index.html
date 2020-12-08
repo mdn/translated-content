@@ -1,0 +1,56 @@
+---
+title: Menús con desplazamiento
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Menús_con_desplazamiento
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - para_revisar
+---
+<p>Esta sección describe los menús con desplazamiento y cómo usar el mecanismo con otros elementos.</p>
+
+<h3 id="Creaci.C3.B3n_de_un_men.C3.BA_largo" name="Creaci.C3.B3n_de_un_men.C3.BA_largo">Crear un menú grande</h3>
+
+<p>Te preguntarás qué sucede si creas un menú con muchas opciones en él, de tal forma que no todos los ítems aparezcan en la pantalla a la vez. Mozilla <img alt="scrolling-menu.jpg" class="internal rwrap" src="/@api/deki/files/4819/=scrolling-menu.jpg" style="float: right;">proveerá un mecanismo de despliegue que te permitirá moverte a través de los ítems.</p>
+
+<div class="float-right"><img alt="Image:menuscroll1.png" class="internal" src="/@api/deki/files/761/=Menuscroll1.png"></div>
+
+<p>Si el espacio disponible es demasiado pequeño, aparecerán flechas al final de cada menú. Si mueves el ratón sobre las flechas, el menú se desplegará hacia abajo o hacia arriba. Si el espacio disponible es lo suficientemente grande, las flechas no aparecerán. Observa que el comportamiento exacto de este mecanismo dependerá del tema actual.</p>
+
+<p>Este comportamiento es automático. No tienes que hacer nada para obtener menús desplegables. Se aplicará a menús en barras de menú, en emergentes o listas de menús. Se implementa usando un elemento <code><a href="/es/XUL/Elementos#arrowscrollbox" title="es/XUL/Elementos#arrowscrollbox">arrowscrollbox</a></code>. Este elemento puede usarse para crear cajas desplegables con flechas.</p>
+
+<p>El elemento <code><a href="/es/XUL/Elementos#arrowscrollbox" title="es/XUL/Elementos#arrowscrollbox">arrowscrollbox</a></code> puede usarse en cualquier lugar donde se pueda usar una caja normal. No tienes que usarlo en menús. Siempre es un caja vertical y puede contener cualquier elemento en su interior. Puedes usarlo para implementar una lista cuando no deseas hacer un menú desplegable.</p>
+
+<h4 id="Ejemplo_-_desplazamiento_de_una_lista_de_botones" name="Ejemplo_-_desplazamiento_de_una_lista_de_botones">Ejemplo - lista de botones con desplazamiento</h4>
+
+<p>El siguiente ejemplo muestra cómo crear una lista desplegable de botones (tendrás que redefinir el tamaño de la ventana para ver los botones de flechas):</p>
+
+<p><strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menuscroll_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_menuscroll_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;arrowscrollbox orient="vertical" flex="1"&gt;
+  &lt;button label="Rojo"/&gt;
+  &lt;button label="Azul"/&gt;
+  &lt;button label="Verde"/&gt;
+  &lt;button label="Amarillo"/&gt;
+  &lt;button label="Naranja"/&gt;
+  &lt;button label="Plata"/&gt;
+  &lt;button label="Lavenda"/&gt;
+  &lt;button label="Oro"/&gt;
+  &lt;button label="Turquesa"/&gt;
+  &lt;button label="Melocotón"/&gt;
+  &lt;button label="Marrón"/&gt;
+  &lt;button label="Negro"/&gt;
+&lt;/arrowscrollbox&gt;
+</pre>
+
+<p>Si pruebas este ejemplo, primero abrirá a tamaño total. Sin embargo, si encoges el alto de la ventana, las flechas de despliegue aparecerán. Al volver a hacer la ventana más grande, las flechas desaparecerán.</p>
+
+<p>Puedes establecer una altura máxima usando la propiedad CSS <code>max-height</code> en el <code>arrowscrollbox</code> para limitar el tamaño de la caja de despliegue y así hacer que las flechas aparezcan todo el tiempo.</p>
+
+<p>El <code>arrowscrollbox</code> es principalmente útil en menús y emergentes.</p>
+
+<p>A continuación veremos cómo añadir <a href="/es/Tutorial_de_XUL/Añadiendo_los_gestores_de_eventos" title="es/Tutorial_de_XUL/Añadiendo_los_gestores_de_eventos">gestores de eventos a elementos XUL</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Menús_emergentes" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Añadiendo_los_gestores_de_eventos">Siguiente  »</a></p>
+</div>

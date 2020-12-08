@@ -1,0 +1,70 @@
+---
+title: Opciones para la publicación de aplicaciones
+slug: Mozilla/Marketplace/Publishing/Publish_options
+tags:
+  - Apps
+  - Marketplace
+translation_of: Archive/Mozilla/Marketplace/Options/Self_publishing
+---
+<div class="summary">
+ <p>Una vez usted ha finalizado su aplicación es necesario publicarla para que este disponible para el usuario final (sin importar que se utilice como una página Web desde el navegador o sea descargada y utilizada en un dispositivo como un teléfono con Firefox OS), suministrando información de soporte  como instrucciones de uso y otros recursos. Este articulo muestra brevemente las diferentes opciones disponibles para usted.</p>
+</div>
+<h2 id="Publicando_en_el_Marketplace_de_Firefox">Publicando en el Marketplace de Firefox</h2>
+<p>El <a href="https://marketplace.firefox.com/" title="/en-US/docs/Web/Apps/Publishing/Submitting_an_app">Marketplace de Firefox</a> es nuestra tienda para distribuir aplicaciones tanto gratuitas como de pago. <a href="/en-US/docs/Web/Apps/Publishing/Submitting_an_app">Enviar una aplicación al Marketplace de Firefox</a> es un proceso simple, la carga a la tienda implica la subida de la aplicación conjuntamente con su información complementaria, luego espere mientras su aplicación pasa a través del proceso de revisión para segurar su calidad y que no contenga código malicioso. El envió al Marketplace de Firefox también confiere una serie de ventajas como el incremento de publicidad, tampoco es necesario implementar APIs especiales en su sitio Web, y la posibilidad de publicar aplicaciones de pago. Usted puede enviar tanto aplicaciones empaquetadas como aplicaciones hosteadas al Marketplace de Firefox.</p>
+<h3 id="Aplicaciones_hosteadas">Aplicaciones hosteadas</h3>
+<p>Una aplicación hosteada es básicamente una página almacenada en un servidor Web que puede utilizarse como una aplicación (el termino hosteada viene del ingles hosting). Si usted quiere permitir a las personas instalar su aplicación directamente desde su Web, usted debe implementar <a href="/en-US/Apps/Developing/JavaScript_API"> algo de código JavaScript</a> en su sitio Web para administrar la instalación y/o actualización de la aplicación en el navegador de los usuarios, asegúrese también que el código de su aplicación incluya un archivo de manifiesto válido. Por favor vea nuestros <a href="/en-US/docs/Web/Apps/Introduction_to_open_web_apps#Manifest" title="/en-US/docs/Web/Apps/Introduction_to_open_web_apps#Manifest">archivos de manifiesto</a> y nuestras  <a href="/en-US/docs/Web/Apps/Introduction_to_open_web_apps#Install_API_functionality" title="/en-US/docs/Web/Apps/Introduction_to_open_web_apps#Install_API_functionality">APIs de instalación</a> para ver los pasos para implementar estas funciones.</p>
+<p>El lugar que usted escoja para almacenar su aplicación queda enteramente a su conveniencia, pero las dos opciones que mostraremos a continuación son las mas comunes y convenientes.</p>
+<h4 id="GitHub">GitHub</h4>
+<p>Si tu aplicación Web es puramente estática (HTML/CSS/JavaScript, pero sin procesamiento del lado del servidor), <a href="http://pages.github.com" rel="external">GitHub Pages</a> es una opción bastante confiable. si usted usa una extensión <code>.webapp </code>esta plataforma entregara su manifiesto con <a href="/en-US/Apps/Developing/Manifest#Serving_from_GitHub">correspondiente tipo de MIME</a>.</p>
+<h4 id="Soluciones_genéricas_de_hosting">Soluciones genéricas de hosting</h4>
+<p>Para sitios Web dinámicos use la opción de hosting genérico (como un servidor Web de su propiedad o uno al que tenga acceso) con las capacidades necesarias o un proveedor de hosting  específicamente adaptado a las necesidades de su aplicación, como por ejemplo <a href="http://www.heroku.com" rel="external">Heroku</a> o <a href="http://code.google.com/appengine" rel="external">Google App Engine</a>.</p>
+<div class="note">
+ <p><strong>Nota</strong>: Las aplicaciones Web instalables tienen una política de seguridad llamada "una aplicación por origen" ; básicamente usted no puede almacenar mas de una aplicación por origen. Esto hace el proceso de pruebas un poco mas difícil, pero siempre podrá crear un sub-dominio para cada aplicación y utilizar el simulador de Firefox OS o Firefox Aurora (que permites instalar aplicaciones Web el en escritorio) para probarlas. Vea las <a href="/en-US/docs/Web/Apps/FAQs/About_app_manifests">FAQs acerca del manifiesto de aplicaciones</a> para mas información sobre los orígenes.</p>
+</div>
+<h3 id="Aplicaciones_empaquetadas">Aplicaciones empaquetadas</h3>
+<p>Una aplicación empaquetada es una Web que tiene todos sus recursos (HTML, CSS, JavaScript, manifiesto, etc.) contenidos en un archivo zip en lugar de tener esos recursos alojados en un servidor Web. Una aplicación empaquetada es simplemente un archivo zip con el <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest">manifiesto de la aplicación</a> en su directorio raíz. El manifiesto debe llamarse <code>manifest.webapp</code>.</p>
+<p>Una diferencia con las aplicaciones hosteadas es que usted debe especificar un <code><a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest#launch_path">launch_path</a></code> en el manifiesto, y en las aplicaciones hosteadas esto es un campo opcional. Para mayor información vea nuestro articulo sobre <a href="/en-US/docs/Web/Apps/Publishing/Packaged_Apps" title="/en-US/docs/Web/Apps/Publishing/Packaged_Apps">Aplicaciones empaquetadas</a>.</p>
+<h2 id="Aplicaciones_auto-publicadas">Aplicaciones auto-publicadas</h2>
+<p>Usted además puede elegir la opción de auto-publicar. Para aplicaciones hosteadas, esto solo involucra colocarla en un hosting como se indica a continuación.</p>
+<p>Usted puede auto-publicar una aplicación empaquetada solo colocándola en un servidor conjuntamente con un mini manifiesto en el mismo directorio donde se encuentra y que será usado al instalar la aplicación. Veamos este proceso:</p>
+<ol>
+ <li>Tener el zip de la aplicación empaquetada con el nombre <code>package.zip</code>. Este archivo contiene todos los recursos de la aplicación así como también su manifiesto.</li>
+ <li>Cree un archivo llamado <code>package.manifest</code> con el siguiente contenido. Este es un mini manifiesto usado para la instalación de aplicaciones empaquetadas. No es el manifiesto principal, el cual se encuentra dentro del archivo zip.<br>
+  <pre class="brush: js">{
+    "name": "My sample app",
+    "package_path" : "http://my-server.com/my-app-directory/my-app.zip",
+    "version": "1",
+    "developer": {
+        "name": "Chris Mills",
+        "url": "http://my-server.com"
+    }
+}</pre>
+ </li>
+ <li>Cree un archivo llamado <code>index.html</code> con el siguiente contenido. Este contiene un ejemplo del JavaScript que llama a la aplicación empaquetada (<a href="/en-US/docs/Web/API/Apps.installPackage"><code>installPackage()</code></a>) y devuelve la llamada en caso de éxito y notificación de errores.
+  <pre class="brush: html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;p&gt;Packaged app installation page&lt;/p&gt;
+    &lt;script&gt;
+      // This URL must be a full url.
+      var manifestUrl = 'http://my-server.com/my-app-directory/package.manifest';
+      var req = navigator.mozApps.installPackage(manifestUrl);
+      req.onsuccess = function() {
+        alert(this.result.origin);
+      };
+      req.onerror = function() {
+        alert(this.error.name);
+      };
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+ </li>
+ <li>Copie <code>package.zip</code>, <code>package.manifest</code>, y <code>index.html</code> en la raíz del directorio de su aplicación (<code>my-app-directory</code> en este ejemplo).</li>
+ <li>Utilizando un dispositivo compatible (como un teléfono con Firefox OS), navegue hasta la localización en su servidor donde usted coloco los archivos de ejemplo y confirme cuando se le pregunte para completar la instalación. El script le dará una indicación en caso de completarse exitosamente o de una falla.</li>
+</ol>
+<div class="note">
+ <p><strong>Nota:</strong> Usted no puede instalar aplicaciones privilegiadas o certificadas desde paquetes auto-publicados ya que ellas necesitan ser firmadas durante el proceso de publicación del Marketplace de Firefox.</p>
+</div>
+<div class="note">
+ <p><strong>Nota</strong>: Usted incluso puede <a href="/en-US/docs/Web/Apps/Creating_a_store" title="/en-US/docs/Web/Apps/Creating_a_store">crear su propia tienda de aplicaciones</a>, ya que dispone de una serie de opciones para hacerlo.</p>
+</div>
+<p> </p>

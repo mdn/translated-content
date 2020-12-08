@@ -1,0 +1,43 @@
+---
+title: navigator.id
+slug: DOM/navigator.id
+translation_of: Archive/Navigator-id
+---
+<div>
+ {{ ApiRef() }} {{ non-standard_header() }}</div>
+<div class="note">
+ <strong>Huomaa:</strong> Tukea tälle toiminnallisuudelle ei ole vielä rakennettu yhteenkään selaimeen. Personaa käyttävien webbisivustojen on sisällytettävä omille sivustoilleen polyfill-kirjasto, jota ylläpidetään osoitteessa <a class="link-https" href="https://login.persona.org/include.js" title="https://login.persona.org/include.js">https://login.persona.org/include.js</a>.</div>
+<h2 id="Summary" name="Summary">Yhteenveto</h2>
+<p><a href="/en-US/docs/Persona" title="BrowserID">BrowserID-yhteyskäytäntö</a> määrittää uuden <code>id</code>-ominaisuuden {{ domxref ("window.navigator")}}-objektiin, jonka kautta se paljastaa BrowserID-sovellusohjelmointirajapinnan (API). Tämä API on läpikäynnyt useita merkittäviä korjausversioita. Jokainen sukupolvi on lueteltu erikseen alla.</p>
+<h2 id="ObserverMethods" name="ObserverMethods">"Observer" API (nykyinen)</h2>
+<p>Observer API esittelee paljon pyydettyjä ominaisuuksia, kuten parannetun jälkitodennuskokemuksen ensikertalaiskäyttäjille, automaattiset pysyväiskirjautumiset ja helpomman integroinnin kotoperäisiin sovelluksiin.</p>
+<dl>
+ <dt>
+  {{ domxref("navigator.id.watch()")}}</dt>
+ <dd>
+  Rekisteröi kutsuttavan callback-funktion, kun käyttäjä kirjautuu sisään tai ulos webbisivustosta.</dd>
+ <dt>
+  {{ domxref("navigator.id.request()")}}</dt>
+ <dd>
+  Pyytää allekirjoitetun tunnistusvakuutuksen käyttäjältä.</dd>
+ <dt>
+  {{ domxref("navigator.id.logout()")}}</dt>
+ <dd>
+  Sulkee käyttäjän pois webbisivulta ja estää <code>onlogin</code>-toiminnon automaattisesta käynnistymisestä heidän seuraavalla vierailullaan.</dd>
+</dl>
+<h2 id="CallbackMethods" name="CallbackMethods">Callback" API (nykyinen)</h2>
+<p>Callback API esiteltiin marraskuussa 2011. Se paransi sovellusohjelmointirajapinnan (API) alustusta sallimalla valitsimien välittämisen kohteelle <code>navigator.id.get()</code> ja tarjoamalla kokeellisen tuen BrowserID-hallituille pysyville istunnoille.</p>
+<dl>
+ <dt>
+  {{ domxref("navigator.id.get()")}}</dt>
+ <dd>
+  Hakee käyttäjän BrowserID:n allekirjoitetussa vakuutuksessa.</dd>
+</dl>
+<h2 id="VerifiedEmailMethods" name="VerifiedEmailMethods">"VerifiedEmail" API (vanhentunut)</h2>
+<p>VerifiedEmail API oli BrowserID:n ensimmäinen sovellusohjelmointirajapinta (API). Se vanheni vuoden 2011 lopussa.</p>
+<dl>
+ <dt>
+  {{ domxref("navigator.id.getVerifiedEmail()")}} {{ deprecated_inline() }}</dt>
+ <dd>
+  Hakee käyttäjän BrowserID:n allekirjoitetussa vakuutuksessa. Tämä metodi on vanhentunut; {{ domxref("navigator.id.get()")}} on taaksepäin yhteensopiva ja sitä voidaan käyttää sen sijasta.</dd>
+</dl>

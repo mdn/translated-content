@@ -1,0 +1,244 @@
+---
+title: Introducción a la API de Cámara
+slug: Web/Guide/API/Camera
+tags:
+  - DOM
+  - Intermedio
+  - Medios
+  - NecesitaActualización
+  - Referencia DOM Gecko
+  - Web API
+  - cámara
+translation_of: Archive/B2G_OS/API/Camera_API/Introduction
+---
+<p><span class="seoSummary">Mediante la <a class="link-https" href="https://wiki.mozilla.org/Platform/Features/Camera_API">API de Cámara</a>, es posible tomar fotografías con la cámara de su dispositivo y subirlas a una página web.</span> Esto se logra a través de un elemento <code>input</code> con los atributos <code>type="file"</code> y <code>accept</code> para declarar que el elemento acepta imágenes. El HTML se parece a esto:</p>
+
+<pre class="brush: html">&lt;input type="file" id="take-picture" accept="image/*"&gt;
+</pre>
+
+<p>Cuando los usuarios eligen activar este elemento HTML, se les presenta la opción de seleccionar un fichero, donde la cámara del dispositivo es una de las opciones. Si seleccionan la cámara, se accede al modo de toma de fotografía. Tras realizar la fotografía, al usuario se le presenta la posibilidad de aceptarla o rechazarla. Si se acepta, es enviada al elemento <code>&lt;input type="file"&gt;</code> y se lanza su evento <code>onchange</code>.</p>
+
+<h2 id="Obtener_una_referencia_a_la_fotografía_tomada">Obtener una referencia a la fotografía tomada</h2>
+
+<p>Con la ayuda de la <a href="/en/Using_files_from_web_applications" title="en/Using_files_from_web_applications">API de Fichero</a> usted puede acceder a la fotografía tomada o el fichero elegido:</p>
+
+<pre class="brush: js">var takePicture = document.querySelector("#take-picture");
+takePicture.onchange = function (event) {
+    // Obtener una referencia a la fotografía tomada o fichero seleccionado
+    var files = event.target.files,
+        file;
+    if (files &amp;&amp; files.length &gt; 0) {
+        file = files[0];
+    }
+};
+</pre>
+
+<h2 id="Presentando_la_fotografía_en_la_página_web">Presentando la fotografía en la página web</h2>
+
+<p>Una vez que tiene una referencia a la fotografía tomada (ej.: fichero), puede entonces usar {{ domxref("window.URL.createObjectURL()") }} para crear una URL referenciando la fotografía y estableciéndola como <code>src</code> de una imagen:</p>
+
+<pre class="brush: js">// Referencia de la imagen
+var showPicture = document.querySelector("#show-picture");
+
+// Crear ObjectURL
+var imgURL = window.URL.createObjectURL(file);
+
+// Establecer ObjectURL como img src
+showPicture.src = imgURL;
+
+// Por razones de rendimiento, revocar los ObjectURL usados
+URL.revokeObjectURL(imgURL);
+</pre>
+
+<p>Si <code>createObjectURL()</code> no es soportado, una alternativa es retroceder a {{ domxref("FileReader") }}:</p>
+
+<pre class="brush: js">// Retroceder a FileReader si createObjectURL no está soportado
+var fileReader = new FileReader();
+fileReader.onload = function (event) {
+    showPicture.src = event.target.result;
+};
+fileReader.readAsDataURL(file);
+</pre>
+
+<h2 id="Ejemplo_completo">Ejemplo completo</h2>
+
+<p>Si desea verlo en acción, eche un vistazo al <a class="external" href="http://robnyman.github.com/camera-api/">ejemplo completo de la API de Cámara funcionando</a>.</p>
+
+<p>Aquí está el código usado para esa demostración:</p>
+
+<h3 id="Página_HTML">Página HTML</h3>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Camera API&lt;/title&gt;
+        &lt;link rel="stylesheet" href="css/base.css" type="text/css" media="screen"&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+
+        &lt;div class="container"&gt;
+            &lt;h1&gt;Camera API&lt;/h1&gt;
+
+            &lt;section class="main-content"&gt;
+                &lt;p&gt;A demo of the Camera API, currently implemented in Firefox and Google Chrome on Android. Choose to take a picture with your device's camera and a preview will be shown through createObjectURL or a FileReader object (choosing local files supported too).&lt;/p&gt;
+
+                &lt;p&gt;
+                    &lt;input type="file" id="take-picture" accept="image/*"&gt;
+                &lt;/p&gt;
+
+                &lt;h2&gt;Preview:&lt;/h2&gt;
+                &lt;p&gt;
+                    &lt;img src="about:blank" alt="" id="show-picture"&gt;
+                &lt;/p&gt;
+
+                &lt;p id="error"&gt;&lt;/p&gt;
+
+            &lt;/section&gt;
+
+            &lt;p class="footer"&gt;All the code is available in the &lt;a href="https://github.com/robnyman/robnyman.github.com/tree/master/camera-api"&gt;Camera API repository on GitHub&lt;/a&gt;.&lt;/p&gt;
+        &lt;/div&gt;
+
+
+        &lt;script src="js/base.js"&gt;&lt;/script&gt;
+
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<h3 id="Fichero_JavaScript">Fichero JavaScript</h3>
+
+<pre class="brush: js">(function () {
+    var takePicture = document.querySelector("#take-picture"),
+        showPicture = document.querySelector("#show-picture");
+
+    if (takePicture &amp;&amp; showPicture) {
+        // Establecer eventos
+        takePicture.onchange = function (event) {
+            // Obtener una referencia a la fotografía tomada o fichero seleccionado
+            var files = event.target.files,
+                file;
+            if (files &amp;&amp; files.length &gt; 0) {
+                file = files[0];
+                try {
+                    // Crear ObjectURL
+                    var imgURL = window.URL.createObjectURL(file);
+
+                    // Establecer ObjectURL como img src
+                    showPicture.src = imgURL;
+
+                    // Revocar ObjectURL
+                    URL.revokeObjectURL(imgURL);
+                }
+                catch (e) {
+                    try {
+                        // Regresar a FileReader si createObjectURL no está soportado
+                        var fileReader = new FileReader();
+                        fileReader.onload = function (event) {
+                            showPicture.src = event.target.result;
+                        };
+                        fileReader.readAsDataURL(file);
+                    }
+                    catch (e) {
+                        //
+                        var error = document.querySelector("#error");
+                        if (error) {
+                            error.innerHTML = "Neither createObjectURL or FileReader are supported";
+                        }
+                    }
+                }
+            }
+        };
+    }
+})();
+</pre>
+
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Camera API</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/DOM/window.URL.createObjectURL" title="/en-US/docs/DOM/window.URL.createObjectURL">createObjectURL()</a></code></td>
+   <td>16</td>
+   <td>{{CompatGeckoDesktop("8.0")}}</td>
+   <td>10+</td>
+   <td>{{CompatNo()}}</td>
+   <td>{{CompatNo()}}</td>
+  </tr>
+  <tr>
+   <td>{{domxref("FileReader")}}</td>
+   <td>16</td>
+   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
+   <td>10+</td>
+   <td>11.6+</td>
+   <td>{{CompatNo()}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Camera API</td>
+   <td>3.0</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+   <td>{{ CompatGeckoMobile("10.0") }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatNo() }}</td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/DOM/window.URL.createObjectURL" title="/en-US/docs/DOM/window.URL.createObjectURL">createObjectURL()</a></code></td>
+   <td>4</td>
+   <td>{{CompatVersionUnknown()}}</td>
+   <td>{{CompatGeckoMobile("10.0")}}</td>
+   <td>{{CompatNo()}}</td>
+   <td>{{CompatNo()}}</td>
+   <td>{{CompatNo()}}</td>
+  </tr>
+  <tr>
+   <td>{{domxref("FileReader")}}</td>
+   <td>3</td>
+   <td>{{CompatVersionUnknown()}}</td>
+   <td>{{CompatGeckoMobile("10.0")}}</td>
+   <td>{{CompatNo()}}</td>
+   <td>11.1</td>
+   <td>{{CompatNo()}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p> </p>

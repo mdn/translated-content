@@ -1,0 +1,53 @@
+---
+title: Glosario de Social API
+slug: Social_API/Glossary
+tags:
+  - Social
+translation_of: Archive/Social_API/Glossary
+---
+<div class="note">
+  <p><strong>Note:</strong> Hay algunos puntos destacados donde los enlaces hacia otros documentos necesitan ser añadidos cuando estos sean escritos.</p>
+</div>
+<p>Para hacer uso de Social API (si estás escribiendo un nuevo proveedor de servicios sociales o trabajando con un proveedor ya existente), hay un número de términos que necesitas saber. ¡Este glosario te ayudará!</p>
+<dl>
+  <dt>
+    Notificación Cliente-a-usuario (Client-to-user notification)</dt>
+  <dd>
+    La notificación Cliente-a-usuario es la API (interfaz de programación de aplicaciones) que se pone a disposición a un worker del servicio (service worker) para indicar que los datos y las interacciones están pendientes para el usuario en el dispositivo en particular, y que el servicio está listo para proporcionarlas. Sujeto a la configuración del navegador, estas notificaciones pueden ser utilizadas para lanzar una variedad de elementos de interfaz para llamar la atención, incluyendo ventanas temporales de estilo "toast" o "Growl", notificaciones ambientales (por ejemplo brillos, saltos, pulsaciones), o colecciones (por ejemplo paneles desplegables de notificación, listas de eventos pendientes). Estas notificaciones son construidas para permitir al service worker recibir notificaciones cuando el usuario indica interés en una de ellas, permitiendo la presentación de datos o interacción para proceder inmediatamente.</dd>
+  <dt>
+    Panel (Panel)</dt>
+  <dd>
+    Una región del interfaz de usuario (generalmente rectangular) que se muestra temporalmente por encima del contenido y de la interfaz del navegador; estos son usados para interacciones breves que son iniciadas por el usuario o que son muy importantes</dd>
+  <dt>
+    Recomendar (Recommend)</dt>
+  <dd>
+    El acto iniciado por el usuario de indicar que una pieza de contenido web (generalmente una URL) debe marcarse de interés para el usuario. No se espera una entrada distinta a una URL. Una recomendación puede ser completada sin widget; no tiene más interfaz de usuario que el botón, barra de menú o comando que indica "recomienda esto".</dd>
+  <dt>
+    Notificación servidor-a-cliente (Server-to-client notification)</dt>
+  <dd>
+    La notificación de servidor a cliente es un sistema por el cual un servicio Server-to-client notification dispone de notificaciones para ser enviadas de manera rápida y eficaz a un cliente. No es una característica de esta propuesta, aunque las técnicas web existentes incluyendo <a href="/en-US/docs/WebSockets" title="/en-US/docs/WebSockets">WebSockets</a>, <a href="/en-US/docs/Server-sent_events" title="/en-US/docs/Server-sent_events">Server-sent events</a>, <code><a href="/en-US/docs/DOM/XMLHttpRequest" title="/en-US/docs/DOM/XMLHttpRequest">XMLHttpRequest</a></code> con sondeo largo, long polling (o infrequently quick polling) pueden ser todas usadas para workers de servicio (service workers). Se espera que un worker de servicio que recibe una notificación servidor-a-cliente retransmitirá a menudo estos datos en una notificación cliente-a-usuario.</dd>
+  <dt>
+    Mensaje de servicio (Service message)</dt>
+  <dd>
+    Un mensaje es una cadena de texto codificada en <a href="/en-US/docs/JSON" title="/en-US/docs/JSON">JSON</a> que es enviada por el navegador por el worker de servicio, o es enviada por el worker del servicio al navegador. Estos mensajes son usados para coordinar la visualización de elementos de usuario manejados por el navegador y responder a las interacciones de usuario y contenido. Véase <span style="color: #ffff00;"><span style="background-color: rgb(255, 0, 0);">Serialización de mensajes</span></span> para detalles de codificación.</dd>
+  <dt>
+    Worker de servicio (Service worker)</dt>
+  <dd>
+    Un ambiente de cálculo ejecutando durante mucho tiempo un JavaScript, manejado por el navegador y servido por una dirección web específica de usuario, que actúa como un eje o hub de coordinación y comunicación entre el navegador y un servicio web.</dd>
+  <dt>
+    Compartir (Share)</dt>
+  <dd>
+    El acto, iniciado por el usuario, de enviar una parte de contenido web (normalmente una URL) con un comentario opcional, explicación u otros datos a la dirección del usuario, lista de direcciones de usuario, red social u otro destino. Los detalles de la iteración son específicos para cada servicio y se requiere un <span style="color: #ffff00;"><code><span style="background-color: rgb(255, 0, 0);">ShareWidget</span></code></span> para representar la interfaz de usuario que complete el intercambio.</dd>
+  <dt>
+    Barra lateral (Sidebar)</dt>
+  <dd>
+    Un rectángulo vertical de espacio de pantalla, posicionado al lado del contenido normal del navegador en una ventana de navegación con pestañas, que es estable a lo largo de la navegación y a cambios de foco entre pestañas. Una barra lateral puede ser minimizada, lo que causa que sea mostrada enteramente en el espacio "por encima del contenido / no superpuesto sobre el contenido".</dd>
+  <dt>
+    Proveedor de servicio social (Social service provider)</dt>
+  <dd>
+    Un servicio web que proporciona una o más APIs al navegador para habilitar características sociales. Es definida en el navegador por un archivo estructurado de texto, que le dice al navegador cómo cargar  recursos de JavaScript y HTML que trae sus funciones al navegador.</dd>
+  <dt>
+    Widget (Widget)</dt>
+  <dd>
+    Un elemento de interfaz de usuario, creado por el navegador, que proporciona una región visual para el contenido producido por el proveedor de servicio.</dd>
+</dl>

@@ -1,0 +1,78 @@
+---
+title: Encriptación y Desencriptación
+slug: Archive/Security/Encriptación_y_Desencriptación
+tags:
+  - Seguridad
+  - Tutorial
+translation_of: Archive/Security/Encryption_and_Decryption
+---
+<p><span class="seoSummary">La encriptación es el proceso de transformar información para hacerla ilegible a cualquiera excepto al receptor del mensaje. La desencriptación es el proceso de transformar información encriptada para que sea legible de nuevo.</span> Un algoritmo criptográfico es una función matemática usada for encriptar o desencriptar. En la mayoría de los casos se utilizan dos funciones relacionadas, una para encriptar y otra para desencriptar.</p>
+
+<p>En la criptografía moderna, la habilidad para mantener secreta la información encriptada no está basada en el algoritmo criptográfico, si no que es ampliamente conocido, sino en un número llamado clave que debe ser usado con el algoritmo para producir un reultado encriptado o para desencriptar información previamente encriptada. La desencriptación con la clave correcta es sencilla. La desencriptación sin la clave correcta es muy compleja, y en algunos casos imposible para cualquier caso práctico.</p>
+
+<p>Las siguientes secciones introducen el uso de claves para encriptar y desencriptar.</p>
+
+<ul>
+ <li><a href="#Simetrica">Encriptación de clave simétrica</a></li>
+ <li><a href="#Publica">Encriptación de clave pública</a></li>
+ <li><a href="#Longitud">Longitud de la clave y fuerza de la encriptación</a></li>
+</ul>
+
+<h3 id="Symmetric-Key_Encryption" name="Symmetric-Key_Encryption"><a href="#" id="Simetrica" name="Simetrica">Encriptación de clave simétrica </a></h3>
+
+<p>Con la encriptación de clave simétrica, la clave de encriptación puede ser calculada a partir de la clave de desencriptación y viceversa. En la mayoría de los algoritmos simétricos, se utiliza la misma clave para encriptar y para desencriptar, como se muestra en la Figura 1.</p>
+
+<p><img alt="Figure 1. Symmetric-Key Encryption" class="internal" src="https://mdn.mozillademos.org/files/10303/05scrypt2.png" style="height: 125px; width: 443px;"></p>
+
+<p>Las implementaciones de la encriptación de clave simétrica pueden ser muy eficientes, con el fin de que los usuarios no tengan que esperar como resultado de una encriptación o una desencriptación. La encriptación de clave simétrica también provee cierto grado de autenticación, ya que la información encriptada no puede ser desencriptada con ninguna otra clave simétrica. Así, mientras que la clave simétrica se mantiene secreta entre las dos partes usándola para encriptar comunicaciones, cada parte puede estar segura que se está comunicando con la otra mientras que los mensajes desencriptados tengan sentido.</p>
+
+<p>La encriptación de clave simétrica sólo es efectiva si la clave simétrica se mantiene en secreto por ambas partes. Si cualquier otro descubre la clave, afecta tanto a la confidencialidad como a la autenticación. Una persona con una clave simétrica no autorizada puede no sólo desencriptar mensajes enviados con esa clave, sino que además puede encriptar nuevos mensajes y enviarlos como si viniese de una de las dos partes que orginalmente sabían la clave.</p>
+
+<p>La encriptación de clave simétrica juega un papel importante en el protocolo SSL, que es muy usado en autenticación y en encriptación sobre redes TCP/IP. SSL también usa técnicas de encriptación de clave pública, descrita en la siguiente sección.</p>
+
+<h3 id="Public-Key_Encryption" name="Public-Key_Encryption"><a name="Publica">Encriptación de clave pública</a></h3>
+
+<p>Las implementaciones más usadas de encriptación de clave pública están basadas en algoritmos patentados por Seguridad de datos RSA. Por lo tanto, esta sección describe el enfoque de RSA a la encriptación de clave pública.</p>
+
+<p>La encriptación de clave pública (también llamada encriptación asimétrica) involucra un par de claves --una clave pública y una clave privada-- asociadas a una entidad que necesita autenticar su identidad electrónicamente o firmar información encriptada. Cada clave pública es publicada, y la correspondiente clave privada se mantiene secreta. La información encriptada con la clave pública sólo puede ser desencriptada con la clave privada. La Figura 2 muestra un esquema simplificado de cómo funciona una encriptación de clave pública.</p>
+
+<p><img alt="Figure 2. Public-Key Encryption" class="internal" src="https://mdn.mozillademos.org/files/15760/06pcrypt-corrected.png" style="height: 125px; width: 443px;"></p>
+
+<p>El esquema mostrado en la Figura 2 permite distribuir libremente una clave pública, y sólo tú serás capaz de leer información encriptada usando esta clave. En general, para enviar informació encriptada a alguien, encriptas la información con la clave pública de esa persona, y la persona que recibe la información encriptada la desencripta utilizando su correspondiente clave privada.</p>
+
+<p>Comparada con la encriptación de clave simétrica, la encriptación de clave pública requiere más tiempo de cómputo y por lo tanto no es apropiada para   grandes cantidades de datos. Sin embargo, es posible usar encriptación de clave pública para enviar una clave simétrica, que puede entonces ser usada para encriptar información adicional. Este el el enfoque utilizado por el protocolo SSL.</p>
+
+<p>Como es lógico, el inverso del esquema mostrado en la Figura 2 también funciona: la información encriptada con tu clave privada puede ser desecnriptada sólo con tu clave pública. Sin embargo, esta no sería una forma deseable de encriptar datos confidenciales, ya que significa que cualquier persona con tu clave pública, que por definición está publicada, podría descifrar los datos. A pesar de esto, la encriptación de clave privada es útil, porque significa que puedes usar tu clave privada para firmar datos con tu firma digital --un requisito importante para el comercio electrónico y otras aplicación comerciales de criptografía--. Clientes como Firefox pueden entonces usar tu clave pública para confirmar que el mensaje fue firmado con tu clave priivada y que no ha sido manipulado desde que se firmó. Las "<a href="https://developer.mozilla.org/en-US/docs/Archive/Security/Digital_Signatures">Firmas Digitales</a>" describen como funciona este proceso de confirmación.</p>
+
+<h3 id="Key_Length_and_Encryption_Strength" name="Key_Length_and_Encryption_Strength"><a name="Longitud">Longitud de la clave y resistencia del cifrado</a></h3>
+
+<p>Romper un algoritmo de encriptación consiste básicamente en encontrar la clave para acceder a la información encriptada en texto plano. Para los algoritmos simétricos, romper el algoritmo normalmente significa intentar determinar la clave usada para encriptar el texto. Para un algoritmo de clave pública, romper el algoritmo normalmente significa obtener la información secreta compartida entre las dos partes.</p>
+
+<p>Un método para romper un algoritmo de clave simétrica es simplemente probar cada clave hasta que se encuentre la clave correcta.Para algoritmos de clave pública, ya que la mitad del par de claves es conocida públicamente, la otra mitad (clave privada) puede ser derivada utilizando la publicada a partir de complejos cálculos matemáticos. Encontrar la clave manualmente para romper un algoritmo se denomina ataque de fuerza bruta.</p>
+
+<p>Romper un algoritmo introduce el riesgo de interceptar, o incluso hacerse pasar por otra persona y ver fraudulentamente información privada.</p>
+
+<p>La fuerza de un algoritmo es determinada encontrando el método más rápido para romperlo y comparándolo con un ataque de fuerza bruta.</p>
+
+<p>Para claves simétricas, la fuerza de la encriptación es a menudo descrita en función del tamaño o longitud de las claves usadas para realizar la encriptación: en general, las claves más largas proporcionan una encriptación más fuerte. La longitud de la clave se mide en bits. Por ejemplo, las claves de 128 bits usadas con la clave simétrica de RC4 soportadas por SSL brindan una protección criptográfica significativamente mejor que las claves de 40 bits utilizadas con el mismo algoritmo. La encriptación RC4 de 128 bits es aproximadamente 3 x  <math><semantics><msup><mn>10</mn><mn>26</mn></msup><annotation encoding="TeX">10^26</annotation></semantics></math>veces más fuerte que la encriptación RC4 de 40 bits.<math><semantics><msup><mn>26</mn></msup><annotation encoding="TeX">10^26</annotation></semantics></math></p>
+
+<p>Algoritmos criptográficos diferentes pueden requerir claves de diferente longitud para lograr la misma fuerza de encriptación. El algoritmo RSA usado para encriptación de clave pública, por ejemplo, puede únicamente utilizar un subconjunto de todos los posibles valores para una clave de una longitud específica, debido a la naturaleza del problema matemático en el que está basado. Otros algoritmos, como los usados para encriptación dde clave simétrica, puede utilizar todos los posibles valores para una clave de una longitud específica, en lugar de un subconjunto.</p>
+
+<p>Ya que es relativamente trivial romper un algoritmo RSA, un algoritmo de encriptación de clave pública RSA debe tener una clave muy larga, al menos de 1024 bits, para ser considerada criptográficamente fuerte. Por otro lado, los algoritmos de clave simétrica pueden lograr aproximadamente el mismo nivel de fuerza con una clave de 80 bits para la mayoría de los algoritmos.</p>
+
+<p> </p>
+
+<div class="originaldocinfo">
+<h3 id="Original_Document_Information" name="Original_Document_Information">Información del documento original</h3>
+
+<ul>
+ <li>Autor(es): Ella Deon Lackey</li>
+ <li>ültima actualización: 2012</li>
+ <li>Información de Copyright: © 2012 Red Hat, Inc.</li>
+ <li>Enlace: <a href="https://access.redhat.com/documentation/en-US/Red_Hat_Certificate_System_Common_Criteria_Certification/8.1/html/Deploy_and_Install_Guide/index.html">Red Hat Certificate System Common Criteria Certification 8.1: Deployment, Planning, and Installation</a></li>
+</ul>
+</div>
+
+<p> </p>
+
+<p> </p>

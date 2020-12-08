@@ -1,0 +1,75 @@
+---
+title: '-ms-accelerator'
+slug: Web/CSS/-ms-accelerator
+tags:
+  - CSS
+  - Non-standard
+  - Propiedad CSS
+  - Referencia
+translation_of: Archive/Web/CSS/-ms-accelerator
+---
+<div>{{CSSRef}}</div>
+
+<div>{{non-standard_header}}</div>
+
+<p>La propiedad CSS <strong><code>-ms-accelerator</code></strong> es una  <a href="/en-US/docs/Web/CSS/Microsoft_CSS_extensions">esxtensión Microsoft</a> que establece o recupera una cadena que indica si el objeto representa un método abreviado de teclado.</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Syntax" name="Syntax">Sintaxis</h2>
+
+<pre class="brush: css">/* El objeto no es un atajo de teclado (por defecto) */
+-ms-accelerator: false
+/* El objeto es un atajo de teclado */
+-ms-accelerator: true
+</pre>
+
+<h3 id="Values">Values</h3>
+
+<dl>
+ <dt><code>false</code></dt>
+ <dd>
+ <p>El objeto no es un atajo de teclado</p>
+ </dd>
+ <dt><code>true</code></dt>
+ <dd>
+ <p>El objeto es un atajo de teclado</p>
+ </dd>
+</dl>
+
+<h3 id="Formal_syntax">Formal syntax</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Examples" name="Examples">Ejemplos</h2>
+
+<p>Este ejemplo usa el atributo <code>-ms-accelerator</code> en un  elemento {{HTMLElement("u")}} para especificar que la "N" en el elemento {{HTMLElement("label")}} es un atajo de teclado. Cuando la opción de "Ocultar los indicadores de navegación del teclado hasta que use la tecla Alt" está habilitada en las propiedades de pantalla del usuario la "N" no estará subrayada hasta que el usuario presione la tecla <kbd>Alt</kbd> . Cuando <kbd>Alt</kbd> + <kbd>N</kbd> son presionadas,el elemento {{HTMLElement("input")}} que define un atributo {{htmlattrxref("accessKey","input")}} valor de atributo de "N" recibe el foco.</p>
+
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Acelerador&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;label for="oName"&gt;&lt;u style="-ms-accelerator: true; accelerator: true"&gt;N&lt;/u&gt;ame: &lt;/label&gt;
+    &lt;input type="text"
+      id="oName"
+      size="25"
+      accesskey="N"
+      value="Your name here" /&gt;
+  &lt;/body&gt;
+&lt;/html&gt;<strong>
+</strong></pre>
+
+<h2 id="Specifications" name="Specifications">Especificaciones</h2>
+
+<p>No es parte de ninguna especificación.</p>
+
+<h2 id="Remarks" name="Remarks">Observaciones</h2>
+
+<p>Esta propiedad está soportada por Windows 2000 y versiones posteriores. permite a los usuarios ocultar los indicadores de navegación para los elementos del menú y los controles hasta que se presiona la tecla  <kbd>Alt</kbd></p>
+
+<p>Una clave de acceso es un solo carácter que se utiliza como método abreviado de teclado para seleccionar un objeto. El usuario presiona la tecla <kbd>Alt</kbd> y la mantiene presionada mientras presiona el carácter para mover el enfoque de entrada al objeto e invocar el evento predeterminado asociado con el objeto.</p>
+
+<p>En Internet Explorer 8 (IE8) el atributo <code>-ms-accelerator</code> es una extensión de CSS, y se puede usar como un sinónimo para <code>accelerator</code><strong> </strong>en el modo estándar de IE8.</p>

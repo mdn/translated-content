@@ -1,0 +1,92 @@
+---
+title: Creando un complemento de diccionario de ortografía
+slug: Mozilla/creando_un_complemento_de_diccionario_de_ortografia
+translation_of: Mozilla/Creating_a_spell_check_dictionary_add-on
+---
+<p>Esta página describe cómo empaquetar un diccionario de ortografía Hunspell como complemento para Firefox, o cómo actualizar tu complemento existente para que pueda ser instalado, desinstalado y actualizado sin necesidad de reiniciar.</p>
+
+<h2 id="Partes_necesarias">Partes necesarias</h2>
+
+<p>Para crear un complemento de diccionario, primero necesitas dos cosas:</p>
+
+<ul>
+ <li>Un diccionario de ortografía en formato Hunspell o Myspell, con una licencia que te permita hacer uso de él. Este diccionario consiste en dos archivos, uno con una extensión de archivo <code>.dic</code> y otro con un <code>.aff</code>.</li>
+ <li>Un código de localización para describir el idioma del diccionario. Por ejemplo, <code>en-US</code>, <code>de-DE</code> o <code>da</code>. Es importante elegir el código de localización correcto, o sino el revisor de ortografía no podrá comparar adecuadamente el idioma del diccionario con el del sitio web para seleccionar el diccionario correcto a utilizar.</li>
+</ul>
+
+<p>Si estás creando un nuevo diccionario, a diferencia de actualizar uno existente, por favor asegúrate de que no haya un <a href="https://addons.mozilla.org/en-US/firefox/language-tools/" title="https://addons.mozilla.org/en-US/firefox/language-tools/">diccionario disponible</a> para tu localización. Si es que ya hay uno, intenta contactar al autor para actualizarlo, o contacta a los <a href="https://wiki.mozilla.org/AMO:Editors" title="https://wiki.mozilla.org/AMO:Editors">editores de AMO</a> si es que el autor no responde.</p>
+
+<h2 id="Empaquetamiento">Empaquetamiento</h2>
+
+<p>Un complemento de Firefox es un archivo ZIP renombrado para usar una extensión de archivo <code>.xpi</code> en lugar de la extensión de archivo <code>.zip</code> normal. Para crear un complemento de diccionario, simplemente crea un archivo ZIP que contenga los siguientes archivos y carpetas:</p>
+
+<p><code>my-dictionary.xpi</code></p>
+
+<ul>
+ <li><code>install.rdf</code></li>
+ <li><code>dictionaries/</code>
+  <ul>
+   <li><em>código-de-localización</em><code>.dic</code></li>
+   <li><em>código-de-localización</em><code>.aff</code></li>
+  </ul>
+ </li>
+</ul>
+
+<p>Los archivos <code>.dic</code> y <code>.aff</code> deben estar ubicados en una subcarpeta llamada <code>dictionaries</code> dentro del archivo ZIP. Ambos archivos deben tener el código de localización como nombre de archivo. También tienes que añadir un archivo llamado <code>install.rdf</code> a la raíz del archivo ZIP. Este archivo contiene información sobre tu complemento, como por ejemplo el nombre y el número de versión (ver a continuación). Además de estos archivos requeridos, puedes añadir archivos opcionales, por ejemplo darle un <a href="/en-US/docs/Install_Manifests#iconURL" title="/en-US/docs/Install_Manifests#iconURL">ícono</a> a tu complemento o describir la licencia del diccionario.</p>
+
+<p>Aquí hay un ejemplo del archivo <code>install.rdf</code>. Puedes crearlo y editarlo con un editor de texto plano como "Bloc de notas".</p>
+
+<p><code>&lt;?xml version="1.0"?&gt;<br>
+ &lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"<br>
+      xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;<br>
+   &lt;Description about="urn:mozilla:install-manifest"&gt;<br>
+     &lt;em:id&gt;<span style="color: #ff0000;"><strong><em>Código-de-localización</em></strong></span>@dictionaries.addons.mozilla.org&lt;/em:id&gt;<br>
+     &lt;em:version&gt;<em><strong><span style="color: #ff0000;">número de versión</span></strong></em>&lt;/em:version&gt;<br>
+     &lt;em:type&gt;64&lt;/em:type&gt;<br>
+     &lt;em:unpack&gt;true&lt;/em:unpack&gt;<br>
+     &lt;em:name&gt;<span style="color: #ff0000;"><em><strong>Nombre</strong></em></span>&lt;/em:name&gt;<br>
+     <em><strong>&lt;!--<br>
+       Otros <a href="/en-US/docs/Install_Manifests" title="/en-US/docs/Install_Manifests">metadatos de install.rdf</a> tales como em:localized, em:description, em:creator,<br>
+       em:developer, em:translator, em:contributor o em:homepageURL<br>
+     --&gt;</strong></em><br>
+ <br>
+     &lt;!-- Firefox --&gt;<br>
+     &lt;em:targetApplication&gt;<br>
+       &lt;Description&gt;<br>
+         &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;<br>
+         &lt;em:minVersion&gt;18.0a1&lt;/em:minVersion&gt;<br>
+         &lt;em:maxVersion&gt;46.0&lt;/em:maxVersion&gt;<br>
+       &lt;/Description&gt;<br>
+     &lt;/em:targetApplication&gt;<br>
+ <br>
+     &lt;!-- Thunderbird --&gt;<br>
+     &lt;em:targetApplication&gt;<br>
+       &lt;Description&gt;<br>
+         &lt;em:id&gt;{3550f703-e582-4d05-9a08-453d09bdfdc6}&lt;/em:id&gt;<br>
+         &lt;em:minVersion&gt;18.0a1&lt;/em:minVersion&gt;<br>
+         &lt;em:maxVersion&gt;22.0&lt;/em:maxVersion&gt;<br>
+       &lt;/Description&gt;<br>
+     &lt;/em:targetApplication&gt;<br>
+ <br>
+     &lt;!-- SeaMonkey --&gt;<br>
+     &lt;em:targetApplication&gt;<br>
+       &lt;Description&gt;<br>
+         &lt;em:id&gt;{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}&lt;/em:id&gt;<br>
+         &lt;em:minVersion&gt;2.15a1&lt;/em:minVersion&gt;<br>
+         &lt;em:maxVersion&gt;2.49&lt;/em:maxVersion&gt;<br>
+       &lt;/Description&gt;<br>
+     &lt;/em:targetApplication&gt;<br>
+   &lt;/Description&gt;<br>
+ &lt;/RDF&gt;</code></p>
+
+<p>Aquí hay algunas reglas sobre cómo debieras adaptar el archivo <code>install.rdf</code>:</p>
+
+<ul>
+ <li>Si estás creando un nuevo complemento de diccionario, recomendamos que el <code>em:id</code> consista del código de localización seguido por <code>@dictionaries.addons.mozilla.org</code>, pero si hay más de un diccionario para tu idioma (por ejemplo, en Alemán existe los diccionarios "ortografía antigua" y "ortografía nueva"), puede que debas elegir otro ID, que siga las <a href="/en-US/docs/Install_Manifests#id" title="/en-US/docs/Install_Manifests#id">reglas de em:id</a>. Si actualizas un complemento de diccionario existente, debes mantener el <code>em:id</code> existente, o tus usuarios no serán actualizados a la última versión.</li>
+ <li><code>em:version</code> debiera seguir las <a href="/en-US/docs/Toolkit_version_format" title="/en-US/docs/Toolkit_version_format">reglas de números de versión de complemento de Mozilla</a>, y si actualizas un complemento de diccionario existente, el número de la nueva versión debe ser mayor al anterior.</li>
+ <li>No cambies <code>em:type</code> o <code>em:unpack</code>, y no añadas un elemento <code>em:bootstrap</code>. "Type = 64" indica que el complemento está en el formato que no requiere reinicio, y desempacarlo es requerido para que Hunspell lea el diccionario.</li>
+ <li>Pese a que el formato que no requiere reinicio para complementos de diccionario fue introducido en Gecko 10, las actualizaciones de diccionarios solo funcionan desde Gecko 18. Por ello, <code>em:minVersion</code> debiera ser igual al ejemplo anterior (o mayor). Si ajustas <code>em:minVersion</code> a un valor inferior, Gecko 10-17 no podrá actualizar tu complemento de diciconario una vez que el diccionario que no requiere reinicio sea instalado (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=782118">bug 782118</a>), y Gecko 10-16 podrían advertir al usuario de que el diccionario no es compatible, cuando los usuarios intenten actualizar a una nueva versión de Firefox/Thunderbird (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=782115" title="https://bugzilla.mozilla.org/show_bug.cgi?id=782115">bug 782115</a>).</li>
+ <li>Actualiza <code>em:maxVersion</code> a la <a href="https://addons.mozilla.org/es/firefox/pages/appversions/" title="https://addons.mozilla.org/en-us/firefox/pages/appversions/">versión más nueva disponible.</a></li>
+</ul>
+
+<p>Una vez que has añadido estos archivos a tu archivo ZIP, y este último lo has renombrado para que tenga la extensión <code>.xpi</code>, puedes instalar tu complemento en Firefox y problarlo. Luego de una prueba exitosa, puedes subir tu complemento a <a href="https://addons.mozilla.org/" title="https://addons.mozilla.org/">addons.mozilla.org</a> y solicitar que sea incluido en la página de <a href="https://addons.mozilla.org/es/firefox/language-tools/" title="https://addons.mozilla.org/en-US/firefox/language-tools/">Diccionarios y paquetes de idioma</a>.</p>

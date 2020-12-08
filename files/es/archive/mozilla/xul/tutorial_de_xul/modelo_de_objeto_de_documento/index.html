@@ -1,0 +1,230 @@
+---
+title: Modelo de objeto de documento
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Modelo_de_objeto_de_documento
+tags:
+  - DOM
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/Document_Object_Model
+---
+<p> </p>
+
+<p>El modelo de objeto de documento (DOM) can be used with XUL elements to get information about them or modify them.</p>
+
+<h3 id="Introducci.C3.B3n_al_.27DOM.27" name="Introducci.C3.B3n_al_.27DOM.27">Introducción al 'DOM'</h3>
+
+<p>El <a href="es/DOM">modelo de objeto de documento</a> (DOM) es usado para almacenar el árbol de los nodos XUL. Cuando un archivo XUL es cargado, las etiquetas son analizadas y convertidas en un documento con estructura jerárquica de nodos, uno por cada etiqueta y bloque te texto. La estructura DOM puede ser examinada y modificada usando varios métodos con esta finalidad. Los elementos XUL específicos también proporcionan funciones adicionales que pueden ser usadas.</p>
+
+<p>Cada archivo XUL que es cargado tendrá su propio documento visualizado en una ventana o marco. A pesar que hay solo un documento asociado con una ventana en cada momento, se puede carga documentos adicionales usando varios métodos.</p>
+
+<p>En Mozilla, el <a href="es/DOM">DOM</a> puede ser accedido y manipulado utilizando <a href="es/JavaScript">JavaScript</a>. Los diversos objetos DOM tienen funciones las cuales pueden ser llamadas por script. Sin embargo, es importante advertir que la DOM es un API que es accesible por JavaScript. JavaScript por sí mismo , es exactamente un lenguaje de scripting que permite el acceso a dichos objetos porque Mozilla dispone esos objetos para su uso.</p>
+
+<p>En <a href="es/JavaScript">JavaScript</a>, siempre hay un único objeto global que está siempre disponible. Se puede hacer referencia a sus propiedades y métodos. Por ejemplo, si un objeto global tiene como propiedad 'name', se puede cambiar el nombre (name) con el código 'name = 7', sin haber especificado objeto alguno. En el contexto de un browser, la es ventana es un objeto global y asimismo es cierto para XUL. Naturalmente, este objeto global sera diferente para cada ventana. Cada marco tendrá también un objeto ventana separado.</p>
+
+<p>La ventana es a menudo referida usando la <a href="es/DOM/window#window.window">propiedad de window</a>, a pesar de que es optativo. En ocasiones, esto se hace simplemente para clarificar el alcance del método al que hace referencia. Por ejemplo, en el siguiente fragmento de código, las dos líneas son equivalentes.</p>
+
+<pre>window.open("test.xul","_new");
+open("test.xul","_new");
+</pre>
+
+<p>Cuando se declara una función o una variable en el nivel más alto de un script, es decir desde otra función, se está de hecho declarando una propiedad del objeto global. En XUL, cada función declarada será definida como propiedad del objeteo window. Por ejemplo, en el siguiente código se visualizará el texto 'Message' en una <a href="es/DOM/window#window.alert">alerta</a> doble.</p>
+
+<pre>function getText(){
+  return "Message";
+}
+
+alert(getText());
+alert(window.getText());
+</pre>
+
+<p>De esta manera, si se desea acceder a variables o llamar a funciones declaradas en un script usado por otra ventana, solo se necesita acceder usando el objeto <code><a href="es/DOM/window">window</a></code> de la otra ventana. Por ejemplo, si se combina los dos últimos ejemplos en un único archivo, podríamos querer llamar a la función getText() desde la otra ventana (por ejemplo la ventana 'test.xul'). Para hacerlo, se puede utilizar lo siguiente:</p>
+
+<pre>alert(window.opener.getText());
+</pre>
+
+<p>Cada ventana tiene un <code><a href="es/DOM/window#window.opener">opener</a></code> property que mantiene a dicho objeto ventana abierto. En este ejemplo, se recupera el opener window y llamamos a la función getText() declarada en el script. Observar que se ha explicitado la propiedad con el identificador 'window' para clarificarlo.</p>
+
+<p>El método de la apertura de la ventana (window's <code><a href="es/DOM/window#window.open">open()</a></code>)también devuelve una referencia a la nueva ventana, por lo que puede llamar a funciones de la nueva ventana desde el <code><a href="es/DOM/window#window.opener">opener</a></code>. Es importante advertir, que sin embargo, el método <code><a href="es/DOM/window#window.open">open()</a></code> lo devuelve antes de que la ventana haya sido complemetamente cargada, por lo que no estarán disponibles todavía funciones.</p>
+
+<p>EL objeto ventana no está definido por ninguna especificación DOM, pero Mozilla en ocasiones lo considera parte del <a>DOM Level 0</a>, un nombre es usado por varios desarrolladores para referirse a este tipo de funciones antes que se hubieran añadido especificaciones. El documento actual visualizado en una ventana puede ser recuperado usando la propiedad del <code><a href="es/DOM/window#window.document">documento</a></code> de la ventana. Desde que esto es uno de los más propiedades referenciadas de una ventana, la propiedad <code><a href="es/DOM/window#window.document">documento</a></code> property es utilizado sin la partícula 'window.' .</p>
+
+<p>Mozilla provee varios objetos documento diferentes dependiendo del tipo de documento. Hay tres documentos principales <a class="external" href="http://www.xulplanet.com/references/objref/HTMLDocument.html">HTMLDocument</a>, <a class="external" href="http://www.xulplanet.com/references/objref/XMLDocument.html">XMLDocument</a>, y <a class="external" href="http://www.xulplanet.com/references/objref/XULDocument.html">XULDocument</a>, para documentos <a href="es/HTML">HTML</a>, <a href="es/XML">XML</a> y <a href="es/XUL">XUL</a> respectivamente. Obviamente, esto es uno de los últimos tipos de documento usados por XUL. Los tres tipos de documentos son muy parecidos, de hecho comparten la misma implementación básica. Sun embargo, hay algunas funciones especificadads para cada tipo de documento.</p>
+
+<h3 id="Recuperaci.C3.B3n_de_elementos" name="Recuperaci.C3.B3n_de_elementos">Recuperación de elementos</h3>
+
+<p>El método más común para recuperar un elemento en un documento es dar al elemento un atributo con el <code><a href="es/DOM/element#element.id">id</a></code> y el uso del documento <code><a href="es/DOM/document#document.getElementById">getElementById()</a></code>. Hemos añadido el atributo id a una serie de elementos a encontrar el archivo de diálogo. Por ejemplo, podríamos obtener el estado de una casilla de verificación mediante el código que aparece a continuación:</p>
+
+<pre>var state = document.getElementById('casecheck').checked;
+</pre>
+
+<p>El valor <code>casecheck</code> corresponde al <code>id</code> del <a href="es/Tutorial_de_XUL/Controles_de_entrada#Casillas_de_selecci.C3.B3n_y_botones">checkbox</a> (que es case sensitive: distingue entre mayúsculas y minúsculas) . Una vez que tenemos una indicación de si está marcada o no, podemos utilizar el estado para llevar a cabo la búsqueda. Podríamos hacer algo similar para las otras casillas de verificación, o cualquier otro elemento que tiene un id. Se necesita para obtener el texto en el campo de entrada, por ejemplo.</p>
+
+<div class="highlight">
+<h4 id="Nuestro_ejemplo" name="Nuestro_ejemplo">Nuestro ejemplo</h4>
+
+<p>No tiene sentido tener la <a href="es/Tutorial_de_XUL/Indicadores_de_progreso">barra de progreso</a> y el <a href="es/Tutorial_de_XUL/%c3%81rboles">árbol de dato</a> de pruebas desplegado cuando el dialogo de búsqueda de archivos se visualiza primero. Estos se agregaron a fin de que pudiéramos verlos. Dejémoslo fuera y aparecerá sólo cuando se presione el botón Buscar. En primer lugar, tenemos que hacerlos inicialmente invisible. El atributo <code><a href="es/XUL/Atributos#hidden">hidden</a></code>, se utiliza para controlar si un elemento es visible o no.</p>
+
+<p>Vamos a cambiar la medida del progreso a fin de que esté inicialmente oculta. Además, vamos a añadir un atributo <code><a href="es/XUL/Atributos#id">id</a></code> de manera que podemos referirnos a ella en una secuencia de comandos para mostrar y ocultar. Si bien estamos en ello, también vamos a ocultar los <a href="es/Tutorial_de_XUL/Divisores">divisores</a> y el árbol de resultados que solo se necesitarán después de que la búsqueda se haya realizado.</p>
+
+<pre class="eval">&lt;tree <span class="highlightred">id="results" hidden="true"</span> flex="1"&gt;
+  .
+  .
+  .
+&lt;splitter <span class="highlightred">id="splitbar"</span> resizeafter="grow" <span class="highlightred">hidden="true"</span>/&gt;
+
+&lt;hbox&gt;
+
+  &lt;progressmeter <span class="highlightred">id="progmeter"</span> value="50%"
+    style="margin: 4px;" <span class="highlightred">hidden="true"</span>/&gt;
+</pre>
+
+<p>Hemos agregado el atributo <code><a href="es/XUL/Atributos#hidden">hidden</a></code> y fijado el valor <code>true</code>. Esto hace que el elemento se oculte cuando aparece por primera vez.</p>
+
+<p>A continuación, vamos a añadir una función que se llama cuando el botón Buscar se presiona. Vamos a poner el scripts en un archivo separado llamado findfile.js. En la <a href="es/Tutorial_de_XUL/A%c3%b1adiendo_los_gestores_de_eventos">sección anterior</a>, añadimos el elemento <code><a href="es/XUL/Elementos#script">script</a></code> en el archivo XUL. Si no lo ha hecho, hagalo ahora, como se indica a continuación. Un controlador <code><a href="es/XUL/Atributos#oncommand">oncommand</a></code> también se añadirá al botón Buscar.</p>
+
+<pre class="eval">&lt;script src="findfile.js"/&gt;
+  .
+  .
+  .
+&lt;button id="find-button" label="Find"
+   <span class="highlightred">oncommand="doFind();"</span>/&gt;
+</pre>
+
+<p>Ahora, crearemos otro archivo llamado findfile.js en el mismo directorio que findfile.xul. Vamos a añadir la función doFind() en este archivo. La etiqueta script permite código que pueda figurar directamente dentro de ella. Sin embargo, por diversas razones, entre ellas un mejor rendimiento, siempre se deben poner scripts en archivos separados, con excepción de breves fragmentos que pueden ponerse directamente en el controlador de eventos.</p>
+
+<pre class="eval">function doFind(){
+  var meter = document.getElementById('progmeter');
+  meter.hidden = false;
+}
+</pre>
+
+<p>Esta función primero obtiene una referencia del medidor de progreso utilizando su identificador, <code>progmeter</code>. La segunda línea del cuerpo de la función cambia el estado oculto de modo que el elemento es visible de nuevo.</p>
+
+<p>Por último, vamos a tener un cuadro de alerta pop-up que muestra lo que será buscado. Por supuesto, no queremos que esté en la versión final, pero vamos a añadirlo para asegurarnos que algo pasará.</p>
+
+<pre class="eval">function doFind(){
+  var meter=document.getElementById('progmeter');
+  meter.hidden = false;
+  <span class="highlightred">var searchtext=document.getElementById('find-text').value;
+  alert("Searching for \"" + searchtext + "\"");</span>
+}
+</pre>
+
+<p>Ahora, con ese cuadro de alerta ahí, sabemos lo que debería suceder cuando haga clic en el botón Buscar. Podríamos añadir código adicional para obtener la selección de los cuadros desplegables.</p>
+</div>
+
+<h3 id="XUL_Element_DOM" name="XUL_Element_DOM">XUL Element DOM</h3>
+
+<p>Every XUL element has a set of attributes, a set of properties and a set of children.</p>
+
+<ul>
+ <li>The attributes are declared in the source, for example, flex="1", is a <code><a href="es/XUL/Atributos#flex">flex</a></code> attribute set to the value <code>1</code>.</li>
+ <li>Properties are available in JavaScript using the dot syntax. For example, element.hidden refers to the hidden property of an element.</li>
+ <li>The children are the child tags of the element and will be nested inside the element in the source.</li>
+</ul>
+
+<p>It is possible to manipulate the attributes, properties and children of an element dynamically using DOM methods.</p>
+
+<p>It is important to note that attributes and properties are separate things. Just because there is an attribute with a given name does not mean that there is a corresponding property with the same name. However, it will often be the case that such a property will exist. For example, to get the flex of an element, you can use the flex property. In this case, the underlying code just returns the value of the attribute. For other properties, XUL will perform more complex calculations.</p>
+
+<p>You can manipulate the attributes of an element using any of the following methods:</p>
+
+<dl>
+ <dt><a href="es/DOM/element#element.getAttribute">getAttribute</a> ( nombre )</dt>
+ <dd>Return the value of the attribute with the given name.</dd>
+ <dt><a href="es/DOM/element#element.hasAttribute">hasAttribute</a> ( nombre )</dt>
+ <dd>Return true if the attribute with the given name has a value.</dd>
+ <dt><a href="es/DOM/element#element.setAttribute">setAttribute</a> ( nombre , valor )</dt>
+ <dd>Set the value of the attribute with the given name to the given value.</dd>
+ <dt><a href="es/DOM/element#element.removeAttribute">removeAttribute</a> ( nombre )</dt>
+ <dd>Remove the attribute with the given name.</dd>
+</dl>
+
+<p>These functions allow you to get and change the value of an attribute at any time. For example, to use the value of the flex attribute, you might use code like the following:</p>
+
+<pre> var box = document.getElementById('somebox');
+ var flex = box.getAttribute("flex");
+
+ var box2 = document.getElementById('anotherbox');
+ box2.setAttribute("flex", "2");
+</pre>
+
+<p>However, the <code><a href="es/XUL/Atributos#flex">flex</a></code> attribute has a <a href="es/XUL/Propiedades#flex">corresponding script property</a> which can be used instead. It isn't any more efficient, but it does mean slightly less typing. The following example accomplishes the same as above using the flex property instead.</p>
+
+<pre> var box = document.getElementById('somebox');
+ var flex = box.flex;
+
+ var box2 = document.getElementById('anotherbox');
+ box2.flex = 2;
+</pre>
+
+<p>Once you have a reference to an element, you can call the properties of that element. For example, to get the <code><a href="es/XUL/Propiedades#hidden">hidden</a></code> property for an element, you can use the syntax <code><em>element</em>.hidden</code> where 'element' is a reference to the element. You might note that most of the properties listed in the reference correlate to common attributes on elements. There are differences, of course, for example, while <strong><font color="green">getAttribute("hidden") will return the string 'true'</font></strong> for a hidden element, whereas the hidden <strong><font color="green">property returns a boolean true value</font></strong>. In this case, the type conversion is done for you so the property is more convenient.</p>
+
+<p>As with each document, there is a different element object for XUL elements as for <a href="es/HTML">HTML</a> and <a href="es/XML">XML</a> elements. Every XUL element implements the <a class="external" href="http://www.xulplanet.com/references/objref/XULElement.html">XULElement</a> interface. A XUL element is any element declared with the XUL namespace. So, XUL elements will have that interface even if added to other XML documents, and non-XUL elements will not have that interface. The XULElement interface has a number of properties and methods specific to XUL elements, many inherited from the generic DOM Element interface.</p>
+
+<p>A namespace is a URI which specifies the kind of element. Here are some examples:</p>
+
+<pre>&lt;button xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/&gt;
+&lt;button xmlns="http://www.w3.org/1999/xhtml"/&gt;
+&lt;html:button xmlns:html="http://www.w3.org/1999/xhtml"/&gt;
+&lt;html:button xmlns:html="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"/&gt;
+</pre>
+
+<p>Namespaces are specified using the <code>xmlns</code> attribute.</p>
+
+<ul>
+ <li>The first button is a XUL element as it has been placed in the XUL namespace.</li>
+ <li>The second element is an XHTML element as it has been given the XHTML namespace.</li>
+ <li>In the third example, the prefix 'html' is mapped to the namespace <span class="nowiki">'http://www.w3.org/1999/xhtml'</span>. You can also use the prefix syntax with a colon to use a specific namespace . This is used when you are using several namespaces in a document and you need to be more precise with which namespace is meant. This causes an XHTML button to be created for this case.</li>
+ <li>The fourth button is a little confusing, but might clarify that it is the URI that is important and not the prefix. The fourth example is a XUL button, not an HTML button, despite what the prefix might say.</li>
+</ul>
+
+<p>This is an important distinction. In fact, the actual text used for the prefix is irrelevant when determining what kind of element is used.</p>
+
+<p>The DOM provides a number of namespace related functions similar to the non-namespace ones. For example, the <code><a href="es/DOM/element#element.getAttributeNS">getAttributeNS()</a></code> function is similar to the the <code><a href="es/DOM/element#element.getAttribute">getAttribute()</a></code> function except an additional argument may be supplied to specify an attribute in a specific namespace.</p>
+
+<p>Many XUL elements have their own properties that are unique to that element. Refer to the <a href="es/XUL/Referencias">elemento reference</a> for a full guide to the attributes and properties available for an element.</p>
+
+<h3 id="Navegaci.C3.B3n_en_el_DOM" name="Navegaci.C3.B3n_en_el_DOM">Navegación en el DOM</h3>
+
+<p>The DOM is a tree structure with a single root node with children. You can get a reference to the root node using the document's <code><a href="es/DOM/document#document.documentElement">documentElement</a></code> property. The root node is always an element, but this is not the case for other nodes in the tree. An element corresponds to a tag is the XUL source, but you may also find text nodes, comment nodes and a few other types in a document tree. In the case of XUL, the root element will be the <code><a href="es/XUL/Elementos">window</a></code> tag in the XUL document. Each node in the tree may have children and those children may have child nodes of their own. Since the DOM is a tree structure, you can navigate through the tree using a variety of properties. Some common properties are listed below:</p>
+
+<dl>
+ <dt><a href="es/DOM/element#element.firstChild">firstChild</a> </dt>
+ <dd>reference to the first child node of an element</dd>
+ <dt><a href="es/DOM/element#element.lastChild">lastChild</a></dt>
+ <dd>reference to the last child node of an element</dd>
+ <dt><a href="es/DOM/element#element.childNodes">childNodes</a></dt>
+ <dd>holds a list of the children of an element</dd>
+ <dt><a href="es/DOM/element#element.parentNode">parentNode</a></dt>
+ <dd>reference to the parent of an node</dd>
+ <dt><a href="es/DOM/element#element.nextSibling">nextSibling</a></dt>
+ <dd>reference to the next sibling in sequence</dd>
+ <dt><a href="es/DOM/element#element.previousSibling">previousSibling</a></dt>
+ <dd>reference to the previous sibling in sequence</dd>
+</dl>
+
+<p>These properties allow you to navigate through a document is various ways. For example, you might get the first child of an element using the <code><a href="es/DOM/element#element.firstChild">firstChild</a></code> property and then navigate through the children using the <code><a href="es/DOM/element#element.nextSibling">nextSibling</a></code> property. Or, you might accomplish the same thing by iterating through the items in the <code><a href="es/DOM/element#element.childNodes">childNodes</a></code> list. In Mozilla, the latter method is more efficient.</p>
+
+<p>The following example shows how to iterate over the children of the root node:</p>
+
+<pre>var childNodes = document.documentElement.childNodes;
+for (var i = 0; i &lt; childNodes.length; i++) {
+  var child = childNodes[i];
+  // do something with child
+}
+</pre>
+
+<p>The <code><a href="es/DOM/element#element.childNodes">childNodes</a></code> variable will hold the children of the document root element. We then use a for loop to iterate over the children, accessing each item using an array-like notation.</p>
+
+<div class="highlight">Nuestro ejemplo: <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-dom.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-dom.xul">Ver en funcionamiento</a></div>
+
+<p><small>See also: <a href="es/A_re-introduction_to_JavaScript">A re-introduction to JavaScript</a> and the <a href="es/Referencia_de_JavaScript_1.5">referencia de JavaScript</a></small></p>
+
+<p>Seguimos con la <a href="es/Tutorial_de_XUL/Modificando_una_interfaz_XUL">modificación del DOM</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Emisores_y_receptores" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Modificando_una_interfaz_XUL">Siguiente  »</a></p>
+</div>

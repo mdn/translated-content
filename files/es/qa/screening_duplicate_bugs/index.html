@@ -1,0 +1,157 @@
+---
+title: Screening duplicate bugs
+slug: QA/Screening_duplicate_bugs
+translation_of: Mozilla/QA/Screening_duplicate_bugs
+---
+<address class="author">
+ <strong>Por <a class="link-mailto" href="mailto:sidr@albedo.net?subject=Text%20Searching%20in%20Bugzilla%20doc">Sean Richardson</a></strong></address>
+<p><span style="line-height: 1.5;">Si has estado </span><a href="/en/docs/Confirming_unconfirmed_bugs" style="line-height: 1.5;" title="http://developer.mozilla.org/en/docs/Confirming_unconfirmed_bugs">confirmando</a><span style="line-height: 1.5;"> bugs SIN CONFIRMAR o viendo </span><a class="link-https" href="https://bugzilla.mozilla.org/query.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;product=Core&amp;product=Firefox&amp;product=Mozilla+Application+Suite&amp;product=Thunderbird" style="line-height: 1.5;">nuevos</a><span style="line-height: 1.5;"> bugs, te habrás dado cuenta de que todos los bugs que son enviados por reporteros inexperimentados son bugs DUPLICADOS. A pesar de que menos de la mitad resultan ser duplicados, lo mejor es asumir que cada uno lo es hasta que uno se convenza de lo contrario.</span></p>
+<p>Esto es una guía que sirve para ayudarle a identificar la máxima cantidad posible de bugs duplicados que llegan de la manera mas eficiente. Se asume que siente cierta comodidad usando <a class="internal" href="/en/Searching_Bugzilla" style="line-height: 1.5;" title="en/Searching Bugzilla">Searching Bugzilla</a>.</p>
+<p>Este tutorial está escrito como si fueras a sentarte y a buscar bugs DUPLICADOS (DUPs) uno tras otros, pero muchos de estos se aplican, no importa como llegues a un bug potencialmente duplicado. Si quieres intentar identificar los bugs DUPLICADOS uno por uno al final de la lista hay una lista de bugs, que indica los tipos de bugs que usualmente están DUPLICADOS.</p>
+<p><span style="line-height: 1.5;">Mientras que estés revisando los reportes de bugs para ver si hay DUPLICADOS, por favor confirma los bugs SIN CONFIRMAR, agrega o simplifica casos de prueba, mejora los pasos para reproducirlo, mejora el resumen, reporta si lo has reproducido en otra plataforma, y/o si has hecho algo mas que tenga sentido antes de moverte al próximo, si el bug no parece ser un DUPLICADO.</span></p>
+<p>Para marcar a un bug como DUPLICADO, <a class="link-https" href="https://bugzilla.mozilla.org/userprefs.cgi?tab=permissions" style="line-height: 1.5;">tu</a> necesitas el <a class="external" href="http://www.mozilla.org/quality/help/unconfirmed.html" style="line-height: 1.5;">permiso</a> <span style="line-height: 1.5;">"Puedes editar todos los aspectos de cualquier bug". Si no tienes este permiso, manda un e-mail a </span><a class="external" href="http://www.gerv.net/hacking/before-you-mail-gerv.html" style="line-height: 1.5;">Gerv</a> o a <a href="mailto:bugmaster@mozilla.com?subject=%5Bedit-bugs-request%5D%20" style="line-height: 1.5;" title="mailto:bugmaster@mozilla.com?subject=%5Bedit-bugs-request%5D%20">bugmaster@mozilla.com</a>, y pregunta si lo pueden agregar a tu cuenta de Bugzilla. Mientras tanto, agrega un comentario a cualquier bug mencionando de que es, o puede ser un duplicado.</p>
+<p> </p>
+<h3 id="Los_bugs_rápidos_y_obvios">Los bugs rápidos y obvios</h3>
+<dl>
+ <dd>
+  Si no lo has hecho todavía, por favor tomate tu tiempo con <a href="https://bugzilla.mozilla.org/duplicates.cgi" title="most-frequent-bugs">la lista de los bugs más frecuentemente reportados de Mozilla</a> y la sección de los <strong>Problemas Conocidos en </strong><a class="external" href="http://www.mozilla.org/products/firefox/releases/">notas de versiones de Firefox</a>.</dd>
+ <dt>
+   </dt>
+ <dd>
+  Si el reporte se parece a una regresión reciente, fijate en <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;bug_severity=blocker&amp;bug_severity=critical&amp;bug_severity=major&amp;keywords=smoketest">los bugs recientemente reportados</a> por el equipo de <a class="external" href="http://quality.mozilla.org/" style="text-decoration: underline;">QA</a> team, y en el newsgroup (<a class="link-news" href="news://news.mozilla.org/netscape.public.mozilla.builds" style="line-height: 1.5;">netscape.public.mozilla.builds</a><span style="line-height: 1.5;">) para ver si el problema ya es conocido.</span></dd>
+ <dd>
+   </dd>
+ <dd>
+  <span style="line-height: 1.5;">También puedes ver más en la lista de </span><a class="link-https" href="https://bugzilla.mozilla.org/query.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=RESOLVED&amp;changedin=1&amp;product=Firefox&amp;product=Thunderbird" style="line-height: 1.5;">bugs de hoy para Firefox y Thunderbird</a><span style="line-height: 1.5;">. Mira la página de </span><a class="external" href="http://quality.mozilla.org/howto/litmus/tutorial" style="line-height: 1.5;" title="http://quality.mozilla.org/howto/litmus/tutorial">smoketesting</a><span style="line-height: 1.5;"> si quieres concentrarte en esta área.</span></dd>
+ <dd>
+  Tendrás menos dicultades escogiendo los bugs duplicados que tu ya cononces que se han reportado. En lugar de ir a través de la lista de bugs en orden, busca en ella bugs cuyos resúmenes parecen familiares, para que puedas tener tantos duplicados como se pueda sin reordenar las busquedas no guiadas.  Los DUPs que tu has reportado o que has encontrado deberían de ser los más fáciles de encontrar, y los más productivos al resolverlos, desde que eres capaz de reconocer y evaluar los identicos rápidamente. </dd>
+ <dt>
+   </dt>
+ <dd>
+  Some ways to narrow down the query based on what you remember:
+  <ul>
+   <li>If you can remember an e-mail address associated with the existing bug, enter it into one of the <strong>Email</strong> sections and set the appropriate role(s). Do the same if you think you added a comment to the existing bug.</li>
+   <li>If you can remember roughly when the bug entered the system, choose "[Bug Creation]" in the <strong>Where the field(s)</strong> field, and set a date range in the <strong>dates</strong> and <strong>to</strong> fields.</li>
+   <li>If you know you've seen some mail from <a class="link-mailto" href="mailto:bugzilla-daemon@mozilla.org" rel="freelink">bugzilla-daemon@mozilla.org</a> on the subject of an existing bug that's a candidate for a match lately, enter a number in the <strong>Changed in the last [ ] days</strong> field.</li>
+  </ul>
+ </dd>
+ <dd>
+  If you get no matches, your recall may be fallible, so try the search again without the restriction.<br>
+   </dd>
+ <dd>
+  If you were able to quickly find the correct bug report to mark a new bug a DUP of, but its summary contains none of the words the reporter of the new bug might have tried to search with, consider adding those words to the summary, or, if you can't do that, including them in a comment suggesting that they be added to the summary -- especially if the bug looks likely to get more duplicates.</dd>
+</dl>
+<h3 id="Searching">Searching</h3>
+<dl>
+ <dd>
+  The first field, <strong>Status</strong>, is normally preset to find NEW, ASSIGNED, and REOPENED bugs. Add UNCONFIRMED (use Ctrl-click in Windows, Command-click in MacOS) to find duplicates among newly-entered bugs too.<br>
+   </dd>
+ <dd>
+  To cast a wider net, add RESOLVED and VERIFIED, or deselect everything in the <strong>Status</strong> field. Do this if you wouldn't otherwise expect a long bug list, or when trying again if you got a relatively short list with no matches. It can be easier to find earlier DUPLICATE bugs (which will be RESOLVED) and follow them to the "real" bug, especially if there are several DUPs already. The existing bug you are hunting for may also have been fixed already.<br>
+   </dd>
+ <dd>
+  To exclude obviously extraneous bugs, narrow the search by making a choice under <strong>Product</strong>. Usually it will be "Core" (for Browser, HTML composition, and text-editing bugs) or "Firefox" or "Thunderbird".<br>
+   </dd>
+ <dd>
+  If the proper component for previously reported bug is obvious (as could be expected for, as an example, most "Bookmarks" bugs), choose that component. You can select multiple components at once. Be prepared, though, to retry you query without specifying a component if you don't find a match - not all bugs end up where you'd expect.<br>
+   </dd>
+ <dd>
+  The same will apply to the <a class="link-https" href="https://bugzilla.mozilla.org/describekeywords.cgi">Keywords</a> field. Not all bugs that should be labelled "fonts", for instance, necessarily are.<br>
+   </dd>
+ <dd>
+  Beside each of the <strong>Summary</strong>, <strong>Description entry</strong>, and <strong>URL</strong> fields. There is a drop-down that lets you choose the type of matching. Choose among "case-insensitive substring","case-sensitive substring", "all words", "any words", or "regular expression", as appropriate (hints on which work best for several common search scenarios are available in the <a class="external" href="http://www.mozilla.org/bugs/text-searching.html#real-life%20examples">Text Searching</a> tutorial). Although searching within the <strong>Description entry</strong> is much slower than any other field, go ahead and use it if it makes sense or the search terms available might not show up in the summary, but try to restrict the search with other fields at the same time if you can.<br>
+   </dd>
+ <dd>
+  Boolean Charts are an advanced feature that can let you do searches that are otherwise impossible. You can use any kind of match with almost any field, and set up boolean <em>and</em>s and <em>or</em>s. The first chart always <strong>ands</strong> with the rest of the query form. As a trivial example, to search for bugs about the tab key and exclude bugs about tables, add [Summary] [Does not contain (case-insensitive) substring] ["table"] after putting "tab" in the <strong>Summary</strong> field.{C}<br>
+   </dd>
+ <dd>
+  If you don't find a match on the bug list generated by your first query, it is usually worth trying at least one or two more queries.</dd>
+</dl>
+<h3 id="Matching">Matching</h3>
+<dl>
+ <dd>
+  When the bug list appears, scan it for anything that looks like a possible match. It's useful to open bugs in a new window to preserve the list. At the top of each column, clicking on its name will sort the bugs by that field. You can add other fields to the bug list by clicking on <span style="text-decoration: underline;">Change columns</span>; for some searches, the <strong>Components</strong> column can be very useful.<br>
+   </dd>
+ <dd>
+  If you find a clear and certain match, add a comment stating which bug the duplicate bug is a DUPLICATE of (if the bug report that matches is itself a DUP, follow the trail of "This bug has been marked as a duplicate of <span style="text-decoration: underline;">00000</span>" comments). If you had to read deep into the existing bug or puzzle out the connection, mention the date of the comment that explains the match or describe the connection.<br>
+   </dd>
+ <dd>
+  If you are not certain of the match, but it looks probable or even possible, add a comment, but also say how sure you are. Even if you are not completely certain that a new bug is a DUP at all, if you think it probably is or even might be, add a comment saying that.<br>
+   </dd>
+ <dd>
+  If the original report is deficient enough that you had to try to reproduce the bug before you could understand what the report was saying, please add enough detail so that the next person reading the bug won't have that problem, and will have an easier time confirming or verifying the match. Even if you don't find a match at all, please do this to make it easier for the next person, who might make the connection immediately given your improved description.<br>
+   </dd>
+ <dd>
+  If the existing bug that the DUPLICATE matches to is in a different component, change the <strong>Component</strong> field to match the existing bug.<br>
+   </dd>
+ <dd>
+  Finally, if you are sure that the bug is a DUPLICATE, go ahead and click on the radio button beside <strong>Resolve bug, mark it as duplicate of bug # [     ]</strong> and enter the bug number of the existing bug. Be sure to check for a typo or transposition error before clicking on <strong>[Commit]</strong>.<br>
+   </dd>
+ <dd>
+  If, to the best of your knowledge, a new UNCONFIRMED bug is not a DUP, please follow the steps outlined in the <a href="/Screening_duplicate_bugs/unconfirmed.html" title="https://developer.mozilla.org/en-US/docs/Mozilla/QA/Confirming_unconfirmed_bugs">Confirming Unconfirmed Bugs</a> guidelines before moving on to the next.</dd>
+</dl>
+<h3 id="Which_is_the_Duplicate">Which is the Duplicate?</h3>
+<dl>
+ <dd>
+  Other things being equal, newer bugs should be made DUPLICATES of older bugs, but, more importantly, whichever bug is further along in the process of getting fixed should <em>not</em> be made a duplicate. Signs that progess has been made include:
+  <ul>
+   <li>the bug is marked FIXED, a patch is attached or a fix is promised soon</li>
+   <li>the bug is ASSIGNED to the right Component and developer</li>
+   <li>the bug has been analyzed by developers</li>
+   <li>the bug has been given a higher priority (e.g., [PDT+], beta2) or an imminent milestone</li>
+   <li>the bug report has a explanation of how to reliably reproduce the bug and/or it has a simplified <a href="/en/Reducing_testcases" title="http://developer.mozilla.org/en/Reducing_testcases">testcase</a></li>
+  </ul>
+ </dd>
+ <dd>
+  UNCONFIRMED and "General" bugs should <em>never</em> have another bug made a duplicate of them unless the other bug is also an UNCONFIRMED or "General" bug. Even then, the bug reports that have less detail and work should be made duplicate of the bug reports that are further along, even if those are older. At that point the bug that receives the DUP should normally be confirmed, if it is not already.<br>
+   </dd>
+ <dd>
+  If you are stumped, add a comment resembling the following:
+  <pre>This bug appears to be a duplicate of bug nnnnn, but
+I'm not sure which should be made DUPLICATE of which.</pre>
+ </dd>
+</dl>
+<h3 id="One_Down_or_Keeping_in_the_Groove">One Down, or, Keeping in the Groove</h3>
+<dl>
+ <dd>
+  Take another look at the bug list after making a match: there may well be another DUPLICATE of the same bug lurking there. You might also see two bugs on the list that look suspiciously similar even though neither matches the bug you started with.<br>
+   </dd>
+ <dd>
+  After some time you will naturally become much more familiar with some types of issues and some components than others. Go with that, focus on the areas you can make sense of quickly. You might also have some existing expertise or experience that makes it easier for you to evaluate some bugs. If you know javascript well, for instance, it makes sense to check over new-to-you DOM bugs before identifying duplicates in any other area.<br>
+   </dd>
+ <dd>
+  Similarly, let your tools guide you, to some extent at least. If you know how to use a Debugger, you can make more of a contribution to evaluating Crashers than others can, so it makes sense to look at them. Similarly, some bugs that are reported on Linux, Macs, or other platforms are specific to the platform or platform/OS combination that they were reported on. Someone unfamiliar with that platform won't be as efficient, so if you regularly use something other than Microsoft Windows, please look at bugs reported on your platform first, by selecting it on the query page. Use the <span style="text-decoration: underline;">Edit this query</span> link at the bottom of a bug list to get back to the query form if you can't use the [Back] button.<br>
+   </dd>
+ <dd>
+  By concentrating on the bug reports that you have the skills and experience to evaluate quickly and surely, you will be able to help more in the time you can contribute.</dd>
+</dl>
+<h3 id="Specific_Types_of_Duplicates">Specific Types of Duplicates</h3>
+<p>Some types of bug reports need or can benefit from special handling:</p>
+<ol>
+ <li><strong>Bug reports about a particular URL:</strong> Check first for a substring (usually just the domain name is appropriate) of the URL in the URL field, matching against bugs with any Status. Obvious exact DUPs should show up easily that way, so long as the reporter filled in the URL field. In case that was not done, check in the Description entry field if there is no match in the URL field.</li>
+ <li><strong>Reports of Crashes:</strong> Crashes are identified by what specific code crashed, not how they are reproduced, so some sort of debugging output may be required before a determination can be made whether a crash report is a DUP. If you reproduce a crash on a previously unreported platform or OS, or using a current binary when the reporter was using a milestone release, please add as much detail as you can. If a module name is reported or you can generate a stack trace, search in Bugzilla for bugs with the <em>crash keyword</em>. If you don't find a match, add "crash" to the keywords field, so long as you were able to reproduce the crash.</li>
+ <li><strong>Multiply-DUPLICATE reports:</strong> Some bug reports describe a number of often unrelated problems. If all of the problems mentioned are clearly duplicates of existing bug reports, mark the new bug report as a DUPLICATE based on the first issue. If it is clear that <em>all but one</em> of the problems have already been reported, state that, citing the bug numbers if possible, and adjust the <strong>Summary</strong> to refer to the remaining problem.</li>
+ <li><strong>"General" bug reports:</strong> Be sure to move the bug to the appropriate Component if you can identify it, and copy over the QA contact, at the same time that you mark it as a DUP, so that it can be verified by someone familiar with the existing bug report.</li>
+ <li><strong>Same Exact Bug, two bug numbers:</strong> Sometimes a bug report ends up in the Bugzilla database twice in a row. If you see two bugs with the same summary and adjacent bug numbers, mark one as a DUP of the other immediately, before both get comments -- but look at both first, in case one has comments already.</li>
+ <li><strong>An ASSIGNED bug may be a DUP:</strong> It does sometimes happen that one assigned bug is a duplicate of another. If both are assigned to the same engineer, add a comment to the one that is not as far along as the other; if two different engineers are involved, add a comment to both, pointing out the existence of the other and why it appears to be a DUP. Do not resolve ASSIGNED bugs as DUPs yourself; the assignee should do that.</li>
+</ol>
+<h3 id="Lists_Where_Duplicates_Lurk">Lists Where Duplicates Lurk</h3>
+<dl>
+ <dd>
+  The greatest concentration of duplicate bugs is in those that enter the database as UNCONFIRMED, although plenty of NEW bugs also turn out to be DUPs. Bugs do occasionally get ASSIGNED before being found to be a DUP, but that is what duplicate-screening is meant to prevent, so please concentrate on UNCONFIRMED and NEW bugs.<br>
+   </dd>
+ <dd>
+  The bug lists below are displayed in rough descending order of prevalence of duplicates. They will appear in new windows; you may want to open bugs from the list in new windows too, to preserve the list. Happy matching; if you find only one DUP, you'll have earned the thanks of a busy software enginner.<br>
+   </dd>
+ <dd>
+  <ul>
+   <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&amp;product=Core&amp;product=Firefox&amp;product=Browser+Localizations&amp;changedin=7">UNCONFIRMED Firefox bugs changed in the last week</a> | <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&amp;op_sys=Linux&amp;product=Core&amp;product=Firefox&amp;product=Browser+Localizations&amp;changedin=7">Linux</a>-only | <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&amp;rep_platform=Macintosh&amp;product=Firefox+Localizations&amp;changedin=7">Mac</a>-only | <a class="link-https" href="https://bugzilla.mozilla.org/query.cgi?bug_status=UNCONFIRMED&amp;product=Core&amp;product=Firefox&amp;product=Browser+Localizations&amp;changedin=7"><em>Customize</em></a></li>
+  </ul>
+  <ul>
+   <li><a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;changedin=2&amp;product=Core&amp;product=Firefox&amp;product=Thunderbird">Today's &amp; Yesterday's UNCONFIRMED <em>and</em> NEW Firefox and Thunderbird Bugs</a> | <a class="link-https" href="https://bugzilla.mozilla.org/query.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;changedin=2&amp;product=Core&amp;product=Firefox&amp;product=Thunderbird"><em>Customize</em></a><br>
+    (<a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&amp;changedin=2&amp;product=Core&amp;product=Firefox&amp;product=Thunderbird">UNCONFIRMED</a>-only | <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?bug_status=NEW&amp;changedin=2&amp;product=Core&amp;product=Firefox&amp;product=Thunderbird">NEW</a>-only</li>
+   <li><a class="external" href="http://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&amp;product=Thunderbird&amp;changedin=7">UNCONFIRMED Thunderbird bugs changed in the last week</a> | <a class="external" href="http://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&amp;op_sys=Linux&amp;product=Thunderbird&amp;changedin=7">Linux</a>-only | <a class="external" href="http://bugzilla.mozilla.org/buglist.cgi?bug_status=UNCONFIRMED&amp;rep_platform=Macintosh&amp;product=Thunderbird&amp;changedin=7">Mac</a>-only | <a class="external" href="http://bugzilla.mozilla.org/query.cgi?bug_status=UNCONFIRMED&amp;product=Thunderbird&amp;changedin=7"><em>Customize</em></a></li>
+  </ul>
+ </dd>
+</dl>
+<p><small>(Thanks to Jan Leger, Eli Goldberg, David Baron, John Morrison, Matthew Thomas, Gervase Markham, Liz Henry, and Terry Weissman for contributing to this document. Additional <a class="link-news" href="news://news.mozilla.org/netscape.public.mozilla.qa.general">suggestions</a> welcome.)</small></p>

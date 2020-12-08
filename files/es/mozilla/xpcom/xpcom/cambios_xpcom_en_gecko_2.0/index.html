@@ -1,0 +1,111 @@
+---
+title: Cambios XPCOM en Gecko 2.0
+slug: Mozilla/XPCOM/XPCOM/Cambios_XPCOM_en_Gecko_2.0
+tags:
+  - Gecko 2.0
+  - XPCOM
+  - para_revisar
+---
+<p></p>
+<p></p><div class="blockIndicator draft">
+    <p><strong>Borrador</strong><br>
+    Esta página no está completa.</p>
+
+</div><p></p>
+<p>Han tenido lugar una serie de cambios que afectan la compatibilidad de componentes XPCOM en Gecko 2. Este artículo detalla esos cambios y provee sugerencias sobre cómo actualizar tu código.</p>
+<h2 id="Se_acabaron_las_interfaces_inmovilizadas">Se acabaron las interfaces inmovilizadas</h2>
+<p>Se acabaron las interfaces inmovilizadas; a partir de ahora, todas las interfaces está sujetas a cambios. Se actualizará la documentación según permita el tiempo eliminar las referencias a las interfaces que estén "inmovilizadas " o "no inmovilizadas".</p><h2 id="Registro_de_componentes">Registro de componentes</h2>
+<p>La manera en que los componentes XPCOM son registrados cambió en Gecko 2. Antes de Gecko 2, durante el registro de un componente, todos los binarios y ficheros del componente JavaScript eran cargados y llamados, pidiéndoles que se registraran a sí mismos. Si usabas <a href="/en/JavaScript_code_modules/XPCOMUtils.jsm" title="en/JavaScript code modules/XPCOMUtils.jsm">XPCOMUtils.jsm</a>, algo de esto estaba oculto, pero eso pasaba.</p>
+<p>Comenzando en Gecko 2, como sea, los componentes son registrados usando archivos manifest, similar a como chrome es registrado. De hecho, el mismo archivo <a href="/en/Chrome_Registration" title="en/chrome.manifest">chrome manifest</a> será usado para registrar componentes.</p>
+<p><strong>Todos los componentes XPCOM</strong> necesitarán ser actualizados para soportar esto. Como sea, es muy fácil hacerlo, y se puede actualmente soportar ambos tipos de registro para conservar la compatibilidad hacia atrás.</p>
+<h3 id="Manifestos_de_componentes">Manifestos de componentes</h3>
+<p>Todo registro de componentes es controlado a través de archivos manifest. Para extensiones, esto es el mismo <code>chrome.manifest</code> actualmente usado para registrar chrome.</p>
+<h3 id="Archivos_XPT">Archivos XPT</h3>
+<p>La ruta de los archivos XPT debe ser listada explicitamente en un manifest usando una directiva <code>interfaces</code> directive:</p>
+<pre>interfaces components/mycomponent.xpt</pre>
+<h3 id="Componentes_JavaScript">Componentes JavaScript</h3>
+<p>El registro de información para componentes JavaScript ya no está dentro del componente mismo; en cambio, está alojado en el manifest. El componente es cargado solo cuando el administrador de XPCOM necesita crear un componente.</p>
+<p><code>chrome.manifest</code>:</p>
+<pre># The {classID} here must match the classID in mycomponent.js
+component {e6b866e3-41b2-4f05-a4d2-3d4bde0f7ef8} components/mycomponent.js
+contract @foobar/mycomponent;1 {e6b866e3-41b2-4f05-a4d2-3d4bde0f7ef8}
+category profile-after-change MyComponent @foobar/mycomponent;1
+</pre>
+<p>El código javascript ya no exporta una función <code><a href="/en/NSGetModule" title="en/NSGetModule">NSGetModule()</a></code>. Ahora debe exportar una función <a href="/en/NSGetFactory" title="en/NSGetFactory"><code>NSGetFactory()</code></a>, la cual acepta un ID de contrato como parámetro.</p>
+<p>Por ejemplo en el código JavaScript de tu componente:</p>
+<pre>Components.utils.import("resource://gre/modules/XPCOMUtils.jsm");
+
+function myComponent() {
+}
+myComponent.prototype = {
+  // this must match whatever is in chrome.manifest!
+  classID: Components.ID("{e6b866e3-41b2-4f05-a4d2-3d4bde0f7ef8}"),
+
+  QueryInterface: XPCOMUtils.generateQI([Components.interfaces.nsIMyComponent]),
+
+  /* nsIMyComponent implementation goes here */
+  ...
+};
+
+// The following line is what XPCOM uses to create components. Each component prototype
+// must have a .classID which is used to create it.
+const NSGetFactory = XPCOMUtils.generateNSGetFactory([myComponent]);
+</pre>
+<p>Un componente puede implemente compatibilidad hacia atrás con Gecko 1.9.2 dinámicamente detectando cuál de los simbolos son exportados por XPCOMUtils.jsm y exportando la función correcta:</p>
+<pre>/**
+* XPCOMUtils.generateNSGetFactory was introduced in Mozilla 2 (Firefox 4).
+* XPCOMUtils.generateNSGetModule is for Mozilla 1.9.2 (Firefox 3.6).
+*/
+if (XPCOMUtils.generateNSGetFactory)
+    var NSGetFactory = XPCOMUtils.generateNSGetFactory([mySample]);
+else
+    var NSGetModule = XPCOMUtils.generateNSGetModule([mySample]);</pre>
+<h3 id="Componentes_binarios">Componentes binarios</h3>
+<p>Los componentes binarios deben ser listados explicitamente en un manifest usando una directiva <code>binary-component</code>:</p>
+<pre>binary-component components/mycomponent.dll
+</pre>
+<p>C++ en el componente debe ser cambiado: un componente binario ya no exporta la función <code><a href="/en/NSGetModule" title="en/NSGetModule">NSGetModule()</a></code>. En cambio, exporta un simbolo de datos <a href="/en/XPCOM/NSModule" title="en/XPCOM/NSModule"><code>NSModule</code></a> el cual apunta a la estructura <code>mozilla::Module</code>. Para más información acerca de la estructura <code>mozilla::Module</code>, mira la cabecera <a class=" external" href="http://mxr.mozilla.org/mozilla-central/source/xpcom/components/Module.h" title="http://mxr.mozilla.org/mozilla-central/source/xpcom/components/Module.h">Module.h</a>. Para un ejemplo actual de implementación de módulos dinámicos, mira <a class=" external" href="http://mxr.mozilla.org/mozilla-central/source/xpcom/sample/nsSampleModule.cpp" title="http://mxr.mozilla.org/mozilla-central/source/xpcom/sample/nsSampleModule.cpp">nsSampleModule.cpp</a>.</p>
+<p>Notese que <code>nsIGenericFactory.h</code> ha sido eliminado. Referencias a <code>nsIGenericFactory.h</code> deben ser reemplazadas con <code>mozilla/ModuleUtils.h</code>.</p>
+<p>Es posible para un componente binario ser compatible con Mozilla 1.9.2 y Mozilla 2.0 usando un macro extra<code>NS_IMPL_MOZILLA192_NSGETMODULE</code>. mira <a class=" external" href="http://mxr.mozilla.org/mozilla-central/source/xpcom/sample/nsSampleModule.cpp" title="http://mxr.mozilla.org/mozilla-central/source/xpcom/sample/nsSampleModule.cpp">nsSampleModule.cpp</a> para más detalles.</p>
+<h3 id="Subdirectorios_específicos_de_plataforma">Subdirectorios específicos de plataforma</h3>
+<p>El sistema component/chrome usado para mirar en los subdirectorios específicos de plataforma de una extensión, del tipo <code>platform/WINNT_x86-msvc/chrome.manifest</code> en Windows. Ya no está soportado. Puedes usar las directivas de registro chrome, OS y ABI para lograr el mismo efecto:</p>
+<pre>binary-component components/windows/mycomponent.dll ABI=WINNT_x86-msvc
+binary-component components/mac/mycomponent.dylib ABI=Darwin_x86-gcc3
+binary-component components/mac/mycomponent64.dylib ABI=Darwin_x86-64-gcc3
+binary-component components/linux/mycomponent.so ABI=Linux_x86-gcc3
+</pre>
+<h2 id="Registro_de_categoría">Registro de categoría</h2>
+<p>Anterior a Gecko 2, las extensiones podían escuchar las <a href="/en/Observer_Notifications" title="en/Observer Notifications">notificaciones</a> para el <code>xpcom-startup</code> y <code>app-startup</code> durante el inicio, y realizar acciones durante. Este ya no es el caso. Las más temprana notificacion de inicio que puede recibir una extensión es <code>profile-after-change</code>, la cual tiene siempre que ser una notificación recomendad para observar. Esto es debido a que está entre las notificaciones más tempranas que ocurren despues de que la carpeta de perfil(y por lo tanto preferencias y otros servicios) está disponible.</p>
+<h3 id="Qué_necesitas_cambiar">Qué necesitas cambiar</h3>
+<p>Si tu extension actualmente observa aún a <code>xpcom-startup</code> ó <code>app-startup</code>, necesitas actualizar tu código para observer en vez a <code>profile-after-change</code>.</p>
+<p>Usualmente, las extensiones observaban <code>app-startup</code> porqué en el pasado, necesitabas cargar <code>app-startup</code> con el fin de poder registrarse para observar <code>profile-after-change</code> en primer lugar. A partir de <span title="(Firefox 3.5 / Thunderbird 3.0 / SeaMonkey 2.0)">Gecko 1.9.1</span>, este ya no es el caso, como sea; tu puedes registrar ahora <code>profile-after-change</code> usando el administrador de categoría. Mira <a href="/en/XPCOM/Receiving_startup_notifications" title="en/XPCOM/Receiving startup notifications">Recibiendo notificaciones de inicio</a> para más detalles.</p>
+<p>Para agregar una entrada de categoria, debes insertar la siguiente linea a tu chrome.manifest:</p>
+<pre>category profile-after-change MyComponent @foobar/mycomponent;1
+</pre>
+<div class="warning"><strong>Importante</strong>: Formalmente, el id de contrado de la entrada de categoría era prefijada con "<code>service,"</code> si el componente era implementado como un servicio. Este prefijo necesita ser eliminado cuando migres a chrome.manifest.</div>
+<h3 id="Nombres_de_categoría_cambiados">Nombres de categoría cambiados</h3>
+<p>El administrador de categoría en XPCOM es usado para registrar ciertos objetos auxiliares globales. Como chrome.manifest es un formato de espacio delimitado, los nombres de categoría con espacios no pueden ser registrados. Por lo tanto las siguientes categorías han cambiado:</p>
+<table class="standard-table"> <thead> <tr> <th scope="col">Nombre anterior</th> <th scope="col">Nuevo nombre</th> </tr> <tr> <td><code>JavaScript global constructor</code></td> <td><code>Javascript-global-constructor</code></td> </tr> <tr> <td><code>JavaScript global constructor prototype alias</code></td> <td><code>JavaScript-global-constructor-prototype-alias</code></td> </tr> </thead> <tbody> <tr> <td><code>JavaScript global property</code></td> <td><code>JavaScript-global-property</code></td> </tr> <tr> <td><code>JavaScript global privileged property</code></td> <td><code>JavaScript-global-privileged-property</code></td> </tr> <tr> <td><code>JavaScript global static nameset</code></td> <td><code>JavaScript-global-static-nameset</code></td> </tr> <tr> <td><code>JavaScript global dynamic nameset</code></td> <td><code>JavaScript-global-dynamic-nameset</code></td> </tr> <tr> <td><code>JavaScript DOM class</code></td> <td><code>JavaScript-DOM-class</code></td> </tr> <tr> <td><code>JavaScript DOM interface</code></td> <td><code>JavaScript-DOM-interface</code></td> </tr> <tr> <td><code>XSLT extension functions</code></td> <td><code>XSLT-extension-functions</code></td> </tr> </tbody>
+</table>
+<h3 id="¿Pero_por_qué">¿Pero por qué?</h3>
+<p>Previamente, cuando fuera Gecko detectaba que la versión de la aplicación habia cambiado, o una o mas extensiones eran agregadas o eliminadas, activadas o desactivadas, era necesario para tratar todos los registros de componentes existentes, reiniciar la aplicación(Lo que llamamos "Reinicio de administrador de extensiones"), durante su proceso de arranque. Esto fue necesario para asegurar que los componentes que ya no estuvieran disponibles fueran eliminados apropiadamente, y para re-registrar todo, cargando algun nuevo componente que se necesitara.</p>
+<p>En teoría, estos es invisible para el usuario, pero es un proceso costoso, ya que cada componente necesita ser cargado y ejecutado, luego descargado, luego recargado de nuevo durante el reinicio.</p>
+<p>Además de eso, con el trabajo que estamos haciendo en el soporte multihilo para Firefox, el contenido de los procesos también necesita registrar componentes en una base por proceso, o de alguna manera para compartir la cache de un componente con el proceso chrome.</p>
+<p>Los cambios para el modelo de registro de componentes permite este llamado Reinicio de administrador de extensiones volverse una cosa del pasado. En lugar de confiar en una potencial caché de componentes en el arranque, nosotros leemos los registros de componentes de la aplicación fuera de su archivo manifest y cargamos esos componentes. Esto obtiene suficiente de XPCOM cargado y en ejecución con lo que podemos cargar el administrador de extensiones y realizar la instalación, desinstalación y acualización necesaria de algunas extensiones instaladas.</p>
+<p>Hecho esto, las extensiones pueden ser cargadas simplemente leyendo su manifesto, cargando sus componentes y continuando el proceso de arranque, todo sin tener que reiniciar el navegador.</p>
+<p>Los contenidos de procesos en Electrolysis pueden simplemente leer el registro del componente durante el arranque.</p>
+<p> </p>
+<h2 id="Cambios_en_los_contenedores_XPCNativeWrapper">Cambios en los contenedores XPCNativeWrapper</h2>
+<h3 id="No_se_pueden_desactivar_del_manifiesto_los_contenedores_XPCNativeWrapper">No se pueden desactivar del manifiesto  los contenedores XPCNativeWrapper</h3>
+<p>Ya no se admite la especificación de <code>xpcnativewrappers=no</code> en tu manifiesto. El objetivo de ésta fue siempre ofrecer una solución alternativa a corto plazo que permitiera que las extensiones continuaran funcionando mientras que los autores actualizaban el código para usar los contenedores XPCNativeWrapper.</p>
+<p>Si tu agregado/complemento depende de un enlace XBL adjunto a los objetos de contenido - por ejemplo, la capacidad para llamar a las funciones u obtener y establecer las propiedades creadas por el enlace XBL - tendrás que usar la propiedad de los contenedores XPCNativeWrapper <code>wrappedJSObject</code> para tener acceso a los objetos ajustados.</p>
+<p>Si necesitas poder llamar a las funciones o tener acceso a las propiedades definidas por el contenido web, tendrás que hacer esto también. Puede ser el caso si, por ejemplo, has escrito una extensión que añade a un servicio de correo web un botón eliminar y el servicio define una función <code>window.delete()<span style="font-family: Verdana,Tahoma,sans-serif;"> que tienes que llamar.</span></code></p>
+<p>Si, por otro lado, lo único que haces con el contenido es tener acceso a métodos y propiedades DOM, no habrás tenido que usar <code>xpcnativewrappers=no<span style="font-family: Verdana,Tahoma,sans-serif;"> y simplemente deberías eliminarlo de tu manifiesto.</span></code></p>
+<h3 id="Cambios_varios_en_los_contenedores_XPCNativeWrapper">Cambios varios en los contenedores XPCNativeWrapper</h3>
+<ul> <li>Ya no se lanza una excepción de seguridad al usar el operador <a href="../../../../en/JavaScript/Reference/Operators/Special_Operators/delete_Operator" rel="internal"><code>delete</code></a> en las propiedades "expando" de un contenedor XPCNativeWrapper.</li>
+</ul><h2 id="Cambios_en_XPCOMUtils.jsm">Cambios en XPCOMUtils.jsm</h2>
+<p>Se ha actualizado el módulo de código <a href="/en/JavaScript_code_modules/XPCOMUtils.jsm" title="en/JavaScript/Code modules/XPCOMUtils.jsm"><code>XPCOMUtils.jsm</code></a>  para permitir que especifiques las ID de las aplicaciones en las que deseas registrar tu componente.</p><h2 id="Captadores_de_servicios_XPCOM">Captadores de servicios XPCOM</h2>
+<p>Una serie de servicios XPCOM que se usan habitualmente disponen ahora de funciones de captadores de servicios en el  <a href="/en/XPCOM/mozilla::services_namespace" title="en/XPCOM/mozilla::services namespace">mozilla::services namespace</a>; facilitan en gran medida el acceso a estos servicios desde el código C++.</p><h2 id="Consulta_también">Consulta también</h2>
+<ul> <li><a class=" external" href="http://blog.mozilla.com/addons/2010/06/14/multiple-breaking-changes-are-coming-for-components-in-extensions/" title="http://blog.mozilla.com/addons/2010/06/14/multiple-breaking-changes-are-coming-for-components-in-extensions/">Multiple breaking changes are coming for components in extensions</a></li>
+</ul>
+<p></p>

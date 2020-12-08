@@ -1,0 +1,369 @@
+---
+title: Portando a Boot to Gecko
+slug: Archive/B2G_OS/Portando
+tags:
+  - B2G
+  - portar
+  - porting
+translation_of: Archive/B2G_OS/Porting_B2G_OS/basics
+---
+<p>Boot to Gecko (FirefoxOS) utiliza un kernel derivado de <a href="http://www.android.com/" title="http://www.android.com/">Android</a>, con una interfaz de usuario basada en <a href="https://developer.mozilla.org/es/docs/Gecko" title="/en-US/docs/Gecko">Gecko</a> sobre él. Este artículo provee la guía básica de cómo portar el sistema operativo en nuevos dispositivos.</p>
+<p>Esta guía asume que tu estas portando en un dispositivo nuevo que está funcionando con Andriod; Si estás portando a otro dispositivo, el trabajo va a ser más enredado.</p>
+<h2 id="Prequisitos">Prequisitos</h2>
+<h3 id="Configurando_la_compilación_de_tu_sistema">Configurando la compilación de tu sistema</h3>
+<p>El primer paso es configurar la compilación del sistema; puedes seguir la guía en <a href="https://developer.mozilla.org/es/docs/Mozilla/Boot_to_Gecko/Firefox_OS_build_prerequisites" title="/en-US/docs/Mozilla/Boot_to_Gecko/B2G_build_prerequisites">prerequisitos para compilar B2G</a>.</p>
+<h3 id="Crear_una_copia_de_seguridad_local_del_sistema_original_de_Android">Crear una copia de seguridad local del sistema original de Android</h3>
+<p>A continuación, deberás hacer una copia de seguridad de tu dispositivo Android antes de empezar a bombardearlo con tu compilación de pruebas de B2G. Además, algunos de estos comandos serán necesarios para el proceso de compilación e instalación.</p>
+<pre>mkdir my_device_backup
+cd my_device_backup
+adb pull /system system</pre>
+<div class="note">
+  <p><strong>Nota:</strong> Esto es opcional pero es recomendado, ya que algunas veces es posible tener perdidas mayores ocasionadas por problemas de compilaciones, en donde si no posees una copia de los archivos propietarios de tu telefono, lo mas probable es que el problema sea irreparable.</p>
+</div>
+<h2 id="B2G">B2G</h2>
+<h3 id="Crea_un_fork_del_repositorio_de_B2G">Crea un fork del repositorio de B2G</h3>
+<p>Para esto necesitas una cuenta en Github.com, si no la tienes, creala y luego realiza un fork del siguiente repositiorio:</p>
+<pre>https://github.com/mozilla-b2g/B2G</pre>
+<p>Si no sabes como crear un fork de un repositorio en visita este <a href="https://help.github.com/articles/fork-a-repo" title="https://help.github.com/articles/fork-a-repo">sitio</a> para obtener ayuda.</p>
+<h3 id="Clona_tu_repositorio_de_B2G">Clona tu repositorio de B2G</h3>
+<p>Una vez hecho el fork anterior, para empezar a portar B2G a tu nuevo dispositivo, es necesario que clones el repositiorio en tu equipo, clonamos el reposiorio de la siguiente manera:</p>
+<pre>git clone https://github.com/Your-User-Name/B2G.git</pre>
+<div class="note">
+  <p>Remplaza <strong>Your-User-Name</strong> con el usuario de tu cuenta de Github.</p>
+</div>
+<h3 id="Agrega_un_nuevo_dispositivo_al_config.sh">Agrega un nuevo dispositivo al config.sh</h3>
+<p>El siguiente paso, es agregar un nuevo dispositivo a <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a>; puedes usar uno de los existentes como plantilla. Esto básicamente consiste en proporcionar las instruciones para obtener los archivos correctos para hacer la compilación.</p>
+<p>Busca la linea siguiente en tu archivo <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a>:</p>
+<pre><span class="k">case</span> <span class="s2">"$1"</span> in</pre>
+<p>Seguidamente agrega:</p>
+<pre class="line"><span class="s2">"<strong>device-name</strong>"</span><span class="o">)</span>
+
+<span class="nb">echo </span><span class="nv">DEVICE</span><span class="o">=</span><strong>device-name</strong> &gt;&gt; .tmp-config <span class="o">&amp;&amp;</span>
+
+repo_sync <span class="nv">$1</span>
+
+;;</pre>
+<div class="note">
+  <p><strong>Nota:</strong> Debes remplazar la parte en que dice <strong>device-name</strong>, con el nombre de tu dispositivo, como por ejemplo si tu dispositivo fuera el Samsung Galaxy S3, quedaria asi:</p>
+  <pre class="line"><span class="s2">"<strong>i9300</strong>"</span><span class="o">)</span>
+
+<span class="nb">echo </span><span class="nv">DEVICE</span><span class="o">=</span><strong>i9300</strong> &gt;&gt; .tmp-config <span class="o">&amp;&amp;</span>
+
+repo_sync <span class="nv">$1</span>
+
+;;</pre>
+</div>
+<p>Como ultimo paso (opcional, no influye en nada si realizas o no este paso), buscas esta parte en tu archivo <a href="https://github.com/mozilla-b2g/B2G/blob/master/config.sh" title="https://github.com/mozilla-b2g/B2G/blob/master/config.sh"><code>config.sh</code></a>:</p>
+<pre class="line"><span class="nb">echo </span>Usage: <span class="nv">$0</span> <span class="se">\(</span>device name<span class="se">\)</span>
+
+<span class="nb">echo</span>
+
+<span class="nb">echo </span>Valid devices to configure are:
+
+<span class="nb">echo</span> - galaxy-s2
+
+<span class="nb">echo</span> - galaxy-nexus
+
+<span class="nb">echo</span> - nexus-s
+
+<span class="nb">echo</span> - nexus-s-4g
+
+<span class="nb">echo</span> - otoro
+
+<span class="nb">echo</span> - unagi
+
+<span class="nb">echo</span> - pandaboard
+
+<span class="nb">echo</span> - emulator
+
+<span class="nb">echo</span> - emulator-x86
+
+<span class="nb">exit</span> -1
+
+;;</pre>
+<p>Y agregas tu dispositivo:</p>
+<pre class="line">echo - device-name
+</pre>
+<div class="note">
+  <p><strong>Nota:</strong> Debes remplazar la parte en que dice <strong>device-name</strong>, con el nombre de tu dispositivo, como por ejemplo si tu dispositivo fuera el Samsung Galaxy S3, quedaria asi:</p>
+  <pre class="line">echo - i9300</pre>
+</div>
+<h3 id="Crear_un_árbol_de_configuración_para_el_nuevo_dispositivo">Crear un árbol de configuración para el nuevo dispositivo</h3>
+<p>Este arbol de configuracion debe incluir, al menos:</p>
+<ul>
+  <li><code>AndroidBoard.mk</code></li>
+  <li><code>AndroidProducts.mk</code></li>
+  <li><code>BoardConfig.mk</code></li>
+  <li><code>extract-files.sh</code></li>
+  <li><code>full_&lt;device_id&gt;.mk</code></li>
+  <li>archivos idc para pantallas táctiles</li>
+  <li>archivos de inicio (<code>init.rc</code>, <code>init.&lt;target&gt;.rc</code>, <code>uevent.rc</code>, ...)</li>
+</ul>
+<p>El contenido aquí puede variar en gran medida entre un dispositivo y otro. En particular, BoardConfig.mk y extract-files.sh podrían variar significativamente. Esta parte requiere un conjunto de hacking, pruebas, y depuración para averiguar que pedazos binarios deberán ser extraidos. Este arbol de configuracion debe estar hosteado en un repo en tu cuenta de Github, mira este <a href="https://github.com/mozilla-b2g/android-device-galaxys2" title="https://github.com/mozilla-b2g/android-device-galaxys2">repositorio de ejemplo</a> para que te hagas una idea de como tiene que quedar. (Solo es un ejemplo y no tiene que quedar igual a este, todos los telefonos tienen distinto Hardware)</p>
+<div class="note">
+  <p><strong>Nota:</strong> No es necesario que crees estos archivos por tu propia cuenta, por lo general la mayoria de los telefonos y dispositivos que corren <a href="http://www.cyanogenmod.com/" title="http://www.cyanogenmod.com/">CyanogenMod</a> o AOKP tienen un repositorio en Github con todos estos archivos del arbol de configuracion, puedes distinguirlos, porque la mayoria de estos repositorios llevan el nombre de: ej "android_device_samsung_i9300" (como es en este caso ejemplo, el nombre varia dependiendo de tu dispositivo). Asi que es recomendable que antes de que empieces a crear estos archivos por tu cuenta, revises algunos de los repositorios de CyanogenMod o AOKP, para ver si el arbol de configuracion de tu dispositivo ya esta creado por alguien mas.</p>
+  <p>Caso contrario ocurre con los dispositivos ZTE o algunos otros dispositivos a los cuales CyanogenMod o AOKP aun no han llegado, que requieren que crees estos archivos por tu propia cuenta desde 0. El <a href="http://forum.xda-developers.com/" title="http://forum.xda-developers.com/">Foro XDA </a> es otro buen lugar para debatir y ver recursos.</p>
+</div>
+<p>Una vez que tengas estos archivos, si te ha tocado crearlos desde 0 o tienes los archivos del arbol de configuracion en tu equipo, es totalmente necesario que los subas a un repositorio en tu cuenta de Github como se habia mencionado anteriormente. Si no sabes como crear el repositorio en donde alojar tus archivos de configuracion, por favor revisa esta <a href="https://help.github.com/articles/creating-a-new-repository" title="https://help.github.com/articles/creating-a-new-repository">guia</a>. Al final del proceso deberas tener un repositorio como este:</p>
+<pre>https://github.com/Your-User-Name/android-device-your-new-device</pre>
+<div class="note">
+  <p>En donde dice <strong>Your-User-Name</strong> deberia aparecer tu nombre de usuario de tu cuenta en Github, y en donde dice <strong>android-device-new-device</strong>, deberia aparecer el nombre que le has puesto a tu repositiorio cuando estabas creandolo. (ej: android-device-samsung-i9300)</p>
+</div>
+<p>Si por el contrario has tenido suerte de encontrar que CyanogenMod o AOKP, o algun otro usuario ya ha creado estos archivos, tienes que hacer un fork del repo en tu cuenta. En pocas palabras, es necesario que tengas todos los repos de tu dispositivo ha realizar el port de FirefoxOS, alojados en tu cuenta de Github.</p>
+<h2 id="El_Archivo_Manifest">El Archivo Manifest</h2>
+<h3 id="Crea_un_fork_del_repositorio_b2g-manifest">Crea un fork del repositorio b2g-manifest</h3>
+<p>De nuevo realizamos un fork al repositorio de b2g-manifest.</p>
+<pre>https://github.com/mozilla-b2g/b2g-manifest</pre>
+<p>Si no sabes como crear un fork de un repositorio en visita este <a href="https://help.github.com/articles/fork-a-repo" title="https://help.github.com/articles/fork-a-repo">sitio</a> para obtener ayuda.</p>
+<div class="note">
+  <p>Este fork tiene que quedar igualmente en tu cuenta de Github.</p>
+</div>
+<h3 id="Crea_tu_propio_repositorio_de_b2g-manifest">Crea tu propio repositorio de b2g-manifest</h3>
+<p>Una vez mas, es necesario que el repositorio que acabas de clonar en el paso anterior, sea hosteado por una cuenta de Github tuya en donde puedas hacer las modificaciones especiales para tu dispositivo. Quedando de la siguiente manera:</p>
+<pre>git clone https://github.com/Your-User-Name/b2g-manifest.git</pre>
+<h3 id="Crear_el_archivo_de_manifiesto_para_el_nuevo_dispositivo">Crear el archivo de manifiesto para el nuevo dispositivo</h3>
+<p>Ahora necesitas agregar los repositorios requeridos para el archivo de manifiesto para el nuevo dispositivo; este archivo de manifiesto es llamado <strong>device-name.xml </strong>(el nombre de este archivo debe ser cambiado por el nombre de tu dispositivo, conservando la extension que lo caracteriza, el .xml). Este archivo debe tener la siguiente estructura:</p>
+<div class="highlight">
+  <pre class="line"><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+
+<span class="nt">&lt;manifest&gt;</span>
+
+
+  <span class="nt">&lt;remote</span> <span class="na">name=</span><span class="s">"aosp"</span>
+
+           <span class="na">fetch=</span><span class="s">"https://android.googlesource.com/"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;remote</span> <span class="na">name=</span><span class="s">"b2g"</span>
+
+          <span class="na">fetch=</span><span class="s">"git://github.com/mozilla-b2g/"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;remote</span> <span class="na">name=</span><span class="s">"linaro"</span>
+
+           <span class="na">fetch=</span><span class="s">"git://android.git.linaro.org/"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;remote</span> <span class="na">name=</span><span class="s">"mozilla"</span>
+
+<span class="na">fetch=</span><span class="s">"git://github.com/mozilla/"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;remote</span> <span class="na">name=</span><span class="s">"mozillaorg"</span>
+
+      <span class="na">fetch=</span><span class="s">"https://git.mozilla.org/releases"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;default</span> <span class="na">revision=</span><span class="s">"refs/tags/android-4.0.4_r1.2"</span>
+
+           <span class="na">remote=</span><span class="s">"linaro"</span>
+
+           <span class="na">sync-j=</span><span class="s">"4"</span> <span class="nt">/&gt;</span>
+
+
+  <span class="c">&lt;!-- Gonk specific things and forks --&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"build"</span> <span class="na">name=</span><span class="s">"platform_build"</span> <span class="na">remote=</span><span class="s">"b2g"</span> <span class="na">revision=</span><span class="s">"master"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;copyfile</span> <span class="na">src=</span><span class="s">"core/root.mk"</span> <span class="na">dest=</span><span class="s">"Makefile"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;/project&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"dalvik"</span> <span class="na">name=</span><span class="s">"fake-dalvik"</span> <span class="na">remote=</span><span class="s">"b2g"</span> <span class="na">revision=</span><span class="s">"master"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"gaia"</span> <span class="na">name=</span><span class="s">"gaia.git"</span> <span class="na">remote=</span><span class="s">"mozillaorg"</span> <span class="na">revision=</span><span class="s">"master"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"gecko"</span> <span class="na">name=</span><span class="s">"gecko.git"</span> <span class="na">remote=</span><span class="s">"mozillaorg"</span> <span class="na">revision=</span><span class="s">"master"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"gonk-misc"</span> <span class="na">name=</span><span class="s">"gonk-misc"</span> <span class="na">remote=</span><span class="s">"b2g"</span> <span class="na">revision=</span><span class="s">"master"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"rilproxy"</span> <span class="na">name=</span><span class="s">"rilproxy"</span> <span class="na">remote=</span><span class="s">"b2g"</span> <span class="na">revision=</span><span class="s">"master"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/moztt"</span> <span class="na">name=</span><span class="s">"moztt"</span> <span class="na">remote=</span><span class="s">"b2g"</span> <span class="na">revision=</span><span class="s">"master"</span> <span class="nt">/&gt;</span>
+
+
+  <span class="c">&lt;!-- Stock Android things --&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"abi/cpp"</span> <span class="na">name=</span><span class="s">"platform/abi/cpp"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"bionic"</span> <span class="na">name=</span><span class="s">"platform/bionic"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"bootable/recovery"</span> <span class="na">name=</span><span class="s">"platform/bootable/recovery"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"device/common"</span> <span class="na">name=</span><span class="s">"device/common"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"device/sample"</span> <span class="na">name=</span><span class="s">"device/sample"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/apriori"</span> <span class="na">name=</span><span class="s">"platform_external_apriori"</span> <span class="na">remote=</span><span class="s">"b2g"</span> <span class="na">revision=</span><span class="s">"master"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/bluetooth/bluez"</span> <span class="na">name=</span><span class="s">"platform/external/bluetooth/bluez"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/bluetooth/glib"</span> <span class="na">name=</span><span class="s">"platform/external/bluetooth/glib"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/bluetooth/hcidump"</span> <span class="na">name=</span><span class="s">"platform/external/bluetooth/hcidump"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/bsdiff"</span> <span class="na">name=</span><span class="s">"platform/external/bsdiff"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/bzip2"</span> <span class="na">name=</span><span class="s">"platform/external/bzip2"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/dbus"</span> <span class="na">name=</span><span class="s">"platform/external/dbus"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/dhcpcd"</span> <span class="na">name=</span><span class="s">"platform/external/dhcpcd"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/dnsmasq"</span> <span class="na">name=</span><span class="s">"platform/external/dnsmasq"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/elfcopy"</span> <span class="na">name=</span><span class="s">"platform_external_elfcopy"</span> <span class="na">remote=</span><span class="s">"b2g"</span> <span class="na">revision=</span><span class="s">"master"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/elfutils"</span> <span class="na">name=</span><span class="s">"platform_external_elfutils"</span> <span class="na">remote=</span><span class="s">"b2g"</span> <span class="na">revision=</span><span class="s">"master"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/expat"</span> <span class="na">name=</span><span class="s">"platform/external/expat"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/fdlibm"</span> <span class="na">name=</span><span class="s">"platform/external/fdlibm"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/flac"</span> <span class="na">name=</span><span class="s">"platform/external/flac"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/freetype"</span> <span class="na">name=</span><span class="s">"platform/external/freetype"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/giflib"</span> <span class="na">name=</span><span class="s">"platform/external/giflib"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/gtest"</span> <span class="na">name=</span><span class="s">"platform/external/gtest"</span> <span class="na">remote=</span><span class="s">"linaro"</span> <span class="na">revision=</span><span class="s">"master"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/harfbuzz"</span> <span class="na">name=</span><span class="s">"platform/external/harfbuzz"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/icu4c"</span> <span class="na">name=</span><span class="s">"platform/external/icu4c"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/iptables"</span> <span class="na">name=</span><span class="s">"platform/external/iptables"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/jpeg"</span> <span class="na">name=</span><span class="s">"platform/external/jpeg"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/libgsm"</span> <span class="na">name=</span><span class="s">"platform/external/libgsm"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/liblzf"</span> <span class="na">name=</span><span class="s">"platform/external/liblzf"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/libnfc-nxp"</span> <span class="na">name=</span><span class="s">"platform/external/libnfc-nxp"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/libnl-headers"</span> <span class="na">name=</span><span class="s">"platform/external/libnl-headers"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/libpng"</span> <span class="na">name=</span><span class="s">"platform/external/libpng"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/libvpx"</span> <span class="na">name=</span><span class="s">"platform/external/libvpx"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/mksh"</span> <span class="na">name=</span><span class="s">"platform/external/mksh"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/opensans"</span> <span class="na">name=</span><span class="s">"platform_external_opensans"</span> <span class="na">remote=</span><span class="s">"b2g"</span> <span class="na">revision=</span><span class="s">"master"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/openssl"</span> <span class="na">name=</span><span class="s">"platform/external/openssl"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/protobuf"</span> <span class="na">name=</span><span class="s">"platform/external/protobuf"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/safe-iop"</span> <span class="na">name=</span><span class="s">"platform/external/safe-iop"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/screencap-gonk"</span> <span class="na">name=</span><span class="s">"screencap-gonk"</span> <span class="na">remote=</span><span class="s">"b2g"</span> <span class="na">revision=</span><span class="s">"master"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/sonivox"</span> <span class="na">name=</span><span class="s">"platform/external/sonivox"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/speex"</span> <span class="na">name=</span><span class="s">"platform/external/speex"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/sqlite"</span> <span class="na">name=</span><span class="s">"platform/external/sqlite"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/stlport"</span> <span class="na">name=</span><span class="s">"platform/external/stlport"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/strace"</span> <span class="na">name=</span><span class="s">"platform/external/strace"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/tagsoup"</span> <span class="na">name=</span><span class="s">"platform/external/tagsoup"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/tinyalsa"</span> <span class="na">name=</span><span class="s">"platform/external/tinyalsa"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/tremolo"</span> <span class="na">name=</span><span class="s">"platform/external/tremolo"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/webp"</span> <span class="na">name=</span><span class="s">"platform/external/webp"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/webrtc"</span> <span class="na">name=</span><span class="s">"platform/external/webrtc"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/wpa_supplicant"</span> <span class="na">name=</span><span class="s">"platform/external/wpa_supplicant"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/wpa_supplicant_8"</span> <span class="na">name=</span><span class="s">"platform/external/wpa_supplicant_8"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/zlib"</span> <span class="na">name=</span><span class="s">"platform/external/zlib"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"external/yaffs2"</span> <span class="na">name=</span><span class="s">"platform/external/yaffs2"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"frameworks/base"</span> <span class="na">name=</span><span class="s">"platform/frameworks/base"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"frameworks/opt/emoji"</span> <span class="na">name=</span><span class="s">"platform/frameworks/opt/emoji"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"frameworks/support"</span> <span class="na">name=</span><span class="s">"platform/frameworks/support"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"hardware/libhardware"</span> <span class="na">name=</span><span class="s">"platform/hardware/libhardware"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"hardware/libhardware_legacy"</span> <span class="na">name=</span><span class="s">"platform/hardware/libhardware_legacy"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"hardware/ril"</span> <span class="na">name=</span><span class="s">"platform/hardware/ril"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"libcore"</span> <span class="na">name=</span><span class="s">"platform/libcore"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"ndk"</span> <span class="na">name=</span><span class="s">"platform/ndk"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"prebuilt"</span> <span class="na">name=</span><span class="s">"platform/prebuilt"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"system/bluetooth"</span> <span class="na">name=</span><span class="s">"platform/system/bluetooth"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"system/core"</span> <span class="na">name=</span><span class="s">"platform/system/core"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"system/extras"</span> <span class="na">name=</span><span class="s">"platform/system/extras"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"system/media"</span> <span class="na">name=</span><span class="s">"platform/system/media"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"system/netd"</span> <span class="na">name=</span><span class="s">"platform/system/netd"</span> <span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;project</span> <span class="na">path=</span><span class="s">"system/vold"</span> <span class="na">name=</span><span class="s">"platform/system/vold"</span> <span class="nt">/&gt;</span>
+
+
+  <span class="c">&lt;!-- Cosas de tu dispositivo  --&gt;</span>
+
+
+
+<span class="nt">&lt;/manifest&gt;</span></pre>
+  <p><span class="nt">El archivo manifesto es muy facil de crear, simplemente necesitaras el codigo anterior y entenderlo un poco. Copia el codigo anterior</span></p>
+  <h2 id="Booteo_de_B2G">Booteo de B2G</h2>
+</div>
+<h3 id="Recompilar_boot.img">Recompilar boot.img</h3>
+<p>Una vez lo tengas todo hecho, necesitas recompilar la imágen de arranque. Esto no suele ser necesario para el propio Kernel, pero recoge los cambios en  <code>init.rc</code>.</p>
+<h4 id="Cambios_a_init.rc">Cambios a init.rc</h4>
+<p>El init.rc que utilizas <strong>no</strong> es el proporcionado por B2G; en su lugar, tienes que tirarlo desde el dispositivo</p>
+<p>Las principales cosas que necesitarás modificar son:</p>
+<h5 id="Importar_init.b2g.rc">Importar init.b2g.rc</h5>
+<p>Añade las siguientes líneas para importar <code>init.b2g.rc</code>:</p>
+<pre>on early-init
+    start ueventd
+    import /init.b2g.rc</pre>
+<h5 id="Fijar_permisos">Fijar permisos</h5>
+<p>Corrige los permisos en los archivos <code>/system/b2g/b2g</code>, <code>/system/b2g/updater</code>, <code>/system/b2g/plugin-container</code>; esto se deberá hacer después de las líneas que montan los archivos del sistema de lectura/escritura:</p>
+<pre>chmod 0755 /system/b2g/b2g
+chmod 0755 /system/b2g/updater
+chmod 0755 /system/b2g/plugin-container</pre>
+<p>Es posible que quieras iniciar modificando <code>init.rc</code> del nuevo dispositivo en vez de usar el <code>init.rc</code> proveido por la compilación del sistema; si es así, necesitas recordar configurar <code>TARGET_PROVIDES_INIT_RC</code> en <code>BoardConfig.mk</code>.</p>
+<h3 id="Kernel_precompilado_vs._compilando_el_kernel_desde_una_fuente">Kernel precompilado vs. compilando el kernel desde una fuente</h3>
+<p>Puedes usar un Kernel precompilado, o podrías compilar el Kernel desde una fuente. Para compilar el Kernel desde una fuente, añade AndroidKernel.mk  y la configuración del kernel al árbol de configuración del dispositivo.</p>
+<p>El <a href="https://github.com/andreasgal/B2G/tree/master/glue/gonk/device/toro/maguro" title="https://github.com/andreasgal/B2G/tree/master/glue/gonk/device/toro/maguro">maguro</a> en la vieja compilación del sistema es un ejemplo de compilación del kernel desde una fuente.</p>
+<h2 id="Flasheo_del_dispositivo">Flasheo del dispositivo</h2>
+<h3 id="Añade_el_nuevo_dispositivo_a_flash.sh">Añade el nuevo dispositivo a flash.sh</h3>
+<p>Añade el nuevo dispositivo a  <code>flash.sh</code>; las especificaciones de como hacer esto dependerán de que herramientas necesitas usar para flashear el nuevo dispositivo.</p>
+<h2 id="Primer_arranque">Primer arranque</h2>
+<h3 id="Configura_compila_y_flashea_el_nuevo_dispositivo">Configura, compila y  flashea el nuevo dispositivo</h3>
+<p>Ahora puedes probar compilando y flasheando tu nuevo dispositivo:</p>
+<pre>ANDROIDFS_DIR=my_device_backup ./config.sh &lt;device_id&gt; default.xml
+./build.sh
+./flash.sh</pre>
+<h3 id="Probar_y_depurar">Probar y depurar</h3>
+<p>Necesitamos añadir algunos detalles aqui; de hecho, este artículo podría usar algo de ayuda.</p>
+<h2 id="FAQ">FAQ</h2>
+<h3 id="¿A_que_dispiositivos_se_le_puede_hacer_Port">¿A que dispiositivos se le puede hacer Port?</h3>
+<p>Si tu dispositivo corre Android 4.0.4 lo mas probable es que pueda correr FirefoxOS, no obstante no quiere decir que a la primera correra sin ningun problema. El Porting es todo un proceso de prueba y error, es posible que tardes mas tiempo solucionando problemas en los archivos que compiles, que recopilandolos todos.</p>
+<h3 id="Mi_dispositivo_es_de_arquitectura_ARMv6_¿correra_alli">Mi dispositivo es de arquitectura ARMv6, ¿correra alli?</h3>
+<p>Puede que si o puede que no, todo depende de tus conocimientos y de hasta donde puedas llegar con el Port, por ahora solo se conoce un caso en los foros de Geeksphone en donde un usuario a logrado completar un Port estable a uno de los telefonos que ofrece Geeksphone de arquitectura ARMv6.</p>
+<h3 id="¿Alguien_mas_esta_trabajando_en_realizar_Port_a_los_diferentes_dispositivos">¿Alguien mas esta trabajando en realizar Port a los diferentes dispositivos?</h3>
+<p>Quienes realizan los Port son desarrolladores, geeks o mozillians. No se puede definir un equipo especial de Mozilla que este trabajando en ello. Por otro lado la comunidad Mozilla Hispano tiene un proyecto conformado por un grupo de personas con el fin de lograr el Port a varios dispositivos. Para mas informacion puedes visitar este <a href="https://www.mozilla-hispano.org/documentacion/Droid2Fox" title="link">link</a>.</p>
+<h3 id="¿Necesito_algunos_conocimientos_previos_para_empezar_a_realizar_el_Port">¿Necesito algunos conocimientos previos para empezar a realizar el Port?</h3>
+<p>Si, de hecho hay dos tipos de casos que pueden suceder mientras realices el Port. El primero de ellos es que tengas la suerte de que todos los sources y archivos que encuentre en Github para tu Port esten bien y compilen sin ningun problema (Poco probable que suceda). El segundo caso es que te toque re escribir algunos, si no son todos los archivos y sources de tu dispositivo para lograr que compilen y que arranquen FirefoxOS (Es lo que probablemente te pueda suceder con seguridad). Por lo que por recomendacion, seria bueno que tuvieras previos conocimientos acerca del funcionamiento de Android, algo de C y C++.</p>
+<h2 id="Mira_también">Mira también</h2>
+<ul>
+  <li><a href="https://developer.mozilla.org/es/docs/Mozilla/Firefox_OS" title="/en-US/docs/Mozilla/Boot_to_Gecko">Boot to Gecko</a></li>
+  <li><a href="https://github.com/mozilla-b2g/B2G" title="https://github.com/mozilla-b2g/B2G">Código fuente de B2G en Github</a></li>
+  <li><a href="http://www.android.com/" title="http://www.android.com/">Sitio web de Android</a></li>
+</ul>

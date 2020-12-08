@@ -1,0 +1,557 @@
+---
+title: 'بازگشت به سرور: اوج گیری جاوا اسکریپت سمت سرور'
+slug: Archive/Web/Server-Side_JavaScript/راهنما
+translation_of: Archive/Web/Server-Side_JavaScript/Walkthrough
+---
+<p dir="rtl"><em><font color="#000000"><font face="Times New Roman, serif"><font size="3">نوشته ی: دیوی واترسن، معمار جاوا اسکریپت، آپتانا</font></font></font></em></p>
+
+<p dir="rtl"><font color="#000000" face="Times New Roman, serif" size="3"><em>شکی نیست که جاوا اسکریپت پرکاربردترین زبان سمت کاربر در وب است. فارغ از این که بک اند برنامه تحت وب شما چگونه پیاده سازی شده، در سمت کاربر برای انجام (تقریبا) هر کاری از جاوا اسکریپت استفاده می کنید: از اعتبارسنجی فرم تا یک برنامه سراسر Ajax. حالا تصور کنید که می توانید با جاوا اسکریپت سمت سروربرنامه های وب خود را نیز توسعه دهید. آیا امکان استفاده از یک زبان برای سمت سرور و کاربر زندگی را برای ما توسعه دهندگان آسان تر نمی کند؟</em></font></p>
+
+<p dir="rtl"><strong>چرخه ی کامل</strong></p>
+
+<p dir="rtl">اگر شما بخشی از انفجار بزرگ وب در اواسط دههی 1990 بودهاید شاید به یاد داشته باشید که (ایدهی) استفاده از جاوا اسکریپت در هر دو سمت سرور و کاربر، هستهی اصلی نگرش نتاسکیپ برای برنامههای وب بود. «نت اسکیپ لایو وایر» نخستین موتور جاوا اسکریپت سمت سرور بود. اکنون با گذشت بیش از 10 سال و تبدیل گروه تکنولوژی نت اسکیپ  به بنیاد موزیلا، جاوا اسکریپت سمت سرور با توجه به افزایش بیش از 10 برابری قدرت پردازندههای امروزی به نسبت پردازنده های اواسط دهه ی 90 در پردازش جاوااسکریپت، کار توسعه دهندگان وب را آسانتر کرده و به همین دلیل شاهد تجدید حیاتی بزرگ است. همانند گذشته این تیم موزیلا است که در مرکز این سیر تکاملی وب قرار دارد. بنا بر گفته ی <a href="http://en.wikipedia.org/wiki/Brendan_Eich">Brendan Erich</a> مدیر فنی موزیلا و خالق جاوا اسکریپت، موتور بعدی جاوا اسکریپت موزیلا با نام <a href="https://wiki.mozilla.org/JavaScript:TraceMonkey">TraceMonkey</a> می تواند کارآیی جاوا اسکریپت را 20 تا 40 برابر بیشتر کند. در پیشرفت های اخیر شاهد ظهور موتورهای دیگری مانند <a href="http://code.google.com/p/v8/">V8 از گوگل</a> و <a href="http://trac.webkit.org/wiki/SquirrelFish">squirrelfish</a> از webKit  برای جاوا اسکریپت بوده ایم. این موتورها استانداردهای کارآیی را ارتقاء داده و به حفظ فضای رقابتی کمک میکنند و باعث هدایت رقابت به سمت بخشهای مرتبط با کارآیی تمام استفادههای اصلی جاوا اسکریپت می شود.</p>
+
+<p dir="rtl">در حال حاضر دو موتور اصلی جاوا اسکریپت در سمت سرور استفاده می شوند و هر دو برآمده از موزیلا هستند: «موزیلا راینو» و «موزیلا اسپایدر مانکی». «راینو» یک مفسر جاوا اسکریپت است که با جاوا نوشته شده و می تواند پلی میان جاوا اسکریپت و جاوای سمت سرور باشد. «استیو یگ» از گوگل کارهای جالبی با این موتور انجام داده. از سوی دیگر «اسپایدر مانکی» موتور جاوا اسکریپت است (که با C نوشته شده) و در مرورگر محبوب فایرفاکس استفاده شده. «اسپایدر مانکی» پس از تکامل تبدیل به «تریس مانکی» خواهد شد. همچنین Jaxer «سرور Ajax» (پروژهای که در آپتانا کار کردهام) نمونه ای از SSJS است که نه تنها از «اسپایدر مانکی» استفاده میکند بلکه </p>
+
+<p lang="en-US" style="margin-bottom: 0in; font-style: normal;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><span style="background: transparent none repeat scroll 0% 0%;"><span style="font-style: normal;"><span lang="en-US"><font size="3"><font color="#000000">but also embeds the entire Firefox browser engine in the application server such that you can do server-side DOM manipulation and other Ajaxy things server-side that Rhino was not built to do.</font></font></span></span></span></font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in; font-style: normal;">                   </p>
+
+<p lang="en-US" style="margin-bottom: 0in; font-style: normal;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><span style="background: transparent none repeat scroll 0% 0%;">Let's take a look at various SSJS implementations and some examples of putting them to use.</span></font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in; font-style: normal;">                   </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="4"><strong>Server-Side JavaScript (SSJS) via Embedded JavaScript Engines</strong></font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">The extension of JavaScript to the server is made possible via embedded JavaScript engines. The two most well established engines are SpiderMonkey and Rhino, both currently maintained by the Mozilla Foundation. SpiderMonkey is the code name for the first ever JavaScript engine, an open source C implementation which can be found embedded in leading software products such as Mozilla Firefox, Adobe Acrobat, and Aptana Jaxer. Rhino is a Java implementation of JavaScript which is commonly embedded in Java applications to expose scripting capability. The Helma web application framework is an example of Rhino in use. The Dojo Toolkit also has capabilities that run in Rhino. Let’s take a closer look at Rhino and its importance to the JavaScript developer.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Rhino offers a unique opportunity for the JavaScript developer to tap into the power of Java classes using JavaScript. Armed with some basic Java knowledge, you can extend JavaScript to include some of the most desired capability such as database access, remote web requests, and XML processing. We’ll start by taking a look at querying a SQL database. </font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">This first example we’ll demonstrate is querying a mySQL database for some employee contact information. It is assumed that you have already downloaded, extracted, and consumed the necessary documentation to get up and running with some basic Rhino scripts. If you don’t already have it, you’ll need to also download the <font color="#000080"><u><a class="external" href="http://dev.mysql.com/downloads/connector/j/5.0.html">JDBC driver for mySQL</a></u></font>, extract the class files, and include the path in your CLASSPATH environment variable. The code in Listing 1 is a sample JavaScript script which incorporates Java classes to handle the database query.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Listing 1 - Querying a mySQL database from Rhino</font></font></font></p>
+
+<pre class="eval">// import the java sql packages
+importPackage( java.sql );
+
+// load the mySQL driver
+java.lang.Class.forName( "com.mysql.jdbc.Driver" );
+
+// create connection to the database
+var conn = DriverManager.getConnection( "jdbc:<a class="external" rel="freelink">mysql://localhost/rhino</a>", "uRhino", "pRhino" );
+
+// create a statement handle
+var stmt = conn.createStatement();
+
+// get a resultset
+var rs = stmt.executeQuery( "select * from employee" );
+
+// get the metadata from the resultset
+var meta = rs.getMetaData();
+
+// loop over the records, dump out column names and values
+while( rs.next() ) {
+	for( var i = 1; i &lt;= meta.getColumnCount(); i++ ) {
+		print( meta.getColumnName( i ) + ": " + rs.getObject( i ) + "\n" );
+	}
+	print( "----------\n" );
+}
+
+// cleanup
+rs.close();
+stmt.close();
+conn.close();</pre>
+
+<p lang="en-US" style="margin-bottom: 0in;">              </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">This code starts off by using a Rhino function named <em>importPackage</em> which is just like using the <em>import</em> statement in Java. Here, we’re including all the classes in the <em>java.sql</em> namespace in the script. The appropriate database driver for mySQL is loaded and the connection string to a database named <em>rhino</em> on my local machine is configured using the user account <em>uRhino</em> with the password of <em>pRhino</em>. The SQL statement is prepared, executed, and printed with the help of the metadata obtained from the resultset. Sample output is shown in Listing 2.</font></font></font></p>
+
+<pre class="eval">id: 1
+first_name: Sammy
+last_name: Hamm
+department: IT
+title: Network Administrator
+----------
+id: 2
+first_name: Nigel
+last_name: Bitters
+department: Finance
+title: Accounting Manager
+...
+</pre>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">It’s clear to see that with just a few lines of code, we can easily take advantage of SQL data stores in JavaScript. The sample script in Listing 1 could be factored out to it’s own function to retrieve the set of employee information, or abstracted further into a more generic data handler class. Next we’ll take a look at another powerful feature in Rhino, E4X processing.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">E4X (ECMAScript for XML) is an extension of JavaScript which provides direct support for XML, greatly simplifying the process of consuming XML via JavaScript. Rhino’s support of this important standard eliminates the pain of using DOM or SAX based parsers in Java. Listing 3 below details a script used to process an RSS feed from the Mozilla website.</font></font></font></p>
+
+<pre class="eval">importPackage( java.net );
+
+// connect to the remote resource
+var u = new URL( "<a class="external" href="http://www.mozilla.org/news.rdf" rel="freelink">http://www.mozilla.org/news.rdf</a>" );
+var c = u.openConnection();
+c.connect();
+
+// read in the raw data
+var s = new java.io.InputStreamReader( c.getInputStream() );
+var b = new java.io.BufferedReader( s );
+var l, str = "";
+
+while( ( l = b.readLine() ) != null ) {
+	// skip
+	if( l != "" ) {
+	str = str + l + "\n";
+	}
+}
+// define the namespaces, first the default,
+// then additional namespaces
+default xml namespace = "<a class="external" href="http://purl.org/rss/1.0/" rel="freelink">http://purl.org/rss/1.0/</a>";
+var dc = new Namespace( "<a class="external" href="http://purl.org/dc/elements/1.1/" rel="freelink">http://purl.org/dc/elements/1.1/</a>" );
+var rdf = new Namespace( "<a class="external" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rel="freelink">http://www.w3.org/1999/02/22-rdf-syntax-ns#</a>" );
+
+// use e4x to process the feed
+var x = new XML( str );
+for each( var i in x..item ) {
+	print( "Title: " + i.title + "\n" );
+	print( "About: " + i.@rdf::about + "\n" );
+	print( "Link: " + i.link + "\n" );
+	print( "Date: " + i.dc::date + "\n" );
+}
+</pre>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">The first half of this script is standard Java code used to retrieve the feed data. After the asset is retrieved and stored in a string, the proper namespaces are defined for this particular resource. The default namespace is defined along with two others, in particular <strong>dc</strong> and <strong>rdf</strong>. Defining these namespaces becomes important if we want to be able to access any data elements in the feed defined in these namespaces. </font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">The act of creating an E4X object is quite simple, in the case of Listing 3, we do this through the line</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Courier New, monospace"><font size="2">var x = new XML( str );</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">From here, the XML is accessible via dot notation. Notice during the processing of the <em>item</em> element where we use the <em>rdf</em> and <em>dc</em> namespace to access the <em>about</em> attribute of the <em>item</em> element, and the <em>date</em> element respectively. The syntax for accessing E4X objects is actually quite natural and certainly easier than most methods.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">JavaScript engines such as Rhino and SpiderMonkey on their own have proven to be a useful and powerful tool to the developer. However, taking advantage of frameworks such as Aptana Jaxer (SpiderMonkey) and Helma (Rhino) can reveal even greater rewards as a great deal of work has already been done for you. All you need to do is implement the JavaScript. Let’s take a closer look on the SpiderMonkey side with Jaxer.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">As stated earlier, Aptana Jaxer is built using the Mozilla Browser Engine engine that powers Mozilla Firefox, which includes SpiderMonkey as its JavaScript interpreter, but lots more features beyond SSJS alone such as DOM, DB, File IO, CSS, server sessions, E4X, etc...] This is a great advantage to the developer as it presents a consistent server-side and client-side development environment for both browser and server contexts that is centered on open source and Web standards. Also since you know which engine you're targeting, you're free to confidently use advanced built in controls such as XML processing via E4X, XPath, and XSLT. Let's take a tour through some of the top features of Jaxer through code examples.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><strong><font size="4">Jaxer – Server-Side Ajax via the Firefox Browser Engine on the server</font></strong></font></font></font>   </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Although server-side JavaScript is not a new concept, Jaxer implements it in a unique fashion. By taking advantage of current ScriptMonkey and Ajax capabilities not to mention the loads of other features packed into the Mozilla Firefox Browser Engine, Aptana Jaxer fuses the client-side with the server-side, creating a unified “same language” development platform. Where once you would need to master not only JavaScript for the client-side but also some flavor of a server-side Web language, Jaxer puts all the rich capability of a server-side language into JavaScript. This accounts for added simplicity and promotes rapid development methodologies.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><strong>Managing Context</strong></font></font></font>   </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">To take advantage of all the operating contexts of Jaxer, you'll need to specify how your scripts should behave using the runat attribute of the script tag (or by setting a runat property on a JavaScript function object). The common values for this attribute are explained below, though there are more than just these.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<ul>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><strong>runat=”client”</strong> – Code contained in this block is restricted to execution client-side, which is also what happens if no <font face="Courier New">runat</font> attribute is specified.</font></font></font></p>
+ </li>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><strong>runat=”server”</strong> – Code contained in this block is restricted to execution server-side.</font></font></font></p>
+ </li>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><strong>runat=”both”</strong> – Code may be invoked on the client or server side.</font></font></font></p>
+ </li>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><strong>runat=”server-proxy”</strong> – Allows for the exposure of server-side JavaScript functions to the browser. Jaxer manages Ajax calls behind the scenes to accomplish this.</font></font></font></p>
+ </li>
+</ul>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">While most of the <font size="2"><font face="Courier New, monospace">runat</font></font> attribute values above are self explanatory, the <font size="2"><font face="Courier New">server-proxy</font></font> concept is best explained through example. Consider the code in Listing 4.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in; font-style: normal;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Listing 4 - Demonstration of server and client context</font></font></font></p>
+
+<pre class="eval">&lt;script runat="server"&gt;
+function exposed() {
+	return "exposed to the browser";
+}
+
+function notExposed() {
+	return "can't see me!";
+}
+&lt;/script&gt;
+
+
+&lt;script runat="client"&gt;
+alert( exposed() );
+alert( notExposed() );
+&lt;/script&gt;
+</pre>
+
+<p><span style="font-family: courier new;">There are two blocks of scripts defined, one with runat set to server and the other set to client. This creates a strict separation of the two environments. As it stands, the code in the client block would throw an error since the server-side JavaScript is not within scope. If you intend to allow the execution of server-side JavaScript from the client-side, you can correct the code in listing 1 by doing one of three things.</span></p>
+
+<ol>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Change the <font size="2"><font face="Courier New">runat</font></font> attribute value of <font face="Courier New">server</font> to <font face="Courier New">server-proxy</font>.</font></font></font></p>
+ </li>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Add a statement inside the server-side script block to expose a particular server-side function to the browser. This statement is of the form<em> <strong>&lt;functionName&gt;</strong></em><strong>.proxy = true</strong>.</font></font></font></p>
+ </li>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Ensure the server-side function name is contained within the <strong>Jaxer.proxies </strong>array.</font></font></font></p>
+ </li>
+</ol>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Generally it's a best practice to use either the second or third strategy since in this case you are exposing only what's needed to the client. See Listing 5 for an update to Listing 1 to reflect this.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Listing 5 - Demonstration of server-proxy</font></font></font></p>
+
+<pre class="eval">&lt;script runat="server"&gt;
+function notExposed() {
+	// runs on the server, hidden from the browser
+	return "can't see me!";
+}
+
+function exposed() {
+	// runs on the server, callable from the browser
+	return "exposed to the browser";
+}
+exposed.proxy = true; // tell Jaxer this function is ok to be called from the browser
+&lt;/script&gt;
+
+&lt;script runat="client" type="text/javascript"&gt;
+alert( exposed() ); //works like a charm
+alert( notExposed() ); //produces an object not found error since it server-side only
+&lt;/script&gt;
+</pre>
+
+<p lang="en-US" style="margin-bottom: 0in;">                  </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Understanding the concept of operating context in Jaxer is central to moving forward with the example application which is what we'll examine next.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="4"><strong>Jaxer – Example Application</strong></font></font></font>   </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">The example application consists of a simple form used to accept comments from public users and was built to cover some of the most useful Jaxer features. The example application is running under Jaxer build 0.9.7.2472 and also incorporates the ExtJS version 2.1 JavaScript framework for user interface controls. For more information how to obtain and install these products, refer to the resources section.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><strong>Single Page Applications</strong></font></font></font>   </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">The first feature the application demonstrates is the concept of a single page application. Since Jaxer allows you to define which code is reserved for the server-side, which code stays on the client-side, and which code is shared between the two, it's very possible to produce a single page application which could also include any number of external assets such as a popular third party framework. Listing 6 shows the beginning of our application which takes advantage of some of these concepts.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Listing 6 - Creating the User Interface</font></font></font></p>
+
+<pre>&lt;link href="/jaxer_examples/js/ext-2.1/resources/css/ext-all.css" type="text/css" rel="stylesheet"/&gt;
+&lt;script src="/jaxer_examples/js/ext-2.1/adapter/ext/ext-base.js"/&gt;
+&lt;script src="/jaxer_examples/js/ext-2.1/ext-all.js"/&gt;
+
+&lt;link href="/jaxer_examples/css/main.css" type="text/css" rel="stylesheet"/&gt;
+
+&lt;script runat="both" src="/jaxer_examples/js/validateComments.js"/&gt;
+
+&lt;script&gt;
+var txt_name;
+var txt_email;
+var txt_message;
+var btn_comments;
+var form_comments;
+
+Ext.onReady( function() {
+	// create the name text field
+	txt_name = new Ext.form.TextField({
+		name: "name",
+		fieldLabel: "Name",
+		width: 200
+	});
+
+	// create the e-mail text field
+	txt_email = new Ext.form.TextField({
+		name: "email",
+		fieldLabel: "E-mail",
+		width: 200
+	});
+
+	// create the message text field
+	txt_message = new Ext.form.TextArea({
+		name: "message",
+		fieldLabel: "Message",
+		width: 200
+	});
+
+	// create a button used to send the form details.
+		btn_comments = new Ext.Button({
+		text: "Submit",
+		fieldLabel: "",
+		handler: formHandler
+	});
+
+// create the form panel, attach the inputs
+form_comments = new Ext.form.FormPanel({
+		labelAlign: "right",
+		width: 400,
+		title: "Comments",
+		items: [
+			txt_name,
+			txt_email,
+			txt_message,
+			btn_comments
+		],
+		renderTo: "form-comments"
+	});
+
+});
+&lt;/script&gt;
+
+
+
+</pre>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">The code in Listing 6 starts by hooking in the Ext JS library which is used to produce the UI elements of the form. Next a script named <em>validateComments.js</em> is hooked in with the <font face="Courier New">runat</font> attribute set to <font face="Courier New">both</font>. The function defined within this file checks the form to make sure it is complete, returning a boolean. The <font face="Courier New">both</font> context it operates within is a very powerful concept as we are able to use this code to check values entered in the form on both the client and server side. No custom validation libraries for each environment makes for rapid development with less risk for error. </font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Towards the bottom of the code are two div tags with ids <strong>form-comments</strong> and <strong>out-logger</strong>. The <strong>form-comments</strong> div is used to render the form and the <strong>out-logger</strong> will be used as a log display as each comment is added. The completed user interface is shown in Figure 1.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                     </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Figure 1 – The user interface</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">       <img alt="ui.png" class="default internal" src="/@api/deki/files/2878/=ui.png" style="height: 482px; width: 619px;"></p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><strong>Server-Side DOM Processing</strong></font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Another powerful concept of Jaxer is the ability to access the DOM server-side with JavaScript. This gives you added control to interrogate and manage the document structure before it's pushed to the client. Listing 7 contains the code which demonstrates this concept.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Listing 7 - Manipulating the DOM server-side</font></font></font></p>
+
+<pre class="eval">&lt;script runat="server"&gt;
+	window.onserverload = function() {
+		document.getElementById( "out-logger" ).innerHTML = Jaxer.File.read( "dump.txt" );
+	}
+&lt;/script&gt;</pre>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">The code in listing 7 is executed server-side and takes advantage of the <font face="Courier New">onserverload</font> event which ensures that we have a complete DOM before trying to access it. This code is simple in that it updates the <font face="Courier New">innerHTML</font> of the logging div with the contents of a text file. The contents of this file are obtained through the file I/O capabilities exposed by Jaxer which is what we'll examine next.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><strong>File I/O</strong></font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Jaxer ships with a comprehensive filesystem I/O capability that is very useful. There are numerous methods in this namespace which allow for a simple, yet powerful approach to file management. The example application uses this capability to log comments submitted by the form to a plain text file named <em>dump.txt</em>. Listing 8 shows the two functions used to handle the comment submission process. </font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Listing 8 - Submitting Comment Data</font></font></font></p>
+
+<pre class="eval">&lt;script&gt;
+function formHandler() {
+
+// get the form values
+	var name = txt_name.getValue();
+	var email = txt_email.getValue();
+	var message = txt_message.getValue();
+
+	// if the form passes validation client-side, submit results to the processor
+	if( validateComments( name, email, message ) ) {
+		formProcessor( name, email, message );
+		// update the logger with the most recent entry
+		document.getElementById( "out-logger" ).innerHTML += "name: " + name + "&lt;br/&gt;email: " + email + "&lt;br/&gt;message: " + message + "&lt;br/&gt;&lt;br/&gt;";
+	} else {
+		Ext.Msg.alert( "Error", "Please enter the required fields" );
+	}
+}
+&lt;/script&gt;
+
+&lt;!-- processes the form contents --&gt;
+&lt;script runat="server"&gt;
+function formProcessor( name, email, message ) {
+	// perform the same validation of the data server-side
+	if( !validateComments( name, email, message ) ) {
+		throw "Incomplete data was submitted.";
+	}
+	// assemble the string
+	var s = "name: " + name + "&lt;br/&gt;" +
+	"email: " + email + "&lt;br/&gt;" +
+	"message: " + message + "&lt;br/&gt;&lt;br/&gt;";
+	// append the entry to the log file
+	Jaxer.File.append( "dump.txt", s );
+}
+formProcessor.proxy = true;
+&lt;/script&gt;
+
+</pre>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">The first function, <strong>formHandler</strong>, performs some first-level validation using the <strong>validateComments</strong> function. If it passes validation, the <strong>formProcessor</strong> server-side function is invoked which does the same validation check using the shared <strong>validateComments</strong> function. Finally, the comment information is assembled into a string and appended to the dump file. </font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><strong>Database Access</strong></font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">For more robust data management, Jaxer comes with the ability to manage data in either a SQLite database which is included in Jaxer, or a mySQL database, and is extensible to others. Much like the file I/O namespace, database access in Jaxer can be as simple or complicated as you want or need it to be. For debugging, Jaxer will also send database errors to the client if you want.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Upgrading the example application to include database access requires just a few lines of code added to the <strong>formProcessor</strong> method. Listing 9 demonstrates these changes.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Listing 9 - Jaxer database access</font></font></font></p>
+
+<pre class="eval">&lt;script runat="server"&gt;
+function formProcessor( name, email, message ) {
+
+	// perform the same validation of the data server-side
+	if( !validateComments( name, email, message ) ) {
+		throw "Incomplete data was submitted.";
+	}
+
+	// assemble the string
+	var s = "name: "    + name    + "&lt;br/&gt;" +
+			"email: "   + email   + "&lt;br/&gt;" +
+			"message: " + message + "&lt;br/&gt;&lt;br/&gt;";
+
+	// append the entry to the log file
+	Jaxer.File.append( "dump.txt", s );
+
+	// add support for management via database
+	Jaxer.DB.execute( "create table if not exists comments ( id integer primary key auto_increment, " +
+															"name varchar(50) not null, "             +
+															"email varchar(255) not null, "           +
+															"message varchar(300) not null )" );
+
+	Jaxer.DB.execute( "insert into comments ( name, email, message ) values ( ?, ?, ? )", [ name, email, message ] );
+
+}
+
+formProcessor.proxy = true;
+&lt;/script&gt;</pre>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">The first statement which uses the <strong>Jaxer.DB</strong> namespace creates a new database table in the default SQLite database if it doesn't already exist. You can see the field names and data types which make sense for the type of data that's been added. The second statement is just a simple insert statement using the data obtained from the form. Placeholders in the form of '?' are used to match up the argument values with their proper position in the insert statement.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><strong>XML Processing</strong></font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">The final feature we'll explore is XML processing with a particular emphasis first on the capability to create a simple XML service on the server-side, then use the E4X capabilities to processes it.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Listing 10 demonstrates the configuration of a simple service we're able to advertise through Jaxer using the data from the database we captured from prior form submissions.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Listing 10 - Creating a simple XML service</font></font></font></p>
+
+<pre class="eval">
+&lt;script runat="server"&gt;
+var rs_comments = Jaxer.DB.execute("SELECT * FROM Comments");
+var doc = document.implementation.createDocument('', 'comments', null);
+var root = doc.documentElement;
+rs_comments.rows.forEach(function(row, index)
+{
+if (true || index &lt; 10)
+{
+var node = doc.createElement('comment');
+node.setAttribute('id', row.id);
+node.setAttribute('name', row.name);
+node.setAttribute('message', row.message);
+root.appendChild(node);
+}
+});
+Jaxer.response.exit(200, doc);
+&lt;/script&gt; </pre>
+
+<p>The data from the database is represented in XML format as follows:</p>
+
+<pre>&lt;comments&gt; &lt;comment message="”Jaxer" name="”Nigel" id="”1”"&gt;&lt;/comment&gt; ... more comments ... &lt;/comments&gt;
+</pre>
+
+<p>Now that we've created this simple XML feed, we can now also consume it using the code from Listing 11.</p>
+
+<p>Listing 11 - Consuming the XML feed</p>
+
+<pre class="eval">&lt;script runat="server"&gt;
+var r = Jaxer.Web.get("service.html", {as: 'e4x'});
+for (var i=0, len = r.comment.length(); i&lt;len; i++) {
+	var comment = r.comment[i];
+	document.write('id: ' + comment.@id + '&lt;br/&gt;');
+	document.write('name: ' + comment.@name + '&lt;br/&gt;');
+	document.write('message: ' + comment.@message + '&lt;br/&gt;');
+	document.write('&lt;hr/&gt;');
+}
+&lt;/script&gt;</pre>
+
+<p> <font color="#000000"><font face="Times New Roman, serif"><font size="3">The code in Listing 11 is very simple. First a call to get the XML feed is made using the <strong>get</strong> method from the <strong>Jaxer.Web</strong> namespace, using the option that requests the response as a new E4X object. The comment nodes are looped over with data output using the simplified E4X syntax. </font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">Out of all the features we looked at, this one has to be my favorite. To be able to use Jaxer to essentially create an XML based RESTful service in JavaScript is useful and shifts a great deal of power to the JavaScript developer.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="4"><strong>Conclusion</strong></font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3">JavaScript can be successfully used for full <span lang="en-US"><font size="3"><font color="#000000">application</font></font></span> development on both the client <span lang="en-US"><font size="3"><font color="#000000">and</font></font></span> server, fulfilling Netscape's original vision for a single, unified language for the Web that makes apps easier to develop and maintain. Advances such as Ajax and running Ajax on the server side with the Jaxer server boosted by today's faster JavaScript engines and radically faster ones like TraceMonkey to come from Mozilla, sets the stage for significant use of server-side JavaScript now.</font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="4"><strong>Resources</strong></font></font></font></p>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<ul>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><font color="#000080"><u><a href="/../../../../En/SpiderMonkey" title="../../../../En/SpiderMonkey">Mozilla SpiderMonkey</a></u></font></font></font></font></p>
+ </li>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><font color="#000080"><u><a class="external" href="http://www.mozilla.org/rhino">Mozilla Rhino</a></u></font></font></font></font></p>
+ </li>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><font color="#000080"><u><a href="/ServerJS" title="https://developer.mozilla.org/ServerJS">ServerJS discussion on proposed Common API for SSJS</a></u></font></font></font></font></p>
+ </li>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><font color="#000080"><u><a class="external" href="http://en.wikipedia.org/wiki/SSJS">SSJS (Server Side JavaScript) at Wikipedia.com</a></u></font></font></font></font></p>
+ </li>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><font color="#000080"><u><a class="external" href="http://www.aptana.com/jaxer">Aptana Jaxer</a></u></font></font></font></font></p>
+ </li>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><font color="#000080"><u><a class="external" href="http://www.aptana.com/jaxer/book">Aptana Jaxer Documentation</a></u></font></font></font></font></p>
+ </li>
+ <li>
+  <p lang="en-US" style="margin-bottom: 0in;"><font color="#000000"><font face="Times New Roman, serif"><font size="3"><font color="#000080"><u>Ext JS</u></font></font></font></font></p>
+ </li>
+</ul>
+
+<p lang="en-US" style="margin-bottom: 0in;">                      </p>
+
+<p>      </p>

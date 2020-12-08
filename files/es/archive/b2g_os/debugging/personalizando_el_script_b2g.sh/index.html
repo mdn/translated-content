@@ -1,0 +1,42 @@
+---
+title: Personalizando el script b2g.sh
+slug: Archive/B2G_OS/Debugging/Personalizando_el_script_b2g.sh
+translation_of: Archive/B2G_OS/Developing_Firefox_OS/Customizing_the_b2g.sh_script
+---
+<p></p><div class="overheadIndicator draft">
+    <p><strong>Borrador</strong><br>
+    Esta página no está completa.</p>
+
+</div><p></p>
+<p>En el teléfono, la aplicación <code><a href="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture#The_userspace_process_architecture">b2g</a></code> (que provee las APIs de Firefox OS entre otras cosas) se inicia a través del script <code>/system/bin/b2g.sh</code>. Se puede personalizar este script para cambiar el comportamiento de Firefox OS.</p>
+<h2 id="Establecer_variables_de_entorno">Establecer variables de entorno</h2>
+<p>Si desea establecer una variable de entorno para una ejecución simple de B2G, puede hacer lo siguiente:</p>
+<pre>adb shell stop b2g
+abd shell "export ENV_VAR=value &amp;&amp; /system/bin/b2g.sh"
+</pre>
+<p>Si desea usar las mismas variables de entorno todo el tiempo, puede editar b2g.sh, como se describe en la siguiente sección.</p>
+<h2 id="Editando_b2g.sh">Editando b2g.sh</h2>
+<p>Para depurar, usted puede desear establecer variables de entorno para conseguir inormación de registro o de otra manera afectar como se ejecuta el programa <code>b2g</code>. Puede hacer esto editando el script <code>b2g.sh</code>. No hay herramientas incluídas en el teléfono para editar este archivo en su lugar, así que necesitará copiarlo primero.</p>
+<p>Connect the phone to your computer, open a terminal window, and execute the following command to edit the script:</p>
+<pre>adb pull /system/bin/b2g.sh</pre>
+<p>Edite el script para hacer todos los cambios que desee. Por ejemplo, supongamos que desea ver alguna salida de los registros (lo que require una compliación de depuración), debería agregar algo como:</p>
+<pre>export NSPR_LOG_FILE=/data/local/tmp/mylog.txt
+export NSPR_LOG_MODULES=Layers:5
+</pre>
+<p>Y luego hacer lo siguiente para subir el script <code>b2g.sh</code> al teléfono:</p>
+<pre>adb shell stop b2g
+adb remount
+adb push b2g.sh /system/bin
+adb shell chmod 0755 /system/bin/b2g.sh
+adb shell start b2g
+</pre>
+<div class="note">
+  <p><strong>Nota:</strong> <code>/data/local/tmp</code> es el único lugar del sistema de archivos en el que pueden escribir los procesos de contenido.</p>
+</div>
+<h2 id="Véase_también">Véase también</h2>
+<ul>
+  <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko" title="/en-US/docs/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">Building and installing Firefox OS</a></li>
+  <li><a href="/en-US/docs/Mozilla/Firefox_OS/Architecture" title="/en-US/docs/Mozilla/Firefox_OS/Architecture">Firefox OS architecture overview</a></li>
+  <li><a href="/es/docs/Mozilla/Firefox_OS/Depuraci%C3%B3n" title="/en-US/docs/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">Depuración en Firefox OS</a></li>
+</ul>
+<p> </p>

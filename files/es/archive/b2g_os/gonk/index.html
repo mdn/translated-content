@@ -1,0 +1,23 @@
+---
+title: Gonk
+slug: Archive/B2G_OS/Gonk
+translation_of: Archive/B2G_OS/Platform/Gonk
+---
+<p><span style="line-height: 1.5;"></span></p><div class="overheadIndicator draft">
+    <p><strong>Borrador</strong><br>
+    Esta página no está completa.</p>
+
+</div><p></p>
+<div class="summary">
+ <p>Gonk es un sistema operativo de bajo nivel de la plataforma <a href="/en-US/docs/Mozilla/Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> que consiste de un kernel Linux basado sobre el <a class="external" href="http://source.android.com/">Android Open Source Project</a> (AOSP) <span style="line-height: 1.5;">y una capa de abstracción de hardware (HAL). Este artículo intenta explicar qué constituye Gonk; para obtener más información sobre la arquitectura general del Firefox OS y cómo Gonk encuadra en ella, lea nuestra guía sobre la <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Architecture">Arquitectura de Firefox OS</a>.</span></p>
+</div>
+<h2 id="Panorama_de_Gonk">Panorama de Gonk</h2>
+<p>En el código fuente de Gecko hay una carpeta b2g\ que contiene el <em>Gonk Port</em>, el cual habilita las capacidades del hardware móvil para la Web. Consiste de un núcleo, o kernel, Linux, HAL y otras librerías OEM específicas. Varias librerías Gonk son proyectos de código abierto comunes: libusb, bluez, etcétera. Algunas de las otras partes de la HAL están compartidas con el Proyecto Android: GPS, cámara y otros.</p>
+<p><span style="line-height: 1.5;">Gonk es una capa de adaptación (port) de dispositivos: un adaptador entre el hardware y Gecko. Gonk es una distribución de Linux bastante sencilla que puede ser tratada como un adaptador Gecko empardado con capas de adaptación Gecko —entonces Gonk es un <strong>objetivo</strong> para adaptar <a href="https://developer.mozilla.org/en-US/docs/Gecko">Gecko</a> a Firefox OS así como también hay adaptadores de Gecko para OS X, Windows y Android.</span></p>
+<div class="note">
+ <p><strong>Nota</strong><b><strong>:</strong> </b>debido a que diferentes dispositivos móviles pueden tener diferentes chips y otras especificaciones de hardware, los dispositivos pueden tener diferentes distribuciones de Gonk.</p>
+</div>
+<p>Como el Proyecto Firefox OS goza de control total sobre Gonk, podemos exponer interfaces a Gecko que no podrían ser expuestas en otros sistemas operativos. Por ejemplo, Gecko posee a través de Gonk acceso directo al conjunto completo de telefonía y al buffer de pantalla.</p>
+<h2 id="Código_fuente_de_Gonk">Código fuente de Gonk</h2>
+<p>El <a href="https://github.com/mozilla-b2g/B2G">repositorio B2g en Github</a> contiene soporte oficial para todas las adaptaciones de Gonk para una variedad de dispositivos, así que puede tratarlo como un repositorio de Gonk. La lista de dispositivos soportados está en<code> B2g/config.sh</code>.</p>
+<p><span style="line-height: 1.5;">La mayor parte del trabajo diario realizado en Gonk implica adaptar el sistema a diferentes placas y asegurarse de que Gecko responda bien a los diferentes dispositivos.</span></p>

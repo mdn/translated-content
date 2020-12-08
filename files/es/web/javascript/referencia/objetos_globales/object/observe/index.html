@@ -1,0 +1,188 @@
+---
+title: Object.observe()
+slug: Web/JavaScript/Referencia/Objetos_globales/Object/observe
+translation_of: Archive/Web/JavaScript/Object.observe
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p>El método <strong><code>Object.observe() </code></strong>es usado para observar de forma asíncrona cambios sobre un objeto.  Este método transmite información sobre cambios en el objeto, en el orden en que estos ocurren.</p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="syntaxbox"><code>Object.observe(<var>obj</var>, <var>callback</var>[, <var>acceptList</var>])</code></pre>
+
+<h3 id="Parámetros">Parámetros</h3>
+
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>El objeto que será observado.</dd>
+ <dt><code>callback</code></dt>
+ <dd>La función llamada cada vez que un cambio es realizado. Esta función recibe el siguiente argumento:</dd>
+ <dd>
+ <dl>
+  <dt><code>changes</code></dt>
+  <dd>Una cadena (<em>Array</em>) de objetos, cada uno de los cuales representa un cambio. Las propiedades de estos objetos son:
+  <ul>
+   <li><strong><code>name</code></strong>: El nombre de la propiedad que fue cambiada.</li>
+   <li><strong><code>object</code></strong>: El objeto con el cambio ya realizado.</li>
+   <li><strong><code>type</code></strong>: Una cadena (<em>String</em>), indicando el tipo de cambio que ocurrió. Puede ser "<em>add</em>" (añadir), "<em>update" </em>(actualizar) o "<em>delete</em>" (borrar) .</li>
+   <li><strong><code>oldValue</code></strong>: Sólo válido para los tipos (<em>type</em>) <em>"</em><em>update" </em>o <em>"delete"</em>. Esta propiedad representa el valor antes de que haya ocurrido el cambio.</li>
+  </ul>
+  </dd>
+ </dl>
+ </dd>
+ <dt><code>acceptList</code></dt>
+ <dd>La lista de tipos de cambios que serán observados en el objeto dado, y que serán pasados a la función callback dada. Si este parámetro es omitido, se utilizará de forma predeterminada la cadena (<em>Array</em>) <code>["add", "update", "delete", "reconfigure", "setPrototype", "preventExtensions"]</code>.</dd>
+</dl>
+
+<h2 id="Descripción">Descripción</h2>
+
+<p>La función <strong><code>callback</code> </strong>es llamada o ejecutada cada vez que un cambio es aplicado sobre el objeto <strong><code>obj</code></strong>. Esta función es ejecutada con una cadena (Array) de todos los cambios sobre el objeto, en el orden en el que estos ocurrieron.</p>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<h3 id="Imprimir_en_consola_los_seis_tipos_diferentes_de_cambios_en_un_objeto.">Imprimir en consola los seis tipos diferentes de cambios en un objeto.</h3>
+
+<pre class="brush: js">var obj = {
+  foo: 0
+};
+
+Object.observe(obj, function(changes) {
+  console.log(changes);
+});
+
+obj.baz = 2;
+// [{name: 'baz', object: &lt;obj&gt;, type: 'add'}]
+
+obj.foo = 'hello';
+// [{name: 'foo', object: &lt;obj&gt;, type: 'update', oldValue: 0}]
+
+delete obj.baz;
+// [{name: 'baz', object: &lt;obj&gt;, type: 'delete', oldValue: 2}]
+
+Object.defineProperty(obj, 'foo', {writable: false});
+// [{name: 'foo', object: &lt;obj&gt;, type: 'reconfigure'}]
+
+Object.setPrototypeOf(obj, {});
+// [{name: '__proto__', object: &lt;obj&gt;, type: 'setPrototype', oldValue: &lt;prototype&gt;}]
+
+Object.seal(obj);
+// [
+//   {name: 'foo', object: &lt;obj&gt;, type: 'reconfigure'},
+//   {name: 'baz', object: &lt;obj&gt;, type: 'reconfigure'},
+//   {object: &lt;obj&gt;, type: 'preventExtensions'}
+// ]
+</pre>
+
+<h3 id="Enlace_de_datos">Enlace de datos</h3>
+
+<pre class="brush: js">// Un modelo de objeto "usuario"
+var user = {
+  id: 0,
+  name: 'Brendan Eich',
+  title: 'Mr.'
+};
+
+// Crear un saludo para el usuario
+function updateGreeting() {
+  user.greeting = 'Hello, ' + user.title + ' ' + user.name + '!';
+}
+updateGreeting();
+
+Object.observe(user, function(changes) {
+  changes.forEach(function(change) {
+    // Cada vez que las propiedades "name" o "title" del objeto
+    // "user" cambien, se ejecutará la función updateGreeting.
+    if (change.name === 'name' || change.name === 'title') {
+      updateGreeting();
+    }
+  });
+});
+</pre>
+
+<h3 id="Cambio_de_tipo_personalizado">Cambio de tipo personalizado</h3>
+
+<pre class="brush: js">// A point on a 2D plane
+var point = {x: 0, y: 0, distance: 0};
+
+function setPosition(pt, x, y) {
+  // Performing a custom change
+  Object.getNotifier(pt).performChange('reposition', function() {
+    var oldDistance = pt.distance;
+    pt.x = x;
+    pt.y = y;
+    pt.distance = Math.sqrt(x * x + y * y);
+    return {oldDistance: oldDistance};
+  });
+}
+
+Object.observe(point, function(changes) {
+  console.log('Distance change: ' + (point.distance - changes[0].oldDistance));
+}, ['reposition']);
+
+setPosition(point, 3, 4);
+// Distance change: 5
+</pre>
+
+<h2 id="Especificación_Técnica_(en_inglés)">Especificación Técnica (en inglés)</h2>
+
+<p><a href="https://github.com/arv/ecmascript-object-observe">Strawman proposal for ECMAScript 7</a>.</p>
+
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatChrome("36")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera("23")}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome("36")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera("23")}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Véase_también">Véase también</h2>
+
+<ul>
+ <li>{{jsxref("Object.unobserve()")}} {{experimental_inline}}</li>
+ <li>{{jsxref("Array.observe()")}} {{experimental_inline}}</li>
+</ul>

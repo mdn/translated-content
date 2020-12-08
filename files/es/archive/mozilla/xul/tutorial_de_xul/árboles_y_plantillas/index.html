@@ -1,0 +1,138 @@
+---
+title: Árboles y plantillas
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Árboles_y_plantillas
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/Trees_and_Templates
+---
+<p>Lo siguiente describe como usar una plantilla con un árbol.</p>
+
+<h3 id="A.C3.B1adiendo_fuentes_de_datos_a_.C3.A1rboles" name="A.C3.B1adiendo_fuentes_de_datos_a_.C3.A1rboles">Añadiendo fuentes de datos a árboles</h3>
+
+<p>When using a tree, you will often use a template to build its content, to handle a large amount of hierarchial data. Using a template with a tree uses very much the same syntax as with other elements. You need to add a <code><a href="es/XUL/Atributos/datasources">datasources</a></code> and a <code><a href="es/XUL/Atributos/ref">ref</a></code> attribute to the <code><a href="es/XUL/Elementos/tree">tree</a></code> element, which specify the datasource and root node to display. Multiple rules can be used to indicate different content for different types of data.</p>
+
+<p>El ejemplo siguiente usa el historial de fuentes de datos:</p>
+
+<pre>&lt;tree datasources="rdf:history" ref="NC:HistoryByDate"
+          flags="dont-build-content"&gt;
+</pre>
+
+<p>As described in the previous section, the tree may use a tree builder for template generation instead of the normal content builder. This means that elements will not be created for every row in the tree, making it more efficient. The <code>[[XUL:Atributos:flgs|flags</code> attribute set to the value <code>dont-build-content</code>, as used in the example above, indicates that the tree builder should be used. If you leave the attribute out, the content builder will be used. You can see the difference by using Mozilla's DOM Inspector on a tree with and without the flag.</p>
+
+<p>If you do use a content builder instead, note that the content won't generally get built until it is needed. With hierarchical trees, the children don't get generated until the parent nodes have been opened by the user.</p>
+
+<p>In the template, there will be one <code><a href="es/XUL/Elementos/treecell">treecell</a></code> for each column in the tree. The cells should have a <code><a href="es/XUL/Atributos/label">label</a></code> attribute to set the label for the cell. This would normally be set to an RDF property so that the label is pulled from the datasource.</p>
+
+<h4 id="Plantilla_constructora_de_.C3.A1rbol" name="Plantilla_constructora_de_.C3.A1rbol">Plantilla constructora de árbol</h4>
+
+<p>The following example demonstrates a template-built tree, in this case for the file system.</p>
+
+<p><strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treetempl_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_treetempl_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;tree id="my-tree" flex="1"
+       datasources="rdf:files" ref="file:///" flags="dont-build-content"&gt;
+  &lt;treecols&gt;
+    &lt;treecol id="Name" label="Name" primary="true" flex="1"/&gt;
+    &lt;splitter/&gt;
+    &lt;treecol id="Date" label="Date" flex="1"/&gt;
+  &lt;/treecols&gt;
+
+    &lt;template&gt;
+      &lt;rule&gt;
+        &lt;treechildren&gt;
+          &lt;treeitem uri="rdf:*"&gt;
+            &lt;treerow&gt;
+              &lt;treecell label="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+              &lt;treecell label="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+            &lt;/treerow&gt;
+          &lt;/treeitem&gt;
+        &lt;/treechildren&gt;
+      &lt;/rule&gt;
+    &lt;/template&gt;
+&lt;/tree&gt;
+</pre>
+
+<p>Aquí, un árbol es creado con dos columnas, para el nombre y la fecha de un archivo. The tree should display a list of the files in the root directory. Only one rule is used, but you may add others if needed. Like with other templates, the uri attribute on an element indicates where to start generating content. The two cells grab the name and date from the datasource and place the values in the cell labels.</p>
+
+<p>This example shows why the uri attribute becomes useful. Notice how it has been placed on the treeitem in the example, even though it is not a direct descendant of the rule element. We need to put this attribute on only those elements that we want repeated for each resource. Because we don't want multiple <code><a href="es/XUL/Elementos/treechildren">treechildren</a></code> elements, we don't put it there. Instead we put the <code><a href="es/XUL/Atributos/uri">uri</a></code> attributes on the <code><a href="es/XUL/Elementos/treeitem">treeitem</a></code> elements. Effectively, the elements outside (or above) the element with the <code><a href="es/XUL/Atributos/uri">uri</a></code> attribute are not duplicated whereas the element with the <code><a href="es/XUL/Atributos/uri">uri</a></code> attribute and the elements inside it are duplicated for each resource.</p>
+
+<p>As the tree builder is used and not the content builder, the structure of the elements in the above example must be as shown, with the <code><a href="es/XUL/Elementos/treechildren">treechildren</a></code> element inside the rule. Although the tree builder doesn't build these elements, it does require this structure in order to determine what to generate correctly.</p>
+
+<div class="float-right"><img alt="Image:rdfoutl1.jpg"></div>
+
+<p>Note in the image that additional child elements below the top-level elements have been added automatically. XUL knows how to add child elements when the templates or rules contain tree elements or menu elements. It will generate tree elements as nested as necessary based on the available RDF data.</p>
+
+<p>An interesting part of RDF datasources is that the resource values are only determined when the data is needed. This means that values that are deeper in the resource hierarchy are not determined until the user navigates to that node in the tree. This becomes useful for certain datasources where the data is determined dynamically.</p>
+
+<h3 id="Ordenando_las_columnas" name="Ordenando_las_columnas">Ordenando las columnas</h3>
+
+<p>If you try the previous example, you might note that the list of files is not sorted. Trees which generate their data from a datasource have the optional ability to sort their data. You can sort either ascending or descending on any column. The user may change the sort column and direction by clicking the column headers. This sorting feature is not available for trees with static content, although you can write a script to sort the data.</p>
+
+<p>Sorting involves three attributes, which should be placed on the columns. The first attribute, sort, should be set to an RDF property that is used as the sort key. Usually, this would be the same as that used in the label of the cell in that column. If you set this on a column, the data will be sorted in that column. The user can change the sort direction by clicking the column header. If you do not set the sort attribute on a column, the data cannot be sorted by that column.</p>
+
+<p>El atributo <code>sortDirection</code> (note la mezcla) es usado para definir el orden por defecto de la columna. Tres valores son posibles:</p>
+
+<dl>
+ <dt>ascending</dt>
+ <dd>los datos aparecerán en orden ascendente (por ejemplo: de la A a la Z.</dd>
+ <dt>descending</dt>
+ <dd>los datos aparecerán en orden descendente (Z-A).</dd>
+ <dt>natural</dt>
+ <dd>los datos aparecerán en el mismo orden en el cual están guardados en la fuente de datos RDF.</dd>
+</dl>
+
+<p>The final attribute, <code>sortActive</code> should be set to <code>true</code> for one column, the one that you would like to be sorted by default.</p>
+
+<p>Although the sorting will function correctly with only those attributes, you may also use the style class <code>sortDirectionIndicator</code> on a column that can be sorted. This will cause a small triangle to appear on the column header that indicates the direction of the sort. If you don't do this, the user may still sort the columns but will have no indication as to which column is currently sorted.</p>
+
+<p>The following example changes the columns in the earlier example to incorporate the extra features:</p>
+
+<pre>&lt;treecols&gt;
+  &lt;treecol id="Name" label="Name" flex="1" primary="true"
+            class="sortDirectionIndicator" sortActive="true"
+            sortDirection="ascending"
+            sort="rdf:http://home.netscape.com/NC-rdf#Name"/&gt;
+  &lt;splitter/&gt;
+  &lt;treecol id="Date" label="Date" flex="1" class="sortDirectionIndicator"
+           sort="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+&lt;/treecols&gt;
+</pre>
+
+<h3 id="Persistencia_del_estado_de_la_columna" name="Persistencia_del_estado_de_la_columna">Persistencia del estado de la columna</h3>
+
+<p>One additional thing you might want to do is persist which column is currently sorted, so that it is remembered between sessions. To do this, we use the <code><a href="es/XUL/Atributos/persist">persist</a></code> attribute on each <code><a href="es/XUL/Elementos/treecol">treecol</a></code> element. There are five attributes of columns that need to be persisted, to save the column width, the column order, whether the column is visible, which column is currently sorted and the sort direction. The following example shows a sample column:</p>
+
+<pre>&lt;treecol id="Date" label="Date" flex="1"
+             class="sortDirectionIndicator"
+             persist="width ordinal hidden sortActive sortDirection"
+             sort="rdf:http://home.netscape.com/WEB-rdf#LastModifiedDate"/&gt;
+</pre>
+
+<p>Más detalles sobre el atributo More details about the <code><a href="es/XUL/Atributos/persist">persist</a></code> son descritos en <a href="es/Tutorial_de_XUL/Datos_persistentes">la sección próxima</a>.</p>
+
+<h3 id="Reglas_adicionales" name="Reglas_adicionales">Reglas adicionales</h3>
+
+<p>There are two additional attributes that can be added to the <code>rule</code> element that allow it to match in certain special circumstances. Both are boolean attributes.</p>
+
+<dl>
+ <dt>iscontainer</dt>
+ <dd>If this attribute is set to <code>true</code>, then the rule will match all resources that have children. For example, we could use this rule to match bookmark folders. This is convenient as the RDF datasource does not need to include any special attributes to indicate this.</dd>
+</dl>
+
+<dl>
+ <dt>isempty</dt>
+ <dd>If this attribute is set to <code>true</code>, then the rule will match all resources that have no children.</dd>
+</dl>
+
+<p>A resource might be a container and be an empty one as well. However, this is different from a resource that is not a container. For example, a bookmark folder is a container but it might or might not have children. However a single bookmark or separator is not a container.</p>
+
+<p>You can combine these two elements with other attribute matches for more specific rules.</p>
+
+<p>Seguimos con las fuentes de datos proporcionadas por Mozilla.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Plantillas" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Fuentes_de_datos_RDF">Siguiente  »</a></p>
+</div>

@@ -1,0 +1,446 @@
+---
+title: Preguntas frecuentes sobre RDF en Mozilla
+slug: Archive/Estándares_Web/Preguntas_frecuentes_sobre_RDF_en_Mozilla
+tags:
+  - RDF
+  - Todas_las_Categorías
+  - páginas_a_traducir
+translation_of: Archive/Web_Standards/RDF_in_Mozilla_FAQ
+---
+<h2 id="General" name="General">General</h2>
+
+<h3 id=".C2.BFPor_d.C3.B3nde_empiezo.3F" name=".C2.BFPor_d.C3.B3nde_empiezo.3F">¿Por dónde empiezo?</h3>
+
+<p><a href="es/RDF">RDF</a> cumple dos objetivos primarios en Mozilla.</p>
+
+<ul>
+ <li>El primero, es una simple base de datos en cruz para guardar una pequeña cantidad de datos.</li>
+</ul>
+
+<ul>
+ <li>El segundo, el más importante, es el modelo RDF que se utiliza junto a <a href="es/XUL/Gu%c3%ada_de_Plantillas">XUL plantillas</a>, un "API" abstracto para mostrar información.</li>
+</ul>
+
+<p><a href="es/RDF_en_cincuenta_palabras_o_menos">RDF en cincuenta palabras o menos</a> es una rápida y muy buena descripción de qué hace RDF en Mozilla.</p>
+
+<p>El documento <a href="es/RDF_Arquitectura_final_(exterior)">RDF Arquitectura final</a> describe con muchos más detalles como trabaja la conexión Mozilla y RDF, y da una explicación de los interfaces implicados.</p>
+
+<h3 id="Donde_puedo_encontrar_informaci.C3.B3n_sobre_Open_Directory_.28.22dmoz.22.29.3F" name="Donde_puedo_encontrar_informaci.C3.B3n_sobre_Open_Directory_.28.22dmoz.22.29.3F">Donde puedo encontrar información sobre Open Directory ("dmoz")?</h3>
+
+<p>Aquí no, desafortunadamente. Bien, aquí hay un poco... Debes empezar en <a class="external" href="http://www.dmoz.org/" rel="freelink">http://www.dmoz.org/</a> para mas información acerca de Open Directory. El set de datos Open Directory está disponible como un, enorme, depósito RDF/XML. Describe miles de sitios Web que usan un mix de vocabulario de <a class="external" href="http://www.dublincore.org/">Dublin Core</a> y de la "taxonomía" DMoz. Para más información mira sus <a class="external" href="http://dmoz.org/rdf.html">páginas RDF</a>, o los <a class="external" href="http://groups.yahoo.com/group/odp-rdf-announce/">anuncios odp-rdf</a> para actualizaciones relacionados con su formato de datos exacto. El sitio <a class="external" href="http://chefmoz.org/">ChefMoz</a> también esta <a class="external" href="http://chefmoz.org/rdf.html">disponible en RDF</a>.</p>
+
+<p>Si tienes problemas con los datos DMoz y ChefMoz, será mejor que contactes directamente esos proyectos. Pero si haces algo interesante con los contenidos (ej. cargando pedazos de los datos desde un sitio remoto hacia una interface de usuario XUL), no olvides hacerlo saber a las listas de <a class="link-mailto" href="mailto:mozilla-rdf@mozilla.org">mozilla-rdf</a> y <a class="link-mailto" href="mailto:www-rdf-interest@w3.org">RDF Interest Group</a>. Estas listas también estarán interesadas en herramientas para limpieza / re-procesamiento y almacenaje de datos DMoz. Para algunos directorios basados en ODP RDF puedes mirar las páginas de los <a class="external" href="http://dmoz.org/Computers/Internet/Searching/Directories/Open_Directory_Project/Use_of_ODP_Data/">sitios que usan ODP Data</a>.</p>
+
+<h3 id="Qu.C3.A9_es_un_datasource.3F" name="Qu.C3.A9_es_un_datasource.3F">Qué es un datasource?</h3>
+
+<p>Generalmente, RDF puede ser visto desde dos puntos de vista: Como un gráfico con nodos y arcos, o como una sopa de declaraciones lógicas. Un datasource es un subgráfico (o coleccíon de declaraciones, dependiendo de tu punto de vista) que por alguna razón están recolectadas todas juntas. Los ejemplos de datasources que existen hoy en día son "marcadores de browser", "historial de navegación", "cuentas de correo IMAP", "servidores de noticia NNTP", y "archivos RDF/XML".</p>
+
+<p>En Mozilla, las datasources pueden unirse usando <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFCompositeDataSource.idl">composite data source</a>. Es como superponer gráficos, o unir una colección de declaraciones ("microteorías"). Las declaraciones acerca de del mismo recurso RDF pueden ser mezcladas. Por ejemplo, "la última fecha de visita" de un sitio en particular proviene del historial de navegación, y el "atajo de teclado" que puedes usar para ese sitio proviene de los marcadores. Ambos datasources refieren al website a través del URL, esta es la "clave" que permite que el datasource sea mezclado con efectividad.</p>
+
+<p>Para mas información acerca de como escribir un datasource por favor remitete a <a href="es/RDF_Datasource_How-To">RDF Datasource How-To</a>.</p>
+
+<h3 id="C.C3.B3mo_administra_los_datasource_Mozilla.3F" name="C.C3.B3mo_administra_los_datasource_Mozilla.3F">Cómo administra los datasource Mozilla?</h3>
+
+<p>El <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFService.idl">RDF service</a> administra una tabla con todos los datasources cargados. A la tabla se le asigna una URI, que es algo asi como la URL del archivo RDF/XML, o una URI "especial" que empieza con <code>rdf</code> que hace referencia a un datasource <em>Built-in</em>.</p>
+
+<p>Los datasources se pueden cargar a traves del servicio RDF, utilizando el método <code>GetDataSource()</code>. Si el argumento URI hace referencia a la URL de un archivo RDF/XML, entonces el servicio creará un <em>datasource RDF</em>. El datasource permanecerá "capturado" hasta que la última referencia al datasource sea liberada. Si el argumento URI hace referencia a un datasource Built-in, el servicio RDF utilizará el administrador de componentes XPCOM para cargar el componente cuya <em>ContractID</em> ha sido hecha utilizando la URI "especial" y el bien conocido <code><a class="link-mailto" href="mailto:prefijo@mozilla.org" rel="freelink">prefijo@mozilla.org</a>/rdf/datasource;1?name=</code>.</p>
+
+<p>Por ejemplo:</p>
+
+<p> </p>
+
+<pre class="eval">rdf:foo
+</pre>
+
+<p>que cargará:</p>
+
+<pre class="eval">@mozilla.org/rdf/datasource;1?name=foo
+</pre>
+
+<p>Igual que los datasources RDF/XML, un datasource que es respondida de esta manera, será "capturada" por el servicio RDF hasta que la última referencia es soltada.</p>
+
+<h3 id="C.C3.B3mo_creo_datasources_desde_un_archivo_RDF.2FXML.3F" name="C.C3.B3mo_creo_datasources_desde_un_archivo_RDF.2FXML.3F">Cómo creo datasources desde un archivo RDF/XML?</h3>
+
+<p>Puedes crear un datasource RDF/XML usando el método <code>GetDataSource()</code> del <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFService.idl">servicio RDF</a>:</p>
+
+<pre class="eval"><span class="highlightblue">// Obten el servicio RDF</span>
+var RDF =
+  Components
+  .classes["@mozilla.org/rdf/rdf-service;1"]
+  .getService(Components.interfaces.nsIRDFService);
+<span class="highlightblue">// ...y desde allí, Obten el datasource. Aségurat de que el servidor web lo entregue como
+// <strong>text/xml</strong> (recomendado) o como <strong>text/rdf</strong>!</span>
+var ds = RDF.GetDataSource("<a class="external" href="http://www.mozilla.org/some-rdf-file.rdf" rel="freelink">http://www.mozilla.org/some-rdf-file.rdf</a>");
+<span class="highlightblue">// NOTA que  <strong>ds</strong> será cargado desincronizadamente, asi que los aciertos no serán
+// inmediatos</span>
+</pre>
+
+<p>O puedes crear uno utilizando el administrador de componentes XPCOM directamente, Aquí hay un ejemplo.</p>
+
+<pre class="eval"><span class="highlightblue">// Crear un archivo RDF/XML usando el administrador de componentes XPCOM</span>
+var ds =
+  Components
+  .classes["@mozilla.org/rdf/datasource;1?name=xml-datasource"]
+  .createInstance(Components.interfaces.nsIRDFDataSource);
+<span class="highlightblue">// La interface <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFRemoteDataSource.idl">nsIRDFRemoteDataSource</a> tiene las interfaces
+// que necesitamos para configurar el datasource.</span>
+var remote =
+   ds.QueryInterface(Components.interfaces.nsIRDFRemoteDataSource);
+<span class="highlightblue">// Asegúrate de que el servidor entregue esto como <strong>text/xml</strong> (recomendado) o como <strong>text/rdf</strong>!</span>
+remote.Init("<a class="external" href="http://www.mozilla.org/some-rdf-file.rdf" rel="freelink">http://www.mozilla.org/some-rdf-file.rdf</a>");
+<span class="highlightblue">// Cárgalo! fijate que esto ocurrira desicronizadamente. Configura
+// <strong>aBlocking</strong> a true, podemos forzarlo pra que sea sincronizado pero
+// generalmente es una mala idea, porque se bloqueará tu interface de usuario!</span>
+remote.Refresh(false);
+<span class="highlightblue">// NOTA que<strong>ds</strong> será cargado desincronizadamente, los aciertos no
+// serán inmediatos</span>
+</pre>
+
+<p>Si deseas que se cargue de forma sincronizada, deberías crearlo manualmente.</p>
+
+<h3 id="C.C3.B3mo_actualizo_un_datasource_RDF.2FXML.3F" name="C.C3.B3mo_actualizo_un_datasource_RDF.2FXML.3F">Cómo actualizo un datasource RDF/XML?</h3>
+
+<p>Puedes forzar un datasource RDF/XML (o cualquier datasource que soporte <a class="external" href="http://lxr.mozilla.org/mozilla/source/source/rdf/base/idl/nsIRDFRemoteDataSource.idl"><code>nsIRDFRemoteDataSource</code></a>) utilizando el método <code>Refresh()</code>de <code>nsIRDFRemoteDataSource. Refresh()</code> tiene un solo parámetro que indica si te gustaría realizar la operacíon sincronizadamente ("blocking") o desincronizadamente ("non-blocking"). Nunca lo hagas sincronizadamente, a menos que sepas lo que estás haciendo, esta opción bloqueará la interfaz de usuario hasta que la carga sea completada.</p>
+
+<h3 id="C.C3.B3mo_s.C3.A9_si_un_datasource_RDF.2FXML_se_carg.C3.B3.3F" name="C.C3.B3mo_s.C3.A9_si_un_datasource_RDF.2FXML_se_carg.C3.B3.3F">Cómo sé si un datasource RDF/XML se cargó?</h3>
+
+<p>Es posible consultar la propiedad <code>loaded</code> utilizando la interfaz <a class="external" href="http://lxr.mozilla.org/mozilla/source/source/rdf/base/idl/nsIRDFRemoteDataSource.idl"><code>nsIRDFRemoteDataSource</code></a> para determinar si el datasource está cargado o no.</p>
+
+<p> </p>
+
+<pre class="eval"><span class="highlightblue">// Obtén el servicio RDF</span>
+var RDF =
+  Components
+  .classes["@mozilla.org/rdf/rdf-service;1"]
+  .getService(Components.interfaces.nsIRDFService);
+<span class="highlightblue">// Obtén el datasource.</span>
+var ds = RDF.GetDataSource("<a class="external" href="http://www.mozilla.org/some-rdf-file.rdf" rel="freelink">http://www.mozilla.org/some-rdf-file.rdf</a>");
+<span class="highlightblue">// Ahora mira si se cargó o no...</span>
+var remote =
+  ds.QueryInterface(Components.interfaces.nsIRDFRemoteDataSource);
+
+if (remote.loaded) {
+  alert("El datasource ya está cargado!");
+}
+else {
+  alert("El datasource no se cargó, pero se está cargando ahora!");
+}
+</pre>
+
+<p>Digamos que el datasource <em>no está</em> cargado, y se está cargando desincronizadamente. Podríamos usar esta API y el <code>setTimeout()</code> de JavaScript para realizar un loop que chequee la propiedad <code>loaded</code> de forma continua. Sería malo no detectar una carga <em>fallida</em>, por ejemplo, que no hubiera ningun dato en le URL.</p>
+
+<p>Por esta razón, hay una <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFXMLSink.idl">interfaz observadora</a> que te permite espiar el progreso del datasource. El siguiente código ilustra como usarlo.</p>
+
+<p> </p>
+
+<pre class="eval"><span class="highlightblue">// Este es el objeto que observará el progreso de RDF/XML</span>
+var Observer = {
+  onBeginLoad: function(aSink)
+    {},
+
+  onInterrupt: function(aSink)
+    {},
+
+  onResume: function(aSink)
+    {},
+
+  onEndLoad: function(aSink)
+    { alert("done!"); },
+
+  onError: function(aSink, aStatus, aErrorMsg)
+    { alert("error! " + aErrorMsg); }
+};
+<span class="highlightblue">// obtén el servicio RDF</span>
+var RDF =
+  Components
+  .classes["@mozilla.org/rdf/rdf-service;1"]
+  .getService(Components.interfaces.nsIRDFService);
+<span class="highlightblue">// Obtén el datasource.</span>
+var ds = RDF.GetDataSource("<a class="external" href="http://www.mozilla.org/some-rdf-file.rdf" rel="freelink">http://www.mozilla.org/some-rdf-file.rdf</a>");
+<span class="highlightblue">// ahora mira si se cargó o no...</span>
+var remote =
+  ds.QueryInterface(Components.interfaces.nsIRDFRemoteDataSource);
+
+if (remote.loaded) {
+  alert("El datasource ya está cargado!");
+}
+else {
+  alert("El datasource no se cargó, pero se está cargando  ahora!");
+  <span class="highlightblue">// los datasources RDF/XML son <strong>nsIRDFXMLSink</strong>s</span>
+  var sink =
+    ds.QueryInterface(Components.interfaces.nsIRDFXMLSink);
+  <span class="highlightblue">// Adjunta el observador al  datasource</span>
+  sink.addXMLSinkObserver(Observer);
+  <span class="highlightblue">// ahora serán llamados del métodos del  <strong>Observador</strong> como
+  // los progresos de carga.</span>
+}
+</pre>
+
+<p><br>
+ Nota que el observador permanecerá unido al datasource RDF/XML a menos que llamemos a <code>XMLSinkObserver</code></p>
+
+<h3 id="C.C3.B3mo_accedo_a_la_informaci.C3.B3n_de_un_datasource.3F" name="C.C3.B3mo_accedo_a_la_informaci.C3.B3n_de_un_datasource.3F">Cómo accedo a la información de un datasource?</h3>
+
+<p>La interfaz <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFDataSource.idl"><code>nsIRDFDataSource</code></a> es lo que te permitirá acceder y manipular las declaraciones en un datasource.</p>
+
+<ul>
+ <li><code>boolean HasAssertion(aSource, aProperty, aTarget, aTruthValue)</code>.<br>
+  This tests the datasource to see if it has the specified tuple.</li>
+ <li><code>nsIRDFNode GetTarget(aSource, aProperty, aTruthValue)</code>.</li>
+ <li><code>nsISimpleEnumerator GetTargets(aSource, aProperty, aTruthValue)</code>.</li>
+ <li><code>nsIRDFResource GetSource(aProperty, aTarget, aTruthValue)</code>.</li>
+ <li><code>nsISimpleEnumerator GetSoruces(aProperty, aTarget, aTruthValue)</code>.</li>
+ <li><code>nsISimpleEnumerator ArcLabelsIn(aTarget)</code>.</li>
+ <li><code>nsISimpleEnumerator ArcLabelsOut(aSource)</code>.</li>
+</ul>
+
+<p>También puedes usar la interfaz <a href="#How_do_I_manipulate_RDF_.22containers.22.3F">RDF container</a> para acceder a la información contenida en <em>contenedores</em> RDF.</p>
+
+<h3 id="C.C3.B3mo_cambio_informaci.C3.B3n_en_un_datasource.3F" name="C.C3.B3mo_cambio_informaci.C3.B3n_en_un_datasource.3F">Cómo cambio información en un datasource?</h3>
+
+<p>Usa "Assert" para agregar una declaración y "Unassert" para quitar una. Mira <a class="external" href="http://www.mozilla.org/rdf/back-end-architecture.html">Mozilla RDF Back end Architecture</a></p>
+
+<pre class="eval">ds.Assert(homepage, FV_quality, value, true);
+ds.Unassert(homepage, FV_quality, value, true);
+</pre>
+
+<h3 id="C.C3.B3mo_guardo_los_cambios_en_un_datasource.3F" name="C.C3.B3mo_guardo_los_cambios_en_un_datasource.3F">Cómo guardo los cambios en un datasource?</h3>
+
+<p>Se puede hacer <code>QueryInterface</code> a <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFRemoteDataSource.idl"><code>nsIRDFRemoteDataSource</code></a> con un datasource. Esta interfaz tiene un método <code>Flush()</code> que re-escribe los contenidos de un datasource nuevamente hacia la URL desde donde fueron cargados. Usando un mecanismo de protocolo específico (ej. un <code>file</code>: URL simplemente escribe el archivo, un <code> http:</code> URL probablemente hará un HTTP-POST). <code>Flush()</code> sólo escribe el datasource si el contenido ha cambiado.</p>
+
+<h3 id="C.C3.B3mo_.C3.BAno_varios_datasource_para_verlos_c.C3.B3mo_uno_solo.3F" name="C.C3.B3mo_.C3.BAno_varios_datasource_para_verlos_c.C3.B3mo_uno_solo.3F">Cómo úno varios datasource para verlos cómo uno solo?</h3>
+
+<p>Utiliza nsIRDFCompositeDataSource. Esta interfaz proviene de nsIRDFDataSource. Implementar esta interfaz combinará las declaraciones de distintos datasources dentro de uno colectivo. Como la interfaz nsIRDFCompositeDataSource proviene de nsIRDFDataSource, puede ser llamada y modificada igual que un data source.</p>
+
+<h3 id="C.C3.B3mo_accedo_a_datasources_.22built-in.22.3F" name="C.C3.B3mo_accedo_a_datasources_.22built-in.22.3F">Cómo accedo a datasources "built-in"?</h3>
+
+<p>Un <em>datasource buitl-in</em> es un componente localmente-instalado que implementa <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFDataSource.idl">nsIRDFDataSource</a>. Por ejemplo, el <a class="external" href="http://lxr.mozilla.org/mozilla/source/xpfe/components/bookmarks/src/nsBookmarksService.cpp">servicio de marcadores</a>. Primero, asegúrate de que eres <em>capaz</em> de acceder a un datasource haciendo click <a href="#What_is_the_security_model_for_RDF.2FXML_in_XUL.3F">aquí</a>. Hay grandes restricciones de seguridad para acceder a un datasource desde un XUL o JS "desconocido".</p>
+
+<p>Como el datasource built-in es nada mas que un componente XPCOM, puedes acceder utilizando el componente administrador XPConnect.</p>
+
+<pre class="eval">// Usa el administrador de componentes para obtener los // marcadores
+<span class="highlightgreen">var bookmarks =
+  Components.
+  classes["@mozilla.org/rdf/datasource;1?name=bookmarks"].
+  getService(Components.interfaces.nsIRDFDataSource);</span>
+
+// Ahora haz algo con eso...
+if (bookmarks.HasAssertion(
+     RDF.GetResource("<a class="external" href="http://home.netscape.com/NC-rdf#BookmarksRoot" rel="freelink">http://home.netscape.com/NC-rdf#BookmarksRoot</a>"),
+     RDF.GetResource("<a class="external" href="http://home.netscape.com/NC-rdf#child" rel="freelink">http://home.netscape.com/NC-rdf#child</a>"),
+     RDF.GetResource("<a class="external" href="http://home.netscape.com/NC-rdf#PersonalToolbarFolder" rel="freelink">http://home.netscape.com/NC-rdf#PersonalToolbarFolder</a>"),
+     true) {
+  // ...
+}
+</pre>
+
+<p>Algunos datasources tienen ContractID "especiales" que hacen más fácil el acceso utilizando el método <code>GetDataSource()</code> de <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFService.idl"><code>nsIRDFSerivce</code></a> o el atributo <code>datasource</code> de una plantilla XUL. Estos ContractID son de:</p>
+
+<pre class="eval">@mozilla.org/rdf/datasource;1?name=<em>name</em>
+</pre>
+
+<p>Y son accesibles via <code>GetDataSource</code> y el atributo <code>datasources</code> usando <code>rdf:<em>name</em></code>. Por ejemplo, el siguiente fragmento XUL muestra como colocar el servicio de marcadores dentro de una plantilla XUL.</p>
+
+<pre class="eval">&lt;tree datasources="rdf:bookmarks"&gt;
+  ...
+&lt;/tree&gt;
+</pre>
+
+<h3 id="C.C3.B3mo_manipulo_.22contenedores.22_RDF.3F" name="C.C3.B3mo_manipulo_.22contenedores.22_RDF.3F">Cómo manipulo "contenedores" RDF?</h3>
+
+<p>Para manipular un "contenedor" RDF (un <code>&lt;rdf:SEq&gt;</code>, por ejemplo) puedes utilizar <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFContainerUtils.idl"><code>nsIRDFContainerUtils</code></a> la cual puede ser llamada como un servicio a tráves del siguiente ContratID:</p>
+
+<pre class="eval">@mozilla.org/rdf/container-utils;1
+</pre>
+
+<p>Puedes usarlo para detectar si algo es un contenedor RDF utilizando <code>IsSeq(), IsBag(), IsAlt()</code>. Puedes "crear un recurso dentro de un contenedor", sino hubiera uno, utilizando <code>MakeSeq(), MakeBag(), MakeAlt()</code>. Estos métodos devuelven <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFContainer.idl"><code>nsIRDFContainer</code></a> que te permitirá hacer operaciones tipo-contenedor sin ensuciarte las manos.</p>
+
+<p>Si tu datasource ya posee un objeto que <em>es</em> un contenedor RDF, puedes usar el objeto <code>nsIRDFContainer</code> con:</p>
+
+<pre class="eval">@mozilla.org/rdf/container;1
+</pre>
+
+<p>Utiliza COntractID y <code>Init()</code> con el datasource y el recurso como parámetros. Nota que esto fallará si el recurso todavia no es un contenedor.</p>
+
+<h2 id="Plantillas_XUL" name="Plantillas_XUL">Plantillas XUL</h2>
+
+<p>Las plantillas XUL se crean especificando un atributo <code>datsource</code> sobre un elemento en un documento XUL.</p>
+
+<p>Hay dos "formas" de escribir plantillas XUL. La "simple", que es la mas comun en Mozilla, y la "extendida", que pertime mayor concordancia contra gráficos RDF. Mira también <a href="es/XUL/Template_Guide">XUL:Template Guide</a> (está ordenado de forma bizarra porque se intenta introducir primero la forma extendida, y luego la forma simple como una especie de simplificación de la forma extendida).</p>
+
+<h3 id=".C2.BFQu.C3.A9_puedo_construir_con_una_plantilla_XUL.3F" name=".C2.BFQu.C3.A9_puedo_construir_con_una_plantilla_XUL.3F">¿Qué puedo construir con una plantilla XUL?</h3>
+
+<p>Puedes construir <em>cualquier</em> clase de contenido usando una plantilla XUL. Puedes utilizar cualquier clase de etiqueta (incluso HTML o XML arbitrario) en la parte <code>&lt;action&gt;</code> de un <code>&lt;rule&gt;</code>.</p>
+
+<h3 id="Cu.C3.A1ndo_debo_utilizar_una_plantilla_XUL.3F" name="Cu.C3.A1ndo_debo_utilizar_una_plantilla_XUL.3F">Cuándo debo utilizar una plantilla XUL?</h3>
+
+<p>Una alternativa al uso de plantillas RDF y XUL es el uso de <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/">W3C DOM APIs</a>, para crear y manipular modelos de contenido XUL (o HTML). Sin embargo, algunas veces suelen presentarse algunos incovenientes:</p>
+
+<ol>
+ <li><em>hay</em> distintas &lt;/em&gt;"vistas" de los datos&lt;/em&gt;. Por ejemplo, Mozilla mail/news muestra la jerarquía de carpeta en la barra de herramientas, varios menues, y en algunas ventana de diálogo. Mejor que escribir tres pedazos de código JS (o C++) para construir los árboles DOM, uno para cada modelo de contenido, <code>&lt;menubutton&gt;</code>, <code>&lt;menu&gt;</code> y <code>&lt;tree&gt;</code>, seria que escribas tres sets compactos de reglas.</li>
+ <li><em>Los datos pueden cambiar</em>. Por ejemplo un usuario de mail/news tal vez agregue o quite carpetas IMAP (nota como estos requerimientos complican la construcción de modelos de contenido) La plantila de construcción XUL utiliza reglas para mantener sincronizados, de forma automática, <em>todos</em> los modelos de contenidos acorde a tus cambios.</li>
+</ol>
+
+<p>Para poder tener la ventaja de estas funciones, debes ser capaz de expresar tu información en términos de <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFDataSource.idl">RDF datasource API</a> ya sea usando el <em>built-in memory datasource</em>, usando RDF/XUL para almacenar tu información, o escribiendo tu propia implementación de <code>nsIRDFDataSource</code></p>
+
+<h3 id="Qu.C3.A9_es_lo_que_se_carga_cuando_especifico_.22datasource.3D.22_.3F" name="Qu.C3.A9_es_lo_que_se_carga_cuando_especifico_.22datasource.3D.22_.3F">Qué es lo que se carga cuando especifico "datasource=" ?</h3>
+
+<p>En el "root" de una plantilla, el atributo <code>datasources</code> especifica que se debe cargar una lista de URIs datasource que están separadas por un espacio en blanco. Pero, qué es una "URI datasource"? Puede ser:</p>
+
+<ul>
+ <li>Un ContractID abreviado para un componente instalado localmente. Especificando <code>rdf:nombre</code> le indicas al generador de la plantilla que cargue el componente XPCOM con el ContractID: <code>@mozilla.org/rdf/datasource;1?name=<em>nombre</em></code></li>
+ <li>La URL de un archivo RDF/XML. Por ejemplo,
+  <pre>file:///tmp/foo.rdf
+chrome://mycomponent/content/component-data.rdf
+http://www.mysite.com/generate-rdf.cgi
+ftp://ftp.somewhere.org/toc.rdf
+</pre>
+
+  <p>La carga será procesada desincronizadamente, y a medida que vaya llegando RDF/XML, el generador de la plantilla irá generando contenido.</p>
+ </li>
+</ul>
+
+<p>En ambos casos, los datasources se cargan usando el método <code>GetDataSource()</code> de <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFService.idl"><code>nsIRDFService</code></a> asi que será manejado de igual manera para todos los datasources que asi se carguen.</p>
+
+<h3 id="Cu.C3.A1l_es_el_modelo_de_seguridad_para_RDF.2FXML_en_XUL.3F" name="Cu.C3.A1l_es_el_modelo_de_seguridad_para_RDF.2FXML_en_XUL.3F">Cuál es el modelo de seguridad para RDF/XML en XUL?</h3>
+
+<p>El documento XUL que es cargado de una URL "confiable" (cualquier <code>chrome:</code> URL) puede especificar <em>cualquier</em> URI datasource en el atributo <code>datasources</code> de la plantilla XUL.</p>
+
+<p>El documento que es cargado desde una URL "no confiable", puede especificar solo un documento RDF/XML desde el mismo <em>codebase</em> (en el significado de Java) donde se origino el documento XUL. Los datasources que no son "especiales" (ej. <code>rdf:</code>) se cargarán desde un XUL "no confiable".</p>
+
+<h3 id="C.C3.B3mo_agrego_un_datasource_a_una_plantila_XUL.3F" name="C.C3.B3mo_agrego_un_datasource_a_una_plantila_XUL.3F">Cómo agrego un datasource a una plantila XUL?</h3>
+
+<p>Si bien es posible crear una plantilla XUL con un conjunto de datasources "implicitos" especificando el atributo <code>datasource</code>, abrá veces que no sabrás que datasource cargar hasta que la XUL esté cargada. Por ejemplo, tu XUL tal vez necesite computar el datasource que se desea mostrar en un manejador <code>onload</code>. O, tal vez necesites agregar datasources basado en la acción de un usuario.</p>
+
+<pre class="eval">&lt;window xmlns="<a class="external" href="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" rel="freelink">http://www.mozilla.org/keymaster/gat...re.is.only.xul</a>"&gt;
+  ...
+  <span class="highlightgreen">&lt;tree id="my-tree" datasources="rdf:null"&gt;
+    ...
+  &lt;/tree&gt;</span>
+  ...
+&lt;/window&gt;
+</pre>
+
+<p>Asumiendo que hemos adquirido el datasource de alguna manera (ej. <a href="#How_do_I_create_a_datasource_from_an_RDF.2FXML_file.3F">así</a>), el sig. ejemplo muestra cómo agregar un datasource a una plantila, y luego, forzar a la plantilla a reconstruirse basada en los nuevos contenidos agregados.</p>
+
+<pre class="eval">var ds = <span class="highlightblue">/* asumimos que tienes esto! */</span>;
+<span class="highlightblue">// Obten el elemento DOM para 'my-tree'</span>
+var tree = document.getElementById('my-tree');
+<span class="highlightblue">// agregamos nuestro datasource</span>
+tree.database.AddDataSource(ds);
+<span class="highlightblue">// Forza al arbol a reconstruirse *ahora*. debes hacerlo "manual"!</span>
+tree.builder.rebuild();
+</pre>
+
+<p>Cualquier elemento XUL con un atributo <code>datasources</code> "tendrá" una propiedad <code>database</code> y una <code>builder</code>. La primera refiere a un objeto <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIRDFCompositeDataSource.idl"><code>nsIRDFCompositeDataSource</code></a> que contiene los datasources desde donde son contruidas las plantillas.</p>
+
+<p>La segunda propiedad refiere a un objeto <a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/base/idl/nsIXULTemplateBuilder.idl"><code>nsIXULTemplateBuilder</code></a> que es el "generador" que mantiene el estado de los contenidos de la plantilla.</p>
+
+<p>Nota que el datasource <code>rdf:null</code> es un datasource especial que nos dice "hey, no tenemos un datasource todavía, pero vamos a agregar uno mas tarde, chequéalo!". Esto hace que <code>database</code> y <code>builder</code> se instalen, pero deja a <code>database</code> vacía de datasources, debes agregarlos tú mismo!</p>
+
+<h3 id="Puedo_manipular_plantillas_XUL_usando_las_APIs_DOM.3F" name="Puedo_manipular_plantillas_XUL_usando_las_APIs_DOM.3F">Puedo manipular plantillas XUL usando las APIs DOM?</h3>
+
+<p>Sí! puedes agragar, quitar reglas, cambiar las condiciones de una regla y cambiar el contenido que es generado por una regla. De hecho, puedes cambiar <em>cualquier cosa</em> de una plantilla usando <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/">W3C DOM APIs</a>.</p>
+
+<p>Eso si, debes llamar a <code>rebuild()</code> para que los cambios hagan efecto (del mismo modo que lo haces si <a href="#C.C3.B3mo_agrego_un_datasource_a_una_plantila_XUL.3F">agregas un datasource</a> a una plantilla XUL).</p>
+
+<h3 id="C.C3.B3mo_agrego_texto_plano_desde_una_plantilla.3F" name="C.C3.B3mo_agrego_texto_plano_desde_una_plantilla.3F">Cómo agrego texto plano desde una plantilla?</h3>
+
+<p>Para agregar texto plano desde una plantilla usa el elemento <code>&lt;text&gt;</code>.</p>
+
+<pre class="eval">&lt;template&gt;
+  &lt;rule&gt;
+    &lt;conditions&gt;...&lt;/condition&gt;
+    &lt;bindings&gt;...&lt;/bindings&gt;
+    &lt;action&gt;
+      <span class="highlightgreen">&lt;text value="?alguna-variable" /&gt;</span>
+    &lt;/action&gt;
+  &lt;/rule&gt;
+&lt;/template&gt;
+</pre>
+
+<p>La plantilla arriba creará un modelo de contenido que ejecutará series de nodos de texto.</p>
+
+<h2 id="Soluci.C3.B3n_de_problemas" name="Soluci.C3.B3n_de_problemas">Solución de problemas</h2>
+
+<p>Trucos y secretos sobre el tema.</p>
+
+<h3 id="Mi_archivo_RDF.2FXML_no_carga." name="Mi_archivo_RDF.2FXML_no_carga.">Mi archivo RDF/XML no carga.</h3>
+
+<p>La causa mas usual de este problema es un tipo de MIME incorrecto. Asegúrate que tu servidor esté enviando el archivo como <code>text/xml</code> (recomendado) o como <code>text/rdf</code>.</p>
+
+<p>Nota que W3C RDF Core WG está registrando application/rdf+xml, aunque esto no funciona con ningún código Mozilla. (tenemos algún bug registrado para rastrear esto? -- <a class="link-mailto" href="mailto:danbri-mozilla@rdfweb.org">danbri</a>)</p>
+
+<p>Otro problema posible: para XUL y RDF cargado de forma remota tal vez necesites ajustar las restricciones de seguridad de Mozilla (mira más abajo para ejemplos). Si XUL no está cargando tu RDF, y el tipo MIME está OK, tal vez este sea el problema.</p>
+
+<p>Puedes usar los utilitarios <code>rdfcat</code> y <code>rdfpoll</code> para verificar que RDF/XML son válidos. Estos programas son generados en Windows por defecto, y en Linux cuando especificas <code>configure --enable-tests</code>.</p>
+
+<ul>
+ <li><code><a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/tests/rdfcat/rdfcat.cpp">rdfcat</a><em>url</em></code><br>
+  Toma como parametro una URL desde donde leerá un archivo RDF/XML, y lo enviará a la consola. Puedes usarlo para verificar que Mozilla ejecuta adecuadamente el RDF/XML hayas escrito.</li>
+ <li><code><a class="external" href="http://lxr.mozilla.org/mozilla/source/rdf/tests/rdfpoll/rdfpoll.cpp">rdfpoll</a><em>url</em> [<em>interval</em>]</code><br>
+  Toma como parámetro una URL desde donde leerá un archivo RDF/XML. Támbien ecepta un <em>intervalo</em> donde actualizará la URL. NOta que las actualizaciones generan una series de <em>diferencias</em> entre los contenidos previos y posteriores del archivo RDF/XML. Esto es útil para quitar errores en archivos generados que cambien con el tiempo.</li>
+</ul>
+
+<p>Ambos programas son lentos para cargar y ejecutarse (pero se ejecutarán). Inician XPCOM y hacen que Necko pueda cargar y procesar URLs igual que lo hace Mozilla.</p>
+
+<h3 id="No_sucede_nada_cuando_llamo_AddDataSource." name="No_sucede_nada_cuando_llamo_AddDataSource.">No sucede nada cuando llamo AddDataSource.</h3>
+
+<p>Nota que el generador de la plantilla <em>no</em> regenera automaticamente el contenido de una plantilla después de <code>AddDataSource</code> o <code>RemoveDataSource</code>, debe ser llamado desde <code>database</code> del generador. Debes llamar <code><em>elt.</em>builder.rebuild()</code> manualmente para actualizar los contenidos de la plantilla</p>
+
+<p>Por qué? Esto se diseño para que no se produzcan múltiple re-generaciones cuando más de un datasource es agregado a la <code>database</code>.</p>
+
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+
+<h3 id="Donde_puedo_encontrar_algunos_ejemplos.3F" name="Donde_puedo_encontrar_algunos_ejemplos.3F">Donde puedo encontrar algunos ejemplos?</h3>
+
+<p><a class="external" href="http://www.mozilla.org/rdf/doc/examples.html">Aquí</a> hay algunos, son ejecutables directamente desde HTTP.</p>
+
+<p>Mira también <a class="link-https" href="https://bugzilla.mozilla.org/data/duplicates.rdf"><code>duplicates.rdf</code></a> (directo desde Mozilla) también <a class="link-https" href="https://bugzilla.mozilla.org/duplicates.xul"><code>duplicates.xul</code></a>. Nota que debes alivianar el <a href="es/Bypassing_Security_Restrictions_and_Signing_Code">modelo de seguridad</a> de Mozilla para que funcionen. Para hacerlo, agrega la siguiente línea al archivo de preferencias. (primero debes reiniciar Mozilla para que escriba el archivo)</p>
+
+<pre class="eval">user_pref("signed.applets.codebase_principal_support", true);
+</pre>
+
+<p>Te preguntará si permites a los scripts en <code>duplicates.xul</code> accerder XPConnect, responde que SÍ.</p>
+
+<p>Actualmente Mozilla no permite acceso a las interfaces y servicios RDF sin previlegios, mira el bug <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=122846">122846</a> para detalles.</p>
+
+<p>Por favor comunicate via mail con <a class="external" href="http://rdfweb.org/people/danbri/">danbri</a> si crees que deberíamos colocar algún otro link</p>
+
+<h2 id="Notas" name="Notas">Notas</h2>
+
+<ol>
+ <li>Mira también <a class="external" href="http://www.w3.org/RDF/">W3C RDF</a> y <a class="external" href="http://www.w3.org/2001/sw/">Semantic Web</a> para más información acerca de RDF y tecnologías relacionadas.</li>
+</ol>
+
+<h2 id="Contribuyentes" name="Contribuyentes">Contribuyentes</h2>
+
+<ul>
+ <li>Sección de ejemplos agregada por <a class="external" href="http://rdfweb.org/people/danbri/">danbri</a> el 2002-07-02 &lt;/li&gt;</li>
+</ul>
+
+<ul>
+ <li>Gracias a Myk Melez por las notas sobre política de seguridad en XUL remoto.</li>
+</ul>
+
+<p>Autor: <a class="link-mailto" href="mailto:waterson@netscape.com">Chris Waterson</a></p>
+
+<div class="originaldocinfo">
+<h2 id="Informaci.C3.B3n_sobre_documento_original" name="Informaci.C3.B3n_sobre_documento_original">Información sobre documento original</h2>
+
+<div>
+<ul>
+ <li>Autor(es): <a class="link-mailto" href="mailto:waterson@netscape.com">Chris Waterson</a></li>
+ <li>Ultima actualización: December 22, 2004</li>
+ <li>Derechos de autor: Copyright (C) <a class="link-mailto" href="mailto:waterson@netscape.com">Chris Waterson</a></li>
+</ul>
+</div>
+
+<p><span class="comment">Categorías</span></p>
+
+<p><span class="comment">Interwiki Language Links</span></p>
+
+<p> </p>
+
+<div class="noinclude"> </div>
+</div>

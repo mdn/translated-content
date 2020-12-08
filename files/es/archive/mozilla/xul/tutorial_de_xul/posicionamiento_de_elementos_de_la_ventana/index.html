@@ -1,0 +1,229 @@
+---
+title: Posicionamiento de elementos de la ventana
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Posicionamiento_de_elementos_de_la_ventana
+tags:
+  - Tutorial_de_XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/Element_Positioning
+---
+<p>Aquí veremos cómo controlar la posición y tamaño de un elemento.</p>
+<h3 id="Posicionamiento_de_elementos_de_la_caja" name="Posicionamiento_de_elementos_de_la_caja">Posicionamiento de elementos de la caja</h3>
+<p>Hasta ahora sabemos cómo posicionar vertical u horizontalmente los elementos en el interior de una caja. A menudo necesitaremos mayor control sobre la posición y tamaño de los elementos dentro de la caja, para esto primero necesitamos echar un vistazo a cómo trabaja una caja.</p>
+<p>La posición de un elemento es determinada por el estilo de esquema de su contenedor. Por ejemplo, la posición de un botón en una caja horizontal es a la derecha del botón anterior, si es que hay alguno. El tamaño de un elemento es determinado por dos factores, el tamaño que el elemento necesita poseer y el tamaño que uno especifique. El tamaño que un elemento requiere es determinado por el tipo de elemento. Por ejemplo, el ancho de un botón es determinado por la cantidad de texto en el botón.</p>
+<p>Un elemento será generalmente tan amplio como éste necesite para soportar su contenido, y no mayor. Algunos elementos, como las cajas de texto, tienen un tamaño predeterminado. Una caja será suficientemente amplia como para contener los elementos dentro de ella. Una caja horizontal con tres botones en ella será tan ancha como los tres botones, más un pequeño espacio de relleno.</p>
+<p>En la imagen de abajo, a los primeros dos botones se les ha dado un tamaño adecuado como para contener su texto. El tercer botón es mayor porque tiene más contenido. El ancho de la caja que contiene los botones es el ancho total de los botones más el espacio entre ellos. El alto de los botones es de un tamaño apropiado para contener el texto.</p>
+<p><img alt="posicionamiento_img01.jpg" class="internal default" src="/@api/deki/files/4787/=posicionamiento_img01.jpg"></p>
+<p>Podría necesitarse tener mayor control sobre el tamaño de un elemento en una ventana. Hay para ello un número de características que permiten controlar el tamaño de un elemento. La forma rápida es simplemente agregar a un elemento los atributos width (ancho) y height (alto), muy parecido a lo que puede hacerse en un rótulo HTML img. Un ejemplo se demuestra abajo:</p>
+<h4 id="Ejemplo_atributos_height_y_width" name="Ejemplo:_atributos_height_y_width">Ejemplo: atributos height y width</h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_1.xul">Ver en funcionamiento</a></p>
+<pre>&lt;button label="Aceptar" width="100" height="40"/&gt;
+</pre>
+<p>Sin embargo, no se recomienda hacer esto, ya que no es muy portable y podría no adaptarse a algunos temas. Una mejor forma es utilizar propiedades de estilo, que funcionan de manera similar a las hojas de estilo en HTML. Pueden utilizarse las siguientes propiedades CSS:</p>
+<dl>
+ <dt>
+  width </dt>
+ <dd>
+  Esto especifica el ancho del elemento.</dd>
+ <dt>
+  height </dt>
+ <dd>
+  Especifica el alto del elemento.</dd>
+</dl>
+<p>Fijando cualquiera de estas propiedades, el elemento será creado con ese ancho y/o largo. Si se especifica solo una propiedad de tamaño, la otra se calculará de acuerdo a lo requerido. El tamaño de estas propiedades de estilo deben especificarse como un número seguido de una unidad de medida.</p>
+<p>Los tamaños son bastante fáciles de calcular para elementos no flexibles. Estos simplemente obedecen sus anchos y altos especificados, y si el tamaño no fuera especificado, el tamaño predeterminado del elemento será lo suficientemente amplio como para acomodar su contenido. Para elementos flexibles, el cálculo es ligeramente más difícil.</p>
+<p>Elementos flexibles son aquellos que poseen el atributo flex establecido en un valor mayor que 0. Debe recordarse que los elementos flexibles aumentan y disminuyen su tamaño para acomodarse al espacio disponible. Su tamaño predeterminado aún se calcula igual que el de los elementos no flexibles. El siguiente ejemplo lo demuestra:</p>
+<h4 id="Ejemplo" name="Ejemplo">Ejemplo</h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_2.xul">Ver en funcionamiento</a></p>
+<pre>&lt;window orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+&lt;hbox&gt;
+  &lt;button label="Sí" flex="1"/&gt;
+  &lt;button label="No"/&gt;
+  &lt;button label="Realmente no sé si uno u otro."/&gt;
+&lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+<p>La ventana aparecerá inicialmente como la imagen anterior. Los primeros dos botones serán dimensionados a un adecuado ancho predeterminado y el tercer botón será mayor porque tiene una etiqueta más larga. El primer botón fue hecho flexible y los tres elementos han sido puestos dentro de una caja. El ancho de la caja se fijará al ancho total inicial de los tres botones (en la imagen cerca de 430 píxeles).</p>
+<p>Si se incrementa el ancho de la ventana, los elementos son comprobados para ver si son flexibles y así rellenar el espacio en blanco que aparecerá. El botón es el único elemento flexible, pero no aumentará su ancho porque la caja dentro de la que encuentra no es flexible. Un elemento no flexible nunca cambia su tamaño aún cuando haya espacio disponible, por lo que el botón no podrá crecer. Esto es, el botón no se hará más ancho.</p>
+<p>La solución es también hacer flexible a la caja. Entonces, cuando se haga más ancha la ventana, habrá espacio extra disponible, por lo que la caja crecerá para ocupar el espacio extra. Como la caja es mayor, también se creará espacio extra dentro de ella, y el botón flexible que contiene crecerá para ajustarse al espacio disponible. Este proceso se repetirá por cada caja anidada existente.</p>
+<h3 id="Estableciendo_tama.C3.B1os_m.C3.ADnimos_y_m.C3.A1ximos" name="Estableciendo_tama.C3.B1os_m.C3.ADnimos_y_m.C3.A1ximos">Estableciendo tamaños mínimos y máximos</h3>
+<p>Puede ser necesario permitir que un elemento sea flexible, pero restringir su tamaño para que no pueda superar cierta dimensión; o puede necesitarse especificar un tamaño mínimo. Esto puede establecerse utilizando cuatro atributos.</p>
+<dl>
+ <dt>
+  minwidth </dt>
+ <dd>
+  Especifica el ancho mínimo del elemento.</dd>
+ <dt>
+  minheight </dt>
+ <dd>
+  Especifica la altura mínima del elemento.</dd>
+ <dt>
+  maxwidth </dt>
+ <dd>
+  Especifica el ancho máximo del elemento.</dd>
+ <dt>
+  maxheight </dt>
+ <dd>
+  Especifica la altura máxima del elemento.</dd>
+</dl>
+<p>Estos valores se miden siempre en píxeles. También pueden utilizarse las correspondientes propiedades CSS, <code>min-width</code>, <code>min-height</code>, <code>max-width</code> y <code>max-height</code>.</p>
+<p>Estas propiedades son aprovechables únicamente por elementos flexibles. Especificando una altura máxima, por ejemplo, un botón flexible podrá crecer solamente hasta esa altura. Aún podrá redimensionarse la ventana más allá de ese punto pero el botón dejará de crecer. Asimismo, la caja en la que se encuentre el botón podrá continuar agrandándose, a menos que también se le fije una altura máxima.</p>
+<p>Si dos botones son igualmente flexibles, normalmente ambos compartirán el espacio extra. Si un botón tiene un ancho máximo, el segundo continuará creciendo y ocupará todo el espacio restante.</p>
+<p>Si una caja posee un ancho o alto máximos, los hijos no podrán crecer más allá de ese tamaño máximo. Si una caja tiene un ancho o alto mínimos, los hijos no podrán achicarse menos que ese tamaño mínimo. Aquí hay algunos ejemplos del establecimiento de anchos y altos:</p>
+<pre>&lt;button label="1" style="width: 100px;"/&gt;
+&lt;button label="2" style="width: 100em; height: 10px;"/&gt;
+&lt;button label="3" flex="1" style="min-width: 50px;"/&gt;
+&lt;button label="4" flex="1" style="min-height: 2ex; max-height: 100px"/&gt;
+&lt;textbox flex="1" style="max-width: 10em;"/&gt;
+&lt;description style="max-width: 50px"&gt;Este es un aburrido pero simple texto desplegable.&lt;/description&gt;
+</pre>
+<dl>
+ <dt>
+  Ejemplo 1 </dt>
+ <dd>
+  el primer botón será mostrado con un ancho de 100 píxeles (px significa píxeles). Debe agregarse la unidad de medida o el ancho será ignorado.</dd>
+ <dt>
+  Ejemplo 2 </dt>
+ <dd>
+  el segundo botón se mostrará con un alto de diez píxeles y un ancho de 100 ems (un em es la medida de un carácter en el tipo de letra utilizado).</dd>
+ <dt>
+  Ejemplo 3 </dt>
+ <dd>
+  el tercer botón es flexible, por lo que crecerá basado en el tamaño de la caja en la que se encuentre. Sin embargo, el botón nunca se reducirá a menos de 50 píxeles. Otros componentes flexibles como los espaciadores absorberán el espacio remanente, rompiendo el cociente flex.</dd>
+ <dt>
+  Ejemplo 4 </dt>
+ <dd>
+  el cuarto botón es flexible y nunca tendrá una altura que sea menor a 2 ex (un ex es normalmente la altura de la letra x en el tipo de letra utilizado) o mayor que 100 píxeles.</dd>
+ <dt>
+  Ejemplo 5 </dt>
+ <dd>
+  la entrada de texto es flexible pero nunca crecerá más de 10 ems. A menudo se querrá utilizar ems al especificar tamaños de elementos con texto en ellos. Esta unidad de medida es útil para cajas de texto, así el tipo de letra podrá cambiar y las cajas de texto siempre poseerán un tamaño adecuado, aún si el tipo de letra es muy grande.</dd>
+ <dt>
+  Ejemplo 6 </dt>
+ <dd>
+  el elemento <code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_description.html">description</a></code> está restringido a poseer un ancho máximo de 50 píxeles. El texto contenido se desplegará hasta la siguiente línea, luego de cincuenta píxeles.</dd>
+</dl>
+<div class="highlight">
+ <p>Agreguemos alguno de estos estilos a la ventana de diálogo "buscar archivos". Lo haremos de tal manera que la caja de texto se redimensione para ocupar toda la ventana.</p>
+ <p>&lt;textbox id="find-text" flex="1" style="min-width: 15em;"/&gt;</p>
+ <p>Aquí, la entrada de texto se ha hecho flexible, de esta manera crecerá si el usuario cambia el tamaño de la ventana. Esto es útil si el usuario desea ingresar una cadena de texto muy larga. También, un ancho mínimo de 15 ems fue fijado para que la caja de texto siempre muestre al menos 15 caracteres. Si el usuario achica el tamaño de la ventana, la entrada de texto no se reducirá pasados los 15 ems. Se dibujará como si se extendiera sobrepasando el borde de la ventana. Nótese en la imagen de abajo que la entrada de texto a crecido para extenderse por el tamaño total de la ventana.</p>
+</div>
+<h3 id="Empaque_de_cajas" name="Empaque_de_cajas">Empaque de cajas</h3>
+<p>Digamos que se tiene una caja con dos elementos hijos, de los cuales ninguno es flexible, pero la caja sí lo es. Por ejemplo:</p>
+<h4 id="Ejemplo_2" name="Ejemplo_2">Ejemplo</h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_3.xul">Ver en funcionamiento</a></p>
+<pre>&lt;box flex="1"&gt;
+  &lt;button label="Alegre"/&gt;
+  &lt;button label="Triste"/&gt;
+&lt;/box&gt;
+</pre>
+<p>Si se redimensiona la ventana, la caja se expandirá para adaptarse al tamaño de la ventana. Los botones no son flexibles, por lo que sus longitudes no cambiarán. El resultado es espacio extra que aparecerá en el lado derecho de la ventana, dentro de la caja. Puede desearse, sin embargo, que el espacio extra aparezca del lado izquierdo, así los botones se mantendrán alineados a la derecha en la ventana.</p>
+<p>Esto puede lograrse colocando un espaciador dentro de la caja, pero se volverá confuso cuando haya que realizarlo muchas veces. Una mejor solución es utilizar en la caja un atributo adicional: pack (empaquetar). Este atributo indica cómo empaquetar los elementos hijos dentro de la caja. Para cajas orientadas horizontalmente, controla el posicionamiento horizontal de los hijos. En cajas verticales, controla el posicionamiento vertical. Pueden utilizarse los siguientes valores:</p>
+<dl>
+ <dt>
+  start </dt>
+ <dd>
+  Posiciona los elementos en el extremo izquierdo para cajas horizontales y en el extremo superior para cajas verticales. Este es el valor predeterminado.</dd>
+ <dt>
+  center </dt>
+ <dd>
+  Centra los elementos hijos en la caja.</dd>
+ <dt>
+  end </dt>
+ <dd>
+  Posiciona los elementos al extremo derecho en cajas horizontales y al extremo inferior en cajas verticales.</dd>
+</dl>
+<p>El atributo <code>pack</code> se aplica a la caja contenedora de los elementos a ser empaquetados, no a los elementos en sí mismos.</p>
+<p>Podemos cambiar el ejemplo anterior para centrar los elementos, de esta manera:</p>
+<h4 id="Ejemplo_3" name="Ejemplo_3">Ejemplo</h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_4.xul">Ver en funcionamiento</a></p>
+<pre>&lt;box flex="1" pack="center"&gt;
+  &lt;button label="Alegre"/&gt;
+  &lt;button label="Triste"/&gt;
+&lt;/box&gt;
+</pre>
+<p>Ahora, cuando la ventana sea redimensionada, los botones se centrarán horizontalmente. Compare este comportamiento con el del ejemplo anterior.</p>
+<h3 id="Alineaci.C3.B3n_de_cajas" name="Alineaci.C3.B3n_de_cajas">Alineación de cajas</h3>
+<p>Si la ventana en el ejemplo Alegre/Triste se redimensiona horizontalmente, el ancho de la caja crecerá. Si no obstante se redimensiona la caja verticalmente, notará que la altura de los botones aumenta. Esto sucede porque la flexibilidad en la otra dirección se asume predeterminadamente.</p>
+<p>Puede regularse este comportamiento con el atributo <code>align</code> (alineación). Para cajas horizontales, éste controla verticalmente la posición de los hijos. En cajas verticales, controla la posición horizontal de los hijos. Los valores posibles son similares a los de <code>pack</code>..</p>
+<dl>
+ <dt>
+  start </dt>
+ <dd>
+  Alinea los elementos a lo largo del extremo superior para cajas horizontales y a lo largo del borde izquierdo para cajas verticales.</dd>
+ <dt>
+  center </dt>
+ <dd>
+  Centra los elementos hijos en la caja.</dd>
+ <dt>
+  end </dt>
+ <dd>
+  Alinea los elementos a lo largo del extremo inferior en cajas horizontales y a lo largo del borde derecho en cajas verticales.</dd>
+ <dt>
+  baseline </dt>
+ <dd>
+  Alinea los elementos para que el texto quede alineado. Esto es útil en cajas horizontales únicamente.</dd>
+ <dt>
+  stretch </dt>
+ <dd>
+  Este valor, el predeterminado, causa que los elementos crezcan hasta ocupar el tamaño de la caja, muy parecido a un elemento flexible, pero en la dirección opuesta.</dd>
+</dl>
+<p>Similar al atributo <code>pack</code>., el atributo <code>align</code> es aplicable únicamente a la caja cuyos elementos deben ser alineados, no a los elementos en sí.</p>
+<p>Por ejemplo, la primera caja de abajo tendrá a sus hijos expandidos, porque ése es el valor predeterminado. La segunda caja posee un atributo <code>align</code>, por lo que sus hijos se ubicarán centrados.</p>
+<h4 id="Ejemplo_4" name="Ejemplo_4">Ejemplo</h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_5.xul">Ver en funcionamiento</a></p>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type="text/css"?&gt;
+
+&lt;window id="sino" title="Pregunta" orient="horizontal"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;hbox&gt;
+    &lt;button label="Sí"/&gt;
+    &lt;button label="No"/&gt;
+  &lt;/hbox&gt;
+  &lt;hbox align="center"&gt;
+    &lt;button label="Tal vez"/&gt;
+    &lt;button label="Quizás"/&gt;
+  &lt;/hbox&gt;
+
+&lt;/window&gt;
+</pre>
+<p><img alt="Image:boxstyle2-b.jpg"></p>
+<p>También pueden utilizarse las propiedades de estilo <code>-moz-box-pack</code> y <code>-moz-box-align</code> en lugar de especificar estos atributos.</p>
+<div class="note">
+ El ejemplo "Alineador de cajas" podría resultar útil para probar las distintas propiedades de la caja..</div>
+<h3 id="Recorte_de_texto_y_botones" name="Recorte_de_texto_y_botones">Recorte de texto y botones</h3>
+<p>Podría llegar a crearse un elemento button que contuviera una etiqueta cuyo ancho sea mayor que el ancho máximo del botón. Por supuesto, una solución sería incrementar el tamaño del botón; sin embargo, los botones (y otros elementos con una etiqueta) tienen un atributo especial llamado <code>crop</code> (recortar) que permite especificar cómo el texto será recortado si este es demasiado largo.</p>
+<p>Si el texto es recortado, puntos suspensivos (…) aparecerán en el botón de donde el texto fue recortado. Existen cuatro valores posibles:</p>
+<dl>
+ <dt>
+  left </dt>
+ <dd>
+  El texto es recortado por su lado izquierdo.</dd>
+ <dt>
+  right </dt>
+ <dd>
+  El texto es recortado por su lado derecho.</dd>
+ <dt>
+  center </dt>
+ <dd>
+  El texto es recortado en ambos extremos.</dd>
+ <dt>
+  none </dt>
+ <dd>
+  El texto no será recortado, este es el valor predeterminado.</dd>
+</dl>
+<p>En realidad, este atributo es útil únicamente cuando una ventana de diálogo es diseñada para ser utilizable en cualquier tamaño. El atributo <code>crop</code> también puede ser usado con el elemento <code>description</code> y otros elementos que utilicen el atributo <code>label</code> para etiquetas. Lo siguiente muestra este atributo en uso:</p>
+<h4 id="Ejemplo_5" name="Ejemplo_5">Ejemplo</h4>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_boxstyle_6.xul">Ver en funcionamiento</a></p>
+<pre>&lt;button label="¡Presióname por favor!" crop="right" flex="1"/&gt;
+</pre>
+<p><img alt="Image:boxstyle2.jpg"></p>
+<p>Nótese como al texto en el botón se le recortará su lado derecho luego de que la ventana sea achicada.</p>
+<h3 id="Ejemplo_.22Buscar_archivos.22_hasta_ahora" name="Ejemplo_.22Buscar_archivos.22_hasta_ahora">Ejemplo "Buscar archivos" hasta ahora</h3>
+<p><a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-boxstyle.xul">Ver en funcionamiento</a></p>
+<p>(Siguiente) A continuación, un resumen y algunos detalles adicionales del modelo de caja.</p>
+<p>Ejemplos: 3.2.1 3.2.2 3.2.3 3.2.4 3.2.5 3.2.6</p>

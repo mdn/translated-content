@@ -1,0 +1,104 @@
+---
+title: Object.prototype.watch()
+slug: Web/JavaScript/Referencia/Objetos_globales/Object/watch
+tags:
+  - JavaScript
+  - Method
+  - Non-standard
+  - Object
+  - Prototype
+translation_of: Archive/Web/JavaScript/Object.watch
+---
+<div>
+ {{JSRef("Objetos_globales", "Object")}}</div>
+<h2 id="Resumen" name="Resumen">Resumen</h2>
+<p>Controla si se asigna un valor a una propiedad y ejecuta una función cuando esto ocurre.</p>
+<h2 id="Sintaxis" name="Sintaxis">Sintaxis</h2>
+<p><code>watch(
+ <i>
+  propiedad</i>
+ ,
+ <i>
+  delegado</i>
+ ) </code></p>
+<h3 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h3>
+<dl>
+ <dt>
+  <code>nombrePropiedad</code></dt>
+ <dd>
+  Nombre de la propiedad del objeto.</dd>
+</dl>
+<dl>
+ <dt>
+  <code>funcionDelegada</code></dt>
+ <dd>
+  Función a llamar.</dd>
+</dl>
+<h2 id="Descripci.C3.B3n" name="Descripci.C3.B3n">Descripción</h2>
+<p>Controla si se asigna una propiedad llamada <code>nombrePropiedad</code> en este objeto, llamando a <code>funcionDelegada(propiedad, valorViejo, valorNuevo)</code> siempre que <code>nombrePropiedad</code> sea asignada y almacene el valor de retorno de esa propiedad. La función encargada de dicho control puede filtrar (o anular) el valor asignado, devolviendo un <code>valorNuevo</code> modificado (o devolviendo <code>valorViejo</code>).</p>
+<p>Si elimina una propiedad para la que se ha establecido un control, ese control no desaparece. Si más tarde se vuelve a crear la propiedad, el control volverá a tener efecto.</p>
+<p>Para eliminar un control, use el método {{jsxref("Object.prototype.unwatch()")}}. Por defecto, el método <code>watch</code> se hereda para cada uno de los objetos descendientes de {{jsxref("Object")}}.</p>
+<p>El depurador JavaScript tiene funciones similares a las que proporciona este método, además de otras opciones de depuración. Para más información sobre el depurador, vea <a href="/es/docs/Venkman">Venkman</a>.</p>
+<p>En NES 3.0 y 4.x, <code>funcionDelegada</code> se llama desde las asignaciones del script además del código nativo. En Firefox, <code>funcionDelegada</code> se llama solamente en las asignaciones del script, pero no en el código nativo. Por ejemplo, <code>window.watch('location', miDelegado)</code> no llamará a <code>miDelegado</code> si el usuario hace click sobre un enlace a un ancla dentro del documento actual. Sin embargo, el siguiente código llamará a <code>miDelegado</code>:</p>
+<pre class="brush: js"><code>window.location += '#miAncla';</code>
+</pre>
+<h2 id="Ejemplos" name="Ejemplos">Ejemplos</h2>
+<h3 id="Ejemplo:_Usando_watch_y_unwatch" name="Ejemplo:_Usando_watch_y_unwatch">Ejemplo: Usando <code>watch</code> y <code>unwatch</code></h3>
+<pre class="brush: js">var objeto = {p:1};
+objeto.watch("p",
+   function (identificador,valorViejo,valorNuevo) {
+      document.writeln("objeto." + identificador + " ha cambiado de "
+         + valorViejo + " a " + valorNuevo);
+      return valorNuevo;
+   });
+
+objeto.p = 2;
+objeto.p = 3;
+delete objeto.p;
+objeto.p = 4;
+
+objeto.unwatch('p');
+objeto.p = 5;
+</pre>
+<p>Este script muestra lo siguiente:</p>
+<pre>objeto.p ha cambiado de 1 a 2
+objeto.p ha cambiado de 2 a 3
+objeto.p ha cambiado de undefined a 4
+</pre>
+<h3 id="Ejemplo:_Usando_watch_para_validar_las_propiedades_de_un_objeto" name="Ejemplo:_Usando_watch_para_validar_las_propiedades_de_un_objeto">Ejemplo: Usando <code>watch</code> para validar las propiedades de un objeto</h3>
+<p>Usted puede usar <code>watch</code> para comprobar cualquier asignación a las propiedades de un objecto. Este ejemplo asegura que cada Persona siempre tiene un nombre válido y una edad entre 0 y 200.</p>
+<pre class="brush: js">Persona = function(nombre,edad) {
+  this.watch("edad", Persona.prototype._esAsignacionValida);
+  this.watch("nombre",Persona.prototype._esAsignacionValida);
+  this.nombre=nombre;
+  this.edad=edad;
+};
+
+Persona.prototype.toString = function() { return this.nombre + "," + this.edad;};
+
+Persona.prototype._esAsignacionValida = function(identificador,valorViejo,valorNuevo) {
+  if (id=="nombre" &amp;&amp; (!valorNuevo|| valorNuevo.length&gt;30)) { throw new RangeError("nombre no válido para " + this); }
+  if (id=="edad"  &amp;&amp; (valorNuevo&lt;0 || valorNuevo&gt;200))      { throw new RangeError("edad no válida para " + this ); }
+  return valorNuevo;
+};
+
+alejandra = new Persona("Alejandra",29); // --&gt; Alejandra,29
+document.writeln(alejandra);
+
+try {
+  alejandra.nombre="";  // --&gt; Error "nombre no válido para  Alejandra,29"
+} catch (excepcion) { document.writeln(excepcion); }
+
+try {
+  alejandra.edad=-4;   // --&gt; Error "edad no válida para  Alejandra,29"
+} catch (excepcion) { document.writeln(excepcion); }
+</pre>
+<p>Este script muestra lo siguiente:</p>
+<pre>Alejandra,29
+RangeError: nombre no válido para  Alejandra,29
+RangeError: edad no válida para  Alejandra,29
+</pre>
+<h2 id="Vea_Tambi.C3.A9n" name="Vea_Tambi.C3.A9n">Vea También</h2>
+<ul>
+ <li>{{jsxref("Object.prototype.unwatch()")}}</li>
+</ul>

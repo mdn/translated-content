@@ -1,0 +1,258 @@
+---
+title: Simulador de Firefox OS
+slug: Archive/B2G_OS/Simulator
+translation_of: Archive/B2G_OS/Simulator
+---
+<div class="note">
+<p>El Simulador de Firefox OS está todavía en una etapa temprana de desarrollo, y aún no llega al nivel de confiabilidad que queremos.</p>
+
+<p>Si encuentra un error de cualquier tipo, <a href="https://github.com/mozilla/r2d2b2g/issues?state=open">cree un informe en GitHub</a>, y si quiere hacernos una pregunta, utilice la <a href="https://lists.mozilla.org/listinfo/dev-developer-tools">lista de correo dev-developer-tools</a> o en el canal <a href="irc://irc.mozilla.org/#devtools">#devtools de irc.mozilla.org</a> (en inglés).</p>
+</div>
+
+<p>El complemento Simulador de Firefox OS es una herramienta que le permite probar y depurar <a href="/en-US/docs/Apps" title="/en-US/docs/Apps">aplicaciones para Firefox OS</a> en el escritorio. El ciclo de «programar–probar–depurar» es mucho más rápido con el Simulador que con un dispositivo de hardware real y, obviamente, no necesitará uno para utilizarlo.</p>
+
+<p>En esencia, el complemento del Simulador consiste de:</p>
+
+<ul>
+ <li><strong>el Simulador en sí</strong>: éste incluye el <a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client" title="/en-US/docs/Mozilla/Firefox_OS/Using_the_B2G_desktop_client">cliente de escritorio de Firefox OS</a>, que es una versión de las capas superiores de <a href="/en-US/docs/Mozilla/Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> que se ejecuta en su sistema operativo de escritorio. El Simulator también incluye algunas <a href="#Simulator-toolbar" title="#Simulator-toolbar">funciones de emulación adicionales</a> que no están disponibles en las compilaciones de Firefox OS para escritorio estándares.</li>
+ <li><strong>el tablero</strong>: una herramienta ubicada en el navegador Firefox que permite iniciar y detener el Simulador; e instalar, desinstalar y depurar aplicaciones ejecutadas en él. El tablero también le permite instalar aplicaciones en un dispositivo real, y realiza comprobaciones a los archivos <em> manifest</em> para detectar problemas comunes.</li>
+</ul>
+
+<p>La siguiente captura de pantalla muestra una sesión de depuración utilizando el Simulador.</p>
+
+<p>El tablero se encuentra en la esquina superior derecha de la imagen, ubicado en una pestaña de Firefox. Hemos añadido una aplicación empaquetada, llamada «Where am I?». En la esquina superior izquierda, hay una aplicación ejecutándose en el Simulador. Asimismo, hemos conectado las herramientas de depuración, que están en la ventana inferior. Puede ver que se ha alcanzado un punto de interrupción en la aplicación.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5139/Simulator-overview.png"></p>
+
+<p>Esta guía abarca los temas siguientes:</p>
+
+<ul>
+ <li><a href="#Installing" title="#Installing">cómo instalar el complemento del Simulador</a></li>
+ <li><a href="#Adding-updating-removing" title="#Adding-updating-removing">cómo añadir, eliminar y actualizar aplicaciones</a></li>
+ <li><a href="#Manifest-validation" title="#Manifest-validation">validación de <em>manifest</em></a></li>
+ <li><a href="#Running-the-Simulator" title="#Running-the-Simulator">cómo ejecutar el Simulador</a></li>
+ <li><a href="#Attaching-developer-tools" title="#Attaching-developer-tools">cómo conectar herramientas de desarrollo como el depurador de JS a las aplicaciones ejecutándose en el Simulador</a></li>
+ <li><a href="#Limitations" title="#Limitations">las limitaciones del Simulador al compararlo cun un dispositivo con Firefox OS real</a></li>
+</ul>
+
+<p>Para un tutorial práctivo que le muestra cómo utilizar el Simulador para depurar una aplicación web real, véase la página <a href="/en-US/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough" title="/en-US/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough">Paso a paso con el Simulador</a>.</p>
+
+<h2 id="Instalar_el_complemento_del_Simulador"><a name="Instalar">Instalar el complemento del Simulador</a></h2>
+
+<p>El Simulador está empaquetado y distribuido como un complemento de Firefox. Para instalarlo:</p>
+
+<ol>
+ <li>Mediante Firefox, vaya a <a href="https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/" title="https://addons.mozilla.org/en-US/firefox/addon/firefox-os-simulator/">la página del Simulador en addons.mozilla.org</a>.</li>
+ <li>Pulse en «Añadir a Firefox».</li>
+ <li>Una vez que se haya descargado completamente el complemento, se le solicitará instalarlo: pulse en «Instalar ahora».</li>
+</ol>
+
+<p>Debido al tamaño del complemento, Firefox puede colgarse durante unos segundos mientras se instala, y es posible que aparezca el cuadro de diálogo «Aviso: script sin respuesta». Si esto ocurre, pulse en «Continuar» y espere a que la instalación finalice. Este problema se sigue en el <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814505" title="https://bugzilla.mozilla.org/show_bug.cgi?id=814505">error n.º 814505</a>.<br>
+ <br>
+ Una vez instalado el complemento, Firefox comprobará si hay actualizaciones regularmente y lo mantendrá actualizado automáticamente.</p>
+
+<p>Cuando instala el Simulador, el tablero se abre automáticamente; y puede volverlo a abrir en cualquier momento yendo al menú «Firefox» (o el menú «Herramientas» en OS X y Linux) ▸ «Desarrollador web» ▸ «Firefox OS Simulator»:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5141/simulator-open-on-windows-7.png" style="display: block; height: 533px; margin-left: auto; margin-right: auto; width: 453px;"><br>
+ El tablero es la herramienta que usará para añadir su aplicación al Simulador y ejecutarla. Así es como luce:<br>
+ <img alt="" src="https://mdn.mozillademos.org/files/5143/dashboard.png" style="height: 720px; width: 963px;"></p>
+
+<h2 id="Añadir_actualizar_y_desinstalar_aplicaciones"><a name="anadir-actualizar-eliminar">Añadir, actualizar y desinstalar aplicaciones</a></h2>
+
+<h3 id="Añadir_aplicaciones">Añadir aplicaciones</h3>
+
+<p>Para añadir una <a href="/en-US/docs/Apps/Packaged_apps" title="/en-US/docs/Apps/Packaged_apps">aplicación empaquetada</a> al Simulador, abra el tablero, pulse en «Añadir un directorio» y seleccione el <a href="/en-US/docs/Apps/Manifest" title="/en-US/docs/Apps/Manifest">archivo <em>manifest</em></a> para su aplicación.<br>
+ <br>
+ Para añadir una aplicación alojada en la Web, escriba un URL en el cuadro de texto «URL de página o manifest.webapp», y luego pulse en «Añadir URL». Si el URL apunta a un <em>manifest</em>, ese <em>manifest</em> se utilizará. Si no, el tablero generará un <em>manifest</em> para el URL. De este modo puede añadir cualquier sitio como aplicación con tan solo introducir su URL.<br>
+ <br>
+ Cuando añade una aplicación, el tablero ejecutará una sserie de pruebas en el archivo <em>manifest</em> para comprbar problemas comunes. Consulte la sección <a href="#Manifest-validation" title="#Manifest-validation">Validación de <em>manifest</em></a> para obtener detalles sobre las pruebas que se ejecutan.</p>
+
+<p>A menos de que la validación del <em>manifest</em> muestre que su aplicación tiene errores, el tablero ejecutará la aplicación en el Simulador automáticamente.</p>
+
+<h3 id="Gestión_de_aplicaciones">Gestión de aplicaciones</h3>
+
+<p>Una vez que ha añadido una aplicación, ésta aparecerá en la lista de aplicaciones instaladas del gestor:<br>
+ <img alt="" src="https://mdn.mozillademos.org/files/5145/dashboard-list-apps.png"><br>
+ Cada entrada proporciona información sobre la aplicación:</p>
+
+<ul>
+ <li>su nombre, tomado del <em>manifest</em></li>
+ <li>su tipo, que puede ser «Empaquetada», «Alojada» o «Generada»</li>
+ <li>un enlace a su archivo <em>manifest</em></li>
+ <li>el resultado de la validación del <em>manifest</em></li>
+</ul>
+
+<p>También proporciona tres órdenes:</p>
+
+<ul>
+ <li>«Eliminar»: elimina la aplicación del Simulador o del tablero. Puede deshacer esta operación mientras no cierre la pestaña del tablero.</li>
+ <li>«Actualizar»: utilice esta orden para actualizar la aplicación en el Simulador después de que le haya realizado cambios. Esto provoca que el tablero valide el <em>manifest</em> de nuevo. Si realiza cambios a su aplicación, éstos no se reflejarán automáticamente en la aplicación instalada: necesitará pulsar en «Actualizar» y reiniciar el Simulador si estuviera en ejecución.</li>
+ <li>«Ejecutar»: ejecuta la aplicación en el Simulador.</li>
+</ul>
+
+<p>Si ha <a href="#Push-to-device" title="#Push-to-device">conectado un dispositivo con Firefox OS</a> a su equipo, verá una cuarta orden llamada «Instalar en dispositivo».</p>
+
+<h3 id="Validación_de_manifest"><a name="Validación de manifest">Validación de <em>manifest</em></a></h3>
+
+<p>Cuando proporciona un <em>manifest</em>, el gestor ejecutará algunas pruebas de validación en él. El gestor informa tres clases de problemas:</p>
+
+<ul>
+ <li>errores del <em>manifest</em>: problemas que evitarán que la aplicación se ejecute</li>
+ <li>avisos del <em>manifest</em>: problemas que pueden evitar que la aplicación se ejecute correctamente</li>
+ <li>avisos específicos del Simulador: funciones que su aplicación utiliza que aún no son compatibles con el Simulador</li>
+</ul>
+
+<p>Se muestran resúmenes de los problemas encontrados en la entrada de la aplicación, al pulsar en los resúmenes se muestran más detalles.</p>
+
+<h4 id="Errores_del_manifest">Errores del <em>manifest</em></h4>
+
+<p>El tablero informará las condiciones siguientes como errores, lo cual significa que no podrá ejecutar su aplicación si no los corrige:</p>
+
+<ul>
+ <li>el <em>manifest</em> no incluye el campo obligatorio «name»</li>
+ <li>el <em>manifest</em> no contiene código JSON válido</li>
+ <li>la aplicación es alojada, pero el campo «<a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">type»</a> en su <em>manifest</em> es <a href="/en-US/docs/Apps/Packaged_apps#Types_of_packaged_apps" title="/en-US/docs/Apps/Packaged_apps#Types_of_packaged_apps">«privileged» o «certified»</a>, que solo están disponibles para aplicaciones empaquetadas</li>
+</ul>
+
+<p>A continuación se muestra el resultado de intentar añadir un archivo <em>manifest</em> que carece del campo «name»:<br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/5147/dashboard-missing-name.png"></p>
+
+<h4 id="Avisos_del_manifest">Avisos del <em>manifest</em></h4>
+
+<p>El tablero informará de los siguientes problemas de <em>manifest</em> como avisos:</p>
+
+<ul>
+ <li>faltan iconos</li>
+ <li>el icono es más pequeño que 128 píxeles: todas las aplicaciones enviadas al Marketplace deben tener al menos un icono de al menos 128 × 128 píxeles</li>
+ <li>el campo <a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">«type»</a> es desconocido</li>
+ <li>el <em>manifest</em> solicita un <a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permiso</a> no reconocido</li>
+ <li>el <em>manifest</em> solicita un <a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permiso</a> que se denegará</li>
+ <li>el <em>manifest</em> solicita un <a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permiso</a> para el que no se pudo determinar el nivel de acceso</li>
+</ul>
+
+<h4 id="Avisos_especíﬁcos_del_Simulador">Avisos especíﬁcos del Simulador</h4>
+
+<p>Finalmente, el gestor emitirá avisos para las aplicaciones que utilicen funciones de Firefox OS que todavía no son totalmente compatibles con el Simulador:</p>
+
+<ul>
+ <li>el campo <a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">«type»</a> es «certified», pero el Simulador no es compatible completamente con aplicaciones certificadas</li>
+ <li>el <em>manifest</em> solicita un <a href="/en-US/docs/Apps/Manifest#permissions" title="/en-US/docs/Apps/Manifest#permissions">permiso</a> para usar una API que el Simulador <a href="#Unsupported-APIs" title="#Unsupported-APIs">todavía no admite</a></li>
+</ul>
+
+<h2 id="Ejecutar_el_Simulador"><a name="Ejecutar-el-Simulador">Ejecutar el Simulador</a></h2>
+
+<p>El Simulador se puede abrir de dos maneras:</p>
+
+<ul>
+ <li>si añade, actualiza o elimina una aplicación, o pulsa en el botón «Ejecutar» junto a una entrada de aplicación, el tablero abrirá automáticamente el Simulador y ejecutará su aplicación directamente</li>
+ <li>si pulsa en el botón que dice «Detenido» en el lado izquierdo del tablero, el Simulador arrancará a la pantalla de inicio y necesitará navegar hacia su aplicación</li>
+</ul>
+
+<p>Una vez que inició el Simulador mediante cualquiera de estas formas, el botón «Detenido» se vuelve verde y su etiqueta cambia a «Ejecutándose». Para detener el Simulador, pulse en este botón de nuevo.<br>
+ <br>
+ El Simulador aparece en una ventana separada cuyo tamaño simula las dimensiones de una pantalla de 320 × 480 píxeles, y posee una <a href="#Simulator-toolbar" title="#Simulator-toolbar">barra de herramientas en la parte inferior que contiene algunas funciones adicionales</a>.</p>
+
+<p>Para simular toques, puede pulsar con el ratón y arrastrar mientras mantiene oprimido el botón izquieerdo. Asi que, para ver las aplicaciones incorporadas en el sistema —y las que haya instalado—, pulse y arrastre con el ratón sobre la pantalla de inicio:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5149/simulator-homescreen.png" style="float: left; height: 638px; width: 432px;"><img alt="" src="https://mdn.mozillademos.org/files/5151/simulator-apps-screen.png" style="height: 638px; width: 432px;"></p>
+
+<h3 id="Barra_de_herramientas_del_Simulador"><a name="Barra-simulador">Barra de herramientas del Simulador</a></h3>
+
+<p>La barra de herramientas ubicada en la parte inferior de la ventana contiene tres botones:<br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/5159/simulator-toolbar.png" style="display: block; height: 190px; margin-left: auto; margin-right: auto; width: 415px;">De izquierda a derecha, son el botón «Inicio», «Simulación de giro» y «Simulación de geolocalización».</p>
+
+<ul>
+ <li>el primero le lleva a la pantalla de inicio,</li>
+ <li>el segundo conmuta la orientación de la pantalla entre horizontal y vertical. Este cambio disparará el evento <a href="/en-US/docs/WebAPI/Detecting_device_orientation" title="/en-US/docs/WebAPI/Detecting_device_orientation">«deviceorientation»</a>,</li>
+ <li>y el tercero abre un cuadro de diálogo que le pedirá compartir su ubicación geográfica, ya sea utilizando sus coordenadas actuales o proporcionando coordenadas personalizadas; la <a href="/en-US/docs/WebAPI/Using_geolocation" title="/en-US/docs/WebAPI/Using_geolocation">API de geolocalización</a> permite que las aplicaciones hagan uso de esta ubicación.</li>
+</ul>
+
+<h3 id="Activar_el_registro_de_consola">Activar el registro de consola</h3>
+
+<p>Si activa la casilla «Consola» que se ubica bajo el botón «Detenido/Ejecutándose», la <a href="/en-US/docs/Error_Console" title="/en-US/docs/Error_Console">Consola de errores</a> se abrirá junto al Simulador. Su aplicación podrá crear registros en esta consola mediante el bojeto global <a href="/en-US/docs/DOM/console" title="/en-US/docs/DOM/console">«console»</a>.</p>
+
+<h3 id="Adjuntar_herramientas_para_desarolladores"><a id="Adjuntando herramientas para desarolladores" name="Adjuntando herramientas para desarolladores"></a>Adjuntar herramientas para desarolladores<a name="Adjuntando herramientas para desarolladores"></a></h3>
+
+<p>Puedes adjuntar herramientas para desarrolladores en el Simulador, para ayudar a depurar tu aplicación. Por el momento, puedes adjuntar únicamente el <a href="/es/docs/Tools/Debugger">Depurador de JavaScript</a> y la <a href="/es/docs/Tools/Web_Console">Consola Web</a>, pero estamos trabajando para añadir soporte para mas herramientas para desarrolladores.</p>
+
+<p>Mientras que el Simulador esté en funcionamiento otro botón aparecerá debajo de la casilla "Consola". Está etiquetado "Conectar...":</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5167/dashboard-connect.png" style="display: block; height: 442px; margin-left: auto; margin-right: auto; width: 459px;"></p>
+
+<p>Haz clic, y te llevará a una página parecida a esta:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5163/connect-port-selection.png" style="display: block; height: 718px; margin-left: auto; margin-right: auto; width: 798px;">Haz clic en "Conectar" aquí y verás otra página, esta vez como esta:<br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/5165/connect-target-selection.png" style="display: block; height: 718px; margin-left: auto; margin-right: auto; width: 798px;"></p>
+
+<p>Para usar el <a href="/es/docs/Tools/Debugger">Depurador de JavaScript</a>, selecciona aquí "chrome://prosthesis/content/shell.xul". Una vez ejecutado, necesitarás buscar los scripts de tu aplicación en el <a href="/en-US/docs/Tools/Debugger#The_debugger_toolbar">seleccionador de script</a>, pero si abres tu aplicación y luego te conectas al depurador, el script principal de tu aplicación será seleccionado como predeterminado:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5169/js-debugger.png" style="display: block; height: 400px; margin-left: auto; margin-right: auto; width: 971px;"> Para usar la <a href="/es/docs/Tools/Web_Console">Consola Web</a> con tu aplicación, selecciona "Proceso Principal" en la ventana "Conectar a dispositivo remoto".</p>
+
+<p>Lamentablemente, no hay depuración de objetivo único que funcione con ambos la Consola Web y el Depurador JS - pero puedes ejecutar dos dos casos simultáneamente de las herramientas de depuración, una dirigida a "shell.xul" y otra a "Proceso Principal".</p>
+
+<h2 id="Subir_al_dispositivo"><a name="Push-to-device">Subir al dispositivo</a></h2>
+
+<p>Si tienes un dispositivo Firefox OS puedes conectarlo al Simulador, y por ello puedes subirlo desde el panel de control a el dispositivo.</p>
+
+<h3 id="Conectar_un_dispositivo">Conectar un dispositivo</h3>
+
+<p>Para conectar un dispositivo, sigue las instrucciones en la guía de <a href="/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/Connecting_a_Firefox_OS_device_to_the_desktop">connecting a Firefox OS device to the desktop</a>. Recuerda que no tienes que instalar adb, ya que el complemento del Simulador ya lo incluye.</p>
+
+<p> </p>
+
+<h3 id="Subir_aplicaciones_al_dispositivo">Subir aplicaciones al dispositivo</h3>
+
+<p>Una vez que hayas configurado el dispositivo y escritorio, y conectado el dispositivo a tu escritorio mediante USB, verás aparecer el comentario "Dispositivo conectado." a la izquierda del panel de control, y un nuevo comando en la entrada por cada aplicación etiquetada "Subir":</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5227/device-connected.png"></p>
+
+<p>Click "Push", and the app will be installed on the Firefox OS device.</p>
+
+<h3 id="Solucionar_problemas_en_Linux">Solucionar problemas en Linux</h3>
+
+<p>Si no puedes conectar tu dispositivo después de crear reglas udev, por favor vea este <a href="https://github.com/mozilla/r2d2b2g/issues/515">bug</a>.</p>
+
+<p> </p>
+
+<h2 id="Limitaciones_del_Simulador"><a name="Limitations">Limitaciones del Simulador</a></h2>
+
+<p>Recuerda que el Simulador de Firefox OS no es una simulación perfecta.</p>
+
+<h3 id="Limitaciones_de_hardware">Limitaciones de hardware</h3>
+
+<p>Aparte del tamaño de la pantalla, el Simulador no simula las limitaciones de hardware del dispositivo Firefox OS tales como memoria disponible o velocidad de la CPU.</p>
+
+<h3 id="Códecs_de_AudioVideo">Códecs de Audio/Video</h3>
+
+<p>Los siguientes códecs dependen en decodificación acelerada por hardware y por lo cual no hay asistencia todavía:</p>
+
+<ul>
+ <li>MP3</li>
+ <li>AAC</li>
+ <li>H.264 (MP4)</li>
+ <li>WebM</li>
+</ul>
+
+<p>Esto significa que no es posible usar el Simulador para probar la reproducción de video en aplicaciones y en páginas web como Youtube que dependen de esos códecs.</p>
+
+<h3 id="APIs_no_admitidas"><a name="Unsupported-APIs">APIs no admitidas</a></h3>
+
+<p>Ciertas APIs que funcionan en el dispositivo no funcionarán en el Simulador, generalmente porque el soporte hardware no está disponible para el escritorio. Hemos implementado simulaciones para algunas APIs como geolocalización, y esperamos añadir más en futuras versiones. Sin embargo, por el momento las siguientes APIs no son compatibles. Usárlas podría traer errores o dar resultados incorrectos:</p>
+
+<ul>
+ <li><a href="/es/docs/Web/Guide/API/Telephony" title="/en-US/WebAPI/WebTelephony">Telephony</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebSMS" title="/en-US/docs/WebAPI/WebSMS">WebSMS</a></li>
+ <li><a href="/en-US/docs/WebAPI/WebBluetooth" title="/en-US/docs/WebAPI/WebBluetooth">WebBluetooth</a></li>
+ <li><a href="/en-US/docs/WebAPI/Using_Light_Events" title="/en-US/docs/WebAPI/Using_Light_Events">Ambient Light</a></li>
+ <li><a href="/en-US/docs/WebAPI/Proximity" title="/en-US/docs/WebAPI/Proximity">Proximity</a></li>
+ <li><a href="/en-US/docs/WebAPI/Network_Information" title="/en-US/docs/WebAPI/Network_Information">Network Information</a></li>
+ <li><a href="/es/docs/Eventos_online_y_offline" title="/en-US/docs/Online_and_offline_events">eventos navigator.onLine y offline</a></li>
+ <li><a href="/es/docs/Web/Guide/API/Vibration" title="/en-US/docs/WebAPI/Vibration">Vibración</a></li>
+</ul>
+
+<h2 id="Obtener_ayuda">Obtener ayuda</h2>
+
+<p>Si encuentras algún bug, por favor <a href="https://github.com/mozilla/r2d2b2g/issues?state=open">archívalos en GitHub</a>. Si tienes alguna cuestión, preguntanos en <a href="https://lists.mozilla.org/listinfo/dev-developer-tools">dev-developer-tools mailing list</a> o en <a href="irc://irc.mozilla.org/#devtools">#devtools en irc.mozilla.org</a>.</p>

@@ -1,0 +1,171 @@
+---
+title: Controles de listas
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Controles_de_listas
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+translation_of: Archive/Mozilla/XUL/Tutorial/List_Controls
+---
+<p>XUL tiene una cantidad de tipos de elementos para la cración de cajas de listas.</p>
+
+<h3 id="Cajas_de_listas" name="Cajas_de_listas">Cajas de listas</h3>
+
+<p>Una caja de listas de usa para mostrar un número de elementos en una lista. El usuario puede seleccionar un elemento de la lista.</p>
+
+<p>XUL provee dos tipos de elementos para crear listas, un elemento <code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_listbox.html">listbox</a></code> para crear cajas de listas de multiples filas, y un elemento <code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_menulist.html">menulist</a></code> para crear listas desplegables. Trabajan de forma muy similar al elemento de HTML <code>select</code>, el cual permite embas funciones, pero los elementos XUL tienes caracteristicas adicionales.</p>
+
+<p>La caja de listas más simple usa el elemento <code>listbox</code> para su propia caja, y el elemento <code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_listitem.html">listitem</a></code> para cada elemento. Por ejemplo, esta lista tendrá cuatro filas, una por cada elemento.</p>
+
+<p><strong>Ejemplo 1</strong> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;listbox&gt;
+  &lt;listitem label="Butter Pecan"/&gt;
+  &lt;listitem label="Chocolate Chip"/&gt;
+  &lt;listitem label="Raspberry Ripple"/&gt;
+  &lt;listitem label="Squash Swirl"/&gt;
+&lt;/listbox&gt;
+</pre>
+
+<p><img alt="Image:lists1.jpg"></p>
+
+<p>Similar al elemento HTML <code>option</code>, Puedes asignar un valor para cada elemento usando el atributo <code>value</code>. Puedes entonces usar el valor en un script. La caja de listas tendrá por defecto el tamaño de las filas de la lista, pero puedes controlar el tamaño con el atributo rows. Seleccionando el número de <code>rows</code> a mostrar en la caja de lista. Una barra de desplazamiento aparecerá para mostrar al usuario las filas adicionales.</p>
+
+<p>El siguiente ejemplo demuestra estas características adicionales:</p>
+
+<p><strong>Ejemplo 2</strong> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_2.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;listbox rows="3"&gt;
+  &lt;listitem label="Butter Pecan" value="bpecan"/&gt;
+  &lt;listitem label="Chocolate Chip" value="chocchip"/&gt;
+  &lt;listitem label="Raspberry Ripple" value="raspripple"/&gt;
+  &lt;listitem label="Squash Swirl" value="squash"/&gt;
+&lt;/listbox&gt;
+</pre>
+
+<p>El ejemplo fue cambiado para mostrar sólo 3 filas a la vez. Los valores se han añadido a los elementos de la lista. Las cajas de listas tienen algunas características adicionales, las cuales se describirán más adelante.</p>
+
+<h3 id="Cajas_de_lista_multi-columna" name="Cajas_de_lista_multi-columna">Cajas de lista multi-columna</h3>
+
+<p>Las cajas de listas tambien soportan multiples columnas. Cada celda puede tener un contenido arbitrario dentro, aunque generalmente sólo se usa texto. Cuando el usuario selecciona un elemento de la lista, la fila entera se selecciona. No tendrás una sola celda seleccionada.</p>
+
+<p>Se usan dos campos para especificar las columnas en la caja de listas. El elemento <code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_listcols.html">listcols</a></code> se usa para mantener la información de la columna, cada una de las cuales se especifica usando un elemento <code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_listcol.html">listcol</a></code> . Necesitas un elemento <code>listcol</code> para cada columna en la caja de listas.</p>
+
+<p>Las cajas de lista no poseen un equivalente al elemento rows de las grillas. De hecho, hay un equivalente, pero es creado y puesto en la caja de lista automáticamente. También está oculto para que no se sepa que está allí.</p>
+
+<p>El elemento <code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_listcell.html">listcell</a></code> (celda de lista) puede ser utilizado para cada celda en una fila. Si se quiere tener tres columnas, se necesita adicionar tres elementos <code>listcell</code> dentro de cada <code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_listitem.html">listitem</a></code>. Para especificar el texto contenido en una celda debe colocarse dentro del elemento un atributo <code>label</code>. Para el simple caso donde hay una sola columna, también puede ponerse los atributos <code>label</code> directamente en los elementos <code>listitem </code> (ítem de lista) correspondientes y no utilizar elementos <code>listcell</code>, como se muestra en el siguente ejemplo.</p>
+
+<p>(Cuando el usuario selecciona un item, toda la fila es seleccionada. No es posible seleccionar una celda individualmente.)</p>
+
+<p>El siguiente ejemplo es de una caja de lista con dos columnas y tres filas:</p>
+
+<p><strong>Ejemplo 3</strong></p>
+
+<pre class="eval">&lt;listbox&gt;
+ &lt;listcols&gt;
+   &lt;listcol flex="1"/&gt;
+   &lt;listcol flex="2"/&gt;
+ &lt;/listcols&gt;
+ &lt;listitem&gt;
+   &lt;listcell label="Jorge"/&gt;
+   &lt;listcell label="Pintor de casas"/&gt;
+ &lt;/listitem&gt;
+ &lt;listitem&gt;
+   &lt;listcell label="María Elena"/&gt;
+   &lt;listcell label="Fabricante de velas"/&gt;
+ &lt;/listitem&gt;
+ &lt;listitem&gt;
+   &lt;listcell label="Rogelio"/&gt;
+   &lt;listcell label="Matón"/&gt;
+ &lt;/listitem&gt;
+&lt;/listbox&gt;
+</pre>
+
+<p>Esta caja de lista posee dos columnas, siendo la segunda el doble de flexible que la primera. Si se reduce el tamaño horizontalmente, las etiquetas en las celdas se recortarán automáticamente. Como con otros elementos, puede utilizarse el atributo crop en las celdas o en los ítems para controlar el recorte.</p>
+
+<h3 id="Filas_de_encabezado" name="Filas_de_encabezado">Filas de encabezado</h3>
+
+<p>Las cajas de lista también permiten la utilización de una fila especial, la fila encabezado. Es muy parecida a una fila regular excepto que se la muestra de manera distinta. Puede ser aprovechada para crear encabezados en las columnas. Se utilizan dos elementos.</p>
+
+<p>El elemento cabeza de lista (<code>listhead</code>) se usa para las filas de encabezado, al igual que el elemento <code>listitem</code> se utiliza para filas comunes. Sin embargo la fila de encabezado no es una fila normal, por lo que si se usara un guión para obtener la primer fila en una caja de lista, la fila de encabezado no sería tenida en cuenta.</p>
+
+<p>El elemento <code>listheader</code> (encabezado de lista) indica cada celda en la fila de encabezado. Para indicar el texto dentro de la celda de encabezado se utiliza el atributo <code>label</code></p>
+
+<p>Este sería el ejemplo anterior pero con una fila de encabezado:</p>
+
+<p><strong>Ejemplo 4</strong></p>
+
+<pre class="eval">&lt;listbox&gt;
+ &lt;listhead&gt;
+   &lt;listheader label="Nombre"/&gt;
+   &lt;listheader label="Ocupación"/&gt;
+ &lt;/listhead&gt;
+ &lt;listcols&gt;
+   &lt;listcol flex="1"/&gt;
+   &lt;listcol flex="2"/&gt;
+ &lt;/listcols&gt;
+ &lt;listitem&gt;
+   &lt;listcell label="Jorge"/&gt;
+   &lt;listcell label="Pintor de casas"/&gt;
+ &lt;/listitem&gt;
+ &lt;listitem&gt;
+   &lt;listcell label="María Elena"/&gt;
+   &lt;listcell label="Fabricante de velas"/&gt;
+ &lt;/listitem&gt;
+ &lt;listitem&gt;
+   &lt;listcell label="Rogelio"/&gt;
+   &lt;listcell label="Matón"/&gt;
+ &lt;/listitem&gt;
+&lt;/listbox&gt;
+</pre>
+
+<p>En este ejemplo, el atributo <code><a href="es/XUL/Atributo#flex">flex</a></code> se usa para hacer la columna flexible. Este atributo será descrito en una sección posterior, pero aqui permite que la columna rellene todo el espacio horizontal disponible. Puedes redimensionar la ventana para ver que la columna se estrecha cuando la ventana lo hace. Si cortas el tamaño horizontalmente, las etiquetas de las celdas se cortarán automáticamente usando una elipsis. Puedes usar el atributo <code><a href="es/XUL/Atributo#crop">crop</a></code> en las celdas o elementos seleccionados con el valor <code>none</code> para deshablitar la elipsis.</p>
+
+<h3 id="Listas_desplegables" name="Listas_desplegables">Listas desplegables</h3>
+
+<p>Las listas desplegables se crean en HTML usando el elemento <code>select</code> . El usuario puede ver una sola elección en una caja de texto y hacer click en la flecha o algo similar como un botón pegado a la caja de texto para realizar una selección diferente. Las otras opciones aparecerán en una ventana emergente. XUL tiene un elemento <code>[[XUL:Elemento#menulista|lista de menú}}</code> que puede usarse para este proposito. Consiste en una caja de texto con un btón adjunto. El nombre se eligió porque muestra un menu emergente con las opciones en el.</p>
+
+<p>Se necesitan tres elementos para describir una lista desplegable. El primero es el elemento <code>menulist</code> , que crea la caja de texto con el botón adjunto. El segundo, <code><a href="es/XUL/Elemento#menupopup">menupopup</a></code>, crea la ventana de menu emergente que aparecerá cuando el botón sea pulsado. El tercero, <code><a href="es/XUL/Elemento#menuitem">menuitem</a></code>, crea cada opción individual.</p>
+
+<p>Su sintaxis se describe mejor con el siguiente ejemplo:</p>
+
+<p><strong>Ejemplo 5</strong> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_5.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_5.xul">Ver en funcionamiento</a></p>
+
+<div class="float-right"><img alt="Image:inputs2.png"></div>
+
+<pre>&lt;menulist label="Bus"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="Coche"/&gt;
+    &lt;menuitem label="Taxi"/&gt;
+    &lt;menuitem label="Bus" selected="true"/&gt;
+    &lt;menuitem label="Tren"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+
+<p>Esta lista de menu contiene cuatro opciones, una por cada elemento <code><a href="es/XUL/Elemento#menuitem">menuitem</a></code> . Para mostrar las opciones, haz click en el botón de flecha en la lista de menu. Cuando se seleccione uno, este aparecerá como la opción en la lista de menu. El atributo <code><a href="es/XUL/Atributo#selected">selected</a></code> se usa para indicar el valor que tendrá la selección por defecto.</p>
+
+<h4 id="Lista_de_men.C3.BA_editable" name="Lista_de_men.C3.BA_editable">Lista de menú editable</h4>
+
+<p>Por defecto, solo puedes seleccionar opciones de la lista. No puedes introducir tu propio texto tecleandolo dentro. Una variante del menulist permite editar el texto dentro del campo. Por ejemplo, el campo URL en el navegador tiene una lista desplegable para seleccionar URLs tecleadas anteriormente, pero puedes teclaearla tu mismo.</p>
+
+<p>Para clear un menulist editable, añada el atributo <code><a href="es/XUL/Atributo#editable">editable</a></code> como sigue: <strong>Ejemplo 6</strong> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_6.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_lists_6.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;menulist editable="true"&gt;
+  &lt;menupopup&gt;
+    &lt;menuitem label="www.mozilla.org"/&gt;
+    &lt;menuitem label="www.xulplanet.com"/&gt;
+    &lt;menuitem label="www.dmoz.org"/&gt;
+  &lt;/menupopup&gt;
+&lt;/menulist&gt;
+</pre>
+
+<p>El campo URL creado aqui tiene tres opciones predefinidas que el usuario puede seleccionar o puede introducir una propia escribiendo en el campo. El texto que el usuario introduzca no se añadirá como nueva opción. Porque el atributo <code>label</code> no se usa en este ejemplo, el valor por defecto será en blanco.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Controles_de_entrada" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Medidores_de_Progreso">Siguiente  »</a></p>
+</div>
+
+<p><span class="comment">Categorías</span></p>
+
+<p><span class="comment">links interwikis</span></p>

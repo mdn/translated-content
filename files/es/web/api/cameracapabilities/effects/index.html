@@ -1,0 +1,37 @@
+---
+title: CameraCapabilities.effects
+slug: Web/API/CameraCapabilities/effects
+translation_of: Archive/B2G_OS/API/CameraCapabilities/effects
+---
+<p>{{ ApiRef() }}</p>
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+<h2 id="Resumen">Resumen</h2>
+<p>El valor de la propiedad <code>effects</code> en un <code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code> que identifica los efectos  (tales como <code>normal</code>, <code>sepia</code>, <code>mono</code>, etc.) que soporta la camara.</p>
+<h2 id="Sintaxis">Sintaxis</h2>
+<pre>var effects = instanceOfCameraControl.capabilities.effects</pre>
+<h2 id="Valor">Valor</h2>
+<p>Devuelve un <code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/JavaScript/Reference/Global_Objects/Array">Array</a></code> de cadenas.</p>
+<h2 id="Ejemplo">Ejemplo</h2>
+<pre class="brush: js">var options = {
+  camera: navigator.mozCameras.getListOfCameras()[0]
+};
+
+function onSuccess(camera) {
+  var effects = camera.capabilities.effects;
+
+  effects.forEach(function (value) {
+    console.log(value)
+  });
+};
+
+navigator.mozCameras.getCamera(options, onSuccess)
+</pre>
+<h2 id="Specification" name="Specification">Especifiacion</h2>
+<p>No forma parte de ninguna especifiacion; en cualquier caso, esta API deberia ser eliminada cuando la <a class="external" href="http://dev.w3.org/2011/webrtc/editor/getusermedia.html" rel="external" title="http://dev.w3.org/2011/webrtc/editor/getusermedia.html">WebRTC Capture and Stream API</a> haya sido implementada.</p>
+<h2 id="Ver_tambien">Ver tambien</h2>
+<ul>
+ <li>{{domxref("CameraCapabilities")}}</li>
+ <li>{{domxref("CameraControl")}}</li>
+ <li>{{domxref("CameraManager")}}</li>
+</ul>

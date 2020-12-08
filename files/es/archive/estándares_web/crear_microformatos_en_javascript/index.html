@@ -1,0 +1,111 @@
+---
+title: Crear microformatos en JavaScript
+slug: Archive/Estándares_Web/Crear_microformatos_en_JavaScript
+tags:
+  - Firefox 3
+  - Microformats
+  - páginas_a_traducir
+translation_of: Archive/Web_Standards/Describing_microformats_in_JavaScript
+---
+<p> Los microformatos son descritos en JavaScript usando un formato de estructura estandarizada que tiene varios miembros estándar que describen el objeto.</p>
+
+<h3 id="Microformat_definition_format" name="Microformat_definition_format">Formato de definición de microformatos</h3>
+
+<p>La definición de microformatos debe contener las siguientes entradas:</p>
+
+<dl>
+ <dt><code>mfVersion</code></dt>
+ <dd>Especifica el numero de versión del microformato API a la definición de la cual fue escrita. Para Firefox 3, este debe ser fijado a 0.8.</dd>
+ <dt><code>mfObject</code></dt>
+ <dd>El objeto JavaScript que implementa el microformato.</dd>
+ <dt><code>className</code></dt>
+ <dd>Una cadena especificando el nombre de las clase de microformato como es referenciada en HTML (<code>class="<em>className</em>"</code>).</dd>
+ <dt><code>required</code></dt>
+ <dd>Un areglo indicando los nombres de todas las propiedades que deben ser especificadas. Este debe ser omitido si todas las propiedades son opcionales.</dd>
+ <dt><code>properties</code></dt>
+ <dd>Una estructura describiendo las propiedades del microformato.</dd>
+</dl>
+
+<h3 id="Property_specifications" name="Property_specifications">Especificaciones de las propiedades</h3>
+
+<p>Cada propiedad en la estructura <code>properties </code>es especificada por su nombre, y debe incluir atributos adicionales si la propiedad lo requiere. Los atributos estándar son:</p>
+
+<dl>
+ <dt><code>plural</code></dt>
+ <dd>Un valor booleano que, si  es <code>true </code>indica que la propiedad puede tener multiples valores. Si una propiedad es plural, este es retornado como un arreglo.</dd>
+ <dt><code>virtual</code></dt>
+ <dd>Un valor booleano que indica si la propiedad es virtual o no. Si esta es virtual, el metodo <code>virtualGetter() </code>sera llamado para intentar crear la propiedad si esta no existe.</dd>
+ <dt><code>virtualGetter</code></dt>
+ <dd>Una funcion que es creada para conseguir el valor de una propiedad virtual. Esta función es usada solo si <code>virtual </code>es <code>true</code>.</dd>
+ <dt><code>value</code></dt>
+ <dd>El valor por defecto de la propiedad.</dd>
+ <dt><code>subproperties</code></dt>
+ <dd>Es posible para una propiedad incluir en si misma mas propiedades; para hacer esto, se deben incluir en una estructura <code>subproperties </code>dentro de la propiedad.</dd>
+ <dt><code>dataType</code></dt>
+ <dd>El tipo de dato contenido por la propiedad. Los posibles valores son:</dd>
+ <dt><code>dateTime</code></dt>
+ <dd>Una fecha ISO</dd>
+ <dt><code>anyURI</code></dt>
+ <dd>Un URI</dd>
+ <dt><code>email</code></dt>
+ <dd>Una dirección de correo electrónico.</dd>
+ <dt><code>tel</code></dt>
+ <dd>Un numero de teléfono.</dd>
+ <dt><code>HTML</code></dt>
+ <dd>HTML incluyendo etiquetas.</dd>
+ <dt><code>float</code></dt>
+ <dd>Un numero de punto flotante.</dd>
+ <dt><code>microformat</code></dt>
+ <dd>Un microformato.</dd>
+ <dt><code>microformat_property</code></dt>
+ <dd>Una propiedad especifica dentro del microformato especificada por <code>microformat</code>.</dd>
+ <dt><code>custom</code></dt>
+ <dd>datos de aduana.</dd>
+</dl>
+
+<h3 id="A_simple_example" name="A_simple_example">Un ejemplo simple</h3>
+
+<p>El microformato hCard para definir información de contactos hace uso del microformato <code>adr </code>para definir una dirección. el microformato <code>adr </code>es definido a continuación:</p>
+
+<pre>var adr_definition = {
+  mfVersion: 0.8,
+  mfObject: adr,
+  className: "adr",
+  properties: {
+    "type" : {
+      plural: true,
+      types: ["work", "home", "pref", "postal", "dom", "intl", "parcel"]
+    },
+    "post-office-box" : {
+    },
+    "street-address" : {
+      plural: true
+    },
+    "extended-address" : {
+    },
+    "locality" : {
+    },
+    "region" : {
+    },
+    "postal-code" : {
+    },
+    "country-name" : {
+    }
+  }
+};
+</pre>
+
+<p>Las propiedades aqui son absolutamente simples. La propiedad <code>type </code>indica el tipo de dirección representada por el objeto (trabajo, hogar, y asi sucesivamente). Desde que la propiedad <code>plural</code> sea <code>true</code>, multiples tipos pueden ser especificados. Esto permite a una dirección ser marcada como sea, por ejemplo, una dirección de trabajo para recibir paquetes.</p>
+
+<p>La propiedad <code>street-address</code> es tambien <code>plural</code>. Esto permite que multiples líneas de información sean contenidas en el arreglo <code>street-address.</code></p>
+
+<p>El microformato esta registrado con el microformato API llamando <code><a href="/es/Using_microformats#add.28.29" title="es/Using_microformats#add.28.29">Microformats.add()</a></code>, como este:</p>
+
+<pre class="eval">Microformats.add("adr", adr_definition);
+</pre>
+
+<p></p><div class="note"><strong>Nota:</strong>  Para ser claro: desde que el  microformato <code>adr</code> esta incluido por defecto en Firefox 3 y posteriores, usted no necesita agregarlo por si mismo si necesita usarlo. </div><p></p>
+
+<h3 id="See_also" name="See_also">Ver tambien</h3>
+
+<p><a href="/es/Using_microformats" title="es/Using_microformats">Using microformats</a>, <a href="/es/Parsing_microformats_in_JavaScript" title="es/Parsing_microformats_in_JavaScript">Parsing microformats in JavaScript</a></p>

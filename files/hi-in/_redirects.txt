@@ -1,0 +1,4 @@
+# FROM-URL	TO-URL
+/hi-IN/docs/%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%B5%E0%A4%A8%E0%A4%BE	/hi-IN/docs/Mozilla/Developer_guide/Introduction
+/hi-IN/docs/MDN/Feedback	/hi-IN/docs/MDN/Contribute/Feedback
+/hi-IN/docs/MDN/Getting_started	/hi-IN/docs/MDN/Contribute/Getting_started

@@ -1,0 +1,33 @@
+---
+title: CameraCapabilities.maxExposureCompensation
+slug: Web/API/CameraCapabilities/maxExposureCompensation
+translation_of: Archive/B2G_OS/API/CameraCapabilities/maxExposureCompensation
+---
+<p>{{ ApiRef() }}</p>
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+<h2 id="Resumen">Resumen</h2>
+<p>La propiedad <code>maxExposureCompensation</code> es un número que define el valor máximo de compensación de exposición soportado.</p>
+<h2 id="Sintaxis">Sintaxis</h2>
+<pre>var max = instanceOfCameraControl.capabilities.maxExposureCompensation</pre>
+<h2 id="Valor">Valor</h2>
+<p>Devuelve un número.</p>
+<h2 id="Ejemplo">Ejemplo</h2>
+<pre class="brush: js">var options = {
+  camera: navigator.mozCameras.getListOfCameras()[0]
+};
+
+function onSuccess(camera) {
+  console.log(camera.capabilities.maxExposureCompensation);
+};
+
+navigator.mozCameras.getCamera(options, onSuccess)
+</pre>
+<h2 id="Specification" name="Specification">Especificación</h2>
+<p>No forma parte de ninguna especificación; No obstante, esta API debería ser eliminada cuando la <a class="external" href="http://dev.w3.org/2011/webrtc/editor/getusermedia.html" rel="external" title="http://dev.w3.org/2011/webrtc/editor/getusermedia.html">WebRTC Capture and Stream API</a> haya sido implementada.</p>
+<h2 id="Ver_también">Ver también</h2>
+<ul>
+ <li>{{domxref("CameraCapabilities")}}</li>
+ <li>{{domxref("CameraControl")}}</li>
+ <li>{{domxref("CameraManager")}}</li>
+</ul>

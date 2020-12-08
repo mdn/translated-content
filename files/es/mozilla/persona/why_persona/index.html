@@ -1,0 +1,30 @@
+---
+title: ¿Por qué Mozilla Persona?
+slug: Mozilla/Persona/Why_Persona
+translation_of: Archive/Mozilla/Persona/Why_Persona
+---
+<p style="">El sistema de nombres de  usuarios y contraseñas que prevalece es insostenible: los usuarios están obligados a crear y recordar una nueva, y compleja contraseña para cada sitio y servicio que utilizan, y cada sitio tiene que almacenar dichas contraseñas de manera segura. Sin embargo, brechas recientes demuestran que inclusive las compañías más prominentes tienen fallos de seguridad al almacenar las contraseñas, lo cual expone la información del usuario.</p>
+<p style="">"Persona" es un sistema de identificación abierto, distribuído, a escala web que reemplaza las contraseñas para cada sitio. Aborda las deficiencias relacionadas a la usabilidad y privacidad de sistemas tales como OpenID sin recurrir a una infraestructura centralizada como Facebook connect.</p>
+<h2 id="Persona_se_deshace_de_las_contraseñas_para_cada_sitio">Persona se deshace de las contraseñas para cada sitio</h2>
+<p>En lugar de contraseñas para cada sitio, Persona permite que los usuarios se autentiquen en los diferentes sitios con tan sólo dos clics después de completar un proceso sencillo, que se realiza una sola vez para cada una de sus identidades. Esto es seguro, y está respaldado por un sistema de cifrado de clave pública. En lugar de una contraseña, el navegador web del usuario genera una confirmación de identidad cifrada que expira después de unos pocos minutos y es únicamente válido para un solo sitio. Debido a que no existen contraseñas específicas por sitio, los sitios web que utilizan Persona no tienen que preocuparse sobre el almacenamiento seguro o de pérdidas de las contraseñas en su base de datos.</p>
+<p>Este proceso de registro rápido también reduce la desavenencia a los usuarios cada vez que visiten sitios nuevos.</p>
+<h2 id="Las_identidades_Persona_son_los_correos_electrónicos">Las identidades Persona son los correos electrónicos</h2>
+<p>Lejos de utilizar nombres de usuario de manera libre, Persona utiliza los correos electrónicos como identidades. Esto ofrece muchos beneficios tanto para los usuarios como para los desarrolladores:</p>
+<h3 id="El_usuario_se_beneficia_al_utilizar_direcciones_de_correo_electrónico">El usuario se beneficia al utilizar direcciones de correo electrónico</h3>
+<ul>
+  <li>Los usuarios conocen de antemano sus correos electrónicos, a diferencia de aprender una nueva y potencialmente confusa dirección URL con OpenID.</li>
+  <li>Las direcciones de correo electrónico capturan de manera elegante la idea de <code>alguien@algun-contexto</code>, haciendo fácil para los usuarios el poder mantener sus identidades <code>@trabajo</code>, <code>@hogar</code>, o <code>@escuela</code> separadas. Esto se diferencia de la tendencia de consolidar las identidades a través de un nombre verdadero, políticas que limitan a una cuenta única en las redes sociales tales como Facebook y Google+.</li>
+  <li>El correo electrónico puede tener su propio hosting o delegado a otros proveedores, dándole control a los usuarios sobre su identidad.</li>
+</ul>
+<h3 id="Los_desarrolladores_se_benefician_al_utilizar_direcciones_de_correo_electrónico">Los desarrolladores se benefician al utilizar direcciones de correo electrónico</h3>
+<ul>
+  <li>Las direcciones de correo electrónico ofrecen a los desarrolladores un medio directo para contactar a sus usuarios.</li>
+  <li>La mayoría de los sitios requieren de una dirección de correo electrónico para registrar sus usuarios, Persona ofrece esta información de manera automática cuando un usuario se registra, eliminando la necesidad de un formulario adicional para esta información después del registro.</li>
+  <li>Muchos sistemas de acceso de antemano utilizan la dirección de correo electrónico como únicos. Esto significa que Persona se adapta perfectamente, y puede ser integrado junto a sistemas de acceso existentes.</li>
+</ul>
+<p>Sin mencionar que los correos electrónicos ya son sistemas distribuídos con billones de cuentas a través de diferentes proveedores.</p>
+<h2 id="¿Qué_diferencia_a_Persona_de_otros_proveedores_de_acceso_sencillo" style="">¿Qué diferencia a Persona de otros proveedores de acceso sencillo?</h2>
+<p>"Persona" es seguro, y fácil. Protege la privacidad del usuario, control del usuario, y elección del usuario de formas que los otros proveedores no hacen o no pueden:</p>
+<p>Muchas redes sociales tales como Facebook y Google+ obligan a que los usuarios utilicen sus nombres verdaderos, y limitan a los usuarios a una sola cuenta. Al estar construida encima de direcciones de correo electrónico, Persona permite que los usuarios mantengas sus identidades separadas, ya sea de trabajo, hogar, escuela u otras.</p>
+<p>"Persona" es abierta y distribuída: cualquiera con un correo electrónico puede registrarse en sitios que utilicen Persona. Y no es sólo eso, cualquiera puede alojar su propio proveedor de identidad o delegar a otras autoridades, al igual que con el correo electrónico. Esto difiere a los servicios de acceso que ofrecen los sitios sociales, los cuales requieren una cuenta en un servicio único y centralizado.</p>
+<p>"Persona" también toma un alcance novedoso para proteger la privacidad del usuario al colocar el navegador web del usuario en medio del proceso de autenticación: el navegador obtiene las credenciales del proveedor de correo electrónico que utiliza el usuario, y luego presenta esas credenciales al sitio web. El proveedor de correo electrónico no puede rastrear al usuario, pero los sitios web pueden seguir confiando en la identidad del usuario al verificar dichas credenciales de manera cifrada. La mayoría de otros sistemas, inclusive aquellas que son distribuídas como el OpenID, requiere que los sitios "llamen a casa" antes de permitir que un usuario ingrese.</p>

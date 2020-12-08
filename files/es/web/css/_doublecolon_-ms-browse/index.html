@@ -1,0 +1,97 @@
+---
+title: '::-ms-browse'
+slug: 'Web/CSS/::-ms-browse'
+tags:
+  - CSS
+  - No estándar(2)
+  - Pseudo-elemento
+  - Referencia
+translation_of: 'Archive/Web/CSS/::-ms-browse'
+---
+<div>{{CSSRef}}{{Non-standard_header}}</div>
+
+<h2 id="Resumen">Resumen</h2>
+
+<p>El <a href="/es/docs/Web/CSS/Pseudo-elements">pseudo-elemento </a>CSS  <strong><code>::-ms-browse</code></strong> representa el botón para abrir el selector de archivos de un  {{HTMLElement("input")}} con <code>type="file"</code>.</p>
+
+<div class="note">
+<p><strong>Nota:</strong> No se pueden usar todas las propiedades con este pseudo-elemento. Hay una  <a href="https://msdn.microsoft.com/es/library/windows/apps/hh779844.aspx">lista de propiedades permitidas en la documentación MSDN</a>.</p>
+</div>
+
+<h2 id="Ejemplo">Ejemplo</h2>
+
+<h3 id="Contenido_HTML">Contenido HTML</h3>
+
+<pre class="brush: html">&lt;label&gt;Select image: &lt;input type="file"&gt;&lt;/label&gt;</pre>
+
+<h3 id="Contenido_CSS">Contenido CSS</h3>
+
+<pre class="brush: css">input[type="file"]::-ms-browse
+{
+  color: red;
+  background-color: yellow;
+}</pre>
+
+<h3 id="Salida">Salida</h3>
+
+<p>{{EmbedLiveSample('Example')}}</p>
+
+<h3 id="Resultado_del_ejemplo">Resultado del ejemplo</h3>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12744/bandicam%202016-03-11%2017-19-55-369.jpg" style="height: 188px; width: 680px;"></p>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<p>No es parte de ninguna especificación pero Miscrosoft tiene una  <a href="https://msdn.microsoft.com/en-us/library/windows/apps/hh779844.aspx">descripción de :<code>:-ms-browse</code> en MSDN</a>.</p>
+
+<h2 id="Compatibilidad_con_los_distintos_navegadores">Compatibilidad con los distintos navegadores</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>10</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>

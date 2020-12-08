@@ -1,0 +1,127 @@
+---
+title: Preferencias del Administrador de Descargas
+slug: Preferencias_del_Administrador_de_Descargas
+tags:
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/Download_Manager_preferences
+---
+<p>Hay varias preferencias usadas por el Administrador de Descargas. Este artículo ofrece una lista de ellas.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Preferencia</th>
+   <th>Descripción</th>
+  </tr>
+  <tr>
+   <td><code>browser.download.manager.showAlertOnComplete</code></td>
+   <td>Un valor booleano que indica si debe ser mostrada o no una aleerta cuando se completa la descarga.<br>
+    <em>Valor por defecto es <code>true</code></em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.download.manager.showAlertInterval</code></td>
+   <td>El número mínimo de mili segundos que deben transcurrir entre alertas de descarga completa.<br>
+    <em>Valor por defecto: 2000 (2 segundos)</em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.download.manager.retention</code></td>
+   <td>Indica por cuanto tiempo deben permanecer las descargas en la cola del Administrador de Descargas, tras haber sido completadas con éxito. 0 indica que la descarga puede ser eliminada una vez completada, 1 indica que las descargas completadas y las abandonadas deben desparecer al cerrar el navegador, 2 indica que las descargas no deben ser nunca eliminadas automáticamente.<br>
+    <em>En <strong>Firefox</strong> por defecto el valor es 2</em>.<br>
+    <em>En <strong>Thunderbird</strong> el valor por defecto es 1</em>;<br>
+    <em>Si la <strong>preferencia no existe</strong>, el valor usado es 0</em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.download.manager.quitBehavior</code></td>
+   <td>Indica lo que debería pasar con las descargas en progreso si se cierra el navegador. 0 indica que la descarga debería ponerse en pausa y reanudarse automáticamente la siguiente vez que se inicie el navegador, 1 indica que la descarga pero que no debería reanudarse automáticamente y 2 indica que la descarga debe ser cancelada al salir.<br>
+    <em>El valor por defecto es 0 (reanudar en la próxima apertura)</em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.download.manager.closeWhenDone</code></td>
+   <td>Un valor boleano indicando si la ventana del Administrador de Descargas deberá ser cerrada o no cuando se completen las descargas.<br>
+    <em>En <strong>Thunderbird</strong> este valor es por defecto <code>true</code></em>.<br>
+    <em>En <strong>Otras aplicaciones</strong> el valor por defecto es <code>false</code></em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.download.manager.addToRecentDocs</code></td>
+   <td>Un valor booleano que indica si las nuevas descargas deben ser añadidas o no a la lista de documentos recientes.<br>
+    <em>El valor por defecto es <code>true</code></em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.download.manager.scanWhenDone</code></td>
+   <td>Un valor booleano que indica si hay que realizar o no un análisis anti-virus cuando se ha completado una descarga. En Windows XP SP2 y Windows Vista, este valor también indica si las descargas presentan un aviso de seguridad al abrir los archivos.<br>
+    <em>El valor por defecto es <code>true</code></em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.helperApps.deleteTempFileOnExit</code></td>
+   <td>Un valor booleano que indica si hay que borrar o no el archivo temporal usado para la descarga, una vez completada esta.<br>
+    <em>En <strong>Mac</strong> el valor por defecto es <code>false</code></em>.<br>
+    <em>En <strong>Otros OS</strong> el valor por defecto es <code>true</code></em></td>
+  </tr>
+  <tr>
+   <td><code>browser.download.manager.flashCount</code></td>
+   <td>Indica el número de veces que el interfaz de usuario debe parpadear para llamar la atención del usuario, cuando la descarga está completa.<br>
+    <em>El valor por defecto es 2</em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.download.manager.focusWhenStarting</code></td>
+   <td>Un valor booleano que indica si poner o no el foco en la ventana del Administrador de Descargas cuando se inicia una descarga.<br>
+    <em>En <strong>Firefox</strong> y <strong>Thunderbird</strong> el valor por defecto es <code>false</code></em>.<br>
+    <em>En <strong>Otras aplicaciones</strong> el valor por defecto es <code>true</code></em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.download.manager.showWhenStarting</code></td>
+   <td>Un valor booleano que indica si mostrar o no la ventana de descarga cuando se inicia una descarga.<br>
+    <em>El valor por defecto es <code>true</code></em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.download.manager.useWindow</code></td>
+   <td>Un valor booleano indicando si se debe usar la ventana de descargas (<code>true</code>) o presentar el estado en la barra de estado (<code>false</code>) en la ventana del navegador.<br>
+    <em>El valor por defecto es <code>true</code></em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.download.useDownloadDir</code></td>
+   <td>Un valor booleano que indica si la preferencia de usuario es guardar automáticamente las descargas en el directorio de descargas. Si este valor es <code>false</code>, el usuario es preguntado sobre qué hacer.<br>
+    <em>En <strong>Thunderbird</strong> el valor por defecto es <code>false</code></em>.<br>
+    <em>En <strong>Otras aplicaciones</strong> el valor por defecto es <code>true</code></em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.download.antivirus.dontclean</code></td>
+   <td>Un valor booleano que indica si el software anti-virus debe intentar limpiar un archivo descargado cuando se ha detectado un virus.<br>
+    <em>El valor por defecto es <code>false</code></em>.</td>
+  </tr>
+  <tr>
+   <td><code>browser.download.manager.alertOnEXEOpen</code></td>
+   <td>Un valor booleano que indica si el iterfaz de usuario debe alertar al usuario acerca de los peligros de abrir (ejecutar) un archivo .EXE. El usuario puede marcar la casilla de "No volver a preguntar" en el interfaz .<br>
+    <em>El valor por defecto es <code>true</code></em>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>Si una preferencia no está marcada cuando el Administrador de Descargas la busca, éste asume el valor por defecto pero no necesariamente añadirá la preferencia. La siguiente tabla, sin embargo, incluye las preferencia que deben ser incluidas en todo producto para que funcione el Administrador.</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>Preferencia</th>
+   <th>Descripción</th>
+  </tr>
+  <tr>
+   <td><code>browser.download.folderList</code></td>
+   <td>Indica el directorio por defecto dónde descargar los archivos. 0 indica el escritorio, 1 indica el directorio por defecto del sistema operativo, 2 indica un directorio escogido (ver: <code>browser.download.dir</code>) folder.<br>
+    <em><strong>Firefox</strong> y <strong>Thunderbird</strong> ponen el valor por defecto a <code>0</code></em>*.<br>
+    * - <small>Firefox en <strong>Windows Vista</strong> cambia esta preferencia a <code>1</code> en la primera ejecución.</small></td>
+  </tr>
+  <tr>
+   <td><code>browser.download.dir</code></td>
+   <td>Un directorio local que el usuario puede haber seleccionado para descargar archivos. La migración de las propiedades de otros navegadores pueden alterar este valor. Este directorio se habilita cuando <code>browser.download.folderList</code> es igual a 2.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h3>
+
+<ul>
+ <li><code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager" title="">nsIDownloadManager</a></code></li>
+ <li><code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownload" title="">nsIDownload</a></code></li>
+ <li><code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManagerUI" title="">nsIDownloadManagerUI</a></code></li>
+</ul>

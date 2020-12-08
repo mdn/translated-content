@@ -1,0 +1,159 @@
+---
+title: border-image-slice
+slug: Web/CSS/border-image-slice
+tags:
+  - Bordes CSS
+  - CSS
+  - Propiedad CSS
+  - Referencia
+translation_of: Web/CSS/border-image-slice
+---
+<div>{{CSSRef}}</div>
+
+<h2 id="Resumen">Resumen</h2>
+
+<p>La propiedad CSS <strong><code>border-image-slice</code></strong> divide la imagen especificada por {{cssxref("border-image-source")}} en nueve regiones: las cuatro esquinas, los cuatro bordes y el espacio enmedio. Esto se hace especificando cuatro desplazamientos hacia adentro.</p>
+
+<p><a href="/files/3814/border-image-slice.png" style="float: left;"><img alt="The nine slices defined by the CSS border-image shorthand or border-image-slice longhand properties" src="/files/3814/border-image-slice.png" style="height: 132px; margin: 1px; padding: 1em; width: 250px;"></a>Cuatro valores controlan la posición de las líneas de corte. Si algunas no son especificada, se infieren de las otras, con la sintaxis común de cuatro valores de CSS.</p>
+
+<p>La región media no es usada por el borde en sí, pero sí se usa como imagen de fondo si se establece la palabra clave <code>fill</code>. Se puede establecer este valor en cualquier posición en la propiedad (antes, después o entre los otros valores).</p>
+
+<p>Las propiedades {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}} y {{cssxref("border-image-outset")}} definen cómo se usarán estas imágenes.</p>
+
+<p>La propiedad abreviada {{cssxref("border-image")}} podría restaurar esta propiedad a su valor predeterminado.</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="brush:css">/* border-image-slice: <em>slice</em> */
+border-image-slice: 30%;
+
+/* border-image-slice: <em>horizontal</em> <em>vertical</em> */
+border-image-slice: 10% 30%;
+
+/* border-image-slice: <em>top</em> <em>horizontal</em> <em>bottom</em> */
+border-image-slice: 30 30% 45;
+
+/* border-image-slice: <em>top</em> <em>right</em> <em>bottom</em> <em>left</em> */
+border-image-slice: 7 12 14 5;
+
+/* border-image-slice: … fill */
+/* The fill value can be placed between any value */
+border-image-slice: 10% fill 7 12;
+
+/* Global values */
+border-image-slice: inherit;
+border-image-slice: initial;
+border-image-slice: unset;
+</pre>
+
+<h3 id="Valores">Valores</h3>
+
+<dl>
+ <dt><em>slice</em></dt>
+ <dd>Es un valor {{cssxref("&lt;number&gt;")}} o {{cssxref("&lt;percentage&gt;")}} de la separación de las cuatro líneas de corte. Un valor {{cssxref("&lt;number&gt;")}} representa <em>píxeles</em> para imágenes de mapa de bits y <em>coordenadas</em> para imágenes vectoriales. A su vez, los valores {{cssxref("&lt;percentage&gt;")}} son relativos a la altura o anchura de la imagen, según sea más adecuado. Valores negativos son inváildos, y valores mayores al tamaño relevante, anchura o altura, son restringidos a <code>100%</code>.</dd>
+ <dt><em>horizontal</em></dt>
+ <dd>Es un valor {{cssxref("&lt;number&gt;")}} o {{cssxref("&lt;percentage&gt;")}} de la separación de las dos líneas de corte horizontales, la superior y la inferior. El valor {{cssxref("&lt;number&gt;")}} representa <em>píxeles</em> para imágenes de mapa de bits y <em>coordenadas</em> para imágenes vectoriales. A su vez, los valores {{cssxref("&lt;percentage&gt;")}} son relativos a la altura o anchura de la imagen, según sea más adecuado. Valores negativos son inválidos, y valores mayores al tamaño relevante, altura o anchura, son restringidos a <code>100%</code>.</dd>
+ <dt><em>vertical</em></dt>
+ <dd>Es un valor {{cssxref("&lt;number&gt;")}} o {{cssxref("&lt;percentage&gt;")}} de la separación de las dos líneas de corte verticales, la izquierda y la derecha. El valor {{cssxref("&lt;number&gt;")}} representa <em>píxeles</em> para imágenes de mapa de bits y <em>coordenadas</em> para imágenes vectoriales. A su vez, los valores {{cssxref("&lt;percentage&gt;")}} son relativos a la altura o anchura de la imagen, según sea más adecuado. Valores negativos son inválidos, y valores mayores al tamaño relevante, altura o anchura, son restringidos a <code>100%</code>.</dd>
+ <dt><em>top</em></dt>
+ <dd>Es un valor {{cssxref("&lt;number&gt;")}} o {{cssxref("&lt;percentage&gt;")}} de la separación de la línea de corte superior. El valor {{cssxref("&lt;number&gt;")}} representa <em>píxeles</em> para imágenes de mapa de bits y <em>coordenadas</em> para imágenes vectoriales. A su vez, los valores {{cssxref("&lt;percentage&gt;")}} son relativos a la altura o anchura de la imagen, según sea más adecuado. Valores negativos son inválidos, y valores mayores al tamaño relevante, altura o anchura, son restringidos a <code>100%</code>.</dd>
+ <dt><em>bottom</em></dt>
+ <dd>Es un valor {{cssxref("&lt;number&gt;")}} o {{cssxref("&lt;percentage&gt;")}} de la separación de la línea de corte inferior. El valor {{cssxref("&lt;number&gt;")}} representa <em>píxeles</em> para imágenes de mapa de bits y <em>coordenadas</em> para imágenes vectoriales. A su vez, los valores {{cssxref("&lt;percentage&gt;")}} son relativos a la altura o anchura de la imagen, según sea más adecuado. Valores negativos son inválidos, y valores mayores al tamaño relevante, altura o anchura, son restringidos a <code>100%</code>.</dd>
+ <dt><em>right</em></dt>
+ <dd>Es un valor {{cssxref("&lt;number&gt;")}} o {{cssxref("&lt;percentage&gt;")}} de la separación de la línea de corte derecha. El valor {{cssxref("&lt;number&gt;")}} representa <em>píxeles</em> para imágenes de mapa de bits y <em>coordenadas</em> para imágenes vectoriales. A su vez, los valores {{cssxref("&lt;percentage&gt;")}} son relativos a la altura o anchura de la imagen, según sea más adecuado. Valores negativos son inválidos, y valores mayores al tamaño relevante, altura o anchura, son restringidos a <code>100%</code>.</dd>
+ <dt><em>left</em></dt>
+ <dd>Es un valor {{cssxref("&lt;number&gt;")}} o {{cssxref("&lt;percentage&gt;")}} de la separación de la línea de corte izquierda. El valor {{cssxref("&lt;number&gt;")}} representa <em>píxeles</em> para imágenes de mapa de bits y <em>coordenadas</em> para imágenes vectoriales. A su vez, los valores {{cssxref("&lt;percentage&gt;")}} son relativos a la altura o anchura de la imagen, según sea más adecuado. Valores negativos son inválidos, y valores mayores al tamaño relevante, altura o anchura, son restringidos a <code>100%</code>.</dd>
+ <dt><code>fill</code></dt>
+ <dd>Es una palabra clave cuya presencia forza que la región media de la imagen sea mostrada sobre la imagen de fondo; su tamaño y altura son redimensionados acorde a los fragmentos superior e izquierdo, respectivamente.</dd>
+ <dt><code>inherit</code></dt>
+ <dd>Es una palabra clave que indica que los cuatro valores serán heredados de los valores calculados de su elemento padre.</dd>
+</dl>
+
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estatus</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Backgrounds', '#border-image-slice', 'border-image-slice')}}</td>
+   <td>{{Spec2('CSS3 Backgrounds')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>15.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("15.0")}}<sup>[1]</sup></td>
+   <td>11</td>
+   <td>15</td>
+   <td>6</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>4.1{{property_prefix("-webkit")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("15.0")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Hasta Gecko 47.0 {{geckoRelease("47.0")}} las imágenes SVGs sin viewport no eran divididas correctamente ({{bug("619500")}}). A partir de Gecko 48.0 {{geckoRelease("48.0")}} son mostradas igual que los SVGs con viewport, aunque si las partes no son exactamente el 50%, son ajustadas incorrectamente ({{bug("1264809")}}). Esto fue arreglado en Gecko 49.0 {{geckoRelease("49.0")}}, aunque aun hay un problema con los SVGs sin viewport donde <a href="https://wiki.mozilla.org/Electrolysis">e10s</a> es deshabilitado ({{bug("1284798")}}).</p>
+
+<p>También, SVGs pequeños son ajustados incorrectamente, porque los porcentajes en {{cssxref("border-image-slice")}} son calculados como enteros, en vez de reales ({{bug("1284797")}}).</p>
+
+<h2 id="Véase_también">Véase también</h2>
+
+<ul>
+ <li><a href="/es/docs/Web/CSS/Shorthand_properties#Tricky_edge_cases">Illustrated description of the 1-to-4-value syntax</a></li>
+</ul>

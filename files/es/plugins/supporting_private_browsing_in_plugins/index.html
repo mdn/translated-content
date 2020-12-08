@@ -1,0 +1,10 @@
+---
+title: Supporting private browsing in plugins
+slug: Plugins/Supporting_private_browsing_in_plugins
+translation_of: Archive/Plugins/Supporting_private_browsing_in_plugins
+---
+<p>{{ fx_minversion_header(3.5) }}</p>
+<p>Firefox 3.5 introduced private browsing, a mode in which potentially private information is not recorded in any way.  It also introduced a mechanism by which plugins can determine whether or not private browsing mode is in effect.  Plugins should be updated to monitor the state of private browsing mode and only save private information when private browsing is disabled.</p>
+<p>Potentially private information may include (but is not necessarily limited to) history information for downloaded data.  For example, if private browsing mode is in effect, video player plugins should not record the URLs of watched videos in their histories.</p>
+<h2 id="Detecting_private_browsing_mode">Detecting private browsing mode</h2>
+<p>Plug-ins can detect whether or not private browsing mode is in effect by using the <a class="internal" href="/en/NPN_GetValue" title="En/NPN GetValue"><code>NPN_GetValue()</code></a> function to check the current value of the <code>NPNVprivateModeBool</code> variable.</p>

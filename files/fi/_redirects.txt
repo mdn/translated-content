@@ -1,0 +1,6 @@
+# FROM-URL	TO-URL
+/fi/docs/Apps	/fi/docs/Web/Apps
+/fi/docs/Etusivu	/fi/docs/Web
+/fi/docs/Skinin_luominen_Firefoxiin:Aloittaminen	/fi/docs/Skinin_luominen_Firefoxiin/Aloittaminen
+/fi/docs/WebGL	/fi/docs/Web/API/WebGL_API
+/fi/docs/en	/en-US/

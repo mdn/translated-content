@@ -1,0 +1,404 @@
+---
+title: width
+slug: Web/CSS/width
+tags:
+  - Propiedad CSS
+  - Referencia
+translation_of: Web/CSS/width
+---
+<div>{{CSSRef}}</div>
+
+<h2 id="Resumen">Resumen</h2>
+
+<p>La propiedad <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>width</code></strong> especifica la anchura del area de contenido de un elemento. El <a href="/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area">área de contenido</a> está <em>dentro</em> del padding, borde, y margen del elemento.</p>
+
+<p>Las propiedades {{cssxref("min-width")}} y {{cssxref("max-width")}} sobreescriben el valor de {{cssxref("width")}}.</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="brush:css">/* Valores &lt;length&gt; */
+width: 300px;
+width: 25em;
+
+/* Valores &lt;percentage&gt; */
+width: 75%;
+
+/* Valores clave */
+width: 25em border-box;
+width: 75% content-box;
+width: max-content;
+width: min-content;
+width: available;
+width: fit-content;
+width: auto;
+
+/* Valores globales */
+width: inherit;
+width: initial;
+width: unset;
+</pre>
+
+<h3 id="Valores">Valores</h3>
+
+<dl>
+ <dt><code>&lt;length&gt;</code></dt>
+ <dd>Ver {{cssxref("&lt;length&gt;")}} para unidades disponibles.</dd>
+ <dt><code>&lt;percentage&gt;</code></dt>
+ <dd>Especificado con el tipo {{cssxref("&lt;percentage&gt;")}} como porcentaje de la anchura del bloque contenedor. Si la anchura del bloque contenedor depende de la anchura del elemento, la presentación resultante es indefinida.</dd>
+ <dt><code>border-box </code>{{experimental_inline}}</dt>
+ <dd>Si está presente, el valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} precedente es aplicado a los límites del borde del elemento.</dd>
+ <dt><code>content-box</code> {{experimental_inline}}</dt>
+ <dd>Si está presente, el valor {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} precedente será aplicado a los límites de contenido del elemento.</dd>
+ <dt><code>auto</code></dt>
+ <dd>El navegador calculará y seleccionará la anchura para el elemento especificado.</dd>
+ <dt>fill {{experimental_inline}}</dt>
+ <dd>Use el tamaño <code>fill-available</code> para elementos inline o block, según sea más apropiado para el modo de escritura.</dd>
+ <dt><code>max-content</code> {{experimental_inline}}</dt>
+ <dd>La anchura preferida intrínseca.</dd>
+ <dt><code>min-content</code> {{experimental_inline}}</dt>
+ <dd>La anchura mínima intrínseca.</dd>
+ <dt><code>available</code> {{experimental_inline}}</dt>
+ <dd>La anchura del bloque contenedor menos su margen horizontal, borde y padding.</dd>
+ <dt><code>fit-content</code> {{experimental_inline}}</dt>
+ <dd>El mayor entre:
+ <ul>
+  <li>la anchura mínima intrínseca</li>
+  <li>la menor entre la anchura prefereida intrínseca y la anchura disponible</li>
+ </ul>
+ </dd>
+</dl>
+
+<h3 id="Sintaxis_formal">Sintaxis formal</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<h3 id="Anchura_predeterminada">Anchura predeterminada</h3>
+
+<pre class="brush:css">p.goldie {
+  background: gold;
+}</pre>
+
+<pre class="brush:html">&lt;p class="goldie"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+
+<p>{{EmbedLiveSample('Default_width', '500px', '64px')}}</p>
+
+<h3 id="Píxeles_y_ems">Píxeles y ems</h3>
+
+<pre class="brush: css">.px_length {
+  width: 200px;
+  background-color: red;
+  color: white;
+  border: 1px solid black;
+}
+
+.em_length {
+  width: 20em;
+  background-color: white;
+  color: red;
+  border: 1px solid black;
+}
+</pre>
+
+<pre class="brush: html">&lt;div class="px_length"&gt;Width measured in px&lt;/div&gt;
+&lt;div class="em_length"&gt;Width measured in em&lt;/div&gt;</pre>
+
+<p>{{EmbedLiveSample('Pixels_and_ems', '500px', '64px')}}</p>
+
+<h3 id="Porcentaje">Porcentaje</h3>
+
+<pre class="brush: css">.percent {
+  width: 20%;
+  background-color: silver;
+  border: 1px solid red;
+}</pre>
+
+<pre class="brush: html">&lt;div class="percent"&gt;Width in percentage&lt;/div&gt;</pre>
+
+<p>{{EmbedLiveSample('Percentage', '500px', '64px')}}</p>
+
+<h3 id="max-content">max-content</h3>
+
+<pre class="brush:css;">p.maxgreen {
+  background: lightgreen;
+  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content;    /* Firefox/Gecko */
+  width: -webkit-max-content; /* Chrome */
+}</pre>
+
+<pre class="brush:html">&lt;p class="maxgreen"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+
+<p>{{EmbedLiveSample('max-content', '500px', '64px')}}</p>
+
+<h3 id="min-content">min-content</h3>
+
+<pre class="brush:css">p.minblue {
+  background: lightblue;
+  width: -moz-min-content;    /* Firefox */
+  width: -webkit-min-content; /* Chrome */
+}</pre>
+
+<pre class="brush:html">&lt;p class="minblue"&gt;The Mozilla community produces a lot of great software.&lt;/p&gt;</pre>
+
+<p>{{EmbedLiveSample('min-content', '500px', '155px')}}</p>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentarios</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Box', '#the-width-and-height-properties', 'width')}}</td>
+   <td>{{Spec2('CSS3 Box')}}</td>
+   <td>Añade las palabras clave <code>max-content</code>, <code>min-content</code>, <code>available</code>, <code>fit-content</code>, <code>border-box</code>, <code>content-box</code>.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'width')}}</td>
+   <td>{{Spec2('CSS3 Transitions')}}</td>
+   <td>Incluye <code>width</code> como propiedad que puede ser animada.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS2.1', 'visudet.html#the-width-property', 'width')}}</td>
+   <td>{{Spec2('CSS2.1')}}</td>
+   <td>Especifica a qué elementos es aplicable.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS1', '#width', 'width')}}</td>
+   <td>{{Spec2('CSS1')}}</td>
+   <td>Definición inicial</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Sizing', '#width-height-keywords', 'width')}}</td>
+   <td>{{Spec2('CSS3 Sizing')}}</td>
+   <td>Añade nuevas palabras clave de tamaño para <code>width</code> y <code>height</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("1.0")}}</td>
+   <td>4</td>
+   <td>3.5</td>
+   <td>1.0 (85)</td>
+  </tr>
+  <tr>
+   <td>Capacidad de ser animada{{experimental_inline}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("16.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>max-content</code>{{experimental_inline}}</td>
+   <td>{{CompatChrome(22.0)}} {{property_prefix("-webkit")}}<br>
+    {{CompatChrome(46.0)}} [1]</td>
+   <td>{{CompatGeckoDesktop("1.9")}}{{property_prefix("-moz")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>15 {{property_prefix("-webkit")}}</td>
+   <td>2.0 (421) (<code>intrinsic</code> value)<br>
+    6.1 {{property_prefix("-webkit")}}</td>
+  </tr>
+  <tr>
+   <td><code>min-content</code>{{experimental_inline}}</td>
+   <td>
+    <p>{{CompatChrome(22.0)}} [4] {{property_prefix("-webkit")}}<br>
+     {{CompatChrome(46.0)}} [1]</p>
+   </td>
+   <td>{{CompatGeckoDesktop("1.9")}} {{property_prefix("-moz")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>15 {{property_prefix("-webkit")}}</td>
+   <td>2.0 (421) (<code>min-intrinsic</code> value)<br>
+    6.1 {{property_prefix("-webkit")}}</td>
+  </tr>
+  <tr>
+   <td><code>available</code>{{experimental_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("1.9")}} {{property_prefix("-moz")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}<sup>[1]</sup></td>
+  </tr>
+  <tr>
+   <td><code>fill-available</code>{{experimental_inline}}</td>
+   <td>{{CompatChrome(22.0)}} {{property_prefix("-webkit")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>6.1 {{property_prefix("-webkit")}}</td>
+  </tr>
+  <tr>
+   <td><code>fit-content</code>{{experimental_inline}}</td>
+   <td>{{CompatChrome(22.0)}} [4] {{property_prefix("-webkit")}}<br>
+    {{CompatChrome(46.0)}} [1]</td>
+   <td>{{CompatGeckoDesktop("1.9")}} {{property_prefix("-moz")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>15 {{property_prefix("-webkit")}}</td>
+   <td>6.1 {{property_prefix("-webkit")}}<sup>[2]</sup></td>
+  </tr>
+  <tr>
+   <td><code>border-box</code> y <code>content-box</code>{{experimental_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td><code>fill</code></td>
+   <td>{{CompatChrome(46.0)}}</td>
+   <td> </td>
+   <td> </td>
+   <td> </td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Capacidad de ser animada{{experimental_inline}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("16.0")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>max-content</code>{{experimental_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(46.0)}} [1]</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatChrome(46.0)}} [1]</td>
+  </tr>
+  <tr>
+   <td><code>min-content</code>{{experimental_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(46.0)}} [1]</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatChrome(46.0)}} [1]</td>
+  </tr>
+  <tr>
+   <td><code>available</code>{{experimental_inline}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>fill-available</code>{{experimental_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(46.0)}} [1]</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatChrome(46.0)}} [1]</td>
+  </tr>
+  <tr>
+   <td><code>fit-content</code>{{experimental_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(46.0)}} [1]</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatChrome(46.0)}} [1]</td>
+  </tr>
+  <tr>
+   <td><code>border-box</code> y <code>content-box</code>{{experimental_inline}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>fill</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(46.0)}}</td>
+   <td> </td>
+   <td> </td>
+   <td> </td>
+   <td> </td>
+   <td>{{CompatChrome(46.0)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] WebKit implementa una variante a este valor con el nombre <code>fill-available</code> a partir de 2013.</p>
+
+<p>[2] Las versiones anteriores de WebKit implementaban una versión anterior de este valor con nombre <code>intrinsic</code>, pero implementan además <code>fit-content</code> desde la versión 6.1.</p>
+
+<p>[3] Sin prefijo.</p>
+
+<p>[4] Soporte a las antiguas palabras clave <code>intrinsic</code> y <code>min-intrinsic</code> de Webkit, pero removido en <a href="https://www.chromestatus.com/feature/5758434351775744">Chrome 48</a>.</p>
+
+<h2 id="Véase_también">Véase también</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">box model</a>, {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}</li>
+</ul>

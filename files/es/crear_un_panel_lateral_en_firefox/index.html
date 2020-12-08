@@ -1,0 +1,163 @@
+---
+title: Crear un panel lateral en Firefox
+slug: Crear_un_panel_lateral_en_Firefox
+tags:
+  - Complementos
+  - Todas_las_Categorías
+  - extensiones
+translation_of: Mozilla/Creating_a_Firefox_sidebar
+---
+<p>
+</p><p>Este artículo muestra cómo crear un panel lateral registrado para Firefox 2 o superior. Véase la sección de referencias para más información sobre cómo crear una extensión para versiones anteriores.
+</p>
+<h2 id="Introducci.C3.B3n"> Introducción </h2>
+<p>Este artículo es un punto de partida para la creación de un nuevo panel lateral para Firefox. Lo que haremos será crear un panel lateral y registrarlo para que esté disponible en el menú. La meta es crear un panel vacío que pueda ser usado como inicio para nuevas aplicaciones.
+</p><p>La creación de un panel lateral precisa de algo de creación de interfaz y de registro en la aplicación destino. Primero se creará una simple página XUL. Luego se crearán los ficheros de registro y finalmente el panel lateral será empaquetado dentro de un fichero instalable XPI.
+</p>
+<h2 id="Prerrequisitos">Pre-requisitos</h2>
+<p>Este artículo es una forma rápida de empezar pero, no explica todos los elementos de <a href="/es/XUL" title="es/XUL">XUL</a> ni el empaquetado de los XPI. Es recomendable que tengas algunos conocimientos básicos del funcionamiento de XUL y cómo maneja Firefox las extensiones. Véase <a href="/es/Creando_una_extensi%C3%B3n" title="es/Creando_una_extensión">Creando una extensión</a> para información más detallada sobre la estructura, empaquetado y publicación de extensiones.</p><h2 id="Paquetes">Paquetes</h2>
+<p>Las extensiones para Firefox son instaladas en paquetes ("<a href="/es/Bundles" title="es/Bundles">Bundles</a>"). Un paquete de extensión contiene generalmente un apartado "content", el cual contiene el código XUL y la lógica de la aplicación. Opcionalmente, se pueden incluir configuraciones regionales y temas. La mayoría de los añadidos vienen en una estructura de árbol predeterminada, y aunque no es requerido, es recomendable utilizar dicha estructura. Aquí se crea el paquete para el panel lateral y los ficheros incluìdos se muestran a continuación.</p>
+<div class="example" id="package_structure">
+<p><strong>Ejemplo 1. Estructura del paquete</strong></p>
+<pre>emptysidebar
+\- chrome
+   |- content
+   |- locale
+   | \- en-US
+   \- skin
+</pre>
+</div>
+<p>Crea todos los directorios, excepto <code>skin</code>. No se usa en este tutorial.</p>
+<p><code>locale</code> alberga la configuración regional, sólo la configuración <code>en-US</code> será creada. Está listada en el <a href="#en-us_emptysidebar.dtd">ejemplo 2</a>. La configuración regional incluye el nombre y los atajos de teclado para el panel lateral.</p>
+<div class="example" id="en-us_emptysidebar.dtd">
+<p><strong>Ejemplo 2. chrome/locale/en-US/emptysidebar.dtd</strong></p>
+<pre class="eval">&lt;!ENTITY emptysidebar.title "EmptySidebar"&gt;
+&lt;!ENTITY openEmptySidebar.commandkey "E"&gt;
+&lt;!ENTITY openEmptySidebar.modifierskey "shift accel"&gt;
+</pre>
+<p>El directorio <code>content</code> incluye nuestro panel lateral, el <code>emptysidebar.xul</code> es mostrado en <a href="#emptysidebar_xul">Example 3</a> y crea una <a class="external" href="http://books.mozdev.org/html/appc-77238.html">página</a> para albergar una etiqueta. Se pueden incluir otros elementos. Por favor, léase los tutoriales XUL para más información.</p>
+<p> </p>
+<div class="example" id="emptysidebar_xul">
+<p><strong>Ejemplo 3. chrome/content/emptysidebar.xul</strong></p>
+<pre>&lt;?xml version="1.0"?&gt;
+&lt;?xml-stylesheet href="chrome://global/skin/" type"text/css" ?&gt;
+&lt;?xml-stylesheet href="chrome://browser/skin/browser.css" type="text/css" ?&gt;
+&lt;!DOCTYPE page SYSTEM "chrome://emptysidebar/locale/emptysidebar.dtd"&gt;
+
+&lt;page id="sbEmptySidebar" title="&amp;emptysidebar.title;"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" &gt;
+  &lt;vbox flex="1"&gt;
+    &lt;label id="atest" value="&amp;emptysidebar.title;" /&gt;
+  &lt;/vbox&gt;
+&lt;/page&gt;
+</pre>
+</div>
+<p>Las nuevas extensiones pueden ser registradas en los menús o en los menús emergentes. Firefox utiliza overlays para ampliar menús. Éste es un fichero XUL separado que especifica la ubicación de los elementos del menú. El panel lateral es añadido aquí al menú Ver &gt; Panel lateral. El fichero overlay es listado en el <a href="#overlay_xul">ejemplo 4</a>.</p>
+<div class="example" id="overlay_xul">
+<p><strong>Ejemplo 4. chrome/contents/firefoxOverlay.xul</strong></p>
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;!DOCTYPE overlay SYSTEM "chrome://emptysidebar/locale/emptysidebar.dtd"&gt;
+&lt;overlay id="emptySidebarOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+
+  &lt;menupopup id="viewSidebarMenu"&gt;
+    &lt;menuitem key="key_openEmptySidebar" observes="viewEmptySidebar"  /&gt;
+  &lt;/menupopup&gt;
+
+  &lt;keyset id="mainKeyset"&gt;
+    &lt;key id="key_openEmptySidebar" command="viewEmptySidebar"
+         key="&amp;openEmptySidebar.commandkey;"
+         modifiers="&amp;openEmptySidebar.modifierskey;" /&gt;
+  &lt;/keyset&gt;
+
+  &lt;broadcasterset id="mainBroadcasterSet"&gt;
+    &lt;broadcaster id="viewEmptySidebar"
+                 label="&amp;emptysidebar.title;"
+                 autoCheck="false"
+                 type="checkbox"
+                 group="sidebar"
+                 sidebarurl="chrome://emptysidebar/content/emptysidebar.xul"
+                 sidebartitle="&amp;emptysidebar.title;"
+                 oncommand="toggleSidebar('viewEmptySidebar');" /&gt;
+  &lt;/broadcasterset&gt;
+&lt;/overlay&gt;
+</pre>
+</div>
+<p>El fichero overlay consta de tres entradas: la definición del menú, los atajos de teclado y el manejador de eventos para los elementos de la interfaz. El propagador es enlazado a un elemento de la IU con el atributo <code>observes</code>. El propagador <code>viewEmptySidebar</code> define cómo se maneja el evento clic en el menú o cuando el atajo de teclado es usado.</p>
+<p>La extensión necesita suministrar algunos ficheros especiales de manifiesto que controlan cómo se instala y dónde están guardados sus recursos chrome. El primero es <code>install.rdf</code>, el manifiesto de instalación. Véase <a href="/es/Manifiesto_de_instalaci%C3%B3n" title="es/Manifiesto_de_instalación">Install Manifests</a> para un listado completo de las propiedades requeridas y opcionales. El manifiesto de instalación se lista en el <a href="#install_manifest">ejemplo 5</a>.</p>
+<div class="example" id="install_manifest">
+<p><strong>Ejemplo 5. install.rdf</strong></p>
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;em:id&gt;emptysidebar@yourdomain.com&lt;/em:id&gt;
+    &lt;em:name&gt;EmptySidebar Extension&lt;/em:name&gt;
+    &lt;em:version&gt;1.0&lt;/em:version&gt;
+    &lt;em:creator&gt;Your Name&lt;/em:creator&gt;
+    &lt;em:description&gt;Example extension for creation and registration of a sidebar.&lt;/em:description&gt;
+    &lt;em:targetApplication&gt;
+      &lt;Description&gt;
+        &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt; &lt;!-- firefox --&gt;
+        &lt;em:minVersion&gt;1.5&lt;/em:minVersion&gt;
+        &lt;em:maxVersion&gt;2.0.0.*&lt;/em:maxVersion&gt;
+      &lt;/Description&gt;
+    &lt;/em:targetApplication&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;
+</pre>
+</div>
+<p>El otro fichero de manifiesto es <code>chrome.manifest</code>, el fichero de manifiesto chrome. El manifiesto chrome crea una lista con todos los tipos de recurso usados por la extensión. El manifiesto también le dice a Firefox que la extensión tiene un overlay que necesita ser mezclado en el navegador. Para más información sobre manifiestos chrome y las propiedades que soportan, véase la referencia del <a href="/es/Manifiesto_Chrome" title="es/Manifiesto_Chrome">Manifiesto Chrome</a>. El manifiesto usado en esta extensión se muestra en el <a href="#chrome_manifest">ejemplo 6</a>.</p>
+<div class="example" id="chrome_manifest">
+<p><strong>Ejemplo 6. chrome.manifest</strong></p>
+<pre>content	emptysidebar	chrome/content/
+locale	emptysidebar	en-US	locale/en-US/
+skin	emptysidebar	classic/1.0	skin/
+overlay	chrome://browser/content/browser.xul	chrome://emptysidebar/content/firefoxOverlay.xul
+</pre>
+</div>
+<h2 id="Prueba">Prueba</h2>
+<p>Durante el proceso de desarrollo del panel lateral, será necesario ir probándolo con Firefox. Hay un modo simple de hacer esto. Primero, necesitamos darle a conocer a Firefox la extensión.</p>
+<ol> <li>Abre el directorio de tu perfil</li> <li>Abre el directorio de las extensiones (créalo si no existe)</li> <li>Crea un nuevo fichero de texto y escribe en él la ruta al directorio de la extensión, p.e. <code>C:\extensiones\miExtension</code> o <code>~/extensiones/miExtension</code>. Guarda el fichero con el id de la extensión como nombre, p.e. <code><a class=" link-mailto" href="mailto:emptysidebar@yourdomain.com">emptysidebar@yourdomain.com</a></code></li>
+</ol>
+<p>¡Ahora estás preparado para probar la extensión! Reinicia Firefox y el panel lateral estará incluido en el menú.</p>
+<p><img alt="Imagen:Sidebar-test.png" class="internal" src="/@api/deki/files/1135/=Sidebar-test.png"></p>
+<p>Después podrás volver y hacer cambios en el fichero XUL. Cerrando y reiniciando Firefox deberían verse reflejados.</p>
+<h2 id="Publicaci.C3.B3n">Publicación</h2>
+<p>Ahora que tenemos el panel lateral es hora de hacerlo disponible al mundo. La instalación necesita la creación de un fichero XPI identificado como extensión de Firefox. El XPI es un fichero ZIP que contiene los ficheros de contenido, de configuración regional y de manifiesto.</p>
+<p>Los directorios content, locale y skin están empaquetados en <code>emptysidebar.jar</code>, los cuales deberían  ser creados en el directorio <code>chrome</code>. En los sistemas unix:</p>
+<pre class="eval">~/src/emptysidebar$ <strong>cd chrome</strong>
+~/src/emptysidebar/chrome$ <strong>zip -r emptysidebar.jar content/ locale/</strong>
+</pre>
+<p>En sistemas Windows, utiliza una herramienta ZIP para crear <code>emptysidebar.zip</code> y luego renómbralo como <code>emptysidebar.jar</code>.</p>
+<p>Dado que estamos empaquetando una extensión con un fichero JAR, necesitamos actualizar el fichero chrome.manifest para incluir dicho fichero:</p>
+<div class="example" id="chrome_manifest_jar">
+<p><strong>Ejemplo 7. chrome.manifest</strong></p>
+<pre>content emptysidebar	jar:chrome/emptysidebar.jar!/content/
+locale  emptysidebar	en-US	jar:chrome/emptysidebar.jar!/locale/en-US/
+skin    emptysidebar	classic/1.0	jar:chrome/emptysidebar.jar!/skin/
+overlay chrome://browser/content/browser.xul	chrome://emptysidebar/content/firefoxOverlay.xul
+</pre>
+</div>
+<p>Por último, creamos el fichero XPI. Éste es un fichero ZIP que contiene el fichero JAR en el directorio chrome y los ficheros de manifiesto. En sistemas unix:</p>
+<pre class="eval">~/src/emptysidebar/chrome$ <strong>cd ..</strong>
+~/src/emptysidebar$ <strong>zip emptysidebar.xpi install.rdf chrome.manifest chrome/emptysidebar.jar</strong>
+</pre>
+<p>Abre Firefox y navega hasta el directorio que contiene <code>emptysidebar.xpi</code>. Haz clic en el fichero y la ventana de instalación de la extensión aparecerá. Tras reiniciar Firefox, el panel lateral estará instalado.</p>
+<p>Puedes descargar el <a class="external" href="http://developer.mozilla.org/samples/extension-samples/emptysidebar.zip">proyecto vacío del panel lateral</a> para usarlo como base de tus propios paneles laterales.</p>
+<div class="figure" id="emptysidebar_extension">
+<p><img alt="Imagen:Sidebar-installed.png" class="internal" src="/@api/deki/files/1134/=Sidebar-installed.png"><br>
+<strong>The EmptySidebar extension</strong></p>
+</div>
+<h2 id="Recursos">Recursos</h2>
+<ul> <li><a href="/es/Creando_una_extensi%C3%B3n" title="es/Creando_una_extensión">Creando una extensión</a></li> <li><a class="external" href="http://books.mozdev.org/html/index.html">Crear aplicaciones con Mozilla</a></li> <li><a class="external" href="http://www.bengoodger.com/software/mb/extensions/packaging/extensions.html">Empaquetando extensiones de Firefox/Thunderbird</a></li> <li><a class="external" href="http://occidopagus.nl/firefox/emptysidebar/">Crear una panel lateral para Firefox 1</a></li>
+</ul>
+<div class="originaldocinfo">
+<h2 id="Informaci.C3.B3n_del_documento_original">Información del documento original</h2>
+<ul> <li>Autor: J.C. Wesdorp &lt;jcwesdorp . at . occidopagus.nl&gt; - May 30, 2005.</li> <li>Actualizado para Firefox 2 - 12 diciembre 2006.</li> <li>Permiso concedido para migrarlo en enero de 2006 incluyendo el permiso para cambiarle la licencia bajo CC:By-SA.</li> <li>Fuente original: <a class=" external" href="http://occidopagus.nl/firefox/emptysidebar/">http://occidopagus.nl/firefox/emptysidebar/</a></li>
+</ul>
+</div>
+</div>
+<p>{{ languages( { "en": "en/Creating_a_Firefox_sidebar" } ) }}</p>

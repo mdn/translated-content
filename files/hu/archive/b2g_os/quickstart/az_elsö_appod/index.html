@@ -1,0 +1,261 @@
+---
+title: Az első appod
+slug: Archive/B2G_OS/Quickstart/Az_elsö_appod
+translation_of: Archive/B2G_OS/Quickstart/Your_first_app
+---
+<article class="brush: js">
+<div class="summary">
+<p>A nyílt webes alkalmazások pontosan azt nyújtják a fejlesztőknek, amire évek óta vágynak: különböző kezelőfelületek egységes környezetét, amit kizárólag HTML, CSS és JavaScript alkalmazásoknak szántak — mindezt az első, nyílt webes felülettel, a Firefox OS-szel. Ez az útmutató egy gyors, alapszintű programozási és alkalmazásépítői instrukciót tartalmaz, hogy létrehozhasd a következő nagyszerű appot.</p>
+</div>
+
+<p>Ha szeretnél minket és ezt az útmutatót követni, letöltheted a <a href="https://github.com/chrisdavidmills/mdn-app-template">gyors applikációkezdő mintánkat</a>. Tudj meg többet ennek tartalmáról, és olvasd el az <a href="/en-US/docs/Project:MDN/Style_guide/Sample_app_coding_guidelines#Apps_template">Alkalmazásminták</a> útmutatót (a programozói felületek és programnyelvek angol nyelvtudást igényelnek)</p>
+
+<h2 id="Az_alkalmazás_felépítése">Az alkalmazás felépítése</h2>
+
+<h3 id="Csomagolt_vs._Hostolt_alkalmazások">Csomagolt vs. Hostolt alkalmazások</h3>
+
+<p>A nyílt webes alkalmazásoknak két formájuk van: <code>csomagolt</code> and <code>hostolt</code>. A csomagolt appok alapvetően <code>zip</code> file-ok, melyek minden alkalmazáskiegészítőt tartalmaznak: HTML, CSS, JavaScript, képek, tanúsítványok, stb. A hostolt alkalmazások szerverről futnak, egy megadott domainen, akárcsak egy weboldal. Mindkét alkalmazástípus érvényes tanúsítványt igényel. Mikor eljön a pillanat, hogy feltöltsd az alkalmazásodat a Firefox Piactérre, akkor vagy ezt a zip file-t töltöd fel, vagy a hostolt applikációhoz mutató linket fogod megadni</p>
+
+<div style="width: 480px; margin: 0 auto;">
+<p>{{EmbedYouTube("Q7x-B13y33Q")}}</p>
+
+<div class="video-caption">
+<p>Készült a Treehouse társulás jóvoltából: <a class="button" href="http://teamtreehouse.com/?cid=1154">Lesd meg őket!</a></p>
+</div>
+</div>
+
+<p>Ezen útmutatón keresztül el fogod készíteni a hostolt alkalmazásodat, amely a te <code>localhost</code> címeden lesz elérhető. Amint az appod készen áll arra, hogy megoszthasd a Firefox Piactéren, eldöntheted, hogy csomagolva, vagy hostolva osztod meg.</p>
+
+<h3 id="App_Tanúsítványok">App Tanúsítványok</h3>
+
+<p>Minden Firefox appnak szüksége van egy manifest.webapp file-ra az alkalmazáson belül. A <a href="/en-US/docs/Web/Apps/Manifest"><code>manifest.webapp</code></a> file biztosítja a létszükségletű információkat az appról, úgy, mint verzó, név, leírás, ikon, hely, helyszíni láncolatok, domain, ahonnan az app telepíthető, és még sokminden. Csak a név és verziószám kötelező. A legegyszerűbb tanúsítvány (az alkalmazásmintán belül) a következőképpen néz ki:</p>
+
+<pre class="brush: js">{
+  "version": "0.1",
+  "name": "Open Web App",
+  "description": "Your new awesome Open Web App",
+  "launch_path": "/app-template/index.html",
+  "icons": {
+    "16": "/app-template/app-icons/icon-16.png",
+    "48": "/app-template/app-icons/icon-48.png",
+    "128": "/app-template/app-icons/icon-128.png"
+  },
+  "developer": {
+    "name": "Your Name",
+    "url": "http://yourawesomeapp.com"
+  },
+  "locales": {
+    "es": {
+      "description": "Su nueva aplicación impresionante Open Web",
+      "developer": {
+        "url": "http://yourawesomeapp.com"
+      }
+    },
+    "it": {
+      "description": "La tua nuova fantastica Open Web App",
+      "developer": {
+        "url": "http://yourawesomeapp.com"
+      }
+    }
+  },
+  "default_locale": "en"
+}</pre>
+
+<div style="width: 480px; margin: 0 auto;">
+<p>{{EmbedYouTube("dgAUgHQOm8M")}}</p>
+
+<div class="video-caption">
+<p>Készült a Treehouse társulás jóvoltából: <a class="button" href="http://teamtreehouse.com/?cid=1154">lESD MEG ŐKET!</a></p>
+</div>
+</div>
+
+<p> </p>
+
+<p>A kezdéshez egy alap tanúsítványra van szükséged. További részletekért olvasd el az  <a href="/en-US/docs/Web/Apps/Manifest">Alkalmazástanúsítványt</a>.</p>
+
+<h2 id="App_Tervezés_Design">App Tervezés &amp; Design</h2>
+
+<p>Az appok kinézete kiemelkedően fontossá vált, ahogy a képernyők felbontása egyre jobb színvonalat ért el. Noha az appok fő célterülete a telefonplatformokban van, mint például a Firefox OS, egyéb eszközöknek is lehet hozzáférésük. A <a href="//developer.mozilla.org/docs/CSS/Media_queries">CSS médium lista</a> lehetővé teszi, hogy különböző eszközök megjelenítéséhez igazodj, ahogy azt alábbi CSS példaváz mutatja:</p>
+
+<pre class="brush: css">/* The following are examples of different CSS media queries */
+
+/* Basic desktop/screen width sniff */
+@media only screen and (min-width : 1224px) {
+  /* styles */
+}
+
+/* Traditional iPhone width */
+@media
+  only screen and (-webkit-min-device-pixel-ratio : 1.5),
+  only screen and (min-device-pixel-ratio : 1.5) {
+  /* styles */
+}
+
+/* Device settings at different orientations */
+@media screen and (orientation:portrait) {
+  /* styles */
+}
+@media screen and (orientation:landscape) {
+  /* styles */
+}</pre>
+
+<p>Számos JavaScript és CSS keretrendszer elérhető, hogy segítsen a tervezésben és mobil app fejlesztésben (<a href="http://twitter.github.com/bootstrap">Bootstrap</a>, stb.) Válaszd azt, amelyik a legjobban illik a stílusodhoz.</p>
+
+<h2 id="Web_API-k">Web API-k</h2>
+
+<p>A JavaScript API-k (alkalmazásprogramozási felületek) legalább olyan gyorsan fejlődnek, mint maguk a készülékek. A Mozilla <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> kezdeményezés temérdek szabvány mobilvázlatot integrál a JavaScript API-kba. A támogatott eszközök listája elérhető a <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> oldalon. A legjobb gyakorlást a JavaScript eszközérzékelő biztosítja, ahogy azt itt mutatjuk:</p>
+
+<pre class="brush: js">// If this device supports the vibrate API...
+if('vibrate' in navigator) {
+    // ... vibrate for a second
+    navigator.vibrate(1000);
+}</pre>
+
+<p>A következő példában a <code>&lt;div&gt; </code>megjelenítését módosítottuk a készülék töltöttségének függvényében:</p>
+
+<pre class="brush: java">// Create the battery indicator listeners
+(function() {
+  var battery = navigator.battery || navigator.mozBattery || navigator.webkitBattery,
+      indicator, indicatorPercentage;
+
+  if(battery) {
+    indicator = document.getElementById('indicator'),
+    indicatorPercentage = document.getElementById('indicator-percentage');
+
+    // Set listeners for changes
+    battery.addEventListener('chargingchange', updateBattery);
+    battery.addEventListener('levelchange', updateBattery);
+
+    // Update immediately
+    updateBattery();
+  }
+
+  function updateBattery() {
+    // Update percentage width and text
+    var level = (battery.level * 100) + '%';
+    indicatorPercentage.style.width = level;
+    indicatorPercentage.innerHTML = 'Battery: ' + level;
+    // Update charging status
+    indicator.className = battery.charging ? 'charging' : '';
+  }
+})();</pre>
+
+<p>A fenti kódmintában, amint megerősíted a <a href="https://developer.mozilla.org/en-US/docs/DOM/window.navigator.battery">Battery API</a> támogatottságot, további eseményfigyelőket adhatsz a <code>chargingchange</code> és a <code>levelchange</code> kódhoz, hogy frissíthesd az elemek megjelenítése. Próbáld meg hozzáadni a mintádhoz, és nézd meg magad a működését.</p>
+
+<p>Rendszeresen ellenőrizd a <a href="https://wiki.mozilla.org/WebAPI">WebAPI</a> oldalt, hogy naprakész legyél az API készülékstátuszokkal.</p>
+
+<h3 id="API_funkcionálisság_telepítése">API funkcionálisság telepítése</h3>
+
+<p>Az app kezdőmintánkban elhelyeztünk egy telepítőkapcsolót, amivel megtekintheted az appodat, mint egy mintaweboldalt, mintha az egy telepített alkalmazás lenne a Firefox OS-en. A gomb megjelenésében nincs semmi különös:</p>
+
+<pre class="brush: html">&lt;button id="install-btn"&gt;Install app&lt;/button&gt;</pre>
+
+<p>A kapcsoló az API telepítő használatával is működtethető (lásd install.js):</p>
+
+<pre class="brush: js">var manifest_url = location.href + 'manifest.webapp';
+
+function install(ev) {
+  ev.preventDefault();
+  // define the manifest URL
+  // install the app
+  var installLocFind = navigator.mozApps.install(manifest_url);
+  installLocFind.onsuccess = function(data) {
+    // App is installed, do something
+  };
+  installLocFind.onerror = function() {
+    // App wasn't installed, info is in
+    // installapp.error.name
+    alert(installLocFind.error.name);
+  };
+};
+
+// get a reference to the button and call install() on click if the app isn't already installed. If it is, hide the button.
+var button = document.getElementById('install-btn');
+
+var installCheck = navigator.mozApps.checkInstalled(manifest_url);
+
+installCheck.onsuccess = function() {
+  if(installCheck.result) {
+    button.style.display = "none";
+  } else {
+    button.addEventListener('click', install, false);
+  };
+};
+</pre>
+
+<p>Összegezzük, mi is történik:</p>
+
+<ol>
+ <li>Kapunk egy hivatkozást a telepítőkapcsolóra, amit a  <code>button </code>változó alatt tárolunk.</li>
+ <li>Eztuán a <code>navigator.mozApps.checkInstalled</code> kódot használjuk, hogy ellenőrizzük a tanúsítványban foglalt app (helyileg: <code>http://people.mozilla.com/~cmills/location-finder/manifest.webapp)</code> telepítve van-e az eszközön. Ezt a teszt az <code>installCheck</code> változóban tárolódik.</li>
+ <li>Miután a teszt sikeresen lefut, létrehoz egy sikeres eseményt, ezáltal az <code>installCheck.onsuccess = function() { ... }</code> fut tovább.</li>
+ <li>Eztuán tesztet futtatunk az <code>installCheck.result</code> létezésére egy egyszerű <code>if</code> állítás használatával. Ha létezik, ezzel alátámasztva, hogy az app telepítve van, elrejtjük a kapcsolót, mivel ezután erre már nincs szükség.</li>
+ <li>Ha az app nincs telepítve, egy kattintásfigyelőt adunk a kapcsolóhoz, így az <code>install()</code> funkció fut, amikor arra kattintunk.</li>
+ <li>Mikor a gombra kattintunk, és az <code>install()</code> funkció fut, eltároljuk a tanúsítvány fájlt egy <code>manifest_url </code>változóban tároljuk, ezután telepítjük az appot a <code>navigator.mozApps.install(manifest_url) </code>használatával, eltárolva ezzel egy hivatkozást az <code>installLocFind</code> változóban. Észrevehetjük, hogy ez a telepítés sikeres és sikertelen eseményeket is létrehoz, így annak függvényében tudsz parancsokat futtatni, hogy a telepítés sikerült-e, vagy sem.</li>
+</ol>
+
+<p>Feltehetőleg igazolni szeretnéd a <a href="/en-US/docs/Web/Apps/JavaScript_API">API teljesítési állapot</a>-ot, mikor először jutsz a telepíthető webalkalmazásokhoz.</p>
+
+<div class="note">
+<p>Megjegyzés: a telepíthető webalkalmazásokra az "egy app/egy eredet" szabály vonatkozik. Magyarul egy hostolt alkalmazás csak egy helyről származtatható. Ez a tesztelést kissé bonyolítja, de ez megkerülhető, például különbözü sub-domaineken keresztül, Firefox OS szimulátorral, vagy a telepítő működésének Firefox Aurora/Nightly-n keresztüli tesztelésével, amiken keresztül a webalkalmazásokat az asztalodra telepítheted. Olvasd el az <a href="/en-US/docs/Web/Apps/FAQs/About_app_manifests">app tanúsítványok GYIK-et</a> további információért.</p>
+</div>
+
+<h2 id="WebRT_API-k_(Engedély-alapú_API-k)">WebRT API-k (Engedély-alapú API-k)</h2>
+
+<p>Sok  WebAPI létezik, amelyek ugyan elérhetők, de külön engedély kell egy-egy speciális tartalom eléréséhez. Az appok az engedélykérelmet a <code>manifest.webapp</code> file-ba regisztrálják, a következőképpen:</p>
+
+<pre class="brush: js">// New key in the manifest: "permissions"
+// Request access to any number of APIs
+// Here we request permissions to the systemXHR API
+"permissions": {
+    "systemXHR": {}
+}</pre>
+
+<p>Az engedély három szintje a következők:</p>
+
+<ul>
+ <li>Normál — API-k, melyek nem ígényelnek különleges elérési engedélyt.</li>
+ <li>Privilegizált — Ezek elérhetők a fejlesztőknek, hogy használják a saját appjukban, amíg feltüntetik az elérési hozzájárulást a tanúsítványban, és megbízható forráson keresztül terjesztik.</li>
+ <li>Igazolt — Azok az API-k, amik kritikus eszközfunkciókat használnak, legyen az például tárcsázó, vagy üzenetküldő szolgáltatás. Ezeket általában kívülálló fejlesztők nem használhatják</li>
+</ul>
+
+<p>Az engedélyekről bővebben a <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Packaged_apps#Types_of_packaged_apps" title="/en-US/docs/Web/Apps/Packaged_apps#Types_of_packaged_apps">Csomagolt apptípusok</a> alatt olvashatsz. Itt többet megtudhatsz az engedélyköteles API-król, és hogy milyen engedélyre van szükséged, nézd meg az <a href="/en-US/docs/Web/Apps/App_permissions">App engedélyek </a>tájékoztatót.</p>
+
+<div class="note">
+<p>Fontos megjegyezni, hogy nem minden web API-t valósítottunk meg a Firefox OS szimulátoron belül.</p>
+</div>
+
+<h2 id="Eszközök_és_tesztelés">Eszközök és tesztelés</h2>
+
+<p>A tesztelés rendkívül fontos, amikor az eszköztámogatásról van szó. Számos opció áll rendelkezésre a telepíthető webalkalmazások tesztelésére.</p>
+
+<h3 id="Firefox_OS_Szimulátor">Firefox OS Szimulátor</h3>
+
+<p>Installing and using the <a href="https://marketplace.firefox.com/developers/docs/firefox_os_simulator">Firefox OS Simulator</a> is the easiest way to get up and running with your app. After you install the simulator, it is accessible from the Tools -&gt; Web Developer -&gt; Firefox OS Simulator menu. The simulator launches with a JavaScript console so you can debug your application from within the simulator.</p>
+
+<h3 id="App_Manager">App Manager</h3>
+
+<p>The new kid on the block with regards to testing tools is called the <a href="/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager">App Manager</a>. This tool allows you to connect desktop Firefox to a compatible device via USB (or a Firefox OS simulator), push apps straight to the device, validate apps, and debug them as they run on the device.</p>
+
+<h3 id="Unit_Testing">Unit Testing</h3>
+
+<p>Unit tests are extremely valuable when testing on different devices and builds. jQuery's <a href="http://qunitjs.com">QUnit</a> is a popular client-side testing utility, but you can use any set of testing tools you'd like.</p>
+
+<h3 id="Installing_Firefox_OS_on_a_Device">Installing Firefox OS on a Device</h3>
+
+<p>Since Firefox OS is an open source platform, code and tools are available to build and install Firefox OS on your own device. Build and installation instructions, as well as notes on what devices it can be installed on, can be found on <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform">MDN</a>.</p>
+
+<p>Dedicated Firefox OS developer preview devices are also available: read our <a href="https://marketplace.firefox.com/developers/dev_phone">Developer preview phone page</a> for more information.</p>
+
+<h2 id="App_benyújtása_és_terjesztése">App benyújtása és terjesztése</h2>
+
+<p>Once your app is complete, you can host it yourself like a standard web site or app (read <a href="/en-US/docs/Web/Apps/Publishing/Self-publishing_Apps">Self-publishing apps</a> for more information), or it can be <a href="https://marketplace.firefox.com/developers/submit/app/manifest">submitted</a> to the <a href="https://marketplace.firefox.com">Firefox Marketplace</a>. Your app's manifest will be validated and you may choose which devices your app will support (e.g. Firefox OS, Desktop Firefox, Firefox Mobile, Firefox Tablet). Once validated, you can add additional details about your app (screenshots, descriptions, price, etc.) and officially submit the app for listing within the Marketplace. Once approved, your app is available to the world for purchase and installation.</p>
+
+<h3 id="More_Marketplace_Listing_Information">More Marketplace &amp; Listing Information</h3>
+
+<ol>
+ <li><a href="/en-US/docs/Web/Apps/Publishing/Submitting_an_app">Submitting an App to the Firefox OS Marketplace </a></li>
+ <li><a href="/en-US/docs/Web/Apps/Publishing/Marketplace_review_criteria">Marketplace Review Criteria </a></li>
+ <li><a href="http://s.vid.ly/embeded.html?link=8k2n4w&amp;autoplay=false">App Submission Video Walkthrough </a></li>
+</ol>
+</article>

@@ -1,0 +1,94 @@
+---
+title: Selección en un árbol
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Selección_en_un_árbol
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/Tree_Selection
+---
+<p>Esta sección describe como obtener y definir los elementos seleccionados en un arbol.</p>
+
+<h3 id="Obteniendo_los_elementos_seleccionados" name="Obteniendo_los_elementos_seleccionados">Obteniendo los elementos seleccionados</h3>
+
+<p>Cada elemento en un árbol (que corresponde al elemento <code><a href="es/XUL/Elementos/treeitem">treeitem</a></code> -<code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_treeitem.html">en)</a></code>- si se usa la vista del contenido del árbol ) puede ser seleccionado individualmente. Si añades el atributo <code><a href="es/XUL/Atributos/seltype">seltype</a></code> a un árbol y tiene el valor múltiple, el usuario puede seleccionar diversos elementos del árbol al mismo tiempo. La selección no tiene porque ser continua. El árbol provee un número de funciones que nos ayudan a determinar que elementos están seleccionados.</p>
+
+<h4 id="Gesti.C3.B3n_del_evento_de_selecci.C3.B3n" name="Gesti.C3.B3n_del_evento_de_selecci.C3.B3n">Gestión del evento de selección</h4>
+
+<p>Primero veamos como podemos determinar si un elemento esta seleccionado. El gestor de eventos <code><a href="es/XUL/Atributos/tree.onselect">onselect()</a></code> puede incluirse en el elemento <code><a href="es/XUL/Elementos/tree">tree</a></code> -(<code><a class="external" href="http://www.xulplanet.com/references/elemref/ref_tree.html">en)</a></code>)-. Cuando el usuario selecciona un elemento del árbol, el gestor de eventos es llamado. El usuario puede también cambiar la selección usando las teclas del cursor. Si el usuario mantiene pulsadas las teclas del cursor para rápidamente desplazarse por los elementos, el gestor de eventos no es llamado hasta que el usuario deja de presionarlas. Esto ofrece una mayor rapidez y también implica que los elementos se mostrarán como seleccionados aunque nunca se llame al evento select para ellos.</p>
+
+<p>La sintaxis para el gestor de eventos <code>onselect</code> es la siguiente.</p>
+
+<pre>&lt;tree id="treeset" onselect="alert('Has seleccionado algo!');"&gt;
+</pre>
+
+<h4 id=".C3.8Dndices_del_.C3.A1rbol" name=".C3.8Dndices_del_.C3.A1rbol">Índices del árbol</h4>
+
+<p>El árbol expone la propiedad <code><a href="es/XUL/Propiedades/currentIndex">currentIndex</a></code> que podemos usar para obtener el elemento actualmente seleccionado, siendo el índice del primero 0. Puedes cambiar el elemento seleccionado si le asignas un nuevo valor a esta propiedad.</p>
+
+<p>Los elementos hijos son incluidos en el contador justo después de sus padres. Esto significa que si hay tres elementos en la raíz y cada uno tiene 2 hijos, habrá un total de nueve elementos. El primer elemento (índice 0) será el primer elemento raíz, el siguiente (índice 1) será el primer hijo, el segundo hijo estará en el índice 2 y el segundo elemento raíz en el índice 3 y así sucesivamente.</p>
+
+<p><img alt="Image:seltree1.jpg"></p>
+
+<p>En la imagen vemos ocho filas, de las cuales dos están seleccionadas. La primera fila seleccionada tiene el índice 4 y la segunda el índice 7. Las filas que no se muestran no se incluyen en el contador de índices.</p>
+
+<h4 id="Selecci.C3.B3n_m.C3.BAltiple" name="Selecci.C3.B3n_m.C3.BAltiple">Selección múltiple</h4>
+
+<p>Para los árboles que permiten selecciones múltiples, obtener la lista de filas seleccionadas es algo más complicado. El elemento árbol tiene la propiedad <code>view</code>, la cual tiene la propiedad <code>selection</code> que a su vez contiene propiedades y métodos relacionados con la selección actual del árbol. Puedes usar esos métodos para obtener un conjunto de elementos seleccionados o modificar la selección.</p>
+
+<p>Ya que los elementos seleccionados en un árbol no tienen porque estar contiguos, puedes obtener distintos grupos de elementos seleccionados que sí lo están, usando las funciones <code>getRangeCount()</code> y <code>getRangeAt()</code>. La primera devuelve el número de rangos de selecciones que hay actualmente. Si solo hay un valor seleccionado, este valor será 1. Deberás utilizar un bucle para recorrer el número de rangos, llamando <code>getRangeAt()</code> en cada uno para obtener los índices del comienzo y fin del rango.</p>
+
+<p>La función <code>getRangeAt()</code> toma tres parámetros.</p>
+
+<ul>
+ <li>El primero es el índice del rango.</li>
+ <li>El segundo es un objeto que será rellenado por la función con el índice del primer elemento seleccionado.</li>
+ <li>El tercero es un objeto que será rellenado con el índice del último elemento seleccionado.</li>
+</ul>
+
+<h5 id="Ejemplo_con_getRangeAt" name="Ejemplo_con_getRangeAt">Ejemplo con <code>getRangeAt</code></h5>
+
+<pre>var start = new Object();
+var end = new Object();
+var numRanges = tree.view.selection.getRangeCount();
+
+for (var t=0; t&lt;numRanges; t++){
+  tree.view.selection.getRangeAt(t,start,end);
+  for (var v=start.value; v&lt;=end.value; v++){
+    alert("El elemento "+v+" está seleccionado.");
+  }
+}
+</pre>
+
+<p>Hemos creado dos objetos llamados ‘start’ y ‘end’. Después hemos recorrido los rangos, el número de los cuales nos lo ha proporcionado la función <code>getRangeCount()</code>. Llamamos a la función <code>getRangeAt()</code> pasándole el índice del rango y los objetos ‘start’ y ‘end’. Estos objetos son devueltos con la propiedad 'value' rellenada. Así que si el primer rango es desde el tercer elemento hasta el séptimo, ‘start.value’ será 2 (recuerda que los índices cuentan desde 0) y ‘end.value’ será 6. Un dialogo de alerta se mostrará para cada índice seleccionado.</p>
+
+<p>If you just want to find out if a specific row is selected, use can use the <code>isSelected()</code> function. It takes a row index as an argument and returns true if that row is selected.</p>
+
+<pre>alert(tree.view.selection.isSelected(3));
+</pre>
+
+<h3 id="Modificando_la_selecci.C3.B3n_del_.C3.A1rbol" name="Modificando_la_selecci.C3.B3n_del_.C3.A1rbol">Modificando la selección del árbol</h3>
+
+<p>The selection object has a number of functions which may be used to change the selection. The simplest function is the <code><a href="es/XUL/M%c3%a9todos/select">select()</a></code> function, which deselects any rows that are currently selected and selects one specific row. For example, the following code will select the row at index 5:</p>
+
+<pre>tree.view.selection.select(5);
+</pre>
+
+<p>Note that you should not just change the tree's <code><a href="es/XUL/Propiedades/currentIndex">currentIndex</a></code> property to change the selection. Instead, you should use the selection's select function as in the example above. You can select all rows with the <code><a href="es/XUL/M%c3%a9todos/selectAll">selectAll()</a></code> function. Note that rows nested inside containers that are not open will not be selected. Naturally, this will only have any effect for trees that use multiple selection. There is also a <code><a href="es/XUL/M%c3%a9todos/clearSelection">clearSelection()</a></code> function to clear the selection, and an <code><a href="es/XUL/M%c3%a9todos/invertSelection">invertSelection</a></code> function to reverse the selection, that is, deselect all selected rows and select all unselected rows.</p>
+
+<p>To select specific rows, use the <code>rangedSelect()</code> function which selects all rows in between two indices. Here is an example which selects rows between index 2 and 7. Note that rows 2 and 7 will also be selected.</p>
+
+<pre>tree.view.selection.rangedSelect(2,7,true);
+</pre>
+
+<p>The last argument indicates whether to add to the current selection or not. If true, the range will be added to the existing selection. If false, all existing selected rows will be deselected first. Finally, the <code>clearRange()</code> function may be used to deselect a range of rows, leaving rows outside the range unaffected.</p>
+
+<pre>tree.view.selection.clearRange(2,7);
+</pre>
+
+<p>Seguimos con como crear los <a href="es/Tutorial_de_XUL/Detalles_de_Vistas_de_un_%c3%a1rbol">detalles de vistas de un árbol</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Más_características_de_los_árboles" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Detalles_de_Vistas_de_un_árbol">Siguiente  »</a></p>
+</div>

@@ -1,0 +1,97 @@
+---
+title: Cómo obtener un seguimiento de pila para un informe de bug
+slug: Mozilla/como_obtener_un_seguimiento_de_pila_para_un_informe_de_error
+translation_of: Mozilla/How_to_get_a_stacktrace_for_a_bug_report
+---
+<p>Si presenta un informe de bug en Bugzilla sobre un <strong>bloqueo</strong>, debe incluir un seguimiento de pila (pila de llamadas) en su informe. Un seguimiento de pila le dirá a los desarrolladores de Mozilla qué falló y proporcionará un punto de partida para investigar su causa. Este artículo describe cómo usar Mozilla Crash Reporter (Breakpad) para obtener una ID de bloqueo, que nuestros ingenieros pueden usar para obtener un stacktrace, y formas alternativas de obtener un stacktrace si no puede obtener una ID de crash.</p>
+
+<h2 id="Requirements">Requirements</h2>
+
+<p>You need a binary build of Firefox from <a class="external external-icon" href="https://www.mozilla.org/en-US/firefox/">Mozilla.org</a>. SeaMonkey and Thunderbird also support crash reporting.</p>
+
+<p>Mozilla's crash report server currently only has debug information for Mozilla builds and thus the crash reporter cannot work if you use a build from a Linux distribution or if you compile from source code. In these cases you will need to use one of the <a href="#Alternative_ways_to_get_a_stacktrace">alternative methods</a> listed below.</p>
+
+<div class="note"><strong>Note: </strong>When filing a crash report, it is important to know whether the crash occurs with <a class="external" href="http://support.mozilla.com/en-US/kb/Safe+Mode" title="http://support.mozilla.com/en-US/kb/Safe+Mode">Firefox safe mode</a>. This helps engineers determine whether a particular <a class="external" href="http://support.mozilla.com/en-US/kb/Troubleshooting+extensions+and+themes" title="http://support.mozilla.com/en-US/kb/Troubleshooting+extensions+and+themes">extension</a> or <a class="external" href="http://support.mozilla.com/en-US/kb/Troubleshooting+plugins" title="http://support.mozilla.com/en-US/kb/Troubleshooting+plugins">plugin</a> is the cause of the crash.</div>
+
+<h2 id="How_to_get_a_crash_ID_with_the_Mozilla_Crash_Reporter">How to get a crash ID with the Mozilla Crash Reporter</h2>
+
+<table>
+ <tbody>
+  <tr>
+   <td>
+    <p><strong>1. Crash and submit a report to the system.</strong></p>
+
+    <p>The Mozilla Crash Reporter window should automatically come up after Firefox crashes. If you have any additional information about the crash, such as additional detail on what you were doing at the time that may have triggered the crash, please enter it into the comments box. Be sure that you <strong>check the "Tell Mozilla about this crash"</strong><strong> checkbox</strong> and click the restart button. The crash reporter should now submit the crash report and Firefox should open again.</p>
+
+    <div class="note">The "Details" button gives additional data about the incident, however this is not useful in a bug report.</div>
+   </td>
+   <td>
+    <p style="text-align: center;"><img alt="reporter.jpg" class="internal lwrap" src="../../../../@api/deki/files/2854/=reporter.jpg?size=webview" style="float: left; height: 307px; width: 300px;"></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<table>
+ <tbody>
+  <tr>
+   <td>
+    <p><strong>2. Tell us the ID of the report you submitted.</strong></p>
+
+    <p>To access all of your submitted reports<strong> type "about:crashes" into the Firefox address bar</strong> and press enter. Firefox should open a list of IDs for your submitted crash reports. Copy two or three of the IDs for the appropriate crashes and paste them into your Bugzilla report. Please check the listed times to avoid copying the ID of an unrelated crash report.</p>
+
+    <div class="note">You can prefix a "bp-" to the beginning of an ID to make Bugzilla turn it into a link: <strong>bp-</strong>a70759c6-1295-4160-aa30-bc4772090918</div>
+   </td>
+   <td>
+    <p style="text-align: center;"><img alt="crashlist.jpg" class="internal lwrap" src="../../../../@api/deki/files/2855/=crashlist.jpg?size=webview" style="float: left; height: 403px; width: 450px;"></p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="How_to_get_the_crash_ID_if_Firefox_crashes_on_startup">How to get the crash ID if Firefox crashes on startup</h3>
+
+<p>If Firefox crashes on startup you can still access your submitted crash reports. Crash reports are accessible from all Firefox profiles, so if a <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles">new profile</a> does not crash you can use it to access them through "about:crashes" <a class="external" href="/en-US/docs/Mozilla/How_to_get_a_stacktrace_for_a_bug_report#How_to_get_a_crash_ID_with_the_Mozilla_Crash_Reporter" title="https://developer.mozilla.org/En/How_to_get_a_stacktrace_for_a_bug_report#How_to_get_a_crash_ID_with_the_Mozilla_Crash_Reporter">as above</a>.</p>
+
+<h4 id="Accessing_crash_report_IDs_outside_of_Firefox">Accessing crash report IDs outside of Firefox</h4>
+
+<p>If you cannot load Firefox at all you can find the crash report files at this location depending on your operating system:</p>
+
+<p>Windows : <span class="filename">%APPDATA%\Mozilla\Firefox\Crash Reports\submitted\</span><br>
+ OS X : <span class="filename">~/Library/Application Support/Firefox/Crash Reports/submitted/</span><br>
+ Linux : <span class="filename">~/.mozilla/firefox/Crash Reports/submitted/</span></p>
+
+<p>Each file in this folder contains one submitted crash report ID. You can check the modified or creation time for each file to discern which crash reports are relevant to your bug report.</p>
+
+<h2 id="Alternative_ways_to_get_a_stacktrace">Alternative ways to get a stacktrace</h2>
+
+<p>If the Mozilla crash reporter doesn't come up or isn't available you will need to obtain a stacktrace manually:</p>
+
+<h4 id="Windows">Windows</h4>
+
+<p>See the article <a class="internal" href="/en-US/docs/Mozilla/How_to_get_a_stacktrace_with_WinDbg" title="En/How to get a stacktrace with WinDbg">Create a stacktrace with Windbg</a> for information on how to do this.</p>
+
+<p>For a full process dump, see <a href="/en-US/docs/How_to_get_a_process_dump_with_Windows_Task_Manage">How to get a process dump with Windows Task Manager [en-US]</a></p>
+
+<h4 id="OS_X">OS X</h4>
+
+<p>Run /Applications/Utilities/Console.app.  Expand "~/Library/Logs" and "CrashReporter", then look for logs for "firefox-bin".</p>
+
+<h4 id="Linux">Linux</h4>
+
+<p>Note that for most distros, the package you need to get symbols for will be something like "xulrunner", not "firefox".</p>
+
+<h2 id="Where_did_my_crash_get_submitted.3F" name="Where_did_my_crash_get_submitted.3F">Crash reports files on your computer</h2>
+
+<p>When Breakpad initially catches a crash it first writes crash report files (e.g. .dump and .extra files) into the 'pending' subdirectory of its 'Crash Reports' directory.</p>
+
+<p>If Breakpad successfully sends the crash report to the reporting server then, by default, the files added to the 'pending' subdirectory for the crash are removed, and a .txt file is placed in the 'submitted' directory containing the crash ID created by the reporting server.</p>
+
+<p>If you want Breakpad to leave the .dump and .extra files on your computer so that you can examine them locally, then set the MOZ_CRASHREPORTER_NO_DELETE_DUMP environment variable to 1.</p>
+
+<ul>
+ <li>Ubuntu:  <a class="external external-icon" href="https://wiki.ubuntu.com/MozillaTeam/Bugs#Obtain%20a%20backtrace%20from%20an%20apport%20crash%20report%20(using%20gdb)">Instructions from the Ubuntu Team</a></li>
+ <li>openSUSE:  <a class="external external-icon" href="https://en.opensuse.org/openSUSE:Bugreport_application_crashed">General instructions from openSUSE</a></li>
+ <li>Fedora: <a class="external external-icon" href="https://fedoraproject.org/wiki/StackTraces">Capturing Stack Traces</a></li>
+ <li>Gentoo: <a class="external external-icon" href="https://wiki.gentoo.org/wiki/Debugging_with_GDB">Debugging using GDB</a></li>
+</ul>

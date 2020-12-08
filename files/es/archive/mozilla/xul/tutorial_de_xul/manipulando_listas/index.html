@@ -1,0 +1,168 @@
+---
+title: Manipulando listas
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Manipulando_listas
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - páginas_a_traducir
+translation_of: Archive/Mozilla/XUL/Tutorial/Manipulating_Lists
+---
+<p>The XUL listbox provides a number of specialized methods.</p>
+
+<h3 id="Manipulaci.C3.B3n_de_una_lista" name="Manipulaci.C3.B3n_de_una_lista">Manipulación de una lista</h3>
+
+<p>The <code><a href="es/XUL/Elementos/listbox">listbox</a></code> element provides numerous methods to retrieve and manipulate its items. Although <a href="es/Tutorial_de_XUL/Controles_de_listas">listboxes</a> may be manipulated using the standard <a href="es/DOM">DOM</a> functions as well, it is recommended that the specialized listbox functions be used instead when possible. These functions are bit simpler and will do the right thing.</p>
+
+<p>The <code><a href="es/XUL/M%c3%a9todos/appendItem">appendItem()</a></code> function is used to append a new item to the end a list. Similar to the <a href="es/DOM/element#element.appendChild">DOM appendChild()</a> function except that it takes a string label, and you do not have to worry about where to add it in the list structure. Here is an example:</p>
+
+<p><strong>Ejemplo 1</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_1.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;script&gt;
+function addItem(){
+  document.getElementById('thelist').appendItem("Thursday", "thu");
+}
+&lt;/script&gt;
+
+&lt;listbox id="thelist"/&gt;
+
+&lt;button label="Add" oncommand="addItem();"/&gt;
+</pre>
+
+<p>The <code><a href="es/XUL/M%c3%a9todos/appendItem">appendItem()</a></code> takes two arguments, the <code>label</code>, in this case 'Thursday', and a <code>value</code> 'thu'. The two arguments correspond to the <code><a href="es/XUL/Atributos/label">label</a></code> attribute and the <code><a href="es/XUL/Atributos/value">value</a></code> attribute on the <code><a href="es/XUL/Elementos/listitem">listitem</a></code> element. The value is used only as an extra optional value associated with an item which you might wish to use in a script.</p>
+
+<p>Similarly, there is also an <code><a href="es/XUL/M%c3%a9todos/insertItemAt">insertItemAt()</a></code> and a <code><a href="es/XUL/M%c3%a9todos/removeItemAt">removeItemAt()</a></code> function which inserts a new item and removes an existing item respectively. The syntax is as follows:</p>
+
+<pre>list.insertItemAt(3, "Miércoles", "mié");
+list.removeItemAt(3);
+</pre>
+
+<p>The <code><a href="es/XUL/M%c3%a9todos/insertItemAt">insertItemAt()</a></code> function takes an additional argument, the position to insert the new item. The new item is inserted at this index, so, in the example, the new item will be added at position 3 while the item previously at that position will now be at position 4. Remember that the first item is 0. The <code><a href="es/XUL/M%c3%a9todos/removeItemAt">removeItemAt()</a></code> function will remove the item at a specific index.</p>
+
+<p>These three methods are also available for several other XUL elements and work in the same manner. In fact, these methods are part of the <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULSelectControlElement.html">nsIDOMXULSelectControlElement</a> interface so any XUL elements which implement this interface have these methods. This includes the <code><a href="es/XUL/Elementos/menulist">menulist</a></code>, <code><a href="es/XUL/Elementos/radiogroup">radiogroup</a></code> and <code><a href="es/XUL/Elementos/tabs">tabs</a></code> elements. For example, to add a new item to a <a href="es/Tutorial_de_XUL/Men%c3%baes_de_barras_simples">menulist</a>, you can use the same syntax as for a <a href="es/Tutorial_de_XUL/Controles_de_listas">listbox</a>. The right kind of element will be appended in each situation.</p>
+
+<h3 id="Lista_de_selecci.C3.B3n" name="Lista_de_selecci.C3.B3n">Lista de selección</h3>
+
+<p>The <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULMultiSelectControlElement.html">nsIDOMXULMultiSelectControlElement</a> interface provides two additonal properties, <code><a href="es/XUL/Propiedades/selectedIndex">selectedIndex</a></code> and <code><a href="es/XUL/Propiedades/selectedItem">selectedItem</a></code>. The former returns the index of the selected item while the latter returns the selected element. For instance the selectedItem of a menulist will be the <code><a href="es/XUL/Elementos/menuitem">menuitem</a></code> that is selected. If no item is selected, <code><a href="es/XUL/Propiedades/selectedIndex">selectedIndex</a></code> will return -1, while <code><a href="es/XUL/Propiedades/selectedItem">selectedItem</a></code> will return null.</p>
+
+<h4 id="Obteniendo_el_.C3.ADtem_seleccionado" name="Obteniendo_el_.C3.ADtem_seleccionado">Obteniendo el ítem seleccionado</h4>
+
+<p>These two properties are commonly inspected during a select event, as in the following example:</p>
+
+<p><strong>Ejemplo 2</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_2.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;listbox id="thelist" onselect="alert(this.selectedItem.label);"&gt;
+  &lt;listitem label="Corto"/&gt;
+  &lt;listitem label="Medio"/&gt;
+  &lt;listitem label="Largo"/&gt;
+&lt;/listbox&gt;
+</pre>
+
+<p>The select event is fired for a <a href="es/XUL/Elementos/listbox">listbox</a> when an item in the list is selected. The select handler here displays an alert containing the label of the selected item in the list. Since the select event fired we can assume that an item is selected. In other cases, you may wish to check to ensure that selectedItem is not null before continuing.</p>
+
+<p>The select event is also fired when a radio button in a <code><a href="es/XUL/Elementos/radiogroup">radiogroup</a></code> is selected and when a tab is selected in a <code><a href="es/XUL/Elementos/tabs">tabs</a></code> element. However, <code><a href="es/XUL/menulist">menulists</a></code> do not fire the select event; instead you can listen to the command event to handle when an item is selected.</p>
+
+<p>For the <code><a href="es/XUL/Elementos/tabs">tabs</a></code> element, it is often more convenient to use functions of the <code><a href="es/XUL/Elementos/tabbox">tabbox</a></code> element instead. It also has a <code><a href="es/XUL/Propiedades/selectedIndex">selectedIndex</a></code> function which will return the index of the selected tab. However, to get the selected item, use the tabbox's <code><a href="es/XUL/Propiedades/selectedTab">selectedTab</a></code> property instead. Or, use the <code><a href="es/XUL/Propiedades/selectedPanel">selectedPanel</a></code> property to get the selected panel, that is, return the content associated with the <a href="es/XUL/Elementos/tab">tab</a>.</p>
+
+<h4 id="Cambiando_la_selecci.C3.B3n" name="Cambiando_la_selecci.C3.B3n">Cambiando la selección</h4>
+
+<p>All of the selection related properties described above may also be assigned a new value to change the selection. In the next example, the <code><a href="es/XUL/Propiedades/selectedIndex">selectedIndex</a></code> property of a <code><a href="es/XUL/Elementos/radiogroup">radiogroup</a></code> element is changed based on the value entered in a textbox. This code isn't foolproof though; for example it doesn't check if the value entered is out of range. You will want to make sure that you add this kind of error checking.</p>
+
+<p><strong>Ejemplo 3</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_3.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_3.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;script&gt;
+function doSelect(){
+  var val = document.getElementById('number').value;
+  val = Number(val);
+  if (val != null)
+    document.getElementById('level').selectedIndex = val - 1;
+}
+&lt;/script&gt;
+
+&lt;hbox align="center"&gt;
+  &lt;label value="Escriba un número del 1 a 3:"/&gt;
+  &lt;textbox id="number"/&gt;
+  &lt;button label="Seleccionar" oncommand="doSelect();"/&gt;
+&lt;/hbox&gt;
+
+&lt;radiogroup id="level"&gt;
+  &lt;radio label="Excelente"/&gt;
+  &lt;radio label="Bueno"/&gt;
+  &lt;radio label="Pobre"/&gt;
+&lt;/radiogroup&gt;
+</pre>
+
+<p>Listboxes also support multiple selection and the functions of the <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULMultiSelectControlElement.html">nsIDOMXULMultiSelectControlElement</a> interface. This interface provides a number of functions specifically for handling multiple selection. For example the <code><a href="es/XUL/Propiedades/selectedItems">selectedItems</a></code> property holds a list of the items that are selected, while the <a href="es/XUL/Propiedades/selectedCount">selectedCount</a> property holds the number of items selected. Typically, you will use these properties to iterate over the list and perform some operation for each item. Be careful when iterating over the selected items; if you modify the items in the list while iterating, the list will change and the selection properties may return different values. This is one reason why it is useful to manipulate the list by the item rather than by index.</p>
+
+<h4 id="Deleting_selected_items" name="Deleting_selected_items">Deleting selected items</h4>
+
+<p>The following example shows a method of deleting the selected items properly:</p>
+
+<p><strong>Ejemplo 4</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_4.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_4.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;script&gt;
+function deleteSelection(){
+  var list = document.getElementById('thelist');
+  var count = list.selectedCount;
+  while (count--){
+    var item = list.selectedItems[0];
+    list.removeItemAt(list.getIndexOfItem(item));
+  }
+}
+&lt;/script&gt;
+
+&lt;button label="Delete" oncommand="deleteSelection();"/&gt;
+
+&lt;listbox id="thelist" seltype="multiple"&gt;
+  &lt;listitem label="Cheddar"/&gt;
+  &lt;listitem label="Cheshire"/&gt;
+  &lt;listitem label="Edam"/&gt;
+  &lt;listitem label="Gouda"/&gt;
+  &lt;listitem label="Havartie"/&gt;
+&lt;/listbox&gt;
+</pre>
+
+<p>Inside the while loop we</p>
+
+<ul>
+ <li>first get the selecteItem at index 0. The first selected item is always retrieved as the size of the array will decrease as the items are removed.</li>
+ <li>Next, we remove the item using the <code><a href="es/XUL/M%c3%a9todos#removeItemAt">removeItemAt()</a></code> function. Since this function requires an index</li>
+ <li>we can convert between an item and an index using the <code><a href="es/XUL/M%c3%a9todos#getIndexOfItem">getIndexOfItem()</a></code> function. There is also a corresponding <code><a href="es/XUL/M%c3%a9todos#getItemAtIndex">getItemAtIndex()</a></code> function to do the reverse.</li>
+</ul>
+
+<p>The <a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIDOMXULMultiSelectControlElement.html">nsIDOMXULMultiSelectControlElement</a> interface also provides methods for modifying the selected items. For instance, the <code><a href="es/XUL/M%c3%a9todos/addItemToSelection">addItemToSelection()</a></code> function adds a new item to the set of selected items, without clearing the existing selection. The <code><a href="es/XUL/M%c3%a9todos#removeItemFromSelection">removeItemFromSelection()</a></code> function removes a single item from the selection.</p>
+
+<h3 id="Lista_desplegable" name="Lista_desplegable">Lista desplegable</h3>
+
+<p>If there are more rows in the <code><a href="es/XUL/Elementos/listbox">listbox</a></code> than can be displayed, a scroll bar will appear to allow the user to scroll the list. The scroll position may be adjusted using a couple of listbox methods.</p>
+
+<p>The <code><a href="es/XUL/M%c3%a9todos/scrollToIndex">scrollToIndex()</a></code> method scrolls to a given row. This listbox will scroll such that the row will be the top row visible, unless the row is near the end of the list of items. The <code><a href="es/XUL/M%c3%a9todos/ensureIndexIsVisible">ensureIndexIsVisible()</a></code> method is similar in that it also scrolls to show a row, but this method does not scroll if the item is already visible. Thus, the former function is used to scroll to a specific row while the latter is used just to make sure that a row is visible. There is also an <code><a href="es/XUL/M%c3%a9todos/ensureIndexIsVisible">ensureIndexIsVisible()</a></code> that takes an item as an argument instead of an index. Compare the effect of both functions at different scroll positions in this example:</p>
+
+<p><strong>Ejemplo 5</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_5.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_domlists_5.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;button label="scrollToIndex"
+           oncommand="document.getElementById('thelist').scrollToIndex(4);"/&gt;
+&lt;button label="ensureIndexIsVisible"
+           oncommand="document.getElementById('thelist').ensureIndexIsVisible(4);"/&gt;
+
+&lt;listbox id="thelist" rows="5"&gt;
+  &lt;listitem label="1"/&gt;
+  &lt;listitem label="2"/&gt;
+  &lt;listitem label="3"/&gt;
+  &lt;listitem label="4"/&gt;
+  &lt;listitem label="5"/&gt;
+  &lt;listitem label="6"/&gt;
+  &lt;listitem label="7"/&gt;
+  &lt;listitem label="8"/&gt;
+  &lt;listitem label="9"/&gt;
+  &lt;listitem label="10"/&gt;
+  &lt;listitem label="11"/&gt;
+  &lt;listitem label="12"/&gt;
+&lt;/listbox&gt;
+</pre>
+
+<p>Seguimos con los <a href="es/Tutorial_de_XUL/Objectos_de_caja">objetos de caja de XUL</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Modificando_una_interfaz_XUL" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Objetos_de_caja">Siguiente  »</a></p>
+</div>

@@ -1,0 +1,74 @@
+---
+title: Nuevo en JavaScript 1.1
+slug: Web/JavaScript/Novedades_en_JavaScript/1.1
+tags:
+  - JavaScript
+  - Versiones
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.1
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>Lo siguiente es una bitácora de cambios en JavaScript desde Netscape Navigator 2.0 al 3.0. La documentación del viejo Netscape se refiere a ésto como "<a href="https://web.archive.org/web/20060318153542/wp.netscape.com/eng/mozilla/3.0/handbook/javascript/index.html">Características agregadas luego de la versión 1</a>". Netscape Navigator 3.0 se lanzó el 19 de agosto de 1996. Netscape Navigator 3.0 fue la segunda versión principal del navegador con soporte JavaScript.</p>
+
+<h2 id="Versiones_JavaScript">Versiones JavaScript</h2>
+
+<p>Netscape Navigator 3.0 también introdujo versiones del lenguage JavaScript.</p>
+
+<pre class="brush: html">&lt;SCRIPT LANGUAGE="JavaScript"&gt;    &lt;!-- JavaScript for Navigator 2.0. --&gt;
+&lt;SCRIPT LANGUAGE="JavaScript1.1"&gt; &lt;!-- JavaScript for Navigator 3.0. --&gt;</pre>
+
+<h2 id="Características_nuevas_en_JavaScript_1.1">Características nuevas en JavaScript 1.1</h2>
+
+<h3 id="Objetos_nuevos">Objetos nuevos</h3>
+
+<ul>
+ <li>{{jsxref("Array")}}</li>
+ <li>{{jsxref("Boolean")}}</li>
+ <li>{{jsxref("Function")}}</li>
+ <li>{{jsxref("Number")}}</li>
+</ul>
+
+<h3 id="Propiedades_nuevas">Propiedades nuevas</h3>
+
+<ul>
+ <li>{{jsxref("Number.MAX_VALUE")}}</li>
+ <li>{{jsxref("Number.MIN_VALUE")}}</li>
+ <li>{{jsxref("NaN")}}</li>
+ <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
+ <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
+</ul>
+
+<h3 id="Método_nuevos">Método nuevos</h3>
+
+<ul>
+ <li>{{jsxref("Array.prototype.join()")}}</li>
+ <li>{{jsxref("Array.prototype.reverse()")}}</li>
+ <li>{{jsxref("Array.prototype.sort()")}}</li>
+ <li>{{jsxref("Array.prototype.split()")}}</li>
+</ul>
+
+<h3 id="Operadores_nuevos">Operadores nuevos</h3>
+
+<ul>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code></li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/void">void</a></code></li>
+</ul>
+
+<h3 id="Otras_características_nuevas">Otras características nuevas</h3>
+
+<ul>
+ <li><code><a href="/en-US/docs/Web/HTML/Element/noscript">&lt;noscript&gt;</a></code></li>
+ <li><a href="/en-US/docs/Archive/Web/LiveConnect">LiveConnect</a>. Comunicación entre Java y JavaScript.</li>
+</ul>
+
+<h2 id="Modificaciones_en_funcionalidad_en_JavaScript_1.1">Modificaciones en funcionalidad en  JavaScript 1.1</h2>
+
+<ul>
+ <li>"Eliminación de objetos". Puedes remover un objeto si estableces como <code>null</code> su objeto de referencia.</li>
+ <li>Se añadieron a los objetos las propiedades <code>constructor</code> y <code>prototype</code>.</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code> ahora es un método de cada objeto (anteriormente era una función integrada); ésto evalúa una cadena de código JavaScript en el contexto del objeto especificado.</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a></code> ahora funciona en todas las plataformas.</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">toString()</a></code>: Se agregó el parámetro de radix, lo cual especifica la base a usar para representar valores numéricos.</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN">isNaN()</a></code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN"> </a> Ahora funciona en todas las plataformas (no sólamente en <em>Unix</em>)</li>
+ <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat">parseFloat()</a></code> <code>y <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt">parseint()</a></code> ahora resultan <code>NaN</code> en todas las plataformas si el primer caracter de la cadena especificada no puede ser convertido en número; en lanzamientos anteriores, resultaba <code>NaN</code> en <em>Solaris </em>e <em>Irix</em>, y cero en todas las otras plataformas.</li>
+</ul>

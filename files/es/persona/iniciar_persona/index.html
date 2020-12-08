@@ -1,0 +1,29 @@
+---
+title: Iniciando el proyecto Persona
+slug: Persona/Iniciar_Persona
+translation_of: Archive/Mozilla/Persona/Bootstrapping_Persona
+---
+<p>Para poder ser realmente exitoso y descentralizado, Persona necesita el apoyo de tres grupos diferentes:</p>
+<ul>
+  <li><strong>Sitios Web</strong> que deben permitir a sus usuarios registrarse con Persona.</li>
+  <li><strong>Navegadores Web</strong> que deben implementar las APIs <a href="https://developer.mozilla.org/en/DOM/navigator.id" title="navigator.id">navigator.id</a> .</li>
+  <li><strong>Proveedores de Email</strong> que deben ser Proveedores de Identidad (IdPs —por su sigla en inglés).</li>
+</ul>
+<p>Esto da lugar a un problema del tipo "el huevo o la gallina": ninguno de estos grupos se beneficiaría significativamente a menos que hubiese una masa considerable de usuarios pero un sistema distribuido no puede conseguir una masa considerable de usuarios sin el apoyo de los grupos mencionados anteriormente.</p>
+<p>Para resolver este problema, <a href="https://login.persona.org">https://login.persona.org</a> alberga tres recursos:</p>
+<ol>
+  <li>Un Proveedor de Identidad de respaldo, que intercede por aquellos usuarios cuyos proveedores de email no soportan Persona</li>
+  <li>Una implementación JavaScript multinavegador (<a href="https://developer.mozilla.org/en-US/docs/persona/Browser_compatibility" title="/en-US/docs/persona/Browser_compatibility"><em>cross-browser</em> en inglés</a>) de las APIs <a href="https://developer.mozilla.org/en/DOM/navigator.id" title="navigator.id">navigator.id</a> para los navegadores sin soporte nativo.</li>
+  <li>Una API de verificación albergada para facilitar que los sitios verifiquen las credenciales de usuario.</li>
+</ol>
+<p>Todo esto en conjunto permite que los sitios web ofrezcan Persona a los usuarios sin importar el navegador y sin que los proveedores de email tengan que involucrarse.</p>
+<p>Estos servicios son temporales y el sistema Persona está diseñado de manera tal que los mismos puedan ser desplazados transparente y automáticamente a medida que se agreguen medios de soporte nativo a los navegadores y proveedores de email. Así, serán menos relevantes a medida que Persona crece; y posiblemente sean todos removidos con el correr del tiempo. En ese momento, <a href="https://login.persona.org">https://login.persona.org</a> no figurará en lo absoluto en el sistema Persona.</p>
+<h2 id="Proveedor_de_identidad_de_respaldo"><strong>Proveedor de identidad de respaldo</strong></h2>
+<p>Cualquier dominio puede ser un Proveedor de Identidad siempre y cuando las partes involucradas estén dispuestas a confiar en los certificados emitidos por ese dominio. Esperamos que los proveedores de email actúen como IdPs para las direcciones que administran haciendo que la experiencia de usuario de Persona sea fluida para esos usuarios. Permite que los usuarios se beneficien de su relación existente con el proveedor de email cuando se autentiquen (acrediten) en otros sitios.</p>
+<p>No obstante, los proveedores de email no serán IdPs hasta que haya una demanda significativa por parte de sus usuarios. Mientras tanto, Mozilla opera un IdP de respaldo en <a href="https://login.persona.org">https://login.persona.org</a>. Este respaldo permite que los usuarios inicien sesión en sitios con sus direcciones de email existentes sin importar si el proveedor soporta Persona. El IdP de respaldo certificará las direcciones de email de cualquier dominio empleando su propio flujo de autenticación y contraseña, en la medida que el usuario sea capaz de probar el control de una dirección al hacer clic en un enlace de un email de verificación.</p>
+<p>Una vez que el proveedor de email soporte Persona nativamente, sus usuarios comenzarán a usuarlo transparentemente en lugar del IdP de respaldo.</p>
+<h2 id="Librería_de_APIs_multinavegador">Librería de APIs multinavegador</h2>
+<p>Para que Persona funcione, el navegador del usuario debe soportar la API <a href="/en/DOM/navigator.id" title="navigator.id">navigator.id</a>. Con el tiempo, los navegadores proveerán un soporte nativo para estas APIs pero, hasta entonces, una implementación <a href="/en-US/docs/persona/Browser_compatibility" title="/en-US/docs/persona/Browser_compatibility">multinavegador </a>está disponlible en <a href="https://login.persona.org/include.js" title="https://login.persona.org/include.js">https://login.persona.org/include.js</a>. Al incluir este archivo, los sitios web ya pueden empezar a usar Persona. Una vez que las implementaciones nativas de las APIs estén disponibles, la librería las pospondrá automáticamente.</p>
+<h2 id="Servicio_de_verificación_remota">Servicio de verificación remota</h2>
+<p>En <a href="https://login.persona.org" rel="freelink">https://login.persona.org</a> Mozilla alberga un <a href="/en/Persona/Remote_Verification_API" title="en/BrowserID/Remote_Verification_API">servicio de verificación remota</a> que los sitios web pueden utilizar para verificar las aseveraciones de identad enviadas por sus usuarios. Esto facilita que los sitios web soporten Persona porque se hace cargo de analizar la aseveración y de verificar critográficamente las identidades de los usuarios.</p>
+<p>Una vez que se estabilicen los formatos de dato de Persona, la verificación se hará posiblemente en el servidor de cada sitio. Esta transición es especialmente importante para la privacidad del usuario debido a que hará imposible que el IdP de respaldo rastree a sus usuarios. Aun con la verificación remota, los usuarios de IdPs nativos no pueden ser rastreados por ese IdP.</p>

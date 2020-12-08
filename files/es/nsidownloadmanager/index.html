@@ -1,0 +1,442 @@
+---
+title: nsIDownloadManager
+slug: nsIDownloadManager
+tags:
+  - Firefox 3
+  - Interfaces
+  - Todas_las_Categorías
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager
+---
+<p></p><div class="blockIndicator obsolete obsoleteHeader"><p><strong><span class="icon-only-inline" title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> Obsoleto</strong><br>Esta funcionalidad es obsoleta. Aunque puede aún funcionar en algunos navegadores, se desalienta su uso ya que puede ser removida en cualquier momento. Evite usarla.</p></div> El interfaz <code>nsIDownloadManager</code> permite a las aplicaciones y extensiones comunicarse con el Administrador de Descargas, añadiendo y quitando archivos a descargar, recolectando información sobre las descargas y siendo notificado cuando las descargas son finalizadas.<p></p>
+
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/downloads/public/nsIDownloadManager.idl" rel="custom">toolkit/components/downloads/public/nsIDownloadManager.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.9 (Firefox 3)</span></div>
+</div><p></p>
+
+<p>Deriva desde: <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
+
+<p>Implementado por: <code>@mozilla.org/download-manager;1</code>. Para crear una unidad, usa:</p>
+
+<pre class="eval">var dm = Components.classes["@mozilla.org/download-manager;1"]
+                   .createInstance(Components.interfaces.nsIDownloadManager);
+</pre>
+
+<h2 id="Descripci.C3.B3n_del_m.C3.A9todo" name="Descripci.C3.B3n_del_m.C3.A9todo">Descripción del método</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>nsIDownload <a href="#addDownload.28.29">addDownload</a>(aDownloadType para abreviar, en <a href="/es/nsIURI" title="es/nsIURI">nsIURI</a> aSource, en nsIURI aTarget, en <a href="/es/AString" title="es/AString">AString</a> aDisplayName, en <a href="/es/NsIMIMEInfo" title="es/NsIMIMEInfo">nsIMIMEInfo</a> aMIMEInfo, en <a href="/es/PRTime" title="es/PRTime">PRTime</a> aStartTime, en <a href="/es/nsILocalFile" title="es/nsILocalFile">nsILocalFile</a> aTempFile, en <a href="/es/nsICancelable" title="es/nsICancelable">nsICancelable</a> aCancelable)</code></td>
+  </tr>
+  <tr>
+   <td><code>nsIDownload <a href="#getDownload.28.29">getDownload</a>(in unsigned long aID)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#cancelDownload.28.29">cancelDownload</a>(in unsigned long aID)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeDownload.28.29">removeDownload</a>(in unsigned long aID)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#pauseDownload.28.29">pauseDownload</a>(in unsigned long aID)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#resumeDownload.28.29">resumeDownload</a>(in unsigned long aID)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#retryDownload.28.29">retryDownload</a>(in unsigned long aID)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#cleanUp.28.29">cleanUp</a>()</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#addListener.28.29">addListener</a>(in <a href="/es/nsIDownloadProgressListener" title="es/nsIDownloadProgressListener">nsIDownloadProgressListener</a> aListener)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#removeListener.28.29">removeListener</a>(in <a href="/es/nsIDownloadProgressListener" title="es/nsIDownloadProgressListener">nsIDownloadProgressListener</a> aListener)</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Atributos" name="Atributos">Atributos</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Atributo</td>
+   <td class="header">Tipo</td>
+   <td class="header">Descripción</td>
+  </tr>
+  <tr>
+   <td><code>DBConnection</code></td>
+   <td><code><a href="/es/mozIStorageConnection" title="es/mozIStorageConnection">mozIStorageConnection</a></code></td>
+   <td>La conexión de la base de datos con la base de datos de descargas. <em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>canCleanUp</code></td>
+   <td><code>boolean</code></td>
+   <td>Si hay o no descargas que se pueden limpiar (quitar) p.e. descargas completadas, fallidas o canceladas. <em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>activeDownloadCount</code></td>
+   <td><code>long</code></td>
+   <td>Número de archivos actualmente siendo descargados. <em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>activeDownloads</code></td>
+   <td><code><a href="/es/nsISimpleEnumerator" title="es/nsISimpleEnumerator">nsISimpleEnumerator</a></code></td>
+   <td>Enumeración de los nsIDownloads activos. <em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>defaultDownloadsDirectory</code></td>
+   <td><code><a href="/es/nsILocalFile" title="es/nsILocalFile">nsILocalFile</a></code></td>
+   <td>Devuelve el directorio por defecto (dependiendo del SO) para las descargas. <em>Sólo lectura</em></td>
+  </tr>
+  <tr>
+   <td><code>userDownloadsDirectory</code></td>
+   <td><code><a href="/es/nsILocalFile" title="es/nsILocalFile">nsILocalFile</a></code></td>
+   <td>Devuelve el directorio, configurado por el usuario, para las descargas. <em>Sólo lectura</em>only.
+    <p>El path depende de dos configuraciones del usuario en las preferencias:</p>
+
+    <p><code>browser.download.folderList</code> define la localización por defecto para los archivos:</p>
+
+    <ul>
+     <li>0: Los archivos se descargan en el Escritorio por defecto.</li>
+     <li>1: Los archivos se descargan en el directorio especificado por el OS por defecto.</li>
+     <li>2: Los archivos se descargan en el directorio local especificado por la preferencia <code>browser.download.dir</code>. Si esta preferencia es invalida, la descarga se realiza en el sitio por defecto.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Constantes" name="Constantes">Constantes</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Constane</td>
+   <td class="header">Valor</td>
+   <td class="header">Descripción</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_NOTSTARTED</code></td>
+   <td>-1</td>
+   <td>La descarga no ha comenzado aún.</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_DOWNLOADING</code></td>
+   <td>0</td>
+   <td>La descarga esta en proceso de ser descargada.</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_FINISHED</code></td>
+   <td>1</td>
+   <td>La descarga ha terminado.</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_FAILED</code></td>
+   <td>2</td>
+   <td>La descarga ha fallado.</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_CANCELED</code></td>
+   <td>3</td>
+   <td>La descarga fue cancelada por el usuario.</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_PAUSED</code></td>
+   <td>4</td>
+   <td>La descarga está actualmente en pausa.</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_QUEUED</code></td>
+   <td>5</td>
+   <td>La descarga está en cola pero no está siendo descargada.</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_BLOCKED</code></td>
+   <td>6</td>
+   <td>La descarga ha sido bloqueada, bien por un control paterno o el escáner de virus ha determinado que el archivo está infectado y no puede limpiarse.</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_SCANNING</code></td>
+   <td>7</td>
+   <td>La descarga está siendo escaneada por la utilidad antivirus.</td>
+  </tr>
+  <tr>
+   <td><code>DOWNLOAD_TYPE_DOWNLOAD</code></td>
+   <td>0</td>
+   <td><em>¿Qué es esto?</em></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="M.C3.A9todos" name="M.C3.A9todos">Métodos</h2>
+
+<h3 id="addDownload.28.29" name="addDownload.28.29">addDownload()</h3>
+
+<p>Crea un nsIDownload y lo añade para ser manejado por el Administrador de descargas.</p>
+
+<pre class="eval">nsIDownload addDownload(
+  in short aDownloadType,
+  in nsIURI aSource,
+  in nsIURI aTarget,
+  in AString aDisplayName,
+  in nsIMIMEInfo aMIMEInfo,
+  in PRTime aStartTime,
+  in nsILocalFile aTempFile,
+  in nsICancelable aCancelable
+)
+</pre>
+
+<h6 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h6>
+
+<dl>
+ <dt><code>aDownloadType</code></dt>
+ <dd>El tipo de transferencia de descarga.</dd>
+</dl>
+
+<dl>
+ <dt><code>aSource</code></dt>
+ <dd>El inicio del URI de transferencia. No debe ser <code>null</code>.</dd>
+</dl>
+
+<dl>
+ <dt><code>aTarget</code></dt>
+ <dd>El destino del URI dónde debe guardarse la transferencia. No debe ser <code>null</code>.</dd>
+</dl>
+
+<dl>
+ <dt><code>aDisplayName</code></dt>
+ <dd>Una descripción de la transferencia, legible por el usuario. Puede ser una cadena vacía.</dd>
+</dl>
+
+<dl>
+ <dt><code>aMIMEInfo</code></dt>
+ <dd>La información MIME asociada con el objetivo. Esto puede incluir el tipo MIME y la aplicación de ayuda en caso necesario. Este parámetro es opcional.</dd>
+</dl>
+
+<dl>
+ <dt><code>startTime</code></dt>
+ <dd>La hora a la que empezó la descarga.</dd>
+</dl>
+
+<dl>
+ <dt><code>aTempFile</code></dt>
+ <dd>La localización del archivo temporal (un archivo temporal en el que guardar los datos recibidos, que no es igual que el archivo de destino). El archivo será movido a su localización definitiva indicada por <code>aTarget</code> cuando se complete la descarga. Esto puede ser <code>null</code>.</dd>
+</dl>
+
+<dl>
+ <dt><code>aCancelable</code></dt>
+ <dd>Un objeto que puede ser utilizado para abortar una descarga. No debe ser <code>null</code>.</dd>
+</dl>
+
+<h6 id="Valor_devuelto" name="Valor_devuelto">Valor devuelto</h6>
+
+<p>El objeto recientemente creado con las propiedades dadas.</p>
+
+<div class="note"><strong>Nota:</strong> Agregar una descarga no comienza el proceso de transferencia. Si quieres que sea así, necsitas crear un objeto <code><a href="/es/NsIWebBrowserPersist" title="es/NsIWebBrowserPersist">nsIWebBrowserPersist</a></code>, llamar al método, poner el <code>progressListener</code> al objeto de descarga devuelto y entonces llamar al método <code>saveURI()</code>.</div>
+
+<h3 id="getDownload.28.29" name="getDownload.28.29">getDownload()</h3>
+
+<p>Lee una descarga manejada por el administrador de descargas. La descarga puede estra en proceso, o haber terminado y estar almacenada en la base de datos.</p>
+
+<pre class="eval">nsIDownload getDownload(
+  in unsigned long aID
+)
+</pre>
+
+<h6 id="Par.C3.A1metros_2" name="Par.C3.A1metros_2">Parámetros</h6>
+
+<dl>
+ <dt><code>aID</code></dt>
+ <dd>La ID única de la descarga.</dd>
+</dl>
+
+<h6 id="Valor_devuelto_2" name="Valor_devuelto_2">Valor devuelto</h6>
+
+<p>TLa descarga con el ID único especificado.</p>
+
+<h6 id="Excepciones" name="Excepciones">Excepciones</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_AVAILABLE</code></dt>
+ <dd>La descarga no está en la base de datos.</dd>
+</dl>
+
+<h3 id="cancelDownload.28.29" name="cancelDownload.28.29">cancelDownload()</h3>
+
+<p>Cancela la descarga que tiene el ID único especificado, si se encuentra en progreso. Esto llama a <code>cancel(NS_BINDING_ABORTED)</code> en el <code><a href="/es/nsICancelable" title="es/nsICancelable">nsICancelable</a></code> dado por la descarga.</p>
+
+<pre class="eval"> void cancelDownload(
+   in unsigned long aID
+ )
+</pre>
+
+<h6 id="Par.C3.A1metros_3" name="Par.C3.A1metros_3">Parámetros</h6>
+
+<dl>
+ <dt><code>aID</code></dt>
+ <dd>El ID único de la descarga.</dd>
+</dl>
+
+<h6 id="Excepciones_2" name="Excepciones_2">Excepciones</h6>
+
+<dl>
+ <dt><code>NS_ERROR_FAILURE</code></dt>
+ <dd>La descarga no está en progreso.</dd>
+</dl>
+
+<h3 id="removeDownload.28.29" name="removeDownload.28.29">removeDownload()</h3>
+
+<p>Quita de la lista, la descarga con el ID único especificado, si ésta no está en progreso. Así como <code>cancelDownload()</code> simplemente cancela la transferencia mientras que la información de la descarga se mantiene, <code>removeDownload()</code> borra todos los datos pertenecientes a la descarga.</p>
+
+<pre class="eval"> void removeDownload(
+   in unsigned long aID
+ )
+</pre>
+
+<h6 id="Par.C3.A1metros_4" name="Par.C3.A1metros_4">Parámetros</h6>
+
+<dl>
+ <dt><code>aID</code></dt>
+ <dd>La ID única de la descarga.</dd>
+</dl>
+
+<h6 id="Excepciones_3" name="Excepciones_3">Excepciones</h6>
+
+<dl>
+ <dt><code>NS_ERROR_FAILURE</code></dt>
+ <dd>La descarga está activa (está en proceso de transferencia).</dd>
+</dl>
+
+<h3 id="pauseDownload.28.29" name="pauseDownload.28.29">pauseDownload()</h3>
+
+<p>Pone la descarga especificada en pausa.</p>
+
+<pre class="eval"> void pauseDownload(
+   in unsigned long aID
+ )
+</pre>
+
+<h6 id="Par.C3.A1metros_5" name="Par.C3.A1metros_5">Parámetros</h6>
+
+<dl>
+ <dt><code>aID</code></dt>
+ <dd>La ID única de la descarga a detener.</dd>
+</dl>
+
+<h6 id="Excepciones_4" name="Excepciones_4">Excepciones</h6>
+
+<dl>
+ <dt><code>NS_ERROR_FAILURE</code></dt>
+ <dd>La descarga no está en proceso.</dd>
+</dl>
+
+<h3 id="resumeDownload.28.29" name="resumeDownload.28.29">resumeDownload()</h3>
+
+<p>Reanuda la descarga especificada.</p>
+
+<pre class="eval"> void resumeDownload(
+   in unsigned long aID
+ )
+</pre>
+
+<h6 id="Par.C3.A1metros_6" name="Par.C3.A1metros_6">Parámetros</h6>
+
+<dl>
+ <dt><code>aID</code></dt>
+ <dd>La ID única de la descarga a reanudar.</dd>
+</dl>
+
+<h6 id="Excepciones_5" name="Excepciones_5">Excepciones</h6>
+
+<dl>
+ <dt><code>NS_ERROR_FAILURE</code></dt>
+ <dd>La descarga no está en progreso.</dd>
+</dl>
+
+<h3 id="retryDownload.28.29" name="retryDownload.28.29">retryDownload()</h3>
+
+<p>Reintenta una descarga fallida.</p>
+
+<pre class="eval"> void retryDownload(
+   in unsigned long aID
+ )
+</pre>
+
+<h6 id="Par.C3.A1metros_7" name="Par.C3.A1metros_7">Parámetros</h6>
+
+<dl>
+ <dt><code>aID</code></dt>
+ <dd>La ID única de la descarga.</dd>
+</dl>
+
+<h6 id="Excepciones_6" name="Excepciones_6">Excepciones</h6>
+
+<dl>
+ <dt><code>NS_ERROR_NOT_AVAILALE</code></dt>
+ <dd>si la descarga es desconocida.</dd>
+</dl>
+
+<h3 id="cleanUp.28.29" name="cleanUp.28.29">cleanUp()</h3>
+
+<p>Quita de la lista las descargas terminadas, fallidas y canceladas.</p>
+
+<pre class="eval"> void cleanUp()
+</pre>
+
+<h6 id="Par.C3.A1metros_8" name="Par.C3.A1metros_8">Parámetros</h6>
+
+<p>Ninguno.</p>
+
+<h3 id="addListener.28.29" name="addListener.28.29">addListener()</h3>
+
+<p>Agrega una escucha al Administrador de Descargas.</p>
+
+<pre class="eval"> void addListener(
+   in nsIDownloadProgressListener aListener
+ )
+</pre>
+
+<h6 id="Par.C3.A1metros_9" name="Par.C3.A1metros_9">Parámetros</h6>
+
+<dl>
+ <dt><code>aListener</code></dt>
+ <dd>El objeto <code><a href="/es/nsIDownloadProgressListener" title="es/nsIDownloadProgressListener">nsIDownloadProgressListener</a></code> que recibirá la información de estado desde el Administrador de Descargas.</dd>
+</dl>
+
+<h3 id="removeListener.28.29" name="removeListener.28.29">removeListener()</h3>
+
+<p>Retira una escucha del Administrador de Descargas.</p>
+
+<pre class="eval"> void removeListener(
+   in nsIDownloadProgressListener aListener
+ )
+</pre>
+
+<h6 id="Par.C3.A1metros_10" name="Par.C3.A1metros_10">Parámetros</h6>
+
+<dl>
+ <dt><code>aListener</code></dt>
+ <dd>El objeto <code><a href="/es/nsIDownloadProgressListener" title="es/nsIDownloadProgressListener">nsIDownloadProgressListener</a></code> dejará de escuchar al Administrador de Descargas.</dd>
+</dl>
+
+<h2 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h2>
+
+<ul>
+ <li><code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownload" title="">nsIDownload</a></code></li>
+ <li><code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManagerUI" title="">nsIDownloadManagerUI</a></code></li>
+ <li><code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener" title="">nsIDownloadProgressListener</a></code></li>
+ <li><a href="/es/The_Download_Manager_schema" title="es/The_Download_Manager_schema">The Download Manager schema</a></li>
+</ul>

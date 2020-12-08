@@ -1,0 +1,307 @@
+---
+title: Extras
+slug: Mozilla/MathML_Project/Extras
+tags:
+  - MathML
+translation_of: Mozilla/MathML_Project/Extras
+---
+<h2 id="MathML_Extras">MathML Extras</h2>
+<p>Esta es una demostración técnica de algunos extras de Mozilla que aun no han sido definidos en la especificación MathML, pero que no se impide su uso por parte de otra especificación. No son portables , solo fueron creados para mostrar algunas características interesantes de usar código nativo desde el entorno del navegador. Se espera que otros renderizadores ignoren los atributos que no pueden comprender mientras estos extras permanezcan indefinidos.</p>
+<h2 id="MathML_Tooltip" name="MathML_Tooltip">El atributo
+ <i>
+  title</i>
+ como una descripción emergente (<a href="http://www.w3.org/TR/html4/struct/global.html#adef-title">desde XHTML</a>)</h2>
+<div style="display: none;">
+ <h3 id="HTML_Content">HTML Content</h3>
+ <pre class="brush: html">&lt;p&gt;Mouse over either log to see a tooltip showing the title
+
+&lt;math display="block"&gt;
+&lt;mrow&gt;
+&lt;mrow&gt;
+&lt;msub title="Base-a log"&gt;
+&lt;mi&gt;log&lt;/mi&gt;
+&lt;mi&gt;a&lt;/mi&gt;
+&lt;/msub&gt;
+&lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;=&lt;/mo&gt;
+&lt;mfrac&gt;
+&lt;mrow&gt;
+&lt;mi title="Natural log"&gt;ln&lt;/mi&gt;
+&lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mrow&gt;
+&lt;mi title="Natural log"&gt;ln&lt;/mi&gt;
+&lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+&lt;mi&gt;a&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;/mfrac&gt;
+&lt;/mrow&gt;
+&lt;/math&gt;
+
+Rather than repeating the instructions,
+some CSS might be used to provide a visual cue. For example
+with the style rule: &lt;code style="white-space: nowrap;"&gt;*[title] { color: blue; }&lt;/code&gt;
+
+&lt;math class="cue" display="block"&gt;
+&lt;mrow&gt;
+&lt;mrow&gt;
+&lt;msub title="Base-a log"&gt;
+&lt;mi&gt;log&lt;/mi&gt;
+&lt;mi&gt;a&lt;/mi&gt;
+&lt;/msub&gt;
+&lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mo&gt;=&lt;/mo&gt;
+&lt;mfrac&gt;
+&lt;mrow&gt;
+&lt;mi title="Natural log"&gt;ln&lt;/mi&gt;
+&lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+&lt;mi&gt;x&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;mrow&gt;
+&lt;mi title="Natural log"&gt;ln&lt;/mi&gt;
+&lt;mo&gt;&amp;ApplyFunction;&lt;/mo&gt;
+&lt;mi&gt;a&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;/mfrac&gt;
+&lt;/mrow&gt;
+&lt;/math&gt;
+&lt;/p&gt;
+
+</pre>
+ <h3 id="CSS_Content">CSS Content</h3>
+ <pre class="brush: css">math.cue *[title] { color: blue; }</pre>
+</div>
+<p>{{ EmbedLiveSample('MathML_Tooltip', '100%', '250px') }}</p>
+<h2 id="Mixing_with_other_markups" name="Mixing_with_other_markups">Mezclando con otras marcas</h2>
+<div style="display: none;">
+ <h3 id="HTML_Content_2">HTML Content</h3>
+ <pre class="brush: html">&lt;math display="block"&gt;
+&lt;mrow&gt;
+&lt;mi&gt;A&lt;/mi&gt;
+&lt;mo&gt;=&lt;/mo&gt;
+&lt;mo&gt;[&lt;/mo&gt;
+&lt;mtable&gt;
+&lt;mtr&gt;
+&lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;
+&lt;mtd&gt;
+&lt;mtext&gt;
+&lt;img width="16" height="16"
+src="http://www.mozilla.org/images/mozilla-16.png"
+alt="mozilla-16" /&gt;
+&lt;/mtext&gt;
+&lt;/mtd&gt;
+&lt;/mtr&gt;
+&lt;mtr&gt;
+&lt;mtd&gt;
+&lt;mtext&gt;&lt;input value="type" size="4"/&gt;&lt;/mtext&gt;
+&lt;/mtd&gt;
+&lt;mtd&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/mtd&gt;
+&lt;/mtr&gt;
+&lt;/mtable&gt;
+&lt;mo&gt;]&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;/math&gt;
+
+&lt;math display="block"&gt;
+&lt;msqrt&gt;
+&lt;mpadded width="30px" height="15px" depth="15px" voffset="-15px"&gt;
+&lt;mtext&gt;
+&lt;svg width="30px" height="30px"&gt;
+&lt;defs&gt;
+&lt;radialGradient id="radGrad1" cx="50%" cy="50%" r="50%"
+                            fx="50%" fy="50%"&gt;
+&lt;stop offset="0%"
+                    style="stop-color:rgb(255,255,255); stop-opacity:1;"/&gt;
+&lt;stop offset="100%"
+                    style="stop-color:rgb(255,0,0); stop-opacity:.8;"/&gt;
+&lt;/radialGradient&gt;
+&lt;/defs&gt;
+&lt;g transform="translate(15,15)"&gt;
+&lt;g&gt;
+&lt;animateTransform attributeName="transform"
+                                attributeType="XML" type="rotate"
+                                from="360" to="0"
+                                dur="15s" repeatCount="indefinite"/&gt;
+&lt;g transform="translate(-15, -15)"&gt;
+&lt;path fill="url(#radGrad1)"
+                      d="M 15 0 L 20 10 L 30 15 L 20 20 L 15 30
+                         L 10 20 L 0 15 L 10 10"/&gt;
+&lt;/g&gt;
+&lt;/g&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+&lt;/mtext&gt;
+&lt;/mpadded&gt;
+&lt;/msqrt&gt;
+&lt;mo&gt;=&lt;/mo&gt;
+&lt;msubsup&gt;
+&lt;mo&gt;∫&lt;/mo&gt;
+&lt;mn&gt;0&lt;/mn&gt;
+&lt;mfrac&gt;
+&lt;mi&gt;π&lt;/mi&gt;
+&lt;mn&gt;2&lt;/mn&gt;
+&lt;/mfrac&gt;
+&lt;/msubsup&gt;
+&lt;msup&gt;
+&lt;mi&gt;θ&lt;/mi&gt;
+&lt;mtext&gt;
+&lt;svg width="15px" height="15px"&gt;
+&lt;defs&gt;
+&lt;radialGradient id="radGrad2" cx="50%" cy="50%" r="50%"
+                          fx="50%" fy="50%"&gt;
+&lt;stop offset="0%"
+                  style="stop-color:rgb(255,255,255); stop-opacity:1;"/&gt;
+&lt;stop offset="100%"
+                  style="stop-color:rgb(0,0,255); stop-opacity:.9;"/&gt;
+&lt;/radialGradient&gt;
+&lt;/defs&gt;
+&lt;g&gt;
+&lt;animateMotion path="M0,0 L3,0 L2,5 L5,5 L0,4 L5,2 z"
+                         begin="0s" dur="0.5s" repeatCount="indefinite"/&gt;
+&lt;circle fill="url(#radGrad2)" r="5px" cx="5px" cy="5px"/&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+&lt;/mtext&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;mo&gt;ⅆ&lt;/mo&gt;
+&lt;mi&gt;θ&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;/math&gt;
+
+&lt;div style="width: 300px; margin-left: auto; margin-right: auto;"&gt;
+&lt;svg width="300px" height="250px"&gt;
+&lt;defs&gt;
+&lt;linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%"&gt;
+&lt;stop offset="0%" style="stop-color:rgb(0,0,255);stop-opacity:1"/&gt;
+&lt;stop offset="100%" style="stop-color:rgb(0,255,0);stop-opacity:1"/&gt;
+&lt;/linearGradient&gt;
+
+&lt;linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%"&gt;
+&lt;stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1"/&gt;
+&lt;stop offset="100%" style="stop-color:rgb(255,255,0);stop-opacity:1"/&gt;
+&lt;/linearGradient&gt;
+
+&lt;radialGradient id="grad3" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"&gt;
+&lt;stop offset="0%" style="stop-color:rgb(0,255,255);stop-opacity:1"/&gt;
+&lt;stop offset="100%" style="stop-color:rgb(255,255,255);stop-opacity:.8"/&gt;
+&lt;/radialGradient&gt;
+&lt;/defs&gt;
+
+&lt;rect width="300" height="250" fill="url(#grad1)"/&gt;
+
+&lt;g transform="translate(150,125)"&gt;
+&lt;g&gt;
+&lt;animateTransform attributeName="transform"
+                          attributeType="XML" type="rotate" from="0" to="360"
+                          dur="6s" repeatCount="indefinite"/&gt;
+
+&lt;g transform="translate(-50,-35)"&gt;
+&lt;rect width="100" height="70" fill="url(#grad2)"/&gt;
+&lt;switch&gt;
+&lt;foreignObject width="100" height="70"
+                           requiredExtensions="http://www.w3.org/1998/Math/MathML"&gt;
+&lt;math display="block"&gt;
+&lt;mrow&gt;
+&lt;mo&gt;(&lt;/mo&gt;
+&lt;mtable&gt;
+&lt;mtr&gt;
+&lt;mtd&gt;&lt;mi&gt;cos&lt;/mi&gt;&lt;mi&gt;θ&lt;/mi&gt;&lt;/mtd&gt;
+&lt;mtd&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mi&gt;sin&lt;/mi&gt;&lt;mi&gt;θ&lt;/mi&gt;&lt;/mtd&gt;
+&lt;/mtr&gt;
+&lt;mtr&gt;
+&lt;mtd&gt;&lt;mi&gt;sin&lt;/mi&gt;&lt;mi&gt;θ&lt;/mi&gt;&lt;/mtd&gt;
+&lt;mtd&gt;&lt;mi&gt;cos&lt;/mi&gt;&lt;mi&gt;θ&lt;/mi&gt;&lt;/mtd&gt;
+&lt;/mtr&gt;
+&lt;/mtable&gt;
+&lt;mo&gt;)&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;/math&gt;
+&lt;/foreignObject&gt;
+&lt;text&gt;rotation matrix&lt;/text&gt;
+&lt;/switch&gt;
+&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;
+&lt;g&gt;
+&lt;animateMotion path="M 32,69 C 64,121 100,27 152,42 203,56 239,257 275,161 295,109 144,221 88,214 -2,202 11,35 32,69 z"
+                     begin="0s" dur="20s" repeatCount="indefinite"/&gt;
+&lt;animateTransform attributeName="transform"
+                        attributeType="XML" type="scale"
+            values="1;2;.5;1" keyTimes="0;.25;.75;1" dur="20s"
+            repeatCount="indefinite"/&gt;
+&lt;circle fill="url(#grad3)" r="30"/&gt;
+&lt;g transform="translate(-30,-30)"&gt;
+&lt;switch&gt;
+&lt;foreignObject width="60" height="60"
+requiredExtensions="http://www.w3.org/1998/Math/MathML"&gt;
+&lt;math display="block"&gt;
+&lt;mrow&gt;
+&lt;munderover&gt;
+&lt;mo&gt;∑&lt;/mo&gt;
+&lt;mrow&gt;
+&lt;mi&gt;n&lt;/mi&gt;
+&lt;mo&gt;=&lt;/mo&gt;
+&lt;mn&gt;0&lt;/mn&gt;
+&lt;/mrow&gt;
+&lt;mrow&gt;
+&lt;mo&gt;+&lt;/mo&gt;
+&lt;mi&gt;∞&lt;/mi&gt;
+&lt;/mrow&gt;
+&lt;/munderover&gt;
+&lt;mfrac&gt;
+&lt;msup&gt;
+&lt;mi&gt;α&lt;/mi&gt;
+&lt;mi&gt;n&lt;/mi&gt;
+&lt;/msup&gt;
+&lt;mrow&gt;
+&lt;mi&gt;n&lt;/mi&gt;
+&lt;mo&gt;!&lt;/mo&gt;
+&lt;/mrow&gt;
+&lt;/mfrac&gt;
+&lt;/mrow&gt;
+&lt;/math&gt;
+&lt;/foreignObject&gt;
+&lt;text&gt;exp(α)&lt;/text&gt;
+&lt;/switch&gt;
+&lt;/g&gt;
+&lt;/g&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+
+</pre>
+</div>
+<p>{{ EmbedLiveSample('Mixing_with_other_markups', '100%', '500px') }}</p>
+<p> </p>
+<h2 id="Inline_JavaScript" name="Inline_JavaScript">JavaScript Incorporado</h2>
+<div style="display: none;">
+ <h3 id="HTML_Content_3">HTML Content</h3>
+ <pre class="brush: html">&lt;math display="block"&gt;
+&lt;mfrac&gt;
+&lt;mtext id="num"&gt;Mouse&lt;/mtext&gt;
+&lt;mtext id="denum"&gt;Over&lt;/mtext&gt;
+&lt;/mfrac&gt;
+&lt;/math&gt;</pre>
+ <h3 id="JavaScript_Content">JavaScript Content</h3>
+ <pre class="brush: js">function whoIsThereAlert(evt)
+{
+  alert("Who is there?");
+}
+function attachListener(id)
+{
+  document.getElementById(id).addEventListener("mouseover", whoIsThereAlert);
+}
+function init()
+{
+  attachListener("num");
+  attachListener("denum");
+}
+
+window.addEventListener("load", init);
+</pre>
+</div>
+<p>{{ EmbedLiveSample('Inline_JavaScript', '100%', '200px') }}</p>
+<p> </p>

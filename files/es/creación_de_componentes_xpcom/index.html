@@ -1,0 +1,274 @@
+---
+title: Creación de Componentes XPCOM
+slug: Creación_de_Componentes_XPCOM
+tags:
+  - Todas_las_Categorías
+  - XPCOM
+  - páginas_a_traducir
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components
+---
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Creating_XPCOM_Components:Preface">Siguiente  »</a></p>
+</div><p></p>
+
+<h3 id="Prefacio" name="Prefacio"><a href="/es/Creación_de_Componentes_XPCOM/Prefacio" title="es/Creación_de_Componentes_XPCOM/Prefacio">Prefacio</a></h3>
+
+<dl>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Prefacio#Qui.C3.A9n_debe_leer_este_Libro" title="es/Creación_de_Componentes_XPCOM/Prefacio#Qui.C3.A9n_debe_leer_este_Libro">Quién debe leer este libro</a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Prefacio#Organizaci.C3.B3n_del_Tutorial" title="es/Creación_de_Componentes_XPCOM/Prefacio#Organizaci.C3.B3n_del_Tutorial">Organización del tutorial</a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Prefacio#Continuando_con_los_Ejemplos" title="es/Creación_de_Componentes_XPCOM/Prefacio#Continuando_con_los_Ejemplos">Continuando con los ejemplos</a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Prefacio#Convenciones" title="es/Creación_de_Componentes_XPCOM/Prefacio#Convenciones">Convenciones</a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Prefacio#Agradecimientos" title="es/Creación_de_Componentes_XPCOM/Prefacio#Agradecimientos">Agradecimientos</a></dd>
+</dl>
+
+<h3 id="Un_vistazo_de_XPCOM" name="Un_vistazo_de_XPCOM"><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM">Un vistazo a XPCOM</a></h3>
+
+<dl>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#La_Soluci.C3.B3n_XPCOM" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#La_Soluci.C3.B3n_XPCOM">La Solución XPCOM</a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Gecko" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Gecko">Gecko</a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Componentes" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Componentes">Componentes</a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Interfases" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Interfases">Interfaces</a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Interfaces_y_Encapsulaci.C3.B3n" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Interfaces_y_Encapsulaci.C3.B3n">Interfaces y encapsulamiento</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#La_Interfaz_Base_nsISupports" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#La_Interfaz_Base_nsISupports">La interfaz base <code>nsISupports</code></a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Identificadores_XPCOM" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Identificadores_XPCOM">Identificadores XPCOM</a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#CID" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#CID">CID</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Contract_ID" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Contract_ID">Contract ID</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Factor.C3.ADas" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Factor.C3.ADas">Factorías</a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#XPIDL_y_Bibliotecas_de_Tipos" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#XPIDL_y_Bibliotecas_de_Tipos">XPIDL y bibliotecas de tipos</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Servicios_de_XPCOM" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Servicios_de_XPCOM">Servicios de XPCOM</a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Tipos_de_XPCOM" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Tipos_de_XPCOM">Tipos de XPCOM</a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Tipos_de_M.C3.A9todos" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Tipos_de_M.C3.A9todos">Tipos de métodos</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Cuenta_de_Referencias" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Cuenta_de_Referencias">Cuenta de referencias</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#C.C3.B3digos_de_Estatus" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#C.C3.B3digos_de_Estatus">Códigos de estatus</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Correlaciones_Variables" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#Correlaciones_Variables">Correlaciones variables</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#C.C3.B3digos_de_Error_Comunes_de_XPCOM" title="es/Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM#C.C3.B3digos_de_Error_Comunes_de_XPCOM">Códigos de errores comunes de XPCOM</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id="Uso_de_Componentes_XPCOM" name="Uso_de_Componentes_XPCOM"><a href="/es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM" title="es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM">Uso de componentes XPCOM</a></h3>
+
+<dl>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#Ejemplos_de_Componentes" title="es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#Ejemplos_de_Componentes">Ejemplos de componentes</a>
+
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#Manejador_de_Cookies" title="es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#Manejador_de_Cookies">Manejador de cookies</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#El_Componente_WebBrowserFind" title="es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#El_Componente_WebBrowserFind">El componente <strong>WebBrowserFind</strong></a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#El_Componente_WebLock" title="es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#El_Componente_WebLock">El componente <strong>WebLock</strong></a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#Uso_de_Componentes_en_Mozilla" title="es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#Uso_de_Componentes_en_Mozilla">Uso de componentes en Mozilla</a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#Localizar_los_Componentes_de_Mozilla" title="es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#Localizar_los_Componentes_de_Mozilla">Localizar los componentes de Mozilla</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#Usar_Componentes_XPCOM_en_tu_Cpp" title="es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#Usar_Componentes_XPCOM_en_tu_Cpp">Usar componentes XPCOM en tu CPP</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#XPConnect:_Usar_Componentes_XPCOM_desde_un_Script" title="es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#XPConnect:_Usar_Componentes_XPCOM_desde_un_Script">XPConnect: Usar componentes XPCOM desde un Script</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id="Interior_del_Componente" name="Interior_del_Componente"><a href="/es/Creación_de_Componentes_XPCOM/Interior_del_Componente" title="es/Creación_de_Componentes_XPCOM/Interior_del_Componente">Interior del Componente</a></h3>
+
+<dl>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Interior_del_Componente#Creaci.C3.B3n_de_Componentes_en_C.2B.2B" title="es/Creación_de_Componentes_XPCOM/Interior_del_Componente#Creaci.C3.B3n_de_Componentes_en_C.2B.2B">Creación de componentes en C++</a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Interior_del_Componente#Inicializaci.C3.B3n_de_XPCOM" title="es/Creación_de_Componentes_XPCOM/Interior_del_Componente#Inicializaci.C3.B3n_de_XPCOM">Inicio de XPCOM</a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Interior_del_Componente#Registro_de_Manifiestos_de_XPCOM" title="es/Creación_de_Componentes_XPCOM/Interior_del_Componente#Registro_de_Manifiestos_de_XPCOM">Registro de manifiestos de XPCOM</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Interior_del_Componente#M.C3.A9todos_de_Registro_en_XPCOM" title="es/Creación_de_Componentes_XPCOM/Interior_del_Componente#M.C3.A9todos_de_Registro_en_XPCOM">Métodos de registro en XPCOM</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Interior_del_Componente#Autoregistro" title="es/Creación_de_Componentes_XPCOM/Interior_del_Componente#Autoregistro">Autoregistro</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Interior_del_Componente#El_Proceso_de_Paro" title="es/Creación_de_Componentes_XPCOM/Interior_del_Componente#El_Proceso_de_Paro">El proceso de paro</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Interior_del_Componente#Tres_Partes_de_una_Biblioteca_de_Componentes_XPCOM" title="es/Creación_de_Componentes_XPCOM/Interior_del_Componente#Tres_Partes_de_una_Biblioteca_de_Componentes_XPCOM">Tres partes de una biblioteca de componentes XPCOM</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Interior_del_Componente#XPCOM_Glue" title="es/Creación_de_Componentes_XPCOM/Interior_del_Componente#XPCOM_Glue">XPCOM Glue</a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Interior_del_Componente#La_Biblioteca_Glue" title="es/Creación_de_Componentes_XPCOM/Interior_del_Componente#La_Biblioteca_Glue">La biblioteca Glue</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Interior_del_Componente#Clases_de_Cadenas_de_XPCOM" title="es/Creación_de_Componentes_XPCOM/Interior_del_Componente#Clases_de_Cadenas_de_XPCOM">Clases de cadenas de XPCOM</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id="Creaci.C3.B3n_de_el_C.C3.B3digo_del_Componente" name="Creaci.C3.B3n_de_el_C.C3.B3digo_del_Componente"><a href="/es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente" title="es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente">Creación del código del componente</a></h3>
+
+<dl>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#En_lo_que_Estaremos_Trabajando" title="es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#En_lo_que_Estaremos_Trabajando">En lo que trabajaremos</a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Registro_de_Componentes" title="es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Registro_de_Componentes">Registro de componentes</a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#El_Programa_regxpcom" title="es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#El_Programa_regxpcom">El Programa <code>regxpcom</code></a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Alternativas_de_Registro" title="es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Alternativas_de_Registro">Alternativas de registro</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Vistazo_del_C.C3.B3digo_Fuente_del_M.C3.B3dulo_WebLock" title="es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Vistazo_del_C.C3.B3digo_Fuente_del_M.C3.B3dulo_WebLock">Vistazo del código fuente del módulo <strong>WebLock</strong></a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Adentr.C3.A1ndonos:_Includes_y_Constantes_Requeridos" title="es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Adentr.C3.A1ndonos:_Includes_y_Constantes_Requeridos">Adentrándonos: inclusiones y constantes requeridas</a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Identificadores_en_XPCOM" title="es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Identificadores_en_XPCOM">Identificadores en XPCOM</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Programando_el_Proceso_de_Registro" title="es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Programando_el_Proceso_de_Registro">Programando el proceso de registro</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Los_M.C3.A9todos_de_Registro" title="es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Los_M.C3.A9todos_de_Registro">Métodos de Registro</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Creaci.C3.B3n_de_una_Instancia_de_tu_Componente" title="es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#Creaci.C3.B3n_de_una_Instancia_de_tu_Componente">Creación de una instancia del componente</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#webLock1.cpp" title="es/Creación_de_Componentes_XPCOM/Creación_de_el_Código_del_Componente#webLock1.cpp"><code>webLock1.cpp</code></a></dd>
+</dl>
+
+<h3 id="Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_M.C3.A1s_F.C3.A1ciles" name="Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_M.C3.A1s_F.C3.A1ciles"><a href="/es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles" title="es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles">Usar utilidades de XPCOM para facilitar el proceso</a></h3>
+
+<dl>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Macros_XPCOM" title="es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Macros_XPCOM">Macros XPCOM</a>
+
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Macros_de_M.C3.B3dulo_de_XPCOM_gen.C3.A9ricos" title="es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Macros_de_M.C3.B3dulo_de_XPCOM_gen.C3.A9ricos">Macros de módulos XPCOM genéricos</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Macros_Comunes_de_Implementaci.C3.B3n" title="es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Macros_Comunes_de_Implementaci.C3.B3n">Macros comunes de implementación</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Macros_de_Declaraci.C3.B3n" title="es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Macros_de_Declaraci.C3.B3n">Macros de declaración</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#webLock2.cpp" title="es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#webLock2.cpp"><code>webLock2.cpp</code></a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Clases_de_Cadenas_en_XPCOM" title="es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Clases_de_Cadenas_en_XPCOM">Clases de cadenas en XPCOM</a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Usando_Cadenas" title="es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Usando_Cadenas">Implementando cadenas</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#nsEmbedString_y_nsEmbedCString" title="es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#nsEmbedString_y_nsEmbedCString"><code>nsEmbedString</code> y <code>nsEmbedCString</code></a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Punteros_Inteligentes" title="es/Creación_de_Componentes_XPCOM/Usar_Utilidades_de_XPCOM_para_Hacer_las_Cosas_Más_Fáciles#Punteros_Inteligentes">Punteros inteligentes</a></dd>
+</dl>
+
+<h3 id="Iniciando_WebLock" name="Iniciando_WebLock"><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock">Iniciando <strong>WebLock</strong></a></h3>
+
+<dl>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Llamado_al_Arrancar" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Llamado_al_Arrancar">Llamado al arrancar</a>
+
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Registro_para_Notificaciones" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Registro_para_Notificaciones">Registro para notificaciones</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Obtener_Acceso_al_Manejador_de_Categor.C3.ADas" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Obtener_Acceso_al_Manejador_de_Categor.C3.ADas">Obtener acceso al manejador de categorías</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#El_Suministro_de_Acceso_a_WebLock" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#El_Suministro_de_Acceso_a_WebLock">Suministro de acceso a <strong>WebLock</strong></a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Creaci.C3.B3n_del_WebLock:_Programaci.C3.B3n_de_Interf.C3.A1z" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Creaci.C3.B3n_del_WebLock:_Programaci.C3.B3n_de_Interf.C3.A1z">Crear la interfaz de programación <strong>WebLock</strong></a></dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Definir_la_Interfaz_WebLock_en_XPIDL" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Definir_la_Interfaz_WebLock_en_XPIDL">Definir la interfaz <strong>WebLock</strong> en XPIDL</a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#La_Sintaxis_XPIDL" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#La_Sintaxis_XPIDL">Sintaxis XPIDL</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Scriptable_Interfaces" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Scriptable_Interfaces">Interfaces programables</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Subclassing_nsISupports" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Subclassing_nsISupports">Subclasificar <code>nsISupports</code></a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#La_Interfaz_Web_Locking" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#La_Interfaz_Web_Locking">Interfaz Web Locking</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Implementaci.C3.B3n_de_WebLock" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Implementaci.C3.B3n_de_WebLock">Implementación de <strong>WebLock</strong></a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Macros_de_Declaraci.C3.B3n" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Macros_de_Declaraci.C3.B3n">Macros de Declaración</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Representaci.C3.B3n_de_Valores_Devueltos_en_XPCOM" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Representaci.C3.B3n_de_Valores_Devueltos_en_XPCOM">Representación de Valores Devueltos en XPCOM</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Generaci.C3.B3n_del_C.C3.B3digo_XPIDL" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Generaci.C3.B3n_del_C.C3.B3digo_XPIDL">Generación del Código XPIDL</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Obtenci.C3.B3n_del_Servicio_WebLock_desde_un_Cliente" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Obtenci.C3.B3n_del_Servicio_WebLock_desde_un_Cliente">Obtención del Servicio <strong>WebLock</strong> Service desde un Cliente</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Implementaci.C3.B3n_de_la_Interfaz_iWebLock" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Implementaci.C3.B3n_de_la_Interfaz_iWebLock">Implementación de la Interfaz <code>iWebLock</code></a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#El_Servicio_Directorios" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#El_Servicio_Directorios">El Servicio Directorios</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Modificar_Rutas_con_nsIFile" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Modificar_Rutas_con_nsIFile">Modificar Rutas con <code>nsIFile</code></a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Manipulaci.C3.B3n_de_Archivos_con_nsIFile" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Manipulaci.C3.B3n_de_Archivos_con_nsIFile">Manipulación de Archivos con <code>nsIFile</code></a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Usar_nsILocalFile_para_leer_informaci.C3.B3n" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Usar_nsILocalFile_para_leer_informaci.C3.B3n">Usar <code>nsILocalFile</code> para leer información</a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Processing_the_White_List_Data" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Processing_the_White_List_Data">Processing the White List Data</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#iWebLock_m.C3.A9todo_por_m.C3.A9todo" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#iWebLock_m.C3.A9todo_por_m.C3.A9todo"><code>iWebLock</code> método por método</a>
+ <dl>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Lock_y_Unlock" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Lock_y_Unlock"><code>Lock</code> y <code>Unlock</code></a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#AddSite" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#AddSite"><code>AddSite</code></a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#RemoveSite" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#RemoveSite"><code>RemoveSite</code></a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#SetSites" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#SetSites"><code>SetSites</code></a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#GetNext" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#GetNext"><code>GetNext</code></a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#GetSites" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#GetSites"><code>GetSites</code></a></dd>
+  <dd><a href="/es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#HasMoreElements" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#HasMoreElements"><code>HasMoreElements</code></a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id="Finishing_the_Component" name="Finishing_the_Component"><a href="/es/Creating_XPCOM_Components/Finishing_the_Component" title="es/Creating_XPCOM_Components/Finishing_the_Component">Finishing the Component</a></h3>
+
+<dl>
+ <dd><a href="/es/Creating_XPCOM_Components/Finishing_the_Component#Using_Frozen_Interfaces" title="es/Creating_XPCOM_Components/Finishing_the_Component#Using_Frozen_Interfaces">Using Frozen Interfaces</a>
+
+ <dl>
+  <dd><a href="/es/Creating_XPCOM_Components/Finishing_the_Component#Copying_Interfaces_Into_Your_Build_Environment" title="es/Creating_XPCOM_Components/Finishing_the_Component#Copying_Interfaces_Into_Your_Build_Environment">Copying Interfaces Into Your Build Environment</a></dd>
+  <dd><a href="/es/Creating_XPCOM_Components/Finishing_the_Component#Implementing_the_nsIContentPolicy_Interface" title="es/Creating_XPCOM_Components/Finishing_the_Component#Implementing_the_nsIContentPolicy_Interface">Implementing the <code>nsIContentPolicy</code> Interface</a></dd>
+  <dd><a href="/es/Creating_XPCOM_Components/Finishing_the_Component#Receiving_Notifications" title="es/Creating_XPCOM_Components/Finishing_the_Component#Receiving_Notifications">Receiving Notifications</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Finishing_the_Component#Implementing_the_nsIContentPolicy" title="es/Creating_XPCOM_Components/Finishing_the_Component#Implementing_the_nsIContentPolicy">Implementing the <code>nsIContentPolicy</code></a>
+ <dl>
+  <dd><a href="/es/Creating_XPCOM_Components/Finishing_the_Component#Uniform_Resource_Locators" title="es/Creating_XPCOM_Components/Finishing_the_Component#Uniform_Resource_Locators">Uniform Resource Locators</a></dd>
+  <dd><a href="/es/Creating_XPCOM_Components/Finishing_the_Component#Checking_the_White_List" title="es/Creating_XPCOM_Components/Finishing_the_Component#Checking_the_White_List">Checking the White List</a></dd>
+  <dd><a href="/es/Creating_XPCOM_Components/Finishing_the_Component#Creating_nsIURI_Objects" title="es/Creating_XPCOM_Components/Finishing_the_Component#Creating_nsIURI_Objects">Creating <code>nsIURI</code> Objects</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id="Building_the_WebLock_UI" name="Building_the_WebLock_UI"><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI">Building the <strong>WebLock</strong> UI</a></h3>
+
+<dl>
+ <dd><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI#User_Interface_Package_List" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI#User_Interface_Package_List">User Interface Package List</a></dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI#Client_Code_Overview" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI#Client_Code_Overview">Client Code Overview</a></dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI#XUL" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI#XUL">XUL</a>
+ <dl>
+  <dd><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI#The_XUL_Document" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI#The_XUL_Document">The XUL Document</a></dd>
+  <dd><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI#The_Locking_UI" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI#The_Locking_UI">The Locking UI</a></dd>
+  <dd><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI#Site_Adding_UI" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI#Site_Adding_UI">Site Adding UI</a></dd>
+  <dd><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI#weblock.xul" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI#weblock.xul"><code>weblock.xul</code></a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI#Overlaying_New_User_Interface_Into_Mozilla" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI#Overlaying_New_User_Interface_Into_Mozilla">Overlaying New User Interface Into Mozilla</a>
+ <dl>
+  <dd><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI#webLockOverlay.xul" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI#webLockOverlay.xul"><code>webLockOverlay.xul</code></a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI#Other_Resources" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI#Other_Resources">Other Resources</a>
+ <dl>
+  <dd><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI#weblock.css" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI#weblock.css"><code>weblock.css</code></a></dd>
+  <dd><a href="/es/Creating_XPCOM_Components/Building_the_WebLock_UI#Image_Resources" title="es/Creating_XPCOM_Components/Building_the_WebLock_UI#Image_Resources">Image Resources</a></dd>
+ </dl>
+ </dd>
+</dl>
+
+<h3 id="Packaging_WebLock" name="Packaging_WebLock"><a href="/es/Creating_XPCOM_Components/Packaging_WebLock" title="es/Creating_XPCOM_Components/Packaging_WebLock">Packaging WebLock</a></h3>
+
+<dl>
+ <dd><a href="/es/Creating_XPCOM_Components/Packaging_WebLock#Component_Installation_Overview" title="es/Creating_XPCOM_Components/Packaging_WebLock#Component_Installation_Overview">Component Installation Overview</a></dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Packaging_WebLock#Archiving_Resources" title="es/Creating_XPCOM_Components/Packaging_WebLock#Archiving_Resources">Archiving Resources</a></dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Packaging_WebLock#The_WebLock_Installation_Script" title="es/Creating_XPCOM_Components/Packaging_WebLock#The_WebLock_Installation_Script">The <strong>WebLock</strong> Installation Script</a></dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Packaging_WebLock#The_WebLock_Trigger_Script" title="es/Creating_XPCOM_Components/Packaging_WebLock#The_WebLock_Trigger_Script">The <strong>WebLock</strong> Trigger Script</a></dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Packaging_WebLock#Distributing_Your_Component" title="es/Creating_XPCOM_Components/Packaging_WebLock#Distributing_Your_Component">Distributing Your Component</a></dd>
+</dl>
+
+<h3 id="Appendix_A_-_Setting_up_the_Gecko_SDK" name="Appendix_A_-_Setting_up_the_Gecko_SDK"><a href="/es/Creating_XPCOM_Components/Setting_up_the_Gecko_SDK" title="es/Creating_XPCOM_Components/Setting_up_the_Gecko_SDK">Appendix A - Setting up the Gecko SDK</a></h3>
+
+<dl>
+ <dd><a href="/es/Creating_XPCOM_Components/Setting_up_the_Gecko_SDK#Downloading_and_Setting_the_SDK" title="es/Creating_XPCOM_Components/Setting_up_the_Gecko_SDK#Downloading_and_Setting_the_SDK">Downloading and Setting the SDK</a></dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Setting_up_the_Gecko_SDK#Building_a_Microsoft_Visual_Cpp_Project" title="es/Creating_XPCOM_Components/Setting_up_the_Gecko_SDK#Building_a_Microsoft_Visual_Cpp_Project">Building a Microsoft Visual Cpp Project</a>
+ <dl>
+  <dd><a href="/es/Creating_XPCOM_Components/Setting_up_the_Gecko_SDK#Creating_a_New_Project" title="es/Creating_XPCOM_Components/Setting_up_the_Gecko_SDK#Creating_a_New_Project">Creating a New Project</a></dd>
+  <dd><a href="/es/Creating_XPCOM_Components/Setting_up_the_Gecko_SDK#Adding_the_Gecko_SDK_to_the_Project_Settings" title="es/Creating_XPCOM_Components/Setting_up_the_Gecko_SDK#Adding_the_Gecko_SDK_to_the_Project_Settings">Adding the Gecko SDK to the Project Settings</a></dd>
+ </dl>
+ </dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Setting_up_the_Gecko_SDK#A_Makefile_for_Unix" title="es/Creating_XPCOM_Components/Setting_up_the_Gecko_SDK#A_Makefile_for_Unix">A Makefile for Unix</a></dd>
+</dl>
+
+<h3 id="Appendix_B_-_Resources" name="Appendix_B_-_Resources"><a href="/es/Creating_XPCOM_Components/Resources" title="es/Creating_XPCOM_Components/Resources">Appendix B - Resources</a></h3>
+
+<dl>
+ <dd><a href="/es/Creating_XPCOM_Components/Resources#WebLock_Resources" title="es/Creating_XPCOM_Components/Resources#WebLock_Resources">WebLock Resources</a></dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Resources#Gecko_Resources" title="es/Creating_XPCOM_Components/Resources#Gecko_Resources">Gecko Resources</a></dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Resources#XPCOM_Resources" title="es/Creating_XPCOM_Components/Resources#XPCOM_Resources">XPCOM Resources</a></dd>
+ <dd><a href="/es/Creating_XPCOM_Components/Resources#General_Development_Resources" title="es/Creating_XPCOM_Components/Resources#General_Development_Resources">General Development Resources</a></dd>
+</dl>
+
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Creating_XPCOM_Components:Preface">Siguiente  »</a></p>
+</div><p></p>
+
+<div class="licenseblock">
+<p>Copyright (c) 2003 by Doug Turner and Ian Oeschger. This material may be distributed only subject to the terms and conditions set forth in the <a class="external" href="http://www.opencontent.org/openpub/" rel="noopener">Open Publication License</a>, v1.02 or later. Distribution of substantively modified versions of this document is prohibited without the explicit permission of the copyright holder. Distribution of the work or derivative of the work in any standard (paper) book form is prohibited unless prior permission is obtained from the copyright holder.</p>
+</div>

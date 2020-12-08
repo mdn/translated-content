@@ -1,0 +1,110 @@
+---
+title: '-moz-binding'
+slug: Web/CSS/-moz-binding
+tags:
+  - CSS
+  - No estándar(2)
+  - Referencia CSS
+  - XBL
+translation_of: Archive/Web/CSS/-moz-binding
+---
+<div>{{Non-standard_header}}{{CSSRef}}</div>
+
+<h2 id="Resumen">Resumen</h2>
+
+<p>La propiedad CSS <code>-moz-binding</code> CSS es usada por las aplicaciones basadas en Mozilla para adjuntar una asociación o enlace <a href="/en-US/docs/XBL">XBL</a> a un elemento del DOM</p>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Síntaxis">Síntaxis</h2>
+
+<pre class="brush:css">/* &lt;uri&gt; value */
+-moz-binding: url(http://www.example.org/xbl/htmlBindings.xml#checkbox);
+
+/* Global values */
+-moz-binding: inherited;
+-moz-binding: initial;
+-moz-binding: unset;
+</pre>
+
+<h3 id="Valores">Valores</h3>
+
+<dl>
+ <dt>&lt;uri&gt;</dt>
+ <dd>La URI del enlace XBL (incluyendo el identificador de fragmento).</dd>
+ <dt><code>none</code></dt>
+ <dd>No se aplica ninguna asociación o enlace XBL al elemento.</dd>
+</dl>
+
+<h3 id="Síntaxis_Formal">Síntaxis Formal</h3>
+
+<pre class="syntaxbox">{{csssyntax}}</pre>
+
+<h2 id="Ejemplo">Ejemplo</h2>
+
+<pre class="brush: css">.exampleone {
+  -moz-binding: url(http://www.example.org/xbl/htmlBindings.xml#radiobutton);
+}</pre>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<p>No es parte de ninguna especificación.</p>
+
+<h2 id="Compatibilidad_con_los_distintos_navegadores.">Compatibilidad con los distintos navegadores.</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Ver_además">Ver además</h2>
+
+<ul>
+ <li><a href="/en-US/docs/XBL/XBL_1.0_Reference/Binding_Attachment_and_Detachment">XBL Reference: Binding Attachment and Detachment</a></li>
+ <li><a href="/en-US/docs/Mozilla/Tech/XUL/Tutorial/Introduction_to_XBL">XUL Tutorial: Introduction to XBL</a></li>
+</ul>

@@ -1,0 +1,304 @@
+---
+title: nsIDownloadProgressListener
+slug: nsIDownloadProgressListener
+tags:
+  - Firefox 3
+  - Interfaces
+  - Todas_las_Categorías
+  - páginas_a_traducir
+translation_of: Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener
+---
+<p>El interfaz <code>nsIDownloadProgressListener</code> da a las aplicaciones y extensiones una manera de vigilar el estado de las descargas que están siendo procesadas por el Administrador de Descargas. Simplemente implementa este interfaz en tu código y llama a la función <code><a href="es/NsIDownloadManager#addListener.28.29">addListener()</a></code> del <code><a href="es/NsIDownloadManager">nsIDownloadManager</a></code> para empezar a escuchar.</p>
+
+<p>Cuando no necesites escuchar más al Administrador de Descargas, llama a la función <code><a href="es/NsIDownloadManager#removeListener.28.29">removeListener()</a></code> del <code>nsIDownloadManager</code> para detener la escucha.</p>
+
+<p>Al momento en que los estados de las descargan cambian, los métodos descritos aquí son llamados por el Administrador de Descargas para que tu código realice cualquier acción que necesite.</p>
+
+<p>Esta interfaz trabaja de forma similar a la interfaz <code><a href="es/NsIWebProgress">nsIWebProgress</a></code>.</p>
+
+<p><br>
+ </p><div style="border: solid #ddd 2px; margin-bottom: 12px;">
+<div style="background: #eee; padding: 2px;"><code><a href="https://dxr.mozilla.org/mozilla-central/source/toolkit/components/downloads/public/nsIDownloadProgressListener.idl" rel="custom">toolkit/components/downloads/public/nsIDownloadProgressListener.idl</a></code><span style="text-align: right; float: right;"><a href="/en-US/docs/Interfaces/About_Scriptable_Interfaces" style="color: #00cc00; font-weight: 700;">Scriptable</a></span></div>
+<span style="padding: 4px 2px;">
+
+<i>Please add a summary to this article.</i>
+</span>
+
+<div style="background: #eee; padding: 2px;">
+<span> </span>
+<span style="text-align: right; float: right;">Last changed in Gecko 1.9 (Firefox 3)</span></div>
+</div><p></p>
+
+<p>Inherits from: <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code></p>
+
+<h2 id="Descripci.C3.B3n_del_m.C3.A9todo" name="Descripci.C3.B3n_del_m.C3.A9todo">Descripción del método</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>void <a href="#onDownloadStateChange.28.29">onDownloadStateChange</a>(in short aState, in nsIDownload aDownload)</code></td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#onProgressChange.28.29">onProgressChange</a>(in <a href="es/NsIWebProgress">nsIWebProgress</a> aWebProgress, in <a href="es/NsIRequest">nsIRequest</a> aRequest, in long long aCurSelfProgress, in long long aMaxSelfProgress, in long long aCurTotalProgress, in long long aMaxTotalProgress, in <a href="es/NsIDownload">nsIDownload</a> aDownload)</code></td>
+  </tr>
+  <tr>
+   <td><span class="icon-only-inline" title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> <code>void <a href="#onStatusChange.28.29">onStatusChange</a>(in <a href="es/NsIWebProgress">nsIWebProgress</a> aWebProgress, in <a href="es/NsIRequest">nsIRequest</a> aRequest, in <a href="es/Nsresult">nsresult</a> aStatus, in <a href="es/Wstring">wstring</a> aMessage, in <a href="es/NsIDownload">nsIDownload</a> aDownload)</code></td>
+  </tr>
+  <tr>
+   <td><span class="icon-only-inline" title="This is an obsolete API and is no longer guaranteed to work."><i class="icon-trash"> </i></span> <code>void <a href="#onLocationChange.28.29">onLocationChange</a>(in <a href="es/NsIWebProgress">nsIWebProgress</a> aWebProgress, in <a href="es/NsIRequest">nsIRequest</a> aRequest, in <a href="es/NsIURI">nsIURI</a> aLocation, in <a href="es/NsIDownload">nsIDownload</a> aDownload)</code>x</td>
+  </tr>
+  <tr>
+   <td><code>void <a href="#onSecurityChange.28.29">onSecurityChange</a>(in <a href="es/NsIWebProgress">nsIWebProgress</a> aWebProgress, in <a href="es/NsIRequest">nsIRequest</a> aRequest, in unsigned long aState, in <a href="es/NsIDownload">nsIDownload</a> aDownload)</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Atributos" name="Atributos">Atributos</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Atributo</td>
+   <td class="header">Tipo</td>
+   <td class="header">Descripción</td>
+  </tr>
+  <tr>
+   <td><code>document</code></td>
+   <td><code><a href="es/NsIDOMDocument">nsIDOMDocument</a></code></td>
+   <td>El objeto documento que representa la ventana del Administrador de Descargas.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="M.C3.A9todos" name="M.C3.A9todos">Métodos</h2>
+
+<h3 id="onDownloadStateChange.28.29" name="onDownloadStateChange.28.29">onDownloadStateChange()</h3>
+
+<p>Es llamado cuando el estado de una descarga en particular cambia.</p>
+
+<pre class="eval"> void onDownloadStateChange(
+   in short aState,
+   in nsIDownload aDownload
+ );
+</pre>
+
+<h6 id="Par.C3.A1metros" name="Par.C3.A1metros">Parámetros</h6>
+
+<dl>
+ <dt>aState</dt>
+ <dd>El estado previo de la descarga. Ver <code><a href="es/NsIDownloadManager">nsIDownloadManager</a></code> para una <a href="es/NsIDownloadManager#Constants">lista de valores posibles</a>.</dd>
+</dl>
+
+<dl>
+ <dt>aDownload</dt>
+ <dd>El objeto <code><a href="es/NsIDownload">nsIDownload</a></code> que representa el archivo cuyo estado de descarga ha cambiado. Puedes obtener el nuevo estado de la descarga con este método.</dd>
+</dl>
+
+<h3 id="onStateChange.28.29" name="onStateChange.28.29">onStateChange()</h3>
+
+<p>Llamado cuando cambia el estado de una descarga en particular.</p>
+
+<pre class="eval"> void onStateChange(
+   in nsIWebProgress aWebProgress,
+   in nsIRequest aRequest,
+   in unsigned long aStateFlags,
+   in nsresult aStatus,
+   in nsIDownload aDownload
+ );
+</pre>
+
+<h6 id="Par.C3.A1metros_2" name="Par.C3.A1metros_2">Parámetros</h6>
+
+<dl>
+ <dt>aWebProgress</dt>
+ <dd>La instancia <code><a href="es/NsIWebProgress">nsIWebProgress</a></code> que usa el Administrador de Descargas para vigilar la descarga.</dd>
+</dl>
+
+<dl>
+ <dt>aRequest</dt>
+ <dd>El <code><a href="es/NsIChannel">nsIChannel</a></code> cuyo estado cambia. Éste parámetro no será <code>NULL</code>.</dd>
+</dl>
+
+<dl>
+ <dt>aStateFlags</dt>
+ <dd>Flags indicandoel nuevo estado de la descarga. Este valores una combinación de uno de los <a href="es/NsIWebProgressListener#State_Transition_Flags">state transition flags</a> documentados en la sección <code><a href="es/NsIWebProgressListener">nsIWebProgressListener</a></code>.</dd>
+</dl>
+
+<dl>
+ <dt>aStatus</dt>
+ <dd>La información del nuevo estado de la descarga. Ver The new state information for the download. See <a href="es/NsIWebProgressListener#onStateChange"><code>onStateChange()</code> en <code>nsIWebProgressListener</code></a> para más detalles. También puede ser una constante de <code><a href="es/NsIDownloadManager#Constants">nsIDownloadManager</a></code> state constants.</dd>
+</dl>
+
+<dl>
+ <dt>aDownload</dt>
+ <dd>La descarga cuyo estado ha cambiado.</dd>
+</dl>
+
+<h3 id="onProgressChange.28.29" name="onProgressChange.28.29">onProgressChange()</h3>
+
+<p>Llamado cuando el nivel de progreso de la descarga cambia.</p>
+
+<pre class="eval"> void onProgressChange(
+   in nsIWebProgress aWebProgress,
+   in nsIRequest aRequest,
+   in long long aCurSelfProgress,
+   in long long aMaxSelfProgress,
+   in long long aCurTotalProgress,
+   in long long aMaxTotalProgress,
+   in nsIDownload aDownload
+ );
+</pre>
+
+<h6 id="Par.C3.A1metros_3" name="Par.C3.A1metros_3">Parámetros</h6>
+
+<dl>
+ <dt>aWebProgress</dt>
+ <dd>La instancia <code><a href="es/NsIWebProgress">nsIWebProgress</a></code> usada por el Administrador de Descargas para vigilar las descargas.</dd>
+</dl>
+
+<dl>
+ <dt>aRequest</dt>
+ <dd>El <code><a href="es/NsIChannel">nsIChannel</a></code> que ha cambiado de estado. Este parámetro no será <code>NULL</code>.</dd>
+</dl>
+
+<dl>
+ <dt>aCurSelfProgress</dt>
+ <dd>La cantidad actual de progreso de la descarga especificada por aDownload.</dd>
+</dl>
+
+<dl>
+ <dt>aMaxSelfProgress</dt>
+ <dd>El valor de progreso que debe alcanzarse para dar por finalizada la descarga.</dd>
+</dl>
+
+<dl>
+ <dt>aCurTotalProgress</dt>
+ <dd>La cantidad actual de progreso que se ha hecho en todas las descargas.</dd>
+</dl>
+
+<dl>
+ <dt>aMaxTotalProgress</dt>
+ <dd>El valor que necesita alcanzar el progreso total para determinar que todas las descargas están completadas.</dd>
+</dl>
+
+<dl>
+ <dt>aDownload</dt>
+ <dd>El objeto <code><a href="es/NsIDownload">nsIDownload</a></code> cuyo progreso está representado por los parámetros aCurSelfProgress y aMaxSelfProgress.</dd>
+</dl>
+
+<h3 id="onStatusChange.28.29" name="onStatusChange.28.29">onStatusChange()</h3>
+
+<p>Llamado cuando el estado de una descarga solicita un cambio. El mensaje de estado recibido se quiere que sea bien visible al usuario.</p>
+
+<div class="warning"><strong>Atención:</strong> Este método ya no está en Firefox 3 (Gecko 1.9). En versiones anteriores, este método nunca fue usado.</div>
+
+<pre class="eval"> void onStatusChange(
+   in nsIWebProgress aWebProgress,
+   in nsIRequest aRequest,
+   in nsresult aStatus,
+   in wstring aMessage,
+   in nsIDownload aDownload
+ );
+</pre>
+
+<h6 id="Par.C3.A1metros_4" name="Par.C3.A1metros_4">Parámetros</h6>
+
+<dl>
+ <dt>aWebProgress</dt>
+ <dd>La instancia <code><a href="es/NsIWebProgress">nsIWebProgress</a></code> usada por el Administrador de Descargas para vigilar las descargas.</dd>
+</dl>
+
+<dl>
+ <dt>nsIChannel</dt>
+ <dd>El <code><a href="es/NsIRequest">nsIRequest</a></code> que cambia de estado. Este parámetro no será <code>NULL</code>.</dd>
+</dl>
+
+<dl>
+ <dt>aStatus</dt>
+ <dd>La información del nuevo estado de la descarga. Ver <a href="es/NsIWebProgressListener#onStateChange"><code>onStateChange()</code></a> en <code>nsIWebProgressListener</code> para más detalles.</dd>
+</dl>
+
+<dl>
+ <dt>aMessage</dt>
+ <dd>Un mensaje de estado legible por el usuario, que se quiere presentar muy visible en la pantalla.</dd>
+</dl>
+
+<dl>
+ <dt>aDownload</dt>
+ <dd>La descarga cuyo estado ha cambiado.</dd>
+</dl>
+
+<h3 id="onLocationChange.28.29" name="onLocationChange.28.29">onLocationChange()</h3>
+
+<div class="warning"><strong>Atención:</strong> Este método ya no está en Firefox 3 (Gecko 1.9). En versiones anteriores, este método nunca fue usado.</div>
+
+<pre class="eval"> void onLocationChange(
+   in nsIWebProgress aWebProgress,
+   in nsIRequest aRequest,
+   in nsIURI aLocation,
+   in nsIDownload aDownload
+ );
+</pre>
+
+<p> </p>
+
+<h6 id="Par.C3.A1metros_5" name="Par.C3.A1metros_5">Parámetros</h6>
+
+<dl>
+ <dt>aWebProgress</dt>
+ <dd>La instancia <code><a href="es/NsIWebProgress">nsIWebProgress</a></code> usada por el Administrador de Descargas para vigilar las descargas.</dd>
+</dl>
+
+<dl>
+ <dt>aRequest</dt>
+ <dd>El <code><a href="es/NsIChannel">nsIChannel</a></code> que ha cambiado de estado. Este parámetro no será <code>NULL</code>.</dd>
+</dl>
+
+<dl>
+ <dt>aLocation</dt>
+ <dd>La URI del archivo que se está descargando.</dd>
+</dl>
+
+<dl>
+ <dt>aDownload</dt>
+ <dd>El objeto <code><a href="es/NsIDownload">nsIDownload</a></code> que representa el archivo que se está descargando.</dd>
+</dl>
+
+<h3 id="onSecurityChange.28.29" name="onSecurityChange.28.29">onSecurityChange()</h3>
+
+<p>Llamado cuando el nivel de seguridad usado mientras se hace la descarga cambia. Por ejemplo, si la petición inicial se ha hecho en un servidor HTTPS pero la descarga cambia a un servidor HTTP, esta función es llamada para avisar de la transición</p>
+
+<pre class="eval"> void onSecurityChange(
+   in nsIWebProgress aWebProgress,
+   in nsIRequest aRequest,
+   in unsigned long aState,
+   in nsIDownload aDownload
+ );
+
+</pre>
+
+<h6 id="Par.C3.A1metros_6" name="Par.C3.A1metros_6">Parámetros</h6>
+
+<dl>
+ <dt>aWebProgress</dt>
+ <dd>La instancia <code><a href="es/NsIWebProgress">nsIWebProgress</a></code> usada por el Administrador de Descargas para vigilar las descargas.</dd>
+</dl>
+
+<dl>
+ <dt>aRequest</dt>
+ <dd>El <code><a href="es/NsIChannel">nsIChannel</a></code> que cambia de estado. Este parámetro no será <code>NULL</code>.</dd>
+</dl>
+
+<dl>
+ <dt>aState</dt>
+ <dd>El nuevo estado de la descarga. Ver <code><a href="es/NsIDownloadManager">nsIDownloadManager</a></code> para una <a href="es/NsIDownloadManager#Constants">lista de valores posibles</a>.</dd>
+</dl>
+
+<dl>
+ <dt>aDownload</dt>
+ <dd>La descarga cuyo nivel de seguridad ha cambiado.</dd>
+</dl>
+
+<h2 id="Ver_tambi.C3.A9n" name="Ver_tambi.C3.A9n">Ver también</h2>
+
+<p><code><a href="es/NsIDownloadManager">nsIDownloadManager</a></code>, <code><a href="es/NsIDownload">nsIDownload</a></code>, <code><a href="es/NsIWebProgressListener">nsIWebProgressListener</a></code></p>

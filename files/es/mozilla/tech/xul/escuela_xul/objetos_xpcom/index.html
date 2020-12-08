@@ -1,0 +1,378 @@
+---
+title: Objetos XPCOM
+slug: Mozilla/Tech/XUL/Escuela_XUL/Objetos_XPCOM
+translation_of: Archive/Add-ons/Overlay_Extensions/XUL_School/XPCOM_Objects
+---
+<div class="blockIndicator warning">
+<p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+</div>
+
+<p>{{LegacyAddonsNotice}}{{AddonSidebar}}</p>
+
+<p>{{ PreviousNext("Escuela_XUL/Uso_de_objetos_en_JavaScript", "Escuela_XUL/Notificaciones_Observer") }}</p>
+
+<h2 id="XPCOM">XPCOM</h2>
+
+<blockquote>
+<p><strong>XPCOM</strong> is a cross platform component object model, similar to Microsoft COM.</p>
+</blockquote>
+
+<p>Taken from the <a href="/en/XPCOM" title="en/XPCOM">XPCOM page</a>.</p>
+
+<p>Firefox can be seen as composed of two layers. The largest of the two is a compiled platform, mostly written in C++. On top of it lies the chrome, mostly written in XML, Javascript and CSS. In fact, you can separate the two. We often mention other "Mozilla based applications". Well, those are applications that, simply put, take the underlying platform with perhaps a few changes and additions, and then write their own chrome layer. This lower layer is called <a href="/en/XULRunner" title="en/XULRunner">XULRunner</a>, and it is a very powerful platform, providing a very robust development base for web-enabled, cross-platform applications. The fact that it allows to easily create OS-independent applications is a big selling point for XULRunner.</p>
+
+<p>XPCOM is the way in which the two layers (XULRunner and chrome) communicate. Most of the objects and functions in the lower layers are hidden from the chrome; those that need to be publicized are exposed through XPCOM components and interfaces. You can think of XPCOM as a reference to all the capabilities available on the lower layers of Firefox.</p>
+
+<p>Using XPCOM components is relatively simple, as you've seen in previous examples.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">this.obsService = Cc["@mozilla.org/observer-service;1"].getService(Ci.nsIObserverService);</pre>
+</div>
+</div>
+
+<p>The <em>Cc</em> object (<a href="/en/Components.classes" title="en/Components.classes">Components.classes</a>) is an index to static objects and class definitions available through XPCOM. The string between the brackets is just an identifier, in this case corresponding to the Observer service. You'll usually know what string to use by reading examples and documentation. There is no comprehensive list of these (that we know of), and that's understandable since it would be a very long list, and it can be extended by add-ons. If you want to see the list in your current Firefox installation, just run the following code in the Error Console:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">var str = ""; for (var i in Components.classes) { str += i + "\n" }; str</pre>
+</div>
+</div>
+
+<p>A run on Firefox 3.6.2 with a few extensions installed yields 876 strings. That's quite a lot. Luckily, you'll only need to know a handful of those for extension development. The <em>@mozilla.org/</em> prefix is just a way to keep things namespaced. We would use something like <em>@xulschool.com/</em> to make our own components.</p>
+
+<p>Components are either services (static objects) or instances of classes, just like the objects we handle in JS. The method you call on <em>Cc["some-string"]</em> should either be <em>getService</em> or <em>createInstance</em>, depending on what you're asking for. In most cases it is very clear which one to call, but in case of doubt, look for documentation on it. Those two methods always receive the interface identifier as an argument.</p>
+
+<p>Similarly to <em>Cc</em>, <em>Ci</em> (<a href="/en/Components.interfaces" title="en/Components.interfaces">Components.interfaces</a>) is an index of available interfaces. A modified version of the last code snippet produces an even longer list of available interfaces. Just like in component identifiers, the <em>nsI</em> prefix is just a way of keeping things in order. The NS stands for Netscape, Mozilla's predecessor. The "I" stands for interface. Our interfaces should begin with something like <em>xsIHello</em>.</p>
+
+<p>An interface is just a definition of a set of attributes and methods that an object implementing it should have. XPCOM components can implement multiple interfaces, and they often do. Let's look at the Preference service as an example of this. We'll look at its documentation in a very old XUL site called <a class="external" href="http://www.xulplanet.com/">XUL Planet</a>. All of its documentation was planned to be migrated to MDC, but it looks like it was never finished and XUL Planet was discontinued. Their XPCOM documentation is better in terms of seeing the relationships between components and interfaces, so we'll use that.</p>
+
+<p>Another useful resource is <a class="external" href="http://www.oxymoronical.com/experiments/xpcomref/" title="http://www.oxymoronical.com/experiments/xpcomref/">this XPCOM reference</a>. This is generated from source, and it's kept relatively up to date. It shows the relationships between components and interfaces, but it's more of a source browser than a documentation reference.</p>
+
+<p>Stepping into the time machine, we see the <a class="external" href="http://web.archive.org/web/20080311100120/http://www.xulplanet.com/references/xpcomref/comps/c_preferencesservice1.html" title="http://web.archive.org/web/20080311100120/http://www.xulplanet.com/references/xpcomref/comps/c_preferencesservice1.html">Preferences Service component page</a>. Right at the top you can see a list of the interfaces it implements, with a link to a documentation page for each one of them. Then you'll see a list of all members of this object, with some documentation about it. It is particularly important to note that, for every member in the component, you'll see in what interface this member is defined. Clicking on the link for the <em>getBranch</em> method takes you to the <a class="external" href="http://web.archive.org/web/20080305031645/www.xulplanet.com/references/xpcomref/ifaces/nsIPrefService.html#method_getBranch" title="http://web.archive.org/web/20080305031645/www.xulplanet.com/references/xpcomref/ifaces/nsIPrefService.html#method_getBranch">nsIPrefService documentation page</a>, where you can see more details on the interface and the method. You can also see a list of what components implement this interface. All of this documentation is generated from the one present in the Firefox source files, so it's in general very complete and well written. It's a shame XUL Planet is no longer with us.</p>
+
+<p>Interfaces can be awkward to handle. If you want to call a method or use an attribute of interface X in a component, you first need to "cast" the component to interface X. This is done via the <em>QueryInterface</em> method that is included in all XPCOM components.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">this._prefService =
+  Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefBranch);
+
+this._prefValue = this._prefService.getBoolPref("somePreferenceName");
+
+this._prefService.QueryInterface(Ci.nsIPrefBranch2);
+this._prefService.addObserver("somePreferenceName", this, false);
+this._prefService.QueryInterface(Ci.nsIPrefBranch);</pre>
+</div>
+</div>
+
+<p>This is a common piece of code you'll see when initializing components or JSM that rely on preferences. We use the Preferences Service to get and set preference values, such as the preference value we're getting on the fourth line of code. These methods are in the <em>nsIPrefBranch</em> interface. The <em>getService</em> and <em>createInstance</em> methods allow you to get the component already set to an interface. In many cases you only need to use one interface, and you won't have to worry about <em>QueryInterface</em>. But in this case we need to change the interface to <em>nsIPrefBranch2</em>, which is the one that includes the method that adds a preference observer. Then we change it back, because after that we only need to get and set preferences, and those methods are in <em>nsIPrefBranch</em>.</p>
+
+<div class="note">Trying to access methods or attributes without having the right interface set will result in an exception being thrown.</div>
+
+<h2 id="Passing_parameters">Passing parameters</h2>
+
+<p>Passing parameters to XPCOM methods is no different from other JS objects, with some exceptions. In general, you can rely on JavaScript's ability to transform values to the correct type, but it's usually best to pass the right type in the first place. This section is a quick guide on how to read XPCOM documentation, which basically amounts to understanding the syntax of <a href="/en/XPIDL" title="en/XPIDL">XPIDL</a>, the language used to specify XPCOM interfaces.</p>
+
+<p>At MDC, you'll see stuff like this:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">void setCharPref(in string aPrefName, in string aValue);</pre>
+</div>
+</div>
+
+<p>One of the most important details to notice is that both paratemers have the <em>in</em> keyword. This specifies that these are input parameters, values that the method will use to perform its actions. When is a parameter not an <em>in</em> parameter? In some methods the <em>out</em> keyword is used for parameters that are return values in reality. This is done for certain value types that are not valid as return values in IDL, such as typed arrays.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">void getChildList(in string aStartingAt, out unsigned long aCount,[array, size_is(aCount), retval] out string aChildArray);</pre>
+</div>
+</div>
+
+<p>This method returns an array of strings. The first parameter is an input that tells the method where to start looking. The second one will hold the length of the return array, and the third parameter will hold the array itself. Note the metadata included in the square brackets, indicating that the parameter is an array, and that its size is determined by the <em>aCount</em> parameter.  Here's one way to invoke this method:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">let childArrayObj = new Object();
+let childArray;
+
+this._prefService.getChildList("", {}, childArrayObj);
+
+// .value holds the actual array.
+childArray = childArrayObj.value;</pre>
+</div>
+</div>
+
+<p>The general rule for <em>out</em> parameters is that you can pass an empty object, and then you can get the result by accessing the <em>value</em> attribute in this object after the method call. The method will set <em>value</em> for you. Also, since JS arrays have the <em>length</em> attribute to get their length, there's no need for the second parameter to be used, so we just pass it an empty object that we won't use. The second parameter is only necessary for callers from within C++ code that use pointers instead of high-level arrays.</p>
+
+<p>Some commonly used XPCOM methods require other XPCOM types as parameters. The <em>addObserver</em> method in <em>nsIPrefBranch2</em> is an example of this.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">void addObserver(in string aDomain, in nsIObserver aObserver, in boolean aHoldWeak);</pre>
+</div>
+</div>
+
+<p>Luckily, you don't have to do anything special if you want to register your JS object as a preference observer. The <em>nsIObserver</em> has a single method <em>observe</em>, so all you need to do is have an <em>observe</em> method in your object and you'll be OK.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">XULSchool.PrefObserver = {
+  init: function() {
+
+    this._prefService =
+      Cc["@mozilla.org/preferences-service;1"].getService(Ci.nsIPrefBranch2);
+    // pass 'this' as if it implemented nsIObserver.
+    this._prefService.addObserver(
+      "extensions.xulschoolhello.somePref", this, false);
+  },
+
+  observe : function(aSubject, aTopic, aData) {
+    // do stuff here.
+  }
+};</pre>
+</div>
+</div>
+
+<p>Finally, here's a table summarizing the types you will most likely encounter in XPCOM interfaces, and how to handle them:</p>
+
+<table style="width: 100%;">
+ <tbody>
+  <tr>
+   <th class="confluenceTh">JS type</th>
+   <th class="confluenceTh">IDL types</th>
+   <th class="confluenceTh">Notes</th>
+  </tr>
+  <tr>
+   <td class="confluenceTd">Strings</td>
+   <td class="confluenceTd">AUTF8String, string, wstring, char*, others</td>
+   <td class="confluenceTd">Historically there have been several string types in XPCOM. The currently favored type for most cases is <em>AUTF8String</em>. You can read more about it in the <a href="/En/Mozilla_internal_string_guide" title="En/Mozilla internal string guide">XPCOM String Guide</a>.</td>
+  </tr>
+  <tr>
+   <td class="confluenceTd">Integers</td>
+   <td class="confluenceTd">short, unsigned short, long, unsigned long, PRInt32, PRUInt32</td>
+   <td class="confluenceTd"><em>PRInt32</em> is the equivalent to <em>long</em>. Most <em>PR*</em> types have an easier to read equivalent, so it is better to use those.</td>
+  </tr>
+  <tr>
+   <td class="confluenceTd">Floating point</td>
+   <td class="confluenceTd">float</td>
+   <td class="confluenceTd"> </td>
+  </tr>
+  <tr>
+   <td class="confluenceTd">Boolean</td>
+   <td class="confluenceTd">boolean, PRBool</td>
+   <td class="confluenceTd"> </td>
+  </tr>
+  <tr>
+   <td class="confluenceTd">Void</td>
+   <td class="confluenceTd">void</td>
+   <td class="confluenceTd"> </td>
+  </tr>
+  <tr>
+   <td class="confluenceTd">Timestamps</td>
+   <td class="confluenceTd">PRTime</td>
+   <td class="confluenceTd">This type is used to pass timestamps measured in milliseconds, such as the output of the <em>getTime()</em> method in a Javascript Date object.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>There are more details about XPIDL in the <a href="/en/XPIDL/Syntax" title="en/XPIDL/Syntax">XPDIL Syntax definition</a>.</p>
+
+<h2 id="Creating_Your_Own_Components">Creating Your Own Components</h2>
+
+<h3 id="JavaScript_XPCOM_Components">JavaScript XPCOM Components</h3>
+
+<p>As we've said before, we recommend using JSM whenever you can. Yet there are some cases where you don't have a choice and you have to create XPCOM components to add a specific feature. In these cases you can choose between compiled XPCOM components, written in C++, or JS XPCOM components. You should favor the latter, they are much less complicated to make and maintain.</p>
+
+<p>Most of the time you'll need 2 source files for a JS XPCOM component: the IDL interface file, and the implementation JS file. In your final extension XPI you'll need to include the JS implementation file, and the XPT file, which is a compiled version of your IDL file. You won't need the IDL or XPT files if your components only use pre-existing Firefox interfaces. In this case you may also find it easier to implement your component using JSM and the <a href="/en/JavaScript_code_modules/XPCOMUtils.jsm" title="en/JavaScript code modules/XPCOMUtils.jsm">XPCOMUtils module</a>.</p>
+
+<p>Download this version of the <a href="/@api/deki/files/5144/=HelloWorld4.zip" title="https://developer.mozilla.org/@api/deki/files/5144/=HelloWorld4.zip">Hello World project with XPCOM</a> to see how XPCOM files are structured in the project and built. (Your build will probably break, we'll cover this later on.)</p>
+
+<p>In the <em>components</em> directory, the file <em>xsIHelloCounter.idl</em> has the following contents:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">#include "nsISupports.idl"
+
+/**
+ * Counter for the Hello World extension. Keeps track of how many times the
+ * hello world message has been shown.
+ */
+[scriptable, uuid(BD46F689-6C1D-47D0-BC07-BB52B546B8B5)]
+interface xsIHelloCounter : nsISupports
+{
+  /* The maximum allowed count. */
+  const short MAX_COUNT = 100;
+
+  /* The current count. */
+  readonly attribute short count;
+
+  /**
+   * Increments the display count and returns the new count.
+   * @return the incremented count.
+   */
+  short increment();
+};</pre>
+</div>
+</div>
+
+<p>The bits about <em>nsISupports</em> are common to most XPCOM interface definitions. <em>nsISupports</em> is the base interface for all interfaces, so it should always be included, except for cases where your interface extends another interface. In those cases you just need to replace <em>nsISupports</em> with the interface you're extending. You can also extend from multiple interfaces, by including a comma-separated list of interfaces instead of only one.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="code-java">[scriptable, uuid(BD46F689-6C1D-47D0-BC07-BB52B546B8B5)]</pre>
+</div>
+</div>
+
+<p>The <em>scriptable</em> qualifier says that this component can be accessed from JS code. This can also be specified on a per-method basis, which is something you'll see in some of the interfaces in Firefox, but it's not likely you'll have to do it in your own components. The second part defines a UUID for the interface. You must generate a new one for each interface, and you should change it every time the interface changes. In this case you're forced to use UUID, the email address format used for extension ids won't work.</p>
+
+<p>We included a constant, an attribute and a method to display examples of the 3, but this is clearly an overly elaborate way to keep a simple counter.</p>
+
+<p>You can define numeric and boolean constants in IDL files, but not string constants. This is a known limitation of XPIDL, and a simple workaround is to define a <em>readonly attribute</em> instead. This means you have to define a getter in the implementation file, though. You can access constants through a reference of the component, or directly from the interface:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">// these are equivalent.
+max = Ci.xsIHelloCounter.MAX_COUNT;
+max = counterReference.MAX_COUNT;</pre>
+</div>
+</div>
+
+<p>The implementation file, <em>xsHelloCounter.js</em>, is much longer. We'll analyze it piece by piece.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">const Cc = Components.classes;
+const Ci = Components.interfaces;
+const Cr = Components.results;
+const Ce = Components.Exception;</pre>
+</div>
+</div>
+
+<p>You should be familiar with this already, although there are a couple of additions, <a href="/en/Components.results" title="en/Components.results">Components.results</a> and <a href="/en/Components.Exception" title="en/Components.Exception">Components.Exception</a>. They'll be used further ahead.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">const CLASS_ID = Components.ID("{37ED5D2A-E223-4386-9854-B64FD38932BF}");
+const CLASS_NAME = "Hello World Counter";
+const CONTRACT_ID = "@xulschool.com/counter;1";</pre>
+</div>
+</div>
+
+<p>These constants are used at the bottom, in the component registration code. They specify the details of the component, such as a unique UUID (you have to generate it too and it must be different from the IDL UUID), a descriptive name (this isn't used anywhere that we know of), and the contract ID, which is the string you use to get a reference to the component. The <em>";1"</em> at the end of the string is supposed to indicate the version of the component, although it shouldn't change much. It can be useful if there are multiple incompatible versions of the component installed at the same time.</p>
+
+<p>The implementation object itself should be easy to understand. The only aspects to take into account are that methods and attributes must have the same names as their IDL counterparts, and that the <em>QueryInterface</em> method is implemented:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">QueryInterface : function(aIID) {
+  if (!aIID.equals(Ci.xsIHelloCounter) &amp;&amp;
+      !aIID.equals(Ci.nsISupports)) {
+    throw Cr.NS_ERROR_NO_INTERFACE;
+ }
+
+  return this;
+}</pre>
+</div>
+</div>
+
+<p>The method is very simple, it validates that the caller is requesting a supported interface, otherwise it throws an exception.</p>
+
+<p>The rest of the code looks long and complicated, but it is pretty much the same for all components, so you shouldn't worry too much about it. All you have to do to use it in other components is copy it and change some names. The purpose of this code is to register the component so that you can get references to it just like all other Firefox components. It is better read from bottom to top.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">function NSGetModule(aCompMgr, aFileSpec) {
+  return CounterModule;
+}</pre>
+</div>
+</div>
+
+<p>This piece of code is the first one that Firefox looks for in all implementation files in the <em>components</em> directory. It simply returns the object that precedes it.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">var CounterModule = {
+  // registerSelf, unregisterSelf, getClassObject, canUnload
+};</pre>
+</div>
+</div>
+
+<p>The only thing you may need to change here is when you need to use the <a href="/en/XPCOM_Interface_Reference/nsICategoryManager" title="en/nsICategoryManager">Category Manager</a>. The Category Manager is a service that allows you to register your component under categories that are either pre-existing or you make up. The service also allows you to get all components registered in a category and invoke methods on them. One common use for this service is registering a component as a <a href="/en/XPCOM_Interface_Reference/nsIContentPolicy" title="en/nsIContentPolicy">Content Policy</a>. With it you can detect and filter URL loads. This is covered further ahead in another section of the tutorial.</p>
+
+<p>The <em>add</em> and <em>delete</em> calls to the Category Manager would have to be done in the <em>registerSelf</em> and <em>unregisterSelf</em> methods:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">registerSelf : function(aCompMgr, aLocation, aLoaderStr, aType) {
+
+  let categoryManager =
+    Cc[@mozilla.org/categorymanager;1].getService(Ci.nsICategoryManager);
+
+  aCompMgr.QueryInterface(Ci.nsIComponentRegistrar);
+  aCompMgr.registerFactoryLocation(
+    CLASS_ID, CLASS_NAME, CONTRACT_ID, aLocation, aLoaderStr, aType);
+  categoryManager.addCategoryEntry(
+    "content-policy", "XULSchool Hello World", CONTRACT_ID, true, true);
+},</pre>
+</div>
+</div>
+
+<p>In this case the component would need to implement <em>nsIContentPolicy</em>.</p>
+
+<p>And, finally, the factory object.</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">var CounterFactory = {
+  /* Single instance of the component. */
+  _singletonObj: null,
+
+  createInstance: function(aOuter, aIID) {
+    if (aOuter != null) {
+      throw Cr.NS_ERROR_NO_AGGREGATION;
+    }
+    // in this case we need a unique instance of the service.
+    if (!this._singletonObj) {
+      this._singletonObj = MessageCounter;
+    }
+
+    return this._singletonObj.QueryInterface(aIID);
+  }
+};</pre>
+</div>
+</div>
+
+<p>If we wanted a class that can be instantiated, instead of a singleton service, the Factory would look like this:</p>
+
+<div class="code panel" style="border-width: 1px;">
+<div class="codeContent panelContent">
+<pre class="brush: js">var CounterFactory = {
+
+  createInstance: function(aOuter, aIID) {
+    if (aOuter != null) {
+      throw Cr.NS_ERROR_NO_AGGREGATION;
+    }
+
+    return (new Counter()).QueryInterface(aIID);
+  }
+};</pre>
+</div>
+</div>
+
+<p>The instructions on how to build an IDL file are included in the section <a href="/en/XUL_School/Setting_Up_a_Development_Environment" title="en/XUL School/Setting Up a Development Environment">Setting up a Development Environment</a>.</p>
+
+<h2 id="C_XPCOM_Components">C++ XPCOM Components</h2>
+
+<p>You do not want to do this unless it's really necessary.</p>
+
+<p>There are few reasons you might need to use binary XPCOM. One of them is adding functionality to Firefox that it doesn't support natively. In that, you would either need to implement this feature for every platform, or limit your extension compatibility to the ones you'll support. You'll need to build a library file for each one of them: DLL for Windows, dylib for Mac (Intel and PPC) and .so for Linux and similar.</p>
+
+<p>We won't get into details about this because it's certainly not tutorial material. <a class="external" href="http://nerdlife.net/building-a-c-xpcom-component-in-windows/" title="http://nerdlife.net/building-a-c-xpcom-component-in-windows/">This blog post</a> details the XPCOM build set up. And you'll need to read the <a href="/En/Developer_Guide/Build_Instructions" title="en/Build Documentation">Build Documentation</a> thoroughly to understand how this all works.</p>
+
+<div class="note">If you need to interact with system libraries without really needing to create one of your own, you should consider using c-types instead. The <a href="/en/js-ctypes" title="en/JavaScript code modules/ctypes.jsm">c-types module</a> is a new bridge between JavaScript and native binaries, introduced in Firefox 3.7. With it, you can interact with existing system libraries without using XPCOM at all.</div>
+
+<p>{{ PreviousNext("Escuela_XUL/Uso_de_objetos_en_JavaScript", "Escuela_XUL/Notificaciones_Observer") }}</p>
+
+<p><span style="font-size: small;">This tutorial was kindly donated to Mozilla by Appcoast.</span></p>

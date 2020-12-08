@@ -1,0 +1,235 @@
+---
+title: Simple Push
+slug: Web/API/Simple_Push_API
+translation_of: Archive/B2G_OS/API/Simple_Push_API
+---
+<p>{{ non-standard_header() }}</p>
+
+<div class="note">
+<p><strong>Nota</strong>: Esta documentación cubre el mecanismo propietario Simple Push de Firefox OS; si usted está buscando la documentación sobre el W3C Push API, diríjase a <a href="/en-US/docs/Web/API/Push_API">Push API</a>.</p>
+</div>
+
+<p>El <strong>Simple Push API</strong>, también conocido como Push Notification API, provee a las aplicaciones la habilidad de ser despertadas para recibir notificaciones. Usted puede utilizar Simple Push como un mecanismo de sincronización, o incluso para traer datos desde servidores de terceros.</p>
+
+<p>Un "push" (empujón) no es más que un evento enviado a un servidor remoto. Así es como funciona: una aplicación usa el <span style="line-height: 1.5;">Simple Push API para solicitar una URL especial y única llamada endpoint (punto final). Esta solicitud viaja hacia un servidor existente mantenido por Mozilla especialmente para este proposito (este se denomina "push server"). Cuando la aplicación recibe el endpoint de vuelta desde el push server, la aplicación envía el endpoint a su propio servidor (su servidor de aplicación). El servidor de aplicación guarda este endpoint, luego cuando quiere despertar la aplicación, llama al endpoint con un número de versión, y el push server contacta a la aplicación con una notificación del número de versión. La aplicación puede hacer cualquier cosa al momento de recibir la notificación, incluso ignorarla.</span></p>
+
+<p>El Simple Push API extiende <code>Window.navigator</code> con una propiedad <code>push</code> que es un objeto {{domxref("PushManager")}}, e incluye algunos eventos nuevos que usted puede recibir para monitorear el estado del empuje.</p>
+
+<h2 id="Ejemplo_mostrando_los_conceptos_básicos">Ejemplo mostrando los conceptos básicos</h2>
+
+<p>Existen varias formas de usar la Simple Push API. Este ejemplos cubren los conceptos básicos de como usarla. El ejemplo consta de los siguientes pasos generales. Consulte las siguientes secciones para obtener información completa sobre cada paso.</p>
+
+<ol>
+ <li><a href="#Add_push_to_manifest">Añadir configuración push al manifiesto de la aplicación</a></li>
+ <li><a href="#2._Call_PushManager.register()_to_request_an_endpoint">LLamar a <code>PushManager.register</code> para solicitar un endpoint</a></li>
+ <li><a href="#3._Send_the_endpoint_to_your_server">Enviar un endpoint a su servidor</a></li>
+ <li><a href="#4._Add_a_message_handler_for_push_notifications_to_your_app">Agregar a su aplicación controladores de mensajes para notificaciones push</a></li>
+ <li><a href="#5._Send_a_notification_from_your_server_using_the_endpoint">Enviar una notificación desde su servidor utilizando el endpoint</a></li>
+</ol>
+
+<h2 id="1._Añadir_configuración_push_al_manifiesto_de_la_aplicación"><a name="Add_push_to_manifest"></a>1. Añadir configuración push al manifiesto de la aplicación</h2>
+
+<p>Usted necesita cambiar dos cosas en el manifiesto de la aplicación para poder utilizar Simple Push:</p>
+
+<ol>
+ <li><a href="/docs/Web/Apps/Manifest#messages" title="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest?redirectlocale=en-US&amp;redirectslug=Apps%2FManifest#messages">Campo <code>messages</code></a> - Añadir <code>push</code> y <code>push-register</code> a <code>messages</code>.<br>
+  Esto le hace saber a la página de aplicación que recibirá cada uno de estos eventos (<code>push</code> y <code>push-register</code>). En este ejemplo, ambos van a la misma página: "/index.html", pero también pueden usar otras páginas. Observe a continuación para mayor información sobre cada uno de estos eventos.</li>
+ <li><a href="/docs/Web/Apps/Manifest#permissions" title="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest?redirectlocale=en-US&amp;redirectslug=Apps%2FManifest#permissions">Campo <code>permissions</code></a> - Añadir que su aplicación quiere recibir notificaciones push.<br>
+  Es una buena idea proveer una descripción clara en este campo para que el usuario final entienda por qué usted necesita permisos de empuje ("push").</li>
+</ol>
+
+<pre><span class="s2">"messages"</span><span class="o">:</span> <span class="cp">[</span>
+   <span class="p">{</span> <span class="s2">"push"</span><span class="p">:</span> <span class="s2">"/index.html"</span><span class="p">},</span>
+   <span class="p">{</span> <span class="s2">"push-register"</span><span class="p">:</span> <span class="s2">"/index.html"</span><span class="p">}</span>
+<span class="cp">]</span><span class="o">,</span>
+<span class="s2">"permissions"</span><span class="o">:</span> <span class="p">{</span>
+  <span class="s2">"push"</span><span class="o">:</span> <span class="err">{
+    </span>"description": "Required for being updated with new goals in soccer matches"<span class="err">
+</span><span class="p">  }</span>
+<span class="err">}</span></pre>
+
+<h2 id="2._LLamar_a_PushManager.register()_para_solicitar_un_endpoint">2. LLamar a <code>PushManager.register()</code> para solicitar un endpoint</h2>
+
+<p>La aplicación necesita solicitar un endpoint llamando {{domxref("PushManager.register")}}. Usted debe decidir cuando este debe ser llamado. Usted podría llamarlo cuando el usuario ha iniciado sesión en el servicio, o cuando el usuario decide comenzar a ver un partido de fútbol, o en cualquier otro momento. El código a continuación es una forma de hacerlo.</p>
+
+<pre class="brush: js"><span class="k">if</span> <span class="p">(</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">push</span><span class="p">)</span> <span class="p">{
+  // Solicitar el endpoint. Esto usa PushManager.register().</span>
+  <span class="kd">var</span> <span class="nx">req</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">push</span><span class="p">.</span><span class="nx">register</span><span class="p">();</span>
+
+  <span class="nx">req</span><span class="p">.</span><span class="brush: js">onsuccess</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">endpoint</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span>
+      console.log<span class="p">(</span><span class="s2">"New endpoint: "</span> <span class="o">+</span> <span class="nx">endpoint</span> <span class="p">);
+      // En este punto, usted deberá usar algunos llamados para enviar el
+      // endpoint a su servidor. Por ejemplo:
+      /*
+      var post = XMLHTTPRequest();
+      post.open("POST", "https://your.server.here/registerEndpoint");
+      post.setRequestHeader("Content-Type", "</span>application/x-www-form-urlencoded");
+      post.send("endpoint=" + encodeURIComponents( endpoint ) );
+      */
+      // Obviamente usted querrá añadir controladores .onload y .onerror,
+      // añadir información de id del usuario, y cualquier otra cosa que podría
+      // necesitar para asocial el endpoint con el usuario.
+    <span class="p">}</span>
+
+   <span class="nx">req</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+     console.error<span class="p">(</span><span class="s2">"Error getting a new endpoint: "</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">));</span>
+   <span class="p">}</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// push no se encuentra disponible en el DOM, así que haga algo diferente.</span>
+<span class="p">}</span></pre>
+
+<h2 id="3._Enviar_un_endpoint_a_su_servidor">3. Enviar un endpoint a su servidor</h2>
+
+<p>Una vez que la aplicación ha recibido un endpoint, esta necesita enviarla a su servidor de aplicación. Hay más de una forma de hacer esto. Por ejemplo usted puede enviarla por email, o enviarla a través de <code>POST</code>, <code>PUT</code>, o incluso <code>GET</code>. Nosotros recomendamos que almacene el endpoint con algunos datos de usuario desde la aplicación, tales como una cookie, un username, o lo que sea que usted utilice para identificar su par enpoint-user.</p>
+
+<p>Pero si usted está enviando a su servidor, nosotros recomendamos que siga estas buenas prácticas:</p>
+
+<ul>
+ <li>Enviarla a tráves de XMLHttpRequest.</li>
+ <li>Siempre usar HTTPS. De otro modo, si alguien intercepta su endpoint, este puede comenzar a enviar notificaciones a su aplicación.</li>
+ <li>Usar algo para emparejar al usuario (o la instalación de la aplicación) con el endpoint, como una cookie por ejemplo.</li>
+ <li>Mantener el endpoint a salvo! Cualquier sistema con acceso a su endpoint puede hacer que su aplicación drene la batería del usuario o amarre innecesariamente su servidor, entre otras molestias. Usted siempre puede hacer que el cliente obtenga un nuevo endpoint y descartar el antiguo, pero siempre asegurese de que su servidor reconozca el cambio.</li>
+</ul>
+
+<h2 id="4._Agregar_a_su_aplicación_controladores_de_mensajes_para_notificaciones_push">4. Agregar a su aplicación controladores de mensajes para notificaciones push</h2>
+
+<p>Una vez haya configurado su endpoint siguiendo los pasos anteriores, usted está listo para hacer que su aplicación comience a escuchar mensajes <code>push</code> y <code>push-register</code> utilizando los controladores de mensajes.</p>
+
+<h3 id="Añadir_un_controlador_de_mensajes_push">Añadir un controlador de mensajes <code>push</code></h3>
+
+<p>El controlador de mensajes push puede encontrarse en su archivo <code>index.html</code> o en su script <code>main.js</code>, o incluso en un archivo específico <code>push-message.html</code> que contiene solamente el controlador de mensajes. Esto puede ser útil si un mensaje <code>push</code> es enviado y su aplicación se encuentra cerrada, porque cargará solamente una pequeña porción del código HTML/JavaScript, y usted puede decidir si la aplicación necesita estar completamente abierta o puede hacer algo en segundo plano. Donde sea que usted decida ubicar el controlador de mensajes <code>push</code>, asegurese de que el manifiesto apunte a la ubicación correcta (ver el primer paso anterior), de otro modo su aplicación podría no obtener actualizaciones. Aquí hay un ejemplo de un controlador de mensajes <code>push</code>:</p>
+
+<pre class="brush: js"><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">mozSetMessageHandler</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">mozSetMessageHandler</span><span class="p">(</span><span class="s1">'push'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    console.log<span class="p">(</span><span class="s1">'My endpoint is '</span> <span class="o">+</span> <span class="nx">e</span><span class="p">.</span><span class="nx">pushEndpoint</span><span class="p">);</span>
+    console.log<span class="p">(</span><span class="s1">'My new version is '</span> <span class="o">+</span>  <span class="nx">e</span><span class="p">.</span><span class="nx">version</span><span class="p">);</span>
+    <span class="c1">// Recuerde que usted puede controlar aquí si tiene más de</span>
+    <span class="c1">// un pushEndpoint</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">pushEndpoint</span> <span class="o">===</span> <span class="nx">emailEndpoint</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">emailHandler</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">version</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">pushEndpoint</span> <span class="o">===</span> <span class="nx">imEndpoint</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">imHandler</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">version</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// Controlador No message</span>
+<span class="p">}</span></pre>
+
+<h3 id="Añadir_un_controlador_de_mensajes_push-register">Añadir un controlador de mensajes <code>push-register</code></h3>
+
+<div class="note">
+<p><strong>Nota:</strong> Asegurese de añadir este controlador y verificar que funciona. Si ustedes no registra de nuevo sus endpoints cuando este mensaje es recibido por su aplicación, la aplicación <strong>NO SERÁ CAPAZ</strong> de recibir nuevas notificaciones push.</p>
+</div>
+
+<p>Un mensaje push-register será enviado a todas las aplicaciones cuando el dispositivo cambie su identificador interno (llamado el UAID o User Agent Identifier). Esto puede deberse a que el servidor push ha cambiado, o se ha caido y necesita recuperarse, o cualquier otra circunstancia. Si cualquiera de estas cosas llegara a ocurrir, ustedes <strong>DEBE</strong> registrar de nuevo todos sus endpoints, porque sus previos endpoints ya no serán válidos. Por lo tanto su aplicación necesita implementar un controlador de mensajes <code>push-register</code>. Observe el siguiente código de ejemplo.</p>
+
+<pre class="brush: js"><span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">mozSetMessageHandler</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">mozSetMessageHandler</span><span class="p">(</span><span class="s1">'push-register'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    console.log<span class="p">(</span><span class="s1">'push-register received, I need to register my endpoint(s) again!'</span><span class="p">);</span>
+
+<span class="c1">    <span class="kd">var</span> <span class="nx">req</span> <span class="o">=</span> <span class="nx">navigator</span><span class="p">.</span><span class="nx">push</span><span class="p">.</span><span class="nx">register</span><span class="p">();</span>
+  <span class="nx">  req</span><span class="p">.</span><span class="brush: js">onsuccess</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">  var</span> <span class="nx">endpoint</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span>
+      console.log<span class="p">(</span><span class="s2">"New endpoint: "</span> <span class="o">+</span> <span class="nx">endpoint</span> <span class="p">);
+      localStorage.endpoint = endpoint;</span>
+    <span class="p">}</span>
+
+   <span class="nx"> req</span><span class="p">.</span><span class="nx">onerror</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+      console.error<span class="p">(</span><span class="s2">"Error getting a new endpoint: "</span> <span class="o">+</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">));</span>
+   <span class="p"> }</span></span>
+  <span class="p">});</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// Controlador No message</span>
+<span class="p">}</span></pre>
+
+<h2 id="5._Enviar_una_notificación_desde_su_servidor_utilizando_el_endpoint">5. Enviar una notificación desde su servidor utilizando el endpoint</h2>
+
+<p>Una vez usted tiene el endpoint en su servidor, usted puede enviar una notificación simplemente enviando una petición HTTP PUT al endpoint con el cuerpo <code>version=&lt;version&gt;</code>. Por ejemplo, imagine un endpoint con la siguiente URL:</p>
+
+<pre><code>https://updates.push.services.mozilla.com/update/abcdef01234567890abcdefabcdef01234567890abcdef</code></pre>
+
+<p>y con la version 5:</p>
+
+<pre><code>version=5</code></pre>
+
+<p>Así es como la notificación se verá utilizando curl:</p>
+
+<pre><code>curl -X PUT -d "version=5" https://updates.push.services.mozilla.com/update/abcdef01234567890abcdefabcdef01234567890abcdef</code></pre>
+
+<p>Si el servidor push esta corriendo correctamente, usted recibirá una respuesta con un <code>200 Status (OK)</code> y un <code>{}</code> como cuerpo. También podría recibir un <code>200 Status</code> indicando que el mensaje fue aceptado, pero que pudo haber sido controlado por un sistema alternativo. Si no, una respuesta <code>error</code> HTTP valida con un JSON explicando el error será retornada.</p>
+
+<div class="note">
+<p><strong>Por favor recuerde:</strong> Solo porque Simple Push ha aceptado el mensaje, esto no garantiza que el mensaje será entregado exitosamente a la aplicación. Muchos factores, desde un dispositivo desconectado a varios fallos de transmisión de datos, pueden ocacionar que no se entregue exitosamente una notificación. Nosotros hacemos nuestro mejor esfuerzo, pero a veces el universo tiene otros planes.</p>
+</div>
+
+<p>Recuerde que el valor de version debe ser números enteros, e incrementales. Las aplicaciones <em>no recibirán</em> nuevas notificaciones si la versión en menor a aquella almacenada en el servidor y/o dispositivo. Las versiones pueden ser útiles para que la aplicación indique si existen eventos "perdidos" que realmente debería verificar. Usted también podriá simplemente usar el UTC (el número de segundos desde la media noche del 1 de enero de 1970, GMT) actual si el valor de la versión no es muy importante para usted.</p>
+
+<h3 id="Anular_el_registro_de_un_endpoint">Anular el registro de un endpoint</h3>
+
+<p>Una vez haya terminado de utilizar el endpoint y no desee recibir más notificaciones, le rogamos anular el registro del antiguo endpoint mediante {{domxref("PushManager.unregister")}}. Esto limpiará la cantidad de datos que el dispositivo envía al servidor push, y además disminuirá el consumo de batería al no enviar notificaciones de las aplicaciones que no las usen.</p>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<p>{{page("/en-US/docs/Web/API/PushManager","Specifications")}}</p>
+
+<h2 id="Conpatibilidad_con_navegadores">Conpatibilidad con navegadores</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Ver_también">Ver también</h2>
+
+<ul>
+ <li>{{domxref("PushManager")}}</li>
+ <li><a href="/en-US/docs/Web/API/Navigator.push">Window.navigator.push</a></li>
+ <li><a href="https://github.com/frsela/pushJSlibrary" title="https://github.com/frsela/pushJSlibrary">pushJSLibrary, a push shim for browsers that do not implement the API</a></li>
+ <li><a href="https://wiki.mozilla.org/WebAPI/SimplePush">SimplePush original design and discussion page</a></li>
+</ul>

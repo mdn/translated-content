@@ -1,0 +1,56 @@
+---
+title: MDN oldalak fordítása
+slug: MDN/Contribute/Localize/Oldalak_fordítása
+tags:
+  - MDN Meta
+  - fordítás
+  - honosítás
+  - l10n
+  - útmutató
+translation_of: MDN/Contribute/Localize/Translating_pages
+---
+<div>{{MDNSidebar}}</div>
+
+<p>Ez a cikk egy alapvető útmutató az MDN-en található tartalom fordításához, amely tartalmazza a fordítási munka menetét, és tanácsokat ad a különböző tartalmak helyes kezeléséhez.</p>
+
+<h2 id="Új_oldal_fordításának_elkezdése">Új oldal fordításának elkezdése</h2>
+
+<p>Amikor egy olyan oldallal találkozol, amelyet szeretnél lefordítani a nyelvedre, akkor kövesd ezeket a lépéseket:</p>
+
+<ol>
+ <li>Kattints a Nyelvek ikonra a <strong>Nyelvek</strong> menü megnyitásához, és kattints a <strong>Fordítás hozzáadása </strong>gombra. Ekkor megjelenik a Nyelvválasztó oldal.</li>
+ <li>Válaszd ki a nyelvet, amelyre le akarod fordítani az oldalt. Megjelenik a Cikk fordítása nézet, az eredeti nyelvi szöveggel a bal oldalon.</li>
+ <li>A <strong>Fordítás leírása </strong>alatt lefordíthatod a címet, és választhatóan, a cikk SEO URL-jét az adott nyelven. A SEO URL az oldal URL-jének a vége (például az „Oldalak_fordítása” ennél a cikknél.) Néhány nyelvi közösség nem fordítja ezt le, ugyanúgy hagyva mint az angolt. Hasonlítsd össze a többi cikket a nyelveden, és határozd meg, hogy mi a bevett gyakorlat. Rákattinthatsz a mínusz jelre a <strong>Fordítás leírása</strong> mellett az információ elrejtéséhez, ha már végeztél vele, hogy több hely maradjon a <strong>Tartalom fordítása </strong>résznek.</li>
+ <li>A <strong>Tartalom fordítása </strong>alatt fordítsd le az oldal törzsét.</li>
+ <li>Tölts ki legalább egy <strong>címkét</strong> az oldalhoz</li>
+ <li>Kattints a <strong>Változtatások mentése</strong> gombra ha végeztél.</li>
+</ol>
+
+<div class="note"><strong>Megjegyzés:</strong> A Cikk fordítása nézet felhasználói felületi elemei először angolul jelennek meg. A későbbi felkeresésekkor a megfelelő nyelven fog megjelenni az oldal, ha létezik honosítás az MDN-en ahhoz a nyelvhez. Az MDN felhasználói felülete a <a href="https://localize.mozilla.org/projects/mdn/" title="https://localize.mozilla.org/projects/mdn/">Pontoon</a> segítségével honosítható. Nézd meg a <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Localization/Localizing_with_Verbatim" title="/en-US/docs/Mozilla/Localization/Localizing_with_Verbatim">Honosítás a Pontoonnal</a> oldalt az eszköz használatának részleteiért.</div>
+
+<h2 id="Lefordított_oldalak_szerkesztése">Lefordított oldalak szerkesztése</h2>
+
+<ul>
+ <li>Egy lefordított oldalon, kattints a <strong>Szerkesztés</strong> gombra (néha megcímkézve a célnyelvvel). Ekkor megnyílik a Cikk fordítása.</li>
+</ul>
+
+<p>Ha az angol verzió megváltozott mióta a fordítást legutóbb frissítettek, akkor a Cikk fordítása nézet megjeleníti a forrás szintű „diff”-et az angol nyelvű verzióban. Ez segít abban, hogy eldöntsd mit kell frissíteni a fordításban.</p>
+
+<h2 id="Fordítások_címkézése">Fordítások címkézése</h2>
+
+<p>Fontos, hogy minden oldal meg legyen címkézve legalább egy címkével. Akkor is, ha ez egy fordítás.</p>
+
+<p>Néhány címke keresési szűrőként használt, vagy közreműködők közti közmegegyezésként. Ezeket nem kell lefordítani. Ezen címkék megismeréséhez olvasd el a <a href="/en-US/docs/Project:MDN/Contributing/Tagging_standards">címkézési szabványokat</a>. Nyugodtan létrehozhatsz lefordított címkéket is az olyan tartalmak csoportosításához, melyeket nem fed le egy szabványos címke.</p>
+
+
+
+<h2 id="Tippek_új_honosítóknak">Tippek új honosítóknak</h2>
+
+<p>Ha új vagy az MDN honosításában, akkor itt van néhány javaslat:</p>
+
+<ul>
+ <li>A <a href="/en-US/docs/Glossary">Szójegyzékben</a> lévő cikkek jók a friss fordítóknak, mert rövidek és egyszerűek.</li>
+ <li>Az <a href="/en-US/docs/tag/l10n%3Apriority">„l10n:priority” címkéjű cikkek</a> magas prioritásúakként kezeltek a fordítás szempontjából. Általánosságban az oktató és fogalmakkal foglalkozó cikkek nagyobb prioritásúak mint a referencia lapok, mert azoknak az olvasóknak van a legnagyobb szüksége a fordításokra, akik még új fogalmakat tanulnak.</li>
+ <li>Ha dupla kapcsos zárójek közti szöveget találsz, mint ezt: <code>\{{some-text("more text")}}</code>, akkor hagyd lefordítatlanul, és ne módosíts az írásjeleken sem. Ez egy <a href="/en-US/docs/MDN/Contribute/Structures/Macros">makró</a>, amely valószínűleg az oldal szerkezetéért felelős, vagy valami más hasznos dolgot csinál. Olyan lefordítatlan szöveget is találhatsz, amelyet makró állít elő; ne aggódj emiatt addig, amíg nem szerzel több tapasztalatot az MDN-nel. (Az ilyen szövegek módosításához <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Tools/Template_editing">különleges engedélyek</a> szükségesek, mert a makrók nagyon sok mindenre képesek.) Ha érdekel, akkor nézd meg a <a href="/en-US/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros">Gyakran használt makrókat</a>, hogy lásd mi mindent tudnak.</li>
+ <li>Nézd meg a <a href="/en-US/docs/MDN/Contribute/Localize/Localization_projects">Lokalizációs projektoldalt</a>, hogy többet tudj meg a területi beállításodhoz tartozó honosításról.</li>
+</ul>

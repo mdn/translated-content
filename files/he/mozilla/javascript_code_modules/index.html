@@ -1,0 +1,147 @@
+---
+title: JavaScript code modules
+slug: Mozilla/JavaScript_code_modules
+tags:
+  - Add-ons
+  - Extensions
+  - JavaScript
+  - Landing
+  - Modules
+  - Mozilla
+  - NeedsTranslation
+  - TopicStub
+  - XPCOM
+translation_of: Mozilla/JavaScript_code_modules
+---
+<p>{{Non-standard_Header}}</p>
+
+<div class="blockIndicator note">
+<p><strong>Note:</strong> These are <em>not</em> the same thing as standard JavaScript modules. See {{JSxRef("Statements/export", "export")}} and {{JSxRef("Statements/import", "import")}} to learn more about how to use standard modules.</p>
+</div>
+
+<p class="summary">JavaScript code modules let multiple privileged JavaScript scopes share code. For example, a module could be used by Firefox itself as well as by extensions, in order to avoid code duplication.</p>
+
+<h2 id="General_topics">General topics</h2>
+
+<div class="topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/JavaScript_code_modules/Using">Using JavaScript code modules</a></dt>
+ <dd>An introduction to how to use JavaScript code modules.</dd>
+ <dt><code><a href="/en-US/docs/Components.utils.import">Components.utils.import</a></code></dt>
+ <dd>How to import a JavaScript code module.</dd>
+ <dt><code><a href="/en-US/docs/Components.utils.unload">Components.utils.unload</a></code></dt>
+ <dd>How to unload a JavaScript code module.</dd>
+</dl>
+</div>
+
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Code_snippets/Modules">Code snippets: Modules</a></dt>
+ <dd>Examples of how to use code modules.</dd>
+ <dt><a class="external" href="https://wiki.mozilla.org/Labs/JS_Modules">Mozilla Labs JS Modules</a></dt>
+ <dd>This page features a list of JavaScript modules, along with download links and documentation, that extension developers can use in their code.</dd>
+</dl>
+</div>
+</div>
+
+<h2 id="Standard_code_modules">Standard code modules</h2>
+
+<div class="topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Addons/Add-on_Manager" title="Addons/Add-on_Manager">AddonManager.jsm</a></dt>
+ <dd>An interface to install, manage, and uninstall add-ons.</dd>
+ <dt><a href="/en-US/docs/Addons/Add-on_Repository" title="Addons/Add-on Repository">AddonRepository.jsm</a></dt>
+ <dd>Provides a search of add-ons in the repository.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Assert.jsm" title="./Assert.jsm">Assert.jsm</a></dt>
+ <dd>Implements the <a href="http://wiki.commonjs.org/wiki/Unit_Testing/1.1" title="http://wiki.commonjs.org/wiki/Unit_Testing/1.1">CommonJS Unit Testing specification version 1.1</a>, which provides a basic standardized interface for performing in-code logical assertions with optional, customizable error reporting.</dd>
+ <dt>BookmarkHTMLUtils.jsm</dt>
+ <dd>Provides utility functions for importing and exporting bookmarks from the old-school "bookmarks.html" style bookmark files.</dd>
+ <dt><a href="/en-US/docs/Mozilla/js-ctypes" title="./ctypes.jsm">ctypes.jsm</a></dt>
+ <dd>Provides an interface that allows JavaScript code to call native libraries without requiring the development of an XPCOM component.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/CustomizableUI.jsm" title="./ctypes.jsm">CustomizableUI.jsm</a></dt>
+ <dd>Allows you to interact with customizable buttons and items in Firefox's main window UI.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/DeferredTask.jsm" title="./DeferredTask.jsm">DeferredTask.jsm</a></dt>
+ <dd>Run a task after a delay.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Dict.jsm" title="./Dict.jsm">Dict.jsm</a></dt>
+ <dd>Provides an API for key/value pair dictionaries.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/DownloadLastDir.jsm" title="./DownloadLastDir.jsm">DownloadLastDir.jsm</a></dt>
+ <dd>Supplies the path to the directory into which the last download occurred.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Downloads.jsm" title="./Downloads.jsm">Downloads.jsm</a></dt>
+ <dd>Provides a single entry point to interact with the downloading capabilities of the platform.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/FileUtils.jsm" title="./FileUtils.jsm"><strong style="font-weight: bold;">FileUtils.jsm</strong></a></dt>
+ <dd>Provides helpers for dealing with files.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Geometry.jsm" title="./Geometry.jsm">Geometry.jsm</a></dt>
+ <dd>Provides routines for performing basic geometric operations on points and rectangles.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Http.jsm" title="./Geometry.jsm">HTTP.jsm</a></dt>
+ <dd>A wrapper for XMLHttpRequest that provides convenient and simplified API for dealing with HTTP requests.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/JNI.jsm">JNI.jsm</a></dt>
+ <dd>Abstracts the js-ctypes to provide an interface that allows JavaScript code to call code running in native JVMs.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/ISO8601DateUtils.jsm" title="./ISO8601DateUtils.jsm">ISO8601DateUtils.jsm</a></dt>
+ <dd>Provides routines to convert between JavaScript <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date" title="JavaScript/ Reference/Global Objects/Date"><code>Date</code></a> objects and ISO 8601 date strings.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Log.jsm">Log.jsm</a> (formerly log4moz)</dt>
+ <dd>Provides a <a href="https://en.wikipedia.org/wiki/Log4j">log4j</a> style API for logging, log messages to various endpoints, such as the <a href="/en-US/docs/Tools/Browser_Console">Browser Console</a> or a file on disk. </dd>
+</dl>
+</div>
+
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/NetUtil.jsm" title="./NetUtil.jsm"><strong style="font-weight: bold;">NetUtil.jsm</strong></a></dt>
+ <dd>Provides helpful networking utility functions, including the ability to easily copy data from an input stream to an output stream asynchronously.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/openLocationLastURL.jsm" title="./openLocationLastURL.jsm">openLocationLastURL.jsm</a></dt>
+ <dd>Provides access to the last URL opened using the "Open Location" option in the File menu.</dd>
+ <dt><a href="/Mozilla/JavaScript_code_modules/OSFile.jsm" title="/en-US/docs/JavaScript_OS.File">OSFile.jsm</a></dt>
+ <dd>Allows routines to access files. To which can be read, write, rename, create directories,etc.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/PerfMeasurement.jsm" title="./PerfMeasurement.jsm">PerfMeasurement.jsm</a></dt>
+ <dd>Provides access to low-level hardware and OS performance measurement tools.</dd>
+ <dt><a href="/en-US/docs/Localization_and_Plurals" title="Localization and Plurals">PluralForm.jsm</a></dt>
+ <dd>Supplies an easy way to get the correct plural forms for the current locale, as well as ways to localize to a specific plural rule.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/PopupNotifications.jsm" title="./PopupNotifications.jsm">PopupNotifications.jsm</a></dt>
+ <dd>Gives an easy way to present non-modal notifications to users.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm" title="./Promise.jsm">Promise.jsm</a></dt>
+ <dd>Implements the <a class="external" href="https://github.com/promises-aplus/promises-spec/blob/1.0.0/README.md" title="https://github.com/promises-aplus/promises-spec/blob/1.0.0/README.md">Promises/A+</a> proposal as known in April 2013.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/PromiseWorker.jsm">PromiseWorker.jsm</a></dt>
+ <dd>A version of {{domxref("ChromeWorker")}} which uses Promises to return the worker's result instead of using an event to do so.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Services.jsm" title="./Services.jsm">Services.jsm</a></dt>
+ <dd>Provides getters for conveniently obtaining access to commonly-used services.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/source-editor.jsm" title="./source-editor.jsm">source-editor.jsm</a></dt>
+ <dd>The Source Editor is used by developer tools such as, the Style Editor; this interface implements the editor and lets you interact with it.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Sqlite.jsm" title="./Sqlite.jsm">Sqlite.jsm</a></dt>
+ <dd>A Promise-based API to mozIStorage/SQLite.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Task.jsm" title="./Task.jsm">Task.jsm</a></dt>
+ <dd>Implements a subset of <a class="external" href="http://taskjs.org/" title="http://taskjs.org/">Task.js</a> to make sequential, asynchronous operations simple, using the power of JavaScript's <code>yield</code> operator.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm" title="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm">Timer.jsm</a></dt>
+ <dd>A pure JS implementation of <code>window.setTimeout</code>.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Webapps.jsm" title="/en-US/docs/Mozilla/JavaScript_code_modules/Timer.jsm">Webapps.jsm</a></dt>
+ <dd>Provides an interface to manage Open Web Apps.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/WebRequest.jsm">WebRequest.jsm</a></dt>
+ <dd>Provides an API to add event listeners for the various stages of making an HTTP request. The event listener receives detailed information about the request, and can modify or cancel the request.</dd>
+ <dt><a href="/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm" title="./XPCOMUtils.jsm">XPCOMUtils.jsm</a></dt>
+ <dd>Contains utilities for JavaScript components loaded by the JS component loader.</dd>
+</dl>
+</div>
+</div>
+
+<h2 id="Subnav">Subnav</h2>
+
+<section id="Quick_Links">
+<ol>
+ <li><strong><a href="/en-US/docs/Mozilla">Mozilla</a></strong></li>
+ <li><strong><a href="/en-US/docs/Mozilla/JavaScript_code_modules">JavaScript code modules</a></strong></li>
+ <li class="toggle">
+  <details open><summary>General topics</summary>
+  <ol>
+   <li><a href="/en-US/docs/JavaScript_code_modules/Using">Using JavaScript code modules</a></li>
+   <li><code><a href="/en-US/docs/Components.utils.import">Components.utils.import</a></code></li>
+   <li><code><a href="/en-US/docs/Components.utils.unload">Components.utils.unload</a></code></li>
+   <li><a href="/en-US/docs/Code_snippets/Modules">Code snippets: Modules</a></li>
+   <li><a class="external" href="https://wiki.mozilla.org/Labs/JS_Modules">Mozilla Labs JS Modules</a></li>
+  </ol>
+  </details>
+ </li>
+ <li class="toggle">
+  <details><summary>Reference</summary>{{ListSubpagesForSidebar("/en-US/docs/Mozilla/JavaScript_code_modules", 1)}}</details>
+ </li>
+</ol>
+</section>

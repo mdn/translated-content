@@ -1,0 +1,228 @@
+---
+title: Menús emergentes
+slug: Archive/Mozilla/XUL/Tutorial_de_XUL/Menús_emergentes
+tags:
+  - Todas_las_Categorías
+  - Tutorial_de_XUL
+  - XUL
+  - para_revisar
+---
+<p>En la última sección vimos cómo crear un menú en una barra de menú. XUL tiene además la capacidad de crear menús emergentes. Los menús emergentes normalmente se muestran cuando el usuario presiona el botón derecho del ratón.</p>
+
+<h3 id="Creaci.C3.B3n_de_un_men.C3.BA_emergente" name="Creaci.C3.B3n_de_un_men.C3.BA_emergente">Crear un menú emergente (menú popup)</h3>
+
+<p>XUL tiene tres tipos diferentes de elementos emergentes, los cuales se describen a continuación. La principal diferencia entre ellos es la manera en la que aparecen.</p>
+
+<ul>
+ <li>
+  <dl>
+   <dt>Menús emergentes simples (Plain Popups)</dt>
+  </dl>
+ </li>
+</ul>
+
+<dl>
+ <dd>El menú emergente simple es una ventana emergente que aparece al presionar el botón izquierdo del ratón sobre un elemento. Son como los menús que aparecen en las barras de menú, excepto que pueden ponerse en cualquier lugar y se les puede poner cualquier contenido. Un buen ejemplo es el menú con despliegue hacia abajo que aparece cuando haces clic sobre la pequeña flecha hacia abajo que sigue a los botones adelante y atrás en una ventana del explorador.</dd>
+</dl>
+
+<ul>
+ <li>
+  <dl>
+   <dt>Menús emergentes de contexto (Context Popups)</dt>
+  </dl>
+ </li>
+</ul>
+
+<dl>
+ <dd>El menú emergente de contexto es una ventana emergente que aparece cuando el usuario presiona el botón de menú contextual, el cual es usualmente el botón derecho del ratón. La forma exacta en que un menú contextual es abierto varía en cada plataforma. En Macintosh, por ejemplo, el usuario puede bien presionar la tecla Control y hacer clic con el ratón o mantener presionado el botón del ratón por un momento. Además, es posible abrir un menú contextual sin usar el ratón, por ejemplo presionando la tecla Menú en un teclado.</dd>
+</dl>
+
+<ul>
+ <li>
+  <dl>
+   <dt>Ventanas emergentes de información (Tooltips)</dt>
+  </dl>
+ </li>
+</ul>
+
+<dl>
+ <dd>Una ventana emergente de información aparecerá cuando el usuario pasa el ratón sobre un elemento. Este tipo de emergentes puede usarse para proporcionar una descripción de un botón con mayor detalle del que puede ofrecer el botón mismo.</dd>
+</dl>
+
+<p>Los tres tipos de elementos emergentes difieren en la forma en que son invocados por el usuario. El tipo de elemento emergente es determinado por el elemento que lo invoca.</p>
+
+<h4 id="Declaraci.C3.B3n_del_contenido_del_men.C3.BA" name="Declaraci.C3.B3n_del_contenido_del_men.C3.BA">Declarar el contenido de un emergente</h4>
+
+<p>Un elemento emergente se describe usando el elemento <code><a href="/es/XUL/Elementos#menupopup" title="es/XUL/Elementos#menupopup">menupopup</a></code>. No tiene atributos especiales y es un tipo de caja. Cuando es invocado, aparecerá una ventana conteniendo lo que sea que hayas puesto dentro del elemento <code><a href="/es/XUL/Elementos#menupopup" title="es/XUL/Elementos#menupopup">menupopup</a></code>. Sin embargo, deberías poner siempre un atributo <code><a href="/Es/XUL/Atributos#id" title="Es/XUL/Atributos#id">id</a></code> en el menupopup ya que sirve para asociar el elemento emergente con un elemento. Veremos lo que esto significa pronto. Pero primero, un ejemplo:</p>
+
+<pre>&lt;popupset&gt;
+  &lt;menupopup id="clipmenu"&gt;
+    &lt;menuitem label="Cortar"/&gt;
+    &lt;menuitem label="Copiar"/&gt;
+    &lt;menuitem label="Pegar"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;
+</pre>
+
+<p>Como puede verse aquí, se ha creado un menú emergente simple con tres órdenes. El elemento <code><a href="/es/XUL/Elementos#menupopup" title="es/XUL/Elementos#menupopup">menupopup</a></code> contiene los tres elementos del menú <code> <code><a href="../../../../en/XUL/menuitem" rel="custom nofollow">menuitem</a></code></code> . Además, como observarás, el <code><a href="/Es/XUL/Atributos#id" title="Es/XUL/Atributos#id">id</a></code> se ha puesto en el elemento <code>menupopup</code>.</p>
+
+<p>El elemento <code><a href="/es/XUL/Elementos#popupset" title="es/XUL/Elementos#popupset">popupset</a></code> contiene toda la declaración del menú emergente. Este es un contenedor genérico de emergentes y es opcional. Este no aparece en pantalla sino que se usa como un apartado en donde puedes declarar todos tus emergentes. Como su mismo nombre implica (<code><a href="/es/XUL/Elementos#popupset" title="es/XUL/Elementos#popupset">popupset</a></code>), puedes poner múltiples declaraciones de elementos emergentes dentro de éste. Solamente tienes que añadir, detrás del primer elemento <code><a href="/es/XUL/Elementos#popupset" title="es/XUL/Elementos#popupset">popupset</a></code>, todos los que quieras adicionalmente. Puedes tener más de un <code><a href="/es/XUL/Elementos#popupset" title="es/XUL/Elementos#popupset">popupset</a></code> en un archivo, pero lo normal es que tengas únicamente uno.</p>
+
+<h4 id="Asociaci.C3.B3n_de_un_men.C3.BA_emergente_con_un_elemento" name="Asociaci.C3.B3n_de_un_men.C3.BA_emergente_con_un_elemento">Asociar un emergente con un elemento</h4>
+
+<p>Ahora que hemos creado el elemento emergente, es hora de hacer que se muestre. Para hacerlo necesitamos asociar el emergente con un elemento en donde debería aparecer. Hacemos esto porque queremos que el emergente aparezca únicamente cuando el usuario haga clic en una determinada área de la ventana. Habitualmente será un botón o una caja concretos.</p>
+
+<p>Para asociar el emergente con un elemento agrega un atributo de entre tres posibles al elemento. El atributo que agregues dependerá del tipo de emergente que quieras crear. Para un menú emergente simple, agrega un atributo <code><a href="../../../../en/XUL/Attribute/popup" rel="internal">popup</a></code> al elemento. Para un menú emergente de contexto, agrega un atributo <code><a href="../../../../en/XUL/Attribute/context" rel="internal">context</a></code>. Por último, para un emergente de información, agrega un atributo <code><a href="../../../../en/XUL/Attribute/tooltip" rel="internal">tooltip</a></code>.</p>
+
+<p>El valor del atributo debe ser el <code><a href="/Es/XUL/Atributos#id" title="Es/XUL/Atributos#id">id</a></code> del <code>menupopup</code> que quieras que aparezca. Este es el porqué de poner un <code><u><span style="color: #3366ff;">id</span></u></code> en el emergente. De esa manera es fácil tener múltiples menús emergentes en un archivo.</p>
+
+<p>En el ejemplo de arriba, queremos hacer que el emergente sea un menú contextual. Eso significa que necesitamos usar el atributo <code><a href="/Es/XUL/Atributos#context" title="Es/XUL/Atributos#context">context</a></code> y agregarlo al elemento con el cual queremos tener asociado el emergente. El ejemplo de abajo muestra cómo debemos hacer esto:</p>
+
+<p><span id="Ejemplo_1"><a id="Ejemplo_1"></a><strong>Ejemplo 1</strong></span> : <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_1.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_1.xul">Ver en funcionamiento</a></p>
+
+<div class="float-right"><img alt="Image:popups-ex1.png" class="internal" src="/@api/deki/files/813/=Popups-ex1.png"></div>
+
+<pre>&lt;popupset&gt;
+  &lt;menupopup id="clipmenu"&gt;
+    &lt;menuitem label="Cortar"/&gt;
+    &lt;menuitem label="Copiar"/&gt;
+    &lt;menuitem label="Pegar"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;
+
+&lt;box context="clipmenu"&gt;
+  &lt;label value="Haz clic con el botón derecho para ver el menú"/&gt;
+&lt;/box&gt;
+</pre>
+
+<p>Aquí, el menú emergente ha sido asociado con una caja. Cada vez que hagas clic contextual (clic con el botón derecho) en cualquier lugar de la caja, aparecerá el menú emergente. El emergente también aparecerá aun si haces clic sobre los descendientes de la caja, así que también funcionará si haces clic en el elemento <code><a href="/es/XUL/Elementos#label" title="es/XUL/Elementos#label">label</a></code>. El atributo <code><a href="/Es/XUL/Atributos#context" title="Es/XUL/Atributos#context">context</a></code> se ha usado para asociar la caja con un menú emergente con el mismo id. En este caso, aparecerá el menú emergente <code>clipmenu</code>. De esta forma, puedes tener varios emergentes y asociar cada uno con diferentes elementos.</p>
+
+<p>Podrías asociar múltiples emergentes con el mismo elemento poniendo más atributos de diferente tipo en un elemento. Podrías además asociar el mismo emergente con múltiples elementos, lo cual es una ventaja de esta sintaxis. Los emergentes solamente pueden asociarse a elementos XUL; no pueden asociarse con elementos HTML.</p>
+
+<h3 id="Herramientas_de_ayuda" name="Herramientas_de_ayuda">Informativos (Tooltips)</h3>
+
+<p>Aquí veremos una forma simple de crear emergentes de información. Hay dos maneras de crearlos. La manera más simple, que es la más común, es agregar un atributo <code><a href="/Es/XUL/Atributos#tooltiptext" title="Es/XUL/Atributos#tooltiptext">tooltiptext</a></code> a un elemento para el que quieres asignar un emergente de información.</p>
+
+<p>El segundo método es usar un elemento <code><a href="/es/XUL/Elementos#tooltip" title="es/XUL/Elementos#tooltip">tooltip</a></code> que tenga el contenido de un emergente de información. Esto requiere que tengas un bloque de contenido separado para cada emergente de información o que tengas un script que establezca el contenido. Sin embargo, esto te permite usar cualquier contenido además de texto en el emergente de información.</p>
+
+<p><strong>Ejemplo 2</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_2.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_2.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;button label="Guardar" tooltiptext="Haz clic aquí para guardar tu trabajo"/&gt;
+
+&lt;popupset&gt;
+  &lt;tooltip id="moretip" orient="vertical" style="background-color: #33DD00;"&gt;
+    &lt;description value="Ver más información"/&gt;
+    &lt;description value="¿De verdad?" style="color: red;"/&gt;
+  &lt;/tooltip&gt;
+&lt;/popupset&gt;
+
+&lt;button label="Más" tooltip="moretip"/&gt;
+</pre>
+
+<p>Estos dos botones tienen un emergente de información cada uno. El primero usa el estilo por defecto. El segundo usa un estilo personalizado que tiene un fondo de diferente color y estilos aplicados al texto. El emergente ha sido asociado al botón Más usando el atributo <code><a href="/Es/XUL/Atributos#tooltip" title="Es/XUL/Atributos#tooltip">tooltip</a></code>, el cual ha sido establecido al correspondiente <code><a href="/Es/XUL/Atributos#id" title="Es/XUL/Atributos#id">id</a></code> del elemento <code><a href="/es/XUL/Elementos#tooltip" title="es/XUL/Elementos#tooltip">tooltip</a></code>. Observa que el elemento <code>tooltip</code> sigue estando ubicado dentro de un elemento <code><a href="/es/XUL/Elementos#popupset" title="es/XUL/Elementos#popupset">popupset</a></code>, como los otros tipos de emergentes.</p>
+
+<h3 id="Definir_donde_aparecer.C3.A1_el_men.C3.BA_emergente" name="Definir_donde_aparecer.C3.A1_el_men.C3.BA_emergente">Alineación del emergente</h3>
+
+<p>Por defecto, las ventanas emergentes y de contexto aparecerán donde esté el puntero del ratón. Los emergentes de información se ubicarán ligeramente por debajo del elemento de tal forma que el puntero del ratón no los oculte. Hay casos sin embargo, en los que vas a querer indicar con mayor detalle dónde debe aparecer el emergente. Por ejemplo, el menú emergente que aparece cuando haces clic en el botón Atrás en un explorador debería aparecer por debajo del botón Atrás y no donde está el puntero del ratón.</p>
+
+<p>Para cambiar la posición del emergente, puedes usar un atributo adicional, <code><a href="/Es/XUL/Atributos#position" title="Es/XUL/Atributos#position">position</a></code>, en el <code><a href="/es/XUL/Elementos#menupopup" title="es/XUL/Elementos#menupopup">menupopup</a></code>. Puedes incluso agregarlo al elemento <code><a href="/es/XUL/Elementos#menupopup" title="es/XUL/Elementos#menupopup">menupopup</a></code>. Este atributo se usa para indicar el lugar del emergente relativo al elemento que lo invoca. Puede establecerse en distintos valores, que se describen brevemente a continuación:</p>
+
+<dl>
+ <dt>after_start</dt>
+ <dd>El emergente aparece debajo del elemento con los bordes izquierdos de éste y la ventana emergente alineados. Si la ventana emergente es más grande que el elemento, se extiende hacia la derecha. Este es el valor usado para los menús colgantes asociados con los botones Atrás y Adelante de los exploradores.</dd>
+</dl>
+
+<dl>
+ <dt>after_end</dt>
+ <dd>El emergente aparece debajo del elemento con los bordes derechos de éste y la ventana emergente alineados.</dd>
+</dl>
+
+<dl>
+ <dt>before_start</dt>
+ <dd>El emergente aparece arriba del elemento con los bordes izquierdos de éste y la ventana emergente alineados.</dd>
+</dl>
+
+<dl>
+ <dt>before_end</dt>
+ <dd>El emergente aparece arriba del elemento con los bordes derechos de éste y la ventana emergente alineados.</dd>
+</dl>
+
+<dl>
+ <dt>end_after</dt>
+ <dd>El emergente aparece a la derecha del elemento con los bordes inferiores de éste y la ventana emergente alineados.</dd>
+</dl>
+
+<dl>
+ <dt>end_before</dt>
+ <dd>El emergente aparece a la derecha del elemento con los bordes superiores de éste y la ventana emergente alineados.</dd>
+</dl>
+
+<dl>
+ <dt>start_after</dt>
+ <dd>El emergente aparece a la izquierda del elemento con los bordes inferiores de éste y la ventana emergente alineados.</dd>
+</dl>
+
+<dl>
+ <dt>start_before</dt>
+ <dd>El emergente aparece a la izquierda del elemento con los bordes superiores de éste y la ventana emergente alineados.</dd>
+</dl>
+
+<dl>
+ <dt>overlap</dt>
+ <dd>El emergente aparece encima del elemento.</dd>
+</dl>
+
+<dl>
+ <dt>at_pointer</dt>
+ <dd>El emergente aparece en la posición del puntero del ratón.</dd>
+</dl>
+
+<dl>
+ <dt>after_pointer</dt>
+ <dd>El emergente aparece en la misma posición horizontal del puntero del ratón pero debajo del elemento. Así es como aparecen los emergentes de información.</dd>
+</dl>
+
+<p>Al agregar el atributo <code>position</code> al elemento emergente, puedes especificar con precisión dónde aparece el emergente. No puedes especificar la posición exacta de un píxel. El atributo <code>position</code> puede usarse con los tres tipos de emergentes, aunque probablemente no cambiarás el valor de un emergente de información. El ejemplo de abajo demuestra cómo crear un botón Atrás con un menú emergente:</p>
+
+<p><strong>Ejemplo 3</strong>: <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_3.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/ex_popups_3.xul">Ver en funcionamiento</a></p>
+
+<pre>&lt;popupset&gt;
+  &lt;menupopup id="backpopup" position="after_start"&gt;
+    &lt;menuitem label="Página 1"/&gt;
+    &lt;menuitem label="Página 2"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;
+
+&lt;button label="Hazme aparecer" popup="backpopup"/&gt;
+</pre>
+
+<h3 id="Ejemplo_de_archivo_de_b.C3.BAsqueda" name="Ejemplo_de_archivo_de_b.C3.BAsqueda">Nuestro ejemplo con un buscador de archivos</h3>
+
+<p>Agreguemos un menú emergente simple al dialogo de búsqueda de archivos. Por simplicidad, solo repetiremos los contenidos del menú Editar. Hagamos que el emergente aparezca cuando se haga clic sobre la primera pestaña del panel:</p>
+
+<pre class="eval"><span class="highlightred">&lt;popupset&gt;
+  &lt;menupopup id="editpopup"&gt;
+    &lt;menuitem label="Cortar" accesskey="t"/&gt;
+    &lt;menuitem label="Copiar" accesskey="c"/&gt;
+    &lt;menuitem label="Pegar" accesskey="p" disabled="true"/&gt;
+  &lt;/menupopup&gt;
+&lt;/popupset&gt;</span>
+
+&lt;vbox flex="1"&gt;
+.
+.
+.
+
+<span class="highlightred">&lt;tabpanel id="searchpanel" orient="vertical" context="editpopup"&gt;</span>
+</pre>
+
+<p>Aquí se ha agregado un emergente simple similar al del menú Editar. Si haces clic derecho (Control-clic en Macintosh) en cualquier lugar del primer panel, aparecerá el emergente. Sin embargo, el emergente no aparecerá si haces clic en otro lugar. Observa que la caja de texto tiene su propio contenido para el menú emergente, el cual prevalecerá sobre el especificado por nosotros.</p>
+
+<p>Otro ejemplo : <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-popups.xul.txt">Código</a> <a href="https://developer.mozilla.org/samples/xultu/examples/findfile/findfile-popups.xul">Ver en funcionamiento</a></p>
+
+<p><br>
+ A continuación seguiremos con la <a href="/es/Tutorial_de_XUL/Menús_con_desplazamiento" title="es/Tutorial de XUL/Menús con desplazamiento">creación de menús con desplazamiento</a>.</p>
+
+<div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Tutorial_de_XUL:Más_funciones_de_menú" style="float: left;">« Anterior</a><a href="/es/docs/Tutorial_de_XUL:Menús_con_desplazamiento">Siguiente  »</a></p>
+</div>

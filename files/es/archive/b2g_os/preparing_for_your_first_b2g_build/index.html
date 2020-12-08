@@ -1,0 +1,151 @@
+---
+title: Preparándote para tu primer binario de B2G
+slug: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+translation_of: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+---
+<p></p>
+
+<p>Antes de construir B2G, necesitas clonar el repositorio y configurar tu binario. Este artículo te explica cómo.</p>
+
+<h2 id="Cómo_clonar_el_repositorio_de_B2G">Cómo clonar el repositorio de B2G</h2>
+
+<p>El primer paso antes de empezar a construir tu primer binario es clonar el repositorio de B2G. Esto no lo bajará todo: bajará solamente el "build system" de B2G y las utilidades de configuración. La mayoría del código de B2G está en el repositorio general <a href="https://developer.mozilla.org/en/Mercurial" title="en/Mercurial">Mercurial</a> de Mozilla.</p>
+
+<p>Para clonar el repositorio, usa git:</p>
+
+<pre>git clone git://github.com/mozilla-b2g/B2G.git</pre>
+
+<p>Tras clonarlo (lo que debería tardar sólo un momento), <code>cd</code> al directorio de B2G:</p>
+
+<pre>cd B2G
+</pre>
+
+<h2 id="Cómo_copiar_la_estructura_de_B2G_a_otro_ordenador">Cómo copiar la estructura de B2G a otro ordenador</h2>
+
+<p>Si tienes un ordenador nuevo (<span class="st">¡</span>vaya suerte!), tu vida será mucho más fácil si simplemente migras la estructura completa de B2G de un ordenador al otro.</p>
+
+<p>Para ello, monta el disco duro de tu ordenador viejo en el nuevo, y haz:</p>
+
+<pre>rsync -a <em>source</em>/ <em>dest</em>/
+</pre>
+
+<p>Donde <code>source</code> es la ruta completa (incluida la barra oblicua del final) a la estructura del código, y <code>dest</code> es el destino al que la quieres mover (la barra oblicua del final también es importante en este caso).</p>
+
+<div class="note">
+<p>Atención: Si copias los archivos de un ordenador con un sistema operativo diferente asegúrate de ejecutar '<em>./build.sh clean' </em>antes de empezar el proceso de construcción. Si no, puedes causar problemas de compilación.</p>
+</div>
+
+<p>Si sigues estas instrucciones, puedes saltarte el resto de este artículo e ir directamente a la <a href="https://developer.mozilla.org/en/Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko">página de construcción</a>.</p>
+
+<h2 id="Cómo_configurar_B2G_en_tu_móvil">Cómo configurar B2G en tu móvil</h2>
+
+<div class="warning"><strong>Importante: </strong>Recuerda que sólo son compatibles los móviles con <strong>Android 4</strong> (alias <strong>Ice Cream Sandwich </strong>o<strong> ICS</strong>). Asegúrate de que tu teléfono tiene instalado ICS, si no este paso probablemente fallará ya que algunos "drivers" se obtienen de móviles que no son Nexus. Si tienes que flashear tu móvil con ICS, ten en cuenta que algunas extensiones USB no funcionan bien con utilidades para flashear, y que tendrás que conectar tu teléfono a uno de los puertos del ordenador.</div>
+
+<p>Una vez tengas el "build system" de B2G, necesitas configurarlo para el móvil en el que lo vas a instalar. Para ver una lista de aparatos compatibles, puedes utilizar la herramienta <code>config.sh</code>:</p>
+
+<pre>./config.sh
+</pre>
+
+<p>Este comando te muestra una lista de aparatos compatibles. Por ejemplo:</p>
+
+<pre>Usage: ./config.sh [-cdflnq] (device name)
+Flags are passed through to |./repo sync|.
+
+Valid devices to configure are:
+- galaxy-s2
+- galaxy-nexus
+- nexus-4
+- nexus-4-kk
+- nexus-5
+- nexus-5-l
+- nexus-s
+- nexus-s-4g
+- flo (Nexus 7 2013)
+- otoro
+- unagi
+- inari
+- keon
+- peak
+- hamachi
+- helix
+- tarako
+- dolphin
+- dolphin-512
+- pandaboard
+- vixen
+- flatfish
+- flame
+- flame-kk
+- flame-l
+- rpi (Revision B)
+- emulator
+- emulator-jb
+- emulator-kk
+- emulator-l
+- emulator-x86
+- emulator-x86-jb
+- emulator-x86-kk
+- emulator-x86-l
+&gt; Sony Xperia devices
+- aries (Z3 Compact KK)
+- aries-l (Z3 Compact L)
+- leo-kk (Z3 KK)
+- leo-l (Z3 L)
+- scorpion-l (Z3 Tablet Compact L)
+- sirius-l (Z2 L)
+- tianchi-l (T2U L)
+- flamingo-l (E3 L)</pre>
+
+<div><br>
+Si tu aparato no está en la lista, no continúes: ayúdanos a hacer B2G compatible con tu aparato o espera a que alguien lo haga. <span class="st">¡</span>Pero siempre es mejor que seas tú el que nos ayudes!</div>
+
+<div> </div>
+
+<div class="note"><strong>Atención:</strong> Si por cualquier razón quieres construir una versión específica de B2G, lee el artículo <a href="#Cómo_construir_una_versión_específica_de_Gecko">Cómo construir una versión específica de Gecko</a> antes de hacerlo.</div>
+
+<h3 id="Cómo_configurar_un_teléfono_móvil">Cómo configurar un teléfono móvil</h3>
+
+<p>Primero conecta tu móvil: el proceso de configuración necesita acceder al teléfono.</p>
+
+<p>Si tu teléfono aparece en la lista de aparatos compatibles, puedes empezar el proceso de configuración ejecutando <code>config.sh</code> otra vez, pero ahora incluyendo el nombre del aparato. Por ejemplo, para construir para el Samsung Google Nexus S, escribirías:</p>
+
+<pre>./config.sh nexus-s
+</pre>
+
+<p>Al principio de la configuración es posible que tengas que configurar la opción de uso del color, tras lo cual el proceso continúa. Éste es un buen momento para tomarse un descanso, ya que es ahora cuando te estás descargando por primera vez todo el código necesario para construir B2G.</p>
+
+<p>Si tu teléfono ya no tiene Android y tu estructura de B2G no tiene los bloques binarios, pero has hecho una copia de seguridad de la partición <code>/system</code> tal y como te recomendó el artículo <a href="https://developer.mozilla.org/es/docs/Mozilla/Boot_to_Gecko/Firefox_OS_build_prerequisites" title="https://developer.mozilla.org/es/docs/Mozilla/Boot_to_Gecko/Firefox_OS_build_prerequisites">Prerrequisitos para construir Firefox OS</a>, puedes utilizar dicha copia de seguridad haciendo:</p>
+
+<pre>ANDROIDFS_DIR=&lt;absolute path to parent dir of system dir&gt; ./config.sh &lt;target&gt;
+</pre>
+
+<h3 id="Configuración_para_construir_un_emulador">Configuración para construir un emulador</h3>
+
+<p>Si quieres construir uno de los emuladores, especifica "emulator" para construir la versión ARM, o "emulator-x86" para construir la versión x86. La versión x86 es más rápida, pero su simulación de dispositivos móviles es menos fiel a la realidad.</p>
+
+<p>Por ejemplo, para construir el emulador ARM, escribirías lo siguiente:</p>
+
+<pre>./config.sh emulator
+</pre>
+
+<p>Al principio de la configuración es posible que tengas que configurar la opción de uso del color, tras lo cual el proceso continúa. Éste es un buen momento para tomarse un descanso, ya que es ahora cuando te estás descargando por primera vez todo el código necesario para construir B2G.</p>
+
+<div class="note">
+<p><strong>Atención:</strong> ./config.sh puede llevar más tiempo y consumir más recursos de red de lo que esperabas. Puedes parar el proceso haciendo Ctrl-C y reiniciarlo más tarde. Si sospechas que parte del proceso fue interrumpido antes de terminar, ejecuta './repo sync' para reparar cualquier posible error.</p>
+</div>
+
+<h2 id="Cómo_construir_una_versión_específica_de_Gecko">Cómo construir una versión específica de Gecko</h2>
+
+<p>Algunas veces querrás o necesitarás construir B2G basado en una versión de Gecko distinta de la que se usa por defecto (la que se especifica en el manifiesto). Puedes hacerlo editando el archivo<code>.userconfig</code> antes de hacer "pull" en el repositorio (es decir, antes de ejecutar <code>config.sh</code>). Por ejemplo, si quieres construir basándote en mozilla-central:</p>
+
+<pre>GECKO_PATH=/path/to/mozilla-central
+GECKO_OBJDIR=/path/to/mozilla-central/objdir-gonk
+</pre>
+
+<div class="note">
+<p><strong>Atención:</strong> si construyes para otra versión de Gecko en Mac OS X, el directorio mozilla-central tiene que estar en un sistema de archivos sensible a las mayúsculas.</p>
+</div>
+
+<p>Lee <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file" title="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file">Personalización del archivo .userconfig</a> para más información sobre adaptaciones que puedes hacer.</p>
+
+<p>Próximo paso: <a href="/en/Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko">empieza a construir</a>.</p>

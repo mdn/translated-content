@@ -1,0 +1,281 @@
+---
+title: Un vistazo de XPCOM
+slug: Creación_de_Componentes_XPCOM/Un_vistazo_de_XPCOM
+tags:
+  - Todas_las_Categorías
+  - XPCOM
+translation_of: Mozilla/Tech/XPCOM/Guide/Creating_components/An_Overview_of_XPCOM
+---
+<p>Este es un libro acerca de XPCOM. Esta escrito en forma de un tutorial acerca de la creación de componentes XPCOM, pero cubre la mayoría de los aspectos, conceptos y terminología del modelo de componentes XPCOM en el camino.</p>
+<p>Este capítulo empieza con un tour rápido de XPCOM - una introducción a los conceptos básicos y tecnologías en XPCOM y el desarrollo de componentes. Las secciones principales en este capítulo introducen los conceptos a un nivel muy superficial, así que podremos discutirlos y usarlos con más familiaridad en el tutorial que describe la creación del componente Mozilla llamado <strong>Weblock</strong>.</p>
+<h3 id="La_Solución_XPCOM">La Solución XPCOM</h3>
+<p>El Modelo Componente Objeto Multiplataforma (XPCOM) es una plataforma que permite a los desarrolladores romper proyectos de software monolíticos en piezas modulares más pequeñas. Estas piezas, conocidas como <em>componentes</em> son ensamblados juntos nuevamente en tiempo de ejecución.</p>
+<p>El objetivo de XPCOM es permitir a diferentes piezas de software ser desarrolladas y construidas independientes unas de otras. Para permitir interoperabilidad entre componentes dentro de una aplicación, XPCOM separa la <em>implementación</em> de un componente de la <em>interfaz</em>, lo cual discutimos en <a href="#Interfases">Interfases</a>. Pero XPCOM también provee muchas herramientas y bibliotecas que habilitan la carga y manipulación de estos componentes, servicios que ayudan al desarrollador a escribir código modular multiplataforma, y soporte para versiones, así que los componentes pueden ser reemplazados o actualizados sin tener que romper o volver a crear la aplicación. Usando XPCOM, los desarrolladores crean componentes que pueden ser reutilizados en diferentes aplicaciones o pueden ser reemplazados para cambiar la funcionalidad de aplicaciones existentes.</p>
+<p>XPCOM no solamente soporta el desarrollo de componetes de software, también provee gran parte de la funcionalidad de una plataforma de desarrollo, como:</p>
+<ul> <li>gestión de componentes</li> <li>abstracción de archivos</li> <li>paso de mensajes objeto</li> <li>manejo de memoria</li>
+</ul>
+<p>Discutiremos los puntos de arriba a detalle en los siguientes capítulos, pero por ahora, puede ser útil pensar en XPCOM como una <em>plataforma para desarrollo de componentes</em>, en la que la que se incluyen características como las listadas arriba.</p>
+<h3 id="Gecko">Gecko</h3>
+<p>Aunque en algunos aspectos es similar a Microsoft COM, XPCOM está diseñado para ser usado primordialmente a nivel de aplicación. El uso más importante de XPCOM es dentro de <em>Gecko</em>, un buscador web embebido de código abierto, que cumple con estándares y un conjunto de herramientas para crear buscadores web y otras aplicaciones.</p>
+<p>XPCOM se encarga de accesar la funcionalidad de las bibliotecas de <em>Gecko</em> y embeber o extender Gecko. Este libro se enfoca en lo último - extender Gecko - pero las ideas fundamentales en el libro también serán importantes para los desarrolladores que embeban Gecko.</p>
+<p>Gecko es usado en muchas aplicaciones de internet, la mayoría buscadores. La lista incluye dispositivos como el Gateway/AOL, el Instant AOL y la Nokia Media Terminal. Gecko también se usa en el último cliente Compuserve, AOL para Mac OS X, Netscape 7 y por supuesto el cliente de Mozilla. En este momento, Gecko es el web browser de código abierto predominante.</p>
+<h3 id="Componentes">Componentes</h3>
+<p>XPCOM te permite construir un sistema en el que grandes proyectos de software pueden ser fragmentados en piezas más pequeñas. Estas piezas, conocidas como componentes, son normalmente diseñadas en pequeñas y reutilizables bibliotecas binarias(una <abbr title="Dynamic Link Library">DLL</abbr> en Windows, por ejemplo, o una <abbr title="Distributed Shared Object">DSO</abbr> en Unix), que pueden incluir uno o más componentes. Cuando hay dos o más componentes relacionados juntos en una biblioteca binaria, llamamos a la biblioteca <em>módulo</em>.</p>
+<p>Fragmentar el software en distintos componentes puede ayudar a hacerlo menos difícil de desarrollar y mantener. Más allá de esto, la programación modular basada en componentes tiene ciertas ventajas bien conocidas:</p>
+<table class="standard-table"> <tbody> <tr> <td class="header">Beneficio</td> <td class="header">Descripción</td> </tr> <tr> <td>Reutlizable</td> <td>El código modular puede ser reutilizado en otras aplicaciones y en otros contextos.</td> </tr> <tr> <td>Actualizaciones</td> <td>Puedes actualizar componentes sin tener que recompilar toda la aplicación.</td> </tr> <tr> <td>Rendimiento</td> <td>Cuando el código es modular, los módulos que no serán usados en seguida pueden ser "cargados durmiendo", o no ser cargados del todo, lo que puede mejorar el rendimiento de tu aplicación.</td> </tr> <tr> <td>Mantenimiento</td> <td>Aún cuando no estés actualizando un componente, diseñar tu aplicación de forma modular puede hacerte más fácil encontrar e mantener las partes de la aplicación en que estás interesado.</td> </tr> </tbody>
+</table>
+<p>Mozilla tiene más de cuatro millones de líneas de código, y ningún individuo por sí solo entiende el código fuente entero. La mejor forma de afrontar un proyecto de este tamaño es dividirlo en piezas más pequeñas y manejables, usar un modelo de programación basado en componentes y organizar ciertos grupos de componentes en módulos. La biblioteca de red, por ejemplo, consiste en componentes para cada uno de los protocolos, HTTP, FTP y otros, los cuales son armados juntos y enlazados en una sola biblioteca. Esta biblioteca es el módulo de trabajo en red, conocida también como "necko".</p>
+<p>El componente <abbr title="Hypertext Transfer Protocol">HTTP</abbr> en Gecko no expone las clases privadas que usa como componentes separados. El "stuff"</p>
+<p>The <abbr title="Hypertext Transfer Protocol">HTTP</abbr> component in Gecko doesn't expose private classes it uses as separate components. The "stuff" that's internal to the component stays internal, and isn't exposed to XPCOM. In the haste of early Mozilla development, components were created where they were inappropriate, but there's been an ongoing effort to remove XPCOM from places like this.</p>
+<p>Pero no siempre es buena idea dividir las cosas. Hay algunas cosas en el mundo que sólo trabajan si están juntas y otras que deberían estar separadas. Por ejemplo, el hijo de un autor no se comerá un sandwich de crema de cacahuate si no tiene jamón, porque en este mundo, la crema de cachuate y el jamón forman una unión inseparable (guácala, en México como en muchos lugares no opinamos lo mismo creo que fue un mal ejemplo, pero en fin esto es parte de la traducción y espero se entienda la idea). Con el software es similar. En áreas de código que están estrechamente acopladas en clases que son usadas sólo internamente, por ejemplo, el duro trabajo de dividir las cosas tal vez no sea un esfuerzo vano.</p>
+<p>El componente <abbr title="Hypertext Transfer Protocol">HTTP</abbr> en Gecko no expone las clases privadas que usa como componentes separados. El "material" que es interno del componente permanece interno y no es visible para XPCOM. Por la prisa al inicio del desarrollo de Mozilla, fueron creados componentes donde era inadecuado, pero se ha estado haciendo un grán esfuerzo para quitar XPCOM de estos lugares.</p>
+<h3 id="Interfaces">Interfaces</h3>
+<p>Generalmente es buena idea dividir el software en componentes, pero ¿Cómo hacer esto exactamente? La idea básica es identificar piezas de funcionalidad que esten relacionadas entre sí y entender cómo se comunican entre ellas. Cuando son definidos los canales de comunicación entre los distintos delimitadores de forma que se encuentran entre componentes y dichos delimitadores son formalizados se llaman <em>interfaces</em>.</p>
+<p>Las interfaces no son una idea nueva en programación. Todos hemos usado interfaces desde nuestro primer programa "Hola Mundo", donde la interface estaba entre el código que escribimos-el código de la aplicación-y el código de impresión. El código de aplicación usó una interfaz de una biblioteca, <code>stdio</code> para pintar la cadena "Hola Mundo" en la pantalla. La diferencia aquí es que una aplicación "Hola Mundo" en XPCOM encuentra esta pantalla pintando funcionalidad en tiempo de ejecución y nunca tiene que saber acerca de <code>stdio</code> cuando es compilado.</p>
+<p>Las interfaces permiten a los desarrolladores <em>encapsular</em> la implementación y la lógica interna de su programa y permitir a los clientes ignorar cómo se hacen las cosas y sólo usar el software.</p>
+<div class="side-note">
+<p><span id="Interfaces_y_programaci%C3%B3n_por_contrato"><a id="Interfaces_y_programaci%C3%B3n_por_contrato"></a><strong>Interfaces y programación por contrato</strong></span></p>
+<p>Una interfaz forma un acuerdo contractual entre componentes y clientes. No hay código que obligue estos acuerdos, pero ignorarlos puede ser fatal. En la programación basada en componentes, un componente garantiza que las interfaces que provee serán <em>inmutables</em>, es decir, proveerán el mismo acceso a los mismos métodos en diferentes versiones del componente, estableciendo un contrato con los clientes que usan el software. A este respecto, la programación basada en interfaces también es llamada <em>programación por contrato</em>.</p>
+</div>
+<h4 id="Interfaces_y_Encapsulación">Interfaces y Encapsulación</h4>
+<p>Entre delimitadores de componentes, la abstracción es crucial para el mantenimiento y la reutilización del software. Considera, por ejemplo, una clase que <em>no está</em> bien encapsulada; usar un método público de inicialización disponible libremente, como sugiere el ejemplo de abajo puede causar problemas.</p>
+<p><span id="Inicializacion_de_AlgunaClase"><a id="Inicializacion_de_AlgunaClase"></a><strong>Inicializacion de AlgunaClase</strong></span></p>
+<pre>class AlgunaClase
+{
+  public:
+    // Constructor
+    AlgunaClase();
+
+    // Virtual Destructor
+    virtual ~AlgunaClase();
+
+    // init method
+    void Init();
+
+    void HazAlgoUtil();
+};
+</pre>
+<p>Para que este sistema funcione correctamente, el programador del cliente debe prestar mucha atención a todas las reglas que el programador del componente estableció. Este es el acuerdo contractual de esta clase clase no encapsulada: un conjunto de reglas que definen cuando cada método puede ser llamado y cuando se espera que se haga. Una regla puede especificar que <code>HazAlgoUtil</code> puede ser llamado sólo después de una llamada a <code>Init()</code>. El método <code>HazAlgoUtil</code> puede hacer algún tipo de validación para asegurar que la condición de que <code>Init()</code> ha sido llamado, ha sido cumplida.</p>
+<p>Además de escribir código bien comentado que le diga al desarrollador del cliente las reglas acerca de <code>Init()</code>, el desarrollador puede seguir un par de pasos para hacer este contrato más claro. Primero, la construcción de un objeto puede ser encapsulada y proveer una <em>clase virtual</em> que defina el método <code>HazAlgoUtil</code>. De esta forma, construcción e inicialización pueden ser completamente ocultos de los clientes de la clase. En esta situación "semiencapsulada", la única parte de la clase que se ve esuna bien definida lista de métodos llamables (la interfaz). Una vez que la clase es encapsulada, la única interfaz que verá el cliente es esta:</p>
+<p><span id="Encapsulaci%C3%B3n_de_AlgunaInterfaz"><a id="Encapsulaci%C3%B3n_de_AlgunaInterfaz"></a><strong>Encapsulación de AlgunaInterfaz</strong></span></p>
+<pre>class AlgunaInterfaz
+{
+  public:
+    virtual void HazAlgoUtil() = 0;
+};
+</pre>
+<p>La implementación puede entonces derivar de esta clase e implementar el método virtual. Los clientes de este código pueden usar después un patrón de diseño factoría para crear el objeto (ve <a href="#Factorías">Factorías</a>) y después encapsular la implementación. En XPCOM, los clientes se escudan de la lógica interna de los componentes de esta forma y confiar en la interfaz para proveer acceso a la funcionalidad requerida.</p>
+<h4 id="La_Interfaz_Base_nsISupports">La Interfaz Base <code>nsISupports</code></h4>
+<p>Dos aspectos fundamentales en la programación basada en componentes e interfaces son: la <em>Vida del componente</em>, también llamada <em>posesión del objeto</em> y las <em>llamadas de interfaz</em>, o poder identificar que interfaces soporta un componente al momento de ejecución. Esta sección introduce la interfaz base, que es la madre de todas las interfaces en XPCOM, <code>nsISupports</code>, la cual proporciona soluciones a estos dos aspectos para los desarrolladores de XPCOM.</p>
+<h5 id="Posesión_de_Objetos">Posesión de Objetos</h5>
+<p>Como los componentes en XPCOM pueden implementar cualquier número de interfaces, dichas interfaces deben ser "contadas por referencia". Los componentes deben tener control de cuántas referencias a él tienen activas los clientes y borrarse ellos mismos cuando ese número llega a cero.</p>
+<p>Cuando un componente se crea, un entero dentro del componente almacena esta <em>cuenta de referencias</em>. La cuenta de referencias se incrementa automáticamente cuando el cliente hace una instancia del componente; durante el transcurso de vida del componente. En algún punto, todos los clientes pierden interés en el componente, en ese momento la cuenta llega a cero y el componente se borra a sí mismo.</p>
+<p>Cuando los clientes usan interfaces responsablemente, esto puede ser un proceso muy serio. XPCOM tiene herramientas para hacer esto más sencillo, como describiremos después. Podemos tener serios problemas cuando por ejemplo, un cliente usa una interfaz y olvida decrementar la cuenta de referencia. Cuando esto pasa, las interfaces tal vez nunca puedan ser liberadas y se desbordará la memoria. El sistema de cuenta de referencias es, como muchas otras cosas en XPCOM, un contrato entre clientes e implementaciones. Trabaja cuando la gente se pone de acuerdo con él, pero si no, las cosas pueden ir mal. Es responsabilidad de la funcion que crea el puntero a la interfaz añadir la referencia inicial o <em>posesión de referencia</em> a la cuenta.</p>
+<div class="side-note">
+<p><span id="Punteros_en_XPCOM"><a id="Punteros_en_XPCOM"></a><strong>Punteros en XPCOM</strong></span></p>
+<p>En XPCOM, "punteros" se refiere a los punteros de interfaz. La diferencia es muy sutil ya que los punteros de interfaz y los punteros comunes son sólo direcciones en memoria. Pero un puntero de interfaz debe poder implementar la interfaz base nsISupports, que también puede ser usada para llamar métodos como <code>AddRef</code>, <code>Release</code>, o <code>QueryInterface</code>.</p>
+</div>
+<p><code>nsISupports</code>, mostrado abajo, proporciona la funcionalidad básica para lidiar con el descubrimiento de la interfaz y la cuenta de referencias. Los miembros de esta interfaz, <code>QueryInterface</code>, <code>AddRef</code>, and <code>Release</code>, proporcionan los medios básicos para conseguir el interfaz correcto de un objeto, incrementando la cuenta de referencias y liberando objetos una vez que dejan de ser usados respectivamente. La interfaz <code>nsISupports</code> se muestra a continuación:</p>
+<p><span id="La_Interfaz_%3Ccode%3EnsISupports%3C/code%3E"><a id="La_Interfaz_%3Ccode%3EnsISupports%3C/code%3E"></a><strong>La Interfaz <code>nsISupports</code></strong></span></p>
+<pre>class Sample: public nsISupports
+{
+  private:
+    nsrefcnt mRefCnt;
+  public:
+    Sample();
+    virtual ~Sample();
+
+    NS_IMETHOD QueryInterface(const nsIID &amp;aIID, void **aResult);
+    NS_IMETHOD_(nsrefcnt) AddRef(void);
+    NS_IMETHOD_(nsrefcnt) Release(void);
+};
+</pre>
+<p>Los distintos tipos usados en la interfaz son descritos en la sección <a href="#Tipos_XPCOM">Tipos XPCOM</a> más adelante. Una implementación completa de la interfaz <code>nsISupports</code> se muestra abajo. Vea <a class="external" href="http://www.mozilla.org/projects/xpcom/QI.html">A Reference Implementation of QueryInterface</a> para información más detallada.</p>
+<p><span id="Implementaci%C3%B3n_de_la_interfaz_%3Ccode%3EnsISupports%3C/code%3E"><a id="Implementaci%C3%B3n_de_la_interfaz_%3Ccode%3EnsISupports%3C/code%3E"></a><strong>Implementación de la interfaz <code>nsISupports</code></strong></span></p>
+<pre>// inicializa la cuenta de referencias a 0
+Sample::Sample() : mRefCnt(0)
+{
+}
+Sample::~Sample()
+{
+}
+
+// típica implementación genérica de QI
+NS_IMETHODIMP Sample::QueryInterface(const nsIID &amp;aIID,
+                                  void **aResult)
+{
+  if (!aResult) {
+    return NS_ERROR_NULL_POINTER;
+  }
+  *aResult = NULL;
+  if (aIID.Equals(kISupportsIID)) {
+    *aResult = (void *) this;
+  }
+  if (!*aResult) {
+    return NS_ERROR_NO_INTERFACE;
+  }
+  // añade una referencia
+  AddRef();
+  return NS_OK;
+}
+
+NS_IMETHODIMP_(nsrefcnt) Sample::AddRef()
+{
+  return ++mRefCnt;
+}
+
+NS_IMETHODIMP_(nsrefcnt) Sample::Release()
+{
+  if (--mRefCnt == 0) {
+    delete this;
+    return 0;
+  }
+  // opcional: regresa la cuenta de referencias
+  return mRefCnt;
+}
+</pre>
+<h5 id="Descubrimiento_de_Objetos_de_Interfaz">Descubrimiento de Objetos de Interfaz</h5>
+<p><em>Herencia</em> es otro tópico muy importante en la programación orientada a objetos. Herencia es el medio por el que una clase es derivada de otra. Cuando una clase hereda de otra clase, le clase hija puede <em>sobreescribir</em> los comportamientos originales de la clase base sin tener que copiar todo el código de esa clase, en efecto creando una clase más específica, como en el ejemplo siguiente:</p>
+<p><br>
+<span id="Herencia_de_la_Clase_Simple"><a id="Herencia_de_la_Clase_Simple"></a><strong>Herencia de la Clase Simple</strong></span></p>
+<pre>class Figura
+{
+  private:
+    int m_x;
+    int m_y;
+
+  public:
+    virtual void Pintar() = 0;
+    Shape();
+    virtual ~Shape();
+};
+
+class Circulo : public Figura
+{
+  private:
+    int m_radio;
+  public:
+    virtual Pintar();
+    Circulo(int x, int y, int radio);
+    virtual ~Circulo();
+};
+</pre>
+<p><code>Circulo</code> es una clase derivada de <code>Figura</code>. En otras palabras un <code>Circulo</code> es una <code>Figura</code>, pero una <code>Figura</code> no es necesariamente un <code>Circulo</code>. En este caso, <code>Figura</code> es la <em>clase base</em> y <code>Circulo</code> es una <em>subclase</em> de <code>Figura</code>.</p>
+<p>En XPCOM, todas las clases derivan de la interfaz <code>nsISupports</code>, así que todos los objetos son <code>nsISupports</code> pero también son otras clases más específicas que necesitas para poder encontrarlas en tiempo de ejecución. En <a href="#Herencia_de_la_Clase_Simple">Herencia de la Clase Simple</a>, por ejemplo, ¿te gustaría poder preguntarle a la <code>Figura</code> si es un <code>Circulo</code> y poder usarlo como circulo si lo es? En XPCOM, esto es para lo que está la caracteríztica <code>QueryInterface</code> de la interfaz <code>nsISupports</code>: permite a los clientes encontrar y accesar diferentes interfaces de acuerdo a sus necesidades.</p>
+<p>En C++, puedes usar un aspecto verdaderamente avanzado conocido como <code>refernecia_dinámica&lt;&gt;</code>, que da una excepción si el objeto <code>Figura</code> no puede hacer referencia a <code>Circulo</code>. Pero habilitar las excepciones y <abbr title="Runtime Type Information">RTTI</abbr> puede no ser una opción por la mejora del rendimiento y la compatibilidad en varias plataformas, así que XPCOM hace las cosas diferente.</p>
+<div class="side-note">
+<p><span id="Excepciones_en_XPCOM"><a id="Excepciones_en_XPCOM"></a><strong>Excepciones en XPCOM</strong></span></p>
+<p>Las excepciones de C++ no son soportadas directamente en XPCOM. Todas las excepciones deben ser gestionadas dentro de un componente dado, antes de cruzar los límites de las interfaces. En XPCOM, todos métodos de interfaz deben regresar un valor de error <code>nsresult</code> (Vea la <a href="/es/Referencia_del_API_de_XPCOM" title="es/Referencia_del_API_de_XPCOM">Referencia del API de XPCOM</a> para ver la lista de códigos de error). Esos resultados de códigos de error se vuelven "excepciones" que gestiona XPCOM.</p>
+</div>
+<p>En vez de utilizar el RTTI de C++, XPCOM usa el método especial <code>QueryInterface</code> que referencía el objeto a la interfaz correcta si esa interfaz es soportada.</p>
+<p>A cada interfaz se le asigna un identificador que se genera de una herramienta comunmente llamada "uuidgen". Este identificador universal único es un número único de 128 bits. Usado en el contexto de una interfaz (similar a un componente, donde el contract ID(ID de contrato) hace esta función), a este número se le conoce como <em>IID</em>.</p>
+<p>Cuando un cliente quiere saber si un objeto soporta una interfaz dada, el cliente pasa el IID asignado a esa interfaz al método <code>QueryInterface</code> de ese objeto. Si el objeto soporta la interfaz requerida, añade una referencia a sí mismo y regresa un puntero a esa interfaz. Si el objeto no soporta la interfaz, regresa un error.</p>
+<pre>class nsISupports {
+  public:
+    long QueryInterface(const nsIID &amp; uuid,
+                        void **result) = 0;
+    long AddRef(void) = 0;
+    long Release(void) = 0;
+};
+</pre>
+<p>El primer parámetro de <code>QueryInterface</code> es una referencia a la clase llamada <code>nsIID</code>, que es una encapsulación básica del IID. De los tres métodos en la clase <code>nsIID</code>, <code>Equals</code>, <code>Parse</code>, and <code>ToString</code>, <code>Equals</code> es por mucho el más importante, porque se usa para comparar dos <code>nsIID</code>s en el proceso de requerimiento de esta interfaz.</p>
+<p>Cuando implementas la clase <code><a href="/es/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports" title="">nsISupports</a></code> (y verás en el capítulo <a href="/es/Creaci%C3%B3n_de_Componentes_XPCOM/Uso_de_Utilidades_XPCOM_para_hacer_las_cosas_m%C3%A1s_f%C3%A1ciles" title="es/Creación_de_Componentes_XPCOM/Uso_de_Utilidades_XPCOM_para_hacer_las_cosas_más_fáciles">Uso de Utilidades XPCOM para hacer las cosas más fáciles</a> como las macros pueden hacer este proceso mucho más sencillo), debes asegurarte que los métodos de la clase regresan un resultado válido cuando el cliente llama <code>QueryInterface</code> con el IID de <code>nsISupports</code>. <code>QueryInterface</code> debe soportar todas las interfaces que el componente soporta.</p>
+<p>En las implementaciones de <code>QueryInterface</code>, el parámetro IID es comparado con el <code>nsIID</code> de la clase. Si coinciden, el puntero <code>this</code> del objeto es referenciado a <code>void</code>, la cuenta de referencias se incrementa y la interfaz es devuelta al llamador. Si no coinciden, la clase regeresa un error y pone el valor de salida a <code>null</code>.</p>
+<p>En el ejemplo de arriba, es muy fácil usar referencias al estilo de C. Pero referenciar puede volverse más complicado donde debes primero referenciar a <code>void</code> y luego al tipo requerido porque debes regresar el puntero a la interfaz en el <abbr title="virtual table">vtable</abbr> correspondiente a la interfaz requerida. Referenciar puede volverse un problema cuando hay un orden ambiguo de herencia.</p>
+<h3 id="Identificadores_XPCOM">Identificadores XPCOM</h3>
+<p>Además del identificador de interfaz IID discutido en la sección anterior, XPCOM usa otros dos identificadores muy importantes para distinguir las clases y los componentes.</p>
+<div class="side-note">
+<p><span id="Clases_Identificadoras_de_XPCOM"><a id="Clases_Identificadoras_de_XPCOM"></a><strong>Clases Identificadoras de XPCOM</strong></span></p>
+<p>La clase <code>nsIID</code> es es un tupo definido para la clase <code>nsID</code>. Los otros tipos definidos de <code>nsID</code>, CID e IID, se refieren a implementaciones específicas de una clase en concreto y a una iterfaz específica, respectivamente.</p>
+<p>La clase <code>nsID</code> proporciona métodos como <code>Equals</code> para comparar identificadores en el código. Ve <a href="/es/Creaci%C3%B3n_de_Componentes_XPCOM/Creaci%C3%B3n_del_C%C3%B3digo_del_Componente#Identificadores_en_XPCOM" title="es/Creación_de_Componentes_XPCOM/Creación_del_Código_del_Componente#Identificadores_en_XPCOM">Identificadores en XPCOM</a> para mayor información de la clase <code>nsID</code>.</p>
+</div>
+<h4 id="CID">CID</h4>
+<p>Un CID es un número de 128 bits que identifica como únicos a una clase o un componente de manera muy parecida a la forma en que un IID identifica una interfaz. El CID para <code>nsISupports</code> se ve como este:</p>
+<p><code>00000000-0000-0000-c000-000000000046</code></p>
+<p>El largo de un CID puede hacer incómodo manejarlo en el código, así que muy a menudo verás #defines para los CIDs y otros identificadores usados, como en el siguiente ejemplo:</p>
+<pre>#define CID_EJEMPLO \
+{ 0x777f7150, 0x4a2b, 0x4301, \
+{ 0xad, 0x10, 0x5e, 0xab, 0x25, 0xb3, 0x22, 0xaa}}
+</pre>
+<p>También verás que <code>NS_DEFINE_CID</code> es muy usado. Esta simple macro declara una constante con el valor del CID:</p>
+<pre>static NS_DEFINE_CID(kWebShellCID, NS_WEB_SHELL_CID);
+</pre>
+<p>Un CID es algunas veces llamado <em>identificador de clase</em>. Si la clase a la que se refiere un CID implementa más de una interfaz, ese CID garantiza que la clase implementa todo ese conjunto de interfaces cuando se publica como congelado.</p>
+<h4 id="Contract_ID">Contract ID</h4>
+<p>Un contract ID es una cadena leible humanamente usada para accesar un componente. Un CID o un contract ID puede ser usado para obtener un componente desde el gestor de componentes. Este es el contract ID para el componente de Operación LDAP:</p>
+<pre>"@mozilla.org/network/ldap-operation;1"
+</pre>
+<p>El formato del contract ID es el <em>dominio</em> del componente, el <em>módulo</em>, el <em>nombre del componente</em> y el <em>número de versión</em> separados por diagonales.</p>
+<p>Como un CID, el contract ID se refiere a una implementación más que a una interfaz, como lo hace un IID. Pero un contract ID no está relacionado a ninguna implementación en específico, como el CID, por lo cual es más general. Más bien, un contract ID especifica un conjunto de interfaces dadas que requiere implementadas y cualquier número de CIDs diferentes pueden estar presentes y llenar ese requerimiento. Esta diferencia entre un contract ID y un CID es lo que hace posible sobreescribir componentes.</p>
+<h3 id="Factorías">Factorías</h3>
+<p>Una vez que el código es dividido en componentes, el código cliente típicamente usa el operador <code>new</code> para instanciar los objetos a usar:</p>
+<pre>SomeClass* component = new SomeClass();
+</pre>
+<p>Este patrón requiere que el cliente sepa algo acerca del componente, al menos qué tan grande es. El <em>patrón de diseño factoría</em> puede usarse para encapsular la construcción de objetos. El objetivo principal de una factoría es crear un objeto sin mostrar a los clientes la implementación e inicialización de este objeto. En el ejemplo <code>SomeClass</code> la construcción e inicialización de <code>SomeClass</code> que implementa la clase abstracta <code>SomeInterface</code>, es contenida dentro de la función <code>New_SomeInterface</code> que sigue el patrón de diseño factoría:</p>
+<p><span id="Encapsulaci%C3%B3n_del_Constructor"><a id="Encapsulaci%C3%B3n_del_Constructor"></a><strong>Encapsulación del Constructor</strong></span></p>
+<pre>int New_SomeInterface(SomeInterface** ret)
+{
+  // crea el objeto
+  SomeClass* out = new SomeClass();
+  if (!out) return -1;
+
+  // inicializa el objeto
+  if (out-&gt;Init() == FALSE)
+  {
+    delete out;
+    return -1;
+  }
+
+  // referencia de la interfaz
+  *ret = static_cast&lt;SomeInterface*&gt;(out);
+  return 0;
+}
+</pre>
+<p>La factoría es la clase que gestiona la creación de instancias separadas de un componente para su uso. En XPCOM, las factorías son implementaciones de la interfaz <code>nsIFactory</code> y usan un patrón de diseño factoría como el ejemplo de arriba para abstraer y encapsular la construcción e inicialización del objeto.</p>
+<p>El ejemplo en <a href="#Encapsulación_del_Constructor">Encapsulación del Constructor</a> es una versión simple sin estado de las factorías, pero programarlo en el mundo real usualmente no es tan simple y en general las factorías necesitan guardar un estado. La factoría necesita, por lo menos preservar información de qué objetos ha creado. Cuando una factoría gestiona instancias de una clase contenida en un biblioteca dinámica compartida, por ejemplo, necesita saber cuando puede descargar la biblioteca. Cuando la factoría preserva un estado, puedes preguntarle si hay referencias esperando y saber si la factoría creó objetos.</p>
+<p>Otro estado que puede guardar una factoría es si un objeto es o no <em>singleton</em>. Por ejemplo, si una factoría crea un objeto que se supone debe ser singleton, entonces las llamadas subsecuentes a la factoría por el objeto deben regresar el mismo objeto. Aunque que hay herramientas y mejores formas de gestionar un singleton (lo que discutiremos cuando hablemos del <code>nsIServiceManager</code>), un desarrollador tal vez quiera usar esta información para asegurarse de que sólo puede existir un objeto singleton sin importar lo que hagan los clientes.</p>
+<p>Los requerimientos de una clase factoría pueden gestionarse de una manera estrictamente funcional con el estado guardado en variables globales, pero hay beneficios de usar clases para las factorías. Cuando usas una clase para implementar la funcionalidad de una factoría, por ejemplo, derivas de la interfaz <code>nsISupports</code>, que te permite manejar el tiempo de vida de los objetos de la factoría por sí mismos. Esto es importante cuando quieres agrupar conjuntos de factorías y determinar si pueden ser descargados. Otro beneficio de usar la interfaz <code>nsISupports</code> es que puedes soportar otras interfaces al momento en que sean introducidas. Como mostraremos al discutir <code>nsIClassInfo</code>, algunas factorías permiten pedir información acerca de la implementación que tienen debajo, como el lenguaje en el está escrito el objeto, las interfaces que soporta, etc. Este tipo de "comprobación futura" es una ventaja clave que se obtiene al derivar de <code>nsISupports</code>.</p>
+<h4 id="XPIDL_y_Bibliotecas_de_Tipos">XPIDL y Bibliotecas de Tipos</h4>
+<p>Una manera fácil y potente de definir una interfaz es - en efecto, un requerimiento para definir interfaces en un ambiente multiplataforma, independiente del lenguaje- es usar un <em>lenguaje de definición de interfaces</em> (IDL). XPCOM usa su propia variante del Lenguaje de Definición de Interfaces (IDL) de CORBA OMG llamado XPIDL, que te permite especificar métodos, atributos y contantes de una interfaz dada y también definir herencia de interfaz.</p>
+<p>Hay algunas desventajas de definir tu interfaz usando XPIDL. No hay soporte para herencia múltiple de una sola cosa; si defines una interfaz nueva, no puede derivar de más de una interfaz; otra limitante de las intertfaces en XPIDL es que los nombres de los métodos deben ser únicos, no puedes tener dos métodos con el mismo nombre aunque tomen distintos parámetros, es decir no se permite la sobrecarga de funciones, y el trabajo que implica tener múltiples nombres de funciones no es agradable:</p>
+<pre>void AlgoConInt(in int x);
+void AlgoConString(in string x);
+void AlgoConURI(in nsIURI x);
+</pre>
+<p>De cualquier modo, estos pequeños inconvenientes palidecen en comparación con la funcionalidad ganada usando XPIDL. XPIDL te permite generar <em>bibliotecas de tipos</em>, o typelibs, que son archivos con la extensión <em>.xpt</em>. La biblioteca de tipo es una representación binaria de una interfaz o interfaces, permite el control programático y acceso de la interfaz, lo que es crucial para las interfaces que no son usadas en el mundo de C++. Cuando los componentes son accesados desde otros lenguajes,como puede hacerse en XPCOM, usan la biblioteca binaria de tipo para accesar a la interfaz, ver qué métodos soporta y llamar esos métodos. Este aspecto de XPCOM se llama <em>XPConnect</em>. XPConnect es la capa de XPCOm que permite el acceso a los componentes de XPCOM desde lenguajes como JavaScript. Ve <a href="/es/Creaci%C3%B3n_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#Conexi.C3.B3n_a_Componentes_desde_la_Interfaz" title="es/Creación_de_Componentes_XPCOM/Uso_de_Componentes_XPCOM#Conexi.C3.B3n_a_Componentes_desde_la_Interfaz">Conexión a Componentes desde la Interfaz</a> para más información de XPConnect.</p>
+<p>Cuando un componente es accesible desde un lenguaje distinto a C++, como JavaScript, se le ordena a su interfaz "reflejarse" en ese lenguaje. Cada interfaz reflejada debe tener una biblioteca de tipos correspondiente. Actualmente puedes escribir componentes en C, C++, Javascript (y algunas veces Python o Java, dependiendo del estado de las etiquetas respectivas) y hay esfuerzos tratando de construir etiquetas XPCOm para Ruby y Perl también.</p>
+<div class="side-note">
+<p><span id="Escribir_Componentes_en_Otros_Lenguajes"><a id="Escribir_Componentes_en_Otros_Lenguajes"></a><strong>Escribir Componentes en Otros Lenguajes</strong></span></p>
+<p>Tal vez no tengas acceso a algunas de las herramientas que XPCOM da para los desarrolladores en C++ (como macros, plantillas, punteros inteligentes y otros) cuando creas componentes en otros lenguajes, tal vez te tengas que conformar con el lenguaje en sí mismo prescindir de C++ y construir, por ejemplo, un componente XPCOm basado en Python que pueden ser usados desde JavaScript o vice versa.</p>
+<p>Ve <a href="/es/Creaci%C3%B3n_de_Componentes_XPCOM/Resources" title="es/Creación_de_Componentes_XPCOM/Resources">Resources</a> Para más información de Python y otros lenguajes para los que se ha añadido soporte en XPCOM.</p>
+</div>
+<p>Todas las interfaces públicas en XPCOM sin definidas usando la sintaxis XPIDL. Las Bibliotecas de tipos y los archivos de cabecera de C++ son generados a partir de estos archivos IDL y la herramienta que genera esos archivos se llama <em>compilador xpidl</em>. La sección <a href="/es/Creaci%C3%B3n_de_Componentes_XPCOM/Iniciando_WebLock#Definici.C3.B3n_de_la_Interfaz_WebLock_en_XPIDL" title="es/Creación_de_Componentes_XPCOM/Iniciando_WebLock#Definici.C3.B3n_de_la_Interfaz_WebLock_en_XPIDL">Definición de la Interfaz WebLock en XPIDL</a> describe la sintaxis XPIDL a detalle.</p>
+<h3 id="Servicios_de_XPCOM">Servicios de XPCOM</h3>
+<p>Cuando los clientes usan los componentes, normalmente <em>instancían</em> un nuevo objeto cada vez que necesitan la funcionalidad que da un componente. Este es el caso cuando, por ejemplo, los clientes lidian con archivos: cada archivo distinto es representado por un objeto diferente y muchos objetos de archivo pueden ser usados al mismo tiempo en cualquier momento.</p>
+<p>Pero también hay un tipo de objeto conocido como <em>servicio</em>, del cual siempre hay sólo una copia (aunque puede haber varios servicios corriendo al mismo tiempo). Cada vez que un cliente quiere accesar la funcionalidad de un servicio, se comunican con la misma instancia de ese servicio. Cuando un usuario busca un número telefónico en la base de datos de una compañía , por ejemplo, probablemente esa base de datos está representada por un "objeto" que es el mismo para todos los trabajadores. Si no lo fuera, la aplicación necesitaría varias copias de una gran base de datos en memoria, para una misma cosa y tal vez habría inconsistencias entre los datos grabados porque las copias serían diferentes.</p>
+<p>Dar este único punto de acceso a la funcionalidad es para lo que está el patrón de diseño singleton y es lo que los servicios hacen en una aplicación (y en un ambiente de desarrollo como XPCOM).</p>
+<p>En XPCOM, además del soporte y gestión de componentes, hay un número de servicios que ayudan al desarrollador a escribir componentes multiplataforma. Estos servicios incluyen una abstracción de archivos multiplataforma que da un acceso a archivos uniforme y potente, los servicios de directorio que mantienen la locación de la aplicación y locaciones específicas del sistema, manejo de memoria para asegurar que todos usen el mismo localizador de memoria y el sistema de notificación de eventos que permite el paso de mensajes simples. El tutorial mostrará cada uno de estos componentes y servicios en uso, y la <a href="/es/XPCOM_API_Reference" title="es/XPCOM_API_Reference">XPCOM API Reference</a> tiene una lista completa de las interfaces en éstas áreas.</p>
+<h3 id="Tipos_de_XPCOM">Tipos de XPCOM</h3>
+<p>Hay muchos tipos XPCOM declarados y macros simples que usaremos en los siguientes ejemplos, la mayoría de esos tipos son simples correlaciones. Los tipos más comunes son descritos en las siguientes secciones.</p>
+<h4 id="Tipos_de_Métodos">Tipos de Métodos</h4>
+<p>Los siguientes son un conjunto de tipos para asegurar la convención correcta de llamadas y tipos regresados de los métodos XPCOM.</p>
+<table class="standard-table"> <tbody> <tr> <td><code>NS_IMETHOD</code></td> <td>Tipo regresado en la declaración del método. Las declaraciones de métodos XPCOM deben usar este como su tipo de regreso.</td> </tr> <tr> <td><code>NS_IMETHODIMP</code></td> <td>Tipo de regreso de implementación del método. Las implementaciones de métodos XPCOM deben usar este como su tipo de regreso.</td> </tr> <tr> <td><code>NS_IMETHODIMP_(tipo)</code></td> <td>Tipo de regreso de implementaciones de casos especiales. Algunos métodos como <code>AddRef</code> y <code>Release</code> no regresan el tipo por defecto. Esta excepción es regrettable, pero requerida para cumplir la compatibilidad con COM.</td> </tr> <tr> <td><code>NS_IMPORT</code></td> <td>Forza el método a ser resuelto internamente por la biblioteca compartida.</td> </tr> <tr> <td><code>NS_EXPORT</code></td> <td>Forza el método a ser exportado por la biblioteca compartida.</td> </tr> </tbody>
+</table>
+<h4 id="Cuenta_de_Referencias">Cuenta de Referencias</h4>
+<p>Estas Macros manejan la cuenta de referencias.</p>
+<table class="standard-table"> <tbody> <tr> <td><code>NS_ADDREF</code></td> <td>Llama a <code>AddRef</code> en un objeto <code>nsISupports</code>.</td> </tr> <tr> <td><code>NS_IF_ADDREF</code></td> <td>Lo mismo que el anterior pero valida null antes de llamar a <code>AddRef</code>.</td> </tr> <tr> <td><code>NS_RELEASE</code></td> <td>Llama a <code>Release</code> en un objeto <code>nsISupports</code>.</td> </tr> <tr> <td><code>NS_IF_RELEASE</code></td> <td>Lo mismo que el anterior pero valida null antes de llamar a <code>Release</code>.</td> </tr> </tbody>
+</table>
+<h3 id="Códigos_de_Estatus">Códigos de Estatus</h3>
+<p>Estas macros prueban códigos de estatus.</p>
+<table class="standard-table"> <tbody> <tr> <td><code>NS_FAILED</code></td> <td>Regresa verdadero si el código de estatus pasado fue fallo.</td> </tr> <tr> <td><code>NS_SUCCEEDED</code></td> <td>Regresa verdadero si el código de estatus pasado fue éxito.</td> </tr> </tbody>
+</table>
+<h3 id="Correlaciones_Variables">Correlaciones Variables</h3>
+<table class="standard-table"> <tbody> <tr> <td><code>nsrefcnt</code></td> <td>Tipo de cuenta de referencias por defecto. Correlaciona un entero de 32-bits.</td> </tr> <tr> <td><code>nsresult</code></td> <td>Tipo de error por defecto. Correlaciona un entero de 32-bits.</td> </tr> <tr> <td><code>nsnull</code></td> <td>Valor nulo por defecto.</td> </tr> </tbody>
+</table>
+<h3 id="Códigos_de_Error_Comunes_de_XPCOM">Códigos de Error Comunes de XPCOM</h3>
+<table class="standard-table"> <tbody> <tr> <td><code>NS_ERROR_NOT_INITIALIZED</code></td> <td>Regresado cuando una instancia no está inicializada.</td> </tr> <tr> <td><code>NS_ERROR_ALREADY_INITIALIZED</code></td> <td>Regresado cuando una instancia ya fue inicializada.</td> </tr> <tr> <td><code>NS_ERROR_NOT_IMPLEMENTED</code></td> <td>Regresado por un método no implementado.</td> </tr> <tr> <td><code>NS_ERROR_NO_INTERFACE</code></td> <td>Regresado cuando una interfaz dada no es soportada.</td> </tr> <tr> <td><code>NS_ERROR_NULL_POINTER</code></td> <td>Regresado cuando un puntero válido es <code>nsnull</code>.</td> </tr> <tr> <td><code>NS_ERROR_FAILURE</code></td> <td>Regresado cuando un método falla. Caso de error genérico.</td> </tr> <tr> <td><code>NS_ERROR_UNEXPECTED</code></td> <td>Regresado cuando ocurre un error inesperado.</td> </tr> <tr> <td><code>NS_ERROR_OUT_OF_MEMORY</code></td> <td>Regresado cuando una localización de memoria falla.</td> </tr> <tr> <td><code>NS_ERROR_FACTORY_NOT_REGISTERED</code></td> <td>Regresado cuando una clase requerida no está registrada.</td> </tr> </tbody>
+</table>
+<p></p><div class="prevnext" style="text-align: right;">
+    <p><a href="/es/docs/Creación_de_Componentes_XPCOM:Prefacio" style="float: left;">« Anterior</a><a href="/es/docs/Creación_de_Componentes_XPCOM:Uso_de_Componentes_XPCOM">Siguiente  »</a></p>
+</div><p></p>
+<p></p>
