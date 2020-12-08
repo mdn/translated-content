@@ -1,0 +1,77 @@
+---
+title: String.prototype.quote()
+slug: Web/JavaScript/Reference/Global_Objects/String/quote
+tags:
+  - JavaScript
+  - String
+  - застарілий
+  - метод
+translation_of: Archive/Web/JavaScript/String.quote
+---
+<div>{{JSRef}} {{obsolete_header("37")}} {{non-standard_header}}</div>
+
+<p>Нестандартний метод <strong><code>quote()</code></strong> повертає копію рядка, замінюючи різноманітні спеціальні символи їхнім екрануванням та загортає результат у подвійні лапки (<code>"</code>).</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox"><code><var>str</var>.quote()</code></pre>
+
+<h3 id="Значення_що_повертається">Значення, що повертається</h3>
+
+<p>Новий рядок, що відображає початковий рядок у подвійних лапках, з екрануванням будь-яких спеціальних символів.</p>
+
+<h2 id="Приклади">Приклади</h2>
+
+<p>У наведеній нижче таблиці метод <code>quote()</code> замінює будь-які спеціальні символи та загортає рядки у подвійні лапки. Також зверніть увагу на третю колонку, де загорнутий метод {{jsxref("Global_Objects/eval", "eval()")}} знову обчислює екрановані символи.</p>
+
+<table class="fullwidth-table">
+ <thead>
+  <tr>
+   <th class="header" scope="col"><code>str</code></th>
+   <th class="header" scope="col"><code>str.quote()</code></th>
+   <th class="header" scope="col"><code>eval(str.quote())</code></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>Hello world!</code></td>
+   <td><code>"Hello world!"</code></td>
+   <td><code>Hello world!</code></td>
+  </tr>
+  <tr>
+   <td><code style="white-space: pre;">Hello<br>
+    world!</code></td>
+   <td><code>"Hello\n\tworld!"</code></td>
+   <td><code style="white-space: pre;">Hello<br>
+    world!</code></td>
+  </tr>
+  <tr>
+   <td><code>" \ — '</code></td>
+   <td><code>"\" \\ \u2014 '"</code></td>
+   <td><code>" \ — '</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Специфікації">Специфікації</h2>
+
+<p>Не є частиною жодного стандарту. Реалізований у JavaScript 1.3.</p>
+
+<h2 id="Поліфіл">Поліфіл</h2>
+
+<pre class="syntaxbox"><code>if (!String.prototype.quote)
+    String.prototype.quote = function(){
+        return JSON.stringify( this ); // починаючи з IE8
+</code>    }</pre>
+
+<h2 id="Сумісність_з_веб-переглядачами">Сумісність з веб-переглядачами</h2>
+
+<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+
+<p>{{Compat("javascript.builtins.String.quote")}}</p>
+
+<h2 id="Див._також">Див. також</h2>
+
+<ul>
+ <li>{{jsxref("JSON.stringify()")}}</li>
+</ul>

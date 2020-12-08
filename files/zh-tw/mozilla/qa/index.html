@@ -1,0 +1,251 @@
+---
+title: 'QA: Quality assurance at Mozilla'
+slug: Mozilla/QA
+tags:
+  - Landing
+  - NeedsTranslation
+  - QA
+  - Testing
+  - TopicStub
+translation_of: Mozilla/QA
+---
+<p>The Mozilla Quality Assurance (QA) team drives software quality assurance activities across Mozilla and plays a key role in releasing a diverse range of software products on schedule. Within each project in Mozilla, we work to explore new features, write and execute tests, uncover and file bugs, build and maintain tools, collect and analyze metrics, and support the release world-class products that promote the open Web.</p>
+
+<p><span class="seoSummary">Here you'll find articles and tools to help you gear up to join the QA team testing Firefox to ensure that each release is as good as it can be.</span></p>
+
+<h2 id="Get_started">Get started</h2>
+
+<ul class="card-grid">
+ <li><span>How can I help test?</span>
+
+  <p>There are lots of ways for you to become a <a href="/en-US/docs/Mozilla/QA/How_can_I_help_test_">community contributor</a> to the Mozilla quality team.</p>
+ </li>
+ <li><span>Bugs</span>
+  <p>All Mozilla projects use <a href="https://bugzilla.mozilla.org/">Bugzilla</a> to track bugs. Learn how to <a href="/en-US/docs/Mozilla/QA/Bug_writing_guidelines" title="/en-US/docs/Mozilla/QA/Bug_writing_guidelines">report a bug</a> and get familiar with <a href="/en-US/docs/What_to_do_and_what_not_to_do_in_Bugzilla">what to do in Bugzilla</a>.</p>
+ </li>
+ <li><span>Events</span>
+  <p>Get involved in our weekly <a href="/en-US/docs/Mozilla/QA/Bug_Verification_Day">Bug Verification Day</a> or <a href="/en-US/docs/Mozilla/QA/Bug_Triage_Day">Bug Triage Day</a>. You may even <a href="/en-US/docs/Mozilla/QA/Organizing_a_Testday">organize a testday</a> for your local community!</p>
+ </li>
+ <li><span>IRC</span>
+  <p><a href="/en-US/docs/Mozilla/QA/Getting_Started_with_IRC">Get started with IRC</a>, the primary form of communication for members of the Mozilla community.</p>
+ </li>
+</ul>
+
+<h2 id="Bugs">Bugs</h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<h3 id="Reporting_bugs">Reporting bugs</h3>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Bugzilla">Bugzilla</a></dt>
+ <dd>All Mozilla projects use <a href="https://bugzilla.mozilla.org/">Bugzilla</a> to track bugs. You will need to <a href="https://bugzilla.mozilla.org/createaccount.cgi">create an account with Bugzilla</a> in order to report bugs and triage them.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Bug_writing_guidelines" title="/en-US/docs/Mozilla/QA/Bug_writing_guidelines">Bug writing guidelines</a></dt>
+ <dd>The more effectively a bug is reported, the more likely that an engineer will actually fix it. By following these guidelines, you can help ensure that your bugs stay at the top of the Mozilla engineers' heap, and get fixed.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/A_Bugs_Life" title="/en-US/docs/Mozilla/QA/A_Bugs_Life">A Bug's Life</a></dt>
+ <dd>This tutorial will give an overview of what happens in the states that a bug will go through as well as how it will go from one to the next within its total life. It also explains the meaning of flags/keywords used in QA.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Filing_Crash_Bugs">Filing Crash Bugs</a></dt>
+ <dd>This document lists guidelines and tips on how to file bug reports for crashes in a way that helps in debugging and fixing the reported issue.</dd>
+</dl>
+</div>
+
+<div class="section">
+<h3 id="Triaging_bugs">Triaging bugs</h3>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Confirming_unconfirmed_bugs" title="en-US/docs/Confirming unconfirmed bugs">Confirming unconfirmed bugs</a></dt>
+ <dd>Identify useful bug reports and close the rest.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Triaging_Bugs_for_Firefox" title="/en-US/docs/Mozilla/QA/Triaging_Bugs_for_Firefox">Triaging Bugs for Firefox</a></dt>
+ <dd>Information about the entire bug triaging process – from processing incoming bugs to narrowing down the steps to reproducing bugs.</dd>
+ <dt><a href="/en-US/docs/Screening_duplicate_bugs">Screening duplicate bugs</a></dt>
+ <dd>Help get bugs fixed faster by screening incoming reports for duplicates.</dd>
+ <dt><a href="/en-US/docs/What_to_do_and_what_not_to_do_in_Bugzilla">General Guidelines</a></dt>
+ <dd>What to do and what not to do in Bugzilla.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="Manual_testing">Manual testing</h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Test_Case_Writing_Primer">Manual Test Case Writing Primer</a></dt>
+ <dd>How to write proper manual test cases</dd>
+</dl>
+</div>
+
+<div class="section">
+<dl>
+ <dt><a href="https://testrail.stage.mozaws.net/">TestRail</a></dt>
+ <dd>Mozilla QA's manual test cases reside in TestRail. You will need an LDAP account in order to login and execute test cases. Learn more on the <a href="https://wiki.mozilla.org/TestEngineering/Testrail">TestRail wiki page</a>.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="Automated_testing">Automated testing</h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Automated_testing" title="/en-US/docs/Mozilla/QA/Automated_testing">Automated testing at Mozilla</a></dt>
+ <dd>Documentation about creating and using automated tests for Mozilla code.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Running_automated_tests">Running automated tests</a></dt>
+ <dd>
+ <p>This page lists the steps required to run Mozilla's automated test suites.</p>
+ </dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Developing_tests" title="en-US/docs/Developing_Tests">Developing tests</a></dt>
+ <dd>Ensure that future changes to Mozilla don't break things that currently work correctly.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Avoiding_intermittent_oranges" title="en-US/docs/QA/Avoiding intermittent oranges">Avoiding intermittent test failures</a></dt>
+ <dd>Suggestions for ways to make your tests more reliable, thereby helping to avoid random, intermittent test failures.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Test_Verification">Test Verification</a></dt>
+ <dd>When a changeset adds a new test, or modifies an existing test, the test verification (TV) test suite performs additional testing to help find intermittent failures in the modified test as quickly as possible.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Mozharness_FAQ">Mozharness FAQ</a></dt>
+ <dd>Answers to common questions about Mozharness.</dd>
+</dl>
+</div>
+
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Robocop" title="/en-US/docs/Mozilla/QA/Robocop">Robocop</a></dt>
+ <dd>Robocop is the automated testing system used for Firefox for Android. Learn its <a href="/en-US/docs/Mozilla/QA/Robocop/Code_style_guidelines">code style guidelines</a></dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Marionette">Marionette</a></dt>
+ <dd>Get started with Marionette UI testing.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/web-platform-tests">web-platform-tests</a></dt>
+ <dd>Learn how to use the industry standard, cross-browser, cross-platform <a href="http://testthewebforward.org/docs/">Web runtime testing system</a> from the <a href="https://www.w3.org/">W3C</a> used by Mozilla and others to ensure browser interoperability.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/external-media-tests">External Media Tests</a></dt>
+ <dd>Get started testing HTML5-based video elements using VideoPuppeteer, a <a href="/en-US/docs/Mozilla/QA/Marionette">Marionette</a>- -based test suite used to test sites like YouTube and Netflix.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Chrome_tests">Chrome tests</a></dt>
+ <dd>A chrome test is basically a <a href="https://developer.mozilla.org/en-US/docs/Mochitest" title="en/Mochitest">Mochitest</a> running with chrome privileges.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="Firefox_QE">Firefox QE</h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Triaging_Bugs_for_Firefox" title="/en-US/docs/Mozilla/QA/Triaging_Bugs_for_Firefox">Triaging Bugs for Firefox</a></dt>
+ <dd>Information about the entire bug triaging process – from processing incoming bugs to narrowing down the steps to reproduce a bug.</dd>
+</dl>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Tips_and_Tricks">Tips and Tricks</a></dt>
+ <dd>These tips and tricks will make your life easier when you are testing.</dd>
+</dl>
+<a href="/en-US/docs/Downloading_Nightly_or_Trunk_Builds">Downloading Nightly or Trunk Builds</a>
+
+<dl>
+ <dd>Every 24 hours, a "nightly" build is created that testers all over the world download and test, reporting as they go along on any bugs that hit them. </dd>
+</dl>
+</div>
+
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Command_Line_Options">Command Line Options</a></dt>
+ <dd>Command line options are used to specify various startup options for Firefox.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Performance/Reporting_a_Performance_Problem">Reporting a Performance Problem</a></dt>
+ <dd>This article will guide you in reporting a performance problem using the <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler">Gecko Profiler extension</a>.</dd>
+ <dt><a href="/en-US/docs/Mozilla/Projects/Crash_reporting">Crash reporting</a></dt>
+ <dd>Firefox ships with an open-source crash reporting system.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="Firefox_for_Android">Firefox for Android</h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Mobile_Firefox">Mobile Firefox</a></dt>
+ <dd>Firefox for Android is the mobile version of Firefox with a native Android look and feel.</dd>
+ <dt><a href="/en-US/Firefox_for_Android/Compatibility_Testing">Compatibility Testing</a></dt>
+ <dd>Help us identify websites that do not work well in Firefox by reporting the specific issues that you find in your investigation.</dd>
+</dl>
+</div>
+
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Fennec_Android:_Logging_with_the_Android_Debug_and_Logcat">Logging with the Android Debug Bridge and Logcat</a></dt>
+ <dd>This article will provide a walkthrough in downloading and setting up an environment to which one can gain access to and view Android system logs.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Firefox_Mobile:_Enabling_the_Error_Console">Enabling the Error Console</a></dt>
+ <dd>See the Mozilla Hacks article on <a class="external external-icon" href="https://hacks.mozilla.org/2012/08/remote-debugging-on-firefox-for-android/">Remote Debugging on Firefox for Android</a> for web content. If you need to debug the Firefox browser itself use Android's <a class="external external-icon" href="http://developer.android.com/tools/help/logcat.html">adb logcat</a>.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="Firefox_OS">Firefox OS</h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<h3 id="Manual_testing_2">Manual testing</h3>
+
+<dl>
+ <dt><a href="/en-US/Firefox_OS/Simulator_vs_Emulator_vs_Device">Simulator vs Emulator vs Device</a></dt>
+ <dd>These are three basic options when it comes to getting a Firefox OS environment in order to work on, or developing for, Firefox OS.</dd>
+ <dt><a href="/en-US/Firefox_OS/Debugging">Debugging</a></dt>
+ <dd>Discover the different tools at your disposal to debug your Firefox OS code.</dd>
+ <dt><a href="/en-US/Firefox_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS">Reporting Bugs</a></dt>
+ <dd>This article provides a guide to filing bugs against the Firefox OS project, including Gaia and B2G.</dd>
+</dl>
+</div>
+
+<div class="section">
+<h3 id="Platform_(Gecko)">Platform (Gecko)</h3>
+
+<dl>
+ <dt><a href="/en-US/Firefox_OS/Platform/Automated_testing">Automated Testing</a></dt>
+ <dd>Learn various aspects of testing Firefox OS, including running different tests, automation, and result reporting and tracking.</dd>
+ <dt><a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_performance_tests">Gaia Performance Tests</a></dt>
+ <dd>This article provides information about running performance tests on Gaia, as well as how to create new tests.</dd>
+ <dt><a href="/en-US/Firefox_OS/Platform/Feature_support_chart">Feature Support Chart</a></dt>
+ <dd>There are several different builds of Firefox OS you can download or build for yourself, and there are some differences between the types of features available on each device.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="Web_QA">Web QA</h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Reducing_testcases" title="en-US/docs/Reducing testcases">Reducing testcases</a></dt>
+ <dd>Improve bug reports by turning broken web pages into simple testcases, which can help developers understand the bug and can also be used for creating automated tests.</dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Managing_Web_QA_XFails">Managing XFails</a></dt>
+ <dd>One of the ongoing tasks of the Web QA department is managing xfails. This document will explain what xfails are, and describe the steps one can take to investigate and update them.</dd>
+</dl>
+</div>
+
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Running_Web_QA_automated_tests">Running Automated Tests</a></dt>
+ <dd>So you’re interested in contributing to Mozilla Web QA automation projects but don’t know where to start? This doc will help you get up and running a set of tests locally.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="Glossary">Glossary</h2>
+
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Glossary/Smoke_Test">Smoke Test</a></dt>
+ <dd></dd>
+</dl>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://lists.mozilla.org/listinfo/dev-quality">Mailing list</a></li>
+ <li><a href="https://quality.mozilla.org/">Blog</a></li>
+ <li><a href="/en-US/docs/tag/QA" title="en-US/docs/tag/QA">View all documents tagged QA</a></li>
+ <li><a href="/en-US/docs/tag/QA:Tools" title="en-US/docs/tag/QA:Tools">View all documents tagged QA:Tools</a></li>
+</ul>

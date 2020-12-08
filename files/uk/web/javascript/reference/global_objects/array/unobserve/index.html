@@ -1,0 +1,89 @@
+---
+title: Array.unobserve()
+slug: Web/JavaScript/Reference/Global_Objects/Array/unobserve
+tags:
+  - Array
+  - JavaScript
+  - Масив
+  - застарілий
+  - метод
+translation_of: Archive/Web/JavaScript/Array.unobserve
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p>Метод Array<strong>.unobserve()</strong> використовувався для видалення спостерігачів, встановлених методом {{jsxref("Array.observe()")}}, але він застарів та був прибраний з переглядачів. Ви можете натомість скористатись більш загальним об'єктом {{jsxref("Proxy")}}.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">Array.unobserve(<var>arr</var>, <var>callback</var>)</pre>
+
+<h3 id="Параметри">Параметри</h3>
+
+<dl>
+ <dt><code>arr</code></dt>
+ <dd>Масив, де треба припинити спостереження.</dd>
+ <dt><code>callback</code></dt>
+ <dd>Посилання на спостерігач, який треба припинити викликати кожен раз, коли у масиві <strong>arr</strong> відбувається зміна.</dd>
+</dl>
+
+<h2 id="Опис">Опис</h2>
+
+<p>Метод <code>Array.unobserve()</code> має викликатися після {{jsxref("Array.observe()")}}, щоб прибрати спостерігач з масиву.</p>
+
+<p>Параметр callback має бути посиланням на функцію, а не анонімною функцією, бо це посилання буде використано, щоб прибрати попередній спостерігач. Немає сенсу викликати <strong>Array.unobserve()</strong> з анонімною функцією зворотного виклику, вона не прибере жоден спостерігач.</p>
+
+<h2 id="Приклади">Приклади</h2>
+
+<h3 id="Припинення_спостереження_за_масивом">Припинення спостереження за масивом</h3>
+
+<pre class="brush: js">var arr = [1, 2, 3];
+
+var observer = function(changes) {
+  console.log(changes);
+}
+
+Array.observe(arr, observer);
+​
+arr.push(4);
+// [{type: "splice", object: &lt;arr&gt;, index: 3, removed:[], addedCount: 1}]
+
+Array.unobserve(arr, observer);
+
+arr.pop();
+// Функція зворотного виклику не викликалась</pre>
+
+<h3 id="Використання_анонімної_функції">Використання анонімної функції</h3>
+
+<pre class="brush: js">var persons = ['Халід', 'Ахмед', 'Мухаммед'];
+
+Array.observe(persons, function (changes) {
+  console.log(changes);
+});
+
+persons.shift();
+// [{type: "splice", object: &lt;arr&gt;, index: 0, removed: [ "Халід" ], addedCount: 0 }]
+
+Array.unobserve(persons, function (changes) {
+  console.log(changes);
+});
+
+persons.push('Абдулла');
+// [{type: "splice", object: &lt;arr&gt;, index: 2, removed: [], addedCount: 1 }]
+// Функція зворотного виклику викликатиметься завжди
+</pre>
+
+<h2 id="Сумісність_з_веб-переглядачами">Сумісність з веб-переглядачами</h2>
+
+<div>
+
+
+<p>{{Compat("javascript.builtins.Array.unobserve")}}</p>
+</div>
+
+<h2 id="Див._також">Див. також</h2>
+
+<ul>
+ <li>{{jsxref("Array.observe()")}} {{obsolete_inline}}</li>
+ <li>{{jsxref("Object.observe()")}} {{obsolete_inline}}</li>
+ <li>{{jsxref("Object.unobserve()")}} {{obsolete_inline}}</li>
+</ul>

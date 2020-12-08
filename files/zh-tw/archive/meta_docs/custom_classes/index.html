@@ -1,0 +1,189 @@
+---
+title: 自訂 CSS 類別
+slug: Archive/Meta_docs/Custom_classes
+tags:
+  - MDC_專案
+translation_of: Archive/Meta_docs/Custom_classes
+---
+<p> 以下是 MDC Wiki 上自行定義的樣式類別，若你也想新增類別，請聯絡 <a href="/User:Dria">Dria</a>。</p>
+
+<h3 id=".E7.8F.BE.E6.9C.89_CSS_.E9.A1.9E.E5.88.A5" name=".E7.8F.BE.E6.9C.89_CSS_.E9.A1.9E.E5.88.A5">現有 CSS 類別</h3>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <td class="header">樣式</td>
+   <td class="header">使用結果</td>
+  </tr>
+  <tr>
+   <td><code>div.tip</code></td>
+   <td>顯示網頁內容中的小技巧文字。</td>
+  </tr>
+  <tr>
+   <td><code>div.bug</code></td>
+   <td>顯示網頁內容中的程式錯誤文字。</td>
+  </tr>
+  <tr>
+   <td><code>.float-left</code></td>
+   <td>製作向左浮動的元素（通常是圖片）。</td>
+  </tr>
+  <tr>
+   <td><code>.float-right</code></td>
+   <td>製作向右浮動的元素（通常是圖片）。</td>
+  </tr>
+  <tr>
+   <td><code>.figure</code></td>
+   <td>這個樣式目前還沒有實際作用，是為日後使用準備的。</td>
+  </tr>
+  <tr>
+   <td><code>.standard-table</code></td>
+   <td>標準的表格樣式。</td>
+  </tr>
+  <tr>
+   <td><code>.standard-table td.header</code></td>
+   <td>標準表格的標題樣式。</td>
+  </tr>
+  <tr>
+   <td><code>.fullwidth-table</code></td>
+   <td>寬度設定為 100% 的表格（就像現在這個表格一樣）。</td>
+  </tr>
+  <tr>
+   <td><code>.fullwidth-table td.header</code></td>
+   <td>寬度設為 100% 之表格的標題樣式。</td>
+  </tr>
+  <tr>
+   <td><code>div.breadcrumbs</code></td>
+   <td>頁面導覽的樣式。</td>
+  </tr>
+  <tr>
+   <td><code>div.breadcrumbs a.breadcrumbs</code></td>
+   <td>頁面導覽字串中連結部分的樣式。</td>
+  </tr>
+  <tr>
+   <td><code>div.breadcrumbs span.breadcrumbs</code></td>
+   <td>頁面導覽字串中目前頁面標題的樣式。</td>
+  </tr>
+  <tr>
+   <td><code>div.side-note-left div.side-note-right</code></td>
+   <td>用以建立文章內的邊欄。此區域之寬度將佔其母元素（通常就是文件本體）的 50%。若要建立邊欄請使用這個樣式，以確保內容顯示上容易閱讀。</td>
+  </tr>
+  <tr>
+   <td><code>div.highlight</code></td>
+   <td>在區段左側放上 3 個像素寬的藍色邊框。/td&gt;</td>
+  </tr>
+  <tr>
+   <td><code>.highlightred</code></td>
+   <td>將文字改以紅色顯示。</td>
+  </tr>
+  <tr>
+   <td><code>.highlightblue</code></td>
+   <td>將文字改以藍色顯示。</td>
+  </tr>
+  <tr>
+   <td><code>.highlightgreen</code></td>
+   <td>將文字改以綠色顯示。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id=".E7.AF.84.E4.BE.8B" name=".E7.AF.84.E4.BE.8B">範例</h3>
+
+<h4 id=".E6.A8.99.E7.A4.BA.E9.83.A8.E5.88.86.E7.A8.8B.E5.BC.8F.E7.A2.BC" name=".E6.A8.99.E7.A4.BA.E9.83.A8.E5.88.86.E7.A8.8B.E5.BC.8F.E7.A2.BC">標示部分程式碼</h4>
+
+<p>通常我們會讓程式碼以特別的區塊顯示，這可以利用 span 搭配 MediaWiki 系統「行前空一格就自動縮排」的功能。須注意的是在 <span class="nowiki">&lt;pre&gt;</span> 區段中不能用 span 元素，因為此時 MediaWiki 會直接把 span 元素當成要顯示的內容而輸出。</p>
+
+<pre>&lt;span class="highlightred"&gt;這樣是沒用的&lt;/span&gt;
+</pre>
+
+<p>這種狀況下就應該將程式碼縮排，然後在其中使用 span 元素。如果程式中有空白行，該行也必須縮排，否則系統會認為空白行的前後為分開的兩個區段。</p>
+
+<pre class="eval">像這樣，
+   程式碼的空白行<span class="highlightred">並沒有</span>縮排，
+</pre>
+
+<pre class="eval">   所以就顯示成<span class="highlightblue">兩個區段</span>了。
+</pre>
+
+<p>顯然這樣跟我們想要的有所差異，所以你應該這麼做：</p>
+
+<pre class="eval">像這樣，
+   空白行前<span class="highlightred">也加了個空白字元</span>以示縮排，
+
+   這樣系統就將其顯示為<span class="highlightblue">同一個</span>區段。
+</pre>
+
+<h4 id=".E5.B0.8E.E8.A6.BD" name=".E5.B0.8E.E8.A6.BD">導覽</h4>
+
+<p> </p>
+
+<ul>
+ <li><a href="/zh_tw/JavaScript_1.5_參考/關於本文" title="zh_tw/JavaScript_1.5_參考/關於本文">JavaScript 1.5 參考:關於本文</a>文件中有一段關於在網頁上添加導覽列的範例。</li>
+</ul>
+
+<h4 id="table.standard-table" name="table.standard-table">table.standard-table</h4>
+
+<p>&lt;tr&gt; &lt;td&gt;此為&lt;/td&gt; &lt;td&gt;<code>table.standard-table</code>&lt;/td&gt; &lt;td&gt;的範例&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt;</p>
+
+<h4 id="table.fullwidth-table" name="table.fullwidth-table">table.fullwidth-table</h4>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th>表格標題 1&lt;/td&gt;
+    <p>&lt;th&gt;表格標題 2&lt;/td&gt; &lt;th&gt;表格標題 3&lt;/td&gt;</p>
+   </th>
+  </tr>
+ </tbody>
+</table>
+
+<p>&lt;tr&gt; &lt;td&gt;此為&lt;/td&gt; &lt;td&gt;<code>table.fullwidth-table</code>&lt;/td&gt; &lt;td&gt;的範例&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt;</p>
+
+<h4 id="DIV_.E5.8D.80.E6.AE.B5" name="DIV_.E5.8D.80.E6.AE.B5">DIV 區段</h4>
+
+<h5 id=".E5.B0.8F.E6.8A.80.E5.B7.A7" name=".E5.B0.8F.E6.8A.80.E5.B7.A7">小技巧</h5>
+
+<p>小技巧區段以 <code>div class="note"</code> 標示，例如：</p>
+
+<div class="note">這就是個小技巧</div>
+
+<h5 id=".E7.A8.8B.E5.BC.8F.E9.8C.AF.E8.AA.A4" name=".E7.A8.8B.E5.BC.8F.E9.8C.AF.E8.AA.A4">程式錯誤</h5>
+
+<p>已知的程式錯誤可用 <code>div class="bug"</code> 標示參照，內含 bugzilla 上的對應資訊連結，例如：</p>
+
+<div class="bug"><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=176320">Bug 176320：彈出視窗 innerWidth 及 innerHeight 的最小值</a></div>
+
+<h5 id=".E8.AD.A6.E5.91.8A" name=".E8.AD.A6.E5.91.8A">警告</h5>
+
+<p>請使用 <code>div class="warning"</code> 來標示文件中的警告文字，很快我們會為此樣式加上圖示等特殊效果。</p>
+
+<div class="warning">此段為警告文字</div>
+
+<h5 id=".E6.B3.A8.E9.87.8B" name=".E6.B3.A8.E9.87.8B">注釋</h5>
+
+<p>請使用 <code>div class="note"</code> 來標示文件中的注釋文字。</p>
+
+<div class="note">這是注釋，雖然沒什麼意思但還是個注釋。</div>
+
+<h5 id=".E6.A8.99.E7.A4.BA.E5.8D.80.E6.AE.B5" name=".E6.A8.99.E7.A4.BA.E5.8D.80.E6.AE.B5">標示區段</h5>
+
+<p>以下為 <code>div class="highlight"</code> 的範例：</p>
+
+<div class="highlight">
+<p>此為以 CSS 標示區段的範例，您可用這個方法讓某個程式碼區段更加顯眼。這個樣式最先是為 <a href="/zh_tw/XUL_教學" title="zh_tw/XUL_教學">XUL 教學</a>而加進 MDC 的。</p>
+
+<pre>而這是
+   標示之區段中
+   文字預先格式化的
+      範例
+</pre>
+</div>
+
+<table class="fullwidth-table">
+ <tbody>
+  <tr>
+   <th>表格標題 1&lt;/td&gt;
+    <p>&lt;th&gt;表格標題 2&lt;/td&gt; &lt;th&gt;表格標題 3&lt;/td&gt;</p>
+   </th>
+  </tr>
+ </tbody>
+</table>

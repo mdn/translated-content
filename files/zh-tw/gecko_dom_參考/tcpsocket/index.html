@@ -1,0 +1,140 @@
+---
+title: TCPSocket API
+slug: Gecko_DOM_參考/TCPSocket
+translation_of: Archive/B2G_OS/API/TCPSocket
+---
+<p>此處將以 JavaScript 格式存取原始的 TCP socket API。此 API 目前僅可用於 FirefoxOS 許可/認證的 App。</p>
+<h2 id="進入點_(Entry_point)">進入點 (Entry point)</h2>
+<pre class="brush: js">var TCPSocket = navigator.mozTCPSocket;
+if(TCPSocket){
+  // ...
+}</pre>
+<h2 id="API">API</h2>
+<pre>interface TCPSocket{
+  readonly attribute DOMString host;
+  readonly attribute unsigned short port;
+  readonly attribute boolean ssl;
+  readonly attribute unsigned long bufferedAmount;
+  readonly attribute DOMString binaryType;
+
+  readonly attribute DOMString readyState;
+  readonly attribute DOMString CONNECTING;
+  readonly attribute DOMString OPEN;
+  readonly attribute DOMString CLOSING;
+  readonly attribute DOMString CLOSED;
+
+  TCPSocket open(DOMString host, unsigned short port, [object options]);
+  void suspend();
+  void resume();
+  void close();
+  boolean send(in jsval data);
+
+  attribute onopen;
+  attribute ondrain;
+  attribute ondata;
+  attribute onerror;
+  attribute onclose;
+};</pre>
+<h3 id="屬性_(Attributes)">屬性 (Attributes)</h3>
+<dl>
+  <dt>
+    host</dt>
+  <dd>
+    Socket 所要連接的 Host。</dd>
+  <dt>
+    port</dt>
+  <dd>
+    Socket 所要連接的 Port。</dd>
+  <dt>
+    ssl</dt>
+  <dd>
+    Socket 是否經過 SSL 加密。</dd>
+  <dt>
+    bufferedAmount</dt>
+  <dd>
+    位於 Socket 緩衝區內，尚未傳送資料的位元數。</dd>
+  <dt>
+    readyState</dt>
+  <dd>
+    Socket 狀態。可能為 {<code>CONNECTING</code>, <code>OPEN</code>, <code>CLOSING</code>, <code>CLOSED</code>}。</dd>
+</dl>
+<h3 id="常數_(Constants)">常數 (Constants)</h3>
+<dl>
+  <dt>
+    CONNECTING</dt>
+  <dd>
+    該數值表示 Socket 的連結狀態。尚未無法傳送資料。</dd>
+  <dt>
+    OPEN</dt>
+  <dd>
+    該數值表示 Socket 的開啟狀態。已可傳送資料。</dd>
+  <dt>
+    CLOSING</dt>
+  <dd>
+    該數值表示 Socket 的關閉中狀態。</dd>
+  <dt>
+    CLOSED</dt>
+  <dd>
+    該數值表示 Socket 的已關閉狀態。</dd>
+</dl>
+<h3 id="函式_(Method)">函式 (Method)</h3>
+<dl>
+  <dt>
+    open(host, port [, options])</dt>
+  <dd>
+    所回傳的新 TCP Socket，均已於指定的 <code>port</code> 連上指定的 <code>host</code>。<code>Options</code> 將作為正規物件。以下為可用選項：</dd>
+</dl>
+<ul>
+  <li><code>useSSL</code> (此為 Boolean 值；預設為 <code>false</code>)：將不論 TCP 連結是否使用 SSL。</li>
+  <li><code>binaryType</code> (此為字串；預設為「string」)：將以資料事件的格式接收 TCP 資料型態，再以 <code>send</code> 的方式傳送資料。可為「<code>string」或「</code><code>arraybuffer」</code>(<a href="/en-US/docs/JavaScript/Typed_arrays/Uint8Array" title="/en-US/docs/JavaScript/Typed_arrays/Uint8Array">UInt8Array</a>)</li>
+</ul>
+<dl>
+  <dt>
+    send(data)</dt>
+  <dd>
+    將緩衝所要傳送至網路的資料。若可安全緩衝更多資料，則將回傳 <code>true。</code>若是回傳 <code>false，</code>即代表將緩衝更多資料。但若要達到較佳效能 (保持較小緩衝)，則應等待下個 <code>drain</code> 事件以緩衝更多資料。</dd>
+  <dt>
+    suspend()</dt>
+  <dd>
+    暫停 <code>data</code> 事件。</dd>
+  <dt>
+    resume()</dt>
+  <dd>
+    繼續 <code>data</code> 事件。若於 Socket 並未暫停的情況下而呼叫此方式，隨即將丟出錯誤。</dd>
+  <dt>
+    close()</dt>
+  <dd>
+    關閉 TCP Socket。</dd>
+</dl>
+<h3 id="事件_(Events)">事件 (Events)</h3>
+<p>透過 on* 屬性，可將 Event Listener 附加至 Socket。</p>
+<dl>
+  <dt>
+    open</dt>
+  <dd>
+    在此事件之後，Socket 即準備好傳送/接收資料。</dd>
+  <dt>
+    drain</dt>
+  <dd>
+    Socket 中可緩衝更多資料。</dd>
+  <dt>
+    error</dt>
+  <dd>
+    發生錯誤。在 <code>open</code> 事件之前，將拒絕連結作業 (不會發生 <code>close</code> 事件)。在 <code>open</code> 事件之後，就會遺失連結作業 (事件之後隨即觸發 <code>close</code> 事件)</dd>
+  <dt>
+    data</dt>
+  <dd>
+    已接受到某些資料。事件的物件將包含 <code>data</code> 屬性，以利檢索資料。在建立 Socket 時，即已設定資料型態。</dd>
+  <dt>
+    close</dt>
+  <dd>
+    已關閉 Socket。</dd>
+</dl>
+<h2 id="敘述_(Description)">敘述 (Description)</h2>
+<p>此 API 僅可用於 FirefoxOS 許可/認證過的 App。而其指涉的 Host 與 Port 均必須由 <a href="/en-US/docs/Apps/Manifest" title="/en-US/docs/Apps/Manifest">app manifest</a> 所提及。</p>
+<p>僅限認證過的 App 可用 1024 以下的 Port。</p>
+<h2 id="另請參閱">另請參閱</h2>
+<ul>
+  <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=733573" title="https://bugzilla.mozilla.org/show_bug.cgi?id=733573">Bug</a></li>
+  <li><a href="https://hg.mozilla.org/mozilla-central/rev/3764a9891e74" title="https://hg.mozilla.org/mozilla-central/rev/3764a9891e74">Mercurial initial commit</a></li>
+</ul>

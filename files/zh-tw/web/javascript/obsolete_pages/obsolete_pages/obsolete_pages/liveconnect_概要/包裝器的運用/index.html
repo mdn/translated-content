@@ -1,0 +1,13 @@
+---
+title: 包裝器的運用
+slug: >-
+  Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/LiveConnect_概要/包裝器的運用
+translation_of: Archive/Web/LiveConnect/LiveConnect_Overview
+---
+<p> </p>
+<h3 id="包裝器的運用" name="包裝器的運用">包裝器的運用</h3>
+<p>在 JavaScript 中，<em>包裝器</em> (<em>wrapper</em>) 是一種目的語言資料類型的物件，可包裝來源語言的物件。當在 JavaScript 中設計程式的時候，你可以使用包裝器物件存取 Java 物件的方法和欄位；呼叫或存取包裝器裡的方法或屬性，用以在 Java 物件上產生呼叫。對 Java 而言，JavaScript 物件是被包裝在類別為 <code>netscape.javascript.JSObject</code> 的實體之中，並傳送給 Java。</p>
+<p>當 JavaScript 物件傳送給 Java 的時候，執行時期引撉會建立類型為 <code>JSObject</code> 的 Java 包裝器；當 <code>JSObject</code> 從 Java 傳送到 JavaScript 的時候，執行時期引撉會解開包裝，還原為原本的 JavaScript 物件類型。<code>JSObject</code> 類別提供了可呼叫 JavaScript 方法和檢查 JavaScript 屬性的介面。</p>
+<p>{{ PreviousNext("Core_JavaScript_1.5_教學:LiveConnect_概要", "Core_JavaScript_1.5_教學:LiveConnect_概要:JavaScript_向_Java_的通訊") }}</p>
+
+<p>{{ languages( { "en": "en/Core_JavaScript_1.5_Guide/LiveConnect_Overview/Working_with_Wrappers", "es": "es/Gu\u00eda_JavaScript_1.5/Concepto_general_de_LiveConnect/Trabajando_con_envoltorios", "ja": "ja/Core_JavaScript_1.5_Guide/LiveConnect_Overview/Working_with_Wrappers", "pl": "pl/Przewodnik_po_j\u0119zyku_JavaScript_1.5/Podgl\u0105d_klas_LiveConnect/Praca_z_klas\u0105_opakowuj\u0105c\u0105" } ) }}</p>

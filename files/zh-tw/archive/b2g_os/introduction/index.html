@@ -1,0 +1,86 @@
+---
+title: Firefox OS 簡介
+slug: Archive/B2G_OS/Introduction
+translation_of: Archive/B2G_OS/Introduction
+---
+<div class="summary">
+<p>Firefox OS 正將無限開拓 Web 的行動界線，且要讓擁有第一支智慧型手機的使用者，能獲得全新的網路體驗。<strong>此開放源碼的行動作業系統，即以</strong> Linux、Open Web 標準、Mozilla 的 Gecko 技術為基礎，勢將重新定義「行動平台」。</p>
+
+<p>在導入 WebAPI 以存取硬體功能，並提供直覺且豐富的智慧型手機體驗之後，Mozilla 相信 Web 必將成為開發者的絕佳機會，讓更多消費者能觸及有趣且多樣的產品。</p>
+</div>
+
+<h2 id="目標客戶">目標客戶</h2>
+
+<p>此一系列說明文件，主要將讓 Web＼平台開發者能夠進一步了解 Firefox OS 的運作方式、貢獻專案的方法，並打造自己的客製化軟體版本以利安裝於裝置之上。若是想建立並發佈自己的 Web App，亦可透過 <a href="https://developer.mozilla.org/en-US/Apps">「應用程式中心 (App Center)」</a>與 <a href="https://developer.mozilla.org/en-US/Marketplace">Marketplace 的「專區 (Zone)」</a>輕鬆達成。</p>
+
+<h2 id="Firefox_OS_的基本承諾">Firefox OS 的基本承諾</h2>
+
+<p>對 Web＼平台開發者來說，所應了解的最重要部分就是：整個使用者介面 (UI) 就是 Web App，且此 Web App 又能夠顯示並啟動其他的 Web App。不論是修改 UI、撰寫 Firefox OS 上執行的 App，甚至是存取行動裝置硬體與服務，都是透過標準的 Web 技術進行。</p>
+
+<p>從產品面來看，Firefox OS 已是 Mozilla 的品牌名稱，透過 Boot to Gecko (B2G，為作業系統產品的設計代號) 而提供相關服務。Firefox OS 的 UI 稱為 Gaia，並包含了 OS 的預設 App 與系統功能。</p>
+
+<p>若要進一步了解平台架構，可參閱《<a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform">平台指南</a>》。</p>
+
+<h2 id="目前與未來的規劃">目前與未來的規劃</h2>
+
+<p>現正開發 Firefox OS 2.0 版，且 1.3/1.4 版已經趨於穩定。目前市面上已有多款手機，消費者或開發者所適用的型號均有。若要進一步了解，可參閱：</p>
+
+<ul>
+ <li>Firefox OS <a href="https://developer.mozilla.org/en-US/Firefox_OS/Releases">開發者版本說明</a>：各版本新支援的功能。</li>
+ <li><a href="https://developer.mozilla.org/en-US/Firefox_OS/Developer_phone_guide">手機指南</a>：目前市面上的手機型號。</li>
+ <li><a href="https://wiki.mozilla.org/B2G/Roadmap">B2G 規劃</a>：Firefox OS 的進度表及時間表。</li>
+</ul>
+
+<h3 id="版本週期">版本週期</h3>
+
+<p>從 Firefox OS 1.2 開始，Firefox OS 版本週期即已儘量同步於 Gecko 與 Firefox 桌面版的版本週期 (即 6 週)。現每 3 個月即釋出新版本 Firefox OS，因此每 2 個 Gecko (Firefox 瀏覽器核心) 版本週期就會釋出 1 次新版本 Firefox OS。</p>
+
+<p>舉例來說，Gecko 30 即與 Firefox OS 1.4 一同釋出 (跨過 Gecko 29)；Gecko 32 即與 Firefox OS 2.0 (本為 1.5) 一同釋出 (跨過 Gecko 31)。</p>
+
+<div class="note">
+<p><strong>注意：</strong>可參閱我們的<a href="https://wiki.mozilla.org/RapidRelease/Calendar">版本釋出排程</a>，確認 Firefox OS 與 Gecko＼桌面版 Firefox 之間的對應版本，另可參閱 <a href="https://wiki.mozilla.org/Release_Management/FirefoxOS/Release_Milestones">Firefox OS Release Milestones</a> 進一步了解版本管理的相關細節。</p>
+</div>
+
+<h2 id="社群">社群</h2>
+
+<p>Boot to Gecko 與 Gaia 均是由 Mozilla 內部的工程師團隊開發而得，另加上 Mozilla 外部與開放源碼社群的一同貢獻。如果你想聯繫 Firefox OS 或 Gaia 開發的社群，則可利用下列的郵件群組與 IRC 頻道。</p>
+
+<p>同樣的，可使用 Bugzilla 系統提報 <a href="https://bugzilla.mozilla.org/describecomponents.cgi?product=Firefox%20OS">Firefox OS 元件</a>的任何問題。如果你不確定哪些元件應該提報問題，歡迎隨時發問。</p>
+
+<div class="note">
+<p><strong>注意：</strong>如果你對 B2G/Gaia 原始碼的特定部分 (例如特定的 Gaia App) 有任何問題或意見，則可在 <a href="https://wiki.mozilla.org/Modules/FirefoxOS">Firefox Modules 頁面</a>上找到特定聯絡細節。</p>
+</div>
+
+<h2 id="打造作業系統">打造作業系統</h2>
+
+<p>B2G 作業系統是以 Mozilla 的 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko">Gecko</a> 繪圖引擎為基礎，並從 Linux kernel 以及稱為 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Gonk">Gonk</a> 的硬體抽象層 (Hardware Abstraction Layer，HAL) 延伸。這裡所說的 Gecko，基本上就是 Firefox for Android 或 Windows 或 Mac OS X 所用的相同 Gecko。而 Gonk 就是 Gecko 所衍生的另項系統。</p>
+
+<p>若要進一步打造並安裝 Firefox OS，可參閱《<a href="https://developer.mozilla.org/zh-TW/Firefox_OS/Building_and_installing_Firefox_OS">建立並安裝 Firefox OS</a>》。你也可以<a href="https://github.com/mozilla-b2g/B2G">到 Github 找到 B2G 的原始碼</a>。</p>
+
+<h2 id="貢獻_Gaia">貢獻 Gaia</h2>
+
+<p>若想為 Gaia 貢獻，其實並不需要深入了解 Web 的開發概念。如果要入門 Gaia 並執行，可參閱《<a href="https://developer.mozilla.org/en-US/Firefox_OS/Hacking_Firefox_OS/Quickstart_guide_to_Gaia_development">入門開發 Gaia</a>》。</p>
+
+<p>還有許多有用的工具，可讓你針對 Gaia 與 Firefox OS 的 Web App 進行除錯。若要進一步了解，亦可參閱《<a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Gaia/Hacking">Hacking Gaia</a>》。</p>
+
+<h2 id="開發_Firefox_OS_的_App">開發 Firefox OS 的 App</h2>
+
+<p>Firefox OS App 同樣是以標準的 Web 技術 (如 HTML、CSS、JavaScript 等等) 所打造而成。如果你本來就是 Web 開發者，就已經具備了大部分的技術。另必須知道數個特定的 JavaScript API，以利存取裝置的硬體與重要功能 (如相機、陀螺儀、光線感測器、聯絡人資訊、系統警示＼通知......)。這些也同樣能參閱<a href="https://developer.mozilla.org/en-US/Apps">應用程式中心</a>與 <a href="https://developer.mozilla.org/en-US/docs/Web">Web 平台</a>頁面獲得更多資訊。</p>
+
+<div class="note">
+<p><strong>注意：</strong>如果你剛開始打造 Open Web/Firefox OS App，或想要初步了解 Web App 與傳統網頁之間的差異，可參閱《<a href="https://developer.mozilla.org/en-US/Apps/Quickstart">App 迅速入門指南</a>》。</p>
+</div>
+
+<h3 id="支援_Firefox_OS_的多個版本">支援 Firefox OS 的多個版本</h3>
+
+<p>在開發 Firefox OS 的 App 時，必須留意消費者手上的裝置到底搭載了哪個版本 (可參閱<a href="https://developer.mozilla.org/en-US/Firefox_OS/Developer_phone_guide/Phone_specs#Firefox_OS_phones_available">目前可用手機表</a>)。另請注意，更新手機平台軟體，可不像更新桌面版軟體一樣簡單。消費者往往受制於網路服務供應商。因此開發者應該讓 App 能夠支援不同的版本。舉例來說，multiline 的「Flexbox」就無法在 Firefox OS 1.3 以下的版本中執行。你可能必須使用較簡單的配置函式，或退而使用較舊的版本。</p>
+
+<p>隨著有越來越多消費性的 Firefox OS 裝置上市，並搭載更高版本的 Firefox OS，這個問題很快就能解決。</p>
+
+<div class="warning">
+<p>我們目前建議能針對 <a href="https://developer.mozilla.org/en-US/Firefox_OS/Releases/1.1">Firefox OS 1.1</a> 版本的特性來開發 App。</p>
+</div>
+
+<div class="note">
+<p><strong>注意：</strong>MDN 上的《<a href="https://developer.mozilla.org/en-US/docs/Web">Web 平台參考頁面</a>》，包含瀏覽器＼平台的支援資訊。另可到《<a href="https://developer.mozilla.org/en-US/Apps/Reference">Apps API Reference</a>》找到特定 App 技術的相關資訊。</p>
+</div>

@@ -1,0 +1,137 @@
+---
+title: 快速指南
+slug: Archive/Mozilla/Persona/Quick_Setup
+translation_of: Archive/Mozilla/Persona/Quick_Setup
+---
+<p>要把 Persona 登入系統加到你的網站，只需要五個步驟：</p>
+<ol>
+ <li>在你的網頁中引入 Persona 的 JavaScript 函式庫。</li>
+ <li>加上「登入」和「登出」按鈕。</li>
+ <li>監聽登入和登出行為。</li>
+ <li>驗證使用者的身分 (credential)。</li>
+ <li>檢視最佳導入實例。</li>
+</ol>
+<p>你應該能在一個下午就建置完成並開始執行，另外重要的事情是：如果你要在你的網站上開始使用 Persona，請花點時間訂閱 <a href="https://mail.mozilla.org/listinfo/persona-notices">Persona 通知</a> 郵件清單。它的流量非常低，只會用於通知你關於變更公告或是安全問題等可能對你的網站造成影響的議題。</p>
+<h2 id="步驟1：引入_Persona_函式庫">步驟1：引入 Persona 函式庫</h2>
+<p>Persona 被設計為跨瀏覽器且可在<a href="https://developer.mozilla.org/docs/persona/Browser_compatibility">全部主要桌面和移動瀏覽器</a>中工作。</p>
+<p>在未來我們期望瀏覽器提供 Persona 的原生支援，但我們同時提供了一個 JavaScript 函式庫完整實作了使用者介面和客戶端部分的協議。透過包含這個函式庫，你的使用者將可以用 Persona 登入，無論他們的瀏覽器是否有原生支援。</p>
+<p>一旦頁面中的這個函式庫載入完成，你需要的 Persona 函式（{{ domxref("navigator.id.watch()", "watch()") }}、{{ domxref("navigator.id.request()", "request()") }} 和 {{ domxref("navigator.id.logout()", "logout()") }}）會在全域物件 <code>navigator.id</code> 中可用。</p>
+<p>要包含 Persona JavaScript 函式庫，你可以把這個 <code>script</code> 標籤放進你頁面的首部：</p>
+<pre class="brush: html;">&lt;script src="https://login.persona.org/include.js"&gt;&lt;/script&gt;
+</pre>
+<p>你<strong>必須</strong>在每個使用 {{ domxref("navigator.id") }} 中函式的頁面裡包含這個標籤。因為 Persona 始終在開發中，你不應該自行管理 <code>include.js</code> 檔。</p>
+<h2 id="步驟2：加入登入登出按鈕">步驟2：加入登入/登出按鈕</h2>
+<p>因為 Persona 被設計為一個 DOM API，你必須在使用者按下你網站上的登入或登出按鈕時呼叫函式。要開啟 Persona 對話視窗並提示使用者登入，你應該呼叫 {{ domxref("navigator.id.request()") }} 。而登出要呼叫 {{ domxref("navigator.id.logout()") }} 。</p>
+<p>例如：</p>
+<pre class="brush: js;">var signinLink = document.getElementById('signin');
+if (signinLink) {
+signinLink.onclick = function() { navigator.id.request(); };
+};
+
+var signoutLink = document.getElementById('signout');
+if (signoutLink) {
+signoutLink.onclick = function() { navigator.id.logout(); };
+};
+</pre>
+<p>那些按鈕的是什麼樣子的？查看我們的<a href="https://developer.mozilla.org/docs/persona/branding">品牌資源</a>頁面中的預製圖片和基於 CSS 的按鈕！</p>
+<h2 id="步驟3：監視登入登出行為">步驟3：監視登入/登出行為</h2>
+<p>要把 Persona 封裝成函式，你需要告訴它當使用者登入/登出時做甚麼。呼叫 {{ domxref("navigator.id.watch()") }} 函式就可以實作，它支援三處：</p>
+<ol>
+ <li>
+  <p>你網站目前使用者的 <code>loggedInEmail</code> ，如果沒有則為 <code>null</code> 。你應該在渲染頁面的時候動態產生它。</p>
+ </li>
+ <li>
+  <p>當觸發 <code>onlogin</code> 行為的時候呼叫的函式。這個函式會被傳遞一個必須認證的「身分斷言」參數。</p>
+ </li>
+ <li>
+  <p>當觸發 <code>onlogout</code> 行為的時候呼叫的函式。這個函式不會被傳遞任何參數。</p>
+ </li>
+</ol>
+<div class="note style-wrap">
+ <p><strong>注意：</strong>你必須總是在呼叫 {{ domxref("navigator.id.watch()") }} 時同時包含 <code>onlogin</code> 和 <code>onlogout</code> 。</p>
+</div>
+<p>例如，如果你現在認為 Bob 已經登入到你的網站，你會這樣做：</p>
+<pre class="brush: js;">var currentUser = 'bob@example.com';
+
+navigator.id.watch({
+loggedInUser: currentUser,
+onlogin: function(assertion) {
+// 一個使用者已經登入！這是你需要做的：
+// 1. 把斷言發送到後端驗證並建立一個工作階段。
+// 2. 更新你的 UI。
+$.ajax({ /* &lt;-- 本例使用了 jQuery，但你也可以用你想用的 */
+type: 'POST',
+url: '/auth/login', // 這是你網站上的一個 URL
+data: {assertion: assertion},
+success: function(res, status, xhr) { window.location.reload(); },
+error: function(res, status, xhr) { alert("登入失敗" + res); }
+});
+},
+onlogout: function() {
+// 一個使用者已經登出！這是你需要做的：
+// 銷毀使用者的工作階段並重新導向使用者或做後端的呼叫。
+// 同樣，讓 loggedInUser 在下個頁面載入時變為 null。
+// （這是一個字面的 JavaScript null。不是 false、 0 或 undefined。null。)
+$.ajax({
+type: 'POST',
+url: '/auth/logout', // 這是你網站上的一個 URL
+success: function(res, status, xhr) { window.location.reload(); },
+error: function(res, status, xhr) { alert("登出失敗" + res); }
+});
+}
+});
+</pre>
+<p>在本例中，<code>onlogin</code> 和 <code>onlogout</code> 都通過向你網站的後端發送非同步 <code>POST</code> 請求來實作。後端隨後通常用設定或刪除工作階段 cookie 中的資訊來登入或登出使用者。之後，如果一切都核對無誤，頁面重新載入來考慮帳號的新登入狀態。</p>
+<p>你當然可以用 AJAX 來不用重新載入或重新導向來實作，但這超出了本教學的範疇。</p>
+<p>你<strong>必須</strong>在每個有登入/登出按鈕的頁面上呼叫這個函式。要為使用者支持 Persona 加強功能，諸如自動登入和全域登出，你<strong>應該</strong>在網站上的每個頁面都呼叫這個函式。</p>
+<h2 id="步驟4：驗證使用者證書">步驟4：驗證使用者證書</h2>
+<p>Persona 用「身分斷言」來代替密碼，那是一種類似一次性、單一網站的、使用者郵件地址捆綁的密碼。當使用者想要登入時，你的 <code>onlogin</code> 回調會傳入一個該使用者的斷言來呼叫。在你登入他們前，你必須驗證斷言的有效性。</p>
+<p>在你的伺服器上而不是使用者瀏覽器上執行的 JavaScript 中驗證斷言是<em>極度</em>重要的，因為那很容易偽造。上面的例子用 jQuery 的 <code>$.ajax()</code> 輔助函式來把斷言通過 <code>POST</code> 到 <code>/auth/login</code> 來呈遞給後端。</p>
+<p>一旦你的伺服器取得了斷言，你如何驗證它？最簡單的方法是用 Mozilla 提供的輔助服務。簡單地把斷言以兩個參數 <code>POST</code> 給 <code>https://verifier.login.persona.org/verify</code>：</p>
+<ol>
+ <li><code>assertion</code>: 使用者提供的身分斷言。</li>
+ <li><code>audience</code>: 你網站的主機名稱和連接埠。你必須在後端硬編碼這個值；不要從使用者提供的任何資料中派生這個值。</li>
+</ol>
+<p>例如，如果你是 <code>example.com</code>，你可以用下面的命令行來測試斷言：</p>
+<pre class="brush: bash;">$ curl -d "assertion=&lt;ASSERTION&gt;&amp;audience=https://example.com:443" "https://verifier.login.persona.org/verify"
+</pre>
+<p>如果它是有效的，你會得到像這樣的一個 JSON 回應：</p>
+<pre class="brush: js;">{
+"status": "okay",
+"email": "bob@eyedee.me",
+"audience": "https://example.com:443",
+"expires": 1308859352261,
+"issuer": "eyedee.me"
+}
+</pre>
+<p>你可以閱讀<a href="https://developer.mozilla.org/en-US/docs/BrowserID/Remote_Verification_API">驗證服務 API</a>來獲知更多關於驗證服務的內容。一個 <code>/api/login</code> 實作的使用了 <a href="http://python.org/">Python</a>、<a href="http://flask.pocoo.org/">Flask</a> web 框架和 <a href="http://python-requests.org">Requests</a> HTTP 函式庫的例子看起來是這樣：</p>
+<pre class="brush: python;">@app.route('/auth/login', methods=['POST'])
+def login():
+# 請求必須包含我們要驗證的斷言
+if 'assertion' not in request.form:
+abort(400)
+
+# 把斷言發送給 Mozilla 的驗證服務
+data = {'assertion': request.form['assertion'], 'audience': 'https://example.com:443'}
+resp = requests.post('https://verifier.login.persona.org/verify', data=data, verify=True)
+
+# 驗證器回應了嗎？
+if resp.ok:
+# 處理回應
+verification_data = json.loads(resp.content)
+
+# 檢查斷言是否有效
+if verification_data['status'] == 'okay':
+# 設置一個安全工作階段 cookie 來登入使用者
+session.update({'email': verification_data['email']})
+return resp.content
+
+# 哎喲，有什麼東西不對，放棄
+abort(500)
+</pre>
+<p>工作階段管理可能很像你現有的登入系統。首先的大區別是在驗證使用者身分採用了檢查斷言而不是檢查密碼。另一個不同是確保使用者的郵件地址有效來用於 {{ domxref("navigator.id.watch()") }} 的 <code>loggedInEmail</code> 參數</p>
+<p>登出很簡單：你只需要移除使用者的工作階段 cookie。</p>
+<h2 id="步驟5：回顧最佳實踐">步驟5：回顧最佳實踐</h2>
+<p>一旦所有的東西都工作正常並且你已經成功登入和登出你的網站，你應該花一會時間來回顧安全可靠地使用 Persona 的<a href="https://developer.mozilla.org/docs/BrowserID/Security_Considerations">最佳實踐</a>。</p>
+<p>如果你在做一個要作為生產環境的網站，你會想要編寫整合測試來模擬用 Persona 登入或登出使用者。要改善 Selenium 中的這個行為，請考慮使用 <a href="https://github.com/mozilla/bidpom" title="https://github.com/mozilla/bidpom">bidpom</a> 函式庫。<a href="https://mockmyid.com/" title="https://mockmyid.com/">mockmyid.com</a> 和 <a href="http://personatestuser.org" title="http://personatestuser.org">personatestuser.org</a> 這兩個網站也可能會有用。</p>
+<p>最後，不要忘記登記加入 <a href="https://mail.mozilla.org/listinfo/persona-notices">Persona 通知</a> 郵件清單，這樣會通知你任何安全問題或 Persona API 的向後相容變更。這個清單的流量非常低：它只用於通知會對你的網站造成負面影響的變更。</p>

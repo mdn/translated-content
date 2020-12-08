@@ -1,0 +1,43 @@
+---
+title: การทำงานร่วมกับคอร์โดวาแอพพลิเคชั่นใน WebIDE
+slug: Tools/WebIDE/การทํางานร่วมกับคอร์โดวาแอพพลิเคชั่นใน_WebIDE
+translation_of: Archive/WebIDE/Working_with_Cordova_apps_in_WebIDE
+---
+<div class="geckoVersionNote">
+<p>New in Firefox 39.</p>
+</div>
+
+<p><a href="http://cordova.apache.org/">Apache Cordova</a><span id="result_box" lang="th"><span class="hps"> ช่วยให้คุณสามารถ</span><span>เขียน</span><span class="alt-edited">แอพพลิเคชั่น</span><span>โดยใช้ HTML,</span> <span class="hps">JavaScript และ</span> <span class="hps">CSS และ</span><span>แล้วสร้าง</span><span>รุ่น</span><span>พื้นเมือง</span><span>ของ</span><span>มันสำหรับ</span><span>แพลตฟอร์มโทรศัพท์มือถือ</span><span>เช่น</span> <span class="hps">iOS และ Android </span></span><br>
+ โดยคอร์โดวา <a href="/en-US/Apps/Tools_and_frameworks/Cordova_support_for_Firefox_OS">คุณยังสามารถสร้างรุ่น app ของคุณสำหรับ Firefox OS</a></p>
+
+<p>From Firefox 39 onwards, WebIDE directly supports Cordova apps: this means that  you can edit Cordova apps in WebIDE, and WebIDE takes care of generating the Firefox OS version for you.</p>
+
+<p>First, create a Cordova app, as you normally would:</p>
+
+<ul>
+ <li>Install Cordova, if you haven't already:
+  <pre class="brush: bash"><code>npm install -g cordova</code></pre>
+ </li>
+</ul>
+
+<ul>
+ <li>Create your Cordova app:
+  <pre class="brush: bash"><code>cordova create my-app</code></pre>
+ </li>
+</ul>
+
+<ul>
+ <li>Add Firefox OS as a target platform for your app:
+  <pre class="brush: bash">cd my-app
+cordova platform add firefoxos</pre>
+ </li>
+</ul>
+
+<p>Next:</p>
+
+<ul>
+ <li><a href="/en-US/docs/Tools/WebIDE/Opening_WebIDE">open WebIDE</a></li>
+ <li>select <a href="/en-US/docs/Tools/WebIDE/Creating_and_editing_apps#Open_a_packaged_app">"Open Packaged App"</a>,  and select the directory containing your Cordova app's <code>config.xml</code> file.</li>
+</ul>
+
+<p>Now you can edit the app as a Cordova app, and whenever you <a href="/en-US/docs/Tools/WebIDE/Running_and_debugging_apps#Running_apps">run the app</a>, WebIDE takes care of generating the Firefox OS version behind the scenes. WebIDE also regenerates the Firefox OS version whenever you make any changes that would affect your app's <a href="/en-US/Apps/Build/Manifest">manifest</a>, so it can perform <a href="/en-US/docs/Tools/WebIDE/Creating_and_editing_apps#Manifest_validation">manifest validation</a>.</p>

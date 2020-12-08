@@ -1,0 +1,884 @@
+---
+title: Firefox 2 佈景主題之更動
+slug: Firefox_2_佈景主題之更動
+tags:
+  - 佈景主題
+  - 待翻譯
+translation_of: Archive/Themes/Theme_changes_in_Firefox_2
+---
+<p>本文涵括使佈景主題相容 <a href="zh_tw/Firefox_2">Firefox 2</a> 的各種修改須知。</p>
+
+<p> </p>
+
+<h2 id=".E8.88.87.E7.80.8F.E8.A6.BD.E5.99.A8.E6.9B.B4.E5.8B.95.E7.9B.B8.E9.97.9C" name=".E8.88.87.E7.80.8F.E8.A6.BD.E5.99.A8.E6.9B.B4.E5.8B.95.E7.9B.B8.E9.97.9C">與瀏覽器更動相關</h2>
+
+<p>瀏覽器中有許多更動甚至刪除的檔案，所以佈景主題可能需要修改才能正確套用。此表格列出 XUL 及相對應的 CSS 檔案更動處，供您編修查照。</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">檔案名稱</td>
+   <td class="header">CSS 檔</td>
+   <td class="header">細節</td>
+  </tr>
+  <tr>
+   <td>feeds/addFeedReader.xul</td>
+   <td>feeds/addFeedReader.css</td>
+   <td>新檔案，提供添加新消息來源閱讀工具的使用介面。</td>
+  </tr>
+  <tr>
+   <td>feeds/subscribe.xhtml</td>
+   <td>feeds/subscribe.css</td>
+   <td>新檔案，提供訂閱消息來源（RSS）的介面。</td>
+  </tr>
+  <tr>
+   <td>preferences/downloads.xul</td>
+   <td>-</td>
+   <td>自 Firefox 2 起移除。</td>
+  </tr>
+  <tr>
+   <td>preferences/general.xul</td>
+   <td>-</td>
+   <td>自 Firefox 2 起移除。</td>
+  </tr>
+  <tr>
+   <td>safebrowsing/warning-overlay.xul</td>
+   <td>safebrowsing/browser-protection.css</td>
+   <td>新檔案，為使用者瀏覽疑似詐騙網站時覆蓋瀏覽器的警告介面。</td>
+  </tr>
+  <tr>
+   <td>search/engineManager.xul</td>
+   <td>engineManager.css</td>
+   <td>新檔案，為搜尋引擎管理員視窗的介面。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id=".E9.A0.90.E8.A8.AD.E4.BD.88.E6.99.AF.E4.B8.BB.E9.A1.8C.E7.9A.84.E6.9B.B4.E5.8B.95" name=".E9.A0.90.E8.A8.AD.E4.BD.88.E6.99.AF.E4.B8.BB.E9.A1.8C.E7.9A.84.E6.9B.B4.E5.8B.95">預設佈景主題的更動</h2>
+
+<p>以下列出 Firefox 2 預設佈景主題的變動之處，您可依循本表找出該修改的地方。</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">檔案</td>
+   <td class="header">變動描述</td>
+  </tr>
+  <tr>
+   <td>browser/bookmarks/addBookmark.css</td>
+   <td>加入與即時摘要相關的 CSS 更動部份。</td>
+  </tr>
+  <tr>
+   <td>browser/bookmarks/bookmarksProperties.css</td>
+   <td>新檔案，內含與即時摘要相關的 CSS。</td>
+  </tr>
+  <tr>
+   <td>browser/browser.css</td>
+   <td>需為即時摘要、搜尋欄、書籤選單項目圖示及其他部分修改之。</td>
+  </tr>
+  <tr>
+   <td>browser/dropmark-nav-small.png</td>
+   <td>新檔案，為使用小圖示時上下一頁旁的下拉選單圖示。</td>
+  </tr>
+  <tr>
+   <td>browser/dropmark-nav.png</td>
+   <td>新檔案，為上下一頁旁的下拉選單圖示。</td>
+  </tr>
+  <tr>
+   <td>browser/engineManager.css</td>
+   <td>新檔案，搜尋引擎管理員所用的 CSS。</td>
+  </tr>
+  <tr>
+   <td>browser/feeds/addFeedReader.css</td>
+   <td>新檔案，新增消息來源閱讀工具的視窗所用之 CSS。</td>
+  </tr>
+  <tr>
+   <td>browser/feeds/feedIcon.png</td>
+   <td>新檔案，RSS 圖示。</td>
+  </tr>
+  <tr>
+   <td>browser/feeds/feedIcon16.png</td>
+   <td>新檔案，RSS 圖示的 16x16 像素版。</td>
+  </tr>
+  <tr>
+   <td>browser/feeds/subscribe.css</td>
+   <td>新檔案，訂閱消息來源時視窗的 CSS。</td>
+  </tr>
+  <tr>
+   <td>browser/Go-rtl.png</td>
+   <td>新檔案，網址列尾端的「Go」三角箭頭圖示。</td>
+  </tr>
+  <tr>
+   <td>browser/preferences/preferences.css</td>
+   <td>選項視窗的樣式檔。</td>
+  </tr>
+  <tr>
+   <td>browser/safebrowsing/browser-protection.css</td>
+   <td>新檔案，控制瀏覽疑似詐騙網站時出現的警告訊息及網址列圖示樣式。</td>
+  </tr>
+  <tr>
+   <td>browser/safebrowsing/close16x16.png</td>
+   <td>新檔案，詐騙網站警告視窗的關閉鈕。</td>
+  </tr>
+  <tr>
+   <td>browser/safebrowsing/dim.png</td>
+   <td>新檔案，瀏覽疑似詐騙網站時，會覆蓋在整個頁面上使頁面內容變暗的檔案，應為半透明圖以便使用者辨識頁面的內容。</td>
+  </tr>
+  <tr>
+   <td>browser/safebrowsing/tail.png</td>
+   <td>新檔案，詐騙網站警告視窗的「尾巴」，藉以製成談話泡泡的樣子。</td>
+  </tr>
+  <tr>
+   <td>browser/safebrowsing/warning16x16.png</td>
+   <td>新檔案，網址列詐騙網站警告圖示的 16x16 像素版。.</td>
+  </tr>
+  <tr>
+   <td>browser/safebrowsing/warning24x24.png</td>
+   <td>新檔案，此為顯示於詐騙網站警告視窗中的圖示。</td>
+  </tr>
+  <tr>
+   <td>browser/search-bar-background-mid.png</td>
+   <td>新檔案，搜尋欄中間的背景。搜尋欄本身及尾端的圖已經拆開分別繪製。</td>
+  </tr>
+  <tr>
+   <td>browser/search-bar-background.png</td>
+   <td>已移除。</td>
+  </tr>
+  <tr>
+   <td>browser/Search-bar.png</td>
+   <td>已移除。</td>
+  </tr>
+  <tr>
+   <td>browser/Search-go-rtl.png</td>
+   <td>新檔案，搜尋欄的搜尋圖示，此為顯示於左側的版本。</td>
+  </tr>
+  <tr>
+   <td>browser/Search-go.png</td>
+   <td>新檔案，搜尋欄右側的搜尋圖示。</td>
+  </tr>
+  <tr>
+   <td>browser/Search-provider-bkgnd-rtl.png</td>
+   <td>New file; the background drawn behind the search provider icon when it's located at the left end of the search bar.</td>
+  </tr>
+  <tr>
+   <td>browser/Search-provider-bkgnd.png</td>
+   <td>New file; the background drawn behind the search provider icon when it's located at the right end of the search bar.</td>
+  </tr>
+  <tr>
+   <td>global/about.css</td>
+   <td>New file; CSS used in the application's about box.</td>
+  </tr>
+  <tr>
+   <td>global/alltabs-box-bkgnd.png</td>
+   <td>New file; the background for the "all tabs" drop-down menu at the right side of the tab bar.</td>
+  </tr>
+  <tr>
+   <td>global/alltabs-box-overflow-bkgnd.png</td>
+   <td>New file; the background for the "all tabs" drop-down menu when there are enough tabs to activate tab bar scrolling.</td>
+  </tr>
+  <tr>
+   <td>global/browser.css</td>
+   <td>Revised to support new styles for the main browser window.</td>
+  </tr>
+  <tr>
+   <td>global/globalBindings.xml</td>
+   <td>Updated to support changes to the tab bar, including per-tab close buttons.</td>
+  </tr>
+  <tr>
+   <td>global/icons/alltabs.png</td>
+   <td>Not actually used; left over from earlier drafts of the theme.</td>
+  </tr>
+  <tr>
+   <td>global/inactivetab-left.png</td>
+   <td>已移除。</td>
+  </tr>
+  <tr>
+   <td>global/inactivetab-right.png</td>
+   <td>已移除。</td>
+  </tr>
+  <tr>
+   <td>global/menu.css</td>
+   <td>Updated to include new styles.</td>
+  </tr>
+  <tr>
+   <td>global/notification.css</td>
+   <td>New file; defines styles used by the notification strip that appears at the top of browser windows to present notices such as "a popup was blocked."</td>
+  </tr>
+  <tr>
+   <td>global/scrollbox/autorepeat-arrow-dn-dis.gif</td>
+   <td>New file; icon displayed for a disabled autorepeat down arrow in a scroll box.</td>
+  </tr>
+  <tr>
+   <td>global/scrollbox/autorepeat-arrow-dn.gif</td>
+   <td>New file; icon displayed for an autorepeat down arrow in a scroll box.</td>
+  </tr>
+  <tr>
+   <td>global/scrollbox/autorepeat-arrow-up-dis.gif</td>
+   <td>New file; icon displayed for a disabled autorepeat up arrow in a scroll box.</td>
+  </tr>
+  <tr>
+   <td>global/scrollbox/autorepeat-arrow-up.gif</td>
+   <td>New file; icon displayed for an autorepeat up arrow in a scroll box.</td>
+  </tr>
+  <tr>
+   <td>global/scrollbox.css</td>
+   <td>Needs to be updated to include new styles.</td>
+  </tr>
+  <tr>
+   <td>global/tab-arrow-end-bkgnd.png</td>
+   <td>New file; the background for the scrolling tab bar arrow at the right side of the tab bar.</td>
+  </tr>
+  <tr>
+   <td>global/tab-arrow-end.png</td>
+   <td>New file; the arrow drawn in the scrolling tab bar box at the right end of the tab bar.</td>
+  </tr>
+  <tr>
+   <td>global/tab-arrow-start-bkgnd.png</td>
+   <td>New file; the background for the scrolling tab bar arrow at the left side of the tab bar.</td>
+  </tr>
+  <tr>
+   <td>global/tab-arrow-start.png</td>
+   <td>New file; the arrow drawn in the scrolling tab bar box at the left end of the tab bar.</td>
+  </tr>
+  <tr>
+   <td>global/tab-left.png</td>
+   <td>新檔案，為分頁標籤的左緣。</td>
+  </tr>
+  <tr>
+   <td>global/tab-middle.png</td>
+   <td>新檔案，為分頁標籤中間部分。</td>
+  </tr>
+  <tr>
+   <td>global/tab-right.png</td>
+   <td>新檔案，為分頁標籤的右緣。</td>
+  </tr>
+  <tr>
+   <td>global/tabbrowser-tabs-bkgnd.png</td>
+   <td>新檔案，為分頁列上標籤後方的背景圖。</td>
+  </tr>
+  <tr>
+   <td>global/toolbar.css</td>
+   <td>需更新，將新的樣式資訊加入。</td>
+  </tr>
+  <tr>
+   <td>mozapps/extensions/about.css</td>
+   <td>Updated with a simplified set of style names, since several styles were identical.</td>
+  </tr>
+  <tr>
+   <td>mozapps/extensions/extensions.css</td>
+   <td>CSS for the add-ons manager window. Updated to support the new features of the Firefox 2 add-ons manager.</td>
+  </tr>
+  <tr>
+   <td>mozapps/extensions/itemDisabledFader.png</td>
+   <td>New file; a translucent PNG used as an overlay on top of items that are disabled in the add-ons manager.</td>
+  </tr>
+  <tr>
+   <td>mozapps/extensions/itemEnabledFader.png</td>
+   <td>New file; a translucent PNG used as an overlay on top of items that are enabled in the add-ons manager.</td>
+  </tr>
+  <tr>
+   <td>mozapps/extensions/notifyBadges.png</td>
+   <td>New file; contains the icons used ito badge the icons for add-ons in the add-on manager window to indicate their status. These look like this in the default theme:
+    <p><img alt="Image:notifyBadges.png"></p>
+
+    <ul>
+     <li>The first icon (green here) indicates that an add-on has an update available.</li>
+     <li>The second icon (yellow here)<em>appears to be used for blocklisted items; trying to confirm</em>.</li>
+     <li>The third icon (red here) indicates that an add-on is disabled, either by the user or because it's incompatible with the application.</li>
+     <li>The fourth icon (blue here)<em>(not sure what this one means)</em>.</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>mozapps/extensions/question.png</td>
+   <td>New file; used in the Add-ons Manager when you check for updates. If no updates are found, this icon is displayed at the left side of the message strip that appears across the top of the window.</td>
+  </tr>
+  <tr>
+   <td>mozapps/extensions/update.css</td>
+   <td>本檔案為更新精靈的樣式，其中的樣式資訊因應重新設計的更新精靈而較之前少。</td>
+  </tr>
+  <tr>
+   <td>mozapps/extensions/viewButtons.png</td>
+   <td>New file; contains icons for each of the views that may be available in the add-ons manager. In the default theme, these look something like this:
+    <p><img alt="Image:viewButtons.png"><br>
+     The top row contains dimmed versions of the icons below them. The first icon is for the extensions view. The second is for themes. The third is for locales, the fourth is for plugins, the fifth is for updates, and the sixth is for installs.</p>
+   </td>
+  </tr>
+  <tr>
+   <td>mozapps/pref</td>
+   <td>Firefox 2 已經用不到這個目錄了，應予移除。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="Changes_in_browser" name="Changes_in_browser">Changes in browser</h3>
+
+<h4 id="bookmarks.2FaddBookmark.css" name="bookmarks.2FaddBookmark.css">bookmarks/addBookmark.css</h4>
+
+<p>addBookmarks.css 檔的最開頭應該加上下列幾行：</p>
+
+<pre>@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+</pre>
+
+<p>還有些與<a href="zh_tw/%e5%8d%b3%e6%99%82%e6%91%98%e8%a6%81">即時摘要</a>相關的 CSS 也要加上，以便調整即時摘要選取工具的樣式。這個選取工具僅在頁面有即時摘要時才以可編輯式下拉選單呈現，否則就長得跟一般文字輸入區相同。</p>
+
+<ul>
+ <li><code>menulist#name{{ mediawiki.external('droppable=\"false\"') }}</code></li>
+ <li><code>menulist#name{{ mediawiki.external('droppable=\"false\"') }} &gt; .menulist-editable-box</code></li>
+ <li><code>menulist#name{{ mediawiki.external('droppable=\"false\"') }} &gt; .menulist-editable-box &gt; html|*.textbox-input</code></li>
+ <li><code>menulist#name{{ mediawiki.external('droppable=\"false\"') }} &gt; .menulist-dropmarker</code></li>
+ <li><code>menulist#name{{ mediawiki.external('droppable=\"false\"') }} &gt; menupopup</code></li>
+</ul>
+
+<p>此檔案將為 addBookmark2.xul 調整樣式。</p>
+
+<h4 id="bookmarks.2FbookmarksProperties.css" name="bookmarks.2FbookmarksProperties.css">bookmarks/bookmarksProperties.css</h4>
+
+<p>這是 Firefox 2 新增的檔案，其 CSS 碼應該跟你剛才加到 addBookmark.css 裡的一樣。此檔案為 bookmarksProperties.xul 調整樣式。</p>
+
+<div class="note"><strong>註：</strong> 這個 CSS 應該會另外開一篇檔案展示範例內容，以便往後其他相關文件參照。</div>
+
+<h4 id="browser.css" name="browser.css">browser.css</h4>
+
+<p>以下是 Firefox 2 之後不再使用的樣式，應予移除：</p>
+
+<ul>
+ <li><code>#bookmarks-button:active</code></li>
+ <li><code>#copy-button:active</code></li>
+ <li><code>#cut-button:active</code></li>
+ <li><code>#downloads-button:active</code></li>
+ <li><code>#forward-button{{ mediawiki.external('buttondown=\"true\"') }}</code></li>
+ <li><code>#history-button:active</code></li>
+ <li><code>#home-button:active</code></li>
+ <li><code>#mail-button</code></li>
+ <li><code>#mail-button:active</code></li>
+ <li><code>#mail-button{{ mediawiki.external('disabled=\"true\"') }}</code></li>
+ <li><code>#mail-button{{ mediawiki.external('open=\"true\"') }}</code></li>
+ <li><code>#new-tab-button:active</code></li>
+ <li><code>#new-tab-button{{ mediawiki.external('checked=\"true\"') }}</code></li>
+ <li><code>#new-window-button:active</code></li>
+ <li><code>#new-window-button{{ mediawiki.external('checked=\"true\"') }}</code></li>
+ <li><code>#paste-button:active</code></li>
+ <li><code>#print-button:active</code></li>
+ <li><code>#reload-button:active</code></li>
+ <li><code>#stop-button:active</code></li>
+ <li><code>.messageButton</code></li>
+ <li><code>.messageImage</code></li>
+ <li><code>.messageText</code></li>
+ <li><code>browsermessage</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #bookmarks-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #copy-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #cut-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #downloads-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #history-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #home-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #mail-button</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #mail-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #mail-button{{ mediawiki.external('disabled=\"true\"') }}</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #mail-button{{ mediawiki.external('open=\"true\"') }}</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #new-tab-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #new-window-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #paste-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #print-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #reload-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #stop-button:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('mode=\"icons\"') }} .toolbarbutton-text</code></li>
+ <li><code>toolbar{{ mediawiki.external('mode=\"text\"') }} .toolbarbutton-1 &gt; .toolbarbutton-text</code></li>
+ <li><code>toolbar{{ mediawiki.external('mode=\"text\"') }} .toolbarbutton-1 &gt; stack &gt; toolbarbutton &gt; .toolbarbutton-text</code></li>
+ <li><code>toolbar{{ mediawiki.external('mode=\"text\"') }} .toolbarbutton-icon</code></li>
+</ul>
+
+<p>而以下是 Firefox 2 佈景主題應加上的樣式：</p>
+
+<ul>
+ <li><code>#back-button .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>#back-button:hover</code></li>
+ <li><code>#back-button:hover .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>#back-button:hover:active</code></li>
+ <li><code>#back-button:hover:active .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>#back-button{{ mediawiki.external('buttondown=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>#back-button{{ mediawiki.external('buttonover=\"true\"') }}</code></li>
+ <li><code>#back-button{{ mediawiki.external('buttonover=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>#back-button{{ mediawiki.external('disabled=\"true\"') }} .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>#back-button{{ mediawiki.external('open=\"true\"') }}</code></li>
+ <li><code>#bookmarks-button:hover</code></li>
+ <li><code>#bookmarks-button:hover:active</code></li>
+ <li><code>#bookmarks-button{{ mediawiki.external('checked=\"true\"') }}</code></li>
+ <li><code>#copy-button:hover</code></li>
+ <li><code>#copy-button:hover:active</code></li>
+ <li><code>#cut-button:hover</code></li>
+ <li><code>#cut-button:hover:active</code></li>
+ <li><code>#downloads-button:hover</code></li>
+ <li><code>#downloads-button:hover:active</code></li>
+ <li><code>#feed-button{{ mediawiki.external('chromedir=\"rtl\"') }}{{ mediawiki.external('feeds') }}:active</code></li>
+ <li><code>#feed-button{{ mediawiki.external('chromedir=\"rtl\"') }}{{ mediawiki.external('feeds') }}:hover</code></li>
+ <li><code>#feed-button{{ mediawiki.external('feeds') }}:active</code></li>
+ <li><code>#feed-button{{ mediawiki.external('feeds') }}:hover</code></li>
+ <li><code>#forward-button .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>#forward-button:hover</code></li>
+ <li><code>#forward-button:hover .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>#forward-button:hover:active</code></li>
+ <li><code>#forward-button:hover:active .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>#forward-button{{ mediawiki.external('buttondown=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>#forward-button{{ mediawiki.external('buttonover=\"true\"') }}</code></li>
+ <li><code>#forward-button{{ mediawiki.external('buttonover=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>#forward-button{{ mediawiki.external('disabled=\"true\"') }} .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>#go-button:hover</code></li>
+ <li><code>#go-button{{ mediawiki.external('chromedir=\"rtl\"') }}</code></li>
+ <li><code>#history-button:hover:active</code></li>
+ <li><code>#history-button:hover:active</code></li>
+ <li><code>#history-button{{ mediawiki.external('checked=\"true\"') }}</code></li>
+ <li><code>#home-button:hover</code></li>
+ <li><code>#home-button:hover:active</code></li>
+ <li><code>#new-tab-button:hover</code></li>
+ <li><code>#new-tab-button:hover:active</code></li>
+ <li><code>#new-window-button:hover</code></li>
+ <li><code>#new-window-button:hover:active</code></li>
+ <li><code>#paste-button:hover</code></li>
+ <li><code>#paste-button:hover:active</code></li>
+ <li><code>#print-button:hover</code></li>
+ <li><code>#print-button:hover:active</code></li>
+ <li><code>#reload-button:hover</code></li>
+ <li><code>#reload-button:hover:active</code></li>
+ <li><code>#searchbar{{ mediawiki.external('empty=\"true\"') }} .searchbar-textbox</code></li>
+ <li><code>#stop-button:hover</code></li>
+ <li><code>#stop-button:hover:active</code></li>
+ <li><code>#urlbar-icons-spacer</code></li>
+ <li><code>#urlbar-spacer</code></li>
+ <li><code>#urlbar{{ mediawiki.external('level=\"high\"') }} #lock-icon:active</code></li>
+ <li><code>#urlbar{{ mediawiki.external('level=\"high\"') }} #lock-icon:hover</code></li>
+ <li><code>#urlbar{{ mediawiki.external('level=\"low\"') }} #lock-icon:active</code></li>
+ <li><code>#urlbar{{ mediawiki.external('level=\"low\"') }} #lock-icon:hover</code></li>
+ <li><code>.autocomplete-treebody::-moz-tree-cell(suggesthint)</code></li>
+ <li><code>.autocomplete-treebody::-moz-tree-cell-text(suggestfirst, treecolAutoCompleteComment)</code></li>
+ <li><code>.autocomplete-treebody::-moz-tree-cell-text(suggesthint, treecolAutoCompleteComment)</code></li>
+ <li><code>.bookmark-item{{ mediawiki.external('livemark') }}</code></li>
+ <li><code>.openintabs-menuitem</code></li>
+ <li><code>.toolbarbutton-icon</code></li>
+ <li><code>.toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button:hover .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button:hover:active .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button{{ mediawiki.external('buttondown=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button{{ mediawiki.external('buttonover=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #back-button{{ mediawiki.external('disabled=\"true\"') }} .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #bookmarks-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #bookmarks-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #copy-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #copy-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #cut-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #cut-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #downloads-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #downloads-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button:hover .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button:hover:active .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button{{ mediawiki.external('buttondown=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button{{ mediawiki.external('buttonover=\"true\"') }} &gt; .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #forward-button{{ mediawiki.external('disabled=\"true\"') }} .toolbarbutton-menubutton-dropmarker</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #history-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #history-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #home-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #home-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #home-button{{ mediawiki.external('disabled=\"true\"') }}</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #new-tab-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #new-tab-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #new-window-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #new-window-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #paste-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #paste-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #print-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #print-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #reload-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #reload-button:hover:active</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #stop-button:hover</code></li>
+ <li><code>toolbar{{ mediawiki.external('iconsize=\"small\"') }} #stop-button:hover:active</code></li>
+ <li><code>toolbarbutton.bookmark-item-microsummarized</code></li>
+</ul>
+
+<p>可能還有其他的樣式也要一併修改一下。</p>
+
+<h4 id="searchbar.css" name="searchbar.css">searchbar.css</h4>
+
+<p>以下是 Firefox 2 不再使用的樣式，應予移除：</p>
+
+<ul>
+ <li><code>.searchbar-dropmarker</code></li>
+</ul>
+
+<p>以下是 Firefox 2 應加上的樣式：</p>
+
+<ul>
+ <li><code>#search-container{{ mediawiki.external('chromedir=\"rtl\"') }} .search-go-button</code></li>
+ <li><code>#search-container{{ mediawiki.external('chromedir=\"rtl\"') }} .searchbar-engine-button</code></li>
+ <li><code>.search-go-button</code></li>
+ <li><code>.search-go-button:hover</code></li>
+ <li><code>.search-go-button:hover:active</code></li>
+ <li><code>.search-go-button{{ mediawiki.external('disabled=\"true\"') }}</code></li>
+ <li><code>.searchbar-engine-button</code></li>
+ <li><code>.searchbar-engine-button:hover</code></li>
+ <li><code>.searchbar-engine-button{{ mediawiki.external('addengines=\"true\"') }}</code></li>
+ <li><code>.searchbar-engine-button{{ mediawiki.external('open=\"true\"') }}</code></li>
+ <li><code>.searchbar-engine-menuitem{{ mediawiki.external('selected=\"true\"') }} &gt; .menu-iconic-text</code></li>
+ <li><code>.searchbar-left</code></li>
+</ul>
+
+<p>同樣的，你可能也需要更動其他部分。</p>
+
+<h4 id="preferences.2Fpreferences.css" name="preferences.2Fpreferences.css">preferences/preferences.css</h4>
+
+<p>以下是 Firefox 2 不再使用的樣式，應予移除：</p>
+
+<ul>
+ <li><code>#browserStartupHomepage</code></li>
+ <li><code>#browserStartupHomepage</code></li>
+ <li><code>#paneDownloads description</code></li>
+ <li><code>#paneGeneral description</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneDownloads') }}</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneDownloads') }}:active</code></li>
+</ul>
+
+<p>以下是 Firefox 2 佈景主題應加上的樣式：</p>
+
+<ul>
+ <li><code>#paneContent description</code></li>
+ <li><code>#paneMain description</code></li>
+ <li><code>#paneSecurity description</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneAdvanced') }}:hover</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneAdvanced') }}{{ mediawiki.external('selected=\"true\"') }}</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneContent') }}:hover</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneContent') }}{{ mediawiki.external('selected=\"true\"') }}</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneFeeds') }}</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneFeeds') }}:active</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneFeeds') }}:hover</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneFeeds') }}{{ mediawiki.external('selected=\"true\"') }}</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneGeneral') }}:hover</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneGeneral') }}{{ mediawiki.external('selected=\"true\"') }}</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneMain') }}</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneMain') }}:active</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneMain') }}:hover</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneMain') }}{{ mediawiki.external('selected=\"true\"') }}</code></li>
+ <li><code>radio{{ mediawiki.external('pane=panePrivacy') }}:hover</code></li>
+ <li><code>radio{{ mediawiki.external('pane=panePrivacy') }}{{ mediawiki.external('selected=\"true\"') }}</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneSecurity') }}</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneSecurity') }}:active</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneSecurity') }}:hover</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneSecurity') }}{{ mediawiki.external('selected=\"true\"') }}</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneTabs') }}:hover</code></li>
+ <li><code>radio{{ mediawiki.external('pane=paneTabs') }}{{ mediawiki.external('selected=\"true\"') }}</code></li>
+</ul>
+
+<p>你依然可能得修改其他部分。</p>
+
+<h4 id="feeds.2FaddFeedReader.css" name="feeds.2FaddFeedReader.css">feeds/addFeedReader.css</h4>
+
+<p>這是 Firefox 2 中的新檔案，用於調整新增消息來源閱讀工具視窗樣式，即 browser/feeds/addFeedReader.xul。</p>
+
+<ul>
+ <li><code>#imageBox</code>
+
+  <ul>
+   <li>顯示消息來源圖示的區塊。</li>
+  </ul>
+ </li>
+ <li><code>#content</code>
+  <ul>
+   <li>視窗內容的樣式資訊。</li>
+  </ul>
+ </li>
+ <li><code>#siteLabel</code>
+  <ul>
+   <li>網站文字的樣式。</li>
+  </ul>
+ </li>
+</ul>
+
+<h4 id="feeds.2Fsubscribe.css" name="feeds.2Fsubscribe.css">feeds/subscribe.css</h4>
+
+<p>這是 Firefox 2 的新檔案，用以調整訂閱消息來源視窗的樣式，即 browser/feeds/subscribe.xhtml。</p>
+
+<ul>
+ <li><code>#application</code></li>
+ <li><code>#feedBody</code></li>
+ <li><code>#feedChangeSubscribeOptions</code></li>
+ <li><code>#feedError</code></li>
+ <li><code>#feedHeader</code></li>
+ <li><code>#feedHeader{{ mediawiki.external('firstrun=\"true\"') }}</code></li>
+ <li><code>#feedHeader{{ mediawiki.external('firstrun=\"true\"') }} #feedIntroText</code></li>
+ <li><code>#feedHeader{{ mediawiki.external('firstrun=\"true\"') }} #feedSubscribeLine</code></li>
+ <li><code>#feedIntroText</code></li>
+ <li><code>#feedSubscribeDoneChangingOptions</code></li>
+ <li><code>#feedSubscribeHandleText</code></li>
+ <li><code>#feedSubscribeHandler</code></li>
+ <li><code>#feedSubscribeLine</code></li>
+ <li><code>#feedSubscribeOptions</code></li>
+ <li><code>#feedSubscribeOptionsGroup</code></li>
+ <li><code>#feedSubscribeOptionsGroupTitle</code></li>
+ <li><code>#feedTitleContainer</code></li>
+ <li><code>#feedTitleImage</code></li>
+ <li><code>#feedTitleLink</code></li>
+ <li><code>#readerContainer</code></li>
+ <li><code>#readerGroup</code></li>
+ <li><code>#readers</code></li>
+ <li><code>#readers &gt; listitem</code></li>
+ <li><code>.feedEntryContent</code></li>
+ <li><code>.feedSubscribeButton</code></li>
+ <li><code>.feedSubscribeButton .button-icon</code></li>
+ <li><code>.feedSubscribeLink</code></li>
+ <li><code>.feedSubscribeLinkBox</code></li>
+ <li><code>.field</code></li>
+ <li><code>.link</code></li>
+ <li><code>.link:hover:active</code></li>
+ <li><code>.plain</code></li>
+ <li><code>.plain &gt; .button-box</code></li>
+ <li><code>.plain:focus &gt; .button-box</code></li>
+ <li><code>.styleLessBorderLess</code></li>
+</ul>
+
+<p>預設佈景主題中也含有 <code>a{{ mediawiki.external('href') }} img</code>、<code>body</code>、<code>h1</code>、<code>h2</code> 及 <code>html</code> 等樣式規則。</p>
+
+<h4 id="safebrowser.2Fbrowser-protection.css" name="safebrowser.2Fbrowser-protection.css">safebrowser/browser-protection.css</h4>
+
+<p>這個 Firefox 2 的新檔案用以調整偵測詐騙網站功能的樣式。下列樣式一定要設定好、在使用者碰上疑似詐騙網站時提醒他們：</p>
+
+<ul>
+ <li><code>#safebrowsing-dim-area-canvas</code></li>
+ <li><code>#safebrowsing-page-canvas</code></li>
+ <li><code>#safebrowsing-palm-close</code></li>
+ <li><code>#safebrowsing-palm-close-container</code></li>
+ <li><code>#safebrowsing-palm-google-logo</code></li>
+ <li><code>#safebrowsing-palm-message</code></li>
+ <li><code>#safebrowsing-palm-message-actionbox</code></li>
+ <li><code>#safebrowsing-palm-message-content</code></li>
+ <li><code>#safebrowsing-palm-message-tail</code></li>
+ <li><code>#safebrowsing-palm-message-tail-container</code></li>
+ <li><code>#safebrowsing-palm-message-titlebox</code></li>
+ <li><code>.safebrowsing-palm-bigtext</code></li>
+ <li><code>.safebrowsing-palm-fixed-width</code></li>
+ <li><code>.safebrowsing-palm-paragraph</code></li>
+ <li><code>.safebrowsing-palm-smalltext</code></li>
+</ul>
+
+<p>而以下樣式則調整碰上疑似詐騙網站時網址列的小圖示，安全跟警告各有不同：</p>
+
+<ul>
+ <li><code>#safebrowsing-urlbar-icon</code></li>
+ <li><code>#safebrowsing-urlbar-icon{{ mediawiki.external('level=\"safe\"') }}</code></li>
+ <li><code>#safebrowsing-urlbar-icon{{ mediawiki.external('level=\"warn\"') }}</code></li>
+</ul>
+
+<h4 id="engineManager.css" name="engineManager.css">engineManager.css</h4>
+
+<p>此檔案為 Firefox 2 新增，要調整的樣式如下：</p>
+
+<ul>
+ <li><code>#engineList treechildren::-moz-tree-image(engineName)</code></li>
+</ul>
+
+<h3 id="Changes_in_global" name="Changes_in_global">Changes in global</h3>
+
+<h4 id="about.css" name="about.css">about.css</h4>
+
+<p>此檔案為 Firefox 2 新增、用以調整「關於 Mozilla Firefox」視窗的樣式。檔案中至少要有下列樣式資訊：</p>
+
+<ul>
+ <li><code>#aboutLogoContainer</code></li>
+ <li><code>#aboutPageContainer</code></li>
+ <li><code>#version</code></li>
+</ul>
+
+<p>預設的佈景主題則額外調整了 <code>body</code>、<code>html</code>、<code>img</code>、<code>ul</code> 及 <code>ul &gt; li</code>。</p>
+
+<h4 id="browser.css_2" name="browser.css_2">browser.css</h4>
+
+<p>Firefox 2 已不使用下列樣式，應予移除：</p>
+
+<ul>
+ <li><code>tab:focus</code></li>
+ <li><code>tab{{ mediawiki.external('beforeselected=\"true\"') }} &gt; .tab-image-right</code></li>
+ <li><code>tab{{ mediawiki.external('selected=\"true\"') }} &gt; .tab-image-left</code></li>
+ <li><code>tab{{ mediawiki.external('selected=\"true\"') }} &gt; .tab-image-middle</code></li>
+ <li><code>tab{{ mediawiki.external('selected=\"true\"') }} &gt; .tab-image-right</code></li>
+</ul>
+
+<p>而以下則是 Firefox 2 佈景主題該新增的樣式：</p>
+
+<ul>
+ <li><code>.alltabs-item &gt; .menu-iconic-left &gt; .menu-iconic-icon</code></li>
+ <li><code>.alltabs-item{{ mediawiki.external('busy') }} &gt; .menu-iconic-left &gt; .menu-iconic-icon</code></li>
+ <li><code>.alltabs-item{{ mediawiki.external('selected=\"true\"') }}</code></li>
+ <li><code>.tab-close-button</code></li>
+ <li><code>.tab-close-button &gt; .toolbarbutton-icon</code></li>
+ <li><code>.tab-close-button-placeholder</code></li>
+ <li><code>.tab-close-button:hover</code></li>
+ <li><code>.tab-close-button:hover:active</code></li>
+ <li><code>.tabbrowser-arrowscrollbox &gt; .scrollbutton-down</code></li>
+ <li><code>.tabbrowser-arrowscrollbox &gt; .scrollbutton-down:hover</code></li>
+ <li><code>.tabbrowser-arrowscrollbox &gt; .scrollbutton-up</code></li>
+ <li><code>.tabbrowser-arrowscrollbox &gt; .scrollbutton-up:hover</code></li>
+ <li><code>.tabbrowser-tab &gt; .tab-close-button</code></li>
+ <li><code>.tabbrowser-tab:not({{ mediawiki.external('selected=\"true\"') }}) &gt; .tab-close-button</code></li>
+ <li><code>.tabbrowser-tab:not({{ mediawiki.external('selected=\"true\"') }}):hover &gt; .tab-close-button</code></li>
+ <li><code>.tabbrowser-tab{{ mediawiki.external('selected=\"true\"') }} &gt; .tab-close-button</code></li>
+ <li><code>.tabbrowser-tab{{ mediawiki.external('selected=\"true\"') }} &gt; .tab-close-button:hover</code></li>
+ <li><code>.tabbrowser-tab{{ mediawiki.external('selected=\"true\"') }} &gt; .tab-close-button:hover:active</code></li>
+ <li><code>.tabbrowser-tabs{{ mediawiki.external('overflow=\"true\"') }} .tabs-alltabs-box</code></li>
+ <li><code>.tabs-alltabs-box</code></li>
+ <li><code>.tabs-alltabs-box:hover</code></li>
+ <li><code>.tabs-alltabs-box{{ mediawiki.external('flash=\"true\"') }}</code></li>
+ <li><code>tab &gt; .tab-image-left</code></li>
+ <li><code>tab &gt; .tab-image-middle</code></li>
+ <li><code>tab &gt; .tab-image-middle &gt; .tab-text</code></li>
+ <li><code>tab &gt; .tab-image-right</code></li>
+ <li><code>tab:focus &gt; .tab-image-middle &gt; .tab-text</code></li>
+ <li><code>tab:hover:not({{ mediawiki.external('selected=\"true\"') }}) &gt; .tab-image-left</code></li>
+ <li><code>tab:hover:not({{ mediawiki.external('selected=\"true\"') }}) &gt; .tab-image-middle</code></li>
+ <li><code>tab:hover:not({{ mediawiki.external('selected=\"true\"') }}) &gt; .tab-image-right</code></li>
+ <li><code>tab:not({{ mediawiki.external('selected=\"true\"') }}) &gt; .tab-image-left</code></li>
+ <li><code>tab:not({{ mediawiki.external('selected=\"true\"') }}) &gt; .tab-image-middle</code></li>
+ <li><code>tab{{ mediawiki.external('selected=\"true\"') }} .tab-image-middle &gt; .tab-text</code></li>
+</ul>
+
+<p>除此之外，依然可能要調整相關的樣式。</p>
+
+<h4 id="menu.css" name="menu.css">menu.css</h4>
+
+<p>這是 Firefox 2 用不上的樣式，應予刪除：</p>
+
+<ul>
+ <li><code>menulist &gt; menupopup &gt; menuitem{{ mediawiki.external('_moz-menuactive=\"true\"') }}</code></li>
+</ul>
+
+<p>而 Firefox 2 佈景主題還應該加上下列樣式：</p>
+
+<ul>
+ <li><code>.menu-iconic-icon</code></li>
+ <li><code>menubar &gt; menu</code></li>
+ <li><code>menubar &gt; menu{{ mediawiki.external('_moz-menuactive=\"true\"') }}{{ mediawiki.external('open=\"true\"') }}</code></li>
+ <li><code>menuitem{{ mediawiki.external('type=\"checkbox\"') }} &gt; .menu-iconic-left</code></li>
+ <li><code>menuitem{{ mediawiki.external('type=\"radio\"') }} &gt; .menu-iconic-left</code></li>
+</ul>
+
+<p>若有相關樣式，可能得另外調整。</p>
+
+<h4 id="notification.css" name="notification.css">notification.css</h4>
+
+<p>此外 Firefox 2 新增的檔案，用以調整阻擋彈出視窗、提示安裝 plugin 等的訊息列樣式。至少應定義下列樣式：</p>
+
+<ul>
+ <li><code>.messageButton</code></li>
+ <li><code>.messageCloseButton</code></li>
+ <li><code>.messageImage</code></li>
+ <li><code>.messageText</code></li>
+ <li><code>.notification-inner</code></li>
+ <li><code>notification</code></li>
+ <li><code>notification{{ mediawiki.external('type=\"info\"') }}</code></li>
+ <li><code>notification{{ mediawiki.external('type=\"warning\"') }}</code></li>
+ <li><code>notification{{ mediawiki.external('type=\"critical\"') }}</code></li>
+</ul>
+
+<h4 id="scrollbox.css" name="scrollbox.css">scrollbox.css</h4>
+
+<p>請為 Firefox 2 佈景主題的這個檔案加上下列樣式：</p>
+
+<ul>
+ <li><code>.autorepeatbutton-down{{ mediawiki.external('disabled=\"true\"') }}</code></li>
+ <li><code>.autorepeatbutton-down{{ mediawiki.external('orient=\"horizontal\"') }}</code></li>
+ <li><code>.autorepeatbutton-down{{ mediawiki.external('orient=\"horizontal\"') }}{{ mediawiki.external('disabled=\"true\"') }}</code></li>
+ <li><code>.autorepeatbutton-up{{ mediawiki.external('disabled=\"true\"') }}</code></li>
+ <li><code>.autorepeatbutton-up{{ mediawiki.external('orient=\"horizontal\"') }}</code></li>
+ <li><code>.autorepeatbutton-up{{ mediawiki.external('orient=\"horizontal\"') }}{{ mediawiki.external('disabled=\"true\"') }}</code></li>
+ <li><code>.scrollbutton-down</code></li>
+ <li><code>.scrollbutton-down &gt; .toolbarbutton-text</code></li>
+ <li><code>.scrollbutton-down{{ mediawiki.external('disabled=\"true\"') }}</code></li>
+ <li><code>.scrollbutton-down{{ mediawiki.external('orient=\"horizontal\"') }}</code></li>
+ <li><code>.scrollbutton-down{{ mediawiki.external('orient=\"horizontal\"') }}{{ mediawiki.external('disabled=\"true\"') }}</code></li>
+ <li><code>.scrollbutton-up</code></li>
+ <li><code>.scrollbutton-up &gt; .toolbarbutton-text</code></li>
+ <li><code>.scrollbutton-up{{ mediawiki.external('disabled=\"true\"') }}</code></li>
+ <li><code>.scrollbutton-up{{ mediawiki.external('orient=\"horizontal\"') }}</code></li>
+ <li><code>.scrollbutton-up{{ mediawiki.external('orient=\"horizontal\"') }}{{ mediawiki.external('disabled=\"true\"') }}</code></li>
+</ul>
+
+<p>You may wish to make changes to other styles as well.</p>
+
+<ul>
+ <li><code>toolbar{{ mediawiki.external('mode=\"icons\"') }} .toolbarbutton-text</code></li>
+ <li><code>toolbar{{ mediawiki.external('mode=\"text\"') }} .toolbarbutton-1 &gt; .toolbarbutton-text</code></li>
+ <li><code>toolbar{{ mediawiki.external('mode=\"text\"') }} .toolbarbutton-1 &gt; stack &gt; toolbarbutton &gt; .toolbarbutton-text</code></li>
+ <li><code>toolbar{{ mediawiki.external('mode=\"text\"') }} .toolbarbutton-icon</code></li>
+</ul>
+
+<p>或許也要更動其他相關的部分。</p>
+
+<h3 id="mozapps_.E6.9B.B4.E5.8B.95.E8.99.95" name="mozapps_.E6.9B.B4.E5.8B.95.E8.99.95">mozapps 更動處</h3>
+
+<h4 id="extensions.2Fabout.css" name="extensions.2Fabout.css">extensions/about.css</h4>
+
+<p>Firefox 2 已經用不著以下樣式了，應予刪除：</p>
+
+<ul>
+ <li><code>#contributorsBox</code></li>
+ <li><code>#creatorBox</code></li>
+ <li><code>#extensionContributors</code></li>
+ <li><code>#extensionContributors</code></li>
+ <li><code>#extensionCreatorLabel</code></li>
+</ul>
+
+<p>此外應新增下列樣式：</p>
+
+<ul>
+ <li><code>.indent</code></li>
+ <li><code>.sectionTitle</code></li>
+</ul>
+
+<p>其他關聯的樣式也可能需要變動。</p>
+
+<h4 id="extensions.2Fupdate.css" name="extensions.2Fupdate.css">extensions/update.css</h4>
+
+<p>Firefox 2 已經用不著以下樣式了，應予刪除：</p>
+
+<ul>
+ <li><code>#foundList</code></li>
+ <li><code>#statusbar-updates</code></li>
+ <li><code>.updateCategoryBox</code></li>
+ <li><code>.updateCategoryContent</code></li>
+ <li><code>.updateCategoryIcon</code></li>
+ <li><code>.updateCategoryLabel{{ mediawiki.external('selected=\"true\"') }}</code></li>
+ <li><code>.updateIcon</code></li>
+ <li><code>.updateIcon{{ mediawiki.external('severity=\"0\"') }}</code></li>
+ <li><code>.updateIcon{{ mediawiki.external('severity=\"1\"') }}</code></li>
+ <li><code>.updateIcon{{ mediawiki.external('severity=\"2\"') }}</code></li>
+ <li><code>.updateIndicator &gt; label</code></li>
+ <li><code>.updateIndicator{{ mediawiki.external('updateCount=\"0\"') }}</code></li>
+ <li><code>.updateItemChecked</code></li>
+ <li><code>.updateItemChecked .checkbox-label-box</code></li>
+ <li><code>.updateItemFromLabel</code></li>
+ <li><code>.updateItemIcon</code></li>
+ <li><code>.updateItemIcon</code></li>
+ <li><code>.updateItemName</code></li>
+ <li><code>.updateItemNameRow</code></li>
+ <li><code>.updateItemURL</code></li>
+ <li><code>.warning</code></li>
+ <li><code>radio{{ mediawiki.external('type=\"update-type\"') }}</code></li>
+ <li><code>radiogroup{{ mediawiki.external('type=\"update-types\"') }}</code></li>
+ <li><code>toolbarbutton{{ mediawiki.external('type=\"updates\"') }}</code></li>
+ <li><code>toolbarbutton{{ mediawiki.external('type=\"updates\"') }} &gt; .toolbarbutton-icon</code></li>
+ <li><code>toolbarbutton{{ mediawiki.external('type=\"updates\"') }}{{ mediawiki.external('severity=\"0\"') }} &gt; .toolbarbutton-icon</code></li>
+ <li><code>toolbarbutton{{ mediawiki.external('type=\"updates\"') }}{{ mediawiki.external('severity=\"1\"') }} &gt; .toolbarbutton-icon</code></li>
+ <li><code>toolbarbutton{{ mediawiki.external('type=\"updates\"') }}{{ mediawiki.external('severity=\"2\"') }} &gt; .toolbarbutton-icon</code></li>
+ <li><code>toolbarbutton{{ mediawiki.external('type=\"updates\"') }}{{ mediawiki.external('updateCount=\"0\"') }}</code></li>
+ <li><code>updateitem</code></li>
+</ul>
+
+<p>此外應新增下列樣式：</p>
+
+<ul>
+ <li><code>.alertBox</code></li>
+ <li><code>.throbber</code></li>
+</ul>

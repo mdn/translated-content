@@ -1,0 +1,138 @@
+---
+title: 準備第一次建置 B2G
+slug: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+translation_of: Archive/B2G_OS/Preparing_for_your_first_B2G_build
+---
+<p>在開始建置 B2G 前，要先複製整個倉儲 (repository)並且作編譯的設定。這篇文章說明要怎麼做。</p>
+
+<h2 id="複製_B2G_倉儲repository">複製 B2G 倉儲(repository)</h2>
+
+<p>在第一次編譯前，要做的第一步就是複製 B2G 的倉儲(repository)。這個步驟將不會把所有東西抓下來！相反地，他會抓 B2G 建置系統和安裝工具。B2G 大部分的程式碼都在主要的 Mozilla <a href="/en/Mercurial" title="en/Mercurial">Mercurial</a> 倉儲。</p>
+
+<p>用 git 來複製倉儲：</p>
+
+<pre>git clone git://github.com/mozilla-b2g/B2G.git</pre>
+
+<p>複製了之後(應該會花個幾分鐘)，<code>cd</code> 到 B2G 的目錄：</p>
+
+<pre>cd B2G
+</pre>
+
+<h2 id="複製_B2G_樹tree到一台新機器">複製 B2G 樹(tree)到一台新機器</h2>
+
+<p>當您有一台新電腦時(超幸運的！)，您會覺得把 B2G tree 從一台電腦轉移到另一台電腦的話，生活會簡單很多。</p>
+
+<p>將您就電腦的磁碟掛上(mount)到新的電腦，然後敲入下面的指令，就可以做到：</p>
+
+<pre>rsync -a <em>source</em>/ <em>dest</em>/
+</pre>
+
+<p><code>source </code>是整個原始碼樹(source tree)的完整路徑 (包括後面的斜線)，而 <code>dest</code> 是您要複製的目的位置 (同樣也包含後面的斜線，它很重要！)。</p>
+
+<p>這樣做之後，您可以跳過這篇文章剩下的部份，然後直接跳到的「<a href="/en/Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko">建置</a>」部份。</p>
+
+<h2 id="設定專屬於您的行動裝置的_B2G">設定專屬於您的行動裝置的 B2G</h2>
+
+<div class="warning"><strong>重要</strong>：請注意只支援 <strong>Android 4</strong> (aka. <strong>Ice Cream Sandwich</strong>) 的行動裝置。請確認您的手機運作的真的是 ICS，否則這個步驟很可能會失敗於某些非 Nexus 裝置的驅動程式。另外，如果您必須要將行動裝置燒成 ICS，請留意有些 USB hubs 和燒錄工具不相容，因此您可能需要將行動裝置連接到內建的 USB port。</div>
+
+<p>擷取了核心的 B2G 建置系統之後，您需要為了要安裝的行動裝置作設定。您可以使用 <code>config.sh</code> 工具來擷取支援的行動裝置列表，如下：</p>
+
+<pre>./config.sh
+</pre>
+
+<p>這會顯示支援的行動裝置列表；舉例來說：</p>
+
+<pre>Usage: ./config.sh [-cdflnq] (device name)
+Flags are passed through to |./repo sync|.
+
+Valid devices to configure are:
+- galaxy-s2
+- galaxy-nexus
+- nexus-4
+- nexus-4-kk
+- nexus-5
+- nexus-5-l
+- nexus-s
+- nexus-s-4g
+- flo (Nexus 7 2013)
+- otoro
+- unagi
+- inari
+- keon
+- peak
+- hamachi
+- helix
+- tarako
+- dolphin
+- dolphin-512
+- pandaboard
+- vixen
+- flatfish
+- flame
+- flame-kk
+- flame-l
+- rpi (Revision B)
+- emulator
+- emulator-jb
+- emulator-kk
+- emulator-l
+- emulator-x86
+- emulator-x86-jb
+- emulator-x86-kk
+- emulator-x86-l
+&gt; Sony Xperia devices
+- aries (Z3 Compact KK)
+- aries-l (Z3 Compact L)
+- leo-kk (Z3 KK)
+- leo-l (Z3 L)
+- scorpion-l (Z3 Tablet Compact L)
+- sirius-l (Z2 L)
+- tianchi-l (T2U L)
+- flamingo-l (E3 L)</pre>
+
+<p>如果您的行動裝置沒被列出，您應該馬上停止來幫忙將 B2G 移植到您的行動裝置，或是等到某個人移植完之後再安裝。我們當然比較希望您可以幫忙移植！</p>
+
+<div class="note">注意：如果因為任何原因您想要編譯某個版本的 Gecko，請在您著手之前先看 <a href="#Building_against_a_custom_Gecko">Building against a custom Gecko</a>。</div>
+
+<h3 id="設定給行動裝置">設定給行動裝置</h3>
+
+<p>首先，連接您的裝置；設定的過程會需要存取它。</p>
+
+<p>如果您的裝置有被列出，您可以再執行一次 <code>config.sh 來開始設定的程序，這次需要指名您的行動裝置的名字。舉例來說，如果要編譯給 Samsung Google Nexus S的話，您要打：</code></p>
+
+<pre>./config.sh nexus-s
+</pre>
+
+<p>在設定一開始的附近您可能會需要設定使用顏色的選項，而在這之後設定程序會繼續下去。接著可以去喝個咖啡休息一下，因為這個時候您會第一次把建置 Boot to Gecko 中所有需要的程式碼都抓下來。</p>
+
+<p>如果您的手機不再使用 Android 且 B2G tree 還沒裝到手機上，而您又有遵照前幾頁所說、聰明地作了一份 <code>/system</code> 磁區的備份的話，您可以這樣使用它：</p>
+
+<pre>ANDROIDFS_DIR=&lt;absolute path to parent dir of system dir&gt; ./config.sh &lt;target&gt;
+</pre>
+
+<h3 id="設定來建置模擬器">設定來建置模擬器</h3>
+
+<p>如果您要編譯模擬器的話，就需要指定 "emulator" 來使用 ARM 的模擬器，或是 "emulator-x86" 來編譯 x86 模擬器。後者比較快，但也因此在表現實際行動裝置上較不準確。<br>
+ <br>
+ 舉例來說，您要像下面這樣設定來編譯 ARM 模擬器：</p>
+
+<pre>./config.sh emulator
+</pre>
+
+<p>在設定一開始的附近您可能會需要設定使用顏色的選項，而在這之後設定程序會繼續下去。接著可以去喝個咖啡休息一下，因為這個時候您會第一次把建置 Boot to Gecko 中所有需要的程式碼都抓下來。</p>
+
+<h2 id="編譯客製的_Gecko">編譯客製的 Gecko</h2>
+
+<p>可能您會想要或需要以好幾種版本的 Gecko 來編譯 Boot to Gecko (manifest 中預設是一種)。您可以在您抓倉儲 (在上述的 config.sh 之前)，藉由編輯 .userconfig 來做到這件事情。舉例來說，如果您要根據 mozilla-central 來編譯：</p>
+
+<pre>GECKO_PATH=/path/to/mozilla-central
+GECKO_OBJDIR=/path/to/mozilla-central/objdir-gonk
+</pre>
+
+<div class="note">
+<p>注意： 如果是在 Mac OS X 下客製化編譯的話，檔案系統本身會注意 mozilla-central 的大小寫。</p>
+</div>
+
+<p>您可以參考 <a href="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file" title="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file">客製化 .userconfig 設定檔</a> 來客製化更多東西。</p>
+
+<p>接著，<a href="/en/Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Building_Boot_to_Gecko">開始編譯</a></p>

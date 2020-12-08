@@ -1,0 +1,63 @@
+---
+title: StopIteration
+slug: Archive/Web/StopIteration
+tags:
+  - JavaScript
+  - застарілий
+translation_of: Archive/Web/StopIteration
+---
+<div class="warning"><strong>Нестандартний.</strong> Об'єкт <code><strong>StopIteration</strong></code> був особливою функціональністю SpiderMonkey та був прибраний у Firefox 58+. Для використання у майбутньому розгляньте цикли <a href="/uk/docs/Web/JavaScript/Reference/Statements/for...of">for..of</a> та <a href="/uk/docs/Web/JavaScript/Reference/Протоколи_перебору">протоколи перебору</a>.</div>
+
+<p>Об'єкт <code><strong>StopIteration</strong></code> використовувався для повідомлення про закінчення перебору у протоколі застарілого ітератора. Не використовуйте цю давню функціональність.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">StopIteration</pre>
+
+<h2 id="Опис">Опис</h2>
+
+<p><code>StopIteration</code> є частиною протоколу застарілого ітератора та буде прибраний одночасно із застарілим ітератором та застарілим генератором.</p>
+
+<h2 id="Приклади">Приклади</h2>
+
+<p><code>StopIteration</code> викидається об'єктом <a href="/uk/docs/Web/JavaScript/Reference/Global_Objects/Iterator"><code>Iterator</code></a>.</p>
+
+<pre class="brush: js">var a = {
+  x: 10,
+  y: 20
+};
+var iter = Iterator(a);
+console.log(iter.next()); // ["x", 10]
+console.log(iter.next()); // ["y", 20]
+console.log(iter.next()); // викидає StopIteration
+</pre>
+
+<p>Викидання об'єкта <code>StopIteration</code>.</p>
+
+<pre class="brush: js">function f() {
+  yield 1;
+  yield 2;
+  throw StopIteration;
+  yield 3; // це не виконується.
+}
+
+for (var n in f()) {
+  console.log(n);   // 1
+                    // 2
+}
+</pre>
+
+<h2 id="Специфікації">Специфікації</h2>
+
+<p>Нестандартний. Не є частиною жодних актуальних стандартів.</p>
+
+<h2 id="Сумісність_з_веб-переглядачами">Сумісність з веб-переглядачами</h2>
+
+<p>Не підтримується. Використовувався у Firefox у версіях до Firefox 57.</p>
+
+<h2 id="Див._також">Див. також</h2>
+
+<ul>
+ <li><a href="/uk/docs/Web/JavaScript/Guide/Iterators_and_Generators">Ітератори та генератори</a></li>
+ <li><a href="/uk/docs/Web/JavaScript/Reference/Global_Objects/Iterator">Iterator</a></li>
+</ul>

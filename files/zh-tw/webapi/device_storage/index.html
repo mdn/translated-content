@@ -1,0 +1,228 @@
+---
+title: Device Storage API
+slug: WebAPI/Device_Storage
+translation_of: Archive/B2G_OS/API/Device_Storage_API
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('privileged') }}</p>
+<h2 id="摘要">摘要</h2>
+<p>Device Storage API 可存取 Web Apps 中的檔案系統。存取檔案系統可能牽涉極高的安全敏感度，所以此 API 僅可用於 Privileged Apps。</p>
+<div class="note">
+  <p><strong>注意：</strong>若裝置儲存媒體的存取速度極慢，可能是受限於實體層 (Physical level) 的關係。在許多情況下，若以 <a href="https://developer.mozilla.org/en-US/docs/IndexedDB" title="/en-US/docs/IndexedDB">IndexedDB</a> 資料庫儲存檔案，取代實體的裝置儲存媒體，將可達到更高的速度。</p>
+</div>
+<h2 id="存取儲存媒體">存取儲存媒體</h2>
+<h3 id="進入點">進入點</h3>
+<p>若使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.getDeviceStorage" title="/en-US/docs/Web/API/window.navigator.getDeviceStorage"><code>navigator.getDeviceStorage()</code></a> 函式，則可存取儲存區。此函式所接受的字串參數，可代表所要存取的儲存媒體名稱。函式回傳的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage" title="/en-US/docs/Web/API/DeviceStorage"><code>DeviceStorage</code></a> 物件，可存取相關的儲存區。</p>
+<p>Firefox OS 提供下列儲存名稱：</p>
+<ul>
+  <li><code>apps：</code><code>此儲存範圍可用以儲存 </code>Apps<code> 所需的使用者資料。因為這些屬於重要資料，所以若要存取此儲存</code>區<code>，將需要額外的授權，且僅限 </code>Certified Apps。</li>
+  <li><code>music</code>：音樂與音訊檔案的儲存區。</li>
+  <li><code>pictures</code>：圖片檔案的儲存區。</li>
+  <li><code>sdcard</code><code>：裝置的</code> SD 記憶卡儲存區。</li>
+  <li><code>videos</code><code>：視訊檔案的儲存區。</code></li>
+</ul>
+<pre class="brush: js">var pics = navigator.getDeviceStorage('pictures');</pre>
+<p>為了要能使用所有儲存區，Apps 必須在自己的 manifest 檔案中載明這些儲存區。舉例來說，如果 Apps 要存取 <code>sdcard</code> 儲存區，則其 manifest 檔案中必須具備「<code>device-storage:sdcard」的授權。</code></p>
+<pre class="brush: js">"permissions": {
+  "device-storage:videos":{ "access": "readonly" },
+  "device-storage:pictures":{ "access": "readwrite" }
+}</pre>
+<h2 id="使用儲存媒體">使用儲存媒體</h2>
+<p>只要 Apps 能夠存取儲存區，就可在該儲存區中新增、取得、移除檔案。</p>
+<h3 id="新增檔案">新增檔案</h3>
+<p>透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage.addNamed" title="/en-US/docs/Web/API/DeviceStorage.addNamed"><code>addNamed</code></a> 或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage.add" title="/en-US/docs/Web/API/DeviceStorage.add"><code>add</code></a> 函式，即可新增檔案。前者可在儲存檔案時，設定明確的名稱；而後者則可自動建立名稱。這 2 組函式均屬非同步函式，並將回傳 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRequest" title="/en-US/docs/Web/API/DOMRequest"><code>DOMRequest</code></a> 物件以處理作業的 <code>success</code> 或 <code>error</code> 狀態。因為在實體層上讀/寫檔案極為緩慢，所以此作業特別重要。</p>
+<p>這 2 組函式均以 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" title="/en-US/docs/Web/API/Blob"><code>Blob</code></a> 作為其第一參數。此物件將於背景之下轉為檔案並儲存起來。當建立 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" title="/en-US/docs/Web/API/Blob"><code>Blob</code></a> 物件時將強制給予其 <code>type，而因為某些儲存區會因類型而有所限制，所以此</code> MIME 類型格外重要：</p>
+<ul>
+  <li><code>music</code> 僅接受「具備有效音訊 MIME 類型」的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" title="/en-US/docs/Web/API/Blob"><code>Blob</code></a></li>
+  <li><code>pictures</code> 僅接受「具備有效圖像 MIME 類型」的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" title="/en-US/docs/Web/API/Blob"><code>Blob</code></a></li>
+  <li><code>videos</code> 僅接受「具備有效視訊 MIME 類型」的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob" title="/en-US/docs/Web/API/Blob"><code>Blob</code></a></li>
+</ul>
+<pre class="brush: js">var sdcard = navigator.getDeviceStorage("sdcard");
+var file   = new Blob(["This is a text file."], {type: "text/plain"});
+
+var request = sdcard.addNamed(file, "my-file.txt");
+
+request.onsuccess = function () {
+  var name = this.result;
+  console.log('File "' + name + '" successfully wrote on the sdcard storage area');
+}
+
+// An error typically occur if a file with the same name already exist
+request.onerror = function () {
+  console.warn('Unable to write the file: ' + this.error);
+}
+</pre>
+<div class="note">
+  <p><strong>注意：</strong>儲存區中的 Repository (Repo) 屬於隱性 (Implicit)，因此不能建立顯性 (Explicit) 的空白 Repo。如果要使用 Repo 的結構，則必須針對 Repo 的名稱，使之成為儲存檔案名稱的一部分。所以，如果你要在 <code>foo</code> 庫中儲存 <code>bar</code> 檔案，就必須使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage.addNamed" title="/en-US/docs/Web/API/DeviceStorage.addNamed"><code>addNamed</code></a> 函式再搭配 <code>addNamed(</code><em>blob</em><code>, "foo/bar") 檔案的完整路徑名稱。一旦要使用這個名稱檢索檔案，也可使用同樣的方式 </code>(參閱下列)。</p>
+  <p>基於安全理由，如果檔案新增於既定的受限儲存區內，則檔案路徑名稱不能以「<code>/」或「../」開頭</code> (且「<code>./」為無意義</code>)。</p>
+</div>
+<h3 id="取得檔案">取得檔案</h3>
+<p>現有 2 種方法可檢索檔案：使用檔案名稱，或依序存取檔案列表。</p>
+<p>最簡單的方式，就是使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage.get" title="/en-US/docs/Web/API/DeviceStorage.get"><code>get</code></a> 與 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage.getEditable" title="/en-US/docs/Web/API/DeviceStorage.getEditable"><code>getEditable</code></a> 函式來檢索檔案。前者可提供<a href="https://developer.mozilla.org/en-US/docs/Web/API/File" title="/en-US/docs/Web/API/File"><code>File</code></a> 物件，即如同唯讀檔案一樣；後者則提供 <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileHandle" title="/en-US/docs/Web/API/FileHandle"><code>FileHandle</code></a> 物件，可更新底層檔案 (Under-laying file)。這 2 組函式均屬非同步函式，並會回傳 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRequest" title="/en-US/docs/Web/API/DOMRequest"><code>DOMRequest</code></a> 物件，以處理作業的 <code>success</code> 或 <code>error</code> 狀態。</p>
+<pre class="brush: js">var sdcard = navigator.getDeviceStorage('sdcard');
+
+var request = sdcard.get("my-file.txt");
+
+request.onsuccess = function () {
+  var file = this.result;
+  console.log("Get the file: " + file.name);
+}
+
+request.onerror = function () {
+  console.warn("Unable to get the file: " + this.error);
+}
+</pre>
+<p>另一個檔案檢索方式，就是透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage.enumerate" title="/en-US/docs/Web/API/DeviceStorage.enumerate"><code>enumerate</code></a> 與 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage.enumerateEditable" title="/en-US/docs/Web/API/DeviceStorage.enumerateEditable"><code>enumerateEditable</code></a> 函式瀏覽儲存區的內容。前者可提供 <a href="https://developer.mozilla.org/en-US/docs/Web/API/File" title="/en-US/docs/Web/API/File"><code>File</code></a> 物件；後者則提供 <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileHandle" title="/en-US/docs/Web/API/FileHandle"><code>FileHandle</code></a> 物件。此 2 組均為非同步函式，並可回傳 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMCursor" title="/en-US/docs/Web/API/DOMCursor"><code>DOMCursor</code></a> 物件以依序存取檔案列表。<a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMCursor" title="/en-US/docs/Web/API/DOMCursor"><code>DOMCursor</code></a> 其實就是 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRequest" title="/en-US/docs/Web/API/DOMRequest"><code>DOMRequest</code></a>，但又額外具備「非同步依序存取列表 (這裡則指檔案列表)」的功能。</p>
+<pre class="brush: js">var pics = navigator.getDeviceStorage('pictures');
+
+// Let's browse all the images available
+var cursor = pics.enumerate();
+
+cursor.onsuccess = function () {
+  var file = this.result;
+  console.log("File found: " + file.name);
+
+  // Once we found a file we check if there is other results
+  if (!this.done) {
+    // Then we move to the next result, which call the cursor
+    // success with the next file as result.
+    this.continue();
+  }
+}
+
+cursor.onerror = function () {
+  console.warn("No file found: " + this.error);
+}
+
+</pre>
+<p>只要傳送 2 組選擇性參數至 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage.enumerate" title="/en-US/docs/Web/API/DeviceStorage.enumerate"><code>enumerate</code></a> 與 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage.enumerateEditable" title="/en-US/docs/Web/API/DeviceStorage.enumerateEditable"><code>enumerateEditable</code></a> 函式，即可限制結果的數量。</p>
+<p>第一組參數可為字串，代表所要搜尋的子資料夾。</p>
+<p>第二組參數則是具備 <code>since </code>屬性的物件，可限制在既定期間內搜尋。</p>
+<pre class="brush: js">var pics = navigator.getDeviceStorage('pictures');
+
+// Lets retrieve picture from the last week.
+var param = {
+  since: new Date((+new Date()) - 7*24*60*60*1000)
+}
+
+var cursor = pics.enumerate(param);
+
+cursor.onsuccess = function () {
+  var file = this.result;
+  console.log("Picture taken on: " + file.<code class="language-js">lastModifiedDate</code>);
+
+  if (!this.done) {
+    this.continue();
+  }
+}
+
+</pre>
+<h3 id="刪除檔案">刪除檔案</h3>
+<p>透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage.delete" title="/en-US/docs/Web/API/DeviceStorage.delete"><code>delete</code></a> 函式，即可從儲存區移除檔案。此函式僅需所要刪除的檔案名稱。如同來自於 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage" title="/en-US/docs/Web/API/DeviceStorage"><code>DeviceStorage</code></a> 介面的其他所有函式，此函式亦屬於非同步 API，並會回傳 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRequest" title="/en-US/docs/Web/API/DOMRequest"><code>DOMRequest</code></a> 物件，以處理作業的 <code>success</code> 或 <code>error</code> 的狀態。</p>
+<pre class="brush: js">var sdcard = navigator.getDeviceStorage('sdcard');
+
+var request = sdcard.delete("my-file.txt");
+
+request.onsuccess = function () {
+  console.log("File deleted");
+}
+
+request.onerror = function () {
+  console.log("Unable to delete the file: " + this.error);
+}
+
+</pre>
+<h2 id="儲存資訊">儲存資訊</h2>
+<p>除了存取檔案之外，儲存區亦提供數個函式，可輕鬆取得某些重要資訊。</p>
+<h3 id="可用空間">可用空間</h3>
+<p>在儲存檔案時，必須先了解的要素之一就是可用空間。<a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage" title="/en-US/docs/Web/API/DeviceStorage"><code>DeviceStorage</code></a> 介面則針對空間而提供 2 組有用函式：</p>
+<ul>
+  <li>{{domxref("DeviceStorage.freeSpace()","freeSpace()")}} 可取得「儲存新檔案」的空間容量</li>
+  <li>{{domxref("DeviceStorage.freeSpace()","usedSpace()")}} 可取得「已儲存檔案」的空間容量</li>
+</ul>
+<p>這些函式亦屬於非同步 APIs，並會回傳 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRequest" title="/en-US/docs/Web/API/DOMRequest"><code>DOMRequest</code></a> 物件，以處理作業的 <code>success</code> 或 <code>error</code> 的狀態。</p>
+<pre class="brush: js">var videos = navigator.getDeviceStorage('videos');
+
+var request = videos.usedSpace();
+
+request.onsuccess = function () {
+  // The result is express in bytes, lets turn it into megabytes
+  var size = this.result / 1000000;
+
+  console.log("The videos on your device use a total of " + size.toFixed(2) + "Mo of space.");
+}
+
+request.onerror = function () {
+  console.warn("Unable to get the space used by videos: " + this.error);
+}
+</pre>
+<h3 id="監聽變動狀態">監聽變動狀態</h3>
+<p>可能有許多 Apps 同時存取相同的儲存區。如果 Apps 能知道儲存區中的變化，則可避免不必要的錯誤。又若 Apps 不依賴 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage" title="/en-US/docs/Web/API/DeviceStorage"><code>DeviceStorage</code></a> 介面的函式所回傳的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRequest" title="/en-US/docs/Web/API/DOMRequest"><code>DOMRequest</code></a> 物件，卻需執行非同步作業，那得知儲存區的變化亦頗有助益。</p>
+<p>因為如此，只要建立、修改、刪除了某個檔案，就會觸發 <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/change" title="/en-US/docs/Web/Reference/Events/change">change</a> 事件。而透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorage.onchange" title="/en-US/docs/Web/API/DeviceStorage.onchange"><code>onchange</code></a> 屬性或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener" title="/en-US/docs/Web/API/EventTarget.addEventListener"><code>addEventListener()</code></a> 函式，即可取得這個事件。而事件處理器 (Event Handler) 所取得的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DeviceStorageChangeEvent" title="/en-US/docs/Web/API/DeviceStorageChangeEvent"><code>DeviceStorageChangeEvent</code></a> 物件，則是擁有額外 2 組屬性的常態 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" title="/en-US/docs/Web/API/Event"><code>Event</code></a> 物件：</p>
+<ul>
+  <li>{{domxref("DeviceStorageChangeEvent.reason")}} 將提供變更 (<code>created 或 modified</code> 或 <code>deleted</code>) 的理由。</li>
+  <li>{{domxref("DeviceStorageChangeEvent.path")}} 則針對受變更所影響的檔案，提供其完整的路徑。</li>
+</ul>
+<pre class="brush: js">var sdcard = navigator.getDeviceStorage('sdcard');
+
+sdcard.onchange = function (change) {
+  var reason = change.reason;
+  var path   = change.path;
+
+  console.log('The file "' + path + '" has been ' + reason);
+}
+</pre>
+<h2 id="規格">規格</h2>
+<p>目前尚無規格。</p>
+<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+<p>{{ CompatibilityTable() }}</p>
+<div id="compat-desktop">
+  <table class="compat-table">
+    <tbody>
+      <tr>
+        <th>Feature</th>
+        <th>Chrome</th>
+        <th>Firefox (Gecko)</th>
+        <th>Internet Explorer</th>
+        <th>Opera</th>
+        <th>Safari</th>
+      </tr>
+      <tr>
+        <td>Basic support</td>
+        <td>{{ CompatUnknown() }}</td>
+        <td>{{ CompatUnknown() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div id="compat-mobile">
+  <table class="compat-table">
+    <tbody>
+      <tr>
+        <th>Feature</th>
+        <th>Android</th>
+        <th>Firefox Mobile (Gecko)</th>
+        <th>IE Mobile</th>
+        <th>Opera Mobile</th>
+        <th>Safari Mobile</th>
+      </tr>
+      <tr>
+        <td>Basic support</td>
+        <td>{{ CompatUnknown() }}</td>
+        <td>{{ CompatUnknown() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2 id="另可參閱">另可參閱</h2>
+<ul>
+  <li>{{domxref("window.navigator.getDeviceStorage()","navigator.getDeviceStorage()")}}</li>
+  <li>{{domxref("DeviceStorage")}}</li>
+  <li>{{domxref("DeviceStorageChangeEvent")}}</li>
+</ul>

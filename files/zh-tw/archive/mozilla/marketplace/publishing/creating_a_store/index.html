@@ -1,0 +1,22 @@
+---
+title: 設立自己的 App 商店
+slug: Archive/Mozilla/Marketplace/Publishing/Creating_a_store
+translation_of: Archive/Marketplace/Options/Creating_a_store
+---
+<div class="summary">
+ <p>任何 Web 網站若具備豐富的圖片與互動經驗，則 Web 瀏覽器可透過Mozilla 的 App 專案平台，將這類網站識別為「Web App」，進而能跨裝置安裝並同步這些網站。開發者現可透過此項特性，將已發佈的 App 整理到目錄與商店中。接著說明相關步驟。</p>
+</div>
+<h2 id="與瀏覽器整合">與瀏覽器整合</h2>
+<p>App 平台即提供「<a href="https://developer.mozilla.org/en-US/docs/Web/API/navigator.mozApps" title="Returns an Apps object you can use to install, manage, and control Open Web Apps in the browser."><code>navigator.mozApps</code></a>」這個 JavaScript 物件，可作為商店與瀏覽器之間的溝通橋樑。</p>
+<p>Web App 是根據其網域所辨識而得。而一個來源網域就只會有一個 App。針對目錄或商店，開發者可透過 <a href="https://developer.mozilla.org/en-US/Apps/Developing/JavaScript_API">App Installation API 與 App Management API</a>，讓瀏覽器觸發 <a href="https://developer.mozilla.org/en-US/docs/Web/API/apps.install" title="Triggers the installation of an app. During the installation process, the app is validated and the user is prompted to approve the installation."><code>apps.install</code></a> 函式並提示 App 的安裝作業，另提供 App 的 manifest 檔案網址，以及任何想要補充的後設資料 (metadata)。開發者可存取此筆後設資料，以查閱消費者的購買資訊、確認單一登入狀態 (SSO)，或其他服務。</p>
+<h3 id="使用_getInstalled()">使用 getInstalled()</h3>
+<p>只要 App 是根據你的網域而安裝於目前的瀏覽器上，均可透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Apps.getInstalled"><code>navigator.mozApps.getInstalled()</code></a> 函式取得此類 App 的清單。另請注意，開發者不會看到其他網域所安裝的 App，只會看到放在自己網域中的 App。</p>
+<p>開發者可透過此函式而了解消費者安裝的 App 是否符合你的預期。即使消費者是以新帳戶登入你的網站，亦可透過「resync」功能而再次安裝既有的 App。</p>
+<h2 id="到底該不該托管？">到底該不該托管？</h2>
+<p>針對托管式 App，商店只需該網站的 manifest 網址，即可觸發 App 的安裝作業 (<a href="https://developer.mozilla.org/en-US/docs/Web/API/apps.install" title="Triggers the installation of an app. During the installation process, the app is validated and the user is prompted to approve the installation."><code>apps.install</code></a>)。該 App 檔案不一定要儲存於商店或目錄之下。</p>
+<p>如果 App 沒有伺服器的邏輯元件 (也就是完全以用戶端 JavaScript、HTML、CSS 所建構的 App)，開發者就可能會想建構出托管功能。此時必須為各 App 指派不同的網域名稱，並針對各 App 的 manifest 檔案建構伺服邏輯，才能使用托管功能。</p>
+<p>如果你現在正自行托管 App 邏輯，則可輕鬆維護和消費者之間的會話 (Session)，進而追蹤消費者的喜好、購買證明，或其他服務。如果你要針對遠端網站提供服務，就必須完成額外作業，才能支援分散式的認證系統。</p>
+<div class="note">
+ <p><strong>注意：</strong><a href="http://firefox-marketplace-api.readthedocs.org/en/latest/">Firefox Marketplace API</a> 內含的功能，讓開發者只耗費最小程度的心血，即可迅速設立自己的 App 商店。</p>
+</div>
+<p> </p>

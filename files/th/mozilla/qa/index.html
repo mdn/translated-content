@@ -1,0 +1,239 @@
+---
+title: 'QA: Quality assurance at Mozilla'
+slug: Mozilla/QA
+tags:
+  - Landing
+  - QA
+  - Testing
+translation_of: Mozilla/QA
+---
+<p><font><font>มอซิลลากิจกรรมการประกันคุณภาพการประกัน (QA) ทีมไดรฟ์คุณภาพซอฟต์แวร์ทั่ว Mozilla และมีบทบาทสำคัญในการปล่อยความหลากหลายของผลิตภัณฑ์ซอฟต์แวร์ในตาราง </font><font>ภายในแต่ละโครงการใน Mozilla เราทำงานในการสำรวจคุณสมบัติใหม่เขียนและดำเนินการทดสอบการค้นพบและยื่นข้อบกพร่องในการสร้างและการบำรุงรักษาเครื่องมือในการเก็บรวบรวมและวิเคราะห์ตัวชี้วัดและการสนับสนุนการเปิดตัวผลิตภัณฑ์ระดับโลกที่ส่งเสริมการเปิดเว็บ</font></font></p>
+
+<p><span class="seoSummary"><font><font>ที่นี่คุณจะพบบทความและเครื่องมือที่จะช่วยให้คุณเกียร์ขึ้นไปร่วมทีม QA ทดสอบ Firefox เพื่อให้แน่ใจว่าแต่ละรุ่นจะดีเท่าที่จะสามารถ</font></font></span></p>
+
+<h2 id="เริ่ม"><font><font>เริ่ม</font></font></h2>
+
+<ul class="card-grid">
+ <li><span><font><font>ฉันจะช่วยทดสอบ?</font></font></span>
+
+  <p><font><font>ยังมีอีกหลายวิธีที่คุณจะกลายเป็น</font></font><a href="/en-US/docs/Mozilla/QA/How_can_I_help_test_"><font><font>ผู้มีส่วนร่วมของชุมชน</font></font></a><font><font>ให้กับทีมงานที่มีคุณภาพของ Mozilla</font></font></p>
+ </li>
+ <li><span><font><font>เป็นโรคจิต</font></font></span>
+  <p><font><font>ทุกโครงการ Mozilla ใช้</font></font><a href="https://bugzilla.mozilla.org/"><font><font>Bugzilla</font></font></a><font><font>เพื่อติดตามข้อบกพร่อง </font><font>เรียนรู้วิธีการ</font></font><a href="/en-US/docs/Mozilla/QA/Bug_writing_guidelines" title="/ en-US / เอกสาร / Mozilla / QA / Bug_writing_guidelines"><font><font>รายงานข้อผิดพลาด</font></font></a><font><font>และทำความคุ้นเคยกับ</font></font><a href="/en-US/docs/What_to_do_and_what_not_to_do_in_Bugzilla"><font><font>สิ่งที่ต้องทำใน </font></font></a><font><font>Bugzilla</font></font></p>
+ </li>
+ <li><span><font><font>เหตุการณ์ที่เกิดขึ้น</font></font></span>
+  <p><font><font>มีส่วนร่วมในรายสัปดาห์ของเรา</font></font><a href="/en-US/docs/Mozilla/QA/Bug_Verification_Day"><font><font>Bug วันตรวจสอบ</font></font></a><font><font>หรือ</font><font>ข้อผิดพลาดวัน Triage </font><font>คุณยังอาจ</font><a href="/en-US/docs/Mozilla/QA/Organizing_a_Testday"><font>จัด testday</font></a><font>สำหรับชุมชนท้องถิ่นของคุณ!</font></font></p>
+ </li>
+ <li><span><font><font>ไออาร์ซี</font></font></span>
+  <p><a href="/en-US/docs/Mozilla/QA/Getting_Started_with_IRC"><font><font>เริ่มต้นกับไออาร์ซี</font></font></a><font><font>ในรูปแบบหลักของการสื่อสารสำหรับสมาชิกของชุมชน Mozilla</font></font></p>
+ </li>
+</ul>
+
+<h2 id="เป็นโรคจิต"><font><font>เป็นโรคจิต</font></font></h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<h3 id="รายงานข้อบกพร่อง"><font><font>รายงานข้อบกพร่อง</font></font></h3>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Bugzilla"><font><font>Bugzilla</font></font></a></dt>
+ <dd><font><font>ทุกโครงการ Mozilla ใช้</font></font><a href="https://bugzilla.mozilla.org/"><font><font>Bugzilla</font></font></a><font><font>เพื่อติดตามข้อบกพร่อง </font><font>คุณจะต้อง</font></font><a href="https://bugzilla.mozilla.org/createaccount.cgi"><font><font>สร้างบัญชีกับ Bugzilla</font></font></a><font><font>เพื่อรายงานข้อบกพร่องและ triage พวกเขา</font></font></dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Bug_writing_guidelines" title="/ en-US / เอกสาร / Mozilla / QA / Bug_writing_guidelines"><font><font>แนวทางการเขียนข้อผิดพลาด</font></font></a></dt>
+ <dd><font><font>ได้อย่างมีประสิทธิภาพมากขึ้นข้อผิดพลาดจะมีการรายงานที่มีแนวโน้มมากขึ้นที่เป็นวิศวกรจริงจะแก้ไขได้ </font><font>โดยปฏิบัติตามหลักเกณฑ์เหล่านี้คุณสามารถช่วยให้มั่นใจว่าข้อบกพร่องของคุณอยู่ที่ด้านบนของกองวิศวกร Mozilla 'และได้รับการแก้ไข</font></font></dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/A_Bugs_Life" title="/ en-US / เอกสาร / Mozilla / QA / A_Bugs_Life"><font><font>ชีวิตของแมลง</font></font></a></dt>
+ <dd><font><font>กวดวิชานี้จะให้ภาพรวมของสิ่งที่เกิดขึ้นในรัฐที่ข้อผิดพลาดที่จะผ่านไปเช่นเดียวกับวิธีการที่จะไปจากที่หนึ่งไปยังอีกที่อยู่ในชีวิตทั้งหมด </font><font>นอกจากนี้ยังอธิบายความหมายของธง / คำหลักที่ใช้ในการควบคุมคุณภาพ</font></font></dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Filing_Crash_Bugs"><font><font>ยื่นข้อบกพร่องผิดพลาด</font></font></a></dt>
+ <dd><font><font>เอกสารนี้แสดงแนวทางและเคล็ดลับเกี่ยวกับวิธีการยื่นรายงานข้อผิดพลาดสำหรับการเกิดปัญหาในทางที่จะช่วยในการแก้จุดบกพร่องและแก้ไขปัญหาที่รายงาน</font></font></dd>
+</dl>
+</div>
+
+<div class="section">
+<h3 id="triaging_ข้อบกพร่อง"><font><font>triaging ข้อบกพร่อง</font></font></h3>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Confirming_unconfirmed_bugs" title="EN-US / เอกสาร / ยืนยันข้อบกพร่องที่ไม่ยืนยัน"><font><font>ยืนยันข้อบกพร่องที่ไม่ยืนยัน</font></font></a></dt>
+ <dd><font><font>แจ้งรายงานข้อผิดพลาดที่มีประโยชน์และปิดส่วนที่เหลือ</font></font></dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Triaging_Bugs_for_Firefox" title="/ en-US / เอกสาร / Mozilla / QA / Triaging_Bugs_for_Firefox"><font><font>triaging Bugs สำหรับ Firefox</font></font></a></dt>
+ <dd><font><font>ข้อมูลเกี่ยวกับกระบวนการข้อผิดพลาดทั้งหมด triaging - การประมวลผลจากข้อบกพร่องที่เข้ามาเพื่อแคบลงขั้นตอนในการทำซ้ำข้อบกพร่อง</font></font></dd>
+ <dt><a href="/en-US/docs/Screening_duplicate_bugs"><font><font>การตรวจคัดกรองโรคจิตที่ซ้ำกัน</font></font></a></dt>
+ <dd><font><font>ช่วยให้ได้รับการแก้ไขข้อบกพร่องได้เร็วขึ้นโดยการคัดกรองรายงานเข้ามาซ้ำกัน</font></font></dd>
+ <dt><a href="/en-US/docs/What_to_do_and_what_not_to_do_in_Bugzilla"><font><font>หลักเกณฑ์ทั่วไป</font></font></a></dt>
+ <dd><font><font>สิ่งที่ต้องทำและสิ่งที่ไม่ต้องทำใน Bugzilla</font></font></dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="การทดสอบด้วยตนเอง"><font><font>การทดสอบด้วยตนเอง</font></font></h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Test_Case_Writing_Primer"><font><font>คู่มือการใช้งานกรณีทดสอบการเขียนรองพื้น</font></font></a></dt>
+ <dd><font><font>วิธีการเขียนคู่มือกรณีทดสอบที่เหมาะสม</font></font></dd>
+</dl>
+</div>
+
+<div class="section">
+<dl>
+ <dt><a href="https://moztrap.mozilla.org/"><font><font>MozTrap</font></font></a></dt>
+ <dd><font><font>คู่มือ Mozilla ควบคุมคุณภาพของกรณีทดสอบที่อาศัยอยู่ใน MozTrap เป็นเครื่องมือในบ้าน </font><font>คุณจะต้องมี ID Persona เพื่อเข้าสู่ระบบและดำเนินการกรณีทดสอบ </font><font>เรียนรู้วิธีการทำงานกับ</font></font><a href="https://moztrap.readthedocs.org"><font><font>MozTrap </font></font></a><font><font>เอกสาร</font></font></dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="การทดสอบอัตโนมัติ"><font><font>การทดสอบอัตโนมัติ</font></font></h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Automated_testing" title="/ en-US / เอกสาร / Mozilla / QA / Automated_testing"><font><font>การทดสอบอัตโนมัติที่ Mozilla</font></font></a></dt>
+ <dd><font><font>เอกสารเกี่ยวกับการสร้างและการใช้การทดสอบแบบอัตโนมัติรหัส Mozilla</font></font></dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Developing_tests" title="EN-US / เอกสาร / Developing_Tests"><font><font>การทดสอบการพัฒนา</font></font></a></dt>
+ <dd><font><font>ตรวจสอบให้แน่ใจว่าการเปลี่ยนแปลงในอนาคตที่จะ Mozilla ไม่ทำลายสิ่งที่ทำงานในปัจจุบันได้อย่างถูกต้อง</font></font></dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Avoiding_intermittent_oranges" title="EN-US / เอกสาร / QA / หลีกเลี่ยงส้มเนื่อง"><font><font>หลีกเลี่ยงความล้มเหลวในการทดสอบเป็นระยะ ๆ</font></font></a></dt>
+ <dd><font><font>ข้อเสนอแนะสำหรับวิธีที่จะทำให้การทดสอบของคุณน่าเชื่อถือมากขึ้นจึงช่วยให้เพื่อหลีกเลี่ยงการสุ่มความล้มเหลวในการทดสอบเป็นระยะ ๆ</font></font></dd>
+</dl>
+</div>
+
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Robocop" title="/ en-US / เอกสาร / Mozilla / QA / Robocop"><font><font>Robocop</font></font></a></dt>
+ <dd><font><font>Robocop เป็นระบบทดสอบอัตโนมัติใช้สำหรับ Firefox สำหรับ Android </font><font>เรียนรู้ของ</font></font><a href="/en-US/docs/Mozilla/QA/Robocop/Code_style_guidelines"><font><font>แนวสไตล์รหัส</font></font></a></dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Marionette"><font><font>หุ่นเชิด</font></font></a></dt>
+ <dd><font><font>เริ่มต้นกับการทดสอบ Marionette UI</font></font></dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/web-platform-tests"><font><font>แพลตฟอร์มการทดสอบเว็บ</font></font></a></dt>
+ <dd><font><font>เรียนรู้วิธีการใช้มาตรฐานอุตสาหกรรม, เบราว์เซอร์ข้ามแพลตฟอร์ม</font></font><a href="http://testthewebforward.org/docs/"><font><font>ระบบการทดสอบ Runtime เว็บ</font></font></a><font><font>จาก</font></font><a href="https://www.w3.org/"><font><font>W3C</font></font></a><font><font>ใช้โดย Mozilla และอื่น ๆ เพื่อให้แน่ใจว่าการทำงานร่วมกันเบราว์เซอร์</font></font></dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/external-media-tests"><font><font>การทดสอบการบันทึกข้อมูลภายนอก</font></font></a></dt>
+ <dd><font><font>เริ่มต้นการทดสอบองค์ประกอบวิดีโอ HTML5 โดยใช้ VideoPuppeteer เป็น</font></font><a href="/en-US/docs/Mozilla/QA/Marionette"><font><font>หุ่นกระบอก</font></font></a><font><font> - ชุดทดสอบชั่นที่ใช้ในการทดสอบเว็บไซต์เช่น YouTube และ Netflix</font></font></dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="Firefox_QE"><font><font>Firefox QE</font></font></h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Triaging_Bugs_for_Firefox" title="/ en-US / เอกสาร / Mozilla / QA / Triaging_Bugs_for_Firefox"><font><font>triaging Bugs สำหรับ Firefox</font></font></a></dt>
+ <dd><font><font>ข้อมูลเกี่ยวกับกระบวนการข้อผิดพลาดทั้งหมด triaging - การประมวลผลจากข้อบกพร่องที่เข้ามาเพื่อทำให้แคบลงตามขั้นตอนในการทำซ้ำข้อผิดพลาด</font></font></dd>
+</dl>
+
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Tips_and_Tricks"><font><font>เคล็ดลับและเทคนิค</font></font></a></dt>
+ <dd><font><font>เคล็ดลับและเทคนิคเหล่านี้จะทำให้ชีวิตของคุณง่ายขึ้นเมื่อคุณมีการทดสอบ</font></font></dd>
+</dl>
+<a href="/en-US/docs/Downloading_Nightly_or_Trunk_Builds"><font><font>ดาวน์โหลดต่อคืนหรือลำต้นสร้าง</font></font></a>
+
+<dl>
+ <dd><font><font>ทุก 24 ชั่วโมงเป็น "ยามค่ำ​​คืน" สร้างที่ถูกสร้างขึ้นทดสอบทั่วโลกดาวน์โหลดและการทดสอบการรายงานที่พวกเขาไปพร้อมกับข้อผิดพลาดใด ๆ ที่ตีพวกเขา </font></font></dd>
+</dl>
+</div>
+
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Command_Line_Options"><font><font>เลือกบรรทัดคำสั่ง</font></font></a></dt>
+ <dd><font><font>เลือกบรรทัดคำสั่งที่ใช้ในการระบุตัวเลือกเริ่มต้นที่แตกต่างกันสำหรับ Firefox</font></font></dd>
+ <dt><a href="/en-US/docs/Mozilla/Performance/Reporting_a_Performance_Problem"><font><font>รายงานปัญหาประสิทธิภาพการทำงาน</font></font></a></dt>
+ <dd><font><font>บทความนี้จะแนะนำคุณในการรายงานปัญหาประสิทธิภาพการทำงานโดยใช้</font><font>นามสกุลตุ๊กแก Profiler</font></font></dd>
+ <dt><a href="/en-US/docs/Crash_reporting"><font><font>รายงานความผิดพลาด</font></font></a></dt>
+ <dd><font><font>เรือ Firefox กับโอเพนซอร์สระบบการรายงานความผิดพลาด</font></font></dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="Firefox_สำหรับ_Android"><font><font>Firefox สำหรับ Android</font></font></h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Mobile_Firefox"><font><font>มือถือ Firefox</font></font></a></dt>
+ <dd><font><font>Firefox สำหรับ Android เป็นรุ่นมือถือของ Firefox ด้วยรูปลักษณ์ Android พื้นเมืองและความรู้สึก</font></font></dd>
+ <dt><a href="/en-US/Firefox_for_Android/Compatibility_Testing"><font><font>ทดสอบความเข้ากัน</font></font></a></dt>
+ <dd><font><font>ช่วยให้เราระบุเว็บไซต์ที่ไม่ทำงานได้ดีใน Firefox โดยการรายงานปัญหาเฉพาะที่คุณพบในการสอบสวนของคุณ</font></font></dd>
+</dl>
+</div>
+
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Fennec_Android:_Logging_with_the_Android_Debug_and_Logcat"><font><font>เข้าสู่ระบบด้วยสะพาน Android Debug และ Logcat</font></font></a></dt>
+ <dd><font><font>บทความนี้จะให้คำแนะนำในการดาวน์โหลดและการตั้งค่าสภาพแวดล้อมที่หนึ่งที่สามารถเข้าถึงและดูบันทึกระบบ Android</font></font></dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Firefox_Mobile:_Enabling_the_Error_Console"><font><font>การเปิดใช้งานข้อผิดพลาดคอนโซล</font></font></a></dt>
+ <dd><font><font>ดูบทความของ Mozilla Hacks ใน</font></font><a class="external external-icon" href="https://hacks.mozilla.org/2012/08/remote-debugging-on-firefox-for-android/"><font><font>การแก้จุดบกพร่องระยะไกลบน Firefox สำหรับ Android</font></font></a><font><font>สำหรับเนื้อหาเว็บ </font><font>หากคุณต้องการที่จะแก้ปัญหาเบราว์เซอร์ Firefox ตัวเองใช้ของ Android </font><font>logcat ADB</font></font></dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="Firefox_OS"><font><font>Firefox OS</font></font></h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<h3 id="การทดสอบด้วยตนเอง_2"><font><font>การทดสอบด้วยตนเอง</font></font></h3>
+
+<dl>
+ <dt><a href="/en-US/Firefox_OS/Simulator_vs_Emulator_vs_Device"><font><font>จำลอง VS Emulator VS อุปกรณ์</font></font></a></dt>
+ <dd><font><font>เหล่านี้มีสามตัวเลือกขั้นพื้นฐานเมื่อมันมาถึงได้รับสภาพแวดล้อม Firefox OS เพื่อที่จะทำงานบนหรือการพัฒนาสำหรับ Firefox OS</font></font></dd>
+ <dt><a href="/en-US/Firefox_OS/Debugging"><font><font>แก้จุดบกพร่อง</font></font></a></dt>
+ <dd><font><font>ค้นพบเครื่องมือที่แตกต่างกันในการกำจัดของคุณเพื่อแก้ปัญหารหัส Firefox ระบบปฏิบัติการของคุณ</font></font></dd>
+ <dt><a href="/en-US/Firefox_OS/Developing_Firefox_OS/Filing_bugs_against_Firefox_OS"><font><font>แจ้งข้อผิดพลาด</font></font></a></dt>
+ <dd><font><font>บทความนี้จะให้คำแนะนำเกี่ยวกับข้อบกพร่องการยื่นกับโครงการ Firefox OS รวมทั้ง Gaia และ B2G</font></font></dd>
+</dl>
+</div>
+
+<div class="section">
+<h3 id="แพลทฟอร์ม_(Gecko)"><font><font>แพลทฟอร์ม (Gecko)</font></font></h3>
+
+<dl>
+ <dt><a href="/en-US/Firefox_OS/Platform/Automated_testing"><font><font>การทดสอบแบบอัตโนมัติ</font></font></a></dt>
+ <dd><font><font>เรียนรู้แง่มุมต่าง ๆ ของการทดสอบ Firefox OS, รวมทั้งการทดสอบการทำงานที่แตกต่างกันระบบอัตโนมัติและผลการรายงานและการติดตาม</font></font></dd>
+ <dt><a href="/en-US/Firefox_OS/Platform/Automated_testing/Gaia_performance_tests"><font><font>การทดสอบประสิทธิภาพ Gaia</font></font></a></dt>
+ <dd><font><font>บทความนี้จะให้ข้อมูลเกี่ยวกับการทำงานการทดสอบประสิทธิภาพการทำงานบน Gaia เช่นเดียวกับวิธีการสร้างการทดสอบใหม่</font></font></dd>
+ <dt><a href="/en-US/Firefox_OS/Platform/Feature_support_chart"><font><font>คุณลักษณะแผนภูมิการสนับสนุน</font></font></a></dt>
+ <dd><font><font>มีหลายสร้างแตกต่างกันของ Firefox OS ที่คุณสามารถดาวน์โหลดหรือสร้างสำหรับตัวเองและมีความแตกต่างบางอย่างระหว่างประเภทของคุณสมบัติที่มีอยู่ในแต่ละอุปกรณ์</font></font></dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="เว็บ_QA"><font><font>เว็บ QA</font></font></h2>
+
+<div class="row topicpage-table">
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Reducing_testcases" title="EN-US / เอกสาร / testcases ลด"><font><font>ลด testcases</font></font></a></dt>
+ <dd><font><font>ปรับปรุงการรายงานข้อผิดพลาดโดยการเปิดหน้าเว็บแบ่งออกเป็น testcases ง่ายซึ่งช่วยให้นักพัฒนาสามารถเข้าใจข้อผิดพลาดและนอกจากนี้ยังสามารถใช้สำหรับการสร้างการทดสอบแบบอัตโนมัติ</font></font></dd>
+ <dt><a href="/en-US/docs/Mozilla/QA/Managing_Web_QA_XFails"><font><font>ผู้จัดการ XFails</font></font></a></dt>
+ <dd><font><font>หนึ่งในงานที่ต่อเนื่องของแผนก QA เว็บเป็น xfails ผู้จัดการ </font><font>เอกสารนี้จะอธิบายสิ่งที่ xfails มีและอธิบายขั้นตอนหนึ่งที่สามารถใช้เวลาในการตรวจสอบและปรับปรุงพวกเขา</font></font></dd>
+</dl>
+</div>
+
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/QA/Running_Web_QA_automated_tests"><font><font>การทดสอบการทำงานอัตโนมัติ</font></font></a></dt>
+ <dd><font><font>ดังนั้นคุณสนใจที่จะเอื้อต่อการควบคุมคุณภาพของ Mozilla เว็บโครงการอัตโนมัติ แต่ไม่ทราบว่าจะเริ่มต้นอย่างไร </font><font>เอกสารนี้จะช่วยให้คุณได้รับและทำงานชุดของการทดสอบในประเทศ</font></font></dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="อภิธานศัพท์"><font><font>อภิธานศัพท์</font></font></h2>
+
+<div class="section">
+<dl>
+ <dt><a href="/en-US/docs/Glossary/Smoke_Test"><font><font>ทดสอบสูบบุหรี่</font></font></a></dt>
+ <dd></dd>
+</dl>
+</div>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="https://lists.mozilla.org/listinfo/dev-quality">Mailing list</a></li>
+ <li><a href="https://quality.mozilla.org/">Blog</a></li>
+ <li><a href="/en-US/docs/tag/QA" title="EN-US / เอกสาร / แท็ก / ควบคุมคุณภาพ"><font><font>ดูเอกสารทั้งหมดที่ติดแท็ก QA</font></font></a></li>
+ <li><a href="/en-US/docs/tag/QA:Tools" title="EN-US / เอกสาร / Tag / QA: เครื่องมือ"><font><font>ดูเอกสารทั้งหมด QA แท็ก: เครื่องมือ</font></font></a></li>
+</ul>

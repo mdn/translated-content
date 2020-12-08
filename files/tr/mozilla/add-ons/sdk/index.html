@@ -1,0 +1,81 @@
+---
+title: Add-on SDK
+slug: Mozilla/Add-ons/SDK
+translation_of: Archive/Add-ons/Add-on_SDK
+---
+<p>Add-on SDK ile standart web teknolojilerini kullanarak Firefox eklentileri üretebilirsiniz. SDK, eklentileri yaratabileceğiniz JavaScript API'lerini ve eklentileri oluşturma, çalıştırma, test etme ve paketleme araçlarını içerir.</p>
+
+<hr>
+<h3 id="Öğreticiler">Öğreticiler</h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials#getting-started">Başlarken</a></dt>
+ <dd><a href="/en-US/Add-ons/SDK/Tutorials/Installation">SDK nasıl yüklenir </a>ve <a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_(jpm)">the jpm aracının kullanımı</a> , ve eklentileri paketleme.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials#interact-with-the-browser">Tarayıcı ile etkileşşim</a></dt>
+ <dd><a href="/en-US/Add-ons/SDK/Tutorials/Open_a_Web_Page">Open web pages</a>, <a href="/en-US/Add-ons/SDK/Tutorials/Listen_For_Page_Load">listen for pages loading</a>, and <a href="/en-US/Add-ons/SDK/Tutorials/List_Open_Tabs">list open pages</a>.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials#development-techniques">Geliştirme teknikleri</a></dt>
+ <dd>Alışılmış geliştirme yöntemlerini öğrenme, örneğin <a href="/en-US/Add-ons/SDK/Tutorials/Unit_testing">unit testing</a>, <a href="/en-US/Add-ons/SDK/Tutorials/Logging">logging</a>, <a href="/en-US/Add-ons/SDK/Tutorials/Creating_Reusable_Modules">creating reusable modules</a>, <a href="/en-US/Add-ons/SDK/Tutorials/l10n">localization</a>, ve <a href="/en-US/Add-ons/SDK/Tutorials/Mobile_development">mobile development</a>.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials#create-user-interfaces">Kullanıcı arayüzü üretme bileşenleri</a></dt>
+ <dd>Kullanıcı arayüzü birimlerini yaratın. Mesela <a href="/en-US/Add-ons/SDK/Tutorials/Adding_a_Button_to_the_Toolbar"> araç çubuğu butonları</a>, <a href="/en-US/Add-ons/SDK/Tutorials/Add_a_Context_Menu_Item">içerik menüleri</a>, <a href="/en-US/Add-ons/SDK/Tutorials/Add_a_Menu_Item_to_Firefox">menü nesneleri</a> ve <a href="/en-US/Add-ons/SDK/Tutorials/Display_a_Popup">iletiler</a>.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials#modify-web-pages">Web sayfalarını modifiye edin.</a></dt>
+ <dd>Modify pages <a href="/en-US/Add-ons/SDK/Tutorials/Modifying_Web_Pages_Based_on_URL">matching a URL pattern</a> or dynamically <a href="/en-US/Add-ons/SDK/Tutorials/Modifying_the_Page_Hosted_by_a_Tab">modify a particular tab</a>.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Annotator">Putting it together</a></dt>
+ <dd>Walkthrough of the Annotator example add-on.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="Guides">Guides</h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Guides#contributors-guide">Contributor's guide</a></dt>
+ <dd>Learn <a href="/en-US/Add-ons/SDK/Guides/Getting_Started">how to start contributing</a> to the SDK, and about the most important idioms used in the SDK code, such as <a href="/en-US/Add-ons/SDK/Guides/Modules">modules</a>, <a href="/en-US/Add-ons/SDK/Guides/Classes_and_Inheritance">classes and inheritance</a>, <a href="/en-US/Add-ons/SDK/Guides/Private_Properties">private properties</a>, and <a href="/en-US/Add-ons/SDK/Guides/Content_Processes">content processes</a>.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Guides#sdk-infrastructure">SDK infrastructure</a></dt>
+ <dd>Aspects of the SDK's underlying technology: <a href="/en-US/Add-ons/SDK/Guides/Module_structure_of_the_SDK">modules</a>, the <a href="/en-US/Add-ons/SDK/Guides/Program_ID">Program ID</a>, and the rules defining <a href="/en-US/Add-ons/SDK/Guides/Firefox_Compatibility">Firefox compatibility</a>.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Guides/Content_Scripts">Content scripts</a></dt>
+ <dd>A detailed guide to working with content scripts.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Guides#sdk-idioms">SDK idioms</a></dt>
+ <dd>The SDK's <a href="/en-US/Add-ons/SDK/Guides/Working_with_Events">event framework</a> and the <a href="/en-US/Add-ons/SDK/Guides/Two_Types_of_Scripts">distinction between add-on scripts and content scripts</a>.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Guides/XUL_Migration_Guide">XUL migration</a></dt>
+ <dd>A guide to <a href="/en-US/Add-ons/SDK/Guides/XUL_Migration_Guide">porting XUL add-ons to the SDK</a>. This guide includes a <a href="/en-US/Add-ons/SDK/Guides/XUL_vs_SDK">comparison of the two toolsets</a> and a <a href="/en-US/Add-ons/SDK/Guides/Porting_the_Library_Detector">working example</a> of porting a XUL add-on.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Guides/Multiprocess_Firefox_and_the_SDK">Multiprocess Firefox and the SDK</a></dt>
+ <dd>How to check whether your add-on is compatible with multiprocess Firefox, and fix it if it isn't.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="Reference">Reference</h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/High-Level_APIs">High-Level APIs</a></dt>
+ <dd>Reference documentation for the high-level SDK APIs.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tools">Tools reference</a></dt>
+ <dd>Reference documentation for the <a href="/en-US/Add-ons/SDK/Tools/jpm">jpm tool</a> used to develop, test, and package add-ons, the <a href="/en-US/Add-ons/SDK/Tools/console">console</a> global used for logging, and the <a href="/en-US/Add-ons/SDK/Tools/package_json">package.json</a> file.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Low-Level_APIs">Low-Level APIs</a></dt>
+ <dd>Reference documentation for the low-level SDK APIs.</dd>
+</dl>
+</div>
+</div>

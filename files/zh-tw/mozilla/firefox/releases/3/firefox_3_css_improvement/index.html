@@ -1,0 +1,30 @@
+---
+title: Firefox 3 CSS Improvement
+slug: Mozilla/Firefox/Releases/3/Firefox_3_CSS_Improvement
+translation_of: Mozilla/Firefox/releases/3/CSS_improvements
+---
+<div>{{FirefoxSidebar}}</div><h3 id="Firefox_3_CSS_.E7.9A.84.E6.94.B9.E5.96.84" name="Firefox_3_CSS_.E7.9A.84.E6.94.B9.E5.96.84">Firefox 3 CSS 的改善</h3>
+<ul>
+ <li>實做了 <a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#propdef-display">display</a> property 的兩個特性值 <a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#value-def-inline-block">inline-block</a> 與 <a class="external" href="http://www.w3.org/TR/CSS21/tables.html#value-def-inline-table">inline-table</a>。</li>
+ <li>現在所有平台都支援 <a class="external" href="http://www.w3schools.com/css/pr_font_font-size-adjust.asp">font-size-adjust</a> property (先前只在 Windows 平台支援)。</li>
+ <li>支援 <a class="external" href="http://www.w3.org/TR/css3-color/">CSS 3 Color Module</a> 中加入的特性值 <a class="external" href="http://www.w3.org/TR/css3-color/#rgba-color">rgba()</a> 與 <a class="external" href="http://www.w3.org/TR/css3-color/#hsla-color">hsla()</a> (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=147017">Bug 147017</a>)。</li>
+ <li>支援 <a class="external" href="http://www.w3.org/TR/css3-ui/">CSS3 Basic User Interface Module</a> 的 pesudo-class <a class="external" href="http://www.w3.org/TR/css3-ui/#pseudo-default">:default</a> (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=302186">Bug 302186</a>)。</li>
+ <li>替 width, min-width, max-width 這三個 properties 加入四個特性值： -moz-max-content, -moz-min-content, -moz-fit-content, 與 -moz-available (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=311415">Bug 311415</a> 與 <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=402706">Bug 402706</a>)。</li>
+ <li>支援 HTML soft hyphens (&amp;shy;)。</li>
+ <li>現在 Pre-formatted tabs 在使用比例字型時的表現好多了，遵守 CSS 2.1 規格書。</li>
+ <li>支援微軟的 CSS 規格 <a class="external" href="http://developer.mozilla.org/en/docs/CSS:ime-mode">ime-mode </a> property。</li>
+ <li>現在支援了 CSS text-rendering property for HTML (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=387969">Bug 387969</a>)。</li>
+ <li>實做了兩個 CSS properties： -moz-border-*-start 與 -moz-border-*-end (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=74880">Bug 74880</a>)。</li>
+ <li>現在 -moz-initial 幾乎實做於所有的 CSS properties 了 (除了 quotes and -moz-border-*-colors) (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=80887">Bug 80887</a>)。</li>
+ <li>window.getComputedStyle() 現在支援所有已支援的 CSS properties (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=316981">Bug 316981</a>).</li>
+ <li>支援 content property 的特性值 "none" (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=378535">Bug 378535</a>)。</li>
+ <li>支援 cursor property 的特性值 "none" (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=378535">Bug 378535</a>)。</li>
+</ul>
+<h3 id=".E5.8F.83.E8.80.83.E8.B3.87.E8.A8.8A" name=".E5.8F.83.E8.80.83.E8.B3.87.E8.A8.8A">參考資訊</h3>
+<ul>
+ <li><a class="external" href="http://developer.mozilla.org/en/docs/CSS_improvements_in_Firefox_3">CSS improvements in Firefox 3 原始網頁</a></li>
+</ul>
+<h3 id=".E5.BB.B6.E4.BC.B8.E9.96.B1.E8.AE.80" name=".E5.BB.B6.E4.BC.B8.E9.96.B1.E8.AE.80">延伸閱讀</h3>
+<ul>
+ <li><a class="external" href="http://msdn2.microsoft.com/en-us/library/ms533883.aspx">ime-mode Attribute | imeMode Property</a></li>
+</ul>

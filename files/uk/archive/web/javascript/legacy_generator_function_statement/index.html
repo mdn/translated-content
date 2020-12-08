@@ -1,0 +1,67 @@
+---
+title: Застаріла функція-генератор
+slug: Archive/Web/JavaScript/Legacy_generator_function_statement
+tags:
+  - JavaScript
+  - legacy
+  - Довідка
+  - застарілий
+  - нестандартний
+translation_of: Archive/Web/JavaScript/Legacy_generator_function_statement
+---
+<div>{{JSSidebar("Statements")}}{{Non-standard_Header}}{{Obsolete_Header("gecko58")}}
+<div class="warning">
+<p>Застаріла функція-генератор була особливою функціональністю SpiderMonkey, прибраною у Firefox 58+. Для використання у майбутньому розгляньте {{JSxRef("Statements/function*", "function*")}}.</p>
+</div>
+</div>
+
+<p><strong>Оператор застарілої функції-генератора</strong> оголошує застарілу функцію-генератор із вказаними параметрами.</p>
+
+<p>Ви також можете визначати функції, використовуючи конструктор {{JSxRef("Function")}} з параметром <code>functionBody</code> та принаймні одним виразом {{JSxRef("Operators/yield", "yield")}}, а також {{JSxRef("Operators/Legacy_generator_function", "вираз застарілої функції-генератора", "", 1)}}.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">function <em>name</em>([<em>param</em>,[, <em>param</em>,[..., <em>param</em>]]]) {
+   [<em>statements</em>]
+}
+</pre>
+
+<dl>
+ <dt><code>name</code></dt>
+ <dd>Ім'я функції.</dd>
+</dl>
+
+<dl>
+ <dt><code>param</code></dt>
+ <dd>Ім'я аргументу, що передається у функцію. Функція може мати до 255 аргументів.</dd>
+</dl>
+
+<dl>
+ <dt><code>statements</code></dt>
+ <dd>Інструкції, що складають тіло функції. Вони повинні містити принаймні один вираз {{JSxRef("Operators/yield", "yield")}}.</dd>
+</dl>
+
+<h2 id="Опис">Опис</h2>
+
+<p>Огляд використання доступний у статті <a href="/uk/docs/JavaScript/Guide/Iterators_and_Generators">Ітератори та генератори</a>.</p>
+
+<h2 id="Сумісність_з_веб-переглядачами">Сумісність з веб-переглядачами</h2>
+
+<p>Supported nowhere.</p>
+
+<h2 id="Див._також">Див. також</h2>
+
+<ul>
+ <li>{{JSxRef("Generator")}}</li>
+ <li><a href="/uk/docs/Web/JavaScript/Reference/Operators/Legacy_generator_function">Вираз застарілої функції-генератора</a></li>
+ <li><a href="/uk/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol">Протокол застарілого ітератора</a></li>
+ <li>{{JSxRef("Operators/yield", "yield")}}</li>
+ <li><a href="/uk/docs/Web/JavaScript/Reference/Functions">Функції та область видимості функції</a></li>
+ <li>{{JSxRef("Statements/function", "function")}}</li>
+ <li>{{JSxRef("Operators/function", "Функціональний вираз")}}</li>
+ <li>{{JSxRef("Function")}}</li>
+ <li>{{JSxRef("Statements/function*", "function*")}}</li>
+ <li>{{JSxRef("Operators/function*", "вираз function*")}}</li>
+ <li>{{JSxRef("GeneratorFunction")}}</li>
+ <li><a href="/uk/docs/Web/JavaScript/Reference/Протоколи_перебору">Протоколи перебору</a></li>
+</ul>

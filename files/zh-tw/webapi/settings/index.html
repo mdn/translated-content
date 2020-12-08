@@ -1,0 +1,69 @@
+---
+title: Settings API
+slug: WebAPI/Settings
+translation_of: Archive/B2G_OS/API/Settings_API
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+<h2 id="摘要">摘要</h2>
+<p>Settings API 可存取、變更、監聽裝置設定的任何變化。裝置的設定選項可能帶有高敏感度的資訊並可能危害整個系統，因此僅限 Certified Apps 可使用此 API。</p>
+<h2 id="使用設定選項">使用設定選項</h2>
+<p>透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozSettings" title="/en-US/docs/Web/API/window.navigator.mozSettings"><code>naviator.mozSettings</code></a> 物件 (即 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SettingsManager" title="/en-US/docs/Web/API/SettingsManager"><code>SettingsManager</code></a> 介面的實例)，即可操作設定選項。</p>
+<h3 id="存取設定選項">存取設定選項</h3>
+<p>若要存取設定選項，必須先以 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SettingsManager.createLock" title="/en-US/docs/Web/API/SettingsManager.createLock"><code>createLock()</code></a> 函式建立鎖定機制。因為可能有多個 Apps 同時存取並更改設定，所以必須確保各個 App 不會受到其他 Apps 的影響。而建立鎖定機制之後，各個 App 均可於特定時間單獨存取設定。</p>
+<p>在 Apps 擁有鎖定機制後，即可透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SettingsLock.get" title="/en-US/docs/Web/API/SettingsLock.get"><code>get()</code></a> 函式讀取任何設定。此函式將回傳 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRequest" title="/en-US/docs/Web/API/DOMRequest"><code>DOMRequest</code></a> 物件，以處理成功或失敗的作業。不論任何狀況下，只要完成了成功/失敗的請求，均會自動解鎖之後才讓其他 Apps 存取設定。若有必要，也可透過鎖定機制的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SettingsLock.closed" title="/en-US/docs/Web/API/SettingsLock.closed"><code>closed</code></a> 屬性，得知是否已解開鎖定。</p>
+<p>在下列程式碼片段中，則建立了鎖定並請求了系統 <code>wifi.enabled</code> 設定的數值。另呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/console.log" title="Outputs a message to the Web Console."><code>console.log()</code></a> 即可於主控台上顯示輸出的結果：</p>
+<pre class="brush: js">var lock    = navigator.mozSettings.createLock();
+var setting = lock.get('wifi.enabled');
+
+setting.onsuccess = function () {
+  console.log('wifi.enabled: ' + setting.result);
+}
+
+setting.onerror = function () {
+  console.warn('An error occured: ' + setting.error);
+}
+</pre>
+<h3 id="更改設定">更改設定</h3>
+<p>設定值的更改程序與存取程序完全相同，但必須呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SettingsLock.set" title="/en-US/docs/Web/API/SettingsLock.set"><code>set()</code></a> 函式，此函式將回傳 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRequest" title="/en-US/docs/Web/API/DOMRequest"><code>DOMRequest</code></a> 物件，讓你知道設定更改請求是否成功。</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/SettingsLock.set" title="/en-US/docs/Web/API/SettingsLock.set"><code>set()</code></a> 函式會將物件作為自己的輸入參數。此物件為鍵值/數值的集合，而各個鍵值即代表 1 組設定的名稱，對應的數值又是設定的新數值。可參閱 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Settings_list" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Settings_list">Firefox OS 設定清單</a>以進一步了解 (另請注意，不同裝置所使用的設定亦將有所差異)。</p>
+<p>這裡可看到建立的 1 組鎖定，並於主控台上顯示 <code>wifi.enabled</code> 設定的結果。</p>
+<pre class="brush: js">var lock = navigator.mozSettings.createLock();
+var result = lock.set({
+  'wifi.enabled': true
+});
+
+result.onsuccess = function () {
+  console.log("the settings has been changed");
+}
+
+result.onerror = function () {
+  console.log("An error occure, the settings remain unchanged");
+}</pre>
+<h3 id="監聽設定中的變化">監聽設定中的變化</h3>
+<p>App 除了讀取、更改設定之外，亦可監聽發生過的任何變更。只要變更過設定，系統隨即觸發 <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/settingchange" title="/en-US/docs/Web/Reference/Events/settingchange">settingchange</a> 事件。此事件為 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozSettingEvent" title="/en-US/docs/Web/API/MozSettingEvent"><code>MozSettingEvent</code></a>。此常態事件又可透過 2 項額外屬性進一步延伸：</p>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MozSettingEvent.settingName" title="/en-US/docs/Web/API/MozSettingEvent.settingName"><code>settingName</code></a> 可提供變更過的設定名稱。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/MozSettingEvent.settingValue" title="/en-US/docs/Web/API/MozSettingEvent.settingValue"><code>settingValue</code></a> 可提供設定的新值。</li>
+</ul>
+<p>只要設定 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SettingsManager.onsettingchange" title="/en-US/docs/Web/API/SettingsManager.onsettingchange"><code>SettingsManager.onsettingchange</code></a> 以指定 1 組回呼 (Callback，只要設定改變就會呼叫該回呼) 即可監聽 <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/settingchange" title="/en-US/docs/Web/Reference/Events/settingchange">settingchange</a> 事件。如果只想監聽某一特定設定的變化，則可呼叫如下的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/SettingsManager.addObserver" title="/en-US/docs/Web/API/SettingsManager.addObserver"><code>SettingsManager.addObserver()</code></a> 函式：</p>
+<pre class="brush: js">function handleWifi(event) {
+  if (event.settingValue === true) {
+    console.log("Hey! I can download that crazy heavy 4GB file")
+  } else {
+    console.log("Oh! I should stop downloading that crazy 4GB file")
+  }
+}
+
+navigator.mozSettings.addObserver('wifi.enabled', handleWifi);
+</pre>
+<p> </p>
+<h2 id="規格">規格</h2>
+<p>目前仍未有任何規格。可參與 W3C 於 <a href="http://www.w3.org/2012/sysapps/" title="http://www.w3.org/2012/sysapps/">System Applications Working Group</a> 中對此API 的討論。</p>
+<h2 id="另可參閱">另可參閱</h2>
+<ul>
+  <li>{{domxref("window.navigator.mozSettings","naviator.mozSettings")}}</li>
+  <li>{{domxref("SettingsManager")}}</li>
+  <li>{{domxref("SettingsLock")}}</li>
+  <li>{{domxref("MozSettingEvent")}}</li>
+</ul>

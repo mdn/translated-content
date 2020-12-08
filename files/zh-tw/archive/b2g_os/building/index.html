@@ -1,0 +1,124 @@
+---
+title: 建置 Boot to Gecko
+slug: Archive/B2G_OS/Building
+translation_of: Archive/B2G_OS/Building
+---
+<div>
+  </div>
+<p>當您已經建立好編譯的系統、第一次成功地抓了程式碼以及設定好程式碼，您就可以編譯 Boot to Gecko。</p>
+<h2 id="更新程式碼">更新程式碼</h2>
+<p>如果您不是第一次編譯B2G，您需要在編譯之前先抓取最新的程式碼。您可以執行以下指令來更新B2G工具及相依套件：</p>
+<pre>git pull
+./repo sync
+</pre>
+<p>您可以藉由指定名稱來更新某部分的倉儲：</p>
+<pre>./repo sync gaia
+</pre>
+<p>repo指令也有其他您可能會有興趣的選項可用；您可執行 <span style="font-family: 'Courier New', 'Andale Mono', monospace;">repo help </span>指令來獲取有用的資訊。</p>
+<h2 id="編譯">編譯</h2>
+<div class="note">
+  <p>注意：在編譯前，您可以設置一個 <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">.userconfig 檔案來訂製這次編譯。</span><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file" title="/en-US/docs/Mozilla/Boot_to_Gecko/Customization_with_the_.userconfig_file">使用 .userconfig 檔案來客製</a> <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">有更多詳細資訊。</span></p>
+</div>
+<p>執行 <span style="font-family: 'Courier New', 'Andale Mono', monospace;">build.sh 就可以開始編譯 Boot to Gecko：</span></p>
+<pre>cd B2G
+./build.sh
+</pre>
+<p>是時候該再喝杯咖啡，或小睡一下了(尤其是第一次編譯)。</p>
+<h3 id="專程編譯某些模組">專程編譯某些模組</h3>
+<p>如果您只想要編譯某個模組，例如 Gecko，您可以指定名稱：</p>
+<pre>./build.sh gecko
+</pre>
+<p>您也可以用這個指令來取得您編譯的模組的列表：</p>
+<pre>./build.sh modules
+</pre>
+<h3 id="設定要使用的處理器數目">設定要使用的處理器數目</h3>
+<p>B2G 的編譯 scripts 預設使用系統的 cores 數量加二作為平行工作的數量。您可以再執行 <code>build.sh</code> 的時候指定 <code>-j </code>參數來改變這個預設值。如果您想要把編譯工作丟到背景、並且減輕 CPU 負載來做其他事情的話，這對您就很方便。當您面臨到編譯問題時，如果您一次就只執行一個編譯工作的話、設定處理器數目也可以讓您更容易讀取編譯的錯誤輸出，真的很方便。</p>
+<p>舉例來說，設定同時只會有兩個工作來編譯：</p>
+<pre>./build.sh -j2
+</pre>
+<p>對於此對常見的使用案例就是防止不要平行編譯。這會讓編譯的輸出更加容易閱讀，更容易釐清編譯的問題。執行下面指令：</p>
+<pre>./build.sh -j1
+</pre>
+<h3 id="多語系編譯">多語系編譯</h3>
+<p>建立多語系的編譯版本：</p>
+<h4 id="Gaia">Gaia</h4>
+<ol>
+  <li>決定要用哪個 Gaia 語系檔。這邊我們用 <a href="http://hg.mozilla.org/integration/gaia-nightly/file/e2eed5263e77/shared/resources/languages-dev.json"><code>locales/languages_dev.json</code></a> 和 <a href="http://hg.mozilla.org/integration/gaia-nightly/file/e2eed5263e77/shared/resources/languages-all.json"><code>locales/languages_all.json</code></a> 當做我們 Gaia 的語系檔。</li>
+  <li>Clone the appropriate locales</li>
+  <li>從 <a href="http://hg.mozilla.org/gaia-l10n">http://hg.mozilla.org/gaia-l10n</a> 複製適當的語系到目錄下；<code>這裡我們放於 gaia-l10n/</code> 下。接著您會需要將列於語系檔之內的美個語系的倉儲(repo)都複製下來。</li>
+  <li>您需要將上面步驟二目錄的絕對路徑設定在<code> LOCALE_BASEDIR</code> 環境變數中。也要把步驟一中檔案的絕對路徑設定在 <code>LOCALES_FILE</code> 環境變數中。</li>
+</ol>
+<p>如例：</p>
+<pre>export LOCALE_BASEDIR=$PWD/gaia-l10n
+export LOCALES_FILE=$PWD/gecko/gaia/shared/resources/languages-dev.json
+</pre>
+<h4 id="Gecko">Gecko</h4>
+<ol>
+  <li>決定要用哪個 Gecko 語系檔。這邊我們用 <a href="http://hg.mozilla.org/releases/mozilla-b2g18/file/default/b2g/locales/all-locales">b2g/locales/all-locales</a> 當做我們的 Gecko 語系檔。</li>
+  <li>複製適當的語系到目錄下；像是 <code>gecko-l10n/</code> 。
+    <ul>
+      <li>mozilla-central 要用 <a href="http://hg.mozilla.org/l10n-central/">http://hg.mozilla.org/l10n-central/</a></li>
+      <li>mozilla-aurora 要用 <a href="http://hg.mozilla.org/releases/l10n/mozilla-aurora/">http://hg.mozilla.org/releases/l10n/mozilla-aurora/</a></li>
+      <li>mozilla-beta 或 mozilla-b2g18 則是 <a href="http://hg.mozilla.org/releases/l10n/mozilla-beta/">http://hg.mozilla.org/releases/l10n/mozilla-beta/</a></li>
+    </ul>
+  </li>
+  <li>複製 <a href="http://hg.mozilla.org/build/compare-locales">compare-locales</a>.</li>
+  <li>
+    <p>將步驟二目錄的絕對路徑設定在 <code>L10NBASEDIR </code>環境變數中。將步驟一中的語系以空白分隔方式設定在 <code>MOZ_CHROME_MULTILOCALE </code>環境變數中。</p>
+  </li>
+  <li>
+    <p>將 <code>compare-locales/scripts</code> 目錄加入到 <code>PATH</code> 變數、 <code>compare-locales/lib</code> 加入到 <code>PYTHONPATH</code> 變數中.</p>
+    如例：
+    <pre>export L10NBASEDIR=$PWD/gecko-l10n
+export MOZ_CHROME_MULTILOCALE="ja zh-TW"
+export PATH="$PATH:$PWD/compare-locales/scripts"
+export PYTHONPATH="$PWD/compare-locales/lib"
+</pre>
+    <p>當您完成這些設定之後，就可以執行 build.sh 了。</p>
+    <p>看起來您也可以用<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=818560#c9/"> .userconfig</a> 來做這些事情。</p>
+    <p>當我們整理好之後，可能會修改這些指令。</p>
+  </li>
+</ol>
+<h2 id="已知的錯誤">已知的錯誤</h2>
+<ul>
+  <li>
+    <h3 id="KeyedVector.h19331_error_indexOfKey_was_not_declared_in_this_scope">KeyedVector.h:193:31: error: indexOfKey was not declared in this scope</h3>
+  </li>
+</ul>
+<p>當您的 gcc 版本太新的時候會出現這個錯誤。請安裝 gcc/g++/g++-multilib 4.6.x 版本.</p>
+<p><a href="/en-US/docs/Mozilla/Boot_to_Gecko/B2G_build_prerequisites" title="en-US/docs/Mozilla/Boot_to_Gecko/B2G_build_prerequisites">設置您的編譯環境</a> 有更多資訊。</p>
+<div class="note">
+  <p><strong>社群上的提醒:</strong> 用 4.7.x 加上修改一些 B2G 程式碼可能可以 (gcc 會告訴你要改哪些地方) 但是這邊就沒人能幫你了！但是不改就不會碰到這些問題。</p>
+</div>
+<ul>
+  <li>
+    <h3 id="arm-linux-androideabi-g_Internal_error_Killed_program_cc1plus">arm-linux-androideabi-g++: Internal error: Killed (program cc1plus)</h3>
+  </li>
+</ul>
+<p>如果看到這個訊息，通常是代表記憶體不夠。在執行 <code>./build.sh </code>之前請確認有足夠的記憶體，如果您的系統記憶體有4G的話，應該可以跑的很順利。</p>
+<ul>
+  <li>
+    <h3 id="If_you_get_build_errors_while_the_build_system_is_running_tests">If you get build errors while the build system is running tests</h3>
+  </li>
+</ul>
+<p>有時候(尤其是在作業系統或是編譯工具更新後)您在編譯系統執行編譯後測試時，會碰到一些靈異現象就像下面這樣：</p>
+<pre>Generating permissions.sqlite...
+test -d profile || mkdir -p profile
+run-js-command  permissions
+WARNING: permission unknown:offline-app
+WARNING: permission unknown:indexedDB-unlimited
+build/permissions.js:122: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIPermissionManager.add]
+make[1]: *** [permissions] Error 3
+make: *** [gaia/profile.tar.gz] Error 2</pre>
+<p>這種情況下試著刪除 <code>gaia/xulrunner-sdk </code>目錄然後再重新抓程式碼：</p>
+<pre>rm -r gaia/xulrunner-sdk
+</pre>
+<p>這樣會刪掉由編譯系統自動抓取、預先編譯的 <a href="/en-US/docs/XULRunner" title="/en-US/docs/XULRunner">XULRunner</a>；在下一次編譯的時候，XULRunner 會再被自動抓取一份。</p>
+<h2 id="接著的步驟">接著的步驟</h2>
+<p>在編譯後，下個步驟就取決於您編譯的 Boot to Gecko 是給模擬器還是給實體手機；細節請參考下列文章：</p>
+<ul>
+  <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_emulators" title="en-US/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_emulators">使用 B2G 模擬器</a></li>
+  <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client" title="en-US/docs/Mozilla/Boot_to_Gecko/Using_the_B2G_desktop_client">使用 B2G 的電腦桌面 client 程式</a></li>
+  <li><a href="https://developer.mozilla.org/en/Mozilla/Boot_to_Gecko/Installing_Boot_to_Gecko_on_a_mobile_device" title="en/Mozilla/Boot_to_Gecko/Installing Boot to Gecko on a mobile device">將 Boot to Gecko 安裝於行動裝置</a></li>
+  <li><a href="/en-US/docs/Mozilla/Boot_to_Gecko/Pandaboard" title="en-US/docs/Mozilla/Boot_to_Gecko/Pandaboard">將 Boot to Gecko 安裝於 pandaboard</a></li>
+</ul>

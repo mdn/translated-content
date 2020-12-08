@@ -1,0 +1,69 @@
+---
+title: TCP Socket
+slug: WebAPI/TCP_Socket
+translation_of: Archive/B2G_OS/API/TPC_Socket_API
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('privileged') }}</p>
+<h2 id="摘要">摘要</h2>
+<p>TCPSocket API 可開啟並使用 TCP 連線，亦可讓 Apps 開發者基於 TCP 架構，建構相關通訊協定 (如 IMAP、IRC、POP、HTTP等)；甚至建立自己所需的協定以滿足特殊需求。</p>
+<h2 id="概述">概述</h2>
+<p>透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozTCPSocket" title="Returns a TCPSocket object you can use to open other sockets."><code>navigator.mozTCPSocket</code></a> 屬性 (本身為 <a href="https://developer.mozilla.org/en-US/docs/Web/API/TCPSocket" title="Provides access to a raw TCP socket API in JavaScript."><code>TCPSocket</code></a> 物件) 即可存取此 API。</p>
+<h3 id="開啟_Socket">開啟 Socket</h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TCPSocket.open" title="The open method is used to open a TCP connection to a given server on a given port."><code>TCPSocket.open()</code></a> 函式即可開啟 Socket。該函式共有 3 組參數：</p>
+<ol>
+  <li>以 1 組字串代表所要連線的伺服器主機名稱 (亦可為該伺服器的原始 IP 位址)。</li>
+  <li>以 1 組數字代表 Socket 所要使用的 TCP 通訊埠 (某些協定擁有標準埠，如 HTTP 為 80、SSL 為 447、SMTP 為 25 等。若為 1024 以上的通訊埠數字，則不會用於任何特定的通訊協定，也就是說可用於任何用途)。</li>
+  <li>最後是 1 組選填的物件，內含最多 2 個選項。<br>
+    i.) 名為 <code>useSSL</code> 的 Boolean 值，代表 Socket 必須使用 SSL，預設值為 <code>false。</code><br>
+    ii.) 名為 <code>binaryType</code> 的字串，可指定 Apps 透過 <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/data" title="/en-US/docs/Web/Reference/Events/data">data</a> 事件所取得的資料型態，可為 <code>string</code> 或 <code>arraybuffer</code> 值。預設值為 <code>string</code>。</li>
+</ol>
+<pre class="brush: js">var socket = navigator.mozTCPSocket.open('localhost', 80);</pre>
+<div class="note">
+  <p><strong>注意：</strong>僅限 Certified Apps 可使用 1024 以下的通訊埠。</p>
+</div>
+<h3 id="傳送資料">傳送資料</h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TCPSocket.send" title="The send method is used to buffer data to be sent to the server."><code>TCPSocket.send()</code></a> 函式將透過 1 組字串，或 1 組 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Typed_arrays/Uint8Array" title="/en-US/docs/JavaScript/Typed_arrays/Uint8Array">Uint8Array</a> 物件而傳送資料。另請注意，由於 TCP Socket 僅處理二進制資料，因此使用 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Typed_arrays/Uint8Array" title="/en-US/docs/JavaScript/Typed_arrays/Uint8Array">Uint8Array</a> 可達較高的安全性。</p>
+<p>對 TCP 通訊協定而言，單次傳輸量最好以 64kb 為上限而能達到最佳效果。只要緩衝的資料不到 64kb，送至 <a href="https://developer.mozilla.org/en-US/docs/Web/API/TCPSocket.send" title="The send method is used to buffer data to be sent to the server."><code>send</code></a> 函式的呼叫即會回傳 <code>true。一旦緩衝區滿載</code>，則函式隨即回傳 <code>false</code>，進而要求該 App 暫停並清空緩衝區。每次只要清空緩衝區就會發出 <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/drain" title="/en-US/docs/Web/Reference/Events/drain">drain</a> 事件，讓該 App 針對此事件再度開始傳送資料。</p>
+<p>透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/TCPSocket.bufferedAmount" title="The bufferedAmount represents the number of bytes which have previously been buffered by calls to the send() method on this socket."><code>TCPSocket.bufferedAmount</code></a> 屬性，即可得知目前已緩衝的實際資料量。</p>
+<pre class="brush: js">function getData() {
+  var data;
+
+  // do stuff that will retrieve data
+
+  return data;
+}
+
+function pushData() {
+  var data;
+
+  do {
+    data = getData();
+  } while (data != null &amp;&amp; socket.send(data));
+}
+
+// Each time the buffer is flushed
+// we try to send data again.
+socket.ondrain = pushData;
+
+// Start sending data.
+pushData();
+</pre>
+<h3 id="取得資料">取得資料</h3>
+<p>只要 Socket 獲得主機所傳來的資料，就會發出 <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/data" title="/en-US/docs/Web/Reference/Events/data">data</a> 事件。App 可透過此事件而存取來自於 Socket 的資料。當 Socket 為開啟狀態時，則資料型態將根據已設定的選項而有所不同 (可參閱前述的第三種參數)。</p>
+<pre class="brush: js">socket.ondata = function (event) {
+  if (typeof event.data === 'string') {
+    console.log('Get a string: ' + event.data);
+  } else {
+    console.log('Get a Uint8Array');
+  }
+}</pre>
+<p>在送出所需的 <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/data" title="/en-US/docs/Web/Reference/Events/data">data</a> 事件之後，有時也必須暫停後續資料流入。此時呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/TCPSocket.suspend" title="The suspend method pauses reading incoming data and prevents the data event from being triggered until the resume() method is called."><code>TCPSocket.suspend()</code></a> 函式，即可暫停讀取後續資料並停止發送 <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/data" title="/en-US/docs/Web/Reference/Events/data">data</a>。若要再次開始讀取資料並發送事件，則可呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/TCPSocket.resume" title="The resume method resumes reading incoming data and allows the data event to be triggered again."><code>TCPSocket.resume()</code></a> 函式。</p>
+<h3 id="關閉_Socket">關閉 Socket</h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/TCPSocket.close" title="The close method cleanly closes the connection."><code>TCPSocket.close()</code></a> 可關閉 Socket。</p>
+<h2 id="標準">標準</h2>
+<p>尚未有任何規格。若要進一步了解此 API，可至 W3C 的 <a href="http://www.w3.org/2012/sysapps/raw-sockets/" title="http://www.w3.org/2012/sysapps/raw-sockets/">Raw Sockets</a> 提案之下，參閱 <a href="http://www.w3.org/2012/sysapps/" title="http://www.w3.org/2012/sysapps/">System Applications Working Group</a> 的相關討論。</p>
+<h2 id="另可參閱">另可參閱</h2>
+<ul>
+  <li>{{domxref("TCPSocket")}}</li>
+</ul>

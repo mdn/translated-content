@@ -1,0 +1,235 @@
+---
+title: Working with multiprocess Firefox
+slug: Archive/Add-ons/Working_with_multiprocess_Firefox
+translation_of: Archive/Add-ons/Working_with_multiprocess_Firefox
+---
+<div class="summary">
+ <p>這篇文章提供給 Firefox 擴充套件開發者；文中概述了如何讓擴充套件可以執行於多行程的 Firefox.</p>
+</div>
+<p>在多行程的 Firefox 之前的版本, chrome code (including code inserted by extensions) 和 content 執行於同一作業系統行程中，所以擴充套件可以直接存取 content:</p>
+<pre class="brush: js">gBrowser.selectedBrowser.contentDocument.body.innerHTML = "replaced by chrome code";</pre>
+<p>然而，在多行程的 Firefox (也稱為 Electrolysis 或 E10S)，套件的程式碼與 content 將執行於不同的行程中，因此不再可能直接地存取。</p>
+<p>取而代之地, the extension will need to factor code that touches content into separate scripts that are called <em>frame scripts</em>. Frame scripts 執行在 content 行程，並可以直接存取 content. Frame scripts 藉由 message-passing API 和套件其餘的部份通訊。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8437/e10s-overview.png" style="display: block; margin-left: auto; margin-right: auto;">當套件程式碼（執行於 chrome 行程中）向套件的 frame script（執行於 content 行程中） 傳訊時，必須使用非同步訊息。</p>
+<p>content 行程允許向 chrome 行程傳遞同步或非同步訊息，但是，非同步通訊是較好的選擇。</p>
+<p>For more details on using the message manager and content scripts, refer to the <a href="/en-US/docs/The_message_manager">message manager guide</a>. The rest of this article explains how to work out if you're affected or not, provides an overview of the sorts of changes that are needed, then walks through the process of porting some simple extension patterns so they work properly with multiprocess Firefox.</p>
+<h2 id="確認你是否受到相容性影響">確認你是否受到相容性影響</h2>
+<p>As a rule:</p>
+<ul>
+ <li>如果你只使用 Add-on SDK's <a href="/en-US/Add-ons/SDK/High-Level_APIs">high-level APIs</a>，你不會受到相容性困擾 (Add-on SDK 目前並不是完全相容於多行程的 Firefox，但相關問題短期內將會處理完成)</li>
+ <li>如果你不存取任何網頁內容，你不會受到相容性困擾</li>
+ <li>if you access web content directly using an <a href="/en-US/Add-ons/Overlay_Extensions">overlay extension</a>, a <a href="/en-US/Add-ons/Bootstrapped_extensions">bootstrapped extension</a>, or <a href="/en-US/Add-ons/SDK/Low-Level_APIs">low-level SDK APIs</a> like <a href="/en-US/Add-ons/SDK/Low-Level_APIs/window_utils">window/utils</a> or <a href="/en-US/Add-ons/SDK/Low-Level_APIs/tabs_utils">tabs/utils</a>, then you probably will be affected</li>
+ <li>if you load XUL pages in tabs, you will be affected</li>
+</ul>
+<p>To know for sure, you need to test it, and setting that up is a two-step process:</p>
+<ul>
+ <li><strong>開啟 Firefox 的多行程支援:</strong> multiprocess support is in <a href="http://nightly.mozilla.org/">Firefox Nightly</a>, but is hiding behind a preference. To enable it visit <a class="external external-icon" href="http://kb.mozillazine.org/About:config">about:config</a>, find the preference named <code>browser.tabs.remote.autostart</code>, set it to <code>true</code>, and restart the browser. As a visual indicator that you're running multiprocess Firefox, the titles of tabs are underlined.</li>
+ <li><strong>宣告你的套件是多行程相容的:</strong> to make migration to multiprocess Firefox easier, we've implemented <a href="/en-US/Firefox/Multiprocess_Firefox/Compatibility_shims">shims</a> that help extensions to work even when they're not compatible. To check whether your extension is really compatible you need to disable these shims. To do that, add a new property to your extension's <a href="/en-US/Add-ons/Install_Manifests">install.rdf</a> named <code>multiprocessCompatible</code>, with a value of <code>true</code>. At the moment, this flag does not disable all shims, so it's not yet a reliable way to test that your add-on is compatible. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1051017">bug 1051017</a> for details on this.</li>
+</ul>
+<p>Now you'll be able to test your extension in multiprocess Firefox, with no <a href="/en-US/Firefox/Multiprocess_Firefox/Compatibility_shims">compatibility shims</a>. At the moment you can't actually install extensions in multiprocess Firefox, so you have to install the extension, then switch on multiprocess support. This is being tracked as <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1055808">bug 1055808</a>.</p>
+<h2 id="Updating_your_code">Updating your code</h2>
+<p>The general approach to updating your code is:</p>
+<ul>
+ <li>factor the part of your extension that accesses web content into one or more separate scripts. In multiprocess Firefox these are called <em>frame scripts</em>.</li>
+ <li>register chrome:// URLs for your frame scripts</li>
+ <li>use a <a href="/en-US/docs/The_message_manager">message manager</a> to load the scripts into <a href="/en-US/docs/Mozilla/Tech/XUL/browser"><code>browser</code></a> objects</li>
+ <li>if you need to communicate between the main extension code and a frame script, use message manager APIs to do so</li>
+ <li>if you load XUL in tabs, <a href="/en-US/docs/Custom_about:_URLs">register these as about: URLs</a> and load them with the about: URL.</li>
+</ul>
+<p>There are more details on this in the <a href="/en-US/docs/The_message_manager">message manager</a> documentation.</p>
+<h3 id="Backwards_compatibility_of_the_new_APIs">Backwards compatibility of the new APIs</h3>
+<p>With multiprocess support turned off, the e10s messaging APIs are still available and functional. They have been available in one form or another since Firefox 4; however, the original APIs are different than the current ones. Some known differences:</p>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=776825">Interface changes in Firefox 17</a></li>
+ <li>Before Firefox 19, code like <code>new content.document.defaultView.XMLHttpRequest()</code> fails with <code>NS_ERROR_FAILURE: Failure</code></li>
+</ul>
+<p>You should test your changes not only in nightlies with multiprocess support turned on, but also in releases you intend to support with multiprocess support turned off.</p>
+<h2 id="Examples">Examples</h2>
+<p>This section walks through the process of porting a few different sorts of extension. The extensions are all extremely simple, and are intended to represent fundamental extension patterns that require different handling in multiprocess Firefox.</p>
+<p>You can find all the source code for these examples in the <a href="https://github.com/mdn/e10s-example-addons">e10s-example-addons GitHub repository</a>.</p>
+<h3 id="Run_a_script_in_all_pages">Run a script in all pages</h3>
+<div class="note">
+ <p><a href="https://github.com/mdn/e10s-example-addons/tree/master/run-script-in-all-pages">See the code for this example</a>.</p>
+</div>
+<p>The first extension runs some code on every page load. The code doesn't need to interact with any other part of the extension: it just makes some predetermined modification to the page. In this case it adds a border to the document's <a href="/en-US/docs/Web/HTML/Element/body"><code>body</code></a>.</p>
+<p>It does this by attaching to a XUL overlay a version of the <a href="/en-US/Add-ons/Code_snippets/On_page_load#Basic_onPageLoad_for_a_browser_window">"On page load" code snippet</a>:</p>
+<pre class="brush: js">var myExtension = {
+    init: function() {
+        // The event can be DOMContentLoaded, pageshow, pagehide, load or unload.
+        if(gBrowser) gBrowser.addEventListener("DOMContentLoaded", this.onPageLoad, false);
+    },
+    onPageLoad: function(aEvent) {
+        var doc = aEvent.originalTarget; // doc is document that triggered the event
+        if (doc.nodeName != "#document") return; // only documents
+        // make whatever modifications you want to doc
+        doc.body.style.border = "5px solid blue";
+    }
+}
+
+window.addEventListener("load", function load(event){
+    window.removeEventListener("load", load, false); //remove listener, no longer needed
+    myExtension.init();
+},false);</pre>
+<p>Because this code accesses web content directly, it won't work in multiprocess Firefox.<br>
+ <img alt="" src="https://mdn.mozillademos.org/files/8431/all-pages-original.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<h4 id="Porting_to_the_message_manager">Porting to the message manager</h4>
+<p>To port this example using the message manager, we can put all the meat of the add-on in a frame script:</p>
+<pre class="brush: js">// frame-script.js
+// will run in the content process
+
+addEventListener("DOMContentLoaded", function(event) {
+  var doc = event.originalTarget;
+  if (doc.nodeName != "#document") return; // only documents
+  doc.body.style.border = "5px solid red";
+});
+</pre>
+<p>We'll register a chrome:// URL for the frame script:</p>
+<pre>// chrome.manifest
+
+content    modify-all-pages    chrome/content/
+</pre>
+<p>The main script, that we attach to the XUL overlay, is just a stub that uses the global message manager to load the frame script into each tab:</p>
+<pre class="brush: js">// chrome script
+// will run in the chrome process
+
+var globalMM = Cc["@mozilla.org/globalmessagemanager;1"]
+  .getService(Ci.nsIMessageListenerManager);
+
+globalMM.loadFrameScript("chrome://modify-all-pages/content/frame-script.js", true);</pre>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8415/all-pages-ported.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<h4 id="Porting_to_the_Add-on_SDK">Porting to the Add-on SDK</h4>
+<p>A good alternative for an extension like this is to port to the Add-on SDK. The Add-on SDK includes a module called <a href="/en-US/Add-ons/SDK/High-Level_APIs/page-mod">page-mod</a> which is designed to load scripts into web pages. The Add-on SDK calls these scripts <em>content scripts</em>.</p>
+<p>In this case the main extension code creates a page-mod to load a content script into every page loaded by the user:</p>
+<pre class="brush: js">// main.js
+
+var pageMod = require("sdk/page-mod");
+var self = require("sdk/self");
+
+pageMod.PageMod({
+  include: "*",
+  contentScriptFile: self.data.url("modify-all-pages.js")
+});</pre>
+<p>The content script can modify the page directly:</p>
+<pre class="brush: js">// modify-all-pages.js - content script
+
+document.body.style.border = "5px solid green";</pre>
+<h3 id="Run_a_script_in_the_active_tab">Run a script in the active tab</h3>
+<div class="note">
+ <p><a href="https://github.com/mdn/e10s-example-addons/tree/master/run-script-in-active-page">See the code for this example</a>.</p>
+</div>
+<p>The example demonstrates how an extension can:</p>
+<ul>
+ <li><a href="/en-US/docs/The_message_manager#Types_of_message_manager">load a frame script into a specific XUL <code>&lt;browser&gt;</code> element</a></li>
+ <li><a href="/en-US/docs/The_message_manager#Synchronous_messaging">make a synchronous call from the frame script to the main extension</a></li>
+</ul>
+<p>The example is a restartless extension that adds a button using the CustomizableUI module. When the user clicks the button, the extension runs some code that modifies the current tab. The basic infrastructure is taken from the <a href="https://github.com/jvillalobos/Australis-Hello-World">Australis "Hello World" extension written by Jorge Villalobos</a>.<br>
+ <br>
+ What the code actually does is: find any <code><a href="/en-US/docs/Web/HTML/Element/Img">&lt;img&gt;</a></code> elements and replace their <code>src</code> with a link to a silly GIF randomly chosen from a list hardcoded into the extension. The silly gifs are taken from the list in the <a href="https://github.com/bwinton/whimsy">Whimsy extension</a>.</p>
+<p>The first version accesses the page directly, so it's not multiprocess compatible:</p>
+<pre class="brush: js">// bootstrap.js
+
+let Gifinate = {
+  init : function() {
+    let io =
+      Cc["@mozilla.org/network/io-service;1"].
+        getService(Ci.nsIIOService);
+
+    // the 'style' directive isn't supported in chrome.manifest for bootstrapped
+    // extensions, so this is the manual way of doing the same.
+    this._ss =
+      Cc["@mozilla.org/content/style-sheet-service;1"].
+        getService(Ci.nsIStyleSheetService);
+    this._uri = io.newURI("chrome://gifinate/skin/toolbar.css", null, null);
+    this._ss.loadAndRegisterSheet(this._uri, this._ss.USER_SHEET);
+
+    // create widget and add it to the main toolbar.
+    CustomizableUI.createWidget(
+      { id : "gifinate-button",
+        defaultArea : CustomizableUI.AREA_NAVBAR,
+        label : "Gifinate",
+        tooltiptext : "Gifinate!",
+        onCommand : function(aEvent) {
+          Gifinate.replaceImages(aEvent.target.ownerDocument.defaultView.content.document);
+        }
+      });
+  },
+
+  replaceImages : function(contentDocument) {
+      let images = contentDocument.getElementsByTagName("img");
+      for (var i = 0; i &lt; images.length; ++i) {
+        let gif = this.gifs[Math.floor(Math.random() * this.gifs.length)];
+        images[i].src = gif;
+      }
+    },</pre>
+<p><img alt="" src="https://mdn.mozillademos.org/files/8433/gifinate-original.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<h4 id="Porting_to_the_message_manager_2">Porting to the message manager</h4>
+<p>To port this example to the message manager we'll make <code>onCommand</code> load a frame script into the current <code>&lt;browser&gt;</code>, then listen for "request-gifs" messages from the frame script. The "request-gifs" message is expected to contain the number of GIFs we need for this page: the message listener retrieves and returns that many GIFs.</p>
+<pre class="brush: js">// bootstrap.js
+// will run in the chrome process
+
+let Gifinate = {
+  init : function() {
+    let io =
+      Cc["@mozilla.org/network/io-service;1"].
+        getService(Ci.nsIIOService);
+
+    // the 'style' directive isn't supported in chrome.manifest for bootstrapped
+    // extensions, so this is the manual way of doing the same.
+    this._ss =
+      Cc["@mozilla.org/content/style-sheet-service;1"].
+        getService(Ci.nsIStyleSheetService);
+    this._uri = io.newURI("chrome://gifinate/skin/toolbar.css", null, null);
+    this._ss.loadAndRegisterSheet(this._uri, this._ss.USER_SHEET);
+
+    // create widget and add it to the main toolbar.
+    CustomizableUI.createWidget(
+      { id : "gifinate-button",
+        defaultArea : CustomizableUI.AREA_NAVBAR,
+        label : "Gifinate Button",
+        tooltiptext : "Gifinate!",
+        onCommand : function(aEvent) {
+          Gifinate.replaceImages(aEvent.target.ownerDocument);
+        }
+      });
+  },
+
+  replaceImages : function(xulDocument) {
+    var browserMM = xulDocument.defaultView.gBrowser.selectedBrowser.messageManager;
+    browserMM.loadFrameScript("chrome://gifinate/content/frame-script.js", false);
+    browserMM.addMessageListener("request-gifs", Gifinate.getGifs);
+  },
+
+  getGifs : function(message) {
+    var gifsToReturn = new Array(message.data);
+    for (var i = 0; i &lt; gifsToReturn.length; i++) {
+      let gif = this.gifs[Math.floor(Math.random() * this.gifs.length)];
+      gifsToReturn[i] = gif;
+    }
+    return gifsToReturn;
+  },
+</pre>
+<p>Again, we need to register a chrome:// URL for the frame script:</p>
+<pre>// chrome.manifest
+
+content gifinate frame-script.js</pre>
+<p>In the frame script, we get all the <code>&lt;img&gt;</code> elements and send the "request-gifs" message to the main add-on code. Because this is a frame script we can make it a synchronous message, and update the <code>src</code> attributes with the value it returns:</p>
+<pre class="brush: js">// frame-script.js
+// will run in the content process
+
+var images = content.document.getElementsByTagName("img");
+var response = sendSyncMessage("request-gifs", images.length);
+var gifs = response[0];
+
+for (var i = 0; i &lt; images.length; ++i) {
+  images[i].src = gifs[i];
+}</pre>
+<p>The overall flow of the add-on now looks like this:<br>
+ <img alt="" src="https://mdn.mozillademos.org/files/8411/gifinate-ported.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<h2 id="Known_bugs">Known bugs</h2>
+<p>This is a list of open bugs likely to affect add-on developers migrating to multiprocess Firefox:</p>
+<ul>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1051238"><b>Bug 1051238</b></a> -<span id="summary_alias_container"> <span id="short_desc_nonedit_display">frame scripts are cached forever, so an add-on can't properly update without a browser restart</span></span></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1017320"><b>Bug 1017320</b></a> -<span id="summary_alias_container"> <span id="short_desc_nonedit_display">tracking bug for implementing compatibility shims</span></span></li>
+ <li><span><span><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1051017"><b>Bug 1051017</b></a> -<span id="summary_alias_container"> <span id="short_desc_nonedit_display">not all shims are disabled, even if an add-on is declared to be multiprocess compatible</span></span></span></span></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1055808"><strong>Bug 1055808</strong></a> - can't install local add-ons in multiprocess Firefox</li>
+</ul>

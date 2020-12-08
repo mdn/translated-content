@@ -1,0 +1,69 @@
+---
+title: 托管＼架設式 (Hosted) App
+slug: Archive/Mozilla/Marketplace/Options/Hosted_apps
+translation_of: Archive/Mozilla/Marketplace/Options/Hosted_apps
+---
+<div class="summary">
+<p><span class="seoSummary">托管＼架設式 (Hosted) App 即為 Open Web App，將其所有資源 (HTML、CSS、JavaScript、manifest 檔案等) 儲存於 Web 伺服器上。本文將簡介托管＼架設式 App，另有相關連結讓你從開發者的角度進一步了解相關資訊。</span></p>
+</div>
+
+<p>與一般網站相同，托管的 Open Web App 亦透過 Web 伺服器提供其所有內容，另於 App 的根目錄中提供 <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest">App 的 manifest 檔案</a>。manifest 檔案則具備 App 的詳細資料，如相關說明、代表 App 的圖示等等。且不論是 Firefox OS 裝置、<a href="https://developer.mozilla.org/en-US/Marketplace/Options/Open_web_apps_for_android">Android 裝置</a>，或<a href="https://developer.mozilla.org/en-US/Marketplace/Options/Open_web_apps_for_desktop">桌上型電腦</a>，這些詳細資料都會用於 App 的安裝作業。一旦安裝完畢，App 就會從原本的托管伺服器動態載入其內容，並可存取 Web 上的其他資源，如 Web 伺服器上的資料庫。</p>
+
+<p>在 <a href="/en-US/Firefox_OS/Security/Security_model#App_Security">Firefox OS 安全模型</a>中，托管式 App 均定義為 Web App，意即這類 App 無法利用 <a href="https://developer.mozilla.org/en-US/Apps/Build/App_permissions">Privileged 與內部 (即 Certified) API</a>。若要利用這些 API，則必須以<a href="/en-US/Marketplace/Options/Packaged_apps">封裝式 (Packaged) App</a> 的方式來提供 App。</p>
+
+<div class="note">
+<p><strong>注意：</strong>Firefox Marketplace 僅支援 Firefox OS 的付費托管式，以及 Firefox OS、Firefox for Android、Firefox 的免費托管式 App。目前正開發所有平台的付費 App 支援功能。</p>
+</div>
+
+<h2 id="App_托管選擇">App 托管選擇</h2>
+
+<p>開發者可自行選擇 App 的托管之處。如果你還沒選擇托管方式，則可考慮本段說明的常見托管選擇。</p>
+
+<h3 id="GitHub">GitHub</h3>
+
+<p>如果你的 Open Web App 為靜態內容 (HTML/CSS/JavaScript，但無伺服器端的處理作業)，那<a class="external external-icon" href="http://pages.github.com" rel="external">GitHub Pages</a> 應該是你的不二選擇。如果你的 manifest 檔案是 <code>.webapp</code> 為附檔名，則 GitHub 就能用 <a href="https://developer.mozilla.org/en-US/Apps/Developing/Manifest#Serving_from_GitHub">correct MIME type</a> 提供 manifest 檔案。</p>
+
+<h3 id="一般托管解決方案">一般托管解決方案</h3>
+
+<p>動態的 Open Web App 需要伺服器端的處理作業，所以你可用任何常見的托管選擇 (像是你自己架設或可存取的 Web 伺服器)。你必須先確認 Web 伺服器具備相關功能。另有許多托管服務供應商已針對托管式 App 的需求 (如 <a class="external external-icon" href="http://www.heroku.com" rel="external">Heroku</a>、<a class="external external-icon" href="http://code.google.com/appengine" rel="external">Google App Engine</a>、<a class="external external-icon" href="http://aws.amazon.com/application-hosting" rel="external">Amazon App Hosting</a>)，量身打造出 Web 伺服器。</p>
+
+<div class="note">
+<p><strong>注意：</strong>之前在安裝 Open Web App 時，必須滿足「一組來源僅能提供一個 App」的安全規範。但這項條件到 Firefox 34/Firefox OS 2.1 (可參閱<a href="https://developer.mozilla.org/en-US/Apps/Build/installable_apps_for_Firefox_OS/App_manifest_FAQ#Can_I_have_more_than_one_app_at_my_origin.3F">此 FAQ</a> 以獲得更多資訊) 已經移除。如果你仍要支援較舊版本，則可試試看在不同來源托管不同的 App (如測試＼正式版本)。其中一個方法就是為 App <a href="/en-US/Marketplace/Publishing/Adding_a_subdomain">建立不同的子網域</a>，或可透過 <a href="/en-US/docs/Tools/WebIDE">WebIDE</a> 測試 App。可參閱<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/FAQs/About_app_manifests">〈manifest 檔案常見問題〉</a>以進一步了解。</p>
+</div>
+
+<h2 id="測試托管式_App">測試托管式 App</h2>
+
+<p>若要將托管式 App 安裝至 Firefox OS 模擬器或實體裝置上，以利進行測試，請參閱《<a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager">應用程式管理員 (App Manager)</a>》。你也可觀看《<a href="https://developer.mozilla.org/en-US/Marketplace/Options/Self_publishing">自行發佈 App</a>》中所說明的步驟，透過 Web 伺服器將 App 安裝到裝置之上。</p>
+
+<h2 id="發佈托管式_App">發佈托管式 App</h2>
+
+<p>現有 2 種方式可發佈托管式 App：1). 透過 Firefox Marketplace 或 2). 自行發佈。</p>
+
+<h3 id="發佈於_Firefox_Marketplace">發佈於 Firefox Marketplace</h3>
+
+<p>你可參閱《<a href="https://developer.mozilla.org/en-US/Marketplace/Publishing">App 發佈流程</a>》，了解應如何將托管式 App 提交到 Firefox Marketplace 之上。</p>
+
+<p>在你提交自己的托管式 App 之後，Marketplace 隨即根據你放在 Web 伺服器上的 manifest 檔案，產生新的「<strong>mini-manifes</strong>」檔案。只要消費者決定要安裝 App，則 mini-manifest 就會傳送到 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Apps.install"><code>Apps.install()</code></a> 函式以安裝該 App。mini-manifest 僅會用於 App 的安裝與更新作業，並不會用於 App 執行期間。</p>
+
+<h3 id="自行發佈">自行發佈</h3>
+
+<p>你當然也能在 Firefox Marketplace 以外發佈托管式 App，也就是透過自己架設的 Web 伺服器。可參閱《<a href="https://developer.mozilla.org/zh-TW/docs/Mozilla/Marketplace/Publishing/Publish_options">自行發佈 App</a>》。</p>
+
+<h2 id="更新托管式_App">更新托管式 App</h2>
+
+<p>共有 2 種方式可更新托管式 App：</p>
+
+<ul>
+ <li>在 App 所托管的 Web 伺服器上進行變更，消費者在下次執行 App 時就能獲得更新檔案。</li>
+ <li>將新版 App 提交到 Firefox Marketplace 之後，就會隨之更新 mini-manifest 所控制的裝置內容，如如 App 的圖示或名稱。</li>
+</ul>
+
+<p>若要進一步了解在 Firefox Marketplace 上更新 App 的方法，可參閱《<a href="https://developer.mozilla.org/zh-TW/docs/Mozilla/Marketplace/Publishing/Updating_apps">更新 App</a>》；若是自行發佈的 App，則可參閱《<a href="https://developer.mozilla.org/en-US/Marketplace/Options/Self_publishing">自行發佈 App</a>》。</p>
+
+<h2 id="另請參閱">另請參閱</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/Firefox_OS/Security/Security_model">Firefox OS 安全性概述</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/Firefox_OS/Security/Application_security">App 安全性</a></li>
+ <li><a class="external external-icon" href="https://github.com/robnyman/Firefox-OS-Boilerplate-App" title="https://github.com/robnyman/Firefox-OS-Boilerplate-App">Firefox OS 的「Boilerplate」App</a></li>
+</ul>

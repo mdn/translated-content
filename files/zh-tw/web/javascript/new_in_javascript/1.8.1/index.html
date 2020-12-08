@@ -1,0 +1,41 @@
+---
+title: JavaScript 1.8.1 新鮮事
+slug: Web/JavaScript/New_in_JavaScript/1.8.1
+tags:
+  - ECMAScript5
+  - Firefox 3.5
+  - Gecko 1.9.1
+  - JavaScript
+  - JavaScript 1.8.1
+  - JavaScript_version_overviews
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.8.1
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+<div>
+<p>{{ gecko_minversion_header("1.9.1") }}</p>
+
+<p>  JavaScript 1.8.1 僅只修改了一小部份語法。主要的改變可以看 <a class="internal" href="/En/SpiderMonkey/Internals/Tracing_JIT" title="En/SpiderMonkey/Internals/Tracing JIT">Tracemonkey just-in-time compiler</a>，大多是關於效能增進的部份。</p>
+
+<p>  以下列舉一些值得注意的 API 變動 (細節詳見 <a class="external" href="http://groups.google.com/group/mozilla.dev.tech.js-engine/browse_thread/thread/a4d1fe147761aacb#" title="http://groups.google.com/group/mozilla.dev.tech.js-engine/browse_thread/thread/a4d1fe147761aacb#">detailed in this newsgroup posting</a>)：</p>
+
+<h2 id="語言新增">語言新增</h2>
+
+<dl>
+ <dt><a class="internal" href="../../../../En/Core_JavaScript_1.5_Reference/Global_Objects/Object/GetPrototypeOf" rel="internal"><code>Object.getPrototypeOf()</code></a></dt>
+ <dd>這個新函式可以回傳物件的 prototype。</dd>
+ <dt><a class="internal" href="/En/Using_native_JSON" title="En/Using JSON in Firefox">Using native JSON</a></dt>
+ <dd>Firefox 3.5 可以原生支援 <a class="internal" href="/en/JSON" title="En/JSON">JSON</a> 的操作了。</dd>
+ <dt>增加了新的 trim 函式到 String 物件</dt>
+ <dd>現在 <a class="internal" href="../../../../en/Core_JavaScript_1.5_Reference/Global_Objects/String" rel="internal"><code>String</code></a> 物件擁有 <a class="internal" href="../../../../En/Core_JavaScript_1.5_Reference/Global_Objects/String/Trim" rel="internal"><code>trim()</code></a>, <code><a class="internal" href="../../../../En/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimLeft" rel="internal">trimLeft()</a> 和</code> <a class="internal" href="../../../../En/Core_JavaScript_1.5_Reference/Global_Objects/String/TrimRight" rel="internal"><code>trimRight()</code></a> 函式。</dd>
+</dl>
+
+<h2 id="其他改良">其他改良</h2>
+
+<ul>
+ <li>Implicit setting of properties in object and array initializers no longer execute setters in JavaScript. This makes the behavior of setting the values of properties more predictable. See the blog post <a class="external" href="/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated" title="https://developer.mozilla.org/editor/fckeditor/core/editor/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated/">Object and array initializers should not invoke setters when evaluated</a> for details.</li>
+</ul>
+
+<p>{{ languages( { "ja": "ja/New_in_JavaScript_1.8.1"} ) }}</p>
+</div>
+
+<p> </p>

@@ -1,0 +1,108 @@
+---
+title: Firefox OS 建置程序摘要
+slug: >-
+  Archive/B2G_OS/Building_and_installing_Firefox_OS/Firefox_OS_build_process_summary
+translation_of: Archive/B2G_OS/Building_and_installing_B2G_OS/B2G_OS_build_process_summary
+---
+<div class="summary">
+ <p><font><font>建置</font></font><font><font>和安裝Firefox OS需要大量的時間，網路頻寬和電腦計算能力。</font><font>不幸的是，一路上事情很容易出問題，所以</font><font>此頁面列出了<font><font>建置</font></font>的目標和步驟，希望</font></font><font><font>可以在用戶<font><font><font><font>建置的</font></font>過程中</font></font><font><font>幫上忙</font></font>。</font><font>至於每一步驟的細節，會在其他文</font></font>件討論<font><font>。</font></font></p>
+</div>
+<div class="note">
+ <p><span style="font-weight: bold;"><font><font>注：</font></font></span><font><font>Firefox OS<font><font>建置</font></font>過程會提及到“B2G”或“Boot2Gecko”。</font><font>“Boot2Gecko”是Firefox OS專案的原始代號名稱。</font></font></p>
+</div>
+<h2 id="建置目標：4個“映像”檔"><font><font><font><font>建置</font></font>目標：4個“映像”檔</font></font></h2>
+<p><font><font><font><font>建置</font></font>的目標是建立4個可以被複製到Firefox OS設備的映像檔。</font></font></p>
+<table style="width: 90%; vertical-align: top; margin: 4px auto;">
+ <tbody>
+  <tr>
+   <td><b><font><font>boot.img</font></font></b></td>
+   <td><font><font>Linux核心和根檔案系統映像檔(root filesystem image)，後者提供<font><font>一套</font></font>可用的基本Unix工具。</font></font></td>
+  </tr>
+  <tr>
+   <td><b><font><font>system.img</font></font></b></td>
+   <td><font><font>Firefox的操作系統核心，包括部分<font><font>的</font></font>Gonk，Gecko的接口，可執行b2g檔。</font></font></td>
+  </tr>
+  <tr>
+   <td><b><font><font>userdata.img</font></font></b></td>
+   <td>
+    <p><font><font>使用者的</font></font><font><font>Gecko profile</font></font><font><font>以及Gaia網頁應用程式。</font></font></p>
+   </td>
+  </tr>
+  <tr>
+   <td><b><font><font>recovery.img</font></font></b></td>
+   <td><font><font>Linux核心和根<font><font>檔案系統</font></font>映像檔，另外還有簡單的工具，好讓使用戶能夠從問題中<font><font>修復</font></font>。</font></font></td>
+  </tr>
+ </tbody>
+</table>
+<p><font><font>一旦四個映像檔產生好後，它們可以被轉移到一個裝置。</font></font></p>
+<p><font><font>Firefox OS是建立在Android開源專案上(Android Open Source Project, AOSP)。</font><font>AOSP的</font></font><code><font><font>ADB</font></font></code><font><font>和</font></font><code><font><font>fastboot工具</font></font></code><font><font>提供了十分好用的方法來存取和操作設備。</font></font><font><font>值得一提的是</font></font><font><font><code>adb reboot-bootloader命令</code></font></font><font><font>可以讓已經</font></font><font><font>連接上的裝置重開機，並且暫停至bootloader早期階段，在這個早期階段中可以下<code>fastboot flash $partition $image命令</code></font></font><font><font><code>，把映像檔複製到裝置之上</code>。</font></font></p>
+<h3 id="開機映像檔(The_Boot_image)"><font><font>開機映像檔(The Boot image)</font></font></h3>
+<p><font><font>boot.img(開機映像檔)</font></font><font><font>包含Linux核心和初始根磁碟分區，boot.img</font></font><font><font>提供核心軟體工具和初始化腳本。為了效率考量，</font><font><font><font>初始根磁碟分區會</font></font>被複製到記憶體之中，因此被稱為“ramdisk”。boot.img</font><font>將被複製到設備上的“啟動”(boot)分區</font></font><code>，而在裝置的檔案系統運作時，<font><font>ramdisk的內容是可以在根目錄底下看見，比如說下adb shell指令</font></font></code><font><font>。</font></font></p>
+<p><font><font>boot.img還<font><font>在根目錄下的<code><font><font>default.prop</font></font></code>文<font><font><font><font>件</font></font></font></font>裡</font></font>建立了root用戶的權限</font></font><font><font>。</font></font></p>
+<p><font><font>另外也可以通過檔案<font><font>檢查</font></font>，分割<font><font>檔案</font></font>到核心和ramdisk映像檔，<font><font>修改從</font></font>ramdisk映像抓出來的內容，並重新組裝ramdisk映像檔，然後重新建置boot.img，這樣來修改現存的開機映像檔 。</font><font><font><font>例如請參考</font></font></font></font><font><font><a href="http://k.japko.eu/alcatel-otf-hackers-guide-1.html">Alcatel One Touch Fire Hacking (Mini)</a></font></font><font><font>指南。</font></font></p>
+<p><font><font>可以在安裝<font><font><font><font>開機映像檔</font></font></font></font>前測試<font><font><font><font>開機映像檔。</font></font></font></font></font></font>首先讓裝置開機後暫停於bootloader，然後下<code>fastboot boot /some/path/to/boot.img命令來開機進入尚未安裝的boot.img。</code></p>
+<h3 id="系統映像"><font><font>系統映像</font></font></h3>
+<p><font><font>系統映像檔（</font></font><code><font><font>system.img</font></font></code><font><font>）是Firefox OS的核心：</font></font></p>
+<ul>
+ <li><strong><font><font>Gonk</font></font></strong><font><font>：操作系統的底層元件</font></font></li>
+ <li><strong>Gecko</strong><font><font>：Firefox的HTML和JavaScript引擎</font></font></li>
+ <li><strong><font><font>B2G</font></font></strong><font><font>：操作系統核心運行程序。</font></font></li>
+</ul>
+<div class="note">
+ <p><font><font>有<font><font>關於平台架構的更多資訊，</font></font>請見</font></font><a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform"><font><font>Firefox OS平台</font></font></a><font><font>指南。</font></font></p>
+</div>
+<p><font><font>system.img會被複製到system分區，而在檔案系統運作時會在/system/目錄底下。</font></font></p>
+<div class="note">
+ <p><strong><font><font>注</font></font></strong><font><font>：system.img提供了許多裝置會用到的二進位大型物件(BLOB)，特別是RIL（Radio Interface Layer）的blob控制了設備上的蜂巢式行動網路(cellular radio network)。</font></font></p>
+</div>
+<h3 id="用戶資料映像檔"><font><font>用戶資料映像檔</font></font></h3>
+<p><font><font>用戶資料應像檔（</font></font><code><font><font>userdata.img</font></font></code><font><font>）提供了運行中載入的各種Gaia應用程式。</font></font></p>
+<p><font><font><code><font><font>userdata.img會被複製到裝置的userdata分區，然後檔案系統</font></font></code></font></font><font><font><code>運作時會在/data/目錄底下。值得一提的是</code></font></font><font><font><code>/data/b2g/目錄含有使用者的Gecko profile，而/data/local/webapps/目錄則含有使用者實際可以用的網頁應用程式</code></font></font><font><font>。</font></font></p>
+<h3 id="復原映像檔"><font><font>復原映像檔</font></font></h3>
+<p><font><font>復原映像檔（</font></font><code><font><font>recovery.img</font></font></code><font><font>）包含了和boot.img相同的核心和類似的ramdisk。</font><font>然而，<code><font><font>recovery.img</font></font></code>採用不同的初始化腳本，所以使用者</font></font><font><font>會被導引到另一個介面，這個介面會有可以透過裝置實體按鍵來操作的復原指令。</font></font></p>
+<p><font><font><code><font><font>recovery.img會被複製到recovery分區，檔案系統運作時並不會掛載復原映像檔。</font></font></code></font></font></p>
+<h2 id="構建過程：準備，設定，建置，安裝"><font><font>構建過程：準備，設定，建置，安裝</font></font></h2>
+<p><font><font>建置和安裝Firefox OS的整個過程包括四個步驟：</font></font></p>
+<table style="width: 90%; vertical-align: top; margin: 4px auto;">
+ <tbody>
+  <tr>
+   <td><b><font><font>準備</font></font></b></td>
+   <td><font><font>取得建置需要的程式和檔案，如正確的編譯器和函式庫。</font></font></td>
+  </tr>
+  <tr>
+   <td><b><font><font>配置</font></font></b></td>
+   <td><font><font>下載原始碼，並創建</font></font><code><font><font>.configure</font></font></code><font><font>檔定義環境變數</font></font>，例如路徑等。</td>
+  </tr>
+  <tr>
+   <td><b><font><font>建置</font></font></b></td>
+   <td>
+    <p><font><font>建置使用者</font></font><font><font>的Gaia個人檔案和Gaia網頁應用程式。</font></font></p>
+   </td>
+  </tr>
+  <tr>
+   <td><b><font><font>安裝</font></font></b></td>
+   <td><font><font>在設備上安裝檔案。</font></font></td>
+  </tr>
+ </tbody>
+</table>
+<p> </p>
+<h3 id="準備"><font><font>準備</font></font></h3>
+<p><font><font>一開始需要準備好<font><font>建置需要的程式和檔案，如正確的編譯器和函式庫</font></font>。</font></font></p>
+<p><font><font>這個步驟可以通過手動執行或使用腳本來完成。</font><font>詳情將在</font></font><font><font><a href="/en-US/Firefox_OS/Firefox_OS_build_prerequisites" title="火狐OS建立的先決條件"><font><font>建置Firefox </font></font></a>OS的先決條件</font></font><font><font>頁面<font><font>討論</font></font>。</font></font></p>
+<div class="note">
+ <p><strong><font><font>注</font></font></strong><font><font>：在UNIX和類UNIX的機器，</font></font><font><font>我們可以利用which指令，搭配需要的程式名稱當作變數，來檢查這些需要的工具是否存在。</font></font></p>
+</div>
+<h3 id="設定"><font><font>設定</font></font></h3>
+<p><font><font>接著我們需要複製一份Firefox OS(B2G)的原始碼，通常可以透過git從B2G專案那裡複製一份，另外我們也需要產生一份.config檔，這個檔案會定義建置用的變數。</font></font></p>
+<p><font><font>設定會執行</font></font><code><font><font>config.sh</font></font></code><font><font>腳本。</font><font>詳情請見</font></font><a href="/en-US/Firefox_OS/Preparing_for_your_first_B2G_build" title="準備進行首次B2G構建"><font><font>準備進行首次B2G建置</font></font></a><font><font>頁面。</font></font></p>
+<p><font><font>configure腳本需要一個參數，指定建置的裝置種類。</font><font>建置名稱是和CPU架構而非裝置相關的代碼<font><font>名稱，目前可取得的代碼名稱請見<a href="/en-US/Firefox_OS/Phones"><font><font>這裡</font></font></a>。</font></font></font></font></p>
+<p><font><font>設定步驟也將使用Android開源專案的repo</font></font><font><font>工具，來下載(或<font><font>更新)建置的原始碼到/repo/project目錄下。這個步驟會下載大量的</font></font></font></font><font><font>檔案並且花費不少時間。</font></font></p>
+<h3 id="建置"><font><font>建置</font></font></h3>
+<p><font><font>建置步驟實際上將編譯所有的原始碼，並且生成的映像檔。</font></font></p>
+<p><font><font>建置會執行</font></font><code><font><font>build.sh</font></font></code><font><font>腳本。</font><font>詳情請見</font></font><a href="/en-US/Firefox_OS/Building" title="建築"><font><font>建置Firefox OS</font></font></a><font><font>頁面。</font></font></p>
+<p><font><font>基本上建置十分單調，這個步驟就是從AOSP工具、到Linux核心、到Gaia網頁應用程式把一切都建置起來，而且有時候很不好判斷是那一個環節出錯導致</font></font><font><font>建置失敗。</font></font></p>
+<p><font><font>我們可以只建置全部的某一部份，例如執行建置腳本時只帶入gecko參數，就會只建置Gecko系統，相同地，只帶入gaia參數，就只會建置Gaia。這些分別建置的部份可以分別地</font></font><font><font>被安裝到裝置上。</font></font></p>
+<p><font><font>另外，也可以建置之前所討論的映像檔，例如建置系統映像檔可以這樣建置./build.sh out/platform/$target/system.img，其中$target參數和設定步驟中所提供的參數相同。</font></font></p>
+<h3 id="安裝"><font><font>安裝</font></font></h3>
+<p><font><font>安裝的步驟會將新編譯的程式碼放置到設備上。</font><font>這個步驟會執行</font></font><code><font><font>flash.sh</font></font></code><font><font>腳本。</font></font></p>
+<p><font><font>如果只要安裝那些在建置步驟中分別被建置的部份，我們可以通過在執行falsh.sh時多帶入一個參數，例如./falsj.sh gaia就只會安裝Gaia網頁應用程式。</font></font></p>

@@ -1,0 +1,78 @@
+---
+title: 附加元件除錯工具箱
+slug: Mozilla/Add-ons/Add-on_Debugger
+translation_of: 'https://extensionworkshop.com/documentation/develop/debugging/'
+---
+<p>{{AddonSidebar}}</p>
+
+<p>附加元件除錯工具箱提供 Firefox 工具箱中的部分工具，能在附加元件的作用範圍中除錯：</p>
+
+<ul>
+ <li><a href="/en-US/docs/Tools/Debugger">JavaScript 除錯器</a>，可用以設定中斷點，或測試程式執行內部的各種狀態。</li>
+ <li><a href="/en-US/docs/Tools/Web_Console">主控台</a>，可用以查閱 log 訊息，或者在附加元件的作用範圍中執行 JavaScript</li>
+ <li><a href="/en-US/docs/Tools/Scratchpad">程式碼速記本</a>，可以在附加元件的作用範圍中執行 JavaScript，並另存為新檔</li>
+</ul>
+
+<p>需要重新啟動瀏覽器的 XUL overlay 附加元件無法使用附加元件除錯工具箱，這類的元件請使用<a href="/en-US/docs/Tools/Browser_Toolbox">瀏覽器工具箱</a>。</p>
+
+<p>請看這段影片，快速認識附加元件除錯工具箱：</p>
+
+<p>{{EmbedYouTube("KU3Xsck7qy0")}}</p>
+
+<h2 id="啟用附加元件除錯工具箱" style="line-height: 30px; font-size: 2.14285714285714rem;">啟用附加元件除錯工具箱</h2>
+
+<div>
+<p>如欲啟用附加元件除錯工具箱，您必須啟用 Firefox 裡的「啟用瀏覽器 chrome 與附加元件除錯工具箱」及「啟用遠端除錯」兩項設定。您可開啟<a href="https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox">網頁工具箱</a>裡的<a href="https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox#Settings">設定</a>，而後在「<a href="https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox#Advanced_settings">進階設定</a>」一區中啟用上述選項。</p>
+</div>
+
+<h2 id="開啟附加元件除錯工具箱"><span style="font-size: 2.14285714285714rem;">開啟</span>附加元件除錯工具箱</h2>
+
+<p><em>註：如前所述，附加元件除錯工具</em>箱<em>是專供不需重新啟動、以 SDK 製作的附加元件使用。若想為其他類型的附加元件除錯，請使用<span style="line-height: 1.5;"><a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox">瀏覽器工具箱</a>裡的工具。</span></em></p>
+
+<p><span style="line-height: 1.5;">Now open the Add-on Manager. Next to the entry for your add-on you will see a button labeled "Debug". Click this button to launch the debugger.</span></p>
+
+<p>Next you'll see a dialog asking you to accept an incoming connection. Click "OK", and the debugger will start in a separate window. Note that sometimes the debugger window is hidden by the main Firefox window.</p>
+
+<p>{{EmbedYouTube("DvNpUVJcG_E")}}</p>
+
+<h2 id="使用附加元件除錯工具">使用附加元件除錯工具</h2>
+
+<p>The Add-on Debugger looks and behaves very much like the <a href="/en-US/docs/Tools/Browser_Toolbox">Browser Toolbox</a>, except that while the scope of the Browser Toolbox is the whole browser, the Add-on Debugger is focused on the specific add-on for which you launched it. Like the Browser Toolbox, a toolbar along the top lets you switch between a number of different tools. In Firefox 31 there's only one such tool, the JavaScript Debugger, but with Firefox 32 you also get the Console and Scratchpad.</p>
+
+<h3 id="JavaScript_除錯器">JavaScript 除錯器</h3>
+
+<p>This behaves just like the normal <a href="/en-US/docs/Tools/Debugger">JavaScript Debugger</a>, except its scope is the add-on rather than a web page. On the left-hand side it lists JavaScript sources:</p>
+
+<ul>
+ <li>at the top is <code>bootstrap.js</code>: either the one you've written if your add-on is a manually written <a href="/en-US/Add-ons/Bootstrapped_extensions">bootstrapped add-on</a>, or the one included by the SDK if your add-on is an SDK add-on.</li>
+ <li>next, if your add-on is an SDK add-on, you'll find your add-on's <code>main.js</code>, any <a href="/en-US/Add-ons/SDK/Guides/Module_structure_of_the_SDK#Local_Modules">local modules</a> shipping with your add-on, and any content scripts that are currently loaded</li>
+ <li>next, all the SDK modules used directly or indirectly by your add-on</li>
+</ul>
+
+<h4 id="Content_scripts">Content scripts</h4>
+
+<p>Content scripts are only listed if and when they are loaded. So, if your Add-on <a href="/en-US/Add-ons/SDK/Guides/Content_Scripts#Loading_content_scripts">loads a content script</a> with <code>contentScriptFile</code>, the file will not appear in the debugger sources until you go to a page that loads the content script.</p>
+
+<p>If you set a breakpoint in a content script, it will not be active for instances of the content script which are loaded after the breakpoint is set.</p>
+
+<p>For example, suppose you have an add-on that attaches a content script to every tab the user loads. The content script adds a click handler to the page. As soon as you open a tab, this content script will be listed in the debugger. If you then set a breakpoint in the content script's click handler, then execution will pause whenever you click the page. But if you open a new tab, there are now two instances of the content script, and the breakpoint will not be enabled for the second instance You'll need to set a new breakpoint now if you want to it work for the second instance.</p>
+
+<p>We're investigating improvements to this in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1016046">bug 1016046</a>.</p>
+
+<h3 id="主控台">主控台</h3>
+
+<p>The Console behaves just like the <a href="/en-US/docs/Tools/Web_Console">Web Console</a>, but its scope is the add-on rather than the web page.</p>
+
+<p>However, note that it actually runs in the context of the add-on's <code>bootstrap.js</code>, which may not be what you expect if your add-on uses the SDK: you won't see any objects defined in your add-on's <code>main.js</code>, and you won't see <code>require()</code> either. This issue is being tracked as <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1005193">bug 1005193</a>.</p>
+
+<p>You can execute Console statements in the context of <code>main.js</code> while execution is paused inside <code>main.js</code>.</p>
+
+<h3 id="程式碼速記本">程式碼速記本</h3>
+
+<p>The Scratchpad behaves just like the normal <a href="/en-US/docs/Tools/Scratchpad">Scratchpad</a>, but its scope is the add-on rather than the web page.</p>
+
+<p>Like the Console, the add-on Scratchpad runs in the context of the add-on's <code>bootstrap.js</code> even if the add-on uses the SDK, and as with the Console you can execute Scratchpad code in the context of <code>main.js</code> while execution is paused inside <code>main.js</code>.</p>
+
+<h2 id="為_chrome_或_about_頁面除錯">為 chrome: 或 about: 頁面除錯</h2>
+
+<p>從 Firefox 37 起，一般的<a href="/en-US/docs/Tools/Debugger">除錯工具</a>已經可以用來為 chrome: 及 about: 兩類頁面除錯，使用方法同一般網頁除錯。</p>

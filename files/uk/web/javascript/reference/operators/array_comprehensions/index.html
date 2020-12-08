@@ -1,0 +1,198 @@
+---
+title: Заповнення масивів
+slug: Web/JavaScript/Reference/Operators/Array_comprehensions
+tags:
+  - JavaScript
+  - Оператор
+  - застарілий
+  - нестандартний
+translation_of: Archive/Web/JavaScript/Array_comprehensions
+---
+<div>{{jsSidebar("Operators")}}
+<div class="warning"><strong>Нестандартний. Не використовуйте!</strong><br>
+Синтаксис заповнення масивів є нестандартним та був прибраний, починаючи з Firefox 58. Для варіантів використання в майбутьому розгляньте {{jsxref("Array.prototype.map")}}, {{jsxref("Array.prototype.filter")}}, {{jsxref("Functions/Стрілкові_функції", "стрілкові функції", "", 1)}} та {{jsxref("Operators/Spread_syntax", "оператор розпакування", "", 1)}}.</div>
+{{Obsolete_Header(58)}}</div>
+
+<p>Синтаксис <strong>заповнення масивів</strong> (array comprehension) був виразом JavaScript, який дозволяв швидко збирати новий масив, базуючись на вже існуючому масиві. Однак, він був прибраний зі стандарту та з реалізації Firefox. Не використовуйте його!</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">[for (x of iterable) x]
+[for (x of iterable) if (condition) x]
+[for (x of iterable) for (y of iterable) x + y]
+</pre>
+
+<h2 id="Опис">Опис</h2>
+
+<p>У заповненнях масивів дозволені наступні два види компонентів:</p>
+
+<ul>
+ <li>{{jsxref("Statements/for...of", "for...of")}} та</li>
+ <li>{{jsxref("Statements/if...else", "if")}}</li>
+</ul>
+
+<p>Перебір for-of завжди є першим компонентом. Можна використовувати більше одного перебору for-of чи if-конструкцій.</p>
+
+<p>Заповнення масивів були попередньо запропоновані для стандартизації у ECMAScript 2016, вони надають корисне скорочення запису для конструювання нового масиву на основі змісту іншого масиву. Заповнення часто можуть використовуватись замість викликів {{jsxref("Array.prototype.map", "map()")}} та {{jsxref("Array.prototype.filter", "filter()")}}, або як засіб їх об'єднати.</p>
+
+<p>Наступне заповнення бере масив чисел та створює новий масив, де кожне з цих чисел подвоюється.</p>
+
+<pre class="brush: js">var numbers = [1, 2, 3, 4];
+var doubled = [for (i of numbers) i * 2];
+console.log(doubled); // виводить 2,4,6,8
+</pre>
+
+<p>Це еквівалентно наступній операції {{jsxref("Array.prototype.map", "map()")}}:</p>
+
+<pre class="brush: js">var doubled = numbers.map(i =&gt; i * 2);
+</pre>
+
+<p>Заповнення також можуть використовуватись для відбору елементів, які відповідають певному виразу. Ось заповнення, яке обирає лише парні числа:</p>
+
+<pre class="brush: js">var numbers = [1, 2, 3, 21, 22, 30];
+var evens = [for (i of numbers) if (i % 2 === 0) i];
+console.log(evens); // виводить 2,22,30
+</pre>
+
+<p>Метод {{jsxref("Array.prototype.filter", "filter()")}} може використовуватись для тієї ж самої мети:</p>
+
+<pre class="brush: js">var evens = numbers.filter(i =&gt; i % 2 === 0);
+</pre>
+
+<p>Операції з {{jsxref("Array.prototype.map", "map()")}} та {{jsxref("Array.prototype.filter", "filter()")}} можна об'єднати у єдине заповнення масиву. Ось таке, що відфільтровує лише парні числа, а потім створює масив, де вони подвоєні:</p>
+
+<pre class="brush: js">var numbers = [1, 2, 3, 21, 22, 30];
+var doubledEvens = [for (i of numbers) if (i % 2 === 0) i * 2];
+console.log(doubledEvens); // виводить 4,44,60
+</pre>
+
+<p>Квадратні дужки заповнення масиву створюють неявний блок для області видимості. Нові змінні (такі, як i у прикладі) поводяться так, ніби вони були оголошені за допомогою {{jsxref("Statements/let","let")}}. Це означає, що вони не будуть доступні за межами заповнення.</p>
+
+<p>Вхідні дані для заповнення масиву не обов'язково самі мають бути масивом; <a href="/uk/docs/Web/JavaScript/Guide/Iterators_and_Generators" title="en-US/docs/JavaScript/Guide/Iterators and Generators">ітератори та генератори</a> також підійдуть.</p>
+
+<p>Навіть рядки можна використовувати як вхідні дані; щоб виконати наведені вище функції filter та map (на подібних до масиву об'єктах):</p>
+
+<pre class="brush: js">var str = 'abcdef';
+var consonantsOnlyStr = [for (c of str) if (!(/[aeiouAEIOU]/).test(c)) c].join(''); // 'bcdf'
+var interpolatedZeros = [for (c of str) c + '0' ].join(''); // 'a0b0c0d0e0f0'
+</pre>
+
+<p>Знову ж таки, початкова форма не зберігається, тому нам доведеться скористатись методом {{jsxref("Array.prototype.join", "join()")}}, щоб повернутись до рядка.</p>
+
+<h2 id="Приклади">Приклади</h2>
+
+<h3 id="Прості_заповнення_масивів">Прості заповнення масивів</h3>
+
+<pre class="brush:js">[for (i of [1, 2, 3]) i * i ];
+// [1, 4, 9]
+
+var abc = ['А', 'Б', 'В'];
+[for (letters of abc) letters.toLowerCase()];
+// ["а", "б", "в"]</pre>
+
+<h3 id="Заповнення_масивів_з_оператором_if">Заповнення масивів з оператором if</h3>
+
+<pre class="brush: js">var years = [1954, 1974, 1990, 2006, 2010, 2014];
+[for (year of years) if (year &gt; 2000) year];
+// [2006, 2010, 2014]
+[for (year of years) if (year &gt; 2000) if (year &lt; 2010) year];
+// [2006], те саме, що й нижче:
+[for (year of years) if (year &gt; 2000 &amp;&amp; year &lt; 2010) year];
+// [2006]
+</pre>
+
+<h3 id="Заповнення_масивів_у_порівнянні_з_map_та_filter">Заповнення масивів у порівнянні з <code>map</code> та <code>filter</code></h3>
+
+<p>Легко зрозуміти синтаксис заповнення масивів, порівнявши його з методами масиву {{jsxref("Array.map", "map")}} та {{jsxref("Array.filter", "filter")}}:</p>
+
+<pre class="brush: js">var numbers = [1, 2, 3];
+
+numbers.map(function (i) { return i * i });
+numbers.map(i =&gt; i * i);
+[for (i of numbers) i * i];
+// усі дорівнюють [1, 4, 9]
+
+numbers.filter(function (i) { return i &lt; 3 });
+numbers.filter(i =&gt; i &lt; 3);
+[for (i of numbers) if (i &lt; 3) i];
+// усі дорівнюють [1, 2]
+</pre>
+
+<h3 id="Заповнення_масивів_з_двома_масивами">Заповнення масивів з двома масивами</h3>
+
+<p>Використання двох переборів for-of для роботи з двома масивами:</p>
+
+<pre class="brush: js">var numbers = [1, 2, 3];
+var letters = ['а', 'б', 'в'];
+
+var cross = [for (i of numbers) for (j of letters) i + j];
+// ["1а", "1б", "1в", "2а", "2б", "2в", "3а", "3б", "3в"]
+
+var grid = [for (i of numbers) [for (j of letters) i + j]];
+// [
+//  ["1а", "1б", "1в"],
+//  ["2а", "2б", "2в"],
+//  ["3а", "3б", "3в"]
+// ]
+
+[for (i of numbers) if (i &gt; 1) for (j of letters) if(j &gt; 'а') i + j]
+// ["2б", "2в", "3б", "3в"], те саме, що й наведене нижче:
+
+[for (i of numbers) for (j of letters) if (i &gt; 1) if(j &gt; 'а') i + j]
+// ["2б", "2в", "3б", "3в"]
+
+[for (i of numbers) if (i &gt; 1) [for (j of letters) if(j &gt; 'а') i + j]]
+// [["2б", "2в"], ["3б", "3в"]], не те саме, що наведене нижче:
+
+[for (i of numbers) [for (j of letters) if (i &gt; 1) if(j &gt; 'а') i + j]]
+// [[], ["2б", "2в"], ["3б", "3в"]]
+</pre>
+
+<h2 id="Специфікації">Специфікації</h2>
+
+<p>Початково синтаксис був присутній у чорнетці ECMAScript 2015, але був видалений у ревізії 27 (серпень 2014). Будь ласка, дивіться семантику специфікації у старших ревізіях ES2015.</p>
+
+<h2 id="Сумісність_з_веб-переглядачами">Сумісність з веб-переглядачами</h2>
+
+
+
+<p>{{Compat("javascript.operators.array_comprehensions")}}</p>
+
+<h2 id="Відмінності_від_заповнень_у_JS1.7JS1.8">Відмінності від заповнень у JS1.7/JS1.8</h2>
+
+<div class="warning">Заповнення JS1.7/JS1.8 були прибрані з Gecko, починаючи з версії 46 ({{bug(1220564)}}).</div>
+
+<p><strong>Старий синтаксис заповнень (більше не використовується!):</strong></p>
+
+<pre class="brush: js example-bad">[X for (Y in Z)]
+[X for each (Y in Z)]
+[X for (Y of Z)]
+</pre>
+
+<p>Відмінності:</p>
+
+<ul>
+ <li>Заповнення ESNext створюють область видимості для кожного блоку "for", а не для всього заповнення.
+  <ul>
+   <li>Старе: <code>[()=&gt;x for (x of [0, 1, 2])][1]() // 2</code></li>
+   <li>Нове: <code>[for (x of [0, 1, 2]) ()=&gt;x][1]() // 1, кожна ітерація створює свіже зв'язування для x. </code></li>
+  </ul>
+ </li>
+ <li>Заповнення ESNext починаються з "for", а не з виразу присвоювання.
+  <ul>
+   <li>Старе: <code>[i * 2 for (i of numbers)]</code></li>
+   <li>Нове: <code>[for (i of numbers) i * 2]</code></li>
+  </ul>
+ </li>
+ <li>Заповнення ESNext можуть мати декілька компонентів <code>if</code> та <code>for</code>.</li>
+ <li>Заповнення ESNext працюють тільки з переборами <code>{{jsxref("Statements/for...of", "for...of")}}</code>, а не з <code>{{jsxref("Statements/for...in", "for...in")}}</code>.</li>
+</ul>
+
+<p>Дивіться пропозиції щодо змін у коді у <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1220564#c42">Bug 1220564, коментар 42</a>.</p>
+
+<h2 id="Див._також">Див. також</h2>
+
+<ul>
+ <li>{{jsxref("Statements/for...of", "for...of")}}</li>
+ <li>{{jsxref("Operators/Generator_comprehensions", "Заповнення генераторів", "" ,1)}}</li>
+</ul>

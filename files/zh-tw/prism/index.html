@@ -1,0 +1,89 @@
+---
+title: Prism
+slug: Prism
+tags:
+  - prism
+translation_of: Archive/Mozilla/Prism
+---
+<p><img align="right"> Prism 是以 XULRunner 為基礎的極簡化瀏覽器，可以讓網際應用程式不必透過一般瀏覽器介面就能直接執行。Prism 的主要概念是「特定網站專用瀏覽器」，就好比為某個網際應用程式量身訂做的瀏覽器一樣，無需選單、工具列及其他傳統瀏覽器的元件。這類專屬瀏覽器能為其網際應用程式提供與作業系統更緊密的整合，所以能同時擁有一般單機程式與網際應用程式雙方面的好處。</p>
+<h3 id=".E5.A5.BD.E8.99.95" name=".E5.A5.BD.E8.99.95">好處</h3>
+<ul>
+ <li><b>分隔運作程序</b> Web apps can hog memory or processor cycles or even bring down the whole browser in extreme cases. By running each app in its own process, we minimize the impact of any mishaps. We can also benefit from operating system tools that less us view the memory/CPU consumption of a specific application.</li>
+ <li><b>使用介面極簡化:</b> A general-purpose browser UI is not necessary or appropriate for most web apps. It is more efficient to provide a UI that is specific to the application. This also cuts down on UI clutter (hence the term <a class="external" href="http://www.hawkwings.net/2006/05/13/a-dedicated-distraction-free-browser-for-gmail/">distraction-free browser</a>).</li>
+ <li><b>與作業系統整合:</b> Support of desktop features can make using the app more natural and convenient for end users. This includes the ability to create desktop shortcuts, to place the application icon in the tray or dock and to display pop-up notifications.</li>
+ <li><b>專屬自訂方式:</b> Apps can be run using a shared browser runtime and customized using client-side script (similar to Greasemonkey). Custom stylesheets can be used to tweak the UI.</li>
+</ul>
+<h3 id=".E6.9E.B6.E6.A7.8B.E6.A6.82.E8.A7.80" name=".E6.9E.B6.E6.A7.8B.E6.A6.82.E8.A7.80">架構概觀</h3>
+<p>Prism 是個 <a href="zh_tw/Creating_XULRunner_Apps_with_the_Mozilla_Build_System">XULRunner 軟體</a>，其中除了 XULRunner 內建的瀏覽器引擎外還包括：</p>
+<ul>
+ <li><b>網際軟體包管理</b>: Code for creating new web app bundles and loading existing bundles.</li>
+ <li><b>捷徑建立介面</b>: A dialog box lets the user specify attributes of the web app (name, URI, icon, shortcut locations).</li>
+ <li><b>JavaScript API</b>: An API that can be used by scripts inside the bundle to customize the application. We are refining this approach to make the API applicable in as many environments as possible (e.g. it might be useful even for applications running in a normal browser). It should be possible for developers to include Prism-style extension direclty in their web app. We would like to harmonize our API with those of similar projects such as <a class="external" href="http://livedocs.adobe.com/labs/air/1/jslr/">Adobe AIR</a> and <a class="external" href="http://code.google.com/apis/gears/">Google Gears</a>.</li>
+ <li><b>作業系統整合功能</b>: Binary components provided access to OS-specific features like shortcut creation and dock/tray icons. We intend to propose these extensions for inclusion in future versions of XULRunner.</li>
+ <li><b>Firefox 擴充套件:</b>: A Firefox extension, code-named "Refractor", can be used to spin out new Prism apps from inside the web browser. Refractor adds a new menu item to call up the shortcut creation dialog for inside Firefox. Web apps can also point to a complete web app bundle or some elements of a web app (like higher resolution icons). Refractor automatically takes this information into account.</li>
+</ul>
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h4 id=".E6.96.87.E4.BB.B6" name=".E6.96.87.E4.BB.B6"><a>文件</a></h4>
+    <dl>
+     <dt>
+      <a href="zh_tw/Prism/FAQ">常見問題集</a></dt>
+     <dd>
+       </dd>
+     <dt>
+      <a href="zh_tw/Prism/%e8%bb%9f%e9%ab%94%e5%8c%85">軟體包</a></dt>
+     <dd>
+      <small>將網際應用程式的設定、圖示及其他專屬自訂檔「包」在 ZIP 壓縮檔內方便使用。</small></dd>
+     <dt>
+      <a href="zh_tw/Prism/%e8%a8%ad%e5%ae%9a">設定</a></dt>
+     <dd>
+      <small>A webapp bundle should contain a webapp.ini configuration file. The configuration file is a simple, INI-style text file that specifies some parameters about a web application.</small></dd>
+     <dt>
+      <a href="zh_tw/Prism/%e6%a8%a3%e5%bc%8f">樣式</a></dt>
+     <dd>
+      <small>One of Prism's goals is to make web applications feel more like desktop applications. One way to make the illusion seem more real is to use styling (or theming). Prism supports a simple styling system that allows the user to add CSS files to the webapp bundle.</small></dd>
+     <dt>
+      <a href="zh_tw/Prism/%e4%b8%bb%e8%a6%96%e7%aa%97">主視窗</a></dt>
+     <dd>
+      <small>Prism provides a simple, scaled down browser window for running web applications. Using configuration files and webapp scripting, the host window can be modified.</small></dd>
+     <dt>
+      <a href="zh_tw/Prism/%e5%ae%89%e8%a3%9d%e7%a8%8b%e5%bc%8f">安裝程式</a></dt>
+     <dd>
+      <small>安裝 Prism。</small></dd>
+    </dl>
+    <p><span class="alllinks"><a>全部列出…</a></span></p>
+   </td>
+   <td>
+    <h4 id=".E7.A4.BE.E7.BE.A4" name=".E7.A4.BE.E7.BE.A4">社群</h4>
+    <ul>
+     <li><a href="zh_tw/Prism/%e7%b6%b2%e8%aa%8c%e6%96%87%e7%ab%a0">相關網誌文章收集</a></li>
+     <li><a class="link-https" href="https://labs.mozilla.com/forum/index.php/board,16.0.html">Mozilla Labs 上的討論區</a></li>
+     <li><a class="external" href="http://wiki.mozilla.org/Prism">Mozilla wiki 上的相關文章</a> (包括 <a class="external" href="http://wiki.mozilla.org/Prism#Installs">安裝步驟</a>)</li>
+     <li><a class="link-irc" href="irc://irc.mozilla.org/prism">#prism on irc.mozilla.org</a></li>
+    </ul>
+    <h4 id=".E5.85.B6.E4.BB.96.E6.9D.B1.E8.A5.BF" name=".E5.85.B6.E4.BB.96.E6.9D.B1.E8.A5.BF">其他東西</h4>
+    <ul>
+     <li><a href="zh_tw/Prism/%e8%bb%9f%e9%ab%94%e5%8c%85%e4%b8%ad%e5%bf%83">軟體包中心</a></li>
+     <li><a href="zh_tw/Prism/%e6%93%b4%e5%85%85%e5%a5%97%e4%bb%b6">擴充套件</a></li>
+    </ul>
+    <h4 id=".E4.B8.80.E8.B5.B7.E6.90.9E.E5.90.A7.EF.BC.81" name=".E4.B8.80.E8.B5.B7.E6.90.9E.E5.90.A7.EF.BC.81">一起搞吧！</h4>
+    <ul>
+     <li><a class="external" href="http://svn.mozilla.org/projects/webrunner/">在 SVN 裡有原始碼</a></li>
+     <li>Bugzilla (程式錯誤及建議回報) <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Mozilla+Labs&amp;component=Prism&amp;resolution=---&amp;chfieldto=Now">既有問題</a>，<a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Mozilla+Labs&amp;component=Prism">回報新錯誤</a></li>
+    </ul>
+    <h4 id=".E7.9B.B8.E9.97.9C.E4.B8.BB.E9.A1.8C" name=".E7.9B.B8.E9.97.9C.E4.B8.BB.E9.A1.8C">相關主題</h4>
+    <dl>
+     <dd>
+      <a href="zh_tw/XULRunner">XULRunner</a></dd>
+    </dl>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<p> </p>
+<p> </p>
+<div class="noinclude">
+  </div>
+<p>{{ languages( { "en": "en/Prism", "fr": "fr/Prism" } ) }}</p>

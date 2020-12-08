@@ -1,0 +1,188 @@
+---
+title: 'about:memory'
+slug: 'Mozilla/Performance/about:memory'
+translation_of: 'Mozilla/Performance/about:memory'
+---
+<p>about:memory 在Firefox 裡是個特別分頁可讓你你看、存、讀、Firefox 的記憶體處理詳細測量出的差異。 此頁也讓你進行其他記憶體相關的操作例如觸發垃圾回收 (GC) 和循環回收 (CC)、轉存 GC &amp; CC 紀錄和轉存無效堆疊偵測 ( DMD) 報告。 此頁出現在所有版本且不須任何準備即可用它。</p>
+
+<h2 id="如何產生記憶體報告">如何產生記憶體報告</h2>
+
+<p>讓我們假設你想去量測 Firefox 的記憶體使用量。 或許你想自己去調查它、也或許某人要球你使用 about:memory 去產生"記憶體報告"以讓他們可以研究你碰到的問題。 跟著下列步驟走：</p>
+
+<ul>
+ <li>在意的那刻 起(例如只要 Firefox's 記憶體用量偏高了) 在網址欄開新分頁且輸入 "about:memory" 並按下 "Enter".</li>
+ <li>如果你正在用的交流管道可傳送檔案，例如 Bugzilla 或 email，按在 "Measure and save..." 按鈕。 將打開一個檔案交談窗讓你存記憶體報告成一個你指定的檔案。 (檔名將有 <code>.json.gz</code> 的副檔名) 你可以順便附加或上傳。接受者將能在他們的 Firefox 中看到 about:memory 中的內容。</li>
+ <li>如你可用的交流管道只有文字可被傳送，例如在網站的意見條中，按在 "Measure..." 按鈕。 這將會造成 about:memory 中樹狀結構目錄文字產生。這個結構只有文字，所以你可以複製貼上部份或全部的文字到任何種類的文字欄(你不必進行擷圖)。這文字包含一些比 memory reports 檔較少的量測值，但通常已經足夠去診斷問題。不要重複地按下 "Measure..." ，因為這將造成 about:memory 記憶體用量提高，由於它釋放並產生大量的文件物件模型(DOM) 節點。</li>
+</ul>
+
+<p>注意在兩個例子中產生的資料含有私人敏感的細節例如你開在其他分頁的完整清單。如果你不想分享這些訊息，你可以選擇 "anonymize" 核取格，在按下 "Measure and save..." 或 "Measure..."之前。 這將造成私人敏感資料被剝掉，但也可能會造成其他人難以去研究記憶體用量。</p>
+
+<h2 id="從檔案讀取記憶體報告">從檔案讀取記憶體報告</h2>
+
+<p>最簡單的方法從檔案讀取記憶體報告就是用 "Load..." 按鈕。 你也可以用 "Load and diff..." 按鈕去獲得在兩個記憶體報告檔中的差異。</p>
+
+<p>單一記憶體報告檔也可以自動被讀取，當附加一個檔案查詢字串，例如：</p>
+
+<pre>about:memory?file=/home/username/reports.json.gz
+</pre>
+
+<p>這是從其他Firefox裝置系統讀取記憶體報告檔最有用的。</p>
+
+<p>記憶體報告被儲存到壓縮的格式 (gzipped JSON)。 這些檔案可以被直接讀或解壓縮後讀入。</p>
+
+<h2 id="解釋記憶體報告">解釋記憶體報告</h2>
+
+<p>幾乎在 about:memory 中你看到東西都有工具提示的解釋。停留在任何按鈕將看到它作用的描述。停留在任何文字量測值上將看到它意義的描述。</p>
+
+<h3 id="量測基本"><span class="mw-headline" id="Basics">量測基本</span></h3>
+
+<p>大多數量測使用位元組為他們的單位，但某些是百分比計算。</p>
+
+<p>多數量測值表示在樹狀目錄結構中。例如：</p>
+
+<pre> 585 (100.0%) -- preference-service
+ └──585 (100.0%) -- referent
+    ├──493 (84.27%) ── strong
+    └───92 (15.73%) -- weak
+        ├──92 (15.73%) ── alive
+        └───0 (00.00%) ── dead
+</pre>
+
+<p>枝葉節點表示實際量測值：每個內部節點值是子節點的總和。</p>
+
+<p>樹狀目錄的使用允許量測值分成進一步的目錄、次目錄、次次目錄…….如果需要可到任意深度。一個目錄中所有的量測值不會重疊。</p>
+
+<p>樹狀可以用斜線 '/' 作為分隔符號被描寫。 例如， <code>preference/referent/weak/dead</code> 表示上列中到最後枝葉節點的路徑。</p>
+
+<p>次目錄按它可以被縮起或展開。如果你發現任何特別的樹狀目錄，這可以幫你馬上縮起主根下所有分枝，然後慢慢展開感興趣的。</p>
+
+<h3 id="報告區間_Sections"><span class="mw-headline" id="Sections">報告區間 Sections</span></h3>
+
+<p>記憶體報告依照每個預處理原則、每個區間一個程序被顯示，在每個程序的量測值中，還有更多小區間。</p>
+
+<h4 id="Explicit_Allocations">Explicit Allocations</h4>
+
+<p>這個區間包含一個單一樹狀目錄，叫做 "explicit"，量測所有經由表層呼叫(explicit calls)去堆疊配置函數和非堆疊配置函數(例如 <code>mmap</code> and <code>VirtualAlloc</code>)的記憶體。</p>
+
+<p>這裡是瀏覽器區間的例子，分頁打開了 cnn.com、 techcrunch.com、 和 arstechnica.com。不同的次目錄被展開，其他的因展示緣故被縮起。</p>
+
+<pre>191.89 MB (100.0%) -- explicit
+├───63.15 MB (32.91%) -- window-objects
+│   ├──24.57 MB (12.80%) -- top(http://edition.cnn.com/, id=8)
+│   │  ├──20.18 MB (10.52%) -- active
+│   │  │  ├──10.57 MB (05.51%) -- window(http://edition.cnn.com/)
+│   │  │  │  ├───4.55 MB (02.37%) ++ js-compartment(http://edition.cnn.com/)
+│   │  │  │  ├───2.60 MB (01.36%) ++ layout
+│   │  │  │  ├───1.94 MB (01.01%) ── style-sheets
+│   │  │  │  └───1.48 MB (00.77%) -- (2 tiny)
+│   │  │  │      ├──1.43 MB (00.75%) ++ dom
+│   │  │  │      └──0.05 MB (00.02%) ── property-tables
+│   │  │  └───9.61 MB (05.01%) ++ (18 tiny)
+│   │  └───4.39 MB (02.29%) -- js-zone(0x7f69425b5800)
+│   ├──15.75 MB (08.21%) ++ top(http://techcrunch.com/, id=20)
+│   ├──12.85 MB (06.69%) ++ top(http://arstechnica.com/, id=14)
+│   ├───6.40 MB (03.33%) ++ top(chrome://browser/content/browser.xul, id=3)
+│   └───3.59 MB (01.87%) ++ (4 tiny)
+├───45.74 MB (23.84%) ++ js-non-window
+├───33.73 MB (17.58%) ── heap-unclassified
+├───22.51 MB (11.73%) ++ heap-overhead
+├────6.62 MB (03.45%) ++ images
+├────5.82 MB (03.03%) ++ workers/workers(chrome)
+├────5.36 MB (02.80%) ++ (16 tiny)
+├────4.07 MB (02.12%) ++ storage
+├────2.74 MB (01.43%) ++ startup-cache
+└────2.16 MB (01.12%) ++ xpconnect</pre>
+
+<p>某些專家才需要瞭解這裡所有的細節，但有很多東西值得解釋。</p>
+
+<ul>
+ <li>這個 "explicit" 值在樹狀圖的根表示所有記憶體經由explicit call 去配置函數。</li>
+ <li> "window-objects" 次目錄表示所有 JavaScript 視窗物件, 包括瀏覽器分頁和使用者界面視窗。 例如， "top(http://edition.cnn.com/, id=8)" 次目錄表示分頁打開到 cnn.com，且 "top(chrome://browser/content/browser.xul, id=3)" 表示主瀏覽器 UI 視窗。</li>
+ <li>在每個視窗的有次目錄關於 JavaScript ("js-compartment(...)" 和 "js-zone(...)")、 layout、 style-sheets、 the DOM, and other things.</li>
+ <li>很清楚的分頁一 cnn.com 用更多記憶體於分頁二 techcrunch.com ，二又用更多記憶體於分頁三 arstechnica.com 。</li>
+ <li>次目錄有個名字叫 "(2 tiny)" 是人工節點預設允許不重要的次目錄縮起來。如果在測量前你將額外資訊 "verbose" 核取盒勾起， 所有目錄將完全展開並且沒有人工節點被插入。</li>
+ <li> "js-non-window" 次目錄表示 JavaScript 記憶體用量不從視窗來而來自瀏覽器核心。</li>
+ <li> "heap-unclassified" 值表示堆疊配置的記憶體( heap-allocated memory) 它是不被任何記憶體記錄列量測的。通常是 "explicit" 的 10--20% 。 如果它偏高，也表示該多加個記憶體紀錄列。無效堆疊偵測 (<a href="/en-US/docs/Mozilla/Performance/DMD" title="Performance/MemShrink/DMD">DMD)</a> 可被用來決定哪些記憶體報告列該被添加。</li>
+ <li>有其他量測值有其他內容例如 images 和 workers，和瀏覽器次系統像啟動快取 Startup cache 和 XPConnect.</li>
+</ul>
+
+<p>某些附加元件 add-ons 的記憶體用量有識別性， 像下列例子所示：</p>
+
+<pre>├───40,214,384 B (04.17%) -- add-ons
+│   ├──21,184,320 B (02.20%) ++ {d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}/js-non-window/zones/zone(0x100496800)/compartment([System Principal], jar:file:///Users/njn/Library/Application%20Support/Firefox/Profiles/puna0zr8.new/extensions/%7Bd10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d%7D.xpi!/bootstrap.js (from: resource://gre/modules/addons/XPIProvider.jsm:4307))
+│   ├──11,583,312 B (01.20%) ++ jid1-xUfzOsOFlzSOXg@jetpack/js-non-window/zones/zone(0x100496800)
+│   ├───5,574,608 B (00.58%) -- {59c81df5-4b7a-477b-912d-4e0fdf64e5f2}
+│   │   ├──5,529,280 B (00.57%) -- window-objects
+│   │   │  ├──4,175,584 B (00.43%) ++ top(chrome://chatzilla/content/chatzilla.xul, id=4293)
+│   │   │  └──1,353,696 B (00.14%) ++ top(chrome://chatzilla/content/output-window.html, id=4298)
+│   │   └─────45,328 B (00.00%) ++ js-non-window/zones/zone(0x100496800)/compartment([System Principal], file:///Users/njn/Library/Application%20Support/Firefox/Profiles/puna0zr8.new/extensions/%7B59c81df5-4b7a-477b-912d-4e0fdf64e5f2%7D/components/chatzilla-service.js)
+│   └───1,872,144 B (00.19%) ++ treestyletab@piro.sakura.ne.jp/js-non-window/zones/zone(0x100496800)</pre>
+
+<p>更多細節值得解釋如下：</p>
+
+<ul>
+ <li>某些附加元件以名子被識別，像 Tree Style Tab。 其他的僅用16進位識別字。 你可以去看 about:support 裡哪個添入列特別識別字屬於那類。例如， <code>59c81df5-4b7a-477b-912d-4e0fdf64e5f2</code> 屬於 Chatzilla 。</li>
+ <li>所有 JavaScript 記憶體用量由附加元件來的被量測並顯示在次目錄中。</li>
+ <li>附加元件使用不同視窗，例如 Chatzilla，這些視窗的記憶體用量將顯示在不同次目錄。</li>
+ <li>自附加元件使用 XUL overlays覆蓋的，如 AdBlock Plus， 這些覆蓋的記憶體使用量將不顯示在這個次目錄中； 它將反而在 non-add-on 次目錄且將不像由附加元件所造成的那般是可識別的。</li>
+</ul>
+
+<h4 id="其他量測值">其他量測值</h4>
+
+<p>這個區間包含多目錄，包括許多在 "explicit" 目錄中橫跨的量測值。 例如， 在 "explicit"目錄所有的 DOM 和 layout 量測值是被打散成一個又一個視窗， 但在 "Other Measurements" 這些量測值是整合為由整個瀏覽器來的總和， 如下例所示：</p>
+
+<pre>26.77 MB (100.0%) -- window-objects
+├──14.59 MB (54.52%) -- layout
+│  ├───6.22 MB (23.24%) ── style-sets
+│  ├───4.00 MB (14.95%) ── pres-shell
+│  ├───1.79 MB (06.68%) ── frames
+│  ├───0.89 MB (03.33%) ── style-contexts
+│  ├───0.62 MB (02.33%) ── rule-nodes
+│  ├───0.56 MB (02.10%) ── pres-contexts
+│  ├───0.47 MB (01.75%) ── line-boxes
+│  └───0.04 MB (00.14%) ── text-runs
+├───6.53 MB (24.39%) ── style-sheets
+├───5.59 MB (20.89%) -- dom
+│   ├──3.39 MB (12.66%) ── element-nodes
+│   ├──1.56 MB (05.84%) ── text-nodes
+│   ├──0.54 MB (02.03%) ── other
+│   └──0.10 MB (00.36%) ++ (4 tiny)
+└───0.06 MB (00.21%) ── property-tables</pre>
+
+<p>在這區間的某些目錄量測那些在 "explicit" 目錄中不是橫跨目錄的量測值，例如在上上個例子中的這個 "preference-service" 。</p>
+
+<p>最後， 在這區間結尾是獨立的量測值， 如下例所示：</p>
+
+<pre>    0.00 MB ── canvas-2d-pixels
+    5.38 MB ── gfx-surface-xlib
+    0.00 MB ── gfx-textures
+    0.00 MB ── gfx-tiles-waste
+          0 ── ghost-windows
+  109.22 MB ── heap-allocated
+        164 ── heap-chunks
+    1.00 MB ── heap-chunksize
+  114.51 MB ── heap-committed
+  164.00 MB ── heap-mapped
+      4.84% ── heap-overhead-ratio
+          1 ── host-object-urls
+    0.00 MB ── imagelib-surface-cache
+    5.27 MB ── js-main-runtime-temporary-peak
+          0 ── page-faults-hard
+    203,349 ── page-faults-soft
+  274.99 MB ── resident
+  251.47 MB ── resident-unique
+1,103.64 MB ── vsize</pre>
+
+<p>某些量測值標示如下：</p>
+
+<ul>
+ <li>"resident" 常駐記憶體. 實體記憶體用量。 如你想要單一量測值去總計記憶體用量， 這也許是最好的選擇。</li>
+ <li>"vsize". 虛擬記憶體用量。 這通常高於任一個其他量測值 (特別在 Mac 上)。 唯有它是問題在 32 位元平台例如 Win32。 也有 "vsize-max-contiguous" (在所有平台上不量測的且在此例中不顯示)， 它指出可用虛擬記憶體空間中最大的一塊。 如果這數值很低， 或許不久之後記憶體配置將失敗由於缺乏虛擬位址空間。</li>
+ <li>許多繪圖顯示相關量測值 ("gfx-*")。 這些值在平台上是佔大量的。 顯示相關通常是高記憶體用量的來源， 所以這些量測職能幫助偵測這些案例。</li>
+</ul>
+
+<h4 id="系統_System">系統 System</h4>
+
+<p>這區間只顯示在Firefox OS。 它包含全裝置從操作系統所測得值。在其之中， 這些區間有助於精確瞭解裝置的記憶體如何被使用。</p>
+
+<p>......翻譯完雖然瞭解不少,卻僅知哪些資訊可以給改善者參考，要解決使用者記憶體的問題，還是建議各位設計師可以整合One Tab之類的軟體，限制記憶體使用例如最大800MB，如果超過了，依使用者習慣分為100個分頁中有20個維持開啟活動、剩下的逐步變成例如完整保存的網頁檔之類，平時留個分頁籤名字只是看看而已，點到了才載入，就不會讓人難忍受了，也不會吃太多記憶體就依照個人使用狀況自行分配就好，畢竟閒置的除了影像外，很多只是在播放廣告，一點感想。</p>

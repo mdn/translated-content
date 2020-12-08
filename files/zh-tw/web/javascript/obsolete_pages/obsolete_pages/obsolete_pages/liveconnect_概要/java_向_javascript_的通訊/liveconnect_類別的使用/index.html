@@ -1,0 +1,105 @@
+---
+title: LiveConnect 類別的使用
+slug: >-
+  Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/LiveConnect_概要/Java_向_JavaScript_的通訊/LiveConnect_類別的使用
+translation_of: Archive/Web/LiveConnect/LiveConnect_Overview
+---
+<p> </p>
+<h3 id="LiveConnect_類別的使用" name="LiveConnect_類別的使用">LiveConnect 類別的使用</h3>
+<p>所有在 Java 代碼中的 JavaScript 物件都是以 <code>netscape.javascript.JSObject</code> 的實體呈現的。當你在你的 Java 代碼內部呼叫方法時，你可以把 JavaScript 物件當作方法的其中一個參數來傳入。要做到這一點，你必須定義能夠對應於 <code>JSObject</code> 類型的方法的參數形式。</p>
+<p>除此之外，當你在 Java 代碼中使用 JavaScript 物件的任何時候，你就要把使用到 JavaScript 物件的呼叫放置於 <code>try...catch</code> 語法之中，並處理 <code>netscape.javascript.JSException</code> 類型的例外。如此一來，當執行 JavaScript 代碼並出現 <code>JSException</code> 類型的例外時，就可讓你的 Java 代碼處理這些錯誤。</p>
+<h4 id="使用_JSObject_存取_JavaScript" name="使用_JSObject_存取_JavaScript">使用 JSObject 存取 JavaScript</h4>
+<p>舉例來說，假定你正在使用稱為 JavaDog 的 Java 類別。如同下面的代碼所示，<code>JavaDog</code> 建構子可接受 JavaScript 物件 <code>jsDog</code>，這個物件被定義成和參數一樣的 <code>JSObject</code> 類型︰</p>
+<pre>import netscape.javascript.*;
+
+public class JavaDog
+{
+    public String dogBreed;
+    public String dogColor;
+    public String dogSex;
+
+    // define the class constructor
+    public JavaDog(JSObject jsDog)
+    {
+        // use try...catch to handle JSExceptions here
+        this.dogBreed = (String)jsDog.getMember("breed");
+        this.dogColor = (String)jsDog.getMember("color");
+        this.dogSex = (String)jsDog.getMember("sex");
+    }
+}
+</pre>
+<p>注意 <code>JSObject</code> 的 <code>getMember</code> 方法是用來存取 JavaScript 物件的屬性。這個例子中使用 <code>getMember</code> 把 JavaScript 的 <code>jsDog.breed</code> 屬性值代給 Java 的資料成員 <code>JavaDog.dogBreed</code>。</p>
+<p><strong>附註:</strong> 更接近實際使用的例子會把 <code>getMember</code> 的呼叫放置在 <code>try...catch</code> 語法的內部，以處理 <code>JSException</code> 類型的錯誤。詳見 在 Java 中處理 JavaScript 例外 以取得更多資訊。</p>
+<p>為了獲得對 <code>getMember</code> 如何運作的良好感覺，仔細閱讀自訂 JavaScript 的物件 <code>Dog</code> 的定義︰</p>
+<pre>function Dog(breed,color,sex) {
+   this.breed = breed
+   this.color = color
+   this.sex = sex
+}
+</pre>
+<p>你可以如下呼叫 gabby 來建立 JavaScript 的 Dog 實體︰</p>
+<pre>gabby = new Dog("lab","chocolate","female")
+</pre>
+<p>如果你對 <code>gabby.color</code> 求值，你會看到他的值是 "chocolate"。現在假定你在你的 JavaScript 代碼中把 <code>gabby</code> 物件傳給建構子並建立 <code>JavaDog</code> 的實體如下︰</p>
+<pre>javaDog = new Packages.JavaDog(gabby)
+</pre>
+<p>如果你對 <code>javaDog.dogColor</code> 求值，你會看到他的值也是 "chocolate"，因為在 Java 的建構子中的 <code>getMember</code> 方法會把 <code>gabby.color</code> 的值代給 <code>dogColor</code>。</p><h4 id="在_Java_中處理_JavaScript_例外" name="在_Java_中處理_JavaScript_例外">在 Java 中處理 JavaScript 例外</h4>
+<p>當在 Java 裡被呼叫的 JavaScript 代碼在執行時期失敗的時候，他就會拋出例外。如果你有意在 Java 裡呼叫 JavaScript 代碼，你可以在 <code>try...catch</code> 區塊裡捕捉例外。在你的 Java 代碼中可以取得形如 <code>netscape.javascript.JSException</code> 實體的 JavaScript 例外。</p>
+<p><code>JSException</code> 即包裝了由 JavaScript 拋出的所有例外類型的 Java 包裝器，類似於用在 JavaScript 物件的包裝器 <code>JSObject</code> 實體的運作方式。當你在 Java 代碼中對 JavaScript 求值時可以使用 <code>JSException</code>。</p>
+<p>當你在 Java 中對 JavaScript 代碼求值的時候，下列情況便會導致執行時期錯誤︰</p>
+<ul> <li>JavaScript 代碼並未被求值，原因可能出在 JavaScript 編譯上的錯誤或在執行時期所發生的某些其他錯誤。JavaScript 解譯器產生的錯誤訊息會被轉換成 <code>JSException</code> 的實體。</li> <li>Java 成功的對 JavaScript 代碼求值，但 JavaScript 代碼執行的是未經處理的 throw 語法。JavaScript 拋出的例外是被包裝成 JSException 的實體。可以使用 JSException 的 getWrappedException 方法在 Java 中解開例外。</li>
+</ul>
+<p>舉例來說，假設 Java 物件 <code>eTest</code> 會對你所傳入的字串 <code>jsCode</code> 求值。你可以藉由例外處理器的實行，來回應求值時所產生的任何一種執行時期錯誤的類型︰</p>
+<pre>import netscape.javascript.JSObject;
+import netscape.javascript.JSException;
+
+public class eTest {
+    public static Object doit(JSObject obj, String jsCode) {
+        try {
+            obj.eval(jsCode);
+        } catch (JSException e) {
+            if (e.getWrappedException()==null)
+                return e;
+            return e.getWrappedException();
+        }
+        return null;
+    }
+}
+</pre>
+<p>在本範例中，在 try 區塊裡的代碼試圖對你所傳入的字串 <code>jsCode</code> 求值。就讓我們假設你傳入了字串 "<code>myFunction()</code>" 當作 <code>jsCode</code> 的值。如果 myFunction 並未定義成 JavaScript 的函數，JavaScript 解譯器無法對 jsCode 求值。解譯器便會產生錯誤訊息，Java 處理器捕捉到錯誤訊息，然後 <code>doit</code> 方法會返回 <code>netscape.javascript.JSException</code> 的實體。</p>
+<p>然而，假設 <code>myFunction</code> 已在 JavaScript 中定義如下︰</p>
+<pre>function myFunction() {
+   try {
+      if (theCondition == true) {
+         return "Everything's ok";
+      } else {
+         throw "JavaScript error occurred" ;
+      }
+   } catch (e) {
+      if (canHandle == true) {
+         handleIt();
+      } else {
+         throw e;
+      }
+   }
+}
+</pre>
+<p>如果 <code>theCondition</code> 為 false，函數就會拋出例外。例外會在 JavaScript 代碼中被捕捉，如果 <code>canHandle</code> 為 true，JavaScript 就會處理例外。如果 <code>canHandle</code> 為 false，就會再度拋出例外，Java 處理器捕捉到例外，然後 doit 方法返回 Java 字串︰</p>
+<pre>JavaScript error occurred
+</pre>
+<p>詳見 <a class="internal" href="/zh_tw/Core_JavaScript_1.5_%E6%95%99%E5%AD%B8/%E4%BE%8B%E5%A4%96%E8%99%95%E7%90%86%E8%AA%9E%E6%B3%95" title="zh tw/Core JavaScript 1.5 教學/例外處理語法">例外處理語法</a> 以取得有關 JavaScript 例外的完整資訊。</p><h4 id="向後相容性" name="向後相容性">向後相容性</h4>
+<p>在 JavaScript 1.3 及早期版本中，<code>JSException</code> 類別具有三個公開的建構子可選擇性的接受字串參數，這個參數可指明詳細的訊息或其他有關例外的資訊。<code>getWrappedException</code> 無法使用。</p>
+<p>使用 <code>try...catch</code> 語法如下，以在 JavaScript 1.3 及其早期版本中處理 LiveConnect 例外︰</p>
+<pre>try {
+   global.eval("foo.bar = 999;");
+} catch (Exception e) {
+   if (e instanceof JSException) {
+      jsCodeFailed()";
+   } else {
+      otherCodeFailed();
+   }
+}
+</pre>
+<p>在本例子中，如果 foo 尚未定義，<code>eval</code> 語句就會失敗。如果 <code>eval</code> 語句在 <code>try</code> 區塊中拋出 <code>JSException</code>，<code>catch</code> 區塊就會執行 <code>jsCodeFailed</code> 方法；如果 <code>try</code> 區塊拋出其他的錯誤，就會執行 <code>otherCodeFailed</code> 方法。</p>
+<p>{{ PreviousNext("Core_JavaScript_1.5_教學:LiveConnect_概要:Java_向_JavaScript_的通訊", "Core_JavaScript_1.5_教學:LiveConnect_概要:資料類型的轉換") }}</p>
+<p>{{ languages( { "en": "en/Core_JavaScript_1.5_Guide/LiveConnect_Overview/Java_to_JavaScript_Communication/Using_the_LiveConnect_Classes", "es": "es/Gu\u00eda_JavaScript_1.5/Concepto_general_de_LiveConnect/Comunicaci\u00f3n_de_Java_con_JavaScript/Utilizar_las_clases_de_LiveConnect", "ja": "ja/Core_JavaScript_1.5_Guide/LiveConnect_Overview/Java_to_JavaScript_Communication/Using_the_LiveConnect_Classes", "pl": "pl/Przewodnik_po_j\u0119zyku_JavaScript_1.5/Podgl\u0105d_klas_LiveConnect/Komunikacja_mi\u0119dzy_Java_a_JavaScript/U\u017cywanie_klas_LiveConnect" } ) }}</p>

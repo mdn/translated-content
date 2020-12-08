@@ -1,0 +1,158 @@
+---
+title: Tutorials
+slug: Mozilla/Add-ons/SDK/Tutorials
+translation_of: Archive/Add-ons/Add-on_SDK/Tutorials
+---
+<div class="warning">
+<p>Support for extensions using XUL/XPCOM or the Add-on SDK was removed in Firefox 57, released November 2017. As there is no supported version of Firefox enabling these technologies, this page will be removed by December 2020.</p>
+
+<p>Add-ons using the techniques described in this document are considered a legacy technology in Firefox. Don't use these techniques to develop new add-ons. Use <a href="/en-US/Add-ons/WebExtensions">WebExtensions</a> instead. If you maintain an add-on which uses the techniques described here, consider migrating it to use WebExtensions.</p>
+
+<p><strong>Starting from <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Firefox 53</a>, no new legacy add-ons will be accepted on addons.mozilla.org (AMO) for desktop Firefox and Firefox for Android.</strong></p>
+
+<p><strong>Starting from <a href="https://wiki.mozilla.org/RapidRelease/Calendar">Firefox 57</a>, only extensions developed using WebExtensions APIs will be supported on Desktop Firefox and Firefox for Android. </strong></p>
+
+<p>Even before Firefox 57, changes coming up in the Firefox platform will break many legacy extensions. These changes include multiprocess Firefox (e10s), sandboxing, and multiple content processes. Legacy extensions that are affected by these changes should migrate to use WebExtensions APIs if they can. See the <a href="https://blog.mozilla.org/addons/2017/02/16/the-road-to-firefox-57-compatibility-milestones/">"Compatibility Milestones" document</a> for more information.</p>
+
+<p>A wiki page containing <a href="https://wiki.mozilla.org/Add-ons/developer/communication">resources, migration paths, office hours, and more</a>, is available to help developers transition to the new technologies.</p>
+</div>
+
+<p>This page lists practical hands-on articles about how to accomplish specific tasks using the SDK.</p>
+
+<hr>
+<h3 id="Başlarken">Başlarken</h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tools/jpm#Installation">Yükleme </a></dt>
+ <dd>Eklentileri geliştirmek için kullanacağınız jpm aracı nasıl yüklenir.</dd>
+</dl>
+
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Troubleshooting">Sorun giderme</a></dt>
+ <dd>
+ <div id="gt-src-tools">
+ <div dir="ltr" style="zoom: 1;"><span id="result_box" lang="tr"><span class="hps">Ortak sorunları</span> <span class="hps">tespit etmek</span> <span class="hps">ve</span> <span class="hps">daha fazla</span> <span class="hps">yardım almak</span> <span class="hps">için bazı</span> <span class="hps">göstericiler</span><span>.</span></span></div>
+ </div>
+ </dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Getting_Started_(jpm)">Başlarken</a></dt>
+ <dd>jpm kullanarak, SDK ile basit bir eklenti yaratmanın gidiş yolu.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="Kullanıcı_Arayüzü_Yaratma">Kullanıcı Arayüzü Yaratma</h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Adding_a_Button_to_the_Toolbar">Araç çubuğu butonu ekleme</a></dt>
+ <dd>Attach a button to the Firefox Add-on toolbar.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Add_a_Menu_Item_to_Firefox">Firefox'a bir menü nesnesi ekleme</a></dt>
+ <dd>Add items to Firefox's main menus.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Display_a_Popup">Bir açılır pencere gösterme</a></dt>
+ <dd>Display a popup dialog implemented with HTML and JavaScript.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Add_a_Context_Menu_Item">Bir içerik menüsü nesnesi ekleme</a></dt>
+ <dd>Add items to Firefox's context menu.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="Interact_with_the_browser"><a name="interact-with-the-browser">Interact with the browser</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Open_a_Web_Page">Open a web page </a></dt>
+ <dd>Open a web page in a new browser tab or window using the tabs module, and access its content.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Listen_for_Page_Load">Listen for page load </a></dt>
+ <dd>Use the tabs module to get notified when new web pages are loaded, and access their content.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/List_Open_Tabs">Get the list of open tabs </a></dt>
+ <dd>Use the tabs module to iterate through the currently open tabs, and access their content.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="Modify_web_pages"><a name="modify-web-pages">Modify web pages</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Modifying_Web_Pages_Based_on_URL">Modify web pages based on URL </a></dt>
+ <dd>Create filters for web pages based on their URL: whenever a web page whose URL matches the filter is loaded, execute a specified script in it.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Modifying_the_Page_Hosted_by_a_Tab">Modify the active web page </a></dt>
+ <dd>Dynamically load a script into the currently active web page.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="Development_techniques"><a name="development-techniques">Development techniques</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Logging">Logging </a></dt>
+ <dd>Log messages to the console for diagnostic purposes.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Creating_reusable_modules">Creating reusable modules </a></dt>
+ <dd>Structure your add-on in separate modules to make it easier to develop, debug, and maintain. Create reusable packages containing your modules, so other add-on developers can use them too.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Unit_testing">Unit testing </a></dt>
+ <dd>Writing and running unit tests using the SDK's test framework.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Chrome_authority">Chrome authority </a></dt>
+ <dd>Get access to the Components object, enabling your add-on to load and use any XPCOM object.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Creating_event_targets">Creating event targets </a></dt>
+ <dd>Enable the objects you define to emit their own events.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Listening_for_load_and_unload">Listen for load and unload </a></dt>
+ <dd>Get notifications when your add-on is loaded or unloaded by Firefox, and pass arguments into your add-on from the command line.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Using_third-party_modules_(jpm)">Using third-party modules (jpm)</a></dt>
+ <dd>Install and use additional modules which don't ship with the SDK itself.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/l10n">Localization </a></dt>
+ <dd>Writing localizable code.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Mobile_development">Mobile development </a></dt>
+ <dd>Develop add-ons for Firefox Mobile on Android.</dd>
+ <dt><a href="/en-US/Add-ons/Add-on_Debugger">Add-on Debugger</a></dt>
+ <dd>Debug your add-on's JavaScript.</dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h3 id="Putting_it_together"><a name="putting-it-together">Putting it together</a></h3>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Annotator">Annotator add-on </a></dt>
+ <dd>A walkthrough of a relatively complex add-on.</dd>
+</dl>
+</div>
+</div>

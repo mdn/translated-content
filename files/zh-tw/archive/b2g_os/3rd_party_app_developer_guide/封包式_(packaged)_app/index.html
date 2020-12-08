@@ -1,0 +1,70 @@
+---
+title: 封包式 (Packaged) App
+slug: Archive/B2G_OS/3rd_Party_App_Developer_Guide/封包式_(Packaged)_App
+---
+<div class="note">
+  <p id="*.E5.8E.9F.E6.96.87.E5.87.BA.E8.99.95.EF.BC.9Ahttps.3A.2F.2Fmarketplace.firefox.com.2Fdevelopers.2Fdocs.2Fpackaged">原文出處：https://marketplace.firefox.com/developers/docs/packaged</p>
+</div>
+<p><strong>封包式</strong><strong> (Packaged) App</strong> 屬於 Open Web App，即以 ZIP 壓縮檔納入其 HTML、CSS、JavaScript、app manifest 等所有資源；取代「將資源置於 Web 伺服器之上」的方式。封包式 App 的 ZIP 壓縮檔另將 <a href="https://developer.mozilla.org/docs/Apps/Manifest">app manifest</a> 置於其根目錄之下，且此 manifest 檔案必須命名為 manifest.webapp。</p>
+<div class="note">
+  <p><strong>注意：</strong>截至 2013 年 1 月為止，Firefox Marketplace 上所提供的封包式 App 限定為 Firefox OS App。</p>
+</div>
+<p> </p>
+<h2 id="封包式_App_之用途"><strong>封包式</strong><strong> App </strong><strong>之用途</strong></h2>
+<p>若 App 會存取裝置上的 Sensitive API，則最好能透過封包式 App 而達到安全性的需求。App 均必須經過上架商城 (如 Firefox OS Marketplace) 認證方可販售。這些商城將審核 App，確認其是否可行，再以其自有金鑰完成加密簽核。再審核過安全性、隱私性、功能性等的可能問題之後，可為 App 的使用者更多添一份保障。</p>
+<p> </p>
+<h2 id="封包式_App_的類型"><strong>封包式</strong><strong> App </strong><strong>的類型</strong></h2>
+<p>封包式 App 可分為 3 類：</p>
+<h4 id="Privileged_app">Privileged app</h4>
+<p style="margin-left: 36.0pt;">Privileged App 是由 Firefox OS Marketplace 以特殊程序核准之後發出。如果任一 App 要存取裝置上的特定 Sensitive API，則可為使用者提供更高的安全性。此種 App 即等同 iOS 或 Android 平台上的 Native App，並具備下列特性：</p>
+<ul>
+  <li>經過程式碼審核或同等作業之後，才會由 App 商城發出許可</li>
+  <li>App 資源亦需由 App 商城簽署。</li>
+  <li>即使無法存取特定 Sensitive Web API 的未受信任內容，亦可透過 Privileged App 的方式使用之。</li>
+  <li>強制性的<a href="https://developer.mozilla.org/en-US/docs/Apps/CSP">內容安全政策 (CSP)</a>；Privileged App 即使用此CSP：</li>
+</ul>
+<pre>"default-src *; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'"</pre>
+<ul>
+  <li>另具備安全性相關的必要機制。可參閱 <a href="https://wiki.mozilla.org/Apps/Security">Security</a> 以進一步了解。</li>
+</ul>
+<h4 id="Certified_app">Certified app</h4>
+<p style="margin-left: 36.0pt;">Certified App 將用於重要的系統功能，如智慧型手機上預設的撥號鍵盤，或系統設定用 App；當然亦可用於 Firefox OS 手機上的重要功能。Certified App 並不會用於第三方 App，所以大多數的 App 開發人員可略過此類 App 不管。除了所有的裝置許可均為隱式許可 (Implicit permission，意即不需要外部的使用者許可) 之外，Certified App 與 Privileged App 大部分均屬於相似的封包式 App。而 Certified App 必須取得 OEM 裝置或電信服務供應商裝置的許可，才能讓此隱式 App 使用重要 API。下列即為 Certified App 的 CSP (與 Privileged App 的 CSP 略有不同)：</p>
+<pre>"default-src *; script-src 'self'; object-src 'none'; style-src 'self'"</pre>
+<p style="margin-left: 36.0pt;">若與 Certified App 相較，Privileged App 則針對 inline CSP 的影響而稍微放寬了限制。進一步了解其原因，可參閱<a href="https://wiki.mozilla.org/Apps/CSP">預設 CSP</a> 與 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=768029">Bug 768029</a>。</p>
+<h4 id="Plain_packaged_app">Plain packaged app</h4>
+<p style="margin-left: 36.0pt;">當然也可讓一般 App 封裝為 ZIP 壓縮檔。在 Marketplace 簽署之後，並不會執行如 Privileged/Certified App 所需的特殊授權程序。且 Plain Packaged App 並不會使用特定的 Sensitive Web API；同時也不屬於 Privileged/Certified App 所用 CSP 管轄所及。</p>
+<p> </p>
+<h2 id="與托管式_(Hosted)_App_的差異"><strong>與托管式</strong><strong> (Hosted) App </strong><strong>的差異</strong></h2>
+<p>封包式 App 的功能，其實與一般網站型態的 Open Web App (即所謂托管式 Hosted App) 功能相同。但封包式 App 的差異在於：</p>
+<ul>
+  <li>封包式 App 不需網際網路檔案供應源。托管式 App 所用的 one-app-per-origin 政策，並不適用於封包式 App。</li>
+  <li>封包式 App 的 ZIP 檔案內部使用特殊協定：<code>app://&lt;uuid&gt;</code>。舉例來說，若在封包式 App 內部載入<code> /index.html </code>作為內容，則其實載入了如下的字串 (僅 UUID 不同)：</li>
+</ul>
+<pre>app://550e8400-e29b-41d4-a716-446655440000/index.html</pre>
+<ul>
+  <li>封包式 App 的 manifest 檔案必須命名為 <code>manifest.webapp</code>。</li>
+  <li>封包式 App 檔案源必須存取自 ZIP 壓縮檔；而 ZIP 壓縮檔又已儲存於 App 所安裝的裝置上。</li>
+  <li>封包式 App 均以不同 <code>mozApps</code> 函式所安裝：<code>installPackage()</code>。</li>
+  <li>針對所有應用程式的內容，封包式 App <code>均強制使用特定的</code> <a href="https://developer.mozilla.org/docs/Security/CSP/Introducing_Content_Security_Policy">CSP</a>；托管式 App 亦可使用 CSP，但非必要條件。</li>
+  <li>封包式 App 可於 iframes 之內嵌入遠端內容，但該內容將無法存取 Privileged API，亦不會具備預設的 CSP。</li>
+  <li>封包式 App 具備更新程序，可為使用者取得新版本的 App。托管式 App 則不需要此程序。</li>
+</ul>
+<p>與一般的托管式 App 相同，封包式 App 仍可存取 Web 伺服器上的資料庫。</p>
+<p> </p>
+<h2 id="使用_Sensitive_Web_API"><strong>使用</strong><strong> Sensitive Web API</strong></h2>
+<p>現在有許多惡意 Web API，因此應謹慎存取 Web API。針對 App 所要存取的所有 Sensitive API，你應該在 <a href="https://developer.mozilla.org/docs/Apps/Manifest">manifest 檔案</a>的 <code>permissions </code>欄位中新增輸入項。</p>
+<p>一般托管式 App 亦可存取某些 Sensitive API，但其他 API 就限定封包式 (Privileged 或 Certified) App 才可存取。可參閱 <a href="https://developer.mozilla.org/docs/Apps/App_permissions">App 許可</a>找到相關需求的表格。</p>
+<p> </p>
+<h2 id="封包式_App_與_Firefox_Marketplace"><strong>封包式</strong><strong> App </strong><strong>與</strong><strong> Firefox Marketplace</strong></h2>
+<p>與托管式 App 相較，Firefox Marketplace 處理封包式 App 的方式較為不同。一旦提交自己的封包式 App 之後，其 ZIP 壓縮檔即儲存於 Marketplace 的伺服器上，且 Marketplace 隨即根據該 ZIP 壓縮檔中的 manifest 檔案，產生新的 manifest 檔案並命名為「mini-manifest」。只要使用者想安裝此 App，就會將 mini-manifest 檔案傳送至 <code>installPackage()</code> 函式以安裝該 App。此 mini-manifest 檔案僅用於安裝與更新作業，與 App 的執行作業無關。</p>
+<p> </p>
+<h2 id="測試封包式_App_的安裝作業"><strong>測試封包式</strong><strong> App </strong><strong>的安裝作業</strong></h2>
+<p>透過 Firefox OS 模擬器 (Firefox OS Simulator)，即可輕鬆安裝封包式 App。目前 Firefox OS 模擬器亦針對各個平台而提供 <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-windows.xpi">Windows</a>、<a href="https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-mac.xpi">OSX</a>、<a href="https://ftp.mozilla.org/pub/mozilla.org/labs/r2d2b2g/r2d2b2g-linux.xpi">Linux</a> 等不同版本。</p>
+<p>安裝模擬器時，將於 Firefox 的「網頁開發者 (Web Developer)」功能表中新增「Firefox OS Simulator」項目。在開啟附加元件之後，即可透過「Add Directory」而指定本端 webapp.manifest 檔案的位置。模擬器另可將該 App 封包 (即壓縮該資料夾)，再透過剛封包完畢的 App 開啟模擬器。</p>
+<p>針對 Linux 與 Windows 的使用者，還需要其他步驟才能設定 Android Debug Bridge (adb)，以溝通實際裝置。請參閱<a href="https://developer.android.com/tools/device.html#setting-up">步驟 3：設定系統以偵測自己的裝置</a>。</p>
+<p>在實際裝置上，可點選 Settings &gt; Device Information &gt; More Information &gt; Developer &gt; Remote Debugging，進而啟動遠端除錯功能。</p>
+<p>任何時間點均可連上受支援的裝置。一旦連上裝置，模擬器即可偵測並顯示所接上的裝置。而在 App 列表的旁邊，可看到「push」的新按鈕。按下「push」即可將剛封包完畢的 App 傳送至裝置上。</p>
+<p> </p>
+<h2 id="更新封包式_App"><strong>更新封包式</strong><strong> App</strong></h2>
+<p>若要進一步了解更新作業，請參閱<a href="https://developer.mozilla.org/docs/Apps/Updating_apps">更新 App</a>。</p>
+<p> </p>

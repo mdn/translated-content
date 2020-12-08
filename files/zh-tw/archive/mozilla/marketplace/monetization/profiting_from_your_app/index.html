@@ -1,0 +1,95 @@
+---
+title: 用自己的 App 創造收益
+slug: Archive/Mozilla/Marketplace/Monetization/Profiting_from_your_app
+translation_of: Archive/Marketplace/Monetization/Profiting_from_your_app
+---
+<div class="summary">
+<p>開發 Web App 不只有趣，也是將自己熱情轉為實質收益的絕佳方式！本篇文章將介紹 App 付款的相關主題、說明目前已經建構的付款類型 ─ 包含付款購買 App 與應用程式內部付費 (In-app payments)，以及該如何處理不同國家內所發生的交易。</p>
+</div>
+
+<p><a class="link-https" href="https://marketplace.firefox.com/">Firefox Marketplace</a> 是專為 Web App 開發者所設計的絕佳市集，可支援付費/免費 App 與 In-app payments、多款裝置平台的 App，還有更多特色。Firefox Marketplace 具備高競爭力的定價系統，讓消費者能選用自己喜歡的付款方式。並由付款服務供應商處理付款程序，可透過消費者的信用卡或行動電話帳單收取款項。</p>
+
+<div class="note">
+<p><strong>注意：</strong>可參閱<a href="https://developer.mozilla.org/zh-TW/docs/Mozilla/Marketplace/FAQ">《Marketplace 常見問題》的〈付款〉一章</a>，了解 Marketplace 付款方面的常見問題。</p>
+</div>
+
+<h2 id="設定付費_App">設定付費 App</h2>
+
+<p>完全可由開發者自行決定 App 收費與否，而且<a href="https://developer.mozilla.org/zh-TW/docs/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F-840092-dup/Publishing/Submitting_an_app">將 App 提交至 Firefox Marketplace</a> 的程序極為相似。Firefox Marketplace 目前支援二種 App 付款模式：</p>
+
+<ul>
+ <li>付費 App或免費增值 App (免費下載之後再購買 App 內建的物品)；消費者在安裝 App 之前即付費完畢</li>
+ <li>續約訂閱 (已規劃完畢)</li>
+</ul>
+
+<p>若將 App 定位為付費 App，則開發者會有不同的選擇並需制定價格；消費者也會在開始下載時完成付費。另請注意，因為必須經過 Marketplace 驗證並正確安裝 App，所以目前僅有 Firefox OS 才支援付費 App。在建構付費 App 時，可參閱《<a href="https://developer.mozilla.org/en-US/Marketplace/Monetization/App_payments_guide">App 付款指南</a>》進一步了解其內部的必要程式碼。</p>
+
+<p>如果開發者是透過 Marketplace 收款，則消費者付款之後即可收到電子收據。開發者必須負責查驗電子收據，確認自己的 App 已正確收款。一般只要啟動 App 時就完成了查驗作業。可參閱《<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Publishing/Validating_a_receipt">查驗收據</a>》以進一步了解。</p>
+
+<p>Mozilla 強烈建議開發者應在收費之前，讓消費者能預覽/試用 App 的功能。只要同時提供單一 App 的免費與付費版本，或透過 In-app payments 都能達到上述目的。</p>
+
+<h3 id="In-app_payments">In-app payments</h3>
+
+<p>In-app payments 讓消費者可在 App 中付款，亦即透過 App 而靈活收取多樣數位版商品與服務的款項。且 In-app payments 讓開發者強化現有 App 即可獲得更高收益；而消費者也不需再另外購買新的 App。</p>
+
+<p>舉例來說，In-app payments 可用於：</p>
+
+<ul>
+ <li>在遊戲中銷售特殊的功能、物品、升級系統</li>
+ <li>升級或解鎖額外的 App 功能</li>
+ <li>建構有時間限制的免費試用版</li>
+ <li>補充 App 中的虛擬貨幣或儲值金額</li>
+</ul>
+
+<p>Mozilla 與 <a href="https://developers.google.com/in-app-payments/docs/">Google 的 In-Apps Payments</a> 系統運作模式極為相似。Firefox Marketplace 系統如下：</p>
+
+<ul>
+ <li>App 將簽署 JWT 請求並呼叫 JavaScript 函式，即開始付款程序。</li>
+ <li>將在 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" title="The HTML &lt;iframe> Element (or HTML inline frame element) represents a nested browsing context, effectively embedding another HTML page into the current page. In HTML 4.01, a document may contain a head and a body or a head and a frame-set, but not both a "><code>&lt;iframe&gt;</code></a> 中啟動購買流程：
+  <ul>
+   <li>消費者透過 Mozilla Persona 登入</li>
+   <li>消費者完成購買程序</li>
+  </ul>
+ </li>
+ <li>消費者關閉視窗時，App 隨即收到 JavaScript 的回呼 (callback)</li>
+ <li>App 伺服器將接收簽署過的 <code>POST</code> 請求，其內並包含 Mozilla 交易 ID，確認本次購買行為完成</li>
+</ul>
+
+<p>Firefox Marketplace 另提供 JavaScript 公用程式函式庫，可協助完成購買程序。</p>
+
+<h3 id="免費增值_(Freemium)_App">免費增值 (Freemium) App</h3>
+
+<p>若開發者想將付費版本的 App 拿掉數項功能而成為免費版本，以供消費者可預覽/試用該 App，則 Mozilla 也同樣支援此一需求。開發者可在「免費版 App」的「詳細資訊」區塊中，找到「upsell」加入付費升級的功能，即可銜接免費與付費版本的 App 並簡化此「免費增值」模式。</p>
+
+<h3 id="退款">退款</h3>
+
+<p>一旦消費者要求退款，則可能由 Mozilla、付款服務供應商，或電信營運商授權退款作業。根據各地的消費規範、信用卡退款政策、電信營運商退款政策等的差異，退款授權方式亦有所不同。此外，Mozilla 並無法處理 In-app payments 的退款作業。</p>
+
+<p>一旦 App 購買行為退款完畢，所對應的收據也隨即失效。因此，開發者應隨時<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Publishing/Validating_a_receipt">查驗收據</a>以確保 App 是否正確授權批准。若任何 App 發生不尋常的大量退款要求，將由 Mozilla 進一步查驗。</p>
+
+<div class="note">
+<p><strong>注意：</strong>《<a href="https://developer.mozilla.org/zh-TW/docs/%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F-840092-dup/Publishing/In-app_payments">應用程式內部付費 (In-app payments)</a>》提供 In-app payments 作業的豐富訊息與範例程式碼。目前 In-app payment 程序尚在實測階段，請隨時參閱更新訊息。</p>
+</div>
+
+<div class="note">
+<p><strong>注意：</strong>若 App 使用 In-app payments 機制，則 Mozilla 建議該 App 可設定為免費下載 App。當然付費 App 同樣可使用此機制。</p>
+</div>
+
+<h2 id="定價與款項給付">定價與款項給付</h2>
+
+<p>App 內部應使用正確的程式碼，且最好透過 Marketplace 檢驗 App 較為穩當。但你心裡可能還是會想著系統是如何跨國處理這些款項。</p>
+
+<p>Firefox Marketplace 所列出的 App，都是由付款服務供應商負責販售。這些付款服務供應商將負責處理交易、收取營業稅與增值稅 (VAT)、確認符合當地消費法規、相關出納/退款作業，以及其他應盡的零售作業。Mozilla 則是提供買家 (即 App 使用者) 與賣家 (App 開發者) 的交流場所，但完全不參與交易活動。而 <a href="http://www.bango.com">Bango</a> 則是 Firefox Marketplace 的付款服務開發商。</p>
+
+<p>付款處理商另負責買家 (即 App 使用者) 與賣家 (App 開發者) 之間的交易過程，包含信用卡處理在內的大小事。付款處理商一般會逐筆交易收取服務費用。開發者必須透過 <a href="https://marketplace.firefox.com/developers/">Firefox Marketplace 開發者交流中心 (Firefox Marketplace Developer Hub)</a>，於各家付款處理商建立自己的帳戶。</p>
+
+<p>為了維持 Firefox Marketplace 的運作、不斷提升 App 平台、實踐<a href="http://www.mozilla.org/about/">我們的使命</a>，Mozilla 與合作夥伴將針對各筆交易拆帳，並另外支付交易費用。目前，若開發者是透過 Marketplace 進行交易，則每筆 App 或 In-app 銷售活動均可獲得 70% 的銷售金額 (此為必要費用與稅後總額，均已包含於消費者所看到價格之中)。而 Mozilla 與合作夥伴則收取 30%。</p>
+
+<p>Firefox Marketplace 未來將支援更多國家、語言、幣別。我們亦將設法提供多個語系的 Marketplace，並搭配各國所適用的付款方式。</p>
+
+<p>進一步了解：</p>
+
+<ul>
+ <li>《<a href="https://developer.mozilla.org/zh-TW/docs/Mozilla/Marketplace/Monetization/App_pricing">制定 App 的價格</a>》將進一步說明應如何透過「價格點數」定價，以及定價將如何搭配信用卡並扣繳稅額等事項。</li>
+ <li>《<a href="https://developer.mozilla.org/en-US/Marketplace/Monetization/Payments_Status">Payments status</a>》可了解目前哪些國家已經開始 App 付款作業、使用的匯率為何、開發者在各國所應注意的事項。</li>
+</ul>

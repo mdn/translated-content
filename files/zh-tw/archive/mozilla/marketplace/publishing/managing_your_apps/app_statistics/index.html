@@ -1,0 +1,66 @@
+---
+title: App 統計資料
+slug: Archive/Mozilla/Marketplace/Publishing/Managing_your_apps/App_Statistics
+translation_of: Archive/Mozilla/Marketplace/Publishing/Managing_your_apps/App_Statistics
+---
+<div class="summary">
+<p>Firefox Marketplace 可提供 App 的多樣統計資料。本文將說明應如何取得自己<span class="seoSummary"> App 在 Firefox Marketplace 上的統計資料、報表資料的呈現方式，另可審閱報表內的特定資訊、可用的報表，並使用已匯出的報表資料。</span></p>
+</div>
+
+<h2 id="取得_App_的狀態">取得 App 的狀態</h2>
+
+<p>若要取得任何已發佈 App 的狀態，須先到 Firefox Marketplace 點擊「<strong>開發者交流中心 (Developer Hub)</strong>」，再進入「我的提交 (<strong>My Submissions)</strong>」。所有已發佈的 App 都能看到 (1)「統計資訊 (<strong>Statistics</strong>)」連結。</p>
+
+<p><img alt="In My Submissions, for each published app you will find a link to the app's stats page" src="https://mdn.mozillademos.org/files/8281/Stats%20link.png" style="width: 990px; height: 210px;"></p>
+
+<h2 id="報表介紹">報表介紹</h2>
+
+<p>在開啟了 App 的統計資訊之後，就會進入下方的統計資料表。此頁將摘要呈現目前可用的統計報表資料。</p>
+
+<p><img alt="The stats dashboard provides a visual summary of your app's stats and links to the 5 reports" src="https://mdn.mozillademos.org/files/8285/Stats%20Dashboard.png" style="width: 1041px; height: 723px;"></p>
+
+<p>開發者可在此頁看到下列報表：</p>
+
+<ul>
+ <li><strong>Installs</strong>：App 完整安裝的次數</li>
+ <li><strong>Visits</strong>：App 在 Marketplace 列表頁面受消費者瀏覽的次數</li>
+ <li><strong>Ratings</strong>：提交給 App 的評分</li>
+ <li><strong>Abuse Reports</strong>：提交給 App 的濫用回報次數</li>
+ <li><strong>Average Rating</strong>：App 目前所接收的平均評分</li>
+</ul>
+
+<p>每組報表均為相同的基礎架構，如下所示：</p>
+
+<p><img alt="All reports follow the same basic structure with date selector, region selector (Installs report only) graph, JSON export option and daily summary." src="https://mdn.mozillademos.org/files/8287/Report%20layout%20overview.png" style="width: 1045px; height: 1026px;"></p>
+
+<ol>
+ <li>日期選擇 — 可設定報表應顯示的開始＼結束日期。</li>
+ <li>地區選擇 (僅 Installs 報表) — 可設定報表應顯示全世界活動資料，或個別國家＼地區的資料。
+  <div class="warning">在本文撰寫期間，此功能因資料加總功能的問題，先予以關閉。可參閱 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1028448">Bug 1028448</a>。</div>
+ </li>
+ <li>「更新」按鈕 — 依照目前日期與地區設定，重新整理報表內容。</li>
+ <li>按每日顯示的活動圖表。</li>
+ <li>JSON 匯出選項。</li>
+ <li>其他按每日顯示的活動圖表。</li>
+</ol>
+
+<h2 id="使用匯出的資料">使用匯出的資料</h2>
+
+<p>你可能想在其他試算表應用中使用匯出的資料。目前尚無主流的試算表應用程式 (Microsoft 的 Excel、Apple 的 iWorks Numbers、OpenOffice 的 Calc) 能支援 JSON 格式的資料匯入功能。解決方案就是將 JSON 轉檔為 CSV 格式。此檔案格式可用於大多數的試算表應用程式。目前有許多 JSON to CSV 的線上轉檔功能：</p>
+
+<ul>
+ <li><a href="http://www.convertcsv.com/json-to-csv.htm">Convert JSON to CSV</a> 有多樣的 CSV 輸出選項，可轉換檔案或黏貼文字 (例如冒號與分號可用其他分隔符號替代)，並針對轉換完成的資料提供文字顯示與 CSV 檔案下載。</li>
+ <li><a href="https://json-csv.com/">JSON to CSV - Online converter</a> 有多樣的 CSV 輸出選項，可轉換檔案或黏貼文字 (冒號、標籤、分號)，並可顯示格式化的表格，亦可下載轉換過的資料與 CSV 檔案。另可針對轉換過的 JSON 資料建立永久連結。但免費版本將限制來源檔案須 1Mb 以下。</li>
+ <li><a href="http://konklone.io/json/">JSON to CSV</a> - 可將 JSON 資料貼上頁面並顯示資料表格。而資料即可下載為 CSV 檔案。你也可依照自己需要，建立 JSON＼頁面的永久連結。其原始碼<a href="https://github.com/konklone/json">架設於 GitHub</a> 上，且該作者另透過<a href="http://sunlightfoundation.com/blog/2014/03/11/making-json-as-simple-as-a-spreadsheet/">此部落格文章說明此專案的背景。</a></li>
+</ul>
+
+<p>此外還有下列資源提供程式碼，讓你能針對不同的試算表應用程式，建立自動匯入功能：</p>
+
+<ul>
+ <li>Excel
+  <ul>
+   <li><a href="https://code.google.com/p/vba-json/">VBA-JSON</a></li>
+   <li><a href="http://www.ediy.co.nz/vbjson-json-parser-library-in-vb6-xidc55680.html">VB-JSON</a></li>
+  </ul>
+ </li>
+</ul>

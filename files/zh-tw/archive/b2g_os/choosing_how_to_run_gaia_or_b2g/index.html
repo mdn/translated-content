@@ -1,0 +1,59 @@
+---
+title: 選擇如何運作 Gaia 或 B2G
+slug: Archive/B2G_OS/Choosing_how_to_run_Gaia_or_B2G
+translation_of: Archive/B2G_OS/Choosing_how_to_run_Gaia_or_B2G
+---
+<p>根據各別的需求，當您以 Boot to GEcko 或是 <a href="/en/Mozilla/Boot_to_Gecko/Introduction_to_Gaia" title="en/Mozilla/Boot_to_Gecko/Introduction_to_Gaia">Gaia</a> 使用者介面時、您會思考各種選項及組合。您可以挑出接著列出的這些選項；每個選項都需要考慮其優缺點，有些會比其他的更具延展性。</p>
+<h2 id="在_Firefox_中運作_Gaia">在 Firefox 中運作 Gaia</h2>
+<p>如果您很清楚您在做什麼的話，您可以複製 <a class="link-https" href="https://github.com/mozilla-b2g/gaia" title="https://github.com/mozilla-b2g/gaia">Gaia 的 repository</a> 並且 <a href="/en/Mozilla/Boot_to_Gecko/Using_Gaia_in_Firefox" title="en/Mozilla/Boot_to_Gecko/Using_Gaia_in_Firefox">在 Firefox 15 或以上版本中運作 Gaia</a>.</p>
+<h3 id="優點">優點</h3>
+<ul>
+  <li>不必 build 任何東西，只需簡單的安裝。</li>
+  <li>可以使用 Firefox 內建的開發者工具來除錯。</li>
+</ul>
+<h3 id="缺點">缺點</h3>
+<ul>
+  <li>看到的範圍是基於瀏覽器的視窗大小，而不是行動裝置的螢幕大小。</li>
+  <li>很多硬體介面的功能無法使用。</li>
+  <li>應用程式在各自、釘著的分頁中運作，而不是主要的 UI 分頁。</li>
+  <li>如果您用 Firefox nightly 版本的話，它不一定很穩定。</li>
+</ul>
+<h3 id="為什麼要在_Firefox_中運作_Gaia">為什麼要在 Firefox 中運作 Gaia</h3>
+<p>有兩個很重要的理由會讓您不在行動裝置或模擬器、而是在 <a href="/en/Mozilla/Boot_to_Gecko/Using_Gaia_in_Firefox" title="en/Mozilla/Boot_to_Gecko/Using_Gaia_in_Firefox">Firefox 上運作 Gaia</a>；容易開始著手開發和運作、也可以使用 Firefox 中優秀的開發者工具。如同要了解 Gaia 的 hackers 一般，開發者一開始測試 apps 的 UI 和基本功能的時候會享受到這極大的好處。</p>
+<div class="note">
+  <strong>Note:</strong> 在開始配送 app 之前，您絕對會需要在實體的行動裝置上做測試。</div>
+<h2 id="在桌面環境中運作_B2G_模擬器">在桌面環境中運作 B2G (模擬器)</h2>
+<p>可以自己建置一個 Boot to Gecko 模擬器，並且在上面運作 Gaia。這個軟體雖然是以 Firefox 為基礎，但和行動裝置上的 Boot to Gecko 的行為非常類似。現在 Mozilla 提供 nightly 版本的模擬器給開發者，且這項工作在 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=744008" title="FIXED: Produce B2G builds for desktop operating systems.">bug 744008</a> 裡持續追蹤著。如果您熟悉建置 Firefox code-base 或是 C++ 專案的話，您可以 <a class="link-https" href="https://wiki.mozilla.org/Gaia/Hacking#Building_B2G" title="https://wiki.mozilla.org/Gaia/Hacking#Building_B2G">依循這些步驟</a> 自己建置這個應用程式。</p>
+<h3 id="優點_2">優點</h3>
+<ul>
+  <li>模擬器提供行動裝置大小的範圍。</li>
+  <li>大部分而言，使用模擬器的體驗是近似實際的行動裝置的。</li>
+  <li>可以使用更多行動裝置的 APIs (但不是全部)。</li>
+</ul>
+<h3 id="缺點_2">缺點</h3>
+<ul>
+  <li>您需要一個安裝好的 C/C++ 編譯環境。</li>
+  <li>您需要自己建置 Gecko 以及模擬器。</li>
+  <li>Firefox 開發者工具無法使用。</li>
+</ul>
+<h3 id="為什麼要運作_B2G_模擬器">為什麼要運作 B2G 模擬器</h3>
+<p>這是一個不錯且折衷的測試和開發解決方案。對於將您的 app 或是其他程式碼放在近似行動裝置的環境中、卻不用再每次測試時都燒進手機而言，是一個不錯的方案。</p>
+<div class="note">
+  <strong>Note:</strong> 在開始配送 app 之前，您絕對會需要在實體的行動裝置上做測試。</div>
+<h2 id="在行動裝置上運作_B2G">在行動裝置上運作 B2G</h2>
+<p>對於測試 B2G 或 Gaia 環境、或是您的 web app 而言，最徹底的方式是建置並將 Boot to Gecko 安裝在實體的行動裝置上。同時這也是最複雜的處理程序。</p>
+<h3 id="優點_3">優點</h3>
+<ul>
+  <li>您可以得到完整的行動裝置體驗。</li>
+  <li>所有的行動裝置 APIs 都可以使用。</li>
+  <li>您可以在實際操作行動裝置中，體驗您的程式的效能。</li>
+</ul>
+<h3 id="缺點_3">缺點</h3>
+<ul>
+  <li>您需要具備一個完整的 C/C++ 建置系統。</li>
+  <li>您需要自己編譯 Gecko 和 Gaia。</li>
+  <li>您需要一個相容的行動裝置來安裝 B2G 作業系統。</li>
+  <li>您需要把 B2G 燒到行動裝置上，同時移除掉原本在運作的作業系統。</li>
+</ul>
+<h3 id="為什麼要在行動裝置上運作_B2G">為什麼要在行動裝置上運作 B2G</h3>
+<p>對於在 B2G 或 Gaia 上測試任何程式或網頁專案而言，這毫無疑問地是最精準的方式。經由在實際的行動裝置硬體上執行，您可以確認您的專案表現及顯示都相當良好，並且都可以正確地使用所有的行動裝置 APIs。另外，在您開始配送任何程式之前，您應該一定要在實體行動裝置上測試；沒這樣做的話，一定會不幸地發生一些難以預測的影響。</p>

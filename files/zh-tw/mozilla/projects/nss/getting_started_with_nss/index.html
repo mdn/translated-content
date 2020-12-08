@@ -1,0 +1,58 @@
+---
+title: Getting Started With NSS
+slug: Mozilla/Projects/NSS/Getting_started_with_NSS
+translation_of: Mozilla/Projects/NSS/Getting_started_with_NSS
+---
+<h2 id="如何參與NSS">如何參與NSS</h2>
+
+<p>網絡安全服務（NSS）是Mozilla軟件使用的加密算法和安全網絡協議的基礎庫。<br>
+ <br>
+ 您想參與並幫助我們改善Mozilla Firefox和其他使用NSS的應用程序的核心安全性嗎？我們期待著您的貢獻！<br>
+ <br>
+ 我們有大量任務等待您關注，我們很樂意協助您確定與您的興趣或技能相匹配的領域。您可以在<a href="/en-US/docs/Mozilla/QA/Getting_Started_with_IRC" title="Mozilla IRC">Mozilla IRC</a>的<a href="irc://irc.mozilla.org/#nss" title="irc：//irc.mozilla.org/nss">#nss</a>頻道中找到我們，也可以在<a href="https://lists.mozilla.org/listinfo/dev-tech-crypto/" title="https://lists.mozilla.org/listinfo/dev-tech-crypto/">mozilla.dev.tech.crypto</a>新聞組中提問。</p>
+
+<p>NSS庫及其支持的命令行工具使用C編程語言編寫。它的構建系統和自動化測試基於makefile和bash腳本。</p>
+
+<p>隨著時間的流逝，已經產生了許多描述NSS各個方面的文檔。您可以從以下內容開始：</p>
+
+<ul>
+ <li>當前的<a href="/en-US/docs/NSS" title="/ zh-CN / docs / NSS">主要NSS文檔頁面</a>，從中可以鏈接到其他文檔。</li>
+ <li>一個<a href="/en-US/docs/Overview_of_NSS" title="/ zh-CN / docs / Overview_of_NSS">總體概述</a>使用NSS和它提供的功能的應用程序。</li>
+ <li>高水平<a href="/en-US/docs/An_overview_of_NSS_Internals" title="/ zh-CN / docs / An_overview_of_NSS_Internals">介紹NSS的內部</a>。</li>
+ <li>了解有關獲取<a href="/en-US/docs/NSS_Sources_Building_Testing" title="/ en-US / docs / NSS_Sources_Building_Testing">NSS來源，構建和測試的信息。</a></li>
+ <li>歸檔的mozilla.org網站上的<a href="https://www-archive.mozilla.org/projects/security/pki/nss/">舊文檔</a>。</li>
+</ul>
+
+<p>（不幸的是，NSS項目目前沒有技術撰稿人，因此我們的文檔沒有我們想要的那樣井井有條。您可以通過更好的組織方式來做出貢獻。）</p>
+
+<h2 id="NSS示例代碼">NSS示例代碼</h2>
+
+<p>由NSS開發人員維護的命令行工具是開始學習如何編寫NSS應用程序的好地方。您可以在子目錄mozilla / security / nss / cmd中找到它們</p>
+
+<p>或看看一些基本的<a href="/docs/Mozilla/Projects/NSS/NSS_Sample_Code">NSS示例代碼</a>。</p>
+
+<p>目前正在開發和審查一組新的樣本，請參閱<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=490238">創建新的NSS樣本</a>。</p>
+
+<p>歡迎您通過以下方式下載示例：hg clone https://hg.mozilla.org/projects/nss; cd nss; hg更新SAMPLES_BRANCH</p>
+
+<h2 id="如何貢獻">如何貢獻</h2>
+
+<p>...（此部分仍在建設中，但是有很多貢獻的機會）</p>
+
+<p>如果您沒有，請先在<a href="https://bugzilla.mozilla.org/">bugzilla.mozilla.org上</a>打開一個bugzilla帳戶。</p>
+
+<p>NSS ::庫組件可解決您要處理的問題。我們維護了一個<a href="https://bugzilla.mozilla.org/buglist.cgi?keywords=good-first-bug%2C%20&amp;keywords_type=allwords&amp;classification=Components&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Libraries&amp;product=NSS">標記為“ good-first-bug”</a>的<a href="https://bugzilla.mozilla.org/buglist.cgi?keywords=good-first-bug%2C%20&amp;keywords_type=allwords&amp;classification=Components&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Libraries&amp;product=NSS">NSS錯誤</a>列表<a href="https://bugzilla.mozilla.org/buglist.cgi?keywords=good-first-bug%2C%20&amp;keywords_type=allwords&amp;classification=Components&amp;query_format=advanced&amp;bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;component=Libraries&amp;product=NSS">，您可以查看這些錯誤</a>。</p>
+
+<h3 id="創建補丁">創建補丁</h3>
+
+<p>請參閱有關<a href="/en-US/docs/NSS_Sources_Building_Testing" title="/ en-US / docs / NSS_Sources_Building_Testing">NSS來源，構建和測試的部分，</a>以開始製作補丁。當您對此感到滿意時，就需要進行代碼審查。</p>
+
+<h3 id="代碼審查">代碼審查</h3>
+
+<p><a href="https://phabricator.services.mozilla.com">http://phabricator.services.mozilla.com/</a>是我們的代碼審查工具，它使用您的Bugzilla帳戶。使用我們的<a href="https://moz-conduit.readthedocs.io/en/latest/phabricator-user.html">Phabricator用戶說明上傳補丁進行審核</a>。</p>
+
+<p><a href="https://github.com/mozilla/nss-tools/blob/master/nss-code-review-checklist.yaml">Github上的清單形式列出了</a>一些在代碼審查期間將要評估的項目<a href="https://github.com/mozilla/nss-tools/blob/master/nss-code-review-checklist.yaml">。</a></p>
+
+<p>通過審查後，您的補丁程序可以由NSS小組的成員登陸。您可以在<a href="/en-US/docs/Mozilla/QA/Getting_Started_with_IRC" title="Mozilla IRC">Mozilla IRC</a>的<a href="irc://irc.mozilla.org/#nss" title="irc：//irc.mozilla.org/nss">#nss</a>頻道中找到我們。</p>
+
+<p>請注意，我們不會發布未經審查和測試的代碼。代碼僅在具有測試的情況下才有效，而測試僅在它們屬於自動化的一部分時才有效。</p>

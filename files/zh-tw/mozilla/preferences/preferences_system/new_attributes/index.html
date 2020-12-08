@@ -1,0 +1,55 @@
+---
+title: Preference XUL Attributes
+slug: Mozilla/Preferences/Preferences_system/New_attributes
+translation_of: Mozilla/Preferences/Preferences_system/New_attributes
+---
+<p> </p>
+<p><code><a href="/en-US/docs/XUL/prefwindow">&lt;prefwindow&gt;</a></code> 裡的 Widgets 可能有下述屬性 (除此以外，尚有標準屬性).</p>
+<h3 id="preference" name="preference">preference</h3>
+<p>Specifies id of the linked <code><a href="/en-US/docs/XUL/preference">&lt;preference&gt;</a></code> element. preference 和 widget 兩者的 <code>value</code> 將保持同步.</p>
+<p>如下例，當 pane 被載入時， textbox 從名稱 extensions.example.mypref 的 preference 來自動初始化它的 <code>value</code> ；反過來說，當使用者改變 textbox 的 value 時，<code>&lt;preference&gt;</code>元素的 value 會同步更新，並將在適當的時候儲存至 preferences system.</p>
+<pre class="eval">&lt;preference id="my_pref" name="extensions.example.mypref" type="unichar"/&gt;
+&lt;textbox preference="my_pref"/&gt;
+</pre>
+<h3 id="preference-editable" name="preference-editable">preference-editable</h3>
+<p>By default, the <code><a href="/en-US/docs/XUL/preference">&lt;preference&gt;</a></code> element will automatically modify the value of a few standard widgets: checkbox, colorpicker, radiogroup, textbox, listitem, listbox, and menulist.</p>
+<p>If you wish it to update the value of an element with different local name, for example your own XBL widget, you need to set the <code>preference-editable="true"</code> attribute on it.</p>
+<p>For your widget to modify the <code>&lt;preference&gt;</code>'s value, you need to make sure a <code>change</code>, <code>command</code>, or <code>input</code> event is fired after the widget's value changes.</p>
+<p><span class="comment">bug # or any testcases ? Note: this does not currently work on the tree widget. It may not work on anything so far (the API says it is to be available in version 1.8).</span></p>
+<h3 id="onsyncfrompreference.2Fonsynctopreference" name="onsyncfrompreference.2Fonsynctopreference">onsyncfrompreference/onsynctopreference</h3>
+<p>Often you will have UI whose construction does not map easily to a given preference type. 例如，你可能有一個 checkbox，當一個整數值是 3 時它被打勾，是 2 時不被打勾。為了初始化這個 UI 元素，你不能依賴預設的 initialization routine，因為這兩個數值對 checkbox 元素來說是無意義的. 你需要寫轉換函數來轉換 preference value 成 UI 元素可用的初始值，並且也轉換 UI 元素的 value 成某些格式來儲存至 preferences file. 這就是 onsyncfrompreference/onsynctopreference 的作用.</p>
+<p><code>onsyncfrompreference</code> 被呼叫，當一個元素從 preferences 被初始化。 明確地說, 當一個 preference 元素的 value 被載入, 所有使用那個 preference 的元素將使他們的 <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">onsyncfrompreference </span><span style="line-height: 1.5;">handler 被呼叫.</span></p>
+<div class="warning">
+ Be careful when writing <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">onsyncfrompreference </span><span style="line-height: 1.5;">handlers.  </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">&lt;preference&gt; </span><span style="line-height: 1.5;">elements defined after the preference<em> <strong>element</strong></em>  being dealt with will not yet have their </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">value</span><span style="line-height: 1.5;"> set, so referring to them from the handler will lead to a null result. Reorder the </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">&lt;preference&gt; </span><span style="line-height: 1.5;">elements or directly fetch the preference value via </span><span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: normal;">Services.prefs</span></div>
+<p><span style="line-height: 1.5;">If you supply an implementation of this event, your implementation will be invoked during initialization and you can return the value with which to initialize the UI element with, or </span><code style="font-size: 14px;">undefined</code><span style="line-height: 1.5;"> to tell the preferences system to initialize the UI element with the default value (i.e. to attempt to initialize with the preference value). In the above example, you might write the checkbox like this:</span></p>
+<pre>&lt;checkbox preference="foo.bar" onsyncfrompreference="return onsyncfrompreference();"/&gt;
+
+.. script:
+function onsyncfrompreference()
+{
+  var preference = document.getElementById("foo.bar");
+  // .value === undefined means the preference is set to the default value
+  var actualValue = preference.value !== undefined ?
+                      preference.value : preference.defaultValue;
+  // actualValue may be |null| here if the pref didn't have the default value.
+  return preference.value == 3;
+
+  // If foo.bar was boolean and we wanted to use its value to initialize
+  // the checkbox, we could still implement this method if we wanted to
+  // perform any other initialization actions at this time.
+}
+</pre>
+<p><code>onsynctopreference</code> is called when preferences are being written - the preferences system asks each element to translate its current state into a value suitable for writing to the specified preference. You can return a special value or <code>undefined</code> to tell the preferences system to use its standard means for obtaining the value. In the above example:</p>
+<pre>&lt;checkbox preference="foo.bar" onsynctopreference="return onsynctopreference();"/&gt;
+.. script:
+function onsynctopreference()
+{
+  var checkbox = document.getElementById("checkbox");
+  return checkbox.checked ? 3 : 2;
+}
+
+// If foo.bar was boolean and we wanted to use its value to write to
+// preferences, we could still implement this method if we wanted to
+// perform any other initialization actions at this time.
+</pre>
+<div class="moreinfo">  <p><strong><a href="/en-US/docs/Preferences_System">Preferences System</a> documentation:</strong></p>  <ul>    <li>Introduction: <a href="/en-US/docs/Preferences_System/Getting_Started">Getting Started</a> | <a href="/en-US/docs/Preferences_System/Examples">Examples</a> | <a href="/en-US/docs/Preferences_System/Troubleshooting">Troubleshooting</a></li>    <li>Reference: <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code> | <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/prefpane" title="prefpane">prefpane</a></code> | <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/preferences" title="preferences">preferences</a></code> | <code><a href="/zh-TW/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> | <a href="/en-US/docs/Preferences_System/New_attributes">XUL attributes</a></li>  </ul></div>

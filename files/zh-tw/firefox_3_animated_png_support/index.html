@@ -1,0 +1,39 @@
+---
+title: Firefox 3 Animated PNG support
+slug: Firefox_3_Animated_PNG_support
+translation_of: Mozilla/Tech/APNG
+---
+<h3 id="Firefox_3_.E6.94.AF.E6.8F.B4_Animated_PNG" name="Firefox_3_.E6.94.AF.E6.8F.B4_Animated_PNG">Firefox 3 支援 Animated PNG</h3>
+<ul>
+ <li>Animated PNG Specification 的發展
+  <ul>
+   <li>2004 年，Mozilla Corporation 的 Stuart Parmenter 與 Vladimir Vukicevic，依據 Portable Network Graphic (PNG) 而設計了 APNG 延伸規格 (extension)，加入了對動畫的支援。</li>
+   <li>2006 年，Google Summer of Code 替目前被廣泛使用的 libpng 加入了 APNG 的支援。</li>
+   <li>2007 年 5 月 23 日，Firefox 3 trunk build 加入 APNG 支援。</li>
+  </ul>
+ </li>
+ <li>APNG 與 GIF 的比較
+  <ul>
+   <li>以往網路上的動畫圖片多用 GIF 格式，但因 GIF 每個像素僅支援 8 bit 的色彩深度，所以不適合用於色彩豐富或有漸層的圖片；APNG 支援 24 bit 的色彩深度。</li>
+   <li>GIF 僅支援完全透明、完全不透明；APNG 支援 8 bit 的透明度。</li>
+   <li>GIF 相容性高，目前常見瀏覽器都可以讀取；APNG 設計時即考慮到相容性的問題，所以 APNG 圖片的第一個 frame 是一張靜態的 PNG 圖片，只要瀏覽器支援 PNG，即使無法正確解讀 APNG，仍可顯示這張 APNG 圖片的第一個 frame 內的 PNG 圖片。</li>
+  </ul>
+ </li>
+ <li>講了這麼多 APNG 的好處，要怎麼產生 APNG 圖片呢？<a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/5519">APNG Edit</a>、<a class="external" href="http://www.treebuilder.de/default.asp?file=660000.xml">SVG2PNG</a>。</li>
+ <li>不幸的是，PNG Group 於 2007 年 4 月 20 日正式拒絕將 APNG 納入正式的延伸規格。</li>
+</ul>
+<h3 id=".E5.8F.83.E8.80.83.E8.B3.87.E6.96.99" name=".E5.8F.83.E8.80.83.E8.B3.87.E6.96.99">參考資料</h3>
+<ul>
+ <li><a class="external" href="http://people.mozilla.com/~dolske/apng/demo.html">APNG Demo</a></li>
+ <li><a class="external" href="http://labs.mozilla.com/2007/08/better-animations-in-firefox-3/">Better Animation in Firefox 3</a></li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/Animated_Portable_Network_Graphics">Animated PNG -- Wikipedia</a></li>
+ <li><a class="external" href="http://developer.mozilla.org/en/docs/Animated_PNG_graphics">APNG Specification</a></li>
+ <li><a class="external" href="http://sourceforge.net/mailarchive/message.php?msg_name=3.0.6.32.20070420132821.012dd8e8%40mail.comcast.net">VOTE FAILED: APNG 20070405a</a></li>
+</ul>
+<h3 id=".E5.BB.B6.E4.BC.B8.E9.96.B1.E8.AE.80" name=".E5.BB.B6.E4.BC.B8.E9.96.B1.E8.AE.80">延伸閱讀</h3>
+<ul>
+ <li><a class="external" href="http://developer.mozilla.org/zh_tw/docs/Firefox_3_for_developers">Firefox 3 開發人員須知</a></li>
+ <li><a class="external" href="http://www.w3.org/Graphics/GIF/spec-gif89a.txt">Graphics Interchange Format (GIF) Specification (Version 89a)</a></li>
+ <li><a class="external" href="http://pmt.sourceforge.net/specs/png-1.2-pdg.html">Portable Network Graphics (PNG) Specification (Version 1.2)</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/PNG/">Portable Network Graphics (PNG) Specification (Second Edition)</a></li>
+</ul>

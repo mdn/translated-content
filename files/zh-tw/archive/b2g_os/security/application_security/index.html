@@ -1,0 +1,124 @@
+---
+title: 應用程式安全
+slug: Archive/B2G_OS/Security/Application_security
+translation_of: Archive/B2G_OS/Security/Application_security
+---
+<div class="summary">
+ <p>本文涵蓋 Firefox OS 應用程式安全模型細節內容。</p>
+</div>
+<p>Firefox OS Web app 核心安全控制如下：</p>
+<ul>
+ <li>Web app 並非瀏覽器中的網頁，而是實際需要安裝後執行的，為了保護使用者更新和移除 app 都會有安全管理機制。</li>
+ <li>存取 Web API 都有權限系統管制，Web app 安裝前必須宣告會使用到那些權限，如果要存取功能更強大的 API，Web app 還得要符合特定條件、被檢驗、受到 Marketplace 簽署。</li>
+ <li>Web app 都在 sandbox 環境下運作，只能看到自己的資源 (cookies、離線 IndexedDB 資料庫等等)。即使剛好兩個 app 載入一樣網址的網頁，這兩份網頁也不會被視為來自同一個網域。</li>
+</ul>
+<h3 id="App_類別">App 類別</h3>
+<p>Firefox OS 支援: "<strong>web</strong>", "<strong>privileged</strong>" 和 <strong>internal</strong> ("<strong>certified</strong>") 三種類別的 Web app，app 的類別宣告在 <a href="/en-US/docs/Apps/Manifest" title="/en-US/docs/Apps/Manifest">manifest</a> 裡 (另外使用權限也在裡面) 。</p>
+<ul>
+ <li><strong>Web Apps:</strong> 大多數第三方 app 都屬於這一類；算是預設類別，沒有超出網頁可用的多餘權限。Web app 能自其他網站安裝而無須額外的驗證程序，也可以被<a href="/en-US/docs/Web/Apps/Packaged_apps" title="/en-US/docs/Web/Apps/Packaged_apps">封裝 (packaged)</a> 起來，但同樣沒有多餘權限。</li>
+ <li><strong>Privileged Apps</strong>: 要求提高權限的 app，一定要被驗證以及通過 Marketplace 簽署。</li>
+ <li><strong>Internal/Certified Apps: </strong>只能，如被 OEM 廠商，預裝的 app。</li>
+</ul>
+<div class="note">
+ <p><strong>Note</strong>: 關於 App 類別，詳細說明請見 <a href="/en-US/docs/Apps/Manifest#type" title="/en-US/docs/Apps/Manifest#type">App Manifest</a>。</p>
+</div>
+<h3 id="App_下載">App 下載</h3>
+<p>Firefox OS 共有兩種 App 下載機制：hosted 以及 packaged。一般 web app 兩種方式都能適用，但 privileged 和 certified apps 只能走 packaged 的方式。</p>
+<h4 id="Hosted(託管式)_apps"><span class="mw-headline" id="Hosted_apps">Hosted(託管式</span><span class="mw-headline">) apps </span></h4>
+<p>Hosted app 只包含開發者網站伺服器上的 <a class="external text" href="/en-US/docs/Apps/Manifest" rel="nofollow">application manifest</a> 檔案，Manifest 檔案裏面有 app 開啟時的<a href="/en-US/Apps/Build/Manifest#launch_path">啟動頁面路徑</a>。從安全性角度來看 hosted app 和網頁差不多，當打開 hosted app ，載入頁面的 URL 就是網頁在伺服器上的一般 URL，如果之前有 appcache 存檔的話則會從裝置上載入。</p>
+<h4 id="Packaged(封裝式)_apps"><span class="mw-headline" id="Packaged_apps">Packaged(封裝式) apps</span></h4>
+<p>Packaged app 將所有的資源 (HTML, CSS, JavaScript, app manifest 等等) 包在一份 zip 檔中，而非網頁伺服器，細節請見<a href="/en-US/docs/Apps/Packaged_apps" title="Apps/Packaged_apps"> Packaged apps</a>. </p>
+<h3 id="App_來源">App 來源</h3>
+<p>對於 hosted app，<a class="external text" href="/en-US/docs/Apps/Manifest" rel="nofollow">application manifest</a> 檔案所在地就是其來源。</p>
+<p>至於 packaged apps，其來源就是安裝當下決定的應用程式識別，而 <a href="/en-US/Apps/Publishing/Packaged_Apps#Types_of_packaged_apps">Privileged 和 Internal apps </a>另外可以在 applications manifest 檔案裡用 <a href="/en-US/Apps/Build/Manifest#origin">origin</a> 參數請求使用特定來源。</p>
+<h3 id="App_安裝"><strong>App 安裝</strong></h3>
+<p>App 透過 <a href="/en-US/docs/JavaScript_API" title="/en-US/docs/JavaScript_API">Apps JavaScript API</a> 安裝:</p>
+<ul>
+ <li>Hosted App: Hosted app 是藉由呼叫 <code>navigator.mozApps.<a href="/en-US/docs/Web/API/Apps.install" title="/en-US/docs/Web/API/Apps.install">install</a>(manifestURL)進行安裝，其中</code> manifestURL 是一個指向 app 位置的 URL。更多資訊請參考<a href="/en-US/docs/DOM/Apps.install">安裝 Apps</a>。</li>
+ <li>Packaged App: Packaged app 是藉由呼叫 <code>navigator.mozApps.<a href="/en-US/docs/Web/API/Apps.installPackage" title="/en-US/docs/Web/API/Apps.installPackage">installPackage</a>(packageURL) 進行安裝。</code>Packaged app 的主程式 manifest 檔經過簽署、存在封裝包之中，另外還會有一個用來發起安裝程序的 "mini-manifest" 檔。更多資訊請見<a href="/en-US/docs/DOM/Apps.installPackage">安裝 Packaged Apps</a> 和<a href="/en-US/docs/Apps/Packaged_apps" title="Apps/Packaged_apps"> Packaged apps</a>。</li>
+</ul>
+<p>App manifest 和 App 來源必須一致，這樣避免了未知的第三方冒用 App；另外為了避免網站被不小心或故意被偽裝成有 app manifest，manifest 檔必須以特定 mime-type，<code>application/x-web-app-manifest+json，</code> 發送。</p>
+<h3 id="更新"><span class="mw-headline" id="Updates">更新</span></h3>
+<p>更新程序請見<a href="/en-US/docs/Apps/Updating_apps" title="Apps/Updating_apps">更新 apps</a>。</p>
+<h2 id="權限">權限</h2>
+<p>App 能夠被授予比一般網頁更多的權限。基本上 app 擁有和網頁同等的權限，如果 app 需要更多額外權限，那麼 app 便需要在 manifest 檔裡明白列出需要的額外權限。</p>
+<h3 id="Manifest_宣告">Manifest 宣告</h3>
+<p>在 manifest 裡，每一個需要的額外權限必須加入供人閱讀的描述說明為何需要此額外權限，例如 app 想要 <a href="/en-US/docs/Web/API/window.navigator.geolocation" title="/en-US/docs/Web/API/window.navigator.geolocation">navigator.geolocation</a> API 使用權限，manifest 裡就必須如此宣告:</p>
+<pre class="brush: html">"permissions": {
+  "geolocation":{
+<code class="language-js"><span class="token string">    "description"</span><span class="token punctuation">:</span> <span class="token string">"Required for autocompletion in the share screen"</span><span class="token punctuation">,</span></code>
+  }
+},
+</pre>
+<p>這樣 app 便可以如同網頁一般提示使用者來請求地理位置存取權限。更多細節請見 <a href="/en-US/docs/Apps/Manifest" title="Apps/Manifest">App manifest</a>。</p>
+<div class="note">
+ <p><strong>Note</strong>: 目前權限使用目的並不會呈現給使用者看 — 見 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=823385" title="https://bugzilla.mozilla.org/show_bug.cgi?id=823385">bug 823385</a>.</p>
+</div>
+<h3 id="權限授予">權限授予</h3>
+<p>當權限需求在 manifest 中宣告後，依據權限不同，可能會直接被同意，但也可能需要在第一次相關 API 被存取時提示使用者徵詢其同意。一般來說會影響到使用者隱私的權限會需要額外徵詢使用者同意，而且這種情況下使用者也有理由知道甚麼權限被請求使用，例如存取通訊錄前會需要徵詢，但存取 TCP 連線則不需要。權限直接同意會經過 Marketplace 安全審核程序以確保安全性。</p>
+<h3 id="權限駁回">權限駁回</h3>
+<p>使用者可以在任何時候從設定駁回先前授予的權限，但這不包括那些直接同意的權限。</p>
+<h2 id="Web_App_Sandbox">Web App Sandbox</h2>
+<h3 id="App_資料獨立"><span class="mw-headline" id="Data_stored_per_app">App 資料獨立 </span></h3>
+<p>每一個 app 都運行在 sandbox 之中，所以所有資料都和其他 app 隔離開來，這涵蓋了 cookie、localStorage、indexedDB 以及網站權限。</p>
+<p><img alt="A diagram showing three Firefox OS apps all open is separate sandboxes, so none of them can affect each other." src="https://mdn.mozillademos.org/files/7091/sandbox.png" style="width: 1040px; height: 437px; display: block; margin: 0px auto;"></p>
+<p>所以說即使 App A 和 App B 都開啟了指向同一來源 (如<a class="external free" href="http://www.mozilla.org" rel="nofollow"> http://www.mozilla.org</a>) 的 {{ htmlelement("iframe") }}，但他們兩者的 cookie 資料還是會不同。結果就是當用  App A 登入 Facebook 帳號，開啟了 App B 前往 Facebook 時，因為 App B 無法存取 App A 的 cookie，所以 App B 還是必須要再執行登入作業，如此一來變確保了 App 之間不互相影響、資料安全。</p>
+<h3 id="Apps_無法啟動彼此"><span class="mw-headline" id="Apps_can.27t_open_each_other">Apps 無法啟動彼此 </span></h3>
+<p>App 不能利用 &lt;iframe&gt; 開啟另一個 App，如果 App A 開啟了一個指向 App B URL 的 iframe，這並不會啟動 App B，相反地這只會前往那個 URL 指向的網頁，任何 App B 的 cookie 都無法被存取，這就和 App B 沒有被安裝的情況一樣。</p>
+<p>就算是 App A 嘗試開啟透過 packaged 式 App B 的 app:// URL，來將 App B 載入到 &lt;iframe&gt; 裡啟動，也會失敗，而且不論 App B 有沒有被安裝，失敗訊息都會一樣，所以說 App A 也無法推敲 App B 的安裝狀態。</p>
+<p>當 App A 上層的 frame 前往 App B 所在的 URL，結果依然相同。我們永遠知道是哪個 frame 開啟哪個 app，所以說透過上層 frame 開啟其他 app 就和前述一樣會失敗，App 之間資料絕對獨立、無法被盜取。</p>
+<h3 id="動機"><span class="mw-headline" id="Motivation">動機</span></h3>
+<p>資料獨立的做法有好有壞，壞處是使用者必須每開一個 app 都要登錄一次同一個網站，或者是網站有存放一些資料於本地端，每個 app 都會儲存一份資料，同樣的資料可能被重複儲存，如果資料剛好又不小的話，將會相當佔儲存空間。</p>
+<p>好處是這是比較安全的做法，app 之間不能透過第三方網站互相影響進而導致未預期的行為，或是一個 App A 移除後，另一個 App B 不會因為依賴 App B 的資料或功能而無法運作。更重要的是，資料獨立確保了惡意 app 難以利用漏洞竊取其他網站的資料。</p>
+<p>最後資料獨立也確保了 app 無法得知使用者是否有裝甚麼其他 app、其他 app 的資料，保護了使用者隱私。</p>
+<h3 id="權限_Sandbox"><span class="mw-headline" id="Sandboxed_Permissions">權限 Sandbox</span></h3>
+<p>如同資料在 snadbox 下是獨立隔離開來的，權限亦然。App A 打開了 <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a> 網頁，而使用者也准許永遠允許 <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a> 使用地理位置服務，但這也只限於 App A，改天換 App B 打開 <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a> 網頁，地理位置服務使用權限還是得再徵詢使用者同意。</p>
+<p>如同一般網頁，每個來源的權限同樣獨立，App A 取得地理位置服務使用權限，但這不代表所有 App A 開啟的網頁都有權使用地理位置服務，如果說 App A 開啟 <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a>，<a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a> 照樣需要取得使用者同意才能使用地理位置服務。</p>
+<h3 id="瀏覽器_API_Sandbox">瀏覽器 API Sandbox</h3>
+<p>對於會開啟大量 URL 的應用程式，如瀏覽器，我們引進了一個 <em>browserContent</em> 旗標來強化安全性，這個 browserContent 讓 app 可以有兩個 sandbox，一個供 app 本身使用，另一個給開啟的網頁使用，例如說:</p>
+<p>有一個 MyBrowser app 自 <a class="external free" href="https://mybrowser.com" rel="nofollow">https://mybrowser.com</a> 載入，所以程式碼和資源都隸屬於這個網域。</p>
+<p>當這個 app 建立一個 <code>&lt;iframe mozbrowser&gt;</code>，另一個 sandbox 便會產生，所以說 <code>&lt;iframe mozbrowser&gt;</code> 裡的 cookie、IndexedDB、localStorage 資料都會獨立隔離開來，兩者間不會互相影響。</p>
+<p>從另一方面來看，如果 MyBrowser app 想要整合 Google Map 的地理位置功能，那麼從一般 &lt;iframe&gt; 裡載入 <a class="external free" href="http://maps.google.com" rel="nofollow">http://maps.google.com</a>，便可以存取 Google Map 網站的 cookie 資料；但若是從 <code>&lt;iframe mozbrowser&gt;</code> 裡載入的話，便無法取得 Google Map 的 cookie 資料了。</p>
+<p>假設另一個情況，有一個類似 Yelp、會造訪餐廳網站的 app，這個 app 只要利用 <code>&lt;iframe mozbrowser&gt;</code> 來打開餐廳網站，就可以確保餐廳網站不能含有指回這個 app 的 &lt;iframe&gt; (例如指回 <a class="external free" href="http://yelp.com" rel="nofollow">http://yelp.com</a>)，如果有的話，該餐廳網站將只能收到 Yelp 網站的資料，而非此 Yelp app，所以該餐廳網站便無法和 Yelp app 共享資料和權限，進而攻擊 Yelp app。</p>
+<h2 id="App_安全性總結">App 安全性總結</h2>
+<p>下表總結各類 Firefox OS App 的格式、安裝、更新特性:</p>
+<table>
+ <caption>
+  Web App 類型</caption>
+ <thead>
+  <tr>
+   <th scope="col">類型</th>
+   <th scope="col">發布</th>
+   <th scope="col">權限</th>
+   <th scope="col">安裝</th>
+   <th scope="col">更新</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Web</td>
+   <td>Hosted 或 Packaged</td>
+   <td>較不敏感的權限，既使未驗證的網站取得也沒關係。</td>
+   <td>可以從各種來源安裝</td>
+   <td>依據安裝來源和發布機制可以背景更新或透過 marketplace 更新。</td>
+  </tr>
+  <tr>
+   <td>Privileged</td>
+   <td>Packaged 和 Signed</td>
+   <td>需要驗證和審核才可以取得特殊權限 API。</td>
+   <td>從可信任的 marketplace 安裝</td>
+   <td>從可信任的 marketplace 更新，需要使用者同意更新。</td>
+  </tr>
+  <tr>
+   <td>Internal</td>
+   <td>Packaged</td>
+   <td>第三方 app 無法存取高度敏感 API</td>
+   <td>裝置預裝</td>
+   <td>跟隨系統層級類別更新。</td>
+  </tr>
+ </tbody>
+</table>
+<div class="note">
+ <p><strong>Note</strong>: 版本 1.0 的 Firefox OS，privileged app 只能從 Mozilla Marketplace 安裝，至於其他多種安全 marketplace 的支援尚未底定。</p>
+</div>
+<p> </p>

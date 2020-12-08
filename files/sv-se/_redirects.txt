@@ -1,0 +1,2 @@
+# FROM-URL	TO-URL
+/sv-SE/docs/MDN/Getting_started	/sv-SE/docs/MDN/Contribute/Getting_started

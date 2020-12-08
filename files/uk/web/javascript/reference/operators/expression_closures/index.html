@@ -1,0 +1,78 @@
+---
+title: Вирази-замикання
+slug: Web/JavaScript/Reference/Operators/Expression_closures
+tags:
+  - Function
+  - JavaScript
+  - Оператор
+  - застарілий
+  - нестандартний
+translation_of: Archive/Web/JavaScript/Expression_closures
+---
+<div>{{JSSidebar("Operators")}}{{Non-standard_Header}}{{Obsolete_Header("gecko60")}}
+<div class="warning"><strong>Нестандартний. Не використовуйте!</strong><br>
+Синтаксис виразів-замикань є нерекомендованою особливою функціональністю Firefox, він був прибраний, починаючи з Firefox 60. Для використання у майбутньому розгляньте <a href="/uk/docs/Web/JavaScript/Reference/Functions/Стрілкові_функції">стрілкові функції</a>.</div>
+</div>
+
+<p>Вирази-замикання - це скорочений синтаксис для написання простих функцій.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">function [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]])
+   <em>expression</em>
+</pre>
+
+<h3 id="Параметри">Параметри</h3>
+
+<dl>
+ <dt><code>name</code></dt>
+ <dd>Ім'я функції. Можна пропустити, в цьому випадку функція буде <em>анонімною</em>. Ім'я доступне лише всередині тіла функції.</dd>
+ <dt><code>paramN</code></dt>
+ <dd>Ім'я аргумента, що передається у функцію. Функція може мати до 255 аргументів.</dd>
+ <dt><code>expression</code></dt>
+ <dd>Вираз, який складає тіло функції.</dd>
+</dl>
+
+<h2 id="Опис">Опис</h2>
+
+<p>Це доповнення є не більше, ніж скороченим синтаксисом для написання простих функцій, надаючи мові щось схоже на типову <a class="external" href="https://uk.wikipedia.org/wiki/%D0%9B%D1%8F%D0%BC%D0%B1%D0%B4%D0%B0-%D1%87%D0%B8%D1%81%D0%BB%D0%B5%D0%BD%D0%BD%D1%8F">нотацію лямбда-числення</a>.</p>
+
+<p>JavaScript 1.7 та старші:</p>
+
+<pre class="brush: js">function(x) { return x * x; }</pre>
+
+<p>JavaScript 1.8:</p>
+
+<pre class="brush: js">function(x) x * x</pre>
+
+<p>Цей синтаксис дозволяє не писати фігурні дужки та оператор 'return' - вони стають неявними. Такий запис не надає жодної іншої переваги в написанні коду, окрім синтаксично коротшого запису.</p>
+
+<h2 id="Приклади">Приклади</h2>
+
+<p>Скорочений запис для зв'язування прослуховувачів подій:</p>
+
+<pre class="brush: js"> document.addEventListener('click', function() false, true);
+</pre>
+
+<p>Використання цієї нотації з деякими функціями масивів з JavaScript 1.6:</p>
+
+<pre class="brush: js">elems.some(function(elem) elem.type == 'text');
+</pre>
+
+<h2 id="Сумісність_з_веб-переглядачами">Сумісність з веб-переглядачами</h2>
+
+
+
+<p>{{Compat("javascript.operators.expression_closures")}}</p>
+
+<h2 id="Див._також">Див. також</h2>
+
+<ul>
+ <li>{{JSxRef("Functions", "Функції")}}</li>
+ <li>{{JSxRef("Function")}}</li>
+ <li>{{JSxRef("Statements/function", "оператор function")}}</li>
+ <li>{{JSxRef("Operators/function", "функціональний вираз")}}</li>
+ <li>{{JSxRef("Statements/function*", "оператор function*")}}</li>
+ <li>{{JSxRef("Operators/function*", "вираз function*")}}</li>
+ <li>{{JSxRef("GeneratorFunction")}}</li>
+</ul>

@@ -1,0 +1,89 @@
+---
+title: Array.observe()
+slug: Web/JavaScript/Reference/Global_Objects/Array/observe
+tags:
+  - JavaScript
+  - Масив
+  - застарілий
+  - метод
+translation_of: Archive/Web/JavaScript/Array.observe
+---
+<div>{{JSRef}} {{obsolete_header}}</div>
+
+<p>Метод <strong><code>Array.observe()</code></strong> використовувався для асинхронного спостереження за змінами у масивах, схоже на  {{jsxref("Object.observe()")}} у об'єктах. Він надавав послідовність змін в порядку виникнення. Як і <code>Object.observe()</code>, він викликається з допустимим списком типів <code>["add", "update", "delete", "splice"]</code>. Однак, цей API застарілий та був прибраний з переглядачів. Ви можете натомість використати більш загальний об'єкт {{jsxref("Proxy")}}.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox">Array.observe(<var>arr</var>, <var>callback</var>)</pre>
+
+<h3 id="Параметри">Параметри</h3>
+
+<dl>
+ <dt><code>arr</code></dt>
+ <dd>Масив для спостереження.</dd>
+ <dt><code>callback</code></dt>
+ <dd>Функція, яка викликається кожен раз, коли відбуваються зміни, з наступним аргументом:
+ <dl>
+  <dt><code>changes</code></dt>
+  <dd>Масив об'єктів, кожен з яких відображає зміну. Властивості цих об'єктів змін:
+  <ul>
+   <li><strong><code>name</code></strong>: Ім'я властивості, яка була змінена.</li>
+   <li><strong><code>object</code></strong>: Змінений масив після того, як відбулась зміна.</li>
+   <li><strong><code>type</code></strong>: Строка, що вказує тип зміни. Один з <code>"add"</code>, <code>"update"</code>, <code>"delete"</code>, або <code>"splice"</code>.</li>
+   <li><strong><code>oldValue</code></strong>: Тільки для типів <code>"update"</code> та <code>"delete"</code>. Значення перед зміною.</li>
+   <li><strong><code>index</code></strong>: Тільки для типу <code>"splice"</code>. Індекс, за яким відбулася зміна.</li>
+   <li><strong><code>removed</code></strong>: Тільки для типу <code>"splice"</code>. Масив видалених елементів.</li>
+   <li><strong><code>addedCount</code></strong>: Тільки для типу <code>"splice"</code>. Кількість доданих елементів.</li>
+  </ul>
+  </dd>
+ </dl>
+ </dd>
+</dl>
+
+<h2 id="Опис">Опис</h2>
+
+<p>Функція <code>callback</code> викликається кожен раз, коли у <code>arr</code> відбувається зміна, з масивом усіх змін у порядку, в якому вони відбувались.</p>
+
+<div class="note">
+<p>Зміни, зроблені методами масивів, такими як <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"><code>Array.prototype.pop()</code></a>, будуть записані як <code>"splice"</code>. Зміни, пов'язані з призначенням величин за індексом, які не змінюють довжину масиву, можуть бути записані як <code>"update"</code>.</p>
+</div>
+
+<h2 id="Приклади">Приклади</h2>
+
+<h3 id="Логування_різних_типів_змін">Логування різних типів змін</h3>
+
+<pre class="brush: js">var arr = ['a', 'b', 'c'];
+
+Array.observe(arr, function(changes) {
+  console.log(changes);
+});
+
+arr[1] = 'B';
+// [{type: 'update', object: &lt;arr&gt;, name: '1', oldValue: 'b'}]
+
+arr[3] = 'd';
+// [{type: 'splice', object: &lt;arr&gt;, index: 3, removed: [], addedCount: 1}]
+
+arr.splice(1, 2, 'beta', 'gamma', 'delta');
+// [{type: 'splice', object: &lt;arr&gt;, index: 1, removed: ['B', 'c'], addedCount: 3}]
+</pre>
+
+<h2 id="Специфікації">Специфікації</h2>
+
+<p><a href="https://github.com/arv/ecmascript-object-observe">Strawman proposal specification</a>.</p>
+
+<h2 id="Сумісність_з_веб-переглядачами">Сумісність з веб-переглядачами</h2>
+
+<div>
+
+
+<p>{{Compat("javascript.builtins.Array.observe")}}</p>
+</div>
+
+<h2 id="Див._також">Див. також</h2>
+
+<ul>
+ <li><a href="//stackoverflow.com/q/29269057/778272">Under what condition would Array.observe's “add” event trigger?</a></li>
+ <li>{{jsxref("Array.unobserve()")}} {{obsolete_inline}}</li>
+ <li>{{jsxref("Object.observe()")}} {{obsolete_inline}}</li>
+</ul>

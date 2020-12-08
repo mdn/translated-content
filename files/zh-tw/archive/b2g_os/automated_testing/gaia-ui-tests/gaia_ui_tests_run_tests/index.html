@@ -1,0 +1,111 @@
+---
+title: Gaia UI Tests Run Tests
+slug: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Gaia_UI_Tests_Run_Tests
+translation_of: Archive/B2G_OS/Automated_testing/gaia-ui-tests/Gaia_UI_Tests_Run_Tests
+---
+<div class="warning">
+  <p>這個頁面尚未完成。請有志一同的夥伴幫忙補充。<br>
+    有任何意見都可以寄到 gaia-ui-automation@mozilla.org。</p>
+</div>
+<h2 id="Running_Tests">Running Tests</h2>
+<p>    Basically, we can run gaia-ui-tests on a device with marionette server, emulators, and desktop B2G. However, please notice again that you should <u><strong>choose the right branch</strong></u> of gaia-ui-tests describing your B2G the best as we talked on previous section.</p>
+<h3 id="Testing_on_Devices">Testing on Devices</h3>
+<p>    First of all, connect your device through USB to computer, and then forward the package from the phone to computer port:</p>
+<pre>adb forward tcp:2828 tcp:2828
+</pre>
+<p>    <a name="adb_forward_error">You might get weird error</a>, such as "no permission", from the command above. In that case, you could try to do the commands below:</p>
+<pre>adb kill-server
+sudo adb devices
+adb forward tcp:2828 tcp:2828
+</pre>
+<p>    It's almost all done before you start to run your tests! Before you start to run the test, read through <a href="https://developer.mozilla.org/en-US/docs/Gaia_Test_Runner#Risks" title="https://developer.mozilla.org/en-US/docs/Gaia_Test_Runner#Risks">this warning</a> in order to start gaia-ui-tests correctly.<br>
+      Now, you can send this command to execute all gaiatests:</p>
+<pre><code>gaiatest &lt;gaia_ui_tests folder&gt;/tests/ --address=localhost:2828 --type=b2g-xfail &lt;your manifest file location&gt;</code>
+</pre>
+<p>    Or, if you want to run solely one file, just do:</p>
+<pre><code>gaiatest &lt;file&gt; --address=localhost:2828 --type=b2g-xfail &lt;your manifest file location&gt;</code>
+</pre>
+<p>    After the test, you will see all the result on pass/fail. And, for each individual test, it might have more information that you can go through. Here are some common examples you might be able to see:</p>
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <td style="text-align: center;"><strong>Error Message </strong></td>
+      <td style="text-align: center;"><strong>Corresponding Actions</strong></td>
+    </tr>
+    <tr>
+      <td>error: [Errno 111] Connection refused</td>
+      <td>reissue adb forward command</td>
+    </tr>
+    <tr>
+      <td>Element ... not visible before timeout</td>
+      <td>make sure the element would display on the app you test</td>
+    </tr>
+    <tr>
+      <td>TimeoutException: Condition timed out</td>
+      <td>make sure the condition on the app is the same as your expectations</td>
+    </tr>
+    <tr>
+      <td>broken pip</td>
+      <td>mostly bad marionette server issue</td>
+    </tr>
+  </tbody>
+</table>
+<p> </p>
+<h3 id="Testing_on_Emulator">Testing on Emulator</h3>
+<p><strong>Automatically launched emulator</strong></p>
+<div class="geckoVersionNote">
+  <p>TODO</p>
+</div>
+<p><strong>Mannually launched emulator</strong></p>
+<div class="geckoVersionNote">
+  <p>TODO</p>
+</div>
+<h3 id="Testing_on_Desktop_B2G">Testing on Desktop B2G</h3>
+<p>    After you downloaded the Gaia UI test from GitHub, you also can use <span class="author-g-bbktpz122z7l6tqfmcrf">desktop build to run the tests.</span><span class="author-g-bbktpz122z7l6tqfmcrf"> The Firefox OS desktop client, also called the </span><span class="author-g-bbktpz122z7l6tqfmcrf i"><i>B2G desktop client</i></span><span class="author-g-bbktpz122z7l6tqfmcrf">,  lets you run Gaia and Web apps in a Gecko-based environment somewhat  similar to an actual device. It doesn't emulate device hardware, so it's  not adequate for testing device APIs, and isn't a replacement for  testing on actual hardware. However, it does have a several APIs enabled  that aren't available on Firefox such as the Contacts and Settings  APIs. It can therefore be useful during the development of your  application, or while working on the Gaia user interface itself.</span></p>
+<p>    You can download the latest build of the desktop client from <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-b2g18/">this location</a>, but make sure you download the appropriate file for your operating system.</p>
+<ul>
+  <li><strong>Mac</strong>: b2g-[VERSION].multi.mac64.dmg</li>
+  <li><strong>Linux (32bit)</strong>: b2g-[VERSION].multi.linux-i686.tar.bz2</li>
+  <li><strong>Linux (64bit)</strong>: b2g-[VERSION].multi.linux-x86_64.tar.bz2</li>
+</ul>
+<div class="note">
+  <p>Note 1: Unfortunately, due to <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=832469">Bug 832469</a> the nightly desktop builds do not currently work on Windows, so you will need either Mac or Linux to continue :</p>
+  <p>Note 2: If you do not have the required operating systems installed on your machine, a virtual machine is fine as well.</p>
+</div>
+<p>    Once downloaded, you will need to extract the contents to a local folder. For the purposes of the rest of this guide, I’ll refer to this location as<code> <strong>$B2G_HOME</strong></code>.<br>
+  Add the following line to your gaia/profile/user.js file,</p>
+<pre><code>user_pref('marionette.force-local', true)</code></pre>
+<p>which on :</p>
+<ul>
+  <li><strong>Mac</strong> is located in $B2G_HOME/B2G.app/Contents/MacOS</li>
+  <li><strong>Linux</strong> is located in $B2G_HOME/b2g</li>
+</ul>
+<p>    Because we’re running against the desktop client we must filter out all tests that are unsuitable. To run the tests, use the following command:</p>
+<pre><code>gaiatest --address=localhost:2828 --type=b2g-antenna-bluetooth-carrier-camera-sdcard-wifi-xfail &lt;your manifest file location&gt;</code>
+</pre>
+<h2 id="Test_Variables">Test Variables</h2>
+<p>    There is one warning previously mentioned here. Please do read <a href="https://developer.mozilla.org/en-US/docs/Gaia_Test_Runner#Risks" title="https://developer.mozilla.org/en-US/docs/Gaia_Test_Runner#Risks">the warning</a> before you setup your json test variables file.</p>
+<p>    We use the --testvars option to pass in local variables, particularly those that cannot be checked into the repository. For example in gaia-ui-tests these variables can be your private login credentials, phone number or details of your WiFi connection.</p>
+<p>    To use it, copy testvars_template.json to a different filename but add it into .gitignore so you don't check it into your repository.</p>
+<p>    When running your tests add the argument: --testvars=(filename).json</p>
+<p><strong>Variables</strong></p>
+<p><code>this_phone_number (string)</code> The phone number of the SIM card in your device. Prefix the number with '+' and your international dialing code.</p>
+<p><code>remote_phone_number (string)</code> A phone number that your device can call during the tests (try not to be a nuisance!). Prefix the number with '+' and your international dialing code.</p>
+<p><code>wifi.ssid (string)</code> This is the SSID/name of your WiFi connection. Currently this supports WPA/WEP/etc. You can add WiFi networks by doing the following (remember to replace "KeyManagement" and "wep" with the value your network supports) :</p>
+<p><code>"wifi": { "ssid": "MyNetwork", "keyManagement": "WEP", "wep": "MyPassword" } </code></p>
+<p><code>WPA-PSK: "wifi": { "ssid": "MyNetwork", "keyManagement": "WPA-PSK", "psk": "MyPassword" } </code></p>
+<p><code>Marketplace: "marketplace": { "username": "MyUsername", "password": "MyPassword" } </code></p>
+<div class="note">
+  <p>Due to <a href="http://bugzil.la/775499">Bug 775499</a>, WiFi connections via WPA-EAP are not capable at this time.</p>
+</div>
+<p> </p>
+<h2 id="Test_Parameters">Test Parameters</h2>
+<p>    As you see in the last command we gave out on previous sections, there are many test variables for you to know. You can do this to get more information:</p>
+<pre>gaiatest --help</pre>
+<p> </p>
+<h2 id="Test_Data_Prerequisites">Test Data Prerequisites</h2>
+<p>Occasionally a test will need data on the hardware that cannot be set during the test setUp. The following tests need data set up before they can be run successfully:</p>
+<p><u><code>test_ftu</code></u> Requires a single record/contact saved onto the SIM card to test the SIM contact import</p>
+<p> </p>
+<p style="text-align: center;"><strong>Go to <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/gaia-ui-tests/Gaia_UI_Tests_Write_Tests" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Platform/Testing/gaia-ui-tests/Gaia_UI_Tests_Run_Tests">"Writing Tests"</a> section</strong></p>
+<p style="text-align: center;"> </p>

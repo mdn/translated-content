@@ -1,0 +1,290 @@
+---
+title: WebIDE
+slug: Tools/WebIDE
+tags:
+  - NeedsTranslation
+  - TopicStub
+translation_of: Archive/WebIDE
+---
+<div class="geckoVersionNote">
+<p>從 Firefox 34 開始均可使用 WebIDE。</p>
+
+<p>亦可於 Firefox 33 中變更偏好設定，以啟動 WebIDE。鍵入 <a href="http://kb.mozillazine.org/About:config">about:config</a> 並找到「<code>devtools.webide.enabled</code> 」，將之設定為「<code>true</code>」即可。</p>
+</div>
+
+<div class="summary">
+<p>WebIDE 現已取代「<a href="/en-US/Firefox_OS/Using_the_App_Manager">應用程式管理員 (App Manager)</a>」，且其功能一如應用程式管理員，並可透過 <a href="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS 模擬器 (Firefox OS Simulator)</a> 或實體 Firefox OS 裝置，進而建構、編輯、執行、除錯 Web App。</p>
+
+<p>不僅如此，WebIDE 亦可連接 <a href="https://developer.mozilla.org/en-US/docs/Tools">Firefox 開發者工具</a>與他款瀏覽器，包含 Firefox 行動版 (Firefox for Android)、Android 上的 Chrome、iOS 上的 Safari。可參閱<a href="https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging">遠端除錯</a>頁面，以了解應如何連上特定瀏覽器。</p>
+</div>
+
+<p>{{EmbedYouTube("2xmj4W8O3E4")}}</p>
+
+<p>你必須先在 WebIDE 中<a href="/en-US/docs/Tools/WebIDE#Setting_up_runtimes">設定一個或多個執行環境 (Runtime)</a>。Runtime 即是 App 的執行與除錯環境。不論是 Firefox OS 裝置透過 USB 連上桌機 (從 <a href="https://developer.mozilla.org/en-US/Firefox/Releases/39">Firefox 39</a> 或更高版本起，可透過 WiFi 連上桌機)，或是桌面版 Firefox 上安裝 Firefox OS 模擬器，都可當做執行環境。</p>
+
+<p>接著就可<a href="/en-US/docs/Tools/WebIDE#Creating_and_opening_apps">建立 App 或啟動現有的 App</a>。如果你要建立全新的 App，內建範本將提供你所需的資料目錄架構與最簡單的樣板；或有更完整的範本提供 Privileged App 所需要的 API。WebIDE 將以樹狀圖顯示 App 的檔案，讓你只要透過內建的編輯器即可修改並儲存檔案。當然，你也能選用自己習慣的編輯器開發 App，只用 WebIDE 除錯亦可。</p>
+
+<p>最後，你可<a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE#Running_and_debugging_apps">將 App 安裝於執行環境之中並執行</a>。也能透過常見的開發者工具，如<a href="/en-US/docs/Tools/Page_Inspector">檢測器 (Inspector)</a>、<a href="/en-US/docs/Tools/Web_Console">主控台 (Console)</a>、<a href="/en-US/docs/Tools/Debugger">JavaScript 除錯器 (JavaScript Debigger)</a> 等，檢查並修改 App。</p>
+
+<h2 id="系統需求">系統需求</h2>
+
+<p>若要以 WebIDE 開發 App 並除錯，必須使用 Firefox 33 或更高版本。如果要在實際 Freifox OS 裝置上測試 App，則該款裝置需搭載 Firefox OS 1.2 或更高版本，並搭配 1 組 USB 連接線。</p>
+
+<p>如果要針對 Firefox OS 1.2 或更高版本開發 App，則限用 WebIDE 進行開發。</p>
+
+<h2 id="啟動_WebIDE">啟動 WebIDE</h2>
+
+<p>進入「網頁開發者」選單，點擊「WebIDE」即可將之啟動。亦可按下鍵盤的「Shift + F8」快捷鍵：<img alt="" src="https://mdn.mozillademos.org/files/8033/webide-initial.png" style="display: block; height: 560px; margin-left: auto; margin-right: auto; width: 720px;">左邊的「開啟應用程式 (Open App)」下拉式選單中，你可啟動現有的 App 或建立新的 App。右邊的「選擇 Runtime (Select Runtime)」下拉式選單中，你可選擇執行環境或設立新的執行環境。</p>
+
+<p>在選擇了執行環境並開啟 App 之後，才可以按中間的「Run」、「Stop」、「Debug」按鈕。</p>
+
+<h2 id="設定執行環境">設定執行環境</h2>
+
+<p>「選擇 Runtime」選單內，共分為 3 種執行環境：</p>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE#Connecting_a_Firefox_OS_device">USB 裝置 (USB Devices)</a>：透過 USB 銜接 Firefox OS 裝置</li>
+ <li><a href="/en-US/docs/Tools/WebIDE#Adding_a_Simulator">模擬器 (Simulators)</a>：你已經安裝的 Firefox OS Simulator</li>
+ <li><a href="/en-US/docs/Tools/WebIDE#Custom_runtimes">自訂 (Custom)</a>：透過自定義的名稱或埠 (port) 來連結 WebIDE。</li>
+</ul>
+
+<p>第一次點開下拉式選單，你不會看見任何的執行環境：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8043/webide-no-runtimes.png" style="display: block; height: 564px; margin-left: auto; margin-right: auto; width: 723px;">接下來會帶你新增執行環境。</p>
+
+<h3 id="連結_Firefox_OS_裝置">連結 Firefox OS 裝置</h3>
+
+<p>在開始連結 Firefox OS 裝置之前，必須先完成下列設定：</p>
+
+<ul>
+ <li><strong>檢查 Firefox OS 版本：</strong>確定你的裝置可以執行 Firefox OS 1.2/Boot2Gecko 1.2 或更高版本。可至「設定 (Settings)」App 中尋找「裝置資訊 (<code>Device Information)」&gt;「軟體 (Software)」確認 Firefox OS 的版本。如果版本太舊，則可到</code> <a href="/en-US/Firefox_OS/Developer_phone_guide">developer phone guide</a> 頁面找到你的裝置，再完成相關更新步驟。</li>
+ <li><strong>啟動「遠端除錯 (Remote debugging)」：</strong>進入裝置的「設定」App ，找到<code>「開發者</code><code> </code><code>(Developer</code><code>)」</code>：
+  <ul>
+   <li>Firefox OS 1.3 或之前的版本：請勾選「遠端除錯」方塊</li>
+   <li>Firefox OS 1.4 或之後的版本：又分「僅 ADB」與「ADB 與開發工具 (ADB and DevTools)」共 2 個選項。請選擇「ADB 與開發工具」。</li>
+  </ul>
+ </li>
+ <li>
+  <ul>
+  </ul>
+  <strong>關閉裝置的螢幕鎖：</strong>在裝置的「設定」中，找到「螢幕鎖 (<code>Screen Lock)」</code>並關閉此功能。因為只要鎖住螢幕就會與裝置斷線，如此就無法除錯了。</li>
+ <li><strong>如果你想要對 Certified App (包含內建的 App) 進行除錯</strong>：請參閱〈<a href="/en-US/docs/Tools/WebIDE#Debugging_certified_apps"><strong>Certified App 除錯</strong></a>〉章節。</li>
+</ul>
+
+<div class="note">
+<p><strong>Linux 版本：</strong></p>
+
+<ul>
+ <li>建立 <code>udev</code> 規則檔案，如同〈<a href="http://developer.android.com/tools/device.html#setting-up">setting up an Android device</a>〉文件裡的步驟 3。以 Geeksphone 為例，請將 <code>idVendor</code> 屬性設定為「05c6」。可至<a href="http://developer.android.com/tools/device.html#VendorIds">此網頁</a>找到更多 <code>idVendor</code> 屬性值。</li>
+</ul>
+</div>
+
+<div class="note">
+<p><strong>Windows 版本：</strong></p>
+
+<ul>
+ <li>根據〈<a href="http://developer.android.com/tools/device.html#setting-up">setting up an Android device</a>〉文件的步驟 3，你必須安裝驅動程式,。可至 <a href="http://downloads.geeksphone.com/">Geeksphone 網站</a>上找到 Geeksphone 的驅動程式。Windows 8 預設不會讓你安裝未註冊的驅動程式。請參閱《<a class="external external-icon" href="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html" title="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html">How to install an unsigned driver on Windows 8</a>》。</li>
+ <li>完成應有的步驟之後，如果 WebIDE 還是抓不到你的裝置，則你可能需要編輯 <a class="external external-icon" href="http://blog.fh-kaernten.at/wehr/?p=1182">adb_usb.ini</a>。</li>
+</ul>
+</div>
+
+<p>如果有其他 Android 裝置已連上你的電腦，請先中斷連線。再透過 USB 銜接裝置與電腦。則你的裝置應該會出現在「USB 裝置」之下：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8045/webide-select-runtime-keon.png" style="display: block; height: 562px; margin-left: auto; margin-right: auto; width: 710px;"></p>
+
+<p>如果還是沒看到你的裝置，請詳見〈<a href="/en-US/docs/Tools/WebIDE/Troubleshooting">疑難雜症</a>〉頁面。</p>
+
+<h3 id="新增模擬器">新增模擬器</h3>
+
+<p><span style="line-height: 1.5;"><a href="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS 模擬器</a>架構在 <span style="line-height: 1.5;">Firefox OS 之上，可在桌機上模擬</span> Firefox OS 裝置。且其</span><span style="line-height: 1.5;">執行的視窗尺寸、使用者介面、內建的 App 也都和 <span style="line-height: 1.5;">Firefox OS 裝置相同，更能模擬 <span style="line-height: 1.5;">Firefox OS 裝置的 API。</span></span></span></p>
+
+<p><span style="line-height: 1.5;">如此在許多情況下，就算你沒有實際裝置，也能測試或除錯自己的 App。 </span></p>
+
+<p>整個模擬器大到不能內建在 Firefox 之中，所以包裝成 Firefox 的<a href="/en-US/Add-ons">附加元件</a>。當你在 Runtimes 下拉式選單中點選「Install Simulator」，將會帶領你到安裝不同版本 Firefox OS 模擬器的頁面。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8039/webide-install-simulator.png" style="display: block; height: 560px; margin-left: auto; margin-right: auto; width: 720px;">你可以安裝所有需要的模擬器。因為模擬器容量頗大，所以請耐心下載。當你安裝模擬器完畢，就能關閉「Extra Components」視窗。已安裝的模擬器就會出現在「Runtimes」的下拉式選單裡面：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8047/webide-select-runtime-keon-simulator.png" style="display: block; height: 559px; margin-left: auto; margin-right: auto; width: 712px;">若要進一步了解模擬器，詳見<a href="/en-US/docs/Tools/Firefox_OS_Simulator">該頁</a>。</p>
+
+<h3 id="自訂執行環境">自訂執行環境</h3>
+
+<p>透過可自訂的執行環境，你可用任意的 hostname 和埠 (port) 去連結遠端裝置。</p>
+
+<p>Firefox OS 裝置與 Android 裝置，均是透過「Android Debug Bridge」這個程式 (也稱為 <a href="http://developer.android.com/tools/help/adb.html">ADB</a>) 連上桌機。WebIDE 已預設使用名為「ADB Helper」的附加元件。此簡單的附加元件可幫你安裝 ADB 並設定好「埠」的轉址，進而簡化相關程序。接著 Firefox 桌面版的工具就能和裝置交換訊息了。</p>
+
+<p>上述功能在大部分情況下都很方便。但有時候你可能不想透過 WebIDE 使用 ADB (例如你想要直接用命令列來跑 ADB)。這時你可使用 <a href="http://developer.android.com/tools/help/adb.html#forwardports"><code>adb forward</code></a> 指令來使用特定的「主機 (Host)」與「埠」<code>。</code><br>
+ <br>
+ 如果你也想用 WebIDE 及命令列使用 ADB，就要<a href="https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons#w_how-to-disable-extensions-and-themes">停用 ADB Helper</a> 附加元件，並透過「自訂 (Custom)」選項、輸入你傳送給 <code><code>adb forward</code></code> 的「主機」與「埠」，即可連接 WebIDE。</p>
+
+<p>ADB Helper 目前還不支援連結 Firefox for Android。如果你想透過 WebIDE 連上 Firefox for Android，就必須設定自己的埠轉址 (Port forwarding) 與自訂的執行環境。可進一步參閱<a href="/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android"> connecting to Firefox for Android using ADB</a>。</p>
+
+<h2 id="選擇執行環境">選擇執行環境</h2>
+
+<p>當你設定好執行環境之後，就能在「選擇 Runtime (Select Runtime)」中點選。</p>
+
+<ul>
+ <li>如果你選擇「模擬器」，WebIDE 就會啟動模擬器。</li>
+ <li>如果你選擇 WebIDE 已連結的 Firefox OS 裝置，則該裝置就會出現對話框確認是否要連結。這時請點選「OK」。</li>
+</ul>
+
+<p>WebIDE 工具列中間的「play」按鈕這時已經可按。點下後就會執行所選的執行環境。 </p>
+
+<h3 id="執行環境的動作">執行環境的動作</h3>
+
+<p>選取執行環境之後，「Runtimes」下拉式選單會多出 3 個選項：</p>
+
+<ul>
+ <li><strong>Runtime 資訊 (Runtime Info)</strong>：現在執行環境的資訊</li>
+ <li><strong>權限表 (Permissions Table)</strong>：顯示目前執行環境的 <a href="/en-US/Apps/Build/App_permissions">App 權限</a>，囊括各個使用中的 API 與 <a href="/en-US/Marketplace/Options/Packaged_apps#Types_of_packaged_apps">App 型態</a>，分別是：可用的 (✓)、禁用的 (✗)、需要使用者認證的 (!)。</li>
+ <li><strong>擷圖 (Screenshot</strong>)：可取得目前執行環境的擷圖</li>
+</ul>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8147/webide-runtimes-menu.png" style="display: block; height: 596px; margin-left: auto; margin-right: auto; width: 789px;"></p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8145/webide-runtimeinfo.png" style="display: block; height: 593px; margin-left: auto; margin-right: auto; width: 753px;"><img alt="" src="https://mdn.mozillademos.org/files/8149/webide-permissions.png" style="display: block; height: 593px; margin-left: auto; margin-right: auto; width: 753px;"></p>
+
+<h2 id="建立並開啟_App">建立並開啟 App</h2>
+
+<p>在「開啟應用程式 (Open App)」選單之下共有 3 個選項：<br>
+ 1). 新增應用程式... (New App...)<br>
+ 2). 開啟封裝的應用程式... (Open Packaged App...)<br>
+ 3). 開啟架設的應用程式... (Open Hosted App...)</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8049/webide-open-app-empty.png" style="display: block; height: 562px; margin-left: auto; margin-right: auto; width: 723px;"></p>
+
+<h3 id="建立新的_App">建立新的 App</h3>
+
+<p>點選「新增應用程式」即可建立新 App。你會看到對話視窗內提供「Privileged Empty App」與「Privileged App」共  2 個範本。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8053/webide-new-app.png" style="display: block; height: 591px; margin-left: auto; margin-right: auto; width: 739px;"></p>
+
+<p>此 2 個範本均來自於 Mozilla 的「<a href="https://github.com/mozilla/mortar">app template collection</a>」，以最基本的架構讓你輕鬆上手。「Privileged App」則會教你如何使用權限去取得跨領域 (cross-origin) 的內容。</p>
+
+<p>在選擇範本之後，必須設定該 App 的名稱及其檔案儲存目錄，接著會在<a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE#Editing_apps">專案編輯器</a>中開啟新 App。</p>
+
+<h3 id="開啟封裝式_App">開啟封裝式 App</h3>
+
+<p>點選「開啟封裝的應用程式...」即可開啟<a href="/en-US/Marketplace/Options/Packaged_apps">封裝式 (Packaged) App</a>。你所選取的資料夾中必須具備 App 的 <a href="/en-US/Apps/Build/Manifest">manifest</a> 檔案，然後就會在<a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE#Editing_apps">專案編輯器</a>中開啟 App。</p>
+
+<div class="note">
+<p>注意：你會在「應用程式管理員 (App Manager)」中看到「manifest」中文翻譯為「安裝資訊檔」。</p>
+</div>
+
+<h3 id="開啟托管架設式_App">開啟托管/架設式 App</h3>
+
+<p>點選「開啟架設的應用程式...」開啟<a href="/en-US/Marketplace/Options/Hosted_apps">托管/架設式 (Hosted) App</a>。你必須輸入 1 組網址指向該 App 的 <a href="/en-US/Apps/Build/Manifest">manifest</a> 檔案，然後就會在<a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE#Editing_apps">專案編輯器</a>中開啟該 App。</p>
+
+<h2 id="編輯_App">編輯 App</h2>
+
+<p>專案編輯器可供編輯 App。左側邊欄是 App 所有檔案的樹狀結構，可透過右鍵選單來新增、刪除檔案。右邊一大塊就是檔案編輯面板。</p>
+
+<h3 id="App_總覽頁面">App 總覽頁面</h3>
+
+<p>如果是第一次打開或新建 App 時，編輯面板會出現 App 總覽頁面：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8055/webide-new-app-editor.png" style="display: block; height: 625px; margin-left: auto; margin-right: auto; width: 846px;"></p>
+
+<p>你可隨時透過左側的檔案樹狀圖，回到 App 總覽頁面。</p>
+
+<h3 id="Manifest_檔案檢查">Manifest 檔案檢查</h3>
+
+<p>WebIDE 會自動檢查 manifest 檔案的常見問題。只要發現問題，就會在 App 總覽頁面中顯示並說明錯誤原因：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8063/webide-invalid-manifest.png" style="display: block; height: 626px; margin-left: auto; margin-right: auto; width: 847px;"></p>
+
+<p>當然也可以在專案編輯器中，直接編輯 App 的 <a href="/en-US/Apps/Build/Manifest">manifest.webapp</a> 檔案。</p>
+
+<h3 id="原始碼編輯器">原始碼編輯器</h3>
+
+<p>WebIDE 是使用 <a href="http://codemirror.net/">CodeMirror</a> 原始碼編輯器。</p>
+
+<h4 id="原始碼編輯器快捷鍵">原始碼編輯器快捷鍵</h4>
+
+<p>{{ Page ("en-US/docs/tools/Keyboard_shortcuts", "source-editor") }}</p>
+
+<h4 id="程式碼補齊">程式碼補齊</h4>
+
+<p>當編輯 CSS 和 JavaScript 時，編輯器會自動補齊建議字串。 CSS 自動補齊功能預設為開啟：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8057/webide-css-autocomplete.png" style="display: block; height: 628px; margin-left: auto; margin-right: auto; width: 849px;">按「Control + Space」就可顯示 JavaScript 的自動補齊建議：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8059/webide-js-autocomplete.png" style="display: block; height: 653px; margin-left: auto; margin-right: auto; width: 867px;"></p>
+
+<h4 id="行內說明文件">行內說明文件</h4>
+
+<p>編輯器也可顯示 JavaScript 的行內說明文件。只要按下「Shift + Space」，就會跳出目前滑鼠游標放置的條目之說明：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8061/webide-js-inline-docs.png" style="display: block; height: 652px; margin-left: auto; margin-right: auto; width: 872px;"></p>
+
+<p>在提示視窗中點選 <code>[docs]</code> 連結，就會帶你到該條目所對應的 MDN 頁面。</p>
+
+<h4 id="儲存檔案">儲存檔案</h4>
+
+<p>你必須儲存檔案之後，才能觀看檔案修改成果。如果是修改過但尚未儲存的檔案，則樹狀圖的檔名旁邊將顯示星號。你可透過選單或按下「Control+S」，即可儲存檔案 (Mac OS X 則為「Command+S」)。</p>
+
+<h3 id="移除專案">移除專案</h3>
+
+<p>要從 WebIDE 移除 App，可在 <a href="/en-US/docs/Tools/WebIDE#The_app_summary_page">App 總覽頁面</a>點選「移除專案 (Remove Project)」。</p>
+
+<h2 id="執行並除錯_App">執行並除錯 App</h2>
+
+<p>當準備好要執行 App 時，必須從<a href="/en-US/docs/Tools/WebIDE#Selecting_a_runtime">「選擇 Runtime」下拉式選單中選取任一執行環境</a>。如果沒有適合的執行環境，請參考<a href="/en-US/docs/Tools/WebIDE#Setting_up_runtimes">設定執行環境</a>。</p>
+
+<p>WebIDE 工具列中間的「Play」按鈕現已可點擊。點下之後就會在你所選的執行環境中安裝並執行 App：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8065/webide-running.png" style="display: block; height: 718px; margin-left: auto; margin-right: auto; width: 1314px;">這時按下「Pause」就會出現開發者工具的<a href="/en-US/docs/Tools/Tools_Toolbox">工具箱</a>，以利你對已連結的 App 進行除錯：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8067/webide-debugging.png" style="display: block; height: 688px; margin-left: auto; margin-right: auto; width: 1310px;">這裡會根據所選的執行環境而提供除錯工具，且必定會提供如<a href="/en-US/docs/Tools/Page_Inspector">檢測器 (Inspector)</a>、<a href="/en-US/docs/Tools/Web_Console">主控台 (Console)</a>、<a href="/en-US/docs/Tools/Debugger">JavaScript 除錯器</a>、<a href="/en-US/docs/Tools/Style_Editor">樣式編輯器 (Style Editor)</a>、<a href="/en-US/docs/Tools/Profiler">效能分析器 (Profiler)</a>、<a href="/en-US/docs/Tools/Scratchpad">程式碼速記本 (Scratchpad)</a> 等基本工具。就如同一般網頁，透過這些工具做出的修改，都可以即時在 App 中看到結果，但僅暫存。相反的，透過編輯面板修改的檔案，都會直接儲存到硬碟之中，但必須重新啟動 App 才能看到結果。</p>
+
+<h3 id="Certified_App_的除錯">Certified App 的除錯</h3>
+
+<p>若是搭配模擬器，則只要已選擇了執行環境，再點擊 App 的下拉選單，則不僅僅是你的 App，只要是該執行環境正執行中的所有 App 都會列在上面，包含<a href="/en-US/Marketplace/Options/Packaged_apps#Certified_app">Certified App</a>。這時即可除錯所你選擇的 App：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8069/webide-debugging-builtin.png" style="display: block; height: 681px; margin-left: auto; margin-right: auto; width: 1302px;"></p>
+
+<p><br>
+ 不過，如果要在實際裝置除錯 Certified App 還需要：</p>
+
+<ul>
+ <li>裝置必須搭載 Firefox OS 1.2 或更高版本</li>
+ <li>必須啟動 Certified App 除錯功能</li>
+</ul>
+
+<p>如果要啟動 Certified App 除錯功能，就要先連接執行環境，然後在選單中找到 <code>Runtime &gt; Runtime Info</code>。如果你在這裡看到「開發工具受限權限 (<code>DevTools restricted privileges)」為「Yes</code>」，就表示無法進行 Certified App 的除錯。根據你除錯對象的不同，後續步驟也有所差異：</p>
+
+<ul>
+ <li>實際裝置
+  <ul>
+   <li>如果你的裝置可進行 rooted，則點選「需要更高權限 (<code>Request higher privileges)」，</code>就會啟動 Certified App 的除錯功能；Firefox OS 亦將重新啟動。</li>
+  </ul>
+ </li>
+ <li>模擬器
+  <ul>
+   <li>模擬器已經預設開啟 Certified App 的除錯功能。</li>
+  </ul>
+ </li>
+ <li>B2G 桌機裝置
+  <ul>
+   <li>在連線並啟動 Certified App 除錯功能之後，即可手動編輯 B2G 桌機用戶端的<a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager#Using_the_B2G_desktop_client">設定</a>。</li>
+  </ul>
+ </li>
+</ul>
+
+<p>現在 (或在重新啟動 B2G 桌機用戶端之後) 你應該可以到 WebIDE 看到裝置中的所有 Certified App 了。</p>
+
+<h2 id="監控效能">監控效能</h2>
+
+<p>如果你想知道自己 App 的效能，也有幾種方法可於 WebIDE 的執行環境中測得：</p>
+
+<ul>
+ <li>「<a href="https://developer.mozilla.org/docs/Tools/WebIDE/Monitor">監控 (Monitor)</a>」面板可初步顯示裝置的效能，協助你找出問題所在。例如 App 佔用的記憶體突然暴增。</li>
+ <li>「<a href="https://developer.mozilla.org/docs/Tools/Profiler">效能分析器</a>」工具可讓你細部分析 App。如果要調查已知的效能問題就特別有用。</li>
+</ul>
+
+<h3 class="r" id="疑難雜症_(Troubleshooting)">疑難雜症 (Troubleshooting)</h3>
+
+<p>WebIDE 的其他使用問題，請參閱<a href="/en-US/docs/Tools/WebIDE/Troubleshooting">疑難雜症</a>頁。</p>
+
+<p> </p>
+
+<p> </p>

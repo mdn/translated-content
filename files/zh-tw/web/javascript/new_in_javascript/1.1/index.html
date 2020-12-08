@@ -1,0 +1,71 @@
+---
+title: New in JavaScript 1.1
+slug: Web/JavaScript/New_in_JavaScript/1.1
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.1
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>The following is a changelog for JavaScript from Netscape Navigator 2.0 to 3.0. The old Netscape documentation references this as <a href="https://web.archive.org/web/20060318153542/wp.netscape.com/eng/mozilla/3.0/handbook/javascript/index.html">"Features added after version 1"</a>. Netscape Navigator 3.0 was released on August 19, 1996. Netscape Navigator 3.0 was the second major version of the browser with JavaScript support.</p>
+
+<h2 id="JavaScript_versions">JavaScript versions</h2>
+
+<p>Netscape Navigator 3.0 also introduced JavaScript language versions.</p>
+
+<pre class="brush: html">&lt;SCRIPT LANGUAGE="JavaScript"&gt;    &lt;!-- JavaScript for Navigator 2.0. --&gt;
+&lt;SCRIPT LANGUAGE="JavaScript1.1"&gt; &lt;!-- JavaScript for Navigator 3.0. --&gt;</pre>
+
+<h2 id="New_features_in_JavaScript_1.1">New features in JavaScript 1.1</h2>
+
+<h3 id="New_objects">New objects</h3>
+
+<ul>
+ <li>{{jsxref("Array")}}</li>
+ <li>{{jsxref("Boolean")}}</li>
+ <li>{{jsxref("Function")}}</li>
+ <li>{{jsxref("Number")}}</li>
+</ul>
+
+<h3 id="New_properties">New properties</h3>
+
+<ul>
+ <li>{{jsxref("Number.MAX_VALUE")}}</li>
+ <li>{{jsxref("Number.MIN_VALUE")}}</li>
+ <li>{{jsxref("NaN")}}</li>
+ <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
+ <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
+</ul>
+
+<h3 id="New_methods">New methods</h3>
+
+<ul>
+ <li>{{jsxref("Array.prototype.join()")}}</li>
+ <li>{{jsxref("Array.prototype.reverse()")}}</li>
+ <li>{{jsxref("Array.prototype.sort()")}}</li>
+ <li>{{jsxref("Array.prototype.split()")}}</li>
+</ul>
+
+<h3 id="New_operators">New operators</h3>
+
+<ul>
+ <li><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a></code></li>
+ <li><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/void">void</a></code></li>
+</ul>
+
+<h3 id="Other_new_features">Other new features</h3>
+
+<ul>
+ <li><code><a href="/zh-TW/docs/Web/HTML/Element/noscript">&lt;noscript&gt;</a></code></li>
+ <li><a href="/zh-TW/docs/Archive/Web/LiveConnect">LiveConnect</a>. Communication between Java and JavaScript.</li>
+</ul>
+
+<h2 id="Changed_functionality_in_JavaScript_1.1">Changed functionality in JavaScript 1.1</h2>
+
+<ul>
+ <li>"Object deletion". You can remove an object by setting its object reference to <code>null</code>.</li>
+ <li><code>constructor</code> and <code>prototype</code> properties on objects added.</li>
+ <li><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code> is now a method of every object (was previously a built-in function); it evaluates a string of JavaScript code in the context of the specified object.</li>
+ <li><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/random">Math.random()</a></code> now works on every platform.</li>
+ <li><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">toString()</a></code>: Added radix parameter, which specifies the base to use for representing numeric values.</li>
+ <li><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/isNaN">isNaN()</a></code> now works on every platform (not only Unix anymore)</li>
+ <li><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/parseFloat">parseFloat()</a></code> and <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/parseInt">parseint()</a></code> now return <code>NaN</code> on all platforms, if the first character of the specified string cannot be converted to a number; in previous releases, it returned <code>NaN</code> on Solaris and Irix and zero on all other platforms.</li>
+</ul>

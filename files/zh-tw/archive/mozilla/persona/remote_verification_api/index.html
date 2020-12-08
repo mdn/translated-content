@@ -1,0 +1,171 @@
+---
+title: 遠端驗證 API
+slug: Archive/Mozilla/Persona/Remote_Verification_API
+translation_of: Archive/Mozilla/Persona/Remote_Verification_API
+---
+<h2 id="Summary" name="Summary">概覽</h2>
+<p>當使用者嘗試登入至網站時，瀏覽器會產生一名為「斷言」的資料結構，其實質上就是一個加密過的電子郵件位置。瀏覽器傳送這個斷言至網站上，使用者登入前，網站必須驗證斷言的有效性。</p>
+<p>斷言可以在本地端或是通過在下列位置的 API 來進行驗證：<span class="link-https"><code>https://verifier.login.persona.org/verify</code></span>。這個頁面介紹了如何使用 API 。</p>
+<h2 id="Methods" name="Methods">方法</h2>
+<p>HTTP POST 請求至 <code>https://verifier.login.persona.org/verify</code>。</p>
+<h3 id="Parameters" name="Parameters">參數</h3>
+<dl>
+ <dt>
+  <code>assertion</code></dt>
+ <dd>
+  使用者所提供之斷言。作為傳入 {{ domxref("navigator.id.watch()") }} 中 <code>onlogin</code> 函數的第一個參數。</dd>
+ <dt>
+  <code>audience</code></dt>
+ <dd>
+  您網站的通訊協定、網域名稱、與通訊埠。例如：<code>「https://example.com:443</code>」</dd>
+</dl>
+<h3 id="Return_values" name="Return_values">回傳值</h3>
+<p>呼叫後會傳統一個包含 <code>status</code> 元素的 JSON 結構，其值可能為「okay」或是「failure」。 依據 <code>status 的值的不同，可能會包含下列表中的額外元素。</code></p>
+<h4 id="okay" name="okay">"okay"</h4>
+<p>該斷言有效。</p>
+<p>在這種情況下，JSON 結構會包含下列附加元素：</p>
+<table class="standard-table" style="width: 80%;">
+ <tbody>
+  <tr>
+   <td>"<code>email</code>"</td>
+   <td>斷言中包含的登入者的郵件位置。</td>
+  </tr>
+  <tr>
+   <td>"<code>audience</code>"</td>
+   <td>Audience 的值包含了斷言。Expected to be your own website URL.</td>
+  </tr>
+  <tr>
+   <td>"<code>expires</code>"</td>
+   <td>斷言有效期的資料，expressed as the <a href="/en/JavaScript/Reference/Global_Objects/Date/valueOf" title="en/JavaScript/Reference/Global_Objects/Date/valueOf">primitive value of a Date object</a>: that is, the number of milliseconds since midnight 01 January, 1970 UTC.</td>
+  </tr>
+  <tr>
+   <td>"<code>issuer</code>"</td>
+   <td>The hostname of the identity provider that issued the assertion.</td>
+  </tr>
+ </tbody>
+</table>
+<h4 id="failure" name="failure">"failure"</h4>
+<p>該斷言無效。這種情況下 JSON 結構將會包含一個附加的元素：</p>
+<table class="compact-table">
+ <tbody>
+  <tr>
+   <td><code>"reason"</code></td>
+   <td>一字串解釋驗證為何失敗。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="Examples" name="Examples">範例</h2>
+<h3 id="node.js" name="node.js">node.js</h3>
+<p>該範例為使用 express.js 的 Node.js 伺服器。</p>
+<pre class="brush: js">var express = require("express"),
+    app = express.createServer(),
+    https = require("https"),
+    querystring = require("querystring");
+/* ... */
+
+// Audience 必須符合您瀏覽器的位置列上顯示的，
+// 包含通訊協定、主機名稱、以及通訊埠。
+var audience = "http://localhost:8888";
+
+app.post("/authenticate", function(req, res) {
+  var vreq = https.request({
+    host: "verifier.login.persona.org",
+    path: "/verify",
+    method: "POST"
+  }, function(vres) {
+    var body = "";
+    vres.on('data', function(chunk) { body+=chunk; } )
+        .on('end', function() {
+          try {
+            var verifierResp = JSON.parse(body);
+            var valid = verifierResp &amp;&amp; verifierResp.status === "okay";
+            var email = valid ? verifierResp.email : null;
+            req.session.email = email;
+            if (valid) {
+              console.log("assertion verified successfully for email:", email);
+              res.json(email);
+            } else {
+              console.log("failed to verify assertion:", verifierResp.reason);
+              res.send(verifierResp.reason, 403);
+            }
+          } catch(e) {
+            console.log("non-JSON response from verifier");
+            // bogus response from verifier!
+            res.send("bogus response from verifier!", 403);
+
+          }
+        });
+  });
+
+  vreq.setHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+  var data = querystring.stringify({
+    assertion: req.body.assertion,
+    audience: audience
+  });
+
+  vreq.setHeader('Content-Length', data.length);
+  vreq.write(data);
+  vreq.end();
+
+  console.log("verifying assertion!");
+});
+
+</pre>
+<p>via <a class="link-https" href="https://github.com/lloyd/myfavoritebeer.org/blob/06255b960e1f9078bc935c1c7af0662f33c88818/server/main.js#L112">Lloyd Hilaiel</a></p>
+<h3 id="PHP" name="PHP">PHP</h3>
+<pre class="brush: php">$url = 'https://verifier.login.persona.org/verify';
+$assert = filter_input(
+    INPUT_POST,
+    'assertion',
+    FILTER_UNSAFE_RAW,
+    FILTER_FLAG_STRIP_LOW|FILTER_FLAG_STRIP_HIGH
+);
+//使用 $_POST 超全域陣列供 PHP &lt; 5.2 並撰寫您自己的篩選其
+$params = 'assertion=' . urlencode($assert) . '&amp;audience=' .
+           urlencode('http://example.com:80');
+$ch = curl_init();
+$options = array(
+    CURLOPT_URL =&gt; $url,
+    CURLOPT_RETURNTRANSFER =&gt; TRUE,
+    CURLOPT_POST =&gt; 2,
+    //CURLOPT_SSL_VERIFYPEER =&gt; true,   //This currently blocks connection to 'https://verifier.login.persona.org/verify'
+    CURLOPT_SSL_VERIFYPEER =&gt; 0,
+
+    CURLOPT_SSL_VERIFYHOST =&gt; 2,
+    CURLOPT_POSTFIELDS =&gt; $params
+);
+curl_setopt_array($ch, $options);
+$result = curl_exec($ch);
+curl_close($ch);
+echo $result;</pre>
+<p>Via <a class="link-https" href="https://github.com/codepo8/BrowserID-login-with-PHP/blob/184fdb74c8a554461c262875859968154d09288e/verify.php">Christian Heilmann</a></p>
+<h3 id="Java" name="Java" style="line-height: 20px;">Java</h3>
+<pre class="brush: java">@Override
+protected void doPost(final HttpServletRequest req,
+   final HttpServletResponse resp) throws ServletException,
+   IOException {
+
+   final String audience = req.getServerName();
+   final String assertion = req.getParameter("assertion");
+   final Verifier verifier = new Verifier();
+   final BrowserIDResponse personaResponse = verifier.verify(assertion,audience);
+   final Status status = personaResponse.getStatus();
+
+   if (status == Status.OK) {
+     /* Authentication with Persona was successful */
+     String email = personaResponse.getEmail();
+     log.info("{} has sucessfully signed in", email);
+     HttpSession session = req.getSession(true);
+     session.setAttribute("email", email);
+
+   } else {
+     /* Authentication with Persona failed */
+     log.info("Sign in failed...");
+
+   }
+}
+</pre>
+<p>Via <a class="link-https" href="https://github.com/user454322/browserid-verifier">Javier</a></p>
+<p> </p>
+<p>注意：If you send the assertion and audience parameters as a JSON-object, they <strong>must not</strong> be URL-encoded. If they are sent as regular HTTP POST parameters, as in the example above, they <strong>must</strong> be URL-encoded.</p>

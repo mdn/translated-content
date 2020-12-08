@@ -1,0 +1,600 @@
+---
+title: JavaScript 1.7 新鮮事
+slug: Web/JavaScript/New_in_JavaScript/1.7
+tags:
+  - JavaScript
+  - JavaScript_version_overviews
+  - 待翻譯
+  - 所有類別
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.7
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>{{ Fx_minversion_header(2) }}</p>
+
+<p>JavaScript 1.7 是個程式語言上的更新，新推出了幾項新功能，諸如特別的產生器（generator）、迭代器（iterator）、陣列簡約式（array comprehension）、<code>let</code> 表達式、以及分割代入（destructuring assignment）。它也包含了所有 <a href="/zh_tw/JavaScript_1.6_新鮮事" title="zh_tw/JavaScript_1.6_新鮮事">JavaScript 1.6</a> 的功能。</p>
+
+<p>從 <a href="/zh_tw/Firefox_2_技術文件" title="zh_tw/Firefox_2_技術文件">Firefox 2</a> 起，開始支援 JavaScript 1.7。</p>
+
+<p>本文章使用的程式碼範例可以用 JavaScript shell 實驗。請參見 <a href="/zh_tw/JavaScript_shell_入門" title="zh tw/JavaScript shell 入門">JavaScript shell 入門</a> 以得知如何建造及使用 shell。</p>
+
+<h2 id="使用_JavaScript_1.7" name="使用_JavaScript_1.7">使用 JavaScript 1.7</h2>
+
+<p>為了使用 JavaScript 1.7 的一些新機能，你必須在 HTML 或 XUL 的原始碼中指明你希望使用 JavaScript 1.7：</p>
+
+<pre class="eval"> &lt;script type="application/javascript;version=1.7"/&gt;
+</pre>
+
+<p>當使用 <a href="/zh_tw/JavaScript_shell_入門" title="zh tw/JavaScript shell 入門">JavaScript shell</a> 的時候，你需要設定想要使用的版本，可以在命令列加上 <code>-version 170</code> 或使用 <code>version()</code> 函式：</p>
+
+<pre class="eval"> version(170);
+</pre>
+
+<p>當碰到必須使用新關鍵字「yield」和「let」的機能時，你必須指定版本 1.7，因為既有的程式可能會將那些關鍵字判讀為變數或函數的名字。當某項機能並未引入新關鍵字時（分割代入和陣列簡約式），可不必指定 JavaScript 的版本。</p>
+
+<h2 id="產生器與迭代器" name="產生器與迭代器">產生器與迭代器</h2>
+
+<p>當開發中的代碼涉及到迭代演算法時（例如迭代整個列表或在同一組資料上反覆進行計算），在計算處理期間還需要維護狀態變數的值。傳統上，你必須使用 Callback 函數以取得迭代演算法的立即值。</p>
+
+<h3 id="產生器" name="產生器">產生器</h3>
+
+<p>思考下面的迭代演算法，他會計算費伯納契數︰</p>
+
+<pre class="brush: js">function do_callback(num) {
+  document.write(num + "&lt;BR&gt;\n");
+}
+
+function fib() {
+  var i = 0, j = 1, n = 0;
+  while (n &lt; 10) {
+    do_callback(i);
+    var t = i;
+    i = j;
+    j += t;
+    n++;
+  }
+}
+
+fib();
+</pre>
+
+<p>代碼中使用的 Callback 常式會在演算法每一次的迭代步驟中進行運算。在本例中，每一個費伯納契數只是簡單的輸出到控制台上。</p>
+
+<p>產生器和迭代器的結合運用可提供較佳的新方式來完成這一動作。讓我們來看看使用產生器所寫成的費伯納契數常式的樣子︰</p>
+
+<pre class="brush: js">function fib() {
+  var i = 0, j = 1;
+  while (true) {
+    yield i;
+    var t = i;
+    i = j;
+    j += t;
+  }
+}
+
+var g = fib();
+for (var i = 0; i &lt; 10; i++) {
+  document.write(g.next() + "&lt;BR&gt;\n");
+}
+</pre>
+
+<p>內含 <code>yield</code> 關鍵字的函數便是產生器。當你呼叫函數的時候，函數的形式參數受限於實際的參數，但函數本身並不會被實際進行求值。取而代之的是產生器迭代器（generator-iterator）的返回。每當呼叫產生器迭代器的 <code>next()</code> 方法就進行迭代演算法的下一步驟。每一步驟的值都是由 <code>yield</code> 關鍵字的值所指定。可以把 <code>yield</code> 想成是產生器迭代器版本的 <code>return</code>，並指明演算法每一回迭代之間的分界線。每當你呼叫 <code>next()</code> 的時候，產生器的代碼會從 <code>yield</code> 之後的語句開始恢復執行。</p>
+
+<p>你可以反覆呼叫產生器迭代器的 <code>next()</code> 方法，直到達到你所想要的結果為止。在本例中，我們可以取得任意多的費伯納契數，只要我們持續呼叫 <code>g.next()</code> 直到拿到所需數目的結果為止。</p>
+
+<h5 id="Resuming_a_generator_at_a_specific_point" name="Resuming_a_generator_at_a_specific_point">在指定點上恢復產生器的執行</h5>
+
+<p>產生器的 <code>next()</code> 方法一經呼叫以後產生器就會被啟動，你可以使用 <code>send()</code> 傳入指定的值，傳入的值會被視為最後一個 <code>yield</code> 的結果。產生器將會返回隨後的 <code>yield</code> 的運算元。</p>
+
+<p>你不能在任意點上啟動產生器；在你可以使用 <code>send()</code> 傳入指定值以前，你必須先以 <code>next()</code> 啟動。</p>
+
+<div class="note"><strong>附註:</strong> 有趣的一點是，呼叫 <code>send(undefined)</code> 和呼叫 <code>next()</code> 是等價的。然而，使用除了 undefined 以外的任意值來呼叫 <code>send()</code> 並啟動新生的產生器，將會導致 <code>TypeError</code> 的例外。</div>
+
+<h5 id="Exceptions_in_generators" name="Exceptions_in_generators">產生器裡的例外</h5>
+
+<p>你可以呼叫產生器的 <code>throw()</code> 方法並傳入要拋出的例外值，強制使產生器拋出例外。例外將會從產生器當下被暫停的內容中拋出，彷彿 <code>throw <em>value</em></code> 被代換成目前被暫停的 <code>yield</code> 語句。</p>
+
+<p>如果在拋出例外的過程中沒有遇到 yield，例外將會不斷擴散直到呼叫 <code>next()</code>，而隨後呼叫的 <code>next()</code> 將會導致 <code>StopIteration</code> 被拋出。</p>
+
+<h5 id="Closing_a_generator" name="Closing_a_generator">關閉產生器</h5>
+
+<p>產生器有一個 <code>close()</code> 方法可強制產生器關閉他自己。關閉產生器的作用有︰</p>
+
+<ol>
+ <li>執行產生器函數裡面所有活動中的 <code>finally</code> 子句。</li>
+ <li>如果 <code>finally</code> 子句拋出除了 <code>StopIteration</code> 以外的任何例外，例外會被擴散到 <code>close()</code> 方法的呼叫端。</li>
+ <li>結束產生器。</li>
+</ol>
+
+<h5 id="Generator_Example" name="Generator_Example">產生器的範例</h5>
+
+<p>下面的代碼驅動的產生器將會產生 100 個迴圈。</p>
+
+<pre class="brush: js">var gen = generator();
+
+function driveGenerator() {
+  if (gen.next()) {
+    window.setTimeout(driveGenerator, 0);
+  } else {
+    gen.close();
+  }
+}
+
+function generator() {
+  while (i &lt; something) {
+    /** stuff **/
+
+    ++i;
+    /** 100 loops per yield **/
+    if ((i % 100) == 0) {
+      yield true;
+    }
+  }
+  yield false;
+}
+</pre>
+
+<h3 id="迭代器" name="迭代器">迭代器</h3>
+
+<p><em>迭代器</em>是一種特殊的物件，可讓你在資料上進行迭代。</p>
+
+<p>在正常使用下，迭代器物件是「看不見的」；你並不需要直接在裡面做操作，但會使用到 JavaScript 的 <a href="/zh_tw/Core_JavaScript_1.5_教學/物件的操作語法" title="zh tw/Core JavaScript 1.5 教學/物件的操作語法"><code>for...in</code> 和 <code>for each...in</code> 語法</a> 在物件的鍵值上自然的循環。</p>
+
+<pre class="brush: js">var objectWithIterator = getObjectSomehow();
+
+for (var i in objectWithIterator)
+{
+  document.write(objectWithIterator[i] + "&lt;BR&gt;\n");
+}
+</pre>
+
+<p>如果你正在實裝你自己的迭代器物件，或者有另一個需要直接操作的迭代器，你將需要知道 <code>next</code> 方法、<code>StopIteration</code> 例外、還有 <code>__iterator__</code> 方法。</p>
+
+<p>你可以藉著呼叫 <code>Iterator(<em>objectname</em>)</code> 來為物件建立迭代器；物件的迭代器會透過物件的 <code>__iterator__</code> 方法找出來，如果沒有提供 <code>__iterator__</code> 方法，就會建立預設的迭代器。預設的迭代器會提供物件的屬性，通常是對應於 <code>for...in</code> 和 <code>for each...in</code> 的模式。如果你想要提供自訂的迭代器，你就要覆蓋 <code>__iterator__</code> 方法並返回你自訂的迭代器的實體。要從 Script 取得物件的迭代器，你就要使用 <code>Iterator(<em>obj</em>)</code> 而非直接存取 <code>__iterator__</code> 屬性。前者可用於陣列；而後者不行。</p>
+
+<p>一旦你有了迭代器以後，你就可以藉由呼叫迭代器的 <code>next()</code> 方法輕鬆的取得物件中的下一項。如果已無下一項資料，就會拋出 <code>StopIteration</code> 例外。</p>
+
+<p>下面是直接操作迭代器的簡單範例︰</p>
+
+<pre class="brush: js">var obj = {name:"Jack Bauer", username:"JackB", id:12345, agency:"CTU", region:"Los Angeles"};
+
+var it = Iterator(obj);
+
+try {
+  while (true) {
+    document.write(it.next() + "&lt;BR&gt;\n");
+  }
+} catch (err if err instanceof StopIteration) {
+  document.write("記錄結束。&lt;BR&gt;\n");
+} catch (err) {
+  document.write("未知的錯誤︰" + err.description + "&lt;BR&gt;\n");
+}
+</pre>
+
+<p>這個程式的輸出就像下面這樣︰</p>
+
+<pre>name,Jack Bauer
+username,JackB
+id,12345
+agency,CTU
+region,Los Angeles
+記錄結束。
+</pre>
+
+<p>當你正在建立你的迭代器的時候，也可以選擇性的指定第二個參數，這個參數是真假值，可表明每當你呼叫 <code>next()</code> 方法時是否只想要返回鍵的部分。把前面例子的 <code>var it = Iterator(obj);</code> 改成 <code>var it = Iterator(obj, true);</code> 會變成以下的輸出內容︰</p>
+
+<pre>name
+username
+id
+agency
+region
+記錄結束。
+</pre>
+
+<p>在這兩種情況下，返回的資料的實際順序主要是由實裝方式所決定。在此並沒有統一的資料順序。</p>
+
+<p>迭代器是用來掃描物件裡的資料的簡便方式，包括那些你沒注意到的內容。如果你需要維護應用程式無法預期的資料的話，這一點將會特別實用。</p>
+
+<h2 id="陣列簡約式" name="陣列簡約式">陣列簡約式</h2>
+
+<p>陣列簡約式的用法和產生器一樣，可提供簡便的方式進行陣列的初始化。例如︰</p>
+
+<pre class="brush: js">function range(begin, end) {
+  for (let i = begin; i &lt; end; ++i) {
+    yield i;
+  }
+}
+</pre>
+
+<p><code>range()</code> 是可返回介於 <code>begin</code> 和 <code>end</code> 之間所有的值的產生器。有了上面的定義，我們可以如下使用︰</p>
+
+<pre class="brush: js">var ten_squares = [i * i for (i in range(0, 10))];
+</pre>
+
+<p>這個預先初始化內容的新陣列 <var>ten_squares</var>，內含 <code>0..9</code> 範圍內所有數值的平方。</p>
+
+<p>在初始化陣列的時候，你可以採用任意的條件。如果你想要初始化內含 0 到 20 之間的偶數的陣列，你可以使用下面的代碼︰</p>
+
+<pre class="brush: js">var evens = [i for (i in range(0, 21)) if (i % 2 == 0)];
+</pre>
+
+<p>在 JavaScript 1.7 以前，就必須編寫成像下面這個樣子︰</p>
+
+<pre class="brush: js">var evens = [];
+for (var i=0; i &lt;= 20; i++) {
+  if (i % 2 == 0)
+    evens.push(i);
+}
+</pre>
+
+<p>陣列簡約式不只是更加的緊密，一旦熟悉了這個概念，就會發現陣列簡約式也真的更加易讀。</p>
+
+<h4 id="作用域規則" name="作用域規則">作用域規則</h4>
+
+<p>陣列簡約式中包含在方括號內部的所有東西具有內含的區塊，就像隱含了 <code>let</code> 宣告一樣。</p>
+
+<h2 id="使用_let_的區塊作用域" name="使用_let_的區塊作用域">使用 <code>let</code> 的區塊作用域</h2>
+
+<p><code>let</code> 可用來管理資料和函數的區塊作用域，在此有許多種方式︰</p>
+
+<ul>
+ <li><strong><code>let</code> 語法</strong> 可提供在區塊的作用域內部連結值與變數的方式，而不影響區塊外部相同名稱的變數的值。</li>
+ <li><strong><code>let</code> 表達式</strong> 可讓你只對單一的表達式確立變數的作用域。</li>
+ <li><strong><code>let</code> 定義</strong> 可定義區塊使變數的作用域受限於這個區塊。這個語法和 <code>var</code> 語法的用法非常類似。</li>
+ <li>你也可以使用 <code>let</code> 來確立只存在於 <code>for</code> 循環的條件式內部的變數。</li>
+</ul>
+
+<h3 id="let_語法" name="let_語法"><code>let</code> 語法</h3>
+
+<div class="warning">
+<p>The <code>let</code> block and <code>let</code> expression syntax is non-standard and will be removed in the future. Do not use them! See {{bug(1023609)}} for more details.</p>
+</div>
+
+<p><code>let</code> 語法可提供給變數一個局域作用域。他會作用於被約束在單一區塊範圍內零個以上的變數；否則，他就和 <a href="/../../../../zh_tw/Core_JavaScript_1.5_參考/語法/區塊" rel="internal" title="../../../../zh tw/Core JavaScript 1.5 參考/語法/區塊">區塊語法</a> 完全一樣。須特別注意的是，在 <code>let</code> 語法內部使用以 <code>var</code> 宣告過的變數，如果變數已在 <code>let</code> 語法外部宣告過，其作用域仍和外部的一樣；這樣的變數仍具有函數作用域。</p>
+
+<p>例如︰</p>
+
+<pre class="brush: js">var x = 5;
+var y = 0;
+
+let (x = x+10, y = 12) {
+  print(x+y + "\n");
+}
+
+print((x + y) + "\n");
+</pre>
+
+<p>程式的輸出結果會是︰</p>
+
+<pre>27
+5
+</pre>
+
+<p>代碼區塊的規則和 JavaScript 中的任何代碼區塊完全一樣。他會有自己的使用 <code>let</code> 宣告所確立的局域變數。</p>
+
+<div class="note"><strong>附註:</strong> 當使用 <code>let</code> 語法的時候，<code>let</code> 後面的圓括弧是必要的。漏掉圓括弧將導致語法錯誤。</div>
+
+<h4 id="作用域規則" name="作用域規則">作用域規則</h4>
+
+<p>用 <code>let</code> 所定義的變數其作用域即為 <code>let</code> 區塊本身，也包括其內部的區塊，除非內部區塊定義了相同名稱的變數。</p>
+
+<h3 id="let_表達式" name="let_表達式"><code>let</code> 表達式</h3>
+
+<div class="warning">
+<p>The <code>let</code> block and <code>let</code> expression syntax is non-standard and will be removed in the future. Do not use them! See {{bug(1023609)}} for more details.</p>
+</div>
+
+<p>你可以使用 <code>let</code> 來確立只對單一表達式有效的變數：</p>
+
+<pre class="brush: js">var x = 5;
+var y = 0;
+document.write( let(x = x + 10, y = 12) x+y  + "&lt;BR&gt;\n");
+document.write(x+y + "&lt;BR&gt;\n");
+</pre>
+
+<p>結果為：</p>
+
+<pre>27
+5
+</pre>
+
+<p>在這個例子中，將 <var>x </var>和 y 指定為 <code>x+10</code> 和 <code>12</code> 只對 <code>x+y</code> 這個表達式有效。</p>
+
+<h4 id="作用域規則" name="作用域規則">作用域規則</h4>
+
+<p>假設有一個 <code>let</code> 表示式：</p>
+
+<pre class="eval">let (<var>decls</var>) <var>expr</var>
+</pre>
+
+<p>這裡的 <var>expr</var> 也會被隱含的區塊所包圍。</p>
+
+<h3 id="let_定義" name="let_定義"><code>let</code> 定義</h3>
+
+<p><code>let</code> 關鍵字也可以用來定義在區塊中的變數。</p>
+
+<div class="note"><strong>附註:</strong> 如果你有更多有趣的例子是有關於 <code>let</code> 定義的使用方式，可以考慮加到此處。</div>
+
+<pre class="brush: js">if (x &gt; y) {
+  let gamma = 12.7 + y;
+  i = gamma * x;
+}</pre>
+
+<p>你可以在擴充套件的代碼中使用 <code>let</code> 定義假命名空間的別名。（詳見 <a href="/zh_tw/擴充套件中安全性的最佳實踐" title="zh tw/擴充套件中安全性的最佳實踐">擴充套件中安全性的最佳實踐</a>。）</p>
+
+<pre class="brush: js">let Cc = Components.classes, Ci = Components.interfaces;
+</pre>
+
+<p>當使用到內部函數的時候，有時 <code>let</code> 語法、表達式和定義可使代碼更為簡潔。</p>
+
+<pre class="brush: js">var list = document.getElementById("list");
+
+for (var i = 1; i &lt;= 5; i++) {
+  var item = document.createElement("LI");
+  item.appendChild(document.createTextNode("Item " + i));
+
+  let j = i;
+  item.onclick = function (ev) {
+    alert("Item " + j + " is clicked.");
+  };
+  list.appendChild(item);
+}
+</pre>
+
+<p>上面的例子有意如此運作，五個（匿名）內部函數的實體分別參考到五個不同變數 <code>j</code> 的實體。注意，如果你改用 <code>var</code> 取代 <code>let</code>，或是移除變數 <code>j</code> 並簡單的在內部函數中使用變數 <code>i</code>，他就不再如此運作。</p>
+
+<h4 id="作用域規則" name="作用域規則">作用域規則</h4>
+
+<p>使用 <code>let</code> 宣告的變數其作用域不僅是限於所在的區塊，也可用於所在區塊的任意子區塊之中，只要這些子區塊未再次定義同樣的變數。在這個方式下，<code>let</code> 的運作就非常類似 <code>var</code>。主要的不同點在於 <code>var</code> 變數的作用域的範圍是整塊函數︰</p>
+
+<pre class="brush: js">  function varTest() {
+    var x = 31;
+    if (true) {
+      var x = 71;  // 相同的變數!
+      alert(x);  // 71
+    }
+    alert(x);  // 71
+  }
+
+  function letTest() {
+    let x = 31;
+    if (true) {
+      let x = 71;  // 不同的變數
+      alert(x);  // 71
+    }
+    alert(x);  // 31
+  }
+</pre>
+
+<p><code>=</code> 右邊的表達式受限於區塊的內部。和 <code>let</code> 表達式 以及 <code>let</code> 語法 的作用範圍不同︰</p>
+
+<pre class="brush: js">  function letTests() {
+    let x = 10;
+
+    // let 語法
+    let (x = x + 20) {
+      alert(x);  // 30
+    }
+
+    // let 表達式
+    alert(let (x = x + 20) x);  // 30
+
+    // let 定義
+    {
+      let x = x + 20;  // 此處的 x 會被求值成 undefined
+      alert(x);  // undefined + 20 ==&gt; NaN
+    }
+  }
+</pre>
+
+<p>在程式或類別中，<code>let</code> 並不會像 <code>var</code> 那樣在全域物件上建立屬性；取而代之的是，在對某個內容的語句求值之際，隱含的區塊會被建立，<code>let</code> 便會在隱含的區塊中建立屬性。其本質上的意義是 <code>let</code> 並不會覆蓋先前使用 <code>var</code> 定義的變數。例如︰</p>
+
+<pre class="brush: js">var x = 'global';
+let x = 42;
+document.write(this.x + "&lt;br&gt;\n");
+</pre>
+
+<p>代碼所顯示的輸出將會是 "global" 而非 "42"。</p>
+
+<p><span style="color: rgb(0, 0, 255);">隱含的區塊</span>並不使用圓括弧來界定，他是由 JavaScript 引擎暗中建立的。</p>
+
+<p>在函數中，以 <code>eval()</code> 執行的 <code>let</code> 並不像 <code>var</code> 那樣在變數物件上（活動中的物件或最內部的區塊）建立屬性；取而代之的是，在對程式中的語句求值之際，隱含的區塊會被建立，<code>let</code> 便會在隱含的區塊中建立屬性。這是 <code>eval()</code> 在程式上以前述規則作用的結果。</p>
+
+<p>換句話說，當你使用 <code>eval()</code> 來執行代碼的時候，這些代碼會被視為獨立的程式，這些程式的代碼會被隱含的區塊所包圍。</p>
+
+<h3 id="for_迴圈裡加上_let_的變數" name="for_迴圈裡加上_let_的變數"><code>for</code> 迴圈裡加上 <code>let</code> 的變數</h3>
+
+<p>你可以使用 <code>let</code> 關鍵字把局域變數限制在 <code>for</code> 迴圈的作用域裡，就像使用 <code>var</code> 一般。</p>
+
+<pre class="brush: js">** 加入 obj **
+   var i=0;
+   for ( let i=i ; i &lt; 10 ; i++ )
+     document.write(i + "&lt;BR&gt;\n");
+
+   for ( let [name,value] in obj )
+     document.write("名稱: " + name + ", 值: " + value + "&lt;BR&gt;\n");
+</pre>
+
+<h4 id="作用域規則" name="作用域規則">作用域規則</h4>
+
+<pre class="eval">for (let <var>expr1</var>; <var>expr2</var>; <var>expr3</var>) <var>statement</var>
+</pre>
+
+<p>在本例中，<var>expr2</var>、<var>expr3</var>、<var>statement</var> 都會被含括在隱含的區塊裡，而這個區塊裡內含以 <code>let <var>expr1</var></code> 宣告的區塊局域變數。這是前述的第一個迴圈的示例。</p>
+
+<pre class="eval">for (let <var>expr1</var> in <var>expr2</var>) <var>statement</var>
+for each(let <var>expr1</var> in <var>expr2</var>) <var>statement</var>
+</pre>
+
+<p>這兩種情況都會有一個內含每一個 <var>statement</var> 的隱含區塊。其中第一個是前述的第二個迴圈。</p>
+
+<h2 id="分割代入" name="分割代入">分割代入</h2>
+
+<p>分割代入是利用反映出陣列或物件結構的字面表達的語法，從陣列或物件抽取資料。</p>
+
+<p>陣列或物件的字面表達式可提供簡易的方式來建立特用的資料封包。這些資料封包一經建立之後，就能以任意方式來做想做的事。你甚至可以從函數裡返回這些資料封包。</p>
+
+<p>分割代入其中一件特別實用的用法是以單一的語句讀取整個結構，不過還有很多有趣的使用方式，並會在隨後小節中顯示完整的範例。</p>
+
+<p>這種能力很類似 Perl 或 Python 等語言所具有的機能。</p>
+
+<h3 id="範例" name="範例">範例</h3>
+
+<p>分割代入最好的解釋方式就是使用範例，所以這裡有一些可供你閱讀並從中學習。</p>
+
+<h4 id="避免臨時變數" name="避免臨時變數">避免臨時變數</h4>
+
+<p>你可以使用分割代入交換變數值，例如︰</p>
+
+<pre class="brush: js">var a = 1;
+var b = 3;
+
+[a, b] = [b, a];
+</pre>
+
+<p>執行代碼之後，<var>b</var> 變成 1 且 <var>a</var> 變成 3。如果沒有分割代入，就需要臨時變數交換兩個變數值（在某些低階語言中，可以使用 <a class="external" href="http://en.wikipedia.org/wiki/XOR_swap">XOR-交換技巧</a>）。</p>
+
+<p>同樣的，也可以用來交換三個以上的變數︰</p>
+
+<pre class="brush: js">var a = 'o';
+var b = "&lt;font color = 'green'&gt;o&lt;/font&gt;";
+var c = 'o';
+var d = 'o';
+var e = 'o';
+var f = "&lt;font color = 'blue'&gt;o&lt;/font&gt;";
+var g = 'o';
+var h = 'o';
+
+for (lp=0;lp&lt;40;lp++)
+	{[a, b, c, d, e, f, g, h] = [b, c, d, e, f, g, h, a];
+	 document.write(a+''+b+''+c+''+d+''+e+''+f+''+g+''+h+''+"&lt;br /&gt;");}
+</pre>
+
+<p>執行代碼時，就會顯示變動的色彩循環效果。</p>
+
+<p>回到我們先前費伯納契數產生器的範例，我們可以去掉臨時變數 "t"，改在單一的群組代入語法中計算 "i" 和 "j" 的新值︰</p>
+
+<pre class="brush: js">function fib() {
+  var i = 0, j = 1;
+  while (true) {
+    yield i;
+    [i, j] = [j, i + j];
+  }
+}
+
+var g = fib();
+for (let i = 0; i &lt; 10; i++)
+  print(g.next());
+</pre>
+
+<h4 id="返回多重值" name="返回多重值">返回多重值</h4>
+
+<p>感謝有了分割代入，函數因此能夠返回多重值。儘管一直都可以從函數返回陣列，不過分割代入可提供更進一步的靈活性。</p>
+
+<pre class="brush: js">function f() {
+  return [1, 2];
+}
+</pre>
+
+<p>如你所見，返回值是以類似陣列的記法把所有要返回的值含括在方括號內來完成的。你可以使用這個方式來返回任意數目的結果。在本例中，<code>f()</code> 返回變數 <code>{{ mediawiki.external('1, 2') }}</code> 作為他的輸出。</p>
+
+<pre class="brush: js">var a, b;
+[a, b] = f();
+document.write ("A is " + a + " B is " + b + "&lt;BR&gt;\n");
+</pre>
+
+<p>指令 <code>{{ mediawiki.external('a, b') }} = f()</code> 會把函數返回的結果依序代入到方括號裡的變數︰<var>a</var> 會被設成 1 而 <var>b</var> 會被設成 2。</p>
+
+<p>你也可以如同陣列一般取回返回值︰</p>
+
+<pre class="brush: js">var a = f();
+document.write ("A is " + a);
+</pre>
+
+<p>在本例中，<var>a</var> 是內含有值 1 和值 2 的陣列。</p>
+
+<h4 id="在物件上循環" name="在物件上循環">在物件上循環</h4>
+
+<p>你也可以使用分割代入從物件取出資料︰</p>
+
+<pre class="brush: js">var obj = { width: 3, length: 1.5, color: "orange" };
+
+for (let[name, value] in obj) {
+  document.write ("Name: " + name + ", Value: " + value + "&lt;BR&gt;\n");
+}
+</pre>
+
+<p>這個循環會遍歷 <var>obj</var> 物件所有的鍵值對，並顯示這些鍵值對的名稱和值。在本例中，其輸出如下︰</p>
+
+<pre>Name: width, Value: 3
+Name: length, Value: 1.5
+Name: color, Value: orange
+</pre>
+
+<p>在 JavaScript 1.7 中，圍繞著 <code>obj</code> 的 <code>Iterator()</code> 並不是必要的；不過在 <a href="/zh_tw/JavaScript_1.8_新鮮事" title="zh tw/JavaScript 1.8 新鮮事">JavaScript 1.8</a> 則是必要的。這是為了使分割代入可用於陣列（詳見 {{ Bug(366941) }}）。</p>
+
+<h4 id="在物件的陣列中的值上循環" name="在物件的陣列中的值上循環">在物件的陣列中的值上循環</h4>
+
+<p>你可以遍歷物件上的陣列，在每一個物件上取出感興趣的資料欄位︰</p>
+
+<pre class="brush: js">var people = [
+  {
+    name: "Mike Smith",
+    family: {
+      mother: "Jane Smith",
+      father: "Harry Smith",
+      sister: "Samantha Smith"
+    },
+    age: 35
+  },
+  {
+    name: "Tom Jones",
+    family: {
+      mother: "Norah Jones",
+      father: "Richard Jones",
+      brother: "Howard Jones"
+    },
+    age: 25
+  }
+];
+
+for each (let {name: n, family: { father: f } } in people) {
+  document.write ("Name: " + n + ", Father: " + f + "&lt;BR&gt;\n");
+}
+</pre>
+
+<p>本例會取出 <var>name</var> 和 <var>family.father</var> 欄位，存在 <var>n</var> 和 <var>f</var> 裡，並輸出其內容。這會對 <var>people</var> 陣列裡的每一個物件進行處理。其輸出如下︰</p>
+
+<pre>Name: Mike Smith, Father: Harry Smith
+Name: Tom Jones, Father: Richard Jones
+</pre>
+
+<h4 id="忽略部分返回值" name="忽略部分返回值">忽略部分返回值</h4>
+
+<p>你也可以忽略不想要的返回值︰</p>
+
+<pre class="brush: js">function f() {
+  return [1, 2, 3];
+}
+
+var [a, , b] = f();
+document.write ("A is " + a + " B is " + b + "&lt;BR&gt;\n");
+</pre>
+
+<p>執行這個代碼之後，a 變成 1 而 b 變成 3。值 2 會被忽略。你可以按這個方式忽略任意（或全部）的返回值。例如︰</p>
+
+<pre class="brush: js">[,,,] = f();
+</pre>
+
+<h4 id="從正規表達式的比對結果取值" name="從正規表達式的比對結果取值">從正規表達式的比對結果取值</h4>
+
+<p>當正規表達式的 <code><a href="/zh_tw/Core_JavaScript_1.5_參考/全域物件/RegExp/exec" title="zh tw/Core JavaScript 1.5 參考/全域物件/RegExp/exec">exec()</a></code> 方法找到符合結果時，就會返回比對結果的陣列。其中第一項是要比對的完整字串，之後是符合正規表達式中的每一個圓括弧的子字串。分割代入可讓你更簡單的從陣列中取出一部分資料，忽略不需要的比對結果。</p>
+
+<pre class="brush: js">// 使用簡單的正規表達式比對 http / https / ftp 形式的 URL。
+var parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
+if (!parsedURL)
+  return null;
+var [, protocol, fullhost, fullpath] = parsedURL;
+</pre>
+
+<p>{{ languages( { "en": "en/New_in_JavaScript_1.7", "es": "es/Novedades_en_JavaScript_1.7", "fr": "fr/Nouveaut\u00e9s_dans_JavaScript_1.7", "it": "it/Novit\u00e0_in_JavaScript_1.7", "ja": "ja/New_in_JavaScript_1.7", "pl": "pl/Nowo\u015bci_w_JavaScript_1.7" } ) }}</p>

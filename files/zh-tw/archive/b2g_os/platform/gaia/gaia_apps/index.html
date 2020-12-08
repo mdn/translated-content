@@ -1,0 +1,78 @@
+---
+title: Gaia apps
+slug: Archive/B2G_OS/Platform/Gaia/Gaia_apps
+translation_of: Archive/B2G_OS/Platform/Gaia/Gaia_apps
+---
+<div class="summary">
+ <p><span class="seoSummary">Gaia 位在 Firefox OS 的上層，其中包含系統管理功能以及一系列 Firefox OS 內建 apps。所有 Gaia 的原始碼 — 即便系統和鍵盤輸入法 — 都是由 HTML5 (HTML + CSS + JavaScript) 和 Open WebAPIs 技術所建構而成的，本文旨在說明 Gaia 內建的 apps 是如何運作之。</span></p>
+</div>
+<h2 id="Gaia_功能類別">Gaia 功能類別</h2>
+<p>Gaia 內不同的 apps 大致上可以分成以下幾類。</p>
+<div class="note">
+ <p><strong>Note</strong>: 許多 app 運作說明都會連結到 <a href="https://github.com/mozilla-b2g/gaia/">Gaia Github repo</a> 上的 README 頁面，那是因為很多 app 都還在快速開發迭代階段，常常會有更動，所以一直更新 MDN 相當不切實際，如果想要進一步獲取最新的資訊，請再參考各 README 頁面。</p>
+</div>
+<h3 id="平台類">平台類</h3>
+<p>包括系統、設定、螢幕鎖定、建置腳本和藍芽 apps。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7503/platform_team.png" style="width: 355px; height: 269px; margin: 0px auto; display: block;"></p>
+<h4 id="平台類_apps">平台類 apps:</h4>
+<dl>
+ <dt>
+  <a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/System">系統 (System)</a></dt>
+ <dd>
+  System app 是第一個在 <a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Architecture#Firefox_OS_bootup_procedure">Firefox OS 開機程序 </a>中被 Gecko 載入的web app，它負責處理許許多多系統運行工作，所以不算是在一般個別 web app 的範疇內。</dd>
+ <dt>
+  <a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/Browser">瀏覽器 (Browser)</a></dt>
+ <dd>
+  Browser app (現在算是 System 一部分) 當有相關需求時，如網頁瀏覽、搜尋或書籤標記，提供瀏覽器類的功能。</dd>
+ <dt>
+  <a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/Window_Management">視窗管理 (Window Management)</a></dt>
+ <dd>
+  Firefox OS 視窗管理功能 — 包括 app 生命週期和互動、通知、動畫等等 — 由 System app 特定一塊負責。</dd>
+ <dt>
+  <a href="/en-US/Firefox_OS/Platform/Gaia/Gaia_apps/Settings">設定 (Settings)</a></dt>
+ <dd>
+  Settings app 讓使用者設定裝置、回應當前活動呼叫 (帶有 <code>configure</code> 名稱的<a href="/en-US/docs/WebAPI/Web_Activities"> Web 活動</a>)，讓其他 app 可以跳轉到 Settings app 其中的設定面板處理需要的設定任務 (例如說顯示 wifi 設定面板當數據傳輸無法使用時)。</dd>
+</dl>
+<h3 id="通訊類">通訊類</h3>
+<p>包括 Dialer, Contact, SMS apps 與 FTU apps.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7499/comms_team.png" style="width: 317px; height: 246px; margin: 0px auto; display: block;"></p>
+<h3 id="生產力類">生產力類</h3>
+<p>包括 Email, Calendar, 與 Clock apps.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7505/productivity_team.png" style="width: 303px; height: 178px; margin: 0px auto; display: block;"></p>
+<h4 id="生產力類_apps">生產力類 apps:</h4>
+<dl>
+ <dt>
+  <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/calendar/README.md">日歷 (Calendar)</a></dt>
+ <dd>
+  Firefox OS 內建 calendar app.</dd>
+ <dt>
+  <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/clock/README.md">時鐘 (Clock</a>)</dt>
+ <dd>
+  Firefox OS 預設 Clock app，具備鬧鈴、計時等功能</dd>
+ <dt>
+  <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/email/README.md">Email</a></dt>
+ <dd>
+  Gaia e-mail app.</dd>
+</dl>
+<h3 id="媒體類">媒體類</h3>
+<p>包括 Camera, Gallery, Music, 和 Video apps 等等媒體相關功能，如桌布和轉送 DRM 鎖。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7501/media_team.png" style="width: 386px; height: 250px; margin: 0px auto; display: block;"></p>
+<h4 id="媒體類_apps">媒體類 apps:</h4>
+<dl>
+ <dt>
+  <a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia/Gaia_apps/Video">影音 (Video)</a></dt>
+ <dd>
+  Video 是影音媒體撥放器。</dd>
+ <dt>
+  <a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/camera/README.md">相機 (Camera)</a></dt>
+ <dd>
+  Firefox OS 使用者透過相機照相、錄影，它也會回應 type 為pick 的 <a href="/en-US/docs/WebAPI/Web_Activities">Web 活動</a>，讓其他想使用相機功能的 app 使用相機。</dd>
+</dl>
+<h3 id="其他_Gaia_特色功能">其他 Gaia 特色功能</h3>
+<p>除了上述功能，Gaia 還有其他功能如 browser, homescreen, marketplace, test framework, PDF viewer, 和 app manager 等。</p>
+<dl>
+ <dt>
+  <a href="https://github.com/mozilla/pdf.js/blob/master/README.md">pdf.js</a></dt>
+ <dd>
+  pdf.js 是 HTML5 基礎的 PDF 瀏覽器，Gaia 用其來瀏覽 PDF，請注意 pdf.js 的程式碼庫 (repo) 和 Gaia 是分開來的。</dd>
+</dl>

@@ -1,0 +1,30 @@
+---
+title: API
+slug: Mozilla/Add-ons/Firefox_for_Android/API
+tags:
+  - NeedsTranslation
+  - TopicStub
+translation_of: Archive/Add-ons/Legacy_Firefox_for_Android/API
+---
+<p>There are a couple of differences between desktop Firefox and Firefox for Android that are particularly relevant to add-on developers:</p>
+
+<ul>
+ <li>there is no visible XUL in the user interface, so you can't use XUL overlays to create your add-on's UI</li>
+ <li>the <a href="https://developer.mozilla.org/en-US/docs/Code_snippets/Tabbed_browser" title="https://developer.mozilla.org/en-US/docs/Code_snippets/Tabbed_browser"><code>gBrowser</code></a> object does not exist, so you can't use <a href="https://developer.mozilla.org/en-US/docs/XUL/tabbrowser" title="https://developer.mozilla.org/en-US/docs/XUL/tabbrowser"><code>tabbrowser</code></a> to interact with browser tabs</li>
+</ul>
+
+<p>Instead, Firefox for Android provides its own APIs:</p>
+
+<ul>
+ <li><a href="/en-US/docs/Extensions/Mobile/API/NativeWindow" title="/en-US/docs/DOM/en/Extensions/Mobile/API/NativeWindow"><code>NativeWindow</code></a> enables you to manipulate parts of the native Android UI</li>
+ <li><a href="/en-US/docs/Extensions/Mobile/API/BrowserApp" title="/en-US/docs/Extensions/Mobile/API/BrowserApp"><code>BrowserApp</code></a> enables you to interact with browser tabs</li>
+ <li><a href="/en-US/Add-ons/Firefox_for_Android/API/PageActions.jsm">PageActions.jsm</a> allows you to add buttons to the urlbar. {{fx_minversion_inline("34")}}</li>
+ <li><a href="/en-US/docs/Extensions/Mobile/API/Prompt.jsm" title="/en-US/docs/Extensions/Mobile/API/Prompt.jsm"><code>Prompt.jsm</code></a> allows you to easily show native prompts, dialogs, menus, and lists</li>
+ <li><a href="/en-US/docs/Extensions/Mobile/API/Notifications.jsm"><code>Notifications.jsm</code></a> allows you to handle system notifcations</li>
+ <li><a href="/en-US/docs/Extensions/Mobile/API/Home.jsm" title="/en-US/docs/Extensions/Mobile/API/Prompt.jsm"><code>Home.jsm</code></a> allows you to customize the home page</li>
+ <li><a href="/en-US/Add-ons/Firefox_for_Android/API/HomeProvider.jsm" title="/en-US/docs/Extensions/Mobile/API/Prompt.jsm"><code>HomeProvider.jsm</code></a> allows you to store data to show on the home page</li>
+ <li><a href="/en-US/Add-ons/Firefox_for_Android/API/Accounts.jsm" title="/en-US/docs/Extensions/Mobile/API/Prompt.jsm"><code>Accounts.jsm</code></a> allows you to start the Firefox Account set-up process</li>
+ <li><a href="/en-US/Add-ons/Firefox_for_Android/API/JavaAddonManager.jsm" title="/en-US/docs/Extensions/Mobile/API/Prompt.jsm"><code>JavaAddonManager.jsm</code></a> allows you to dynamically load and interface with compiled Java code. {{fx_minversion_inline("42")}}</li>
+</ul>
+
+<p>In these pages we've documented the main functions and properties exposed by these objects. To see all the details, refer to the code at <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js" title="http://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js"><code>browser.js</code></a>.</p>

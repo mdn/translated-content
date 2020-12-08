@@ -1,0 +1,125 @@
+---
+title: JavaScript 1.8 新鮮事
+slug: Web/JavaScript/New_in_JavaScript/1.8
+tags:
+  - JavaScript
+  - JavaScript_version_overviews
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.8
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+<p>{{ Fx_minversion_header(3) }} JavaScript 1.8 是 Gecko 1.9（包含於 <a href="/zh_tw/Firefox_3_技術文件" title="zh tw/Firefox 3 技術文件">Firefox 3</a>）的一部分。相較於 <a href="/zh_tw/JavaScript_1.7_新鮮事" title="zh tw/JavaScript 1.7 新鮮事">JavaScript 1.7</a> 此版只是個小更新，不過部分更新是為了跟進 ECMAScript 4/JavaScript 2。此次的釋出版本包含所有在 <a href="/zh_tw/JavaScript_1.6_新鮮事" title="zh tw/JavaScript 1.6 新鮮事">JavaScript 1.6</a> 和 <a href="/zh_tw/JavaScript_1.7_新鮮事" title="zh tw/JavaScript 1.7 新鮮事">JavaScript 1.7</a> 出現的新機能。</p>
+
+<p>詳見 {{ Bug(380236) }} 以追蹤 JavaScript 1.8 的開發狀態。本文件的狀態可見 {{ Bug(421027) }}。</p>
+
+<h3 id="使用_JavaScript_1.8" name="使用_JavaScript_1.8">使用 JavaScript 1.8</h3>
+
+<p>為了在 HTML 中使用 JavaScript 1.8 的新機能，需要像下面那樣來使用︰</p>
+
+<pre class="brush: js"> &lt;script type="application/javascript;version=1.8"&gt; ... 你的代碼 ... &lt;/script&gt;
+</pre>
+
+<p>另一個方式（不推薦）是使用已廢棄的 <code>&lt;script&gt;</code> 語言屬性並把他定義為 "JavaScript1.8"。</p>
+
+<p>如果是使用 <a href="/zh_tw/SpiderMonkey/JavaScript_shell_入門" title="zh tw/SpiderMonkey/JavaScript shell 入門">JavaScript shell</a>，JavaScript XPCOM 元件，或 XUL <code>&lt;script&gt;</code> 元件，會自動（{{ Bug(381031) }}, {{ Bug(385159) }}）使用最新的 JS 版本（在 Mozilla 1.9 中是 JS1.8）。</p>
+
+<p>如果某一機能需要使用到新關鍵字 "yield" 和 "let"，你就要指定 1.7 以上的版本，因為現存的代碼可能會使用這些關鍵字作為變數或函數名。至於未使用到新關鍵字的機能（例如產生器表達式）可以直接使用，不需指定 JavaScript 版本。</p>
+
+<h3 id="表達式化簡" name="表達式化簡">表達式化簡</h3>
+
+<p>表達式化簡（Expression closures）提供類似 典型 <a class="external" href="http://en.wikipedia.org/wiki/Lambda_calculus#Lambda_calculus_and_programming_languages">Lambda 記法</a> 的語法，除了用於簡單函數的簡寫以外，並未帶來其他新機能。</p>
+
+<p><a href="/zh_tw/JavaScript_1.7_新鮮事" title="zh tw/JavaScript 1.7 新鮮事">JavaScript 1.7</a> 及早期版本︰</p>
+
+<pre class="brush: js"> function(x) { return x * x; }
+</pre>
+
+<p>JavaScript 1.8︰</p>
+
+<pre class="brush: js"> function(x) x * x
+</pre>
+
+<p>這個語法可讓你省略花括弧和 'return' 語法 - 使這些隱含化。以這種風格編寫的代碼除了簡短以外，並沒有其他額外的優點。</p>
+
+<p><strong>範例:</strong></p>
+
+<p>連結事件接收器的簡寫︰</p>
+
+<pre class="brush: js"> document.addEventListener("click", function() false, true);
+</pre>
+
+<p>在來自 <a href="/zh_tw/JavaScript_1.6_新鮮事" title="zh tw/JavaScript 1.6 新鮮事">JavaScript 1.6</a> 的 some 中使用這個記法︰</p>
+
+<pre class="brush: js"> elems.some(function(elem) elem.type == "text");
+</pre>
+
+<h3 id="產生器表達式" name="產生器表達式">產生器表達式</h3>
+
+<p>This addition allows you to simply create generators (which were introduced in <a href="/en/New_in_JavaScript_1.7" title="en/New_in_JavaScript_1.7">JavaScript 1.7</a>). Typically you would have to create a custom function which would have a yield in it, but this addition allows you to use array comprehension-like syntax to create an identical generator statement.</p>
+
+<p>In <a href="/en/New_in_JavaScript_1.7" title="en/New_in_JavaScript_1.7">JavaScript 1.7</a>, you might write something like the following in order to create a custom generator for an object:</p>
+
+<pre class="brush: js"> function add3(obj) {
+   for ( let i in obj )
+     yield i + 3;
+ }
+
+ let it = add3(someObj);
+ try {
+   while (true) {
+     document.write(it.next() + "&lt;br&gt;\n");
+   }
+ } catch (err if err instanceof StopIteration) {
+   document.write("End of record.&lt;br&gt;\n");
+ }
+</pre>
+
+<p>In JavaScript 1.8, you can circumvent having to create a custom generator function by using a generator expression instead:</p>
+
+<pre class="brush: js"> let it = (i + 3 for (i in someObj));
+ try {
+   while (true) {
+     document.write(it.next() + "&lt;br&gt;\n");
+   }
+ } catch (err if err instanceof StopIteration) {
+   document.write("End of record.&lt;br&gt;\n");
+ }
+</pre>
+
+<p>Generator expressions can also be passed in, as values, to a function. This is particularly noteworthy since generators aren't run until they are absolutely needed (unlike for typical array comprehension situations, where the arrays are constructed ahead of time). An example of the difference can be seen here:</p>
+
+<p>Using JavaScript 1.7 Array Comprehension</p>
+
+<pre class="brush: js"> handleResults([ i for ( i in obj ) if ( i &gt; 3 ) ]);
+
+ function handleResults( results ) {
+   for ( let i in results )
+     // ...
+ }
+</pre>
+
+<p>Using JavaScript 1.8 Generator Expressions</p>
+
+<pre class="brush: js"> handleResults( i for ( i in obj ) if ( i &gt; 3 ) );
+
+ function handleResults( results ) {
+   for ( let i in results )
+     // ...
+ }
+</pre>
+
+<p>The significant difference between the two examples being that by using the generator expressions, you would only have to loop over the 'obj' structure once, total, as opposed to once when comprehending the array, and again when iterating through it.</p>
+
+<h3 id="陣列更進一步的擴充" name="陣列更進一步的擴充">陣列更進一步的擴充</h3>
+
+<p>There are two new iterative <code><a href="/en/Core_JavaScript_1.5_Reference/Global_Objects/Array" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Array">Array</a></code> methods included in JavaScript 1.8, specifically:</p>
+
+<ul>
+ <li><code><a href="/En/Core_JavaScript_1.5_Reference/Global_Objects/Array/Reduce" title="en/Core_JavaScript_1.5_Reference/Objects/Array/reduce">reduce()</a></code> - runs a function on every item in the array and collects the results from previous calls.</li>
+ <li><code><a href="/En/Core_JavaScript_1.5_Reference/Global_Objects/Array/ReduceRight" title="en/Core_JavaScript_1.5_Reference/Objects/Array/reduceRight">reduceRight()</a></code> - runs a function on every item in the array and collects the results from previous calls, but in reverse.</li>
+</ul>
+
+<h3 id="for..in_分割代入的變更" name="for..in_分割代入的變更">for..in 分割代入的變更</h3>
+
+<p>One change that occurred in the release of JavaScript 1.8 was a bug fix related to the key/value <a class="internal" href="/en/New_in_JavaScript_1.7" title="En/New in JavaScript 1.7">destructuring of arrays</a> introduced in JavaScript 1.7. Previously it was possible to destructure the keys/values of an array by using for ( var [key, value] in array ). However that made it impossible to destructure the values of an array - that were arrays. This has been resolved now. ({{ Bug(366941) }}).</p>
+
+<p>{{ languages( { "en": "en/New_in_JavaScript_1.8", "es": "es/Novedades_en_JavaScript_1.8", "fr": "fr/Nouveaut\u00e9s_dans_JavaScript_1.8", "ja": "ja/New_in_JavaScript_1.8", "pl": "pl/Nowo\u015bci_w_JavaScript_1.8", "pt": "pt/Novidades_no_Javascript_1.8", "ko": "ko/New_in_JavaScript_1.8" } ) }}</p>

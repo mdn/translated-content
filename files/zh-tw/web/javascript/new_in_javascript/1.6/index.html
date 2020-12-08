@@ -1,0 +1,87 @@
+---
+title: JavaScript 1.6 新鮮事
+slug: Web/JavaScript/New_in_JavaScript/1.6
+tags:
+  - E4X
+  - JavaScript
+  - JavaScript_version_overviews
+  - 所有類別
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.6
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>JavaScript 1.6 推出了幾項新機能：E4X、幾個新的 <code>Array</code> 方法、以及 Array 與 String 的通用化。</p>
+
+<p><a href="/zh_tw/Firefox_1.5" title="zh_tw/Firefox_1.5">Firefox 1.5</a> 或更新版的瀏覽器支援 JavaScript 1.6。</p>
+
+<h3 id="E4X" name="E4X">E4X</h3>
+
+<p>ECMAScript for XML（<a href="/zh_tw/E4X" title="zh_tw/E4X">E4X</a>）是個在 <a href="/zh_tw/JavaScript" title="zh_tw/JavaScript">JavaScript</a> 內建立並處理 <a href="/zh_tw/XML" title="zh_tw/XML">XML</a> 內容的強力技術。我們將持續改進我們對 E4X 的支援，包括新增與既有的 <a href="/zh_tw/DOM" title="zh_tw/DOM">DOM</a> 進行透明化的整合，不過建立以 XML 為基礎的 Web 應用程式的開發者已可受益於 Firefox 1.5 對 E4X 的支援。</p>
+
+<p>使用 E4X 時還是可以使用標準的 MIME 類型：</p>
+
+<pre>&lt;script type="text/javascript"&gt;
+</pre>
+
+<p>不過，E4X 語法可能會和把 Script 放進 HTML 註解以避免舊瀏覽器讀取的現行方式（<code>&lt;!--...--&gt;</code>）發生衝突。E4X 也有可能與把 Script 放進 XML CDATA 區段（<code>&lt;![CDATA{{ mediawiki.external('...') }}]&gt;</code>）讓 Script 可以直接使用 "&lt;" 和 "&gt;" 符號（這並不適用於 HTML）的現行方式發生衝突。如果你不斷的見到莫名其妙的語法錯誤，那就把 "; e4x=1" 加到 MIME 類型裡：</p>
+
+<pre>&lt;script type="text/javascript; e4x=1"&gt;
+</pre>
+
+<p>注意，擴充套件中的 Script 一定會把 HTML 註解當作 E4X 的語法來處理。也就是說，"e4x=1" 是預設的。</p>
+
+<p>E4X 已在 <a href="/zh_tw/E4X/使用_E4X_處理_XML" rel="internal" title="zh tw/E4X/使用 E4X 處理 XML">使用 E4X 處理 XML</a> 一文中說明。</p>
+
+<h3 id="Array_的擴充" name="Array_的擴充">Array 的擴充</h3>
+
+<p>在此有七個新的 <code><a href="/zh_tw/Core_JavaScript_1.5_參考/物件/Array" title="zh tw/Core JavaScript 1.5 參考/物件/Array">Array</a></code> 方法，並且可以分成兩大類，項目定位方法以及迭代方法。項目定位方法有：</p>
+
+<ul>
+ <li><code><a href="/zh_tw/Core_JavaScript_1.5_參考/物件/Array/indexOf" title="zh tw/Core JavaScript 1.5 參考/物件/Array/indexOf">indexOf()</a></code> - 返回第一次出現指定項目的索引。</li>
+ <li><code><a href="/zh_tw/Core_JavaScript_1.5_參考/物件/Array/lastIndexOf" title="zh tw/Core JavaScript 1.5 參考/物件/Array/lastIndexOf">lastIndexOf()</a></code> - 返回最後一次出現指定項目的索引。</li>
+</ul>
+
+<p>迭代方法有：</p>
+
+<ul>
+ <li><code><a href="/zh_tw/Core_JavaScript_1.5_參考/物件/Array/every" title="zh tw/Core JavaScript 1.5 參考/物件/Array/every">every()</a></code> - 對陣列中的每一個項目執行函數，如果函數返回 true 就繼續下去。如果每一個項目都返回 true，就返回 true。</li>
+ <li><code><a href="/zh_tw/Core_JavaScript_1.5_參考/物件/Array/filter" title="zh tw/Core JavaScript 1.5 參考/物件/Array/filter">filter()</a></code> - 對陣列中的每一個項目執行函數，並以陣列返回函數執行結果為 true 的項目。</li>
+ <li><code><a href="/zh_tw/Core_JavaScript_1.5_參考/物件/Array/forEach" title="zh tw/Core JavaScript 1.5 參考/物件/Array/forEach">forEach()</a></code> - 對陣列中的每一個項目執行函數。</li>
+ <li><code><a href="/zh_tw/Core_JavaScript_1.5_參考/物件/Array/map" title="zh tw/Core JavaScript 1.5 參考/物件/Array/map">map()</a></code> - 對陣列中的每一個項目執行函數，並以陣列返回執行結果。</li>
+ <li><code><a href="/zh_tw/Core_JavaScript_1.5_參考/物件/Array/some" title="zh tw/Core JavaScript 1.5 參考/物件/Array/some">some()</a></code> - 對陣列中的每一個項目執行函數，如果函數返回 false 就繼續下去。如果有一個項目返回 true，就返回 true。</li>
+</ul>
+
+<p>閱讀 <a href="/zh_tw/Core_JavaScript_1.5_教學/陣列的運用#於_JavaScript_1.6_引入" rel="internal" title="zh tw/Core JavaScript 1.5 教學/陣列的運用#於 JavaScript 1.6 引入">陣列的運用</a> 以取得更多資訊，或見 Nicholas C. Zakas 的文章，<span class="exlink"><a class="external" href="http://www.webreference.com/programming/javascript/ncz/column4/index.html" title="http://www.webreference.com/programming/javascript/ncz/column4/index.html">Mozilla's New Array Methods</a></span>。</p>
+
+<h3 id="Array_.E8.88.87_String_.E5.85.B1.E9.80.9A_.28generics.29" name="Array_.E8.88.87_String_.E5.85.B1.E9.80.9A_.28generics.29">Array 與 String 的通用化</h3>
+
+<p>有時候你會想要把陣列的方法套用在字串上。這樣做的話，便是把字串視為字元的陣列。比如說，如果要檢查變數 <var>str</var> 裡面的每個字元都是字母，你就會這樣寫：</p>
+
+<pre>function isLetter(character) {
+  return (character &gt;= "a" &amp;&amp; character &lt;= "z");
+}
+
+if (Array.prototype.every.call(str, isLetter))
+  alert("字串 '" + str + "' 只有包含字母！");
+</pre>
+
+<p>這樣的寫法相當耗事，所以 JavaScript 1.6 有比較簡短的寫法：</p>
+
+<pre>if (Array.every(str, isLetter))
+  alert("字串 '" + str + "' 只有包含字母！");
+</pre>
+
+<p>同理，你可以把 String 方法用在任何物件上：</p>
+
+<pre>var num = 15;
+alert(String.replace(num, /5/, '2'));
+</pre>
+
+<h3 id=".E5.8F.A6.E5.A4.96.E5.8F.83.E8.A6.8B" name=".E5.8F.A6.E5.A4.96.E5.8F.83.E8.A6.8B">參閱</h3>
+
+<ul>
+ <li>自 <a href="/zh_tw/Firefox_2_技術文件" title="zh_tw/Firefox_2_技術文件">Firefox 2</a> 起開始支援的 <a href="/zh_tw/JavaScript_1.7_新鮮事" title="zh_tw/JavaScript_1.7_新鮮事">JavaScript 1.7</a>。</li>
+ <li><a href="/zh_tw/Core_JavaScript_1.5_教學/陣列的運用#近似陣列的物件的運用" rel="internal" title="zh tw/Core JavaScript 1.5 教學/陣列的運用#近似陣列的物件的運用">近似陣列的物件的運用</a>。</li>
+</ul>
+
+<p>{{ languages( { "en": "en/New_in_JavaScript_1.6", "es": "es/Novedades_en_JavaScript_1.6", "fr": "fr/Nouveaut\u00e9s_dans_JavaScript_1.6", "ja": "ja/New_in_JavaScript_1.6", "pl": "pl/Nowo\u015bci_w_JavaScript_1.6", "ru": "ru/\u041d\u043e\u0432\u043e\u0435_\u0432_JavaScript_1.6", "zh-cn": "cn/New_in_JavaScript_1.6" } ) }}</p>

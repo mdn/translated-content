@@ -1,0 +1,46 @@
+---
+title: WebIDE 錯誤排除
+slug: Tools/WebIDE/Troubleshooting
+translation_of: Archive/WebIDE/Troubleshooting
+---
+<h2 id="連接_Firefox_OS_裝置">連接 Firefox OS 裝置</h2>
+
+<p>如果您連接了 Firefox OS 裝置，但該裝置沒有出現在 WebIDE 裡，有些事情您可以先試試：</p>
+
+<ul>
+ <li>檢查 Firefox OS 版本：請確定您的 Firefox OS（Boot2Gecko）版本是 1.2 以上，方能使用 WebIDE。版本號碼可至「設定 &gt; <code>裝置資訊」下的「軟體」查詢。如果您的版本太舊，可考慮依循</code> <a href="/en-US/Firefox_OS/Developer_phone_guide">developer phone guide</a> 的說明升級。</li>
+ <li>啟用遠端除錯工具：請至「設定」中「裝置資訊 &gt; 更多資訊 &gt; 開發者」中
+  <ul>
+   <li>Firefox OS 1.3 以前：勾選「Remote Debugging」</li>
+   <li>Firefox OS 1.4 以後：「Remote Debugging」選單中有「僅 ADB」及「ADB 與開發工具」兩個選項，請選擇「ADB 與開發工具」。</li>
+  </ul>
+ </li>
+ <li>停用螢幕鎖：in the Settings app on the device, go to <code>Screen Lock</code> and unchecking the <code>Lock Screen</code> checkbox. This is a good idea because when the screen gets locked, the phone connection gets lost, meaning it is no longer available for debugging.</li>
+ <li>不要同時在電腦上連接 Firefox OS 手機與另一隻 Android 手機。</li>
+ <li>if <a href="/en-US/docs/Tools/WebIDE#Custom_runtimes">you disabled the ADB Addon Helper</a>, did you successfully run the <code>adb forward</code> command?</li>
+ <li>if you use Linux, make sure you added add a <code>udev</code> rules file, as documented in step 3 of this guide to <a class="external external-icon" href="http://developer.android.com/tools/device.html#setting-up">setting up an Android device</a>. The <code>idVendor</code> attribute to use for the Geeksphone is "05c6", and <a class="external external-icon" href="http://developer.android.com/tools/device.html#VendorIds">this page</a> lists other <code>idVendor</code> values.</li>
+ <li>if you use Windows:
+  <ul>
+   <li>you need to install drivers, as documented in step 3 of this guide to <a class="external external-icon" href="http://developer.android.com/tools/device.html#setting-up">setting up an Android device</a>. You can find drivers for Geeksphone devices on the <a class="external external-icon" href="http://downloads.geeksphone.com/">Geeksphone web site</a>. Windows 8 by default will not let you install unsigned drivers. See this tutorial on <a class="external-icon external" href="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html" title="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html">"How to install an unsigned driver on Windows 8"</a>.</li>
+   <li>if the WebIDE can't see your device after following all the steps, you may have to <a class="external-icon external" href="http://blog.fh-kaernten.at/wehr/?p=1182">edit adb_usb.ini</a>.</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="為認證過的應用程式除錯">為認證過的應用程式除錯</h2>
+
+<p>如果您想為認證過的應用程式（包括內建的應用程式）除錯，請參考 <a href="/en-US/docs/Tools/WebIDE#Debugging_certified_apps">debugging certified apps</a> 中的說明。</p>
+
+<h2 id="Enable_logging">Enable logging</h2>
+
+<p>You can also enable verbose logging to gather diagnostics:</p>
+
+<ol start="1" style="list-style-type: decimal;">
+ <li>visit <a class="external external-icon" href="http://kb.mozillazine.org/About:config">about:config</a>, and add a new preference called <span class="message"><span class="content"><code><span class="email">extensions.adbhelper@mozilla.org.sdk</span>.console.logLevel</code>, with the string value <code>all, and set </code></span></span>extensions.adbhelper@mozilla.org.debug<span class="message"><span class="content"><code> to true</code></span></span></li>
+ <li>In the <a class="external external-icon" href="https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons">Add-ons Manager</a>, disable and then re-enable the ADB Helper add-on.</li>
+ <li>Open the <a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">Browser Console</a> and you'll now see console messages prefixed with <code>adb</code>. If the messages don't mean anything to you, <a href="/en-US/docs/Tools/WebIDE/Troubleshooting#Get_help">ask for help</a>.</li>
+</ol>
+
+<h2 id="尋求協助">尋求協助</h2>
+
+<p>請上 <a class="external external-icon" href="https://wiki.mozilla.org/DevTools/GetInvolved#Communication">IRC 的 #devtools</a> 頻道尋求協助。</p>

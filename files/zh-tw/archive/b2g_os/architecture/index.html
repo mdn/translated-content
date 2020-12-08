@@ -1,0 +1,717 @@
+---
+title: Firefox OS 架構
+slug: Archive/B2G_OS/Architecture
+translation_of: Archive/B2G_OS/Architecture
+---
+<div class="summary">
+<p><span class="seoSummary">本文件是 Firefox OS 平台架構的初步概要介紹，將會簡單地向您介紹 Firefox OS 的重要概念，並解釋元件間如何互動。</span></p>
+</div>
+
+<div class="note">
+<p><strong>注意：</strong>Firefox OS 仍算是開發中的產品。本文說明的架構仍非最後確定的架構，隨時可能修改。</p>
+</div>
+
+<h2 id="Firefox_OS_術語">Firefox OS 術語</h2>
+
+<p>在閱讀 Firefox OS 技術文件之前，建議先了解以下的詞彙:</p>
+
+<dl>
+ <dt>B2G</dt>
+ <dd>Boot to Gecko 的縮寫。</dd>
+ <dt>Boot to Gecko</dt>
+ <dd>Firefox OS 作業系統的工程代號。此代號常常用以代表 Firefox OS。因為在本專案還未定下正式名稱之前，此代號已經用了很長的一段時間，因此常常用以代表 Firefox OS。</dd>
+ <dt>Firefox OS</dt>
+ <dd>Firefox OS 即是將 Mozilla (及其 OEM 夥伴) 的品牌與服務，套用至 <strong>Boot to Gecko</strong> 的基礎之上開發而得的最終產品。</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Gaia" title="/en-US/docs/Mozilla/Firefox_OS/Gaia">Gaia</a></dt>
+ <dd>Firefox OS 平台的使用者介面 (UI)。 在啟動 Firefox OS 之後，都是透過 Gaia 層產出螢幕上的任何東西。Gaia 建構出鎖定畫面、主畫面，以及大家預期智慧型手機所應提供的其他標準 App。Gaia 完全使用 HTML、CSS、JavaScript 實作而成。透過實作在 Gecko 層的開放 Web API，與其底層的作業系統溝通。第三方 App 均可安裝於 Gaia 層。</dd>
+ <dt><a href="/en-US/docs/Gecko" title="/en-US/docs/Accessibility/AT-APIs/Gecko">Gecko</a></dt>
+ <dd>Firefox OS App 的執行環境 (Runtime)，也就是本層可支援所有的開放標準：HTML、CSS、JavaScript。本層另必須確保這些 API 可正確運作於 Gecko 支援的所有 OS。意即 Gecko 另包含了網路連線堆疊、圖形堆疊、配置引擎、JavaScript 虛擬機器、移植層。</dd>
+ <dt><a href="/en-US/docs/Mozilla/Firefox_OS/Gonk" title="/en-US/docs/Mozilla/Firefox_OS/Gonk">Gonk</a></dt>
+ <dd>Gonk 是 Firefox OS 平台的底層作業系統，是由 Linux 核心 (以 <a href="http://source.android.com/">Android Open Source Project</a> 為架構)，與使用者空間的硬體抽象層 (Hardware abstraction layer，HAL) 所組成。核心以及許多使用者空間的函式庫，均來自常見的開放源碼專案，如 Linux、libusb、bluez 等。HAL 的某些部分是與 AOSP 共享，如 GPS 或相機。你可將 Gonk 當成是簡單的 Linux 分支版本。Gonk 又是 Gecko 的移植目標；意即有一套 Gecko 可在 Gonk 上執行，就像是 Gecko 也有 Mac OS X、Windows、Android 等版本。因為 Firefox OS 可完整控制 Gonk，所以某些不能開放給其他 OS 用的介面，還是可開發給 Gecko 使用。舉例來說，Gecko 可直接存取 Gonk 的完整電話功能堆疊，並於 Gonk 上顯示緩衝區 (Frame buffer)，但是其他 OS 不能進行類似的存取。</dd>
+ <dt><a name="Jank">Jank</a></dt>
+ <dd>此一詞彙常見於行動 App 領域，指在 APP 中執行了緩慢或沒有效率的程式碼，進而阻礙了 UI 更新並發商系統延遲或無回應的情形。Gaia 開發者使用不同的最佳化方法，要儘力避免此狀況發生。</dd>
+</dl>
+
+<h2 id="整體架構示意圖">整體架構示意圖</h2>
+
+<p>下圖比較了專利平台與 Firefox OS 之間的架構。</p>
+
+<p><img alt="on the left is a native mobile architecture stack, on the right is the Firefox OS architecture. they are similarm except that the native stack is all proprietary device functionality, and the Firefox OS stack is all done with open source and web technologies." src="https://mdn.mozillademos.org/files/9487/general-architecture.png" style="display: block; height: 488px; margin: 0px auto; width: 997px;"></p>
+
+<p>Firefox OS 即減去了 OS 與 App 層之間的原生 API 層。這種統合式的設計可減輕平台負擔並簡化安全機制，卻又不致犧牲效能，也不會影響智慧型手機的使用體驗。</p>
+
+<ol>
+ <li><a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Gaia">Gaia</a> 作為裝置的核心 Web App 與 UI 層，並全以 HTML5、CSS、JavaScript 撰寫而成，並有許多 API 可供 UI 程式碼存取手機硬體與 Gecko 功能。</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Gecko">Gecko</a> 即為 Firefox OS 的 Web 引擎與表現層 (Presentation layer)，作為 Web 內容與底層裝置的之間介面，進而將硬體接上 HTML。Gecko 亦提供 HTML5 剖析 (Parsing) 與繪圖引擎，並透過程式設計的方式，以安全的 Web API 存取硬體功能、更新作業，以及其他核心服務。</li>
+ <li><a href="https://developer.mozilla.org/en-US/Firefox_OS/Platform/Gonk">Gonk</a> 是 Firefox OS 堆疊中的核心層級元件，作為 Gecko 與底層硬體之間的介面。Gonk 可控制底層硬體，並將硬體功能告知 Gecko 中建構的 Web API。Gonk 可視為「黑盒子」，暗自進行所有複雜又零碎的背景作業，以於硬體層制定請求，進而控制行動裝置。</li>
+ <li>行動裝置，就是執行 Firefox OS 的行動電話硬體。OEM 廠商則負責提供行動裝置。</li>
+</ol>
+
+<h2 id="特殊_Firefox_OS_架構">特殊 Firefox OS 架構</h2>
+
+<p><img alt="Firefox OS Architecture" src="/files/4605/FirefoxOS.png" style="display: block; height: 915px; margin: 0px auto; width: 754px;"></p>
+
+<h2 id="Firefox_OS_開機流程">Firefox OS 開機流程</h2>
+
+<p>本段將說明 Firefox OS 的開機流程，包含整個流程所牽涉的部份，以及相關部分在系統裡的位置。流程順序大致如下：最先從核心空間裡的開機載入器 (Bootloader) 開始，到原生程式碼中開始程序，進入 B2G 再到使用者空間的 Gecko，最後到 Gecko 裡的系統 App、視窗管理器、主畫面 App。而其他 App 也同樣依照上述程序執行。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7491/bootup.png" style="height: 1979px; width: 2112px;"></p>
+
+<h3 id="開機程序">開機程序</h3>
+
+<p>在首次啟動 Firefox OS 裝置時，就會於主要的開機載入器 (bootloader) 中開始作業。自此，就如同一般作業系統程序，更高一階的開機相關載入器會載入執行，然後往上更高一階的載入器又會被接續執行，如此下去形成一串開機載入流程鏈，直到最後程序就會將執行權交到 Linux 核心。</p>
+
+<p>關於開機程序有幾點需要注意：</p>
+
+<ul>
+ <li>開機載入器通常顯示裝置開機時的第一個畫面，一般為硬體製造商的標誌。</li>
+ <li>開機載入器可將映像檔 (Image) 建構於裝置之中。不同的裝置另使用不同的通訊協定。大部分的手機均使用 <a href="http://android-dls.com/wiki/index.php?title=Fastboot">fastboot 協定</a>。但 Samsung Galaxy II 使用 odin 協定。</li>
+ <li>在開機流程的尾聲，往往會載入數據機映像檔，並於數據機處理器上執行之。各款裝置的方法均有所不同。</li>
+</ul>
+
+<h3 id="Linux_核心">Linux 核心</h3>
+
+<p>Gonk 使用 Linux 核心的版本，與 Android 開放源碼專案 (<a href="http://source.android.com/" title="http://source.android.com/">Android Open Source Project，AOSP</a>) 所衍生使用的版本非常相似，但是並未沿用幾項 AOSP 所進行的修改。除外，雖然 Lunix 基本上已經相當穩定，但仍有些製造商會自行修改。</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Linux_startup_process" title="http://en.wikipedia.org/wiki/Linux_startup_process">Linux 的啟動程序</a>已經可在網路上找到相當詳盡的文件說明，所以在此不再贅述。</p>
+
+<p>Linux 核心會啟動一些基本的程序 (Process)。在執行 init.rc 中定義的程序後，會再執行 <a href="https://github.com/mozilla-b2g/gonk-misc/blob/master/init.b2g.rc">init.b2g.rc</a> 以啟動基本核心程序，如 <code>b2g</code> (Firefox OS 基礎程序，內含 Gecko) 以及 <code>rild</code> (通話功能的相關程序，各晶片組多有不同)，請見下方所述細節。和大部分的 Unix 作業系統一樣，最後會啟動使用者空間 (Userspace) 程序。</p>
+
+<p>在啟動 <code>init </code>程序之後，Linux 核心就會處理由使用者空間傳來的系統呼叫，並中斷來自於硬體裝置的類似呼叫。許多硬體功能均透過 <a href="http://en.wikipedia.org/wiki/Sysfs" title="http://en.wikipedia.org/wiki/Sysfs"><code>sysfs </code></a>揭露給使用者空間，以下便是 Gecko 讀取電池狀態的<a href="https://github.com/cgjones/mozilla-central/blob/master/hal/gonk/GonkHal.cpp#L277" title="https://github.com/cgjones/mozilla-central/blob/master/hal/gonk/GonkHal.cpp#L277">程式碼片段</a>：</p>
+
+<pre class="brush:cpp;">FILE *capacityFile = fopen("/sys/class/power_supply/battery/capacity", "r");
+double capacity = dom::battery::kDefaultLevel * 100;
+if (capacityFile) {
+  fscanf(capacityFile, "%lf", &amp;capacity);
+  fclose(capacityFile);
+}</pre>
+
+<h3 id="更多有關_init_程序">更多有關 init 程序</h3>
+
+<p>Gonk 中的 <code>init</code> 程序，將處理必要的檔案系統並產生系統服務，之後就如同程序管理一般繼續待命，並將編譯指令碼 (也就是 <code>init*.rc</code> 檔案)；指令碼內的指令則說明在啟動不同服務時所應進行的作業。</p>
+
+<p><code>init </code>程序必須處理一個相當關鍵的作業，即啟動 <code>b2g</code> 程序；這也是 Firefox OS 的核心。</p>
+
+<p>以下為 <code>init.rc</code> 中用以啟動 b2g 的程式碼：</p>
+
+<pre>service b2g /system/bin/b2g.sh
+    class main
+    onrestart restart media</pre>
+
+<div class="note">
+<p><strong>注意：</strong>Firefox OS 與 Android 的 init.rc 之間的差異，將各款裝置而有所不同。有時候只是附加 <code>init.b2g.rc</code>，但有時修改的幅度甚大。</p>
+</div>
+
+<h2 id="使用者空間_(Userspace)_的程序架構">使用者空間 (Userspace) 的程序架構</h2>
+
+<p>現在讓我們來看看高階一點的部分，到底Firefox OS的各個元件之間是如何運作互動的。下圖所描述的是Firefox OS的主要使用者空間程序。</p>
+
+<p>接著可進一步了解 Firefox OS 不同元件是如何運作互動。下圖呈現 Firefox OS 的主要使用者空間程序。</p>
+
+<p><img alt="Userspace diagram" src="https://developer.mozilla.org/files/3849/B2G%20userspace%20architecture.svg" style="float: right; height: 491px; position: relative; width: 520px;"></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<div class="note">
+<p><strong>注意：</strong>由於 Firefox OS 尚處於開發階段，所以此示意圖可能隨時修改而非完全正確。</p>
+</div>
+
+<p>b2g 程序是主要的系統程序，能以高權限存取大部分的硬體；b2g 可溝通數據機、畫出顯示緩衝區 (Framebuffer)，並與 GPS 或相機等硬體溝通。在系統內部，b2g 則執行 Gecko 層 (即以 libxul.so 所實作)。另可參考 <a href="#Gecko">Gecko</a> 以了解 Gecko 層的運作方式，以及 b2g 與 Gecko 層溝通的方法。</p>
+
+<h3 id="b2g">b2g</h3>
+
+<p>b2g 程序會生成許多低權限的內容程序 (Content process)，並透過這些程序來載入 Web 的 App 與內容。這些程序會再透過訊息傳遞系統「<a href="/en-US/docs/IPDL" title="/en-US/docs/IPDL">IPDL</a>」溝通 Gecko 伺服器。</p>
+
+<p><code>b2g 程序所執行</code>的 libxul，即參照 <code>b2g/app/b2g.js </code>取得預設偏好設定。透過偏好設定，程序將開啟上述的 HTML 檔案「<code>b2g/chrome/content/shell.html</code>」，即於 <code>omni.ja</code> 檔案中編譯而得。而 <code>shell.html</code> 則包含了 <code>b2g/chrome/content/shell.js</code> 檔案，將觸發 Gaia 的「<code>system」</code>這個 App。</p>
+
+<h3 id="rild">rild</h3>
+
+<p><code>rild 為銜接</code>數據機處理器的介面，也是用以建構<strong>無線介面層 (Radio Interface Layer，RIL)</strong> 的常駐程式 (Daemon)。往往是由硬體製造商所撰寫的專屬程式碼，以溝通自家的數據機硬體。<code>rild 可讓用戶端</code>程式碼連接 <code>rild 本身</code>綁定的 Unix-domain socket。可經由以下類似的 <code>init 指令碼</code>啟動之：</p>
+
+<pre>service ril-daemon /system/bin/rild
+    socket rild stream 660 root radio</pre>
+
+<h3 id="rilproxy">rilproxy</h3>
+
+<p>在 Firefox OS 中，<code>rild</code> 用戶端即屬於 <code>rilproxy</code> 程序，作為 <code>rild</code> 與 <code>b2g</code> 之間不具功能的傳送代理dumb forwarding proxy。為何需要此代理伺服器，就必須從實作細節來說明了。但簡單來說，proxy 確實有其存在的必要。<a href="https://github.com/mozilla-b2g/rilproxy" title="https://github.com/mozilla-b2g/rilproxy"><code>可到 GitHub 上找到 rilproxy</code> 原始碼</a>。</p>
+
+<h3 id="mediaserver">mediaserver</h3>
+
+<p><a href="https://github.com/android/platform_frameworks_base/tree/ics-mr0-release/media/libmediaplayerservice" title="https://github.com/android/platform_frameworks_base/tree/ics-mr0-release/media/libmediaplayerservice"><code>mediaserver</code> 程序</a>用以控制音訊與視訊的播放作業。Gecko 透過 Android 的遠端程序呼叫 (Remote Procedure Call，RPC) 和其溝通。某些可由 Gecko 撥放的媒體檔案 (如 OGG Vorbis 音訊、OGG Theora 視訊、<a href="http://www.webmproject.org/about/" title="http://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;ved=0CDUQFjAA&amp;url=http%3A%2F%2Fwww.webmproject.org%2F&amp;ei=8Q84UOnoMoHH6wHZ44DwBA&amp;usg=AFQjCNHK9j6wyhUful5RmKCpU6b8GDfpYQ&amp;sig2=tCl8VxL3mCvrH86EyOwO_A">WebM</a> 視訊等)，均是由 Gecko 解碼後直接傳送給 <code>mediaserver</code> 程序。其他的媒體檔案則是交由 <code>libstagefright</code> 解碼。<code>libstagefright 可存取特定</code>編碼與硬體編碼器 (Hardware encoder)。</p>
+
+<div class="note">
+<p><strong>注意：</strong>mediaserver 程序為 Firefox OS 的「暫時性」元件，主要是協助早期的開發作業。預計最快在 Firefox OS 2.0 階段就會移除。</p>
+</div>
+
+<h3 id="netd">netd</h3>
+
+<p><code>netd </code>程序可用來設定網路介面。</p>
+
+<h3 id="wpa_supplicant">wpa_supplicant</h3>
+
+<p><code>wpa_supplicant</code> 程序為標準 UNIX 樣式常駐程式，可處理 WiFi 存取點的連線作業。</p>
+
+<h3 id="dbus-daemon">dbus-daemon</h3>
+
+<p>dbus-daemon 用以建構 <a href="http://www.freedesktop.org/wiki/Software/dbus" title="http://www.freedesktop.org/wiki/Software/dbus">D-Bus</a> 訊息匯流系統，可供 Firefox OS 進行藍牙通訊作業。</p>
+
+<h2 id="Gecko">Gecko</h2>
+
+<p>如前所述，<a href="https://developer.mozilla.org/en-US/docs/Gecko" title="/en-US/docs/Gecko">Gecko</a> 即由 Web 標準 (<a href="https://developer.mozilla.org/en-US/docs/HTML" title="/en-US/docs/HTML">HTML</a>、<a href="https://developer.mozilla.org/en-US/docs/CSS" title="/en-US/docs/CSS">CSS</a>、<a href="https://developer.mozilla.org/en-US/docs/JavaScript" title="/en-US/docs/JavaScript">JavaScript</a>) 建構而成，並用以打造 Firefox OS 上所顯示的一切，另可控制手機硬體。Web App 則透過安全且受控制的 Web API (同樣以 Gecko 所建構而得) 來將 HTML5 連上硬體。Web API 可透過程式設計的方式，存取底層行動裝置硬體 (如電池或振動) 的功能，或取得儲存的資料 (如行事曆或聯絡資訊)。Web 內容亦可透過content invokes the accessible Web APIs within HTML5.</p>
+
+<p>App 是由相關 HTML5 網頁內容所組成。如果要撰寫 Web App 並於 Firefox OS 行動裝置上執行，則開發者也只要組合、封包、發佈此網頁內容即可。而在執行期間，即交由瀏覽器轉譯、編譯、換至此網頁內容。可參閱<a href="https://developer.mozilla.org/en-US/Apps">應用程式中心 (App Center)</a> 進一步了解。</p>
+
+<div class="note">
+<p><strong>注意：</strong>如果要搜尋 Gecko 的 Codebase，則可前往 <a href="http://dxr.mozilla.org" style="line-height: 1.5;">http://dxr.mozilla.org</a>，功能比較炫、參照功能不錯，但 Repo 較有限。亦可使用傳統的 <a href="http://mxr.mozilla.org" style="line-height: 1.5;">http://mxr.mozilla.org</a>，內含較多的 Mozilla 專案。</p>
+</div>
+
+<h3 id="Gecko_架構圖">Gecko 架構圖</h3>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5027/securityframework.png" style="height: 591px; width: 979px;"></p>
+
+<ul>
+ <li><strong>安全架構：</strong>包含
+
+  <ul>
+   <li><strong>Permission Manager</strong>：用以存取 Web API 功能的閘門。</li>
+   <li><strong>Access Control List</strong>：存取 Web API 功能所必備的規則與許可。</li>
+   <li><strong>Credential Validation</strong>：App 與使用者的驗證。</li>
+   <li><strong>Permissions Store</strong>：存取 Web API 功能所必備的權限。</li>
+  </ul>
+ </li>
+ <li><strong>Web API</strong>：標準 API 的集合，可將硬體功能提供予網頁內容，讓 Web App 能透過程式設計的方式，安全存取行動裝置底層硬體的功能，以及裝置所儲存＼可用的資料。</li>
+ <li><strong>I/O</strong>：銜接硬體與資料儲存區的介面。</li>
+ <li><strong>軟體更新</strong>：取得＼安裝更新檔至系統軟體與第三方 App。</li>
+ <li><strong>內容配置與繪製</strong>：用以剖析、編譯、執行網頁內容的引擎，並可搭配格式資訊，將格式化過後的內容呈現於使用者眼前。</li>
+ <li><strong>b2g 程序：</strong>(Gecko) 於高度權限的系統程序中執行，可存取行動電話的硬體功能。執行 App 屬於 b2g 的子程序。</li>
+</ul>
+
+<h3 id="和_Firefox_OS_相關的_Gecko_檔案">和 Firefox OS 相關的 Gecko 檔案</h3>
+
+<h4 id="b2g_2">b2g/</h4>
+
+<p>b2g 資料夾主要包含 Firefox OS 相關功能。</p>
+
+<h5 id="b2gchromecontent">b2g/chrome/content</h5>
+
+<p>內含於系統 App 上運行的 Javascript 檔。</p>
+
+<h5 id="b2gchromecontentshell.html">b2g/chrome/content/shell.html</h5>
+
+<p>Gaia 的進入點。如前所述，shell.html 會拉進 shell.js 與 settings.js。用於系統 App 的 HTML。</p>
+
+<pre class="brush: html">&lt;script type="application/javascript;version=1.8" src="chrome://browser/content/settings.js"&gt; &lt;/script&gt;
+&lt;script type="application/javascript;version=1.8" src="chrome://browser/content/shell.js"&gt; &lt;/script&gt;</pre>
+
+<p><code>settings.js 裡面是系統預設的設定參數。</code></p>
+
+<h5 id="b2gchromecontentshell.js">b2g/chrome/content/shell.js</h5>
+
+<p><code>shell.js 是載入 Gaia「system」App 的第一個指令碼。</code></p>
+
+<p><code>shell.js 將匯入所有必要的模組、註冊關鍵的監聽器、定義</code> <code style="font-style: normal; line-height: 1.5;">sendCustomEvent 與<font face="Open Sans, sans-serif"> </font></code><code style="font-style: normal; line-height: 1.5;">sendChromeEvent 以溝通 </code>Gaia<code style="font-style: normal; line-height: 1.5;">、提供 webapp 安裝輔助程式：indexedDB 配額、遠端除錯器、鍵盤助手、螢幕截圖工具。</code></p>
+
+<p>不過<code> shell.js</code> 最重要的功能，則是啟動 Gaia 的<code>「system」</code>App，然後將整體系統相關的管理作業交給該「<code>system</code>」App。</p>
+
+<pre class="brush: js">let systemAppFrame =
+  document.createElementNS('http://www.w3.org/1999/xhtml', 'html:iframe');
+    ...
+  container.appendChild(systemAppFrame);</pre>
+
+<h5 id="b2gappb2g.js">b2g/app/b2g.js</h5>
+
+<p>此指令碼包含預先定義的設定，就像是瀏覽器的 about:config，以及 Gaia 的 pref.js。這些設定值另可透過「設定 (Settings)」App 變更，也可用 Gaia 建置指令碼中的 Gaia’s user.js 覆寫之。</p>
+
+<h4 id="domAPI">/dom/{API}</h4>
+
+<p>新實作的 API (post-b2g) 會位於 <code>dom/ 資料夾。</code>舊 API 位於 <code>dom/base</code>，例如<code>navigator.cpp</code>。</p>
+
+<h5 id="domapps">/dom/apps</h5>
+
+<p><code>將載入 .jsm。而</code> <code>.js</code> API 實作即如 <code>webapp.js 安裝、getSelf 等。</code></p>
+
+<h5 id="domappsPermissionsTable.jsm">dom/apps/PermissionsTable.jsm</h5>
+
+<p>所有的存取權限都定義在 <a href="http://mxr.mozilla.org/mozilla-central/source/dom/apps/src/PermissionsTable.jsm">PermissionsTable.jsm</a> 之中。</p>
+
+<h4 id="domwebidl">/dom/webidl</h4>
+
+<p>WebIDL是用以定義 Web API 的語言，請參閱 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/WebIDL_bindings">WebIDL_bindings</a> 了解所支援的屬性。</p>
+
+<h4 id="halgonk">/hal/gonk</h4>
+
+<p>此目錄包含 gonk 銜接層 (Port layer) 的相關檔案。</p>
+
+<h4 id="所產生的檔案">所產生的檔案</h4>
+
+<h5 id="modulelibprefsrcinitall.js">module/libpref/src/init/all.js</h5>
+
+<p>內有全部的設定檔。</p>
+
+<h5 id="systemb2g_omni.ja_and_omni.js">/system/b2g/ omni.ja and omni.js</h5>
+
+<p>內有裝置內資源所適用的樣式。</p>
+
+<h3 id="處理輸入事件">處理輸入事件</h3>
+
+<p>Gecko 內絕大多數的行動，都是由使用者的行動所觸發，可用輸入事件為代表 (如按下按鈕、觸碰裝置的螢幕等)。這些事件必須透過 <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAppShell" title="">nsIAppShell</a></code> 的 <a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/nsAppShell.cpp" rel="custom">Gonk implementation</a> (為 Gecko 介面之一，作為 Gecko App 的主要進入點)，進入到Gecko。也就是說，輸入裝置驅動程式將呼叫 <code>nsAppShell</code> 物件 (代表 Gecko 子系統) 上的函式，來將事件發送到使用者介面。</p>
+
+<p>例如：</p>
+
+<pre class="brush:cpp;">void GeckoInputDispatcher::notifyKey(nsecs_t eventTime,
+                                     int32_t deviceId,
+                                     int32_t source,
+                                     uint32_t policyFlags,
+                                     int32_t action,
+                                     int32_t flags,
+                                     int32_t keyCode,
+                                     int32_t scanCode,
+                                     int32_t metaState,
+                                     nsecs_t downTime) {
+  UserInputData data;
+  data.timeMs = nanosecsToMillisecs(eventTime);
+  data.type = UserInputData::KEY_DATA;
+  data.action = action;
+  data.flags = flags;
+  data.metaState = metaState;
+  data.key.keyCode = keyCode;
+  data.key.scanCode = scanCode;
+  {
+    MutexAutoLock lock(mQueueLock);
+    mEventQueue.push(data);
+  }
+  gAppShell-&gt;NotifyNativeEvent();
+}</pre>
+
+<p>這些事件來自於Linux標準<code>input_event</code>系統. Firefox OS在其上添加了一層簡單的<a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/libui/InputReader.cpp" rel="custom">抽象層</a>，提供了一些像是事件過濾等不錯的功能。產生事件的程式碼在<a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/libui/EventHub.cpp" rel="custom">widget/gonk/libui/EventHub.cpp</a>裡的<code>EventHub::getEvents()方法。</code></p>
+
+<p>Gecko接收到事件後，這些事件會透過<code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/nsAppShell.cpp" rel="custom">nsAppShell</a>發送到DOM:</code></p>
+
+<pre class="brush:cpp;">static nsEventStatus sendKeyEventWithMsg(uint32_t keyCode,
+                                         uint32_t msg,
+                                         uint64_t timeMs,
+                                         uint32_t flags) {
+    nsKeyEvent event(true, msg, NULL);
+    event.keyCode = keyCode;
+    event.location = nsIDOMKeyEvent::DOM_KEY_LOCATION_MOBILE;
+    event.time = timeMs;
+    event.flags |= flags;
+    return nsWindow::DispatchInputEvent(event);
+}
+</pre>
+
+<p>之後，事件有可能被Gecko處理掉或是當作<a href="/en-US/docs/DOM_Client_Object_Cross-Reference/DOM_Events" style="line-height: 1.5;" title="/en-US/docs/DOM_Client_Object_Cross-Reference/DOM_Events">DOM事件</a>被<span style="line-height: 1.5;">發送到網頁應用程式做進一步處裡。</span></p>
+
+<h3 id="影像繪圖">影像繪圖</h3>
+
+<p>在最底層，Gecko利用 <a href="http://www.khronos.org/opengles/2_X/" title="http://www.khronos.org/opengles/2_X/">OpenGL ES 2.0</a> 向包有硬體影格緩衝區(frame buffers)的GL context物件繪圖，這是由Gonk所實作的<code><a href="https://dxr.mozilla.org/mozilla-central/source/widget/gonk/nsWindow.cpp" rel="custom">nsWindow</a>完成</code>:</p>
+
+<pre class="brush:cpp;">gNativeWindow = new android::FramebufferNativeWindow();
+sGLContext = GLContextProvider::CreateForWindow(this);</pre>
+
+<p><code>FramebufferNativeWindow類別(</code>class)是直接從Android而來，請見<code><a href="https://github.com/android/platform_frameworks_base/blob/ics-mr1-release/libs/ui/FramebufferNativeWindow.cpp" title="https://github.com/android/platform_frameworks_base/blob/ics-mr1-release/libs/ui/FramebufferNativeWindow.cpp">FramebufferNativeWindow.cpp</a>；使用了</code><strong>gralloc</strong> API存取繪圖驅動，好配對影格緩衝裝置的緩衝到記憶體之中。</p>
+
+<p>Gecko透過圖層(Layers)系統合成螢幕上的影像，大體而言如下:</p>
+
+<ol>
+ <li>Gecko將不同部分的記憶體分頁(pages)畫入記憶體緩衝，有時後這些緩衝存在系統記憶體，有時候因為Gecko會直接畫入視訊記憶體(video memory)，所以這些緩衝也可能會是配對在Gecko定址空間的材質(textures) ，以上的工作主要是由<code><a href="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/basic/BasicThebesLayer.cpp#83" title="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/basic/BasicThebesLayer.cpp#201">BasicThebesLayer::PaintThebes()</a>方法完成。</code></li>
+ <li>Gecko利用OpenGL命令將這些材質合成起來，合成工作由<code><a href="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/opengl/ThebesLayerOGL.cpp#124" title="http://mxr.mozilla.org/mozilla-central/source/gfx/layers/basic/BasicThebesLayer.cpp#201">ThebesLayerOGL::RenderTo()</a>方法執行。</code></li>
+</ol>
+
+<p>因為有關Gecko如何處理影像繪圖的作法已經超出本文範圍，所以本文不再做進一步討論了。</p>
+
+<h3 id="硬體抽象層(Hardware_Abstraction_Layer_HAL)">硬體抽象層(Hardware Abstraction Layer, HAL)</h3>
+
+<p>Gecko HAL是Gecko接口層之一，它使用高階層Gecko能取用的C++ API存取跨平台間的底層系統介面，這些API以每個平台為基礎實作在Gecko HAL之內。Gecko的Javacsript程式碼並不能看到這個HAL層。</p>
+
+<h4 id="HAL如何運作">HAL如何運作</h4>
+
+<p>讓我們先來看看<a href="/zh-TW/docs/Web/API/Window/navigator/vibrate" title="The documentation about this has not yet been written; please consider contributing!"><code>Vibration</code></a> API。這個Gecko HAL API被定義在<a href="https://dxr.mozilla.org/mozilla-central/source/hal/Hal.h" rel="custom">hal/Hal.h</a>，基本上你可以看到如下函式(為了說明需要，經過函式簽名(function signature)簡化):</p>
+
+<pre>void Vibrate(const nsTArray&lt;uint32&gt; &amp;pattern);</pre>
+
+<p>Gecko呼叫這個函式來根據某個特定型態開啟震動(另外有一個對應的函式用來關閉震動)。Gonk對這個函式的實作在<a href="https://dxr.mozilla.org/mozilla-central/source/hal/gonk/GonkHal.cpp" rel="custom">hal/gonk/GonkHal.cpp</a>:</p>
+
+<pre class="brush:cpp;">void Vibrate(const nsTArray&lt;uint32_t&gt; &amp;pattern) {
+  EnsureVibratorThreadInitialized();
+  sVibratorRunnable-&gt;Vibrate(pattern);
+}
+</pre>
+
+<p>下面以<code style="font-style: normal; line-height: 1.5;">VibratorRunnable::Run()實作的</code><span style="line-height: 1.5;">程式碼發送震動</span><span style="line-height: 1.5;">開啟</span><span style="line-height: 1.5;">請求到另一個執行緒，其中主要的迴圈部分如下:</span></p>
+
+<pre class="brush:cpp;">while (!mShuttingDown) {
+  if (mIndex &lt; mPattern.Length()) {
+    uint32_t duration = mPattern[mIndex];
+    if (mIndex % 2 == 0) {
+      vibrator_on(duration);
+    }
+    mIndex++;
+    mMonitor.Wait(PR_MillisecondsToInterval(duration));
+  }
+  else {
+    mMonitor.Wait();
+  }
+}
+</pre>
+
+<p><code>vibrator_on()便是打開震動馬達的Gonk HAL API，這個函式透過sysfs向內部核心驅動程式送出訊息，寫入值到核心物件之中。</code></p>
+
+<h4 id="HAL_API退回替代(Fallback)實作">HAL API退回替代(Fallback)實作</h4>
+
+<p>Gecko HAL API 跨平台支援。當為沒有震動馬達的平台(如桌上型電腦)建置Gecko，則另一個HAL退回替代API會被使用，這個替代API實作於<a href="https://dxr.mozilla.org/mozilla-central/source/hal/fallback/FallbackVibration.cpp" rel="custom">hal/fallback/FallbackVibration.cpp</a>:</p>
+
+<pre class="brush:cpp;">void Vibrate(const nsTArray&lt;uint32_t&gt; &amp;pattern) {
+}</pre>
+
+<h4 id="沙箱(Sandbox)實作">沙箱(Sandbox)實作</h4>
+
+<p>因為大多數的網頁內容都是在低權限的內容程序運行，所以我們無法確保這些程序有權限去，例如，打開震動馬達，除此之外，為了避免出現程序爭相啟動震動的狀況出現，採用中央控制的作法較為理想。在Gecko HAL，透過sandbox作法可以達到中央控制的目標；其實sandbox也就是一個由內容程序發出到Gecko"伺服器"的<span style="line-height: 1.5;">代理請求，這個代理請求式透過IPDL送出。</span></p>
+
+<p>以震動為例，這是由<a href="https://dxr.mozilla.org/mozilla-central/source/hal/sandbox/SandboxHal.cpp" rel="custom">hal/sandbox/SandboxHal.cpp</a>所實作的<code>Vibrate()完成</code>:</p>
+
+<pre class="brush:cpp;">void Vibrate(const nsTArray&lt;uint32_t&gt;&amp; pattern, const WindowIdentifier &amp;id) {
+  AutoInfallibleTArray&lt;uint32_t, 8&gt; p(pattern);
+
+  WindowIdentifier newID(id);
+  newID.AppendProcessID();
+  Hal()-&gt;SendVibrate(p, newID.AsArray(), GetTabChildFrom(newID.GetWindow()));
+}</pre>
+
+<p>這會發送一個 PHal 介面定義的訊息，亦即<span style="line-height: 1.5;">IPDL的<a href="https://dxr.mozilla.org/mozilla-central/source/hal/sandbox/PHal.ipdl" rel="custom">hal/sandbox/PHal.ipdl</a>內所描述的。其中呼叫的函式大致如下:</span></p>
+
+<pre>Vibrate(uint32_t[] pattern);</pre>
+
+<p>訊息的接收端是<code>HalParent::RecvVibrate()函式，這個函式定義在</code><a href="https://dxr.mozilla.org/mozilla-central/source/hal/sandbox/SandboxHal.cpp" rel="custom">hal/sandbox/SandboxHal.cpp</a>裡面，大致如下:</p>
+
+<pre class="brush:cpp;">virtual bool RecvVibrate(const InfallibleTArray&lt;unsigned int&gt;&amp; pattern,
+            const InfallibleTArray&lt;uint64_t&gt; &amp;id,
+            PBrowserParent *browserParent) MOZ_OVERRIDE {
+
+  hal::Vibrate(pattern, newID);
+  return true;
+}</pre>
+
+<p>本段範例雖然有省略一些相關性不高的部分，不過確實的說明訊息傳遞是如何由Gecko到Gonk，再到Gonk HAL實作Vibrate()，最後到震動馬達驅動程式。</p>
+
+<h3 id="DOM_APIs">DOM APIs</h3>
+
+<p><strong>DOM介面</strong>是網頁根本上和Gecko溝通的方法，如果想知道更多這方面的細節，請參考<a href="/en-US/docs/DOM/About_the_Document_Object_Model" title="/en-US/docs/DOM/About_the_Document_Object_Model">關於DOM</a>。 DOM介面是用<a href="/en-US/docs/XPIDL" title="/en-US/docs/XPIDL">IDL</a>定義的，其中包括了外部函式介面(foreign function interface, FFI)以及介於javascript和C++的物件模型(object model, OM) 。</p>
+
+<p>像是vibration API便是透過IDL讓網頁內容使用，這部分程式碼定義在<code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/interfaces/base/nsIDOMNavigator.idl" rel="custom">nsIDOMNavigator.idl</a>:</code></p>
+
+<pre>[implicit_jscontext] void mozVibrate(in jsval aPattern);</pre>
+
+<p>mozVibrate(冠有廠商前綴的函式，這個函式背後的震動規格尚未定案)接受<code><a href="/en-US/docs/SpiderMonkey/JSAPI_Reference/Jsval" title="/en-US/docs/SpiderMonkey/JSAPI_Reference/JSVAL_IS_OBJECT">jsval</a>型態的參數，也就是Javascript的值。IDL編譯器<font face="Open Sans, sans-serif">，</font></code><code style="line-height: 1.5;"><a href="/en-US/docs/XPIDL/xpidl" style="line-height: 1.5;" title="/en-US/docs/XPIDL/xpidl">xpidl</a>，會產生C++的介面，這個介面會由</code><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;"><a href="https://dxr.mozilla.org/mozilla-central/source/dom/base/Navigator.cpp" rel="custom">Navigator.cpp</a>內的</span><code style="font-style: normal; line-height: 1.5;">Navigator類別實作之。</code></p>
+
+<pre class="brush:cpp;">NS_IMETHODIMP Navigator::MozVibrate(const jsval&amp; aPattern, JSContext* cx) {
+  // ...
+  hal::Vibrate(pattern);
+  return NS_OK;
+}</pre>
+
+<p>這個函式最關鍵的部分在於呼叫 hal::Vibreate() 將控制權由DOM移交給Gecko HAL，自此我們便會如前所述地進入HAL層，最後到達驅動程式。在上層的 DOM 並不在意現在是在哪個平台上執行(Gonk, WIndows, Mac OS X等等)，DOM 也不在意現在是內容程序的程式碼在跑或是Gecko伺服器的在跑，所有的一切都交由底層系統處理。</p>
+
+<p>vibration API相對單純，適合用於說明，而<a href="/en-US/docs/API/WebSMS" title="/en-US/docs/API/WebSMS">SMS API</a> 便是比較複雜的API，它用到自己的"遠端"層將內容程序和伺服器連接起來。</p>
+
+<h2 id="無線介面層(Radio_Interface_Layer_RIL)">無線介面層(Radio Interface Layer, RIL)</h2>
+
+<p><a href="#The_userspace_process_architecture">The userspace process architecture</a>段落已經提過RIL，這邊我們將更進一步檢視各個元件是如何互動運作。</p>
+
+<p>和RIL有關的元件有:</p>
+
+<dl>
+ <dt><code>rild</code></dt>
+ <dd>和特定數據機韌體溝通的背景程序(daemon)。</dd>
+ <dt><code>rilproxy</code></dt>
+ <dd>rild和Gecko b2g程序之間訊息傳遞的代理背景程序(daemon)。rilproxy的存在解決了無法和rild直接溝通的問題，因為rild只可以在radio群組內溝通。</dd>
+ <dt><code>b2g</code></dt>
+ <dd>實作Gecko的程序，又稱為<strong>chrome process</strong>。其中和RIL相關的部分有<a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/ril_worker.js" rel="custom">dom/system/gonk/ril_worker.js</a>(這是一個worker執行緒，會透過rilproxy和rild溝通，並且實作了無線狀態機(radio state machine))以及<code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRadioInterfaceLayer" title="">nsIRadioInterfaceLayer</a></code>介面(是主執行緒的<a href="/en-US/docs/XPCOM" style="line-height: 1.5;" title="/en-US/docs/XPCOM">XPCOM</a>服務，主要是作為ril_worker.js和Gecko各元件，包括Gecko內容程序，之間的訊息傳遞<span style="line-height: 1.5;">)。</span></dd>
+ <dt>Gecko's content process</dt>
+ <dd><code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRILContentHelper" title="">nsIRILContentHelper</a></code>介面會提供XPCOM服務，有了這個服務，Gecko內容程序會使用到的DOM API，例如<a href="/en-US/docs/API/WebTelephony" title="/en-US/docs/API/WebTelephony">Telephony</a>與<a href="/en-US/docs/API/WebSMS" title="/en-US/docs/API/WebSMS">SMS</a> API，便能夠和Chrome程序的無線介面溝通。</dd>
+</dl>
+
+<h3 id="範例_Example_Communicating_from_rild_to_the_DOM">範例: Example: Communicating from rild to the DOM</h3>
+
+<p>讓我們來看看一段例子，看一下系統底層是如何和DOM程式碼溝通。當數據機接收到來電時，它會透過專屬機制通知rild，rild接著按照<code style="line-height: 1.5;"><a href="https://github.com/mozilla-b2g/android-hardware-ril/blob/master/include/telephony/ril.h" style="line-height: 1.5;" title="https://github.com/mozilla-b2g/android-hardware-ril/blob/master/include/telephony/ril.h">ril.h</a>內定義的</code><span style="line-height: 1.5;">"open"協定發送訊息到rild客戶端，以來電通話為例，</span><code style="font-style: normal; line-height: 1.5;">RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED</code><span style="line-height: 1.5;"> 訊息會被rild發送至rilporxy。</span></p>
+
+<p>實作在<code><a href="https://github.com/mozilla-b2g/rilproxy/blob/master/src/rilproxy.c" title="https://github.com/mozilla-b2g/rilproxy/blob/master/src/rilproxy.c">rilproxy.c</a>的rilproxy會透過以下程式碼，和rild</code><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">建立</span><span style="font-family: courier new,andale mono,monospace; font-style: inherit; font-weight: inherit; line-height: 1.5;">連線:</span></p>
+
+<pre class="brush:cpp;">ret = read(rilproxy_rw, data, 1024);
+
+if(ret &gt; 0) {
+  writeToSocket(rild_rw, data, ret);
+}</pre>
+
+<p>一旦從rild那裏取回訊息後，訊息便會經由連接rilproxy和Gecko的socket傳給Gecko，Gecko是藉由<a href="https://dxr.mozilla.org/mozilla-central/source/ipc/ril/Ril.cpp" rel="custom">IPC thread</a>接收訊息:</p>
+
+<pre class="brush:cpp;">int ret = read(fd, mIncoming-&gt;Data, 1024);
+// ... handle errors ...
+mIncoming-&gt;mSize = ret;
+sConsumer-&gt;MessageReceived(mIncoming.forget());
+</pre>
+
+<p>訊息的接收端是<a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/SystemWorkerManager.cpp" rel="custom">SystemWorkerManager</a>，然後訊息又會被重新打包發送到<code>{source("dom/system/gonk/ril_worker.js", "ril_worker.js")}}執行緒，這個</code><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">ril_worker.js</span><code style="font-style: normal; line-height: 1.5;">實做了RIL狀態機(</code><span style="line-height: 1.5;">RIL state machine); 這其中的過程是透過 </span><code style="font-style: normal; line-height: 1.5;">RILReceiver::MessageReceived()函式完成</code><span style="line-height: 1.5;">:</span></p>
+
+<pre class="brush:cpp;">virtual void MessageReceived(RilRawData *aMessage) {
+  nsRefPtr&lt;DispatchRILEvent&gt; dre(new DispatchRILEvent(aMessage));
+  mDispatcher-&gt;PostTask(dre);
+}</pre>
+
+<p><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">訊息</span><span style="line-height: 1.5;">傳遞到</span><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">ril_worker.js執行緒後，onRILMessage()函數接著會被呼叫。其中呼叫方法是利用Javascript API函式</span><code style="font-style: normal; line-height: 1.5;"><a href="/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName" title="/en-US/docs/SpiderMonkey/JSAPI_Reference/JS_CallFunctionName">JS_CallFunctionName</a>()</code><span style="line-height: 1.5;">:</span></p>
+
+<pre>return JS_CallFunctionName(aCx, obj, "onRILMessage", NS_ARRAY_LENGTH(argv),
+                           argv, argv);</pre>
+
+<p><code>onRILMessage()定義在</code><a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/ril_worker.js" rel="custom">dom/system/gonk/ril_worker.js</a>中；然後訊息會被切割成包裹，之後每一個包裹會被送給適當的處理函式:</p>
+
+<pre class="brush:js;">handleParcel: function handleParcel(request_type, length) {
+  let method = this[request_type];
+  if (typeof method == "function") {
+    if (DEBUG) debug("Handling parcel as " + method.name);
+    method.call(this, length);
+  }
+}
+</pre>
+
+<p>ril_worker.js對每一個請求類型有實作一個同名的處理函式，所以程式碼能夠簡單地取得請求類型名稱，然後再比對是否有對應的函式存在，如果有便呼叫對應函式起來處理。</p>
+
+<p><code><font face="Open Sans, sans-serif">以</font>RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED</code>為例，下面的處理函式會被呼叫:</p>
+
+<pre class="brush:js;">RIL[UNSOLICITED_RESPONSE_CALL_STATE_CHANGED] = function UNSOLICITED_RESPONSE_CALL_STATE_CHANGED() {
+  this.getCurrentCalls();
+};</pre>
+
+<p>當收到訊息通知後，通話狀態也跟著改變，所以狀態機接著呼叫getCurrentCall()取得目前通話狀態:</p>
+
+<pre class="brush:js;">getCurrentCalls: function getCurrentCalls() {
+  Buf.simpleRequest(REQUEST_GET_CURRENT_CALLS);
+}</pre>
+
+<p>這樣會回傳一個請求給rild，要求目前所有進行中通話的狀態。這個請求會沿著<code>RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED</code> 訊息之前所行進過的路走，只不過方向相反(從<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">ril_worker.js</code><span style="line-height: 1.5;"> 到 </span><code style="font-style: normal; line-height: 1.5;">SystemWorkerManager</code><span style="line-height: 1.5;"> 、到 </span><code style="font-style: normal; line-height: 1.5;">Ril.cpp、</code><span style="line-height: 1.5;">再到</span><code style="font-style: normal; line-height: 1.5;">rilproxy，最後是</code><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">rild</code><span style="line-height: 1.5;"> socket</span><span style="line-height: 1.5;">)。</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">rild</code><span style="line-height: 1.5;"> 然後會回應請求，再回到ril_worker.js的</span><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">REQUEST_GET_CURRENT_CALLS訊息處理器，整個過程是雙向溝通。</span></p>
+
+<p>通話狀態然後會被處理，和之前的狀態比較，如果狀態有變更，ril_worker.js 會再通知在主執行緒上的<code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRadioInterfaceLayer" title="">nsIRadioInterfaceLayer</a></code>服務:</p>
+
+<pre class="brush:js;">_handleChangedCallState: function _handleChangedCallState(changedCall) {
+  let message = {type: "callStateChange",
+                 call: changedCall};
+  this.sendDOMMessage(message);
+}</pre>
+
+<p><code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRadioInterfaceLayer" title="">nsIRadioInterfaceLayer</a></code>實作在<a href="https://dxr.mozilla.org/mozilla-central/source/dom/system/gonk/RadioInterfaceLayer.js" rel="custom">dom/system/gonk/RadioInterfaceLayer.js</a>，而訊息是透過onmessage()收到:</p>
+
+<pre class="brush:js;"> onmessage: function onmessage(event) {
+   let message = event.data;
+   debug("Received message from worker: " + JSON.stringify(message));
+   switch (message.type) {
+     case "callStateChange":
+       // This one will handle its own notifications.
+       this.handleCallStateChange(message.call);
+       break;
+   ...
+</pre>
+
+<p>之後訊息會透過父程序訊息管理器(Parent Process Message Manager, PPMM)送到內容程序:</p>
+
+<pre class="brush:js;">handleCallStateChange: function handleCallStateChange(call) {
+  [some internal state updating]
+  ppmm.sendAsyncMessage("RIL:CallStateChanged", call);
+}</pre>
+
+<p>內容程序透過<code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIRILContentHelper" title="">nsIRILContentHelper</a></code> 服務的<span style="background-color: rgba(234, 239, 242, 0.247059); font-family: consolas,monaco,andale mono,monospace; font-size: 1rem; line-height: 19px; white-space: pre;">receiveMessage()從子</span><span style="line-height: 1.5;">程序訊息管理器(</span><span style="line-height: 1.5;">Child Process Message Manager, CPMM)那裡</span><span style="background-color: rgba(234, 239, 242, 0.247059); font-family: consolas,monaco,andale mono,monospace; font-size: 1rem; line-height: 19px; white-space: pre;">接受訊息:</span></p>
+
+<pre class="brush:js;">receiveMessage: function receiveMessage(msg) {
+  let request;
+  debug("Received message '" + msg.name + "': " + JSON.stringify(msg.json));
+  switch (msg.name) {
+    case "RIL:CallStateChanged":
+      this._deliverTelephonyCallback("callStateChanged",
+                                     [msg.json.callIndex, msg.json.state,
+                                     msg.json.number, msg.json.isActive]);
+      break;</pre>
+
+<p>接著，每一個電話callback物件的<code><a href="https://developer.mozilla.org/zh-TW/docs/XPCOM_Interface_Reference/nsIRILTelephonyCallback#callStateChanged()">nsIRILTelephonyCallback.callStateChanged()</a></code>方法會被呼叫；每一個有存取<a href="/zh-TW/docs/Web/API/Window/navigator/mozTelephony" title="The documentation about this has not yet been written; please consider contributing!"><code>window.navigator.mozTelephony</code></a> API的網頁應用程式會註冊這樣一個callback物件，這個callback物件會發送事件到網頁應用程式，如現階段通話物件狀態改變或有新通話來電事件。</p>
+
+<pre class="brush:cpp;">NS_IMETHODIMP Telephony::CallStateChanged(PRUint32 aCallIndex, PRUint16 aCallState,
+                                          const nsAString&amp; aNumber, bool aIsActive) {
+  [...]
+
+  if (modifiedCall) {
+    // Change state.
+    modifiedCall-&gt;ChangeState(aCallState);
+
+    // See if this should replace our current active call.
+    if (aIsActive) {
+      mActiveCall = modifiedCall;
+    }
+
+    return NS_OK;
+  }
+
+  nsRefPtr&lt;TelephonyCall&gt; call =
+          TelephonyCall::Create(this, aNumber, aCallState, aCallIndex);
+  nsRefPtr&lt;CallEvent&gt; event = CallEvent::Create(call);
+  nsresult rv = event-&gt;Dispatch(ToIDOMEventTarget(), NS_LITERAL_STRING("incoming"));
+  NS_ENSURE_SUCCESS(rv, rv);
+  return NS_OK;
+}</pre>
+
+<p>應用程式收到事件後可以跟著進行更新使用者介面等等:</p>
+
+<pre class="brush:js;">handleEvent: function fm_handleEvent(evt) {
+  switch (evt.call.state) {
+    case 'connected':
+      this.connected();
+      break;
+    case 'disconnected':
+      this.disconnected();
+      break;
+    default:
+      break;
+  }
+}</pre>
+
+<p>更進一步的範例請見<code style="line-height: 1.5;"><a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/communications/dialer/js/dialer.js" style="line-height: 1.5;" title="https://github.com/mozilla-b2g/gaia/blob/master/apps/communications/dialer/js/dialer.js">撥號應用程式的</a></code><code style="line-height: 1.5;"><a href="https://github.com/mozilla-b2g/gaia/blob/master/apps/communications/dialer/js/dialer.js" style="line-height: 1.5;" title="https://github.com/mozilla-b2g/gaia/blob/master/apps/communications/dialer/js/dialer.js">handleEvent()</a>。</code></p>
+
+<h3 id="3G_data">3G data</h3>
+
+<p>有一個 RIL 訊息會向電信服務(cellular service)發起數據請求(data call)，這會啟動數據機的數據傳輸狀態。數據請求會開啟 Linux 核心的<a href="https://zh.wikipedia.org/wiki/Point-to-Point Protocol" title="Point-to-Point Protocol">Point-to-Point Protocol</a> (PPP) 介面裝置，這個裝置能夠透過使用者介面設定。</p>
+
+<h3 id="相關DOM_APIs">相關DOM APIs</h3>
+
+<p>以下是和 RIL 溝通相關的DOM APIs:</p>
+
+<ul>
+ <li><a href="/en-US/docs/API/WebTelephony/Introduction_to_WebTelephony" title="/en-US/docs/API/WebTelephony/Introduction_to_WebTelephony">Telephony API</a></li>
+ <li><a href="/en-US/docs/API/WebSMS/Introduction_to_WebSMS" title="/en-US/docs/API/WebSMS/Introduction_to_WebSMS">SMS API</a></li>
+ <li>Mobile Connection API</li>
+</ul>
+
+<h2 id="WiFi">WiFi</h2>
+
+<p>Firefox OS 的 WiFi 後端使用 <code>wpa_supplicant</code> 處裡大部份工作。所以說WiFi 後端的主要工作是管理請求者(supplicant)，還有輔助一些任務，例如載入 WiFi 驅動程式和開關網路介面；從根本上來看，WiFi 後端就是一個狀態機(state machine)，而其狀態會跟隨請求者狀態。</p>
+
+<div class="note">
+<p><strong>Note:</strong> 許多 WiFi 有關的有趣東西都和 wpa_supplicant 程序可能的狀態變更息息相關。</p>
+</div>
+
+<p>WiFi 元件的實作可以分成兩份檔案:</p>
+
+<dl>
+ <dt><a href="https://dxr.mozilla.org/mozilla-central/source/dom/wifi/DOMWifiManager.js" rel="custom">dom/wifi/DOMWifiManager.js</a></dt>
+ <dd>實作網頁內容所看到的API；定義在 <code><a href="/zh-TW/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWifi.idl" title="">nsIWifi.idl</a></code>.</dd>
+ <dt><a href="https://dxr.mozilla.org/mozilla-central/source/dom/wifi/WifiWorker.js" rel="custom">dom/wifi/WifiWorker.js</a></dt>
+ <dd>實作狀態機和驅動請求者的程式碼。</dd>
+</dl>
+
+<p>這兩份檔案利用<a href="/en-US/docs/The_message_manager" title="/en-US/docs/The_message_manager">訊息管理員(message manager)</a> 溝通。 後端聆聽請求訊息，比如說"連接"，然後回應訊息當請求行動完成後；DOM 端聆聽回應以及狀態改變和資訊更新的訊息。</p>
+
+<div class="note">
+<p><strong>Note:</strong> 任何同步 DOM API 都會藉由快取資料來實作，同步訊息會盡量避免。</p>
+</div>
+
+<h3 id="WifiWorker.js">WifiWorker.js</h3>
+
+<p>這份檔案實作了 WiFi 介面背後的主要邏輯，由 SystemWorkerManager 喚起，然後運行在 chrome 程序裡(對多執行緒版本來說)。 WifiWorker.js 可以切成兩塊: 一個巨大無名函式與 WifiWorker；無名函式會產出 WifiManager，為本地提供 API，包含和請求者連線以及可取得的掃描結果等事件通知，它會回應請求的資訊，控管和請求者連線的細節，遵照 API 使用客戶的指示行動。</p>
+
+<p>WifiManager 和 DOM 中間是 WifiWorker 物件。WifiWorker 根據事件行動並且轉傳事件給 DOM，反過來，它也會收到 DOM 傳過來的請求，並且對請求者(supplicant)採取適當的動作，WifiWorker 也會維護請求者的狀態資訊和下不步行動的資訊。</p>
+
+<h3 id="DOMWifiManager.js">DOMWifiManager.js</h3>
+
+<p>實作 DOM API，負責在呼叫方和 WiFi worker 之間傳遞訊息。</p>
+
+<div class="note">
+<p><strong>Note:</strong> 為了避免和 chrome 程序之間同步訊息，WiFi Manager 需要根據收到的事件快取狀態。</p>
+</div>
+
+<p>有一個同步訊息，那就是當 DOM API 初始化時為了取得請求者(supplicant)當下的狀態。</p>
+
+<h3 id="DHCP">DHCP</h3>
+
+<p>DHCP 和 DNS 由標準 Linux DHCP 客戶端，dhcpcd，負責。當網路連線中斷後，因為無法運作，Firefox OS 會終止 dhcpcd，直到又重新連上網路，dhcpcd 會被再重啟。<code>dhcpcd</code> 也負責設定預設路徑(route)。</p>
+
+<h2 id="Network_Manager">Network Manager</h2>
+
+<p>Network Manager 負責設定 3G 數據和 WiFi 元件的網路介面。</p>
+
+<h2 id="程序與執行緒">程序與執行緒</h2>
+
+<p>Firefox OS 採用 POSIX threads 實現所有應用程式的執行緒，這包括了應用成程式主執行緒、Web Worker 和輔助執行緒。Nice值決定了程序和執行緒的執行優先順序，然後再依賴 Linux 核心排程器先後執行；根據程序不同的狀態會有不同的Nice值。目前有7種Nice層級:</p>
+
+<table class="standard-table">
+ <caption>程序執行優先順序</caption>
+ <thead>
+  <tr>
+   <th scope="col">優先順序</th>
+   <th scope="col">Nice</th>
+   <th scope="col">用於</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>MASTER</code></td>
+   <td>0</td>
+   <td>主 b2g process</td>
+  </tr>
+  <tr>
+   <td><code>FOREGROUND_HIGH</code></td>
+   <td>0</td>
+   <td>持有 CPU wakelock 的程式</td>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+   <td><code>FOREGROUND</code></td>
+   <td>1</td>
+   <td>前景(foreground)程式</td>
+  </tr>
+  <tr>
+   <td><code>FOREGROUND_KEYBOARD</code></td>
+   <td>1</td>
+   <td>鍵盤程式</td>
+  </tr>
+  <tr>
+   <td><code>BACKGROUND_PERCEIVABLE</code></td>
+   <td>7</td>
+   <td>音樂播放背景(background)程式</td>
+  </tr>
+  <tr>
+   <td><code>BACKGROUND_HOMESCREEN</code></td>
+   <td>18</td>
+   <td>主畫面程式</td>
+  </tr>
+  <tr>
+   <td><code>BACKGROUND</code></td>
+   <td>18</td>
+   <td>其他背景程式</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>有些層級的 Nice 值雖然一樣，不過記憶體不足時的終止行為不一樣。所有的優先順序可以在建置時調整，相關的程式碼請見<a href="http://hg.mozilla.org/mozilla-central/file/54e8c6492dc4/b2g/app/b2g.js#l610"><code>b2g/app/b2g.js</code></a>。</p>
+
+<p>一個程序(process)之內，主執行緒繼承了該程序的 Nice 值，而 Web Worker 執行緒所得到的 Nice 值為主執行緒的加一點，所以優先權較低，這麼做是為了避免耗費 CPU 資源的worker 拖慢的主執行續的運作。程序優先順趣會因為事件發生而變化，比如說當一個程式由前景轉到背景時、一個新的程式啟動、現存程式取得 CPU wakelock，一旦程序的執行優先權變動，旗下所屬的執行緒的執行優先權也會跟著變動。</p>
+
+<div class="note">
+<p><strong>Note:</strong> cgroups 目前沒有在資源管理用上，因為在某些裝置和核心上並不可靠。</p>
+</div>
+
+<p> </p>

@@ -1,0 +1,181 @@
+---
+title: 介紹音效 API
+slug: Introducing_the_Audio_API_Extension
+translation_of: Archive/Mozilla/Introducing_the_Audio_API_Extension
+---
+<p>音效 API 是 HTML5 規範中的媒體元素 {{ HTMLElement("audio") }} 與 {{ HTMLElement("video") }} 的補充功能，它讓開發者可以存取音效的後設資料跟音頻本身的生資料。開發者可以具象化這些音效資料，分析這些資料，甚至是創造出新的音效資料。</p>
+<h2 id="讀取音頻串流">讀取音頻串流</h2>
+<h3 id="loadedmetadata_事件"><strong>loadedmetadata</strong> 事件</h3>
+<p>當一個媒體的後設資料傳至使用者電腦的時候，一個 <strong>loadedmetadata</strong> 事件會被觸發。這個事件有以下這些屬性：</p>
+<ul> <li><strong>mozChannels</strong>: 頻道的數量</li> <li><strong>mozSampleRate</strong>: 取樣頻率（次/秒）</li> <li><strong>mozFrameBufferLength</strong>: 在每次事件所有頻道的總樣本數</li>
+</ul>
+<p>這些資料在解碼音頻資料串流的的時候會用到。下面是一個從一個音頻元素取出這些資料的例子：</p>
+<pre class="brush: js">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;JavaScript 後設資料範例&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;audio id="audio-element"
+           src="song.ogg"
+           controls="true"
+           style="width: 512px;"&gt;
+    &lt;/audio&gt;
+    &lt;script&gt;
+      function loadedMetadata() {
+        channels          = audio.mozChannels;
+        rate              = audio.mozSampleRate;
+        frameBufferLength = audio.mozFrameBufferLength;
+      }
+      var audio = document.getElementById('audio-element');
+      audio.addEventListener('loadedmetadata', loadedMetadata, false);
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h3 id="MozAudioAvailable_事件"><strong>MozAudioAvailable</strong> 事件</h3>
+<p>當播放一個音頻源的時候，樣本資料會被傳播至音頻處理層級而這些樣本也會被輸入進音頻緩衝（大小取決於<strong>mozFrameBufferLength</strong>）。當緩衝被填滿的時候，一個 <strong>MozAudioAvailable</strong> 事件會被觸發，而這個事件就含有一段時間內的樣本。這些樣本不一定在事件被觸發的時候已經被播放過，也不一定馬上反應媒體元素上的靜音設定或是音量調整。音頻的播放、暫停、跳躍都會影響生音頻資料串流。</p>
+<p><strong>MozAudioAvailable</strong> 事件有兩個屬性：</p>
+<ul> <li><strong>frameBuffer</strong>: 含有解碼後的音頻資料（浮點數）的frame緩衝（一個陣列）</li> <li><strong>time</strong>: 這些樣本的時間戳記。從開始時間計（秒）。</li>
+</ul>
+<p>frame緩衝含有一個音頻樣本的陣列。請注意樣本不會照對應的頻道分隔，而是混在一起。舉例來說，一個二頻道訊號：頻道1-樣本1 頻道2-樣本1 頻道1-樣本2 頻道2-樣本2 頻道3-樣本1 頻道3-樣本2。</p>
+<p>讓我們擴充之前的範例，在一個 {{ HTMLElement("div") }} 元素裡顯示時間戳記跟首兩個樣本：</p>
+<pre class="brush: js">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;JavaScript 具象化範例&lt;/title&gt;
+    &lt;body&gt;
+    &lt;audio id="audio-element"
+           src="revolve.ogg"
+           controls="true"
+           style="width: 512px;"&gt;
+    &lt;/audio&gt;
+	&lt;pre id="raw"&gt;hello&lt;/pre&gt;
+    &lt;script&gt;
+      function loadedMetadata() {
+        channels          = audio.mozChannels;
+        rate              = audio.mozSampleRate;
+        frameBufferLength = audio.mozFrameBufferLength;
+      }
+
+      function audioAvailable(event) {
+        var frameBuffer = event.frameBuffer;
+        var t = event.time;
+
+        var text = "Samples at: " + t + "\n"
+        text += frameBuffer[0] + "  " + frameBuffer[1]
+        raw.innerHTML = text;
+      }
+
+      var raw = document.getElementById('raw')
+      var audio = document.getElementById('audio-element');
+      audio.addEventListener('MozAudioAvailable', audioAvailable, false);
+      audio.addEventListener('loadedmetadata', loadedMetadata, false);
+
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<h2 id="產生一個音頻串流">產生一個音頻串流</h2>
+<p>產生並裝置一個由腳本撰寫的 {{ HTMLElement("audio") }} 元素（也就是沒有 <em>src</em> 屬性）也是可以的。你可以用腳本設定音頻串流，然後寫入音頻樣本。網頁製作者必須產生一個音頻物件然後使用 <code>mozSetup()</code> 函式來設定頻道的數量跟頻率（赫茲）。舉例來說：</p>
+<pre class="brush: js">// 產生一個新的音頻元素
+var audioOutput = new Audio();
+// 設定此音頻元素的串流為「雙聲道，44.1千赫」
+audioOutput.mozSetup(2, 44100);
+</pre>
+<p>再來就需要做樣本。這些樣本和 <strong>mozAudioAvailable</strong> 事件的樣本用的格式是一樣的。這些樣本可以用 <code>mozWriteAudio()</code> 函式來寫入音頻串流。請注意並不是所有的樣本都會被寫入串流。函示會回傳被寫入串流的樣本數，這對於下一次要寫入資料的時候的很好用。請看下面的例子：</p>
+<pre class="brush: js">// 用JS陣列來寫樣本
+var samples = [0.242, 0.127, 0.0, -0.058, -0.242, ...];
+var numberSamplesWritten = audioOutput.mozWriteAudio(samples);
+
+// 用參數化陣列來寫樣本
+var samples = new Float32Array([0.242, 0.127, 0.0, -0.058, -0.242, ...]);
+var numberSamplesWritten = audioOutput.mozWriteAudio(samples);
+</pre>
+<p>我們在下一個範例做一個脈動：</p>
+<pre class="brush: js">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+     &lt;title&gt;及時產生音頻&lt;/title&gt;
+   &lt;script type="text/javascript"&gt;
+     function playTone() {
+       var output = new Audio();
+      output.mozSetup(1, 44100);
+       var samples = new Float32Array(22050);
+       var len = samples.length;
+
+       for (var i = 0; i &lt; samples.length ; i++) {
+         samples[i] = Math.sin( i / 20 );
+       }
+              output.mozWriteAudio(samples);
+     }
+   &lt;/script&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;p&gt;當你按下以下的按鈕之後，這個demo會撥一秒鐘的音調。&lt;/p&gt;
+   &lt;button onclick="playTone();"&gt;播放&lt;/button&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;</pre>
+<p><code>mozCurrentSampleOffset()</code> 方法回傳音頻串流的「可聽位置」，也就是最後一次被播放的樣本的位置。</p>
+<pre class="brush: js">// 取得當時後端音頻串流的可聽位置（以樣本數計算）。
+var currentSampleOffset = audioOutput.mozCurrentSampleOffset();
+</pre>
+<p>對於正在被播放的樣本（正在被硬體播放的樣本位置可以由 <code>mozCurrentSampleOffset()</code> 取得），為了保持一點點的領先（「一點點」一般大約是500 ms），你應該定期地用 <code>mozWriteAudio()</code> 寫入固定額度的音頻資料。舉例來說，假如我們設此音頻為雙聲道與每秒44100個樣本、間隔時間為100 ms、pre-buffer為500 ms，則我們每次需要寫 (2 * 44100 / 10) = 8820 個樣本，總計的樣本數是 (currentSampleOffset + 2 * 44100 / 2)。（譯注：個人覺得這段寫得很怪，直接看<a href="/zh_tw/Creating_a_Web_based_tone_generator" title="zh_tw/Creating a Web based tone generator">例子</a>可能會比較好懂。）</p>
+<p>為了讓聲音的播放不間斷但是在寫入音頻資料資料與播放的時間差為最小，自動偵測最小的pre-buffer也是可能的。為了達到這個目的，你可以在一開始的時候寫入很小部份的資料，當看到 <code>mozCurrentSampleOffset()</code> 的回傳值大於 0 的時候測量其時間差。</p>
+<pre class="brush: js">var prebufferSize = sampleRate * 0.020; // 初使緩衝為 20 ms
+var autoLatency = true, started = new Date().valueOf();
+...
+// 延遲（Latency）的自動偵測
+if (autoLatency) {
+  prebufferSize = Math.floor(sampleRate * (new Date().valueOf() - started) / 1000);
+  if (audio.mozCurrentSampleOffset()) { // 開始播放了嗎？
+    autoLatency = false;
+}
+</pre>
+<h2 id="處理音頻串流">處理音頻串流</h2>
+<p>由於 <strong>MozAudioAvailable</strong> 事件與 <code>mozWriteAudio()</code> 方法都是使用 <code>Float32Array</code> 為傳值，把一個音頻串流的輸出直接接上（或是處理過後接上）另一個是可以做到的。你應該將第一個音頻串流設為靜音使得只有第二音頻元素能被聽到。</p>
+<pre class="brush: js">&lt;audio id="a1"
+       src="song.ogg"
+       controls&gt;
+&lt;/audio&gt;
+&lt;script&gt;
+var a1 = document.getElementById('a1'),
+    a2 = new Audio(),
+    buffers = [];
+
+function loadedMetadata() {
+  // 將音頻 a1 設為靜音
+  a1.volume = 0;
+  // 講 a2 的設定弄成與 a1 相等，然後由這個播放。
+  a2.mozSetup(a1.mozChannels, a1.mozSampleRate);
+}
+
+function audioAvailable(event) {
+  // 寫入當下的 framebuffer
+  var frameBuffer = event.frameBuffer;
+  writeAudio(frameBuffer);
+}
+
+a1.addEventListener('MozAudioAvailable', audioAvailable, false);
+a1.addEventListener('loadedmetadata', loadedMetadata, false);
+
+function writeAudio(audio) {
+  buffers.push(audio);
+
+  // 有在緩衝裡的資料的話，寫入該資料
+  while(buffers.length &gt; 0) {
+    var buffer = buffers.shift();
+    var written = a2.mozWriteAudio(buffer);
+    // 如果非所有資料都被寫進去的話，將之留在緩衝裡：
+    if(written &lt; buffer.length) {
+      buffers.unshift(buffer.slice(written));
+      return;
+    }
+  }
+}
+&lt;/script&gt;
+</pre>
+<h2 id="參見">參見</h2>
+<ul> <li><a href="/zh_tw/Creating_a_Web_based_tone_generator" title="zh_tw/Creating a Web based tone generator">製作一個 Web 上的音調產生器</a></li> <li><a href="/en/Visualizing_Audio_Spectrum" title="en/Visualizing Audio Spectrum"><span>Visualizing an audio spectrum</span></a></li> <li><a href="/en/Displaying_the_Mozilla_logo_with_the_Audio_Samples" title="en/Displaying the Mozilla logo with the Audio Samples"><span>Displaying a graphic with audio samples</span></a></li> <li><a href="/en/Creating_a_simple_synth" title="https://developer.mozilla.org/en/Creating_a_simple_synth">Creating a simple synth (using existing libraries)</a></li> <li><a class=" external" href="http://en.wikipedia.org/wiki/Digital_audio" title="http://en.wikipedia.org/wiki/Digital_audio">Wikipedia article on digital audio</a><span><br> </span></li>
+</ul>
+<p>{{ languages( { "en": "en/Introducing_the_Audio_API_Extension"} ) }}</p>

@@ -1,0 +1,110 @@
+---
+title: Profile Manager
+slug: Profile_Manager
+translation_of: Mozilla/Profile_Manager
+---
+<p>Firefox and other XULRunner applications store user settings and data in special folders, called <a class="external" href="http://support.mozilla.com/en-US/kb/Profiles" title="http://support.mozilla.com/en-US/kb/Profiles">profiles</a>.    Firefox provides a built-in applet to <a class="external" href="http://support.mozilla.com/en-US/kb/Managing%20profiles" title="http://support.mozilla.com/en-US/kb/Managing profiles">manage these profiles</a>, but it will eventually be going away (see <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=214675" title="https://bugzilla.mozilla.org/show_bug.cgi?id=214675">bug 214675</a>), so a new standalone Profile Manager application has been created, which works with any XULRunner application, and has many features not found in Firefox's built-in version.</p>
+<h2 id="Downloading">Downloading</h2>
+<h4 id="Binaries">Binaries</h4>
+<p>You can download Profile Manager builds from <a class="link-ftp" href="ftp://ftp.mozilla.org/pub/mozilla.org/utilities/profilemanager/1.0/" title="ftp://ftp.mozilla.org/pub/mozilla.org/utilities/profilemanager/1.0/">ftp://ftp.mozilla.org/pub/mozilla.org/utilities/profilemanager/1.0/</a>.  There is no installer; just extract the files from the archive. </p>
+<p>System requirements:</p>
+<ul>
+ <li>Mac: an Intel processor, i386 or x86_64</li>
+ <li>Linux: any version capable of running Firefox 4.0</li>
+ <li>Windows: XP or later</li>
+</ul>
+<h4 id="Source_code">Source code</h4>
+<p>You can download the source as well:</p>
+<p style="margin-left: 40px;"><code>hg clone <a class="external" href="http://hg.mozilla.org/automation/profilemanager" rel="freelink">http://hg.mozilla.org/automation/profilemanager</a></code>/</p>
+<p>Instructions for building can be found in <a class="external" href="http://hg.mozilla.org/automation/profilemanager/file/tip/BUILD.txt" title="http://hg.mozilla.org/automation/profilemanager/file/tip/BUILD.txt">BUILD.txt</a>.</p>
+<h2 id="Reporting_Bugs">Reporting Bugs</h2>
+<p>Profile Manager bugs should be reported in Bugzilla, under <a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Testing&amp;Component=ProfileManager" title="https://bugzilla.mozilla.org/enter_bug.cgi?product=Testing&amp;Component=ProfileManager">Testing -&gt; ProfileManager</a>.</p>
+<h2 id="Starting_Profile_Manager">Starting Profile Manager</h2>
+<p>To start Profile Manager, just launch profilemanager.exe (on Windows) or profilemanager-bin (on Linux and Mac).  By default, Profile Manager will manage Firefox profiles, but you can also use it to work with profiles of other xulrunner apps, like Thunderbird or SeaMonkey.  To use Profile Manager with an application other than Firefox, you need to launch it using the application's name as an argument, for example:</p>
+<p> </p>
+<p style="margin-left: 40px;"><code>profilemanager-bin seamonkey</code></p>
+<h2 id="Profiles_and_application_versions">Profiles and application versions</h2>
+<p>Profile Manager manages two different lists: one of user profiles, and the other of application versions that can be used with the profiles.  By default, this means it tracks a list of Firefox applications that are installed on your system, and a list of profiles for use by Firefox.</p>
+<p> </p>
+<p>An individual profile can be linked to a specific installation of Firefox, so that version of Firefox will be launched when that profile is selected.  For example, ProfileA might be linked with a copy of Firefox 3.6.10, while ProfileB might be linked with a copy of Firefox 3.5.3.</p>
+<p>When launched, Profile Manager will look in some default locations for installed versions of Firefox (or other application you're using Profile Manager with).  Additionally, you can manually add Firefox versions by clicking the "Manage Firefox versions..." button:</p>
+<p> <img alt=""></p>
+<p>Each Firefox version in the list has the following properties:  path, version, and default.  The default property indicates that this version of Firefox will be used with profiles that don't have a specific application version associated with them.</p>
+<p> </p>
+<h2 id="Creating_a_profile">Creating a profile</h2>
+<p>To create a new profile, just click the New button from Profile Manager's toolbar.  A dialog will appear that allows you to specify the profile's name, and optionally the profile's path, and the version of Firefox (or other application) that will be used with this profile:</p>
+<p> </p>
+<p><img alt=""></p>
+<p> </p>
+<h2 id="Launching_Firefox_with_a_profile">Launching Firefox with a profile</h2>
+<p>To launch Firefox with a specific profile, select the profile in the main window, and hit the "Start Firefox" button:  Firefox will be launched with that profile, and Profile Manager will terminate.  The version of Firefox which will be launched is indicated in the "Firefox version" dropdown in the Launch Options box:</p>
+<p> </p>
+<p><img alt=""></p>
+<p>There are several additional launch options available for Firefox.  These cause Firefox to be launched with various command-line arguments.  See <a href="/en/Command_Line_Options" title="en/Command Line Options">Command Line Options</a> for a description of these.</p>
+<table style="width: 400px;">
+ <thead>
+  <tr>
+   <th scope="col">Launch Option</th>
+   <th scope="col">Command Line Argument</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Run Firefox in offline mode</td>
+   <td><a href="/en/Command_Line_Options#-offline" title="https://developer.mozilla.org/en/Command_Line_Options#-offline">-offline</a></td>
+  </tr>
+  <tr>
+   <td>Run Firefox in safe mode</td>
+   <td><a href="/en/Command_Line_Options#-safe-mode" title="https://developer.mozilla.org/en/Command_Line_Options#-safe-mode">-safe-mode</a></td>
+  </tr>
+  <tr>
+   <td>Start Firefox with a console</td>
+   <td><a href="/en/Command_Line_Options#-console" title="https://developer.mozilla.org/en/Command_Line_Options#-console">-console</a></td>
+  </tr>
+  <tr>
+   <td>Start new instance</td>
+   <td><a href="/en/Command_Line_Options#-no-remote" title="https://developer.mozilla.org/en/Command_Line_Options#-no-remote">-no-remote</a></td>
+  </tr>
+ </tbody>
+</table>
+<p><strong>Note:</strong> It isn't possible to start a second instance of Firefox without passing it the -no-remote command line argument.  For this reason, if you attempt to launch Firefox using Profile Manager, and it detects that another instance of Firefox is already running, it will automatically add the -no-remote argument for you, regardless of whether this launch option was checked.</p>
+<p> </p>
+<h2 id="Locked_profiles">Locked profiles</h2>
+<p>Some profiles may be shown as locked in the main window.   Such profiles are currently being used by an instance of Firefox.  If you attempt to perform any operation on a locked profile, you'll get a warning; if you choose to continue despite the warning, you may encounter errors or corrupt a profile.</p>
+<p> </p>
+<p>It's strongly recommended to avoid operations on locked profiles.  If you need to do something with a locked profile, close the instance of Firefox which is using the profile first.</p>
+<p> </p>
+<h2 id="Backing_up_and_restoring_profiles">Backing up and restoring profiles</h2>
+<p>Profile Manager offers two different mechanisms for backing up and restoring profiles.</p>
+<p> </p>
+<h4 id="Backup_folder">Backup folder</h4>
+<p>Profile Manager has a local backup folder where it can manage profile backups.  This is the easiest way to backup and restore profiles. </p>
+<p>To backup a profile:  select the profile you want to backup, and choose "backup to-&gt;backup folder" from the toolbar's Backup menu.  The profile will be backed up, and the backup will appear under the backups column in the main display:</p>
+<p><img alt=""></p>
+<p>To restore a profile:  select the backup in the main display, open the context menu, and choose "restore".  When you restore a profile, the backup is retained, so you can restore from the same backup at a later date.</p>
+<p>To delete a backup:  select the backup in the main display, open the context menu, and choose "delete".</p>
+<h4 id="Profile_archives">Profile archives</h4>
+<p>Profile Manager can also backup to and restore from .zip archives.  Profile Manager does not track these backups in the UI, but using profile archives is an easy way to move profiles between machines.</p>
+<p>To backup a profile to an archive:  select the profile you want to backup, and choose "backup to-&gt;archive" from the toolbar's backup menu.  You'll be prompted for a name and location for the archive.</p>
+<p>To create a profile from a profile archive:  Select "restore from-&gt;archive" from the toolbar's backup menu.  You'll be prompted for the location of the archive, and then for the name of the profile you'd like to create from the archive.</p>
+<p> </p>
+<h2 id="Other_Operations">Other Operations</h2>
+<p>Context-clicking any profile in the profile list will cause a popup menu to appear with the following commands:</p>
+<ul>
+ <li><strong>Copy</strong><strong> - </strong>makes a copy of the profile using a name and location of your choice.</li>
+ <li><strong>Delete</strong> - deletes the profile, and all files associated with it.</li>
+ <li><strong>Properties </strong>- shows a dialog that displays the profile's path and last-modified date.</li>
+ <li><strong>Rename</strong> - allows you to specify a new name for the profile.</li>
+ <li><strong>Version </strong>- allows you change the default application version to be used with the profile.</li>
+</ul>
+<p> </p>
+<h2 id="Future_Enhancements">Future Enhancements</h2>
+<ul>
+ <li>Ability to install/uninstall/enable/disable extensions in profiles.</li>
+ <li>Ability to copy certain assets (e.g., bookmarks) between profiles.</li>
+ <li>Add 'Profile Size' to the Properties dialog.</li>
+ <li>Ability to reset a profile (return it to a default state excluding bookmarks and passwords).</li>
+ <li>Add option to specify the location of profiles.ini.</li>
+</ul>
+<p> </p>
+<p>{{ languages( {"es" : "es/Administrador_de_perfiles" ,"zh-cn" : "zh-cn/Profile_Manager" } ) }}</p>

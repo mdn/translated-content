@@ -1,0 +1,144 @@
+---
+title: Promise.jsm
+slug: Mozilla/JavaScript_code_modules/Promise.jsm
+tags:
+  - NeedsTranslation
+  - TopicStub
+translation_of: Mozilla/JavaScript_code_modules/Promise.jsm
+---
+<p>{{ gecko_minversion_header("25") }}</p>
+
+<p>The <code>Promise.jsm</code> JavaScript code module implements the <a href="https://github.com/promises-aplus/promises-spec/blob/1.0.0/README.md" title="https://github.com/promises-aplus/promises-spec/blob/1.0.0/README.md">Promises/A+</a> proposal as known in April 2013.</p>
+
+<div class="warning">
+<p>This module was used before <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">DOM Promises</a> were made globally available in Gecko 29. Its usage is not suggested for new code.</p>
+
+<p>If you just need a Promise, consider using a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">DOM Promise</a> instead.</p>
+
+<p>If you need a <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Deferred">Deferred</a>, because you want to create a Promise and manually resolve or reject it, consider using <a href="/en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.jsm">PromiseUtils.jsm</a> instead.</p>
+</div>
+
+<p>To use it, you first need to import the code module into your JavaScript scope:</p>
+
+<pre>Components.utils.import("resource://gre/modules/Promise.jsm");
+</pre>
+
+<div class="note">
+<p><strong>Note:</strong> A preliminary promise module is also available starting from Gecko 17, though it didn't conform to the Promises/A+ proposal until Gecko 25:</p>
+
+<pre>Components.utils.import("<s>resource://gre/modules/commonjs/promise/core.js</s>");     // Gecko 17 to 20
+Components.utils.import("<s>resource://gre/modules/commonjs/sdk/core/promise.js</s>"); // Gecko 21 to 24
+</pre>
+
+<p>This implementation also includes helper functions that are specific to the Add-on SDK. While you may still import this module from the above paths, the recommended way for loading it is through the <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/modules/toolkit/loader.html" title="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/modules/toolkit/loader.html">Add-on SDK loader</a>.</p>
+</div>
+
+<h2 id="Introduction">Introduction</h2>
+
+<p>For an introduction to promises, you may start from the <a href="/en-US/Add-ons/SDK/Low-Level_APIs/core_promise">Add-on SDK documentation</a>, keeping in mind that only the core subset is implemented in this module.</p>
+
+<p><u>A promise is an object representing a value that may not be available yet</u>. Internally, a promise can be in one of three states:</p>
+
+<ul>
+ <li><strong>Pending</strong>, when the final value is not available yet. This is the only state that may transition to one of the other two states.</li>
+ <li><strong>Fulfilled</strong>, when and if the final value becomes available. A <em>fulfillment value</em> becomes permanently associated with the promise. This may be any value, including <code>undefined</code>.</li>
+ <li><strong>Rejected</strong>, if an error prevented the final value from being determined. A <em>rejection reason</em> becomes permanently associated with the promise. This may be any value, including <code>undefined</code>, though it is generally an <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Error" title="/en-US/docs/JavaScript/Reference/Global_Objects/Error"><code>Error</code></a> object, like in exception handling.</li>
+</ul>
+
+<p>A reference to an existing promise may be received by different means, for example as the return value of a call into an asynchronous API. In this case, the state of the promise can be observed but not directly controlled.</p>
+
+<p>To observe the state of a promise, its <code>then</code> method must be used. This method registers callback functions that are called as soon as the promise is either fulfilled or rejected. The method returns a new promise, that in turn is fulfilled or rejected depending on the state of the original promise and on the behavior of the callbacks. For example, unhandled exceptions in the callbacks cause the new promise to be rejected, even if the original promise is fulfilled. See the documentation of the <code>then</code> method for details.</p>
+
+<p>Promises may also be created using the <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor" title="/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor"><code>new Promise()</code></a> constructor.</p>
+
+<h2 id="Method_overview">Method overview</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Deferred" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Deferred">Deferred</a> <a href="#defer()">defer</a>();</code> {{ obsolete_inline("30") }}</td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a> <a href="#resolve()">resolve</a>([optional] aValue);</code></td>
+  </tr>
+  <tr>
+   <td><code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a> <a href="#reject()">reject</a>([optional] aReason);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods">Methods</h2>
+
+<h3 id="defer()">defer()</h3>
+
+<p>Creates a new pending promise and provides methods to resolve or reject it.</p>
+
+<pre>Deferred defer(); {{ obsolete_inline("30") }}
+</pre>
+
+<h6 id="Parameters">Parameters</h6>
+
+<p>None.</p>
+
+<h6 id="Return_value">Return value</h6>
+
+<p>A new object, containing the new promise in the <code>promise</code> property, and the methods to change its state in the <code>resolve</code> and <code>reject</code> properties. See the <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Deferred" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Deferred"><code>Deferred</code></a> documentation for details.</p>
+
+<h3 id="resolve()">resolve()</h3>
+
+<p>Creates a new promise fulfilled with the specified value, or propagates the state of an existing promise.</p>
+
+<pre>Promise resolve(
+  aValue
+);
+</pre>
+
+<h6 id="Parameters_2">Parameters</h6>
+
+<dl>
+ <dt><code>aValue</code> {{ optional_inline() }}</dt>
+ <dd>If this value is not a promise, including <code>undefined</code>, it becomes the fulfillment value of the returned promise. If this value is a promise, then the returned promise will be resolved with the value, i.e. it will eventually assume the same state as the provided promise.</dd>
+</dl>
+
+<h6 id="Return_value_2">Return value</h6>
+
+<p>A promise that can be pending, fulfilled, or rejected.</p>
+
+<h3 id="reject()">reject()</h3>
+
+<p>Creates a new promise rejected with the specified reason.</p>
+
+<pre>Promise reject(
+  aReason
+);
+</pre>
+
+<h6 id="Parameters_3">Parameters</h6>
+
+<dl>
+ <dt><code>aReason</code> {{ optional_inline() }}</dt>
+ <dd>
+ <p>The rejection reason for the returned promise. Although the reason can be <code>undefined</code>, it is generally an <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Error" title="/en-US/docs/JavaScript/Reference/Global_Objects/Error"><code>Error</code></a> object, like in exception handling.</p>
+
+ <div class="note"><strong>Note:</strong> This argument should not be a promise. Specifying a rejected promise would make the rejection reason equal to the rejected promise itself, and not its rejection reason.</div>
+ </dd>
+</dl>
+
+<h6 id="Return_value_3">Return value</h6>
+
+<p>A rejected promise.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>See the <a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Examples">examples</a> page.</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise">Promise</a></li>
+ <li><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Deferred" title="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Deferred">Deferred</a></li>
+ <li><a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Examples">Examples</a></li>
+ <li><a class="internal" href="/en-US/docs/JavaScript_code_modules/Using" title="en-US/docs/JavaScript code modules/Using JavaScript code modules">Using JavaScript code modules</a></li>
+ <li><a class="internal" href="/en-US/docs/Mozilla/JavaScript_code_modules" title="en-US/docs/Mozilla/JavaScript code modules">JavaScript code modules</a></li>
+ <li><a class="internal" href="/en-US/docs/Components.utils.import" title="en-US/docs/Components.utils.import"><code>Components.utils.import</code></a></li>
+</ul>

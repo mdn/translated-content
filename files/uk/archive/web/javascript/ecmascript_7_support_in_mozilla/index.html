@@ -1,0 +1,70 @@
+---
+title: ECMAScript 7 підтримка в Mozilla
+slug: Archive/Web/JavaScript/ECMAScript_7_support_in_Mozilla
+tags:
+  - ECMAScript 2016
+  - Firefox
+  - JavaScript
+translation_of: Archive/Web/JavaScript/ECMAScript_Next_support_in_Mozilla
+---
+<p>{{jsSidebar("New_in_JS")}}</p>
+
+<p>ECMAScript 2016 є наступним етапом еволюції стандарту ECMA-262 (зазвичай називають <a href="/en-US/docs/Web/JavaScript">JavaScript</a>). Робота над ECMAScript 2015 була завершена 17 червня 2015, нові можливості вже впроваджуються. Ви можете побачити останні впровадження в <a href="https://github.com/tc39/ecma262">tc39/ecma262</a> GitHub репозиторії.</p>
+
+<p>Поточні недоліки в процесі специфікації планується вирішити в декілька <em>етапів</em> та <em>чемпіонатів</em>. Також, пропонується дотримуватися 2 річного циклу публікації стандарту. Для перегляду інформації що до процесу специфікації після випуску ES2015 дивіться <a href="http://slides.com/rafaelweinstein/tc39-process">у презентації Rafael Weinstein</a>.</p>
+
+<p>Канал зворотного зв'язку за стандартами ECMAScript <a href="https://mail.mozilla.org/listinfo/es-discuss">es-discuss</a>.</p>
+
+<h2 id="Експериментальні_можливості">Експериментальні можливості</h2>
+
+<p>Наступні функції вже реалізовані, але доступні тільки в каналі <a href="http://nightly.mozilla.org/">нічних збірок Firefox</a>:</p>
+
+<h3 id="Additions_to_the_Array_object">Additions to the <code>Array</code> object</h3>
+
+<ul>
+ <li>{{jsxref("Array.prototype.includes()")}} (<a href="https://github.com/domenic/Array.prototype.includes/blob/master/spec.md">spec</a>)</li>
+</ul>
+
+<h3 id="Additions_to_the_ArrayBuffer_object">Additions to the <code>ArrayBuffer</code> object</h3>
+
+<ul>
+ <li>{{jsxref("ArrayBuffer.transfer()")}} (<a href="https://gist.github.com/lukewagner/2735af7eea411e18cf20">spec</a>)</li>
+</ul>
+
+<h3 id="New_TypedObject_objects">New TypedObject objects</h3>
+
+<ul>
+ <li><a href="https://github.com/dslomov-chromium/typed-objects-es7">Typed Objects draft</a></li>
+</ul>
+
+<h3 id="New_SIMD_objects">New SIMD objects</h3>
+
+<ul>
+ <li><a href="https://github.com/johnmccutchan/ecmascript_simd">SIMD specification draft and polyfill</a></li>
+</ul>
+
+<h2 id="Можливості_які_потребують_стабілізації">Можливості, які потребують стабілізації</h2>
+
+<p>The following features are supported beyond the Nightly channel, but ongoing specification and implementation work is happening. Features which were originally in the ECMAScript 6 draft and got postponed to ECMAScript 7 are likely to appear here.</p>
+
+<h3 id="Вирази">Вирази</h3>
+
+<ul>
+ <li>{{jsxref("Operators/Arithmetic_Operators", "Exponentiation operator", "#Exponentiation", 1)}} (<a href="/en-US/Firefox/Releases/42">Firefox 42</a>)</li>
+</ul>
+
+<h2 id="Можливості_які_ще_не_підтримуються">Можливості, які ще не підтримуються</h2>
+
+<p>Наступні функції ще не реалізовані, але орієнтовані на ECMAScript 7.</p>
+
+<ul>
+ <li><code>Object.observe()</code> ({{bug(800355)}})</li>
+</ul>
+
+<h2 id="Дивіться_також">Дивіться також</h2>
+
+<ul>
+ <li><a href="http://www.ecmascript.org/">ECMAScript вебсайт </a></li>
+ <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1021376">Mozilla ES2016 відстежування багів</a></li>
+ <li><a href="http://kangax.github.io/compat-table/es7/">ECMAScript 2016 підтримка браузерами</a></li>
+</ul>

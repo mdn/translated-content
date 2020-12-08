@@ -1,0 +1,117 @@
+---
+title: การแก้ไขปัญหา WebIDE
+slug: Tools/WebIDE/Troubleshooting
+translation_of: Archive/WebIDE/Troubleshooting
+---
+<h2 id="การเชื่อมต่ออุปกรณ์_Firefox_OS_ผ่าน_USB"><span class="short_text" id="result_box" lang="th"><span class="hps">การเชื่อมต่ออุปกรณ์</span> <span class="hps">Firefox</span> <span class="hps">OS</span> <span class="hps">ผ่าน USB</span></span></h2>
+
+<p><span id="result_box" lang="th"><span class="hps">ถ้าคุณ</span><span>กำลังพยายามที่จะ</span><span>เชื่อมต่ออุปกรณ์</span> <span class="hps">Firefox</span> <span class="hps">OS เพื่อ</span> <span class="hps">WebIDE</span> <span class="hps">และ มันไม่</span><span>แสดงขึ้น</span></span> <span class="short_text" id="result_box" lang="th"><span class="hps">นี่คือบาง</span><span>สิ่งที่คุณสามารถ</span><span>ลองทำ:</span></span></p>
+
+<ul>
+ <li><font><font>ตรวจสอบรุ่นของ Firefox OS: ให้แน่ใจว่าอุปกรณ์ของคุณใช้</font></font><strong><font><font>Firefox OS 1.2 / Boot2Gecko 1.2 </font></font></strong><font><font>หรือสูงกว่า </font></font><code>Device Information &gt; Software</code><font><font>การตรวจสอบรุ่นไปที่แอปการตั้งค่าบนอุปกรณ์แล้ว</font><font> </font><font>ถ้าคุณไม่มีเวอร์ชันที่สูงพอให้ค้นหาอุปกรณ์ของคุณใน</font></font><a href="/en-US/Firefox_OS/Developer_phone_guide"><font><font>คู่มือสำหรับนักพัฒนาซอฟต์แวร์</font></font></a><font><font>และทำตามคำแนะนำในการอัปเกรด</font></font></li>
+ <li><font><font>เปิดใช้งานการแก้จุดบกพร่องระยะไกล: </font></font><code>Device information &gt; More information &gt; Developer</code><font><font>ในแอปตั้งค่าบนอุปกรณ์ให้ไปที่</font></font>
+  <ul>
+   <li><font><font>Firefox OS 1.3 ขึ้นไป: "Remote Debugging" เป็นเพียงช่องทำเครื่องหมายง่ายๆ </font><font>ทำเครื่องหมายในช่อง</font></font></li>
+   <li><font><font>Firefox OS 1.4 ขึ้นไป: "Remote Debugging" จะขอให้คุณเปิดใช้งานเฉพาะ ADB หรือ ADB และ DevTools </font><font>เลือก "ADB และ DevTools"</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>ปิดใช้งานการล็อกหน้าจอในอุปกรณ์ของคุณ: ในแอปการตั้งค่าบนอุปกรณ์ให้ไปที่</font></font><code>Screen Lock</code><font><font>และยกเลิกการ</font></font><code>Lock Screen</code><font><font>เลือกช่องทำเครื่องหมาย </font><font>นี่เป็นวิธีที่ดีเพราะเมื่อหน้าจอถูกล็อคการเชื่อมต่อโทรศัพท์สูญหายซึ่งหมายความว่าจะไม่สามารถแก้ปัญหาได้อีกต่อไป</font></font></li>
+ <li><font><font>ตรวจสอบว่าคุณไม่ได้เชื่อมต่อโทรศัพท์ Android พร้อมกับโทรศัพท์ระบบปฏิบัติการ Firefox ในคอมพิวเตอร์ของคุณ</font></font></li>
+ <li>Check the USB cable you are using:เปลี่ยนการกระทำทุกอย่างเป็นภาษา ไทย
+  <p> </p>
+
+  <ul>
+   <li><font><font>ลองถอดปลั๊กและเสียบสายเคเบิล USB อีกครั้ง</font></font></li>
+   <li><font><font>ลองเสียบสาย USB เข้ากับพอร์ตอื่นในคอมพิวเตอร์ของคุณ </font><font>คุณอาจต้องสลับระหว่างพอร์ต</font></font></li>
+   <li><font><font>ลองใช้สาย USB อื่น </font><font>สายที่มากับโทรศัพท์มักมีคุณภาพไม่ดีและมักล้มเหลว</font></font></li>
+   <li><font><font>ลองใช้สายเคเบิล USB ที่สั้นกว่า </font><font>สาย USB ยาวได้รับทราบว่าไม่ทำงานได้ดี</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>ลองปิดใช้งานและเปิดใช้งานการแก้ไขปัญหาระยะไกลอีกครั้งในแอปการตั้งค่าบนอุปกรณ์</font></font></li>
+ <li><font><font>ถ้า</font></font><a href="/en-US/docs/Tools/WebIDE#Custom_runtimes"><font><font>คุณปิดการใช้งาน ADB Addon Helper</font></font></a><font><font>คุณทำสำเร็จ</font></font><code>adb forward</code><font><font>หรือไม่?</font></font></li>
+ <li><font><font>ถ้าคุณใช้ Linux:</font></font>
+  <ul>
+   <li><font><font>ให้แน่ใจว่าคุณเพิ่ม</font></font><code>udev</code><font><font>ไฟล์กฎตามที่บันทึกไว้ในขั้นตอนที่ 3 ของคู่มือนี้เพื่อ</font><font>ตั้งค่าอุปกรณ์</font></font><a class="external external-icon" href="http://developer.android.com/tools/device.html#setting-up"><font><font> Android </font></font></a><code>idVendor</code><font><font>แอตทริบิวต์ที่จะใช้สำหรับ Geeksphone คือ "05c6" และ</font></font><a class="external external-icon" href="http://developer.android.com/tools/device.html#VendorIds"><font><font>หน้านี้</font></font></a><font><font>รายการอื่น ๆ</font></font><code>idVendor</code><font><font>ค่า </font><font>จากนั้นให้เรียกใช้</font></font><code>adb devices</code><font><font>เพื่อให้แน่ใจว่าอุปกรณ์ของคุณอยู่ในรายการ </font><font>หากอุปกรณ์ดูเหมือนจะเป็น "no permission" คุณต้องรีสตาร์ทเซิร์ฟเวอร์ adb (เช่น</font></font><code>adb kill-server;adb start-server</code><font><font>)</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>ถ้าคุณใช้ Windows:</font></font>
+  <ul>
+   <li><font><font>คุณจำเป็นต้องติดตั้งไดรเวอร์เป็นเอกสารในขั้นตอนที่ 3 ของคู่มือนี้เพื่อ</font><font>ตั้งค่าอุปกรณ์</font></font><a class="external external-icon" href="http://developer.android.com/tools/device.html#setting-up"><font><font> Android </font></font></a><font><font>คุณสามารถค้นหาไดรเวอร์สำหรับอุปกรณ์ Geeksphone บน</font></font><a class="external external-icon" href="http://downloads.geeksphone.com/"><font><font>เว็บไซต์ Geeksphone</font></font></a><font><font>และไดรเวอร์สำหรับอุปกรณ์ของ Google บน</font><font>เว็บไซต์ของ</font></font><a href="http://developer.android.com/sdk/win-usb.htm"><font><font> Google </font></font></a><font><font>Windows 8 เป็นค่าเริ่มต้นจะไม่ให้คุณติดตั้งโปรแกรมควบคุมที่ไม่ได้ลงชื่อ </font><font>ดูการกวดวิชานี้เกี่ยวกับ</font></font><a class="external-icon external" href="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html" title="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html"><font><font>"วิธีการติดตั้งโปรแกรมควบคุมที่ไม่ได้ลงนามใน Windows </font></font></a><font><font>8"</font></font></li>
+   <li><font><font>หาก WebIDE ไม่สามารถดูอุปกรณ์ของคุณหลังจากทำตามขั้นตอนทั้งหมดที่คุณอาจต้อง</font></font><a class="external-icon external" href="http://blog.fh-kaernten.at/wehr/?p=1182"><font><font>แก้ไข </font></font></a><font><font>adb_usb.ini</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>หากคุณใช้ Mac OS X:</font></font>
+  <ul>
+   <li><font><font>หากคุณได้รับข้อผิดพลาดเกี่ยวกับการหมดเวลาที่เชื่อมต่อกับอุปกรณ์จำลองและอุปกรณ์จริงคุณอาจไม่สามารถเชื่อมต่อกับ localhost เนื่องจากไฟล์ว่าง / etc / hosts </font><font>คุณสามารถแก้ปัญหาได้โดยประชากรของไฟล์และล้างแคช DNS </font><font>ตามที่อธิบายไว้ที่นี่</font></font></li>
+   <li><font><font>หากคุณเป็นผู้ใช้ EasyTether คุณจะต้องถอนการติดตั้งหรือปิดใช้งาน EasyTether: </font></font><code>sudo kextunload /System/Library/Extensions/EasyTetherUSBEthernet.kext</code></li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="การเชื่อมต่ออุปกรณ์_Firefox_OS_ผ่าน_Wi-Fi"><span class="short_text" id="result_box" lang="th"><span class="hps">การเชื่อมต่ออุปกรณ์</span> <span class="hps">Firefox</span> <span class="hps">OS</span> <span class="hps">ผ่าน Wi-Fi</span></span></h2>
+
+<ul>
+ <li><font><font>ตรวจสอบเวอร์ชันของคุณ: การดีบักแบบ Wi-Fi ต้องใช้ Firefox 39 หรือสูงกว่าและอุปกรณ์ Firefox OS ที่ใช้งาน Firefox OS 3.0 จาก 2015-03-27 หรือใหม่กว่า</font></font></li>
+ <li><font><font>เครื่องสแกนโค้ด QR อาจเป็นเรื่องที่น่าหงุดหงิดในขณะนี้เนื่องจากอุปกรณ์จริงจะจับภาพความละเอียดต่ำมาก </font></font><a href="https://bugzil.la/1145772"><font><font>ข้อผิดพลาด 1145772</font></font></a><font><font>มีเป้าหมายเพื่อปรับปรุงสิ่งนี้ในเร็ว ๆ นี้ </font><font>หากคุณมีปัญหาในเรื่องนี้ให้ลองสแกนด้วยทิศทางที่ต่างกัน </font><font>หากคุณเลือก "สแกนและจดจำแล้วคุณจะไม่ต้องสแกนรหัสอีกครั้งในครั้งต่อไปที่คุณเชื่อมต่อคอมพิวเตอร์กับอุปกรณ์นี้</font></font></li>
+</ul>
+
+<h2 id="การเชื่อมต่อกับ_Firefox_สำหรับ_Android"><span class="short_text" id="result_box" lang="th"><span class="hps">การเชื่อมต่อกับ</span> <span class="hps">Firefox</span> <span class="hps">สำหรับ Android</span></span></h2>
+
+<p><font><font>หากคุณกำลังพยายามเชื่อมต่อกับอินสแตนซ์ Firefox ที่รันบน Android OS และไม่ปรากฏขึ้นคุณสามารถลองทำสิ่งต่างๆต่อไปนี้:</font></font></p>
+
+<ul>
+ <li><font><font>ตรวจสอบเวอร์ชั่นของ Firefox: ให้แน่ใจว่าอุปกรณ์ของคุณใช้</font></font><strong><font><font>Firefox 36 </font></font></strong><font><font>หรือสูงกว่า </font><font>WebIDE จะไม่ตรวจสอบรุ่นเก่าโดยอัตโนมัติเพื่อให้คุณต้องเปิดใช้งานการส่งต่อพอร์ตและเชื่อมต่อกับพอร์ตอุปกรณ์ - ทำตามคำแนะนำ</font><font>ที่นี่</font></font></li>
+ <li><font><font>ให้แน่ใจว่าคุณได้เปิดใช้งานการแก้จุดบกพร่องระยะไกลใน Firefox: เปิด Firefox สำหรับ Android เปิดเมนูเลือก</font><font>แล้วตรวจสอบช่องทำเครื่องหมายที่</font></font><code>Settings</code><code>Developer Tools &gt; Remote debugging</code></li>
+ <li><font><font>ตรวจสอบว่ามีการแก้จุดบกพร่อง USB ในการตั้งค่านักพัฒนาซอฟต์แวร์ของอุปกรณ์</font></font></li>
+ <li><font><font>ถ้าคุณยังไม่เห็นอุปกรณ์ของคุณในหน้าต่าง WebIDE ให้ลองสลับ</font></font><code>Remote debugging</code><font><font>บนโทรศัพท์</font></font>
+  <ul>
+   <li><font><font>ตัดการเชื่อมต่ออุปกรณ์ของคุณจากคอมพิวเตอร์และปิด</font></font><code>Remote debugging</code><font><font>เครื่อง</font></font></li>
+   <li><font><font>เชื่อมต่ออุปกรณ์อีกครั้งและเปิด</font></font><code>Remote debugging</code><font><font>- โปรแกรมนี้จะรีสตาร์ทอินสแตนซ์ดีบักเกอร์บนโทรศัพท์</font></font></li>
+   <li><font><font>ลองเชื่อมต่อผ่าน WebIDE อีกครั้ง</font></font></li>
+  </ul>
+ </li>
+ <li><font><font>หากใช้ Windows ตรวจสอบให้แน่ใจว่าอุปกรณ์ Android ของคุณได้รับการตรวจสอบอย่างถูกต้องและใช้ไดรฟ์ USB ของ Google ที่มาพร้อมกับ Android SDK</font></font></li>
+</ul>
+
+<h2 id="การเชื่อมต่อกับเบราว์เซอร์อื่น_ๆ_(Chrome_Safari)"><span class="short_text" id="result_box" lang="th"><span class="hps">การเชื่อมต่อกับ</span><span>เบราว์เซอร์</span><span>อื่น ๆ</span> <span class="atn hps">(</span><span>Chrome, Safari</span><span>)</span></span></h2>
+
+<p><font><font>WebIDE ใช้</font></font><a href="/en-US/docs/Tools/Valence"><font><font>Valence (ก่อนหน้านี้คือ Firefox Tools Adapter)</font></font></a><font><font>เพื่อเข้าถึงเบราว์เซอร์อื่นเช่น Chrome และ Safari </font></font></p>
+
+<p><font><font>หากคุณกำลังมีปัญหาในการเชื่อมต่อกับเบราว์เซอร์อื่น ๆ เหล่านี้ให้ตรวจสอบขั้นตอนการติดตั้งและบันทึกอื่น ๆ สำหรับเบราว์เซอร์ผู้ที่อยู่ใน</font><font>หน้า</font></font><a href="/en-US/docs/Tools/Valence"><font><font> Valence</font></font></a></p>
+
+<h2 id="ไม่สามารถแก้ปัญหาบางแอพพลิเคชั่น(debug)">ไม่สามารถแก้ปัญหาบาง<span class="short_text" id="result_box" lang="th"><span class="alt-edited">แอพพลิเคชั่น(</span></span>debug<span class="short_text" lang="th"><span class="alt-edited">)</span></span></h2>
+
+<p><font><font>หากคุณพบว่าคุณไม่สามารถแก้ปัญหาแอปพลิเคชันที่ได้รับการรับรองแอปที่ติดตั้งหรือแอปที่ติดตั้งไว้ในอุปกรณ์จริงแล้วคุณอาจกำลังดูนโยบายด้านความปลอดภัยที่มีสิทธิ์ จำกัด ของ WebIDE </font><font>หากต้องการข้อมูลเพิ่มเติมโปรดดูที่ส่วนที่เกี่ยวกับ</font></font><a href="/en-US/docs/Tools/WebIDE#Unrestricted_app_debugging_%28including_certified_apps.2C_main_process.2C_etc.%29"><font><font>การแก้จุดบกพร่องไม่ จำกัด แอป (รวมถึงแอพพลิเคได้รับการรับรองกระบวนการหลัก ฯลฯ</font></font></a><font><font> )</font></font></p>
+
+<h2 id="ไม่สามารถโหลดรายชื่อโครงการ"><span class="short_text" id="result_box" lang="th"><span class="hps">ไม่สามารถโหลด</span><span>รายชื่อ</span><span>โครงการ</span></span></h2>
+
+<p><font><font>หากคุณเปิด WebIDE ใน Firefox เวอร์ชันใดเวอร์ชันหนึ่งแล้วปรับลดรุ่นเป็น Firefox เวอร์ชันก่อนหน้าด้วยโปรไฟล์เดียวกันคุณอาจเห็นข้อผิดพลาด "Unable to load project list" เมื่อเปิด WebIDE ในเวอร์ชัน Firefox ก่อนหน้านี้</font></font></p>
+
+<p><font><font>ซึ่งอาจเกิดขึ้นได้เมื่อระบบจัดเก็บข้อมูลที่ WebIDE ใช้ ( </font></font><a href="/en-US/docs/Web/API/IndexedDB_API"><font><font>IndexedDB</font></font></a><font><font> ) จำเป็นต้องย้ายหรือปรับโครงสร้างไฟล์ภายในสำหรับเวอร์ชัน Firefox รุ่นใหม่ </font><font>รายการโครงการจะกลายเป็นเวอร์ชันล่าสุดของ Firefox ที่ไม่สามารถเข้าถึงได้</font></font></p>
+
+<p><font><font>ไม่มีข้อมูลสูญหาย แต่คุณจะต้องใช้ Firefox รุ่นล่าสุดที่ใช้กับโปรไฟล์ของคุณเพื่อรับรายชื่อโครงการ</font></font></p>
+
+<p><font><font>ถ้าคุณต้องการใช้ Firefox เวอร์ชันเก่ากว่านี้คุณสามารถลองลบรายการโครงการตามวิธีการต่อไปนี้ได้ แต่นี่ไม่ได้รับการสนับสนุนและอาจส่งผลต่อปัญหาหรือการสูญหายของข้อมูลเพิ่มเติม:</font></font></p>
+
+<ol>
+ <li><font><font>ปิด Firefox</font></font></li>
+ <li><font><font>ค้นหาไดเรกทอรีโปรไฟล์ Firefox ของคุณ</font></font></li>
+ <li><font><font>ค้นหา</font></font><code>storage</code><font><font>โฟลเดอร์ภายในไดเร็กทอรีโปรไฟล์</font></font></li>
+ <li><font><font>ภายใต้บางส่วนของต้นไม้แฟ้มนี้ควรมีไฟล์และ / หรือไดเรกทอรีที่ขึ้นต้นด้วย</font></font><code>4268914080AsptpcPerjo</code><font><font>(ชื่อที่ถูกแฮชของฐานข้อมูล)</font></font></li>
+ <li><font><font>ลบไฟล์และไดเรกทอรีดังกล่าวออก</font></font></li>
+ <li><font><font>เริ่ม Firefox และ WebIDE อีกครั้ง</font></font></li>
+</ol>
+
+<h2 id="เปิดใช้งานการเข้าสู่ระบบ"><span class="short_text" id="result_box" lang="th"><span class="hps">เปิดใช้งาน</span><span>การเข้าสู่ระบบ</span></span></h2>
+
+<p><font><font>นอกจากนี้คุณยังสามารถเปิดใช้งานการบันทึกข้อมูลแบบ verbose เพื่อรวบรวมการวินิจฉัย:</font></font></p>
+
+<ol start="1" style="list-style-type: decimal;">
+ <li><font><font>เปิด</font></font><a class="external external-icon" href="http://kb.mozillazine.org/About:config"><font><font>about: config</font></font></a><font><font>และเพิ่มการตั้งค่าใหม่ที่เรียกว่า</font></font><code>extensions.adbhelper@mozilla.org.sdk.console.logLevel</code><font><font>มีค่าสตริง</font></font><code>all</code><font><font>และการตั้งค่า</font><font>ไป</font></font><code>extensions.adbhelper@mozilla.org.debug</code><code>true</code></li>
+ <li><font><font>ใน</font></font><a class="external external-icon" href="https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons"><font><font>Add-on Manager</font></font></a><font><font>ให้ปิดใช้งานและเปิดใช้งาน</font><a class="external external-icon" href="https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons"><font>Add-on</font></a><font>ของ ADB Helper ใหม่</font></font></li>
+ <li><font><font>เปิด</font></font><a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console"><font><font>เบราว์เซอร์คอนโซล</font></font></a><code>adb</code><font><font>และตอนนี้คุณจะเห็นข้อความที่คอนโซลหน้าด้วย</font><font> </font><font>ถ้าข้อความไม่ได้มีความหมายอะไรกับคุณ</font><font>ขอความช่วยเหลือ</font></font></li>
+</ol>
+
+<h2 id="ต้องการความช่วยเหลือ">ต้องการ<span class="short_text" id="result_box" lang="th"><span class="hps">ความช่วยเหลือ</span></span></h2>
+
+<p>ไปที่ <a class="external external-icon" href="https://wiki.mozilla.org/DevTools/GetInvolved#Communication">#devtools room on IRC</a> <span class="short_text" id="result_box" lang="th"><span class="hps">และเราจะพยายาม</span><span>ที่จะช่วย</span></span></p>

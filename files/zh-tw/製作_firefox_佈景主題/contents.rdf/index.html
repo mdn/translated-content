@@ -1,0 +1,48 @@
+---
+title: contents.rdf
+slug: 製作_Firefox_佈景主題/contents.rdf
+translation_of: Archive/Themes/Creating_a_Skin_for_Firefox/contents.rdf
+---
+<p>
+</p><p>將下列文字複製貼進純文字檔中，命名為「<code>contents.rdf</code>」：
+</p>
+<pre>&lt;?xml version="1.0"?&gt;
+
+&lt;RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chrome="http://www.mozilla.org/rdf/chrome#"&gt;
+
+  &lt;!-- 列出此佈景主題提供的外觀樣式 --&gt;
+  &lt;RDF:Seq about="urn:mozilla:skin:root"&gt;
+    &lt;RDF:li resource="urn:mozilla:skin:My_Theme"/&gt;
+  &lt;/RDF:Seq&gt;
+
+  &lt;RDF:Description about="urn:mozilla:skin:My_Theme"
+        chrome:displayName="My Theme"
+        chrome:accessKey="N"
+        chrome:author=""
+        chrome:authorURL=""
+        chrome:description=""
+        chrome:name="My_Theme"
+        chrome:image="preview.png" &gt;
+   &lt;chrome:packages&gt;
+      &lt;RDF:Seq about="urn:mozilla:skin:My_Theme:packages"&gt;
+        &lt;RDF:li resource="urn:mozilla:skin:My_Theme:browser"/&gt;
+        &lt;RDF:li resource="urn:mozilla:skin:My_Theme:communicator"/&gt;
+        &lt;RDF:li resource="urn:mozilla:skin:My_Theme:global"/&gt;
+        &lt;RDF:li resource="urn:mozilla:skin:My_Theme:mozapps"/&gt;
+        &lt;RDF:li resource="urn:mozilla:skin:My_Theme:help"/&gt;
+      &lt;/RDF:Seq&gt;
+    &lt;/chrome:packages&gt;
+  &lt;/RDF:Description&gt;
+
+  &lt;!-- 版本資訊，這個佈景主題僅支援主版本號碼為 1 的 Firefox。 --&gt;
+  &lt;RDF:Description chrome:skinVersion="1.5" about="urn:mozilla:skin:My_Theme:browser"/&gt;
+  &lt;RDF:Description chrome:skinVersion="1.5" about="urn:mozilla:skin:My_Theme:communicator"/&gt;
+  &lt;RDF:Description chrome:skinVersion="1.5" about="urn:mozilla:skin:My_Theme:global"/&gt;
+  &lt;RDF:Description chrome:skinVersion="1.5" about="urn:mozilla:skin:My_Theme:mozapps"/&gt;
+  &lt;RDF:Description chrome:skinVersion="1.5" about="urn:mozilla:skin:My_Theme:help"/&gt;
+&lt;/RDF:RDF&gt;
+</pre>
+<div class="noinclude">
+</div>
+{{ languages( { "de": "de/Theme_erstellen/contents.rdf", "en": "en/Creating_a_Skin_for_Firefox/contents.rdf", "fr": "fr/Cr\u00e9er_un_th\u00e8me_pour_Firefox/contents.rdf", "ja": "ja/Creating_a_Skin_for_Firefox/contents.rdf", "pl": "pl/Tworzenie_sk\u00f3rek_dla_Firefoksa/contents.rdf", "pt": "pt/Criando_um_visual_para_o_Firefox/contents.rdf" } ) }}

@@ -1,0 +1,27 @@
+---
+title: 更新 App
+slug: Archive/Mozilla/Marketplace/Publishing/Updating_apps
+translation_of: Archive/Mozilla/Marketplace/Publishing/Updating_apps
+---
+<div class="summary">
+ <p>本篇文章將針對已發佈的 App (自行發佈或於 <a href="https://marketplace.firefox.com/">Firefox Marketplace</a> 上發佈)，說明相關更新步驟。</p>
+</div>
+<div class="note">
+ <p><strong>注意：</strong>如果 App 已通過 Marketplace 審查，而開發者想更改 App 的名稱，就必須再次提交 App 並重新審查。</p>
+</div>
+<h2 id="更新托管式_(Hosted)_App">更新托管式 (Hosted) App</h2>
+<p>托管式 App 本質就是網頁，因此同樣依 Web 快取的常規而運作。但開發者亦可選用如 <a href="https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache">HTML5 AppCache</a> 的進階機制以加快啟動速度。先了解這二點之後，更新 App 所使用的一般資源大概就沒有需要特別注意的地方了。</p>
+<p>但 Open Web App 在處理 manifest 檔案時就不太一樣了。某些 manifest 的變動必須經過使用者許可。但根據 Web runtime 實作的不同，較難以確定是否會啟動更新作業。</p>
+<p>如果要能確實解決此問題，開發者可於 manifest 檔案中添加「<code>version</code>」欄位。只要檢查 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Apps.getInstalled"><code>navigator.mozApps.getInstalled()</code></a> 函式所回傳的值，即可了解目前的版本。如果消費者並未安裝最新版本，則可透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Apps.install"><code>navigator.mozApps.install()</code></a> 觸發更新作業。</p>
+<p>Web runtime 並不會使用 <code>version</code> 的值，所以開發者可使用任何喜歡的版號設定格式。</p>
+<p>另請注意，如果因更改 manifest 檔案而發生錯誤或毀損，則一旦將 manifest 檔案提交到 Firefox Marketplace 就會發現。嚴重錯誤將導致 App 無法出現在 Marketplace 之中。若是較不嚴重的錯誤，就可能會自動標定該 App 需要重新審查。</p>
+<h2 id="更新封裝式_(Packaged)_App">更新封裝式 (Packaged) App</h2>
+<p><a href="https://developer.mozilla.org/zh-TW/docs/Web/Apps/Developing/Packaged_apps/Packaged_apps">封裝式 App</a> 與托管式 App 的更新程序有所不同。在更新封裝式 App 時，開發者必須將 App 的新版 zip 檔案上傳至 Firefox Marketplace。更新過的 App 同樣要先通過審查，才能再發佈至 Marketplace 之上。如此將於 Firefox OS 手機上觸發更新作業。消費者亦可透過「Settings」App 要求進行更新。</p>
+<p>若想進一步了解封裝式 App 的更新程序，可參閱下一章節。</p>
+<h3 id="更新封裝式_App_相關細節">更新封裝式 App 相關細節</h3>
+<p>接著提供封裝式 App 更新時的相關細節。如果你打算建構 App 商城，就可能必須特別注意。</p>
+<ul>
+ <li>將更新過的封裝式 App 發佈之後，亦應更新 <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Packaged_apps#Packaged_apps_and_the_Firefox_OS_Marketplace">mini-manifest</a> 指向更新過的 ZIP 檔案 (請注意 mini-manifest 並非 App 的主要 manifest 檔案)。<code>ETag</code> 標頭亦將變更，且將觸發 Firefox OS 手機上的更新作業。</li>
+ <li>搭載於手機上的 Firefox OS 將每天一次，檢查 App 是否更新。Firefox OS 將檢查 mini-manifest 的網址，再檢查 mini-manifest 之內 <code>package_path</code>  的網址。只要使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/App">App 物件</a>上的 <code>checkForUpdate()</code> 函式即可進行此作業。一旦 <code>ETag</code> 標頭改變，該函式隨即得知 App 更新過，並將檢查 ZIP 檔案是否變更。</li>
+ <li>Firefox OS 將批次檢查 App 的更新檔案。</li>
+</ul>

@@ -1,0 +1,55 @@
+---
+title: arguments.caller
+slug: Web/JavaScript/Reference/Functions/arguments/caller
+tags:
+  - Functions
+  - JavaScript
+  - arguments
+  - Властивість
+  - застаріла
+translation_of: Archive/Web/JavaScript/arguments.caller
+---
+<div>{{jsSidebar("Functions")}}</div>
+
+<p>{{obsolete_header}}</p>
+
+<p>Застаріла властивість <strong><code>arguments.caller</code></strong> використовувалась, щоб надавати функцію, яка викликала поточну функцію, що виконується. Ця властивість була прибрана та більше не працює.</p>
+
+<h2 id="Опис">Опис</h2>
+
+<p>Ця властивість більше недоступна, але ви можете скористатись {{jsxref("Function.caller")}}.</p>
+
+<pre class="brush: js">function whoCalled() {
+   if (whoCalled.caller == null)
+      console.log('Я викликана з глобальної області видимості.');
+   else
+      console.log('Функція ' + whoCalled.caller + ' викликала мене!');
+}</pre>
+
+<h2 id="Приклади">Приклади</h2>
+
+<p>Наступний код використовувався для перевірки значення <code>arguments.caller</code> у функції, але він більше не працює.</p>
+
+<pre class="brush: js example-bad">function whoCalled() {
+   if (arguments.caller == null)
+      console.log('Я викликана з глобальної області видимості.');
+   else
+      console.log('Функція ' + arguments.caller + ' викликала мене!');
+}
+</pre>
+
+<h2 id="Специфікації">Специфікації</h2>
+
+<p>Не є частиною жодного стандарту. Реалізована у JavaScript 1.1 та прибрана у {{bug(7224)}} через потенційну вразливість для безпеки.</p>
+
+<h2 id="Сумісність_з_веб-переглядачами">Сумісність з веб-переглядачами</h2>
+
+
+
+<p>{{Compat("javascript.functions.arguments.caller")}}</p>
+
+<h2 id="Див._також">Див. також</h2>
+
+<ul>
+ <li>{{jsxref("Function")}}</li>
+</ul>

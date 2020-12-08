@@ -1,0 +1,161 @@
+---
+title: การตั้งค่ารันไทม์
+slug: Tools/WebIDE/การตั้งค่ารันไทม์
+translation_of: Archive/WebIDE/Setting_up_runtimes
+---
+<p>A runtime is an environment in which you'll run and debug the app. A runtime could be a Firefox OS device connected to the desktop over USB, it could be a Firefox OS Simulator installed on the desktop itself, or it could be another instance of Firefox Desktop.</p>
+
+<p>Under the "Select Runtime" dropdown, runtimes are grouped into four types:</p>
+
+<dl>
+ <dt><a href="/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Connecting_a_Firefox_OS_device">USB DEVICES</a></dt>
+ <dd>Firefox OS devices connected over USB. From Firefox 36 this also gets you connected to <a href="/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE">Firefox for Android over USB</a>.</dd>
+ <dt><a href="/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Connecting_over_WiFi">WI-FI DEVICES</a></dt>
+ <dd>Firefox OS devices connected over Wi-Fi. <em>New in Firefox 39.</em></dd>
+ <dt><a href="/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Adding_a_Simulator">SIMULATORS</a></dt>
+ <dd>Instances of the Firefox OS Simulator that you've installed.</dd>
+ <dt><a href="/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Other_runtimes">OTHER</a></dt>
+ <dd>Remote runtimes to connect WebIDE to an arbitrary host and port. If you have the <a href="/en-US/docs/Tools/Valence">Valence</a> add-on installed, this section will also list the <a href="/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Valence-enabled_runtimes">additional runtimes it enables</a>.</dd>
+</dl>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10377/webide-select-runtime.png" style="display: block; height: 701px; margin-left: auto; margin-right: auto; width: 799px;">The rest of this section describes how you can add some runtimes.</p>
+
+<h2 id="การเชื่อมต่ออุปกรณ์_Firefox_OS"><span class="short_text" id="result_box" lang="th"><span class="hps">การเชื่อมต่ออุปกรณ์</span> <span class="hps">Firefox</span> <span class="hps">OS</span></span></h2>
+
+<p>If you have a sufficiently recent version of Firefox and Firefox OS, you can <a href="/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Connecting_over_WiFi">connect the Firefox OS device over WiFi</a>. Otherwise, you must connect over USB.</p>
+
+<h3 id="การเชื่อมต่อผ่าน_USB"><span class="short_text" id="result_box" lang="th"><span class="hps">การเชื่อมต่อ</span><span>ผ่าน USB</span></span></h3>
+
+<p>Before you can connect a Firefox OS device, there's some setup you have to go through:</p>
+
+<ul>
+ <li><strong>Check your Firefox OS version: </strong>Make sure your device is running Firefox OS 1.2/Boot2Gecko 1.2 or higher. To check the version, go to the Settings app on the device, then <code>Device Information &gt; Software</code>. If you don't have a high enough version, find your device in the <a href="/en-US/Firefox_OS/Developer_phone_guide">developer phone guide</a> and follow the instructions for upgrading.</li>
+ <li><strong>Enable remote debugging: </strong>In the Settings app on the device, go to <code>Device information &gt; More information &gt; Developer</code>.
+  <ul>
+  </ul>
+
+  <ul>
+   <li>Firefox OS 1.3 and earlier: "Remote Debugging" is just a simple checkbox. Check it.</li>
+   <li>Firefox OS 1.4 and later: "Remote Debugging" asks you to enable for just ADB, or for ADB and DevTools. Select "ADB and DevTools".</li>
+  </ul>
+ </li>
+ <li><strong>Disable Screen lock on your device:</strong> In the Settings app on the device, go to <code>Screen Lock</code> and uncheck the <code>Lock Screen</code> checkbox. This is required because when the screen gets locked, the phone connection gets lost, meaning it is no longer available for debugging.</li>
+ <li><strong>If you want unrestricted debugging privileges, including certified apps, built-in apps, and apps already installed on a real device</strong>: See the section on <a href="/en-US/docs/Tools/WebIDE/Running_and_debugging_apps#Unrestricted_app_debugging_(including_certified_apps.2C_main_process.2C_etc.)">Unrestricted app debugging (including certified apps, main process, etc.)</a>.</li>
+</ul>
+
+<div class="note">
+<p><strong>เฉพาะ Linux:</strong></p>
+
+<ul>
+ <li>Add a <code>udev</code> rules file, as documented in step 3 of this guide to <a href="http://developer.android.com/tools/device.html#setting-up">setting up an Android device</a>. The <code>idVendor</code> attribute to use for the Geeksphone is "05c6", and <a href="http://developer.android.com/tools/device.html#VendorIds">this page</a> lists other <code>idVendor</code> values.</li>
+</ul>
+</div>
+
+<div class="note">
+<p><strong>เฉพาะ Windows:</strong></p>
+
+<ul>
+ <li>You need to install drivers, as documented in step 3 of this guide to <a href="http://developer.android.com/tools/device.html#setting-up">setting up an Android device</a>. You can find drivers for Geeksphone devices on the <a href="http://downloads.geeksphone.com/">Geeksphone web site</a>. Windows 8 by default will not let you install unsigned drivers. See this tutorial on <a class="external external-icon" href="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html" title="http://www.craftedge.com/tutorials/driver_install_windows8/driver_install_win8.html">"How to install an unsigned driver on Windows 8"</a>.</li>
+ <li>If WebIDE can't see your device after following all the steps, you may have to <a class="external external-icon" href="http://blog.fh-kaernten.at/wehr/?p=1182">edit adb_usb.ini</a>.</li>
+</ul>
+</div>
+
+<p>If there are any other Android devices connected to your computer, disconnect them. Now connect the device to the computer using USB. You should see the device appear under "USB DEVICES":</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8045/webide-select-runtime-keon.png" style="display: block; height: 562px; margin-left: auto; margin-right: auto; width: 710px;"></p>
+
+<p>If you don't see your device, see the <a href="/en-US/docs/Tools/WebIDE/Troubleshooting">Troubleshooting</a> page.</p>
+
+<h3 id="การเชื่อมต่อผ่าน_WiFi"><span class="short_text" id="result_box" lang="th"><span class="hps">การเชื่อมต่อ</span><span>ผ่าน WiFi</span></span></h3>
+
+<p>To connect over WiFi, you need:</p>
+
+<ul>
+ <li>Firefox 39 or later</li>
+ <li>a Firefox OS device running a build of Firefox OS 3.0 from 2015-03-27 or later</li>
+</ul>
+
+<p>This doesn't use <a href="http://developer.android.com/tools/help/adb.html">ADB</a> at all, and is therefore likely to be more reliable than the USB method.</p>
+
+<h4 id="Enable_WiFi_debugging">Enable WiFi debugging</h4>
+
+<p>First, enable WiFi debugging on the Firefox OS device.</p>
+
+<ol>
+ <li>Open <a href="/en-US/Firefox_OS/Debugging/Developer_settings">Developer Settings</a> on the device (Settings -&gt; Developer)</li>
+ <li>Check "DevTools via Wi-Fi"</li>
+ <li>Edit the device name if desired</li>
+</ol>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10361/fxos-wifi-opts.png" style="display: block; height: 512px; margin: 0px auto; width: 352px;"></p>
+
+<h4 id="Select_the_device">Select the device</h4>
+
+<p>In WebIDE, click the "Select Runtime" menu. You should see a section labeled "Wi-Fi Devices", and your device should appear under it:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10365/webide-wifi-runtime.png" style="display: block; height: 700px; margin: 0px auto; width: 708px;">Select your device.</p>
+
+<h4 id="Authenticate">Authenticate</h4>
+
+<p>Next, in the WebIDE you'll see a prompt with a QR code:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/10367/webide-qr-code.png" style="display: block; height: 458px; margin: 0px auto; width: 886px;">On the device, you'll see a connection prompt giving you options to "Scan" or "Scan and Remember". Choose one of the options and scan the QR code. Now WebIDE should connect to the device, and the device icon next to "Select Runtime" should turn blue to indicate this.</p>
+
+<p>The QR code scanner can be a bit frustrating at the moment, as real devices appear to capture a very low resolution picture. <a href="https://bugzil.la/1145772">Bug 1145772</a> aims to improve this soon. If you have trouble with this, try scanning with a few different orientations.</p>
+
+<p>If you chose "Scan and Remember, then you won't have to scan the code again the next time you connect your computer to this device.</p>
+
+<h2 id="การเชื่อมต่อกับ_Firefox_สำหรับ_Android"><span class="short_text" id="result_box" lang="th"><span class="hps">การเชื่อมต่อกับ</span> <span class="hps">Firefox</span> <span class="hps">สำหรับ Android</span></span></h2>
+
+<p>From Firefox 36 onwards Android devices connected over USB and running Firefox for Android appear as a runtime under "USB devices". See the article on <a href="/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE">connecting to Firefox for Android from WebIDE</a>.</p>
+
+<p>Before Firefox 36, you can <a href="/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android">connect to Firefox for Android without using WebIDE at all</a>, or can use WebIDE by setting up a <a href="/en-US/docs/Tools/WebIDE/Setting_up_runtimes#Remote_runtime">custom remote runtime</a>.</p>
+
+<h2 id="Adding_a_Simulator">Adding a Simulator</h2>
+
+<p><span style="line-height: 1.5;">The <a href="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS Simulator</a> is <span style="line-height: 1.5;">a version of the higher layers of Firefox OS</span> that simulates a Firefox OS device, but runs on the desktop</span><span style="line-height: 1.5;">. </span><span style="line-height: 1.5;">It runs in a window the same size as a Firefox OS device, includes the Firefox OS user interface and built-in apps, and simulates many of the Firefox OS device APIs.</span></p>
+
+<p><span style="line-height: 1.5;">This means that in many cases, you don't need a real device to test and debug your app. </span></p>
+
+<p>The Simulator doesn't ship inside Firefox but as a Firefox <a href="/en-US/Add-ons">add-on</a>. If you click "Install Simulator" in the Runtimes dropdown menu, you will go to a page from which you can install Simulators for various versions of Firefox OS.</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8039/webide-install-simulator.png" style="display: block; height: 560px; margin-left: auto; margin-right: auto; width: 720px;">You can install as many as you like. Be patient, though: the Simulator may take a few minutes to download. Once you've installed some Simulators you can close this "Extra Components" window, and the Simulators you've installed appear as options in the Runtimes dropdown menu:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/8047/webide-select-runtime-keon-simulator.png" style="display: block; height: 559px; margin-left: auto; margin-right: auto; width: 712px;">To learn more about the Simulator, see its <a href="/en-US/docs/Tools/Firefox_OS_Simulator">documentation page</a>.</p>
+
+<h2 id="Other_runtimes">Other runtimes</h2>
+
+<h3 id="Remote_runtime">Remote runtime</h3>
+
+<p>With a remote runtime you can use an arbitrary hostname and port to connect to the remote device.</p>
+
+<p>Under the hood, Firefox OS devices and Android devices connect to the desktop using a program called the Android Debug Bridge, or <a href="http://developer.android.com/tools/help/adb.html">ADB</a>. By default, WebIDE uses an add-on called the ADB Helper: this simplifies the process for you by installing ADB and setting up port forwarding so the Firefox desktop tools can exchange messages with the device.</p>
+
+<p>This is convenient in most cases, but sometimes you might want to use ADB outside of WebIDE: for example, you might be running ADB directly from the command line. In that case you'll connect to the device by specifying a host and port using the <a href="http://developer.android.com/tools/help/adb.html#forwardports"><code>adb forward</code></a> command (example: <code>adb forward tcp:6000 localfilesystem:/data/local/debugger-socket</code>).<br>
+ <br>
+ If you then want to use WebIDE to connect as well, you should <a href="https://support.mozilla.org/en-US/kb/disable-or-remove-add-ons#w_how-to-disable-extensions-and-themes">disable the ADB Helper add-on</a> and connect WebIDE using the Custom runtime option, entering the host and port that you passed to <code>adb forward</code> (example: <code>localhost:6000</code>).</p>
+
+<p>Also, before Firefox 36, the ADB Helper does not yet support connecting to Firefox for Android, so if you want to connect WebIDE to Firefox for Android, you'll need to set up your own port forwarding and use a custom runtime. <a href="/en-US/docs/Tools/Remote_Debugging/Firefox_for_Android">See more about connecting to Firefox for Android using ADB prior to Firefox 36</a>.</p>
+
+<h3 id="Valence-enabled_runtimes">Valence-enabled runtimes</h3>
+
+<p>If you have the <a href="/en-US/docs/Tools/Valence">Valence</a> add-on installed, you'll see three additional runtimes:</p>
+
+<ul>
+ <li>Chrome on Android</li>
+ <li>Safari on iOS</li>
+ <li>Chrome Desktop</li>
+</ul>
+
+<p>For instructions on how to connect to these runtimes, see the relevant entry in the <a href="/en-US/docs/Tools/Remote_Debugging">Remote Debugging</a> page.</p>
+
+<h2 id="Selecting_a_runtime">Selecting a runtime</h2>
+
+<p>Once you've set up a runtime you can select it using the "Select Runtime" menu.</p>
+
+<ul>
+ <li>If you select a Simulator, WebIDE launches the Simulator.</li>
+ <li>If you select a Firefox OS device WebIDE connects to the device. On the device a dialog will ask you to confirm that you wish to connect: press "OK".</li>
+</ul>
+
+<p>Now the "play" button in the center of the WebIDE toolbar is enabled: click it to <a href="/en-US/docs/Tools/WebIDE/Running_and_debugging_apps">install and run the app</a> in the selected runtime.</p>

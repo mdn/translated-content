@@ -1,0 +1,69 @@
+---
+title: 使用 B2G 模擬器
+slug: Archive/B2G_OS/Using_the_B2G_emulators
+translation_of: Archive/B2G_OS/Using_the_B2G_emulators
+---
+<p>這篇文章提供簡潔的指南，包括使用 Boot to Gecko 模擬器時需要知道的一些重要的事情。這不意味著這是一個完整的使用手冊；相反地，它只告訴您一些有用的事情，讓您不必自己去學。</p>
+<p>這篇指南假設您已經編譯了一個模擬器；如果您還沒編譯的話，請跳回「<a href="/en/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Building_and_installing_Boot_to_Gecko">建置和安裝 Boot to Gecko</a>」！</p>
+<h2 id="關於_B2G_模擬器">關於 B2G 模擬器</h2>
+<p>有兩種 B2G 模擬器。第一種是 x86 行動裝置的模擬器，使用 "emulator-x86" 設定以 <code>config.sh</code> 編譯而成。雖然這遠比模擬 ARM 處理器快多了，但是它執行的沒有那麼接近一個實體行動裝置的結果。而第二種則是 ARM 行動裝置的模擬器，使用 "emulator" 的設定編譯。</p>
+<p>一旦你選擇、設定及編譯模擬器，就使用者而言，剩下來要做的事情都是一樣的，所以這篇導覽剩下的共同部分是兩種模擬器都適用的。</p>
+<div class="note">
+  <strong>Note:</strong> 在 Mac OS X 上，B2G 模擬器需要 Core 2 Duo 或更快 CPU；也就是說，一個相容於 Mac OS X 10.7 "Lion" 的系統。你不必一定得使用 Lion，只是要在和 Lion 相容的系統上面執行就可以了。</div>
+<h2 id="啟動模擬器">啟動模擬器</h2>
+<p>執行下列指令，就可以打開 B2G 模擬器了：</p>
+<pre>./run-emulator.sh
+</pre>
+<p>這個指令將會會您操作所有模擬器的起始作業。現在就耐心等模擬器啟動以及 Boot to Gecko 在上面開始運作起來。啟動會花好幾分鐘，所以請耐心等候。</p>
+<h2 id="當模擬器掛了">當模擬器掛了</h2>
+<p>有時候模擬器會啟動失敗。歡迎來到尖端科技的前緣。這裡有一些派的上用場的技巧，可用來解決問題。</p>
+<h3 id="確定_adb_server_是不是還活著">確定 adb server 是不是還活著</h3>
+<p>adb server 處理與模擬的行動裝置之間的互動，而這裡常常出問題的原因是 adb server 不是沒在執行就是故障。</p>
+<div class="note">
+  <p><strong>Note:</strong> 舉例來說，如果您使用 B2G 版本所編譯出的 <code>adb</code> 的話，它的位置會在 <code>$B2G/out/host/&lt;platform&gt;/bin</code> 目錄裡。在 Mac 上的話，則是在 <code>$B2G/out/host/darwin-x86/bin</code> 目錄下。</p>
+</div>
+<p>使用下列指令來看 <code>adb</code> 是否還在運作中：</p>
+<pre>ps aux | grep adb
+</pre>
+<p>If it's there, do this to kill it, because it's probably not working correctly.</p>
+<pre>adb kill-server
+</pre>
+<p>If it's not there, do this:</p>
+<pre>adb start-server
+</pre>
+<p>接著試試看再執行模擬器一次看看。如果還是沒辦法運作的話， 就是時候到 irc.mozilla.org 使用 <a class="link-irc" href="irc://irc.mozilla.org/b2g" title="irc://irc.mozilla.org/b2g">#b2g</a> 搜尋尋求幫助了。</p>
+<h3 id="抹掉_configuration_設定值">抹掉 configuration 設定值</h3>
+<p>有時候，在模擬的行動裝置上使用過期的設定檔的設定值也會讓它暴走。你可以砍掉 indexedDB 資料庫來解決這個問題，如下：</p>
+<ol>
+  <li>確定 adb 在執行中，如同 <a href="#Make_sure_the_adb_server_is_running">Make sure the adb server is running</a> 中所描述的一般。</li>
+  <li>啟動模擬器。</li>
+  <li>先打開電腦裡的 terminal，然後切換到編譯模擬器的主目錄 (root code build directory)，接著打：「<code>out/host/&lt;platform&gt;/bin/adb -e shell</code>」；在 Mac 上使用「<code>out/host/darwin-x86/bin/adb -e shell</code>」。</li>
+  <li>現在你已經在 adb 的 shell 裡面、且可以直接在模擬器的行動 裝置上執行 shell 指令 (commands)了。讓我們使用「<code>stop b2g</code>」來停止裝置上的 B2G。</li>
+  <li>刪除 indexedDB 資料庫：<code>rm -rf /data/local/indexedDB</code>。</li>
+  <li>在模擬的行動裝置上重新啟動 B2G：<code>start b2g</code>。</li>
+</ol>
+<p>希望此時您所打開 Gaia 介面一切都恢復正常。</p>
+<h2 id="設定模擬器">設定模擬器</h2>
+<p>如果您想要調整模擬器更接近您想要模擬的裝置的話，有幾個選項可以改改看。這一節提供一些關於「如何調校」的基本資訊。您可以編輯 <code>run-emulator.sh</code> (觀念上還是複製一份來編輯)這個 script 來調校模擬器的設定。這裡指會討論到一些最常用到的參數；您可以 <a class="external" href="http://www.qemu.org/" title="http://www.qemu.org/">連到 qemu 網站</a> 來看其他部分的細節。</p>
+<div class="note">
+  <strong>Tip:</strong> 您可以為每個想要模擬的裝置建立一個 <code>run-emulator.sh 的</code>複製版本；這會您比較容易以不同的設定啟動模擬器。</div>
+<h3 id="改變外觀">改變外觀</h3>
+<p>模擬器預設會以 HVGA 模式啟動；VGA 的一半、也就是 320x480 pixels 的外觀。在啟動時，我們可以給模擬器加上 -skin 的參數來指定外觀。您可以編輯 <code>run-emulator.sh 來</code>切換成不同的顯示模式來執行模擬器。可以使用的外觀列表如下：</p>
+<ul>
+  <li>HVGA (320x480)</li>
+  <li>QVGA (240x320)</li>
+  <li>WQVGA (240x400)</li>
+  <li>WQVGA432 (240x432)</li>
+  <li>WSVGA (1024x600)</li>
+  <li>WVGA800 (480x800)</li>
+  <li>WVGA854 (480x854)</li>
+  <li>WXGA720 (1280x720)</li>
+  <li>WXGA800 (1280x800)</li>
+</ul>
+<p>外觀的存放位置在 <code>B2G/development/tools/emulator/skins</code> 目錄。外觀的格式很簡單；如果您打開來看的話，他們只是一些資料夾，裝著一些使用者介面物件的 PNG 檔案以及一個描述使用者介面的配置及螢幕區域的文字檔 <code>layout。如果需要建立客製化的外觀的話，是還蠻簡單的。</code></p>
+<h3 id="改變記憶體的大小">改變記憶體的大小</h3>
+<p>另一個您可能想要/需要改變的選項就是行動裝置的記憶體大小。預設是 512MB；然而，如果您要模擬的行動裝置的記憶體比較大或小的話，或許對您而言，將記憶體調整成一樣的大小是很重要的，這樣才能確定您的 app 會在您想要執行的基礎裝置上執行。您可以將 <code>-memory</code> 參數的數值修改成您需要的數字(以 MB 為單位)，就可以改變執行時的記憶體大小。除了預設的 512MB 之外，您可能會想要以 256MB 和 1024MB 來做測試。</p>
+<p>而如果想要改變模擬裝置的儲存容量大小的話 (就是 local 資料的儲存空間，像是行動電話的內建快閃記憶體或是電腦的硬碟)，可以改變 <code>-partition-size</code> 參數的數值。預設是 512MB，但是您可以改成任何大小 (以 MB 為單位)來模擬想要測試的行動裝置。</p>
+<h3 id="網路連線">網路連線</h3>
+<p>如果因為某些原因，您沒辦法將您的模擬器連上網際網路 (internet)的話，您可以從命令提示字元來執行下面的指令 (commandline)：</p>
+<pre>adb shell setprop net.dns1 10.0.2.3</pre>

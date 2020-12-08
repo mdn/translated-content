@@ -1,0 +1,50 @@
+---
+title: Integrated Authentication
+slug: Mozilla/Integrated_authentication
+translation_of: Mozilla/Integrated_authentication
+---
+<p class="summary">This document provides an overview of Mozilla's support for integrated authentication. <span class="seoSummary">This entails support for the the Simple and Protected GSS-API Negotiation Mechanism (SPNEGO) internet standard (<a class="external" href="https://tools.ietf.org/html/rfc2478" title="RFC 2478">RFC 2478</a>) to negotiate either Kerberos, NTLM, or other authentication protocols supported by the operating system.</span> SPNEGO is commonly referred to as the "negotiate" authentication protocol.</p>
+
+<p>Mozilla does not have its own internal implementation of SPNEGO. Instead, it leverages system libraries that provide SPNEGO; SSPI on Microsoft Windows, and GSS-API on Linux, Mac OSX, and other UNIX-like systems.</p>
+
+<p>The Mozilla implementation of SPNEGO can be found under {{ Source("extensions/auth/") }}. It used to live in extensions/negotiateauth.</p>
+
+<p>Mozilla also supports raw NTLM authentication using an internal implementation (based on the <a class="external" href="http://davenport.sourceforge.net/ntlm.html">documentation</a> provided by Eric Glass) that supports NTLMv1/LMv1 and NTLM2 Session Key modes. As of Mozilla 1.7, there is no support for NTLMv2/LMv2. This is mainly due to the fact that NTLMSSP does not provide a means to negotiate use of NTLMv2/LMv2. &lt;i&gt;This document is incomplete ...&lt;/i&gt;</p>
+
+<h3 id="Flow_Diagram">Flow Diagram</h3>
+
+<p>The diagram below shows how various components interact.</p>
+
+<p><img alt="Image:integrated-auth.png" class="internal" src="/@api/deki/files/735/=Integrated-auth.png"></p>
+
+<h3 id="Configuration">Configuration</h3>
+
+<p>By default, Mozilla rejects all SPNEGO challenges from a web server. This is to protect the user from the possibility of DNS-spoofing being used to stage a man-in-the-middle exploit (see {{ Bug(17578) }} for more info). Moreover, with Windows clients NTLM may be negotiated as the authentication protocol. So, it is paramount that the browser does not freely exchange NTLM user credentials with any server that requests them. The NTLM response includes a hash of the user's logon credentials. On older versions of Windows this hash is computed using a relatively weak algorithm (see <a class="external" href="http://ubiqx.org/cifs/SMB.html#SMB.8">Hertel</a> for more info on NTLM authentication).</p>
+
+<p>Mozilla currently supports a whitelist of sites that are permitted to engage in SPNEGO authentication with the browser. This list is intended to be configured by an IT department prior to distributing Mozilla to end-users.</p>
+
+<p>The preferences are:</p>
+
+<pre class="notranslate">pref("network.negotiate-auth.trusted-uris", <em>site-list</em>);
+pref("network.negotiate-auth.delegation-uris", <em>site-list</em>);
+pref("network.automatic-ntlm-auth.trusted-uris", <em>site-list</em>);
+</pre>
+
+<p>where, <em>site-list</em> is a comma-separated list of URL prefixes or domains of the form:</p>
+
+<pre class="notranslate"><em>site-list</em> = "mydomain.com, https://myotherdomain.com"
+</pre>
+
+<p><code>network.negotiate-auth.trusted-uris</code> lists the sites that are permitted to engage in SPNEGO authentication with the browser, and <code>network.negotiate-auth.delegation-uris</code> lists the sites for which the browser may delegate user authorization to the server. <code>network.automatic-ntlm-auth.trusted-uris</code> lists the trusted sites to use NTLM authentification.</p>
+
+<p>If you wish to use non-fully-qualified entries of the form <code>mydomain.com</code> in the above preferences for NTLM and SPNEGO authentication, you will also need to set the preferences <code>network.automatic-ntlm-auth.allow-non-fqdn</code> and <code>network.negotiate-auth.allow-non-fqdn</code> (respectively) to <code>true</code>.</p>
+
+<div class="originaldocinfo">
+<h2 id="Original_Document_Information">Original Document Information</h2>
+
+<ul>
+ <li>Author(s): <a class="link-mailto" href="mailto:darin@meer.net">Darin Fisher</a></li>
+ <li>Last Updated Date: December 27, 2005</li>
+ <li>Copyright Information: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="https://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</li>
+</ul>
+</div>

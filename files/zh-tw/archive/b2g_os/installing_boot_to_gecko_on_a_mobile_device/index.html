@@ -1,0 +1,53 @@
+---
+title: 將 Boot to Gecko 安裝於行動裝置
+slug: Archive/B2G_OS/Installing_Boot_to_Gecko_on_a_mobile_device
+translation_of: Archive/B2G_OS/Installing_on_a_mobile_device
+---
+<p>如果您編譯給行動裝置的 Boot to Gecko 之後，您就將他安裝在行動裝置上。這篇文章會引導您進行這個動作。</p>
+<div class="note">
+  <strong>Note:</strong> 第一次把 B2G 寫入手機時，手機必須安裝 Androidd 4.0 (Ice Cream Sandwich) 版本。否則這個動作就不會正常的運作。而一旦您完成第一次 B2G 的安裝之後，您就可以熟練的更新了。</div>
+<h2 id="燒錄手機">燒錄手機</h2>
+<p>您只要將您的手機連結到電腦上、並打下列指令，就可以燒任何東西到手機上：</p>
+<pre>./flash.sh
+</pre>
+<p>就這樣。您編譯好的 B2G 就會被燒錄到您的行動裝置上。</p>
+<h3 id="為您的行動裝置設定_udev_規則">為您的行動裝置設定 udev 規則</h3>
+<p>在 Linux，如果您看到這個訊息，</p>
+<pre>&lt; waiting for device &gt;</pre>
+<p>那或許意味著這個 fastboot 裝置和提供給 adb 裝置的不同，而那個裝置沒有被加入 udev 規則。您現在可以藉由執行 <code>lsusb</code> 來取得 USB 廠商的 ID，但是它會是 Google 的 ID：18d1，所以將下面這一行加入 <code>/etc/udev/rules.d/51-android.rules 這個檔案，然後就會正常運作了：</code></p>
+<pre>SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", MODE="0666", GROUP="plugdev"</pre>
+<div class="note">
+  <strong>Note:</strong> 如果您在 Linux 上碰到一個非常有幫助的 <code>libusb</code> 錯誤 "-3"的話，這意味著手機需要被 root 來取得 USB 裝置的權限。請使用 <code>sudo</code> 再執行一次這個 script。</div>
+<h3 id="Samsung_Galaxy_S2_要特別注意的地方">Samsung Galaxy S2 要特別注意的地方</h3>
+<p>如果您的手機是 Galaxy S2 且使用 heimdall 1.3.2 (最新版；可以用 <code>heimdall version</code> 指令檢查版本) 的話，您可能會看到一個警告訊息「FACTORYFS upload failed!」、後面接著「Heimdall flashing failed」和一些額外的資訊。實際上這是一個成功的狀況，所以您可以忽略這個建議。</p>
+<p>為了要擺脫這個奇怪的行為，您可以去抓 heidmall 的 <a class="link-https" href="https://github.com/Benjamin-Dobell/Heimdall" title="https://github.com/Benjamin-Dobell/Heimdall">複製的原始碼</a>、並且降級到 1.3.1 release 版 ("<code>git checkout fbbed42c1e5719cc7a4dceeba098981f19f37c06</code>")，接著根據 <code>README</code> 編譯、然後安裝，這樣就不會再看到這個錯誤訊息了。然而，這並不是必須的 (看起來比較爽就是了)。</p>
+<p>heimdall 的所有版本都無法燒錄超過 100MB 的 system.img。執行下列指令：</p>
+<pre>ls -l ./out/target/product/galaxys2/system.img
+</pre>
+<p>就可以看到您的 system.img 有多大。如果太大的話，先到 IRC 找人問問求救；有幾種方法可以分兩階段來燒錄。</p>
+<h2 id="Samsung_Galaxy_S2_額外的步驟">Samsung Galaxy S2 額外的步驟</h2>
+<p>如果您正在燒錄到 Galaxy S2 的話，需要遵守一個額外的步驟。因為使用 <code>flash.sh</code> script 不會自動將 Gaia 燒錄上去；您需要也打下列指令：</p>
+<pre>./flash.sh gaia
+</pre>
+<h2 id="燒錄某個分割區partitions到具備_fastboot_的手機">燒錄某個分割區(partitions)到具備 fastboot 的手機</h2>
+<p>您可以燒錄某個分割區 (partitions)到 fastboot 的手機 (也就是說，除了 Samsung Galaxy S2 之外的任何其他手機)。指令如下：</p>
+<pre>./flash.sh system
+./flash.sh boot
+./flash.sh user
+</pre>
+<h2 id="更新某個模組">更新某個模組</h2>
+<p>在燒錄的時候，您可以藉由指名元件名稱來更新某個 B2G 的元件。如下：</p>
+<pre>./flash.sh gaia
+./flash.sh gecko
+</pre>
+<h2 id="接著，下一步">接著，下一步</h2>
+<p>此時，您的手機應該正在運作 Boot to Gecko！是時候該體驗、<a href="/en/Mozilla/Boot_to_Gecko/Writing_apps_for_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Writing_apps_for_Boot_to_Gecko">寫些程式</a>、 <a href="/en/Mozilla/Boot_to_Gecko/Testing_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Testing_Boot_to_Gecko">測試</a>、或是 <a href="/en/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">除些錯</a> 了！</p>
+<div class="note">
+  <strong>Note:</strong> 一個有用的技巧：如果您的 B2G 版本啟動的時候有螢幕鎖且需要密碼才能解鎖的話，預設的解鎖密碼是 0000。</div>
+<h2 class="note" id="Troubleshooting">Troubleshooting</h2>
+<p>如果行動裝置在安裝或更新 B2G 到新版本後不會正常運作的話，這裡還有一些技巧可以參考。</p>
+<h3 class="note" id="如果使用者介面_Gaia_沒有啟動">如果使用者介面 (Gaia) 沒有啟動</h3>
+<p>如果您更新您的手機導致使用者介面不會啟動的話，您可以重置手機來清除一些過期的設定或是之類的東西。這樣做可能會讓它回過魂來繼續運作。參考及使用下列指令：</p>
+<pre>cd gaia
+make reset-gaia
+</pre>

@@ -1,0 +1,78 @@
+---
+title: Date.prototype.toLocaleFormat()
+slug: Archive/Web/JavaScript/Date.toLocaleFormat
+tags:
+  - Date
+  - JavaScript
+  - Довідка
+  - метод
+  - нестандартний
+translation_of: Archive/Web/JavaScript/Date.toLocaleFormat
+---
+<div>{{JSRef}} {{non-standard_header}}</div>
+
+<p>Нестандартний метод <strong><code>toLocaleFormat()</code></strong> перетворює дату на рядок, використовуючи вказане форматування. {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} є альтернативою для форматування дат згідно зі стандартами. Також дивіться нову версію {{jsxref("Date.prototype.toLocaleDateString()")}}.</p>
+
+<p><strong>Ця функціональність була прибрана та більше не працює у Firefox 58+.</strong> Більше інформації та допомогу з міграцією дивіться у статті <a href="/uk/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat">Warning: Date.prototype.toLocaleFormat is deprecated</a>.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox notranslate"><var>dateObj</var>.toLocaleFormat(<var>formatString</var>)</pre>
+
+<h3 id="Параметри">Параметри</h3>
+
+<dl>
+ <dt><code>formatString</code></dt>
+ <dd>Рядок форматування у такому ж форматі, який очікується функцією <a class="external" href="http://www.opengroup.org/onlinepubs/007908799/xsh/strftime.html"><code>strftime()</code></a> у C.</dd>
+</dl>
+
+<h3 id="Повертає">Повертає</h3>
+
+<p>Рядкове представлення наданої дати з використанням вказаного форматування.</p>
+
+<h2 id="Опис">Опис</h2>
+
+<p>Метод <code>toLocaleFormat()</code> надає більший програмний контроль над форматуванням створеної дати та/або часу. Назви місяців та днів тижня локалізуються за допомогою мовних налаштувань операційної системи. Однак, порядок дня та місяця, а також інші задачі локалізації не опрацьовуються автоматично, оскільки ви контролюєте те, в якому порядку вони виводяться. Ви повинні подбати про те, щоб рядок форматування був правильно локалізований згідно системних налаштувань користувача. Пам'ятайте, що мовні налаштування системи не обов'язково співпадають з налаштуваннями веб-переглядача.</p>
+
+<p>Розробники XULRunner мають знати, що простого завантаження рядка форматування з файлу <code>.dtd</code> чи <code>.properties</code> за допомогою URI <code>chrome://<em>somedomain</em>/locale/<em>somefile.ext</em></code> слід <strong>уникати</strong>, оскільки файл <code>.dtd</code>/<code>.properties</code> та метод <code>toLocaleFormat()</code> не обов'язково використовують однакову мову, що може призвести до дивних чи навіть неоднозначних або нечитабельних дат.</p>
+
+<p>Також зауважте, що поведінка мови, що використовується, залежить від платформи, а користувач може змінити системні налаштування, а отже, використання системних налаштувань з рядком форматування може бути зовсім непридатним. Вам варто розглянути використання деяких більш загальних методів <code>toLocale*</code> об'єкта {{jsxref("Global_Objects/Date", "Date")}} або створення власної локалізації дати, яку потрібно, відобразити, за допомогою якогось з методів <code>get*</code> об'єкта {{jsxref("Global_Objects/Date", "Date")}} замість використання цього методу.</p>
+
+<h2 id="Приклади">Приклади</h2>
+
+<h3 id="Використання_toLocaleFormat">Використання <code>toLocaleFormat()</code></h3>
+
+<pre class="brush: js example-bad notranslate">var today = new Date();
+var date = today.toLocaleFormat('%A, %B %e, %Y');
+</pre>
+
+<p>У цьому прикладі <code>toLocaleFormat()</code> повертає рядок, такий як "Wednesday, October 3, 2007". Зауважте, що рядок форматування у цьому прикладі не локалізований як слід, що призведе до описаних вище проблем.</p>
+
+<h2 id="Поліфіл">Поліфіл</h2>
+
+<p>Використовуючи бібліотеку <a href="https://github.com/abritinthebay/datejs/wiki/Format-Specifiers">DateJS</a>, ви можете створити поліфіл методу library you can polyfill {{jsxref("Date.prototype.toLocaleDateString()")}} ось так:</p>
+
+<pre class="brush: js notranslate">if (!Date.prototype.toLocaleFormat) {
+    (function() {
+        Date.prototype.toLocaleFormat = function(formatString) {
+            return this.format(formatString);
+        };
+    }());
+}</pre>
+
+<h2 id="Специфікації">Специфікації</h2>
+
+<p><span class="pl-s">Не є частиною жодного стандарту.</span></p>
+
+<h2 id="Сумісність_з_веб-переглядачами">Сумісність з веб-переглядачами</h2>
+
+<p>Не підтримується жодним переглядачем. Попередньо підтримувався у Firefox 1.5 до Firefox 57 (січень 2018).</p>
+
+<h2 id="Див._також">Див. також</h2>
+
+<ul>
+ <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
+ <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
+</ul>

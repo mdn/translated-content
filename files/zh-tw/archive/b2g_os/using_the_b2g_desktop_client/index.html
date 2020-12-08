@@ -1,0 +1,180 @@
+---
+title: 使用 Firefox OS 的電腦桌面 client 程式
+slug: Archive/B2G_OS/Using_the_B2G_desktop_client
+translation_of: Archive/B2G_OS/Building_the_B2G_OS_simulator
+---
+<p>Firefox OS 的 desktop client，也被稱為 <em>B2G desktop client</em>，讓您可以在一個以 Gecko 為基礎的環境－有點類似實際行動裝置的環境下執行 Gaia 和 web apps。它不會模擬行動裝置的硬體，因此它並不適合拿來測試行動裝置的 API，也不能取代在實際硬體上的測試。然而，它的確擁有一些 Firefox 上所沒有 APIs，像是聯絡人(Contacts)和設定(Settings)的 Apis。因此，當我們在開發應用程式、或是在操作 Gaia 使用者介面上可以派上用場。</p>
+
+<p>這篇文章不但涵蓋下載或是建置 Firefox desktop client，也包含了如何使用它。</p>
+
+<h2 id="下載_nightly_版本">下載 nightly 版本</h2>
+
+<p>如同 <a href="http://nightly.mozilla.org" title="http://nightly.mozilla.org">Firefox Nightlies</a> 一般，Firefox OS 的 desktop client 每天都會用最新的原始碼編譯出一個版本。最新的版本將 <a href="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/" title="http://ftp.mozilla.org/pub/mozilla.org/b2g/nightly/latest-mozilla-central/">可以從 Mozilla FTP 伺服器取得</a>。請確定挑到最新的版本和對的封存給您的作業系統。</p>
+
+<p>我們現在可以略過下面內容，直接到「執行<a href="#Running_the_desktop_client" title="#Running_the_desktop_client"> desktop client</a>」。</p>
+
+<h2 id="建置_desktop_client">建置 desktop client</h2>
+
+<p>我們需要做的地一件事情是架起<a href="/En/Developer_Guide/Build_Instructions#Build_prerequisites" title="En/Developer_Guide/Build_Instructions#Build_prerequisites"> Mozilla 的標準建置環境</a>。一旦我們有了這個環境，我們可以降低我們所需要的原始碼，並且設定建置 Firefox OS 的 desktop client。</p>
+
+<h3 id="第一次下載原始碼">第一次下載原始碼</h3>
+
+<p>在我們要放置程式碼的目錄(資料夾)中，讓我們將包含所有 Gecko 的 <code>mozilla-central</code> 倉儲 (repository)給複製下來。</p>
+
+<pre> hg clone http://hg.mozilla.org/mozilla-central
+</pre>
+
+<h3 id="更新程式碼">更新程式碼</h3>
+
+<p>當我們之後編譯後來的版本時，我們要確定我們有最新的原始碼。下列就是如何拉到最新的更新的指令：</p>
+
+<pre>cd mozilla-central
+hg pull -u
+</pre>
+
+<h3 id="建立_mozconfig">建立 mozconfig</h3>
+
+<p>接著，我們要在 <code>mozilla-central</code> 目錄下新增一個檔案 <code>mozconfig</code> 來設定建置系統去編譯 Boot to Gecko client 程式而不是 Firefox：</p>
+
+<pre>mk_add_options MOZ_OBJDIR=../build
+mk_add_options MOZ_MAKE_FLAGS="-j9 -s"
+
+ac_add_options --enable-application=b2g
+ac_add_options --disable-libjpeg-turbo
+
+# This option is required if you want to be able to run Gaia's tests
+ac_add_options --enable-tests
+
+# turn on mozTelephony/mozSms interfaces
+# Only turn this line on if you actually have a dev phone
+# you want to forward to. If you get crashes at startup,
+# make sure this line is commented.
+#ac_add_options --enable-b2g-ril</pre>
+
+<h3 id="建置(編譯)">建置(編譯)</h3>
+
+<p>現在我們已經準備好要在目錄 <code>mozilla-central</code> 裡面、透過下面的指令來編譯 desktop client。</p>
+
+<pre class="brush: bash language-html"><code class="language-bash">./mach build</code></pre>
+
+<p>編譯好的 client 會被放在 <code>../build/dist </code>目錄下 (基本上是依照 <code>mozconfig </code>檔案裡面的 <code>MOZ_OBJDIR 參數</code>所指定的值)。</p>
+
+<h2 id="執行_desktop_client">執行 desktop client</h2>
+
+<p>預設 desktop client 會顯示空的畫面，因為它並不知道一開始要載入哪個 web app 來當做系統 app。系統 apps 和 Firefox OS 中預設會有的 apps 就被稱為 Gaia。</p>
+
+<h3 id="下載_Gaia">下載 Gaia</h3>
+
+<p>第一次下載 Gaia、讓我們從 GitHub 上複製原始碼的倉儲 (repository)：</p>
+
+<pre> git clone https://github.com/mozilla-b2g/gaia</pre>
+
+<p>為了更新成 Gaia 的一個已存在的版本，我們可以從 GitHub 拉最新的更新：</p>
+
+<pre>cd gaia
+git pull
+</pre>
+
+<h3 id="產生_profile">產生 profile</h3>
+
+<p>接著我們需要設定 desktop client 中 Gaia 的 apps。這包括包裝行動裝置上也有的 Gaia apps，以及設定系統 apps 的權限。我們透過產生一個 profile 來做這些事情。接著的指令會做這些事情：新的 profile 包含一個客製的擴充以及其他 B2G 正常運作所需的設定。所以在 <code>gaia</code> 目錄裡執行下面的指令：</p>
+
+<pre>cd gaia
+make
+</pre>
+
+<p>這應該會在 <code>gaia </code>目錄下面建立一個 <code>profile</code> 目錄。</p>
+
+<h3 id="在_Linux_上執行">在 Linux 上執行</h3>
+
+<p>只要在啟動 <code>b2g</code> 執行檔的時候加上 profile 參數，就可以使用我們剛剛產生的 profile 來啟動 desktop client 。如果是自己編譯的話，執行檔的位置會在早先下載下來的 tarball 裡面，如果是自己編譯的話，就會在 <code>../build/dist/bin 的目錄裡。</code></p>
+
+<pre>.../b2g -profile gaia/profile
+</pre>
+
+<p>您可能會碰到惱人的 rendering 問題。只要在 <code>gaia/profile/prefs.js</code> 裡面加上下面這行就可以避開這個問題：</p>
+
+<pre>user_pref("layers.acceleration.disabled", true);
+</pre>
+
+<h3 id="在_Mac_上執行">在 Mac 上執行</h3>
+
+<p>在 Mac 上，<code>b2g 執行檔的位置和需要指定 profile 的絕對路徑，因此指令比較複雜：</code></p>
+
+<pre>.../B2G.app/Contents/MacOS/b2g -profile /full/path/to/gaia/profile
+</pre>
+
+<h2 id="指令的選項(或參數)">指令的選項(或參數)</h2>
+
+<p>在使用 desktop client 時，你可以使用一些指令的參數來調校執行時的體驗。您可以用 <code>-help</code> 這個參數來列出參數的列表。這一節涵蓋一些特別的參數。</p>
+
+<h3 id="option-screen" name="option-screen">明確指定螢幕大小</h3>
+
+<p>您可以用 <code>--screen</code> 來指定您想要模擬的行動裝置的螢幕大小：</p>
+
+<pre>b2g --screen=<em>&lt;width&gt;</em>x<em>&lt;height&gt;</em>[@<em>&lt;dpi&gt;</em>]</pre>
+
+<p><em>&lt;width&gt;</em>, <em>&lt;height&gt;</em>, and <em>&lt;dpi&gt;</em> 都是相當不用解釋的參數：行動裝置以 pixels 為單位的長和寬以及 DPI 解析度。舉例來說：</p>
+
+<pre>b2g --screen=320x480
+b2g --screen=320x480@160
+</pre>
+
+<p>或者，您可以使用某些行動裝置的名字來模擬他們的螢幕大小和解析度：</p>
+
+<ul>
+ <li><code>iphone</code></li>
+ <li><code>ipad</code></li>
+ <li><code>nexus_s</code></li>
+ <li><code>galaxy_nexus</code></li>
+ <li><code>galaxy_tab</code></li>
+ <li><code>wildfire</code></li>
+ <li><code>tattoo</code></li>
+ <li><code>salsa</code></li>
+ <li><code>chacha</code></li>
+</ul>
+
+<h3 id="option-console" name="option-console">開啟 JavaScript console</h3>
+
+<p>在您開啟 B2G 的 desktop client 時，您可以藉由加上 <code>-jsconsole</code> 這個記號來開啟<br>
+ JavaSCript console。在編譯之後，只要：</p>
+
+<pre>.../b2g -jsconsole -profile <em>/path/to/your/profile</em></pre>
+
+<p>如果您已經在 Mac 上安裝了 nightly 版本的話，您可以照著下面的指令：</p>
+
+<pre>/Applications/B2G.app/Contents/MacOS/b2g -jsconsole -profile <em>/path/to/your/profile</em></pre>
+
+<h3 id="option-runapp" name="option-runapp">在 B2G 啟動時，指定開啟一個應用程式</h3>
+
+<p>您現在可以指定一個應用程式在 b2g desktop client 開始運作時，自動執行起來。這會在其他系統程式被掛載起來之後，馬上讓指定的應用程式被執行起來。只要加上 <code>--runapp</code> 這個參數、後面在加上要執行應用程式的名字，就可以做到了。如下：</p>
+
+<pre> .../b2g -profile <em>/path/to/your/gaia/profile</em> --runapp email</pre>
+
+<p>在尋找要執行的 app 之前，指定的名字要被正規化為全部小寫、且不能帶有 - 和空白的符號。接著這個正規化過的名字會被拿來和 app 的 manifest 的名字做比較。</p>
+
+<p>舉例來說，現在 email app 的名字是「E-mail」，但是因為正規化的效果， <code>--runapp</code> <code>email</code> 這個參數是 ok<u> 且</u>可以執行的。</p>
+
+<p>如果您加了 <code>--runapp</code> 參數但是卻沒有帶後面的 app 名字、或是帶了空的名字的話，b2g client 會列出一串列表，其中包括已知的應用程式和簡短的使用訊息。</p>
+
+<div class="note">
+<p><strong>Note:</strong> 用 <code>--runapp</code> 參數會有關閉螢幕鎖的副作用，且不會再度啟用螢幕鎖。這是假設您不會用這個指令加上 profile 來測試螢幕鎖，否則您會重新打開這個選項。如果這個行為會造成問題的話，也歡迎提供 patch 來改變這個它。</p>
+</div>
+
+<h2 id="Usage_tips">Usage tips</h2>
+
+<p>這一節提供一些在使用 B2G desktop client 時，有幫助的技巧。</p>
+
+<ul>
+ <li>ESC 鍵提供了和 "back" 一樣的功能。</li>
+ <li>Home 鍵提供了和 "home" 按鈕一樣的功能；如果您用的是 Mac 的話，Home 鍵是 Fn+← (Fn + 左鍵)。</li>
+</ul>
+
+<h2 id="Next_steps">Next steps</h2>
+
+<p>現在您有一個執行 Boot to Gecko 的 desktop 版本了，您可以在上面測試、開發以及做其他事情：</p>
+
+<ul>
+ <li><a href="/en/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Debugging_on_Boot_to_Gecko">在 Boot to Gecko 上除錯</a></li>
+ <li><a href="/en/Mozilla/Boot_to_Gecko/Testing_Boot_to_Gecko" title="en/Mozilla/Boot_to_Gecko/Testing_Boot_to_Gecko">測試 Boot to Gecko</a></li>
+</ul>

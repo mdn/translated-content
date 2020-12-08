@@ -1,0 +1,25 @@
+---
+title: 寫一個 Firefox OS 的 Web app
+slug: Archive/B2G_OS/Apps/Writing_a_web_app_for_B2G
+translation_of: Web/Apps/Fundamentals/Quickstart
+---
+<p>B2G apps 只是用 HTML、CSS、和 Javascript 寫的 Web apps。在網頁上發佈 Web apps 就跟發佈一般的網站一樣。為了讓網站可以像 Web app 一樣可以被安裝在行動裝置上，你只需要加上一個 manifest 以及掛上一個安裝按鈕，如以下說明。</p>
+<p>建議您從下面的文章著手：</p>
+<ul>
+  <li><a href="/en/Apps/Getting_Started" title="Getting started with making apps">從製作 apps 開始上手</a></li>
+  <li><a href="/en/Apps/Manifest" title="App manifest">App manifest</a></li>
+</ul>
+<p>當然，您也可以無拘無束地<a href="/en/Apps" title="https://developer.mozilla.org/en/Apps/"> 沉浸在 Open Web Apps 的深處</a>！</p>
+<h2 id="安裝_Web_app">安裝 Web app</h2>
+<p>在網頁上發佈 app 和 manifest 之後，接著要讓 Gecko 知道這個訊息。像是在安裝時，Gecko 查詢 manifest 並將必須的項目加入到 home 的畫面，等等。</p>
+<p>安裝 app 需要呼叫 <a href="/en/Apps/Apps_JavaScript_API/navigator.mozApps.install" title="https://developer.mozilla.org/en/Apps/Apps_JavaScript_API/navigator.mozApps.install">navigator.mozApps.install() API</a>。這裡有個安裝按鈕的範例，當您將 app 置於自己管理的位置時，這個範例可以讓您將按鈕嵌入於您自己的網頁：</p>
+<pre>&lt;script&gt;
+var manifest_url = "http://my.webapp.com/manifest.json";
+&lt;/script&gt;
+
+&lt;button onclick="navigator.mozApps.install(manifest_url); return false;"&gt;
+  Install this awesome app on your homescreen!
+&lt;/button&gt;
+</pre>
+<p>注意：這個安裝按鈕也可以被置於像是 <a href="/en/Apps/Submitting_an_app" title="https://developer.mozilla.org/en/Apps/Submitting_an_app">Mozilla Marketplace</a> 的 app market，然而一般而言，在您自己的主要頁面上面也放一個「安裝 web app」的按鈕是非常貼心的。</p>
+<p>現在請用 B2G 瀏覽器 app 瀏覽您的網站，並且點選安裝按鈕吧。</p>

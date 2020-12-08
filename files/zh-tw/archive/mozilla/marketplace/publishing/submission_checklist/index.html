@@ -1,0 +1,72 @@
+---
+title: 提交作業檢查清單
+slug: Archive/Mozilla/Marketplace/Publishing/Submission_checklist
+translation_of: Archive/Mozilla/Marketplace/Publishing/Submission_checklist
+---
+<div class="summary">
+ <p><span class="seoSummary">在將自己的 App 提交到 Firefox Marketplace 之前，當然該確認是否已經掌握了所有必要資源。本文則提供檢查項目與相關資訊的連結。</span></p>
+</div>
+<h2 id="提交作業檢查清單">提交作業檢查清單</h2>
+<p>要完成 Firefox Marketplace 的提交程序，你需要：</p>
+<h3 id="針對封裝式_(Packaged)_App">針對<a href="/en-US/Marketplace/Options/Packaged_apps">封裝式 (Packaged) App</a></h3>
+<ul>
+ <li>將 App 封裝為 zip 檔案，並將 <a href="/en-US/Apps/Build/Manifest">manifest</a> 檔案至於根目錄中。</li>
+ <li>於 <a href="/en-US/Apps/Build/Manifest">manifest</a> 檔案中指定 <code><a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest#launch_path">launch_path</a></code>。</li>
+</ul>
+<h3 id="針對架設托管式_(Hosted)_App">針對<a href="/en-US/Marketplace/Options/Hosted_apps">架設/托管式 (Hosted) App</a></h3>
+<ul>
+ <li><span style="line-height: 1.5em;">可架設/托管 App 的網站。進一步資訊可參閱</span><span style="line-height: 1.5em;">《<a href="/en-US/Marketplace/Options/Hosted_apps#Options_for_hosting_your_app">Options for hosting your app</a></span><span style="line-height: 1.5em;">》。</span></li>
+ <li>App 內 manifest 檔案的網址。進一步資訊可參閱《<a href="https://developer.mozilla.org/zh-TW/Apps/Developing/Manifest/Manifest-840092-dup#csp">App 的 Manifest 檔案</a>》。</li>
+</ul>
+<div class="note">
+ <p>在將 App 提交到 Firefox Marketplace 之前，可使用「<a href="https://marketplace.mozilla.org/developers/validator">測試應用程式驗證</a>」工具來測試 manifest 檔案的正確性。</p>
+</div>
+<div class="note">
+ <p><strong>注意：</strong>你會在「應用程式管理員 (App Manager)」看到「manifest」中文翻譯為「安裝資訊檔」。</p>
+</div>
+<h3 id="針對所有_App_(必備)">針對所有 App (必備)</h3>
+<p>架設/托管式、封裝式 App 的共通必要條件：</p>
+<ul>
+ <li>App 的<a href="/en-US/Apps/Developing/Manifest#name">名稱</a>必須加進 manifest 檔案中，最多可達 128 個字元。在 App 上傳程序的 <a href="/en-US/Marketplace/Submission/Submitting_an_app#Step_3.3A_Details">Step 3</a> 中，亦必須預先填入 Marketplace 的「Name」欄位。</li>
+ <li>App 的 manifest 檔案必須有 App 的<a href="/en-US/Apps/Developing/Manifest#description">相關敘述</a>，最多可達 1024 個字元。在 App 上傳程序的 <a href="/en-US/Marketplace/Submission/Submitting_an_app#Step_3.3A_Details">Step 3</a> 中，亦必須預先填入 Marketplace 的「Description」欄位，並可後續進行編輯 (但如果是 Marketplace 的說明欄位，則沒有字元數的限制)。</li>
+ <li>需提供 128 x 128px 的縮圖圖示，以於 Marketplace 上呈現。此為固定的圖示尺寸。若要進一步了解應如何將圖示加入 App 中，可參閱 <a href="/en-US/Apps/Developing/Manifest#icons">manifest 圖示</a>。</li>
+ <li>需提供 App 截圖，至少為 320 x 480px (可參閱 <a href="/en-US/Apps/Publishing/Marketplace_screenshot_criteria">Marketplace 截圖準則</a>以進一步了解。若要添增或變更截圖，可於 <a href="/en-US/Marketplace/Submission/Submitting_an_app#Step_4.3A_Next_Steps">Step 4</a> 中更新之)。</li>
+ <li>App 的隱私權政策，或是隱私權政策網頁的網址。可參閱<a href="/en-US/Marketplace/Publishing/Privacy_policies">隱私權政策指南</a>以進一步了解 (可於 <a href="/en-US/Marketplace/Submission/Submitting_an_app#Step_3.3A_Details">Step 3</a> 時輸入)。</li>
+ <li>提供 App 支援服務的電子郵件位址 (可於 <a href="/en-US/Marketplace/Submission/Submitting_an_app#Step_3.3A_Details">Step 3</a> 時輸入)。</li>
+</ul>
+<h3 id="針對付費_App_或應用程式內付款_(In-app_payments)">針對付費 App 或應用程式內付款 (In-app payments)</h3>
+<ul>
+ <li>你必須找好付款服務商、銀行帳戶明細 (如帳號、SWIFT 代號、地址明細)、公司明細 (如 VAT 編號、公司統編、開業日期)。</li>
+ <li>如果 App 使用 In-app payments，確認已於 manifest 檔案中提供了 origin。</li>
+</ul>
+<h3 id="針對所有_App_(非必備)">針對所有 App (非必備)</h3>
+<p>架設/托管式、封裝式 App 的建議條件：</p>
+<ul>
+ <li>最多可提交 6 張截圖來呈現 App 的主畫面。最好是涵蓋不同裝置規格的 App 截圖，且各有尺寸限制：
+  <ul>
+   <li>手機：建議 320 x 480px 或相對應的倍數。</li>
+   <li>平板電腦：建議 1024 x 768px 或 1280 x 800px。</li>
+   <li>桌上型電腦：建議 1280 x 800px 或 1440 x 900px。</li>
+  </ul>
+ </li>
+ <li>其他尺寸的圖示應透過 manifest 檔案指定，以於其他平台/網頁內容達到最佳顯示效果：
+  <ul>
+   <li>60 x 60px 圖示可於裝置螢幕上顯示。</li>
+   <li>32 x 32px、90 x 90px、120 x 120px、256 x 256px 圖示，可於不同平台達到最佳顯示效果，如 Windows 7 與 Android。</li>
+  </ul>
+ </li>
+ <li>App 及其支援服務首頁的網址。根據你自己的需要，可為相同或不同的網址 (於 <a href="/en-US/Marketplace/Submission/Submitting_an_app#Step_3.3A_Details">Step 3</a> 時輸入)。</li>
+ <li>其他<a href="/en-US/Apps/Developing/Manifest"> manifest</a> 檔案的選填欄位。目前有 <a href="/en-US/Apps/Developing/Manifest#name">name</a>、<a href="/en-US/Apps/Developing/Manifest#description">description</a>、<a href="/en-US/Apps/Developing/Manifest#icons">icons</a> 為必要欄位，另有許多選填欄位，例如：
+  <ul>
+   <li>如果你要提供多語言版本的 App，就必須填入 <a href="/en-US/Apps/Developing/Manifest#locales">locales</a> 的資訊。</li>
+   <li>如果有 locales 欄位，就必須一併提供 <a href="/en-US/Apps/Developing/Manifest#default_locale">default_locale</a> 欄位。</li>
+   <li>如果要在 App 中使用特定裝置的 API 或 Web Activity，也必須在 manifest 檔案中提供相關 <a href="/en-US/Apps/Developing/App_permissions">App permissions</a> 或 <a href="/en-US/docs/WebAPI/Web_Activities">activities</a> 欄位。</li>
+  </ul>
+ </li>
+</ul>
+<h3 id="另外還有......">另外還有......</h3>
+<p>......你應該：</p>
+<ul>
+ <li>在 Marketplace 審核通過你的 App 之後，預設將立刻讓 App 上架。如果你不想讓 App 立刻上架，則在提交 App 時要取消勾選「<strong>Publish my app in the Firefox Marketplace as soon as it's reviewed</strong>」(於 <a href="/en-US/Marketplace/Submission/Submitting_an_app#Step_2.3A_Submit">Step 2</a> 時勾選)。</li>
+ <li>可參閱 <a href="/en-US/docs/Web/Apps/Publishing/Marketplace_review_criteria">Marketplace 審查準則</a> (<a href="/en-US/Marketplace/Submission/Submitting_an_app#Step_1.3A_Agreement">Step 1</a>)。</li>
+</ul>

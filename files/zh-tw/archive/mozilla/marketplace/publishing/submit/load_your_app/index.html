@@ -1,0 +1,134 @@
+---
+title: 將 App 上傳到 Firefox Marketplace
+slug: Archive/Mozilla/Marketplace/Publishing/Submit/Load_your_app
+translation_of: Archive/Mozilla/Marketplace/Publishing/Submit/Load_your_app
+---
+<div class="summary">
+<p>在登入自己的開發者帳戶並同意開發者協定之後，就能輸入 App 的細節，再讓  Firefox Marketplace 識別其 manifest 檔案。</p>
+</div>
+
+<div class="note">
+<p>注意：你可能會看到「manifest 檔案」之正體中文翻譯為「安裝資訊檔」。</p>
+</div>
+
+<h2 id="概述">概述</h2>
+
+<p>現在你進入「提交 App (<strong>Submit an App</strong> )」頁面，可進行：</p>
+
+<ul>
+ <li>確認 App 的獲利模式 — 是要免費提供給消費者，或是消費者須付費購買，也可以另外提供應用程式內付款 (In-app payments) 產品。</li>
+ <li>確認 App 是否可相容於該平台。</li>
+ <li>根據 App 的封裝方式：
+  <ul>
+   <li>確認托管＼架設式 (Hosted) App 的 manifest 檔案之位址。</li>
+   <li>上傳封裝式 (Packaged) App 的 ZIP 檔案。</li>
+  </ul>
+ </li>
+ <li>提供 App 必要的特性＼功能相關資訊。</li>
+</ul>
+
+<h2 id="收益方式">收益方式</h2>
+
+<p>你首先應對 App 所提供的資訊，就是其收益方式。</p>
+
+<ol>
+ <li>針對自己的 App，點選 (1)「免費 (<strong>Free)</strong>」或「付費/應用程式內付款 (<strong>Paid / in-app)</strong>」分頁。</li>
+ <li><img alt="Select either Free if the app is free to download and use, or Paid / In-app of the app has to be purchased or contains any in-app payment options" src="https://mdn.mozillademos.org/files/8213/Select%20monetization%20model.png" style="width: 978px; height: 162px;"></li>
+</ol>
+
+<div class="note">
+<p>如果你想先讓消費者免費下載 App，再透過 App 內部付費產品獲得收益，請點選「<strong>付費 / 應用程式內付款</strong>」。</p>
+</div>
+
+<div class="note">
+<p>只要你點選「付費/應用程式內付款」並完成提交程序之後，就無法再將該 App 改回免費提供。但原本就點選「免費」的 App 可隨時更改為付費形式。</p>
+</div>
+
+<h2 id="平台相容性">平台相容性</h2>
+
+<p>在選擇了免費＼付費 App 之後，就該定義 App 所將賴以執行的作業系統與瀏覽器。</p>
+
+<ol>
+ <li>選擇 App 相容的平台<br>
+  <img alt="Select the OS and browser implementations the app is designed to work on." src="https://mdn.mozillademos.org/files/8217/Select%20compatible%20platforms.png" style="width: 980px; height: 337px;"></li>
+</ol>
+
+<p>各個平台所支援的收益方式如下。</p>
+
+<table class="standard-table" style="width: 60% ;">
+ <thead>
+  <tr>
+   <th scope="row" style="width: 60% ;"> </th>
+   <th scope="col" style="width: 20%;">Free</th>
+   <th scope="col" style="width: 20%;">Paid /In-app</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">Firefox OS</th>
+   <td style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/8219/Tick_20x20.png" style="width: 20px; height: 20px;"></td>
+   <td style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/8219/Tick_20x20.png" style="width: 20px; height: 20px;"></td>
+  </tr>
+  <tr>
+   <th scope="row">Firefox for Desktop</th>
+   <td style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/8219/Tick_20x20.png" style="width: 20px; height: 20px;"></td>
+   <td style="text-align: center;"> </td>
+  </tr>
+  <tr>
+   <th scope="row">Firefox Mobile<br>
+    (Firefox for Android on screen 7" or less)</th>
+   <td style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/8219/Tick_20x20.png" style="width: 20px; height: 20px;"></td>
+   <td style="text-align: center;"> </td>
+  </tr>
+  <tr>
+   <th scope="row">Firefox Tablet<br>
+    (Firefox for Android on screen over 7")</th>
+   <td style="text-align: center;"><img alt="" src="https://mdn.mozillademos.org/files/8219/Tick_20x20.png" style="width: 20px; height: 20px;"></td>
+   <td style="text-align: center;"> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="上傳_App">上傳 App</h2>
+
+<p>現在為 Firefox Marketplace 說明 App 類型：</p>
+
+<ol>
+ <li>如果為托管＼架設式 App，(1) 須先輸入 <a href="/en-US/docs/Web/Apps/Manifest">App 的 manifest 檔案</a>所在之伺服器位址 (須為完整的 URL)，再點擊 (2)「<strong>驗證 (Validate)</strong>」。<br>
+  <img alt="Enter the URL for the manifest of a Hosted App" src="https://mdn.mozillademos.org/files/8223/Identify%20Hosted%20App.png" style="width: 982px; height: 198px;"><br>
+  <br>
+  Marketplace 就會驗證你的 manifest 檔案。
+  <ul>
+   <li>驗證完畢，點擊「<strong>繼續 (Continue)</strong>」。</li>
+   <li>若 manifest 檔案的驗證結果出現錯誤或警告，也會提供完整報告的連結。請看過報告之後修正錯誤，再重新提交 manifest 檔案進行驗證。<br>
+    <img alt="If there are errors or warning as a result of validating the app's manifest a link is provided to a full report" src="https://mdn.mozillademos.org/files/8225/Validation%20results.png" style="width: 981px; height: 55px;"></li>
+  </ul>
+ </li>
+ <li>如果為封裝式 App，則點擊「<strong>封裝</strong> (<strong>Packaged</strong>)」分頁並點選「<strong>選擇檔案... (Select a file...)</strong>」。接著就會開啟電腦的檔案瀏覽功能，找到 App 的 zip 檔案並上傳。<br>
+  <img alt="Click Select a file to upload a packaged app's ZIP file" src="https://mdn.mozillademos.org/files/8211/Select%20Packaged%20App.png" style="width: 982px; height: 189px;"><br>
+  Marketplace 現已可驗證 App 的封包。
+  <ul>
+   <li>驗證完畢，點擊「<strong>繼續 (Continue)</strong>」。</li>
+   <li>若封包 (ZIP) 的驗證結果出現錯誤或警告，也會提供完整報告的連結。請看過報告之後修正錯誤，再重新封包檔案之後提交以利驗證。<br>
+    <img alt="If there are errors or warning as a result of validating the app's manifest a link is provided to a full report" src="https://mdn.mozillademos.org/files/8225/Validation%20results.png" style="width: 981px; height: 55px;"></li>
+  </ul>
+ </li>
+</ol>
+
+<h2 id="了解_App_最低限度的_API_需求">了解 App 最低限度的 API 需求</h2>
+
+<p>在 App 驗證完成之後，就會出現「<strong>應用程式最低需求 (App Minimum Requirements)</strong>」頁面。一開始將顯示最常用的 API 需求清單。如果有找不到的 App 需求，則點擊 (1)「<strong>檢視全部 (View all)」</strong>，再 (2) 勾選所要的需求方塊。</p>
+
+<div class="note">
+<p>消費者的裝置若不支援本頁中所選的需求，則 Marketplace 將隱藏你的 App。</p>
+</div>
+
+<p><img alt="An automatically populated list of app requirements displays, click View all and add any that have been missed" src="https://mdn.mozillademos.org/files/8227/Select%20the%20apps%20minimum%20API%20requiements.png" style="width: 984px; height: 506px;"></p>
+
+<h2 id="下一步">下一步</h2>
+
+<p>接著可點擊「<strong>繼續 (Continue)</strong>」完成下個程序。</p>
+
+<p><img alt="When the details have been added to the page, clicking Continue moves onto the next step." src="https://mdn.mozillademos.org/files/8233/Continue%20option.png" style="width: 982px; height: 91px;"></p>
+
+<p>若要了解接下來的步驟，可繼續閱讀：<a href="/en-US/Marketplace/Publishing/Submit/Enter_your_apps_details">輸入 App 的細節</a>。</p>

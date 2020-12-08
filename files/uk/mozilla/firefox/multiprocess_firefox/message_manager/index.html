@@ -1,0 +1,71 @@
+---
+title: Message manager
+slug: Mozilla/Firefox/Multiprocess_Firefox/Message_Manager
+translation_of: Mozilla/Firefox/Multiprocess_Firefox/Message_Manager
+---
+<div>{{FirefoxSidebar}}</div>
+
+<p><span class="tlid-translation translation" lang="uk">n старих версій Firefox для настільних ПК весь браузер працював в рамках однієї операційної системи. Зокрема, JavaScript, який керував користувальницьким інтерфейсом браузера (також відомий як "хромний код"), і JavaScript, який працює на веб-сторінках (також відомий як "вміст" або "веб-контент"), не були розділені.<br>
+ <br>
+ В даний час останні версії Firefox запускають інтерфейс браузера та веб-вміст в окремих процесах. У поточній ітерації цієї архітектури всі вкладки браузера запускаються в межах одного процесу, а інтерфейс браузера працює у своєму індивідуальному процесі. У майбутніх ітераціях Firefox буде не один процес виключно обробки веб-контенту. Внутрішня назва цього проекту називається Електроліз, іноді скорочується до e10s.<br>
+ <br>
+ Хороша новина полягає в тому, що звичайні веб-сторінки та їх розробники не впливають на цю перехід на багатопроцесорний Firefox. На жаль, люди, що розробляють додатки для Firefox або Firefox, будуть впливати, якщо їх код покладається на можливість доступу до веб-контенту безпосередньо, оскільки система доступу до цих даних зміниться.<br>
+ <br>
+ Замість доступу до веб-вмісту безпосередньо, хромований код повинен буде використовувати замість цього менеджер повідомлень. Щоб полегшити цей перехід, ми впровадили перехресні об єкти обгортки та деякі програми сумісності для розробників додатків. Якщо ви розробник додатку, цікавитесь, чи впливає ви на цю зміну чи ні, перегляньте посібник із роботи з багатопроцесорним Firefox.</span></p>
+
+<h2 id="Guides">Guides</h2>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Message_manager_overview">Message manager overview</a></dt>
+ <dd></dd>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Frame_script_loading_and_lifetime">Frame script loading and lifetime</a></dt>
+ <dd></dd>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Communicating_with_frame_scripts">Communicating with frame scripts</a></dt>
+ <dd></dd>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Performance">Performance Best Practices</a></dt>
+ <dd></dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Frame_script_environment">Frame script environment</a></dt>
+ <dd></dd>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/_Limitations_of_frame_scripts">Limitations of frame scripts</a></dt>
+ <dd></dd>
+ <dt><a href="/en-US/Firefox/Multiprocess_Firefox/Message_Manager/Process_scripts">Process scripts</a></dt>
+ <dd></dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<h2 id="API_reference">API reference</h2>
+
+<div class="column-container">
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFrameScriptLoader">nsIFrameScriptLoader</a></dt>
+ <dd></dd>
+ <dt><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageListenerManager">nsIMessageListenerManager</a></dt>
+ <dd></dd>
+ <dt><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageBroadcaster">nsIMessageBroadcaster</a></dt>
+ <dd></dd>
+ <dt><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMessageSender">nsIMessageSender</a></dt>
+ <dd></dd>
+</dl>
+</div>
+
+<div class="column-half">
+<dl>
+ <dt><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISyncMessageSender">nsISyncMessageSender</a></dt>
+ <dd></dd>
+ <dt><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentFrameMessageManager">nsIContentFrameMessageManager</a></dt>
+ <dd></dd>
+ <dt><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIProcessScriptLoader">nsIProcessScriptLoader</a></dt>
+ <dd></dd>
+</dl>
+</div>
+</div>

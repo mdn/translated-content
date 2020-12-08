@@ -1,0 +1,90 @@
+---
+title: Firefox OS 模擬器
+slug: Archive/B2G_OS/Simulator
+translation_of: Archive/B2G_OS/Simulator
+---
+<div class="note">
+<p>本文將針對 Firefox OS 1.2 或更高版本，說明 Firefox OS 模擬器 (Firefox OS Simulator) 相關使用方式。如果開發者目前正開發 Firefox OS 1.1 的 App，則請參閱 <a href="https://developer.mozilla.org/en-US/docs/Tools/Firefox_OS_1.1_Simulator">Firefox OS 1.1 Simulator</a> 的相關文章。</p>
+</div>
+
+<p>Firefox OS 模擬器可於桌機中模擬 Firefox OS 裝置。開發者不用真的弄到實際設備就能夠測試 App 並進行除錯。模擬器會在視窗中以 Firefox OS 裝置的實際尺寸執行，亦包含 Firefox OS 使用者介面與已內建的 App，進而模擬多樣的 Firefox OS 裝置 API。</p>
+
+<p>Firefox OS 模擬器是以 Firefox 附加元件的格式發佈，可下載並安裝於 Firefox 瀏覽器之上，接著可透過<a href="https://developer.mozilla.org/zh-TW/docs/Mozilla/Firefox_OS/Using_the_App_Manager">應用程式管理員 (App Manager)</a> 來執行模擬器、將 App 送入模擬器、搭配其他開發者工具。</p>
+
+<h2 id="安裝"><span style="line-height: 1.5;">安裝</span></h2>
+
+<p>直接點擊下方按鈕即可安裝模擬器。現有多個版本可供安裝。我們也建議開發者能安裝所有版本，以達最佳開發靈活度。</p>
+
+<p><a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/" style="margin-bottom: 20px; padding: 10px; color: white; text-align: center; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; display: inline-block; background-color: rgb(129, 188, 46); white-space: nowrap; text-shadow: rgba(0, 0, 0, 0.247059) 0px 1px 0px; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 0px 0px, rgba(0, 0, 0, 0.298039) 0px -1px 0px 0px inset;">安裝 Firefox OS Simulator</a></p>
+
+<p>另請參閱<a href="https://developer.mozilla.org/zh-TW/docs/Mozilla/Firefox_OS/Using_the_App_Manager">《應用程式管理員》中的說明</a>來啟動模擬器。一旦模擬器開始執行，開發者即可將 App 送入應用程式管理員進行除錯；就如同使用實際裝置一樣。</p>
+
+<div class="note" style="line-height: 21px;">
+<p><strong>注意：模擬器</strong> (1.2 與 1.3 版) 目前正回報 1 組錯誤的 Gecko user agent 字串：請參閱 {{ Bug("964598") }} 進一步了解。</p>
+</div>
+
+<h2 id="模擬器的使用者介面_(UI)" style="line-height: 30px;">模擬器的使用者介面 (UI)</h2>
+
+<p>模擬器將另外顯示獨立的視窗，且模擬畫面則為 320x480 像素。若要模擬觸控事件，則可按下滑鼠按鈕不放並拖曳。只要在主畫面上按下滑鼠不放並從右向左拖曳，即可看到已內建的 App，還有開發者剛送入的 App：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/7173/simulator-1.2.png" style="display: block; height: 623px; margin: 0px auto; width: 810px;"></p>
+
+<p>在模擬器視窗底部的工具列共有 2 個按鈕：</p>
+
+<ul>
+ <li>左邊「<strong>主畫面</strong>」按鈕可回到主畫面；或長按不放則可關閉模擬器</li>
+ <li>右邊「<strong>畫面旋轉</strong>」按鈕可切換裝置的橫向、直向畫面；即產生 <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Managing_screen_orientation#Listening_orientation_change" title="/en-US/docs/WebAPI/Detecting_device_orientation">orientationchange</a> 事件。</li>
+</ul>
+
+<h2 id="模擬器的限制">模擬器的限制</h2>
+
+<p>請注意，Firefox OS 模擬器仍無法提供完美的模擬作業。</p>
+
+<h3 id="硬體限制"><strong>硬體限制</strong></h3>
+
+<p>模擬器除了螢幕尺寸的限制之外，也無法模擬 Firefox OS 裝置的硬體 (例如 CPU 速度或可用的記憶體容量)。</p>
+
+<h3 id="音訊視訊編碼">音訊/視訊編碼</h3>
+
+<p>下列編碼 (Codecs) 因硬體加速解碼而有所不同，因此尚未支援：</p>
+
+<ul>
+ <li>MP3</li>
+ <li>AAC</li>
+ <li>H.264 (MP4)</li>
+ <li>WebM</li>
+</ul>
+
+<p>也就是說，若 App 或網站 (如 Youtube) 使用這些編碼，則模擬器將無法測試其中的視訊回播功能。</p>
+
+<h3 id="未支援的_API"><a name="Unsupported-APIs">未支援的 API</a></h3>
+
+<p>一般來說，因為桌上型電腦無法使用支援硬體，所以可於裝置上運作的特定 API，可能無法用於模擬器之上。我們另外針對某些 API (例如 Geolocation 地理位置定位) 建構了模擬功能，未來版本亦將新增更多模擬 API。但目前仍尚未支援下列 API。如果使用了這些 API，也只會得到錯誤的報告或結果：</p>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/WebAPI/WebTelephony" title="/en-US/WebAPI/WebTelephony">Telephony</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/WebSMS" title="/en-US/docs/WebAPI/WebSMS">WebSMS</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/WebBluetooth" title="/en-US/docs/WebAPI/WebBluetooth">WebBluetooth</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Using_Light_Events" title="/en-US/docs/WebAPI/Using_Light_Events">Ambient Light</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Proximity" title="/en-US/docs/WebAPI/Proximity">Proximity</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Network_Information" title="/en-US/docs/WebAPI/Network_Information">Network Information</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Online_and_offline_events" title="/en-US/docs/Online_and_offline_events">navigator.onLine and offline events</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Vibration" title="/en-US/docs/WebAPI/Vibration">Vibration</a></li>
+</ul>
+
+<h2 id="獲得協助"><a name="Simulator-help"></a>獲得協助</h2>
+
+<p>如果有任何問題，請透過 <a href="https://lists.mozilla.org/listinfo/dev-developer-tools">dev-developer-tools 郵件群組</a>或到 <a href="irc://irc.mozilla.org/#devtools">#devtools on irc.mozilla.org</a> 上發問。</p>
+
+<h3 id="啟動詳細資訊_(verbose)_記錄的方法"><a name="Simulator-verbose-logging"></a>啟動詳細資訊 (verbose) 記錄的方法</h3>
+
+<p>開發者可到<a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console">網頁主控台 (Web Console)</a> 觀看 App 的記錄訊息，並透過<a href="https://developer.mozilla.org/zh-TW/docs/Mozilla/Firefox_OS/Using_the_App_Manager">應用程式管理員</a>將記錄附加到 App 上。如果想知道 App 啟動時的早期訊息，甚至早於主控台連線並開始作業的訊息，則開發者可啟動模擬器中的詳細資訊記錄功能。</p>
+
+<p>可透過 about:config 並建立新的 preference 設定。依照模擬器的版本，preference 的名稱也有所差異：</p>
+
+<ul>
+ <li>Firefox OS 1.3 為extensions.fxos_1_3_simulator@mozilla.org.sdk.console.logLevel</li>
+ <li>Firefox OS 1.2 為 extensions.fxos_1_2_simulator@mozilla.org.sdk.console.logLevel</li>
+</ul>
+
+<p>針對「附加元件管理員 (Add-on Manager)」中的附加元件，可將字串值設為「all」、停用，再啟用。目前有關模擬器作業的額外訊息，均將出現於<a href="https://developer.mozilla.org/en-US/docs/Tools/Browser_Console">瀏覽器主控台 (Browser Console)</a> 中。</p>

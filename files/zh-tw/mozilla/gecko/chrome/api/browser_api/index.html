@@ -1,0 +1,158 @@
+---
+title: Browser API
+slug: Mozilla/Gecko/Chrome/API/Browser_API
+translation_of: Mozilla/Gecko/Chrome/API/Browser_API/Using
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('privileged') }}</p>
+<h2 id="摘要">摘要</h2>
+<p>HTML Browser API 其實是 HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 元素的延伸，可讓 Web Apps 建構瀏覽器或類似瀏覽器的 Apps。主要可分為 2 大項：</p>
+<ul>
+  <li>針對嵌入式內容，讓 <code>iframe</code> 行為如同最上層的瀏覽器視窗。也就是說 <a href="https://developer.mozilla.org/en-US/docs/DOM/window.top" title="/en-US/docs/DOM/window.top"><code>window.top</code></a><code>、</code><a href="https://developer.mozilla.org/en-US/docs/DOM/window.parent" title="/en-US/docs/DOM/window.parent"><code>window.parent</code></a><code>、</code><a href="https://developer.mozilla.org/en-US/docs/DOM/window.frameElement" title="/en-US/docs/DOM/window.frameElement"><code>window.frameElement</code></a><code> 都不該顯示出上層的頁</code>框階層 (Frame hierarchy)。在不同情況下，也能用來說明嵌入式內容是否為 Open Web Apps。</li>
+  <li>用以控制並監聽嵌入式內容狀態變化的 API。</li>
+</ul>
+<p>另在「嵌入式內容就是 1 個 <a href="/en-US/docs/Apps" title="/en-US/docs/Apps">Open Web App</a>」的情況下，將於合適的 Apps 環境 (如權限) 中載入該內容。</p>
+<h2 id="用途">用途</h2>
+<p>設定了 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-mozbrowser">mozbrowser</a> 屬性之後，即可將 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 轉為瀏覽器框架：</p>
+<pre class="brush: html">&lt;iframe src="http://hostname.tld" mozbrowser&gt;</pre>
+<p>如果要嵌入 Open Web Apps，就必須提供 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-mozapp">mozapp</a> 屬性，且導向 Apps 的 manifest 檔案之路徑應為：</p>
+<pre>&lt;iframe src="http://hostname.tld" mozapp='http://path/to/manifest.webapp' mozbrowser&gt;</pre>
+<p>最後透過 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-remote">remote</a> 屬性，<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 內容可載入至本身的子處理程序 (Child process) 中，藉以分離出「嵌入此 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 頁面」的處理程序。</p>
+<pre>&lt;iframe src="http://hostname.tld" mozbrowser remote&gt;</pre>
+<div class="warning">
+  <p><strong>警告：</strong>因應安全考量，若要從未知/未經信任的來源下載內容，則必備最後一項屬性。若要略過此屬性，則 Apps 可能受到惡意網站的危害。</p>
+</div>
+<h2 id="權限">權限</h2>
+<p>任何 Apps 若要嵌入瀏覽器框架，則其 <a href="/en-US/docs/Web/Apps/Manifest" title="/en-US/docs/Web/Apps/Manifest">app manifest</a> 檔案中必備 <code>browser</code> 權限。</p>
+<pre class="brush: json">{
+  "permissions": {
+    "browser": {}
+  }
+}</pre>
+<p>此外，若要嵌入 Open Web Apps，則該 App 亦需具備 <code>embed-apps</code> 權限。</p>
+<pre class="brush: json">{
+  "permissions": {
+    "browser": {},
+    "embed-apps": {}
+  }
+}</pre>
+<h2 id="其他函式">其他函式</h2>
+<p>為因應瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的需求，Firefox OS 另擴充了 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement" title="/en-US/docs/Web/API/HTMLIFrameElement"><code>HTMLIFrameElement</code></a> DOM 介面。下列新函式將為 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 提供更多功能：</p>
+<h3 id="存取_(Navigation)_函式">存取 (Navigation) 函式</h3>
+<p>這些函式可存取 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的瀏覽記錄，為建構「停止」、「上一頁」、「下一頁」、「重新載入」等按鈕所必備。</p>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.reload" title="/en-US/docs/Web/API/HTMLIFrameElement.reload"><code>reload()</code></a>：重新載入 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的內容。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.stop" title="/en-US/docs/Web/API/HTMLIFrameElement.stop"><code>stop()</code></a>：停止載入 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的內容。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.getCanGoBack" title="/en-US/docs/Web/API/HTMLIFrameElement.getCanGoBack"><code>getCanGoBack()</code></a>：得知是否能存取上一頁。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.goBack" title="/en-US/docs/Web/API/HTMLIFrameElement.goBack"><code>goBack()</code></a>：針對瀏覽記錄中的上個位置，更改 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的位置。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.getCanGoForward" title="/en-US/docs/Web/API/HTMLIFrameElement.getCanGoForward"><code>getCanGoForward()</code></a>：得知是否能存取下一頁。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.goForward" title="/en-US/docs/Web/API/HTMLIFrameElement.goForward"><code>goForward()</code></a>：針對瀏覽記錄中的下個位置，更改 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的位置。</li>
+</ul>
+<h3 id="效能函式">效能函式</h3>
+<p>這些函式可管理瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 所使用的資源。特別適於建構分頁式瀏覽器的應用。</p>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.setVisible" title="/en-US/docs/Web/API/HTMLIFrameElement.setVisible"><code>setVisible()</code></a>：更改瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的顯示狀態。如此可能影響資源分配與某些函式 (如 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.requestAnimationFrame" title="/en-US/docs/Web/API/window.requestAnimationFrame"><code>requestAnimationFrame</code></a>)。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.getVisible" title="/en-US/docs/Web/API/HTMLIFrameElement.getVisible"><code>getVisible()</code></a>：得知瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 目前的顯示狀態。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.purgeHistory" title="/en-US/docs/Web/API/HTMLIFrameElement.purgeHistory"><code>purgeHistory()</code></a>：清除瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的所有相關資源 (cookies、localStorage、快取等)。</li>
+</ul>
+<h3 id="事件函式">事件函式</h3>
+<p>為了管理瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的內容，另新增了許多新事件 (如下所示)。下列函式即用以處理這些事件：</p>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 現已支援 <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget" title="/en-US/docs/Web/API/EventTarget"><code>EventTarget</code></a> 介面的函式：<a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener" title="/en-US/docs/Web/API/EventTarget.addEventListener"><code>addEventListener()</code></a>、<a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.removeEventListener" title="/en-US/docs/Web/API/EventTarget.removeEventListener"><code>removeEventListener()</code></a>、<a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.dispatchEvent" title="/en-US/docs/Web/API/EventTarget.dispatchEvent"><code>dispatchEvent()</code></a>。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.sendMouseEvent" title="/en-US/docs/Web/API/HTMLIFrameElement.sendMouseEvent"><code>sendMouseEvent()</code></a>：傳送 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent" title="/en-US/docs/Web/API/MouseEvent"><code>MouseEvent</code></a> 至 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的內容。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.sendTouchEvent" title="/en-US/docs/Web/API/HTMLIFrameElement.sendTouchEvent"><code>sendTouchEvent()</code></a>：傳送 <a href="https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent" title="/en-US/docs/Web/API/TouchEvent"><code>TouchEvent</code></a> 至 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的內容。另請注意此函式僅能用於觸控式裝置。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.addNextPaintListener" title="/en-US/docs/Web/API/HTMLIFrameElement.addNextPaintListener"><code>addNextPaintListener()</code></a>：定義處理器 (Handler) 以監聽瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 中的下一個 <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/MozAfterPaint" title="/en-US/docs/Web/Reference/Events/MozAfterPaint">MozAfterPaint</a> 事件。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.removeNextPaintListener" title="/en-US/docs/Web/API/HTMLIFrameElement.removeNextPaintListener"><code>removeNextPaintListener()</code></a>：移除先前以 <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.addNextPaintListener" title="/en-US/docs/Web/API/HTMLIFrameElement.addNextPaintListener"><code>addNextPaintListener()</code></a><code> 所設定的處理器。</code></li>
+</ul>
+<h3 id="其他函式_2">其他函式</h3>
+<p>這些函式適於使用瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的 Apps。</p>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement.getScreenshot" title="/en-US/docs/Web/API/HTMLIFrameElement.getScreenshot"><code>getScreenshot()</code></a>：針對瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的內容進行截圖。特別適合在分頁式瀏覽器 Apps 中取得分頁的圖示。</li>
+</ul>
+<h2 id="事件">事件</h2>
+<p>若要讓 Apps 管理瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>，則該 Apps 將監聽瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 中發生的新事件。監聽的新事件如下：</p>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowserasyncscroll" title="/en-US/docs/Web/Reference/Events/mozbrowserasyncscroll">mozbrowserasyncscroll</a>：瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 中的捲動位置改變，隨即送出此函式。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowserclose" title="/en-US/docs/Web/Reference/Events/mozbrowserclose">mozbrowserclose</a>：在瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 中呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.close" title="/en-US/docs/Web/API/window.close"><code>window.close()</code></a>，隨即送出此函式。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowsercontextmenu" title="/en-US/docs/Web/Reference/Events/mozbrowsercontextmenu">mozbrowsercontextmenu</a>：瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 嘗試開啟右鍵選單，隨即送出此函式。此函式將處理瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 內容中的可用 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/menuitem"><code>&lt;menuitem&gt;</code></a> 元素。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowsererror" title="/en-US/docs/Web/Reference/Events/mozbrowsererror">mozbrowsererror</a>：在瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 中載入內容而發生錯誤時，隨即送出此函式。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowsericonchange" title="/en-US/docs/Web/Reference/Events/mozbrowsericonchange">mozbrowsericonchange</a>：瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的網站圖示變更時，隨即送出此函式。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowserloadend" title="/en-US/docs/Web/Reference/Events/mozbrowserloadend">mozbrowserloadend</a>：瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 完成載入所有的外部檔案 (Assets) 時，隨即送出此函式。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowserloadstart" title="/en-US/docs/Web/Reference/Events/mozbrowserloadstart">mozbrowserloadstart</a>：瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 開始載入新頁面時，隨即送出此函式。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowserlocationchange" title="/en-US/docs/Web/Reference/Events/mozbrowserlocationchange">mozbrowserlocationchange</a>：瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 的位置改變時，隨即送出此函式。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowseropenwindow" title="/en-US/docs/Web/Reference/Events/mozbrowseropenwindow">mozbrowseropenwindow</a>：在瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 中呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.open" title="/en-US/docs/Web/API/window.open"><code>window.open()</code></a> 時，隨即送出此函式。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowsersecuritychange" title="/en-US/docs/Web/Reference/Events/mozbrowsersecuritychange">mozbrowsersecuritychange</a>：在瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 中變更 SSL 狀態時，隨即送出此函式。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowsershowmodalprompt" title="/en-US/docs/Web/Reference/Events/mozbrowsershowmodalprompt">mozbrowsershowmodalprompt</a>：在瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 中呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.alert" title="/en-US/docs/Web/API/window.alert"><code>alert()</code></a>、<a href="https://developer.mozilla.org/en-US/docs/Web/API/window.confirm" title="/en-US/docs/Web/API/window.confirm"><code>confirm()</code></a>，或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.prompt" title="/en-US/docs/Web/API/window.prompt"><code>prompt()</code></a><code> 時</code>，隨即送出此函式。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowsertitlechange" title="/en-US/docs/Web/Reference/Events/mozbrowsertitlechange">mozbrowsertitlechange</a>：在瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> 中變更 document.title 時，隨即送出此函式。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowserusernameandpasswordrequired" title="/en-US/docs/Web/Reference/Events/mozbrowserusernameandpasswordrequired">mozbrowserusernameandpasswordrequired</a>：請求 HTTP 的認證 (Authentification) 時，隨即送出此函式。</li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/mozbrowseropensearch" title="/en-US/docs/Web/Reference/Events/mozbrowseropensearch">mozbrowseropensearch</a>：只要發現搜尋引擎的鏈結，隨即送出此函式。</li>
+</ul>
+<h2 id="範例">範例</h2>
+<p>此範例可建構最基本的瀏覽器 Apps。</p>
+<h3 id="HTML">HTML</h3>
+<p>在 HTML 中，我們只要新增 1 組 URL 位址列、1個「Go」與「Stop」按鈕、1 組瀏覽器 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>。</p>
+<pre class="brush: html">&lt;header&gt;
+  &lt;input id="url"&gt;
+  &lt;button id="go"&gt;Go&lt;/button&gt;
+  &lt;button id="stop"&gt;Stop&lt;/button&gt;
+&lt;/header&gt;
+
+&lt;iframe src="about:blank" mozbrowser remote&gt;&lt;/iframe&gt;
+</pre>
+<h3 id="CSS">CSS</h3>
+<p>變個小小的 CSS 戲法，即可切換按鈕為「Go」與「Stop」。</p>
+<pre class="brush: css">button:disabled {
+  display: none;
+}</pre>
+<h3 id="JavaScript">JavaScript</h3>
+<p>現在可加進必要的功能：</p>
+<pre class="brush: js">document.addEventListener("DOMContentLoaded", function () {
+  var url  = document.getElementById("url");
+  var go   = document.getElementById("go");
+  var stop = document.getElementById("stop");
+
+  var browser = document.getElementsByTagName("iframe")[0];
+
+  // This function is used to switch the Go and Stop button
+  // If the browser is loading content, "Go" is disabled and "Stop" is enabled
+  // Otherwise, "Go" is enabled and "Stop" is disabled
+  function uiLoading(isLoading) {
+      go.disabled =  isLoading;
+    stop.disabled = !isLoading;
+  }
+
+  go.addEventListener("touchend", function () {
+    browser.setAttribute("src", url.value);
+  });
+
+  stop.addEventListener("touchend", function () {
+    browser.stop();
+  });
+
+  // When the browser starts loading content, we switch the "Go" and "Stop" buttons
+  browser.addEventListener('mozbrowserloadstart', function () {
+    uiLoading(true);
+  });
+
+  // When the browser finishes loading content, we switch back the "Go" and "Stop" buttons
+  browser.addEventListener('mozbrowserloadend', function () {
+    uiLoading(false);
+  });
+
+  // In case of error, we also switch back the "Go" and "Stop" buttons
+  browser.addEventListener('mozbrowsererror', function (event) {
+    uiLoading(false);
+    alert("Loading error: " + event.detail);
+  });
+
+  // When a user follows a link, we make sure the new location is displayed in the address bar
+  browser.addEventListener('mozbrowserlocationchange', function (event) {
+    url.value = event.detail;
+  });
+});</pre>
+<h2 id="另可參閱">另可參閱</h2>
+<ul>
+  <li>{{HTMLElement("iframe")}}</li>
+  <li>{{domxref("HTMLIFrameElement")}}</li>
+  <li><a href="https://wiki.mozilla.org/WebAPI/BrowserAPI" title="https://wiki.mozilla.org/WebAPI/BrowserAPI">WikiMo 上的建構作業</a>統計資訊</li>
+</ul>

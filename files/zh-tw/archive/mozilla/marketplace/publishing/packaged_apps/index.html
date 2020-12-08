@@ -1,0 +1,75 @@
+---
+title: 封裝式 (Packaged) App
+slug: Archive/Mozilla/Marketplace/Publishing/Packaged_apps
+translation_of: Archive/Mozilla/Marketplace/Options/Packaged_apps
+---
+<p><span class="seoSummary"><strong>封裝式</strong><strong> (Packaged) App</strong> 屬於 Open Web App，即以 ZIP 壓縮檔納入其 HTML、CSS、JavaScript、manifest 檔案等所有資源，不像之前必須將資源置於網路伺服器之中。本篇文章將為開發者提供封裝式 App 的相關說明 。</span></p>
+<p>封裝式 App 為 ZIP 壓縮檔，內含 Open Web App 能夠運作的所有資源，並將 <a href="https://developer.mozilla.org/docs/Apps/Manifest">manifest</a> 檔案置於其根目錄之下，且此 manifest 檔案將提供 App 本身的說明、圖示等資訊，以利辨識出已安裝的 App。此封包接著可將 App 安裝到 Firefox OS 裝置、<a href="https://developer.mozilla.org/en-US/Marketplace/Options/Open_web_apps_for_android">Android 裝置</a>、<a href="https://developer.mozilla.org/en-US/Marketplace/Options/Open_web_apps_for_desktop">桌機</a>之中。一旦在裝置上安裝 App 之後，仍可存取 Web 上的資源，如伺服器上的資料庫。</p>
+<p><a href="https://developer.mozilla.org/zh-TW/Apps/Developing/Packaged_apps/Packaged_apps$edit#types_of_packaged_apps">封裝式 App 另可分為三類：</a>Web App、Privileged App、Certified App。封裝式 App 可作為任何形式的 Open Web App；Privileged 與 Certified App 則是透過數位簽章的方式，啟動 <a href="https://developer.mozilla.org/en-US/Apps/Build/App_permissions">Privileged 與 Certified API</a>。Privileged App 簽章之後即成為 Marketplace 審查流程的一部分；Certified App 則是由裝置製造商或電信營運商進行簽章。</p>
+<p>封裝式 App 除了能使用 Privileged 與 Certified API 之外，也能在安裝之後更快取得裝置的資源，達到更快的首次啟動速度。基於這些特色，我們也針對 Firefox OS 裝置、<a href="https://developer.mozilla.org/en-US/Marketplace/Options/Open_web_apps_for_android">Android 裝置</a>、<a href="https://developer.mozilla.org/en-US/Marketplace/Options/Open_web_apps_for_desktop">桌機</a>，均建議以封裝式 App 的形式提供 Open Web App。</p>
+<div class="note">
+ <p><strong>注意：</strong>目前 Firefox Marketplace 上所支援的付費封裝式 App，僅限為 Firefox OS App。而免費封裝式 App 已可支援 Firefox OS、行動版 Firefox (Firefox for Android)、桌面版 Firefox。現正開發可支援所有平台的付費 App。</p>
+</div>
+<div class="note">
+ <p><strong>注意：</strong>你會在 Firefox 開發者工具的「應用程式管理員 (App Manager)」看到「manifest」中文翻譯為「安裝資訊檔」。</p>
+</div>
+<h2 id="封裝式_App_的類型"><strong>封</strong>裝<strong>式</strong><strong> App </strong><strong>的類型</strong></h2>
+<p>封裝式 App 可分為 Web App、Privileged App、Certified App，且均可對應 Firefox OS 不同程度的 <a href="https://developer.mozilla.org/en-US/Firefox_OS/Security/Security_model#App_Security">App 安全性</a>模式。接著將提供進一步資訊。</p>
+<h3 id="Web_app">Web app</h3>
+<p>Web App 不會使用 Privileged 或 Certified API。在提交到 Marketplace 之後，App 的封包隨即簽章完成，但仍尚未執行 Privileged 或 Certified App 所使用的特殊授權程序。也因此 Web App 不能使用 Privileged 或 Certified API。這些 App 也不需要 Privileged 與 Certified App 所必備的<a href="https://developer.mozilla.org/en-US/Apps/CSP">內容安全政策</a> (CSP)。</p>
+<p>這種封裝式 App 的 <code>manifest.webapp</code> 檔案中，不需要 <code>type</code> 欄位。其 <code>type</code> (<code>web</code>) 的預設值就是正確的值。</p>
+<p>Web App 可<a href="https://developer.mozilla.org/en-US/Marketplace/Options/Self_publishing">自行發佈</a>，或可透過 Firefox Marketplace 發佈。Web App 亦可透過<a href="https://developer.mozilla.org/en-US/Marketplace/Options/Hosted_apps">架設/托管式 App</a> 的機制對外提供。</p>
+<h3 id="Privileged_app">Privileged app</h3>
+<dl>
+ <dt>
+   </dt>
+ <dd>
+  Privileged app 是由 Firefox OS Marketplace 以特殊程序核准之後發出。如果任一 App 要存取裝置上的特定 Sensitive API，則可為使用者提供更高的安全性。此種 App 即等同 iOS 或 Android 平台上的原生 App。若要指定為 Privileged App，必須在其 <code>manifest.webapp 檔案中添增</code> <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest#type"><code>type</code></a> 欄位並設定為 <code>privileged</code>。App 所要存取的 privileged API，均必須加入 <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest">manifest</a> 檔案的 <code>permissions</code> 欄位中。</dd>
+ <dd>
+  Firefox OS、Web runtimes for Android、桌機，將針對 Privileged App 強制使用下列 <a href="https://developer.mozilla.org/en-US/docs/Security/CSP/Introducing_Content_Security_Policy">CSP</a>：</dd>
+</dl>
+<dl>
+ <dd>
+  <pre>"default-src *; script-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline'"</pre>
+  <p>Privileged App 僅能透過 Firefox Marketplace 發佈。</p>
+ </dd>
+ <dt>
+   </dt>
+</dl>
+<h3 id="Certified_app">Certified app</h3>
+<dl>
+ <dt>
+   </dt>
+ <dd>
+  <div class="geckoVersionNote">
+   <p>一般第三方開發者並不會接觸到 Certified App；且 Certified App 也不會透過 Firefox Marketplace 發佈。這類 API 的長遠目標，就是要讓本身的憑證更完善、更具公信力，進而也能作為 Privileged API。如果你不是很想架構特定的 API，也可直接在 <a href="https://lists.mozilla.org/listinfo/dev-webapps">dev-webapps</a> 郵件群組中反應。</p>
+  </div>
+ </dd>
+ <dd>
+  Certified App 將透過 Certified API 而存取重要的系統功能，如智慧型手機上預設的撥號鍵盤，或系統設定 App。與 Privileged App 相較，並不會用於第三方 App，所以大多數的 App 開發者可忽略此類 App。除了所有的裝置許可均為隱式許可 (Implicit permission，意即不需要外部的使用者許可) 之外，Certified 與 Privileged App 大部分均屬於相似的封裝式 App。而 Certified App 必須取得 OEM 裝置或電信營運商裝置的許可，才能讓此隱式 App 使用重要 API。若要將 App 指定為 Certified App，則需於其 <code>manifest.webapp</code> 檔案中添增 <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest#type"><code>type</code></a> 欄位並設定為 <code>certified</code>。</dd>
+ <dd>
+  Firefox OS 則針對 Certified App 建構了下列 CSP：
+  <pre>"default-src *; script-src 'self'; object-src 'none'; style-src 'self'"</pre>
+  與 Certified App 相較，Privileged App 則是針對 inline CSP 的影響而稍微放寬了限制。進一步了解其原因，可參閱<a href="https://wiki.mozilla.org/Apps/CSP">預設 CSP</a> 與 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=768029">Bug 768029</a>。<br>
+  <br>
+  OEM 廠商與電信營運商均已將 Certified App 安裝到裝置之上。</dd>
+ <dt>
+   </dt>
+</dl>
+<h2 id="測試封裝式_App"><strong>測試封</strong>裝<strong>式</strong><strong> App</strong></h2>
+<p>如果要透過 Firefox OS 模擬器 (Firefox OS Simulator)，測試 Firefox OS 裝置在安裝封裝式 App 的情形，可參閱<a href="https://developer.mozilla.org/zh-TW/Firefox_OS/Using_the_App_Manager">《應用程式管理員 (App Manager)》</a>。開發者也能透過《<a href="https://developer.mozilla.org/zh-TW/docs/Mozilla/Marketplace/Publishing/Publish_options">App 發佈方式</a>》中的步驟，從一般網頁伺服器上安裝該 App 到裝置上。另請注意，如果你要自己發佈 App，就只能安裝封裝式 Web App。</p>
+<h2 id="發佈封裝式_App">發佈封裝式 App</h2>
+<p>有兩種方式可發佈封裝式 App：透過 Firefox Marketplace 或自行發佈。</p>
+<h3 id="透過_Firefox_Marketplace_發佈">透過 Firefox Marketplace 發佈</h3>
+<p>可參閱 <a href="https://developer.mozilla.org/en-US/Marketplace/Publishing">App Publishing</a>，將封裝式 App 提交到 Firefox Marketplace 之上。</p>
+<p>在提交封裝式 App 時，其 zip 檔案即儲存於 Marketplace 伺服器之上，且 Marketplace 將根據封裝式 App 的 zip 檔案中的 manifest，產生新的「<strong>mini-manifest</strong>」檔案。在消費者安裝 App 時，隨即將 mini-manifest 傳送至 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Apps.installPackage"><code>Apps.installPackage()</code></a> 函式以安裝該 App。僅安裝與更新程序才會使用 mini-manifest。App 執行期間並不會使用此檔案。</p>
+<h3 id="自行發佈">自行發佈</h3>
+<p>當然也能在 Firefox Marketplace 之外，也就是自己的網路伺服器上發佈封裝式 App。可參閱《<a href="https://developer.mozilla.org/en-US/Marketplace/Options/Self_publishing">自行發佈 App</a>》。</p>
+<h2 id="更新封裝式_App"><strong>更新封</strong>裝<strong>式 A</strong>pp</h2>
+<p>若要進一步了解更新作業，請參閱《<a href="https://developer.mozilla.org/docs/Apps/Updating_apps">更新 App</a>》。</p>
+<h2 id="更多資訊">更多資訊</h2>
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/Firefox_OS/Security/Security_model">Firefox OS 安全性概述</a></li>
+ <li><a href="https://developer.mozilla.org/en-US/Firefox_OS/Security/Application_security">應用程式安全性</a></li>
+ <li><a href="https://github.com/robnyman/Firefox-OS-Boilerplate-App" title="https://github.com/robnyman/Firefox-OS-Boilerplate-App">Firefox OS Boilerplate App</a></li>
+</ul>

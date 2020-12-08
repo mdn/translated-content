@@ -1,0 +1,61 @@
+---
+title: Idle
+slug: WebAPI/Idle
+translation_of: Archive/B2G_OS/API/Idle_API
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{ B2GOnlyHeader2('certified') }}</p>
+<h2 id="摘要">摘要</h2>
+<p>當使用者讓裝置進入閒置/待機狀態，可通知 App 以採取相對應的行動。最常見的情形就是待機省電。而待機省電狀態又可另外搭配 <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Power_Management" title="/en-US/docs/WebAPI/Power_Management">Power Management API</a>。</p>
+<h2 id="Idle_Observer">Idle Observer</h2>
+<p>若要讓任一 App 收到「系統閒置」的通知，就必須先註冊 Idle Observer。而 Idle Observer 物件具備了 3 項屬性：</p>
+<ul>
+  <li><code>time</code> 屬性將定義使用者最後的動作之後，理應進入閒置/待機狀態的時間 (以秒計算)。</li>
+  <li><code>onidle</code> 屬性則是判斷使用者閒置之後，所會呼叫的函式。</li>
+  <li><code>onactive</code> 屬性則是使用者再度啟動裝置之後，所會呼叫的函式。</li>
+</ul>
+<pre class="brush: js">// NOTE: mozPower is part of the Power Management API
+
+var fadeLight = {
+  time: 10, // Ten seconds
+
+  onidle: function () {
+    // The user does not seem active, let's dim the screen down
+    navigator.mozPower.screenBrightness = 0.5;
+  },
+
+  onactive: function () {
+    // Ok, the user is back, let's brighten the screen up
+    navigator.mozPower.screenBrightness = 1;
+  }
+}
+
+var screenOff = {
+  time: 15, // fifteen seconds
+
+  onidle: function () {
+    // Ok, the user had his chance but he's really idle, let's turn the screen off
+    navigator.mozPower.screenEnabled = false;
+  },
+
+  onactive: function () {
+    // Ok, the user is back, let's turn the screen on
+    navigator.mozPower.screenEnabled = true;
+  }
+}
+</pre>
+<p>任一 App 均可依需要而定義為多個 Idle Observer。但不論定義成幾個 Idle Observer，都必須以 <a href="https://developer.mozilla.org/en-US/docs/DOM/window.navigator.addIdleObserver" title="/en-US/docs/DOM/window.navigator.addIdleObserver"><code>navigator.addIdleObserver()</code></a> 函式完成註冊，才能由系統所處理。</p>
+<pre class="brush: js">navigator.addIdleObserver(fadeLight);
+navigator.addIdleObserver(screenOff);
+</pre>
+<p>又如果 App 不再需要知道使用者是否閒置了系統，則可透過 <a href="https://developer.mozilla.org/en-US/docs/DOM/window.navigator.removeIdleObserver" title="/en-US/docs/DOM/window.navigator.removeIdleObserver"><code>navigator.removeIdleObserver()</code></a> 函式移除 Idle Observer。</p>
+<pre class="brush: js">navigator.removeIdleObserver(fadeLight);
+navigator.removeIdleObserver(screenOff);
+</pre>
+<h2 id="規格">規格</h2>
+<p>目前仍未有任何規格，但 W3C 將此 API 納入為 <a href="http://www.w3.org/2012/sysapps/" title="http://www.w3.org/2012/sysapps/">System Applications Working Group</a> 討論的一部分。</p>
+<h2 id="另可參閱">另可參閱</h2>
+<ul>
+  <li>{{domxref("window.navigator.addIdleObserver","navigator.addIdleObserver")}}</li>
+  <li>{{domxref("window.navigator.removeIdleObserver","navigator.removeIdleObserver")}}</li>
+</ul>

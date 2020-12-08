@@ -1,0 +1,415 @@
+---
+title: Web Activities
+slug: WebAPI/Web_Activities
+translation_of: Archive/B2G_OS/API/Web_Activities
+---
+<p>{{ non-standard_header() }}</p>
+<p>{{B2GOnlyHeader2('installed')}}</p>
+<h2 id="摘要">摘要</h2>
+<p>Web Activities 即定義「App 將 Activity 委託 (Delegate) 予另一個 App (往往是由使用者所選擇)」的方法。</p>
+<p>Web Activities 目前僅能用於 Firefox OS 上，而完整規格可<a href="https://wiki.mozilla.org/WebAPI/WebActivities" title="https://wiki.mozilla.org/WebAPI/WebActivities">參閱 WikiMo</a>。</p>
+<h2 id="Activity">Activity</h2>
+<p>所謂「Activity」就是使用者想做的事情，如選取影像、傳送電子郵件等。App 開發者可能會定義某個 App 去處理該 Activity，或定義某個 App 委託予 Activity。</p>
+<h2 id="將_App_註冊為_Activity_handler">將 App 註冊為 Activity handler</h2>
+<p>App 開發者可建構 App 以處理單或多個 Activity。也就是說，這個 App 可經由其他 App 呼叫之後，而執行 Activity 所定義的某些特定動作。舉例來說，我們可能用其他 App 呼叫相片管理 App，進而選取相片。若 App 是作為 Activity Handler，就會成為其他 App 作業流程的一部分。</p>
+<h3 id="註冊_Activity">註冊 Activity</h3>
+<p>如果要將 App 註冊為 Activity Handler，目前唯一方法就是到 App 的 manifest 檔案中宣告。</p>
+<div class="note">
+ <p><strong>注意：</strong>任何 App 均可針對現有的 Activity，將本身註冊為 Activity Handler；亦可建立自己的 Activity。不論是哪種情況，對 manifest 檔案的處理方式都相同。但若要建立新的 Activity，最好是在新 Activity 名稱的前方加上網址 (例如 <em>example.org/myActivity </em>或 <em>org.example.myActivity</em>)，以避免發生衝突。</p>
+</div>
+<h4 id="App_manifest_(亦所謂的宣告註冊)">App manifest (亦所謂的宣告註冊)</h4>
+<p>如同下列範例所示，必須透過 <a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest" title="/en-US/docs/Apps/Manifest">App 的 manifest 檔案</a>，宣告 App 將會處理 Activity：</p>
+<pre class="brush: js">{
+  // Other App Manifest related stuff
+
+  // Activity registration
+  "activities": {
+
+    // The name of the activity to handle (here "pick")
+    "pick": {
+      "href": "./pick.html",
+      "disposition": "inline",
+      "filters": {
+        "type": ["image/*","image/jpeg","image/png"]
+      },
+      "returnValue": true
+    }
+  }
+}
+</pre>
+<h4 id="動態註冊">動態註冊</h4>
+<p>透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator" title="/en-US/docs/Web/API/window.navigator"><code>navigator</code></a> 物件，即可讓 App 動態的註冊自己。但目前尚未提供此 API。可留意 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=775181">bug 775181</a> 以持續追蹤此 API。</p>
+<h4 id="Activity_Handler_說明">Activity Handler 說明</h4>
+<dl>
+ <dt>
+  <code>href</code></dt>
+ <dd>
+  當其他 App 或網頁所啟動的 Activity，同樣也受到此 App 所支援時，則只要選定此 App 執行 Activity，則 <code>href 將指定所應開啟的網頁。另可透過 disposition</code> 屬性指定網頁的開啟方式。
+  <div class="note">
+   <strong>注意：</strong>此頁面的 URL 將受到<a href="https://developer.mozilla.org/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript" title="/en-US/docs/JavaScript/Same_origin_policy_for_JavaScript">同源規範 (Same-origin policy)</a> 的限制。</div>
+ </dd>
+</dl>
+<dl>
+ <dt>
+  <code>disposition</code> {{optional_inline()}}</dt>
+</dl>
+<dl>
+ <dd>
+  在開始 Activity 時，指定「<code>href</code> 所指定的頁面」呈現方式。其值必為下列之一 (若略過不設定，則預設為 <code>window</code>)：
+  <ul>
+   <li><strong><code>window</code></strong> ─ 只要是處理 Activity 的頁面，均將以新視窗開啟之；若在行動裝置上，則是以此畫面取代「請求該 Activity 的原始 App」。頁面必須針對自己所支援的各個 Activity，呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozSetMessageHandler" title="/en-US/docs/Web/API/window.navigator.mozSetMessageHandler"><code>navigator.mozSetMessageHandler()</code></a>，再執行「接收到訊息」的Activity。</li>
+   <li><strong><code>inline</code></strong> ─ 將以覆蓋原頁面的方式，開啟「處理 Activity 的頁面」；若在行動裝置上，則會在「請求該 Activity 的原始 App」上彈出框。如果 <code>disposition</code> 同樣是 <code>window</code>，則後續動作將一模一樣。</li>
+  </ul>
+ </dd>
+</dl>
+<dl>
+ <dt>
+  <code>returnValue</code> {{optional_inline()}}</dt>
+ <dd>
+  表示 Activity 是否將回傳數值。如果 App 不回傳數值，則一旦選定 App，UA 隨即傳送
+  <i>
+   success</i>
+  事件。如果要回傳數值，那只要 Activity 成功，Activity Handler 會呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityRequestHandler.postResult" title="/en-US/docs/Web/API/MozActivityRequestHandler.postResult"><code>MozActivityRequestHandler.postResult()</code></a>；反之則呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityRequestHandler.postError" title="/en-US/docs/Web/API/MozActivityRequestHandler.postError"><code>MozActivityRequestHandler.postError()</code></a>。此處 Activity Handler 中，將於 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozSetMessageHandler" title="/en-US/docs/Web/API/window.navigator.mozSetMessageHandler"><code>mozSetMessageHandler</code></a> 指定第一引數的類型，其實就是 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityRequestHandler" title="/en-US/docs/Web/API/MozActivityRequestHandler"><code>MozActivityRequestHandler</code></a>。在事件處理器呼叫了 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityRequestHandler.postResult" title="/en-US/docs/Web/API/MozActivityRequestHandler.postResult"><code>postResult</code></a> 或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityRequestHandler.postError" title="/en-US/docs/Web/API/MozActivityRequestHandler.postError"><code>postError</code></a> 之後，將分別觸發 <em>success</em> 或 <em>error</em> 事件。</dd>
+</dl>
+<dl>
+ <dt>
+  <code>filters</code> {{optional_inline()}}</dt>
+ <dd>
+  此 Dictionary 收錄了「用以指定篩選器 (Filter)」的各個屬性。在確認 App 是否適合處理目前 Activity 時，就會套用這些篩選器。篩選器名稱可為任何形式的文字，但需對應 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions" title="/en-US/docs/Web/API/MozActivityOptions"><code>MozActivityOptions</code></a> 的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions.data" title="/en-US/docs/Web/API/MozActivityOptions.data"><code>data</code></a> 屬性名稱。篩選器的值可能為基本數值 (數字或字串)、基本數值構成的陣列，或篩選器的定義物件。任一 Activity 必須先滿足所有篩選器之後，才會決定是否要處理其他 Activity。</dd>
+</dl>
+<p>根據各個篩選器數值的不同，處理篩選器的方式也有所差異：</p>
+<ul>
+ <li>如果篩選器為基本數值，則可選填相對應的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions.data" title="/en-US/docs/Web/API/MozActivityOptions.data"><code>MozActivityOptions.data</code></a> 屬性。但若屬性已存在，則必須與篩選器所具備的數值相同。</li>
+ <li>如果篩選器數值為基本數值構成的陣列，則可選填相對應的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions.data" title="/en-US/docs/Web/API/MozActivityOptions.data"><code>MozActivityOptions.data</code></a> 屬性。但若屬性已存在，則必須與篩選器所具備的數值陣列之一相同。</li>
+ <li>如果篩選器數值為篩選器定義物件，則相對應的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions.data" title="/en-US/docs/Web/API/MozActivityOptions.data"><code>MozActivityOptions.data</code></a> 屬性只要遵守物件所定義的規範，即可滿足篩選器。篩選器定義物件可為下列屬性：
+  <ul>
+   <li><code>required</code>：此 Boolean 值將指出對應的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions.data" title="/en-US/docs/Web/API/MozActivityOptions.data"><code>MozActivityOptions.data</code></a> 屬性，必為存在 (<code>true</code>) 或不存在 (<code>false</code>)。</li>
+   <li><code>value</code>: <code>：基本數值或基本數值構成的陣列。相對應的</code> <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions.data" title="/en-US/docs/Web/API/MozActivityOptions.data"><code>MozActivityOptions.data</code></a> 屬性值，必須與篩選器中定義的數值之一相同。</li>
+   <li><code>min</code><code>：如果所需的數值為數字，則相對應的 </code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions.data" title="/en-US/docs/Web/API/MozActivityOptions.data"><code>MozActivityOptions.data</code></a> 屬性值必須大於或等於該值。</li>
+   <li><code>max</code><code>：如果所需的數值為數字，則相對應的 </code><a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions.data" title="/en-US/docs/Web/API/MozActivityOptions.data"><code>MozActivityOptions.data</code></a> 屬性值必須小於或等於該值。</li>
+   <li><code>pattern</code><code>：</code><code>字串形式必須遵照</code> <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Regular_Expressions" title="/en-US/docs/JavaScript/Guide/Regular_Expressions">JavaScript 正規表示式 (Regular expression)</a> 語法。相對應的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions.data" title="/en-US/docs/Web/API/MozActivityOptions.data"><code>MozActivityOptions.data</code></a> 屬性值必須符合該形式。<strong>從</strong><strong> Firefox OS v1.2 </strong><strong>起即支援此屬性</strong><strong>。</strong></li>
+   <li><code>patternFlag</code>：若使用了 <code>pattern</code> 屬性，則必須透過此屬性提供某些額外的正規表示式旗標 (如 <code>i</code> 或 <code>g</code>)。<strong>從</strong><strong> Firefox OS v1.2 </strong><strong>起即支援此屬性</strong><strong>。</strong></li>
+   <li><code>regexp</code>：此字串包含的正規表示式內容，均遵循 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Regular_Expressions" title="/en-US/docs/JavaScript/Guide/Regular_Expressions">JavaScript 正規表示式</a>的語法。其對應的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions.data" title="The data property returns an arbitrary object representing any data passed with the activity."><code>MozActivityOptions.data</code></a> 屬性值必須符合該樣式。與上方的 <code>pattern 欄位</code>相較，<code>regexp可以只針對字串中間的部分值做比對</code>；因此若要比對字串頭與字串尾，就必須使用 metacharacters 的「^」與「$」分別，即可與 <code>patternFlag </code>一樣進行完全比對。<strong>目前僅限</strong><strong> Firefox OS v1.0 </strong><strong>與</strong><strong> v1.1 </strong><strong>支援此屬性。</strong>因此建議同時使用 <code>pattern</code> 與 <code>regexp</code>。</li>
+  </ul>
+ </li>
+</ul>
+<h2 id="處理_Activity">處理 Activity</h2>
+<p>一旦把 App 宣告為 Activity Handler 之後，我們就必須在實作中處理其他 App 所傳來的 Activity 請求。</p>
+<p>若要處理 Activity，就必須註冊「執行所有必要動作」的函式。先透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozSetMessageHandler" title="/en-US/docs/Web/API/window.navigator.mozSetMessageHandler"><code>navigator.mozSetMessageHandler()</code></a> 來設定訊息處理器 (Message handler)，並特別指派至「<code>activity」訊息</code> (不能為 Activity 的名稱)。接著將傳入 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityRequestHandler" title="/en-US/docs/Web/API/MozActivityRequestHandler"><code>MozActivityRequestHandler</code></a> 物件，以作為 Activity Handler 函式的參數。</p>
+<pre class="brush: js">navigator.mozSetMessageHandler('activity', function(activityRequest) {
+  // Do something to handle the activity
+});</pre>
+<p>在 Activity Handler 函式執行動作時，將透過 Activity 請求而檢索 Activity 的相關資訊，並依需要而回傳答案。</p>
+<p>另外，呼叫 Activity 的 App 必須提供某些資料 (請參閱下表)。而透過請求的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityRequestHandler.source" title="/en-US/docs/Web/API/MozActivityRequestHandler.source">source</a> 屬性 (亦為 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions" title="/en-US/docs/Web/API/MozActivityOptions">MozActivityOptions</a> 物件) 即可取得這些資料。該物件將提供 Activity 呼叫的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions.name" title="/en-US/docs/Web/API/MozActivityOptions.name">name</a> 與相關 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityOptions.data" title="/en-US/docs/Web/API/MozActivityOptions.data">data</a>。</p>
+<pre class="brush: js">navigator.mozSetMessageHandler('activity', function(activityRequest) {
+  var option = activityRequest.source;
+
+  if (option.name === "pick") {
+    // Do something to handle the activity
+  }
+});</pre>
+<p>一旦執行所有動作以處理 Activity 之後，我們就可以呼叫請求的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityRequestHandler.postResult" title="/en-US/docs/Web/API/MozActivityRequestHandler.postResult">postResult()</a> 函式，針對委託該 Activity 的 App，回傳所需的結果。</p>
+<p>如果發生錯誤，則可呼叫請求的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityRequestHandler.postError" title="/en-US/docs/Web/API/MozActivityRequestHandler.postError">postError()</a> 函式，以回傳該 Activity 的錯誤訊息。</p>
+<pre class="brush: js">navigator.mozSetMessageHandler('activity', function(activityRequest) {
+  var option = activityRequest.source;
+
+  if (option.name === "pick") {
+    // Do something to handle the activity
+    ...
+
+    // Send back the result
+    if (picture) {
+      activityRequest.postResult(picture);
+    } else {
+      activityRequest.postError("Unable to provide a picture");
+    }
+  }
+});</pre>
+<div class="note">
+ <p><strong>注意：</strong>如果並未呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityRequestHandler.postError" title="/en-US/docs/Web/API/MozActivityRequestHandler.postError"><code>postError</code></a> 或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivityRequestHandler.postResult" title="/en-US/docs/Web/API/MozActivityRequestHandler.postResult"><code>postResult()</code></a>，則均應由 UA 送出錯誤訊息；例如使用者離開了 App (關閉桌面上的分頁，或回到行動裝置的首頁) 的情形。</p>
+</div>
+<h2 id="開始_Activity">開始 Activity</h2>
+<p>就 <em>Web Activities</em> 的另一方面來說，就是有 App 會將 Activity 委託予我們的 App。若要執行這種委託作業，則 App 必須建立 (Instantiate) <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozActivity" title="/en-US/docs/Web/API/MozActivity"><code>MozActivity</code></a> 物件，進而呼叫 Activity。這種物件其實就是 <a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMRequest" title="/en-US/docs/Web/API/DOMRequest"><code>DOMRequest</code></a> 物件，可等待來自於 Activity Handler 的任何反應。只要建立了物件之後，就會開始 Activity (也會立刻為使用者顯示 UI)。</p>
+<pre class="brush: js" id=".C2.A0">var activity = new MozActivity({
+  // Ask for the "pick" activity
+  name: "pick",
+
+  // Provide de data required by the filters of the activity
+  data: {
+    type: "image/jpeg"
+  }
+});
+
+activity.onsuccess = function() {
+  var picture = this.result;
+  console.log("A picture has been retrieve");
+};
+
+activity.onerror = function() {
+  console.log(this.error);
+};
+</pre>
+<h3 id="Firefox_OS_的_Activity">Firefox OS 的 Activity</h3>
+<p><a href="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia" title="/en-US/docs/Mozilla/Firefox_OS/Platform/Gaia">Gaia</a> 即為 Firefox OS 的原生介面，並已內建許多 App 以定義基本的 Activity。這些 Activity 如下：</p>
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Name</th>
+   <th scope="col">Application</th>
+   <th scope="col">Expected Data (filters)</th>
+   <th scope="col">Comments</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>browse</code></td>
+   <td>Gallery</td>
+   <td>
+    <pre class="brush: js">
+type: "photos"</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>configure</code></td>
+   <td>Settings</td>
+   <td>
+    <pre class="brush: js">
+target: "device"</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>costcontrol/balance</code></td>
+   <td>Costcontrol</td>
+   <td>None</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>costcontrol/data_usage</code></td>
+   <td>Costcontrol</td>
+   <td>None</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>costcontrol/telephony</code></td>
+   <td>Costcontrol</td>
+   <td>None</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td><code>dial</code></td>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: "webtelephony/number",
+number: {
+  regexp:/^[\\d\\s+#*().-]{0,50}$/
+}</pre>
+   </td>
+   <td>當 App 要傳送一通電話時使用。</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="3"><code>new</code></td>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: "webcontacts/contact"</pre>
+   </td>
+   <td>當 App 要建立新的聯絡人資料時使用。</td>
+  </tr>
+  <tr>
+   <td>Email</td>
+   <td>
+    <pre class="brush: js">
+type: "mail"</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>SMS</td>
+   <td>
+    <pre class="brush: js" id="LC48">
+type: "websms/sms",
+number: {
+  regexp:/^[\\w\\s+#*().-]{0,50}$/
+}</pre>
+   </td>
+   <td>當 App 要傳送一封文字簡訊時使用。</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="4"><code>open</code></td>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: "webcontacts/contact"</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Gallery</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "image/jpeg",
+  "image/png",
+  "image/gif",
+  "image/bmp"
+]</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Music</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "audio/mpeg",
+  "audio/ogg",
+  "audio/mp4"
+]</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Video</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "video/webm",
+  "video/mp4",
+  "video/3gpp",
+  "video/youtube"
+]</pre>
+    <p>Also expect a <code>blob</code> property which is a {{domxref("Blob")}} object.</p>
+   </td>
+   <td>當 App 要顯示影片時使用 (而 <code>view</code> 的Activity 同樣可辦到) 。</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="2"><code>pick</code></td>
+   <td>Camera, Gallery, Wallpaper</td>
+   <td>
+    <pre class="brush: js">
+type: ["image/*", "image/jpeg"]</pre>
+   </td>
+   <td>當 App 要取得圖片時使用。</td>
+  </tr>
+  <tr>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "webcontacts/contact",
+  "webcontacts/email"
+]</pre>
+   </td>
+   <td>當 App 要檢索某個聯絡人資訊或電子郵件時使用。</td>
+  </tr>
+  <tr>
+   <td><code>record</code></td>
+   <td>Camera</td>
+   <td>
+    <pre class="brush: js">
+type: ["photos", "videos"]</pre>
+   </td>
+   <td>當 App 要錄製影片時使用。</td>
+  </tr>
+  <tr>
+   <td><code>save-bookmark</code></td>
+   <td>Homescreen</td>
+   <td>
+    <pre class="brush: js" id="LC46">
+type: "url",
+url: {
+  required:true,
+  regexp:/^https?:/
+}</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="2"><code>share</code></td>
+   <td>Bluetooth</td>
+   <td>
+    <pre class="brush: js">
+number: 1
+</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>Email, Wallpaper</td>
+   <td>
+    <pre class="brush: js">
+type: "image/*"</pre>
+   </td>
+   <td>當 App 要分享圖片時使用。</td>
+  </tr>
+  <tr>
+   <td colspan="1" rowspan="4"><code>view</code></td>
+   <td>Browser</td>
+   <td>
+    <pre class="brush: js">
+type: "url"
+url: {
+  required: true,
+  regexp: /^https?:.{1,16384}$/
+}</pre>
+   </td>
+   <td>當 App 要開啟 URL 時使用。</td>
+  </tr>
+  <tr>
+   <td>Email</td>
+   <td>
+    <pre class="brush: js" id="LC64">
+type: "url",
+url: {
+  required:true,
+  regexp:/^mailto:/
+}</pre>
+   </td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>PDFjs</td>
+   <td>
+    <pre class="brush: js">
+type: "application/pdf"</pre>
+   </td>
+   <td>當 App 要顯示 PDF 文件內容時使用。</td>
+  </tr>
+  <tr>
+   <td>Video</td>
+   <td>
+    <pre class="brush: js">
+type: [
+  "video/webm",
+  "video/mp4",
+  "video/3gpp",
+  "video/youtube"
+]</pre>
+    <p>Also expect a <code>url</code> property which is a string.</p>
+   </td>
+   <td>當 App 要顯示影片時使用 (而 <code>open</code> 的 Activity 同樣可辦到)。</td>
+  </tr>
+  <tr>
+   <td><code>update</code></td>
+   <td>Communication</td>
+   <td>
+    <pre class="brush: js">
+type: "webcontacts/contact"</pre>
+   </td>
+   <td>當 App 要更新聯絡人時使用。</td>
+  </tr>
+ </tbody>
+</table>
+<h2 id="規格">規格</h2>
+<p><em>Web Activities</em> 目前尚不屬於任何規格，但其中某些部分與當前的 <a href="https://dvcs.w3.org/hg/web-intents/raw-file/tip/spec/Overview-respec.html" title="http://www.w3.org/TR/web-intents/">Web Intents</a> 有所重複。事實上，Mozilla 規劃 <em>Web Activities </em>正是想提議用以替代 <em>Web Intents</em>。若要進一步了解相關資訊，可參閱 <a href="http://lists.w3.org/Archives/Public/public-web-intents/2012Jun/0061.html" title="http://lists.w3.org/Archives/Public/public-web-intents/2012Jun/0061.html">Web Intents Task Force ML</a> 上的討論。</p>
+<h2 id="另可參閱">另可參閱</h2>
+<ul>
+ <li>{{domxref("MozActivity")}}</li>
+ <li>{{domxref("MozActivityRequestHandler")}}</li>
+ <li>{{domxref("MozActivityOptions")}}</li>
+ <li>{{domxref("window.navigator.mozSetMessageHandler()","navigator.mozSetMessageHandler()")}}</li>
+ <li><a href="https://hacks.mozilla.org/2013/01/introducing-web-activities/" title="https://hacks.mozilla.org/2013/01/introducing-web-activities/">Introducing Web Activities</a></li>
+</ul>

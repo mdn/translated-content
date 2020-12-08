@@ -1,0 +1,159 @@
+---
+title: Persona
+slug: Mozilla/Persona
+translation_of: Archive/Mozilla/Persona
+---
+<div class="boxed translate-display">
+<div class="summary"><font><font>Basit, gizlilik-duyarlı tek oturum açma: Kullanıcıların e-posta adresi ile web sitenize oturum izin ve şifre yönetimi kendinizi özgür.</font></font></div>
+
+<div class="column-container">
+<div class="callout-box">
+<p><strong><font><font>Koparmayın veya yardım almak!</font></font></strong></p>
+
+<p><font><font>Takip </font></font><a class="external" href="http://identity.mozilla.com/"><font><font>eden blog</font></font></a><font><font> katılmak, </font></font><a class="link-https" href="https://lists.mozilla.org/listinfo/dev-identity"><font><font>posta listesi</font></font></a><font><font> , bizi bulmak </font></font><a class="link-irc" href="irc://irc.mozilla.org/identity"><font><font>#identity</font></font></a><font><font> üzerindeki </font></font><a class="link-https" href="https://wiki.mozilla.org/IRC"><font><font>IRC</font></font></a><font><font> veya </font></font><a class="link-https" href="https://github.com/mozilla/browserid/issues/new"><font><font>bir hatayı bildirmek</font></font></a><font><font> .</font></font></p>
+</div>
+
+<p><a href="https://login.persona.org/"><font><font>Mozilla Persona</font></font></a><font><font> kullanımı kolay ve dağıtmak için kolay Web için bir çapraz tarayıcı giriş sistemidir. </font><font>Bu çalışır </font></font><a href="https://developer.mozilla.org/en-US/docs/persona/Browser_compatibility"><font><font>, tüm büyük tarayıcılar</font></font></a><font><font> ve yapabilirsiniz </font></font><a href="https://developer.mozilla.org/en-US/docs/Persona/Quick_Setup"><font><font>bugün başlamak</font></font></a><font><font> .</font></font></p>
+
+<p><font><font>Neden web sitenizde Persona kullanmalıyım?</font></font></p>
+
+<ol>
+ <li><strong><font><font>Persona tamamen siteye özgü şifreleri ortadan kaldırır</font></font></strong><font><font> , yaratma yönetmek ve güvenli şifreler depolama yükünden kullanıcıları ve web sitelerini serbest.</font></font></li>
+ <li><strong><font><font>Persona. Kullanımı kolay</font></font></strong><font><font> bir Persona kullanıcı gibi yeni bir siteye oturum açabilirsiniz sadece iki tıklama ile </font></font><a href="http://voo.st"><font><font>Voost</font></font></a><font><font> hesap oluşturma ile ilişkili sürtünme atlayarak.</font></font></li>
+ <li><strong><font><font>Persona uygulanması kolaydır </font></font></strong><strong><font><font>.</font></font></strong><font><font> Geliştiriciler, tek bir öğleden sonra bir siteye Persona ekleyebilirsiniz.</font></font></li>
+ <li><strong><font><font>Hiçbir kilit-var</font></font></strong><font><font> . </font><font>Geliştiriciler kendi tüm kullanıcılar için doğrulanmış e-posta adresi almak ve kullanıcılar Persona ile herhangi bir e-posta adresini kullanabilirsiniz.</font></font></li>
+</ol>
+
+<p><font><font>Ayrıca, Persona sadece daha iyi gidiyor: bir inşa var </font></font><strong><font><font>, açık, ademi merkeziyetçi protokol</font></font></strong><font><font> sağlamak için tasarlanmıştır </font></font><strong><font><font>tarayıcılar içine doğrudan entegrasyon</font></font></strong><font><font> ve </font></font><strong><font><font>e-posta sağlayıcıları tarafından doğal destek </font></font></strong><strong><font><font>.</font></font></strong><font><font> otomatik olarak bu gelişmeler yaşayacaksınız bugün Persona uygulamak Siteleri, herhangi bir kodu değiştirmek zorunda kalmadan .</font></font></p>
+</div>
+
+<hr>
+<div class="column-container">
+<h2 id="Sitenizde_Persona_kullanma"><font><font>Sitenizde Persona kullanma</font></font></h2>
+
+
+<div class="column-third">
+<h3 id="Başlarken"><font><font>Başlarken</font></font></h3>
+
+<dl>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/Why_Persona"><font><font>Neden Persona?</font></font></a></dt>
+ <dd><font><font>Diğer kimlik ve kimlik doğrulama sistemlerine kıyasla Persona hakkında özel nedir.</font></font></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/Quick_Setup"><font><font>Hızlı kurulum</font></font></a></dt>
+ <dd><font><font>Web Persona eklemek nasıl gösteren bir örneklerde.</font></font></dd>
+</dl>
+
+<h3 id="API_başvuru"><font><font>API başvuru</font></font></h3>
+
+<dl>
+ <dt><a href="https://developer.mozilla.org/en-US/Persona/The_navigator.id_API"><font><font>navigator.id API</font></font></a></dt>
+ <dd><font><font>Tarayıcı API.</font></font></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/Remote_Verification_API"><font><font>Doğrulama API başvuru</font></font></a></dt>
+ <dd><font><font>Uzaktan doğrulama API.</font></font></dd>
+</dl>
+</div>
+
+<div class="column-third">
+<h3 id="Kılavuzlar"><font><font>Kılavuzlar</font></font></h3>
+
+<dl>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/Security_Considerations"><font><font>Güvenlik noktaları</font></font></a></dt>
+ <dd><font><font>Uygulamaları ve teknikler Persona dağıtım güvenli olduğundan emin olmak için.</font></font></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/Browser_compatibility"><font><font>Tarayıcı uyumluluğu</font></font></a></dt>
+ <dd><font><font>Bilgi tam olarak hangi tarayıcıları Persona destek.</font></font></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/Internationalization"><font><font>Uluslararasılaşma</font></font></a></dt>
+ <dd><font><font>Persona farklı dilleri nasıl işleyeceğini öğrenin.</font></font></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/The_implementor_s_guide"><font><font>implementor kılavuzu</font></font></a></dt>
+ <dd><font><font>Persona için destek ekledik sitelerden ipuçları.</font></font></dd>
+</dl>
+</div>
+
+<div class="column-third">
+<h3 id="Kaynaklar"><font><font>Kaynaklar</font></font></h3>
+
+<dl>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/Libraries_and_plugins"><font><font>Kütüphaneler ve eklentileri</font></font></a></dt>
+ <dd><font><font>Sevdiğiniz programlama dili, web çerçeve, blog, ya da içerik yönetim sistemi için bir damla-kütüphane bulun.</font></font></dd>
+ <dt><a class="link-https" href="https://github.com/mozilla/browserid-cookbook"><font><font>Persona yemek kitabı</font></font></a></dt>
+ <dd><font><font>Persona siteleri için örnek kaynak kodu. </font><font>C # parçacıkları (MVC3), PHP, node.js, ve daha fazlasını içerir.</font></font></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/branding"><font><font>Markalaşma kaynakları</font></font></a></dt>
+ <dd><font><font>Düğmeleri ve diğer grafik giriş yap kullanıcılara mevcut Persona yardımcı olur.</font></font></dd>
+</dl>
+</div>
+</div>
+
+<hr>
+<div class="column-container">
+<h2 id="Kimlik_Sağlayıcı_Olmak"><font><font>Kimlik Sağlayıcı Olmak</font></font></h2>
+
+<p><font><font>Eğer bir e-posta sağlayıcısı veya başka bir kimlik-sağlayan hizmet iseniz, bir Persona Kimlik Sağlayıcı olma hakkında bilgi edinmek için aşağıdaki bağlantıları kontrol edin.</font></font></p>
+
+<dl>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/Identity_Provider_Overview"><font><font>IdP Genel Bakış</font></font></a></dt>
+ <dd><font><font>Persona Kimlik Sağlayıcıları bir üst düzey görünümü.</font></font></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/Implementing_a_Persona_IdP"><font><font>IDP Uygulamak</font></font></a></dt>
+ <dd><font><font>Yerinden Olmuş Kişiler olma teknik detaylar ayrıntılı bir rehber.</font></font></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/.well-known-browserid"><font><font>.well bilinen / browserid</font></font></a></dt>
+ <dd><font><font>Yapısı ve amacı genel bir bakış </font></font><code><font><font>.well bilinen / browserid</font></font></code><font><font> yerinden edilmiş kişilerin protokol için onların desteğini tanıtımı için kullanmak dosyaya.</font></font></dd>
+</dl>
+</div>
+
+<hr>
+<div class="column-container">
+<h2 id="Persona_Projesi"><font><font>Persona Projesi</font></font></h2>
+
+<dl>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/Glossary"><font><font>Sözlük</font></font></a></dt>
+ <dd><font><font>BrowserID ve Persona terminoloji tanımlanır.</font></font></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/FAQ"><font><font>SSS</font></font></a></dt>
+ <dd><font><font>Sık sorulan soruların yanıtları.</font></font></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/Protocol_Overview"><font><font>Protokol genel bakış</font></font></a></dt>
+ <dd><font><font>Altta yatan BrowserID protokolünün bir orta düzey teknik bakış.</font></font></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/persona/Crypto"><font><font>Kripto</font></font></a></dt>
+ <dd><font><font>Persona ve BrowserID arkasında şifreleme kavramlar bir bakış.</font></font></dd>
+ <dt><a class="link-https" href="https://github.com/mozilla/id-specs/blob/prod/browserid/index.md"><font><font>Spec</font></font></a></dt>
+ <dd><font><font>Derin teknik detaylar burada yaşıyor.</font></font></dd>
+ <dt><a href="https://developer.mozilla.org/en-US/docs/Persona/Bootstrapping_Persona"><font><font>Persona web sitesi</font></font></a></dt>
+ <dd><font><font>Persona gidiyor almak için, biz de üç barındırma hizmetleri konum </font></font><a class="link-https" href="https://login.persona.org" rel="freelink"><font><font>https://login.persona.org</font></font></a><font><font> : bir geri dönüş Kimlik Sağlayıcı, {{domxref ("navigator.id")}} API'leri taşınabilir uygulanmasını ve bir kimlik belirtilme doğrulama hizmeti.</font></font></dd>
+ <dt><a href="https://github.com/mozilla/browserid"><font><font>Persona kaynak kodu</font></font></a></dt>
+ <dd><font><font>Persona web sitesi arkasında kod GitHub üzerinde bir depo yaşıyor. </font><font>Istekleri hoş geldiniz çekin!</font></font></dd>
+</dl>
+</div>
+
+<h2 id="Subnav"><font><font>Subnav</font></font></h2>
+
+<ol>
+ <li><a href="https://developer.mozilla.org/tr/docs/Persona$edit#"><font><font>Bir web sitesinde Persona kullanma</font></font></a>
+
+  <ol>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/Why_Persona" title="Neden Persona?"><font><font>Neden Persona kullanmanız gerekir?</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/Quick_setup" title="Hızlı Başlangıç"><font><font>Başlamak</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/The_implementor_s_guide" title="Implementor Kılavuzu"><font><font>Persona uygulanması için ipuçları</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/Security_Considerations" title="Güvenlik Kaygıları"><font><font>Güvenlik noktaları</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/Browser_compatibility" title="Tarayıcı uyumluluğu"><font><font>Tarayıcı uyumluluğu</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/Internationalization" title="Uluslararasılaşma"><font><font>Uluslararasılaşma</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-US/Persona/The_navigator.id_API" title="navigator.id API"><font><font>navigator.id API</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/Remote_Verification_API" title="Uzaktan Doğrulama API"><font><font>Uzaktan doğrulama API</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/Libraries_and_plugins" title="Kütüphaneler ve eklentileri"><font><font>Kütüphaneler ve eklentileri</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/branding" title="Markalaşma kaynakları"><font><font>Markalaşma kaynakları</font></font></a></li>
+  </ol>
+ </li>
+ <li><a href="https://developer.mozilla.org/tr/docs/Persona$edit#"><font><font>Kimlik Sağlayıcı Olmak</font></font></a>
+  <ol>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/Identity_Provider_Overview" title="IdP Genel Bakış"><font><font>IdP Genel Bakış</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/Implementing_a_Persona_IdP" title="IDP Uygulamak"><font><font>IDP Uygulamak</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-us/docs/Persona/.well-known-browserid" title=".well bilinen en browserid biçimi"><font><font>.well bilinen en browserid biçimi</font></font></a></li>
+  </ol>
+ </li>
+ <li><a href="https://developer.mozilla.org/tr/docs/Persona$edit#"><font><font>Persona projesi</font></font></a>
+  <ol>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/Glossary" title="Sözlük"><font><font>Sözlük</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-us/docs/Persona/FAQ" title="SSS"><font><font>SSS</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-us/docs/Persona/Bootstrapping_Persona" title="Persona barındırılan hizmetler"><font><font>Persona barındırılan hizmetler</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/Persona/Protocol_Overview" title="Protokol genel bakış"><font><font>Protokol genel bakış</font></font></a></li>
+   <li><a href="https://developer.mozilla.org/en-US/docs/persona/Crypto" title="Kripto"><font><font>Kriptografi</font></font></a></li>
+  </ol>
+ </li>
+</ol>
+</div>
+
+<p> </p>

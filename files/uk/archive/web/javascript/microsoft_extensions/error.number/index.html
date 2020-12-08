@@ -1,0 +1,83 @@
+---
+title: Error.number
+slug: Archive/Web/JavaScript/Microsoft_Extensions/Error.number
+tags:
+  - Error
+  - Internet Explorer
+  - JavaScript
+  - Властивість
+  - нестандартна
+translation_of: Archive/Web/JavaScript/Microsoft_Extensions/Error.number
+---
+<div>{{JSRef}}</div>
+
+<div class="warning"><strong>Нестандартна властивість. Не використовуйте!</strong><br>
+Це розширення Microsoft, яке підтримується тільки у Internet Explorer.</div>
+
+<p><strong>Властивість</strong> <strong><code>Error.number</code></strong> повертає числову величину, асоційовану з конкретною помилкою.</p>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre><code>object
+.number [= errorNumber]
+</code></pre>
+
+<h3 id="Параметри">Параметри</h3>
+
+<dl>
+ <dt><em>Object</em></dt>
+ <dd>Будь-який екземпляр об'єкта <code>Error</code>.</dd>
+ <dt><em>errorNumber</em></dt>
+ <dd>Ціле число, що відображає помилку.</dd>
+</dl>
+
+<h2 id="Зауваження">Зауваження</h2>
+
+<p>Номер помилки є 32-бітним значенням. Перше 16-бітне слово є кодом об'єкта, а друге слово є кодом помилки. Щоб отримати код помилки, скористайтесь оператором <code>&amp;</code> (побітове І), щоб об'єднати номер з шістнадцятковим числом <code>0xFFFF</code>.</p>
+
+<h2 id="Приклад">Приклад</h2>
+
+<p>Наступний приклад спричиняє викидання помилки та виводить код помилки, отриманий з номера помилки.</p>
+
+<pre class="brush: js">try
+    {
+    // Спричиняє помилку.
+    var x = y;
+    }
+catch(e)
+    {
+    document.write ("Код помилки: ");
+    document.write (e.number &amp; 0xFFFF)
+    document.write ("&lt;br /&gt;");
+
+    document.write ("Код об'єкта: ")
+    document.write(e.number&gt;&gt;16 &amp; 0x1FFF)
+    document.write ("&lt;br /&gt;");
+
+    document.write ("Повідомлення помилки: ")
+    document.write (e.message)
+    }
+</pre>
+
+<h2 id="Приклад_2">Приклад</h2>
+
+<p>Цей код виведе наступне.</p>
+
+<pre class="brush: js">Код помилки: 5009
+Код об'єкта: 10
+Повідомлення помилки: 'y' is undefined
+</pre>
+
+<h2 id="Вимоги">Вимоги</h2>
+
+<p>Підтримується у наступних режимах: режим сумісності (Quirks), стандарти Internet Explorer 6, стандарти Internet Explorer 7, стандарти Internet Explorer 8, стандарти Internet Explorer 9, стандарти Internet Explorer 10, стандарти Internet Explorer 11. Також підтримується у застосунках Store (Windows 8 та Windows Phone 8.1).</p>
+
+<p><strong>Належить до</strong>: <a href="https://docs.microsoft.com/en-us/scripting/javascript/reference/error-object-javascript">Error Object</a></p>
+
+<h2 id="Див._також">Див. також</h2>
+
+<ul>
+ <li><a href="/uk/docs/Web/JavaScript/Microsoft_Extensions/Error.description">Властивість description (Error)</a></li>
+ <li><a href="https://docs.microsoft.com/en-us/scripting/javascript/reference/message-property-error-javascript">Властивість message (Error)</a></li>
+ <li><a href="https://docs.microsoft.com/en-us/scripting/javascript/reference/name-property-error-javascript">Властивість name (Error)</a></li>
+</ul>

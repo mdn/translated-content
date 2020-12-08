@@ -1,0 +1,25 @@
+---
+title: Java 向 JavaScript 的通訊
+slug: >-
+  Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/LiveConnect_概要/Java_向_JavaScript_的通訊
+translation_of: Archive/Web/LiveConnect/LiveConnect_Overview
+---
+<p> </p>
+<p>如果你想要在 Java 中使用 JavaScript 物件，你必須在你的 Java 原始碼中引入 <code>netscape.javascript</code> 包裝。這個包裝定義了下面的類別︰</p>
+<ul> <li><code><a class="internal" href="/zh_tw/Core_JavaScript_1.5_%E5%8F%83%E8%80%83/LiveConnect/JSObject" title="zh tw/Core JavaScript 1.5 參考/LiveConnect/JSObject">netscape.javascript.JSObject</a></code> 可讓 Java 代碼存取 JavaScript 的方法和屬性。</li> <li><code><a class="internal" href="/zh_tw/Core_JavaScript_1.5_%E5%8F%83%E8%80%83/LiveConnect/JSException" title="zh tw/Core JavaScript 1.5 參考/LiveConnect/JSException">netscape.javascript.JSException</a></code> 可讓 Java 代碼處理 JavaScript 的錯誤。</li>
+</ul>
+<p>詳見 <a class="internal" href="/zh_tw/Core_JavaScript_1.5_%E5%8F%83%E8%80%83" title="zh tw/Core JavaScript 1.5 參考">Core JavaScript 參考</a> 以取得關於此類別的更多資訊。</p>
+<h3 id="LiveConnect_類別的位置" name="LiveConnect_類別的位置">LiveConnect 類別的位置</h3>
+<p>在舊版 Netscape 瀏覽器中，這些類別是連同瀏覽器一起散佈的。從 JavaScript 1.2 開始，這些類別是放在 .jar 檔案中散佈的；在稍早的 JavaScript 版本中，這些類別是放在 .zip 檔案中散佈的。例如，Windows NT 版本的 Netscape Navigator 4，這些類別是放在 Navigator 底下的 <code>Program\Java\Classes</code> 目錄裡的 <code>java40.jar</code> 檔案中散佈的。</p>
+<p>最近這些類別已改和昇陽的 Java Runtime 一同散佈；一開始是放在 Java Runtime 的散佈版本（JRE 1.3）底下的 "jre/lib" 目錄裡的 "jaws.jar" 檔案中，然後改放在同一目錄下的 "plugin.jar" 檔案中（JRE 1.4 以上）。</p>
+<h3 id="在_JDK_中使用_LiveConnect_類別" name="在_JDK_中使用_LiveConnect_類別">在 JDK 中使用 LiveConnect 類別</h3>
+<p>若要存取 LiveConnect 類別，有如下兩種方式可以指定 JDK 編譯器的 <code>CLASSPATH</code> 裡的 .jar 或 .zip 檔案位置︰</p>
+<ul> <li>建立 <code>CLASSPATH</code> 環境變數，並指明 .jar 或 .zip 檔案的路徑和名稱。</li> <li>當你編譯的時候，使用 <code>-classpath</code> 命令列參數指明 .jar 或 .zip 檔案的位置。</li>
+</ul>
+<p>要在 Windows NT 下指定環境變數，你可在控制台中雙擊系統圖示，並建立稱作 <code>CLASSPATH</code> 的使用者環境變數，其中的值類似下面︰</p>
+<pre class="eval">C:\Program Files\Java\jre1.4.1\lib\plugin.jar
+</pre>
+<p>詳見昇陽 JDK 文件，以取得有關 <code>CLASSPATH</code> 的更多資訊。</p>
+<p><strong>附註:</strong> 因為 Java 是強類型語言，而 JavaScript 是弱類型，當你使用 LiveConnect 的時候，JavaScript 執行時期引擎會為其他語言把參數值轉換成適當的資料類型。詳見 <a class="internal" href="/zh_tw/Core_JavaScript_1.5_%E6%95%99%E5%AD%B8/LiveConnect_%E6%A6%82%E8%A6%81/%E8%B3%87%E6%96%99%E9%A1%9E%E5%9E%8B%E7%9A%84%E8%BD%89%E6%8F%9B" title="zh tw/Core JavaScript 1.5 教學/LiveConnect 概要/資料類型的轉換">資料類型的轉換</a> 取得完整資訊。</p>
+<p>{{ PreviousNext("Core_JavaScript_1.5_教學:LiveConnect_概要:JavaScript_向_Java_的通訊", "Core_JavaScript_1.5_教學:LiveConnect_概要:Java_向_JavaScript_的通訊:LiveConnect_類別的使用") }}</p>
+<p>{{ languages( { "en": "en/Core_JavaScript_1.5_Guide/LiveConnect_Overview/Java_to_JavaScript_Communication", "es": "es/Gu\u00eda_JavaScript_1.5/Concepto_general_de_LiveConnect/Comunicaci\u00f3n_de_Java_con_JavaScript", "ja": "ja/Core_JavaScript_1.5_Guide/LiveConnect_Overview/Java_to_JavaScript_Communication", "pl": "pl/Przewodnik_po_j\u0119zyku_JavaScript_1.5/Podgl\u0105d_klas_LiveConnect/Komunikacja_mi\u0119dzy_Java_a_JavaScript" } ) }}</p>

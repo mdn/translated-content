@@ -1,0 +1,300 @@
+---
+title: JavaScript 參考文件
+slug: Web/JavaScript/Reference
+tags:
+  - JavaScript
+  - NeedsTranslation
+translation_of: Web/JavaScript/Reference
+---
+<div>{{JsSidebar}}</div>
+
+<p>在 MDN 的 JavaScript 分區中，這一部分被作爲 Javascript 的資料庫。閱讀<a href="https://wiki.developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/About">關於該參考</a>以了解更多。</p>
+
+<h2 id="全域物件">全域物件</h2>
+
+<p>本章節記錄了所有 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects">JavaScript 標準內建物件</a> 以及其方法與屬性。</p>
+
+<ul class="card-grid">
+ <li><span>數值屬性</span>
+
+  <p>{{JSxRef("Infinity")}}<br>
+   {{JSxRef("NaN")}}<br>
+   {{JSxRef("undefined")}}<br>
+   {{JSxRef("globalThis")}}</p>
+ </li>
+ <li><span>函數屬性</span>
+  <p>{{JSxRef("Global_Objects/eval", "eval()")}}<br>
+   {{JSxRef("Global_Objects/isFinite", "isFinite()")}}<br>
+   {{JSxRef("Global_Objects/isNaN", "isNaN()")}}<br>
+   {{JSxRef("Global_Objects/parseFloat", "parseFloat()")}}<br>
+   {{JSxRef("Global_Objects/parseInt", "parseInt()")}}<br>
+   {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}<br>
+   {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}<br>
+   {{JSxRef("Global_Objects/encodeURI", "encodeURI()")}}<br>
+   {{JSxRef("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}</p>
+ </li>
+ <li><span>基礎物件</span>
+  <p>{{JSxRef("Object")}}<br>
+   {{JSxRef("Function")}}<br>
+   {{JSxRef("Boolean")}}<br>
+   {{JSxRef("Symbol")}}</p>
+ </li>
+ <li><span>Error objects</span>
+  <p>{{JSxRef("Error")}}<br>
+   {{JSxRef("AggregateError")}}<br>
+   {{JSxRef("EvalError")}}<br>
+   {{JSxRef("InternalError")}}<br>
+   {{JSxRef("RangeError")}}<br>
+   {{JSxRef("ReferenceError")}}<br>
+   {{JSxRef("SyntaxError")}}<br>
+   {{JSxRef("TypeError")}}<br>
+   {{JSxRef("URIError")}}</p>
+ </li>
+</ul>
+
+<ul class="card-grid">
+ <li><span>數字與日期</span>
+
+  <p>{{JSxRef("Number")}}<br>
+   {{JSxRef("BigInt")}}<br>
+   {{JSxRef("Math")}}<br>
+   {{JSxRef("Date")}}</p>
+ </li>
+ <li><span>文字處理</span>
+  <p>{{JSxRef("String")}}<br>
+   {{JSxRef("RegExp")}}</p>
+ </li>
+ <li><span>具索引的集合</span><a href="/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates#Numbers"> </a>{{JSxRef("Array")}}<br>
+  {{JSxRef("Int8Array")}}<br>
+  {{JSxRef("Uint8Array")}}<br>
+  {{JSxRef("Uint8ClampedArray")}}<br>
+  {{JSxRef("Int16Array")}}<br>
+  {{JSxRef("Uint16Array")}}<br>
+  {{JSxRef("Int32Array")}}<br>
+  {{JSxRef("Uint32Array")}}<br>
+  {{JSxRef("Float32Array")}}<br>
+  {{JSxRef("Float64Array")}}<br>
+  {{JSxRef("BigInt64Array")}}<br>
+  {{JSxRef("BigUint64Array")}}</li>
+ <li><span>具鍵值的集合</span>
+  <p>{{JSxRef("Map")}}<br>
+   {{JSxRef("Set")}}<br>
+   {{JSxRef("WeakMap")}}<br>
+   {{JSxRef("WeakSet")}}</p>
+ </li>
+</ul>
+
+<ul class="card-grid">
+ <li><span>結構化資料</span>
+
+  <p>{{JSxRef("ArrayBuffer")}}<br>
+   {{JSxRef("SharedArrayBuffer")}}<br>
+   {{JSxRef("Atomics")}}<br>
+   {{JSxRef("DataView")}}<br>
+   {{JSxRef("JSON")}}</p>
+ </li>
+ <li><span>控制抽象化物件</span>
+  <p>{{JSxRef("Promise")}}<br>
+   {{JSxRef("Generator")}}<br>
+   {{JSxRef("GeneratorFunction")}}<br>
+   {{JSxRef("AsyncFunction")}}</p>
+ </li>
+ <li><span>Reflection</span>
+  <p>{{JSxRef("Reflect")}}<br>
+   {{JSxRef("Proxy")}}</p>
+ </li>
+ <li><span>國際化</span>
+  <p>{{JSxRef("Intl")}}<br>
+   {{JSxRef("Global_Objects/Collator", "Intl.Collator")}}<br>
+   {{JSxRef("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}<br>
+   {{JSxRef("Global_Objects/ListFormat", "Intl.ListFormat")}}<br>
+   {{JSxRef("Global_Objects/NumberFormat", "Intl.NumberFormat")}}<br>
+   {{JSxRef("Global_Objects/PluralRules", "Intl.PluralRules")}}<br>
+   {{JSxRef("Global_Objects/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}<br>
+   {{JSxRef("Global_Objects/Locale", "Intl.Locale")}}</p>
+ </li>
+</ul>
+
+<ul class="card-grid">
+ <li><span>WebAssembly</span>
+
+  <p>{{JSxRef("WebAssembly")}}<br>
+   {{JSxRef("WebAssembly.Module")}}<br>
+   {{JSxRef("WebAssembly.Instance")}}<br>
+   {{JSxRef("WebAssembly.Memory")}}<br>
+   {{JSxRef("WebAssembly.Table")}}<br>
+   {{JSxRef("WebAssembly.CompileError")}}<br>
+   {{JSxRef("WebAssembly.LinkError")}}<br>
+   {{JSxRef("WebAssembly.RuntimeError")}}</p>
+ </li>
+</ul>
+
+<h2 id="敘述句">敘述句</h2>
+
+<p>本章節記錄了所有 <a href="/zh-TW/docs/Web/JavaScript/Reference/Statements">JavaScript 敘述句與宣告</a>。</p>
+
+<ul class="card-grid">
+ <li><span>流程控制</span>{{jsxref("Statements/block", "Block")}}<br>
+  {{jsxref("Statements/break", "break")}}<br>
+  {{jsxref("Statements/continue", "continue")}}<br>
+  {{jsxref("Statements/Empty", "Empty")}}<br>
+  {{jsxref("Statements/if...else", "if...else")}}<br>
+  {{jsxref("Statements/switch", "switch")}}<br>
+  {{jsxref("Statements/throw", "throw")}}<br>
+  {{jsxref("Statements/try...catch", "try...catch")}}</li>
+ <li><span>宣告</span>
+  <p>{{jsxref("Statements/var", "var")}}<br>
+   {{jsxref("Statements/let", "let")}}<br>
+   {{jsxref("Statements/const", "const")}}</p>
+ </li>
+ <li><span>函數與類別</span>
+  <p>{{jsxref("Statements/function", "function")}}<br>
+   {{jsxref("Statements/function*", "function*")}}<br>
+   {{jsxref("Statements/async_function", "async function")}}<br>
+   {{jsxref("Statements/return", "return")}}<br>
+   {{jsxref("Statements/class", "class")}}</p>
+ </li>
+ <li><span>迭代</span>
+  <p>{{jsxref("Statements/do...while", "do...while")}}<br>
+   {{jsxref("Statements/for", "for")}}<br>
+   {{jsxref("Statements/for_each...in", "for each...in")}}<br>
+   {{jsxref("Statements/for...in", "for...in")}}<br>
+   {{jsxref("Statements/for...of", "for...of")}}<br>
+   {{jsxref("Statements/for-await...of", "for await...of")}}<br>
+   {{jsxref("Statements/while", "while")}}</p>
+ </li>
+</ul>
+
+<ul class="card-grid">
+ <li><span>Other</span>
+
+  <p>{{jsxref("Statements/debugger", "debugger")}}<br>
+   {{jsxref("Statements/import", "import")}}<br>
+   {{jsxref("Statements/label", "label")}}<br>
+   {{jsxref("Statements/with", "with")}}</p>
+ </li>
+</ul>
+
+<h2 id="表示法與運算子">表示法與運算子</h2>
+
+<p>本章節記錄了所有 <a href="/zh-TW/docs/Web/JavaScript/Reference/Operators">JavaScript 表示法與運算子</a>。</p>
+
+<div>
+<ul class="card-grid">
+ <li><span>主要運算式</span>{{JSxRef("Operators/this", "this")}}<br>
+  {{JSxRef("Operators/function", "function")}}<br>
+  {{JSxRef("Operators/class", "class")}}<br>
+  {{JSxRef("Operators/function*", "function*")}}<br>
+  {{JSxRef("Operators/yield", "yield")}}<br>
+  {{JSxRef("Operators/yield*", "yield*")}}<br>
+  {{JSxRef("Operators/async_function", "async function")}}<br>
+  {{JSxRef("Operators/await", "await")}}<br>
+  {{JSxRef("Global_Objects/Array", "[]")}}<br>
+  {{JSxRef("Operators/Object_initializer", "{}")}}<br>
+  {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}<br>
+  {{JSxRef("Operators/Grouping", "( )")}}<br>
+  {{JSxRef("null")}}</li>
+ <li><span>左手邊運算式</span>
+  <p>{{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}<br>
+   {{JSxRef("Operators/new", "new")}}<br>
+   {{JSxRef("Operators/new%2Etarget", "new.target")}}<br>
+   {{JSxRef("Operators/super", "super")}}<br>
+   {{JSxRef("Operators/Spread_syntax", "...obj")}}</p>
+ </li>
+ <li><span>遞增與遞減</span>
+  <p>{{JSxRef("Operators/Arithmetic_Operators", "A++", "#Increment")}}<br>
+   {{JSxRef("Operators/Arithmetic_Operators", "A--", "#Decrement")}}<br>
+   {{JSxRef("Operators/Arithmetic_Operators", "++A", "#Increment")}}<br>
+   {{JSxRef("Operators/Arithmetic_Operators", "--A", "#Decrement")}}</p>
+ </li>
+ <li><span>一元運算子</span>
+  <p>{{JSxRef("Operators/delete", "delete")}}<br>
+   {{JSxRef("Operators/void", "void")}}<br>
+   {{JSxRef("Operators/typeof", "typeof")}}<br>
+   {{JSxRef("Operators/Arithmetic_Operators", "+", "#Unary_plus")}}<br>
+   {{JSxRef("Operators/Arithmetic_Operators", "-", "#Unary_negation")}}<br>
+   {{JSxRef("Operators/Bitwise_Operators", "~", "#Bitwise_NOT")}}<br>
+   {{JSxRef("Operators/Logical_Operators", "!", "#Logical_NOT")}}</p>
+ </li>
+</ul>
+
+<ul class="card-grid">
+ <li><span>算術運算子</span>
+
+  <p>{{JSxRef("Operators/Arithmetic_Operators", "+", "#Addition")}}<br>
+   {{JSxRef("Operators/Arithmetic_Operators", "-", "#Subtraction")}}<br>
+   {{JSxRef("Operators/Arithmetic_Operators", "/", "#Division")}}<br>
+   {{JSxRef("Operators/Arithmetic_Operators", "*", "#Multiplication")}}<br>
+   {{JSxRef("Operators/Arithmetic_Operators", "%", "#Remainder")}}<br>
+   {{JSxRef("Operators/Arithmetic_Operators", "**", "#Exponentiation")}}</p>
+ </li>
+ <li><span>關係運算子</span>
+  <p>{{JSxRef("Operators/in", "in")}}<br>
+   {{JSxRef("Operators/instanceof", "instanceof")}}<br>
+   {{JSxRef("Operators/Comparison_Operators", "&lt;", "#Less_than_operator")}}<br>
+   {{JSxRef("Operators/Comparison_Operators", "&gt;", "#Greater_than_operator")}}<br>
+   {{JSxRef("Operators/Comparison_Operators", "&lt;=", "#Less_than_or_equal_operator")}}<br>
+   {{JSxRef("Operators/Comparison_Operators", "&gt;=", "#Greater_than_or_equal_operator")}}</p>
+ </li>
+ <li><span>相等運算子</span>
+  <p>{{JSxRef("Operators/Comparison_Operators", "==", "#Equality")}}<br>
+   {{JSxRef("Operators/Comparison_Operators", "!=", "#Inequality")}}<br>
+   {{JSxRef("Operators/Comparison_Operators", "===", "#Identity")}}<br>
+   {{JSxRef("Operators/Comparison_Operators", "!==", "#Nonidentity")}}</p>
+ </li>
+ <li><span>位元移位運算子</span>
+  <p>{{JSxRef("Operators/Bitwise_Operators", "&lt;&lt;", "#Left_shift")}}<br>
+   {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;", "#Right_shift")}}<br>
+   {{JSxRef("Operators/Bitwise_Operators", "&gt;&gt;&gt;", "#Unsigned_right_shift")}}</p>
+ </li>
+</ul>
+
+<ul class="card-grid">
+ <li><span>二元位元運算子</span>{{JSxRef("Operators/Bitwise_Operators", "&amp;", "#Bitwise_AND")}}<br>
+  {{JSxRef("Operators/Bitwise_Operators", "|", "#Bitwise_OR")}}<br>
+  {{JSxRef("Operators/Bitwise_Operators", "^", "#Bitwise_XOR")}}</li>
+ <li><span>二元邏輯運算子</span>
+  <p>{{JSxRef("Operators/Logical_Operators", "&amp;&amp;", "#Logical_AND")}}<br>
+   {{JSxRef("Operators/Logical_Operators", "||", "#Logical_OR")}}</p>
+ </li>
+ <li><span>條件(三元)運算子</span>
+  <p>{{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}</p>
+ </li>
+ <li><span>賦值運算子</span>
+  <p>{{JSxRef("Operators/Assignment_Operators", "=", "#Assignment")}}<br>
+   {{JSxRef("Operators/Assignment_Operators", "*=", "#Multiplication_assignment")}}<br>
+   {{JSxRef("Operators/Assignment_Operators", "/=", "#Division_assignment")}}<br>
+   {{JSxRef("Operators/Assignment_Operators", "%=", "#Remainder_assignment")}}<br>
+   {{JSxRef("Operators/Assignment_Operators", "+=", "#Addition_assignment")}}<br>
+   {{JSxRef("Operators/Assignment_Operators", "-=", "#Subtraction_assignment")}}<br>
+   {{JSxRef("Operators/Assignment_Operators", "&lt;&lt;=", "#Left_shift_assignment")}}<br>
+   {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;=", "#Right_shift_assignment")}}<br>
+   {{JSxRef("Operators/Assignment_Operators", "&gt;&gt;&gt;=", "#Unsigned_right_shift_assignment")}}<br>
+   {{JSxRef("Operators/Assignment_Operators", "&amp;=", "#Bitwise_AND_assignment")}}<br>
+   {{JSxRef("Operators/Assignment_Operators", "^=", "#Bitwise_XOR_assignment")}}<br>
+   {{JSxRef("Operators/Assignment_Operators", "|=", "#Bitwise_OR_assignment")}}<br>
+   {{JSxRef("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}<br>
+   {{JSxRef("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}</p>
+ </li>
+</ul>
+</div>
+
+<h2 id="函數">函數</h2>
+
+<p>本章節說明如何使用 <a href="/zh-TW/docs/Web/JavaScript/Reference/Functions">JavaScript 函數</a> 來開發您的應用程式。</p>
+
+<ul>
+ <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code></a></li>
+ <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a></li>
+ <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/Default_parameters">Default parameters</a></li>
+ <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters">Rest parameters</a></li>
+</ul>
+
+<h2 id="其他參考頁面">其他參考頁面</h2>
+
+<ul>
+ <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Lexical_grammar">Lexical grammar</a></li>
+ <li><a href="/zh-TW/docs/Web/JavaScript/Data_structures">Data types and data structures</a></li>
+ <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a></li>
+ <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features">Deprecated features</a></li>
+</ul>

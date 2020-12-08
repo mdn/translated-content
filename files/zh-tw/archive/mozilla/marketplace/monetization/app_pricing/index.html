@@ -1,0 +1,3698 @@
+---
+title: 制定 App 的價格
+slug: Archive/Mozilla/Marketplace/Monetization/App_pricing
+translation_of: Archive/Marketplace/Monetization/App_pricing
+---
+<div class="summary">
+<p>本文將為開發者說明在 Firefox Marketplace 中制定 App 價格與收款的方法。因為開發者可能在 Firefox Marketplace 中跨國制定不同的價格，所以定價方式有點複雜。本文即提供相關資訊，如訂價、拆帳、課稅、付款方式、應收帳款、防止詐騙等等。</p>
+</div>
+
+<h2 id="以「價格點數」定價"><strong>以「價格點數」定價</strong></h2>
+
+<p>在 Firefox Marketplace 中，開發者必須透過固定的「價格點數 (Price point)」完成定價。開發者可選擇任一價格點數，而該價格點數隨即套用為各地區通用貨幣的等值定價。針對開發者所選定 App 或應用程式內部付費 (In-app Payments) 的販售地區，當地消費者就能透過系統得知 App 的定價。價格點數範圍從 US$0.10 (點數 1) 到 US$49.99 (點數 140)。Firefox Marketplace 中的 App 與 In-app Payments，均適用價格點數的定價方式。</p>
+
+<p><strong>範例：</strong>若 App 設定為「10」價格點數，則在流通美金的地區就是售價 US$0.99 (未含當地銷售稅)；流通歐元的地區就是售價 €0.89 (已含歐洲增值稅)。在哥倫比亞的電信帳單代繳售價為 COP$2060.00 (包含哥倫比亞區的增值稅)，信用卡繳款的售價則為 US$0.99。</p>
+
+<h3 id="價格點數表"><strong>價格點數表</strong></h3>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th rowspan="2">Price point</th>
+
+      <th>Austria</th>
+
+      <th>Belgium</th>
+
+      <th>Brazil</th>
+
+      <th>Chile</th>
+
+      <th>Colombia</th>
+
+      <th>Cyprus</th>
+
+      <th>Estonia</th>
+
+      <th>Finland</th>
+
+      <th>France</th>
+
+      <th>Germany</th>
+
+      <th>Greece</th>
+
+      <th>Hungary</th>
+
+      <th>Ireland</th>
+
+      <th>Italy</th>
+
+      <th>Latvia</th>
+
+      <th>Lithuania</th>
+
+      <th>Luxembourg</th>
+
+      <th>Malta</th>
+
+      <th>Mexico</th>
+
+      <th>Netherlands</th>
+
+      <th>Peru</th>
+
+      <th>Poland</th>
+
+      <th>Portugal</th>
+
+      <th>Slovakia</th>
+
+      <th>Slovenia</th>
+
+      <th>Spain</th>
+
+      <th>United Kingdom</th>
+
+      <th>United States</th>
+
+      <th>Uruguay</th>
+
+      <th>Venezuela</th>
+
+      <th>Rest of World</th>
+
+    </tr><tr>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+      <th></th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>VAT/Tax included in price</th>
+
+      <td>unknown</td>
+
+      <td>unknown</td>
+
+      <td>no</td>
+
+      <td>yes&amp;nbsp;(19%)</td>
+
+      <td>yes&amp;nbsp;(16%)</td>
+
+      <td>unknown</td>
+
+      <td>unknown</td>
+
+      <td>unknown</td>
+
+      <td>unknown</td>
+
+      <td>yes&amp;nbsp;(19%)</td>
+
+      <td>yes&amp;nbsp;(23%)</td>
+
+      <td>yes&amp;nbsp;(27%)</td>
+
+      <td>unknown</td>
+
+      <td>yes&amp;nbsp;(22%)</td>
+
+      <td>unknown</td>
+
+      <td>unknown</td>
+
+      <td>unknown</td>
+
+      <td>unknown</td>
+
+      <td>yes&amp;nbsp;(16%)</td>
+
+      <td>unknown</td>
+
+      <td>yes&amp;nbsp;(18%)</td>
+
+      <td>yes&amp;nbsp;(23%)</td>
+
+      <td>unknown</td>
+
+      <td>unknown</td>
+
+      <td>unknown</td>
+
+      <td>yes&amp;nbsp;(21%)</td>
+
+      <td>yes&amp;nbsp;(20%)</td>
+
+      <td>no</td>
+
+      <td>yes&amp;nbsp;(22%)</td>
+
+      <td>yes&amp;nbsp;(12%)</td>
+
+      <td>no</td>
+
+    </tr>
+
+
+    <tr>
+      <th>Tier 0</th>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        $0
+
+      </td>
+
+      <td>
+
+        $0
+
+      </td>
+
+      <td>
+
+        $0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        $0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        $0
+
+      </td>
+
+      <td>
+
+        0&amp;nbsp;zł
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        €0
+
+      </td>
+
+      <td>
+
+        £0
+
+      </td>
+
+      <td>
+
+        $0
+
+      </td>
+
+      <td>
+
+        $0
+
+      </td>
+
+      <td>
+
+        $0
+
+      </td>
+
+      <td>
+
+        $0
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 1</th>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+        €0.1
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.1
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;25
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+        0.49&amp;nbsp;zł
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 5</th>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+        €0.25
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.25
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;70
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+        $3.75
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+        0.98&amp;nbsp;zł
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 7</th>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+        €0.4
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.4
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;135
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+        $7.51
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+        1.99&amp;nbsp;zł
+          <span class="footnote"><a href="#pricetable_fn_2" title="Purchase via carrier only">[2]</a></span>
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+      <td>
+
+                n/a
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 10</th>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $0.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $0.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $2060
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+
+      </td>
+
+      <td>
+
+        €0.89
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;270
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $15
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $0.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        3.99&amp;nbsp;zł
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €0.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        £0.75
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $0.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $0.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $0.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $0.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 20</th>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $1.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $1.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $4150
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+
+      </td>
+
+      <td>
+
+        €1.89
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;545
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $30
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $1.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        7.69&amp;nbsp;zł
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €1.89
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        £1.5
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $1.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $1.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $1.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $1.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 30</th>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $2.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $2.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $6240
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+
+      </td>
+
+      <td>
+
+        €2.79
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;820
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $45
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $2.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        11.59&amp;nbsp;zł
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €2.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        £2.25
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $2.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $2.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $2.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $2.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 40</th>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $3.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $3.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $8320
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+
+      </td>
+
+      <td>
+
+        €3.79
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;1095
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $60
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $3.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        15.49&amp;nbsp;zł
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €3.79
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        £3
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $3.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $3.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $3.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $3.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 50</th>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $4.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $4.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $10420
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+
+      </td>
+
+      <td>
+
+        €4.69
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;1360
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $75
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $4.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        19.5&amp;nbsp;zł
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €4.69
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        £3.75
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $4.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $4.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $4.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $4.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 60</th>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $6.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $6.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $14600
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+
+      </td>
+
+      <td>
+
+        €6.59
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;1900
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $105
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $6.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        26.99&amp;nbsp;zł
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €6.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        £5.25
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $6.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $6.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $6.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $6.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 70</th>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $9.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $9.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $20840
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+
+      </td>
+
+      <td>
+
+        €9.49
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;2720
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $150
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $9.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        38.79&amp;nbsp;zł
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €9.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        £7.5
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $9.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $9.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $9.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $9.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 80</th>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $12.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $12.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $26070
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+
+      </td>
+
+      <td>
+
+        €11.59
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;3400
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $185
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $12.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        48.49&amp;nbsp;zł
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €11.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        £9.5
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $12.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $12.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $12.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $12.49
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 90</th>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $14.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $14.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $31280
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+
+      </td>
+
+      <td>
+
+        €14.19
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;4080
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $225
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $14.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        57.99&amp;nbsp;zł
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €14.19
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        £11.25
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $14.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $14.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $14.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $14.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 100</th>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $19.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $19.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $41720
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+
+      </td>
+
+      <td>
+
+        €18.99
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;5450
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $300
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $19.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        77.49&amp;nbsp;zł
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €18.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        £15
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $19.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $19.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $19.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $19.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 110</th>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $24.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $24.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $52160
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+
+      </td>
+
+      <td>
+
+        €23.59
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;6800
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $375
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $24.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        96.99&amp;nbsp;zł
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €23.59
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        £18.75
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $24.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $24.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $24.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $24.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+    <tr>
+      <th>Tier 120</th>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $29.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $29.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $62580
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+
+      </td>
+
+      <td>
+
+        €28.39
+
+      </td>
+
+      <td>
+
+        Ft&amp;nbsp;8170
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $450
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $29.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        116.49&amp;nbsp;zł
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        €28.39
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        £22.5
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $29.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $29.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $29.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+      <td>
+
+        $29.99
+          <span class="footnote"><a href="#pricetable_fn_1" title="Credit card purchase only">[1]</a></span>
+
+      </td>
+
+    </tr>
+
+
+  </tbody>
+  <caption><small>Last updated: 1519101168023.</small></caption>
+
+</table>
+<ul style="list-style-type: none;">
+    <li id="pricetable_fn_1">[1] Credit card purchase only.</li>
+    <li id="pricetable_fn_1">[2] Carrier billing only, no credit card purchase.</li>
+
+</ul>
+
+<h2 id="制定自己產品的價格">制定自己產品的價格</h2>
+
+<p>如果要為自己的 App 或 In-app 產品定價，就必須選擇價格點數與想要銷售的地區。對 App 來說，選擇銷售國家並不會限制其他國家的消費者購買 App，只會決定 App 所將上架的國家 (可能不只一個國家)。即使消費者身處其他國家，只要付款方式亦適用 App 的上架國家，就同樣可購買該 App。</p>
+
+<h2 id="價格點數表如何運作？"><strong>價格點數表如何運作？</strong></h2>
+
+<p>Marketplace 將針對各種幣別預先設定匯率，再轉換為美金以外的計價並四捨五入，以更為貼近市場友善的數字。四捨五入的價格與外幣匯率的波動，都代表美金以外的定價不會隨時等值於美金現價。除非需穩定多國換匯之後的相對價格，否則美金以外的定價均將保持不動。Mozilla 也不會刻意常常調整定價，且最快每六個月才會調價一次。價格點數一般均保持在美金定價的 1% ~ 2% 之內。而由於某些國家定價另納入了增值稅，因此可能超出此範圍。</p>
+
+<h3 id="含稅價與未稅價的價格點數"><strong>含稅價與未稅價的價格點數</strong></h3>
+
+<p>顯示於不同地區的價格可能含稅或未稅。含稅價代表該價格已含稅 (一般為增值稅，VAT) 並顯示給消費者知道。未稅價則代表稅額 (若有對應稅額) 將另外再加至顯示的價格中。</p>
+
+<p>各國家與地區的增值稅略有不同，但一般均依照 App 販售國家 (由電信營運商收取) 的增值稅率而定；或是在英國適用增值稅的地區以信用卡付款，則為 20% 增值稅率。一旦消費者確定付款之後，就會根據其付款資訊中登記地區的幣別，或目前所在地區的幣別計算。</p>
+
+<p>如果消費者所在地區顯示的是未稅價，則當地稅額與費用將再加入 App 售價之中。消費者可能要收到發票，或由銀行/電信營運商寄發對帳單之後，才會看到實際的稅額。</p>
+
+<h2 id="如何拆帳？"><strong>如何拆帳？</strong></h2>
+
+<p>在將自己設定為「開發者」的付款帳戶之後，即可選擇往後收款的幣別。目前支援的付款幣別包含美金 ($)、歐元 (€)、英鎊 (£)。若是含稅價格，則開發者在正常情況下會收到「消費者購買 App 金額扣除稅額與特定費用」的 70%。若是未稅價格，則會收到「消費者針對 App 定價表付款」的 70%；應付稅額另再加到消費者實際付款額之中。由於匯率浮動與增殖稅率的差異，各地區的實收金額也有所變動。</p>
+
+<p>而上述金額的另外 30%，將由 Mozilla、電信營運商、第三方支付供應商拆帳。其內包含商業交易程序的相關交易與服務費用。根據目前既定的分配方式，Mozilla 約將收取 5% ~ 7.5%。</p>
+
+<div class="note">
+<p>若選用電信帳單代繳方式，則開發者所能收到的款項可能又有差異。請到<a href="https://developer.mozilla.org/en-US/Marketplace/Monetization/Payments_Status">付款狀態</a>了解相關細節，進一步了解該國電信營運商的拆帳規定。</p>
+</div>
+
+<h2 id="付款方式：電信帳單代繳與信用卡"><strong>付款方式：電信帳單代繳與信用卡</strong></h2>
+
+<p>透過 Firefox Marketplace 販售自己 App 的絕佳優點之一，就是能直接讓消費者透過行動電話帳單付款。對信用卡尚未普及的新興市場而言，此特色絕對是目前行動付款的重要媒介。</p>
+
+<p>目前為止，電信營運商必須與 Mozilla 簽訂合約之後，才能在所屬地區提供電信帳單代繳的服務。消費者必須申請該電信營運商的 SIM 卡並預繳特定金額，以順利支付 App 或 In-app Payment 的款項。當然，消費者亦可透過信用卡購買 App。</p>
+
+<p>針對客戶透過自己行動電話號碼付費的機制，某些電信營運商另設有最低與最高額度，而且各家營運商均有不同。若 App 定價超出該額度，則款項預設轉為信用卡支付；但又並非所有消費者均擁有信用卡。又有些地區並無法和營運商值接建立帳單服務，而必須透過信用卡付款，如此就限定需以美金、歐元、英鎊購買 App。</p>
+
+<div class="note">
+<p><strong>注意：</strong>針對信用卡部分，目前最低收費款項為 10 價格點數 (即美金 $0.99 元整)；而最高款項為美金 $30.00 元整。接受 Visa® 與 MasterCard® 信用卡。</p>
+</div>
+
+<h2 id="慎防詐騙"><strong>慎防詐騙</strong></h2>
+
+<p>第三方支付供應商應已有多種防止詐騙的方式。為了減少詐騙行為，目前僅限消費者實際所在地銀行發行的信用卡，才能用以支付 App 購買款項。因此，消費者若持巴西境內銀行所發行的信用卡，就只能在巴西國內使用該信用卡，而不能跑到哥倫比亞境內購買 App。</p>
+
+<h2 id="取得自己的收益：設定收款帳戶"><strong>取得自己的收益：設定收款帳戶</strong></h2>
+
+<p>開發者若要能確實收到自己 App 或 In-app Payments 所創造的營收，必須先針對自己所選擇的 App 販售地區，開好當地支付供應商所提供的帳戶。各家支付供應商都具備服務條款，與 Mozilla 的服務條款不盡相同。開發者必須同意供應商的條款之後，才能透過 Firefox Marketplace 銷售自己的 App 或取得 In-app Payments 款項。</p>
+
+<p>你也可在 Firefox Marketplace 中設定開發者的收款帳戶。先找到 App 的「Compatibility &amp; Payments」之後，針對你所選擇的販售地區新增收款帳戶即可。</p>
+
+<div class="note">
+<p><strong>注意：</strong>Bango 則是 Firefox Marketplace 的支付供應商。</p>
+</div>
+
+<h2 id="收取屬於自己的款項"><strong>收取屬於自己的款項</strong></h2>
+
+<p>開發者可直接與支付供應商往來，以順利取得屬於自己的款項。你會收到「自行對帳發票 (Self Billing Invoice，SBI)」，其中將列舉開發者銷售總額、消費者退費總額、開發者實際收取總額。若你的 App 販售地區可退增值稅，則總額也將包含增值稅額。</p>
+
+<p>你可透過自己在 Firefox Marketplace 中的開發者帳戶，找到支付供應商的付款入口網頁。由於各國電信營運商入帳時程各有不同，且消費法規也可能影響退款速度，所以帳戶的收款條件與時程也有所差異。請自行了解第三方支付供應商的相關條件與說明。</p>
+
+<h2 id="稅額"><strong>稅額</strong></h2>
+
+<p>本章節將說明銷售稅的處理方式。</p>
+
+<h3 id="增值稅_(Value_Added_Tax，VAT)"><strong>增值稅 (Value Added Tax，</strong>VAT<strong>)</strong></h3>
+
+<p>Bango 可針對當地的稅捐機關，處理增值稅 (VAT) 的退稅問題。根據各個國家與地區的法律規定，相關徵稅與退稅的條件均有不同。開發者可向會計師或稅捐機關諮詢。而自行對帳發票 (SBI) 將根據增值稅稅前金額，開立發票給 Bango。開發者到時候觀看支付清單即可了解運作情形。如果開發者身處不屬於「販售者需支付增值稅」的地區，則應該會收到當地稅捐機關的退稅。相關細節請向會計師諮詢。</p>
+
+<h3 id="預扣稅額與換匯費用"><strong>預扣稅額與換匯費用</strong></h3>
+
+<p>Bango 可支付美金 ($)、歐元 (€)、英鎊 (£)，讓開發者自行選擇適合的幣別。Bango 可能會因法條規範，為開發者預扣或繳付當地稅額，因此會從支付帳款中扣除應付稅額。各國的預扣稅率均不相同，也可能必須支付換匯費用。在將當地貨幣換成等值的美金、歐元、英鎊時，就可能產生 1.9% ~ 2.5% 的換匯費用。這項費用對開發者並不友善，而 Mozilla 也正研究是否有替代方案。</p>
+
+<h2 id="開發者的收益"><strong>開發者的收益</strong></h2>
+
+<p>因所在國家、當地貨幣、付款方式的不同，開發者販售 App 所獲得的收益也有所差異。可參閱<a href="https://developer.mozilla.org/en-US/Marketplace/Monetization/Payments_Status">付款狀態</a>以進一步了解各國的付款細節。</p>

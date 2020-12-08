@@ -1,0 +1,194 @@
+---
+title: Object.observe()
+slug: Web/JavaScript/Reference/Global_Objects/Object/observe
+tags:
+  - Değişim İzle
+  - Obje
+  - Obje Gözlem
+  - Obje İzle
+translation_of: Archive/Web/JavaScript/Object.observe
+---
+<div>{{JSRef("Global_Objects", "Object")}}</div>
+
+<h2 id="Özet">Özet</h2>
+
+<p><strong><code>Object.observe()</code></strong> methodu bir objedeki değişimleri izlemenizi sağlar. Geri dönüş için belirlediğiniz fonksiyona, obje üzerinde gerçeklenen değişikleri, oluşma sırasına göre gönderir.</p>
+
+<h2 id="Söz_Dizimi">Söz Dizimi</h2>
+
+<pre><code>Object.observe(<var>obj</var>, <var>callback</var>[, <var>acceptList</var>])</code></pre>
+
+<h3 id="Parametreler">Parametreler</h3>
+
+<dl>
+ <dt><code>obj</code></dt>
+ <dd>İzlenecek Obje.</dd>
+ <dt>callback</dt>
+ <dd>Değişiklikler her gerçekleştiğinde çağırılacak fonksiyon. Aşağıdaki argümanlar ile çağırılır,
+ <dl>
+  <dt><code>changes</code></dt>
+  <dd>Her bir değişikliği temsilen bir objenin bulunduğu bir dizi döner. Objenin elemanları;
+  <ul>
+   <li><strong><code>name</code></strong>:  Değişen elemanın adı.</li>
+   <li><strong><code>object</code></strong>: Objenin yeni hali.</li>
+   <li><strong><code>type</code></strong>: Metin türünde değişim. Bu metin <code>"add"</code>, <code>"update"</code>, ve <code>"delete" </code>olabilir<code>.</code></li>
+   <li><strong><code>oldValue</code></strong>: Eğer değiştirme ve ya silme işlemi gerçekleşti ise değişimden önceki değeri içerir.</li>
+  </ul>
+  </dd>
+ </dl>
+ </dd>
+ <dt><code>acceptList</code></dt>
+ <dd>The list of types of changes to be observed on the given object for the given callback. If omitted, the array <code>["add", "update", "delete", "reconfigure", "setPrototype", "preventExtensions"]</code> will be used.</dd>
+</dl>
+
+<h2 id="Açıklama">Açıklama</h2>
+
+<p><code>callback</code> fonksiyonu objede gerçekleşen her değişimde çağırılır. Bir dizi içerisinde değişiklikleri içeren objeler bulunur.</p>
+
+<h2 id="Örnekler">Örnekler</h2>
+
+<h3 id="Örnelk_6_farklı_tipi_kayıt_altına_alma">Örnelk: 6 farklı tipi kayıt altına alma</h3>
+
+<pre class="brush: js">var obj = {
+  foo: 0,
+  bar: 1
+};
+
+Object.observe(obj, function(changes) {
+  console.log(changes);
+});
+
+obj.baz = 2;
+// [{name: 'baz', object: &lt;obj&gt;, type: 'add'}]
+
+obj.foo = 'hello';
+// [{name: 'foo', object: &lt;obj&gt;, type: 'update', oldValue: 0}]
+
+delete obj.baz;
+// [{name: 'baz', object: &lt;obj&gt;, type: 'delete', oldValue: 2}]
+
+Object.defineProperty(obj, 'foo', {writable: false});
+// [{name: 'foo', object: &lt;obj&gt;, type: 'reconfigure'}]
+
+Object.setPrototypeOf(obj, {});
+// [{name: '__proto__', object: &lt;obj&gt;, type: 'setPrototype', oldValue: &lt;prototype&gt;}]
+
+Object.seal(obj);
+// [
+//   {name: 'foo', object: &lt;obj&gt;, type: 'reconfigure'},
+//   {name: 'bar', object: &lt;obj&gt;, type: 'reconfigure'},
+//   {object: &lt;obj&gt;, type: 'preventExtensions'}
+// ]
+</pre>
+
+<h3 id="Örnek_Veri_bağlama">Örnek: Veri bağlama</h3>
+
+<pre class="brush: js">// bir kullanıcı sınıfı
+var user = {
+  id: 0,
+  name: 'Brendan Eich',
+  title: 'Mr.'
+};
+
+// Kullanıcı için bir selemlama oluştur.
+function updateGreeting() {
+  user.greeting = 'Merhaba, ' + user.title + ' ' + user.name + '!';
+}
+updateGreeting();
+
+Object.observe(user, function(changes) {
+  changes.forEach(function(change) {
+    // isim yada soyisim her değiştiğinde oluşturulan selamlayı düzenle.
+    if (change.name === 'name' || change.name === 'title') {
+      updateGreeting();
+    }
+  });
+});
+</pre>
+
+<h3 id="Örnek_Özel_değişim_türü">Örnek: Özel değişim türü</h3>
+
+<pre class="brush: js">// 2 boyutlu düzlemde bir nokta
+var point = {x: 0, y: 0, distance: 0};
+
+function setPosition(pt, x, y) {
+  // özel bir değişim gerçekleştir.
+  Object.getNotifier(pt).performChange('reposition', function() {
+    var oldDistance = pt.distance;
+    pt.x = x;
+    pt.y = y;
+    pt.distance = Math.sqrt(x * x + y * y);
+    return {oldDistance: oldDistance};
+  });
+}
+
+Object.observe(point, function(changes) {
+  console.log('Distance change: ' + (point.distance - changes[0].oldDistance));
+}, ['reposition']);
+
+setPosition(point, 3, 4);
+// Mesafe değişimi: 5
+</pre>
+
+<h2 id="Specifications" name="Specifications">Özellikler</h2>
+
+<p><a href="https://github.com/arv/ecmascript-object-observe">Strawman proposal for ECMAScript 7</a>.</p>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Tarayıcılar Arası Uyumluluk</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Özellik</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Temel Destek</td>
+   <td>{{CompatChrome("36")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera("23")}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Özellik</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Temel Destek</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome("36")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera("23")}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">Ayrıca bakınız</h2>
+
+<ul>
+ <li>{{jsxref("Object.unobserve()")}} {{experimental_inline}}</li>
+ <li>{{jsxref("Array.observe()")}} {{experimental_inline}}</li>
+</ul>

@@ -1,0 +1,91 @@
+---
+title: 使用 MathML
+slug: Mozilla/MathML_Project/開頭
+tags:
+  - MathML
+translation_of: Mozilla/MathML_Project/Start
+---
+<h2 id="使用_MathML">使用 MathML</h2>
+<p>你有看到這頁面理那些精巧的數學算式嗎？ 沒有嗎？ 太糟糕了， 來<a href="https://developer.mozilla.org/@api/deki/files/5690/=start.png">這邊</a>看一下你錯過了什麼東西吧。 並快<a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/">下載</a>支援這個功能的 Mozilla 板本來補救這哀傷的場面！</p>
+<p>還是你發現你看到的畫面根螢幕截圖不一樣呢？ 這牆況通常是因為你少了某些關鍵的 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/fonts/">MathML 字型</a>。</p>
+<p>現在準備萬全了， 你應該看得到這個行內等式的尖角符號： <math> <mrow> <mover> <mi>x</mi> <mo>^</mo> </mover> <mo>+</mo> <mover> <mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow> <mo>^</mo> </mover> <mo>+</mo> <mover> <mrow><mi>x</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mi>z</mi></mrow> <mo>^</mo> </mover> <mo>.</mo>  </mrow></math>旁邊這個則是小小的公式, <math> <mrow> <mo>det</mo> <mo lspace="0" rspace="0" symmetric="false">|</mo> <mfrac linethickness="0"> <mi>a</mi> <mi>c</mi> </mfrac> <mfrac linethickness="0"> <mi>b</mi> <mi>d</mi> </mfrac> <mo lspace="0" rspace="0" symmetric="false">|</mo> <mo>=</mo> <mi>a</mi> <mi>d</mi> <mo>-</mo> <mi>b</mi> <mi>c</mi> <mo>,</mo> </mrow></math>也可以被設定成這樣的顯示方式： <math display="block"> <mrow> <mo>det</mo> <mo>|</mo> <mtable> <mtr> <mtd> <mi>a</mi> </mtd> <mtd> <mi>b</mi> </mtd> </mtr> <mtr> <mtd> <mi>c</mi> </mtd> <mtd> <mi>d</mi> </mtd> </mtr> </mtable> <mo>|</mo> <mo>=</mo> <mi>a</mi> <mi>d</mi> <mo>-</mo> <mi>b</mi> <mi>c</mi> <mo>.</mo> </mrow> </math></p>
+<p>數學的排版非常的挑剔。 <a href="./">MathML in Mozilla</a> 正是著眼於實踐 <a href="http://www.w3.org/Math/">MathML 標準</a>
+ <i>
+ </i>
+ 以能達到<em> 所標記即所得</em> 、或者說 <em>所製即所得</em>
+ <i>
+ </i>
+ ，簡短點就是所謂的 "WYSIWYM"。 而這兩者的差異可以在下面的兩行算式表現出來！<math display="block"><msup><mrow><mo minsize="3" symmetric="false">(</mo> <mo>...</mo> <msup> <mrow> <mo minsize="2" symmetric="false">(</mo> <msup> <mrow> <mo symmetric="false">(</mo> <msub> <mi>a</mi> <mn>0</mn> </msub> <mo>+</mo> <msub> <mi>a</mi> <mn>1</mn> </msub> <mo symmetric="false">)</mo> </mrow> <msub> <mi>n</mi> <mn>1</mn> </msub> </msup> <mo>+</mo> <msub> <mi>a</mi> <mn>2</mn> </msub> <mo minsize="2" symmetric="false">)</mo> </mrow> <msub> <mi>n</mi> <mn>2</mn> </msub> </msup> <mo>+</mo> <mo>...</mo> <mo>+</mo> <msub> <mi>a</mi> <mi>p</mi> </msub> <mo minsize="3" symmetric="false">)</mo> </mrow> <msub> <mi>n</mi> <mi>p</mi> </msub> </msup> </math> <math display="block"> <msup> <mrow> <mo>(</mo> <mo>...</mo> <msup> <mrow> <mo>(</mo> <msup> <mrow> <mo>(</mo> <msub> <mi>a</mi> <mn>0</mn> </msub> <mo>+</mo> <msub> <mi>a</mi> <mn>1</mn> </msub> <mo>)</mo> </mrow> <msub> <mi>n</mi> <mn>1</mn> </msub> </msup> <mo>+</mo> <msub> <mi>a</mi> <mn>2</mn> </msub> <mo>)</mo> </mrow> <msub> <mi>n</mi> <mn>2</mn> </msub> </msup> <mo>+</mo> <mo>...</mo> <mo>+</mo> <msub> <mi>a</mi> <mi>p</mi> </msub> <mo>)</mo> </mrow> <msub> <mi>n</mi> <mi>p</mi> </msub> </msup> </math></p>
+<p>而這粗體等式的根 <math><mstyle mathvariant="bold"><msup><mi>y</mi> <mn>3</mn> </msup> <mo>+</mo> <mi>p</mi> <mi>y</mi> <mo>+</mo> <mi>q</mi> <mo>=</mo> <mn>0</mn>  </mstyle></math>也用粗體呈現 <math display="block"> <mstyle mathvariant="bold"> <mi>y</mi> <mo>=</mo> <mroot> <mrow> <mo>-</mo> <mfrac> <mi>q</mi> <mn>2</mn> </mfrac> <mo>+</mo> <mroot> <mrow> <mfrac> <msup> <mi>q</mi> <mn>2</mn> </msup> <mn>4</mn> </mfrac> <mo>+</mo> <mfrac> <msup> <mi>p</mi> <mn>3</mn> </msup> <mn>27</mn> </mfrac> </mrow> <mn>2</mn> </mroot> </mrow> <mn>3</mn> </mroot> <mo>+</mo> <mroot> <mrow> <mo>-</mo> <mfrac> <mi>q</mi> <mn>2</mn> </mfrac> <mo>-</mo> <mroot> <mrow> <mfrac> <msup> <mi>q</mi> <mn>2</mn> </msup> <mn>4</mn> </mfrac> <mo>+</mo> <mfrac> <msup> <mi>p</mi> <mn>3</mn> </msup> <mn>27</mn> </mfrac> </mrow> <mn>2</mn> </mroot> </mrow> <mn>3</mn> </mroot> <mo>.</mo> </mstyle> </math></p>
+<p>而等式 <math><mrow><mi>a</mi> <msup> <mi>x</mi> <mn>2</mn> </msup> <mo>+</mo> <mi>b</mi> <mi>x</mi> <mo>+</mo> <mi>c</mi> <mo>=</mo> <mn>0</mn> <mo>,</mo>  </mrow> </math>的根 在下面的黃色區域內點可以縮放它</p>
+<div style="display: none;">
+ <h2 id="Zoomable_Math" name="Zoomable_Math">Zoomable Math</h2>
+ <h3 id="HTML_Content">HTML Content</h3>
+ <pre class="brush: html">    &lt;p&gt;
+      &lt;math display="block"&gt;
+        &lt;mstyle id="zoomableMath" mathbackground="yellow"&gt;
+          &lt;mrow&gt;
+            &lt;mi&gt;x&lt;/mi&gt;
+            &lt;mo&gt;=&lt;/mo&gt;
+            &lt;mfrac&gt;
+              &lt;mrow&gt;
+                &lt;mrow&gt;
+                  &lt;mo&gt;-&lt;/mo&gt;
+                  &lt;mi&gt;b&lt;/mi&gt;
+                &lt;/mrow&gt;
+                &lt;mo&gt;&amp;#xB1;&lt;/mo&gt;
+                &lt;msqrt&gt;
+                  &lt;mrow&gt;
+                    &lt;msup&gt;
+                      &lt;mi&gt;b&lt;/mi&gt;
+                      &lt;mn&gt;2&lt;/mn&gt;
+                    &lt;/msup&gt;
+                    &lt;mo&gt;-&lt;/mo&gt;
+                    &lt;mrow&gt;
+                      &lt;mn&gt;4&lt;/mn&gt;
+                      &lt;mi&gt;a&lt;/mi&gt;
+                      &lt;mi&gt;c&lt;/mi&gt;
+                    &lt;/mrow&gt;
+                  &lt;/mrow&gt;
+                &lt;/msqrt&gt;
+              &lt;/mrow&gt;
+              &lt;mrow&gt;
+                &lt;mn&gt;2&lt;/mn&gt;
+                &lt;mi&gt;a&lt;/mi&gt;
+              &lt;/mrow&gt;
+            &lt;/mfrac&gt;
+          &lt;/mrow&gt;
+        &lt;/mstyle&gt;
+      &lt;/math&gt;
+    &lt;/p&gt;
+
+</pre>
+ <h3 id="JavaScript_Content">JavaScript Content</h3>
+ <pre class="brush: js">      function zoomToggle()
+      {
+      if (this.hasAttribute("mathsize")) {
+      this.removeAttribute("mathsize");
+      } else {
+      this.setAttribute("mathsize", "200%");
+      }
+      }
+
+      function load()
+      {
+      document.getElementById("zoomableMath").
+      addEventListener("click", zoomToggle, false);
+      }
+
+      window.addEventListener("load", load, false);</pre>
+</div>
+<p style="text-align: center;">{{ EmbedLiveSample('Zoomable_Math') }}</p>
+<p>還這邊這個有趣的筆記<math display="block"> <mrow><mo>{</mo> <mtable> <mtr> <mtd> <mrow> <msub> <mi>u</mi> <mi>t</mi> </msub> <mo>+</mo> <msub> <mrow> <mi>f</mi> <mo>(</mo> <mi>u</mi> <mo>)</mo> </mrow> <mi>x</mi> </msub> <mo>=</mo> <mn>0</mn> </mrow> </mtd> </mtr> <mtr> <mtd> <mrow> <mi>u</mi> <mo stretchy="false">(</mo> <mn>0</mn> <mo>,</mo> <mi>x</mi> <mo stretchy="false">)</mo> <mo>=</mo> <mrow> <mo>{</mo> <mtable> <mtr> <mtd> <mrow> <msup> <mi>u</mi> <mo>-</mo> </msup> </mrow> </mtd> <mtd> <mrow> <mtext>if </mtext> <mi>x</mi> <mo>&lt;</mo> <mn>0</mn> </mrow> </mtd> </mtr> <mtr> <mtd> <mrow> <msup> <mi>u</mi> <mo>+</mo> </msup> </mrow> </mtd> <mtd> <mrow> <mtext>if </mtext> <mi>x</mi> <mo>&gt;</mo> <mn>0</mn> </mrow></mtd></mtr></mtable></mrow></mrow></mtd></mtr></mtable></mrow></math></p>
+<p>或是這個複雜的筆記 <math display="block"> <mrow> <msub> <mover> <mi>Ell</mi> <mo>^</mo> </mover> <mi>Y</mi> </msub> <mo stretchy="false">(</mo> <mi>Z</mi> <mo>;</mo> <mi>z</mi> <mo>,</mo> <mi>τ</mi> <mo stretchy="false">)</mo> <mo>:=</mo> <msub> <mo>∫</mo> <mi>Y</mi> </msub> <mo>(</mo> <munder> <mo>∏</mo> <mi>l</mi> </munder> <mfrac> <mrow> <mrow> <mo>(</mo> <mfrac> <msub> <mi>y</mi> <mi>l</mi> </msub> <mrow> <mn>2</mn> <mi>π</mi> <mi mathvariant="normal">i</mi> </mrow> </mfrac> <mo>)</mo> </mrow> <mrow> <mi>θ</mi> <mo>(</mo> <mfrac> <msub> <mi>y</mi> <mi>l</mi> </msub> <mrow> <mn>2</mn> <mi>π</mi> <mi mathvariant="normal">i</mi> </mrow> </mfrac> <mo>-</mo> <mi>z</mi> <mo>)</mo> </mrow> <msup> <mi>θ</mi> <mo>′</mo> </msup> <mo stretchy="false">(</mo> <mn>0</mn> <mo stretchy="false">)</mo> </mrow> <mrow> <mi>θ</mi> <mo stretchy="false">(</mo> <mo>-</mo> <mi>z</mi> <mo stretchy="false">)</mo> <mrow> <mi>θ</mi> <mo>(</mo> <mfrac> <msub> <mi>y</mi> <mi>l</mi> </msub> <mrow> <mn>2</mn> <mi>π</mi> <mi mathvariant="normal">i</mi> </mrow> </mfrac> <mo>)</mo> </mrow> </mrow> </mfrac> <mo>)</mo> <mo>×</mo> <mo>(</mo> <munder> <mo>∏</mo> <mi>k</mi> </munder> <mfrac> <mrow> <mrow> <mi>θ</mi> <mo>(</mo> <mfrac> <msub> <mi>e</mi> <mi>k</mi> </msub> <mrow> <mn>2</mn> <mi>π</mi> <mi mathvariant="normal">i</mi> </mrow> </mfrac> <mo>-</mo> <mo stretchy="false">(</mo> <msub> <mi>α</mi> <mi>k</mi> </msub> <mo>+</mo> <mn>1</mn> <mo stretchy="false">)</mo> <mi>z</mi> <mo>)</mo> </mrow> <mi>θ</mi> <mo stretchy="false">(</mo> <mo>-</mo> <mi>z</mi> <mo stretchy="false">)</mo> </mrow> <mrow> <mrow> <mi>θ</mi> <mo>(</mo> <mfrac> <msub> <mi>e</mi> <mi>k</mi> </msub> <mrow> <mn>2</mn> <mi>π</mi> <mi mathvariant="normal">i</mi> </mrow> </mfrac> <mo>-</mo> <mi>z</mi> <mo>)</mo> </mrow> <mi>θ</mi> <mo stretchy="false">(</mo> <mo>-</mo> <mo stretchy="false">(</mo> <msub> <mi>α</mi> <mi>k</mi> </msub> <mo>+</mo> <mn>1</mn> <mo stretchy="false">)</mo> <mi>z</mi> <mo stretchy="false">)</mo> </mrow> </mfrac> <mo>)</mo> </mrow> </math> <math display="block"> <mrow> <mi>π</mi> <mo stretchy="false">(</mo> <mi>n</mi> <mo stretchy="false">)</mo> <mo>=</mo> <munderover> <mo>∑</mo> <mrow> <mi>m</mi> <mo>=</mo> <mn>2</mn> </mrow> <mi>n</mi> </munderover> <mrow> <mo>⌊</mo> <msup> <mrow> <mo>(</mo> <mrow> <munderover> <mo>∑</mo> <mrow> <mi>k</mi> <mo>=</mo> <mn>1</mn> </mrow> <mrow> <mi>m</mi> <mo>-</mo> <mn>1</mn> </mrow> </munderover> <mrow> <mo minsize="1.5">⌊</mo> <mo>(</mo> <mi>m</mi> <mo>/</mo> <mi>k</mi> <mo>)</mo> <mo minsize="2">/</mo> <mo>⌈</mo> <mi>m</mi> <mo>/</mo> <mi>k</mi> <mo>⌉</mo> <mo minsize="1.5">⌋</mo> </mrow> </mrow> <mo>)</mo> </mrow> <mrow> <mo>-</mo> <mn>1</mn> </mrow> </msup> <mo>⌋</mo> </mrow> </mrow> </math> <math display="block"> <mrow> <msub> <mrow> <mo>‖</mo> <mi>ϕ</mi> <mo>‖</mo> </mrow> <mrow> <msubsup> <mi>W</mi> <mi>s</mi> <mi>k</mi> </msubsup> <mo stretchy="false">(</mo> <msub> <mi>Ω</mi> <mi>g</mi> </msub> <mo stretchy="false">)</mo> </mrow> </msub> <mo>≝</mo> <msup> <mrow> <mo>(</mo> <munder> <mo>∑</mo> <mrow> <mo>|</mo> <mi>α</mi> <mo>|</mo> <mo>≦</mo> <mi>k</mi> </mrow> </munder> <msubsup> <mfenced close="‖" open="‖"> <mfrac> <mrow> <msup> <mo>∂</mo> <mi>α</mi> </msup> <mi>ϕ</mi> </mrow> <mrow> <mo>∂</mo> <msup> <mi>ξ</mi> <mi>α</mi> </msup> </mrow> </mfrac> </mfenced> <mrow> <msup> <mi>L</mi> <mi>s</mi> </msup> <mo stretchy="false">(</mo> <msub> <mi>Ω</mi> <mi>g</mi> </msub> <mo stretchy="false">)</mo> </mrow> <mi>s</mi> </msubsup> <mo>)</mo> </mrow> <mrow> <mn>1</mn> <mo>/</mo> <mi>s</mi> </mrow> </msup> </mrow> </math></p>
+<p>想要看更多的範例你可以點 <a href="./">MathML Project</a> 頁面的任一連結； 如果你有在編譯自己的版本，可以看一下這個資料夾
+ <i>
+  mozilla/layout/mathml/tests</i>
+ 。</p>
+<p>所以你可以做些什麼呢？ 你在 Mozilla 上使用時有沒有遇到任何 MathML 標準是沒正常運作的？ 或者是一些煩人的東西你覺得需要改進？ 或是你之前做的某些東西沒辦法正常運作了(像是 <em>迴歸</em> )？ 如果有遇到這些狀況，快去 BugZilla 回報這些異常吧。BugZilla 世有辦法收錄這些東西的。而且，如果你遇到問題不回報，我們也沒辦法去修正啊？！</p>
+<p>如果你想要讓 Gecko 成為一個更精巧更完善的 MathML 繪製引擎，<a href="https://developer.mozilla.org/en-US/docs/get-involved.html">加入我們</a>。 你的回應可以以 網站上的 MathML 內容呈現、或者去 <a href="https://developer.mozilla.org/en-US/docs/quality/bug-writing-guidelines.html">BugZilla</a> 回報錯誤。或者，如果你能在在程式碼方面提供協助， 來 <a href="http://lxr.mozilla.org/seamonkey/source/layout/mathml/">檢查或改進目前的程式碼</a> ， 或者是處理我們<a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/update.html">待處理清單</a>的項目。</p>
+<div id="cke_pastebin" style="position: absolute; top: 1775.63px; width: 1px; height: 1px; overflow: hidden; left: -1000px;">
+  </div>

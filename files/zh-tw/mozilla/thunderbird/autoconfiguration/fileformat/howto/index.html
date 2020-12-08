@@ -1,0 +1,199 @@
+---
+title: 'Autoconfig: How to create a configuration file'
+slug: Mozilla/Thunderbird/Autoconfiguration/FileFormat/HowTo
+translation_of: Mozilla/Thunderbird/Autoconfiguration/FileFormat/HowTo
+---
+<h2 id="Definition">Definition</h2>
+<h2 id="Authoritative_definition"><a class="link-https" href="https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat" title="https://wiki.mozilla.org/Thunderbird:Autoconfiguration:ConfigFileFormat">Authoritative definition</a></h2>
+<h2 id="Example">Example</h2>
+<h2 id="Real-world_example"><a class="link-https" href="https://live.mozillamessaging.com/autoconfig/v1.1/freenet.de" title="https://live.mozillamessaging.com/autoconfig/v1.1/freenet.de">Real-world example</a></h2>
+<h2 id="sect1"> </h2>
+<h2 id="&lt;xml_version1.0_encodingUTF-8>">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</h2>
+<h2 id="&lt;clientConfig_version1.1>_&lt;emailProvider_idfreenet.de>_&lt;domain>freenet.de&lt;domain>_&lt;displayName>Freenet_Mail&lt;displayName>_&lt;displayShortName>Freenet&lt;displayShortName>_&lt;incomingServer_typeimap>_&lt;hostname>imap.freenet.de&lt;hostname>_&lt;port>993&lt;port>_&lt;socketType>SSL&lt;socketType>_&lt;authentication>password-encrypted&lt;authentication>_&lt;username>EMAILADDRESS&lt;username>_&lt;incomingServer>_&lt;incomingServer_typeimap>_&lt;hostname>imap.freenet.de&lt;hostname>_&lt;port>143&lt;port>_&lt;socketType>STARTTLS&lt;socketType>_&lt;authentication>password-encrypted&lt;authentication>_&lt;username>EMAILADDRESS&lt;username>_&lt;incomingServer>_&lt;incomingServer_typepop3>_&lt;hostname>pop.freenet.de&lt;hostname>_&lt;port>995&lt;port>_&lt;socketType>SSL&lt;socketType>_&lt;authentication>password-cleartext&lt;authentication>_&lt;username>EMAILADDRESS&lt;username>_&lt;incomingServer>_&lt;incomingServer_typepop3>_&lt;hostname>pop.freenet.de&lt;hostname>_&lt;port>110&lt;port>_&lt;socketType>STARTTLS&lt;socketType>_&lt;authentication>password-cleartext&lt;authentication>_&lt;username>EMAILADDRESS&lt;username>_&lt;incomingServer>_&lt;outgoingServer_typesmtp>_&lt;hostname>smtp.freenet.de&lt;hostname>_&lt;port>465&lt;port>_&lt;socketType>SSL&lt;socketType>_&lt;authentication>password-encrypted&lt;authentication>_&lt;username>EMAILADDRESS&lt;username>_&lt;outgoingServer>_&lt;outgoingServer_typesmtp>_&lt;hostname>smtp.freenet.de&lt;hostname>_&lt;port>587&lt;port>_&lt;socketType>STARTTLS&lt;socketType>_&lt;authentication>password-encrypted&lt;authentication>_&lt;username>EMAILADDRESS&lt;username>_&lt;outgoingServer>_&lt;documentation_urlhttpkundenservice.freenet.dehilfeemailprogrammeconfigindex.html>_&lt;descr_langde>Allgemeine_Beschreibung_der_Einstellungen&lt;descr>_&lt;descr_langen>Generic_settings_page&lt;descr>_&lt;documentation>_&lt;documentation_urlhttpkundenservice.freenet.dehilfeemailprogrammeconfigthunderbirdimap-thunderbirdimapindex.html>_&lt;descr_langde>TB_2.0_IMAP-Einstellungen&lt;descr>_&lt;descr_langen>TB_2.0_IMAP_settings&lt;descr>_&lt;documentation>_&lt;emailProvider>_&lt;clientConfig>">&lt;<span class="start-tag">clientConfig</span><span class="attribute-name"> version</span>=<span class="attribute-value">"1.1"</span>&gt;<br>
+    &lt;<span class="start-tag">emailProvider</span><span class="attribute-name"> id</span>=<span class="attribute-value">"freenet.de"</span>&gt;<br>
+      &lt;<span class="start-tag">domain</span>&gt;freenet.de&lt;/<span class="end-tag">domain</span>&gt;<br>
+      &lt;<span class="start-tag">displayName</span>&gt;Freenet Mail&lt;/<span class="end-tag">displayName</span>&gt;<br>
+      &lt;<span class="start-tag">displayShortName</span>&gt;Freenet&lt;/<span class="end-tag">displayShortName</span>&gt;<br>
+      &lt;<span class="start-tag">incomingServer</span><span class="attribute-name"> type</span>=<span class="attribute-value">"imap"</span>&gt;<br>
+        &lt;<span class="start-tag">hostname</span>&gt;imap.freenet.de&lt;/<span class="end-tag">hostname</span>&gt;<br>
+        &lt;<span class="start-tag">port</span>&gt;993&lt;/<span class="end-tag">port</span>&gt;<br>
+        &lt;<span class="start-tag">socketType</span>&gt;SSL&lt;/<span class="end-tag">socketType</span>&gt;<br>
+        &lt;<span class="start-tag">authentication</span>&gt;password-encrypted&lt;/<span class="end-tag">authentication</span>&gt;<br>
+        &lt;<span class="start-tag">username</span>&gt;%EMAILADDRESS%&lt;/<span class="end-tag">username</span>&gt;<br>
+      &lt;/<span class="end-tag">incomingServer</span>&gt;<br>
+      &lt;<span class="start-tag">incomingServer</span><span class="attribute-name"> type</span>=<span class="attribute-value">"imap"</span>&gt;<br>
+        &lt;<span class="start-tag">hostname</span>&gt;imap.freenet.de&lt;/<span class="end-tag">hostname</span>&gt;<br>
+        &lt;<span class="start-tag">port</span>&gt;143&lt;/<span class="end-tag">port</span>&gt;<br>
+        &lt;<span class="start-tag">socketType</span>&gt;STARTTLS&lt;/<span class="end-tag">socketType</span>&gt;<br>
+        &lt;<span class="start-tag">authentication</span>&gt;password-encrypted&lt;/<span class="end-tag">authentication</span>&gt;<br>
+        &lt;<span class="start-tag">username</span>&gt;%EMAILADDRESS%&lt;/<span class="end-tag">username</span>&gt;<br>
+      &lt;/<span class="end-tag">incomingServer</span>&gt;<br>
+      &lt;<span class="start-tag">incomingServer</span><span class="attribute-name"> type</span>=<span class="attribute-value">"pop3"</span>&gt;<br>
+        &lt;<span class="start-tag">hostname</span>&gt;pop.freenet.de&lt;/<span class="end-tag">hostname</span>&gt;<br>
+        &lt;<span class="start-tag">port</span>&gt;995&lt;/<span class="end-tag">port</span>&gt;<br>
+        &lt;<span class="start-tag">socketType</span>&gt;SSL&lt;/<span class="end-tag">socketType</span>&gt;<br>
+        &lt;<span class="start-tag">authentication</span>&gt;password-cleartext&lt;/<span class="end-tag">authentication</span>&gt;<br>
+        &lt;<span class="start-tag">username</span>&gt;%EMAILADDRESS%&lt;/<span class="end-tag">username</span>&gt;<br>
+      &lt;/<span class="end-tag">incomingServer</span>&gt;<br>
+      &lt;<span class="start-tag">incomingServer</span><span class="attribute-name"> type</span>=<span class="attribute-value">"pop3"</span>&gt;<br>
+        &lt;<span class="start-tag">hostname</span>&gt;pop.freenet.de&lt;/<span class="end-tag">hostname</span>&gt;<br>
+        &lt;<span class="start-tag">port</span>&gt;110&lt;/<span class="end-tag">port</span>&gt;<br>
+        &lt;<span class="start-tag">socketType</span>&gt;STARTTLS&lt;/<span class="end-tag">socketType</span>&gt;<br>
+        &lt;<span class="start-tag">authentication</span>&gt;password-cleartext&lt;/<span class="end-tag">authentication</span>&gt;<br>
+        &lt;<span class="start-tag">username</span>&gt;%EMAILADDRESS%&lt;/<span class="end-tag">username</span>&gt;<br>
+      &lt;/<span class="end-tag">incomingServer</span>&gt;<br>
+      &lt;<span class="start-tag">outgoingServer</span><span class="attribute-name"> type</span>=<span class="attribute-value">"smtp"</span>&gt;<br>
+        &lt;<span class="start-tag">hostname</span>&gt;smtp.freenet.de&lt;/<span class="end-tag">hostname</span>&gt;<br>
+        &lt;<span class="start-tag">port</span>&gt;465&lt;/<span class="end-tag">port</span>&gt;<br>
+        &lt;<span class="start-tag">socketType</span>&gt;SSL&lt;/<span class="end-tag">socketType</span>&gt;<br>
+        &lt;<span class="start-tag">authentication</span>&gt;password-encrypted&lt;/<span class="end-tag">authentication</span>&gt;<br>
+        &lt;<span class="start-tag">username</span>&gt;%EMAILADDRESS%&lt;/<span class="end-tag">username</span>&gt;<br>
+      &lt;/<span class="end-tag">outgoingServer</span>&gt;<br>
+      &lt;<span class="start-tag">outgoingServer</span><span class="attribute-name"> type</span>=<span class="attribute-value">"smtp"</span>&gt;<br>
+        &lt;<span class="start-tag">hostname</span>&gt;smtp.freenet.de&lt;/<span class="end-tag">hostname</span>&gt;<br>
+        &lt;<span class="start-tag">port</span>&gt;587&lt;/<span class="end-tag">port</span>&gt;<br>
+        &lt;<span class="start-tag">socketType</span>&gt;STARTTLS&lt;/<span class="end-tag">socketType</span>&gt;<br>
+        &lt;<span class="start-tag">authentication</span>&gt;password-encrypted&lt;/<span class="end-tag">authentication</span>&gt;<br>
+        &lt;<span class="start-tag">username</span>&gt;%EMAILADDRESS%&lt;/<span class="end-tag">username</span>&gt;<br>
+      &lt;/<span class="end-tag">outgoingServer</span>&gt;<br>
+      &lt;<span class="start-tag">documentation</span><span class="attribute-name"> url</span>=<span class="attribute-value">"http://kundenservice.freenet.de/hilfe/email/programme/config/index.html"</span>&gt;<br>
+        &lt;<span class="start-tag">descr</span><span class="attribute-name"> lang</span>=<span class="attribute-value">"de"</span>&gt;Allgemeine Beschreibung der Einstellungen&lt;/<span class="end-tag">descr</span>&gt;<br>
+        &lt;<span class="start-tag">descr</span><span class="attribute-name"> lang</span>=<span class="attribute-value">"en"</span>&gt;Generic settings page&lt;/<span class="end-tag">descr</span>&gt;<br>
+      &lt;/<span class="end-tag">documentation</span>&gt;<br>
+      &lt;<span class="start-tag">documentation</span><span class="attribute-name"> url</span>=<span class="attribute-value">"http://kundenservice.freenet.de/hilfe/email/programme/config/thunderbird/imap-thunderbird/imap/index.html"</span>&gt;<br>
+        &lt;<span class="start-tag">descr</span><span class="attribute-name"> lang</span>=<span class="attribute-value">"de"</span>&gt;TB 2.0 IMAP-Einstellungen&lt;/<span class="end-tag">descr</span>&gt;<br>
+        &lt;<span class="start-tag">descr</span><span class="attribute-name"> lang</span>=<span class="attribute-value">"en"</span>&gt;TB 2.0 IMAP settings&lt;/<span class="end-tag">descr</span>&gt;<br>
+      &lt;/<span class="end-tag">documentation</span>&gt;<br>
+    &lt;/<span class="end-tag">emailProvider</span>&gt;<br>
+  &lt;/<span class="end-tag">clientConfig</span>&gt;</h2>
+<h2 id="How_to_probe_mail_servers">How to probe mail servers</h2>
+<h2 id="To_determine_a_server's_capabilities_you_can_contact_the_server_directly_and_talk_the_POPIMAPSMTP_protocol_manually_(assuming_you_already_know_the_hostname)._For_non-SSL_use_netcat_-v_hostname_port_(preferred)_or_telnet_hostname_port_as_client.">To determine a server's capabilities, you can contact the server directly and talk the POP/IMAP/SMTP protocol manually (assuming you already know the hostname).<br>
+  For non-SSL, use <strong><code>netcat -v <em>hostname</em> <em>port</em></code></strong> (preferred) or <code>telnet <em>hostname</em> <em>port</em></code> as "client".</h2>
+<ul>
+  <li>
+    <h2 id="POP3_port_110_when_you_see_OK_WEB.DE_POP3-Server_or_similar_enter_CAPA_hit_return.">POP3, port 110: when you see <code>+OK WEB.DE POP3-Server</code> or similar, enter <code><strong>CAPA</strong></code>, hit return.</h2>
+  </li>
+  <li>
+    <h2 id="IMAP_port_143_when_you_see_*_OK_mwinf2j04_IMAP4_server_ready_or_similar_enter_1_CAPABILITY_hit_return.">IMAP, port 143: when you see <code>* OK mwinf2j04 IMAP4 server ready</code> or similar, enter <code><strong>1 CAPABILITY</strong></code>, hit return.</h2>
+  </li>
+  <li>
+    <h2 id="SMTP_port_587_or_25_when_you_see_220_mail.gmx.net_GMX_Mailservices_ESMTP_or_similar_enter_EHLO_example.net_hit_return.">SMTP, port 587 or 25: when you see <code>220 mail.gmx.net GMX Mailservices ESMTP</code> or similar, enter <code><strong>EHLO example.net</strong></code>, hit return.</h2>
+  </li>
+</ul>
+<h2 id="In_all_cases_the_server_should_respond_with_a_list_of_capabilities.">In all cases, the server should respond with a list of capabilities.</h2>
+<h2 id="SSL_STARTTLS">SSL / STARTTLS</h2>
+<h2 id="There_are_2_SSL_variants_normal_SSL_and_STARTTLS.">There are 2 SSL variants: normal SSL and STARTTLS.</h2>
+<h2 id="Normal_SSL">Normal SSL</h2>
+<h2 id="The_old-style_SSL_(including_TLS_which_is_just_the_new_name_for_SSL)_has_a_special_port">The old-style SSL (including TLS, which is just the new name for SSL) has a special port:</h2>
+<ul>
+  <li>
+    <h2 id="POP3_via_SSL_port_995">POP3 via SSL: port 995</h2>
+  </li>
+  <li>
+    <h2 id="IMAP_via_SSL_port_993">IMAP via SSL: port 993</h2>
+  </li>
+  <li>
+    <h2 id="SMTP_via_SSL_port_465">SMTP via SSL: port 465</h2>
+  </li>
+</ul>
+<h2 id="On_Linux_you_can_contact_the_server_via">On Linux, you can contact the server via</h2>
+<pre></pre>
+<h2 id="openssl_s_client_-connect_hostnameport"><strong>openssl s_client -connect <em>hostname</em>:<em>port</em></strong></h2>
+<h2 id="You_should_see_output_about_the_SSL_handshake_and_the_certificate._Important_is_what_is_listed_as_CN._This_must_be_the_same_as_the_hostname_that_you_contacted_otherwise_the_certificate_is_not_valid_(or_you_need_to_use_another_hostname)._If_you_see_nothing_then_probably_the_server_does_not_support_SSL._After_that_you_can_have_the_same_protocol_exchange_as_with_netcat_on_standard_ports_as_listed_above.">You should see output about the SSL handshake and the certificate. Important is what is listed as "CN=". This must be the same as the hostname that you contacted, otherwise the certificate is not valid (or you need to use another hostname).<br>
+  If you see nothing, then probably the server does not support SSL.<br>
+  After that, you can have the same protocol exchange as with netcat on standard ports, as listed above.</h2>
+<h2 id="STARTTLS">STARTTLS</h2>
+<h2 id="STARTTLS_is_a_special_new_form_of_SSL_which_works_on_the_standard_ports_(e.g._port_143_for_IMAP)._You_can_contact_the_server_via_netcat_as_mentioned_above._If_you_see_STARTTLS_(for_IMAP_SMTP)_or_STLS_(for_POP)_listed_as_one_of_the_capabilities_the_server_should_support_STARTTLS._To_try_it_out_on_Linux_you_can_contact_the_server_via">STARTTLS is a special, new form of SSL, which works on the standard ports (e.g. port 143 for IMAP). You can contact the server via netcat as mentioned above. If you see "STARTTLS" (for IMAP, SMTP) or "STLS" (for POP) listed as one of the capabilities, the server should support STARTTLS.<br>
+  To try it out, on Linux, you can contact the server via</h2>
+<h2 id="sect2"> </h2>
+<h2 id="openssl_s_client_-connect_hostnameport_-starttls_proto">openssl s_client -connect <em>hostname</em>:<em>port</em> -starttls <em>proto</em></h2>
+<h2 id="...where_proto_is_imap_pop3_or_smtp._For_example">...where "proto" is <code>imap</code>, <code>pop3</code> or <code>smtp</code>. For example:</h2>
+<pre></pre>
+<h2 id="openssl_s_client_-connect_imap.example.com143_-starttls_imap"><strong>openssl s_client -connect <em>imap.example.com</em>:<em>143</em> -starttls <em>imap</em></strong></h2>
+<h2 id="You_should_get_the_same_response_as_described_above_for_openssl.">You should get the same response as described above for openssl.</h2>
+<h2 id="Configuration_file_format">Configuration file format</h2>
+<h2 id="Add_the_appropriate_port_and_socket_type_for_each_server_depending_on_protocol_and_SSL_support._For_example_for_IMAP_with_SSL">Add the appropriate port and socket type for each server, depending on protocol and SSL support. For example,<br>
+  for IMAP with SSL:</h2>
+<h2 id="sect3"> </h2>
+<h2 id="&lt;port>993&lt;port>">&lt;port&gt;993&lt;port&gt;</h2>
+<h2 id="&lt;socketType>SSL&lt;socketType>">&lt;socketType&gt;SSL&lt;/socketType&gt;</h2>
+<h2 id="for_IMAP_with_STARTTLS">for IMAP with STARTTLS:</h2>
+<h2 id="sect4"> </h2>
+<h2 id="&lt;port>143&lt;port>_&lt;socketType>STARTTLS&lt;socketType>">&lt;port&gt;143&lt;port&gt;<br>
+  &lt;socketType&gt;STARTTLS&lt;/socketType&gt;</h2>
+<h2 id="for_IMAP_without_any_SSL_(deprecated!)">for IMAP without any SSL (deprecated!):</h2>
+<h2 id="sect5"> </h2>
+<h2 id="&lt;port>143&lt;port>">&lt;port&gt;143&lt;port&gt;</h2>
+<h2 id="&lt;socketType>plain&lt;socketType>">&lt;socketType&gt;plain&lt;/socketType&gt;</h2>
+<h2 id="Use_SSL">Use SSL</h2>
+<h2 id="Please_do_not_submit_or_serve_any_configurations_without_SSL!_There's_no_reason_in_2010_why_users_still_need_to_read_mail_entirely_unprotected._If_you_are_an_ISP_and_think_the_server_load_is_too_high_try_adding_an_SSL_accelerator._They_are_cheap_and_widely_used._In_fact_even_most_freemail_(!)_providers_these_days_support_SSL_so_if_users_pay_you_money_for_ISP_service_that's_all_the_more_reason_to_give_them_proper_service._But_first_simply_try_to_enable_software_SSL_-_small_servers_may_be_fine_with_SSL_and_without_any_additional_installations.">Please do not submit or serve any configurations without SSL! There's no reason in 2010 why users still need to read mail entirely unprotected.<br>
+  If you are an ISP and think the server load is too high, try adding an SSL accelerator. They are cheap and widely used. In fact, even most freemail (!) providers these days support SSL, so if users pay you money for ISP service, that's all the more reason to give them proper service. But first simply try to enable software SSL - small servers may be fine with SSL and without any additional installations.</h2>
+<h2 id="Valid_certificate">Valid certificate</h2>
+<h2 id="Either_way_be_sure_to_use_a_valid_certificate">Either way, be sure to use a valid certificate:</h2>
+<ul>
+  <li>
+    <h2 id="issued_by_a_CA_recognized_by_Firefox_Thunderbird">issued by a CA recognized by Firefox / Thunderbird</h2>
+  </li>
+  <li>
+    <h2 id="not_expired">not expired</h2>
+  </li>
+  <li>
+    <h2 id="the_CN_in_the_cert_must_match_the_hostname_that_Thunderbird_contacts_and_that_is_listed_as_&lt;hostname>_in_the_configuration_file._If_they_don't_match_Thunderbird_must_assume_that_the_user_may_be_under_attack_otherwise_the_SSL_guarantees_no_longer_hold._Thunderbird_either_warns_the_user_or_ignores_the_server._(Note_that_you_can_get_certificates_for_free_these_days_for_example_from_startssl.com.)">the CN in the cert must match the hostname that Thunderbird contacts and that is listed as &lt;hostname&gt; in the configuration file. If they don't match, Thunderbird must assume that the user may be under attack, otherwise the SSL guarantees no longer hold. Thunderbird either warns the user or ignores the server. (Note that you can get certificates for free these days, for example from startssl.com.)</h2>
+  </li>
+</ul>
+<h2 id="Authentication">Authentication</h2>
+<h2 id="Probe_the_mail_server_as_explained_above_for_STARTTLS._If_you_see_CRAM-MD5_or_APOP_in_the_response_the_server_should_support_encrypted_passwords._If_you_only_see_AUTH_LOGIN_andor_PLAIN_or_no_AUTH_at_all_the_server_probably_does_not_support_secure_authentication._In_the_former_case_select_Encrypted_passwords_as_Authentication_method_(in_Thunderbird_Account_Settings_UI_incoming_server_and_SMTP_server)_and_test_whether_you_can_actually_log_in_with_a_real_account_(because_some_servers_are_unfortunately_broken_with_regards_to_authentication_often_due_to_a_wrong_or_misconfigured_SASL_installation)."><span class="external free">Probe the mail server, as explained above for STARTTLS.</span> If you see <code>CRAM-MD5</code> or <code>APOP</code> in the response, the server should support encrypted passwords. If you <em>only</em> see <code>AUTH</code> <code>LOGIN</code> and/or <code>PLAIN</code>, or no <code>AUTH</code> at all, the server probably does not support secure authentication. In the former case, select "Encrypted passwords" as "Authentication method" (in Thunderbird Account Settings UI, incoming server and SMTP server), and test whether you can actually log in with a real account (because some servers are unfortunately broken with regards to authentication, often due to a wrong or misconfigured SASL installation).</h2>
+<h2 id="Configuration_file_format_2">Configuration file format</h2>
+<h2 id="In_the_configuration_file_for_each_IMAP_POP_and_SMTP_server_you_need_to_specify_the_authentication_method._For_plaintext_passwords">In the configuration file, for each IMAP, POP and SMTP server, you need to specify the authentication method.<br>
+  <br>
+  For plaintext passwords:</h2>
+<h2 id="sect6"> </h2>
+<h2 id="&lt;authentication>password-cleartext&lt;authentication>">&lt;authentication&gt;password-cleartext&lt;/authentication&gt;</h2>
+<h2 id="For_CRAM-MD5">For CRAM-MD5:</h2>
+<h2 id="sect7"> </h2>
+<h2 id="&lt;authentication>password-encrypted&lt;authentication>">&lt;authentication&gt;password-encrypted&lt;/authentication&gt;</h2>
+<h2 id="Discouraged_settings_(SMTP_only)_If_the_SMTP_server_can_only_be_used_after_checking_incoming_mail_please_use"><br>
+  Discouraged settings (SMTP only):<br>
+  If the SMTP server can only be used after checking incoming mail, please use</h2>
+<h2 id="sect8"> </h2>
+<h2 id="&lt;authentication>smtp-after-pop&lt;authentication>">&lt;authentication&gt;smtp-after-pop&lt;/authentication&gt;</h2>
+<h2 id="Note_that_RFC_4409_disallows_that_and_requires_the_customer-facing_SMTP_server_to_support_proper_authentication_via_AUTH._If_the_SMTP_server_can_only_be_used_within_the_ISP's_network_and_requires_no_authentication_use">Note that RFC 4409 disallows that and requires the customer-facing SMTP server to support proper authentication via AUTH.<br>
+  If the SMTP server can only be used within the ISP's network, and requires no authentication, use:</h2>
+<h2 id="sect9"> </h2>
+<h2 id="&lt;authentication>client-IP-address&lt;authentication>">&lt;authentication&gt;client-IP-address&lt;/authentication&gt;</h2>
+<h2 id="or_if_it_requires_authentication_in_addition_to_the_user_being_in_the_ISP_network_use_e.g.">or, if it requires authentication in addition to the user being in the ISP network, use e.g.:</h2>
+<h2 id="sect10"> </h2>
+<h2 id="&lt;authentication>password-cleartext&lt;authentication>_2">&lt;authentication&gt;password-cleartext&lt;/authentication&gt;</h2>
+<h2 id="&lt;restriction>client-IP-address&lt;restriction>">&lt;restriction&gt;client-IP-address&lt;/restriction&gt;</h2>
+<h2 id="However_that_means_that_users_on_the_road_or_in_the_office_are_unable_to_send_mail_which_is_a_real_problem_for_many_of_our_users._This_violates_RFC_4409_as_well_and_is_an_outdated_configuration._Please_try_find_a_configuration_that_works_in_all_cases_for_the_sake_of_the_users.">However, that means that users on the road or in the office are unable to send mail, which is a real problem for many of our users. This violates RFC 4409 as well and is an outdated configuration. Please try find a configuration that works in all cases, for the sake of the users.</h2>
+<h2 id="Please_support_MD5_passwords">Please support MD5 passwords</h2>
+<h2 id="Please_support_authentication_with_CRAM-MD5._It_is_simple_to_implement_and_to_set_up_and_you_can_still_use_RADIUS_or_a_database_that_stores_passwords_in_plaintext_so_you_don't_need_to_make_changes_to_your_mail_server_or_authentication_infrastructure_apart_from_installing_some_software_and_configuring_it_correctly._CRAM-MD5_is_particularly_important_when_no_SSL_is_used_Never_make_users_send_their_passwords_in_plaintext_over_the_network!_(Not_even_in_your_ISP_network.)_We_warn_users_in_the_Mail_Account_Creation_dialog_about_such_insecure_configurations_and_we_reserve_the_right_to_block_them_in_the_future._As_an_ISP_you_should_ideally_store_passwords_in_encrypted_format_which_removes_the_risk_of_mass_password_theft_(and_possibly_reuse_on_other_sites)_if_somebody_hacks_your_servers._You_can_still_support_plaintext_passwords_in_this_case_and_encrypt_passwords_on_the_fly_before_comparing._(Users_who_use_plaintext_passwords_would_still_be_somewhat_exposed_but_at_least_you_don't_have_the_risk_of_the_whole_plaintext_password_database_being_stolen.)_You_can_use_both_plaintext_and_encrypted_authentication_transmission_with_plaintext_or_encrypted_password_databases_-_the_two_issues_are_independent.">Please support authentication with CRAM-MD5. It is simple to implement, and to set up, and you can still use RADIUS or a database that stores passwords in plaintext, so you don't need to make changes to your mail server or authentication infrastructure apart from installing some software and configuring it correctly. CRAM-MD5 is particularly important when no SSL is used: Never make users send their passwords in plaintext over the network! (Not even in your ISP network.) We warn users in the Mail Account Creation dialog about such insecure configurations, and we reserve the right to block them in the future.<br>
+  <br>
+  <span class="external free">As an ISP, you should ideally store passwords in encrypted format, which removes the risk of mass password theft (and possibly reuse on other sites) if somebody hacks your servers. You can still support plaintext passwords in this case, and encrypt passwords on the fly before comparing. (Users who use plaintext passwords would still be somewhat exposed, but at least you don't have the risk of the whole plaintext password database being stolen.) You can use both plaintext and encrypted authentication transmission with plaintext or encrypted password databases - the two issues are independent.</span></h2>
+<h2 id="Username">Username</h2>
+<h2 id="If_the_user's_IMAP_login_name_is_the_same_as_his_email_address_(for_example_if_fredexample.com_is_the_login_name)_add">If the user's IMAP login name is the same as his email address (for example, if "<a class="link-mailto" href="mailto:fred@example.com" rel="freelink">fred@example.com</a>" is the login name), add:</h2>
+<h2 id="sect11"> </h2>
+<h2 id="&lt;username>EMAILADDRESS&lt;username>">&lt;username&gt;%EMAILADDRESS%&lt;/username&gt;</h2>
+<h2 id="Note_Use_EMAILADDRESS_as_literal._Thunderbird_will_replace_it_with_the_email_address_that_the_user_entered._Same_for_EMAILLOCALPART_and_other_placeholders."><span class="external free">Note: Use</span> %EMAILADDRESS% as literal. Thunderbird will replace it with the email address that the user entered. Same for %EMAILLOCALPART% and other placeholders.</h2>
+<h2 id="If_the_login_name_is_the_same_as_the_first_segment_before_the_of_the_email_address_(for_example_fred_for_fredexample.com)_use"><span class="external free">If the login name is the same as the first segment before the @ of the email address (for example, "fred" for "<a class="link-mailto" href="mailto:fred@example.com" rel="freelink">fred@example.com</a>"), use:</span></h2>
+<h2 id="sect12"> </h2>
+<h2 id="&lt;username>EMAILLOCALPART&lt;username>">&lt;username&gt;%EMAILLOCALPART%&lt;/username&gt;</h2>
+<h2 id="Aliases_or_username_not_part_of_email_address">Aliases, or username not part of email address</h2>
+<h2 id="Note_that_the_above_must_be_true_for_any_email_address_that_the_user_would_set_up_-_even_for_aliases._You_can_ignore_aliases_like_info_if_that's_an_alias_for_fred_(or_both_fred_and_wilma)_and_Fred_would_set_up_fredexample.com_in_Thunderbird_not_info._If_however_Fred_can_set_up_heroexample.com_as_alias_for_fredexample.com_and_neither_hero_nor_heroexample.com_would_work_as_login_name_on_your_IMAP_server_you_need_to_set_up_a_lookup_of_alias_->_username_on_your_autoconfig_server._So_if_you_get_a_request_for_&lt;httpautoconfig.example.commailc...roexample.com>_your_autconfig_server_must_have_a_script_which_responds_to_mailconfig-v1.1.xml_and_returns_the_concrete_username_for_example"><span class="external free">Note that the above must be true for any email address that the user would set up - even for aliases.<br>
+  <br>
+  You can ignore aliases like info@, if that's an alias for fred@ (or both fred@ and wilma@) and Fred would set up <a class="link-mailto" href="mailto:fred@example.com" rel="freelink">fred@example.com</a> in Thunderbird, not info@.<br>
+  <br>
+  If, however, Fred can set up <a class="link-mailto" href="mailto:hero@example.com" rel="freelink">hero@example.com</a> as alias for <a class="link-mailto" href="mailto:fred@example.com" rel="freelink">fred@example.com</a>, and neither "hero" nor "<a class="link-mailto" href="mailto:hero@example.com" rel="freelink">hero@example.com</a>" would work as login name on your IMAP server, you need to set up a lookup of alias -&gt; username on your autoconfig server. So, if you get a request for &lt;<a class="external" href="http://autoconfig.example.com/mail/config-v1.1.xml?emailaddress=hero@example.com" rel="freelink">http://autoconfig.example.com/mail/c...ro@example.com</a>&gt;, your autconfig server must have a script which responds to /mail/config-v1.1.xml and returns the concrete username, for example:</span></h2>
+<h2 id="sect13"> </h2>
+<h2 id="&lt;username>fred&lt;username>">&lt;username&gt;fred&lt;/username&gt;</h2>
+<h2 id="..._(or_&lt;username>fredexample.com&lt;username>_as_appropriate)_for_heroexample.com._This_is_the_only_way_to_enable_automatic_configuration_without_users_having_to_remember_what_their_primary_login_name_was_which_is_a_serious_problem_in_practical_experience._Even_if_you_have_told_them_all_the_necessary_information_in_your_welcome_letter_they_usually_cannot_find_the_letter._That's_exactly_where_autoconfiguration_tries_to_help.">... (or &lt;username&gt;<a class="link-mailto" href="mailto:fred@example.com" rel="freelink">fred@example.com</a>&lt;/username&gt;, as appropriate) for <a class="link-mailto" href="mailto:hero@example.com" rel="freelink">hero@example.com</a>. This is the only way to enable automatic configuration without users having to remember what their primary login name was, which is a serious problem in practical experience. Even if you have told them all the necessary information in your welcome letter, they usually cannot find the letter. That's exactly where autoconfiguration tries to help.</h2>
+<h2 id="Enable_visiturl">Enable visiturl</h2>
+<h2 id="Some_providers_do_not_provide_IMAP_or_POP_service_by_default_but_require_it_to_be_enabled_via_a_web_UI._If_that_is_the_case_add_the_URL_that_a_logged-in_user_would_use_into_this_field_and_the_application_can_prompt_the_user_to_visit_it.">Some providers do not provide IMAP or POP service by default, but require it to be enabled via a web UI. If that is the case, add the URL that a logged-in user would use into this field, and the application can prompt the user to visit it.</h2>
+<h2 id="This_is_not_yet_supported_by_Thunderbird_3.1_but_should_be_in_the_future_so_please_add_this_critical_information_where_it_applies.">This is <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=586364" title="https://bugzilla.mozilla.org/show_bug.cgi?id=586364">not yet supported</a> by Thunderbird 3.1, but should be in the future, so please add this critical information where it applies.</h2>
+<h2 id="If_you_are_an_ISP_please_by_all_means_avoid_this._It's_one_of_those_walls_against_which_users_run_the_hard_way.">If you are an ISP, please by all means avoid this. It's one of those "walls" against which users run the hard way.</h2>
+<h2 id="Documentation_URL">Documentation URL</h2>
+<h2 id="If_the_configuration_is_(partially)_based_on_a_help_webpage_of_the_ISP_that_describes_the_configuration_that_end_users_should_use_you_can_record_its_URL_here._You_may_add_several_of_them_as_several_elements._It_is_for_informational_purposes_only_and_mainly_for_the_maintenance_of_the_config_file_the_client_currently_does_not_use_them_at_all.">If the configuration is (partially) based on a help webpage of the ISP that describes the configuration that end users should use, you can record its URL here. You may add several of them, as several elements. It is for informational purposes only and mainly for the maintenance of the config file, the client currently does not use them at all.</h2>
+<h2 class="syntaxbox" id="If_your_URL_contains_ampersands_()_please_remember_to_replace_them_with_HTML_entities_(amp)._For_example">If your URL contains ampersands (<code>&amp;</code>), please remember to replace them with HTML entities (<code>&amp;amp;</code>). For example:</h2>
+<h2 id="sect14"> </h2>
+<h2 id="&lt;documentation_urlhttpexample.comhelp.phpclientthunderbirdamplangen>">&lt;<span class="start-tag">documentation</span><span class="attribute-name"> url</span>="http://example.com/help.php?client=thunderbird<span style="color: #b22222;"><strong>&amp;amp;</strong></span>lang=en"/&gt;</h2>
+<h2 class="syntaxbox" id="Otherwise_your_XML_file_will_be_incorrect_and_Thunderbird_will_neither_be_able_to_parse_it_nor_to_return_any_error_message.">Otherwise your XML file will be incorrect and Thunderbird will neither be able to parse it, nor to return any error message.</h2>

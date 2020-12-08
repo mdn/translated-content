@@ -1,0 +1,48 @@
+---
+title: 建構付費 App
+slug: Archive/Mozilla/Marketplace/Monetization/App_payments_guide
+translation_of: Archive/Marketplace/Monetization/App_payments_guide
+---
+<div class="summary">
+ <p style="margin: 0px 0px 1.286em; padding: 0px; line-height: 1.5em;">Firefox Marketplace 的消費者有兩種需要付款的情形：<br>
+  1). 購買 App 需付款 (付費 App)<br>
+  2). 在安裝 App 之後另外購買某樣東西需付款；即 App 內付款機制 (In-app payment)<br>
+  本文即提供付費 App 所需的程式碼與作業流程，另外將有另一篇文章說明 <a href="https://developer.mozilla.org/en-US/Marketplace/Monetization/In-app_payments">In-app payments</a>。</p>
+</div>
+<h2 id="選擇封裝方式_(Packaged_或_Hosted)"><strong>選擇封裝方式</strong> (Packaged <strong>或</strong> Hosted)</h2>
+<p>在了解付款方式之前，先決定自己的 App 應該是封裝式 (Packaged)，或架設/托管式 (Hosted)。如果想處理為封裝式 App，就必須遵守內容安全政策 (Content Security Policy，CSP)。可參閱下列說明以進一步了解。</p>
+<ul>
+ <li><a href="https://developer.mozilla.org/zh-TW/Apps/Developing/Packaged_apps/Packaged_apps">封裝式 App</a>：了解封裝式與架設/托管式 App 之間的不同。其中也初步說明封裝式 App 所需的內容安全政策。</li>
+ <li><a href="https://wiki.mozilla.org/Apps/Security#Default_CSP_policy">內容安全政策 (CSP)</a>：解釋 CSP 之含意。</li>
+</ul>
+<h2 id="建構付費_App"><strong>建構付費 A</strong>pp</h2>
+<div>
+ <p>任何 App 都能設定為付費 App，也都能是封裝式或架設/托管式 App；完全不需特別的權限。在將 App 提交到 Firefox Marketplace 時，只要勾選使其成為付費 App 即可。但開發者需讓 App 驗證自己的銷售收據，才能確認收到帳款。接下來就是應進行的步驟。</p>
+ <h3 id="將_installs_allowed_from_添增到_manifest.webapp"><strong>將</strong> installs_allowed_from <strong>添增到</strong> manifest.webapp</h3>
+ <p>首先必須將 <code>installs_allowed_from</code> 欄位添增到 <a href="/en-US/Apps/Developing/Manifest">App 的 manifest 檔案</a>中。另給予如下的 Firefox Marketplace 網址：</p>
+ <pre class="brush: js">"installs_allowed_from": [ "https://marketplace.firefox.com" ]</pre>
+ <p>這個步驟屬於收據驗證作業的一部分，才能讓系統確認 App 來自於收款的商店。</p>
+</div>
+<h3 id="驗證收據">驗證收據</h3>
+<p>只要從 Marketplace 售出 App 之後，隨即會產生該筆銷售的數位收據。開發者應該為自己的 App 植入程式碼，讓 App 執行時能一併驗證銷售收據。我們強烈建議，但不強制驗證收據。此查核作業可避免消費者安裝了 App 卻未付費。</p>
+<p>Mozilla 另負責維護 JavaScript 輔助函式庫 (Helper)，即所謂的 <a href="https://github.com/mozilla/receiptverifier" title="https://github.com/mozilla/receiptverifier">receiptverifier</a>，只要少量程式碼即可驗證收據。只要將下列 <code>receiptverifier</code> 函式庫加入 App 即可：</p>
+<ul>
+ <li><a href="https://github.com/mozilla/receiptverifier/blob/master/receiptverifier.js" style="line-height: 1.572;">receiptverifier.js</a></li>
+ <li><a href="https://github.com/mozilla/receiptverifier/blob/master/receiptverifier-ui.js">receiptverifier-ui.js</a></li>
+</ul>
+<p>再將下列程式碼加入 App (更改內文以符合自己的 App)，即可驗證收據：</p>
+<pre class="brush: js" style="font-size: 14px;">mozmarket.receipts.Prompter({
+  storeURL: "https://marketplace.firefox.com/app/your-app",
+  supportHTML: '&lt;a href="mailto:you@yourapp.com"&gt;email you@yourapp.com&lt;/a&gt;',
+  verify: true
+});</pre>
+<p>正常只要啟動 App 就會開始驗證收據。如果確認收據有效，即可釋放 App 的資源；反之可停止 App 執行。</p>
+<div class="note">
+ <p><strong>注意：</strong>若要進一步建立自己的收據驗證器，可參閱<a href="/en-US/Marketplace/Monetization/Validating_a_receipt">驗證收據</a>。</p>
+</div>
+<h2 id="另可參閱">另可參閱</h2>
+<ul>
+ <li><a href="https://hacks.mozilla.org/2013/02/building-a-paid-app-for-firefox-os" title="https://hacks.mozilla.org/2013/02/building-a-paid-app-for-firefox-os">建構 Firefox OS 的付費 App</a>：內有更多付費 App 相關資訊的連結。</li>
+ <li><a href="https://github.com/mozilla/receiptverifier" title="https://github.com/mozilla/receiptverifier">receiptverifier</a> 函式庫：使用上述函式庫的說明文件與範例。</li>
+ <li><a href="https://wiki.mozilla.org/Apps/WebApplicationReceipt" title="https://wiki.mozilla.org/Apps/WebApplicationReceipt">Web App 收據</a>：數位收據的詳細說明資訊。</li>
+</ul>

@@ -1,0 +1,28 @@
+---
+title: Про скриптосумісні інтерфейси
+slug: Interfaces/Про_скриптосумісні_інтерфейси
+tags:
+  - Interface
+  - Interfaces
+  - 'Interfaces:Scriptable'
+  - XPCOM
+  - Довідка з XPCOM API
+translation_of: Interfaces/About_Scriptable_Interfaces
+---
+<h2 id="Status_of_this_document" name="Status_of_this_document">Статус цього документа</h2>
+
+<p>Це лише початковий та неповний документ. Більшість наведених відомостей ґрунтується на <a href="http://www.mozilla.org/scriptable/">http://www.mozilla.org/scriptable/</a> й статті <a href="/uk/docs/Mozilla/Tech/XPCOM/Guide/Creating_components">Creating XPCOM Components</a>.</p>
+
+<h2 id="Scriptable_Interfaces" name="Scriptable_Interfaces">Скриптосумісні інтерфейси</h2>
+
+<p><a href="/en-US/docs/Creating_XPCOM_Components/An_Overview_of_XPCOM#Interfaces">Інтерфейси</a> дозволяють компонентам XPCOM виставляти свою функціональність назовні, водночас приховуючи деталі реалізації компонента. Інтерфейси пишуться мовою опису інтерфейсів <a href="/en-US/docs/XPIDL">XPIDL</a>.</p>
+
+<p>Якщо інтерфейс позначено як скриптосумісний, це свідчить про те, що на компоненти, які надають цей інтерфейс, можна посилатися (через той інтерфейс) зі скриптів (як-от <a href="/uk/docs/JavaScript">JavaScript</a>), а також те, що нові компоненти можна створювати шляхом реалізації таких інтерфейсів скриптовими мовами.</p>
+
+<h2 id="XPConnect" name="XPConnect">XPConnect</h2>
+
+<p><a href="/uk/docs/XPConnect">XPConnect</a> — це технологія, що дозволяє використовувати/реалізовувати скриптосумісні інтерфейси у скриптах JavaScript. Жодної іншої скриптової мови XPConnect не підтримує.</p>
+
+<h2 id="Python" name="Python">Python</h2>
+
+<p>Існує розширення {{Source("extensions/python")}}, що наводить мости між <a href="/uk/docs/XPCOM">XPCOM</a> та <a href="http://python.org/">Python</a>, уможливлюючи використання/реалізацію скриптосумісних інтерфейсів мовою Python.</p>

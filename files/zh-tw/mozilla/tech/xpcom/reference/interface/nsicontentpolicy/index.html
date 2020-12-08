@@ -1,0 +1,491 @@
+---
+title: nsIContentPolicy
+slug: Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPolicy
+translation_of: Archive/Mozilla/nsIContentPolicy
+---
+<p><font><font>{{IFSummaryStart（“DOM /鹼/ nsIContentPolicy.idl”，“編寫腳本”）}}接口用於實現內容策略的機制。</font><font>這個接口的實現可以被用來控制各種類型的外的線的內容，或者某些類型的內聯內容的處理的負荷。{{IFSummaryEnd（“nsIContentPolicyBase”，42，“1.0”）}}</font></font></p>
+
+<p><font><font>可以觀察到，正在通過實施{{接口（“nsIContentPolicy”）}}加載到瀏覽器中的內容。</font><font>如果你正在開發一個內容感知的插件（攔截廣告或改變內容的外觀，例如）該接口是非常有用的，或者如果你想停止或允許用戶瀏覽的網址。</font></font></p>
+
+<p><font><font>{{WarningStart（）}}不要阻塞調用者在你的實施方式{{manch（“shouldLoad”）}}或{{manch（“為ShouldProcess”）}}（例如，通過啟動一個對話框，以提示用戶東西）。“）{{WarningEnd（）}}</font></font></p>
+
+<div class="note">
+<p><strong><font><font>注：</font></font></strong><font><font>在現實中，很多這種接口在{{接口（“nsIContentPolicyBase”）}}接口定義，但現在，直到有人有時間來拆東西記錄在這裡。</font></font></p>
+</div>
+
+<h2 id="Method_overview" name="Method_overview"><font><font><font><font>方法概述</font></font></font></font></h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td><code>short <a href="#shouldLoad()">shouldLoad</a>(in unsigned long aContentType, in nsIURI aContentLocation, in nsIURI aRequestOrigin, in nsISupports aContext, in ACString aMimeTypeGuess, in nsISupports aExtra, in nsIPrincipal aRequestPrincipal);</code></td>
+  </tr>
+  <tr>
+   <td><code>short <a href="#shouldProcess()">shouldProcess</a>(in unsigned long aContentType, in nsIURI aContentLocation, in nsIURI aRequestOrigin, in nsISupports aContext, in ACString aMimeType, in nsISupports aExtra, in nsIPrincipal aRequestPrincipal);</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Constants" name="Constants"><font><font><font><font>常量</font></font></font></font></h2>
+
+<h3 id="內容類型"><font><font>內容類型</font></font></h3>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header"><font><font>不變</font></font></td>
+   <td class="header"><font><font><font><font>值</font></font></font></font></td>
+   <td class="header"><font><font><font><font>描述</font></font></font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_OTHER</code></td>
+   <td><code>1</code></td>
+   <td><font><font>指示內容，其類型是未知的，或者是不感興趣的一個有限的使用情況之外。</font><font>在一般情況下，你應該盡量不要使用這種類型的，除非沒有其他人是合適的。</font><font>{{gecko_minversion_inline（“1.8”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_SCRIPT</code></td>
+   <td><code>2</code></td>
+   <td><font><font>表示的可執行</font></font><code>script</code><font><font>（例如JavaScript）。</font><font>{{gecko_minversion_inline（“1.8”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_IMAGE</code></td>
+   <td><code>3</code></td>
+   <td><font><font><font><font>指示</font></font></font></font><code>image</code><font><font><font><font>（例如，{{HTMLElement的（“IMG”）}}的元素）。</font></font></font><font><font><font>{{gecko_minversion_inline（“1.8”）}}</font></font></font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_STYLESHEET</code></td>
+   <td><code>4</code></td>
+   <td><font><font>指示</font></font><code>stylesheet</code><font><font>（例如，{{HTMLElement的（“風格”）}}的元素）。</font><font>{{gecko_minversion_inline（“1.8”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_OBJECT</code></td>
+   <td><code>5</code></td>
+   <td><font><font>代表一個普通</font></font><code>object</code><font><font>（插件，處理內容通常這一類下降）。</font><font>{{gecko_minversion_inline（“1.8”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_DOCUMENT</code></td>
+   <td><code>6</code></td>
+   <td><font><font>表示DOM {{domxref（“文件”）}}在頂層（即，直接在瀏覽器標籤）。</font><font>{{gecko_minversion_inline（“1.8”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_SUBDOCUMENT</code></td>
+   <td><code>7</code></td>
+   <td>
+    <p><font><font>表示包含在另一個一{{domxref（“文件”）}} </font></font><code>document</code><font><font>（</font><font>例如，{{HTMLElement的（“IFRAME”）}}和{{HTMLElement的（“幀”）}}的元素）。</font><font>{{gecko_minversion_inline（“1.8”）}}</font></font></p>
+
+    <div class="note">
+    <p><strong><font><font>注：</font></font></strong><font><font>壁虎使用</font></font><code>TYPE_INTERNAL_FRAME</code><font><font>，並</font></font><code>TYPE_INTERNAL_IFRAME</code><font><font>以內部辨別其差異。</font><font>這些類型映射到</font></font><code>TYPE_SUBDOCUMENT</code><font><font>被傳遞到內容政策實施前，不應外壁虎代碼中使用。</font><font>{{gecko_minversion_inline（41）}}</font></font></p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>TYPE_REFRESH</code></td>
+   <td><code>8</code></td>
+   <td>
+    <p><font><font>指示定時刷新。</font></font></p>
+
+    <p><font><font>{{manch（“shouldLoad”）}}將永遠不會得到這個，因為它並不代表內容被加載（通過刷新觸發的實際負載將通過{{manch（“shouldLoad”）}}如預期）。</font></font></p>
+    <font><font>{{manch（“為ShouldProcess”）}}將收到此為，例如{{HTMLElement的（“元”）}}刷新元件和HTTP刷新頭。</font><font>{{gecko_minversion_inline（“1.8”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_XBL</code></td>
+   <td><code>9</code></td>
+   <td><font><font>指示XBL綁定請求，觸發或者通過{{cssxref（“ - MOZ結合”）}} CSS屬性或{{domxref（“Document.addBinding（）”）}}方法。</font><font>{{gecko_minversion_inline（“1.8”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_PING</code></td>
+   <td><code>10</code></td>
+   <td><font><font>表示通過在{{HTML元素（“A”）}}使用元素{{htmlattrxref（“平”，“一”）}}屬性的點擊觸發的平。</font><font>{{gecko_minversion_inline（“1.9”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_XMLHTTPREQUEST</code></td>
+   <td><code>11</code></td>
+   <td><font><font>表示{{domxref（“XMLHttpRequest的”）}}。</font><font>也用於{{domxref（“Document.load（）”）}} {{gecko_minversion_inline（“1.9”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_OBJECT_SUBREQUEST</code></td>
+   <td><code>12</code></td>
+   <td><font><font>表示由一個插件的請求。</font><font>{{gecko_minversion_inline（“1.9”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_DTD</code></td>
+   <td><code>13</code></td>
+   <td><font><font>表示通過XML加載的DTD </font></font><code>document</code><font><font>。</font><font>{{gecko_minversion_inline（“1.9”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_FONT</code></td>
+   <td><code>14</code></td>
+   <td><font><font>指示經由{{cssxref（“@字體面”）}}規則加載的字體。</font><font>{{gecko_minversion_inline（“1.9.1”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_MEDIA</code></td>
+   <td><code>15</code></td>
+   <td><font><font>表示視頻或音頻負載。</font><font>{{gecko_minversion_inline（“1.9.1”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_WEBSOCKET</code></td>
+   <td><code>16</code></td>
+   <td><font><font><font><font>表示</font></font></font></font><a href="/en-US/docs/Web/API/WebSocket_API"><font><font><font><font>的WebSocket的</font></font></font></font></a><font><font><font><font>負荷。</font></font></font><font><font><font>{{gecko_minversion_inline（“11”）}}</font></font></font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_CSP_REPORT</code></td>
+   <td><code>17</code></td>
+   <td><font><font>表示一個</font></font><a href="/en-US/docs/Web/Security/CSP"><font><font>內容安全策略</font></font></a><font><font>報告。</font><font>{{gecko_minversion_inline（“20”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_XSLT</code></td>
+   <td><code>18</code></td>
+   <td><font><font>表示一個樣式表轉換。</font><font>{{gecko_minversion_inline（“27”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_BEACON</code></td>
+   <td><code>19</code></td>
+   <td><font><font>表示信標後。</font><font>{{gecko_minversion_inline（“30”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_FETCH</code></td>
+   <td><font><font><font><font>20</font></font></font></font></td>
+   <td><font><font>指示通過發起的負載的{{domxref（“GlobalFetch.fetch（）”）}}方法，其可作為在全球都{{domxref（“窗口”）}}和{{domxref（“工人”）} }上下文。</font><font>{{gecko_minversion_inline（36）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_IMAGESET</code></td>
+   <td><font><font><font><font>21</font></font></font></font></td>
+   <td><font><font>指示要加載的{{HTML元素（“IMG”）}}（與該{{htmlattrxref（“srcset”，“IMG”）}}屬性或{{HTMLElement的（“圖片”）}}。{{gecko_minversion_inline（請求36）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_WEB_MANIFEST</code></td>
+   <td><font><font><font><font>22</font></font></font></font></td>
+   <td><font><font>指示要加載一個Web清單的請求。</font><font>{{gecko_minversion_inline（41）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>TYPE_INTERNAL_SCRIPT</code></td>
+   <td><font><font><font><font>23</font></font></font></font></td>
+   <td>
+    <p><font><font>用於表示使用{{HTMLElement的（“腳本”）}}元素加載的腳本的內部常數。</font><font>{{gecko_minversion_inline（41）}}</font></font></p>
+
+    <div class="warning">
+    <p><strong><font><font>重要說明：</font></font></strong><font><font>此類型映射到</font></font><code>TYPE_SCRIPT</code><font><font>傳遞給內容政策實施之前，不宜在室外的Gecko內核代碼中使用。</font></font></p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>TYPE_INTERNAL_WORKER</code></td>
+   <td><font><font><font><font>24</font></font></font></font></td>
+   <td>
+    <p><font><font>用於表示通過專用工人加載的腳本的內部常數。</font><font>{{gecko_minversion_inline（41）}}</font></font></p>
+
+    <div class="warning">
+    <p><strong><font><font><font><font>重要說明：</font></font></font></font></strong><font><font><font><font>此類型映射到</font></font></font></font><code>TYPE_SCRIPT</code><font><font><font><font>傳遞給內容政策實施之前，不宜在室外的Gecko內核代碼中使用。</font></font></font></font></p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>TYPE_INTERNAL_SHARED_WORKER</code></td>
+   <td><font><font><font><font>25</font></font></font></font></td>
+   <td>
+    <p><font><font>用於表示通過共享工人加載的腳本的內部常數。</font><font>{{gecko_minversion_inline（41）}}</font></font></p>
+
+    <div class="warning">
+    <p><strong><font><font><font><font>重要說明：</font></font></font></font></strong><font><font><font><font>此類型映射到</font></font></font></font><code>TYPE_SCRIPT</code><font><font><font><font>傳遞給內容政策實施之前，不宜在室外的Gecko內核代碼中使用。</font></font></font></font></p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>TYPE_INTERNAL_EMBED</code></td>
+   <td><font><font><font><font>26</font></font></font></font></td>
+   <td>
+    <p><font><font>內部常量用於表示從{{HTML元素（“嵌入”）}}元素加載的內容。</font><font>{{gecko_minversion_inline（41）}}</font></font></p>
+
+    <div class="warning">
+    <p><strong><font><font><font><font>重要說明：</font></font></font></font></strong><font><font><font><font>此類型映射到</font></font></font></font><code>TYPE_OBJECT</code><font><font><font><font>傳遞給內容政策實施之前，不宜在室外的Gecko內核代碼中使用。</font></font></font></font></p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>TYPE_INTERNAL_OBJECT</code></td>
+   <td><font><font><font><font>27</font></font></font></font></td>
+   <td>
+    <p><font><font>內部常量用於表示從{{HTMLElement的（“對象”）}}元素加載的內容。</font><font>{{gecko_minversion_inline（41）}}</font></font></p>
+
+    <div class="warning">
+    <p><strong><font><font><font><font>重要說明：</font></font></font></font></strong><font><font><font><font>此類型映射到</font></font></font></font><code>TYPE_OBJECT</code><font><font><font><font>傳遞給內容政策實施之前，不宜在室外的Gecko內核代碼中使用。</font></font></font></font></p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>TYPE_INTERNAL_FRAME</code></td>
+   <td><font><font><font><font>28</font></font></font></font></td>
+   <td>
+    <p><font><font>內部常量用於表示從{{HTML元素（“幀”）}}元素加載的內容。</font><font>{{gecko_minversion_inline（41）}}</font></font></p>
+
+    <div class="warning">
+    <p><strong><font><font><font><font>重要說明：</font></font></font></font></strong><font><font><font><font>此類型映射到</font></font></font></font><code>TYPE_SUBDOCUMENT</code><font><font><font><font>傳遞給內容政策實施之前，不宜在室外的Gecko內核代碼中使用。</font></font></font></font></p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>TYPE_INTERNAL_IFRAME</code></td>
+   <td><font><font><font><font>29</font></font></font></font></td>
+   <td>
+    <p><font><font>內部常量用於表示從{{HTML元素（“IFRAME”）}}元素加載的內容。</font><font>{{gecko_minversion_inline（41）}}</font></font></p>
+
+    <div class="warning">
+    <p><strong><font><font><font><font>重要說明：</font></font></font></font></strong><font><font><font><font>此類型映射到</font></font></font></font><code>TYPE_SUBDOCUMENT</code><font><font><font><font>傳遞給內容政策實施之前，不宜在室外的Gecko內核代碼中使用。</font></font></font></font></p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>TYPE_INTERNAL_AUDIO</code></td>
+   <td><font><font><font><font>30</font></font></font></font></td>
+   <td>
+    <p><font><font>內部常量用於表示從{{HTML元素（“音頻”）}}元素加載的內容。</font><font>{{gecko_minversion_inline（41）}}</font></font></p>
+
+    <div class="warning">
+    <p><strong><font><font><font><font>重要說明：</font></font></font></font></strong><font><font><font><font>此類型映射到</font></font></font></font><code>TYPE_MEDIA</code><font><font><font><font>傳遞給內容政策實施之前，不宜在室外的Gecko內核代碼中使用。</font></font></font></font></p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>TYPE_INTERNAL_VIDEO</code></td>
+   <td><font><font><font><font>31</font></font></font></font></td>
+   <td>
+    <p><font><font>內部常量用於表示從{{HTML元素（“視頻”）}}元素加載的內容。</font><font>{{gecko_minversion_inline（41）}}</font></font></p>
+
+    <div class="warning">
+    <p><strong><font><font><font><font>重要說明：</font></font></font></font></strong><font><font><font><font>此類型映射到</font></font></font></font><code>TYPE_MEDIA</code><font><font><font><font>傳遞給內容政策實施之前，不宜在室外的Gecko內核代碼中使用。</font></font></font></font></p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>TYPE_INTERNAL_TRACK</code></td>
+   <td><font><font><font><font>32</font></font></font></font></td>
+   <td>
+    <p><font><font>內部常量用於表示從{{HTML元素（“軌道”）}}元素加載的內容。</font><font>{{gecko_minversion_inline（41）}}</font></font></p>
+
+    <div class="warning">
+    <p><strong><font><font><font><font>重要說明：</font></font></font></font></strong><font><font><font><font>此類型映射到</font></font></font></font><code>TYPE_MEDIA</code><font><font><font><font>傳遞給內容政策實施之前，不宜在室外的Gecko內核代碼中使用。</font></font></font></font></p>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td><code>REJECT_REQUEST</code></td>
+   <td><code>-1</code></td>
+   <td><font><font>從{{manch（“shouldLoad”）}}或{{manch（“為ShouldProcess”）}}返回如果負載或處理請求是基於所述請求的細節拒絕。</font><font>{{gecko_minversion_inline（“1.8”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>REJECT_TYPE</code></td>
+   <td><code>-2</code></td>
+   <td>
+    <p><font><font>從{{manch（“shouldLoad”）}}或{{manch（“為ShouldProcess”）}}返回如果負載/過程僅僅基於（上述標誌）它的類型拒絕。</font></font></p>
+    <font><font>{{注（“這甩只適用於該服務器上的當前請求，而不是同一類型的未來需求。”）}} {{gecko_minversion_inline（“1.8”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>REJECT_SERVER</code></td>
+   <td><code>-3</code></td>
+   <td>
+    <p><font><font>從{{manch（“shouldLoad”）}}或{{manch（“為ShouldProcess”）}}如果負載/過程是基於在服務器上拒絕它託管在或從請求（返回</font></font><code>aContentLocation</code><font><font>或</font></font><code>aRequestOrigin</code><font><font>），例如，如果塊的</font></font><code>IMAGE</code><font><font>，因為它是從goatse.cx服務（即使你不一定阻止</font></font><code>other</code><font><font>從該服務器/域類型）。</font></font></p>
+    <font><font><font><font>{{注（“這甩只適用於該服務器上的當前請求，而不是同一類型的未來需求。”）}} {{gecko_minversion_inline（“1.8”）}}</font></font></font></font></td>
+  </tr>
+  <tr>
+   <td><code>REJECT_OTHER</code></td>
+   <td><code>-4</code></td>
+   <td>
+    <p><font><font>從{{manch（“shouldLoad”）}}或返回{{manch（“為ShouldProcess”）}}如果負載/過程是基於一些拒絕</font></font><code>other</code><font><font>標準。</font><font>Mozilla的呼叫者會處理這個喜歡</font></font><code>REJECT_REQUEST</code><font><font>; </font><font>第三方實現者，例如，用這個來指導自己的來電諮詢額外參數的更多細節。</font><font>{{gecko_minversion_inline（“1.8”）}}</font></font></p>
+
+    <p><font><font>{{注（“這甩只適用於該服務器上的當前請求，而不是同一類型的未來需求。”）}}</font></font></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>ACCEPT</code></td>
+   <td><code>1</code></td>
+   <td><font><font>從{{manch（“shouldLoad”）}}或{{manch（“為ShouldProcess”）}}如果負載或處理請求不被拒絕返回。</font><font>{{gecko_minversion_inline（“1.8”）}}</font></font></td>
+  </tr>
+  <tr>
+   <td><code>OTHER</code></td>
+   <td><code>0</code></td>
+   <td><font><font><font><font>{{obsolete_inline（“1.8”）}}</font></font></font></font></td>
+  </tr>
+  <tr>
+   <td><code>SCRIPT</code></td>
+   <td><code>1</code></td>
+   <td><font><font><font><font>{{obsolete_inline（“1.8”）}}</font></font></font></font></td>
+  </tr>
+  <tr>
+   <td><code>IMAGE</code></td>
+   <td><code>2</code></td>
+   <td><font><font><font><font>{{obsolete_inline（“1.8”）}}</font></font></font></font></td>
+  </tr>
+  <tr>
+   <td><code>STYLESHEET</code></td>
+   <td><code>3</code></td>
+   <td><font><font><font><font>{{obsolete_inline（“1.8”）}}</font></font></font></font></td>
+  </tr>
+  <tr>
+   <td><code>OBJECT</code></td>
+   <td><code>4</code></td>
+   <td><font><font><font><font>{{obsolete_inline（“1.8”）}}</font></font></font></font></td>
+  </tr>
+  <tr>
+   <td><code>SUBDOCUMENT</code></td>
+   <td><code>5</code></td>
+   <td><font><font><font><font>{{obsolete_inline（“1.8”）}}</font></font></font></font></td>
+  </tr>
+  <tr>
+   <td><code>CONTROL_TAG</code></td>
+   <td><code>6</code></td>
+   <td><font><font><font><font>{{obsolete_inline（“1.8”）}}</font></font></font></font></td>
+  </tr>
+  <tr>
+   <td><code>RAW_URL</code></td>
+   <td><code>7</code></td>
+   <td><font><font><font><font>{{obsolete_inline（“1.8”）}}</font></font></font></font></td>
+  </tr>
+  <tr>
+   <td><code>DOCUMENT</code></td>
+   <td><code>8</code></td>
+   <td><font><font><font><font>{{obsolete_inline（“1.8”）}}</font></font></font></font></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Methods" name="Methods"><font><font><font><font>方法</font></font></font></font></h2>
+
+<h3 id="shouldLoad()" name="shouldLoad()"><font><font><font><font>shouldLoad（）</font></font></font></font></h3>
+
+<p><font><font>打電話讓自己的內容政策的執行決定在給定位置的資源是否應該被加載。</font><font>這種方法是通過加載指定aContentLocation的資源，以確定是否要開始加載所請求的資源之前調用。</font></font></p>
+
+<p class="note"><code>shouldLoad()</code><font><font>可以稱為同時所涉及的文檔的DOM和佈局是不一致的狀態。</font><font>這意味著，該方法的實施者</font></font><strong><font><font>不得</font></font></strong><font><font>做任何以下內容：</font></font></p>
+
+<ol>
+ <li class="note"><font><font>以任何方式修改DOM中（例如，設置屬性是一個沒有沒有）。</font></font></li>
+ <li class="note"><font><font>查詢依賴於佈局（例如，任何DOM屬性</font></font><code>offset*</code><font><font>屬性）。</font></font></li>
+ <li class="note"><font><font>查詢依賴於任何風格的DOM屬性（例如，計算方式）。</font></font></li>
+ <li class="note"><font><font>查詢依賴於DOM的當前狀態的“上下文”節點（例如，節點列表的長度）之外的任何DOM屬性。</font></font></li>
+ <li class="note"><font><font>[JavaScript實現僅]不使用XPCNativeWrapper（顯式或隱式地）的任何對象上的任何類型的訪問屬性。</font><font>由於各種DOM0的事情，這會導致項目4。</font></font></li>
+</ol>
+
+<p class="note"><font><font>如果你在做這些事情</font></font><code>shouldLoad()</code><font><font>的實現，期望不可預知的行為，可能包括死機，沒有顯示出來的內容，內容顯示了一倍，等等。如果你不需要做任何的事情上面，做他們關閉超時或事件。</font></font></p>
+
+<div class="note"><strong><font><font>注</font></font></strong><font><font>：當多個內容策略用於（例如，通過幾個擴展），如果其中一人拒絕的請求，該政策的其餘部分不叫。</font><font>參考：</font></font><a class="external" href="http://mxr.mozilla.org/mozilla-central/source/content/base/src/nsContentPolicy.cpp#146" title="http://mxr.mozilla.org/mozilla-central/source/content/base/src/nsContentPolicy.cpp#146"><font><font>http://mxr.mozilla.org/mozilla-central/source/content/base/src/nsContentPolicy.cpp#146</font></font></a><font><font>。</font></font></div>
+
+<div class="note"><strong><font><font>注</font></font></strong><font><font>：內容政策在上述情況下的順序取決於安裝的優先級。</font></font></div>
+
+<pre class="eval"><font><font>短shouldLoad（</font></font><font><font>
+  在無符號長aContentType，</font></font><font><font>
+  在nsIURI aContentLocation，</font></font><font><font>
+  在nsIURI aRequestOrigin，</font></font><font><font>
+  在nsISupports aContext，</font></font><font><font>
+  在ACString aMimeTypeGuess，</font></font><font><font>
+  在nsISupports aExtra，</font></font><font><font>
+  在nsIPrincipal aRequestPrincipal</font></font><font><font>
+);</font></font>
+</pre>
+
+<h6 id="Parameters" name="Parameters"><font><font>參數</font></font></h6>
+
+<dl>
+ <dt><code>aContentType</code></dt>
+ <dd><font><font>的類型的內容進行測試。</font><font>這將是一個一個{{ANCH（“內容類型”）}}在上面列出。</font></font></dd>
+ <dt><code>aContentLocation</code></dt>
+ <dd><font><font>的內容的URI被檢查; </font><font>一定不能</font></font><code>null</code><font><font>。</font></font></dd>
+ <dt><code>aRequestOrigin</code><font><font><font><font> {optional_inline}}</font></font></font></font></dt>
+ <dd><font><font>啟動此加載請求的資源的位置; </font><font>可</font></font><code>null</code><font><font>如果不適用。</font></font></dd>
+ <dt><code>aContext</code><font><font><font><font> {optional_inline}}</font></font></font></font></dt>
+ <dd><font><font>的{{接口（“nsIDOMNode”）}}或{{接口（“nsIDOMWindow”）}}發起請求，或一些可以</font></font><code>QueryInterface()</code><font><font>向其中的一個; </font><font>可</font></font><code>null</code><font><font>如果不適用。</font></font></dd>
+ <dt><font><font>{{音符（“aContext是當用戶使用的上下文菜單中的新選項卡/窗口或CMD / CTRL +打開鏈接的新選項卡/窗口點擊鏈接（即，aContext不是該鏈路是在拉片在這些情況下）。“）}}</font></font></dt>
+ <dt> </dt>
+ <dt> </dt>
+ <dt><code>aMimeTypeGuess</code></dt>
+ <dd><font><font>可選的。</font><font>用於所請求的內容的MIME類型猜測，基於可用於請求發起（例如，信息</font></font><code>OBJECT</code><font><font>的類型屬性）; </font><font>不能可靠地反映實際的MIME類型所請求的內容。</font></font></dd>
+ <dt><code>aExtra</code></dt>
+ <dd><font><font>一個可選的參數，直通非壁虎呼叫者額外的數據傳遞給被調用者。</font></font></dd>
+</dl>
+
+<dl>
+ <dt><code style="font-size: 14px;">aRequestPrincipal</code></dt>
+ <dd><font><font>可選的。</font><font>定義了導致負載的主體。</font><font>這僅適用於可選</font></font><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=803765#c9"><font><font>的非壁虎</font></font></a><font><font>代碼：所有的壁虎代碼應該設置此參數。</font><font>對於導航事件，這是導致該加載頁面的主體。</font></font></dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value"><font><font><font><font>返回值</font></font></font></font></h6>
+
+<p><code>ACCEPT</code><font><font><font><font> 要么 </font></font></font></font><code>REJECT_*</code></p>
+
+<h3 id="shouldProcess()" name="shouldProcess()"><font><font>為ShouldProcess（）</font></font></h3>
+
+<p><font><font>如果資源被處理？</font><font>{{manch（“為ShouldProcess”）}}將被調用一次傳遞給它的所有資料已被確定有關資源，資源的一部分已經被加載後一般。</font><font>“處理”是指通過處理應用程序。</font><font>例如，為ShouldProcess可以用來允許來自服務器的響應根據MIME類型的響應的處理或忽略。</font></font></p>
+
+<p><font><font>{{NoteStart（）}} {{manch（“為ShouldProcess”）}}可以被稱為當DOM和佈局</font></font><code>document</code><font><font>涉及處於不一致的狀態。</font><font>查看{{manch（“shouldLoad”）}}筆記，看看這是什麼意思了這種方法的實現者。{{NoteEnd（）}}</font></font></p>
+
+<pre class="eval"><font><font>短為ShouldProcess（</font></font><font><font>
+  在無符號長aContentType，</font></font><font><font>
+  在nsIURI aContentLocation，</font></font><font><font>
+  在nsIURI aRequestOrigin，</font></font><font><font>
+  在nsISupports aContext，</font></font><font><font>
+  在ACString aMimeType，</font></font><font><font>
+  在nsISupports aExtra，</font></font><font><font>
+  在nsIPrincipal aRequestPrincipal</font></font><font><font>
+);</font></font>
+</pre>
+
+<h6 id="Parameters" name="Parameters"><font><font><font><font>參數</font></font></font></font></h6>
+
+<dl>
+ <dt><code>aContentType</code></dt>
+ <dd><font><font>的類型的內容進行測試。</font><font>這將是TYPE_ *常量之一。</font></font></dd>
+ <dt><code>aContentLocation</code></dt>
+ <dd><font><font>可選的。</font><font>被請求的資源的位置：可能是，例如，一個重定向後的URI資源。</font></font></dd>
+ <dt><code>aRequestOrigin</code></dt>
+ <dd><font><font>可選的。</font><font>啟動此加載請求的資源的位置; </font><font>可</font></font><code>null</code><font><font>如果不適用。</font></font></dd>
+ <dt><code>aContext</code></dt>
+ <dd><font><font>可選的。</font><font>的{{接口（“nsIDOMNode”）}}或發起請求{{接口（“nsIDOMWindow”）}}，或一些可以查詢接口的那些中的一個; </font><font>可</font></font><code>null</code><font><font>如果不適用。</font></font></dd>
+ <dt><code>aMimeType</code></dt>
+ <dd><font><font>MIME類型所請求的資源（例如，圖像/ PNG）的，所報告的網絡庫，如果可用的話（可以是空的，如果不適合的類型，例如，</font></font><code>TYPE_REFRESH</code><font><font>）。</font></font></dd>
+ <dt><code>aExtra</code></dt>
+ <dd><font><font><font><font>一個可選的參數，直通非壁虎呼叫者額外的數據傳遞給被調用者。</font></font></font></font></dd>
+</dl>
+
+<dl>
+ <dt><code style="font-size: 14px;">aRequestPrincipal</code></dt>
+ <dd><font><font>可選的。</font><font>提出請求的主體。</font></font></dd>
+</dl>
+
+<h6 id="Return_value" name="Return_value"><font><font><font><font>返回值</font></font></font></font></h6>
+
+<p><code>ACCEPT</code><font><font><font><font> 要么 </font></font></font></font><code>REJECT_*</code></p>
+
+<h2 id="Example" name="Example"><font><font><font><font>例</font></font></font></font></h2>
+
+<p><font><font>您可以通過包括容易實現這個接口</font></font><code>nsIContentPolicy.h</code><font><font>的頭文件和實現</font></font><code>public nsIContentPolicy</code><font><font>到類，如下所示：</font></font></p>
+
+<pre class="brush: cpp"><font><font>//將這個變成你的頭文件</font></font>
+<font><font>
+＃包括“_path_to_sdk /包括/內容/ nsIContentPolicy.h”</font></font>
+<font><font>
+MyClass類：公共nsISupports，公共nsIContentPolicy {</font></font><font><font>
+  ...</font></font><font><font>
+  NS_DECL_NSICONTENTPOLICY</font></font><font><font>
+  ...</font></font><font><font>
+}</font></font>
+<font><font>
+//這到您的實現文件 </font></font><font><font>
+NS_IMPL_ISUPPORTSn（MyClass的，nsISupports，nsIContentPolicy，...）</font></font>
+</pre>
+
+<p><font><font>{{NoteStart（）}}之前，你能接受的通知，你必須註冊你的插件{{接口（“nsICategoryManager”）}}。</font><font>見下面的例子。{{NoteEnd（）}}</font></font></p>
+
+<pre class="brush: cpp"><font><font><font><font>字符*以前= nsnull; </font></font></font></font>
+<font><font><font><font>
+nsCOMPtr的的&lt;nsICategoryManager&gt; catman; </font></font></font></font>
+<font><font><font><font>
+servman-&gt; GetServiceByContractID（NS_CATEGORYMANAGER_CONTRACTID，</font></font></font></font><font><font><font><font>
+NS_GET_IID（nsICategoryManager）</font></font></font></font><font><font><font><font>
+getter_AddRefs（catman））; </font></font></font></font>
+<font><font><font><font>
+RV = catman-&gt; AddCategoryEntry（“內容的策略”，</font></font></font></font><font><font><font><font>
+COMPONENT_CLASSNAME，</font></font></font></font><font><font><font><font>
+COMPONENT_CONTRACTID，</font></font></font></font><font><font><font><font>
+PR_TRUE，   </font></font></font></font><font><font><font><font>
+PR_TRUE，</font><font>＆</font></font></font></font><font><font><font><font>
+以前）;</font></font></font></font></pre>
+
+<p><font><font>JavaScript開發人員也可以</font></font><a href="/en/XUL_School/Intercepting_Page_Loads#Content_Policy" title="EN / XUL學校/攔截頁面加載＃內容策略"><font><font>實現XPCOM組件</font></font></a><font><font>擴展</font></font><code>nsIContentPolicy</code><font><font>。</font></font></p>

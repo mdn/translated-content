@@ -1,0 +1,259 @@
+---
+title: 應用程式管理員 (App Manager)
+slug: Archive/B2G_OS/Using_the_App_Manager
+translation_of: Archive/B2G_OS/Using_the_App_Manager
+---
+<div class="summary">
+<p>「應用程式管理員 (App Manager)」為 Firefox 桌面版的新工具，具備多樣的有效工具，可透過開發者的瀏覽器，直接於 Firefox OS 手機與 Firefox OS 模擬器 (Firefox OS Simulator) 中進行 HTML5 Web App 的測試、佈署、除錯等作業。</p>
+
+<p>應用程式管理員適用於 Firefox OS 1.2 或更高版本。如果你正為 Firefox OS 1.1 開發 App，則請參閱《<a href="https://developer.mozilla.org/en-US/docs/Tools/Firefox_OS_1.1_Simulator">Firefox OS 1.1 Simulator</a>》一文。</p>
+</div>
+
+<p>{{EmbedYouTube("z1Bxg1UJVf0")}}</p>
+
+<p>應用程式管理員具備下列元件：</p>
+
+<ul>
+ <li><a href="#Apps_panel">「Apps」面板</a>將管理本端 App (即位於你電腦上的 App 原始碼) 與托管 (Hosted) 於外部的 App，讓開發者能在自己的裝置或模擬器上進行封裝與安裝作業，並透過 Toolboxes 除錯。</li>
+ <li><a href="#Device_panel">「Device」面板</a>則顯示已連線裝置的相關資訊，包含 Firefox OS 的版本、所使用裝置 API 的必要權限、已安裝的 App 等。</li>
+ <li><a href="/en-US/docs/Tools_Toolbox">Toolboxes</a> 集合一系列的開發者工具 (網頁主控台、檢測器、除錯器等)，將透過 Apps panel 而連上執行中的 App，以利執行除錯作業。</li>
+</ul>
+
+<h2 id="快速設定："><a name="Configuring_device">快速設定：</a></h2>
+
+<p>本段將協助開發者儘快設定並執行應用程式管理員。如果你需要進一步詳細資訊，則請略過本段文章而直接觀看下一段《裝置與系統設定》。若發生任何問題，亦可參閱本文最後一段《疑難排解》。</p>
+
+<ol>
+ <li>確認已安裝桌面版 Firefox 26 或更高版本</li>
+ <li>開啟應用程式管理員 (可於網址列中鍵入 <code>about:app-manager</code>)</li>
+ <li>若你手上並沒有實際的 Firefox OS 裝置：
+  <ol>
+   <li><a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/">先安裝 Firefox OS 模擬器 (Firefox OS Simulator)</a></li>
+   <li>在應用程式管理員底部的工具列中，點選 <em>Start Simulator</em> 再點選已安裝的模擬器名稱 (已安裝的模擬器均應出現)。</li>
+  </ol>
+ </li>
+ <li>若你擁有 Firefox OS 實體裝置：
+  <ol>
+   <li>確認目前為 Firefox OS 1.2 或更高版本</li>
+   <li>確認已在視窗系統中安裝該款手機的驅動程式</li>
+   <li>進入裝置的「Settings」，停用「Screen Lock (<code>Settings &gt; <code>Screen Lock</code></code>)」並啟用「Remote Debugging (<code>Settings &gt; Device information &gt; More information &gt; Developer</code>)」</li>
+   <li>另為 Firefox 桌面版<a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/adb-helper/">安裝 ADB Helper</a> 附加元件</li>
+   <li>使用 USB 纜線銜接裝置與電腦</li>
+   <li>接著應可於應用程式管理員的底部看到裝置名稱，點選該裝置</li>
+  </ol>
+ </li>
+ <li>底部應顯示「Connected to: xxx」</li>
+ <li>點選 Apps panel 並新增 App；封裝式 (Packaged) 或托管式 (Hosted) App 均可</li>
+ <li>Refresh 按鈕將驗證該 App 並安裝於裝置/模擬器中</li>
+ <li>Debug 按鈕則銜接開發者工具與執行中的 App</li>
+ <li>若遇上任何錯誤，可參閱〈疑難排解〉章節</li>
+</ol>
+
+<h2 id="裝置與系統設定">裝置與系統設定</h2>
+
+<p>使用應用程式管理員前的第一件事，就是必須正確設定現有的系統與手機。本段將逐步說明各個步驟。</p>
+
+<h3 id="需要_Firefox_1.2_或更高版本">需要 Firefox 1.2 或更高版本</h3>
+
+<p>確認裝置目前為 Firefox OS 1.2/Boot2Gecko 1.2 或更高版本。若要檢查目前 Firefox OS 版本，可點選 <code>Settings &gt; Device Information &gt; Software</code>。</p>
+
+<p>如果尚未安裝必要的 Firefox OS 版本，則根據手機型號的不同，你可能必須安裝 Firefox 1.2 或更高的 nightly 版本，或自行透過原始碼進行設定與建置 (Build)。</p>
+
+<p>目前可用的建置：</p>
+
+<ul>
+ <li><a href="http://downloads.geeksphone.com/">Geeksphone Keon/Peak builds</a> (若要進一步了解使用方式，可參閱 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Developer_phone_guide/Updating_and_Tweaking_Geeksphone">Updating and Tweaking your Firefox OS Developer Preview phone/Geeksphone</a>)</li>
+ <li>敬請期待更多後續資訊</li>
+</ul>
+
+<p>若要建構自己的 Firefox OS 1.2 或更高版本，請參閱 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Building_and_installing_Firefox_OS">Building and installing Firefox OS</a> 說明，並從 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Firefox_OS_build_prerequisites">Firefox OS build prerequisites</a> 著手開始。</p>
+
+<h3 id="遠端除錯_(Remote_debugging)">遠端除錯 (Remote debugging)</h3>
+
+<p>接著必須啟動 Firefox OS 中的遠端除錯 (Remote debugging) 功能。點選<code>Settings &gt; Device information &gt; More information &gt; Developer</code>，最後勾選 Remote Debugging 方塊即可。</p>
+
+<h3 id="Adb_Helper_Add-on" name="Adb_Helper_Add-on">ADB 或 ADB helper</h3>
+
+<p>透過 Android Debug Bridge (ADB) 處理裝置與電腦之間的連線作業。現有 2 種 ADB 執行方式：</p>
+
+<ul>
+ <li>
+  <p>讓 Firefox 直接處理 ADB (建議使用)。<a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/adb-helper/">先安裝 ADB Helper 附加元件</a>可簡化相關流程。安裝 ADB Helper 之後就不需再安裝 ADB，也不需再輸入 <code>adb forward</code> 指令。此附加元件將處理所有作業。</p>
+  <a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/" style="margin-bottom: 20px; padding: 10px; text-align: center; border-radius: 4px; display: inline-block; background-color: #81BC2E; white-space: nowrap; color: white; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;" title="https://addons.mozilla.org">下載 ADB Helper 附加元件</a></li>
+ <li>手動操作 ADB。你必須自行下載並安裝 <code>adb</code> (可參閱 <a href="http://developer.android.com/sdk/index.html">Get the Android SDK</a>)，再於終端機內鍵入下列指令，以啟動轉發通訊埠 (Port forwarding)：
+  <pre>adb forward tcp:6000 localfilesystem:/data/local/debugger-socket</pre>
+  另請注意，每次只要重新啟動或重新插拔手機，均必須重複上述動作 1 次。</li>
+</ul>
+
+<div class="note">
+<p>注意：只要安裝 ADB Helper 附加元件，就不需執行此指令。</p>
+</div>
+
+<h2 id="將裝置連上應用程式管理員">將裝置連上應用程式管理員</h2>
+
+<p>完成所有設定之後，就可將裝置連上電腦並啟動應用程式管理員：</p>
+
+<ol>
+ <li>以 USB 纜線銜接裝置與電腦。</li>
+ <li>進入 <code>Settings &gt; Screen Lock</code> 並取消勾選 <code>Lock Screen</code><code>，以停用裝置的螢幕鎖定功能。一旦螢幕鎖定之後，手機與電腦的連線將隨之中斷，也就無法進行除錯作業。因此最好先停用此功能。</code></li>
+ <li>啟動應用程式管理員 — 到 Firefox 桌面版中點選「工具 (<code>Tools)」&gt;「網頁開發者 (Web Developer)」&gt;「</code>應用程式管理員 (<code>App Manager)」選單；或於網址列中鍵入</code> <code>about:app-manager</code>。</li>
+ <li>應用程式管理員分頁的底部可看到連線狀態顯示列 (如下圖所示)。只要點選「Connect to localhost:6000」按鈕即可連線裝置。</li>
+ <li>若連線成功，裝置畫面隨即出現「An incoming request to permit remote debugging connection was detected. Allow connection?」對話框。按下「OK」鈕 (你可能必須按下手機的電源鍵，才會看到該對話框)。接著應會更新連線狀態列並顯示「Connected to B2G」。此時也將出現「Disconnect」按鈕，以利隨時中斷連線。</li>
+</ol>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6263/connection-status.png" style="width: 600px; height: 30px; display: block; margin: 0px auto;"></p>
+
+<div class="note">
+<p>另請注意，位於連線狀態列中的其他控制鈕，可讓你銜接模擬器與應用程式管理員 (將於下一段中說明)，並更改連線所使用的通訊埠。若要更改通訊埠，則必須啟動該通訊埠的「轉發通訊埠 (Port forwarding)」功能。可參閱上述的<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager#Enable_port_forwarding">啟動轉發通訊埠</a>。</p>
+</div>
+
+<h2 id="使用_Firefox_OS_Simulator_附加元件"><a name="Simulator">使用 Firefox OS Simulator 附加元件</a></h2>
+
+<p>如果你手上還沒有實際的 Firefox OS 裝置可搭配 App Manager，也能透過 Firefox OS 模擬器 (Firefox OS Simulator) 附加元件體驗應用程式管理員。請先為自己的作業系統安裝合適的模擬器：</p>
+
+<p><a href="https://ftp.mozilla.org/pub/mozilla.org/labs/fxos-simulator/" style="margin-bottom: 20px; padding: 10px; text-align: center; border-radius: 4px; display: inline-block; background-color: #81BC2E; white-space: nowrap; color: white; text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25); box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.2), 0px -1px 0px 0px rgba(0, 0, 0, 0.3) inset;">安裝 Firefox OS 模擬器</a></p>
+
+<div class="note">
+<p><strong>注意：</strong>目前僅有 Firefox OS 1.2 模擬器。未來將提供更多版本選擇。</p>
+</div>
+
+<p>安裝模擬器之後，請透過 about:app-manager 找到應用程式管理員分頁底部的連線狀態列，點選「Start simulator」按鈕。接著將出現至少 3 組按鈕：</p>
+
+<ul>
+ <li>「Firefox OS 1.3」、「Firefox OS 1.2」或類似的呈現方式：左邊按鈕將顯示目前安裝的模擬器版本。點選按鈕即可連線至模擬器。</li>
+ <li>「Add」：中間按鈕則提供本文所提到的模擬器安裝鏈結，讓你新增更多版本的模擬器 (Firefox OS 1.2、Firefox OS 1.3 等)。</li>
+ <li>「Cancel」：右邊按鈕可取消連線。</li>
+</ul>
+
+<div class="note">
+<p><strong>注意：</strong>模擬器 (1.2 與 1.3 版) 目前回報 1 組錯誤的 Gecko user agent 字串：可參閱 {{ Bug("964598") }} 進一步了解。</p>
+</div>
+
+<h2 id="「Apps」面板"><a name="Apps_panel">「Apps」面板</a></h2>
+
+<p>所有要件設定完畢之後，就從「Apps」面板開始了解應用程式管理員的功能吧。先透過 Apps 面板將現有 App 送入裝置中並進行除錯：</p>
+
+<ul>
+ <li>若要安裝本端 App，則請點選「Add Packaged App」按鈕旁的「+」加號按鈕，再從檔案選擇對話框中找到放置該 App 的目錄即可。</li>
+ <li>若要安裝外部的托管式 (Hosted) App，請將該 App manifest 檔案的絕對路徑輸入「Add Hosted App」對話框中，再點選「+」加號按鈕。</li>
+</ul>
+
+<p>視窗右側隨即顯示 App 的相關資訊，如下圖所示：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6261/apps-panel.png" style="width: 600px; height: 375px; display: block; margin: 0px auto;"></p>
+
+<h3 id="Manifest_檔案編輯器_(Manifest_Editor)">Manifest 檔案編輯器 (Manifest Editor)</h3>
+
+<p>從 Firefox 28 開始，「Apps」面板即包含編輯器功能，可用於 App 的 manifest 檔案：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6613/apps-panel-fx-28.png" style="width: 600px; display: block; margin: 0px auto;"></p>
+
+<h3 id="除錯">除錯</h3>
+
+<p>此時點選「Update」就會更新 (或安裝) 裝置上的 App。點選「Debug」則會連上工具箱，以利直接對程式碼進行除錯：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6265/debug.png" style="width: 600px; height: 375px; display: block; margin: 0px auto;"></p>
+
+<div class="note">
+<p><strong>注意：</strong>你可能會玩工具箱玩到上癮 — 快試著修改 DOM、CSS 等。接著就能看到裝置即時反應出更新的效果。相關更新均將儲存於已安裝的 App 程式碼中，下次再開啟裝置中的 App 就能一目了然。</p>
+</div>
+
+<p>若是 Firefox 28 之前的版本，這些工具將顯示於另一個獨立視窗中。從 Firefox 28 開始，這些工具均顯示於應用程式管理員之內的獨立分頁中；就接在「Apps」與「Device」分頁之下。此分頁將顯示目前 App 的圖示，因此極容易辨識：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6615/toolbox-fx-28.png" style="width: 600px; height: 375px; display: block; margin: 0px auto;"></p>
+
+<h3 id="錯誤">錯誤</h3>
+
+<p>如果新增 App 失敗 (可能是 URL 錯誤，或選到了封裝式 App 的資料夾)，則該頁仍會顯示所新增的 App 項目，也會包含錯誤資訊。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6259/apps-error.png" style="width: 600px; height: 375px; display: block; margin: 0px auto;"></p>
+
+<p>另外只要將滑鼠游標移至視窗左邊的 App 名稱/說明之上，在「X」按鈕出現時按下，即可在此畫面中刪除該 App。請注意此動作並不會刪除裝置中的 App。必須從裝置上手動移除 App，才會真正刪除裝置中的 App。</p>
+
+<h2 id="「Device」面板"><a name="Device_panel">「Device」面板</a></h2>
+
+<p>「Device」面板將顯示已連線裝置的相關資訊。另可透過「Installed Apps」視窗中開啟裝置上的 App 並進行除錯。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6267/device-tab.png" style="width: 600px; height: 375px; display: block; margin: 0px auto;"></p>
+
+<div class="note">
+<p><strong>注意：</strong>依預設值，此處並不會顯示 Certified App。<a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager#Debugging_Certified_Apps">可參閱 Certified App 的除錯方式</a>。</p>
+</div>
+
+<p>「Permissions」視窗將針對目前裝置上的不同 <a href="https://developer.mozilla.org/zh-TW/docs/WebAPI">Web API</a>，顯示必要的權限。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/6269/permissions.png" style="width: 600px; height: 375px; display: block; margin: 0px auto;"></p>
+
+<p>最後可按下「Screenshot」按鈕，即可對目前裝置的顯示項目拍下截圖。此截圖將以 Firefox 的新分頁開啟，讓你決定是否要儲存該圖。</p>
+
+<h2 id="Certified_App_的除錯"><a name="Debugging_Certified_Apps">Certified App 的除錯</a></h2>
+
+<p>目前僅限搭載 Firefox OS 1.2 開發版本的裝置，才能進行 Certified Apps 的除錯。若你手上的裝置正執行開發版本，則可將設定檔中的「 <code>devtools.debugger.forbid-certified-apps</code><code>」變更為「</code><code>false</code><code>」，即可開始 </code>Certified App<code> 的除錯。可參閱下列步驟：</code></p>
+
+<ol>
+ <li>
+  <p>在電腦的終端/主控台上輸入下列指令，以進入裝置的 filesystem：</p>
+
+  <pre class="brush: bash">adb shell</pre>
+
+  <p>接著命令列提示將轉為 <code>root@android</code>。</p>
+ </li>
+ <li>
+  <p>接著以下列指令暫停執行 B2G：</p>
+
+  <pre class="brush: bash">stop b2g</pre>
+ </li>
+ <li>
+  <p>進入以下目錄：</p>
+
+  <pre>cd /data/b2g/mozilla/*.default/</pre>
+ </li>
+ <li>
+  <p>以下列指令更改 prefs.js 檔案：</p>
+
+  <pre class="brush: js">echo 'user_pref("devtools.debugger.forbid-certified-apps", false);' &gt;&gt; prefs.js</pre>
+ </li>
+ <li>
+  <p>在完成編輯並儲存檔案之後，再以下列指令重新啟動 B2G：</p>
+
+  <pre class="brush: bash">start b2g</pre>
+ </li>
+ <li>
+  <p>輸入 <code>exit</code> 指令以退出 Android 的 filesystem 之後，就會回到正常的終端畫面。</p>
+ </li>
+ <li>
+  <p>最後再次連回應用程式管理員，就能看到 Certified App 出現，即可進行除錯。</p>
+ </li>
+</ol>
+
+<div class="note">
+<p><strong>注意：</strong>如果你想把這個偏好設定加入自己的 Gaia 版本，則可執行 <code>DEVICE_DEBUG=1 reset-gaia</code></p>
+</div>
+
+<h2 id="在應用程式管理員中執行自訂的版本">在應用程式管理員中執行自訂的版本</h2>
+
+<p>只要透過 Firefox OS 模擬器，即可於應用程式管理員中執行自訂的 B2G Desktop 與 Gaia 版本。可參閱《<a href="https://developer.mozilla.org/en-US/Firefox_OS/Running_custom_builds_in_the_App_Manager">Running custom Firefox OS/Gaia builds in the App Manager</a>》進一步了解。</p>
+
+<h2 id="疑難排解"><a name="Troubleshooting">疑難排解</a></h2>
+
+<p id="My_device_is_not_recognized">如果系統無法辨認裝置：</p>
+
+<ul>
+ <li>請先完整閱讀上方的《裝置與系統設定》段落，確認已完成所有步驟：</li>
+ <li>自己的裝置是否執行 Firefox OS 1.2 或更高版本？</li>
+ <li>是否已啟用手機的「Remote Debugging」設定？</li>
+ <li>如果你尚未使用 <a href="#Adb_Helper_Add-on">ADB Helper 附加元件</a>：
+  <ul>
+   <li>是否已成功執行 <code>adb forward</code> 指令？</li>
+  </ul>
+ </li>
+ <li>如果你正使用 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Using_the_App_Manager#Adb_Helper_Add-on">ADB Helper 附加元件</a>，但自己的裝置並未出現於底部的工具列中：
+  <ul>
+   <li>如果是使用 Linux，<a href="http://developer.android.com/tools/device.html#setting-up">請確認已正確設定 udev</a></li>
+   <li>如果是使用 Windows，<a href="http://developer.android.com/tools/device.html#setting-up">請確認已安裝正確的驅動程式</a></li>
+  </ul>
+ </li>
+ <li>你手機的螢幕解鎖了嗎？</li>
+</ul>
+
+<p>還是無法讓自己的裝置連上應用程式管理員或啟動模擬器嗎？<a href="https://wiki.mozilla.org/DevTools/GetInvolved#Communication">快讓我們知道</a>或<a href="https://bugzilla.mozilla.org/enter_bug.cgi?alias=&amp;assigned_to=nobody%40mozilla.org&amp;attach_text=&amp;blocked=&amp;bug_file_loc=http%3A%2F%2F&amp;bug_ignored=0&amp;bug_severity=normal&amp;bug_status=NEW&amp;cf_blocking_b2g=---&amp;cf_crash_signature=&amp;cf_status_b2g18=---&amp;cf_status_b2g_1_1_hd=---&amp;cf_status_b2g_1_2=---&amp;cf_status_firefox24=---&amp;cf_status_firefox25=---&amp;cf_status_firefox26=---&amp;cf_status_firefox27=---&amp;cf_status_firefox_esr17=---&amp;cf_status_firefox_esr24=---&amp;cf_tracking_b2g18=---&amp;cf_tracking_firefox24=---&amp;cf_tracking_firefox25=---&amp;cf_tracking_firefox26=---&amp;cf_tracking_firefox27=---&amp;cf_tracking_firefox_esr17=---&amp;cf_tracking_firefox_esr24=---&amp;cf_tracking_firefox_relnote=---&amp;cf_tracking_relnote_b2g=---&amp;comment=&amp;component=Developer%20Tools%3A%20App%20Manager&amp;contenttypeentry=&amp;contenttypemethod=autodetect&amp;contenttypeselection=text%2Fplain&amp;data=&amp;defined_groups=1&amp;dependson=&amp;description=&amp;flag_type-203=X&amp;flag_type-37=X&amp;flag_type-41=X&amp;flag_type-5=X&amp;flag_type-607=X&amp;flag_type-720=X&amp;flag_type-721=X&amp;flag_type-737=X&amp;flag_type-748=X&amp;flag_type-781=X&amp;flag_ty">到 bugzilla 回報錯誤</a>。</p>

@@ -1,0 +1,132 @@
+---
+title: New in JavaScript 1.8.5
+slug: Web/JavaScript/New_in_JavaScript/1.8.5
+tags:
+  - ECMAScript5
+  - JavaScript
+  - JavaScript 1.8.5
+translation_of: Archive/Web/JavaScript/New_in_JavaScript/1.8.5
+---
+<div>{{jsSidebar("New_in_JS")}}</div>
+
+<p>以下為 JavaScript 1.8.5 的更新日誌，此版本被涵蓋於 <a href="/zh-TW/Firefox/Releases/4">Firefox 4</a> 之中。</p>
+
+<h2 id="JavaScript_1.8.5_新功能">JavaScript 1.8.5 新功能</h2>
+
+<h3 id="新函數">新函數</h3>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">函數</th>
+   <th scope="col">敘述</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{jsxref("Object.create()")}}</td>
+   <td>
+    <p>基於一個特定的原型物件和屬性，建立一個新物件。{{bug("492840")}}</p>
+   </td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.defineProperty()")}}</td>
+   <td>Adds the named property described by a given descriptor to an object.</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.defineProperties()")}}</td>
+   <td>Adds the named properties described by the given descriptors to an object.</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.getOwnPropertyDescriptor()")}}</td>
+   <td>Returns a property descriptor for a named property on an object. {{bug("505587")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.keys()")}}</td>
+   <td>Returns an array of all enumerable properties on an object. {{bug("307791")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.getOwnPropertyNames()")}}</td>
+   <td>Returns an array of all enumerable and non-enumerable properties on an object. {{bug("518663")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.preventExtensions()")}}</td>
+   <td>Prevents any extensions of an object. {{bug("492849")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.isExtensible()")}}</td>
+   <td>Determine if extending of an object is allowed. {{bug("492849")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.seal()")}}</td>
+   <td>
+    <p>避免其他程式碼刪除一個物件的屬性。 {{bug("492845")}}</p>
+   </td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.isSealed()")}}</td>
+   <td>Determine if an object is sealed. {{bug("492845")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.freeze()")}}</td>
+   <td>凍結一個物件：其他程式碼無法刪除或更便任何屬性。{{bug("492844")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Object.isFrozen()")}}</td>
+   <td>辨識一個物件是否遭凍結。{{bug("492844")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Array.isArray()")}}</td>
+   <td>檢查一個變數是否為陣列。{{bug("510537")}}</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Date.prototype.toJSON()")}}</td>
+   <td>回傳一個 JSON 格式的字串 給<code>Date</code> 物件。</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("Function.prototype.bind()")}}</td>
+   <td>
+    <p>Creates a new function that, when called, itself calls this function in the context provided (with a given sequence of arguments) {{bug("429507")}}</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="New_ECMAScript5_features">New ECMAScript5 features</h3>
+
+<ul>
+ <li><code><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/get" title="JavaScript/Reference/Operators/Special Operators/get Operator">get</a></code> and <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Operators/set" title="JavaScript/Reference/Operators/Special Operators/set Operator">set</a></code> operators now allows the identifier to be numeric or a string. {{bug("520696")}}</li>
+ <li>{{jsxref("Function.apply()")}} can accept any array-like object as the arguments list, instead of only true arrays.</li>
+ <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="JavaScript/Strict mode">strict mode support</a></li>
+ <li>{{jsxref("Array.toString()")}} now works even on non-arrays by either returning the result of calling its <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/join" title="JavaScript/Reference/Global Objects/Array/join"><code>join()</code></a> method if one is available or by calling its <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/toString" title="JavaScript/Reference/Global Objects/Object/toString"><code>toString()</code></a> method.</li>
+</ul>
+
+<h3 id="Other_standardization_work">Other standardization work</h3>
+
+<p>Various non-standard syntaxes for defining getters and setters have been removed; ECMAScript 5 defined syntax has not been changed. These were all pretty esoteric and rarely used; if this affects you, see <a class="external" href="http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/" title="http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/">this blog post</a> for details.</p>
+
+<h3 id="新物件">新物件</h3>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Object</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{jsxref("Proxy")}}</td>
+   <td>Offers support for creating <code>Object</code> and <code>Function</code> proxies that enable meta-programming in JavaScript.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Changed_functionality_in_JavaScript_1.8.5">Changed functionality in JavaScript 1.8.5</h2>
+
+<ul>
+ <li>ISO 8601 support in <code>Date</code>: The {{jsxref("Date")}} object's <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date/parse" title="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date/parse">parse()</a> method now supports simple ISO 8601 format date strings.</li>
+ <li>Global objects made read only: The <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/NaN" title="JavaScript/Reference/Global Objects/NaN"><code>NaN</code></a>, <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="JavaScript/Reference/Global Objects/Infinity"><code>Infinity</code></a>, and <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="JavaScript/Reference/Global Objects/undefined"><code>undefined</code></a> global objects have been made read only, per the ECMAScript 5 specification.</li>
+ <li><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/Parent" title="JavaScript/Reference/Global Objects/Object/Parent"><code>obj.__parent__</code></a> and <code>obj.__count__</code> become obsolete. Some information about why: <a class="external" href="http://whereswalden.com/2010/05/07/spidermonkey-change-du-jour-the-special-__parent__-property-has-been-removed/" title="http://whereswalden.com/2010/05/07/spidermonkey-change-du-jour-the-special-__parent__-property-has-been-removed/">SpiderMonkey change du jour: the special __parent__ property has been removed</a> {{bug("551529")}} &amp; {{bug("552560")}}.</li>
+ <li>Trailing commas no longer accepted in {{jsxref("JSON.parse()")}}.</li>
+</ul>

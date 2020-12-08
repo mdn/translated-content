@@ -1,0 +1,268 @@
+---
+title: Firefox OS 模擬器簡易攻略
+slug: Archive/B2G_OS/Simulator/Simulator_Walkthrough
+translation_of: Archive/B2G_OS/Simulator/Simulator_Walkthrough
+---
+<p>這裡將透過 <a href="https://developer.mozilla.org/en-US/docs/Tools/Firefox_OS_Simulator" title="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS 模擬器 (Firefox OS Simulator)</a> 對 Web Apps 進行很簡單的除錯 (但要找的 bug 有點多)。</p>
+<p>整個簡易攻略分成 6 個部分，各自使用不同的診斷/除錯工具，包含 <a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough#manifest_.E6.AA.A2.E9.A9.97.E5.8A.9F.E8.83.BD" title="#Using-manifest-validation">manifest 檢驗功能</a>、<a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough#.E4.BD.BF.E7.94.A8.E7.B6.B2.E9.A0.81.E4.B8.BB.E6.8E.A7.E5.8F.B0_(Web_Console)">網頁主控台 (Web Console)</a>、<a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough#.E4.BD.BF.E7.94.A8_JavaScript_.E9.99.A4.E9.8C.AF.E5.99.A8_(JavaScript_Debugger)" title="#Using-the-JavaScript-Debugger">JavaScript 除錯器 (JavaScript Debugger)</a>、<a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough#.E4.BD.BF.E7.94.A8.E7.B6.B2.E8.B7.AF.E7.9B.A3.E6.B8.AC.E5.99.A8_(Network_Monitor)" title="#Using-the-NetworkMonitor">網路監測器 (Network Monitor)</a>、<a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough#.E4.BD.BF.E7.94.A8.E6.A8.A3.E5.BC.8F.E7.B7.A8.E8.BC.AF.E5.99.A8_(Style_Editor)" title="#Using-the-StyleEditor">樣式編輯器 (Style Editor)</a>、<a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator/Simulator_Walkthrough#.E4.BD.BF.E7.94.A8.E6.94.B6.E6.93.9A_(Receipts)_.E6.B8.AC.E8.A9.A6.E5.8A.9F.E8.83.BD" title="#Using-the-TestReceipts">收據 (Receipts) 測試</a>。</p>
+<p>這 6 個部分各自獨立。就算你只挑其中幾段來看，應該也能看得懂而不會有銜接上的問題。</p>
+<h3 id="manifest_檢驗功能"><a name="Using-manifest-validation">manifest 檢驗功能</a></h3>
+<div class="note">
+ <p>GitHub 上的 <a href="https://github.com/rpl/firefoxos-simulator-walkthrough" title="https://github.com/rpl/firefoxos-simulator-walkthrough">firefoxos-simulator-walkthrough</a> 現有不同版本的 App。如果你想從第一段開始了解 App 的修正程序，可從 App 的 <a href="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-1" title="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-1">whereami-1</a> 版本著手，逐步完成此攻略。</p>
+ <p>這個 App 只會顯示 1 個「Where am I?」按鈕。只要點擊按鈕，則 App 就會透過 Geolocation API 取得使用者目前的位置，並於地圖上顯示。</p>
+ <p>此處假設你<a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator#.E5.AE.89.E8.A3.9D.E6.A8.A1.E6.93.AC.E5.99.A8.E9.99.84.E5.8A.A0.E5.85.83.E4.BB.B6" title="/en-US/docs/Tools/Firefox_OS_Simulator#Installing_the_Simulator_add-on">已經安裝了 Firefox OS 模擬器 (Firefox OS Simulator)</a>，並開啟了 Dashboard。</p>
+</div>
+<p>首先我們點選「<strong>Add Directory</strong>」，將 App 新增至 Dashboard 中，再選擇 manifest 檔案。畫面如下：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5529/manifest-error-collapsed-4.0.png" style="width: 1044px; height: 680px;"><br>
+ <br>
+ 點選「<strong>(2 errors and 0 warnings)</strong><strong>」就會看到：</strong></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5531/manifest-error-expanded-4.0.png" style="width: 1044px; height: 680px;"><br>
+ 畫面將清楚顯示錯誤訊息。此時看到「<strong>manifest.webapp</strong>」就會發現少了 1 組「<strong>name</strong><strong>」：</strong></p>
+<pre>{
+  "description": "A simple web app",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/style/icons/earth.png"
+  }
+}</pre>
+<p><br>
+ 我們把「<strong>name</strong>」欄位加入 manifest 檔案之後儲存，再點選 Dashboard 中的「<strong>Refresh</strong>」：</p>
+<pre>{
+  "name": "Where am I?",
+  "description": "A simple web app",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/style/icons/earth.png"
+  }
+}</pre>
+<p><br>
+ 此時 Dashboard 應該會告知沒有錯誤，也就能執行 App：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5533/whereami-no-map-4.0.png" style="width: 1044px; height: 478px;"></p>
+<p>但這時就算你按下按鈕，模擬器也不會有任何動作。我們會在下一段中使用 WebConsole 診斷此問題。</p>
+<h3 id="使用網頁主控台_(Web_Console)"><a name="Using-the-WebConsole">使用網頁主控台 (Web Console)</a></h3>
+<div class="note">
+ <p><strong>如果你要從這裡開始研讀攻略：</strong></p>
+ <p>這一段將透過 <a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator" title="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS 模擬器 (Firefox OS Simulator)</a>，對很簡單的 Web App 進行除錯。GitHub 上的 <a href="https://github.com/rpl/firefoxos-simulator-walkthrough" title="https://github.com/rpl/firefoxos-simulator-walkthrough">firefoxos-simulator-walkthrough</a> 已有不同版本的 App。如果你想從本段開始了解 App 的修正程序，可從 App 的 <a href="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-2" title="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-2">whereami-2</a> 版本著手，逐步完成此攻略。</p>
+ <p>這個 App 只會顯示 1 個「Where am I?」按鈕。只要點擊按鈕，則 App 就會透過 Geolocation API 取得使用者目前的位置，並於地圖上顯示。</p>
+ <p>但此版本的 App 不會執行任何作業。本段透過 WebConsole 診斷出問題。</p>
+ 此處假設你<a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator#.E5.AE.89.E8.A3.9D.E6.A8.A1.E6.93.AC.E5.99.A8.E9.99.84.E5.8A.A0.E5.85.83.E4.BB.B6" title="/en-US/docs/Tools/Firefox_OS_Simulator#Installing_the_Simulator_add-on">已經安裝了 Firefox OS 模擬器 (Firefox OS Simulator)</a>、開啟 Dashboard、點選 Dashboard 中的「Add Directory」而新增了 App，並點選 App 的「manifest.webapp」檔案。</div>
+<p>這裡必須按下 Dashboard 上的「<strong>Connect</strong>」按鈕：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5497/connect-to-app-button.png" style="width: 1044px; height: 650px;"></p>
+<p>隨即自動開啟模擬器視窗並執行 App。而 Dashboard 分頁另將出現網頁主控台 (WebConsole)。</p>
+<p>主控台的輸出結果會提示幾項錯誤、警告、訊息。但請注意最後一項：<br>
+ <br>
+ <img alt="" src="https://mdn.mozillademos.org/files/5535/webconsole-whereami-error.png" style="width: 1044px; height: 680px;"><br>
+ <br>
+ 看來是 App 的程式碼「whereami.js」明顯出了問題。這裡列出程式碼的前幾行：</p>
+<pre class="brush: js">var whereami = document.getElementById('whereami');
+
+whereami.onclick = function() {
+  navigator.geolocation.getCurrentPosition(getMap, error);
+};</pre>
+<p><br>
+ 若與 App 的「index.html」相較，則問題明顯是：</p>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+  &lt;head&gt;
+    &lt;meta charset='utf-8'&gt;
+    &lt;script src="http://open.mapquestap.com/sdk/js/v7.0.s/mqa.toolkit.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"&gt;&lt;/script&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;button id ="where-am-i"&gt;Where am I?&lt;/button&gt;
+    &lt;div id="map"&gt;&lt;/div&gt;
+    &lt;script src="scripts/whereami.js"&gt;&lt;/script&gt;
+    &lt;link media="all" href="style/style.css" type="text/css" rel="stylesheet"&gt;
+  &lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<p><br>
+ 在 HTML 中的按鈕 ID 是「where-am-i」，而不是我們在前面 JavaScript 中所使用的「whereami」。所以我們修改為：</p>
+<pre class="brush: js">var whereami = document.getElementById('where-am-i');
+
+whereami.onclick = function() {
+  navigator.geolocation.getCurrentPosition(getMap, error);
+};</pre>
+<p>接著啟動 App 時雖然沒有問題，但仍未顯示地圖。這時主控台又出現新的訊息：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5537/webconsole-whereami-geolocation-error.png" style="width: 1044px; height: 680px;"></p>
+<p>此訊息是由「whereami.js」程式碼所記錄，指出 Geolocation API 回傳了錯誤，卻沒有說明是哪種錯誤。接著我們可用 JavaScript 除錯器 (JavaScript Debugger) 找出錯誤類型。</p>
+<h3 id="使用_JavaScript_除錯器_(JavaScript_Debugger)"><a name="Using-the-JavaScript-Debugger">使用 JavaScript 除錯器 (JavaScript Debugger)</a></h3>
+<div class="note">
+ <p><strong>如果你要從這裡開始研讀攻略：</strong></p>
+ <p>這一段將透過 <a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator" title="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS 模擬器 (Firefox OS Simulator)</a>，對很簡單的 Web App 進行除錯。GitHub 上的 <a href="https://github.com/rpl/firefoxos-simulator-walkthrough" title="https://github.com/rpl/firefoxos-simulator-walkthrough">firefoxos-simulator-walkthrough</a> 已有不同版本的 App。如果你想從本段開始了解 App 的修正程序，可從 App 的 <a href="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-3" title="https://github.com/wbamberg/firefoxos-simulator-walkthrough/tree/master/whereami-1">whereami-3 </a>版本著手，逐步完成此攻略。</p>
+ <p>這個 App 只會顯示 1 個「Where am I?」按鈕。只要點擊按鈕，則 App 就會透過 Geolocation API 取得使用者目前的位置，並於地圖上顯示。</p>
+ <p>此版本 App 的 Geolocation API 將回傳錯誤。所以本段將透過 JavaScript 除錯器 (JavaScript Debugger) 找出到底是哪種問題。</p>
+ <p>此處假設你<a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator#.E5.AE.89.E8.A3.9D.E6.A8.A1.E6.93.AC.E5.99.A8.E9.99.84.E5.8A.A0.E5.85.83.E4.BB.B6" title="/en-US/docs/Tools/Firefox_OS_Simulator#Installing_the_Simulator_add-on">已經安裝了 Firefox OS 模擬器 (Firefox OS Simulator)</a>、開啟 Dashboard、點選 Dashboard 中的「Add Directory」而新增了 App，並點選 App 的「manifest.webapp」檔案。</p>
+</div>
+<p>在連上 App 的網頁主控台 (WebConsole) 中，點選 Geolocation 錯誤記錄的右側鏈結：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5539/webconsole-whereami-geolocation-error-annotated.png" style="width: 1044px; height: 680px;"><br>
+ 按下「<strong>whereami.js:8</strong>」鏈結之後，JavaScript 除錯器隨即自動載入相關檔案並跳到有問題的行數。</p>
+<p>根據<a href="https://developer.mozilla.org/en-US/docs/DOM/window.navigator.geolocation.getCurrentPosition#PositionError" title="/en-US/docs/DOM/window.navigator.geolocation.getCurrentPosition#PositionError">這篇 Geolocation API 參考</a>所述，這裡將由錯誤處理器 (Error handler) 的 <code>error() 屬性送入 </code><code>code</code> 物件<code>，而我們再透過 </code><code>error 物件的</code><code> code</code><code> 屬性</code><code>獲知此特定錯誤的詳細資訊</code>。所以我們點選左側行數為 8 的那一行，即可於 <code>error()</code> 之內設定中斷點：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5541/webconsole-whereami-set-breakpoint.png" style="width: 1044px; height: 680px;"></p>
+<p>在 App 之內點選「<strong>Where am I?</strong>」之後，執行作業就會停在中斷點：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5545/webconsole-whereami-hit-breakpoint.png" style="width: 1044px; height: 680px;"></p>
+<p>此時只要按下「<strong>Add watch expression</strong>」的地方並鍵入「<strong>error.code</strong>」，就會立刻看到其值為「<strong>1</strong>」：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5547/webconsole-whereami-watch.png" style="width: 1044px; height: 680px;"><br>
+ 同樣根據 <a href="https://developer.mozilla.org/en-US/docs/DOM/window.navigator.geolocation.getCurrentPosition#PositionError" title="/en-US/docs/DOM/window.navigator.geolocation.getCurrentPosition#PositionError">Geolocation API 參考文件</a>所述，「1」即代表「權限已遭否決」。如果 Web Apps 尚未請求 <a href="https://developer.mozilla.org/en-US/docs/Apps/App_permissions" title="/en-US/docs/Apps/App_permissions">Geolocation 權限</a>，或使用者尚未許可該權限，都會發生這種錯誤。<br>
+ <br>
+ 這時來看「manifest.webapp」檔案，就會看到我們尚未要求權限：</p>
+<pre>{
+  "name": "Where am I?",
+  "description": "A simple web app",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/style/icons/earth.png"
+  }
+}</pre>
+<p><br>
+ 接著修復如下：</p>
+<pre>{
+  "name": "Where am I?",
+  "description": "A simple web app",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/style/icons/earth.png"
+  },
+  "permissions": {
+    "geolocation": {
+      "description": "Needed to tell the user where they are"
+      }
+  }
+}</pre>
+<p><br>
+ 儲存「<strong>manifest.webapp</strong>」之後，再按下 Dashboard 中的「<strong>Refresh</strong>」。這裡記得要在除錯器停在中斷點時，才能繼續除錯。而當你點選「Where am I?」，App 隨即會要求你分享你的位置。而你允許分享之後仍看不到地圖，接著又在 WebConsole 中找到新的訊息：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5549/webconsole-whereami-mapquestapi-not-defined.png" style="width: 1044px; height: 680px;"></p>
+<p>此訊息指出 MapQuest API (在 App 中以 script 標籤所指定) 並未正確載入。接著可使用網路監測器 (Network Monitor) 找出問題。</p>
+<h3 id="使用網路監測器_(Network_Monitor)"><a name="Using-the-NetworkMonitor"></a>使用網路監測器 (Network Monitor)</h3>
+<div class="note">
+ <p><strong>如果你要從這裡開始研讀攻略：</strong></p>
+ <p>這一段將透過 <a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator" title="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS 模擬器 (Firefox OS Simulator)</a>，對很簡單的 Web App 進行除錯。GitHub 上的 <a href="https://github.com/rpl/firefoxos-simulator-walkthrough" title="https://github.com/rpl/firefoxos-simulator-walkthrough">firefoxos-simulator-walkthrough</a> 已有不同版本的 App。如果你想從本段開始了解 App 的修正程序，可從 App 的 <a href="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-4" title="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-4">whereami-4 </a>版本著手，逐步完成此攻略。</p>
+ <p>這個 App 只會顯示 1 個「Where am I?」按鈕。只要點擊按鈕，則 App 就會透過 Geolocation API 取得使用者目前的位置，並於地圖上顯示。</p>
+ <p>此版本 App 的網頁主控台 (WebConsole) 將顯示「MQA is not defined」錯誤。所以本段將透過網路監測器 (Network Monitor) 找出未載入 MapQuest API 的原因。</p>
+ <p>此處假設你<a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator#.E5.AE.89.E8.A3.9D.E6.A8.A1.E6.93.AC.E5.99.A8.E9.99.84.E5.8A.A0.E5.85.83.E4.BB.B6" title="/en-US/docs/Tools/Firefox_OS_Simulator#Installing_the_Simulator_add-on">已經安裝了 Firefox OS 模擬器 (Firefox OS Simulator)</a>、開啟 Dashboard、點選 Dashboard 中的「Add Directory」而新增了 App，並點選 App 的「manifest.webapp」檔案。</p>
+</div>
+<div class="warning">
+ <p><strong>警告：</strong><a href="https://hacks.mozilla.org/2013/06/network-monitor-now-in-firefox-beta/" title="https://hacks.mozilla.org/2013/06/network-monitor-now-in-firefox-beta/">需 Firefox 23.0 或更高版本才具備網路監測器</a>功能。</p>
+</div>
+<p>在連上 App 的開發者工具中，點選「<strong>Network</strong>」分頁就會看到下列面板。可以看到「<strong>open.mapquestap.com</strong>」網域針對「<strong>mqa.toolkit.js</strong>」資源所發出的請求，從未完全成功過：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5551/network-monitor-timing-panel.png" style="width: 1044px; height: 680px;"></p>
+<p>成功的請求均標記為<strong>綠色</strong>。如果我們點選「<strong>open.mapquestap.com</strong><strong>」</strong>網域 (<strong>深灰色</strong>) 的請求之一，點選「<strong>Timings</strong>」的細節面板，就會看到 DNS 解析 (DNS resolution) 並未成功，因此該請求從未達到「<strong>Connecting</strong>」的狀態。</p>
+<p>再看到「<strong>index.html</strong>」檔案，會發現 script 標籤指向錯誤網域。</p>
+<p>這裡變更 script 標籤以使用正確的網域：<strong>open.mapquestapi.com</strong> (於網域名稱內加入缺少的「i」) 之後，即可修復此錯誤。</p>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+  &lt;head&gt;
+    &lt;meta charset='utf-8'&gt;
+    &lt;script src="<span style="background-color: #ffff00;">http://open.mapquestapi.com/sdk/js/v7.0.s/mqa.toolkit.js</span>"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"&gt;&lt;/script&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;button id ="where-am-i"&gt;Where am I?&lt;/button&gt;
+    &lt;div id="map"&gt;&lt;/div&gt;
+    &lt;script src="scripts/whereami.js"&gt;&lt;/script&gt;
+    &lt;link media="all" href="style/style.css" type="text/css" rel="stylesheet"&gt;
+  &lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<p>儲存「<strong>index.html</strong>」並點選 Dashboard 中的「<strong>Refresh</strong>」。在 App 執行時按下「Where am I?」，系統就會要求你分享你的位置。在你允許分享之後，App 終於顯示地圖：<br>
+ <img alt="" src="https://mdn.mozillademos.org/files/5553/whereami-map.png" style="width: 399px; height: 663px;"></p>
+<h3 id="使用樣式編輯器_(Style_Editor)"><a name="Using-the-StyleEditor"></a>使用樣式編輯器 (Style Editor)</h3>
+<div class="note">
+ <p><strong>如果你要從這裡開始研讀攻略：</strong></p>
+ <p>這一段將透過 <a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator" title="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS 模擬器 (Firefox OS Simulator)</a> 客製化 App 的樣式表 (Stylesheets)。 GitHub 上的 <a href="https://github.com/rpl/firefoxos-simulator-walkthrough" title="https://github.com/rpl/firefoxos-simulator-walkthrough">firefoxos-simulator-walkthrough</a> 已有不同版本的 App。如果你想從本段開始了解 App 的修正程序，可從 App 的 <a href="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-5" title="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-5">whereami-5</a> 版本著手，逐步完成此攻略。</p>
+ <p>這個 App 只會顯示 1 個「Where am I?」按鈕。只要使用者點擊按鈕，則 App 就會透過 Geolocation API 取得使用者目前的位置，並於地圖上顯示。</p>
+ <p>此版本的 App 已修復前述的所有錯誤。接著我們將透過樣式編輯器 (Style Editor)，為執行中的 App 即時變更樣式並儲存之。</p>
+ <p>此處假設你<a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator#.E5.AE.89.E8.A3.9D.E6.A8.A1.E6.93.AC.E5.99.A8.E9.99.84.E5.8A.A0.E5.85.83.E4.BB.B6" title="/en-US/docs/Tools/Firefox_OS_Simulator#Installing_the_Simulator_add-on">已經安裝了 Firefox OS 模擬器 (Firefox OS Simulator)</a>、開啟 Dashboard、點選 Dashboard 中的「Add Directory」而新增了 App，並點選 App 的「manifest.webapp」檔案。</p>
+</div>
+<div class="warning">
+ <p><strong>警告：</strong><a href="https://hacks.mozilla.org/2013/06/network-monitor-now-in-firefox-beta/" title="https://hacks.mozilla.org/2013/06/network-monitor-now-in-firefox-beta/">必須 Firefox 23.0 或更高版本才具備網路監測器</a> (目前 <a href="http://www.mozilla.org/en-US/firefox/beta/" title="http://www.mozilla.org/en-US/firefox/beta/">Firefox Beta 試用版才是 23.0 版</a>)</p>
+</div>
+<p>在連上 App 的開發者工具中，點選「<strong>Style Editor</strong>」分頁就會看到下列面板：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5555/whereami-style-editor.png" style="width: 1044px; height: 536px;"></p>
+<p>點選左側樣式表清單中的「<strong>style/style.css</strong>」，並修改 CSS 規則。新的規則會立刻套用至已連線的 App 上：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5557/whereami-style-editor-changes.png" style="width: 1044px; height: 528px;"></p>
+<p>現在點選樣式表「<strong>style/style.css</strong>」正下方的「<strong>Save</strong>」，即可將之儲存回專案中。</p>
+<h3 id="使用收據_(Receipts)_測試功能"><a name="Using-the-TestReceipts"></a>使用收據 (Receipts) 測試功能</h3>
+<div class="note">
+ <p><strong>如果你要從這裡開始研讀攻略：</strong></p>
+ <p>這一段將透過 <a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator" title="/en-US/docs/Tools/Firefox_OS_Simulator">Firefox OS 模擬器 (Firefox OS Simulator)</a>，為 Web App 新增付款收據驗證碼。GitHub 上的 <a href="https://github.com/rpl/firefoxos-simulator-walkthrough" title="https://github.com/rpl/firefoxos-simulator-walkthrough">firefoxos-simulator-walkthrough</a> 已有不同版本的 App。如果你想從本段開始了解 App 的修正程序，可從 App 的 <a href="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-6" title="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-6">whereami-6</a> 版本著手，逐步完成此攻略。</p>
+ <p>這個 App 只會顯示 1 個「Where am I?」按鈕。只要點擊按鈕，則 App 就會透過 Geolocation API 取得使用者目前的位置，並於地圖上顯示。</p>
+ <p>我們要把此版本 App 變更為付費 Web App。</p>
+ <p>此處假設你<a href="https://developer.mozilla.org/zh-TW/docs/Tools/Firefox_OS_Simulator#.E5.AE.89.E8.A3.9D.E6.A8.A1.E6.93.AC.E5.99.A8.E9.99.84.E5.8A.A0.E5.85.83.E4.BB.B6" title="/en-US/docs/Tools/Firefox_OS_Simulator#Installing_the_Simulator_add-on">已經安裝了 Firefox OS 模擬器 (Firefox OS Simulator)</a>、開啟 Dashboard、點選 Dashboard 中的「Add Directory」而新增了 App，並點選 App 的「manifest.webapp」檔案。</p>
+</div>
+<p>目前你已經將 App 修改為無錯誤的 App，並已擁有合適的樣式。現在可新增付款收據驗證 (Payment Receipt Validation) 功能，確保使用者必須購買此 App。</p>
+<p>Mozilla 另已提供小型的 JavaScript 函式庫，可協助 Apps 檢查自己的收據：<a href="https://github.com/mozilla/receiptverifier" title="https://github.com/mozilla/receiptverifier">http://github.com/mozilla/receiptverifier</a>。</p>
+<p>為 App 新增 receiptverifier (把新的 script 標籤加入「index.html」檔案中)：</p>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+  &lt;head&gt;
+    &lt;meta charset='utf-8'&gt;
+    <span style="background-color: #ffff00;">&lt;script src="https://raw.github.com/mozilla/receiptverifier/master/receiptverifier.js"&gt;&lt;/script&gt;</span>
+    &lt;script src="http://open.mapquestapi.com/sdk/js/v7.0.s/mqa.toolkit.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"&gt;&lt;/script&gt;
+
+  &lt;/head&gt;
+
+  &lt;body&gt;
+    &lt;button id ="where-am-i"&gt;Where am I?&lt;/button&gt;
+    &lt;div id="map"&gt;&lt;/div&gt;
+    &lt;script src="scripts/whereami.js"&gt;&lt;/script&gt;
+    &lt;link media="all" href="style/style.css" type="text/css" rel="stylesheet"&gt;
+  &lt;/body&gt;
+
+&lt;/html&gt;</pre>
+<p>接著再以「<strong>mozmarket.receipts.Verifier</strong>」API 檢查「<strong>scripts/whereami.js</strong>」中的收據 (將於按下按鈕，或於載入 App 時檢查收據)：</p>
+<pre class="brush: js">...
+
+var verifier = new mozmarket.receipts.Verifier({
+  installs_allowed_from: '*',
+  typsAllowed: 'test-receipt',
+  logLevel: mozmarket.receipts.Verifier.levels.DEBUG,
+  onlog: mozmarket.receipts.Verifier.consoleLogger
+});
+verifier.clearCache();
+
+function verifyPaymentReceipts(cb) {
+  verifier.verify(function (verifier) {
+    if (verifier.state instanceof verifier.states.OK) {
+      cb(null); // valid payment
+    } else {
+      cb("invalid-payment"); // invalid payment
+    }
+  });
+  setTimeout(function checkNoReceipts() {
+    if (verifier.state instanceof verifier.states.NoReceipts) {
+      cb("no-receipts");
+    }
+  }, 2000);
+}
+
+whereami.onclick = function() {
+  verifyPaymentReceipts(function (err) {
+    if (err) {
+      alert("Invalid Payment Receipt.");
+    } else {
+      navigator.geolocation.getCurrentPosition(getMap, error);
+    }
+  });
+};
+</pre>
+<p>正常情況需透過 Marketplace 與 Payment 服務，以加密方式簽署收據。但目前可先用模擬器 App 項目中的「<strong>Receipts</strong>」選單，點選所要安裝的收據類型 (預設為「<strong>None</strong>」)，即可為 App 安裝測試收據。</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5559/receipts-whereami-menu-annotated.png" style="width: 1044px; height: 742px;"></p>
+<p>現在即可測試 App 具備「<strong>Valid</strong>」、「<strong>Invalid</strong>」、「<strong>Refunded</strong>」收據，或無收據時的行為。另可於網頁主控台觀看「<strong>receiptverifier</strong>」函式庫所產生的記錄，藉以了解相關結果：</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5561/whereami-receipt-invalid.png" style="width: 1044px; height: 539px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/5563/whereami-receipt-valid.png" style="width: 1044px; height: 535px;"></p>
+<div class="note">
+ <p><strong>注意：</strong><a href="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-7" title="https://github.com/rpl/firefoxos-simulator-walkthrough/tree/master/whereami-7">whereami-7 </a>版本即為最終完成的 App。</p>
+</div>
+<p> </p>

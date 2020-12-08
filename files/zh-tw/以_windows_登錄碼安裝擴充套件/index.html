@@ -1,0 +1,32 @@
+---
+title: 以 Windows 登錄碼安裝擴充套件
+slug: 以_Windows_登錄碼安裝擴充套件
+tags:
+  - 擴充套件
+translation_of: >-
+  https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/
+---
+<h3 id=".E7.B0.A1.E4.BB.8B"> 簡介 </h3>
+<p>本文演示以 Windows 登錄碼 (Registry)「安裝」Firefox／Thunderbird <a href="zh_tw/%e6%93%b4%e5%85%85%e5%a5%97%e4%bb%b6">擴充套件</a>的方法。此功能可以方便協力廠商的程式為 Firefox 或 Thunderbird 安裝套件。
+</p><p><b>注意</b> 本文所描述的功能只在 Firefox／Thunderbird 1.5 以上版本有用。
+</p>
+<h3 id=".E5.AE.89.E8.A3.9D"> 安裝 </h3>
+<p>在下列兩個登錄碼下新增項目便可安裝套件：
+</p>
+<pre class="eval">HKEY_CURRENT_USER\Software\Mozilla\Firefox\Extensions
+HKEY_LOCAL_MACHINE\Software\Mozilla\Firefox\Extensions
+</pre>
+<p>若要裝在 Thunderbird 中，則將上面的 <code>Firefox</code> 改為 <code>Thunderbird</code> 即可。
+</p><p>新增的項目需以擴充套件的 <a href="zh_tw/%e5%a5%97%e4%bb%b6%e5%ae%89%e8%a3%9d%e6%aa%94%e7%b5%90%e6%a7%8b#id">ID</a> 為名、型態設定為 <code>REG_SZ</code>，其值則為套件安裝檔所在資料夾的完整路徑。舉例來說，要安裝<a href="zh_tw/%e8%a3%bd%e4%bd%9c%e6%93%b4%e5%85%85%e5%a5%97%e4%bb%b6">製作擴充套件</a>範例中的套件，則需新增一個名為 <code><a class=" link-mailto" href="mailto:sample@foo.net">sample@foo.net</a></code> 的登錄碼項目，並將其值設定為 <code>c:\extensions\myExtension</code>。
+</p><p>新增登錄碼之後，下回 Firefox／Thunderbird 啟動時便會偵測其值遂行安裝。在 Firefox／Thunderbird 執行中時依然可以更動登錄碼。
+</p><p>如果 <code>HKEY_CURRENT_USER</code> 及 <code>HKEY_LOCAL_MACHINE</code> 中有相同的登錄碼項目，則會先行採用 <code>HKEY_CURRENT_USER</code> 中的套件；如果使用者自行安裝過相同的擴充套件，則自行安裝的會優先使用。
+</p>
+<h3 id=".E7.A7.BB.E9.99.A4"> 移除 </h3>
+<p>要移除以 Windows 登錄碼安裝的套件，只要將相對應的登錄碼項目移除即可。移除登錄碼之後，下回 Firefox／Thunderbird 啟動偵測後便會一併移除套件。在 Firefox／Thunderbird 執行中時依然可以更動登錄碼。
+</p>
+<h3 id=".E5.BB.B6.E4.BC.B8.E9.96.B1.E8.AE.80"> 延伸閱讀 </h3>
+<p><a href="zh_tw/%e5%8c%85%e8%a3%9d%e6%93%b4%e5%85%85%e5%a5%97%e4%bb%b6">包裝擴充套件</a>
+</p>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Adding_Extensions_using_the_Windows_Registry", "ja": "ja/Adding_Extensions_using_the_Windows_Registry", "zh-cn": "cn/Adding_Extensions_using_the_Windows_Registry" } ) }}

@@ -1,0 +1,332 @@
+---
+title: 應用程式內部付費 (In-app payments)
+slug: Archive/Mozilla/Marketplace/Monetization/In-app_payments
+translation_of: Archive/Marketplace/Monetization/In-app_payments_section/mozPay_iap
+---
+<div class="summary">
+ <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozPay">navigator.mozPay</a> API 可讓網頁內容執行數位貨品的付款作業，並能接收由付款服務商所傳來的購買確認訊息。我們也針對此 API 建構了 <a href="https://wiki.mozilla.org/WebAPI/WebPaymentProvider">Web 付款服務商</a>，讓你能取得數位貨品的款項。本文將說明該如何使用<span class="seoSummary"> <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozPay">navigator.mozPay</a> API 與 <a href="https://wiki.mozilla.org/WebAPI/WebPaymentProvider">Web 付款服務商</a>的服務，以達到應用程式內付款 (In-app payments)。</span></p>
+ <div class="note">
+  <p>另外現正開發「<a href="https://developer.mozilla.org/en-US/Marketplace/Monetization/In-app_payments_section/fxPay_iap">fxPay</a>」付款處理機制。FxPay 不會要求開發者必須架設伺服器以進行購買行為驗證，可算是更完整的付款方式。</p>
+ </div>
+</div>
+<h2 id="In-app_payments_概述">In-app payments 概述</h2>
+<p>讓你為自己的 App 添加 In-app payments 機制，與其運作的方法：</p>
+<ul>
+ <li>登入 <a href="https://marketplace.firefox.com/developers/">Firefox Marketplace 開發者交流中心 (Developer Hub)。</a></li>
+ <li><a href="https://marketplace.firefox.com/developers/submit/">上傳 App</a>、將 App 設定為 Paid 或 In-app 付款、產生應用程式金鑰 (Application Key) 與應用程式安全金鑰 (Application Secret)。</li>
+ <li>App 將透過上述的安全金鑰 (Secret) 簽署 <a href="http://openid.net/specs/draft-jones-json-web-token-07.html">JWT</a> 請求，並呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozPay"><code>navigator.mozPay(...)</code></a> 而開始付款作業</li>
+ <li>系統將另開一個特殊視窗執行付款流程
+  <ul>
+   <li>消費者若尚未登入，則以 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Persona">Mozilla Persona</a> 登入</li>
+   <li>消費者輸入自己的 PIN 碼</li>
+   <li>消費者透過電信帳單或信用卡付費</li>
+  </ul>
+ </li>
+ <li>消費者關閉視窗之後，你的 App 就會收到 JavaScript 回呼 (Callback)</li>
+ <li>你的 App <strong>伺服器</strong>將接收已簽署的 POST 請求，內含的 Mozilla 交易 ID 將指出已成功完成購買程序</li>
+ <li>所得金額將直接匯入你的銀行帳戶</li>
+</ul>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozPay"><code>navigator.mozPay</code></a> API 目前限用於 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a>。你同樣可透過 <a href="https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager">Firefox OS 應用程式管理員 (App Manager)</a> 測試此 API。</p>
+<div class="note">
+ <p><strong>注意：</strong>如果是在 Firefox OS 1.2 裝置上測試，只要該裝置內並無 SIM 卡，則 <code>mozPay</code> 呼叫將失敗。但消費者只要裝入 SIM 卡就可解決此問題。目前市面上販售的 Firefox OS 裝置均未安裝 Firefox 1.2。若要進一步了解，可參閱 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=989022">bug 989022</a>。</p>
+</div>
+<h2 id="逐步設定_In-app_payment">逐步設定 In-app payment</h2>
+<p>接著說明該如何設定 In-app payment。</p>
+<h3 id="取得測試用的付款金鑰_(Payment_Key)"><strong>取得測試用的付款金鑰 (Payment Key)</strong></h3>
+<p>在登入至 <a href="https://marketplace.firefox.com/developers/">Firefox Marketplace 開發者交流中心</a>時，可前往 <a href="https://marketplace.firefox.com/developers/in-app-keys/">In-App Payment Keys</a> 頁面取得應用程式金鑰與安全金鑰以利測試。雖然金鑰只能讓你<strong>模擬</strong> In-app payments，但已足以因應相關測試。在將自己的 App 提交至 Marketplace 審核之前，應該先多嘗試相關模擬。請參閱付款模擬的相關說明。</p>
+<h3 id="取得真正的付款金鑰"><strong>取得真正的付款金鑰</strong></h3>
+<p>在將自己的 App 提交至 <a href="https://marketplace.firefox.com/developers/">Firefox Marketplace 開發者交流中心</a>時， 系統將要求你設定付款條件。此時請選擇 App 的價格 (你也可能想免費提供)，接著勾選你接受 In-app payments 的選項。在設定自己的銀行帳戶之後，前往「Manage In-App Payments」頁面取得應用程式金鑰與安全金鑰，才能執行真正的付款作業。</p>
+<p>透過隱私設定或類似檔案，可在自己的 App 伺服器中儲存應用程式安全金鑰。</p>
+<div class="note">
+ <strong>重要：</strong>請確認沒有任何人可讀取你的應用程式安全金鑰。絕對不要在用戶端披露該項資訊。</div>
+<h3 id="設定_App"><strong>設定 A</strong>pp</h3>
+<p>先假設你在設計某個 <a href="https://developer.mozilla.org/en-US/docs/Web/Apps">Open Web App </a>的冒險遊戲，而你想販售「魔力獨角獸」物品，讓玩家能擁有遊戲優勢。你可設定美金 $1.99、歐元 €1.89，或任何幣值均可。接著將說明該如何設定後端伺服器，並撰寫前端程式碼而透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozPay">navigator.mozPay</a> 銷售產品。</p>
+<h3 id="設定自己的伺服器以簽署_JWT"><strong>設定自己的伺服器以簽署</strong> JWT</h3>
+<p>因為用來簽署的應用程式安全金鑰絕對不能公開，所以你必須在伺服端簽署 <a href="http://openid.net/specs/draft-jones-json-web-token-07.html">JSON Web Tokens (JWTs)</a>；而非用戶端。回到剛剛冒險遊戲要賣魔力獨角獸的例子，你要在自己的伺服器上建立如 <code>/sign-jwt</code> 的網址。如此可建立 JSON 物件以定義產品名稱、定價等。可參閱 <a href="https://wiki.mozilla.org/WebAPI/WebPayment">Web Payment API 規格</a>以了解完整的 JWT 格式。範例如下：</p>
+<pre class="brush: js  language-js"><code class="language-js"><span class="token punctuation">{</span>
+  <span class="token string">"iss"</span><span class="token punctuation">:</span> APPLICATION_KEY<span class="token punctuation">,</span>
+  <span class="token string">"aud"</span><span class="token punctuation">:</span> <span class="token string">"marketplace.firefox.com"</span><span class="token punctuation">,</span>
+  <span class="token string">"typ"</span><span class="token punctuation">:</span> <span class="token string">"mozilla/payments/pay/v1"</span><span class="token punctuation">,</span>
+  <span class="token string">"iat"</span><span class="token punctuation">:</span> <span class="token number">1337357297</span><span class="token punctuation">,</span>
+  <span class="token string">"exp"</span><span class="token punctuation">:</span> <span class="token number">1337360897</span><span class="token punctuation">,</span>
+  <span class="token string">"request"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"id"</span><span class="token punctuation">:</span> <span class="token string">"915c07fc-87df-46e5-9513-45cb6e504e39"</span><span class="token punctuation">,</span>
+    <span class="token string">"pricePoint"</span><span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Magical Unicorn"</span><span class="token punctuation">,</span>
+    <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Adventure Game item"</span><span class="token punctuation">,</span>
+    <span class="token string">"icons"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"64"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/img/icon-64.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"128"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/img/icon-128.png"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">"productData"</span><span class="token punctuation">:</span> <span class="token string">"user_id=1234&amp;my_session_id=XYZ"</span><span class="token punctuation">,</span>
+    <span class="token string">"postbackURL"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/payments/postback"</span><span class="token punctuation">,</span>
+    <span class="token string">"chargebackURL"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/payments/chargeback"</span><span class="token punctuation">,</span>
+    <span class="token string">"defaultLocale"</span><span class="token punctuation">:</span> <span class="token string">"en"</span><span class="token punctuation">,</span>
+    <span class="token string">"locales"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"de"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Magisches Einhorn"</span><span class="token punctuation">,</span>
+        <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Adventure Game Artikel"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><a href="https://wiki.mozilla.org/WebAPI/WebPayment">Web Payment API 規格</a>將詳細解釋格式。此處列出幾個重點：</p>
+<ul>
+ <li><code>iss</code> (issuer) 將對應你從 <a href="http://marketplace.firefox.com/developers/">Firefox Marketplace 開發者交流中心</a>所取得的 App 金鑰。</li>
+ <li><code>aud</code> (audience) 應設定為 <code>marketplace.firefox.com</code>。</li>
+ <li><code>request.id</code> 均專屬對應至你的各個 App 產品。</li>
+ <li>在購買當下，<code>request.pricePoint</code> 將展開為價格與幣別。你必須將之設定為有效的<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Publishing/App_pricing#Pricing_with_price_points" title="/en-US/docs/Web/Apps/Publishing/App_pricing#Pricing_with_price_points">價格點數</a>。</li>
+ <li><code>request.productData </code><code>最多</code><code>可容納 255 個字元的字串。當你接收到回傳的</code> postback 時，可讓你核對 App 的狀態。</li>
+ <li><code>request.postbackURL</code> 與 <code>request.chargebackURL</code> 需指向你伺服器網址的有效、絕對路徑。在 Mozilla 正式上線的服務環境中，網址均必須是 HTTPS。</li>
+ <li><code>request.icons</code> 物件 (選填) 是你販售商品的圖示網址，其值為寬/高像素值 (圖像需為正方形)。Mozilla 的付款服務商將於付款確認頁面上使用你的 64 像素圖像。若你並未指定 64 像素的圖像，則將依照字型取得最大的圖示並將之縮放。針對首次購買該 App 的消費者，則由付款服務商在背景取得圖示，所以消費者不會立刻看到圖示。若你變更圖示，則將於 24 小時之內顯示新圖示。</li>
+ <li><code>request.defaultLocale</code> 將敘述 In-app 產品目前的語言。除非必須定義 <code>locales</code> ，否則此亦為選填物件。</li>
+ <li><code>request.locales</code> 物件 (選填) 將對應一或多個地區而重新定義 In-app 產品所內含的資料，且此處 UI 將根據存取裝置的語言而提供翻譯過的內容。舉例來說，如果有義大利消費者安裝了你的 App，你應該也想提供義大利文的 UI 介面。各個地區語言的輸入項均已鍵入語言標籤 (<a href="http://www.ietf.org/rfc/rfc4646.txt">RFC 4646</a>) ，並包含你所要取代的標籤。你可以只重新定義 <code>name</code> 與 <code>description</code> 就好。但若定義了 <code>locales</code> 也就必須定義 <code>defaultLocale</code>。</li>
+</ul>
+<p>在 Python (使用 <a href="https://github.com/progrium/pyjwt">PyJWT</a>) 程式碼中，你可簽署並編碼上述的請求路徑如下：</p>
+<pre class="brush: python language-html"><code class="language-python">import jwt
+signed_request = jwt.encode(request_dict, application_secret, algorithm='HS256')</code></pre>
+<p>此程式碼將為 JWT (使用應用程式安全金鑰) 進行簽章，並使用 HMAC SHA 256 演算法。在編碼過後就如下列：</p>
+<pre class="language-html"><code class="language-html">eyJhbGciOiAiSFMyNTYiLCAidHlwIjogIkpXVCJ9.IntcImF1ZFwiOiBcIm1hcmtldHBsYWNlLm1vemlsbGEub3JnXCIsIFwiaXNzXCI6IFwiQVBQLTEyM1wiLCBcInJlcXVlc3RcIjoge1wiY3VycmVuY3lcIjogXCJVU0RcIiwgXCJwcmljZVwiOiBcIjAuOTlcIiwgXCJuYW1lXCI6IFwiVmlydHVhbCAzRCBHbGFzc2VzXCIsIFwicHJvZHVjdGRhdGFcIjogXCJBQkMxMjNfREVGNDU2X0dISV83ODkuWFlaXCIsIFwiZGVzY3JpcHRpb25cIjogXCJWaXJ0dWFsIDNEIEdsYXNzZXNcIn0sIFwiZXhwXCI6IFwiMjAxMi0wMy0yMVQxMTowOTo1Ni43NTMxNDFcIiwgXCJpYXRcIjogXCIyMDEyLTAzLTIxVDEwOjA5OjU2LjgxMDQyMFwiLCBcInR5cFwiOiBcIm1vemlsbGEvcGF5bWVudHMvcGF5L3YxXCJ9Ig.vl4E31_5H3t5H_mM8XA69DqypCqdACVKFy3kXz9EmTI</code></pre>
+<p>如上面章節所述，在 JWT 經過編碼/簽章之後，即可透過其用戶端碼而供你的 App 所使用。</p>
+<h3 id="設定購買按鈕">設定購買按鈕</h3>
+<p>現在你已經有後端可為自己的產品產生 JWT 了。接著透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozPay"><code>navigator.mozPay</code></a> 提供前端程式碼的撰寫範例。請確實在自己的 App 中提供按鈕，以利消費者購買產品。例如：</p>
+<pre class="brush: html  language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>purchase<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Purchase Magical Unicorn<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>點選購買按鈕之後，你的 App 應會簽署 <a href="http://openid.net/specs/draft-jones-json-web-token-07.html">JSON Web Token (JWT)</a> 並呼叫 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozPay"><code>navigator.mozPay</code></a>。下列為 <a href="http://jquery.com/">jQuery</a> 使用範例：</p>
+<pre class="brush: js  language-js"><code class="language-js">$<span class="token punctuation">(</span><span class="token string">'#purchase button'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token comment"> // The purchase is now pending...
+</span>  $<span class="token punctuation">.</span><span class="token function">post<span class="token punctuation">(</span></span><span class="token string">'/sign-jwt'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">done<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>signedJWT<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> request <span class="token operator">=</span> navigator<span class="token punctuation">.</span><span class="token function">mozPay<span class="token punctuation">(</span></span><span class="token punctuation">[</span>signedJWT<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      request<span class="token punctuation">.</span>onsuccess <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">waitForPostback<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      request<span class="token punctuation">.</span>onerror <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'navigator.mozPay() error: '</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>error<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">fail<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">error<span class="token punctuation">(</span></span><span class="token string">'Ajax post to /sign-jwt failed'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">waitForPostback<span class="token punctuation">(</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ <span class="token comment"> // Poll your server until you receive a postback with a JWT.
+</span> <span class="token comment"> // If the JWT signature is valid then you can dispurse the Magical Unicorn
+</span> <span class="token comment"> // product to your customer.
+</span> <span class="token comment"> // For bonus points, use Web Sockets :)
+</span><span class="token punctuation">}</span></code></pre>
+<p>上列程式碼將送出 Ajax 請求至你伺服器上的 <code>/sign-jwt</code> 網址。該網址所簽署的 JSON blob 將包含產品/價格資訊，並以純文字檔回傳 JWT。而 Ajax 處理器 (Handler) 將傳送該 JWT 進入 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozPay"><code>navigator.mozPay</code></a> 並等待，直到付款服務商將購買確認訊息送至你的伺服器上。若送過來的 JWT 簽章通過驗證為有效，你就可將虛擬商品交付給消費者。</p>
+<h3 id="於伺服器上處理_Postback"><strong>於伺服器上處理</strong> Postback</h3>
+<p>在正式販售出出自己的 App 產品之前，必須先等待 Marketplace 回傳購買確認訊息；此及所謂的「Postback」。此由 <code>marketplace.firefox.com</code> 傳送出「POST」確認通知 (即 1 組 <a href="http://openid.net/specs/draft-jones-json-web-token-07.html">JWT</a>)，至原始付款請求所指定的 <code>request.postbackURL</code>。</p>
+<p>而此「POST」具備 <code>application/x-www-form-urlencoded</code> 的 <code>Content-Type</code>，且亦可於 <strong><code>notice</code></strong> 參數中找到此 JWT。在你的伺服器框架中，你可透過如 <strong>request.POST['notice']</strong> 來存取此 JWT。</p>
+<p>此 JWT 通知具備所有的付款請求欄位與 1 組交易 ID，並以 <a href="https://marketplace.firefox.com/developers/">Firefox Marketplace 開發者交流中心</a>取得的應用程式安全金鑰而完成簽章。當你收到 Postback 並驗證簽章之後，隨即完成購買程序。若你無法辨別 JWT 的簽章，就可能不是 Marketplace 所傳送的 JWT，你可逕行忽略。</p>
+<p><a href="https://wiki.mozilla.org/WebAPI/WebPayment">Web Payment API 規格</a>即解釋了 Postback 的細節。Postback 內含原始請求，且添增的新反應參數亦包含 Mozilla 的特定交易 ID。範例如下：</p>
+<pre class="brush: js  language-js"><code class="language-js"><span class="token punctuation">{</span>
+  <span class="token string">"iss"</span><span class="token punctuation">:</span> <span class="token string">"marketplace.firefox.com"</span><span class="token punctuation">,</span>
+  <span class="token string">"aud"</span><span class="token punctuation">:</span> APPLICATION_KEY<span class="token punctuation">,</span>
+  <span class="token string">"typ"</span><span class="token punctuation">:</span> <span class="token string">"mozilla/payments/pay/postback/v1"</span><span class="token punctuation">,</span>
+  <span class="token string">"exp"</span><span class="token punctuation">:</span> <span class="token number">1337370900</span><span class="token punctuation">,</span>
+  <span class="token string">"iat"</span><span class="token punctuation">:</span> <span class="token number">1337360900</span><span class="token punctuation">,</span>
+  <span class="token string">"request"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"id"</span><span class="token punctuation">:</span> <span class="token string">"915c07fc-87df-46e5-9513-45cb6e504e39"</span><span class="token punctuation">,</span>
+    <span class="token string">"pricePoint"</span><span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Magical Unicorn"</span><span class="token punctuation">,</span>
+    <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Adventure Game item"</span><span class="token punctuation">,</span>
+    <span class="token string">"icons"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"64"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/img/icon-64.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"128"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/img/icon-128.png"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">"productData"</span><span class="token punctuation">:</span> <span class="token string">"user_id=1234&amp;my_session_id=XYZ"</span><span class="token punctuation">,</span>
+    <span class="token string">"postbackURL"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/payments/postback"</span><span class="token punctuation">,</span>
+    <span class="token string">"chargebackURL"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/payments/chargeback"</span><span class="token punctuation">,</span>
+    <span class="token string">"defaultLocale"</span><span class="token punctuation">:</span> <span class="token string">"en"</span><span class="token punctuation">,</span>
+    <span class="token string">"locales"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"de"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Magisches Einhorn"</span><span class="token punctuation">,</span>
+        <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Adventure Game Artikel"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">"response"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"transactionID"</span><span class="token punctuation">:</span> <span class="token string">"webpay:84294ec6-7352-4dc7-90fd-3d3dd36377e9"</span><span class="token punctuation">,</span>
+    <span class="token string">"price"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">"amount"</span><span class="token punctuation">:</span> <span class="token string">"0.99"</span><span class="token punctuation">,</span> <span class="token string">"currency"</span><span class="token punctuation">:</span> <span class="token string">"CAD"</span><span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>列出 Postback 的幾項重點：</p>
+<ul>
+ <li>必將納入你的原始付款請求。</li>
+ <li><code>iss</code> (issuer) 必為 marketplace.firefox.com。</li>
+ <li><code>aud</code> (audience) 設定為你的應用程式金鑰。</li>
+ <li>以你的應用程式安全金鑰簽署 JWT。</li>
+ <li><code>response.transactionID</code> 專屬於 Mozilla 的 <a href="https://github.com/mozilla/webpay">Web Payment Provider。</a></li>
+ <li><code>response.price </code>則為客戶實際使用的金額與幣別。</li>
+</ul>
+<h3 id="回應_Postback">回應 Postback</h3>
+<p>App 必須透過純文字的 HTTP 回應 (其內僅含交易 ID)，對 Postback 做出回應。例如：</p>
+<pre class="language-html"><code class="language-html">HTTP/1.1 200 OK
+Content-Type: text/plain
+
+webpay:84294ec6-7352-4dc7-90fd-3d3dd36377e9</code></pre>
+<h3 id="於伺服器上處理_Chargeback"><strong>於伺服器上處理</strong> Chargeback</h3>
+<p>如果交易過程發生問題 (如消費者帳戶的餘額不足)，則 Marketplace 將傳送退款通知 (即 POST 過的 <a href="http://openid.net/specs/draft-jones-json-web-token-07.html">JWT</a>)。Chargeback 與 Postback 同樣都會傳送到 App，但 Chargeback 送達的時間較晚。該 POST 具備 <code>application/x-www-form-urlencoded</code> 的 <code>Content-Type</code>，且可於 <code>notice</code> 參數中找到該 JWT。下列為解碼後的 Chargeback 通知範例：</p>
+<pre class="brush: js  language-js"><code class="language-js"><span class="token punctuation">{</span>
+  <span class="token string">"iss"</span><span class="token punctuation">:</span> <span class="token string">"marketplace.firefox.com"</span><span class="token punctuation">,</span>
+  <span class="token string">"aud"</span><span class="token punctuation">:</span> APPLICATION_KEY<span class="token punctuation">,</span>
+  <span class="token string">"typ"</span><span class="token punctuation">:</span> <span class="token string">"mozilla/payments/pay/chargeback/v1"</span><span class="token punctuation">,</span>
+  <span class="token string">"exp"</span><span class="token punctuation">:</span> <span class="token number">1337370900</span><span class="token punctuation">,</span>
+  <span class="token string">"iat"</span><span class="token punctuation">:</span> <span class="token number">1337360900</span><span class="token punctuation">,</span>
+  <span class="token string">"request"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"id"</span><span class="token punctuation">:</span> <span class="token string">"915c07fc-87df-46e5-9513-45cb6e504e39"</span><span class="token punctuation">,</span>
+    <span class="token string">"pricePoint"</span><span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Magical Unicorn"</span><span class="token punctuation">,</span>
+    <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Adventure Game item"</span><span class="token punctuation">,</span>
+    <span class="token string">"icons"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"64"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/img/icon-64.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"128"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/img/icon-128.png"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">"productData"</span><span class="token punctuation">:</span> <span class="token string">"user_id=1234&amp;my_session_id=XYZ"</span><span class="token punctuation">,</span>
+    <span class="token string">"postbackURL"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/payments/postback"</span><span class="token punctuation">,</span>
+    <span class="token string">"chargebackURL"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/payments/chargeback"</span><span class="token punctuation">,</span>
+    <span class="token string">"defaultLocale"</span><span class="token punctuation">:</span> <span class="token string">"en"</span><span class="token punctuation">,</span>
+    <span class="token string">"locales"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"de"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Magisches Einhorn"</span><span class="token punctuation">,</span>
+        <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Adventure Game Artikel"</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">"response"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"transactionID"</span><span class="token punctuation">:</span> <span class="token string">"webpay:84294ec6-7352-4dc7-90fd-3d3dd36377e9"</span><span class="token punctuation">,</span>
+    <span class="token string">"reason"</span><span class="token punctuation">:</span> <span class="token string">"refund"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>此 JWT 和 Postback 類似，可於 <a href="https://wiki.mozilla.org/WebAPI/WebPayment">Web Payment API 規格</a>中參閱其定義細節。此處列出幾項重點：</p>
+<ul>
+ <li>必納入原始付款請求。</li>
+ <li><code>iss</code> (issuer) 必為 <code>marketplace.firefox.com</code>。</li>
+ <li><code>aud</code> (audience) 需設為你的應用程式金鑰。</li>
+ <li>JWT 需以你的應用程式安全金鑰完成簽章。</li>
+ <li><code>response.transactionID</code> 專屬於 Mozilla 的 Web Payment Provider。</li>
+ <li><code>response.reason</code> 必設為 <code>refund</code> 或 <code>reversal。</code>
+  <ul>
+   <li><code>refund</code> 代表已根據消費者或管理員的要求而退回款項。</li>
+   <li><code>reversal</code>代表消費者要求信用卡發卡銀行取消交易。在爭議款項發生時，消費者亦可能透過信用卡公司取消交易。</li>
+  </ul>
+ </li>
+</ul>
+<div class="note">
+ <p><strong>注意：</strong>目前 in-app payments 尚未支援退款作業。</p>
+</div>
+<p>App 必須透過純文字的 HTTP 回應 (其內僅含交易 ID)，對 Chargeback 做出回應。舉例來說：</p>
+<pre class="language-html"><code class="language-html">HTTP/1.1 200 OK
+Content-Type: text/plain
+
+webpay:84294ec6-7352-4dc7-90fd-3d3dd36377e9</code></pre>
+<h3 id="Postbackchargeback_錯誤">Postback/chargeback 錯誤</h3>
+<p>若 App 伺服器是以不成功的狀態碼回應 HTTP 請求，則 Mozilla 的 Web Payment Provider 將重新嘗試 URL 數次。若仍未能接收成功回應，則 App 開發者就會收到通知，且該 App 將暫時停用。若 App 伺服器未能以交易 ID 回應 Postback 或 Chargeback，就會將該伺服器處理為錯誤並會重新嘗試。</p>
+<h3 id="使用_HTTPS_Postbackchargeback_網址">使用 HTTPS Postback/chargeback 網址</h3>
+<p>於正式環境中執行 App 時，可依需要而嘗試使用安全的 HTTPS 網址。如此一來，在將 Postbacks 從 Mozilla 伺服器傳輸至自己的 App 伺服器時，可避免 Postback 資料遭他人讀取。目前並未強制使用 HTTPS 來保護付款請求，其實 JWT 簽章即可達到相同效果。</p>
+<div class="warning">
+ <p><strong><strong>注意：</strong></strong>若你並未使用安全的 HTTPS Postback 網址，則請確認自己的付款請求<strong><strong><strong>並未包含個人識別資訊</strong></strong></strong>，以免遭第三方所攔截。舉例來說<strong><strong>，需確認自己的</strong></strong> <em>productData</em> 值並未揭露任何高敏感性的使用者資料。Mozilla 預設的付款請求亦未包含任何個人識別資訊。</p>
+</div>
+<h3 id="Postbackchargeback_IP">Postback/chargeback IP</h3>
+<p>如果你依照上述方式而確實檢查了 JWT 簽章，就不需為 Firefox Marketplace 伺服器 (傳送 postback/chargeback 通知給你) 的 IP 設定許可清單。但如果你想再另加額外保險 (例如防止鍵盤側錄)，則 Marketplace 也能從下列 IP 位址寄發 postback/chargeback 通知給你。只要這些 IP 位址變更，都會發佈到 <a href="https://lists.mozilla.org/listinfo/dev-marketplace">dev-marketplace 郵件群組</a>之中。</p>
+<pre class="language-html"><code class="language-html">63.245.216.100</code></pre>
+<h3 id="模擬付款">模擬付款</h3>
+<p>上面的「概述」部分提到，你可從 <a href="https://marketplace.firefox.com/developers/">Firefox Marketplace 開發者交流中心</a>取得特殊的應用程式金鑰 (Application Key) 與應用程式安全金鑰 (Application Secret)，進而模擬 In-app payments。而這個安全金鑰亦可簽署如下的客製 JWT：</p>
+<pre class="brush: js  language-js"><code class="language-js"><span class="token punctuation">{</span>
+  <span class="token string">"iss"</span><span class="token punctuation">:</span> APPLICATION_KEY<span class="token punctuation">,</span>
+  <span class="token string">"aud"</span><span class="token punctuation">:</span> <span class="token string">"marketplace.firefox.com"</span><span class="token punctuation">,</span>
+  <span class="token string">"typ"</span><span class="token punctuation">:</span> <span class="token string">"mozilla/payments/pay/v1"</span><span class="token punctuation">,</span>
+  <span class="token string">"iat"</span><span class="token punctuation">:</span> <span class="token number">1337357297</span><span class="token punctuation">,</span>
+  <span class="token string">"exp"</span><span class="token punctuation">:</span> <span class="token number">1337360897</span><span class="token punctuation">,</span>
+  <span class="token string">"request"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token string">"id"</span><span class="token punctuation">:</span> <span class="token string">"915c07fc-87df-46e5-9513-45cb6e504e39"</span><span class="token punctuation">,</span>
+    <span class="token string">"pricePoint"</span><span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Magical Unicorn"</span><span class="token punctuation">,</span>
+    <span class="token string">"description"</span><span class="token punctuation">:</span> <span class="token string">"Adventure Game item"</span><span class="token punctuation">,</span>
+    <span class="token string">"icons"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"64"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/img/icon-64.png"</span><span class="token punctuation">,</span>
+      <span class="token string">"128"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/img/icon-128.png"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">"productData"</span><span class="token punctuation">:</span> <span class="token string">"user_id=1234&amp;my_session_id=XYZ"</span><span class="token punctuation">,</span>
+    <span class="token string">"postbackURL"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/payments/postback"</span><span class="token punctuation">,</span>
+    <span class="token string">"chargebackURL"</span><span class="token punctuation">:</span> <span class="token string">"https://yourapp.com/payments/chargeback"</span><span class="token punctuation">,</span>
+    <span class="token string">"simulate"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"result"</span><span class="token punctuation">:</span> <span class="token string">"postback"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>額外的 <code>request.simulate</code> 屬性可要求 Payment Provider 模擬相關結果，而不會真正收費。使用者介面亦不會要求登入或 PIN 碼。在開發 App 時，可透過此屬性而確認「購買」鈕已正確掛上 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozPay">navigator.mozPay</a>，且自己的伺服器可正確運作 Postbacks 與 Chargebacks 的網址。</p>
+<p>下列範例將模擬 1 筆成功的購買作業，並傳送簽署過的通知至你的 Postback 網址：</p>
+<pre class="brush: js  language-js"><code class="language-js"><span class="token punctuation">{</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token string">"request"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token string">"simulate"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"result"</span><span class="token punctuation">:</span> <span class="token string">"postback"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>下列則模擬 1 筆 Chargeback 退款：</p>
+<pre class="brush: js  language-js"><code class="language-js"><span class="token punctuation">{</span>
+  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+  <span class="token string">"request"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token string">"simulate"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">"result"</span><span class="token punctuation">:</span> <span class="token string">"chargeback"</span><span class="token punctuation">,</span>
+      <span class="token string">"reason"</span><span class="token punctuation">:</span> <span class="token string">"refund"</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>將如同真正的購買作業一般，將有 1 筆 JWT 通知傳送到你的處理器，但不會有隨機產生的 transactionID。模擬作業亦可使用 non-HTTPS 網址。</p>
+<div class="note">
+ <p><strong>注意：</strong>模擬的付款 JWT 不該用於正式的服務環境中，否則你的消費者將免費取得產品。</p>
+</div>
+<h2 id="除錯">除錯</h2>
+<p>如果你並未正確使用 in-app payment API，則付款畫面將顯示錯誤訊息，以協助使用者進行後續步驟。付款畫面亦將提供錯誤程式碼，協助開發者找出相關錯誤。你可透過 Mozilla 的 <a href="https://webpay.readthedocs.org/en/latest/services.html#error-legend">Error Legend API</a>，在自己慣用的程式語言中觀看錯誤代碼。舉例來說，錯誤代碼 <code>INVALID_JWT</code> 即表示 JWT 簽章無效，或 JWT 格式混亂。</p>
+<h2 id="保護應用程式安全金鑰"><strong>保護應用程式安全金鑰</strong></h2>
+<div class="warning">
+ <p><strong><strong>警告：</strong></strong>請確認沒有任何人可讀取你的應用程式安全金鑰。<strong>絕對不要在用戶端披露該項資訊</strong>。</p>
+</div>
+<h3 id="撤銷遭盜用的應用程式安全金鑰"><strong>撤銷遭盜用的應用程式安全金鑰</strong></h3>
+<p>雖然遭盜用的機率極低，但你的安全金鑰仍可能外洩或遭盜用，這時應儘快進行下列撤銷步驟：</p>
+<ol>
+ <li>登入 <a href="https://marketplace.mozilla.org/">Firefox Marketplace</a>。</li>
+ <li>前往「My Submissions」並找到自己的 App。</li>
+ <li>前往「Manage In-App Payments」頁面；就是產生自己所屬憑證 (Credentials) 的相同頁面。</li>
+ <li>點擊「Reset Credentials」按鈕。</li>
+</ol>
+<p>在重設自己的憑證之後，其他人就無法以舊憑證處理付款作業。你會看到新的應用程式金鑰與安全金鑰，並可立刻用來處理自己 App 中的付款流程。</p>
+<p>若要回報任何安全性問題，請<a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Marketplace;component=Payments%2FRefunds">填寫 Payments/Refunds 分類下的錯誤</a>。</p>
+<h2 id="程式碼函式庫"><strong>程式碼函式庫</strong></h2>
+<p>下列為 Mozilla 的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozPay"><code>navigator.mozPay</code></a> 專屬函式庫：</p>
+<ul>
+ <li>Python: <a href="https://mozpay.readthedocs.org/en/latest/">mozpay</a> module</li>
+ <li>node.js: <a href="https://github.com/mozilla/mozpay-js">mozpay</a> module</li>
+</ul>
+<p>Here are some generic <a href="http://openid.net/specs/draft-jones-json-web-token-07.html">JSON Web Token</a> (JWT) libraries for encoding/decoding and signature verification:</p>
+<ul>
+ <li>Python: <a href="https://pypi.python.org/pypi/PyJWT-mozilla">PyJWT-mozilla</a></li>
+ <li>Ruby: <a href="https://github.com/progrium/ruby-jwt">ruby-jwt</a></li>
+ <li>node.js: <a href="https://github.com/hokaccha/node-jwt-simple">node-jwt-simple</a></li>
+ <li>PHP: <a href="https://github.com/luciferous/jwt">luciferous/jwt</a></li>
+ <li>Java: <a href="http://code.google.com/p/jsontoken/">jsontoken</a></li>
+ <li>.NET: <a href="https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet">IdentityModel Extensions for .Net</a></li>
+</ul>
+<h2 id="範例程式碼"><strong>範例程式碼</strong></h2>
+<ul>
+ <li>這裡提供 <a href="https://github.com/jlongster/webfighter">Web Fighter</a> 原始碼。此遊戲是以 NodeJS 建構 In-app payments 功能。你可到 Marketplace 的<a href="https://marketplace.firefox.com/app/webfighter?src=search">這裡</a>安裝。</li>
+ <li>此為診斷與測試用 App，將呈現 JWT 請求的簽署方式，並以 Python 撰寫 Postbacks 與 Chargebacks 的檢驗器 (Verifier) 程式碼：<a href="https://github.com/kumar303/inapp-pay-test">In-app Payment Tester</a></li>
+</ul>
+<h2 id="尋求協助"><strong>尋求協助</strong></h2>
+<ul>
+ <li>你可透過 <a href="https://lists.mozilla.org/listinfo/dev-webapps">dev-webapps</a> 郵件群組，或在 <a href="https://wiki.mozilla.org/IRC">irc.mozilla.org</a> 的 #payments 頻道上討論 In-app payments 的相關問題。</li>
+ <li>若發現任何錯誤，請在 Payments/Refunds 分類下回報 <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Marketplace;component=Payments%2FRefunds">Marketplace bug</a>。</li>
+</ul>
+<h2 id="類似的付款系統"><strong>類似的付款系統</strong></h2>
+<ul>
+ <li><a href="https://developers.google.com/commerce/wallet/digital/docs/">Google 的 In-App Payments API</a></li>
+ <li><a href="http://developer.apple.com/library/mac/#documentation/NetworkingInternet/Conceptual/StoreKitGuide/APIOverview/OverviewoftheStoreKitAPI.html">iOS 的 in-app purchases</a></li>
+ <li><a href="http://developer.android.com/google/play/billing/billing_overview.html">Android 的 in-App billing API</a></li>
+</ul>

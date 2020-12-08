@@ -1,0 +1,196 @@
+---
+title: Alarm API
+slug: WebAPI/Alarm
+translation_of: Archive/B2G_OS/API/Alarm_API
+---
+<p>{{ SeeCompatTable() }}</p>
+<h2 id="摘要">摘要</h2>
+<p>Alarm API 可存取裝置的警示設定功能。而警示設定功能可排定通知的時間，或在特定時間啟動某個 App。如鬧鐘、行事曆、自動更新等的 Apps，就可能需要透過 Alarm API，在特定時點觸發裝置的特定動作。</p>
+<p>而 Alarm API 本身僅可進行警示排程。透過 System Message API 即可將警示發送到 Apps，因此若 Apps 要對警示做出反應，就必須先將 Apps 註冊至 <code>alarm</code> 訊息。</p>
+<p>另外，使用 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozAlarmsManager" title="/en-US/docs/Web/API/MozAlarmsManager"><code>MozAlarmsManager</code></a> 介面的 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozAlarms" title="/en-US/docs/Web/API/window.navigator.mozAlarms"><code>window.navigator.mozAlarms</code></a> 物件，即可設定警示。</p>
+<h2 id="example" name="example">警示排程</h2>
+<p>使用警示功能的第一件事，就是警示排程。若依照時區來分，共可分成 2 種警示，且均可透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/MozAlarmsManager.add" title="/en-US/docs/Web/API/MozAlarmsManager.add"><code>MozAlarmsManager.add</code></a> 函式進行排程。</p>
+<div class="note">
+  <p><strong>注意：</strong>若未針對特定 Apps 來設定警示，則只要是正在監聽警示的 Apps，均將接到系統所發送的警示。</p>
+</div>
+<h3 id="忽略時區的警示">忽略時區的警示</h3>
+<p>系統將根據裝置的本端時間，發送此類警示。若裝置變更了時區設定，則系統將根據新的時區而發送警示。舉例來說，如果使用者位在巴黎，設定了 12 PM CET (<em>Central European Time</em>) 發出警示，結果出差到舊金山時，那同樣會在 12 PM PDT (<em>Pacific Daylight Time</em>) 發送警示。</p>
+<pre class="brush: js">// This the date to schedule the alarm
+var myDate  = new Date("May 15, 2012 16:20:00");
+
+// This is arbitrary data pass to the alarm
+var data    = {
+  foo: "bar"
+}
+
+// The "ignoreTimezone" string is what make the alarm ignoring it
+var request = navigator.mozAlarms.add(myDate, "ignoreTimezone", data);
+
+request.onsuccess = function () {
+  console.log("The alarm has been scheduled");
+};
+
+request.onerror = function () {
+  console.log("An error occurred: " + this.error.name);
+};
+</pre>
+<h3 id="遵守時區的警示">遵守時區的警示</h3>
+<p>系統將根據排程當下的時區，發送此類警示。若裝置因為某個理由變更了時區，系統同樣是根據原始的排程時區而發出警示。舉例來說，如果使用者位在巴黎，設定於 12 PM CET (<em>Central European Time</em>) 發送警示，結果出差到舊金山時，系統將於 3 AM PDT (<em>Pacific Daylight Time</em>) 發送警示。</p>
+<pre class="brush: js">// This the date to schedule the alarm
+var myDate  = new Date("May 15, 2012 16:20:00");
+
+// This is arbitrary data pass to the alarm
+var data    = {
+  foo: "bar"
+}
+
+// The "honorTimezone" string is what make the alarm honoring it
+var request = navigator.mozAlarms.add(myDate, "honorTimezone", data);
+
+request.onsuccess = function () {
+  console.log("The alarm has been scheduled");
+};
+
+request.onerror = function () {
+  console.log("An error occurred: " + this.error.name);
+};
+</pre>
+<h2 id="管理警示">管理警示</h2>
+<p>針對目前 App 已排定的警示，<a href="https://developer.mozilla.org/en-US/docs/Web/API/MozAlarmsManager.getAll" title="/en-US/docs/Web/API/MozAlarmsManager.getAll"><code>MozAlarmsManager.getAll</code></a> 函式將回傳完整的警示清單。這份清單則為<a href="https://developer.mozilla.org/en-US/docs/WebAPI/Alarm#mozAlarm"> mozAlarm</a> 物件的<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">陣列</a>。</p>
+<h3 id="mozAlarm">mozAlarm</h3>
+<p>這些物件均為非同步 JavaScript 物件，並包含下列屬性：</p>
+<dl>
+  <dt>
+    <code>id</code></dt>
+  <dd>
+    1 組號碼代表警示的 ID</dd>
+  <dt>
+    <code>date</code></dt>
+  <dd>
+    <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Date" title="/en-US/docs/JavaScript/Reference/Global_Objects/Date">Date</a> 物件代表警示的排程時間</dd>
+  <dt>
+    <code>respectTimezone</code></dt>
+  <dd>
+    1 組字串指出警示將遵守或忽略 <code>date</code> 物件的時區資訊。該值可為 <code>ignoreTimezone</code> 或 <code>honorTimezone </code></dd>
+  <dt>
+    <code>data</code></dt>
+  <dd>
+    與警示一同儲存的所有資料，均納入此 JavaScript 物件中</dd>
+</dl>
+<pre class="brush: js">var request = navigator.mozAlarms.getAll();
+
+request.onsuccess = function () {
+  this.result.forEach(function (alarm) {
+    console.log('Id: ' + alarm.id);
+    console.log('date: ' + alarm.date);
+    console.log('respectTimezone: ' + alarm.respectTimezone);
+    console.log('data: ' + JSON.stringify(alarm.data));
+  });
+};
+
+request.onerror = function () {
+  console.log("An error occurred: " + this.error.name);
+};
+</pre>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/MozAlarmsManager.remove" title="/en-US/docs/Web/API/MozAlarmsManager.remove"><code>MozAlarmsManager.remove</code></a> 函式則可解除已排程的警示。</p>
+<pre class="brush: js">var alarmId;
+
+// Set an alarm and store it's id
+var request = navigator.mozAlarms.add(new Date("May 15, 2012 16:20:00"), "honorTimezone");
+
+request.onsuccess = function () {
+  alarmId = this.result;
+}
+
+// ...
+
+// Later on, removing the alarm if it exists
+if (alarmId) {
+  navigator.mozAlarms.remove(alarmId);
+}
+</pre>
+<h2 id="處理警示">處理警示</h2>
+<p>在系統發送警示之後，任何 Apps 均可做出回應。為了要能處理警示，Apps 必須將本身註冊為警示處理器 (Alarm handler)。透過 System Messaging API 的 2 個步驟即可完成註冊：</p>
+<p>首先，Apps 必須將 <code>alarm</code> 納入<a href="https://developer.mozilla.org/en-US/docs/Apps/Manifest#messages" title="/en-US/docs/Apps/Manifest#messages">本身 manifest 檔案的 message 屬性</a>中，而此 manifest 檔案需包含「已註冊回呼 (Callback) 函式的文件」之網址。一旦發送警示時，就會呼叫該文件中所註冊的回呼函式。</p>
+<pre class="brush: js">"messages": [
+  { "alarm": "/index.html" }
+]</pre>
+<p>其次，Apps 必須以 <code>alarm</code> 訊息綁定回呼函式；可透過 <a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozSetMessageHandler" title="/en-US/docs/Web/API/window.navigator.mozSetMessageHandler"><code>navigator.mozSetMessageHandler</code></a> 函式完成此步驟。此回呼函式將接收 <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Alarm#mozAlarm">mozAlarm</a> 物件，其內為警示所附掛的資料。</p>
+<pre class="brush: js">navigator.mozSetMessageHandler("alarm", function (mozAlarm) {
+  alert("alarm fired: " + JSON.stringify(mozAlarm.data));
+});
+</pre>
+<p>如果 App 想確認是否有警示延宕在系統端尚未發出，則可使用<a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozHasPendingMessage" title="/en-US/docs/Web/API/window.navigator.mozHasPendingMessage"><code>navigator.mozHasPendingMessage</code></a> 函式並搭配 <code>alarm</code> 值。</p>
+<pre class="brush: js">navigator.mozHasPendingMessage("alarm");
+</pre>
+<h2 id="規格">規格</h2>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Alarm API')}}</td>
+      <td>{{Spec2('Alarm API')}}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+<p>{{ CompatibilityTable() }}</p>
+<div id="compat-desktop">
+  <table class="compat-table">
+    <tbody>
+      <tr>
+        <th>Feature</th>
+        <th>Chrome</th>
+        <th>Firefox (Gecko)</th>
+        <th>Internet Explorer</th>
+        <th>Opera</th>
+        <th>Safari</th>
+      </tr>
+      <tr>
+        <td>Basic support</td>
+        <td>{{ CompatUnknown()}}</td>
+        <td>{{CompatGeckoDesktop("16")}} {{ property_prefix("moz") }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div id="compat-mobile">
+  <table class="compat-table">
+    <tbody>
+      <tr>
+        <th>Feature</th>
+        <th>Android</th>
+        <th>Chrome for Android</th>
+        <th>Firefox Mobile (Gecko)</th>
+        <th>IE Mobile</th>
+        <th>Opera Mobile</th>
+        <th>Safari Mobile</th>
+      </tr>
+      <tr>
+        <td>Basic support</td>
+        <td>{{ CompatUnknown() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{CompatGeckoMobile("10")}} {{ property_prefix("moz") }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+        <td>{{ CompatNo() }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h2 id="另可參閱">另可參閱</h2>
+<ul>
+  <li>{{domxref("window.navigator.mozAlarms","navigator.mozAlarms")}}</li>
+  <li>{{domxref("MozAlarmsManager")}}</li>
+  <li>{{domxref("window.navigator.mozSetMessageHandler")}}</li>
+</ul>

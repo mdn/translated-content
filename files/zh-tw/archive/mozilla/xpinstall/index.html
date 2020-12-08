@@ -1,0 +1,65 @@
+---
+title: XPInstall
+slug: Archive/Mozilla/XPInstall
+tags:
+  - NeedsTranslation
+  - TopicStub
+  - XPInstall
+  - XPInstall_API_reference
+translation_of: Archive/Mozilla/XPInstall
+---
+<div><div class="warning"><p>Parts of this page show the use of the <a href="https://developer.mozilla.org/en-US/docs/XPInstall_API_Reference">XPInstall API</a>. The majority of this API is now deprecated and as of Gecko 1.9 no longer available. <a href="https://developer.mozilla.org/en-US/docs/Extensions">Extension</a>, <a href="https://developer.mozilla.org/en-US/docs/Themes">Theme</a>, and <a href="https://developer.mozilla.org/en-US/docs/Plugins">plug-in</a> developers must switch away from <code>install.js</code> based packages to the new <a href="https://developer.mozilla.org/en-US/docs/Bundles">packaging scheme</a> with an <code><a href="https://developer.mozilla.org/en-US/docs/Install_Manifests">install.rdf</a></code> manifest. In particular plugin developers should see <a href="https://developer.mozilla.org/en-US/docs/Shipping_a_plugin_as_a_Toolkit_bundle">how to package a plugin as an extension</a>.</p></div>
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+  &lt;Description about="urn:mozilla:install-manifest"&gt;
+    &lt;!-- properties --&gt;
+  &lt;/Description&gt;
+&lt;/RDF&gt;</code></pre>
+</div>
+
+<div><strong>Cross-Platform Install (XPInstall)</strong> is a technology used by Mozilla Application Suite, Mozilla Firefox, Mozilla Thunderbird and other <a href="/en-US/docs/XUL" title="XUL">XUL</a>-based applications for installing <a href="/en-US/docs/Extensions" title="Extensions">extensions</a>. An <a href="/en-US/docs/XPI" title="XPI">XPI</a> (pronounced "zippy" and derived from XPInstall) installer module is a ZIP file that contains an install script or manifest (entitled install.js or <a href="/en-US/docs/Install_Manifests" title="Install_Manifests">install.rdf</a>) at the root of the file.</div>
+
+<table class="topicpage-table">
+ <tbody>
+  <tr>
+   <td>
+    <h2 class="Documentation" id="Documentation" name="Documentation">Documentation</h2>
+
+    <dl>
+     <dt><a href="/en-US/docs/XPInstall_API_Reference" title="XPInstall_API_Reference">XPInstall API Reference</a></dt>
+     <dd>XPInstall API Reference.</dd>
+     <dt><a href="/en-US/docs/Learn_XPI_Installer_Scripting_by_Example" title="Learn_XPI_Installer_Scripting_by_Example">Learn XPI Installer Scripting by Example</a></dt>
+     <dd>This article uses the installer script from <code>browser.xpi</code> install package as the basis for discussing XPI installations in general.</dd>
+     <dt><a href="/en-US/docs/Creating_XPI_Installer_Modules" title="Creating_XPI_Installer_Modules">Creating XPI Installer Modules</a></dt>
+     <dd>This article describes the packaging scheme of the Mozilla and offers a tutorial for creating a new package that can then be redistributed, installed, and made available to users.</dd>
+     <dt><a href="/en-US/docs/Install_Wizards_(aka:_Stub_Installers)" title="Install_Wizards_(aka:_Stub_Installers)">Install Wizards (aka: Stub Installers)</a></dt>
+    </dl>
+
+    <p><span class="alllinks"><a href="/en-US/docs/tag/XPInstall" title="tag/XPInstall">View All...</a></span></p>
+   </td>
+   <td>
+    <h2 class="Community" id="Community" name="Community">Community</h2>
+
+    <ul>
+     <li>View Mozilla forums... {{ DiscussionList("dev-platform", "mozilla.dev.platform") }}</li>
+    </ul>
+
+    <h2 class="Tools" id="Tools" name="Tools">Tools</h2>
+
+    <ul>
+     <li><a class="external" href="http://www.mozilla.org/quality/smartupdate/xpinstall-trigger.html">XPInstall trigger page</a></li>
+    </ul>
+
+    <h2 class="Related_Topics" id="Related_Topics" name="Related_Topics">Related Topics</h2>
+
+    <ul>
+     <li><a href="/en-US/docs/Extensions" title="Extensions">Extensions</a>, <a href="/en-US/docs/XUL" title="XUL">XUL</a>, <a href="/en-US/docs/XPI" title="XPI">XPI</a></li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>

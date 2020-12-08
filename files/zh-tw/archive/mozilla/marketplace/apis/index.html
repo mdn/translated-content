@@ -1,0 +1,36 @@
+---
+title: 公用程式函式庫與 API
+slug: Archive/Mozilla/Marketplace/APIs
+translation_of: Archive/Mozilla/Marketplace/APIs
+---
+<div class="summary">
+<p><span class="seoSummary">如果要將 Firefox Marketplace 的功能寫進 App 與 Web 頁面之中，就必須透過 Marketplace Utility Libraries、Web API、Marketplace API。本文將說明上述方式、使用時機，並提供進一步的說明文件連結。</span></p>
+</div>
+
+<h2 id="Marketplace_Utility_Library">Marketplace Utility Library</h2>
+
+<p>Marketplace Utility Library 可讓開發者避開複雜的 Web API 與 Marketplace API，進而簡化每天的程式撰寫作業。目前雖然只有 1 組函式庫，但隨著 Marketplace 功能不斷擴充，將會陸續提供其他函式庫：</p>
+
+<ul>
+ <li><code><a href="https://github.com/mozilla/receiptverifier">receiptverifier</a></code> — 此函式庫可驗證付款收據。可參閱《<a href="https://developer.mozilla.org/zh-TW/docs/Mozilla/Marketplace/Monetization/Validating_a_receipt">驗證收據</a>》以了解使用方式。</li>
+</ul>
+
+<h2 id="Web_API">Web API</h2>
+
+<p>Marketplace App 必須透過 Web API 才能提供特定功能：</p>
+
+<ul>
+ <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/window.navigator.mozPay">navigator.mozPay</a></code> 及其相關的<a class="external external-icon" href="https://wiki.mozilla.org/WebAPI/WebPaymentProvider"> Web Payment Provider</a> — 此 API 即用以處理 App 內的付款機制 (In-app payments)。同樣可參閱《<a href="/en-US/Marketplace/Monetization/In-app_payments">In-app payments</a>》以了解使用方式。</li>
+</ul>
+
+<h2 id="Marketplace_API">Marketplace API</h2>
+
+<p>針對大多數的一般 App 撰寫需要，其實並用不到 Marketplace API。但某些 Activities (如<a href="https://developer.mozilla.org/zh-TW/docs/Mozilla/Marketplace/Publishing/Creating_a_store">設立自己的 App 商店</a>) 就需要此 API。但根據開發者自己的需求，也許 Marketplace Utility Library 還是比較好用。</p>
+
+<p>Marketplace API 的相關說明文件，均已置於 readthedocs.org 的<a href="http://firefox-marketplace-api.readthedocs.org/en/latest/topics/overview.html">這個網址上</a>。如果你需要進一步了解這些 API，亦可加入 <a href="https://lists.mozilla.org/listinfo/dev-marketplace">dev-marketplace</a> 郵件群組。</p>
+
+<div class="note">
+<p>Marketplace API 說明文件，均記錄了正在開發中的 Marketplace API。所以內含的 API 細節尚未公開於 Marketplace 之上。</p>
+</div>
+
+<p> </p>

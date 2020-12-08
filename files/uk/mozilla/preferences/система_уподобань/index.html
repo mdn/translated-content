@@ -1,0 +1,51 @@
+---
+title: Система уподобань
+slug: Mozilla/Preferences/Система_уподобань
+tags:
+  - XUL
+  - Система уподобань
+translation_of: Mozilla/Preferences/Preferences_system
+---
+<p>Цей документ описує нову систему уподобань. Її використання уможливлює створення вікон із вподобаннями, що відповідно виглядають та працюють на різних платформах (Windows, MacOS X та GNOME).</p>
+
+
+
+<p>The system is implemented through a few <a href="/en/XUL" title="en/XUL">XUL</a> elements and attributes. Reference information about them is available below:</p>
+
+<div class="moreinfo">  <p><strong><a href="/en-US/docs/Preferences_System">Preferences System</a> documentation:</strong></p>  <ul>    <li>Introduction: <a href="/en-US/docs/Preferences_System/Getting_Started">Getting Started</a> | <a href="/en-US/docs/Preferences_System/Examples">Examples</a> | <a href="/en-US/docs/Preferences_System/Troubleshooting">Troubleshooting</a></li>    <li>Reference: <code><a href="/uk/docs/Mozilla/Tech/XUL/prefwindow" title="prefwindow">prefwindow</a></code> | <code><a href="/uk/docs/Mozilla/Tech/XUL/prefpane" title="prefpane">prefpane</a></code> | <code><a href="/uk/docs/Mozilla/Tech/XUL/preferences" title="preferences">preferences</a></code> | <code><a href="/uk/docs/Mozilla/Tech/XUL/preference" title="preference">preference</a></code> | <a href="/en-US/docs/Preferences_System/New_attributes">XUL attributes</a></li>  </ul></div>
+
+<h3 id="Use">Use</h3>
+
+<p>Code for a typical preferences window may look like this:</p>
+
+<pre>&lt;prefwindow id="appPreferences"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"&gt;
+  &lt;prefpane id="pane1" label="&amp;pane1.title;"&gt;
+    &lt;preferences&gt;
+      &lt;preference id="pref1" name="pref.name" type="bool"/&gt;
+    &lt;/preferences&gt;
+
+   .. UI elements that refer to the preferences above, e.g.:
+    &lt;checkbox id="check1" preference="pref1"
+              label="&amp;check1.label;" accesskey="&amp;check1.accesskey;"/&gt;
+  &lt;/prefpane&gt;
+
+  &lt;prefpane id="pane2" label="&amp;pane2.title;" src="chrome://uri/to/pane.xul"/&gt;
+&lt;/prefwindow&gt;
+</pre>
+
+<p>Pane content can be specified inline or an external chrome URI supplied for pane content to be loaded in via a dynamic overlay. You should be careful to read the <a class="external" href="http://en.wikipedia.org/wiki/Human_interface_guidelines" title="http://en.wikipedia.org/wiki/Human_interface_guidelines">HIGs</a> for the platforms you are targeting and use the XUL preprocessor if necessary to set different window titles as appropriate. You should also be careful to specify the width of the window (in em) as appropriate using the preprocessor for each targeted platform, as well as the height (in em) for platforms where the window size does not change as the selected panel is changed (e.g. Windows).</p>
+
+<h3 id="Usage_in_XULRunner_applications" name="Usage_in_XULRunner_applications">Usage in XULRunner applications</h3>
+
+<p>When calling openDialog() to open a preferences dialog, "toolbar" should be included in the features string.  Not using "toolbar" will cause the preferences dialog to only display one preference pane.</p>
+
+<p>Example:</p>
+
+<pre class="eval">var features = "chrome,titlebar,toolbar,centerscreen,modal";
+window.openDialog(url, "Preferences", features);
+</pre>
+
+<h3 id="Bugzilla">Bugzilla</h3>
+
+<p>The component for bugs in the Preferences bindings (but not in Firefox/Thunderbird Options UI) is Toolkit:Preferences (<a class="link-https" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Toolkit">file a bug</a> <a class="link-https" href="https://bugzilla.mozilla.org/buglist.cgi?query_format=advanced&amp;product=Toolkit&amp;component=Preferences&amp;resolution=---&amp;chfieldto=Now">list open bugs</a>)</p>

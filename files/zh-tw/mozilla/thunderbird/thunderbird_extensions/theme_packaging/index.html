@@ -1,0 +1,105 @@
+---
+title: 包裝佈景主題
+slug: Mozilla/Thunderbird/Thunderbird_extensions/Theme_Packaging
+tags:
+  - Toolkit API
+  - 佈景主題
+translation_of: Mozilla/Thunderbird/Thunderbird_extensions/Theme_Packaging
+---
+<p>本文描述包裝 Firefox 及 Thunderbird 之<a href="zh_tw/%e4%bd%88%e6%99%af%e4%b8%bb%e9%a1%8c">佈景主題</a>的方法。</p>
+<h3 id=".E9.9C.80.E6.B1.82" name=".E9.9C.80.E6.B1.82">需求</h3>
+<p>製作 Firefox 或 Thunderbird 的佈景主題需要懂層疊樣式表（<a href="zh_tw/CSS">CSS</a>）、會一點 <a href="zh_tw/XBL">XBL</a>、還要有美術繪圖設計等能力（不過也不見得一定要）。本文只說明包裝佈景主題以便顯示於 Firefox 佈景主題視窗的方法。</p>
+<h3 id=".E4.BD.88.E6.99.AF.E4.B8.BB.E9.A1.8C.E6.AA.94.E6.A1.88.E6.9E.B6.E6.A7.8B" name=".E4.BD.88.E6.99.AF.E4.B8.BB.E9.A1.8C.E6.AA.94.E6.A1.88.E6.9E.B6.E6.A7.8B">佈景主題檔案架構</h3>
+<p>Firefox 及 Thunderbird 的佈景主題是一個將資料以下列結構包裝的 JAR 檔案：</p>
+<pre class="eval">theme.jar:
+  install.rdf
+  contents.rdf
+  preview.png
+  icon.png
+  browser/<i>一堆檔案</i>
+  global/<i>一堆檔案</i>
+  mozapps/<i>一堆檔案</i>
+  communicator/<i>一堆檔案</i>
+  ...
+
+</pre>
+<ul>
+ <li>最頂層必須有個 <a href="zh_tw/Chrome.manifest">chrome.manifest</a> 檔（適用於 Firefox 或 Thunderbird 1.5 以上）或 contents.rdf 來將佈景主題註冊到 chrome 中，另外還需要一個 <a href="zh_tw/Install.rdf">install.rdf</a> 清單記載佈景主題視窗中需要用到的資訊。</li>
+ <li>preview.png 是佈景主題視窗中會出現的預覽圖，尺寸大小不限。</li>
+ <li>icon.png 是 32x32 的 PNG 檔（可以有 alpha 半透明資訊），會出現於佈景主題視窗的佈景列表中。</li>
+</ul>
+<h3 id="install.rdf" name="install.rdf">install.rdf</h3>
+<p><a href="zh_tw/Install.rdf">install.rdf</a> 清單長得像這樣：</p>
+<pre class="eval"><span class="nowiki">&lt;?xml version="1.0"?&gt;
+
+ &lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+   &lt;Description about="urn:mozilla:install-manifest"&gt;
+     &lt;em:type&gt;4&lt;/em:type&gt;
+     ''其他特性''
+   &lt;/Description&gt;
+ &lt;/RDF&gt;</span>
+</pre>
+<h4 id=".E5.BF.85.E5.82.99.E7.89.B9.E6.80.A7" name=".E5.BF.85.E5.82.99.E7.89.B9.E6.80.A7">必備特性</h4>
+<p>install.rdf 檔中必須含有下列特性：</p>
+<ul>
+ <li>em:id</li>
+ <li>em:version</li>
+ <li>em:type</li>
+ <li>em:targetApplication</li>
+ <li>em:name</li>
+ <li>em:internalName</li>
+</ul>
+<p>詳細資訊請見 <a href="zh_tw/Install.rdf">install.rdf 參考</a>。</p>
+<h4 id=".E9.81.B8.E7.94.A8.E7.89.B9.E6.80.A7" name=".E9.81.B8.E7.94.A8.E7.89.B9.E6.80.A7">選用特性</h4>
+<ul>
+ <li>em:description</li>
+ <li>em:creator</li>
+ <li>em:contributor</li>
+ <li>em:homepageURL</li>
+ <li>em:updateURL</li>
+</ul>
+<p>如果你想將佈景主題送上 <a class="external" href="http://addons.mozilla.org">addons.mozilla.org</a>，則 updateURL 就是必備的特性。</p>
+<h4 id=".E7.AF.84.E4.BE.8B" name=".E7.AF.84.E4.BE.8B">範例</h4>
+<pre class="eval"><span class="nowiki">&lt;?xml version="1.0"?&gt;
+
+ &lt;RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:em="http://www.mozilla.org/2004/em-rdf#"&gt;
+
+   &lt;Description about="urn:mozilla:install-manifest"&gt;
+     &lt;em:id&gt;{18b64b56-d42f-428d-a88c-baa413bc413f}&lt;/em:id&gt;
+     &lt;em:version&gt;1.0&lt;/em:version&gt;
+     &lt;em:type&gt;4&lt;/em:type&gt;
+
+     &lt;!-- 擴充套件的適用軟體，含最低需求及上限版本資訊。 --&gt;
+     &lt;em:targetApplication&gt;
+       &lt;Description&gt;
+         &lt;em:id&gt;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&lt;/em:id&gt;
+         &lt;em:minVersion&gt;0.8&lt;/em:minVersion&gt;
+         &lt;em:maxVersion&gt;0.9&lt;/em:maxVersion&gt;
+       &lt;/Description&gt;
+     &lt;/em:targetApplication&gt;
+
+     &lt;!-- 使用者會看到的資訊 --&gt;
+     &lt;em:name&gt;New Theme 1&lt;/em:name&gt;
+     &lt;em:description&gt;A test theme for Firefox&lt;/em:description&gt;
+     &lt;em:creator&gt;Ben Goodger&lt;/em:creator&gt;
+     &lt;em:contributor&gt;John Doe&lt;/em:contributor&gt;
+     &lt;em:homepageURL&gt;http://www.bengoodger.com/&lt;/em:homepageURL&gt;
+
+     &lt;!-- 佈景主題管理員內部所用的識別名稱 --&gt;
+     &lt;em:internalName&gt;newtheme1&lt;/em:internalName&gt;
+   &lt;/Description&gt;
+ &lt;/RDF&gt;</span>
+</pre>
+<p>以下是幾個 targetApplication 特性常用的應用程式 GUID：</p>
+<pre class="eval">Firefox      {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+Thunderbird  {3550f703-e582-4d05-9a08-453d09bdfdc6}
+Sunbird      {718e30fb-e89b-41dd-9da7-e25a45638b28}
+</pre>
+<h3 id="Toolkit_API_.E5.AE.98.E6.96.B9.E5.8F.83.E8.80.83.E6.96.87.E4.BB.B6" name="Toolkit_API_.E5.AE.98.E6.96.B9.E5.8F.83.E8.80.83.E6.96.87.E4.BB.B6"><a href="zh_tw/Toolkit_API">Toolkit API</a> 官方參考文件</h3>
+<div>
+ {{page("/zh-TW/docs/Toolkit_API/Official_References")}}</div>
+<div class="noinclude">
+  </div>

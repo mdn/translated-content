@@ -1,0 +1,70 @@
+---
+title: Extensions for Firefox for Android
+slug: Mozilla/Add-ons/Firefox_for_Android
+tags:
+  - NeedsTranslation
+  - TopicStub
+translation_of: Archive/Add-ons/Legacy_Firefox_for_Android
+---
+<p>Firefox for Android supports add-ons using the same <a href="/en-US/Add-ons" title="en/Extensions">extension system</a> used by all other Gecko-based applications. You can use the <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/mobile.html">Add-on SDK</a> or build <a href="/en-US/Add-ons/Bootstrapped_extensions">manually bootstrapped restartless add-ons</a>. You can even develop traditional restart-required add-ons, although the other two approaches are preferable.</p>
+
+<p>Add-ons that work with desktop Firefox <strong>do not</strong> automatically work in Firefox for Android:</p>
+
+<ul>
+ <li>There is no visible XUL in the UI, so you can't use an overlay to create the UI.</li>
+ <li>Internal code and objects, like <code>gBrowser</code>, do not exist. Look at the Firefox on Android <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js" title="http://mxr.mozilla.org/mozilla-central/source/mobile/android/chrome/content/browser.js"><code>browser.js</code></a> file to learn about the internals. Much of the same fundamental functionality exists.</li>
+ <li>Services like <code>nsIPromptService</code> and <code>nsIAlertsService</code> are implemented to use native Android UI.</li>
+ <li>There is a simple JavaScript object, called <a href="https://developer.mozilla.org/en/Extensions/Mobile/API/NativeWindow" title="en/Extensions/Mobile/NativeWindow"><code>NativeWindow</code></a>, that allows you to manipulate parts of the native Android UI.</li>
+</ul>
+
+<p>The following articles provide help with developing extensions for Firefox on Android. In addition, please refer to the <a class="internal" href="/en-US/Add-ons" title="En/Extensions">general extension documentation</a> that applies to all Mozilla applications.</p>
+
+<div class="column-container">
+<div class="column-half">
+<h3 id="Tutorials">Tutorials</h3>
+
+<dl>
+ <dt><a href="/en-US/Add-ons/Firefox_for_Android/Walkthrough">Walkthrough</a></dt>
+ <dd>Developing, packaging and installing a simple add-on for Firefox for Android.</dd>
+ <dt><a href="/en-US/Add-ons/Firefox_for_Android/Firefox_Hub_Walkthrough">Firefox Hub Walkthrough</a></dt>
+ <dd>How to develop a Firefox Hub add-on to add content to the Firefox for Android home page.</dd>
+ <dt><a href="/en-US/Add-ons/SDK/Tutorials/Mobile_development">Add-on SDK</a></dt>
+ <dd>How to develop Firefox for Android add-ons using the Add-on SDK.</dd>
+</dl>
+
+<h3 id="Sample_code">Sample code</h3>
+
+<dl>
+ <dt><a href="/en-US/Add-ons/Firefox_for_Android/Code_snippets">Code Snippets</a></dt>
+ <dd>Code samples for common tasks.</dd>
+ <dt><a href="/en-US/Add-ons/Firefox_for_Android/Initialization_and_Cleanup">Initialization and Cleanup</a></dt>
+ <dd>How to initialize your add-on when it is started and clean up when it is shut down.</dd>
+ <dt><a href="https://github.com/mozilla/firefox-for-android-addons">Firefox for Android Add-ons Github Repo</a></dt>
+ <dd>A collection of JS modules, sample code, and boilerplate repos to help you build add-ons for Firefox for Android.</dd>
+</dl>
+</div>
+
+<div class="column-half">
+<h3 id="API_reference">API reference</h3>
+
+<dl>
+ <dt><a class="internal" href="/en-US/Add-ons/Firefox_for_Android/API/NativeWindow">NativeWindow</a></dt>
+ <dd>Create native Android UI widgets.</dd>
+ <dt><a href="/en-US/Add-ons/Firefox_for_Android/API/BrowserApp">BrowserApp</a></dt>
+ <dd>Access browser tabs and the web content they host.</dd>
+ <dt><a class="internal" href="/en-US/Add-ons/Firefox_for_Android/API/Prompt.jsm">Prompt.jsm</a></dt>
+ <dd>Show native Android dialogs.</dd>
+ <dt><a href="/en-US/Add-ons/Firefox_for_Android/API/HelperApps.jsm">HelperApps.jsm</a></dt>
+ <dd>Query and launch native apps installed on the system.</dd>
+ <dt><a href="/en-US/Add-ons/Firefox_for_Android/API/Notifications.jsm">Notifications.jsm</a></dt>
+ <dd>Use extended properties for Android system notifications.</dd>
+ <dt><a href="/en-US/Add-ons/Firefox_for_Android/API/Home.jsm">Home.jsm</a></dt>
+ <dd>Customize the home page.</dd>
+ <dt><a href="/en-US/Add-ons/Firefox_for_Android/API/HomeProvider.jsm">HomeProvider.jsm</a></dt>
+ <dd>Store data to display on the home page.</dd>
+ <dt> </dt>
+</dl>
+</div>
+</div>
+
+<p> </p>
