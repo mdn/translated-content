@@ -188,7 +188,7 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
 
 <p>好的，我们还需要做点额外的工作。Fetch promises 不会产生 404 或 500错误，只有在产生像网路故障的情况时才会不工作。总的来说，Fetch promises 总是成功运行，即使<a href="https://developer.mozilla.org/en-US/docs/Web/API/Response/ok">response.ok</a> 属性是<code> false</code>。为了产生404错误，我们需要判断 <code>response.ok</code> ，如果是 <code>false</code>，抛出错误，否则返回 blob。就像下面的代码这样做。</p>
 
-<pre class="notranslate"><code>let promise2 = promise.then(response =&gt; {
+<pre class="brush: js notranslate"><code>let promise2 = promise.then(response =&gt; {
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   } else {
@@ -204,7 +204,7 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
 
 <p>6. 现在让我们填写执行程序函数的主体。在花括号内添加以下行：</p>
 
-<pre class="notranslate"><code>let objectURL = URL.createObjectURL(myBlob);
+<pre class="brush: js notranslate"><code>let objectURL = URL.createObjectURL(myBlob);
 let image = document.createElement('img');
 image.src = objectURL;
 document.body.appendChild(image);</code></pre>
@@ -237,8 +237,14 @@ document.body.appendChild(image);</code></pre>
 
 <p>这是写出来的一种非常简便的方式;我们故意这样做是为了帮助你清楚地了解发生了什么。如本文前面所示，你可以将<code>.then()</code>块（以及<code>.catch()</code>块）链接在一起。上面的代码也可以这样写(参阅GitHub上的<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch-chained.html">simple-fetch-chained.html</a> ):</p>
 
-<pre class="brush: js notranslate">fetch('coffee.jpg')
-.then(response =&gt; response.blob())
+<pre class="brush: js notranslate"><code>fetch('coffee.jpg')
+.then(response =&gt; {
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  } else {
+    return response.blob();
+  }
+})
 .then(myBlob =&gt; {
   let objectURL = URL.createObjectURL(myBlob);
   let image = document.createElement('img');
@@ -247,7 +253,7 @@ document.body.appendChild(image);</code></pre>
 })
 .catch(e =&gt; {
   console.log('There has been a problem with your fetch operation: ' + e.message);
-});</pre>
+});</code></pre>
 
 <p>请记住，履行的promise所返回的值将成为传递给下一个 <code>.then()</code> 块的executor函数的参数。</p>
 
@@ -279,9 +285,9 @@ document.body.appendChild(image);</code></pre>
   ...
 });</pre>
 
-<p>如果它们都<strong>实现</strong>，那么一个包含所有这些结果的数组将作为<code>.all()</code>的参数传给其链接的<code>.then()</code>块的执行器函数。如果传递给<code>Promise.all()</code>的任何promise都<strong>拒绝</strong>，整个块将<strong>拒绝</strong>。</p>
+<p>如果它们都<strong>实现</strong>，那么数组中的结果将作为参数传递给<code>.then()</code>块中的执行器函数。如果传递给<code>Promise.all()</code>的任何一个 promise <strong>拒绝</strong>，整个块将<strong>拒绝</strong>。</p>
 
-<p>这非常有用。想象一下，我们正在获取信息以在内容上动态填充页面上的UI功能。在许多情况下，接收所有数据然后才显示完整内容，而不是显示部分信息是有意义的。</p>
+<p>这非常有用。想象一下，我们正在获取信息以在内容上动态填充页面上的UI功能。在许多情况下，接收所有数据然后才显示完整内容，而不是显示部分信息。</p>
 
 <p>让我们构建另一个示例来展示这一点。</p>
 
@@ -323,11 +329,11 @@ Promise.all([a, b, c]).then(values =&gt; {
   <p>这看起来有点复杂，所以让我们一步一步地完成它：</p>
 
   <ol>
-   <li>首先，我们定义函数，向它传递一个URL和一个表示它正在获取的资源类型的字符串。</li>
-   <li>在函数体内部，我们有一个类似于我们在第一个例子中看到的结构 - 我们调用<code>fetch()</code>函数来获取指定URL处的资源，然后将其链接到另一个返回解码（或“read”）的promise。 ）响应body。这始终是前一个示例中的<code>blob()</code>方法。</li>
+   <li>首先，我们定义函数，向它传递一个URL和字符串，这个字符串表示资源类型。</li>
+   <li>在函数体内部，我们有一个类似于我们在第一个例子中看到的结构 - 我们调用<code>fetch()</code>函数来获取指定URL处的资源，然后将其链接到另一个 promise ，它解码（或“read”）响应body。这是前一个示例中的<code>blob()</code>方法。</li>
    <li>但是，这里有两处不同：
     <ul>
-     <li>首先，我们返回的第二个promise会因类型值的不同而不同。在执行函数内部，我们包含一个简单的<code>if ... else if</code>语句，根据我们需要解码的文件类型返回不同的promise（在这种情况下，我们可以选择<code>blob</code>或<code>text</code>，但这很容易扩展这个以处理其他类型）。</li>
+     <li>首先，我们返回的第二个promise会因类型值的不同而不同。在执行函数内部，我们包含一个简单的<code>if ... else if</code>语句，根据我们需要解码的文件类型返回不同的promise（在这种情况下，我们可以选择<code>blob</code>或<code>text</code>，而且很容易扩展这个以处理其他类型）。</li>
      <li>其次，我们在<code>fetch()</code>调用之前添加了<code>return</code>关键字。它的作用是运行整个链，然后运行最终结果（即<code>blob()</code>或<code>text()</code>返回的promise作为我们刚刚定义的函数的返回值）。实际上，<code>return</code>语句将结果从链返回到顶部。</li>
     </ul>
    </li>
@@ -352,7 +358,7 @@ let description = fetchAndDecode('description.txt', 'text');</pre>
 
 });</pre>
 
-  <p>你可以看到它需要一个包含promises作为参数的数组。执行者只有在所有三个promises的状态成为<strong>resolved</strong>时才会运行;当发生这种情况时，它将传递一个数组，其中包含来自各个promise（即解码的响应主体）的结果，类似于 [coffee-results, tea-results, description-results].</p>
+  <p>你可以看到它需要一个包含promises作为参数的数组。执行者只有在所有三个promises的状态成为<strong>resolved</strong>时才会运行;当发生这种情况时，它将被传入一个数组，其中包含来自各个promise（即解码的响应主体）的结果，类似于 [coffee-results, tea-results, description-results].</p>
  </li>
  <li>
   <p>最后，在执行程序中添加以下内容。这里我们使用一些相当简单的同步代码将结果存储在单独的变量中（从blob创建对象URL），然后在页面上显示图像和文本。</p>
@@ -407,7 +413,7 @@ document.body.appendChild(para);</pre>
   runFinalCode();
 });</pre>
 
-<p>在最近的现代浏览器中，<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">.finally()</a></code> 方法可用，它可以链接到常规promise链的末尾，允许你减少代码重复并更优雅地执行操作。上面的代码现在可以写成如下：</p>
+<p>在现代浏览器中，<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">.finally()</a></code> 方法可用，它可以链接到常规promise链的末尾，允许你减少代码重复并更优雅地执行操作。上面的代码现在可以写成如下：</p>
 
 <pre class="brush: js notranslate">myPromise
 .then(response =&gt; {
@@ -422,12 +428,16 @@ document.body.appendChild(para);</pre>
 
 <p>有关一个真实示例，请查看我们的<a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-finally.html">promise-finally.html demo</a>（另请参阅<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-finally.html">source code</a>）。这与我们在上面部分中看到的<code>Promise.all()</code>演示完全相同，除了在<code>fetchAndDecode()</code>函数中我们将<code>finally()</code>调用链接到链的末尾：</p>
 
-<pre class="brush: js notranslate">function fetchAndDecode(url, type) {
+<pre class="brush: js notranslate"><code>function fetchAndDecode(url, type) {
   return fetch(url).then(response =&gt; {
-    if(type === 'blob') {
-      return response.blob();
-    } else if(type === 'text') {
-      return response.text();
+    if(!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+      if(type === 'blob') {
+        return response.blob();
+      } else if(type === 'text') {
+        return response.text();
+      }
     }
   })
   .catch(e =&gt; {
@@ -436,7 +446,7 @@ document.body.appendChild(para);</pre>
   .finally(() =&gt; {
     console.log(`fetch attempt for "${url}" finished.`);
   });
-}</pre>
+}</code></pre>
 
 <p>这会将一条简单的消息记录到控制台，告诉我们每次获取尝试的时间。</p>
 
@@ -454,7 +464,7 @@ document.body.appendChild(para);</pre>
 
 <p>可以使用<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise()</a></code> 构造函数构建自己的promise。当你需要使用现有的旧项目代码、库或框架以及基于现代promise的代码时，这会派上用场。比如，当你遇到没有使用promise的旧式异步API的代码时，你可以用promise来重构这段异步代码。</p>
 
-<p>让我们看一个简单的示例来帮助你入门 —— 这里我们使用promise包装一个<code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code>调用 - 它会在两秒后运行一个函数，该函数将用字符串“Success!”，解析当前promise（调用链接的<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolve()</a></code>），。</p>
+<p>让我们看一个简单的示例来帮助你入门 —— 这里我们用 promise 包装一了个<code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a>，</code>它会在两秒后运行一个函数，该函数将用字符串“Success!”，解析当前promise（调用链接的<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">resolve()</a></code>）。</p>
 
 <pre class="brush: js notranslate">let timeoutPromise = new Promise((resolve, reject) =&gt; {
   setTimeout(function(){
@@ -462,7 +472,7 @@ document.body.appendChild(para);</pre>
   }, 2000);
 });</pre>
 
-<p><code>resolve()</code>和<code>reject()</code>是用来<strong>实现</strong>和<strong>拒绝</strong>新创建的promise的函数。此处，promise<strong>实现</strong>了字符串“Success!”。</p>
+<p><code>resolve()</code>和<code>reject()</code>是用来<strong>实现</strong>和<strong>拒绝</strong>新创建的promise的函数。此处，promise 成功运行通过显示字符串“Success!”。</p>
 
 <p>因此，当你调用此promise时，可以将<code>.then()</code>块链接到它的末尾，它将传递给<code>.then()</code>块一串“Success!”。在下面的代码中，我们显示出该消息：</p>
 
@@ -534,7 +544,7 @@ document.body.appendChild(para);</pre>
 
 <h3 id="一个更真实的例子">一个更真实的例子</h3>
 
-<p>上面的例子是故意做得简单，以使概念易于理解，但它并不是实际上完全同步。异步性质基本上是使用<code>setTimeout()</code>伪造的，尽管它仍然表明promises对于创建具有合理的操作流程，良好的错误处理等的自定义函数很有用</p>
+<p>上面的例子是故意做得简单，以使概念易于理解，但它并不是实际上完全异步。异步性质基本上是使用<code>setTimeout()</code>伪造的，尽管它仍然表明promises对于创建具有合理的操作流程，良好的错误处理等的自定义函数很有用</p>
 
 <p>我们想邀请你学习的一个例子是<a href="https://github.com/jakearchibald/idb/">Jake Archibald's idb library</a>，它真正地显示了<code>Promise()</code>构造函数的有用异步应用程序。这采用了 <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a>，它是一种旧式的基于回调的API，用于在客户端存储和检索数据，并允许你将其与promises一起使用。如果你查看<a href="https://github.com/jakearchibald/idb/blob/master/lib/idb.js">main library file</a>，你将看到我们在上面讨论过的相同类型的技术。以下块将许多IndexedDB方法使用的基本请求模型转换为使用promise：</p>
 

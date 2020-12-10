@@ -1,6 +1,12 @@
 ---
-title: Выполняемые на сервере веб фреймворки
+title: Выполняемые на сервере веб-фреймворки
 slug: Learn/Server-side/First_steps/Web_frameworks
+tags:
+  - '-фреймворк'
+  - Ве
+  - Программирование серверной части
+  - Сервер
+  - начальный уровень
 translation_of: Learn/Server-side/First_steps/Web_frameworks
 ---
 <div>{{LearnSidebar}}</div>
@@ -30,7 +36,7 @@ translation_of: Learn/Server-side/First_steps/Web_frameworks
 
 <p>В следующем разделе приводится более подробная информация о том, как веб-фреймворки могут облегчить разработку веб-приложений. Затем мы объясним некоторые критерии, которые вы можете использовать для выбора веб-фреймворка, а затем перечислим некоторые из ваших вариантов.</p>
 
-<h2 id="Что_может_сделать_веб-фреймворк_для_вас">Что может сделать веб-фреймворк для вас ?</h2>
+<h2 id="Что_может_сделать_веб-фреймворк_для_вас">Что может сделать веб-фреймворк для вас?</h2>
 
 <p>Веб-фреймворки предоставляют инструменты и библиотеки для упрощения общих операций веб-разработки. Вы не обязаны использовать веб-фреймворк на стороне сервера, но это настоятельно рекомендуется — это сделает вашу жизнь намного проще.</p>
 
@@ -238,43 +244,52 @@ def youngest(request):
 
 <p><a href="http://expressjs.com/">Express</a> — быстрый, непринуждённый, гибкий и минималистский веб-фреймворк для <a href="https://nodejs.org/en/">Node.js</a> (node — это серверная среда для запуска JavaScript). Он обеспечивает надёжный набор функций для веб и мобильных приложений и предоставляет полезные HTTP-утилиты и <a href="/en-US/docs/Glossary/Middleware">middleware</a> (промежуточные интерфейсы).</p>
 
-<p><span class="tlid-translation translation" lang="ru">Express чрезвычайно популярен, частично потому, что он облегчает миграцию клиентских веб-программистов JavaScript в разработку на стороне сервера, а частично потому, что он ресурсоэффективен (базовая среда узлов использует легкую многозадачность в потоке, а не порождает отдельные процессы для каждого новый веб-запрос).<br>
- <br>
- Поскольку Express является минималистской веб-инфраструктурой, он не включает в себя все компоненты, которые вы, возможно, захотите использовать (например, доступ к базе данных и поддержка пользователей и сеансов предоставляются через независимые библиотеки). Есть много отличных независимых компонентов, но иногда бывает сложно решить, какой из них лучше всего подходит для конкретной цели!<br>
- <br>
- Многие популярные серверные и полные стеки (включая серверные и клиентские) основаны на Express, включая Feathers, ItemsAPI, KeystoneJS, Kraken, LEAN-STACK, LoopBack, MEAN и Sails.<br>
- <br>
- Многие крупные компании используют Express, в том числе: Uber, Accenture, IBM и т. Д. (Список приведен здесь).</span></p>
+<p><span class="tlid-translation translation" lang="ru">Express чрезвычайно популярен, частично потому, что он облегчает миграцию клиентских веб-программистов JavaScript в разработку на стороне сервера, а частично потому, что он ресурсоэффективен (базовая среда узлов использует легкую многозадачность в потоке, а не порождает отдельные процессы для каждого новый веб-запроса).</span></p>
+
+<p><span class="tlid-translation translation" lang="ru">Поскольку Express является минималистским веб-фреймворком, он не включает в себя все компоненты, которые вы, возможно, захотите использовать (например, доступ к базе данных и поддержка пользователей и сеансов предоставляются через независимые библиотеки). Есть много отличных независимых компонентов, но иногда бывает сложно решить, какой из них лучше всего подходит для конкретной цели! </span></p>
+
+<p><span class="tlid-translation translation" lang="ru">На Express основаны многие популярные серверные фреймворки, а также фреймворки полного цикла (которые включают как серверную, так и клиентскую часть), в числе которых <a href="http://feathersjs.com/">Feathers</a>, <a href="https://www.itemsapi.com/">ItemsAPI</a>, <a href="http://keystonejs.com/">KeystoneJS</a>, <a href="http://krakenjs.com/">Kraken</a>, <a href="http://loopback.io/">LoopBack</a>, <a href="http://mean.io/">MEAN</a> и <a href="http://sailsjs.org/">Sails</a>.</span></p>
+
+<p><span class="tlid-translation translation" lang="ru">Express используют многие крупные компании, в том числе: Uber, Accenture, IBM и т. д. (список приведён <a href="http://expressjs.com/en/resources/companies-using-express.html">здесь</a>).</span></p>
 
 <h3 id="Ruby_on_Rails_Ruby">Ruby on Rails (Ruby)</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Rails (обычно называемый «Ruby on Rails») - это веб-фреймворк, написанный для языка программирования Ruby.</span><br>
+<p><span class="tlid-translation translation" lang="ru"><span title=""><a href="http://rubyonrails.org/">Rails</a> (обычно именуется «Ruby on Rails») </span></span>—<span class="tlid-translation translation" lang="ru"><span title=""> это веб-фреймворк, написанный для языка программирования Ruby.</span></span></p>
+
+<p><span class="tlid-translation translation" lang="ru"><span title="">Rails следует очень похожей философии дизайна на Django.</span> <span title="">Как и Django, он предоставляет стандартные механизмы для маршрутизации URL-адресов, доступа к данным из базы данных, генерации HTML из шаблонов и форматирования таких данных как {{glossary ("JSON")}} или {{glossary ("XML")}}.</span> Им <span title="">точно так же поощряется использование шаблонов проектирования, таких как DRY («не повторяйте себя» </span></span>—<span class="tlid-translation translation" lang="ru"><span title=""> пишите код только один раз, если это возможно), MVC (модель-представление-контроллер) и ряд других.</span><br>
  <br>
- <span title="">Rails следует очень похожей философии дизайна на Django.</span> <span title="">Как и Django, он предоставляет стандартные механизмы для маршрутизации URL, доступа к данным из базы данных, генерации HTML из шаблонов и форматирования данных как {{glossary ("JSON")}} или {{glossary ("XML")}}.</span> <span title="">Точно так же поощряется использование шаблонов проектирования, таких как DRY («не повторяйте себя» - пишите код только один раз, если это возможно), MVC (модель-представление-контроллер) и ряд других.</span><br>
+ <span title="">Конечно, в них существует и много различий, которые связаны с конкретными проектными решениями и природой самих языков.</span><br>
  <br>
- <span title="">Конечно, есть много различий, связанных с конкретными проектными решениями и характером языков.</span><br>
- <br>
- <span title="">Rails использовался для крупных сайтов, в том числе: Basecamp, GitHub, Shopify, Airbnb, Twitch, SoundCloud, Hulu, Zendesk, Square, Highrise.</span></span></p>
+ <span title="">Rails использовался для крупных сайтов, в том числе: <a href="https://basecamp.com/">Basecamp</a>, <a href="https://github.com/">GitHub</a>, <a href="https://shopify.com/">Shopify</a>, <a href="https://airbnb.com/">Airbnb</a>, <a href="https://twitch.tv/">Twitch</a>, <a href="https://soundcloud.com/">SoundCloud</a>, <a href="https://hulu.com/">Hulu</a>, <a href="https://zendesk.com/">Zendesk</a>, <a href="https://square.com/">Square</a>, <a href="https://highrisehq.com/">Highrise</a>.</span></span></p>
 
 <h3 id="ASP.NET">ASP.NET</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">ASP.NET - это веб-инфраструктура с открытым исходным кодом, разработанная Microsoft для создания современных веб-приложений и сервисов.</span> <span title="">С ASP.NET вы можете быстро создавать веб-сайты на основе HTML, CSS и JavaScript, масштабировать их для использования миллионами пользователей и легко добавлять более сложные возможности, такие как веб-API, формы поверх данных или коммуникации в режиме реального времени.</span><br>
- <br>
- <span title="">Одним из отличий для ASP.NET является то, что он построен на Common Language Runtime (CLR), что позволяет программистам писать код ASP.NET с использованием любого поддерживаемого языка .NET (C #, Visual Basic и т. д.).</span> <span title="">Как и многие продукты Microsoft, он обладает отличными инструментами (часто бесплатными), активным сообществом разработчиков и хорошо написанной документацией.</span><br>
- <br>
- <span title="">ASP.NET используется Microsoft, Xbox.com, Stack Overflow и многими другими.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title=""><a href="http://www.asp.net/">ASP.NET</a> </span></span>—<span class="tlid-translation translation" lang="ru"><span title=""> это веб-фреймворк с открытым исходным кодом, разработанный Microsoft для создания современных веб-приложений и сервисов.</span> <span title="">С ASP.NET вы можете быстро создавать веб-сайты на основе HTML, CSS и JavaScript, масштабировать их для использования миллионами пользователей и легко добавлять более сложные возможности, такие как веб-API, формы поверх данных или коммуникации в режиме реального времени.</span></span></p>
+
+<p><span class="tlid-translation translation" lang="ru"><span title="">Одним из отличий ASP.NET является то, что он построен на <a href="https://ru.wikipedia.org/wiki/Common_Language_Runtime">Common Language Runtime</a> </span></span>(CLR, «общеязыковая исполняющая среда»)<span class="tlid-translation translation" lang="ru"><span title="">, что позволяет программистам писать код ASP.NET с использованием любого поддерживаемого языка .NET (C#, Visual Basic и т. п.).</span> <span title="">Как и многие продукты Microsoft, он обладает отличными инструментами (часто бесплатными), активным сообществом разработчиков и хорошо написанной документацией.</span></span></p>
+
+<p><span class="tlid-translation translation" lang="ru"><span title="">ASP.NET используется Microsoft, Xbox.com, Stack Overflow и многими другими.</span></span></p>
 
 <h3 id="Mojolicious_Perl">Mojolicious (Perl)</h3>
 
-<p><span class="tlid-translation translation" lang="ru">Mojolicious - это веб-фреймворк следующего поколения для языка программирования Perl.<br>
- <br>
- Еще в первые дни Интернета многие люди изучали Perl из-за замечательной библиотеки Perl под названием CGI. Это было достаточно просто, чтобы начать, не зная много о языке и достаточно мощный, чтобы держать вас в курсе. Mojolicious реализует эту идею, используя новейшие технологии.<br>
- <br>
- Некоторые из функций, предоставляемых Mojolicious: веб-инфраструктура в режиме реального времени, позволяющая легко превращать отдельные файловые прототипы в хорошо структурированные веб-приложения MVC; RESTful маршруты, плагины, команды, шаблоны Perl-ish, согласование контента, управление сеансами, проверка форм, структура тестирования, статический файловый сервер, обнаружение CGI / PSGI, поддержка Unicode первого класса; Реализация полного стека HTTP и WebSocket клиент / сервер с IPv6, TLS, SNI, IDNA, HTTP / SOCKS5 прокси, сокет домена UNIX, Comet (длинный опрос), поддержка активности, пул соединений, тайм-аут, cookie, поддержка нескольких частей и сжатия gzip; Парсеры и генераторы JSON и HTML / XML с поддержкой селекторов CSS; Очень чистый, портативный и объектно-ориентированный чистый Perl API без скрытой магии; Свежий код, основанный на многолетнем опыте, бесплатный и открытый исходный код.</span></p>
+<p><span class="tlid-translation translation" lang="ru"><a href="http://mojolicious.org/">Mojolicious</a> </span>—<span class="tlid-translation translation" lang="ru"> это веб-фреймворк следующего поколения для языка программирования Perl.</span></p>
+
+<p><span class="tlid-translation translation" lang="ru">Ещё в первые дни Интернета многие люди изучали Perl из-за замечательной библиотеки Perl под названием <a href="https://metacpan.org/module/CGI">CGI</a>. Язык позволял довольно просто начать, не зная многого о языке, и был достаточно мощным, чтобы вы продолжали работу. Mojolicious реализует эту идею, используя новейшие технологии.</span></p>
+
+<p><span class="tlid-translation translation" lang="ru">Некоторые из функций, предоставляемых Mojolicious</span>:</p>
+
+<ul>
+ <li><span class="tlid-translation translation" lang="ru">веб-инфраструктура в режиме реального времени, позволяющая легко превращать отдельные файловые прототипы в хорошо структурированные веб-приложения MVC</span>.</li>
+ <li><span class="tlid-translation translation" lang="ru">RESTful маршруты, плагины, команды, шаблоны Perl-ish, согласование контента, управление сеансами, проверка форм, структура тестирования, статический файловый сервер, обнаружение CGI/<a href="http://plackperl.org/">PSGI</a>, первоклассная поддержка Unicode</span>.</li>
+ <li><span class="tlid-translation translation" lang="ru">Реализация полного стека HTTP и WebSocket клиент/сервер с IPv6, TLS, SNI, IDNA, HTTP/SOCKS5 прокси, сокет домена UNIX, Comet (длинный опрос), поддержка активности, пул соединений, тайм-аут, cookie, поддержка нескольких частей и сжатия gzip</span>.</li>
+ <li><span class="tlid-translation translation" lang="ru">Парсеры и генераторы JSON и HTML/XML с поддержкой селекторов CSS</span>.</li>
+ <li><span class="tlid-translation translation" lang="ru">Очень чистый, портативный и объектно-ориентированный Perl API без скрытой магии</span>.</li>
+ <li><span class="tlid-translation translation" lang="ru">Свежий код, основанный на многолетнем опыте, бесплатный и с открытым исходным кодом</span>.</li>
+</ul>
 
 <h2 id="Резюме"><span class="tlid-translation translation" lang="ru"><span title="">Резюме</span></span></h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Эта статья показала, что веб-фреймворки могут упростить разработку и поддержку кода на стороне сервера.</span> <span title="">Он также предоставил общий обзор нескольких популярных платформ и обсудил критерии выбора платформы веб-приложений.</span> <span title="">Теперь у вас должно быть хотя бы представление о том, как выбрать веб-фреймворк для собственной разработки на стороне сервера.</span> <span title="">Если нет, то не беспокойтесь - позже в курсе мы дадим вам подробные учебники по Django и Express, чтобы дать вам некоторый опыт работы с веб-фреймворком.</span> </span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Эта статья показала, что веб-фреймворки могут упростить разработку и поддержку кода на стороне сервера.</span> <span title="">Она также предоставила общий обзор нескольких популярных платформ и обсудила критерии выбора платформы веб-приложений.</span> <span title="">Теперь у вас должно быть хотя бы представление о том, как выбрать веб-фреймворк для собственной разработки на стороне сервера.</span> <span title="">Если нет, то не беспокойтесь </span></span>—<span class="tlid-translation translation" lang="ru"><span title=""> позже в курсе мы дадим вам подробные учебники по Django и Express, чтобы дать вам некоторый опыт работы с веб-фреймворком.</span> </span></p>
 
 <p>Для следующей статьи в этом модуле мы немного изменим направление и рассмотрим веб-безопасность.</p>
 
@@ -283,7 +298,7 @@ def youngest(request):
 <h2 id="В_этом_модуле">В этом модуле</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
+ <li><a href="/ru/docs/Learn/Server-side/First_steps/Introduction">Introduction to the server side</a></li>
  <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview">Client-Server overview</a></li>
  <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Web_frameworks">Server-side web frameworks</a></li>
  <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Website security</a></li>

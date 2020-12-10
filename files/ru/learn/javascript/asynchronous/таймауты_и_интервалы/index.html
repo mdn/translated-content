@@ -61,7 +61,7 @@ translation_of: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 <p>Как следствие, такой код, как setTimeout (fn, 0), будет выполняться, как только стек будет пуст, а не сразу. Если вы выполните такой код, как setTimeout (fn, 0), но сразу после выполнения цикла, который насчитывает от 1 до 10 миллиардов, ваш обратный вызов будет выполнен через несколько секунд.</p>
 </div>
 
-<p>В слудующем примере, браузер будет ожидать две секунды перед тем как  выполнит анонимную функцию, тогда отобразит сообщение (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">живой пример</a>, и <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">исходный код</a>):</p>
+<p>В следующем примере, браузер будет ожидать две секунды перед тем как  выполнит анонимную функцию, тогда отобразит сообщение (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">живой пример</a>, и <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">исходный код</a>):</p>
 
 <pre class="brush: js notranslate">let myGreeting = setTimeout(function() {
   alert('Hello, Mr. Universe!');
@@ -151,7 +151,7 @@ clearInterval(myInterval);</pre>
 <p>Несколько подсказок для вас:</p>
 
 <ul>
- <li>Вы можете структурировать и стилизовать разметку кнопок по своему усмотрению; просто убедитесь, что вы используете семантический HTML с ковычками, которые позволяют захватывать ссылки на кнопки с помощью JavaScript.</li>
+ <li>Вы можете структурировать и стилизовать разметку кнопок по своему усмотрению; просто убедитесь, что вы используете семантический HTML с кавычками, которые позволяют захватывать ссылки на кнопки с помощью JavaScript.</li>
  <li>Вероятно, вы захотите создать переменную, которая начинается с 0, а затем увеличивается на единицу каждую секунду с использованием постоянного цикла.</li>
  <li>Этот пример проще создать без использования объекта Date (), как мы это делали в нашей версии, но он будет менее точен - вы не можете гарантировать, что обратный вызов сработает ровно через 1000 мс. Более точным способом было бы запустить startTime = Date.now (), чтобы получить метку времени, когда пользователь нажал кнопку запуска, а затем выполнить Date.now () - startTime, чтобы получить количество миллисекунд после того, как была нажата кнопка запуска .</li>
  <li>Вам также нужно рассчитать количество часов, минут и секунд как отдельные значения, а затем отображать их вместе в строке после каждой итерации цикла. На втором счетчике вы можете отработать каждую из них.</li>
@@ -168,7 +168,7 @@ clearInterval(myInterval);</pre>
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Если вы застрали, вы можете <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html">увидеть нашу версию</a> (см. также <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html">исходный код</a> ).</p>
+<p><strong>Note</strong>: Если вы застряли, вы можете <a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html">увидеть нашу версию</a> (см. также <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-stopwatch.html">исходный код</a> ).</p>
 </div>
 
 <h2 id="Что_нужно_помнить_о_setTimeout_и_setInterval">Что нужно помнить о <code>setTimeout ()</code> и <code>setInterval ()</code></h2>
@@ -359,7 +359,7 @@ div {
   <p>Разместите  {{htmlelement("script")}} элемент перед <code>&lt;/body&gt;</code> .</p>
  </li>
  <li>
-  <p>Разместите следующий JavaScript код в  <code>&lt;script&gt;</code> . Здесь вы сохраняете ссылку на <code>&lt;div&gt;</code> внутри, устанавливаете дяпеременной <code>rotateCount</code> значение <code>0</code>, устанавливаете неинициализированную переменную, которая позже будет использоваться для хранения ссылки на вызов <code>requestAnimationFrame()</code>, и устанавливатете для переменной <code>startTime</code> значение <code>null</code>, которая будет позже использоваться для хранения времени начала <code>requestAnimationFrame()</code>.</p>
+  <p>Разместите следующий JavaScript код в  <code>&lt;script&gt;</code> . Здесь вы сохраняете ссылку на <code>&lt;div&gt;</code> внутри, устанавливаете дяпеременной <code>rotateCount</code> значение <code>0</code>, устанавливаете неинициализированную переменную, которая позже будет использоваться для хранения ссылки на вызов <code>requestAnimationFrame()</code>, и устанавливаете для переменной <code>startTime</code> значение <code>null</code>, которая будет позже использоваться для хранения времени начала <code>requestAnimationFrame()</code>.</p>
 
   <pre class="brush: js notranslate">const spinner = document.querySelector('div');
 let rotateCount = 0;
@@ -368,7 +368,7 @@ let rAF;
 </pre>
  </li>
  <li>
-  <p>Под предыдущим котом вставьте функцию <code>draw()</code> соторая будет использоваться для хранения нашешо кода анимации, который включает параметр <code>timestamp</code> :</p>
+  <p>Под предыдущим кодом вставьте функцию <code>draw()</code> соторая будет использоваться для хранения нашешо кода анимации, который включает параметр <code>timestamp</code> :</p>
 
   <pre class="brush: js notranslate">function draw(timestamp) {
 
@@ -513,7 +513,7 @@ const result = document.querySelector('.result');</pre>
 }</pre>
  </li>
  <li>
-  <p>Затем добавьте функцию draw(), которая анимирует спиннер. Это очень похоже на версию из предыдущего примера просторо счетчика:</p>
+  <p>Затем добавьте функцию draw(), которая анимирует спиннер. Это очень похоже на версию из предыдущего примера простого счетчика:</p>
 
   <pre class="brush: js notranslate">function draw(timestamp) {
   if(!startTime) {
@@ -595,16 +595,16 @@ function start() {
   };
 }</pre>
 
-  <p>Пройдите через это:</p>
+  <p>Выполните следующие инструкции:</p>
 
   <ol>
-   <li>Во-первых, отмените анимацию спиннера с помощью {{domxref("window.cancelAnimationFrame", "cancelAnimationFrame()")}} (всегда полезно очистить ненужный процессы), и скройте контейнер счетчика.</li>
+   <li>Во-первых, отмените анимацию спиннера с помощью {{domxref("window.cancelAnimationFrame", "cancelAnimationFrame()")}} (всегда полезно очистить ненужные процессы), и скройте контейнер счетчика.</li>
    <li>Затем, отобразите абзац с результатами и установите для его текстового содержимого значение "PLAYERS GO!!"  чтобы сообщить игрокам, что теперь они могут нажать свою кнопку, чтобы победить.</li>
    <li>Прикрепите к документу прослушиватель событий <code><a href="/en-US/docs/Web/API/Document/keydown_event">keydown</a></code> . При нажатии любой кнопки запускается функция <code>keyHandler()</code>.</li>
    <li>Внутри <code>keyHandler()</code>, код включает обьект события в качестве параметра (представленного <code>e</code>) — его свойство {{domxref("KeyboardEvent.key", "key")}} содержит только что нажатую клавишу, и вы можете использовать это для твета на определенные нажатия клавиш определенными действиями.</li>
    <li>Установите для переменной <code>isOver</code> значение false, чтобы мы могли отслеживать, были ли нажаты правильные клавиши, чтобы игрок 1 или 2 выиграл. Мы не хотим, чтобы игра заканчивалась при нажатии неправильной клваиши.</li>
    <li>Регистрация <code>e.key</code> в консоли, это полезный способ узнать значение различных клавиш, которые вы нажимаете.</li>
-   <li>Когда <code>e.key</code> принимает значение "a", отобразить сообщение о том, что Player 1 выиграл, а когда <code>e.key</code> это "l", отобразить сообщение о том, что Player 2 выиграл. (<strong>Note:</strong> Это будет работать только со строчными буквами a и l — если переданы прописные A или L , это считается другими клавишами!) Если была нажата одна из этих клавишь, установите для <code>isOver</code> значение <code>true</code>.</li>
+   <li>Когда <code>e.key</code> принимает значение "a", отобразить сообщение о том, что Player 1 выиграл, а когда <code>e.key</code> это "l", отобразить сообщение о том, что Player 2 выиграл. (<strong>Note:</strong> Это будет работать только со строчными буквами a и l — если переданы прописные A или L , это считается другими клавишами!) Если была нажата одна из этих клавиш, установите для <code>isOver</code> значение <code>true</code>.</li>
    <li>Только еслиf <code>isOver</code> равно <code>true</code>, удалите прослушиватель событий <code>keydown</code> с помощью {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} чтобы после того, как произошло выигрышное нажатие, больше не было возможности ввода с клавиатуры, чтобы испортить финальный результат игры. Вы также используете <code>setTimeout()</code> для вызова <code>reset()</code> через 5 секунд — как обьяснялось ранее, эта функция сбрасывает игру обратно в исходное состояние, чтобы можно было начать новую игру.</li>
   </ol>
  </li>

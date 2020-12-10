@@ -323,11 +323,11 @@ timeTest().then(() =&gt; {
 
 <p>您必须仔细测试您的代码，并在性能开始受损时牢记这一点。</p>
 
-<p>另一个小小的不便是你必须将期待已久的promise封装在异步函数中。</p>
+<p>另一个小小的不便是你必须将等待执行的promise封装在异步函数中。</p>
 
 <h2 id="Asyncawait_的类方法">Async/await 的类方法</h2>
 
-<p>最后值得一提的是，我们可以在类/对象方法前面添加<code>async</code>，以使它们返回promises，并<code>await</code>它们内部的promises。查看 <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes">ES class code we saw in our object-oriented JavaScript article</a>，然后使用异步方法查看我们的修改版本：</p>
+<p>最后值得一提的是，我们可以在类/对象方法前面添加<code>async</code>，以使它们返回promises，并<code>await</code>它们内部的promises。查看 <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes">ES class code we saw in our object-oriented JavaScript article</a>，然后查看使用异步方法的修改版本：</p>
 
 <pre class="brush: js notranslate">class Person {
   constructor(first, last, age, gender, interests) {

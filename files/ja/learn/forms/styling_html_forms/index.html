@@ -199,7 +199,7 @@ legend {
 
 <p>上記のコードを HTML の body に追加します。</p>
 
-<h3 id="Organizing_your_assets" name="Organizing_your_assets">Organizing your assets</h3>
+<h3 id="Organizing_your_assets" name="Organizing_your_assets">アセットを揃える</h3>
 
 <p>ここからがおもしろいところです! コードを書き始める前に、ここでは 3 つの追加要素が必要です:</p>
 
@@ -308,7 +308,7 @@ form {
 
 <p>テキストフィールドのスタイル設定が完了して、次は単一行および複数行のテキストフィールドの表示が同じになるよう調整しなければなりません。これは、一般的にこれらのデフォルト表示が同じでないためです。</p>
 
-<h4 id="Tweaking_the_textareas" name="Tweaking_the_textareas">Tweaking the textareas</h4>
+<h4 id="Tweaking_the_textareas" name="Tweaking_the_textareas">textareaの微調整</h4>
 
 <p>{{HTMLElement("textarea")}} 要素はデフォルトでブロック要素としてレンダリングされるようにします。ここで重要なことは、{{cssxref("resize")}} プロパティと {{cssxref("overflow")}} プロパティの 2 つです。ここでは固定サイズでデザインしているため、ユーザーが複数行のテキストフィールドをリサイズできないように <code>resize</code> プロパティを使用します。{{cssxref("overflow")}} プロパティは、ブラウザー間でのフィールドの一貫性を向上させるために使用します。これのデフォルト値が <code>auto</code> であるブラウザーと <code>scroll</code> であるブラウザーが存在します。この例では、すべてのブラウザーが <code>auto</code> になるようにするのがよいでしょう。</p>
 
@@ -348,7 +348,8 @@ button:hover,
 button:focus {
   outline     : none;
   background  : #000;
-  co</pre>
+  color       : #FFF;
+}</pre>
 
 <h3 id="The_final_result" name="The_final_result">最終結果</h3>
 

@@ -7,7 +7,7 @@ translation_of: Learn/JavaScript/Asynchronous/Choosing_the_right_approach
 
 <div>{{PreviousMenu("Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}</div>
 
-<p>为了完成这个模块，我们将简要讨论我们在整个过程中讨论的不同编码技术和功能，看看你应该使用哪一个，并提供适当的常见陷阱的建议和提醒。随着时间的推移，我们可能会添加到此资源中。</p>
+<p>为了完成这个模块，我们将简要讨论之前章节谈论过编码技术和功能，看看你应该使用哪一个，并提供适当的建议和提醒。随着时间的推移，我们可能会添加到此资源中。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -24,7 +24,7 @@ translation_of: Learn/JavaScript/Asynchronous/Choosing_the_right_approach
 
 <h2 id="异步回调">异步回调</h2>
 
-<p>通常在旧式API中找到，涉及将函数作为参数传递给另一个函数，然后在异步操作完成时调用该函数，以便回调可以依次对结果执行某些操作。这是promise的先导;它不那么高效或灵活。仅在必要时使用。</p>
+<p>通常在旧式API中找到，涉及将函数作为参数传递给另一个函数，然后在异步操作完成时调用该函数，以便回调可以依次对结果执行某些操作。这是promise的前身;它不那么高效或灵活。仅在必要时使用。</p>
 
 <table class="standard-table">
  <caption>Useful for...</caption>
@@ -76,7 +76,7 @@ loadAsset('coffee.jpg', 'blob', displayImage);</pre>
 
 <ul>
  <li>嵌套回调可能很麻烦且难以阅读（即“回调地狱”）</li>
- <li>每层嵌套都需要调用一次失败回调，而使用promises，您只需使用一个<code>.catch（）</code>代码块来处理整个链的错误。</li>
+ <li>每层嵌套都需要故障回调，而使用promises，您只需使用一个<code>.catch（）</code>代码块来处理整个链的错误。</li>
  <li>异步回调不是很优雅。</li>
  <li>Promise回调总是按照它们放在事件队列中的严格顺序调用;异步回调不是。</li>
  <li>当传入到一个第三方库时，异步回调对函数如何执行失去完全控制。</li>
@@ -137,8 +137,8 @@ setTimeout(function run() {
 <p>递归<code>setTimeout（）</code>和<code>setInterval（）</code>之间存在差异：</p>
 
 <ul>
- <li>递归<code>setTimeout（）</code>保证执行之间至少经过指定的时间（在本例中为100ms）;代码将运行，然后等待100毫秒再次运行。无论代码运行多长时间，间隔都是相同的。</li>
- <li>使用<code>setInterval（）</code>，我们选择的间隔包括执行我们想要运行的代码所花费的时间。假设代码需要40毫秒才能运行 ––然后间隔最终只有60毫秒。</li>
+ <li>递归<code>setTimeout（）</code>保证两次执行间经过指定的时间量（在本例中为100ms）;代码将运行，然后等待100毫秒再次运行。无论代码运行多长时间，间隔都是相同的。</li>
+ <li>使用<code>setInterval（）</code>，我们选择的时间间隔包含了运行代码所花费的时间。（还是100ms为例）假设代码需要40毫秒才能运行 –– 间隔最终只会有60毫秒。</li>
 </ul>
 
 <p>当你的代码有可能比你分配的时间间隔更长时间运行时，最好使用递归的<code>setTimeout（）</code> ––这将使执行之间的时间间隔保持不变，无论代码执行多长时间，你不会得到错误。</p>
@@ -156,7 +156,7 @@ setTimeout(function run() {
 
 <h2 id="setInterval">setInterval()</h2>
 
-<p><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code>是一种允许您在每次执行之间以设定的时间间隔重复运行函数的方法。不如<code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code>有效，但允许您选择运行速率/帧速率。</p>
+<p><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code>函数允许重复执行一个函数，并设置时间间隔。不如<code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code>有效率，但允许您选择运行速率/帧速率。</p>
 
 <table class="standard-table">
  <caption>Useful for...</caption>

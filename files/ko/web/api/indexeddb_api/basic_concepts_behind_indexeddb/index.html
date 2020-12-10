@@ -35,7 +35,7 @@ translation_of: Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 
 <h2 id="concepts" name="concepts">주요 개념들</h2>
 
-<p>만약 당신이 다른 종류의 데이터베이스로 작업하고 있었다면, IndexedDB로 작업할 때 힘들어질 수도 있습니다. 그러므로 다음의 중요한 개념들을 염두에 두어야 합니다.</p>
+<p>만약 당신이 다른 DB 시스템을 사용해봤던 경험이 있다면 오히려 잘못된 추측으로 인해 IndexedDB로 작업할 때 힘들어질 수도 있습니다. 그러므로 다음의 중요한 개념들을 잘 정리해 두어야 합니다.</p>
 
 <ul>
  <li>
@@ -98,17 +98,17 @@ translation_of: Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
  <p><strong>Note</strong>: 파이어폭스에서 (나중에 다시 계산 할 수 없는 까다로운 데이터를 저장하는 것)과 같은 몇 가지 이유로 지속성을 보장하고 싶다면, <code>complete</code> 이벤트가 전달되기 전에 아직 정식 표준이 아닌 실험적인 <code>readwriteflush</code> 모드를 이용하여 트랜젝션을 데이터베이스에 강제로 반영할 수 있습니다. ({{domxref("IDBDatabase.transaction")}} 참고.) 현재는 실험적으로 적용되어 있고(experimental), <code>about:config</code>에서<code>dom.indexedDB.experimental</code>값이 <code>true</code> 로 설정되어 있을 때만 사용할 수 있습니다.</p>
  </div>
  </dd>
- <dt><a name="gloss_object_store">객체 저장소</a></dt>
+ <dt><a name="gloss_object_store">객체 저장소 ( Object Store )</a></dt>
  <dd>
  <p>데이터베이스에 데이터가 저장되는 매커니즘입니다. 객체 저장소는 키(key)와 값(value)의 쌍으로 된 레코드를 영구적으로 잡습니다. 한 객체 저장소 안의 레코드는 키(key)에 따라 오름차순으로 정렬됩니다.</p>
 
- <p>모든 객체 저장소는 데이터베이스 안에서 고유한 이름을 가져야 합니다. Object store는 선택적으로 <em><a href="#gloss_keygenerator">key generator</a></em>와 <em><a href="#gloss_keypath">key path</a>를 가질 수 있다</em>.만약 object store가 key path를 가진다면, 그것은 <em><a href="#gloss_inline_key">in-line keys</a>를 사용한다</em>; 아니면, 그것은 <em><a href="#gloss_outofline_key">out-of-line keys</a>를 사용한다</em>.</p>
+ <p>모든 객체 저장소는 데이터베이스 안에서 고유한 이름을 가져야 합니다. 객체 저장소는 선택적으로 <em><a href="#gloss_keygenerator">key generator</a></em>와 <em><a href="#gloss_keypath">key path</a>를 가질 수 있습니다</em>. 만약 객체 저장소가 key path를 가진다면, 그것은 <em><a href="#gloss_inline_key">in-line keys</a>를 사용합니다. </em> 아니면, 그것은 <em><a href="#gloss_outofline_key">out-of-line keys</a>를 사용하는 것입니다.</em></p>
 
- <p>Object store에 대한 참고 문서를 위해, <a href="../../../../en/IndexedDB/IDBObjectStore" rel="internal">IDBObjectStore</a> 또는 <a href="../../../../en/IndexedDB/IDBObjectStoreSync" rel="internal">IDBObjectStoreSync</a>를 보라.</p>
+ <p>객체 저장소에 대한 보다 자세한 정보는, <a href="../../../../en/IndexedDB/IDBObjectStore" rel="internal">IDBObjectStore</a> 또는 <a href="../../../../en/IndexedDB/IDBObjectStoreSync" rel="internal">IDBObjectStoreSync</a>를 참조하세요.</p>
  </dd>
  <dt><a name="gloss_version">version</a></dt>
- <dd>Database가 처음 만들어질 때, 그것의 version은 interger 1이다. 각 database는 한번에 하나의 version을 가진다; 하나의 데이터베이스가 한번에 여러 version으로 존재할 수 없다. version을 바꾸는 유일한 방법은 현재 버전보다 큰 버전으로 그것을 여는 것이다. 이는 <a href="/en-US/docs/Web/API/IDBVersionChangeRequest"><code>versionchange</code></a> <em>transaction을 시작하고</em> <a href="/en-US/docs/Web/Reference/Events/upgradeneeded_indexedDB"><code>upgradeneeded</code></a> event를 fire한다. database의 schema를 변경할 수 있는 유일한 곳은 그 event의 handler 내부이다.</dd>
- <dd>Note: This definition describes the <a class="external" href="http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html">most recent specification</a>, which is only implemented in up-to-date browsers. Old browsers implemented the now deprecated and removed <a href="/en-US/docs/IndexedDB/IDBDatabase#setVersion()" title="/en-US/docs/IndexedDB/IDBDatabase#setVersion()"><code>IDBDatabase.setVersion()</code></a> method.</dd>
+ <dd>Database가 처음 만들어질 때, version은 정수형 숫자로 1입니다. 각 database는  하나의 version을 집니다; 하나의 데이터베이스가 한번에 여러 version으로 존재할 수 없다. version을 바꾸는 유일한 방법은 현재 버전보다 큰 버전으로 그것을 여는 것입니다. 이렇ㄱ하면 <a href="/en-US/docs/Web/API/IDBVersionChangeRequest"><code>versionchange</code></a> <em>트랜잭션을 시작하고</em> <a href="/en-US/docs/Web/Reference/Events/upgradeneeded_indexedDB"><code>upgradeneeded</code></a> event를 발생시킵니다. database의 schema를 변경하려면 upgradeneed 이벤트 핸들러내에서 수행해야 합니다.</dd>
+ <dd>Note: 이 스펙은  <a class="external" href="http://dvcs.w3.org/hg/IndexedDB/raw-file/tip/Overview.html">most recent specification</a>, which is only implemented in up-to-date browsers. Old browsers implemented the now deprecated and removed <a href="/en-US/docs/IndexedDB/IDBDatabase#setVersion()" title="/en-US/docs/IndexedDB/IDBDatabase#setVersion()"><code>IDBDatabase.setVersion()</code></a> method.</dd>
  <dt><a name="gloss_database_connection">database connection</a></dt>
  <dd> <em><a href="#gloss_database">database</a>를 여는 것에 의해 생성되는 operation</em>. 한 주어진 database는 동시에 여러개의 connections를 가질 수 있다.</dd>
  <dt><a name="gloss_transaction">transaction</a></dt>
@@ -199,15 +199,15 @@ translation_of: Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
  <li>그 feature에 호환되지 않는 변경이 이루어졌다.</li>
 </ul>
 
-<p>실제 환경과 브라우저 호환성은 시간에 따라 변하지만, 브라우저 제조사의 기본 철학은 가능한한 데이터를 유지하는 데에 최대한 노력하는 것이다.</p>
+<p>정확한 삭제 시점과 브라우져의 DB 수용능력은 때때로 달라질 수 있습니다만, 브라우져 벤더가 지킬려고 노력하는 가장 기본적인 철학은 데이터를 가능한 최대한 데이터를 지킬려고 노력한다는 것입니다.</p>
 
 <h2 id="next" name="next">Next steps</h2>
 
-<p>자 이제 이들 지식을 가지고서 , 우리는 더 큰 것들을 가질 수 있게 되었다.the API 사용법에 대한 튜토리얼을 위해서, <a href="/en/IndexedDB/Using_IndexedDB" title="en/IndexedDB/IndexedDB primer">Using IndexedDB</a>를 보라.</p>
+<p>이제 큰 그림은 이해할 수 있게 됐고 아울러 보다 복잡한 사용법을 익힐 준비가 됐네요. 실제로 어떻게 API를 사용하는지 알아보기 위해서, <a href="/en/IndexedDB/Using_IndexedDB" title="en/IndexedDB/IndexedDB primer">Using IndexedDB</a>를 살펴봅시다.</p>
 
 <h2 id="함께_보기">함께 보기</h2>
 
-<p> </p>
+
 
 <ul>
  <li><a href="http://www.w3.org/TR/IndexedDB/" title="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
@@ -216,4 +216,8 @@ translation_of: Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
  <li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx" title="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>
 
-<p> </p>
+
+
+<div id="gtx-trans" style="position: absolute; left: 225px; top: 8418px;">
+<div class="gtx-trans-icon"></div>
+</div>

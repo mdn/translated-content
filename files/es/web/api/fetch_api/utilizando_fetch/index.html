@@ -37,7 +37,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
   .then(response =&gt; response.json())
   .then(data =&gt; console.log(data));</pre>
 
-<p>Aquí estamos recuperando un archivo JSON a través de red e impriminedo en la consola. El uso de <code>fetch()</code> más simple toma un argumento (la ruta del recurso que quieres buscas) y devuelve un objeto Promise conteniendo la respuesta, un objeto {{domxref("Response")}}.</p>
+<p>Aquí estamos recuperando un archivo JSON a través de red e imprimiendo en la consola. El uso de <code>fetch()</code> más simple toma un argumento (la ruta del recurso que quieres obtener) y devuelve un objeto Promise conteniendo la respuesta, un objeto {{domxref("Response")}}.</p>
 
 <p>Esto es, por supuesto, una respuesta HTTP no el archivo JSON. Para extraer el contenido en el cuerpo del JSON desde la respuesta, usamos el método {{domxref("Body.json","json()")}} (definido en el <a href="https://es.wikipedia.org/wiki/Mixin">mixin</a> de {{domxref("Body")}}, el cual está implementado por los objetos {{domxref("Request")}} y {{domxref("Response")}}).</p>
 

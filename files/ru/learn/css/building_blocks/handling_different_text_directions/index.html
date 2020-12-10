@@ -5,9 +5,9 @@ translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}</div>
 
-<p>Many of the properties and values that we have encountered so far in our CSS learning have been tied to the physical dimensions of our screen. We create borders on the top, right, bottom, and left of a box, for example. These physical dimensions map very neatly to content that is viewed horizontally, and by default the web tends to support left-to-right languages (e.g. English or French) better than right-to-left languages (such as Arabic).</p>
+<p>Многие свойства и значения, с которыми мы столкнулись до сих пор при изучении CSS, были привязаны к физическим размерам нашего экрана. Мы создаем границы, например, сверху, справа, снизу и слева от коробки.Эти физические размеры очень точно соответствуют контенту, который просматривается по горизонтали, и по умолчанию Интернет имеет тенденцию поддерживать языки с письмом слева направо (например, английский или французский) лучше, чем языки с письмом справа налево (например, арабский).</p>
 
-<p>In recent years however, CSS has evolved in order to better support different directionality of content, including right-to-left but also top-to-bottom content (such as Japanese) — these different directionalities are called <strong>writing modes</strong>. As you progress in your study and begin to work with layout, an understanding of writing modes will be very helpful to you, therefore we will introduce them now.</p>
+<p>Однако в последние годы CSS развивался чтобы лучше поддерживать разную направленность контента, включая контент с направлением справа налево, а также контент сверху вниз (например, в японском языке) - эти разные направления называются режимами письма. По мере того, как вы продвигаетесь в обучении и начинаете работать с макетом, понимание режимов письма будет вам очень полезно, поэтому мы сейчас и познакомимся с ними.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -16,29 +16,29 @@ translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
    <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)</td>
   </tr>
   <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand the importance of writing modes to modern CSS.</td>
+   <th scope="row">Цель:</th>
+   <td>Понять важность режимов письма для современного CSS.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="What_are_writing_modes">What are writing modes?</h2>
+<h2 id="Какие_бывают_режимы_письма">Какие бывают режимы письма?</h2>
 
-<p>A writing mode in CSS refers to whether the text is running horizontally or vertically. The {{cssxref("writing-mode")}} property lets us switch from one writing mode to another. You don't need to be working in a language which uses a vertical writing mode to want to do this — you could also change the writing mode of parts of your layout for creative purposes.</p>
+<p>Режим письма в CSS определяет, идет ли текст по горизонтали или по вертикали. Свойство {{cssxref ("writing-mode")}} позволяет нам переключаться из одного режима письма в другой. Для этого вам не обязательно работать на языке, который использует режим вертикального письма - вы также можете изменить режим письма частей вашего макета для творческих целей.</p>
 
-<p>In the example below we have a heading displayed using <code>writing-mode: vertical-rl</code>. The text now runs vertically. Vertical text is common in graphic design, and can be a way to add a more interesting look and feel to your web design.</p>
+<p>В приведенном ниже примере заголовок отображается с использованием <code>writing-mode: vertical-rl</code>. Теперь текст идет вертикально. Вертикальный текст часто используется в графическом дизайне и может быть способом добавить более интересный вид вашему веб-дизайну.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}</p>
 
-<p>The three possible values for the <code><a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a></code> property are:</p>
+<p>Три возможных значения свойства  <code><a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a></code>:</p>
 
 <ul>
- <li><code>horizontal-tb</code>: Top-to-bottom block flow direction. Sentences run horizontally.</li>
- <li><code>vertical-rl</code>: Right-to-left block flow direction. Sentences run vertically.</li>
- <li><code>vertical-lr</code>: Left-to-right block flow direction. Sentences run vertically.</li>
+ <li><code>horizontal-tb</code>: Направление потока блока сверху вниз. Предложения идут горизонтально.</li>
+ <li><code>vertical-rl</code>: Направление потока блоков справа налево. Предложения идут вертикально.</li>
+ <li><code>vertical-lr</code>: Направление потока блока слева направо. Предложения идут вертикально.</li>
 </ul>
 
-<p>So the <code>writing-mode</code> property is in reality setting the direction in which block-level elements are displayed on the page — either from top-to-bottom, right-to-left, or left-to-right. This then dictates the direction text flows in sentences.</p>
+<p>Таким образом, свойство <code>writing-mode</code> на самом деле устанавливает направление, в котором элементы уровня блока отображаются на странице - сверху вниз, справа налево или слева направо. Это затем определяет направление движения текста в предложениях.</p>
 
 <h2 id="Writing_modes_and_block_and_inline_layout">Writing modes and block and inline layout</h2>
 
