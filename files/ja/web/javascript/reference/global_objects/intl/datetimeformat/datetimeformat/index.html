@@ -20,14 +20,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/Date
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox">new Intl.DateTimeFormat([<var>locales</var>[, <var>options</var>]])</pre>
+<pre class="syntaxbox notranslate">new Intl.DateTimeFormat([<var>locales</var>[, <var>options</var>]])</pre>
 
 <h3 id="Parameters" name="Parameters">引数</h3>
 
 <dl>
  <dt><code><var>locales</var></code> {{optional_inline}}</dt>
  <dd>
- <p>BCP47 言語タグの文字列、または、そのような文字列の配列です。ブラウザーの既定のロケールを使用するには、この引数を省略するか、 <code>undefined</code> を渡すかしてください。 Unicode 拡張に対応しています (例えば "<code>en-US-u-ca-buddhist</code>" など)。 <code>locales</code> 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} のページをご覧ください。次の Unicode 拡張キーが利用できます。</p>
+ <p>BCP47 言語タグの文字列、または、そのような文字列の配列です。ブラウザーの既定のロケールを使用するには、空の配列を渡してください。。 Unicode 拡張に対応しています (例えば "<code>en-US-u-ca-buddhist</code>" など)。 <code>locales</code> 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} のページをご覧ください。次の Unicode 拡張キーが利用できます。</p>
 
  <dl>
   <dt><code>nu</code></dt>
@@ -51,6 +51,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/Date
    <li>"<code>medium</code>"</li>
    <li>"<code>short</code>"</li>
   </ul>
+
+  <div class="blockIndicator note">
+  <p><code>dateStyle</code> は <code>timeStyle</code> と一緒に使用することができますが、他のオプションと一緒に使用することができません (例えば <code>weekday</code>, <code>hour</code>, <code>month</code>, など)。</p>
+  </div>
   </dd>
   <dt><code>timeStyle</code></dt>
   <dd><code>format()</code> が呼び出された際に使用される時刻の書式化スタイルです。利用可能な値は以下のとおりです。
@@ -61,8 +65,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/Date
    <li>"<code>short</code>"</li>
   </ul>
   </dd>
-  <dt><code>fractionalSecondDigits</code></dt>
-  <dd><code>format()</code> を呼び出したときに適用する秒の小数点以下の桁数です。有効な値は 0-3 です。</dd>
+  <dd>
+  <div class="blockIndicator note">
+  <p><code>timeStyle</code> は <code>dateStyle</code> と一緒に使用することができますが、他のオプションと一緒に使用することができません (例えば <code>weekday</code>, <code>hour</code>, <code>month</code>, など)。</p>
+  </div>
+  </dd>
   <dt><code>calendar</code></dt>
   <dd>暦です。有効な値は、 "<code>buddhist</code>", "<code>chinese</code>", " <code>coptic</code>", "<code>ethiopia</code>", "<code>ethiopic</code>", "<code>gregory</code>", " <code>hebrew</code>", "<code>indian</code>", "<code>islamic</code>", "<code>iso8601</code>", " <code>japanese</code>", "<code>persian</code>", "<code>roc</code>" です。</dd>
   <dt><code>dayPeriod</code></dt>
@@ -142,6 +149,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/Date
   <dd>分の表現です。利用可能な値は "<code>numeric</code>", "<code>2-digit</code>" です。</dd>
   <dt><code>second</code></dt>
   <dd>秒の表現です。利用可能な値は "<code>numeric</code>", "<code>2-digit</code>" です。</dd>
+  <dt><code>fractionalSecondDigits</code></dt>
+  <dd>
+  <div class="blockIndicator note">
+  <p class="noinclude">Firefox 84, Chrome 84, などで追加されました。詳しくは互換性一覧表を参照してください。</p>
+  </div>
+  秒の小数点以下を表すために使用される数字の桁数 (その先の桁は切り捨てられます)。利用可能な値は次の通りです。
+
+  <ul>
+   <li><code>0</code> (小数点以下は切り捨て)</li>
+   <li><code>1</code> (小数点以下は1桁で表される。例えば、 736 は <code>7</code> と書式化される。)</li>
+   <li><code>2</code> (小数点以下は2桁で表される。例えば、 736 は <code>73</code> と書式化される。)</li>
+   <li><code>3</code> (小数点以下は2桁で表される。例えば、 736 は <code>736</code> と書式化される。)</li>
+  </ul>
+  </dd>
   <dt><code>timeZoneName</code></dt>
   <dd>タイムゾーン名の表現です。利用可能な値は以下の通りです。
   <ul>
@@ -154,6 +175,37 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/Date
  <p class="noinclude">日付・時間コンポーネントプロパティの既定値は {{jsxref("undefined")}} ですが、すべてのコンポーネントプロパティが {{jsxref("undefined")}} であった場合、 <code>year</code>, <code>month</code>, <code>day</code> は "<code>numeric</code>" であると仮定されます。</p>
  </dd>
 </dl>
+
+<h2 id="Examples" name="Examples">例</h2>
+
+<h3 id="Using_DateTimeFormat" name="Using_DateTimeFormat">DateTimeFormat の使用</h3>
+
+<p>ロケールを指定しない基本的な使用方法では、 <code>DateTimeFormat</code> は既定のロケールとオプションを使用します。</p>
+
+<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+
+// toLocaleString without arguments depends on the implementation,
+// the default locale, and the default time zone
+console.log(new Intl.DateTimeFormat().format(date));
+// → "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)</pre>
+
+<h3 id="Using_timeStyle_and_dateStyle" name="Using_timeStyle_and_dateStyle">timeStyle と dateStyle の使用</h3>
+
+<pre class="brush: js notranslate">let o = new Intl.DateTimeFormat("en" , {
+  timeStyle: "short"
+});
+console.log(o.format(Date.now())); // "13:31 AM"
+
+let o = new Intl.DateTimeFormat("en" , {
+  dateStyle: "short"
+});
+console.log(o.format(Date.now())); // "07/07/20"
+
+let o = new Intl.DateTimeFormat("en" , {
+  timeStyle: "medium",
+  dateStyle: "short"
+});
+console.log(o.format(Date.now())); // "07/07/20, 13:31:55 AM"</pre>
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 

@@ -34,9 +34,7 @@ translation_of: Learn/CSS/First_steps/Getting_started
 
 <h2 id="由某個_HTML_開始">由某個 HTML 開始</h2>
 
-<p>我們的起點是一個 HTML 文件。如果您想要在自己的電腦上操作，可以把下面的程式碼複製下來。在您電腦上的目錄中，用 <code>index.html</code> 為檔名儲存</p>
-
-<p>。</p>
+<p>我們的起點是一個 HTML 文件。如果您想要在自己的電腦上操作，可以把下面的程式碼複製下來。在您電腦上的目錄中，用 <code>index.html</code> 為檔名儲存。</p>
 
 <pre class="brush: html notranslate">&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
@@ -70,23 +68,23 @@ and also a &lt;a href="http://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
 
 <h2 id="為我們的文件加入CSS">為我們的文件加入CSS</h2>
 
-<p>首先，告訴HTML文件我們有些CSS規則要加入是第一個步驟。你可能會碰到三種不同的方式可以將CSS檔案應用進HTML文件之中，不過我們現在先將焦點放在最常見且最實用的方式：將CSS從文件的前頭連接進去。</p>
+<p>首先，第一個步驟是告訴 HTML 文件我們有些 CSS 規則要加入。你通常有三種不同的方式來將 CSS 套用到 HTML 文件上，然而，現在我們先將焦點放在其中最常見並且實用的方式：在您文件標頭的位置將 CSS 連結進去。</p>
 
-<p>先建立一個檔案，將它存在與你HTML文件同一個目錄之中並命名為<code>styles.css</code> 。<code>.css</code> 外掛會辨識它為一個CSS檔案。</p>
+<p>建立一個檔案，存在與您 HTML 文件同一個目錄之中，並命名為 <code>styles.css</code> 。副檔名 <code>.css</code> 會讓它被當作一個 CSS 檔案。</p>
 
-<p>To link <code>styles.css</code> to <code>index.html</code> add the following line somewhere inside the {{htmlelement("head")}} of the HTML document:</p>
+<p>為了連結 <code>styles.css</code> 到 <code>index.html</code> 中，在 HTML 文件的 {{htmlelement("head")}} 中，加入下面這行：</p>
 
 <pre class="brush: html notranslate">&lt;link rel="stylesheet" href="styles.css"&gt;</pre>
 
-<p>This {{htmlelement("link")}} element tells the browser that we have a stylesheet, using the <code>rel</code> attribute, and the location of that stylesheet as the value of the <code>href</code> attribute. You can test that the CSS works by adding a rule to <code>styles.css</code>. Using your code editor add the following to your CSS file:</p>
+<p>{{htmlelement("link")}} 元素使用 <code>rel</code> 屬性告訴瀏覽器我們有一個樣式表，接著 <code>href</code> 屬性指向到這個樣式表的位置。您可以在 <code>styles.css</code> 裡加入規則，來測試它是否能夠運作。使用程式碼編輯器，在你的 CSS 檔案中加入下面這段規則：</p>
 
 <pre class="brush: css notranslate">h1 {
   color: red;
 }</pre>
 
-<p>Save your HTML and CSS files and reload the page in a web browser. The level one heading at the top of the document should now be red. If that happens, congratulations — you have successfully applied some CSS to an HTML document. If that doesn't happen, carefully check that you've typed everything correctly.</p>
+<p>將您的  HTML 與 CSS 檔案儲存後，重新整理瀏覽器裡的頁面。文件中最上頭的第一級標題現在應該會是紅色的。如果是，恭喜！您成功地套到了一些 CSS 設定到 HTML 中了。如果結果不是如此，仔細檢查您的每段文字並確認都輸入正確。</p>
 
-<p>You can continue to work in <code>styles.css</code> locally, or you can use our interactive editor below to continue with this tutorial. The interactive editor acts as if the CSS in the first panel is linked to the HTML document, just as we have with our document above.</p>
+<p>你可以在你電腦裡的 <code>styles.css</code> 上繼續，或是使用我們下的互動編輯器來繼續本教學指引。 互動編輯器的行為，就像是這個 CSS 已經連結到 HTML 中，就如同我們在前面剛剛完成的一樣。</p>
 
 <h2 id="Styling_HTML_elements">Styling HTML elements</h2>
 

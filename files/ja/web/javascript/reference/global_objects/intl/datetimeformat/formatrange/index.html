@@ -10,23 +10,23 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/form
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Intl.DateTimeFormat.prototype.formatRange()</code></strong> は、日付の範囲をもっとも簡明な方法で、 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトがインスタンス化されたときに提供された <strong><code>locale</code></strong> と <code><strong>options</strong></code> に基づいて書式化します。</p>
+<p><strong><code>Intl.DateTimeFormat.prototype.formatRange()</code></strong> は、日付の範囲をもっとも簡明な方法で、 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトがインスタンス化されたときに提供された <strong><code>locale</code></strong> と <strong><code>options</code></strong> に基づいて書式化します。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrange.html", "taller")}}</div>
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre><code>Intl.DateTimeFormat.prototype.formatRange(<var>startDate, endDate</var>)</code></pre>
+<pre class="notranslate"><code>Intl.DateTimeFormat.prototype.formatRange(<var>startDate, endDate</var>)</code></pre>
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<h3 id="Basic_formatRange_usage" name="Basic_formatRange_usage">基本的な <code>formatRange</code> の使用</h3>
+<h3 id="Basic_formatRange_usage" name="Basic_formatRange_usage">基本的な formatRange の使用</h3>
 
-<p>このメソッドは2つの {{jsxref("Date")}} を受け取り、 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトがインスタンス化されたときに提供された <strong><code>locale</code></strong> と <code><strong>options</strong></code> に基づいて日付の範囲を書式化します。</p>
+<p>このメソッドは2つの {{jsxref("Date")}} を受け取り、 {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトがインスタンス化されたときに提供された <code>locale</code> と <code>options</code> に基づいて日付の範囲を書式化します。</p>
 
-<pre class="brush: js">let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
+<pre class="brush: js notranslate">let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
 let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
 let date3 = new Date(Date.UTC(2007, 0, 20, 10, 0, 0));
 // &gt; 'Wed, 10 Jan 2007 10:00:00 GMT'
@@ -66,18 +66,22 @@ console.log(fmt2.formatRange(date1, date3));
  <thead>
   <tr>
    <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <td><a href="https://tc39.es/proposal-intl-DateTimeFormat-formatRange/#sec-intl.datetimeformat.prototype.formatRange">Intl.DateTimeFormat.prototype.formatRange</a></td>
-   <td>Stage 3</td>
-   <td></td>
+   <td>{{SpecName('Intl.DateTimeFormat.formatRange', '#sec-intl.datetimeformat.prototype.formatRange', 'formatRange()')}}</td>
   </tr>
  </tbody>
 </table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<div>
+<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+
+<p>{{Compat("javascript.builtins.Intl.DateTimeFormat.formatRange")}}</p>
+</div>
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

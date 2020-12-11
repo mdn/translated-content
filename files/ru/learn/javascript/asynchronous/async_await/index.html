@@ -1,6 +1,10 @@
 ---
 title: Making asynchronous programming easier with async and await
 slug: Learn/JavaScript/Asynchronous/Async_await
+tags:
+  - Асинхронность
+  - Гайд
+  - Для новичков
 translation_of: Learn/JavaScript/Asynchronous/Async_await
 ---
 <div>{{LearnSidebar}}</div>
@@ -150,7 +154,7 @@ myFetch().then((blob) =&gt; {
 
 <h3 id="Минуточку_а_как_это_все_работает">Минуточку, а как это все работает ?</h3>
 
-<p>Вы могли заметить, что мы обернули наш код в функцию и сделали ее асинхронной с помощью acync. Это было обязательно - нам надо создать контейнер, внутри которого будет запускаться асинхронный код и будет возмоность дождаться его результата с помощью await, не блокируя остальной код нашег скрипта.</p>
+<p>Вы могли заметить, что мы обернули наш код в функцию и сделали ее асинхронной с помощью acync. Это было обязательно - нам надо создать контейнер, внутри которого будет запускаться асинхронный код и будет возмоность дождаться его результата с помощью await, не блокируя остальной код нашего скрипта.</p>
 
 <p>Внутри <code>myFetch()</code> находится код, который слегка напоминает версию на Promise, но есть важные отличия. Вместо того, чтобы писать цепочку блоков <code>.then()</code> мы просто использует ключевое слово <code>await</code> перед вызовом promise-based функции и присваиваем результат в переменную. Ключеовое слово <code>await</code> говорит JavaScript runtime приостановить код в этой строке, не блокируя остальной код скприта за пределами асинхронной функции. Когда вызов promise-based функции будет готов вернуть результат, выполнение продолжится с этой строки дальше.<br>
  <br>
@@ -225,7 +229,7 @@ myFetch().then((blob) =&gt; {
 
 <h2 id="Await_и_Promise.all">Await и Promise.all()</h2>
 
-<p>Как вы помните, асинхронные функции построены поверх <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>, поэтому они совместимы со всеми возможностями последних. Мы легко можем подождать выполнение <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></code>, присвоить результат в переменную и все это сделать используя синхронный стиль. Опять, вернемся к <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html">an example we saw in our previous article</a>. Откройте пример в соседней вкладке, чтобы лучше понять разницу.</p>
+<p>Как вы помните, асинхронные функции построены поверх <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a>, поэтому они совместимы со всеми возможностями последних. Мы легко можем подождать выполнение <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></code>, присвоить результат в переменную и все это сделать используя синхронный стиль. Опять, вернемся к <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html">примеру, рассмотреному в предыдущей статье</a>. Откройте пример в соседней вкладке, чтобы лучше понять разницу.</p>
 
 <p>Версия с async/await (смотрите <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-all-async-await.html">live demo</a> и <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-all-async-await.html">source code</a>), сейчас выглядит так:</p>
 
@@ -300,7 +304,7 @@ displayContent()
  <br>
  Есть подход, который позволяет обойти эту проблему - сохранить все выполняющиеся Promises в переменные, а уже после этого дожидаться (awaiting) их результата. Давайте посмотрим на несколько примеров.</p>
 
-<p>We've got two examples available — <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html">source code</a>) and <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a> (see <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html">source code</a>). Both of them start off with a custom promise function that fakes an async process with a <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> call:</p>
+<p>Мы подготовили два примера  — <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a> (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html">source code</a>) и <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a> (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html">source code</a>). Они оба начинаются с функции возвращающей promise, имитирующей асинхронность процессов при помощи вызова <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code>:</p>
 
 <pre class="brush: js notranslate">function timeoutPromise(interval) {
   return new Promise((resolve, reject) =&gt; {
@@ -310,13 +314,13 @@ displayContent()
   });
 };</pre>
 
-<p>Then each one includes a <code>timeTest()</code> async function that awaits three <code>timeoutPromise()</code> calls:</p>
+<p>Далее в каждом примере есть асинхронная функция  <code>timeTest()</code> ожидающая три вызова <code>timeoutPromise()</code>:</p>
 
 <pre class="brush: js notranslate">async function timeTest() {
   ...
 }</pre>
 
-<p>Each one ends by recording a start time, seeing how long the <code>timeTest()</code> promise takes to fulfill, then recording an end time and reporting how long the operation took in total:</p>
+<p>В каждом примере функция записывает время начала исполнения и сколько времерни понадобилось на испольние  <code>timeTest()</code>  промисов, вычитая время в момент запуска функции из времени в момент разрешения обещаний:</p>
 
 <pre class="brush: js notranslate">let startTime = Date.now();
 timeTest().then(() =&gt; {
@@ -325,9 +329,9 @@ timeTest().then(() =&gt; {
   alert("Time taken in milliseconds: " + timeTaken);
 })</pre>
 
-<p>It is the <code>timeTest()</code> function that differs in each case.</p>
+<p>Далее представленна асинхронная функция <code>timeTest()</code> различная для каждого из примеров.</p>
 
-<p>In the <code>slow-async-await.html</code> example, <code>timeTest()</code> looks like this:</p>
+<p>В случае с медленным примером <code>slow-async-await.html</code>, <code>timeTest()</code> выглядит:</p>
 
 <pre class="brush: js notranslate">async function timeTest() {
   await timeoutPromise(3000);
@@ -335,9 +339,9 @@ timeTest().then(() =&gt; {
   await timeoutPromise(3000);
 }</pre>
 
-<p>Here we simply await all three <code>timeoutPromise()</code> calls directly, making each one alert for 3 seconds. Each subsequent one is forced to wait until the last one finished — if you run the first example, you'll see the alert box reporting a total run time of around 9 seconds.</p>
+<p>Здесь мы просто ждем все три  <code>timeoutPromise()</code> напрямую, блокируя выполнение на данного блока на 3 секунды прии каждом вызове. Все последующие вызовы вынуждены ждать пока разрешится предыдущий. Если вы запустите первый пример (<code>slow-async-await.html</code>) вы увидите alert сообщающий время выполнения около 9 секунд. </p>
 
-<p>In the <code>fast-async-await.html</code> example, <code>timeTest()</code> looks like this:</p>
+<p>Во втором  <code>fast-async-await.html</code> примере, функция <code>timeTest()</code> выглядит как:</p>
 
 <pre class="brush: js notranslate">async function timeTest() {
   const timeoutPromise1 = timeoutPromise(3000);
@@ -349,17 +353,17 @@ timeTest().then(() =&gt; {
   await timeoutPromise3;
 }</pre>
 
-<p>Here we store the three <code>Promise</code> objects in variables, which has the effect of setting off their associated processes all running simultaneously.</p>
+<p>В данном случае мы храмим три объекта <code>Promise</code> в переменных,  каждый из которых может разрешиться независимо от других.</p>
 
-<p>Next, we await their results — because the promises all started processing at essentially the same time, the promises will all fulfill at the same time; when you run the second example, you'll see the alert box reporting a total run time of just over 3 seconds!</p>
+<p>Ниже мы ожидаем разрешения промисов из объекта в результат, так как они были запущенны одновременно, блокируя поток, то и разрешатся одновременно. Если вы запустите вроторой приимер вы увидите alert, сообщающий время выполнения около 3 секунд.</p>
 
-<p>You'll have to test your code carefully, and bear this in mind if performance starts to suffer.</p>
+<p>Важно не забывать о быстродействии применяя await, проверяйте количество блокировок.</p>
 
-<p>Another minor inconvenience is that you have to wrap your awaited promises inside an async function.</p>
+<p>
+ </p><h2 id="Asyncawait_class_methods">Async/await class methods</h2>
 
-<h2 id="Asyncawait_class_methods">Async/await class methods</h2>
 
-<p>As a final note before we move on, you can even add <code>async</code> in front of class/object methods to make them return promises, and <code>await</code> promises inside them. Take a look at the <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes">ES class code we saw in our object-oriented JavaScript article</a>, and then look at our modified version with an <code>async</code> method:</p>
+<p>В качестве последнего замечания, вы можете использовать  <code>async</code>  перед методами классов или объектов, вынуждая их возвращать promises. А также  await внутри методов объявленных такиим образом. Посмотрите на пример <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes">ES class code, который мы наблюдали в статье  object-oriented JavaScript</a>,  и сравниете его с модифицированной (асинхронной) <code>async</code> версией ниже:</p>
 
 <pre class="brush: js notranslate">class Person {
   constructor(first, last, age, gender, interests) {
@@ -383,19 +387,19 @@ timeTest().then(() =&gt; {
 
 let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);</pre>
 
-<p>The first class method could now be used something like this:</p>
+<p>Первый метод класса теперь можно использовать таким образом:</p>
 
 <pre class="brush: js notranslate">han.greeting().then(console.log);</pre>
 
-<h2 id="Browser_support">Browser support</h2>
+<h2 id="Browser_support_Поддержка_браузерами">Browser support (Поддержка браузерами)</h2>
 
 <p>One consideration when deciding whether to use async/await is support for older browsers. They are available in modern versions of most browsers, the same as promises; the main support problems come with Internet Explorer and Opera Mini.</p>
 
 <p>If you want to use async/await but are concerned about older browser support, you could consider using the <a href="https://babeljs.io/">BabelJS</a> library — this allows you to write your applications using the latest JavaScript and let Babel figure out what changes if any are needed for your user’s browsers. On encountering a browser that does not support async/await, Babel's polyfill can automatically provide fallbacks that work in older browsers.</p>
 
-<h2 id="Conclusion">Conclusion</h2>
+<h2 id="Заключение">Заключение</h2>
 
-<p>And there you have it — async/await provide a nice, simplified way to write async code that is simpler to read and maintain. Even with browser support being more limited than other async code mechanisms at the time of writing, it is well worth learning and considering for use, both for now and in the future.</p>
+<p>Вот пожалуй и все - async/await позволяют писать асинхронный код, который легче читать и поддерживать. Даже учитывая, что поддержка со стороны браузеров несколько хуже, чем у promise.then, все же стоит обратить на него внимание.</p>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</p>
 

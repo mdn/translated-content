@@ -30,15 +30,15 @@ translation_of: Learn/JavaScript/Objects/Basics
 
 <p>Como acontece com muitas coisas em JavaScript, a criação de um objeto geralmente começa com a definição e a inicialização de uma variável. Tente digitar o código a seguir no arquivo que você baixou, salve e atualize:</p>
 
-<pre class="brush: js">var pessoa = {};</pre>
+<pre class="brush: js notranslate">var pessoa = {};</pre>
 
 <p>Se você inserir <code>pessoa</code> no seu console JS e pressionar o botão, deverá obter o seguinte resultado:</p>
 
-<pre class="brush: js">[object Object]</pre>
+<pre class="brush: js notranslate">[object Object]</pre>
 
 <p>Parabéns, você acabou de criar seu primeiro objeto. Tarefa concluída! Mas este é um objeto vazio, então não podemos fazer muita coisa com isso. Vamos atualizar nosso objeto para ficar assim:</p>
 
-<pre class="brush: js">var pessoa = {
+<pre class="brush: js notranslate">var pessoa = {
   nome: ['Bob', 'Smith'],
   idade: 32,
   sexo: 'masculino',
@@ -54,7 +54,7 @@ translation_of: Learn/JavaScript/Objects/Basics
 
 <p>Depois de salvar e atualizar, tente inserir alguns dos itens a seguir no console JavaScript no devtools do seu navegador:</p>
 
-<pre class="brush: js">pessoa.nome
+<pre class="brush: js notranslate">pessoa.nome
 pessoa.nome[0]
 pessoa.idade
 pessoa.interesses[1]
@@ -69,7 +69,7 @@ pessoa.saudacao()</pre>
 
 <p>Então, o que está acontecendo? Bem, um objeto é composto de vários membros, cada um  com um nome (ex.: <code>nome</code> e <code>idade</code> vistos acima), e um valor (ex.: <code>['Bob', 'Smith']</code> e <code>32</code>). Cada par nome/valor deve ser separado por uma vírgula e o nome e valor, em cada caso, separados por dois pontos. A sintaxe sempre segue esse padrão:</p>
 
-<pre class="brush: js">var nomeDoObjeto = {
+<pre class="brush: js notranslate">var nomeDoObjeto = {
   nomeMembro1: valorMembro1,
   nomeMembro2: valorMembro2,
   nomeMembro3: valorMembro3
@@ -85,7 +85,7 @@ pessoa.saudacao()</pre>
 
 <p>Acima, você acessou as propriedades de objetos e métodos usando <strong>notação de ponto</strong>. O objeto nome (pessoa) atua como <strong>namespace </strong>(espaço de nomes) — ele deve ser digitado primeiro para que você acesse qualquer coisa <strong>encapsulada </strong>dentro do objeto. Depois você escreve um ponto, então o item que quer acessar — isso pode ser o nome de uma simples propriedade, um item de um array ou a chamada para um dos métodos do objeto, por exemplo: </p>
 
-<pre class="brush: js">pessoa.idade
+<pre class="brush: js notranslate">pessoa.idade
 pessoa.interesse[1]
 pessoa.bio()</pre>
 
@@ -93,28 +93,28 @@ pessoa.bio()</pre>
 
 <p>É até possível fazer o valor de um membro de um objeto ser outro objeto. Por exemplo, tente alterar o nome do membro de:</p>
 
-<pre class="brush: js">nome: ['Bob', 'Smith'],</pre>
+<pre class="brush: js notranslate">nome: ['Bob', 'Smith'],</pre>
 
 <p>para</p>
 
-<pre class="brush: js">nome : {
+<pre class="brush: js notranslate">nome : {
   primeiro: 'Bob',
   ultimo: 'Smith'
 },</pre>
 
 <p>Aqui estamos efetivamente criando um <strong>sub-namespace</strong>. Parece difícil, mas não é — para acessar esses itens você apenas precisa encadear mais um passo ao final de outro ponto. Tente isso aqui no console:</p>
 
-<pre class="brush: js">pessoa.nome.primeiro
+<pre class="brush: js notranslate">pessoa.nome.primeiro
 pessoa.nome.ultimo</pre>
 
 <p><strong>Importante</strong>: Nesse ponto você também precisará revisar seus métodos e mudar quaisquer instâncias de</p>
 
-<pre class="brush: js">nome[0]
+<pre class="brush: js notranslate">nome[0]
 nome[1]</pre>
 
 <p>para</p>
 
-<pre class="brush: js">nome.primeiro
+<pre class="brush: js notranslate">nome.primeiro
 nome.ultimo</pre>
 
 <p>Caso contrário seus métodos não funcionarão.</p>
@@ -123,12 +123,12 @@ nome.ultimo</pre>
 
 <p>Há outra forma de acessar propriedades do objeto — usando notação de colchetes. Ao invés desses:</p>
 
-<pre class="brush: js">pessoa.idade
+<pre class="brush: js notranslate">pessoa.idade
 pessoa.nome.primeiro</pre>
 
 <p>Você pode usar:</p>
 
-<pre class="brush: js">pessoa['idade']
+<pre class="brush: js notranslate">pessoa['idade']
 pessoa['nome']['primeiro']</pre>
 
 <p>Fica muito parecido com a maneira que acessamos itens de um array, e é basicamente a mesma coisa, só que ao invés de usarmos um número de índice para selecionar um item, usamos o nome associado a cada valor. Não é por menos que objetos às vezes são chamados de <strong>arrays associativos</strong> — eles mapeiam strings a valores do mesmo modo que arrays mapeiam números a valores.</p>
@@ -137,42 +137,42 @@ pessoa['nome']['primeiro']</pre>
 
 <p>Até agora nós apenas procuramos receber (ou <strong>apanhar</strong>) membros de objetos — podemos também <strong>setar </strong>(atualizar) o valor de membros de objetos simplesmente declarando o membro que queremos setar (usando notação de ponto ou colchete), tipo assim:</p>
 
-<pre class="brush: js">pessoa.idade = 45;
+<pre class="brush: js notranslate">pessoa.idade = 45;
 pessoa['nome']['ultimo'] = 'Cratchit';</pre>
 
 <p>Tente escrever as linhas acima e então apanhar seus membros novamente para ver como mudaram. Assim:</p>
 
-<pre class="brush: js">pessoa.idade
+<pre class="brush: js notranslate">pessoa.idade
 pessoa['nome']['ultimo']</pre>
 
 <p>Não podemos apenas atualizar valores existentes de propriedades e métodos; podemos também criar membros completamente novos. Tente isso aqui no console:</p>
 
-<pre class="brush: js">pessoa['olhos'] = 'castanho'.
+<pre class="brush: js notranslate">pessoa['olhos'] = 'castanho'.
 pessoa.despedida = function() { alert( "Adeus a todos!" ); }</pre>
 
 <p>Podemos testar nossos novos membros:</p>
 
-<pre class="brush: js">pessoa['olhos'];
+<pre class="brush: js notranslate">pessoa['olhos'];
 pessoa.despedida();</pre>
 
 <p>Um aspecto útil de notação de colchetes é que ela pode ser usadada não apenas para setar valores dinamicamente, mas também nomes de membros. Vamos dizer que queremos que usuários possam armazenar tipos de valores personalizados em seus dados de 'pessoa', digitando o nome e o valor do membro em dois inputs de texto. Podemos obter esses valores dessa forma:</p>
 
-<pre class="brush: js">var myDataName = nameInput.value;
+<pre class="brush: js notranslate">var myDataName = nameInput.value;
 var myDataValue = nameValue.value;</pre>
 
 <p>Podemos, então, adicionar esse novo nome e valor ao objeto <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">pessoa</span></font> assim:</p>
 
-<pre class="brush: js">pessoa[myDataName] = myDataValue;</pre>
+<pre class="brush: js notranslate">pessoa[myDataName] = myDataValue;</pre>
 
 <p>Para testar isso, tente adicionar as seguinte linhas em seu código, abaixo do fechamento da chaves do objeto <code>pessoa</code> :</p>
 
-<pre class="brush: js">var myDataName = 'altura';
+<pre class="brush: js notranslate">var myDataName = 'altura';
 var myDataValue = '1.75m';
 pessoa[myDataName] = myDataValue;</pre>
 
 <p>Agora tente salvar e atualizar, entrando o seguinte no seu input de texto:</p>
 
-<pre class="brush: js">pessoa.altura</pre>
+<pre class="brush: js notranslate">pessoa.altura</pre>
 
 <p>Adicionar uma propriedade a um objeto usando o método acima não é possível com a notação ponto, que só aceita um nome de membro literal, não aceita valor de variável apontando para um nome.</p>
 
@@ -180,7 +180,7 @@ pessoa[myDataName] = myDataValue;</pre>
 
 <p>Você pode ter reparado algo levemente estranho em nossos métodos. Olhe esse aqui, por exemplo:</p>
 
-<pre class="brush: js">saudacao: function(){
+<pre class="brush: js notranslate">saudacao: function(){
   alert("Oi! Meu nome é " + this.nome.primeiro + ".");
 }</pre>
 
@@ -188,7 +188,7 @@ pessoa[myDataName] = myDataValue;</pre>
 
 <p>Vamos ilustrar o que queremos dizer com um par de objetos pessoa:</p>
 
-<pre class="brush: js">var pessoa1 = {
+<pre class="brush: js notranslate">var pessoa1 = {
   nome: 'Chris',
   saudacao: function() {
     alert('Oi! Meu nome é ' + this.nome + '.');
@@ -210,13 +210,13 @@ var pessoa2 = {
 
 <p>Então quando usamos métodos de strings como:</p>
 
-<pre class="brush: js">minhaString.split(',');</pre>
+<pre class="brush: js notranslate">minhaString.split(',');</pre>
 
 <p>Estamos usando um método disponível na instância da class <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>. Toda vez que você cria uma string em seu código, essa string é automaticamente criada como uma instância de <code>String</code>, e, portanto, possui vários métodos e propriedades comuns que estão disponíveis para ela.</p>
 
 <p>Quando você acessa o document object model usando linhas como estas:</p>
 
-<pre class="brush: js">var minhaDiv = document.createElement('div');
+<pre class="brush: js notranslate">var minhaDiv = document.createElement('div');
 var meuVideo = document.querySelector('video');</pre>
 
 <p>Você está usando métodos disponíveis na instância da class <code><a href="/en-US/docs/Web/API/Document">Document</a></code>. Cada vez que a página é recarrecada, uma instância de <code>Document</code> é criada, chamando <code>document</code>, que representa a estrutura inteira da página, conteúdo e outros recursos como sua URL. Novamente, isso significa que ela tem vários métodos e propriedades disponíveis nela.</p>
@@ -225,13 +225,17 @@ var meuVideo = document.querySelector('video');</pre>
 
 <p>Note que Objetos/APIs embutidos nem sempre criam instâncias de objetos automaticamente. Por exemplo, a <a href="/en-US/docs/Web/API/Notifications_API">API de Notificações </a>— que permite que navegadores modernos disparem notificações de sistema — requerem que você inicialize uma nova instância de objeto usando o construtor para cada notificação que queira disparar. Tente entrar o seguinte no seu console Javascript:</p>
 
-<pre class="brush: js">var minhaNotificacao = new Notification('Hello!');</pre>
+<pre class="brush: js notranslate">var minhaNotificacao = new Notification('Hello!');</pre>
 
 <p>Novamente, olharemos constructores num artigo mais na frente.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: É útil pensar sobre como os objetos se comunicam <strong>passando mensagens</strong> - quando um objeto precisa de outro objeto para realizar algum tipo de ação, ele freqüentemente enviará uma mensagem para outro objeto através de um de seus métodos e aguardará uma resposta, que reconhecemos como um valor de retorno.</p>
 </div>
+
+<h2 id="Teste_suas_habilidades_!">Teste suas habilidades !</h2>
+
+<p>Você chegou ao fim desse artigo,entretanto você consegue lembrar as informações mais importantes? Você pode encontrar mais testes para verificar se você consolidou as informações antes que você siga adiante  — veja  <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Test_your_skills:_Object_basics">Test your skills: Object basics</a>.</p>
 
 <h2 id="Resumo">Resumo</h2>
 

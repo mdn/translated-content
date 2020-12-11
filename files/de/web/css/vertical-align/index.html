@@ -3,14 +3,20 @@ title: vertical-align
 slug: Web/CSS/vertical-align
 tags:
   - CSS
-  - CSS Referenz
+  - CSS Eigenschaft
+  - Referenz
+  - 'recipe:css-property'
 translation_of: Web/CSS/vertical-align
 ---
 <div>{{CSSRef}}</div>
 
-<p>Die <strong><code>vertical-align</code></strong> <a href="/de/docs/Web/CSS">CSS</a> Eigenschaft bestimmt die vertikale Ausrichtung in inline Elementen oder in Tabellenzellen.</p>
+<p>Die <a href="/de/docs/Web/CSS">CSS</a> Eigenschaft <strong><code>vertical-align</code></strong> bestimmt die vertikale Ausrichtung in inline Elementen oder in Tabellenzellen.</p>
 
-<div>{{EmbedInteractiveExample("pages/css/vertical-align.html")}}</div>
+<div>{{EmbedInteractiveExample("pages/css/vertical-
+<div>align.html")}}</div>
+
+<div class="hidden">Die Quelle für dieses interaktive Beispiel ist in einem GitHub-Repository gespeichert. Wenn Sie zum Projekt der interaktiven Beispiele beitragen möchten, klonen Sie bitte <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> und senden Sie uns eine Pull-Anfrage.</div>
+</div>
 
 <p>Die vertical-align Eigenschaft kann in zwei Anwendungsfällen genutzt werden:</p>
 
@@ -19,7 +25,7 @@ translation_of: Web/CSS/vertical-align
 </ul>
 
 <div id="vertical-align-inline">
-<pre class="hidden brush: html">&lt;p&gt;
+<pre class="hidden brush: html notranslate">&lt;p&gt;
 top:&lt;img style="vertical-align:top" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
 middle:&lt;img style="vertical-align:middle" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
 bottom:&lt;img style="vertical-align:bottom" src="https://mdn.mozillademos.org/files/15189/star.png"/&gt;
@@ -37,7 +43,7 @@ text-bottom:&lt;img  style="vertical-align:text-bottom" src="https://mdn.mozilla
 
 </pre>
 
-<pre class="hidden brush: css">#* {
+<pre class="hidden brush: css notranslate">#* {
   box-sizing: border-box;
 }
 
@@ -64,7 +70,7 @@ p {
 </ul>
 
 <div id="vertical-align-table">
-<pre class="hidden brush: html">&lt;table&gt;
+<pre class="hidden brush: html notranslate">&lt;table&gt;
   &lt;tr&gt;
     &lt;td style="vertical-align: baseline"&gt;baseline&lt;/td&gt;
     &lt;td style="vertical-align: top"&gt;top&lt;/td&gt;
@@ -79,7 +85,7 @@ p {
 
 </pre>
 
-<pre class="hidden brush: css">table {
+<pre class="hidden brush: css notranslate">table {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -102,9 +108,7 @@ td {
 
 <h2 id="Syntax">Syntax</h2>
 
-<p> </p>
-
-<pre class="brush: css no-line-numbers language-css"><code class="language-css"><span class="comment token">/* Schlüsselwörter */</span>
+<pre class="brush: css no-line-numbers language-css notranslate"><code class="language-css"><span class="comment token">/* Schlüsselwörter */</span>
 <span class="property token">vertical-align</span><span class="punctuation token">:</span> baseline<span class="punctuation token">;</span>
 <span class="property token">vertical-align</span><span class="punctuation token">:</span> sub<span class="punctuation token">;</span>
 <span class="property token">vertical-align</span><span class="punctuation token">:</span> super<span class="punctuation token">;</span>
@@ -131,27 +135,35 @@ td {
 <h3 id="Werte_für_inline-Elemente">Werte für inline-Elemente</h3>
 
 <dl>
- <dt>baseline</dt>
+ <dt>
+ <h4 id="Eltern-Elemente">Eltern-Elemente</h4>
+ </dt>
+</dl>
+
+<p>Diese Werte richten das Element vertikal relativ zu seinem übergeordneten Element aus:</p>
+
+<dl>
+ <dt><code>baseline</code></dt>
  <dd>Die Grundlinie des Elements liegt auf der Grundlinie des Elternelements.</dd>
- <dt>sub</dt>
+ <dt><code>sub</code></dt>
  <dd>Das Element ist tiefgestellt.</dd>
- <dt>super</dt>
+ <dt><code>super</code></dt>
  <dd>Das Element ist hochgestellt.</dd>
- <dt>text-top</dt>
+ <dt><code>text-top</code></dt>
  <dd>Die Oberkante des Elements liegt auf der Oberkante der Schrift des Elternelements.</dd>
- <dt>text-bottom</dt>
+ <dt><code>text-bottom</code></dt>
  <dd>Die Unterkante des Elements liegt auf der Unterkante der Schrift des Elternelements.</dd>
- <dt>middle</dt>
+ <dt><code>middle</code></dt>
  <dd>Die Mitte des Elements liegt auf der Mitte der Kleinbuchstaben des Elternelements.</dd>
- <dt>top</dt>
+ <dt><code>top</code></dt>
  <dd>Die Oberkante des Elements liegt auf der Oberkante des Elternelements.</dd>
- <dt>bottom</dt>
+ <dt><code>bottom</code></dt>
  <dd>Die Unterkante des Elements liegt auf der Unterkante des Elternelements.</dd>
- <dt>&lt;Prozentzahl&gt;</dt>
+ <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
  <dd>Die Unterkante des Elements liegt um einen <a href="/de/CSS/Einheiten#Prozent">prozentualen Wert</a> höher als die Unterkante des Elternelements. Die Anteile beziehen sich auf den Wert der <a href="/de/CSS/line-height" title="de/CSS/line-height"><code>line-height</code></a> Eigenschaft.</dd>
- <dt>&lt;Länge&gt;</dt>
+ <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd>Die Unterkante des Elements liegt um einen <a href="/de/CSS/Einheiten#L.c3.a4ngen">bestimmten Wert</a> höher als die Unterkante des Elternelements. Negative Werte sind erlaubt.</dd>
- <dt>inherit</dt>
+ <dt><code>inherit</code></dt>
  <dd>Der Wert des Elternelements wird geerbt.</dd>
 </dl>
 
@@ -172,13 +184,13 @@ td {
 
 <h3 id="Formale_Syntax">Formale Syntax</h3>
 
-<pre class="syntaxbox">{{csssyntax}}</pre>
+<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
 
 <h2 id="Beispiel">Beispiel</h2>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">&lt;div&gt;Ein &lt;img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; Bild mit default Ausrichtung.&lt;/div&gt;
+<pre class="brush: html notranslate">&lt;div&gt;Ein &lt;img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; Bild mit default Ausrichtung.&lt;/div&gt;
 &lt;div&gt;Ein &lt;img class="top" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; Bild mit text-top Ausrichtung.&lt;/div&gt;
 &lt;div&gt;Ein &lt;img class="bottom" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; Bild mit text-bottom Ausrichtung.&lt;/div&gt;
 &lt;div&gt;Ein &lt;img class="middle" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" /&gt; Bild mit middle Ausrichtung.&lt;/div&gt;
@@ -186,7 +198,7 @@ td {
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css">img.top { vertical-align: text-top; }
+<pre class="brush: css notranslate">img.top { vertical-align: text-top; }
 img.bottom { vertical-align: text-bottom; }
 img.middle { vertical-align: middle; }
 </pre>
@@ -197,7 +209,7 @@ img.middle { vertical-align: middle; }
 
 <h2 id="Spezifikation">Spezifikation</h2>
 
-<p> </p>
+
 
 <table class="standard-table">
  <thead>

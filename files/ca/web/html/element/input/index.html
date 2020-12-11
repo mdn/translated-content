@@ -18,7 +18,7 @@ translation_of: Web/HTML/Element/input
 
 <h2 id="Sumari">Sumari</h2>
 
-<p>L'element HTML <code>&lt;input&gt;</code> s'utilitza per crear controls interactius per als formularis basats en la web per tal d'acceptar dades de l'usuari. Com un funciona <code>un &lt;input&gt;</code> varia considerablement en funció del valor del seu atribut <code>type</code>.</p>
+<p>L'element HTML <code>&lt;input&gt;</code> s'utilitza per crear controls interactius per als formularis basats en la web per tal d'acceptar dades de l'usuari. El funcionament d'un <code>&lt;input&gt;</code> varia considerablement en funció del valor del seu atribut <code>type</code>. L'element és un dels més potents i complexos en HTML a causa del gran nombre de combinacions de tipus d'entrada i atributs.</p>
 
 <table class="properties">
  <tbody>
@@ -111,7 +111,7 @@ translation_of: Web/HTML/Element/input
  </ul>
  <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize">documentació <code>autocapitalize</code> Referència HTML Safari</a></dd>
  <dt>{{htmlattrdef("autocomplete")}} {{HTMLVersionInline("5")}}</dt>
- <dd>Aquest atribut indica si el valor del control pot ser completar automàticament pel navegador.</dd>
+ <dd>Aquest atribut indica si el valor del control pot ser completat automàticament pel navegador.</dd>
  <dd><span class="short_text" id="result_box" lang="ca"><span>Els</span> <span>valors</span> <span>possibles</span> <span>són</span></span>:
  <ul>
   <li><code>off</code>: L'usuari ha d'introduir explícitament un valor en aquest camp per a cada ús, o el document proporciona el seu propi mètode d'autocompletat. El navegador no completa automàticament l'entrada.</li>
@@ -162,9 +162,9 @@ translation_of: Web/HTML/Element/input
  <p>Si l'atribut <strong>autocomplete</strong> no s'especifica en un element d'entrada, llavors el navegador utilitza el valor de l'atribut <strong>autocomplete</strong> de l'element <code>&lt;input&gt;</code> propietari del formulari. El propietari del formulari és o bé l'element <code>form</code> en que l'element <code>&lt;input&gt;</code> és un descendent, o l'element form en que el <strong>id</strong> és especificat per l'atribut <strong>form</strong> de l'element input. Per obtenir més informació, consulteu l'attribute {{htmlattrxref("autocomplete", "form")}} en {{HTMLElement("form")}}.</p>
 
  <p>L'atribut <strong>autocomple</strong> també controla si Firefox, a diferència d'altres navegadors, <a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persisteix l'estat dinàmic deshabilitat i (si escau) checkedness dinàmic</a> d'un <code>&lt;input&gt;</code> a través de les càrregues de pàgines. La funció de persistència està activat per defecte. En establir el valor de l'atribut <strong>autocomplete</strong> a <code>off</code> desactiva aquesta. Això funciona fins i tot quan l'atribut <strong>autocomplete</strong> preferis que no s'apliques normalment en el <code>&lt;input&gt;</code> en virtut del seu <strong>type</strong>. Veure{{bug(654072)}}.</p>
- Per a la majoria dels navegadors moderns (incloent Firefox 38+, Google Chrome 34+, 11+ IE) establir l'atribut <strong>autocomplete</strong> <em>no</em> impedirà que l'administrador de contrasenyes del navegador preguntar a l'usuari si desitja emmagatzemar els camps d'inici de sessió (nom d'usuari i contrasenya) i, si estan d'acord, de fer-ho de forma automàtica a l'inici de sessió de la propera vegada que l'usuari visiti la pàgina. Veure <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields">L'atribut autocomplete i els camps d'inici de sessió</a>.</dd>
+ Per a la majoria dels navegadors moderns (incloent-hi Firefox 38+, Google Chrome 34+, 11+ IE) establir l'atribut <strong>autocomplete</strong> <em>no</em> impedirà que l'administrador de contrasenyes del navegador pregunti a l'usuari si desitja emmagatzemar els camps d'inici de sessió (nom d'usuari i contrasenya) i, si estan d'acord, de fer-ho de forma automàtica a l'inici de sessió de la propera vegada que l'usuari visiti la pàgina. Veure <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#The_autocomplete_attribute_and_login_fields">L'atribut autocomplete i els camps d'inici de sessió</a>.</dd>
  <dt>{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</dt>
- <dd><span id="result_box" lang="ca"><span class="alt-edited">Aquest és un atribut no estàndard amb el suport de Safari que s'utilitza per controlar si s'ha d'habilitar la correcció automàtica quan l'usuari està entrant/editan el valor de text del &lt;input&gt;. Els posibles valors del atribut son:</span></span>
+ <dd><span id="result_box" lang="ca"><span class="alt-edited">Aquest és un atribut no estàndard amb el suport de Safari que s'utilitza per controlar si s'ha d'habilitar la correcció automàtica quan l'usuari està entrant/editant el valor de text del &lt;input&gt;. Els possibles valors del atribut són:</span></span>
  <ul>
   <li><code>on</code>: Activar la correcció automàtica</li>
   <li><code>off</code>: Desactivar la correcció automàtica</li>
@@ -303,7 +303,7 @@ translation_of: Web/HTML/Element/input
 
 <h2 id="Notes">Notes</h2>
 
-<h3 id="Entrades_d'arxius">E<span class="short_text" id="result_box" lang="ca"><span>ntrades</span> <span>d'arxius</span></span></h3>
+<h3 id="Entrades_darxius">E<span class="short_text" id="result_box" lang="ca"><span>ntrades</span> <span>d'arxius</span></span></h3>
 
 <div class="note">
 <p><strong>Not:</strong> A partir de {{Gecko("2.0")}}, cridar al mètode click() en un element <code>&lt;input&gt;</code> de type "file" obre el selector d'arxius i permet a l'usuari seleccionar arxius. Consulti <a href="https://developer.mozilla.org/en-US/docs/Using_files_from_web_applications">Ús d'arxius d'aplicacions web</a> per obtenir un exemple i més detalls.</p>
@@ -311,26 +311,26 @@ translation_of: Web/HTML/Element/input
 
 <p>No es pot establir el valor d'un selector de fitxers a partir d'un script; fer alguna cosa com el següent no té efecte:</p>
 
-<pre class="brush: js">var e = getElementById("someFileInputElement");
+<pre class="brush: js notranslate">var e = getElementById("someFileInputElement");
 e.value = "foo";
 </pre>
 
-<h3 id="Missatges_d'error">Missatges d'error</h3>
+<h3 id="Missatges_derror">Missatges d'error</h3>
 
 <p>Si voleu que Firefox presenti un missatge d'error personalitzat quan un camp no pot validar, podeu utilitzar l'atribut <code>x-moz-errormessage</code> per fer-ho:</p>
 
-<pre class="brush: html">&lt;input type="email" x-moz-errormessage="Please specify a valid email address."&gt;
+<pre class="brush: html notranslate">&lt;input type="email" x-moz-errormessage="Please specify a valid email address."&gt;
 </pre>
 
 <p>Tingueu en compte, però, que això no és estàndard i no tindrà efecte sobre altres navegadors.</p>
 
 <h2 id="Exemples">Exemples</h2>
 
-<h2 id="Exemple_1_Caixa_d'entrada_senzilla">Exemple 1; <span class="short_text" id="result_box" lang="ca"><span>Caixa</span> <span>d'entrada</span> <span>senzilla</span></span></h2>
+<h2 id="Exemple_1_Caixa_dentrada_senzilla">Exemple 1; <span class="short_text" id="result_box" lang="ca"><span>Caixa</span> <span>d'entrada</span> <span>senzilla</span></span></h2>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">&lt;p&gt;A basic input&lt;/p&gt;
+<pre class="brush: html notranslate">&lt;p&gt;A basic input&lt;/p&gt;
 &lt;input type="text" value="Type here"&gt;
 </pre>
 
@@ -338,11 +338,11 @@ e.value = "foo";
 
 <p>{{ EmbedLiveSample('Example_1_Simple_input_box', '', '100', '', 'Web/HTML/Element/input') }}</p>
 
-<h2 id="Exemple_2_Escenari_de_cas_d'ùs_comú">Exemple 2; Escenari de cas d'ùs comú</h2>
+<h2 id="Exemple_2_Escenari_de_cas_dús_comú">Exemple 2; Escenari de cas d'ús comú</h2>
 
 <h3 id="HTML_2">HTML</h3>
 
-<pre class="brush: html">&lt;p&gt;A common form that includes input tags&lt;/p&gt;
+<pre class="brush: html notranslate">&lt;p&gt;A common form that includes input tags&lt;/p&gt;
 &lt;form action="getform.php" method="get"&gt;
     &lt;label&gt;First name: &lt;input type="text"&gt;&lt;/label&gt;&lt;br&gt;
      &lt;label&gt;Last name: &lt;input type="text"&gt;&lt;/label&gt;&lt;br&gt;
@@ -359,7 +359,7 @@ e.value = "foo";
 
 <p>Es pot utilitzar l'atribut {{htmlattrxref("mozactionhint", "input")}} per especificar el text de l'etiqueta de la tecla Retorn al teclat virtual quan el formulari es representa a Firefox mòbil. Per exemple, per tenir una etiqueta a "Següent", pot fer això:</p>
 
-<pre class="brush: html">&lt;input type="text" mozactionhint="next"&gt;
+<pre class="brush: html notranslate">&lt;input type="text" mozactionhint="next"&gt;
 </pre>
 
 <p>El resultat és:</p>
@@ -375,7 +375,7 @@ e.value = "foo";
 <ul>
  <li>Prova l'idioma especificat per un atribut <code>lang/xml:lang</code> en l'element o qualsevol dels seus pares;</li>
  <li>Prova l'idioma especificat per qualsevol capçalera HTTP Content-Language o</li>
- <li>Si no s'especifica cap, utilitzeu la configuració regional del navegador.</li>
+ <li>Si no se n'especifica cap, utilitza la configuració regional del navegador.</li>
 </ul>
 
 <h2 id="Especificacions">Especificacions</h2>
@@ -392,7 +392,7 @@ e.value = "foo";
   <tr>
    <td>{{SpecName('HTML WHATWG', 'forms.html#the-input-element', '&lt;input&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
    <td>{{SpecName('HTML Media Capture', '#the-capture-attribute','&lt;input capture&gt;')}}</td>
@@ -402,12 +402,12 @@ e.value = "foo";
   <tr>
    <td>{{SpecName('HTML5 W3C', 'forms.html#the-input-element', '&lt;input&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.4', '&lt;form&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

@@ -54,7 +54,7 @@ translation_of: Learn/Forms/Advanced_form_styling
 
 <p>前の記事では歴史的に、ウェブフォームのスタイル設定は OS で行われており、それがこのコントロールの見た目のカスタマイズの問題の一部となっていました。</p>
 
-<p>{{cssxref("appearance")}} プロパティは OS やシステムレベルでウェブフォームのスタイル設定を制御する方法としてい作成されました。不運なことに、そのプロパティの元々の実装の動作はブラウザー間で大きく異なっており、そんなに便利ではありませんでした。最近の実装ではもっと動作が一貫してきており、十分興味深く、それは Chromium-ベースのブラウザー (Chrome, Opera, Edge), Safari, Firefox のいずれも <code>-webkit-</code>  のプレフィックスつきバージョン (<code>-webkit-appearance</code>)をサポートしています。Firefox は、ウェブ開発者の大半が <code>-webkit-</code> プレフィックスバージョンをサポート使っていて互換性が良いため、このように決めました。</p>
+<p>{{cssxref("appearance")}} プロパティは OS やシステムレベルでウェブフォームのスタイル設定を制御する方法として作成されました。不運なことに、そのプロパティの元々の実装の動作はブラウザー間で大きく異なっており、そんなに便利ではありませんでした。最近の実装ではもっと動作が一貫してきており、十分興味深く、それは Chromium-ベースのブラウザー (Chrome, Opera, Edge), Safari, Firefox のいずれも <code>-webkit-</code>  のプレフィックスつきバージョン (<code>-webkit-appearance</code>)をサポートしています。Firefox は、ウェブ開発者の大半が <code>-webkit-</code> プレフィックスバージョンをサポート使っていて互換性が良いため、このように決めました。</p>
 
 <p>リファレンスページを見ると <code>-webkit-appearance</code> の多くの値がありますが、最も便利で、おそらく唯一使うのは <code>none</code> です。これはあらゆるコントロールがシステムレベルのスタイル設定するのをできるだけ防止して、CSS を用いた独自のスタイル設定をできるようにします。</p>
 
@@ -180,7 +180,7 @@ input[type=checkbox] {
  </tbody>
 </table>
 
-<h4 id="ラジオボタンチェックボックスで_appearance_none_を使う">ラジオボタン/チェックボックスで appearance: none を使う</h4>
+<h4 id="Using_appearance_none_on_radioscheckboxes" name="Using_appearance_none_on_radioscheckboxes">ラジオボタン/チェックボックスで appearance: none を使う</h4>
 
 <p>これまで見てきたように、チェックボックスやラジオボタンのデフォルトの見た目を {{cssxref('appearance')}}<code>:none;</code> で削除できます。この HTML の例を見てみましょう：</p>
 
@@ -279,7 +279,7 @@ input[type=checkbox]:disabled {
 
 <p>問題は、要素はブラウザー同士でいろいろな既定の見た目があって、それにスタイル設定できても、内部のいくつかはスタイル設定できないことです。</p>
 
-<p>別のルック＆フィールに生きる準備がある場合、サイズ変更が一貫していて、background-colors のような単一スタイル設定、システムレベルのスタイル設定を除去できる見た目を使うシンプルなスタイル設定を持って逃げることもできます。</p>
+<p>ルック＆フィールの違いを受け入れる覚悟があれば、サイズ変更を一貫したものにするためのシンプルなスタイル設定や、background-colors のような単一スタイル設定、システムレベルのスタイル設定を除去できる appearance の使用などで逃げることもできます。</p>
 
 <p>例を見てみましょう、たくさんの"劣悪な" フォーム機能をつぎつぎに表示しています:</p>
 
@@ -346,7 +346,7 @@ button {
 <p>また JavaScript をページに追加してコントロール自身の下にあるファイルピッカー自身で選択されたファイルを一覧しているのを心に留めておいてください。これは <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/file#Examples">&lt;input type="file"&gt;</a></code> リファレンスページの例を簡単にしたバージョンです。</p>
 </div>
 
-<p>見ていくうちに、この見た目がモダンブラウザーのようになっていくのが上手になるでしょう。</p>
+<p>ご覧のとおり、これらをモダンブラウザー全体で均一に見せることはかなりうまくいっています。</p>
 
 <p>すべてのコントロールとそのラベルに対してグローバルな CSS の正規化を適用し、サイズを同様にして、親のフォントを適用するなどを行っています。これは前の記事で述べたようなことです:</p>
 
@@ -377,7 +377,7 @@ button {
 
 <p>モダンブラウザーでは、select とデータリストは一般的に、デフォルトからルック＆フィールを大きく変えたくないようにスタイル設定する場合、悪くないものです。</p>
 
-<p>これまで boxe を、とても統一されて一貫した見た目にしてきました。とにかくデータリストコントロールは <code>&lt;input type="text"&gt;</code> なので、問題にならないことがわかっています。</p>
+<p>これまで、ボックスの基本的な見た目をかなり均一で一貫性のあるものにしてきました。とにかくデータリストコントロールは <code>&lt;input type="text"&gt;</code> なので、問題にならないことがわかっています。</p>
 
 <p>2 つのものが多少問題をはらんでいます。まず最初に、select がドロップダウンであることを示す "矢印" アイコンは、ブラウザーによって異なります。また select ボックスのサイズを増やしたり、変更したりすると、醜くなりがちです。これを修正するため、例では最初に旧友の <code>appearance: none</code> を使ってアイコンを除去しています:</p>
 
@@ -422,7 +422,7 @@ button {
 
 <p>日付/時間の入力タイプ (<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code>, <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/time">time</a></code>, <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/week">week</a></code>, <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/month">month</a></code>) にはすべて同じ重大な関連した問題があります。実際のボックスはテキスト入力と同じくスタイル設定が容易であり、デモ内で得たものの見た目は良いです。</p>
 
-<p>しかし、コントロールの内部パーツ (例 日付をピックアップするのに使うポップアップカレンダー、値を増減するスピナー) はまったくスタイル設定できず、<code>appearence: none;</code>を使ってスタイルを除去できません。スタイル設定に完全なコントロールが必要な場合、カスタムコントロールを生成するライブラリを使うか、自分で作らねばなりません。</p>
+<p>しかし、コントロールの内部パーツ (例 日付をピックアップするのに使うポップアップカレンダー、値を増減するスピナー) はまったくスタイル設定できず、<code>appearance: none;</code>を使ってスタイルを除去できません。スタイル設定に完全なコントロールが必要な場合、カスタムコントロールを生成するライブラリを使うか、自分で作らねばなりません。</p>
 
 <div class="blockIndicator note">
 <p><strong>注</strong>: ここでも<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code> は触れる価値があります — これにも値を増減するスピナーがあるので、同じ問題に悩まさされます。しかし、<code>number</code> タイプを使った場合にデータは簡単に集められて、単に <code>text</code> 入力を (あるいはモバイルブラウザーで数字キーパッドを表示するのに <code>tel</code> を) 代わりに使うのも簡単です</p>

@@ -9,11 +9,11 @@ tags:
   - Seguridad
 translation_of: Web/Security/Same-origin_policy
 ---
-<p>La política same-origin (mismo-origen) restringe cómo un documento o script cargado desde un origen puede interactuar con un rescurso de otro origen. Es un mecanismo de seguridad crítico para aislar documentos potencialmente maliciosos.</p>
+<p>La política same-origin (mismo-origen) restringe cómo un documento o script cargado desde un origen puede interactuar con un recurso de otro origen. Es un mecanismo de seguridad crítico para aislar documentos potencialmente maliciosos.</p>
 
 <h2 id="Definición_de_origen">Definición de origen</h2>
 
-<p>Dos páginas tienen el mismo origen si el protocolo, puerto (si es especificado) y host son los mismo para ambas páginas. Verá esto a veces referido como la tupla esquema/host/puerto" (donde una "tupla" es un conjunto de componentes que juntos forman un todo).</p>
+<p>Dos páginas tienen el <em>mismo origen</em> si el {{Glossary("protocol","protocolo")}}, {{Glossary("port","puerto")}} (si es especificado) y {{Glossary("host","anfitrión")}} son los mismos para ambas páginas. Verá esto a veces referido como la "tupla esquema/anfitrión/puerto" (donde una "tupla" es un conjunto de componentes que juntos forman un todo).</p>
 
 <p>La siguiente tabla muestra ejemplos de comparaciones de origenes para la URL <code>http://store.company.com/dir/page.html</code>:</p>
 
@@ -62,8 +62,6 @@ translation_of: Web/Security/Same-origin_policy
 <p>Por ejemplo, <code>about:blank</code> a menudo se usa como URL de nuevas ventanas popup en las que el script padre escribe contenido (por ejemplo mediante el mecanismo {{domxref("Window.open()")}}). Si este popup además contiene JavaScript, ese escript heredará el mismo origen que el script que lo ha creado.</p>
 </div>
 
-<p> </p>
-
 <div class="blockIndicator warning">
 <p><code>data:</code> URLs obtienen un nuevo, vacío, contexto de seguridad.</p>
 </div>
@@ -83,7 +81,7 @@ translation_of: Web/Security/Same-origin_policy
 
 <p>Una página puede cambiar su propio origen con algunas limitaciones. Un script puede asignar el valor de {{domxref("document.domain")}} al dominio actual o a un superdominio del dominio actual. Si se asigna a un superdominio del dominio actual, el dominio más corto es usado para las posteriores comprobaciones de origen. Por ejemplo, sea un script en <code>http://store.company.com/dir/other.html</code> que ejecuta lo siguiente:</p>
 
-<pre>document.domain = "company.com";
+<pre class="notranslate">document.domain = "company.com";
 </pre>
 
 <p>Tras su ejecución, la página puede pasar la comprobación de origen con <code>http://company.com/dir/page.html</code> (asumiendo que <code>http://company.com/dir/page.html</code> asigna su <code>document.domain</code> a "<code>company.com</code>" para indicar que desea hacerlo - ver {{domxref("document.domain")}} para más información). Sin embargo, <code>company.com</code> <strong>no</strong> podría asignar <code>document.domain</code> a <code>othercompany.com</code> ya que no es un superdominio de <code>company.com</code>.</p>

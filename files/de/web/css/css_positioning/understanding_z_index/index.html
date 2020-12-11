@@ -1,5 +1,5 @@
 ---
-title: Understanding CSS z-index
+title: CSS z-index verstehen
 slug: Web/CSS/CSS_Positioning/Understanding_z_index
 tags:
   - Advanced
@@ -14,38 +14,38 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index
 ---
 <div>{{cssref}}</div>
 
-<p>In the most basic cases, <a href="/en-US/docs/Web/HTML">HTML</a> pages can be considered two-dimensional, because text, images, and other elements are arranged on the page without overlapping. In this case, there is a single rendering flow, and all elements are aware of the space taken by others. <span class="seoSummary">The {{cssxref("z-index")}} attribute lets you adjust the order of the layering of objects when rendering content.</span></p>
+<p>In den meisten einfachen Fällen können <a href="/de/docs/Web/HTML">HTML</a>-Seiten als zweidimensional betrachtet werden, da Text, Bilder und andere Elemente auf der Seite angeordnet sind, ohne sich zu überlappen. In diesem Fall gibt es einen einzigen Rendering-Fluss, und der Prozess kennt den Platz, den jedes Elemente einimmt. Mit dem Attribut {{cssxref("z-index")}} können Sie die Reihenfolge der Schichtung von Objekten beim Rendern von Inhalten verändern.</p>
 
 <blockquote>
-<p><em>In CSS 2.1, each box has a position in three dimensions. In addition to their horizontal and vertical positions, boxes lie along a "z-axis" and are formatted one on top of the other. Z-axis positions are particularly relevant when boxes overlap visually.</em></p>
+<p>In CSS 2.1 hat jede Box eine Position in drei Dimensionen. Zusätzlich zu ihrer horizontalen und vertikalen Position liegen die Boxen entlang einer "Z-Achse" und werden übereinander formatiert. Die Positionen der Z-Achse sind besonders relevant, wenn sich Boxen visuell überlappen.</p>
 </blockquote>
 
-<p>(from <a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#z-index">CSS 2.1 Section 9.9.1 - Layered presentation</a>)</p>
+<p>(von <a class="external" href="http://www.w3.org/TR/CSS21/visuren.html#z-index">CSS 2.1 Section 9.9.1 - Layered presentation</a>)</p>
 
-<p>This means that CSS style rules allow you to position boxes on layers in addition to the normal rendering layer (layer 0). The Z position of each layer is expressed as an integer representing the stacking order for rendering. Greater numbers mean closer to the observer. Z position can be controlled with the CSS <code>z-index</code> property.</p>
+<p>Das bedeutet, dass Sie mit CSS-Stilregeln Boxen auf Ebenen zusätzlich zur normalen Rendering-Ebene (Ebene 0) positionieren können. Die Z-Position jeder Ebene wird als Ganzzahl ausgedrückt, die die Stapelreihenfolge für das Rendering darstellt. Größere Zahlen bedeuten näher am Betrachter. Die Z-Position kann mit der CSS-Eigenschaft <a href="/de/docs/Web/CSS/z-index"><code>z-index</code></a> gesteuert werden</p>
 
-<p>Using <code>z-index</code> appears extremely easy: a single property, assigned a single integer number, with an easy-to-understand behaviour. However, when <code>z-index</code> is applied to complex hierarchies of HTML elements, its behaviour can be hard to understand or predict. This is due to complex stacking rules. In fact a dedicated section has been reserved in the CSS specification <a class="external" href="http://www.w3.org/TR/CSS21/zindex.html">CSS-2.1 Appendix E</a> to explain these rules better.</p>
+<p>Die Verwendung von <code>z-index</code> erscheint extrem einfach: eine einzelne Eigenschaft, der eine einzelne Ganzzahl zugewiesen ist, mit einem leicht verständlichen Verhalten. Wenn z-index jedoch auf komplexe Hierarchien von HTML-Elementen angewendet wird, kann sein Verhalten schwer zu verstehen oder vorherzusagen sein. Das liegt an den komplexen Stapelungsregeln. In der Tat wurde in der CSS-Spezifikation <a href="http://www.w3.org/TR/CSS21/zindex.html">CSS-2.1 Anhang E</a> ein eigener Abschnitt reserviert, um diese Regeln besser zu erklären.</p>
 
-<p>This article will try to explain those rules, with some simplification and several examples.</p>
+<p>Dieser Artikel wird versuchen, diese Regeln zu erklären, mit einigen Vereinfachungen und mehreren Beispielen.</p>
 
 <ol>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>: The stacking rules that apply when <code>z-index</code> is not used.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stacking with floated blocks</a>: How floating elements are handled with stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a>: How to use <code>z-index</code> to change default stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">The stacking context</a>: Notes on the stacking context.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">Stacking context example 1</a>: 2-level HTML hierarchy, <code>z-index</code> on the last level</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">Stacking context example 2</a>: 2-level HTML hierarchy, <code>z-index</code> on all levels</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Stacking context example 3</a>: 3-level HTML hierarchy, <code>z-index</code> on the second level</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stapeln ohne die Eigenschaft z-index</a>: Die Stapelungsregeln, die gelten, wenn <code>z-index</code> nicht verwendet wird.</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stapeln mit schwebenden Blöcken</a>: Wie schwebende Elemente beim Stapeln behandelt werden.</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Verwenden von z-index</a>: Wie Sie <code>z-index</code> verwenden, um die Standardstapelung zu ändern.</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">Der S</a><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">tapelungskontext</a>: Hinweise zum Stacking-Kontext.</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">Stapelungskontext-Beispiel 1</a>: 2-stufige HTML-Hierarchie, <code>z-index</code> auf der letzten Stufe</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">Sta</a><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">pelungsk</a><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">ontext-Beispiel 2</a>: 2-stufige HTML-Hierarchie, <code>z-index</code> auf allen Ebenen</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Sta</a><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">pelungsk</a><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">ontext-Beispiel 3</a>: 3-stufige HTML-Hierarchie, <code>z-index</code> auf der zweiten Ebene</li>
 </ol>
 
 <div class="originaldocinfo">
-<h2 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h2>
+<h2 id="Original_Document_Information" name="Original_Document_Information">Original Dokumenteninformation</h2>
 
 <ul>
- <li>Author(s): Paolo Lombardi</li>
- <li>This article is the English translation of an article I wrote in Italian for <a class="external" href="http://www.yappy.it">YappY</a>. I grant the right to share all the content under the <a class="external" href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license</a>.</li>
- <li>Last Updated Date: July 9, 2005</li>
+ <li>Autor(s): Paolo Lombardi</li>
+ <li>Dieser Artikel ist die englische Übersetzung eines Artikels, den ich auf Italienisch für <a class="external external-icon" href="http://www.yappy.it">YappY</a>. geschrieben habe. Ich gewähre das Recht, den gesamten Inhalt unter der <a class="external" href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license</a> zu teilen.</li>
+ <li>Letzte Aktualisation: 9. Juli 2005</li>
 </ul>
 
-<p><small><em>Author's note: Thanks to Wladimir Palant and Rod Whiteley for the review.</em></small></p>
+<p><small><em>Anmerkung des Autors: Danke an Wladimir Palant und Rod Whiteley für die Rezension.</em></small></p>
 </div>

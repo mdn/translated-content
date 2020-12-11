@@ -1,5 +1,5 @@
 ---
-title: Using z-index
+title: Stapeln mit z-index
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 tags:
   - CSS
@@ -9,36 +9,34 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 ---
 <div>{{cssref}}</div>
 
-<p>The first part of this article, <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>, explains how stacking is arranged by default. If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a <a href="/en-US/docs/Web/CSS/position#Types_of_positioning">positioned</a> element.</p>
+<p>Im ersten Teil dieses Artikels, <a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stapeln ohne die Eigenschaft</a> <code>z-index</code>, wird erklärt, wie die Stapelung standardmäßig angeordnet wird. Wenn Sie eine benutzerdefinierte Stapelreihenfolge erstellen möchten, können Sie die Eigenzschaft {{cssxref("z-index")}} bei einem <a href="/de/docs/Web/CSS/position#Types_of_positioning">positionierten</a> Element verwenden.</p>
 
-<p>The <code>z-index</code> property can be specified with an integer value (positive, zero, or negative), which represents the position of the element along the z-axis. If you are not familiar with the z-axis, imagine the page as a stack of layers, each one having a number. Layers are rendered in numerical order, with larger numbers above smaller numbers.</p>
+<p>Die Eigenschaft <code>z-index</code> kann mit einem ganzzahligen Wert (positiv, null oder negativ) angegeben werden, der die Position des Elements entlang der z-Achse darstellt. Wenn Sie mit der z-Achse nicht vertraut sind, stellen Sie sich die Seite als einen Stapel von Ebenen vor, von denen jede eine Nummer hat. Die Ebenen werden in numerischer Reihenfolge gerendert, wobei größere Zahlen über kleineren Zahlen stehen.</p>
 
 <ul>
- <li>bottom layer <em>(farthest from the observer)</em></li>
+ <li>unterste Schicht (am weitesten vom Beobachter entfernt)</li>
  <li>...</li>
- <li>Layer -3</li>
- <li>Layer -2</li>
- <li>Layer -1</li>
- <li>Layer 0 <em>(default rendering layer)</em></li>
- <li>Layer 1</li>
- <li>Layer 2</li>
- <li>Layer 3</li>
+ <li>Schicht -3</li>
+ <li>Schicht -2</li>
+ <li>Schicht -1</li>
+ <li>Schicht 0 <em>(Standard-Renderingschicht)</em></li>
+ <li>Schicht 1</li>
+ <li>Schicht 2</li>
+ <li>Schicht 3</li>
  <li>...</li>
- <li>top layer <em>(closest to the observer)</em></li>
+ <li>oberste Schicht <em>(am nähesten zum Beobachter liegend)</em></li>
 </ul>
 
 <div class="note">
-<p><strong>Notes:</strong></p>
-
 <ul>
- <li>When no <code>z-index</code> property is specified, elements are rendered on the default rendering layer 0 (zero).</li>
- <li>If several elements share the same <code>z-index</code> value (i.e., they are placed on the same layer), stacking rules explained in the section <a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a> apply.</li>
+ <li>Wenn keine Eigenschaft <code>z-index</code> angegeben ist, werden Elemente auf der Standard-Rendering-Ebene 0 (Null) gerendert.</li>
+ <li>Wenn mehrere Elemente denselben <code>z-index</code> Wert haben (d. h. sie werden auf derselben Ebene platziert), gelten die im Abschnitt <a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stapeln ohne z-Index-Eigenschaft</a> erläuterten Stapelungsregeln.</li>
 </ul>
 </div>
 
-<p>In the following example, the layers' stacking order is rearranged using <code>z-index</code>. The <code>z-index</code> of element #5 has no effect since it is not a positioned element.</p>
+<p>Im folgenden Beispiel wird die Stapelreihenfolge der Ebenen mithilfe des <code>z-index</code> neu angeordnet. Der <code>z-index</code> von Element Nr. 5 hat keine Auswirkung, da es sich nicht um ein positioniertes Element handelt.</p>
 
-<p>{{EmbedLiveSample("Source_code_for_the_example", 600, 400)}}</p>
+<p><img alt="Example of stacking rules modified using z-index" class="internal" src="/@api/deki/files/912/=Understanding_zindex_03.png"></p>
 
 <h2 id="Beispiel">Beispiel</h2>
 
@@ -142,12 +140,12 @@ b {
 <h2 id="Siehe_auch">Siehe auch</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>: The stacking rules that apply when <code>z-index</code> is not used.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stacking with floated blocks</a>: How floating elements are handled with stacking.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">The stacking context</a>: Notes on the stacking context.</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">Stacking context example 1</a>: 2-level HTML hierarchy, z-index on the last level</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">Stacking context example 2</a>: 2-level HTML hierarchy, z-index on all levels</li>
- <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Stacking context example 3</a>: 3-level HTML hierarchy, z-index on the second level</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stapeln ohne die Eigenschaft z-index</a>: Die Stapelungsregeln, die gelten, wenn der <code>z-index</code> nicht verwendet wird.</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stapeln mit fließenden Blöcken</a>: Wie fließende (<code>float</code>) Elemente beim Stapeln behandelt werden.</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">Der Stapelkontext:</a> Hinweise zum Stapelkontext.</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">Stapelkontext-Beispiel 1</a>: 2-stufige HTML-Hierarchie, <code>z-index</code> auf der letzten Stufe</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">Stapelkontext-Beispiel 2</a>: 2-stufige HTML-Hierarchie, <code>z-index</code> auf allen Ebenen</li>
+ <li><a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Stapelkontext-Beispiel 3</a>: 3-stufige HTML-Hierarchie, <code>z-index</code> auf der zweiten Ebene</li>
 </ul>
 
 <div class="originaldocinfo">
@@ -155,7 +153,7 @@ b {
 
 <ul>
  <li>Author(s): Paolo Lombardi</li>
- <li>This article is the English translation of an article I wrote in Italian for <a class="external" href="http://www.yappy.it">YappY</a>. I grant the right to share all the content under the <a class="external" href="http://creativecommons.org/licenses/by-sa/2.0/">Creative Commons: Attribution-Sharealike license</a>.</li>
+ <li>This article is the English translation of an article I wrote in Italian for <a class="external external-icon" href="http://www.yappy.it" rel="noopener">YappY</a>. I grant the right to share all the content under the <a class="external external-icon" href="http://creativecommons.org/licenses/by-sa/2.0/" rel="noopener">Creative Commons: Attribution-Sharealike license</a>.</li>
  <li>Last Updated Date: November 3, 2014</li>
 </ul>
 </div>

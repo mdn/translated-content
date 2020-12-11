@@ -16,7 +16,7 @@ translation_of: Web/API/ParentNode/querySelectorAll
 
 <p>The {{domxref("ParentNode")}} mixin defines the <code><strong>querySelectorAll()</strong></code> method 返回一个 {{domxref("NodeList")}} 表示元素的列表，把当前的元素作为根与指定的选择器组相匹配。</p>
 
-<p>If you need only a single result, consider the {{domxref("ParentNode.querySelector", "querySelector()")}} method instead.</p>
+<p>如果你只需要一个结果，可以考虑使用{{domxref("ParentNode.querySelector", "querySelector()")}}方法来代替。</p>
 
 <div class="note">
 <p><strong>Note:</strong> This method is implemented as {{domxref("Element.querySelectorAll()")}}, {{domxref("Document.querySelectorAll()")}}, and {{domxref("DocumentFragment.querySelectorAll()")}}</p>
@@ -24,7 +24,7 @@ translation_of: Web/API/ParentNode/querySelectorAll
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox"><var>elementList</var> = <em>parentNode</em>.querySelectorAll(<var>selectors</var>);
+<pre class="syntaxbox notranslate"><var>elementList</var> = <em>parentNode</em>.querySelectorAll(<var>selectors</var>);
 </pre>
 
 <h3 id="参数">参数</h3>
@@ -41,10 +41,10 @@ translation_of: Web/API/ParentNode/querySelectorAll
 
 <h3 id="返回值">返回值</h3>
 
-<p>A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object for each descendant node that matches at least one of the specified selectors.</p>
+<p>一个不存活的 {{domxref("NodeList")}} ，每个子节点拥有一个 {{domxref("Element")}} 对象，其中每个子节点至少与一个选择器相匹配。</p>
 
 <div class="note">
-<p><strong>Note:</strong> If the specified <code>selectors</code> include a <a href="/en-US/docs/Web/CSS/Pseudo-elements">CSS pseudo-element</a>, the returned list is always empty.</p>
+<p><strong>Note:</strong> 如果指定的 <code>selectors</code> 包含<a href="/en-US/docs/Web/CSS/Pseudo-elements">CSS pseudo-element</a>，那么返回的列表始终为空。</p>
 </div>
 
 <h3 id="Exceptions">Exceptions</h3>
@@ -58,24 +58,24 @@ translation_of: Web/API/ParentNode/querySelectorAll
 
 <p>To obtain a {{domxref("NodeList")}} of all of the {{HTMLElement("p")}} elements in the document:</p>
 
-<pre class="brush: js">var matches = document.querySelectorAll("p");</pre>
+<pre class="brush: js notranslate">var matches = document.querySelectorAll("p");</pre>
 
 <p>这个例子返回了所有 class 为 "note" 或者 "alert" 的 div 元素的一个列表:</p>
 
-<pre class="brush: js">var matches = document.querySelectorAll("div.note, div.alert");</pre>
+<pre class="brush: js notranslate">var matches = document.querySelectorAll("div.note, div.alert");</pre>
 
 <p>Here, we get a list of <code>&lt;p&gt;</code> elements whose immediate parent element is a {{domxref("div")}} with the class <code>"highlighted"</code> and which are located inside a container whose ID is <code>"test"</code>.</p>
 
-<pre class="brush: js">var container = document.querySelector("#test");
+<pre class="brush: js notranslate">var container = document.querySelector("#test");
 var matches = container.querySelectorAll("div.highlighted &gt; p");</pre>
 
 <p>This example uses an <a href="/en-US/docs/Web/CSS/Attribute_selectors">attribute selector</a> to return a list of the {{domxref("iframe")}} elements in the document that contain an attribute named <code>"data-src"</code>:</p>
 
-<pre class="brush: js">var matches = document.querySelectorAll("iframe[data-src]");</pre>
+<pre class="brush: js notranslate">var matches = document.querySelectorAll("iframe[data-src]");</pre>
 
 <p>Here, an attribute selector is used to return a list of the list items contained within a list whose ID is <code>"userlist"</code> which have a <code>"data-active"</code> attribute whose value is <code>"1"</code>:</p>
 
-<pre class="brush: js">var container = document.querySelector("#userlist");
+<pre class="brush: js notranslate">var container = document.querySelector("#userlist");
 var matches = container.querySelectorAll("li[data-active=1]");</pre>
 
 <h2 id="User_notes">User notes</h2>
@@ -86,7 +86,7 @@ var matches = container.querySelectorAll("li[data-active=1]");</pre>
 
 <p>Consider this HTML, with its three nested {{HTMLElement("div")}} blocks.</p>
 
-<pre class="brush: html">&lt;div class="outer"&gt;
+<pre class="brush: html notranslate">&lt;div class="outer"&gt;
   &lt;div class="select"&gt;
     &lt;div class="inner"&gt;
     &lt;/div&gt;
@@ -95,7 +95,7 @@ var matches = container.querySelectorAll("li[data-active=1]");</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js">var select = document.querySelector('.select');
+<pre class="brush: js notranslate">var select = document.querySelector('.select');
 var inner = select.querySelectorAll('.outer .inner');
 inner.length; // 1, not 0!
 </pre>
@@ -104,7 +104,7 @@ inner.length; // 1, not 0!
 
 <p>The {{cssxref(":scope")}} pseudo-class restores the expected behavior, only matching selectors on descendants of the base element:</p>
 
-<pre class="brush: js">var select = document.querySelector('.select');
+<pre class="brush: js notranslate">var select = document.querySelector('.select');
 var inner = select.querySelectorAll(':scope .outer .inner');
 inner.length; // 0</pre>
 

@@ -4546,6 +4546,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Int8Array_temp	/ja/docs/Web/JavaScript/Reference/Global_Objects/Int8Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/InternalError/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/InternalError
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat

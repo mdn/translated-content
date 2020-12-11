@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>sort()</strong></code> メソッドは、配列の要素を <em><a href="https://ja.wikipedia.org/wiki/In-place アルゴリズム">in place</a></em> でソートします。既定のソート順は昇順で、要素を文字列に変換してから、UTF-16 コード単位の値の並びとして比較します。</p>
+<p><code><strong>sort()</strong></code> メソッドは、配列の要素を <em><a href="https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">in place</a></em> でソートします。既定のソート順は昇順で、要素を文字列に変換してから、UTF-16 コード単位の値の並びとして比較します。</p>
 
 <p>このソートで消費される CPU時間やメモリースペースは実装に依存するので、ここで言及することは出来ません。</p>
 
@@ -28,21 +28,20 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 <h3 id="Parameters" name="Parameters">引数</h3>
 
 <dl>
- <dt><code>compareFunction</code> {{optional_inline}}</dt>
- <dd>ソート順を定義する関数を指定します。省略された場合、配列の各要素は文字列に変換され、各文字の <a href="/ja/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode</a> のコードポイント順に従ってソートされます。</dd>
- <dl>
-  <dt><code>firstEl</code></dt>
-  <dd>比較対象の一つ目の要素を指定します。</dd>
-  <dt><code>secondEl</code></dt>
-  <dd>比較対象の二つ目の要素を指定します。</dd>
- </dl>
-
+ <dt><code>firstEl</code></dt>
+ <dd>比較対象の一つ目の要素を指定します。</dd>
+ <dt><code>secondEl</code></dt>
+ <dd>比較対象の二つ目の要素を指定します。</dd>
 </dl>
 
+<dl>
+ <dt><code>compareFunction</code> {{optional_inline}}</dt>
+ <dd>ソート順を定義する関数を指定します。省略された場合、配列の各要素は文字列に変換され、各文字の <a href="/ja/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode</a> のコードポイント順に従ってソートされます。</dd>
+</dl>
 
 <h3 id="Return_value" name="Return_value">返値</h3>
 
-<p>ソートされた結果の配列。ソートは対象配列上で <em><a href="https://en.wikipedia.org/wiki/In-place_algorithm">in place</a></em> に行われることに注意して下さい。コピーされた別の配列が準備されることはありません。</p>
+<p>ソートされた結果の配列。ソートは対象配列上で <em><a href="https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">in place</a></em> に行われることに注意して下さい。コピーされた別の配列が準備されることはありません。</p>
 
 <h2 id="Description" name="Description">解説</h2>
 

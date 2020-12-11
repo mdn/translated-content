@@ -9,120 +9,77 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
 ---
-<div>{{JSRef("Global_Objects", "DateTimeFormat", "Intl,Collator,NumberFormat")}}</div>
+<div>{{JSRef}}</div>
 
-<h2 id="概要">概要</h2>
+<p><strong><code>Intl.DateTimeFormat.supportedLocalesOf()</code></strong> メソッドは、ランタイムの既定のロケールで代替する必要なく日時の書式で対応されているものを含む配列を返します。</p>
 
-<p>ランタイムのデフォルトローケルに戻る必要なしでフォーマットしている日時でサポートしている提供されているローケルを含んでいる配列を返します。</p>
+<div>{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-supportedlocalesof.html","shorter")}}</div>
+
+<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox"><code>Intl.DateTimeFormat.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</code></pre>
+<pre class="syntaxbox notranslate">Intl.DateTimeFormat.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</pre>
 
 <h3 id="Parameters" name="Parameters">引数</h3>
 
 <dl>
- <dt><code>locales</code></dt>
- <dd>BCP47言語タグの文字列、そのような文字列の配列。 <code>locales</code>引数の一般的な形式に対して、{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}を確かめて下さい。</dd>
- <dt><code>options</code></dt>
+ <dt><code><var>locales</var></code></dt>
+ <dd>BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 <code>locales</code> 引数の一般的な形式については、 {{jsxref("Intl", "Intl のページ", "#Locale_identification_and_negotiation", 1)}}を参照してください。</dd>
+ <dt><code><var>options</var></code></dt>
  <dd>
- <p>オプション。次のプロパティを持つオブジェクト:</p>
+ <p>省略可能です。以下のプロパティを持つことがあるオブジェクトです。</p>
 
  <dl>
   <dt><code>localeMatcher</code></dt>
-  <dd>使っているローケルマッチングアルゴリズム。利用可能な値は<code>"lookup"</code>、<code>"best fit"</code>。デフォルトでは <code>"best fit"</code>。このオプションについての情報のために、{{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}を確かめて下さい。</dd>
+  <dd>使用するロケールの一致アルゴリズムです。指定可能な値は <code>lookup</code> および <code>best fit</code> で、既定値は <code>best fit</code> です。このオプションの詳細は、 {{jsxref("Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。</dd>
  </dl>
  </dd>
 </dl>
 
-<h2 id="説明">説明</h2>
+<h3 id="Return_value" name="Return_value">返値</h3>
 
-<p><code>locales</code>で提供されている言語タグのサブセットを持つ配列を返します。返される言語タグは、ランタイムがローケルマッチングアルゴリズムを使って考慮してフォーマットしている日時でのローケルをサポートしていてるので、デフォルトローケルに戻る必要はありません。</p>
+<p>指定したロケールタグのサブセットを表す文字列の配列で、ランタイムの既定のロケールで代替する必要なく日時の書式で対応されているものを含みます。</p>
 
-<h2 id="例">例</h2>
+<h2 id="Description" name="Description">解説</h2>
 
-<h3 id="例_supportedLocalesOfを使う">例: <code>supportedLocalesOf</code>を使う</h3>
+<p><code>locales</code> で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが日時のロケールに対応しているもので、使用しているロケール一致アルゴリズムで一致しているとみなされているものです。</p>
 
-<p>日時のフォーマットで、バリ語ではなく、インドネシア語とドイツ語をサポートしているランタイムを仮定すると、<code>supportedLocalesOf</code>はインドネシア語とドイツ語の言語タグを返します。ピンインは日時のフォーマットには適切ではなくインドネシア語では使われません。インドネシアの特定のドイツ語はサポートされそうにもありません。 <code>"lookup"</code>アルゴリズムの指定に注意して下さい。<code>"best fit"</code>はインドネシア語はバリ語に対して、十分にふさわしいと決定するかもしれません。というのも、 ほとんどのバリの人はインドネシア語も理解するからです。それゆえバリ言語タグも同様に返します。</p>
+<h2 id="Examples" name="Examples">例</h2>
 
-<pre class="brush: js">var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
+<h3 id="Using_supportedLocalesOf" name="Using_supportedLocalesOf">supportedLocalesOf() の使用</h3>
+
+<p>日時の書式でインドネシア語とドイツ語に対応しており、バリ語に対応していないランタイムを想定すると、 <code>supportedLocalesOf</code> はインドネシア語とドイツ語の言語タグを変更せずに返しますが、 pinyin の照合は日時の書式には関係なく、インドネシア語でも使用されません。ここでの <code>lookup</code> アルゴリズムの仕様に注意してください — バリ語話者のほとんどはインドネシア語も理解しているので、 <code>best fit</code> のマッチャーはインドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。</p>
+
+<pre class="brush: js notranslate">var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 var options = { localeMatcher: 'lookup' };
 console.log(Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(', '));
 // → "id-u-co-pinyin, de-ID"
 </pre>
 
-<h2 id="仕様">仕様</h2>
+<h2 id="Specifications" name="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
+   <th scope="col">仕様書</th>
   </tr>
   <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-12.2.2', 'Intl.DateTimeFormat.supportedLocalesOf')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Initial definition.</td>
+   <td>{{SpecName('ES Int Draft', '#sec-intl.datetimeformat.supportedlocalesof', 'Intl.DateTimeFormat.supportedLocalesOf')}}</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<div>{{CompatibilityTable}}</div>
+<div>
+<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>機能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本サポート</td>
-   <td>{{CompatChrome("24")}}</td>
-   <td>{{CompatGeckoDesktop("29")}}</td>
-   <td>{{CompatIE("11")}}</td>
-   <td>{{CompatOpera("15")}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Compat("javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf")}}</p>
 </div>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>機能</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本サポート</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome("26")}}</td>
-   <td>{{CompatNo}}<br>
-    {{bug("864843")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="関連情報">関連情報</h2>
+<h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
- <li>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</li>
+ <li>{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}</li>
 </ul>

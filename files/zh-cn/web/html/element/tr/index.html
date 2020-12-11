@@ -3,7 +3,7 @@ title: <tr>
 slug: Web/HTML/Element/tr
 translation_of: Web/HTML/Element/tr
 ---
-<p><strong>HTML <code>&lt;tr&gt;</code> 元素</strong>定义表格中的行。 Those can be a mix of {{HTMLElement("td")}} and {{HTMLElement("th")}} elements.</p>
+<p><strong>HTML <code>&lt;tr&gt;</code> 元素</strong>定义表格中的行。 同一行可同时出现{{HTMLElement("td")}} 和{{HTMLElement("th")}} 元素.</p>
 
 <table class="properties">
  <tbody>
@@ -40,12 +40,12 @@ translation_of: Web/HTML/Element/tr
 
 <dl>
  <dt>{{htmlattrdef("align")}} {{deprecatedGeneric("inline","html4.01")}}, {{obsoleteGeneric("inline","html5")}}</dt>
- <dd>This enumerated attribute specifies how horizontal alignment of each cell content will be handled. Possible values are:
+ <dd>该枚举属性指定每个单元格中内容的水平对齐方式，可使用的属性值如下:
  <ul>
-  <li><code>left</code>, aligning the content to the left of the cells</li>
-  <li><code>center</code>, centering the content in the cells</li>
-  <li><code>right</code>, aligning the content to the right of the cells</li>
-  <li><code>justify</code>, widening the spaces in the textual content so that the content is justified in the cells</li>
+  <li><code>left</code>, 内容在单元格中左对齐</li>
+  <li><code>center</code>, 内容在单元格中居中</li>
+  <li><code>right</code>, 内容在单元格中右对齐</li>
+  <li><code>justify</code>, 增加文本内容之间的空白以伸展这行文本，使得该单元格中的多行文本具有相同的长度。</li>
   <li><code>char</code>, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "tr")}} and {{htmlattrxref("charoff", "tr")}} attributes {{unimplemented_inline("2212")}}</li>
  </ul>
 
@@ -112,12 +112,12 @@ translation_of: Web/HTML/Element/tr
   <tr>
    <td>{{SpecName('HTML WHATWG','tables.html#the-tr-element','tr element')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C','tabular-data.html#the-tr-element','tr element')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
