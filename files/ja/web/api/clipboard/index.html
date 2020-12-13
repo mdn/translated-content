@@ -59,7 +59,7 @@ translation_of: Web/API/Clipboard
 
 <p>例えば、Firefox はまだ <code>"clipboard-read"</code> と <code>"clipboard-write"</code> パーミッションをサポートしていないため、これとは異なる方法でクリップボードの内容にアクセスし変更するメソッドへのアクセスを制限します。</p>
 
-<p>WebExtension の場合、clipboardRead や clipboardWrite パーミッションを要求することで clipboard.readText() や clipboard.writeText() を使うことができます。ウェブサイトに適用されたコンテンツスクリプトは、Clipboard オブジェクトにアクセスすることはできません。<a href="https://blog.mozilla.org/addons/2018/08/31/extensions-in-firefox-63/">Extensions in Firefox 63</a> を参照してください。</p>
+<p>WebExtension の場合、clipboardRead や clipboardWrite パーミッションを要求することで clipboard.readText() や clipboard.writeText() を使うことができます。HTTPサイトに適用されたコンテンツスクリプトは、Clipboard オブジェクトにアクセスすることはできません。<a href="https://blog.mozilla.org/addons/2018/08/31/extensions-in-firefox-63/">Extensions in Firefox 63</a> を参照してください。</p>
 
 <p>また、{{domxref("Clipboard.read", "read()")}} と {{domxref("Clipboard.write", "write()")}} はデフォルトで無効にされており、これらを有効にするには設定を変更する必要があります。これらを使う前にブラウザー実装状況の表を確認してください。</p>
 

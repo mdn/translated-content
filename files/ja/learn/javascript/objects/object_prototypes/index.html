@@ -41,11 +41,11 @@ translation_of: Learn/JavaScript/Objects/Object_prototypes
 
 <h2 id="プロトタイプベースの言語とは">プロトタイプベースの言語とは?</h2>
 
-<p>JavaScript はしばしば<strong>プロトタイプベースの言語</strong>として記述されます - 継承を提供するために、オブジェクトはメソッドやプロパティを継承するテンプレートオブジェクトとして機能する <strong><code>prototype</code> オブジェクト</strong>を持つことができます。</p>
+<p>JavaScript はしばしば<strong>プロトタイプベースの言語</strong>として記述されます - 継承機能を提供するため、オブジェクトは <strong><code>prototype</code></strong> <strong>オブジェクト </strong>を持つことができます。これはテンプレートオブジェクトとして機能し、そこからメソッドやプロパティを継承します。</p>
 
-<p>オブジェクトのプロトタイプオブジェクトは、メソッドやプロパティを継承するプロトタイプオブジェクトを持つことができます。これはしばしば<strong>プロトタイプチェーン</strong>と呼ばれ、異なるオブジェクトが他のオブジェクトに定義されたプロパティやメソッドを持つ理由を説明しています。</p>
+<p>オブジェクトのプロトタイプオブジェクトもまたメソッドやプロパティを継承するプロトタイプオブジェクトを持つことができます。これはしばしば<strong>プロトタイプチェーン</strong>と呼ばれ、異なるオブジェクトが他のオブジェクトに定義されたプロパティやメソッドを持つ理由を説明しています。</p>
 
-<p>JavaScript では、オブジェクトのインスタンスとプロトタイプ (コンストラクタの <code>prototype</code> プロパティから派生した <code>__proto__</code> プロパティ) の間にリンクが張られており、プロパティとメソッドはプロトタイプの連鎖を辿って見つけられます。</p>
+<p>JavaScript では、あるオブジェクトのインスタンスとそのプロトタイプ (コンストラクタの <code>prototype</code> プロパティから派生した <code>__proto__</code> プロパティ) の間にリンクが張られており、そのプロパティとメソッドはプロトタイプの連鎖を辿って発見されます。</p>
 
 <div class="note">
 <p><strong>Note:</strong> <strong>オブジェクトの <code>prototype</code></strong> (<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(<var>obj</var>)</a></code> または非推奨の <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code> プロパティで取得可能) と<strong>コンストラクタ関数の<code>prototype</code> プロパティ</strong>の違いを理解することが重要です。</p>

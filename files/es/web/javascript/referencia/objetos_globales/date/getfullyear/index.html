@@ -1,121 +1,64 @@
 ---
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Referencia/Objetos_globales/Date/getFullYear
+tags:
+  - Fecha
+  - JavaScript
+  - Prototipo
+  - Referencia
+  - metodo
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
 ---
 <div>{{JSRef}}</div>
 
-<p>El método <strong><code>getFullYear()</code></strong> devuelve el año del objeto de fecha especificado acorde al tiempo local.</p>
+<p>El método <strong><code>getFullYear()</code></strong> devuelve el año de la fecha indicada acorde a la hora local.</p>
 
-<p>Es prefererible usar este método en sustitución del método <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getYear">getYear()</a>.</p>
+<p>Usa este método en lugar del método {{jsxref("Date.prototype.getYear()", "getYear()")}}.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/date-getfullyear.html","shorter")}}</div>
 
 <h2 id="Sintaxis">Sintaxis</h2>
 
-<pre class="syntaxbox"><code><var>dateObj</var>.getFullYear()</code></pre>
+<pre class="syntaxbox notranslate"><var>dateObj</var>.getFullYear()</pre>
 
-<h3 id="Parámetros">Parámetros</h3>
+<h3 id="Valor_devuelto">Valor devuelto</h3>
 
-<p>Ninguno.</p>
+<p>Un número correspondiente al año de la fecha indicada, según la hora local.</p>
 
-<h3 id="Devuelve">Devuelve</h3>
+<h2 id="Descripción">Descripción</h2>
 
-<p>El valor devuelto por <code>getFullYear()</code> es un número absolute. Para fechas entre los años 1000 y 9999, <code>getFullYear()</code> devuelve un número de cuatro cifras, por ejemplo, 1995. Use esta función para obtener un año que cumpla con el efecto del año 2000.</p>
+<p>El valor devuelto por <code>getFullYear()</code> es un número absoluto. Para fechas entre los años 1000 y 9999, <code>getFullYear()</code> devuelve un número de cuatro cifras, por ejemplo, 1995. Utiliza esta función para obtener un año que cumpla con los años posteriores al 2000.</p>
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Usando_getFullYear">Usando <code>getFullYear()</code></h3>
+<h3 id="Utilizando_getFullYear">Utilizando getFullYear()</h3>
 
-<p>El siguiente ejemplo asigna un valor de cuatro digitos con el año actual a la variable <code>year</code>.</p>
+<p>El siguiente ejemplo asigna el valor de cuatro dígitos del año actual a la variable <code>year</code>.</p>
 
-<pre class="brush: js">var today = new Date();
+<pre class="brush: js notranslate">var today = new Date();
 var year = today.getFullYear();
 </pre>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
 <table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+  </tr>
+ </thead>
  <tbody>
-  <tr>
-   <th scope="col">Especificaciones</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definición inicial. Implementado en JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.10', 'Date.prototype.getFullYear')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getfullyear', 'Date.prototype.getFullYear')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-date.prototype.getfullyear', 'Date.prototype.getFullYear')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+<h2 id="Compatibilidad_con_navegadores">Compatibilidad con navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
+<p>{{Compat("javascript.builtins.Date.getFullYear")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome para Android</th>
-   <th>Firefox para móvil (Gecko)</th>
-   <th>IE para móvil</th>
-   <th>Opera para móvil</th>
-   <th>Safari para móvil</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="Vea_también">Vea también</h2>
+<h2 id="Ver_también">Ver también</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>

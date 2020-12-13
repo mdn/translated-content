@@ -1,6 +1,13 @@
 ---
 title: Twoje pierwsze rozszerzenie
 slug: Mozilla/Add-ons/WebExtensions/Twój_pierwszy_WebExtension
+tags:
+  - Add-ons
+  - Dodatki
+  - Extensions
+  - Przewodnik
+  - WebExtensions
+  - Wtyczki
 translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 <div>{{AddonSidebar}}</div>
@@ -15,14 +22,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 
 <p>Stwórz nowy folder i przejdź do niego:</p>
 
-<pre class="brush: bash">mkdir borderify
+<pre class="brush: bash notranslate">mkdir borderify
 cd borderify</pre>
 
 <h3 id="manifest.json">manifest.json</h3>
 
 <p>Teraz stwórz nowy plik o nazwie "manifest.json" bezpośrednio w katalogu "borderify". Wprowadź do niego poniższy kod:</p>
 
-<pre class="brush: json">{
+<pre class="brush: json notranslate">{
 
   "manifest_version": 2,
   "name": "Borderify",
@@ -59,7 +66,7 @@ cd borderify</pre>
 <div class="warning">
 <p><a href="/en-US/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID">W niektórych sytuacjach musisz nadać ID swojemu rozszerzeniu</a>. Jeśli potrzebujesz nadać rozszerzeniu ID, dołącz klucz <code><a href="/en-US/Add-ons/WebExtensions/manifest.json/applications">applications</a></code> do <code>manifest.json</code> i przypisz mu pole <code>id</code>:</p>
 
-<pre class="brush: json">"applications": {
+<pre class="brush: json notranslate">"applications": {
   "gecko": {
     "id": "borderify@przyklad.pl"
   }
@@ -75,7 +82,7 @@ cd borderify</pre>
 <p>Jeśli zdecydujesz się dodać własną ikonę, to powinna być w formacie 48x48 pikseli. Możesz także dodać ikonę o rozmiarze 96x96 pikseli dla ekranów o wysokiej rozdzielczości i jeśli dodasz ją, to powinna ona zostać przypisana jako wartość pola 96 obiektu <code>icons</code> <br>
  w pliku manifest.json:</p>
 
-<pre class="brush: json">"icons": {
+<pre class="brush: json notranslate">"icons": {
   "48": "icons/border-48.png",
   "96": "icons/border-96.png"
 }</pre>
@@ -90,7 +97,7 @@ cd borderify</pre>
 
 <p>Ostatecznie stwórz plik o nazwie "borderify.js" bezpośrednio w katalogu "borderify". Wpisz do niego poniższy kod:</p>
 
-<pre class="brush: js">document.body.style.border = <code class="language-js"><span class="string token">"5px solid red"</span></code>;</pre>
+<pre class="brush: js notranslate">document.body.style.border = <code class="language-js"><span class="string token">"5px solid red"</span></code>;</pre>
 
 <p>Ten skrypt b<span class="st">ę</span>dzie załadowany na stronach spełniających wzór określony w kluczu <code>content_scripts</code> w pliku manifest.json. Skrypt ma bezpośredni dostęp do dokumentu, podobnie jak skrypty wczytane przez stronę.</p>
 
@@ -102,7 +109,7 @@ cd borderify</pre>
 
 <p>Najpierw dokładnie sprawdź, czy odpowiedne pliki są w właściwych miejsacach:</p>
 
-<pre>borderify/
+<pre class="notranslate">borderify/
     icons/
         border-48.png
     borderify.js
@@ -146,7 +153,7 @@ cd borderify</pre>
 <p>Teraz gdy ty masz <span class="short_text" id="result_box" lang="pl"><span>pomysł</span></span> na temat procesu tworzenia rozszerzeń (WebExtension) dla Firefoxa, to spróbuj:</p>
 
 <ul>
- <li><a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">przeczytać więcej na temat anatomi rozszerzeń</a></li>
+ <li><a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">przeczytać więcej na temat anatomii rozszerzeń</a></li>
  <li><a href="/en-US/Add-ons/WebExtensions/Your_second_WebExtension">napisać bardziej rozbudowane rozszerzenie</a></li>
  <li><a href="/en-US/Add-ons/WebExtensions/API">przeczytać o JavaScript API dostępnym dla rozszerzeń.</a></li>
 </ul>
