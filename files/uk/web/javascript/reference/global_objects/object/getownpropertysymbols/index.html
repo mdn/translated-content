@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySym
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="brush: js"><code>Object.getOwnPropertySymbols(<var>obj</var>)</code></pre>
+<pre class="brush: js notranslate"><code>Object.getOwnPropertySymbols(<var>obj</var>)</code></pre>
 
 <h3 id="Параметри">Параметри</h3>
 
@@ -39,7 +39,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySym
 
 <h2 id="Приклади">Приклади</h2>
 
-<pre class="brush: js">var obj = {};
+<h3 id="Використання_getOwnPropertySymbols">Використання getOwnPropertySymbols</h3>
+
+<pre class="brush: js notranslate">var obj = {};
 var a = Symbol('a');
 var b = Symbol.for('b');
 
@@ -59,18 +61,9 @@ console.log(objectSymbols[0]);     // Symbol(a)
  <tbody>
   <tr>
    <th scope="col">Специфікація</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Коментар</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Початкове визначення.</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
   </tr>
  </tbody>
 </table>

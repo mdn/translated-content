@@ -21,16 +21,16 @@ translation_of: Web/CSS/gradient
 <p>颜色值沿着一条隐式的直线逐渐过渡。由{{cssxref("linear-gradient", "linear-gradient()")}}产生。</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;div class="linear-gradient"&gt;Linear gradient&lt;/div&gt;
+<pre class="brush: html notranslate">&lt;div class="linear-gradient"&gt;Linear gradient&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css notranslate">div {
   width: 240px;
   height: 80px;
 }</pre>
 </div>
 
-<pre class="brush: css">.linear-gradient {
+<pre class="brush: css notranslate">.linear-gradient {
   background: linear-gradient(to right,
       red, orange, yellow, green, blue, indigo, violet);
 }</pre>
@@ -44,16 +44,16 @@ translation_of: Web/CSS/gradient
 <p>颜色值由一个中心点（原点）向外扩散并逐渐过渡到其他颜色值。由{{cssxref("radial-gradient", "radial-gradient()")}}函数产生。</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;div class="radial-gradient"&gt;Radial gradient&lt;/div&gt;
+<pre class="brush: html notranslate">&lt;div class="radial-gradient"&gt;Radial gradient&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css notranslate">div {
   width: 240px;
   height: 80px;
 }</pre>
 </div>
 
-<pre class="brush: css">.radial-gradient {
+<pre class="brush: css notranslate">.radial-gradient {
   background: radial-gradient(red, yellow, rgb(30, 144, 255));
 }
 </pre>
@@ -67,18 +67,18 @@ translation_of: Web/CSS/gradient
 <p>重复多次渐变图案直到足够填满指定元素。由 {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}和{{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}函数产生。</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;div class="linear-repeat"&gt;Repeating linear gradient&lt;/div&gt;
+<pre class="brush: html notranslate">&lt;div class="linear-repeat"&gt;Repeating linear gradient&lt;/div&gt;
 &lt;br&gt;
 &lt;div class="radial-repeat"&gt;Repeating radial gradient&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css notranslate">div {
   width: 240px;
   height: 80px;
 }</pre>
 </div>
 
-<pre class="brush: css">.linear-repeat {
+<pre class="brush: css notranslate">.linear-repeat {
   background: repeating-linear-gradient(to top left,
       lightpink, lightpink 5px, white 5px, white 10px);
 }
@@ -115,7 +115,11 @@ translation_of: Web/CSS/gradient
 
 <h2 id="浏览器兼容性"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 40px;"><strong>浏览器兼容性</strong></span></font></h2>
 
-<p>每一种渐变都有不同的兼容性，敬请查阅特定渐变的相关文献与资料以获取更多信息。</p>
+<div class="hidden">每一种渐变都有不同的兼容性，敬请查阅特定渐变的相关文献与资料以获取更多信息。</div>
+
+<div class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("css.types.image.gradient")}}</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -123,5 +127,3 @@ translation_of: Web/CSS/gradient
  <li><a href="/en-US/docs/CSS/Using_CSS_gradients" title="Using gradients">Using CSS gradients</a>,</li>
  <li>渐变方程：{{cssxref("&lt;gradient&gt;")}}, {{cssxref("linear-gradient", "linear-gradient()")}}, {{cssxref("radial-gradient", "radial-gradient()")}}, {{cssxref("repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}};</li>
 </ul>
-
-<p> </p>

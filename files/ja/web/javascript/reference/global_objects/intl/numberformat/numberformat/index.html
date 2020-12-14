@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/Number
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Intl.NumberFormat()</code></strong> コンストラクターは、言語に依存した数値の書式を有効にするオブジェクトを生成します。</p>
+<p><strong><code>Intl.NumberFormat()</code></strong> コンストラクターは、言語に依存した数値の整形ができるオブジェクトを生成します。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}</div>
 
@@ -60,30 +60,30 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/Number
   <dt><code>notation</code></dt>
   <dd>数値を表示するための書式です。既定値は "<code>standard</code>" です。
   <ul>
-   <li>"<code>standard</code>" 通常の数値の書式です。</li>
-   <li>"<code>scientific</code>" return the order-of-magnitude for formatted number.</li>
-   <li>"<code>engineering</code>" return the exponent of ten when divisible by three</li>
-   <li>"<code>compact</code>" string representing exponent, defaults is using the "short" form.</li>
+   <li>"<code>standard</code>" は、通常の数値の書式です。</li>
+   <li>"<code>scientific</code>" は、整形された数値の次数をを返します。</li>
+   <li>"<code>engineering</code>" は、3で割ることができる場合に10のべき乗を返します。</li>
+   <li>"<code>compact</code>" は、指数表記を表す文字列で、既定値は "short" の形式を使用したものです。</li>
   </ul>
   </dd>
   <dt><code>numberingSystem</code></dt>
-  <dd>Numbering System. Possible values include: "<code>arab</code>", "<code>arabext</code>", " <code>bali</code>", "<code>beng</code>", "<code>deva</code>", "<code>fullwide</code>", " <code>gujr</code>", "<code>guru</code>", "<code>hanidec</code>", "<code>khmr</code>", " <code>knda</code>", "<code>laoo</code>", "<code>latn</code>", "<code>limb</code>", "<code>mlym</code>", " <code>mong</code>", "<code>mymr</code>", "<code>orya</code>", "<code>tamldec</code>", " <code>telu</code>", "<code>thai</code>", "<code>tibt</code>".</dd>
+  <dd>数値体系です。使用可能な値には、 "<code>arab</code>", "<code>arabext</code>", " <code>bali</code>", "<code>beng</code>", "<code>deva</code>", "<code>fullwide</code>", " <code>gujr</code>", "<code>guru</code>", "<code>hanidec</code>", "<code>khmr</code>", " <code>knda</code>", "<code>laoo</code>", "<code>latn</code>", "<code>limb</code>", "<code>mlym</code>", " <code>mong</code>", "<code>mymr</code>", "<code>orya</code>", "<code>tamldec</code>", " <code>telu</code>", "<code>thai</code>", "<code>tibt</code>" があります。</dd>
   <dt><code>signDisplay</code></dt>
-  <dd>When to display the sign for the number; defaults to "<code>auto</code>"
+  <dd>数値の符号を表示するときです。既定値は "<code>auto</code>" です。
   <ul>
-   <li>"<code>auto</code>" sign display for negative numbers only</li>
-   <li>"<code>never</code>" never display sign</li>
-   <li>"<code>always</code>" always display sign</li>
-   <li>"<code>exceptZero</code>" sign display for positive and negative numbers, but not zero</li>
+   <li>"<code>auto</code>" は、負の数のみ符号を表示します。</li>
+   <li>"<code>never</code>" は、符号を表示しません。</li>
+   <li>"<code>always</code>" は、常に符号を表示します。</li>
+   <li>"<code>exceptZero</code>" は正の数と負の数には符号を表示しますが、ゼロには表示しません。</li>
   </ul>
   </dd>
   <dt><code>style</code></dt>
-  <dd>The formatting style to use , the default is "<code>decimal</code>".
+  <dd>使用する整形スタイルで、既定値は "<code>decimal</code>" です。
   <ul>
-   <li>"<code>decimal</code>" for plain number formatting.</li>
-   <li>"<code>currency</code>" for currency formatting.</li>
-   <li>"<code>percent</code>" for percent formatting</li>
-   <li>"<code>unit</code>" for unit formatting</li>
+   <li>"<code>decimal</code>" は、ふつうの数値の整形に使用します。</li>
+   <li>"<code>currency</code>" は、通貨の整形に使用します。</li>
+   <li>"<code>percent</code>" は、パーセントの整形に使用します。</li>
+   <li>"<code>unit</code>" は単位の整形に使用します。</li>
   </ul>
   </dd>
   <dt><code>unit</code></dt>
@@ -120,16 +120,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/Number
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<h3 id="Basic_usage">Basic usage</h3>
+<h3 id="Basic_usage" name="Basic_usage">基本的な使用</h3>
 
-<p>In basic use without specifying a locale, a formatted string in the default locale and with default options is returned.</p>
+<p>特定のロケールなしで使用すると、既定のロケール、既定のオプションで整形された文字列が返されます。</p>
 
 <pre class="brush: js notranslate">let amount = 3500;
 
 console.log(new Intl.NumberFormat().format(amount));
 // → '3,500' if in US English locale</pre>
 
-<h3 id="Decimal_and_percent_formatting">Decimal and percent formatting</h3>
+<h3 id="Decimal_and_percent_formatting" name="Decimal_and_percent_formatting">十進数とパーセントの整形</h3>
 
 <pre class="brush: js notranslate">let amount = 3500;
 
@@ -139,9 +139,9 @@ new Intl.NumberFormat('en-US', {style: 'percent'}).format(amount);
 // → '350,000%'
 </pre>
 
-<h3 id="Unit_formatting">Unit formatting</h3>
+<h3 id="Unit_formatting" name="Unit_formatting">単位の整形</h3>
 
-<p>If the <code>style</code> is <code>'unit'</code>, a <code>unit</code> property must be provided. Optionally, <code>unitDisplay</code> controls the unit formatting.</p>
+<p><code>style</code> が <code>'unit'</code> である場合、 <code>unit</code> プロパティを提供する必要があります。オプションで、 <code>unitDisplay</code> が単位の整形を制御します。</p>
 
 <pre class="brush: js notranslate">let amount = 3500;
 
@@ -152,9 +152,9 @@ new Intl.NumberFormat('en-US', {style: 'unit', unit: 'liter', unitDisplay: 'long
 // → '3,500 liters'
 </pre>
 
-<h3 id="Currency_formatting">Currency formatting</h3>
+<h3 id="Currency_formatting" name="Currency_formatting">通貨の整形</h3>
 
-<p>If the <code>style</code> is <code>'currency'</code>, a <code>currency</code> property must be provided. Optionally, <code>currencyDisplay</code> and <code>currencySign</code> control the unit formatting.</p>
+<p><code>style</code> が <code>'currency'</code> であった場合、 <code>currency</code> プロパティを提供する必要があります。オプションで、 <code>currencyDisplay</code> および <code>currencySign</code> が単位の整形を制御します。</p>
 
 <pre class="brush: js notranslate">let amount = -3500;
 new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'}).format(amount);
@@ -175,9 +175,9 @@ new Intl.NumberFormat('bn', {
 // →  '($3,500.00)'
 </pre>
 
-<h3 id="Scientific_engineering_or_compact_notations">Scientific, engineering or compact notations</h3>
+<h3 id="Scientific_engineering_or_compact_notations" name="Scientific_engineering_or_compact_notations">科学、工学、短縮表記</h3>
 
-<p>Scientific and compact notation are represented by the <code>notation</code> option and can be formatted like this:</p>
+<p>科学の短縮表記は <code>notation</code> オプションで表すことができ、以下のようになります。</p>
 
 <pre class="brush: js notranslate">new Intl.NumberFormat('en-US', { notation: "scientific" }).format(987654321);
 // → 9.877E8
@@ -206,9 +206,9 @@ new Intl.NumberFormat('en-GB', {
 }).format(987654321);
 // → 988M</pre>
 
-<h3 id="Displaying_signs">Displaying signs</h3>
+<h3 id="Displaying_signs" name="Displaying_signs">符号の表示</h3>
 
-<p>Display a sign for positive and negative numbers, but not zero:</p>
+<p>正の数と負の数に符号を表示し、ゼロには表示しない場合は次のようにします。</p>
 
 <pre class="brush: js notranslate">new Intl.NumberFormat("en-US", {
     style: "percent",
@@ -216,7 +216,7 @@ new Intl.NumberFormat('en-GB', {
 }).format(0.55);
 // → '+55%'</pre>
 
-<p>Note that when the currency sign is "accounting", parentheses might be used instead of a minus sign:</p>
+<p>なお、通貨の符号が "accounting" である場合、負号の代わりに括弧が使用されることがあります。</p>
 
 <pre class="brush: js notranslate">new Intl.NumberFormat('bn', {
   style: 'currency',

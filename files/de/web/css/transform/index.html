@@ -2,122 +2,169 @@
 title: transform
 slug: Web/CSS/transform
 tags:
-  - BrauchtBeispiele
-  - BrauchtBrowserKompatibilität
+  - CSS
   - CSS-Eigenschaft
   - Referenz
+  - Transfomation
+  - 'recipe:css-property'
 translation_of: Web/CSS/transform
 ---
-<p>   {{CSRef}} {{SeheCompatTable}}</p>
+<div>{{CSSRef}}</div>
 
-<p>Mit der Eigenschaft "CSS übersetzen" können Sie Übersetzungstransformationen einzeln und unabhängig von der Eigenschaft<br>
- {{CSSxRef ("transform")}} angeben. Dadurch wird die typische Verwendung der Benutzeroberfläche besser abgebildet, und Sie müssen sich nicht die genaue Reihenfolge der Transformationsfunktionen merken, die im Transformationswerte angegeben werden müssen.</p>
+<p>Mit der <a href="/de/docs/Web/CSS">CSS</a>-Eigenschaft <strong><code>transform</code></strong> können Sie ein Element drehen, skalieren, schräg stellen oder übersetzen. Sie modifiziert den Koordinatenraum des CSS <a href="/de/docs/Web/CSS/Visual_formatting_model">visuellen Formatierungsmodells</a>.</p>
 
-<p>Syntax</p>
+<div>{{EmbedInteractiveExample("pages/css/transform.html")}}</div>
 
-<p>/ * Schlüsselwortwerte * / translate: none; / * Einzelwerte * / translate: 100px; übersetzen: 50%; / * Zwei Werte * / translate: 100px 200px; übersetzen: 50% 105px; / * Drei Werte * / übersetzen: 50% 105px 5rem;</p>
 
-<p><br>
- Values</p>
 
-<p>&lt;p&gt; {{HTMLSidebar ("Global_attributes")}} &lt;/p&gt;</p>
+<p>Wenn die Eigenschaft einen anderen Wert als <code>none</code> hat, wird ein <a href="/de/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">Stapelkontext</a> erstellt. In diesem Fall fungiert das Element als ein enthaltender Block für alle <code>position: fixed;</code> oder <code>position: absolute;</code> Elemente, die es enthält.</p>
 
-<p>  &lt;p&gt; &lt;span class = "seoSummary"&gt; Das &lt;strong&gt; translate &lt;/strong&gt; &lt;a href="/en-US/docs/Web/HTML/Global_attributes"&gt; globale Attribut &lt;/a&gt; ist ein aufgezähltes Attribut, das wird verwendet, um anzugeben, ob die &lt;em&gt; übersetzbaren Attributwerte &lt;/em&gt; eines Elements und die untergeordneten Knoten {{domxref ("Text")}} beim Lokalisieren der Seite übersetzt werden sollen oder ob sie unverändert bleiben sollen. &lt;/span&gt; Es kann folgende Werte annehmen:<br>
- &lt;/p&gt;</p>
+<div class="warning">
+<p>Nur transformierbare Elemente können transformiert werden. Das heißt, alle Elemente, deren Layout durch das CSS-Box-Modell geregelt wird, mit Ausnahme von: <a href="/de/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes">nicht ersetzten Inline-Boxen</a>, <a href="/de/docs/Web/HTML/Element/col">Tabellen-Spalten-Boxen</a> und <a href="/de/docs/Web/HTML/Element/colgroup">Tabellen-Spalten-Gruppen-Boxen</a>.</p>
+</div>
 
-<p>&lt;ul&gt;<br>
- &lt;li&gt; leere Zeichenfolge oder &lt;code&gt; "yes" &lt;/code&gt;, die angibt, dass das Element übersetzt werden soll, wenn die Seite lokalisiert wird. &lt;/i&gt;<br>
- &lt;li&gt; &lt;code&gt; "no" &lt;/code&gt; gibt an, dass das Element nicht übersetzt werden darf. &lt;/li&gt;<br>
-   &lt;/ul&gt;</p>
+<h2 id="Syntax">Syntax</h2>
 
-<p>  &lt;p&gt; Obwohl nicht alle Browser dieses Attribut erkennen, wird es von automatischen Übersetzungssystemen wie Google Translate und möglicherweise auch von Tools, die von menschlichen Übersetzern verwendet werden, respektiert. Aus diesem Grund ist es wichtig, dass Webautoren dieses Attribut verwenden, um Inhalte zu markieren, die nicht übersetzt werden sollen. &lt;/P&gt;</p>
+<pre class="brush: css notranslate">/* Keyword values */
+transform: none;
 
-<p>  &lt;h2 id = "Specifications"&gt; Spezifikationen &lt;/h2&gt;</p>
+/* Function values */
+transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+transform: perspective(17px);
+transform: rotate(0.5turn);
+transform: rotate3d(1, 2.0, 3.0, 10deg);
+transform: rotateX(10deg);
+transform: rotateY(10deg);
+transform: rotateZ(10deg);
+transform: translate(12px, 50%);
+transform: translate3d(12px, 50%, 3em);
+transform: translateX(2em);
+transform: translateY(3in);
+transform: translateZ(2px);
+transform: scale(2, 0.5);
+transform: scale3d(2.5, 1.2, 0.3);
+transform: scaleX(2);
+transform: scaleY(0.5);
+transform: scaleZ(0.3);
+transform: skew(30deg, 20deg);
+transform: skewX(30deg);
+transform: skewY(1.07rad);
 
-<p>  &lt;table class = "standard-table"&gt;<br>
- &lt;tbody&gt;<br>
- &lt;tr&gt;<br>
- &lt;th scope = "col"&gt; Spezifikation &lt;/th&gt;<br>
- &lt;th scope = "col"&gt; Status &lt;/th&gt;<br>
- &lt;th scope = "col"&gt; Kommentar &lt;/th&gt;<br>
- &lt;/tr&gt;<br>
- &lt;tr&gt;<br>
- &lt;td&gt; {{SpecName ('HTML WHATWG', "dom.html # attr-translate", "translate")}} &lt;/td&gt;<br>
- &lt;td&gt; {{Spec2 ('HTML WHATWG')}} &lt;/td&gt;<br>
- &lt;td&gt; Keine Änderung gegenüber dem letzten Snapshot {{SpecName ('HTML5.1')}} &lt;/td&gt;<br>
- &lt;/tr&gt;<br>
- &lt;tr&gt;<br>
- &lt;td&gt; {{SpecName ('HTML5.1', ​​"dom.html # the-translate-attribute", "translate")}} &lt;/td&gt;<br>
- &lt;td&gt; {{Spec2 ('HTML5.1')}} &lt;/td&gt;<br>
- &lt;td&gt; Momentaufnahme von {{SpecName ('HTML WHATWG')}}, ursprüngliche Definition &lt;/td&gt;<br>
- &lt;/tr&gt;<br>
- &lt;/tbody&gt;<br>
-   &lt;/table&gt;</p>
+/* Multiple function values */
+transform: translateX(10px) rotate(10deg) translateY(5px);
+transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
 
-<p>  &lt;h2 id = "Browser_compatibility"&gt; Browserkompatibilität &lt;/h2&gt;</p>
+/* Global values */
+transform: inherit;
+transform: initial;
+transform: unset;
+</pre>
 
-<p>  &lt;div class = "hidden"&gt; Die Kompatibilitätstabelle auf dieser Seite wird aus strukturierten Daten generiert. Wenn Sie zu den Daten beitragen möchten, lesen Sie &lt;a href="https://github.com/mdn/browser-compat-data"&gt; https://github.com/mdn/browser-compat- Daten &lt;/a&gt; und senden Sie uns eine Pull-Anfrage. &lt;/div&gt;</p>
+<p>Die Eigenschaft <code>transform</code> kann entweder als Schlüsselwortwert <code><a href="/de/docs/Web/CSS/transform$edit#none">none</a></code> oder mehrere<code><a href="/de/docs/Web/CSS/transform$edit#&lt;transform-function>">&lt;transform-function&gt;</a></code> -Werte angegeben werden.</p>
 
-<p>  &lt;p&gt; {{Compat ("html.global_attributes.translate")}} &lt;/p&gt;</p>
+<div class="blockIndicator note">
+<p><strong>Hinweis:</strong> Wenn {{cssxref("transform-function/perspective", "perspective()")}} einer von mehreren Funktionswerten ist, muss er zuerst aufgeführt werden.</p>
+</div>
 
-<p>  &lt;h2 id = "See_also"&gt; Siehe auch &lt;/h2&gt;</p>
+<h3 id="Werte">Werte</h3>
 
-<p>  &lt;ul&gt;<br>
- &lt;li&gt; Alle &lt;a href="/en-US/docs/Web/HTML/Global_attributes"&gt; globalen Attribute &lt;/a&gt;. &lt;/li&gt;<br>
- &lt;li&gt; Die Eigenschaft {{domxref ("HTMLElement.translate")}}, die dieses Attribut widerspiegelt. &lt;/li&gt;<br>
- &lt;li&gt; &lt;a href="https://www.w3.org/International/questions/qa-translate-flag"&gt; Verwenden des HTML-Übersetzungsattributs &lt;/a&gt; &lt;/li&gt;<br>
-   &lt;/ul&gt;</p>
+<dl>
+ <dt id="&lt;transform-function>">{{cssxref("&lt;transform-function&gt;")}}</dt>
+ <dd>Eine oder mehrere der <a href="/de/docs/Web/CSS/transform-function">CSS-Transformationsfunktionen</a>, die angewendet werden sollen. Die Transformationsfunktionen werden in der Reihenfolge von links nach rechts multipliziert, was bedeutet, dass zusammengesetzte Transformationen effektiv in der Reihenfolge von rechts nach links angewendet werden.</dd>
+ <dt id="none"><code>none</code></dt>
+ <dd>Specifies that no transform should be applied.</dd>
+</dl>
 
-<p><br>
- Formal syntax</p>
+<h2 id="Bedenken_hinsichtlich_der_Zugänglichkeit">Bedenken hinsichtlich der Zugänglichkeit</h2>
 
-<p>{{CSSSyntax}}</p>
+<p>Skalierungs-/Zoom-Animationen sind problematisch für die Barrierefreiheit, da sie ein häufiger Auslöser für bestimmte Arten von Migräne sind. Wenn Sie solche Animationen auf Ihrer Website einbinden müssen, sollten Sie ein Steuerelement bereitstellen, mit dem Benutzer Animationen abschalten können, vorzugsweise site-wide.</p>
 
-<p>Examples</p>
+<p>Ziehen Sie außerdem in Erwägung, die Medienfunktion {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} zu nutzen - verwenden Sie sie, um eine <a href="/de/docs/Web/CSS/Media_Queries">Media Queries</a> zu schreiben, die Animationen ausschaltet, wenn der Benutzer in seinen Systemeinstellungen reduzierte Animationen angegeben hat.</p>
 
-<p>HTML</p>
+<p>Erfahren Sie mehr:</p>
 
-<p>&lt;div&gt;<br>
- &lt;p class="translate"&gt; Translation<br>
- &lt;/p&gt; &lt;/div&gt;</p>
+<ul>
+ <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions">MDN Understanding WCAG, Guideline 2.3 explanations</a></li>
+ <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions">Understanding Success Criterion 2.3.3 | W3C Understanding WCAG 2.1</a></li>
+</ul>
 
-<p>CSS</p>
-
-<p>* { box-sizing: border-box; } html { font-family: sans-serif; } div { width: 150px; margin: 0 auto; } p { padding: 10px 5px; border: 3px solid black; border-radius: 20px; width: 150px; font-size: 1.2rem; text-align: center; } .translate { transition: translate 1s; } div:hover .translate { translate: 200px 50px; }</p>
-
-<p>Result</p>
-
-<p>{{EmbedLiveSample<br>
- ('Examples')}}</p>
-
-<p>Specifications</p>
-
-<p>SpecificationStatusComment{{SpecName('CSS Transforms 2', '#individual-transforms', 'individual transforms')}}{{Spec2('CSS Transforms 2')}}Initial definition.</p>
+<h2 id="Formale_Definition">Formale Definition</h2>
 
 <p>{{CSSInfo}}</p>
 
-<p>Browser-Kompatibilität</p>
+<h2 id="Formale_Syntax">Formale Syntax</h2>
 
-<p>Die Kompatibilitätstabelle auf dieser Seite wird aus strukturierten Daten generiert. Wenn Sie zu den Daten beitragen möchten, lesen Sie bitte https://github.com/mdn/browser-compat-data und senden Sie uns eine Pull-Anfrage.<br>
- {{Compat("css.properties.translate")}}</p>
+<pre class="syntaxbox notranslate">{{csssyntax}}</pre>
 
-<p> Siehe auch</p>
+<h2 id="Beispiel">Beispiel</h2>
 
-<p>{{cssxref ('scale')}}</p>
+<h3 id="Translating_and_rotating_an_element" name="Translating_and_rotating_an_element">Verschieben und Drehen eines Elements</h3>
 
-<p>{{cssxref ('rotate')}}</p>
+<h4 id="HTML">HTML</h4>
 
-<p>{{cssxref ('transform')}}</p>
+<pre class="brush: html notranslate">&lt;div&gt;Transformed element&lt;/div&gt;</pre>
 
-<p>hinweis: skew ist kein unabhängiger Transformationswert</p>
+<h4 id="CSS">CSS</h4>
 
-<p><br>
- Übersetzung in Deutsch:</p>
+<pre class="brush: css notranslate">div {
+  border: solid red;
+  transform: translate(30px, 20px) rotate(20deg);
+  width: 140px;
+  height: 60px;
+}</pre>
 
-<p>Benötigen Sie Hilfe? • Leitfaden für Redakteure • Stilleitfaden</p>
+<h4 id="Ergebnis">Ergebnis</h4>
 
-<p>Sie haben einen Entwurf vom: 21.10.2019 16:52:53.</p>
+<p>{{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}</p>
 
-<p>Entwurf automatisch gespeichert: 21.10.2019 16:55:27</p>
+<h3 id="Mehr_Beispiele">Mehr Beispiele</h3>
 
-<p> </p>
+<p>Weitere Beispiele finden Sie unter <a href="/de/docs/Web/CSS/CSS_Transforms/CSS_Transformationen_verwenden">Verwendung von CSS-Transformationen</a> und {{cssxref("&lt;transform-function&gt;")}}.</p>
+
+<ul>
+</ul>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spezifikation</th>
+   <th scope="col">Status</th>
+   <th scope="col">Kommentar</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}}</td>
+   <td>{{Spec2('CSS Transforms 2')}}</td>
+   <td>Zusätzliche 3D Transformationsfunctionen.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('CSS3 Transforms', '#transform-property', 'transform')}}</td>
+   <td>{{Spec2('CSS3 Transforms')}}</td>
+   <td>Ursprünglich Definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser-Kompatibilität">Browser-Kompatibilität</h2>
+
+<div class="hidden">Die Kompatibilitätstabelle auf dieser Seite wird aus strukturierten Daten generiert. Wenn Sie zu den Daten beitragen möchten, besuchen Sie bitte <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> und senden Sie uns eine Pull-Anfrage.</div>
+
+<p>{{Compat("css.properties.transform")}}</p>
+
+<h2 id="Siehe_auch">Siehe auch</h2>
+
+<ul>
+ <li><a href="/de/docs/CSS/Using_CSS_transforms">Verwendung von CSS-Transformationen</a></li>
+ <li>{{cssxref("&lt;transform-function&gt;")}} Datentyp mit allen Transformationsfunktionen erklärt.</li>
+ <li>Online-Tool zur Visualisierung von CSS Transformationsfunktionen: <a href="https://css-transform.moro.es/">CSS Transform Playground</a></li>
+ <li>{{cssxref ('matrix')}}</li>
+ <li>{{cssxref ('matrix3d')}}</li>
+ <li>{{cssxref ('perspective')}}</li>
+ <li>{{cssxref ('rotate')}}</li>
+ <li>{{cssxref ('scale')}}</li>
+ <li>{{cssxref ('skew')}}</li>
+</ul>

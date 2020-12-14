@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
-<pre><code>Object.defineProperties(<var>obj</var>, <var>props</var>)</code></pre>
+<pre class="notranslate"><code>Object.defineProperties(<var>obj</var>, <var>props</var>)</code></pre>
 
 <h3 id="Parameters" name="Parameters">参数</h3>
 
@@ -26,10 +26,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
  <dd>
  <dl>
   <dt><code>configurable</code></dt>
-  <dd><code>true</code> 当且仅当该属性描述符的类型可以被改变并且该属性可以从对应对象中删除。<br>
+  <dd><code>true</code> 只有该属性描述符的类型可以被改变并且该属性可以从对应对象中删除。<br>
   <strong>默认为 <code>false</code></strong></dd>
   <dt><code>enumerable</code></dt>
-  <dd><code>true</code> 当且仅当在枚举相应对象上的属性时该属性显现。<br>
+  <dd><code>true</code> 只有在枚举相应对象上的属性时该属性显现。<br>
   <strong>默认为 <code>false</code></strong></dd>
  </dl>
 
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
   <dd>与属性关联的值。可以是任何有效的JavaScript值（数字，对象，函数等）。<br>
   <strong>默认为 {{jsxref("undefined")}}.</strong></dd>
   <dt><code>writable</code></dt>
-  <dd><code>true</code>当且仅当与该属性相关联的值可以用{{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}改变时。<br>
+  <dd><code>true</code>只有与该属性相关联的值被{{jsxref("Operators/Assignment_Operators", "assignment operator", "", 1)}}改变时。<br>
   <strong>默认为 <code>false</code></strong></dd>
  </dl>
 
@@ -63,7 +63,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 
 <h2 id="例子">例子</h2>
 
-<pre class="brush: js">var obj = {};
+<pre class="brush: js notranslate">var obj = {};
 Object.defineProperties(obj, {
   'property1': {
     value: true,
@@ -80,7 +80,7 @@ Object.defineProperties(obj, {
 
 <p>假设一个原始的执行环境，所有的名称和属性都引用它们的初始值，<code>Object.defineProperties</code>几乎完全等同于（注意<code>isCallable</code>中的注释）以下JavaScript中的重新实现：</p>
 
-<pre class="brush: js">function defineProperties(obj, properties) {
+<pre class="brush: js notranslate">function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -158,12 +158,12 @@ Object.defineProperties(obj, {
   <tr>
    <td>{{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}}</td>
    <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>

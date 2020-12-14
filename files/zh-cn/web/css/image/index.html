@@ -81,7 +81,7 @@ translation_of: Web/CSS/image
 
 <p>以下是有效的图像引用值：</p>
 
-<pre>url(test.jpg)                          url()方法, 只要test.jpg是图像文件
+<pre class="notranslate">url(test.jpg)                          url()方法, 只要test.jpg是图像文件
 linear-gradient(to bottom, blue, red)  一个 &lt;gradient&gt;标签
 element(#colonne3)                     页面的一部分, 使用了element()方法,
                                        如果 colonne3 是存在于页面中的一个元素id即可
@@ -89,7 +89,7 @@ element(#colonne3)                     页面的一部分, �
 
 <p>以下是无效的图像引用值：</p>
 
-<pre>cervin.jpg                             图像文件必须使用url()方法定义
+<pre class="notranslate">cervin.jpg                             图像文件必须使用url()方法定义
 url(report.pdf)                        url()方法指向的文件链接必须是一个图像文件
 element(#fakeid)                       如果fakeid是一个不存在与页面的元素id
 </pre>
@@ -117,87 +117,11 @@ element(#fakeid)                       如果fakeid是一个不存在与页面�
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td><code>&lt;uri&gt;</code></td>
-   <td>{{ compatVersionUnknown() }}</td>
-   <td>{{ compatVersionUnknown() }}</td>
-   <td>{{ compatVersionUnknown() }}</td>
-   <td>{{ compatVersionUnknown() }}</td>
-   <td>{{ compatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>&lt;gradient&gt;</code></td>
-   <td>{{ compatVersionUnknown() }}<br>
-    limited to {{ cssxref("background-image") }} &amp; {{ cssxref("background") }}{{ property_prefix("-moz") }}</td>
-   <td>{{ compatVersionUnknown() }}{{ property_prefix("-webkit") }}</td>
-   <td>IE 10{{ property_prefix("-ms") }}</td>
-   <td>{{ compatVersionUnknown() }}{{ property_prefix("-o") }}</td>
-   <td>{{ compatVersionUnknown() }}{{ property_prefix("-webkit") }}</td>
-  </tr>
-  <tr>
-   <td><code>element()</code></td>
-   <td>4.0 (2.0) limited to {{ cssxref("background-image") }} &amp; {{ cssxref("background") }}{{ property_prefix("-moz") }}</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>{{ compatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
+<div class="hidden">
+<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 </div>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td><code>&lt;uri&gt;</code></td>
-   <td>{{ compatVersionUnknown() }}</td>
-   <td>{{ compatVersionUnknown() }}</td>
-   <td>{{ compatVersionUnknown() }}</td>
-   <td>{{ compatVersionUnknown() }}</td>
-   <td>{{ compatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>&lt;gradient&gt;</code></td>
-   <td>{{ compatVersionUnknown() }}<br>
-    limited to {{ cssxref("background-image") }} &amp; {{ cssxref("background") }}{{ property_prefix("-moz") }}</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>{{ compatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>element()</code></td>
-   <td>4.0 (2.0) limited to {{ cssxref("background-image") }} &amp; {{ cssxref("background") }}{{ property_prefix("-moz") }}</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>{{ compatUnknown() }}</td>
-   <td>{{ compatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>{{Compat("css.types.image")}}</p>
 
 <h2 id="参阅：">参阅：</h2>
 

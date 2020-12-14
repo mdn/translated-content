@@ -11,23 +11,30 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 <div>{{JSRef("Global_Objects", "Number")}}</div>
 
 <h2 id="Summary" name="Summary">Сводка</h2>
+
 <p>Метод <strong><code>toExponential()</code></strong> возвращает строку, представляющую объект {{jsxref("Global_Objects/Number", "Number")}} в экспоненциальной записи.</p>
 
 <h2 id="Syntax" name="Syntax">Синтаксис</h2>
-<pre class="syntaxbox"><code><var>numObj</var>.toExponential([<var>fractionDigits</var>])</code></pre>
+
+<pre class="syntaxbox notranslate"><code><var>numObj</var>.toExponential([<var>fractionDigits</var>])</code></pre>
 
 <h3 id="Parameters" name="Parameters">Параметры</h3>
+
 <dl>
  <dt><code>fractionDigits</code></dt>
  <dd>Необязательный параметр. Целое число, определяющее количество цифр после десятичной запятой. По умолчанию используется столько цифр, сколько необходимо для указания числа.</dd>
 </dl>
 
 <h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+
 <p>Строка, представляющая объект {{jsxref("Global_Objects/Number", "Number")}} в экспоненциальной записи с одной цифрой перед десятичной запятой, округлённое до <code>fractionDigits</code> цифр после десятичной запятой. Если аргумент <code>fractionDigits</code> опущен, количество цифр после десятичной запятой по умолчанию устанавливается в количество цифр, необходимых для однозначного представления значения.</p>
+
 <p>Если вы используете метод <code>toExponential()</code> с числовыми литералами и числовой литерал не имеет экспоненты и десятичной запятой, оставьте пробел перед точкой, предшествующей вызову метода для предотвращения интерпретации этой точки как десятичной запятой.</p>
+
 <p>Если число имеет больше цифр, чем запрошено параметром <code>fractionDigits</code>, оно будет округлено к ближайшему числу, представляемому <code>fractionDigits</code> цифрами. Смотрите обсуждение округления в описании метода {{jsxref("Number.prototype.toFixed", "toFixed()")}}, которое так же применяется и к методу <code>toExponential()</code>.</p>
 
 <h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
+
 <dl>
  <dt>{{jsxref("Global_Objects/RangeError", "RangeError")}}</dt>
  <dd>Если параметр <code>fractionDigits</code> слишком маленький или слишком большой. Значения между 0 и 20 включительно не будут порождать исключение {{jsxref("Global_Objects/RangeError", "RangeError")}}. Также реализации могут поддерживать большие и меньшие значения.</dd>
@@ -37,8 +44,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 
 <h2 id="Examples" name="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_toExponential" name="Example:_Using_toExponential">Пример: использование <code>toExponential</code></h3>
-<pre class="brush: js">var numObj = 77.1234;
+<h3 id="Example_Using_toExponential" name="Example:_Using_toExponential">Пример: использование <code>toExponential</code></h3>
+
+<pre class="brush: js notranslate">var numObj = 77.1234;
 
 
 console.log(numObj.toExponential());  // выведет 7.71234e+1
@@ -49,6 +57,7 @@ console.log(77 .toExponential());     // выведет 7.7e+1
 </pre>
 
 <h2 id="Specifications" name="Specifications">Спецификации</h2>
+
 <table class="standard-table">
  <tbody>
   <tr>
@@ -64,66 +73,22 @@ console.log(77 .toExponential());     // выведет 7.7e+1
   <tr>
    <td>{{SpecName('ES5.1', '#sec-15.7.4.6', 'Number.prototype.toExponential')}}</td>
    <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-number.prototype.toexponential', 'Number.prototype.toExponential')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
-<div>{{CompatibilityTable}}</div>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Возможность</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>Базовая поддержка</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Возможность</th>
-    <th>Android</th>
-    <th>Chrome для Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Базовая поддержка</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
+
+<div>{{Compat("javascript.builtins.Number.toExponential")}}</div>
 
 <h2 id="See_also" name="See_also">Смотрите также</h2>
+
 <ul>
  <li>{{jsxref("Number.prototype.toFixed()")}}</li>
  <li>{{jsxref("Number.prototype.toPrecision()")}}</li>

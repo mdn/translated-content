@@ -62,7 +62,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 <pre class="brush: css notranslate">.wrapper {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 10px;
+  grid-gap: 10px;
   grid-auto-rows: 100px;
   grid-template-areas:
     "a a a a b b b b"
@@ -96,7 +96,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 <p>{{ EmbedLiveSample('alignment_1', '500', '450') }}</p>
 </div>
 
-<p><code>align-self: start</code> を設定すると、それぞれの子 <code>&lt;div&gt;</code> の高さは <code>&lt;div&gt; </code>の中身によって決定されることを覚えておいてください。対照的に、<code><a href="https://developer.mozilla.org/ja/docs/Web/CSS/align-self">align-items</a></code> を完全に省略すると、それぞれの子 <code>&lt;div&gt;</code> の高さはグリッドエリアを満たすように広がります。</p>
+<p><code>align-self: start</code> を設定すると、それぞれの子 <code>&lt;div&gt;</code> の高さはコンテンツの <code>&lt;div&gt;</code>  によって決定されることを覚えておいてください。また、<code><a href="https://developer.mozilla.org/ja/docs/Web/CSS/align-self">align-self</a></code> を完全に省略すると、それぞれの子 <code>&lt;div&gt;</code> の高さはグリッドエリアを満たすように広がります。</p>
 
 <p>{{cssxref("align-items")}} プロパティはすべての子グリッドアイテムに {{cssxref("align-self")}} プロパティを設定します。これは、グリッドアイテム上で <code>align-self</code> を使えばプロパティを個別に設定できるということです。</p>
 
@@ -125,7 +125,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 <pre class="brush: css notranslate">.wrapper {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 10px;
+  grid-gap: 10px;
   grid-auto-rows: 100px;
   grid-template-areas:
     "a a a a b b b b"
@@ -161,11 +161,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 <p>{{ EmbedLiveSample('alignment_2', '500', '450') }}</p>
 </div>
 
-<h3 id="固有のアスペクト比を持つアイテム">固有のアスペクト比を持つアイテム</h3>
+<h3 id="アイテムと固有のアスペクト比">アイテムと固有のアスペクト比</h3>
 
 <p>デフォルトでは、{{cssxref("align-self")}} の振る舞いはアイテムを広げます。しかし、固有のアスペクト比を持つアイテムの振る舞いは <code>start</code> になります。固有のアスペクト比を持つアイテムにデフォルトで <code>stretch</code> を設定するとアイテムを歪めるからです。</p>
 
-<p>この振る舞いは現在、仕様で明確になっていますが、ブラウザーへの実装はまだ途上です。それまでの間、{{cssxref("align-self")}} と {{cssxref("justify-self")}} を <code>start</code> に設定することによって、グリッドの直接の子である画像などのアイテムが、デフォルトで広がらないことを保証できます。これは正しい動作を模倣します。</p>
+<p>この振る舞いは現在、仕様で明確になっていますが、ブラウザーはまだ正しく実装していません。その間、{{cssxref("align-self")}} と {{cssxref("justify-self")}} を <code>start</code> に設定することによって、画像などのアイテムがグリッドの直接の子のようにデフォルトで広がらないことを保証できます。これは正しい動作を模倣します。</p>
 
 <h2 id="インライン軸上のアイテムの位置揃え">インライン軸上のアイテムの位置揃え</h2>
 
@@ -210,7 +210,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 <pre class="brush: css notranslate">.wrapper {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  gap: 10px;
+  grid-gap: 10px;
   grid-auto-rows: 100px;
   grid-template-areas:
     "a a a a b b b b"
@@ -248,11 +248,11 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 
 <p>{{cssxref("align-self")}} と {{cssxref("align-items")}} と同様に、グリッドコンテナに {{cssxref("justify-items")}} を適用することで、すべてのアイテムに {{cssxref("justify-self")}} の値を設定できます。</p>
 
-<p>{{cssxref("justify-self")}} と {{cssxref("justify-items")}} プロパティは<a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout">フレックスボックス</a>に実装されていません。これはフレックスボックスが一次元であること、軸にそって複数のアイテムがあるかもしれず単一のアイテムを両端揃えすることができないことによります。フレックスボックスのメイン軸・インライン軸に沿って配置するには、{{cssxref("justify-content")}} プロパティを使用します。</p>
+<p>{{cssxref("justify-self")}} と {{cssxref("justify-items")}} プロパティは<a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout">フレックスボックス</a>に実装されていません。これはフレックスボックスが一次元であること、軸にそって複数のアイテムがあるかもしれず単一のアイテムを揃えることができないことによります。フレックスボックスのメイン軸・インライン軸に沿って配置するには、{{cssxref("justify-content")}} プロパティを使用します。</p>
 
 <h3 id="ショートハンドプロパティ">ショートハンドプロパティ</h3>
 
-<p>{{CSSxRef("place-items")}} プロパティは {{CSSxRef("align-items")}} と {{CSSxRef("justify-items")}} のショートハンドであり、{{CSSxRef("place-self")}} は {{CSSxRef("align-self")}} と {{CSSxRef("justify-self")}} のショートハンドです。</p>
+<p>{{CSSxRef("place-items")}} プロパティは {{CSSxRef("align-items")}} と {{CSSxRef("justify-items")}} のショートハンドであり、{{CSSxRef("place-item")}} は {{CSSxRef("align-self")}} と {{CSSxRef("justify-self")}} のショートハンドです。</p>
 
 <h2 id="エリア内のアイテムを中央に揃える">エリア内のアイテムを中央に揃える</h2>
 
@@ -281,7 +281,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 <pre class="brush: css notranslate">.wrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  grid-gap: 10px;
   grid-auto-rows: 200px;
   grid-template-areas:
     ". a a ."
@@ -304,7 +304,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 
 <h2 id="ブロック軸上のグリッドトラックの配置">ブロック軸上のグリッドトラックの配置</h2>
 
-<p>グリッドトラックが使うエリアがグリッドコンテナより小さければ、コンテナ内にグリッドトラック自体を配置できます。繰り返しますが、これはブロック軸とインライン軸上で行われます。{{cssxref("align-content")}} はブロック軸上のトラックを配置し、{{cssxref("justify-content")}} はインライン軸上の配置を行います。{{cssxref("place-content")}} プロパティは {{cssxref("align-content")}} と {{cssxref("justify-content")}} のショートハンドです。{{cssxref("align-content")}} と {{cssxref("justify-content")}} と {{cssxref("place-content")}} の値は次の通りです。</p>
+<p>グリッドトラックが使うエリアがグリッドコンテナより小さければ、コンテナ内にグリッドトラック自体を配置できます。繰り返しますが、これはブロック軸とインライン軸上で行われます。{{cssxref("align-content")}} はブロック軸方向でトラックを配置し、{{cssxref("justify-content")}} はインライン軸方向の配置を行います。{{cssxref("place-content")}} プロパティは {{cssxref("align-content")}} と {{cssxref("justify-content")}} のショートハンドです。{{cssxref("align-content")}} と {{cssxref("justify-content")}} と {{cssxref("place-content")}} の値は次の通りです。</p>
 
 <ul>
  <li><code>normal</code></li>
@@ -320,9 +320,9 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
  <li><code>last baseline</code></li>
 </ul>
 
-<p>以下の例では 500 ピクセル × 500 ピクセルのグリッドコンテナがあります。3 つの行トラックと列トラックがあり、それぞれ、幅 100 ピクセル、溝 10 ピクセルです。これはグリッドコンテナ内でブロックとインラインどちらの方向にも空間があることを意味します。</p>
+<p>以下の例では 500 ピクセル × 500 ピクセルのグリッドコンテナがあります。3 つの行トラックと列トラックがあり、それぞれ、幅 100 ピクセル、溝 10 ピクセルです。これはグリッドコンテナ内でブロックとインラインどちらの方向にも隙間があることを意味します。</p>
 
-<p><code>align-content</code> プロパティはグリッド全体のグリッドコンテナに適用されます。グリッドレイアウトでのデフォルトの振る舞いは <code>start</code> で、これにより、グリッドトラックはグリッドの左上隅にあり、グリッドラインの始まりに対して整列しています。</p>
+<p><code>align-content</code> プロパティはグリッドコンテナに、すなわちすべてのグリッドに適用されます。グリッドレイアウトでのデフォルトの振る舞いは <code>start</code> で、これにより、グリッドトラックはグリッドの左上隅にあり、グリッドが始まるラインに合わせて整列しています。</p>
 
 <div id="alignment_5">
 <div class="hidden">
@@ -350,7 +350,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
   grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
-  gap: 10px;
+  grid-gap: 10px;
   grid-template-areas:
     "a a b"
     "a a b"
@@ -409,7 +409,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
   grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
-  gap: 10px;
+  grid-gap: 10px;
   grid-template-areas:
     "a a b"
     "a a b"
@@ -503,7 +503,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 
 <p>スペース配分の値を使用すると、グリッド上のアイテムが大きくなる可能性があることに注意してください。アイテムが複数のグリッドトラックにまたがる場合、トラック間にさらにスペースを追加すると、アイテムはその分大きくなる必要があります。グリッドは常に厳密です。したがって、これらの値を使用する場合は、トラックの内容が追加のスペースに対応できるようにするか、整列プロパティを使用して引き伸ばさず始点に置くようにします。</p>
 
-<p>下の図では、<code>align-content</code> と <code>start</code> で配置したグリッドの隣に、<code>align-content</code> を <code>space-between</code> に設定して配置したグリッドがあります。2 つのトラックの間にスペースを取るとき、2 つの行トラックにまたがる Item 1 と 2 が どのように余分な高さを確保しているか見てください。</p>
+<p>下の図では、<code>align-content</code> を <code>start</code> にして配置したグリッドの隣に、<code>align-content</code> を <code>space-between</code> に設定して配置したグリッドがあります。2 つのトラックの間にスペースを取るとき、2 つの行トラックにまたがる Item 1 と 2 が どのように余分な高さを確保しているか見てください。</p>
 
 <p><img alt="space-between を使用したときアイテムがどのように大きくなるかのデモ。" src="https://mdn.mozillademos.org/files/14729/7_space-between.png" style="height: 534px; width: 1030px;"></p>
 
@@ -539,7 +539,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
   grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
-  gap: 10px;
+  grid-gap: 10px;
   grid-template-areas:
     "a a b"
     "a a b"
@@ -604,7 +604,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
   grid-template-rows: repeat(3, 100px);
   height: 500px;
   width: 500px;
-  gap: 10px;
+  grid-gap: 10px;
   grid-template-areas:
     "a a b"
     "a a b"

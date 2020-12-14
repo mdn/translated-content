@@ -35,19 +35,19 @@ translation_of: Learn/Forms/Form_validation
  </tbody>
 </table>
 
-<p>クライアント側検証は最初のチェックであり、ユーザーの使い勝手を良くするために重要な機能ですクライアント側で不当なデータを捕捉することで、ユーザーはすぐに修正できます。無効なデータがサーバーに送られるて拒否されると、サーバーへ往復してユーザーにデータ修正するよう連絡することによってかなり時間を浪費します。</p>
+<p>クライアント側検証は最初のチェックであり、ユーザーの使い勝手を良くするために重要な機能ですクライアント側で不当なデータを捕捉することで、ユーザーはすぐに修正できます。もしも無効なデータがサーバーに送られてから拒否される場合、サーバーへの往復とクライアント側に戻ってユーザーにデータを修正するように指示することにより、かなり時間を浪費します。</p>
 
 <p>しかし、クライアント側の検証はセキュリティ対策<em>とは考えられません</em>!アプリは常に<em>サーバー側でも</em>クライアント側と<strong>同様に</strong>送信されたデータのセキュリティをチェックします。なぜならクライアント側の検証は容易に回避することができて、悪意のユーザーは簡単に、サーバーへ不正なデータを送信できます。何が起こり得るかは <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Server-side/First_steps/Website_security">ウェブサイトセキュリティ</a>を見てください。サーバー側検証はこのガイドの範囲を超えますが、覚えておいてください。</p>
 
 <h2 id="What_is_form_validation" name="What_is_form_validation">フォーム検証とは何か</h2>
 
-<p>有名なサイトの登録フォームに行き、データを求められている書式で入力しなかいと、フィードバックがあることに気づくでしょう。次のようなメッセージが表示されます。</p>
+<p>有名なサイトの登録フォームに行き、データを求められている書式で入力しないと、フィードバックがあることに気づくでしょう。次のようなメッセージが表示されます。</p>
 
 <ul>
  <li>「このフィールドは必須です」 (このフィールドが空欄にできない場合)</li>
  <li>「電話番号は XXX-XXXX の形式で入力してください」 (あるデータフォーマットが必須の場合)</li>
  <li>「有効なメールアドレスを入力してください」 (入力データが適切なフォーマットではない場合)</li>
- <li>「パスワードは 8文字から 30文字の間で、1文字以上の大文字、記号、数字を含む必要があります。」 (特に詳しいデータフォーマットが必要な場合)</li>
+ <li>「パスワードは 8 文字から 30 文字の間で、1 文字以上の大文字、記号、数字を含む必要があります。」 (特に詳しいデータフォーマットが必要な場合)</li>
 </ul>
 
 <p>これは<strong>フォーム検証</strong>と呼ばれます。データを入力したとき、ブラウザー、またはウェブアプリケーションは、そのデータが正しい書式であり、アプリケーションに設定された制約に合っているかをチェックします。ブラウザーで行われる検証は<strong>クライアント側</strong>検証と、サーバー側で行われるものは<strong>サーバー側</strong>検証と呼ばれます。この章では、クライアント側検証に集中します。</p>
@@ -74,7 +74,7 @@ translation_of: Learn/Forms/Form_validation
 
 <h2 id="Using_built-in_form_validation" name="Using_built-in_form_validation">内蔵フォーム検証の利用</h2>
 
-<p><a href="/ja/docs/HTML/HTML5">HTML5</a> のフォーム制御の機能の一つに JavaScript に頼らない多くのユーザーデータの検証があります。これはフォーム要素の validation属性を使って行います。これまで多くを見てきましたが、まとめ直すと:</p>
+<p><a href="/ja/docs/HTML/HTML5">HTML5</a> のフォーム制御の機能の一つに JavaScript に頼らない多くのユーザーデータの検証があります。これはフォーム要素の検証の属性を使って行います。これまで多くを見てきましたが、まとめ直すと:</p>
 
 <ul>
  <li><code><a href="/ja/docs/Web/HTML/Attributes/required">required</a></code>: 属性は値が入力されているべきかどうかを指定します。</li>
@@ -126,7 +126,7 @@ input:valid {
   border: 2px solid black;
 }</pre>
 
-<p>{{EmbedLiveSample("Validation_constraints_on_input_elements", "100%", 80)}}</p>
+<p>{{EmbedLiveSample("Simple_start_file", "100%", 80)}}</p>
 
 <p>始めるにあたって、ハードディスク内の新しいディレクトリーに <code>fruit-start.html</code> のコピーを作成してください。</p>
 
@@ -164,7 +164,7 @@ input:valid {
 <p><strong>注</strong>: この例は GitHub の <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-required.html">fruit-validation.html</a> で見ることができます (<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-required.html">ソースコード</a>も見てください)。</p>
 </div>
 
-<p>値のないままフォームを送信してみましょう。妥当ではない入力がどのようにフォーカスされるか注意しましょう。デフォルトのエラーメッセージ("Please fill out this field") が表示され、フォームの送信を阻止します。</p>
+<p>値のないままフォームを送信してみましょう。妥当ではない入力がどのようにフォーカスされるか注意しましょう。デフォルトのエラーメッセージ(「このフィールドは入力必須です。」) が表示され、フォームの送信を阻止します。</p>
 
 <p><code>required</code> 属性をサポートしている要素にこの属性がある場合、その要素に値があるかないかによって、要素が {{cssxref(':required')}} 疑似クラスに一致するかどうかが決まります。もし {{HTMLElement("input")}} に値がなければ、<code>input</code> は{{cssxref(':invalid')}} 疑似クラスに一致します。</p>
 
@@ -256,7 +256,7 @@ input:valid {
 &lt;/form&gt;</pre>
 
 <ul>
- <li>ここで、<code>text</code> フィールドには <code>minlength</code> 属性と <code>maxlength</code> 属性には 6 を指定しています。これは banana「バナナ」と cherry「さくらんぼ」の文字数と同じです。</li>
+ <li>ここで、<code>text</code> フィールドには <code>minlength</code> 属性と <code>maxlength</code> 属性には 6 を指定しています。これは banana (バナナ) と cherry (さくらんぼ) の文字数と同じです。</li>
  <li>またここでは、<code>number</code> フィールドに <code>min</code> 属性で 1 を <code>max</code> 属性で 10 を指定しました。この範囲外の数字の入力は妥当ではないと表示されます。ユーザーは矢印を使ってこの範囲外の値に増減できませんが、ユーザーが数字を手入力した場合はデータは不正となります。この数字は必須ではないので、値を除去すると妥当になります。</li>
 </ul>
 
@@ -274,7 +274,7 @@ div {
 
 <p>例をライブで実行してみましょう。</p>
 
-<p>{{EmbedLiveSample("Constraining_the_length_of_your_entries", "100%", 100)}}</p>
+<p>{{EmbedLiveSample("Constraining_the_values_of_your_entries", "100%", 100)}}</p>
 
 <div class="blockIndicator note">
 <p><strong>注</strong>: GitHub の <a href="https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html">fruit-length.html</a> でライブサンプルを見ることができます(<a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-pattern.html">ソースコード</a>も見てください)</p>
@@ -483,7 +483,7 @@ email.addEventListener("input", function (event) {
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<p>この簡単なフォームでは、ブラウザーの自動検証を無効にするために <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Attributes/novalidate">novalidate</a></code> 属性を使用しています。これで、検証を制御するためにスクリプトを使用できます。ただし、これは制約検証 API の対応や CSS の疑似クラス {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}}, {{cssxref(":out-of-range")}} の適用を無効にするわけではありません。つまり、データを送信する前にブラウザーが自動的なフォームの妥当性確認を行わないとしても、あなた自身で確認を行って、フォームの状態に応じたスタイル設定ができます。</p>
+<p>この簡単なフォームでは、ブラウザーの自動検証を無効にするために <code><a href="/ja/docs/Web/HTML/Attributes/novalidate">novalidate</a></code> 属性を使用しています。これで、検証を制御するためにスクリプトを使用できます。ただし、これは制約検証 API の対応や CSS の疑似クラス {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}}, {{cssxref(":out-of-range")}} の適用を無効にするわけではありません。つまり、データを送信する前にブラウザーが自動的なフォームの妥当性確認を行わないとしても、あなた自身で確認を行って、フォームの状態に応じたスタイル設定ができます。</p>
 
 <p>検証する入力は <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code>で、これは <code>required</code>(入力必須)で、8文字の <code>minlength</code> があります。これをわれわれのコードで確認して、それぞれカスタムエラーメッセージを表示させてみましょう。</p>
 
@@ -560,10 +560,11 @@ const error = document.querySelector('#mail + span.error');
 email.addEventListener("input", function (event) {
   // ユーザーが何かを入力するたびに、メールアドレスのフィールドが妥当かを
   // 確認します。
+
   if (email.validity.valid) {
     // エラーメッセージを表示している場合に、フィールドが妥当になれば
     // エラーメッセージを取り除きます。
-    error.innerHTML = ""; // メッセージの内容物をリセットします
+    error.textContent = ""; // メッセージの内容物をリセットします
     error.className = "error"; // メッセージの表示状態をリセットします
   } else {
     // If there is still an error, show the correct error
@@ -771,7 +772,7 @@ addEvent(email, "input", function () {
   const test = email.value.length === 0 || emailRegExp.test(email.value);
   if (test) {
     email.className = "valid";
-    error.innerHTML = "";
+    error.textContent = "";
     error.className = "error";
   } else {
     email.className = "invalid";
@@ -784,14 +785,14 @@ addEvent(form, "submit", function () {
 
   if (!test) {
     email.className = "invalid";
-    error.innerHTML = "I expect an e-mail, darling!";
+    error.textContent = "I expect an e-mail, darling!";
     error.className = "error active";
 
     // 一部の古いブラウザーは event.reventDefault() メソッドをサポートしていません。
     return false;
   } else {
     email.className = "valid";
-    error.innerHTML = "";
+    error.textContent = "";
     error.className = "error";
   }
 });</pre>
@@ -801,6 +802,10 @@ addEvent(form, "submit", function () {
 <p>{{EmbedLiveSample("An_example_that_doesnt_use_the_constraint_validation_API", "100%", 130)}}</p>
 
 <p>ご覧の通り、自分でで検証システムを構築するのは大変なことではありません。難しいのはクロスプラットフォームで、かつ作成するであろうあらゆるフォームで使用できる汎用的なものにすることです。フォーム検証を行うために利用できる、<a href="http://rickharrison.github.com/validate.js/" rel="external">Validate.js</a> のような多くのライブラリがあります。</p>
+
+<h2 id="Test_your_skills!" name="Test_your_skills!">スキルをテストしましょう!</h2>
+
+<p>この記事の最後に到着しましたが、最も大事な情報を覚えていますか？ 次に進む前に、この情報を保持しているか検証するテストがあります — <a href="/ja/docs/Learn/Forms/Test_your_skills:_Form_validation">Test your skills: Form validation</a> を見てください。</p>
 
 <h2 id="Conclusion" name="Conclusion">まとめ</h2>
 

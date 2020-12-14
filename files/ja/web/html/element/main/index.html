@@ -2,13 +2,11 @@
 title: <main>
 slug: Web/HTML/Element/main
 tags:
+  - Element
   - HTML
-  - HTML コンテンツグループ化
-  - 'HTML:フローコンテンツ'
-  - 'HTML:知覚可能コンテンツ'
+  - HTML sections
   - Reference
   - main
-  - 要素
 translation_of: Web/HTML/Element/main
 ---
 <div>{{HTMLRef}}</div>
@@ -24,12 +22,12 @@ translation_of: Web/HTML/Element/main
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>, 知覚可能コンテンツ</td>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Flow_content">フローコンテンツ</a>, 知覚可能コンテンツ</td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a></td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Flow_content">フローコンテンツ</a></td>
   </tr>
   <tr>
    <th scope="row">タグの省略</th>
@@ -37,11 +35,15 @@ translation_of: Web/HTML/Element/main
   </tr>
   <tr>
    <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れる場所、但し<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element" id="the-main-element:hierarchically-correct-main-element">階層的に正しい <code>main</code> 要素であること</a>。</td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れる場所、但し<a href="https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element" id="the-main-element:hierarchically-correct-main-element">階層的に正しい <code>main</code> 要素であること</a>。</td>
+  </tr>
+  <tr>
+   <th scope="row">暗黙の ARIA ロール</th>
+   <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Main_role">main</a></code></td>
   </tr>
   <tr>
    <th scope="row">許可されている ARIA ロール</th>
-   <td>既定で <code>&lt;main&gt;</code> 要素に <code>main</code> ロールを適用します。また、<code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role">presentation</a></code> ロールも許可されます。</td>
+   <td>許可されている <code>role</code> なし</td>
   </tr>
   <tr>
    <th scope="row">DOM インターフェイス</th>
@@ -62,7 +64,7 @@ translation_of: Web/HTML/Element/main
 
 <h2 id="Example" name="Example">例</h2>
 
-<pre class="brush: html">&lt;!-- 他のコンテンツ --&gt;
+<pre class="brush: html notranslate">&lt;!-- 他のコンテンツ --&gt;
 
 &lt;main&gt;
   &lt;h1&gt;Apples&lt;/h1&gt;
@@ -87,7 +89,7 @@ translation_of: Web/HTML/Element/main
 
 &lt;!-- 他のコンテンツ --&gt;</pre>
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
+<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮</h2>
 
 <h3 id="Landmark" name="Landmark">ランドマーク</h3>
 
@@ -99,7 +101,7 @@ translation_of: Web/HTML/Element/main
 
 <p>{{htmlattrxref("id")}} 属性を追加することで、 <code>&lt;main&gt;</code> 要素がスキップナビゲーションリンクのターゲットになることができます。</p>
 
-<pre><span class="tag">&lt;body</span><span class="tag">&gt;
+<pre class="brush: html notranslate">&lt;body&gt;
   &lt;a href="#main-content"&gt;Skip to main content&lt;/a&gt;
 
   &lt;!-- navigation and header content --&gt;
@@ -107,7 +109,7 @@ translation_of: Web/HTML/Element/main
   &lt;main id="main-content"&gt;
     &lt;!-- main page content --&gt;
   &lt;/main&gt;
-&lt;/body&gt;</span>
+&lt;/body&gt;
 </pre>
 
 <ul>
@@ -153,9 +155,9 @@ translation_of: Web/HTML/Element/main
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p><code>&lt;main&gt;</code> は広く対応されています。 Internet Explorer 11 およびそれ以前については、アクセシビリティにするために <code>&lt;main&gt;</code> 要素に ARIA の <code>"main"</code> ロールを追加することが提案されています (JAWS のような、古い Internet Explorer との組み合わせで使用する読み上げソフトは、 <code>role</code> 属性を含めれば <code>&lt;main&gt;</code> 要素の意味論的な意味を理解できるでしょう)。</p>
+<p><code>&lt;main&gt;</code> は広く対応されています。 Internet Explorer 11 およびそれ以前については、アクセシビリティのために {{glossary("ARIA")}} の <code>"main"</code> ロールを <code>&lt;main&gt;</code> 要素に追加することが提案されています (JAWS のような、古い Internet Explorer との組み合わせで使用する読み上げソフトは、 <code>&lt;main&gt;</code> 要素の意味論的な意味を <code>role</code> 属性を含めることで理解できるでしょう)。</p>
 
-<pre class="brush: html">&lt;main role="main"&gt;
+<pre class="brush: html notranslate">&lt;main role="main"&gt;
   ...
 &lt;/main&gt;
 </pre>

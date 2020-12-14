@@ -114,11 +114,11 @@ translation_of: Web/HTML/Preloading_content
 
 <h2 id="Cross-origin_fetches" name="Cross-origin_fetches">オリジンをまたいだフェッチ</h2>
 
-<p>If you've got your sites' <a href="/en-US/docs/Web/HTTP/Access_control_CORS">CORS</a> settings worked out properly, you can successfully preload cross-origin resources as long as you set a {{htmlattrxref("crossorigin","link")}} attribute on your <code>&lt;link&gt;</code> element.</p>
+<p>CORSを有効にしてフェッチ（例えば、<code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> or <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/@font-face">fonts</a>）されたリソースをプリロードするとき、<code>&lt;link&gt;</code>要素に{{htmlattrxref（ "crossorigin"、 "link"）}}属性を設定する場合には特別な注意が必要です。</p>
 
-<p>One interesting case where this applies, even if the fetch is not cross-origin, is font files. Because of various reasons, these have to be fetched using anonymous mode CORS (see <a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>).</p>
+<p dir="ltr" id="tw-target-text">上記のように、これが当てはまる興味深いケースの1つは、フォントファイルです。さまざまな理由により、これらは匿名モードのCORSを使用してフェッチする必要があります（<a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>参照）。</p>
 
-<p>Let's use this case as an example. You can see the full <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts">example source code on GitHub</a> (<a href="https://mdn.github.io/html-examples/link-rel-preload/fonts/">also see it live</a>):</p>
+<p>このケースを例として使用してみましょう。完全なサンプルソースコードは <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts">example source code on GitHub</a> (<a href="https://mdn.github.io/html-examples/link-rel-preload/fonts/">also see it live</a>):</p>
 
 <pre class="brush: html notranslate">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
@@ -133,7 +133,7 @@ translation_of: Web/HTML/Preloading_content
   …
 &lt;/body&gt;</pre>
 
-<p>Not only are we providing the MIME type hints in the <code>type</code> attributes, but we are also providing the <code>crossorigin</code> attribute to handle the CORS issue.</p>
+<p dir="ltr" id="tw-target-text"><code>type</code>属性にMIMEタイプヒントを提供するだけでなく、プリロードのCORSモードが最終的なフォントリソースリクエストと一致することを確認するために、<code>crossorigin</code>属性も提供しています。</p>
 
 <h2 id="Including_media" name="Including_media">media を含める</h2>
 

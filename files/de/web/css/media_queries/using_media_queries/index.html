@@ -1,17 +1,19 @@
 ---
-title: Using media queries
+title: Media Queries verwenden
 slug: Web/CSS/Media_Queries/Using_media_queries
 tags:
   - NeedsTranslation
 translation_of: Web/CSS/Media_Queries/Using_media_queries
 ---
-<p><span class="seoSummary">A <strong>media query</strong> consists of a media type and at least one expression that limits the style sheets' scope by using media features, such as width, height, and color. Media queries, added in <a href="/en-US/docs/CSS/CSS3" title="/en-US/docs/CSS/CSS3">CSS3</a>, let the presentation of content be tailored to a specific range of output devices without having to change the content itself.</span></p>
+<div>{{cssref}}</div>
+
+<p>A <strong>media query</strong> consists of a media type and at least one expression that limits the style sheets' scope by using media features, such as width, height, and color. Media queries, added in <a href="/en-US/docs/CSS/CSS3" title="/en-US/docs/CSS/CSS3">CSS3</a>, let the presentation of content be tailored to a specific range of output devices without having to change the content itself.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
 <p>Media queries consist of a <a class="internal" href="/en-US/docs/CSS/@media" title="/en-US/docs/CSS/@media">media type</a> and can, as of the CSS3 specification, contain one or more expressions, expressed as media features, which resolve to either true or false.  The result of the query is true if the media type specified in the media query matches the type of device the document is being displayed on <strong>and</strong> all expressions in the media query are true.</p>
 
-<pre class="brush: html">&lt;!-- CSS media query on a link element --&gt;
+<pre class="brush: html notranslate">&lt;!-- CSS media query on a link element --&gt;
 &lt;link rel="stylesheet" media="(max-width: 800px)" href="example.css" /&gt;
 
 &lt;!-- CSS media query within a stylesheet --&gt;
@@ -37,15 +39,15 @@ translation_of: Web/CSS/Media_Queries/Using_media_queries
 
 <p>The <code>and</code> keyword is used for combining multiple media features together, as well as combining media features with media types. A basic media query, a single media feature with the implied <code>all</code> media type, could look like this:</p>
 
-<pre class="brush: css">@media (min-width: 700px) { ... }</pre>
+<pre class="brush: css notranslate">@media (min-width: 700px) { ... }</pre>
 
 <p>If, however, you wanted this to apply only if the display is in landscape, you could use an <code>and</code> operator to chain the media features together.</p>
 
-<pre class="brush: css">@media (min-width: 700px) and (orientation: landscape) { ... }</pre>
+<pre class="brush: css notranslate">@media (min-width: 700px) and (orientation: landscape) { ... }</pre>
 
 <p>Now the above media query will only return true if the viewport is 700px wide or wider and the display is in landscape. If, however, you only wanted this to apply if the display in question was of the media type TV, you could chain these features with a media type using an <code>and</code> operator.</p>
 
-<pre class="brush: css">@media tv and (min-width: 700px) and (orientation: landscape) { ...  }</pre>
+<pre class="brush: css notranslate">@media tv and (min-width: 700px) and (orientation: landscape) { ...  }</pre>
 
 <p>Now, the above media query will only apply if the media type is TV, the viewport is 700px wide or wider, and the display is in landscape.</p>
 
@@ -55,7 +57,7 @@ translation_of: Web/CSS/Media_Queries/Using_media_queries
 
 <p>For instance, if you wanted to apply a set of styles if the viewing device either had a minimum width of 700px or was a handheld in landscape, you could write the following:</p>
 
-<pre class="brush: css">@media (min-width: 700px), handheld and (orientation: landscape) { ... }</pre>
+<pre class="brush: css notranslate">@media (min-width: 700px), handheld and (orientation: landscape) { ... }</pre>
 
 <p>Above, if I were on a <code>screen</code> device with a viewport width of 800px, the media statement would return true because the first part, interpreted as <code>@media all and (min-width: 700px)</code> would apply to my device and therefore return true, despite the fact that my <code>screen</code> device would fail the <code>handheld</code> media type check in the second media query. Likewise, if I were on a <code>handheld</code> device held in landscape with a viewport width of 500px, while the first media query would fail due to the viewport width, the second media query would succeed and thus the media statement would return true.</p>
 
@@ -63,37 +65,37 @@ translation_of: Web/CSS/Media_Queries/Using_media_queries
 
 <p>The <code>not</code> keyword applies to the whole media query and returns true if the media query would otherwise return false (such as <code>monochrome</code> on a color display or a screen width of 600px with a <code>min-width: 700px</code> feature query). A <code>not</code> will only negate the media query it is applied to and not to every media query if present in a comma-separated list of media queries. The <code>not</code> keyword cannot be used to negate an individual feature query, only an entire media query. <span style="line-height: 1.572;">For example, the </span><code style="font-size: 14px;">not</code><span style="line-height: 1.572;"> is evaluated last in the following query:</span></p>
 
-<pre class="brush: css" style="font-size: 14px;">@media not all and (monochrome) { ... }
+<pre class="brush: css notranslate" style="font-size: 14px;">@media not all and (monochrome) { ... }
 </pre>
 
 <p>This means that the query is evaluated like this:</p>
 
-<pre class="brush: css" style="font-size: 14px;">@media not (all and (monochrome)) { ... }
+<pre class="brush: css notranslate" style="font-size: 14px;">@media not (all and (monochrome)) { ... }
 </pre>
 
 <p>... rather than like this:</p>
 
-<pre class="brush: css" style="font-size: 14px;">@media (not all) and (monochrome) { ... }</pre>
+<pre class="brush: css notranslate" style="font-size: 14px;">@media (not all) and (monochrome) { ... }</pre>
 
 <p>As another example, look at the following media query:</p>
 
-<pre class="brush: css" style="font-size: 14px;">@media not screen and (color), print and (color)
+<pre class="brush: css notranslate" style="font-size: 14px;">@media not screen and (color), print and (color)
 </pre>
 
 <p>It is evaluated like this:</p>
 
-<pre class="brush: css" style="font-size: 14px;">@media (not (screen and (color))), print and (color)</pre>
+<pre class="brush: css notranslate" style="font-size: 14px;">@media (not (screen and (color))), print and (color)</pre>
 
 <h4 id="only">only</h4>
 
 <p><span style="line-height: 21px;">The </span><code style="font-size: 14px;">only</code><span style="line-height: 21px;"> keyword prevents older browsers that do not support media queries with media features from applying the given styles:</span></p>
 
-<pre class="brush: html">&lt;link rel="stylesheet" media="only screen and (color)" href="example.css" /&gt;
+<pre class="brush: html notranslate">&lt;link rel="stylesheet" media="only screen and (color)" href="example.css" /&gt;
 </pre>
 
-<h3 id="Pseudo-BNF_(for_those_of_you_that_like_that_kind_of_thing)">Pseudo-BNF (for those of you that like that kind of thing)</h3>
+<h3 id="Pseudo-BNF_for_those_of_you_that_like_that_kind_of_thing">Pseudo-BNF (for those of you that like that kind of thing)</h3>
 
-<pre>media_query_list: &lt;media_query&gt; [, &lt;media_query&gt; ]*
+<pre class="notranslate">media_query_list: &lt;media_query&gt; [, &lt;media_query&gt; ]*
 media_query: [[only | not]? &lt;media_type&gt; [ and &lt;expression&gt; ]*]
   | &lt;expression&gt; [ and &lt;expression&gt; ]*
 expression: ( &lt;media_feature&gt; [: &lt;value&gt;]? )
@@ -135,12 +137,12 @@ media_feature: width | min-width | max-width
 
 <p>To apply a style sheet to all color devices:</p>
 
-<pre class="brush: css">@media all and (color) { ... }
+<pre class="brush: css notranslate">@media all and (color) { ... }
 </pre>
 
 <p>To apply a style sheet to devices with at least 4 bits per color component:</p>
 
-<pre class="brush: css">@media all and (min-color: 4) { ... }
+<pre class="brush: css notranslate">@media all and (min-color: 4) { ... }
 </pre>
 
 <h3 id="color-index">color-index</h3>
@@ -155,12 +157,12 @@ media_feature: width | min-width | max-width
 
 <p>To indicate that a style sheet should apply to all devices using indexed color, you can do:</p>
 
-<pre class="brush: css">@media all and (color-index) { ... }
+<pre class="brush: css notranslate">@media all and (color-index) { ... }
 </pre>
 
 <p>To apply a style sheet to indexed color devices with at least 256 colors:</p>
 
-<pre class="brush: html">&lt;link rel="stylesheet" media="all and (min-color-index: 256)" href="http://foo.bar.com/stylesheet.css" /&gt;
+<pre class="brush: html notranslate">&lt;link rel="stylesheet" media="all and (min-color-index: 256)" href="http://foo.bar.com/stylesheet.css" /&gt;
 </pre>
 
 <h3 id="aspect-ratio">aspect-ratio</h3>
@@ -175,7 +177,7 @@ media_feature: width | min-width | max-width
 
 <p>The following selects a special style sheet to use for when the display area is at least as wide as it is high.</p>
 
-<pre class="brush: css">@media screen and (min-aspect-ratio: 1/1) { ... }</pre>
+<pre class="brush: css notranslate">@media screen and (min-aspect-ratio: 1/1) { ... }</pre>
 
 <p>This selects the style when the aspect ratio is either 1:1 or greater. In other words, these styles will only be applied when the viewing area is square or landscape.</p>
 
@@ -191,7 +193,7 @@ media_feature: width | min-width | max-width
 
 <p>The following selects a special style sheet to use for widescreen displays.</p>
 
-<pre class="brush: css">@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) { ... }</pre>
+<pre class="brush: css notranslate">@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) { ... }</pre>
 
 <p>This selects the style when the aspect ratio is either 16:9 or 16:10.</p>
 
@@ -207,7 +209,7 @@ media_feature: width | min-width | max-width
 
 <p>To apply a style sheet to a document when displayed on a screen that is less than 800 pixels long, you can use this:</p>
 
-<pre class="brush: html">&lt;link rel="stylesheet" media="screen and (max-device-height: 799px)" /&gt;
+<pre class="brush: html notranslate">&lt;link rel="stylesheet" media="screen and (max-device-height: 799px)" /&gt;
 </pre>
 
 <h3 id="device-width">device-width</h3>
@@ -222,7 +224,7 @@ media_feature: width | min-width | max-width
 
 <p>To apply a style sheet to a document when displayed on a screen that is less than 800 pixels wide, you can use this:</p>
 
-<pre class="brush: html" style="font-size: 14px;">&lt;link rel="stylesheet" media="screen and (max-device-width: 799px)" /&gt;</pre>
+<pre class="brush: html notranslate" style="font-size: 14px;">&lt;link rel="stylesheet" media="screen and (max-device-width: 799px)" /&gt;</pre>
 
 <h3 id="grid">grid</h3>
 
@@ -236,7 +238,7 @@ media_feature: width | min-width | max-width
 
 <p>To apply a style to handheld devices with a 15-character or narrower display:</p>
 
-<pre class="brush: css">@media handheld and (grid) and (max-width: 15em) { ... }
+<pre class="brush: css notranslate">@media handheld and (grid) and (max-width: 15em) { ... }
 </pre>
 
 <div class="note"><strong>Note:</strong> The "em" unit has a special meaning for grid devices; since the exact width of an "em" can't be determined, 1em is assumed to be the width of one grid cell horizontally, and the height of one cell vertically.</div>
@@ -263,12 +265,12 @@ media_feature: width | min-width | max-width
 
 <p>To apply a style sheet to all monochrome devices:</p>
 
-<pre class="brush: css">@media all and (monochrome) { ... }
+<pre class="brush: css notranslate">@media all and (monochrome) { ... }
 </pre>
 
 <p>To apply a style sheet to monochrome devices with at least 8 bits per pixel:</p>
 
-<pre class="brush: css">@media all and (min-monochrome: 8) { ... }
+<pre class="brush: css notranslate">@media all and (min-monochrome: 8) { ... }
 </pre>
 
 <h3 id="orientation">orientation</h3>
@@ -283,7 +285,7 @@ media_feature: width | min-width | max-width
 
 <p>To apply a style sheet only in portrait orientation:</p>
 
-<pre class="brush: css">@media all and (orientation: portrait) { ... }</pre>
+<pre class="brush: css notranslate">@media all and (orientation: portrait) { ... }</pre>
 
 <div class="note"><strong>Note:</strong> This value does not correspond to actual device orientation. Opening the soft keyboard on most devices in portrait orientation will cause the viewport to become wider than it is tall, thereby causing the browser to use landscape styles instead of portrait.</div>
 
@@ -299,12 +301,12 @@ media_feature: width | min-width | max-width
 
 <p>To apply a style sheet to devices with at least 300 dots per inch of resolution:</p>
 
-<pre class="brush: css">@media print and (min-resolution: 300dpi) { ... }
+<pre class="brush: css notranslate">@media print and (min-resolution: 300dpi) { ... }
 </pre>
 
 <p>To replace the old <span style="font-family: courier new,andale mono,monospace; line-height: normal;">(min-device-pixel-ratio: 2) </span>syntax:</p>
 
-<pre class="brush: css">@media screen and (min-resolution: 2dppx) { ... }</pre>
+<pre class="brush: css notranslate">@media screen and (min-resolution: 2dppx) { ... }</pre>
 
 <h3 id="scan">scan</h3>
 
@@ -318,7 +320,7 @@ media_feature: width | min-width | max-width
 
 <p>To apply a style sheet only to progressive scanning televisions:</p>
 
-<pre class="brush: css">@media tv and (scan: progressive) { ... }
+<pre class="brush: css notranslate">@media tv and (scan: progressive) { ... }
 </pre>
 
 <h3 id="width">width</h3>
@@ -335,18 +337,18 @@ media_feature: width | min-width | max-width
 
 <p>If you want to specify a style sheet for handheld devices, or screen devices with a width greater than 20em, you can use this query:</p>
 
-<pre class="brush: css">@media handheld and (min-width: 20em), screen and (min-width: 20em) { ... }
+<pre class="brush: css notranslate">@media handheld and (min-width: 20em), screen and (min-width: 20em) { ... }
 </pre>
 
 <p>This media query specifies a style sheet that applies to printed media wider than 8.5 inches:</p>
 
-<pre class="brush: html">&lt;link rel="stylesheet" media="print and (min-width: 8.5in)"
+<pre class="brush: html notranslate">&lt;link rel="stylesheet" media="print and (min-width: 8.5in)"
     href="http://foo.com/mystyle.css" /&gt;
 </pre>
 
 <p>This query specifies a style sheet that is usable when the viewport is between 500 and 800 pixels wide:</p>
 
-<pre class="brush: css">@media screen and (min-width: 500px) and (max-width: 800px) { ... }
+<pre class="brush: css notranslate">@media screen and (min-width: 500px) and (max-width: 800px) { ... }
 </pre>
 
 <h2 id="Mozilla-specific_media_features">Mozilla-specific media features</h2>
@@ -398,7 +400,7 @@ media_feature: width | min-width | max-width
 
 <p>Example:</p>
 
-<pre>@media (-webkit-min-device-pixel-ratio: 2), /* Webkit-based browsers */
+<pre class="notranslate">@media (-webkit-min-device-pixel-ratio: 2), /* Webkit-based browsers */
        (min--moz-device-pixel-ratio: 2),    /* Older Firefox browsers (prior to Firefox 16) */
        (min-resolution: 2dppx),             /* The standard way */
        (min-resolution: 192dpi)             /* dppx fallback */ </pre>
@@ -630,8 +632,6 @@ media_feature: width | min-width | max-width
 <p>[3] Supports {{cssxref("&lt;number&gt;")}} values, as per the spec.</p>
 
 <p>[4] <code>tv</code> media type is not supported</p>
-
-<p> </p>
 
 <h2 id="See_also">See also</h2>
 

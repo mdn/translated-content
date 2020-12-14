@@ -12,7 +12,9 @@ tags:
   - 'веб-разработка:инструменты'
 translation_of: Tools/Web_Console
 ---
-<div>{{ToolsSidebar}}</div><p>Веб-консоль:</p>
+<div>{{ToolsSidebar}}</div>
+
+<p>Веб-консоль:</p>
 
 <ol>
  <li>Выводит информацию, связанную с веб-страницей: сетевые запросы, ошибки и предупреждения JavaScript и CSS, а также сообщения об ошибках, предупреждения и информационные сообщения, выдаваемые кодом JavaScript, выполняющимся в контексте страницы;</li>
@@ -140,7 +142,7 @@ translation_of: Tools/Web_Console
  </tbody>
 </table>
 
-<p> </p>
+
 
 <p>Нажав мышкой на сообщение вы увидите следующее окно с более детальной информацией о запросе и ответе на него:</p>
 
@@ -194,7 +196,7 @@ translation_of: Tools/Web_Console
 
 <p><span id="result_box" lang="ru"><span>Тем не менее</span><span>,</span> <span>если</span> <span>какой-то</span> <span>JavaScript код</span> <span>читает что</span> <span>стиль</span><span> был изменен</span><span>,</span> <span>то</span> <span>браузер должен</span> <span>выполнить</span> <span>синхронное</span> <span>переформатирование</span></span><span lang="ru"><span> в порядке вычисленным расчетом стиля</span><span> чтобы вернуться</span><span>.</span> <span>Например</span><span>, код</span><span> как</span> <span>этот хочет  вызовать</span> <span>немедленное</span><span>,</span> <span>синхронное</span><span>,</span> </span><span id="result_box" lang="ru"><span>переформатирование</span></span><span lang="ru"><span>,</span> <span>когда вызовет</span></span> <code>window.getComputedStyle(thing).height</code>:</p>
 
-<pre class="brush: js">var thing = document.getElementById("the-thing");
+<pre class="brush: js notranslate">var thing = document.getElementById("the-thing");
 thing.style.display = "inline-block";
 var thingHeight = window.getComputedStyle(thing).height;</pre>
 
@@ -299,12 +301,12 @@ var thingHeight = window.getComputedStyle(thing).height;</pre>
    <td>
     <p>The argument to <code>error()</code>.</p>
 
-    <pre class="brush: js">
+    <pre class="brush: js notranslate">
 console.error("an error");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7143/api-error.png" style="display: block; margin-left: auto; margin-right: auto;">
     <p>The console will display a full stack trace for errors:</p>
 
-    <pre class="brush: js">
+    <pre class="brush: js notranslate">
 function error() {
   console.error("an error");
 }
@@ -327,12 +329,12 @@ call_error();</pre>
    <td>
     <p>If the assertion succeeds, nothing. If the assertion fails, the argument:</p>
 
-    <pre class="brush: js">
+    <pre class="brush: js notranslate">
 console.assert(false, "My assertion always fails");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7139/api-assert.png" style="display: block; margin-left: auto; margin-right: auto;">
     <p>The console will display a full stack trace for assertions:</p>
 
-    <pre class="brush: js">
+    <pre class="brush: js notranslate">
 function assertion() {
   console.assert(false, "assertion failed");
 }
@@ -364,7 +366,7 @@ call_assertion();</pre>
    <td>
     <p>The argument to <code>warn()</code>.</p>
 
-    <pre class="brush: js">
+    <pre class="brush: js notranslate">
 console.warn("a warning");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7155/api-warn.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -386,7 +388,7 @@ console.warn("a warning");</pre>
    <td>
     <p>The argument to <code>info()</code>.</p>
 
-    <pre class="brush: js">
+    <pre class="brush: js notranslate">
 console.info("some info");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7145/api-info.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -408,7 +410,7 @@ console.info("some info");</pre>
    <td>
     <p>The label supplied, if any, and the number of times this occurrence of <code>count()</code> has been called with the given label:</p>
 
-    <pre class="brush: js">
+    <pre class="brush: js notranslate">
 console.count(user.value);</pre>
 
     <p><img alt="" src="https://mdn.mozillademos.org/files/7359/api-count.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
@@ -419,7 +421,7 @@ console.count(user.value);</pre>
    <td>
     <p>Listing of the object's properties:</p>
 
-    <pre class="brush: js">
+    <pre class="brush: js notranslate">
 var user = document.getElementById('user');
 console.dir(user);</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7157/api-dir.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
@@ -433,10 +435,10 @@ console.dir(user);</pre>
    <td>
     <p>The argument to <code>log()</code>.</p>
 
-    <pre class="brush: js">
+    <pre class="brush: js notranslate">
 console.log("logged");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7147/api-log.png" style="display: block; margin-left: auto; margin-right: auto;">
-    <p> </p>
+
 
     <p>Если аргумент — это узел DOM, консоль выдаст его в виде <a href="/ru/docs/Tools/Web_Console#Highlighting_and_inspecting_DOM_nodes">инспектируемого</a> rich text:</p>
 
@@ -454,7 +456,7 @@ console.log("logged");</pre>
    <td>
     <p>Notification that the specified timer started.</p>
 
-    <pre class="brush: js">
+    <pre class="brush: js notranslate">
 console.time("t");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7149/api-time.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -463,7 +465,7 @@ console.time("t");</pre>
    <td>
     <p>Duration for the specified timer.</p>
 
-    <pre class="brush: js">
+    <pre class="brush: js notranslate">
 console.timeEnd("t");</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7151/api-timeEnd.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -472,7 +474,7 @@ console.timeEnd("t");</pre>
    <td>
     <p>Stack trace:</p>
 
-    <pre class="brush: js">
+    <pre class="brush: js notranslate">
 console.trace();</pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7159/api-trace.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -487,7 +489,7 @@ console.trace();</pre>
 
 <p>Начиная с Firefox 31, вы можете использовать спецификатор формата <code>"%c"</code> для стилизации консольных сообщений:</p>
 
-<pre class="brush: js">console.log("%cMy stylish message", "color: red; font-style: italic");</pre>
+<pre class="brush: js notranslate">console.log("%cMy stylish message", "color: red; font-style: italic");</pre>
 
 <div><img alt="" src="https://mdn.mozillademos.org/files/7739/console-style.png" style="display: block; height: 52px; margin-left: auto; margin-right: auto; width: 293px;"></div>
 
@@ -534,21 +536,21 @@ console.trace();</pre>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/7377/commandline-executejs.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<h3 id="Accessing_variables">Accessing variables</h3>
+<h3 id="Получение_переменных">Получение переменных</h3>
 
-<p>You can access variables defined in the page, both built-in variables like <code>window</code> and variables added by JavaScript like <code>jQuery</code>:</p>
+<p>Вы можете получить доступ к переменным на странице; это могут быть как внутренние переменные например в объекте <code>window</code> , так и переменные, добавленные с помощью Javascript кода - например с помощью <code>jQuery</code>:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/7367/commandline-accessbuiltin.png" style="display: block; margin-left: auto; margin-right: auto;"><img alt="" src="https://mdn.mozillademos.org/files/7369/commandline-accesspageadded.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<h3 id="Автозавершение">Автозавершение</h3>
+<h3 id="Автоподстановка">Автоподстановка</h3>
 
-<p>The command line has autocomplete: enter the first few letters and a popup appears with possible completions:</p>
+<p>У командной строки есть функционал автоподстановки: начните вводить несколько начальных букв - и появится всплывающее окно с возможными вариантами завершения команды:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7375/commandline-autocomplete.png" style="display: block; margin-left: auto; margin-right: auto;">Type <kbd>Enter</kbd> or <kbd>Tab</kbd> to accept the suggestion, use the up/down arrows to move to a different suggestion, or just keep typing if you don't like any of the suggestions.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7375/commandline-autocomplete.png" style="display: block; margin-left: auto; margin-right: auto;">Нажмите <kbd>Enter</kbd> или <kbd>Tab</kbd>, чтобы принять нужную подсказку, перемещайтесь вверх/вниз с помощью стрелок к другим вариантам подсказок или просто продолжайте набирать текст, если Вам не подходит ни один из вариантов.</p>
 
-<p>The console suggests completions from the scope of the currently executing stack frame. This means that if you've hit a breakpoint in a function you get autocomplete for objects local to the function.</p>
+<p>Консоль выдает подсказки из области видимости текущего активного фрейма. Это значит, что если Вы уже достигли точки останова в функции, то у Вас будут доступны автоподстановки только для объектов, которые находятся в одной области видимости с этой функцией.</p>
 
-<p>You get autocomplete suggestions for array elements, as well:</p>
+<p>Вы можете получать такие же подсказки для элементов массива:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/7383/commandline-arrayautocomplete.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
@@ -566,30 +568,30 @@ console.trace();</pre>
 
 <h3 id="Работа_с_iframes">Работа с iframes</h3>
 
-<p>If a page contains embedded <a href="/ru/docs/Web/HTML/Element/iframe">iframes</a>, you can use the <code>cd()</code> command to change the console's scope to a specific iframe, and then you can execute functions defined in the document hosted by that iframe. There are three ways to select an iframe using <code>cd()</code>:</p>
+<p>Если страница содержит встроенные <a href="/ru/docs/Web/HTML/Element/iframe">iframes</a>, Вы можете использовать команду <code>cd()</code> чтобы изменить область видимости в консоли на область определенного iframe, и после этого Вы сможете выполнять функции, которые содержит объект <a href="https://developer.mozilla.org/ru/docs/Web/API/Document">document</a> в этом iframe. Существует три способа выбрать iframe используя <code>cd()</code>:</p>
 
-<p>You can pass the iframe DOM element:</p>
+<p>Вы можете передать DOM-элемент для определенного iframe :</p>
 
-<pre class="brush: js">var frame = document.getElementById("frame1");
+<pre class="brush: js notranslate">var frame = document.getElementById("frame1");
 cd(frame);</pre>
 
-<p>You can pass a CSS selector that matches the iframe:</p>
+<p>Вы можете передать CSS селектор для определенного iframe:</p>
 
-<pre class="brush: js">cd("#frame1");</pre>
+<pre class="brush: js notranslate">cd("#frame1");</pre>
 
-<p>You can pass the iframe's global window object:</p>
+<p>Вы можете передать глобальный объект <a href="https://developer.mozilla.org/ru/docs/Web/API/Window">Window</a> для определенного iframe:</p>
 
-<pre class="brush: js">var frame = document.getElementById("frame1");
+<pre class="brush: js notranslate">var frame = document.getElementById("frame1");
 cd(frame.contentWindow);
 </pre>
 
-<p>To switch the context back to the top-level window, call <code>cd()</code> with no arguments:</p>
+<p>Для переключения контекста видимости обратно к окну верхнего уровня, введите <code>cd()</code> без аргументов:</p>
 
-<pre class="brush: js">cd();</pre>
+<pre class="brush: js notranslate">cd();</pre>
 
-<p>For example, suppose we have a document that embeds an iframe:</p>
+<p>Предположим у нас есть документ, который содержит iframe:</p>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -599,9 +601,9 @@ cd(frame.contentWindow);
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>The iframe defines a new function:</p>
+<p>В этом iframe определена новая функция:</p>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -615,13 +617,13 @@ cd(frame.contentWindow);
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>You can switch context to the iframe like this:</p>
+<p>Вы можете переключиться на контекст iframe например так:</p>
 
-<pre class="brush: js">cd("#frame1");</pre>
+<pre class="brush: js notranslate">cd("#frame1");</pre>
 
-<p>Now you'll see that the global window's document is the iframe:</p>
+<p>Сейчас Вы сможете видеть, что глобальный объект <a href="https://developer.mozilla.org/ru/docs/Web/API/Window">Window</a> это теперь наш iframe:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7355/web-console-iframe-document.png" style="display: block; height: 75px; margin-left: auto; margin-right: auto; width: 632px;">And you can call the function defined in the iframe:</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7355/web-console-iframe-document.png" style="display: block; height: 75px; margin-left: auto; margin-right: auto; width: 632px;">и сможете выполнить вызов функции, определенной в этом iframe:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/7357/web-console-iframe-function.png" style="display: block; height: 77px; margin-left: auto; margin-right: auto; width: 632px;"></p>
 
