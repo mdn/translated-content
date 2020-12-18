@@ -59,8 +59,6 @@
 /zh-CN/docs/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90	/zh-CN/docs/junks/%E8%BF%99%E6%98%AF%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90
 /zh-CN/docs/%E9%80%9A%E8%BF%87CVS%E8%8E%B7%E5%8F%96%E6%BA%90%E7%A0%81	/zh-CN/docs/Mozilla/Developer_guide/Source_Code/CVS
 /zh-CN/docs/%E9%80%9A%E8%BF%87Mercurial%E8%8E%B7%E5%8F%96%E6%BA%90%E7%A0%81	/zh-CN/docs/temppath
-/zh-CN/docs/%E9%99%84%E5%8A%A0%E7%BB%84%E4%BB%B6	undefined
-/zh-CN/docs/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1JavaScript%E5%85%A5%E9%97%A8	undefined
 /zh-CN/docs/%E9%A1%B9%E7%9B%AE%E8%AF%B4%E6%98%8E	/zh-CN/docs/junks/%E9%A1%B9%E7%9B%AE%E8%AF%B4%E6%98%8E
 /zh-CN/docs/%E9%A1%B9%E7%9B%AE%E8%AF%B4%E6%98%8E/Page_Title	/zh-CN/docs/junks/Page_Title
 /zh-CN/docs/%E9%A1%B9%E7%9B%AE:%E6%9C%AC%E5%9C%B0%E5%8C%96%E9%A1%B9%E7%9B%AE	/zh-CN/docs/Project:Localization_Projects
@@ -606,7 +604,6 @@
 /zh-CN/docs/DOM/event.button	/zh-CN/docs/Web/API/event.button
 /zh-CN/docs/DOM/event.cancelBubble	/zh-CN/docs/Web/API/UIEvent/cancelBubble
 /zh-CN/docs/DOM/event.cancelable	/zh-CN/docs/Web/API/Event/cancelable
-/zh-CN/docs/DOM/event.charCode	undefined
 /zh-CN/docs/DOM/event.currentTarget	/zh-CN/docs/Web/API/Event/currentTarget
 /zh-CN/docs/DOM/event.defaultPrevented	/zh-CN/docs/Web/API/Event/defaultPrevented
 /zh-CN/docs/DOM/event.isChar	/zh-CN/docs/Web/API/UIEvent/isChar
@@ -1435,7 +1432,6 @@
 /zh-CN/docs/QA	/zh-CN/docs/%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81
 /zh-CN/docs/RDF	/zh-CN/docs/Web/RDF
 /zh-CN/docs/RDF_%E7%AE%80%E4%BB%8B	/zh-CN/docs/junks/RDF_%E7%AE%80%E4%BB%8B
-/zh-CN/docs/Rhino_documentation	undefined
 /zh-CN/docs/Rich-Text_Editing_in_Mozilla	/zh-CN/docs/Web/Guide/HTML/Content_Editable/Rich-Text_Editing_in_Mozilla
 /zh-CN/docs/Roll_your_own_browser_-_An_embedding_HowTo_(external)	/zh-CN/docs/junks/Gecko/Embedding_Mozilla/Roll_your_own_browser_-_An_embedding_HowTo_(external)
 /zh-CN/docs/SVG	/zh-CN/docs/Web/SVG
@@ -1465,7 +1461,6 @@
 /zh-CN/docs/The_Mozilla_platform_Mozilla%E5%B9%B3%E5%8F%B0	/zh-CN/docs/junks/Mozilla%E5%B9%B3%E5%8F%B0
 /zh-CN/docs/Themes	/zh-CN/docs/junks/Themes
 /zh-CN/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
-/zh-CN/docs/Toolkit_API/Official_References	undefined
 /zh-CN/docs/Toolkit_API:Official_References	/zh-CN/docs/Toolkit_API/Official_References
 /zh-CN/docs/Tools-840092-dup/Remote_Debugging	/zh-CN/docs/Tools/Remote_Debugging
 /zh-CN/docs/Tools-840092-dup/Tools_Toolbox	/zh-CN/docs/Tools/Tools_Toolbox

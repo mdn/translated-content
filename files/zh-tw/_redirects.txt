@@ -681,7 +681,6 @@
 /zh-TW/docs/Web/JavaScript/JavaScript_typed_arrays/ArrayBuffer/prototype	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype
 /zh-TW/docs/Web/JavaScript/New_in_JavaScript/JavaScript_1.6_%E6%96%B0%E9%AE%AE%E4%BA%8B	/zh-TW/docs/Web/JavaScript/New_in_JavaScript/1.6
 /zh-TW/docs/Web/JavaScript/New_in_JavaScript/JavaScript_1.7_%E6%96%B0%E9%AE%AE%E4%BA%8B	/zh-TW/docs/Web/JavaScript/New_in_JavaScript/1.7
-/zh-TW/docs/Web/JavaScript/Obsolete_Pages	undefined
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Control_flow_and_error_handling	/zh-TW/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Expressions_and_Operators	/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /zh-TW/docs/Web/JavaScript/Obsolete_Pages/Keyed_collections	/zh-TW/docs/Web/JavaScript/Guide/Keyed_collections

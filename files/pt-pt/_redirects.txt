@@ -622,7 +622,6 @@
 /pt-PT/docs/XForms:Controles_Customizados	/pt-PT/docs/XForms/Controles_Customizados
 /pt-PT/docs/XML:Comunidade	/pt-PT/docs/XML/Comunidade
 /pt-PT/docs/XML:Outros_Recursos	/pt-PT/docs/XML/Outros_Recursos
-/pt-PT/docs/XPInstall	undefined
 /pt-PT/docs/XPath	/pt-PT/docs/Web/XPath
 /pt-PT/docs/XPath:Eixos	/pt-PT/docs/XPath/Eixos
 /pt-PT/docs/XPath:Fun%C3%A7%C3%B5es	/pt-PT/docs/XPath/Fun%C3%A7%C3%B5es
