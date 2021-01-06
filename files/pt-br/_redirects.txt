@@ -294,8 +294,8 @@
 /pt-BR/docs/Web/Events/resize	/pt-BR/docs/Web/API/Window/resize_event
 /pt-BR/docs/Web/Events/scroll	/pt-BR/docs/Web/API/Document/scroll_event
 /pt-BR/docs/Web/Events/touchstart	/pt-BR/docs/Web/API/Element/touchstart_event
-/pt-BR/docs/Web/Guide/CSS	/pt-BR/docs/Learn/CSS
-/pt-BR/docs/Web/Guide/HTML	/pt-BR/docs/Learn/HTML
+/pt-BR/docs/Web/Guide/CSS	/pt-BR/docs/Aprender/CSS
+/pt-BR/docs/Web/Guide/HTML	/pt-BR/docs/Aprender/HTML
 /pt-BR/docs/Web/HTML/Element/%3Cb%3E	/pt-BR/docs/Web/HTML/Element/b
 /pt-BR/docs/Web/HTML/Elementos_nlock-level	/pt-BR/docs/Web/HTML/Elementos_block-level
 /pt-BR/docs/Web/HTML/HTML5/HTML5_element_list	/pt-BR/docs/Web/HTML/Element
