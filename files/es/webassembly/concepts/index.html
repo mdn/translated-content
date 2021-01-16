@@ -111,10 +111,10 @@ translation_of: WebAssembly/Concepts
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: There are future plans to <a href="https://github.com/WebAssembly/gc/blob/master/README.md">allow WebAssembly to call Web APIs directly</a>.</p>
+<p><strong>Nota</strong>: Hay planes futuros para <a href="https://github.com/WebAssembly/gc/blob/master/README.md">permitir WebAssembly llamar directamente a la API Web</a>.</p>
 </div>
 
-<p>The JavaScript glue code is not as simple as you might imagine. For a start, Emscripten implements popular C/C++ libraries like <a href="https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer">SDL</a>, <a href="https://en.wikipedia.org/wiki/OpenGL">OpenGL</a>, <a href="https://en.wikipedia.org/wiki/OpenAL">OpenAL</a>, and parts of <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a>. These libraries are implemented in terms of Web APIs and thus each one requires some JavaScript glue code to connect WebAssembly to the underlying Web API.</p>
+<p>El código pegamento de Javascript, no es tan sencillo, como puede parecer. Empezando por que Emscripten implementa librerias de C/C++ como <a href="https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer">SDL</a>, <a href="https://en.wikipedia.org/wiki/OpenGL">OpenGL</a>, <a href="https://en.wikipedia.org/wiki/OpenAL">OpenAL</a>, y partes de <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a>. Estas librerias están implementadoas en terminos de APIs Web y por eso cada una necesita algún código pegamento de Javascirpt, para conectarlo con WebAssembly a la API Web subyacente.</p>
 
 <p>So part of the glue code is implementing the functionality of each respective library used by the C/C++ code. The glue code also contains the logic for calling the above-mentioned WebAssembly JavaScript APIs to fetch, load and run the .wasm file.</p>
 
