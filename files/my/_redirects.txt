@@ -1,3 +1,3 @@
 # FROM-URL	TO-URL
-/my/docs/Learn/CSS/CSS-%E1%80%99%E1%80%AD%E1%80%90%E1%80%BA%E1%80%86%E1%80%80%E1%80%BA	/en-US/docs/Learn/CSS/First_steps
+/my/docs/Learn/CSS/CSS-မိတ်ဆက်	/en-US/docs/Learn/CSS/First_steps
 /my/docs/Web/Guide/HTML	/my/docs/Learn/HTML

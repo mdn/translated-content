@@ -1,9 +1,6 @@
 # FROM-URL	TO-URL
-/vi/docs/Apps	/vi/docs/Web/Apps
-/vi/docs/Apps/Quickstart	/vi/docs/Web/Apps/Quickstart
 /vi/docs/CSS	/vi/docs/Web/CSS
 /vi/docs/CSS/background-color	/vi/docs/Web/CSS/background-color
-/vi/docs/Developer_Guide	/vi/docs/Mozilla/Developer_guide
 /vi/docs/HTML	/vi/docs/Web/HTML
 /vi/docs/Learn/CSS/Introduction_to_CSS	/en-US/docs/Learn/CSS/First_steps
 /vi/docs/Learn/CSS/Introduction_to_CSS/Box_model	/en-US/docs/Learn/CSS/Building_blocks/The_box_model

@@ -19,7 +19,6 @@
 /he/docs/HTML/Element/figure	/he/docs/Web/HTML/Element/figure
 /he/docs/HTML/Element/font	/he/docs/Web/HTML/Element/font
 /he/docs/HTML/Element/footer	/he/docs/Web/HTML/Element/footer
-/he/docs/HTML/Element/form	/he/docs/Web/HTML/Element/form
 /he/docs/HTML/Element/head	/he/docs/Web/HTML/Element/head
 /he/docs/HTML/Element/header	/he/docs/Web/HTML/Element/header
 /he/docs/HTML/Element/hgroup	/he/docs/Web/HTML/Element/hgroup
@@ -31,18 +30,11 @@
 /he/docs/HTML/Element/nav	/he/docs/Web/HTML/Element/nav
 /he/docs/HTML/Element/p	/he/docs/Web/HTML/Element/p
 /he/docs/HTML/Element/section	/he/docs/Web/HTML/Element/section
-/he/docs/HTML/Element/span	/he/docs/Web/HTML/Element/span
 /he/docs/HTML/Element/strong	/he/docs/Web/HTML/Element/strong
 /he/docs/HTML/Element/table	/he/docs/Web/HTML/Element/table
 /he/docs/HTML/Element/time	/he/docs/Web/HTML/Element/time
 /he/docs/HTML/Element/title	/he/docs/Web/HTML/Element/title
 /he/docs/JavaScript	/he/docs/Web/JavaScript
-/he/docs/JavaScript/%D7%AA%D7%99%D7%A2%D7%95%D7%93_JavaScript	/he/docs/Web/JavaScript/%D7%AA%D7%99%D7%A2%D7%95%D7%93_JavaScript
-/he/docs/JavaScript/%D7%AA%D7%99%D7%A2%D7%95%D7%93_JavaScript/%D7%90%D7%95%D7%91%D7%99%D7%99%D7%A7%D7%98%D7%99%D7%9D_%D7%92%D7%9C%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%9D	/he/docs/Web/JavaScript/%D7%AA%D7%99%D7%A2%D7%95%D7%93_JavaScript/%D7%90%D7%95%D7%91%D7%99%D7%99%D7%A7%D7%98%D7%99%D7%9D_%D7%92%D7%9C%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%9D
-/he/docs/JavaScript/%D7%AA%D7%99%D7%A2%D7%95%D7%93_JavaScript/%D7%90%D7%95%D7%91%D7%99%D7%99%D7%A7%D7%98%D7%99%D7%9D_%D7%92%D7%9C%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%9D/Boolean	/he/docs/Web/JavaScript/%D7%AA%D7%99%D7%A2%D7%95%D7%93_JavaScript/%D7%90%D7%95%D7%91%D7%99%D7%99%D7%A7%D7%98%D7%99%D7%9D_%D7%92%D7%9C%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%9D/Boolean
-/he/docs/JavaScript/%D7%AA%D7%99%D7%A2%D7%95%D7%93_JavaScript/%D7%90%D7%95%D7%91%D7%99%D7%99%D7%A7%D7%98%D7%99%D7%9D_%D7%92%D7%9C%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%9D/Boolean/constructor	/he/docs/Web/JavaScript/%D7%AA%D7%99%D7%A2%D7%95%D7%93_JavaScript/%D7%90%D7%95%D7%91%D7%99%D7%99%D7%A7%D7%98%D7%99%D7%9D_%D7%92%D7%9C%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%9D/Boolean/constructor
-/he/docs/JavaScript/%D7%AA%D7%99%D7%A2%D7%95%D7%93_JavaScript/%D7%90%D7%95%D7%91%D7%99%D7%99%D7%A7%D7%98%D7%99%D7%9D_%D7%92%D7%9C%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%9D/Boolean/prototype	/he/docs/Web/JavaScript/%D7%AA%D7%99%D7%A2%D7%95%D7%93_JavaScript/%D7%90%D7%95%D7%91%D7%99%D7%99%D7%A7%D7%98%D7%99%D7%9D_%D7%92%D7%9C%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%9D/Boolean/prototype
-/he/docs/JavaScript/%D7%AA%D7%99%D7%A2%D7%95%D7%93_JavaScript/%D7%90%D7%95%D7%91%D7%99%D7%99%D7%A7%D7%98%D7%99%D7%9D_%D7%92%D7%9C%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%9D/Boolean/toSource	/he/docs/Web/JavaScript/%D7%AA%D7%99%D7%A2%D7%95%D7%93_JavaScript/%D7%90%D7%95%D7%91%D7%99%D7%99%D7%A7%D7%98%D7%99%D7%9D_%D7%92%D7%9C%D7%95%D7%91%D7%9C%D7%99%D7%99%D7%9D/Boolean/toSource
 /he/docs/MDN/Getting_started	/he/docs/MDN/Contribute/Getting_started
 /he/docs/Mozilla_MathML_Project/Start-redirect-1	/he/docs/Mozilla_MathML_Project/Start
 /he/docs/Web/Guide/HTML	/he/docs/Learn/HTML
