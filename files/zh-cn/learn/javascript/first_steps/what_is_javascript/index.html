@@ -42,13 +42,13 @@ translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 
 <p dir="ltr">这三层依次建立，秩序井然。以文本标签(text label)的简单示例。首先用 HTML 将文本标记起来，从而赋予它结构和目的：</p>
 
-<pre class="brush: html notranslate" dir="rtl">&lt;p&gt;玩家1：小明&lt;/p&gt;</pre>
+<pre class="brush: html notranslate">&lt;p&gt;玩家1：小明&lt;/p&gt;</pre>
 
 <p dir="ltr">玩家1：小明</p>
 
 <p dir="ltr">然后我们可以为它加一点 CSS 让它更好看：</p>
 
-<pre class="brush: css notranslate" dir="rtl">p {
+<pre class="brush: css notranslate">p {
   font-family: sans-serif, '黑体';
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -92,7 +92,7 @@ p {
 
 <p dir="ltr">最后，我们可以再加上一些 JavaScript 来实现动态行为：</p>
 
-<pre class="brush: js notranslate" dir="rtl">const para = document.querySelector('p');
+<pre class="brush: js notranslate">const para = document.querySelector('p');
 
 para.addEventListener('click', updateName);
 
@@ -210,7 +210,7 @@ function updateName() {
 
 <p dir="ltr">当浏览器执行到一段 JavaScript 代码时，通常会按从上往下的顺序执行这段代码。这意味着你需要注意代码书写的顺序。比如，我们回到第一个例子中的 JavaScript 代码：</p>
 
-<pre class="brush: js notranslate" dir="rtl">const para = document.querySelector('p');
+<pre class="brush: js notranslate">const para = document.querySelector('p');
 
 para.addEventListener('click', updateName);
 
@@ -324,13 +324,13 @@ const buttons <span class="operator token">=</span> document<span class="punctua
 
 <p dir="ltr">注意，有时候你会遇到在 HTML 中存在着一丝真实的 JavaScript 代码。它或许看上去像这样：</p>
 
-<pre class="brush: js example-bad line-numbers  language-js notranslate" dir="rtl"><code class="language-js"><span class="keyword token">function</span> <span class="function token">createParagraph</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js example-bad line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">createParagraph</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
   const para <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">'p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
   para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'你点击了这个按钮！'</span><span class="punctuation token">;</span>
   document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>para<span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="punctuation token">}</span></code></pre>
 
-<pre class="brush: html example-bad notranslate" dir="rtl">&lt;button onclick="createParagraph()"&gt;点我呀&lt;/button&gt;</pre>
+<pre class="brush: html example-bad notranslate">&lt;button onclick="createParagraph()"&gt;点我呀&lt;/button&gt;</pre>
 
 <p dir="ltr">你可以在下面尝试这个版本的 demo。</p>
 
@@ -366,7 +366,7 @@ const buttons <span class="operator token">=</span> document<span class="punctua
 
 <p dir="ltr">可以使用纯 JavaScript 结构来通过一个指令选取所有按钮。下文的这段代码即实现了这一目的：</p>
 
-<pre class="brush: js notranslate" dir="rtl">const buttons = document.querySelectorAll('button');
+<pre class="brush: js notranslate">const buttons = document.querySelectorAll('button');
 
 for(let i = 0; i &lt; buttons.length ; i++) {
   buttons[i].addEventListener('click', createParagraph);
@@ -386,7 +386,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p dir="ltr">“内部”示例使用了以下结构：</p>
 
-<pre class="brush: js notranslate" dir="rtl">document.addEventListener("DOMContentLoaded", function() {
+<pre class="brush: js notranslate">document.addEventListener("DOMContentLoaded", function() {
   . . .
 });</pre>
 
@@ -394,7 +394,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p dir="ltr">“外部”示例中使用了 JavaScript 的一项现代技术（<code>async</code> “异步”属性）来解决这一问题，它告知浏览器在遇到 <code>&lt;script&gt;</code> 元素时不要中断后续 HTML 内容的加载。</p>
 
-<pre class="brush: html notranslate" dir="rtl">&lt;script src="script.js" async&gt;&lt;/script&gt;</pre>
+<pre class="brush: html notranslate">&lt;script src="script.js" async&gt;&lt;/script&gt;</pre>
 
 <p dir="ltr">上述情况下，脚本和 HTML 将一并加载，代码将顺利运行。</p>
 
@@ -412,7 +412,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p dir="ltr">比如，如果你的页面要加载以下三个脚本：</p>
 
-<pre class="brush: html notranslate" dir="rtl">&lt;script async src="js/vendor/jquery.js"&gt;&lt;/script&gt;
+<pre class="brush: html notranslate">&lt;script async src="js/vendor/jquery.js"&gt;&lt;/script&gt;
 
 &lt;script async src="js/script2.js"&gt;&lt;/script&gt;
 
@@ -455,7 +455,7 @@ for(let i = 0; i &lt; buttons.length ; i++) {
 
 <p dir="ltr">比如说，我们可以这样为上一个 demo 添加注释：</p>
 
-<pre class="brush: js notranslate" dir="rtl">// 函数：创建一个新的段落并添加至 HTML body 底部。
+<pre class="brush: js notranslate">// 函数：创建一个新的段落并添加至 HTML body 底部。
 function createParagraph() {
   let para = document.createElement('p');
   para.textContent = '你点了这个按钮！';
