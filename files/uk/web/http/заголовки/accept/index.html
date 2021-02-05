@@ -5,20 +5,20 @@ translation_of: Web/HTTP/Headers/Accept
 ---
 <div><font><font>{{HTTPSidebar}}</font></font></div>
 
-<p><font><font>的</font></font><strong><code>Accept</code></strong><font><font>请求的HTTP标头通告哪些内容类型，表示为</font></font><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types"><font><font>MIME类型</font></font></a><font><font>，客户端是能够理解的。</font><font>使用</font></font><a href="/en-US/docs/Web/HTTP/Content_negotiation"><font><font>内容协商</font></font></a><font><font>，服务器然后选择其中一个提议，使用它并通过{{HTTPHeader（“Content-Type”）}}响应标头通知客户端它的选择。</font><font>浏览器根据请求完成的上下文为此标头设置了足够的值：在获取CSS样式表时，为请求设置的值与获取图像，视频或脚本时的值不同。</font></font></p>
+<p><font><font>的</font></font><strong><code>Accept</code></strong><font><font>请求的HTTP标头通告哪些内容类型，表示为</font></font><a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types"><font><font>MIME类型</font></font></a><font><font>，客户端是能够理解的。</font><font>使用</font></font><a href="/en-US/docs/Web/HTTP/Content_negotiation"><font><font>内容协商</font></font></a><font><font>，服务器然后选择其中一个提议，使用它并通过{{HTTPHeader("Content-Type")}}响应标头通知客户端它的选择。</font><font>浏览器根据请求完成的上下文为此标头设置了足够的值：在获取CSS样式表时，为请求设置的值与获取图像，视频或脚本时的值不同。</font></font></p>
 
 <table class="properties">
  <tbody>
   <tr>
    <th scope="row"><font><font>标题类型</font></font></th>
-   <td><font><font>{{词汇表（“请求标题”）}}</font></font></td>
+   <td><font><font>{{词汇表("请求标题")}}</font></font></td>
   </tr>
   <tr>
-   <th scope="row"><font><font>{{词汇表（“禁止标题名称”）}}</font></font></th>
+   <th scope="row"><font><font>{{词汇表("禁止标题名称")}}</font></font></th>
    <td><font><font>没有</font></font></td>
   </tr>
   <tr>
-   <th scope="row"><font><font>{{词汇表（“简单标题”，“CORS-safelisted request-header”）}}</font></font></th>
+   <th scope="row"><font><font>{{词汇表("简单标题”，“CORS-safelisted request-header")}}</font></font></th>
    <td><font><font>是</font></font></td>
   </tr>
  </tbody>
@@ -30,7 +30,7 @@ translation_of: Web/HTTP/Headers/Accept
 接受：&lt;MIME_type&gt; / *</font></font><font><font>
 接受：* / *</font></font>
 <font><font>
-//多种类型，使用{{词汇表（“质量值”，“质量值”）}}语法加权：</font></font><font><font>
+//多种类型，使用{{词汇表("质量值”，“质量值")}}语法加权：</font></font><font><font>
 接受：text / html，application / xhtml + xml，application / xml; q = 0.9，* / *; q = 0.8</font></font></pre>
 
 <h2 id="指令"><font><font>指令</font></font></h2>
@@ -64,7 +64,7 @@ translation_of: Web/HTTP/Headers/Accept
    <th scope="col"><font><font>标题</font></font></th>
   </tr>
   <tr>
-   <td><font><font>{{RFC（“7231”，“接受”，“5.3.2”）}}</font></font></td>
+   <td><font><font>{{RFC("7231”，“接受”，“5.3.2")}}</font></font></td>
    <td><font><font>超文本传输​​协议（HTTP / 1.1）：语义和上下文</font></font></td>
   </tr>
  </tbody>
@@ -74,12 +74,12 @@ translation_of: Web/HTTP/Headers/Accept
 
 <p class="hidden"><font><font>此页面中的兼容性表是根据结构化数据生成的。</font><font>如果您想为数据做出贡献，请查看</font></font><a href="https://github.com/mdn/browser-compat-data"><font><font>https://github.com/mdn/browser-compat-data</font></font></a><font><font>并向我们​​发送拉取请求。</font></font></p>
 
-<p><font><font>{{COMPAT（ “http.headers.Accept”）}}</font></font></p>
+<p><font><font>{{COMPAT("http.headers.Accept")}}</font></font></p>
 
 <h2 id="也可以看看"><font><font>也可以看看</font></font></h2>
 
 <ul>
  <li><font><font>HTTP </font></font><a href="/en-US/docs/Web/HTTP/Content_negotiation"><font><font>内容协商</font></font></a></li>
- <li><font><font>内容协商结果的标头：{{HTTPHeader（“Content-Type”）}}</font></font></li>
- <li><font><font>其他类似的标头：{{HTTPHeader（“TE”）}}，{{HTTPHeader（“Accept-Encoding”）}}，{{HTTPHeader（“Accept-Charset”）}}，{{HTTPHeader（“Accept-Language” ）}}</font></font></li>
+ <li><font><font>内容协商结果的标头：{{HTTPHeader("Content-Type")}}</font></font></li>
+ <li><font><font>其他类似的标头：{{HTTPHeader("TE")}}，{{HTTPHeader("Accept-Encoding")}}，{{HTTPHeader("Accept-Charset")}}，{{HTTPHeader("Accept-Language")}}</font></font></li>
 </ul>

@@ -3,13 +3,13 @@ title: grid-template
 slug: Web/CSS/grid-template
 translation_of: Web/CSS/grid-template
 ---
-<p><font><font>的</font></font><strong><code>grid-template</code></strong><font><font>CSS屬性是一個</font></font><a href="/en-US/docs/Web/CSS/Shorthand_properties"><font><font>速記屬性</font></font></a><font><font>，用於定義{{詞彙表（“網格列”，“網格列”）}}，{{詞彙表（“網格行”，“行”）}}，和{{詞彙表（“格狀區“，” area“）}}。</font></font></p>
+<p><font><font>的</font></font><strong><code>grid-template</code></strong><font><font>CSS屬性是一個</font></font><a href="/en-US/docs/Web/CSS/Shorthand_properties"><font><font>速記屬性</font></font></a><font><font>，用於定義{{詞彙表("網格列”，“網格列")}}，{{詞彙表("網格行”，“行")}}，和{{詞彙表（“格狀區“，” area“）}}。</font></font></p>
 
-<div><font><font>{{EmbedInteractiveExample（“ pages / css / grid-template.html”）}}</font></font></div>
+<div><font><font>{{EmbedInteractiveExample("pages / css / grid-template.html")}}</font></font></div>
 
 <p class="hidden"><font><font>該交互式示例的源存儲在GitHub存儲庫中。</font><font>如果您想為交互式示例項目做出貢獻，請克隆</font></font><a href="https://github.com/mdn/interactive-examples"><font><font>https://github.com/mdn/interactive-examples</font></font></a><font><font>並向我們發送請求請求。</font></font></p>
 
-<p><font><font>作者可以為長期屬性設置值：{{cssxref（“ grid-template-rows”）}}，{{cssxref（“ grid-template-columns”）}}和{{cssxref（“ grid-template-areas “）}}。</font></font></p>
+<p><font><font>作者可以為長期屬性設置值：{{cssxref("grid-template-rows")}}，{{cssxref("grid-template-columns")}}和{{cssxref（“ grid-template-areas “）}}。</font></font></p>
 
 <h2 id="句法"><font><font>句法</font></font></h2>
 
@@ -41,9 +41,9 @@ grid-template: unset;
 
 <dl>
  <dt><code>none</code></dt>
- <dd><font><font>是將所有三個長期屬性設置為的關鍵字</font></font><code>none</code><font><font>，表示沒有顯式網格。</font><font>沒有命名的網格區域。</font><font>行和列將隱式生成；</font><font>它們的大小將由{{cssxref（“ grid-auto-rows”）}}和{{cssxref（“ grid-auto-columns”）}}屬性確定。</font></font></dd>
+ <dd><font><font>是將所有三個長期屬性設置為的關鍵字</font></font><code>none</code><font><font>，表示沒有顯式網格。</font><font>沒有命名的網格區域。</font><font>行和列將隱式生成；</font><font>它們的大小將由{{cssxref("grid-auto-rows")}}和{{cssxref("grid-auto-columns")}}屬性確定。</font></font></dd>
  <dt><code>&lt;'grid-template-rows'&gt; / &lt;'grid-template-columns'&gt;</code></dt>
- <dd><font><font>將{{cssxref（“ grid-template-rows”）}}和{{cssxref（“ grid-template-columns”）}}設置為指定值，並設置{{cssxref（“ grid-template-areas”）} }至</font></font><code>none</code><font><font>。</font></font></dd>
+ <dd><font><font>將{{cssxref("grid-template-rows")}}和{{cssxref("grid-template-columns")}}設置為指定值，並設置{{cssxref（“ grid-template-areas”）} }至</font></font><code>none</code><font><font>。</font></font></dd>
  <dt><code>[ &lt;line-names&gt;? &lt;string&gt; &lt;track-size&gt;? &lt;line-names&gt;? ]+ [ / &lt;explicit-track-list&gt; ]?</code></dt>
  <dd>Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in <code>auto</code> for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or <code>none</code>, if not specified).<br>
 
