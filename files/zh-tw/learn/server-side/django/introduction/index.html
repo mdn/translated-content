@@ -236,7 +236,7 @@ def index(request):
 
 <p>模板系統允許您使用佔位符指定輸出文檔的結構，以便在生成頁面時填充數據。模板通常用於創建HTML，但也可以創建其他類型的文檔。 Django支持其本機模板系統，和另一個流行的Python庫，名為 Jinja2（如果需要，它也可以支持其他系統）。</p>
 
-<p>代碼片段，顯示了上一節中<code>render（）</code>函數調用的HTML模板的外觀。這個模板的編寫假設它在渲染時可以訪問名為<code>youngest_teams</code>的列表變量（包含在上面<code>render（）</code>函數中的上下文變量<code>context</code>中）。在HTML框架內部，我們有一個表達式，首先檢查<code>youngest_teams</code>變量是否存在，然後在<code>for</code>循環中迭代它。在每次迭代中，模板在{{htmlelement（“li”）}}元素中顯示每個團隊的<code>team_name</code>值。</p>
+<p>代碼片段，顯示了上一節中<code>render（）</code>函數調用的HTML模板的外觀。這個模板的編寫假設它在渲染時可以訪問名為<code>youngest_teams</code>的列表變量（包含在上面<code>render（）</code>函數中的上下文變量<code>context</code>中）。在HTML框架內部，我們有一個表達式，首先檢查<code>youngest_teams</code>變量是否存在，然後在<code>for</code>循環中迭代它。在每次迭代中，模板在{{htmlelement("li")}}元素中顯示每個團隊的<code>team_name</code>值。</p>
 
 <pre class="brush: python">## filename: best/templates/best/index.html
 
