@@ -17,38 +17,6 @@
       "smhaziq"
     ]
   },
-  "HTML": {
-    "modified": "2019-03-23T23:34:09.303Z",
-    "contributors": [
-      "akifrabbani",
-      "haboqueferus",
-      "FredB"
-    ]
-  },
-  "HTML/Canvas": {
-    "modified": "2019-03-23T23:34:10.539Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
-  "HTML/Canvas/Melukis_Grafik_dengan_Canvas": {
-    "modified": "2019-03-23T23:34:10.144Z",
-    "contributors": [
-      "haboqueferus"
-    ]
-  },
-  "HTML/Elemen": {
-    "modified": "2019-03-23T23:34:02.244Z",
-    "contributors": [
-      "haboqueferus"
-    ]
-  },
-  "HTML/Tip_menulis_LamanHTML_dengan_pemuatan_pantas": {
-    "modified": "2020-07-16T22:22:33.228Z",
-    "contributors": [
-      "haboqueferus"
-    ]
-  },
   "Learn": {
     "modified": "2020-07-16T22:43:44.802Z",
     "contributors": [
@@ -70,41 +38,10 @@
       "SphinxKnight"
     ]
   },
-  "Learn/HTML/Forms": {
-    "modified": "2020-07-16T22:20:59.860Z",
-    "contributors": [
-      "chrisdavidmills",
-      "haboqueferus"
-    ]
-  },
   "Learn/HTML/Howto": {
     "modified": "2020-07-16T22:22:29.770Z",
     "contributors": [
       "Jeremie"
-    ]
-  },
-  "Learn/HTML/Howto/Add_responsive_image_to_a_webpage": {
-    "modified": "2020-07-16T22:24:36.680Z",
-    "contributors": [
-      "QA8500"
-    ]
-  },
-  "Learn/Memulakan_pembelajaran_web": {
-    "modified": "2020-07-16T22:33:54.574Z",
-    "contributors": [
-      "arerifx"
-    ]
-  },
-  "Learn/Memulakan_pembelajaran_web/Berurusan_dengan_fail": {
-    "modified": "2020-07-16T22:34:35.698Z",
-    "contributors": [
-      "arerifx"
-    ]
-  },
-  "Learn/Memulakan_pembelajaran_web/Memasang_Perisian_Asas": {
-    "modified": "2020-07-16T22:34:09.294Z",
-    "contributors": [
-      "arerifx"
     ]
   },
   "Learn/Server-side": {
@@ -123,12 +60,6 @@
     "modified": "2020-07-16T22:38:41.559Z",
     "contributors": [
       "chrisdavidmills"
-    ]
-  },
-  "Learn/Soalan_lazim": {
-    "modified": "2020-07-16T22:35:25.604Z",
-    "contributors": [
-      "arerifx"
     ]
   },
   "MDN": {
@@ -150,14 +81,6 @@
       "manxmensch",
       "jswisher",
       "esah"
-    ]
-  },
-  "MDN/Community": {
-    "modified": "2019-09-11T08:02:08.941Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "Othman"
     ]
   },
   "MDN/Contribute": {
@@ -184,20 +107,6 @@
       "klez"
     ]
   },
-  "MDN/Contribute/Howto/Bagaimana_membuat_akaun_MDN": {
-    "modified": "2019-01-16T21:20:18.582Z",
-    "contributors": [
-      "wbamberg",
-      "shufay",
-      "teoli"
-    ]
-  },
-  "MDN_at_ten": {
-    "modified": "2019-01-16T21:24:37.324Z",
-    "contributors": [
-      "azrolabidin"
-    ]
-  },
   "Web": {
     "modified": "2020-01-07T09:44:39.115Z",
     "contributors": [
@@ -208,7 +117,98 @@
       "teoli"
     ]
   },
-  "Web_Development": {
+  "Web/API/Canvas_API": {
+    "modified": "2019-03-23T23:34:10.539Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/HTML/Element": {
+    "modified": "2019-03-23T23:34:02.244Z",
+    "contributors": [
+      "haboqueferus"
+    ]
+  },
+  "Learn/HTML/Howto/Author_fast-loading_HTML_pages": {
+    "modified": "2020-07-16T22:22:33.228Z",
+    "contributors": [
+      "haboqueferus"
+    ]
+  },
+  "Learn/Forms": {
+    "modified": "2020-07-16T22:20:59.860Z",
+    "contributors": [
+      "chrisdavidmills",
+      "haboqueferus"
+    ]
+  },
+  "Learn/HTML/Multimedia_and_embedding/Responsive_images": {
+    "modified": "2020-07-16T22:24:36.680Z",
+    "contributors": [
+      "QA8500"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/Dealing_with_files": {
+    "modified": "2020-07-16T22:34:35.698Z",
+    "contributors": [
+      "arerifx"
+    ]
+  },
+  "Learn/Getting_started_with_the_web": {
+    "modified": "2020-07-16T22:33:54.574Z",
+    "contributors": [
+      "arerifx"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/Installing_basic_software": {
+    "modified": "2020-07-16T22:34:09.294Z",
+    "contributors": [
+      "arerifx"
+    ]
+  },
+  "Learn/Common_questions": {
+    "modified": "2020-07-16T22:35:25.604Z",
+    "contributors": [
+      "arerifx"
+    ]
+  },
+  "MDN/At_ten": {
+    "modified": "2019-01-16T21:24:37.324Z",
+    "contributors": [
+      "azrolabidin"
+    ]
+  },
+  "orphaned/MDN/Community": {
+    "modified": "2019-09-11T08:02:08.941Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "Othman"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
+    "modified": "2019-01-16T21:20:18.582Z",
+    "contributors": [
+      "wbamberg",
+      "shufay",
+      "teoli"
+    ]
+  },
+  "Web/API/Canvas_API/Tutorial": {
+    "modified": "2019-03-23T23:34:10.144Z",
+    "contributors": [
+      "haboqueferus"
+    ]
+  },
+  "Web/HTML": {
+    "modified": "2019-03-23T23:34:09.303Z",
+    "contributors": [
+      "akifrabbani",
+      "haboqueferus",
+      "FredB"
+    ]
+  },
+  "Web/Guide": {
     "modified": "2019-03-23T23:34:05.696Z",
     "contributors": [
       "ethertank"
