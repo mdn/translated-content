@@ -276,82 +276,6 @@
       "ahmadnourallah"
     ]
   },
-  "Glossary/الحروف": {
-    "modified": "2019-03-18T20:41:14.582Z",
-    "contributors": [
-      "moussagigawatt"
-    ]
-  },
-  "Glossary/الخاصية": {
-    "modified": "2019-03-18T20:41:18.902Z",
-    "contributors": [
-      "moussagigawatt"
-    ]
-  },
-  "Glossary/الدوال_من_الدرجة_الأولى": {
-    "modified": "2019-03-18T21:43:51.692Z",
-    "contributors": [
-      "ahmadnourallah"
-    ]
-  },
-  "Glossary/الكائنات": {
-    "modified": "2019-03-18T21:23:58.693Z",
-    "contributors": [
-      "ahmadnourallah",
-      "yagoub76"
-    ]
-  },
-  "Glossary/المجالات": {
-    "modified": "2019-03-18T20:58:54.465Z",
-    "contributors": [
-      "laloshify"
-    ]
-  },
-  "HTML/Element": {
-    "modified": "2019-09-11T08:42:21.522Z",
-    "contributors": [
-      "SphinxKnight",
-      "moaz_osama_okasha",
-      "elzoz531",
-      "teoli",
-      "HelmiHB"
-    ]
-  },
-  "HTML/Element/article": {
-    "modified": "2020-10-15T22:31:03.274Z",
-    "contributors": [
-      "M.M.J",
-      "a01273477051"
-    ]
-  },
-  "HTML/Element/bdo": {
-    "modified": "2020-10-15T22:02:29.578Z",
-    "contributors": [
-      "SphinxKnight",
-      "zidanlab"
-    ]
-  },
-  "HTML/Element/headings_elements": {
-    "modified": "2020-10-15T22:08:39.845Z",
-    "contributors": [
-      "SphinxKnight",
-      "Alhakem"
-    ]
-  },
-  "HTML/Element/span": {
-    "modified": "2020-10-15T22:05:54.978Z",
-    "contributors": [
-      "SphinxKnight",
-      "moaz_osama_okasha"
-    ]
-  },
-  "HTML/Element/tt": {
-    "modified": "2020-10-15T22:05:53.553Z",
-    "contributors": [
-      "SphinxKnight",
-      "moaz_osama_okasha"
-    ]
-  },
   "Learn": {
     "modified": "2020-07-16T22:43:37.457Z",
     "contributors": [
@@ -429,13 +353,6 @@
       "ahmadnourallah"
     ]
   },
-  "Learn/Common_questions/كيفية_عمل": {
-    "modified": "2020-09-14T10:55:57.301Z",
-    "contributors": [
-      "hichamikka",
-      "mestoo"
-    ]
-  },
   "Learn/Front-end_web_developer": {
     "modified": "2020-12-09T17:02:05.907Z",
     "contributors": [
@@ -499,14 +416,6 @@
       "jwhitlock"
     ]
   },
-  "Learn/Getting_started_with_the_web/أساسيات_صفحات_الطرز_المتراصة": {
-    "modified": "2020-07-16T22:34:55.259Z",
-    "contributors": [
-      "aminezouhair",
-      "sami-assasa",
-      "ahmadnourallah"
-    ]
-  },
   "Learn/HTML": {
     "modified": "2020-07-16T22:22:14.487Z",
     "contributors": [
@@ -514,12 +423,6 @@
       "wasem1772",
       "Alihoday",
       "Andrew_Pfeiffer"
-    ]
-  },
-  "Learn/HTML/Forms": {
-    "modified": "2020-12-06T05:54:22.728Z",
-    "contributors": [
-      "coderclouds2018"
     ]
   },
   "Learn/HTML/Introduction_to_HTML": {
@@ -550,27 +453,6 @@
     "contributors": [
       "MOTZ79567",
       "ezrinjaz"
-    ]
-  },
-  "Learn/HTML/الجداول": {
-    "modified": "2020-07-16T22:25:09.678Z",
-    "contributors": [
-      "aminezouhair"
-    ]
-  },
-  "Learn/HTML/بسيطة_HTML_إنشاء_صفحة": {
-    "modified": "2020-07-16T22:22:26.344Z",
-    "contributors": [
-      "wbamberg",
-      "mubarak823",
-      "mhmdiaa"
-    ]
-  },
-  "Learn/How_to_contribute": {
-    "modified": "2020-07-16T22:33:42.427Z",
-    "contributors": [
-      "SphinxKnight",
-      "ahmadnourallah"
     ]
   },
   "Learn/JavaScript": {
@@ -682,21 +564,6 @@
       "ahmadnourallah"
     ]
   },
-  "MDN/Community": {
-    "modified": "2019-03-23T22:39:46.468Z",
-    "contributors": [
-      "wbamberg",
-      "ahmadnourallah",
-      "Jeremie",
-      "1071432726"
-    ]
-  },
-  "MDN/Community/Whats_happening": {
-    "modified": "2019-06-11T03:43:32.787Z",
-    "contributors": [
-      "aminezouhair"
-    ]
-  },
   "MDN/Contribute": {
     "modified": "2019-03-23T23:16:50.906Z",
     "contributors": [
@@ -735,32 +602,11 @@
       "Sheppy"
     ]
   },
-  "MDN/Contribute/Howto/Do_a_technical_review": {
-    "modified": "2019-06-10T14:47:38.844Z",
-    "contributors": [
-      "aminezouhair",
-      "wbamberg",
-      "ashqaljnoob"
-    ]
-  },
-  "MDN/Contribute/Howto/Do_an_editorial_review": {
-    "modified": "2019-06-15T16:26:58.954Z",
-    "contributors": [
-      "aminezouhair"
-    ]
-  },
   "MDN/Contribute/Howto/Report_a_problem": {
     "modified": "2020-01-07T12:21:22.751Z",
     "contributors": [
       "peterbe",
       "aminezouhair"
-    ]
-  },
-  "MDN/Contribute/Howto/Set_the_summary_for_a_page": {
-    "modified": "2020-02-14T19:30:29.921Z",
-    "contributors": [
-      "a0m0rajab",
-      "maherv"
     ]
   },
   "MDN/Contribute/Howto/Tag": {
@@ -774,28 +620,6 @@
     "modified": "2019-06-15T16:35:07.831Z",
     "contributors": [
       "aminezouhair"
-    ]
-  },
-  "MDN/Contribute/Howto/Write_an_article_to_help_learn_about_the_Web": {
-    "modified": "2020-02-28T22:26:02.885Z",
-    "contributors": [
-      "aminezouhair"
-    ]
-  },
-  "MDN/Contribute/Howto/إنشاء_حساب_على_شبكة_مطوري_موزيلا": {
-    "modified": "2019-06-11T03:35:08.931Z",
-    "contributors": [
-      "aminezouhair",
-      "wbamberg",
-      "ahmadnourallah",
-      "mhmdiaa",
-      "Syrian-Guy"
-    ]
-  },
-  "MDN/Contribute/Howto/كيفية_إنشاء_وتحرير_الصفحات": {
-    "modified": "2019-03-18T21:28:07.470Z",
-    "contributors": [
-      "AhmedElhatem"
     ]
   },
   "MDN/Guidelines": {
@@ -813,15 +637,6 @@
       "maherv"
     ]
   },
-  "MDN/Kuma": {
-    "modified": "2019-09-09T15:51:34.712Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "ahmadnourallah",
-      "dr-m1991"
-    ]
-  },
   "MDN/Tools": {
     "modified": "2020-09-30T16:47:53.767Z",
     "contributors": [
@@ -829,22 +644,6 @@
       "wbamberg",
       "Jeremie",
       "Sheppy"
-    ]
-  },
-  "MDN/Tools/Deleting_pages": {
-    "modified": "2020-09-30T16:47:53.745Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Jeremie",
-      "Bettr",
-      "iii59300"
-    ]
-  },
-  "MDN_at_ten": {
-    "modified": "2019-03-23T22:44:47.432Z",
-    "contributors": [
-      "M.IRAQY999"
     ]
   },
   "Mozilla": {
@@ -912,12 +711,6 @@
     "contributors": [
       "wbamberg",
       "ralshammrei"
-    ]
-  },
-  "Mozilla/Add-ons/WebExtensions/ما_هي_امتدادات_الويب": {
-    "modified": "2020-01-01T17:57:33.756Z",
-    "contributors": [
-      "Anonymous"
     ]
   },
   "Mozilla/Developer_guide": {
@@ -1099,19 +892,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Geolocation/Using_geolocation": {
-    "modified": "2019-08-31T16:04:10.213Z",
-    "contributors": [
-      "1043465747",
-      "elsisi"
-    ]
-  },
-  "Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API": {
-    "modified": "2020-03-22T20:37:24.802Z",
-    "contributors": [
-      "i7cn"
-    ]
-  },
   "Web/API/HTMLElement": {
     "modified": "2019-03-23T23:00:29.058Z",
     "contributors": [
@@ -1132,23 +912,10 @@
       "iJianHuang"
     ]
   },
-  "Web/API/History_API/مثال": {
-    "modified": "2019-03-23T22:22:46.391Z",
-    "contributors": [
-      "atefBB"
-    ]
-  },
   "Web/API/Navigator": {
     "modified": "2019-03-23T22:15:21.162Z",
     "contributors": [
       "Sheppy"
-    ]
-  },
-  "Web/API/Navigator.battery": {
-    "modified": "2019-03-23T23:12:40.096Z",
-    "contributors": [
-      "jsx",
-      "Syrian-Guy"
     ]
   },
   "Web/API/Node": {
@@ -1222,23 +989,11 @@
       "vnctdj"
     ]
   },
-  "Web/CSS/CSS_Flexible_Box_Layout/المفاهيم_الأساسية_للصندوق_المرن": {
-    "modified": "2020-03-28T05:18:29.446Z",
-    "contributors": [
-      "Mutazalhawash"
-    ]
-  },
   "Web/CSS/CSS_Grid_Layout": {
     "modified": "2019-03-18T21:35:22.946Z",
     "contributors": [
       "AmineBelmili",
       "rachelandrew"
-    ]
-  },
-  "Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout_arabic": {
-    "modified": "2019-03-18T21:35:18.134Z",
-    "contributors": [
-      "harchaoui"
     ]
   },
   "Web/CSS/CSS_Writing_Modes": {
@@ -1272,24 +1027,6 @@
       "AF555"
     ]
   },
-  "Web/CSS/التحول": {
-    "modified": "2020-10-15T22:06:18.420Z",
-    "contributors": [
-      "mohamadlounnas"
-    ]
-  },
-  "Web/CSS/التعليقات": {
-    "modified": "2019-03-23T22:09:00.996Z",
-    "contributors": [
-      "Abu3safeer"
-    ]
-  },
-  "Web/CSS/العناصر_التي_يمكن_تحريكها_باستخدام_CSS_Transitions": {
-    "modified": "2019-03-23T22:09:06.742Z",
-    "contributors": [
-      "Abu3safeer"
-    ]
-  },
   "Web/Events": {
     "modified": "2020-07-05T11:11:44.298Z",
     "contributors": [
@@ -1304,32 +1041,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/CSS": {
-    "modified": "2019-03-23T23:26:10.869Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/Guide/CSS/Getting_started": {
-    "modified": "2019-03-23T22:26:23.175Z",
-    "contributors": [
-      "wjinca"
-    ]
-  },
-  "Web/Guide/CSS/Getting_started/Readable_CSS": {
-    "modified": "2019-03-23T22:26:15.891Z",
-    "contributors": [
-      "atefBB",
-      "Muhnad"
-    ]
-  },
-  "Web/Guide/CSS/Getting_started/القوائم": {
-    "modified": "2019-03-23T22:26:05.454Z",
-    "contributors": [
-      "atefBB",
-      "EmanShaltoutTrend"
-    ]
-  },
   "Web/Guide/HTML/HTML5": {
     "modified": "2020-10-19T18:49:26.722Z",
     "contributors": [
@@ -1338,22 +1049,6 @@
       ".1234waleed",
       "ess_a25",
       "John.Smith"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/HTML5_element_list": {
-    "modified": "2019-03-23T23:14:56.560Z",
-    "contributors": [
-      "Abu3safeer",
-      "atefBB",
-      "mohamedmahmoud",
-      "teoli",
-      "Ali.Talib"
-    ]
-  },
-  "Web/Guide/الرسومات": {
-    "modified": "2019-03-18T21:43:50.204Z",
-    "contributors": [
-      "ahmadnourallah"
     ]
   },
   "Web/HTML": {
@@ -1372,15 +1067,6 @@
     "modified": "2020-10-15T22:35:10.964Z",
     "contributors": [
       "mhayajneh"
-    ]
-  },
-  "Web/HTML_لغة_ترميز_النص_الفائق": {
-    "modified": "2019-09-11T08:10:23.337Z",
-    "contributors": [
-      "SphinxKnight",
-      "aminezouhair",
-      "ahmadnourallah",
-      "antaraz"
     ]
   },
   "Web/HTTP": {
@@ -1505,21 +1191,6 @@
     "contributors": [
       "Youssef-Belmeskine",
       "SphinxKnight"
-    ]
-  },
-  "Web/JavaScript/Guide/الدوال": {
-    "modified": "2020-03-12T19:44:03.918Z",
-    "contributors": [
-      "Youssef-Belmeskine",
-      "Benseidseid"
-    ]
-  },
-  "Web/JavaScript/Introduction_to_Object-Oriented_JavaScript": {
-    "modified": "2020-03-12T19:44:59.681Z",
-    "contributors": [
-      "HeSoKa05",
-      "Youssef-Belmeskine",
-      "mustafasalah"
     ]
   },
   "Web/JavaScript/Reference": {
@@ -1695,12 +1366,6 @@
       "Mourad_Ouchane"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/الارقام": {
-    "modified": "2020-10-10T09:54:31.841Z",
-    "contributors": [
-      "Flemer"
-    ]
-  },
   "Web/JavaScript/Reference/Operators": {
     "modified": "2020-12-14T11:30:35.207Z",
     "contributors": [
@@ -1750,18 +1415,6 @@
       "skarfstri"
     ]
   },
-  "Web/JavaScript/Reference/الدوال": {
-    "modified": "2020-03-12T19:44:04.047Z",
-    "contributors": [
-      "Benseidseid"
-    ]
-  },
-  "Web/JavaScript/Reference/الدوال/get": {
-    "modified": "2020-10-15T22:32:22.148Z",
-    "contributors": [
-      "abdwfawzy985"
-    ]
-  },
   "Web/MathML": {
     "modified": "2019-03-23T22:01:47.703Z",
     "contributors": [
@@ -1790,14 +1443,315 @@
       "antaraz"
     ]
   },
-  "Web/حماية": {
+  "Glossary/Character": {
+    "modified": "2019-03-18T20:41:14.582Z",
+    "contributors": [
+      "moussagigawatt"
+    ]
+  },
+  "Glossary/property": {
+    "modified": "2019-03-18T20:41:18.902Z",
+    "contributors": [
+      "moussagigawatt"
+    ]
+  },
+  "Glossary/First-class_Function": {
+    "modified": "2019-03-18T21:43:51.692Z",
+    "contributors": [
+      "ahmadnourallah"
+    ]
+  },
+  "Glossary/Object": {
+    "modified": "2019-03-18T21:23:58.693Z",
+    "contributors": [
+      "ahmadnourallah",
+      "yagoub76"
+    ]
+  },
+  "Glossary/Scope": {
+    "modified": "2019-03-18T20:58:54.465Z",
+    "contributors": [
+      "laloshify"
+    ]
+  },
+  "orphaned/heesfoord007": {
+    "modified": "2019-03-23T22:50:44.174Z",
+    "contributors": [
+      "heesfoord007"
+    ]
+  },
+  "Web/HTML/Element/article": {
+    "modified": "2020-10-15T22:31:03.274Z",
+    "contributors": [
+      "M.M.J",
+      "a01273477051"
+    ]
+  },
+  "Web/HTML/Element/bdo": {
+    "modified": "2020-10-15T22:02:29.578Z",
+    "contributors": [
+      "SphinxKnight",
+      "zidanlab"
+    ]
+  },
+  "Web/HTML/Element/Heading_Elements": {
+    "modified": "2020-10-15T22:08:39.845Z",
+    "contributors": [
+      "SphinxKnight",
+      "Alhakem"
+    ]
+  },
+  "Web/HTML/Element": {
+    "modified": "2019-09-11T08:42:21.522Z",
+    "contributors": [
+      "SphinxKnight",
+      "moaz_osama_okasha",
+      "elzoz531",
+      "teoli",
+      "HelmiHB"
+    ]
+  },
+  "Web/HTML/Element/span": {
+    "modified": "2020-10-15T22:05:54.978Z",
+    "contributors": [
+      "SphinxKnight",
+      "moaz_osama_okasha"
+    ]
+  },
+  "Web/HTML/Element/tt": {
+    "modified": "2020-10-15T22:05:53.553Z",
+    "contributors": [
+      "SphinxKnight",
+      "moaz_osama_okasha"
+    ]
+  },
+  "Learn/Common_questions/How_does_the_Internet_work": {
+    "modified": "2020-09-14T10:55:57.301Z",
+    "contributors": [
+      "hichamikka",
+      "mestoo"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/CSS_basics": {
+    "modified": "2020-07-16T22:34:55.259Z",
+    "contributors": [
+      "aminezouhair",
+      "sami-assasa",
+      "ahmadnourallah"
+    ]
+  },
+  "orphaned/Learn/How_to_contribute": {
+    "modified": "2020-07-16T22:33:42.427Z",
+    "contributors": [
+      "SphinxKnight",
+      "ahmadnourallah"
+    ]
+  },
+  "Learn/Forms": {
+    "modified": "2020-12-06T05:54:22.728Z",
+    "contributors": [
+      "coderclouds2018"
+    ]
+  },
+  "Learn/HTML/Tables": {
+    "modified": "2020-07-16T22:25:09.678Z",
+    "contributors": [
+      "aminezouhair"
+    ]
+  },
+  "MDN/At_ten": {
+    "modified": "2019-03-23T22:44:47.432Z",
+    "contributors": [
+      "M.IRAQY999"
+    ]
+  },
+  "orphaned/MDN/Community": {
+    "modified": "2019-03-23T22:39:46.468Z",
+    "contributors": [
+      "wbamberg",
+      "ahmadnourallah",
+      "Jeremie",
+      "1071432726"
+    ]
+  },
+  "orphaned/MDN/Community/Whats_happening": {
+    "modified": "2019-06-11T03:43:32.787Z",
+    "contributors": [
+      "aminezouhair"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Do_a_technical_review": {
+    "modified": "2019-06-10T14:47:38.844Z",
+    "contributors": [
+      "aminezouhair",
+      "wbamberg",
+      "ashqaljnoob"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Do_an_editorial_review": {
+    "modified": "2019-06-15T16:26:58.954Z",
+    "contributors": [
+      "aminezouhair"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Set_the_summary_for_a_page": {
+    "modified": "2020-02-14T19:30:29.921Z",
+    "contributors": [
+      "a0m0rajab",
+      "maherv"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Write_an_article_to_help_learn_about_the_Web": {
+    "modified": "2020-02-28T22:26:02.885Z",
+    "contributors": [
+      "aminezouhair"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
+    "modified": "2019-06-11T03:35:08.931Z",
+    "contributors": [
+      "aminezouhair",
+      "wbamberg",
+      "ahmadnourallah",
+      "mhmdiaa",
+      "Syrian-Guy"
+    ]
+  },
+  "MDN/Contribute/Howto/Create_and_edit_pages": {
+    "modified": "2019-03-18T21:28:07.470Z",
+    "contributors": [
+      "AhmedElhatem"
+    ]
+  },
+  "MDN/Yari": {
+    "modified": "2019-09-09T15:51:34.712Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "ahmadnourallah",
+      "dr-m1991"
+    ]
+  },
+  "orphaned/MDN/Tools/Page_deletion": {
+    "modified": "2020-09-30T16:47:53.745Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "Jeremie",
+      "Bettr",
+      "iii59300"
+    ]
+  },
+  "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
+    "modified": "2020-01-01T17:57:33.756Z",
+    "contributors": [
+      "Anonymous"
+    ]
+  },
+  "Web/API/Geolocation_API": {
+    "modified": "2019-08-31T16:04:10.213Z",
+    "contributors": [
+      "1043465747",
+      "elsisi"
+    ]
+  },
+  "Web/API/Geolocation_API/Using_the_Geolocation_API": {
+    "modified": "2020-03-22T20:37:24.802Z",
+    "contributors": [
+      "i7cn"
+    ]
+  },
+  "Web/API/History_API/Example": {
+    "modified": "2019-03-23T22:22:46.391Z",
+    "contributors": [
+      "atefBB"
+    ]
+  },
+  "Web/API/Navigator/battery": {
+    "modified": "2019-03-23T23:12:40.096Z",
+    "contributors": [
+      "jsx",
+      "Syrian-Guy"
+    ]
+  },
+  "Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox": {
+    "modified": "2020-03-28T05:18:29.446Z",
+    "contributors": [
+      "Mutazalhawash"
+    ]
+  },
+  "Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout": {
+    "modified": "2019-03-18T21:35:18.134Z",
+    "contributors": [
+      "harchaoui"
+    ]
+  },
+  "Web/CSS/transform": {
+    "modified": "2020-10-15T22:06:18.420Z",
+    "contributors": [
+      "mohamadlounnas"
+    ]
+  },
+  "Web/CSS/Comments": {
+    "modified": "2019-03-23T22:09:00.996Z",
+    "contributors": [
+      "Abu3safeer"
+    ]
+  },
+  "Web/CSS/CSS_animated_properties": {
+    "modified": "2019-03-23T22:09:06.742Z",
+    "contributors": [
+      "Abu3safeer"
+    ]
+  },
+  "Web/Guide/Graphics": {
+    "modified": "2019-03-18T21:43:50.204Z",
+    "contributors": [
+      "ahmadnourallah"
+    ]
+  },
+  "conflicting/Web/HTML": {
+    "modified": "2019-09-11T08:10:23.337Z",
+    "contributors": [
+      "SphinxKnight",
+      "aminezouhair",
+      "ahmadnourallah",
+      "antaraz"
+    ]
+  },
+  "Web/JavaScript/Guide/Functions": {
+    "modified": "2020-03-12T19:44:03.918Z",
+    "contributors": [
+      "Youssef-Belmeskine",
+      "Benseidseid"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number": {
+    "modified": "2020-10-10T09:54:31.841Z",
+    "contributors": [
+      "Flemer"
+    ]
+  },
+  "Web/JavaScript/Reference/Functions/get": {
+    "modified": "2020-10-15T22:32:22.148Z",
+    "contributors": [
+      "abdwfawzy985"
+    ]
+  },
+  "Web/JavaScript/Reference/Functions": {
+    "modified": "2020-03-12T19:44:04.047Z",
+    "contributors": [
+      "Benseidseid"
+    ]
+  },
+  "Web/Security": {
     "modified": "2019-09-10T16:31:27.104Z",
     "contributors": [
       "SphinxKnight",
       "aminezouhair"
     ]
   },
-  "Web/مرجع.": {
+  "Web/Reference": {
     "modified": "2020-09-14T07:03:21.633Z",
     "contributors": [
       "coderclouds2018",
@@ -1805,46 +1759,92 @@
       "Syrian-Guy"
     ]
   },
-  "Web_Development": {
-    "modified": "2019-03-23T23:25:33.143Z",
-    "contributors": [
-      "ethertank"
-    ]
-  },
-  "Web_Development/Mobile": {
-    "modified": "2019-03-23T23:25:26.627Z",
-    "contributors": [
-      "BenB"
-    ]
-  },
-  "heesfoord007": {
-    "modified": "2019-03-23T22:50:44.174Z",
-    "contributors": [
-      "heesfoord007"
-    ]
-  },
-  "أحداث_مكتبة_jQuery": {
+  "orphaned/أحداث_مكتبة_jQuery": {
     "modified": "2019-03-23T23:08:54.898Z",
     "contributors": [
       "Syrian-Guy"
     ]
   },
-  "مكتبة_جي_كويري": {
+  "orphaned/مكتبة_جي_كويري": {
     "modified": "2019-03-23T23:08:46.056Z",
     "contributors": [
       "Syrian-Guy"
     ]
   },
-  "واصفة_SpellCheck_الجديدة_في_HTML5": {
+  "orphaned/واصفة_SpellCheck_الجديدة_في_HTML5": {
     "modified": "2019-03-23T23:11:43.327Z",
     "contributors": [
       "Syrian-Guy"
     ]
   },
-  "واصفة_العنوان_في_HTML": {
+  "orphaned/واصفة_العنوان_في_HTML": {
     "modified": "2019-03-23T23:11:41.974Z",
     "contributors": [
       "Syrian-Guy"
+    ]
+  },
+  "conflicting/Learn/Getting_started_with_the_web": {
+    "modified": "2020-07-16T22:22:26.344Z",
+    "contributors": [
+      "wbamberg",
+      "mubarak823",
+      "mhmdiaa"
+    ]
+  },
+  "conflicting/Web/Guide": {
+    "modified": "2019-03-23T23:25:33.143Z",
+    "contributors": [
+      "ethertank"
+    ]
+  },
+  "Web/Guide/Mobile": {
+    "modified": "2019-03-23T23:25:26.627Z",
+    "contributors": [
+      "BenB"
+    ]
+  },
+  "conflicting/Learn/CSS/First_steps": {
+    "modified": "2019-03-23T22:26:23.175Z",
+    "contributors": [
+      "wjinca"
+    ]
+  },
+  "Learn/CSS/First_steps/How_CSS_is_structured": {
+    "modified": "2019-03-23T22:26:15.891Z",
+    "contributors": [
+      "atefBB",
+      "Muhnad"
+    ]
+  },
+  "Learn/CSS/Styling_text/Styling_lists": {
+    "modified": "2019-03-23T22:26:05.454Z",
+    "contributors": [
+      "atefBB",
+      "EmanShaltoutTrend"
+    ]
+  },
+  "conflicting/Learn/CSS": {
+    "modified": "2019-03-23T23:26:10.869Z",
+    "contributors": [
+      "Sheppy"
+    ]
+  },
+  "conflicting/Web/HTML/Element": {
+    "modified": "2019-03-23T23:14:56.560Z",
+    "contributors": [
+      "Abu3safeer",
+      "atefBB",
+      "mohamedmahmoud",
+      "teoli",
+      "Ali.Talib"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Objects": {
+    "modified": "2020-03-12T19:44:59.681Z",
+    "contributors": [
+      "HeSoKa05",
+      "Youssef-Belmeskine",
+      "mustafasalah"
     ]
   }
 }
