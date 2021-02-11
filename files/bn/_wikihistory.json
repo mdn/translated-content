@@ -1,11 +1,4 @@
 {
-  "DOM": {
-    "modified": "2019-03-23T23:25:08.675Z",
-    "contributors": [
-      "badsha_eee",
-      "teoli"
-    ]
-  },
   "Glossary": {
     "modified": "2020-10-07T11:06:43.575Z",
     "contributors": [
@@ -38,23 +31,6 @@
     "modified": "2019-03-23T22:37:31.573Z",
     "contributors": [
       "tuxboy"
-    ]
-  },
-  "HTML/HTML5": {
-    "modified": "2019-03-23T23:35:15.435Z",
-    "contributors": [
-      "teoli",
-      "badsha_eee",
-      "ashickur_noor",
-      "tuxboy"
-    ]
-  },
-  "HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-23T23:22:57.838Z",
-    "contributors": [
-      "shafiul",
-      "Maliha81",
-      "jaggedzak"
     ]
   },
   "Learn": {
@@ -124,12 +100,6 @@
       "SphinxKnight"
     ]
   },
-  "Learn/JavaScript/First_steps/জাভাস্ক্রিপ্ট-কী": {
-    "modified": "2020-07-23T11:41:02.501Z",
-    "contributors": [
-      "promisind"
-    ]
-  },
   "Learn/Server-side": {
     "modified": "2020-07-16T22:35:55.391Z",
     "contributors": [
@@ -155,12 +125,6 @@
       "promisind"
     ]
   },
-  "Localization": {
-    "modified": "2019-03-23T23:27:22.624Z",
-    "contributors": [
-      "badsha_eee"
-    ]
-  },
   "MDN": {
     "modified": "2020-02-19T18:52:16.503Z",
     "contributors": [
@@ -172,25 +136,6 @@
       "teoli"
     ]
   },
-  "MDN/Community": {
-    "modified": "2019-09-04T05:42:20.308Z",
-    "contributors": [
-      "Naahid",
-      "voiceofmoments",
-      "wbamberg",
-      "Shubhobd",
-      "teoli",
-      "badsha_eee"
-    ]
-  },
-  "MDN/Community/Whats_happening": {
-    "modified": "2019-03-23T23:27:03.844Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "badsha_eee"
-    ]
-  },
   "MDN/Contribute": {
     "modified": "2019-01-16T18:29:06.865Z",
     "contributors": [
@@ -200,14 +145,6 @@
       "teoli",
       "Prome",
       "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Creating_and_editing_pages": {
-    "modified": "2019-01-16T17:44:34.088Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "badsha_eee"
     ]
   },
   "MDN/Contribute/Getting_started": {
@@ -234,28 +171,12 @@
       "badsha_eee"
     ]
   },
-  "MDN/Contribute/Howto/Create_an_MDN_account": {
-    "modified": "2019-01-16T18:29:56.107Z",
-    "contributors": [
-      "wbamberg",
-      "badsha_eee"
-    ]
-  },
   "MDN/Guidelines": {
     "modified": "2020-09-30T15:28:12.396Z",
     "contributors": [
       "chrisdavidmills",
       "wbamberg",
       "Sheppy"
-    ]
-  },
-  "MDN/Guidelines/Style_guide": {
-    "modified": "2020-09-30T15:28:13.100Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jswisher",
-      "wbamberg",
-      "shamimsw"
     ]
   },
   "MDN/Structures": {
@@ -272,13 +193,6 @@
       "chrisdavidmills",
       "wbamberg",
       "jswisher"
-    ]
-  },
-  "MDN_at_ten": {
-    "modified": "2019-03-23T22:50:40.078Z",
-    "contributors": [
-      "Bolaram",
-      "badsha_eee"
     ]
   },
   "Mozilla": {
@@ -335,27 +249,6 @@
       "badsha_eee"
     ]
   },
-  "Mozilla/ফায়ারফক্স": {
-    "modified": "2020-01-18T12:34:49.048Z",
-    "contributors": [
-      "leela52452",
-      "SphinxKnight",
-      "wbamberg",
-      "jwhitlock",
-      "badsha_eee",
-      "Bolaram",
-      "ashickur_noor",
-      "Sudipto.chy"
-    ]
-  },
-  "Mozilla/ফায়ারফক্স/রিলিজস": {
-    "modified": "2019-04-09T14:31:52.314Z",
-    "contributors": [
-      "wbamberg",
-      "shafiul",
-      "Sudipto.chy"
-    ]
-  },
   "Tools": {
     "modified": "2020-07-16T22:44:13.511Z",
     "contributors": [
@@ -388,13 +281,6 @@
       "jsx",
       "Fariha_Fiha",
       "mimzi_fahia"
-    ]
-  },
-  "Tools/ত্রিমাত্রিক_দর্শন": {
-    "modified": "2020-07-16T22:34:24.936Z",
-    "contributors": [
-      "wbamberg",
-      "MUHAMMAD_KHAN"
     ]
   },
   "Web": {
@@ -499,62 +385,6 @@
       "teoli"
     ]
   },
-  "Web/CSS/Getting_Started": {
-    "modified": "2019-03-23T23:31:51.964Z",
-    "contributors": [
-      "teoli",
-      "tuxboy"
-    ]
-  },
-  "Web/CSS/Getting_Started/Color": {
-    "modified": "2019-03-23T23:11:32.781Z",
-    "contributors": [
-      "Saki336",
-      "Maliha81"
-    ]
-  },
-  "Web/CSS/Getting_Started/How_CSS_works": {
-    "modified": "2019-03-23T23:21:45.414Z",
-    "contributors": [
-      "Bolaram",
-      "mimzi_fahia",
-      "kamrunNaharRuma",
-      "teoli"
-    ]
-  },
-  "Web/CSS/Getting_Started/Readable_CSS": {
-    "modified": "2019-03-23T23:10:14.661Z",
-    "contributors": [
-      "teoli",
-      "amena-synthia"
-    ]
-  },
-  "Web/CSS/Getting_Started/Text_styles": {
-    "modified": "2019-03-23T23:11:32.510Z",
-    "contributors": [
-      "MalihaDipty"
-    ]
-  },
-  "Web/CSS/Getting_Started/Why_use_CSS": {
-    "modified": "2019-03-23T23:21:57.361Z",
-    "contributors": [
-      "Bolaram",
-      "teoli",
-      "mimzi_fahia"
-    ]
-  },
-  "Web/CSS/Getting_Started/নই": {
-    "modified": "2019-03-23T23:10:32.206Z",
-    "contributors": [
-      "rabeya"
-    ]
-  },
-  "Web/CSS/Getting_Started/লে-আউট": {
-    "modified": "2019-03-23T23:11:30.667Z",
-    "contributors": [
-      "Prome"
-    ]
-  },
   "Web/CSS/element()": {
     "modified": "2020-11-10T11:02:42.501Z",
     "contributors": [
@@ -583,50 +413,14 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/API/DOM": {
-    "modified": "2019-01-16T18:05:53.775Z",
-    "contributors": [
-      "shahvishald"
-    ]
-  },
-  "Web/Guide/API/WebRTC": {
-    "modified": "2019-03-23T22:37:29.214Z",
-    "contributors": [
-      "tuxboy"
-    ]
-  },
   "Web/Guide/Events": {
     "modified": "2019-03-23T23:10:51.342Z",
     "contributors": [
       "Jeremie"
     ]
   },
-  "Web/Guide/HTML/Canvas_tutorial": {
-    "modified": "2019-03-23T23:22:41.275Z",
-    "contributors": [
-      "mahmudtamim"
-    ]
-  },
-  "Web/Guide/HTML/Content_Editable": {
-    "modified": "2019-03-23T23:22:35.093Z",
-    "contributors": [
-      "sourav1"
-    ]
-  },
-  "Web/Guide/HTML/Forms": {
-    "modified": "2020-07-16T22:20:53.344Z",
-    "contributors": [
-      "kmsuzan"
-    ]
-  },
   "Web/Guide/Performance": {
     "modified": "2019-03-23T23:20:59.790Z",
-    "contributors": [
-      "shakil18"
-    ]
-  },
-  "Web/Guide/গ্রাফিক্স": {
-    "modified": "2019-03-23T23:20:59.963Z",
     "contributors": [
       "shakil18"
     ]
@@ -654,28 +448,6 @@
     "modified": "2019-03-23T22:42:54.998Z",
     "contributors": [
       "ToufiqAminRumi"
-    ]
-  },
-  "Web/HTML/CORS_settings_attributes": {
-    "modified": "2019-03-23T22:42:33.032Z",
-    "contributors": [
-      "hmmonir"
-    ]
-  },
-  "Web/HTML/Canvas": {
-    "modified": "2019-03-23T23:31:43.205Z",
-    "contributors": [
-      "SphinxKnight",
-      "spsumon44",
-      "teoli",
-      "tuxboy"
-    ]
-  },
-  "Web/HTML/Canvas/Tutorial": {
-    "modified": "2019-03-23T23:31:44.732Z",
-    "contributors": [
-      "teoli",
-      "tuxboy"
     ]
   },
   "Web/HTML/Element": {
@@ -724,12 +496,6 @@
     "modified": "2019-03-23T22:41:46.042Z",
     "contributors": [
       "hmmonir"
-    ]
-  },
-  "Web/HTML/Focus_management_in_HTML": {
-    "modified": "2019-03-23T22:41:57.848Z",
-    "contributors": [
-      "ToufiqAminRumi"
     ]
   },
   "Web/HTML/Global_attributes": {
@@ -933,15 +699,6 @@
       "mohammadshohagulislam"
     ]
   },
-  "Web/JavaScript/ভাষার_রিসোর্স": {
-    "modified": "2020-03-12T19:39:11.262Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "shafiul",
-      "arifrhb"
-    ]
-  },
   "Web/Reference": {
     "modified": "2019-03-23T23:25:25.072Z",
     "contributors": [
@@ -960,11 +717,254 @@
       "munny"
     ]
   },
-  "Web_Development": {
+  "Web/Guide/HTML/HTML5": {
+    "modified": "2019-03-23T23:35:15.435Z",
+    "contributors": [
+      "teoli",
+      "badsha_eee",
+      "ashickur_noor",
+      "tuxboy"
+    ]
+  },
+  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-23T23:22:57.838Z",
+    "contributors": [
+      "shafiul",
+      "Maliha81",
+      "jaggedzak"
+    ]
+  },
+  "Learn/JavaScript/First_steps/What_is_JavaScript": {
+    "modified": "2020-07-23T11:41:02.501Z",
+    "contributors": [
+      "promisind"
+    ]
+  },
+  "Glossary/Localization": {
+    "modified": "2019-03-23T23:27:22.624Z",
+    "contributors": [
+      "badsha_eee"
+    ]
+  },
+  "MDN/At_ten": {
+    "modified": "2019-03-23T22:50:40.078Z",
+    "contributors": [
+      "Bolaram",
+      "badsha_eee"
+    ]
+  },
+  "orphaned/MDN/Community": {
+    "modified": "2019-09-04T05:42:20.308Z",
+    "contributors": [
+      "Naahid",
+      "voiceofmoments",
+      "wbamberg",
+      "Shubhobd",
+      "teoli",
+      "badsha_eee"
+    ]
+  },
+  "orphaned/MDN/Community/Whats_happening": {
+    "modified": "2019-03-23T23:27:03.844Z",
+    "contributors": [
+      "wbamberg",
+      "teoli",
+      "badsha_eee"
+    ]
+  },
+  "MDN/Contribute/Howto/Create_and_edit_pages": {
+    "modified": "2019-01-16T17:44:34.088Z",
+    "contributors": [
+      "wbamberg",
+      "teoli",
+      "badsha_eee"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
+    "modified": "2019-01-16T18:29:56.107Z",
+    "contributors": [
+      "wbamberg",
+      "badsha_eee"
+    ]
+  },
+  "MDN/Guidelines/Writing_style_guide": {
+    "modified": "2020-09-30T15:28:13.100Z",
+    "contributors": [
+      "chrisdavidmills",
+      "jswisher",
+      "wbamberg",
+      "shamimsw"
+    ]
+  },
+  "Mozilla/Firefox": {
+    "modified": "2020-01-18T12:34:49.048Z",
+    "contributors": [
+      "leela52452",
+      "SphinxKnight",
+      "wbamberg",
+      "jwhitlock",
+      "badsha_eee",
+      "Bolaram",
+      "ashickur_noor",
+      "Sudipto.chy"
+    ]
+  },
+  "Mozilla/Firefox/Releases": {
+    "modified": "2019-04-09T14:31:52.314Z",
+    "contributors": [
+      "wbamberg",
+      "shafiul",
+      "Sudipto.chy"
+    ]
+  },
+  "Tools/3D_View": {
+    "modified": "2020-07-16T22:34:24.936Z",
+    "contributors": [
+      "wbamberg",
+      "MUHAMMAD_KHAN"
+    ]
+  },
+  "Web/API/Canvas_API/Tutorial": {
+    "modified": "2019-03-23T23:22:41.275Z",
+    "contributors": [
+      "mahmudtamim"
+    ]
+  },
+  "Web/Guide/HTML/Editable_content": {
+    "modified": "2019-03-23T23:22:35.093Z",
+    "contributors": [
+      "sourav1"
+    ]
+  },
+  "Learn/Forms": {
+    "modified": "2020-07-16T22:20:53.344Z",
+    "contributors": [
+      "kmsuzan"
+    ]
+  },
+  "Web/Guide/Graphics": {
+    "modified": "2019-03-23T23:20:59.963Z",
+    "contributors": [
+      "shakil18"
+    ]
+  },
+  "Web/API/Canvas_API": {
+    "modified": "2019-03-23T23:31:43.205Z",
+    "contributors": [
+      "SphinxKnight",
+      "spsumon44",
+      "teoli",
+      "tuxboy"
+    ]
+  },
+  "Web/HTML/Attributes/crossorigin": {
+    "modified": "2019-03-23T22:42:33.032Z",
+    "contributors": [
+      "hmmonir"
+    ]
+  },
+  "Web/JavaScript/Language_Resources": {
+    "modified": "2020-03-12T19:39:11.262Z",
+    "contributors": [
+      "fscholz",
+      "teoli",
+      "shafiul",
+      "arifrhb"
+    ]
+  },
+  "Web/API/Document_Object_Model": {
+    "modified": "2019-03-23T23:25:08.675Z",
+    "contributors": [
+      "badsha_eee",
+      "teoli"
+    ]
+  },
+  "conflicting/Web/Guide": {
     "modified": "2019-03-23T23:31:46.369Z",
     "contributors": [
       "tuxboy",
       "ethertank"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Values_and_units": {
+    "modified": "2019-03-23T23:11:32.781Z",
+    "contributors": [
+      "Saki336",
+      "Maliha81"
+    ]
+  },
+  "Learn/CSS/First_steps/How_CSS_works": {
+    "modified": "2019-03-23T23:21:45.414Z",
+    "contributors": [
+      "Bolaram",
+      "mimzi_fahia",
+      "kamrunNaharRuma",
+      "teoli"
+    ]
+  },
+  "Learn/CSS/First_steps": {
+    "modified": "2019-03-23T23:31:51.964Z",
+    "contributors": [
+      "teoli",
+      "tuxboy"
+    ]
+  },
+  "Learn/CSS/First_steps/How_CSS_is_structured": {
+    "modified": "2019-03-23T23:10:14.661Z",
+    "contributors": [
+      "teoli",
+      "amena-synthia"
+    ]
+  },
+  "Learn/CSS/Styling_text/Fundamentals": {
+    "modified": "2019-03-23T23:11:32.510Z",
+    "contributors": [
+      "MalihaDipty"
+    ]
+  },
+  "conflicting/Learn/CSS/First_steps/How_CSS_works": {
+    "modified": "2019-03-23T23:21:57.361Z",
+    "contributors": [
+      "Bolaram",
+      "teoli",
+      "mimzi_fahia"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Selectors": {
+    "modified": "2019-03-23T23:10:32.206Z",
+    "contributors": [
+      "rabeya"
+    ]
+  },
+  "Learn/CSS/CSS_layout": {
+    "modified": "2019-03-23T23:11:30.667Z",
+    "contributors": [
+      "Prome"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model": {
+    "modified": "2019-01-16T18:05:53.775Z",
+    "contributors": [
+      "shahvishald"
+    ]
+  },
+  "Web/API/WebRTC_API": {
+    "modified": "2019-03-23T22:37:29.214Z",
+    "contributors": [
+      "tuxboy"
+    ]
+  },
+  "conflicting/Web/API/Canvas_API/Tutorial": {
+    "modified": "2019-03-23T23:31:44.732Z",
+    "contributors": [
+      "teoli",
+      "tuxboy"
+    ]
+  },
+  "Web/API/Document/hasFocus": {
+    "modified": "2019-03-23T22:41:57.848Z",
+    "contributors": [
+      "ToufiqAminRumi"
     ]
   }
 }
