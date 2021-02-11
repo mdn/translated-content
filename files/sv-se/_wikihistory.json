@@ -20,12 +20,6 @@
       "jhf.087"
     ]
   },
-  "Glossary/IP_Adress": {
-    "modified": "2019-03-23T22:01:12.779Z",
-    "contributors": [
-      "ChrisPro"
-    ]
-  },
   "Learn": {
     "modified": "2020-07-16T22:43:47.837Z",
     "contributors": [
@@ -67,13 +61,6 @@
       "Umeaboy"
     ]
   },
-  "MDN/Community": {
-    "modified": "2019-09-11T08:01:00.208Z",
-    "contributors": [
-      "SphinxKnight",
-      "Umeaboy"
-    ]
-  },
   "MDN/Contribute": {
     "modified": "2019-07-04T06:57:02.244Z",
     "contributors": [
@@ -99,26 +86,12 @@
       "wbamberg"
     ]
   },
-  "MDN/Contribute/Howto/Create_an_MDN_account": {
-    "modified": "2019-03-18T21:17:33.735Z",
-    "contributors": [
-      "zutadeli"
-    ]
-  },
   "Tools": {
     "modified": "2020-07-16T22:44:18.024Z",
     "contributors": [
       "SphinxKnight",
       "wbamberg",
       "Umeaboy"
-    ]
-  },
-  "Tools/Prestanda": {
-    "modified": "2020-07-16T22:36:13.861Z",
-    "contributors": [
-      "wbamberg",
-      "alpha60",
-      "FuzzyRoll"
     ]
   },
   "Web": {
@@ -149,35 +122,11 @@
       "valterekholm"
     ]
   },
-  "Web/API/KryptoNyckel": {
-    "modified": "2019-03-18T21:47:07.992Z",
-    "contributors": [
-      "ChrisPro"
-    ]
-  },
-  "Web/API/KryptoNyckel/typ": {
-    "modified": "2019-03-18T21:47:05.804Z",
-    "contributors": [
-      "ChrisPro"
-    ]
-  },
   "Web/API/SubtleCrypto": {
     "modified": "2020-10-15T21:59:23.885Z",
     "contributors": [
       "fscholz",
       "prebytes"
-    ]
-  },
-  "Web/API/SubtleCrypto/genereraNyckel": {
-    "modified": "2019-03-18T21:47:06.975Z",
-    "contributors": [
-      "ChrisPro"
-    ]
-  },
-  "Web/API/SubtleCrypto/signum": {
-    "modified": "2019-03-18T21:46:10.267Z",
-    "contributors": [
-      "ChrisPro"
     ]
   },
   "Web/API/Window": {
@@ -206,12 +155,6 @@
     "modified": "2019-03-18T21:47:08.909Z",
     "contributors": [
       "inad9300"
-    ]
-  },
-  "Web/HTML/Global_attributes/Kortplats": {
-    "modified": "2019-03-18T21:47:07.728Z",
-    "contributors": [
-      "ChrisPro"
     ]
   },
   "Web/HTTP": {
@@ -288,10 +231,67 @@
       "Sheppy"
     ]
   },
-  "Web/Security/Osäkra_lösenord": {
+  "Glossary/IP_Address": {
+    "modified": "2019-03-23T22:01:12.779Z",
+    "contributors": [
+      "ChrisPro"
+    ]
+  },
+  "orphaned/MDN/Community": {
+    "modified": "2019-09-11T08:01:00.208Z",
+    "contributors": [
+      "SphinxKnight",
+      "Umeaboy"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
+    "modified": "2019-03-18T21:17:33.735Z",
+    "contributors": [
+      "zutadeli"
+    ]
+  },
+  "Tools/Performance": {
+    "modified": "2020-07-16T22:36:13.861Z",
+    "contributors": [
+      "wbamberg",
+      "alpha60",
+      "FuzzyRoll"
+    ]
+  },
+  "Web/API/CryptoKey": {
+    "modified": "2019-03-18T21:47:07.992Z",
+    "contributors": [
+      "ChrisPro"
+    ]
+  },
+  "Web/API/SubtleCrypto/generateKey": {
+    "modified": "2019-03-18T21:47:06.975Z",
+    "contributors": [
+      "ChrisPro"
+    ]
+  },
+  "Web/API/SubtleCrypto/sign": {
+    "modified": "2019-03-18T21:46:10.267Z",
+    "contributors": [
+      "ChrisPro"
+    ]
+  },
+  "Web/HTML/Global_attributes/slot": {
+    "modified": "2019-03-18T21:47:07.728Z",
+    "contributors": [
+      "ChrisPro"
+    ]
+  },
+  "Web/Security/Insecure_passwords": {
     "modified": "2019-03-23T22:01:18.095Z",
     "contributors": [
       "ScorpionHH"
+    ]
+  },
+  "conflicting/Web/API/CryptoKey": {
+    "modified": "2019-03-18T21:47:05.804Z",
+    "contributors": [
+      "ChrisPro"
     ]
   }
 }
