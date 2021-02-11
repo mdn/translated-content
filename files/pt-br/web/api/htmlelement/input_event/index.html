@@ -1,0 +1,249 @@
+---
+title: input
+slug: Web/API/HTMLElement/input_event
+translation_of: Web/API/HTMLElement/input_event
+original_slug: Web/Events/input
+---
+<p>O evento <code>input do </code>DOM é disparado sincronicamente quando o valor de um elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} é alterado. (Para elementos input com <code>type=checkbox</code> ou <code>type=radio</code>, o evento <code>input</code> não é disparado quando o usuário clica no elemento, porque o valor do atributo não é alterado.) Além disso, o evento é disparado no <a href="/en-US/docs/Web/API/HTMLElement/contentEditable"><code>contenteditable</code></a> editors quando o seu conteúdo é alterado. Nesse caso, O alvo do evento é o elemento host da edição. Se houver dois ou mais elementos que tenha <code>contenteditable</code> como true, o "host de edição" é o elemento antepassado mais próximo cujo pai não é editável. Similarmente, ele também é disparado no element raiz do <a href="/en-US/docs/Web/API/Document/designMode"><code>designMode</code></a> editors.</p>
+
+<h2 id="Informações_gerais">Informações gerais</h2>
+
+<dl>
+ <dt>Specification</dt>
+ <dd><a class="external" href="https://html.spec.whatwg.org/multipage/forms.html#event-input-input">HTML5</a>, <a href="https://dvcs.w3.org/hg/dom3events/raw-file/tip/html/DOM3-Events.html#event-type-input">DOM Level 3 Events</a></dd>
+ <dt>Interface</dt>
+ <dd>{{domxref("Event")}}, {{domxref("InputEvent")}}</dd>
+ <dt>Bubbles</dt>
+ <dd>Yes</dd>
+ <dt>Cancelable</dt>
+ <dd>No</dd>
+ <dt>Target</dt>
+ <dd>Element</dd>
+ <dt>Default Action</dt>
+ <dd>The value or the content is modified.</dd>
+</dl>
+
+<h2 id="Propriedades">Propriedades</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Property</th>
+   <th scope="col">Type</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>target</code> {{readonlyInline}}</td>
+   <td>{{domxref("EventTarget")}}</td>
+   <td>The event target (the topmost target in the DOM tree).</td>
+  </tr>
+  <tr>
+   <td><code>type</code> {{readonlyInline}}</td>
+   <td>{{domxref("DOMString")}}</td>
+   <td>The type of event.</td>
+  </tr>
+  <tr>
+   <td><code>bubbles</code> {{readonlyInline}}</td>
+   <td>{{jsxref("Boolean")}}</td>
+   <td>Whether the event normally bubbles or not.</td>
+  </tr>
+  <tr>
+   <td><code>cancelable</code> {{readonlyInline}}</td>
+   <td>{{jsxref("Boolean")}}</td>
+   <td>Whether the event is cancellable or not.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidade_dos_navegadores">Compatibilidade dos navegadores</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
+   <td>9<sup>[2]</sup></td>
+   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>immediately after <code>compositionupdate</code></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("12")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>15</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>on <code>contenteditable</code> element</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("14")}}</td>
+   <td>{{CompatNo}}<sup>[4]</sup>
+    <p> </p>
+   </td>
+   <td>15</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>when <code>designMode</code> is "on"</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("14")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>15</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>data</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>isComposing</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop("31")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>&lt;select&gt;</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop("49")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Chrome for Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>immediately after <code>compositionupdate</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile("12")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>on <code>contenteditable</code> element</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("14")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>when <code>designMode</code> is "on"</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("14")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>data</code></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>isComposing</code></td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("31")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td>&lt;select&gt;</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Prior to Gecko 12.0 {{geckoRelease("12.0")}}, Gecko didn't fire input events while composition was ongoing using IMEs or when dead keys were used on Mac OS X.</p>
+
+<p>[2] IE 9 does not fire an input event when the user deletes characters from an input (e.g. by pressing Backspace or Delete, or using the "Cut" operation).</p>
+
+<p>[3] Prior to Opera 15, Opera did not fire an input event after dropping text in an input field.</p>
+
+<p>[4] The event target is the innermost element at the caret position.</p>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<ul>
+ <li>{{event("keydown")}}</li>
+ <li>{{event("keyup")}}</li>
+ <li>{{event("keypress")}}</li>
+ <li>{{event("input")}}</li>
+</ul>
+
+<p>Also the <code><a href="/en-US/docs/Web/Reference/Events/change">change</a></code> event is related. <code>change</code> fires less often than <code>input</code> – it only fires when the changes are committed by the user.</p>
