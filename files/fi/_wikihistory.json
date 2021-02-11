@@ -1,157 +1,4 @@
 {
-  "DOM": {
-    "modified": "2019-03-23T23:35:02.223Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
-  "DOM/navigator.doNotTrack": {
-    "modified": "2019-03-23T23:34:48.293Z",
-    "contributors": [
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator": {
-    "modified": "2019-03-23T23:34:56.542Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.appCodeName": {
-    "modified": "2019-03-23T23:34:50.037Z",
-    "contributors": [
-      "AshfaqHossain",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.appName": {
-    "modified": "2019-03-23T23:34:51.570Z",
-    "contributors": [
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.appVersion": {
-    "modified": "2019-03-23T23:34:48.787Z",
-    "contributors": [
-      "arunpandianp",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.battery": {
-    "modified": "2019-03-23T23:34:51.352Z",
-    "contributors": [
-      "AshfaqHossain",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.buildID": {
-    "modified": "2019-03-23T23:34:47.974Z",
-    "contributors": [
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.connection": {
-    "modified": "2019-03-23T23:34:50.817Z",
-    "contributors": [
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.cookieEnabled": {
-    "modified": "2019-03-23T23:34:44.696Z",
-    "contributors": [
-      "valtlai",
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.language": {
-    "modified": "2019-03-23T23:34:47.370Z",
-    "contributors": [
-      "AshfaqHossain",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.mimeTypes": {
-    "modified": "2019-03-23T23:34:46.573Z",
-    "contributors": [
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.onLine": {
-    "modified": "2019-03-23T23:34:35.718Z",
-    "contributors": [
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.oscpu": {
-    "modified": "2019-03-23T23:34:33.342Z",
-    "contributors": [
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.platform": {
-    "modified": "2019-03-23T23:34:40.545Z",
-    "contributors": [
-      "jsx",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.plugins": {
-    "modified": "2019-03-23T23:34:30.762Z",
-    "contributors": [
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.product": {
-    "modified": "2019-03-23T23:34:35.892Z",
-    "contributors": [
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.productSub": {
-    "modified": "2019-03-23T23:34:36.834Z",
-    "contributors": [
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.userAgent": {
-    "modified": "2019-03-23T23:34:27.801Z",
-    "contributors": [
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "DOM/window.navigator.vendor": {
-    "modified": "2019-03-23T23:34:28.021Z",
-    "contributors": [
-      "khalid32",
-      "Karvjorm"
-    ]
-  },
-  "HTML": {
-    "modified": "2019-03-23T23:34:49.523Z",
-    "contributors": [
-      "Prasanth"
-    ]
-  },
-  "HTML/Canvas": {
-    "modified": "2019-03-23T23:34:49.838Z",
-    "contributors": [
-      "Karvjorm"
-    ]
-  },
   "Learn": {
     "modified": "2020-07-16T22:43:40.977Z",
     "contributors": [
@@ -161,12 +8,6 @@
   },
   "Learn/JavaScript": {
     "modified": "2020-07-16T22:29:38.464Z",
-    "contributors": [
-      "dartvaneri"
-    ]
-  },
-  "Learn/JavaScript/Ensimmaiset_askeleet": {
-    "modified": "2020-07-16T22:29:50.029Z",
     "contributors": [
       "dartvaneri"
     ]
@@ -194,31 +35,6 @@
     "contributors": [
       "SphinxKnight",
       "halttunen.jarkko1"
-    ]
-  },
-  "Mozilla_Developer_Centerin_sisällöt": {
-    "modified": "2019-03-23T23:43:43.976Z",
-    "contributors": [
-      "Melter"
-    ]
-  },
-  "Skinin_luominen_Firefoxiin": {
-    "modified": "2019-01-16T16:12:14.893Z",
-    "contributors": [
-      "Melter"
-    ]
-  },
-  "Skinin_luominen_Firefoxiin/Aloittaminen": {
-    "modified": "2019-03-23T23:43:46.736Z",
-    "contributors": [
-      "Melter"
-    ]
-  },
-  "Teemat": {
-    "modified": "2019-03-23T23:43:19.026Z",
-    "contributors": [
-      "fscholz",
-      "Melter"
     ]
   },
   "Web": {
@@ -336,25 +152,209 @@
       "mirorauhala"
     ]
   },
-  "demos": {
-    "modified": "2019-01-16T13:28:20.845Z",
-    "contributors": [
-      "Nzon"
-    ]
-  },
-  "demos/detail": {
+  "orphaned/demos/detail": {
     "modified": "2019-01-16T13:28:09.443Z",
     "contributors": [
       "Nzon"
     ]
   },
-  "fi": {
+  "orphaned/demos": {
+    "modified": "2019-01-16T13:28:20.845Z",
+    "contributors": [
+      "Nzon"
+    ]
+  },
+  "Web/API/Navigator/doNotTrack": {
+    "modified": "2019-03-23T23:34:48.293Z",
+    "contributors": [
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/NavigatorID/appCodeName": {
+    "modified": "2019-03-23T23:34:50.037Z",
+    "contributors": [
+      "AshfaqHossain",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/NavigatorID/appName": {
+    "modified": "2019-03-23T23:34:51.570Z",
+    "contributors": [
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/NavigatorID/appVersion": {
+    "modified": "2019-03-23T23:34:48.787Z",
+    "contributors": [
+      "arunpandianp",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/Navigator/battery": {
+    "modified": "2019-03-23T23:34:51.352Z",
+    "contributors": [
+      "AshfaqHossain",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/Navigator/buildID": {
+    "modified": "2019-03-23T23:34:47.974Z",
+    "contributors": [
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/Navigator/connection": {
+    "modified": "2019-03-23T23:34:50.817Z",
+    "contributors": [
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/Navigator/cookieEnabled": {
+    "modified": "2019-03-23T23:34:44.696Z",
+    "contributors": [
+      "valtlai",
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/NavigatorLanguage/language": {
+    "modified": "2019-03-23T23:34:47.370Z",
+    "contributors": [
+      "AshfaqHossain",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/NavigatorPlugins/mimeTypes": {
+    "modified": "2019-03-23T23:34:46.573Z",
+    "contributors": [
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/NavigatorOnLine/onLine": {
+    "modified": "2019-03-23T23:34:35.718Z",
+    "contributors": [
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/Navigator/oscpu": {
+    "modified": "2019-03-23T23:34:33.342Z",
+    "contributors": [
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/NavigatorID/platform": {
+    "modified": "2019-03-23T23:34:40.545Z",
+    "contributors": [
+      "jsx",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/NavigatorPlugins/plugins": {
+    "modified": "2019-03-23T23:34:30.762Z",
+    "contributors": [
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/NavigatorID/product": {
+    "modified": "2019-03-23T23:34:35.892Z",
+    "contributors": [
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/Navigator/productSub": {
+    "modified": "2019-03-23T23:34:36.834Z",
+    "contributors": [
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/NavigatorID/userAgent": {
+    "modified": "2019-03-23T23:34:27.801Z",
+    "contributors": [
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/Navigator/vendor": {
+    "modified": "2019-03-23T23:34:28.021Z",
+    "contributors": [
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "Web/API/Window/navigator": {
+    "modified": "2019-03-23T23:34:56.542Z",
+    "contributors": [
+      "fscholz",
+      "khalid32",
+      "Karvjorm"
+    ]
+  },
+  "orphaned/fi": {
     "modified": "2019-03-24T00:08:59.851Z",
     "contributors": [
       "teoli",
       "syssgx",
       "techexpert",
       "Melter"
+    ]
+  },
+  "Web/API/Canvas_API": {
+    "modified": "2019-03-23T23:34:49.838Z",
+    "contributors": [
+      "Karvjorm"
+    ]
+  },
+  "Learn/JavaScript/First_steps": {
+    "modified": "2020-07-16T22:29:50.029Z",
+    "contributors": [
+      "dartvaneri"
+    ]
+  },
+  "orphaned/Mozilla_Developer_Centerin_sisällöt": {
+    "modified": "2019-03-23T23:43:43.976Z",
+    "contributors": [
+      "Melter"
+    ]
+  },
+  "orphaned/Skinin_luominen_Firefoxiin/Aloittaminen": {
+    "modified": "2019-03-23T23:43:46.736Z",
+    "contributors": [
+      "Melter"
+    ]
+  },
+  "orphaned/Skinin_luominen_Firefoxiin": {
+    "modified": "2019-01-16T16:12:14.893Z",
+    "contributors": [
+      "Melter"
+    ]
+  },
+  "orphaned/Teemat": {
+    "modified": "2019-03-23T23:43:19.026Z",
+    "contributors": [
+      "fscholz",
+      "Melter"
+    ]
+  },
+  "Web/API/Document_Object_Model": {
+    "modified": "2019-03-23T23:35:02.223Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "conflicting/Web/HTML": {
+    "modified": "2019-03-23T23:34:49.523Z",
+    "contributors": [
+      "Prasanth"
     ]
   }
 }
