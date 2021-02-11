@@ -1,47 +1,4 @@
 {
-  "Core_JavaScript_1.5_正規表達式的建立": {
-    "modified": "2019-03-24T00:00:58.216Z",
-    "contributors": [
-      "wbamberg",
-      "happysadman"
-    ]
-  },
-  "Cross-site_XMLHttpRequest": {
-    "modified": "2019-01-16T15:28:10.716Z",
-    "contributors": [
-      "Mgjbot",
-      "BobChao",
-      "Coolcd"
-    ]
-  },
-  "DOM_觀察器": {
-    "modified": "2019-01-16T13:41:41.852Z",
-    "contributors": [
-      "273K"
-    ]
-  },
-  "DragDrop": {
-    "modified": "2019-01-16T13:26:51.358Z",
-    "contributors": [
-      "sailplaneTW"
-    ]
-  },
-  "Firefox_3.5_技術文件": {
-    "modified": "2019-03-23T23:59:44.778Z",
-    "contributors": [
-      "irvinfly",
-      "RJ_Hsiao",
-      "teoli",
-      "Littlebtc",
-      "BobChao"
-    ]
-  },
-  "Firefox_中的離線資源": {
-    "modified": "2019-03-24T00:13:31.494Z",
-    "contributors": [
-      "sailplaneTW"
-    ]
-  },
   "Games": {
     "modified": "2019-09-09T15:35:53.246Z",
     "contributors": [
@@ -1087,12 +1044,6 @@
       "iigmir"
     ]
   },
-  "HTML5_Cross_Browser_Polyfills": {
-    "modified": "2019-01-16T13:58:45.342Z",
-    "contributors": [
-      "Kennyluck"
-    ]
-  },
   "Learn": {
     "modified": "2020-08-04T10:38:00.665Z",
     "contributors": [
@@ -1319,28 +1270,6 @@
       "chrisdavidmills"
     ]
   },
-  "Learn/HTML/Forms": {
-    "modified": "2020-07-16T22:21:03.096Z",
-    "contributors": [
-      "nighet",
-      "chrisdavidmills",
-      "iigmir",
-      "Shiyou",
-      "saka6333",
-      "jcchang",
-      "sjmiles"
-    ]
-  },
-  "Learn/HTML/Forms/How_to_structure_an_HTML_form": {
-    "modified": "2020-07-16T22:21:16.863Z",
-    "contributors": [
-      "iigmir",
-      "anniesnoopymd",
-      "chrisdavidmills",
-      "Sheppy",
-      "kitty-5420"
-    ]
-  },
   "Learn/HTML/Howto": {
     "modified": "2020-07-16T22:22:31.553Z",
     "contributors": [
@@ -1419,13 +1348,6 @@
       "CATITANK"
     ]
   },
-  "Learn/HTML/Multimedia_and_embedding/HTML中的圖片": {
-    "modified": "2020-07-20T05:13:25.235Z",
-    "contributors": [
-      "zackjtl",
-      "LeonchanTW"
-    ]
-  },
   "Learn/HTML/Multimedia_and_embedding/Video_and_audio_content": {
     "modified": "2020-09-27T07:40:33.292Z",
     "contributors": [
@@ -1438,30 +1360,9 @@
       "CoderAmutu"
     ]
   },
-  "Learn/HTML/Multimedia_and_embedding/其他_嵌入_技術": {
-    "modified": "2020-09-27T08:20:57.717Z",
-    "contributors": [
-      "CoderAmutu"
-    ]
-  },
   "Learn/HTML/Tables": {
     "modified": "2020-07-16T22:25:16.897Z",
     "contributors": [
-      "iigmir"
-    ]
-  },
-  "Learn/HTML/Tables/基礎": {
-    "modified": "2020-11-25T04:21:37.312Z",
-    "contributors": [
-      "123milkcat",
-      "allchangechallenge"
-    ]
-  },
-  "Learn/How_to_contribute": {
-    "modified": "2020-07-16T22:33:48.192Z",
-    "contributors": [
-      "SphinxKnight",
-      "willynpi",
       "iigmir"
     ]
   },
@@ -1749,12 +1650,6 @@
     "modified": "2020-07-16T22:40:40.169Z",
     "contributors": [
       "estelle"
-    ]
-  },
-  "Learn/Performance/多媒體": {
-    "modified": "2020-07-16T22:40:44.626Z",
-    "contributors": [
-      "b84330808"
     ]
   },
   "Learn/Server-side": {
@@ -2065,15 +1960,6 @@
       "iigmir"
     ]
   },
-  "Learn/Server-side/First_steps/介紹": {
-    "modified": "2020-10-29T10:39:42.677Z",
-    "contributors": [
-      "JamesGoler",
-      "Kun-Neng",
-      "vivihenry",
-      "frank030310"
-    ]
-  },
   "Learn/Tools_and_testing": {
     "modified": "2020-07-16T22:38:58.702Z",
     "contributors": [
@@ -2142,23 +2028,6 @@
       "abs0986211642"
     ]
   },
-  "MDN/Community": {
-    "modified": "2020-05-24T00:35:19.952Z",
-    "contributors": [
-      "nighet",
-      "wbamberg",
-      "SecondSpirit",
-      "ALiangLiang",
-      "a0983891582",
-      "king_5266"
-    ]
-  },
-  "MDN/Community/論壇": {
-    "modified": "2020-05-24T00:50:25.189Z",
-    "contributors": [
-      "nighet"
-    ]
-  },
   "MDN/Contribute": {
     "modified": "2019-01-16T19:25:51.462Z",
     "contributors": [
@@ -2197,14 +2066,6 @@
       "klez"
     ]
   },
-  "MDN/Contribute/Howto/Create_an_MDN_account": {
-    "modified": "2019-01-16T21:17:57.540Z",
-    "contributors": [
-      "wbamberg",
-      "iigmir",
-      "f19857466"
-    ]
-  },
   "MDN/Contribute/Howto/Create_and_edit_pages": {
     "modified": "2019-04-23T05:30:19.186Z",
     "contributors": [
@@ -2217,63 +2078,11 @@
       "coby777"
     ]
   },
-  "MDN/Contribute/Howto/Do_a_technical_review": {
-    "modified": "2019-03-23T22:32:06.855Z",
-    "contributors": [
-      "wbamberg",
-      "iigmir",
-      "mgrn"
-    ]
-  },
-  "MDN/Contribute/Howto/Do_an_editorial_review": {
-    "modified": "2019-08-12T14:08:44.950Z",
-    "contributors": [
-      "ayugioh2003",
-      "wbamberg",
-      "jwhitlock",
-      "flyinglimao"
-    ]
-  },
-  "MDN/Contribute/Howto/Set_the_summary_for_a_page": {
-    "modified": "2019-03-23T22:02:13.738Z",
-    "contributors": [
-      "wbamberg",
-      "Astrid-GitHub",
-      "RSyehann"
-    ]
-  },
   "MDN/Contribute/Howto/Tag": {
     "modified": "2019-03-23T22:54:12.092Z",
     "contributors": [
       "wbamberg",
       "yami"
-    ]
-  },
-  "MDN/Editor": {
-    "modified": "2020-09-30T15:44:37.576Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "EatPizza311",
-      "tpst1114",
-      "jswisher"
-    ]
-  },
-  "MDN/Editor/Basics": {
-    "modified": "2020-09-30T15:44:37.917Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "tpst1114"
-    ]
-  },
-  "MDN/Editor/Edit_box": {
-    "modified": "2020-09-30T15:44:37.748Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jackblackevo",
-      "JoanneWu"
     ]
   },
   "MDN/Guidelines": {
@@ -2301,17 +2110,6 @@
       "wildsky"
     ]
   },
-  "MDN/Kuma": {
-    "modified": "2019-09-06T03:30:44.825Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "iigmir",
-      "SecondSpirit",
-      "a8040282",
-      "Sheppy"
-    ]
-  },
   "MDN/Tools": {
     "modified": "2020-09-30T16:55:39.074Z",
     "contributors": [
@@ -2335,12 +2133,6 @@
       "wbamberg",
       "jackblackevo",
       "iigmir",
-      "alk03073135"
-    ]
-  },
-  "MDN_at_ten": {
-    "modified": "2019-03-23T22:49:37.556Z",
-    "contributors": [
       "alk03073135"
     ]
   },
@@ -2705,17 +2497,6 @@
       "BobChao"
     ]
   },
-  "Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽": {
-    "modified": "2019-04-23T03:28:52.095Z",
-    "contributors": [
-      "jackblackevo",
-      "wbamberg",
-      "SphinxKnight",
-      "irvinfly",
-      "teoli",
-      "BobChao"
-    ]
-  },
   "Mozilla/Firefox/Releases/5": {
     "modified": "2019-03-23T23:06:59.171Z",
     "contributors": [
@@ -2769,20 +2550,6 @@
       "wbamberg",
       "fscholz",
       "RJ_Hsiao"
-    ]
-  },
-  "Python": {
-    "modified": "2019-03-23T23:33:19.493Z",
-    "contributors": [
-      "garylai1990"
-    ]
-  },
-  "SVG/Tutorial/Basic_Shapes": {
-    "modified": "2019-04-23T03:35:52.184Z",
-    "contributors": [
-      "jackblackevo",
-      "ethertank",
-      "Dx.Yang"
     ]
   },
   "Tools": {
@@ -2955,12 +2722,6 @@
   },
   "Tools/Web_Console/Keyboard_shortcuts": {
     "modified": "2020-07-16T22:34:24.444Z",
-    "contributors": [
-      "iigmir"
-    ]
-  },
-  "Tools/Web_Console/Opening_the_Web_Console": {
-    "modified": "2020-07-16T22:34:17.831Z",
     "contributors": [
       "iigmir"
     ]
@@ -3178,13 +2939,6 @@
       "dextra",
       "Kennyluck",
       "happysadman"
-    ]
-  },
-  "Web/API/Canvas_API/Drawing_graphics_with_canvas": {
-    "modified": "2019-03-23T23:13:40.314Z",
-    "contributors": [
-      "fscholz",
-      "sailplaneTW"
     ]
   },
   "Web/API/Canvas_API/Tutorial": {
@@ -3565,12 +3319,6 @@
       "BobChao"
     ]
   },
-  "Web/API/Document_Object_Model/事件": {
-    "modified": "2019-03-23T22:27:33.501Z",
-    "contributors": [
-      "H-W-Chang"
-    ]
-  },
   "Web/API/DragEvent": {
     "modified": "2020-02-27T01:36:51.610Z",
     "contributors": [
@@ -3706,12 +3454,6 @@
     "modified": "2019-03-23T22:31:08.554Z",
     "contributors": [
       "jackblackevo"
-    ]
-  },
-  "Web/API/Event/createEvent": {
-    "modified": "2019-03-23T22:46:58.596Z",
-    "contributors": [
-      "Shiyou"
     ]
   },
   "Web/API/Event/currentTarget": {
@@ -3951,14 +3693,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Geolocation/Using_geolocation": {
-    "modified": "2019-12-15T11:33:42.173Z",
-    "contributors": [
-      "ayugioh2003",
-      "jackblackevo",
-      "MashKao"
-    ]
-  },
   "Web/API/Geolocation/clearWatch": {
     "modified": "2019-03-23T22:36:15.036Z",
     "contributors": [
@@ -4146,20 +3880,8 @@
       "jackblackevo"
     ]
   },
-  "Web/API/HTMLElement/dataset": {
-    "modified": "2019-03-18T21:38:45.005Z",
-    "contributors": [
-      "willynpi"
-    ]
-  },
   "Web/API/HTMLElement/lang": {
     "modified": "2019-03-23T22:12:53.096Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
-  "Web/API/HTMLElement/style": {
-    "modified": "2019-03-23T22:20:07.015Z",
     "contributors": [
       "jackblackevo"
     ]
@@ -4446,12 +4168,6 @@
       "jackblackevo"
     ]
   },
-  "Web/API/Node/innerText": {
-    "modified": "2019-03-23T22:12:44.697Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/API/Node/insertBefore": {
     "modified": "2020-10-15T22:10:04.295Z",
     "contributors": [
@@ -4552,13 +4268,6 @@
     "contributors": [
       "fscholz",
       "jasonslyvia"
-    ]
-  },
-  "Web/API/Performance.timing": {
-    "modified": "2020-10-15T21:29:18.100Z",
-    "contributors": [
-      "fscholz",
-      "BobChao"
     ]
   },
   "Web/API/Pointer_Lock_API": {
@@ -4785,13 +4494,6 @@
       "MashKao"
     ]
   },
-  "Web/API/Web_Video_Text_Tracks_Format": {
-    "modified": "2019-03-23T23:11:00.411Z",
-    "contributors": [
-      "wbamberg",
-      "BobChao"
-    ]
-  },
   "Web/API/Web_Workers_API": {
     "modified": "2019-03-23T22:31:22.820Z",
     "contributors": [
@@ -4818,31 +4520,6 @@
     "modified": "2019-03-23T22:30:42.242Z",
     "contributors": [
       "jackblackevo"
-    ]
-  },
-  "Web/API/Window.history": {
-    "modified": "2019-03-23T23:27:30.087Z",
-    "contributors": [
-      "jackblackevo",
-      "jsx",
-      "ChiLiJung"
-    ]
-  },
-  "Web/API/Window.onpopstate": {
-    "modified": "2019-03-23T23:27:28.070Z",
-    "contributors": [
-      "irvinfly",
-      "khalid32",
-      "ChiLiJung"
-    ]
-  },
-  "Web/API/Window.requestAnimationFrame": {
-    "modified": "2020-10-15T21:24:54.235Z",
-    "contributors": [
-      "t7yang",
-      "Ekanan",
-      "North",
-      "foxbrush"
     ]
   },
   "Web/API/Window/getComputedStyle": {
@@ -4913,20 +4590,6 @@
       "IsaacSchemm"
     ]
   },
-  "Web/API/Window/sidebar/Adding_search_engines_from_Web_pages": {
-    "modified": "2019-01-16T15:28:04.055Z",
-    "contributors": [
-      "jackblackevo",
-      "Mgjbot",
-      "BobChao"
-    ]
-  },
-  "Web/API/WindowBase64": {
-    "modified": "2019-03-23T22:30:45.308Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/API/WindowEventHandlers": {
     "modified": "2019-03-23T22:30:52.273Z",
     "contributors": [
@@ -4955,12 +4618,6 @@
     "modified": "2020-10-15T22:29:07.467Z",
     "contributors": [
       "chrischi0922s"
-    ]
-  },
-  "Web/API/WindowTimers": {
-    "modified": "2019-03-18T21:16:54.761Z",
-    "contributors": [
-      "jackblackevo"
     ]
   },
   "Web/API/XMLHttpRequest": {
@@ -5040,13 +4697,6 @@
     "contributors": [
       "lin826",
       "iigmir"
-    ]
-  },
-  "Web/API/document.createTreeWalker": {
-    "modified": "2019-03-23T23:14:12.386Z",
-    "contributors": [
-      "jsx",
-      "shyangs"
     ]
   },
   "Web/API/notification": {
@@ -5175,13 +4825,6 @@
       "cvrebert"
     ]
   },
-  "Web/CSS/@viewport/height": {
-    "modified": "2019-10-22T02:02:49.952Z",
-    "contributors": [
-      "Zhang-Junzhi",
-      "yvonne6344"
-    ]
-  },
   "Web/CSS/CSS_Animations": {
     "modified": "2019-03-23T22:43:48.571Z",
     "contributors": [
@@ -5195,21 +4838,6 @@
       "teoli",
       "ethertank",
       "sailplaneTW"
-    ]
-  },
-  "Web/CSS/CSS_Background_and_Borders": {
-    "modified": "2019-03-23T22:44:17.591Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
-  "Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds": {
-    "modified": "2019-03-23T22:48:53.708Z",
-    "contributors": [
-      "sss63232",
-      "Shiyou",
-      "teoli",
-      "alk03073135"
     ]
   },
   "Web/CSS/CSS_Box_Model": {
@@ -5227,13 +4855,6 @@
       "MOSapeizer"
     ]
   },
-  "Web/CSS/CSS_Colors": {
-    "modified": "2019-03-23T22:44:44.114Z",
-    "contributors": [
-      "Sebastianz",
-      "teoli"
-    ]
-  },
   "Web/CSS/CSS_Colors/Color_picker_tool": {
     "modified": "2019-03-23T22:44:42.147Z",
     "contributors": [
@@ -5248,14 +4869,6 @@
       "iigmir",
       "1986slayer",
       "WynnChen"
-    ]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes": {
-    "modified": "2020-05-11T23:59:37.780Z",
-    "contributors": [
-      "wildsky",
-      "iigmir",
-      "1986slayer"
     ]
   },
   "Web/CSS/CSS_Grid_Layout": {
@@ -5347,15 +4960,6 @@
       "elin",
       "ethertank",
       "sailplaneTW"
-    ]
-  },
-  "Web/CSS/Common_CSS_Questions": {
-    "modified": "2020-07-16T22:25:46.290Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "Mgjbot",
-      "BobChao"
     ]
   },
   "Web/CSS/Descendant_combinator": {
@@ -5463,14 +5067,6 @@
     "modified": "2019-03-24T00:08:26.325Z",
     "contributors": [
       "wbamberg",
-      "teoli",
-      "Kennyluck"
-    ]
-  },
-  "Web/CSS/border-image/border-image": {
-    "modified": "2019-03-24T00:08:11.061Z",
-    "contributors": [
-      "mrstork",
       "teoli",
       "Kennyluck"
     ]
@@ -5661,31 +5257,6 @@
       "louisremi"
     ]
   },
-  "Web/Events/DOMContentLoaded": {
-    "modified": "2019-04-30T13:56:21.954Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "NoctisHsu",
-      "jackblackevo",
-      "ethertank",
-      "CarterTsai"
-    ]
-  },
-  "Web/Events/abort": {
-    "modified": "2019-04-30T14:18:03.298Z",
-    "contributors": [
-      "wbamberg",
-      "secminhr"
-    ]
-  },
-  "Web/Events/load": {
-    "modified": "2019-03-23T22:18:11.736Z",
-    "contributors": [
-      "fscholz",
-      "Snailpool"
-    ]
-  },
   "Web/Guide": {
     "modified": "2019-03-23T23:29:55.855Z",
     "contributors": [
@@ -5731,12 +5302,6 @@
       "shing0608"
     ]
   },
-  "Web/Guide/DOM": {
-    "modified": "2019-03-23T23:29:56.158Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Web/Guide/Events": {
     "modified": "2019-03-23T22:48:03.662Z",
     "contributors": [
@@ -5769,13 +5334,6 @@
     "modified": "2019-03-23T22:28:17.896Z",
     "contributors": [
       "iigmir"
-    ]
-  },
-  "Web/Guide/HTML/Event_attributes": {
-    "modified": "2019-11-20T21:38:26.184Z",
-    "contributors": [
-      "wbamberg",
-      "jackblackevo"
     ]
   },
   "Web/Guide/HTML/HTML5": {
@@ -6064,12 +5622,6 @@
       "Shiyou"
     ]
   },
-  "Web/HTML/Forms_in_HTML": {
-    "modified": "2019-03-23T23:28:09.563Z",
-    "contributors": [
-      "foxbrush"
-    ]
-  },
   "Web/HTML/Global_attributes": {
     "modified": "2019-03-23T22:31:21.607Z",
     "contributors": [
@@ -6108,13 +5660,6 @@
       "TAlulu",
       "irvinfly",
       "stingyong"
-    ]
-  },
-  "Web/HTML/Supported_media_formats": {
-    "modified": "2019-03-23T23:14:51.174Z",
-    "contributors": [
-      "young3578671",
-      "Keeseonglee"
     ]
   },
   "Web/HTML/Using_the_application_cache": {
@@ -6310,12 +5855,6 @@
       "nientsu"
     ]
   },
-  "Web/HTTP/Server-Side_Access_Control": {
-    "modified": "2019-03-23T22:06:20.131Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/HTTP/Status": {
     "modified": "2020-10-15T21:38:22.963Z",
     "contributors": [
@@ -6433,13 +5972,6 @@
       "gamerslouis"
     ]
   },
-  "Web/HTTP/Status/418_I_m_a_teapot": {
-    "modified": "2020-10-15T22:00:43.617Z",
-    "contributors": [
-      "iigmir",
-      "dzamlo"
-    ]
-  },
   "Web/HTTP/Status/451": {
     "modified": "2020-10-15T22:02:32.084Z",
     "contributors": [
@@ -6480,15 +6012,6 @@
       "lesikolerina23",
       "iigmir",
       "slivenred"
-    ]
-  },
-  "Web/HTTP/data_URIs": {
-    "modified": "2020-06-09T11:41:01.440Z",
-    "contributors": [
-      "jhihruei",
-      "jwhitlock",
-      "Shiyou",
-      "alk03073135"
     ]
   },
   "Web/JavaScript": {
@@ -6785,18 +6308,6 @@
       "Snailpool"
     ]
   },
-  "Web/JavaScript/Introduction_to_Object-Oriented_JavaScript": {
-    "modified": "2020-08-05T00:50:19.955Z",
-    "contributors": [
-      "nientsu",
-      "cwlin0416",
-      "fscholz",
-      "jackblackevo",
-      "nightsnow0918",
-      "irvinfly",
-      "sailplaneTW"
-    ]
-  },
   "Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:35:23.439Z",
     "contributors": [
@@ -6821,594 +6332,6 @@
       "chengr4",
       "ballfish",
       "mybaseball52"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/JavaScript_概要": {
-    "modified": "2019-01-16T14:44:37.660Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/LiveConnect_概要": {
-    "modified": "2019-01-16T14:43:16.706Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/Unicode": {
-    "modified": "2019-01-16T14:44:25.337Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/以類別為基礎的語言_vs._以原型為基礎的語言": {
-    "modified": "2019-01-16T14:43:47.289Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/例外處理語法": {
-    "modified": "2019-03-24T00:00:58.152Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/例外處理語法/throw_語法": {
-    "modified": "2019-03-24T00:00:57.682Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/例外處理語法/try...catch_語法": {
-    "modified": "2020-08-31T05:59:42.160Z",
-    "contributors": [
-      "clifflu",
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/值": {
-    "modified": "2019-01-16T14:44:19.901Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/再談屬性的繼承": {
-    "modified": "2019-01-16T14:43:20.597Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/再談屬性的繼承/實體關係的確定": {
-    "modified": "2019-01-16T14:43:13.719Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/再談屬性的繼承/局域值和繼承值": {
-    "modified": "2019-01-16T14:43:16.085Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/再談屬性的繼承/建構子中的全域資訊": {
-    "modified": "2019-01-16T14:43:20.683Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/再談屬性的繼承/沒有多重繼承": {
-    "modified": "2019-01-16T14:43:21.630Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/函數的呼叫": {
-    "modified": "2019-03-24T00:00:58.959Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/函數的定義": {
-    "modified": "2019-01-16T14:44:26.521Z",
-    "contributors": [
-      "teoli",
-      "Sheppy",
-      "Jaric",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/區塊語法": {
-    "modified": "2019-01-16T13:06:24.647Z",
-    "contributors": [
-      "teoli",
-      "Sheppy",
-      "Jaric",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/字面表達": {
-    "modified": "2019-01-16T14:44:20.274Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/常數": {
-    "modified": "2019-01-16T14:44:19.601Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/建立新的物件": {
-    "modified": "2019-03-24T00:01:06.649Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法": {
-    "modified": "2019-01-16T14:44:21.815Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/break_語法": {
-    "modified": "2019-03-24T00:00:58.023Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/continue_語法": {
-    "modified": "2019-03-24T00:01:00.198Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/do...while_語法": {
-    "modified": "2019-03-24T00:00:59.356Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/for_語法": {
-    "modified": "2019-03-24T00:01:11.869Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/label_語法": {
-    "modified": "2019-03-24T00:01:01.557Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/while_語法": {
-    "modified": "2019-03-24T00:01:00.950Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立": {
-    "modified": "2019-03-24T00:01:06.394Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/Getter_和_Setter_的定義": {
-    "modified": "2019-03-24T00:01:05.950Z",
-    "contributors": [
-      "fscholz",
-      "jigs12",
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/使用_this_取得物件的參考": {
-    "modified": "2019-03-24T00:01:06.045Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/屬性的刪除": {
-    "modified": "2019-03-24T00:01:04.888Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用": {
-    "modified": "2019-03-24T00:01:06.293Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/方法的定義": {
-    "modified": "2019-03-24T00:01:03.034Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用": {
-    "modified": "2019-03-24T00:01:06.480Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引": {
-    "modified": "2019-03-24T00:01:04.238Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/針對物件的類型定義屬性": {
-    "modified": "2019-03-24T00:01:04.444Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/條件語法": {
-    "modified": "2019-01-16T14:43:51.018Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式模式的編寫": {
-    "modified": "2019-03-24T00:00:58.884Z",
-    "contributors": [
-      "wildsky",
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式的建立": {
-    "modified": "2019-03-24T00:01:00.293Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式的運用": {
-    "modified": "2019-01-16T14:44:21.287Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式的運用/使用標誌的進階搜尋": {
-    "modified": "2019-01-16T14:44:23.103Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式的運用/括弧子字串的比對結果的運用": {
-    "modified": "2019-01-16T14:44:25.974Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式的運用/正規表達式的範例": {
-    "modified": "2019-03-24T00:00:59.567Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/物件和屬性": {
-    "modified": "2019-01-16T14:44:03.755Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/物件的操作語法": {
-    "modified": "2019-03-24T00:00:59.074Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/繼承": {
-    "modified": "2019-03-24T00:01:09.212Z",
-    "contributors": [
-      "jsgao0",
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子": {
-    "modified": "2019-03-24T00:01:18.422Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/更靈活的建構子": {
-    "modified": "2019-01-16T14:43:17.913Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性": {
-    "modified": "2019-03-24T00:01:21.807Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的加入": {
-    "modified": "2019-03-24T00:01:15.806Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的繼承": {
-    "modified": "2019-03-24T00:01:17.728Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/階層的建立": {
-    "modified": "2019-03-24T00:01:17.848Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/表達式": {
-    "modified": "2019-01-16T14:44:25.015Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/註解": {
-    "modified": "2019-01-16T14:44:18.898Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/變數": {
-    "modified": "2019-01-16T14:44:20.971Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/迭代器和產生器": {
-    "modified": "2019-03-24T00:01:19.860Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "Wladimir_Palant",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子": {
-    "modified": "2019-01-16T14:44:25.230Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/代入運算子": {
-    "modified": "2019-03-24T00:01:01.353Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/位元運算子": {
-    "modified": "2019-01-16T14:44:24.141Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/字串運算子": {
-    "modified": "2019-01-16T14:44:19.884Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/比較運算子": {
-    "modified": "2019-01-16T14:44:28.417Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/特殊運算子": {
-    "modified": "2019-01-16T14:44:24.727Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/算術運算子": {
-    "modified": "2019-01-16T14:44:25.132Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/邏輯運算子": {
-    "modified": "2019-01-16T14:44:21.016Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/閉包的運用": {
-    "modified": "2019-01-16T14:44:07.939Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/關於": {
-    "modified": "2019-01-16T14:44:22.263Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/陣列的運用": {
-    "modified": "2019-03-24T00:01:19.124Z",
-    "contributors": [
-      "wbamberg",
-      "Jaja",
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的函數": {
-    "modified": "2019-01-16T14:44:03.697Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的函數/Number_和_String_函數": {
-    "modified": "2019-03-24T00:01:05.054Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的函數/escape_和_unescape_函數": {
-    "modified": "2019-03-24T00:01:07.501Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的函數/eval_函數": {
-    "modified": "2019-01-16T14:44:04.783Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的函數/isFinite_函數": {
-    "modified": "2019-03-24T00:01:03.372Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的函數/isNaN_函數": {
-    "modified": "2019-03-24T00:01:04.794Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的函數/parseInt_和_parseFloat_函數": {
-    "modified": "2019-03-24T00:01:07.340Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件": {
-    "modified": "2019-01-16T14:44:07.734Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Array_物件": {
-    "modified": "2019-03-24T00:01:13.553Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Boolean_物件": {
-    "modified": "2019-03-24T00:01:13.158Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Date_物件": {
-    "modified": "2019-03-24T00:01:09.665Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Function_物件": {
-    "modified": "2019-03-24T00:01:12.219Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Math_物件": {
-    "modified": "2019-03-24T00:01:08.965Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Number_物件": {
-    "modified": "2019-03-24T00:01:11.242Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/RegExp_物件": {
-    "modified": "2019-03-24T00:01:13.910Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
-    ]
-  },
-  "Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/String_物件": {
-    "modified": "2019-03-24T00:01:08.836Z",
-    "contributors": [
-      "teoli",
-      "happysadman"
     ]
   },
   "Web/JavaScript/Reference": {
@@ -7890,13 +6813,6 @@
       "Kennyluck"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype": {
-    "modified": "2019-03-23T22:31:10.924Z",
-    "contributors": [
-      "teoli",
-      "jackblackevo"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/AsyncFunction": {
     "modified": "2020-10-15T22:18:02.118Z",
     "contributors": [
@@ -7943,12 +6859,6 @@
   },
   "Web/JavaScript/Reference/Global_Objects/Date/now": {
     "modified": "2019-03-23T22:26:18.288Z",
-    "contributors": [
-      "ddtet"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Date/prototype": {
-    "modified": "2019-03-23T22:26:36.902Z",
     "contributors": [
       "ddtet"
     ]
@@ -8007,12 +6917,6 @@
     "contributors": [
       "CYBAI",
       "lessmind"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Function/prototype": {
-    "modified": "2019-03-23T22:30:13.335Z",
-    "contributors": [
-      "jackblackevo"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Infinity": {
@@ -8137,12 +7041,6 @@
       "xguang"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Number/prototype": {
-    "modified": "2020-10-15T21:56:46.161Z",
-    "contributors": [
-      "jsgao0"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Number/toExponential": {
     "modified": "2019-03-23T22:28:18.890Z",
     "contributors": [
@@ -8242,13 +7140,6 @@
       "leowu"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Object/prototype": {
-    "modified": "2019-03-23T22:44:24.956Z",
-    "contributors": [
-      "Shiyou",
-      "alk03073135"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Promise": {
     "modified": "2020-10-15T21:50:59.376Z",
     "contributors": [
@@ -8278,13 +7169,6 @@
     "contributors": [
       "t7yang",
       "l13013312333"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Promise/prototype": {
-    "modified": "2020-10-15T21:51:00.110Z",
-    "contributors": [
-      "nyngwang",
-      "jackblackevo"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Promise/race": {
@@ -8408,13 +7292,6 @@
       "lychee.tw"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/prototype": {
-    "modified": "2020-10-15T22:02:57.359Z",
-    "contributors": [
-      "SphinxKnight",
-      "bine139488"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/replace": {
     "modified": "2020-10-15T21:28:07.269Z",
     "contributors": [
@@ -8497,26 +7374,8 @@
       "ethertank"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Arithmetic_Operators": {
-    "modified": "2020-10-15T22:18:48.252Z",
-    "contributors": [
-      "zivalee"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Bitwise_Operators": {
-    "modified": "2020-10-15T22:19:10.927Z",
-    "contributors": [
-      "hmysjiang"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Comma_Operator": {
     "modified": "2020-03-12T19:45:21.494Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Comparison_Operators": {
-    "modified": "2020-03-12T19:45:23.267Z",
     "contributors": [
       "jackblackevo"
     ]
@@ -8536,12 +7395,6 @@
       "jsgao0",
       "jackblackevo",
       "flyinglimao"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Logical_Operators": {
-    "modified": "2020-10-15T22:19:41.845Z",
-    "contributors": [
-      "chunhh1012"
     ]
   },
   "Web/JavaScript/Reference/Operators/Object_initializer": {
@@ -8945,22 +7798,6 @@
       "Dx.Yang"
     ]
   },
-  "Web/SVG/Tutorial/路径": {
-    "modified": "2019-05-06T13:50:22.523Z",
-    "contributors": [
-      "Snailpool",
-      "ethertank",
-      "ziyunfei",
-      "Dx.Yang"
-    ]
-  },
-  "Web/SVG/教學": {
-    "modified": "2019-01-16T14:42:54.040Z",
-    "contributors": [
-      "ethertank",
-      "happysadman"
-    ]
-  },
   "Web/Security": {
     "modified": "2019-09-10T16:50:03.503Z",
     "contributors": [
@@ -9024,34 +7861,741 @@
       "sailplaneTW"
     ]
   },
-  "Web/性能": {
-    "modified": "2019-12-05T10:33:09.898Z",
-    "contributors": [
-      "zhaoy88"
-    ]
-  },
-  "WebAPI": {
-    "modified": "2019-03-23T23:28:55.141Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "MashKao",
-      "sailplaneTW"
-    ]
-  },
-  "WebAPI/Permissions": {
-    "modified": "2019-03-23T23:28:38.156Z",
-    "contributors": [
-      "MashKao"
-    ]
-  },
   "WebAssembly": {
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": [
       "Aries0d0f"
     ]
   },
-  "WebSockets": {
+  "orphaned/Core_JavaScript_1.5_正規表達式的建立": {
+    "modified": "2019-03-24T00:00:58.216Z",
+    "contributors": [
+      "wbamberg",
+      "happysadman"
+    ]
+  },
+  "orphaned/Cross-site_XMLHttpRequest": {
+    "modified": "2019-01-16T15:28:10.716Z",
+    "contributors": [
+      "Mgjbot",
+      "BobChao",
+      "Coolcd"
+    ]
+  },
+  "orphaned/DOM_觀察器": {
+    "modified": "2019-01-16T13:41:41.852Z",
+    "contributors": [
+      "273K"
+    ]
+  },
+  "conflicting/Web/API/HTML_Drag_and_Drop_API": {
+    "modified": "2019-01-16T13:26:51.358Z",
+    "contributors": [
+      "sailplaneTW"
+    ]
+  },
+  "orphaned/Firefox_3.5_技術文件": {
+    "modified": "2019-03-23T23:59:44.778Z",
+    "contributors": [
+      "irvinfly",
+      "RJ_Hsiao",
+      "teoli",
+      "Littlebtc",
+      "BobChao"
+    ]
+  },
+  "orphaned/Firefox_中的離線資源": {
+    "modified": "2019-03-24T00:13:31.494Z",
+    "contributors": [
+      "sailplaneTW"
+    ]
+  },
+  "orphaned/HTML5_Cross_Browser_Polyfills": {
+    "modified": "2019-01-16T13:58:45.342Z",
+    "contributors": [
+      "Kennyluck"
+    ]
+  },
+  "orphaned/Learn/How_to_contribute": {
+    "modified": "2020-07-16T22:33:48.192Z",
+    "contributors": [
+      "SphinxKnight",
+      "willynpi",
+      "iigmir"
+    ]
+  },
+  "Learn/Forms/How_to_structure_a_web_form": {
+    "modified": "2020-07-16T22:21:16.863Z",
+    "contributors": [
+      "iigmir",
+      "anniesnoopymd",
+      "chrisdavidmills",
+      "Sheppy",
+      "kitty-5420"
+    ]
+  },
+  "Learn/Forms": {
+    "modified": "2020-07-16T22:21:03.096Z",
+    "contributors": [
+      "nighet",
+      "chrisdavidmills",
+      "iigmir",
+      "Shiyou",
+      "saka6333",
+      "jcchang",
+      "sjmiles"
+    ]
+  },
+  "Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
+    "modified": "2020-07-20T05:13:25.235Z",
+    "contributors": [
+      "zackjtl",
+      "LeonchanTW"
+    ]
+  },
+  "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies": {
+    "modified": "2020-09-27T08:20:57.717Z",
+    "contributors": [
+      "CoderAmutu"
+    ]
+  },
+  "Learn/HTML/Tables/Basics": {
+    "modified": "2020-11-25T04:21:37.312Z",
+    "contributors": [
+      "123milkcat",
+      "allchangechallenge"
+    ]
+  },
+  "Learn/Performance/Multimedia": {
+    "modified": "2020-07-16T22:40:44.626Z",
+    "contributors": [
+      "b84330808"
+    ]
+  },
+  "Learn/Server-side/First_steps/Introduction": {
+    "modified": "2020-10-29T10:39:42.677Z",
+    "contributors": [
+      "JamesGoler",
+      "Kun-Neng",
+      "vivihenry",
+      "frank030310"
+    ]
+  },
+  "MDN/At_ten": {
+    "modified": "2019-03-23T22:49:37.556Z",
+    "contributors": [
+      "alk03073135"
+    ]
+  },
+  "orphaned/MDN/Community": {
+    "modified": "2020-05-24T00:35:19.952Z",
+    "contributors": [
+      "nighet",
+      "wbamberg",
+      "SecondSpirit",
+      "ALiangLiang",
+      "a0983891582",
+      "king_5266"
+    ]
+  },
+  "orphaned/MDN/Community/Conversations": {
+    "modified": "2020-05-24T00:50:25.189Z",
+    "contributors": [
+      "nighet"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
+    "modified": "2019-01-16T21:17:57.540Z",
+    "contributors": [
+      "wbamberg",
+      "iigmir",
+      "f19857466"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Do_a_technical_review": {
+    "modified": "2019-03-23T22:32:06.855Z",
+    "contributors": [
+      "wbamberg",
+      "iigmir",
+      "mgrn"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Do_an_editorial_review": {
+    "modified": "2019-08-12T14:08:44.950Z",
+    "contributors": [
+      "ayugioh2003",
+      "wbamberg",
+      "jwhitlock",
+      "flyinglimao"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Set_the_summary_for_a_page": {
+    "modified": "2019-03-23T22:02:13.738Z",
+    "contributors": [
+      "wbamberg",
+      "Astrid-GitHub",
+      "RSyehann"
+    ]
+  },
+  "orphaned/MDN/Editor/Basics": {
+    "modified": "2020-09-30T15:44:37.917Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "tpst1114"
+    ]
+  },
+  "orphaned/MDN/Editor/Keyboard_shortcuts": {
+    "modified": "2020-09-30T15:44:37.748Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "jackblackevo",
+      "JoanneWu"
+    ]
+  },
+  "orphaned/MDN/Editor": {
+    "modified": "2020-09-30T15:44:37.576Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "EatPizza311",
+      "tpst1114",
+      "jswisher"
+    ]
+  },
+  "MDN/Yari": {
+    "modified": "2019-09-06T03:30:44.825Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "iigmir",
+      "SecondSpirit",
+      "a8040282",
+      "Sheppy"
+    ]
+  },
+  "orphaned/Mozilla/Firefox/Releases/4/Firefox_4_開發者新功能概覽": {
+    "modified": "2019-04-23T03:28:52.095Z",
+    "contributors": [
+      "jackblackevo",
+      "wbamberg",
+      "SphinxKnight",
+      "irvinfly",
+      "teoli",
+      "BobChao"
+    ]
+  },
+  "Web/SVG/Tutorial/Basic_Shapes": {
+    "modified": "2019-04-23T03:35:52.184Z",
+    "contributors": [
+      "jackblackevo",
+      "ethertank",
+      "Dx.Yang"
+    ]
+  },
+  "Tools/Web_Console/UI_Tour": {
+    "modified": "2020-07-16T22:34:17.831Z",
+    "contributors": [
+      "iigmir"
+    ]
+  },
+  "conflicting/Web/Guide": {
+    "modified": "2019-01-16T13:10:01.650Z",
+    "contributors": [
+      "teoli",
+      "Sonrisa"
+    ]
+  },
+  "Web/API/Document_Object_Model/Events": {
+    "modified": "2019-03-23T22:27:33.501Z",
+    "contributors": [
+      "H-W-Chang"
+    ]
+  },
+  "Web/API/Document/createTreeWalker": {
+    "modified": "2019-03-23T23:14:12.386Z",
+    "contributors": [
+      "jsx",
+      "shyangs"
+    ]
+  },
+  "Web/API/Geolocation_API": {
+    "modified": "2019-12-15T11:33:42.173Z",
+    "contributors": [
+      "ayugioh2003",
+      "jackblackevo",
+      "MashKao"
+    ]
+  },
+  "Web/API/HTMLOrForeignElement/dataset": {
+    "modified": "2019-03-18T21:38:45.005Z",
+    "contributors": [
+      "willynpi"
+    ]
+  },
+  "Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2019-03-23T22:20:07.015Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
+  "Web/API/HTMLElement/innerText": {
+    "modified": "2019-03-23T22:12:44.697Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
+  "Web/API/Performance/timing": {
+    "modified": "2020-10-15T21:29:18.100Z",
+    "contributors": [
+      "fscholz",
+      "BobChao"
+    ]
+  },
+  "Web/API/WebVTT_API": {
+    "modified": "2019-03-23T23:11:00.411Z",
+    "contributors": [
+      "wbamberg",
+      "BobChao"
+    ]
+  },
+  "Web/API/Window/history": {
+    "modified": "2019-03-23T23:27:30.087Z",
+    "contributors": [
+      "jackblackevo",
+      "jsx",
+      "ChiLiJung"
+    ]
+  },
+  "Web/API/WindowEventHandlers/onpopstate": {
+    "modified": "2019-03-23T23:27:28.070Z",
+    "contributors": [
+      "irvinfly",
+      "khalid32",
+      "ChiLiJung"
+    ]
+  },
+  "Web/API/window/requestAnimationFrame": {
+    "modified": "2020-10-15T21:24:54.235Z",
+    "contributors": [
+      "t7yang",
+      "Ekanan",
+      "North",
+      "foxbrush"
+    ]
+  },
+  "orphaned/Web/CSS/border-image/border-image": {
+    "modified": "2019-03-24T00:08:11.061Z",
+    "contributors": [
+      "mrstork",
+      "teoli",
+      "Kennyluck"
+    ]
+  },
+  "Learn/CSS/Howto/CSS_FAQ": {
+    "modified": "2020-07-16T22:25:46.290Z",
+    "contributors": [
+      "fscholz",
+      "teoli",
+      "Mgjbot",
+      "BobChao"
+    ]
+  },
+  "Web/API/Window/DOMContentLoaded_event": {
+    "modified": "2019-04-30T13:56:21.954Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "NoctisHsu",
+      "jackblackevo",
+      "ethertank",
+      "CarterTsai"
+    ]
+  },
+  "Web/API/Window/load_event": {
+    "modified": "2019-03-23T22:18:11.736Z",
+    "contributors": [
+      "fscholz",
+      "Snailpool"
+    ]
+  },
+  "orphaned/Learn/HTML/Forms/HTML5_updates": {
+    "modified": "2019-03-23T23:28:09.563Z",
+    "contributors": [
+      "foxbrush"
+    ]
+  },
+  "Web/HTTP/Basics_of_HTTP/Data_URIs": {
+    "modified": "2020-06-09T11:41:01.440Z",
+    "contributors": [
+      "jhihruei",
+      "jwhitlock",
+      "Shiyou",
+      "alk03073135"
+    ]
+  },
+  "Web/HTTP/Status/418": {
+    "modified": "2020-10-15T22:00:43.617Z",
+    "contributors": [
+      "iigmir",
+      "dzamlo"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/JavaScript_概要": {
+    "modified": "2019-01-16T14:44:37.660Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/LiveConnect_概要": {
+    "modified": "2019-01-16T14:43:16.706Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/例外處理語法": {
+    "modified": "2019-03-24T00:00:58.152Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/例外處理語法/throw_語法": {
+    "modified": "2019-03-24T00:00:57.682Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/例外處理語法/try...catch_語法": {
+    "modified": "2020-08-31T05:59:42.160Z",
+    "contributors": [
+      "clifflu",
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/函數的定義": {
+    "modified": "2019-01-16T14:44:26.521Z",
+    "contributors": [
+      "teoli",
+      "Sheppy",
+      "Jaric",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/建立新的物件": {
+    "modified": "2019-03-24T00:01:06.649Z",
+    "contributors": [
+      "wbamberg",
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/break_語法": {
+    "modified": "2019-03-24T00:00:58.023Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/continue_語法": {
+    "modified": "2019-03-24T00:01:00.198Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/do...while_語法": {
+    "modified": "2019-03-24T00:00:59.356Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/for_語法": {
+    "modified": "2019-03-24T00:01:11.869Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/label_語法": {
+    "modified": "2019-03-24T00:01:01.557Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循環語法/while_語法": {
+    "modified": "2019-03-24T00:01:00.950Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/Getter_和_Setter_的定義": {
+    "modified": "2019-03-24T00:01:05.950Z",
+    "contributors": [
+      "fscholz",
+      "jigs12",
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立": {
+    "modified": "2019-03-24T00:01:06.394Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/使用_this_取得物件的參考": {
+    "modified": "2019-03-24T00:01:06.045Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/屬性的刪除": {
+    "modified": "2019-03-24T00:01:04.888Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/建構子函數的使用": {
+    "modified": "2019-03-24T00:01:06.293Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/方法的定義": {
+    "modified": "2019-03-24T00:01:03.034Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件初始化子的使用": {
+    "modified": "2019-03-24T00:01:06.480Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/物件屬性的索引": {
+    "modified": "2019-03-24T00:01:04.238Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新物件的建立/針對物件的類型定義屬性": {
+    "modified": "2019-03-24T00:01:04.444Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式模式的編寫": {
+    "modified": "2019-03-24T00:00:58.884Z",
+    "contributors": [
+      "wildsky",
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式的建立": {
+    "modified": "2019-03-24T00:01:00.293Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/正規表達式的運用/正規表達式的範例": {
+    "modified": "2019-03-24T00:00:59.567Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/物件的操作語法": {
+    "modified": "2019-03-24T00:00:59.074Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/繼承": {
+    "modified": "2019-03-24T00:01:09.212Z",
+    "contributors": [
+      "jsgao0",
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子": {
+    "modified": "2019-03-24T00:01:18.422Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性": {
+    "modified": "2019-03-24T00:01:21.807Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的加入": {
+    "modified": "2019-03-24T00:01:15.806Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/物件的屬性/屬性的繼承": {
+    "modified": "2019-03-24T00:01:17.728Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/職員的例子/階層的建立": {
+    "modified": "2019-03-24T00:01:17.848Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/迭代器和產生器": {
+    "modified": "2019-03-24T00:01:19.860Z",
+    "contributors": [
+      "wbamberg",
+      "teoli",
+      "Wladimir_Palant",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/運算子/比較運算子": {
+    "modified": "2019-01-16T14:44:28.417Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/閉包的運用": {
+    "modified": "2019-01-16T14:44:07.939Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/關於": {
+    "modified": "2019-01-16T14:44:22.263Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的函數/parseInt_和_parseFloat_函數": {
+    "modified": "2019-03-24T00:01:07.340Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Array_物件": {
+    "modified": "2019-03-24T00:01:13.553Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Boolean_物件": {
+    "modified": "2019-03-24T00:01:13.158Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Date_物件": {
+    "modified": "2019-03-24T00:01:09.665Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Function_物件": {
+    "modified": "2019-03-24T00:01:12.219Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Math_物件": {
+    "modified": "2019-03-24T00:01:08.965Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/Number_物件": {
+    "modified": "2019-03-24T00:01:11.242Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/RegExp_物件": {
+    "modified": "2019-03-24T00:01:13.910Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/預先定義的核心物件/String_物件": {
+    "modified": "2019-03-24T00:01:08.836Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "Web/SVG/Tutorial/Paths": {
+    "modified": "2019-05-06T13:50:22.523Z",
+    "contributors": [
+      "Snailpool",
+      "ethertank",
+      "ziyunfei",
+      "Dx.Yang"
+    ]
+  },
+  "orphaned/Web/SVG/教學": {
+    "modified": "2019-01-16T14:42:54.040Z",
+    "contributors": [
+      "ethertank",
+      "happysadman"
+    ]
+  },
+  "Web/Performance": {
+    "modified": "2019-12-05T10:33:09.898Z",
+    "contributors": [
+      "zhaoy88"
+    ]
+  },
+  "Web/API/Permissions_API": {
+    "modified": "2019-03-23T23:28:38.156Z",
+    "contributors": [
+      "MashKao"
+    ]
+  },
+  "Web/API/WebSockets_API": {
     "modified": "2019-10-10T16:56:50.765Z",
     "contributors": [
       "teoli",
@@ -9059,28 +8603,21 @@
       "Kennyluck"
     ]
   },
-  "WebSockets/WebSockets_reference": {
-    "modified": "2019-03-24T00:11:12.133Z",
-    "contributors": [
-      "teoli",
-      "Kennyluck"
-    ]
-  },
-  "WebSockets/WebSockets_reference/CloseEvent": {
+  "Web/API/CloseEvent": {
     "modified": "2019-03-24T00:11:09.722Z",
     "contributors": [
       "teoli",
       "Kennyluck"
     ]
   },
-  "WebSockets/WebSockets_reference/MessageEvent": {
+  "Web/API/MessageEvent": {
     "modified": "2019-03-24T00:11:11.117Z",
     "contributors": [
       "teoli",
       "Kennyluck"
     ]
   },
-  "WebSockets/WebSockets_reference/WebSocket": {
+  "Web/API/WebSocket": {
     "modified": "2019-03-24T00:11:12.042Z",
     "contributors": [
       "NoobTW",
@@ -9089,7 +8626,7 @@
       "Kennyluck"
     ]
   },
-  "WebSockets/Writing_WebSocket_client_applications": {
+  "Web/API/WebSockets_API/Writing_WebSocket_client_applications": {
     "modified": "2019-03-24T00:11:12.716Z",
     "contributors": [
       "andretw",
@@ -9098,20 +8635,46 @@
       "Kennyluck"
     ]
   },
-  "Web_development": {
-    "modified": "2019-01-16T13:10:01.650Z",
+  "Glossary/XHTML": {
+    "modified": "2019-03-24T00:01:02.785Z",
     "contributors": [
-      "teoli",
-      "Sonrisa"
+      "ethertank",
+      "happysadman"
     ]
   },
-  "Web_開發": {
-    "modified": "2019-03-24T00:01:02.674Z",
+  "orphaned/XPCNativeWrapper": {
+    "modified": "2019-03-24T00:01:38.163Z",
+    "contributors": [
+      "ethertank",
+      "Clydewu"
+    ]
+  },
+  "orphaned/zh-tw": {
+    "modified": "2019-01-16T13:51:15.538Z",
+    "contributors": [
+      "CQD"
+    ]
+  },
+  "orphaned/參與_Mozilla_專案": {
+    "modified": "2019-03-24T00:01:01.475Z",
     "contributors": [
       "happysadman"
     ]
   },
-  "Web_開發/Historical_artifacts_to_avoid": {
+  "orphaned/建立擴充套件": {
+    "modified": "2019-01-16T16:02:32.252Z",
+    "contributors": [
+      "Josesun",
+      "Haka"
+    ]
+  },
+  "conflicting/Learn/Server-side/Django": {
+    "modified": "2019-03-23T23:33:19.493Z",
+    "contributors": [
+      "garylai1990"
+    ]
+  },
+  "conflicting/Learn/HTML/Introduction_to_HTML": {
     "modified": "2019-03-23T22:48:17.115Z",
     "contributors": [
       "iigmir",
@@ -9120,37 +8683,474 @@
       "slhuang"
     ]
   },
-  "XHTML": {
-    "modified": "2019-03-24T00:01:02.785Z",
-    "contributors": [
-      "ethertank",
-      "happysadman"
-    ]
-  },
-  "XPCNativeWrapper": {
-    "modified": "2019-03-24T00:01:38.163Z",
-    "contributors": [
-      "ethertank",
-      "Clydewu"
-    ]
-  },
-  "zh-tw": {
-    "modified": "2019-01-16T13:51:15.538Z",
-    "contributors": [
-      "CQD"
-    ]
-  },
-  "參與_Mozilla_專案": {
-    "modified": "2019-03-24T00:01:01.475Z",
+  "conflicting/Web/Guide_6b4b72e1fc91461bde34734ce07b1c08": {
+    "modified": "2019-03-24T00:01:02.674Z",
     "contributors": [
       "happysadman"
     ]
   },
-  "建立擴充套件": {
-    "modified": "2019-01-16T16:02:32.252Z",
+  "conflicting/Web/API/Canvas_API/Tutorial": {
+    "modified": "2019-03-23T23:13:40.314Z",
     "contributors": [
-      "Josesun",
-      "Haka"
+      "fscholz",
+      "sailplaneTW"
+    ]
+  },
+  "Web/API/Document/createEvent": {
+    "modified": "2019-03-23T22:46:58.596Z",
+    "contributors": [
+      "Shiyou"
+    ]
+  },
+  "conflicting/Web/OpenSearch": {
+    "modified": "2019-01-16T15:28:04.055Z",
+    "contributors": [
+      "jackblackevo",
+      "Mgjbot",
+      "BobChao"
+    ]
+  },
+  "conflicting/Web/API/WindowOrWorkerGlobalScope": {
+    "modified": "2019-03-23T22:30:45.308Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
+  "conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a": {
+    "modified": "2019-03-18T21:16:54.761Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
+  "conflicting/Web/CSS/@viewport": {
+    "modified": "2019-10-22T02:02:49.952Z",
+    "contributors": [
+      "Zhang-Junzhi",
+      "yvonne6344"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2019-03-23T22:44:17.591Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds": {
+    "modified": "2019-03-23T22:48:53.708Z",
+    "contributors": [
+      "sss63232",
+      "Shiyou",
+      "teoli",
+      "alk03073135"
+    ]
+  },
+  "Web/CSS/CSS_Color": {
+    "modified": "2019-03-23T22:44:44.114Z",
+    "contributors": [
+      "Sebastianz",
+      "teoli"
+    ]
+  },
+  "Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox": {
+    "modified": "2020-05-11T23:59:37.780Z",
+    "contributors": [
+      "wildsky",
+      "iigmir",
+      "1986slayer"
+    ]
+  },
+  "Web/API/HTMLMediaElement/abort_event": {
+    "modified": "2019-04-30T14:18:03.298Z",
+    "contributors": [
+      "wbamberg",
+      "secminhr"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model": {
+    "modified": "2019-03-23T23:29:56.158Z",
+    "contributors": [
+      "Sheppy"
+    ]
+  },
+  "Learn/JavaScript/Building_blocks/Events": {
+    "modified": "2019-11-20T21:38:26.184Z",
+    "contributors": [
+      "wbamberg",
+      "jackblackevo"
+    ]
+  },
+  "conflicting/Web/Media/Formats": {
+    "modified": "2019-03-23T23:14:51.174Z",
+    "contributors": [
+      "young3578671",
+      "Keeseonglee"
+    ]
+  },
+  "conflicting/Web/HTTP/CORS": {
+    "modified": "2019-03-23T22:06:20.131Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Objects": {
+    "modified": "2020-08-05T00:50:19.955Z",
+    "contributors": [
+      "nientsu",
+      "cwlin0416",
+      "fscholz",
+      "jackblackevo",
+      "nightsnow0918",
+      "irvinfly",
+      "sailplaneTW"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Grammar_and_types": {
+    "modified": "2019-01-16T14:44:25.337Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Details_of_the_Object_Model": {
+    "modified": "2019-01-16T14:43:47.289Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Grammar_and_types_5c6f30ff8e011c45a011b9c8f3b5bcea": {
+    "modified": "2019-01-16T14:44:19.901Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Details_of_the_Object_Model_937645e235e25783cc4e9b0d7a1f6d76": {
+    "modified": "2019-01-16T14:43:20.597Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Details_of_the_Object_Model_3193ca1e5a7bdb78e9d9418a947916aa": {
+    "modified": "2019-01-16T14:43:13.719Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Details_of_the_Object_Model_483bbc3a620ead7b721647d1a2cb216f": {
+    "modified": "2019-01-16T14:43:16.085Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Details_of_the_Object_Model_8898a6dd437cc51f48b4e8cade0385ac": {
+    "modified": "2019-01-16T14:43:20.683Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Details_of_the_Object_Model_60d6c39d4282c67c117db9fdaf83be08": {
+    "modified": "2019-01-16T14:43:21.630Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Functions": {
+    "modified": "2019-03-24T00:00:58.959Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling": {
+    "modified": "2019-01-16T13:06:24.647Z",
+    "contributors": [
+      "teoli",
+      "Sheppy",
+      "Jaric",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Grammar_and_types_d57082c2207b466127d8dc34a980addf": {
+    "modified": "2019-01-16T14:44:20.274Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Grammar_and_types_e5a53691c318855e3342ad91feb78f2e": {
+    "modified": "2019-01-16T14:44:19.601Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_a2d11ceeaeb3cb8c43292be7771f9b23": {
+    "modified": "2019-01-16T14:44:21.815Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_2691b613803afee4bca87dca2a41b5c5": {
+    "modified": "2019-01-16T14:43:51.018Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Regular_Expressions": {
+    "modified": "2019-01-16T14:44:21.287Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Regular_Expressions_38b32725e0e3217a5542b1b4ee122407": {
+    "modified": "2019-01-16T14:44:23.103Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Regular_Expressions_24eb6498b86da57e7fb5337fd8fa04a6": {
+    "modified": "2019-01-16T14:44:25.974Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Working_with_Objects": {
+    "modified": "2019-01-16T14:44:03.755Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Details_of_the_Object_Model_b021bd32308e4c421518cdd7104ac7bc": {
+    "modified": "2019-01-16T14:43:17.913Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators": {
+    "modified": "2019-01-16T14:44:25.015Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Control_flow_and_error_handling_74154e098f4b1e7026df3945ceb0fa4a": {
+    "modified": "2019-01-16T14:44:18.898Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Grammar_and_types_ef6fc79abc28f5eadd6c126341df5e49": {
+    "modified": "2019-01-16T14:44:20.971Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators_e6fc14473511cf01e7062dfb7751f49d": {
+    "modified": "2019-01-16T14:44:25.230Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators_e70c1f2655520c542321ddbdb2c4f28d": {
+    "modified": "2019-03-24T00:01:01.353Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators_11969cb29fead65c26360f554426c217": {
+    "modified": "2019-01-16T14:44:24.141Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators_eb65eb8f4e6b3c16f08b95149183cfb8": {
+    "modified": "2019-01-16T14:44:19.884Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators_952d66f1fe521bc0574c89750f5b406e": {
+    "modified": "2019-01-16T14:44:24.727Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators_05717c12b1ecaebc9d68cf43524d31b1": {
+    "modified": "2019-01-16T14:44:25.132Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Expressions_and_Operators_351a6d9e4d31b32eff9762ef5deead93": {
+    "modified": "2019-01-16T14:44:21.016Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide": {
+    "modified": "2019-03-24T00:01:19.124Z",
+    "contributors": [
+      "wbamberg",
+      "Jaja",
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Functions_ceaa4b2a55bb67388c2728af1ff890f5": {
+    "modified": "2019-03-24T00:01:07.501Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Functions_effb9b1bcc102a5f6df7f1785ce89033": {
+    "modified": "2019-01-16T14:44:04.783Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Functions_587eb671a310bac0771e73a91b0abe6d": {
+    "modified": "2019-01-16T14:44:03.697Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Functions_b2cd05cbfe188215dc2e3f972d293ed6": {
+    "modified": "2019-03-24T00:01:03.372Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Functions_925b2d10050621507a9c990cb803dcca": {
+    "modified": "2019-03-24T00:01:04.794Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Functions_536f6bf46bbdf38cc1a0b28ca1bc41b9": {
+    "modified": "2019-03-24T00:01:05.054Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide_dc05b578fe0c2f7d9a89ed82daab4e65": {
+    "modified": "2019-01-16T14:44:07.734Z",
+    "contributors": [
+      "teoli",
+      "happysadman"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer": {
+    "modified": "2019-03-23T22:31:10.924Z",
+    "contributors": [
+      "teoli",
+      "jackblackevo"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date": {
+    "modified": "2019-03-23T22:26:36.902Z",
+    "contributors": [
+      "ddtet"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Function": {
+    "modified": "2019-03-23T22:30:13.335Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Number": {
+    "modified": "2020-10-15T21:56:46.161Z",
+    "contributors": [
+      "jsgao0"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Object": {
+    "modified": "2019-03-23T22:44:24.956Z",
+    "contributors": [
+      "Shiyou",
+      "alk03073135"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Promise": {
+    "modified": "2020-10-15T21:51:00.110Z",
+    "contributors": [
+      "nyngwang",
+      "jackblackevo"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
+    "modified": "2020-10-15T22:02:57.359Z",
+    "contributors": [
+      "SphinxKnight",
+      "bine139488"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Operators": {
+    "modified": "2020-10-15T22:18:48.252Z",
+    "contributors": [
+      "zivalee"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Operators_7c8eb9475d97a4a734c5991857698560": {
+    "modified": "2020-10-15T22:19:10.927Z",
+    "contributors": [
+      "hmysjiang"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Operators_310dc67549939233c3d18a8fa2cdbb23": {
+    "modified": "2020-03-12T19:45:23.267Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Operators_f71733c8e7001a29c3ec40d8522a4aca": {
+    "modified": "2020-10-15T22:19:41.845Z",
+    "contributors": [
+      "chunhh1012"
+    ]
+  },
+  "conflicting/Web/API": {
+    "modified": "2019-03-23T23:28:55.141Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "MashKao",
+      "sailplaneTW"
+    ]
+  },
+  "conflicting/Web/API/WebSockets_API": {
+    "modified": "2019-03-24T00:11:12.133Z",
+    "contributors": [
+      "teoli",
+      "Kennyluck"
     ]
   }
 }

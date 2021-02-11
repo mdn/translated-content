@@ -1,9 +1,10 @@
 ---
 title: Firefox 中的離線資源
-slug: Firefox_中的離線資源
+slug: orphaned/Firefox_中的離線資源
 tags:
   - HTML5 離線
   - application cache
+original_slug: Firefox_中的離線資源
 ---
 <p> </p>
 <div> <div> <p>原文 : <a href="/en/Using_Application_Cache" title="https://developer.mozilla.org/en/Using_Application_Cache">Using Application Cache</a></p> <p> </p> <h2 id="介紹">介紹</h2> <p>  HTML5 提供了 cache 機制，使得網路應用程式能較不受到網路狀態的影響。開發人員可以藉由 Application Cache (AppCache) 的介面來定義哪些資源應當被瀏覽器儲存起來 - 如此一來即使網路斷線使用者依舊可以取得這些資源。同時，應用程式也能正確的運行即使使用者按下了「重新載入」的按鈕。</p> <p>  大抵來說，使用 Application Cache 可以取得下列好處：</p> <ul> <li>離線瀏覽：使用者可以在斷線/離線時瀏覽你的網站</li> <li>網站加速：善用 AppCache 就可以減少載入重複資源的狀況，進而加速網站讀取速度</li> <li>減少伺服器的負擔：瀏覽器僅只有在伺服器上資源發生變動時才重新抓取資料</li> </ul> <h2 id="application_cache_運作的機制">application cache 運作的機制</h2> <h3 id="啟動_application_cache">啟動 application cache</h3> <p>  啟動 AppCache 的方法很簡單，你只需要在你程式頁面中，html 元素裡指名 manifest 的位置即可，這裡有個簡單範例：</p> <div> <pre class="eval"><span class="nowiki">&lt;html manifest="example.appcache"&gt; </span>
