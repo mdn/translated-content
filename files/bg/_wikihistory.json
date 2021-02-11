@@ -27,42 +27,12 @@
       "kartelov"
     ]
   },
-  "Learn/Да_започнем_с_Мрежата": {
-    "modified": "2020-07-16T22:33:49.451Z",
-    "contributors": [
-      "kberov",
-      "mduchev",
-      "angelinag"
-    ]
-  },
-  "Learn/Да_започнем_с_Мрежата/Инсталиране_на_основния_софтуер": {
-    "modified": "2020-07-16T22:34:05.697Z",
-    "contributors": [
-      "kberov",
-      "mduchev",
-      "angelinag"
-    ]
-  },
-  "Learn/Да_започнем_с_Мрежата/Основи_на_HTML": {
-    "modified": "2020-07-16T22:34:42.357Z",
-    "contributors": [
-      "kberov",
-      "petya5q"
-    ]
-  },
   "MDN": {
     "modified": "2020-02-19T19:28:26.629Z",
     "contributors": [
       "jswisher",
       "SphinxKnight",
       "wbamberg"
-    ]
-  },
-  "MDN/Getting_started": {
-    "modified": "2019-03-18T21:35:03.859Z",
-    "contributors": [
-      "wbamberg",
-      "L37sg0"
     ]
   },
   "Mozilla": {
@@ -138,12 +108,6 @@
     "modified": "2019-03-23T22:06:38.930Z",
     "contributors": [
       "chrisdavidmills"
-    ]
-  },
-  "Web/Guide/Графики": {
-    "modified": "2019-03-23T22:06:42.140Z",
-    "contributors": [
-      "rorinka"
     ]
   },
   "Web/HTML": {
@@ -371,20 +335,6 @@
   "Web/JavaScript/Reference/Operators": {
     "modified": "2020-12-14T04:30:59.125Z"
   },
-  "Web/JavaScript/Reference/Operators/Arithmetic_Operators": {
-    "modified": "2020-10-15T22:29:49.563Z",
-    "contributors": [
-      "dplamenov"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/разпределящ_синтаксис": {
-    "modified": "2020-10-15T22:23:17.971Z",
-    "contributors": [
-      "kopa4a",
-      "kberov",
-      "ksimeonova"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-03-18T21:32:18.223Z",
     "contributors": [
@@ -403,13 +353,108 @@
       "petya5q2"
     ]
   },
-  "Web/SVG/Ръководство": {
+  "Learn/Getting_started_with_the_web": {
+    "modified": "2020-07-16T22:33:49.451Z",
+    "contributors": [
+      "kberov",
+      "mduchev",
+      "angelinag"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/Installing_basic_software": {
+    "modified": "2020-07-16T22:34:05.697Z",
+    "contributors": [
+      "kberov",
+      "mduchev",
+      "angelinag"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/HTML_basics": {
+    "modified": "2020-07-16T22:34:42.357Z",
+    "contributors": [
+      "kberov",
+      "petya5q"
+    ]
+  },
+  "MDN/Contribute/Getting_started": {
+    "modified": "2019-03-18T21:35:03.859Z",
+    "contributors": [
+      "wbamberg",
+      "L37sg0"
+    ]
+  },
+  "Web/Guide/Graphics": {
+    "modified": "2019-03-23T22:06:42.140Z",
+    "contributors": [
+      "rorinka"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/Spread_syntax": {
+    "modified": "2020-10-15T22:23:17.971Z",
+    "contributors": [
+      "kopa4a",
+      "kberov",
+      "ksimeonova"
+    ]
+  },
+  "Web/SVG/Tutorial": {
     "modified": "2019-03-18T21:32:33.959Z",
     "contributors": [
       "petya5q2"
     ]
   },
-  "Речник": {
+  "Glossary/404": {
+    "modified": "2019-03-18T21:35:09.380Z",
+    "contributors": [
+      "kberov",
+      "venimus"
+    ]
+  },
+  "Glossary/array": {
+    "modified": "2019-03-23T22:04:38.875Z",
+    "contributors": [
+      "kberov"
+    ]
+  },
+  "Glossary/Browser": {
+    "modified": "2019-03-23T22:04:50.137Z",
+    "contributors": [
+      "kberov",
+      "stoyanster"
+    ]
+  },
+  "Glossary/CSS": {
+    "modified": "2019-03-23T22:03:48.968Z",
+    "contributors": [
+      "kberov"
+    ]
+  },
+  "Glossary/ECMA": {
+    "modified": "2019-03-18T21:15:32.098Z",
+    "contributors": [
+      "kberov"
+    ]
+  },
+  "Glossary/HTML": {
+    "modified": "2019-03-23T22:13:43.475Z",
+    "contributors": [
+      "kberov",
+      "stoyanster"
+    ]
+  },
+  "Glossary/HTTP": {
+    "modified": "2019-03-23T22:04:23.041Z",
+    "contributors": [
+      "kberov"
+    ]
+  },
+  "Glossary/Hypertext": {
+    "modified": "2019-03-23T22:04:02.582Z",
+    "contributors": [
+      "kberov"
+    ]
+  },
+  "Glossary": {
     "modified": "2020-10-07T11:06:15.491Z",
     "contributors": [
       "peterbe",
@@ -418,88 +463,43 @@
       "kberov"
     ]
   },
-  "Речник/404": {
-    "modified": "2019-03-18T21:35:09.380Z",
-    "contributors": [
-      "kberov",
-      "venimus"
-    ]
-  },
-  "Речник/Browser": {
-    "modified": "2019-03-23T22:04:50.137Z",
-    "contributors": [
-      "kberov",
-      "stoyanster"
-    ]
-  },
-  "Речник/CSS": {
-    "modified": "2019-03-23T22:03:48.968Z",
-    "contributors": [
-      "kberov"
-    ]
-  },
-  "Речник/ECMA": {
-    "modified": "2019-03-18T21:15:32.098Z",
-    "contributors": [
-      "kberov"
-    ]
-  },
-  "Речник/HTML": {
-    "modified": "2019-03-23T22:13:43.475Z",
-    "contributors": [
-      "kberov",
-      "stoyanster"
-    ]
-  },
-  "Речник/HTTP": {
-    "modified": "2019-03-23T22:04:23.041Z",
-    "contributors": [
-      "kberov"
-    ]
-  },
-  "Речник/Hypertext": {
-    "modified": "2019-03-23T22:04:02.582Z",
-    "contributors": [
-      "kberov"
-    ]
-  },
-  "Речник/Internet": {
+  "Glossary/Internet": {
     "modified": "2019-03-23T22:03:43.619Z",
     "contributors": [
       "kberov"
     ]
   },
-  "Речник/JSON": {
-    "modified": "2019-03-23T22:04:00.137Z",
-    "contributors": [
-      "kberov",
-      "tatarski"
-    ]
-  },
-  "Речник/JavaScript": {
+  "Glossary/JavaScript": {
     "modified": "2019-03-23T22:04:32.960Z",
     "contributors": [
       "_serendipity_",
       "kberov"
     ]
   },
-  "Речник/Server": {
+  "Glossary/JSON": {
+    "modified": "2019-03-23T22:04:00.137Z",
+    "contributors": [
+      "kberov",
+      "tatarski"
+    ]
+  },
+  "Glossary/Server": {
     "modified": "2019-03-23T22:04:25.240Z",
     "contributors": [
       "kberov"
     ]
   },
-  "Речник/World_Wide_Web": {
+  "Glossary/World_Wide_Web": {
     "modified": "2019-03-23T22:04:45.195Z",
     "contributors": [
       "kberov",
       "dafo"
     ]
   },
-  "Речник/array": {
-    "modified": "2019-03-23T22:04:38.875Z",
+  "conflicting/Web/JavaScript/Reference/Operators": {
+    "modified": "2020-10-15T22:29:49.563Z",
     "contributors": [
-      "kberov"
+      "dplamenov"
     ]
   }
 }
