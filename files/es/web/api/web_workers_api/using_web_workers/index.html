@@ -1,7 +1,8 @@
 ---
 title: Usando Web Workers
-slug: Web/Guide/Performance/Usando_web_workers
+slug: Web/API/Web_Workers_API/Using_web_workers
 translation_of: Web/API/Web_Workers_API/Using_web_workers
+original_slug: Web/Guide/Performance/Usando_web_workers
 ---
 <p><span class="seoSummary">Los Web Workers dedicados proveen un medio sencillo para que el contenido web ejecute scripts en hilos en segundo plano. Una vez creado, un worker puede enviar mensajes a la tarea creada mediante envio de mensajes al manejador de eventos especificado por el creador.</span> Sin embargo, <strong>los workers trabajan dentro de un <a href="https://developer.mozilla.org/en-US/docs/JavaScript/DedicatedWorkerGlobalScope">contexto global</a> diferente de la ventana actual</strong> (usar el atajo <span style="line-height: 1.5;"> {{ domxref("window") }} en lugar de </span><span style="line-height: 1.5;">{{ domxref("window.self","self") }} con el fin de obtener el scope actual dentro de un </span><span style="line-height: 1.5;">{{ domxref("Worker") }} retornaría, de hecho, un error).</span></p>
 
