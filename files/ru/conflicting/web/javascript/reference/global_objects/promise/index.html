@@ -1,0 +1,68 @@
+---
+title: Promise.prototype
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Promise
+tags:
+  - JavaScript
+  - Обещание
+  - Свойство
+translation_of: Web/JavaScript/Reference/Global_Objects/Promise
+translation_of_original: Web/JavaScript/Reference/Global_Objects/Promise/prototype
+original_slug: Web/JavaScript/Reference/Global_Objects/Promise/prototype
+---
+<div>{{JSRef}}</div>
+
+<p>Cвойство <code><strong>Promise</strong></code><strong><code>.prototype</code></strong> представляет собой прототип конструктора {{jsxref("Promise")}}.</p>
+
+<div>{{js_property_attributes(0,0,0)}}</div>
+
+<h2 id="Описание">Описание</h2>
+
+<p>{{jsxref("Promise")}} обьект наследованный от {{jsxref("Promise.prototype")}}. Вы можете использовать прототип конструктора  чтобы добавлять свойства или методы во все объекты обещаний.</p>
+
+<h2 id="Свойства">Свойства</h2>
+
+<dl>
+ <dt><code>Promise.prototype.constructor</code></dt>
+ <dd>Возвращает функцию, которая создала прототип экземпляра. Это функция всех обещаний по умолчанию.</dd>
+</dl>
+
+<h2 id="Методы">Методы</h2>
+
+<dl>
+ <dt>{{jsxref("Promise.catch", "Promise.prototype.catch(onRejected)")}}</dt>
+ <dd>Добавляет функцию обратного вызова для обработки отклонения обещания, которая возвращает новое обещание выполненное с переданным значением, если она вызвана, или оригинальное значение resolve, если обещание выполнено.</dd>
+ <dt>{{jsxref("Promise.then", "Promise.prototype.then(onFulfilled, onRejected)")}}</dt>
+ <dd style="margin-bottom: 0.5cm;">Добавляет обработчик выполнения и отклонения обещания, и возвращает новое обещание выполненное со значением вызванного обработчика, или оригинальное значение, если обещание не было обработано (т.е. если соответствующий обработчик onFulfilled или onRejected не является функцией).</dd>
+</dl>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES6', '#sec-promise.prototype', 'Promise.prototype')}}</td>
+   <td>{{Spec2('ES6')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-promise.prototype', 'Promise.prototype')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+
+
+<h2 id="Смотри_также">Смотри также</h2>
+
+<ul>
+ <li>{{jsxref("Promise")}}</li>
+</ul>

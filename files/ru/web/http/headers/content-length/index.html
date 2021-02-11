@@ -1,0 +1,68 @@
+---
+title: Content-Length
+slug: Web/HTTP/Headers/Content-Length
+tags:
+  - HTTP
+  - Headers
+  - Reference
+  - Длина контента
+  - Заголовок
+  - запрос
+translation_of: Web/HTTP/Headers/Content-Length
+original_slug: Web/HTTP/Заголовки/Content-Length
+---
+<div>{{HTTPSidebar}}</div>
+
+<p>Заголовок <strong><code>Content-Length</code></strong> указывает размер отправленного получателю тела объекта в байтах.</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <th scope="row">Тип заголовка</th>
+   <td>{{Glossary("Entity header", "Заголовок сущности")}}</td>
+  </tr>
+  <tr>
+   <th scope="row">Можно не передавать</th>
+   <td>да</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="syntaxbox notranslate">Content-Length: &lt;длина&gt;
+</pre>
+
+<h2 id="Директивы">Директивы</h2>
+
+<dl>
+ <dt>&lt;длина&gt;</dt>
+ <dd>Байты.</dd>
+</dl>
+
+<h2 id="Спецификация">Спецификация</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Название</th>
+  </tr>
+  <tr>
+   <td>{{RFC("7230", "Content-Length", "3.3.2")}}</td>
+   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
+
+<p class="hidden">Таблица совместимостина этой странице сгенерирована из структурированных данных. Если вы хотите добавить данные, пожалуйста отправьте пулл-реквест в репозиторий <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a></p>
+
+<p>{{Compat("http.headers.Content-Length")}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li>{{HTTPHeader("Transfer-Encoding")}}</li>
+</ul>

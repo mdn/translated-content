@@ -1,0 +1,131 @@
+---
+title: CORS settings attributes
+slug: Web/HTML/Attributes/crossorigin
+translation_of: Web/HTML/Attributes/crossorigin
+original_slug: Web/HTML/CORS_settings_attributes
+---
+<p><span class="seoSummary">В HTML5 некоторые теги поддерживают <a href="/en-US/docs/HTTP/Access_control_CORS">CORS</a>, например {{ HTMLElement("img") }} или {{ HTMLElement("video") }}, имеют атрибут <code>crossorigin</code>  (<code>crossOrigin</code> свойство), которое позволяет настроить CORS запросы для данных получаемых элементом.</span> Эти атрибуты могут иметь следующие значения:</p>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <td class="header">Ключевое слово</td>
+   <td class="header">Описание</td>
+  </tr>
+  <tr>
+   <td><code>anonymous</code></td>
+   <td>CORS запросы от этого элемента не будут передавать учетные данные.</td>
+  </tr>
+  <tr>
+   <td><code>use-credentials</code></td>
+   <td>CORS запросы от этого элемента будут передавать учетные данные.</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>По умолчанию (если значение атрибута не задано), CORS не используется вообще. Ключевое слово "anonymous" означает что не будет обмена <strong>учетных данных</strong>(user credentials) через cookies, client-side SSL сертификаты или HTTP аутентификацию как описано в <a class="external" href="http://www.w3.org/TR/cors/#user-credentials">Секции Терминология CORS спецификации</a>.</p>
+
+<p>Неправильное ключевое слово или пустая строка, будет обработано как  <code>anonymous</code>.</p>
+
+<h3 id="Пример_crossorigin_с_тегом_script">Пример: crossorigin с тегом script</h3>
+
+<p>Используя тег {{HTMLElement("script")}} вы можете указать браузеру выполнять код <code>https://example.com/example-framework.js</code> без передачи user-credentials.</p>
+
+<pre class="brush: html">&lt;script src="https://example.com/example-framework.js"
+        crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Спецификация</th>
+   <th scope="col">Статус</th>
+   <th scope="col">Комментарий</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'infrastructure.html#cors-settings-attributes', 'CORS settings attributes')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'embedded-content.html#attr-img-crossorigin', 'crossorigin')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
+
+<p>{{ CompatibilityTable() }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>13</td>
+   <td>{{ CompatGeckoDesktop("8.0") }}</td>
+   <td>11</td>
+   <td>{{ CompatNo() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+  <tr>
+   <td>{{ HTMLElement("video")}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatGeckoDesktop("12.0") }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Базовая поддержка</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatGeckoMobile("8.0") }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatVersionUnknown() }}</td>
+  </tr>
+  <tr>
+   <td>{{ HTMLElement("video")}}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatGeckoMobile("12.0") }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+   <td>{{ CompatUnknown() }}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<ul>
+ <li><a href="/En/HTTP_access_control" title="en/HTTP access control">HTTP access control</a></li>
+</ul>

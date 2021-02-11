@@ -1,0 +1,150 @@
+---
+title: Формы в HTML
+slug: orphaned/Learn/HTML/Forms/HTML5_updates
+tags:
+  - HTML
+  - HTML5
+  - Введение
+  - Интернет
+  - Любитель
+  - Новичок
+  - Обзор
+  - Руководство
+  - Формы
+translation_of: Learn/HTML/Forms/HTML5_updates
+original_slug: Web/Guide/HTML/Формы_в_HTML
+---
+<p>Элементы и атрибуты форм в <strong>HTML5</strong> предоставляют большие возможности семантической верстки, чем HTML4, а также позволяет отказаться от использования JavaScript и CSS, которое было ранее необходимо для HTML4. Большие возможности в формах HTML5 делают удобным для пользователей отправление информации с различных веб-сайтов. Они также предоставляют эти возможности для тех пользователей, у которых отключена поддержка JavaScript.</p>
+
+<p><span class="seoSummary">Эта статья описывает изменения в HTML-формах, представленных в HTML5. Для более подробного руководства по использованию формами, просмотрите наше обширное<a href="/ru/docs/Web/Guide/HTML/Forms"> руководство по HTML-формам</a>.</span></p>
+
+<h2 id="The_input_element" name="The_input_element">Элемент <code>&lt;input&gt;</code></h2>
+
+<p>В элементе <code>{{HTMLElement("input")}}</code> появились новые значения для атрибута {{htmlattrxref("type", "input")}}. (Просмотрите справочник {{HTMLElement("input")}} для получения полного списка атрибутов, значений и их использования для этого элемента.)</p>
+
+<ul>
+ <li><code>search</code>: Элемент представляет из себя поле для поиска. Переходы строк автоматически удаляются из значения <code>value</code>.</li>
+ <li><code>tel</code>: Элемент представляет из себя поле для редактирования номера телефона. Переходы строк автоматически удаляются из значения <code>value</code>. Вы можете использовать атрибуты, такие как: {{htmlattrxref("pattern", "input")}} и {{htmlattrxref("maxlength", "input")}}, чтобы запретить ввод неподходящих символов.</li>
+ <li><code>url</code>: Элемент представляет из себя поле для редактирования <a class="external" href="https://ru.wikipedia.org/wiki/URL" title="http://en.wikipedia.org/wiki/URL">URL</a>. Переходы строк и пробелы автоматически удаляются из значения <code>value</code>.</li>
+ <li>
+  <p><code>email</code>: Элемент представляет из себя поле для ввода одного адреса электронной почты. Переходы строк автоматически удаляются из значения <code>value</code>. Может быть предоставлен недействительный адрес эл. почты, но поле ввода запретит отправку формы, если эл. адрес почты не будет соответствовать нормам ABNF.</p>
+
+  <div class="note"><strong>Заметьте:</strong> Если установлен атрибут {{htmlattrxref("multiple", "input")}}, то может быть введено несколько адресов электронной почты, разделенных запятой, но, в данный момент, такая возможность не реализована в Firefox.</div>
+ </li>
+</ul>
+
+<p>Также, элемент {{HTMLElement("input")}} получил новые атрибуты:</p>
+
+<ul>
+ <li>{{htmlattrxref("list", "input")}}: ID элемента {{HTMLElement("datalist")}}, в котором элементы {{HTMLElement("option")}} используются как подсказки для текстового поля.</li>
+ <li>{{htmlattrxref("pattern", "input")}}: Регулярное выражение, по которому поверяются вводимые данные. Может использоваться в элементе {{htmlattrxref("type", "input")}} со значениями <code>text</code>, <code>tel</code>, <code>search</code>, <code>url</code>, <code>и email</code>.</li>
+ <li>{{htmlattrxref("form", "input")}}: Строка, указывающая, к какому элементу {{HTMLElement("form")}} принадлежит элемент. Элемент может быть частью только одной формы.</li>
+ <li>{{htmlattrxref("formmethod", "input")}}: Строка, указывающая метод передачи данных  (GET or POST), когда форма отправляется на сервер. Он перекрывает значение атрибута {{htmlattrxref("method", "form")}} элемента {{HTMLElement("form")}}, если установлен. Работает только, если {{htmlattrxref("type", "input")}} является <code>image</code> <code>или submit, </code>и если установлен атрибут {{htmlattrxref("form", "input")}}.</li>
+ <li>{{htmlattrxref("x-moz-errormessage", "input")}} {{non-standard_inline}}: Строка, указывающая на сообщение об ошибке, которое будет показано, если это поле не пройдет валидацию. Этот атрибут - расширение Mozilla и не является стандартом.</li>
+</ul>
+
+<h2 id="Текстовое_поле">Текстовое поле</h2>
+
+<p><code>&lt;input&gt;</code> с атрибутом <code>type="text"</code> определяет однострочное поле для ввода.</p>
+
+<pre class="brush: html">&lt;form&gt;
+  Введите свое имя: &lt;input type="text" name="name"&gt;
+&lt;/form&gt;</pre>
+
+<h2 id="Флажок"><strong style="font-size: 2.142857142857143rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">Флажок</strong></h2>
+
+<p><code>&lt;input&gt;</code> с атрибутом <code>type="checkbox"</code> определяет флажок.</p>
+
+<pre class="brush: html">&lt;input type="checkbox" name="chk" value="" checked&gt; Подписаться на рассылку</pre>
+
+<h2 id="The_form_element" name="The_form_element">Переключатель</h2>
+
+<p><code>&lt;input&gt;</code> с атрибутом <code>type="radio"</code> определяет радио кнопку.</p>
+
+<pre class="brush: html">&lt;form&gt;
+  &lt;input type="radio" name="animal" value="monkey"&gt;Обезьяна&lt;br&gt;
+  &lt;input type="radio" name="animal" value="cat"&gt;Кот&lt;br&gt;
+  <span style="font-size: 1rem;">&lt;input type="radio" name="</span>animal<span style="font-size: 1rem;">" value="other"&gt;Другое
+</span>&lt;/form&gt;</pre>
+
+<h2 id="The_form_element" name="The_form_element"><code>Элемент &lt;form&gt;</code></h2>
+
+<p>Элемент {{HTMLElement("form")}} получил новый атрибут:</p>
+
+<ul>
+ <li>{{htmlattrxref("novalidate", "form")}}: Этот атрибут предотвращает валидацию формы перед отправкой.</li>
+</ul>
+
+<h2 id="The_datalist_element" name="The_datalist_element"><code>Элемент &lt;datalist&gt;</code></h2>
+
+<p>Элемент {{HTMLElement("datalist")}} представляет собой список элементов {{HTMLElement("option")}}, который необходимо предложить при вводе поля {{HTMLElement("input")}}.</p>
+
+<p>Вы можете использовать атрибут {{htmlattrxref("list", "input")}} в элементе {{HTMLElement("input")}}, чтобы связать текстовое поле с элементом {{HTMLElement("datalist")}}.</p>
+
+<h2 id="The_output_element" name="The_output_element"><code>Элемент &lt;output&gt;</code></h2>
+
+<p>Элемент <code>{{HTMLElement("output")}}</code> представляет собой результат каких-либо вычислений.</p>
+
+<p>Вы можете использовать атрибут {{htmlattrxref("for", "output")}} для указания связи между элементом <code>{{HTMLElement("output")}}</code> и другими элементами в документе, которые повлияли на расчет (к примеру, поля для ввода параметров). Значением атрибута {{htmlattrxref("for", "output")}} является список ID других элементов, разделенный пробелами.</p>
+
+<p>{{non-standard_inline}} Gecko 2.0 (but not necessarily other browser engines) supports defining custom validity constraints and error messages for {{HTMLElement("output")}} elements, and therefore applies the {{Cssxref(":invalid")}}, {{Cssxref(":valid")}}, {{Cssxref(":-moz-ui-invalid")}}, and {{Cssxref(":-moz-ui-valid")}} CSS pseudo-classes to them. This can be helpful in situations where the calculated result violates a business rule, but no specific input value does (for example, "The total of percentages must not exceed 100").</p>
+
+<h2 id="The_placeholder_attribute" name="The_placeholder_attribute">Атрибут placeholder</h2>
+
+<p>Атрибут {{htmlattrxref("placeholder", "input")}} в элементах <code>{{HTMLElement("input")}}</code> и <code>{{HTMLElement("textarea")}}</code> отображает подсказки для пользователей, которые показывают, что можно ввести в эти поля. Текст в placeholder не должен содержать символов перевода строки или возврата каретки.</p>
+
+<h2 id="The_autofocus_attribute" name="The_autofocus_attribute">Атрибут autofocus</h2>
+
+<p>Атрибут {{htmlattrxref("autofocus", "input")}} позволяет указать для элемента формы автоматическое получение фокуса после полной загрузки страницы, если пользователь сам не переместит фокус на другой элемент, например, этот атрибут можно указать для различных полей ввода. Только один элемент в документе должен иметь этот атрибут, который содержит Boolean значение. Этот атрибут может быть установлен в <code>{{HTMLElement("input")}}</code>, <code>{{HTMLElement("button")}}</code>, <code>{{HTMLElement("select")}} </code>и <code>{{HTMLElement("textarea")}}</code> элементах.  {{htmlattrxref("autofocus", "input")}} нельзя установить в элементах input c атрибутом type установленным в значение hidden (это означает, что ты не можешь автоматически устанавливать фокус в скрытых полях).</p>
+
+<h2 id="The_label.control_DOM_property" name="The_label.control_DOM_property">DOM свойство label.control</h2>
+
+<p>DOM интерфейс <code><a href="/en-US/docs/DOM/HTMLLabelElement" title="DOM/HTMLLabelElement">HTMLLabelElement</a></code> , помимо свойств, относящихся к HTML элементу <code>{{HTMLElement("label")}}</code> , предоставляет дополнительное свойство <strong> control</strong>, возвращающее поле ввода, для которого предназначен <code>{{HTMLElement("label")}}</code>. Оно либо указывается в атрибуте <code>{{htmlattrxref("for", "label")}}</code> , либо является первым вложенным полем ввода.</p>
+
+<h2 id="Constraint_Validation" name="Constraint_Validation">Constraint Validation</h2>
+
+<p>HTML5 provides syntax and API items to support client-side validation of forms. While this functionality does not replace server-side validation, which is still necessary for security and data integrity, client-side validation can support a better user experience by giving the user immediate feedback about the input data.</p>
+
+<p>If the <code>title</code> attribute is set on the {{HTMLElement("input")}} element, its value is used as tooltip. However, if the validation fails, this tooltip text will be replaced with the associated error message. It is possible to customize this error message using the non-standard {{htmlattrxref("x-moz-errormessage")}} attribute or when calling the <code>setCustomValidity()</code> method.</p>
+
+<pre class="brush: html">&lt;input type="email" title="Please, provide an e-mail" x-moz-errormessage="This is not a valid e-mail"&gt;</pre>
+
+<div class="note"><strong>Note:</strong> Constraint validation is not supported on {{HTMLElement("button")}} elements in a form; to style a button based on the validity of the associated form, use the {{cssxref(":-moz-submit-invalid")}} pseudo-class.</div>
+
+<h3 id="HTML_Syntax_for_Constraint_Validation" name="HTML_Syntax_for_Constraint_Validation">HTML Syntax for Constraint Validation</h3>
+
+<p>The following items in HTML5 syntax can be used to specify constraints on form data.</p>
+
+<ul>
+ <li>The {{htmlattrxref("required", "input")}} attribute on the {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}} elements indicates that a value must be supplied. (On the {{HTMLElement("input")}} element, {{htmlattrxref("required", "input")}} applies only in conjunction with certain values of the {{htmlattrxref("type", "input")}} attribute.)</li>
+ <li>The {{htmlattrxref("pattern", "input")}} attribute on the {{HTMLElement("input")}} element constrains the value to match a specific regular expression.</li>
+ <li>The {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes of the {{HTMLElement("input")}} element constrain the minimum and maximum values that can be entered.</li>
+ <li>The {{htmlattrxref("step", "input")}} attribute of the {{HTMLElement("input")}} element (when used in combination with the {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} attributes) constrains the granularity of values that can be entered. A value that does not correspond an allowed value step does not validate.</li>
+ <li>The {{htmlattrxref("maxlength", "input")}} attribute of the {{HTMLElement("input")}} and {{HTMLElement("textarea")}} elements constrains the maximum number of characters (in Unicode code points) that the user can enter.</li>
+ <li>The values <code>url</code> and <code>email</code> for the {{htmlattrxref("type", "input")}} constrain the value to being a valid URL or e-mail address, respectively.</li>
+</ul>
+
+<p>In addition, you can prevent constraint validation by specifying the {{htmlattrxref("novalidate", "form")}} attribute on the {{HTMLElement("form")}}, or the {{htmlattrxref("formnovalidate", "button")}} attribute on the {{HTMLElement("button")}} element and on the {{HTMLElement("input")}} element (when {{htmlattrxref("type", "input")}} is <code>submit</code> or <code>image</code>). These attributes indicate that the form is not to be validated when it is submitted.</p>
+
+<h3 id="Constraint_Validation_API" name="Constraint_Validation_API">Constraint Validation API</h3>
+
+<p>The following DOM properties and methods related to constraint validation are available to client-side scripts:</p>
+
+<ul>
+ <li>On <code><a href="/en-US/docs/DOM/HTMLFormElement" title="DOM/HTMLFormElement">HTMLFormElement</a></code> objects, the <code>checkValidity()</code> method, which returns true if all of this form element's associated elements that are subject to constraint validation satisfy their constraints, and false if any do not.</li>
+ <li>On <a href="/en-US/docs/HTML/Content_categories#Form-associated" title="HTML/Content Categories#form-associated">form-associated elements</a>:
+  <ul>
+   <li><code>willValidate</code> property, which is false if the element has constraints that are not satisfied.</li>
+   <li><code>validity</code> property, which is a <code><a href="/en-US/docs/DOM/ValidityState" title="DOM/ValidityState Interface">ValidityState</a></code> object representing the validity states that the element is in (i.e., constraint failure or success conditions).</li>
+   <li><code>validationMessage</code> property, which is a message describing any constraint failures that pertain to the element.</li>
+   <li><code>checkValidity()</code> method, which returns false if the element fails to satisfy any of its constraints, or true otherwise.</li>
+   <li><code>setCustomValidity()</code> method, which sets a custom validation message, allowing for constraints to be imposed and validated beyond those that are predefined.</li>
+  </ul>
+ </li>
+</ul>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li><a href="/en-US/docs/HTML/Forms" title="/en-US/docs/HTML/Forms">HTML Forms Guide</a></li>
+</ul>
