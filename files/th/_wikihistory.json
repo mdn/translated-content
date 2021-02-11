@@ -60,18 +60,6 @@
       "SphinxKnight"
     ]
   },
-  "Learn/ฝั่งเซิร์ฟเวอร์": {
-    "modified": "2020-08-22T12:32:08.079Z",
-    "contributors": [
-      "luciferz2130"
-    ]
-  },
-  "Learn/เริ่มต้นใช้งานเว็บ": {
-    "modified": "2020-08-22T12:21:31.189Z",
-    "contributors": [
-      "luciferz2130"
-    ]
-  },
   "MDN": {
     "modified": "2020-02-19T17:58:18.306Z",
     "contributors": [
@@ -110,28 +98,6 @@
       "jswisher"
     ]
   },
-  "MDN/Contribute/Howto/Create_an_MDN_account": {
-    "modified": "2019-04-30T21:53:50.225Z",
-    "contributors": [
-      "wbamberg",
-      "wittawat456"
-    ]
-  },
-  "MDN/Contribute/Howto/Do_a_technical_review": {
-    "modified": "2019-07-02T19:28:15.866Z",
-    "contributors": [
-      "aliceparklad",
-      "wbamberg",
-      "nhoobee",
-      "daneeyan"
-    ]
-  },
-  "MDN_at_ten": {
-    "modified": "2019-03-23T22:48:09.302Z",
-    "contributors": [
-      "wkforever"
-    ]
-  },
   "Mozilla": {
     "modified": "2019-03-23T23:27:29.227Z",
     "contributors": [
@@ -157,28 +123,6 @@
       "satthawut"
     ]
   },
-  "Mozilla/Firefox/เปิดผนึก": {
-    "modified": "2019-01-16T18:30:43.586Z",
-    "contributors": [
-      "wbamberg",
-      "Nampa"
-    ]
-  },
-  "Mozilla/Firefox/เปิดผนึก/30": {
-    "modified": "2019-03-23T23:12:58.184Z",
-    "contributors": [
-      "wbamberg",
-      "Dexpaktho"
-    ]
-  },
-  "Mozilla/Firefox/เปิดผนึก/47": {
-    "modified": "2019-03-23T22:22:47.058Z",
-    "contributors": [
-      "wbamberg",
-      "kdex",
-      "itclinic"
-    ]
-  },
   "Tools": {
     "modified": "2020-07-29T11:39:03.529Z",
     "contributors": [
@@ -191,13 +135,6 @@
     "modified": "2020-07-16T22:35:06.450Z",
     "contributors": [
       "Sheppy"
-    ]
-  },
-  "Tools/Debugger/www.หนังโป้.com": {
-    "modified": "2020-07-16T22:35:17.110Z",
-    "contributors": [
-      "SphinxKnight",
-      "abdulmana293"
     ]
   },
   "Tools/Eyedropper": {
@@ -456,6 +393,69 @@
     "modified": "2019-09-13T21:22:10.128Z",
     "contributors": [
       "Kritlnwzeed38"
+    ]
+  },
+  "Learn/Server-side": {
+    "modified": "2020-08-22T12:32:08.079Z",
+    "contributors": [
+      "luciferz2130"
+    ]
+  },
+  "Learn/Getting_started_with_the_web": {
+    "modified": "2020-08-22T12:21:31.189Z",
+    "contributors": [
+      "luciferz2130"
+    ]
+  },
+  "MDN/At_ten": {
+    "modified": "2019-03-23T22:48:09.302Z",
+    "contributors": [
+      "wkforever"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
+    "modified": "2019-04-30T21:53:50.225Z",
+    "contributors": [
+      "wbamberg",
+      "wittawat456"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Do_a_technical_review": {
+    "modified": "2019-07-02T19:28:15.866Z",
+    "contributors": [
+      "aliceparklad",
+      "wbamberg",
+      "nhoobee",
+      "daneeyan"
+    ]
+  },
+  "Mozilla/Firefox/Releases/30": {
+    "modified": "2019-03-23T23:12:58.184Z",
+    "contributors": [
+      "wbamberg",
+      "Dexpaktho"
+    ]
+  },
+  "Mozilla/Firefox/Releases/47": {
+    "modified": "2019-03-23T22:22:47.058Z",
+    "contributors": [
+      "wbamberg",
+      "kdex",
+      "itclinic"
+    ]
+  },
+  "Mozilla/Firefox/Releases": {
+    "modified": "2019-01-16T18:30:43.586Z",
+    "contributors": [
+      "wbamberg",
+      "Nampa"
+    ]
+  },
+  "Tools/Debugger/UI_Tour": {
+    "modified": "2020-07-16T22:35:17.110Z",
+    "contributors": [
+      "SphinxKnight",
+      "abdulmana293"
     ]
   }
 }
