@@ -282,7 +282,6 @@
 /zh-CN/docs/DOM/HTMLCanvasElement	/zh-CN/docs/Web/API/HTMLCanvasElement
 /zh-CN/docs/DOM/HTMLDocument	/zh-CN/docs/Web/API/HTMLDocument
 /zh-CN/docs/DOM/HTMLFieldSetElement	/zh-CN/docs/Web/API/HTMLFieldSetElement
-/zh-CN/docs/DOM/HTML_in_XMLHttpRequest	/zh-CN/docs/HTML_in_XMLHttpRequest
 /zh-CN/docs/DOM/ImageData	/zh-CN/docs/Web/API/ImageData
 /zh-CN/docs/DOM/Input.mozSetFileNameArray	/zh-CN/docs/Web/API/HTMLInputElement/mozSetFileNameArray
 /zh-CN/docs/DOM/KeyboardEvent	/zh-CN/docs/Web/API/KeyboardEvent

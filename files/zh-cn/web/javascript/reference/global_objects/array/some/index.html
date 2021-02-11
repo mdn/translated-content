@@ -78,8 +78,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/some
 <pre class="brush: js"><code>[2, 5, 8, 1, 4].some(x =&gt; x &gt; 10);  // false
 [12, 5, 8, 1, 4].some(x =&gt; x &gt; 10); // true</code></pre>
 
-<p>{{ EmbedLiveSample('Testing_array_elements_using_arrow_functions', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}</p>
-
 <h3 id="判断数组元素中是否存在某个值">判断数组元素中是否存在某个值</h3>
 
 <p>此例中为模仿 <code>includes()</code>  方法, 若元素在数组中存在, 则回调函数返回值为 <code>true</code> :</p>
@@ -95,8 +93,6 @@ function checkAvailability(arr, val) {
 checkAvailability(fruits, 'kela');   // false
 checkAvailability(fruits, 'banana'); // true</pre>
 
-<p>{{ EmbedLiveSample('Checking_whether_a_value_exists_in_an_array', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}</p>
-
 <h3 id="使用箭头函数判断数组元素中是否存在某个值">使用箭头函数判断数组元素中是否存在某个值</h3>
 
 <pre class="brush: js">var fruits = ['apple', 'banana', 'mango', 'guava'];
@@ -107,9 +103,6 @@ function checkAvailability(arr, val) {
 
 checkAvailability(fruits, 'kela');   // false
 checkAvailability(fruits, 'banana'); // true</pre>
-
-<p>{{ EmbedLiveSample('Checking_whether_a_value_exists_using_an_arrow_function', '', '', '', 'Experiment:StaticExamplesOnTop/JavaScript/Array/some') }}</p>
-
 
 
 <h3 id="将任意值转换为布尔类型">将任意值转换为布尔类型</h3>
@@ -133,8 +126,6 @@ getBoolean('false'); // false
 getBoolean(1);       // true
 getBoolean('true');  // true
 </pre>
-
-<p>{{ EmbedLiveSample('Converting_any_value_to_Boolean', '', '', '', 'Web/JavaScript/Reference/Global_Objects/Array/some') }}</p>
 
 <h2 id="Compatibility" name="Compatibility">Polyfill</h2>
 
