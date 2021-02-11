@@ -1,4 +1,6 @@
 # FROM-URL	TO-URL
+/he/docs/DOM	/he/docs/Web/API/Document_Object_Model
+/he/docs/Glossary/מערך	/he/docs/Glossary/array
 /he/docs/HTML	/he/docs/Web/HTML
 /he/docs/HTML/Element	/he/docs/Web/HTML/Element
 /he/docs/HTML/Element/Heading_Elements	/he/docs/Web/HTML/Element/Heading_Elements
@@ -34,9 +36,24 @@
 /he/docs/HTML/Element/table	/he/docs/Web/HTML/Element/table
 /he/docs/HTML/Element/time	/he/docs/Web/HTML/Element/time
 /he/docs/HTML/Element/title	/he/docs/Web/HTML/Element/title
+/he/docs/Hebrew_Localization	/he/docs/orphaned/Hebrew_Localization
 /he/docs/JavaScript	/he/docs/Web/JavaScript
+/he/docs/Learn/HTML/טבלאות	/he/docs/Learn/HTML/Tables
+/he/docs/Learn/HTML/טפסים	/he/docs/Learn/Forms
+/he/docs/Learn/HTML/מבוא_לשפת_HTML	/he/docs/Learn/HTML/Introduction_to_HTML
+/he/docs/Learn/HTML/פתרון_בעיות	/he/docs/Learn/HTML/Howto
+/he/docs/Learn/JavaScript/Building_blocks/תנאים	/he/docs/Learn/JavaScript/Building_blocks/conditionals
+/he/docs/MDN/Community	/he/docs/orphaned/MDN/Community
+/he/docs/MDN/Contribute/Howto/Create_an_MDN_account	/he/docs/orphaned/MDN/Contribute/Howto/Create_an_MDN_account
 /he/docs/MDN/Getting_started	/he/docs/MDN/Contribute/Getting_started
+/he/docs/Mozilla/Add-ons/WebExtensions/manifest.json/הרשאות	/he/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
+/he/docs/Mozilla/Add-ons/WebExtensions/טיפום	/he/docs/Mozilla/Add-ons/WebExtensions/Tips
 /he/docs/Mozilla_MathML_Project/Start-redirect-1	/he/docs/Mozilla_MathML_Project/Start
+/he/docs/Web/API/Geolocation/ממשק_שירותי_מיקום	/he/docs/Web/API/Geolocation_API
 /he/docs/Web/Guide/HTML	/he/docs/Learn/HTML
+/he/docs/Web/Hypertext_Markup_Language	/he/docs/orphaned/Web/Hypertext_Markup_Language
 /he/docs/Web/JavaScript/Reference/Methods_Index	/he/docs/Web/JavaScript/Reference
+/he/docs/Web_Development	/he/docs/conflicting/Web/Guide
 /he/docs/en	/en-US/
+/he/docs/he	/he/docs/orphaned/he
+/he/docs/מושגים	/he/docs/orphaned/מושגים
