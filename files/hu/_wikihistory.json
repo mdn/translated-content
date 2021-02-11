@@ -1,53 +1,4 @@
 {
-  "Bevezetés_a_dokumentumobjektum-modellbe": {
-    "modified": "2019-03-23T23:46:33.058Z",
-    "contributors": [
-      "teoli",
-      "Csörföly D"
-    ]
-  },
-  "CSS": {
-    "modified": "2019-09-11T03:36:12.939Z",
-    "contributors": [
-      "SphinxKnight",
-      "tetkosimi",
-      "teoli",
-      "CsörfölyD"
-    ]
-  },
-  "CSS/CSS_Grid_Layout": {
-    "modified": "2019-03-18T21:34:45.745Z",
-    "contributors": [
-      "kecskeskrisztian"
-    ]
-  },
-  "CSS/font-weight": {
-    "modified": "2020-11-12T12:54:39.738Z",
-    "contributors": [
-      "evasimonyi"
-    ]
-  },
-  "CSS/text-decoration": {
-    "modified": "2020-11-12T10:40:09.368Z",
-    "contributors": [
-      "evasimonyi"
-    ]
-  },
-  "DOM": {
-    "modified": "2019-03-24T00:03:55.193Z",
-    "contributors": [
-      "ethertank",
-      "fscholz",
-      "Csörföly D"
-    ]
-  },
-  "DOM/HTMLBRElement": {
-    "modified": "2019-03-23T23:31:58.209Z",
-    "contributors": [
-      "khalid32",
-      "urbalazs"
-    ]
-  },
   "Glossary": {
     "modified": "2020-10-07T11:10:36.306Z",
     "contributors": [
@@ -88,12 +39,6 @@
       "evasimonyi"
     ]
   },
-  "Glossary/Elso_osztalyu_funkciok": {
-    "modified": "2019-03-18T20:56:29.186Z",
-    "contributors": [
-      "Szelmat"
-    ]
-  },
   "Glossary/JavaScript": {
     "modified": "2020-11-16T15:08:28.654Z",
     "contributors": [
@@ -105,12 +50,6 @@
     "modified": "2019-03-18T20:56:27.754Z",
     "contributors": [
       "Szelmat"
-    ]
-  },
-  "Glossary/bongeszo": {
-    "modified": "2020-07-28T08:32:30.144Z",
-    "contributors": [
-      "mmarci72"
     ]
   },
   "Learn": {
@@ -130,40 +69,10 @@
       "chrisdavidmills"
     ]
   },
-  "Learn/HTML/Bevezetes_a_HTML-be": {
-    "modified": "2020-07-16T22:22:48.153Z",
-    "contributors": [
-      "tetkosimi"
-    ]
-  },
-  "Learn/Ismerkedés_a_Világhálóval": {
-    "modified": "2020-07-29T16:23:02.755Z",
-    "contributors": [
-      "szcsl"
-    ]
-  },
-  "Learn/Ismerkedés_a_Világhálóval/Alapvető_programok_telepítése": {
-    "modified": "2020-07-31T12:06:30.955Z",
-    "contributors": [
-      "szcsl"
-    ]
-  },
-  "Learn/Ismerkedés_a_Világhálóval/Hogy_fog_kinézni_a_weboldalunk": {
-    "modified": "2020-08-02T13:33:58.088Z",
-    "contributors": [
-      "szcsl"
-    ]
-  },
   "Learn/JavaScript": {
     "modified": "2020-07-16T22:29:39.465Z",
     "contributors": [
       "entriek"
-    ]
-  },
-  "Learn/JavaScript/Első_lépések": {
-    "modified": "2020-07-16T22:29:51.271Z",
-    "contributors": [
-      "Aioiui"
     ]
   },
   "Learn/Server-side": {
@@ -276,13 +185,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/Window.stop": {
-    "modified": "2019-03-23T23:25:32.999Z",
-    "contributors": [
-      "jsx",
-      "mark_b"
-    ]
-  },
   "Web/API/Window/alert": {
     "modified": "2020-10-15T22:20:45.271Z",
     "contributors": [
@@ -302,22 +204,10 @@
       "fscholz"
     ]
   },
-  "Web/API/XMLHttpRequest/XMLHttpRequest_hasznalata": {
-    "modified": "2020-10-15T22:19:50.902Z",
-    "contributors": [
-      "dominicus-75"
-    ]
-  },
   "Web/CSS/Tools": {
     "modified": "2019-03-23T22:57:26.063Z",
     "contributors": [
       "velvel53"
-    ]
-  },
-  "Web/CSS/Tools/Border-radius_bemutato": {
-    "modified": "2019-03-23T22:57:32.009Z",
-    "contributors": [
-      "nemesreviz"
     ]
   },
   "Web/Guide": {
@@ -331,12 +221,6 @@
     "contributors": [
       "SphinxKnight",
       "Sheppy"
-    ]
-  },
-  "Web/Guide/Grafika": {
-    "modified": "2019-05-08T07:13:14.821Z",
-    "contributors": [
-      "tetkosimi"
     ]
   },
   "Web/HTML": {
@@ -397,12 +281,6 @@
       "CsörfölyD"
     ]
   },
-  "Web/JavaScript/Guide/Bevezetés": {
-    "modified": "2020-03-12T19:43:36.391Z",
-    "contributors": [
-      "RMarcell"
-    ]
-  },
   "Web/JavaScript/Reference": {
     "modified": "2020-11-19T10:10:24.248Z",
     "contributors": [
@@ -436,13 +314,6 @@
     "modified": "2020-03-12T19:47:09.248Z",
     "contributors": [
       "dorionka"
-    ]
-  },
-  "Web/JavaScript/Reference/Errors/Érvénytelen_típus": {
-    "modified": "2020-04-19T20:35:18.887Z",
-    "contributors": [
-      "tacsipacsi",
-      "sanyoca"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects": {
@@ -487,15 +358,6 @@
       "Sealdolphin"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Függvény": {
-    "modified": "2020-11-16T15:30:24.183Z",
-    "contributors": [
-      "meskobalazs",
-      "iamdue",
-      "copas2",
-      "dorionka"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/NaN": {
     "modified": "2020-11-19T09:58:46.355Z",
     "contributors": [
@@ -524,12 +386,6 @@
       "suckee86"
     ]
   },
-  "Web/JavaScript/a_javascript_ujboli_bemutatasa": {
-    "modified": "2020-03-12T19:48:54.218Z",
-    "contributors": [
-      "kisjoke91"
-    ]
-  },
   "Web/Reference": {
     "modified": "2019-03-23T22:43:43.697Z",
     "contributors": [
@@ -542,10 +398,154 @@
       "barcai"
     ]
   },
-  "WebSockets": {
+  "Web/CSS/CSS_Grid_Layout": {
+    "modified": "2019-03-18T21:34:45.745Z",
+    "contributors": [
+      "kecskeskrisztian"
+    ]
+  },
+  "Web/CSS/font-weight": {
+    "modified": "2020-11-12T12:54:39.738Z",
+    "contributors": [
+      "evasimonyi"
+    ]
+  },
+  "Web/CSS": {
+    "modified": "2019-09-11T03:36:12.939Z",
+    "contributors": [
+      "SphinxKnight",
+      "tetkosimi",
+      "teoli",
+      "CsörfölyD"
+    ]
+  },
+  "Web/CSS/text-decoration": {
+    "modified": "2020-11-12T10:40:09.368Z",
+    "contributors": [
+      "evasimonyi"
+    ]
+  },
+  "Web/API/HTMLBRElement": {
+    "modified": "2019-03-23T23:31:58.209Z",
+    "contributors": [
+      "khalid32",
+      "urbalazs"
+    ]
+  },
+  "Glossary/Browser": {
+    "modified": "2020-07-28T08:32:30.144Z",
+    "contributors": [
+      "mmarci72"
+    ]
+  },
+  "Glossary/First-class_Function": {
+    "modified": "2019-03-18T20:56:29.186Z",
+    "contributors": [
+      "Szelmat"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML": {
+    "modified": "2020-07-16T22:22:48.153Z",
+    "contributors": [
+      "tetkosimi"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/Installing_basic_software": {
+    "modified": "2020-07-31T12:06:30.955Z",
+    "contributors": [
+      "szcsl"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/What_will_your_website_look_like": {
+    "modified": "2020-08-02T13:33:58.088Z",
+    "contributors": [
+      "szcsl"
+    ]
+  },
+  "Learn/Getting_started_with_the_web": {
+    "modified": "2020-07-29T16:23:02.755Z",
+    "contributors": [
+      "szcsl"
+    ]
+  },
+  "Learn/JavaScript/First_steps": {
+    "modified": "2020-07-16T22:29:51.271Z",
+    "contributors": [
+      "Aioiui"
+    ]
+  },
+  "Web/API/Window/stop": {
+    "modified": "2019-03-23T23:25:32.999Z",
+    "contributors": [
+      "jsx",
+      "mark_b"
+    ]
+  },
+  "Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
+    "modified": "2020-10-15T22:19:50.902Z",
+    "contributors": [
+      "dominicus-75"
+    ]
+  },
+  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+    "modified": "2019-03-23T22:57:32.009Z",
+    "contributors": [
+      "nemesreviz"
+    ]
+  },
+  "Web/Guide/Graphics": {
+    "modified": "2019-05-08T07:13:14.821Z",
+    "contributors": [
+      "tetkosimi"
+    ]
+  },
+  "Web/JavaScript/A_re-introduction_to_JavaScript": {
+    "modified": "2020-03-12T19:48:54.218Z",
+    "contributors": [
+      "kisjoke91"
+    ]
+  },
+  "Web/JavaScript/Guide/Introduction": {
+    "modified": "2020-03-12T19:43:36.391Z",
+    "contributors": [
+      "RMarcell"
+    ]
+  },
+  "Web/JavaScript/Reference/Errors/Unexpected_type": {
+    "modified": "2020-04-19T20:35:18.887Z",
+    "contributors": [
+      "tacsipacsi",
+      "sanyoca"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Function": {
+    "modified": "2020-11-16T15:30:24.183Z",
+    "contributors": [
+      "meskobalazs",
+      "iamdue",
+      "copas2",
+      "dorionka"
+    ]
+  },
+  "Web/API/WebSockets_API": {
     "modified": "2019-03-23T22:56:13.956Z",
     "contributors": [
       "EvanDotPro"
+    ]
+  },
+  "Web/API/Document_Object_Model": {
+    "modified": "2019-03-23T23:46:33.058Z",
+    "contributors": [
+      "teoli",
+      "Csörföly D"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model": {
+    "modified": "2019-03-24T00:03:55.193Z",
+    "contributors": [
+      "ethertank",
+      "fscholz",
+      "Csörföly D"
     ]
   }
 }
