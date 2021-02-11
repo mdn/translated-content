@@ -1,7 +1,8 @@
 ---
 title: Object.prototype.__proto__
-slug: Web/JavaScript/Referencje/Obiekty/Object/proto
+slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/proto
+original_slug: Web/JavaScript/Referencje/Obiekty/Object/proto
 ---
 <div class="warning">
 <p><strong>Ostrzeżenie:</strong> Zmiana <code>[[Prototype]]</code> obiektu, ze względu na sposób w jaki współczesny JavaScript optymalizuje dostęp do właściwości, jest bardzo powolną operacją (W każdej przeglądarce!). Efekty modyfikacji łańcucha dziedziczenia są rozległe, nie chodzi tu tylko o wydłużenie czasu potrzebnego na wykonanie operacji <code>obj.__proto__ = ...</code>, skutki wpływają na <strong>każdy</strong> fragment kodu który odwołuje się do <strong>jakiejkolwiek</strong> właściwości obiektu, którego <code>[[Prototype]]</code> został zmieniony. Dlatego jeżeli zależy ci na wydajności powinieneś unikać tej operacji. Zamiast tego, stwórz nowy obiekt z porządanym <code>[[Prototype]]</code> za pomocą {{jsxref("Object.create()")}}.</p>

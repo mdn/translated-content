@@ -1,7 +1,8 @@
 ---
 title: JSON
-slug: JSON
+slug: Glossary/JSON
 translation_of: Glossary/JSON
+original_slug: JSON
 ---
 <p><strong>JSON</strong> (<strong>JavaScript Object Notation</strong>) jest formatem wymiany danych. Przypomina podzbiór składni <a href="/pl/docs/JavaScript">JavaScriptu</a>, choć nie jest nim w ścisłym sensie tego terminu. (Zobacz <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/JSON" title="en/JavaScript/Reference/Global Objects/JSON">JSON</a> w <a href="https://developer.mozilla.org/en/JavaScript/Reference" title="en/JavaScript/Reference">Dokumentacji JavaScript</a> aby poznać szczegóły). Użyteczny w dowolnym rodzaju aplikacji opartej o JavaScript, m.in. na stronach internetowych i w rozszerzeniach przeglądarek. Przykładowo, dane użytkownika w formacie JSON mogą być przechowywane w <a href="/pl/docs/DOM/document.cookie">ciasteczku</a> (cookie), zaś preferencje rozszerzenia mogą być przechowywane w formacie JSON przez przeglądarkę.</p>
 <p>JSON może przechowywać liczby (<code>number</code>), wartości logiczne (<code>boolean</code>), ciagi znaków (<code>string</code>), <code>null</code>, tablice (uporządkowane sekwencje wartości) oraz obiekty (zbiory odwzorowań ciąg znaków-wartość) złożone z powyższych wartości (lub z innych tablic i obiektów). Nie definiuje naturalnej reprezentacji dla bardziej złożonych typów danych, jak funkcje, wyrażenia regularne, daty itd. (Obiekty typu Date są domyślnie serializowane w postaci ciągu znaków zawierającego datę w formacie ISO, zatem choć nie zostają odtworzone w oryginalnym formacie, informacja nie jest bezpowrotnie tracona). Gdy niezbędne jest przechowanie tego rodzaju danych, można przekształcić wartości w momencie serializacji, lub przed ich deserializacją, umożliwiając w ten sposób przechowanie w JSON dodatkowych typów danych.</p>
