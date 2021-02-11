@@ -1,38 +1,40 @@
 ---
-title: KryptoNyckel
-slug: Web/API/KryptoNyckel
+title: KryptoNyckel.typ
+slug: conflicting/Web/API/CryptoKey
 tags:
   - API
+  - Egenskaper
   - Gränssnitt
-  - Kryptering
+  - Krypteringar
+  - KryptoNyckel
+  - Läs-endast
   - Referenser
   - Webb Krypto API
 translation_of: Web/API/CryptoKey
+translation_of_original: Web/API/CryptoKey/type
+original_slug: Web/API/KryptoNyckel/typ
 ---
 <p>{{APIRef("Web Crypto API")}}</p>
 
-<p><strong>KryptoNyckelns</strong> gränssnitt representerar en kryptografisk {{glossary("key")}} deriverad från en specifik nyckelalgoritm.</p>
+<p><strong>KryptoNyckel.typ</strong> har en skrivskyddad egenskap som anger typ av nyckel: om det är nyckeln för en symmetrisk algoritm(<code>"hemligt"</code>) eller för en asymmetrisk algoritm(<code>"publik"</code> eller <code>"privat"</code>, är beroende på dess syfte).</p>
 
-<p>Ett <em>KryptoNyckel</em> objekt kan erhållas med användning av {{domxref("SubtleCrypto.generateKey()")}}, {{domxref("SubtleCrypto.deriveKey()")}} eller{{domxref("SubtleCrypto.importKey()")}}</p>
+<h2 id="Syntax">Syntax</h2>
 
-<h2 id="Egenskaper">Egenskaper</h2>
+<pre class="syntaxbox"><em>resultat</em> = nyckel<code>.typ</code>
+</pre>
 
-<p><em>Detta gränssnitt ärar inte någon egendom.</em></p>
+<h3 id="Returvärde">Returvärde</h3>
 
-<dl>
- <dt>{{domxref("CryptoKey.type")}}</dt>
- <dd>Returnerar ett uppräknat värde som representerar typ av nyckel, en hemlig nyckel (för symmetrisk algoritm), en offentlig eller en privat nyckel (för en asymmetrisk algoritm)</dd>
- <dt>{{domxref("CryptoKey.extractable")}}</dt>
- <dd>Returnerar en {{jsxref("Boolean")}} Indikerar om den råa informationen kan exporteras till ansökan eller inte.</dd>
- <dt>{{domxref("CryptoKey.algorithm")}}</dt>
- <dd>Returnerar ett ogenomskinligt objekt som representerar en viss chiffer som nyckeln ska användas med.</dd>
- <dt>{{domxref("CryptoKey.usages")}}</dt>
- <dd>Returnerar en uppsättning uppräknade värden som anger vilken nyckel som kan användas för.</dd>
-</dl>
+<ul>
+ <li><code><em>resultat</em></code> är ett uppräknat värde som kan vara:
 
-<h2 id="Metoder">Metoder</h2>
-
-<p><em>Detta gränssnitt arvs inte eller implementerar någon metod.</em></p>
+  <ul>
+   <li><code>"hemligt"</code> representerar den unika nyckeln som används för kryptering eller dekryptering av ett meddelande med en symmetrisk algoritm.</li>
+   <li><code>"publik"</code> representerar en offentligt delbar nyckel som används i en asymmetrisk algoritm.</li>
+   <li><code>"privat"</code> representerar en nyckel som används i en asymmetrisk algoritm som måste hållas privat.</li>
+  </ul>
+ </li>
+</ul>
 
 <h2 id="Specifikationer">Specifikationer</h2>
 
@@ -44,14 +46,14 @@ translation_of: Web/API/CryptoKey
    <th scope="col">Kommentar</th>
   </tr>
   <tr>
-   <td>{{ SpecName('Web Crypto API', '#dfn-CryptoKey', 'CryptoKey') }}</td>
+   <td>{{ SpecName('Web Crypto API', '#dfn-CryptoKey-type', 'CryptoKey.type') }}</td>
    <td>{{ Spec2('Web Crypto API') }}</td>
    <td>Initial definition.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Webbläsarkompatibilitet">Webbläsarkompatibilitet</h2>
 
 <p>{{ CompatibilityTable() }}</p>
 
@@ -95,8 +97,8 @@ translation_of: Web/API/CryptoKey
   </tr>
   <tr>
    <td>grundläggande stöd</td>
+   <td>{{CompatVersionUnknown}}</td>
    <td>37</td>
-   <td>{{ CompatChrome(37) }}</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{ CompatGeckoMobile(34) }}</td>
    <td>{{ CompatNo }}</td>
@@ -110,5 +112,6 @@ translation_of: Web/API/CryptoKey
 <h2 id="Se_även">Se även</h2>
 
 <ul>
- <li>{{domxref("Crypto")}} och {{domxref("Crypto.subtle")}}.</li>
+ <li>{{domxref("Crypto")}} och {{domxref("Crypto.subtle")}}.</li>
+ <li>{{domxref("CryptoKey")}}, gränssnittet tillhör det.</li>
 </ul>
