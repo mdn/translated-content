@@ -85,12 +85,6 @@
       "ivanprytula"
     ]
   },
-  "Glossary/Block/Скриптинг": {
-    "modified": "2019-10-07T11:02:21.315Z",
-    "contributors": [
-      "Pavlechko"
-    ]
-  },
   "Glossary/Boolean": {
     "modified": "2019-05-04T17:39:14.904Z",
     "contributors": [
@@ -165,12 +159,6 @@
     "contributors": [
       "DariaManko",
       "ArtemLashmanov"
-    ]
-  },
-  "Glossary/DTD": {
-    "modified": "2019-01-17T01:19:22.959Z",
-    "contributors": [
-      "asmforce"
     ]
   },
   "Glossary/Data_structure": {
@@ -593,205 +581,6 @@
       "asmforce"
     ]
   },
-  "Glossary/Інструкція": {
-    "modified": "2019-10-08T03:15:04.893Z",
-    "contributors": [
-      "Pavlechko"
-    ]
-  },
-  "Glossary/Інтернет": {
-    "modified": "2019-03-23T22:08:20.008Z",
-    "contributors": [
-      "SKaznadei",
-      "asmforce"
-    ]
-  },
-  "Glossary/Абстракція": {
-    "modified": "2019-03-23T22:30:29.962Z",
-    "contributors": [
-      "asmforce",
-      "Kamilius"
-    ]
-  },
-  "Glossary/Алгоритм": {
-    "modified": "2019-03-23T22:30:35.419Z",
-    "contributors": [
-      "asmforce",
-      "Kamilius"
-    ]
-  },
-  "Glossary/Арґумент": {
-    "modified": "2019-03-23T22:04:22.695Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
-  "Glossary/Буфер": {
-    "modified": "2019-03-23T22:07:54.933Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
-  "Glossary/Веб_Доступність": {
-    "modified": "2019-05-04T18:59:21.286Z",
-    "contributors": [
-      "ArtemLashmanov",
-      "Kamilius"
-    ]
-  },
-  "Glossary/Вікно_перегляду": {
-    "modified": "2019-03-23T22:08:34.368Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
-  "Glossary/ДК": {
-    "modified": "2019-03-18T21:34:51.796Z",
-    "contributors": [
-      "SKaznadei"
-    ]
-  },
-  "Glossary/Дешифрування": {
-    "modified": "2019-09-16T13:32:33.238Z",
-    "contributors": [
-      "DollarPo8"
-    ]
-  },
-  "Glossary/Динамічна_мова_програмування": {
-    "modified": "2019-03-18T21:43:52.488Z",
-    "contributors": [
-      "bdvorianov"
-    ]
-  },
-  "Glossary/Замикання": {
-    "modified": "2019-03-23T22:04:17.938Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
-  "Glossary/Змінна": {
-    "modified": "2019-03-23T22:09:07.757Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
-  "Glossary/Значення": {
-    "modified": "2019-03-23T22:09:28.718Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
-  "Glossary/Компіляція": {
-    "modified": "2019-03-18T21:35:41.310Z",
-    "contributors": [
-      "Abalmazik"
-    ]
-  },
-  "Glossary/Криптоаналіз": {
-    "modified": "2019-09-10T14:27:53.120Z",
-    "contributors": [
-      "DollarPo8"
-    ]
-  },
-  "Glossary/Криптографічна_геш-функція": {
-    "modified": "2019-09-18T10:42:51.504Z",
-    "contributors": [
-      "DollarPo8"
-    ]
-  },
-  "Glossary/Криптографія": {
-    "modified": "2019-09-10T13:13:46.945Z",
-    "contributors": [
-      "DollarPo8"
-    ]
-  },
-  "Glossary/Метод": {
-    "modified": "2019-07-18T12:27:02.669Z",
-    "contributors": [
-      "DariaManko",
-      "asmforce",
-      "Kamilius"
-    ]
-  },
-  "Glossary/ООП": {
-    "modified": "2019-05-16T18:01:52.440Z",
-    "contributors": [
-      "ArtemLashmanov",
-      "asmforce"
-    ]
-  },
-  "Glossary/Обгортка": {
-    "modified": "2019-03-23T22:08:15.564Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
-  "Glossary/Оператор": {
-    "modified": "2019-03-18T21:44:09.880Z",
-    "contributors": [
-      "bdvorianov"
-    ]
-  },
-  "Glossary/Посилання": {
-    "modified": "2019-03-18T21:34:47.720Z",
-    "contributors": [
-      "SKaznadei"
-    ]
-  },
-  "Glossary/Рекурсія": {
-    "modified": "2019-03-18T21:44:04.217Z",
-    "contributors": [
-      "asmforce",
-      "bdvorianov"
-    ]
-  },
-  "Glossary/Символ": {
-    "modified": "2020-12-14T08:56:37.459Z",
-    "contributors": [
-      "DariaManko",
-      "raikune"
-    ]
-  },
-  "Glossary/Тенета": {
-    "modified": "2019-03-18T20:37:36.381Z",
-    "contributors": [
-      "romanstor",
-      "SKaznadei",
-      "asmforce"
-    ]
-  },
-  "Glossary/Тип": {
-    "modified": "2019-03-23T22:09:27.817Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
-  "Glossary/Функція": {
-    "modified": "2019-07-01T07:43:55.787Z",
-    "contributors": [
-      "DariaManko",
-      "bdvorianov"
-    ]
-  },
-  "Glossary/Шифр": {
-    "modified": "2019-09-10T14:28:27.783Z",
-    "contributors": [
-      "DollarPo8"
-    ]
-  },
-  "Glossary/Шифротекст": {
-    "modified": "2019-09-12T14:19:30.255Z",
-    "contributors": [
-      "DollarPo8"
-    ]
-  },
-  "Glossary/ідентифікатор": {
-    "modified": "2019-03-23T22:11:07.008Z",
-    "contributors": [
-      "asmforce",
-      "yuraantonov"
-    ]
-  },
   "Learn": {
     "modified": "2020-07-16T22:43:48.924Z",
     "contributors": [
@@ -825,22 +614,10 @@
       "sonia-ko"
     ]
   },
-  "Learn/CSS/CSS_розмітка": {
-    "modified": "2020-07-25T19:25:57.955Z",
-    "contributors": [
-      "nepiravno"
-    ]
-  },
   "Learn/CSS/First_steps": {
     "modified": "2020-07-25T19:19:07.223Z",
     "contributors": [
       "nepiravno",
-      "SergiyLuckys"
-    ]
-  },
-  "Learn/CSS/First_steps/Що_таке_CSS": {
-    "modified": "2020-10-15T22:22:31.879Z",
-    "contributors": [
       "SergiyLuckys"
     ]
   },
@@ -849,12 +626,6 @@
     "contributors": [
       "nepiravno",
       "wilton-cruz"
-    ]
-  },
-  "Learn/CSS/Styling_text/Стилі_списків": {
-    "modified": "2020-07-16T22:26:15.367Z",
-    "contributors": [
-      "MykolaCompany"
     ]
   },
   "Learn/Common_questions": {
@@ -952,32 +723,12 @@
       "mdymytrova"
     ]
   },
-  "Learn/Getting_started_with_the_web/Інтернет_та_веб-стандарти": {
-    "modified": "2020-07-25T20:32:44.440Z",
-    "contributors": [
-      "nepiravno"
-    ]
-  },
   "Learn/HTML": {
     "modified": "2020-07-16T22:22:24.960Z",
     "contributors": [
       "rage2k2",
       "feel13good",
       "hadleyel"
-    ]
-  },
-  "Learn/HTML/Forms": {
-    "modified": "2020-07-25T20:03:44.978Z",
-    "contributors": [
-      "nepiravno",
-      "Yurii_Horbach",
-      "feel13good"
-    ]
-  },
-  "Learn/HTML/Forms/Your_first_form": {
-    "modified": "2020-07-16T22:21:07.366Z",
-    "contributors": [
-      "pelyp47"
     ]
   },
   "Learn/HTML/Introduction_to_HTML": {
@@ -1019,13 +770,6 @@
       "websunsey"
     ]
   },
-  "Learn/HTML/Introduction_to_HTML/scho_v_head_metadani_v_HTML": {
-    "modified": "2020-07-16T22:23:25.057Z",
-    "contributors": [
-      "ArtemLashmanov",
-      "websunsey"
-    ]
-  },
   "Learn/HTML/Multimedia_and_embedding": {
     "modified": "2020-07-16T22:24:29.703Z",
     "contributors": [
@@ -1041,12 +785,6 @@
       "Oleksandr09",
       "AlexOcheretnyi",
       "feel13good"
-    ]
-  },
-  "Learn/How_to_contribute": {
-    "modified": "2020-07-16T22:33:46.744Z",
-    "contributors": [
-      "bohdan009"
     ]
   },
   "Learn/JavaScript": {
@@ -1098,18 +836,6 @@
       "HelgeUa"
     ]
   },
-  "Learn/JavaScript/Асинхронний": {
-    "modified": "2020-07-25T19:53:57.083Z",
-    "contributors": [
-      "nepiravno"
-    ]
-  },
-  "Learn/JavaScript/Будівельні_блоки": {
-    "modified": "2020-07-25T19:43:30.011Z",
-    "contributors": [
-      "nepiravno"
-    ]
-  },
   "Learn/Server-side": {
     "modified": "2020-07-16T22:36:02.652Z",
     "contributors": [
@@ -1147,54 +873,6 @@
       "chrisdavidmills"
     ]
   },
-  "Learn/Tools_and_testing/Git_та_GitHub": {
-    "modified": "2020-07-25T20:26:40.197Z",
-    "contributors": [
-      "nepiravno"
-    ]
-  },
-  "Learn/Tools_and_testing/Розуміння_JavaScript-фреймворків_на_стороні_клієнта": {
-    "modified": "2020-07-25T20:53:33.045Z",
-    "contributors": [
-      "nepiravno"
-    ]
-  },
-  "Learn/Tools_and_testing/Розуміння_JavaScript-фреймворків_на_стороні_клієнта/znayomymos_zi_svelte": {
-    "modified": "2020-08-22T19:18:21.080Z",
-    "contributors": [
-      "thedenoff"
-    ]
-  },
-  "Learn/Tools_and_testing/Розуміння_інструментів_веб-розробки_на_стороні_клієнта": {
-    "modified": "2020-07-25T20:47:10.306Z",
-    "contributors": [
-      "nepiravno"
-    ]
-  },
-  "Learn/Tools_and_testing/Тестування_кросбраузерності": {
-    "modified": "2020-07-25T20:16:06.008Z",
-    "contributors": [
-      "nepiravno"
-    ]
-  },
-  "Learn/Доступність": {
-    "modified": "2020-07-25T20:18:04.756Z",
-    "contributors": [
-      "nepiravno"
-    ]
-  },
-  "Learn/Навчання_та_отримання_допомоги": {
-    "modified": "2020-07-25T20:34:14.558Z",
-    "contributors": [
-      "nepiravno"
-    ]
-  },
-  "Learn/Фронт-енд_веб-розробник": {
-    "modified": "2020-07-26T07:04:16.114Z",
-    "contributors": [
-      "nepiravno"
-    ]
-  },
   "MDN": {
     "modified": "2020-02-19T18:40:00.793Z",
     "contributors": [
@@ -1206,15 +884,6 @@
       "yuraantonov",
       "imrock",
       "Jeremie"
-    ]
-  },
-  "MDN/Community": {
-    "modified": "2019-09-11T08:00:43.055Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "asmforce",
-      "yuraantonov"
     ]
   },
   "MDN/Contribute": {
@@ -1246,44 +915,6 @@
       "jswisher"
     ]
   },
-  "MDN/Contribute/Howto/Create_an_MDN_account": {
-    "modified": "2019-01-17T02:06:23.808Z",
-    "contributors": [
-      "wbamberg",
-      "yuraantonov"
-    ]
-  },
-  "MDN/Contribute/Howto/Do_an_editorial_review": {
-    "modified": "2020-09-04T18:11:30.511Z",
-    "contributors": [
-      "borysl",
-      "wbamberg",
-      "asmforce",
-      "kuki"
-    ]
-  },
-  "MDN/Contribute/Howto/Set_the_summary_for_a_page": {
-    "modified": "2019-03-23T22:05:10.058Z",
-    "contributors": [
-      "wbamberg",
-      "ivaskonyan"
-    ]
-  },
-  "MDN/Contribute/Howto/Бета_тестування": {
-    "modified": "2019-03-18T21:45:25.216Z",
-    "contributors": [
-      "wbamberg",
-      "asmforce"
-    ]
-  },
-  "MDN/Contribute/Howto/Як_створювати_й_редагувати_сторінки": {
-    "modified": "2019-08-06T16:49:19.554Z",
-    "contributors": [
-      "html5beginner",
-      "wbamberg",
-      "asmforce"
-    ]
-  },
   "MDN/Guidelines": {
     "modified": "2020-09-30T15:32:09.261Z",
     "contributors": [
@@ -1293,25 +924,6 @@
       "jswisher"
     ]
   },
-  "MDN/Guidelines/Настанови_зі_стилю": {
-    "modified": "2020-09-30T15:32:10.012Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jswisher",
-      "Pavlechko",
-      "wbamberg",
-      "BezZaboT",
-      "asmforce"
-    ]
-  },
-  "MDN/Kuma": {
-    "modified": "2019-09-09T15:54:27.754Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "asmforce"
-    ]
-  },
   "MDN/Structures": {
     "modified": "2020-09-30T12:57:34.758Z",
     "contributors": [
@@ -1319,25 +931,6 @@
       "wbamberg",
       "asmforce",
       "jswisher"
-    ]
-  },
-  "MDN/Structures/Шаблони": {
-    "modified": "2020-09-30T12:57:34.918Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "asmforce"
-    ]
-  },
-  "MDN/Structures/Шаблони/Загальновживані_шаблони": {
-    "modified": "2020-09-30T12:57:35.379Z",
-    "contributors": [
-      "chrisdavidmills",
-      "memodim.di",
-      "wbamberg",
-      "teoli",
-      "fscholz",
-      "asmforce"
     ]
   },
   "MDN/Tools": {
@@ -1355,23 +948,6 @@
       "wbamberg",
       "asmforce",
       "jwhitlock"
-    ]
-  },
-  "MDN/Tools/KumaScript/Усунення_помилок_KumaScript": {
-    "modified": "2020-09-30T16:54:47.555Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "asmforce"
-    ]
-  },
-  "MDN/Про": {
-    "modified": "2019-09-09T15:23:18.385Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "asmforce",
-      "OlexandrIlchenko"
     ]
   },
   "Mozilla": {
@@ -1415,12 +991,6 @@
     "modified": "2019-05-25T08:49:03.914Z",
     "contributors": [
       "cloudgnome"
-    ]
-  },
-  "Mozilla/Add-ons/WebExtensions/Що_таке_Web_Розширення": {
-    "modified": "2019-03-18T21:05:11.899Z",
-    "contributors": [
-      "leofun01"
     ]
   },
   "Mozilla/Firefox": {
@@ -1507,12 +1077,6 @@
       "Sergiy_Luckys"
     ]
   },
-  "Web/API/API_відображення_сторінки": {
-    "modified": "2020-10-15T22:29:33.453Z",
-    "contributors": [
-      "memodim.di"
-    ]
-  },
   "Web/API/Ambient_Light_Events": {
     "modified": "2020-10-27T06:20:23.810Z",
     "contributors": [
@@ -1544,12 +1108,6 @@
     "modified": "2020-07-10T12:46:01.798Z",
     "contributors": [
       "alexeeva.iryna"
-    ]
-  },
-  "Web/API/Canvas_API/Tutorial/Чутливі_ділянки_та_доступність": {
-    "modified": "2019-03-23T22:08:43.488Z",
-    "contributors": [
-      "asmforce"
     ]
   },
   "Web/API/Console": {
@@ -1888,20 +1446,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/WindowTimers": {
-    "modified": "2019-03-23T22:25:44.821Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/API/WindowTimers/setTimeout": {
-    "modified": "2019-03-23T22:25:41.478Z",
-    "contributors": [
-      "jurkobanzaj",
-      "Rozelin",
-      "Kamilius"
-    ]
-  },
   "Web/API/XMLHttpRequest": {
     "modified": "2020-10-15T21:59:05.751Z",
     "contributors": [
@@ -1909,21 +1453,6 @@
       "fscholz",
       "rshul",
       "Jedipedia"
-    ]
-  },
-  "Web/API/Подія": {
-    "modified": "2020-04-15T04:26:09.031Z",
-    "contributors": [
-      "vera-design",
-      "yuraantonov"
-    ]
-  },
-  "Web/API/Подія/target": {
-    "modified": "2020-08-08T10:32:59.036Z",
-    "contributors": [
-      "Vandeko1",
-      "curtdp",
-      "yuraantonov"
     ]
   },
   "Web/Accessibility": {
@@ -2016,29 +1545,11 @@
       "GiorgioLviv"
     ]
   },
-  "Web/CSS/CSS_Animations/Використання_CSS_анімацій": {
-    "modified": "2019-03-23T22:07:52.924Z",
-    "contributors": [
-      "GiorgioLviv"
-    ]
-  },
-  "Web/CSS/CSS_Box_Model/Згортання_відступів": {
-    "modified": "2019-03-23T22:08:26.711Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
   "Web/CSS/CSS_Flexible_Box_Layout": {
     "modified": "2019-03-23T22:35:53.862Z",
     "contributors": [
       "jenja-pa",
       "chrisdavidmills"
-    ]
-  },
-  "Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes": {
-    "modified": "2019-03-23T22:35:58.219Z",
-    "contributors": [
-      "animatio"
     ]
   },
   "Web/CSS/CSS_Grid_Layout": {
@@ -2172,68 +1683,11 @@
       "mr-vikster"
     ]
   },
-  "Web/CSS/Альтернативні_таблиці_стилів": {
-    "modified": "2019-03-23T22:20:16.657Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
-  "Web/CSS/Довідник": {
-    "modified": "2019-11-24T18:02:08.214Z",
-    "contributors": [
-      "yuraantonov"
-    ]
-  },
-  "Web/CSS/Коробчаста_модель_CSS": {
-    "modified": "2019-03-23T22:08:28.621Z",
-    "contributors": [
-      "asmforce",
-      "mfluehr"
-    ]
-  },
-  "Web/CSS/Модель_візуального_формування": {
-    "modified": "2020-04-17T11:33:03.035Z",
-    "contributors": [
-      "ablackrain",
-      "olegsava",
-      "asmforce"
-    ]
-  },
-  "Web/CSS/Розмітка_кулінарна-книга": {
-    "modified": "2020-07-25T19:29:27.695Z",
-    "contributors": [
-      "nepiravno"
-    ]
-  },
-  "Web/CSS/Схема_компонування": {
-    "modified": "2019-03-23T22:08:35.177Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
   "Web/Events": {
     "modified": "2019-04-30T14:15:07.936Z",
     "contributors": [
       "wbamberg",
       "teoli"
-    ]
-  },
-  "Web/Events/DOMContentLoaded": {
-    "modified": "2019-04-30T14:16:03.506Z",
-    "contributors": [
-      "wbamberg",
-      "AndriiZ",
-      "fscholz",
-      "alekseichuk",
-      "AlinaKuzmenko"
-    ]
-  },
-  "Web/Events/abort": {
-    "modified": "2019-04-30T14:23:14.164Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "CosmicBoris"
     ]
   },
   "Web/Guide": {
@@ -2243,19 +1697,6 @@
       "yakubiv",
       "ASeegull",
       "jsx"
-    ]
-  },
-  "Web/Guide/CSS/Getting_started": {
-    "modified": "2019-03-23T22:37:37.659Z",
-    "contributors": [
-      "ASeegull",
-      "yuraantonov"
-    ]
-  },
-  "Web/Guide/CSS/Getting_started/What_is_CSS": {
-    "modified": "2019-03-23T22:21:20.519Z",
-    "contributors": [
-      "ASeegull"
     ]
   },
   "Web/Guide/HTML/Content_categories": {
@@ -2274,20 +1715,6 @@
       "andrewnovsky",
       "yakubiv",
       "assanovstan"
-    ]
-  },
-  "Web/Guide/HTML/Використання_HTML-секцій_та_структура_документу": {
-    "modified": "2019-03-18T20:54:41.113Z",
-    "contributors": [
-      "litashg",
-      "Efimenko",
-      "yakubiv"
-    ]
-  },
-  "Web/Guide/Графіка": {
-    "modified": "2019-03-23T22:38:59.184Z",
-    "contributors": [
-      "v.h.f.u"
     ]
   },
   "Web/HTML": {
@@ -2342,126 +1769,6 @@
     "contributors": [
       "skravche",
       "mdymytrova"
-    ]
-  },
-  "Web/HTML/Довідник": {
-    "modified": "2019-09-09T07:23:26.420Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "asmforce",
-      "v.h.f.u"
-    ]
-  },
-  "Web/HTML/Елемент": {
-    "modified": "2020-04-04T20:48:11.630Z",
-    "contributors": [
-      "Neonas",
-      "yuraantonov"
-    ]
-  },
-  "Web/HTML/Елемент/html": {
-    "modified": "2019-03-23T22:36:12.142Z",
-    "contributors": [
-      "asmforce",
-      "yuraantonov"
-    ]
-  },
-  "Web/HTML/Елемент/iframe": {
-    "modified": "2020-11-06T03:47:28.747Z",
-    "contributors": [
-      "SphinxKnight",
-      "melnykvlados"
-    ]
-  },
-  "Web/HTML/Елемент/link": {
-    "modified": "2020-10-15T22:15:13.454Z",
-    "contributors": [
-      "AndriyDarmits"
-    ]
-  },
-  "Web/HTML/Елемент/nav": {
-    "modified": "2020-10-15T21:46:13.795Z",
-    "contributors": [
-      "bulvvkoxide",
-      "asmforce",
-      "Kamilius"
-    ]
-  },
-  "Web/HTML/Елемент/script": {
-    "modified": "2020-10-15T22:25:25.196Z",
-    "contributors": [
-      "DANICHMOMO"
-    ]
-  },
-  "Web/HTML/Елемент/section": {
-    "modified": "2019-03-23T22:21:37.735Z",
-    "contributors": [
-      "bulvvkoxide",
-      "yuraantonov"
-    ]
-  },
-  "Web/HTML/Елемент/style": {
-    "modified": "2019-03-23T22:20:18.231Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
-  "Web/HTML/Елемент/table": {
-    "modified": "2020-10-15T22:34:06.777Z",
-    "contributors": [
-      "borysl"
-    ]
-  },
-  "Web/HTML/Елемент/video": {
-    "modified": "2020-10-15T22:22:00.012Z",
-    "contributors": [
-      "AndriiZ"
-    ]
-  },
-  "Web/HTML/Елемент/Заголовок": {
-    "modified": "2019-03-23T22:10:15.473Z",
-    "contributors": [
-      "yuraantonov"
-    ]
-  },
-  "Web/HTML/Загальні_атрибути": {
-    "modified": "2019-05-03T05:34:55.602Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
-  "Web/HTML/Загальні_атрибути/hidden": {
-    "modified": "2020-10-15T22:16:02.593Z",
-    "contributors": [
-      "khomyakdi"
-    ]
-  },
-  "Web/HTML/Загальні_атрибути/itemscope": {
-    "modified": "2020-02-27T17:18:48.824Z",
-    "contributors": [
-      "pelyp47",
-      "AlinaKuzmenko",
-      "nemishkor"
-    ]
-  },
-  "Web/HTML/Загальні_атрибути/lang": {
-    "modified": "2020-10-15T22:17:22.681Z",
-    "contributors": [
-      "asmforce",
-      "HA3IK"
-    ]
-  },
-  "Web/HTML/Загальні_атрибути/tabindex": {
-    "modified": "2020-10-15T22:29:23.358Z",
-    "contributors": [
-      "memodim.di"
-    ]
-  },
-  "Web/HTML/Режим_сумісності_й_стандартний_режим": {
-    "modified": "2019-03-18T21:46:42.475Z",
-    "contributors": [
-      "asmforce"
     ]
   },
   "Web/HTTP": {
@@ -2591,85 +1898,10 @@
       "AdriandeCita"
     ]
   },
-  "Web/HTTP/Заголовки": {
-    "modified": "2019-07-09T04:41:30.590Z",
-    "contributors": [
-      "WildeMax",
-      "savbace",
-      "pupenasan",
-      "curdwithraisins"
-    ]
-  },
   "Web/HTTP/Заголовки/Accept": {
     "modified": "2019-03-18T21:11:57.961Z",
     "contributors": [
       "liwc0329"
-    ]
-  },
-  "Web/HTTP/Заголовки/Accept-Encoding": {
-    "modified": "2020-10-15T22:13:34.607Z",
-    "contributors": [
-      "pupenasan"
-    ]
-  },
-  "Web/HTTP/Заголовки/Accept-Language": {
-    "modified": "2020-10-15T22:13:27.393Z",
-    "contributors": [
-      "pupenasan"
-    ]
-  },
-  "Web/HTTP/Заголовки/Connection": {
-    "modified": "2020-10-15T22:13:31.957Z",
-    "contributors": [
-      "pupenasan"
-    ]
-  },
-  "Web/HTTP/Заголовки/Content-Length": {
-    "modified": "2020-10-15T22:13:38.034Z",
-    "contributors": [
-      "pupenasan"
-    ]
-  },
-  "Web/HTTP/Заголовки/Content-Type": {
-    "modified": "2020-10-15T22:13:30.716Z",
-    "contributors": [
-      "pupenasan"
-    ]
-  },
-  "Web/HTTP/Заголовки/ETag": {
-    "modified": "2020-10-15T22:03:56.430Z",
-    "contributors": [
-      "cloudgnome"
-    ]
-  },
-  "Web/HTTP/Заголовки/If-Match": {
-    "modified": "2020-10-15T22:04:01.753Z",
-    "contributors": [
-      "cloudgnome"
-    ]
-  },
-  "Web/HTTP/Заголовки/Location": {
-    "modified": "2020-10-15T22:13:34.509Z",
-    "contributors": [
-      "pupenasan"
-    ]
-  },
-  "Web/HTTP/Заголовки/Referer": {
-    "modified": "2020-10-15T21:57:21.223Z",
-    "contributors": [
-      "websunsey"
-    ]
-  },
-  "Web/HTTP/Заголовки/User-Agent": {
-    "modified": "2020-10-15T22:04:15.494Z",
-    "contributors": [
-      "Sestowner"
-    ]
-  },
-  "Web/HTTP/Заголовки/X-Forwarded-Proto": {
-    "modified": "2020-10-15T22:22:50.826Z",
-    "contributors": [
-      "nakhodkiin"
     ]
   },
   "Web/JavaScript": {
@@ -2775,14 +2007,6 @@
       "DariaManko"
     ]
   },
-  "Web/JavaScript/Guide/Dokladno_pro_Objectnu_Model": {
-    "modified": "2020-03-12T19:45:23.579Z",
-    "contributors": [
-      "AdriandeCita",
-      "wbamberg",
-      "PavloEleva"
-    ]
-  },
   "Web/JavaScript/Guide/Functions": {
     "modified": "2020-03-12T19:47:17.480Z",
     "contributors": [
@@ -2871,15 +2095,6 @@
     "modified": "2020-06-23T13:21:35.238Z",
     "contributors": [
       "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Guide/Вирази_та_оператори": {
-    "modified": "2020-03-12T19:46:18.944Z",
-    "contributors": [
-      "DariaManko",
-      "kwitochka",
-      "Onimi",
-      "OleksandrPelepey"
     ]
   },
   "Web/JavaScript/Inheritance_and_the_prototype_chain": {
@@ -3063,24 +2278,6 @@
     "contributors": [
       "DariaManko",
       "codermeister",
-      "trofima"
-    ]
-  },
-  "Web/JavaScript/Reference/Functions/Стрілкові_функції": {
-    "modified": "2020-10-15T21:59:14.617Z",
-    "contributors": [
-      "maisteRR",
-      "asmforce",
-      "vberestovskyi",
-      "krizik",
-      "ahavianiri"
-    ]
-  },
-  "Web/JavaScript/Reference/Functions/решта_параметрів": {
-    "modified": "2020-10-15T21:55:37.826Z",
-    "contributors": [
-      "DariaManko",
-      "fscholz",
       "trofima"
     ]
   },
@@ -3321,14 +2518,6 @@
       "makk"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/prototype": {
-    "modified": "2020-10-15T21:46:48.879Z",
-    "contributors": [
-      "DariaManko",
-      "piton13",
-      "nesteant"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/push": {
     "modified": "2020-10-15T22:20:55.331Z",
     "contributors": [
@@ -3421,12 +2610,6 @@
       "DariaManko"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype": {
-    "modified": "2020-10-15T22:26:05.753Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/BigInt": {
     "modified": "2020-10-15T22:32:52.326Z",
     "contributors": [
@@ -3481,13 +2664,6 @@
     "modified": "2020-10-15T22:31:11.369Z",
     "contributors": [
       "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Boolean/prototype": {
-    "modified": "2020-10-15T22:06:14.618Z",
-    "contributors": [
-      "DariaManko",
-      "AdriandeCita"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Boolean/toSource": {
@@ -3887,12 +3063,6 @@
       "DariaManko"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Error/prototype": {
-    "modified": "2020-10-15T22:18:21.094Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Error/toSource": {
     "modified": "2020-10-15T22:18:40.791Z",
     "contributors": [
@@ -3907,12 +3077,6 @@
   },
   "Web/JavaScript/Reference/Global_Objects/EvalError": {
     "modified": "2020-10-15T22:18:17.805Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/EvalError/prototype": {
-    "modified": "2020-10-15T22:18:43.111Z",
     "contributors": [
       "DariaManko"
     ]
@@ -3981,12 +3145,6 @@
       "Kelebor"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Function/prototype": {
-    "modified": "2020-10-15T22:21:50.690Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Function/toSource": {
     "modified": "2020-10-15T22:21:38.211Z",
     "contributors": [
@@ -4029,12 +3187,6 @@
       "DariaManko"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/GeneratorFunction/prototype": {
-    "modified": "2020-10-15T22:25:30.929Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Infinity": {
     "modified": "2020-10-15T22:21:06.954Z",
     "contributors": [
@@ -4043,12 +3195,6 @@
   },
   "Web/JavaScript/Reference/Global_Objects/InternalError": {
     "modified": "2020-10-15T22:18:24.342Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/InternalError/prototype": {
-    "modified": "2020-10-15T22:18:47.273Z",
     "contributors": [
       "DariaManko"
     ]
@@ -4349,14 +3495,6 @@
     "modified": "2020-10-15T22:06:13.191Z",
     "contributors": [
       "AdriandeCita"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Math/заокругелння": {
-    "modified": "2020-10-15T21:54:59.380Z",
-    "contributors": [
-      "AdriandeCita",
-      "yurii-kozak",
-      "yuraantonov"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/NaN": {
@@ -4663,12 +3801,6 @@
       "DariaManko"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Promise/prototype": {
-    "modified": "2020-10-15T21:51:58.196Z",
-    "contributors": [
-      "piton13"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Promise/race": {
     "modified": "2020-10-15T22:03:35.608Z",
     "contributors": [
@@ -4689,13 +3821,6 @@
       "DariaManko"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Promise/відхилено": {
-    "modified": "2020-10-15T21:53:08.281Z",
-    "contributors": [
-      "DariaManko",
-      "piton13"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Proxy": {
     "modified": "2020-10-15T21:59:11.773Z",
     "contributors": [
@@ -4709,20 +3834,8 @@
       "DariaManko"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/RangeError/prototype": {
-    "modified": "2020-10-15T22:18:03.049Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/ReferenceError": {
     "modified": "2020-10-15T22:18:21.096Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/ReferenceError/prototype": {
-    "modified": "2020-10-15T22:18:46.456Z",
     "contributors": [
       "DariaManko"
     ]
@@ -5248,33 +4361,14 @@
       "asmforce"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype": {
-    "modified": "2020-10-15T21:58:51.957Z",
-    "contributors": [
-      "DariaManko",
-      "asmforce"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/TypeError": {
     "modified": "2020-10-15T22:18:20.714Z",
     "contributors": [
       "DariaManko"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/TypeError/prototype": {
-    "modified": "2020-10-15T22:18:47.800Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/URIError": {
     "modified": "2020-10-15T22:18:21.321Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/URIError/prototype": {
-    "modified": "2020-10-15T22:18:47.179Z",
     "contributors": [
       "DariaManko"
     ]
@@ -5337,157 +4431,6 @@
       "DariaManko"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Число": {
-    "modified": "2020-10-15T21:55:15.973Z",
-    "contributors": [
-      "DariaManko",
-      "asmforce",
-      "justlp",
-      "yuri_spivak"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/EPSILON": {
-    "modified": "2020-10-15T22:06:24.197Z",
-    "contributors": [
-      "DariaManko",
-      "AdriandeCita"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/MAX_SAFE_INTEGER": {
-    "modified": "2020-10-15T22:06:24.055Z",
-    "contributors": [
-      "DariaManko",
-      "AdriandeCita"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/MAX_VALUE": {
-    "modified": "2020-10-15T22:31:47.123Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/MIN_SAFE_INTEGER": {
-    "modified": "2020-10-15T22:31:49.130Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/MIN_VALUE": {
-    "modified": "2020-10-15T22:32:00.610Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/NEGATIVE_INFINITY": {
-    "modified": "2020-10-15T22:31:57.386Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/NaN": {
-    "modified": "2020-10-15T22:31:57.609Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/Number": {
-    "modified": "2020-10-15T22:31:48.346Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/POSITIVE_INFINITY": {
-    "modified": "2020-10-15T22:32:15.213Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/isFinite": {
-    "modified": "2020-10-15T22:32:15.212Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/isInteger": {
-    "modified": "2020-10-15T22:19:10.892Z",
-    "contributors": [
-      "DariaManko",
-      "abmd"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/isNaN": {
-    "modified": "2020-10-15T22:32:17.922Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/isSafeInteger": {
-    "modified": "2020-10-15T22:32:15.124Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/parseFloat": {
-    "modified": "2020-10-15T22:32:15.375Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/parseInt": {
-    "modified": "2020-10-15T22:32:20.201Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/prototype": {
-    "modified": "2020-10-15T21:56:21.125Z",
-    "contributors": [
-      "asmforce"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/toExponential": {
-    "modified": "2020-10-15T22:29:41.228Z",
-    "contributors": [
-      "DariaManko",
-      "taraskundyk"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/toFixed": {
-    "modified": "2020-10-15T22:32:23.109Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/toLocaleString": {
-    "modified": "2020-10-15T22:32:24.740Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/toPrecision": {
-    "modified": "2020-10-15T22:32:25.165Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/toSource": {
-    "modified": "2020-10-15T22:32:25.603Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/toString": {
-    "modified": "2020-10-15T22:32:26.957Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Число/valueOf": {
-    "modified": "2020-10-15T22:32:27.402Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
   "Web/JavaScript/Reference/Lexical_grammar": {
     "modified": "2020-10-15T22:30:14.109Z",
     "contributors": [
@@ -5509,12 +4452,6 @@
   },
   "Web/JavaScript/Reference/Operators/Addition_assignment": {
     "modified": "2020-10-15T22:31:12.087Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Arithmetic_Operators": {
-    "modified": "2020-10-15T22:24:28.585Z",
     "contributors": [
       "DariaManko"
     ]
@@ -5551,12 +4488,6 @@
   },
   "Web/JavaScript/Reference/Operators/Bitwise_OR_assignment": {
     "modified": "2020-10-15T22:31:18.458Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Bitwise_Operators": {
-    "modified": "2020-10-15T22:24:24.851Z",
     "contributors": [
       "DariaManko"
     ]
@@ -5689,12 +4620,6 @@
   },
   "Web/JavaScript/Reference/Operators/Logical_OR": {
     "modified": "2020-10-15T22:31:23.119Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Logical_Operators": {
-    "modified": "2020-10-15T22:24:49.649Z",
     "contributors": [
       "DariaManko"
     ]
@@ -5919,49 +4844,6 @@
       "DariaManko"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Ініціалізація_об’єктів": {
-    "modified": "2020-10-15T21:53:09.316Z",
-    "contributors": [
-      "DariaManko",
-      "trofima"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Деструктуризація": {
-    "modified": "2020-03-12T19:45:50.341Z",
-    "contributors": [
-      "savbace",
-      "trofima"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Оператор_розпакування": {
-    "modified": "2020-03-12T19:45:50.602Z",
-    "contributors": [
-      "Lancer92",
-      "Artem2011",
-      "devalf",
-      "trofima",
-      "KadirTopal"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Оператори_порівняння": {
-    "modified": "2020-10-15T21:57:25.055Z",
-    "contributors": [
-      "DariaManko",
-      "Onimi",
-      "Anonymous",
-      "GrytsiukSerhiy",
-      "asmforce"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Оператори_присвоєння": {
-    "modified": "2020-10-15T21:53:06.640Z",
-    "contributors": [
-      "DariaManko",
-      "wbamberg",
-      "Onimi",
-      "trofima"
-    ]
-  },
   "Web/JavaScript/Reference/Statements": {
     "modified": "2020-10-15T21:49:08.697Z",
     "contributors": [
@@ -6013,12 +4895,6 @@
   },
   "Web/JavaScript/Reference/Statements/debugger": {
     "modified": "2020-10-15T22:22:36.514Z",
-    "contributors": [
-      "DariaManko"
-    ]
-  },
-  "Web/JavaScript/Reference/Statements/default": {
-    "modified": "2020-10-15T22:22:48.978Z",
     "contributors": [
       "DariaManko"
     ]
@@ -6153,27 +5029,6 @@
       "DariaManko"
     ]
   },
-  "Web/JavaScript/Reference/Протоколи_перебору": {
-    "modified": "2020-03-12T19:47:16.437Z",
-    "contributors": [
-      "DariaManko",
-      "asmforce"
-    ]
-  },
-  "Web/JavaScript/oglyad_tehnologiy_JavaScript": {
-    "modified": "2020-03-12T19:45:24.334Z",
-    "contributors": [
-      "PavloEleva"
-    ]
-  },
-  "Web/JavaScript/Перевірка_на_рівність_та_однаковість": {
-    "modified": "2020-03-12T19:47:10.878Z",
-    "contributors": [
-      "DariaManko",
-      "gshadura",
-      "asmforce"
-    ]
-  },
   "Web/Progressive_web_apps": {
     "modified": "2019-03-23T22:00:18.455Z",
     "contributors": [
@@ -6203,13 +5058,986 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Гудіні": {
+  "Glossary/Block/Scripting": {
+    "modified": "2019-10-07T11:02:21.315Z",
+    "contributors": [
+      "Pavlechko"
+    ]
+  },
+  "Glossary/Abstraction": {
+    "modified": "2019-03-23T22:30:29.962Z",
+    "contributors": [
+      "asmforce",
+      "Kamilius"
+    ]
+  },
+  "Glossary/Algorithm": {
+    "modified": "2019-03-23T22:30:35.419Z",
+    "contributors": [
+      "asmforce",
+      "Kamilius"
+    ]
+  },
+  "Glossary/Argument": {
+    "modified": "2019-03-23T22:04:22.695Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Glossary/buffer": {
+    "modified": "2019-03-23T22:07:54.933Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Glossary/Accessibility": {
+    "modified": "2019-05-04T18:59:21.286Z",
+    "contributors": [
+      "ArtemLashmanov",
+      "Kamilius"
+    ]
+  },
+  "Glossary/Viewport": {
+    "modified": "2019-03-23T22:08:34.368Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Glossary/Decryption": {
+    "modified": "2019-09-16T13:32:33.238Z",
+    "contributors": [
+      "DollarPo8"
+    ]
+  },
+  "Glossary/Dynamic_programming_language": {
+    "modified": "2019-03-18T21:43:52.488Z",
+    "contributors": [
+      "bdvorianov"
+    ]
+  },
+  "Glossary/UX": {
+    "modified": "2019-03-18T21:34:51.796Z",
+    "contributors": [
+      "SKaznadei"
+    ]
+  },
+  "Glossary/Closure": {
+    "modified": "2019-03-23T22:04:17.938Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Glossary/Variable": {
+    "modified": "2019-03-23T22:09:07.757Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Glossary/Value": {
+    "modified": "2019-03-23T22:09:28.718Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Glossary/Identifier": {
+    "modified": "2019-03-23T22:11:07.008Z",
+    "contributors": [
+      "asmforce",
+      "yuraantonov"
+    ]
+  },
+  "Glossary/Statement": {
+    "modified": "2019-10-08T03:15:04.893Z",
+    "contributors": [
+      "Pavlechko"
+    ]
+  },
+  "Glossary/Internet": {
+    "modified": "2019-03-23T22:08:20.008Z",
+    "contributors": [
+      "SKaznadei",
+      "asmforce"
+    ]
+  },
+  "Glossary/Compile": {
+    "modified": "2019-03-18T21:35:41.310Z",
+    "contributors": [
+      "Abalmazik"
+    ]
+  },
+  "Glossary/Cryptanalysis": {
+    "modified": "2019-09-10T14:27:53.120Z",
+    "contributors": [
+      "DollarPo8"
+    ]
+  },
+  "Glossary/Cryptographic_hash_function": {
+    "modified": "2019-09-18T10:42:51.504Z",
+    "contributors": [
+      "DollarPo8"
+    ]
+  },
+  "Glossary/Cryptography": {
+    "modified": "2019-09-10T13:13:46.945Z",
+    "contributors": [
+      "DollarPo8"
+    ]
+  },
+  "Glossary/Method": {
+    "modified": "2019-07-18T12:27:02.669Z",
+    "contributors": [
+      "DariaManko",
+      "asmforce",
+      "Kamilius"
+    ]
+  },
+  "Glossary/Wrapper": {
+    "modified": "2019-03-23T22:08:15.564Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Glossary/OOP": {
+    "modified": "2019-05-16T18:01:52.440Z",
+    "contributors": [
+      "ArtemLashmanov",
+      "asmforce"
+    ]
+  },
+  "Glossary/Operator": {
+    "modified": "2019-03-18T21:44:09.880Z",
+    "contributors": [
+      "bdvorianov"
+    ]
+  },
+  "Glossary/Hyperlink": {
+    "modified": "2019-03-18T21:34:47.720Z",
+    "contributors": [
+      "SKaznadei"
+    ]
+  },
+  "Glossary/Recursion": {
+    "modified": "2019-03-18T21:44:04.217Z",
+    "contributors": [
+      "asmforce",
+      "bdvorianov"
+    ]
+  },
+  "Glossary/Symbol": {
+    "modified": "2020-12-14T08:56:37.459Z",
+    "contributors": [
+      "DariaManko",
+      "raikune"
+    ]
+  },
+  "Glossary/World_Wide_Web": {
+    "modified": "2019-03-18T20:37:36.381Z",
+    "contributors": [
+      "romanstor",
+      "SKaznadei",
+      "asmforce"
+    ]
+  },
+  "Glossary/Type": {
+    "modified": "2019-03-23T22:09:27.817Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Glossary/Function": {
+    "modified": "2019-07-01T07:43:55.787Z",
+    "contributors": [
+      "DariaManko",
+      "bdvorianov"
+    ]
+  },
+  "Glossary/Cipher": {
+    "modified": "2019-09-10T14:28:27.783Z",
+    "contributors": [
+      "DollarPo8"
+    ]
+  },
+  "Glossary/Ciphertext": {
+    "modified": "2019-09-12T14:19:30.255Z",
+    "contributors": [
+      "DollarPo8"
+    ]
+  },
+  "Learn/CSS/CSS_layout": {
+    "modified": "2020-07-25T19:25:57.955Z",
+    "contributors": [
+      "nepiravno"
+    ]
+  },
+  "Learn/CSS/First_steps/What_is_CSS": {
+    "modified": "2020-10-15T22:22:31.879Z",
+    "contributors": [
+      "SergiyLuckys"
+    ]
+  },
+  "Learn/CSS/Styling_text/Styling_lists": {
+    "modified": "2020-07-16T22:26:15.367Z",
+    "contributors": [
+      "MykolaCompany"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/The_web_and_web_standards": {
+    "modified": "2020-07-25T20:32:44.440Z",
+    "contributors": [
+      "nepiravno"
+    ]
+  },
+  "orphaned/Learn/How_to_contribute": {
+    "modified": "2020-07-16T22:33:46.744Z",
+    "contributors": [
+      "bohdan009"
+    ]
+  },
+  "Learn/Forms": {
+    "modified": "2020-07-25T20:03:44.978Z",
+    "contributors": [
+      "nepiravno",
+      "Yurii_Horbach",
+      "feel13good"
+    ]
+  },
+  "Learn/Forms/Your_first_form": {
+    "modified": "2020-07-16T22:21:07.366Z",
+    "contributors": [
+      "pelyp47"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML": {
+    "modified": "2020-07-16T22:23:25.057Z",
+    "contributors": [
+      "ArtemLashmanov",
+      "websunsey"
+    ]
+  },
+  "Learn/JavaScript/Asynchronous": {
+    "modified": "2020-07-25T19:53:57.083Z",
+    "contributors": [
+      "nepiravno"
+    ]
+  },
+  "Learn/JavaScript/Building_blocks": {
+    "modified": "2020-07-25T19:43:30.011Z",
+    "contributors": [
+      "nepiravno"
+    ]
+  },
+  "Learn/Tools_and_testing/GitHub": {
+    "modified": "2020-07-25T20:26:40.197Z",
+    "contributors": [
+      "nepiravno"
+    ]
+  },
+  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks": {
+    "modified": "2020-07-25T20:53:33.045Z",
+    "contributors": [
+      "nepiravno"
+    ]
+  },
+  "Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started": {
+    "modified": "2020-08-22T19:18:21.080Z",
+    "contributors": [
+      "thedenoff"
+    ]
+  },
+  "Learn/Tools_and_testing/Understanding_client-side_tools": {
+    "modified": "2020-07-25T20:47:10.306Z",
+    "contributors": [
+      "nepiravno"
+    ]
+  },
+  "Learn/Tools_and_testing/Cross_browser_testing": {
+    "modified": "2020-07-25T20:16:06.008Z",
+    "contributors": [
+      "nepiravno"
+    ]
+  },
+  "Learn/Accessibility": {
+    "modified": "2020-07-25T20:18:04.756Z",
+    "contributors": [
+      "nepiravno"
+    ]
+  },
+  "Learn/Learning_and_getting_help": {
+    "modified": "2020-07-25T20:34:14.558Z",
+    "contributors": [
+      "nepiravno"
+    ]
+  },
+  "Learn/Front-end_web_developer": {
+    "modified": "2020-07-26T07:04:16.114Z",
+    "contributors": [
+      "nepiravno"
+    ]
+  },
+  "orphaned/MDN/Community": {
+    "modified": "2019-09-11T08:00:43.055Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "asmforce",
+      "yuraantonov"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
+    "modified": "2019-01-17T02:06:23.808Z",
+    "contributors": [
+      "wbamberg",
+      "yuraantonov"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Do_an_editorial_review": {
+    "modified": "2020-09-04T18:11:30.511Z",
+    "contributors": [
+      "borysl",
+      "wbamberg",
+      "asmforce",
+      "kuki"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Set_the_summary_for_a_page": {
+    "modified": "2019-03-23T22:05:10.058Z",
+    "contributors": [
+      "wbamberg",
+      "ivaskonyan"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Be_a_beta_tester": {
+    "modified": "2019-03-18T21:45:25.216Z",
+    "contributors": [
+      "wbamberg",
+      "asmforce"
+    ]
+  },
+  "MDN/Contribute/Howto/Create_and_edit_pages": {
+    "modified": "2019-08-06T16:49:19.554Z",
+    "contributors": [
+      "html5beginner",
+      "wbamberg",
+      "asmforce"
+    ]
+  },
+  "MDN/Guidelines/Writing_style_guide": {
+    "modified": "2020-09-30T15:32:10.012Z",
+    "contributors": [
+      "chrisdavidmills",
+      "jswisher",
+      "Pavlechko",
+      "wbamberg",
+      "BezZaboT",
+      "asmforce"
+    ]
+  },
+  "MDN/Yari": {
+    "modified": "2019-09-09T15:54:27.754Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "asmforce"
+    ]
+  },
+  "MDN/Structures/Macros": {
+    "modified": "2020-09-30T12:57:34.918Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "asmforce"
+    ]
+  },
+  "MDN/Structures/Macros/Commonly-used_macros": {
+    "modified": "2020-09-30T12:57:35.379Z",
+    "contributors": [
+      "chrisdavidmills",
+      "memodim.di",
+      "wbamberg",
+      "teoli",
+      "fscholz",
+      "asmforce"
+    ]
+  },
+  "MDN/Tools/KumaScript/Troubleshooting": {
+    "modified": "2020-09-30T16:54:47.555Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "asmforce"
+    ]
+  },
+  "MDN/About": {
+    "modified": "2019-09-09T15:23:18.385Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "asmforce",
+      "OlexandrIlchenko"
+    ]
+  },
+  "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
+    "modified": "2019-03-18T21:05:11.899Z",
+    "contributors": [
+      "leofun01"
+    ]
+  },
+  "Web/API/Page_Visibility_API": {
+    "modified": "2020-10-15T22:29:33.453Z",
+    "contributors": [
+      "memodim.di"
+    ]
+  },
+  "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility": {
+    "modified": "2019-03-23T22:08:43.488Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Web/API/WindowOrWorkerGlobalScope/setTimeout": {
+    "modified": "2019-03-23T22:25:41.478Z",
+    "contributors": [
+      "jurkobanzaj",
+      "Rozelin",
+      "Kamilius"
+    ]
+  },
+  "Web/API/Event": {
+    "modified": "2020-04-15T04:26:09.031Z",
+    "contributors": [
+      "vera-design",
+      "yuraantonov"
+    ]
+  },
+  "Web/API/Event/target": {
+    "modified": "2020-08-08T10:32:59.036Z",
+    "contributors": [
+      "Vandeko1",
+      "curtdp",
+      "yuraantonov"
+    ]
+  },
+  "Web/CSS/CSS_Animations/Using_CSS_animations": {
+    "modified": "2019-03-23T22:07:52.924Z",
+    "contributors": [
+      "GiorgioLviv"
+    ]
+  },
+  "Web/CSS/CSS_Box_Model/Mastering_margin_collapsing": {
+    "modified": "2019-03-23T22:08:26.711Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Web/CSS/Alternative_style_sheets": {
+    "modified": "2019-03-23T22:20:16.657Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Web/CSS/Reference": {
+    "modified": "2019-11-24T18:02:08.214Z",
+    "contributors": [
+      "yuraantonov"
+    ]
+  },
+  "Web/CSS/CSS_Box_Model": {
+    "modified": "2019-03-23T22:08:28.621Z",
+    "contributors": [
+      "asmforce",
+      "mfluehr"
+    ]
+  },
+  "Web/CSS/Visual_formatting_model": {
+    "modified": "2020-04-17T11:33:03.035Z",
+    "contributors": [
+      "ablackrain",
+      "olegsava",
+      "asmforce"
+    ]
+  },
+  "Web/CSS/Layout_cookbook": {
+    "modified": "2020-07-25T19:29:27.695Z",
+    "contributors": [
+      "nepiravno"
+    ]
+  },
+  "Web/CSS/Layout_mode": {
+    "modified": "2019-03-23T22:08:35.177Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Web/API/Window/DOMContentLoaded_event": {
+    "modified": "2019-04-30T14:16:03.506Z",
+    "contributors": [
+      "wbamberg",
+      "AndriiZ",
+      "fscholz",
+      "alekseichuk",
+      "AlinaKuzmenko"
+    ]
+  },
+  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2019-03-18T20:54:41.113Z",
+    "contributors": [
+      "litashg",
+      "Efimenko",
+      "yakubiv"
+    ]
+  },
+  "Web/Guide/Graphics": {
+    "modified": "2019-03-23T22:38:59.184Z",
+    "contributors": [
+      "v.h.f.u"
+    ]
+  },
+  "Web/HTML/Reference": {
+    "modified": "2019-09-09T07:23:26.420Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "asmforce",
+      "v.h.f.u"
+    ]
+  },
+  "Web/HTML/Element/html": {
+    "modified": "2019-03-23T22:36:12.142Z",
+    "contributors": [
+      "asmforce",
+      "yuraantonov"
+    ]
+  },
+  "Web/HTML/Element/iframe": {
+    "modified": "2020-11-06T03:47:28.747Z",
+    "contributors": [
+      "SphinxKnight",
+      "melnykvlados"
+    ]
+  },
+  "Web/HTML/Element": {
+    "modified": "2020-04-04T20:48:11.630Z",
+    "contributors": [
+      "Neonas",
+      "yuraantonov"
+    ]
+  },
+  "Web/HTML/Element/link": {
+    "modified": "2020-10-15T22:15:13.454Z",
+    "contributors": [
+      "AndriyDarmits"
+    ]
+  },
+  "Web/HTML/Element/nav": {
+    "modified": "2020-10-15T21:46:13.795Z",
+    "contributors": [
+      "bulvvkoxide",
+      "asmforce",
+      "Kamilius"
+    ]
+  },
+  "Web/HTML/Element/script": {
+    "modified": "2020-10-15T22:25:25.196Z",
+    "contributors": [
+      "DANICHMOMO"
+    ]
+  },
+  "Web/HTML/Element/section": {
+    "modified": "2019-03-23T22:21:37.735Z",
+    "contributors": [
+      "bulvvkoxide",
+      "yuraantonov"
+    ]
+  },
+  "Web/HTML/Element/style": {
+    "modified": "2019-03-23T22:20:18.231Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Web/HTML/Element/table": {
+    "modified": "2020-10-15T22:34:06.777Z",
+    "contributors": [
+      "borysl"
+    ]
+  },
+  "Web/HTML/Element/video": {
+    "modified": "2020-10-15T22:22:00.012Z",
+    "contributors": [
+      "AndriiZ"
+    ]
+  },
+  "Web/HTML/Element/header": {
+    "modified": "2019-03-23T22:10:15.473Z",
+    "contributors": [
+      "yuraantonov"
+    ]
+  },
+  "Web/HTML/Global_attributes/hidden": {
+    "modified": "2020-10-15T22:16:02.593Z",
+    "contributors": [
+      "khomyakdi"
+    ]
+  },
+  "Web/HTML/Global_attributes": {
+    "modified": "2019-05-03T05:34:55.602Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Web/HTML/Global_attributes/itemscope": {
+    "modified": "2020-02-27T17:18:48.824Z",
+    "contributors": [
+      "pelyp47",
+      "AlinaKuzmenko",
+      "nemishkor"
+    ]
+  },
+  "Web/HTML/Global_attributes/lang": {
+    "modified": "2020-10-15T22:17:22.681Z",
+    "contributors": [
+      "asmforce",
+      "HA3IK"
+    ]
+  },
+  "Web/HTML/Global_attributes/tabindex": {
+    "modified": "2020-10-15T22:29:23.358Z",
+    "contributors": [
+      "memodim.di"
+    ]
+  },
+  "Web/HTML/Quirks_Mode_and_Standards_Mode": {
+    "modified": "2019-03-18T21:46:42.475Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "Web/HTTP/Headers/Accept-Encoding": {
+    "modified": "2020-10-15T22:13:34.607Z",
+    "contributors": [
+      "pupenasan"
+    ]
+  },
+  "Web/HTTP/Headers/Accept-Language": {
+    "modified": "2020-10-15T22:13:27.393Z",
+    "contributors": [
+      "pupenasan"
+    ]
+  },
+  "Web/HTTP/Headers/Connection": {
+    "modified": "2020-10-15T22:13:31.957Z",
+    "contributors": [
+      "pupenasan"
+    ]
+  },
+  "Web/HTTP/Headers/Content-Length": {
+    "modified": "2020-10-15T22:13:38.034Z",
+    "contributors": [
+      "pupenasan"
+    ]
+  },
+  "Web/HTTP/Headers/Content-Type": {
+    "modified": "2020-10-15T22:13:30.716Z",
+    "contributors": [
+      "pupenasan"
+    ]
+  },
+  "Web/HTTP/Headers/ETag": {
+    "modified": "2020-10-15T22:03:56.430Z",
+    "contributors": [
+      "cloudgnome"
+    ]
+  },
+  "Web/HTTP/Headers/If-Match": {
+    "modified": "2020-10-15T22:04:01.753Z",
+    "contributors": [
+      "cloudgnome"
+    ]
+  },
+  "Web/HTTP/Headers": {
+    "modified": "2019-07-09T04:41:30.590Z",
+    "contributors": [
+      "WildeMax",
+      "savbace",
+      "pupenasan",
+      "curdwithraisins"
+    ]
+  },
+  "Web/HTTP/Headers/Location": {
+    "modified": "2020-10-15T22:13:34.509Z",
+    "contributors": [
+      "pupenasan"
+    ]
+  },
+  "Web/HTTP/Headers/Referer": {
+    "modified": "2020-10-15T21:57:21.223Z",
+    "contributors": [
+      "websunsey"
+    ]
+  },
+  "Web/HTTP/Headers/User-Agent": {
+    "modified": "2020-10-15T22:04:15.494Z",
+    "contributors": [
+      "Sestowner"
+    ]
+  },
+  "Web/HTTP/Headers/X-Forwarded-Proto": {
+    "modified": "2020-10-15T22:22:50.826Z",
+    "contributors": [
+      "nakhodkiin"
+    ]
+  },
+  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
+    "modified": "2020-03-12T19:45:23.579Z",
+    "contributors": [
+      "AdriandeCita",
+      "wbamberg",
+      "PavloEleva"
+    ]
+  },
+  "Web/JavaScript/Guide/Expressions_and_Operators": {
+    "modified": "2020-03-12T19:46:18.944Z",
+    "contributors": [
+      "DariaManko",
+      "kwitochka",
+      "Onimi",
+      "OleksandrPelepey"
+    ]
+  },
+  "Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:45:24.334Z",
+    "contributors": [
+      "PavloEleva"
+    ]
+  },
+  "Web/JavaScript/Reference/Functions/rest_parameters": {
+    "modified": "2020-10-15T21:55:37.826Z",
+    "contributors": [
+      "DariaManko",
+      "fscholz",
+      "trofima"
+    ]
+  },
+  "Web/JavaScript/Reference/Functions/Arrow_functions": {
+    "modified": "2020-10-15T21:59:14.617Z",
+    "contributors": [
+      "maisteRR",
+      "asmforce",
+      "vberestovskyi",
+      "krizik",
+      "ahavianiri"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {
+    "modified": "2020-10-15T21:46:48.879Z",
+    "contributors": [
+      "DariaManko",
+      "piton13",
+      "nesteant"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype": {
+    "modified": "2020-10-15T22:26:05.753Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Math/round": {
+    "modified": "2020-10-15T21:54:59.380Z",
+    "contributors": [
+      "AdriandeCita",
+      "yurii-kozak",
+      "yuraantonov"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Promise/reject": {
+    "modified": "2020-10-15T21:53:08.281Z",
+    "contributors": [
+      "DariaManko",
+      "piton13"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/EPSILON": {
+    "modified": "2020-10-15T22:06:24.197Z",
+    "contributors": [
+      "DariaManko",
+      "AdriandeCita"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number": {
+    "modified": "2020-10-15T21:55:15.973Z",
+    "contributors": [
+      "DariaManko",
+      "asmforce",
+      "justlp",
+      "yuri_spivak"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/isFinite": {
+    "modified": "2020-10-15T22:32:15.212Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/isInteger": {
+    "modified": "2020-10-15T22:19:10.892Z",
+    "contributors": [
+      "DariaManko",
+      "abmd"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/isNaN": {
+    "modified": "2020-10-15T22:32:17.922Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger": {
+    "modified": "2020-10-15T22:32:15.124Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER": {
+    "modified": "2020-10-15T22:06:24.055Z",
+    "contributors": [
+      "DariaManko",
+      "AdriandeCita"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE": {
+    "modified": "2020-10-15T22:31:47.123Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER": {
+    "modified": "2020-10-15T22:31:49.130Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE": {
+    "modified": "2020-10-15T22:32:00.610Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/NaN": {
+    "modified": "2020-10-15T22:31:57.609Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY": {
+    "modified": "2020-10-15T22:31:57.386Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/Number": {
+    "modified": "2020-10-15T22:31:48.346Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/parseFloat": {
+    "modified": "2020-10-15T22:32:15.375Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/parseInt": {
+    "modified": "2020-10-15T22:32:20.201Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY": {
+    "modified": "2020-10-15T22:32:15.213Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/toExponential": {
+    "modified": "2020-10-15T22:29:41.228Z",
+    "contributors": [
+      "DariaManko",
+      "taraskundyk"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/toFixed": {
+    "modified": "2020-10-15T22:32:23.109Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/toLocaleString": {
+    "modified": "2020-10-15T22:32:24.740Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/toPrecision": {
+    "modified": "2020-10-15T22:32:25.165Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/toSource": {
+    "modified": "2020-10-15T22:32:25.603Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/toString": {
+    "modified": "2020-10-15T22:32:26.957Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Number/valueOf": {
+    "modified": "2020-10-15T22:32:27.402Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/Destructuring_assignment": {
+    "modified": "2020-03-12T19:45:50.341Z",
+    "contributors": [
+      "savbace",
+      "trofima"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/Object_initializer": {
+    "modified": "2020-10-15T21:53:09.316Z",
+    "contributors": [
+      "DariaManko",
+      "trofima"
+    ]
+  },
+  "Web/JavaScript/Reference/Iteration_protocols": {
+    "modified": "2020-03-12T19:47:16.437Z",
+    "contributors": [
+      "DariaManko",
+      "asmforce"
+    ]
+  },
+  "Web/JavaScript/Equality_comparisons_and_sameness": {
+    "modified": "2020-03-12T19:47:10.878Z",
+    "contributors": [
+      "DariaManko",
+      "gshadura",
+      "asmforce"
+    ]
+  },
+  "Web/Houdini": {
     "modified": "2020-01-12T13:13:12.436Z",
     "contributors": [
       "AndriyTykhan"
     ]
   },
-  "Web/Посібники": {
+  "Web/Tutorials": {
     "modified": "2020-03-16T20:18:27.566Z",
     "contributors": [
       "w3schoolsrus",
@@ -6218,7 +6046,7 @@
       "assanovstan"
     ]
   },
-  "Інструменти": {
+  "Tools": {
     "modified": "2020-07-16T22:44:19.040Z",
     "contributors": [
       "w3schoolsrus",
@@ -6228,71 +6056,243 @@
       "yuraantonov"
     ]
   },
-  "Інструменти/Network_Monitor": {
+  "Tools/Network_Monitor": {
     "modified": "2020-07-16T22:35:32.001Z",
     "contributors": [
       "pupenasan"
     ]
   },
-  "Інструменти/Network_Monitor/Performance_Analysis": {
+  "Tools/Network_Monitor/Performance_Analysis": {
     "modified": "2020-07-16T22:35:35.883Z",
     "contributors": [
       "pupenasan"
     ]
   },
-  "Інструменти/Network_Monitor/Throttling": {
-    "modified": "2020-07-16T22:35:36.549Z",
-    "contributors": [
-      "pupenasan"
-    ]
-  },
-  "Інструменти/Network_Monitor/recording": {
+  "Tools/Network_Monitor/recording": {
     "modified": "2020-07-16T22:35:35.497Z",
     "contributors": [
       "pupenasan"
     ]
   },
-  "Інструменти/Network_Monitor/request_details": {
+  "Tools/Network_Monitor/request_details": {
     "modified": "2020-07-16T22:35:34.973Z",
     "contributors": [
       "pupenasan"
     ]
   },
-  "Інструменти/Network_Monitor/request_list": {
+  "Tools/Network_Monitor/request_list": {
     "modified": "2020-07-16T22:35:34.227Z",
     "contributors": [
       "pupenasan"
     ]
   },
-  "Інструменти/Network_Monitor/toolbar": {
+  "Tools/Network_Monitor/Throttling": {
+    "modified": "2020-07-16T22:35:36.549Z",
+    "contributors": [
+      "pupenasan"
+    ]
+  },
+  "Tools/Network_Monitor/toolbar": {
     "modified": "2020-07-16T22:35:32.971Z",
     "contributors": [
       "pupenasan"
     ]
   },
-  "Інструменти/Web_Console": {
+  "Tools/Web_Console/Console_messages": {
+    "modified": "2020-07-16T22:34:16.455Z",
+    "contributors": [
+      "pupenasan"
+    ]
+  },
+  "Tools/Web_Console": {
     "modified": "2020-07-16T22:34:10.166Z",
     "contributors": [
       "pupenasan",
       "PavloEleva"
     ]
   },
-  "Інструменти/Web_Console/Console_messages": {
-    "modified": "2020-07-16T22:34:16.455Z",
-    "contributors": [
-      "pupenasan"
-    ]
-  },
-  "Інструменти/Web_Console/Opening_the_Web_Console": {
+  "Tools/Web_Console/UI_Tour": {
     "modified": "2020-07-16T22:34:17.758Z",
     "contributors": [
       "pupenasan"
     ]
   },
-  "Інструменти/Web_Console/Split_console": {
+  "Tools/Web_Console/Split_console": {
     "modified": "2020-07-16T22:34:21.548Z",
     "contributors": [
       "pupenasan"
+    ]
+  },
+  "conflicting/Glossary/Doctype": {
+    "modified": "2019-01-17T01:19:22.959Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "conflicting/Web/API/WindowOrWorkerGlobalScope": {
+    "modified": "2019-03-23T22:25:44.821Z",
+    "contributors": [
+      "Sheppy"
+    ]
+  },
+  "Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox": {
+    "modified": "2019-03-23T22:35:58.219Z",
+    "contributors": [
+      "animatio"
+    ]
+  },
+  "Web/API/HTMLMediaElement/abort_event": {
+    "modified": "2019-04-30T14:23:14.164Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "CosmicBoris"
+    ]
+  },
+  "conflicting/Learn/CSS/First_steps": {
+    "modified": "2019-03-23T22:37:37.659Z",
+    "contributors": [
+      "ASeegull",
+      "yuraantonov"
+    ]
+  },
+  "Learn/CSS/First_steps/How_CSS_works": {
+    "modified": "2019-03-23T22:21:20.519Z",
+    "contributors": [
+      "ASeegull"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Boolean": {
+    "modified": "2020-10-15T22:06:14.618Z",
+    "contributors": [
+      "DariaManko",
+      "AdriandeCita"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Error": {
+    "modified": "2020-10-15T22:18:21.094Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/EvalError": {
+    "modified": "2020-10-15T22:18:43.111Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Function": {
+    "modified": "2020-10-15T22:21:50.690Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/GeneratorFunction": {
+    "modified": "2020-10-15T22:25:30.929Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/InternalError": {
+    "modified": "2020-10-15T22:18:47.273Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Promise": {
+    "modified": "2020-10-15T21:51:58.196Z",
+    "contributors": [
+      "piton13"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/RangeError": {
+    "modified": "2020-10-15T22:18:03.049Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/ReferenceError": {
+    "modified": "2020-10-15T22:18:46.456Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/SyntaxError": {
+    "modified": "2020-10-15T21:58:51.957Z",
+    "contributors": [
+      "DariaManko",
+      "asmforce"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/TypeError": {
+    "modified": "2020-10-15T22:18:47.800Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/URIError": {
+    "modified": "2020-10-15T22:18:47.179Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Number": {
+    "modified": "2020-10-15T21:56:21.125Z",
+    "contributors": [
+      "asmforce"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Operators": {
+    "modified": "2020-10-15T22:24:28.585Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Operators_7c8eb9475d97a4a734c5991857698560": {
+    "modified": "2020-10-15T22:24:24.851Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Operators_f71733c8e7001a29c3ec40d8522a4aca": {
+    "modified": "2020-10-15T22:24:49.649Z",
+    "contributors": [
+      "DariaManko"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Operators/Spread_syntax": {
+    "modified": "2020-03-12T19:45:50.602Z",
+    "contributors": [
+      "Lancer92",
+      "Artem2011",
+      "devalf",
+      "trofima",
+      "KadirTopal"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Operators_a8aa9ce42ce1749862961c61113d120b": {
+    "modified": "2020-10-15T21:57:25.055Z",
+    "contributors": [
+      "DariaManko",
+      "Onimi",
+      "Anonymous",
+      "GrytsiukSerhiy",
+      "asmforce"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Operators_1cd48548c16282df3883f99267726c3e": {
+    "modified": "2020-10-15T21:53:06.640Z",
+    "contributors": [
+      "DariaManko",
+      "wbamberg",
+      "Onimi",
+      "trofima"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Statements/switch": {
+    "modified": "2020-10-15T22:22:48.978Z",
+    "contributors": [
+      "DariaManko"
     ]
   }
 }
