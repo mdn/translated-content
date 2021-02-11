@@ -1,0 +1,127 @@
+---
+title: Éléments de bloc
+slug: Web/HTML/Block-level_elements
+tags:
+  - Débutant
+  - HTML
+  - Web
+translation_of: Web/HTML/Block-level_elements
+original_slug: Web/HTML/Éléments_en_bloc
+---
+<div>{{HTMLSidebar}}</div>
+
+<p>Les éléments de bloc forment une catégorie d'éléments HTML (<em>HyperText Markup Language</em>) en opposition aux <a href="/fr/docs/Web/HTML/Éléments_en_ligne">éléments en ligne</a>.</p>
+
+<p>Leur caractéristique principale réside dans le fait qu'ils sont séparés par un saut de ligne avant et après l'élément (créant ainsi un « bloc » de contenu). On peut, en quelque sorte, les représenter comme des blocs empilés les uns sur les autres. Ce faisant, ils prennent la largeur de leurs conteneurs.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Un élément de bloc commence toujours sur une nouvelle ligne et prend toute la largeur disponible (autrement dit, il s'étend le plus possible vers la droite et vers la gauche).</p>
+</div>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="HTML">HTML</h3>
+
+<pre class="brush: html">&lt;p&gt;Ce paragraphe est un élément de bloc. Son fond a été coloré pour illustrer son conteneur.&lt;/p&gt;</pre>
+
+<h3 id="CSS">CSS</h3>
+
+<pre class="brush: css">p {
+  background-color: #8ABB55;
+}</pre>
+
+<h3 id="Résultat">Résultat</h3>
+
+<p>{{EmbedLiveSample('Exemples')}}</p>
+
+<h2 id="Contrainte">Contrainte</h2>
+
+<ul>
+ <li>Les éléments de bloc ne peuvent apparaître qu'au sein d'un élément {{HTMLElement("body")}}</li>
+</ul>
+
+<h2 id="Élément_de_bloc_ou_élément_en_ligne">Élément de bloc ou élément en ligne ?</h2>
+
+<p>Les éléments de bloc diffèrent des éléments en ligne par :</p>
+
+<dl>
+ <dt>La mise en forme</dt>
+ <dd>Par défaut, les éléments de bloc commencent sur des nouvelles lignes.</dd>
+ <dt>Le modèle de contenu</dt>
+ <dd>De façon générale, les éléments de bloc peuvent contenir des éléments en ligne et d'autres éléments de bloc. L'idée structurelle sous-jacente est que les éléments de bloc créent de plus grandes structures que les éléments en ligne.</dd>
+</dl>
+
+<p>La distinction entre bloc et ligne est utilisée dans les spécifications HTML jusqu'à la version 4.01. En HTML5, cette distinction binaire est remplacée par un ensemble plus complexe de <a href="/fr/docs/Web/HTML/Catégorie_de_contenu">catégories de contenu</a>. La catégorie des éléments en bloc correspond approximativement à la catégorie de <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux">contenu de flux</a> en HTML5, celle des éléments en ligne correspond à la catégorie de <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9">contenu phrasé</a>. Il y a également d'autres catégories (<a href="/fr/docs/Web/Guide/HTML/Catégories_de_contenu#Contenu_interactif">le contenu interactif</a> par exemple).</p>
+
+<h2 id="Éléments">Éléments</h2>
+
+<p>La liste qui suit contient tous les éléments HTML en bloc (cette catégorie n'est pas strictement applicable pour les éléments apparus avec HTML5).</p>
+
+<div class="threecolumns">
+<dl>
+ <dt>{{HTMLElement("address")}}</dt>
+ <dd>Information de contact.</dd>
+ <dt>{{HTMLElement("article")}}</dt>
+ <dd>Contenu d'un article.</dd>
+ <dt>{{HTMLElement("aside")}}</dt>
+ <dd>Contenu tangentiel.</dd>
+ <dt>{{HTMLElement("blockquote")}}</dt>
+ <dd>Long bloc de citation.</dd>
+ <dt>{{HTMLElement("details")}}</dt>
+ <dd>Outil permettant de révéler des informations sur la page.</dd>
+ <dt>{{HTMLElement("dialog")}}</dt>
+ <dd>Boîte de dialogue.</dd>
+ <dt>{{HTMLElement("dd")}}</dt>
+ <dd>Description d'une définition.</dd>
+ <dt>{{HTMLElement("div")}}</dt>
+ <dd>Division d'un document.</dd>
+ <dt>{{HTMLElement("dl")}}</dt>
+ <dd>Liste de définitions.</dd>
+ <dt>{{HTMLElement("dt")}}</dt>
+ <dd>Définition/description d'un terme.</dd>
+ <dt>{{HTMLElement("fieldset")}}</dt>
+ <dd>Ensemble de champs.</dd>
+ <dt>{{HTMLElement("figcaption")}}</dt>
+ <dd>Légende d'une image.</dd>
+ <dt>{{HTMLElement("figure")}}</dt>
+ <dd>Permet de grouper des média avec une légende (voir {{HTMLElement("figcaption")}}).</dd>
+ <dt>{{HTMLElement("footer")}}</dt>
+ <dd>Bas de page ou de section.</dd>
+ <dt>{{HTMLElement("form")}}</dt>
+ <dd>Formulaire.</dd>
+ <dt>{{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}</dt>
+ <dd>Éléments de titre de niveau 1 à 6.</dd>
+ <dt>{{HTMLElement("header")}}</dt>
+ <dd>En-tête de page ou de section.</dd>
+ <dt>{{HTMLElement("hgroup")}}</dt>
+ <dd>Information d'en-tête de groupe.</dd>
+ <dt>{{HTMLElement("hr")}}</dt>
+ <dd>Ligne de division horizontale.</dd>
+ <dt>{{HTMLElement("li")}}</dt>
+ <dd>Élément d'une liste.</dd>
+ <dt>{{HTMLElement("main")}}</dt>
+ <dd>Contient le contenu central unique au document.</dd>
+ <dt>{{HTMLElement("nav")}}</dt>
+ <dd>Contient des liens de navigation.</dd>
+ <dt>{{HTMLElement("ol")}}</dt>
+ <dd>Liste ordonnée.</dd>
+ <dt>{{HTMLElement("p")}}</dt>
+ <dd>Paragraphe.</dd>
+ <dt>{{HTMLElement("pre")}}</dt>
+ <dd>Texte pré-formaté.</dd>
+ <dt>{{HTMLElement("section")}}</dt>
+ <dd>Section d'une page web.</dd>
+ <dt>{{HTMLElement("table")}}</dt>
+ <dd>Tableau.</dd>
+ <dt>{{HTMLElement("ul")}}</dt>
+ <dd>Liste non-ordonnée.</dd>
+</dl>
+</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/HTML/Éléments_en_ligne">Les éléments en ligne</a></li>
+ <li>{{cssxref("display")}}</li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Flow_Layout/Disposition_de_bloc_en_ligne_avec_flux_normal">Les éléments de bloc et les éléments en ligne dans le flux normal</a></li>
+</ul>
