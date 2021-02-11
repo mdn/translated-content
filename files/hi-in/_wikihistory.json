@@ -32,25 +32,6 @@
       "ojaswa1942"
     ]
   },
-  "Glossary/इंटरनेट": {
-    "modified": "2019-03-23T22:56:56.620Z",
-    "contributors": [
-      "teoli",
-      "kavish"
-    ]
-  },
-  "Glossary/डेटा_संरचना": {
-    "modified": "2020-04-16T13:14:37.025Z",
-    "contributors": [
-      "Vipul1142"
-    ]
-  },
-  "Glossary/लोकल": {
-    "modified": "2019-03-23T22:26:49.872Z",
-    "contributors": [
-      "drashti4"
-    ]
-  },
   "MDN": {
     "modified": "2020-02-19T18:55:03.247Z",
     "contributors": [
@@ -60,13 +41,6 @@
       "sambhav2612",
       "Jeremie",
       "ziyunfei"
-    ]
-  },
-  "MDN/Community": {
-    "modified": "2020-04-28T12:04:05.561Z",
-    "contributors": [
-      "wbamberg",
-      "VibhanshuChaudhary"
     ]
   },
   "MDN/Contribute": {
@@ -100,13 +74,6 @@
     "contributors": [
       "wbamberg",
       "Sheppy"
-    ]
-  },
-  "MDN/Contribute/Howto/Do_a_technical_review": {
-    "modified": "2019-01-16T19:24:57.935Z",
-    "contributors": [
-      "wbamberg",
-      "prafull_satasiya"
     ]
   },
   "Mozilla": {
@@ -174,26 +141,59 @@
       "ExE-Boss"
     ]
   },
-  "Web/JavaScript/Reference/Operators/ऑपरेटर_प्राथमिकता": {
+  "Web/SVG": {
+    "modified": "2019-03-18T20:44:13.086Z",
+    "contributors": [
+      "ojaswa1942"
+    ]
+  },
+  "Glossary/Internet": {
+    "modified": "2019-03-23T22:56:56.620Z",
+    "contributors": [
+      "teoli",
+      "kavish"
+    ]
+  },
+  "Glossary/Data_structure": {
+    "modified": "2020-04-16T13:14:37.025Z",
+    "contributors": [
+      "Vipul1142"
+    ]
+  },
+  "Glossary/Locale": {
+    "modified": "2019-03-23T22:26:49.872Z",
+    "contributors": [
+      "drashti4"
+    ]
+  },
+  "orphaned/MDN/Community": {
+    "modified": "2020-04-28T12:04:05.561Z",
+    "contributors": [
+      "wbamberg",
+      "VibhanshuChaudhary"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Do_a_technical_review": {
+    "modified": "2019-01-16T19:24:57.935Z",
+    "contributors": [
+      "wbamberg",
+      "prafull_satasiya"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/Operator_Precedence": {
     "modified": "2020-03-12T19:48:28.073Z",
     "contributors": [
       "harshrathod50"
     ]
   },
-  "Web/JavaScript/टाईप्ड_सरणियाँ": {
+  "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-15T22:25:45.883Z",
     "contributors": [
       "harshrathod50"
     ]
   },
-  "Web/Localization": {
+  "orphaned/Web/Localization": {
     "modified": "2019-03-18T20:44:13.487Z",
-    "contributors": [
-      "ojaswa1942"
-    ]
-  },
-  "Web/SVG": {
-    "modified": "2019-03-18T20:44:13.086Z",
     "contributors": [
       "ojaswa1942"
     ]
