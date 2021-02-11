@@ -1,23 +1,4 @@
 {
-  "Bản_Kê_Khai_Cài_Đặt": {
-    "modified": "2019-03-24T00:04:37.878Z",
-    "contributors": [
-      "ethertank",
-      "kimkha"
-    ]
-  },
-  "DOM_Inspector": {
-    "modified": "2019-01-16T16:31:31.933Z",
-    "contributors": [
-      "ThornyLong"
-    ]
-  },
-  "Labs-tab": {
-    "modified": "2019-01-16T13:28:54.736Z",
-    "contributors": [
-      "Hakuna"
-    ]
-  },
   "Learn": {
     "modified": "2020-07-16T22:43:49.278Z",
     "contributors": [
@@ -75,31 +56,11 @@
       "JeffD"
     ]
   },
-  "Learn/Common_questions/Internet_lam_viec_nh_the_nao": {
-    "modified": "2020-07-16T22:35:39.021Z",
-    "contributors": [
-      "dev-luonglq"
-    ]
-  },
   "Learn/Common_questions/What_is_a_web_server": {
     "modified": "2020-07-16T22:35:32.212Z",
     "contributors": [
       "Clone-Code",
       "thanhvk"
-    ]
-  },
-  "Learn/Common_questions/thiet_lap_web_mang_noi_bo": {
-    "modified": "2020-07-16T22:35:53.848Z",
-    "contributors": [
-      "namphong124563",
-      "trannguyenhb"
-    ]
-  },
-  "Learn/Dong_gop_cho_khu_vuc_hoc_tap_tren_MDN": {
-    "modified": "2020-07-16T22:33:47.224Z",
-    "contributors": [
-      "SphinxKnight",
-      "vunamhung"
     ]
   },
   "Learn/Front-end_web_developer": {
@@ -129,16 +90,6 @@
       "daonhut",
       "spideycode18",
       "vunamhung"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/Cài_đặt_các_phần_mềm_cơ_bản": {
-    "modified": "2020-07-16T22:34:12.264Z",
-    "contributors": [
-      "vunamhung",
-      "PurpleLover",
-      "summerpupil",
-      "trannguyenhb",
-      "sugudkendy"
     ]
   },
   "Learn/Getting_started_with_the_web/Dealing_with_files": {
@@ -213,13 +164,6 @@
       "Sliver-Ray",
       "vunamhung",
       "hoangphong15"
-    ]
-  },
-  "Learn/HTML/Forms": {
-    "modified": "2020-07-16T22:21:02.351Z",
-    "contributors": [
-      "jasonwest",
-      "Jeffrey_Yang"
     ]
   },
   "Learn/HTML/Introduction_to_HTML": {
@@ -449,16 +393,6 @@
       "Lungv"
     ]
   },
-  "MDN/Community": {
-    "modified": "2019-09-11T08:00:31.400Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "dangkyokhoang",
-      "trongdaideveloper",
-      "lescarbeauleo.ll37"
-    ]
-  },
   "MDN/Contribute": {
     "modified": "2019-03-23T22:56:25.294Z",
     "contributors": [
@@ -486,32 +420,11 @@
       "jswisher"
     ]
   },
-  "MDN/Contribute/Howto/Create_an_MDN_account": {
-    "modified": "2019-08-03T22:29:43.278Z",
-    "contributors": [
-      "sonvo90"
-    ]
-  },
   "MDN/Contribute/Howto/Create_and_edit_pages": {
     "modified": "2020-11-12T19:32:11.935Z",
     "contributors": [
       "jaytea01091990",
       "Vietnamese"
-    ]
-  },
-  "MDN/Contribute/Howto/Do_a_technical_review": {
-    "modified": "2019-03-18T21:34:38.027Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "nguyenkien1997"
-    ]
-  },
-  "MDN/Contribute/Howto/Do_an_editorial_review": {
-    "modified": "2019-03-18T21:31:03.863Z",
-    "contributors": [
-      "wbamberg",
-      "PurpleLover"
     ]
   },
   "MDN/Contribute/Howto/Tag": {
@@ -600,215 +513,6 @@
       "cubi.koj"
     ]
   },
-  "Tu-dien-thuat-ngu": {
-    "modified": "2020-07-07T11:10:26.504Z",
-    "contributors": [
-      "AMAZALK",
-      "SphinxKnight",
-      "wbamberg",
-      "dogeblossom",
-      "pierreneter"
-    ]
-  },
-  "Tu-dien-thuat-ngu/AJAX": {
-    "modified": "2019-03-23T22:03:39.351Z",
-    "contributors": [
-      "PurpleLover",
-      "HoangLong"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Algorithm": {
-    "modified": "2019-07-04T10:59:16.462Z",
-    "contributors": [
-      "CaMapCoChan"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Attribute": {
-    "modified": "2019-03-23T22:08:56.474Z",
-    "contributors": [
-      "dogeblossom"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Bandwidth": {
-    "modified": "2019-03-18T21:38:06.965Z",
-    "contributors": [
-      "LuckyBC"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Boolean": {
-    "modified": "2019-03-18T21:19:37.651Z",
-    "contributors": [
-      "dangtu"
-    ]
-  },
-  "Tu-dien-thuat-ngu/CDN": {
-    "modified": "2019-03-18T21:19:29.377Z",
-    "contributors": [
-      "dangtu"
-    ]
-  },
-  "Tu-dien-thuat-ngu/CSS": {
-    "modified": "2019-03-23T22:03:35.496Z",
-    "contributors": [
-      "HoangLong"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Cache": {
-    "modified": "2019-03-18T21:19:31.742Z",
-    "contributors": [
-      "dangtu"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Callback_function": {
-    "modified": "2020-09-09T06:56:52.568Z",
-    "contributors": [
-      "HieuZenKa"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Computer_Programming": {
-    "modified": "2019-07-04T11:20:10.774Z",
-    "contributors": [
-      "CaMapCoChan"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Dynamic_programming_language": {
-    "modified": "2020-01-21T05:07:50.519Z",
-    "contributors": [
-      "TozyMC"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Falsy": {
-    "modified": "2019-03-18T21:42:15.228Z",
-    "contributors": [
-      "huyennbl"
-    ]
-  },
-  "Tu-dien-thuat-ngu/General_header": {
-    "modified": "2020-07-30T13:12:39.167Z",
-    "contributors": [
-      "meet-robbers"
-    ]
-  },
-  "Tu-dien-thuat-ngu/HTML": {
-    "modified": "2019-07-09T01:38:57.464Z",
-    "contributors": [
-      "CaMapCoChan",
-      "SphinxKnight",
-      "sang247"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Head": {
-    "modified": "2019-03-18T21:34:03.824Z",
-    "contributors": [
-      "haschema"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Hoisting": {
-    "modified": "2019-03-23T22:03:26.098Z",
-    "contributors": [
-      "tthoa"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Identifier": {
-    "modified": "2019-09-12T07:11:51.101Z",
-    "contributors": [
-      "PurpleLover"
-    ]
-  },
-  "Tu-dien-thuat-ngu/JSON": {
-    "modified": "2020-03-01T08:50:15.149Z",
-    "contributors": [
-      "jasonwest"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Metadata": {
-    "modified": "2019-09-28T03:51:43.213Z",
-    "contributors": [
-      "PurpleLover"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Null": {
-    "modified": "2019-04-02T01:34:28.284Z",
-    "contributors": [
-      "PurpleLover"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Operand": {
-    "modified": "2019-03-18T21:24:16.690Z",
-    "contributors": [
-      "PurpleLover"
-    ]
-  },
-  "Tu-dien-thuat-ngu/PHP": {
-    "modified": "2020-07-06T04:07:13.997Z",
-    "contributors": [
-      "trhiu98"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Primitive": {
-    "modified": "2020-02-20T08:31:45.575Z",
-    "contributors": [
-      "jasonwest",
-      "PurpleLover"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Responsive_web_design": {
-    "modified": "2019-03-18T21:23:52.487Z",
-    "contributors": [
-      "dangtu",
-      "PurpleLover"
-    ]
-  },
-  "Tu-dien-thuat-ngu/SVG": {
-    "modified": "2019-03-18T21:30:00.077Z",
-    "contributors": [
-      "PurpleLover"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Truthy": {
-    "modified": "2019-03-18T21:14:14.286Z",
-    "contributors": [
-      "PurpleLover"
-    ]
-  },
-  "Tu-dien-thuat-ngu/Type_Conversion": {
-    "modified": "2019-03-18T21:14:14.787Z",
-    "contributors": [
-      "PurpleLover"
-    ]
-  },
-  "Tu-dien-thuat-ngu/XML": {
-    "modified": "2019-04-02T00:32:39.662Z",
-    "contributors": [
-      "PurpleLover"
-    ]
-  },
-  "Tu-dien-thuat-ngu/array": {
-    "modified": "2019-03-23T22:51:42.901Z",
-    "contributors": [
-      "pierreneter"
-    ]
-  },
-  "Tu-dien-thuat-ngu/jQuery": {
-    "modified": "2020-06-12T00:19:33.980Z",
-    "contributors": [
-      "MinhDT"
-    ]
-  },
-  "Tu-dien-thuat-ngu/trinh-duyet": {
-    "modified": "2019-03-18T21:27:51.112Z",
-    "contributors": [
-      "trongthanh"
-    ]
-  },
-  "Tu-dien-thuat-ngu/undefined": {
-    "modified": "2020-11-05T07:13:34.835Z",
-    "contributors": [
-      "lamvanngoankl",
-      "duongdnh",
-      "dzungnait"
-    ]
-  },
   "Web": {
     "modified": "2020-09-07T08:56:40.087Z",
     "contributors": [
@@ -839,12 +543,6 @@
     "modified": "2019-03-23T22:10:10.512Z",
     "contributors": [
       "ffxsam"
-    ]
-  },
-  "Web/API/AudioContext/createOscillator": {
-    "modified": "2019-03-23T22:10:18.020Z",
-    "contributors": [
-      "deschutron"
     ]
   },
   "Web/API/Canvas_API": {
@@ -929,12 +627,6 @@
       "namnt2203"
     ]
   },
-  "Web/API/HTMLElement/dataset": {
-    "modified": "2020-10-15T22:21:54.914Z",
-    "contributors": [
-      "dangtu"
-    ]
-  },
   "Web/API/HTMLFormElement": {
     "modified": "2020-10-15T22:23:32.942Z",
     "contributors": [
@@ -957,12 +649,6 @@
     "modified": "2020-10-15T22:20:32.518Z",
     "contributors": [
       "NgDTien"
-    ]
-  },
-  "Web/API/Navigator/sendBeacon-vi": {
-    "modified": "2020-10-15T22:30:31.004Z",
-    "contributors": [
-      "hta218"
     ]
   },
   "Web/API/Node": {
@@ -1112,25 +798,10 @@
   "Web/CSS/CSS_Box_Model": {
     "modified": "2020-07-02T02:43:31.905Z"
   },
-  "Web/CSS/CSS_Box_Model/Kien_thuc_co_ban_ve_css_box_model": {
-    "modified": "2020-07-26T20:10:53.236Z",
-    "contributors": [
-      "luongvanphuc"
-    ]
-  },
   "Web/CSS/CSS_Grid_Layout": {
     "modified": "2020-09-05T02:57:16.998Z",
     "contributors": [
       "PlayerNguyen",
-      "trannguyenhb"
-    ]
-  },
-  "Web/CSS/CSS_Grid_Layout/tong_quan_ve_grid_layout": {
-    "modified": "2019-10-10T16:32:33.519Z",
-    "contributors": [
-      "thaovy231011",
-      "graceoflives",
-      "ThuanChung",
       "trannguyenhb"
     ]
   },
@@ -1175,12 +846,6 @@
     "modified": "2019-06-25T00:21:32.015Z",
     "contributors": [
       "alattalatta"
-    ]
-  },
-  "Web/CSS/filter-function/url": {
-    "modified": "2019-06-25T00:21:32.737Z",
-    "contributors": [
-      "quangnguyen3499"
     ]
   },
   "Web/CSS/flex": {
@@ -1237,13 +902,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Events/load": {
-    "modified": "2019-04-30T13:56:43.861Z",
-    "contributors": [
-      "wbamberg",
-      "tinhocsoctrang"
-    ]
-  },
   "Web/Guide": {
     "modified": "2019-04-18T16:41:12.742Z",
     "contributors": [
@@ -1257,12 +915,6 @@
     "modified": "2019-03-31T09:01:39.683Z",
     "contributors": [
       "Lyn203"
-    ]
-  },
-  "Web/Guide/CSS/Getting_started": {
-    "modified": "2019-03-23T22:41:47.576Z",
-    "contributors": [
-      "wjinca"
     ]
   },
   "Web/Guide/HTML/HTML5": {
@@ -1330,13 +982,6 @@
     "modified": "2020-10-15T22:30:44.497Z",
     "contributors": [
       "nguyenhavy280"
-    ]
-  },
-  "Web/HTML_vi": {
-    "modified": "2019-09-10T15:30:17.653Z",
-    "contributors": [
-      "SphinxKnight",
-      "monodyle"
     ]
   },
   "Web/HTTP": {
@@ -1448,13 +1093,6 @@
       "vietthangml3"
     ]
   },
-  "Web/JavaScript/Guide/Gioi-thieu": {
-    "modified": "2020-03-12T19:42:05.017Z",
-    "contributors": [
-      "ldhnam",
-      "pierreneter"
-    ]
-  },
   "Web/JavaScript/Guide/Iterators_and_Generators": {
     "modified": "2020-03-12T19:48:55.506Z",
     "contributors": [
@@ -1510,15 +1148,6 @@
     "modified": "2020-03-12T19:48:10.925Z",
     "contributors": [
       "quytran"
-    ]
-  },
-  "Web/JavaScript/Guide/cu-phap-lap-trinh": {
-    "modified": "2020-03-12T19:42:06.926Z",
-    "contributors": [
-      "jasonwest",
-      "mrbean",
-      "ldhnam",
-      "pierreneter"
     ]
   },
   "Web/JavaScript/Memory_Management": {
@@ -1581,12 +1210,6 @@
       "Lisa9820727170617"
     ]
   },
-  "Web/JavaScript/Reference/Errors/qua_nhieu_de_quy": {
-    "modified": "2020-03-12T19:46:27.274Z",
-    "contributors": [
-      "tuanticker"
-    ]
-  },
   "Web/JavaScript/Reference/Functions": {
     "modified": "2020-03-12T19:45:38.625Z",
     "contributors": [
@@ -1636,13 +1259,6 @@
       "teoli"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/\blength": {
-    "modified": "2020-10-15T22:08:30.308Z",
-    "contributors": [
-      "quangnguyen3499",
-      "dothanhlam"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/Reduce": {
     "modified": "2020-10-15T22:08:11.278Z",
     "contributors": [
@@ -1654,14 +1270,6 @@
     "modified": "2019-03-23T22:16:29.080Z",
     "contributors": [
       "anhnc"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Array/Sắp_xếp": {
-    "modified": "2020-10-15T22:05:03.635Z",
-    "contributors": [
-      "trongthanh",
-      "PurpleLover",
-      "summerpupil"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Array/concat": {
@@ -2095,12 +1703,6 @@
       "WTSKelly"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Promise/prototype": {
-    "modified": "2020-10-15T21:50:15.823Z",
-    "contributors": [
-      "dominhhai"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/RegExp": {
     "modified": "2020-10-15T22:02:37.288Z",
     "contributors": [
@@ -2184,13 +1786,6 @@
       "PurpleLover"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/loi": {
-    "modified": "2020-10-15T22:01:36.057Z",
-    "contributors": [
-      "Dr.Tan",
-      "bonjourimcam"
-    ]
-  },
   "Web/JavaScript/Reference/Iteration_protocols": {
     "modified": "2020-05-26T04:51:45.802Z",
     "contributors": [
@@ -2201,13 +1796,6 @@
     "modified": "2020-12-14T11:30:39.043Z",
     "contributors": [
       "myakura"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Arithmetic_Operators": {
-    "modified": "2020-10-15T22:08:01.208Z",
-    "contributors": [
-      "quytran",
-      "PurpleLover"
     ]
   },
   "Web/JavaScript/Reference/Operators/Conditional_Operator": {
@@ -2353,6 +1941,418 @@
     "contributors": [
       "summerpupil",
       "thonggtcc"
+    ]
+  },
+  "orphaned/Bản_Kê_Khai_Cài_Đặt": {
+    "modified": "2019-03-24T00:04:37.878Z",
+    "contributors": [
+      "ethertank",
+      "kimkha"
+    ]
+  },
+  "orphaned/DOM_Inspector": {
+    "modified": "2019-01-16T16:31:31.933Z",
+    "contributors": [
+      "ThornyLong"
+    ]
+  },
+  "orphaned/Labs-tab": {
+    "modified": "2019-01-16T13:28:54.736Z",
+    "contributors": [
+      "Hakuna"
+    ]
+  },
+  "Learn/Common_questions/How_does_the_Internet_work": {
+    "modified": "2020-07-16T22:35:39.021Z",
+    "contributors": [
+      "dev-luonglq"
+    ]
+  },
+  "Learn/Common_questions/set_up_a_local_testing_server": {
+    "modified": "2020-07-16T22:35:53.848Z",
+    "contributors": [
+      "namphong124563",
+      "trannguyenhb"
+    ]
+  },
+  "orphaned/Learn/How_to_contribute": {
+    "modified": "2020-07-16T22:33:47.224Z",
+    "contributors": [
+      "SphinxKnight",
+      "vunamhung"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/Installing_basic_software": {
+    "modified": "2020-07-16T22:34:12.264Z",
+    "contributors": [
+      "vunamhung",
+      "PurpleLover",
+      "summerpupil",
+      "trannguyenhb",
+      "sugudkendy"
+    ]
+  },
+  "Learn/Forms": {
+    "modified": "2020-07-16T22:21:02.351Z",
+    "contributors": [
+      "jasonwest",
+      "Jeffrey_Yang"
+    ]
+  },
+  "orphaned/MDN/Community": {
+    "modified": "2019-09-11T08:00:31.400Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "dangkyokhoang",
+      "trongdaideveloper",
+      "lescarbeauleo.ll37"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
+    "modified": "2019-08-03T22:29:43.278Z",
+    "contributors": [
+      "sonvo90"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Do_a_technical_review": {
+    "modified": "2019-03-18T21:34:38.027Z",
+    "contributors": [
+      "wbamberg",
+      "SphinxKnight",
+      "nguyenkien1997"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Do_an_editorial_review": {
+    "modified": "2019-03-18T21:31:03.863Z",
+    "contributors": [
+      "wbamberg",
+      "PurpleLover"
+    ]
+  },
+  "Glossary/AJAX": {
+    "modified": "2019-03-23T22:03:39.351Z",
+    "contributors": [
+      "PurpleLover",
+      "HoangLong"
+    ]
+  },
+  "Glossary/Algorithm": {
+    "modified": "2019-07-04T10:59:16.462Z",
+    "contributors": [
+      "CaMapCoChan"
+    ]
+  },
+  "Glossary/array": {
+    "modified": "2019-03-23T22:51:42.901Z",
+    "contributors": [
+      "pierreneter"
+    ]
+  },
+  "Glossary/Attribute": {
+    "modified": "2019-03-23T22:08:56.474Z",
+    "contributors": [
+      "dogeblossom"
+    ]
+  },
+  "Glossary/Bandwidth": {
+    "modified": "2019-03-18T21:38:06.965Z",
+    "contributors": [
+      "LuckyBC"
+    ]
+  },
+  "Glossary/Boolean": {
+    "modified": "2019-03-18T21:19:37.651Z",
+    "contributors": [
+      "dangtu"
+    ]
+  },
+  "Glossary/Cache": {
+    "modified": "2019-03-18T21:19:31.742Z",
+    "contributors": [
+      "dangtu"
+    ]
+  },
+  "Glossary/Callback_function": {
+    "modified": "2020-09-09T06:56:52.568Z",
+    "contributors": [
+      "HieuZenKa"
+    ]
+  },
+  "Glossary/CDN": {
+    "modified": "2019-03-18T21:19:29.377Z",
+    "contributors": [
+      "dangtu"
+    ]
+  },
+  "Glossary/Computer_Programming": {
+    "modified": "2019-07-04T11:20:10.774Z",
+    "contributors": [
+      "CaMapCoChan"
+    ]
+  },
+  "Glossary/CSS": {
+    "modified": "2019-03-23T22:03:35.496Z",
+    "contributors": [
+      "HoangLong"
+    ]
+  },
+  "Glossary/Dynamic_programming_language": {
+    "modified": "2020-01-21T05:07:50.519Z",
+    "contributors": [
+      "TozyMC"
+    ]
+  },
+  "Glossary/Falsy": {
+    "modified": "2019-03-18T21:42:15.228Z",
+    "contributors": [
+      "huyennbl"
+    ]
+  },
+  "Glossary/General_header": {
+    "modified": "2020-07-30T13:12:39.167Z",
+    "contributors": [
+      "meet-robbers"
+    ]
+  },
+  "Glossary/Head": {
+    "modified": "2019-03-18T21:34:03.824Z",
+    "contributors": [
+      "haschema"
+    ]
+  },
+  "Glossary/Hoisting": {
+    "modified": "2019-03-23T22:03:26.098Z",
+    "contributors": [
+      "tthoa"
+    ]
+  },
+  "Glossary/HTML": {
+    "modified": "2019-07-09T01:38:57.464Z",
+    "contributors": [
+      "CaMapCoChan",
+      "SphinxKnight",
+      "sang247"
+    ]
+  },
+  "Glossary/Identifier": {
+    "modified": "2019-09-12T07:11:51.101Z",
+    "contributors": [
+      "PurpleLover"
+    ]
+  },
+  "Glossary": {
+    "modified": "2020-07-07T11:10:26.504Z",
+    "contributors": [
+      "AMAZALK",
+      "SphinxKnight",
+      "wbamberg",
+      "dogeblossom",
+      "pierreneter"
+    ]
+  },
+  "Glossary/jQuery": {
+    "modified": "2020-06-12T00:19:33.980Z",
+    "contributors": [
+      "MinhDT"
+    ]
+  },
+  "Glossary/JSON": {
+    "modified": "2020-03-01T08:50:15.149Z",
+    "contributors": [
+      "jasonwest"
+    ]
+  },
+  "Glossary/Metadata": {
+    "modified": "2019-09-28T03:51:43.213Z",
+    "contributors": [
+      "PurpleLover"
+    ]
+  },
+  "Glossary/Null": {
+    "modified": "2019-04-02T01:34:28.284Z",
+    "contributors": [
+      "PurpleLover"
+    ]
+  },
+  "Glossary/Operand": {
+    "modified": "2019-03-18T21:24:16.690Z",
+    "contributors": [
+      "PurpleLover"
+    ]
+  },
+  "Glossary/PHP": {
+    "modified": "2020-07-06T04:07:13.997Z",
+    "contributors": [
+      "trhiu98"
+    ]
+  },
+  "Glossary/Primitive": {
+    "modified": "2020-02-20T08:31:45.575Z",
+    "contributors": [
+      "jasonwest",
+      "PurpleLover"
+    ]
+  },
+  "Glossary/Responsive_web_design": {
+    "modified": "2019-03-18T21:23:52.487Z",
+    "contributors": [
+      "dangtu",
+      "PurpleLover"
+    ]
+  },
+  "Glossary/SVG": {
+    "modified": "2019-03-18T21:30:00.077Z",
+    "contributors": [
+      "PurpleLover"
+    ]
+  },
+  "Glossary/Browser": {
+    "modified": "2019-03-18T21:27:51.112Z",
+    "contributors": [
+      "trongthanh"
+    ]
+  },
+  "Glossary/Truthy": {
+    "modified": "2019-03-18T21:14:14.286Z",
+    "contributors": [
+      "PurpleLover"
+    ]
+  },
+  "Glossary/Type_Conversion": {
+    "modified": "2019-03-18T21:14:14.787Z",
+    "contributors": [
+      "PurpleLover"
+    ]
+  },
+  "Glossary/undefined": {
+    "modified": "2020-11-05T07:13:34.835Z",
+    "contributors": [
+      "lamvanngoankl",
+      "duongdnh",
+      "dzungnait"
+    ]
+  },
+  "Glossary/XML": {
+    "modified": "2019-04-02T00:32:39.662Z",
+    "contributors": [
+      "PurpleLover"
+    ]
+  },
+  "Web/API/BaseAudioContext/createOscillator": {
+    "modified": "2019-03-23T22:10:18.020Z",
+    "contributors": [
+      "deschutron"
+    ]
+  },
+  "Web/API/HTMLOrForeignElement/dataset": {
+    "modified": "2020-10-15T22:21:54.914Z",
+    "contributors": [
+      "dangtu"
+    ]
+  },
+  "Web/API/Navigator/sendBeacon": {
+    "modified": "2020-10-15T22:30:31.004Z",
+    "contributors": [
+      "hta218"
+    ]
+  },
+  "Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model": {
+    "modified": "2020-07-26T20:10:53.236Z",
+    "contributors": [
+      "luongvanphuc"
+    ]
+  },
+  "Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout": {
+    "modified": "2019-10-10T16:32:33.519Z",
+    "contributors": [
+      "thaovy231011",
+      "graceoflives",
+      "ThuanChung",
+      "trannguyenhb"
+    ]
+  },
+  "Web/API/Window/load_event": {
+    "modified": "2019-04-30T13:56:43.861Z",
+    "contributors": [
+      "wbamberg",
+      "tinhocsoctrang"
+    ]
+  },
+  "conflicting/Web/HTML": {
+    "modified": "2019-09-10T15:30:17.653Z",
+    "contributors": [
+      "SphinxKnight",
+      "monodyle"
+    ]
+  },
+  "Web/JavaScript/Guide/Grammar_and_types": {
+    "modified": "2020-03-12T19:42:06.926Z",
+    "contributors": [
+      "jasonwest",
+      "mrbean",
+      "ldhnam",
+      "pierreneter"
+    ]
+  },
+  "Web/JavaScript/Guide/Introduction": {
+    "modified": "2020-03-12T19:42:05.017Z",
+    "contributors": [
+      "ldhnam",
+      "pierreneter"
+    ]
+  },
+  "Web/JavaScript/Reference/Errors/Too_much_recursion": {
+    "modified": "2020-03-12T19:46:27.274Z",
+    "contributors": [
+      "tuanticker"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Array/length": {
+    "modified": "2020-10-15T22:08:30.308Z",
+    "contributors": [
+      "quangnguyen3499",
+      "dothanhlam"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Array/sort": {
+    "modified": "2020-10-15T22:05:03.635Z",
+    "contributors": [
+      "trongthanh",
+      "PurpleLover",
+      "summerpupil"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Error": {
+    "modified": "2020-10-15T22:01:36.057Z",
+    "contributors": [
+      "Dr.Tan",
+      "bonjourimcam"
+    ]
+  },
+  "Web/CSS/url()": {
+    "modified": "2019-06-25T00:21:32.737Z",
+    "contributors": [
+      "quangnguyen3499"
+    ]
+  },
+  "conflicting/Learn/CSS/First_steps": {
+    "modified": "2019-03-23T22:41:47.576Z",
+    "contributors": [
+      "wjinca"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Promise": {
+    "modified": "2020-10-15T21:50:15.823Z",
+    "contributors": [
+      "dominhhai"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Operators": {
+    "modified": "2020-10-15T22:08:01.208Z",
+    "contributors": [
+      "quytran",
+      "PurpleLover"
     ]
   }
 }
