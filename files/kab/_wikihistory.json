@@ -7,13 +7,6 @@
       "AlemFarid"
     ]
   },
-  "Games/Imedyaten": {
-    "modified": "2019-01-17T00:33:41.158Z",
-    "contributors": [
-      "wbamberg",
-      "AlemFarid"
-    ]
-  },
   "Games/Techniques": {
     "modified": "2019-01-17T00:32:29.921Z",
     "contributors": [
@@ -48,13 +41,6 @@
     "contributors": [
       "wbamberg",
       "dkocho4"
-    ]
-  },
-  "Games/Tools/Engines_and_tools": {
-    "modified": "2019-03-23T22:15:49.757Z",
-    "contributors": [
-      "wbamberg",
-      "AlemFarid"
     ]
   },
   "Games/Tutorials": {
@@ -137,49 +123,6 @@
       "AlemFarid"
     ]
   },
-  "Glossary/aneggaf": {
-    "modified": "2019-01-17T00:36:04.202Z",
-    "contributors": [
-      "belkacem77"
-    ]
-  },
-  "Lmed": {
-    "modified": "2020-07-16T22:43:44.046Z",
-    "contributors": [
-      "AlemFarid",
-      "SphinxKnight",
-      "belkacem77"
-    ]
-  },
-  "Lmed/Getting_started_with_the_web": {
-    "modified": "2020-07-16T22:33:53.869Z",
-    "contributors": [
-      "AlemFarid",
-      "jwhitlock",
-      "Jom97"
-    ]
-  },
-  "Lmed/Getting_started_with_the_web/HTML_basics": {
-    "modified": "2020-07-16T22:34:48.291Z",
-    "contributors": [
-      "AlemFarid",
-      "jwhitlock"
-    ]
-  },
-  "Lmed/HTML": {
-    "modified": "2020-07-16T22:22:20.132Z",
-    "contributors": [
-      "jwhitlock",
-      "chrisdavidmills"
-    ]
-  },
-  "Lmed/HTML/Introduction_to_HTML": {
-    "modified": "2020-07-16T22:22:50.316Z",
-    "contributors": [
-      "jwhitlock",
-      "AlemFarid"
-    ]
-  },
   "MDN": {
     "modified": "2020-02-19T19:27:51.835Z",
     "contributors": [
@@ -214,21 +157,6 @@
     "contributors": [
       "wbamberg",
       "jswisher"
-    ]
-  },
-  "MDN/Contribute/Howto/Create_an_MDN_account": {
-    "modified": "2019-01-17T02:12:47.706Z",
-    "contributors": [
-      "wbamberg",
-      "AlemFarid"
-    ]
-  },
-  "MDN/Tamezdaynutt": {
-    "modified": "2020-01-08T19:08:17.925Z",
-    "contributors": [
-      "AlemFarid",
-      "SphinxKnight",
-      "wbamberg"
     ]
   },
   "Mozilla": {
@@ -301,12 +229,6 @@
       "AlemFarid"
     ]
   },
-  "Tools/Tadiwent_Web": {
-    "modified": "2020-07-16T22:34:06.350Z",
-    "contributors": [
-      "AlemFarid"
-    ]
-  },
   "Web": {
     "modified": "2020-01-09T06:29:14.605Z",
     "contributors": [
@@ -373,12 +295,6 @@
       "belkacem77"
     ]
   },
-  "Web/JavaScript/Amnir": {
-    "modified": "2020-03-12T19:46:27.549Z",
-    "contributors": [
-      "AlemFarid"
-    ]
-  },
   "Web/MathML": {
     "modified": "2020-01-08T18:43:48.020Z",
     "contributors": [
@@ -405,14 +321,98 @@
       "AlemFarid"
     ]
   },
-  "Web/Tuffart": {
-    "modified": "2020-01-05T20:38:50.587Z",
+  "Web/Tutorials": {
+    "modified": "2019-03-23T22:14:38.443Z",
     "contributors": [
       "AlemFarid"
     ]
   },
-  "Web/Tutorials": {
-    "modified": "2019-03-23T22:14:38.443Z",
+  "Games/Examples": {
+    "modified": "2019-01-17T00:33:41.158Z",
+    "contributors": [
+      "wbamberg",
+      "AlemFarid"
+    ]
+  },
+  "orphaned/Games/Tools/Engines_and_tools": {
+    "modified": "2019-03-23T22:15:49.757Z",
+    "contributors": [
+      "wbamberg",
+      "AlemFarid"
+    ]
+  },
+  "orphaned/Glossary/aneggaf": {
+    "modified": "2019-01-17T00:36:04.202Z",
+    "contributors": [
+      "belkacem77"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/HTML_basics": {
+    "modified": "2020-07-16T22:34:48.291Z",
+    "contributors": [
+      "AlemFarid",
+      "jwhitlock"
+    ]
+  },
+  "Learn/Getting_started_with_the_web": {
+    "modified": "2020-07-16T22:33:53.869Z",
+    "contributors": [
+      "AlemFarid",
+      "jwhitlock",
+      "Jom97"
+    ]
+  },
+  "Learn/HTML": {
+    "modified": "2020-07-16T22:22:20.132Z",
+    "contributors": [
+      "jwhitlock",
+      "chrisdavidmills"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML": {
+    "modified": "2020-07-16T22:22:50.316Z",
+    "contributors": [
+      "jwhitlock",
+      "AlemFarid"
+    ]
+  },
+  "Learn": {
+    "modified": "2020-07-16T22:43:44.046Z",
+    "contributors": [
+      "AlemFarid",
+      "SphinxKnight",
+      "belkacem77"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
+    "modified": "2019-01-17T02:12:47.706Z",
+    "contributors": [
+      "wbamberg",
+      "AlemFarid"
+    ]
+  },
+  "orphaned/MDN/Community": {
+    "modified": "2020-01-08T19:08:17.925Z",
+    "contributors": [
+      "AlemFarid",
+      "SphinxKnight",
+      "wbamberg"
+    ]
+  },
+  "Tools/Web_Console": {
+    "modified": "2020-07-16T22:34:06.350Z",
+    "contributors": [
+      "AlemFarid"
+    ]
+  },
+  "Web/JavaScript/Guide": {
+    "modified": "2020-03-12T19:46:27.549Z",
+    "contributors": [
+      "AlemFarid"
+    ]
+  },
+  "Web/Accessibility": {
+    "modified": "2020-01-05T20:38:50.587Z",
     "contributors": [
       "AlemFarid"
     ]
