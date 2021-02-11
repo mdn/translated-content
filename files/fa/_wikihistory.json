@@ -40,28 +40,6 @@
       "Darush"
     ]
   },
-  "HTML/Attributes": {
-    "modified": "2019-03-23T23:38:35.871Z",
-    "contributors": [
-      "teoli",
-      "amir.farsi",
-      "navid-emami"
-    ]
-  },
-  "HTML/Canvas/Drawing_Graphics_with_Canvas": {
-    "modified": "2019-03-23T23:38:20.891Z",
-    "contributors": [
-      "navid-emami"
-    ]
-  },
-  "HTML/HTML5": {
-    "modified": "2019-03-23T23:38:22.268Z",
-    "contributors": [
-      "teoli",
-      "hamekas.2003",
-      "navid-emami"
-    ]
-  },
   "Learn": {
     "modified": "2020-07-16T22:43:40.539Z",
     "contributors": [
@@ -113,40 +91,6 @@
       "Mahdiyeh1"
     ]
   },
-  "Learn/Getting_started_with_the_web/مقدمات_جاوااسکریپت": {
-    "modified": "2020-07-16T22:35:09.662Z",
-    "contributors": [
-      "heidarv",
-      "rouhollahmazarei",
-      "HassanTafreshi",
-      "zsotude",
-      "AyubZ",
-      "rezafarokhi",
-      "Moeinh77",
-      "saeedx4",
-      "skm2017",
-      "dariush"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/منتشر_کردن_وبسایت_شما": {
-    "modified": "2020-07-16T22:34:24.950Z",
-    "contributors": [
-      "HassanTafreshi"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/نصب_نرم_افزارهای_پایه": {
-    "modified": "2020-07-16T22:34:07.219Z",
-    "contributors": [
-      "Mahdi-Abedi"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/وب_سایت_شما_چه_شکلی_است؟": {
-    "modified": "2020-07-16T22:34:15.361Z",
-    "contributors": [
-      "groprog",
-      "Mahdi-Abedi"
-    ]
-  },
   "Learn/HTML": {
     "modified": "2020-07-16T22:22:16.658Z",
     "contributors": [
@@ -193,12 +137,6 @@
       "FarzadMohtasham"
     ]
   },
-  "Learn/JavaScript/Objects/مقدمات": {
-    "modified": "2020-07-16T22:31:57.451Z",
-    "contributors": [
-      "rasoul_par"
-    ]
-  },
   "Learn/Server-side": {
     "modified": "2020-07-16T22:35:56.665Z",
     "contributors": [
@@ -209,12 +147,6 @@
     "modified": "2020-11-01T18:52:31.732Z",
     "contributors": [
       "hamishwillee"
-    ]
-  },
-  "Learn/Server-side/قدم_اول": {
-    "modified": "2020-07-16T22:36:08.360Z",
-    "contributors": [
-      "HassanTafreshi"
     ]
   },
   "Learn/Tools_and_testing": {
@@ -237,12 +169,6 @@
       "wbamberg",
       "persianRobot",
       "Sheppy"
-    ]
-  },
-  "MDN/Community": {
-    "modified": "2020-08-22T20:47:40.362Z",
-    "contributors": [
-      "sadafabasi39"
     ]
   },
   "MDN/Contribute": {
@@ -278,32 +204,10 @@
       "jswisher"
     ]
   },
-  "MDN/Contribute/Howto/Be_a_beta_tester": {
-    "modified": "2019-01-17T01:16:00.841Z",
-    "contributors": [
-      "wbamberg",
-      "TheArashM"
-    ]
-  },
   "MDN/Contribute/Howto/Create_and_edit_pages": {
     "modified": "2020-10-24T08:29:09.905Z",
     "contributors": [
       "SaeedEsmailzaee"
-    ]
-  },
-  "MDN/Contribute/Howto/ساختنـحسابـکاربری": {
-    "modified": "2019-03-23T22:33:50.005Z",
-    "contributors": [
-      "wbamberg",
-      "itismasi",
-      "mhpedram",
-      "persianRobot"
-    ]
-  },
-  "MDN_at_ten": {
-    "modified": "2019-01-16T22:10:46.111Z",
-    "contributors": [
-      "milad"
     ]
   },
   "Mozilla": {
@@ -383,12 +287,6 @@
       "teoli",
       "reza.jahanbigloo2@gmail.com",
       "kazem82"
-    ]
-  },
-  "Server-sent_events": {
-    "modified": "2019-03-23T23:01:56.485Z",
-    "contributors": [
-      "ethertank"
     ]
   },
   "Tools": {
@@ -497,12 +395,6 @@
       "AlfredoLlaquet"
     ]
   },
-  "Web/API/Node/innerText": {
-    "modified": "2019-03-23T22:31:35.738Z",
-    "contributors": [
-      "ATR"
-    ]
-  },
   "Web/API/Node/insertBefore": {
     "modified": "2019-01-16T21:47:16.448Z",
     "contributors": [
@@ -585,12 +477,6 @@
       "Sheppy"
     ]
   },
-  "Web/CSS/Media_Queries/ابزار-تست-رسانه-پاسخگو": {
-    "modified": "2019-03-23T22:06:17.159Z",
-    "contributors": [
-      "soroushsoltanni"
-    ]
-  },
   "Web/CSS/Pseudo-elements": {
     "modified": "2019-03-18T21:31:36.769Z",
     "contributors": [
@@ -651,24 +537,6 @@
       "chrisdavidmills",
       "mojtabataheri",
       "dijam"
-    ]
-  },
-  "Web/CSS/انتخابگرـنوع": {
-    "modified": "2020-10-15T22:06:28.710Z",
-    "contributors": [
-      "dijam"
-    ]
-  },
-  "Web/CSS/انتخابگرـویژگی": {
-    "modified": "2020-10-15T22:06:29.476Z",
-    "contributors": [
-      "dijam"
-    ]
-  },
-  "Web/CSS/بزرگنمایی": {
-    "modified": "2020-10-15T22:08:35.445Z",
-    "contributors": [
-      "astrixoblix"
     ]
   },
   "Web/Guide": {
@@ -756,19 +624,6 @@
     "modified": "2020-10-15T22:28:24.997Z",
     "contributors": [
       "A.Faturechi"
-    ]
-  },
-  "Web/HTML/Tips_for_authoring_fast-loading_HTML_pages": {
-    "modified": "2020-07-16T22:22:32.419Z",
-    "contributors": [
-      "teoli",
-      "navid-emami"
-    ]
-  },
-  "Web/HTML/افزودن_رنگ": {
-    "modified": "2019-03-18T21:30:28.105Z",
-    "contributors": [
-      "rezafarokhi"
     ]
   },
   "Web/HTTP": {
@@ -914,46 +769,6 @@
       "fscholz"
     ]
   },
-  "Web/JavaScript/راهنما": {
-    "modified": "2020-03-12T19:40:57.602Z",
-    "contributors": [
-      "hamed.tm",
-      "asghar1366",
-      "ompcj4u"
-    ]
-  },
-  "Web/JavaScript/راهنما/Control_flow_and_error_handling": {
-    "modified": "2020-03-12T19:44:53.784Z",
-    "contributors": [
-      "Arashfiroozabadi"
-    ]
-  },
-  "Web/JavaScript/راهنما/Details_of_the_Object_Model": {
-    "modified": "2020-12-05T15:23:37.230Z",
-    "contributors": [
-      "r.einollahi1"
-    ]
-  },
-  "Web/JavaScript/راهنما/Functions": {
-    "modified": "2020-03-12T19:46:51.520Z",
-    "contributors": [
-      "peymanzk"
-    ]
-  },
-  "Web/JavaScript/راهنما/Grammar_and_types": {
-    "modified": "2020-03-12T19:45:05.571Z",
-    "contributors": [
-      "Zamaaan"
-    ]
-  },
-  "Web/JavaScript/راهنما/مقدمه": {
-    "modified": "2020-03-12T19:43:32.628Z",
-    "contributors": [
-      "farhadmpr",
-      "r-mohammadi",
-      "eliassharafi"
-    ]
-  },
   "Web/MathML": {
     "modified": "2019-03-23T23:18:26.790Z",
     "contributors": [
@@ -991,30 +806,215 @@
       "yahakim"
     ]
   },
-  "Web/جاوااسکریپت": {
+  "Web/HTML/Attributes": {
+    "modified": "2019-03-23T23:38:35.871Z",
+    "contributors": [
+      "teoli",
+      "amir.farsi",
+      "navid-emami"
+    ]
+  },
+  "Web/Guide/HTML/HTML5": {
+    "modified": "2019-03-23T23:38:22.268Z",
+    "contributors": [
+      "teoli",
+      "hamekas.2003",
+      "navid-emami"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/JavaScript_basics": {
+    "modified": "2020-07-16T22:35:09.662Z",
+    "contributors": [
+      "heidarv",
+      "rouhollahmazarei",
+      "HassanTafreshi",
+      "zsotude",
+      "AyubZ",
+      "rezafarokhi",
+      "Moeinh77",
+      "saeedx4",
+      "skm2017",
+      "dariush"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/Publishing_your_website": {
+    "modified": "2020-07-16T22:34:24.950Z",
+    "contributors": [
+      "HassanTafreshi"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/Installing_basic_software": {
+    "modified": "2020-07-16T22:34:07.219Z",
+    "contributors": [
+      "Mahdi-Abedi"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/What_will_your_website_look_like": {
+    "modified": "2020-07-16T22:34:15.361Z",
+    "contributors": [
+      "groprog",
+      "Mahdi-Abedi"
+    ]
+  },
+  "Learn/JavaScript/Objects/Basics": {
+    "modified": "2020-07-16T22:31:57.451Z",
+    "contributors": [
+      "rasoul_par"
+    ]
+  },
+  "Learn/Server-side/First_steps": {
+    "modified": "2020-07-16T22:36:08.360Z",
+    "contributors": [
+      "HassanTafreshi"
+    ]
+  },
+  "MDN/At_ten": {
+    "modified": "2019-01-16T22:10:46.111Z",
+    "contributors": [
+      "milad"
+    ]
+  },
+  "orphaned/MDN/Community": {
+    "modified": "2020-08-22T20:47:40.362Z",
+    "contributors": [
+      "sadafabasi39"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Be_a_beta_tester": {
+    "modified": "2019-01-17T01:16:00.841Z",
+    "contributors": [
+      "wbamberg",
+      "TheArashM"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
+    "modified": "2019-03-23T22:33:50.005Z",
+    "contributors": [
+      "wbamberg",
+      "itismasi",
+      "mhpedram",
+      "persianRobot"
+    ]
+  },
+  "Web/API/Server-sent_events": {
+    "modified": "2019-03-23T23:01:56.485Z",
+    "contributors": [
+      "ethertank"
+    ]
+  },
+  "Web/API/HTMLElement/innerText": {
+    "modified": "2019-03-23T22:31:35.738Z",
+    "contributors": [
+      "ATR"
+    ]
+  },
+  "Web/CSS/Media_Queries/Using_media_queries": {
+    "modified": "2019-03-23T22:06:17.159Z",
+    "contributors": [
+      "soroushsoltanni"
+    ]
+  },
+  "Web/CSS/Type_selectors": {
+    "modified": "2020-10-15T22:06:28.710Z",
+    "contributors": [
+      "dijam"
+    ]
+  },
+  "Web/CSS/Attribute_selectors": {
+    "modified": "2020-10-15T22:06:29.476Z",
+    "contributors": [
+      "dijam"
+    ]
+  },
+  "Web/CSS/zoom": {
+    "modified": "2020-10-15T22:08:35.445Z",
+    "contributors": [
+      "astrixoblix"
+    ]
+  },
+  "Learn/HTML/Howto/Author_fast-loading_HTML_pages": {
+    "modified": "2020-07-16T22:22:32.419Z",
+    "contributors": [
+      "teoli",
+      "navid-emami"
+    ]
+  },
+  "Web/HTML/Applying_color": {
+    "modified": "2019-03-18T21:30:28.105Z",
+    "contributors": [
+      "rezafarokhi"
+    ]
+  },
+  "Web/JavaScript/Guide/Control_flow_and_error_handling": {
+    "modified": "2020-03-12T19:44:53.784Z",
+    "contributors": [
+      "Arashfiroozabadi"
+    ]
+  },
+  "Web/JavaScript/Guide/Details_of_the_Object_Model": {
+    "modified": "2020-12-05T15:23:37.230Z",
+    "contributors": [
+      "r.einollahi1"
+    ]
+  },
+  "Web/JavaScript/Guide/Functions": {
+    "modified": "2020-03-12T19:46:51.520Z",
+    "contributors": [
+      "peymanzk"
+    ]
+  },
+  "Web/JavaScript/Guide/Grammar_and_types": {
+    "modified": "2020-03-12T19:45:05.571Z",
+    "contributors": [
+      "Zamaaan"
+    ]
+  },
+  "Web/JavaScript/Guide": {
+    "modified": "2020-03-12T19:40:57.602Z",
+    "contributors": [
+      "hamed.tm",
+      "asghar1366",
+      "ompcj4u"
+    ]
+  },
+  "Web/JavaScript/Guide/Introduction": {
+    "modified": "2020-03-12T19:43:32.628Z",
+    "contributors": [
+      "farhadmpr",
+      "r-mohammadi",
+      "eliassharafi"
+    ]
+  },
+  "orphaned/Web/جاوااسکریپت": {
     "modified": "2020-03-12T19:43:09.101Z",
     "contributors": [
       "Mirmousavi"
     ]
   },
-  "Web_Development": {
-    "modified": "2019-03-23T23:36:21.719Z",
+  "orphaned/توسعه_وب": {
+    "modified": "2019-03-24T00:12:08.783Z",
     "contributors": [
-      "ethertank"
+      "teoli",
+      "RamtinA"
     ]
   },
-  "Web_development/Historical_artifacts_to_avoid": {
+  "Web/API/Canvas_API/Tutorial": {
+    "modified": "2019-03-23T23:38:20.891Z",
+    "contributors": [
+      "navid-emami"
+    ]
+  },
+  "conflicting/Learn/HTML/Introduction_to_HTML": {
     "modified": "2019-03-23T23:38:29.789Z",
     "contributors": [
       "teoli",
       "navid-emami"
     ]
   },
-  "توسعه_وب": {
-    "modified": "2019-03-24T00:12:08.783Z",
+  "conflicting/Web/Guide": {
+    "modified": "2019-03-23T23:36:21.719Z",
     "contributors": [
-      "teoli",
-      "RamtinA"
+      "ethertank"
     ]
   }
 }
