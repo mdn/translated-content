@@ -1,0 +1,24 @@
+---
+title: DOM イベントでブレークする
+slug: Tools/Debugger/Break_on_DOM_mutation
+translation_of: Tools/Debugger/Break_on_DOM_mutation
+translation_of_original: Tools/Debugger/How_to/Break_on_a_DOM_event
+original_slug: Tools/Debugger/How_to/Break_on_a_DOM_event
+---
+<div>{{ToolsSidebar}}</div><div class="note">
+<p>この機能は、まだ新しいデバッガーでサポートしていません。現時点で必要である場合は、about:config で設定項目 "devtools.debugger.new-debugger-frontend" を <code>false</code> に設定して、古いデバッガーに戻すことができます。</p>
+
+<p>古いデバッガーのドキュメントは、<a href="/ja/docs/Tools/Debugger_%28before_Firefox_52%29">デバッガー (Firefox 52 より前)</a> をご覧ください。</p>
+</div>
+
+<p>特定の DOM イベントをリッスンしている場合は、リスナーを探し出して手動でブレークポイントを設定することなく、イベントが発生したときにデバッガーにブレークさせることができます。</p>
+
+<p>始めに<a href="/ja/docs/Tools/Debugger/UI_Tour#toolbar"> ツールバー </a>上の変数/イベントペインを開くボタンをクリックして、<a href="/ja/docs/Tools/Debugger/UI_Tour#Events_pane">イベントペイン </a>を開きます。そして、"イベント" タブをクリックします。イベントペインは、リスナーを割り当てているすべてのイベントを列挙します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/13210/debugger-events-pane-annotated.png" style="display: block; height: 334px; margin-left: auto; margin-right: auto; width: 904px;"></p>
+
+<p>そして、ブレークさせたいイベントの隣にあるボックスにチェックを入れてください。</p>
+
+<p>イベントが発生すると、リスナーの始点でコードがブレークします。</p>
+
+<p>{{EmbedYouTube("f-tbR8kj0K0")}}</p>

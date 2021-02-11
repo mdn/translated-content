@@ -1,0 +1,69 @@
+---
+title: WebIDE を使用した Firefox for Android のデバッグ
+slug: Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE
+tags:
+  - ガイド
+  - ツール
+  - デバッグ
+translation_of: Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE_clone
+original_slug: Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE_clone
+---
+<div>{{ToolsSidebar}}</div>
+
+<p>この記事では、<a href="/ja/docs/Tools">Firefox開発ツール</a>を Firefox 36 以降の Android 用 Firefox に接続する方法について説明します。</p>
+
+<p>長い間、Firefox Developer Tools を Android 用 Firefox に接続してモバイル Web サイトをデバッグすることは可能でした。これまでは、かなり複雑でエラーが発生しやすいプロセスでした。Firefox 36 では、このプロセスをもっと簡単にしました。特に、adb ツールをまったく直接処理する必要はありません。これで WebIDE を使用して接続します。これは舞台裏での adb の設定を担当します。</p>
+
+<div class="note">
+<p>これを行うには、デスクトップに Firefox 36 以上、モバイルデバイスに Firefox 35 が必要です。以前のバージョンを使用する必要がある場合は、<a href="/ja/docs/Tools/Remote_Debugging/Firefox_for_Android">デベロッパーツールを Android 用 Firefox に接続する</a>ための古い手順を参照してください。</p>
+</div>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9011/remote-debugging-overview-fx36.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>このガイドは2つの部分に分かれています。最初の部分「前提条件」は、1回だけ行う必要のあるものをカバーし、2番目の部分の「接続する」は、デバイスを接続するたびに行う必要がある作業をカバーします。</p>
+
+<h2 id="前提条件">前提条件</h2>
+
+<p>まず、次のものが必要です。</p>
+
+<ul>
+ <li>Firefox 36 以降が動作するデスクトップまたはラップトップコンピュータ</li>
+ <li>Android 35 以上の Android 用 Firefox を搭載した <a href="https://support.mozilla.org/ja/kb/will-firefox-work-my-mobile-device">Android 用 Firefox を実行できる</a> Android デバイス</li>
+ <li>2つのデバイスを接続する USB ケーブル</li>
+</ul>
+
+<h3 id="ADB_ヘルパー">ADB ヘルパー</h3>
+
+<p>デスクトップ上の Firefox には、ADB ヘルパーアドオンのバージョン 0.7.1 以上が必要です。これは、初めて WebIDE を開くときに自動的にインストールされます。バージョンを確認するには、ブラウザのアドレスバーに <code>about:addons</code> と入力すると、ADB が表示されます。</p>
+
+<p>ADB ヘルパーのバージョンが 0.7.1 以上でない場合は、「Projects」メニューから「Extra Components を管理」を選択すると、「Extra Components」ウィンドウが表示されます。このウィンドウには ADB ヘルパーのエントリが含まれています：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9021/extra-components.png" style="display: block; margin-left: auto; margin-right: auto;">「アンインストール」をクリックし、「インストール」をクリックすると、最新のバージョンになります。</p>
+
+<h3 id="Android_端末のセットアップ">Android 端末のセットアップ</h3>
+
+<p>まず、<a href="http://developer.android.com/guide/developing/device.html#setting-up">このリンクの手順 2 と 3 を実行して</a>、USB デバッグを有効にします。</p>
+
+<p>次に Firefox for Android でリモートデバッグを有効にします。ブラウザを開き、メニューを開き、[設定]、[デベロッパーツール] を選択します (一部の Android 搭載端末では、[詳細] を選択して [設定] オプションを表示する必要があります)。[リモートデバッグ] チェックボックスをオンにします。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/5829/remote-debugging-device-enable.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>ブラウザはポート転送を設定することを通知する通知を表示することがありますが、無視することができます。</p>
+
+<h2 id="接続する">接続する</h2>
+
+<p>Android 端末を USB ケーブルでデスクトップに接続し、WebIDE を開き、「ランタイム」メニューを開きます。「USBデバイス」の下に Android 用 Firefox がデバッグ対象として表示されます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9013/remote-debugging-android-runtime.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>それを選択してください。Android 搭載端末では警告メッセージが表示されます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9031/incoming-warning.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>[OK] をクリックします。WebIDE の「アプリケーションを開く」メニューをクリックします。デバイス上に開いているすべてのタブのリストが表示されます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9015/remote-debugging-android-open-tabs.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+
+<p>開発ツールを添付するタブを選択する：</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/9029/remote-debugging-android-attached.png" style="display: block; margin-left: auto; margin-right: auto;">これでリモートデバッグをサポートするすべての Firefox 開発ツールを使用できるようになります。詳細については<a href="/ja/docs/Tools/Remote_Debugging">リモートデバッグ</a>のページを参照してください。</p>

@@ -1,0 +1,234 @@
+---
+title: フォントを確認する
+slug: Tools/Page_Inspector/How_to/Edit_fonts
+tags:
+  - Fonts
+  - Guide
+  - Inspector
+  - Tools
+  - variable fonts
+translation_of: Tools/Page_Inspector/How_to/Edit_fonts
+original_slug: Tools/Page_Inspector/How_to/View_fonts
+---
+<div>{{ToolsSidebar}}</div>
+
+<p class="summary">この記事は、Firefox 開発ツールで使用可能なフォントツールのツアーです。このツールはブラウザーに読み込んだ文書に適用されたフォントに対して、適用されたすべてのフォントを調査する、あるいはバリアブルフォントの軸の値を細かく調整するなど、表示や調査のために役に立つツールが含まれています。</p>
+
+<div class="note">
+<p><strong>注記:</strong> この記事に示されているように、更新されたフォントツールは Firefox 63 以降で利用できます。古いバージョンの Firefox を使用している場合、ツールは見た目や動作が全く同じではありませんが、似ています (特にフォントエディターは利用できません)。</p>
+</div>
+
+<h2 id="The_Fonts_tab" name="The_Fonts_tab">フォントタブ</h2>
+
+<p><a href="/ja/docs/Tools/Page_Inspector">インスペクター</a> をウィンドウの下側に表示している場合は、右側にフォントタブがあります。右側または左側に表示している場合は、HTML ペインの下にフォントタブがあります。タブは以下のようにして表示できます:</p>
+
+<ol>
+ <li><a href="/ja/docs/Tools/Page_Inspector/How_to/Open_the_Inspector">インスペクターを開きます</a>。</li>
+ <li>フォントタブを選択します。CSS ペインの右側に表示されるタブの末尾にあります。</li>
+</ol>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16157/full-fonts-tab-new63.png" style="border: 1px solid black; display: block; height: 663px; margin: 0px auto; width: 500px;"></p>
+
+<p>フォントタブは 3 つの主要なセクションに分かれています:</p>
+
+<ul>
+ <li>"Fonts used" : 現在調査中の要素で使用しているフォント。</li>
+ <li>新しいフォントエディター。Firefox 61 および 62 では、このセクションがありません。</li>
+ <li>"All fonts on page" : このセクションは、ページで使用しているすべてのフォントを表示します。Firefox 61 および 62 ではこの領域が "ページ内の他のフォント" という名前であり、"Fonts used" セクションにあるフォントが含まれません。</li>
+</ul>
+
+<h2 id="Fonts_used" name="Fonts_used">Fonts used</h2>
+
+<p>フォントエディターの最初のセクションは、現在調査中の要素で使用しているフォントを、フォントファミリーでグループ化して表示します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16150/fonts-used.png" style="border-style: solid; border-width: 1px; display: block; height: 114px; margin: 0px auto; width: 400px;"></p>
+
+<p>調査中の要素にフォントが適用されたテキストコンテンツがある場合に、フォントが "使用されている" と判断します。空要素はフォントが使用されませんので、"No fonts were found for the current element." というメッセージが表示されます。</p>
+
+<p>以下の理由のいずれかを理由として、このセクションにフォントが表示されます:</p>
+
+<ul>
+ <li>要素の <code>font-family</code> CSS 宣言の値に指定されている。</li>
+ <li>ブラウザーのデフォルトスタイル (ラテン文字ではほとんどのブラウザーで Times New Roman) が要素に適用されており、作者が定義したフォントは与えらえていない。</li>
+ <li>フォントが適用されたテキストコンテンツを持つほかの要素を包含しているなど、調査中の要素の子孫でフォントが使用されている。</li>
+ <li><code>font-family</code> CSS 宣言で指定されたフォントがないため、システムの既定のフォントが使用されている。</li>
+</ul>
+
+<h2 id="Fonts_Editor" name="Fonts_Editor">フォントエディター</h2>
+
+<p>Firefox 63 でフォントエディターを追加しました。"Fonts used" の下にある新たな領域であり、フォントの特性を編集するコントロールがあります。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16159/fonts-editor-closeup-63-cropped.png" style="border-style: solid; border-width: 1px; display: block; height: 134px; margin: 0px auto; width: 500px;"></p>
+
+<p>通常の (静的な) フォントでは、以下の設定を変更できます。</p>
+
+<h3 id="Size" name="Size">サイズ</h3>
+
+<p>調査中の要素の {{cssxref("font-size")}} です。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16160/font-size_cropped.png" style="border-style: solid; border-width: 1px; display: block; height: 26px; margin: 0px auto; width: 360px;"></p>
+
+<p><code>em</code>、<code>rem</code>、<code>%</code>、<code>px</code>、<code>vh</code>、<code>vw</code> の単位を使用して設定できます。スライダーを使用するか、テキストボックスに直接数値を入力して値を設定できます。</p>
+
+<div class="note">
+<p><strong>注記</strong>: <code>pt</code> など、ほかの単位を <code>font-size</code> や <code>line-height</code> で使用したい場合は、<a href="/ja/docs/Tools/Page_Inspector/UI_Tour#Rules_view">ルールビュー</a> で調査中の要素に、その単位を使用する値を適用します。フォントエディターが自動的に値を拾って単位のドロップダウンメニューに割り当てて、単位が使用可能になります。</p>
+</div>
+
+<p>単位を変更すると数値を新しい単位で同等の値に変換しますので、同じ計算値が維持されます。</p>
+
+<p>例: <code>1rem</code> が 10 ピクセルと等価である場合に単位を <code>rem</code> から <code>px</code> に変更すると、<code>2rem</code> は <code>20px</code> になります。</p>
+
+<h3 id="Line_height" name="Line_height">Line height</h3>
+
+<p>調査中の要素の {{cssxref("line-height")}} です。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16166/line-height_cropped.png" style="border-style: solid; border-width: 1px; display: block; height: 31px; margin: 0px auto; width: 360px;"></p>
+
+<p>単位なし、または <code>em</code>、<em>%</em>、<code>px</code> の単位を使用して設定できます。スライダーを使用するか、テキストボックスに直接数値を入力して値を設定できます。</p>
+
+<p>単位を変更すると、<code>font-size</code> の設定に応じて値を変換します。</p>
+
+<p>例: フォントのサイズが 20 ピクセルで line-height が <code>1.5em</code> である場合に単位を <code>em</code> から <code>px</code> に変更すると、値が <code>30px</code> になります。</p>
+
+<h3 id="Weight" name="Weight">太さ</h3>
+
+<p>調査中の要素の {{cssxref("font-weight")}} です。</p>
+
+<p><img alt="Font weight setting" src="https://mdn.mozillademos.org/files/16162/font-weight_cropped.png" style="border-style: solid; border-width: 1px; display: block; height: 31px; margin: 0px auto; width: 360px;"></p>
+
+<p>スライダーを使用するか、テキストボックスに直接数値を入力して値を設定できます。バリアブルではないフォントではスライダーの範囲が 100 から 900 であり、100 ずつ増えます。</p>
+
+<div class="note">
+<p><strong>注記</strong>: <code>wght</code> バリエーション軸を定義する <a href="/ja/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">バリアブルフォント</a> (後述) は、独自の範囲を持ちます。</p>
+</div>
+
+<h3 id="Italic" name="Italic">イタリック</h3>
+
+<p>調査中の要素の {{cssxref("font-style")}} です。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16163/font-italic_cropped.png" style="border-style: solid; border-width: 1px; display: block; height: 31px; margin: 0px auto; width: 360px;"></p>
+
+<p>この設定は、<code>font-style</code> プロパティの値 <code>italic</code> と <code>normal</code> を切り替えます。</p>
+
+<div class="note">
+<p><strong>注記</strong>: この設定を変更すると、Firefox はページ上の表示を直ちに変更するためにインラインスタイルを適用します。</p>
+</div>
+
+<h2 id="All_fonts_on_page" name="All_fonts_on_page">All fonts on page</h2>
+
+<p>フォントタブの最後にある領域に、ページ上で使用しているすべてのフォントを、展開可能なリストで表示します。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16158/all-fonts-on-page_new63.png" style="border: 1px solid black; display: block; height: 641px; margin: 0px auto; width: 500px;"></p>
+
+<p>このリストは、フォントがウェブフォントかシステムのフォントかを簡単に判別できますので便利です。</p>
+
+<p>このセクションでは、それぞれのフォントで以下の情報を提供します:</p>
+
+<ul>
+ <li>フォントの、<code>font-family</code> における識別子と正式名称。</li>
+ <li>システムで使用できないウェブフォントである場合は、フォントファイルの URL。あるいはコンピューターから読み込んだフォント (既定のシステムフォント、または以前システムにインストールしたウェブフォント) である場合は "システム" と表示します。URL の右にあるアイコンをクリックすると、フォントファイルの URL をコピーします。</li>
+ <li>ウェブフォントである場合に、フォントをページに読み込む際の {{cssxref("@font-face")}} ディスクリプター。ディスクリプターは展開可能であり、展開するとスタイルシートで定義されたすべての構文を表示します。</li>
+ <li>フォントをレンダリングした結果を理解するための文字列サンプル。既定のサンプル文字列は "Abc" ですが、セクションの最上部にある入力フィールドをクリックして新しい値を入力することで、編集可能です。入力した文字列は、すべてのサンプル文字列に設定されます。</li>
+</ul>
+
+<h2 id="Variable_font_support_in_Firefox_Developer_Tools" name="Variable_font_support_in_Firefox_Developer_Tools">Firefox 開発ツールでバリアブルフォントをサポート</h2>
+
+<p>Firefox 62 でバリアブルフォントをサポートして、Firefox 63 ではフォントエディターでバリアブルフォントプロパティの編集機能をサポートしました。</p>
+
+<h3 id="What_are_variable_fonts" name="What_are_variable_fonts">バリアブルフォントとは?</h3>
+
+<p><a href="/ja/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">バリアブルフォント</a> または <strong>OpenType Font Variations</strong> は、フォントデザイナーがひとつのフォントファイルに複数のタイプフェイスのバリエーションを含むことを可能にする、新しいフォントファイル形式を定義します。これはバリアブルフォントが使用可能なタイプフェイス全体を表すときは、ひとつのページに複数の異なるウェブフォントを適用する必要がなく、変更したい特性で望む値を含めて提供すればよいことを意味します。</p>
+
+<p>バリアブルフォントは許容範囲が <strong>バリエーション軸</strong> (詳しくは <a href="/ja/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide#Introducing_the_'variation_axis'">Introducing the 'variation axis'</a> をご覧ください) で定義されていますので、フォントの特性を細かい粒度で簡単に変更できます。例えば、バリアブルフォントでは {{cssxref("font-weight")}} を 1 から 1000 の任意の値に設定できます (ただし、バリアブルフォントがこの範囲全体をサポートすることは保証されません)。</p>
+
+<p>登録済みの軸がいくつかあります。これらの軸をすべてのフォントが定義する必要はありませんが、フォントデザイナーが登録済みの軸を<em>実装する</em>場合は、その動作が定義済みの動作に<em>従うことが必要です</em>。</p>
+
+<p>すべてのバリアブルフォント軸に、4 文字の軸タグがあります。CSS の <code>{{cssxref("font-variation-settings")}}</code> プロパティは、キーと値のペアでタグを使用します。例えば <code>font-variation-settings</code> を使用して {{cssxref("font-weight")}} を設定するには以下のようにします:</p>
+
+<pre class="brush: css">font-variation-settings: "wght" 350;</pre>
+
+<p>ただし <code>font-variation-settings</code> は、(独自の軸など) 特性値を設定するために基本的なフォントプロパティを使用できない場合の最終手段に限って使用するべきです。</p>
+
+<div class="note">
+<p><strong>注記</strong>: <code>font-variation-settings</code> を使用して設定したフォントの特性値は、対応する基本的なフォントプロパティ (<code>font-weight</code> など) で設定した値に必ず上書きされます。これはカスケーディングによって現れた値も含まれます。</p>
+</div>
+
+<p>登録済みの軸と対応する CSS プロパティを以下に示します:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">軸タグ</th>
+   <th scope="col">CSS プロパティ</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>"wght"</td>
+   <td>{{cssxref("font-weight")}}</td>
+  </tr>
+  <tr>
+   <td>"wdth"</td>
+   <td>{{cssxref("font-stretch")}}</td>
+  </tr>
+  <tr>
+   <td>"slnt" (slant)</td>
+   <td>{{cssxref("font-style")}}: <code>oblique + angle</code></td>
+  </tr>
+  <tr>
+   <td>"ital"</td>
+   <td>{{cssxref("font-style")}}: <code>italic</code></td>
+  </tr>
+  <tr>
+   <td>"opsz"</td>
+   <td>
+    <p>{{cssxref("font-optical-sizing")}}</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<p>登録済みの軸のリストに含まれない軸は、独自の軸であると考えられます。独自の軸に対応する CSS フォントプロパティはありません。フォントデザイナーは、希望する軸をなんでも定義できます。それぞれの軸に、一意の 4 文字のタグが必要です。軸の名前と範囲の定義は、フォントデザイナー次第です。</p>
+
+<div class="note">
+<p><strong>注記</strong>: 登録済みの軸タグは小文字のタグであるのに対して、独自の軸は大文字のタグにするべきです。フォントデザイナーがこの慣習に従うことは強制されておらず、従っていないものもあることに注意してください。ここで重要なことは、軸タグが大文字と小文字を区別することです。</p>
+</div>
+
+<div class="warning">
+<p><strong>警告</strong>: バリアブルフォントを使用するために、オペレーティングシステムを最新の状態にしておくことが必要です。例えば Linux OS では最新バージョンの Linux Freetype が必要であり、また 10.13 より古い macOS はバリアブルフォントをサポートしていません。最新ではないオペレーティングシステムでは、ウェブページや Firefox 開発ツールでバリアブルフォントを使用できない場合があります。</p>
+</div>
+
+<h4 id="Working_with_Variable_fonts_in_the_Font_Editor" name="Working_with_Variable_fonts_in_the_Font_Editor">フォントエディターでバリアブルフォントを扱う</h4>
+
+<p>調査中の要素でバリアブルフォントを使用している場合に、個々のフォントに実装されている軸と、軸の値を変更するコントロールをフォントタブに表示します。これは、個々のフォントでどの軸が使用可能かをすばやく見つける際に役に立ちます。フォントデザイナーが基本的に自由に軸を実装できるようになると、劇的に役に立つでしょう。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16164/v_fonts_example_cropped.png" style="border: 1px solid black; display: block; height: 379px; margin: 0px auto; width: 350px;"></p>
+
+<p>これらの軸は個別に調節できます。またフォントデザイナーが定義済みのインスタンスを含めていれば "Instance" ドロップダウンリストでそれらを選択でき、ページの表示も更新します。</p>
+
+<p>以下に、さまざまな軸を定義したフォントの例を 2 つ示します:</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16167/v_fonts-examples_cropped.png" style="display: block; height: 29px; margin: 0px auto; width: 700px;"></p>
+
+<p>以下の例では、"Cheee Variable" フォントに Yeast や Gravity の設定があることがわかります。これらはフォントデザイナーが定義した独自の軸です。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16169/change_font_before_cropped.png" style="border: 1px solid black; display: block; height: 329px; margin: 0px auto; width: 889px;"></p>
+
+<p>1 番目の画像は、既定の設定のフォントをページで使用した状態です。2 番目の画像は、同じフォントで "Hi Yeast Hi Gravity" バリエーションを選択した後の状態です。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/16168/change_font_after_cropped.png" style="border: 1px solid black; display: block; height: 329px; margin: 0px auto; width: 897px;"></p>
+
+<ul>
+</ul>
+
+<h2 id="Tips" name="Tips">ヒント</h2>
+
+<p>最後に、フォントタブを有効に使用するためのヒントをいくつか紹介します:</p>
+
+<ul>
+ <li>インスペクターの <a href="/ja/docs/Tools/Page_Inspector/3-pane_mode">3 ペインモード</a> を使用しているとき、フォントタブの隣に調査中の要素の CSS ルールを同時に表示します。</li>
+ <li>ルールビューで {{cssxref("font-family")}} プロパティにマウスポインターを載せると、フォントのサンプルをツールチップで表示します:
+  <p><img alt="" src="https://mdn.mozillademos.org/files/16170/fonts_62_tooltip_cropped.png" style="border: 1px solid black; display: block; height: 153px; margin: 0px auto; width: 450px;"></p>
+ </li>
+ <li>上のスクリーンショットでは、<code>font-family</code> のフォントの羅列で、調査中の要素へ実際に適用されたフォントに下線が引かれていることにも気づくでしょう。これは、指定された多くのフォントでどれが適用されたかを簡単に発見できるようにします。</li>
+</ul>
