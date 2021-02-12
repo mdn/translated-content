@@ -78,7 +78,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 
 <p>Bei einem Skript muss das devtools5-Dokument eine Nachricht senden, in der es aufgefordert wird, das Skript einzufügen.  Die devtools.inspectedWindow.table gibt die ID der Zielregisterkarte an:</p>
 
-<p>Wenn Sie Nachrichten zwischen den im Zielfenster ausgeführten Inhaltsskripten und einem devtools-Dokument austauschen müssen, sollten Sie {{WebExtAPIRef ("runtime.connect ()")} und {{WebExtAPIRef ("runtime.onConnect") verwenden  ")}}, um eine Verbindung zwischen der Hintergrundseite und dem devtools-Dokument herzustellen.  Die Hintergrundseite kann dann eine Zuordnung zwischen Registerkarten-IDs und {{WebExtAPIRef ("runtime.Port")}} -Objekten verwalten und diese verwenden, um Nachrichten zwischen den beiden Bereichen weiterzuleiten.</p>
+<p>Wenn Sie Nachrichten zwischen den im Zielfenster ausgeführten Inhaltsskripten und einem devtools-Dokument austauschen müssen, sollten Sie {{WebExtAPIRef ("runtime.connect ()")}} und {{WebExtAPIRef ("runtime.onConnect")}} verwenden, um eine Verbindung zwischen der Hintergrundseite und dem devtools-Dokument herzustellen.  Die Hintergrundseite kann dann eine Zuordnung zwischen Registerkarten-IDs und {{WebExtAPIRef ("runtime.Port")}} -Objekten verwalten und diese verwenden, um Nachrichten zwischen den beiden Bereichen weiterzuleiten.</p>
 
 <p>Diese APIs basieren auf den Chrome devtools-APIs, aber im Vergleich zu Chrome fehlen noch viele Funktionen.  In diesem Abschnitt werden die Funktionen aufgeführt, die ab Firefox 54 noch nicht implementiert sind. Beachten Sie, dass sich die devtools-APIs in der aktiven Entwicklung befinden und wir erwarten, dass die meisten davon in zukünftigen Versionen unterstützt werden.</p>
 

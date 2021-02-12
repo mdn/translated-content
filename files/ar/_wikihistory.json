@@ -448,13 +448,6 @@
       "ahmadnourallah"
     ]
   },
-  "Learn/HTML/Multimedia_and_embedding": {
-    "modified": "2020-07-16T22:24:23.909Z",
-    "contributors": [
-      "MOTZ79567",
-      "ezrinjaz"
-    ]
-  },
   "Learn/JavaScript": {
     "modified": "2020-07-16T22:29:36.627Z",
     "contributors": [
@@ -1389,18 +1382,6 @@
     "modified": "2020-03-12T19:49:40.482Z",
     "contributors": [
       "suqbit"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/new": {
-    "modified": "2020-10-15T22:33:30.546Z",
-    "contributors": [
-      "noqp312"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/this": {
-    "modified": "2020-10-15T22:29:18.195Z",
-    "contributors": [
-      "h6t9m205"
     ]
   },
   "Web/JavaScript/Reference/Statements": {

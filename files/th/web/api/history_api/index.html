@@ -91,7 +91,7 @@ history.pushState (stateObj, "page 2", "bar.html");</font></font>
 <p><font><font>ในแง่การโทร</font></font><code>pushState()</code><font><font>จะคล้ายกับการตั้งค่า</font></font><code>window.location = "#foo"</code><font><font>ทั้งสองจะสร้างและเปิดใช้งานรายการบันทึกประวัติอื่นที่เชื่อมโยงกับเอกสารปัจจุบัน </font><font>แต่</font></font><code>pushState()</code><font><font>มีประโยชน์น้อย:</font></font></p>
 
 <ul>
- <li><font><font>URL ใหม่อาจเป็น URL ที่มีต้นกำเนิดเดียวกันกับ URL ปัจจุบัน </font><font>ในทางตรงกันข้ามการตั้งค่า</font></font><code>window.location</code><font><font>ช่วยให้คุณสามารถใช้ {{domxref ("document") {} เดียวกันได้เฉพาะเมื่อคุณแก้ไขเฉพาะแฮช</font></font></li>
+ <li><font><font>URL ใหม่อาจเป็น URL ที่มีต้นกำเนิดเดียวกันกับ URL ปัจจุบัน </font><font>ในทางตรงกันข้ามการตั้งค่า</font></font><code>window.location</code><font><font>ช่วยให้คุณสามารถใช้ {{domxref ("document") }} เดียวกันได้เฉพาะเมื่อคุณแก้ไขเฉพาะแฮช</font></font></li>
  <li><font><font>คุณไม่จำเป็นต้องเปลี่ยน URL หากไม่ต้องการ </font><font>ในทางตรงกันข้ามการตั้งค่า</font><font>จะสร้างประวัติศาสตร์เข้าใหม่เท่านั้นถ้ากัญชาปัจจุบันไม่ได้</font></font><code>window.location = "#foo";</code><code>#foo</code></li>
  <li><font><font>คุณสามารถเชื่อมโยงข้อมูลโดยพลการกับรายการประวัติการเข้าชมใหม่ของคุณได้ </font><font>ด้วยวิธีแฮชที่ใช้คุณจำเป็นต้องเข้ารหัสข้อมูลที่เกี่ยวข้องทั้งหมดลงในสตริงที่สั้น</font></font></li>
  <li><font><font>หาก</font></font><code>title </code><font><font>เบราว์เซอร์ใช้ภายหลังเบราเซอร์ข้อมูลนี้สามารถใช้งานได้ (ไม่ขึ้นอยู่กับการกล่าวคือแฮช)</font></font></li>
