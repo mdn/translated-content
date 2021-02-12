@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Referencje/Obiekty/Function/bind
 Metoda <span class="seoSummary"><code><strong>bind()</strong></code> </span> tworzy nową funkcję, której wywołanie powoduje ustawienie <strong>this</strong> na podaną wartość, z podaną sekwencją argumentów poprzedzającą dowolną podaną podczas wywołania nowej funkcji.<br>
  </div>
 
-<div>{{EmbedInteractiveExample („pages / js / function-bind.html”, „taller”)}}<br>
+<div>{{EmbedInteractiveExample ("pages/js/function-bind.html", "taller")}}<br>
 Źródło tego interaktywnego przykładu jest przechowywane w repozytorium GitHub. Jeśli chcesz przyczynić się do projektu interaktywnych przykładów, sklonuj https://github.com/mdn/interactive-examples i wyślij nam prośbę o pobranie.</div>
 
 <h2 id="Syntax">Syntax</h2>
@@ -20,7 +20,7 @@ Metoda <span class="seoSummary"><code><strong>bind()</strong></code> </span> two
 
 <dl>
  <dt><code><var>thisAtr</var></code></dt>
- <dd>Wartość, która ma być przekazana jako <strong>this</strong> do funkcji docelowej func po wywołaniu funkcji powiązanej. Wartość jest ignorowana, jeśli funkcja powiązana jest konstruowana przy użyciu operatora {{jsxref („Operators / new”, „new”)}}. Podczas używania funkcji <strong>bind</strong> do utworzenia funkcji (dostarczonej jako wywołanie zwrotne) wewnątrz setTimeout, każda prymitywna wartość przekazywana, gdy <strong>thisAtr</strong> jest konwertowany na obiekt. Jeśli nie podano żadnych argumentów, aby powiązać (bind), lub jeśli thisArg jest <strong>null</strong> lub <strong>undefined</strong>, <strong>this</strong> z zakresu wykonania jest traktowany jako <strong>thisAtr</strong> dla nowej funkcji.</dd>
+ <dd>Wartość, która ma być przekazana jako <strong>this</strong> do funkcji docelowej func po wywołaniu funkcji powiązanej. Wartość jest ignorowana, jeśli funkcja powiązana jest konstruowana przy użyciu operatora {{jsxref ("Operators/new", "new")}}. Podczas używania funkcji <strong>bind</strong> do utworzenia funkcji (dostarczonej jako wywołanie zwrotne) wewnątrz setTimeout, każda prymitywna wartość przekazywana, gdy <strong>thisAtr</strong> jest konwertowany na obiekt. Jeśli nie podano żadnych argumentów, aby powiązać (bind), lub jeśli thisArg jest <strong>null</strong> lub <strong>undefined</strong>, <strong>this</strong> z zakresu wykonania jest traktowany jako <strong>thisAtr</strong> dla nowej funkcji.</dd>
  <dt><code><var>arg1</var>, <var>arg2</var>, ...<var>argN</var></code> {{optional_inline}}</dt>
  <dd>Argumenty poprzedzające argumenty dostarczone funkcji powiązanej podczas wywoływania func.</dd>
 </dl>
@@ -152,7 +152,7 @@ flower.bloom();
 <p>Metody przedstawione poniżej nie są najlepszym sposobem na robienie rzeczy i prawdopodobnie nie powinny być stosowane w żadnym środowisku produkcyjnym.</p>
 </div>
 
-<p>Funkcje powiązane są automatycznie odpowiednie do użycia z operatorem {{jsxref („Operators / new”, „new”)}} do tworzenia nowych instancji utworzonych przez funkcję docelową. Gdy do utworzenia wartości używana jest funkcja powiązana, pod warunkiem, że jest to ignorowane.</p>
+<p>Funkcje powiązane są automatycznie odpowiednie do użycia z operatorem {{jsxref ("Operators/new", "new")}} do tworzenia nowych instancji utworzonych przez funkcję docelową. Gdy do utworzenia wartości używana jest funkcja powiązana, pod warunkiem, że jest to ignorowane.</p>
 
 <p>Jednak pod warunkiem, że argumenty są nadal dołączane do wywołania konstruktora:</p>
 
@@ -188,9 +188,9 @@ axisPoint instanceof YAxisPoint;         // true
 new YAxisPoint(17, 42) instanceof Point; // true
 </pre>
 
-<p>Zauważ, że nie musisz robić nic specjalnego, aby utworzyć powiązaną funkcję do użycia z {{jsxref („Operators / new”, „new”)}}.</p>
+<p>Zauważ, że nie musisz robić nic specjalnego, aby utworzyć powiązaną funkcję do użycia z {{jsxref ("Operators/new", "new")}}.</p>
 
-<p>Następstwem jest to, że nie musisz robić nic specjalnego, aby utworzyć funkcję powiązaną, która będzie wywoływana w sposób jawny, nawet jeśli wolisz, aby funkcja powiązana była wywoływana tylko za pomocą {{jsxref („Operators / new”, „new”)}} .</p>
+<p>Następstwem jest to, że nie musisz robić nic specjalnego, aby utworzyć funkcję powiązaną, która będzie wywoływana w sposób jawny, nawet jeśli wolisz, aby funkcja powiązana była wywoływana tylko za pomocą {{jsxref ("Operators/new", "new")}} .</p>
 
 <pre class="brush: js notranslate">//  Example can be run directly in your JavaScript console
 //  ...continued from above
@@ -220,7 +220,7 @@ slice.apply(arguments);
 
 <p>Za pomocą bind () można to uprościć.</p>
 
-<p>W poniższym fragmencie kodu slice () jest funkcją powiązaną z funkcją {{jsxref („Function.prototype.apply ()”, „Apply ()”)}} z {{jsxref („Function.prototype”) }}, z tą wartością ustawioną na {{jsxref („Array.prototype.slice ()”, „slice ()”)}} funkcji {{jsxref („Array.prototype”)}}. Oznacza to, że dodatkowe wywołania apply () można wyeliminować:</p>
+<p>W poniższym fragmencie kodu slice () jest funkcją powiązaną z funkcją {{jsxref ("Function.prototype.apply ()", "Apply ()")}} z {{jsxref ("Function.prototype") }}, z tą wartością ustawioną na {{jsxref ("Array.prototype.slice ()", "slice ()")}} funkcji {{jsxref ("Array.prototype")}}. Oznacza to, że dodatkowe wywołania apply () można wyeliminować:</p>
 
 <pre class="brush: js notranslate">//  same as "slice" in the previous example
 const unboundSlice = Array.prototype.slice;
@@ -297,10 +297,10 @@ if (!Function.prototype.bind) (function(){
 <p>Niektóre z wielu różnic (mogą być też inne, ponieważ ta lista nie próbuje być wyczerpująca) między tym algorytmem a określonym algorytmem to:</p>
 
 <p>Częściowa implementacja opiera się na {{jsxref ("Array.prototype.slice ()")}}, {{jsxref ("Array.prototype.concat ()")}}, {{jsxref ("Function.prototype.call ( ) ")}} i {{jsxref (" Function.prototype.apply () ")}}, wbudowane metody mające swoje oryginalne wartości.<br>
- Częściowa implementacja tworzy funkcje, które nie mają niezmiennej „pigułki trucizny” {{jsxref („Function.caller”, „caller”)}} i właściwości argumentów, które wyrzucają {{jsxref („Global_Objects / TypeError”, „TypeError”) }} przy pobieraniu, ustawianiu lub usuwaniu. (Można to dodać, jeśli implementacja obsługuje {{jsxref („Object.defineProperty”)}} lub częściowo zaimplementowana [bez zachowania polegającego na rzucaniu przy usuwaniu], jeśli implementacja obsługuje {{jsxref („Object .__ zdefiniujGetter__”, „ __defineGetter__ ”)}} i {{jsxref („ Object .__ definiSetter__ ”,„ __defineSetter__ ”)}}).<br>
+ Częściowa implementacja tworzy funkcje, które nie mają niezmiennej „pigułki trucizny” {{jsxref ("Function.caller", "caller")}} i właściwości argumentów, które wyrzucają {{jsxref ("Global_Objects/TypeError", "TypeError") }} przy pobieraniu, ustawianiu lub usuwaniu. (Można to dodać, jeśli implementacja obsługuje {{jsxref ("Object.defineProperty")}} lub częściowo zaimplementowana [bez zachowania polegającego na rzucaniu przy usuwaniu], jeśli implementacja obsługuje {{jsxref ("Object .__ zdefiniujGetter__", " __defineGetter__ ")}} i {{jsxref (" Object .__ definiSetter__ "," __defineSetter__ ")}}).<br>
  Częściowa implementacja tworzy funkcje, które mają właściwość prototypu. (Właściwie powiązane funkcje nie mają żadnych.)<br>
- Częściowa implementacja tworzy powiązane funkcje, których właściwość {{jsxref („Function.length”, „length”)}}} nie zgadza się z właściwością nakazaną przez ECMA-262: tworzy funkcje o długości 0. Pełna implementacja - w zależności od długość funkcji docelowej i liczba wcześniej określonych argumentów - może zwrócić niezerową długość.<br>
- Częściowa implementacja tworzy powiązane funkcje, których właściwość {{jsxref („Function.name”, „name”)}} nie jest pochodną oryginalnej nazwy funkcji. Według ECMA-262 nazwa zwróconej funkcji powiązanej powinna być „związana” + nazwa funkcji docelowej.<br>
+ Częściowa implementacja tworzy powiązane funkcje, których właściwość {{jsxref ("Function.length", "length")}}} nie zgadza się z właściwością nakazaną przez ECMA-262: tworzy funkcje o długości 0. Pełna implementacja - w zależności od długość funkcji docelowej i liczba wcześniej określonych argumentów - może zwrócić niezerową długość.<br>
+ Częściowa implementacja tworzy powiązane funkcje, których właściwość {{jsxref ("Function.name", "name")}} nie jest pochodną oryginalnej nazwy funkcji. Według ECMA-262 nazwa zwróconej funkcji powiązanej powinna być „związana” + nazwa funkcji docelowej.<br>
  Jeśli zdecydujesz się użyć tej częściowej implementacji, nie możesz polegać na przypadkach, w których zachowanie odbiega od ECMA-262, wydanie 5! Na szczęście te odchylenia od specyfikacji rzadko (jeśli w ogóle) pojawiają się w większości sytuacji kodowania. Jeśli nie rozumiesz żadnego z odchyleń od powyższej specyfikacji, w tym konkretnym przypadku można bezpiecznie nie martwić się o te niezgodne szczegóły odchylenia.</p>
 
 <p>Jeśli jest to absolutnie konieczne, a wydajność nie stanowi problemu, znacznie wolniejsze (ale bardziej zgodne ze specyfikacją rozwiązanie) można znaleźć na stronie https://github.com/Raynos/function-bind.</p>
