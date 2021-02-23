@@ -14726,12 +14726,6 @@
       "julianosilvaa"
     ]
   },
-  "Web/Accessibility/ARIA/widgets/overview": {
-    "modified": "2019-03-23T22:43:55.361Z",
-    "contributors": [
-      "paul.bignier"
-    ]
-  },
   "Web/Accessibility/Understanding_WCAG": {
     "modified": "2020-09-07T05:15:13.925Z",
     "contributors": [
@@ -34154,12 +34148,6 @@
       "Watilin"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils": {
-    "modified": "2019-03-23T23:15:38.230Z",
-    "contributors": [
-      "Watilin"
-    ]
-  },
   "Web/API/Web_Workers_API/Structured_clone_algorithm": {
     "modified": "2019-03-23T22:20:19.039Z",
     "contributors": [
@@ -45015,16 +45003,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/activeElement": {
-    "modified": "2019-03-23T23:12:53.004Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "AshfaqHossain",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
   "Web/API/DocumentOrShadowRoot/elementFromPoint": {
     "modified": "2019-03-23T23:50:28.633Z",
     "contributors": [
@@ -46001,6 +45979,28 @@
     "contributors": [
       "VincentN",
       "Fredchat"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA/widgets": {
+    "modified": "2019-03-23T22:43:55.361Z",
+    "contributors": [
+      "paul.bignier"
+    ]
+  },
+  "orphaned/Web/API/HTMLHyperlinkElementUtils": {
+    "modified": "2019-03-23T23:15:38.230Z",
+    "contributors": [
+      "Watilin"
+    ]
+  },
+  "Web/API/Document/activeElement": {
+    "modified": "2019-03-23T23:12:53.004Z",
+    "contributors": [
+      "fscholz",
+      "teoli",
+      "AshfaqHossain",
+      "Mgjbot",
+      "BenoitL"
     ]
   }
 }

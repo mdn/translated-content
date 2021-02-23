@@ -5859,25 +5859,6 @@
       "jesumv"
     ]
   },
-  "Web/API/NonDocumentTypeChildNode": {
-    "modified": "2019-03-23T22:32:46.517Z",
-    "contributors": [
-      "fscholz"
-    ]
-  },
-  "Web/API/NonDocumentTypeChildNode/nextElementSibling": {
-    "modified": "2020-10-15T21:46:25.502Z",
-    "contributors": [
-      "AlePerez92",
-      "Grijander81"
-    ]
-  },
-  "Web/API/NonDocumentTypeChildNode/previousElementSibling": {
-    "modified": "2019-03-23T22:32:40.718Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
   "Web/API/Notifications_API": {
     "modified": "2019-03-23T22:07:39.198Z",
     "contributors": [
@@ -23742,6 +23723,25 @@
     "modified": "2019-03-23T23:26:58.291Z",
     "contributors": [
       "sebasmagri"
+    ]
+  },
+  "conflicting/Web/API/Element": {
+    "modified": "2019-03-23T22:32:46.517Z",
+    "contributors": [
+      "fscholz"
+    ]
+  },
+  "Web/API/Element/nextElementSibling": {
+    "modified": "2020-10-15T21:46:25.502Z",
+    "contributors": [
+      "AlePerez92",
+      "Grijander81"
+    ]
+  },
+  "Web/API/Element/previousElementSibling": {
+    "modified": "2019-03-23T22:32:40.718Z",
+    "contributors": [
+      "Grijander81"
     ]
   }
 }

@@ -213,7 +213,7 @@
 /ko/docs/DOM	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/DOM/Notification.permission	/ko/docs/Web/API/Notification/permission
 /ko/docs/DOM/document	/ko/docs/Web/API/Document
-/ko/docs/DOM/document.activeElement	/ko/docs/Web/API/DocumentOrShadowRoot/activeElement
+/ko/docs/DOM/document.activeElement	/ko/docs/Web/API/Document/activeElement
 /ko/docs/DOM/document.alinkColor	/ko/docs/Web/API/Document/alinkColor
 /ko/docs/DOM/document.anchors	/ko/docs/Web/API/Document/anchors
 /ko/docs/DOM/document.applets	/ko/docs/Web/API/Document/applets
@@ -244,7 +244,7 @@
 /ko/docs/DOM/window.navigator.geolocation.getCurrentPosition	/ko/docs/Web/API/Geolocation/getCurrentPosition
 /ko/docs/DOM/window.navigator.registerProtocolHandler	/ko/docs/Web/API/Navigator/registerProtocolHandler
 /ko/docs/DOM:document	/ko/docs/Web/API/Document
-/ko/docs/DOM:document.activeElement	/ko/docs/Web/API/DocumentOrShadowRoot/activeElement
+/ko/docs/DOM:document.activeElement	/ko/docs/Web/API/Document/activeElement
 /ko/docs/DOM:document.alinkColor	/ko/docs/Web/API/Document/alinkColor
 /ko/docs/DOM:document.anchors	/ko/docs/Web/API/Document/anchors
 /ko/docs/DOM:document.applets	/ko/docs/Web/API/Document/applets
@@ -623,11 +623,11 @@
 /ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
-/ko/docs/Web/API/Document/activeElement	/ko/docs/Web/API/DocumentOrShadowRoot/activeElement
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/Document/defaultView/resize_event	/ko/docs/Web/API/Window/resize_event
 /ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/Document/drag_event
 /ko/docs/Web/API/Document/getSelection	/ko/docs/Web/API/DocumentOrShadowRoot/getSelection
+/ko/docs/Web/API/DocumentOrShadowRoot/activeElement	/ko/docs/Web/API/Document/activeElement
 /ko/docs/Web/API/Document_Object_Model/Preface	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/Web/API/Document_Object_Model/소개	/ko/docs/Web/API/Document_Object_Model/Introduction
 /ko/docs/Web/API/Document_Object_Model/예제	/ko/docs/Web/API/Document_Object_Model/Examples
@@ -642,6 +642,8 @@
 /ko/docs/Web/API/HTMLElement/dataset	/ko/docs/Web/API/HTMLOrForeignElement/dataset
 /ko/docs/Web/API/HTMLElement/style	/ko/docs/Web/API/ElementCSSInlineStyle/style
 /ko/docs/Web/API/HTMLElement/tabIndex	/ko/docs/Web/API/HTMLOrForeignElement/tabIndex
+/ko/docs/Web/API/HTMLHyperlinkElementUtils	/ko/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
+/ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API/Drag_operations	/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /ko/docs/Web/API/Navigator.battery	/ko/docs/Web/API/Navigator/battery

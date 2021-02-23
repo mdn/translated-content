@@ -10378,12 +10378,6 @@
       "iainreid629"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/activeElement": {
-    "modified": "2020-11-25T12:38:44.862Z",
-    "contributors": [
-      "imgss"
-    ]
-  },
   "Web/API/DocumentOrShadowRoot/elementFromPoint": {
     "modified": "2020-11-25T12:47:25.249Z",
     "contributors": [
@@ -16696,32 +16690,6 @@
     "modified": "2020-10-15T22:20:51.077Z",
     "contributors": [
       "Oswald111"
-    ]
-  },
-  "Web/API/NonDocumentTypeChildNode": {
-    "modified": "2020-10-15T21:33:03.603Z",
-    "contributors": [
-      "RainSlide",
-      "teoli"
-    ]
-  },
-  "Web/API/NonDocumentTypeChildNode/nextElementSibling": {
-    "modified": "2019-10-05T16:51:15.466Z",
-    "contributors": [
-      "VictorDu",
-      "rguanghui",
-      "teoli",
-      "khalid32",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/NonDocumentTypeChildNode/previousElementSibling": {
-    "modified": "2019-10-05T16:54:41.549Z",
-    "contributors": [
-      "rguanghui",
-      "teoli",
-      "khalid32",
-      "ziyunfei"
     ]
   },
   "Web/API/Notation": {
@@ -47526,64 +47494,6 @@
       "jinjin"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils/hash": {
-    "modified": "2020-02-24T00:59:03.514Z",
-    "contributors": [
-      "ikomom",
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/href": {
-    "modified": "2019-03-23T22:13:56.960Z",
-    "contributors": [
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils": {
-    "modified": "2020-10-15T21:33:08.803Z",
-    "contributors": [
-      "RainSlide",
-      "AyAmeng",
-      "teoli"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/origin": {
-    "modified": "2019-03-23T22:12:28.154Z",
-    "contributors": [
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/password": {
-    "modified": "2019-03-23T22:12:38.210Z",
-    "contributors": [
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/pathname": {
-    "modified": "2019-03-23T22:12:27.883Z",
-    "contributors": [
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/search": {
-    "modified": "2019-03-23T22:16:26.271Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "kameii"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/toString": {
-    "modified": "2019-03-23T22:13:59.877Z",
-    "contributors": [
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/username": {
-    "modified": "2019-03-23T22:12:31.600Z",
-    "contributors": [
-      "xgqfrms-GitHub"
-    ]
-  },
   "Web/API/Web_Audio_API/Best_practices": {
     "modified": "2020-04-13T06:14:13.545Z",
     "contributors": [
@@ -50797,6 +50707,96 @@
       "lxyion",
       "acgeeker",
       "alayasix"
+    ]
+  },
+  "Web/API/Document/activeElement": {
+    "modified": "2020-11-25T12:38:44.862Z",
+    "contributors": [
+      "imgss"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/hash": {
+    "modified": "2020-02-24T00:59:03.514Z",
+    "contributors": [
+      "ikomom",
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/href": {
+    "modified": "2019-03-23T22:13:56.960Z",
+    "contributors": [
+      "xgqfrms-GitHub"
+    ]
+  },
+  "orphaned/Web/API/HTMLHyperlinkElementUtils": {
+    "modified": "2020-10-15T21:33:08.803Z",
+    "contributors": [
+      "RainSlide",
+      "AyAmeng",
+      "teoli"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/origin": {
+    "modified": "2019-03-23T22:12:28.154Z",
+    "contributors": [
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/password": {
+    "modified": "2019-03-23T22:12:38.210Z",
+    "contributors": [
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/pathname": {
+    "modified": "2019-03-23T22:12:27.883Z",
+    "contributors": [
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/search": {
+    "modified": "2019-03-23T22:16:26.271Z",
+    "contributors": [
+      "xgqfrms-GitHub",
+      "kameii"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/toString": {
+    "modified": "2019-03-23T22:13:59.877Z",
+    "contributors": [
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/username": {
+    "modified": "2019-03-23T22:12:31.600Z",
+    "contributors": [
+      "xgqfrms-GitHub"
+    ]
+  },
+  "conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e": {
+    "modified": "2020-10-15T21:33:03.603Z",
+    "contributors": [
+      "RainSlide",
+      "teoli"
+    ]
+  },
+  "Web/API/Element/nextElementSibling": {
+    "modified": "2019-10-05T16:51:15.466Z",
+    "contributors": [
+      "VictorDu",
+      "rguanghui",
+      "teoli",
+      "khalid32",
+      "ziyunfei"
+    ]
+  },
+  "Web/API/Element/previousElementSibling": {
+    "modified": "2019-10-05T16:54:41.549Z",
+    "contributors": [
+      "rguanghui",
+      "teoli",
+      "khalid32",
+      "ziyunfei"
     ]
   }
 }

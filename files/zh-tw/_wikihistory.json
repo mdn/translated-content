@@ -4211,12 +4211,6 @@
       "jackblackevo"
     ]
   },
-  "Web/API/NonDocumentTypeChildNode": {
-    "modified": "2019-03-23T22:30:38.352Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/API/Notifications_API": {
     "modified": "2020-04-21T06:01:14.944Z",
     "contributors": [
@@ -9151,6 +9145,12 @@
     "contributors": [
       "teoli",
       "Kennyluck"
+    ]
+  },
+  "conflicting/Web/API/Element": {
+    "modified": "2019-03-23T22:30:38.352Z",
+    "contributors": [
+      "jackblackevo"
     ]
   }
 }
