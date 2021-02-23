@@ -5,7 +5,6 @@
 /fa/docs/HTML/Canvas/رسم_گرافیک_با_Canvas	/fa/docs/Web/API/Canvas_API/Tutorial
 /fa/docs/HTML/Element	/fa/docs/Web/HTML/Element
 /fa/docs/HTML/Element/Heading_Elements	/fa/docs/Web/HTML/Element/Heading_Elements
-/fa/docs/HTML/Element/Input	/fa/docs/Web/HTML/Element/Input
 /fa/docs/HTML/HTML5	/fa/docs/Web/Guide/HTML/HTML5
 /fa/docs/HTML/Introduction	/fa/docs/Learn/HTML/Introduction_to_HTML
 /fa/docs/HTML/Tips_for_authoring_fast-loading_HTML_pages	/fa/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages

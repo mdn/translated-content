@@ -791,7 +791,6 @@
 /es/docs/HTML/Element/table	/es/docs/Web/HTML/Element/table
 /es/docs/HTML/Element/video	/es/docs/Web/HTML/Element/video
 /es/docs/HTML/Elemento	/es/docs/Web/HTML/Element
-/es/docs/HTML/Elemento/<html>	/es/docs/Web/HTML/Elemento/<html>
 /es/docs/HTML/Elemento/Audio	/es/docs/Web/HTML/Element/audio
 /es/docs/HTML/Elemento/Elementos_títulos	/es/docs/Web/HTML/Element/Heading_Elements
 /es/docs/HTML/Elemento/Progreso	/es/docs/Web/HTML/Element/progress
