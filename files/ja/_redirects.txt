@@ -10,7 +10,7 @@
 /ja/docs/API/Document	/ja/docs/Web/API/Document
 /ja/docs/API/Document/Document	/ja/docs/Web/API/Document/Document
 /ja/docs/API/Document/URL	/ja/docs/Web/API/Document/URL
-/ja/docs/API/Document/activeElement	/ja/docs/Web/API/DocumentOrShadowRoot/activeElement
+/ja/docs/API/Document/activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/API/Document/adoptNode	/ja/docs/Web/API/Document/adoptNode
 /ja/docs/API/Document/alinkColor	/ja/docs/Web/API/Document/alinkColor
 /ja/docs/API/Document/anchors	/ja/docs/Web/API/Document/anchors
@@ -1408,7 +1408,7 @@
 /ja/docs/DOM/dispatchEvent_example	/ja/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events
 /ja/docs/DOM/document	/ja/docs/Web/API/Document
 /ja/docs/DOM/document.URL	/ja/docs/Web/API/Document/URL
-/ja/docs/DOM/document.activeElement	/ja/docs/Web/API/DocumentOrShadowRoot/activeElement
+/ja/docs/DOM/document.activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/DOM/document.adoptNode	/ja/docs/Web/API/Document/adoptNode
 /ja/docs/DOM/document.alinkColor	/ja/docs/Web/API/Document/alinkColor
 /ja/docs/DOM/document.anchors	/ja/docs/Web/API/Document/anchors
@@ -1762,7 +1762,7 @@
 /ja/docs/DOM:Storage	/ja/docs/conflicting/Web/API/Web_Storage_API
 /ja/docs/DOM:document	/ja/docs/Web/API/Document
 /ja/docs/DOM:document.URL	/ja/docs/Web/API/Document/URL
-/ja/docs/DOM:document.activeElement	/ja/docs/Web/API/DocumentOrShadowRoot/activeElement
+/ja/docs/DOM:document.activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/DOM:document.adoptNode	/ja/docs/Web/API/Document/adoptNode
 /ja/docs/DOM:document.anchors	/ja/docs/Web/API/Document/anchors
 /ja/docs/DOM:document.close	/ja/docs/Web/API/Document/close
@@ -3741,7 +3741,6 @@
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
 /ja/docs/Web/API/DeviceLightEvent.value	/ja/docs/Web/API/DeviceLightEvent/value
 /ja/docs/Web/API/Document.domConfig	/ja/docs/Web/API/Document
-/ja/docs/Web/API/Document/activeElement	/ja/docs/Web/API/DocumentOrShadowRoot/activeElement
 /ja/docs/Web/API/Document/async	/ja/docs/Web/API/XMLDocument/async
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
 /ja/docs/Web/API/Document/domConfig	/ja/docs/Web/API/Document
@@ -3752,6 +3751,7 @@
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/conflicting/Web/API/Document/characterSet
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/GlobalEventHandlers/onselectionchange
 /ja/docs/Web/API/Document/styleSheets	/ja/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/ja/docs/Web/API/DocumentOrShadowRoot/activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint	/ja/docs/conflicting/Web/API/DocumentOrShadowRoot
 /ja/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/ja/docs/conflicting/Web/API/DocumentOrShadowRoot_20ea0e1d91453a020aad3a16dbce16f1
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/conflicting/Web/API/Document_Object_Model_8435a25d5137b436d5d7161e1b813c02
@@ -3817,6 +3817,19 @@
 /ja/docs/Web/API/HTMLFormElement.reset	/ja/docs/Web/API/HTMLFormElement/reset
 /ja/docs/Web/API/HTMLFormElement.submit	/ja/docs/Web/API/HTMLFormElement/submit
 /ja/docs/Web/API/HTMLFormElement.target	/ja/docs/Web/API/HTMLFormElement/target
+/ja/docs/Web/API/HTMLHyperlinkElementUtils	/ja/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
+/ja/docs/Web/API/HTMLHyperlinkElementUtils/hash	/ja/docs/Web/API/HTMLAnchorElement/hash
+/ja/docs/Web/API/HTMLHyperlinkElementUtils/host	/ja/docs/Web/API/HTMLAnchorElement/host
+/ja/docs/Web/API/HTMLHyperlinkElementUtils/hostname	/ja/docs/Web/API/HTMLAnchorElement/hostname
+/ja/docs/Web/API/HTMLHyperlinkElementUtils/href	/ja/docs/Web/API/HTMLAnchorElement/href
+/ja/docs/Web/API/HTMLHyperlinkElementUtils/origin	/ja/docs/Web/API/HTMLAnchorElement/origin
+/ja/docs/Web/API/HTMLHyperlinkElementUtils/password	/ja/docs/Web/API/HTMLAnchorElement/password
+/ja/docs/Web/API/HTMLHyperlinkElementUtils/pathname	/ja/docs/Web/API/HTMLAnchorElement/pathname
+/ja/docs/Web/API/HTMLHyperlinkElementUtils/port	/ja/docs/Web/API/HTMLAnchorElement/port
+/ja/docs/Web/API/HTMLHyperlinkElementUtils/protocol	/ja/docs/Web/API/HTMLAnchorElement/protocol
+/ja/docs/Web/API/HTMLHyperlinkElementUtils/search	/ja/docs/Web/API/HTMLAnchorElement/search
+/ja/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ja/docs/Web/API/HTMLAnchorElement/toString
+/ja/docs/Web/API/HTMLHyperlinkElementUtils/username	/ja/docs/Web/API/HTMLAnchorElement/username
 /ja/docs/Web/API/HTMLIFrameElement.getVisible	/ja/docs/Web/API/HTMLIFrameElement/getVisible
 /ja/docs/Web/API/HTMLIFrameElement.stop	/ja/docs/Web/API/HTMLIFrameElement/stop
 /ja/docs/Web/API/HTMLTableElement.align	/ja/docs/Web/API/HTMLTableElement/align
@@ -3897,6 +3910,7 @@
 /ja/docs/Web/API/Node/innerText	/ja/docs/Web/API/HTMLElement/innerText
 /ja/docs/Web/API/Node/nodePrincipal	/ja/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
+/ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
@@ -3989,7 +4003,7 @@
 /ja/docs/Web/API/console.time	/ja/docs/Web/API/Console/time
 /ja/docs/Web/API/console.timeEnd	/ja/docs/Web/API/Console/timeEnd
 /ja/docs/Web/API/document.URL	/ja/docs/Web/API/Document/URL
-/ja/docs/Web/API/document.activeElement	/ja/docs/Web/API/DocumentOrShadowRoot/activeElement
+/ja/docs/Web/API/document.activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/document.adoptNode	/ja/docs/Web/API/Document/adoptNode
 /ja/docs/Web/API/document.alinkColor	/ja/docs/Web/API/Document/alinkColor
 /ja/docs/Web/API/document.anchors	/ja/docs/Web/API/Document/anchors
@@ -4225,6 +4239,7 @@
 /ja/docs/Web/API/window.window	/ja/docs/Web/API/Window/window
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/ja/docs/Web/Accessibility/ARIA/Roles/button_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role	/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role
+/ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/conflicting/Web/Accessibility/ARIA/widgets
 /ja/docs/Web/Accessibility/Accessibility_FAQ	/ja/docs/Web/Accessibility/FAQ
 /ja/docs/Web/Apps/Build/Manipulating_media	/ja/docs/Web/Guide/Audio_and_video_delivery
 /ja/docs/Web/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video	/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video

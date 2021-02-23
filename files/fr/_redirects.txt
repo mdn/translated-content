@@ -914,7 +914,7 @@
 /fr/docs/DOM/Whitespace_template	/fr/docs/Web/API/Document_Object_Model/Whitespace
 /fr/docs/DOM/dispatchEvent_exemple	/fr/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events
 /fr/docs/DOM/document	/fr/docs/Web/API/Document
-/fr/docs/DOM/document.activeElement	/fr/docs/Web/API/DocumentOrShadowRoot/activeElement
+/fr/docs/DOM/document.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/DOM/document.body	/fr/docs/Web/API/Document/body
 /fr/docs/DOM/document.createAttribute	/fr/docs/Web/API/Document/createAttribute
 /fr/docs/DOM/document.createDocumentFragment	/fr/docs/Web/API/Document/createDocumentFragment
@@ -935,7 +935,7 @@
 /fr/docs/DOM/document.open	/fr/docs/Web/API/Document/open
 /fr/docs/DOM/document.write	/fr/docs/Web/API/Document/write
 /fr/docs/DOM/element	/fr/docs/Web/API/Element
-/fr/docs/DOM/element.activeElement	/fr/docs/Web/API/DocumentOrShadowRoot/activeElement
+/fr/docs/DOM/element.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/DOM/element.addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/DOM/element.appendChild	/fr/docs/Web/API/Node/appendChild
 /fr/docs/DOM/element.attributes	/fr/docs/Web/API/Element/attributes
@@ -1078,7 +1078,7 @@
 /fr/docs/DOM:Whitespace_template	/fr/docs/Web/API/Document_Object_Model/Whitespace
 /fr/docs/DOM:dispatchEvent_exemple	/fr/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events
 /fr/docs/DOM:document	/fr/docs/Web/API/Document
-/fr/docs/DOM:document.activeElement	/fr/docs/Web/API/DocumentOrShadowRoot/activeElement
+/fr/docs/DOM:document.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/DOM:document.createAttribute	/fr/docs/Web/API/Document/createAttribute
 /fr/docs/DOM:document.createElement	/fr/docs/Web/API/Document/createElement
 /fr/docs/DOM:document.createTextNode	/fr/docs/Web/API/Document/createTextNode
@@ -1096,7 +1096,7 @@
 /fr/docs/DOM:document.open	/fr/docs/Web/API/Document/open
 /fr/docs/DOM:document.write	/fr/docs/Web/API/Document/write
 /fr/docs/DOM:element	/fr/docs/Web/API/Element
-/fr/docs/DOM:element.activeElement	/fr/docs/Web/API/DocumentOrShadowRoot/activeElement
+/fr/docs/DOM:element.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/DOM:element.addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/DOM:element.appendChild	/fr/docs/Web/API/Node/appendChild
 /fr/docs/DOM:element.attributes	/fr/docs/Web/API/Element/attributes
@@ -2244,7 +2244,7 @@
 /fr/docs/JavaScript/Reference/Annexes/Annexe_-_Mots_réservés	/fr/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
 /fr/docs/JavaScript/Reference/Annexes/Fonctionnalités_dépréciées	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/JavaScript/Reference/Annexes/Mots_réservés	/fr/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
-/fr/docs/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Commentaires
+/fr/docs/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
 /fr/docs/JavaScript/Reference/Fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/JavaScript/Reference/Fonctions/arguments	/fr/docs/Web/JavaScript/Reference/Functions/arguments
 /fr/docs/JavaScript/Reference/Fonctions/arguments/callee	/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee
@@ -2583,7 +2583,7 @@
 /fr/docs/JavaScript/Reference/Propriétés_globales/NaN	/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /fr/docs/JavaScript/Reference/Propriétés_globales/undefined	/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /fr/docs/JavaScript/Reference/Référence_JavaScript	/fr/docs/Web/JavaScript/Reference
-/fr/docs/JavaScript/Reference/Référence_JavaScript/Commentaires	/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Commentaires
+/fr/docs/JavaScript/Reference/Référence_JavaScript/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Fonctions/arguments	/fr/docs/Web/JavaScript/Reference/Functions/arguments
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Fonctions/arguments/callee	/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee
@@ -2812,7 +2812,7 @@
 /fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/decodeURI	/fr/docs/Web/JavaScript/Reference/Global_Objects/decodeURI
 /fr/docs/JavaScript/Référence_JavaScript/Opérateurs	/fr/docs/Web/JavaScript/Reference/Operators
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript	/fr/docs/Web/JavaScript/Reference
-/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Commentaires	/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Commentaires
+/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Fonctions/arguments	/fr/docs/Web/JavaScript/Reference/Functions/arguments
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Fonctions/arguments/callee	/fr/docs/Web/JavaScript/Reference/Functions/arguments/callee
@@ -3722,7 +3722,7 @@
 /fr/docs/Web/API/DeviceRotationRate/alpha	/fr/docs/Web/API/DeviceMotionEventRotationRate/alpha
 /fr/docs/Web/API/DeviceRotationRate/beta	/fr/docs/Web/API/DeviceMotionEventRotationRate/beta
 /fr/docs/Web/API/DeviceRotationRate/gamma	/fr/docs/Web/API/DeviceMotionEventRotationRate/gamma
-/fr/docs/Web/API/Document.activeElement	/fr/docs/Web/API/DocumentOrShadowRoot/activeElement
+/fr/docs/Web/API/Document.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/Document.body	/fr/docs/Web/API/Document/body
 /fr/docs/Web/API/Document.createAttribute	/fr/docs/Web/API/Document/createAttribute
 /fr/docs/Web/API/Document.createElement	/fr/docs/Web/API/Document/createElement
@@ -3744,7 +3744,6 @@
 /fr/docs/Web/API/Document.open	/fr/docs/Web/API/Document/open
 /fr/docs/Web/API/Document.write	/fr/docs/Web/API/Document/write
 /fr/docs/Web/API/Document/Document.anchors	/fr/docs/Web/API/Document/anchors
-/fr/docs/Web/API/Document/activeElement	/fr/docs/Web/API/DocumentOrShadowRoot/activeElement
 /fr/docs/Web/API/Document/async	/fr/docs/Web/API/XMLDocument/async
 /fr/docs/Web/API/Document/defaultView/popstate_event	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Document/defaultView/storage_event	/fr/docs/Web/API/Window/storage_event
@@ -3752,6 +3751,7 @@
 /fr/docs/Web/API/Document/elementFromPoint	/fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
 /fr/docs/Web/API/Document/getSelection	/fr/docs/Web/API/DocumentOrShadowRoot/getSelection
 /fr/docs/Web/API/Document/styleSheets	/fr/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/fr/docs/Web/API/DocumentOrShadowRoot/activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/Document_Object_Model/Exemples	/fr/docs/Web/API/Document_Object_Model/Examples
 /fr/docs/Web/API/Document_Object_Model/Introduction_au_DOM	/fr/docs/Web/API/Document_Object_Model/Introduction
 /fr/docs/Web/API/Document_Object_Model/Les_évènements_et_le_DOM	/fr/docs/Web/API/Document_Object_Model/Events
@@ -3762,7 +3762,7 @@
 /fr/docs/Web/API/Document_Object_Model/window	/fr/docs/Web/API/Window
 /fr/docs/Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C	/fr/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 /fr/docs/Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C/Exemple	/fr/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
-/fr/docs/Web/API/Element.activeElement	/fr/docs/Web/API/DocumentOrShadowRoot/activeElement
+/fr/docs/Web/API/Element.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/Element.addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/Element.appendChild	/fr/docs/Web/API/Node/appendChild
 /fr/docs/Web/API/Element.attributes	/fr/docs/Web/API/Element/attributes
@@ -3871,6 +3871,7 @@
 /fr/docs/Web/API/HTMLElement/style	/fr/docs/Web/API/ElementCSSInlineStyle/style
 /fr/docs/Web/API/HTMLElement/tabIndex	/fr/docs/Web/API/HTMLOrForeignElement/tabIndex
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
+/fr/docs/Web/API/HTMLHyperlinkElementUtils	/fr/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /fr/docs/Web/API/HTMLTableElement.caption	/fr/docs/Web/API/HTMLTableElement/caption
 /fr/docs/Web/API/HTMLTableElement.insertRow	/fr/docs/Web/API/HTMLTableElement/insertRow
 /fr/docs/Web/API/IDBEnvironment/indexedDB	/fr/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB
@@ -3906,7 +3907,7 @@
 /fr/docs/Web/API/Selection_API	/fr/docs/conflicting/Web/API/Selection
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
-/fr/docs/Web/API/URLUtils	/fr/docs/Web/API/HTMLHyperlinkElementUtils
+/fr/docs/Web/API/URLUtils	/fr/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /fr/docs/Web/API/WebGLRenderingContext/activer	/fr/docs/Web/API/WebGLRenderingContext/enable
 /fr/docs/Web/API/WebGLRenderingContext/canevas	/fr/docs/Web/API/WebGLRenderingContext/canvas
 /fr/docs/Web/API/WebGL_API/By_example/Appliquer_des_couleurs	/fr/docs/Web/API/WebGL_API/By_example/Clearing_with_colors
@@ -4006,6 +4007,7 @@
 /fr/docs/Web/API/window.location	/fr/docs/Web/API/window/location
 /fr/docs/Web/API/window.navigator.mozPower	/fr/docs/Web/API/Navigator/mozPower
 /fr/docs/Web/API/window.requestAnimationFrame	/fr/docs/Web/API/Window/requestAnimationFrame
+/fr/docs/Web/Accessibility/ARIA/widgets/overview	/fr/docs/conflicting/Web/Accessibility/ARIA/widgets
 /fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Contraste_de_la_couleur	/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 /fr/docs/Web/Apps/Build/Audio_and_video_delivery	/fr/docs/Web/Guide/Audio_and_video_delivery
 /fr/docs/Web/Apps/Build/Audio_and_video_delivery/Live_streaming_web_audio_and_video	/fr/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
@@ -4736,7 +4738,7 @@
 /fr/docs/Web/JavaScript/Performance_les_dangers_liés_à_la_modification_de_Prototype	/fr/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation
 /fr/docs/Web/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference/About
 /fr/docs/Web/JavaScript/Reference/Classes/Class_fields	/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields
-/fr/docs/Web/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Commentaires
+/fr/docs/Web/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
 /fr/docs/Web/JavaScript/Reference/Erreurs	/fr/docs/Web/JavaScript/Reference/Errors
 /fr/docs/Web/JavaScript/Reference/Erreurs/Already_has_pragma	/fr/docs/Web/JavaScript/Reference/Errors/Already_has_pragma
 /fr/docs/Web/JavaScript/Reference/Erreurs/Array_sort_argument	/fr/docs/Web/JavaScript/Reference/Errors/Array_sort_argument

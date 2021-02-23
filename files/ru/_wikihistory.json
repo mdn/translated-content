@@ -5672,84 +5672,6 @@
       "Echzio"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils": {
-    "modified": "2019-03-23T22:27:08.817Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/hash": {
-    "modified": "2019-03-23T22:27:07.342Z",
-    "contributors": [
-      "tim-zh"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/host": {
-    "modified": "2019-03-23T22:27:14.772Z",
-    "contributors": [
-      "tim-zh"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/hostname": {
-    "modified": "2019-03-23T22:27:14.609Z",
-    "contributors": [
-      "tim-zh"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/href": {
-    "modified": "2019-03-23T22:27:04.617Z",
-    "contributors": [
-      "tim-zh"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/origin": {
-    "modified": "2019-03-23T22:27:01.715Z",
-    "contributors": [
-      "tim-zh"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/password": {
-    "modified": "2019-03-23T22:26:59.020Z",
-    "contributors": [
-      "tim-zh"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/pathname": {
-    "modified": "2019-03-23T22:27:12.811Z",
-    "contributors": [
-      "tim-zh"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/port": {
-    "modified": "2019-03-23T22:27:11.593Z",
-    "contributors": [
-      "tim-zh"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/protocol": {
-    "modified": "2019-03-23T22:27:14.324Z",
-    "contributors": [
-      "tim-zh"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/search": {
-    "modified": "2019-03-23T22:27:12.956Z",
-    "contributors": [
-      "tim-zh"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/toString": {
-    "modified": "2019-03-23T22:26:54.970Z",
-    "contributors": [
-      "tim-zh"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/username": {
-    "modified": "2019-03-23T22:27:13.479Z",
-    "contributors": [
-      "tim-zh"
-    ]
-  },
   "Web/API/HTMLImageElement": {
     "modified": "2019-03-23T23:30:08.953Z",
     "contributors": [
@@ -6891,18 +6813,6 @@
       "arhad",
       "surrsoft",
       "dginzburg"
-    ]
-  },
-  "Web/API/NonDocumentTypeChildNode": {
-    "modified": "2019-03-18T21:43:39.016Z",
-    "contributors": [
-      "fscholz"
-    ]
-  },
-  "Web/API/NonDocumentTypeChildNode/previousElementSibling": {
-    "modified": "2019-03-18T21:39:03.666Z",
-    "contributors": [
-      "Sparks"
     ]
   },
   "Web/API/Notifications_API": {
@@ -22152,13 +22062,6 @@
       "Aleksander3007"
     ]
   },
-  "Web/API/NonDocumentTypeChildNode/nextElementSibling": {
-    "modified": "2019-08-16T17:33:57.106Z",
-    "contributors": [
-      "T-p-V",
-      "GoodLuck"
-    ]
-  },
   "Web/API/Crypto/getRandomValues": {
     "modified": "2020-10-15T21:43:20.603Z",
     "contributors": [
@@ -25313,15 +25216,6 @@
       "Aleksej"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/activeElement": {
-    "modified": "2019-03-23T23:07:52.737Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "mrDinckleman",
-      "my8bit"
-    ]
-  },
   "Web/API/DocumentOrShadowRoot/getSelection": {
     "modified": "2019-03-23T22:34:05.751Z",
     "contributors": [
@@ -25987,6 +25881,112 @@
       "cognitive-cake",
       "runicelf",
       "Megapotz"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/hash": {
+    "modified": "2019-03-23T22:27:07.342Z",
+    "contributors": [
+      "tim-zh"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/host": {
+    "modified": "2019-03-23T22:27:14.772Z",
+    "contributors": [
+      "tim-zh"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/hostname": {
+    "modified": "2019-03-23T22:27:14.609Z",
+    "contributors": [
+      "tim-zh"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/href": {
+    "modified": "2019-03-23T22:27:04.617Z",
+    "contributors": [
+      "tim-zh"
+    ]
+  },
+  "orphaned/Web/API/HTMLHyperlinkElementUtils": {
+    "modified": "2019-03-23T22:27:08.817Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/origin": {
+    "modified": "2019-03-23T22:27:01.715Z",
+    "contributors": [
+      "tim-zh"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/password": {
+    "modified": "2019-03-23T22:26:59.020Z",
+    "contributors": [
+      "tim-zh"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/pathname": {
+    "modified": "2019-03-23T22:27:12.811Z",
+    "contributors": [
+      "tim-zh"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/port": {
+    "modified": "2019-03-23T22:27:11.593Z",
+    "contributors": [
+      "tim-zh"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/protocol": {
+    "modified": "2019-03-23T22:27:14.324Z",
+    "contributors": [
+      "tim-zh"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/search": {
+    "modified": "2019-03-23T22:27:12.956Z",
+    "contributors": [
+      "tim-zh"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/toString": {
+    "modified": "2019-03-23T22:26:54.970Z",
+    "contributors": [
+      "tim-zh"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/username": {
+    "modified": "2019-03-23T22:27:13.479Z",
+    "contributors": [
+      "tim-zh"
+    ]
+  },
+  "conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e": {
+    "modified": "2019-03-18T21:43:39.016Z",
+    "contributors": [
+      "fscholz"
+    ]
+  },
+  "Web/API/Element/nextElementSibling": {
+    "modified": "2019-08-16T17:33:57.106Z",
+    "contributors": [
+      "T-p-V",
+      "GoodLuck"
+    ]
+  },
+  "Web/API/Element/previousElementSibling": {
+    "modified": "2019-03-18T21:39:03.666Z",
+    "contributors": [
+      "Sparks"
+    ]
+  },
+  "Web/API/Document/activeElement": {
+    "modified": "2019-03-23T23:07:52.737Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "mrDinckleman",
+      "my8bit"
     ]
   }
 }

@@ -5245,12 +5245,6 @@
       "Mascare"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils": {
-    "modified": "2019-03-23T23:01:38.757Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
   "Web/API/WindowOrWorkerGlobalScope/clearInterval": {
     "modified": "2019-03-23T22:33:02.364Z",
     "contributors": [
@@ -5993,6 +5987,12 @@
       "lazycesar",
       "kdex",
       "alberto.decaro"
+    ]
+  },
+  "orphaned/Web/API/HTMLHyperlinkElementUtils": {
+    "modified": "2019-03-23T23:01:38.757Z",
+    "contributors": [
+      "teoli"
     ]
   }
 }

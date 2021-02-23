@@ -551,12 +551,12 @@
 /pt-BR/docs/Web/API/Document.querySelector	/pt-BR/docs/Web/API/Document/querySelector
 /pt-BR/docs/Web/API/Document.querySelectorAll	/pt-BR/docs/Web/API/Document/querySelectorAll
 /pt-BR/docs/Web/API/Document/ElementoRegistrado	/pt-BR/docs/Web/API/Document/registerElement
-/pt-BR/docs/Web/API/Document/activeElement	/pt-BR/docs/Web/API/DocumentOrShadowRoot/activeElement
 /pt-BR/docs/Web/API/Document/async	/pt-BR/docs/Web/API/XMLDocument/async
 /pt-BR/docs/Web/API/Document/defaultView/popstate_event	/pt-BR/docs/Web/API/Window/popstate_event
 /pt-BR/docs/Web/API/Document/defaultView/resize_event	/pt-BR/docs/Web/API/Window/resize_event
 /pt-BR/docs/Web/API/Document/elementFromPoint	/pt-BR/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
 /pt-BR/docs/Web/API/Document/getSelection	/pt-BR/docs/Web/API/DocumentOrShadowRoot/getSelection
+/pt-BR/docs/Web/API/DocumentOrShadowRoot/activeElement	/pt-BR/docs/Web/API/Document/activeElement
 /pt-BR/docs/Web/API/DocumentoXML	/pt-BR/docs/Web/API/XMLDocument
 /pt-BR/docs/Web/API/Element.addEventListener	/pt-BR/docs/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/Element.getAttribute	/pt-BR/docs/Web/API/Element/getAttribute
@@ -626,7 +626,8 @@
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Utilizando_o_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 /pt-BR/docs/Web/Accessibility/ARIA/Guia_para_implementar_o_leitor_de_tela_ARIA	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /pt-BR/docs/Web/Accessibility/ARIA/forms/Dicas_básicas_de_form	/pt-BR/docs/Web/Accessibility/ARIA/forms/Basic_form_hints
-/pt-BR/docs/Web/Accessibility/ARIA/widgets/Visão_geral	/pt-BR/docs/Web/Accessibility/ARIA/widgets/overview
+/pt-BR/docs/Web/Accessibility/ARIA/widgets/Visão_geral	/pt-BR/docs/conflicting/Web/Accessibility/ARIA/widgets
+/pt-BR/docs/Web/Accessibility/ARIA/widgets/overview	/pt-BR/docs/conflicting/Web/Accessibility/ARIA/widgets
 /pt-BR/docs/Web/Acessibilidade	/pt-BR/docs/Web/Accessibility
 /pt-BR/docs/Web/Acessibilidade/Accessibilidade_para_plataforma_movel	/pt-BR/docs/Web/Accessibility/Mobile_accessibility_checklist
 /pt-BR/docs/Web/Acessibilidade/An_overview_of_accessible_web_applications_and_widgets	/pt-BR/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets

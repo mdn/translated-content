@@ -15239,13 +15239,6 @@
       "caio.rrs"
     ]
   },
-  "Web/Accessibility/ARIA/widgets/overview": {
-    "modified": "2019-03-23T22:29:34.759Z",
-    "contributors": [
-      "Aschlla",
-      "caio.rrs"
-    ]
-  },
   "Web/Accessibility/Mobile_accessibility_checklist": {
     "modified": "2019-03-18T21:15:58.279Z",
     "contributors": [
@@ -16965,15 +16958,6 @@
       "Fernandolrs"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/activeElement": {
-    "modified": "2019-03-23T22:24:43.471Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "fernandosavio",
-      "DiegoYungh"
-    ]
-  },
   "Web/API/DocumentOrShadowRoot/elementFromPoint": {
     "modified": "2019-03-23T22:29:17.399Z",
     "contributors": [
@@ -17366,6 +17350,22 @@
     "contributors": [
       "Fernandolrs",
       "Sheppy"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA/widgets": {
+    "modified": "2019-03-23T22:29:34.759Z",
+    "contributors": [
+      "Aschlla",
+      "caio.rrs"
+    ]
+  },
+  "Web/API/Document/activeElement": {
+    "modified": "2019-03-23T22:24:43.471Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz",
+      "fernandosavio",
+      "DiegoYungh"
     ]
   }
 }

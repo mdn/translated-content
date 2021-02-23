@@ -15796,84 +15796,6 @@
       "ethertank"
     ]
   },
-  "Web/API/HTMLHyperlinkElementUtils": {
-    "modified": "2020-10-15T22:23:06.944Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/hash": {
-    "modified": "2020-10-15T22:23:05.133Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/host": {
-    "modified": "2020-10-15T22:23:05.592Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/hostname": {
-    "modified": "2020-10-15T22:23:07.472Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/href": {
-    "modified": "2020-10-15T22:23:04.877Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/origin": {
-    "modified": "2020-10-15T22:23:07.057Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/password": {
-    "modified": "2020-10-15T22:23:11.065Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/pathname": {
-    "modified": "2020-10-15T22:23:11.921Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/port": {
-    "modified": "2020-10-15T22:23:11.557Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/protocol": {
-    "modified": "2020-10-15T22:23:12.187Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/search": {
-    "modified": "2020-10-15T22:23:10.982Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/toString": {
-    "modified": "2020-10-15T22:23:12.912Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/username": {
-    "modified": "2020-10-15T22:23:12.962Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/HTMLIFrameElement": {
     "modified": "2019-07-30T13:30:00.677Z",
     "contributors": [
@@ -18985,12 +18907,6 @@
       "fscholz",
       "khalid32",
       "Okome"
-    ]
-  },
-  "Web/API/NonDocumentTypeChildNode": {
-    "modified": "2020-11-23T04:18:54.717Z",
-    "contributors": [
-      "segayuu"
     ]
   },
   "Web/API/Notification": {
@@ -26075,12 +25991,6 @@
     "modified": "2019-01-17T03:02:23.841Z",
     "contributors": [
       "julianosilvaa"
-    ]
-  },
-  "Web/Accessibility/ARIA/widgets/overview": {
-    "modified": "2019-03-18T21:35:01.506Z",
-    "contributors": [
-      "Uemmra3"
     ]
   },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
@@ -52926,17 +52836,6 @@
       "Okome"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/activeElement": {
-    "modified": "2019-03-23T23:52:39.067Z",
-    "contributors": [
-      "mfuji09",
-      "wbamberg",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Kohei"
-    ]
-  },
   "Web/API/DocumentOrShadowRoot/elementFromPoint": {
     "modified": "2019-03-23T23:50:29.105Z",
     "contributors": [
@@ -53495,6 +53394,107 @@
     "modified": "2019-03-23T23:31:15.481Z",
     "contributors": [
       "ethertank"
+    ]
+  },
+  "conflicting/Web/Accessibility/ARIA/widgets": {
+    "modified": "2019-03-18T21:35:01.506Z",
+    "contributors": [
+      "Uemmra3"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/hash": {
+    "modified": "2020-10-15T22:23:05.133Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/host": {
+    "modified": "2020-10-15T22:23:05.592Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/hostname": {
+    "modified": "2020-10-15T22:23:07.472Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/href": {
+    "modified": "2020-10-15T22:23:04.877Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "orphaned/Web/API/HTMLHyperlinkElementUtils": {
+    "modified": "2020-10-15T22:23:06.944Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/origin": {
+    "modified": "2020-10-15T22:23:07.057Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/password": {
+    "modified": "2020-10-15T22:23:11.065Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/pathname": {
+    "modified": "2020-10-15T22:23:11.921Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/port": {
+    "modified": "2020-10-15T22:23:11.557Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/protocol": {
+    "modified": "2020-10-15T22:23:12.187Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/search": {
+    "modified": "2020-10-15T22:23:10.982Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/toString": {
+    "modified": "2020-10-15T22:23:12.912Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/username": {
+    "modified": "2020-10-15T22:23:12.962Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e": {
+    "modified": "2020-11-23T04:18:54.717Z",
+    "contributors": [
+      "segayuu"
+    ]
+  },
+  "Web/API/Document/activeElement": {
+    "modified": "2019-03-23T23:52:39.067Z",
+    "contributors": [
+      "mfuji09",
+      "wbamberg",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "Kohei"
     ]
   }
 }

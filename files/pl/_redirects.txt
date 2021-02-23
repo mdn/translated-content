@@ -320,7 +320,7 @@
 /pl/docs/DOM/dispatchEvent_-_przykład	/pl/docs/Web/Guide/Events/Creating_and_triggering_events
 /pl/docs/DOM/document	/pl/docs/Web/API/Document
 /pl/docs/DOM/document.URL	/pl/docs/Web/API/Document/URL
-/pl/docs/DOM/document.activeElement	/pl/docs/Web/API/DocumentOrShadowRoot/activeElement
+/pl/docs/DOM/document.activeElement	/pl/docs/Web/API/Document/activeElement
 /pl/docs/DOM/document.alinkColor	/pl/docs/Web/API/Document/alinkColor
 /pl/docs/DOM/document.anchors	/pl/docs/Web/API/Document/anchors
 /pl/docs/DOM/document.applets	/pl/docs/Web/API/Document/applets
@@ -568,7 +568,7 @@
 /pl/docs/DOM:dispatchEvent_-_przykład	/pl/docs/Web/Guide/Events/Creating_and_triggering_events
 /pl/docs/DOM:document	/pl/docs/Web/API/Document
 /pl/docs/DOM:document.URL	/pl/docs/Web/API/Document/URL
-/pl/docs/DOM:document.activeElement	/pl/docs/Web/API/DocumentOrShadowRoot/activeElement
+/pl/docs/DOM:document.activeElement	/pl/docs/Web/API/Document/activeElement
 /pl/docs/DOM:document.alinkColor	/pl/docs/Web/API/Document/alinkColor
 /pl/docs/DOM:document.anchors	/pl/docs/Web/API/Document/anchors
 /pl/docs/DOM:document.applets	/pl/docs/Web/API/Document/applets
@@ -1927,10 +1927,10 @@
 /pl/docs/Web/API/AudioContext/createDynamicsCompressor	/pl/docs/Web/API/BaseAudioContext/createDynamicsCompressor
 /pl/docs/Web/API/Canvas_API/Tutorial/Optymalizacja_canvas	/pl/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /pl/docs/Web/API/Canvas_API/Tutorial/rysowanie_ksztaltow	/pl/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
-/pl/docs/Web/API/Document/activeElement	/pl/docs/Web/API/DocumentOrShadowRoot/activeElement
 /pl/docs/Web/API/Document/firstChild	/pl/docs/conflicting/Web/API/Node/firstChild
 /pl/docs/Web/API/Document/namespaceURI	/pl/docs/conflicting/Web/API/Node/namespaceURI
 /pl/docs/Web/API/Document/styleSheets	/pl/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/pl/docs/Web/API/DocumentOrShadowRoot/activeElement	/pl/docs/Web/API/Document/activeElement
 /pl/docs/Web/API/Element/addEventListener	/pl/docs/Web/API/EventTarget/addEventListener
 /pl/docs/Web/API/Element/appendChild	/pl/docs/Web/API/Node/appendChild
 /pl/docs/Web/API/Element/blur	/pl/docs/Web/API/HTMLOrForeignElement/blur

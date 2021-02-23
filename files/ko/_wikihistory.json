@@ -3620,13 +3620,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/activeElement": {
-    "modified": "2020-10-15T22:26:23.654Z",
-    "contributors": [
-      "alattalatta",
-      "composite"
-    ]
-  },
   "Web/API/DocumentOrShadowRoot/styleSheets": {
     "modified": "2020-10-15T22:11:37.061Z",
     "contributors": [
@@ -4406,18 +4399,6 @@
       "jsx",
       "teoli",
       "Netaras"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils": {
-    "modified": "2020-10-15T22:15:23.043Z",
-    "contributors": [
-      "connorshea"
-    ]
-  },
-  "Web/API/HTMLHyperlinkElementUtils/href": {
-    "modified": "2020-10-15T22:15:22.693Z",
-    "contributors": [
-      "alattalatta"
     ]
   },
   "Web/API/HTMLLIElement": {
@@ -18703,6 +18684,25 @@
     "modified": "2019-01-16T16:14:51.504Z",
     "contributors": [
       "Sebuls"
+    ]
+  },
+  "Web/API/Document/activeElement": {
+    "modified": "2020-10-15T22:26:23.654Z",
+    "contributors": [
+      "alattalatta",
+      "composite"
+    ]
+  },
+  "Web/API/HTMLAnchorElement/href": {
+    "modified": "2020-10-15T22:15:22.693Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "orphaned/Web/API/HTMLHyperlinkElementUtils": {
+    "modified": "2020-10-15T22:15:23.043Z",
+    "contributors": [
+      "connorshea"
     ]
   }
 }
