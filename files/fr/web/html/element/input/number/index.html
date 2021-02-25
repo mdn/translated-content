@@ -270,7 +270,6 @@ input:valid+span:after {
         &lt;input id="meters" type="number" name="meters" step="0.01" min="0" placeholder="e.g. 1.78" required&gt;
         &lt;span class="validity"&gt;&lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class="feetInputGroup" style="display: none;"&gt;
         &lt;span&gt;Saisir votre taille — &lt;/span&gt;
         &lt;label for="feet"&gt;feet :&lt;/label&gt;
         &lt;input id="feet" type="number" name="feet" min="0" step="1"&gt;
@@ -289,7 +288,7 @@ input:valid+span:after {
 
 <p>Ici on utilise l'attribut <code>step</code> avec la valeur <code>0.01</code> afin d'accepter une taille en centimètres. On fournit également un texte indicatif via <code>placeholder</code>.</p>
 
-<p>Par défaut on masque la saisie en pieds avec <code>style="display: none;"</code>.</p>
+<p>Par défaut on masque la saisie en pieds avec <code>class="hidden"</code>.</p>
 
 <h3 id="CSS">CSS</h3>
 

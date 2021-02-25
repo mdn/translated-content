@@ -39,7 +39,6 @@ background-blend-mode: unset;
 
 <h2 id="Examples" name="Examples">Ejemplos</h2>
 
-<pre class="brush: html" style="display: none;">&lt;div id="div"&gt;&lt;/div&gt;
 &lt;select id="select"&gt;
     &lt;option&gt;normal&lt;/option&gt;
     &lt;option&gt;multiply&lt;/option&gt;
@@ -59,14 +58,14 @@ background-blend-mode: unset;
     &lt;option&gt;luminosity&lt;/option&gt;
 &lt;/select&gt;</pre>
 
-<pre class="brush: css" style="display: none;">#div {
+<pre class="brush: css" class="hidden">#div {
     width: 300px;
     height: 300px;
     background: url('https://mdn.mozillademos.org/files/8543/br.png'),url('https://mdn.mozillademos.org/files/8545/tr.png');
     background-blend-mode: screen;
 }</pre>
 
-<pre class="brush: js" style="display: none;">document.getElementById("select").onchange = function(event) {
+<pre class="brush: js" class="hidden">document.getElementById("select").onchange = function(event) {
     document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
 }
 console.log(document.getElementById('div'));</pre>

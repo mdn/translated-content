@@ -90,7 +90,6 @@ new Promise(function(resolve, reject) { ... });</pre>
 
 <h3 id="Einen_Promise_erstellen">Einen Promise erstellen</h3>
 
-<pre class="brush: html notranslate" style="display: none;">&lt;button id="btn"&gt;Make a promise!&lt;/button&gt;
 &lt;div id="log"&gt;&lt;/div&gt;
 </pre>
 
@@ -134,7 +133,7 @@ function testPromise() {
 }
 </pre>
 
-<pre class="brush:js notranslate" style="display: none;">if ("Promise" in window) {
+<pre class="brush:js notranslate" class="hidden">if ("Promise" in window) {
   btn = document.getElementById("btn");
    btn.addEventListener("click",testPromise);
 }
