@@ -201,7 +201,7 @@ window.confirm("Are you sure?"); // calls the original window.confirm()</pre>
 <div class="blockIndicator note">
 <p>Firefox では、コンテンツスクリプトの (例えば、<code><a href="/ja/docs/Web/API/Fetch_API/Using_Fetch">fetch()</a></code> を使った) リクエストは、拡張機能のコンテキストで起こるので、ページコンテンツを参照する URL を絶対URL で提供せねばなりません。</p>
 
-<p>Chrome では、リクエストはページのコンテ<span style="display: none;"> </span>キストで起こるので、相対 URL で行われます。例えば、<code>/api</code> は <code>https://[現在のペー<span style="display: none;"> </span>ジの URL]/api</code> に送られます。</p>
+<p>Chrome では、リクエストはページのコンテ<span class="hidden"> </span>キストで起こるので、相対 URL で行われます。例えば、<code>/api</code> は <code>https://[現在のペー<span class="hidden"> </span>ジの URL]/api</code> に送られます。</p>
 </div>
 
 <p>コンテンツスクリプトは拡張機能の他の部分と同一のクロスドメイン権限を取得します: よって拡張機能が <code>manifest.json</code> の <code><a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> キーを使ってあるドメインのクロスドメインアクセスを要求している場合、コンテンツスクリプトも同様にそのドメインのアクセスを取得します。</p>

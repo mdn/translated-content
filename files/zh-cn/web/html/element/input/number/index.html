@@ -233,7 +233,6 @@ input:valid+span:after {
         &lt;input id="meters" type="number" name="meters" step="0.01" min="0" placeholder="e.g. 1.78" required&gt;
         &lt;span class="validity"&gt;&lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class="feetInputGroup" style="display: none;"&gt;
         &lt;span&gt;Enter your height — &lt;/span&gt;
         &lt;label for="feet"&gt;feet:&lt;/label&gt;
         &lt;input id="feet" type="number" name="feet" min="0" step="1"&gt;
@@ -252,7 +251,7 @@ input:valid+span:after {
 
 <p>You'll see that we are using many of the attributes we've already looked at in the article earlier on. Since we want to accept a meter value in centimeters, we've set the <code>step</code> value to <code>0.01</code>, so that values like 1.78 are not seen as invalid. We've also provided a placeholder for that input.</p>
 
-<p>We've hidden the feet and inches inputs initially using <code>style="display: none;"</code> so that meters is the default entry type.</p>
+<p>We've hidden the feet and inches inputs initially using <code>class="hidden"</code> so that meters is the default entry type.</p>
 
 <p>Now on to the CSS — this looks very similar to the validation styling we saw before; nothing remarkable here:</p>
 

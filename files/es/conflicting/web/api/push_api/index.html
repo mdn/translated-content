@@ -74,7 +74,7 @@ original_slug: Web/API/Push_API/Using_the_Push_API
  <li>Over in your service worker, set up a <code>push</code> event handler to respond to push messages being received.
   <ol>
    <li>If you want to respond by sending a channel message back to the main context (see Step 6) you need to first get a reference to the <code>port2</code> we sent over to the service worker context ({{domxref("MessagePort")}}). This is available on the {{domxref("MessageEvent")}} object passed to the <code>onmessage</code> handler ({{domxref("ServiceWorkerGlobalScope.onmessage")}}). Specifically, this is found in the <code>ports</code> property, index 0. Once this is done, you can send a message back to <code>port1</code>, using {{domxref("MessagePort.postMessage()")}}.</li>
-   <li>If you want to respond by firing a system notification, you can do this by calling {{domxref("ServiceWorkerRegistration.showNotification()")}}. Note that in our code we have run this inside an {{domxref("ExtendableEvent.waitUntil()")}} method — this extends the lifetime of the event until after the notification has been fired, so we can make sure everything has happened that we want to happen.<span id="cke_bm_307E" style="display: none;"> </span></li>
+   <li>If you want to respond by firing a system notification, you can do this by calling {{domxref("ServiceWorkerRegistration.showNotification()")}}. Note that in our code we have run this inside an {{domxref("ExtendableEvent.waitUntil()")}} method — this extends the lifetime of the event until after the notification has been fired, so we can make sure everything has happened that we want to happen.<span id="cke_bm_307E" class="hidden"> </span></li>
   </ol>
  </li>
 </ol>

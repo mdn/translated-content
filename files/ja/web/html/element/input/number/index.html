@@ -315,7 +315,6 @@ input:valid+span:after {
         &lt;input id="meters" type="number" name="meters" step="0.01" min="0" placeholder="例 1.78" required&gt;
         &lt;span class="validity"&gt;&lt;/span&gt;
     &lt;/div&gt;
-    &lt;div class="feetInputGroup" style="display: none;"&gt;
         &lt;span&gt;あなたの身長を入力してください — &lt;/span&gt;
         &lt;label for="feet"&gt;フィート:&lt;/label&gt;
         &lt;input id="feet" type="number" name="feet" min="0" step="1"&gt;
@@ -334,7 +333,7 @@ input:valid+span:after {
 
 <p>これまでの記事ですでに見てきた属性の多くを使用していることがわかります。センチメートル単位のメートル値を受け入れるため、 <code>step</code> の値を <code>0.01</code> に設定して、 <em>1.78</em> のような値が無効とされないようにしました。また、その入力欄のプレイスホルダーも提供しました。</p>
 
-<p>最初はフィートとインチの入力欄を <code>style="display: none;"</code> を使用して非表示にしているため、既定はメートルでの入力です。</p>
+<p>最初はフィートとインチの入力欄を <code>class="hidden"</code> を使用して非表示にしているため、既定はメートルでの入力です。</p>
 
 <p>次に、 CSS に進みます。これは、以前に見た検証のスタイル付けととても良く似ています。ここで注目するところはありません。</p>
 

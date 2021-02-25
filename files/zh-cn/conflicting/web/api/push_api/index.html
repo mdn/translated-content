@@ -75,7 +75,7 @@ original_slug: Web/API/Push_API/Using_the_Push_API
  <li>在你的 service worker 中，设置一个 <code>push</code> 事件句柄来响应接收到的推送消息。
   <ol>
    <li>如果你想要将一个信道消息发送回主 context（看第6步），你需要先取得之前发送给 service worker 的  <code>port2</code> 的引用 ({{domxref("MessagePort")}}) 。这个可以通过传给 <code>onmessage</code> handler ({{domxref("ServiceWorkerGlobalScope.onmessage")}}) 的{{domxref("MessageEvent")}} 对象取得。 具体地说，是 <code>ports</code> 属性的索引 0 。 之后你可以用 {{domxref("MessagePort.postMessage()")}} 来向 <code>port1</code> 发送消息 。</li>
-   <li>如果你想要使用系统通知，可以调用 {{domxref("ServiceWorkerRegistration.showNotification()")}} 。注意，在我们的代码中，我们将其运行在一个 {{domxref("ExtendableEvent.waitUntil()")}} 方法中——这样做将事件的 生命周期（lifetime）扩展到了通知被处理后，使得我们可以确认事情像我们期望的那样进行。<span id="cke_bm_307E" style="display: none;"> </span></li>
+   <li>如果你想要使用系统通知，可以调用 {{domxref("ServiceWorkerRegistration.showNotification()")}} 。注意，在我们的代码中，我们将其运行在一个 {{domxref("ExtendableEvent.waitUntil()")}} 方法中——这样做将事件的 生命周期（lifetime）扩展到了通知被处理后，使得我们可以确认事情像我们期望的那样进行。<span id="cke_bm_307E" class="hidden"> </span></li>
   </ol>
  </li>
 </ol>
