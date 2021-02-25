@@ -56,7 +56,7 @@
 /ja/docs/API/Document/fgColor	/ja/docs/Web/API/Document/fgColor
 /ja/docs/API/Document/forms	/ja/docs/Web/API/Document/forms
 /ja/docs/API/Document/fullscreen	/ja/docs/Web/API/Document/fullscreen
-/ja/docs/API/Document/fullscreenElement	/ja/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/ja/docs/API/Document/fullscreenElement	/ja/docs/Web/API/Document/fullscreenElement
 /ja/docs/API/Document/fullscreenEnabled	/ja/docs/Web/API/Document/fullscreenEnabled
 /ja/docs/API/Document/getBoxObjectFor	/ja/docs/Web/API/Document/getBoxObjectFor
 /ja/docs/API/Document/getElementById	/ja/docs/Web/API/Document/getElementById
@@ -3322,7 +3322,7 @@
 /ja/docs/MDN/Contribute/Tools/Page_watching	/ja/docs/orphaned/MDN/Tools/Page_watching
 /ja/docs/MDN/Contribute/Tools/Revision_dashboard	/ja/docs/orphaned/MDN/Tools/Revision_dashboard
 /ja/docs/MDN/Contribute/Tools/Sample_server	/ja/docs/MDN/Tools/Sample_server
-/ja/docs/MDN/Contribute/Tools/Search	/ja/docs/MDN/Tools/Search
+/ja/docs/MDN/Contribute/Tools/Search	/ja/docs/orphaned/MDN/Tools/Search
 /ja/docs/MDN/Contribute/Tools/Template_editing	/ja/docs/orphaned/MDN/Tools/Template_editing
 /ja/docs/MDN/Contribute/Tools/Zones	/ja/docs/MDN/Tools/Zones
 /ja/docs/MDN/Contribute/Troubleshooting	/ja/docs/orphaned/MDN/Troubleshooting
@@ -3362,10 +3362,11 @@
 /ja/docs/MDN/Tools/Page_regeneration	/ja/docs/orphaned/MDN/Tools/Page_regeneration
 /ja/docs/MDN/Tools/Page_watching	/ja/docs/orphaned/MDN/Tools/Page_watching
 /ja/docs/MDN/Tools/Revision_dashboard	/ja/docs/orphaned/MDN/Tools/Revision_dashboard
+/ja/docs/MDN/Tools/Search	/ja/docs/orphaned/MDN/Tools/Search
 /ja/docs/MDN/Tools/Template_editing	/ja/docs/orphaned/MDN/Tools/Template_editing
 /ja/docs/MDN/Troubleshooting	/ja/docs/orphaned/MDN/Troubleshooting
 /ja/docs/MDN/User_guide	/ja/docs/MDN/Tools
-/ja/docs/MDN/User_guide/Advanced_search	/ja/docs/MDN/Tools/Search
+/ja/docs/MDN/User_guide/Advanced_search	/ja/docs/orphaned/MDN/Tools/Search
 /ja/docs/MDN/User_guide/Deleting_pages	/ja/docs/orphaned/MDN/Tools/Page_deletion
 /ja/docs/MDN/User_guide/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
@@ -3745,13 +3746,13 @@
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
 /ja/docs/Web/API/Document/domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/elementFromPoint	/ja/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
-/ja/docs/Web/API/Document/fullscreenElement	/ja/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
 /ja/docs/Web/API/Document/getAnimations	/ja/docs/Web/API/DocumentOrShadowRoot/getAnimations
 /ja/docs/Web/API/Document/getSelection	/ja/docs/conflicting/Web/API/DocumentOrShadowRoot/getSelection
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/conflicting/Web/API/Document/characterSet
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/GlobalEventHandlers/onselectionchange
 /ja/docs/Web/API/Document/styleSheets	/ja/docs/Web/API/DocumentOrShadowRoot/styleSheets
 /ja/docs/Web/API/DocumentOrShadowRoot/activeElement	/ja/docs/Web/API/Document/activeElement
+/ja/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/ja/docs/Web/API/Document/fullscreenElement
 /ja/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint	/ja/docs/conflicting/Web/API/DocumentOrShadowRoot
 /ja/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/ja/docs/conflicting/Web/API/DocumentOrShadowRoot_20ea0e1d91453a020aad3a16dbce16f1
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/conflicting/Web/API/Document_Object_Model_8435a25d5137b436d5d7161e1b813c02
@@ -3998,6 +3999,7 @@
 /ja/docs/Web/API/WindowTimers/setInterval	/ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/WindowOrWorkerGlobalScope/caches
+/ja/docs/Web/API/XMLHttpRequest/openRequest	/ja/docs/orphaned/Web/API/XMLHttpRequest/openRequest
 /ja/docs/Web/API/console.dir	/ja/docs/Web/API/Console/dir
 /ja/docs/Web/API/console.log	/ja/docs/Web/API/Console/log
 /ja/docs/Web/API/console.time	/ja/docs/Web/API/Console/time

@@ -340,9 +340,10 @@
 /ru/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/ru/docs/MDN/Tools/KumaScript/Troubleshooting
 /ru/docs/MDN/Structures/Live_samples/Simple_live_sample_demo	/ru/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
 /ru/docs/MDN/Tools/Page_watching	/ru/docs/orphaned/MDN/Tools/Page_watching
+/ru/docs/MDN/Tools/Search	/ru/docs/orphaned/MDN/Tools/Search
 /ru/docs/MDN/Tools/URL-suffix	/ru/docs/MDN/Tools/Unsupported_GET_API
 /ru/docs/MDN/User_guide	/ru/docs/conflicting/MDN/Tools
-/ru/docs/MDN/User_guide/Advanced_search	/ru/docs/MDN/Tools/Search
+/ru/docs/MDN/User_guide/Advanced_search	/ru/docs/orphaned/MDN/Tools/Search
 /ru/docs/MDN/User_guide/Deleting_pages	/ru/docs/orphaned/MDN/Tools/Page_deletion
 /ru/docs/MDN/User_guide/Feeds	/ru/docs/orphaned/MDN/Tools/Feeds
 /ru/docs/MDN/User_guide/Linking_to_MDN	/ru/docs/orphaned/MDN/About/Linking_to_MDN

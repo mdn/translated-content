@@ -21607,13 +21607,6 @@
       "ksam"
     ]
   },
-  "MDN/Tools/Search": {
-    "modified": "2019-03-23T23:07:10.929Z",
-    "contributors": [
-      "wbamberg",
-      "Mingun"
-    ]
-  },
   "orphaned/MDN/Tools/Page_deletion": {
     "modified": "2019-01-16T19:44:31.713Z",
     "contributors": [
@@ -25987,6 +25980,13 @@
       "fscholz",
       "mrDinckleman",
       "my8bit"
+    ]
+  },
+  "orphaned/MDN/Tools/Search": {
+    "modified": "2019-03-23T23:07:10.929Z",
+    "contributors": [
+      "wbamberg",
+      "Mingun"
     ]
   }
 }

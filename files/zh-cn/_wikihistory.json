@@ -22785,12 +22785,6 @@
       "maicss"
     ]
   },
-  "Web/API/XMLHttpRequest/openRequest": {
-    "modified": "2019-03-18T21:28:11.436Z",
-    "contributors": [
-      "Arktische"
-    ]
-  },
   "Web/API/XMLHttpRequest/overrideMimeType": {
     "modified": "2020-10-15T22:03:22.512Z",
     "contributors": [
@@ -47158,14 +47152,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/fullscreenElement": {
-    "modified": "2019-03-24T00:17:55.698Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "ziyunfei"
-    ]
-  },
   "Web/API/Document/fullscreenEnabled": {
     "modified": "2019-03-24T00:17:54.483Z",
     "contributors": [
@@ -50797,6 +50783,20 @@
       "teoli",
       "khalid32",
       "ziyunfei"
+    ]
+  },
+  "Web/API/Document/fullscreenElement": {
+    "modified": "2019-03-24T00:17:55.698Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "ziyunfei"
+    ]
+  },
+  "orphaned/Web/API/XMLHttpRequest/openRequest": {
+    "modified": "2019-03-18T21:28:11.436Z",
+    "contributors": [
+      "Arktische"
     ]
   }
 }
