@@ -406,7 +406,7 @@
 /zh-CN/docs/DOM/document.linkColor	/zh-CN/docs/Web/API/Document/linkColor
 /zh-CN/docs/DOM/document.load	/zh-CN/docs/Web/API/XMLDocument/load
 /zh-CN/docs/DOM/document.mozFullScreen	/zh-CN/docs/Web/API/Document/fullscreen
-/zh-CN/docs/DOM/document.mozFullScreenElement	/zh-CN/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/zh-CN/docs/DOM/document.mozFullScreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
 /zh-CN/docs/DOM/document.mozFullScreenEnabled	/zh-CN/docs/Web/API/Document/fullscreenEnabled
 /zh-CN/docs/DOM/document.onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/DOM/document.readyState	/zh-CN/docs/Web/API/Document/readyState
@@ -1487,13 +1487,14 @@
 /zh-CN/docs/Web/API/Document/getSelection	/zh-CN/docs/conflicting/Web/API/DocumentOrShadowRoot/getSelection
 /zh-CN/docs/Web/API/Document/inputEncoding	/zh-CN/docs/conflicting/Web/API/Document/characterSet
 /zh-CN/docs/Web/API/Document/mozFullScreen	/zh-CN/docs/Web/API/Document/fullscreen
-/zh-CN/docs/Web/API/Document/mozFullScreenElement	/zh-CN/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/zh-CN/docs/Web/API/Document/mozFullScreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
 /zh-CN/docs/Web/API/Document/mozFullScreenEnabled	/zh-CN/docs/Web/API/Document/fullscreenEnabled
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
 /zh-CN/docs/Web/API/Document/pointerLockElement	/zh-CN/docs/Web/API/DocumentOrShadowRoot/pointerLockElement
 /zh-CN/docs/Web/API/Document/rouchmove_event	/zh-CN/docs/Web/API/Document/touchmove_event
 /zh-CN/docs/Web/API/Document/styleSheets	/zh-CN/docs/conflicting/Web/API/DocumentOrShadowRoot/styleSheets
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/activeElement	/zh-CN/docs/Web/API/Document/activeElement
+/zh-CN/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
 /zh-CN/docs/Web/API/Document_Object_Model/Preface	/zh-CN/docs/conflicting/Web/API/Document_Object_Model
 /zh-CN/docs/Web/API/Element.classList	/zh-CN/docs/Web/API/Element/classList
 /zh-CN/docs/Web/API/Element.className	/zh-CN/docs/Web/API/Element/className
@@ -1865,6 +1866,7 @@
 /zh-CN/docs/Web/API/WindowTimers/clearTimeout	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout
 /zh-CN/docs/Web/API/XMLDocument.load	/zh-CN/docs/Web/API/XMLDocument/load
 /zh-CN/docs/Web/API/XMLHttpRequest/FormData	/zh-CN/docs/Web/API/FormData
+/zh-CN/docs/Web/API/XMLHttpRequest/openRequest	/zh-CN/docs/orphaned/Web/API/XMLHttpRequest/openRequest
 /zh-CN/docs/Web/API/console.dir	/zh-CN/docs/Web/API/Console/dir
 /zh-CN/docs/Web/API/console.group	/zh-CN/docs/Web/API/Console/group
 /zh-CN/docs/Web/API/console.groupCollapsed	/zh-CN/docs/Web/API/Console/groupCollapsed
@@ -1913,7 +1915,7 @@
 /zh-CN/docs/Web/API/document.links	/zh-CN/docs/Web/API/Document/links
 /zh-CN/docs/Web/API/document.location	/zh-CN/docs/Web/API/Document/location
 /zh-CN/docs/Web/API/document.mozFullScreen	/zh-CN/docs/Web/API/Document/fullscreen
-/zh-CN/docs/Web/API/document.mozFullScreenElement	/zh-CN/docs/Web/API/DocumentOrShadowRoot/fullscreenElement
+/zh-CN/docs/Web/API/document.mozFullScreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
 /zh-CN/docs/Web/API/document.mozFullScreenEnabled	/zh-CN/docs/Web/API/Document/fullscreenEnabled
 /zh-CN/docs/Web/API/document.querySelector	/zh-CN/docs/Web/API/Document/querySelector
 /zh-CN/docs/Web/API/document.readyState	/zh-CN/docs/Web/API/Document/readyState

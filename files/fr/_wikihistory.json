@@ -14492,13 +14492,6 @@
       "ThCarrere"
     ]
   },
-  "Web/API/XMLHttpRequest/sendAsBinary": {
-    "modified": "2020-10-15T22:26:07.337Z",
-    "contributors": [
-      "SphinxKnight",
-      "MasterFox"
-    ]
-  },
   "Web/API/XMLHttpRequest/setRequestHeader": {
     "modified": "2020-10-15T22:22:04.139Z",
     "contributors": [
@@ -46001,6 +45994,13 @@
       "AshfaqHossain",
       "Mgjbot",
       "BenoitL"
+    ]
+  },
+  "orphaned/Web/API/XMLHttpRequest/sendAsBinary": {
+    "modified": "2020-10-15T22:26:07.337Z",
+    "contributors": [
+      "SphinxKnight",
+      "MasterFox"
     ]
   }
 }

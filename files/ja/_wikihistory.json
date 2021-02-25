@@ -6149,17 +6149,6 @@
       "hamasaki"
     ]
   },
-  "MDN/Tools/Search": {
-    "modified": "2020-09-30T16:50:21.247Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki",
-      "dynamis"
-    ]
-  },
   "Mozilla": {
     "modified": "2020-08-10T23:23:31.255Z",
     "contributors": [
@@ -12758,13 +12747,6 @@
     "modified": "2020-10-15T22:29:40.404Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "Web/API/DocumentOrShadowRoot/fullscreenElement": {
-    "modified": "2020-10-15T21:46:47.293Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
     ]
   },
   "Web/API/DocumentOrShadowRoot/getSelection": {
@@ -25095,12 +25077,6 @@
     "contributors": [
       "mfuji09",
       "yuta0801"
-    ]
-  },
-  "Web/API/XMLHttpRequest/openRequest": {
-    "modified": "2020-07-29T10:05:34.264Z",
-    "contributors": [
-      "eltociear"
     ]
   },
   "Web/API/XMLHttpRequest/progress_event": {
@@ -53495,6 +53471,30 @@
       "khalid32",
       "ethertank",
       "Kohei"
+    ]
+  },
+  "orphaned/MDN/Tools/Search": {
+    "modified": "2020-09-30T16:50:21.247Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "wbamberg",
+      "Uemmra3",
+      "hamasaki",
+      "dynamis"
+    ]
+  },
+  "Web/API/Document/fullscreenElement": {
+    "modified": "2020-10-15T21:46:47.293Z",
+    "contributors": [
+      "mfuji09",
+      "yyss"
+    ]
+  },
+  "orphaned/Web/API/XMLHttpRequest/openRequest": {
+    "modified": "2020-07-29T10:05:34.264Z",
+    "contributors": [
+      "eltociear"
     ]
   }
 }
