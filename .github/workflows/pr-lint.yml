@@ -20,11 +20,6 @@ jobs:
         with:
           repository: mdn/content
           path: mdn/content
-          # Yes, this means fetch EVERY COMMIT EVER.
-          # It's probably not sustainable in the far future (e.g. past 2021)
-          # but for now it's good enough. We'll need all the history
-          # so we can figure out each document's last-modified date.
-          fetch-depth: 0
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
@@ -32,13 +27,11 @@ jobs:
           node-version: "12"
 
       - name: Install all yarn packages
+        working-directory: ${{ github.workspace }}/mdn/content/pr-lint
         run: |
-          cd $GITHUB_WORKSPACE/mdn/content/
-          cd pr-lint
           yarn --frozen-lockfile
 
       - name: Run checks
+        working-directory: ${{ github.workspace }}/mdn/content/pr-lint
         run: |
-          cd $GITHUB_WORKSPACE/mdn/content/
-          cd pr-lint
           yarn run check

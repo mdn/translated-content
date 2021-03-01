@@ -27,11 +27,6 @@ jobs:
         with:
           repository: mdn/content
           path: mdn/content
-          # Yes, this means fetch EVERY COMMIT EVER.
-          # It's probably not sustainable in the far future (e.g. past 2021)
-          # but for now it's good enough. We'll need all the history
-          # so we can figure out each document's last-modified date.
-          fetch-depth: 0
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
@@ -48,8 +43,8 @@ jobs:
 
       - name: Install all yarn packages
         if: steps.cached-node_modules.outputs.cache-hit != 'true'
+        working-directory: ${{ github.workspace }}/mdn/content
         run: |
-          cd $GITHUB_WORKSPACE/mdn/content/
           yarn --frozen-lockfile
 
       - uses: technote-space/get-diff-action@v4.0.5
@@ -60,10 +55,12 @@ jobs:
 
       - name: Build changed content
         if: ${{ env.GIT_DIFF_CONTENT }}
+        env:
+          content_root: ${{ github.workspace }}/mdn/content/files
+          content_translated_root: ${{ github.workspace }}/files
+        working-directory: ${{ github.workspace }}/mdn/content
         run: |
           echo ${{ env.GIT_DIFF_CONTENT }}
-          export CONTENT_ROOT=$GITHUB_WORKSPACE/mdn/content/files
-          export CONTENT_TRANSLATED_ROOT=$GITHUB_WORKSPACE/files
 
           # Some day, when our number of flaws have reached 0 we'll change
           # this to "*:error" which means the slightest flaw in the build
@@ -108,7 +105,6 @@ jobs:
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
 
-          cd $GITHUB_WORKSPACE/mdn/content/
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
       - uses: technote-space/get-diff-action@v4.0.5
@@ -119,11 +115,11 @@ jobs:
 
       - name: Check changed files
         if: ${{ env.GIT_DIFF_FILES }}
+        env:
+          content_root: ${{ github.workspace }}/mdn/content/files
+          content_translated_root: ${{ github.workspace }}/files
+        working-directory: ${{ github.workspace }}/mdn/content
         run: |
           echo ${{ env.GIT_DIFF_FILES }}
 
-          export CONTENT_ROOT=$GITHUB_WORKSPACE/mdn/content/files
-          export TRANSLATED_CONTENT_ROOT=$GITHUB_WORKSPACE/files
-
-          cd $GITHUB_WORKSPACE/mdn/content/
           yarn filecheck ${{ env.GIT_DIFF_FILES }}
