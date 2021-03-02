@@ -43,8 +43,8 @@ jobs:
 
       - name: Check redirects file(s)
         env:
-          content_root: ${{ github.workspace }}/mdn/content/files
-          content_translated_root: ${{ github.workspace }}/files
+          CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
+          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
           yarn content validate-redirects --strict

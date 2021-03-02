@@ -39,7 +39,7 @@ jobs:
         with:
           path: |
             {{ github.workspace }}/mdn/content/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-1
 
       - name: Install all yarn packages
         if: steps.cached-node_modules.outputs.cache-hit != 'true'
@@ -56,8 +56,8 @@ jobs:
       - name: Build changed content
         if: ${{ env.GIT_DIFF_CONTENT }}
         env:
-          content_root: ${{ github.workspace }}/mdn/content/files
-          content_translated_root: ${{ github.workspace }}/files
+          CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
+          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
           echo ${{ env.GIT_DIFF_CONTENT }}
@@ -116,8 +116,8 @@ jobs:
       - name: Check changed files
         if: ${{ env.GIT_DIFF_FILES }}
         env:
-          content_root: ${{ github.workspace }}/mdn/content/files
-          content_translated_root: ${{ github.workspace }}/files
+          CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
+          CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
           echo ${{ env.GIT_DIFF_FILES }}
