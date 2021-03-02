@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - files/**/_redirects.txt
+      - files/**/index.html
       - .github/workflows/pr-check_redirects.yml
 
 jobs:
