@@ -104,8 +104,8 @@ true || undefined ?? "foo"; // выбрасывает SyntaxError</pre>
 
 <pre class="brush: js notranslate">let foo = { someFooProp: "hi" };
 
-console.log(foo.someFooProp?.toUpperCase());  // "HI"
-console.log(foo.someBarProp?.toUpperCase()); // undefined
+console.log(foo.someFooProp?.toUpperCase() ?? "not available"); // "HI"
+console.log(foo.someBarProp?.toUpperCase() ?? "not available"); // "not available"
 </pre>
 
 <h2 id="Спецификации">Спецификации</h2>
