@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array
 ---
 <div>{{JSRef}}</div>
 
-<p>Das <strong><code>Float32Array</code></strong> getypte Array repräsentiert ein Array von 32 Bit Gleitkommazahlen (entspricht dem C Datengyp <code>float</code>) in der Plattform-Byte-Reihenfolge. Wenn Kontrolle über die Byte-Reihenfolge erforderlich ist, muss {{jsxref("DataView")}} stattdessen benutz werden. Die Inhalte werden mit <code>0</code> initialisiert. Wie erwartet, kann man Element in einem Array mit Objektmethoden referenzieren oder man benutzt die normale Arrayindex-Syntax (das ist die Klammernotation).</p>
+<p>Das <strong><code>Float32Array</code></strong> getypte Array repräsentiert ein Array von 32 Bit Gleitkommazahlen (entspricht dem C Datentyp <code>float</code>) in der Plattform-Byte-Reihenfolge. Wenn Kontrolle über die Byte-Reihenfolge erforderlich ist, muss {{jsxref("DataView")}} stattdessen benutzt werden. Die Inhalte werden mit <code>0</code> initialisiert. Wie erwartet, kann man Element in einem Array mit Objektmethoden referenzieren oder man benutzt die normale Arrayindex-Syntax (das ist die Klammernotation).</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -56,11 +56,11 @@ new Float32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.prototype.buffer", "Float32Array.prototype.buffer")}} {{readonlyInline}}</dt>
  <dd>Gibt die {{jsxref("ArrayBuffer")}} Referenz zurück, welche nach der Erstellung eines <code>Float32Array</code> fest ist und nicht mehr geändert werden kann.</dd>
  <dt>{{jsxref("TypedArray.prototype.byteLength", "Float32Array.prototype.byteLength")}} {{readonlyInline}}</dt>
- <dd>Gibt die Länge (in Bytes) des <code>Float32Array</code> vom Anfang seines {{jsxref("ArrayBuffer")}} zurück. WIrd beim erstellen festgesetzt und kann nicht geändert werden.</dd>
+ <dd>Gibt die Länge (in Bytes) des <code>Float32Array</code> vom Anfang seines {{jsxref("ArrayBuffer")}} zurück. Wird beim Erstellen festgesetzt und kann nicht geändert werden.</dd>
  <dt>{{jsxref("TypedArray.prototype.byteOffset", "Float32Array.prototype.byteOffset")}} {{readonlyInline}}</dt>
- <dd>Gibt das Offset (in Bytes) des <code>Float32Array</code> vom Anfang seines {{jsxref("ArrayBuffer")}} zurück. WIrd beim erstellen festgesetzt und kann nicht geändert werden.</dd>
+ <dd>Gibt das Offset (in Bytes) des <code>Float32Array</code> vom Anfang seines {{jsxref("ArrayBuffer")}} zurück. Wird beim Erstellen festgesetzt und kann nicht geändert werden.</dd>
  <dt>{{jsxref("TypedArray.prototype.length", "Float32Array.prototype.length")}} {{readonlyInline}}</dt>
- <dd>Gibt Anzahl der Elemente des <code>Float32Array</code> zurück. WIrd beim erstellen festgesetzt und kann nicht geändert werden.</dd>
+ <dd>Gibt Anzahl der Elemente des <code>Float32Array</code> zurück. WIrd beim Erstellen festgesetzt und kann nicht geändert werden.</dd>
 </dl>
 
 <h3 id="Methoden_2">Methoden</h3>
@@ -71,7 +71,7 @@ new Float32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.entries", "Float32Array.prototype.entries()")}}</dt>
  <dd>Gibt ein neues <code>Array Iterator</code> Objekt zurück, welches die Schlüssel/Wertepaare für jeden Index im Array enthält. Siehe auch {{jsxref("Array.prototype.entries()")}}.</dd>
  <dt>{{jsxref("TypedArray.every", "Float32Array.prototype.every()")}}</dt>
- <dd>Teste, ob alle Elemente einem, als Funktion übergebenen, Test erfüllen. Siehe auch Array.prototype.every()")}}.</dd>
+ <dd>Teste, ob alle Elemente eine, als Funktion übergebenen, Test erfüllen. Siehe auch Array.prototype.every()")}}.</dd>
  <dt>{{jsxref("TypedArray.fill", "Float32Array.prototype.fill()")}}</dt>
  <dd>Füllt alle Elemente eines Arrays vom Startindex bis zum Endindex mit einem statischen Wert. Siehe auch {{jsxref("Array.prototype.fill()")}}.</dd>
  <dt>{{jsxref("TypedArray.filter", "Float32Array.prototype.filter()")}}</dt>
@@ -97,13 +97,13 @@ new Float32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.move", "Float32Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}</dt>
  <dd>Ehemalige nicht Standardisierte Version von {{jsxref("TypedArray.copyWithin", "Float32Array.prototype.copyWithin()")}}.</dd>
  <dt>{{jsxref("TypedArray.reduce", "Float32Array.prototype.reduce()")}}</dt>
- <dd>Führt eine Funktion gegeben einen Akkumulator und jeden Wert des Array aus (von links nach rechts), um das Array auf einen Wert zu reduzieren. Siehe auch {{jsxref("Array.prototype.reduce()")}}.</dd>
+ <dd>Führt eine Funktion gegen einen Akkumulator und jeden Wert des Arrays aus (von links nach rechts), um das Array auf einen Wert zu reduzieren. Siehe auch {{jsxref("Array.prototype.reduce()")}}.</dd>
  <dt>{{jsxref("TypedArray.reduceRight", "Float32Array.prototype.reduceRight()")}}</dt>
- <dd>Führt eine Funktion gegeben einen Akkumulator und jeden Wert des Array aus (von rechts nach links), um das Array auf einen Wert zu reduzieren. Siehe auch {{jsxref("Array.prototype.reduce()")}}.</dd>
+ <dd>Führt eine Funktion gegen einen Akkumulator und jeden Wert des Arrays aus (von rechts nach links), um das Array auf einen Wert zu reduzieren. Siehe auch {{jsxref("Array.prototype.reduceRight()")}}.</dd>
  <dt>{{jsxref("TypedArray.reverse", "Float32Array.prototype.reverse()")}}</dt>
  <dd>Kehrt die Reihenfolge von jedem Element eines Arrays um — das Erste wird das Letzte und das Letzte wird das Erste. Siehe auch {{jsxref("Array.prototype.reverse()")}}.</dd>
  <dt>{{jsxref("TypedArray.set", "Float32Array.prototype.set()")}}</dt>
- <dd>Speichert mehrere Werte in einem getypten Array und ließt Eingabewerte aus einem spezifiziertem Array.</dd>
+ <dd>Speichert mehrere Werte in einem getypten Array und liest Eingabewerte aus einem spezifizierten Array.</dd>
  <dt>{{jsxref("TypedArray.slice", "Float32Array.prototype.slice()")}}</dt>
  <dd>Extrahiert einen Bereich aus einem Array und gibt diesen in einem neuen Array zurück. Siehe auch {{jsxref("Array.prototype.slice()")}}.</dd>
  <dt>{{jsxref("TypedArray.some", "Float32Array.prototype.some()")}}</dt>
@@ -115,11 +115,11 @@ new Float32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.values", "Float32Array.prototype.values()")}}</dt>
  <dd>Gibt ein neues <code>Array Iterator</code> Objekt zurück, welches die Werte von jedem Index im Array enthält. Siehe auch {{jsxref("Array.prototype.values()")}}.</dd>
  <dt>{{jsxref("TypedArray.toLocaleString", "Float32Array.prototype.toLocaleString()")}}</dt>
- <dd>Gibt einen Ortsabhängige Stringrepräsentation des Arrays und seiner Element zurück. Siehe auch {{jsxref("Array.prototype.toLocaleString()")}}.</dd>
+ <dd>Gibt eine ortsabhängige Stringrepräsentation des Arrays und seiner Element zurück. Siehe auch {{jsxref("Array.prototype.toLocaleString()")}}.</dd>
  <dt>{{jsxref("TypedArray.toString", "Float32Array.prototype.toString()")}}</dt>
  <dd>Gibt einen Stringrepräsentation des Arrays und seiner Element zurück. Siehe auch {{jsxref("Array.prototype.toString()")}}.</dd>
  <dt>{{jsxref("TypedArray.@@iterator", "Float32Array.prototype[@@iterator]()")}}</dt>
- <dd>Gibt ein neues <code>Array Iterator</code> Objekt zurück, welches die zugehörigen Werte für jeden Index im Array enthalten.</dd>
+ <dd>Gibt ein neues <code>Array Iterator</code> Objekt zurück, welches die zugehörigen Werte für jeden Index im Array enthält.</dd>
 </dl>
 
 <h2 id="Beispiele">Beispiele</h2>
@@ -187,7 +187,7 @@ var float32 = new Float32Array(iterable);
 
 <h2 id="Kompatibilitätshinweise">Kompatibilitätshinweise</h2>
 
-<p>Mit Beginn von ECMAScript 2015, müssen <code>Float32Array</code> Konstruktoren mit einem {{jsxref("Operators/new", "new")}} benutzt werden. Der Aufruf eines <code>Float32Array</code> Konstruktors als eine Funktion ohne <code>new</code>, Führt jetzt zu einem {{jsxref("TypeError")}}.</p>
+<p>Mit Beginn von ECMAScript 2015, müssen <code>Float32Array</code> Konstruktoren mit einem {{jsxref("Operators/new", "new")}} benutzt werden. Der Aufruf eines <code>Float32Array</code> Konstruktors als eine Funktion ohne <code>new</code>, führt jetzt zu einem {{jsxref("TypeError")}}.</p>
 
 <pre class="brush: js example-bad">var dv = Float32Array([1, 2, 3]);
 // TypeError: calling a builtin Float32Array constructor
