@@ -4,8 +4,8 @@
 [MDN Web Docs](https://developer.mozilla.org)’ translated content! :tada:
 
 The following is a set of guidelines for contributing to the
-[translated content of MDN Web Docs](https://github.com/mdn/translated-content), which is
-hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
+[translated content of MDN Web Docs](https://github.com/mdn/translated-content),
+which is hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
 ## Tier 1 locales
 
@@ -14,9 +14,9 @@ to active locales — this means locales that have active community maintenance
 teams in place to review PRs, fix issues, make updates, etc. Currently the list
 of active locales is:
 
- - `fr`
- - `ja`
- - `zh` (`zh-CN` and `zh-TW`)
+- `fr`
+- `ja`
+- `zh` (`zh-CN` and `zh-TW`)
 
 If you want to just find a task and jump in, search by the labels `l10n-fr`,
 `l10n-ja`, and `l10n-zh` in this repo’s [issues list](https://github.com/mdn/translated-content/issues),
@@ -61,14 +61,14 @@ and the translated-content repo (this repo).
 
 ### Content repo setup
 
- 1. Once the above is done, cd into the content repo.
+1. Once the above is done, cd into the content repo.
 
- 1. Run the command `yarn install` to fetch the latest packages and get the local
+1. Run the command `yarn install` to fetch the latest packages and get the local
    MDN testing environment set up. It is also recommended that you run
    `yarn install` before every update you do to the source, to make sure you
    have the latest packages.
 
- 1. Next, create an environment variable called `CONTENT_TRANSLATED_ROOT`, which
+1. Next, create an environment variable called `CONTENT_TRANSLATED_ROOT`, which
    points to the path to the translated-  content repo’s `files` directory. You
    could do this for a single session like so:
 
@@ -83,7 +83,7 @@ and the translated-content repo (this repo).
 
    (the `.env` file will be created for you if it does not already exist.)
 
- 1. Now you’ve got this set up, enter the command `yarn start` to begin the local
+1. Now you’ve got this set up, enter the command `yarn start` to begin the local
    testing server running at `localhost:5000`.
 
 ### Working in the translated-content repo
@@ -91,13 +91,13 @@ and the translated-content repo (this repo).
 Over in the translated-content repo, decide what change you want to make, and
 then:
 
- 1. Create a new branch to make your changes in.
+1. Create a new branch to make your changes in.
 
- 1. Switch to your new branch and make the changes you want to make. You can
+1. Switch to your new branch and make the changes you want to make. You can
    keep going back to `localhost:5000` to test your changes and make sure the
    content looks how you want it to look.
 
- 1. When you are satisfied with your changes, create a pull request and one of
+1. When you are satisfied with your changes, create a pull request and one of
    our review teams will review it.
 
 ### For more info on editing this repo
@@ -121,30 +121,31 @@ and `l10n-zh`.
 
 The review teams for each locale are:
 
- - French (`fr`) content — the [@yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr) team,
-   which consists of:
-   - [@nicolas-goudry](https://github.com/nicolas-goudry)
-   - [@JNa0](https://github.com/JNa0)
-   - [@tristantheb](https://github.com/tristantheb)
-   - [@LEMIBANDDEXARI](https://github.com/LEMIBANDDEXARI)
-   - [@SphinxKnight](https://github.com/SphinxKnight)
- - Japanese (`ja`) content — the [@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja) team,
-   which consists of:
-   - [@mfuji09](https://github.com/mfuji09)
-   - More TBD
- - Chinese (`zh-CN` and `zh-TW`) content — the [@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh) team, which consists of:
-   - [@t7yang](https://github.com/t7yang)
-   - [@dibery](https://github.com/dibery)
-   - [@irvin](https://github.com/irvin)
+- French (`fr`) content — the [@yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr)
+  team, which consists of:
+  - [@nicolas-goudry](https://github.com/nicolas-goudry)
+  - [@JNa0](https://github.com/JNa0)
+  - [@tristantheb](https://github.com/tristantheb)
+  - [@LEMIBANDDEXARI](https://github.com/LEMIBANDDEXARI)
+  - [@SphinxKnight](https://github.com/SphinxKnight)
+- Japanese (`ja`) content — the [@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
+  team, which consists of:
+  - [@mfuji09](https://github.com/mfuji09)
+  - More TBD
+- Chinese (`zh-CN` and `zh-TW`) content — the [@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
+  team, which consists of:
+  - [@t7yang](https://github.com/t7yang)
+  - [@dibery](https://github.com/dibery)
+  - [@irvin](https://github.com/irvin)
 
 ### Requirements for keeping locales up-to-date
 
 Active community maintenance teams are expected to keep their locales maintained
 and reasonably up-to-date. This means:
 
- - Reviewing and actioning all pull requests within 2 weeks.
- - Triaging and fixing all actionable issues within 1 month.
- - Making reasonable progress on keeping MDN’s tier 1 content (definition TBD)
+- Reviewing and actioning all pull requests within 2 weeks.
+- Triaging and fixing all actionable issues within 1 month.
+- Making reasonable progress on keeping MDN’s tier 1 content (definition TBD)
    synchronized with the `en-US` versions. This means some progress should be
    made each week, e.g. updating an article to be in sync with the English
    version, removing or fixing a bad quality article…
