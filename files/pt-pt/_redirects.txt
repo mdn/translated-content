@@ -988,6 +988,8 @@
 /pt-PT/docs/Web/JavaScript/Reference/Operadores/função	/pt-PT/docs/Web/JavaScript/Reference/Operators/function
 /pt-PT/docs/Web/JavaScript/Reference/Sobre	/pt-PT/docs/Web/JavaScript/Reference/About
 /pt-PT/docs/Web/MathML/Attribute/Valores	/pt-PT/docs/Web/MathML/Attribute/Values
+/pt-PT/docs/Web/MathML/Element/mglyph	/pt-PT/docs/orphaned/Web/MathML/Element/mglyph
+/pt-PT/docs/Web/MathML/Element/mlabeledtr	/pt-PT/docs/orphaned/Web/MathML/Element/mlabeledtr
 /pt-PT/docs/Web/MathML/Examples/Derivar_a_Formula_Resolvente	/pt-PT/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula
 /pt-PT/docs/Web/MathML/Examples/MathML_teorema_de_Pitagoras	/pt-PT/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem
 /pt-PT/docs/Web/Progressive_web_apps/Guia_de_programacao	/pt-PT/docs/Web/Progressive_web_apps/Developer_guide

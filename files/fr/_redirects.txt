@@ -5650,6 +5650,7 @@
 /fr/docs/Web/JavaScript/décoder_encoder_en_base64	/fr/docs/Glossary/Base64
 /fr/docs/Web/JavaScript/guide_de_demarrage	/fr/docs/conflicting/Learn/Getting_started_with_the_web/JavaScript_basics
 /fr/docs/Web/MathML/Attribute/Valeurs	/fr/docs/Web/MathML/Attribute/Values
+/fr/docs/Web/MathML/Element/mglyph	/fr/docs/orphaned/Web/MathML/Element/mglyph
 /fr/docs/Web/MathML/Exemples	/fr/docs/Web/MathML/Examples
 /fr/docs/Web/MathML/Exemples/Dériver_la_Formule_Quadratique	/fr/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula
 /fr/docs/Web/MathML/Exemples/MathML_Theoreme_de_Pythagore	/fr/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem

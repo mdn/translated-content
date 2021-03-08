@@ -822,6 +822,7 @@
 /ru/docs/Web/JavaScript/Справочник_по_JavaScript_1.5/Операции/Битовые_Операции	/ru/docs/conflicting/Web/JavaScript/Reference/Operators_7c8eb9475d97a4a734c5991857698560
 /ru/docs/Web/JavaScript/Справочник_по_JavaScript_1.5/Операции/Операции_Присваивания	/ru/docs/conflicting/Web/JavaScript/Reference/Operators_8d54701de06af40a7c984517cbe87b3e
 /ru/docs/Web/Manifest/serviceworker	/ru/docs/orphaned/Web/Manifest/serviceworker
+/ru/docs/Web/MathML/Element/mglyph	/ru/docs/orphaned/Web/MathML/Element/mglyph
 /ru/docs/Web/MathML/Атрибут	/ru/docs/Web/MathML/Attribute
 /ru/docs/Web/MathML/Примеры	/ru/docs/Web/MathML/Examples
 /ru/docs/Web/MathML/Примеры/Deriving_the_Quadratic_Formula	/ru/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula

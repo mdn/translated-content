@@ -24522,14 +24522,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/MathML/Element/mglyph": {
-    "modified": "2020-10-15T21:23:58.877Z",
-    "contributors": [
-      "SphinxKnight",
-      "Delapouite",
-      "Goofy"
-    ]
-  },
   "Web/MathML/Element/mi": {
     "modified": "2019-03-23T23:29:00.435Z",
     "contributors": [
@@ -46001,6 +45993,14 @@
     "contributors": [
       "SphinxKnight",
       "MasterFox"
+    ]
+  },
+  "orphaned/Web/MathML/Element/mglyph": {
+    "modified": "2020-10-15T21:23:58.877Z",
+    "contributors": [
+      "SphinxKnight",
+      "Delapouite",
+      "Goofy"
     ]
   }
 }
