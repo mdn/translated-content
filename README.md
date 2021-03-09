@@ -125,6 +125,7 @@ The review teams for each locale are:
   - [@SphinxKnight](https://github.com/SphinxKnight)
 - Japanese (`ja`) content — the [@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
   team, which consists of:
+  - [@potappo](https://github.com/hmartjp)
   - [@potappo](https://github.com/potappo)
   - [@mfuji09](https://github.com/mfuji09)
 - Chinese (`zh-CN` and `zh-TW`) content — the [@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
