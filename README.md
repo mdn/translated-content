@@ -22,11 +22,6 @@ If you want to just find a task and jump in, search by the labels `l10n-fr`,
 `l10n-ja`, and `l10n-zh` in this repo’s [issues list](https://github.com/mdn/translated-content/issues),
 or the main [content repo issues](https://github.com/mdn/content/issues)
 
-If you want to find out more about our community maintenance teams, see
-[localizing MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize).
-If you want to ask questions or talk to us about forming a new community
-maintenance team, see [ask for help](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
-
 ## Code of Conduct
 
 Everyone participating in this project is expected to follow our
@@ -130,8 +125,8 @@ The review teams for each locale are:
   - [@SphinxKnight](https://github.com/SphinxKnight)
 - Japanese (`ja`) content — the [@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
   team, which consists of:
+  - [@potappo](https://github.com/potappo)
   - [@mfuji09](https://github.com/mfuji09)
-  - More TBD
 - Chinese (`zh-CN` and `zh-TW`) content — the [@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
   team, which consists of:
   - [@t7yang](https://github.com/t7yang)
@@ -145,10 +140,28 @@ and reasonably up-to-date. This means:
 
 - Reviewing and actioning all pull requests within 2 weeks.
 - Triaging and fixing all actionable issues within 1 month.
-- Making reasonable progress on keeping MDN’s tier 1 content (definition TBD)
+- Making reasonable progress on keeping MDN’s Tier 1 content (definition TBD)
    synchronized with the `en-US` versions. This means some progress should be
    made each week, e.g. updating an article to be in sync with the English
    version, removing or fixing a bad quality article…
 
 If no progress is made on a locale in these areas within 1 month, the locale
 will be considered inactive, and edits will stop being accepted.
+
+### Promoting an inactive locale to Tier 1
+
+If you want to promote a currently-inactive/frozen locale to Tier 1, meaning
+that it is activated and can then be edited, you need to put together a
+community maintenance team. This requires:
+
+- A team lead who will be the communication point between that team and the MDN
+  core team, and have overall responsibility for the team.
+- At least one other member, so that one member can review another member's
+  work.
+- A place to discuss this team's localization work. This can be a Telegram
+  group, Matrix chat room, or whatever the team thinks is best.
+
+If you want to find out more about our community maintenance teams, see
+[localizing MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize).
+If you want to ask questions or talk to us about forming a new community
+maintenance team, see [ask for help](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
