@@ -180,8 +180,8 @@ slugs only), to make the documentation easier to manage. This resulted in two
 new buckets of documents being created for each locale, existing as
 subdirectories of each local folder:
 
-* `orphaned` — documents that are not associated with any parent `en-US` page.
-* `conflicting` — documents with duplicate translations in existence (e.g.
+- `orphaned` — documents that are not associated with any parent `en-US` page.
+- `conflicting` — documents with duplicate translations in existence (e.g.
   localized once under the existing `en-US` slug, and then again under a
   localized slug). The duplicate(s) are put in this folder.
 
@@ -198,9 +198,9 @@ for, or moved to a different location, in the tree.
 
 When a synchronization occurs:
 
-* Tier 1 (active) locale maintenance teams are given two weeks to decide what to
+- Tier 1 (active) locale maintenance teams are given two weeks to decide what to
   do with the affected documents in their locales to keep things in sync.
-* Tier 2 (frozen) locales have the affected documents deleted/moved immediately.
+- Tier 2 (frozen) locales have the affected documents deleted/moved immediately.
 
 Note: Conflicting docs are often created during the sync operation when `en-US`
 documents get merged — for example if `Foo/Bar` becomes just a section inside
