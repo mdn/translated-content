@@ -263,7 +263,7 @@
 /es/docs/DOM/CssRule.cssText	/es/docs/Web/API/CSSRule/cssText
 /es/docs/DOM/CssRule.parentStyleSheet	/es/docs/Web/API/CSSRule/parentStyleSheet
 /es/docs/DOM/CssRule.selectorText	/es/docs/Web/API/CSSStyleRule/selectorText
-/es/docs/DOM/Document.styleSheets	/es/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/es/docs/DOM/Document.styleSheets	/es/docs/Web/API/Document/styleSheets
 /es/docs/DOM/Element.setAttribute	/es/docs/Web/API/Element/setAttribute
 /es/docs/DOM/Element.style	/es/docs/Web/API/ElementCSSInlineStyle/style
 /es/docs/DOM/HTMLAudioElement	/es/docs/Web/API/HTMLAudioElement
@@ -1791,8 +1791,8 @@
 /es/docs/Web/API/Document/async	/es/docs/Web/API/XMLDocument/async
 /es/docs/Web/API/Document/crearAtributo	/es/docs/Web/API/Document/createAttribute
 /es/docs/Web/API/Document/getSelection	/es/docs/Web/API/DocumentOrShadowRoot/getSelection
-/es/docs/Web/API/Document/pointerLockElement	/es/docs/Web/API/DocumentOrShadowRoot/pointerLockElement
-/es/docs/Web/API/Document/styleSheets	/es/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/es/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/es/docs/Web/API/Document/pointerLockElement
+/es/docs/Web/API/DocumentOrShadowRoot/styleSheets	/es/docs/Web/API/Document/styleSheets
 /es/docs/Web/API/Element/accessKey	/es/docs/Web/API/HTMLElement/accessKey
 /es/docs/Web/API/Element/name	/es/docs/conflicting/Web/API
 /es/docs/Web/API/Element/ongotpointercapture	/es/docs/Web/API/GlobalEventHandlers/ongotpointercapture

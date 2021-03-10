@@ -10823,16 +10823,6 @@
       "Jan Dudek"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/styleSheets": {
-    "modified": "2019-03-23T23:48:20.614Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "Robson",
-      "Mgjbot",
-      "Jan Dudek"
-    ]
-  },
   "conflicting/Web/API": {
     "modified": "2019-03-24T00:13:13.340Z",
     "contributors": [
@@ -11744,6 +11734,16 @@
       "AshfaqHossain",
       "Mgjbot",
       "Flaneur"
+    ]
+  },
+  "Web/API/Document/styleSheets": {
+    "modified": "2019-03-23T23:48:20.614Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "Robson",
+      "Mgjbot",
+      "Jan Dudek"
     ]
   }
 }

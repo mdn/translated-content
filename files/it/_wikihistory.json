@@ -5847,14 +5847,6 @@
       "Federico"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/styleSheets": {
-    "modified": "2019-03-23T23:46:31.284Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Federico"
-    ]
-  },
   "Web/API/MouseEvent/altKey": {
     "modified": "2019-03-23T23:46:44.336Z",
     "contributors": [
@@ -5993,6 +5985,14 @@
     "modified": "2019-03-23T23:01:38.757Z",
     "contributors": [
       "teoli"
+    ]
+  },
+  "Web/API/Document/styleSheets": {
+    "modified": "2019-03-23T23:46:31.284Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Federico"
     ]
   }
 }

@@ -3620,13 +3620,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/styleSheets": {
-    "modified": "2020-10-15T22:11:37.061Z",
-    "contributors": [
-      "alattalatta",
-      "DeadIntegral"
-    ]
-  },
   "Web/API/DocumentType": {
     "modified": "2020-10-15T22:10:02.690Z",
     "contributors": [
@@ -18703,6 +18696,13 @@
     "modified": "2020-10-15T22:15:23.043Z",
     "contributors": [
       "connorshea"
+    ]
+  },
+  "Web/API/Document/styleSheets": {
+    "modified": "2020-10-15T22:11:37.061Z",
+    "contributors": [
+      "alattalatta",
+      "DeadIntegral"
     ]
   }
 }

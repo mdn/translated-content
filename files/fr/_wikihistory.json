@@ -11813,20 +11813,8 @@
       "SphinxKnight"
     ]
   },
-  "Web/API/PasswordCredential/additionalData": {
-    "modified": "2020-10-15T22:15:45.161Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/API/PasswordCredential/iconURL": {
     "modified": "2020-10-15T22:15:45.183Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PasswordCredential/idName": {
-    "modified": "2020-10-15T22:15:37.132Z",
     "contributors": [
       "SphinxKnight"
     ]
@@ -11839,12 +11827,6 @@
   },
   "Web/API/PasswordCredential/password": {
     "modified": "2020-10-15T22:15:44.068Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/API/PasswordCredential/passwordName": {
-    "modified": "2020-10-15T22:15:42.960Z",
     "contributors": [
       "SphinxKnight"
     ]
@@ -45008,15 +44990,6 @@
       "FredPl"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/styleSheets": {
-    "modified": "2019-03-23T23:06:00.949Z",
-    "contributors": [
-      "a5er",
-      "fscholz",
-      "J.DMB",
-      "Nothus"
-    ]
-  },
   "Web/API/HTMLElement/accessKey": {
     "modified": "2019-03-23T22:24:43.588Z",
     "contributors": [
@@ -46001,6 +45974,33 @@
       "SphinxKnight",
       "Delapouite",
       "Goofy"
+    ]
+  },
+  "Web/API/Document/styleSheets": {
+    "modified": "2019-03-23T23:06:00.949Z",
+    "contributors": [
+      "a5er",
+      "fscholz",
+      "J.DMB",
+      "Nothus"
+    ]
+  },
+  "conflicting/Web/API/PasswordCredential": {
+    "modified": "2020-10-15T22:15:45.161Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "conflicting/Web/API/PasswordCredential_cbf7b306e83a3f58ff06bccf89637c12": {
+    "modified": "2020-10-15T22:15:37.132Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "conflicting/Web/API/PasswordCredential_bc57d5dfa87242b4fb83497887124f41": {
+    "modified": "2020-10-15T22:15:42.960Z",
+    "contributors": [
+      "SphinxKnight"
     ]
   }
 }

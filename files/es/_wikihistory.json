@@ -15671,12 +15671,6 @@
       "FenixAlive"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/pointerLockElement": {
-    "modified": "2019-03-23T22:05:31.350Z",
-    "contributors": [
-      "arquigames"
-    ]
-  },
   "Web/API/DOMString/Binary": {
     "modified": "2020-08-29T03:33:22.030Z",
     "contributors": [
@@ -23067,15 +23061,6 @@
       "Diferno"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/styleSheets": {
-    "modified": "2019-03-23T23:58:05.224Z",
-    "contributors": [
-      "fscholz",
-      "jsx",
-      "teoli",
-      "HenryGR"
-    ]
-  },
   "Web/API/HTMLElement/accessKey": {
     "modified": "2019-03-23T22:26:12.172Z",
     "contributors": [
@@ -23742,6 +23727,21 @@
     "modified": "2019-03-23T22:32:40.718Z",
     "contributors": [
       "Grijander81"
+    ]
+  },
+  "Web/API/Document/pointerLockElement": {
+    "modified": "2019-03-23T22:05:31.350Z",
+    "contributors": [
+      "arquigames"
+    ]
+  },
+  "Web/API/Document/styleSheets": {
+    "modified": "2019-03-23T23:58:05.224Z",
+    "contributors": [
+      "fscholz",
+      "jsx",
+      "teoli",
+      "HenryGR"
     ]
   }
 }

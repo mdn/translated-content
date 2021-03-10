@@ -3750,8 +3750,8 @@
 /fr/docs/Web/API/Document/domConfig	/fr/docs/Web/API/Document
 /fr/docs/Web/API/Document/elementFromPoint	/fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
 /fr/docs/Web/API/Document/getSelection	/fr/docs/Web/API/DocumentOrShadowRoot/getSelection
-/fr/docs/Web/API/Document/styleSheets	/fr/docs/Web/API/DocumentOrShadowRoot/styleSheets
 /fr/docs/Web/API/DocumentOrShadowRoot/activeElement	/fr/docs/Web/API/Document/activeElement
+/fr/docs/Web/API/DocumentOrShadowRoot/styleSheets	/fr/docs/Web/API/Document/styleSheets
 /fr/docs/Web/API/Document_Object_Model/Exemples	/fr/docs/Web/API/Document_Object_Model/Examples
 /fr/docs/Web/API/Document_Object_Model/Introduction_au_DOM	/fr/docs/Web/API/Document_Object_Model/Introduction
 /fr/docs/Web/API/Document_Object_Model/Les_évènements_et_le_DOM	/fr/docs/Web/API/Document_Object_Model/Events
@@ -3891,6 +3891,9 @@
 /fr/docs/Web/API/Node/innerText	/fr/docs/Web/API/HTMLElement/innerText
 /fr/docs/Web/API/Node/nodePrincipal	/fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
+/fr/docs/Web/API/PasswordCredential/additionalData	/fr/docs/conflicting/Web/API/PasswordCredential
+/fr/docs/Web/API/PasswordCredential/idName	/fr/docs/conflicting/Web/API/PasswordCredential_cbf7b306e83a3f58ff06bccf89637c12
+/fr/docs/Web/API/PasswordCredential/passwordName	/fr/docs/conflicting/Web/API/PasswordCredential_bc57d5dfa87242b4fb83497887124f41
 /fr/docs/Web/API/Performance.now()	/fr/docs/Web/API/Performance/now
 /fr/docs/Web/API/Pointer_events/gestes_pincer_zoom	/fr/docs/Web/API/Pointer_events/Pinch_zoom_gestures
 /fr/docs/Web/API/RandomSource.getRandomValues	/fr/docs/Web/API/Crypto/getRandomValues
@@ -3999,7 +4002,7 @@
 /fr/docs/Web/API/document.querySelector	/fr/docs/Web/API/Document/querySelector
 /fr/docs/Web/API/document.referrer	/fr/docs/Web/API/Document/referrer
 /fr/docs/Web/API/document.scripts	/fr/docs/Web/API/Document/scripts
-/fr/docs/Web/API/document.styleSheets	/fr/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/fr/docs/Web/API/document.styleSheets	/fr/docs/Web/API/Document/styleSheets
 /fr/docs/Web/API/event.defaultPrevented	/fr/docs/Web/API/Event/defaultPrevented
 /fr/docs/Web/API/event.preventDefault	/fr/docs/Web/API/Event/preventDefault
 /fr/docs/Web/API/navigator.doNotTrack	/fr/docs/Web/API/Navigator/doNotTrack

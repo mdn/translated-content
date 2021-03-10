@@ -103,7 +103,7 @@
 /it/docs/DOM/document.namespaceURI	/it/docs/Web/API/Node/namespaceURI
 /it/docs/DOM/document.open	/it/docs/Web/API/Document/open
 /it/docs/DOM/document.referrer	/it/docs/Web/API/Document/referrer
-/it/docs/DOM/document.styleSheets	/it/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/it/docs/DOM/document.styleSheets	/it/docs/Web/API/Document/styleSheets
 /it/docs/DOM/document.title	/it/docs/Web/API/Document/title
 /it/docs/DOM/document.width	/it/docs/Web/API/Document/width
 /it/docs/DOM/element	/it/docs/Web/API/Element
@@ -249,7 +249,7 @@
 /it/docs/DOM:document.namespaceURI	/it/docs/Web/API/Node/namespaceURI
 /it/docs/DOM:document.open	/it/docs/Web/API/Document/open
 /it/docs/DOM:document.referrer	/it/docs/Web/API/Document/referrer
-/it/docs/DOM:document.styleSheets	/it/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/it/docs/DOM:document.styleSheets	/it/docs/Web/API/Document/styleSheets
 /it/docs/DOM:document.title	/it/docs/Web/API/Document/title
 /it/docs/DOM:document.width	/it/docs/Web/API/Document/width
 /it/docs/DOM:element	/it/docs/Web/API/Element
@@ -492,7 +492,7 @@
 /it/docs/Usare_valori_URL_per_la_proprietà_cursor	/it/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 /it/docs/Web/API/Document/firstChild	/it/docs/conflicting/Web/API/Node/firstChild
 /it/docs/Web/API/Document/namespaceURI	/it/docs/Web/API/Node/namespaceURI
-/it/docs/Web/API/Document/styleSheets	/it/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/it/docs/Web/API/DocumentOrShadowRoot/styleSheets	/it/docs/Web/API/Document/styleSheets
 /it/docs/Web/API/Document_Object_Model/Introduzione	/it/docs/Web/API/Document_Object_Model/Introduction
 /it/docs/Web/API/Element.getElementsByTagName	/it/docs/Web/API/Element/getElementsByTagName
 /it/docs/Web/API/Element.scrollHeight	/it/docs/Web/API/Element/scrollHeight

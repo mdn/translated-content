@@ -361,7 +361,7 @@
 /pl/docs/DOM/document.open	/pl/docs/Web/API/Document/open
 /pl/docs/DOM/document.plugins	/pl/docs/Web/API/Document/plugins
 /pl/docs/DOM/document.referrer	/pl/docs/Web/API/Document/referrer
-/pl/docs/DOM/document.styleSheets	/pl/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/pl/docs/DOM/document.styleSheets	/pl/docs/Web/API/Document/styleSheets
 /pl/docs/DOM/document.title	/pl/docs/Web/API/Document/title
 /pl/docs/DOM/document.vlinkColor	/pl/docs/Web/API/Document/vlinkColor
 /pl/docs/DOM/document.width	/pl/docs/Web/API/Document/width
@@ -609,7 +609,7 @@
 /pl/docs/DOM:document.open	/pl/docs/Web/API/Document/open
 /pl/docs/DOM:document.plugins	/pl/docs/Web/API/Document/plugins
 /pl/docs/DOM:document.referrer	/pl/docs/Web/API/Document/referrer
-/pl/docs/DOM:document.styleSheets	/pl/docs/Web/API/DocumentOrShadowRoot/styleSheets
+/pl/docs/DOM:document.styleSheets	/pl/docs/Web/API/Document/styleSheets
 /pl/docs/DOM:document.title	/pl/docs/Web/API/Document/title
 /pl/docs/DOM:document.vlinkColor	/pl/docs/Web/API/Document/vlinkColor
 /pl/docs/DOM:document.width	/pl/docs/Web/API/Document/width
@@ -1929,8 +1929,8 @@
 /pl/docs/Web/API/Canvas_API/Tutorial/rysowanie_ksztaltow	/pl/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /pl/docs/Web/API/Document/firstChild	/pl/docs/conflicting/Web/API/Node/firstChild
 /pl/docs/Web/API/Document/namespaceURI	/pl/docs/conflicting/Web/API/Node/namespaceURI
-/pl/docs/Web/API/Document/styleSheets	/pl/docs/Web/API/DocumentOrShadowRoot/styleSheets
 /pl/docs/Web/API/DocumentOrShadowRoot/activeElement	/pl/docs/Web/API/Document/activeElement
+/pl/docs/Web/API/DocumentOrShadowRoot/styleSheets	/pl/docs/Web/API/Document/styleSheets
 /pl/docs/Web/API/Element/addEventListener	/pl/docs/Web/API/EventTarget/addEventListener
 /pl/docs/Web/API/Element/appendChild	/pl/docs/Web/API/Node/appendChild
 /pl/docs/Web/API/Element/blur	/pl/docs/Web/API/HTMLOrForeignElement/blur

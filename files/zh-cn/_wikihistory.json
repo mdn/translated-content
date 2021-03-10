@@ -10390,12 +10390,6 @@
       "WuCongMan"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/styleSheets": {
-    "modified": "2020-10-19T22:22:59.095Z",
-    "contributors": [
-      "lastVigo"
-    ]
-  },
   "Web/API/DocumentTouch": {
     "modified": "2019-03-23T22:57:10.414Z",
     "contributors": [
@@ -47145,12 +47139,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/pointerLockElement": {
-    "modified": "2019-03-23T22:20:46.971Z",
-    "contributors": [
-      "876843240"
-    ]
-  },
   "Web/API/Document/touchmove_event": {
     "modified": "2019-04-30T14:14:32.752Z",
     "contributors": [
@@ -50797,6 +50785,18 @@
       "biqing",
       "April421",
       "xgqfrms"
+    ]
+  },
+  "Web/API/Document/pointerLockElement": {
+    "modified": "2019-03-23T22:20:46.971Z",
+    "contributors": [
+      "876843240"
+    ]
+  },
+  "Web/API/Document/styleSheets": {
+    "modified": "2020-10-19T22:22:59.095Z",
+    "contributors": [
+      "lastVigo"
     ]
   }
 }
