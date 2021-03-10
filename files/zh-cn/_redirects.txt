@@ -1452,6 +1452,7 @@
 /zh-CN/docs/Web/API/AudioContext/sampleRate	/zh-CN/docs/Web/API/BaseAudioContext/sampleRate
 /zh-CN/docs/Web/API/AudioContext/state	/zh-CN/docs/Web/API/BaseAudioContext/state
 /zh-CN/docs/Web/API/AudioNode/connect(AudioParam)	/zh-CN/docs/orphaned/Web/API/AudioNode/connect(AudioParam)
+/zh-CN/docs/Web/API/Beacon_API/Using_the_Beacon_API	/zh-CN/docs/conflicting/Web/API/Beacon_API
 /zh-CN/docs/Web/API/Blob.size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/Blob.slice	/zh-CN/docs/Web/API/Blob/slice
 /zh-CN/docs/Web/API/Blob.type	/zh-CN/docs/Web/API/Blob/type
@@ -2691,6 +2692,7 @@
 /zh-CN/docs/learn/Server-side/Django/主页构建	/zh-CN/docs/Learn/Server-side/Django/Home_page
 /zh-CN/docs/learn/Server-side/Django/开发环境	/zh-CN/docs/Learn/Server-side/Django/development_environment
 /zh-CN/docs/learn/Server-side/Django/管理站点	/zh-CN/docs/Learn/Server-side/Django/Admin_site
+/zh-CN/docs/learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry	/zh-CN/docs/orphaned/learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 /zh-CN/docs/learn/WebGL/By_example	/zh-CN/docs/Web/API/WebGL_API/By_example
 /zh-CN/docs/learn/WebGL/By_example/Basic_scissoring	/zh-CN/docs/Web/API/WebGL_API/By_example/Basic_scissoring
 /zh-CN/docs/learn/WebGL/By_example/Boilerplate_1	/zh-CN/docs/Web/API/WebGL_API/By_example/Boilerplate_1

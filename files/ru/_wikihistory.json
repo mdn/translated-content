@@ -19101,12 +19101,6 @@
       "bsergey"
     ]
   },
-  "Web/MathML/Element/mglyph": {
-    "modified": "2020-10-30T16:27:27.508Z",
-    "contributors": [
-      "d0rj"
-    ]
-  },
   "Web/MathML/Element/mn": {
     "modified": "2020-10-30T16:23:01.293Z",
     "contributors": [
@@ -25987,6 +25981,12 @@
     "contributors": [
       "wbamberg",
       "Mingun"
+    ]
+  },
+  "orphaned/Web/MathML/Element/mglyph": {
+    "modified": "2020-10-30T16:27:27.508Z",
+    "contributors": [
+      "d0rj"
     ]
   }
 }

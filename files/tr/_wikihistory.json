@@ -115,12 +115,6 @@
       "hakantr"
     ]
   },
-  "Learn/CSS/Building_blocks/Selectors/Box_Model_Tasks": {
-    "modified": "2020-10-15T21:52:54.629Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
   "Learn/CSS/Building_blocks/Selectors/Combinators": {
     "modified": "2020-10-26T18:41:35.670Z",
     "contributors": [
@@ -2397,6 +2391,12 @@
     "contributors": [
       "cicekonur",
       "umutozdemir97"
+    ]
+  },
+  "orphaned/Learn/CSS/Building_blocks/Selectors/Box_Model_Tasks": {
+    "modified": "2020-10-15T21:52:54.629Z",
+    "contributors": [
+      "hakantr"
     ]
   }
 }

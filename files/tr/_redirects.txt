@@ -34,6 +34,7 @@
 /tr/docs/JavaScript/Reference/Global_Objects/Array	/tr/docs/Web/JavaScript/Reference/Global_Objects/Array
 /tr/docs/JavaScript/Reference/Global_Objects/Array/concat	/tr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 /tr/docs/JavaScript/Reference/Global_Objects/Array/prototype	/tr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
+/tr/docs/Learn/CSS/Building_blocks/Selectors/Box_Model_Tasks	/tr/docs/orphaned/Learn/CSS/Building_blocks/Selectors/Box_Model_Tasks
 /tr/docs/Learn/Common_questions/Tarayıcı_geliştirici_araçları_araçları_nelerdir	/tr/docs/Learn/Common_questions/What_are_browser_developer_tools
 /tr/docs/MDN/Community	/tr/docs/orphaned/MDN/Community
 /tr/docs/MDN/Contribute/Editor	/tr/docs/orphaned/MDN/Editor
