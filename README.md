@@ -63,18 +63,22 @@ and the translated-content repo (this repo).
    `yarn install` before every update you do to the source, to make sure you
    have the latest packages.
 
-1. Next, create an environment variable called `CONTENT_TRANSLATED_ROOT`, which
-   points to the path to the translated-  content repo’s `files` directory. You
+1. Next, create an environment variable called `CONTENT_TRANSLATED_ROOT`
+   containing the path to the *translated-content* repo’s `files` directory. You
    could do this for a single session like so:
 
+   ```
    export CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files
+   ```
 
    But you’ll have to newly-set this every time you open up a new terminal
    window. Instead, you could put the environment variable setting in an `.env`
    file in the root of your content repo. This is most easily done using the
    following command:
 
+   ```
    echo CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files >> .env
+   ```
 
    (the `.env` file will be created for you if it does not already exist.)
 
@@ -88,9 +92,10 @@ then:
 
 1. Create a new branch to make your changes in.
 
-1. Switch to your new branch and make the changes you want to make. You can
-   keep going back to `localhost:5000` to test your changes and make sure the
-   content looks how you want it to look.
+1. Switch to your new branch and make the changes you want to make. You can keep
+   going back to `localhost:5000/<your_locale>` (e.g. `localhost:5000/fr` for
+   French) to test your changes and make sure the content looks how you want it
+   to look.
 
 1. When you are satisfied with your changes, create a pull request and one of
    our review teams will review it.
@@ -125,7 +130,7 @@ The review teams for each locale are:
   - [@SphinxKnight](https://github.com/SphinxKnight)
 - Japanese (`ja`) content — the [@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
   team, which consists of:
-  - [@potappo](https://github.com/hmartjp)
+  - [@hmartjp](https://github.com/hmartjp)
   - [@potappo](https://github.com/potappo)
   - [@mfuji09](https://github.com/mfuji09)
 - Chinese (`zh-CN` and `zh-TW`) content — the [@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
