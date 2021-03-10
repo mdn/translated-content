@@ -67,7 +67,7 @@ and the translated-content repo (this repo).
    containing the path to the *translated-content* repo’s `files` directory. You
    could do this for a single session like so:
 
-   ```
+   ```bash
    export CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files
    ```
 
@@ -76,7 +76,7 @@ and the translated-content repo (this repo).
    file in the root of your content repo. This is most easily done using the
    following command:
 
-   ```
+   ```bash
    echo CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files >> .env
    ```
 
