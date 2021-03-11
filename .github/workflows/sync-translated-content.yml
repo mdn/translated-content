@@ -42,7 +42,7 @@ jobs:
         run: |
           yarn --frozen-lockfile
 
-      - name: Build changed content
+      - name: Sync translated content
         env:
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
           CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
@@ -58,6 +58,6 @@ jobs:
           git remote add upstream "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git config --local user.email "actions@users.noreply.github.com"
           git config --local user.name "MDN"
-          git commit -a -m "[CRON] sync translated content"
-          git pull --rebase upstream main
+          git commit -a -m "[CRON] sync translated content" && \
+          git pull --rebase upstream main && \
           git push upstream main
