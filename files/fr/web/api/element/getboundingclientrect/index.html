@@ -91,7 +91,7 @@ for (var key in rect) {
 
 <p>L'objet <code>DOMRect</code> retourné peut être modifié dans les navigateurs modernes. Cela n'était pas le cas avec ceux plus anciens qui retournaient effectivement <code>DOMRectReadOnly</code>. Dans IE et Edge, ne pas pouvoir ajouter les propriétés manquantes à l'objet <a href="https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx">ClientRect </a>qu'ils retournent empêche d'ajouter le support de <code>x</code> et <code>y</code>.</p>
 
-<p>En raison de problèmes de comptabilité (voir ci-dessous), il est plus sûr de se limiter aux propriétés <code>top</code>, <code>left</code>, <code>right</code>, et <code>bottom</code>.</p>
+<p>En raison de problèmes de compatibilité (voir ci-dessous), il est plus sûr de se limiter aux propriétés <code>top</code>, <code>left</code>, <code>right</code>, et <code>bottom</code>.</p>
 
 <p>Les propriétés dans l'objet <code>DOMRect</code> retourné ne sont pas possèdées pas ce dernier. Tandis que les opérateurs <code>in</code> et <code>for...in</code> vont trouver les propriétés retournées, les autres APIs comme Object.keys échoueront. De plus, et de façon inattendue, les fonctionnalités ES2015 et plus récentes telles que <code>Object.assign()</code> et les paramètres du reste / la décomposition d'un objet, ne réussiront pas à copier les propriétés retournées.</p>
 
