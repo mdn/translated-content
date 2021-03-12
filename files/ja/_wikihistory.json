@@ -20480,12 +20480,6 @@
       "eltociear"
     ]
   },
-  "Web/API/Response/useFinalURL": {
-    "modified": "2020-10-15T22:32:38.418Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
   "Web/API/SVGElement": {
     "modified": "2020-10-15T21:57:52.067Z",
     "contributors": [
@@ -51302,12 +51296,6 @@
       "ethertank"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/getAnimations": {
-    "modified": "2020-10-15T22:32:28.367Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "orphaned/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController": {
     "modified": "2020-10-15T22:26:44.153Z",
     "contributors": [
@@ -53493,6 +53481,18 @@
   },
   "Web/API/Document/styleSheets": {
     "modified": "2020-10-15T22:33:02.264Z",
+    "contributors": [
+      "eltociear"
+    ]
+  },
+  "Web/API/Document/getAnimations": {
+    "modified": "2020-10-15T22:32:28.367Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "orphaned/Web/API/Response/useFinalURL": {
+    "modified": "2020-10-15T22:32:38.418Z",
     "contributors": [
       "eltociear"
     ]

@@ -3747,12 +3747,12 @@
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
 /ja/docs/Web/API/Document/domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/elementFromPoint	/ja/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
-/ja/docs/Web/API/Document/getAnimations	/ja/docs/Web/API/DocumentOrShadowRoot/getAnimations
 /ja/docs/Web/API/Document/getSelection	/ja/docs/conflicting/Web/API/DocumentOrShadowRoot/getSelection
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/conflicting/Web/API/Document/characterSet
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/GlobalEventHandlers/onselectionchange
 /ja/docs/Web/API/DocumentOrShadowRoot/activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/ja/docs/Web/API/Document/fullscreenElement
+/ja/docs/Web/API/DocumentOrShadowRoot/getAnimations	/ja/docs/Web/API/Document/getAnimations
 /ja/docs/Web/API/DocumentOrShadowRoot/msElementsFromRect	/ja/docs/orphaned/Web/API/DocumentOrShadowRoot/msElementsFromRect
 /ja/docs/Web/API/DocumentOrShadowRoot/nodeFromPoint	/ja/docs/conflicting/Web/API/DocumentOrShadowRoot
 /ja/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/ja/docs/conflicting/Web/API/DocumentOrShadowRoot_20ea0e1d91453a020aad3a16dbce16f1
@@ -3931,6 +3931,7 @@
 /ja/docs/Web/API/Range1/startContainer	/ja/docs/Web/API/Range/startContainer
 /ja/docs/Web/API/Range1/startOffset	/ja/docs/Web/API/Range/startOffset
 /ja/docs/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController	/ja/docs/orphaned/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
+/ja/docs/Web/API/Response/useFinalURL	/ja/docs/orphaned/Web/API/Response/useFinalURL
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /ja/docs/Web/API/Slotable	/ja/docs/conflicting/Web/API/Element
