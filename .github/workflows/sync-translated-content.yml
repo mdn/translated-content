@@ -33,7 +33,7 @@ jobs:
         id: cached-node_modules
         with:
           path: |
-            **/node_modules
+            ${{ github.workspace }}/mdn/content/node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install all yarn packages
@@ -50,7 +50,7 @@ jobs:
         run: |
           yarn content sync-translated-content
 
-      - name: Commit changes 
+      - name: Commit changes
         # git commit will fail if there are no changes but that's okay!
         continue-on-error: true
         run: |
