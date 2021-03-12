@@ -130,7 +130,7 @@ The review teams for each locale are:
   - [@SphinxKnight](https://github.com/SphinxKnight)
 - Japanese (`ja`) content — the [@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
   team, which consists of:
-  - [@hmartjp](https://github.com/hmartjp)
+  - [@hmatrjp](https://github.com/hmatrjp)
   - [@potappo](https://github.com/potappo)
   - [@dynamis](https://github.com/dynamis)
   - [@kenji-yamasaki](https://github.com/kenji-yamasaki)
