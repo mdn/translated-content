@@ -132,6 +132,8 @@ The review teams for each locale are:
   team, which consists of:
   - [@hmartjp](https://github.com/hmartjp)
   - [@potappo](https://github.com/potappo)
+  - [@dynamis](https://github.com/dynamis)
+  - [@kenji-yamasaki](https://github.com/kenji-yamasaki)
   - [@mfuji09](https://github.com/mfuji09)
 - Chinese (`zh-CN` and `zh-TW`) content — the [@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
   team, which consists of:
