@@ -271,7 +271,7 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Il y a plusieurs manière pour ajouter des routes à la variable <code>urlpatterns</code> (dans les étapes décrites ci-dessus nous avons ajouté petit à patir en utilisant l'opérateur <code>+=</code> pour bien séparer les étapes). Il est en réalité tout à fait possible de toput regrouper dans une seule étape :</p>
+<p><strong>Note</strong>: Il y a plusieurs manière pour ajouter des routes à la variable <code>urlpatterns</code> (dans les étapes décrites ci-dessus nous avons ajouté petit à patir en utilisant l'opérateur <code>+=</code> pour bien séparer les étapes). Il est en réalité tout à fait possible de tout regrouper dans une seule étape :</p>
 
 <pre class="brush: python notranslate">urlpatterns = [
     path('admin/', admin.site.urls),
