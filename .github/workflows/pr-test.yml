@@ -1,7 +1,7 @@
 # This is more or less a verbatim copy of
 # https://github.com/mdn/content/blob/main/.github/workflows/pr-test.yml
 # but done in a way that it first checks out mdn/translated-content (or
-# fork of) and *then* checks out mdn/content which has the relevant
+# fork of) and _then_ checks out mdn/content which has the relevant
 # CI related tooling.
 
 name: PR Test
