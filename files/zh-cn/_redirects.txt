@@ -1485,7 +1485,6 @@
 /zh-CN/docs/Web/API/Document/domConfig	/zh-CN/docs/Web/API/Document
 /zh-CN/docs/Web/API/Document/elementFromPoint	/zh-CN/docs/conflicting/Web/API/DocumentOrShadowRoot/elementFromPoint
 /zh-CN/docs/Web/API/Document/elementsFromPoint	/zh-CN/docs/conflicting/Web/API/DocumentOrShadowRoot/elementsFromPoint
-/zh-CN/docs/Web/API/Document/getSelection	/zh-CN/docs/conflicting/Web/API/DocumentOrShadowRoot/getSelection
 /zh-CN/docs/Web/API/Document/inputEncoding	/zh-CN/docs/conflicting/Web/API/Document/characterSet
 /zh-CN/docs/Web/API/Document/mozFullScreen	/zh-CN/docs/Web/API/Document/fullscreen
 /zh-CN/docs/Web/API/Document/mozFullScreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
@@ -1494,6 +1493,7 @@
 /zh-CN/docs/Web/API/Document/rouchmove_event	/zh-CN/docs/Web/API/Document/touchmove_event
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
+/zh-CN/docs/Web/API/DocumentOrShadowRoot/getSelection	/zh-CN/docs/Web/API/Document/getSelection
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/zh-CN/docs/Web/API/Document/pointerLockElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/styleSheets	/zh-CN/docs/Web/API/Document/styleSheets
 /zh-CN/docs/Web/API/Document_Object_Model/Preface	/zh-CN/docs/conflicting/Web/API/Document_Object_Model

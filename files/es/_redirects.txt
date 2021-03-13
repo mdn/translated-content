@@ -1790,7 +1790,7 @@
 /es/docs/Web/API/Document/abrir	/es/docs/Web/API/Document/open
 /es/docs/Web/API/Document/async	/es/docs/Web/API/XMLDocument/async
 /es/docs/Web/API/Document/crearAtributo	/es/docs/Web/API/Document/createAttribute
-/es/docs/Web/API/Document/getSelection	/es/docs/Web/API/DocumentOrShadowRoot/getSelection
+/es/docs/Web/API/DocumentOrShadowRoot/getSelection	/es/docs/Web/API/Document/getSelection
 /es/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/es/docs/Web/API/Document/pointerLockElement
 /es/docs/Web/API/DocumentOrShadowRoot/styleSheets	/es/docs/Web/API/Document/styleSheets
 /es/docs/Web/API/Element/accessKey	/es/docs/Web/API/HTMLElement/accessKey

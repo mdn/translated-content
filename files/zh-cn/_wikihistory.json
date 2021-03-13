@@ -10384,12 +10384,6 @@
       "1Cr18Ni9"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/getSelection": {
-    "modified": "2020-10-15T22:12:59.602Z",
-    "contributors": [
-      "WuCongMan"
-    ]
-  },
   "Web/API/DocumentTouch": {
     "modified": "2019-03-23T22:57:10.414Z",
     "contributors": [
@@ -50797,6 +50791,12 @@
     "modified": "2020-10-19T22:22:59.095Z",
     "contributors": [
       "lastVigo"
+    ]
+  },
+  "Web/API/Document/getSelection": {
+    "modified": "2020-10-15T22:12:59.602Z",
+    "contributors": [
+      "WuCongMan"
     ]
   }
 }

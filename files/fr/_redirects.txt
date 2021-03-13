@@ -3749,8 +3749,8 @@
 /fr/docs/Web/API/Document/defaultView/storage_event	/fr/docs/Web/API/Window/storage_event
 /fr/docs/Web/API/Document/domConfig	/fr/docs/Web/API/Document
 /fr/docs/Web/API/Document/elementFromPoint	/fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
-/fr/docs/Web/API/Document/getSelection	/fr/docs/Web/API/DocumentOrShadowRoot/getSelection
 /fr/docs/Web/API/DocumentOrShadowRoot/activeElement	/fr/docs/Web/API/Document/activeElement
+/fr/docs/Web/API/DocumentOrShadowRoot/getSelection	/fr/docs/Web/API/Document/getSelection
 /fr/docs/Web/API/DocumentOrShadowRoot/styleSheets	/fr/docs/Web/API/Document/styleSheets
 /fr/docs/Web/API/Document_Object_Model/Exemples	/fr/docs/Web/API/Document_Object_Model/Examples
 /fr/docs/Web/API/Document_Object_Model/Introduction_au_DOM	/fr/docs/Web/API/Document_Object_Model/Introduction
@@ -3996,7 +3996,7 @@
 /fr/docs/Web/API/document.createElementNS	/fr/docs/Web/API/Document/createElementNS
 /fr/docs/Web/API/document.createRange	/fr/docs/Web/API/Document/createRange
 /fr/docs/Web/API/document.defaultView	/fr/docs/Web/API/Document/defaultView
-/fr/docs/Web/API/document.getSelection	/fr/docs/Web/API/DocumentOrShadowRoot/getSelection
+/fr/docs/Web/API/document.getSelection	/fr/docs/Web/API/Document/getSelection
 /fr/docs/Web/API/document.head	/fr/docs/Web/API/Document/head
 /fr/docs/Web/API/document.location	/fr/docs/Web/API/Document/location
 /fr/docs/Web/API/document.querySelector	/fr/docs/Web/API/Document/querySelector

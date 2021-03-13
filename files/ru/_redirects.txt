@@ -402,8 +402,8 @@
 /ru/docs/Web/API/Document/defaultView/resize_event	/ru/docs/Web/API/Window/resize_event
 /ru/docs/Web/API/Document/defaultView/storage_event	/ru/docs/Web/API/Window/storage_event
 /ru/docs/Web/API/Document/domConfig	/ru/docs/Web/API/Document
-/ru/docs/Web/API/Document/getSelection	/ru/docs/Web/API/DocumentOrShadowRoot/getSelection
 /ru/docs/Web/API/DocumentOrShadowRoot/activeElement	/ru/docs/Web/API/Document/activeElement
+/ru/docs/Web/API/DocumentOrShadowRoot/getSelection	/ru/docs/Web/API/Document/getSelection
 /ru/docs/Web/API/Element.getBoundingClientRect	/ru/docs/Web/API/Element/getBoundingClientRect
 /ru/docs/Web/API/Element.insertAdjacentHTML	/ru/docs/Web/API/Element/insertAdjacentHTML
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey

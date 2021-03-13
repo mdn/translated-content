@@ -23055,12 +23055,6 @@
       "wbamberg"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/getSelection": {
-    "modified": "2019-03-23T22:54:50.239Z",
-    "contributors": [
-      "Diferno"
-    ]
-  },
   "Web/API/HTMLElement/accessKey": {
     "modified": "2019-03-23T22:26:12.172Z",
     "contributors": [
@@ -23742,6 +23736,12 @@
       "jsx",
       "teoli",
       "HenryGR"
+    ]
+  },
+  "Web/API/Document/getSelection": {
+    "modified": "2019-03-23T22:54:50.239Z",
+    "contributors": [
+      "Diferno"
     ]
   }
 }

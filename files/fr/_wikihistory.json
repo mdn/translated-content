@@ -44980,16 +44980,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/getSelection": {
-    "modified": "2019-09-25T07:21:02.389Z",
-    "contributors": [
-      "julienc",
-      "sudwebdesign",
-      "loella16",
-      "fscholz",
-      "FredPl"
-    ]
-  },
   "Web/API/HTMLElement/accessKey": {
     "modified": "2019-03-23T22:24:43.588Z",
     "contributors": [
@@ -46001,6 +45991,16 @@
     "modified": "2020-10-15T22:15:42.960Z",
     "contributors": [
       "SphinxKnight"
+    ]
+  },
+  "Web/API/Document/getSelection": {
+    "modified": "2019-09-25T07:21:02.389Z",
+    "contributors": [
+      "julienc",
+      "sudwebdesign",
+      "loella16",
+      "fscholz",
+      "FredPl"
     ]
   }
 }

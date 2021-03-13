@@ -18249,12 +18249,6 @@
       "Sebuls"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/getSelection": {
-    "modified": "2019-03-23T22:51:22.015Z",
-    "contributors": [
-      "x86kernel"
-    ]
-  },
   "Web/API/HTMLElement/accessKey": {
     "modified": "2020-10-15T22:14:28.158Z",
     "contributors": [
@@ -18703,6 +18697,12 @@
     "contributors": [
       "alattalatta",
       "DeadIntegral"
+    ]
+  },
+  "Web/API/Document/getSelection": {
+    "modified": "2019-03-23T22:51:22.015Z",
+    "contributors": [
+      "x86kernel"
     ]
   }
 }

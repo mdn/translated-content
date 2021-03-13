@@ -626,8 +626,8 @@
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/Document/defaultView/resize_event	/ko/docs/Web/API/Window/resize_event
 /ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/Document/drag_event
-/ko/docs/Web/API/Document/getSelection	/ko/docs/Web/API/DocumentOrShadowRoot/getSelection
 /ko/docs/Web/API/DocumentOrShadowRoot/activeElement	/ko/docs/Web/API/Document/activeElement
+/ko/docs/Web/API/DocumentOrShadowRoot/getSelection	/ko/docs/Web/API/Document/getSelection
 /ko/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ko/docs/Web/API/Document/styleSheets
 /ko/docs/Web/API/Document_Object_Model/Preface	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/Web/API/Document_Object_Model/소개	/ko/docs/Web/API/Document_Object_Model/Introduction

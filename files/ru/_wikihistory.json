@@ -25203,12 +25203,6 @@
       "Aleksej"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/getSelection": {
-    "modified": "2019-03-23T22:34:05.751Z",
-    "contributors": [
-      "YakovL"
-    ]
-  },
   "Web/API/HTMLElement/accessKey": {
     "modified": "2019-03-23T22:51:14.902Z",
     "contributors": [
@@ -25987,6 +25981,12 @@
     "modified": "2020-10-30T16:27:27.508Z",
     "contributors": [
       "d0rj"
+    ]
+  },
+  "Web/API/Document/getSelection": {
+    "modified": "2019-03-23T22:34:05.751Z",
+    "contributors": [
+      "YakovL"
     ]
   }
 }

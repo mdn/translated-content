@@ -12743,12 +12743,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/getSelection": {
-    "modified": "2020-10-15T22:26:08.191Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/DocumentType": {
     "modified": "2020-10-15T22:09:56.256Z",
     "contributors": [
@@ -53495,6 +53489,12 @@
     "modified": "2020-10-15T22:32:38.418Z",
     "contributors": [
       "eltociear"
+    ]
+  },
+  "Web/API/Document/getSelection": {
+    "modified": "2020-10-15T22:26:08.191Z",
+    "contributors": [
+      "mfuji09"
     ]
   }
 }

@@ -16964,12 +16964,6 @@
       "cezaraugusto"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/getSelection": {
-    "modified": "2019-03-23T22:54:15.369Z",
-    "contributors": [
-      "expalmer"
-    ]
-  },
   "Web/API/HTMLElement/accessKey": {
     "modified": "2019-03-23T22:27:15.059Z",
     "contributors": [
@@ -17366,6 +17360,12 @@
       "fscholz",
       "fernandosavio",
       "DiegoYungh"
+    ]
+  },
+  "Web/API/Document/getSelection": {
+    "modified": "2019-03-23T22:54:15.369Z",
+    "contributors": [
+      "expalmer"
     ]
   }
 }
