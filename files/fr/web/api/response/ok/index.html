@@ -25,7 +25,7 @@ translation_of: Web/API/Response/ok
 
 <h2 id="Example">Exemple</h2>
 
-<p>Dans <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">notre exemple</a> (voir <a href="https://mdn.github.io/fetch-examples/fetch-response/">l'exemple en ligne</a>) nous créons un nouvel objet {{domxref("Request")}} en utilisant le constructeur {{domxref("Request.Request","Request()")}} avec le chemin vers un JPG en argument. On <em>fetch</em> ensuite la requête en utilisant {{domxref("GlobalFetch.fetch()")}}, on extrait un <em>blob</em> de la réponse en utilisant {{domxref("Body.blob")}} pour en créer un objet URL en utilisant {{domxref("URL.createObjectURL")}} et l'afficher dans une balise {{htmlelement("img")}}.</p>
+<p>Dans <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-response">notre exemple</a> (voir <a href="https://mdn.github.io/fetch-examples/fetch-response/">la démonstration en ligne</a>) nous créons un nouvel objet {{domxref("Request")}} en utilisant le constructeur {{domxref("Request.Request","Request()")}} avec le chemin vers un JPG en argument. On récupère (<em>fetch</em> en anglais) ensuite la requête en utilisant {{domxref("GlobalFetch.fetch()")}}, on extrait un <em>blob</em> de la réponse en utilisant {{domxref("Body.blob")}} pour créer un objet URL grâce à {{domxref("URL.createObjectURL")}} et l'afficher dans une balise {{htmlelement("img")}}.</p>
 
 <div class="note">
 <p><strong>Note :</strong> Nous affichons la valeur de la propriété <code>ok</code> de la réponse dans la console en haut du bloc <code>fetch()</code>.</p>
@@ -46,12 +46,14 @@ fetch(myRequest).then(function(response) {
 <h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Spécification</th>
    <th scope="col">Statut</th>
    <th scope="col">Commentaire</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('Fetch','#dom-response-ok','ok')}}</td>
    <td>{{Spec2('Fetch')}}</td>
@@ -60,14 +62,14 @@ fetch(myRequest).then(function(response) {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Compatibilité navigateurs</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("api.Response.ok")}}</p>
 
 <h2 id="See_also">Voir aussi</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Service_Worker_API">API ServiceWorker</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">Contrôle d'accès HTTP (CORS)</a></li>
- <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+ <li><a href="/fr/docs/Web/API/Service_Worker_API">API ServiceWorker</a></li>
+ <li><a href="/fr/docs/Web/HTTP/CORS">Contrôle d'accès HTTP (CORS)</a></li>
+ <li><a href="/fr/docs/Web/HTTP">HTTP</a></li>
 </ul>
