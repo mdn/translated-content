@@ -56,9 +56,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
 
 <p>Si vous n'êtes pas familier avec les différences entre ces deux méthodes, jetez un coup d'oeil à <a href="https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee">Apprendre à connaître le Javascript asynchrone : Rappels, promesses et synchronisation/attente</a> ou la page des <a href="/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses">promesses d'utilisation</a> de MDN.</p>
 
-<p>Alors, comment tirer profit des promesses facilement, alors que Firefox est le seul navigateur qui les supporte ? La solution est de coder pour Firefox en utilisant des promesses et d'utiliser le <a href="https://github.com/mozilla/webextension-polyfill/">navigateur WebExtension API Polyfill</a>. Cette polyfill prend en compte l'espace de nommage de l'API et la gestion asynchrone des événements dans Firefox, Chrome et Opera. Au moment de la rédaction du présent document (novembre 2018), le soutien pour Edge était en cours d'élaboration.</p>
+<p>Alors, comment tirer profit des promesses facilement, alors que Firefox est le seul navigateur qui les supporte ? La solution est de coder pour Firefox en utilisant des promesses et d'utiliser le <a href="https://github.com/mozilla/webextension-polyfill/">Polyfill pour l'API WebExtension du navigateur</a>. Ce polyfill prend en compte l'espace de nommage de l'API et la gestion asynchrone des événements dans Firefox, Chrome et Opera. Au moment de la rédaction du présent document (novembre 2018), le soutien pour Edge était en cours d'élaboration.</p>
 
-<p>Vous installez le navigateur WebExtension API Polyfill dans votre environnement de développement à l'aide de npm ou vous le téléchargez directement depuis les <a href="https://github.com/mozilla/webextension-polyfill/releases">versions de GitHub</a>. Vous référencerez alors <code>browser-polyfill.js</code> dans :</p>
+<p>Pour utiliser le Polyfill, installez-le dans votre environment de développement à l'aide de npm ou téléchargez-le directement depuis les <a href="https://github.com/mozilla/webextension-polyfill/releases">versions de GitHub</a></p>
 
 <ul>
  <li><code>manifest.json</code>, pour mettre à disposition des scripts de fond et de contenu.</li>
@@ -82,7 +82,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
 
 <p>Pour plus de détails et d'informations sur l'utilisation du polyfill avec un module bundler, voir le <a href="https://github.com/mozilla/webextension-polyfill/blob/master/README.md">readme du projet sur GitHub.</a></p>
 
-<p>Il existe d'autres options de polyfill mais, au moment d'écrire ces lignes, aucune ne fournit la couverture de l'API Polyfill du navigateur WebExtension. Ainsi, lorsque vous n'avez pas choisi Firefox comme premier choix, vos options sont d'accepter les limitations des polyfills alternatifs, de porter sur Firefox et d'ajouter la prise en charge du cross-browser, ou de développer votre propre polyfill.</p>
+<p>Il existe d'autres options de polyfill mais, au moment d'écrire ces lignes, aucune ne fournit la couverture du Polyfill pour l'API WebExtension du navigateur. Ainsi, lorsque vous n'avez pas choisi Firefox comme premier choix, vos options sont d'accepter les limitations des polyfills alternatifs, de porter sur Firefox et d'ajouter la prise en charge du cross-browser, ou de développer votre propre polyfill.</p>
 
 <h3 id="Couverture_des_fonctions_API">Couverture des fonctions API</h3>
 
