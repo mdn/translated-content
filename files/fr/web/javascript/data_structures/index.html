@@ -62,7 +62,7 @@ original_slug: Web/JavaScript/Structures_de_données
 
 <p>Le type <code>Number</code> est géré pour représenter les nombres : <a href="https://en.wikipedia.org/wiki/Double_precision_floating-point_format">les nombres flottants à précision double, représentés sur 64 bits, selon le format IEEE 754</a> (les nombres compris entre -(2<sup>53</sup> -1) et 2<sup>53</sup> -1). <strong>Il n'y a donc pas de type à part pour représenter les nombres entiers</strong>. En plus de sa capacité à représenter les nombres décimaux, le type nombre possède trois valeurs symboliques : <code>+<a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Infinity">Infinity</a></code>, <code>-Infinity</code>, et {{jsxref("NaN")}} (<em>Not A Number</em> en anglais, qui signifie « n'est pas un nombre »).</p>
 
-<p>Afin de vérifier que des valeurs sont supérieures/inférieures à <code>+/-Infinity</code>, on peut utiliser les constantes {{jsxref("Number.MAX_VALUE")}} et {{jsxref("Number.MIN_VALUE")}}. À partir d'ECMAScript 6, on peut également vérifier si un nombre est/sera compris dans l'intervalle de représentation pour les nombres flottants à précision double en utilisant la méthode {{jsxref("Number.isSafeInteger()")}} ainsi que les valeurs {{jsxref("Number.MAX_SAFE_INTEGER")}} et {{jsxref("Number.MIN_SAFE_INTEGER")}}. En dehors de cet intervalle et pour JavaScript, on considère que les nombres ne sont plus représentés correctement qu'on manipule alors une approximation de la valeur sous forme d'un nombre à virgule flottante à précision double.</p>
+<p>Afin de vérifier que des valeurs sont supérieures/inférieures à <code>+/-Infinity</code>, on peut utiliser les constantes {{jsxref("Number.MAX_VALUE")}} et {{jsxref("Number.MIN_VALUE")}}. À partir d'ECMAScript 6, on peut également vérifier si un nombre est/sera compris dans l'intervalle de représentation pour les nombres flottants à précision double en utilisant la méthode {{jsxref("Number.isSafeInteger()")}} ainsi que les valeurs {{jsxref("Number.MAX_SAFE_INTEGER")}} et {{jsxref("Number.MIN_SAFE_INTEGER")}}. En dehors de cet intervalle et pour JavaScript, on considère que les nombres ne sont plus représentés correctement. On manipule alors une approximation de la valeur sous forme d'un nombre à virgule flottante à précision double.</p>
 
 <p>Le type nombre possède un seul entier pouvant être représenté de deux façons différentes : 0 qui peut être représenté par -0 et +0. ("0" étant un alias pour +0). En pratique, cela n'a généralement aucun impact et<code> +0 === -0</code> vaut bien <code>true</code>. Malgré tout, on peut observer certaines différences quand on divise par zéro :</p>
 
@@ -200,7 +200,7 @@ const y = x + 1n;
 
 <h4 id="Propriétés_daccesseur">Propriétés d'accesseur</h4>
 
-<p>Ces propriétés associent une clé avec un ou deux fonctions accesseur et mutateur qui permettent de récupérer ou d'enregistrer une valeur. Elles possèdent les attributs suivants :</p>
+<p>Ces propriétés associent une clé avec une ou deux fonctions accesseur et mutateur qui permettent de récupérer ou d'enregistrer une valeur. Elles possèdent les attributs suivants :</p>
 
 <table class="standard-table">
  <caption>Attributs d'une propriété d'accesseur</caption>
