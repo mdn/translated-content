@@ -2,8 +2,13 @@
 title: Affecter par décomposition
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 tags:
+  - Destructuration
+  - Affectation de déstructuration
   - ECMAScript 2015
+  - ES6
   - JavaScript
+  - Caractéristiques de la langue
+  - Déstructuration des objets imbriqués et des tableaux
   - Opérateur
   - Reference
 translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
@@ -225,7 +230,7 @@ console.log(truc); // true</pre>
 
 <p>Une variable peut recevoir une valeur par défaut lors de la décomposition si la propriété correspondante de l'objet vaut <code>undefined</code>.</p>
 
-<pre class="brush: js">const {a = 10; b = 5} = {a: 3};
+<pre class="brush: js">const {a = 10, b = 5} = {a: 3};
 
 console.log(a); // 3
 console.log(b); // 5</pre>
