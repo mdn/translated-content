@@ -326,7 +326,7 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
  <li>{{domxref("Response.ok")}} — как сказано ранее, это короткое свойство для упрощения проверки на то что статус ответа находится гдето между 200-299 включительно. Это свойство типа {{domxref("Boolean")}}.</li>
 </ul>
 
-<p>Они так же могут быть созданы с помощью JavaScript, но реальная польза от этого есть только при использовании  {{domxref("ServiceWorker_API", "сервисворкеров")}}, когда вы предоставляете собственный ответ на запрос с помощью метода {{domxref("FetchEvent.respondWith","respondWith()")}}:</p>
+<p>Они так же могут быть созданы с помощью JavaScript, но реальная польза от этого есть только при использовании  {{domxref("ServiceWorker_API", "сервис-воркеров")}}, когда вы предоставляете собственный ответ на запрос с помощью метода {{domxref("FetchEvent.respondWith","respondWith()")}}:</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> myBody <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Blob</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 
@@ -393,7 +393,7 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
     // Сделать что-то с XMLHttpRequest?
 }</pre>
 
-<h2 id="Полифилл">Полифилл</h2>
+<h2 id="Полифил">Полифил</h2>
 
 <p>Для того, чтобы использовать Fetch в неподдерживаемых браузерах, существует  <a href="https://github.com/github/fetch">Fetch Polyfill</a> , который воссоздает функциональность для не поддерживающих браузеров.</p>
 

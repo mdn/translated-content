@@ -52,7 +52,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 
 <p>Метод <code><strong>fill</strong></code> является <em>изменяющим методом</em>, он изменит объект <code>this</code> и вернёт его, а не просто вернёт копию.</p>
 
-<p>Если аргумент <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">value</span></font>​​​​​ является объектом, тo метод <code><strong>fill</strong></code> заполнит массив ссылками на этот объект.</p>
+<p>Если аргумент <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">value</span></font>​​​​​ является объектом, то метод <code><strong>fill</strong></code> заполнит массив ссылками на этот объект.</p>
 
 <h2 id="Examples" name="Examples">Примеры</h2>
 
@@ -72,7 +72,7 @@ Array(3).fill(4);                // [4, 4, 4]
 var arr = Array(3).fill({}) // [{}, {}, {}];
 arr[0].hi = "hi"; // [{ hi: "hi" }, { hi: "hi" }, { hi: "hi" }]</code></pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифилл</h2>
+<h2 id="Polyfill" name="Polyfill">Полифил</h2>
 
 <pre><code>if (!Array.prototype.fill) {
   Object.defineProperty(Array.prototype, 'fill', {

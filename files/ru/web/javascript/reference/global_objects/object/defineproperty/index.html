@@ -118,7 +118,7 @@ Object.defineProperty(obj, 'key', withValue('static'));
 
 <h3 id="Example:_Creating_a_property" name="Example:_Creating_a_property">Пример: создание свойства</h3>
 
-<p>Если указанное свойство не существует в объекте, метод <code>Object.defineProperty()</code> создаст новое свойство по переданному описанию. Поля в дескрипторе могут быть опущены, в этом случае их значения будут значениями по умолчанию. Все логические поля будут по-умолчанию установлены в <code>false</code>. Поля <code>value</code>, <code>get</code> и <code>set</code> по умолчанию будут установлены в {{jsxref("Global_Objects/undefined", "undefined")}}. Свойство, определённое без атрибутов <code>get</code>/<code>set</code>/<code>value</code>/<code>writable</code> называется «общим», а дескриптор данных — «типовым».</p>
+<p>Если указанное свойство не существует в объекте, метод <code>Object.defineProperty()</code> создаст новое свойство по переданному описанию. Поля в дескрипторе могут быть опущены, в этом случае их значения будут значениями по умолчанию. Все логические поля будут по умолчанию установлены в <code>false</code>. Поля <code>value</code>, <code>get</code> и <code>set</code> по умолчанию будут установлены в {{jsxref("Global_Objects/undefined", "undefined")}}. Свойство, определённое без атрибутов <code>get</code>/<code>set</code>/<code>value</code>/<code>writable</code> называется «общим», а дескриптор данных — «типовым».</p>
 
 <pre class="brush: js">var o = {}; // Создаём новый объект
 

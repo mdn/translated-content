@@ -54,9 +54,9 @@ if (result) {
 
 <p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
 
-<h2 id="Полифилл">Полифилл</h2>
+<h2 id="Полифил">Полифил</h2>
 
-<p>Следующий полифилл добавит метод replace в класс <code>DOMTokenList</code>.  Селудющий код будет работать только с <strong>IE10-11</strong>. Чтобы использовать с более ранними версиями IE, обратитесь к полифиллу по {{domxref("element.classList#Polyfill")}}</p>
+<p>Следующий полифил добавит метод replace в класс <code>DOMTokenList</code>.  Селудющий код будет работать только с <strong>IE10-11</strong>. Чтобы использовать с более ранними версиями IE, обратитесь к полифилу по {{domxref("element.classList#Polyfill")}}</p>
 
 <pre class="brush: js notranslate"><code>DOMTokenList.prototype.replace = function (a, b) {
     if (this.contains(a)) {

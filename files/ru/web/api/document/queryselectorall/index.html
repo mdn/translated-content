@@ -108,7 +108,7 @@ highlightedItems.forEach(function(userItem) {
 var inner = select.querySelectorAll('.outer .inner');
 inner.length; // 1, не 0!</pre>
 
-<p>В данном примере, когда мы выбрали <code>".outer .inner"</code> в контексте <code>&lt;div&gt;</code> с классом <code>"select"</code>, элемент с классом <code>".inner"</code> был всё равно найден, хотя <code>.outer</code> не является потомком элемента в котором происходил поиск (<code>".select"</code>). По-умолчанию, <code>querySelectorAll()</code> проверяет только последний элемент без учёта контекста.</p>
+<p>В данном примере, когда мы выбрали <code>".outer .inner"</code> в контексте <code>&lt;div&gt;</code> с классом <code>"select"</code>, элемент с классом <code>".inner"</code> был всё равно найден, хотя <code>.outer</code> не является потомком элемента в котором происходил поиск (<code>".select"</code>). По умолчанию, <code>querySelectorAll()</code> проверяет только последний элемент без учёта контекста.</p>
 
 <p>Псевдокласс {{cssxref(":scope")}} даёт нам ожидаемый результат. Только соответстующие селекторы в потомках базового элемента:</p>
 

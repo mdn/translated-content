@@ -51,7 +51,7 @@ Access-Control-Allow-Origin: null
 
 <pre class="notranslate">Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
 
-<p>Чтобы ограничить <code>Access-Control-Allow-Origin</code> разрешенным набором значений, необходимо реализовать логику на стороне сервера для проверки значения заговока {{HTTPHeader("Origin")}} запроса, спавнить его с разрешенным списком источников, а затем, если значение {{HTTPHeader("Origin")}} присутствует в списке, задать значение <code>Access-Control-Allow-Origin</code>, равное значению {{HTTPHeader("Origin")}}.</p>
+<p>Чтобы ограничить <code>Access-Control-Allow-Origin</code> разрешенным набором значений, необходимо реализовать логику на стороне сервера для проверки значения заголовка {{HTTPHeader("Origin")}} запроса, спавнить его с разрешенным списком источников, а затем, если значение {{HTTPHeader("Origin")}} присутствует в списке, задать значение <code>Access-Control-Allow-Origin</code>, равное значению {{HTTPHeader("Origin")}}.</p>
 
 <h3 id="CORS_и_кэширование">CORS и кэширование</h3>
 

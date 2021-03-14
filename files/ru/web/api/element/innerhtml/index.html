@@ -69,7 +69,7 @@ el.innerHTML = name; // показывает alert</pre>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Этот пример использует <code>innerHTML</code> для создания механизма логгирования сообщений внутри элемента на странице.</p>
+<p>Этот пример использует <code>innerHTML</code> для создания механизма логирования сообщений внутри элемента на странице.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -85,7 +85,7 @@ log("Регистрация событий мыши внутри этого ко
 
 <p>Функция <code>log()</code> создаёт сообщение получая текущее время из объекта {{jsxref("Date")}}, используя {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, и соединяя стороку с временной меткой с текстовым сообщением. Затем сообщение добавляется в элемент с классом <code>"log"</code>.</p>
 
-<p>Мы добавляем второй метод, который логгирует информацию о событиях на основе {{domxref("MouseEvent")}} (например, {{event("mousedown")}}, {{event("click")}}, и {{event("mouseenter")}}):</p>
+<p>Мы добавляем второй метод, который логирует информацию о событиях на основе {{domxref("MouseEvent")}} (например, {{event("mousedown")}}, {{event("click")}}, и {{event("mouseenter")}}):</p>
 
 <pre class="brush: js notranslate">function logEvent(event) {
   var msg = "Event &lt;strong&gt;" + event.type + "&lt;/strong&gt; at &lt;em&gt;" +
@@ -93,7 +93,7 @@ log("Регистрация событий мыши внутри этого ко
   log(msg);
 }</pre>
 
-<p>Затем мы используем этот обработчик событий на элементе, который содержит наше логгирование, для каждого события мыши:</p>
+<p>Затем мы используем этот обработчик событий на элементе, который содержит наше логирование, для каждого события мыши:</p>
 
 <pre class="brush: js notranslate">var boxElem = document.querySelector(".box");
 
@@ -112,7 +112,7 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
   &lt;div class="log"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{HTMLElement("div")}} c классом <code>"box"</code> – просто контейнер для, который даст содержимому пространство вокруг себя. <code>&lt;div&gt;</code> с классом <code>"log"</code> является контейнером для логгирования текста внутри себя.</p>
+<p>{{HTMLElement("div")}} c классом <code>"box"</code> – просто контейнер для, который даст содержимому пространство вокруг себя. <code>&lt;div&gt;</code> с классом <code>"log"</code> является контейнером для логирования текста внутри себя.</p>
 
 <h3 id="CSS">CSS</h3>
 

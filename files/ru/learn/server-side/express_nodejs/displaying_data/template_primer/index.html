@@ -83,7 +83,7 @@ html(lang="en")
 
 <p>Значения всех атрибутов <em>экранируются</em> (т.е. такие символы как "<code>&gt;</code>" заменяются эквивалентными кодами HTML как "<code>&amp;gt;"</code>) , чтобы предотвратить JavaScript инъекции и межсайтовые атаки.</p>
 
-<p>Если после тэга стоит знак = , следующий текст рассматривается как <em>выражение</em> JavaScript. Например, шиже в первой строке, содержимое тэга <code>h1</code> будет <em>переменной </em> <code>title</code> (которая определена в файле или передана в шаблон из Express). Во второй строке содержимое параграфа - это текстовая строка, соединенная с переменной  <code>title</code> . В каждом из случаев поведение по умолчанию - экранировать строки.</p>
+<p>Если после тэга стоит знак = , следующий текст рассматривается как <em>выражение</em> JavaScript. Например, ниже в первой строке, содержимое тэга <code>h1</code> будет <em>переменной </em> <code>title</code> (которая определена в файле или передана в шаблон из Express). Во второй строке содержимое параграфа - это текстовая строка, соединенная с переменной  <code>title</code> . В каждом из случаев поведение по умолчанию - экранировать строки.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">h1= title
 p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title</code></pre>

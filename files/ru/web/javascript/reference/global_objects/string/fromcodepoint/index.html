@@ -66,9 +66,9 @@ String.fromCodePoint(NaN);      // RangeError
 console.log(String.fromCodePoint(0x2F804)); // или 194564 в десятичной записи
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифилл</h2>
+<h2 id="Polyfill" name="Polyfill">Полифил</h2>
 
-<p>Метод <code>String.fromCodePoint()</code> был добавлен к стандарту ECMAScript в 6-й версии и может поддерживаться ещё не во всех браузерах или окружениях. Используйте код ниже в качестве полифилла:</p>
+<p>Метод <code>String.fromCodePoint()</code> был добавлен к стандарту ECMAScript в 6-й версии и может поддерживаться ещё не во всех браузерах или окружениях. Используйте код ниже в качестве полифила:</p>
 
 <pre class="brush: js">/*! http://mths.be/fromcodepoint v0.1.0 by @mathias */
 if (!String.fromCodePoint) {

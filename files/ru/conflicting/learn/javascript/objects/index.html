@@ -305,7 +305,7 @@ console.log(student1 instanceof Person);  // true
 console.log(student1 instanceof Student); // true
 </pre>
 
-<p>Относительно строки <code>Student.prototype = Object.create(Person.prototype);</code>: В старых движках JavaScript, в которых нет  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create" title="Object.create">Object.create</a></code> можно использовать полифилл (ещё известный как "shim") или функцию которая достигает тех же результатов, такую как:</p>
+<p>Относительно строки <code>Student.prototype = Object.create(Person.prototype);</code>: В старых движках JavaScript, в которых нет  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create" title="Object.create">Object.create</a></code> можно использовать полифил (ещё известный как "shim") или функцию которая достигает тех же результатов, такую как:</p>
 
 <pre class="brush: js">function createObject(proto) {
     function ctor() { }
