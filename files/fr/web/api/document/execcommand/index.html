@@ -19,7 +19,7 @@ translation_of: Web/API/Document/execCommand
     <code><a href="/fr/docs/Web/HTML/Global_attributes/contenteditable">contentEditable</a></code>
     .</span></p>
 
-<p>La plupart des commandes affecte la <a
+<p>La plupart des commandes affectent la <a
     href="/fr/docs/Web/API/Selection">sélection</a> du document (mise en gras, italique, etc.), tandis que
   d'autres insèrent de nouveaux éléments (un lien) ou modifient toute une ligne (indentation). Lorsqu'on
   utilise <code>contentEditable</code>, <code>execCommand()</code> affecte l'élément éditable
@@ -51,7 +51,7 @@ translation_of: Web/API/Document/execCommand
     exécuter. Voir {{anch("Commands")}} pour une liste de commandes possibles.</dd>
   <dt><code><var>aShowDefaultUI</var></code></dt>
   <dd>Un booléen ({{jsxref("Boolean")}}) indiquant si l'interface utilisateur par défaut
-    devrait être affichée. Ce n'est pas implémentée par Mozilla.</dd>
+    devrait être affichée. Ce n'est pas implémenté par Mozilla.</dd>
   <dt><code><var>aValueArgument</var></code></dt>
   <dd>Pour les commandes utilisant un argument en entrée, il s'agit d'une chaîne {{domxref("DOMString")}}
     qui fournit cette information. On pourra, par exemple, <code>insertImage</code> utilise
@@ -80,7 +80,7 @@ translation_of: Web/API/Document/execCommand
     compatibilité ci-après.</dd>
   <dt><code>createLink</code></dt>
   <dd>Crée un hyperlien à partir de la sélection (sous réserve qu'il y en ait une). Une 
-    chaîne de caractères formant une URI est nécessaire comme argument afin de fournir
+    chaîne de caractères formant un URI est nécessaire comme argument afin de fournir
     la valeur de l'attribut <code>href</code>. L'URI doit contenir au moins un caractère
     (qui peut être un blanc). (Internet Explorer créera un lien avec une valeur 
     <code>null</code>.)</dd>
@@ -127,14 +127,14 @@ translation_of: Web/API/Document/execCommand
     L'argument passé doit être un nom de balise. Tous les éléments de bloc peuvent en
     théorie être utilisés. (Internet Explorer et Edge ne prennent en charge que les
     balises <code>H1</code><code>H6</code>, <code>ADDRESS</code>, et <code>PRE</code> qui
-    doivent être passée entre chevrons : <code>"&lt;H1&gt;"</code>.)</dd>
+    doivent être passées entre chevrons : <code>"&lt;H1&gt;"</code>.)</dd>
   <dt><code>forwardDelete</code></dt>
   <dd>Supprime un caractère à la position du curseur. Le comportement obtenu est le même
     que lorsqu'on appuie sur la touche <kbd>Suppr</kbd> d'un clavier Windows.</dd>
   <dt><code>heading</code></dt>
   <dd>Ajoute un élément de titre autour de la sélection ou au niveau du point d'insertion.
-    L'argument doit être le nom d'une balise de titre (<code>"H1"</code> à <code>"H6"</code>
-    ). (Non pris en charge par Internet Explorer et Safari.)</dd>
+    L'argument doit être le nom d'une balise de titre (<code>"H1"</code> à <code>"H6"</code>).
+    (Non pris en charge par Internet Explorer et Safari.)</dd>
   <dt><code>hiliteColor</code></dt>
   <dd>Modifie la couleur d'arrière-plan pour la sélection ou à partir du point d'insertion.
     La valeur passée en argument doit être une chaîne de caractères définissant une couleur
