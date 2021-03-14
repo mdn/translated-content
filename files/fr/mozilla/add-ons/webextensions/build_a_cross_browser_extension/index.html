@@ -54,11 +54,19 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
 
 <p>Firefox prend également en charge les rappels pour les API qui prennent en charge l'espace de noms <code>chrome.*</code>. Cependant, il est recommandé d'utiliser des promesses (et l'espace de noms <code>browser.*</code> du navigateur). Des promesses ont été adoptées dans le cadre de la norme proposée. Il simplifie grandement la gestion asynchrone des événements, en particulier lorsque vous devez enchaîner des événements.</p>
 
-<p>Si vous n'êtes pas familier avec les différences entre ces deux méthodes, jetez un coup d'oeil à <a href="https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee">Apprendre à connaître le Javascript asynchrone : Rappels, promesses et synchronisation/attente</a> ou la page des <a href="/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses">promesses d'utilisation</a> de MDN.</p>
+<div class="notecard note">
+ <p>Si vous n'êtes pas familier avec les différences entre ces deux méthodes, jetez un coup d'oeil à <a href="https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee">Apprendre à connaître le Javascript asynchrone : Rappels, promesses et synchronisation/attente</a> ou la page des <a href="/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses">promesses d'utilisation</a> de MDN.</p>
+</div>
 
-<p>Alors, comment tirer profit des promesses facilement, alors que Firefox est le seul navigateur qui les supporte ? La solution est de coder pour Firefox en utilisant des promesses et d'utiliser le <a href="https://github.com/mozilla/webextension-polyfill/">Polyfill pour l'API WebExtension du navigateur</a>. Ce polyfill prend en compte l'espace de nommage de l'API et la gestion asynchrone des événements dans Firefox, Chrome et Opera. Au moment de la rédaction du présent document (novembre 2018), le soutien pour Edge était en cours d'élaboration.</p>
+<h4 id="The_WebExtension_browser_API_Polyfill">Polyfill pour l'API WebExtension du navigateur</h4>
+
+<p>Alors, comment tirer profit des promesses facilement, alors que Firefox est le seul navigateur qui les supporte ? La solution est de coder pour Firefox en utilisant des promesses et d'utiliser le <a href="https://github.com/mozilla/webextension-polyfill/">Polyfill pour l'API WebExtension du navigateur</a>.</p>
+
+<p>Ce polyfill prend en compte l'espace de nommage de l'API et la gestion asynchrone des événements dans Firefox, Chrome et Opera. Au moment de la rédaction du présent document (novembre 2018), le soutien pour Edge était en cours d'élaboration.</p>
 
 <p>Pour utiliser le Polyfill, installez-le dans votre environment de développement à l'aide de npm ou téléchargez-le directement depuis les <a href="https://github.com/mozilla/webextension-polyfill/releases">versions de GitHub</a></p>
+
+<p>Vous référencerez alors <code>browser-polyfill.js</code> dans :</p>
 
 <ul>
  <li><code>manifest.json</code>, pour mettre à disposition des scripts de fond et de contenu.</li>
@@ -80,7 +88,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
 
 <p>Votre but est de vous assurer que le polyfill s'exécute dans votre extension avant tout autre script qui attend le <code>browser.*</code> API namespace s'exécute.</p>
 
-<p>Pour plus de détails et d'informations sur l'utilisation du polyfill avec un module bundler, voir le <a href="https://github.com/mozilla/webextension-polyfill/blob/master/README.md">readme du projet sur GitHub.</a></p>
+<div class="notecard note">
+ <p>Pour plus de détails et d'informations sur l'utilisation du polyfill avec un module bundler, voir le <a href="https://github.com/mozilla/webextension-polyfill/blob/master/README.md">readme du projet sur GitHub.</a></p>
+</div>
 
 <p>Il existe d'autres options de polyfill mais, au moment d'écrire ces lignes, aucune ne fournit la couverture du Polyfill pour l'API WebExtension du navigateur. Ainsi, lorsque vous n'avez pas choisi Firefox comme premier choix, vos options sont d'accepter les limitations des polyfills alternatifs, de porter sur Firefox et d'ajouter la prise en charge du cross-browser, ou de développer votre propre polyfill.</p>
 
@@ -89,16 +99,21 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
 <p>Les différences dans les fonctions API offertes dans chacun des quatre principaux navigateurs se répartissent en trois grandes catégories :</p>
 
 <ul>
- <li>Manque de soutien pour l'ensemble d'une fonction. Par exemple, au moment d'écrire ces lignes, Edge ne prenait pas en charge la fonction de <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy#Browser_compatibility">vie privée</a>.</li>
- <li>Variations in the support for features within a function. For example, at the time of writing, Firefox doesn’t support the notification function method <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked#Browser_compatibility">onButtonClicked</a> while Firefox is the only browser that supports <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown#Browser_compatibility">onShown</a>.</li>
- <li>Proprietary functions, supporting browser specific features. For example, at the time of writing, containers was a Firefox-specific feature supported by the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities#Browser_compatibility">contextualIdentities</a> function.</li>
+ <li><strong>Manque de soutien pour l'ensemble d'une fonction.</strong><br />
+ Par exemple, au moment d'écrire ces lignes, Edge ne prenait pas en charge la fonction de <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy#Browser_compatibility">vie privée</a></code>.</li>
+ <li><strong>Variations in the support for features within a function.</strong>
+ For example, at the time of writing, Firefox doesn’t support the notification function method <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked#Browser_compatibility">onButtonClicked</a></code> while Firefox is the only browser that supports <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown#Browser_compatibility">onShown</a></code>.</li>
+ <li><strong>Proprietary functions, supporting browser specific features.</strong>
+ For example, at the time of writing, containers was a Firefox-specific feature supported by the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities#Browser_compatibility">contextualIdentities</a> function.</li>
 </ul>
 
 <p>You can find details about the support for the extension APIs among the four main browsers and Firefox for Android on the Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a> page. Browser compatibility information is also included with each function and its methods, types, and events in the Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">JavaScript APIs</a> reference pages.</p>
 
+<h4 id="Handling_API_differences">Handling API differences</h4>
+
 <p>A simple approach to addressing these differences is to limit the functions used in your extension to functions that offer the same functionality across your range of targeted browsers. In practice, for most extensions, this approach is likely to be too restrictive.</p>
 
-<p>The approach you should take where there are differences among the APIs, is to offer either alternative implementations or fallback functionality. Remember that you may also need to do this to allow for differences in API support between versions of the same browser.</p>
+<p>Instead, where there are differences among the APIs, you should either offer alternative implementations or fallback functionality. (Remember: you may also need to do this to allow for differences in API support between versions of the <em>same</em> browser.)</p>
 
 <p>The use of runtime checks on the availability of a function’s features is the recommended approach to implementing alternative or fallback functionality. The benefit of performing a runtime check is that if the function becomes available you don’t need to update and redistribute the extension to take advantage of it.</p>
 
@@ -110,54 +125,60 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
 
 <h3 id="Manifest_keys">Manifest keys</h3>
 
-<p>The differences in the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">manifest.json</a> file keys supported by the four main browsers fall broadly into three categories:</p>
+<p>The differences in the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">manifest.json</a></code> file keys supported by the four main browsers fall broadly into three categories:</p>
 
 <ul>
- <li>Extension information attributes. For example, at the time of writing, Firefox and Opera include the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#Browser_compatibility">developer</a> key for details about the developer, as well as the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility">author</a>, of the extension.</li>
- <li>Extension features. For example, at the time of writing, Edge did not support the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#Browser_compatibility">commands</a> key that enables shortcut keys to be defined for an extension.</li>
- <li>Key optionality. For example, at the time of writing, the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility">author</a> key is mandatory in Edge but optional in the other main browsers.</li>
+ <li><strong>Extension information attributes.</strong>
+ For example, at the time of writing, Firefox and Opera include the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#Browser_compatibility">developer</a></code> key for details about the developer, as well as the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility">author</a></code>, of the extension.</li>
+ <li><strong>Extension features.</strong>
+ For example, at the time of writing, Edge did not support the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#Browser_compatibility">commands</a></code> key that enables shortcut keys to be defined for an extension.</li>
+ <li><strong>Key optionality.</strong>
+ For example, at the time of writing, the <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility">author</a></code> key is mandatory in Edge but optional in the other main browsers.</li>
 </ul>
 
-<p>Browser compatibility information is included with each key in the Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json key reference pages</a>.</p>
+<p>Browser compatibility information is included with each key in the Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json"><code>manifest.json</code> key reference pages</a>.</p>
 
 <p>As <code>manifest.json</code> files tend to change little—except for release numbers, which may be different between the various browsers—creating and editing a static version for each browser is usually the simplest approach.</p>
 
 <h3 id="Extension_packaging">Extension packaging</h3>
 
-<p>Packaging an extension for distribution through the browser extension stores is relatively straightforward. Firefox, Chrome, and Opera all use a simple zip format that requires the <code>manifest.json</code> file to be at the root of the zip package. However, submitting to the Microsoft store requires additional packaging of the extension file.</p>
+<p>Packaging an extension for distribution through the browser extension stores is relatively straightforward.</p>
+
+<ul>
+ <li>Firefox, Chrome, and Opera all use a simple zip format that requires the <code>manifest.json</code> file to be at the root of the zip package.  </li>
+ <li>However, submitting to the Microsoft store requires additional packaging of the extension file.</li>
+</ul>
 
 <p>For details on packaging, refer to the guidance on the respective extension’s developer portals.</p>
 
 <h3 id="Publishing">Publishing</h3>
 
-<p>Each of the four major browsers maintains browser extension stores. As a consequence, you need to approach adding and updating your extension in each separately. In some cases you can upload your extension using a utility. Each of the stores also performs a review of your extension to check for security vulnerabilities. The table below summarizes the approach and features of each store:</p>
+<p>Each of the four major browsers maintains browser extension stores. Each store also performs a review of your extension to check for security vulnerabilities. </p>
+
+<p>As a consequence, you need to approach adding and updating your extension for each store separately. In some cases, you can upload your extension using a utility.</p>
+
+<p>The table below summarizes the approach and features of each store:</p>
 
 <table>
+ <thead>
+  <tr>
+   <th>Browser</th>
+   <th>Registration fee</th>
+   <th>Upload utility</th>
+   <th>Pre-publication review process</th>
+   <th>Account two factor authentication</th>
+  </tr>
+ </thead>
  <tbody>
   <tr>
-   <td></td>
-   <td>
-    <p>Registration fee</p>
-   </td>
-   <td>
-    <p>Upload utility</p>
-   </td>
-   <td>
-    <p>Pre-publication review process</p>
-   </td>
-   <td>
-    <p>Account two factor authentication</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
+   <th>
     <p>Firefox</p>
-   </td>
+   </th>
    <td>
     <p>No</p>
    </td>
    <td>
-    <p><a href="/en-US/Add-ons/WebExtensions/web-ext_command_reference">web-ext</a></p>
+    <p><a href="https://extensionworkshop.com/documentation/develop/web-ext-command-reference/">web-ext</a></p>
    </td>
    <td>
     <p>Automatic, a few seconds<sup>1</sup></p>
@@ -167,9 +188,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
    </td>
   </tr>
   <tr>
-   <td>
+   <th>
     <p>Chrome</p>
-   </td>
+   </th>
    <td>
     <p>Yes</p>
    </td>
@@ -184,9 +205,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
    </td>
   </tr>
   <tr>
-   <td>
+   <th>
     <p>Opera</p>
-   </td>
+   </th>
    <td>
     <p>No</p>
    </td>
@@ -201,9 +222,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
    </td>
   </tr>
   <tr>
-   <td>
+   <th>
     <p>Edge</p>
-   </td>
+   </th>
    <td>
     <p>Yes</p>
    </td>
@@ -228,7 +249,9 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
 
 <h4 id="Extension_naming">Extension naming</h4>
 
-<p>Microsoft requires that extensions have unique names and provides a process for claiming one or more names for your extension through the Windows Dev Center. It may therefore be prudent to reserve an extension name with Microsoft, even if you’re not intending to support Edge immediately. None of the other stores apply name restrictions.</p>
+<p>Microsoft requires that extensions have unique names and provides a process for claiming one or more names for your extension through the Windows Dev Center. It may therefore be prudent to reserve an extension name with Microsoft, even if you’re not intending to support Edge immediately.</p>
+
+<p>None of the other stores apply name restrictions.</p>
 
 <h4 id="Version_numbering">Version numbering</h4>
 
@@ -249,5 +272,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/construction_extension_cross_browse
 <p>When approaching a cross-platform extension development, addressing the fundamental differences between extension API implementations can be addressed by targeting Firefox and using the <a href="https://github.com/mozilla/webextension-polyfill/">WebExtension browser API Polyfill</a>. Following this approach you benefit from using API features that are closely aligned with the proposed extensions API standard and offer you the simplicity of promises for asynchronous event handling.</p>
 
 <p>The bulk of your cross-platform work is likely to focus on handling variations among the API features supported by the main browsers. Creating your <code>manifest.json</code> files should be relatively straightforward and something you can do manually. You will then need to account for the variations in extension packaging and the processes for submitting to each of the extension stores.</p>
+
+<p>You can use <a href="https://github.com/notlmn/browser-extension-template">browser-extension-template</a> to quickly set up a working project for building and publishing a browser extension.</p>
 
 <p>Following the advice in this article, you should be able to create an extension that works well on all of the four main browsers, enabling you to deliver your extension features to more people.</p>
