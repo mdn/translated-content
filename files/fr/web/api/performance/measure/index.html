@@ -12,7 +12,7 @@ translation_of: Web/API/Performance/measure
 ---
 <div>{{APIRef("User Timing API")}}</div>
 
-<p>La méthode <strong><code>measure()</code></strong> crée un {{domxref("DOMHighResTimeStamp", "timestamp")}} nommé dans le <em>tampon d'entrée de performance</em> du navigateur entre deux marques, l'heure de début de navigation ou l'heure actuelle. Lors d'une mesure entre deux marques, il existe respectivement une <em>marque de début</em> et une <em>marque de fin</em>. L'horodatage nommé est désigné comme une <em>mesure</em>.</p>
+<p class="seoSummary">La méthode <strong><code>measure()</code></strong> crée un {{domxref("DOMHighResTimeStamp", "timestamp")}} nommé dans le <em>tampon d'entrée de performance</em> du navigateur entre deux marqueurs, l'heure de début de navigation ou l'heure actuelle. Lors d'une mesure entre deux marqueurs, il existe respectivement un <em>marqueur de début</em> et un <em>marqueur de fin</em>. L'horodatage nommé est désigné comme une <em>mesure</em>.</p>
 
 <p>La <code>measure</code> peut être récupérée par l'une des interfaces {{domxref("Performance")}} : ({{domxref("Performance.getEntries", "getEntries()")}}, {{domxref("Performance.getEntriesByName", "getEntriesByName()")}} ou {{domxref("Performance.getEntriesByType", "getEntriesByType()")}}).</p>
 
@@ -21,8 +21,8 @@ translation_of: Web/API/Performance/measure
 <ul>
   <li>{{domxref("PerformanceEntry.entryType","entryType")}} - fixé à une « <code>measure</code> ».</li>
   <li>{{domxref("PerformanceEntry.name","name")}} - fixé à un « <code>name</code> » donné lors de la création de la mesure.</li>
-  <li>{{domxref("PerformanceEntry.startTime","startTime")}} - fixé à la marque de départ {{domxref("DOMHighResTimeStamp","timestamp")}}.</li>
-  <li>{{domxref("PerformanceEntry.duration","duration")}} - fixé à un {{domxref("DOMHighResTimeStamp")}} qui correspond à la durée de la mesure (généralement, l'horodatage de la marque de fin moins l'horodatage de la marque de début).</li>
+  <li>{{domxref("PerformanceEntry.startTime","startTime")}} - fixé à un marqueur de départ {{domxref("DOMHighResTimeStamp","timestamp")}}.</li>
+  <li>{{domxref("PerformanceEntry.duration","duration")}} - fixé à un {{domxref("DOMHighResTimeStamp")}} qui correspond à la durée de la mesure (généralement, l'horodatage du marqueur de fin moins l'horodatage du marqueur de début).</li>
 </ul>
 
 <p>{{AvailableInWorkers}}</p>
@@ -42,9 +42,9 @@ translation_of: Web/API/Performance/measure
   <dt>name</dt>
   <dd>Une {{domxref("DOMString")}} représentant le nom de la mesure.</dd>
   <dt>startMark {{optional_inline}}</dt>
-  <dd>Une {{domxref("DOMString")}} représentant le nom de la marque de départ de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. S'il est omis, l'heure de début sera celle de la navigation.</dd>
+  <dd>Une {{domxref("DOMString")}} représentant le nom du marqueur de départ de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. S'il est omis, l'heure de début sera celle de la navigation.</dd>
   <dt>endMark {{optional_inline}}</dt>
-  <dd>Une {{domxref("DOMString")}} représentant le nom de la marque de fin de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. S'il est omis, le temps actuel est utilisé.</dd>
+  <dd>Une {{domxref("DOMString")}} représentant le nom du marqueur de fin de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. S'il est omis, le temps actuel est utilisé.</dd>
 </dl>
 
 <h3 id="Return_value">Valeur de retour</h3>
