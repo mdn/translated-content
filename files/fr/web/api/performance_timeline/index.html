@@ -1,0 +1,78 @@
+---
+title: Performance Timeline API
+slug: Web/API/Performance_Timeline
+tags:
+  - API
+  - Guide
+  - Aperçu
+  - Performance
+  - Performance Web
+translation_of: Web/API/Performance_Timeline
+---
+<div>{{DefaultAPISidebar("Performance Timeline API")}}</div>
+
+<p>L'API <strong>Performance Timeline</strong> définit des extensions de l'interface {{domxref("Performance")}} pour prendre en charge les mesures de latence côté client dans les applications. Ces extensions fournissent des interfaces permettant de récupérer les {{domxref("PerformanceEntry", "paramètres de saisie des performances", '', 1)}} en fonction de critères de filtrage spécifiques. La norme comprend également, des interfaces qui permettent à une application de définir des retours (« callbacks ») d'<em>{{anch("Performance_Observers", "observateur des performances", '', 1)}}</em>, qui sont notifiés lorsque des événements de performance spécifiques sont ajoutés à la <em>chronologie des performances</em> du navigateur.</p>
+
+<p>Ce document fournit un aperçu des interfaces de la norme. Pour plus de détails sur les interfaces, voir les pages de référence et <a href="/fr/docs/Web/API/Performance_Timeline/Using_Performance_Timeline">Utilisation de Performance Timeline</a>.</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Performance_extensions">Extensions de <code>Performance</code></h2>
+
+<p>L'API Performance Timeline étend l'interface {{domxref("Performance")}} avec trois méthodes qui fournissent différents mécanismes pour obtenir un ensemble d'{{domxref("PerformanceEntry", "enregistrements des performances (métriques)", "", 1)}}, en fonction des critères de filtrage spécifiés. Ces méthodes sont les suivantes :</p>
+
+<dl>
+  <dt>{{domxref("Performance.getEntries","getEntries()")}}</dt>
+  <dd>Renvoie toutes les {{domxref("PerformanceEntry", "entrées de performances", "", 1)}} enregistrées ou, éventuellement, les entrées basées sur les {{domxref("PerformanceEntry.name", "name")}}, {{domxref("PerformanceEntry.entryType", "type de performance", "", 1)}} et/ou les {{domxref("PerformanceEntry.initiatorType", "initiatorType")}} spécifiés. (tel qu'un élément HTML).</dd>
+  <dt>{{domxref("Performance.getEntriesByName","getEntriesByName()")}}</dt>
+  <dd>Renvoie les {{domxref("PerformanceEntry", "entrées de performances", "", 1)}} enregistrées en fonction du {{domxref("PerformanceEntry.name", "name")}} spécifié et éventuellement du {{domxref("PerformanceEntry.entryType", "type de performance", "", 1)}}.</dd>
+  <dt>{{domxref("Performance.getEntriesByType","getEntriesByType()")}}</dt>
+  <dd>Renvoie les {{domxref("PerformanceEntry", "entrées de perfornances", "", 1)}} enregistrées en fonction des {{domxref("PerformanceEntry.entryType", "types de performances", "", 1)}} spécifiés.</dd>
+</dl>
+
+<h2 id="PerformanceEntry_interface">L'interface <code>PerformanceEntry</code></h2>
+
+<p>The {{domxref("PerformanceEntry")}} interface encapsulates a single <em>performance entry</em> — that is, a single data point or metric in the <em>performance timeline</em>. This interface has the following four properties, and these properties are extended (with additional constraints) by other interfaces (such as {{domxref("PerformanceMark")}}):</p>
+
+<dl>
+  <dt>{{domxref("PerformanceEntry.name","name")}}</dt>
+  <dd>Le nom de l'entrée de performance lorsque la métrique a été créée.</dd>
+  <dt>{{domxref("PerformanceEntry.entryType","entryType")}}</dt>
+  <dd>Le type de mesure de performance (par exemple, « <code>mark</code> »).</dd>
+  <dt>{{domxref("PerformanceEntry.startTime","startTime")}}</dt>
+  <dd>Un {{domxref("DOMHighResTimeStamp", "horodatage haute résolution", "", 1)}} représentant l'heure de départ de l'entrée de performance.</dd>
+  <dt>{{domxref("PerformanceEntry.duration","duration")}}</dt>
+  <dd>Un {{domxref("DOMHighResTimeStamp", "horodatage haute résolution", "", 1)}} représentant la valeur temporelle de la durée de l'événement de performance. (Certains {{domxref("PerformanceEntry.entryType", "types d'entrée", "", 1)}} de performance n'ont pas de concept de <em>durée</em> et cette valeur est fixée à <code>'0'</code> pour ces types).</dd>
+</dl>
+
+<p>Cette interface comprend une méthode {{domxref("PerformanceEntry.toJSON", "toJSON()")}} qui renvoie la sérialisation de l'objet {{domxref("PerformanceEntry")}}. La sérialisation est spécifique à l'entrée {{domxref("PerformanceEntry.entryType", "type de performance", "", 1)}}.</p>
+
+<h2 id="Performance_observers">Observateurs des performances</h2>
+
+<p>{{SeeCompatTable}}</p>
+
+<p>Les interfaces d'<em>observateurs de performance</em> permettent à une application d'enregistrer un <em>observateur</em> pour des types d'événements de performance spécifiques, et lorsqu'un de ces types d'événements est enregistré, l'application est <em>notifiée</em> de l'événement via la fonction de rappel de l'observateur qui a été spécifiée lors de la création de l'observateur.</p>
+
+<p>Lorsque l'observateur (rappel ou « callback ») est invoqué, les paramètres du rappel incluent une <em>{{domxref("PerformanceObserverEntryList", "liste des entrées de l'observateur de performance", "", 1)}}</em> qui contient uniquement des {{domxref("PerformanceEntry", "entrées de performance", "", 1)}} <em>observées</em>. C'est-à-dire que la liste contient uniquement des entrées pour les types d'événements qui ont été spécifiés lorsque la méthode {{domxref("PerformanceObserver.observe", "observe()")}} de l'observateur a été invoquée. L'interface {{domxref("PerformanceObserverEntryList")}} possède les trois mêmes méthodes <code>getEntries*()</code> que l'interface {{domxref("Performance")}}. Cependant, notez qu'il y a une différence clé avec ces méthodes ; les versions {{domxref("PerformanceObserverEntryList")}} sont utilisées pour récupérer les entrées de performance <em>observées</em> dans le rappel de l'observateur.</p>
+
+<p>Outre la méthode {{domxref("PerformanceObserver.observe", "observe()")}} de l'interface {{domxref("PerformanceObserver")}} (qui sert à enregistrer les {{domxref("PerformanceEntry.entryType", "types d'entrées", "", 1)}} pour <em>observer</em>), l'interface {{domxref("PerformanceObserver")}} possède également une méthode {{domxref("PerformanceObserver.disconnect", "disconnect()")}} qui empêche un observateur de recevoir d'autres événements.</p>
+
+<p class="notecard note">Les observateurs de performance ont été ajoutés au <code>Niveau 2</code> de la norme et n'ont pas été implémentés à grande échelle.</p>
+
+<h2 id="Implementation_status">État de la mise en œuvre</h2>
+
+<p>Un résumé de l'état de mise en œuvre des interfaces est fourni ci-dessous, avec un lien vers des informations plus détaillées.</p>
+
+<ul>
+  <li><strong>Les extensions de l'interface Performance :</strong> Comme le montre le tableau de <a href="/fr/docs/Web/API/Performance#browser_compatibility">Compatibilité des navigateurs</a> de l'interface {{domxref("Performance")}}, la plupart de ces interfaces sont largement prises en charge par les navigateurs de bureau et bénéficient d'un support moindre sur les appareils mobiles.</li>
+  <li><strong>PerformanceEntry :</strong> Comme le montre le tableau de <a href="/fr/docs/Web/API/PerformanceEntry#browser_compatibility">Compatibilité des navigateurs</a> de l'interface {{domxref("PerformanceEntry")}}, la plupart de ces interfaces sont largement prises en charge par les navigateurs de bureau et le sont moins sur les appareils mobiles.</li>
+  <li><strong>Observateur de performance {{experimental_inline}} :</strong> Comme le montre le tableau de <a href="/fr/docs/Web/API/PerformanceObserver#browser_compatibility">Compatibilité des navigateurs</a> de l'interface {{domxref("PerformanceObserver")}}, cette interface n'est pas implémentée sur les navigateurs.</li>
+</ul>
+
+<p>Pour tester la prise en charge de ces interfaces par votre navigateur, exécutez l'application <code><a href="https://mdn.github.io/web-performance/perf-api-support.html">perf-api-support</a></code>.</p>
+
+<h2 id="See_also">Voir aussi</h2>
+
+<ul>
+ <li><a href="https://siusin.github.io/perf-timing-primer/">Une introduction aux API de chronométrage des performances du Web</a> <small>(en)</small></li>
+</ul>
