@@ -36,7 +36,7 @@ translation_of: Web/API/Performance_API/Using_the_Performance_API
 
 <h2 id="Serializing_the_Performance_object">Sérialisation de l'objet <code>Performance</code></h2>
 
-<p>La sérialisation JSON de l'objet {{domxref("Performance")}} est effectuée via la méthode {{domxref("Performance.toJSON", "toJSON()")}}. Dans l'exemple suivant, la sérialisation JSON des objets {{domxref("Performance")}}, {{domxref("Performance.timing")}} et {{domxref("Performance.navigation")}} est imprimée dans l'élément <code>object</code>.</p>
+<p>La sérialisation JSON de l'objet {{domxref("Performance")}} est effectuée via la méthode {{domxref("Performance.toJSON", "toJSON()")}}. Dans l'exemple suivant, la sérialisation JSON des objets {{domxref("Performance")}}, {{domxref("Performance.timing")}} {{deprecated_inline}} et {{domxref("Performance.navigation")}} {{deprecated_inline}} est imprimée dans l'élément <code>object</code>.</p>
 
 <pre class="brush: js">
   function print_json() {
@@ -80,14 +80,14 @@ translation_of: Web/API/Performance_API/Using_the_Performance_API
   </thead>
   <tbody>
     <tr>
-      <td>{{SpecName('Highres Time')}}</td>
-      <td>{{Spec2('Highres Time')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-    <tr>
       <td>{{SpecName('Highres Time Level 2')}}</td>
       <td>{{Spec2('Highres Time Level 2')}}</td>
       <td>Ajout de l'attribut <code>performance</code> sur <code>Window</code> et <code>WorkerGlobalScope</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Highres Time')}}</td>
+      <td>{{Spec2('Highres Time')}}</td>
+      <td>Définition initiale.</td>
     </tr>
   </tbody>
 </table>
