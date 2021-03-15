@@ -12,17 +12,17 @@ translation_of: Web/API/Performance/measure
 ---
 <div>{{APIRef("User Timing API")}}</div>
 
-<p class="seoSummary">La méthode <strong><code>measure()</code></strong> crée un {{domxref("DOMHighResTimeStamp", "timestamp")}} nommé dans le <em>tampon d'entrée de performance</em> du navigateur entre deux marqueurs, l'heure de début de navigation ou l'heure actuelle. Lors d'une mesure entre deux marqueurs, il existe respectivement un <em>marqueur de début</em> et un <em>marqueur de fin</em>. L'horodatage nommé est désigné comme une <em>mesure</em>.</p>
+<p class="seoSummary">La méthode <strong><code>measure()</code></strong> crée un {{domxref("DOMHighResTimeStamp", "timestamp")}} nommé dans le <em>tampon d'entrée de performance</em> du navigateur entre deux marqueurs, l'heure de début de navigation ou l'heure actuelle. Lors d'une mesure entre deux marqueurs, on aura un <em>marqueur de début</em> et un <em>marqueur de fin</em>. L'horodatage ainsi nommé est désigné comme une <em>mesure</em>.</p>
 
-<p>La <code>measure</code> peut être récupérée par l'une des interfaces {{domxref("Performance")}} : ({{domxref("Performance.getEntries", "getEntries()")}}, {{domxref("Performance.getEntriesByName", "getEntriesByName()")}} ou {{domxref("Performance.getEntriesByType", "getEntriesByType()")}}).</p>
+<p>La mesure correspondante peut être récupérée par l'une des méthodes suivantes de l'interface {{domxref("Performance")}} : {{domxref("Performance.getEntries", "getEntries()")}}, {{domxref("Performance.getEntriesByName", "getEntriesByName()")}} ou {{domxref("Performance.getEntriesByType", "getEntriesByType()")}}.</p>
 
-<p>L'{{domxref("PerformanceEntry", "entrée de performance")}} de la <code>measure</code> aura les valeurs de propriété suivantes :</p>
+<p>L'{{domxref("PerformanceEntry", "entrée de performance","",1)}} créée par <code>measure()</code> aura les valeurs de propriété suivantes :</p>
 
 <ul>
-  <li>{{domxref("PerformanceEntry.entryType","entryType")}} - fixé à une « <code>measure</code> ».</li>
-  <li>{{domxref("PerformanceEntry.name","name")}} - fixé à un « <code>name</code> » donné lors de la création de la mesure.</li>
-  <li>{{domxref("PerformanceEntry.startTime","startTime")}} - fixé à un marqueur de départ {{domxref("DOMHighResTimeStamp","timestamp")}}.</li>
-  <li>{{domxref("PerformanceEntry.duration","duration")}} - fixé à un {{domxref("DOMHighResTimeStamp")}} qui correspond à la durée de la mesure (généralement, l'horodatage du marqueur de fin moins l'horodatage du marqueur de début).</li>
+  <li>{{domxref("PerformanceEntry.entryType","entryType")}} : <code>"measure"</code>.</li>
+  <li>{{domxref("PerformanceEntry.name","name")}} : le nom passé en argument lors de la création de la mesure (cf. ci-après).</li>
+  <li>{{domxref("PerformanceEntry.startTime","startTime")}} : fixé selon le marqueur de départ (type {{domxref("DOMHighResTimeStamp")}}).</li>
+  <li>{{domxref("PerformanceEntry.duration","duration")}} : fixé à un {{domxref("DOMHighResTimeStamp")}} qui correspond à la durée de la mesure (généralement, l'horodatage du marqueur de fin moins l'horodatage du marqueur de début).</li>
 </ul>
 
 <p>{{AvailableInWorkers}}</p>
@@ -30,33 +30,30 @@ translation_of: Web/API/Performance/measure
 <h2 id="Syntax">Syntaxe</h2>
 
 <pre class="brush: js">
-  <em>performance</em>.measure(name);
-  <em>performance</em>.measure(name, startMark);
-  <em>performance</em>.measure(name, startMark, endMark);
-  <em>performance</em>.measure(name, undefined, endMark);
+  performance.measure(name);
+  performance.measure(name, startMark);
+  performance.measure(name, startMark, endMark);
+  performance.measure(name, undefined, endMark);
 </pre>
 
 <h3 id="Arguments">Arguments</h3>
 
 <dl>
-  <dt>name</dt>
+  <dt><code>name</code></dt>
   <dd>Une {{domxref("DOMString")}} représentant le nom de la mesure.</dd>
-  <dt>startMark {{optional_inline}}</dt>
-  <dd>Une {{domxref("DOMString")}} représentant le nom du marqueur de départ de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. S'il est omis, l'heure de début sera celle de la navigation.</dd>
-  <dt>endMark {{optional_inline}}</dt>
-  <dd>Une {{domxref("DOMString")}} représentant le nom du marqueur de fin de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. S'il est omis, le temps actuel est utilisé.</dd>
+  <dt><code>startMark</code> {{optional_inline}}</dt>
+  <dd>Une {{domxref("DOMString")}} représentant le nom du marqueur de départ de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. Si elle est omise, l'heure de début sera celle de la navigation.</dd>
+  <dt><code>endMark</code> {{optional_inline}}</dt>
+  <dd>Une {{domxref("DOMString")}} représentant le nom du marqueur de fin de la mesure. Peut également être le nom d'une propriété {{domxref("PerformanceTiming")}}. Si elle est omise, le temps actuel est utilisé.</dd>
 </dl>
 
 <h3 id="Return_value">Valeur de retour</h3>
 
-<dl>
-  <dt>void</dt>
-  <dd> </dd>
-</dl>
+<p>Aucune</p>
 
 <h2 id="Example">Exemple</h2>
 
-<p>L'exemple suivant montre comment <code>measure()</code> est utilisé pour créer une nouvelle <em>mesure</em> d'{{domxref("PerformanceEntry", "entrée de performance")}} dans le tampon d'entrée de performance du navigateur.</p>
+<p>L'exemple suivant montre comment <code>measure()</code> est utilisé pour créer une nouvelle <em>mesure</em> d'{{domxref("PerformanceEntry", "entrée de performance","",1)}} dans le tampon d'entrée de performance du navigateur.</p>
 
 <pre class="brush: js">const markerNameA = "example-marker-a"
 const markerNameB = "example-marker-b"
@@ -68,10 +65,10 @@ setTimeout(function() {
   setTimeout(function() {
 
     // Crée une variété de mesures.
-    performance.measure("measure a to b", markerNameA, markerNameB);
-    performance.measure("measure a to now", markerNameA);
-    performance.measure("measure from navigation start to b", undefined, markerNameB);
-    performance.measure("measure from the start of navigation to now");
+    performance.measure("mesure a à b", markerNameA, markerNameB);
+    performance.measure("mesure a à maintenant", markerNameA);
+    performance.measure("mesure du début de la navigation à b", undefined, markerNameB);
+    performance.measure("mesure du début de la navigation à maintenant");
 
     // Sort toutes les mesures.
     console.log(performance.getEntriesByType("measure"));
@@ -86,12 +83,14 @@ setTimeout(function() {
 <h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
-  <tbody>
+  <thead>
     <tr>
       <th scope="col">Spécification</th>
       <th scope="col">Statut</th>
       <th scope="col">Commentaire</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>{{SpecName('User Timing Level 2', '#dom-performance-measure', 'measure()')}}
       </td>
