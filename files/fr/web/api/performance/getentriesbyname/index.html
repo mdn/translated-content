@@ -11,30 +11,30 @@ translation_of: Web/API/Performance/getEntriesByName
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p class="seoSummary">La méthode <strong><code>getEntriesByName()</code></strong> renvoie une liste de tous les objets {{domxref("PerformanceEntry")}} pour les <em>name</em> et <em>type</em> donnés. Les membres de la liste (<em>entrées</em>) peuvent être créés en faisant des <em>marqueurs</em> ou des <em>mesures</em> de performance (par exemple en appelant la méthode {{domxref("Performance.mark", "mark()")}}) à des moments explicites.</p>
+<p class="seoSummary">La méthode <strong><code>getEntriesByName()</code></strong> renvoie une liste de tous les objets {{domxref("PerformanceEntry")}} ayant un nom (et éventuellement un type) donné(s). Les entrées de performance auront pu être créées au préalable avec des <em>marqueurs</em> ou des <em>mesures</em> de performance (par exemple en appelant la méthode {{domxref("Performance.mark", "mark()")}}) à des moments explicites.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntaxe</h2>
 
 <pre class="brush: js">
-  <em>entries</em> = window.performance.getEntriesByName(name, type);
+  <var>entries</var> = window.performance.getEntriesByName(name, type);
 </pre>
 
 <h3 id="Arguments">Arguments</h3>
 
 <dl>
-  <dt>name</dt>
+  <dt><code>name</code></dt>
   <dd>Le nom de l'entrée à récupérer.</dd>
-  <dt>type {{optional_inline}}</dt>
+  <dt><code>type</code> {{optional_inline}}</dt>
   <dd>Le type d'entrée à récupérer tel que « <code>mark</code> ». Les types d'entrées valides sont listés dans {{domxref("PerformanceEntry.entryType")}}.</dd>
 </dl>
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
 <dl>
-  <dt>entries</dt>
-  <dd>Une liste de tous les objets {{domxref("PerformanceEntry")}} ayant les <em>name</em> et <em>type</em> spécifiés. Si l'argument <code>type</code> n'est pas spécifié, seul le <code>name</code> sera utilisé pour déterminer les entrées à retourner. Les éléments seront dans l'ordre chronologique basé sur les {{domxref("PerformanceEntry.startTime", "startTime")}} des entrées. Si aucun objet ne répond aux critères spécifiés, une liste vide est retournée.</dd>
+  <dt><code>entries</code></dt>
+  <dd>Une liste de tous les objets {{domxref("PerformanceEntry")}} ayant le nom et le type spécifiés. Si l'argument <code>type</code> n'est pas spécifié, seul le nom (<code>name</code>) sera utilisé pour déterminer les entrées à renvoyer. Les éléments seront dans l'ordre chronologique basé sur les {{domxref("PerformanceEntry.startTime", "startTime")}} des entrées. Si aucun objet ne répond aux critères spécifiés, une liste vide est retournée.</dd>
 </dl>
 
 <h2 id="Example">Exemple</h2>
@@ -92,12 +92,14 @@ translation_of: Web/API/Performance/getEntriesByName
 <h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
-  <tbody>
+  <thead>
     <tr>
       <th scope="col">Spécification</th>
       <th scope="col">Statut</th>
       <th scope="col">Commentaire</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>{{SpecName('Performance Timeline Level 2', '#dom-performance-getentriesbyname',
         'getEntriesByName()')}}</td>
