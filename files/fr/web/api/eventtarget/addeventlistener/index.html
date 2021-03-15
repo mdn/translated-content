@@ -101,10 +101,10 @@ function eventHandler(event) {
 <p>Par exemple, si vous voulez vérifier l'option <code>passive</code> :</p>
 
 <pre class="brush: js">
-var passiveSupported = false;
+let passiveSupported = false;
 
 try {
-  var options = Object.defineProperty({}, "passive", {
+  let options = Object.defineProperty({}, "passive", {
     get: function() {
       passiveSupported = true;
     }
@@ -124,15 +124,18 @@ try {
 <p>Ensuite, lorsque vous voulez créer un écouteur d'événements réel qui utilise les options en question, vous pouvez faire quelque chose comme ce qui suit :</p>
 
 <pre class="brush: js">
-someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
-                              ? { passive: true } : false);
+someElement.addEventListener(
+  "mouseup",
+  handleMouseUp,
+  passiveSupported ? { passive: true } : false
+);
 </pre>
 
 <p>Ici, nous ajoutons un écouteur pour l'événement {{domxref("Element/mouseup_event", "mouseup")}} dans l'élément <em><code>someElement</code></em>. Pour le troisième paramètre, si <em><code>passiveSupported</code></em> est <code>true</code>, nous spécifions un objet <em><code>options</code></em> avec <code>passive</code> initialisée à <code>true</code> ; sinon, nous savons que nous devons passer un Boolean, et nous passons <code>false</code> comme valeur du paramètre <em><code>useCapture</code></em>.</p>
 
 <p>Si vous préférez, vous pouvez utiliser une bibliothèque tierce comme <a href="https://modernizr.com/docs">Modernizr</a> ou <a href="https://github.com/rafrex/detect-it">Detect It</a> pour faire ce test pour vous.</p>
 
-<p>Vous pouvez en apprendre davantage dans l'article à propos des <code><a href="https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection">EventListenerOptions</a></code>  du <a href="https://wicg.github.io/admin/charter.html">Groupe Web Incubator Community</a>.</p>
+<p>Vous pouvez en apprendre davantage dans l'article à propos des <code><a href="https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md#feature-detection">EventListenerOptions</a></code> du <a href="https://wicg.github.io/admin/charter.html">Groupe Web Incubator Community</a>.</p>
 
 <h2 id="Examples">Exemples</h2>
 
@@ -154,7 +157,7 @@ someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
 <pre class="brush: js">
 // Fonction pour changer le contenu de t2
 function modifyText() {
-  var t2 = document.querySelector("#t2");
+  const t2 = document.querySelector("#t2");
   if (t2.firstChild.nodeValue == "trois") {
     t2.firstChild.nodeValue = "deux";
   } else {
@@ -163,7 +166,7 @@ function modifyText() {
 }
 
 // Ajouter un écouteur d'évènements à la table
-var el = document.querySelector("#outside");
+const el = document.querySelector("#outside");
 el.addEventListener("click", modifyText, false);
 </pre>
 
@@ -191,12 +194,12 @@ el.addEventListener("click", modifyText, false);
 <pre class="brush: js">
 // Fonction pour changer le contenu de t2
 function modifyText(newText) {
-  var t2 = document.querySelector("#t2");
+  const t2 = document.querySelector("#t2");
   t2.firstChild.nodeValue = newText;
 }
 
 // Fonction pour ajouter un écouteur d'évènement à la table
-var el = document.querySelector("#outside");
+const el = document.querySelector("#outside");
 el.addEventListener("click", function(){modifyText("quatre")}, false);
 </pre>
 
@@ -224,13 +227,15 @@ el.addEventListener("click", function(){modifyText("quatre")}, false);
 <pre class="brush: js">
 // Fonction pour changer le contenu de t2
 function modifyText(newText) {
-  var t2 = document.querySelector("#t2");
+  const t2 = document.querySelector("#t2");
   t2.firstChild.nodeValue = newText;
 }
 
 // Ajouter un écouteur d'évènements à la table avec une fonction fléchée
-var el = document.querySelector("#outside");
-el.addEventListener("click", () =&gt; { modifyText("quatre"); }, false);</pre>
+const el = document.querySelector("#outside");
+el.addEventListener("click", () =&gt; {
+  modifyText("quatre");
+}, false);</pre>
 
 <h4 id="Result_3">Résultat</h4>
 
@@ -262,33 +267,37 @@ el.addEventListener("click", () =&gt; { modifyText("quatre"); }, false);</pre>
 <h4 id="CSS">CSS</h4>
 
 <pre class="brush: css">
-.outer, .middle, .inner1, .inner2 {
+.outer,
+.middle,
+.inner1,
+.inner2 {
   display: block;
-  width:   520px;
+  width: 520px;
   padding: 15px;
-  margin:  15px;
+  margin: 15px;
   text-decoration: none;
 }
 .outer {
   border: 1px solid red;
-  color:  red;
+  color: red;
 }
 .middle {
   border: 1px solid green;
-  color:  green;
-  width:  460px;
+  color: green;
+  width: 460px;
 }
-.inner1, .inner2 {
+.inner1,
+.inner2 {
   border: 1px solid purple;
-  color:  purple;
-  width:  400px;
+  color: purple;
+  width: 400px;
 }
 </pre>
 
 <h4 id="JavaScript_4">JavaScript</h4>
 
 <pre class="brush: js">
-const outer  = document.querySelector('.outer');
+const outer = document.querySelector('.outer');
 const middle = document.querySelector('.middle');
 const inner1 = document.querySelector('.inner1');
 const inner2 = document.querySelector('.inner2');
@@ -467,7 +476,7 @@ my_element.addEventListener('click', (e) =&gt; {
 <p>Ceci est un exemple avec et sans <code>bind()</code> :</p>
 
 <pre class="brush: js">
-var Something = function(element) {
+const Something = function(element) {
   // |this| est un objet nouvellement créé
   this.name = 'Quelque chose de bon';
   this.onclick1 = function(event) {
@@ -741,8 +750,8 @@ element.onclick = function() {
 <h3 id="Memory_issues">Problèmes de mémoire</h3>
 
 <pre class="brush: js">
-var i;
-var els = document.getElementsByTagName('*');
+let i;
+const els = document.getElementsByTagName('*');
 
 // Cas 1
 for (i=0 ; i&lt;els.length ; i++) {
