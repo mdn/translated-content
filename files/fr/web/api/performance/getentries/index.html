@@ -11,23 +11,21 @@ translation_of: Web/API/Performance/getEntries
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p class="seoSummary">La méthode <strong><code>getEntries()</code></strong> renvoie une liste de tous les objets {{domxref("PerformanceEntry")}} pour la page. Les membres de la liste (<em>entrées</em>) peuvent être créés en faisant des <em>marqueurs</em> ou des <em>mesures</em> de performance (par exemple en appelant la méthode {{domxref("Performance.mark", "mark()")}}) à des moments explicites. Si vous ne vous intéressez qu'aux entrées de performance de certains types ou qui portent certains noms, regardez {{domxref("Performance.getEntriesByType", "getEntriesByType()")}} et {{domxref("Performance.getEntriesByName", "getEntriesByName()")}}.</p>
+<p class="seoSummary">La méthode <strong><code>getEntries()</code></strong> renvoie une liste de tous les objets {{domxref("PerformanceEntry")}} pour la page. Les membres de la liste (<em>entrées</em>) peuvent être créés en faisant des <em>marqueurs</em> ou des <em>mesures</em> de performance (par exemple en appelant la méthode {{domxref("Performance.mark", "mark()")}}) à des moments explicites. Si vous souhaitez filtrer  les entrées de performance en fonction de leur type ou de leur nom, consultez la documentation des méthodes {{domxref("Performance.getEntriesByType", "getEntriesByType()")}} et {{domxref("Performance.getEntriesByName", "getEntriesByName()")}}.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntax">Syntaxe</h2>
 
-<p>Syntaxe générale :</p>
-
 <pre class="brush: js">
-  <em>entries</em> = window.performance.getEntries();
+  <var>entries</var> = window.performance.getEntries();
 </pre>
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
 <dl>
-  <dt>entries</dt>
-  <dd>Un <code>array</code> d'objets {{domxref("PerformanceEntry")}}. Les éléments seront classés par ordre chronologique en fonction des entrées {{domxref("PerformanceEntry.startTime","startTime")}}.</dd>
+  <dt><code>entries</code></dt>
+  <dd>Un tableau ({{jsxref("Array")}}) d'objets {{domxref("PerformanceEntry")}}. Les éléments seront classés par ordre chronologique en fonction des entrées {{domxref("PerformanceEntry.startTime","startTime")}}.</dd>
 </dl>
 
 <h2 id="Example">Exemple</h2>
@@ -78,12 +76,14 @@ translation_of: Web/API/Performance/getEntries
 <h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
-  <tbody>
+  <thead>
     <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
+        <th scope="col">Spécification</th>
+        <th scope="col">Statut</th>
+        <th scope="col">Commentaire</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>{{SpecName('Performance Timeline Level 2', '#dom-performance-getentries',
         'getEntries()')}}</td>
