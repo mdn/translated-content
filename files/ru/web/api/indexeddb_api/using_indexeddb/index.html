@@ -36,7 +36,7 @@ translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 
 <h2 id="open" name="open">Создание и структурирование хранилища</h2>
 
-<p>Так как спецификация пока еще находится в процесе разработки, то текущие реализации IndexedDB отличаются у различных браузеров и могут содержать имена объектов, включающие в себя префиксы браузеров. Однако, как только стандарт будет принят,  префиксы будут удалены. К настоящему моменту префиксы уже удалены в реализациях IndexedDB в Internet Explorer 10, Firefox 16 и Chrome 24. Браузеры, построенные на базе Gecko пока еще используют префикс <code>moz,</code> а браузеры на базе движка <code>webkit</code> используют префикс <code>webkit.</code></p>
+<p>Так как спецификация пока еще находится в процессе разработки, то текущие реализации IndexedDB отличаются у различных браузеров и могут содержать имена объектов, включающие в себя префиксы браузеров. Однако, как только стандарт будет принят,  префиксы будут удалены. К настоящему моменту префиксы уже удалены в реализациях IndexedDB в Internet Explorer 10, Firefox 16 и Chrome 24. Браузеры, построенные на базе Gecko пока еще используют префикс <code>moz,</code> а браузеры на базе движка <code>webkit</code> используют префикс <code>webkit.</code></p>
 
 <h3 id="Использование_экспериментальной_версии_IndexedDB">Использование экспериментальной версии IndexedDB</h3>
 
@@ -140,7 +140,7 @@ request.onupgradeneeded = function(event) {
 
 <p>Когда вы увеличиваете номер версии, будет инициировано событие onupgradeneeded. В этот момент БД будет хранить старые объекты. Но для всякого объекта прошлой версии стоит создать новый объект, совместимый с новой версией. Если вам необходимо исправить существующий объект в БД (например, для изменения keyPath), то вы можете удалить объект и создать его вновь с новыми параметрами (помните, что удаление стирает информацию, так что не забывайте сохранять то, что вам нужно).</p>
 
-<p>WebKit поддержимает текущую версию спецификации в Google Chrome 23 и старше. Так что там нет события <span style="font-family: Consolas,Monaco,'Andale Mono',monospace;">indexedDB.open(name, version).onupgradeneeded. Однако, вы можете ознакомиться с инструкцией <a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">о том, что делать со старым </a></span><a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">Webkit</a>.</p>
+<p>WebKit поддерживает текущую версию спецификации в Google Chrome 23 и старше. Так что там нет события <span style="font-family: Consolas,Monaco,'Andale Mono',monospace;">indexedDB.open(name, version).onupgradeneeded. Однако, вы можете ознакомиться с инструкцией <a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">о том, что делать со старым </a></span><a href="/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">Webkit</a>.</p>
 
 <h3 id="Структура_базы_данных">Структура базы данных</h3>
 

@@ -26,13 +26,13 @@ translation_of: Web/API/RTCPeerConnection
 
 <dl>
  <dt>{{domxref("RTCPeerConnection.connectionstatechange_event", "connectionstatechange")}}</dt>
- <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда общий статус объекта сосединения <code>RTCPeerConnection</code> изменился.<br>
+ <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда общий статус объекта соединения <code>RTCPeerConnection</code> изменился.<br>
  Так же, доступно через свойство установки обработчика события  {{domxref("RTCPeerConnection.onconnectionstatechange", "onconnectionstatechange")}}.</dd>
  <dt>{{domxref("RTCPeerConnection.datachannel_event", "datachannel")}}</dt>
  <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда удаленный пир (участник соединения) добавляет объект данных {{domxref("RTCDataChannel")}}  в текущее соединение.<br>
  Так же, доступно через свойство установки обработчика события {{domxref("RTCPeerConnection.ondatachannel", "ondatachannel")}}.</dd>
  <dt>{{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}}</dt>
- <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда  специальный объект ICE кандидата (<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate">RTCIceCandidate</a>) сгенерирован <code>RTCPeerConnection</code> и готов для передачи удаленному пиру по каналу сигнализации.Сам сгененрированный объект кандидата передается в параметр вызванного обработчика. <br>
+ <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда  специальный объект ICE кандидата (<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate">RTCIceCandidate</a>) сгенерирован <code>RTCPeerConnection</code> и готов для передачи удаленному пиру по каналу сигнализации.Сам сгенерированный объект кандидата передается в параметр вызванного обработчика. <br>
  Так же, доступно через свойство установки обработчика события {{domxref("RTCPeerConnection.onicecandidate", "onicecandidate")}}.</dd>
  <dt>{{domxref("RTCPeerConnection.icecandidateerror_event", "icecandidateerror")}}</dt>
  <dd>Событие типа ошибки  {{domxref("RTCPeerConnectionIceErrorEvent")}} , возникает на объекте соединения при генерации ICE кандидата (<a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCIceCandidate">RTCIceCandidate</a>), если при этом возникла ошибка. Свойства объекта ошибки, возвращаемого в обработчик,  описывают подробности ошибки.<br>
@@ -41,7 +41,7 @@ translation_of: Web/API/RTCPeerConnection
  <dd>Событие объекта <code>RTCPeerConnection</code> возникает при изменении статуса ICE соединения. К примеру, <a href="https://developer.mozilla.org/en-US/docs/Glossary/ICE">ICE</a> соединение разорвано.<br>
  Так же, доступно через свойство установки обработчика события{{domxref("RTCPeerConnection.oniceconnectionstatechange", "oniceconnectionstatechange")}} .</dd>
  <dt>{{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}}</dt>
- <dd>Событие объекта <code>RTCPeerConnection,</code> возникает, когда статус сборки, представленный классом {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}, изменяется. Это указывает на то, что :  согласование соединения ICE еще не началось (статус равен значению "<code>new</code>"); согласование соединения ICE началось (статус равен значеню "<code>gathering</code>"); согласование ICE  соединения завершено (статус равен значению "<code>complete</code>").<br>
+ <dd>Событие объекта <code>RTCPeerConnection,</code> возникает, когда статус сборки, представленный классом {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}, изменяется. Это указывает на то, что :  согласование соединения ICE еще не началось (статус равен значению "<code>new</code>"); согласование соединения ICE началось (статус равен значению "<code>gathering</code>"); согласование ICE  соединения завершено (статус равен значению "<code>complete</code>").<br>
  Так же, доступно через свойство установки обработчика {{domxref("RTCPeerConnection.onicegatheringstatechange", "onicegatheringstatechange")}} .</dd>
  <dt>{{domxref("RTCPeerConnection.isolationchange_event", "isolationchange")}}</dt>
  <dd>Событие объекта <code>RTCPeerConnection</code> возникает, когда свойство {{domxref("MediaStreamTrack.isolated", "isolated")}} на одном из объектов  {{domxref("MediaStreamTrack")}} , связанного с соединением изменяет свое значение. Объект трека является изолированным {{domxref("MediaStreamTrack.isolated", "isolated")}}, если его содержимое не может быть доступно содержащему его документу, по причине невозможности аутентификации, или объект трека прибыл не из источника происхождения страницы.<br>
@@ -148,7 +148,7 @@ translation_of: Web/API/RTCPeerConnection
   </tr>
   <tr>
    <td><code>"disconnected"</code></td>
-   <td>Проверяет, что компоненты все еще подключены, хотябы для одного объекта {{domxref("RTCPeerConnection")}}.  Это менее строгий тест, чем <code>"failed"</code>, и он может периодически запускаться и разрешаться спонтанно в менее надежных сетях, или во время временного отключения. Когда проблема исчезнет, ​​соединение может вернуться в состояние <code>"connected".</code> </td>
+   <td>Проверяет, что компоненты все еще подключены, хотя бы для одного объекта {{domxref("RTCPeerConnection")}}.  Это менее строгий тест, чем <code>"failed"</code>, и он может периодически запускаться и разрешаться спонтанно в менее надежных сетях, или во время временного отключения. Когда проблема исчезнет, ​​соединение может вернуться в состояние <code>"connected".</code> </td>
   </tr>
   <tr>
    <td><code>"closed"</code></td>
@@ -159,7 +159,7 @@ translation_of: Web/API/RTCPeerConnection
 
 <h3 id="Перечисление_RTCIceGatheringState">Перечисление RTCIceGatheringState</h3>
 
-<p>Перечисление <code>RTCIceGatheringState</code> определяет строковые константы, которые описывают текущий статус ICE сборки, возвращаемый свойством  {{domxref("RTCPeerConnection.iceGatheringState")}}. Для определения изменнения этого свойства можно подписаться на событие  {{event("icegatheringstatechange")}}.</p>
+<p>Перечисление <code>RTCIceGatheringState</code> определяет строковые константы, которые описывают текущий статус ICE сборки, возвращаемый свойством  {{domxref("RTCPeerConnection.iceGatheringState")}}. Для определения изменения этого свойства можно подписаться на событие  {{event("icegatheringstatechange")}}.</p>
 
 <table class="standard-table">
  <thead>

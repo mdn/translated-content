@@ -219,7 +219,7 @@ recognition.onresult = function(event) {
 <h3 id="Демо_2">Демо</h3>
 
 <p>То же самое приложение из предыдущего примера.<br>
- <a href="https://ru.web-speech-api-example.cheliz.top/">Ccылка на приложение</a> или <a href="https://github.com/Oleg-Miniuk/ru_web_speech_example">репозиторий</a> (клонируем, затем <code>npm install &amp;&amp; npm run start</code> в терминале, после чего открыть <strong>localhost:4001</strong> в браузере).<br>
+ <a href="https://ru.web-speech-api-example.cheliz.top/">Ссылка на приложение</a> или <a href="https://github.com/Oleg-Miniuk/ru_web_speech_example">репозиторий</a> (клонируем, затем <code>npm install &amp;&amp; npm run start</code> в терминале, после чего открыть <strong>localhost:4001</strong> в браузере).<br>
  <br>
  Пользовательский интерфейс включает в себя набор элементов для ввода текста, задания высоты тона, скорости воспроизведения и непосредственного выбора голоса, которым будет текст произнесен.</p>
 
@@ -351,7 +351,7 @@ let voices = [];</pre>
 <p>Внутри функции <code>speak()</code> мы выполняем проверку на то, воспроизводится ли речь в данный момент, с помощью свойства <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/speaking">SpeechSynthesis.speaking</a></code> <br>
  Если да, то останавливаем процесс функцией <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/cancel" title="The cancel() method of the SpeechSynthesis interface removes all utterances from the utterance queue.">SpeechSynthesis.cancel()</a></code> и запускаем рекурсивно заново.</p>
 
-<p>В последней части функции мы включаем обработчик <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onpause">SpeechSynthesisUtterance.onpause</a></code>, чтобыпоказать пример применения <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent">SpeechSynthesisEvent</a></code> в различных ситуациях. Вызов <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pause">SpeechSynthesis.pause() </a></code>возвращает сообщение с информацией о номере символа и слове, на котором была вызвана пауза.</p>
+<p>В последней части функции мы включаем обработчик <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance/onpause">SpeechSynthesisUtterance.onpause</a></code>, чтобы показать пример применения <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisEvent">SpeechSynthesisEvent</a></code> в различных ситуациях. Вызов <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/pause">SpeechSynthesis.pause() </a></code>возвращает сообщение с информацией о номере символа и слове, на котором была вызвана пауза.</p>
 
 <p>Наконец, мы назовем <code>blur()</code> у текстового поля. Это, прежде всего, для того, чтобы скрыть клавиатуру в ОС Firefox.</p>
 

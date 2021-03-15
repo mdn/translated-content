@@ -69,7 +69,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Attribute_selectors
 
 <ul>
  <li>Используя <code>li[class],</code> мы можем выбрать каждый селектор с атрибутом класса. Это соответствует всем пунктам списка, за исключением первого.</li>
- <li><code>li[class="a"]</code> выбирает селектор с классом <code>a</code>, но не селектор с классом <code>a</code> в сочетании с другим, отделённым запятой, классом как частью зачения. Он выбирает второй пункт списка.</li>
+ <li><code>li[class="a"]</code> выбирает селектор с классом <code>a</code>, но не селектор с классом <code>a</code> в сочетании с другим, отделённым запятой, классом как частью значения. Он выбирает второй пункт списка.</li>
  <li><code>li[class~="a"]</code> выберет класс <code>a</code>, а также значение, которое содержит класс <code>a</code> как часть разделённого пробелом списка. Он выберет второй и третий пункты списка.</li>
 </ul>
 
@@ -77,7 +77,7 @@ original_slug: Learn/CSS/Building_blocks/Селекторы/Attribute_selectors
 
 <h2 id="Селекторы_вхождения_подстроки"><span class="tlid-translation translation" lang="ru"><span title="">Селекторы вхождения подстроки</span></span></h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Эти селекторы предоставляют более широкие возможности для выявления вхождения подстроки в значение атрибута</span></span>. Например, если у вас есть классы <code>box-warning</code> и <code>box-error</code> и вы хотите выбрать всё, что начинается со стороки "box-", вы можете использовать <code>[class^="box-"]</code>, чтобы выбрать оба класса (или <code>[class|="box"]</code> как описано в предыдущем разделе).</p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Эти селекторы предоставляют более широкие возможности для выявления вхождения подстроки в значение атрибута</span></span>. Например, если у вас есть классы <code>box-warning</code> и <code>box-error</code> и вы хотите выбрать всё, что начинается со строки "box-", вы можете использовать <code>[class^="box-"]</code>, чтобы выбрать оба класса (или <code>[class|="box"]</code> как описано в предыдущем разделе).</p>
 
 <table class="standard-table">
  <thead>

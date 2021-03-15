@@ -65,7 +65,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 
 <p>Эти методы не получают непосредственно доступ к байт-коду, так что требуется дополнительный шаг помещения ответа загрузки файла в объект {{domxref("ArrayBuffer")}} перед компилированием и созданием экземпляра wasm-модуля.</p>
 
-<p>Эквивалентный код будет выглядить так:</p>
+<p>Эквивалентный код будет выглядеть так:</p>
 
 <pre class="brush: js">fetch('simple.wasm').then(response =&gt;
   response.arrayBuffer()
@@ -101,7 +101,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 
   <pre class="brush: js">var memory = new WebAssembly.Memory({initial:10, maximum:100});</pre>
 
-  <p>Единицы измерения начальной (<code>initial</code>) и максимальной (<code>maximum</code>) памяти имеют фиксированый размер в 64KB. Это означает, что в нашем случае объект памяти при создании имеет 640KB, а его максимальный возможный размер будет 6.4MB.</p>
+  <p>Единицы измерения начальной (<code>initial</code>) и максимальной (<code>maximum</code>) памяти имеют фиксированный размер в 64KB. Это означает, что в нашем случае объект памяти при создании имеет 640KB, а его максимальный возможный размер будет 6.4MB.</p>
 
   <p>Объект памяти WebAssembly предоставляет свой хранимый диапазон байт через getter/setter свойства buffer, которое возвращает объект ArrayBuffer. Для примера, чтобы записать число 42 в первое слово линейной памяти, вы можете сделать это:</p>
 
@@ -136,7 +136,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 
 <ol>
  <li>
-  <p>Сопируйте файл <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm">memory.wasm</a> в локальную директорию в которой вы работаете.</p>
+  <p>Скопируйте файл <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm">memory.wasm</a> в локальную директорию в которой вы работаете.</p>
 
   <div class="note">
   <p><strong>Примечание</strong>: Вы можете увидеть текстовое представление модуля в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat">memory.wat</a>.</p>
@@ -236,7 +236,7 @@ console.log(tbl.get(1)());  // 42</pre>
 <p>Вы можете видеть, что он принимает 2 параметра:</p>
 
 <ul>
- <li>Обьект, который содержит 2 свойства, описывающих глобальную переменную:
+ <li>Объект, который содержит 2 свойства, описывающих глобальную переменную:
   <ul>
    <li><code>value</code>: это тип данных, который может быть одним из типов данных, позволенных внутри WebAssembly модуля — <code>i32</code>, <code>i64</code>, <code>f32</code>, или <code>f64</code>.</li>
    <li><code>mutable</code>: булево значение, определяющее что переменная может изменяться.</li>

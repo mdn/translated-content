@@ -9,13 +9,13 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 <p>Код контроллера для некоторых страниц библиотеки будет зависеть от результатов многих асинхронных запросов, которые должны выполняться в определенном порядке или параллельно. Для того, чтобы управлять потоком выполнения, и выводить страницы, когда получена вся необходимая информация, будет использован <a class="external external-icon" href="https://www.npmjs.com/package/async" rel="noopener">async</a> - известный модуль node.</p>
 
 <div class="note">
-<p><strong>Note:</strong>  В JavaScript существует много других способов управления аснхронным поведением и потоком выполнения, включая такой относительно  новый элемент языка JacaScript как <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Techniques/Promises">Promises</a> (обещания, промисы).</p>
+<p><strong>Note:</strong>  В JavaScript существует много других способов управления асинхронным поведением и потоком выполнения, включая такой относительно  новый элемент языка JacaScript как <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Techniques/Promises">Promises</a> (обещания, промисы).</p>
 </div>
 
-<p>Модуль Async имеет массу полезных методов (см. документациюt <a class="external external-icon" href="http://caolan.github.io/async/docs.html" rel="noopener">the documentation</a>). Вот некоторые наиболее важные функции:</p>
+<p>Модуль Async имеет массу полезных методов (см. документацию <a class="external external-icon" href="http://caolan.github.io/async/docs.html" rel="noopener">the documentation</a>). Вот некоторые наиболее важные функции:</p>
 
 <ul>
- <li><code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#parallel" rel="noopener">async.parallel()</a></code> для осуществеления любых операций, которые должны выполняться параллельно.</li>
+ <li><code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#parallel" rel="noopener">async.parallel()</a></code> для осуществления любых операций, которые должны выполняться параллельно.</li>
  <li><code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#series" rel="noopener">async.series()</a></code> если нужно иметь уверенность, что асинхронные операции выполняются последовательно.</li>
  <li><code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> для операций, которые должны выполняться последовательно, причем каждая операция зависит от результатов предыдущих операций.</li>
 </ul>
@@ -24,7 +24,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <p>Большинство методов, которые используются в  <em>Express</em> - <span class="highlight-span">асинхронные - вы определяете выполняемую операцию, передавая </span> callback-функцию. Метод завершается немедленно, а  callback-функция вызывается тогда, когда завершилась запрошенная операция. По соглашению, принятому в <em>Express</em>, callback-функция передает значение ошибки <em>error</em>  как первый параметр (или <code>null</code> при успехе) и результат функции (если есть) как второй параметр.</p>
 
-<p>Если контроллер должен выполнить только одну асинхронную операцию, чтобы получить информацию для представления страницы, то реализация проста - мы просто представляем шаблон в колбэке. Фрагмент кода (ниже) демонстрирует это для функции, которая подсчитывает количество элементов модкли <code>SomeModel</code> (применяя метод Mongoose <code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.count" rel="noopener">count()</a></code> ):</p>
+<p>Если контроллер должен выполнить только одну асинхронную операцию, чтобы получить информацию для представления страницы, то реализация проста - мы просто представляем шаблон в колбэке. Фрагмент кода (ниже) демонстрирует это для функции, которая подсчитывает количество элементов модели <code>SomeModel</code> (применяя метод Mongoose <code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.count" rel="noopener">count()</a></code> ):</p>
 
 <pre class="brush: js"><code>exports.some_model_count = function(req, res, next) {
 
@@ -37,7 +37,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 <code>}</code>
 </pre>
 
-<p>Однако что, если требуется сделать <strong>множественные</strong> асинхронные запросы, и результат нельзя представить, пока не завершились все операции? Наивная реализация могла бы использовать "венок" запросов, запуская последующие запросы в колбэках предыдущих, и представляя ответ в последнем колбэке. Проблема такого подхода состоит в том, что запросы должны вапольняться последовательно, хотя, вероятно, было бы более эффективно выполнять их параллельно. Это также может привести к усложненному вложенному коду, что обычно называют адом обратных вызовов ( <a class="external external-icon" href="http://callbackhell.com/" rel="noopener">callback hell</a> ).</p>
+<p>Однако что, если требуется сделать <strong>множественные</strong> асинхронные запросы, и результат нельзя представить, пока не завершились все операции? Наивная реализация могла бы использовать "венок" запросов, запуская последующие запросы в колбэках предыдущих, и представляя ответ в последнем колбэке. Проблема такого подхода состоит в том, что запросы должны выполняться последовательно, хотя, вероятно, было бы более эффективно выполнять их параллельно. Это также может привести к усложненному вложенному коду, что обычно называют адом обратных вызовов ( <a class="external external-icon" href="http://callbackhell.com/" rel="noopener">callback hell</a> ).</p>
 
 <p>Намного лучше было бы выполнять все запросы параллельно, и иметь единственную callback-функцию, которая будет вызвана после того как все запросы выполнены. Именно такое выполнение операций модуль <em>Async</em> делает легким и простым!</p>
 

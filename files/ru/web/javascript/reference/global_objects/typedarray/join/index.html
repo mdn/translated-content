@@ -37,7 +37,7 @@ uint8.join('');    // '123'
 
 <h2 id="Glossary('Polifill'_'Полифил')">{{Glossary('Polifill', 'Полифил')}}</h2>
 
-<p>Поскольку теперь нет глобального объекта с именем <em>TypedArray</em>, то полифилинг доджен быть выполнен "по требованию".</p>
+<p>Поскольку теперь нет глобального объекта с именем <em>TypedArray</em>, то полифилинг должен быть выполнен "по требованию".</p>
 
 <pre class="brush: js">// https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.join
 if (!Uint8Array.prototype.join) {
@@ -47,7 +47,7 @@ if (!Uint8Array.prototype.join) {
 }
 </pre>
 
-<p>Если вам нужна поддержка устаревшего JavaScript-дфижка, который не поддерживает свойство <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>, то лучше не создавать полифилы новых методов <code>Array.prototype</code>, так как вы не сможете сделать их неперечислимыми.</p>
+<p>Если вам нужна поддержка устаревшего JavaScript-движка, который не поддерживает свойство <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>, то лучше не создавать полифилы новых методов <code>Array.prototype</code>, так как вы не сможете сделать их неперечислимыми.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

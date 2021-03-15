@@ -36,7 +36,7 @@ translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
 
 <h2 id="Блок-тень">Блок-тень</h2>
 
-<p>{{cssxref("box-shadow")}} позволяет добавить одну и более тень к контейнеру. Как и <code>text-shadow</code>, <code>box-shadows</code> отлично поддерживаются брузерами, включая IE9+ и Edge. У пользователей ранних версий IE будет просто копия без тени, поэтому убедитесь, что контент с дизайном разборчив и без теней.</p>
+<p>{{cssxref("box-shadow")}} позволяет добавить одну и более тень к контейнеру. Как и <code>text-shadow</code>, <code>box-shadows</code> отлично поддерживаются браузерами, включая IE9+ и Edge. У пользователей ранних версий IE будет просто копия без тени, поэтому убедитесь, что контент с дизайном разборчив и без теней.</p>
 
 <p>Вы можете найти примеры из стати на <a href="http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html">box-shadow.html</a> (или в <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html">исходном коде</a>).</p>
 
@@ -150,7 +150,7 @@ button:active {
 
 <p>{{ EmbedLiveSample('Другие_опции_блок-теней', '100%', 70) }}</p>
 
-<p>Мы стилизовали кнопку с помощью состояний <em>focus</em>, <em>hover</em> и <em>active</em>. Для кнопки по умолчанию установлены несколько простых чёрных теней плюс пара внутренних теней в противополжном углу кнопки для эстетичности.</p>
+<p>Мы стилизовали кнопку с помощью состояний <em>focus</em>, <em>hover</em> и <em>active</em>. Для кнопки по умолчанию установлены несколько простых чёрных теней плюс пара внутренних теней в противоположном углу кнопки для эстетичности.</p>
 
 <p>При нажатии на кнопку первая тень становится внутренней, чтобы создать ощущение нажатия кнопки.</p>
 
@@ -302,14 +302,14 @@ article div:last-child {
 <p>Форма в этом примере не реагирует на содержание изображения. Вместо этого в центре изображения определяется центр окружности, как если бы мы начертили циркулем окружность, вписанную в изображение. Это та окружность, которую обтекает текст.</p>
 
 <div class="blockIndicator note">
-<p><strong>Примечание</strong>: В Firefox Вы можеет использовать <a href="https://developer.mozilla.org/ru/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Инспектор фигур</a>, чтобы редактировать фигуры.</p>
+<p><strong>Примечание</strong>: В Firefox Вы можете использовать <a href="https://developer.mozilla.org/ru/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Инспектор фигур</a>, чтобы редактировать фигуры.</p>
 </div>
 
 <p>Значение <code>circle()</code> — лишь одно из нескольких базовых фигур для этого свойства, но можно и создавать формы. (Читайте <a href="/en-US/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">Обзор CSS-фигур</a> на MDN.)</p>
 
 <h2 id="-webkit-background-clip_text">-webkit-background-clip: text</h2>
 
-<p>Функция, о которой мы, кажется, упомянули в свйстве <code>text</code> для значения {{cssxref("background-clip")}}. Опция <code>-webkit-text-fill-color: transparent;</code> позволяет обрезать фоновые изображения под форму текста. Это неофициальный стандарт, но он был подключён во множестве браузеров. В данном контексте обязательно используется префикс <code>-webkit-</code> для любых браузеров:</p>
+<p>Функция, о которой мы, кажется, упомянули в свойстве <code>text</code> для значения {{cssxref("background-clip")}}. Опция <code>-webkit-text-fill-color: transparent;</code> позволяет обрезать фоновые изображения под форму текста. Это неофициальный стандарт, но он был подключён во множестве браузеров. В данном контексте обязательно используется префикс <code>-webkit-</code> для любых браузеров:</p>
 
 <pre class="brush: css">.text-clip {
   -webkit-background-clip: text;

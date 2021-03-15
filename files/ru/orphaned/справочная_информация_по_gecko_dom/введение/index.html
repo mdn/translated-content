@@ -7,7 +7,7 @@ original_slug: Справочная_информация_по_Gecko_DOM/Введ
 
 <h2 id="What_is_the_DOM" name="What_is_the_DOM">Что такое DOM?</h2>
 
-<p><span id="result_box" lang="ru"><span>Document Object Model (DOM) - это программный интерфейс для HTML и XML-документов.</span> <span>Он представляет страницу, чтобы программы могли изменять структуру, стиль и содержание документа.</span> <span>DOM отображает страницу ввиде узлов и объектов.</span> <span>Таким образом, языки программирования могут взаимодействовать со страницей.</span></span></p>
+<p><span id="result_box" lang="ru"><span>Document Object Model (DOM) - это программный интерфейс для HTML и XML-документов.</span> <span>Он представляет страницу, чтобы программы могли изменять структуру, стиль и содержание документа.</span> <span>DOM отображает страницу в виде узлов и объектов.</span> <span>Таким образом, языки программирования могут взаимодействовать со страницей.</span></span></p>
 
 <p>Веб-страница - это документ<span id="result_box" lang="ru"><span>. Этот документ можно либо отобразить в окне браузера, либо в качестве источника HTML</span></span><span id="result_box" lang="ru"><span>.</span> <span>Но в обоих случаях это один и тот же документ.</span></span> <span id="result_box" lang="ru"><span>Объектная модель документа (DOM) представляет этот же документ, таким образом, чтобы им можно было манипулировать.</span> <span>DOM представляет собой объектно-ориентированное представление веб-страницы, которое может быть модифицировано с помощью скриптовых языков, таких как JavaScript.</span></span></p>
 
@@ -21,7 +21,7 @@ original_slug: Справочная_информация_по_Gecko_DOM/Введ
 alert(paragraphs[0].nodeName);
 </pre>
 
-<p>Все свойства, методы и события, доступные для управления и создания веб-страниц, организованы в объекты (например, объект документа, который представляет сам документ (<code>document</code>), объект таблица (<code>table</code>), который реализует специальный интерфейс DOM <code>HTMLTableElement</code> для доступа к таблицам HTML и т. д. ). Эта документация предоставляет по-объектную справку по DOM, реализованную в браузерах на базе Gecko.</p>
+<p>Все свойства, методы и события, доступные для управления и создания веб-страниц, организованы в объекты (например, объект документа, который представляет сам документ (<code>document</code>), объект таблица (<code>table</code>), который реализует специальный интерфейс DOM <code>HTMLTableElement</code> для доступа к таблицам HTML и т. д. ). Эта документация предоставляет пообъектную справку по DOM, реализованную в браузерах на базе Gecko.</p>
 
 <h2 id="DOM_and_JavaScript" name="DOM_and_JavaScript">DOM и JavaScript</h2>
 
@@ -76,7 +76,7 @@ p_list = doc.getElementsByTagName("para");
 
 <h2 id="Important_Data_Types" name="Important_Data_Types">Важные типы данных</h2>
 
-<p><span id="result_box" lang="ru"><span>Эта руководство пытается описать различные объекты и типы данных как можно проще.</span> <span>Но есть много различных типов данных, которые передаются через API, о которых вы должны знать.</span> <span>Для простоты, примеры синтаксиса в этом руководстве по API обычно назвывают узловые элементы - элементами</span></span> <code>element</code>, массивам узлов, такие как <code>nodeList</code>, - также элементами <code>element</code>, а аттрибуты узлов <code>attribute</code> именуются просто аттрибутам.</p>
+<p><span id="result_box" lang="ru"><span>Эта руководство пытается описать различные объекты и типы данных как можно проще.</span> <span>Но есть много различных типов данных, которые передаются через API, о которых вы должны знать.</span> <span>Для простоты, примеры синтаксиса в этом руководстве по API обычно называют узловые элементы - элементами</span></span> <code>element</code>, массивам узлов, такие как <code>nodeList</code>, - также элементами <code>element</code>, а атрибуты узлов <code>attribute</code> именуются просто атрибутам.</p>
 
 <p>Следующая таблица кратко описывает эти типы данных.</p>
 
@@ -133,7 +133,7 @@ for (var i = 0; i &lt; tableAttrs.length; i++) {
 table.summary = "note: increased border";
 </pre>
 
-<h3 id="Core_Interfaces_in_the_DOM" name="Core_Interfaces_in_the_DOM">Ключевые Интерфесы в DOM</h3>
+<h3 id="Core_Interfaces_in_the_DOM" name="Core_Interfaces_in_the_DOM">Ключевые Интерфейсы в DOM</h3>
 
 <p>This section lists some of the most commonly-used interfaces in the DOM. The idea is not to describe what these APIs do here but to give you an idea of the sorts of methods and properties you will see very often as you use the DOM. These common APIs are used in the longer examples in the <a href="/en-US/docs/Gecko_DOM_Reference/Examples" title="Gecko_DOM_Reference/Examples">DOM Examples</a> chapter at the end of this book.</p>
 

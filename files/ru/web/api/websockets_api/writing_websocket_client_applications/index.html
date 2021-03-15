@@ -6,7 +6,7 @@ original_slug: WebSockets/Writing_WebSocket_client_applications
 ---
 <p>{{ draft() }}</p>
 
-<p>Веб-сокеты - технология, которя позволяет открыть интерактивную сессию общения между браузером пользователя и сервером. Соединяясь через веб-сокеты, веб-приложения могут осуществлять взаимодействие в реальном времени вместо того, чтобы делать запросы к клиенту о входящих/исходящих изменениях.</p>
+<p>Веб-сокеты - технология, которая позволяет открыть интерактивную сессию общения между браузером пользователя и сервером. Соединяясь через веб-сокеты, веб-приложения могут осуществлять взаимодействие в реальном времени вместо того, чтобы делать запросы к клиенту о входящих/исходящих изменениях.</p>
 
 <div class="note"><strong>Замечание: </strong>У нас есть работающий пример чата, части кода из которого используются в статье. Пример будет доступен, когда инфраструктура сайта сможет должным образом поддерживать хостинг примеров с использованием веб-сокетов.</div>
 
@@ -54,7 +54,7 @@ WebSocket WebSocket(
 
 <p><span style="line-height: 21px;">Если ошибка случается во время попытки подключения, то в объект </span><a href="https://developer.mozilla.org/en/WebSockets/WebSockets_reference/WebSocket" style="line-height: 21px;" title="WebSocket"><code style="font-style: inherit;">WebSocket</code></a><span style="line-height: 21px;"> сначала посылается простое событие с именем «error» (таким образом, задействуя обработчик </span><code style="font-size: 14px; line-height: 21px;">onerror</code><span style="line-height: 21px;">), потом - событие </span><a href="https://developer.mozilla.org/en/WebSockets/WebSockets_reference/CloseEvent" style="line-height: 21px;" title="CloseEvent"><code style="font-style: inherit;">CloseEvent</code></a><span style="line-height: 21px;"> </span><span style="line-height: 21px;"> (таким образом, задействуя обработчик </span><code style="font-size: 14px; line-height: 21px;">onclose</code><span style="line-height: 21px;">) чтобы обозначить причину закрытия соединения.</span></p>
 
-<p>Однако, начиная с версии Firefox 11, типичным является получение в консоль от платформы Mozilla расширенного сообщения об обшибке и кода завершения, как то определено в <a class="external" href="http://tools.ietf.org/html/rfc6455#section-7.4" title="RFC 6455 Section 7.4">RFC 6455, Section 7.4</a> посредством <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent"><code>CloseEvent</code></a>.</p>
+<p>Однако, начиная с версии Firefox 11, типичным является получение в консоль от платформы Mozilla расширенного сообщения об ошибке и кода завершения, как то определено в <a class="external" href="http://tools.ietf.org/html/rfc6455#section-7.4" title="RFC 6455 Section 7.4">RFC 6455, Section 7.4</a> посредством <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent"><code>CloseEvent</code></a>.</p>
 
 <h3 id="Примеры">Примеры</h3>
 

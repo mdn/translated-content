@@ -9,13 +9,13 @@ translation_of: Web/API/Attr
 
 <p>{{InheritanceDiagram}}</p>
 
-<div class="warning"><strong>Внимание:</strong>  Начиная с Gecko 7.0 {{geckoRelease("7.0")}},  устаревшие  свойства и мотоды при обращении выведут  предупреждающие сообщения на консоль. Поэтому  вы должны   проверить свой код. Смотрите полный список  <a href="#Deprecated_properties_and_methods">устаревших свойств и методов</a>.</div>
+<div class="warning"><strong>Внимание:</strong>  Начиная с Gecko 7.0 {{geckoRelease("7.0")}},  устаревшие  свойства и методы при обращении выведут  предупреждающие сообщения на консоль. Поэтому  вы должны   проверить свой код. Смотрите полный список  <a href="#Deprecated_properties_and_methods">устаревших свойств и методов</a>.</div>
 
 <h2 id="Свойства">Свойства </h2>
 
 <dl>
  <dt>{{domxref("Attr.name", "name")}} {{readOnlyInline}}</dt>
- <dd>Имя аттрибута.</dd>
+ <dd>Имя атрибута.</dd>
  <dt>{{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}</dt>
  <dd>{{domxref("DOMString")}}<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"> </span></font>представление URI пространства имен атрибута, или NULL если нет никакого пространства имен.</dd>
  <dt>{{domxref("Attr.localName", "localName")}} {{readOnlyInline}}</dt>
@@ -24,7 +24,7 @@ translation_of: Web/API/Attr
  <dd>{{domxref("DOMString")}}  представление префикс пространства имен атрибута, или NULL, если префикс не указан.</dd>
  <dt>{{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}</dt>
  <dd>
- <p>Элемнет, содержащий атрибут.</p>
+ <p>Элемент, содержащий атрибут.</p>
 
  <div class="note">
  <p><strong>Примечание:</strong> DOM уровень 4 удалил это свойство.Предполагалось, что, поскольку Вы получаете объект Attr от {{domxref("Element")}}, вы заранее должны знать связанный элемент.  Поскольку это не верно в случаях, подобных объектам Attr, возвращаемым  {{domxref("Document.evaluate")}}, DOM уровень жизни вновь ввел это свойство. </p>

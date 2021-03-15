@@ -23,7 +23,7 @@ translation_of: Web/HTTP/CORS
 
 <h2 id="Какие_запросы_используют_CORS">Какие запросы используют CORS?</h2>
 
-<p>Этот <a class="external" href="https://fetch.spec.whatwg.org/#http-cors-protocol">cтандарт сross-origin обмена</a> используется для разрешения кросс-сайтовых HTTP запросов для:</p>
+<p>Этот <a class="external" href="https://fetch.spec.whatwg.org/#http-cors-protocol">стандарт сross-origin обмена</a> используется для разрешения кросс-сайтовых HTTP запросов для:</p>
 
 <ul>
  <li>Вызова {{domxref("XMLHttpRequest")}} или <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> APIs в кросс-сайт манере, как описано выше.</li>
@@ -38,7 +38,7 @@ translation_of: Web/HTTP/CORS
 
 <h2 id="Обзор_функциональности">Обзор функциональности</h2>
 
-<p>Стандарт Cross-Origin Resource Sharing работает с помощью добавления новых <a href="/en-US/docs/Web/HTTP/Headers">HTTP-заголовков</a>, которые позволяют серверам описывать набор источников, которым разрешено читать информацию, запрашиваемую web-браузером. В частности, для методов HTTP-запросов, которые могут привести к побочным эффектам над данными сервера (в частности, для HTTP методов, отличных от {{HTTPMethod("GET")}} или для {{HTTPMethod("POST")}} запросов, использующих определнные <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME-</a>типы), спецификация требует, чтобы браузеры "предпроверяли" запрос, запрашивая поддерживающие методы с сервера с помощью метода HTTP-запроса {{HTTPMethod("OPTIONS")}} и затем, поверх "подтверждения" с сервера, отсылали фактический запрос с фактическим методом HTTP-запроса. Сервера также могут оповещать клиентов должны ли "полномочия" (включая <a href="/en-US/docs/Web/HTTP/Cookies">Cookies</a> и HTTP Authentication данные) быть отправлены с запросом.</p>
+<p>Стандарт Cross-Origin Resource Sharing работает с помощью добавления новых <a href="/en-US/docs/Web/HTTP/Headers">HTTP-заголовков</a>, которые позволяют серверам описывать набор источников, которым разрешено читать информацию, запрашиваемую web-браузером. В частности, для методов HTTP-запросов, которые могут привести к побочным эффектам над данными сервера (в частности, для HTTP методов, отличных от {{HTTPMethod("GET")}} или для {{HTTPMethod("POST")}} запросов, использующих определенные <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME-</a>типы), спецификация требует, чтобы браузеры "предпроверяли" запрос, запрашивая поддерживающие методы с сервера с помощью метода HTTP-запроса {{HTTPMethod("OPTIONS")}} и затем, поверх "подтверждения" с сервера, отсылали фактический запрос с фактическим методом HTTP-запроса. Сервера также могут оповещать клиентов должны ли "полномочия" (включая <a href="/en-US/docs/Web/HTTP/Cookies">Cookies</a> и HTTP Authentication данные) быть отправлены с запросом.</p>
 
 <p>Следующая секция описывает сценарии, а также предоставляет анализ использования HTTP-заголовков. </p>
 
@@ -209,7 +209,7 @@ function callOtherDomain(){
 <p><img alt="" src="https://mdn.mozillademos.org/files/16753/preflight_correct.png" style="height: 553px; width: 521px;"></p>
 
 <div class="blockIndicator note">
-<p><strong>Замечнаие:</strong> как описано ниже, фактический <code>POST</code> запрос не включает <code>Access-Control-Request-*</code>  заголовки; они нужны только для <code>OPTIONS</code> запроса.</p>
+<p><strong>Замечание:</strong> как описано ниже, фактический <code>POST</code> запрос не включает <code>Access-Control-Request-*</code>  заголовки; они нужны только для <code>OPTIONS</code> запроса.</p>
 </div>
 
 <p>Давайте посмотрим на полный обмен между клиентом и сервером. Первый обмен - это <em>предварительный</em> <em>запрос/ответ</em>:</p>
@@ -330,7 +330,7 @@ Access-Control-Max-Age: 86400</pre>
 
 <h3 id="Запросы_с_учетными_данными">Запросы с учетными данными</h3>
 
-<p>Наиболее интересная возможность, предоставляемая как {{domxref("XMLHttpRequest")}}, так и <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> и CORS - это возможность делать "проверенные" запросы, которые осведомленны о файлах <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookie</a> и информации HTTP аутентификаци. По умолчанию, в кросс-сайтовых {{domxref("XMLHttpRequest")}} или <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> вызовах, браузеры <strong>не </strong>отправляют учетные данные. Конкретный флаг должен быть установлен для объекта {{domxref("XMLHttpRequest")}} или конструктора {{domxref("Request")}} при его вызове.</p>
+<p>Наиболее интересная возможность, предоставляемая как {{domxref("XMLHttpRequest")}}, так и <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> и CORS - это возможность делать "проверенные" запросы, которые осведомлены о файлах <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookie</a> и информации HTTP аутентификации. По умолчанию, в кросс-сайтовых {{domxref("XMLHttpRequest")}} или <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> вызовах, браузеры <strong>не </strong>отправляют учетные данные. Конкретный флаг должен быть установлен для объекта {{domxref("XMLHttpRequest")}} или конструктора {{domxref("Request")}} при его вызове.</p>
 
 <p>В этом примере контент, изначально загруженный из <code class="plain">http://foo.example,</code> выполняет простой GET запрос к ресурсу  <code class="plain">http://bar.other,</code> который устанавливает файлы сookie. Содержимое на foo.example может содержать такой JavaScript:</p>
 
@@ -350,7 +350,7 @@ function callOtherDomain(){
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14291/cred-req.png" style="height: 223px; width: 521px;"></p>
 
-<p>Вот пример обмена между клентом и сервером:</p>
+<p>Вот пример обмена между клиентом и сервером:</p>
 
 <pre class="brush: none notranslate">GET /resources/access-control-with-credentials/ HTTP/1.1
 Host: bar.other

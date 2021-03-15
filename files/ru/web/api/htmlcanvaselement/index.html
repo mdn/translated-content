@@ -15,7 +15,7 @@ translation_of: Web/API/HTMLCanvasElement
 <div>{{APIRef("Canvas API")}}</div>
 </div>
 
-<p>Интерфейс <strong><code>HTMLCanvasElement</code></strong> предоставляет свойства и методы для управления расположением и представлением элеметов canvas. Он также наследует свойства и методы интерфейса {{domxref("HTMLElement")}}.</p>
+<p>Интерфейс <strong><code>HTMLCanvasElement</code></strong> предоставляет свойства и методы для управления расположением и представлением элементов canvas. Он также наследует свойства и методы интерфейса {{domxref("HTMLElement")}}.</p>
 
 <h2 id="Свойства">Свойства</h2>
 
@@ -23,11 +23,11 @@ translation_of: Web/API/HTMLCanvasElement
 
 <dl>
  <dt>{{domxref("HTMLCanvasElement.height")}}</dt>
- <dd>Положительное целое число, отражающее HTML-атрибут {{htmlattrxref("height", "canvas")}} элемента {{HTMLElement("canvas")}} (воспринимается в пикселях CSS). Если атрибут не определён или имеет некорректное значение (например отрицательное), используется зачение по умолчанию  <code>— 150</code>.</dd>
+ <dd>Положительное целое число, отражающее HTML-атрибут {{htmlattrxref("height", "canvas")}} элемента {{HTMLElement("canvas")}} (воспринимается в пикселях CSS). Если атрибут не определён или имеет некорректное значение (например отрицательное), используется значение по умолчанию  <code>— 150</code>.</dd>
  <dt>{{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}}</dt>
  <dd>Объект {{jsxref("Boolean")}}, отражающий HTML-атрибут {{htmlattrxref("moz-opaque", "canvas")}} элемента {{HTMLElement("canvas")}}. Сообщает холсту, будет ли присутствовать прозрачность. Если холсту известно, что прозрачность не используется, отрисовка может быть оптимизирована.</dd>
  <dt>{{domxref("HTMLCanvasElement.width")}}</dt>
- <dd>Положительное целое число, отражающее HTML-атрибут {{htmlattrxref("width", "canvas")}} элемента {{HTMLElement("canvas")}} (воспринимается в пикселях CSS). Если атрибут не определён или имеет некорректное значение (например отрицательное), используется зачение по умолчанию  <code>— 300</code>.</dd>
+ <dd>Положительное целое число, отражающее HTML-атрибут {{htmlattrxref("width", "canvas")}} элемента {{HTMLElement("canvas")}} (воспринимается в пикселях CSS). Если атрибут не определён или имеет некорректное значение (например отрицательное), используется значение по умолчанию  <code>— 300</code>.</dd>
  <dt>{{domxref("HTMLCanvasElement.mozPrintCallback")}}{{non-standard_inline}}</dt>
  <dd>Is a <code>function</code> that is Initially null, Web content can set this to a JavaScript function that will be called if the page is printed. This function can then redraw the canvas at a higher resolution that is suitable for the printer being used. <a href="https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/">See this blog post.</a></dd>
 </dl>
@@ -40,11 +40,11 @@ translation_of: Web/API/HTMLCanvasElement
  <dt>{{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}</dt>
  <dd>Возвращает {{domxref("CanvasCaptureMediaStream")}} — поток видео, которое захватывается в реальном времени с поверхности холста.</dd>
  <dt>{{domxref("HTMLCanvasElement.getContext()")}}</dt>
- <dd>Возвращает связный с холстом контекст, который позволяет рисовать на холсте. Если context ID не поддерживается, возвращает null. Вызов getContext с параметром <code>"2d"</code> возвращает объект {{domxref("CanvasRenderingContext2D")}}, тогда так вызов с параметром <code>"experimental-webgl"</code> (или <code>"webgl"</code>) возвращает объект {{domxref("WebGLRenderingContext")}}. Этот контекст поддерживается толко в браузерах, в которых реализован <a href="/en-US/docs/Web/WebGL">WebGL</a>.</dd>
+ <dd>Возвращает связный с холстом контекст, который позволяет рисовать на холсте. Если context ID не поддерживается, возвращает null. Вызов getContext с параметром <code>"2d"</code> возвращает объект {{domxref("CanvasRenderingContext2D")}}, тогда так вызов с параметром <code>"experimental-webgl"</code> (или <code>"webgl"</code>) возвращает объект {{domxref("WebGLRenderingContext")}}. Этот контекст поддерживается только в браузерах, в которых реализован <a href="/en-US/docs/Web/WebGL">WebGL</a>.</dd>
  <dt>{{domxref("HTMLCanvasElement.toDataURL()")}}</dt>
  <dd>Возвращает data-URL, который содержит представление картинки в формате. указанном в параметре <code>type</code> (по умолчанию <code>png</code>). Возвращаемая картинка имеет разрешение 96dpi.</dd>
  <dt>{{domxref("HTMLCanvasElement.toBlob()")}}</dt>
- <dd>Создаёт объект {{domxref("Blob")}}, представляющий картинку, которая содержится в холсте. Этот файл может быть кэширован на диске или сохранён в памяти наусмотрение user agent.</dd>
+ <dd>Создаёт объект {{domxref("Blob")}}, представляющий картинку, которая содержится в холсте. Этот файл может быть кэширован на диске или сохранён в памяти на усмотрение user agent.</dd>
  <dt>{{domxref("HTMLCanvasElement.transferControlToOffscreen()")}} {{experimental_inline}}</dt>
  <dd>Передаёт управление объекту {{domxref("OffscreenCanvas")}}, либо в main thread либо в worker.</dd>
  <dt>{{domxref("HTMLCanvasElement.mozGetAsFile()")}} {{non-standard_inline}} {{deprecated_inline}}</dt>

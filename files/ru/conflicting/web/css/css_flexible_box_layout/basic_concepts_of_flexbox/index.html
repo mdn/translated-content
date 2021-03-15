@@ -53,11 +53,11 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
  </dd>
  <dt>Направления</dt>
  <dd>
- <p>Главное начало и конец (<strong>main</strong>) и перекрёстное начало и конец (<strong>cross start</strong>/<strong>end</strong>) — это стороны контейнера, определяющие начало и окончание потока flex-элемментов. Они следуют по главной и перекрестной осями flex-контейнера в векторе, установленном режимом написания ({{Cssxref("writing-mode")}}) (слева направо, справа налево и т. д.).</p>
+ <p>Главное начало и конец (<strong>main</strong>) и перекрёстное начало и конец (<strong>cross start</strong>/<strong>end</strong>) — это стороны контейнера, определяющие начало и окончание потока flex-элементов. Они следуют по главной и перекрестной осями flex-контейнера в векторе, установленном режимом написания ({{Cssxref("writing-mode")}}) (слева направо, справа налево и т. д.).</p>
 
  <ul>
   <li>Свойство {{Cssxref("order")}} присваивает элементы порядковым группам и определяет, в каком порядке их показывать.</li>
-  <li>Свойство {{Cssxref("flex-flow")}} — это короткая форма, состоящая из свойств {{Cssxref("flex-direction")}} и {{Cssxref("flex-wrap")}}, определяющих расплолжение элементов.</li>
+  <li>Свойство {{Cssxref("flex-flow")}} — это короткая форма, состоящая из свойств {{Cssxref("flex-direction")}} и {{Cssxref("flex-wrap")}}, определяющих расположение элементов.</li>
  </ul>
  </dd>
  <dt>Линии</dt>
@@ -85,7 +85,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
 
 <pre class="brush: css">display: inline-flex</pre>
 
-<p>Таким образом мы определяем элемент как флексбокс, а его дочерниие элементы — как flex-элементы. Значение <code>flex</code> делает контейнер блочным элементом, а <code>inline-flex</code> значение превращает его в инлайн-элемент.</p>
+<p>Таким образом мы определяем элемент как флексбокс, а его дочерние элементы — как flex-элементы. Значение <code>flex</code> делает контейнер блочным элементом, а <code>inline-flex</code> значение превращает его в инлайн-элемент.</p>
 
 <div class="note"><span class="notranslate"><strong>Внимание</strong></span><strong>:</strong> для <span class="notranslate">указания префикса вендора, добавьте строку в значение атрибута, а не к самому атрибуту</span>. <span class="notranslate">Например</span>, <code>display: -webkit-flex</code>.</div>
 

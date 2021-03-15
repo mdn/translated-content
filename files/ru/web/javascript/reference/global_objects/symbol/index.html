@@ -114,7 +114,7 @@ typeof symObj;  // "object"
  <dt>{{jsxref("Symbol.for()", "Symbol.for(key)")}}</dt>
  <dd>Ищет существующие символы по заданному ключу и возвращает его, если он найден. В противном случае создается новый символ для данного ключа в глобальном реестре символов.</dd>
  <dt>{{jsxref("Symbol.keyFor", "Symbol.keyFor(sym)")}}</dt>
- <dd>Получает по разделямому символу его ключ из глобального реестра символов.</dd>
+ <dd>Получает по разделяемому символу его ключ из глобального реестра символов.</dd>
 </dl>
 
 <h2 id="Boolean_instances" name="Boolean_instances"><code><span style="font-family: open sans,sans-serif; font-size: 2.14285714285714rem;">Прототип </span>Symbol</code></h2>
@@ -147,7 +147,7 @@ typeof Symbol.iterator === 'symbol'
 <ul>
  <li>При попытке конвертировать символ в число, будет брошено исключение {{jsxref("TypeError")}} (напр., <code>+sym</code> или <code>sym | 0</code>).</li>
  <li>Результатом нестрогого сравнения, <code>Object(sym) == sym</code>, будет <code>true.</code></li>
- <li><code>Symbol("foo") + "bar" </code>бросает исключение {{jsxref("TypeError")}} (невозможно преобразовать символ в строку). Это удерживает разработчика от, к примеру, случайного создания строкого поля у объекта из символа.</li>
+ <li><code>Symbol("foo") + "bar" </code>бросает исключение {{jsxref("TypeError")}} (невозможно преобразовать символ в строку). Это удерживает разработчика от, к примеру, случайного создания строгого поля у объекта из символа.</li>
  <li>Более  <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion">"безопасный" вызов <code>String(sym)</code></a> работает с символами как вызов {{jsxref("Symbol.prototype.toString()")}}. Заметьте, что в то же время <code>new String(sym)</code> бросит исключение.</li>
 </ul>
 

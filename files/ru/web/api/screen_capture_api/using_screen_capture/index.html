@@ -5,7 +5,7 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 ---
 <p>{{DefaultAPISidebar("Screen Capture API")}}</p>
 
-<p><span class="seoSummary">В этой статье изучается использование програмного интерфейса  Screen Capture и его метода {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} для захвата потока экрана (всего или его части), его записи или передачи через сессию <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> .</span></p>
+<p><span class="seoSummary">В этой статье изучается использование программного интерфейса  Screen Capture и его метода {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} для захвата потока экрана (всего или его части), его записи или передачи через сессию <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> .</span></p>
 
 <div class="blockIndicator note">
 <p><strong>Примечание :</strong> Полезно отметить, что последние версии библиотеки <a href="https://github.com/webrtcHacks/adapter">WebRTC adapter.js</a>  включают реализацию метода <code>getDisplayMedia()</code> для обмена изображениями с экрана на браузерах, которые его поддерживают, но еще не реализуют текущий стандартный интерфейс, который реализован в последних версиях  Chrome, Edge, и Firefox.</p>
@@ -71,7 +71,7 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 <p><strong>Примечание :</strong> В отличие от большинства применений ограничений в медиа-API, здесь он используется исключительно для определения конфигурации потока, а не для фильтрации доступных вариантов.</p>
 </div>
 
-<p>Существуют три новых ограничения, добавленныех в объект типа <code>MediaTrackConstraints</code> (а так же в  {{domxref("MediaTrackSupportedConstraints")}} и {{domxref("MediaTrackSettings")}}) для конфигурирования потока захвата экрана:</p>
+<p>Существуют три новых ограничения, добавленные в объект типа <code>MediaTrackConstraints</code> (а так же в  {{domxref("MediaTrackSupportedConstraints")}} и {{domxref("MediaTrackSettings")}}) для конфигурирования потока захвата экрана:</p>
 
 <dl>
  <dt>{{domxref("MediaTrackConstraints.cursor", "cursor")}}</dt>
@@ -84,7 +84,7 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
   <dt><code>motion</code> </dt>
   <dd>(в движении) Курсор должен быть видимым при его движении, и (на усмотрение  {{Glossary("user agent")}} ) на короткое время до и после движения. В покое курсор удаляется из потока.</dd>
   <dt><code>never</code>   </dt>
-  <dd> (никогда) Курсор не появляетсяв результирующем потоке..</dd>
+  <dd> (никогда) Курсор не появляется в результирующем потоке..</dd>
  </dl>
  </dd>
  <dt>{{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}}</dt>
@@ -109,7 +109,7 @@ translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 
 <p>Метод {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} в основном используется для захвата видео пользовательского экрана или его части. Однако {{Glossary("user agent", "user agents")}} может позволить захватить аудио вместе с видео контентом. Источником аудио может быть выбранное окно, вся аудио система компьютера, или пользовательский микрофон (или их комбинация) .</p>
 
-<p>До запуска скрипта, который будет запрашивать возможность обмена аудио, проверте реализацию  {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} , для понимания браузерной совместимости с функциональностью захвата аудио в поток захвата экрана.</p>
+<p>До запуска скрипта, который будет запрашивать возможность обмена аудио, проверьте реализацию  {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} , для понимания браузерной совместимости с функциональностью захвата аудио в поток захвата экрана.</p>
 
 <p>Чтобы запросить доступ к экрану с включенным звуком, параметры ниже передаются в метод <code>getDisplayMedia()</code>:</p>
 

@@ -37,7 +37,7 @@ Access-Control-Allow-Origin: null
  <dd>Указывает источник. Может быть указан только один источник.</dd>
  <dt><code>null</code></dt>
  <dd>Определяет в качестве источника "null".
- <div class="note"><strong>Замечание:</strong> <a href="https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null">Не используйте</a> <code>null</code>: "Может показаться, что вернуть <code>Access-Control-Allow-Origin: "null"</code> безопасно, но сериализация Источника любого ресурса, использующего неиерархическую схему (такие как <code>data:</code> или <code>file:</code>), и изолированные документы, определяются как "null". Многие пользовательские агенты предоставляют таким документам доступ к ответу сзаголовком <code>Access-Control-Allow-Origin: "null"</code>, и любой источник модет создать враждебный документ с Источником "null". Поэтому использования заголовка ACAO со значением "null" следует избегать."</div>
+ <div class="note"><strong>Замечание:</strong> <a href="https://w3c.github.io/webappsec-cors-for-developers/#avoid-returning-access-control-allow-origin-null">Не используйте</a> <code>null</code>: "Может показаться, что вернуть <code>Access-Control-Allow-Origin: "null"</code> безопасно, но сериализация Источника любого ресурса, использующего неиерархическую схему (такие как <code>data:</code> или <code>file:</code>), и изолированные документы, определяются как "null". Многие пользовательские агенты предоставляют таким документам доступ к ответу с заголовком <code>Access-Control-Allow-Origin: "null"</code>, и любой источник может создать враждебный документ с Источником "null". Поэтому использования заголовка ACAO со значением "null" следует избегать."</div>
  </dd>
 </dl>
 
@@ -51,11 +51,11 @@ Access-Control-Allow-Origin: null
 
 <pre class="notranslate">Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
 
-<p>Чтобы ограничить <code>Access-Control-Allow-Origin</code> разрешенным набором значений, необходимо реализовать логику на стороне сервера для проверки значения заголовка {{HTTPHeader("Origin")}} запроса, спавнить его с разрешенным списком источников, а затем, если значение {{HTTPHeader("Origin")}} присутствует в списке, задать значение <code>Access-Control-Allow-Origin</code>, равное значению {{HTTPHeader("Origin")}}.</p>
+<p>Чтобы ограничить <code>Access-Control-Allow-Origin</code> разрешенным набором значений, необходимо реализовать логику на стороне сервера для проверки значения заголовка {{HTTPHeader("Origin")}} запроса, сравнить его с разрешенным списком источников, а затем, если значение {{HTTPHeader("Origin")}} присутствует в списке, задать значение <code>Access-Control-Allow-Origin</code>, равное значению {{HTTPHeader("Origin")}}.</p>
 
 <h3 id="CORS_и_кэширование">CORS и кэширование</h3>
 
-<p>Если сервер послал ответ со значением <code>Access-Control-Allow-Origin</code>, которое содержит явное указание источника (а не шаблонное значние "<code>*</code>"), тогда ответ также должен включать в себя заголовок {{HTTPHeader("Vary")}} со значением <code>Origin</code> — чтобы указать браузеру, что ответы с сервера могут отличаться в зависимости от заголовка запроса <code>Origin</code>.</p>
+<p>Если сервер послал ответ со значением <code>Access-Control-Allow-Origin</code>, которое содержит явное указание источника (а не шаблонное значение "<code>*</code>"), тогда ответ также должен включать в себя заголовок {{HTTPHeader("Vary")}} со значением <code>Origin</code> — чтобы указать браузеру, что ответы с сервера могут отличаться в зависимости от заголовка запроса <code>Origin</code>.</p>
 
 <pre class="notranslate">Access-Control-Allow-Origin: https://developer.mozilla.org
 Vary: Origin</pre>

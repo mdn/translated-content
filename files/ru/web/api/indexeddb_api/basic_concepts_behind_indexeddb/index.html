@@ -16,7 +16,7 @@ translation_of: Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 <p>Оно может стать полезным для:</p>
 
 <ul>
- <li>Общего понимания дизайна и страуктуры IndexedDB, смотри <a href="#concepts">Big Concepts</a>.</li>
+ <li>Общего понимания дизайна и структуры IndexedDB, смотри <a href="#concepts">Big Concepts</a>.</li>
  <li>Изучения большего о терминах в IndexedDB, смотри секцию <a href="#definitions">Definitions</a>.</li>
  <li>Детального руководства как использовать API, смотри <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB" title="en/IndexedDB/IndexedDB primer">Using IndexedDB</a>.</li>
  <li>Рекомендованной документации по IndexedDB API, ссылаясь на основные статьи по <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> и его подстраницы, описывающие, какие типы объектов используются в IndexedDB.</li>
@@ -27,7 +27,7 @@ translation_of: Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 
 <p>IndexedDB позволяет сохранять и извлекать объекты, проиндексированные с помощью "ключа". Все манипуляции над базой данных происходят при помощи транзакций. Как и большинство решений для web-хранилищ, IndexedDB следует <a class="external" href="http://www.w3.org/Security/wiki/Same_Origin_Policy" title="http://www.w3.org/Security/wiki/Same_Origin_Policy">same-origin policy</a>. Поэтому, если получить доступ к сохраненным данным в пределах домена можно, то вне его - нет.</p>
 
-<p>IndexedDB - <a href="/en/IndexedDB#Asynchronous_API" title="https://developer.mozilla.org/en/IndexedDB#Asynchronous_API">ассинхронное</a> API, которое может быть использовано в большинстве контекстов, включая <a href="/ru/docs/Web/API/Web_Workers_API/Using_web_workers" title="https://developer.mozilla.org/En/Using_web_workers">Web Workers</a>. Раньше оно включало <a href="/en/IndexedDB#Synchronous_API" title="https://developer.mozilla.org/en/IndexedDB#Synchronous_API">синхронную</a> версию, для использования в web workers, но это было удалено из спецификации в связи с недостатком интереса внутри web-сообщеста.</p>
+<p>IndexedDB - <a href="/en/IndexedDB#Asynchronous_API" title="https://developer.mozilla.org/en/IndexedDB#Asynchronous_API">асинхронное</a> API, которое может быть использовано в большинстве контекстов, включая <a href="/ru/docs/Web/API/Web_Workers_API/Using_web_workers" title="https://developer.mozilla.org/En/Using_web_workers">Web Workers</a>. Раньше оно включало <a href="/en/IndexedDB#Synchronous_API" title="https://developer.mozilla.org/en/IndexedDB#Synchronous_API">синхронную</a> версию, для использования в web workers, но это было удалено из спецификации в связи с недостатком интереса внутри web-сообщества.</p>
 
 <p>Существует так же конкурирующая с IndexedDB спецификация, WebSQL Database, но W3C исключила ее 18 ноября 2010. Хотя IndexedDB и WebSQL оба являются решением для хранилищ, они предоставляют различный функционал. WebSQL Database - реляционная система доступа к базам данных, когда IndexedDB - система индексированной таблицы.</p>
 

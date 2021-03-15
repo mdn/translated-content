@@ -17,7 +17,7 @@ translation_of: Web/API/Window/getSelection
 
 <p><font face="consolas, Liberation Mono, courier, monospace">Объект </font>{{domxref("Selection")}}.</p>
 
-<p>При добавлении в параметр пустую строку или вспользовавшись методом {{jsxref("Selection.toString()")}} вам вернут строку, которую выделил пользователь.</p>
+<p>При добавлении в параметр пустую строку или воспользовавшись методом {{jsxref("Selection.toString()")}} вам вернут строку, которую выделил пользователь.</p>
 
 <h2 id="Example" name="Example">Пример</h2>
 
@@ -32,7 +32,7 @@ translation_of: Web/API/Window/getSelection
 
 <h3 id="String_representation_of_the_Selection_object">String representation of the Selection object</h3>
 
-<p>В JavaScript при попытке передать в функцию, принимающую строку (как на пример {{ Domxref("window.alert()") }} или же {{ Domxref("document.write()") }}), функция попробует сделать из любого параметра строку, даже если этот параметр явлется объектом, функцией со своими методами и свойствами.</p>
+<p>В JavaScript при попытке передать в функцию, принимающую строку (как на пример {{ Domxref("window.alert()") }} или же {{ Domxref("document.write()") }}), функция попробует сделать из любого параметра строку, даже если этот параметр является объектом, функцией со своими методами и свойствами.</p>
 
 <p>В приведенном выше примере <code>selObj.toString() автоматически задействуется, когда мы передаем в </code>{{domxref("window.alert()")}} переменную selObj как параметр, который должен быть строкой. Однако мы не можем использовать свойства и метода объекта String, как на пример : <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" title="JS/String.length">length</a></code>, <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr" title="JS/String.substr">substr</a></code>. В следствии чего, вам необходимо будет применить вручную метод   <code>toString(), как тут:</code></p>
 

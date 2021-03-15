@@ -18,7 +18,7 @@ oReq.send();</pre>
 
 <h2 id="Типы_запросов">Типы запросов</h2>
 
-<p>Запрос, сделанный посредством <code>XMLHttpRequest</code>, может загружать данные синхронно или асинхронно. Это определяется третьим аргументом метода <a href="/en-US/docs/DOM/XMLHttpRequest#open()" title="DOM/XMLHttpRequest#open()">open()</a>  объекта XMLHttpRequest: если он равен true или не определён, запрос выполнится асихнронно, в противном случае — синхронно. Детальное обсуждение и демонстрации обоих типов запросов могут быть найдены на странице <a href="/en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests" title="Synchronous and Asynchronous Requests">synchronous and asynchronous requests</a>. Использовать синхронные запросы приходится очень редко.</p>
+<p>Запрос, сделанный посредством <code>XMLHttpRequest</code>, может загружать данные синхронно или асинхронно. Это определяется третьим аргументом метода <a href="/en-US/docs/DOM/XMLHttpRequest#open()" title="DOM/XMLHttpRequest#open()">open()</a>  объекта XMLHttpRequest: если он равен true или не определён, запрос выполнится асинхронно, в противном случае — синхронно. Детальное обсуждение и демонстрации обоих типов запросов могут быть найдены на странице <a href="/en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests" title="Synchronous and Asynchronous Requests">synchronous and asynchronous requests</a>. Использовать синхронные запросы приходится очень редко.</p>
 
 <div class="note"><strong>Примечание:</strong> Начиная с Gecko 30.0 {{ geckoRelease("30.0") }} не рекомендуется использовать синхронные запросы, так как они отрицательно влияют на пользовательский опыт.</div>
 
@@ -52,7 +52,7 @@ oReq.send();</pre>
 
 <h2 id="Работа_с_двоичными_данными">Работа с двоичными данными</h2>
 
-<p>Хотя обычнно <code>XMLHttpRequest</code> используется, чтобы получать и загружать текст, с его помощью можно обмениваться и двоичными данными. Есть несколько проверенных способов заставить <code>XMLHttpRequest</code> посылать двоичные данные. Они используют метод  <code>XMLHttpRequest</code>.overrideMimeType().</p>
+<p>Хотя обычно <code>XMLHttpRequest</code> используется, чтобы получать и загружать текст, с его помощью можно обмениваться и двоичными данными. Есть несколько проверенных способов заставить <code>XMLHttpRequest</code> посылать двоичные данные. Они используют метод  <code>XMLHttpRequest</code>.overrideMimeType().</p>
 
 <pre class="brush:js notranslate">var oReq = new XMLHttpRequest();
 oReq.open("GET", url, true);
@@ -117,7 +117,7 @@ function transferCanceled(evt) {
 
 <p>На строчках 3-6 добавляются обработчики для различных событий, происходящих при передаче данных с помощью <code>XMLHttpRequest</code>.</p>
 
-<div class="note"><strong>Примечение:</strong> Обработчики нужно добавлять до того, как вызвать <code>open(). В противном случае события не будут обработаны.</code></div>
+<div class="note"><strong>Примечание:</strong> Обработчики нужно добавлять до того, как вызвать <code>open(). В противном случае события не будут обработаны.</code></div>
 
 <p>Обработчик события <code>progress</code>, представленный функцией <code>updateProgress()</code> в этом примере, получает количество байт, которое должно быть передано, и количество уже переданных байт в полях <code>total</code> и <code>loaded.</code> Но если поле <code>lengthComputable</code> равняется <code>false</code>, значит, длина сообщения неизвестна и будет отображаться как ноль.</p>
 
@@ -504,7 +504,7 @@ print_r($_FILES);
 
 <pre class="syntaxbox notranslate">AJAXSubmit(myForm);</pre>
 
-<div class="note"><strong>Заметка:</strong> Данный фреимворк использует <a href="/en-US/docs/DOM/FileReader" title="/en-US/docs/DOM/FileReader"><code>FileReader</code></a> API для передачи загрузочных файлов. Это новыйAPI и его невозможно использовать IE9 и ниже. В связи с этим, загрузки только с использованием AJAX воспринимаются, лишь как <strong>экспериментальные</strong>. Если вам не требуется загружать бинарные файлы, то данный фреимворк работает в большинстве современных браузерах.</div>
+<div class="note"><strong>Заметка:</strong> Данный фреймворк использует <a href="/en-US/docs/DOM/FileReader" title="/en-US/docs/DOM/FileReader"><code>FileReader</code></a> API для передачи загрузочных файлов. Это новыйAPI и его невозможно использовать IE9 и ниже. В связи с этим, загрузки только с использованием AJAX воспринимаются, лишь как <strong>экспериментальные</strong>. Если вам не требуется загружать бинарные файлы, то данный фреймворк работает в большинстве современных браузерах.</div>
 
 <div class="note"><strong>Note:</strong> The best way to send binary content is via <a href="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer" title="/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer">ArrayBuffers</a> or <a href="/en-US/docs/DOM/Blob" title="/en-US/docs/DOM/Blob">Blobs</a> in conjuncton with the <a href="/en-US/docs/DOM/XMLHttpRequest#send%28%29" title="/en-US/docs/DOM/XMLHttpRequest#send()"><code>send()</code></a> method and possibly the <a href="/en-US/docs/DOM/FileReader#readAsArrayBuffer()" title="/en-US/docs/DOM/FileReader#readAsArrayBuffer()"><code>readAsArrayBuffer()</code></a> method of the <a href="/en-US/docs/DOM/FileReader" title="/en-US/docs/DOM/FileReader"><code>FileReader</code></a> API. But, since the aim of this script is to work with a <a href="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify" title="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify">stringifiable</a> raw data, we used the <a href="/en-US/docs/DOM/XMLHttpRequest#sendAsBinary%28%29" title="/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()"><code>sendAsBinary()</code></a> method in conjunction with the <a href="/en-US/docs/DOM/FileReader#readAsBinaryString%28%29" title="/en-US/docs/DOM/FileReader#readAsBinaryString()"><code>readAsBinaryString()</code></a> method of the <a href="/en-US/docs/DOM/FileReader" title="/en-US/docs/DOM/FileReader"><code>FileReader</code></a> API. As such, the above script makes sense only when you are dealing with small files. If you do not intend to upload binary content, consider instead using the <a href="/en-US/docs/DOM/XMLHttpRequest/FormData" title="DOM/XMLHttpRequest/FormData"><code>FormData</code></a> API.</div>
 

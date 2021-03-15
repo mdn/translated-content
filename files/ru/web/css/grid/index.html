@@ -12,7 +12,7 @@ translation_of: Web/CSS/grid
 
 <p>Свойство CSS <strong><code>grid</code></strong> является сокращенной формой записи, которая  устанавливает значения для всех явных свойств сетки  (grid)  ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}},  и {{cssxref("grid-template-areas")}}), всех неявных свойств сетки (grid) ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, и {{cssxref("grid-auto-flow")}}), и свойств для промежутков между рядами и столбцами сетки ({{cssxref("grid-column-gap")}} и {{cssxref("grid-row-gap")}}) в одной строчке.</p>
 
-<p class="note"><strong>Note:</strong> В одной строке grid могут быть описаны свойства только одного вида: явные или неявные. Подсвойства, которые не были описаны, принимают, как и в других сокращенных формах записи свойств, значения по умолчанию. Кроме того, при помощи сокращенной формы записи значения свойств для промежутков между рядами и столбцами сетки по умолчанию сбрасываются, несмотря на то, что они не могут быть установленны в сокращенной форме записи.</p>
+<p class="note"><strong>Note:</strong> В одной строке grid могут быть описаны свойства только одного вида: явные или неявные. Подсвойства, которые не были описаны, принимают, как и в других сокращенных формах записи свойств, значения по умолчанию. Кроме того, при помощи сокращенной формы записи значения свойств для промежутков между рядами и столбцами сетки по умолчанию сбрасываются, несмотря на то, что они не могут быть установлены в сокращенной форме записи.</p>
 
 <p>{{cssinfo}}</p>
 
@@ -53,7 +53,7 @@ grid: unset;
  <dt><code>&lt;'grid-template'&gt;</code></dt>
  <dd>Определяет {{cssxref("grid-template")}} (шаблон сетки) включая {{cssxref("grid-template-columns")}} (столбцы), {{cssxref("grid-template-rows")}}  (ряды) и {{cssxref("grid-template-areas")}} (области).</dd>
  <dt><code>&lt;'grid-template-rows'&gt; / [ auto-flow &amp;&amp; dense? ] &lt;'grid-auto-columns'&gt;?</code></dt>
- <dd>Устанавливает auto-flow явно задавая  размещение по рядам с помощью  свойства {{cssxref("grid-template-rows")}} (и устанавливая свойство {{cssxref("grid-template-columns")}} в значение <code>none</code>) и уточняет, как должно работать авто-повторение столбцов при помощи свойства {{cssxref("grid-auto-columns")}} (и устанавливая {{cssxref("grid-auto-rows")}} в значение <code>auto</code>). Свойство {{cssxref("grid-auto-flow")}} может быть так же установлено для столбцев со свойством <code>dense</code> если оно определено.</dd>
+ <dd>Устанавливает auto-flow явно задавая  размещение по рядам с помощью  свойства {{cssxref("grid-template-rows")}} (и устанавливая свойство {{cssxref("grid-template-columns")}} в значение <code>none</code>) и уточняет, как должно работать авто-повторение столбцов при помощи свойства {{cssxref("grid-auto-columns")}} (и устанавливая {{cssxref("grid-auto-rows")}} в значение <code>auto</code>). Свойство {{cssxref("grid-auto-flow")}} может быть так же установлено для столбцов со свойством <code>dense</code> если оно определено.</dd>
  <dd>
  <p>Все остальные подсвойства grid сбрасываются в их начальные значения .</p>
  </dd>
@@ -185,7 +185,7 @@ grid: unset;
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li>Звязанные свойства CSS: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}</li>
+ <li>Связанные свойства CSS: {{cssxref("grid-template")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-flow")}}</li>
  <li>Руководство по разметке сетки: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Line-based placement with CSS Grid</a></em></li>
  <li>Руководство по разметке сетки: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#Grid_definition_shorthands">Grid template areas - Grid definition shorthands</a></em></li>
 </ul>

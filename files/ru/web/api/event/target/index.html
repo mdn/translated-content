@@ -119,7 +119,7 @@ ul.addEventListener('click', hide, false);</pre>
 
 <h2 id="Примечания">Примечания</h2>
 
-<p>В IE 6-8 модель событий отличается. Обработчики событий назначаются с помощью нестандартного {{domxref('EventTarget.attachEvent')}} метода. При этом в объекте события есть свойство {{domxref('Event.srcElement')}}, вместо <code>target</code> свойства, но по смыслу оно индентично <code>event.target</code>.</p>
+<p>В IE 6-8 модель событий отличается. Обработчики событий назначаются с помощью нестандартного {{domxref('EventTarget.attachEvent')}} метода. При этом в объекте события есть свойство {{domxref('Event.srcElement')}}, вместо <code>target</code> свойства, но по смыслу оно идентично <code>event.target</code>.</p>
 
 <pre class="brush: js notranslate">function hide(e) {
   // Поддержка IE 6-8

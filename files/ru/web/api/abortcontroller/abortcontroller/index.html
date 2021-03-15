@@ -21,7 +21,7 @@ translation_of: Web/API/AbortController/AbortController
 
 <p>В следующем фрагменте мы будем загружать видео используя <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</p>
 
-<p>Сначала мы создаём контроллер с помощью контруктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.</p>
+<p>Сначала мы создаём контроллер с помощью конструктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.</p>
 
 <p>Когда <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch запрос</a> инициируется, мы передаём <code>AbortSignal</code> в качестве опции внутрь объекта параметров запроса (см. <code>{signal}</code> ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором прослушивателе событий.</p>
 
@@ -50,7 +50,7 @@ function fetchVideo() {
 }</pre>
 
 <div class="note">
-<p><strong>Примечание</strong>: Когда <code>abort()</code> вызывается, <code>fetch()</code> обещаение отклоняется с <code>AbortError</code>.</p>
+<p><strong>Примечание</strong>: Когда <code>abort()</code> вызывается, <code>fetch()</code> обещание отклоняется с <code>AbortError</code>.</p>
 </div>
 
 <p>Вы можете найти полный рабочий пример на GitHub — см. <a href="https://github.com/mdn/dom-examples/tree/master/abort-api">abort-api</a> (<a href="https://mdn.github.io/dom-examples/abort-api/">см. как он работает в живую</a>).</p>
@@ -72,7 +72,7 @@ function fetchVideo() {
  </tbody>
 </table>
 
-<h2 id="Совместимость_с_бразуерами">Совместимость с бразуерами</h2>
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 
 
