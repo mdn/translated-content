@@ -10,7 +10,7 @@ translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 <pre class="brush: html">&lt;span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="chk1-label"&gt;
 &lt;/span&gt; &lt;label id="chk1-label"&gt;Remember my preferences&lt;/label&gt;</pre>
 
-<p>Первое правило ARIA -  если у нативного HTML элемента или атрибута присутствует небходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA. Вместо этого лучше использовать <a href="/en-US/docs/Web/HTML/Element/input/checkbox">HTML checkbox</a>  <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>, который изначально предоставляет необходимый функционал:</p>
+<p>Первое правило ARIA -  если у нативного HTML элемента или атрибута присутствует необходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA. Вместо этого лучше использовать <a href="/en-US/docs/Web/HTML/Element/input/checkbox">HTML checkbox</a>  <code><a href="/en-US/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>, который изначально предоставляет необходимый функционал:</p>
 
 <pre class="brush: html">&lt;input type="checkbox" id="chk1-label"&gt;
 &lt;label for="chk1-label"&gt;Запомнить мои предпочтения&lt;/label&gt;</pre>
@@ -75,7 +75,7 @@ translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 
 <h3 id="Примеры">Примеры</h3>
 
-<p>Пример ниже создает простой чекбокс, используя CSS и JavaScript для обработкиотмеченного и неотмеченного состояний элемента.</p>
+<p>Пример ниже создает простой чекбокс, используя CSS и JavaScript для обработки отмеченного и неотмеченного состояний элемента.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -119,7 +119,7 @@ translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 
 <ul>
  <li>Показать элемент как элемент с функциями чекбокса для API доступности.</li>
- <li>Когда значение aria-checked меняется, отправить оступное событие изменения состояния.</li>
+ <li>Когда значение aria-checked меняется, отправить доступное событие изменения состояния.</li>
 </ul>
 
 <p>Продукты, использующие ассистивные технологии должны сделать следующее:</p>
@@ -132,7 +132,7 @@ translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 
 <h2 id="Лучшие_практики">Лучшие практики</h2>
 
-<p>Первое правило ARIA - если у нативного HTML элемента или атрибута присутствует небходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA, чтобы сделать его доступным. По существу, рекомендуется использовать нативный <a href="/en-US/docs/Web/HTML/Element/input/checkbox">HTML checkbox</a>  вместо воспроизведения функциональности чекбокса с помощью JavaScript и ARIA.</p>
+<p>Первое правило ARIA - если у нативного HTML элемента или атрибута присутствует необходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA, чтобы сделать его доступным. По существу, рекомендуется использовать нативный <a href="/en-US/docs/Web/HTML/Element/input/checkbox">HTML checkbox</a>  вместо воспроизведения функциональности чекбокса с помощью JavaScript и ARIA.</p>
 
 <h2 id="Смотрите_также">Смотрите также:</h2>
 

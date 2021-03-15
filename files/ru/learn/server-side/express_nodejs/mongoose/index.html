@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">В этой статье дается краткое введение в базы данных, и методика их использования в приложнениях Node/Express. Затем мы покажем, как можно использовать <a href="http://mongoosejs.com/">Mongoose</a> для доступа к базе данных веб-сайта  <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a>. Мы объясним, как объявляются схемы и модели объектов, укажем основные типы полей, и методику базовой валидации. В статье также кратко показаны  основные методы доступа к данным модели.</p>
+<p class="summary">В этой статье дается краткое введение в базы данных, и методика их использования в приложениях Node/Express. Затем мы покажем, как можно использовать <a href="http://mongoosejs.com/">Mongoose</a> для доступа к базе данных веб-сайта  <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a>. Мы объясним, как объявляются схемы и модели объектов, укажем основные типы полей, и методику базовой валидации. В статье также кратко показаны  основные методы доступа к данным модели.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -24,7 +24,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 
 <h2 id="Обзор">Обзор</h2>
 
-<p>Сотрудники библиотеки будут использовать сайт Local Library  для хранения информации о книгах и абонентах, а абоненты библиотеки будут использовать его для просмотра и поиска книг, для получения информации о доступных копиях, для резервирования или одалживния книг. Чтобы эффективно хранить и извлекать информацию, мы будем хранить ее в базе данных.</p>
+<p>Сотрудники библиотеки будут использовать сайт Local Library  для хранения информации о книгах и абонентах, а абоненты библиотеки будут использовать его для просмотра и поиска книг, для получения информации о доступных копиях, для резервирования или одалживания книг. Чтобы эффективно хранить и извлекать информацию, мы будем хранить ее в базе данных.</p>
 
 <p>Express-приложения могут использовать различные базы данных, и есть несколько подходов, которые можно использовать для выполнения операций <strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate and <strong>D</strong>elete (CRUD) (создать, прочесть, обновить, удалить). В руководстве дан краткий обзор некоторых доступных опций, и детально рассмотрены некоторые механизмы работы.</p>
 
@@ -42,7 +42,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 
 <ul>
  <li>Использование родного языка запросов баз данных (т.е. SQL)</li>
- <li>Использование объектной модели данных (ODM) или объектно-реляционной модели (ORM).  ODM / ORM представлют данные веб-сайта как объекты JavaScript, которые затем отображаются на поддерживающую базу данных. Некоторые ORM  привязаны к определенной базе данных, тогда как другие не зависят от конкретной базы данных.</li>
+ <li>Использование объектной модели данных (ODM) или объектно-реляционной модели (ORM).  ODM / ORM представляют данные веб-сайта как объекты JavaScript, которые затем отображаются на поддерживающую базу данных. Некоторые ORM  привязаны к определенной базе данных, тогда как другие не зависят от конкретной базы данных.</li>
 </ul>
 
 <p>Наилучшую производительность можно получить с помощью SQL или другого языка запросов, поддерживаемого базой данных. Объектные модели (ODM) часто медленнее, потому что требуют перевода объектов в формат базы данных, при этом не обязательно будут использованы наиболее эффективные запросы к базе данных (особенно, если ODM предназначена для различных баз данных и должна идти на большие компромиссы в смысле поддержки тех или иных функций базы данных).</p>
@@ -60,7 +60,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 <p>Популярные решения на момент написания статьи:</p>
 
 <ul>
- <li><a href="https://www.npmjs.com/package/mongoose">Mongoose</a>: -- это средство моделирование обьектов базы данных <a href="https://www.mongodb.org/">MongoDB</a>,  предназначенное для асинхронной работы.</li>
+ <li><a href="https://www.npmjs.com/package/mongoose">Mongoose</a>: -- это средство моделирование объектов базы данных <a href="https://www.mongodb.org/">MongoDB</a>,  предназначенное для асинхронной работы.</li>
  <li><a href="https://www.npmjs.com/package/waterline">Waterline</a>: ORM  фреймворка <a href="http://sailsjs.com/">Sails</a> (основан на Express) . Она предоставляет единый API для доступа к множеству баз данных, в том числе Redis, mySQL, LDAP, MongoDB, и Postgres.</li>
  <li><a href="https://www.npmjs.com/package/bookshelf">Bookshelf</a>: поддерживает как promise- так и традиционные callback- интерфейсы, поддержка транзакций, eager/nested-eager relation loading, полиморфные ассоциации, и поддержка, один к одному, один ко многим, и многие ко многим. Работает с PostgreSQL, MySQL, и SQLite3.</li>
  <li><a href="https://www.npmjs.com/package/objection">Objection</a>: Делает настолько легким, насколько возможно, использование всей мощи SQL и движка базы данных ( поддерживает  SQLite3, Postgres, и MySQL).</li>
@@ -77,7 +77,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 
 <h3 id="Применение_Mongoose_и_MongoDb_для_LocalLibrary">Применение Mongoose и MongoDb для LocalLibrary</h3>
 
-<p><span id="result_box" lang="ru"><span class="alt-edited">В примере LocalLibrary (и до конца раздела) мы будем использовать Mongoose ODM для доступа к данным </span></span><span lang="ru"><span class="alt-edited">нашей библиотеки.</span> <span class="alt-edited">Mongoose является интерфейсом для MongoDB, NoSQL-базы данных с открытым исходным кодом, в которой использована документо-ориентированная модель данных.</span> В <span class="alt-edited">MongoDB </span><span class="alt-edited">«коллекции» и «документы» -- это аналоги «таблиц» и «строк» в реляционных БД</span></span>.</p>
+<p><span id="result_box" lang="ru"><span class="alt-edited">В примере LocalLibrary (и до конца раздела) мы будем использовать Mongoose ODM для доступа к данным </span></span><span lang="ru"><span class="alt-edited">нашей библиотеки.</span> <span class="alt-edited">Mongoose является интерфейсом для MongoDB, NoSQL-базы данных с открытым исходным кодом, в которой использована документов-ориентированная модель данных.</span> В <span class="alt-edited">MongoDB </span><span class="alt-edited">«коллекции» и «документы» -- это аналоги «таблиц» и «строк» в реляционных БД</span></span>.</p>
 
 <p><span id="result_box" lang="ru"><span>Это сочетание ODM и БД весьма популярно в сообществе Node, частично потому, что система хранения документов и запросов очень похожа на JSON и поэтому знакома разработчикам JavaScript</span></span>.</p>
 
@@ -112,7 +112,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 <p><img alt="Mongoose Library Model  with correct cardinality" src="https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png" style="height: 620px; width: 737px;"></p>
 
 <div class="note">
-<p><strong>Заметка</strong>: В следующем разделе дан базовый пример, в котором объясняется, как задавать и как использовать модели. При чтении обратите внимание, как будут создаваться модели, приведенные на диагарамме.</p>
+<p><strong>Заметка</strong>: В следующем разделе дан базовый пример, в котором объясняется, как задавать и как использовать модели. При чтении обратите внимание, как будут создаваться модели, приведенные на диаграмме.</p>
 </div>
 
 <h2 id="Mongoose_Справочник">Mongoose Справочник</h2>
@@ -136,7 +136,7 @@ translation_of: Learn/Server-side/Express_Nodejs/mongoose
 <p><strong>Примечание:</strong> В примере для хранения базы данных мы используем облачный сервис <a href="https://mlab.com/plans/pricing/">sandbox tier</a> ("песочницу"). This is suitable for development, and makes sense for the tutorial because it makes "installation" operating system independent (database-as-a-service is also one approach you might well use for your production database).</p>
 </div>
 
-<h3 id="Подключенние_к_MongoDB">Подключенние к MongoDB</h3>
+<h3 id="Подключение_к_MongoDB">Подключение к MongoDB</h3>
 
 <p><em>Mongoose </em>требует подключение к MongoDB. Вы можете использовать require() и подключится к локальной БД при помощи <code>mongoose.connect(),</code> как показано ниже.</p>
 
@@ -509,7 +509,7 @@ SomeModel.find(callback_function);</code></pre>
 
 <p>Мы уже немного понимаем,  что может делать Mongoose и как следует проектировать  модели. Теперь самое время начать работу над сайтом  <em>LocalLibrary</em>. Самое первое, что мы должны сделать - установить базу данных MongoDb, в которой будут храниться данные нашей   библиотеки.</p>
 
-<p>В этом руководстве мы будем использовать базу данных в "песочнице" ("<a href="https://mlab.com/plans/pricing/">sandbox</a>") - бесплатный облачный сервис, предоставляемый  <a href="https://mlab.com/welcome/">mLab</a>. Такая база не очень подходит для промышленных вебсайтов, поскольку не имеет избыточности, но она очень удобна для разработки и прототипирования. Мы используем ее, так как она бесплатна, ее легко установить, и потому что mLab - популярный поставщик  <em>базы данных как сервиса, </em>и это может быть разумным выбором для промышленной базы данных (на данный момент другие известные возможности включают <a href="https://www.compose.com/">Compose</a>, <a href="https://scalegrid.io/pricing.html">ScaleGrid</a> и <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a>).</p>
+<p>В этом руководстве мы будем использовать базу данных в "песочнице" ("<a href="https://mlab.com/plans/pricing/">sandbox</a>") - бесплатный облачный сервис, предоставляемый  <a href="https://mlab.com/welcome/">mLab</a>. Такая база не очень подходит для промышленных веб-сайтов, поскольку не имеет избыточности, но она очень удобна для разработки и прототипирования. Мы используем ее, так как она бесплатна, ее легко установить, и потому что mLab - популярный поставщик  <em>базы данных как сервиса, </em>и это может быть разумным выбором для промышленной базы данных (на данный момент другие известные возможности включают <a href="https://www.compose.com/">Compose</a>, <a href="https://scalegrid.io/pricing.html">ScaleGrid</a> и <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a>).</p>
 
 <div class="note">
 <p><strong>Заметка:</strong> При желании можно установить БД  MongoDb локально, загрузив и установив <a href="https://www.mongodb.com/download-center">подходящие для вашей системы двоичные файлы</a>. В этом случае приводимые ниже инструкции не изменятся, за исключением URL базы данных, который нужно будет задать для установки соединения.</p>
@@ -535,7 +535,7 @@ SomeModel.find(callback_function);</code></pre>
 
   <ul>
    <li>
-    <p>Выберите ближайщий к Вам регион и щелкните кнопку <strong>Continue</strong>.</p>
+    <p>Выберите ближайший к Вам регион и щелкните кнопку <strong>Continue</strong>.</p>
    </li>
   </ul>
  </li>
@@ -573,7 +573,7 @@ SomeModel.find(callback_function);</code></pre>
 
 <h2 id="Установка_Mongoose">Установка Mongoose</h2>
 
-<p>Откройте окно команд и перейдите в каталог, в котором создан  <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">каркас вебсайта Local Library</a>. Введите команду install, чтобы установить Mongoose (и ее зависимости), а также добавьте ее в файл <strong>package.json</strong>, если вы еще не сделали этого ранее, при чтении примера <a href="#Installing_Mongoose_and_MongoDB">Mongoose Primer</a>.</p>
+<p>Откройте окно команд и перейдите в каталог, в котором создан  <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">каркас веб-сайта Local Library</a>. Введите команду install, чтобы установить Mongoose (и ее зависимости), а также добавьте ее в файл <strong>package.json</strong>, если вы еще не сделали этого ранее, при чтении примера <a href="#Installing_Mongoose_and_MongoDB">Mongoose Primer</a>.</p>
 
 <pre class="brush: bash">npm install mongoose
 </pre>
@@ -594,7 +594,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));</pre>
 
 <h2 id="Определение_схемы_LocalLibrary">Определение схемы LocalLibrary</h2>
 
-<p>Мы определим отдельный модуль для каждой модели как уже обсуждалось <a href="#One_schemamodel_per_file">выше</a>. Начнем с создания каталога для моделей в корне проекта (<strong>/models</strong>), после чего создадим отдельные файлы для кажой модели:</p>
+<p>Мы определим отдельный модуль для каждой модели как уже обсуждалось <a href="#One_schemamodel_per_file">выше</a>. Начнем с создания каталога для моделей в корне проекта (<strong>/models</strong>), после чего создадим отдельные файлы для каждой модели:</p>
 
 <pre>/express-locallibrary-tutorial  //the project root
   <strong>/models</strong>
@@ -716,7 +716,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
 
 <ul>
  <li><code>enum</code>: Позволяет указать допустимые значения строки. В нашем случае используются, чтобы задать статус доступности книги (применение enum (перечисления) означает, что мы ходим предотвратить ошибочное написание и произвольные значения статуса)</li>
- <li><code>default</code>: определяет значание статуса по умолчанию (maintenance) при создании  экземпляра книги, и дату <code>due_back </code>возврата книги (<code>now,</code> сейчас). Отметьте, как используется функция  Date при установке даты!</li>
+ <li><code>default</code>: определяет значение статуса по умолчанию (maintenance) при создании  экземпляра книги, и дату <code>due_back </code>возврата книги (<code>now,</code> сейчас). Отметьте, как используется функция  Date при установке даты!</li>
 </ul>
 
 <p>Все остальное знакомо по предыдущим схемам.</p>
@@ -762,7 +762,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
 
 <h2 id="Итог">Итог</h2>
 
-<p>В этой статье мы познакомились с БД и ОРМ (объектно-реляционными моделями) в системе Node/Express, узнали, как определяются схемы и модели Mongoose. Мы применили эти знания при проектировании и реализации моделей <code>Book</code>, <code>BookInstance</code>, <code>Author</code> и <code>Genre</code> для вебсайта <em>LocalLibrary</em>.</p>
+<p>В этой статье мы познакомились с БД и ОРМ (объектно-реляционными моделями) в системе Node/Express, узнали, как определяются схемы и модели Mongoose. Мы применили эти знания при проектировании и реализации моделей <code>Book</code>, <code>BookInstance</code>, <code>Author</code> и <code>Genre</code> для веб-сайта <em>LocalLibrary</em>.</p>
 
 <p>В конце мы испытали свои модели путем создания ряда элементов (при помощи автономного скрипта). В следующей статье мы рассмотрим создание страниц, на которых будут показаны эти элементы.</p>
 
@@ -770,7 +770,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);</pre>
 
 <ul>
  <li><a href="https://expressjs.com/en/guide/database-integration.html">Database integration</a> Интеграция БД (документация Express)</li>
- <li><a href="http://mongoosejs.com/">Mongoose website</a> Вебсайт Mongoose (документация Mongoose)</li>
+ <li><a href="http://mongoosejs.com/">Mongoose website</a> Веб-сайт Mongoose (документация Mongoose)</li>
  <li><a href="http://mongoosejs.com/docs/guide.html">Mongoose Guide</a> Справочник Mongoose (документация Mongoose)</li>
  <li><a href="http://mongoosejs.com/docs/validation.html">Validation</a> Валидация (документация Mongoose)</li>
  <li><a href="http://mongoosejs.com/docs/schematypes.html">Schema Types</a> Типы в схемах (документация Mongoose)</li>

@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 <p>Метод <code><strong>then()</strong></code> возвращает {{jsxref("Promise")}}. Метод может принимать два аргумента: колбэк-функции для случаев выполнения и отклонения промиса.</p>
 
 <div class="note">
-<p> Если один или оба аргумента отсутсвуют или их значения не функции, то <code>then</code> пропустит их и не выбросит ошибку. Если для <code>Promise</code>, который переходит в состояние <code>выполнен</code> или <code>отклонен</code> вызван метод <code>then</code>, и у данного метода нет нужного обработчика, то в таком случае <code>then</code> просто возвращает промис с состоянием начального <code>Promise</code>, для которого <code>then</code> был вызван.</p>
+<p> Если один или оба аргумента отсутствуют или их значения не функции, то <code>then</code> пропустит их и не выбросит ошибку. Если для <code>Promise</code>, который переходит в состояние <code>выполнен</code> или <code>отклонен</code> вызван метод <code>then</code>, и у данного метода нет нужного обработчика, то в таком случае <code>then</code> просто возвращает промис с состоянием начального <code>Promise</code>, для которого <code>then</code> был вызван.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -58,7 +58,7 @@ p1.then(function(value) {
 
 <h3 id="Соединение">Соединение</h3>
 
-<p>Так как метод <code>then</code> возвращает <code>Promise</code> (обещание), вы можете объединить несколько вызовов <code>then</code> в цепочку. Значения возвращаемые из onFulfilled или onRejected коллбэков будут автоматически обернуты в обещание.</p>
+<p>Так как метод <code>then</code> возвращает <code>Promise</code> (обещание), вы можете объединить несколько вызовов <code>then</code> в цепочку. Значения возвращаемые из onFulfilled или onRejected колбэков будут автоматически обернуты в обещание.</p>
 
 <pre class="brush: js notranslate">var p2 = new Promise(function(resolve, reject) {
   resolve(1);

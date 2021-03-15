@@ -35,7 +35,7 @@ translation_of: Mozilla/Firefox/Releases/68
 <ul>
  <li>В списке<a href="/ru-RU/docs/Tools/Network_Monitor/request_list#Filtering_requests"> запросов</a> Сетевой монитора теперь можно блокировать определённые URL ({{bug(1151368)}}).</li>
  <li>Теперь вы можете повторно отправить запрос без редактирования метода, URL, параметров и заголовков, используя команду <a href="/ru-RU/docs/Tools/Network_Monitor/request_list#Context_menu">Переотправить</a> в контекстном меню ({{bug(1422014)}}).</li>
- <li>Контектное меню Сетевого монитора, вкладка <a href="/ru-RU/docs/Tools/Network_Monitor/request_details#Headers">Заголовки</a>, теперь позволяет вам скопировать всю или же некоторую информацию о заголовках в формате JSON ({{bug(1442249)}}).</li>
+ <li>Контекстное меню Сетевого монитора, вкладка <a href="/ru-RU/docs/Tools/Network_Monitor/request_details#Headers">Заголовки</a>, теперь позволяет вам скопировать всю или же некоторую информацию о заголовках в формате JSON ({{bug(1442249)}}).</li>
 </ul>
 
 <h4 id="Инспектор_страниц">Инспектор страниц</h4>
@@ -139,30 +139,30 @@ translation_of: Mozilla/Firefox/Releases/68
  <li>{{domxref("XMLHttpRequest")}} был обновлён и больше не принимает нестандартное значение <code>moz-chunked-arraybuffer</code> для {{domxref("XMLHttpRequest.responseType", "responseType")}}. Код, использующий это, должен быть обновлён, чтобы <a href="/ru-RU/docs/Web/API/Streams_API/Using_readable_streams#Consuming_a_fetch_as_a_stream">использовать Fetch API как поток</a> ({{bug(1120171)}}).</li>
  <li><code>XMLHttpRequest</code> теперь выводит предупреждения в консоль, если выполняется синхронный запрос во время обработки {{domxref("Window.unload_event", "unload")}}, {{domxref("Window.beforeunload_event", "beforeunload")}}, {{domxref("Window.pagehide_event", "pagehide")}} ({{bug(980902)}}).</li>
  <li>Свойство {{domxref("Document.cookie", "cookie")}} было перенесено из интерфейса {{domxref("HTMLDocument")}} в {{domxref("Document")}}, позволяя документам отличным от {{Glossary("HTML")}} использовать куки ({{bug(144795)}}).</li>
- <li>Методы {{domxref("HTMLElement.focus()")}} и {{domxref("SVGElement.focus()")}} теперь принимают необязательный объект, который может содержать булеву опцию <code>preventScroll</code>, определяющую: должна или не дожна происходить блокировка браузером прокрутки элемента с фокусом в поле зрения ({{bug(1374045)}}).</li>
+ <li>Методы {{domxref("HTMLElement.focus()")}} и {{domxref("SVGElement.focus()")}} теперь принимают необязательный объект, который может содержать булеву опцию <code>preventScroll</code>, определяющую: должна или не должна происходить блокировка браузером прокрутки элемента с фокусом в поле зрения ({{bug(1374045)}}).</li>
 </ul>
 
 <h4 id="События_DOM">События DOM</h4>
 
 <ul>
  <li><a href="/ru-RU/docs/Mozilla/Firefox_for_Android">Firefox для Android</a> больше не отправляет неправильное событие {{domxref("Window.resize_event", "resize")}}, пока не будет отрисован первый фрейм; это улучшит совместимость с сайтами, которые не ожидают, что это событие произойдёт ({{bug(1528052)}}).</li>
- <li>Рассылка событий для неосновных кнопок мыши было измненено ближе к спецификации; Событие {{domxref("Element.click_event", "click")}} больше не вызывается, когда неосновные кнопки мыши были нажат, в отличие от события {{domxref("Element.auxclick_event", "auxclick")}}. В дополнение, {{domxref("Element.dblclick_event", "dblclick")}} больше на срабатывает для неосновных кнопок мыши ({{bug(1379466)}}).</li>
+ <li>Рассылка событий для неосновных кнопок мыши было изменено ближе к спецификации; Событие {{domxref("Element.click_event", "click")}} больше не вызывается, когда неосновные кнопки мыши были нажат, в отличие от события {{domxref("Element.auxclick_event", "auxclick")}}. В дополнение, {{domxref("Element.dblclick_event", "dblclick")}} больше на срабатывает для неосновных кнопок мыши ({{bug(1379466)}}).</li>
  <li>Собственное свойство {{domxref("MouseEvent.mozPressure")}} объявлено устаревшим и теперь при вызове сопровождается предупреждением в консоли ({{bug(1165211)}}).</li>
 </ul>
 
 <h4 id="Медиа_Веб-аудио_и_WebRTC">Медиа, Веб-аудио и WebRTC</h4>
 
 <ul>
- <li>WebRTC был обновлён и распознаёт <code>null</code>, отправленное в обработчик события {{domxref("RTCPeerConnection.icecandidate", "icecandidate")}}, сообщая о получении, вместо того, чтобы никак не реагировать на это; когда это происходит, ICE соостояние ({{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}) становится <code>complete</code> ({{bug(1318167)}}).</li>
+ <li>WebRTC был обновлён и распознаёт <code>null</code>, отправленное в обработчик события {{domxref("RTCPeerConnection.icecandidate", "icecandidate")}}, сообщая о получении, вместо того, чтобы никак не реагировать на это; когда это происходит, ICE состояние ({{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}}) становится <code>complete</code> ({{bug(1318167)}}).</li>
  <li>Методы {{domxref("RTCRtpReceiver")}},{{domxref("RTCRtpReceiver.getContributingSources", "getContributingSources()")}} и {{domxref("RTCRtpReceiver.getSynchronizationSources", "getSynchronizationSources()")}} теперь поддерживают видеодорожки; ранее они работали только с audio ({{bug(1534466)}}).</li>
  <li>Web Audio API интерфейс {{domxref("MediaStreamTrackAudioSourceNode")}} теперь поддерживается, как метод {{domxref("AudioContext.createMediaStreamTrackSource()")}} ({{bug(1324548)}}).</li>
  <li>{{domxref("RTCDataChannel.negotiated")}} теперь реализован ({{bug(1529695)}}).</li>
- <li>Конструктор {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "MediaStreamAudioSourceNode()")}} был обновлён в соотвествии со спецификацией, где "first audio track" в потоке дорожка, идентификаторой которой приходит первым в лексикографическом порядке ({{bug(1324548)}}).</li>
+ <li>Конструктор {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "MediaStreamAudioSourceNode()")}} был обновлён в соответствии со спецификацией, где "first audio track" в потоке дорожка, идентификатора которой приходит первым в лексикографическом порядке ({{bug(1324548)}}).</li>
  <li>
-  <p>{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} больше не может быть использован из небезопаного контекста; попытки сделать это будут сопровождаться исключением <code>NotAllowedError</code>. Безопасными контекстами считаются те, которые загруженные через HTTPS, либо которые использую схему  <code>file:///</code>, либо загружены из <code>localhost</code>. Сейчас, если необходимо, вы можете включить возможность совершать небезопасные вызовы <code>getUserMedia()</code>, установив надстройку <code>media.getusermedia.insecure.enabled</code> в состояние <code>true</code> ({{bug(1335740)}}).</p>
+  <p>{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} больше не может быть использован из небезопасного контекста; попытки сделать это будут сопровождаться исключением <code>NotAllowedError</code>. Безопасными контекстами считаются те, которые загруженные через HTTPS, либо которые использую схему  <code>file:///</code>, либо загружены из <code>localhost</code>. Сейчас, если необходимо, вы можете включить возможность совершать небезопасные вызовы <code>getUserMedia()</code>, установив надстройку <code>media.getusermedia.insecure.enabled</code> в состояние <code>true</code> ({{bug(1335740)}}).</p>
 
   <div class="blockIndicator note">
-  <p><strong>Заметка:</strong> В будущем, Firefox также удалит свойство {{domxref("navigator.mediaDevices")}} на незащищённых контекстах, предотратив доступ к  {{domxref("MediaDevices")}} API. <strong>Это уже так в Nightly сборках.</strong></p>
+  <p><strong>Заметка:</strong> В будущем, Firefox также удалит свойство {{domxref("navigator.mediaDevices")}} на незащищённых контекстах, предотвратив доступ к  {{domxref("MediaDevices")}} API. <strong>Это уже так в Nightly сборках.</strong></p>
   </div>
  </li>
 </ul>
@@ -205,7 +205,7 @@ translation_of: Mozilla/Firefox/Releases/68
 <h4 id="Прочее_2">Прочее</h4>
 
 <ul>
- <li>Отключена функция принудительной выгрузки вкладок при нехватки памяти, для предоствращения магических исчезновений top-level контекстов браузера ({{bug(1553748)}}).</li>
+ <li>Отключена функция принудительной выгрузки вкладок при нехватки памяти, для предотвращения магических исчезновений top-level контекстов браузера ({{bug(1553748)}}).</li>
  <li>Disabled priviledged content processes that caused HTTP authentication dialogs not to appear when navigating to a website after opening a new tab ({{bug(1558763)}}).</li>
 </ul>
 
@@ -213,15 +213,15 @@ translation_of: Mozilla/Firefox/Releases/68
 
 <p><em>Без изменений.</em></p>
 
-<h2 id="Изменения_для_разработчкиов_дополнений">Изменения для разработчкиов дополнений</h2>
+<h2 id="Изменения_для_разработчиков_дополнений">Изменения для разработчиков дополнений</h2>
 
 <h3 id="Изменения_API">Изменения API</h3>
 
 <ul>
  <li>Функции <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register">proxy.register()</a> и <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/unregister">proxy.unregister()</a> объявлены устаревшими и будут удалены в Firefox 71 ({{bug(1545811)}}).</li>
  <li>Сообщения об ошибке, когда дополнение пытается добавить папку с закладками в основную папку, теперь более интуитивно понятное ({{bug(1512171)}}).</li>
- <li>Promise, возвращённый <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/duplicate">browser.tabs.duplicate()</a></code>, выполняется сразу, пока вкладки не загружены полность, для повышения производительности ({{bug(1394376)}}).</li>
- <li>Была добавлена поддержка chrome.storage.managed, позволяющая настройкам быть реализованым через корпоративную политику ({{bug(1230802)}}).</li>
+ <li>Promise, возвращённый <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/duplicate">browser.tabs.duplicate()</a></code>, выполняется сразу, пока вкладки не загружены полностью, для повышения производительности ({{bug(1394376)}}).</li>
+ <li>Была добавлена поддержка chrome.storage.managed, позволяющая настройкам быть реализованным через корпоративную политику ({{bug(1230802)}}).</li>
  <li>Появилась опция Групповой Политики, позволяющая добавить все расширения в черный список, за исключением тех, что внесены в белый, ({{bug(1522823)}}).</li>
 </ul>
 

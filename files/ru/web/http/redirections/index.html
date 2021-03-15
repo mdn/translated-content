@@ -70,7 +70,7 @@ translation_of: Web/HTTP/Redirections
    <td><code>Found</code></td>
    <td>{{HTTPMethod("GET")}} методы неизменны.<br>
     Другие методы <u>могут</u>  быть превращены в {{HTTPMethod("GET")}}.<sup><a href="#attr2">[2]</a></sup></td>
-   <td>Веб-страница недоступна по непредвиденым причинам. В этом случае поисковые роботы не будут обновлять свои ссылки.</td>
+   <td>Веб-страница недоступна по непредвиденным причинам. В этом случае поисковые роботы не будут обновлять свои ссылки.</td>
   </tr>
   <tr>
    <td><code>303</code></td>
@@ -151,7 +151,7 @@ translation_of: Web/HTTP/Redirections
 
 <ol>
  <li>HTTP перенаправления всегда выполняются первыми, пока еще страница даже не была передана,  и конечно же, пока еще не прочитана.</li>
- <li>HTML перенаправления ({{HTMLElement("meta")}}) выполняються только, если перенаправление не было в выполнено в HTTP.</li>
+ <li>HTML перенаправления ({{HTMLElement("meta")}}) выполняются только, если перенаправление не было в выполнено в HTTP.</li>
  <li>JavaScript перенаправления используются как последняя возможность перенаправления, и работают только если разрешено выполнение JavaScript на клиентской стороне.</li>
 </ol>
 
@@ -205,7 +205,7 @@ translation_of: Web/HTTP/Redirections
 &lt;/VirtualHost&gt;
 </pre>
 
-<p>URL <code>http://example.com/</code> будет переенаправлен к <code>http://www.example.com/</code> (но не к <code>http://example.com/other.html</code> )</p>
+<p>URL <code>http://example.com/</code> будет перенаправлен к <code>http://www.example.com/</code> (но не к <code>http://example.com/other.html</code> )</p>
 
 <p><code>Redirect_Match</code> делает то же, но использует регулярное выражение, чтобы определить множество URL адресов, которые подпадут под эффект:</p>
 

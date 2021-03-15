@@ -45,7 +45,7 @@ Number.isFinite('0');       // false, при использовании глоб
                             // функции isFinite('0') было бы true
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифилл</h2>
+<h2 id="Polyfill" name="Polyfill">Полифил</h2>
 
 <pre class="brush: js">Number.isFinite = Number.isFinite || function(value) {
   return typeof value === 'number' &amp;&amp; isFinite(value);

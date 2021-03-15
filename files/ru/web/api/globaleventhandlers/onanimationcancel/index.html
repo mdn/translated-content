@@ -74,7 +74,7 @@ translation_of: Web/API/GlobalEventHandlers/onanimationcancel
  </pre>
 </div>
 
-<p>Опустим некоторые фрагмнты CSS, не имеющие значение для нас, и рассмотрим стили для элемента, который мы анимируем. Это блок box со всеми своими свойствами, включая определенную анимацию {{cssxref("animation")}}. Мы продолжим и опишем анимацию прямо здесь, поскольку обычно она должна запускаться непосредственно при загрузке страницы, не зависимо от какого-либо другого события. </p>
+<p>Опустим некоторые фрагменты CSS, не имеющие значение для нас, и рассмотрим стили для элемента, который мы анимируем. Это блок box со всеми своими свойствами, включая определенную анимацию {{cssxref("animation")}}. Мы продолжим и опишем анимацию прямо здесь, поскольку обычно она должна запускаться непосредственно при загрузке страницы, не зависимо от какого-либо другого события. </p>
 
 <pre class="brush: css">#box {
   width: var(--boxwidth);
@@ -137,7 +137,7 @@ translation_of: Web/API/GlobalEventHandlers/onanimationcancel
 
 </pre>
 
-<p>Теперь добавим переключение {{cssxref("display")}} между <code>"</code><code>flex"</code> и <code>"</code><code>none"</code> и установим обрабочик события щелчка {{event("click")}} на кнопке "Hide/Show":</p>
+<p>Теперь добавим переключение {{cssxref("display")}} между <code>"</code><code>flex"</code> и <code>"</code><code>none"</code> и установим обработчик события щелчка {{event("click")}} на кнопке "Hide/Show":</p>
 
 <pre class="brush: js">document.getElementById('toggleBox').addEventListener('click', function() {
   if (box.style.display == "none") {

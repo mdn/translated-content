@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
 <div>{{JSRef}}</div>
 
-<p><code><font face="Verdana, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Метод </span></font><strong>flatMap()</strong></code> сначала применяет функцию к каждому элементу, а затем преобразует полученый результат в плоскую структуру и помещает в новый массив. Это идентично <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> функции, с последующим применением функции <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">flat</a> с параметром depth ( глубина ) равным 1, но <code>flatMap</code> часто бывает полезным, так как работает немного более эффективно.</p>
+<p><code><font face="Verdana, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Метод </span></font><strong>flatMap()</strong></code> сначала применяет функцию к каждому элементу, а затем преобразует полученный результат в плоскую структуру и помещает в новый массив. Это идентично <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> функции, с последующим применением функции <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat">flat</a> с параметром depth ( глубина ) равным 1, но <code>flatMap</code> часто бывает полезным, так как работает немного более эффективно.</p>
 
 <p class="hidden">\{{EmbedInteractiveExample("pages/js/array-flatmap.html")}}</p>
 
@@ -61,7 +61,7 @@ arr1.flatMap(x =&gt; [[x * 2]]);
 // [[2], [4], [6], [8]]
 </pre>
 
-<p>Хотя результат полученый в примере выше можно было получить используя просто map, ниже мы рассмотрим пример где <code>flatMap</code> является более эффективным.</p>
+<p>Хотя результат полученный в примере выше можно было получить используя просто map, ниже мы рассмотрим пример где <code>flatMap</code> является более эффективным.</p>
 
 <p>Давайте сгенерируем список слов из списка предложений.</p>
 
@@ -111,7 +111,7 @@ arr1.reduce((acc, x) =&gt; acc.concat([x * 2]<span class="js source"><span class
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 <div>
-<div class="hidden">Таблица поддержки браузерами сгенерированна из представленных данных. Если вы хотите улучшить эти данные, пожалуйста преверьте <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и пришлите на PR ( pull request ) с исправлениями.</div>
+<div class="hidden">Таблица поддержки браузерами сгенерированна из представленных данных. Если вы хотите улучшить эти данные, пожалуйста проверьте <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и пришлите на PR ( pull request ) с исправлениями.</div>
 
 <p>{{Compat("javascript.builtins.Array.flatMap")}}</p>
 </div>

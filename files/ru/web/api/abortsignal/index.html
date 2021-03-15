@@ -31,7 +31,7 @@ translation_of: Web/API/AbortSignal
 
 <p>В следующем фрагменте мы будем загружать видео используя <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.</p>
 
-<p>Сначала мы создаём контроллер с помощью контруктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.</p>
+<p>Сначала мы создаём контроллер с помощью конструктора {{domxref("AbortController.AbortController","AbortController()")}}, а затем получаем ссылку на связанный объект {{domxref("AbortSignal")}} используя свойство {{domxref("AbortController.signal")}}.</p>
 
 <p>Когда <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch запрос</a> инициируется, мы передаём <code>AbortSignal</code> в качестве опции внутрь объекта параметров запроса (см. <code>{signal}</code> ниже). Это связывает сигнал и контроллер с fetch запросом и позволяет нам прервать его, вызвав {{domxref("AbortController.abort()")}}, как показано ниже во втором прослушивателе событий.</p>
 
@@ -58,7 +58,7 @@ function fetchVideo() {
 }</pre>
 
 <div class="note">
-<p><strong>Примечание</strong>: Когда <code>abort()</code> вызывается, <code>fetch()</code> обещаение отклоняется с <code>AbortError</code>.</p>
+<p><strong>Примечание</strong>: Когда <code>abort()</code> вызывается, <code>fetch()</code> обещание отклоняется с <code>AbortError</code>.</p>
 </div>
 
 <div class="warning">

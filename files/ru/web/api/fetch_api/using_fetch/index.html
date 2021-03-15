@@ -40,7 +40,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 
 <h3 id="Установка_параметров_запроса">Установка параметров запроса</h3>
 
-<p>Метод <code>fetch()</code> может принимать второй параметр - обьект <code>init</code>, который позволяет вам контролировать различные настройки:</p>
+<p>Метод <code>fetch()</code> может принимать второй параметр - объект <code>init</code>, который позволяет вам контролировать различные настройки:</p>
 
 <pre class="brush: js">// Пример отправки POST запроса:
 async function postData(url = '', data = {}) {
@@ -323,10 +323,10 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
 <ul>
  <li>{{domxref("Response.status")}} — Целочисленное (по умолчанию 200) содержит код статуса ответа.</li>
  <li>{{domxref("Response.statusText")}} — Строка (по умолчанию"OK"), которая соответствует HTTP коду статуса.</li>
- <li>{{domxref("Response.ok")}} — как сказано ранее, это короткое свойство для упрощения проверки на то что статус ответа находится гдето между 200-299 включительно. Это свойство типа {{domxref("Boolean")}}.</li>
+ <li>{{domxref("Response.ok")}} — как сказано ранее, это короткое свойство для упрощения проверки на то что статус ответа находится где-то между 200-299 включительно. Это свойство типа {{domxref("Boolean")}}.</li>
 </ul>
 
-<p>Они так же могут быть созданы с помощью JavaScript, но реальная польза от этого есть только при использовании  {{domxref("ServiceWorker_API", "сервисворкеров")}}, когда вы предоставляете собственный ответ на запрос с помощью метода {{domxref("FetchEvent.respondWith","respondWith()")}}:</p>
+<p>Они так же могут быть созданы с помощью JavaScript, но реальная польза от этого есть только при использовании  {{domxref("ServiceWorker_API", "сервис-воркеров")}}, когда вы предоставляете собственный ответ на запрос с помощью метода {{domxref("FetchEvent.respondWith","respondWith()")}}:</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> myBody <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Blob</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 
@@ -361,7 +361,7 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
  <li>{{domxref("FormData")}}</li>
 </ul>
 
-<p>{{domxref("Body")}} примесь определяет следующие методы для извлечения тела (реализованны как для {{domxref("Request")}} так и для {{domxref("Response")}}). Все они возвращают promise, который в конечном итоге исполняется и выводит содержимое.</p>
+<p>{{domxref("Body")}} примесь определяет следующие методы для извлечения тела (реализованы как для {{domxref("Request")}} так и для {{domxref("Response")}}). Все они возвращают promise, который в конечном итоге исполняется и выводит содержимое.</p>
 
 <ul>
  <li>{{domxref("Body.arrayBuffer","arrayBuffer()")}}</li>
@@ -393,7 +393,7 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
     // Сделать что-то с XMLHttpRequest?
 }</pre>
 
-<h2 id="Полифилл">Полифилл</h2>
+<h2 id="Полифил">Полифил</h2>
 
 <p>Для того, чтобы использовать Fetch в неподдерживаемых браузерах, существует  <a href="https://github.com/github/fetch">Fetch Polyfill</a> , который воссоздает функциональность для не поддерживающих браузеров.</p>
 
@@ -475,7 +475,7 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
 
 <p>[1] Этот API  is implemented behind a preference.</p>
 
-<p>[2] До Firefox 52, <code>get()</code> возращал только  первое значение в указанном заголовке, а <code>getAll()</code> возращал все значения. Начиная с 52, <code>get()</code> теперь возращает все значения и <code>getAll()</code> был удален.</p>
+<p>[2] До Firefox 52, <code>get()</code> возвращал только  первое значение в указанном заголовке, а <code>getAll()</code> возвращал все значения. Начиная с 52, <code>get()</code> теперь возвращает все значения и <code>getAll()</code> был удален.</p>
 
 <h2 id="См._также">См. также</h2>
 

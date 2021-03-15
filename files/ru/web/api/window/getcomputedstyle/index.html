@@ -17,7 +17,7 @@ translation_of: Web/API/Window/getComputedStyle
  <dd>Строка указывающая на найденный псевдо-элемент. Опускается (или <code>null</code>) для не псевдо-элементов.</dd>
 </dl>
 
-<p>Возвращенный <code>style</code> живой {{domxref("CSSStyleDeclaration")}} обьект, который обновляется автоматически когда элемент стилей изменяется.</p>
+<p>Возвращенный <code>style</code> живой {{domxref("CSSStyleDeclaration")}} объект, который обновляется автоматически когда элемент стилей изменяется.</p>
 
 <h2 id="Выводы">Выводы</h2>
 
@@ -73,13 +73,13 @@ var style = window.getComputedStyle(elem1, null);
 
 <h2 id="Описание">Описание</h2>
 
-<p>Возвращенный обьект - это такой же обьект, который возвращается из свойства элемента {{domxref("HTMLElement.style", "style")}}; Так или иначе, эти два обьекта имеют разные назначения. Обьект который возвращается из <code>getComputedStyle</code> только для чтения и может быть использован для инспектирования стиля элемента (включая описание из <code>&lt;style&gt;</code> элемента или внешней таблицы стилей). Обьект <code>element.style</code> следует использовать для установки стилей на специфических элементах.</p>
+<p>Возвращенный объект - это такой же объект, который возвращается из свойства элемента {{domxref("HTMLElement.style", "style")}}; Так или иначе, эти два объекта имеют разные назначения. Объект который возвращается из <code>getComputedStyle</code> только для чтения и может быть использован для инспектирования стиля элемента (включая описание из <code>&lt;style&gt;</code> элемента или внешней таблицы стилей). Объект <code>element.style</code> следует использовать для установки стилей на специфических элементах.</p>
 
 <p>Первый аргумент должен быть элементом (вставка узлов которые не являются элементами, например <code>#text</code> выдаст ошибку).</p>
 
 <h2 id="defaultView"><code>defaultView</code></h2>
 
-<p>Во многих примерах кода, <code>getComputedStyle</code> используется из обьекта <code>document.defaultView</code>. Почти во всех случаях это не нужно, поскольку <code>getComputedStyle</code> существует в обьетке <code>window</code>. Это что-то на подобии шаблона defaultView который был нейкой прослойкой. Люди не хотели писать спецификацию для <code>window</code> и создавали <code>API</code>  которое также могло использоваться для Java. Так или иначе <a class="link-https" href="https://github.com/jquery/jquery/pull/524#issuecomment-2241183" title="https://github.com/jquery/jquery/pull/524#issuecomment-2241183">есть только один случай</a> когда метод <code>defaultView</code> должен использоваться: когда вы используете Firefox 3.6 чтобы получить доступ к вычесленным стилям.</p>
+<p>Во многих примерах кода, <code>getComputedStyle</code> используется из объекта <code>document.defaultView</code>. Почти во всех случаях это не нужно, поскольку <code>getComputedStyle</code> существует в объекте <code>window</code>. Это что-то на подобии шаблона defaultView который был некой прослойкой. Люди не хотели писать спецификацию для <code>window</code> и создавали <code>API</code>  которое также могло использоваться для Java. Так или иначе <a class="link-https" href="https://github.com/jquery/jquery/pull/524#issuecomment-2241183" title="https://github.com/jquery/jquery/pull/524#issuecomment-2241183">есть только один случай</a> когда метод <code>defaultView</code> должен использоваться: когда вы используете Firefox 3.6 чтобы получить доступ к вычисленным стилям.</p>
 
 <h2 id="Использования_с_псевдо-элементами">Использования с псевдо-элементами</h2>
 
@@ -183,7 +183,7 @@ var style = window.getComputedStyle(elem1, null);
 </table>
 </div>
 
-<h2 id="Спецификаци">Спецификаци</h2>
+<h2 id="Спецификации">Спецификации</h2>
 
 <ul>
  <li><a class="external" href="https://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle">DOM Level 2 Style: getComputedStyle</a></li>

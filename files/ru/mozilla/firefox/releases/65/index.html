@@ -71,7 +71,7 @@ translation_of: Mozilla/Firefox/Releases/65
 
 <ul>
  <li>Удалена настройка <code>layout.css.shape-outside.enabled</code>; поддержку {{cssxref("shape-outside")}}, {{cssxref("shape-margin")}} и {{cssxref("shape-image-threshold")}} больше нельзя отключить через <code>about:config</code> ({{bug(1504387)}}).</li>
- <li>Удалены некоторые специфичные дляl Firefox значения {{cssxref("user-select")}}  — <code>-moz-all</code>, <code>-moz-text</code>, <code>tri-state</code>, <code>element</code>, <code>elements</code> и <code>toggle</code>. См. {{bug(1492958)}} и {{bug(1506547)}}.</li>
+ <li>Удалены некоторые специфичные для Firefox значения {{cssxref("user-select")}}  — <code>-moz-all</code>, <code>-moz-text</code>, <code>tri-state</code>, <code>element</code>, <code>elements</code> и <code>toggle</code>. См. {{bug(1492958)}} и {{bug(1506547)}}.</li>
  <li>Как упоминалось выше, удалена временная функция <code>frames()</code> ({{bug(1496619)}}).</li>
 </ul>
 
@@ -212,7 +212,7 @@ translation_of: Mozilla/Firefox/Releases/65
    <li>Обратный вызов слушателя событий {{WebExtAPIRef("tabs.onActivated")}} получил новый параметр, <code>previousTabId</code>, содержащий ID предыдущей активированной вкладки, если она всё ещё открыта.</li>
    <li>Объект <code>updateProperties</code> функции {{WebExtAPIRef("tabs.update()")}} обзавёлся новым свойством <code>successorTabId</code>, которое служит для его обновления.</li>
    <li><code>successorTabId</code> также возвращается функциями наподобие {{WebExtAPIRef("tabs.get()")}} и {{WebExtAPIRef("tabs.query()")}}.</li>
-   <li>Новая функция <code>tabs.moveInSuccession()</code> ипозволяет массово манипулировать наследниками вкладок.</li>
+   <li>Новая функция <code>tabs.moveInSuccession()</code> позволяет массово манипулировать наследниками вкладок.</li>
   </ul>
  </li>
 </ul>

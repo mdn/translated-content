@@ -23,7 +23,7 @@ original_slug: DOM/Using_web_workers
 
 <p>Вы можете запускать любой код внутри потока worker-а, за некоторыми исключениями. Например, вы не можете прямо манипулировать DOM внутри worker-а, или использовать некоторые методы по умолчанию и свойства объекта {{domxref("window")}}. Но вы можете использовать большой набор опций, доступный под <code>Window</code>, включая <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>, и механизмы хранения данных, таких как <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> и относящихся только к Firefox OS <a href="/en-US/docs/Web/API/Data_Store_API">Data Store API</a>. Для дополнительной информации смотрите <a href="/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Functions and classes available to workers</a>.</p>
 
-<p>Данные передаются между worker-ами и главным потоком через систему сообщений — обе стороны передают свои сообщения, используя метод <code>postMessage()</code> и отвечают на сообщения при помощи обработчика событий <code>onmessage</code> (сообщение хранится в аттрибуте data события {{event("Message")}}). Данные при этом копируются, а не делятся.</p>
+<p>Данные передаются между worker-ами и главным потоком через систему сообщений — обе стороны передают свои сообщения, используя метод <code>postMessage()</code> и отвечают на сообщения при помощи обработчика событий <code>onmessage</code> (сообщение хранится в атрибуте data события {{event("Message")}}). Данные при этом копируются, а не делятся.</p>
 
 <p>Объекты Workers могут, в свою очередь, создавать новые объекты workers, и так до тех пор, пока всё работает в рамках текущей страницы. Плюс к этому, объекты workers могут использовать <a class="internal" href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> для сетевого ввода/вывода, но есть исключение - атрибуты <code>responseXML</code> и <code>channel</code> объекта <code>XMLHttpRequest</code> всегда возвращают <code>null</code>.</p>
 
@@ -138,7 +138,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 
 <p>Разделяемый worker доступен нескольким разным скриптам — даже если они находятся в разных окнах, фреймах или даже worker-ах. В этом разделе мы обсудим JavaScript, который можно найти в нашем <a class="external external-icon" href="https://github.com/mdn/simple-shared-worker">базовом примере разделяемых worker-ов</a> (<a class="external external-icon" href="http://mdn.github.io/simple-shared-worker/">запустить разделяемый worker</a>): Он очень похож на базовый пример выделенных worker-ов, за исключением двух функций, которые доступны из разных скриптовых файлов: <em>умножение двух чисел</em> или <em>возведение числа в степень.</em> Оба скрипта используют один и тот же worker для необходимых вычислений.</p>
 
-<p>Здесь мы сосредоточимся на разнице между выделенными и раздялемыми worker-ами. Обратите внимание, что в данном примере есть две HTML страницы с JavaScript кодом, которые используют один и тот же файл worker-а.</p>
+<p>Здесь мы сосредоточимся на разнице между выделенными и разделенными worker-ами. Обратите внимание, что в данном примере есть две HTML страницы с JavaScript кодом, которые используют один и тот же файл worker-а.</p>
 
 <div class="note">
 <p><strong>Заметка</strong>: Если разделяемый worker может быть доступен из нескольких контекстов просмотра, то все они должны иметь одно и то же происхождение (одни и те же протокол, хост и порт).</p>
@@ -168,7 +168,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 
 <h3 id="Передача_сообщений_виз_разделяемого_worker-а">Передача сообщений в/из разделяемого worker-а</h3>
 
-<p>Теперь сообщения могут быть отправлены worker-у, как и прежде, но метод <code>postMessage()</code> должен вызываться из объекта <code>port</code> (еще раз, вы можете увидеть схожие кострукции в <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> и <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js">square.js</a>):</p>
+<p>Теперь сообщения могут быть отправлены worker-у, как и прежде, но метод <code>postMessage()</code> должен вызываться из объекта <code>port</code> (еще раз, вы можете увидеть схожие конструкции в <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js">multiply.js</a> и <a href="https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js">square.js</a>):</p>
 
 <pre class="brush: js notranslate">squareNumber.onchange = function() {
   myWorker.port.postMessage([squareNumber.value,squareNumber.value]);
@@ -516,7 +516,7 @@ onmessage = function(oEvent) {
 
 <h3 id="Передача_данных_с_помощью_передачи_владения_передаваемые_объекты">Передача данных с помощью передачи владения (передаваемые объекты)</h3>
 
-<p>Google Chrome 17+ and Firefox 18+ имеют дополнительную возможность передачи определенных типов объектов (передаваемые объекты реализующие {{domxref("Transferable")}} интерфейс) к или из worker-а с высокой призводительностью. Эти объекты передаются из одного контекста в другой без операций копирования, что приводит к значительному повышению производительности при отправке больших наборов данных. Думайте об этом как о передаче по ссылке в мире C/C++. Однако в отличии от передачи по ссылке, "версия" из вызывающего контекста больше недоступна после передачи. Владельцем становится новый контекст.  Для примера, после передачи {{domxref("ArrayBuffer")}} из главной страницы к worker-у,  исходный {{domxref("ArrayBuffer")}} очищается и более недоступен для использования.  Его содержание (в буквальном смысле) переносится в рабочий контекст.</p>
+<p>Google Chrome 17+ and Firefox 18+ имеют дополнительную возможность передачи определенных типов объектов (передаваемые объекты реализующие {{domxref("Transferable")}} интерфейс) к или из worker-а с высокой производительностью. Эти объекты передаются из одного контекста в другой без операций копирования, что приводит к значительному повышению производительности при отправке больших наборов данных. Думайте об этом как о передаче по ссылке в мире C/C++. Однако в отличии от передачи по ссылке, "версия" из вызывающего контекста больше недоступна после передачи. Владельцем становится новый контекст.  Для примера, после передачи {{domxref("ArrayBuffer")}} из главной страницы к worker-у,  исходный {{domxref("ArrayBuffer")}} очищается и более недоступен для использования.  Его содержание (в буквальном смысле) переносится в рабочий контекст.</p>
 
 <pre class="brush: js notranslate">// Create a 32MB "file" and fill it.
 var uInt8Array = new Uint8Array(1024*1024*32); // 32MB
@@ -533,7 +533,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 <h2 id="Встроенные_worker-ы">Встроенные worker-ы</h2>
 
-<p>Не существует утвержденного способа встроить код worker-а в рамках веб-страницы, как элемент {{HTMLElement("script")}} делает для обычных скриптов. Но элемент {{HTMLElement("script")}}, который не имеет аттрибута <code>src</code> и аттрибута  <code>type</code>, которому не назначен выполняемый MIME type, можно считать блоком данных для использования JavaScript. Блок данных "Data blocks" — это более общее свойство HTML5, может содержать любые текстовые данные. Так, worker может быть встроен следующим образом:</p>
+<p>Не существует утвержденного способа встроить код worker-а в рамках веб-страницы, как элемент {{HTMLElement("script")}} делает для обычных скриптов. Но элемент {{HTMLElement("script")}}, который не имеет атрибута <code>src</code> и атрибута  <code>type</code>, которому не назначен выполняемый MIME type, можно считать блоком данных для использования JavaScript. Блок данных "Data blocks" — это более общее свойство HTML5, может содержать любые текстовые данные. Так, worker может быть встроен следующим образом:</p>
 
 <pre class="brush: html line-numbers language-html notranslate"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span>
@@ -856,7 +856,7 @@ onmessage = function(event) {
 
 <p>[1] Chrome и Opera выдают ошибку "<code>Uncaught SecurityError: Failed to construct 'Worker': Script at 'file:///Path/to/worker.js' cannot be accessed from origin 'null'.</code>" когда вы пытаетесь запустить worker локально. Нужно быть на надлежащем домене.</p>
 
-<p>[2] Начиная с Safari 7.1.2, вы можете вызывать <code>console.log</code> изнутри worker-а, но он ничего не выведет в консоль. Более старые версии Safari не ползволяют вызывать <code>console.log</code> изнутри worker-а</p>
+<p>[2] Начиная с Safari 7.1.2, вы можете вызывать <code>console.log</code> изнутри worker-а, но он ничего не выведет в консоль. Более старые версии Safari не позволяют вызывать <code>console.log</code> изнутри worker-а</p>
 
 <p>[3] Эта функция реализована с префиксом как <code>webkitURL</code>.</p>
 

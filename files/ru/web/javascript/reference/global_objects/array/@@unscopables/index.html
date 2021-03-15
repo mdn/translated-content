@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Приведённый код отлично работает в ES5 и ниже. Однако в ECMAScript 2015 и более поздних версиях был введён метод  {{jsxref("Array.prototype.keys()")}}. Это означает, что внутри окружения <code>with</code>, "ключи" будут методом, а не пременной. Вот где теперь встроенные свойства символа {{jsxref("Array.prototype[@@unscopables]")}} вступают в игру и препятствуют тому, чтобы некоторые из методов Array были включены в оператор <code>with</code>.</p>
+<p>Приведённый код отлично работает в ES5 и ниже. Однако в ECMAScript 2015 и более поздних версиях был введён метод  {{jsxref("Array.prototype.keys()")}}. Это означает, что внутри окружения <code>with</code>, "ключи" будут методом, а не переменной. Вот где теперь встроенные свойства символа {{jsxref("Array.prototype[@@unscopables]")}} вступают в игру и препятствуют тому, чтобы некоторые из методов Array были включены в оператор <code>with</code>.</p>
 
 <pre class="brush: js">var keys = [];
 
@@ -64,7 +64,7 @@ Object.keys(Array.prototype[Symbol.unscopables]);
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 <div>
-<div class="hidden">Таблица совместимости на этой странице создаётся из структурированных данных. Если Вы хотите дополнить эти данные, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам пулл-реквест.</div>
+<div class="hidden">Таблица совместимости на этой странице создаётся из структурированных данных. Если Вы хотите дополнить эти данные, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам пул-реквест.</div>
 
 <p>{{Compat("javascript.builtins.Array.@@unscopables")}}</p>
 </div>

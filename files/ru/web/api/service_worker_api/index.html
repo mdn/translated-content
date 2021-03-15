@@ -25,14 +25,14 @@ translation_of: Web/API/Service_Worker_API
 
 <p>Service worker запускается в контексте worker'ов, поэтому он не имеет доступа к DOM и работает в потоке отдельном от основного потока JavaScript, управляющего вашим приложением, а следовательно — не блокирует его. Он призван быть полностью асинхронным; как следствие, синхронные API, такие как <a href="/en-US/docs/Web/API/XMLHttpRequest">XHR</a> и <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Storage">localStorage</a>, в Service Worker'е использовать нельзя.</p>
 
-<p>Из соображений безопасности service worker'ы работают только по HTTPS (либо, в целях разработки, на <code>localhost</code>). Давать сторонним людям возможность измененять сетевые запросы крайне опасно. Кроме того, Service Worker API недоступен в <a href="https://support.mozilla.org/ru/kb/privatnyj-prosmotr-prosmotr-veb-stranic-bez-sohran">режиме приватного просмотра</a> браузера Firefox.</p>
+<p>Из соображений безопасности service worker'ы работают только по HTTPS (либо, в целях разработки, на <code>localhost</code>). Давать сторонним людям возможность изменять сетевые запросы крайне опасно. Кроме того, Service Worker API недоступен в <a href="https://support.mozilla.org/ru/kb/privatnyj-prosmotr-prosmotr-veb-stranic-bez-sohran">режиме приватного просмотра</a> браузера Firefox.</p>
 
 <div class="note">
 <p><strong>Заметка</strong>: Service Worker'ы выигрывают у предыдущих решений, таких как <a href="http://alistapart.com/article/application-cache-is-a-douchebag">AppCache,</a> потому что не делают предположений о том, что вы пытаетесь сделать, и не ломаются, в случаях если их предположения не оказываются верными; вы имеете полный контроль над всем.</p>
 </div>
 
 <div class="note">
-<p><strong>Заметка</strong>: Service worker'ы широко используют промисы (<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>). В общем случае они будут ждать ответа, после которого вернутся с успешным или неудачным завершением. Архитектура на промисах для этого подоходит идеально.</p>
+<p><strong>Заметка</strong>: Service worker'ы широко используют промисы (<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>). В общем случае они будут ждать ответа, после которого вернутся с успешным или неудачным завершением. Архитектура на промисах для этого подходит идеально.</p>
 </div>
 
 <h3 id="Регистрация">Регистрация</h3>
@@ -85,7 +85,7 @@ translation_of: Web/API/Service_Worker_API
  <li>Улучшение производительности, с помощью предварительной загрузки ресурсов, которые понадобятся пользователю в ближайшем будущем, например несколько последующих картинок в фотоальбоме.</li>
 </ul>
 
-<p>В будущем service worker'ы будут способны на многие другие полезные вещи для веб-платформ, приближая их к нативным приложеням. Примечательно, что другие спецификации могут и будут использовать контекст service worker, к примеру для:</p>
+<p>В будущем service worker'ы будут способны на многие другие полезные вещи для веб-платформ, приближая их к нативным приложениям. Примечательно, что другие спецификации могут и будут использовать контекст service worker, к примеру для:</p>
 
 <ul>
  <li><a href="https://github.com/slightlyoff/BackgroundSync">Фоновой синхронизации</a>: запускать service worker даже когда ни одного пользователя нет на сайте, чтобы обновить кеш.</li>
@@ -100,27 +100,27 @@ translation_of: Web/API/Service_Worker_API
  <dt>{{domxref("Cache") }}</dt>
  <dd>Представляет хранилище для объектов {{domxref("Request")}} / {{domxref("Response")}}, которые кешируются, как часть жизненного цикла {{domxref("ServiceWorker")}}.</dd>
  <dt>{{domxref("CacheStorage") }}</dt>
- <dd>Представляет хранилище для объектов {{domxref("Cache")}}. Он создает главную директорию для всех именовынных кешей, к которым {{domxref("ServiceWorker")}} имеет доступ, и поддерживает отображение строковых имен соответствующего объекта {{domxref("Cache")}}.</dd>
+ <dd>Представляет хранилище для объектов {{domxref("Cache")}}. Он создает главную директорию для всех именованных кешей, к которым {{domxref("ServiceWorker")}} имеет доступ, и поддерживает отображение строковых имен соответствующего объекта {{domxref("Cache")}}.</dd>
  <dt>{{domxref("Client") }}</dt>
  <dd>Представляет область видимости клиента service worker. Это либо документ в контексте браузера, либо {{domxref("SharedWorker")}}, который контролируется активным worker'ом.</dd>
  <dt>{{domxref("Clients") }}</dt>
- <dd>Представлет контейнер для списка объектов {{domxref("Client")}}; основной способ получить доступ к клиентам активного service worker'а текущего источника.</dd>
+ <dd>Представляет контейнер для списка объектов {{domxref("Client")}}; основной способ получить доступ к клиентам активного service worker'а текущего источника.</dd>
  <dt>{{domxref("ExtendableEvent") }}</dt>
  <dd>Расширяет жизненный цикл событий <code>install</code> и <code>activate</code>, отправляемых {{domxref("ServiceWorkerGlobalScope")}} как часть жизненного цикла service worker'а. Это гарантирует, что любое функциональное событие (как {{domxref("FetchEvent")}}) не отправится в {{domxref("ServiceWorker")}}, пока он не обновит шаблон данных, удалив устаревшие данные кеша.</dd>
  <dt>{{domxref("ExtendableMessageEvent") }}</dt>
- <dd>Обект событий {{event("message_(ServiceWorker)","message")}} запускается в service worker (когда канал сообщений в {{domxref("ServiceWorkerGlobalScope")}} получил новое сообщение из другого контекста) — расширяет жизненный цикл таких событий.</dd>
+ <dd>Объект событий {{event("message_(ServiceWorker)","message")}} запускается в service worker (когда канал сообщений в {{domxref("ServiceWorkerGlobalScope")}} получил новое сообщение из другого контекста) — расширяет жизненный цикл таких событий.</dd>
  <dt>{{domxref("FetchEvent") }}</dt>
  <dd>Параметр, передающийся в обработчик {{domxref("ServiceWorkerGlobalScope.onfetch")}}, <code>FetchEvent</code> представляет собой событие получения, которое отправляется в  {{domxref("ServiceWorkerGlobalScope")}} {{domxref("ServiceWorker")}}. Он содержит информацию о запросе и результирующем ответе и обеспечивает {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}} метод, который позволяет отправить произвольный ответ обратно контролируемой странице.</dd>
  <dt>{{domxref("InstallEvent") }}</dt>
- <dd>Параметр, передющийся в  {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} обработчик, <code>InstallEvent</code> представляет сообой событие установки, которое отправляется {{domxref("ServiceWorkerGlobalScope")}} {{domxref("ServiceWorker")}}. Как наследник {{domxref("ExtendableEvent")}}, он гарантирует, что функциональные события, такие как {{domxref("FetchEvent")}}, не будут отправлены во время установки. </dd>
+ <dd>Параметр, передающийся в  {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} обработчик, <code>InstallEvent</code> представляет собой событие установки, которое отправляется {{domxref("ServiceWorkerGlobalScope")}} {{domxref("ServiceWorker")}}. Как наследник {{domxref("ExtendableEvent")}}, он гарантирует, что функциональные события, такие как {{domxref("FetchEvent")}}, не будут отправлены во время установки. </dd>
  <dt>{{domxref("Navigator.serviceWorker") }}</dt>
  <dd>Возвращает объект {{domxref("ServiceWorkerContainer")}}, который обеспечивает доступ к регистрации, удалению, обновлению и коммуникации с объектами {{domxref("ServiceWorker")}}<a href="https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window">ассоциируемого документа</a>.</dd>
  <dt>{{domxref("NotificationEvent") }}</dt>
- <dd>Параметр, передаваемый в обработчик {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}}, интерфейс <code>NotificationEvent</code> представляет событие уведомления на клик, которое отправлется в {{domxref("ServiceWorkerGlobalScope")}} service worker'а.</dd>
+ <dd>Параметр, передаваемый в обработчик {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}}, интерфейс <code>NotificationEvent</code> представляет событие уведомления на клик, которое отправляется в {{domxref("ServiceWorkerGlobalScope")}} service worker'а.</dd>
  <dt>{{domxref("ServiceWorker") }}</dt>
  <dd>Представляет service worker. Несколько контекстов браузера (страницы, worker'ы, и т.д.) могут быть ассоциированы с одним объектом <code>ServiceWorker</code>.</dd>
  <dt>{{domxref("ServiceWorkerContainer") }}</dt>
- <dd>Предоставляет объект, описывающий service worker как общий блок в экосистеме сети, включая возможность регистрировать, отключать и обновлять service worker'ы, и предоставляет доступ к состоянию текущего и других зарагестрованных service worker'ов.</dd>
+ <dd>Предоставляет объект, описывающий service worker как общий блок в экосистеме сети, включая возможность регистрировать, отключать и обновлять service worker'ы, и предоставляет доступ к состоянию текущего и других зарегистрированных service worker'ов.</dd>
  <dt>{{domxref("ServiceWorkerGlobalScope") }}</dt>
  <dd>Представляет глобальный контекст исполнения service worker'а.</dd>
  <dt>{{domxref("ServiceWorkerMessageEvent")}}</dt>
@@ -129,12 +129,12 @@ translation_of: Web/API/Service_Worker_API
  <dd>Представляет регистрацию service worker'а.</dd>
  <dt>{{domxref("SyncEvent")}} {{non-standard_inline}}</dt>
  <dd>
- <p>SyncEvent предсталяет синхронное действие, котрое отправляется {{domxref("ServiceWorkerGlobalScope")}} ServiceWorker. </p>
+ <p>SyncEvent представляет синхронное действие, которое отправляется {{domxref("ServiceWorkerGlobalScope")}} ServiceWorker. </p>
  </dd>
  <dt>{{domxref("SyncManager")}} {{non-standard_inline}}</dt>
- <dd>Обеспечивает интерфейс регистрации и перечисления синхронных рагистраций.</dd>
+ <dd>Обеспечивает интерфейс регистрации и перечисления синхронных регистрации.</dd>
  <dt>{{domxref("WindowClient") }}</dt>
- <dd>Предствляет область видимости клинетского service worker'а, представленного в виде документа в контекте браузера, контролируемого активным worker'ом. Это особый тип объекта {{domxref("Client")}} с некоторыми дополнительными методами и свойствами.</dd>
+ <dd>Представляет область видимости клиентского service worker'а, представленного в виде документа в контакте браузера, контролируемого активным worker'ом. Это особый тип объекта {{domxref("Client")}} с некоторыми дополнительными методами и свойствами.</dd>
 </dl>
 
 <h2 id="Спецификации_характеристики">Спецификации (характеристики)</h2>

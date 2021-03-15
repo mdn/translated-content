@@ -6,7 +6,7 @@ tags:
 translation_of: Web/Guide/HTML/HTML5/Constraint_validation
 original_slug: HTML/HTML5/Constraint_validation
 ---
-<p>Создание веб форм всегда было комплексной задачей. В то время как сама по себе разметка формы - задача не сложная, проверка каждого поля на валидность - сложнее, а информирование юзера о проблеме - может стать головной болью. Стандарт <a href="/en-US/docs/Web/Guide/HTML/HTML5" title="en/HTML/HTML5">HTML5</a> предоставил новые механизмы для форм: были добавлены новые семантические типы для элемента {{ HTMLElement("input") }} и <em>обязательная валидация, </em>чтобы облегчить работу по проверке содержимого формы на стороне браузера. Проще говоря, обычная проверка может быть выполнена без JavaScript, простой установкой новых аттрибутов; более сложные ограничения могут быть реализованы через HTML5 <a href="/en-US/docs/Web/Guide/HTML/Forms_in_HTML#Constraint_Validation_API" title="en/HTML/HTML5/Forms in HTML5#Constraint Validation API">Constraint Validation API</a>.</p>
+<p>Создание веб форм всегда было комплексной задачей. В то время как сама по себе разметка формы - задача не сложная, проверка каждого поля на валидность - сложнее, а информирование юзера о проблеме - может стать головной болью. Стандарт <a href="/en-US/docs/Web/Guide/HTML/HTML5" title="en/HTML/HTML5">HTML5</a> предоставил новые механизмы для форм: были добавлены новые семантические типы для элемента {{ HTMLElement("input") }} и <em>обязательная валидация, </em>чтобы облегчить работу по проверке содержимого формы на стороне браузера. Проще говоря, обычная проверка может быть выполнена без JavaScript, простой установкой новых атрибутов; более сложные ограничения могут быть реализованы через HTML5 <a href="/en-US/docs/Web/Guide/HTML/Forms_in_HTML#Constraint_Validation_API" title="en/HTML/HTML5/Forms in HTML5#Constraint Validation API">Constraint Validation API</a>.</p>
 
 <div class="note"><strong>Внимание:</strong> HTML5 Constraint validation не отменяет валидацию <em>на стороне сервера</em>. Несмотря на то что на сервер будет отправляться меньше запросов с невалидными данными, такие запросы всё ещё могут быть отправлены менее "сговорчивыми" браузерами (например, браузерами без поддержки HTML5 и без JavaScript) или плохими парнями, пытающимися взломать ваше веб-приложение. Следовательно, как и в случае с HTML4, вам всё ещё нужно проверять ввод на стороне сервера, таким образом, чтобы это было согласовано с валидацией на стороне клиента.</div>
 
@@ -15,13 +15,13 @@ original_slug: HTML/HTML5/Constraint_validation
 <p>В HTML5, базовые ограничения описываются двумя способами:</p>
 
 <ul>
- <li>Использованием наиболее семантически подходящего значения для {{ htmlattrxref("type", "input") }} аттрибута элемента {{ HTMLElement("input") }}, например, выбор типа <span style="font-family: courier new;">email</span> автоматически создаёт ограничение, которое проверяет, является ли значение e-mail адресом.</li>
- <li>Установкой значений для аттрибутов, связанных с валидацией, описывая базовые ограничения без использования JavaScript.</li>
+ <li>Использованием наиболее семантически подходящего значения для {{ htmlattrxref("type", "input") }} атрибута элемента {{ HTMLElement("input") }}, например, выбор типа <span style="font-family: courier new;">email</span> автоматически создаёт ограничение, которое проверяет, является ли значение e-mail адресом.</li>
+ <li>Установкой значений для атрибутов, связанных с валидацией, описывая базовые ограничения без использования JavaScript.</li>
 </ul>
 
 <h3 id="Семантические_типы_input-ов">Семантические типы input-ов</h3>
 
-<p>Аттрибуты, присущие элементам {{ htmlattrxref("type", "input") }}:</p>
+<p>Атрибуты, присущие элементам {{ htmlattrxref("type", "input") }}:</p>
 
 <table class="standard-table">
  <thead>
@@ -37,8 +37,8 @@ original_slug: HTML/HTML5/Constraint_validation
    <td>Значение должно быть абсолютным URL, одним из:
     <ul>
      <li>валидным URI (как описано в <a class="external" href="http://www.ietf.org/rfc/rfc3986.txt" title="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>)</li>
-     <li>валидным IRI, без query сомпонента (как описано в <a class="external" href="http://www.ietf.org/rfc/rfc3987.txt" title="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)</li>
-     <li>валидным IRI, без query сомпонента и без неэкранированных не-ASCII символов (как описано в <a class="external" href="http://www.ietf.org/rfc/rfc3987.txt" title="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)</li>
+     <li>валидным IRI, без query компонента (как описано в <a class="external" href="http://www.ietf.org/rfc/rfc3987.txt" title="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)</li>
+     <li>валидным IRI, без query компонента и без неэкранированных не-ASCII символов (как описано в <a class="external" href="http://www.ietf.org/rfc/rfc3987.txt" title="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)</li>
      <li>валидным IRI, при условии, что кодировка документа UTF-8 или UTF-16 (как описано в <a class="external" href="http://www.ietf.org/rfc/rfc3987.txt" title="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)</li>
     </ul>
    </td>
@@ -53,7 +53,7 @@ original_slug: HTML/HTML5/Constraint_validation
      <li><code>ldh-str</code> (описан в <a class="external" href="http://www.apps.ietf.org/rfc/rfc1034.html#sec-3.5" title="http://www.apps.ietf.org/rfc/rfc1034.html#sec-3.5">RFC 1034</a>) - US-ASCII символы, цифры и "<span style="font-family: courier new;">-"</span>, сгруппированы по словам и разделённые точкой (<span style="font-family: courier new;">.</span>).</li>
     </ul>
 
-    <div class="note"><strong>Внимание:</strong> если установлен аттрибут {{ htmlattrxref("multiple", "input") }}, в поле могут быть вписаны несколько e-mail адресов, разделённых запятыми. Если любое из этих условий не выполнено, будет вызвано <strong>Type mismatch </strong>constraint violation.</div>
+    <div class="note"><strong>Внимание:</strong> если установлен атрибут {{ htmlattrxref("multiple", "input") }}, в поле могут быть вписаны несколько e-mail адресов, разделённых запятыми. Если любое из этих условий не выполнено, будет вызвано <strong>Type mismatch </strong>constraint violation.</div>
    </td>
    <td><strong>Type mismatch </strong>constraint violation</td>
   </tr>
@@ -62,15 +62,15 @@ original_slug: HTML/HTML5/Constraint_validation
 
 <p>Следует учесть, что большинство типов input не имеют "нативных" ограничений, а некоторые из них просто лишены валидации или имеют автоматическую корректировку невалидных значений по умолчанию. </p>
 
-<h3 id="Аттрибуты_валидации">Аттрибуты валидации</h3>
+<h3 id="Атрибуты_валидации">Атрибуты валидации</h3>
 
-<p>Ниже перечислены аттрибуты, которые описывают базовые ограничения:</p>
+<p>Ниже перечислены атрибуты, которые описывают базовые ограничения:</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col">Аттрибут</th>
-   <th scope="col">Типы input с поддержкой аттрибута</th>
+   <th scope="col">Атрибут</th>
+   <th scope="col">Типы input с поддержкой атрибута</th>
    <th scope="col">Возможные значения</th>
    <th scope="col">Описание ограничения</th>
    <th scope="col">Связанное нарушение</th>
@@ -88,7 +88,7 @@ original_slug: HTML/HTML5/Constraint_validation
    <td rowspan="3">{{ htmlattrxref("min", "input") }}</td>
    <td>range, number</td>
    <td>Валидное число</td>
-   <td rowspan="3">Значение поля должно быть больше или равно значению аттрибута</td>
+   <td rowspan="3">Значение поля должно быть больше или равно значению атрибута</td>
    <td rowspan="3"><strong>Underflow</strong> constraint violation</td>
   </tr>
   <tr>
@@ -103,7 +103,7 @@ original_slug: HTML/HTML5/Constraint_validation
    <td rowspan="3">{{ htmlattrxref("max", "input") }}</td>
    <td>range, number</td>
    <td>Валидное число</td>
-   <td rowspan="3">Значение поля должно быть меньше или равно значению аттрибута</td>
+   <td rowspan="3">Значение поля должно быть меньше или равно значению атрибута</td>
    <td rowspan="3"><strong>Overflow</strong> constraint violation</td>
   </tr>
   <tr>
@@ -117,7 +117,7 @@ original_slug: HTML/HTML5/Constraint_validation
   <tr>
    <td>{{ htmlattrxref("required", "input") }}</td>
    <td>text, search, url, tel, email, password, date, datetime, datetime-local, month, week, time, number, checkbox, radio, file; also on the {{ HTMLElement("select") }} and {{ HTMLElement("textarea") }} elements</td>
-   <td><em>никакое</em> так как это Boolean аттрибут: его присутствие означает <em>true</em>, а отсутствие - <em>false</em></td>
+   <td><em>никакое</em> так как это Boolean атрибут: его присутствие означает <em>true</em>, а отсутствие - <em>false</em></td>
    <td>Значение должно быть не пустым (если установлено).</td>
    <td><strong>Missing</strong> constraint violation</td>
   </tr>
@@ -125,7 +125,7 @@ original_slug: HTML/HTML5/Constraint_validation
    <td rowspan="5">{{ htmlattrxref("step", "input") }}</td>
    <td>date</td>
    <td>Целое число дней</td>
-   <td rowspan="5">Пока в аттрибут <code>step</code> не установлен <em>любой</em> литерал, значение может быть <strong>min</strong> + любое число, крастное шагу.</td>
+   <td rowspan="5">Пока в атрибут <code>step</code> не установлен <em>любой</em> литерал, значение может быть <strong>min</strong> + любое число, красное шагу.</td>
    <td rowspan="5"><strong>Step mismatch </strong>constraint violation</td>
   </tr>
   <tr>
@@ -148,7 +148,7 @@ original_slug: HTML/HTML5/Constraint_validation
    <td>{{ htmlattrxref("maxlength", "input") }}</td>
    <td>text, search, url, tel, email, password; также на элементе {{ HTMLElement("textarea") }}</td>
    <td>Длина (целое число)</td>
-   <td>Количество символов (знаков) не должно превышать значение аттрибута.</td>
+   <td>Количество символов (знаков) не должно превышать значение атрибута.</td>
    <td><strong>Too long</strong> constraint violation</td>
   </tr>
  </tbody>

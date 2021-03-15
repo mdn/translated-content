@@ -32,7 +32,7 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}</dt>
  <dd>Возвращает {{domxref("DOMString")}} представляющий локальную часть условного имени элемента. В Firefox 3.5 и более ранних версиях, свойство локального имени в верхнем регистре для HTML элементов (но не XHTML элементов). В более поздних версиях, такого не произошло, и свойство находится в нижнем регистре для HTML и XHTML {{ gecko_minversion_inline("1.9.2") }}. Хотя недавние спецификации требуют от <code>localName</code> быть определенным как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все еще реализуют его как интерфейс {{domxref("Node")}}.</dd>
  <dt>{{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}</dt>
- <dd>Пространство имен URI данного узла или <code>null,</code> если нет пространства имен. В Firefox 3.5 и более ранних версиях, HTML элементы не имееют пространства имен. В более поздних версиях, HTML элементы находятся в пространстве имен <code><a class="linkification-ext external" href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> для деревьев HTML и XML. {{ gecko_minversion_inline("1.9.2") }}<br>
+ <dd>Пространство имен URI данного узла или <code>null,</code> если нет пространства имен. В Firefox 3.5 и более ранних версиях, HTML элементы не имеют пространства имен. В более поздних версиях, HTML элементы находятся в пространстве имен <code><a class="linkification-ext external" href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> для деревьев HTML и XML. {{ gecko_minversion_inline("1.9.2") }}<br>
  Хотя недавние спецификации требуют <code>namespaceURI</code> быть определенным как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все еще реализуют его как интерфейс {{domxref("Node")}}.</dd>
  <dt>{{domxref("Node.nextSibling")}} {{readonlyInline}}</dt>
  <dd>Возвращает {{domxref("Node")}} представляющий следующий узел в древе или <code>null,</code> если не такого узла.</dd>
@@ -102,7 +102,7 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.nodeValue")}}</dt>
  <dd>Это {{domxref("DOMString")}}, представляющее значение объектов. Для большинства типов <code>Node</code>, возвращает <code>null</code> и любой набор операция игнорируется. Для узлов типа <code>TEXT_NODE</code> ({{domxref("Text")}} objects), <code>COMMENT_NODE</code> ({{domxref("Comment")}} objects), и <code>PROCESSING_INSTRUCTION_NODE</code> ({{domxref("ProcessingInstruction")}} objects), значение соответствует текстовым данным, содержащихся в объекте.</dd>
  <dt>{{domxref("Node.ownerDocument")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("Document")}} к которому принадлежит этот узел. Если нет связанного сним документа, возвращает <code>null</code>.</dd>
+ <dd>Возвращает {{domxref("Document")}} к которому принадлежит этот узел. Если нет связанного с ним документа, возвращает <code>null</code>.</dd>
  <dt>{{domxref("Node.parentNode")}} {{readonlyInline}}</dt>
  <dd>Возвращает {{domxref("Node")}} который является родителем этого узла. Если нет такого узла, по причине того, что узел находится вверху древа или не относится к древу, данное свойство вернет<code> null</code>.</dd>
  <dt>{{domxref("Node.parentElement")}} {{readonlyInline}}</dt>
@@ -223,9 +223,9 @@ document.body.removeAll();</pre>
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col">Сецификация</th>
+   <th scope="col">Спецификация</th>
    <th scope="col">Статус</th>
-   <th scope="col">Коментарий</th>
+   <th scope="col">Комментарий</th>
   </tr>
  </thead>
  <tbody>

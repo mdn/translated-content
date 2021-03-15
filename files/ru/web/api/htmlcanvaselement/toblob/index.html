@@ -233,9 +233,9 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
 
 <p>[1] See {{WebKitBug("71270")}}.</p>
 
-<h2 id="Полифилл">Полифилл</h2>
+<h2 id="Полифил">Полифил</h2>
 
-<p>Полифилл, основанный на toDataURL, со слабой производительностью.</p>
+<p>Полифил, основанный на toDataURL, со слабой производительностью.</p>
 
 <pre>if (!HTMLCanvasElement.prototype.toBlob) {
   Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {

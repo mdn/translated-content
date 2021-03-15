@@ -37,9 +37,9 @@ dataChannel.addEventListener("open", (event) =&gt; {
 
 <h3 id="Ручной_режим_согласования">Ручной режим согласования</h3>
 
-<p>Для ручного согласования соединения, сначала необходимо создать новый объект типа {{domxref("RTCDataChannel")}}, используя метод  {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} объекта {{domxref("RTCPeerConnection")}}, определяя свойство  {{domxref("RTCDataChannelInit.negotiated", "negotiated")}} в значение <code>true</code>. Это сигнализирует объекту соединения не пытыться согласовать соединение автоматически.</p>
+<p>Для ручного согласования соединения, сначала необходимо создать новый объект типа {{domxref("RTCDataChannel")}}, используя метод  {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} объекта {{domxref("RTCPeerConnection")}}, определяя свойство  {{domxref("RTCDataChannelInit.negotiated", "negotiated")}} в значение <code>true</code>. Это сигнализирует объекту соединения не пытаться согласовать соединение автоматически.</p>
 
-<p>Затем нужно согласовать соединение, используя веб сервер или иные средства коммуникации. Этот процесс должен сигнализировать удаленному узлу, что нужно создать собственный объект типа <code>RTCDataChannel</code> со свойством  <code>negotiated</code>, установленным в значение  <code>true</code>, используя тот же идентификатор канала {{domxref("RTCDataChannel.id", "id")}}. Это свяжет два объекта типа  <code>RTCDataChannel </code>через объет типа <code>RTCPeerConnection</code>.</p>
+<p>Затем нужно согласовать соединение, используя веб сервер или иные средства коммуникации. Этот процесс должен сигнализировать удаленному узлу, что нужно создать собственный объект типа <code>RTCDataChannel</code> со свойством  <code>negotiated</code>, установленным в значение  <code>true</code>, используя тот же идентификатор канала {{domxref("RTCDataChannel.id", "id")}}. Это свяжет два объекта типа  <code>RTCDataChannel </code>через объект типа <code>RTCPeerConnection</code>.</p>
 
 <pre class="brush: js">let dataChannel = pc.createDataChannel("MyApp Channel", {
   negotiated: true
@@ -51,7 +51,7 @@ dataChannel.addEventListener("open", (event) =&gt; {
 
 requestRemoteChannel(dataChannel.id);</pre>
 
-<p>В данном примере канал создается установкой значения свойства <code>negotiated</code> в <code>true</code>, затем вызывается функция  <code>requestRemoteChannel()</code> , запуская согласование соединения для создания удаленного канала с тем же идентификатором как у локального канала. Таким образом создание каналов данных позволяет использовать различные свойства, создавая их декларативно, использьзуя одно и тоже значение идентификатора канала  <code>id</code>.</p>
+<p>В данном примере канал создается установкой значения свойства <code>negotiated</code> в <code>true</code>, затем вызывается функция  <code>requestRemoteChannel()</code> , запуская согласование соединения для создания удаленного канала с тем же идентификатором как у локального канала. Таким образом создание каналов данных позволяет использовать различные свойства, создавая их декларативно, используя одно и тоже значение идентификатора канала  <code>id</code>.</p>
 
 <h2 id="Буферизация">Буферизация</h2>
 

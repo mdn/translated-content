@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 <h3 id="Браузерная_поддержка">Браузерная поддержка</h3>
 
-<p>На октябрь 2016, текущие версии основых веб-браузеров включали <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla">ECMAScript 5.1</a> и <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla">ECMAScript 2015</a>, но более старые версии (все еще находящиеся в использовании) реализуют только ECMAScript 5.</p>
+<p>На октябрь 2016, текущие версии основы веб-браузеров включали <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla">ECMAScript 5.1</a> и <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_2015_support_in_Mozilla">ECMAScript 2015</a>, но более старые версии (все еще находящиеся в использовании) реализуют только ECMAScript 5.</p>
 
 <h3 id="Будущее">Будущее</h3>
 
@@ -51,7 +51,7 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 <h3 id="Ядро_DOM">Ядро DOM</h3>
 
-<p>Объектно-ориентированная модель документа (DOM) это кросс-платформенное, <strong>языково-независимое соглашение</strong> по представлению объектов и взаимодейстивию с ними в документах HTML, XHTML и XML. Объект в <strong>DOM-дереве</strong> может быть адресован и обработан с помощью своих методов. Ядро Объектно-ориентированной модели документа стандартизируется W3C и определяет языково-независимые интерфейсы, абстрагирующие HTML и XML документы как объекты, и механизмы для управления этой абстракцией. Кроме прочих вещей, опреденных в DOM, можно также найти:</p>
+<p>Объектно-ориентированная модель документа (DOM) это кросс-платформенное, <strong>языково-независимое соглашение</strong> по представлению объектов и взаимодействию с ними в документах HTML, XHTML и XML. Объект в <strong>DOM-дереве</strong> может быть адресован и обработан с помощью своих методов. Ядро Объектно-ориентированной модели документа стандартизируется W3C и определяет языково-независимые интерфейсы, абстрагирующие HTML и XML документы как объекты, и механизмы для управления этой абстракцией. Кроме прочих вещей, опряденных в DOM, можно также найти:</p>
 
 <ul>
  <li>Структуру документа, древовидную модель, и архитектуру событий DOM в <a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html" title="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">ядре DOM</a>: <code>Node</code>, <code>Element</code>, <code>DocumentFragment</code>, <code>Document</code>, <code>DOMImplementation</code>, <code>Event</code>, <code>EventTarget</code>, …</li>
@@ -74,12 +74,12 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
  <li><a class="external" href="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/" title="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/">XMLHttpRequest</a> позволяет отправлять асинхронные HTTP запросы.</li>
  <li>Объектная модель <a class="external" href="http://dev.w3.org/csswg/cssom/">CSS</a> абстрагировать CSS-правила как объекты</li>
  <li><a class="external" href="http://www.whatwg.org/specs/web-workers/current-work/">WebWorkers</a> обеспечивает выполнение параллельных вычислений.</li>
- <li><a class="external" href="http://www.whatwg.org/C/#network">WebSockets</a> обеспечивает низкоуровневое двунаправленое соединение.</li>
+ <li><a class="external" href="http://www.whatwg.org/C/#network">WebSockets</a> обеспечивает низкоуровневое двунаправленное соединение.</li>
  <li><a class="external" href="http://www.whatwg.org/html/#2dcontext" title="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context</a> это API для рисования с помощью элемента {{htmlelement("canvas")}}..</li>
 </ul>
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>Каждый разработчик сталкивавшийся с DOM понимает как там все <a href="http://ejohn.org/blog/the-dom-is-a-mess/" title="http://ejohn.org/blog/the-dom-is-a-mess/">безнадёжно</a>. Реализация той иной функциональности может отличаться, а следовательно и поведение. Главной причиной этого послужило то, что само описание спецификации DOM, было недостаточно ясным и подробным для разработчиков браузеров. Кроме того разные производители браузеров добавили несовместимые функциональности в своих браузеры или функциональности перекрывающие друг друга (например модель событий в IE). В данный момент консорциум W3C и частично WHATWG пытаюся описать детально поведение тех или иных функций, чтобы улучшить совместимость между браузерами. Следуя этой тенденции, можно надеятся что браузеры улучшат свои реализации основываясь на этих спецификациях.</p>
+<p>Каждый разработчик сталкивавшийся с DOM понимает как там все <a href="http://ejohn.org/blog/the-dom-is-a-mess/" title="http://ejohn.org/blog/the-dom-is-a-mess/">безнадёжно</a>. Реализация той иной функциональности может отличаться, а следовательно и поведение. Главной причиной этого послужило то, что само описание спецификации DOM, было недостаточно ясным и подробным для разработчиков браузеров. Кроме того разные производители браузеров добавили несовместимые функциональности в своих браузеры или функциональности перекрывающие друг друга (например модель событий в IE). В данный момент консорциум W3C и частично WHATWG пытаются описать детально поведение тех или иных функций, чтобы улучшить совместимость между браузерами. Следуя этой тенденции, можно надеяться что браузеры улучшат свои реализации основываясь на этих спецификациях.</p>
 
-<p>Наиболее общий, но возможно не самый надежный способ улучшить кроссбраузерную совместимость это воспользоваться библиотеками JavaScript. Эти библиотеки абстрагируют вас от особенностей реализации DOM в том или ином браузере, и гарантируют, что их API работает одинаково в разных браузерах. Наиболее распростаненные из них это <a class="external" href="http://jquery.com/">jQuery</a> и <a class="external" href="http://www.prototypejs.org/">prototype</a>.</p>
+<p>Наиболее общий, но возможно не самый надежный способ улучшить кроссбраузерную совместимость это воспользоваться библиотеками JavaScript. Эти библиотеки абстрагируют вас от особенностей реализации DOM в том или ином браузере, и гарантируют, что их API работает одинаково в разных браузерах. Наиболее распространенные из них это <a class="external" href="http://jquery.com/">jQuery</a> и <a class="external" href="http://www.prototypejs.org/">prototype</a>.</p>

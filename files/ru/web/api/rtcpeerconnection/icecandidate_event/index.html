@@ -34,7 +34,7 @@ translation_of: Web/API/RTCPeerConnection/icecandidate_event
 
 <h3 id="Делимся_Sharing_новым_кандидатом">Делимся (Sharing) новым кандидатом</h3>
 
-<p>В основном события <code>icecandidate</code> происходят, чтобы указать, что новый кандидат был построен (gathered). Этого кондидата нужно доставить удаленному клиенту (remote peer) через канал сигнализации (signaling channel), которым управляет ваш код.</p>
+<p>В основном события <code>icecandidate</code> происходят, чтобы указать, что новый кандидат был построен (gathered). Этого кандидата нужно доставить удаленному клиенту (remote peer) через канал сигнализации (signaling channel), которым управляет ваш код.</p>
 
 <pre class="brush: js notranslate">rtcPeerConnection.onicecandidate = (event) =&gt; {
   if (event.candidate) {

@@ -23,7 +23,7 @@ original_slug: DOM/document.createElement
 </pre>
 
 <ul>
- <li><code>element</code> — созданый объект <a href="../Web/API/Element">элемента</a>.</li>
+ <li><code>element</code> — созданный объект <a href="../Web/API/Element">элемента</a>.</li>
  <li><code>tagName</code> — строка, указывающая элемент какого типа должен быть создан. <a href="ru/DOM/element.nodeName">nodeName</a> создается и инициализируется со значением <code>tagName</code>.</li>
  <li>
   <p><code>options</code> — необязательный параметр, объект <code>ElementCreationOptions</code>, который может содержать только поле <code>is</code>, указывающее имя пользовательского элемента, созданного с помощью <code>customElements.define()</code> (см. <a href="/ru/docs/Web/Web_Components">Веб-компоненты</a>).</p>
@@ -57,7 +57,7 @@ original_slug: DOM/document.createElement
     var newDiv = document.createElement("div");
         newDiv.innerHTML = "&lt;h1&gt;Привет!&lt;/h1&gt;";
 
-    // Добавляем только что созданый элемент в дерево DOM
+    // Добавляем только что созданный элемент в дерево DOM
 
     my_div = document.getElementById("org_div1");
     document.body.insertBefore(newDiv, my_div);
@@ -70,7 +70,7 @@ original_slug: DOM/document.createElement
 
 <p>Если существуют атрибуты со значениями по умолчанию, атрибуты узлов предоставляющие их создаются автоматически и применяются к элементу.</p>
 
-<p>Для создания элементов с заданым пространством имен используйте метод <a href="ru/DOM/document.createElementNS">createElementNS</a>.</p>
+<p>Для создания элементов с заданным пространством имен используйте метод <a href="ru/DOM/document.createElementNS">createElementNS</a>.</p>
 
 <p>Реализация <code>createElement </code>в Gecko не соответствует DOM спецификации для XUL и XHTML документов: <code>localName</code> и <code>namespaceURI</code> не устанавливаются в  <code>null</code> в созданном документе. Смотрите {{ Bug(280692) }} для подробностей.</p>
 

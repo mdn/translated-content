@@ -18,7 +18,7 @@ translation_of: Web/API/FileReader
 <p>Объекты <code>File</code> можно получить через объект {{domxref("FileList")}}, который возвращается как результат при выборе файлов пользователем с помощью элемента {{HTMLElement("input")}}, через drag and drop из объекта {{domxref("DataTransfer")}}, или с помощью <code>mozGetAsFile()</code>, метода доступного в API элемента {{domxref("HTMLCanvasElement")}}.</p>
 
 <div class="blockIndicator warning">
-<p>Важное замечание: <code>FileReader</code> используется только для безопасным образом чтения содержимого файла из пользовательской (удалённой) системы. Его нельзя использовать для простого чтения файла по пути из файловой системы. Для чтения файла по пути в JavaScript следуюет использовать стандартное решение Ajax для чтения файла на стороне сервера с разрешение CORS при кроссдоменном чтении.</p>
+<p>Важное замечание: <code>FileReader</code> используется только для безопасным образом чтения содержимого файла из пользовательской (удалённой) системы. Его нельзя использовать для простого чтения файла по пути из файловой системы. Для чтения файла по пути в JavaScript следует использовать стандартное решение Ajax для чтения файла на стороне сервера с разрешение CORS при кроссдоменном чтении.</p>
 </div>
 
 <p>{{AvailableInWorkers}}</p>
@@ -75,13 +75,13 @@ translation_of: Web/API/FileReader
  <dt>{{domxref("FileReader.abort()")}}</dt>
  <dd>Отмена операции чтения. После вызова, значение <code>readyState</code> станет равным <code>DONE</code>.</dd>
  <dt>{{domxref("FileReader.readAsArrayBuffer()")}} {{ gecko_minversion_inline("7.0") }}</dt>
- <dd>Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, аттрибут <code>result</code> будет содержать данные файла в виде {{domxref("ArrayBuffer")}}.</dd>
+ <dd>Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут <code>result</code> будет содержать данные файла в виде {{domxref("ArrayBuffer")}}.</dd>
  <dt>{{domxref("FileReader.readAsBinaryString()")}}</dt>
- <dd>Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, аттрибут <code style="font-style: normal;">result</code> будет содержать бинарные данные файла в виде строки.</dd>
+ <dd>Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут <code style="font-style: normal;">result</code> будет содержать бинарные данные файла в виде строки.</dd>
  <dt>{{domxref("FileReader.readAsDataURL()")}}</dt>
- <dd>Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, аттрибут <code style="font-style: normal;">result</code> будет содержать данные файла в виде <code>data:</code> URL.</dd>
+ <dd>Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут <code style="font-style: normal;">result</code> будет содержать данные файла в виде <code>data:</code> URL.</dd>
  <dt>{{domxref("FileReader.readAsText()")}}</dt>
- <dd>Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, аттрибут <code style="font-style: normal;">result</code> будет содержать данные файла в виде текста.</dd>
+ <dd>Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут <code style="font-style: normal;">result</code> будет содержать данные файла в виде текста.</dd>
 </dl>
 
 <h2 id="Спецификация">Спецификация</h2>

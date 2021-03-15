@@ -18,14 +18,14 @@ original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 
 <h2 id="Определяем_переменные">Определяем переменные</h2>
 
-<p>Сначала, давайте определим необходимые переменные — добавьте следующий код ниже всех наших текущих опеределений переменных:</p>
+<p>Сначала, давайте определим необходимые переменные — добавьте следующий код ниже всех наших текущих определений переменных:</p>
 
 <pre class="brush: js">var bricks;
 var newBrick;
 var brickInfo;
 </pre>
 
-<p>Переменная <code>bricks</code> будет использоваться в качестве набора кирпичей, <code>newBrick</code> будет тем самым кирпичем, который мы будем создавать в каждой итерации цикла и добавлять в набор, а в <code>brickInfo</code> будет хранить всю необходимую информацию о кирпичах, как таковых.</p>
+<p>Переменная <code>bricks</code> будет использоваться в качестве набора кирпичей, <code>newBrick</code> будет тем самым кирпичом, который мы будем создавать в каждой итерации цикла и добавлять в набор, а в <code>brickInfo</code> будет хранить всю необходимую информацию о кирпичах, как таковых.</p>
 
 <h2 id="Добавляем_графику_для_кирпича">Добавляем графику для кирпича</h2>
 
@@ -107,7 +107,7 @@ var brickInfo;
 var brickY = (r*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
 </pre>
 
-<p>Координата <code>x</code> каждого кирпича рассчитывается на основе суммы ширины кирпича <code>brickInfo.width</code> и зазора <code>brickInfo.padding</code>, умноженной на номер столбца <code>с</code>, после этого добавляем отступ от левого края <code>brickInfo.offset.left</code>; Рассчёт <code>y</code> аналогичен, только используются номер ряда <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">r</span></font>, высота кирпича <code>brickInfo.height</code> и отступ от верхнего края <code>brickInfo.offset.top</code>. Вот теперь каждый кирпич на своём месте, с учётом всех отступов и зазоров.</p>
+<p>Координата <code>x</code> каждого кирпича рассчитывается на основе суммы ширины кирпича <code>brickInfo.width</code> и зазора <code>brickInfo.padding</code>, умноженной на номер столбца <code>с</code>, после этого добавляем отступ от левого края <code>brickInfo.offset.left</code>; Расчет <code>y</code> аналогичен, только используются номер ряда <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">r</span></font>, высота кирпича <code>brickInfo.height</code> и отступ от верхнего края <code>brickInfo.offset.top</code>. Вот теперь каждый кирпич на своём месте, с учётом всех отступов и зазоров.</p>
 
 <h2 id="Проверяем_код_функции_initBricks()">Проверяем код функции initBricks()</h2>
 
@@ -142,7 +142,7 @@ var brickY = (r*(brickInfo.height+brickInfo.padding))+brickInfo.offset.top;
 }
 </pre>
 
-<p>Если вы перезапустите страницу <code>index.html</code>, то увидете кирпичи, нарисованные на расстоянии друг от друга.</p>
+<p>Если вы перезапустите страницу <code>index.html</code>, то увидеть кирпичи, нарисованные на расстоянии друг от друга.</p>
 
 <h2 id="Сравните_свой_код">Сравните свой код</h2>
 

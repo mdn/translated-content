@@ -123,7 +123,7 @@ translation_of: Web/API/XMLHttpRequest
       <tr>
        <td><code>2</code></td>
        <td><code>HEADERS_RECEIVED</code></td>
-       <td>Вызван метод <code>send()</code>, получены заголовки и код ответа (200, 404, 501 и проч).</td>
+       <td>Вызван метод <code>send()</code>, получены заголовки и код ответа (200, 404, 501 и проч.).</td>
       </tr>
       <tr>
        <td><code>3</code></td>
@@ -143,7 +143,7 @@ translation_of: Web/API/XMLHttpRequest
    <td><code>response</code></td>
    <td>varies</td>
    <td>
-    <p>Тело сущности запроса. Соласно полю <code><a href="#responseType">responseType</a></code>, может быть <a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a>, <a href="/en/DOM/Blob" title="en/DOM/Blob"><code>Blob</code></a>, {{ domxref("Document") }}, JavaScript объектом (для "json"), или строкой. Равно <code>null</code> если запрос не завершен или окончен с ошибкой.</p>
+    <p>Тело сущности запроса. Согласно полю <code><a href="#responseType">responseType</a></code>, может быть <a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a>, <a href="/en/DOM/Blob" title="en/DOM/Blob"><code>Blob</code></a>, {{ domxref("Document") }}, JavaScript объектом (для "json"), или строкой. Равно <code>null</code> если запрос не завершен или окончен с ошибкой.</p>
    </td>
   </tr>
   <tr id="responseText">
@@ -196,7 +196,7 @@ translation_of: Web/API/XMLHttpRequest
        <td>
         <p>Похоже на поле <code>"text"</code>, но только находится в потоке(streaming). Это значит, что значение доступно только в промежуток времени между событиями прогресса (<code>"progress"</code> event), и содержит данные которые пришли из последнего события прогресса.</p>
 
-        <p>Поле содержит строку, пока выполняются события прогресса. После того как ответ получен польность, значение поля меняется на <code>null</code>.</p>
+        <p>Поле содержит строку, пока выполняются события прогресса. После того как ответ получен полностью, значение поля меняется на <code>null</code>.</p>
 
         <p>Работает только в Firefox.</p>
        </td>
@@ -223,7 +223,7 @@ translation_of: Web/API/XMLHttpRequest
    <td>
     <p>Ответ является объектом DOM <code><a class="internal" href="/en/DOM/document" title="En/DOM/Document">Document</a></code>, или <code>null в случае если запрос окончился ошибкой, или ответ не получен полностью, или если ответ невозможно распарсить как </code>XML или HTML. Ответ парсится как если бы это был <code>text/xml</code> stream. Когда значение <code>responseType</code> равно <code>"document"</code> и запрос выполнен асинхронно, ответ парсится как <code>text/html</code> stream.</p>
 
-    <div class="note"><strong>Примечание:</strong> Если сервер не работаетс заголовком (не присылает в ответе) "Content-type: <code>text/xml"</code>, то можно использовать метод <code>overrideMimeType() для того чтобы парсить получаемый ответ как </code>XML.</div>
+    <div class="note"><strong>Примечание:</strong> Если сервер не работает с заголовком (не присылает в ответе) "Content-type: <code>text/xml"</code>, то можно использовать метод <code>overrideMimeType() для того чтобы парсить получаемый ответ как </code>XML.</div>
    </td>
   </tr>
   <tr id="status">
@@ -255,7 +255,7 @@ translation_of: Web/API/XMLHttpRequest
   <tr id="upload">
    <td><code>upload</code></td>
    <td><code>XMLHttpRequestUpload</code></td>
-   <td>Загрзка (upload process) может отслеживаться event listener'ом.</td>
+   <td>Загрузка (upload process) может отслеживаться event listener'ом.</td>
   </tr>
   <tr id="withCredentials">
    <td><code>withCredentials</code></td>
@@ -402,7 +402,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <dl>
  <dt><code>method</code></dt>
- <dd>HTTP метод отправки сообщения - "GET", "POST", "PUT", "DELETE", и проч. Ignored for non-HTTP(S) URLs.</dd>
+ <dd>HTTP метод отправки сообщения - "GET", "POST", "PUT", "DELETE", и проч.. Ignored for non-HTTP(S) URLs.</dd>
  <dt><code>url</code></dt>
  <dd>URL адрес, на который будет отправлено сообщение.</dd>
  <dt><code>async</code></dt>
@@ -453,7 +453,7 @@ void send(FormData <var>data</var>);</pre>
 
 <h3 id="setRequestHeader()" name="setRequestHeader()">setRequestHeader()</h3>
 
-<p>Устанавливает значение заголовка HTTP-запроса. Вы должны вызвать <code>setRequestHeader()</code> после <a href="#open"><code>open()</code></a>, но перед <code>send()</code>. Если данный метод вызывается несколько раз с одним и тем же заголовком, все значения объеденяются в один заголовок запроса.</p>
+<p>Устанавливает значение заголовка HTTP-запроса. Вы должны вызвать <code>setRequestHeader()</code> после <a href="#open"><code>open()</code></a>, но перед <code>send()</code>. Если данный метод вызывается несколько раз с одним и тем же заголовком, все значения объединяются в один заголовок запроса.</p>
 
 <pre>void setRequestHeader(
    DOMString <var>header</var>,
@@ -510,14 +510,14 @@ void send(FormData <var>data</var>);</pre>
 
 <p>Вариант метода <code>send()</code> который посылает бинарные данные.</p>
 
-<div class="note"><strong>Примечание:</strong> Етот нестандартный метод считается устарелым по состоянию на Gecko 31 {{ geckoRelease(31) }}, и со временем будет удален. Взамен может использоваться стандарт метода <code>send(Blob data).</code> </div>
+<div class="note"><strong>Примечание:</strong> Этот нестандартный метод считается устарелым по состоянию на Gecko 31 {{ geckoRelease(31) }}, и со временем будет удален. Взамен может использоваться стандарт метода <code>send(Blob data).</code> </div>
 
 <pre>void sendAsBinary(
    in DOMString body
 );
 </pre>
 
-<p>Даный метод используется в сочетании с методом <code><a href="/en-US/docs/DOM/FileReader#readAsBinaryString()" title="/en-US/docs/DOM/FileReader#readAsBinaryString()">readAsBinaryString</a>,</code> который присутствует в <a href="/en-US/docs/DOM/FileReader" title="/en-US/docs/DOM/FileReader"><code>FileReader</code></a> API, и позволяет <a href="https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files" title="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">прочитать и <strong>загрузить</strong> файл любого типа</a> и превратить необработанные данные в <a href="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify" title="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify">JSON-строку</a>.</p>
+<p>Данный метод используется в сочетании с методом <code><a href="/en-US/docs/DOM/FileReader#readAsBinaryString()" title="/en-US/docs/DOM/FileReader#readAsBinaryString()">readAsBinaryString</a>,</code> который присутствует в <a href="/en-US/docs/DOM/FileReader" title="/en-US/docs/DOM/FileReader"><code>FileReader</code></a> API, и позволяет <a href="https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files" title="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">прочитать и <strong>загрузить</strong> файл любого типа</a> и превратить необработанные данные в <a href="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify" title="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify">JSON-строку</a>.</p>
 
 <h5 id="Параметры_4">Параметры</h5>
 

@@ -5,11 +5,11 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 ---
 <p>В этой статье показано, как определить страницу для удаления объектов <code>Author</code>.</p>
 
-<p>Как описано в разделе  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms#form_design">form design</a>,  наша стратегия будет заключаться в том, чтобы разрешить удаление только объектов, на которые не ссылаются другие объекты(в этом случае это означает, что мы не позволим <code>Author</code> быть удаленным, если на него ссылается  <code>Book</code>). С точки зрения реализации это означает, что форма должна подтвердить, что нет никаких связанных книг, прежде чем автор будет удален. Если есть связанные книги, то они должны отображаться и быть удалены до того, как будеет удален объект <code>Author</code>.</p>
+<p>Как описано в разделе  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/forms#form_design">form design</a>,  наша стратегия будет заключаться в том, чтобы разрешить удаление только объектов, на которые не ссылаются другие объекты(в этом случае это означает, что мы не позволим <code>Author</code> быть удаленным, если на него ссылается  <code>Book</code>). С точки зрения реализации это означает, что форма должна подтвердить, что нет никаких связанных книг, прежде чем автор будет удален. Если есть связанные книги, то они должны отображаться и быть удалены до того, как будет удален объект <code>Author</code>.</p>
 
 <h2 class="highlight-spanned" id="Controller—get_route">Controller—get route</h2>
 
-<p>Откройте <strong>/controllers/authorController.js</strong>. Найдите экспротируемый метод контроллера  <code>author_delete_get()</code> и замените его на слдеующий код.</p>
+<p>Откройте <strong>/controllers/authorController.js</strong>. Найдите экспортируемый метод контроллера  <code>author_delete_get()</code> и замените его на следующий код.</p>
 
 <pre><code class="language-js">// Отображать форму для удаления автора GET
 exports.author_delete_get = function(req, res, next) {
@@ -32,7 +32,7 @@ exports.author_delete_get = function(req, res, next) {
 
 };</code></pre>
 
-<p>TКонтроллер получает id экземпляра <code>Author</code> для удаления из параметра URL  (<code>req.params.id</code>). Он использует метод  <code>async.parallel()</code> , чтобы получить запись автра и паралельнно вс связанные книги. WКогда оба пораметра авершины, он рендерит страницу  <code><strong>author_delete</strong></code><strong>.pug</strong>, передает значения для <code>title</code>, <code>author</code>, и <code>author_books</code>.</p>
+<p>Контроллер получает id экземпляра <code>Author</code> для удаления из параметра URL  (<code>req.params.id</code>). Он использует метод  <code>async.parallel()</code> , чтобы получить запись автора и параллельно вс связанные книги. Когда оба параметра авершины, он рендерит страницу  <code><strong>author_delete</strong></code><strong>.pug</strong>, передает значения для <code>title</code>, <code>author</code>, и <code>author_books</code>.</p>
 
 <div class="note">
 <p><strong>Заметка:</strong> Если <code>findById()</code><strong> </strong>не возвращает результатов, то автор отсутствует в базе данных. В этом случае удалять нечего, поэтому сразу выводим список всех авторов.</p>
@@ -85,7 +85,7 @@ exports.author_delete_post = function(req, res, next) {
 
 <h2 class="highlight-spanned" id="View">View</h2>
 
-<p>Создайте <strong>/views/author_delete.pug</strong> и скопируйет текст ниже.</p>
+<p>Создайте <strong>/views/author_delete.pug</strong> и скопируйте текст ниже.</p>
 
 <pre class="line-numbers  language-html"><code class="language-html">extends layout
 
@@ -143,7 +143,7 @@ p
 
 <h2 class="highlight-spanned" id="Как_это_выглядит">Как это выглядит?</h2>
 
-<p>Запустите приложение и откройте в вашем браузере  <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Затем раздел <em>All authors </em>, а затем укажите конктретного пользователя. Наконец, выберите ссылку <em>Delete author</em>.</p>
+<p>Запустите приложение и откройте в вашем браузере  <a class="external external-icon" href="http://localhost:3000/" rel="noopener">http://localhost:3000/</a>. Затем раздел <em>All authors </em>, а затем укажите конкретного пользователя. Наконец, выберите ссылку <em>Delete author</em>.</p>
 
 <p>Если у автора нет книг, вам будет представлена такая страница. После нажатия клавиши delete сервер удалит автора и перенаправит в список авторов</p>
 

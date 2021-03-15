@@ -11,7 +11,7 @@ translation_of: Web/CSS/radial-gradient()
 
 
 
-<p>Как и любой градиент, радиальный градиент не имеет <a href="https://developer.mozilla.org/en-US/docs/CSS/image#no_intrinsic">внутренних размеров</a>, тоесть заданных или предпочитаемых размеров, как и заданного коэффициента соотношения сторон. Его итоговый размер будет соответствовать размеру элемента к которому он применен.</p>
+<p>Как и любой градиент, радиальный градиент не имеет <a href="https://developer.mozilla.org/en-US/docs/CSS/image#no_intrinsic">внутренних размеров</a>, то есть заданных или предпочитаемых размеров, как и заданного коэффициента соотношения сторон. Его итоговый размер будет соответствовать размеру элемента к которому он применен.</p>
 
 <p>Чтобы создать повторяющийся радиальный градиент, который будет заполнять контейнер, необходимо использовать функцию {{cssxref("repeating-radial-gradient")}}.</p>
 
@@ -19,11 +19,11 @@ translation_of: Web/CSS/radial-gradient()
 
 <h2 id="Композиция_свойства">Композиция свойства</h2>
 
-<p><img alt="" src="/files/3795/radial%20gradient.png" style="float: left; height: 176px; width: 396px;">Радиальнй градиент задается <em>позицией центра</em>, <em>конечной формой</em>, и двумя или более <em>точками изменения цвета</em>.</p>
+<p><img alt="" src="/files/3795/radial%20gradient.png" style="float: left; height: 176px; width: 396px;">Радиальный градиент задается <em>позицией центра</em>, <em>конечной формой</em>, и двумя или более <em>точками изменения цвета</em>.</p>
 
 <p>Чтобы создать плавный градиент, функция <code>radial-gradient()</code> рисует серию концентрических форм исходящих из центра к краям формы градиента (и потенциально далее за его пределы). Конечная форма может быть как кругом так и эллипсом.</p>
 
-<p>Точки изменения цвета расположены на <em>виртуальном луче градиента</em>, который расширяется горизонтально направо. Позиция точек заданных в процентах расчитывается относительно пересечения конечной формы таким лучем, что является <code>100%</code>. Цвет каждой такой формы задается цветом на пересечении луча градиента и этой формы.</p>
+<p>Точки изменения цвета расположены на <em>виртуальном луче градиента</em>, который расширяется горизонтально направо. Позиция точек заданных в процентах рассчитывается относительно пересечения конечной формы таким лучом, что является <code>100%</code>. Цвет каждой такой формы задается цветом на пересечении луча градиента и этой формы.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -67,11 +67,11 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
  </table>
 
  <div class="note">
- <p><strong>Заметка:</strong> Ранние реализации этой функции включают в себя другие значения свойства (<code>cover</code> and <code>contain</code>) которые являются синонимами <span class="st"><code>farthest-corner</code></span> и <code>closest-side</code>, соответственно. Рекоментуется использовать только стандартные значения, так как некоторые реализации уже перестали использовать старые значения свойств.</p>
+ <p><strong>Заметка:</strong> Ранние реализации этой функции включают в себя другие значения свойства (<code>cover</code> and <code>contain</code>) которые являются синонимами <span class="st"><code>farthest-corner</code></span> и <code>closest-side</code>, соответственно. Рекомендуется использовать только стандартные значения, так как некоторые реализации уже перестали использовать старые значения свойств.</p>
  </div>
  </dd>
  <dt><code>&lt;color-stop&gt;</code></dt>
- <dd>{{cssxref("&lt;color&gt;")}} значение цвета в точке изменения цвета за которым следует необязательный параметр позиции ({{cssxref("&lt;percentage&gt;")}} или {{cssxref("&lt;length&gt;")}} вдоль оси градиента). Значения <code>0%</code>, или <code>0</code> представляют центр градиента; значение <code>100%</code> представляет собой виртуальное пересечение конечной формы с виртуальным лучем граддиента. Процентные значения будут линейно расположены на луче градиента.</dd>
+ <dd>{{cssxref("&lt;color&gt;")}} значение цвета в точке изменения цвета за которым следует необязательный параметр позиции ({{cssxref("&lt;percentage&gt;")}} или {{cssxref("&lt;length&gt;")}} вдоль оси градиента). Значения <code>0%</code>, или <code>0</code> представляют центр градиента; значение <code>100%</code> представляет собой виртуальное пересечение конечной формы с виртуальным лучом градиента. Процентные значения будут линейно расположены на луче градиента.</dd>
 </dl>
 
 <h3 id="Синтаксис_2">Синтаксис</h3>
@@ -128,7 +128,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
 <p>{{EmbedLiveSample('Градиент_со_смещенным_центром', 240, 120)}}</p>
 
 <div class="note">
-<p><strong>Заметка:</strong> Дополнительные примеры можно найти в <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Использование CSS градиентов</a>.</p>
+<p><strong>Заметка:</strong> Дополнительные примеры можно найти в <a href="/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients">Ииспользование CSS градиентов</a>.</p>
 </div>
 
 <h2 id="Спецификация">Спецификация</h2>
@@ -166,7 +166,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
    <th>Safari</th>
   </tr>
   <tr>
-   <td>Стандартное использование (в {{cssxref("background")}} и {{cssxref("background-image")}})</td>
+   <td>Стандартное ииспользование (в {{cssxref("background")}} и {{cssxref("background-image")}})</td>
    <td>{{CompatGeckoDesktop("1.9.2")}}{{property_prefix("-moz")}}<sup>[1]</sup><br>
     {{CompatGeckoDesktop("16")}}</td>
    <td>10.0 (534.16){{property_prefix("-webkit")}}<sup>[2]</sup></td>
@@ -175,7 +175,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
    <td>5.1{{property_prefix("-webkit")}}<sup>[2]</sup></td>
   </tr>
   <tr>
-   <td>Использование в {{cssxref("border-image")}}</td>
+   <td>Ииспользование в {{cssxref("border-image")}}</td>
    <td>{{CompatGeckoDesktop("29")}}</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatVersionUnknown}}</td>
@@ -183,7 +183,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
    <td>{{CompatVersionUnknown}}</td>
   </tr>
   <tr>
-   <td>Использование на любых других свойствах работающих с типом {{cssxref("&lt;image&gt;")}}</td>
+   <td>Ииспользование на любых других свойствах работающих с типом {{cssxref("&lt;image&gt;")}}</td>
    <td>{{CompatNo}}</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatVersionUnknown}}</td>
@@ -232,7 +232,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
    <th>Safari Mobile</th>
   </tr>
   <tr>
-   <td>Стандартное спользование (в {{cssxref("background")}} и {{cssxref("background-image")}})</td>
+   <td>Стандартное использование (в {{cssxref("background")}} и {{cssxref("background-image")}})</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatGeckoMobile("1.9.2")}}{{property_prefix("-moz")}}<sup>[1]</sup><br>
     {{CompatGeckoMobile("16")}}</td>
@@ -241,7 +241,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
    <td>{{CompatVersionUnknown}}</td>
   </tr>
   <tr>
-   <td>Использование в {{cssxref("border-image")}}</td>
+   <td>Ииспользование в {{cssxref("border-image")}}</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatGeckoMobile("29")}}</td>
    <td>{{CompatVersionUnknown}}</td>
@@ -249,7 +249,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
    <td>{{CompatVersionUnknown}}</td>
   </tr>
   <tr>
-   <td>Использование на любых других свойствах работающих с типом {{cssxref("&lt;image&gt;")}}</td>
+   <td>Ииспользование на любых других свойствах работающих с типом {{cssxref("&lt;image&gt;")}}</td>
    <td>{{CompatNo}}</td>
    <td>{{CompatVersionUnknown}}</td>
    <td>{{CompatVersionUnknown}}</td>
@@ -277,9 +277,9 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
 </table>
 </div>
 
-<p>[1] Firefox 3.6 синтаксис - ранний реализованный вариант с префиксом. До Firefox 36, Gecko не применял градиенты на расширенное цветовое пространство, так как это приводило к неожиданному появлению серого оттенка при использовании прозрачности. Начиная с Firefox 42, версии градиентов с префиксом могую быть отключены установкой <code>layout.css.prefixes.gradients</code> to <code>false</code>.</p>
+<p>[1] Firefox 3.6 синтаксис - ранний реализованный вариант с префиксом. До Firefox 36, Gecko не применял градиенты на расширенное цветовое пространство, так как это приводило к неожиданному появлению серого оттенка при использовании прозрачности. Начиная с Firefox 42, версии градиентов с префиксом могут быть отключены установкой <code>layout.css.prefixes.gradients</code> to <code>false</code>.</p>
 
-<p>[2] Ранний синтаксис Webkit с префиксом. WebKit с версии 528 поддерживает устаревшый вариант <a href="https://developer.apple.com/library/safari/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Gradients/Gradient.html#//apple_ref/doc/uid/TP40008032-CH10-SW34"><code>-webkit-gradient(radial,…)</code></a>. Смотрите также <a href="https://developer.apple.com/library/safari/#documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Gradients/Gradient.html#//apple_ref/doc/uid/TP40008032-CH10-SW15">текущую поддержку</a> радиальных градиентов.</p>
+<p>[2] Ранний синтаксис Webkit с префиксом. WebKit с версии 528 поддерживает устаревший вариант <a href="https://developer.apple.com/library/safari/documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Gradients/Gradient.html#//apple_ref/doc/uid/TP40008032-CH10-SW34"><code>-webkit-gradient(radial,…)</code></a>. Смотрите также <a href="https://developer.apple.com/library/safari/#documentation/InternetWeb/Conceptual/SafariVisualEffectsProgGuide/Gradients/Gradient.html#//apple_ref/doc/uid/TP40008032-CH10-SW15">текущую поддержку</a> радиальных градиентов.</p>
 
 <p>[3] Internet Explorer от 5.5 до 9.0 поддерживают собственный фильтр <a href="http://msdn.microsoft.com/en-us/library/ms532997(VS.85,loband).aspx"><code>filter: progid:DXImageTransform.Microsoft.Gradient()</code></a>.</p>
 
@@ -289,13 +289,13 @@ radial-gradient(circle at center, red 0, blue, green 100%)</pre>
 
 <ul>
  <li>Gecko имеет долгоиграющий баг благодаря которому значения вроде <code>radial-gradient(circle gold,red)</code> будут работать, даже несмотря на то, что пропущена запятая между <code>circle</code> и <code>gold</code> ({{bug(1383323)}}). Новый parallel CSS движок от Firefox (также известный как <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> или <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, планируемый к релизу в Firefox 57) исправляет этот баг.</li>
- <li>Также в Gecko выражения с {{cssxref("calc")}} считаются недействительными — значени не валидно при использовании в  radial-gradient() ({{bug(1376019)}}). Новый parallel CSS движок от Firefox (также известный как <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> или <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, планируемый к релизув Firefox 57) исправляет этот баг.</li>
+ <li>Также в Gecko выражения с {{cssxref("calc")}} считаются недействительными — значение не валидно при использовании в  radial-gradient() ({{bug(1376019)}}). Новый parallel CSS движок от Firefox (также известный как <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> или <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, планируемый к релизув Firefox 57) исправляет этот баг.</li>
 </ul>
 
 <h2 id="Смотрите_так_же">Смотрите так же</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Using_CSS_gradients">Использование CSS градиентов</a></li>
+ <li><a href="/en-US/docs/CSS/Using_CSS_gradients">Ииспользование CSS градиентов</a></li>
  <li>Другие варианты градиентов: {{cssxref("repeating-radial-gradient")}}, {{cssxref("linear-gradient")}}, {{cssxref("repeating-linear-gradient")}}</li>
  <li>{{cssxref("&lt;image&gt;")}}</li>
 </ul>
