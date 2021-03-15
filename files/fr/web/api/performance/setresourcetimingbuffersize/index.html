@@ -11,9 +11,9 @@ translation_of: Web/API/Performance/setResourceTimingBufferSize
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p class="seoSummary">La méthode <strong><code>setResourceTimingBufferSize()</code></strong> définit la taille du <em>tampon de synchronisation des ressources</em> du navigateur au nombre spécifié d'objets « <code>resource</code> » d'{{domxref("PerformanceEntry.entryType", "entryType")}}.</p>
+<p class="seoSummary">La méthode <strong><code>setResourceTimingBufferSize()</code></strong> définit la taille du tampon mémoire du navigateur dans lequel sont stockés les objets de mesures de performance de type <code>"resource"</code> (voir {{domxref("PerformanceEntry.entryType", "entryType")}}).</p>
 
-<p>La taille recommandée du tampon de synchronisation des ressources d'un navigateur est d'au moins 150 objets d'{{domxref("PerformanceEntry","entrée de performance")}}.</p>
+<p>La taille recommandée du tampon de synchronisation des ressources d'un navigateur est au moins 150 objets <code>{{domxref("PerformanceEntry")}}</code>.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -26,16 +26,13 @@ translation_of: Web/API/Performance/setResourceTimingBufferSize
 <h3 id="Arguments">Arguments</h3>
 
 <dl>
-  <dt>maxSize</dt>
-  <dd>Un <code>number</code> représentant le nombre maximal d'objets {{domxref("PerformanceEntry", "d'entrée de performance")}} que le navigateur doit contenir dans son tampon d'entrée de performance.</dd>
+  <dt><code>maxSize</code></dt>
+  <dd>Un nombre (cf. {{jsxref("Number")}}) représentant le nombre maximal d'objets {{domxref("PerformanceEntry", "d'entrée de performance","",1)}} avec le type <code>"resource"</code> que le navigateur doit contenir dans le tampon correspondant.</dd>
 </dl>
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<dl>
-  <dt>none</dt>
-  <dd>Cette méthode n'a pas de valeur de retour.</dd>
-</dl>
+<p>Aucune.</p>
 
 <h2 id="Example">Exemple</h2>
 
@@ -57,12 +54,14 @@ translation_of: Web/API/Performance/setResourceTimingBufferSize
 <h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
-  <tbody>
+  <thead>
     <tr>
       <th scope="col">Spécification</th>
       <th scope="col">Statut</th>
       <th scope="col">Commentaire</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>{{SpecName('Resource Timing', '#dom-performance-setresourcetimingbuffersize',
         'setResourceTimingBufferSize()')}}</td>
