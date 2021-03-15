@@ -280,7 +280,7 @@
 /ru/docs/Learn/Server-side/Django/Сессии	/ru/docs/Learn/Server-side/Django/Sessions
 /ru/docs/Learn/Server-side/Express_Nodejs/Учебник_сайт_local_library	/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
 /ru/docs/Learn/Server-side/First_steps/Веб_Безопасность	/ru/docs/Learn/Server-side/First_steps/Website_security
-/ru/docs/Learn/Tools_and_testing/ГитХаб	/ru/docs/Learn/Tools_and_testing/GitHub
+/ru/docs/Learn/Tools_and_testing/GitHub	/ru/docs/Learn/Tools_and_testing/GitHub
 /ru/docs/Learn/Tools_and_testing/Фронтенд_JavaScript_фреймворки	/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 /ru/docs/Learn/Tools_and_testing/Фронтенд_JavaScript_фреймворки/React_getting_started	/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 /ru/docs/Learn/Understanding_URLs	/ru/docs/Learn/Common_questions/What_is_a_URL

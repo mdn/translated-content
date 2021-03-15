@@ -21,7 +21,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.applicationCache")}} {{readOnlyInline}} {{gecko_minversion_inline("1.9")}}</dt>
  <dd>Объект {{domxref("OfflineResourceList")}}, обеспечивающий для окна доступ к ресурсам вне сети.</dd>
  <dt>{{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}</dt>
- <dd>Свойство, указывающее ббыло ли текущее окно закрыто или нет.</dd>
+ <dd>Свойство, указывающее было ли текущее окно закрыто или нет.</dd>
  <dt>{{domxref("Window.Components")}} {{Non-standard_inline}}</dt>
  <dd>Точка доступа к богатому функционалу <a href="/en-US/docs/XPCOM">XPCOM</a>. Некоторые свойства, т.к. <a href="/en-US/docs/Components.classes">classes</a>, доступны только для достаточно привелегированного кода. <strong>Web-код не должен использовать эти свойства.</strong></dd>
  <dt>{{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}</dt>
@@ -49,7 +49,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}</dt>
  <dd>Это свойство указывает, отображается ли окно в полноэкранном режиме или нет.</dd>
  <dt>{{domxref("Window.globalStorage")}} {{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}</dt>
- <dd>Не поддерживает с Gecko 13 (Firefox 13). Использовать вместо него{{domxref("Window.localStorage")}}. Ббыло: Множественные объекты хранения, которые используются для хранения данных на нескольких страницах.</dd>
+ <dd>Не поддерживает с Gecko 13 (Firefox 13). Использовать вместо него{{domxref("Window.localStorage")}}. Было: Множественные объекты хранения, которые используются для хранения данных на нескольких страницах.</dd>
  <dt>{{domxref("Window.history")}} {{ReadOnlyInline}}</dt>
  <dd>Возвращает ссылку на объект истории.</dd>
  <dt>{{domxref("Window.innerHeight")}}</dt>
@@ -333,7 +333,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.ondevicelight")}}</dt>
  <dd>Свойство обработчика событий для отслеживания изменения уровня света.</dd>
  <dt>{domxref("Window.ondevicemotion")}} {{gecko_minversion_inline("6.0")}}</dt>
- <dd>Вызывается, если ббыло определено изменение акселерометра (для мобильных устройств).</dd>
+ <dd>Вызывается, если было определено изменение акселерометра (для мобильных устройств).</dd>
  <dt>{{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}</dt>
  <dd>Вызывается, когда была изменена ориентация (для мобильных устройств).</dd>
  <dt>{{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}</dt>
@@ -349,7 +349,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.onappinstalled")}}</dt>
  <dd>Вызывается, когда страница установлена, как приложение. Смотри {{event('appinstalled')}} событие.</dd>
  <dt>{{domxref("Window.oninput")}}</dt>
- <dd>Вызывается, когда значение элемента &lt;input&gt; ббыло изменено.</dd>
+ <dd>Вызывается, когда значение элемента &lt;input&gt; было изменено.</dd>
  <dt>{{domxref("GlobalEventHandlers.onkeydown")}}</dt>
  <dd>Свойство обработчика событий для события {{event("keydown")}} в окне.</dd>
  <dt>{{domxref("GlobalEventHandlers.onkeypress")}}</dt>
@@ -375,9 +375,9 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.onmozbeforepaint")}} {{gecko_minversion_inline("2.0")}}</dt>
  <dd>Свойство обработчика событий для события <code>MozBeforePaint</code>, которое присылается прежде чем окно будет перерисовано, если событие необходимо из-за вызова метода {{domxref("Window.mozRequestAnimationFrame()")}}.</dd>
  <dt>{{domxref("WindowEventHandlers.onoffline")}}</dt>
- <dd>Вызывается, когда ббыло потеряно соединение с сетью. Смотри событие {{event("offline")}}.</dd>
+ <dd>Вызывается, когда было потеряно соединение с сетью. Смотри событие {{event("offline")}}.</dd>
  <dt>{{domxref("WindowEventHandlers.ononline")}}</dt>
- <dd>Вызывается, когда соединение с сетью ббыло установлено. Смотри событие {{event("online")}}.</dd>
+ <dd>Вызывается, когда соединение с сетью было установлено. Смотри событие {{event("online")}}.</dd>
  <dt>{{domxref("WindowEventHandlers.onpageshow")}}</dt>
  <dd>Свойство обработчика событий для события pageshow в окне.</dd>
  <dt>{{domxref("WindowEventHandlers.onpagehide")}}</dt>
@@ -409,9 +409,9 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.onuserproximity")}}</dt>
  <dd>Свойство обработчика событий для события изменения близости пользователя к устройству.</dd>
  <dt>{{domxref("Window.onvrdisplayconnected")}} {{experimental_inline}}</dt>
- <dd>Представляет обработчик события, который будет запущен, когда подходящее устройство виртуальной реальности ббыло присоединено к компьютеру (когда запускается событие {{event("vrdisplayconnected")}}).</dd>
+ <dd>Представляет обработчик события, который будет запущен, когда подходящее устройство виртуальной реальности было присоединено к компьютеру (когда запускается событие {{event("vrdisplayconnected")}}).</dd>
  <dt>{{domxref("Window.onvrdisplaydisconnected")}} {{experimental_inline}}</dt>
- <dd>Представляет обработчик события, который будет запущен, когда подходящее устройство виртуальной реальности ббыло отсоединено от компьютера (когда запускается событие {{event("vrdisplaydisconnected")}}).</dd>
+ <dd>Представляет обработчик события, который будет запущен, когда подходящее устройство виртуальной реальности было отсоединено от компьютера (когда запускается событие {{event("vrdisplaydisconnected")}}).</dd>
  <dt>{{domxref("Window.onvrdisplaypresentchange")}} {{experimental_inline}}</dt>
  <dd>Представляет обработчик события, который будет запущен, когда изменится состояние устройства виртуальной реальности — т.е. перейдет от  представленного к непредставленному или наоборот (когда будет запущено событие {{event("onvrdisplaypresentchange")}}).</dd>
 </dl>
