@@ -19,8 +19,8 @@ translation_of: Web/HTML/Element/ul
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>。また、 <code>&lt;ul&gt;</code> 要素の子に少なくとも 1 個 {{HTMLElement("li")}} 要素を包含する場合は、<a href="/ja/docs/Web/Guide/HTML/Content_categories#Palpable_content">知覚可能コンテンツ</a>。</td>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Flow_content">フローコンテンツ</a>。また、 <code>&lt;ul&gt;</code> 要素の子に少なくとも 1 個 {{HTMLElement("li")}} 要素を包含する場合は、<a href="/ja/docs/Web/Guide/HTML/Content_categories#Palpable_content">知覚可能コンテンツ</a>。</td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
@@ -32,7 +32,7 @@ translation_of: Web/HTML/Element/ul
   </tr>
   <tr>
    <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れるすべての要素</td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れるすべての要素</td>
   </tr>
   <tr>
    <th scope="row">暗黙の ARIA ロール</th>
@@ -49,19 +49,16 @@ translation_of: Web/HTML/Element/ul
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
 <p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
 
 <dl>
  <dt>{{ htmlattrdef("compact") }} {{Deprecated_inline}}</dt>
- <dd>この論理属性は、コンパクトなスタイルでリストを秒がするようブラウザーに指示するものです。この属性の解釈は{{glossary("user agent", "ユーザーエージェント")}}に委ねられ、またすべてのブラウザーで動作するものでもありません。</dd>
+ <dd>この論理属性は、コンパクトなスタイルでリストを描画するようブラウザーに指示するものです。この属性の解釈は{{glossary("user agent", "ユーザーエージェント")}}に委ねられ、またすべてのブラウザーで動作するものでもありません。</dd>
  <dd>
  <div class="warning"><strong>警告:</strong> この属性は非推奨になっているため、使用しないでください。代わりに <a href="/ja/docs/Web/CSS">CSS</a> を使用してください。 <code>compact</code> 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として <code>80%</code> を指定します。</div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{ htmlattrdef("type") }} {{Deprecated_inline}}</dt>
  <dd>リストの行頭記号の形状を指定するために用います。 HTML3.2 および HTML 4.0/4.01 tranditional で定義されていた値は以下の通りです。
  <ul>
@@ -78,7 +75,7 @@ translation_of: Web/HTML/Element/ul
  </dd>
 </dl>
 
-<h2 id="Usage_notes" name="Usage_notes">使用上のメモ</h2>
+<h2 id="Usage_notes">使用上のメモ</h2>
 
 <ul>
  <li><code>&lt;ul&gt;</code> 要素は、数的な順序がなく、その配置順に意味を持たない項目を持つリストを表します。通常、順序なしリストの項目はドット、円形、四角形などいくつかの形式による行頭記号を伴って描画されます。行頭記号のスタイルは HTML 仕様書のページでは定義されていませんが、 CSS の {{ cssxref("list-style-type") }} プロパティを用いて変更することが可能です。</li>
@@ -86,11 +83,11 @@ translation_of: Web/HTML/Element/ul
  <li>{{ HTMLElement("ol") }} と <code>&lt;ul&gt;</code> は、どちらも項目のリストを表します。両者の違いは、 {{ HTMLElement("ol") }} 要素では順序に意味があることです。使い分けの目安としては、項目の順序を変更してみてください。意味が変わるようであれば {{ HTMLElement("ol") }} 要素を使用し、そうでない場合は <code>&lt;ul&gt;</code> 要素を使用することができます。</li>
 </ul>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="Simple_example" name="Simple_example">シンプルな例</h3>
+<h3 id="Simple_example">シンプルな例</h3>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;first item&lt;/li&gt;
   &lt;li&gt;second item&lt;/li&gt;
   &lt;li&gt;third item&lt;/li&gt;
@@ -101,9 +98,9 @@ translation_of: Web/HTML/Element/ul
 
 <p>{{EmbedLiveSample("Simple_example", 400, 100)}}</p>
 
-<h3 id="Nesting_a_list" name="Nesting_a_list">入れ子になったリスト</h3>
+<h3 id="Nesting_a_list">入れ子になったリスト</h3>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;first item&lt;/li&gt;
   &lt;li&gt;second item
   &lt;!-- 閉じタグの &lt;/li&gt; がここにはありません。 --&gt;
@@ -129,9 +126,9 @@ translation_of: Web/HTML/Element/ul
 
 <p>{{EmbedLiveSample("Nesting_a_list", 400, 220)}}</p>
 
-<h3 id="Nested_ul_and_ol" name="Nested_ul_and_ol">&lt;ul&gt; と &lt;ol&gt; のネスト</h3>
+<h3 id="Nested_ul_and_ol">&lt;ul&gt; と &lt;ol&gt; のネスト</h3>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;first item&lt;/li&gt;
   &lt;li&gt;second item
   &lt;!-- ここには &lt;li&gt; の閉じタグはない --&gt;
@@ -150,7 +147,7 @@ translation_of: Web/HTML/Element/ul
 
 <p>{{EmbedLiveSample("Ordered_list_inside_unordered_list", 400, 150)}}</p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -174,13 +171,11 @@ translation_of: Web/HTML/Element/ul
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("html.elements.ul")}}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>その他のリスト関連要素: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}</li>
