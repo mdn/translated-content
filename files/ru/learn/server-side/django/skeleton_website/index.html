@@ -253,7 +253,7 @@ path('catalog/', include('catalog.urls')),path('',
 RedirectView.as_view(url='/catalog/', permanent=True)), ] +
 <code>static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)</code></pre>
 
-<p>Кроме того, мы добавили import вниз файла (<code>from django.urls import include</code>) ,чтобы видеть, что мы добавили, но обычно все import'ы добавляются в верхнюю часть файла.</p>
+<p>Кроме того, мы добавили import вниз файла (<code>from django.urls import include</code>) ,чтобы видеть, что мы добавили, но обычно все инструкции import добавляются в верхнюю часть файла.</p>
 </div>
 
 <p>Напоследок, создайте файл <strong>urls.py</strong> внутри папки <strong>catalog</strong>, и добавьте следующий код, чтобы определить (пустой) <code>urlpatterns</code>. Сюда мы будем добавлять наши URL соотношения, по мере разработки сайта. </p>

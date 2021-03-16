@@ -255,7 +255,7 @@ translation_of: Web/API/XMLHttpRequest
   <tr id="upload">
    <td><code>upload</code></td>
    <td><code>XMLHttpRequestUpload</code></td>
-   <td>Загрузка (upload process) может отслеживаться event listener'ом.</td>
+   <td>Загрузка (upload process) может отслеживаться обработчиком события.</td>
   </tr>
   <tr id="withCredentials">
    <td><code>withCredentials</code></td>
@@ -406,7 +406,7 @@ translation_of: Web/API/XMLHttpRequest
  <dt><code>url</code></dt>
  <dd>URL адрес, на который будет отправлено сообщение.</dd>
  <dt><code>async</code></dt>
- <dd>Необязательный boolean параметр, по умолчанию равный <code>true. Определяет, будет ли запрос отправлен асинхронно. Если значение равно</code> <code>false</code>, метод <code>send() вернет ответ в общем потоке работы приложения (иначе говоря, приложение зависнет на некоторое время), в противном случае, ответ может быть получен только при помощи определенных </code>event listener'ов. В случае, если используется отправка <code>multipart</code> запроса, то этот атрибут <strong>должен </strong>быть <code>true</code>, или будет выброшено исключение.
+ <dd>Необязательный boolean параметр, по умолчанию равный <code>true. Определяет, будет ли запрос отправлен асинхронно. Если значение равно</code> <code>false</code>, метод <code>send() вернет ответ в общем потоке работы приложения (иначе говоря, приложение зависнет на некоторое время), в противном случае, ответ может быть получен только при помощи определенных </code> обработчиков событий. В случае, если используется отправка <code>multipart</code> запроса, то этот атрибут <strong>должен </strong>быть <code>true</code>, или будет выброшено исключение.
  <div class="note"><strong>Примечание:</strong> Начиная с Gecko 30.0 {{ geckoRelease("30.0") }}, синхронные запросы объявлены как deprecated, в силу того что все пользователи недовольны тем, что приложение "зависает".</div>
  </dd>
  <dt><code>user</code></dt>

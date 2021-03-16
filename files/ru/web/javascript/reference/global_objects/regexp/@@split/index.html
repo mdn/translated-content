@@ -56,7 +56,7 @@ console.log(result);  // ["2016", "01", "02"]
 
 <h3 id="Использование_split_в_подклассах">Использование <code>@@split</code> в подклассах</h3>
 
-<p>Подклассы {{jsxref("RegExp")}} могут переопределить <code>[@@split]()</code> для изменения дефольтного поведения.</p>
+<p>Подклассы {{jsxref("RegExp")}} могут переопределить <code>[@@split]()</code> для изменения стандартного поведения.</p>
 
 <pre class="brush: js">class MyRegExp extends RegExp {
   [Symbol.split](str, limit) {

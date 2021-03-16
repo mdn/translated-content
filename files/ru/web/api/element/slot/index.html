@@ -36,7 +36,7 @@ translation_of: Web/API/Element/slot
   &lt;span slot="my-text"&gt;Let's have some different text!&lt;/span&gt;
 &lt;/my-paragraph&gt;</pre>
 
-<p>В нашем JavaScript файле мы получаем ссылку {{htmlelement("span")}}, показанную выше, а затем регестрием ссылку на имя соответствующего элемента <code>&lt;slot&gt;</code>.</p>
+<p>В нашем JavaScript файле мы получаем ссылку {{htmlelement("span")}}, показанную выше, а затем регистрируем ссылку на имя соответствующего элемента <code>&lt;slot&gt;</code>.</p>
 
 <pre class="brush: js">let slottedSpan = document.querySelector('my-paragraph span')
 console.log(slottedSpan.slot); // logs <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">'my-text'</span></span></span></span></pre>
