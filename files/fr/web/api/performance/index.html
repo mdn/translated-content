@@ -13,7 +13,7 @@ translation_of: Web/API/Performance
 
 <p class="seoSummary">L'interface <strong><code>Performance</code></strong> donne accès à des informations liées aux performances pour la page actuelle. Elle fait partie de l'API « High Resolution Time », mais est complétée par les APIs <a href="/fr/docs/Web/API/Performance_Timeline">Performance Timeline</a>, <a href="/fr/docs/Web/API/Navigation_timing_API">Navigation Timing</a>, <a href="/fr/docs/Web/API/User_Timing_API">User Timing</a>, et <a href="/fr/docs/Web/API/Resource_Timing_API">Resource Timing</a>.</p>
 
-<p>Un objet de ce type peut être obtenu en appelant l'attribut en lecture seule {{domxref("Window.performance")}}.</p>
+<p>Un objet de ce type peut être obtenu en appelant l'attribut en lecture seule {{domxref("window.performance")}}.</p>
 
 <div class="notecard note">
   <p><strong>Note :</strong> Cette interface et ses attributs sont accessibles aux <a href="/fr/docs/Web/API/Web_Workers_API">Web Workers</a> via <code><a href="/fr/docs/Web/API/WorkerGlobalScope/performance">WorkerGlobalScope.performance</a></code> sauf dans les cas cités ci-dessous. Notez également que les marqueurs et les mesures de performance sont définis par contexte. Si vous créez un marqueur dans le processus principal (ou un autre Web Worker), vous ne pourrez pas le voir dans le processus du Web Worker, et réciproquement.</p>
@@ -45,13 +45,13 @@ translation_of: Web/API/Performance
   <dt>
     {{domxref("performance.memory")}} {{readonlyInline}} {{Non-standard_inline}}</dt>
   <dd>
-    Une <em>extension non standard</em> ajoutée dans Chrome, cette propriété fournit à un objet des informations de base sur l'utilisation de la mémoire. <em>Vous <strong>ne devriez pas utiliser</strong> cette API non standard.</em>
+    Une extension <em>non standard</em> ajoutée dans Chrome, cette propriété fournit à un objet des informations de base sur l'utilisation de la mémoire. <em>Vous <strong>ne devriez pas utiliser</strong> cette API non standard.</em>
   </dd>
   <dt>
     {{domxref("Performance.timeOrigin")}} {{readonlyInline}} {{Experimental_inline}}
   </dt>
   <dd>
-    Renvoie un horodatage haute résolution de l'heure de début de la mesure de performance.
+    Fournit un horodatage haute résolution de l'heure de début de la mesure de performance.
   </dd>
 </dl>
 
@@ -65,13 +65,13 @@ translation_of: Web/API/Performance
   <dt>{{domxref("performance.clearMeasures()")}}</dt>
   <dd>Supprime la <em>mesure</em> indiquée des données de performances du navigateur mises en mémoire tampon.</dd>
   <dt>{{domxref("performance.clearResourceTimings()")}}</dt>
-  <dd>Supprime toutes les {{domxref("PerformanceEntry","entrées de performance")}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} "<code>resource</code>" des données de performances du navigateur mises en mémoire tampon.</dd>
+  <dd>Supprime toutes les {{domxref("PerformanceEntry","entrées de performance","",1)}} avec un {{domxref("PerformanceEntry.entryType","entryType")}} "<code>resource</code>" des données de performances du navigateur mises en mémoire tampon.</dd>
   <dt>{{domxref("performance.getEntries()")}}</dt>
-  <dd>Retourne une liste d'objets {domxref("PerformanceEntry")}} basée sur le <em>filter</em> indiqué.</dd>
+  <dd>Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le <em>filtre</em> indiqué.</dd>
   <dt>{{domxref("performance.getEntriesByName()")}}</dt>
-  <dd>Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le <em>nom</em> d'entrée indiqué.</dd>
+  <dd>Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le <em>nom</em> indiqué.</dd>
   <dt>{{domxref("performance.getEntriesByType()")}}</dt>
-  <dd>Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le <em>type</em> d'entrée indiqué.</dd>
+  <dd>Retourne une liste d'objets {{domxref("PerformanceEntry")}} basée sur le <em>type</em> indiqué.</dd>
   <dt>{{domxref("performance.mark()")}}</dt>
   <dd>Crée un {{domxref("DOMHighResTimeStamp","timestamp")}} avec le nom indiqué, dans la mémoire tampon du navigateur dédiée aux performances.</dd>
   <dt>{{domxref("performance.measure()")}}</dt>
@@ -79,30 +79,31 @@ translation_of: Web/API/Performance
   <dt>{{domxref("Performance.now()")}}</dt>
   <dd>Retourne un objet {{domxref("DOMHighResTimeStamp")}} représentant le nombre de millisecondes écoulées depuis un instant donné.</dd>
   <dt>{{domxref("performance.setResourceTimingBufferSize()")}}</dt>
-  <dd>Configure la taille de la mémoire tampon pour le chronométrage des ressources du navigateur, avec le nombre indiqué de {{domxref("PerformanceEntry.entryType","type")}} d'{{domxref("PerformanceEntry","performance entry")}}objets "<code>resource</code>" .</dd>
+  <dd>Configure la taille de la mémoire tampon pour le chronométrage des ressources du navigateur. La valeur passée en argument indiquera le nombre maximal d'objets {{domxref("PerformanceEntry")}} ayant le {{domxref("PerformanceEntry.entryType","type")}} "<code>resource</code>" qu'il sera possible d'y stocker.</dd>
   <dt>{{domxref("Performance.toJSON()")}}</dt>
   <dd>Retourne un objet JSON représentant l'objet <code>Performance</code>.</dd>
 </dl>
 
 <h2 id="Events">Événements</h2>
 
-<p>Écoutez ces événements en utilisant <code>addEventListener()</code> ou en assignant un écouteur d'événement à la propriété <code>on<em>EventName</em></code> de cette interface.</p>
+<p>On pourra écouter ces événements en utilisant <code>addEventListener()</code> ou en assignant un gestionnaire d'événement à la propriété <code>on<em>&lt;EventName&gt;</em></code> de cette interface.</p>
 
 <dl>
   <dt>{{DOMxRef("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}</dt>
-  <dd>Déclenché lorsque la fenêtre de <a href="/fr/docs/Web/API/Performance/setResourceTimingBufferSize">tampon de synchronisation des ressources</a> du navigateur est pleine.<br>
-  Également disponible via la propriété {{DOMxRef("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}}.</dd>
+  <dd>Déclenché lorsque le <a href="/fr/docs/Web/API/Performance/setResourceTimingBufferSize">tampon de synchronisation des ressources</a> du navigateur est plein. Également disponible via la propriété {{DOMxRef("Performance.onresourcetimingbufferfull", "onresourcetimingbufferfull")}}.</dd>
 </dl>
 
 <h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
-  <tbody>
+  <thead>
     <tr>
       <th scope="col">Spécification</th>
       <th scope="col">Statut</th>
       <th scope="col">Commentaires</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>{{SpecName('Highres Time Level 2', '#sec-performance', 'Performance')}}</td>
       <td>{{Spec2('Highres Time Level 2')}}</td>
@@ -121,7 +122,7 @@ translation_of: Web/API/Performance
     <tr>
       <td>{{SpecName('Performance Timeline', '#extensions-to-the-performance-interface', 'Performance extensions')}}</td>
       <td>{{Spec2('Performance Timeline')}}</td>
-      <td>Définition des méthodes <code>getEntries()</code>, <code>getEntriesByType()</code> et  <code>getEntriesByName()</code>.</td>
+      <td>Définition des méthodes <code>getEntries()</code>, <code>getEntriesByType()</code> et <code>getEntriesByName()</code>.</td>
     </tr>
     <tr>
       <td>{{SpecName('Resource Timing', '#extensions-performance-interface', 'Performance extensions')}}</td>
