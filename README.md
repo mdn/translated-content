@@ -101,6 +101,11 @@ then:
 1. When you are satisfied with your changes, create a pull request and one of
    our review teams will review it.
 
+1. Once the pull request has been merged, the edition may take up to 48 hours
+   (daily build and CDN caches). To see if your change has been deployed,
+   you can check on
+   [What's Deployed](https://whatsdeployed.io/s/16d/mdn/translated-content).
+
 ### For more info on editing this repo
 
 For more information, we’d like to suggest that you go to the [content repo](https://github.com/mdn/content)
