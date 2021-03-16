@@ -100,7 +100,7 @@ translation_of: WebAssembly/Concepts
 
 <p>La herramienta Emscripten está disponible para casi cualquier tipo de código C/C++ y compila en un módulo .wasm, además del código "pegamento" necesario en JavaScript, necesario para cargar y ejecutar el módulo, y un documento HTML donde se muestre el resultado del código.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14647/emscripten-diagram.png" style="display: block; height: 104px; margin: 0px auto; width: 764px;"></p>
+<p><img alt="" src="emscripten-diagram.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Resumiendo, el proceso es el que sigue:</p>
 
@@ -120,7 +120,7 @@ translation_of: WebAssembly/Concepts
 
 <p>The generated HTML document loads the JavaScript glue file and writes stdout to a {{htmlelement("textarea")}}. If the application uses OpenGL, the HTML also contains a {{htmlelement("canvas")}} element that is used as the rendering target. It’s very easy to modify the Emscripten output and turn it into whatever web app you require.</p>
 
-<p>You can find full documentation on Emscripten at <a href="https://emscripten.org">emscripten.org</a>, and a guide to implementing the toolchain and compiling your own C/C++ app across to wasm at <a href="https://developer.mozilla.org/en-US/docs/WebAssembly/C_to_wasm">Compiling from C/C++ to WebAssembly</a>.</p>
+<p>You can find full documentation on Emscripten at <a href="https://emscripten.org">emscripten.org</a>, and a guide to implementing the toolchain and compiling your own C/C++ app across to wasm at <a href="/en-US/docs/WebAssembly/C_to_wasm">Compiling from C/C++ to WebAssembly</a>.</p>
 
 <h3 id="Writing_WebAssembly_directly">Writing WebAssembly directly</h3>
 
