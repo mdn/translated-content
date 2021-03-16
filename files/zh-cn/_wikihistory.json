@@ -10362,28 +10362,6 @@
       "eventao"
     ]
   },
-  "Web/API/DocumentOrShadowRoot": {
-    "modified": "2020-10-15T21:55:35.186Z",
-    "contributors": [
-      "RainSlide",
-      "bei6",
-      "iainreid629"
-    ]
-  },
-  "Web/API/DocumentOrShadowRoot/elementFromPoint": {
-    "modified": "2020-11-25T12:47:25.249Z",
-    "contributors": [
-      "imgss",
-      "Bayes"
-    ]
-  },
-  "Web/API/DocumentOrShadowRoot/elementsFromPoint": {
-    "modified": "2020-10-15T21:55:33.567Z",
-    "contributors": [
-      "fscholz",
-      "1Cr18Ni9"
-    ]
-  },
   "Web/API/DocumentTouch": {
     "modified": "2019-03-23T22:57:10.414Z",
     "contributors": [
@@ -50797,6 +50775,28 @@
     "modified": "2020-10-15T22:12:59.602Z",
     "contributors": [
       "WuCongMan"
+    ]
+  },
+  "Web/API/Document/elementFromPoint": {
+    "modified": "2020-11-25T12:47:25.249Z",
+    "contributors": [
+      "imgss",
+      "Bayes"
+    ]
+  },
+  "Web/API/Document/elementsFromPoint": {
+    "modified": "2020-10-15T21:55:33.567Z",
+    "contributors": [
+      "fscholz",
+      "1Cr18Ni9"
+    ]
+  },
+  "orphaned/Web/API/DocumentOrShadowRoot": {
+    "modified": "2020-10-15T21:55:35.186Z",
+    "contributors": [
+      "RainSlide",
+      "bei6",
+      "iainreid629"
     ]
   }
 }

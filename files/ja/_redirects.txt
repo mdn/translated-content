@@ -46,7 +46,7 @@
 /ja/docs/API/Document/documentURI	/ja/docs/Web/API/Document/documentURI
 /ja/docs/API/Document/documentURIObject	/ja/docs/Web/API/Document/documentURIObject
 /ja/docs/API/Document/domConfig	/ja/docs/Web/API/Document
-/ja/docs/API/Document/elementFromPoint	/ja/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
+/ja/docs/API/Document/elementFromPoint	/ja/docs/Web/API/Document/elementFromPoint
 /ja/docs/API/Document/embeds	/ja/docs/Web/API/Document/embeds
 /ja/docs/API/Document/enableStyleSheetsForSet	/ja/docs/Web/API/Document/enableStyleSheetsForSet
 /ja/docs/API/Document/evaluate	/ja/docs/Web/API/Document/evaluate
@@ -1435,7 +1435,7 @@
 /ja/docs/DOM/document.documentURI	/ja/docs/Web/API/Document/documentURI
 /ja/docs/DOM/document.documentURIObject	/ja/docs/Web/API/Document/documentURIObject
 /ja/docs/DOM/document.domConfig	/ja/docs/Web/API/Document
-/ja/docs/DOM/document.elementFromPoint	/ja/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
+/ja/docs/DOM/document.elementFromPoint	/ja/docs/Web/API/Document/elementFromPoint
 /ja/docs/DOM/document.embeds	/ja/docs/Web/API/Document/embeds
 /ja/docs/DOM/document.fgColor	/ja/docs/Web/API/Document/fgColor
 /ja/docs/DOM/document.firstChild	/ja/docs/Web/API/Node/firstChild
@@ -1770,7 +1770,7 @@
 /ja/docs/DOM:document.createEvent	/ja/docs/Web/API/Document/createEvent
 /ja/docs/DOM:document.documentElement	/ja/docs/Web/API/Document/documentElement
 /ja/docs/DOM:document.documentURIObject	/ja/docs/Web/API/Document/documentURIObject
-/ja/docs/DOM:document.elementFromPoint	/ja/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
+/ja/docs/DOM:document.elementFromPoint	/ja/docs/Web/API/Document/elementFromPoint
 /ja/docs/DOM:document.firstChild	/ja/docs/Web/API/Node/firstChild
 /ja/docs/DOM:document.forms	/ja/docs/Web/API/Document/forms
 /ja/docs/DOM:document.getElementById	/ja/docs/Web/API/Document/getElementById
@@ -3746,11 +3746,13 @@
 /ja/docs/Web/API/Document/async	/ja/docs/Web/API/XMLDocument/async
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
 /ja/docs/Web/API/Document/domConfig	/ja/docs/Web/API/Document
-/ja/docs/Web/API/Document/elementFromPoint	/ja/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/conflicting/Web/API/Document/characterSet
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/GlobalEventHandlers/onselectionchange
+/ja/docs/Web/API/DocumentOrShadowRoot	/ja/docs/orphaned/Web/API/DocumentOrShadowRoot
 /ja/docs/Web/API/DocumentOrShadowRoot/activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint	/ja/docs/Web/API/Document/caretPositionFromPoint
+/ja/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/ja/docs/Web/API/Document/elementFromPoint
+/ja/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/ja/docs/Web/API/Document/elementsFromPoint
 /ja/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/ja/docs/Web/API/Document/fullscreenElement
 /ja/docs/Web/API/DocumentOrShadowRoot/getAnimations	/ja/docs/Web/API/Document/getAnimations
 /ja/docs/Web/API/DocumentOrShadowRoot/getSelection	/ja/docs/Web/API/Document/getSelection

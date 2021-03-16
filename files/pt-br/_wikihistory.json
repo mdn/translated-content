@@ -16958,12 +16958,6 @@
       "Fernandolrs"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/elementFromPoint": {
-    "modified": "2019-03-23T22:29:17.399Z",
-    "contributors": [
-      "cezaraugusto"
-    ]
-  },
   "Web/API/HTMLElement/accessKey": {
     "modified": "2019-03-23T22:27:15.059Z",
     "contributors": [
@@ -17366,6 +17360,12 @@
     "modified": "2019-03-23T22:54:15.369Z",
     "contributors": [
       "expalmer"
+    ]
+  },
+  "Web/API/Document/elementFromPoint": {
+    "modified": "2019-03-23T22:29:17.399Z",
+    "contributors": [
+      "cezaraugusto"
     ]
   }
 }

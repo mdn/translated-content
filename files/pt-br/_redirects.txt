@@ -554,8 +554,8 @@
 /pt-BR/docs/Web/API/Document/async	/pt-BR/docs/Web/API/XMLDocument/async
 /pt-BR/docs/Web/API/Document/defaultView/popstate_event	/pt-BR/docs/Web/API/Window/popstate_event
 /pt-BR/docs/Web/API/Document/defaultView/resize_event	/pt-BR/docs/Web/API/Window/resize_event
-/pt-BR/docs/Web/API/Document/elementFromPoint	/pt-BR/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/activeElement	/pt-BR/docs/Web/API/Document/activeElement
+/pt-BR/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/pt-BR/docs/Web/API/Document/elementFromPoint
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/getSelection	/pt-BR/docs/Web/API/Document/getSelection
 /pt-BR/docs/Web/API/DocumentoXML	/pt-BR/docs/Web/API/XMLDocument
 /pt-BR/docs/Web/API/Element.addEventListener	/pt-BR/docs/Web/API/EventTarget/addEventListener

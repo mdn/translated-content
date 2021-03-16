@@ -12725,18 +12725,6 @@
       "AshfaqHossain"
     ]
   },
-  "Web/API/DocumentOrShadowRoot": {
-    "modified": "2020-10-15T22:12:34.663Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/DocumentOrShadowRoot/elementsFromPoint": {
-    "modified": "2020-10-15T22:29:40.404Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/DocumentType": {
     "modified": "2020-10-15T22:09:56.256Z",
     "contributors": [
@@ -52764,19 +52752,6 @@
       "Okome"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/elementFromPoint": {
-    "modified": "2019-03-23T23:50:29.105Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Mgjbot",
-      "Shoot",
-      "Potappo",
-      "Norah"
-    ]
-  },
   "conflicting/Web/API/DocumentOrShadowRoot/getSelection": {
     "modified": "2019-03-23T23:38:33.748Z",
     "contributors": [
@@ -53495,6 +53470,31 @@
     "modified": "2020-10-15T22:33:00.354Z",
     "contributors": [
       "eltociear"
+    ]
+  },
+  "Web/API/Document/elementFromPoint": {
+    "modified": "2019-03-23T23:50:29.105Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "Mgjbot",
+      "Shoot",
+      "Potappo",
+      "Norah"
+    ]
+  },
+  "Web/API/Document/elementsFromPoint": {
+    "modified": "2020-10-15T22:29:40.404Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "orphaned/Web/API/DocumentOrShadowRoot": {
+    "modified": "2020-10-15T22:12:34.663Z",
+    "contributors": [
+      "mfuji09"
     ]
   }
 }
