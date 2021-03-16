@@ -11,7 +11,7 @@ translation_of: Web/API/Performance_API/Using_the_Performance_API
 ---
 <div>{{DefaultAPISidebar("High Resolution Time")}}</div>
 
-<p class="seoSummary">Une exigence fondamentale de la performance web est une définition précise et cohérente du <em>temps.</em> Le type {{domxref("DOMHighResTimeStamp")}} (un <code>double</code>) est utilisé par toutes les interfaces de performance pour contenir de telles valeurs de temps. En outre, il doit y avoir un moyen de créer une <em>empreinte temporelle</em> pour un point spécifique dans le temps ; ceci est fait avec la méthode {{domxref("Performance.now", "now()")}}.</p>
+<p class="summary"><span class="seoSummary">Une exigence fondamentale de la performance web est une définition précise et cohérente du <em>temps.</em> Le type {{domxref("DOMHighResTimeStamp")}} (un <code>double</code>) est utilisé par toutes les interfaces de performance pour contenir de telles valeurs de temps.</span> En outre, il doit y avoir un moyen de créer une <em>empreinte temporelle</em> pour un point spécifique dans le temps ; ceci est fait avec la méthode {{domxref("Performance.now", "now()")}}.</p>
 
 <p>Les interfaces de performance Web sont définies dans une <a href="https://www.w3.org/wiki/Web_Performance/Publications">suite de normes</a>. L'interface <em>de base</em> de ces normes est l'interface {{domxref("Performance")}} et ses méthodes et propriétés sont étendues par différentes normes. Ce guide décrit comment utiliser les interfaces {{domxref("Performance")}} qui sont définies dans la norme <a href="https://w3c.github.io/hr-time/">High-Resolution Time</a>. D'autres guides sur les performances web (répertoriés dans la section {{anch("See_also", "Voir aussi")}}) décrivent comment utiliser des méthodes et propriétés supplémentaires de l'interface {{domxref("Performance")}}.</p>
 
@@ -22,16 +22,16 @@ translation_of: Web/API/Performance_API/Using_the_Performance_API
 <p>L'exemple de code suivant montre l'utilisation de {{domxref("DOMHighResTimeStamp")}} et de la méthode {{domxref("Performance.now", "Performance.now()")}}. La méthode {{domxref("Performance.now", "now()")}} renvoie un <em>timestamp</em> (de type {{domxref("DOMHighResTimeStamp")}}) qui est un point discret dans le temps. En appelant cette méthode avant et après une tâche, il est possible de mesurer le temps nécessaire à l'exécution de la tâche.</p>
 
 <pre class="brush: js">
-  function calculate_time() {
-    var startTime;
-    var endTime;
+function calculate_time() {
+  let <var>startTime</var>;
+  let <var>endTime</var>;
 
-    startTime = performance.now();
-    do_task();
-    endTime = performance.now();
+  startTime = performance.now();
+  do_task();
+  endTime = performance.now();
 
-    return (endTime - startTime);
-  }
+  return (endTime - startTime);
+}
 </pre>
 
 <h2 id="Serializing_the_Performance_object">Sérialisation de l'objet <code>Performance</code></h2>
@@ -39,31 +39,31 @@ translation_of: Web/API/Performance_API/Using_the_Performance_API
 <p>La sérialisation JSON de l'objet {{domxref("Performance")}} est effectuée via la méthode {{domxref("Performance.toJSON", "toJSON()")}}. Dans l'exemple suivant, la sérialisation JSON des objets {{domxref("Performance")}}, {{domxref("Performance.timing")}} {{deprecated_inline}} et {{domxref("Performance.navigation")}} {{deprecated_inline}} est imprimée dans l'élément <code>object</code>.</p>
 
 <pre class="brush: js">
-  function print_json() {
-    var json;
-    var o = document.getElementsByTagName("output")[0];
+function print_json() {
+  let <var>json</var>;
+  let <var>o</var> = document.getElementsByTagName("output")[0];
 
-    if (window.performance.toJSON === undefined) {
-      json = "window.performance.toJSON() n'est PAS pris en charge";
-      o.innerHTML += json + "&lt;br&gt;";
-    } else {
-      var s;
-      json = window.performance.toJSON();
+  if (window.performance.toJSON === undefined) {
+    json = "window.performance.toJSON() n'est PAS pris en charge";
+    o.innerHTML += json + "&lt;br&gt;";
+  } else {
+    let <var>s</var>;
+    json = window.performance.toJSON();
 
-      // Imprimer l'objet de performance
-      s = JSON.stringify(json);
-      o.innerHTML = "&lt;p&gt;performance = " + s + "&lt;/p&gt;";
+    // Imprimer l'objet de performance
+    s = JSON.stringify(json);
+    o.innerHTML = "&lt;p&gt;performance = " + s + "&lt;/p&gt;";
 
-      // Imprimer les objets performance.timing et performance.navigation
-      var perf = JSON.parse(s);
+    // Imprimer les objets performance.timing et performance.navigation
+    let <var>perf</var> = JSON.parse(s);
 
-      var timing = perf.timing;
-      o.innerHTML += "&lt;p&gt;peformance.timing = " + JSON.stringify(timing) + "&lt;/p&gt;";
+    let <var>timing</var> = perf.timing;
+    o.innerHTML += "&lt;p&gt;peformance.timing = " + JSON.stringify(timing) + "&lt;/p&gt;";
 
-      var navigation = perf.navigation;
-      o.innerHTML += "&lt;p&gt;peformance.navigation = " + JSON.stringify(navigation) + "&lt;/p&gt;";
-    }
+    let <var>navigation</var> = perf.navigation;
+    o.innerHTML += "&lt;p&gt;peformance.navigation = " + JSON.stringify(navigation) + "&lt;/p&gt;";
   }
+}
 </pre>
 
 <h2 id="Specifications">Spécifications</h2>

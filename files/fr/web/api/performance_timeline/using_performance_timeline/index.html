@@ -9,69 +9,69 @@ translation_of: Web/API/Performance_Timeline/Using_Performance_Timeline
 ---
 <div>{{DefaultAPISidebar("Performance Timeline API")}}</div>
 
-<p>La norme <strong><a href="https://w3c.github.io/performance-timeline/">Performance Timeline</a></strong> définit des extensions de l'interface {{domxref("Performance")}} pour prendre en charge les mesures de latence côté client au sein des applications. La norme comprend également des interfaces qui permettent à une application d'être notifiée lorsque des événements de performance spécifiques se produisent. Ensemble, ces interfaces peuvent être utilisées pour aider à identifier les goulots d'étranglement des performances d'une application.</p>
+<p class="summary"><span class="seoSummary">La norme <strong><a href="https://w3c.github.io/performance-timeline/">Performance Timeline</a></strong> définit des extensions de l'interface {{domxref("Performance")}} pour prendre en charge les mesures de latence côté client au sein des applications.</span> La norme comprend également des interfaces qui permettent à une application d'être notifiée lorsque des événements de performance spécifiques se produisent. Ensemble, ces interfaces peuvent être utilisées pour aider à identifier les goulots d'étranglement des performances d'une application.</p>
 
 <h2 id="Performance_extensions">Extensions de <code>Performance</code></h2>
 
 <p><strong>Performance Timeline</strong> étend l'objet {{domxref("Performance")}} avec trois méthodes qui fournissent différents mécanismes pour obtenir un ensemble d'{{domxref("PerformanceEntry", "enregistrements des performances (métriques)", "", 1)}}, selon les critères de filtrage spécifiés. L'exemple suivant montre l'utilisation de ces méthodes {{domxref("Performance.getEntries", "getEntries()")}}, {{domxref("Performance.getEntriesByName", "getEntriesByName()")}} et {{domxref("Performance.getEntriesByType", "getEntriesByType()")}}.</p>
 
 <pre class="brush: js">
-  function log(s) {
-    var o = document.getElementsByTagName("output")[0];
-    o.innerHTML += s + " &lt;br&gt;";
+function log(<var>s</var>) {
+  let <var>o</var> = document.getElementsByTagName("output")[0];
+  o.innerHTML += s + " &lt;br&gt;";
+}
+function do_work(<var>n</var>) {
+  for (let <var>i</var>=0 ; i &lt; n; i++) {
+      let <var>m</var> = Math.random();
   }
-  function do_work (n) {
-    for (var i=0 ; i &lt; n; i++) {
-       var m = Math.random();
-    }
+}
+function print_perf_entry(pe) {
+  log("..name: " + pe.name +
+      "; entryType: " + pe.entryType +
+      "; startTime: " + pe.startTime +
+      "; duration: " + pe.duration);
+}
+function print_PerformanceEntries() {
+  if (performance.mark === undefined) {
+    log("... performance.mark Not supported");
+    return;
   }
-  function print_perf_entry(pe) {
-    log("..name: "        + pe.name      +
-        "; entryType: " + pe.entryType +
-        "; startTime: " + pe.startTime +
-        "; duration: "  + pe.duration);
+
+  // Crée quelques entrées de performance via les méthodes mark() et measure()
+  performance.mark("Begin");
+  do_work(50000);
+  performance.mark("End");
+  do_work(50000);
+  performance.measure("Measure1", "Begin", "End");
+
+  // Utilise getEntries() pour itérer toutes les entrées.
+  let <var>p</var> = performance.getEntries();
+  for (let <var>i</var>=0; i &lt; p.length; i++) {
+    log("Toutes les entrées [" + i + "]");
+    print_perf_entry(p[i]);
   }
-  function print_PerformanceEntries() {
-    if (performance.mark === undefined) {
-      log("... performance.mark Not supported");
-      return;
-    }
 
-    // Crée quelques entrées de performance via les méthodes mark() et measure()
-    performance.mark("Begin");
-    do_work(50000);
-    performance.mark("End");
-    do_work(50000);
-    performance.measure("Measure1", "Begin", "End");
-
-    // Utilise getEntries() pour itérer toutes les entrées.
-    var p = performance.getEntries();
-    for (var i=0; i &lt; p.length; i++) {
-      log("All Entry[" + i + "]");
-      print_perf_entry(p[i]);
-    }
-
-    // Utilise getEntries(name, entryType) pour obtenir des entrées spécifiques.
-    p = performance.getEntries({name : "Measure1", entryType:   "measure"});
-    for (var i=0; i &lt; p.length; i++) {
-      log("Begin and Measure [" + i + "]");
-      print_perf_entry(p[i]);
-    }
-
-    // Utilisez getEntriesByType() pour obtenir toutes les entrées "mark".
-    p = performance.getEntriesByType("mark");
-    for (var i=0; i &lt; p.length; i++) {
-      log ("Mark only [" + i + "]");
-      print_perf_entry(p[i]);
-    }
-
-    // Utilise getEntriesByName() pour obtenir toutes les entrées "mark" nommées "Begin".
-    p = performance.getEntriesByName("Begin", "mark");
-    for (var i=0; i &lt; p.length; i++) {
-      log ("Begin and Mark [" + i + "]");
-      print_perf_entry(p[i]);
-    }
+  // Utilise getEntries(name, entryType) pour obtenir des entrées spécifiques.
+  p = performance.getEntries({name : "Measure1", entryType:   "measure"});
+  for (let <var>i</var>=0; i &lt; p.length; i++) {
+    log("Begin et Measure [" + i + "]");
+    print_perf_entry(p[i]);
   }
+
+  // Utilisez getEntriesByType() pour obtenir toutes les entrées "mark".
+  p = performance.getEntriesByType("mark");
+  for (let <var>i</var>=0; i &lt; p.length; i++) {
+    log ("Mark seulement [" + i + "]");
+    print_perf_entry(p[i]);
+  }
+
+  // Utilise getEntriesByName() pour obtenir toutes les entrées "mark" nommées "Begin".
+  p = performance.getEntriesByName("Begin", "mark");
+  for (let <var>i</var>=0; i &lt; p.length; i++) {
+    log ("Begin et Mark [" + i + "]");
+    print_perf_entry(p[i]);
+  }
+}
 </pre>
 
 <h2 id="PerformanceEntry_interface">L'interface <code>PerformanceEntry</code></h2>
@@ -79,55 +79,55 @@ translation_of: Web/API/Performance_Timeline/Using_Performance_Timeline
 <p>L'interface {{domxref("PerformanceEntry")}} encapsule une seule <em>entrée de performance</em>, c'est-à-dire une seule métrique de performance. Cette interface possède quatre propriétés et un <em>sérialiseur</em> JSON : ({{domxref("Performance.toJSON", "toJSON()")}}. L'exemple suivant montre l'utilisation de ces propriétés.</p>
 
 <pre class="brush: js">
-  function print_PerformanceEntry(ev) {
-    var properties = ["name", "entryType", "startTime", "duration"];
+function print_PerformanceEntry(<var>ev</var>) {
+  let <var>properties</var> = ["name", "entryType", "startTime", "duration"];
 
-    // Crée quelques entrées de performance
-    performance.mark("Start");
-    do_work(50000);
-    performance.mark("Stop");
-    performance.measure("measure-1");
+  // Crée quelques entrées de performance
+  performance.mark("Start");
+  do_work(50000);
+  performance.mark("Stop");
+  performance.measure("measure-1");
 
-    var p = performance.getEntries();
-    for (var i=0; i &lt; p.length; i++) {
-      log("PerfEntry[" + i + "]");
-      for (var j=0; j &lt; properties.length; j++) {
-        // check each property in window.performance
-        var supported = properties[j] in p[i];
-        if (supported) {
-          var pe = p[i];
-          log("... " + properties[j] + " = " + pe[properties[j]]);
-        } else {
-          log("... " + properties[j] + " = Not supported");
-        }
+  let <var>p</var> = performance.getEntries();
+  for (let <var>i</var>=0; i &lt; p.length; i++) {
+    log("PerfEntry[" + i + "]");
+    for (let <var></var>=0; j &lt; properties.length; j++) {
+      // check each property in window.performance
+      let <var>supported</var> = properties[j] in p[i];
+      if (supported) {
+        let <var>pe</var> = p[i];
+        log("... " + properties[j] + " = " + pe[properties[j]]);
+      } else {
+        log("... " + properties[j] + " = N'est pas pris en charge");
       }
     }
   }
+}
 </pre>
 
 <p>Cette interface comprend également une méthode {{domxref("PerformanceEntry.toJSON", "toJSON()")}} qui renvoie la sérialisation de l'objet {{domxref("PerformanceEntry")}}. Les exemples suivants montrent l'utilisation de cette méthode.</p>
 
 <pre class="brush: js">
-  function PerfEntry_toJSON() {
+function PerfEntry_toJSON() {
 
-    // Crée quelques entrées de performance
-    performance.mark("mark-1");
-    performance.mark("mark-2");
-    performance.measure("meas-1", "mark-1", "mark-2");
+  // Crée quelques entrées de performance
+  performance.mark("mark-1");
+  performance.mark("mark-2");
+  performance.measure("meas-1", "mark-1", "mark-2");
 
-    var peList = performance.getEntries();
-    var pe = peList[0];
+  let <var>peList</var> = performance.getEntries();
+  let <var>pe</var> = peList[0];
 
-    if (pe.toJSON === undefined) {
-      log ("PerformanceEntry.toJSON() n'est PAS pris en charge");
-      return;
-    }
-
-    // Imprime l'objet PerformanceEntry
-    var json = pe.toJSON();
-    var s = JSON.stringify(json);
-    log("PerformanceEntry.toJSON = " + s);
+  if (pe.toJSON === undefined) {
+    log("PerformanceEntry.toJSON() n'est PAS pris en charge");
+    return;
   }
+
+  // Imprime l'objet PerformanceEntry
+  let <var>json</var> = pe.toJSON();
+  let <var>s</var> = JSON.stringify(json);
+  log("PerformanceEntry.toJSON = " + s);
+}
 </pre>
 
 <h2 id="Performance_Observers">Observateurs de performance</h2>
@@ -139,49 +139,49 @@ translation_of: Web/API/Performance_Timeline/Using_Performance_Timeline
 <p>L'exemple suivant montre comment enregistrer deux observateurs : le premier s'enregistre pour plusieurs types d'événements et le second ne s'enregistre que pour un seul type d'événement.</p>
 
 <pre class="brush: js">
-  function PerformanceObservers() {
-    // Crée un observateur pour tous les types d'événements de performance
-    var observe_all = new PerformanceObserver(function(list, obs) {
-      var perfEntries;
+function PerformanceObservers() {
+  // Crée un observateur pour tous les types d'événements de performance
+  let <var>observe_all</var> = new PerformanceObserver(function(list, obs) {
+    let <var>perfEntries</var>;
 
-      // Imprime toutes les entrées
-      perfEntries = list.getEntries();
-      for (var i=0; i &lt; perfEntries.length; i++) {
-        print_perf_entry(perfEntries[i]);
-      }
+    // Imprime toutes les entrées
+    perfEntries = list.getEntries();
+    for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+      print_perf_entry(perfEntries[i]);
+    }
 
-      // Imprime les entrées nommées "Begin" avec le type "mark".
-      perfEntries = list.getEntriesByName("Begin", "mark");
-      for (var i=0; i &lt; perfEntries.length; i++) {
-        print_perf_entry(perfEntries[i]);
-      }
+    // Imprime les entrées nommées "Begin" avec le type "mark".
+    perfEntries = list.getEntriesByName("Begin", "mark");
+    for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+      print_perf_entry(perfEntries[i]);
+    }
 
-      // Imprime les entrées avec le type "marque".
-      perfEntries = list.getEntriesByType("mark");
-      for (var i=0; i &lt; perfEntries.length; i++) {
-        print_perf_entry(perfEntries[i]);
-      }
-    });
-    // inscrit tous les types d'événements liés aux performances
-    observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
+    // Imprime les entrées avec le type "mark".
+    perfEntries = list.getEntriesByType("mark");
+    for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+      print_perf_entry(perfEntries[i]);
+    }
+  });
+  // inscrit tous les types d'événements liés aux performances
+  observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
 
-    // Crée un observateur pour le seul type d'événement "mark".
-    var observe_mark = new PerformanceObserver(function(list, obs) {
-      var perfEntries = list.getEntries();
-      // Ne devrait avoir que des entrées de type "mark".
-      for (var i=0; i &lt; perfEntries.length; i++) {
-        print_perf_entry(perfEntries[i]);
-      }
-    });
-    // inscrit uniquement l'événement "mark".
-    observe_mark.observe({entryTypes: ['mark']});
-  }
-  function print_perf_entry(pe) {
-    log("name: "        + pe.name      +
-        "; entryType: " + pe.entryType +
-        "; startTime: " + pe.startTime +
-        "; duration: "  + pe.duration);
-  }
+  // Crée un observateur pour le seul type d'événement "mark".
+  let <var>observe_mark</var> = new PerformanceObserver(function(list, obs) {
+    let <var>perfEntries</var> = list.getEntries();
+    // Ne devrait avoir que des entrées de type "mark".
+    for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+      print_perf_entry(perfEntries[i]);
+    }
+  });
+  // inscrit uniquement l'événement "mark".
+  observe_mark.observe({entryTypes: ['mark']});
+}
+function print_perf_entry(pe) {
+  log("name: " + pe.name +
+      "; entryType: " + pe.entryType +
+      "; startTime: " + pe.startTime +
+      "; duration: " + pe.duration);
+}
 </pre>
 
 <p>L'interface {{domxref("PerformanceObserverEntryList", "liste des entrées de l'observateur de performance", "", 1)}} possède les trois mêmes méthodes <code>getEntries*()</code> que l'interface {{domxref("Performance")}} et ces méthodes sont utilisées pour récupérer les entrées de performance <em>observées</em> dans le rappel de l'observateur. Ces méthodes ont été utilisées dans l'exemple cité ci-dessus.</p>
