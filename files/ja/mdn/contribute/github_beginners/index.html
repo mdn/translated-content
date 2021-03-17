@@ -108,115 +108,115 @@ translation_of: MDN/Contribute/GitHub_beginners
     <p><img src="code-popup.png" alt="クローン URL と共に open with github desktop や download zip などの選択肢を表示しているポップアップウィンドウ"></p>
   </li>
   <li>
-    <p>If you set up SSH authentication as instructed above, click the "SSH" tab and copy the <code>git@github.com:<em>&lt;your-user-name&gt;</em>/content.git</code> URL from the text field in the box. If you didn't set up SSH authentication, copy the URL from the text field on the "HTTPS" tab instead, which should look like this: <code>https://github.com/<em>&lt;your-user-name&gt;</em>/content.git</code>.</p>
+    <p>上で説明したように、 SSH 認証を設定した場合は "SSH" タブをクリックし、ボックス内のテキストフィールドから <code>git@github.com:<em>&lt;your-user-name&gt;</em>/content.git</code> の URL をコピーしてください。 SSH 認証を設定していない場合は、代わりに "HTTPS" タブのテキストフィールドから <code>https://github.com/<em>&lt;your-user-name&gt;</em>/content.git</code> のような URL をコピーしてください。</p>
   </li>
   <li>
-    <p>Now open up the command line on your computer, and navigate into the directory you set up earlier to store your local git repo clones in using the cd command, e.g.</p>
+    <p>そして自分のコンピューターでコマンドラインを開き、 cd コマンドで先ほど git リポジトリのローカルのクローンを保存するために設定したディレクトリに移動します。</p>
 
     <pre class="brush: bash">cd git</pre>
   </li>
   <li>
-    <p>Clone your fork by entering a command with the following form:</p>
+    <p>次のような形でコマンドを入力し、フォークをクローンしてください。</p>
 
     <pre class="brush: bash">git clone <em>the-url-you-copied</em></pre>
 
-    <p>So for example my cloning command looked like this:</p>
+    <p>例えば、私がクローンするときのコマンドは次のようになります。</p>
 
     <pre class="brush: bash">git clone git@github.com:chrisdavidmills/content.git</pre>
   </li>
 </ol>
 
-<p>You should now find a content directory inside your git directory, containing the contents of the repo.</p>
+<p>これで git ディレクトリの中に content ディレクトリができ、そこにリポジトリの内容が入っているはずです。</p>
 
-<h3 id="setting_up_a_remote_to_point_to_the_main_version_of_the_repo">Setting up a remote to point to the main version of the repo</h3>
+<h3 id="setting_up_a_remote_to_point_to_the_main_version_of_the_repo">リポジトリのメインバージョンを指すようリモートを設定する</h3>
 
-<p>One last thing to do before moving on is set up a <em>remote</em> to point to the main version of the repo, e.g. <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> in the case of our example. A remote is basically a pointer to a specific remote repo location on GitHub, and is most commonly used to update your local clone so it is up-to-date with the latest main repo, as we'll see below.</p>
+<p>次に進む前の最後の作業として、リモートを設定してメインバージョンのリポジトリを指すようにしましょう。この例では <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> とします。リモートとは基本的に、GitHub 上の特定のリモートリポジトリの場所を指すものです。後述するように、ローカルのクローンを最新のメインリポジトリに更新するために最もよく使われます。</p>
 
-<p>Setting up a remote is done with the <code>git remote add</code> command, which looks like this:</p>
+<p>リモートの設定は、次のように <code>git remote add</code> コマンドで行います。</p>
 
 <pre class="brush: bash">git remote add <em>remote-name</em> <em>repo-you-want-to-point-to</em></pre>
 
 <ul>
-  <li><em>remote-name</em> is a name that you decide on, which is used to refer to the remote later on. It is good to stick to a consistent name for remotes across different repos that have the same purpose, so the same remote name will do the same thing everywhere, and you are less likely to get confused. So for example, the main version of the repo that you forked your version from is often called the "upstream repo", therefore people often use "upstream" as the name of the remote upstream location. I usually call my upstream remotes "mozilla", to signify that they point to Mozilla's main copy of the repo.</li>
-  <li><em>repo-you-want-to-point-to</em> is the SSH (or HTTPS) URL of the repo you want to point to, retrieved in the same way as we did when we were cloning our fork earlier.</li>
+  <li><em>remote-name</em> は、自分で決めた名前で、後にリモートを参照するために使用されます。同じ目的を持つ異なるリポジトリ間では、一貫したリモート名にこだわるのと良いでしょう。同じリモート名であれば、どこでも同じことができ、混乱することも少なくなります。例えば、自分のバージョンをフォークしたリポジトリのメインバージョンは「upstream (上流) リポジトリ」と呼ばれることが多く、そのためよく "upstream" がリモートの上流の場所を表す名前として使われます。私は通常、上流のリモートを "mozilla" と呼んでいますが、これは Mozilla のメインのリポジトリを指していることを示すためです。</li>
+  <li><em>repo-you-want-to-point-to</em> は、指す先の SSH (またはHTTPS) の URL で、先ほどフォークのクローンを作ったときと同じ方法で取得します。</li>
 </ul>
 
-<p>So, to add your remote:</p>
+<p>したがって、リモートを追加するには以下のようにします。</p>
 
 <ol>
   <li>
-    <p>Go to the github.com page for the main version of the repo (<a href="https://github.com/mdn/content">https://github.com/mdn/content</a> in this example) and retrieve the SSH or HTTPS URL as appropriate, from the "Code" popup.</p>
+    <p>github.com のリポジトリのメインバージョンのページへ行き (この例では <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> とします)、必要に応じて "Code" ポップアップから SSH または HTTPS の URL を取得します。</p>
   </li>
   <li>
-    <p>In your command line, <code>cd</code> into your content directory:</p>
+    <p>コマンドラインから、 <code>cd</code> で自分の content ディレクトリに移動します。</p>
 
     <pre class="brush: bash">cd content</pre>
   </li>
   <li>
-    <p>Now run a command along the following lines, replacing <em>remote-name</em> and <em>repo-you-want-to-point-to</em> as appropriate:</p>
+    <p>次のようなコマンドを、 <em>remote-name</em> と <em>repo-you-want-to-point-to</em> を適切に置き換えて実行してください。</p>
 
     <pre class="brush: bash">git remote add <em>remote-name</em> <em>repo-you-want-to-point-to</em></pre>
 
-    <p>So for example, I used the SSH URL and called my remote "mozilla":</p>
+    <p>したがって、例えば私は SSH の URL を使用してリモートの "mozilla" を呼び出したので、次のようにしました。</p>
 
     <pre class="brush: bash">git remote add mozilla git@github.com:mdn/content.git</pre>
   </li>
 </ol>
 
-<p>Your remote should now be set up. You can verify it by running the command <code>git remote -v</code> in your terminal, which outputs a list of your remote names and where they point to. You should see something a bit like this:</p>
+<p>これで、リモートの設定が完了しました。端末で <code>git remote -v</code> というコマンドを実行するとこれを確認できます。このコマンドは、自分のリモートの名前とその場所の一覧を出力します。以下のようなものが表示されるでしょう。</p>
 
 <pre>mozilla    git@github.com:mdn/content.git (fetch)
 mozilla    git@github.com:mdn/content.git (push)
 origin    git@github.com:chrisdavidmills/content.git (fetch)
 origin    git@github.com:chrisdavidmills/content.git (push)</pre>
 
-<h2 id="preparing_to_make_a_change_to_the_repo">Preparing to make a change to the repo</h2>
+<h2 id="preparing_to_make_a_change_to_the_repo">リポジトリに変更を加えるための準備</h2>
 
-<p>Now you've got your local fork clone all set up to work with, there is a set of commands you should get in the habit of running before you attempt to make any new changes.</p>
+<p>これで、ローカルのフォーククローンで作業できるようになりましたが、新しい変更を行う前に実行しておくべき一連のコマンドがあります。</p>
 
-<h3 id="switch_to_the_main_branch">Switch to the main branch</h3>
+<h3 id="switch_to_the_main_branch">メインブランチへの切り替え</h3>
 
-<p>Each repo has a number of different branches, which are basically different versions of the codebase inside the same repo. The idea is that for each change to a codebase, you make the change on a separate branch and test it there first, before then pushing the changes to the main copy of the code.</p>
+<p>それぞれのリポジトリにはいくつかの異なるブランチがあり、これは基本的に同じリポジトリの中にあるコードベースの異なるバージョンです。つまり、コードベースに変更を加えるたびに、別のブランチで変更を加え、まずそこでテストしてから、コードのメインコピーに変更を反映させるという考え方です。</p>
 
-<p>The main branch of the content repo is called "main" (it might be called something else like "master" in other repos, and if so you'll have to update the name of it in all commands shown below). You'll be on this branch by default if you've just cloned the repo, but if you've already done some work you'll likely be on a different branch.
+<p>コンテンツリポジトリのメインブランチは "main" と呼ばれています (他のリポジトリでは "master" などと呼ばれているかもしれません。その場合は、以下に示すすべてのコマンドでその名前を読み替える必要があります)。リポジトリをクローンしたばかりのときは既定ででこのブランチにいることになりますが、すでに作業を終えている場合は別のブランチにいるかもしれません。
 
-Make sure you run the following to switch to the main branch before doing anything else:
+何か作業をする前に、次のコマンドを実行してメインブランチに切り替えるようにしましょう。
 
 <pre class="brush: bash">git switch main</pre>
 
 <div class="notecard note">
-  <h4>Note</h4>
+  <h4>注</h4>
 
-  <p>In other tutorials you may have seen <code>git checkout</code> used to change branches in a repo. That works fine most of the time, but can sometimes have unintended side-effects, therefore in this tutorial we are recommending the newer <code>git switch</code> command, which is designed purely for switching branches and has less chance of going wrong. If you are interested in how these commands are related, and the differences between them, <a href="https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout">Highlights from Git 2.23 > Experimental alternatives for git checkout</a> provides a good summary.</p>
+  <p>他のチュートリアルでは、リポジトリのブランチを変更するために <code>git checkout</code> を使っているのを見たことがあるかもしれません。このチュートリアルでは、より新しい <code>git switch</code> コマンドをお勧めします。これは純粋にブランチを変更するために設計されたもので、失敗する可能性が低いからです。これらのコマンドの関連性や違いに興味がある方は、 <a href="https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout">Highlights from Git 2.23 > Experimental alternatives for git checkout</a> が良くまとまっています。</p>
 </div>
 
-<h3 id="update_your_main_branch">Update your main branch</h3>
+<h3 id="update_your_main_branch">自分のメインブランチの更新</h3>
 
-<p>Next up, you should update your main branch so that it contains the same content as the main branch of the main repo. The content repo is updated many times every day by a large number of contributors, so if you don't do this, your version will get out-of-date, and this will cause problems when you try to submit your updates. This is where your remote will come in handy!</p>
+<p>次は、メインブランチを更新して、メインリポジトリのメインブランチと同じコンテンツになるようにします。 content リポジトリは数多くの貢献者によって毎日何度も更新されているので、これをやらないとバージョンが古くなってしまい、更新を投稿する際に問題が発生します。ここで、リモートが役に立つのです。</p>
 
-<p>To update your repo:</p>
+<p>リポジトリを更新するには次のようにします。</p>
 
 <ol>
   <li>
-    <p>First fetch the updated contents of your remote with the following command:</p>
+    <p>まず、以下のコマンドで、リモートの更新されたコンテンツを取得します。</p>
 
     <pre class="brush: bash">git fetch <em>remote-name</em></pre>
 
-    <p>So for example:</p>
+    <p>例えば次のようになります。</p>
 
     <pre class="brush: bash">git fetch mozilla</pre>
   </li>
   <li>
-    <p>Next, replace the contents of your main branch with the remote repo's main branch. There are many different ways you could do this, but I tend to use the <code>rebase</code> command, like this:</p>
+    <p>次に、自分のメインブランチの内容を、リモートリポジトリのメインブランチに置き換えます。いろいろな方法がありますが、私は <code>rebase</code> コマンドをよく使います。</p>
 
     <pre class="brush: bash">git rebase <em>remote-name</em>/<em>main-branch-name</em></pre>
 
-    <p>So for example:<p>
+    <p>例えば次のようになります。<p>
 
     <pre class="brush: bash">git rebase mozilla/main</pre>
   </li>
   <li>
-    <p>Finally, push those changes up to the remote version of your fork using:</p>
+    <p>最後に、次のようにして自分のフォークのリモートバージョンに変更をプッシュします。</p>
 
     <pre class="brush: bash">git push</pre>
   </li>
