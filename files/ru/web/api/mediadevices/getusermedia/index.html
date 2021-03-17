@@ -240,7 +240,7 @@ navigator.mediaDevices.getUserMedia(constraints)
 <p>Ниже, находятся примеры, использующие <code>navigator.mediaDevices.getUserMedia()</code>, с полифилами для работы в старых браузерах. Обратите внимание, что эти полифилы не корректируют все различия в синтаксисе, и не работают во всех браузерах. Рекомендуется использовать библиотеку  <a href="https://github.com/webrtc/adapter">adapter.js</a> , как производственный полифил.</p>
 
 <pre class="brush: js notranslate">// Старые браузеры могут не реализовывать свойство mediaDevices,
-//поэтому вначале присваеваем свойству ссылку на пустой объект
+// поэтому сначала присваиваем свойству ссылку на пустой объект
 
 if (navigator.mediaDevices === undefined) {
   navigator.mediaDevices = {};

@@ -76,7 +76,7 @@ self.addEventListener('activate', function(event) {
     return CURRENT_CACHES[key];
   });
 
-  // Автивный воркер не будет рассматриваться как активированный, пока promise не разрешится успешно.
+  // Активный воркер не будет рассматриваться как активированный, пока promise не разрешится успешно.
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
