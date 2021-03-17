@@ -1,0 +1,138 @@
+---
+title: PerformanceEntry.entryType
+slug: Web/API/PerformanceEntry/entryType
+tags:
+  - API
+  - Performance Timeline API
+  - PerformanceEntry
+  - Property
+  - Propriété
+  - Reference
+  - Performance Web
+translation_of: Web/API/PerformanceEntry/entryType
+---
+<div>{{APIRef("Performance Timeline API")}}</div>
+
+<p class="summary">La propriété <strong><code>entryType</code></strong> renvoie un {{domxref("DOMString")}} représentant le type de mesure de performance tel que, par exemple, « <code>mark</code> ». Cette propriété est en lecture seule.</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Syntax">Syntaxe</h2>
+
+<pre class="brush:js">var <var>type</var> = <var>entry</var>.entryType;</pre>
+
+<h3 id="Return_Value">Valeur de retour</h3>
+
+<p>La valeur de retour dépend du sous-type de l'objet <code>PerformanceEntry</code> et affecte la valeur de la propriété {{domxref('PerformanceEntry.name')}} comme le montre le tableau ci-dessous.</p>
+
+<h3 id="Performance_entry_type_names">Noms des types d'entrée de performance</h3>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Valeur</th>
+      <th scope="col">Sous-type</th>
+      <th scope="col">Type de propriété de nom</th>
+      <th scope="col">Description de la propriété de nom.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>element</code></td>
+      <td>{{domxref('PerformanceElementTiming')}}</td>
+      <td>{{domxref("DOMString")}}</td>
+      <td>Rapporte le temps de chargement des éléments.</td>
+    </tr>
+    <tr>
+      <td><code>frame</code>, <code>navigation</code></td>
+      <td>{{domxref('PerformanceFrameTiming')}},
+        {{domxref('PerformanceNavigationTiming')}}</td>
+      <td>{{domxref("URL")}}</td>
+      <td>L'adresse du document.</td>
+    </tr>
+    <tr>
+      <td><code>resource</code></td>
+      <td>{{domxref('PerformanceResourceTiming')}}</td>
+      <td>{{domxref("URL")}}</td>
+      <td>L'URL résolue de la ressource demandée. Cette valeur ne change pas même si la demande est redirigée.</td>
+    </tr>
+    <tr>
+      <td><code>mark</code></td>
+      <td>{{domxref('PerformanceMark')}}</td>
+      <td>{{domxref("DOMString")}}</td>
+      <td>Le nom utilisé lorsque la marque a été créée en appelant {{domxref("Performance.mark", "mark()")}}.</td>
+    </tr>
+    <tr>
+      <td><code>measure</code></td>
+      <td>{{domxref('PerformanceMeasure')}}</td>
+      <td>{{domxref("DOMString")}}</td>
+      <td>Le nom utilisé lorsque la mesure a été créée en appelant {{domxref("Performance.measure", "measure()")}}.</td>
+    </tr>
+    <tr>
+      <td><code>paint</code></td>
+      <td>{{domxref('PerformancePaintTiming')}}</td>
+      <td>{{domxref("DOMString")}}</td>
+      <td>Soit <code>'first-paint'</code> ou <code>'first-contentful-paint'</code>.</td>
+    </tr>
+    <tr>
+      <td><code>longtask</code></td>
+      <td>{{domxref('PerformanceLongTaskTiming')}}</td>
+      <td>{{domxref("DOMString")}}</td>
+      <td>Signale les cas de tâches longues.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Example">Exemple</h2>
+
+<p>L'exemple suivant montre l'utilisation de la propriété <code>entryType</code>.</p>
+
+<pre class="brush: js">function run_PerformanceEntry() {
+
+  // Vérifie le support des fonctionnalités avant de continuer
+  if (performance.mark === undefined) {
+    console.log("performance.mark n'est pas pris en charge");
+    return;
+  }
+
+  // Crée une entrée de performance nommée "begin" via la méthode mark()
+  performance.mark("begin");
+
+  // Vérifie le type d'entrée de toutes les entrées "begin".
+  let <var>entriesNamedBegin</var> = performance.getEntriesByName("begin");
+  for (let <var>i</var>=0; i &lt; entriesNamedBegin.length; i++) {
+    let <var>typeOfEntry</var> = entriesNamedBegin[i].entryType;
+    console.log("L'entrée est de type : " + typeOfEntry);
+  }
+}
+</pre>
+
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry-entrytype',
+        'entryType')}}</td>
+      <td>{{Spec2('Performance Timeline Level 2')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Performance Timeline', '#dom-performanceentry-entrytype',
+        'entryType')}}</td>
+      <td>{{Spec2('Performance Timeline')}}</td>
+      <td>Définition initiale.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.PerformanceEntry.entryType")}}</p>

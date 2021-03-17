@@ -1,0 +1,147 @@
+---
+title: PerformanceEntry
+slug: Web/API/PerformanceEntry
+tags:
+  - API
+  - Interface
+  - Performance Timeline API
+  - PerformanceEntry
+  - Reference
+  - Performance Web
+translation_of: Web/API/PerformanceEntry
+---
+<div>{{APIRef("Performance Timeline API")}}</div>
+
+<p class="summary">L'objet <strong><code>PerformanceEntry</code></strong> encapsule une seule mesure de performance qui fait partie de la <em>chronologie de performance</em>. Une <em>entrée de performance</em> peut être créée directement en faisant <em>{{domxref("PerformanceMark", "mark")}}</em> ou <em>{{domxref("PerformanceMeasure", "measure")}}</em> (par exemple en appelant la méthode {{domxref("Performance.mark", "mark()")}}) à un point explicite d'une application. Les entrées de performance sont également créées de manière indirecte, par exemple en chargeant une ressource (telle qu'une image).</p>
+
+<p>Les instances <code>PerformanceEntry</code> seront toujours l'un des sous-types suivants :</p>
+
+<ul>
+  <li>{{domxref("PerformanceMark")}}</li>
+  <li>{{domxref("PerformanceMeasure")}}</li>
+  <li>{{domxref("PerformanceFrameTiming")}}</li>
+  <li>{{domxref("PerformanceNavigationTiming")}}</li>
+  <li>{{domxref("PerformanceResourceTiming")}}</li>
+  <li>{{domxref("PerformancePaintTiming")}}</li>
+</ul>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Properties">Propriétés</h2>
+
+<dl>
+  <dt>{{domxref("PerformanceEntry.name")}} {{readonlyInline}}</dt>
+  <dd>Une valeur qui précise davantage la valeur renvoyée par la propriété {{domxref("PerformanceEntry.entryType")}}. La valeur des deux dépend du sous-type. Voir la page de la propriété pour les valeurs valides.</dd>
+  <dt>{{domxref("PerformanceEntry.entryType")}} {{readonlyInline}}</dt>
+  <dd>Une chaîne de caractère {{domxref("DOMString")}} représentant le type de mesure de performance comme, par exemple, "<code>mark</code>". Voir la page des propriétés pour les valeurs valides.</dd>
+  <dt>{{domxref("PerformanceEntry.startTime")}} {{readonlyInline}}</dt>
+  <dd>Un objet {{domxref("DOMHighResTimeStamp")}} représentant l'heure de départ de la mesure de performance.</dd>
+  <dt>{{domxref("PerformanceEntry.duration")}} {{readonlyInline}}</dt>
+  <dd>Un objet {{domxref("DOMHighResTimeStamp")}} représentant la valeur temporelle de la durée de l'événement de performance.</dd>
+</dl>
+
+<h2 id="Methods">Méthodes</h2>
+
+<dl>
+  <dt>{{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}</dt>
+  <dd>Renvoie une représentation JSON de l'objet <code>PerformanceEntry</code>.</dd>
+</dl>
+
+<h2 id="Example">Exemple</h2>
+
+<p>L'exemple suivant vérifie toutes les propriétés <code>PerformanceEntry</code> pour voir si le navigateur les prend en charge et, le cas échéant, écrit leurs valeurs dans la console.</p>
+
+<pre class="brush:js">function print_PerformanceEntries() {
+  // Utilise getEntries() pour obtenir une liste de toutes les entrées de performance.
+  let <var>p</var> = performance.getEntries();
+  for (let <var>i</var>=0; i &lt; p.length; i++) {
+    console.log("PerformanceEntry[" + i + "]");
+    print_PerformanceEntry(p[i]);
+  }
+}
+function print_PerformanceEntry(<var>perfEntry</var>) {
+  let <var>properties</var> = ["name",
+                    "entryType",
+                    "startTime",
+                    "duration"];
+
+  for (let <var>i</var>=0; i &lt; properties.length; i++) {
+    // Check each property
+    let <var>supported</var> = properties[i] in perfEntry;
+    if (supported) {
+      let <var>value</var> = perfEntry[properties[i]];
+      console.log("... " + properties[i] + " = " + value);
+    } else {
+      console.log("... " + properties[i] + " n'est PAS pris en charge");
+    }
+  }
+}
+</pre>
+
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Resource Timing 3')}}</td>
+      <td>{{Spec2('Resource Timing 3')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Resource Timing 2')}}</td>
+      <td>{{Spec2('Resource Timing 2')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Resource Timing')}}</td>
+      <td>{{Spec2('Resource Timing')}}</td>
+      <td>Ajoute l'interface {{domxref("PerformanceResourceTiming")}} et la valeur <code>resource</code> pour <code>entryType</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Navigation Timing Level 2')}}</td>
+      <td>{{Spec2('Navigation Timing Level 2')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Navigation Timing')}}</td>
+      <td>{{Spec2('Navigation Timing')}}</td>
+      <td>Ajoute l'interface {{domxref("PerformanceNavigationTiming")}} et la valeur <code>navigation</code> pour <code>entryType</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('User Timing Level 2')}}</td>
+      <td>{{Spec2('User Timing Level 2')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('User Timing')}}</td>
+      <td>{{Spec2('User Timing')}}</td>
+      <td>Ajoute les interfaces {{domxref("PerformanceMark")}} et {{domxref("PerformanceMeasure")}} ainsi que les valeurs <code>mark</code> et <code>measure</code> pour <code>entryType</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Frame Timing')}}</td>
+      <td>{{Spec2('Frame Timing')}}</td>
+      <td>Ajoute l'interface {{domxref('PerformanceFrameTiming')}} et la valeur <code>frame</code> pour <code>entryType</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceentry', 'PerformanceEntry')}}</td>
+      <td>{{Spec2('Performance Timeline Level 2')}}</td>
+      <td>Ajout de la méthode de sérialisation <code>toJSON()</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Performance Timeline', '#dom-performanceentry', 'PerformanceEntry')}}</td>
+      <td>{{Spec2('Performance Timeline')}}</td>
+      <td>Définition initiale.</td>
+    </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.PerformanceEntry")}}</p>
