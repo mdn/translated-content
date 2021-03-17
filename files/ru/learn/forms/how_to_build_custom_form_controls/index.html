@@ -639,7 +639,7 @@ window.addEventListener('load', function () {
     // Убеждаемся, что выбранное по умолчанию значение корректно отображено
     updateValue(select, selectedIndex);
 
-    // Каждый раз когда пользователь кликает на вариант, мы соответственно обновляем значение
+    // Каждый раз, когда пользователь кликает на вариант, мы соответственно обновляем значение
     optionList.forEach(function (option, index) {
       option.addEventListener('click', function (event) {
         updateValue(select, index);
