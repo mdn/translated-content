@@ -9,7 +9,8 @@ tags:
 ---
 <div>{{APIRef}}</div>
 
-<p>Событие <code><strong>webglcontextlost</strong></code> является частью <a href="/ru/docs/Web/API/WebGL_API">WebGL API</a>. Оно происходит когда {{Glossary("User agent")}} обнаруживает, что буфер, связанный с {{domxref("WebGLRenderingContext")}}, потерян.</p>
+<p>Событие <code><strong>webglcontextlost</strong></code> <a href="/ru/docs/Web/API/WebGL_API">WebGL API</a> вызывается когда {{Glossary("User agent")}}
+    обнаруживает, что буфер, связанный с {{domxref("WebGLRenderingContext")}}, потерян.</p>
 
 <table class="properties">
     <tbody>
@@ -34,7 +35,7 @@ tags:
 
 <h2 id="Example">Пример</h2>
 
-<p>Вы можете симулировать <code>webglcontextlost</code> событие с помощью расширения {{domxref("WEBGL_lose_context")}}:</p>
+<p>Вы можете эмулировать <code>webglcontextlost</code> событие с помощью расширения {{domxref("WEBGL_lose_context")}}:</p>
 
 <pre class="brush: js">const canvas = document.getElementById('canvas');
 const gl = canvas.getContext('webgl');
