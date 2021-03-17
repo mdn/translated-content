@@ -76,7 +76,7 @@ arr1.reduce((acc, val) =&gt; acc.concat(val), []);// [1, 2, 3, 4]
 const flatSingle = arr =&gt; [].concat(...arr);
 </pre>
 
-<pre class="brush: js notranslate">// Для развёртвания многомерных массивов используем рекурсию, reduce и concat
+<pre class="brush: js notranslate">// Для развертывания многомерных массивов используем рекурсию, reduce и concat
 const arr = [1, 2, [3, 4, [5, 6]]];
 
 function flatDeep(arr, d = 1) {

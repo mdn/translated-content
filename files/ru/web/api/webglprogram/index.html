@@ -32,7 +32,7 @@ if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
 <pre class="brush: js">// Использование программы
 gl.useProgram(program);
 
-// Связывание существующих аттрибутов данных
+// Связывание существующих атрибутов данных
 gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 gl.enableVertexAttribArray(attributeLocation);
 gl.vertexAttribPointer(attributeLocation, 3, gl.FLOAT, false, 0, 0);

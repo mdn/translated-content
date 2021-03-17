@@ -52,7 +52,7 @@ arr; // [1, 2, 3, , 5]
 // Возвращает true даже если такого свойства не существует
 Reflect.deleteProperty({}, 'foo'); // true
 
-// Возвращает false если такое свойство ненастраивоемое
+// Возвращает false если такое свойство ненастраиваемое
 Reflect.deleteProperty(Object.freeze({foo: 1}), 'foo'); // false
 </pre>
 
