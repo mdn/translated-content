@@ -108,10 +108,11 @@ translation_of: MDN/Contribute/GitHub_beginners
     <p><img src="code-popup.png" alt="クローン URL と共に open with github desktop や download zip などの選択肢を表示しているポップアップウィンドウ"></p>
   </li>
   <li>
-    <p>上で説明したように、 SSH 認証を設定した場合は "SSH" タブをクリックし、ボックス内のテキストフィールドから <code>git@github.com:<em>&lt;your-user-name&gt;</em>/content.git</code> の URL をコピーしてください。 SSH 認証を設定していない場合は、代わりに "HTTPS" タブのテキストフィールドから <code>https://github.com/<em>&lt;your-user-name&gt;</em>/content.git</code> のような URL をコピーしてください。</p>
+    <p>上で説明したように SSH 認証を設定した場合は、 "SSH" タブをクリックし、ボックス内のテキストフィールドから <code>git@github.com:<em>&lt;your-user-name&gt;</em>/content.git</code> の URL をコピーします。SSH 認証を設定していない場合は、代わりに "HTTPS" タブのテキストフィールドから <code>https://github.com/<em>&lt;your-user-name&gt;</em>/content.git</code> のような URL をコピーします。</p>
+
   </li>
   <li>
-    <p>そして自分のコンピューターでコマンドラインを開き、 cd コマンドで先ほど git リポジトリのローカルのクローンを保存するために設定したディレクトリに移動します。</p>
+    <p>コンピュータでコマンドラインを開き、次のようにして先ほど cd コマンドでローカルの git リポジトリのクローンを保存するために設定したディレクトリに移動します。</p>
 
     <pre class="brush: bash">cd git</pre>
   </li>
@@ -137,18 +138,18 @@ translation_of: MDN/Contribute/GitHub_beginners
 <pre class="brush: bash">git remote add <em>remote-name</em> <em>repo-you-want-to-point-to</em></pre>
 
 <ul>
-  <li><em>remote-name</em> は、自分で決めた名前で、後にリモートを参照するために使用されます。同じ目的を持つ異なるリポジトリ間では、一貫したリモート名にこだわるのと良いでしょう。同じリモート名であれば、どこでも同じことができ、混乱することも少なくなります。例えば、自分のバージョンをフォークしたリポジトリのメインバージョンは「upstream (上流) リポジトリ」と呼ばれることが多く、そのためよく "upstream" がリモートの上流の場所を表す名前として使われます。私は通常、上流のリモートを "mozilla" と呼んでいますが、これは Mozilla のメインのリポジトリを指していることを示すためです。</li>
-  <li><em>repo-you-want-to-point-to</em> は、指す先の SSH (またはHTTPS) の URL で、先ほどフォークのクローンを作ったときと同じ方法で取得します。</li>
+  <li><em>remote-name</em> は自分で決めた名前で、後でリモートを参照するときに使われます。同じ目的を持つ異なるリポジトリ間では、一貫したリモート名に統一すると良いでしょう。同じリモート名であれば、どこでも同じことができるので、混乱することが少なくなります。例えば、あなたが自分のバージョンをフォークしたリポジトリのメインバージョンは「upstream (上流) のリポジトリ」と呼ばれることが多く、そのためリモートの上流の場所の名前として "upstream" がよく使われます。私は通常、上流のリモートを "mozilla" と呼んでいますが、これはMozillaのメインのリポジトリを指していることを示すためです。</li>
+  <li><em>repo-you-want-to-point-to</em> は、指定したいリポジトリの SSH (または HTTPS) の URL で、先ほどフォークのクローンを作ったときと同じ方法で取得します。</li>
 </ul>
 
-<p>したがって、リモートを追加するには以下のようにします。</p>
+<p>ですから、リモートを追加するには次ようにします。</p>
 
 <ol>
   <li>
-    <p>github.com のリポジトリのメインバージョンのページへ行き (この例では <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> とします)、必要に応じて "Code" ポップアップから SSH または HTTPS の URL を取得します。</p>
+    <p>リポジトリのメインバージョン (この例では <a href="https://github.com/mdn/content">https://github.com/mdn/content</a>) の github.com ページにアクセスし、 "Code" ポップアップから必要に応じて SSH または HTTPS の URL を取得します。</p>
   </li>
   <li>
-    <p>コマンドラインから、 <code>cd</code> で自分の content ディレクトリに移動します。</p>
+    <p>コマンドラインで、 <code>cd</code> で自分の content ディレクトリに移動してください。</p>
 
     <pre class="brush: bash">cd content</pre>
   </li>
@@ -172,37 +173,37 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
 
 <h2 id="preparing_to_make_a_change_to_the_repo">リポジトリに変更を加えるための準備</h2>
 
-<p>これで、ローカルのフォーククローンで作業できるようになりましたが、新しい変更を行う前に実行しておくべき一連のコマンドがあります。</p>
+<p>これで、フォークのローカルのクローンで作業できるようになりましたが、新しい変更を行う前に実行しておくべき一連のコマンドがあります。</p>
 
-<h3 id="switch_to_the_main_branch">メインブランチへの切り替え</h3>
+<h3 id="switch_to_the_main_branch">メインブランチへ切り替える</h3>
 
-<p>それぞれのリポジトリにはいくつかの異なるブランチがあり、これは基本的に同じリポジトリの中にあるコードベースの異なるバージョンです。つまり、コードベースに変更を加えるたびに、別のブランチで変更を加え、まずそこでテストしてから、コードのメインコピーに変更を反映させるという考え方です。</p>
+<p>それぞれのリポジトリにはいくつかのブランチがあり、基本的には同じリポジトリの中にあるコードベースの異なるバージョンを指します。つまり、コードベースに変更を加えるたびに、別のブランチで変更を加え、まずそこでテストしてから、コードのメインコピーに変更を反映させるという考え方です。</p>
 
-<p>コンテンツリポジトリのメインブランチは "main" と呼ばれています (他のリポジトリでは "master" などと呼ばれているかもしれません。その場合は、以下に示すすべてのコマンドでその名前を読み替える必要があります)。リポジトリをクローンしたばかりのときは既定ででこのブランチにいることになりますが、すでに作業を終えている場合は別のブランチにいるかもしれません。
+<p>コンテンツリポジトリのメインブランチは "main" と呼ばれています (他のリポジトリでは "master" などと呼ばれているかもしれません。その場合は、以下に示すすべてのコマンドについて、その名前で読み替える必要があります)。リポジトリをクローンしたばかりのときは既定でこのブランチにいることになりますが、すでに作業を終えている場合は別のブランチにいることになるでしょう。
 
-何か作業をする前に、次のコマンドを実行してメインブランチに切り替えるようにしましょう。
+何かをする前に、以下のように実行してメインブランチに切り替えるようにしてください。
 
 <pre class="brush: bash">git switch main</pre>
 
 <div class="notecard note">
   <h4>注</h4>
 
-  <p>他のチュートリアルでは、リポジトリのブランチを変更するために <code>git checkout</code> を使っているのを見たことがあるかもしれません。このチュートリアルでは、より新しい <code>git switch</code> コマンドをお勧めします。これは純粋にブランチを変更するために設計されたもので、失敗する可能性が低いからです。これらのコマンドの関連性や違いに興味がある方は、 <a href="https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout">Highlights from Git 2.23 > Experimental alternatives for git checkout</a> が良くまとまっています。</p>
+  <p>他のチュートリアルでは、リポジトリのブランチを変更するために <code>git checkout</code> を使っているのを見たことがあるかもしれません。このチュートリアルでは、より新しいコマンドである <code>git switch</code> をお勧めします。これは純粋にブランチを変更するために設計されたもので、失敗する可能性が低いからです。これらのコマンドの関連性や違いに興味がある方は、 <a href="https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout">Highlights from Git 2.23 > Experimental alternatives for git checkout</a> が良くまとまっています。</p>
 </div>
 
-<h3 id="update_your_main_branch">自分のメインブランチの更新</h3>
+<h3 id="update_your_main_branch">自分のメインブランチを更新する</h3>
 
-<p>次は、メインブランチを更新して、メインリポジトリのメインブランチと同じコンテンツになるようにします。 content リポジトリは数多くの貢献者によって毎日何度も更新されているので、これをやらないとバージョンが古くなってしまい、更新を投稿する際に問題が発生します。ここで、リモートが役に立つのです。</p>
+<p>次は、メインブランチを更新して、メインリポジトリのメインブランチと同じコンテンツになるようにします。コンテンツリポジトリは多くの貢献者によって毎日何度も更新されているので、これをしないとバージョンが古くなってしまい、更新を送る際に問題が発生します。ここで、リモートが役に立つのです。</p>
 
 <p>リポジトリを更新するには次のようにします。</p>
 
 <ol>
   <li>
-    <p>まず、以下のコマンドで、リモートの更新されたコンテンツを取得します。</p>
+    <p>まず、次のコマンドで、リモートの更新されたコンテンツを取得します。</p>
 
     <pre class="brush: bash">git fetch <em>remote-name</em></pre>
 
-    <p>例えば次のようになります。</p>
+    <p>例えば、次のようにします。</p>
 
     <pre class="brush: bash">git fetch mozilla</pre>
   </li>
@@ -222,13 +223,13 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
   </li>
 </ol>
 
-<p>You'll know if your updates worked properly by looking at the github.com page for your fork (i.e. mine is <a href="https://github.com/chrisdavidmills/content">https://github.com/chrisdavidmills/content</a>). It should say something like "This branch is even with mdn:main." somewhere near the top. If it says your main branch is behind mdn:main by a number of commits, then you'll need to try it again, or <a href="#troubleshooting">troubleshoot</a>.</p>
+<p>アップデートが正しく行われたかどうかは、 github.com で自分のフォークのページを見ればわかります (例えば、私の場合は <a href="https://github.com/chrisdavidmills/content">https://github.com/chrisdavidmills/content</a>)。上部に "This branch is even with mdn:main." のような記述があるはずです。もし自分のメインブランチが mdn:main よりも多くのコミット数で遅れていると表示されている場合は、もう一度試してみるか、<a href="#troubleshooting">トラブルシューティング</a>を行う必要があります。</p>
 
-<h3 id="create_a_new_branch_to_do_your_work_in">Create a new branch to do your work in</h3>
+<h3 id="create_a_new_branch_to_do_your_work_in">作業用の新しいブランチを作る</h3>
 
-<p>Once you've got your main branch up to date in your fork, you must always create a new branch to make a change in. You should <em>never</em> do your work in the main branch and submit it from there — it can get messy very quickly, trust us. It is a lot cleaner and less error-prone to do all work in separate branches.</p>
+<p>フォークでメインブランチを最新の状態にした後は、必ず新しいブランチを作成して変更を加えるひつようがあります。メインブランチで作業を行い、そこから投稿するということは絶対にしないでください。すべての作業を別々のブランチで行ったほうが、はるかにすっきりしていて、ミスも起こりにくいのです。</p>
 
-<p>To create a new branch:</p>
+<p>新しいブランチを作るには次のようにします。</p>
 
 <ol>
   <li>
