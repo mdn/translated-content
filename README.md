@@ -16,10 +16,11 @@ of active locales is:
 
 - `fr`
 - `ja`
+- `ru`
 - `zh` (`zh-CN` and `zh-TW`)
 
 If you want to just find a task and jump in, search by the labels `l10n-fr`,
-`l10n-ja`, and `l10n-zh` in this repo’s [issues list](https://github.com/mdn/translated-content/issues),
+`l10n-ja`, `l10n-ru`, and `l10n-zh` in this repo’s [issues list](https://github.com/mdn/translated-content/issues),
 or the main [content repo issues](https://github.com/mdn/content/issues)
 
 ## Code of Conduct
@@ -100,6 +101,11 @@ then:
 1. When you are satisfied with your changes, create a pull request and one of
    our review teams will review it.
 
+1. Once the pull request has been merged, the edition may take up to 48 hours
+   (daily build and CDN caches). To see if your change has been deployed,
+   you can check on
+   [What's Deployed](https://whatsdeployed.io/s/16d/mdn/translated-content).
+
 ### For more info on editing this repo
 
 For more information, we’d like to suggest that you go to the [content repo](https://github.com/mdn/content)
@@ -116,7 +122,7 @@ and common actions such as [adding](https://github.com/mdn/content#adding-a-new-
 It is the responsibility of the active community maintenance team for each
 active locale to keep up-to-date with reviews of pull requests and handling
 issues filed against that locale. You can filter the relevant pull requests and
-issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`,
+issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`, `l10n-ru`,
 and `l10n-zh`.
 
 The review teams for each locale are:
@@ -135,6 +141,14 @@ The review teams for each locale are:
   - [@dynamis](https://github.com/dynamis)
   - [@kenji-yamasaki](https://github.com/kenji-yamasaki)
   - [@mfuji09](https://github.com/mfuji09)
+- Russian (`ru`) content — the [@yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru)
+  team, which consists of:
+  - [@armanpwnz](https://github.com/armanpwnz)
+  - [@captainspring](https://github.com/captainspring)
+  - [@mpstv](https://github.com/mpstv)
+  - [@myshov](https://github.com/myshov)
+  - [@Saionaro](https://github.com/Saionaro)
+  - [@lex111](https://github.com/lex111)
 - Chinese (`zh-CN` and `zh-TW`) content — the [@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
   team, which consists of:
   - [@t7yang](https://github.com/t7yang)

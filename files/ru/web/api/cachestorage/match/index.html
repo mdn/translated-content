@@ -17,7 +17,7 @@ translation_of: Web/API/CacheStorage/match
 
 <p>Объекты Cache проверяются в порядке создания.</p>
 
-<div class="note"><strong>Note</strong>: {{domxref("CacheStorage.match()", "caches.match()")}} это метод для удобства в работе. Такая функциональность достигается вызовом {{domxref("cache.match()")}} для каждого объекта cache (в порядке полученом запросом {{domxref("CacheStorage.keys()", "caches.keys()")}}) пока {{domxref("Response")}} не будет найден.</div>
+<div class="note"><strong>Note</strong>: {{domxref("CacheStorage.match()", "caches.match()")}} это метод для удобства в работе. Такая функциональность достигается вызовом {{domxref("cache.match()")}} для каждого объекта cache (в порядке полученном запросом {{domxref("CacheStorage.keys()", "caches.keys()")}}) пока {{domxref("Response")}} не будет найден.</div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -44,7 +44,7 @@ translation_of: Web/API/CacheStorage/match
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Метод возвращает {{jsxref("Promise")}} который разрешается совпавшим {{domxref("Response")}}. Если ни одного совпадени не было найдено, promise разрешается с <code>undefined</code>.</p>
+<p>Метод возвращает {{jsxref("Promise")}} который разрешается совпавшим {{domxref("Response")}}. Если ни одного совпадений не было найдено, promise разрешается с <code>undefined</code>.</p>
 
 <h2 id="Примеры" style="line-height: 30px; font-size: 2.14285714285714rem;">Примеры</h2>
 

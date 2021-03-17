@@ -91,7 +91,7 @@ p1.then(function(value) {
 });
 </pre>
 
-<h3 id="Ловим_выброшеные_исключения">Ловим выброшеные исключения</h3>
+<h3 id="Ловим_выброшенные_исключения">Ловим выброшенные исключения</h3>
 
 <pre class="brush: js">// Выкидываемая ошибка вызовет метод catch
 var p1 = new Promise(function(resolve, reject) {
@@ -102,7 +102,7 @@ p1.catch(function(e) {
   console.log(e); // "Uh-oh!"
 });
 
-// Ошибки выброшеные из асинхронных функций не будут пойманы методом catch
+// Ошибки выброшенные из асинхронных функций не будут пойманы методом catch
 var p2 = new Promise(function(resolve, reject) {
   setTimeout(function() {
     throw 'Uncaught Exception!';
@@ -113,7 +113,7 @@ p2.catch(function(e) {
   console.log(e); // Никогда не вызовется
 });
 
-// Ошибки выброшеные после выполнения обещания будут проигнорированны
+// Ошибки выброшенные после выполнения обещания будут проигнорированны
 var p3 = new Promise(function(resolve, reject) {
   resolve();
   throw 'Silenced Exception!';

@@ -38,7 +38,7 @@ original_slug: Building_an_Extension
              content\
 </pre>
 <p><span class="comment">&lt;pre&gt; #!/bin/sh h=$HOME/moExt mkdir -p $h/my_extension/chrome/content touch $h/my_extension/chrome.manifest $h/my_extension/install.rdf &lt;/pre&gt;</span> Более подробную информацию по настройке окружения читайте в статье <a href="/en/Setting_up_extension_development_environment" title="en/Setting_up_extension_development_environment">Setting up extension development environment</a>.</p>
-<h2 id="Create_the_Install_Manifest" name="Create_the_Install_Manifest">Создание файла инсталяции</h2>
+<h2 id="Create_the_Install_Manifest" name="Create_the_Install_Manifest">Создание файла инсталляции</h2>
 <p>Откройте файл <code><a href="/en/Install_Manifests" title="en/Install_Manifests">install.rdf</a></code> который Вы создали на предыдущем этапе и вставьте эти строки:</p>
 <pre class="eval">&lt;?xml version="1.0"?&gt;
 
@@ -74,7 +74,7 @@ original_slug: Building_an_Extension
  <li>Определение <code>&lt;em:type&gt;2&lt;/em:type&gt;</code> -- объявляет, что устанавливается именно расширение. Если бы Вы устанавливали тему, то это было бы 4 ( <a href="/en/Install_Manifests#type" title="en/Install_Manifests#type">Install Manifests#type</a> for other type codes).</li>
  <li><strong>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</strong> - Идентификатор приложения Firefox.</li>
  <li><strong>1.5</strong> - минимальная версия Firefox, с которой будет работать Ваше Расширение. Укажите здесь минимальную версию, для которой будет выполняться все необходимые тесты.</li>
- <li><strong>3.0.*</strong> - - максимальня версия Firefox, с которой будет работать Ваше Расширение. Укажите здесь, самую свежую, доступную в данный момент версию. В этом случае, "3.0.*" указывает на то, что расширение работает с Firefox 3.0 и любыми последующими 3.0.x версиями.</li>
+ <li><strong>3.0.*</strong> - - максимальная версия Firefox, с которой будет работать Ваше Расширение. Укажите здесь, самую свежую, доступную в данный момент версию. В этом случае, "3.0.*" указывает на то, что расширение работает с Firefox 3.0 и любыми последующими 3.0.x версиями.</li>
 </ul>
 <p>(В Firefox версии 3.0.1, вы не сможете установить для em:minVersion и em:maxVersion значение "<strong>3.0.*</strong>". Если Вы попытаетесь установить Расширение, то получите ошибку "Not compatible with Firefox 3.0.1". Мне не ясны причины этого, так что я оставлю объяснение тому, кто имеет больше информации по этому поводу. Установка em:minVersion равным "<strong>3</strong>" и em:maxVersion равным "<strong>3.0.*</strong>" решило проблему для меня.)</p>
 <p>Расширения разработанные для работы только с последними версиями Firefox 2.0.0.x, должны иметь установленным максимальную версию в "2.0.0. *". Расширения, разработанные для работы с только с последними версиями Firefox 1.5.0.x, должны иметь установленным максимальную версию "1.5.0. *".</p>
@@ -190,7 +190,7 @@ pref("extensions.sample.showAdvanced", true); //булево
 <h2 id="XPCOM_Components" name="XPCOM_Components">XPCOM Components</h2>
 <p>Firefox поддерживает <a href="/en/XPCOM" title="en/XPCOM">XPCOM</a> компоненты в расширениях. Вы можете легко создавать свои собственные компоненты на JavaScript или C + + (с использованием <a href="/en/Gecko_SDK" title="en/Gecko_SDK">Gecko SDK</a>).</p>
 <p>Поместите все ваши. JS или. DLL файлы каталог <code>components/</code> - после установки расширения , они автоматически будут зарегистрированы при первом запуске Firefox.</p>
-<p>Для получения дополнительной информации см. <a href="/en/How_to_Build_an_XPCOM_Component_in_Javascript" title="en/How_to_Build_an_XPCOM_Component_in_Javascript">Как создать XPCOM компонент на JavaScript</a>, <a href="/en/How_to_build_a_binary_XPCOM_component_using_Visual_Studio" title="en/How_to_build_a_binary_XPCOM_component_using_Visual_Studio">Как создать XPCOM компонент с использованием Visual Studio</a> и <a href="/en/Creating_XPCOM_Components" title="en/Creating_XPCOM_Components">Cкниги по созданию XPCOM Компонентов</a>.</p>
+<p>Для получения дополнительной информации см. <a href="/en/How_to_Build_an_XPCOM_Component_in_Javascript" title="en/How_to_Build_an_XPCOM_Component_in_Javascript">Как создать XPCOM компонент на JavaScript</a>, <a href="/en/How_to_build_a_binary_XPCOM_component_using_Visual_Studio" title="en/How_to_build_a_binary_XPCOM_component_using_Visual_Studio">Как создать XPCOM компонент с использованием Visual Studio</a> и <a href="/en/Creating_XPCOM_Components" title="en/Creating_XPCOM_Components">Книги по созданию XPCOM Компонентов</a>.</p>
 <h5 id="Application_Command_Line" name="Application_Command_Line">Командная строка приложения</h5>
 <p>Один из возможных вариантов использования пользовательских XPCOM компонентов добавить в командную строку указатель для Firefox или Thunderbird. Вы можете использовать этот метод для запуска ваших расширений, как приложений:</p>
 <pre class="eval"> firefox.exe -myapp

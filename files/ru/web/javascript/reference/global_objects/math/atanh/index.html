@@ -48,7 +48,7 @@ Math.atanh(2);   // NaN
 
 <p>Для значений, меньших -1 или больших 1, метод <code>Math.atanh()</code> возвращает {{jsxref("NaN")}}.</p>
 
-<h2 id="Polyfill" name="Polyfill">Полифилл</h2>
+<h2 id="Polyfill" name="Polyfill">Полифил</h2>
 
 <p>Для <math><semantics><mrow><mrow><mo>|</mo><mi>x</mi><mo>|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="TeX">\left|x\right| &lt; 1</annotation></semantics></math>, мы имеем <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">artanh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {artanh} (x) = \frac{1}{2}\ln \left( \frac{1 + x}{1 - x} \right)</annotation></semantics></math>, так что этот метод может эмулироваться следующим образом:</p>
 

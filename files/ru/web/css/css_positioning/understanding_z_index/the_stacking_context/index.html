@@ -26,7 +26,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_conte
  <li>элементы с {{cssxref("isolation")}} установленным в  "isolate",</li>
  <li><code>position: fixed</code></li>
  <li>если мы указываем элементу атрибут  <code>{{cssxref("will-change")}}</code> при этом не обязательно присваивать ему значения (См. <a href="http://dev.opera.com/articles/css-will-change-property/">this post</a>)</li>
- <li>элементы с {{cssxref("-webkit-overflow-scrolling")}} установленым в "touch"</li>
+ <li>элементы с {{cssxref("-webkit-overflow-scrolling")}} установленным в "touch"</li>
 </ul>
 
 <p>Внутри контекста наложения дочерние элементы расположены в соответствии с правилами, описанными ранее. Важно заметить, что значения свойства z-index для дочерних элементов формирующих контекст наложения, будут учитываться только в рамках родительского элемента. Контекст наложения обрабатываются атомарно, как единое целое в контексте наложения родителя.</p>
@@ -69,7 +69,7 @@ translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_conte
 <p><strong>Notes:</strong></p>
 
 <ul>
- <li>DIV #4 отрисовывается под DIV #1, потому что z-index (5) DIV #1 действителен внутри контекта наложения корневого элемента, в то время как z-index (6) DIV #4 действителен внутри контекста наложения DIV #3. Поэтому,  DIV #4 находиться ниже DIV #1, потому что DIV #4 принадлежит DIV #3, который в свою очередь имеет меньший z-index(по сравнению с .DIV #1).</li>
+ <li>DIV #4 отрисовывается под DIV #1, потому что z-index (5) DIV #1 действителен внутри контакта наложения корневого элемента, в то время как z-index (6) DIV #4 действителен внутри контекста наложения DIV #3. Поэтому,  DIV #4 находиться ниже DIV #1, потому что DIV #4 принадлежит DIV #3, который в свою очередь имеет меньший z-index(по сравнению с .DIV #1).</li>
  <li>По этим же причинам DIV #2 (z-index 2) отрисовывается под DIV#5 (z-index 1), так как DIV #5 принадлежит DIV #3, чей z-index больше( чем z-index DIV #2).</li>
  <li>У DIV #3 есть свойство z-index 4, но это значение независимо от z-index'ов DIV #4, DIV #5 и DIV #6, потому что принадлежат они разным контекстам наложения.</li>
  <li>An easy way to figure out the <em>rendering order</em> of stacked elements along the Z axis is to think of it as a "version number" of sorts, where child elements are minor version numbers underneath their parent's major version numbers. This way we can easily see how an element with a z-index of 1 (DIV #5) is stacked above an element with a z-index of 2 (DIV #2), and how an element with a z-index of 6 (DIV #4) is stacked below an element with a z-index of 5 (DIV #1). In our example (sorted according to the final rendering order):

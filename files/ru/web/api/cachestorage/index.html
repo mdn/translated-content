@@ -15,7 +15,7 @@ translation_of: Web/API/CacheStorage
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p>Интерфейс <strong><code>CacheStorage</code></strong> представляет собой хранилище для объектов {{domxref("Cache")}}. Он предоставляет главную директорию всех именованых кешей, к которым могут получить доступ {{domxref("ServiceWorker")}}, другие типы воркеров или {{domxref("window")}} (вы не обязаны использовать их с service workers, даже если существует спецификация, определяющая это) и поддерживает отображение строковых имен соответствующих объектов {{domxref("Cache")}}.</p>
+<p>Интерфейс <strong><code>CacheStorage</code></strong> представляет собой хранилище для объектов {{domxref("Cache")}}. Он предоставляет главную директорию всех именованных кешей, к которым могут получить доступ {{domxref("ServiceWorker")}}, другие типы воркеров или {{domxref("window")}} (вы не обязаны использовать их с service workers, даже если существует спецификация, определяющая это) и поддерживает отображение строковых имен соответствующих объектов {{domxref("Cache")}}.</p>
 
 <p><code>CacheStorage</code> также позволяет вызвать {{domxref("CacheStorage.open()")}} и {{domxref("CacheStorage.match()")}}. Используйте {{domxref("CacheStorage.open()")}} для получения экземпляров {{domxref("Cache")}}. Используйте {{domxref("CacheStorage.match()")}} для проверки того, является ли данный {{domxref("Request")}} ключом в любом из объектов {{domxref("Cache")}}, отслеживаемых объектом <code>CacheStorage</code>.</p>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/CacheStorage
  <dt>{{domxref("CacheStorage.delete()")}}</dt>
  <dd>Находит объект {{domxref("Cache")}}, соответствующий <code>cacheName</code>, и, если такой обнаружен, удаляет объект {{domxref("Cache")}} и возвращает {{jsxref("Promise")}}, завершающийся с <code>true</code>. Если объект {{domxref("Cache")}} не найдет, то возвращается <code>false</code>.</dd>
  <dt>{{domxref("CacheStorage.keys()")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}}, который вернет массив, содержащий строки, соответствующие всем именованым объектам {{domxref("Cache")}}, отслеживаемым {{domxref("CacheStorage")}}. Используйте этот метод для прохода по списку всех объектов {{domxref("Cache")}}.</dd>
+ <dd>Возвращает {{jsxref("Promise")}}, который вернет массив, содержащий строки, соответствующие всем именованным объектам {{domxref("Cache")}}, отслеживаемым {{domxref("CacheStorage")}}. Используйте этот метод для прохода по списку всех объектов {{domxref("Cache")}}.</dd>
 </dl>
 
 <h2 id="Примеры">Примеры</h2>

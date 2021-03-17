@@ -38,7 +38,7 @@ console.log(encodeURIComponent('\uDFFF'));
 
 <p><code>Для <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm">application/x-www-form-urlencoded</a></code> пробелы должны быть заменены на "+", поэтому вам может понадобиться <code>encodeURIComponent</code> с дополнительной заменой "%20" на "+".</p>
 
-<p>Чтобы строго соблюдать <a class="external" href="http://tools.ietf.org/html/rfc3986">RFC 3986</a> (который резервирует !, ', (, ), и *), даже не смотря на то, что символы не используют сформированных URI разделителей, можно безопасно использовать следущее:</p>
+<p>Чтобы строго соблюдать <a class="external" href="http://tools.ietf.org/html/rfc3986">RFC 3986</a> (который резервирует !, ', (, ), и *), даже не смотря на то, что символы не используют сформированных URI разделителей, можно безопасно использовать следующие:</p>
 
 <pre class="brush: js">function fixedEncodeURIComponent (str) {
   return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {

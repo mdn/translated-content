@@ -61,7 +61,7 @@ translation_of: Web/API/Document/querySelectorAll
 <pre class="brush: js">var matches = document.querySelectorAll("div.note, div.alert");
 </pre>
 
-<p>Здесь мы получаем список элементов <code>&lt;p&gt;</code>, чьим непосредственным родительским элементом явялется {{HTMLElement("div")}} с классом <code>highlighted</code>, который расположен внутри контейнера с идентификатором <code>test</code>.</p>
+<p>Здесь мы получаем список элементов <code>&lt;p&gt;</code>, чьим непосредственным родительским элементом является {{HTMLElement("div")}} с классом <code>highlighted</code>, который расположен внутри контейнера с идентификатором <code>test</code>.</p>
 
 <pre class="brush: js">var container = document.querySelector("#test");
 var matches = container.querySelectorAll("div.highlighted &gt; p");</pre>
@@ -108,9 +108,9 @@ highlightedItems.forEach(function(userItem) {
 var inner = select.querySelectorAll('.outer .inner');
 inner.length; // 1, не 0!</pre>
 
-<p>В данном примере, когда мы выбрали <code>".outer .inner"</code> в контексте <code>&lt;div&gt;</code> с классом <code>"select"</code>, элемент с классом <code>".inner"</code> был всё равно найден, хотя <code>.outer</code> не является потомком элемента в котором происходил поиск (<code>".select"</code>). По-умолчанию, <code>querySelectorAll()</code> проверяет только последний элемент без учёта контекста.</p>
+<p>В данном примере, когда мы выбрали <code>".outer .inner"</code> в контексте <code>&lt;div&gt;</code> с классом <code>"select"</code>, элемент с классом <code>".inner"</code> был всё равно найден, хотя <code>.outer</code> не является потомком элемента в котором происходил поиск (<code>".select"</code>). По умолчанию, <code>querySelectorAll()</code> проверяет только последний элемент без учёта контекста.</p>
 
-<p>Псевдокласс {{cssxref(":scope")}} даёт нам ожидаемый результат. Только соответстующие селекторы в потомках базового элемента:</p>
+<p>Псевдокласс {{cssxref(":scope")}} даёт нам ожидаемый результат. Только соответствующие селекторы в потомках базового элемента:</p>
 
 <pre class="brush: js">var select = document.querySelector('.select');
 var inner = select.querySelectorAll(':scope .outer .inner');

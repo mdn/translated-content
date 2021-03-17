@@ -37,7 +37,7 @@ translation_of: Web/Performance/Lazy_loading
 
 <h3 id="CSS">    CSS</h3>
 
-<p>По умолчанию, CSS рассматривается как блокирующий рендер (<a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path">render blocking</a>) ресурс, так что браузер не отобразит контент, пока объектная модель CSS (<a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a>) не будет завершена. Поэтому начальный CSS файл должен небольшим, чтобы быть доставленым так быстро, как это возможно. Рекомендуется использовать media-queries для того, чтобы вместо одного монолитного css-файла грузить специализированные</p>
+<p>По умолчанию, CSS рассматривается как блокирующий рендер (<a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path">render blocking</a>) ресурс, так что браузер не отобразит контент, пока объектная модель CSS (<a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a>) не будет завершена. Поэтому начальный CSS файл должен небольшим, чтобы быть доставленным так быстро, как это возможно. Рекомендуется использовать media-queries для того, чтобы вместо одного монолитного css-файла грузить специализированные</p>
 
 <pre>&lt;link href="style.css"    rel="stylesheet" media="all"&gt;
 &lt;link href="portrait.css" rel="stylesheet" media="orientation:portrait"&gt;
@@ -69,7 +69,7 @@ translation_of: Web/Performance/Lazy_loading
 <p>Вы можете определить, было ли загружено то или иное изображение, проверив Boolean значение {{domxref("HTMLImageElement.complete", "complete")}}.</p>
 
 <p><strong>Полифил</strong><br>
- Для использованиях в браузерах, которые не поддерживают данную технологию, рекомендуется использовать полифилл: <a href="https://github.com/mfranzke/loading-attribute-polyfill" rel="noopener">loading-attribute-polyfill</a></p>
+ Для использованиях в браузерах, которые не поддерживают данную технологию, рекомендуется использовать полифил: <a href="https://github.com/mfranzke/loading-attribute-polyfill" rel="noopener">loading-attribute-polyfill</a></p>
 
 <p><strong>Intersection Observer API</strong><br>
  <a href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver">Intersection Observers</a> позволяют вам узнать, как наблюдаемый вами элемент входит или выходит из зоны видимости браузера (viewport).</p>

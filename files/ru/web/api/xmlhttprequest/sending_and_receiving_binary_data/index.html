@@ -92,7 +92,7 @@ var abyte = filestream.charCodeAt(x) &amp; 0xff; // throw away high-order byte (
 
 <p>Метод <code>send</code> объекта XMLHttpRequest был расширен, чтобы обеспечить легкую передачу бинарных данных - теперь он принимает объекты <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a>, {{domxref("Blob")}}, или {{domxref("File")}}.</p>
 
-<p>В примере ниже на лету создается текстовый файл и отпрвляется методом <code>POST</code> на сервер. Здесь используется обычный текст, но нетрудно представить себе пример с бинарным файлом.</p>
+<p>В примере ниже на лету создается текстовый файл и отправляется методом <code>POST</code> на сервер. Здесь используется обычный текст, но нетрудно представить себе пример с бинарным файлом.</p>
 
 <pre class="brush: js notranslate">var oReq = new XMLHttpRequest();
 oReq.open("POST", url, true);
@@ -105,7 +105,7 @@ var blob = new Blob(['abc123'], {type: 'text/plain'});
 oReq.send(blob);
 </pre>
 
-<h2 id="Sending_typed_arrays_as_binary_data" name="Sending_typed_arrays_as_binary_data">Отправка типизированнх массивов как бинарных данных</h2>
+<h2 id="Sending_typed_arrays_as_binary_data" name="Sending_typed_arrays_as_binary_data">Отправка типизированных массивов как бинарных данных</h2>
 
 <p>Точно так же можно отправлять типизированные массивы JavaScript.</p>
 
@@ -140,13 +140,13 @@ req.setRequestHeader("Content-Length", 741);
 req.sendAsBinary(aBody);
 </pre>
 
-<p>В строке 4 заголовок Content-Length устанавливается в 741, что означает, что размер данных 741 байт. Разумеется, это значение должно соотвествовать реальному размеру данных.</p>
+<p>В строке 4 заголовок Content-Length устанавливается в 741, что означает, что размер данных 741 байт. Разумеется, это значение должно соответствовать реальному размеру данных.</p>
 
 <p>В строке 5 метод <code>sendAsBinary()</code> начинает запрос.</p>
 
 <div class="note"><strong>Примечание:</strong> Нестандартный метод <code>sendAsBinary</code> начиная с Gecko 31 {{ geckoRelease(31) }} считается устаревшим и скоро будет удален. Вместо него, как показывалось выше, можно использовать стандартный метод <code>send(Blob data)</code>.</div>
 
-<p>Кроме того, чтобы отправить бинарные данные можно передать экземплят {{interface("nsIFileInputStream")}} в метод <a href="/en-US/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a>. В этом случае заголовок <code>Content-Length</code> заполнять явно необязательно, поскольку информация получается из потока автоматически:</p>
+<p>Кроме того, чтобы отправить бинарные данные можно передать экземпляр {{interface("nsIFileInputStream")}} в метод <a href="/en-US/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a>. В этом случае заголовок <code>Content-Length</code> заполнять явно необязательно, поскольку информация получается из потока автоматически:</p>
 
 <pre class="brush: js notranslate">// Создание потока из файла.
 var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]

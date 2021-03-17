@@ -149,7 +149,7 @@ const texture = loadTexture(gl, 'cubetexture.png');</code></pre>
 
 <p>Массив <code>textureCoordinates</code> определяет координаты текстуры, соответствующие каждой вершине каждой грани. Заметьте, что координаты текстуры лежат в промежутке между 0.0 и 1.0. Размерность текстуры нормализуется в пределах между 0.0 и 1.0, независимо от реального размера изображения.</p>
 
-<p>После опредения массива координат текстуры, мы копируем его в буфер, и теперь WebGL имеет данные для отрисовки.</p>
+<p>После определения массива координат текстуры, мы копируем его в буфер, и теперь WebGL имеет данные для отрисовки.</p>
 
 <h2 id="Обновление_шейдеров">Обновление шейдеров</h2>
 
@@ -246,7 +246,7 @@ const texture = loadTexture(gl, 'cubetexture.png');</code></pre>
 ...
 function drawScene(gl, programInfo, buffers, texture, deltaTime) {</code></pre>
 
-<p>Сейчас вращающийся куб должен именть текстуру на гранях.</p>
+<p>Сейчас вращающийся куб должен иметь текстуру на гранях.</p>
 
 
 
@@ -271,7 +271,7 @@ function drawScene(gl, programInfo, buffers, texture, deltaTime) {</code></pre>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>Обратите внимание:</strong> Поддрежка CORS для кросс-доменного видео и атрибут <code>crossorigin</code> для HTML-элемента {{ HTMLElement("video") }} реализованы в {{Gecko("12.0")}}.</p>
+<p><strong>Обратите внимание:</strong> Поддержка CORS для кросс-доменного видео и атрибут <code>crossorigin</code> для HTML-элемента {{ HTMLElement("video") }} реализованы в {{Gecko("12.0")}}.</p>
 </div>
 
 <p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}</p>

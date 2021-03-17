@@ -23,9 +23,9 @@ new Int32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int32Array.BYTES_PER_ELEMENT")}}</dt>
  <dd>Возвращает числовое значение размера элемента. <code>4</code> в случае с <code>Int32Array</code>.</dd>
  <dt>Int32Array.length</dt>
- <dd>Свойство статического размера, значение которого равно 3. Для актуального размера (колличества элементов), смотрите {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.</dd>
+ <dd>Свойство статического размера, значение которого равно 3. Для актуального размера (количества элементов), смотрите {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.</dd>
  <dt>{{jsxref("TypedArray.name", "Int32Array.name")}}</dt>
- <dd>Возвращяает строковое значение названия конструктора. В случае с тиопм <code>Int32Array</code>: "Int32Array".</dd>
+ <dd>Возвращает строковое значение названия конструктора. В случае с типом <code>Int32Array</code>: "Int32Array".</dd>
  <dt>{{jsxref("TypedArray.prototype", "Int32Array.prototype")}}</dt>
  <dd>Прототип для <em>TypedArray</em> объектов.</dd>
 </dl>
@@ -154,7 +154,7 @@ var int32 = new Int32Array(iterable);
   <tr>
    <th scope="col">Specification</th>
    <th scope="col">Статус</th>
-   <th scope="col">Коментарии</th>
+   <th scope="col">Комментарии</th>
   </tr>
   <tr>
    <td>{{SpecName('Typed Array')}}</td>
@@ -182,7 +182,7 @@ var int32 = new Int32Array(iterable);
 
 <h2 id="Compatibility_notes">Compatibility notes</h2>
 
-<p>Начиная с ECMAScript 2015, конструкторы <code>Int32Array</code> требуют оператор {{jsxref("Operators/new", "new")}}. Вызов <code>Int32Array</code> коструктора как функцию без оператора <code>new</code>, вызовет ошибку {{jsxref("TypeError")}}.</p>
+<p>Начиная с ECMAScript 2015, конструкторы <code>Int32Array</code> требуют оператор {{jsxref("Operators/new", "new")}}. Вызов <code>Int32Array</code> конструктора как функцию без оператора <code>new</code>, вызовет ошибку {{jsxref("TypeError")}}.</p>
 
 <pre class="brush: js example-bad">var dv = Int32Array([1, 2, 3]);
 // TypeError: calling a builtin Int32Array constructor

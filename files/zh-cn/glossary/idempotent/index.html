@@ -21,14 +21,14 @@ GET /pageX HTTP/1.1
 GET /pageX HTTP/1.1
 </pre>
 
-<p><code>POST /add_row HTTP/1.1</code> 是幂等的。如果调用多次，就会增加多行记录：</p>
+<p><code>POST /add_row HTTP/1.1</code> 不是幂等的。如果调用多次，就会增加多行记录：</p>
 
 <pre class="notranslate">POST /add_row HTTP/1.1
 POST /add_row HTTP/1.1   -&gt; Adds a 2nd row
 POST /add_row HTTP/1.1   -&gt; Adds a 3rd row
 </pre>
 
-<p><code>DELETE /idX/delete HTTP/1.1</code> 幂等的，即便是不同请求之间接收到的状态码不一样：</p>
+<p><code>DELETE /idX/delete HTTP/1.1</code> 是幂等的，即便是不同请求之间接收到的状态码不一样：</p>
 
 <pre class="notranslate">DELETE /idX/delete HTTP/1.1   -&gt; Returns 200 if idX exists
 DELETE /idX/delete HTTP/1.1   -&gt; Returns 404 as it just got deleted

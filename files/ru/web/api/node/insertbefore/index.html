@@ -20,7 +20,7 @@ translation_of: Web/API/Node/insertBefore
 <pre class="syntaxbox">var <em>insertedElement</em> = <em>parentElement</em>.insertBefore(<em>newElement</em>, <em>referenceElement</em>);
 </pre>
 
-<p>В Mozilla Firefox, если <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">referenceElement</span> не задан или равен <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">null</span>, <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">newElement</span> вcтавляется в конец списка дочерних элеметнов. В IE, <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">referenceElement</span> равный <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">undefined</span>, сгенерируется исключение <span style="line-height: 1.5;">"</span>Invalid argument", в то время как Chrome сгенерирует исключение  "Uncaught TypeError", ожидая 2 аргумента.</p>
+<p>В Mozilla Firefox, если <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">referenceElement</span> не задан или равен <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">null</span>, <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">newElement</span> вставляется в конец списка дочерних элементов. В IE, <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">referenceElement</span> равный <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">undefined</span>, сгенерируется исключение <span style="line-height: 1.5;">"</span>Invalid argument", в то время как Chrome сгенерирует исключение  "Uncaught TypeError", ожидая 2 аргумента.</p>
 
 <ul>
  <li><code>insertedElement</code> Вставленный элемент.</li>
@@ -73,7 +73,7 @@ var newElement = document.createElement("div");
 parentElement.insertBefore(newElement, theFirstChild);
 </pre>
 
-<p>Когда у родителя нет первого дочернего элемента, <code>firstChild</code> вернет <code>null</code>. Новый элемент все равно будет втавляться после последнего дочернего элемента. Но так как родитель не имеет первого дочернего элемета, то он не будет иметь и последнего. Следовательно, после добавления в него элемента, этот элемент будет единственным дочерним элементом.</p>
+<p>Когда у родителя нет первого дочернего элемента, <code>firstChild</code> вернет <code>null</code>. Новый элемент все равно будет выставляться после последнего дочернего элемента. Но так как родитель не имеет первого дочернего элемента, то он не будет иметь и последнего. Следовательно, после добавления в него элемента, этот элемент будет единственным дочерним элементом.</p>
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">Совместимость с браузерами</h2>
 

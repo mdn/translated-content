@@ -26,7 +26,7 @@ translation_of: Web/HTML/Element/meta
    <td><code>&lt;meta charset&gt;</code>, <code>&lt;meta http-equiv&gt;</code>: {{HTMLElement("head")}} элемент. Если {{htmlattrxref("http-equiv", "meta")}} это не заявленная декларация, то может быть внутри элемента {{HTMLElement("noscript")}} или {{HTMLElement("head")}}.</td>
   </tr>
   <tr>
-   <th scope="row">Разрешёные роли ARIA</th>
+   <th scope="row">Разрешенные роли ARIA</th>
    <td>Отсутствуют</td>
   </tr>
   <tr>
@@ -70,7 +70,7 @@ translation_of: Web/HTML/Element/meta
    Нет веских оснований для объявления неточного набора символов.</li>
   <li><code>&lt;meta&gt;</code> элемент должен находиться внутри элемента {{HTMLElement("head")}} и задаваться в <strong>1024 первых байтах</strong> HTML страницы, поскольку некоторые браузеры смотрят только эти байты перед выбором кодировки.</li>
   <li>Этот <code>&lt;meta&gt;</code> элемент - часть алгоритма, определяющего набор символов (<a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/parsing.html#encoding-sniffing-algorithm" title="Algorithm charset page">algorithm to determine the character set</a>) страницы, который браузер поддерживает. Заголовок {{HTTPHeader("Content-Type")}} и любые {{Glossary("Byte-Order Mark","Byte-Order Marks")}} элементы переопределяют данный элемент.</li>
-  <li>Настоятельно рекомендуется определить кодировку символов. Если для страницы не определён набор символов, то некоторые cross-scripting тхнологии могут повредить страницу, например такие как <a class="external" href="https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7">UTF-7 fallback cross-scripting technique</a>. Постоянная установка этого элемента будет защищать Вас от этого риска.</li>
+  <li>Настоятельно рекомендуется определить кодировку символов. Если для страницы не определён набор символов, то некоторые cross-scripting технологии могут повредить страницу, например такие как <a class="external" href="https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7">UTF-7 fallback cross-scripting technique</a>. Постоянная установка этого элемента будет защищать Вас от этого риска.</li>
   <li>Этот {{HTMLElement("meta")}} элемент это синоним для pre-HTML5 <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=<em>IANAcharset</em>"&gt; </code>где <em><code>IANAcharset</code> </em>соответствует значению эквивалентного {{htmlattrxref("charset", "meta")}} атрибута.<br>
    Этот синтаксис по-прежнему разрешен, хотя и устарел и больше не рекомендуется.</li>
  </ul>
@@ -92,7 +92,7 @@ translation_of: Web/HTML/Element/meta
   Поэтому допустимым синтаксисом для его содержимого является литеральная строка '<code>text/html</code>', за которой следует набор символов со следующим синтаксисом: '<code>; charset=</code><em><code>IANAcharset</code></em>' где  <code>IANAcharset</code> это предпочтительное<em> MIME имя</em> для набора символов, который определяется как<a class="external" href="https://www.iana.org/assignments/character-sets"> IANA.</a>
   <div class="note"><strong>Замечания:</strong>
   <ul>
-   <li>Не используйте эту прагму, так как она устарела. Используйте атибут{{htmlattrxref("charset", "meta")}} в элементе {{HTMLElement("meta")}} вместо этого.</li>
+   <li>Не используйте эту прагму, так как она устарела. Используйте атрибут{{htmlattrxref("charset", "meta")}} в элементе {{HTMLElement("meta")}} вместо этого.</li>
    <li>{{HTMLElement("meta")}} не может быть использована для выбора типа документа в XHTML документе, или в HTML5 документе, за которым следует XHTML синтаксис, никогда не задавайте MIME тип как XHTML MIME. Это будет некорректно.</li>
    <li>Только HTML документ может использовать контент-тип, так что большинство из них являются неиспользуемыми, поэтому они являются устаревшими и заменяются {{htmlattrxref("charset", "meta")}} атрибутом.</li>
   </ul>
@@ -116,12 +116,12 @@ translation_of: Web/HTML/Element/meta
  <dt>{{htmlattrdef("name")}}</dt>
  <dd>Этот атрибут определяет имя уровня документа метаданных. <br>
  Его не следует устанавливать, если один из атрибутов {{htmlattrxref("itemprop", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} или {{htmlattrxref("charset", "meta")}} также указан в наборе.<br>
- Имя этого документального уровня метаданных связано со значением, которое содержится в {{htmlattrxref("content", "meta")}} атрибуте.Допустимые значения для имени элемента, со связанными с ними значениями, хранятся посредтвом {{htmlattrxref("content", "meta")}} атрибута:
+ Имя этого документального уровня метаданных связано со значением, которое содержится в {{htmlattrxref("content", "meta")}} атрибуте.Допустимые значения для имени элемента, со связанными с ними значениями, хранятся посредством {{htmlattrxref("content", "meta")}} атрибута:
  <ul>
   <li><code>application-name</code>, определяет имя веб-приложения, запущенного на веб-странице;
    <div class="note"><strong>Замечание:</strong>
    <ul>
-    <li>Браузеры могут использовать его для идентификации приложения. Он отличается от  {{HTMLElement("title")}} элемента, который обычно состоит из имени приложения, но также может содержать специальную информацию, как например име документа или статус;</li>
+    <li>Браузеры могут использовать его для идентификации приложения. Он отличается от  {{HTMLElement("title")}} элемента, который обычно состоит из имени приложения, но также может содержать специальную информацию, как например имя документа или статус;</li>
     <li>Простые веб-страницы не определяют application-name meta.</li>
    </ul>
    </div>
@@ -191,7 +191,7 @@ translation_of: Web/HTML/Element/meta
      </tr>
      <tr>
       <td><code>noindex</code></td>
-      <td>Освобождает робота от идексирования страниц</td>
+      <td>Освобождает робота от индексирования страниц</td>
       <td>All</td>
      </tr>
      <tr>
@@ -206,7 +206,7 @@ translation_of: Web/HTML/Element/meta
      </tr>
      <tr>
       <td><code>none</code></td>
-      <td>Эквивалетно <code>noindex, nofollow</code></td>
+      <td>Эквивалентно <code>noindex, nofollow</code></td>
       <td><a class="external" href="https://support.google.com/webmasters/answer/79812">Google</a></td>
      </tr>
      <tr>

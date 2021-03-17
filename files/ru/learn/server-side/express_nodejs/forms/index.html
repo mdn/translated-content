@@ -44,7 +44,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 <p><img alt="Simple name field example in HTML form" src="https://mdn.mozillademos.org/files/14117/form_example_name_field.png" style="border-style: solid; border-width: 1px; display: block; height: 44px; margin: 0px auto; width: 399px;"></p>
 
-<p>Определенные в  HTML формы собираются внутри тэга <code>&lt;form&gt;...&lt;/form&gt;</code>, содержащего хтя ы один элемент <code>input</code> с <code>type="submit"</code>.</p>
+<p>Определенные в  HTML формы собираются внутри тэга <code>&lt;form&gt;...&lt;/form&gt;</code>, содержащего хотя ы один элемент <code>input</code> с <code>type="submit"</code>.</p>
 
 <pre class="brush: html notranslate">&lt;form action="/team_name_url/" method="post"&gt;
     &lt;label for="team_name"&gt;Enter name: &lt;/label&gt;
@@ -52,7 +52,7 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
     &lt;input type="submit" value="OK"&gt;
 &lt;/form&gt;</pre>
 
-<p>Хотя здесь мы включили только одно (текстовое) поле для ввода имени команды, форма может содержать любое количество других элементов ввода и связанных с ними меток. Атрибут <code>type</code> определяет какой из <a href="/ru/docs/Learn/HTML/Forms/Стандартные_виджеты_форм">виджетов</a> будет выбран для отображения поля. Атрибуты <code>name</code> и <code>id</code> идентифицируют поле в JavaScript/CSS/HTML, а <code>value</code> определяет его первоначальное значение. Связанная с полем метка, задается с помощью тега <code style="font-style: normal; font-weight: normal;">label</code> (располгается строкой выше и содержит в себе подпись "Enter name"). Связь метки и поля ввода устанавливается при помощи атрибута <code>for</code>, в котором указывается значение идентификатора поля (<code>input</code> <code>id</code>).</p>
+<p>Хотя здесь мы включили только одно (текстовое) поле для ввода имени команды, форма может содержать любое количество других элементов ввода и связанных с ними меток. Атрибут <code>type</code> определяет какой из <a href="/ru/docs/Learn/HTML/Forms/Стандартные_виджеты_форм">виджетов</a> будет выбран для отображения поля. Атрибуты <code>name</code> и <code>id</code> идентифицируют поле в JavaScript/CSS/HTML, а <code>value</code> определяет его первоначальное значение. Связанная с полем метка, задается с помощью тега <code style="font-style: normal; font-weight: normal;">label</code> (располагается строкой выше и содержит в себе подпись "Enter name"). Связь метки и поля ввода устанавливается при помощи атрибута <code>for</code>, в котором указывается значение идентификатора поля (<code>input</code> <code>id</code>).</p>
 
 <p>Input <code>submit </code>будет отображаться в виде кнопки (по умолчанию) - он может быть нажат пользователем, чтобы загрузить данные, содержащиеся в других входных элементов на сервер (в данном случае, только team_name). Атрибуты формы определяют метод HTTP, используемый для отправки данных, и назначение данных на сервере (action):</p>
 
@@ -140,7 +140,7 @@ body('age', 'Invalid age').optional({ checkFalsy: true }).isISO8601(),
 </pre>
 
   <div class="note">
-  <p><strong>Note:</strong> Вы также можете добавить встроенные средства очистки, такие как <code>trim()</code>, как показано выше. Однако средства очитски, применяемые здесь, применяются только к шагу проверки. Если требуется очистить конечный результат, необходимо использовать отдельный метод очистки, как показано ниже.</p>
+  <p><strong>Note:</strong> Вы также можете добавить встроенные средства очистки, такие как <code>trim()</code>, как показано выше. Однако средства очистки, применяемые здесь, применяются только к шагу проверки. Если требуется очистить конечный результат, необходимо использовать отдельный метод очистки, как показано ниже.</p>
   </div>
  </li>
  <li><code><a href="https://github.com/ctavan/express-validator#sanitizebodyfields">sanitizeBody(fields)</a></code>: Задает поле тела для очистки. затем операции очистки последовательно соединяются с этим методом. Например, операция очистки <code>escape()</code>, описанная ниже, удаляет символы HTML из переменной name, которые могут использоваться в атаках сценариев между сайтами JavaScript.
@@ -206,7 +206,7 @@ router.post('/genre/create', genre_controller.genre_create_post);
 
 <ol>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_genre_form">Форма для создания Genre</a> — Определение нашей страницы для создания объектов <code>Genre</code>.</li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form">Форма для cоздания Author</a> — Определение страницы для создания объектов <code>Author</code>.</li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form">Форма для создания Author</a> — Определение страницы для создания объектов <code>Author</code>.</li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_book_form">Форма для создания Book</a> — Определение страницы/формы для создания объектов <code>Book</code>.</li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Create_BookInstance_form">Форма для создания BookInstance</a> — Определение страницы/формы для создания объектов <code>BookInstance</code>.</li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Delete_author_form">Форма для удаления Author</a> — Определение страницы для удаления объектов <code>Author</code>.</li>

@@ -9,7 +9,7 @@ translation_of: Web/API/Cache
 
 <p>Для вызывающего скрипта может быть множество именованных объектов <code>Cache</code>. Разработчик сам определяет реализацию того, как скрипт (например, в  {{domxref("ServiceWorker")}}) управляет обновлением <code>Cache</code>. Записи в <code>Cache</code> не будут обновлены, пока не будет выполнен явный запрос; их время жизни не истечет до момента удаления. Используйте {{domxref("CacheStorage.open", "CacheStorage.open(cacheName)")}}, чтобы открыть определенный именованный объект <code>Cache </code>и затем вызывайте любые методы<code> Cache </code>для управления его состоянием.</p>
 
-<p>Вы также ответственны за периодическую очистку записей кеша. Каждый браузер имеет жесткие ограничения на объем хранилища кеша, доступный для исходного кода. Браузер делает все, чтобы как можно лучше использовать дисковое пространство, но он может удалить хранилище кеша для скрипта. В основном, браузер либо удаляет все данные из кеша для скрипта, либо не удалает ничего. Устанавливайте версии кеша в имени и используйте кеш только той версии, которая безопасна для использования. Смотрите <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches">Удаление старого кеша</a>.</p>
+<p>Вы также ответственны за периодическую очистку записей кеша. Каждый браузер имеет жесткие ограничения на объем хранилища кеша, доступный для исходного кода. Браузер делает все, чтобы как можно лучше использовать дисковое пространство, но он может удалить хранилище кеша для скрипта. В основном, браузер либо удаляет все данные из кеша для скрипта, либо не удаляет ничего. Устанавливайте версии кеша в имени и используйте кеш только той версии, которая безопасна для использования. Смотрите <a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Deleting_old_caches">Удаление старого кеша</a>.</p>
 
 <div class="note">
 <p><strong>Замечание</strong>: {{domxref("Cache.put")}}, {{domxref("Cache.add")}} и {{domxref("Cache.addAll")}} допускают сохранение в кеш только <code>GET</code> запросов.</p>
@@ -37,7 +37,7 @@ translation_of: Web/API/Cache
  <dt>{{domxref("Cache.match", "Cache.match(request, options)")}}</dt>
  <dd>Возвращает {{jsxref("Promise")}}, который успешно завершается с нахождением первого совпадения для данного запроса в объекте {{domxref("Cache")}}.</dd>
  <dt>{{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}}</dt>
- <dd>Возвращает {{jsxref("Promise")}}, который успешно завершается и возврщает массив всех найденных совпадений для данного запроса в объекте  {{domxref("Cache")}}.</dd>
+ <dd>Возвращает {{jsxref("Promise")}}, который успешно завершается и возвращает массив всех найденных совпадений для данного запроса в объекте  {{domxref("Cache")}}.</dd>
  <dt>{{domxref("Cache.add", "Cache.add(request)")}}</dt>
  <dd>Принимает в качестве параметра URL, получает данные по нему и добавляет полученный объект ответа в заданный кеш. Функциональный эквивалент  вызову fetch() с последующим вызовом Cache.put() для добавления результата в кеш.</dd>
  <dt>{{domxref("Cache.addAll", "Cache.addAll(requests)")}}</dt>
@@ -45,7 +45,7 @@ translation_of: Web/API/Cache
  <dt>{{domxref("Cache.put", "Cache.put(request, response)")}}</dt>
  <dd>Принимает запрос и ответ на него и добавляет их в заданный кеш.</dd>
  <dt>{{domxref("Cache.delete", "Cache.delete(request, options)")}}</dt>
- <dd>Находит запись {{domxref("Cache")}}, чей ключ является запросом, и, в случае находждения, удаляет запись {{domxref("Cache")}}  и возвращает {{jsxref("Promise")}}, успешно завершающийся со значением <code>true</code>. Если же запись  {{domxref("Cache")}} не найдена, возвращается <code>false</code>.</dd>
+ <dd>Находит запись {{domxref("Cache")}}, чей ключ является запросом, и, в случае нахождения, удаляет запись {{domxref("Cache")}}  и возвращает {{jsxref("Promise")}}, успешно завершающийся со значением <code>true</code>. Если же запись  {{domxref("Cache")}} не найдена, возвращается <code>false</code>.</dd>
  <dt>{{domxref("Cache.keys", "Cache.keys(request, options)")}}</dt>
  <dd>Возвращает {{jsxref("Promise")}}, который отдает массив ключей {{domxref("Cache")}}.</dd>
 </dl>
@@ -60,7 +60,7 @@ translation_of: Web/API/Cache
 
 <p>Также, пример описывает лучшие практики по заданию версий кеша при работе с сервис воркерами. И хотя в примере лишь один кеш, тот же подход может быть использован для множества кешей. Он сравнивает сокращенный идентификатор кеша с определенным, версионным именем кеша. Код также удаляет весь кеш, для которого не определено имя <code>CURRENT_CACHES</code>.</p>
 
-<p>В примере кода "кеш" это аттрибут WorkerGlobalScope сервис воркеров. Он содержит объект CacheStorage, через который можно получить доступ к <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage">CacheStorage</a>  API.</p>
+<p>В примере кода "кеш" это атрибут WorkerGlobalScope сервис воркеров. Он содержит объект CacheStorage, через который можно получить доступ к <a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage">CacheStorage</a>  API.</p>
 
 <div class="note"><strong>Замечание:</strong> В Chrome, откройте chrome://inspect/#service-workers и кликните по ссылке "inspect" под зарегистрированным сервис воркером чтобы увидеть записи журнала по различным действиям выполняемым скриптом <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js">service-worker.js</a>.</div>
 

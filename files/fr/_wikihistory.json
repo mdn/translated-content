@@ -7697,19 +7697,6 @@
       "loella16"
     ]
   },
-  "Web/API/DocumentOrShadowRoot": {
-    "modified": "2020-10-15T22:25:01.411Z",
-    "contributors": [
-      "tristantheb"
-    ]
-  },
-  "Web/API/DocumentOrShadowRoot/elementsFromPoint": {
-    "modified": "2020-10-15T22:25:00.754Z",
-    "contributors": [
-      "SphinxKnight",
-      "RolandGautier"
-    ]
-  },
   "Web/API/DocumentTouch": {
     "modified": "2019-03-23T22:50:40.193Z",
     "contributors": [
@@ -44970,16 +44957,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/DocumentOrShadowRoot/elementFromPoint": {
-    "modified": "2019-03-23T23:50:28.633Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "jsx",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
   "Web/API/HTMLElement/accessKey": {
     "modified": "2019-03-23T22:24:43.588Z",
     "contributors": [
@@ -46001,6 +45978,29 @@
       "loella16",
       "fscholz",
       "FredPl"
+    ]
+  },
+  "Web/API/Document/elementFromPoint": {
+    "modified": "2019-03-23T23:50:28.633Z",
+    "contributors": [
+      "fscholz",
+      "teoli",
+      "jsx",
+      "Mgjbot",
+      "BenoitL"
+    ]
+  },
+  "Web/API/Document/elementsFromPoint": {
+    "modified": "2020-10-15T22:25:00.754Z",
+    "contributors": [
+      "SphinxKnight",
+      "RolandGautier"
+    ]
+  },
+  "orphaned/Web/API/DocumentOrShadowRoot": {
+    "modified": "2020-10-15T22:25:01.411Z",
+    "contributors": [
+      "tristantheb"
     ]
   }
 }

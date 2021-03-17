@@ -64,7 +64,7 @@ target</em>.addEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</
 
 <p>Прослушиватель событий может быть задан либо как функция обратного вызова, либо как объект реализующий {{domxref("EventListener")}}, чей {{domxref("EventListener.handleEvent", "handleEvent()")}} метод служит как функция обратного вызова.</p>
 
-<p>Сама функция обранного вызова имеет те же параметры и возвращаемое значение что и метод <code>handleEvent()</code>; То есть обратный вызов принимает единственный параметр: объект основанный на {{domxref("Event")}} описывая событие, которое произошло и ничего не возвращая.</p>
+<p>Сама функция обратного вызова имеет те же параметры и возвращаемое значение что и метод <code>handleEvent()</code>; То есть обратный вызов принимает единственный параметр: объект основанный на {{domxref("Event")}} описывая событие, которое произошло и ничего не возвращая.</p>
 
 <p>Например, обратный вызов обработчика событий, который может использоваться для обработки {{event("fullscreenchange")}} и {{event("fullscreenerror")}} может выглядеть так:</p>
 
@@ -239,7 +239,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 
 <p>Значение переменной <code>this</code> внутри <code>modifyText()</code> при вызове событием клика будет равно ссылке на глобальный (window) объект (или <code>undefined</code> при использовании <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">strict mode</a>)</p>
 
-<div class="note"><strong>Note:</strong> В JavaScript 1.8.5 введён метод <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind" title="JavaScript/Reference/Global Objects/Function/bind">Function.prototype.bind()</a></code> , который позволяет указать значение, которое должно быть использовано для всех вызовов данной функции. Он позволяет вам легко обходить ситуации, в которых не ясно, чему будет равно this, в зависимости от того, в каком контексте будет вызвана ваша функция. заметьте, также, что Вам будет необходимо иметь внешню ссылку на слушатель, чтобы Вы могли удалить его позже.</div>
+<div class="note"><strong>Note:</strong> В JavaScript 1.8.5 введён метод <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind" title="JavaScript/Reference/Global Objects/Function/bind">Function.prototype.bind()</a></code> , который позволяет указать значение, которое должно быть использовано для всех вызовов данной функции. Он позволяет вам легко обходить ситуации, в которых не ясно, чему будет равно this, в зависимости от того, в каком контексте будет вызвана ваша функция. заметьте, также, что Вам будет необходимо иметь внешнюю ссылку на слушатель, чтобы Вы могли удалить его позже.</div>
 
 <p>Пример с использованием <code>bind</code> и без него:</p>
 
@@ -297,7 +297,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 
 <h3 id="Compatibility" name="Compatibility">Совместимость</h3>
 
-<p>Вы можете обойти методы <code>addEventListener</code>, <code>removeEventListener</code>, <code>Event.preventDefault</code> и <code>Event.stopPropagation</code> не поддерживаемы в IE 8 используя следующий код в начале Вашего скрипта. Этот код подерживает использование <code>handleEvent</code> и события <code>DOMContentLoaded</code>.</p>
+<p>Вы можете обойти методы <code>addEventListener</code>, <code>removeEventListener</code>, <code>Event.preventDefault</code> и <code>Event.stopPropagation</code> не поддерживаемы в IE 8 используя следующий код в начале Вашего скрипта. Этот код поддерживает использование <code>handleEvent</code> и события <code>DOMContentLoaded</code>.</p>
 
 <div class="note">
 <p><strong>Note: </strong>useCapture не поддерживается, так как IE 8 не имеет альтернативного метода для этого. Также заметьте, что следующий код только добавляет поддержку IE 8. Также, он работает только при соблюдении стандартов: объявление DOCTYPE страницы обязательно.</p>

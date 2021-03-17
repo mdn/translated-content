@@ -3613,13 +3613,6 @@
       "zzoPark"
     ]
   },
-  "Web/API/DocumentOrShadowRoot": {
-    "modified": "2020-10-15T22:11:35.284Z",
-    "contributors": [
-      "DeadIntegral",
-      "Sheppy"
-    ]
-  },
   "Web/API/DocumentType": {
     "modified": "2020-10-15T22:10:02.690Z",
     "contributors": [
@@ -18703,6 +18696,13 @@
     "modified": "2019-03-23T22:51:22.015Z",
     "contributors": [
       "x86kernel"
+    ]
+  },
+  "orphaned/Web/API/DocumentOrShadowRoot": {
+    "modified": "2020-10-15T22:11:35.284Z",
+    "contributors": [
+      "DeadIntegral",
+      "Sheppy"
     ]
   }
 }

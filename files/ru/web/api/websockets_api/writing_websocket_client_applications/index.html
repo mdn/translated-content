@@ -1,24 +1,24 @@
 ---
-title: Написание клиентских приложений с помощью вебсокетов
+title: Написание клиентских приложений с помощью веб-сокетов
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 original_slug: WebSockets/Writing_WebSocket_client_applications
 ---
 <p>{{ draft() }}</p>
 
-<p>Вебсокеты - технология, которя позволяет открыть интерактивную сессию общения между браузером пользователя и сервером. Соединяясь через вебсокеты, веб-приложения могут осуществлять взаимодействие в реальном времени вместо того, чтобы делать запросы к клиенту о входящих/исходящих изменениях.</p>
+<p>Веб-сокеты - технология, которая позволяет открыть интерактивную сессию общения между браузером пользователя и сервером. Соединяясь через веб-сокеты, веб-приложения могут осуществлять взаимодействие в реальном времени вместо того, чтобы делать запросы к клиенту о входящих/исходящих изменениях.</p>
 
-<div class="note"><strong>Замечание: </strong>У нас есть работающий пример чата, части кода из которого используются в статье. Пример будет доступен, когда инфраструктура сайта сможет должным образом поддерживать хостинг примеров с использованием вебсокетов.</div>
+<div class="note"><strong>Замечание: </strong>У нас есть работающий пример чата, части кода из которого используются в статье. Пример будет доступен, когда инфраструктура сайта сможет должным образом поддерживать хостинг примеров с использованием веб-сокетов.</div>
 
-<h2 id="Доступность_вебсокетов">Доступность вебсокетов</h2>
+<h2 id="Доступность_веб-сокетов">Доступность веб-сокетов</h2>
 
-<p>API вебсокетов доступно в Javascript коде, область видимости которого включает объект DOM {{ domxref("Window") }} или любой объект, реализующий {{ domxref("WorkerUtils") }}; это означает, что вы можете использовать Web Workers.</p>
+<p>API веб-сокетов доступно в Javascript коде, область видимости которого включает объект DOM {{ domxref("Window") }} или любой объект, реализующий {{ domxref("WorkerUtils") }}; это означает, что вы можете использовать Web Workers.</p>
 
-<div class="note"><strong>Замечание:</strong> API вебсокетов (как и протокол лежащий в его основе) всё ещё проходят этап активной разработки; в настоящее время существует много проблем совместимости с разными браузерами (и даже с разными релизами одного и того же браузера).</div>
+<div class="note"><strong>Замечание:</strong> API веб-сокетов (как и протокол лежащий в его основе) всё ещё проходят этап активной разработки; в настоящее время существует много проблем совместимости с разными браузерами (и даже с разными релизами одного и того же браузера).</div>
 
 <h2 id="Создание_объекта_WebSocket">Создание объекта WebSocket</h2>
 
-<p><code><font face="Lucida Grande, Lucida Sans Unicode, DejaVu Sans, Lucida, Arial, Helvetica, sans-serif">Чтобы общаться через протокол вебсокетов необходимо создать объект </font><a href="/en/WebSockets/WebSockets_reference/WebSocket" title="en/WebSockets/WebSockets reference/WebSocket">WebSocket</a></code>; при его создании автоматически происходит попытка открыть соединение с сервером.</p>
+<p><code><font face="Lucida Grande, Lucida Sans Unicode, DejaVu Sans, Lucida, Arial, Helvetica, sans-serif">Чтобы общаться через протокол веб-сокетов необходимо создать объект </font><a href="/en/WebSockets/WebSockets_reference/WebSocket" title="en/WebSockets/WebSockets reference/WebSocket">WebSocket</a></code>; при его создании автоматически происходит попытка открыть соединение с сервером.</p>
 
 <p>Конструктор WebSocket принимает один обязательный и один необязательный параметр:</p>
 
@@ -35,9 +35,9 @@ WebSocket WebSocket(
 
 <dl>
  <dt><code>url</code></dt>
- <dd>URL, с которым происходит соединение; это должен быть URL вебсокет-сервера.</dd>
+ <dd>URL, с которым происходит соединение; это должен быть URL веб-сокет-сервера.</dd>
  <dt><code>protocols</code> {{ optional_inline() }}</dt>
- <dd>Может быть одной строкой протокола или массивом таких строк. Эти строки используют для индикации под-протоколов; таким образом, один сервер может реализовывать несколько под-протоколов вебсокетов (к примеру, вам может потребоваться, чтобы сервер мог обрабатывать разные типы взаимодействий в зависимости от определённого под-протокола). Если вы не укажете строку протокола, то будет передана пустая строка.</dd>
+ <dd>Может быть одной строкой протокола или массивом таких строк. Эти строки используют для индикации под-протоколов; таким образом, один сервер может реализовывать несколько под-протоколов веб-сокетов (к примеру, вам может потребоваться, чтобы сервер мог обрабатывать разные типы взаимодействий в зависимости от определённого под-протокола). Если вы не укажете строку протокола, то будет передана пустая строка.</dd>
 </dl>
 
 <p>В конструкторе могут возникать следующие исключения:</p>
@@ -54,7 +54,7 @@ WebSocket WebSocket(
 
 <p><span style="line-height: 21px;">Если ошибка случается во время попытки подключения, то в объект </span><a href="https://developer.mozilla.org/en/WebSockets/WebSockets_reference/WebSocket" style="line-height: 21px;" title="WebSocket"><code style="font-style: inherit;">WebSocket</code></a><span style="line-height: 21px;"> сначала посылается простое событие с именем «error» (таким образом, задействуя обработчик </span><code style="font-size: 14px; line-height: 21px;">onerror</code><span style="line-height: 21px;">), потом - событие </span><a href="https://developer.mozilla.org/en/WebSockets/WebSockets_reference/CloseEvent" style="line-height: 21px;" title="CloseEvent"><code style="font-style: inherit;">CloseEvent</code></a><span style="line-height: 21px;"> </span><span style="line-height: 21px;"> (таким образом, задействуя обработчик </span><code style="font-size: 14px; line-height: 21px;">onclose</code><span style="line-height: 21px;">) чтобы обозначить причину закрытия соединения.</span></p>
 
-<p>Однако, начиная с версии Firefox 11, типичным является получение в консоль от платформы Mozilla расширенного сообщения об обшибке и кода завершения, как то определено в <a class="external" href="http://tools.ietf.org/html/rfc6455#section-7.4" title="RFC 6455 Section 7.4">RFC 6455, Section 7.4</a> посредством <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent"><code>CloseEvent</code></a>.</p>
+<p>Однако, начиная с версии Firefox 11, типичным является получение в консоль от платформы Mozilla расширенного сообщения об ошибке и кода завершения, как то определено в <a class="external" href="http://tools.ietf.org/html/rfc6455#section-7.4" title="RFC 6455 Section 7.4">RFC 6455, Section 7.4</a> посредством <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent"><code>CloseEvent</code></a>.</p>
 
 <h3 id="Примеры">Примеры</h3>
 

@@ -3,395 +3,266 @@ title: document.execCommand
 slug: Web/API/Document/execCommand
 tags:
   - API
-  - Commandes
   - DOM
-  - Exécution
+  - Method
   - Méthodes
+  - Reference
 translation_of: Web/API/Document/execCommand
 ---
-<p>{{ApiRef("DOM")}}<br>
- Lorsqu'un document HTML est passé à <code><a href="https://developer.mozilla.org/fr/docs/Web/API/Document/designMode">designMode</a></code>, l'objet document expose la méthode <strong><code>execCommand</code></strong> qui permet d'exécuter des commandes pour manipuler le contenu de la zone modifiable, telle que les éléments <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/input">form inputs</a> ou <code><a href="https://developer.mozilla.org/fr/docs/Web/HTML/Global_attributes/contenteditable">contentEditable</a></code> .</p>
+<div>{{ApiRef("DOM")}}{{deprecated_header}}</div>
 
-<p>La plupart des commandes affectent la <a href="https://developer.mozilla.org/fr/docs/Web/API/Selection">sélection</a> du document (gras, italique, etc.), tandis que d'autres ajoutent de nouveaux éléments (ajout d'un lien) ou affectent une ligne entière (indentation). Lorsque vous utilisez <code>contentEditable</code>, l'appel <code>execCommand()</code> affectera l'élément modifiable actuellement actif.</p>
+<p><span class="seoSummary">Lorsqu'un document HTML passe en
+    <code><a href="/fr/docs/Web/API/Document/designMode">designMode</a></code>, l'objet
+    <code>document</code> correspondant expose une méthode <strong><code>execCommand()</code></strong>
+    permettant d'exécuter des commandes manipulant la région éditable courante tels que <a
+      href="/fr/docs/Web/HTML/Element/input">les champs de formulaire</a> ou les éléments
+    <code><a href="/fr/docs/Web/HTML/Global_attributes/contenteditable">contentEditable</a></code>
+    .</span></p>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+<p>La plupart des commandes affectent la <a
+    href="/fr/docs/Web/API/Selection">sélection</a> du document (mise en gras, italique, etc.), tandis que
+  d'autres insèrent de nouveaux éléments (un lien) ou modifient toute une ligne (indentation). Lorsqu'on
+  utilise <code>contentEditable</code>, <code>execCommand()</code> affecte l'élément éditable
+  courant.</p>
 
-<pre><em>bool</em> = document.execCommand(<em>aCommandName</em>, <em>aShowDefaultUI</em>, <em>aValueArgument</em>)</pre>
+<h2 id="Syntax">Syntaxe</h2>
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+<pre class="brush: js"><var>document</var>.execCommand(<var>aCommandName</var>, <var>aShowDefaultUI</var>, <var>aValueArgument</var>)
+</pre>
 
-<p>Un {{jsxref('Boolean')}} qui est à <code>false</code> <em>(faux)</em> si la commande n'est pas supportée ou désactivée.</p>
+<h3 id="Return_value">Valeur de retour</h3>
+
+<p>Un booléen ({{jsxref('Boolean')}}) qui vaut <code>false</code> si la commande n'est pas 
+  prise en charge ou si elle est désactivée.</p>
 
 <div class="note">
-<p><strong> </strong><span id="result_box" lang="fr"><span><strong>Note :</strong> Ne renvoie <code>true</code> <em>(vrai)</em> que dans le contexte d'une interaction utilisateur. Ne pas utiliser la valeur de retour pour vérifier le support du navigateur avant d'appeler une commande.</span></span></p>
+  <p><strong>Note</strong> : <code><var>document</var>.execCommand()</code> ne renvoie
+    <code>true</code> que s'il est appelé à partir d'une interaction utilisateur. On ne
+    peut pas l'invoquer dans un script afin de vérifier la prise en charge navigateur avant
+    d'appeler une commande. À partir de Firefox 82, les appels imbriqués à 
+    <code>document.execCommand()</code> renverront toujours <code>false</code>.</p>
 </div>
 
-<h3 id="Paramètres">Paramètres</h3>
-
-<p><code><strong>aCommandName</strong></code><br>
- {{domxref("DOMString")}} spécifie le nom de la commande à exécuter ​​​​​​. Voir {{anch("Commands")}} pour la liste des commandes possibles .</p>
-
-<p><strong><code>aShowDefaultUI</code></strong><br>
- Un {{jsxref("Boolean")}} indiquant si l'interface utilisateur par défaut doit être affichée. Ceci n'est pas implémenté par Mozilla.</p>
-
-<p><strong><code>aValueArgument</code></strong><br>
- Pour les commandes qui nécessitent un argument , il s'agit d'une {{domxref ("DOMString")}} <em>(chaîne de caractères)</em> fournissant ces informations. Par exemple, <code>insertImage</code> requière l'URL de l'image à insérer. Spécifiez <code>null </code>si aucun argument n'est nécessaire.</p>
-
-<h3 id="Commandes"><a id="Commands" name="Commands">Commandes</a></h3>
-
-<p><code><strong>backColor</strong></code><br>
- Change la couleur d'arrière-plan du document. En mode <code>styleWithCss</code>, il affecte plutôt la couleur de fond du bloc contenant. Cela nécessite une chaîne de valeurs {{cssxref ("&lt;color&gt;")}} pour être transmise en tant qu'argument de valeur. Notez que Internet Explorer utilise cette option pour définir la couleur d'arrière-plan du texte.</p>
-
-<p><code><strong>bold</strong></code><br>
- Ajoute ou enlève l'affichage <code>bold</code> de la sélection ou au point d'insertion. Internet Explorer utilise la balise {{HTMLElement("strong")}} au lieu de {{HTMLElement("b")}}.</p>
-
-<p><strong><code>contentReadOnly</code></strong><br>
- Rend le  contenu du document en lecture seule ou modifiable. Cela nécessite qu'un booléen <code>true</code> / <code>false</code> soit transmis en tant qu'argument de valeur. (Non pris en charge par Internet Explorer.)</p>
-
-<p><strong><code>copy</code></strong><br>
- Copie la sélection courante dans le presse papier. Les conditions d'activation de ce comportement varient d'un navigateur à l'autre et ont évolué au fil du temps. Vérifiez la table de compatibilité pour déterminer si vous pouvez l'utiliser dans votre cas.</p>
-
-<p><code><strong>createLink</strong></code><br>
- Crée un lien d'ancrage à partir de la sélection, uniquement s'il existe une sélection. Cela nécessite que la chaîne URI HREF soit transmise en tant qu'argument de valeur. L'URI doit contenir au moins un caractère unique, qui peut être un espace blanc. (Internet Explorer créera un lien avec une valeur URI <code>null</code>.)</p>
-
-<p><code><strong>cut</strong></code><br>
- Coupe et copie la sélection courante dans le presse papier. Les conditions d'activation de ce comportement varient d'un navigateur à l'autre et ont évolué au fil du temps. Vérifiez la <a href="#Compatibilité des navigateurs">table de compatibilité</a> pour déterminer si vous pouvez l'utiliser dans votre cas.</p>
-
-<p><code><strong>decreaseFontSize</strong></code><br>
- Ajoute une balise {{HTMLElement("small")}} autour de la sélection ou du point d'insertion (Non pris en charge par Internet Explorer).</p>
+<h3 id="Parameters">Paramètres</h3>
 
 <dl>
- <dt><code>defaultParagraphSeparator</code></dt>
- <dd>Change le séparateur de paragraphes utilisé lorsque de nouveaux paragraphes sont créés dans les zones de textes modifiables. Voir <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Contenu_editable#Differences_in_markup_generation">Contenu éditable</a> pour plus de détails.</dd>
+  <dt><code><var>aCommandName</var></code></dt>
+  <dd>Une chaîne de caractères {{domxref("DOMString")}} indiquant le nom de la commande à
+    exécuter. Voir {{anch("Commands")}} pour une liste de commandes possibles.</dd>
+  <dt><code><var>aShowDefaultUI</var></code></dt>
+  <dd>Un booléen ({{jsxref("Boolean")}}) indiquant si l'interface utilisateur par défaut
+    devrait être affichée. Ce n'est pas implémenté par Mozilla.</dd>
+  <dt><code><var>aValueArgument</var></code></dt>
+  <dd>Pour les commandes utilisant un argument en entrée, il s'agit d'une chaîne {{domxref("DOMString")}}
+    qui fournit cette information. On pourra, par exemple, <code>insertImage</code> utilise
+    l'URL de l'image à insérer. On utilisera <code>null</code> si aucun argument n'est utilisé.</dd>
 </dl>
 
-<p><code><strong>delete</strong></code><br>
- Supprime la sélection courante</p>
+<h3 id="Commands">Commandes</h3>
 
-<p><strong><code>enableInlineTableEditing</code></strong><br>
- Active ou désactive les commandes d'insertion et de suppression des lignes et des colonnes du tableau. (Non pris en charge par Internet Explorer.)</p>
+<dl>
+  <dt><code>backColor</code></dt>
+  <dd>Modifie la couleur d'arrière-plan du document. Avec le mode <code>styleWithCss</code>
+    cela affecte la couleur d'arrière-plan du bloc englobant. Une chaîne de caractères décrivant
+    une valeur {{cssxref("&lt;color&gt;")}} doit être passée en argument.
+    On notera qu'Internet Explorer utilise ceci pour la couleur d'arrière-plan du texte.</dd>
+  <dt><code>bold</code></dt>
+  <dd>Active ou désactive la mise en gras pour la sélection ou à partir du point d'insertion
+    Internet Explorer utilise la balise {{HTMLElement("strong")}} plutôt que {{HTMLElement("b")}}.</dd>
+  <dt><code>ClearAuthenticationCache</code></dt>
+  <dd>Supprime toutes les informations d'authentification (<i>credentials</i>) du cache.</dd>
+  <dt><code>contentReadOnly</code></dt>
+  <dd>Rend le contenu du document en lecture seule ou éditable en fonction du booléen passé
+    en argument (n'est pas pris en charge par Internet Explorer)</dd>
+  <dt><code>copy</code></dt>
+  <dd>Copie la sélection courante vers le presse-papier. Les conditions pour obtenir ce 
+    comportement peuvent varier d'un navigateur à l'autre. Veuillez voir le tableau de
+    compatibilité ci-après.</dd>
+  <dt><code>createLink</code></dt>
+  <dd>Crée un hyperlien à partir de la sélection (sous réserve qu'il y en ait une). Une 
+    chaîne de caractères formant un URI est nécessaire comme argument afin de fournir
+    la valeur de l'attribut <code>href</code>. L'URI doit contenir au moins un caractère
+    (qui peut être un blanc). (Internet Explorer créera un lien avec une valeur 
+    <code>null</code>.)</dd>
+  <dt><code>cut</code></dt>
+  <dd>Coupe le contenu de la sélection courante et le copie dans le presse-papier.
+    Les conditions pour obtenir ce comportement peuvent varier d'un navigateur à l'autre.
+    Veuillez voir le tableau de compatibilité ci-après.</dd>
+  <dt><code>decreaseFontSize</code></dt>
+  <dd>Ajoute une balise {{HTMLElement("small")}} autour de la sélection ou au point
+    d'insertion. (Non pris en charge par Internet Explorer.)</dd>
+  <dt><code>defaultParagraphSeparator</code></dt>
+  <dd>Modifie le séparateur de paragraphe utilisé lorsque de nouveaux paragraphes sont
+    créés dans les zones de texte éditables. Voir <a
+      href="/fr/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation">
+      Différences dans la génération du balisage</a> pour plus de détails.</dd>
+  <dt><code>delete</code></dt>
+  <dd>Supprimer la sélection courante.</dd>
+  <dt><code>enableAbsolutePositionEditor</code></dt>
+  <dd>Active ou désactive la poignée qui permet de déplacer les éléments positionnés de
+    façon absolue. Celle-ci est désactivée par défaut depuis Firefox 64 ({{bug(1490641)}}).
+  </dd>
+  <dt><code>enableInlineTableEditing</code></dt>
+  <dd>Active ou désactive les contrôles pour l'insertion ou la suppression des lignes ou
+    colonnes de tableau. Les contrôles sont désactivés par défaut depuis Firefox 64
+    ({{bug(1490641)}}).</dd>
+  <dt><code>enableObjectResizing</code></dt>
+  <dd>Active ou désactive les contrôles permettant de redimensionner les images, tableaux
+    ou les éléments positionnés de façon absolue. Les poignées sont désactivées par défaut
+    depuis Firefox 64 ({{bug(1490641)}}).</dd>
+  <dt><code>fontName</code></dt>
+  <dd>Modifie le nom de la police pour la sélection ou à partir du point d'insertion. La
+    valeur fournie en argument doit être un nom de police (ex. <code>"Arial"</code>).</dd>
+  <dt><code>fontSize</code></dt>
+  <dd>Modifie la taille de la police pour la sélection ou à partir du point d'insertion.
+    La valeur fournie en argument doit être un entier compris entre 1 et 7.</dd>
+  <dt><code>foreColor</code></dt>
+  <dd>Modifie la couleur de la police pour la sélection ou à partir du point d'insertion.
+    La valeur passée en argument doit être une chaîne de caractères décrivant une couleur
+    exprimée en notation hexadécimale.</dd>
+  <dt><code>formatBlock</code></dt>
+  <dd>Ajoute un élément HTML de bloc autour de la ligne contenant la sélection courante et
+    remplace l'éventuel élément de bloc englobant s'il en existe un (pour Firefox,
+    {{HTMLElement("blockquote")}} fera exception et englobera n'importe quel bloc). 
+    L'argument passé doit être un nom de balise. Tous les éléments de bloc peuvent en
+    théorie être utilisés. (Internet Explorer et Edge ne prennent en charge que les
+    balises <code>H1</code><code>H6</code>, <code>ADDRESS</code>, et <code>PRE</code> qui
+    doivent être passées entre chevrons : <code>"&lt;H1&gt;"</code>.)</dd>
+  <dt><code>forwardDelete</code></dt>
+  <dd>Supprime un caractère à la position du curseur. Le comportement obtenu est le même
+    que lorsqu'on appuie sur la touche <kbd>Suppr</kbd> d'un clavier Windows.</dd>
+  <dt><code>heading</code></dt>
+  <dd>Ajoute un élément de titre autour de la sélection ou au niveau du point d'insertion.
+    L'argument doit être le nom d'une balise de titre (<code>"H1"</code> à <code>"H6"</code>).
+    (Non pris en charge par Internet Explorer et Safari.)</dd>
+  <dt><code>hiliteColor</code></dt>
+  <dd>Modifie la couleur d'arrière-plan pour la sélection ou à partir du point d'insertion.
+    La valeur passée en argument doit être une chaîne de caractères définissant une couleur
+    et <code>useCSS</code> doit valoir <code>true</code>. (Non pris en charge par Internet
+    Explorer.)</dd>
+  <dt><code>increaseFontSize</code></dt>
+  <dd>Ajoute une balise {{HTMLElement("big")}} autour de la sélection ou à partir du point
+    d'insertion. (Non pris en charge par Internet Explorer).</dd>
+  <dt><code>indent</code></dt>
+  <dd>Augmente l'indentation de la ligne contenant la sélection ou le point d'insertion.
+    Pour Firefox, si la sélection s'étend sur plusieurs lignes ayant différents niveaux
+    d'indentation, seules les lignes les moins indentées seront décalées.</dd>
+  <dt><code>insertBrOnReturn</code></dt>
+  <dd>Contrôle si la touche <kbd>Entrée</kbd> insère un élément {{HTMLElement("br")}} ou
+    si le bloc courant est scindé en deux. (Non pris en charge par Internet Explorer.)</dd>
+  <dt><code>insertHorizontalRule</code></dt>
+  <dd>Insère un élément {{HTMLElement("hr")}} au point d'insertion ou remplace la
+    sélection courante par cet élément.</dd>
+  <dt><code>insertHTML</code></dt>
+  <dd>Insère un élément au point d'insertion en supprimant la sélection. Une chaîne de 
+    caractères HTML valide doit être fournie en argument. (Non pris en charge par Internet
+    Explorer.)</dd>
+  <dt><code>insertImage</code></dt>
+  <dd>Insère une image au point d'insertion en supprimant la sélection. L'argument doit
+    être une chaîne de caractères indiquant l'URL à utiliser pour l'attribut
+    <code>src</code> de l'image. Les prérequis de cette valeur sont les mêmes que pour
+    <code>createLink</code>.</dd>
+  <dt><code>insertOrderedList</code></dt>
+  <dd>Crée une <a href="/fr/docs/Web/HTML/Element/ol">liste numérotée ordonnée</a> pour la
+    sélection ou à partir du point d'insertion.</dd>
+  <dt><code>insertUnorderedList</code></dt>
+  <dd>Crée une <a href="/fr/docs/Web/HTML/Element/ul">liste non-ordonnée</a> pour la
+    sélection ou à partir du point d'insertion.</dd>
+  <dt><code>insertParagraph</code></dt>
+  <dd>Insère un <a href="/fr/docs/Web/HTML/Element/p">paragraphe</a> autour de la sélection
+    pour la ligne courante. (Internet Explorer insère un paragraphe au point d'insertion 
+    et supprime la sélection.)</dd>
+  <dt><code>insertText</code></dt>
+  <dd>Insère le texte indiqué au point d'insertion (quitte à supprimer l'éventuelle
+    sélection courante).</dd>
+  <dt><code>italic</code></dt>
+  <dd>Active ou désactive la mise en italique pour la sélection ou à partir du point
+    d'insertion. (Internet Explorer utilisera l'élément {{HTMLElement("em")}} plutôt que
+    {{HTMLElement("i")}}.)</dd>
+  <dt><code>justifyCenter</code></dt>
+  <dd>Centre la sélection ou le point d'insertion.</dd>
+  <dt><code>justifyFull</code></dt>
+  <dd>Justifie la sélection ou le point d'insertion.</dd>
+  <dt><code>justifyLeft</code></dt>
+  <dd>Justifie à gauche la sélection ou le point d'insertion.</dd>
+  <dt><code>justifyRight</code></dt>
+  <dd>Justifie à droite la sélection ou le point d'insertion.</dd>
+  <dt><code>outdent</code></dt>
+  <dd>Effectue un retrait d'indentation pour la ligne courante.</dd>
+  <dt><code>paste</code></dt>
+  <dd>Colle le contenu du presse-papier au point d'insertion (et remplace éventuellement
+    la sélection actuelle). Fonctionnalité désactivée pour le contenu web.</dd>
+  <dt><code>redo</code></dt>
+  <dd>Rejoue l'action annulée par la précédente commande <code>undo</code>.</dd>
+  <dt><code>removeFormat</code></dt>
+  <dd>Supprime toute mise en forme pour la sélection courante.</dd>
+  <dt><code>selectAll</code></dt>
+  <dd>Sélectionne l'ensemble du contenu de la région éditable.</dd>
+  <dt><code>strikeThrough</code></dt>
+  <dd>Active ou désactive la rayure de la sélection ou à partir d'un point d'insertion.</dd>
+  <dt><code>subscript</code></dt>
+  <dd>Active ou désactive <a href="/fr/docs/Web/HTML/Element/sub">la mise en indice</a>
+    pour la sélection ou au point d'insertion</dd>
+  <dt><code>superscript</code></dt>
+  <dd>Active ou désactive <a href="/fr/docs/Web/HTML/Element/sup">la mise en exposant</a>
+    pour la sélection ou au point d'insertion</dd>
+  <dt><code>underline</code></dt>
+  <dd>Active ou désactive <a href="/fr/docs/Web/HTML/Element/u">le soulignement</a> pour
+    la sélection ou au point d'insertion.</dd>
+  <dt><code>undo</code></dt>
+  <dd>Annule la dernière commande exécutée.</dd>
+  <dt><code>unlink</code></dt>
+  <dd>Retire l'<a href="/fr/docs/Web/HTML/Element/a">ancre</a> de l'hyperlien sélectionné.
+  </dd>
+  <dt><code>useCSS</code> {{Deprecated_inline}}</dt>
+  <dd>Active/désactive l'utilisation de balises HTML ou de CSS pour le balisage généré. La
+    valeur de l'argument doit être un booléen.</dd>
+  <dd>Note : cet argument possède une logique inversée (<code>false</code> permet
+    d'utiliser CSS et <code>true</code> permet d'utiliser HTML). Cette valeur n'est pas
+    prise en charge par Internet Explorer et a été dépréciée en faveur de
+    <code>styleWithCSS</code>.</dd>
+  <dt><code>styleWithCSS</code></dt>
+  <dd>Remplace la commande <code>useCSS</code>. <code>true</code> modifie/génère des
+    attributs <code>style</code> dans le balisage tandis que <code>false</code> génère des
+    éléments HTML de présentation.</dd>
+</dl>
 
-<p><code><strong>enableObjectResizing</strong></code><br>
- Active ou désactive les poignées de redimensionnement des images et autres objets redimensionnables. (Non pris en charge par Internet Explorer.)</p>
+<h2 id="Example">Exemple</h2>
 
-<p><code><strong>fontName</strong></code><br>
- Modifie le nom de police de la sélection ou du point d'insertion. Cela nécessite une chaîne de nom de police (tel qu'<code>"Arial"</code>) à transmettre comme argument de valeur.</p>
+<p>Un exemple d'utilisation est disponible
+  <a href="https://codepen.io/chrisdavidmills/full/gzYjag/">sur CodePen</a>.</p>
 
-<p><code><strong>fontSize</strong></code><br>
- Modifie la taille de police pour la sélection ou au point d'insertion. Cela nécessite que la taille d'une police HTML (<code>1</code>-<code>7</code>) soit transmise en tant qu'argument de valeur.</p>
-
-<p><code><strong>foreColor</strong></code><br>
- Modifie une couleur de police pour la sélection ou au point d'insertion. Cela nécessite qu'une chaîne de valeurs de couleur soit transmise en tant qu'argument de valeur.</p>
-
-<p><code><strong>formatBlock</strong></code><br>
- Ajoute une balise HTML style bloc autour de la ligne contenant la sélection en cours, en remplaçant l'élément bloc contenant la ligne si elle existe (dans Firefox, BLOCKQUOTE est l'exception - il enroule tout élément bloc contenant). Nécessite la saisie d'une chaîne de nom d'étiquette comme argument de valeur. Pratiquement toutes les étiquettes de style de bloc peuvent être utilisées (par exemple "{{HTMLElement("h1")}}", "{{HTMLElement("p")}}", "{{HTMLElement("dl")}}", "{{HTMLElement("blockquote")}}"). (Internet Explorer ne prend en charge que les balises de titre <code>H1</code> - <code>H6</code>, <code>ADDRESS</code> et <code>PRE</code>, qui doivent également inclure les délimiteurs de balises &lt;&gt;, tels que <code>"&lt;H1&gt;"</code>.)</p>
-
-<p><code><strong>forwardDelete</strong></code><br>
- Supprime le caractère avant la position du <a href="http://en.wikipedia.org/wiki/Cursor_%28computers%29">curseur</a>. Il est le même que frapper la touche de suppression.</p>
-
-<p><code><strong>heading</strong></code><br>
- Ajoute une balise de titre autour d'une ligne de sélection ou d'insertion. Nécessite que la chaîne de nom d'étiquette soit transmise en tant qu'argument de valeur (c'est-à-dire "{{HTMLElement("<code>H1</code>")}}", "{{HTMLElement("<code>H6</code>")}}"). (Non pris en charge par Internet Explorer et Safari.)</p>
-
-<p><code><strong>hiliteColor</strong></code><br>
- Modifie la couleur d'arrière-plan de la sélection ou du point d'insertion. Nécessite une chaîne de valeurs de couleur à transmettre comme argument de valeur. <code>UseCSS</code> doit être à <code>true</code> (<em>vrai</em>) pour que cela fonctionne. (Non pris en charge par Internet Explorer.)</p>
-
-<p><code><strong>increaseFontSize</strong></code><br>
- Ajoute une balise {{HTMLElement("big")}} autour de la sélection ou au point d'insertion. (Non pris en charge par Internet Explorer.)</p>
-
-<p><code><strong>indent</strong></code><br>
- Décale la ligne contenant le point de sélection ou d'insertion. Dans Firefox, si la sélection s'étend sur plusieurs lignes à différents niveaux d'indentation, seules les lignes les moins indentées de la sélection seront indentées.</p>
-
-<p><code><strong>insertBrOnReturn</strong></code><br>
- Contrôle si la touche Entrée insère une balise br ou divise l'élément de bloc courant en deux. (Non pris en charge par Internet Explorer.)</p>
-
-<p><strong><code>insertHorizontalRule</code></strong><br>
- Insère une ligne horizontale au point d'insertion. (Supprime la sélection)</p>
-
-<p><code><strong>insertHTML</strong></code><br>
- Insère une chaîne HTML au point d'insertion (supprime la sélection). Nécessite une chaîne HTML valide à transmettre en tant qu'argument de valeur. (Non pris en charge par Internet Explorer.)</p>
-
-<p><code><strong>insertImage</strong></code><br>
- Insère une image au point d'insertion (supprime la sélection). Nécessite l'image SRC URI chaîne à passer comme un argument de valeur. L'URI doit contenir au moins un caractère unique, qui peut être un espace blanc. (Internet Explorer créera un lien avec une valeur URI nulle.)</p>
-
-<p><code><strong>insertOrderedList</strong></code><br>
- Crée une <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/ol">liste ordonnée numérotée</a> pour la sélection ou le point d'insertion.</p>
-
-<p><code><strong>insertUnorderedList</strong></code><br>
- Crée une <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/ul">liste non triée à puces</a> pour la sélection ou au point d'insertion.</p>
-
-<p><code><strong>insertParagraph</strong></code><br>
- Insère un <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/p">paragraphe</a> autour de la sélection ou de la ligne en cours. (Internet Explorer insère un paragraphe au point d'insertion et supprime la sélection.)</p>
-
-<p><code><strong>insertText</strong></code><br>
- Insère le texte brut donné au point d'insertion (supprime la sélection).</p>
-
-<p><code><strong>italic</strong></code><br>
- Active / désactive l'italique pour la sélection ou le point d'insertion. (Internet Explorer utilise la balise {{HTMLElement("em")}} au lieu de {{HTMLElement("i")}}).</p>
-
-<p><code><strong>justifyCenter</strong></code><br>
- Centre le point de sélection ou d'insertion.</p>
-
-<p><code><strong>justifyFull</strong></code><br>
- Justifie le point de sélection ou d'insertion.</p>
-
-<p><code><strong>justifyLeft</strong></code><br>
- Justifie le point de sélection ou d'insertion à gauche.</p>
-
-<p><code><strong>justifyRight</strong></code><br>
- Justifie à droite la sélection ou le point d'insertion.</p>
-
-<p><code><strong>outdent</strong></code><br>
- Augmente la ligne contenant le point de sélection ou d'insertion.</p>
-
-<p><code><strong>paste</strong></code><br>
- Colle le contenu du Presse-papiers au point d'insertion (remplace la sélection en cours). La fonctionnalité Presse-papiers doit être activée dans le fichier de préférences <em>user.js</em>. Voir [1].</p>
-
-<p><code><strong>redo</strong></code><br>
- Rétablit la commande d'annulation précédente.</p>
-
-<p><code><strong>removeFormat</strong></code><br>
- Supprime tout le formatage de la sélection en cours.</p>
-
-<p><code><strong>selectAll</strong></code><br>
- Sélectionne tout le contenu de la zone modifiable.</p>
-
-<p><code><strong>strikeThrough</strong></code><br>
- Active ou désactive le barré pour la sélection ou le point d'insertion.</p>
-
-<p><code><strong>subscript</strong></code><br>
- Active ou désactive l'<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/sub">élément de souscription</a> sur la sélection ou au point d'insertion.</p>
-
-<p><code><strong>superscript</strong></code><br>
- Active / désactive l'<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/sup">élément de mise en exposant</a> pour la sélection ou le point d'insertion.</p>
-
-<p><code><strong>underline</strong></code><br>
- Active ou désactive l'<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/u">élément d'annotation non textuelle</a> pour la sélection ou le point d'insertion.</p>
-
-<p><code><strong>undo</strong></code><br>
- Annule la dernière commande exécutée.</p>
-
-<p><code><strong>unlink</strong></code><br>
- Supprime l'<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/a">élément d'ancrage</a> de l'hyperlien sélectionné.</p>
-
-<p><code><strong>useCSS</strong></code><strong> {{Deprecated_inline}}</strong><br>
- Active / désactive l'utilisation de balises HTML ou CSS pour le balisage généré. Nécessite un argument booléen vrai / faux comme argument de valeur. REMARQUE : Cet argument est logiquement inverse (c.-à-d. utilise <code>false</code> pour utiliser CSS, <code>true</code> pour utiliser HTML). (Non pris en charge par Internet Explorer.) Cela a été obsolète; Utilisez plutôt la commande <code>styleWithCSS</code>.</p>
-
-<p><code><strong>styleWithCSS</strong></code><br>
- Remplace la commande <code>useCSS</code><em> </em>; argument fonctionne comme prévu, c'est-à-dire <code>true</code> modifie / génère des attributs de <code>style</code> dans le balisage, <code>false</code> génère des éléments de mise en forme.</p>
-
-<h2 id="Exemple">Exemple</h2>
-
-<p>Un <a href="http://codepen.io/netsi1964/full/QbLLGW/">exemple d'utilisation</a> sur CodePen.</p>
-
-<h2 id="Spécifications">Spécifications</h2>
+<h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML Editing', '#execcommand()', 'execCommand')}}</td>
-   <td>{{Spec2('HTML Editing')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">État</th>
+      <th scope="col">Commentaires</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://w3c.github.io/editing/docs/execCommand/">execCommand</a></td>
+      <td>Brouillon non officiel</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs"><a id="Compatibilité des navigateurs" name="Compatibilité des navigateurs"></a>Compatibilité des navigateurs</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<p>{{CompatibilityTable}}</p>
+<p>{{Compat("api.Document.execCommand")}}</p>
 
-<div id="compat-desktop" style="display: block;">
-<div id="compat-desktop">
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>insertBrOnReturn</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>copy</code>/<code>cut</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(41)}}</td>
-   <td>9</td>
-   <td>29</td>
-   <td>10</td>
-  </tr>
-  <tr>
-   <td><code>defaultParagraphSeparator</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(55)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>ClearAuthenticationCache</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>6</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>insertBrOnReturn</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>copy</code>/<code>cut</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(41)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>defaultParagraphSeparator</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(55)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>ClearAuthenticationCache</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-    </div>
-     </div>
-
-<div id="compat-mobile" class="hidden">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>insertBrOnReturn</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>copy</code>/<code>cut</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(43)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(41)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Avant Firefox 41, la capacité du presse-papiers devait être activée dans le fichier de préférences user.js. Voir <a href="https://developer.mozilla.org/fr/docs/Mozilla/Preferences/A_brief_guide_to_Mozilla_preferences">Un bref guide des préférences Mozilla</a> pour plus d'informations. Si la commande n'était pas prise en charge ou activée, <code>execCommand</code> déclenchait une exception au lieu de renvoyer <code>false</code>. Dans Firefox 41 et versions ultérieures, la capacité du presse-papiers est activée par défaut dans n'importe quel gestionnaire d'événements capable de faire apparaître une fenêtre (scripts semi-approuvés), mais aucun contenu web ne peut lire le presse-papier. Les extensions web peuvent <a href="https://developer.mozilla.org/fr/Add-ons/WebExtensions/interagir_avec_le_presse_papier">interagir avec le presse-papier</a>.</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
- <li>{{domxref("HTMLElement.contentEditable")}}</li>
- <li>{{domxref("document.designMode")}}</li>
- <li><a href="https://developer.mozilla.org/fr/docs/Rich-Text_Editing_in_Mozilla">Rich-Text Editing in Mozilla</a></li>
- <li><a href="https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md">Scribe's "Browser Inconsistencies" documentation</a>  <span class="short_text" id="result_box" lang="fr"><span>avec des bugs liés</span></span> à <code>document.execCommand</code>.{{CompatUnknown}}</li>
+  <li>{{domxref("HTMLElement.contentEditable")}}</li>
+  <li>{{domxref("document.designMode")}}</li>
+  <li><a href="/fr/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla">L'édition HTML dans Firefox</a>
+  </li>
+  <li><a
+      href="https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md">Documentation des incohérences
+      navigateur dans Scribe</a> qui indique les bugs liés à <code>document.execCommand</code>.</li>
 </ul>

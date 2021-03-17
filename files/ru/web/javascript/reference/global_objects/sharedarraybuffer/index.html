@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Новый объект <code>SharedArrayBuffer</code> указаной длины. Его содержимое после инициализаци равно 0.</p>
+<p>Новый объект <code>SharedArrayBuffer</code> указанной длины. Его содержимое после инициализации равно 0.</p>
 
 <h2 id="Описание">Описание</h2>
 
@@ -49,7 +49,7 @@ worker.postMessage(sab);
 
 <h3 id="Конструкции_требуют_оператор_new">Конструкции требуют оператор <code>new</code></h3>
 
-<p>Конструторы <code>SharedArrayBuffer</code> необходимо вызывать с помощью оператора {{jsxref("Operators/new", "new")}}. Вызов конструктора <code>SharedArrayBuffer</code> как функции без указания <code>new</code>, вызовет ошибку {{jsxref("TypeError")}}.</p>
+<p>Конструкторы <code>SharedArrayBuffer</code> необходимо вызывать с помощью оператора {{jsxref("Operators/new", "new")}}. Вызов конструктора <code>SharedArrayBuffer</code> как функции без указания <code>new</code>, вызовет ошибку {{jsxref("TypeError")}}.</p>
 
 <pre class="brush: js example-bad">var sab = SharedArrayBuffer(1024);
 // TypeError: вызов встроенного конструктора SharedArrayBuffer

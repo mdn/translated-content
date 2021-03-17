@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
 
 <h2 id="Description" name="Description">Описание</h2>
 
-<p>Объекты <code>Function</code>, созданные констуктором <code>Function</code>, разбираются при создании функции. Это менее эффективно определения функции при помощи <a href="/ru/docs/Web/JavaScript/Reference/Operators/function">выражения <code>function</code></a> или <a href="/ru/docs/Web/JavaScript/Reference/Statements/function">инструкции <code>function</code></a> и вызова её внутри вашего кода, поскольку такие функции разбираются вместе с остальным кодом.</p>
+<p>Объекты <code>Function</code>, созданные конструктором <code>Function</code>, разбираются при создании функции. Это менее эффективно определения функции при помощи <a href="/ru/docs/Web/JavaScript/Reference/Operators/function">выражения <code>function</code></a> или <a href="/ru/docs/Web/JavaScript/Reference/Statements/function">инструкции <code>function</code></a> и вызова её внутри вашего кода, поскольку такие функции разбираются вместе с остальным кодом.</p>
 
 <p>Все аргументы, переданные в функцию, трактуются как имена идентификаторов параметров создаваемой функции, и имеют тот же порядок следования, что и при их передаче в конструктор функции.</p>
 
@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
 <p><strong>Примечание:</strong> функции, созданные конструктором <code>Function</code>, не создают замыканий на их контексты создания; они всегда создаются в глобальной области видимости. При их вызове, они получат доступ только к своим локальным переменным и переменным из глобальной области видимости, но не к переменным в той области видимости, в которой вызывался конструктор <code>Function</code>. Это поведение отличается от поведения при использовании функции {{jsxref("Global_Objects/eval", "eval")}} с кодом создания функции.</p>
 </div>
 
-<p>Вызов констуктора <code>Function</code> как функции (без использования оператора <code>new</code>) имеет тот же самый эффект, что и вызов его как констуктора.</p>
+<p>Вызов конструктора <code>Function</code> как функции (без использования оператора <code>new</code>) имеет тот же самый эффект, что и вызов его как конструктора.</p>
 
 <h2 id="Properties_and_Methods_of_Function" name="Properties_and_Methods_of_Function">Свойства и методы объекта <code>Function</code></h2>
 
@@ -62,7 +62,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function
 
 <h2 id="Function_instances" name="Function_instances">Экземпляры объекта <code>Function</code></h2>
 
-<p>Экземпляры объекта <code>Function</code> наследуют методы и свойства из объекта {{jsxref("Function.prototype")}}. Как и со всеми другими конструкторами, вы можете изменить объект прототипа констуктора для применения изменений ко всем экземплярам объекта <code>Function</code>.</p>
+<p>Экземпляры объекта <code>Function</code> наследуют методы и свойства из объекта {{jsxref("Function.prototype")}}. Как и со всеми другими конструкторами, вы можете изменить объект прототипа конструктора для применения изменений ко всем экземплярам объекта <code>Function</code>.</p>
 
 <h2 id="Examples" name="Examples">Примеры</h2>
 
@@ -80,7 +80,7 @@ adder(2, 6);
 // &gt; 8
 </pre>
 
-<p>Аргуметы "<code>a</code>" и "<code>b</code>" являются именами формальных аргументов, которые используются в теле функции, "<code>return a + b</code>".</p>
+<p>Аргументы "<code>a</code>" и "<code>b</code>" являются именами формальных аргументов, которые используются в теле функции, "<code>return a + b</code>".</p>
 
 <h3 id="Example_A_recursive_shortcut_to_massively_modify_the_DOM" name="Example:_A_recursive_shortcut_to_massively_modify_the_DOM">Пример: рекурсивное сокращение для массового изменения DOM</h3>
 

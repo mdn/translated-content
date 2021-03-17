@@ -3,7 +3,7 @@ title: Значения клавиш
 slug: Web/API/KeyboardEvent/key/Key_Values
 translation_of: Web/API/KeyboardEvent/key/Key_Values
 ---
-<p>В таблицах ниже перечислены стандартные значения различных категорий клавиш с объяснением того, для чего этота клавиша обычно используется. Соответствующие виртуальные коды клавиш для распространенных платформ включены там, где они доступны.</p>
+<p>В таблицах ниже перечислены стандартные значения различных категорий клавиш с объяснением того, для чего этот клавиша обычно используется. Соответствующие виртуальные коды клавиш для распространенных платформ включены там, где они доступны.</p>
 
 <div class="pull-aside">
 <div class="moreinfo">Узнайте, как использовать эти пары "ключ-значение" в JavaScript с помощью <a href="/docs/Web/API/KeyboardEvent/key">KeyboardEvent.key</a></div>
@@ -166,7 +166,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
   </tr>
   <tr>
    <td><code>"ScrollLock"</code> [2]</td>
-   <td>Клавиша<kbd>Scroll Lock</kbd> Перекключает между режимами прокрутки и перемещения курсора.</td>
+   <td>Клавиша<kbd>Scroll Lock</kbd> Переключает между режимами прокрутки и перемещения курсора.</td>
    <td><code>VK_SCROLL</code> (0x91)</td>
    <td></td>
    <td><code>GDK_KEY_Scroll_Lock</code> (0xFF14)<br>
@@ -1062,7 +1062,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
 
 <h3 id="Только_японские_клавиатуры">Только японские клавиатуры</h3>
 
-<p>Эти клавиши достуны только на японских клавиатурах.</p>
+<p>Эти клавиши доступны только на японских клавиатурах.</p>
 
 <table class="standard-table">
  <thead>
@@ -1179,7 +1179,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
 
 <p>[2] <code>VK_HANGUL</code> и <code>VK_KANA</code> <span class="tlid-translation translation" lang="ru"><span title="">используют один и тот же числовой код клавиши</span></span> в Windows, также как <code>VK_HANJA</code> и <code>VK_KANJI</code>.</p>
 
-<p>[3] До Firefox 37, клавиша <kbd>Hankaku</kbd> (half-width) генерировала значание <code>"HalfWidth"</code> в Firefox. Такжк, этак клавиша генерировала значаение <code>"Unidentified"</code> в Internet Explorer (проверено в версиях 9 и 11).</p>
+<p>[3] До Firefox 37, клавиша <kbd>Hankaku</kbd> (half-width) генерировала значение <code>"HalfWidth"</code> в Firefox. Также, этак клавиша генерировала значение <code>"Unidentified"</code> в Internet Explorer (проверено в версиях 9 и 11).</p>
 
 <p>[4] Internet Explorer (проверено в версиях 9 и 11) возвращал <code>"Unidentified"</code> для клавиши <kbd>Zenkaku</kbd>; Firefox 36 и более ранние определяли эту клавишу как <code>"FullWidth"</code> <span class="tlid-translation translation" lang="ru"><span title="">на японских раскладках клавиатуры</span></span> и <code>"Unidentified"</code> на всех остальных <span class="tlid-translation translation" lang="ru"><span title="">раскладках клавиатуры</span></span>. Firefox 37 и выше, а также все версии Google Chrome, корректно возвращают <code>"Zenkaku"</code>.</p>
 
@@ -3444,7 +3444,7 @@ translation_of: Web/API/KeyboardEvent/key/Key_Values
 
 <p>[1] Internet Explorer, Edge, и Firefox (36 и ранее) используют <code>"SelectMedia"</code> вместо <code>"LaunchMediaPlayer"</code>. Firefox 37 и Firefox 48 используют <code>"MediaSelect"</code>. Firefox 49 <span class="tlid-translation translation" lang="ru"><span title="">был обновлен в соответствии с последней спецификацией и теперь возвращает</span></span> <code>"LaunchMediaPlayer"</code>.</p>
 
-<p>[2] Google Chrome 57 и ранние возращают <code>"LaunchMyComputer"</code> вместо <code>"LaunchApplication1"</code>. Смотри <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=612743">Chrome Bug 612743</a> для дополнительной информации.</p>
+<p>[2] Google Chrome 57 и ранние возвращают <code>"LaunchMyComputer"</code> вместо <code>"LaunchApplication1"</code>. Смотри <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=612743">Chrome Bug 612743</a> для дополнительной информации.</p>
 
 <p>[3] Google Chrome 57 и ранние возвращают <code>"LaunchCalculator"</code> вместо <code>"LaunchApplication2"</code>. Смотри <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=612743">Chrome Bug 612743</a> для дополнительной информации.</p>
 

@@ -922,7 +922,7 @@
 /fr/docs/DOM/document.createTextNode	/fr/docs/Web/API/Document/createTextNode
 /fr/docs/DOM/document.documentElement	/fr/docs/Web/API/Document/documentElement
 /fr/docs/DOM/document.documentURIObject	/fr/docs/Web/API/Document/documentURIObject
-/fr/docs/DOM/document.elementFromPoint	/fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
+/fr/docs/DOM/document.elementFromPoint	/fr/docs/Web/API/Document/elementFromPoint
 /fr/docs/DOM/document.execCommand	/fr/docs/Web/API/Document/execCommand
 /fr/docs/DOM/document.firstChild	/fr/docs/Web/API/Node/firstChild
 /fr/docs/DOM/document.getElementById	/fr/docs/Web/API/Document/getElementById
@@ -1084,7 +1084,7 @@
 /fr/docs/DOM:document.createTextNode	/fr/docs/Web/API/Document/createTextNode
 /fr/docs/DOM:document.documentElement	/fr/docs/Web/API/Document/documentElement
 /fr/docs/DOM:document.documentURIObject	/fr/docs/Web/API/Document/documentURIObject
-/fr/docs/DOM:document.elementFromPoint	/fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
+/fr/docs/DOM:document.elementFromPoint	/fr/docs/Web/API/Document/elementFromPoint
 /fr/docs/DOM:document.firstChild	/fr/docs/Web/API/Node/firstChild
 /fr/docs/DOM:document.getElementById	/fr/docs/Web/API/Document/getElementById
 /fr/docs/DOM:document.getElementsByClassName	/fr/docs/Web/API/Document/getElementsByClassName
@@ -3729,7 +3729,7 @@
 /fr/docs/Web/API/Document.createTextNode	/fr/docs/Web/API/Document/createTextNode
 /fr/docs/Web/API/Document.documentElement	/fr/docs/Web/API/Document/documentElement
 /fr/docs/Web/API/Document.documentURIObject	/fr/docs/Web/API/Document/documentURIObject
-/fr/docs/Web/API/Document.elementFromPoint	/fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
+/fr/docs/Web/API/Document.elementFromPoint	/fr/docs/Web/API/Document/elementFromPoint
 /fr/docs/Web/API/Document.evaluate	/fr/docs/Web/API/Document/evaluate
 /fr/docs/Web/API/Document.execCommand	/fr/docs/Web/API/Document/execCommand
 /fr/docs/Web/API/Document.firstChild	/fr/docs/Web/API/Node/firstChild
@@ -3748,8 +3748,10 @@
 /fr/docs/Web/API/Document/defaultView/popstate_event	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Document/defaultView/storage_event	/fr/docs/Web/API/Window/storage_event
 /fr/docs/Web/API/Document/domConfig	/fr/docs/Web/API/Document
-/fr/docs/Web/API/Document/elementFromPoint	/fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint
+/fr/docs/Web/API/DocumentOrShadowRoot	/fr/docs/orphaned/Web/API/DocumentOrShadowRoot
 /fr/docs/Web/API/DocumentOrShadowRoot/activeElement	/fr/docs/Web/API/Document/activeElement
+/fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/fr/docs/Web/API/Document/elementFromPoint
+/fr/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/fr/docs/Web/API/Document/elementsFromPoint
 /fr/docs/Web/API/DocumentOrShadowRoot/getSelection	/fr/docs/Web/API/Document/getSelection
 /fr/docs/Web/API/DocumentOrShadowRoot/styleSheets	/fr/docs/Web/API/Document/styleSheets
 /fr/docs/Web/API/Document_Object_Model/Exemples	/fr/docs/Web/API/Document_Object_Model/Examples
