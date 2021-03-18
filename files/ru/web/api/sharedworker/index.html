@@ -46,7 +46,7 @@ translation_of: Web/API/SharedWorker
 <pre class="brush: js">var myWorker = new SharedWorker("worker.js");
 </pre>
 
-<p>далее скрипты получают доступ к воркеру через объект {{domxref("MessagePort")}}, находящийся в свойстве {{domxref("SharedWorker.port")}}. Если устанавливается хэндлер события onmessage, port самостоятельно начинает работу, вызывая собственный метод <code>start(), </code>если же принимать события с помощью слушателя события  "message" через addEventListener, необходимо вызвать метод <code>start()</code> самостоятельно:</p>
+<p>далее скрипты получают доступ к воркеру через объект {{domxref("MessagePort")}}, находящийся в свойстве {{domxref("SharedWorker.port")}}. Если устанавливается обработчик события onmessage, port самостоятельно начинает работу, вызывая собственный метод <code>start(), </code>если же принимать события с помощью обработчика события  "message" через addEventListener, необходимо вызвать метод <code>start()</code> самостоятельно:</p>
 
 <pre class="brush: js">myWorker.port.start();</pre>
 

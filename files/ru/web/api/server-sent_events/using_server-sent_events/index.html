@@ -20,7 +20,7 @@ translation_of: Web/API/Server-sent_events/Using_server-sent_events
 <pre class="brush: js"><code>const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } ); </code>
 </pre>
 
-<p>Как только вы создали экземпляр <code>EventSource</code>, вы можете начать прослушивание сообщений с сервера, добавив обработчик для события {{event("message")}} :</p>
+<p>Как только вы создали экземпляр <code>EventSource</code>, вы можете начать получать сообщения с сервера, добавив обработчик события {{event("message")}} :</p>
 
 <pre class="brush: js">evtSource.onmessage = function(event) {
   const newElement = document.createElement("li");
@@ -31,9 +31,9 @@ translation_of: Web/API/Server-sent_events/Using_server-sent_events
 }
 </pre>
 
-<p>Этот код прослушивает входящие сообщения (то есть уведомления от сервера, на которых нет поля <code>event</code>) и добавляет текст сообщения в список в HTML-документе.</p>
+<p>Этот код обрабатывает входящие сообщения (то есть уведомления от сервера, на которых нет поля <code>event</code>) и добавляет текст сообщения в список в HTML-документе.</p>
 
-<p>Вы также можете прослушивать события, используя <code>addEventListener()</code>:</p>
+<p>Вы также можете обрабатывать события, используя <code>addEventListener()</code>:</p>
 
 <pre class="brush: js"><code>evtSource.addEventListener("ping", function(event) {
   const newElement = document.createElement("li");
@@ -114,7 +114,7 @@ while (1) {
 
 <dl>
  <dt><code>event</code></dt>
- <dd>Строка, идентифицирующая тип описанного события. Если <code>event</code> указан, то событие будет отправлено в браузер слушателю для указанного имени события. Исходный код сайта должен использовать <code>addEventListener()</code> для прослушивания именованных событий. Обработчик <code>onmessage</code> вызывается, если для сообщения не указано имя события.</dd>
+ <dd>Строка, идентифицирующая тип описанного события. Если <code>event</code> указан, то событие будет отправлено в браузер обработчику указанного имени события. Исходный код сайта должен использовать <code>addEventListener()</code> для обработки именованных событий. Обработчик <code>onmessage</code> вызывается, если для сообщения не указано имя события.</dd>
  <dt><code>data</code></dt>
  <dd>Поле данных для сообщения. Когда <code>EventSource</code> получает несколько последовательных строк, начинающихся с <code>data:</code>, <a href="http://www.w3.org/TR/eventsource/#dispatchMessage">он объединяет их</a>, вставляя символ новой строки между каждой из них. Последние переводы строки удаляются.</dd>
  <dt><code>id</code></dt>

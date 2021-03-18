@@ -13,7 +13,7 @@ translation_of: Web/API/NavigatorOnLine/onLine
 
 <p><span id="result_box" lang="ru"><span class="hps">В Firefox</span> <span class="hps">и</span> <span class="hps">Internet Explorer</span><span>, переключение</span> <span class="hps">браузер</span>а <span class="hps">в автономный режим</span> <span class="hps">посылает</span> </span><code>false</code> значение. Во всех остальных случаях возвращается значение<code> true</code>.</p>
 
-<p><span id="result_box" lang="ru"><span class="hps">Вы можете</span> <span class="hps">увидеть изменения</span> <span class="hps">в</span> <span class="hps">состоянии сети</span> <span class="hps">путем прослушивания</span> <span class="hps">событий </span></span><a href="/en-US/docs/Web/API/document.ononline"><code>window.ononline</code></a> и <a href="/en-US/docs/Web/API/document.onoffline"><code>window.onoffline</code></a>.</p>
+<p><span id="result_box" lang="ru"><span class="hps">Вы можете</span> <span class="hps">увидеть изменения</span> <span class="hps">в</span> <span class="hps">состоянии сети</span> <span class="hps">путем обработки</span> <span class="hps">событий </span></span><a href="/en-US/docs/Web/API/document.ononline"><code>window.ononline</code></a> и <a href="/en-US/docs/Web/API/document.onoffline"><code>window.onoffline</code></a>.</p>
 
 <h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
@@ -38,7 +38,7 @@ translation_of: Web/API/NavigatorOnLine/onLine
 
 <p>Если браузер не поддерживает<code> navigator.onLine</code> в примере выше, то всегда будет<code> false</code>/<code>undefined</code>.</p>
 
-<p>Чтобы увидеть изменения в состоянии сети, используйте <code><a href="/en-US/docs/DOM/element.addEventListener" title="DOM/element.addEventListener">addEventListener</a></code> для прослушивания событий <code>window.ononline</code> и <code>window.onoffline</code>, как показано в примере:</p>
+<p>Чтобы увидеть изменения в состоянии сети, используйте <code><a href="/en-US/docs/DOM/element.addEventListener" title="DOM/element.addEventListener">addEventListener</a></code> для обработки событий <code>window.ononline</code> и <code>window.onoffline</code>, как показано в примере:</p>
 
 <pre class="brush: js">window.addEventListener("offline", function(e) {alert("offline");})
 

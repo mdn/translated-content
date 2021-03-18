@@ -43,7 +43,7 @@ translation_of: Web/API/Window/beforeunload_event
 
 <p>Для борьбы с нежелательными всплывающими окнами браузеры могут не отображать подсказки, созданные в обработчиках событий <strong>beforeunload</strong>, за исключением случаев, когда страница была обработана или даже не отображается вообще.</p>
 
-<p>Прикрепление обработчика/слушателя событий к <code>window</code> или <code>document</code>'s <code>beforeunload</code> событие не позволяет браузерам использовать кэш навигации по страницам в памяти, наподобие <a href="/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching">Firefox's Back-Forward cache</a> or <a href="https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/">WebKit's Page Cache</a>.</p>
+<p>Прикрепление обработчика событий к <code>window</code> или <code>document</code> <code>beforeunload</code> событие не позволяет браузерам использовать кэш навигации по страницам в памяти, наподобие <a href="/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching">Firefox's Back-Forward cache</a> or <a href="https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/">WebKit's Page Cache</a>.</p>
 
 <p>В спецификации HTML указано, что вызовы {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, и {{domxref("window.prompt()")}} методы могут быть проигнорированы во время этого события. Посмотреть <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts" lang="ru">HTML specification</a> для более подробной информации.</p>
 

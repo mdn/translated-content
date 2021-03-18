@@ -24,7 +24,7 @@ var panner = audioCtx.createPanner();</pre>
 <h2 id="Пример">Пример</h2>
 
 <div class="note_trans">
-<div>Ниже можно увидеть пример использования {{domxref("AudioListener")}}, {{domxref("PannerNode")}} и метода <code>createPanner()</code> для управления пространством объемного звука. Обычно определяется положение в трехмерном пространстве, изначально занимаемое слушателем (listener) и источником звука (panner), а затем, при использовании приложения, обновляется позиция одного из них или обоих. Например, вы можете перемещать персонажа внутри игрового мира, и желательно чтобы передача звука изменялась реалистично, по мере приближения или отдаления персонажа относительно источника звука, вроде стереопроигрывателя. В этом примере можно видеть, что все это управляется функциями <code>moveRight()</code>, <code>moveLeft()</code>, и т.п., которые устанавливают новые значения для положения паннера через функцию <code>PositionPanner()</code>.</div>
+<div>Ниже можно увидеть пример использования {{domxref("AudioListener")}}, {{domxref("PannerNode")}} и метода <code>createPanner()</code> для управления пространством объемного звука. Обычно определяется положение в трехмерном пространстве, изначально занимаемое обработчиком (listener) и источником звука (panner), а затем, при использовании приложения, обновляется позиция одного из них или обоих. Например, вы можете перемещать персонажа внутри игрового мира, и желательно чтобы передача звука изменялась реалистично, по мере приближения или отдаления персонажа относительно источника звука, вроде стереопроигрывателя. В этом примере можно видеть, что все это управляется функциями <code>moveRight()</code>, <code>moveLeft()</code>, и т.п., которые устанавливают новые значения для положения паннера через функцию <code>PositionPanner()</code>.</div>
 
 <div> </div>
 
@@ -40,7 +40,7 @@ var panner = audioCtx.createPanner();</pre>
 <p>Note how we have used some feature detection to either give the browser the newer property values (like {{domxref("AudioListener.forwardX")}}) for setting position, etc. if it supports those, or older methods (like {{domxref("AudioListener.setOrientation()")}}) if it still supports those but not the new properties.</p>
 
 <pre class="brush: js">// set up listener and panner position information
-// установка сведений о слушателе (listener) и положении panner'а
+// установка сведений обработчика и положении panner'а
 var WIDTH = window.innerWidth;
 var HEIGHT = window.innerHeight;
 
@@ -100,7 +100,7 @@ rightBound = xPos - 50;
 xIterator = WIDTH/150;
 
 // listener will always be in the same place for this demo
-// в этом демо слушатель всегда находится на одном и том же месте
+// в этом демо обработчик всегда находится на одном и том же месте
 
 if(listener.positionX) {
   listener.positionX.value = xPos;

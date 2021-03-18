@@ -82,7 +82,7 @@ alert( "username = " + sessionStorage.getItem("username"));
     field.value = sessionStorage.getItem("autosave");
  }
 
- // Прослушивать изменения значения текстового поля
+ // Обрабатывать изменения значения текстового поля
  field.addEventListener("change", function() {
     // И сохранить результаты в объект хранилища сессий
     sessionStorage.setItem("autosave", field.value);
