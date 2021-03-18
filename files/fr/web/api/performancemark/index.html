@@ -1,0 +1,76 @@
+---
+title: PerformanceMark
+slug: Web/API/PerformanceMark
+tags:
+  - API
+  - Interface
+  - Performance Timing API
+  - Reference
+  - Performance Web
+translation_of: Web/API/PerformanceMark
+---
+<div>{{APIRef("User Timing API")}}</div>
+
+<p class="summary"><code><strong>PerformanceMark</strong></code> est une interface <em>abstraite</em> pour les objets {{domxref("PerformanceEntry")}} avec un {{domxref("PerformanceEntry.entryType", "entryType")}} « <code>mark</code> ».Les entrées de ce type sont créées en appelant {{domxref("Performance.mark", "performance.mark()")}} pour ajouter un {{domxref("DOMHighResTimeStamp")}} <em>nommé</em> (le <em>marquage</em>) à la <em>chronologie des performances</em> du navigateur.</p>
+
+<p>{{InheritanceDiagram}}</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Properties">Propriétés</h2>
+
+<p>Cette interface n'a pas de propriétés mais elle étend les propriétés de {{domxref("PerformanceEntry")}} suivantes en qualifiant/contraignant les propriétés comme suit :</p>
+
+<dl>
+  <dt>{{domxref("PerformanceEntry.entryType")}}</dt>
+  <dd>Retourne « <code>mark</code> ».</dd>
+  <dt>{{domxref("PerformanceEntry.name")}}</dt>
+  <dd>Retourne le nom donné au marquage lorsqu'il a été créé via un appel de {{domxref("Performance.mark()", "performance.mark()")}}.</dd>
+  <dt>{{domxref("PerformanceEntry.startTime")}}</dt>
+  <dd>Retourne le {{domxref("DOMHighResTimeStamp")}} à partir du moment où {{domxref("Performance.mark()", "performance.mark()")}} a été appelé.</dd>
+  <dt>{{domxref("PerformanceEntry.duration")}}</dt>
+  <dd>Retourne "<code>0</code>". (Un marquage n'a pas de <em>durée</em>.)</dd>
+</dl>
+
+<h2 id="Methods">Méthodes</h2>
+
+<p>Cette interface n'a pas de méthodes.</p>
+
+<h2 id="Example">Exemple</h2>
+
+<p>Voir l'exemple dans <a href="/fr/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">Utilisation de l'API User Timing</a>.</p>
+
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('User Timing Level 2', '#performancemark', 'PerformanceMark')}}</td>
+      <td>{{Spec2('User Timing Level 2')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('User Timing', '#performancemark', 'PerformanceMark')}}</td>
+      <td>{{Spec2('User Timing')}}</td>
+      <td>Définition initiale.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.PerformanceMark")}}</p>
+
+<h2 id="See_also">Voir aussi</h2>
+
+<ul>
+  <li><a href="/fr/docs/Web/API/User_Timing_API">User Timing (Aperçu)</a></li>
+  <li><a href="/fr/docs/Web/API/User_Timing_API/Using_the_User_Timing_API">Utilisation de l'API User Timing</a></li>
+</ul>
