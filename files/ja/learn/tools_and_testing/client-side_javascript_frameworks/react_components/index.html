@@ -1,7 +1,16 @@
 ---
-title: React アプリのコンポーネント化
+title: アプリのコンポーネント化
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
+tags:
+  - Beginner
+  - Frameworks
+  - JavaScript
+  - Learn
+  - React
+  - client-side
+  - events
+  - interactivity
+  - state
 ---
 
 <div>{{LearnSidebar}}</div>
@@ -18,22 +27,23 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提条件:</th>
       <td>
         <p>
-          <a href="/en-US/docs/Learn/HTML">HTML</a>、<a
-            href="/en-US/docs/Learn/CSS"
+          <a href="/ja/docs/Learn/HTML">HTML</a>、<a
+            href="/ja/docs/Learn/CSS"
             >CSS</a
-          >、<a href="/en-US/docs/Learn/JavaScript">JavaScript</a
+          >、<a href="/ja/docs/Learn/JavaScript">JavaScript</a
           > のコア言語に精通していること、<a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >ターミナル/コマンドライン</a
           >の知識があること。
+        </p>
         </p>
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目的:</th>
       <td>
         Todo リストアプリをコンポーネントに分割するための賢明な方法を示すこと。
       </td>
@@ -41,7 +51,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_
   </tbody>
 </table>
 
-<h2 id="最初のコンポーネントの定義">最初のコンポーネントの定義</h2>
+<h2 id="Defining_our_first_component">最初のコンポーネントの定義</h2>
 
 <p>
   コンポーネントの定義は、ある程度練習をするまでは難しいと思われるかもしれませんが、要点は以下の通りです。
@@ -62,18 +72,18 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_
   リスト項目からコンポーネントを作成してみましょう。
 </p>
 
-<h2 id="&lt;Todo_>の作成"><code>&lt;Todo /&gt;</code>の作成</h2>
+<h2 id="Make_a_&lt;Todo_&gt;"><code>&lt;Todo /&gt;</code>の作成</h2>
 
 <p>
   コンポーネントを作る前に、そのための新しいファイルを作らなければなりません。実は、コンポーネント用の新しいディレクトリの作成が必要です。次のコマンドは、<code
-    >components</code
-  >
-  ディレクトリを作成し、その中に
-  <code>Todo.js</code>
-  というファイルを作成します。これらを実行する前に、アプリのルートにいることを確認してください！
+  >components</code
+>
+ディレクトリを作成し、その中に
+<code>Todo.js</code>
+というファイルを作成します。これらを実行する前に、アプリのルートにいることを確認してください！
 </p>
 
-<pre class="brush: bash notranslate">
+<pre class="brush: bash">
 mkdir src/components
 touch src/components/Todo.js</pre
 >
@@ -82,7 +92,7 @@ touch src/components/Todo.js</pre
   新しい <code>Todo.js</code> ファイルは今は空です。ファイルを開いて最初の行に次を入力してください。
 </p>
 
-<pre class="brush: js notranslate">import React from "react";</pre>
+<pre class="brush: js">import React from "react";</pre>
 
 <p>
   今回は
@@ -92,7 +102,7 @@ touch src/components/Todo.js</pre
   にもそのためのコードを追加していきます。このコードでは、関数の定義とエクスポートを一行で定義しています。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 export default function Todo() {
   return (
 
@@ -102,14 +112,14 @@ export default function Todo() {
 
 <p>
   ここまでは問題ありませんが、このコンポーネントは何かを返さなければなりません！<code
-    >src/App.js</code
-  >
-  に戻って、最初の
-  <code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code>
-  をコピーし、<code>Todo.js</code> に貼り付けて、以下のように読み込みます。
+  >src/App.js</code
+>
+に戻って、最初の
+<code><a href="/ja/docs/Web/HTML/Element/li">&lt;li&gt;</a></code>
+をコピーし、<code>Todo.js</code> に貼り付けて、以下のように読み込みます。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 export default function Todo() {
   return (
     &lt;li className="todo stack-small"&gt;
@@ -132,10 +142,9 @@ export default function Todo() {
 }</pre
 >
 
-<div class="blockIndicator note">
+<div class="notecard note">
   <p>
-    <strong>注意</strong>:
-    コンポーネントは常に何かを返さなければなりません。もし今後あなたが何も返さないコンポーネントをレンダリングしようとしたら、React
+    <strong>Note</strong>: コンポーネントは常に何かを返さなければなりません。もし今後あなたが何も返さないコンポーネントをレンダリングしようとしたら、React
     はブラウザにエラーを表示するでしょう。
   </p>
 </div>
@@ -145,7 +154,7 @@ export default function Todo() {
   で、ファイルの先頭付近に次の行を追加して <code>Todo</code> をインポートします。
 </p>
 
-<pre class="brush: js notranslate">import Todo from "./components/Todo";</pre>
+<pre class="brush: js">import Todo from "./components/Todo";</pre>
 
 <p>
   このコンポーネントをインポートすると、<code>App.js</code> の
@@ -155,7 +164,7 @@ export default function Todo() {
   は以下のようになるはずです。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 &lt;ul
   role="list"
   className="todo-list stack-large stack-exception"
@@ -175,8 +184,8 @@ export default function Todo() {
 <p>
   <img
     alt="Our todo list app, with todo components repeating because the label is hardcoded into the component"
-    src="https://mdn.mozillademos.org/files/17255/todo-list-repeating-todos.png"
-    style="border-style: solid; border-width: 1px; height: 954px; width: 856px"
+    src="todo-list-repeating-todos.png"
+    style="border-style: solid; border-width: 1px"
   />
 </p>
 
@@ -185,17 +194,16 @@ export default function Todo() {
   があります。次に、異なるコンポーネント呼び出しで別々のコンテンツをレンダリングする方法を見てみましょう。
 </p>
 
-<h2 id="「一意の」_&lt;Todo_>_を作成">
+<h2 id="Make_a_unique_&lt;Todo_&gt;">
   「一意の」 <code>&lt;Todo /&gt;</code> を作成
 </h2>
 
 <p>
   コンポーネントが強力なのは、UI の一部を再利用し、その UI のソースを 1
-  か所で参照できるからです。問題は、通常、各コンポーネントのすべてを再利用するのではなく、ほとんどの部分を再利用しつつ小さな部分を変更したいということです。そこでプロップ(
-  props )の出番です。
+  か所で参照できるからです。問題は、通常、各コンポーネントのすべてを再利用するのではなく、ほとんどの部分を再利用しつつ小さな部分を変更したいということです。そこでpropsの出番です。
 </p>
 
-<h3 id="name_に何が入るでしょう？"><code>name</code> に何が入るでしょう？</h3>
+<h3 id="Whats_in_a_name"><code>name</code> に何が入るでしょう？</h3>
 
 <p>
   完了させたいタスクの名前を追跡するために、それぞれの
@@ -206,10 +214,10 @@ export default function Todo() {
 <p>
   <code>App.js</code>では、それぞれの
   <code>&lt;Todo /&gt;</code>
-  に名前のプロップを与えます。先ほどのタスクの名前を使ってみましょう。
+  に名前のpropsを与えます。先ほどのタスクの名前を使ってみましょう。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 &lt;Todo name="Eat" /&gt;
 &lt;Todo name="Sleep" /&gt;
 &lt;Todo name="Repeat" /&gt;</pre
@@ -219,7 +227,7 @@ export default function Todo() {
   ブラウザを更新すると...以前と全く同じものが表示されます。<code
     >&lt;Todo /&gt;</code
   >
-  にプロップを与えましたが、まだ使っていません。<code>Todo.js</code>
+  にpropsを与えましたが、まだ使っていません。<code>Todo.js</code>
   に戻って解決しましょう。
 </p>
 
@@ -235,13 +243,15 @@ export default function Todo() {
     >Eat</code
   >
   を
-  <code>name</code> のプロップで置き換えることができます。覚えておいてください:
+  <code>name</code> のpropsで置き換えることができます。覚えておいてください:
   JSX の式の途中では、中括弧を使って変数の値を注入します。
 </p>
 
-<p>これらをまとめると、<code>Todo()</code> 関数は次のようになるはずです。</p>
+<p>
+  これらをまとめると、<code>Todo()</code> 関数は次のようになるはずです。
+</p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 export default function Todo(props) {
   return (
     &lt;li className="todo stack-small"&gt;
@@ -265,45 +275,45 @@ export default function Todo(props) {
 >
 
 <p>
-  これで、ブラウザには3つの一意のタスクが表示されるようになりました。しかし、もう一つの問題が残っています:
+  <em>これで、</em>ブラウザには3つの一意のタスクが表示されるようになりました。しかし、もう一つの問題が残っています:
   これらはすべてデフォルトでチェックされています。
 </p>
 
 <p>
   <img
     alt="Our todo list, with different todo labels now they are passed into the components as props"
-    src="https://mdn.mozillademos.org/files/17256/todo-list-unique-todos.png"
-    style="border-style: solid; border-width: 1px; height: 954px; width: 856px"
+    src="todo-list-unique-todos.png"
+    style="border-style: solid; border-width: 1px"
   />
 </p>
 
-<h3 id="それは_completed_ですか？">それは <code>completed</code> ですか？</h3>
+<h3 id="Is_it_completed">それは <code>completed</code> ですか？</h3>
 
 <p>
   元の静的リストでは、<code>Eat</code>
   だけがチェックされていました。もう一度言いますが、<code>&lt;Todo /&gt;</code
-  >コンポーネントを構成するUIのほとんどを再利用しつつ、一つだけ変更したいのです。これは別のプロップが良い仕事をしてくれます！<code>App.js</code> での各
+  >コンポーネントを構成するUIのほとんどを再利用しつつ、一つだけ変更したいのです。これは別のpropsが良い仕事をしてくれます！<code>App.js</code> での各
   <code>&lt;Todo /&gt;</code>
-  の呼び出しには、完了したことを示す新しいプロップを与えます。最初の
+  の呼び出しには、完了したことを示す新しいpropsを与えます。最初の
   (<code>Eat</code>) は <code>true</code> の値を持ち、残りは
   <code>false</code> にします。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 &lt;Todo name="Eat" completed={true} /&gt;
 &lt;Todo name="Sleep" completed={false} /&gt;
 &lt;Todo name="Repeat" completed={false} /&gt;</pre
 >
 
 <p>
-  先ほどと同様に、これらのプロップを実際に使用するためには
+  先ほどと同様に、これらのpropsを実際に使用するためには
   <code>Todo.js</code> に戻る必要があります。<code>&lt;input /&gt;</code> の
   <code>defaultChecked</code> 属性の値が
-  <code>completed</code> したプロップと同じになるように変更します。これで、Todo
+  <code>completed</code> したpropsと同じになるように変更します。これで、Todo
   コンポーネントの <code>&lt;input /&gt;</code> 要素は次のようになります。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 &lt;input id="todo-0" type="checkbox" defaultChecked={props.completed} /&gt;</pre
 >
 
@@ -315,28 +325,28 @@ export default function Todo(props) {
 <p>
   <img
     alt="Our todo list app, now with differing checked states - some checkboxes are checked, others not"
-    src="https://mdn.mozillademos.org/files/17254/todo-list-differing-checked-states.png"
-    style="border-style: solid; border-width: 1px; height: 954px; width: 856px"
+    src="todo-list-differing-checked-states.png"
+    style="border-style: solid; border-width: 1px"
   />
 </p>
 
 <p>
   各
   <code>&lt;Todo /&gt;</code>
-  コンポーネントの<code>completed</code> プロップを変更すると、ブラウザはそれに応じてレンダリングされた同等のチェックボックスをチェックしたり、チェックを外したりします。
+  コンポーネントの<code>completed</code> propsを変更すると、ブラウザはそれに応じてレンダリングされた同等のチェックボックスをチェックしたり、チェックを外したりします。
 </p>
 
-<h3 id="id_をください"><code>id</code> をください</h3>
+<h3 id="Gimme_some_id_please"><code>id</code> をください</h3>
 
 <p>
   現在、<code>&lt;Todo /&gt;</code> コンポーネントはすべてのタスクに
   <code>todo-0</code> という <code>id</code> 属性を与えています。これは悪い HTML
   です、なぜなら
-  <a href="/en-US/docs/Web/HTML/Global_attributes/id">id 属性</a
+  <a href="/ja/docs/Web/HTML/Global_attributes/id">id 属性</a
   >は一意でなければならないからです (CSS や JavaScript
   などでドキュメントフラグメントの一意な識別子として使用されます)。つまり、各
   <code>Todo</code> に対して一意の値を取る
-  <code>id</code> プロップをコンポーネントに与えるべきです。
+  <code>id</code> propsをコンポーネントに与えるべきです。
 </p>
 
 <p>
@@ -345,7 +355,7 @@ export default function Todo(props) {
   を与えてみましょう。<code>i</code> は毎回1つずつ大きくなっていきます。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 &lt;Todo name="Eat" completed={true} id="todo-0" /&gt;
 &lt;Todo name="Sleep" completed={false} id="todo-1" /&gt;
 &lt;Todo name="Repeat" completed={false} id="todo-2" /&gt;</pre
@@ -353,12 +363,12 @@ export default function Todo(props) {
 
 <p>
   ここで <code>Todo.js</code> に戻り、<code>id</code>
-  プロップを使うようにします。これは <code>&lt;input /&gt;</code> 要素の
+  propsを使うようにします。これは <code>&lt;input /&gt;</code> 要素の
   <code>id</code> 属性の値とラベルの
   <code>htmlFor</code> 属性の値を置き換える必要があります。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 &lt;div className="c-cb"&gt;
   &lt;input id={props.id} type="checkbox" defaultChecked={props.completed} /&gt;
   &lt;label className="todo-label" htmlFor={props.id}&gt;
@@ -367,7 +377,7 @@ export default function Todo(props) {
 &lt;/div&gt;</pre
 >
 
-<h2 id="ここまでは順調ですか？">ここまでは順調ですか？</h2>
+<h2 id="So_far_so_good">ここまでは順調ですか？</h2>
 
 <p>
   今のところ React
@@ -375,7 +385,7 @@ export default function Todo(props) {
     >&lt;Todo /&gt;</code
   >
   コンポーネントをレンダリングする3つの行はほぼ同じですが、1つだけ違う点があります:
-  それぞれのプロップの値です。
+  それぞれのpropsの値です。
 </p>
 
 <p>
@@ -383,7 +393,7 @@ export default function Todo(props) {
   のコアな能力の一つであるイテレーション（反復処理）を使えば、コードをクリーンアップすることができます。イテレーションを使うためには、まず自分のタスクを再考する必要があります。
 </p>
 
-<h2 id="データとしてのタスク">データとしてのタスク</h2>
+<h2 id="Tasks_as_data">データとしてのタスク</h2>
 
 <p>
   それぞれのタスクには現在、3つの情報が含まれています:
@@ -397,7 +407,7 @@ export default function Todo(props) {
   を作成してください。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 const DATA = [
   { id: "todo-0", name: "Eat", completed: true },
   { id: "todo-1", name: "Sleep", completed: false },
@@ -406,14 +416,14 @@ const DATA = [
 >
 
 <p>
-  次に、<code>tasks</code> という名前のプロップとして
+  次に、<code>tasks</code> という名前のpropsとして
   <code>&lt;App /&gt;</code> に <code>DATA</code> を渡します。<code
     >src/index.js</code
   >
   の最終行は以下のようになるはずです。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 ReactDOM.render(&lt;App tasks={DATA} /&gt;, document.getElementById("root"));</pre
 >
 
@@ -425,39 +435,43 @@ ReactDOM.render(&lt;App tasks={DATA} /&gt;, document.getElementById("root"));</p
   で確認してください。
 </p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
   <p>
-    <strong>注意</strong>: <code>ALL_CAPS</code> 定数名は JavaScript
+    <strong>Note</strong>: <code>ALL_CAPS</code> 定数名は JavaScript
     では特別な意味はありません;
     他の開発者に「このデータはここで定義された後は変更されません」と伝えるための慣習です。
   </p>
 </div>
 
-<h2 id="イテレーションによるレンダリング">イテレーションによるレンダリング</h2>
+<h2 id="Rendering_with_iteration">イテレーションによるレンダリング</h2>
 
 <p>
   オブジェクトの配列をレンダリングするには、それぞれのオブジェクトを
   <code>&lt;Todo /&gt;</code>
   コンポーネントに変換しなければなりません。JavaScript
   では、データを別のものに変換するための配列メソッド
-  <code>Array.prototype.map()</code> を提供しています。
+  <code
+    ><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+      >Array.prototype.map()</a
+    ></code
+  > を提供しています。
 </p>
 
 <p>
   <code>App()</code
-  >の<code>return</code>文の上に、<code>taskList</code>という新しい<code>const</code>を作り、<code>map()</code>を使って変換します。まず、taskの配列を、各タスクの名前というシンプルなものに変えてみましょう。
+    >の<code>return</code>文の上に、<code>taskList</code>という新しい<code>const</code>を作り、<code>map()</code>を使って変換します。まず、taskの配列を、各タスクの名前というシンプルなものに変えてみましょう。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 const taskList = props.tasks.map(task =&gt; task.name);</pre
 >
 
 <p>
   <code>&lt;ul&gt;</code
-  >のすべてのchildrenを<code>taskList</code>に置き換えてみましょう。
+    >のすべてのchildrenを<code>taskList</code>に置き換えてみましょう。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 &lt;ul
   role="list"
   className="todo-list stack-large stack-exception"
@@ -477,19 +491,19 @@ const taskList = props.tasks.map(task =&gt; task.name);</pre
 <p>
   <img
     alt="Our todo list app with the todo item labels just shown bunched up on one line"
-    src="https://mdn.mozillademos.org/files/17257/todo-list-unstructured-names.png"
-    style="border-style: solid; border-width: 1px; height: 627px; width: 856px"
+    src="todo-list-unstructured-names.png"
+    style="border-style: solid; border-width: 1px"
   />
 </p>
 
 <p>
   この問題を解決するには、<code>map()</code>関数から<code>&lt;Todo /&gt;</code
-  >コンポーネントを返す必要があります -
-  JSXでは、JavaScriptとマークアップ構造を混在させることができることを覚えておいてください!
-  今あるものの代わりに、次のものを試してみましょう。
+    >コンポーネントを返す必要があります -
+    JSXでは、JavaScriptとマークアップ構造を混在させることができることを覚えておいてください!
+    今あるものの代わりに、次のものを試してみましょう。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
  const taskList = props.tasks.map(task =&gt; &lt;Todo /&gt;);</pre
 >
 
@@ -500,22 +514,20 @@ const taskList = props.tasks.map(task =&gt; task.name);</pre
   >コンポーネントに渡したいことを覚えておいてください。これらの知識をまとめると、次のようなコードになります。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 const taskList = props.tasks.map(task =&gt; (
   &lt;Todo id={task.id} name={task.name} completed={task.completed} /&gt;
 ));</pre
 >
 
-<p>
-  今では、アプリは以前のように見え、私たちのコードの繰り返しも少なくなりました。
-</p>
+<p>  今では、アプリは以前のように見え、私たちのコードの繰り返しも少なくなりました。</p>
 
 <h2 id="Unique_keys">ユニーク・キー</h2>
 
 <p>
   Reactは配列からタスクをレンダリングしているので、それらを適切にレンダリングするために、どれがどれなのかを追跡しなければなりません。
   どれがどれなのかを把握して、適切にレンダリングする必要があります。
-  Reactは自分自身で推測で物事を把握しようとしますが、それを助けるために<code>key</code>propを<code
+  Reactは自分自身で推測で物事を把握しようとしますが、それを助けるために<code>key</code> propを<code
     >&lt;Todo /&gt;</code
   >コンポーネントに渡すことで助けてあげることができます。
   <code>key</code>はReactで管理されている特別なpropです。
@@ -527,7 +539,7 @@ const taskList = props.tasks.map(task =&gt; (
   <code>taskList</code>は次のように更新します。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 const taskList = props.tasks.map(task =&gt; (
     &lt;Todo
       id={task.id}
@@ -569,13 +581,13 @@ const taskList = props.tasks.map(task =&gt; (
   アプリのルートディレクトリにいることに注意してください。
 </p>
 
-<pre class="brush: bash notranslate">
+<pre class="brush: bash">
 touch src/components/Form.js src/components/FilterButton.js</pre
 >
 
-<h3 id="The_&lt;Form_>">The <code>&lt;Form /&gt;</code></h3>
+<h3 id="The_&lt;Form_&gt;">The <code>&lt;Form /&gt;</code></h3>
 
-<p><code>components/Form.js</code>開いて、以下のようにしてください。:</p>
+<p><code>components/Form.js</code>開いて、以下のようにしてください。</p>
 
 <ul>
   <li>Todo.jsで行ったように、ファイルの先頭でReactをImportします。</li>
@@ -592,7 +604,7 @@ touch src/components/Form.js src/components/FilterButton.js</pre
 
 <p>あなたの<code>Form.js</code>ファイルは次のようになります。</p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 import React from "react";
 
 function Form(props) {
@@ -620,7 +632,7 @@ function Form(props) {
 export default Form;</pre
 >
 
-<h3 id="The_&lt;FilterButton_>">The &lt;FilterButton /&gt;</h3>
+<h3 id="The_&lt;FilterButton_&gt;">The &lt;FilterButton /&gt;</h3>
 
 <p>
   <code>FilterButton.js</code>を<code>Form.js</code>のようにします。
@@ -628,7 +640,7 @@ export default Form;</pre
 
 <p>ファイルの内容は以下のようになります:</p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 import React from "react";
 
 function FilterButton(props) {
@@ -644,21 +656,19 @@ function FilterButton(props) {
 export default FilterButton;</pre
 >
 
-<div class="blockIndicator note">
+<div class="notecard note">
   <p>
     <strong>Note</strong>: ここでは、最初に<Todo />コンポーネントで行ったのと同じ間違いをしていることに気づくかもしれません。
     つまり、それぞれのボタンは同じものになるということです。
     これでいいのです:) 
     このコンポーネントの修正は、後ほどで行います<a
-    href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#Back_to_the_filter_buttons"
+    href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#Back_to_the_filter_buttons"
     >(Back to the filter buttons)</a
   >
   </p>
 </div>
 
-<h2 id="Importing_all_our_components">
-  すべてのコンポーネントのImport
-</h2>
+<h2 id="Importing_all_our_components">すべてのコンポーネントのImport</h2>
 
 <p>新しいコンポーネントを使ってみましょう。</p>
 
@@ -672,7 +682,7 @@ export default FilterButton;</pre
   コンポーネントのレンダリングを行うと、<code>App.js</code>は次のようになります。
 </p>
 
-<pre class="brush: js notranslate">
+<pre class="brush: js">
 import React from "react";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
@@ -734,13 +744,13 @@ export default App;</pre
 <ul>
   <li>
     <a
-      href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction"
+      href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction"
       >Introduction to client-side frameworks</a
     >
   </li>
   <li>
     <a
-      href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features"
+      href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features"
       >Framework main features</a
     >
   </li>
@@ -749,43 +759,43 @@ export default App;</pre
     <ul>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"
           >Getting started with React</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning"
           >Beginning our React todo list</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components"
           >Componentizing our React app</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state"
           >React interactivity: Events and state</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering"
           >React interactivity: Editing, filtering, conditional rendering</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility"
           >Accessibility in React</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources"
           >React resources</a
         >
       </li>
@@ -796,37 +806,37 @@ export default App;</pre
     <ul>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started"
           >Getting started with Ember</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization"
           >Ember app structure and componentization</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state"
           >Ember interactivity: Events, classes and state</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer"
           >Ember Interactivity: Footer functionality, conditional rendering</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing"
           >Routing in Ember</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources"
           >Ember resources and troubleshooting</a
         >
       </li>
@@ -837,55 +847,55 @@ export default App;</pre
     <ul>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started"
           >Getting started with Vue</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component"
           >Creating our first Vue component</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists"
           >Rendering a list of Vue components</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models"
           >Adding a new todo form: Vue events, methods, and models</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling"
           >Styling Vue components with CSS</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties"
           >Using Vue computed properties</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering"
           >Vue conditional rendering: editing existing todos</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management"
           >Focus management with Vue refs</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources"
           >Vue resources</a
         >
       </li>
@@ -896,49 +906,49 @@ export default App;</pre
     <ul>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started"
           >Getting started with Svelte</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning"
           >Starting our Svelte Todo list app</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props"
           >Dynamic behavior in Svelte: working with variables and props</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components"
           >Componentizing our Svelte app</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility"
           >Advanced Svelte: Reactivity, lifecycle, accessibility</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores"
           >Working with Svelte stores</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript"
           >TypeScript support in Svelte</a
         >
       </li>
       <li>
         <a
-          href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next"
+          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next"
           >Deployment and next steps</a
         >
       </li>
