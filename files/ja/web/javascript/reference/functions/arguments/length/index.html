@@ -2,24 +2,23 @@
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
 tags:
-  - arguments
+- Functions
+- JavaScript
+- Property
+- arguments
 translation_of: Web/JavaScript/Reference/Functions/arguments/length
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
-<p><strong><code>arguments.length</code></strong> プロパティは、関数に渡された引数の数を含みます。</p>
+<p><strong><code>arguments.length</code></strong> プロパティは、関数に渡された引数の数が入ります。</p>
 
-<h2 id="構文">構文</h2>
+<h2 id="Description">解説</h2>
 
-<pre class="syntaxbox">arguments.length</pre>
+<p>arguments.length プロパティは、実際に関数に渡された引数の数を提供します。これは、定義されたパラメーターの数以上にも以下にもできます（{{jsxref("Function.length")}} を見てください）。</p>
 
-<h2 id="Description" name="Description">説明</h2>
+<h2 id="Examples">例</h2>
 
-<p>The arguments.length プロパティは、実際に関数に渡された引数の数を提供します。これは、定義されたパラメーターの数以上にも以下にもできます（{{jsxref("Function.length")}} を見てください）。</p>
-
-<h2 id="Examples" name="Examples">例</h2>
-
-<h3 id="arguments.length_を使用する"><code>arguments.length</code> を使用する</h3>
+<h3 id="Using_arguments.length"><code>arguments.length</code> の使用</h3>
 
 <p>この例では、2 つ以上の数を加算する関数を定義しています。</p>
 
@@ -32,91 +31,28 @@ translation_of: Web/JavaScript/Reference/Functions/arguments/length
 }
 </pre>
 
-<h2 id="仕様">仕様</h2>
+<div class="note">
+<p>{{jsxref("Function.length")}} と arguments.length の違いに注意してください</p>
+</div>
+
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>初期定義。JavaScript 1.1 で実装。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
+   <th scope="col">仕様書</th>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{CompatibilityTable}}</p>
+<p>{{Compat("javascript.functions.arguments.length")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>機能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本サポート</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>機能</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本サポート</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="関連項目">関連項目</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>{{jsxref("Function")}}</li>
