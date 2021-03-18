@@ -32,14 +32,14 @@ translation_of: >-
       <th scope="row">전제조건:</th>
       <td>
         <p>
-          <a href="/ko/docs/Learn/HTML">HTML</a>、<a href="/ko/docs/Learn/CSS"
+          <a href="/ko/docs/Learn/HTML">HTML</a>,<a href="/ko/docs/Learn/CSS"
             >CSS</a
-          >、<a href="/ko/docs/Learn/JavaScript">JavaScript</a> 에
+          >,<a href="/ko/docs/Learn/JavaScript">JavaScript</a> 에
           익숙해야합니다.<a
             href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >터미널/커맨드라인</a
           >
-          에 관한 지식이 있어야 합니다.。
+          에 관한 지식이 있어야 합니다.
         </p>
 
         <p>
@@ -193,8 +193,8 @@ const header = &lt;header&gt;
 </p>
 
 <pre class="brush: js notranslate">
-const header = React.createElement("header"、null、
-  React.createElement("h1"、null、 "Mozilla Developer Network")
+const header = React.createElement("header",null,
+  React.createElement("h1",null, "Mozilla Developer Network")
 );</pre
 >
 
@@ -280,8 +280,7 @@ const header = React.createElement("header"、null、
   >
   (<strong>WSL</strong>)
   둘 중 무엇이든 좋습니다.
-  혹시 일반적인 커맨드를 확인해보시려면 
-  の両方が適しています。これら、および一般的な端末コマンドの詳細については、<a
+  혹시 일반적인 커맨드를 확인해보시려면, <a
     href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
     >커멘드라인 크래시 코스</a
   >를 참조해 주시길 바랍니다.
@@ -732,7 +731,7 @@ function App() {
 >
 
 <p>
-  다음에는 여덟 번째 줄에 "world" 대신 <code>subject</code> 변수를 사용해봅시다.
+  다음은 여덟 번째 줄 "world" 대신 <code>subject</code> 변수를 사용해봅시다.
 </p>
 
 <pre class="notranslate">
@@ -779,7 +778,7 @@ ReactDOM.render(&lt;App subject="Clarice" /&gt;, document.getElementById('root')
 >
 
 <p>
-  <code>App.js</code>으로 돌아와, App 함수 자체를 다시 한 번 봅시다. 이 함수는 다음과 같이 되어있습니다.(직관적으로 볼 수 있도록 <code>return</code>은 생략했습니다.)
+  <code>App.js</code>으로 돌아와, App 함수 자체를 다시 한 번 봅시다. 이 함수는 다음과 같이 되어있습니다.(직관적으로 볼 수 있도록 <code>return</code>문은 생략했습니다.)
 </p>
 
 <pre class="notranslate">
@@ -842,11 +841,11 @@ function App(props) {
 
 <p>
   이로써 우리는 React를 로컬 환경에 설치하는 방법, 스타터 어플리케이션 만드는 방법, 기본적으로 어떻게 움직이는가를 알 수 있는 React 입문이 마쳤습니다.
-  다음 글에는, 첫 어플리케이션으로 익숙한 ToDo List를 만드는 것을 시작할 것입니다.
+  다음 글에서는 첫 어플리케이션으로 익숙한 ToDo List를 만드는 것을 시작할 것입니다.
   하지만, 그 전에 우리가 배웠던 것을 되짚어봅시다.
 </p>
 
-<p>React 에서는:</p>
+<p>React는:</p>
 
 <ul>
   <li>
@@ -860,7 +859,7 @@ function App(props) {
   </li>
   <li>
     일부 JSX 속성은 HTML 속성과는 다르므로 JavaScript의 예약어와 충돌하지 않습니다. 예를 들어 HTML의 <code>class</code>는 JSX의 <code>className</code>으로 변환됩니다.
-    여러 단어를 갖고 있는 속성은 카멜케이스로 표현합니다.
+    여러 단어를 갖고 있는 속성은 <code>camelCase</code> 스타일로 표현합니다.
   </li>
   <li>
     props는 컴포넌트 속성를 호출, 전달하도록 작성합니다.
