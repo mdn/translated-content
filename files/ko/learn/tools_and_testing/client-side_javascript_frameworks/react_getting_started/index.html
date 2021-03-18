@@ -493,7 +493,7 @@ export default App;</pre
 </p>
 
 <h3 id="Import_statements" name="Import_statements">
-  import 문에 대해서
+  import 문에 대하여
 </h3>
 
 <p>
@@ -567,39 +567,33 @@ function App() {
 >
 
 <p>
-  この <code>App</code> 関数は JSX
-  式を返します。この式には、ブラウザーが最終的に DOM
-  にレンダリングするものを定義します。
+  <code>App</code> 함수는 JSX을 리턴합니다.
+  이 표현식은 브라우저가 최종적으로 DOM에 렌더링한다는 의미합니다.
 </p>
 
 <p>
-  HTML と同じように、<code>attribute="value"</code>
-  のように属性をもつ要素があります。3 行目では、<code
-    ><a href="/ja/docs/Web/HTML/Element/div">&lt;div&gt;</a></code
-  >
-  開始タグに <code>className</code> 属性があります。これは HTML の<code
-    ><a href="/ja/docs/Web/HTML/Global_attributes/class">class</a></code
-  >
-  属性と同じですが、JSX は JavaScript であるため使用できません。<code
-    >class</code
-  >
-  が予約されているためです。つまり、JavaScript
-  ではすでにそれを使用しており、もし同様に使うと問題が発生するということです。同じような理由で、他のいくつかの
-  HTML 属性は、HTML とは異なる方法で JSX で記述されています。
+  HTML같이 <code>attribute="value"</code> 속성을 갖는 요소가 있습니다.
+  세 번째 줄에서는 열린<code
+    ><a href="/ko/docs/Web/HTML/Element/div">&lt;div&gt;</a></code
+  >태그에 <code>className</code> 속성이 있습니다.
+  이는 HTML의 <code
+  ><a href="/ko/docs/Web/HTML/Global_attributes/class">class</a> 속성과 동일하지만 JSX은 JavaScript이기때문에 사용할 수 없습니다. 
+  <code>class</code>가 예약어이기 때문입니다.
+  이 상태에서 JavaScript처럼 사용한다면 문제가 발생할 것입니다.
+  이와 같거나 비슷한 이유로 다른 몇가지 HTML 속성은 HTML와는 다르게 JSX에 작성합니다.
 </p>
 
 <p>
-  6 行目の
-  <code><a href="/ja/docs/Web/HTML/Element/p">&lt;p&gt;</a></code>
-  タグを「Hello, world！」に変更して、ファイルを保存します。この変更はブラウザー
-  <code>http://localhost:3000</code>
-  で実行されている開発サーバーですぐにレンダリングされます。次に、<code
-    ><a href="/ja/docs/Web/HTML/Element/a">&lt;a&gt;</a></code
-  >
-  タグを削除して保存します。すると、「Learn React」リンクはなくなります。
+  여섯 번째 줄에 있는
+  <code><a href="/ko/docs/Web/HTML/Element/p">&lt;p&gt;</a></code>
+  태그를 "Hello, world!"로 바꿔 파일을 저장합시다.
+  이 변경은 <code>http://localhost:3000</code>에서 실행되고 있는 개발 서버 브라우저에 바로 렌더링 될 것입니다.
+  다음으로 <code
+  ><a href="/ko/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> 태그를 지운 뒤 저장합시다.
+  그러면 "Learn React" 링크가 사라집니다.
 </p>
 
-<p>あなたの <code>App</code> コンポーネントは次のようになります。</p>
+<p>이제 <code>App</code> 컴포넌트는 다음과 같이 될 것입니다.</p>
 
 <pre class="notranslate">
 function App() {
@@ -617,22 +611,20 @@ function App() {
 >
 
 <h3 id="Export_statements" name="Export_statements">
-  ステートメントのエクスポート
+  export 문에 대하여
 </h3>
 
 <p>
-  <code>App.js</code> ファイルの一番下にある
-  <code>export default App</code> は、<code>App</code>
-  コンポーネントを他のモジュールで使用できるようにしています。
+  <code>App.js</code> 파일 제일 밑에 있는 <code>export default App</code>은, <code>App</code> 컴포넌트를 다른 모듈에서 사용할 수 있게 해줍니다.
 </p>
 
 <h2 id="Interrogating_the_index" name="Interrogating_the_index">
-  index を詳しくみる
+  index를 자세히 톺아봅시다.
 </h2>
 
 <p>
-  <code>src/index.js</code> を開きましょう。<code>App</code>
-  コンポーネントを使用しているのがわかります。このファイルはアプリのエントリーポイントであり、最初は次のようになっています。
+  <code>src/index.js</code>를 열어보죠.
+  <code>App</code> 컴포넌트를 사용하고 있다는 것을 확인하실 수 있습니다. 이 파일은 어플리케이션의 진입점(entry point)입니다. 코드는 아래와 같이 되어있을 겁니다.
 </p>
 
 <pre class="notranslate">
@@ -651,54 +643,41 @@ serviceWorker.unregister();</pre
 >
 
 <p>
-  <code>App.js</code> と同様に、ファイルは、実行する必要のあるすべての JS
-  モジュールとその他のアセットをインポートすることから始まります。<code
-    >src/index.css</code
-  >
-  ではアプリ全体に適用されるグローバルスタイルを保持します。ここに、インポートされた<code>App</code>コンポーネントも確認できます。下部の
-  <code>export</code> により、<code>App.js</code>
-  がインポートできるようになりました。
+  <code>App.js</code>와 마찬가지로, 이 파일은 모든 JS 모듈과 실행하는 데 필요한 것들을 가져오는 것부터 시작합니다. <code>src/index.css</code>은 전체 어플리케이션에 적용될 글로벌 스타일을 갖고 있습니다.
+  이는 <code>App</code> 컴포넌트에서도 확인할 수 있습니다. 하단에 <code>export</code>로 <code>App.js</code>를 import 할 수 있습니다.
 </p>
 
 <p>
-  7 行目 <code>ReactDOM.render()</code> は 2 つの引数で React
-  の関数を呼び出します：
+  일곱 번째 줄에 있는 <code>ReactDOM.render()</code>은 2개의 인수를 통해 React 함수를 호출합니다:
 </p>
 
 <ul>
   <li>
-    <code>&lt;App /&gt;</code>: この場合、レンダリングしたいコンポーネント。
+    <code>&lt;App /&gt;</code>은 렌더링 할 컴포넌트입니다.
   </li>
   <li>
-    内部にコンポーネントをレンダリングする DOM 要素: この場合、<code>root</code>
-    要素。<code>public/index.html</code> の内側を見ると、これがの
-    <code>&lt;div&gt;</code> であり、<code>&lt;body&gt;</code>
-    すぐ内側の要素であることがわかります。
+    컴포넌트를 렌더링하고 싶은 DOM요소는 ID가 <code>root</code>인 요소입니다.
+    <code>public/index.html</code>를 보면, 이것이 <code>&lt;body&gt;</code> 안에 있는 <code>&lt;div&gt;</code> 요소 라는 것을 알 수 있습니다.
   </li>
 </ul>
 
 <p>
-  これらはすべて、<code>App</code> コンポーネントを最初のコンポーネントとして
-  React アプリケーションをレンダリングすることを React に伝えます。
+  이것들은 <code>App</code> 컴포넌트를 <code>root</code>(첫 번째 컴포넌트로) React 어플리케이션을 렌더링하고 싶다 React에 전달합니다.
 </p>
 
 <div class="blockIndicator note">
   <p>
-    <strong>注</strong>: JSX では、React コンポーネントと HTML
-    要素には閉じスラッシュが必要です。そのまま <code>&lt;App&gt;</code> または
-    <code>&lt;img&gt;</code> と書くとエラーが発生します。
+    <strong>Note</strong>: JSX에서는 React 컴포넌트와 HTML 요소를 닫는 빗금(슬래시)가 필요합니다. 닫지 않은 상태로 <code>&lt;App&gt;</code>나 <code>&lt;img&gt;</code>를 작성하면 오류가 발생합니다.
   </p>
 </div>
 
 <p>
-  <a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers"
+  <a href="/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers"
     >Service Worker</a
-  >
-  は、アプリケーションのパフォーマンスを向上させ、ウェブアプリケーションの機能をオフラインで動作させることができる興味深いコードですが、この記事の対象ではありません。5
-  行目と 9 〜 12 行目を削除します。
+  >은 어플리케이션 퍼포먼스를 향상시키기 위해, 웹 어플리케이션 기능들을 오프라인에서도 동작할 수 있게 하는 무척 흥미로운 코드입니다만, 여기에서 다루지 않으므로 다섯 번째 줄과 9~12 번째 줄을 지워줍시다.
 </p>
 
-<p>最終的な<code>index.js</code>ファイルは次のようになります。</p>
+<p>이제 <code>index.js</code> 파일은 다음과 같을 것입니다.</p>
 
 <pre class="notranslate">
 import React from 'react';
@@ -709,35 +688,31 @@ import App from './App';
 ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre
 >
 
-<h2 id="Variables_and_props" name="Variables_and_props">変数と props</h2>
+<h2 id="Variables_and_props" name="Variables_and_props">변수와 props</h2>
 
 <p>
-  次に、JavaScript スキルのいくつかを使用して、コンポーネントの編集と React
-  でのデータの操作をもう少し快適にします。JSX内での変数の使用方法について説明し、データをコンポーネントに渡す方法である
-  props を紹介します (その後、変数を使用してアクセスできます)。
+  다음은 몇 가지 JavaScript 기술을 통해 컴포넌트를 보다 쉽게 편집하고 React에서 데이터로 작업할 수 있도록 하겠습니다.
+  JSX 내에서 변수가 어떻게 사용되는지, 데이터를 컴포넌트에 전달하는 방법인 (후에 변수로써 접근할 수 있는) props를 알아 보겠습니다.
 </p>
 
-<h3 id="JSXの変数">JSXの変数</h3>
+<h3 id="Variable_in_JSX">JSX에서 변수</h3>
 
-<p><code>App.js</code> に戻り、9 行目に注目しましょう。</p>
+<p><code>App.js</code>으로 돌아와 아홉 번째 줄을 봅시다.</p>
 
 <pre class="brush: js notranslate">
 &lt;img src = {logo} className = "App-logo" alt = "logo" /&gt;</pre
 >
 
 <p>
-  ここでは、<code>&lt;img /&gt;</code> タグの
-  <code>src</code> 属性値は中括弧で囲まれています。これは、JSX
-  が変数を認識する方法です。React が
-  <code>{logo}</code>
-  を表示し、アプリの2行目のインポートを参照していることを確認してから、logo
-  ファイルを取得してレンダリングします。
+  여기서 <code>&lt;img /&gt;</code> 태그의 <code>src</code> 속성 값은 중괄호안에 있습니다.
+  이것이 JSX가 변수를 인식하는 방법입니다.
+  React는 <code>{logo}</code>를 보여주고 어플리케이션 두 번째 줄에 import 되어있는 logo 파일을 받아 렌더링합니다.
 </p>
 
 <p>
-  独自の変数を作ってみましょう。<code>App</code> の return ステートメントの前に
-  <code>const subject = 'React';</code> を追加します。すると、<code>App</code>
-  コンポーネントは次のようになります。
+  우리만의 변수를 만들어 봅시다.
+  <code>App</code>에서 return 문 앞에 <code>const subject = 'React';</code>를 적어봅시다.
+  그러면 <code>App</code> 컴포넌트는 다음과 같이 될 것입니다.
 </p>
 
 <pre class="notranslate">
@@ -757,8 +732,7 @@ function App() {
 >
 
 <p>
-  次のように、8 行目を変更して「world」という単語の代わりに
-  <code>subject</code> 変数を使用します。
+  다음에는 여덟 번째 줄에 "world" 대신 <code>subject</code> 변수를 사용해봅시다.
 </p>
 
 <pre class="notranslate">
@@ -778,28 +752,26 @@ function App() {
 >
 
 <p>
-  保存すると、「Hello、world！」の代わりにブラウザーに「Hello、React！」と表示されます。
+  저장하면, "Hello, world!" 대신 브라우저에 "Hello, React!"가 보여집니다.
 </p>
 
 <p>
-  変数は便利ですが、設定したばかりの変数はReactの機能をあまり活用していません。そこで、propsの登場です。
+  변수는 편리합니다만, 이런 식으로 변수를 사용하면 React를 기능을 제대로 활용하는 것이 아닙니다.
+  그러기에 여기서 props의 등장입니다!
 </p>
 
-<h3 id="Component_props" name="Component_props">コンポーネントのprops</h3>
+<h3 id="Component_props" name="Component_props">컴포넌트에서 props</h3>
 
 <p>
-  <strong>props</strong> はコンポーネントに渡される任意のデータです。prop
-  はコンポーネント内に記述され、HTML属性と同じ構文を使用します —
-  <code>prop="value"</code>。<code>index.js</code>を開き、<code
-    >&lt;App/&gt;</code
-  >
-  に最初の <code>prop</code> を渡しましょう。
+  <strong>props</strong>는 컴포넌트에 전달하는 임의의 데이터입니다. props는 컴포넌트 내에 작성해 HTML 속성처럼 사용할 수 있습니다 — <code>prop="value"</code>.
+  그러나 React에서 데이터 흐름은 단방향입니다.
+  props는 부모 컴포넌트에서 자식 컴포넌트로 전달할 수 있으면 자식 컴포넌트에서 props는 읽기 전용입니다.
+  <code>index.js</code>를 열어, <code>&lt;App/&gt;</code>에 첫 <code>prop</code>를 전달해 봅시다.
 </p>
 
 <p>
-  <code>&lt;App/&gt;</code> コンポーネントに <code>subject</code> という prop
-  を追加して、値は
-  <code>Clarice</code> とします。完了すると、コードは次のようになります。
+  <code>&lt;App/&gt;</code> 컴포넌트에 <code>subject</code>로 명명한 props를 추가해 값을 <code>Clarice</code>로 줍니다.
+  코드는 다음과 같습니다.
 </p>
 
 <pre class="notranslate">
@@ -807,9 +779,7 @@ ReactDOM.render(&lt;App subject="Clarice" /&gt;, document.getElementById('root')
 >
 
 <p>
-  <code>App.js</code> に戻り、App
-  関数自体をもう一度見てみましょう。この関数は次のようになっています
-  (簡潔にするために <code>return</code> で短くしています)。
+  <code>App.js</code>으로 돌아와, App 함수 자체를 다시 한 번 봅시다. 이 함수는 다음과 같이 되어있습니다.(직관적으로 볼 수 있도록 <code>return</code>은 생략했습니다.)
 </p>
 
 <pre class="notranslate">
@@ -822,10 +792,8 @@ function App() {
 >
 
 <p>
-  <code>App</code> 関数の引数を変更して、<code>props</code>
-  をパラメーターとして受け入れられるようにします。他のパラメーターと同様
-  <code>props</code> に、<code>console.log()</code>
-  を入力して、ブラウザーのコンソールにそれを表示させます。すると、次のようになります。
+  <code>App</code> 함수에서 인수를 바꿔, <code>props</code>를 매개변수(parameter)로써 받을 수 있도록 합니다.
+  다른 매개변수와 같이 <code>props</code>에 <code>console.log()</code>를 넣어 브라우저 콘솔에서 확인해보면 다음과 같습니다.
 </p>
 
 <pre class="notranslate">
@@ -839,30 +807,22 @@ function App(props) {
 >
 
 <p>
-  ファイルを保存し、ブラウザーの JavaScript
-  コンソールを確認します。次のようなログが表示されるはずです。
+  파일을 저장하면 브라우저 콘솔을 확인해봅시다.
+  다음과 같은 로그를 볼 수 있습니다.
 </p>
 
 <pre class="notranslate">Object { subject: "Clarice" }</pre>
 
 <p>
-  オブジェクトプロパティ <code>subject</code> は、<code>&lt;App /&gt;</code>
-  コンポーネント呼び出しに追加した
-  <code>subject</code> プロパティに対応し、文字列
-  <code>Clarice</code> はその値に対応します。React
-  のコンポーネントプロップは、常にこのようにオブジェクトに集約されます。
+  객체 프로퍼티 <code>subject</code>는, <code>&lt;App /&gt;</code> 컴포넌트에 추가해 <code>subject</code> 프로퍼티에 대응해, 문자열 <code>Clarice</code>은 그 값에 대응합니다.
+  React의 컴포넌트는 이러한 방식으로 객체에 쌓입니다.
 </p>
 
 <p>
-  <code>subject</code> は props の一部です。App.js
-  でこれを使ってみましょう。<code>subject</code> 定数を変更して、<code
-    >React</code
-  >
-  という文字列として定義する代わりに
-  <code>props.subject</code> の値を読み取るようにします。<code
-    >console.log()</code
-  >
-  は必要に応じて削除することもできます。
+  <code>subject</code>는 props의 일부입니다.
+  <code>App.js</code>에서 이걸 활용해봐야겠죠.
+  <code>subject</code>를 <code>props.subject</code>로 바꿔 값을 다룰 수 있게 해봅시다.
+  <code>console.log()</code>은 기호에 따라 지우셔도 됩니다.
 </p>
 
 <pre class="notranslate">
@@ -875,42 +835,35 @@ function App(props) {
 >
 
 <p>
-  保存すると、アプリは「Hello、Clarice！」と挨拶するはずです。<code
-    >index.js</code
-  >
-  に戻り、<code>subject</code>
-  の値を編集して保存すると、テキストが変更されます。
+  저장하면 어플리케이션은 "Hello Clarice"라 반겨줄 것입니다. <code>index.js</code>으로 돌아와 <code>subject</code>의 값을 정해주면 내용물을 바꿀 수 있습니다.
 </p>
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+<h2 id="Summary" name="Summary">정리</h2>
 
 <p>
-  これで、React
-  をローカルでインストールする方法、スターターアプリを作成する方法、基本的にどのように機能するかなど、React
-  の入門が終わりました。次の記事では、最初に適したアプリケーションである todo
-  リストの作成を開始します。ただし、その前に、私たちが学んだことのいくつかをおさらいしましょう。
+  이로써 우리는 React를 로컬 환경에 설치하는 방법, 스타터 어플리케이션 만드는 방법, 기본적으로 어떻게 움직이는가를 알 수 있는 React 입문이 마쳤습니다.
+  다음 글에는, 첫 어플리케이션으로 익숙한 ToDo List를 만드는 것을 시작할 것입니다.
+  하지만, 그 전에 우리가 배웠던 것을 되짚어봅시다.
 </p>
 
-<p>React では:</p>
+<p>React 에서는:</p>
 
 <ul>
   <li>
-    コンポーネントは必要なモジュールをインポートでき、ファイルの下部でエクスポートする必要があります。
-  </li>
-  <li>コンポーネント関数は <code>PascalCase</code> で名前が付けられます。</li>
-  <li>
-    JSX 変数は、<code>{so}</code>
-    のように中括弧で囲むことで読み取ることができます。
+    컴포넌트는 필요한 모듈을 import 할 수 있으며, 이를 위해 파일 하단 부에 export 할 필요가 있습니다.
   </li>
   <li>
-    一部の JSX 属性は HTML 属性とは異なるため、JavaScript
-    の予約語と競合しません。例えば <code>class</code>、HTML では
-    <code>className</code> JSX
-    に変換されます。複数単語の属性はキャメルケースであることに注意してください。
+    컴포넌트 함수는 <code>PascalCase</code> 스타일로 명명됩니다.
   </li>
   <li>
-    props
-    は、コンポーネント呼び出し内の属性と同じように記述され、コンポーネントに渡されます。
+    JSX 변수는 <code>{so}</code> 같이 중괄호로 감싸 다룰 수 있습니다.
+  </li>
+  <li>
+    일부 JSX 속성은 HTML 속성과는 다르므로 JavaScript의 예약어와 충돌하지 않습니다. 예를 들어 HTML의 <code>class</code>는 JSX의 <code>className</code>으로 변환됩니다.
+    여러 단어를 갖고 있는 속성은 카멜케이스로 표현합니다.
+  </li>
+  <li>
+    props는 컴포넌트 속성를 호출, 전달하도록 작성합니다.
   </li>
 </ul>
 
@@ -919,18 +872,18 @@ function App(props) {
   "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 </p>
 
-<h2 id="In_this_module" name="In_this_module">このモジュール内</h2>
+<h2 id="In_this_module" name="In_this_module">In this module</h2>
 
 <ul>
   <li>
     <a
-      href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction"
+      href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction"
       >Introduction to client-side frameworks</a
     >
   </li>
   <li>
     <a
-      href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features"
+      href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features"
       >Framework main features</a
     >
   </li>
@@ -939,43 +892,43 @@ function App(props) {
     <ul>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started"
           >Getting started with React</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning"
           >Beginning our React todo list</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components"
           >Componentizing our React app</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state"
           >React interactivity: Events and state</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering"
           >React interactivity: Editing, filtering, conditional rendering</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility"
           >Accessibility in React</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources"
           >React resources</a
         >
       </li>
@@ -986,37 +939,37 @@ function App(props) {
     <ul>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started"
           >Getting started with Ember</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization"
           >Ember app structure and componentization</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state"
           >Ember interactivity: Events, classes and state</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer"
           >Ember Interactivity: Footer functionality, conditional rendering</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing"
           >Routing in Ember</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources"
           >Ember resources and troubleshooting</a
         >
       </li>
@@ -1027,55 +980,55 @@ function App(props) {
     <ul>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started"
           >Getting started with Vue</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component"
           >Creating our first Vue component</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists"
           >Rendering a list of Vue components</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models"
           >Adding a new todo form: Vue events, methods, and models</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling"
           >Styling Vue components with CSS</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties"
           >Using Vue computed properties</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering"
           >Vue conditional rendering: editing existing todos</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management"
           >Focus management with Vue refs</a
         >
       </li>
       <li>
         <a
-          href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources"
+          href="/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources"
           >Vue resources</a
         >
       </li>
