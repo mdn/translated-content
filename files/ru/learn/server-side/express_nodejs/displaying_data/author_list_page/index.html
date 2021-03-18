@@ -24,7 +24,7 @@ exports<span class="punctuation token">.</span>author_list <span class="operator
 
 <span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
 
-<p>Метод использует такие функции модели как <code>find()</code>, <code>sort()</code> и <code>exec()</code> для того, чтобы вернуть все объекты  <code>Author</code> отсортированными по  <code>family_name</code> в алфавитном порядке. В вызове <code>exec()</code> callback-функция имеет первый параметр- объект ошибок  (или <code>null</code>) и второй параметр - список всех авторов, если ошибок не было. При ошибках вызывается следующая функция промежуточного слоя  с полученным значением объекта ошибок, а если ошибок не было, отображается шаблон <strong>author_list</strong>(.pug), передавая странице <code>title</code> и список авторов (<code>author_list</code>).</p>
+<p>Метод использует такие функции модели как <code>find()</code>, <code>sort()</code> и <code>exec()</code> для того, чтобы вернуть все объекты  <code>Author</code> отсортированными по  <code>family_name</code> в алфавитном порядке. В вызове <code>exec()</code> колбэк-функция имеет первый параметр- объект ошибок  (или <code>null</code>) и второй параметр - список всех авторов, если ошибок не было. При ошибках вызывается следующая функция промежуточного слоя  с полученным значением объекта ошибок, а если ошибок не было, отображается шаблон <strong>author_list</strong>(.pug), передавая странице <code>title</code> и список авторов (<code>author_list</code>).</p>
 
 <h2 class="highlight-spanned" id="Представление"><span class="highlight-span">Представление</span></h2>
 
@@ -74,7 +74,7 @@ block content
   </ul>
  </li>
  <li>Отображающий шаблон должен быть назван <strong>genre_list.pug</strong>.</li>
- <li>Шаблону для отображения должны быть переданы переменные <code>title</code> (строка 'Genre List') и <code>genre_list</code> (the list of список жанров, который вернет callback-функция <code>Genre.find()</code>.</li>
+ <li>Шаблону для отображения должны быть переданы переменные <code>title</code> (строка 'Genre List') и <code>genre_list</code> (the list of список жанров, который вернет колбэк-функция <code>Genre.find()</code>.</li>
  <li>Представление должно соответствовать скриншоту, приведенному ранее (оно должно иметь структуру и формат, похожие на таковые в представлении списка авторов, за исключением, конечно, продолжительности жизни, так как для жанров даты не заданы).</li>
 </ol>
 
