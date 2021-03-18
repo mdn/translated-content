@@ -148,6 +148,7 @@ The review teams for each locale are:
   - [@mpstv](https://github.com/mpstv)
   - [@myshov](https://github.com/myshov)
   - [@Saionaro](https://github.com/Saionaro)
+  - [@sashasushko](https://github.com/sashasushko)
   - [@lex111](https://github.com/lex111)
 - Chinese (`zh-CN` and `zh-TW`) content — the [@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
   team, which consists of:
