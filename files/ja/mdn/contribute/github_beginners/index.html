@@ -13,16 +13,16 @@ translation_of: MDN/Contribute/GitHub_beginners
 
 <p><a href="https://git-scm.com/">Git</a> と <a href="https://github.com/">GitHub</a> は学習したり使いこなしたりするのが難しいツールですが、いくつかの簡単なコマンドと適切なアドバイスがあれば、 MDN への協力を始めるのに十分な程度のことが、さほど苦労せずにできるはずです。この記事の目的は、 Git や GitHub を使いこなすことではなく、基本的なレベルで生産的になり、 MDN に協力するために必要なことを紹介することです。</p>
 
-<p>すでに Git/GitHub の基本に慣れている人は、おそらくここで新しいことを学ぶことはないでしょうが、それでもこの記事をリファレンスとして活用することはできるでしょう。また、長い説明を省いてコマンドだけを掲載している <a href="/en-US/docs/MDN/Contribute/GitHub_cheatsheet">GitHub のチートシート</a>もあります。</p>
+<p>すでに Git/GitHub の基本に慣れている人は、おそらくここで新しいことを学ぶことはないでしょうが、それでもこの記事をリファレンスとして活用することはできるでしょう。また、長い説明を省いてコマンドだけを掲載している <a href="/ja/docs/MDN/Contribute/GitHub_cheatsheet">GitHub の早見表</a>もあります。</p>
 
-<h2 id="essential_concepts">重要な概念</h2>
+<h2 id="essential_concepts">基本的な概念</h2>
 
-<p>以下のものは Git と GitHub を最大限に活用するために知っておかなければならない重要なな概念です。</p>
+<p>以下のものは Git と GitHub を最大限に活用するために知っておかなければならない基本的な概念です。</p>
 
 <ul>
-  <li>Git は<em>バージョン管理システム</em>のツールで、開発ワークフローには欠かせないものです。複数の開発者が同じコードベースで、互いの邪魔にならないように作業したり、コードベースを遠隔地に安全に保管したり、必要に応じてコードを以前の状態に戻したりといったことができます。</li>
+  <li>Git は<em>バージョン管理システム</em>のツールで、開発ワークフローには欠かせないものです。複数の開発者が同じコードベースで、互いの邪魔にならないように作業したり、コードベースをリモートの場所に安全に保管したり、必要に応じてコードを以前の状態に戻したりといったことができます。</li>
   <li>GitHub は、保存されたコードベースを操作するための便利なツールを Git の上に提供し、コードベースを保存するためのサーバースペースの提供も行うウェブアプリケーションです。この分野の他のアプリケーションである <a href="https://about.gitlab.com/">GitLab</a> や <a href="https://bitbucket.org/">Bitbucket</a> などと同様の機能を持っています。</li>
-  <li>それぞれのコードベースは、<em>リポジトリ</em>または <em>repo</em> と呼ばれるコンテナーに格納されます。</li>
+  <li>それぞれのコードベースは、リポジトリ (<em>repository</em> または <em>repo</em>) と呼ばれるコンテナーに格納されます。</li>
   <li>リポジトリに変更を加える最小限の手順は次の通りです。
     <ul>
       <li>そのリポジトリの自分用のコピーを作成する (フォーク (<em>fork</em>) といいます)。</li>
@@ -42,7 +42,7 @@ translation_of: MDN/Contribute/GitHub_beginners
   <li>Git/GitHub の操作にはコマンドラインを使います。 Git や GitHub 用の GUI ツールはいくつかありますが、このガイドでは利用できません。</li>
 </ul>
 
-<h2 id="initial_setup">初期セットアップ</h2>
+<h2 id="initial_setup">初期設定</h2>
 
 <p>特定のリポジトリでの作業を開始する前に、以下の手順を実行してください。</p>
 
@@ -54,17 +54,17 @@ translation_of: MDN/Contribute/GitHub_beginners
       <li>Node.js をインストールしたら、 <code>npm install --global yarn</code> を実行して yarn をインストールしてください。</li>
     </ol>
   </li>
-  <li>コンピューターのどこかに、すべての Git リポジトリを保存するための別のディレクトリを、コマンドラインで簡単に見つけて移動できるところに作成します。 home/user ディレクトリの中に mdn-git というディレクトリを作成するといいでしょう。</li>
+  <li>すべての Git リポジトリを保存するための別のディレクトリを、コンピューターのどこか、コマンドラインで簡単に見つけて移動できるところに作成します。 mdn-git というディレクトリを home/user ディレクトリの中に作成するといいでしょう。</li>
   <li>まだない場合は、 <a href="https://github.com/join">GitHub アカウントをサインアップ</a>してください。 MDN のリポジトリに貢献するのに必要です。</li>
 </ol>
 
 <h3 id="setting_up_ssh_authentication_on_github">GitHub での SSH 認証の設定</h3>
 
-<p>この時点で、 GitHub のアカウントに SSH キーを設定する必要があります。これは基本的に、 GitHub にあなたを識別させるためのセキュリティ機構であり、 GitHub のサービスを利用するたびに認証する必要はありません。</p>
+<p>この時点で、 SSH キーを GitHub のアカウントに設定する必要があります。これは基本的に、 GitHub に自分を識別させるためのセキュリティ機構であり、 GitHub のサービスを利用するたびに認証する必要がなくなります。</p>
 
 <p>GitHub は、この設定に関する便利なガイドを用意しています。まずは <a href="https://docs.github.com/ja/github/authenticating-to-github/connecting-to-github-with-ssh">GitHub に SSH で接続する</a>を参照してください。ここで紹介する手順に従って、 Github で SSH を利用するための設定を行います。</p>
 
-<p>これを行わなくても MDN に貢献することはできますが、 GitHub とやり取りするたびに (例えば、下記のようにプルリクエストを送信するたびに) ユーザー名とパスワードを入力しなければならなくなります。</p>
+<p>これを行わなくても MDN に貢献することはできますが、 GitHub とやり取りするたびに (例えば、後で触れるようにプルリクエストを送信するたびに) ユーザー名とパスワードを入力しなければならなくなります。</p>
 
 <h2 id="setting_up_to_work_on_a_specific_repo">特定のリポジトリで作業するためのセットアップ</h2>
 
@@ -103,12 +103,12 @@ translation_of: MDN/Contribute/GitHub_beginners
     <p>github.com の自分のフォークのページ (例えば <code>https://github.com/<em>&lt;ユーザー名&gt;</em>/content</code>) へ行ってください。</p>
   </li>
   <li>
-    <p>ファイルリストの上にある緑色の "Code" ボタンを押してください。そうすると、以下のポップアップのようなものが現れます。</p>
+    <p>ファイル一覧の上にある緑色の "Code" ボタンを押してください。そうすると、以下のポップアップのようなものが現れます。</p>
 
     <p><img src="code-popup.png" alt="クローン URL と共に open with github desktop や download zip などの選択肢を表示しているポップアップウィンドウ"></p>
   </li>
   <li>
-    <p>上で説明したように、 SSH 認証を設定した場合は "SSH" タブをクリックし、ボックス内のテキストフィールドから <code>git@github.com:<em>&lt;your-user-name&gt;</em>/content.git</code> の URL をコピーしてください。 SSH 認証を設定していない場合は、代わりに "HTTPS" タブのテキストフィールドから <code>https://github.com/<em>&lt;your-user-name&gt;</em>/content.git</code> のような URL をコピーしてください。</p>
+    <p>上で説明したように、 SSH 認証を設定した場合は "SSH" タブをクリックし、ボックス内のテキストフィールドから <code>git@github.com:<em>&lt;ユーザー名&gt;</em>/content.git</code> の URL をコピーしてください。 SSH 認証を設定していない場合は、代わりに "HTTPS" タブのテキストフィールドから <code>https://github.com/<em>&lt;ユーザー名&gt;</em>/content.git</code> のような URL をコピーしてください。</p>
   </li>
   <li>
     <p>そして自分のコンピューターでコマンドラインを開き、 cd コマンドで先ほど git リポジトリのローカルのクローンを保存するために設定したディレクトリに移動します。</p>
@@ -134,11 +134,11 @@ translation_of: MDN/Contribute/GitHub_beginners
 
 <p>リモートの設定は、次のように <code>git remote add</code> コマンドで行います。</p>
 
-<pre class="brush: bash">git remote add <em>remote-name</em> <em>repo-you-want-to-point-to</em></pre>
+<pre class="brush: bash">git remote add <em>リモート名</em> <em>指す先のリポジトリ</em></pre>
 
 <ul>
-  <li><em>remote-name</em> は自分で決めた名前で、後でリモートを参照するときに使われます。同じ目的を持つ異なるリポジトリ間では、一貫したリモート名に統一すると良いでしょう。同じリモート名であれば、どこでも同じことができるので、混乱することが少なくなります。例えば、あなたが自分のバージョンをフォークしたリポジトリのメインバージョンは「upstream (上流) のリポジトリ」と呼ばれることが多く、そのためリモートの上流の場所の名前として "upstream" がよく使われます。私は通常、上流のリモートを "mozilla" と呼んでいますが、これはMozillaのメインのリポジトリを指していることを示すためです。</li>
-  <li><em>repo-you-want-to-point-to</em> は、指定したいリポジトリの SSH (または HTTPS) の URL で、先ほどフォークのクローンを作ったときと同じ方法で取得します。</li>
+  <li><em>リモート名</em> は自分で決めた名前で、後にリモートを参照するために使用されます。同じ目的を持つ異なるリポジトリ間では、一貫したリモート名にこだわるのと良いでしょう。同じリモート名であれば、どこでも同じことができ、混乱することも少なくなります。例えば、自分のバージョンをフォークしたリポジトリのメインバージョンは「upstream (上流) リポジトリ」と呼ばれることが多く、そのためよく "upstream" がリモートの上流の場所を表す名前として使われます。私は通常、上流のリモートを "mozilla" と呼んでいますが、これは Mozilla のメインのリポジトリを指していることを示すためです。</li>
+  <li><em>指す先のリポジトリ</em> は、指す先の SSH (またはHTTPS) の URL で、先ほどフォークのクローンを作ったときと同じ方法で取得します。</li>
 </ul>
 
 <p>ですから、リモートを追加するには次ようにします。</p>
@@ -153,9 +153,9 @@ translation_of: MDN/Contribute/GitHub_beginners
     <pre class="brush: bash">cd content</pre>
   </li>
   <li>
-    <p>次のようなコマンドを、 <em>remote-name</em> と <em>repo-you-want-to-point-to</em> を適切に置き換えて実行してください。</p>
+    <p>次のようなコマンドを、 <em>リモート名</em> と <em>指す先のリポジトリ</em> を適切に置き換えて実行してください。</p>
 
-    <pre class="brush: bash">git remote add <em>remote-name</em> <em>repo-you-want-to-point-to</em></pre>
+    <pre class="brush: bash">git remote add <em>リモート名</em> <em>指す先のリポジトリ</em></pre>
 
     <p>したがって、例えば私は SSH の URL を使用してリモートの "mozilla" を呼び出したので、次のようにしました。</p>
 
@@ -200,7 +200,7 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
   <li>
     <p>まず、以下のコマンドで、リモートの更新されたコンテンツを取得してください。</p>
 
-    <pre class="brush: bash">git fetch <em>remote-name</em></pre>
+    <pre class="brush: bash">git fetch <em>リモート名</em></pre>
 
     <p>例えば、次のようにします。</p>
 
@@ -209,7 +209,7 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
   <li>
     <p>次に、自分のメインブランチの内容を、リモートリポジトリのメインブランチに置き換えます。いろいろな方法がありますが、私は <code>rebase</code> コマンドをよく使います。</p>
 
-    <pre class="brush: bash">git rebase <em>remote-name</em>/<em>main-branch-name</em></pre>
+    <pre class="brush: bash">git rebase <em>リモート名</em>/<em>メインブランチ名</em></pre>
 
     <p>例えば次のようになります。<p>
 
@@ -232,7 +232,7 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
 
 <ol>
   <li>
-    <p>github.com で自分のフォークのページ (例えば、私の場合は <a href="https://github.com/chrisdavidmills/content">https://github.com/chrisdavidmills/content</a>) に行くと、ファイルリストの左上に、おそらく "main" と書かれているブランチボタンが見つかります。</p>
+    <p>github.com で自分のフォークのページ (例えば、私の場合は <a href="https://github.com/chrisdavidmills/content">https://github.com/chrisdavidmills/content</a>) に行くと、ファイル一覧の左上に、おそらく "main" と書かれているブランチボタンが見つかります。</p>
 
     <p><img src="branch-button.png" alt="main と表示されたボタン"></p>
   </li>
@@ -270,7 +270,7 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
 
 <ol>
   <li>リモートで変更した内容をローカルのクローンに取り込むには、 <code>git pull</code> コマンドを実行してください。</li>
-  <li><code>* [new branch]          test-branch -> origin/test-branch</code> という行のメッセージが表示されます。</li>
+  <li><code>* [new branch]          test-branch -> origin/test-branch</code> のような数行のメッセージが表示されます。</li>
   <li>自分のブランチに切り替える (つまり、 "main" から切り替えてそのブランチで作業する) には、 <code>git switch test-branch</code> コマンドを実行してください。</li>
 </ol>
 
@@ -288,18 +288,18 @@ nothing to commit, working tree clean</pre>
 
 <p>だいたい良いようですね。現在は "test-branch" ブランチにいて、まだ変更は何も行っていません。</p>
 
-<h2 id="adding_committing_and_pushing_changes">Adding, committing, and pushing changes</h2>
+<h2 id="adding_committing_and_pushing_changes">変更の追加、コミット、プッシュ</h2>
 
-<p>At this point you are ready to make changes to the repo you are working on — to fix a bug on MDN or whatever it is that you are doing. We will mostly skip this part, as that's not the point of the tutorial. If you want to fix a real problem on MDN, go and choose a bug to fix from our <a href="https://github.com/mdn/content/issues/">content issues list</a>, or read <a href="/en-US/docs/MDN/Contribute">Contributing to MDN</a> for more guidance.</p>
+<p>この時点で、作業しているリポジトリに変更を加える準備が整いました。 MDN のバグを修正したり、何かをするためです。この部分はこのチュートリアルの目的ではないので、ほとんど省略します。 MDN で実際の問題を修正したい場合は、<a href="https://github.com/mdn/content/issues/">コンテンツの問題一覧</a>から修正するバグを選択するか、より詳しいガイダンスが必要であれば <a href="/ja/docs/MDN/Contribute">MDN への貢献</a>をお読みください。</p>
 
-<p>If you just want to follow along with this tutorial for example's sake, let's do something simple.</p>
+<p>例としての性質上、このチュートリアルに沿って進めるのであれば、簡単なことをやってみましょう。</p>
 
 <ol>
   <li>
-    <p>Go into the <code>content/README.md</code> file, and add a single letter into the top heading of the README.</p>
+    <p><code>content/README.md</code> ファイルに入り、 README の一番上の見出しに 1 文字を追加してください。</p>
   </li>
   <li>
-    <p>Now go back to your command line and enter the <code>git status</code> command again. This time git should tell you something like this:</p>
+    <p>次に、コマンドラインに戻って <code>git status</code> コマンドを再度入力します。今度は、git が次のように教えてくれるはずです。</p>
 
     <pre>Your branch is up to date with 'origin/test-branch'.
 
@@ -311,18 +311,18 @@ nothing to commit, working tree clean</pre>
     no changes added to commit (use "git add" and/or "git commit -a")</pre>
   </li>
   <li>
-    <p>So at this point it is telling you what files you have modified. The next stage is to "add" them, which means add them to a list of files that you want to commit to push up to the remote fork. To add this file to the commit list, type the following:</p>
+    <p>つまり、この時点で変更したファイルを教えてくれるのです。次の段階では、そのファイルを「追加」します。つまり、リモートフォークにプッシュするために、コミットしたいファイルの一覧にそのファイルを追加します。このファイルをコミット一覧に追加するには、次のように入力します。</p>
 
     <pre class="brush: bash">git add README.md</pre>
 
     <div class="notecard note">
-      <h3>Note</h3>
+      <h3>注</h3>
 
-      <p><code>README.md</code> is the path to the file you have changed, not just its name. If it were inside a subdirectory, you'd have to write the full path to the file.
+      <p><code>README.md</code> は、変更したファイルの名前だけではなく、そのファイルへのパスを書きます。サブディレクトリの中にあった場合は、そのファイルのフルパスを書かなければなりません。
     </div>
   </li>
   <li>
-    <p>If you run <code>git status</code> again, you'll now see this:</p>
+    <p>もう一度 <code>git status</code> を実行すると、このように表示されます。</p>
 
     <pre>On branch test-branch
     Your branch is up to date with 'origin/test-branch'.
@@ -332,19 +332,19 @@ nothing to commit, working tree clean</pre>
         modified:   README.md</pre>
   </li>
   <li>
-    <p>Git is telling us that <code>README.md</code> is now in our commit list. To include all the files in the commit list in a commit (a single set of changes that we will later try to send to the main branch), enter the following (the <code>-m</code> option is short for message"):
+    <p>Git は <code>README.md</code> がコミット一覧に入ったことを教えてくれました。コミット一覧にあるすべてのファイルをコミット (後にメインブランチに送信しようとする、ひとつの変更セット) に含めるには、次のように入力します (<code>-m</code> オプションは "message" の略です)。
 
     <pre class="brush: bash">git commit -m 'my first commit'</pre>
 
-    <p>Git will tell you this:</p>
+    <p>Git は次のように表示します。</p>
 
     <pre>[test-branch 44b207ef6] my first commit
      1 file changed, 1 insertion(+), 1 deletion(-)</pre>
 
-    <p>To show that it has registered that you've made a commit.</p>
+    <p>コミットを登録したことを示すためです。</p>
   </li>
   <li>
-    <p>Run <code>git status</code> again, and you'll get this information:</p>
+    <p>もう一度 <code>git status</code> を実行すると、次のような情報が得られます。</p>
 
     <pre>On branch test-branch
     Your branch is ahead of 'origin/test-branch' by 1 commit.
@@ -354,9 +354,9 @@ nothing to commit, working tree clean</pre>
   </li>
 </ol>
 
-<p>The information readout has basically reset — it is telling us that there are no changes to commit, because we've now sent our previous change into the system as a commit. The key difference from before is the line "Your branch is ahead of 'origin/test-branch' by 1 commit." — our local version of the "test-branch" branch is now ahead of the remote version of "test-branch" by one commit — in other words, we've made a change locally that the remote branch doesn't have.</p>
+<p>情報の読み出しは基本的にリセットされています。 — 前回の変更をコミットとしてシステムに送信したので、コミットする変更がないことを伝えています。先ほどとの大きな違いは、 "Your branch is ahead of 'origin/test-branch' by 1 commit." という行です。 — ローカル版の "test-branch" ブランチは、リモート版 "test-branch" よりも 1 コミット分進んでいます。言い換えれば、リモートブランチにはない変更をローカルで行ったということです。</p>
 
-<p>Let's send our local change to the remote branch. You can do this by running the command <code>git push</code> — try this now. If there no errors, you should get a readout like this:</p>
+<p>ローカルで行った変更をリモートブランチに送りましょう。そのためには <code>git push</code> というコマンドを実行します。 — やってみましょう。エラーが出なければ、次のような内容が表示されます。</p>
 
 <pre>Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
@@ -368,98 +368,98 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:chrisdavidmills/content.git
     77215e31e..44b207ef6  test-branch -> test-branch</pre>
 
-<h2 id="creating_a_pull_request">Creating a pull request</h2>
+<h2 id="creating_a_pull_request">プルリクエストの作成</h2>
 
-<p>At this point, go back to your remote fork's github.com page. You should see a message along the lines of "This branch is 1 commit ahead of mdn:main. " meaning that our fork's content has a content change (commit) in it that mozilla's "main" branch doesn't have.</p>
+<p>この時点で、 github.com のリモートフォークのページに戻ってみましょう。すると、 "This branch is 1 commit ahead of mdn:main." というメッセージが表示されるはずです。これは、私たちのフォークのコンテンツには、 mozilla の "main" ブランチにはない内容の変更 (コミット) があることを意味しています。</p>
 
 <ol>
   <li>
-    <p>To send our change up to the main copy of the repo, we need to create a pull request. This can be easily done using the "Compare & pull request" button that you should see up the top of the files list, once the branch has had a change pushed to it.</p>
+    <p>自分の変更をリポジトリのメインコピーに送るには、プルリクエストを作成する必要があります。この作業は、ブランチに変更がプッシュされたときにファイル一覧の一番上に表示される "Compare & pull request" ボタンを使って簡単に行うことができます。</p>
 
-    <p><img src="compare-and-pull-request.png" alt="Banner with text test branch had recent pushes, and a button labeled compare and pull request"></p>
+    <p><img src="compare-and-pull-request.png" alt="test ブランチに最近のプッシュがあるというテキスト、そして compare and pull request と書かれたボタンが表示されているバナー"></p>
 
-    <p>Press this button, and you should get a new screen appearing along these lines:</p>
+    <p>このボタンを押すと、次のような新しい画面が表示されます。</p>
 
-    <p><img src="open-pull-request.png" alt="open pull request form, which includes text fields for title and description"></p>
+    <p><img src="open-pull-request.png" alt="open pull request フォーム、その中にタイトルと説明のテキストフィールドがある"></p>
 
     <div class="notecard warning">
-      <h3>Warning</h3>
+      <h3>警告</h3>
 
-      <p>Only follow the rest of these steps if you have a real change to make to the repo! Please do not actually submit test PRs to our repos.</p>
+      <p>ここから先の手順は、実際にリポジトリに変更を加える場合にのみ行ってください。実際にテスト PR をリポジトリに提出しないでください。</p>
     </div>
   </li>
   <li>
-    <p>At this point, enter a useful title and description for your PR, saying exactly what it changed, why this is a good thing, and what related issue it fixed, if appropriate. Specifically, include a line saying <code>Fixes <em>issue-url</em></code>. GitHub automatically renders this as a link to the issue number, e.g. <code>Fixes #1234</code> and, in addition, automatically closes the related issue once the pull request is merged.</p>
+    <p>ここでは、プルリクエストに役立つタイトルと説明を入力し、変更した内容、それがなぜ良いことなのかを正確に書いてください。必要に応じて、修正された関連する問題を書いてください。具体的には、 <code>Fixes <em>issue-url</em></code> という行を入れます。 GitHub は、自動的にこれを <code>Fixes #1234</code> のような課題番号へのリンクとして表示し、さらにプルリクエストがマージされると関連する課題を自動的にクローズします。 (訳注: <code>Fixes <em>issue-url</em></code> の部分は英語で入力してください。日本語で書くと自動的にクローズする機能が動作しないことがあります。)</p>
   </li>
   <li>
-    <p>Once you are ready to send your pull request, click the "Create pull request" button. This will cause your pull request (PR) to appear in the repo's <a href="https://github.com/mdn/content/pulls">Pull requests list</a>, where it'll be reviewed by our review teams, and hopefully merged into the main codebase.</p>
+    <p>プルリクエストを送信する準備ができたら、 "Create pull request" ボタンをクリックしてください。これにより、自分のプルリクエスト (PR) がリポジトリの<a href="https://github.com/mdn/content/pulls">プルリクエスト一覧</a>に表示され、レビューチームによるレビューを経て、メインのコードベースにマージされることになります。</p>
 
-    <p>If the review team has changes they want you to make, they'll tell you in comments in the pull request thread (you should receive an email notification to tell you this).</p>
+    <p>レビューチームが変更を加えてほしい場合は、プルリクエストのスレッドのコメントで教えてくれます (その旨の通知メールが届くはずです)。</p>
   </li>
   <li>
-    <p>If you want to make further changes to the same pull request you've already submitted, you can do so by making more commits on the same local branch and then pushing them as explained previously. There is no need to create a completely new pull request. <strong>Just make sure you are making them on the same branch as before</strong>.</p>
+    <p>すでに提出したプルリクエストにさらに変更を加えたい場合は、同じローカルブランチ上でさらにコミットを行い、先ほど説明したようにプッシュすることで変更を加えることができます。全く新しいプルリクエストを作成する必要はありません。ただ、<strong>以前と同じブランチにコミットしていることを確認してください</strong>。</p>
   </li>
 </ol>
 
-<h2 id="troubleshooting">Troubleshooting</h2>
+<h2 id="troubleshooting">トラブルシューティング</h2>
 
-<p>The above tutorial is aimed at providing you with the basics of git and GitHub that you'll need to contribute to GitHub repos at a basic level. We hope it was helpful! We'd also like to discuss the fact that, despite being the industry standard version control system for the web industry, Git has a kind of mythical/legendary reputation as a painfully difficult tool to learn and use.</p>
+<p>上記のチュートリアルは、 GitHub のリポジトリに貢献するために必要な git と GitHub の基礎知識を基本レベルで提供することを目的としています。お役に立ちましたでしょうか。また、ウェブ業界の標準的なバージョン管理システムであるにもかかわらず、 Git は学ぶのも使うのも非常に難しいツールであるという神話的・伝説的な評判があることについても触れておきましょう。</p>
 
-<p>We're not sure this is entirely fair. Git has a lot of commands that are sometimes fairly cryptic in their use, and does take a long time to master. It is also fair to say that if you forget some of the commands or do things in the wrong order you can find yourself in some interesting messes that are hard to get out of. However, as long as you get yourself into some good habits as described above, you shouldn't go too far wrong. It is also worth mentioning that Git is much easier to use than it was 10 years ago.</p>
+<p>私たちは、これが完全に公平だとは思いません。 Git には多くのコマンドがあり、その使い方は時に非常に不可解で、マスターするには長い時間がかかります。また、コマンドのいくつかを忘れたり、間違った順序で実行したりすると、なかなか抜け出せない面白い混乱に陥る可能性があるのも事実です。しかし、上記のような良い習慣を身につけていれば、大きく間違えることはないでしょう。また、 Git は10年前に比べてはるかに使いやすくなっていることも特筆すべき点です。</p>
 
-<p>This section will be added to over time, and includes some useful commands/sequences to help you fix common problems.</p>
+<p>この節は今後拡充してゆき、一般的な問題を解決するのに役立つコマンドやシーケンスを紹介します。</p>
 
-<h3 id="reverting_a_change_you_made_to_a_file_that_you_havent_yet_added_to_the_commit_list">Reverting a change you made to a file that you haven't yet added to the commit list</h3>
+<h3 id="reverting_a_change_you_made_to_a_file_that_you_havent_yet_added_to_the_commit_list">コミット一覧に追加されていないファイルに加えた変更を元に戻す</h3>
 
-<p>If you've changed a file, but have not yet run the <code>git add <em>file-path</em></code> command to add it to the commit list, you can revert it to the state it was when you first checked out the branch by running</p>
+<p>ファイルを変更したものの、まだそれをコミット一覧に追加するための <code>git add <em>ファイルパス</em></code> コマンドを実行していない場合は、次のように実行すれば、そのファイルをブランチを最初にチェックアウトしたときの状態に戻すことができます。</p>
 
-<pre class="brush: bash">git restore <em>file-path</em></pre>
+<pre class="brush: bash">git restore <em>ファイルパス</em></pre>
 
-<h3 id="removing_a_file_from_the_commit_list">Removing a file from the commit list</h3>
+<h3 id="removing_a_file_from_the_commit_list">コミット一覧からのファイルの削除</h3>
 
-<p>If you've already run the <code>git add <em>file-path</em></code> command to add a file to the commit list, but now want to remove it from the commit list, you can use the command</p>
+<p><code>git add <em>ファイルパス</em></code> コマンドを実行してファイルをコミット一覧に追加した後で、そのファイルをコミット一覧から削除したい場合は、次のようなコマンドを使います。</p>
 
-<pre class="brush: bash">git restore --staged <em>file-path</em></pre>
+<pre class="brush: bash">git restore --staged <em>ファイルパス</em></pre>
 
-<h3 id="reversing_a_commit">Reversing a commit</h3>
+<h3 id="reversing_a_commit">コミットの取り消し</h3>
 
-<p>If you've committed the commit list using <code>git commit -m 'my commit message'</code>, and not yet pushed it, but now realized that you put something in there that you want to remove, you can reverse your local commit using</p>
+<p><code>git commit -m 'my commit message'</code> を使ってコミット一覧をコミットした後、まだプッシュしていないが、何か削除したいものを入れてしまったことに気づいた場合、次のようにしてローカルのコミットを取り消すことができます。</p>
 
 <pre class="brush: bash">git reset HEAD~1</pre>
 
-<p>This will take it back to the state when the changes in that commit are not yet added to the commit list (you would need to git add them again after figuring out the problem). Note that this gets you back to the state before you started committing anything in this session. This won't help you if you need to do something more complex, like only revert the middle commit out of a set of three. We'll leave it there for this lesson.</p>
+<p>これで、そのコミットの変更がまだコミット一覧に追加されていない状態に戻ります (問題を解決した後で、再度 git add する必要があります)。これは、このセッションで何かをコミットし始める前の状態に戻ることに注意しましょう。これでは、たとえば 3 つのコミットのうち真ん中のコミットだけを戻したいといった複雑なことをするときには役に立ちません。このレッスンでは、このままにしておきましょう。</p>
 
-<h3 id="reversing_a_commit_that_has_been_pushed_to_the_remote_fork">Reversing a commit that has been pushed to the remote fork</h3>
+<h3 id="reversing_a_commit_that_has_been_pushed_to_the_remote_fork">リモートフォークにプッシュされたコミットを元に戻す</h3>
 
-<p>At this point, there is not really any going back, or rewinding. Instead, you need to push another commit to reverse the effects of the one you want to get rid of. You could do this manually using some of the tools we've already given you above, but there is a built-in command that makes this easier — <code>git revert</code>. This can be used to automatically create a commit that reverts changes back to the point you specify.</p>
+<p>ここまで来ると、実際には戻ることも巻き戻すこともできません。代わりに、削除したいコミットの効果を逆にするために、別のコミットをプッシュする必要があります。上記で紹介したツールを使って手動で行うこともできますが、これを簡単に行うことができる組み込みのコマンド、 <code>git revert</code> があります。これを使うと、指定した時点に変更を戻すコミットを自動的に作成することができます。</p>
 
 <ol>
   <li>
-    <p>At its simplest, you can run the following command to create a commit that will get your remote branch back to the state you were in before you started committing:</p>
+    <p>最もシンプルな方法は、以下のコマンドを実行して、リモートブランチをコミット開始前の状態に戻すコミットを作成することです。</p>
 
     <pre class="brush: bash">git revert HEAD</pre>
   </li>
   <li>
-    <p>This will result in a commit message file being opened up in your default text editor that you need to check to make sure you are happy with it. Close this, and git will finalize creating the commit.</p>
+    <p>すると、コミットメッセージファイルが既定のテキストエディターで開かれるので、それを見て納得できるかどうか確認しましょう。これを閉じると、 git はコミットの作成を完了します。</p>
   </li>
   <li>
-    <p>Now you just need to push it:</p>
+    <p>あとはプッシュする必要があるだけです。</p>
 
     <pre class="brush: bash">git push</pre>
   </li>
 </ol>
 
-<p>If you look at your remote fork's github.com page again, you'll see the commit that you wanted to reverse, plus the commit that reverses it.</p>
+<p>github.com でリモートフォークのページを再度見ると、元に戻したかったコミットと、それを元に戻したコミットが表示されています。</p>
 
-<h3 id="want_to_see_more">Want to see more?</h3>
+<h3 id="want_to_see_more">もっと見たいですか？</h3>
 
-<p>If you think this troubleshooting guide should contain more information, please <a href="https://github.com/mdn/content/issues/new">create an issue</a> to suggest what you think we should include.</p>
+<p>他にもこのトラブルシューティングガイドに情報を盛り込むべきだと思われる場合は、<a href="https://github.com/mdn/content/issues/new">課題を作成</a>して提案してください。</p>
 
-<h2 id="see_also">See also</h2>
+<h2 id="see_also">関連情報</h2>
 
 <ul>
-  <li><a href="/en-US/docs/Learn/Tools_and_testing/GitHub">MDN Learn > Git and GitHub</a></li>
-  <li><a href="https://dangitgit.com/en">Dangit, Git</a> — additional useful troubleshooting techniques</li>
+  <li><a href="/ja/docs/Learn/Tools_and_testing/GitHub">MDN 学習 > Git と GitHub</a></li>
+  <li><a href="https://dangitgit.com/en">Dangit, Git</a> — その他の有用なトラブルシューティング技術</li>
   <li><a href="https://hackernoon.com/45-github-issues-dos-and-donts-dfec9ab4b612">45 Github Issues Dos and Don'ts</a></li>
-  <li><a href="https://cli.github.com/">gh CLI tool</a> — once you are used to using the vanilla git CLI commands to control your repos, you might want to consider installing GitHub's own gh CLI tool, which provides commands to speed up a number of the processes discussed above.</li>
+  <li><a href="https://cli.github.com/">GitHub CLI tool</a> — リポジトリの管理に git の CLI コマンドを使うことに慣れてきたら、 GitHub 独自の GitHub CLI ツールのインストールを検討してみてはいかがでしょうか。</li>
 </ul>
