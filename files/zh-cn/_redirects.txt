@@ -1730,6 +1730,7 @@
 /zh-CN/docs/Web/API/RandomSource	/zh-CN/docs/conflicting/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/Response/克隆	/zh-CN/docs/Web/API/Response/clone
+/zh-CN/docs/Web/API/SVGPathElement/getTotalLength	/zh-CN/docs/Web/API/SVGGeometryElement/getTotalLength
 /zh-CN/docs/Web/API/Screen.availHeight	/zh-CN/docs/Web/API/Screen/availHeight
 /zh-CN/docs/Web/API/Screen.availLeft	/zh-CN/docs/Web/API/Screen/availLeft
 /zh-CN/docs/Web/API/Screen.availTop	/zh-CN/docs/Web/API/Screen/availTop
