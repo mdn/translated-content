@@ -1,0 +1,170 @@
+---
+title: PerformanceEventTiming
+slug: Web/API/PerformanceEventTiming
+tags:
+  - API
+  - Event Timing API
+  - Interface
+  - Performance
+  - PerformanceEventTiming
+  - Reference
+  - Performance Web
+translation_of: Web/API/PerformanceEventTiming
+---
+<div>{{SeeCompatTable}}{{APIRef("Event Timing API")}}</div>
+
+<p class="summary">L'interface <code>PerformanceEventTiming</code> de l'<code>Event Timing API</code> des événements fournit des informations de chronométrage pour les types d'événements énumérés ci-dessous.</p>
+
+<div class="index">
+  <ul>
+    <li>{{event("auxclick")}}</li>
+    <li>{{event("beforeinput")}}</li>
+    <li>{{event("click")}}</li>
+    <li>{{event("compositionend")}}</li>
+    <li>{{event("compositionstart")}}</li>
+    <li>{{event("compositionupdate")}}</li>
+    <li>{{event("contextmenu")}}</li>
+    <li>{{event("dblclick")}}</li>
+    <li>{{event("dragend")}}</li>
+    <li>{{event("dragenter")}}</li>
+    <li>{{event("dragleave")}}</li>
+    <li>{{event("dragover")}}</li>
+    <li>{{event("dragstart")}}</li>
+    <li>{{event("drop")}}</li>
+    <li>{{event("input")}}</li>
+    <li>{{event("keydown")}}</li>
+    <li>{{event("keypress")}}</li>
+    <li>{{event("keyup")}}</li>
+    <li>{{event("mousedown")}}</li>
+    <li>{{event("mouseenter")}}</li>
+    <li>{{event("mouseleave")}}</li>
+    <li>{{event("mouseout")}}</li>
+    <li>{{event("mouseover")}}</li>
+    <li>{{event("mouseup")}}</li>
+    <li>{{event("pointerover")}}</li>
+    <li>{{event("pointerenter")}}</li>
+    <li>{{event("pointerdown")}}</li>
+    <li>{{event("pointerup")}}</li>
+    <li>{{event("pointercancel")}}</li>
+    <li>{{event("pointerout")}}</li>
+    <li>{{event("pointerleave")}}</li>
+    <li>{{event("gotpointercapture")}}</li>
+    <li>{{event("lostpointercapture")}}</li>
+    <li>{{event("touchstart")}}</li>
+    <li>{{event("touchend")}}</li>
+    <li>{{event("touchcancel")}}</li>
+  </ul>
+</div>
+
+<h2 id="Properties">Propriétés</h2>
+
+<dl>
+  <dt><strong><code>{{domxref("PerformanceEventTiming.processingStart")}}</code></strong> {{ExperimentalBadge}}</dt>
+  <dd>Retourne l'heure à laquelle la diffusion des événements a commencé.</dd>
+  <dt><strong><code>{{domxref("PerformanceEventTiming.processingEnd")}}</code></strong> {{ExperimentalBadge}}</dt>
+  <dd>Retourne l'heure à laquelle la diffusion de l'événement s'est terminée.</dd>
+  <dt><strong><code>{{domxref("PerformanceEventTiming.cancelable")}}</code></strong> {{ExperimentalBadge}}</dt>
+  <dd>Retourne l'attribut annulable de l'événement associé.</dd>
+  <dt><strong><code>{{domxref("PerformanceEventTiming.target")}}</code></strong> {{NonStandardBadge}}</dt>
+  <dd>Retourne la dernière cible de l'événement associé, si elle n'est pas supprimée.</dd>
+</dl>
+
+<h2 id="Methods">Méthodes</h2>
+
+<dl>
+  <dt><strong><code>{{domxref("PerformanceEventTiming.toJSON()")}}</code></strong> {{ExperimentalBadge}}</dt>
+  <dd>Convertit l'objet {{domxref("PerformanceEventTiming")}} en JSON.</dd>
+</dl>
+
+<h2 id="Examples">Exemples</h2>
+
+<p>L'exemple suivant montre comment utiliser l'API pour tous les événements :</p>
+
+<pre class="brush:js">const <var>observer</var> = new PerformanceObserver(function(list) {
+  const <var>perfEntries</var> = list.getEntries().forEach(entry =&gt; {
+    // Durée totale
+    const <var>inputDuration</var> = entry.duration;
+    // Retard d'entrée (avant l'événement de traitement)
+    const <var>inputDelay</var> = entry.processingStart - entry.startTime;
+    // Temps de traitement d'un événement synchrone (entre le début et la fin de la diffusion).
+    const <var>inputSyncProcessingTime</var> = entry.processingEnd - entry.processingStart;
+  });
+});
+// Enregistre un observateur pour l'événement.
+observer.observe({entryTypes: ["event"]});
+</pre>
+
+<p>Nous pouvons également interroger directement le <a href="https://web.dev/fid">premier délai d'entrée</a>. Le premier délai d'entrée ou « FID : First input delay », mesure le temps entre le moment où un utilisateur interagit pour la première fois avec une page (c'est-à-dire lorsqu'il clique sur un lien ou sur un bouton) et le moment où le navigateur est effectivement en mesure de commencer à traiter les gestionnaires d'événements en réponse à cette interaction.</p>
+
+<pre class="brush:js">// Pour savoir si (et quand) la page a été masquée pour la première fois, voir :
+// https://github.com/w3c/page-visibility/issues/29
+// NOTE : idéalement, cette vérification devrait être effectuée dans le &lt;head&gt; du document
+// pour éviter les cas où l'état de visibilité change avant l'exécution de ce code.
+let <var>firstHiddenTime</var> = document.visibilityState === 'hidden' ? 0 : Infinity;
+document.addEventListener('visibilitychange', (event) =&gt; {
+  firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
+}, {once: true});
+
+// Envoie les données transmises à un point de terminaison analytique. Ce code
+// utilise `/analytics` ; vous pouvez le remplacer par votre propre URL.
+function sendToAnalytics(<var>data</var>) {
+  const <var>body</var> = JSON.stringify(data);
+  // Utilise `navigator.sendBeacon()` si disponible, en revenant à `fetch()`.
+  (navigator.sendBeacon &amp;&amp; navigator.sendBeacon('/analytics', body)) ||
+      fetch('/analytics', {body, method: 'POST', keepalive: true});
+}
+
+// Utilise un try/catch au lieu de la fonction de détection de la prise en charge de `first-input`
+// car certains navigateurs lancent des requêtes lorsqu'ils utilisent la nouvelle option `type`.
+// https://bugs.webkit.org/show_bug.cgi?id=209216
+try {
+  function onFirstInputEntry(<var>entry</var>) {
+    // Ne rapporte le FID que si la page n'était pas cachée avant que
+    // l'entrée soit envoyée. Cela se produit généralement lorsqu'une
+    // page est chargée dans un onglet en arrière-plan.
+    if (entry.startTime &lt; firstHiddenTime) {
+      const <var>fid</var> = entry.processingStart - entry.startTime;
+
+      // Rapporte la valeur du FID à un terminal d'analyse.
+      sendToAnalytics({fid});
+    }
+  }
+
+  // Crée un PerformanceObserver qui appelle `onFirstInputEntry` pour chaque entrée.
+  const <var>po</var> = new PerformanceObserver((entryList) =&gt; {
+    entryList.getEntries().forEach(onFirstInputEntry);
+  });
+
+  // Observe les entrées de type `first-input`, y compris les entrées en mémoire tampon,
+  // c'est-à-dire les entrées qui ont eu lieu avant d'appeler `observe()` ci-dessous.
+  po.observe({
+    type: 'first-input',
+    buffered: true,
+  });
+} catch (<var>e</var>) {
+  // Ne fait rien si le navigateur ne prend pas en charge cette API.
+}
+</pre>
+
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Event Timing API','#sec-performance-event-timing','PerformanceEventTiming')}}</td>
+      <td>{{Spec2('Event Timing API')}}</td>
+      <td>Définition Initiale.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.PerformanceEventTiming")}}</p>
