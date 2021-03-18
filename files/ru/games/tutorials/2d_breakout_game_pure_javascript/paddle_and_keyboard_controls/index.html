@@ -39,7 +39,7 @@ var paddleX = (canvas.width-paddleWidth)/2;</pre>
 
 <ul>
  <li>Две переменные для хранения информации о том, левая или правая кнопка управления нажата.</li>
- <li>Два слушателя для событий <code>keydown</code> и <code>keyup</code> — мы хотим запустить некоторый код для обработки движения ракетки при нажатии кнопок.</li>
+ <li>Два обработчика для событий <code>keydown</code> и <code>keyup</code> — мы хотим запустить некоторый код для обработки движения ракетки при нажатии кнопок.</li>
  <li>Две функции обработки события <code>keydown</code> и <code>keyup</code> код, который будет выполняться при нажатии кнопок.</li>
  <li>Возможность перемещения ракетки влево и вправо</li>
 </ul>
@@ -49,7 +49,7 @@ var paddleX = (canvas.width-paddleWidth)/2;</pre>
 <pre class="brush: js">var rightPressed = false;
 var leftPressed = false;</pre>
 
-<p>Значением по умолчанию для обоих является <code>false</code>, так как изначально кнопки не нажаты. Для прослушивания нажатий клавиш, мы создадим два обработчика событий. Добавьте следующие строки чуть выше функции <code>setInterval()</code> в нижней части JavaScript:</p>
+<p>Значением по умолчанию для обоих является <code>false</code>, так как изначально кнопки не нажаты. Для обработки нажатий клавиш, мы создадим два обработчика событий. Добавьте следующие строки чуть выше функции <code>setInterval()</code> в нижней части JavaScript:</p>
 
 <pre class="brush: js">document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);</pre>
