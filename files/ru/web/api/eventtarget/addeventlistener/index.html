@@ -105,7 +105,7 @@ try {
 <pre class="brush: js notranslate">someElement.addEventListener("mouseup", handleMouseUp, passiveSupported
                                ? { passive: true } : false);</pre>
 
-<p>Здесь мы добавляем обработчика для события {{event ("mouseup")}} элемента <code>someElement</code>. Для третьего параметра, если <code>passiveSupported</code> имеет значение <code>true</code>, мы указываем объект <code>options</code> с <code>passive: true</code>; в противном случае мы знаем, что нам нужно передать логическое значение, и мы передаем <code>false</code> как значение параметра <code>useCapture</code>.</p>
+<p>Здесь мы добавляем обработчик события {{event ("mouseup")}} элемента <code>someElement</code>. Для третьего параметра, если <code>passiveSupported</code> имеет значение <code>true</code>, мы указываем объект <code>options</code> с <code>passive: true</code>; в противном случае мы знаем, что нам нужно передать логическое значение, и мы передаем <code>false</code> как значение параметра <code>useCapture</code>.</p>
 
 <p>Вы можете использовать стороннюю библиотеку, такую как <a href="https://modernizr.com/docs">Modernizr</a> или <a href="https://github.com/rafrex/detect-it">Detect It</a>, чтобы проверить поддержку необходимого свойства.</p>
 
@@ -148,7 +148,7 @@ el.addEventListener("click", modifyText, false);
 
 <p>{{EmbedLiveSample('Add_a_simple_listener')}}</p>
 
-<p>Если вам нужно передать параметры в обработчика, вы можете использовать анонимные функции.</p>
+<p>Если вам нужно передать параметры в обработчик, вы можете использовать анонимные функции.</p>
 
 <h3 id="Event_Listener_with_anonymous_function" name="Event_Listener_with_anonymous_function">Слушатель события с анонимной функцией</h3>
 
