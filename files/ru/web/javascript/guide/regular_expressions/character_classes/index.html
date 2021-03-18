@@ -151,11 +151,11 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 
 <pre class="brush: js notranslate">var randomData = "015 354 8787 687351 3512 8735";
 var regexpFourDigits = /\b\d{4}\b/g;
-// \b определяет границу поиска (например, не начиает поиск с середины слова)
+// \b определяет границу поиска (например, не начинает поиск с середины слова)
 // \d{4} определяет цифру, четыре раза
-// определяет другую границу поиска (например, не начиает поиск с середины слова)
+// определяет другую границу поиска (например, не начинает поиск с середины слова)
 
-// Вывод всех числел имеющих только 4 цифры
+// Вывод всех чисел имеющих только 4 цифры
 console.table(randomData.match(regexpFourDigits));
 // ['8787', '3512', '8735']
 </pre>
@@ -164,9 +164,9 @@ console.table(randomData.match(regexpFourDigits));
 
 <pre class="brush: js notranslate">var aliceExcerpt = "I’m sure I’m not Ada,’ she said, ‘for her hair goes in such long ringlets, and mine doesn’t go in ringlets at all.";
 var regexpWordStartingWithA = /\b[aA]\w+/g;
-// \b определяет границу поиска (например, не начиает поиск с середины слова)
+// \b определяет границу поиска (например, не начинает поиск с середины слова)
 // [aA] определяет букву a или A
-// \b определяет границу поиска (например, не начиает поиск с середины слова)
+// \b определяет границу поиска (например, не начинает поиск с середины слова)
 
 console.table(aliceExcerpt.match(regexpWordStartingWithA));
 // ['Ada', 'and', 'at', 'all']

@@ -100,7 +100,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 <pre class="brush: html notranslate">&lt;video controls&gt;
   &lt;source src="rabbit320.mp4" type="video/mp4"&gt;
   &lt;source src="rabbit320.webm" type="video/webm"&gt;
-  &lt;p&gt;Ваш браузер не подддерживает HTML5 видео. Вот &lt;a href="rabbit320.mp4"&gt;ссылка на видео&lt;/a&gt; взамен.&lt;/p&gt;
+  &lt;p&gt;Ваш браузер не поддерживает HTML5 видео. Вот &lt;a href="rabbit320.mp4"&gt;ссылка на видео&lt;/a&gt; взамен.&lt;/p&gt;
 &lt;/video&gt;</pre>
 
 <p>Здесь мы изъяли атрибут <code>src</code>  из нашего тега <code>&lt;video&gt;</code>, и вместо этого включали отдельные  элементы {{htmlelement("source")}}, каждый из которых ссылается на собственный источник. В этом случае браузер пройдется по элементам <code>&lt;source&gt;</code> и начнёт воспроизводить первый из них, который имеет поддерживаемый кодек. Включение источников WebM и MP4 должно быть достаточно для воспроизведения вашего видео на большинстве платформ и браузеров в наши дни.</p>

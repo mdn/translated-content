@@ -139,7 +139,7 @@ console.log(new Intl.DateTimeFormat().format(date));
 // Форматирование ниже предполагает, что местный часовой пояс равен
 // America/Los_Angeles для локали США
 
-// В америкаском английском используется порядок месяц-день-год
+// В американском английском используется порядок месяц-день-год
 console.log(new Intl.DateTimeFormat('en-US').format(date));
 // → "12/19/2012"
 
@@ -156,7 +156,7 @@ console.log(new Intl.DateTimeFormat('ar-EG').format(date));
 // → "<span dir="rtl">٢٠‏/١٢‏/٢٠١٢</span>"
 
 // В Японии приложения могут захотеть использовать японский календарь,
-// в котором 2012 год являеся 24-м годом эры Хейсей
+// в котором 2012 год является 24-м годом эры Хейсей
 console.log(new Intl.DateTimeFormat('ja-JP-u-ca-japanese').format(date));
 // → "24/12/20"
 

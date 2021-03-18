@@ -77,7 +77,7 @@ p1.then(function(v) {
 });
 
 // Thenable объект выбрасывает исключение
-// перед вызовом колбека Promise resolves
+// перед вызовом колбэка Promise resolves
 var thenable = { then: function(resolve) {
   throw new TypeError("Throwing");
   resolve("Resolving");
@@ -91,7 +91,7 @@ p2.then(function(v) {
 });
 
 // Thenable объект выбрасывает исключение
-// после вызова колбека Promise resolves
+// после вызова колбэка Promise resolves
 var thenable = { then: function(resolve) {
   resolve("Resolving");
   throw new TypeError("Throwing");

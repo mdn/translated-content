@@ -104,7 +104,7 @@ class BookListView(generic.ListView):
     def get_context_data(self, **kwargs):
         # В первую очередь получаем базовую реализацию контекста
         context = super(BookListView, self).get_context_data(**kwargs)
-        # Добавляем новую переменную к контексту и иниуиализируем ее некоторым значением
+        # Добавляем новую переменную к контексту и инициализируем ее некоторым значением
         context['some_data'] = 'This is just some data'
         return context</pre>
 

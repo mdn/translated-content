@@ -227,7 +227,7 @@ urlpatterns += [
 
 <p>Добавьте следующие строчки, тоже в конец файла:</p>
 
-<pre class="brush: python"># Добавьте URL соотношения, чтобы перенаправить запросы с корневового URL, на URL приложения
+<pre class="brush: python"># Добавьте URL соотношения, чтобы перенаправить запросы с корневого URL, на URL приложения
 from django.views.generic import RedirectView
 urlpatterns += [
     <code>path('', RedirectView.as_view(url='/catalog/', permanent=True)),</code>

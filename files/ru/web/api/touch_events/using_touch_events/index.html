@@ -80,7 +80,7 @@ function process_touchstart(ev) {
 <pre class="brush: js notranslate">// Создание обработчика события "touchstart"
 someElement.addEventListener('touchstart', function(ev) {
   // Перебор точек события, которые были активированы
-  // для этого элемента и обработчка каждого целевого элемента события
+  // для этого элемента и обработка каждого целевого элемента события
   for (var i=0; i &lt; ev.targetTouches.length; i++) {
     process_target(ev.targetTouches[i].target);
   }

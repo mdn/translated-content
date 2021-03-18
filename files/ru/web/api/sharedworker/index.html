@@ -78,7 +78,7 @@ translation_of: Web/API/SharedWorker
       port.postMessage(workerResult);
     });
 
-    port.start(); // обязательно при использовании addEventListener. Иначе вызывается неявно после установки хэндлера onmessage.
+    port.start(); // необходимо при добавлении обработчиков с помощью addEventListener. При использовании сеттера port.onmessage, данный метод вызывается автоматически, неявно
 }</pre>
 
 <h3 id="Пример_с_несколькими_страницами">Пример с несколькими страницами</h3>

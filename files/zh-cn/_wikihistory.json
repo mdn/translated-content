@@ -18192,12 +18192,6 @@
       "fanxiaojie"
     ]
   },
-  "Web/API/SVGPathElement/getTotalLength": {
-    "modified": "2020-10-15T22:32:52.448Z",
-    "contributors": [
-      "tiny-gravel"
-    ]
-  },
   "Web/API/SVGSVGElement": {
     "modified": "2020-10-15T22:20:08.511Z",
     "contributors": [
@@ -50797,6 +50791,12 @@
       "RainSlide",
       "bei6",
       "iainreid629"
+    ]
+  },
+  "Web/API/SVGGeometryElement/getTotalLength": {
+    "modified": "2020-10-15T22:32:52.448Z",
+    "contributors": [
+      "tiny-gravel"
     ]
   }
 }
