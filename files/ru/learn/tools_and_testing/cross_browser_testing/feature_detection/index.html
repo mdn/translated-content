@@ -85,7 +85,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 
 <h4 id="supports">@supports</h4>
 
-<p>Недавно, в CSS появился собственный механизм обнаружения собственных функций — {{cssxref("@supports")}} at-rule. Это работает аналогично <a href="/en-US/docs/Web/CSS/Media_Queries">медиазапросам</a> (см. Также <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems">Адаптивные проблемы дизайна</a>) — за исключением того, что вместо выборочного применения CSS в зависимости от медиа-функции, такой как разрешение, ширина экрана или соотношение сторон, выборочно применяется CSS в зависимости от того, поддерживается ли функция CSS.</p>
+<p>Недавно, в CSS появился собственный механизм обнаружения собственных функций — {{cssxref("@supports")}} at-rule. Это работает аналогично <a href="/en-US/docs/Web/CSS/Media_Queries">медиавыражениям</a> (см. Также <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems">Адаптивные проблемы дизайна</a>) — за исключением того, что вместо выборочного применения CSS в зависимости от медиа-функции, такой как разрешение, ширина экрана или соотношение сторон, выборочно применяется CSS в зависимости от того, поддерживается ли функция CSS.</p>
 
 <p>Например, мы могли бы переписать наш предыдущий пример для использования <code>@supports</code> — см. <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html">supports-feature-detect.html</a></code> и <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css">supports-styling.css</a></code>. Если вы посмотрите на последнее, вы увидите пару блоков <code>@supports</code> например:</p>
 
@@ -169,7 +169,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 
 <h4 id="matchMedia">matchMedia</h4>
 
-<p>Мы также хотели упомянуть функцию JavaScript {{domxref("Window.matchMedia")}} на этом этапе. Это свойство, которое позволяет вам запускать тесты медиа-запросов внутри JavaScript. Это выглядит так:</p>
+<p>Мы также хотели упомянуть функцию JavaScript {{domxref("Window.matchMedia")}} на этом этапе. Это свойство, которое позволяет вам запускать тесты медиавыражений внутри JavaScript. Это выглядит так:</p>
 
 <pre class="brush: js">if (window.matchMedia("(max-width: 480px)").matches) {
   // run JavaScript in here.
