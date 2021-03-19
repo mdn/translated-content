@@ -10,7 +10,6 @@ original_slug: Traducir_las_descripciones_de_las_extensiones
 ---
 <p> </p>
 <h3 id="Localizing_in_Gecko_1.9" name="Localizing_in_Gecko_1.9">Localizing in Gecko 1.9</h3>
-<p>{{ Gecko_minversion_header(1.9) }} {{ Fx_minversion_header(3) }}</p>
 <p>Gecko 1.9 incluye un nuevo y más robusto método para localizar descripciones añadidas y otros metadatos. Todas las diferentes descripciones aparecen ahora en el fichero <a href="es/Install_Manifests">install.rdf</a> utilizando las propedades <code>em:localized</code>. Cada una contiene al menos una propiedad <code>em:locale</code> que marca el localizador (locale) para el cual deberá utilizarse la citada información y, además, todas las diversas cadenas (strings) del localizador. El siguiente ejemplo demuestra lo dicho (la mayoría de las propiedades normales del manifiesto han sido suprimidas para abreviar):</p>
 <pre>&lt;?xml version="1.0"?&gt;
 
