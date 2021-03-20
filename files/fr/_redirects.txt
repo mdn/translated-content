@@ -3125,10 +3125,7 @@
 /fr/docs/MDN/Contribute/Contenu	/fr/docs/MDN/Guidelines
 /fr/docs/MDN/Contribute/Contenu/Code_lignesdirectrices	/fr/docs/MDN/Guidelines/Code_guidelines
 /fr/docs/MDN/Contribute/Howto/Creer_un_exercice_interactif_pour_apprendre_le_web	/fr/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
-/fr/docs/MDN/Contribute/Howto/Set_the_summary_for_a_page	/fr/docs/orphaned/MDN/Contribute/Howto/Set_the_summary_for_a_page
-/fr/docs/MDN/Contribute/Howto/Write_an_article_to_help_learn_about_the_Web	/fr/docs/orphaned/MDN/Contribute/Howto/Write_an_article_to_help_learn_about_the_Web
 /fr/docs/MDN/Contribute/Howto/convertir_code_pour_etre_direct	/fr/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live
-/fr/docs/MDN/Contribute/Howto/Étiquettes_pages_JavaScript	/fr/docs/orphaned/MDN/Contribute/Howto/Tag_JavaScript_pages
 /fr/docs/MDN/Contribute/Structures	/fr/docs/MDN/Structures
 /fr/docs/MDN/Contribute/Structures/Exemples_live	/fr/docs/MDN/Structures/Live_samples
 /fr/docs/MDN/Contribute/Structures/Macros	/fr/docs/MDN/Structures/Macros
