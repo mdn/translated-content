@@ -19,7 +19,7 @@ translation_of: Web/API/MutationObserver
 
 <dl>
  <dt>{{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}</dt>
- <dd>Создает и возвращает новый <code>MutationObserver</code>, который вызовет определенную функцию обратного вызова при изменении в DOM.</dd>
+ <dd>Создает и возвращает новый <code>MutationObserver</code>, который вызовет определенную колбэк-функцию при изменении в DOM.</dd>
 </dl>
 
 <h2 id="Параметры">Параметры</h2>
@@ -115,7 +115,7 @@ const config = {
     subtree: true
 };
 
-// Функция обратного вызова при срабатывании мутации
+// Колбэк-функция при срабатывании мутации
 const callback = function(mutationsList, observer) {
     for (let mutation of mutationsList) {
         if (mutation.type === 'childList') {
@@ -126,7 +126,7 @@ const callback = function(mutationsList, observer) {
     }
 };
 
-// Создаем<code> </code>экземпляр наблюдателя с указанной функцией обратного вызова
+// Создаем<code> </code>экземпляр наблюдателя с указанной функцией колбэка
 const observer = new MutationObserver(callback);
 
 // Начинаем наблюдение за настроенными изменениями целевого элемента<code>

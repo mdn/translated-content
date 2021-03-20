@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <h2 id="Description" name="Description">Описание</h2>
 <p>Метод <code>reduceRight()</code> выполняет функцию <code>callback</code> один раз для каждого элемента, присутствующего в массиве, за исключением пустот, принимая четыре аргумента: начальное значение (или значение от предыдущего вызова <code>callback</code>), значение текущего элемента, текущий индекс и массив, по которому происходит итерация.</p>
-<p>Вызов функции обратного вызова <code>callback</code> будет выглядеть так:</p>
+<p>Вызов колбэк-функции <code>callback</code> будет выглядеть так:</p>
 <pre class="brush: js">array.reduceRight(function(previousValue, currentValue, index, array) {
   // ...
 });
@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
   return previousValue + currentValue;
 });
 </pre>
-<p>Функция обратного вызова будет вызвана четыре раза, аргументы и возвращаемое значение при каждом вызове будут следующими:</p>
+<p>Колбэк-функция будет вызвана четыре раза, аргументы и возвращаемое значение при каждом вызове будут следующими:</p>
 <table style="width: 100%;">
  <thead>
   <tr>
@@ -100,7 +100,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
   </tr>
  </tbody>
 </table>
-<p>Значение, возвращённое методом <code>reduceRight()</code> будет равным последнему результату выполнения функции обратного вызова (<code>10</code>).</p>
+<p>Значение, возвращённое методом <code>reduceRight()</code> будет равным последнему результату выполнения колбэк-функции — <code>10</code>.</p>
 <p>Если же вы зададите начальное значение <code>initialValue</code>, результат будет выглядеть так:</p>
 <pre class="brush: js">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
   return previousValue + currentValue;

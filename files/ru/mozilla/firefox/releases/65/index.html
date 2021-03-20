@@ -209,7 +209,7 @@ translation_of: Mozilla/Firefox/Releases/65
 
   <ul>
    <li>Тип {{WebExtAPIRef("tabs.Tab")}} получил свойство <code>successorId</code>, используемое для хранения/получения ID вкладки-наследника.</li>
-   <li>Обратный вызов обработчика событий {{WebExtAPIRef("tabs.onActivated")}} получил новый параметр, <code>previousTabId</code>, содержащий ID предыдущей активированной вкладки, если она всё ещё открыта.</li>
+   <li>Колбэк обработчика событий {{WebExtAPIRef("tabs.onActivated")}} получил новый параметр, <code>previousTabId</code>, содержащий ID предыдущей активированной вкладки, если она всё ещё открыта.</li>
    <li>Объект <code>updateProperties</code> функции {{WebExtAPIRef("tabs.update()")}} обзавёлся новым свойством <code>successorTabId</code>, которое служит для его обновления.</li>
    <li><code>successorTabId</code> также возвращается функциями наподобие {{WebExtAPIRef("tabs.get()")}} и {{WebExtAPIRef("tabs.query()")}}.</li>
    <li>Новая функция <code>tabs.moveInSuccession()</code> позволяет массово манипулировать наследниками вкладок.</li>

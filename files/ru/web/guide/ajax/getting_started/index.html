@@ -193,7 +193,7 @@ httpRequest.send(null);
 
 <p><strong>Замечание 3</strong>: Если переменная <code>httpRequest</code> используется глобально, то конкурирующие функции, вызывающие <code>makeRequest()</code> могут конкурировать друг с другом, вызывая состязания. Объявление переменной <code>httpRequest</code> локально в функции и передача ее в <code>alertContent()</code> предотвращает состязания.</p>
 
-<p><strong>Замечание 4</strong>: При привязывании функции обратного вызова к <code>onreadystatechange</code> нельзя указывать аргументов. По этой причине не работает следующий код:</p>
+<p><strong>Замечание 4</strong>: При привязывании колбэк-функции к <code>onreadystatechange</code> нельзя указать аргументы. По этой причине не работает следующий код:</p>
 
 <pre>httpRequest.onreadystatechange = alertContents(httpRequest); // (не работает)
 </pre>

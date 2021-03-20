@@ -5,11 +5,11 @@ translation_of: Web/API/VRDisplay/requestAnimationFrame
 ---
 <div>{{APIRef("WebVR API")}}{{SeeCompatTable}}</div>
 
-<p>Метод <code><strong>requestAnimationFrame()</strong></code> интерфейса {{domxref("VRDisplay")}} является специфичной реализацией метода {{domxref("Window.requestAnimationFrame")}} и принимает в качестве аргумента функцию обратного вызова (callback-функция). Эта функция будет вызвана, когда объект типа <code>VRDisplay</code> будет готов отобразить новый кадр сцены:</p>
+<p>Метод <code><strong>requestAnimationFrame()</strong></code> интерфейса {{domxref("VRDisplay")}} является специфичной реализацией метода {{domxref("Window.requestAnimationFrame")}} и принимает в качестве аргумента колбэк-функцию. Эта функция будет вызвана, когда объект типа <code>VRDisplay</code> будет готов отобразить новый кадр сцены:</p>
 
 <ul>
  <li>Если в этот момент объект типа <code>VRDisplay</code> не находится в процессе отображения сцены, то вызов этой функции эквивалентен вызову {{domxref("Window.requestAnimationFrame")}}.</li>
- <li>Если объект типа <code>VRDisplay</code> находится в состоянии отображения сцены, вызов callback-функции происходит с собственной частотой обновления устройства, представленного этим объектом.</li>
+ <li>Если объект типа <code>VRDisplay</code> находится в состоянии отображения сцены, вызов колбэк-функции происходит с собственной частотой обновления устройства, представленного этим объектом.</li>
 </ul>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -21,7 +21,7 @@ translation_of: Web/API/VRDisplay/requestAnimationFrame
 
 <dl>
  <dt>callback</dt>
- <dd>callback-функция, которая будет вызвана когда объект типа <code>VRDisplay</code> будет готов отобразить новый кадр сцены.</dd>
+ <dd>Колбэк-функция, которая будет вызвана когда объект типа <code>VRDisplay</code> будет готов отобразить новый кадр сцены.</dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>

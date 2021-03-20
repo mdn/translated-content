@@ -14,7 +14,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Home_page
 <pre class="brush: js ">// GET catalog home page.
 router.get('/', book_controller.index);  //This actually maps to /catalog/ because we import the route with a /catalog prefix</pre>
 
-<p>Параметр callback-функции определен в <strong>/controllers/bookController.js</strong>:</p>
+<p>Параметр колбэк-функции определен в <strong>/controllers/bookController.js</strong>:</p>
 
 <pre class="brush: js">exports.index = function(req, res, next) {
     res.send('NOT IMPLEMENTED: Site Home Page');
@@ -27,7 +27,7 @@ router.get('/', book_controller.index);  //This actually maps to /catalog/ becau
 <p>Функция контроллера индекса должна получать информацию о том, сколько книг (<code>Book)</code>, экземпляров книг (<code>BookInstance)</code>, сколько из них доступно, сколько авторов (<code>Author)</code>, жанров (<code>Genre)</code> имеется в БД, должна поместить эту информацию в шаблон, чтобы создать  HTML-страницу, после чего вернуть ее в  HTTP-ответе.</p>
 
 <div class="note">
-<p><strong>Заметка:</strong> Количество экземпляров в каждой модели вычисляется при помощи метода <code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.countDocuments" rel="noopener">countDocuments()</a></code> . Он вызывается для модели с возможным набором условий, необходимых для проверки соответствия первому аргументу и callback-функции второго аргумента (обсуждалось ранее в "Использование базы данных с Mongoose" <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Using a Database (with Mongoose)</a>), причем можно вернуть также запрос <code>Query,</code> а затем выполнить его позже при помощи callback. Эта  callback-функция будет выполняться, когда БД вернет количество записей.  Значение ошибки (or <code>null</code>) будет первым параметром, а количество записей (или null, если была ошибка) -  вторым параметром.</p>
+<p><strong>Заметка:</strong> Количество экземпляров в каждой модели вычисляется при помощи метода <code><a class="external external-icon" href="http://mongoosejs.com/docs/api.html#model_Model.countDocuments" rel="noopener">countDocuments()</a></code> . Он вызывается для модели с возможным набором условий, необходимых для проверки соответствия первому аргументу и колбэк-функции второго аргумента (обсуждалось ранее в "Использование базы данных с Mongoose" <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Using a Database (with Mongoose)</a>), причем можно вернуть также запрос <code>Query,</code> а затем выполнить его позже при помощи callback. Эта  колбэк-функция будет выполняться, когда БД вернет количество записей.  Значение ошибки (or <code>null</code>) будет первым параметром, а количество записей (или null, если была ошибка) -  вторым параметром.</p>
 
 <pre class="brush: js ">SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
  // ... do something if there is an err
@@ -76,12 +76,12 @@ exports.index = function(req, res) {
     });
 };</pre>
 
-<p>Метод <code>async.parallel()</code> передает объект с функциями для получения количества элементов каждой модели. Все эти функции стартуют одновременно. Когда все они завершатся,  будет вызвана финальная callback-функция, в итоговом параметре которой содержится нужный нам результат (или ошибка).</p>
+<p>Метод <code>async.parallel()</code> передает объект с функциями для получения количества элементов каждой модели. Все эти функции стартуют одновременно. Когда все они завершатся,  будет вызвана финальная колбэк-функция, в итоговом параметре которой содержится нужный нам результат (или ошибка).</p>
 
-<p>При успешном завершении callback-функции она вызывает <code><a class="external external-icon" href="http://expressjs.com/en/4x/api.html#res.render" rel="noopener">res.render()</a></code>, у которой в качестве параметров - представление (шаблон)  '<strong>index</strong>' и объект, содержащий данные, которые следует поместить в шаблон (среди них - количества элементов в моделях). Данные представлены как пары ключ-значение, и могут быть получены в шаблоне по ключу.</p>
+<p>При успешном завершении колбэк-функции она вызывает <code><a class="external external-icon" href="http://expressjs.com/en/4x/api.html#res.render" rel="noopener">res.render()</a></code>, у которой в качестве параметров - представление (шаблон)  '<strong>index</strong>' и объект, содержащий данные, которые следует поместить в шаблон (среди них - количества элементов в моделях). Данные представлены как пары ключ-значение, и могут быть получены в шаблоне по ключу.</p>
 
 <div class="note">
-<p><strong>Заметка:</strong>  В данном случае callback-функция, которую вызывает <code>async.parallel()</code> , несколько необычная - страница отображается всегда, независимо от того, была ошибка или нет (обычно используют отдельный путь выполнения для обработки выводимых ошибок).</p>
+<p><strong>Заметка:</strong>  В данном случае колбэк-функция, которую вызывает <code>async.parallel()</code> , несколько необычная - страница отображается всегда, независимо от того, была ошибка или нет (обычно используют отдельный путь выполнения для обработки выводимых ошибок).</p>
 </div>
 
 <h2 id="Представление">Представление</h2>

@@ -25,7 +25,7 @@ original_slug: Web/API/WindowTimers/setTimeout
  <li><code>delay</code>  {{optional_inline}} -  задержка в миллисекундах (тысячных долях секунды), после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. {{anch("Notes")}} ниже.</li>
 </ul>
 
-<p>Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этого функционала в таких браузерах, необходимо использовать код для совместимости (см. раздел <a href="#Аргументы_функции_обратного_вызова">Аргументы функции обратного вызова</a>).</p>
+<p>Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этого функционала в таких браузерах, необходимо использовать код для совместимости (см. раздел <a href="#Аргументы_колбэк-функции">Аргументы колбэк-функции</a>).</p>
 
 <div class="warning"><strong>Important:</strong> Prior to Gecko 13 {{ geckoRelease("13.0") }}, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.</div>
 
@@ -62,7 +62,7 @@ function clearAlert() {
 
 <p>Смотрите также <a href="/en-US/docs/DOM/window.clearTimeout#Example" title="en-US/docs/DOM/window.clearTimeout#Example"><code>пример clearTimeout()</code></a>.</p>
 
-<h2 id="Аргументы_функции_обратного_вызова">Аргументы функции обратного вызова</h2>
+<h2 id="Аргументы_колбэк-функции">Аргументы колбэк-функции</h2>
 
 <p>Если вам нужно передать аргумент в вашу callback функцию, но нужно, чтобы это работало в Internet Explorer 9 и ниже, который не поддерживает передачу дополнительных параметров (ни с <code>setTimeout()</code> или <code>setInterval()</code>), то вы можете прописать специальный код для <em>совместимости с IE, </em><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>вставив этот код в начало ваших скриптов</span></span></span>, <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>который включит функцию передачи стандартных параметров HTML5 в </span></span></span>Internet Explorer<span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span> для обоих таймеров</span></span></span>.</p>
 
@@ -162,7 +162,7 @@ setTimeout(myArray.myMethod, 1500, "1"); // prints "undefined" after 1.5 seconds
 setTimeout.call(myArray, myArray.myMethod, 2000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error</pre>
 
-<p><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Как видите, нет способов передать объект</span></span></span> <code>this</code> <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>в функцию обратного вызова.</span></span></span>.</p>
+<p><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Как видите, нет способов передать объект</span></span></span> <code>this</code> <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>в колбэк-функцию.</span></span></span>.</p>
 
 <h3 id="Возможное_решение">Возможное решение</h3>
 
@@ -186,7 +186,7 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
   } : vCallback, nDelay);
 };</pre>
 
-<div class="note"><strong>Note:</strong> These two replacements will also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as polyfills also. See the <a href="#Аргументы_функции_обратного_вызова">Callback arguments</a> paragraph.</div>
+<div class="note"><strong>Note:</strong> These two replacements will also enable the HTML5 standard passage of arbitrary arguments to the callback functions of timers in IE. So they can be used as polyfills also. See the <a href="#Аргументы_колбэк-функции">Callback arguments</a> paragraph.</div>
 
 <p>Новая тестируемая особенность:</p>
 

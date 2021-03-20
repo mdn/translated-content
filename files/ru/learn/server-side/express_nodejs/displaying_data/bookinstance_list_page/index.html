@@ -26,7 +26,7 @@ exports<span class="punctuation token">.</span>bookinstance_list <span class="op
 
 <p>Чтобы вернуть все объекты <code>BookInstance,</code> метод использует функцию <code>find()</code> модели. Далее в цепочке вызывается метод <code>populate()</code> с аргументом - полем <code>book,</code> что приводит к замене идентификатора id, хранящегося для каждого экземпляра <code>BookInstance</code> полным документом <code>Book</code>.</p>
 
-<p>При удаче, callback-функция, переданная запросу, заполняет шаблон <strong>bookinstance_list</strong>(.pug), передав переменные <code>title</code> и <code>bookinstance_list</code>.</p>
+<p>При удаче, колбэк-функция, переданная запросу, заполняет шаблон <strong>bookinstance_list</strong>(.pug), передав переменные <code>title</code> и <code>bookinstance_list</code>.</p>
 
 <h2 class="highlight-spanned" id="Представление">Представление</h2>
 

@@ -26,7 +26,7 @@ exports<span class="punctuation token">.</span>book_list <span class="operator t
 
 <p>Метод использует функцию модели<code>find()</code> для возврата всех объектов <code>Book</code>, выбрав для возврата только заголовок и автора, поскольку нам не нужны другие поля (он также вернет <code>_id</code> и виртуальные поля). Здесь мы также вызываем <code>populate()</code> on <code>Book</code>, указывая поле  <code>author</code> —это заменит сохраненный идентификатор автора книги полными сведениями об авторе.</p>
 
-<p>При успешном выполнении, обратный вызов передаст запрос на отрисовку шаблона <strong>book_list</strong>(.pug), передаст <code>title</code> и<code>book_list</code> (список книг с автором) в качестве переменных.</p>
+<p>При успешном выполнении, колбэк передаст запрос на отрисовку шаблона <strong>book_list</strong>(.pug), передаст <code>title</code> и<code>book_list</code> (список книг с автором) в качестве переменных.</p>
 
 <h2 class="highlight-spanned" id="Представление"><span class="highlight-span">Представление</span></h2>
 
