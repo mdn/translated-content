@@ -3674,7 +3674,6 @@
 /fr/docs/Web/API/Document/defaultView/popstate_event	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Document/defaultView/storage_event	/fr/docs/Web/API/Window/storage_event
 /fr/docs/Web/API/Document/domConfig	/fr/docs/Web/API/Document
-/fr/docs/Web/API/DocumentOrShadowRoot	/fr/docs/orphaned/Web/API/DocumentOrShadowRoot
 /fr/docs/Web/API/DocumentOrShadowRoot/activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/fr/docs/Web/API/Document/elementFromPoint
 /fr/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/fr/docs/Web/API/Document/elementsFromPoint
@@ -3780,8 +3779,6 @@
 /fr/docs/Web/API/Element/ongotpointercapture	/fr/docs/Web/API/GlobalEventHandlers/ongotpointercapture
 /fr/docs/Web/API/Element/onwheel	/fr/docs/Web/API/GlobalEventHandlers/onwheel
 /fr/docs/Web/API/Element/removeChild	/fr/docs/Web/API/Node/removeChild
-/fr/docs/Web/API/Entity	/fr/docs/orphaned/Web/API/Entity
-/fr/docs/Web/API/EntityReference	/fr/docs/orphaned/Web/API/EntityReference
 /fr/docs/Web/API/Event.initEvent	/fr/docs/Web/API/Event/initEvent
 /fr/docs/Web/API/Event.stopPropagation	/fr/docs/Web/API/Event/stopPropagation
 /fr/docs/Web/API/Event/Comparaison_des_cibles_d_évènements	/fr/docs/Web/API/Event/Comparison_of_Event_Targets
@@ -3799,7 +3796,6 @@
 /fr/docs/Web/API/HTMLElement/style	/fr/docs/Web/API/ElementCSSInlineStyle/style
 /fr/docs/Web/API/HTMLElement/tabIndex	/fr/docs/Web/API/HTMLOrForeignElement/tabIndex
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
-/fr/docs/Web/API/HTMLHyperlinkElementUtils	/fr/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /fr/docs/Web/API/HTMLTableElement.caption	/fr/docs/Web/API/HTMLTableElement/caption
 /fr/docs/Web/API/HTMLTableElement.insertRow	/fr/docs/Web/API/HTMLTableElement/insertRow
 /fr/docs/Web/API/IDBEnvironment/indexedDB	/fr/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB
@@ -3808,7 +3804,6 @@
 /fr/docs/Web/API/Location.reload	/fr/docs/Web/API/Location/reload
 /fr/docs/Web/API/Location.replace	/fr/docs/Web/API/Location/replace
 /fr/docs/Web/API/MediaDevices/mediaDevices.getUserMedia	/fr/docs/Web/API/MediaDevices/getUserMedia
-/fr/docs/Web/API/NameList	/fr/docs/orphaned/Web/API/NameList
 /fr/docs/Web/API/Navigator.getGamepads	/fr/docs/Web/API/Navigator/getGamepads
 /fr/docs/Web/API/Navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
 /fr/docs/Web/API/Navigator.onLine	/fr/docs/Web/API/NavigatorOnLine/onLine
@@ -3838,7 +3833,6 @@
 /fr/docs/Web/API/Selection_API	/fr/docs/conflicting/Web/API/Selection
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
-/fr/docs/Web/API/URLUtils	/fr/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /fr/docs/Web/API/WebGLRenderingContext/activer	/fr/docs/Web/API/WebGLRenderingContext/enable
 /fr/docs/Web/API/WebGLRenderingContext/canevas	/fr/docs/Web/API/WebGLRenderingContext/canvas
 /fr/docs/Web/API/WebGL_API/By_example/Appliquer_des_couleurs	/fr/docs/Web/API/WebGL_API/By_example/Clearing_with_colors
@@ -3914,7 +3908,6 @@
 /fr/docs/Web/API/Worker.terminate	/fr/docs/Web/API/Worker/terminate
 /fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers	/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
-/fr/docs/Web/API/XMLHttpRequest/sendAsBinary	/fr/docs/orphaned/Web/API/XMLHttpRequest/sendAsBinary
 /fr/docs/Web/API/console.log	/fr/docs/Web/API/Console/log
 /fr/docs/Web/API/console.time	/fr/docs/Web/API/Console/time
 /fr/docs/Web/API/console.timeEnd	/fr/docs/Web/API/Console/timeEnd

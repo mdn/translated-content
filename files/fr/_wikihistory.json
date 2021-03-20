@@ -33544,18 +33544,6 @@
       "alexandre-le-borgne"
     ]
   },
-  "orphaned/Web/API/Entity": {
-    "modified": "2019-03-18T21:40:22.544Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "orphaned/Web/API/EntityReference": {
-    "modified": "2019-03-18T21:40:29.302Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/Event/Comparison_of_Event_Targets": {
     "modified": "2019-03-18T21:39:09.103Z",
     "contributors": [
@@ -33632,12 +33620,6 @@
       "wbamberg",
       "fscholz",
       "Kalwyn"
-    ]
-  },
-  "orphaned/Web/API/NameList": {
-    "modified": "2020-10-13T11:05:39.955Z",
-    "contributors": [
-      "Voulto"
     ]
   },
   "Web/API/NavigatorOnLine/Online_and_offline_events": {
@@ -45429,12 +45411,6 @@
       "paul.bignier"
     ]
   },
-  "orphaned/Web/API/HTMLHyperlinkElementUtils": {
-    "modified": "2019-03-23T23:15:38.230Z",
-    "contributors": [
-      "Watilin"
-    ]
-  },
   "Web/API/Document/activeElement": {
     "modified": "2019-03-23T23:12:53.004Z",
     "contributors": [
@@ -45443,13 +45419,6 @@
       "AshfaqHossain",
       "Mgjbot",
       "BenoitL"
-    ]
-  },
-  "orphaned/Web/API/XMLHttpRequest/sendAsBinary": {
-    "modified": "2020-10-15T22:26:07.337Z",
-    "contributors": [
-      "SphinxKnight",
-      "MasterFox"
     ]
   },
   "orphaned/Web/MathML/Element/mglyph": {
@@ -45512,12 +45481,6 @@
     "contributors": [
       "SphinxKnight",
       "RolandGautier"
-    ]
-  },
-  "orphaned/Web/API/DocumentOrShadowRoot": {
-    "modified": "2020-10-15T22:25:01.411Z",
-    "contributors": [
-      "tristantheb"
     ]
   }
 }
