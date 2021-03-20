@@ -26367,15 +26367,6 @@
       "rtabusse"
     ]
   },
-  "orphaned/Learn/How_to_contribute": {
-    "modified": "2020-07-16T22:33:43.608Z",
-    "contributors": [
-      "SphinxKnight",
-      "Dralyab",
-      "loella16",
-      "PetiPandaRou"
-    ]
-  },
   "Learn/Common_questions/set_up_a_local_testing_server": {
     "modified": "2020-07-16T22:35:52.861Z",
     "contributors": [
@@ -30053,9 +30044,12 @@
     ]
   },
   "Glossary/Signature/Security": {
-    "modified": "2019-03-23T22:40:22.990Z",
+    "modified": "2019-03-23T23:47:49.334Z",
     "contributors": [
-      "xdelatour"
+      "fsiliadin",
+      "Sebastianz",
+      "CedricP",
+      "Fredchat"
     ]
   },
   "Glossary/SIMD": {
@@ -30789,54 +30783,6 @@
     "contributors": [
       "maximelore",
       "wbamberg"
-    ]
-  },
-  "orphaned/Introduction_à_la_cryptographie_à_clef_publique/Certificats_et_authentification": {
-    "modified": "2019-03-24T00:12:07.320Z",
-    "contributors": [
-      "fsiliadin",
-      "SphinxKnight",
-      "Sebastianz",
-      "Sheppy",
-      "nterray",
-      "BenoitL",
-      "Fredchat"
-    ]
-  },
-  "orphaned/Introduction_à_la_cryptographie_à_clef_publique/Chiffrement_et_déchiffrement": {
-    "modified": "2019-03-23T23:47:48.910Z",
-    "contributors": [
-      "acemann",
-      "Sebastianz",
-      "CedricP",
-      "Fredchat"
-    ]
-  },
-  "orphaned/Introduction_à_la_cryptographie_à_clef_publique/Gestion_des_certificats": {
-    "modified": "2019-03-23T23:47:44.500Z",
-    "contributors": [
-      "acemann",
-      "Sebastianz",
-      "fscholz",
-      "CedricP",
-      "Fredchat"
-    ]
-  },
-  "orphaned/Introduction_à_la_cryptographie_à_clef_publique/Les_problèmes_de_sécurité_sur_Internet": {
-    "modified": "2019-03-23T23:47:50.104Z",
-    "contributors": [
-      "Sebastianz",
-      "CedricP",
-      "Fredchat"
-    ]
-  },
-  "orphaned/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques": {
-    "modified": "2019-03-23T23:47:49.334Z",
-    "contributors": [
-      "fsiliadin",
-      "Sebastianz",
-      "CedricP",
-      "Fredchat"
     ]
   },
   "Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
@@ -36193,15 +36139,6 @@
       "SphinxKnight"
     ]
   },
-  "orphaned/Web/HTML/Global_attributes/dropzone": {
-    "modified": "2020-10-15T21:33:33.621Z",
-    "contributors": [
-      "tristantheb",
-      "SphinxKnight",
-      "Goofy",
-      "guillaumev"
-    ]
-  },
   "Web/HTML/Global_attributes/hidden": {
     "modified": "2020-10-15T21:33:54.525Z",
     "contributors": [
@@ -36371,25 +36308,6 @@
     "contributors": [
       "tregagnon",
       "SphinxKnight"
-    ]
-  },
-  "orphaned/Web/HTML/Element/command": {
-    "modified": "2020-10-15T21:20:20.685Z",
-    "contributors": [
-      "SphinxKnight",
-      "JNa0",
-      "tregagnon",
-      "DirtyVader"
-    ]
-  },
-  "orphaned/Web/HTML/Element/element": {
-    "modified": "2020-10-15T21:26:29.511Z",
-    "contributors": [
-      "SphinxKnight",
-      "JNa0",
-      "teoli",
-      "louuis",
-      "ylerjen"
     ]
   },
   "Web/HTML/Block-level_elements": {
@@ -38278,15 +38196,6 @@
       "PifyZ"
     ]
   },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {
-    "modified": "2020-10-15T21:26:50.016Z",
-    "contributors": [
-      "SphinxKnight",
-      "gloucklegnou",
-      "teoli",
-      "greygjhart"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/push": {
     "modified": "2020-10-15T21:26:49.987Z",
     "contributors": [
@@ -38507,12 +38416,6 @@
       "SphinxKnight"
     ]
   },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype": {
-    "modified": "2020-10-15T21:50:20.188Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Atomics/add": {
     "modified": "2020-10-15T21:42:58.119Z",
     "contributors": [
@@ -38608,12 +38511,6 @@
     "contributors": [
       "SphinxKnight",
       "sarahgp"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/BigInt/prototype": {
-    "modified": "2020-10-15T22:12:26.325Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString": {
@@ -44274,20 +44171,6 @@
       "Fredchat",
       "VincentN",
       "Chbok"
-    ]
-  },
-  "orphaned/XPCOM/Liaisons_de_langage/Objet_Components": {
-    "modified": "2019-04-18T20:34:34.205Z",
-    "contributors": [
-      "wbamberg",
-      "jmh"
-    ]
-  },
-  "orphaned/XPCOM/Reference/Standard_XPCOM_components": {
-    "modified": "2019-04-18T20:35:41.986Z",
-    "contributors": [
-      "wbamberg",
-      "jmh"
     ]
   },
   "Web/API/XSLTProcessor/Browser_Differences": {

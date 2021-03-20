@@ -163,7 +163,6 @@
 /fr/docs/Apprendre/Commencer_avec_le_web/The_web_and_web_standards	/fr/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards
 /fr/docs/Apprendre/Commencer_avec_le_web/What_will_your_website_look_like	/fr/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like
 /fr/docs/Apprendre/Commencez_votre_projet_web	/fr/docs/Learn/Common_questions/Thinking_before_coding
-/fr/docs/Apprendre/Comment_contribuer	/fr/docs/orphaned/Learn/How_to_contribute
 /fr/docs/Apprendre/Common_questions	/fr/docs/Learn/Common_questions
 /fr/docs/Apprendre/Common_questions/configurer_un_serveur_de_test_local	/fr/docs/Learn/Common_questions/set_up_a_local_testing_server
 /fr/docs/Apprendre/Comprendre_les_URL	/fr/docs/Learn/Common_questions/What_is_a_URL
@@ -1946,7 +1945,6 @@
 /fr/docs/HTML/Element/code	/fr/docs/Web/HTML/Element/code
 /fr/docs/HTML/Element/col	/fr/docs/Web/HTML/Element/col
 /fr/docs/HTML/Element/colgroup	/fr/docs/Web/HTML/Element/colgroup
-/fr/docs/HTML/Element/command	/fr/docs/orphaned/Web/HTML/Element/command
 /fr/docs/HTML/Element/data	/fr/docs/Web/HTML/Element/data
 /fr/docs/HTML/Element/dd	/fr/docs/Web/HTML/Element/dd
 /fr/docs/HTML/Element/del	/fr/docs/Web/HTML/Element/del
@@ -2145,16 +2143,8 @@
 /fr/docs/Introduction_à_XML	/fr/docs/Web/XML/XML_introduction
 /fr/docs/Introduction_à_XML/xml:base	/fr/docs/Web/XML/xml:base
 /fr/docs/Introduction_à_l'utilisation_de_XPath_avec_JavaScript	/fr/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
-/fr/docs/Introduction_à_la_cryptographie_à_clef_publique/Certificats_et_authentification	/fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Certificats_et_authentification
-/fr/docs/Introduction_à_la_cryptographie_à_clef_publique/Chiffrement_et_déchiffrement	/fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Chiffrement_et_déchiffrement
-/fr/docs/Introduction_à_la_cryptographie_à_clef_publique/Gestion_des_certificats	/fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Gestion_des_certificats
-/fr/docs/Introduction_à_la_cryptographie_à_clef_publique/Les_problèmes_de_sécurité_sur_Internet	/fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Les_problèmes_de_sécurité_sur_Internet
-/fr/docs/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques	/fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques
-/fr/docs/Introduction_à_la_cryptographie_à_clef_publique:Certificats_et_authentification	/fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Certificats_et_authentification
-/fr/docs/Introduction_à_la_cryptographie_à_clef_publique:Chiffrement_et_déchiffrement	/fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Chiffrement_et_déchiffrement
-/fr/docs/Introduction_à_la_cryptographie_à_clef_publique:Gestion_des_certificats	/fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Gestion_des_certificats
-/fr/docs/Introduction_à_la_cryptographie_à_clef_publique:Les_problèmes_de_sécurité_sur_Internet	/fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Les_problèmes_de_sécurité_sur_Internet
-/fr/docs/Introduction_à_la_cryptographie_à_clef_publique:Signatures_numériques	/fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques
+/fr/docs/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques	/fr/docs/Glossary/Signature/Security
+/fr/docs/Introduction_à_la_cryptographie_à_clef_publique:Signatures_numériques	/fr/docs/Glossary/Signature/Security
 /fr/docs/JSON	/fr/docs/Glossary/JSON
 /fr/docs/JavaScript	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/A_propos	/fr/docs/Web/JavaScript/About_JavaScript
@@ -2282,7 +2272,6 @@
 /fr/docs/JavaScript/Reference/Global_Objects/Array/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length
 /fr/docs/JavaScript/Reference/Global_Objects/Array/map	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /fr/docs/JavaScript/Reference/Global_Objects/Array/pop	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/fr/docs/JavaScript/Reference/Global_Objects/Array/prototype	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
 /fr/docs/JavaScript/Reference/Global_Objects/Array/push	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /fr/docs/JavaScript/Reference/Global_Objects/Array/shift	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
 /fr/docs/JavaScript/Reference/Global_Objects/Array/splice	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
@@ -2334,7 +2323,6 @@
 /fr/docs/JavaScript/Reference/Objets_globaux/Array/map	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /fr/docs/JavaScript/Reference/Objets_globaux/Array/of	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/of
 /fr/docs/JavaScript/Reference/Objets_globaux/Array/pop	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/fr/docs/JavaScript/Reference/Objets_globaux/Array/prototype	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
 /fr/docs/JavaScript/Reference/Objets_globaux/Array/push	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /fr/docs/JavaScript/Reference/Objets_globaux/Array/reduce	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /fr/docs/JavaScript/Reference/Objets_globaux/Array/reduceRight	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
@@ -2637,7 +2625,6 @@
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Array/lastIndexOf	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Array/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Array/pop	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Array/prototype	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Array/push	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Array/reduce	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Array/reduceRight	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
@@ -2867,7 +2854,6 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Array/length	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Array/map	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Array/pop	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Array/prototype	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Array/push	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Array/reduce	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Array/reduceRight	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
@@ -4559,7 +4545,6 @@
 /fr/docs/Web/HTML/Attributs_globaux/data-*	/fr/docs/Web/HTML/Global_attributes/data-*
 /fr/docs/Web/HTML/Attributs_globaux/dir	/fr/docs/Web/HTML/Global_attributes/dir
 /fr/docs/Web/HTML/Attributs_globaux/draggable	/fr/docs/Web/HTML/Global_attributes/draggable
-/fr/docs/Web/HTML/Attributs_globaux/dropzone	/fr/docs/orphaned/Web/HTML/Global_attributes/dropzone
 /fr/docs/Web/HTML/Attributs_globaux/hidden	/fr/docs/Web/HTML/Global_attributes/hidden
 /fr/docs/Web/HTML/Attributs_globaux/id	/fr/docs/Web/HTML/Global_attributes/id
 /fr/docs/Web/HTML/Attributs_globaux/itemid	/fr/docs/Web/HTML/Global_attributes/itemid
@@ -4582,7 +4567,6 @@
 /fr/docs/Web/HTML/Attributs_universels/data-*	/fr/docs/Web/HTML/Global_attributes/data-*
 /fr/docs/Web/HTML/Attributs_universels/dir	/fr/docs/Web/HTML/Global_attributes/dir
 /fr/docs/Web/HTML/Attributs_universels/draggable	/fr/docs/Web/HTML/Global_attributes/draggable
-/fr/docs/Web/HTML/Attributs_universels/dropzone	/fr/docs/orphaned/Web/HTML/Global_attributes/dropzone
 /fr/docs/Web/HTML/Attributs_universels/hidden	/fr/docs/Web/HTML/Global_attributes/hidden
 /fr/docs/Web/HTML/Attributs_universels/id	/fr/docs/Web/HTML/Global_attributes/id
 /fr/docs/Web/HTML/Attributs_universels/inputmode	/fr/docs/Web/HTML/Global_attributes/inputmode
@@ -4611,8 +4595,6 @@
 /fr/docs/Web/HTML/Element/Video/canplay_event	/fr/docs/Web/API/HTMLMediaElement/canplay_event
 /fr/docs/Web/HTML/Element/Video/emptied_event	/fr/docs/Web/API/HTMLMediaElement/emptied_event
 /fr/docs/Web/HTML/Element/Video/ended_event	/fr/docs/Web/API/HTMLMediaElement/ended_event
-/fr/docs/Web/HTML/Element/command	/fr/docs/orphaned/Web/HTML/Element/command
-/fr/docs/Web/HTML/Element/element	/fr/docs/orphaned/Web/HTML/Element/element
 /fr/docs/Web/HTML/Element/h1	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h2	/fr/docs/Web/HTML/Element/Heading_Elements
 /fr/docs/Web/HTML/Element/h3	/fr/docs/Web/HTML/Element/Heading_Elements
@@ -4631,7 +4613,6 @@
 /fr/docs/Web/HTML/Formulaires/Mon_premier_formulaire_HTML	/fr/docs/Learn/Forms/Your_first_form
 /fr/docs/Web/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple	/fr/docs/Learn/Forms/Your_first_form/Example
 /fr/docs/Web/HTML/Gestion_du_focus_en_HTML	/fr/docs/Web/API/Document/hasFocus
-/fr/docs/Web/HTML/Global_attributes/dropzone	/fr/docs/orphaned/Web/HTML/Global_attributes/dropzone
 /fr/docs/Web/HTML/HTML5	/fr/docs/Web/Guide/HTML/HTML5
 /fr/docs/Web/HTML/HTML5/Liste_des_éléments_HTML5	/fr/docs/conflicting/Web/HTML/Element
 /fr/docs/Web/HTML/Image_avec_ressources_origines_multiples_CORS_activees	/fr/docs/Web/HTML/CORS_enabled_image
@@ -4846,7 +4827,6 @@
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/arguments/length	/fr/docs/Web/JavaScript/Reference/Functions/arguments/length
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/paramètres_du_reste	/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères	/fr/docs/Web/JavaScript/Reference/Template_literals
-/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/BigInt/prototype
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 /fr/docs/Web/JavaScript/Reference/Grammaire_lexicale	/fr/docs/Web/JavaScript/Reference/Lexical_grammar
 /fr/docs/Web/JavaScript/Reference/Index_des_méthodes	/fr/docs/Web/JavaScript/Reference
@@ -4917,7 +4897,6 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/map	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/of	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/of
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/pop	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/prototype	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/push	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/reduce	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/reduceRight	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
@@ -4939,7 +4918,6 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/slice	/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/AsyncFunction	/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/AsyncFunction/prototype	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Atomics	/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Atomics/add	/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics/add
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Atomics/and	/fr/docs/Web/JavaScript/Reference/Global_Objects/Atomics/and
@@ -4960,7 +4938,6 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/BigInt	/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/BigInt/asIntN	/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/BigInt/asUintN	/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/BigInt/prototype	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/BigInt/prototype
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/BigInt/toLocaleString	/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/BigInt/toString	/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/BigInt/valueOf	/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
@@ -5843,9 +5820,7 @@
 /fr/docs/XMLHttpRequest/FormData	/fr/docs/Web/API/FormData
 /fr/docs/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /fr/docs/XMLSerializer	/fr/docs/Web/API/XMLSerializer
-/fr/docs/XPCOM/Liaisons_de_langage/Objet_Components	/fr/docs/orphaned/XPCOM/Liaisons_de_langage/Objet_Components
 /fr/docs/XPCOM/Reference/Interface	/fr/docs/XPCOM_Interface_Reference
-/fr/docs/XPCOM/Reference/Standard_XPCOM_components	/fr/docs/orphaned/XPCOM/Reference/Standard_XPCOM_components
 /fr/docs/XPCOM:Liaisons_de_langage	/fr/docs/XPCOM/Liaisons_de_langage
 /fr/docs/XPath	/fr/docs/Web/XPath
 /fr/docs/XPath/Axes	/fr/docs/Web/XPath/Axes
@@ -6051,6 +6026,7 @@
 /fr/docs/nsISupports	/fr/docs/XPCOM_Interface_Reference/nsISupports
 /fr/docs/nsIURI	/fr/docs/XPCOM_Interface_Reference/nsIURI
 /fr/docs/nsIXULAppInfo	/fr/docs/XPCOM_Interface_Reference/nsIXULAppInfo
+/fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques	/fr/docs/Glossary/Signature/Security
 /fr/docs/setAttribute	/fr/docs/Web/API/Element/setAttribute
 /fr/docs/toSource	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toSource
 /fr/docs/toString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
