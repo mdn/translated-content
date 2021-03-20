@@ -18,7 +18,7 @@ translation_of: Web/API/MediaSource
 
 <dl>
  <dt>{{domxref("MediaSource.MediaSource", "MediaSource()")}}</dt>
- <dd>Создает и возвращает новый объект <code>MediaSource</code> не имеющий подключенных буферов данных.</dd>
+ <dd>Создаёт и возвращает новый объект <code>MediaSource</code> не имеющий подключённых буферов данных.</dd>
 </dl>
 
 <h2 id="Свойства">Свойства</h2>
@@ -31,7 +31,7 @@ translation_of: Web/API/MediaSource
  <dt>{{domxref("MediaSource.activeSourceBuffers")}} {{readonlyInline}}</dt>
  <dd>Возвращает объект типа {{domxref("SourceBufferList")}} содержащий подмножество объектов типа {{domxref("SourceBuffer")}} хранящих в себе другие объекты типа {{domxref("SourceBuffers")}} — список объектов, предоставляющих доступ к выбранному видео, доступным аудиодорожкам, текстовым данным и тд.</dd>
  <dt>{{domxref("MediaSource.readyState")}} {{readonlyInline}}</dt>
- <dd>Возвращает enum, отображающий состояние текущего <code>MediaSource-объекта</code>, будь то отсутствие подключения к медиа-элементу(<code>closed</code>), подключенный и готовый к передаче объектов типа {{domxref("SourceBuffer")}} (<font face="consolas, Liberation Mono, courier, monospace">open</font>), или подключенный, но с завершенным потоком {{domxref("MediaSource.endOfStream()")}} (<code>ended</code>.)</dd>
+ <dd>Возвращает enum, отображающий состояние текущего <code>MediaSource-объекта</code>, будь то отсутствие подключения к медиа-элементу(<code>closed</code>), подключённый и готовый к передаче объектов типа {{domxref("SourceBuffer")}} (<font face="consolas, Liberation Mono, courier, monospace">open</font>), или подключённый, но с завершённым потоком {{domxref("MediaSource.endOfStream()")}} (<code>ended</code>.)</dd>
  <dt>{{domxref("MediaSource.duration")}}</dt>
  <dd>Возвращает или устанавливает продолжительность предоставляемых медиаданных.</dd>
 </dl>
@@ -48,7 +48,7 @@ translation_of: Web/API/MediaSource
 
 <dl>
  <dt>{{domxref("MediaSource.addSourceBuffer()")}}</dt>
- <dd>Создает новый объект типа {{domxref("SourceBuffer")}}, с указанным  MIME-типом и добавляет в список <code>MediaSource</code>'s {{domxref("SourceBuffers")}}.</dd>
+ <dd>Создаёт новый объект типа {{domxref("SourceBuffer")}}, с указанным  MIME-типом и добавляет в список <code>MediaSource</code>'s {{domxref("SourceBuffers")}}.</dd>
  <dt>{{domxref("MediaSource.removeSourceBuffer()")}}</dt>
  <dd>Удаляет указанный {{domxref("SourceBuffer")}} из списка {{domxref("SourceBuffers")}}, связанного с текущим <code>MediaSource-объектом</code>.</dd>
  <dt>{{domxref("MediaSource.endOfStream()")}}</dt>
@@ -62,7 +62,7 @@ translation_of: Web/API/MediaSource
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Нижеприведенный простой пример подгружает видео фрагмент за фрагментом так скоро, как может, воспроизводя их "как только так сразу". Этот пример был написан Nick Desaulniers и может быть <a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">просмотрен здесь в виде демо</a> (также вы можете <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">загрузить исходный код</a> для дальнейшего изучения.)</p>
+<p>Нижеприведённый простой пример подгружает видео фрагмент за фрагментом так скоро, как может, воспроизводя их "как только так сразу". Этот пример был написан Nick Desaulniers и может быть <a href="http://nickdesaulniers.github.io/netfix/demo/bufferAll.html">просмотрен здесь в виде демо</a> (также вы можете <a href="https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html">загрузить исходный код</a> для дальнейшего изучения.)</p>
 
 <pre class="brush: js">var video = document.querySelector('video');
 

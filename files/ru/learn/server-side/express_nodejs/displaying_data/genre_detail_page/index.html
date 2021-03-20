@@ -43,7 +43,7 @@ exports.genre_detail = function(req, res, next) {
 };
 </pre>
 
-<p>Метод использует <code>async.parallel()</code> для параллельного запроса названия жанра и связанных с ним книг, причем колбэк-функция возвращает страницу, когда (если) оба запроса завершились успешно.</p>
+<p>Метод использует <code>async.parallel()</code> для параллельного запроса названия жанра и связанных с ним книг, причём колбэк-функция возвращает страницу, когда (если) оба запроса завершились успешно.</p>
 
 <p>The ID of the required genre record is encoded at the end of the URL and extracted automatically based on the route definition (<strong>/genre/:id</strong>). The ID is accessed within the controller via the request parameters: <code style="font-style: normal; font-weight: normal;">req.params.id</code>. It is used in <code style="font-style: normal; font-weight: normal;">Genre.findById()</code> to get the current genre. It is also used to get all <code>Book</code> objects that have the genre ID in their <code>genre</code> field: <code>Book.find({ 'genre': req.params.id })</code>.</p>
 

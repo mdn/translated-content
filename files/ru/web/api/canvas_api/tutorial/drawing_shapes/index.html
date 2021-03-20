@@ -12,11 +12,11 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 
 <h2 id="Сетка">Сетка</h2>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;">Перед тем, как мы начнем рисовать, нам нужно поговорить о сетке canvas или <strong>координатной плоскости</strong>. Наш HTML каркас из предыдущей страницы включал в себя элемент canvas 150 пикселей в ширину и 150 пикселей в высоту. Справа можно увидеть этот canvas <span class="short_text" id="result_box" lang="ru"><span class="hps">с сеткой</span><span>, накладываемой по умолчанию</span></span>. <span id="result_box" lang="ru"><span class="hps">Обычно 1 единица</span> <span class="hps">на сетке соответствует</span> <span class="hps">1 пикселю на</span></span> canvas. <span id="result_box" lang="ru"><span>Начало координат этой сетки</span> <span class="hps">расположено</span> <em><span class="hps">в верхнем левом</span> <span class="hps">углу</span></em> <span class="hps">в</span> <span class="atn hps">координате <code><em>(</em></code></span><span><code><em>0,0 )</em></code>.</span></span> <span id="result_box" lang="ru"><span class="hps">Все</span> <span class="hps">элементы размещены</span> <span class="hps">относительно</span> <span class="hps">этого</span> <span class="hps">начала</span><span>. </span><span class="hps">Так</span>им образом, <span class="hps">положение верхнего</span> <span class="hps">левого угла</span> <span class="hps">синего квадрата составляет</span> <code><em><span class="hps">х</span></em></code> <span class="hps">пикселей слева</span><span class="hps"> и</span> <code><em><span class="hps">у</span></em></code> <span class="hps">пикселей</span> <span class="hps">сверху,</span> <span class="hps">на</span> <span class="hps">координате <code><em>(х</em></code></span><span><code><em>, у)</em></code>.</span></span> <span id="result_box" lang="ru"><span class="hps">Позже в</span> <span class="hps">этом уроке мы</span> <span class="hps">увидим, как</span> <span class="hps">можно</span> <span class="hps">перевести</span> <span class="hps">начало координат</span> <span class="hps">в другое место</span><span>,</span> <span class="hps">вращать сетку</span> <span class="hps">и даже</span> <span class="hps">масштабировать ее</span><span>, но сейчас</span> <span class="hps">мы будем придерживаться</span> <span class="hps">настроек сетки по умолчанию.</span></span></p>
+<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;">Перед тем, как мы начнём рисовать, нам нужно поговорить о сетке canvas или <strong>координатной плоскости</strong>. Наш HTML каркас из предыдущей страницы включал в себя элемент canvas 150 пикселей в ширину и 150 пикселей в высоту. Справа можно увидеть этот canvas <span class="short_text" id="result_box" lang="ru"><span class="hps">с сеткой</span><span>, накладываемой по умолчанию</span></span>. <span id="result_box" lang="ru"><span class="hps">Обычно 1 единица</span> <span class="hps">на сетке соответствует</span> <span class="hps">1 пикселю на</span></span> canvas. <span id="result_box" lang="ru"><span>Начало координат этой сетки</span> <span class="hps">расположено</span> <em><span class="hps">в верхнем левом</span> <span class="hps">углу</span></em> <span class="hps">в</span> <span class="atn hps">координате <code><em>(</em></code></span><span><code><em>0,0 )</em></code>.</span></span> <span id="result_box" lang="ru"><span class="hps">Все</span> <span class="hps">элементы размещены</span> <span class="hps">относительно</span> <span class="hps">этого</span> <span class="hps">начала</span><span>. </span><span class="hps">Так</span>им образом, <span class="hps">положение верхнего</span> <span class="hps">левого угла</span> <span class="hps">синего квадрата составляет</span> <code><em><span class="hps">х</span></em></code> <span class="hps">пикселей слева</span><span class="hps"> и</span> <code><em><span class="hps">у</span></em></code> <span class="hps">пикселей</span> <span class="hps">сверху,</span> <span class="hps">на</span> <span class="hps">координате <code><em>(х</em></code></span><span><code><em>, у)</em></code>.</span></span> <span id="result_box" lang="ru"><span class="hps">Позже в</span> <span class="hps">этом уроке мы</span> <span class="hps">увидим, как</span> <span class="hps">можно</span> <span class="hps">перевести</span> <span class="hps">начало координат</span> <span class="hps">в другое место</span><span>,</span> <span class="hps">вращать сетку</span> <span class="hps">и даже</span> <span class="hps">масштабировать её</span><span>, но сейчас</span> <span class="hps">мы будем придерживаться</span> <span class="hps">настроек сетки по умолчанию.</span></span></p>
 
 <h2 id="Рисование_прямоугольников">Рисование прямоугольников</h2>
 
-<p>В отличие от {{Glossary("SVG")}}, {{HTMLElement("canvas")}} поддерживает только одну примитивную фигуру: прямоугольник. Все другие фигуры должны быть созданы комбинацией одного или большего количества контуров (paths), набором точек, соединенных в линии. К счастью в ассортименте рисования контуров у нас есть  функции, которые делают возможным составление очень сложных фигур.</p>
+<p>В отличие от {{Glossary("SVG")}}, {{HTMLElement("canvas")}} поддерживает только одну примитивную фигуру: прямоугольник. Все другие фигуры должны быть созданы комбинацией одного или большего количества контуров (paths), набором точек, соединённых в линии. К счастью в ассортименте рисования контуров у нас есть  функции, которые делают возможным составление очень сложных фигур.</p>
 
 <p>Сначала рассмотрим прямоугольник. Ниже представлены три функции рисования прямоугольников в canvas:</p>
 
@@ -29,7 +29,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
  <dd>Очистка  прямоугольной области, делая содержимое совершенно прозрачным.</dd>
 </dl>
 
-<p>Каждая из приведенных функций принимает несколько параметров: </p>
+<p>Каждая из приведённых функций принимает несколько параметров: </p>
 
 <ul>
  <li><em>x</em>, <font face="Consolas, Liberation Mono, Courier, monospace"><em>y</em></font> устанавливают положение верхнего левого угла прямоугольника в canvas (относительно начала координат);</li>
@@ -60,11 +60,11 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
   }
 }</pre>
 
-<p>Этот пример изображен ниже.</p>
+<p>Этот пример изображён ниже.</p>
 
 <p>{{EmbedLiveSample("Пример_создания_прямоугольных_фигур", 160, 160, "https://mdn.mozillademos.org/files/245/Canvas_rect.png")}}</p>
 
-<p>Функция fillRect() рисует большой чёрный квадрат со стороной 100 px. Функция clearRect() вырезает квадрат 60х60 из центра, а функция strokeRect() создает прямоугольный контур 50х50 пикселей внутри очищенного квадрата.</p>
+<p>Функция fillRect() рисует большой чёрный квадрат со стороной 100 px. Функция clearRect() вырезает квадрат 60х60 из центра, а функция strokeRect() создаёт прямоугольный контур 50х50 пикселей внутри очищенного квадрата.</p>
 
 <p>На следующей странице мы рассмотрим две альтернативы методу clearRect(), и также увидим, как можно изменять цвет и стиль контура отображаемых фигур.</p>
 
@@ -77,7 +77,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 <p>Создание фигур используя контуры происходит в несколько важных шагов:</p>
 
 <ol>
- <li>Сначала вы создаете контур.</li>
+ <li>Сначала вы создаёте контур.</li>
  <li>Затем, используя <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">команды рисования</a>, рисуете контур.</li>
  <li>Потом закрываете контур.</li>
  <li>Созданный контур вы можете обвести или залить для его отображения.</li>
@@ -87,7 +87,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}}</dt>
- <dd>Создает новый контур. После создания используется в дальнейшем командами рисования при построении контуров.</dd>
+ <dd>Создаёт новый контур. После создания используется в дальнейшем командами рисования при построении контуров.</dd>
  <dt><a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">Path методы</a></dt>
  <dd>Методы для установки различных контуров объекта.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}</dt>
@@ -195,12 +195,12 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.lineTo", "lineTo(x, y)")}}</dt>
- <dd>Рисует линию с текущей позиции до позиции, определенной <code>x и y</code>.</dd>
+ <dd>Рисует линию с текущей позиции до позиции, определённой <code>x и y</code>.</dd>
 </dl>
 
 <p><span id="result_box" lang="ru"><span class="hps">Этот метод принимает</span> <span class="hps">два аргумента</span> </span><code><em>x</em><span lang="ru"><span class="hps"> и </span></span><em>y</em></code><span lang="ru"><span>, которые являются</span> <span class="hps">координатами конечной</span> <span class="hps">точки линии</span><span>.</span></span> <span id="result_box" lang="ru"><span>Начальная точка зависит</span> <span class="hps">от</span> <span class="hps">ранее</span> <span class="hps">нарисованных путей, причём</span> <span class="hps">конечная точка</span> <span class="hps">предыдущего пути является</span> начальной <span class="hps">точкой следующего</span> <span class="hps">и т. д.</span> <span class="hps">Начальная точка также</span> <span class="hps">может быть изменена</span> <span class="hps">с помощью метода</span></span> <code>moveTo()</code>.</p>
 
-<p>Пример ниже рисует два треугольника, один закрашенный и другой обведен контуром.</p>
+<p>Пример ниже рисует два треугольника, один закрашенный и другой обведён контуром.</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;html&gt;
@@ -238,7 +238,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 
 <p>{{EmbedLiveSample("Линии", 160, 160, "https://mdn.mozillademos.org/files/238/Canvas_lineTo.png")}}</p>
 
-<p><span id="result_box" lang="ru"><span class="hps">Вы заметите</span> <span class="hps">разницу между</span> <span class="hps">закрашенным</span> <span class="hps">и обведенным контуром</span> <span class="hps">треугольниками.</span> <span class="hps">Это, </span><span class="hps">как упоминалось выше</span><span>,</span> <span class="hps">из-за</span> того, что <span class="hps">фигуры</span> <span class="hps">автоматически закрываются</span><span>, когда</span> <span class="hps">путь</span> <span class="hps">заполнен (т. е. закрашен)</span><span>, но</span> <span class="hps">не тогда, когда</span> <span class="hps">он очерчен (т. е. обведен контуром)</span><span>.</span></span> <span id="result_box" lang="ru"><span class="hps">Если бы мы</span> <span class="hps">не учли</span> </span><code>closePath()</code><span lang="ru"> <span class="hps">для</span> очерченного <span class="hps">треугольника</span><span>,</span> тогда <span class="hps">только две линии</span> <span class="hps">были бы</span> <span class="hps">нарисованы,</span> <span class="hps">а не</span> <span class="hps">весь треугольник</span><span>.</span></span></p>
+<p><span id="result_box" lang="ru"><span class="hps">Вы заметите</span> <span class="hps">разницу между</span> <span class="hps">закрашенным</span> <span class="hps">и обведённым контуром</span> <span class="hps">треугольниками.</span> <span class="hps">Это, </span><span class="hps">как упоминалось выше</span><span>,</span> <span class="hps">из-за</span> того, что <span class="hps">фигуры</span> <span class="hps">автоматически закрываются</span><span>, когда</span> <span class="hps">путь</span> <span class="hps">заполнен (т. е. закрашен)</span><span>, но</span> <span class="hps">не тогда, когда</span> <span class="hps">он очерчен (т. е. обведён контуром)</span><span>.</span></span> <span id="result_box" lang="ru"><span class="hps">Если бы мы</span> <span class="hps">не учли</span> </span><code>closePath()</code><span lang="ru"> <span class="hps">для</span> очерченного <span class="hps">треугольника</span><span>,</span> тогда <span class="hps">только две линии</span> <span class="hps">были бы</span> <span class="hps">нарисованы,</span> <span class="hps">а не</span> <span class="hps">весь треугольник</span><span>.</span></span></p>
 
 <h3 id="Дуги">Дуги</h3>
 
@@ -251,7 +251,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
  <dd>Рисуем дугу с заданными контрольными точками и радиусом, соединяя эти точки прямой линией.</dd>
 </dl>
 
-<p>Рассмотрим детальнее метод <em>arc()</em>, который имеет пять параметров: <em><code>x</code></em> и <em><code>y</code></em> — это координаты центра окружности, в которой должна быть нарисована дуга. <em><code>radius</code></em> — не требует пояснений. Углы <code>startAngle</code> и <code>endAngle</code> определяют начальную и конечную точки дуги в радианах вдоль кривой окружности. Отсчет происходит от оси x. Параметр <code>anticlockwise</code> — логическое значение, которое, если <code>true</code>, то рисование дуги совершается против хода часовой стрелки; иначе рисование происходит по ходу часовой стрелки.</p>
+<p>Рассмотрим детальнее метод <em>arc()</em>, который имеет пять параметров: <em><code>x</code></em> и <em><code>y</code></em> — это координаты центра окружности, в которой должна быть нарисована дуга. <em><code>radius</code></em> — не требует пояснений. Углы <code>startAngle</code> и <code>endAngle</code> определяют начальную и конечную точки дуги в радианах вдоль кривой окружности. Отсчёт происходит от оси x. Параметр <code>anticlockwise</code> — логическое значение, которое, если <code>true</code>, то рисование дуги совершается против хода часовой стрелки; иначе рисование происходит по ходу часовой стрелки.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Углы в функции arc() измеряют в радианах, не в градусах. Для перевода градусов в радианы вы можете использовать JavaScript-выражение: <code>radians = (Math.PI/180)*degrees</code>.</p>
@@ -263,7 +263,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 
 <p>Координаты <code>x</code> и <code>y</code>  должны быть достаточно ясны. <code>radius</code> and <code>startAngle</code> — фиксированы. <code>endAngle</code> начинается со 180 градусов (полуокружность) в первой колонке и, увеличиваясь с шагом 90 градусов, достигает кульминации полноценной окружностью в последнем столбце.</p>
 
-<p>Установка параметра <code>clockwise</code> определяет результат; в первой и третьей строках рисование дуг происходит по часовой стрелке, а во второй и четвертой - против часовой стрелки. Благодаря if-условию верхняя половина дуг образуется с контуром, (обводкой), а нижняя половина дуг - с заливкой.</p>
+<p>Установка параметра <code>clockwise</code> определяет результат; в первой и третьей строках рисование дуг происходит по часовой стрелке, а во второй и четвёртой - против часовой стрелки. Благодаря if-условию верхняя половина дуг образуется с контуром, (обводкой), а нижняя половина дуг - с заливкой.</p>
 
 <div class="note">
 <p><strong>Note:</strong> Этот пример требует немного большего холста (canvas), чем другие на этой странице: 150 x 200 pixels.</p>
@@ -319,13 +319,13 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
  <dd>Рисуется кубическая кривая Безье с текущей позиции пера в конечную точку с координатами <code>x</code> и <code>y</code>, используя две контрольные точки с координатами (<code>cp1x</code>, <code>cp1y</code>) и (cp2x, cp2y).</dd>
 </dl>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/223/Canvas_curves.png" style="float: right; height: 190px; width: 190px;">Различие между ними можно увидеть на рисунке, изображенном справа. Квадратичная кривая Безье имеет стартовую и конечную точки (синие точки) и всего одну контрольную точку (красная точка), в то время как кубическая кривая Безье использует две контрольные точки.</p>
+<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/223/Canvas_curves.png" style="float: right; height: 190px; width: 190px;">Различие между ними можно увидеть на рисунке, изображённом справа. Квадратичная кривая Безье имеет стартовую и конечную точки (синие точки) и всего одну контрольную точку (красная точка), в то время как кубическая кривая Безье использует две контрольные точки.</p>
 
 <p>Параметры <code>x</code> и <code>y</code> в этих двух методах являются координатами конечной точки. <code>cp1x</code> и <code>cp1y</code> — координаты первой контрольной точки, а <code>cp2x</code> и <code>cp2y</code> — координаты второй контрольной точки.</p>
 
 <p>Использование квадратичных или кубических кривых Безье может быть  спорным выходом, так как в отличие от приложений векторной графики типа Adobe Illustrator, мы не имеем полной видимой обратной связи с тем, что мы делаем. Этот факт делает довольно сложным процесс рисования сложных фигур. В следующем примере мы нарисуем совсем простую составную фигуру, но, если у вас есть время и ещё больше терпения, можно создать более сложные составные фигуры.</p>
 
-<p>В этом примере нет ничего слишком тяжелого. В обоих случаях мы видим последовательность кривых, рисуя которые, в результате получим составную фигуру.</p>
+<p>В этом примере нет ничего слишком тяжёлого. В обоих случаях мы видим последовательность кривых, рисуя которые, в результате получим составную фигуру.</p>
 
 <h4 id="Квадратичные_кривые_Безье">Квадратичные кривые Безье</h4>
 
@@ -513,7 +513,7 @@ function roundedRect(ctx,x,y,width,height,radius){
 
 <p>Мы не будем подробно останавливаться на том, так как это на самом деле удивительно просто. Наиболее важные вещи, которые следует отметить, это использование свойства <code>fillStyle</code> в контексте рисования и использование функции утилиты (в данном случае <code>roundedRect()</code>). Использование функций утилиты для битов чертежа часто может быть очень полезным и сократить количество необходимого кода, а также его сложность.</p>
 
-<p>Позже, в этом уроке, мы еще раз рассмотрим <code>fillStyle</code>, но более подробно. Здесь же мы используем его для изменения цвета заливки путей вместо цвета по умолчанию от черного до белого, а затем обратно.</p>
+<p>Позже, в этом уроке, мы ещё раз рассмотрим <code>fillStyle</code>, но более подробно. Здесь же мы используем его для изменения цвета заливки путей вместо цвета по умолчанию от чёрного до белого, а затем обратно.</p>
 
 <h2 id="Path2D_объекты">Path2D объекты</h2>
 
@@ -522,7 +522,7 @@ function roundedRect(ctx,x,y,width,height,radius){
 
 <dl>
  <dt>{{domxref("Path2D.Path2D", "Path2D()")}}</dt>
- <dd>Конструктор <code><strong>Path2D()</strong></code> возвращает вновь созданный объект <code>Path2D</code>  необязательно с другим путем в качестве аргумента (создает копию) или необязательно со строкой, состоящей из данных пути <a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path</a> .</dd>
+ <dd>Конструктор <code><strong>Path2D()</strong></code> возвращает вновь созданный объект <code>Path2D</code>  необязательно с другим путём в качестве аргумента (создаёт копию) или необязательно со строкой, состоящей из данных пути <a href="/en-US/docs/Web/SVG/Tutorial/Paths">SVG path</a> .</dd>
 </dl>
 
 <pre class="brush: js notranslate">new Path2D();     // пустой path объект
@@ -540,7 +540,7 @@ new Path2D(d);    // path из SVG</pre>
 
 <h3 id="Path2D_пример">Path2D пример</h3>
 
-<p>В этом примере мы создаем прямоугольник и круг. Оба они сохраняются как объект <code>Path2D</code>, поэтому они доступны для последующего использования. С новым API <code>Path2D</code> несколько методов были обновлены, чтобы при необходимости принять объект <code>Path2D</code> для использования вместо текущего пути. Здесь <code>stroke</code> и <code>fill</code> используются с аргументом пути, например, для рисования обоих объектов на холст.</p>
+<p>В этом примере мы создаём прямоугольник и круг. Оба они сохраняются как объект <code>Path2D</code>, поэтому они доступны для последующего использования. С новым API <code>Path2D</code> несколько методов были обновлены, чтобы при необходимости принять объект <code>Path2D</code> для использования вместо текущего пути. Здесь <code>stroke</code> и <code>fill</code> используются с аргументом пути, например, для рисования обоих объектов на холст.</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;html&gt;
@@ -573,7 +573,7 @@ new Path2D(d);    // path из SVG</pre>
 
 <h3 id="Использование_SVG_путей">Использование SVG путей</h3>
 
-<p>Еще одна мощная функция нового Canvas <code>Path2D</code> API использует данные пути SVG, <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths">SVG path data</a>, для инициализации путей на вашем холсте. Это может позволить вам передавать данные пути и повторно использовать их как в SVG, так и в холсте.</p>
+<p>Ещё одна мощная функция нового Canvas <code>Path2D</code> API использует данные пути SVG, <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths">SVG path data</a>, для инициализации путей на вашем холсте. Это может позволить вам передавать данные пути и повторно использовать их как в SVG, так и в холсте.</p>
 
 <p>Путь перемещается в точку (<code>M10 10</code>), а затем горизонтально перемещается на 80 пунктов вправо (<code>h 80</code>), затем на 80 пунктов вниз (<code>v 80</code>), затем на 80 пунктов влево (<code>h -80</code>), а затем обратно на start (<code>z</code>). <br>
  Этот пример можно увидеть на странице  <a href="/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths"><code>Path2D</code> constructor</a>.</p>

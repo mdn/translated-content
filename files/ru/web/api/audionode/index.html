@@ -4,7 +4,7 @@ slug: Web/API/AudioNode
 translation_of: Web/API/AudioNode
 ---
 <p>{{ APIRef("Web Audio API") }}<br>
- <strong>AudioNode </strong>это общий интерфейс для описания модулей обработки аудио таких как источники звука (например HTML элементы {{HTMLElement("audio")}} или {{HTMLElement("video")}}), генераторы звука (например {{domxref("OscillatorNode")}} и т.п.), приемники звука для модулей производящих обработку звука (например {{domxref("BiquadFilterNode")}} или {{domxref("ConvolverNode")}}), или регуляторы громкости (например {{domxref("GainNode")}}). </p>
+ <strong>AudioNode </strong>это общий интерфейс для описания модулей обработки аудио таких как источники звука (например HTML элементы {{HTMLElement("audio")}} или {{HTMLElement("video")}}), генераторы звука (например {{domxref("OscillatorNode")}} и т.п.), приёмники звука для модулей производящих обработку звука (например {{domxref("BiquadFilterNode")}} или {{domxref("ConvolverNode")}}), или регуляторы громкости (например {{domxref("GainNode")}}). </p>
 
 <p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="https://mdn.mozillademos.org/files/9713/WebAudioBasics.png" style="display: block; height: 230px; margin: 0px auto; width: 677px;"></p>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/AudioNode
 
 <dl>
  <dt>{{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}</dt>
- <dd>Возвращает количество входов узла. Узлы определенные как источники имеют <code>numberOfInputs</code> равное 0.</dd>
+ <dd>Возвращает количество входов узла. Узлы определённые как источники имеют <code>numberOfInputs</code> равное 0.</dd>
 </dl>
 
 <dl>
@@ -56,7 +56,7 @@ translation_of: Web/API/AudioNode
  <dt>{{domxref("AudioNode.connect(AudioParam)")}}</dt>
  <dd>Позволяет нам подключить один выход данного узла на параметрический вход другого.</dd>
  <dt>{{domxref("AudioNode.disconnect()")}}</dt>
- <dd>Позволяет нам отключить текущий узел от другого, уже подключенного узла.</dd>
+ <dd>Позволяет нам отключить текущий узел от другого, уже подключённого узла.</dd>
 </dl>
 
 <h2 id="Примеры">Примеры</h2>

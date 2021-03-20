@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Guide/Functions
 
 <ul>
  <li>Имя функции.</li>
- <li>Список параметров (принимаемых функцией) заключенных в круглые скобки <code>()</code> и разделенных запятыми.</li>
+ <li>Список параметров (принимаемых функцией) заключённых в круглые скобки <code>()</code> и разделённых запятыми.</li>
  <li>Инструкции, которые будут выполнены после вызова функции, заключают в фигурные скобки <code>{ }</code>.</li>
 </ul>
 
@@ -92,7 +92,7 @@ var x = square(4); // x получает значение 16
 console.log(factorial(3));
 </pre>
 
-<p>Функции вида "function definition expression" удобны, когда функция передается аргументом другой функции. Следующий пример показывает функцию <code>map</code>, которая должна получить функцию первым аргументом и массив вторым.</p>
+<p>Функции вида "function definition expression" удобны, когда функция передаётся аргументом другой функции. Следующий пример показывает функцию <code>map</code>, которая должна получить функцию первым аргументом и массив вторым.</p>
 
 <pre class="brush: js">function map(f, a) {
   var result = [], // Create a new Array
@@ -184,7 +184,7 @@ d = factorial(4); // d gets the value 24
 e = factorial(5); // e gets the value 120
 </pre>
 
-<p>Есть другие способы вызвать функцию. Существуют частые случаи, когда функции необходимо вызывать динамически, или поменять номера аргументов функции, или необходимо вызвать функцию с привязкой к определенному контексту. Оказывается, что функции сами по себе являются объектами, и эти объекты в свою очередь имеют методы (посмотрите объект <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function" title="The Function constructor creates a new Function object. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues similar to eval. However, unlike eval, the Function constructor allows executing code in the global scope, prompting better programming habits and allowing for more efficient code minification."><code>Function</code></a>). Один из них это метод <code><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).">apply()</a></code>, использование которого может достигнуть этой цели.</p>
+<p>Есть другие способы вызвать функцию. Существуют частые случаи, когда функции необходимо вызывать динамически, или поменять номера аргументов функции, или необходимо вызвать функцию с привязкой к определённому контексту. Оказывается, что функции сами по себе являются объектами, и эти объекты в свою очередь имеют методы (посмотрите объект <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function" title="The Function constructor creates a new Function object. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues similar to eval. However, unlike eval, the Function constructor allows executing code in the global scope, prompting better programming habits and allowing for more efficient code minification."><code>Function</code></a>). Один из них это метод <code><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" title="The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).">apply()</a></code>, использование которого может достигнуть этой цели.</p>
 
 <h2 id="Область_видимости_функций"><a id="definition" name="definition"></a>Область видимости функций</h2>
 
@@ -202,7 +202,7 @@ function multiply() {
   return num1 * num2;
 }
 
-multiply(); // вернет 60
+multiply(); // вернёт 60
 
 // Пример вложенной функции
 function getScore() {
@@ -216,7 +216,7 @@ function getScore() {
   return add();
 }
 
-getScore(); // вернет "Chamahk scored 5"
+getScore(); // вернёт "Chamahk scored 5"
 </pre>
 
 <h2 id="Scope_и_стек_функции"><a id="definition" name="definition"></a>Scope и стек функции</h2>
@@ -309,7 +309,7 @@ foo(3);
 
 <p>Поскольку вложенная функция это closure, это означает, что вложенная функция может "унаследовать" (<em>inherit</em>) аргументы и переменные функции, в которую та вложена. Другими словами, вложенная функция содержит scope внешней (<em>"outer"</em>) функции.</p>
 
-<p>Подведем итог:</p>
+<p>Подведём итог:</p>
 
 <ul>
  <li>Вложенная функция имеет доступ ко всем инструкциям внешней функции.</li>
@@ -350,7 +350,7 @@ result1 = outside(3)(5); // возвращает 8
 
 <h3 id="Сохранение_переменных">Сохранение переменных</h3>
 
-<p>Обратите внимание, значение <code>x</code> сохранилось, когда возвращалось <code>inside</code>. Closure должно сохранять аргументы и переменные во всем scope. Поскольку каждый вызов предоставляет потенциально разные аргументы, создается новый closure для каждого вызова во вне. Память может быть очищена только тогда, когда <code>inside</code> уже возвратился и больше не доступен.</p>
+<p>Обратите внимание, значение <code>x</code> сохранилось, когда возвращалось <code>inside</code>. Closure должно сохранять аргументы и переменные во всем scope. Поскольку каждый вызов предоставляет потенциально разные аргументы, создаётся новый closure для каждого вызова во вне. Память может быть очищена только тогда, когда <code>inside</code> уже возвратился и больше не доступен.</p>
 
 <p>Это не отличается от хранения ссылок в других объектах, но часто менее очевидно, потому что не устанавливаются ссылки напрямую и нельзя посмотреть там.</p>
 
@@ -379,9 +379,9 @@ A(1); // в консоле выведится 6 (1 + 2 + 3)</pre>
  <li>Раз closure функции <code>B</code> включает <code>A</code>, то closure <code>С</code> тоже включает A, <code>C</code> имеет доступ к аргументам и переменным обоих функций <code>B</code> <em>и</em> <code>A</code>. Другими словами, <code>С</code> связывает <em>цепью</em> (<em>chain</em>) scopes функций <code>B</code> и <code>A</code> в таком порядке.</li>
 </ol>
 
-<p>В обратном порядке, однако, это не верно. <code>A</code> не имеет доступ к переменным и аргументам <code>C</code>, потому что <code>A</code> не имеет такой доступ к <code>B</code>. Таким образом, <code>C</code> остается приватным только для <code>B</code>.</p>
+<p>В обратном порядке, однако, это не верно. <code>A</code> не имеет доступ к переменным и аргументам <code>C</code>, потому что <code>A</code> не имеет такой доступ к <code>B</code>. Таким образом, <code>C</code> остаётся приватным только для <code>B</code>.</p>
 
-<h3 id="Конфликты_имен_Name_conflicts">Конфликты имен (Name conflicts)</h3>
+<h3 id="Конфликты_имён_Name_conflicts">Конфликты имён (Name conflicts)</h3>
 
 <p>Когда два аргумента или переменных в scope у closure имеют одинаковые имена, происходит <em>конфликт имени</em> (<em>name conflict</em>). Более вложенный (<em>more inner</em>) scope имеет приоритет, так самый вложенный scope имеет наивысший приоритет, и наоборот. Это цепочка областей видимости (<em>scope chain</em>). Самым первым звеном является самый глубокий scope, и наоборот. Рассмотрим следующие:</p>
 
@@ -395,7 +395,7 @@ A(1); // в консоле выведится 6 (1 + 2 + 3)</pre>
 
 outside()(10); // возвращает 20 вместо 10</pre>
 
-<p>Конфликт имени произошел в инструкции <code>return x * 2</code> между параметром <code>x</code> функции <code>inside</code> и переменной <code>x</code> функции <code>outside</code>. Scope chain здесь будет таким: {<code>inside</code> ==&gt; <code>outside</code> ==&gt; глобальный объект (<em>global object</em>)}. Следовательно <code>x</code> функции <code>inside</code> имеет больший приоритет по сравнению с <code>outside</code>, и нам вернулось 20 (= 10 * 2), а не 10 (= 5 * 2).</p>
+<p>Конфликт имени произошёл в инструкции <code>return x * 2</code> между параметром <code>x</code> функции <code>inside</code> и переменной <code>x</code> функции <code>outside</code>. Scope chain здесь будет таким: {<code>inside</code> ==&gt; <code>outside</code> ==&gt; глобальный объект (<em>global object</em>)}. Следовательно <code>x</code> функции <code>inside</code> имеет больший приоритет по сравнению с <code>outside</code>, и нам вернулось 20 (= 10 * 2), а не 10 (= 5 * 2).</p>
 
 <h2 id="Замыкания"><a id="definition" name="definition"></a>Замыкания</h2>
 
@@ -407,7 +407,7 @@ outside()(10); // возвращает 20 вместо 10</pre>
 
 <p>Также, поскольку вложенная функция имеет доступ к scope внешней функции, переменные и функции, объявленные во внешней функции, будет продолжать существовать и после её выполнения для вложенной функции, если на них и на неё сохранился доступ (имеется ввиду, что переменные, объявленные во внешней функции, сохраняются, только если внутренняя функция обращается к ним).</p>
 
-<p>Closure создается, когда вложенная функция как-то стала доступной в неком scope вне внешней функции.</p>
+<p>Closure создаётся, когда вложенная функция как-то стала доступной в неком scope вне внешней функции.</p>
 
 <pre class="brush: js">var pet = function(name) {   // Внешняя функция объявила переменную "name"
   var getName = function() {
@@ -568,7 +568,7 @@ multiply(5); // 5</pre>
 
 <h3 id="Оставшиеся_параметры_Rest_parameters">Оставшиеся параметры (Rest parameters)</h3>
 
-<p><a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Оставшиеся параметры</a> предоставляют нам массив неопределенных аргументов. В примере мы используем оставшиеся параметры, чтобы собрать аргументы с индексами со 2-го до последнего. Затем мы умножим каждый из них на значение первого аргумента. В этом примере используется стрелочная функция (<u><em><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a>)</em></u>, о которой будет рассказано в следующей секции.</p>
+<p><a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Оставшиеся параметры</a> предоставляют нам массив неопределённых аргументов. В примере мы используем оставшиеся параметры, чтобы собрать аргументы с индексами со 2-го до последнего. Затем мы умножим каждый из них на значение первого аргумента. В этом примере используется стрелочная функция (<u><em><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a>)</em></u>, о которой будет рассказано в следующей секции.</p>
 
 <pre class="brush: js">function multiply(multiplier, ...theArgs) {
   return theArgs.map(x =&gt; multiplier * x);
@@ -607,7 +607,7 @@ console.log(a3); // logs [8, 6, 7, 9]</pre>
 
 <h3 id="Лексика_this">Лексика <code>this</code></h3>
 
-<p>До стрелочных функций каждая новая функция определяла свое значение <code>this</code> (новый объект в случае конструктора, undefined в strict mode,  контекстный объект, если функция вызвана как метод объекта, и т.д.).  Это оказалось раздражающим с точки зрения объектно-ориентированного стиля программирования.</p>
+<p>До стрелочных функций каждая новая функция определяла своё значение <code>this</code> (новый объект в случае конструктора, undefined в strict mode,  контекстный объект, если функция вызвана как метод объекта, и т.д.).  Это оказалось раздражающим с точки зрения объектно-ориентированного стиля программирования.</p>
 
 <pre class="brush: js">function Person() {
   // Конструктор Person() определяет `this` как самого себя.
@@ -616,14 +616,14 @@ console.log(a3); // logs [8, 6, 7, 9]</pre>
   setInterval(function growUp() {
     // Без strict mode функция growUp() определяет `this`
     // как global object, который отличается от `this`
-    // определенного конструктором Person().
+    // определённого конструктором Person().
     this.age++;
   }, 1000);
 }
 
 var p = new Person();</pre>
 
-<p>В ECMAScript 3/5 эта проблема была исправлена путем присвоения значения <code>this</code> переменной, которую можно было бы замкнуть.</p>
+<p>В ECMAScript 3/5 эта проблема была исправлена путём присвоения значения <code>this</code> переменной, которую можно было бы замкнуть.</p>
 
 <pre class="brush: js">function Person() {
   var self = this; // Некоторые выбирают `that` вместо `self`.

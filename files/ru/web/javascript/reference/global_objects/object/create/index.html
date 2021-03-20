@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
 
-<p>Выбрасывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если параметр <code>proto</code> не является {{jsxref("Global_Objects/null", "null")}} или объектом (исключение составляют объекты-обертки примитивных типов).</p>
+<p>Выбрасывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если параметр <code>proto</code> не является {{jsxref("Global_Objects/null", "null")}} или объектом (исключение составляют объекты-обёртки примитивных типов).</p>
 
 <h2 id="Examples" name="Examples">Примеры</h2>
 
@@ -170,7 +170,7 @@ o2 = Object.create({}, {
     var hasOwn = Object.prototype.hasOwnProperty;
 
     return function (O) {
-      // 1. Если Type(O) не является Object or Null выдается исключение TypeError.
+      // 1. Если Type(O) не является Object or Null выдаётся исключение TypeError.
       if (typeof O != 'object') {
         throw TypeError('Object prototype may only be an Object or null');
       }
@@ -183,7 +183,7 @@ o2 = Object.create({}, {
       var obj = new Temp();
       Temp.prototype = null; // Давайте не будем держать случайные ссылки на О...
 
-      // 4.  Если аргумент Properties присутствует и не определен, добавляем
+      // 4.  Если аргумент Properties присутствует и не определён, добавляем
       //    собственные свойства к obj, как будто вызывая стандартную встроенную
       //    функцию Object.defineProperties с аргументами obj и
       //    Properties.

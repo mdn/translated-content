@@ -5,7 +5,7 @@ translation_of: Web/API/FormData/append
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
-<p>Метод <code><strong>append()</strong></code> из интерфейса {{domxref("FormData")}} добавляет новое значение в существующий ключ внутри объекта <code>FormData</code>, или создает ключ, в случае если он отсутствует.</p>
+<p>Метод <code><strong>append()</strong></code> из интерфейса {{domxref("FormData")}} добавляет новое значение в существующий ключ внутри объекта <code>FormData</code>, или создаёт ключ, в случае если он отсутствует.</p>
 
 <p>Разница между {{domxref("FormData.set")}} и <code>append()</code> в том, что если заданный ключ уже существует, {{domxref("FormData.set")}} заменит данные в нем на новые, а <code>append()</code> добавит новое значение к остальным в конец.</p>
 
@@ -26,9 +26,9 @@ formData.append(name, value, filename);</pre>
  <dt><code>name</code></dt>
  <dd>Имя поля, которое будет содержать данные из <code>value</code>.</dd>
  <dt><code>value</code></dt>
- <dd>Значение поля. В варианте с двумя параметрами, это является {{domxref("USVString")}}, если значение не является строкой, то оно будет в нее конвертировано. В варианте с тремя параметрами это может быть {{domxref("Blob")}}, {{domxref("File")}}, или {{domxref("USVString")}}, И снова, если ни один из них не указан в значении то оно будет конвертировано в строку.</dd>
+ <dd>Значение поля. В варианте с двумя параметрами, это является {{domxref("USVString")}}, если значение не является строкой, то оно будет в неё конвертировано. В варианте с тремя параметрами это может быть {{domxref("Blob")}}, {{domxref("File")}}, или {{domxref("USVString")}}, И снова, если ни один из них не указан в значении то оно будет конвертировано в строку.</dd>
  <dt><code>filename </code>{{optional_inline}}</dt>
- <dd>Имя файла которое будет отправлено серверу ({{domxref("USVString")}}), когда {{domxref("Blob")}} или {{domxref("File")}} прошел проверку как второй параметр. Стандартное имя файла для {{domxref("Blob")}} объектов это "blob".</dd>
+ <dd>Имя файла которое будет отправлено серверу ({{domxref("USVString")}}), когда {{domxref("Blob")}} или {{domxref("File")}} прошёл проверку как второй параметр. Стандартное имя файла для {{domxref("Blob")}} объектов это "blob".</dd>
 </dl>
 
 <div class="note">
@@ -41,7 +41,7 @@ formData.append(name, value, filename);</pre>
 
 <h2 id="Пример">Пример</h2>
 
-<p>Данная строка кода создает пустой <code>FormData</code> объект:</p>
+<p>Данная строка кода создаёт пустой <code>FormData</code> объект:</p>
 
 <pre class="brush: js">var formData = new FormData(); // Currently empty</pre>
 

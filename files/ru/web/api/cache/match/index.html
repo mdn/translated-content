@@ -28,12 +28,12 @@ translation_of: Web/API/Cache/match
  <dt>request</dt>
  <dd>Запрос {{domxref("Request")}}, который вы пытаетесь найти в {{domxref("Cache")}}.</dd>
  <dt>options {{optional_inline}}</dt>
- <dd>Объект, который задает параметры для операции <code>match</code>. Допустимые значения:
+ <dd>Объект, который задаёт параметры для операции <code>match</code>. Допустимые значения:
  <ul>
   <li><code>ignoreSearch</code>: Булево значение {{domxref("Boolean")}}, которое указывает следует ли игнорировать строку запроса в url.  Например, если оно установлено в <code>true, часть</code> <code>?value=bar</code> запроса <code>http://foo.com/?value=bar</code> будет проигнорирована при поиске соответствий ключа. По умолчанию равно <code>false</code>.</li>
   <li><code>ignoreMethod</code>: Булево значение {{domxref("Boolean")}}, которое, когда равно <code>true</code>, предотвращает проверку <code>http</code> метода для запроса  {{domxref("Request")}} при выполнении сопоставлений ключа (обычно разрешены лишь <code>GET</code> и <code>HEAD</code>). По умолчанию равно <code>false</code>.</li>
   <li><code>ignoreVary</code>: Булево значение {{domxref("Boolean")}}, которое, когда установлено в <code>true,</code> указывает операции сопоставления ключа не проводить проверку соответствия заголовка <code>VARY</code> — т.е., если URL совпадает, вы получите соответствие независимо от того, установлен ли на объекте {{domxref("Response")}} заголовок <code>VARY</code>. По умолчанию равно <code>false</code>.</li>
-  <li><code>cacheName</code>: Строка {{domxref("DOMString")}}, задающая определенный кеш для поиска. Заметьте, что этот параметр игнорируется методом  <code>Cache.match()</code>.</li>
+  <li><code>cacheName</code>: Строка {{domxref("DOMString")}}, задающая определённый кеш для поиска. Заметьте, что этот параметр игнорируется методом  <code>Cache.match()</code>.</li>
  </ul>
 
  <p>В Chrome поддерживается лишь <code>cacheName</code>.</p>

@@ -70,7 +70,7 @@ translation_of: Mozilla/Firefox/Releases/53
 <h3 id="DOM"><font><font>DOM</font></font></h3>
 
 <ul>
- <li><font><font>{{Domxref ( "HTMLHyperLinkElementUtils.pathname", "путь")}} и {{domxref ( "HTMLHyperLinkElementUtils.search", "поиск")}} {{domxref ( "HTMLHyperLinkElementUtils")}} свойства ранее возвращено неправильные части в URL. </font><font>Например, для URL из </font></font><code>http://z.com/x?a=true&amp;b=false</code><font><font>, </font></font><code>pathname</code><font><font>будет возвращаться « </font></font><code>/x?a=true&amp;b=false"</code><font><font>и </font></font><code>search</code><font><font>вернется„“, а не» </font></font><code>/x</code><font><font>«и» </font></font><code>?a=true&amp;b=false"</code><font><font>соответственно. </font><font>Теперь это было исправлено ({{bug (1310483)}}).</font></font></li>
+ <li><font><font>{{Domxref ( "HTMLHyperLinkElementUtils.pathname", "путь")}} и {{domxref ( "HTMLHyperLinkElementUtils.search", "поиск")}} {{domxref ( "HTMLHyperLinkElementUtils")}} свойства ранее возвращено неправильные части в URL. </font><font>Например, для URL из </font></font><code>http://z.com/x?a=true&amp;b=false</code><font><font>, </font></font><code>pathname</code><font><font>будет возвращаться « </font></font><code>/x?a=true&amp;b=false"</code><font><font>и </font></font><code>search</code><font><font>вернётся„“, а не» </font></font><code>/x</code><font><font>«и» </font></font><code>?a=true&amp;b=false"</code><font><font>соответственно. </font><font>Теперь это было исправлено ({{bug (1310483)}}).</font></font></li>
  <li><font><font>{{Domxref ( "URLSearchParams.URLSearchParams", "URLSearchParams ()")}} Конструктор теперь принимает на {{domxref ( "USVString")}} или последовательность {{domxref ( "USVString")}} ев в качестве инициализации объект ({{bug( "1330678")}}).</font></font></li>
  <li><font><font>{{Domxref ( "Selection.setBaseAndExtent ()")}} метод </font></font><a href="/en-US/docs/Web/API/Selection_API"><font><font>API выбора</font></font></a><font><font> теперь реализован (см {{bug (1321623)}}).</font></font></li>
  <li><a href="https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly"><font><font>"Fakepath"</font></font></a><font><font> дополнение </font></font><code>file</code><font><font>типа {{HTMLElement ( "вход")}} </font></font><code>values</code><font><font>была реализована в Gecko, давая его соотношение с другими браузерами (см {{bug (1274596)}}).</font></font></li>
@@ -92,7 +92,7 @@ translation_of: Mozilla/Firefox/Releases/53
 
 <ul>
  <li><font><font>{{Domxref ( "WEBGL_compressed_texture_astc")}} реализуется расширение WebGL ({{bug(1250077)}}).</font></font></li>
- <li><font><font>{{Domxref ( "WEBGL_debug_renderer_info")}} расширение WebGL теперь включен по умолчанию ({{bug(1336645)}}).</font></font></li>
+ <li><font><font>{{Domxref ( "WEBGL_debug_renderer_info")}} расширение WebGL теперь включён по умолчанию ({{bug(1336645)}}).</font></font></li>
 </ul>
 
 <h3 id="Аудио_видео_и_медиа"><font><font>Аудио, видео и медиа</font></font></h3>
@@ -151,21 +151,21 @@ translation_of: Mozilla/Firefox/Releases/53
 <h3 id="HTML_XML"><font><font>HTML / XML</font></font></h3>
 
 <ul>
- <li><span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>dom.details_element.enabled</code><font><font>Прив - которая контролируется включение / отключение {{HTMLElement ( "детали")}} и {{HTMLElement ( "Резюме")}} опорный элемент в Firefox - теперь был удален из </font></font><code>about:config</code><font><font>. </font><font>Эти элементы (которые впервые были включены по умолчанию в Firefox 49) больше не могут быть отключены. </font><font>См {{bug (1271549)}}.</font></font></span></span></li>
+ <li><span id="summary_alias_container"><span id="short_desc_nonedit_display"><code>dom.details_element.enabled</code><font><font>Прив - которая контролируется включение / отключение {{HTMLElement ( "детали")}} и {{HTMLElement ( "Резюме")}} опорный элемент в Firefox - теперь был удалён из </font></font><code>about:config</code><font><font>. </font><font>Эти элементы (которые впервые были включены по умолчанию в Firefox 49) больше не могут быть отключены. </font><font>См {{bug (1271549)}}.</font></font></span></span></li>
 </ul>
 
 <h3 id="CSS_2"><span><span><font><font>CSS</font></font></span></span></h3>
 
 <ul>
  <li><font><font>Удалены {{property_prefix ( "- Мос")}} приставкой вариант {{cssxref ( ": реж", ": каталог ()")}} псевдокласс ({{bug (1270406)}}).</font></font></li>
- <li><code>-moz</code><font><font>Приставкой версия {{cssxref ( "текст-ALIGN-последний")}} был удален ({{bug (1276808)}}).</font></font></li>
+ <li><code>-moz</code><font><font>Приставкой версия {{cssxref ( "текст-ALIGN-последний")}} был удалён ({{bug (1276808)}}).</font></font></li>
  <li><font><font>Удалены {{property_prefix ( "- Мос")}} приставкой вариант {{cssxref ( "известково ()")}} Метод ({{bug (1331296)}}).</font></font></li>
 </ul>
 
 <h3 id="JavaScript_2"><font><font>JavaScript</font></font></h3>
 
 <ul>
- <li><font><font>Нестандартный {{jsxref ( "ArrayBuffer.slice ()")}} Метод был удален (но стандартизированная версия {{jsxref ( "ArrayBuffer.prototype.slice ()")}} сохраняется, см {{bug (1313112)}}).</font></font></li>
+ <li><font><font>Нестандартный {{jsxref ( "ArrayBuffer.slice ()")}} Метод был удалён (но стандартизированная версия {{jsxref ( "ArrayBuffer.prototype.slice ()")}} сохраняется, см {{bug (1313112)}}).</font></font></li>
 </ul>
 
 <h3 id="API-интерфейсы"><font><font>API-интерфейсы</font></font></h3>

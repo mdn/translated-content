@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
 <div>{{JSRef}}</div>
 
-<p>Объект <strong><code>SharedArrayBuffer</code></strong> используется для создания разделенного буфера фиксированной длины для хранения примитивных бинарных данных, подобно объекту {{jsxref("ArrayBuffer")}}, но могут быть использованы для создания обзора на разделенную память. В отличие от <code>ArrayBuffer</code>, <code>SharedArrayBuffer</code> не может быть отсоединен.</p>
+<p>Объект <strong><code>SharedArrayBuffer</code></strong> используется для создания разделённого буфера фиксированной длины для хранения примитивных бинарных данных, подобно объекту {{jsxref("ArrayBuffer")}}, но могут быть использованы для создания обзора на разделённую память. В отличие от <code>ArrayBuffer</code>, <code>SharedArrayBuffer</code> не может быть отсоединен.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -29,15 +29,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 
 <p>Для разделения памяти с помощью объекта {{jsxref("SharedArrayBuffer")}} между одним агентом в кластере и другим (агент может быть как основной программой web-страницы, так и одним из web-workers), используются <code><a href="/en-US/docs/Web/API/Worker/postMessage">postMessage</a></code> и <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured cloning</a>.</p>
 
-<p>Алгоритм структурированного клонирования принимает <code>SharedArrayBuffers</code> и <code>TypedArrays,</code> отображенный в <code>SharedArrayBuffers</code>. В обоих случаях, объект  <code>SharedArrayBuffer</code> передается получателю, результируя в новый, приватный объект SharedArrayBuffer внутри агента-получателя (так же как для {{jsxref("ArrayBuffer")}}). Однако, блок общих данных, на который ссылаются оба объекта <code>SharedArrayBuffer, </code>это один и тот же блок данных, и сторонние эффекты в блоке в одном из агентов в итоге станут заметны в другом агенте.</p>
+<p>Алгоритм структурированного клонирования принимает <code>SharedArrayBuffers</code> и <code>TypedArrays,</code> отображённый в <code>SharedArrayBuffers</code>. В обоих случаях, объект  <code>SharedArrayBuffer</code> передаётся получателю, результируя в новый, приватный объект SharedArrayBuffer внутри агента-получателя (так же как для {{jsxref("ArrayBuffer")}}). Однако, блок общих данных, на который ссылаются оба объекта <code>SharedArrayBuffer, </code>это один и тот же блок данных, и сторонние эффекты в блоке в одном из агентов в итоге станут заметны в другом агенте.</p>
 
 <pre class="brush: js">var sab = new SharedArrayBuffer(1024);
 worker.postMessage(sab);
 </pre>
 
-<h3 id="Обновление_и_синхронизация_разделенной_памяти_с_помощью_Атомарных_операций">Обновление и синхронизация разделенной памяти с помощью Атомарных операций</h3>
+<h3 id="Обновление_и_синхронизация_разделённой_памяти_с_помощью_Атомарных_операций">Обновление и синхронизация разделённой памяти с помощью Атомарных операций</h3>
 
-<p>Разделенная память может быть создана и изменена одновременно в  workers или основном потоке. В зависимости от системы (ЦПУ, ОС, браузер) может уйти время пока изменения будут распространены по всем контекстам. Для синхронизации необходимы {{jsxref("Атомарные", "атомарные", "", 1)}} операции .</p>
+<p>Разделённая память может быть создана и изменена одновременно в  workers или основном потоке. В зависимости от системы (ЦПУ, ОС, браузер) может уйти время пока изменения будут распространены по всем контекстам. Для синхронизации необходимы {{jsxref("Атомарные", "атомарные", "", 1)}} операции .</p>
 
 <h3 id="API_принимающие_объекты_SharedArrayBuffer">API, принимающие объекты <code>SharedArrayBuffer</code></h3>
 
@@ -61,7 +61,7 @@ worker.postMessage(sab);
 
 <dl>
  <dt><code>SharedArrayBuffer.length</code></dt>
- <dd>Длина конструктора <code>SharedArrayBuffer,</code> чье значение равно 1.</dd>
+ <dd>Длина конструктора <code>SharedArrayBuffer,</code> чьё значение равно 1.</dd>
  <dt>{{jsxref("SharedArrayBuffer.prototype")}}</dt>
  <dd>Позволяет дополнительные свойства для всех объектов <code>SharedArrayBuffer</code>.</dd>
 </dl>

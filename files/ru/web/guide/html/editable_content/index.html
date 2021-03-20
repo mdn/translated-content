@@ -12,13 +12,13 @@ translation_of: Web/Guide/HTML/Editable_content
 
 <p>Все, что вам нужно сделать, это установить атрибут {{htmlattrxref("contenteditable")}} почти на любой элемент HTML, чтобы сделать его доступным для редактирования.</p>
 
-<p>Вот простой пример, который создает элемент {{HTMLElement("div")}}, содержимое которого пользователь может редактировать.</p>
+<p>Вот простой пример, который создаёт элемент {{HTMLElement("div")}}, содержимое которого пользователь может редактировать.</p>
 
 <pre class="brush: html">&lt;div contenteditable="true"&gt;
   Этот текст может быть отредактирован пользователем.
 &lt;/div&gt;</pre>
 
-<p>Вот приведенный выше HTML-код в песочнице:</p>
+<p>Вот приведённый выше HTML-код в песочнице:</p>
 
 <p>{{ EmbedLiveSample('Как_это_работает') }} </p>
 
@@ -30,9 +30,9 @@ translation_of: Web/Guide/HTML/Editable_content
 
 <p>Использование  <code>contenteditable</code>  в разных браузерах было болезненным в течение длительного времени из-за различий в сгенерированной разметке между браузерами. Например, даже что-то простое, что происходит, когда вы нажимаете Enter/Return для создания новой строки текста внутри редактируемого элемента, обрабатывалось по-разному в основных браузерах (Firefox вставлял элементы {{htmlelement("br")}}, IE/Opera использовала {{htmlelement("p")}}, в Chrome/Safari использовался {{htmlelement("div")}}). </p>
 
-<p>К счастью, в современных браузерах ситуация несколько более последовательна. Начиная с  <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/60">Firefox 60</a>,  Firefox будет обновлен, чтобы обернуть отдельные строки в элементах {{htmlelement("div")}}, соответствующих поведению Chrome, современной Opera, Edge и Safari.</p>
+<p>К счастью, в современных браузерах ситуация несколько более последовательна. Начиная с  <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/60">Firefox 60</a>,  Firefox будет обновлён, чтобы обернуть отдельные строки в элементах {{htmlelement("div")}}, соответствующих поведению Chrome, современной Opera, Edge и Safari.</p>
 
-<p>Попробуйте это в приведенном выше примере.</p>
+<p>Попробуйте это в приведённом выше примере.</p>
 
 <div class="note">
 <p><strong>Примечание</strong>: Internet Explorer, который больше не разрабатывается, использует элементы {{htmlelement("p")}} вместо <code>&lt;div&gt;</code>.</p>
@@ -103,7 +103,7 @@ user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");</pre
 &lt;option class="heading" selected&gt;- цвет -&lt;/option&gt;
 &lt;option value="red"&gt;Красный&lt;/option&gt;
 &lt;option value="blue"&gt;Синий&lt;/option&gt;
-&lt;option value="green"&gt;Зеленый&lt;/option&gt;
+&lt;option value="green"&gt;Зелёный&lt;/option&gt;
 &lt;option value="black"&gt;Чёрный&lt;/option&gt;
 &lt;/select&gt;
 &lt;select onchange="formatDoc('backcolor',this[this.selectedIndex].value);this.selectedIndex=0;"&gt;
@@ -121,7 +121,7 @@ user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");</pre
 &lt;img class="intLink" title="Удалить форматирование" onclick="formatDoc('removeFormat')" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABGdBTUEAALGPC/xhBQAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB9oECQMCKPI8CIIAAAAIdEVYdENvbW1lbnQA9syWvwAAAuhJREFUOMtjYBgFxAB501ZWBvVaL2nHnlmk6mXCJbF69zU+Hz/9fB5O1lx+bg45qhl8/fYr5it3XrP/YWTUvvvk3VeqGXz70TvbJy8+Wv39+2/Hz19/mGwjZzuTYjALuoBv9jImaXHeyD3H7kU8fPj2ICML8z92dlbtMzdeiG3fco7J08foH1kurkm3E9iw54YvKwuTuom+LPt/BgbWf3//sf37/1/c02cCG1lB8f//f95DZx74MTMzshhoSm6szrQ/a6Ir/Z2RkfEjBxuLYFpDiDi6Af///2ckaHBp7+7wmavP5n76+P2ClrLIYl8H9W36auJCbCxM4szMTJac7Kza////R3H1w2cfWAgafPbqs5g7D95++/P1B4+ECK8tAwMDw/1H7159+/7r7ZcvPz4fOHbzEwMDwx8GBgaGnNatfHZx8zqrJ+4VJBh5CQEGOySEua/v3n7hXmqI8WUGBgYGL3vVG7fuPK3i5GD9/fja7ZsMDAzMG/Ze52mZeSj4yu1XEq/ff7W5dvfVAS1lsXc4Db7z8C3r8p7Qjf///2dnZGxlqJuyr3rPqQd/Hhyu7oSpYWScylDQsd3kzvnH738wMDzj5GBN1VIWW4c3KDon7VOvm7S3paB9u5qsU5/x5KUnlY+eexQbkLNsErK61+++VnAJcfkyMTIwffj0QwZbJDKjcETs1Y8evyd48toz8y/ffzv//vPP4veffxpX77z6l5JewHPu8MqTDAwMDLzyrjb/mZm0JcT5Lj+89+Ybm6zz95oMh7s4XbygN3Sluq4Mj5K8iKMgP4f0////fv77//8nLy+7MCcXmyYDAwODS9jM9tcvPypd35pne3ljdjvj26+H2dhYpuENikgfvQeXNmSl3tqepxXsqhXPyc666s+fv1fMdKR3TK72zpix8nTc7bdfhfkEeVbC9KhbK/9iYWHiErbu6MWbY/7//8/4//9/pgOnH6jGVazvFDRtq2VgiBIZrUTIBgCk+ivHvuEKwAAAAABJRU5ErkJggg=="&gt;
 &lt;img class="intLink" title="Жирный" onclick="formatDoc('bold');" src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAInhI+pa+H9mJy0LhdgtrxzDG5WGFVk6aXqyk6Y9kXvKKNuLbb6zgMFADs=" /&gt;
 &lt;img class="intLink" title="Italic" onclick="formatDoc('italic');" src="data:image/gif;base64,R0lGODlhFgAWAKEDAAAAAF9vj5WIbf///yH5BAEAAAMALAAAAAAWABYAAAIjnI+py+0Po5x0gXvruEKHrF2BB1YiCWgbMFIYpsbyTNd2UwAAOw==" /&gt;
-&lt;img class="intLink" title="Подчеркивание" onclick="formatDoc('underline');" src="data:image/gif;base64,R0lGODlhFgAWAKECAAAAAF9vj////////yH5BAEAAAIALAAAAAAWABYAAAIrlI+py+0Po5zUgAsEzvEeL4Ea15EiJJ5PSqJmuwKBEKgxVuXWtun+DwxCCgA7" /&gt;
+&lt;img class="intLink" title="Подчёркивание" onclick="formatDoc('underline');" src="data:image/gif;base64,R0lGODlhFgAWAKECAAAAAF9vj////////yH5BAEAAAIALAAAAAAWABYAAAIrlI+py+0Po5zUgAsEzvEeL4Ea15EiJJ5PSqJmuwKBEKgxVuXWtun+DwxCCgA7" /&gt;
 &lt;img class="intLink" title="Выровнять слева" onclick="formatDoc('justifyleft');" src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAIghI+py+0Po5y02ouz3jL4D4JMGELkGYxo+qzl4nKyXAAAOw==" /&gt;
 &lt;img class="intLink" title="Выровнять центр" onclick="formatDoc('justifycenter');" src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAIfhI+py+0Po5y02ouz3jL4D4JOGI7kaZ5Bqn4sycVbAQA7" /&gt;
 &lt;img class="intLink" title="Выровнять справа" onclick="formatDoc('justifyright');" src="data:image/gif;base64,R0lGODlhFgAWAID/AMDAwAAAACH5BAEAAAAALAAAAAAWABYAQAIghI+py+0Po5y02ouz3jL4D4JQGDLkGYxouqzl43JyVgAAOw==" /&gt;

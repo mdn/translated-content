@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/input/datetime-local
 ---
 <p>{{HTMLRef}}</p>
 
-<p>{{htmlelement("input")}} элемент типа <strong><code>datetime-local</code></strong> создает поля ввода, позволяющие легко ввести дату и время —  год, месяц, день, часы и минуты.</p>
+<p>{{htmlelement("input")}} элемент типа <strong><code>datetime-local</code></strong> создаёт поля ввода, позволяющие легко ввести дату и время —  год, месяц, день, часы и минуты.</p>
 
 <p>Интерфейс управления варьируется от браузера к браузеру, на данный момент поддержка носит фрагментарный характер, только с Chrome/Opera  и EDGE на рабочем столе — и большинство современных мобильных версиях браузера — наличие полезной реализации. В других браузерах элемент управления сводиться до простого <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
@@ -19,7 +19,7 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14949/datetime-local-chrome.png" style="display: block; height: 224px; margin: 0px auto; width: 280px;"></p>
 
-<p>В Edge <code>datetime-local</code> элемент управления выглядит как на скриншоте ниже. Клик на дате и времени отобразит два отдельных поля выбора, чтобы Вы могли легко установить дату и время. То есть, по сути, получаем два элемента <code>date</code> и <code>time</code>, объединенных в один:</p>
+<p>В Edge <code>datetime-local</code> элемент управления выглядит как на скриншоте ниже. Клик на дате и времени отобразит два отдельных поля выбора, чтобы Вы могли легко установить дату и время. То есть, по сути, получаем два элемента <code>date</code> и <code>time</code>, объединённых в один:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14953/datetime-local-picker-edge1.png" style="display: block; height: 398px; margin: 0px auto; width: 320px;"></p>
 
@@ -52,14 +52,14 @@ translation_of: Web/HTML/Element/input/datetime-local
 
 <h2 id="Значение">Значение</h2>
 
-<p> {{domxref("DOMString")}} представление значения даты, введенной во входные данные. Вы можете установить значение по умолчанию для ввода, включая дату внутри {{htmlattrxref("value", "input")}} атрибута, как:</p>
+<p> {{domxref("DOMString")}} представление значения даты, введённой во входные данные. Вы можете установить значение по умолчанию для ввода, включая дату внутри {{htmlattrxref("value", "input")}} атрибута, как:</p>
 
 <pre class="brush: html">&lt;label for="party"&gt;Enter a date and time for your party booking:&lt;/label&gt;
 &lt;input id="party" type="datetime-local" name="partydate" value="2017-06-01T08:30"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Value', 600, 60) }}</p>
 
-<p>Одна вещь, чтобы отметить, что отображаемый формат даты отличается от фактического <code>значения</code> — отображаемый формат даты будет выбран на основе установленного языкового стандарта операционной системы пользователя, в то время как дата<code>значение</code> всегда форматируется <code>yyyy-MM-ddThh:mm</code>. Когда значение передается на сервер, например, это будет выглядеть <code>partydate=2017-06-01T08:30</code>.</p>
+<p>Одна вещь, чтобы отметить, что отображаемый формат даты отличается от фактического <code>значения</code> — отображаемый формат даты будет выбран на основе установленного языкового стандарта операционной системы пользователя, в то время как дата<code>значение</code> всегда форматируется <code>yyyy-MM-ddThh:mm</code>. Когда значение передаётся на сервер, например, это будет выглядеть <code>partydate=2017-06-01T08:30</code>.</p>
 
 <div class="note">
 <p><strong>Примечание</strong>: также имейте в виду, что если такие данные поступают через http-запрос Get, двоеточие нужно экранировать для включения в параметры URL, например <code>partydate=2017-06-01T08%3A30</code>.</p>

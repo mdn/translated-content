@@ -14,7 +14,7 @@ translation_of: Web/API/Clients/openWindow
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p>Метод <strong><code>openWindow()</code></strong> интерфейса {{domxref("Clients")}} создает новый контекст просмотра верхнего уровня и загружает заданный URL. Если вызывающий скрипт не имеет разрешения на отображение всплывающих окон, <code>openWindow()</code> выдаст <code>InvalidAccessError</code>.</p>
+<p>Метод <strong><code>openWindow()</code></strong> интерфейса {{domxref("Clients")}} создаёт новый контекст просмотра верхнего уровня и загружает заданный URL. Если вызывающий скрипт не имеет разрешения на отображение всплывающих окон, <code>openWindow()</code> выдаст <code>InvalidAccessError</code>.</p>
 
 <p>В Firefox этому методу разрешено отображать всплывающие окна только при вызове события клике по уведомлению.</p>
 
@@ -59,7 +59,7 @@ self.addEventListener('notificationclick', e =&gt; {
   e.waitUntil(clients.matchAll({ type: 'window' }).then(clientsArr =&gt; {
     // Если вкладка, соответствующая целевому URL-адресу, уже существует, сфокусируйтесь на ней;
     const hadWindowToFocus = clientsArr.some(windowClient =&gt; windowClient.url === e.notification.data.url ? (windowClient.focus(), true) : false);
-    // В противном случае откройте новую вкладку для соответствующего URL-адреса и сфокусируйте ее.
+    // В противном случае откройте новую вкладку для соответствующего URL-адреса и сфокусируйте её.
     if (!hadWindowToFocus) clients.openWindow(e.notification.data.url).then(windowClient =&gt; windowClient ? windowClient.focus() : null);
   }));
 });

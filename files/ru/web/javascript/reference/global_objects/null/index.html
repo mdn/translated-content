@@ -40,14 +40,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/null
 
 <h3 id="Difference_between_null_and_undefined" name="Difference_between_null_and_undefined">Отличия между <code>null</code> и <code>undefined</code></h3>
 
-<p><code>null</code> является определенным значением отсутствия объекта, тогда как {{jsxref("Global_Objects/undefined", "undefined")}} обозначает неопределенность. Например: </p>
+<p><code>null</code> является определённым значением отсутствия объекта, тогда как {{jsxref("Global_Objects/undefined", "undefined")}} обозначает неопределённость. Например: </p>
 
 <pre class="brush: js">var element;
-// значение переменной element до ее инициализации не определенно: undefined
+// значение переменной element до её инициализации не определённо: undefined
 
 element = document.getElementById('not-exists');
 // здесь при попытке получения несуществующего элемента, метод getElementById возвращает null
-// переменная element теперь инициализирована значением null, ее значение определено
+// переменная element теперь инициализирована значением null, её значение определено
 </pre>
 
 <p>При проверке на <code>null</code> или {{jsxref("Global_Objects/undefined", "undefined")}}, помните о <a href="/ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения#Использование_операторов_равенства">различии между операторами равенства (==) и идентичности (===)</a>: с первым, выполняется преобразование типов. </p>

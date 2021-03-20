@@ -14,7 +14,7 @@ tags:
 translation_of: Learn/HTML/Forms/HTML5_updates
 original_slug: Web/Guide/HTML/Формы_в_HTML
 ---
-<p>Элементы и атрибуты форм в <strong>HTML5</strong> предоставляют большие возможности семантической верстки, чем HTML4, а также позволяет отказаться от использования JavaScript и CSS, которое было ранее необходимо для HTML4. Большие возможности в формах HTML5 делают удобным для пользователей отправление информации с различных веб-сайтов. Они также предоставляют эти возможности для тех пользователей, у которых отключена поддержка JavaScript.</p>
+<p>Элементы и атрибуты форм в <strong>HTML5</strong> предоставляют большие возможности семантической вёрстки, чем HTML4, а также позволяет отказаться от использования JavaScript и CSS, которое было ранее необходимо для HTML4. Большие возможности в формах HTML5 делают удобным для пользователей отправление информации с различных веб-сайтов. Они также предоставляют эти возможности для тех пользователей, у которых отключена поддержка JavaScript.</p>
 
 <p><span class="seoSummary">Эта статья описывает изменения в HTML-формах, представленных в HTML5. Для более подробного руководства по использованию формами, просмотрите наше обширное<a href="/ru/docs/Web/Guide/HTML/Forms"> руководство по HTML-формам</a>.</span></p>
 
@@ -29,7 +29,7 @@ original_slug: Web/Guide/HTML/Формы_в_HTML
  <li>
   <p><code>email</code>: Элемент представляет из себя поле для ввода одного адреса электронной почты. Переходы строк автоматически удаляются из значения <code>value</code>. Может быть предоставлен недействительный адрес эл. почты, но поле ввода запретит отправку формы, если эл. адрес почты не будет соответствовать нормам ABNF.</p>
 
-  <div class="note"><strong>Заметьте:</strong> Если установлен атрибут {{htmlattrxref("multiple", "input")}}, то может быть введено несколько адресов электронной почты, разделенных запятой, но, в данный момент, такая возможность не реализована в Firefox.</div>
+  <div class="note"><strong>Заметьте:</strong> Если установлен атрибут {{htmlattrxref("multiple", "input")}}, то может быть введено несколько адресов электронной почты, разделённых запятой, но, в данный момент, такая возможность не реализована в Firefox.</div>
  </li>
 </ul>
 
@@ -40,7 +40,7 @@ original_slug: Web/Guide/HTML/Формы_в_HTML
  <li>{{htmlattrxref("pattern", "input")}}: Регулярное выражение, по которому поверяются вводимые данные. Может использоваться в элементе {{htmlattrxref("type", "input")}} со значениями <code>text</code>, <code>tel</code>, <code>search</code>, <code>url</code>, <code>и email</code>.</li>
  <li>{{htmlattrxref("form", "input")}}: Строка, указывающая, к какому элементу {{HTMLElement("form")}} принадлежит элемент. Элемент может быть частью только одной формы.</li>
  <li>{{htmlattrxref("formmethod", "input")}}: Строка, указывающая метод передачи данных  (GET or POST), когда форма отправляется на сервер. Он перекрывает значение атрибута {{htmlattrxref("method", "form")}} элемента {{HTMLElement("form")}}, если установлен. Работает только, если {{htmlattrxref("type", "input")}} является <code>image</code> <code>или submit, </code>и если установлен атрибут {{htmlattrxref("form", "input")}}.</li>
- <li>{{htmlattrxref("x-moz-errormessage", "input")}} {{non-standard_inline}}: Строка, указывающая на сообщение об ошибке, которое будет показано, если это поле не пройдет валидацию. Этот атрибут - расширение Mozilla и не является стандартом.</li>
+ <li>{{htmlattrxref("x-moz-errormessage", "input")}} {{non-standard_inline}}: Строка, указывающая на сообщение об ошибке, которое будет показано, если это поле не пройдёт валидацию. Этот атрибут - расширение Mozilla и не является стандартом.</li>
 </ul>
 
 <h2 id="Текстовое_поле">Текстовое поле</h2>
@@ -48,7 +48,7 @@ original_slug: Web/Guide/HTML/Формы_в_HTML
 <p><code>&lt;input&gt;</code> с атрибутом <code>type="text"</code> определяет однострочное поле для ввода.</p>
 
 <pre class="brush: html">&lt;form&gt;
-  Введите свое имя: &lt;input type="text" name="name"&gt;
+  Введите своё имя: &lt;input type="text" name="name"&gt;
 &lt;/form&gt;</pre>
 
 <h2 id="Флажок"><strong style="font-size: 2.142857142857143rem; font-weight: 700; letter-spacing: -1px; line-height: 30px;">Флажок</strong></h2>
@@ -85,7 +85,7 @@ original_slug: Web/Guide/HTML/Формы_в_HTML
 
 <p>Элемент <code>{{HTMLElement("output")}}</code> представляет собой результат каких-либо вычислений.</p>
 
-<p>Вы можете использовать атрибут {{htmlattrxref("for", "output")}} для указания связи между элементом <code>{{HTMLElement("output")}}</code> и другими элементами в документе, которые повлияли на расчет (к примеру, поля для ввода параметров). Значением атрибута {{htmlattrxref("for", "output")}} является список ID других элементов, разделенный пробелами.</p>
+<p>Вы можете использовать атрибут {{htmlattrxref("for", "output")}} для указания связи между элементом <code>{{HTMLElement("output")}}</code> и другими элементами в документе, которые повлияли на расчёт (к примеру, поля для ввода параметров). Значением атрибута {{htmlattrxref("for", "output")}} является список ID других элементов, разделённый пробелами.</p>
 
 <p>{{non-standard_inline}} Gecko 2.0 (but not necessarily other browser engines) supports defining custom validity constraints and error messages for {{HTMLElement("output")}} elements, and therefore applies the {{Cssxref(":invalid")}}, {{Cssxref(":valid")}}, {{Cssxref(":-moz-ui-invalid")}}, and {{Cssxref(":-moz-ui-valid")}} CSS pseudo-classes to them. This can be helpful in situations where the calculated result violates a business rule, but no specific input value does (for example, "The total of percentages must not exceed 100").</p>
 

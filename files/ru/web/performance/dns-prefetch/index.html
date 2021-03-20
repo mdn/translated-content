@@ -13,7 +13,7 @@ translation_of: Web/Performance/dns-prefetch
 
 <p>Бывают случаи, когда в вашем приложении используются ссылки на домены, отличные от основного домена приложения. Например, внутри вашего приложения на "a.com" есть ссылка на домен "b.org". Для того, чтобы пройти по этой ссылке, пользовательский клиент должен сначала выяснить, какой адрес в интернете соответствует доменному имени "b.org". Этот процесс называется <code>DNS resolution.</code> И хотя механизмы кеширования DNS помогают сократить время запросов, DNS Resolution заметно влияет на время ожидания запроса из-за того, что первый клиентский запрос уходит сначала на DNS сервера и дожидается ответа от них. Для приложений, которые открывают соединения ко многим сторонним доменам, влияние DNS Resolution может сильно уменьшить производительность загрузки.</p>
 
-<p><code>dns-prefetch</code> помогает разработчикам замаскировать ожидание DNS resolution. <a href="/en-US/docs/Web/HTML/Element/link">HTML <code>&lt;link&gt;</code> элемент</a> предлагает подобный функционал с помощью атрибута <a href="/en-US/docs/Web/HTML/Attributes/rel"><code>rel</code></a>, значение которого может содержать <code>dns-prefetch</code>. В этом случае, предзагрузка DNS произойдет для домена, указанного в атрибуте <a href="/en-US/docs/Web/HTML/Attributes">href</a>:</p>
+<p><code>dns-prefetch</code> помогает разработчикам замаскировать ожидание DNS resolution. <a href="/en-US/docs/Web/HTML/Element/link">HTML <code>&lt;link&gt;</code> элемент</a> предлагает подобный функционал с помощью атрибута <a href="/en-US/docs/Web/HTML/Attributes/rel"><code>rel</code></a>, значение которого может содержать <code>dns-prefetch</code>. В этом случае, предзагрузка DNS произойдёт для домена, указанного в атрибуте <a href="/en-US/docs/Web/HTML/Attributes">href</a>:</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -44,7 +44,7 @@ translation_of: Web/Performance/dns-prefetch
 
 <pre class="brush: unix notranslate">Link: &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</pre>
 
-<p><strong>В третьих, </strong> хорошей практикой считается использование <code>dns-prefetch</code> в паре с  <code>preconnect</code>. В то время, как <code>dns-prefetch</code> срабатывает только при DNS поиске, <code>preconnect</code> устанавливает соединение к нужному серверу. Этот процесс включает в себя DNS resolution, установку TCP соединения и установление безопасного соединения (<a href="/en-US/docs/Glossary/TLS">TLS</a> рукопожатие), если оно доступно. Комбинирование этих двух инструкций дает возможность ещё больше сократить время ожидания для кросс-доменных запросов. Вы можете использовать их вместе таким образом:</p>
+<p><strong>В третьих, </strong> хорошей практикой считается использование <code>dns-prefetch</code> в паре с  <code>preconnect</code>. В то время, как <code>dns-prefetch</code> срабатывает только при DNS поиске, <code>preconnect</code> устанавливает соединение к нужному серверу. Этот процесс включает в себя DNS resolution, установку TCP соединения и установление безопасного соединения (<a href="/en-US/docs/Glossary/TLS">TLS</a> рукопожатие), если оно доступно. Комбинирование этих двух инструкций даёт возможность ещё больше сократить время ожидания для кросс-доменных запросов. Вы можете использовать их вместе таким образом:</p>
 
 <pre class="brush: html notranslate">&lt;link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin&gt;
 &lt;link rel="dns-prefetch" href="https://fonts.gstatic.com/"&gt;

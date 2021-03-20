@@ -57,7 +57,7 @@ translation_of: Web/HTTP/Status
   <tr>
    <td>102</td>
    <td>Processing</td>
-   <td>"В обработке". Этот код указывает, что сервер получил запрос и обрабатывает его, но обработка еще не завершена.</td>
+   <td>"В обработке". Этот код указывает, что сервер получил запрос и обрабатывает его, но обработка ещё не завершена.</td>
    <td>Только HTTP/1.1</td>
   </tr>
   <tr>
@@ -135,7 +135,7 @@ translation_of: Web/HTTP/Status
    <td id="301">301</td>
    <td>Moved Permanently</td>
    <td>
-    <p>"Перемещён на постоянной основе". Этот код ответа значит, что <span id="result_box" lang="ru"><span>URI </span><span>запрашиваемого</span> <span>ресурса</span> <span>был изменен</span><span>.</span> <span>Возможно,</span> <span>новый</span> <span>URI </span></span><span lang="ru"><span>будет </span></span>предоставлен <span lang="ru"><span>в ответе.</span></span></p>
+    <p>"Перемещён на постоянной основе". Этот код ответа значит, что <span id="result_box" lang="ru"><span>URI </span><span>запрашиваемого</span> <span>ресурса</span> <span>был изменён</span><span>.</span> <span>Возможно,</span> <span>новый</span> <span>URI </span></span><span lang="ru"><span>будет </span></span>предоставлен <span lang="ru"><span>в ответе.</span></span></p>
    </td>
    <td>HTTP/0.9 and later</td>
   </tr>
@@ -143,7 +143,7 @@ translation_of: Web/HTTP/Status
    <td id="302">302</td>
    <td>Found</td>
    <td>
-    <p>"Найдено". Этот код ответа значит, что запрошенный ресурс <em>временно изменен</em>. <span id="result_box" lang="ru"><span>Новые</span> <span>изменения в</span> <span>URI</span> <span>могут быть</span></span> доступны в <span id="result_box" lang="ru"><span>будущем</span></span>. <span id="result_box" lang="ru"><span>Таким образом,</span> этот<span> </span><span>URI,</span> <span>должен</span> <span>быть использован</span> <span>клиентом</span> <span>в</span> <span>будущих запросах</span><span>.</span></span></p>
+    <p>"Найдено". Этот код ответа значит, что запрошенный ресурс <em>временно изменён</em>. <span id="result_box" lang="ru"><span>Новые</span> <span>изменения в</span> <span>URI</span> <span>могут быть</span></span> доступны в <span id="result_box" lang="ru"><span>будущем</span></span>. <span id="result_box" lang="ru"><span>Таким образом,</span> этот<span> </span><span>URI,</span> <span>должен</span> <span>быть использован</span> <span>клиентом</span> <span>в</span> <span>будущих запросах</span><span>.</span></span></p>
    </td>
    <td>HTTP/0.9 and later</td>
   </tr>
@@ -156,7 +156,7 @@ translation_of: Web/HTTP/Status
   <tr>
    <td id="304">304</td>
    <td>Not Modified</td>
-   <td>"Не модифицировано". Используется для кэширования. Это код ответа значит, что запрошенный ресурс не был изменен. Таким образом, клиент может продолжать использовать кэшированную версию ответа.</td>
+   <td>"Не модифицировано". Используется для кэширования. Это код ответа значит, что запрошенный ресурс не был изменён. Таким образом, клиент может продолжать использовать кэшированную версию ответа.</td>
    <td>HTTP/0.9 and later</td>
   </tr>
   <tr>
@@ -205,7 +205,7 @@ translation_of: Web/HTTP/Status
   <tr>
    <td id="402">402</td>
    <td>Payment Required</td>
-   <td>"Необходима оплата". Этот код ответа зарезервирован для будущего использования. Первоначальная цель для создания этого когда была в использовании его для цифровых платежных систем(на данный момент не используется).</td>
+   <td>"Необходима оплата". Этот код ответа зарезервирован для будущего использования. Первоначальная цель для создания этого когда была в использовании его для цифровых платёжных систем(на данный момент не используется).</td>
    <td>HTTP/0.9 and 1.1</td>
   </tr>
   <tr>
@@ -223,14 +223,14 @@ translation_of: Web/HTTP/Status
   <tr>
    <td id="405">405</td>
    <td>Method Not Allowed</td>
-   <td>"Метод не разрешен". Сервер знает о запрашиваемом методе, но он был деактивирован и не может быть использован. Два обязательных метода,  <code>GET</code> и <code>HEAD</code>,  никогда не должны быть деактивированы и не должны возвращать этот код ошибки.</td>
+   <td>"Метод не разрешён". Сервер знает о запрашиваемом методе, но он был деактивирован и не может быть использован. Два обязательных метода,  <code>GET</code> и <code>HEAD</code>,  никогда не должны быть деактивированы и не должны возвращать этот код ошибки.</td>
    <td>HTTP/1.1 only</td>
   </tr>
   <tr>
    <td id="406">406</td>
    <td>Not Acceptable</td>
    <td>
-    <p>Этот ответ отсылается, когда веб сервер после выполнения <a href="/en/HTTP/Content_negotiation#Server-driven_negotiation" title="https://developer.mozilla.org/en/HTTP/Content_negotiation#Server-driven_negotiation">server-driven content negotiation</a>, не нашел контента, отвечающего критериям, полученным из user agent.</p>
+    <p>Этот ответ отсылается, когда веб сервер после выполнения <a href="/en/HTTP/Content_negotiation#Server-driven_negotiation" title="https://developer.mozilla.org/en/HTTP/Content_negotiation#Server-driven_negotiation">server-driven content negotiation</a>, не нашёл контента, отвечающего критериям, полученным из user agent.</p>
    </td>
    <td>HTTP/1.1 only</td>
   </tr>
@@ -243,7 +243,7 @@ translation_of: Web/HTTP/Status
   <tr>
    <td id="408">408</td>
    <td>Request Timeout</td>
-   <td>Ответ с таким кодом может прийти, даже без предшествующего запроса. Он означает, что сервер хотел бы отключить это неиспользуемое соединение. Этот метод используется все чаще с тех пор, как некоторые браузеры, вроде Chrome и IE9, стали использовать <a class="external" href="http://www.belshe.com/2011/02/10/the-era-of-browser-preconnect/" title="http://www.belshe.com/2011/02/10/the-era-of-browser-preconnect/">HTTP механизмы предварительного соединения</a> для ускорения серфинга  (смотрите {{ bug(634278) }}, будущей реализации этого механизма в Firefox). Также учитывайте, что некоторые серверы прерывают соединения не отправляя подобных сообщений.</td>
+   <td>Ответ с таким кодом может прийти, даже без предшествующего запроса. Он означает, что сервер хотел бы отключить это неиспользуемое соединение. Этот метод используется все чаще с тех пор, как некоторые браузеры, вроде Chrome и IE9, стали использовать <a class="external" href="http://www.belshe.com/2011/02/10/the-era-of-browser-preconnect/" title="http://www.belshe.com/2011/02/10/the-era-of-browser-preconnect/">HTTP механизмы предварительного соединения</a> для ускорения сёрфинга  (смотрите {{ bug(634278) }}, будущей реализации этого механизма в Firefox). Также учитывайте, что некоторые серверы прерывают соединения не отправляя подобных сообщений.</td>
    <td>HTTP/1.1 only</td>
   </tr>
   <tr>
@@ -258,7 +258,7 @@ translation_of: Web/HTTP/Status
    <td id="410">410</td>
    <td>Gone</td>
    <td>
-    <p>Этот ответ отсылается, когда запрашиваемый контент удален с сервера.</p>
+    <p>Этот ответ отсылается, когда запрашиваемый контент удалён с сервера.</p>
    </td>
    <td>HTTP/1.1 only</td>
   </tr>
@@ -266,7 +266,7 @@ translation_of: Web/HTTP/Status
    <td id="411">411</td>
    <td>Length Required</td>
    <td>
-    <p>Запрос отклонен, потому что сервер требует указание заголовка <code>Content-Length</code>, но он не указан.</p>
+    <p>Запрос отклонён, потому что сервер требует указание заголовка <code>Content-Length</code>, но он не указан.</p>
    </td>
    <td>HTTP/1.1 only</td>
   </tr>
@@ -293,7 +293,7 @@ translation_of: Web/HTTP/Status
   <tr>
    <td id="415">415</td>
    <td>Unsupported Media Type</td>
-   <td>Медиа формат запрашиваемых данных не поддерживается сервером, поэтому запрос отклонен</td>
+   <td>Медиа формат запрашиваемых данных не поддерживается сервером, поэтому запрос отклонён</td>
    <td>HTTP/1.1 only</td>
   </tr>
   <tr>
