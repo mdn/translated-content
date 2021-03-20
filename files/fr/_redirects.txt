@@ -4028,7 +4028,6 @@
 /fr/docs/Web/CSS/:before	/fr/docs/Web/CSS/::before
 /fr/docs/Web/CSS/:matches	/fr/docs/Web/CSS/:is
 /fr/docs/Web/CSS/:visited_et_la_vie_privée	/fr/docs/Web/CSS/Privacy_and_the_:visited_selector
-/fr/docs/Web/CSS/@media/Index	/fr/docs/orphaned/Web/CSS/@media/Index
 /fr/docs/Web/CSS/@styleset	/fr/docs/Web/CSS/@font-feature-values
 /fr/docs/Web/CSS/@viewport/height	/fr/docs/conflicting/Web/CSS/@viewport
 /fr/docs/Web/CSS/@viewport/max-height	/fr/docs/conflicting/Web/CSS/@viewport_516ab4b0283b5b2231fb657505e22440
@@ -4199,7 +4198,6 @@
 /fr/docs/Web/CSS/Fusion_des_marges	/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 /fr/docs/Web/CSS/Héritage	/fr/docs/Web/CSS/inheritance
 /fr/docs/Web/CSS/Implémentation_des_Brouillons_CSS	/fr/docs/conflicting/Web/CSS/Mozilla_Extensions
-/fr/docs/Web/CSS/Index	/fr/docs/orphaned/Web/CSS/Index
 /fr/docs/Web/CSS/Jeux_de_caractères_CSS	/fr/docs/Web/CSS/CSS_Charsets
 /fr/docs/Web/CSS/Layout_cookbook/Bas_de_page_adhérant	/fr/docs/Web/CSS/Layout_cookbook/Sticky_footers
 /fr/docs/Web/CSS/Layout_cookbook/Carte	/fr/docs/Web/CSS/Layout_cookbook/Card
