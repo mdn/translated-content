@@ -3128,8 +3128,6 @@
 /fr/docs/MDN/A_propos	/fr/docs/MDN/About
 /fr/docs/MDN/Contribute/Contenu	/fr/docs/MDN/Guidelines
 /fr/docs/MDN/Contribute/Contenu/Code_lignesdirectrices	/fr/docs/MDN/Guidelines/Code_guidelines
-/fr/docs/MDN/Contribute/Editor/Basics	/fr/docs/orphaned/MDN/Editor/Basics
-/fr/docs/MDN/Contribute/Editor/Basics/Pieces_jointes	/fr/docs/orphaned/MDN/Editor/Basics/Attachments
 /fr/docs/MDN/Contribute/Howto/Comment_créer_un_compte_sur_MDN	/fr/docs/orphaned/MDN/Contribute/Howto/Create_an_MDN_account
 /fr/docs/MDN/Contribute/Howto/Creer_un_exercice_interactif_pour_apprendre_le_web	/fr/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 /fr/docs/MDN/Contribute/Howto/Set_the_summary_for_a_page	/fr/docs/orphaned/MDN/Contribute/Howto/Set_the_summary_for_a_page
@@ -3147,15 +3145,11 @@
 /fr/docs/MDN/Contribute/Tools/KumaScript	/fr/docs/MDN/Tools/KumaScript
 /fr/docs/MDN/Contribute/Tools/Template_editing	/fr/docs/orphaned/MDN/Tools/Template_editing
 /fr/docs/MDN/Débuter_sur_MDN	/fr/docs/MDN/Contribute/Getting_started
-/fr/docs/MDN/Editor	/fr/docs/orphaned/MDN/Editor
-/fr/docs/MDN/Editor/Basics	/fr/docs/orphaned/MDN/Editor/Basics
-/fr/docs/MDN/Editor/Basics/Pieces_jointes	/fr/docs/orphaned/MDN/Editor/Basics/Attachments
 /fr/docs/MDN/Feedback	/fr/docs/MDN/Contribute/Feedback
 /fr/docs/MDN/Guidelines/Code_lignesdirectrices	/fr/docs/MDN/Guidelines/Code_guidelines
 /fr/docs/MDN/Kuma	/fr/docs/MDN/Yari
 /fr/docs/MDN/Rejoindre_la_communauté	/fr/docs/orphaned/MDN/Community
 /fr/docs/MDN/Rejoindre_la_communauté/Conversations	/fr/docs/orphaned/MDN/Community/Conversations
-/fr/docs/MDN/Rejoindre_la_communauté/Doc_sprints	/fr/docs/orphaned/MDN/Community/Doc_sprints
 /fr/docs/MDN/Rejoindre_la_communauté/Whats_happening	/fr/docs/orphaned/MDN/Community/Whats_happening
 /fr/docs/MDN/Structures/Exemples_live	/fr/docs/MDN/Structures/Live_samples
 /fr/docs/MDN/Structures/Tables_de_compatibilité	/fr/docs/MDN/Structures/Compatibility_tables
@@ -3309,7 +3303,6 @@
 /fr/docs/Outils/Add-ons	/fr/docs/orphaned/Tools/Add-ons
 /fr/docs/Outils/Boîte_à_outils_du_navigateur	/fr/docs/Tools/Browser_Toolbox
 /fr/docs/Outils/Browser_Toolbox	/fr/docs/Tools/Browser_Toolbox
-/fr/docs/Outils/CSS_Coverage	/fr/docs/orphaned/Tools/CSS_Coverage
 /fr/docs/Outils/Console_JavaScript	/fr/docs/Tools/Browser_Console
 /fr/docs/Outils/Console_Web	/fr/docs/Tools/Web_Console
 /fr/docs/Outils/Console_Web/Console_messages	/fr/docs/Tools/Web_Console/Console_messages
@@ -3399,7 +3392,6 @@
 /fr/docs/Outils/Débogueur/How_to/Step_through_code	/fr/docs/Tools/Debugger/How_to/Step_through_code
 /fr/docs/Outils/Débogueur/How_to/Use_a_source_map	/fr/docs/Tools/Debugger/How_to/Use_a_source_map
 /fr/docs/Outils/Débogueur/Keyboard_shortcuts	/fr/docs/Tools/Debugger/Keyboard_shortcuts
-/fr/docs/Outils/Débogueur/Limitations_of_the_new_debugger	/fr/docs/orphaned/Tools/Debugger/Limitations_of_the_new_debugger
 /fr/docs/Outils/Débogueur/Raccourcis_clavier	/fr/docs/Tools/Debugger/Keyboard_shortcuts
 /fr/docs/Outils/Débogueur/Set_an_XHR_breakpoint	/fr/docs/Tools/Debugger/Set_an_XHR_breakpoint
 /fr/docs/Outils/Débogueur/Settings	/fr/docs/Outils/Débogueur/Paramètres

@@ -31214,35 +31214,6 @@
       "Dralyab"
     ]
   },
-  "orphaned/MDN/Editor/Basics": {
-    "modified": "2020-09-30T15:38:34.461Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Voulto",
-      "jswisher"
-    ]
-  },
-  "orphaned/MDN/Editor/Basics/Attachments": {
-    "modified": "2020-09-30T15:38:34.580Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ele-gall-ac-mineducation"
-    ]
-  },
-  "orphaned/MDN/Editor": {
-    "modified": "2020-09-30T15:38:34.314Z",
-    "contributors": [
-      "chrisdavidmills",
-      "verdy_p",
-      "wbamberg",
-      "Keyrolus",
-      "ftoulouse",
-      "Mylainos",
-      "Jeremie",
-      "teoli",
-      "BenoitL"
-    ]
-  },
   "MDN/Guidelines/Code_guidelines": {
     "modified": "2020-09-30T15:29:18.597Z",
     "contributors": [
@@ -31261,14 +31232,6 @@
     "contributors": [
       "wbamberg",
       "zakaila"
-    ]
-  },
-  "orphaned/MDN/Community/Doc_sprints": {
-    "modified": "2019-03-23T22:40:48.518Z",
-    "contributors": [
-      "wbamberg",
-      "qwincy_p",
-      "Manuela"
     ]
   },
   "orphaned/MDN/Community": {
@@ -32391,13 +32354,6 @@
       "teoli"
     ]
   },
-  "orphaned/Tools/CSS_Coverage": {
-    "modified": "2019-03-23T22:51:54.141Z",
-    "contributors": [
-      "maximelore",
-      "wbamberg"
-    ]
-  },
   "Tools/Remote_Debugging/Chrome_Desktop": {
     "modified": "2020-07-16T22:35:40.256Z",
     "contributors": [
@@ -32576,13 +32532,6 @@
       "SphinxKnight",
       "Omnilaika02",
       "nora"
-    ]
-  },
-  "orphaned/Tools/Debugger/Limitations_of_the_new_debugger": {
-    "modified": "2019-03-23T22:22:02.266Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
     ]
   },
   "Tools/Debugger/Keyboard_shortcuts": {
