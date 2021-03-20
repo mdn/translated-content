@@ -1,0 +1,79 @@
+---
+title: PerformanceObserver.observe()
+slug: Web/API/PerformanceObserver/observe
+tags:
+  - API
+  - Method
+  - Méthode
+  - Performance
+  - PerformanceObserver
+  - Reference
+  - Performance Web
+translation_of: Web/API/PerformanceObserver/observe
+---
+<div>{{APIRef("Performance Timeline API")}}</div>
+
+<p class="summary">La méthode <strong><code>observe()</code></strong> de l'interface <strong>{{domxref("PerformanceObserver")}}</strong> est utilisée pour spécifier l'ensemble des types d'entrée de performance à observer. Les types d'entrée de performance sont spécifiés sous la forme d'un tableau d'objets {{domxref("DOMString")}}, chacun nommant un type d'entrée ; les noms de type sont documentés dans <a href="/fr/docs/Web/API/PerformanceEntry/entryType">Noms des types d'entrée de performance</a>.</p>
+
+<p>Lorsqu'une entrée de performance correspondante est enregistrée, la fonction de rappel de l'observateur de performance — définie lors de la création du {{domxref("PerformanceObserver")}} — est invoquée.</p>
+
+<h2 id="Syntax">Syntaxe</h2>
+
+<pre class="brush:js"><var>observer</var>.observe(<var>options</var>);</pre>
+
+<h3 id="Parameters">Paramètres</h3>
+
+<dl>
+  <dt><code>options</code></dt>
+  <dd>Un dictionnaire <code>PerformanceObserverInit</code> avec les membres possibles suivants :
+    <ul>
+      <li><code>entryTypes</code> : Un tableau d'objets {{domxref("DOMString")}}, chacun spécifiant un type d'entrée de performance à observer. Ne peut pas être utilisé avec les options « <code>type</code> » ou « <code>buffered</code> ».</li>
+      <li><code>type</code> : Une {{domxref("DOMString")}} unique spécifiant exactement un type d'entrée de performance à observer. Ne peut pas être utilisé avec l'option <code>entryTypes</code>.</li>
+      <li><code>buffered</code> : Un indicateur {{jsxref("Boolean")}} pour indiquer si les entrées en mémoire tampon doivent être mises en file d'attente dans la mémoire tampon de l'observateur. Ne doit être utilisé qu'avec l'option « <code>type</code> ».</li>
+    </ul>
+    <p class="notecard note">Voir {{domxref("PerformanceEntry.entryType")}} pour une liste des noms de types d'entrées de performance valides. Les types non reconnus sont ignorés, bien que le navigateur puisse afficher un message d'avertissement sur la console pour aider les développeurs à déboguer leur code. Si aucun type valide n'est trouvé, <code>observe()</code> n'a aucun effet.</p>
+  </dd>
+</dl>
+
+<h2 id="Example">Exemple</h2>
+
+<p>Cet exemple crée et configure deux <code>PerformanceObservers</code> ; l'un surveille les événements <code>"mark"</code> et <code>"frame"</code>, et l'autre surveille les événements <code>"measure"</code>.</p>
+
+<pre class="brush: js">const <var>observer</var> = new PerformanceObserver(function(<var>list</var>, <var>obj</var>) {
+  let <var>entries</var> = list.getEntries();
+  for (let <var>i</var>=0; i &lt; entries.length; i++) {
+    // Traiter les événements "mark" et "famse"
+  }
+});
+observer.observe({entryTypes: ["mark", "frame"]});
+
+function perf_observer(<var>list</var>, <var>observer</var>) {
+  // Traiter l'événement "measure"
+}
+const <var>observer2</var> = new PerformanceObserver(perf_observer);
+observer2.observe({entryTypes: ["measure"]});
+</pre>
+
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Performance Timeline Level 2', '#dom-performanceobserver-observe',
+        'observe()')}}</td>
+      <td>{{Spec2('Performance Timeline Level 2')}}</td>
+      <td>Définition initiale de la méthode <code>observe()</code>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.PerformanceObserver.observe")}}</p>
