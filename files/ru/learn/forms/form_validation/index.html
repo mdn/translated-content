@@ -796,8 +796,8 @@ function addEvent(element, event, callback) {
   element["on"+event] = function (e) {
     var output = callback(e);
 
-    // Обратный вызов, который возвращает `false`, останавливает цепочку обратного вызова
-     // и прерывает выполнение обратного вызова события.
+    // колбэк, который возвращает `false`, останавливает цепочку колбэков
+     // и прерывает выполнение колбэка события.
     if (output === false) return false;
 
     if (typeof previousEventCallBack === 'function') {

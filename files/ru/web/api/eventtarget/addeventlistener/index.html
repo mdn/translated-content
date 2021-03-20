@@ -60,13 +60,13 @@ target</em>.addEventListener(<em>type</em>, <em>listener</em>[, <em>useCapture</
 
 <h2 id="Примечания_по_использованию">Примечания по использованию</h2>
 
-<h3 id="Обратный_вызов_обработчика_событий">Обратный вызов обработчика событий</h3>
+<h3 id="Колбэк_обработчика_событий">Колбэк обработчика событий</h3>
 
-<p>Обработчик событий может быть задан либо как функция обратного вызова, либо как объект реализующий {{domxref("EventListener")}}, чей {{domxref("EventListener.handleEvent", "handleEvent()")}} метод служит как функция обратного вызова.</p>
+<p>Обработчик событий может быть задан либо как колбэк-функция, либо как объект реализующий {{domxref("EventListener")}}, чей {{domxref("EventListener.handleEvent", "handleEvent()")}} метод служит как колбэк-функция.</p>
 
-<p>Сама функция обратного вызова имеет те же параметры и возвращаемое значение что и метод <code>handleEvent()</code>; То есть обратный вызов принимает единственный параметр: объект основанный на {{domxref("Event")}} описывая событие, которое произошло и ничего не возвращая.</p>
+<p>Сама колбэк-функция имеет те же параметры и возвращаемое значение что и метод <code>handleEvent()</code>; То есть колбэк принимает единственный параметр: объект основанный на {{domxref("Event")}} описывая событие, которое произошло и ничего не возвращая.</p>
 
-<p>Например, обратный вызов обработчика событий, который может использоваться для обработки {{event("fullscreenchange")}} и {{event("fullscreenerror")}} может выглядеть так:</p>
+<p>Например, колбэк обработчика событий, который может использоваться для обработки {{event("fullscreenchange")}} и {{event("fullscreenerror")}} может выглядеть так:</p>
 
 <pre class="brush: js line-numbers language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">eventHandler</span><span class="punctuation token">(</span><span class="parameter token">event</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
   <span class="keyword token">if</span> <span class="punctuation token">(</span>event<span class="punctuation token">.</span>type <span class="operator token">==</span> <span class="string token">'fullscreenchange'</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>

@@ -20,7 +20,7 @@ translation_of: Web/Guide/Mobile
 
 <ul>
  <li>обтекаемая разметка CSS, позволяющая плавно адаптировать страницу под изменяющиеся размеры окна</li>
- <li>использование <a href="/en/CSS/Media_queries" title="en/CSS/Media_queries">медиа-запросов</a>, подключающих стили по условию, соответственно, <a href="/en/CSS/Media_queries#width" title="en/CSS/Media_queries#width">ширине</a> и <a href="/en/CSS/Media_queries#height" title="en/CSS/Media_queries#height">высоте</a> экрана.</li>
+ <li>использование <a href="/en/CSS/Media_queries" title="en/CSS/Media_queries">медиавыражений</a>, подключающих стили по условию, соответственно, <a href="/en/CSS/Media_queries#width" title="en/CSS/Media_queries#width">ширине</a> и <a href="/en/CSS/Media_queries#height" title="en/CSS/Media_queries#height">высоте</a> экрана.</li>
 </ul>
 
 <p><a href="/ru/docs/Mozilla/Mobile/Viewport_meta_tag" title="en/Mobile/Viewport_meta_tag">Meta-тег viewport</a> указывает браузеру, каким образом отображать ваш сайт в подходящем масштабе на устройстве пользователя.</p>
@@ -29,11 +29,11 @@ translation_of: Web/Guide/Mobile
 
 <p>Для использования сенсорного экрана вам понадобится работать с <a href="/en/DOM/Touch_events" title="en/DOM/Touch_events">DOM Touch events</a>. Вы не сможете использовать псевдо класс <a href="/ru/docs/Web/CSS/:hover" title="En/CSS/:hover">CSS :hover</a>, а при проектировании интерактивных элементов (к примеру, кнопок) нужно будет учитывать тот факт, что пальцы толще, чем указатели мыши. Дополнительные материалы в статье <a class="external" href="https://web.archive.org/web/20150520130912/http://www.whatcreative.co.uk/blog/tips/designing-for-touch-screen/">проектирование под сенсорные экраны</a>.</p>
 
-<p>Вы можете использовать медиа-запрос <a href="/en/CSS/Media_queries#-moz-touch-enabled" title="en/CSS/Media_queries#-moz-touch-enabled">-moz-touch-enabled</a>, чтобы использовать нужные вам правила CSS на устройствах, поддерживающих обработку нажатий на экран.</p>
+<p>Вы можете использовать медиавыражение <a href="/en/CSS/Media_queries#-moz-touch-enabled" title="en/CSS/Media_queries#-moz-touch-enabled">-moz-touch-enabled</a>, чтобы использовать нужные вам правила CSS на устройствах, поддерживающих обработку нажатий на экран.</p>
 
 <h3 id="Оптимизация_изображений">Оптимизация изображений</h3>
 
-<p>Чтобы помочь пользователям, чьи устройства имеют медленный или дорогой доступ к сети, вы можете оптимизировать изображения, загружая изображения под соответствующие размеры и разрешение экрана устройства. Это делается в CSS указывая в медиа-запросах <a href="/en/CSS/Media_queries#height" title="en/CSS/Media_queries#height">height</a>, <a href="/en/CSS/Media_queries#width" title="en/CSS/Media_queries#width">width</a>, и <a href="/en/CSS/Media_queries#-moz-device-pixel-ratio" title="en/CSS/Media_queries#-moz-device-pixel-ratio">pixel ratio</a>.</p>
+<p>Для оптимизации скорости загрузки у пользователей мобильных устройств вы имеете возможность загружать различные версии изображений в соответствии со спецификациями экрана устройства. Описать правила загрузки можно в CSS при помощи медиавыражений <a href="/en/CSS/Media_queries#height" title="en/CSS/Media_queries#height">height</a>, <a href="/en/CSS/Media_queries#width" title="en/CSS/Media_queries#width">width</a>, и <a href="/en/CSS/Media_queries#-moz-device-pixel-ratio" title="en/CSS/Media_queries#-moz-device-pixel-ratio">pixel ratio</a>.</p>
 
 <p>Также вы можете использовать свойства CSS чтобы применить визуальные эффекты типа <a href="/en/CSS/Using_CSS_gradients" title="en/CSS/Using_CSS_gradients">gradients</a> и <a href="/En/CSS/Box-shadow" title="En/CSS/Box-shadow">shadows</a> без использования изображений.</p>
 
