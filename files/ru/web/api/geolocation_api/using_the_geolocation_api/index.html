@@ -58,7 +58,7 @@ original_slug: Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API
 
 <h3 id="Точная_настройка_отклика"><span class="short_text" id="result_box" lang="ru"><span>Точная</span> <span>настройка</span> <span>отклика</span></span></h3>
 
-<p>{{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} и {{domxref("Geolocation.watchPosition()","watchPosition()")}} принимают callback-функцию при успехе, необязательную callback-функцию при ошибке и необязательный объект <code><a href="/ru/docs/Web/API/PositionOptions">PositionOptions</a></code>.</p>
+<p>{{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}} и {{domxref("Geolocation.watchPosition()","watchPosition()")}} принимают колбэк-функцию при успехе, необязательную колбэк-функцию при ошибке и необязательный объект <code><a href="/ru/docs/Web/API/PositionOptions">PositionOptions</a></code>.</p>
 
 <p>Этот объект позволяет вам включить возможность определения позиции с высокой точностью, указать максимальное время кэширования значения позиции (при повторных запросах, пока время не вышло, вам будет возвращается кэшированное значение; после браузер будет запрашивать актуальные данные), а также указать значение, устанавливающее интервал — как часто браузер должен пытаться получить данные о местоположении, прежде чем выйдет время.</p>
 
@@ -86,7 +86,7 @@ var wpid = navigator.geolocation.watchPosition(geo_success, geo_error, geo_optio
 
 <p>Экземпляр <code>GeolocationPosition</code> содержит только две вещи, свойство <code>coords</code>, внутри которого <code>GeolocationCoordinates</code> и свойство timestamp, внутри которого экземпляр {{domxref("DOMTimeStamp")}}, предоставляющее метку времени, созданную при получении данные.</p>
 
-<p>Экземпляр <code>GeolocationCoordinates</code> содержит некоторое количество свойств, двое из которых вы будете чаще всего использовать: <code>latitude</code> и <code>longitude</code>, которые помогут вам отобразить полученную позицию на карте. Поэтому многие callback-функции с успешным получением позиции выглядят очень просто:</p>
+<p>Экземпляр <code>GeolocationCoordinates</code> содержит некоторое количество свойств, двое из которых вы будете чаще всего использовать: <code>latitude</code> и <code>longitude</code>, которые помогут вам отобразить полученную позицию на карте. Поэтому многие колбэк-функции с успешным получением позиции выглядят очень просто:</p>
 
 <pre class="brush: js">function success(position) {
   const latitude  = position.coords.latitude;

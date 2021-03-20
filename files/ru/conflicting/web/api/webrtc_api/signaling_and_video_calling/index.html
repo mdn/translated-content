@@ -53,7 +53,7 @@ function error(err) {
 <pre class="brush: js notranslate">// Получить список людей с сервера
 // Пользователь выбирает список людей, чтобы установить соединение с нужным человеком
 navigator.getUserMedia({video: true}, function(stream) {
-  // Добавление локального потока не вызовет onaddstream обратного вызова,
+  // Добавление локального потока не вызовет колбэк onaddstream,
   // так называют его вручную.
   pc.onaddstream = e =&gt; video.src = URL.createObjectURL(e.stream);
   pc.<a href="#addStream()">addStream</a>(stream);
