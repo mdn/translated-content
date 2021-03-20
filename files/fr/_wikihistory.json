@@ -30751,40 +30751,6 @@
       "rachelandrew"
     ]
   },
-  "orphaned/Tools/Add-ons/DOM_Inspector/DOM_Inspector_FAQ": {
-    "modified": "2020-07-16T22:36:25.515Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Add-ons/DOM_Inspector": {
-    "modified": "2020-07-16T22:36:24.288Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore",
-      "tregagnon",
-      "Delapouite",
-      "Mgjbot",
-      "BenoitL",
-      "Sheppy",
-      "Chbok"
-    ]
-  },
-  "orphaned/Tools/Add-ons/DOM_Inspector/Internals": {
-    "modified": "2020-07-16T22:36:25.144Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Add-ons/DOM_Inspector/Introduction_to_DOM_Inspector": {
-    "modified": "2020-07-16T22:36:25.833Z",
-    "contributors": [
-      "maximelore",
-      "wbamberg"
-    ]
-  },
   "Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
     "modified": "2020-03-12T19:36:16.242Z",
     "contributors": [
@@ -31266,12 +31232,6 @@
       "BenoitL",
       "Mgjbot",
       "Fredchat"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons_bonnes_pratiques_performances_extensions": {
-    "modified": "2019-03-23T22:52:30.998Z",
-    "contributors": [
-      "ArakNoPhob"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar": {
@@ -32196,13 +32156,6 @@
       "maximelore"
     ]
   },
-  "orphaned/Tools/Add-ons": {
-    "modified": "2020-07-16T22:36:23.351Z",
-    "contributors": [
-      "maximelore",
-      "wbamberg"
-    ]
-  },
   "Tools/Browser_Toolbox": {
     "modified": "2020-07-16T22:35:55.531Z",
     "contributors": [
@@ -32523,161 +32476,6 @@
       "wbamberg",
       "teoli",
       "Goofy"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/Disable_breakpoints": {
-    "modified": "2019-03-23T22:21:17.073Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Access_debugging_in_add-ons": {
-    "modified": "2019-03-23T22:21:33.063Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Black_box_a_source": {
-    "modified": "2019-03-23T22:21:44.269Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Break_on_a_DOM_event": {
-    "modified": "2019-03-23T22:22:11.943Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Debug_eval_sources": {
-    "modified": "2019-03-23T22:22:29.066Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Disable_breakpoints": {
-    "modified": "2019-03-23T22:22:13.461Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Examine,_modify,_and_watch_variables": {
-    "modified": "2019-03-23T22:22:09.066Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Highlight_and_inspect_DOM_nodes": {
-    "modified": "2019-03-23T22:22:10.389Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to": {
-    "modified": "2019-03-23T22:22:26.886Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Open_the_debugger": {
-    "modified": "2019-03-23T22:22:10.293Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore",
-      "teoli"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Pretty-print_a_minified_file": {
-    "modified": "2019-03-23T22:22:11.012Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Search_and_filter": {
-    "modified": "2019-03-23T22:21:42.961Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Set_a_breakpoint": {
-    "modified": "2019-03-23T22:21:42.671Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Set_a_conditional_breakpoint": {
-    "modified": "2019-03-23T22:21:51.627Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Step_through_code": {
-    "modified": "2019-03-23T22:21:44.640Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Use_a_source_map": {
-    "modified": "2019-03-23T22:21:49.457Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)": {
-    "modified": "2019-03-23T22:22:28.971Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/Keyboard_shortcuts": {
-    "modified": "2019-03-23T22:21:50.707Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/Settings": {
-    "modified": "2019-03-23T22:14:03.961Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/UI_Tour": {
-    "modified": "2019-03-23T22:19:32.754Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
     ]
   },
   "Tools/DevToolsAPI": {
