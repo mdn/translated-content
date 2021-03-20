@@ -19,11 +19,11 @@ translation_of: Web/HTTP/CORS
 
 <p>На самом деле, все.</p>
 
-<p>Конкретнее, эта статья для web-администраторов, разработчиков серверной стороны и front-end разработчиков. Современные браузеры поддерживают клиентские компоненты cross-origin обмена, включая заголовки и соблюдение правил политики. Но этот новый стандарт означает, что сервера также должны поддерживать новые заголовки запросов и ответов. Другая статья для разработчиков серверной части, описывающая <a href="/en-US/docs/Web/HTTP/Server-Side_Access_Control">перспективы сross-origin обмена на стороне сервера (с примерами кода на PHP)</a>, к дополнительному прочтению.</p>
+<p>Конкретнее, эта статья для web-администраторов, разработчиков серверной стороны и front-end разработчиков. Современные браузеры поддерживают клиентские компоненты cross-origin обмена, включая заголовки и соблюдение правил политики. Но этот новый стандарт означает, что сервера также должны поддерживать новые заголовки запросов и ответов. Другая статья для разработчиков серверной части, описывающая <a href="/en-US/docs/Web/HTTP/Server-Side_Access_Control">перспективы cross-origin обмена на стороне сервера (с примерами кода на PHP)</a>, к дополнительному прочтению.</p>
 
 <h2 id="Какие_запросы_используют_CORS">Какие запросы используют CORS?</h2>
 
-<p>Этот <a class="external" href="https://fetch.spec.whatwg.org/#http-cors-protocol">стандарт сross-origin обмена</a> используется для разрешения кросс-сайтовых HTTP запросов для:</p>
+<p>Этот <a class="external" href="https://fetch.spec.whatwg.org/#http-cors-protocol">стандарт cross-origin обмена</a> используется для разрешения кросс-сайтовых HTTP запросов для:</p>
 
 <ul>
  <li>Вызова {{domxref("XMLHttpRequest")}} или <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> APIs в кросс-сайт манере, как описано выше.</li>
@@ -332,7 +332,7 @@ Access-Control-Max-Age: 86400</pre>
 
 <p>Наиболее интересная возможность, предоставляемая как {{domxref("XMLHttpRequest")}}, так и <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> и CORS - это возможность делать "проверенные" запросы, которые осведомлены о файлах <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookie</a> и информации HTTP аутентификации. По умолчанию, в кросс-сайтовых {{domxref("XMLHttpRequest")}} или <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> вызовах, браузеры <strong>не </strong>отправляют учетные данные. Конкретный флаг должен быть установлен для объекта {{domxref("XMLHttpRequest")}} или конструктора {{domxref("Request")}} при его вызове.</p>
 
-<p>В этом примере контент, изначально загруженный из <code class="plain">http://foo.example,</code> выполняет простой GET запрос к ресурсу  <code class="plain">http://bar.other,</code> который устанавливает файлы сookie. Содержимое на foo.example может содержать такой JavaScript:</p>
+<p>В этом примере контент, изначально загруженный из <code class="plain">http://foo.example,</code> выполняет простой GET запрос к ресурсу  <code class="plain">http://bar.other,</code> который устанавливает файлы cookie. Содержимое на foo.example может содержать такой JavaScript:</p>
 
 <pre class="brush: js notranslate" id="line1">var invocation = new XMLHttpRequest();
 var url = 'http://bar.other/resources/credentialed-content/';

@@ -78,7 +78,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
   <tr>
    <td><code>\S</code></td>
    <td>
-    <p>Совпадет с любым символом, не являющимся проблельным. Эквивалентно <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. Например, <code>/\S\w*/</code> находит "foo" в "foo bar".</p>
+    <p>Совпадет с любым символом, не являющимся пробельным. Эквивалентно <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>. Например, <code>/\S\w*/</code> находит "foo" в "foo bar".</p>
    </td>
   </tr>
   <tr>
@@ -147,7 +147,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Плиск_серии_цифр">Плиск серии цифр</h3>
+<h3 id="Поиск_серии_цифр">Поиск серии цифр</h3>
 
 <pre class="brush: js notranslate">var randomData = "015 354 8787 687351 3512 8735";
 var regexpFourDigits = /\b\d{4}\b/g;
