@@ -8,7 +8,7 @@ translation_of: Web/API/AudioBuffer
 <div>
 <h2 id="Сводка">Сводка</h2>
 
-<p><code>AudioBuffer</code> - это интерфейс короткого звукового ресурса (audio asset), находящегося в памяти и созданного из аудиофайла методом {{ domxref("AudioContext.decodeAudioData()") }}, или из исходных данных с помощью метода {{ domxref("AudioContext.createBuffer()") }}. Помещенные в AudioBuffer звуковые данные могут быть воспроизведены в  {{ domxref("AudioBufferSourceNode") }}.</p>
+<p><code>AudioBuffer</code> - это интерфейс короткого звукового ресурса (audio asset), находящегося в памяти и созданного из аудиофайла методом {{ domxref("AudioContext.decodeAudioData()") }}, или из исходных данных с помощью метода {{ domxref("AudioContext.createBuffer()") }}. Помещённые в AudioBuffer звуковые данные могут быть воспроизведены в  {{ domxref("AudioBufferSourceNode") }}.</p>
 </div>
 
 <p>Объекты этого типа предназначены для хранения небольших звуковых фрагментов, обычно менее 45 секунд. Для более длинных звуков, объекты реализующие {{domxref("MediaElementAudioSourceNode")}} являются более подходящими. Этот буфер содержит данные в формате неперемещаемого IEE754 32-битного линейного ИКМ с номинальным диапазоном от -1 до +1, то есть 32-битный буфер с плавающей точкой каждого звукового фрагмента (samples) от -1.0 до 1.0. Если {{domxref("AudioBuffer")}} имеет несколько каналов, то они хранятся в отдельном буфере.</p>
@@ -17,7 +17,7 @@ translation_of: Web/API/AudioBuffer
 
 <dl>
  <dt>{{domxref("AudioBuffer.AudioBuffer", "AudioBuffer()")}}</dt>
- <dd><span class="hidden"> </span>Создает и возвращает новый объект <code>AudioBuffer</code>.</dd>
+ <dd><span class="hidden"> </span>Создаёт и возвращает новый объект <code>AudioBuffer</code>.</dd>
  <dt>
  <h2 id="Свойства"><span class="hidden"> </span>Свойства</h2>
  </dt>
@@ -49,7 +49,7 @@ translation_of: Web/API/AudioBuffer
 <pre class="brush: js;highlight:[7,14,27]">// Стерео
 var channels = 2;
 
-// Создает пустой двухсекундный стерео-буфер
+// Создаёт пустой двухсекундный стерео-буфер
 // с частотой звука AudioContext (sample rate)
 var frameCount = audioCtx.sampleRate * 2.0;
 var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);

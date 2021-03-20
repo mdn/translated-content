@@ -66,7 +66,7 @@ f();  // 6
 
 elements.map(function(element) {
   return element.length;
-}); // Это выражение вернет массив [8, 6, 7, 9]
+}); // Это выражение вернёт массив [8, 6, 7, 9]
 
 // Функцию выше можно записать как стрелочную функцию:
 elements.map((element) =&gt; {
@@ -123,7 +123,7 @@ var p = new Person();
 
 <p>Кроме этого, может быть создана <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">привязанная функция</a>, в которую передаётся требуемое значение <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code> для функции (функция <code>growUp()</code> в примере выше).</p>
 
-<p>Стрелочные функции не содержат собственный контекст <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code>, а используют значение <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code> окружающего контекста. Поэтому нижеприведенный код работает как предполагалось:</p>
+<p>Стрелочные функции не содержат собственный контекст <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code>, а используют значение <code><a href="/ru/docs/Web/JavaScript/Reference/Operators/this">this</a></code> окружающего контекста. Поэтому нижеприведённый код работает как предполагалось:</p>
 
 <pre class="brush: js">function Person(){
   this.age = 0;

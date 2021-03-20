@@ -20,9 +20,9 @@ translation_of: Web/API/XMLHttpRequest/response
 
 <p> </p>
 
-<p>Соответствующий объект, основанный на значении <code>responseType</code>. Вы можете попытаться запросить данные в определенном формате, установив значение <code>responseType</code> после вызова <code>open()</code> для инициализации запроса, но перед вызовом <code>send()</code> для отправки запроса на сервер.</p>
+<p>Соответствующий объект, основанный на значении <code>responseType</code>. Вы можете попытаться запросить данные в определённом формате, установив значение <code>responseType</code> после вызова <code>open()</code> для инициализации запроса, но перед вызовом <code>send()</code> для отправки запроса на сервер.</p>
 
-<p>Значение равно <code>null</code>, если запрос еще не завершен или был неудачным, за исключением того, что при чтении текстовых данных с использованием <code>responseType "text"</code> или пустой строки (<code>""</code>), ответ может содержать ответ до тех пор, пока запрос все еще находится в состоянии <code>LOADING readyState (3)</code>.</p>
+<p>Значение равно <code>null</code>, если запрос ещё не завершён или был неудачным, за исключением того, что при чтении текстовых данных с использованием <code>responseType "text"</code> или пустой строки (<code>""</code>), ответ может содержать ответ до тех пор, пока запрос все ещё находится в состоянии <code>LOADING readyState (3)</code>.</p>
 
 <p>Типы ответов описаны ниже.</p>
 
@@ -58,7 +58,7 @@ translation_of: Web/API/XMLHttpRequest/response
   </tr>
   <tr>
    <td><code>"json"</code></td>
-   <td><code>response</code> является JavaScript object, созданный путем анализа содержимого полученных данных как <a href="https://developer.mozilla.org/en-US/docs/Glossary/JSON" title="JSON: JavaScript Object Notation (JSON) is a data-interchange format.  Although not a strict subset, JSON closely resembles a subset of JavaScript syntax. Though many programming languages support JSON, JSON is especially useful for JavaScript-based apps, including websites and browser extensions.">JSON</a>.</td>
+   <td><code>response</code> является JavaScript object, созданный путём анализа содержимого полученных данных как <a href="https://developer.mozilla.org/en-US/docs/Glossary/JSON" title="JSON: JavaScript Object Notation (JSON) is a data-interchange format.  Although not a strict subset, JSON closely resembles a subset of JavaScript syntax. Though many programming languages support JSON, JSON is especially useful for JavaScript-based apps, including websites and browser extensions.">JSON</a>.</td>
   </tr>
   <tr>
    <td><code>"text"</code></td>
@@ -78,7 +78,7 @@ translation_of: Web/API/XMLHttpRequest/response
   </tr>
   <tr>
    <td><code>"ms-stream"</code> </td>
-   <td><code>response</code> является частью потоковой загрузки; этот тип ответа разрешен только для запросов на загрузку и поддерживается только Internet Explorer.</td>
+   <td><code>response</code> является частью потоковой загрузки; этот тип ответа разрешён только для запросов на загрузку и поддерживается только Internet Explorer.</td>
   </tr>
  </tbody>
 </table>
@@ -89,7 +89,7 @@ translation_of: Web/API/XMLHttpRequest/response
 
 <p> </p>
 
-<p>В этом примере представлена функция <code>load()</code>, которая загружает и обрабатывает страницу с сервера. Он работает путем создания объекта <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" title="Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing."><code>XMLHttpRequest</code></a> и создания обработчика события с событием <code>readystatechange</code>, чтобы при изменении <code>readyState </code>на <code>DONE (4)</code> <code>response</code> получался и передавался в колбэк-функцию, предоставляемую <code>load()</code>.</p>
+<p>В этом примере представлена функция <code>load()</code>, которая загружает и обрабатывает страницу с сервера. Он работает путём создания объекта <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" title="Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing."><code>XMLHttpRequest</code></a> и создания обработчика события с событием <code>readystatechange</code>, чтобы при изменении <code>readyState </code>на <code>DONE (4)</code> <code>response</code> получался и передавался в колбэк-функцию, предоставляемую <code>load()</code>.</p>
 
 <p>Содержимое обрабатывается как необработанные текстовые данные (поскольку здесь ничто не переопределяет <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType" title="The XMLHttpRequest property responseType is an enumerated string value specifying the type of data contained in the response."><code>responseType</code></a> по умолчанию).</p>
 

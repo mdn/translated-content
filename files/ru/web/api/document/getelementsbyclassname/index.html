@@ -5,7 +5,7 @@ translation_of: Web/API/Document/getElementsByClassName
 ---
 <p id="Summary">{{APIRef("DOM")}}</p>
 
-<p>Возвращает массивоподобный (итерируемый) объект всех дочерних элементов, соответствующих всем из указанных имен классов. В случае вызова по отношению к объекту 'document', поиск происходит по всему документу, включая корневой элемент. Вызывать {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} можно также применительно к любому элементу: возвращены будут лишь те элементы, которые являются потомками указанного корневого элемента и имеют при этом указанные классы.</p>
+<p>Возвращает массивоподобный (итерируемый) объект всех дочерних элементов, соответствующих всем из указанных имён классов. В случае вызова по отношению к объекту 'document', поиск происходит по всему документу, включая корневой элемент. Вызывать {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} можно также применительно к любому элементу: возвращены будут лишь те элементы, которые являются потомками указанного корневого элемента и имеют при этом указанные классы.</p>
 
 <h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
@@ -14,7 +14,7 @@ translation_of: Web/API/Document/getElementsByClassName
 
 <ul>
  <li><var>В "elements"</var> будет текущая  {{ domxref("HTMLCollection") }} найденных элементов.</li>
- <li><var>"names"</var> - строка, состоящая из списка имен искомых классов; имена классов разделяют пробелами.</li>
+ <li><var>"names"</var> - строка, состоящая из списка имён искомых классов; имена классов разделяют пробелами.</li>
  <li>getElementsByClassName может быть вызвана по отношению к любому элементу, не только для документа целиком. ("document"). Элемент, по отношению к которому осуществляется вызов, используется для целей поиска в качестве корневого элемента.</li>
 </ul>
 
@@ -32,7 +32,7 @@ translation_of: Web/API/Document/getElementsByClassName
 
 <pre class="brush: js">document.getElementById('main').getElementsByClassName('test');</pre>
 
-<p>Мы также можем использовать методы из Array.prototype по отношению к любой {{ domxref("HTMLCollection") }}, передавая коллекцию в качестве значения <em>this</em> метода. Код в примере найдет все элементы 'div' с классом 'test':</p>
+<p>Мы также можем использовать методы из Array.prototype по отношению к любой {{ domxref("HTMLCollection") }}, передавая коллекцию в качестве значения <em>this</em> метода. Код в примере найдёт все элементы 'div' с классом 'test':</p>
 
 <pre class="brush: js">var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
@@ -41,7 +41,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 <h2 id="Получение_элементов_класса_'test'">Получение элементов класса 'test'</h2>
 
-<p>Ниже приведен пример наиболее употребительного способа использования данного метода.</p>
+<p>Ниже приведён пример наиболее употребительного способа использования данного метода.</p>
 
 <pre>&lt;!doctype html&gt;
 &lt;html&gt;

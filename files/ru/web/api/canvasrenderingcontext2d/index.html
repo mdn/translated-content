@@ -37,7 +37,7 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.clearRect()")}}</dt>
- <dd>Для всех пикселей, находящихся внутри прямоугольника, определенного начальной точкой <em>(x, y)</em> и размерами <em>(ширина, высота),</em> устанавливает черный прозрачный цвет, стирая любое ранее нарисованное содержимое.</dd>
+ <dd>Для всех пикселей, находящихся внутри прямоугольника, определённого начальной точкой <em>(x, y)</em> и размерами <em>(ширина, высота),</em> устанавливает чёрный прозрачный цвет, стирая любое ранее нарисованное содержимое.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.fillRect()")}}</dt>
  <dd>Рисует залитый прямоугольник в позиции <em>(x, y)</em>, размеры которого определяются шириной <em>width</em> и высотой <em>height</em>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</dt>
@@ -71,7 +71,7 @@ ctx.fillRect(10, 10, 55, 50);
  <dt>{{domxref("CanvasRenderingContext2D.miterLimit")}}</dt>
  <dd>Ограничение длины сопряжений. По умолчанию <code>10</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.getLineDash()")}}</dt>
- <dd>Возвращает текущий паттерн штриховой линии, который представляет собой массив, состоящий из четного количества неотрицательных чисел.</dd>
+ <dd>Возвращает текущий паттерн штриховой линии, который представляет собой массив, состоящий из чётного количества неотрицательных чисел.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.setLineDash()")}}</dt>
  <dd>Устанавливает текущий паттерн штриховой линии.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.lineDashOffset")}}</dt>
@@ -99,20 +99,20 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.fillStyle")}}</dt>
- <dd>Цвет или стиль применяемый внутри форм. По умолчанию #000 (черный).</dd>
+ <dd>Цвет или стиль применяемый внутри форм. По умолчанию #000 (чёрный).</dd>
  <dt>{{domxref("CanvasRenderingContext2D.strokeStyle")}}</dt>
- <dd>Цвет или стиль , применяемый к линиям вокруг формы. По умолчанию #000 (черный).</dd>
+ <dd>Цвет или стиль , применяемый к линиям вокруг формы. По умолчанию #000 (чёрный).</dd>
 </dl>
 
 <h2 id="Градиенты_и_шаблоны">Градиенты и шаблоны</h2>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.createLinearGradient()")}}</dt>
- <dd>Создает линейный градиент вдоль линии, задаваемой координатами, передаваемыми в параметры метода.</dd>
+ <dd>Создаёт линейный градиент вдоль линии, задаваемой координатами, передаваемыми в параметры метода.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.createRadialGradient()")}}</dt>
- <dd>Создает радиальный градиент, задаваемый координатами двух окружностей, передаваемыми в параметры метода.</dd>
+ <dd>Создаёт радиальный градиент, задаваемый координатами двух окружностей, передаваемыми в параметры метода.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.createPattern()")}}</dt>
- <dd>Создает шаблон, используя указанное изображение ({{domxref("CanvasImageSource")}}). Он повторяет исходное изображение в направлениях, указанных во втором аргументе. Этот метод возвращает {{domxref("CanvasPattern")}}.</dd>
+ <dd>Создаёт шаблон, используя указанное изображение ({{domxref("CanvasImageSource")}}). Он повторяет исходное изображение в направлениях, указанных во втором аргументе. Этот метод возвращает {{domxref("CanvasPattern")}}.</dd>
 </dl>
 
 <h2 id="Тени">Тени</h2>
@@ -134,7 +134,7 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.beginPath()")}}</dt>
- <dd>Создает новый пустой контур, обнуляя список фрагментов контура. Вызовите этот метод, когда захотите создать новый контур.</dd>
+ <dd>Создаёт новый пустой контур, обнуляя список фрагментов контура. Вызовите этот метод, когда захотите создать новый контур.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.closePath()")}}</dt>
  <dd>Перемещает точку рисования назад к началу текущего фрагмента контура. Этот метод пытается провести прямую линию от текущей точки до начальной. Если форма уже закрыта или имеет только одну точку, метод ничего не делает.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.moveTo()")}}</dt>
@@ -152,7 +152,7 @@ ctx.fillRect(10, 10, 55, 50);
  <dt>{{domxref("CanvasRenderingContext2D.ellipse()")}} {{experimental_inline}}</dt>
  <dd>Добавляет к контуру эллипс, с центром в точке <em>(x, y)</em>, заданный радиусами <em>radiusX</em> и <em>radiusY</em>, имеющий угол начала <em>startAngle</em> и конца <em>endAngle</em>, рисующийся в направлении, заданном в аргументе <em>anticlockwise</em> (по умолчанию - по часовой стрелке).</dd>
  <dt>{{domxref("CanvasRenderingContext2D.rect()")}}</dt>
- <dd>Создает контур прямоугольника с началом в точке <em>(x, y)</em>, и размерами, заданными шириной <em>width</em> и высотой <em>height</em>.</dd>
+ <dd>Создаёт контур прямоугольника с началом в точке <em>(x, y)</em>, и размерами, заданными шириной <em>width</em> и высотой <em>height</em>.</dd>
 </dl>
 
 <h2 id="Рисование_контуров">Рисование контуров</h2>
@@ -167,7 +167,7 @@ ctx.fillRect(10, 10, 55, 50);
  <dt>{{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}</dt>
  <dd>Прокручивает текущий или заданный контур в видимую область окна браузера.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.clip()")}}</dt>
- <dd>Создает область отсечения из текущих фрагментов контура. Все что рисуется после вызова метода <code>clip()</code> применяется только внутри области отсечения. Пример использования см. в разделе <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing" title="Clipping paths">Области отсечения</a> руководства по Canvas.</dd>
+ <dd>Создаёт область отсечения из текущих фрагментов контура. Все что рисуется после вызова метода <code>clip()</code> применяется только внутри области отсечения. Пример использования см. в разделе <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Compositing" title="Clipping paths">Области отсечения</a> руководства по Canvas.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.isPointInPath()")}}</dt>
  <dd>Позволяет узнать, содержится ли указанная точка в текущем контуре.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.isPointInStroke()")}}</dt>
@@ -201,7 +201,7 @@ ctx.fillRect(10, 10, 55, 50);
  <dt>{{domxref("CanvasRenderingContext2D.globalAlpha")}}</dt>
  <dd>Значение альфа-канала, применяемое к формам и изображениям, прежде чем они накладываются на холст. Значение по умолчанию <code>1.0</code> (полностью непрозрачный).</dd>
  <dt>{{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}</dt>
- <dd>Совместно с примененным <code>globalAlpha</code> это свойство определяет как формы и изображения накладываются на существующее изображение.</dd>
+ <dd>Совместно с применённым <code>globalAlpha</code> это свойство определяет как формы и изображения накладываются на существующее изображение.</dd>
 </dl>
 
 <h2 id="Рисование_изображений">Рисование изображений</h2>
@@ -217,7 +217,7 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.createImageData()")}}</dt>
- <dd>Создает новый пустой объект {{domxref("ImageData")}} с заданными размерами. Цвет всех пикселов в новом объекте устанавливается в прозрачный черный.</dd>
+ <dd>Создаёт новый пустой объект {{domxref("ImageData")}} с заданными размерами. Цвет всех пикселов в новом объекте устанавливается в прозрачный черный.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.getImageData()")}}</dt>
  <dd>Возвращает объект {{domxref("ImageData")}}, представляющий данные о пикселах, расположенных под областью холста, ограниченной прямоугольником длиной <em>sw</em> и высотой <em>sh</em>, начальная точка которого находится в позиции <em>(sx, sy)</em>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.putImageData()")}}</dt>
@@ -228,7 +228,7 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} {{experimental_inline}}</dt>
- <dd>Режим сглаживания изображений; если отключен, изображения не будут сглаживаться при масштабировании.</dd>
+ <dd>Режим сглаживания изображений; если отключён, изображения не будут сглаживаться при масштабировании.</dd>
 </dl>
 
 <h2 id="Состояние_холста">Состояние холста</h2>
@@ -237,9 +237,9 @@ ctx.fillRect(10, 10, 55, 50);
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.save()")}}</dt>
- <dd>Сохраняет текущее состояние стилей рисования, используя для этого стек, так что вы можете отменить любые внесенные в него изменения с помощью метода <code>restore()</code>.</dd>
+ <dd>Сохраняет текущее состояние стилей рисования, используя для этого стек, так что вы можете отменить любые внесённые в него изменения с помощью метода <code>restore()</code>.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.restore()")}}</dt>
- <dd>Восстанавливает состояние стилей рисования в значение, сохраненное методом <code>save()</code> в стек состояний последним.</dd>
+ <dd>Восстанавливает состояние стилей рисования в значение, сохранённое методом <code>save()</code> в стек состояний последним.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.canvas")}}</dt>
  <dd>Доступная только для чтения обратная ссылка на {{domxref("HTMLCanvasElement")}}. Может иметь значение {{jsxref("null")}}, если она не связана с элементом {{HTMLElement("canvas")}}.</dd>
 </dl>
@@ -259,7 +259,7 @@ ctx.fillRect(10, 10, 55, 50);
 
 <h3 id="Blink_и_WebKit">Blink и WebKit</h3>
 
-<p>Большинство из этих API являются <a href="https://code.google.com/p/chromium/issues/detail?id=363198">запрещенными и будут удалены в будущем</a>.</p>
+<p>Большинство из этих API являются <a href="https://code.google.com/p/chromium/issues/detail?id=363198">запрещёнными и будут удалены в будущем</a>.</p>
 
 <dl>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.clearShadow()</code></dt>
@@ -307,9 +307,9 @@ ctx.fillRect(10, 10, 55, 50);
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitBackingStorePixelRatio</code></dt>
  <dd><span id="result_box" lang="ru"><span>Размер хранилища по отношению к элементу canvas</span></span>. Смотри <a href="http://www.html5rocks.com/en/tutorials/canvas/hidpi/">High DPI Canvas</a>.</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitGetImageDataHD</code></dt>
- <dd>Предназначался для HD хранилищ, но удален из спецификации canvas.</dd>
+ <dd>Предназначался для HD хранилищ, но удалён из спецификации canvas.</dd>
  <dt>{{non-standard_inline}} <code>CanvasRenderingContext2D.webkitPutImageDataHD</code></dt>
- <dd>Предназначался для HD хранилищ, но удален из спецификации canvas.</dd>
+ <dd>Предназначался для HD хранилищ, но удалён из спецификации canvas.</dd>
 </dl>
 
 <dl>

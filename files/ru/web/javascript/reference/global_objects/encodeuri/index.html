@@ -82,7 +82,7 @@ console.log(encodeURIComponent('\uD800'));
 // один низкий суррогат бросит "URIError: malformed URI sequence"
 console.log(encodeURIComponent('\uDFFF'));</code></pre>
 
-<p>Также заметим, что следуя наиболее свежей <a href="http://tools.ietf.org/html/rfc3986">RFC3986</a> для URL, которая делает квадратные скобки защищенными (для IPv6) и таким образом не кодирует, когда формирование чего-либо, не являющегося частью URL (такое как домен), следующий сниппет поможет:</p>
+<p>Также заметим, что следуя наиболее свежей <a href="http://tools.ietf.org/html/rfc3986">RFC3986</a> для URL, которая делает квадратные скобки защищёнными (для IPv6) и таким образом не кодирует, когда формирование чего-либо, не являющегося частью URL (такое как домен), следующий сниппет поможет:</p>
 
 <pre class="brush: js">function fixedEncodeURI (str) {
     return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');

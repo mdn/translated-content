@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
 <div>{{JSRef}}</div>
 
-<p>Метод <strong>catch()</strong> возвращает <code>Promise(</code>обещание) и работает только в случае отклонения обещания. Ведет себя аналогично вызову {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}.</p>
+<p>Метод <strong>catch()</strong> возвращает <code>Promise(</code>обещание) и работает только в случае отклонения обещания. Ведёт себя аналогично вызову {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -31,7 +31,7 @@ p.catch(function(reason) {
   <dt><code>reason</code></dt>
   <dd>Причина отказа.</dd>
   <dt>
-  <p>Promise( Обещание ), возвращенное catch (), отклоняется, если onRejected выдает ошибку(throw) или возвращает Promise, который был отклонен; В противном случае Promise, возвращаемый catch () имеет статус  выполнено  (fulfilled)</p>
+  <p>Promise( Обещание ), возвращённое catch (), отклоняется, если onRejected выдаёт ошибку(throw) или возвращает Promise, который был отклонён; В противном случае Promise, возвращаемый catch () имеет статус  выполнено  (fulfilled)</p>
   </dt>
  </dl>
  </dd>
@@ -72,7 +72,7 @@ p1.then(function(value) {
   console.log('Not fired due to the catch');
 });
 
-// Следующий код ведет себя также, как вышенаписанный
+// Следующий код ведёт себя также, как вышенаписанный
 p1.then(function(value) {
   console.log(value); // "Success!"
   return Promise.reject('oh, no!');

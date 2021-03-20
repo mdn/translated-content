@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 <p>Каждое событие запущено на определённой стадии запроса. Типичный порядок событий такой:<img alt="" src="https://mdn.mozillademos.org/files/13376/webRequest-flow.png" style="display: block; height: 680px; margin-left: auto; margin-right: auto; width: 624px;"></p>
 
-<p>{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} Может быть запущен в любой момент во время запроса. Чреда событий может отличаться от приведенной выше: например, в Firefox, после <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HSTS</a> обновления, событие <code>onBeforeRedirect</code> будет запущено сразу же после <code>onBeforeRequest</code>.</p>
+<p>{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} Может быть запущен в любой момент во время запроса. Чреда событий может отличаться от приведённой выше: например, в Firefox, после <a href="/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">HSTS</a> обновления, событие <code>onBeforeRedirect</code> будет запущено сразу же после <code>onBeforeRequest</code>.</p>
 
 <p>Все события, кроме <code>onErrorOccurred</code>, могут принимать три аргумента в  <code>addListener()</code>:</p>
 
@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
  <li>необязательный объект <code>extraInfoSpec</code> . Может быть использован для передачи дополнительных специфических для события инструкций.</li>
 </ul>
 
-<p>Функции - обработчику передается объект <code>details</code> который содержит информацию о запросе. Она содержит ID запроса, который обеспечен для включения надстройки, которая позволяет соотносить события, ассоциируемые с одним запросом. Это уникально в пределах сессии и контекста надстройки. Информация остается одинаковой везде на протяжении запроса, даже при перенаправлениях и обменах аутентификации.</p>
+<p>Функции - обработчику передаётся объект <code>details</code> который содержит информацию о запросе. Она содержит ID запроса, который обеспечен для включения надстройки, которая позволяет соотносить события, ассоциируемые с одним запросом. Это уникально в пределах сессии и контекста надстройки. Информация остаётся одинаковой везде на протяжении запроса, даже при перенаправлениях и обменах аутентификации.</p>
 
 <p>Для использования webRequest API для определённого хоста, расширение должно иметь "webRequest" <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions">API permission</a> и <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permission </a>для этого хоста. Для использования возможности "блокирования" расширение должно также иметь "webRequestBlocking" API разрешение.</p>
 
@@ -56,7 +56,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
    <li>{{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}</li>
   </ul>
  </li>
- <li>предоставить учетные данные аутентификации в:
+ <li>предоставить учётные данные аутентификации в:
   <ul>
    <li>{{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}</li>
   </ul>

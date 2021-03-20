@@ -78,7 +78,7 @@ translation_of: Web/API/XMLHttpRequest/send
 xhr.open('GET', '/server', true);
 
 xhr.onload = function () {
-  // Запрос завершен. Здесь можно обрабатывать результат.
+  // Запрос завершён. Здесь можно обрабатывать результат.
 };
 
 xhr.send(null);
@@ -94,12 +94,12 @@ xhr.send(null);
 <pre><code>var xhr = new XMLHttpRequest();
 xhr.open("POST", '/server', true);
 
-//Передает правильный заголовок в запросе
+//Передаёт правильный заголовок в запросе
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
     if(xhr.readyState == XMLHttpRequest.DONE &amp;&amp; xhr.status == 200) {
-        // Запрос завершен. Здесь можно обрабатывать результат.
+        // Запрос завершён. Здесь можно обрабатывать результат.
     }
 }
 xhr.send("foo=bar&amp;lorem=ipsum");

@@ -27,7 +27,7 @@ translation_of: Web/API/Worker/postMessage
  <dt><em>message</em></dt>
  <dd><code>Object</code> передаваемый в <code>worker</code>. Будет содержаться в поле <code>data</code> описания события обработчика {{domxref("DedicatedWorkerGlobalScope.onmessage")}}. Это может быть любое значение или объект JavaScript, которые может обработать алгоритм структурированного клонирования, поддерживающий циклические ссылки.</dd>
  <dt><em>transfer</em> {{optional_inline}}</dt>
- <dd>Необязательный <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code> с передаваемыми ({{domxref("Transferable")}}) объектами (из тех, что были указаны в <code>message</code>) на которые передаются права собственности. Если право на объект передается, он становится непригодным (<em>neutered</em>) в контексте, из которого был отправлен, и становится доступным только в <code>worker</code>, которому он был отправлен.</dd>
+ <dd>Необязательный <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a></code> с передаваемыми ({{domxref("Transferable")}}) объектами (из тех, что были указаны в <code>message</code>) на которые передаются права собственности. Если право на объект передаётся, он становится непригодным (<em>neutered</em>) в контексте, из которого был отправлен, и становится доступным только в <code>worker</code>, которому он был отправлен.</dd>
  <dd>Переданные (<code>transferable</code>) объекты могут быть экземплярами классов {{domxref("ArrayBuffer")}}, {{domxref("MessagePort")}} или {{domxref("ImageBitmap")}}. null не является допустимым значением для передачи прав.</dd>
 </dl>
 
@@ -60,7 +60,7 @@ second.onchange = function() {
 
 <h3 id="Пример_с_Transfer">Пример с Transfer</h3>
 
-<p>В этом примере показано дополнение Firefox, которое передает <code>ArrayBuffer</code> из основного потока в <code>ChromeWorker</code>, а затем <code>ChromeWorker</code> передает его обратно в основной поток.</p>
+<p>В этом примере показано дополнение Firefox, которое передаёт <code>ArrayBuffer</code> из основного потока в <code>ChromeWorker</code>, а затем <code>ChromeWorker</code> передаёт его обратно в основной поток.</p>
 
 <h4 id="Код_основного_потока">Код основного потока:</h4>
 
@@ -86,7 +86,7 @@ console.info('arrBuf.byteLength, ДО передачи:', arrBuf.byteLength);
 myWorker.postMessage(
     {
         aTopic: 'do_sendWorkerArrBuff',
-        aBuf: arrBuf // буфер который передается 3 строками ниже
+        aBuf: arrBuf // буфер который передаётся 3 строками ниже
     },
     [
         arrBuf // буфер созданный на строке 9
@@ -150,7 +150,7 @@ arrBuf.byteLength, ПОСЛЕ передачи: 0                            boo
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div class="hidden">Таблица совместимости на этой странице создается из структурированных данных. Если вы хотите внести свой вклад в данные, пожалуйста, проверьте <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам запрос.</div>
+<div class="hidden">Таблица совместимости на этой странице создаётся из структурированных данных. Если вы хотите внести свой вклад в данные, пожалуйста, проверьте <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте нам запрос.</div>
 
 <p>{{Compat("api.Worker.postMessage")}}</p>
 

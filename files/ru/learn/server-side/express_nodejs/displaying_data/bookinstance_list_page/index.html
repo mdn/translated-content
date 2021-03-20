@@ -9,7 +9,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_li
 
 <p>Функция контроллера списка <code>BookInstance</code> требуется для получения списка всех экземпляров некоторой книги, для получения информации, связанной с книгой, и для передачи полученного списка в шаблон для отображения.</p>
 
-<p>Откройте файл <strong>/controllers/bookinstanceController.js</strong>. Найдите экспортируемый метод <code>bookinstance_list()</code> контроллера и замените его следующим кодом (измененный код выделен жирным).</p>
+<p>Откройте файл <strong>/controllers/bookinstanceController.js</strong>. Найдите экспортируемый метод <code>bookinstance_list()</code> контроллера и замените его следующим кодом (изменённый код выделен жирным).</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Display list of all BookInstances.</span>
 exports<span class="punctuation token">.</span>bookinstance_list <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>req<span class="punctuation token">,</span> res<span class="punctuation token">,</span> next<span class="punctuation token">)</span> <span class="punctuation token">{</span>
@@ -30,7 +30,7 @@ exports<span class="punctuation token">.</span>bookinstance_list <span class="op
 
 <h2 class="highlight-spanned" id="Представление">Представление</h2>
 
-<p>Создайте файл  <strong>/views/bookinstance_list.pug</strong> и скопируйте в него текст, приведенный ниже.</p>
+<p>Создайте файл  <strong>/views/bookinstance_list.pug</strong> и скопируйте в него текст, приведённый ниже.</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">extends</span> <span class="class-name token">layout</span>
 

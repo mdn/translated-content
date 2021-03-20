@@ -46,7 +46,7 @@ canvas.toBlob(function(blob) {
       url = URL.createObjectURL(blob);
 
   newImg.onload = function() {
-    // больше не нужно читать blob, поэтому он отменен
+    // больше не нужно читать blob, поэтому он отменён
     URL.revokeObjectURL(url);
   };
 
@@ -62,7 +62,7 @@ canvas.toBlob(function(blob) {
 <div>
 <h3 id="A_way_to_convert_a_canvas_to_an_ico_Mozilla_only">A way to convert a canvas to an ico (Mozilla only)</h3>
 
-<p>Это использует <code>-moz-parse</code> для преобразования cnavas в ICO. Windows XP не поддерживает преобразование из PNG в ico, поэтому вместо этого использует bmp. Ссылка для загрузки создается путем установки атрибута загрузки. Значение атрибута загрузки - это имя, которое он будет использовать в качестве имени файла.</p>
+<p>Это использует <code>-moz-parse</code> для преобразования cnavas в ICO. Windows XP не поддерживает преобразование из PNG в ico, поэтому вместо этого использует bmp. Ссылка для загрузки создаётся путём установки атрибута загрузки. Значение атрибута загрузки - это имя, которое он будет использовать в качестве имени файла.</p>
 
 <pre class="brush: js">var canvas = document.getElementById('canvas');
 var d = canvas.width;

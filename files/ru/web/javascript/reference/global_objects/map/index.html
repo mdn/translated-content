@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map
 
 <h3 id="Сравнение_Объектов_и_Map">Сравнение Объектов и Map</h3>
 
-<p>Объекты похожи на <code>Map</code> в том, что оба позволяют устанавливать значения по ключам, получать эти значения, удалять ключи и проверять их наличие. В связи с этим (и потому, что не было встроенных альтернатив), {{jsxref("Object", "Объекты")}} исторически использовались как <code>Map</code>. Однако, у них есть ряд отличий, который дает преимущества <code>Map</code> в ряде случаев:</p>
+<p>Объекты похожи на <code>Map</code> в том, что оба позволяют устанавливать значения по ключам, получать эти значения, удалять ключи и проверять их наличие. В связи с этим (и потому, что не было встроенных альтернатив), {{jsxref("Object", "Объекты")}} исторически использовались как <code>Map</code>. Однако, у них есть ряд отличий, который даёт преимущества <code>Map</code> в ряде случаев:</p>
 
 <ul>
  <li>Ключами {{jsxref("Object", "Объекта")}} выступают {{jsxref("String", "Строки")}} и {{jsxref("Symbol", "Символы")}}, в то время как любое значение может быть ключом <code>Map</code>, включая {{jsxref("Function", "функции")}}, {{jsxref("Object", "объекты")}} и {{Glossary("Primitive", "примитивы")}}.</li>
@@ -74,7 +74,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Map
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/clear" title="The clear() method removes all elements from a Map object."><code>Map.prototype.clear()</code></a></dt>
  <dd>Удаляет все пары ключ / значение из объекта <code>Map</code>.</dd>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/delete" title="The delete() method removes the specified element from a Map object by key."><code>Map.prototype.delete(key)</code></a></dt>
- <dd>Возвращает <code>true</code>, если элемент в объекте <code>Map</code> существовал и был удален, или false, если элемент не существует. <code>Map.prototype.has(key)</code> вернет <code>false</code> позже.</dd>
+ <dd>Возвращает <code>true</code>, если элемент в объекте <code>Map</code> существовал и был удалён, или false, если элемент не существует. <code>Map.prototype.has(key)</code> вернёт <code>false</code> позже.</dd>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/entries" title="The entries() method returns a new Iterator object that contains the [key, value] pairs for each element in the Map object in insertion order."><code>Map.prototype.entries()</code></a></dt>
  <dd>Возвращает новый объект <code>Iterator</code> который содержит <strong>массив</strong> <strong><code>[key, value]</code></strong> для каждого элемента в объекте <code>Map</code> в порядке вставки.</dd>
  <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach" title="The forEach() method executes a provided function once per each key/value pair in the Map object, in insertion order."><code>Map.prototype.forEach(callbackFn[, thisArg])</code></a></dt>

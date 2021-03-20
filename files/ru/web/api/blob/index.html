@@ -73,7 +73,7 @@ var myBlob = builder.getBlob('text/xml');
 
 <h3 id="Создание_URL_для_содержимого_типизированного_массива">Создание URL для содержимого типизированного массива</h3>
 
-<p>Следующий код создает типизированный массив JavaScript и создает новый <code>Blob</code>, содержащий данные типизированного массива. Затем вызывается {{DOMxRef("URL.createObjectURL()")}} для преобразования blob в {{glossary("URL")}}.</p>
+<p>Следующий код создаёт типизированный массив JavaScript и создаёт новый <code>Blob</code>, содержащий данные типизированного массива. Затем вызывается {{DOMxRef("URL.createObjectURL()")}} для преобразования blob в {{glossary("URL")}}.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -84,7 +84,7 @@ var myBlob = builder.getBlob('text/xml');
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<p>Основной частью этого кода для примера является функция <code>typedArrayToURL()</code>, которая создает <code>Blob</code> из переданного типизированного массива и возвращает объект URL для него. Преобразовав данные в URL объекта, их можно использовать несколькими способами, в том числе, в качестве значения атрибута {{htmlattrxref("src", "img")}} элементов {{HTMLElement("img")}} (конечно, при условии, что данные содержат изображение).</p>
+<p>Основной частью этого кода для примера является функция <code>typedArrayToURL()</code>, которая создаёт <code>Blob</code> из переданного типизированного массива и возвращает объект URL для него. Преобразовав данные в URL объекта, их можно использовать несколькими способами, в том числе, в качестве значения атрибута {{htmlattrxref("src", "img")}} элементов {{HTMLElement("img")}} (конечно, при условии, что данные содержат изображение).</p>
 
 <pre class="brush: js">function typedArrayToURL(typedArray, mimeType) {
   return URL.createObjectURL(new Blob([typedArray.buffer], {type: mimeType}))

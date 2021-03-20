@@ -43,10 +43,10 @@ translation_of: Web/HTML/Element/video
 
 <dl>
  <dt>{{htmlattrdef("autoplay")}}</dt>
- <dd><span id="result_box" lang="ru"><span class="hps">Логический</span> <span class="hps">атрибут</span><span>;</span> <span class="hps">если указан,</span> то <span class="hps">видео</span> <span class="hps">начнет воспроизводится </span></span><span lang="ru"><span class="hps">автоматически</span><span class="hps">, как только</span> <span class="hps">это будет возможно сделать без</span> <span class="hps">остановки</span><span>, чтобы закончить</span> <span class="hps">загрузку данных</span><span>.</span></span></dd>
+ <dd><span id="result_box" lang="ru"><span class="hps">Логический</span> <span class="hps">атрибут</span><span>;</span> <span class="hps">если указан,</span> то <span class="hps">видео</span> <span class="hps">начнёт воспроизводится </span></span><span lang="ru"><span class="hps">автоматически</span><span class="hps">, как только</span> <span class="hps">это будет возможно сделать без</span> <span class="hps">остановки</span><span>, чтобы закончить</span> <span class="hps">загрузку данных</span><span>.</span></span></dd>
  <dt>{{htmlattrdef("autobuffer")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
- <dd>Логический атрибут; если указано, видео автоматически начнет буферизацию, даже если оно не настроено на автоматический запуск. Используйте этот атрибут только тогда, когда очень вероятно, что пользователь будет смотреть видео. Видео буферизуется до тех пор, пока не заполнится кэш мультимедиа.
- <div class="note"><strong>Примечание:</strong> несмотря на то, что в ранних версиях HTML5 атрибут <code>autobuffer</code> присутствовал, в последующих выпусках он был удален. Также он был удален из Gecko 2.0 и других браузеров, а в некоторых никогда не реализовывался. Спецификация определяет новый перечислимый атрибут <code>preload</code>, вместо <code>autobuffer</code> с другим синтаксисом. {{bug(548523)}}</div>
+ <dd>Логический атрибут; если указано, видео автоматически начнёт буферизацию, даже если оно не настроено на автоматический запуск. Используйте этот атрибут только тогда, когда очень вероятно, что пользователь будет смотреть видео. Видео буферизуется до тех пор, пока не заполнится кэш мультимедиа.
+ <div class="note"><strong>Примечание:</strong> несмотря на то, что в ранних версиях HTML5 атрибут <code>autobuffer</code> присутствовал, в последующих выпусках он был удалён. Также он был удалён из Gecko 2.0 и других браузеров, а в некоторых никогда не реализовывался. Спецификация определяет новый перечислимый атрибут <code>preload</code>, вместо <code>autobuffer</code> с другим синтаксисом. {{bug(548523)}}</div>
  </dd>
  <dt>{{htmlattrdef("buffered")}}</dt>
  <dd>Атрибут для определения временных диапазонов буферизованных носителей. Этот атрибут содержит объект {{domxref("TimeRanges")}}.</dd>
@@ -64,13 +64,13 @@ translation_of: Web/HTML/Element/video
  <dt>{{htmlattrdef("height")}}</dt>
  <dd><span class="short_text" id="result_box" lang="ru"><span class="hps">Высота</span> <span class="hps">области отображения</span> <span class="hps">видео</span> <span class="hps">в</span> <span class="hps">пикселях</span><span>.</span></span></dd>
  <dt>{{htmlattrdef("loop")}}</dt>
- <dd><span id="result_box" lang="ru"><span class="hps">Логический</span> <span class="hps">атрибут</span><span>;</span> <span class="hps">если указан,</span> то <span class="hps">по окончанию проигрывания,</span> <span class="hps">видео</span> <span class="hps">автоматически</span> начнет воспроизведение с начала<span class="hps">.</span></span></dd>
+ <dd><span id="result_box" lang="ru"><span class="hps">Логический</span> <span class="hps">атрибут</span><span>;</span> <span class="hps">если указан,</span> то <span class="hps">по окончанию проигрывания,</span> <span class="hps">видео</span> <span class="hps">автоматически</span> начнёт воспроизведение с начала<span class="hps">.</span></span></dd>
  <dt>{{htmlattrdef("muted")}}</dt>
  <dd>Логический атрибут, который определяет значение по умолчания для аудио дорожки, содержащуюся в видео. <span id="result_box" lang="ru"><span class="hps">Если атрибут указан</span></span>, то аудио дорожка <span id="result_box" lang="ru"><span class="hps">воспроизводиться </span></span>не будет. З<span id="result_box" lang="ru"><span class="hps">начение</span> <span class="hps">атрибута по умолчанию</span> <span class="hps">- "ложь"</span><span>,</span> и это<span class="hps"> означает, что</span> <span class="hps">звук будет</span> <span class="hps">воспроизводиться, когда</span> <span class="hps">видео воспроизводится</span><span>.</span></span></dd>
  <dt>{{htmlattrdef("played")}}</dt>
  <dd>Атрибут {{domxref("TimeRanges")}}, указывающий все диапазоны воспроизводимого видео.</dd>
  <dt>{{htmlattrdef("preload")}}</dt>
- <dd>Этот перечислимый атрибут предназначен для того, чтобы дать подсказку браузеру о том, что, по мнению автора, приведет к лучшему пользовательскому опыту. Он может иметь одно из следующих значений:
+ <dd>Этот перечислимый атрибут предназначен для того, чтобы дать подсказку браузеру о том, что, по мнению автора, приведёт к лучшему пользовательскому опыту. Он может иметь одно из следующих значений:
  <ul>
   <li><code>none</code>: указывает, что видео не должно быть предварительно загружено.</li>
   <li><code>metadata</code>: указывает, что предварительно загружаются метаданные видео (например, длина).</li>
@@ -89,7 +89,7 @@ translation_of: Web/HTML/Element/video
  </div>
  </dd>
  <dt>{{htmlattrdef("poster")}}</dt>
- <dd>URL-адрес, указывающий на постера, которое будет использовано, пока загружается видео или пока пользователь не нажмет на кнопку воспроизведения. Если этот атрибут не указан, ничего не отображается до тех пор, пока не будет доступен первый кадр; то первый кадр отображается как рамка постера.</dd>
+ <dd>URL-адрес, указывающий на постера, которое будет использовано, пока загружается видео или пока пользователь не нажмёт на кнопку воспроизведения. Если этот атрибут не указан, ничего не отображается до тех пор, пока не будет доступен первый кадр; то первый кадр отображается как рамка постера.</dd>
  <dt>{{htmlattrdef("src")}}</dt>
  <dd>The URL of the video to embed. This is optional; you may instead use the {{HTMLElement("source")}} element within the video block to specify the video to embed.</dd>
  <dt>{{htmlattrdef("width")}}</dt>

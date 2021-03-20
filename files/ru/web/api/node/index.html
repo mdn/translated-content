@@ -30,10 +30,10 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.lastChild")}} {{readonlyInline}}</dt>
  <dd>Возвращает {{domxref("Node")}}, представляющий последний прямой узел потомок узла или <code>null</code>, если узел не имеет потомков.</dd>
  <dt>{{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("DOMString")}} представляющий локальную часть условного имени элемента. В Firefox 3.5 и более ранних версиях, свойство локального имени в верхнем регистре для HTML элементов (но не XHTML элементов). В более поздних версиях, такого не произошло, и свойство находится в нижнем регистре для HTML и XHTML {{ gecko_minversion_inline("1.9.2") }}. Хотя недавние спецификации требуют от <code>localName</code> быть определенным как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все еще реализуют его как интерфейс {{domxref("Node")}}.</dd>
+ <dd>Возвращает {{domxref("DOMString")}} представляющий локальную часть условного имени элемента. В Firefox 3.5 и более ранних версиях, свойство локального имени в верхнем регистре для HTML элементов (но не XHTML элементов). В более поздних версиях, такого не произошло, и свойство находится в нижнем регистре для HTML и XHTML {{ gecko_minversion_inline("1.9.2") }}. Хотя недавние спецификации требуют от <code>localName</code> быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.</dd>
  <dt>{{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}</dt>
- <dd>Пространство имен URI данного узла или <code>null,</code> если нет пространства имен. В Firefox 3.5 и более ранних версиях, HTML элементы не имеют пространства имен. В более поздних версиях, HTML элементы находятся в пространстве имен <code><a class="linkification-ext external" href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> для деревьев HTML и XML. {{ gecko_minversion_inline("1.9.2") }}<br>
- Хотя недавние спецификации требуют <code>namespaceURI</code> быть определенным как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все еще реализуют его как интерфейс {{domxref("Node")}}.</dd>
+ <dd>Пространство имён URI данного узла или <code>null,</code> если нет пространства имён. В Firefox 3.5 и более ранних версиях, HTML элементы не имеют пространства имён. В более поздних версиях, HTML элементы находятся в пространстве имён <code><a class="linkification-ext external" href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> для деревьев HTML и XML. {{ gecko_minversion_inline("1.9.2") }}<br>
+ Хотя недавние спецификации требуют <code>namespaceURI</code> быть определённым как интерфейс {{domxref("Element")}}, но браузеры основанные на Gecko все ещё реализуют его как интерфейс {{domxref("Node")}}.</dd>
  <dt>{{domxref("Node.nextSibling")}} {{readonlyInline}}</dt>
  <dd>Возвращает {{domxref("Node")}} представляющий следующий узел в древе или <code>null,</code> если не такого узла.</dd>
  <dt>{{domxref("Node.nodeName")}} {{readonlyInline}}</dt>
@@ -104,12 +104,12 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.ownerDocument")}} {{readonlyInline}}</dt>
  <dd>Возвращает {{domxref("Document")}} к которому принадлежит этот узел. Если нет связанного с ним документа, возвращает <code>null</code>.</dd>
  <dt>{{domxref("Node.parentNode")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("Node")}} который является родителем этого узла. Если нет такого узла, по причине того, что узел находится вверху древа или не относится к древу, данное свойство вернет<code> null</code>.</dd>
+ <dd>Возвращает {{domxref("Node")}} который является родителем этого узла. Если нет такого узла, по причине того, что узел находится вверху древа или не относится к древу, данное свойство вернёт<code> null</code>.</dd>
  <dt>{{domxref("Node.parentElement")}} {{readonlyInline}}</dt>
- <dd>Возвращает {{domxref("Element")}} который является родителем данного узла. Если узел не имеет родителя или если родитель не {{domxref("Element")}}, это свойство вернет <code>null</code>.</dd>
+ <dd>Возвращает {{domxref("Element")}} который является родителем данного узла. Если узел не имеет родителя или если родитель не {{domxref("Element")}}, это свойство вернёт <code>null</code>.</dd>
  <dt>{{domxref("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}</dt>
- <dd>{{domxref("DOMString")}} представляющий префикс пространства имен узла или <code>null</code> если нет префикса точно определенного.<br>
- Хотя недавние спецификации требуют того, чтобы <code>префикс</code> был определен как интерфейс {{domxref("Element")}}, браузеры основанные на Gecko еще реализовывают его как интерфейс {{domxref("Node")}}.</dd>
+ <dd>{{domxref("DOMString")}} представляющий префикс пространства имён узла или <code>null</code> если нет префикса точно определенного.<br>
+ Хотя недавние спецификации требуют того, чтобы <code>префикс</code> был определён как интерфейс {{domxref("Element")}}, браузеры основанные на Gecko ещё реализовывают его как интерфейс {{domxref("Node")}}.</dd>
  <dt>{{domxref("Node.previousSibling")}} {{readonlyInline}}</dt>
  <dd>Возвращают {{domxref("Node")}} представляющий предыдущий узел древа или <code>null</code>, если нет такого узла.</dd>
  <dt>{{domxref("Node.textContent")}}</dt>
@@ -238,7 +238,7 @@ document.body.removeAll();</pre>
   <tr>
    <td>{{SpecName('DOM3 Core', 'core.html#ID-1950641247', 'Node')}}</td>
    <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Методы <code>insertBefore()</code>, <code>replaceChild()</code>, <code>removeChild()</code>, and <code>appendChild()</code> возвращают еще один вид ошибок (<code>NOT_SUPPORTED_ERR</code>) если вызваны из {{domxref("Document")}}.<br>
+   <td>Методы <code>insertBefore()</code>, <code>replaceChild()</code>, <code>removeChild()</code>, and <code>appendChild()</code> возвращают ещё один вид ошибок (<code>NOT_SUPPORTED_ERR</code>) если вызваны из {{domxref("Document")}}.<br>
     Метод <code>normalize()</code> был модифицирован таким образом, что узел {{domxref("Text")}} также может быть нормализован, если надлежащий флаг {{domxref("DOMConfiguration")}} установлен.<br>
     Добавлены следующие методы: <code>compareDocumentPosition()</code>, <code>isSameNode()</code>, <code>lookupPrefix()</code>, <code>isDefaultNamespace()</code>, <code>lookupNamespaceURI()</code>, <code>isEqualNode()</code>, <code>getFeature()</code>, <code>setUserData()</code>, and <code>getUserData().</code><br>
     Добавлены следующие свойства: <code>baseURI</code> and <code>textContent</code>.</td>
@@ -246,7 +246,7 @@ document.body.removeAll();</pre>
   <tr>
    <td>{{SpecName('DOM2 Core', 'core.html#ID-1950641247', 'Node')}}</td>
    <td>{{Spec2('DOM2 Core')}}</td>
-   <td>Свойство <code>ownerDocument</code> был слегка изменен, так что {{domxref("DocumentFragment")}} также возвращает <code>null</code>.<br>
+   <td>Свойство <code>ownerDocument</code> был слегка изменён, так что {{domxref("DocumentFragment")}} также возвращает <code>null</code>.<br>
     Добавлены следующие свойства: <code>namespaceURI</code>, <code>prefix</code>, and <code>localName</code>.<br>
     Добавлены следующие методы: <code>normalize()</code>, <code>isSupported()</code> and <code>hasAttributes()</code>.</td>
   </tr>

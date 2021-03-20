@@ -5,9 +5,9 @@ translation_of: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 ---
 <h2 id="Receiving_binary_data_using_JavaScript_typed_arrays" name="Receiving_binary_data_using_JavaScript_typed_arrays">Получение бинарных данных используя JavaScript arrays </h2>
 
-<p>Свойство responseType объекта XMLHttpRequest можно задать для изменения ожидаемого типа ответа с сервера. Возможные значения: пустая строка (по умолчанию), "arraybuffer", "blob", "document", "json" и "text". Свойство response будет содержать тело сущности в соответствии с типом ответа, как ArrayBuffer, Blob, Document, JSON или string. Это значение равно null, если запрос не завершен или не был успешным.</p>
+<p>Свойство responseType объекта XMLHttpRequest можно задать для изменения ожидаемого типа ответа с сервера. Возможные значения: пустая строка (по умолчанию), "arraybuffer", "blob", "document", "json" и "text". Свойство response будет содержать тело сущности в соответствии с типом ответа, как ArrayBuffer, Blob, Document, JSON или string. Это значение равно null, если запрос не завершён или не был успешным.</p>
 
-<p>В этом примере изображение считывается как двоичный файл и создается 8-разрядный массив целых чисел без знака из необработанных байтов. Обратите внимание, что это не будет декодировать изображение и читать пиксели. Для этого вам понадобится <a href="https://github.com/devongovett/png.js/">библиотека декодирования png</a>.</p>
+<p>В этом примере изображение считывается как двоичный файл и создаётся 8-разрядный массив целых чисел без знака из необработанных байтов. Обратите внимание, что это не будет декодировать изображение и читать пиксели. Для этого вам понадобится <a href="https://github.com/devongovett/png.js/">библиотека декодирования png</a>.</p>
 
 <pre class="brush: js notranslate">var oReq = new XMLHttpRequest();
 oReq.open("GET", "/myfile.png", true);
@@ -90,9 +90,9 @@ var abyte = filestream.charCodeAt(x) &amp; 0xff; // throw away high-order byte (
 
 <h2 id="Sending_binary_data" name="Sending_binary_data">Отправка бинарных данных</h2>
 
-<p>Метод <code>send</code> объекта XMLHttpRequest был расширен, чтобы обеспечить легкую передачу бинарных данных - теперь он принимает объекты <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a>, {{domxref("Blob")}}, или {{domxref("File")}}.</p>
+<p>Метод <code>send</code> объекта XMLHttpRequest был расширен, чтобы обеспечить лёгкую передачу бинарных данных - теперь он принимает объекты <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a>, {{domxref("Blob")}}, или {{domxref("File")}}.</p>
 
-<p>В примере ниже на лету создается текстовый файл и отправляется методом <code>POST</code> на сервер. Здесь используется обычный текст, но нетрудно представить себе пример с бинарным файлом.</p>
+<p>В примере ниже на лету создаётся текстовый файл и отправляется методом <code>POST</code> на сервер. Здесь используется обычный текст, но нетрудно представить себе пример с бинарным файлом.</p>
 
 <pre class="brush: js notranslate">var oReq = new XMLHttpRequest();
 oReq.open("POST", url, true);
@@ -121,7 +121,7 @@ xhr.open("POST", url, false);
 xhr.send(myArray);
 </pre>
 
-<p>Здесь создается и отправляется 512-ти байтовый массив из 8-битных целых чисел, н, разумеется, можно использовать любые двоичные данные.</p>
+<p>Здесь создаётся и отправляется 512-ти байтовый массив из 8-битных целых чисел, н, разумеется, можно использовать любые двоичные данные.</p>
 
 <div class="note"><strong>Примечание:</strong> Поддержка передачи объектов <a href="/en-US/docs/JavaScript_typed_arrays/ArrayBuffer" title="ArrayBuffer"><code>ArrayBuffer</code></a> с помощью XMLHttpRequest появилась в Gecko 9.0 {{geckoRelease("9.0")}}. <strong>Add information about other browsers' support here.</strong></div>
 
@@ -144,7 +144,7 @@ req.sendAsBinary(aBody);
 
 <p>В строке 5 метод <code>sendAsBinary()</code> начинает запрос.</p>
 
-<div class="note"><strong>Примечание:</strong> Нестандартный метод <code>sendAsBinary</code> начиная с Gecko 31 {{ geckoRelease(31) }} считается устаревшим и скоро будет удален. Вместо него, как показывалось выше, можно использовать стандартный метод <code>send(Blob data)</code>.</div>
+<div class="note"><strong>Примечание:</strong> Нестандартный метод <code>sendAsBinary</code> начиная с Gecko 31 {{ geckoRelease(31) }} считается устаревшим и скоро будет удалён. Вместо него, как показывалось выше, можно использовать стандартный метод <code>send(Blob data)</code>.</div>
 
 <p>Кроме того, чтобы отправить бинарные данные можно передать экземпляр {{interface("nsIFileInputStream")}} в метод <a href="/en-US/docs/DOM/XMLHttpRequest#send()" title="XMLHttpRequest#send()"><code>send()</code></a>. В этом случае заголовок <code>Content-Length</code> заполнять явно необязательно, поскольку информация получается из потока автоматически:</p>
 

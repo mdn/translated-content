@@ -45,7 +45,7 @@ original_slug: Learn/JavaScript/Объекты/Object_prototypes
 
 <p>Точнее, свойства и методы определяются в свойстве <code>prototype</code> функции-конструктора объектов, а не в самих объектах.</p>
 
-<p>В JavaScript создается связь между экземпляром объекта и его прототипом (свойство <code>__proto__</code>, которое является производным от свойства <code>prototype</code> конструктора), а свойства и методы обнаруживаются при переходе по цепочке прототипов.</p>
+<p>В JavaScript создаётся связь между экземпляром объекта и его прототипом (свойство <code>__proto__</code>, которое является производным от свойства <code>prototype</code> конструктора), а свойства и методы обнаруживаются при переходе по цепочке прототипов.</p>
 
 <div class="note">
 <p><strong>Примечание</strong>: Важно понимать, что существует различие между прототипом объекта (который доступен через <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf">Object.getPrototypeOf(obj)</a></code> или через устаревшее свойство <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code>) и свойством <code>prototype</code> в функциях-конструкторах. Первое свойство является свойством каждого экземпляра, а второе - свойством конструктора. То есть <code>Object.getPrototypeOf(new Foobar())</code> относится к тому же объекту, что и <code>Foobar.prototype</code>.</p>
@@ -55,7 +55,7 @@ original_slug: Learn/JavaScript/Объекты/Object_prototypes
 
 <h2 id="Понимание_прототипа_объектов">Понимание прототипа объектов</h2>
 
-<p>Вернемся к примеру, когда мы закончили писать наш конструктор <code>Person()</code>- загрузите пример в свой браузер. Если у вас еще нет работы от последней статьи, используйте наш пример <a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">oojs-class-further-exercises.html</a> (см. Также <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">исходный код</a>).</p>
+<p>Вернёмся к примеру, когда мы закончили писать наш конструктор <code>Person()</code>- загрузите пример в свой браузер. Если у вас ещё нет работы от последней статьи, используйте наш пример <a href="http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html">oojs-class-further-exercises.html</a> (см. Также <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html">исходный код</a>).</p>
 
 <p>В этом примере мы определили конструктору функцию, например:</p>
 
@@ -75,15 +75,15 @@ original_slug: Learn/JavaScript/Объекты/Object_prototypes
 
 <pre class="brush: js">var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);</pre>
 
-<p>Если вы наберете «<code>person1.</code>» в вашей консоли JavaScript, вы должны увидеть, что браузер пытается автоматически заполнить это с именами участников, доступных на этом объекте:</p>
+<p>Если вы наберёте «<code>person1.</code>» в вашей консоли JavaScript, вы должны увидеть, что браузер пытается автоматически заполнить это с именами участников, доступных на этом объекте:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13853/object-available-members.png" style="display: block; margin: 0 auto;"></p>
 
-<p>В этом списке вы увидите элементы, определенные в конструкторе person 1 — Person() — <code>name</code>, <code>age</code>, <code>gender</code>, <code>interests</code>, <code>bio</code>, и <code>greeting</code>. Однако вы также увидите некоторые другие элементы — <code>watch</code>, <code>valueOf</code>и т. д. — они определены в объекте прототипа Person (), который является <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>.</p>
+<p>В этом списке вы увидите элементы, определённые в конструкторе person 1 — Person() — <code>name</code>, <code>age</code>, <code>gender</code>, <code>interests</code>, <code>bio</code>, и <code>greeting</code>. Однако вы также увидите некоторые другие элементы — <code>watch</code>, <code>valueOf</code>и т. д. — они определены в объекте прототипа Person (), который является <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png" style="display: block; height: 150px; margin: 0px auto; width: 700px;"></p>
 
-<p>Итак, что произойдет, если вы вызываете метод в <code>person1</code>, который фактически определен в <code>Object</code>? Например:</p>
+<p>Итак, что произойдёт, если вы вызываете метод в <code>person1</code>, который фактически определён в <code>Object</code>? Например:</p>
 
 <pre class="brush: js">person1.valueOf()</pre>
 
@@ -99,7 +99,7 @@ original_slug: Learn/JavaScript/Объекты/Object_prototypes
 </div>
 
 <div class="note">
-<p><strong>Примечание</strong>: Официально нет способа получить доступ к объекту прототипа объекта напрямую - «ссылки» между элементами в цепочке определены во внутреннем свойстве, называемом <code>[[prototype]]</code> в спецификации для языка JavaScript ( см. {{glossary("ECMAScript")}}). Однако у большинства современных браузеров есть свойство, доступное для них под названием <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto"> </a>(это 2 подчеркивания с обеих сторон), который содержит объект-прототип объекта-конструктора. Например, попробуйте <code>person1.__proto__</code> и <code>person1.__proto__.__proto__</code>, чтобы увидеть, как выглядит цепочка в коде!</p>
+<p><strong>Примечание</strong>: Официально нет способа получить доступ к объекту прототипа объекта напрямую - «ссылки» между элементами в цепочке определены во внутреннем свойстве, называемом <code>[[prototype]]</code> в спецификации для языка JavaScript ( см. {{glossary("ECMAScript")}}). Однако у большинства современных браузеров есть свойство, доступное для них под названием <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">__proto__</a></code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto"> </a>(это 2 подчёркивания с обеих сторон), который содержит объект-прототип объекта-конструктора. Например, попробуйте <code>person1.__proto__</code> и <code>person1.__proto__.__proto__</code>, чтобы увидеть, как выглядит цепочка в коде!</p>
 
 <p>С ECMAScript 2015 вы можете косвенно обращаться к объекту прототипа объекта <code>Object.getPrototypeOf (obj)</code>.</p>
 </div>
@@ -108,14 +108,14 @@ original_slug: Learn/JavaScript/Объекты/Object_prototypes
 
 <p>Итак, где определены наследуемые свойства и методы? Если вы посмотрите на страницу со ссылкой <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code>, вы увидите в левой части большое количество свойств и методов - это намного больше, чем количество унаследованных членов, доступных для объекта <code>person1</code>. Некоторые из них унаследованы, а некоторые нет - почему это?</p>
 
-<p>Как упоминалось выше, наследованные свойства это те, что определены в свойстве <code>prototype</code> (вы можете называть это подпространством имен), то есть те, которые начинаются с <code>Object.prototype.</code>, а не те, которые начинаются с простого <code>Object</code>. Значение свойства <code>prototype</code> - это объект, который в основном представляет собой контейнер для хранения свойств и методов, которые мы хотим наследовать объектами, расположенными дальше по цепочке прототипов.</p>
+<p>Как упоминалось выше, наследованные свойства это те, что определены в свойстве <code>prototype</code> (вы можете называть это подпространством имён), то есть те, которые начинаются с <code>Object.prototype.</code>, а не те, которые начинаются с простого <code>Object</code>. Значение свойства <code>prototype</code> - это объект, который в основном представляет собой контейнер для хранения свойств и методов, которые мы хотим наследовать объектами, расположенными дальше по цепочке прототипов.</p>
 
 <p>Таким образом <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/watch">Object.prototype.watch()</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">Object.prototype.valueOf()</a></code> и т. д. доступны для любых типов объектов, которые наследуются от <code>Object.prototype</code>, включая новые экземпляры объектов, созданные из конструктора <code>Person()</code> .</p>
 
-<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is()</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code> и другие члены, не определенные в контейнере <code>prototype</code>, не наследуются экземплярами объектов или типами объектов, которые наследуются от <code>Object.prototype</code>. Это методы / свойства, доступные только в конструкторе <code>Object()</code>.</p>
+<p><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is()</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code> и другие члены, не определённые в контейнере <code>prototype</code>, не наследуются экземплярами объектов или типами объектов, которые наследуются от <code>Object.prototype</code>. Это методы / свойства, доступные только в конструкторе <code>Object()</code>.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Это кажется странным - как у вас есть метод, определенный для конструктора, который сам по себе является функцией? Ну, функция также является типом объекта - см. Ссылку на конструктор <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code>, если вы нам не верите.</p>
+<p><strong>Примечание</strong>: Это кажется странным - как у вас есть метод, определённый для конструктора, который сам по себе является функцией? Ну, функция также является типом объекта - см. Ссылку на конструктор <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">Function()</a></code>, если вы нам не верите.</p>
 </div>
 
 <ol>
@@ -127,9 +127,9 @@ original_slug: Learn/JavaScript/Объекты/Object_prototypes
  </li>
 </ol>
 
-<p>Вы увидите большое количество методов, определенных для свойства <code>prototype</code> <code>Object</code>'а , которые затем доступны для объектов, которые наследуются от <code>Object</code>, как показано выше.</p>
+<p>Вы увидите большое количество методов, определённых для свойства <code>prototype</code> <code>Object</code>'а , которые затем доступны для объектов, которые наследуются от <code>Object</code>, как показано выше.</p>
 
-<p>Вы увидите другие примеры наследования цепочек прототипов по всему JavaScript - попробуйте найти методы и свойства, определенные на прототипе глобальных объектов <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> и <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>, например. Все они имеют несколько элементов, определенных на их прототипе, поэтому, например, когда вы создаете строку, вот так:</p>
+<p>Вы увидите другие примеры наследования цепочек прототипов по всему JavaScript - попробуйте найти методы и свойства, определённые на прототипе глобальных объектов <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> и <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>, например. Все они имеют несколько элементов, определённых на их прототипе, поэтому, например, когда вы создаёте строку, вот так:</p>
 
 <pre class="brush: js">var myString = 'This is my string.';</pre>
 
@@ -147,16 +147,16 @@ original_slug: Learn/JavaScript/Объекты/Object_prototypes
  <li>Например, попробуйте это в консоли JavaScript предыдущего примера:
   <pre class="brush: js">var person2 = Object.create(person1);</pre>
  </li>
- <li>На самом деле <code>create()</code>создает новый объект из указанного объекта-прототипа. Здесь <code>person2</code> создается с помощью <code>person1</code> в качестве объекта-прототипа. Это можно проверить, введя в консоли следующее:
+ <li>На самом деле <code>create()</code>создаёт новый объект из указанного объекта-прототипа. Здесь <code>person2</code> создаётся с помощью <code>person1</code> в качестве объекта-прототипа. Это можно проверить, введя в консоли следующее:
   <pre class="brush: js">person2.__proto__</pre>
  </li>
 </ol>
 
-<p>Это вернет объект <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">person1</span></font>.</p>
+<p>Это вернёт объект <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">person1</span></font>.</p>
 
 <h2 id="Свойство_constructor">Свойство constructor</h2>
 
-<p>Каждая функция-конструктор имеет свойство <code>prototype</code>, значением которого является объект, содержащий свойство <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">constructor</a></code>. Это свойство <code>constructor</code> указывает на исходную функцию-конструктор. Как вы увидите в следующем разделе, свойства, определенные в свойстве <code>Person.prototype</code> (или в общем случае в качестве свойства прототипа функции конструктора, который является объектом, как указано в предыдущем разделе) становятся доступными для всех объектов экземпляра, созданных с помощью конструктор <code>Person()</code>. Следовательно, свойство конструктора также доступно для объектов <code>person1</code> и <code>person2</code>.</p>
+<p>Каждая функция-конструктор имеет свойство <code>prototype</code>, значением которого является объект, содержащий свойство <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">constructor</a></code>. Это свойство <code>constructor</code> указывает на исходную функцию-конструктор. Как вы увидите в следующем разделе, свойства, определённые в свойстве <code>Person.prototype</code> (или в общем случае в качестве свойства прототипа функции конструктора, который является объектом, как указано в предыдущем разделе) становятся доступными для всех объектов экземпляра, созданных с помощью конструктор <code>Person()</code>. Следовательно, свойство конструктора также доступно для объектов <code>person1</code> и <code>person2</code>.</p>
 
 <ol>
  <li>Например, попробуйте эти команды в консоли:
@@ -165,7 +165,7 @@ person2.constructor</pre>
 
   <p>Они должны возвращать конструктор <code>Person()</code>, поскольку он содержит исходное определение этих экземпляров.</p>
 
-  <p>Хитрый трюк заключается в том, что вы можете поместить круглые скобки в конец свойства <code>constructor</code> (содержащие любые требуемые параметры) для создания другого экземпляра объекта из этого конструктора. Конструктор - это функция в конце концов, поэтому ее можно вызвать с помощью круглых скобок; вам просто нужно включить ключевое слово <code>new</code>, чтобы указать, что вы хотите использовать эту функцию в качестве конструктора.</p>
+  <p>Хитрый трюк заключается в том, что вы можете поместить круглые скобки в конец свойства <code>constructor</code> (содержащие любые требуемые параметры) для создания другого экземпляра объекта из этого конструктора. Конструктор - это функция в конце концов, поэтому её можно вызвать с помощью круглых скобок; вам просто нужно включить ключевое слово <code>new</code>, чтобы указать, что вы хотите использовать эту функцию в качестве конструктора.</p>
  </li>
  <li>Попробуйте это в консоли:
   <pre class="brush: js">var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);</pre>
@@ -211,9 +211,9 @@ person3.bio()</pre>
  </li>
 </ol>
 
-<p>Должно появиться всплывающее окно, с именем пользователя, определенным в конструкторе. Это действительно полезно, но ещё более полезно то, что вся цепочка наследования обновляется динамически, автоматически делая этот новый метод доступным для всех экземпляров объектов, полученных из конструктора.</p>
+<p>Должно появиться всплывающее окно, с именем пользователя, определённым в конструкторе. Это действительно полезно, но ещё более полезно то, что вся цепочка наследования обновляется динамически, автоматически делая этот новый метод доступным для всех экземпляров объектов, полученных из конструктора.</p>
 
-<p>Подумайте об этом на мгновение. В нашем коде мы определяем конструктор, затем мы создаем экземпляр объекта из конструктора, <em>затем</em> добавляем новый метод к прототипу конструктора:</p>
+<p>Подумайте об этом на мгновение. В нашем коде мы определяем конструктор, затем мы создаём экземпляр объекта из конструктора, <em>затем</em> добавляем новый метод к прототипу конструктора:</p>
 
 <pre class="brush: js">function Person(first, last, age, gender, interests) {
 
@@ -227,13 +227,13 @@ Person.prototype.farewell = function() {
   alert(this.name.first + ' has left the building. Bye for now!');
 };</pre>
 
-<p>Но метод <code>farewell()</code> <em>по-прежнему</em> доступен в экземпляре объекта <code>person1</code> - его элементы были автоматически обновлены, чтобы включить недавно определенный метод <code>farewell()</code>.</p>
+<p>Но метод <code>farewell()</code> <em>по-прежнему</em> доступен в экземпляре объекта <code>person1</code> - его элементы были автоматически обновлены, чтобы включить недавно определённый метод <code>farewell()</code>.</p>
 
 <div class="note">
 <p><strong>Примечание:</strong> Если у вас возникли проблемы с получением этого примера для работы, посмотрите на наш пример <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html">oojs-class-prototype.html</a> (см. также это <a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html">running live</a>).</p>
 </div>
 
-<p>Вы редко увидите свойства, определенные в свойстве <code>prototype</code>, потому что они не очень гибки при таком определении. Например, вы можете добавить свойство следующим образом:</p>
+<p>Вы редко увидите свойства, определённые в свойстве <code>prototype</code>, потому что они не очень гибки при таком определении. Например, вы можете добавить свойство следующим образом:</p>
 
 <pre class="brush: js">Person.prototype.fullName = 'Bob Smith';</pre>
 
@@ -241,9 +241,9 @@ Person.prototype.farewell = function() {
 
 <pre class="brush: js">Person.prototype.fullName = this.name.first + ' ' + this.name.last;</pre>
 
-<p>Однако это не работает, поскольку в этом случае <code>this</code> будет ссылаться на глобальную область, а не на область функции. Вызов этого свойства вернет <code>undefined undefined</code>. Это отлично работало с методом, который мы определили ранее в прототипе, потому что он находится внутри области функций, которая будет успешно перенесена в область экземпляра объекта. Таким образом, вы можете определить постоянные свойства прототипа (т. е. те, которые никогда не нуждаются в изменении), но обычно лучше определять свойства внутри конструктора.</p>
+<p>Однако это не работает, поскольку в этом случае <code>this</code> будет ссылаться на глобальную область, а не на область функции. Вызов этого свойства вернёт <code>undefined undefined</code>. Это отлично работало с методом, который мы определили ранее в прототипе, потому что он находится внутри области функций, которая будет успешно перенесена в область экземпляра объекта. Таким образом, вы можете определить постоянные свойства прототипа (т. е. те, которые никогда не нуждаются в изменении), но обычно лучше определять свойства внутри конструктора.</p>
 
-<p>Фактически, довольно распространенный шаблон для большего количества определений объектов - это определение свойств внутри конструктора и методов в прототипе. Это упрощает чтение кода, поскольку конструктор содержит только определения свойств, а методы разделены на отдельные блоки. Например:</p>
+<p>Фактически, довольно распространённый шаблон для большего количества определений объектов - это определение свойств внутри конструктора и методов в прототипе. Это упрощает чтение кода, поскольку конструктор содержит только определения свойств, а методы разделены на отдельные блоки. Например:</p>
 
 <pre class="brush: js">// Определение конструктора и его свойств
 

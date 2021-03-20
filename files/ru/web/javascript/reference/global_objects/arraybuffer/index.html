@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
 <div>{{JSRef}}</div>
 
-<p>Объект <strong><code>ArrayBuffer</code></strong> используется для работы с бинарными данными. Он представляет собой ссылку на поток "сырых" двоичных данных, однако работать с ними напрямую возможности не дает. Вместо этого, вы можете создать <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">типизированный массив</a> или объект {{jsxref("DataView")}}, который можно использовать для чтения и записи данных в <strong><code>ArrayBuffer</code></strong>. </p>
+<p>Объект <strong><code>ArrayBuffer</code></strong> используется для работы с бинарными данными. Он представляет собой ссылку на поток "сырых" двоичных данных, однако работать с ними напрямую возможности не даёт. Вместо этого, вы можете создать <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">типизированный массив</a> или объект {{jsxref("DataView")}}, который можно использовать для чтения и записи данных в <strong><code>ArrayBuffer</code></strong>. </p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -24,11 +24,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Новый объект <code>ArrayBuffer</code> определенного размера. Изначально содержимое равно 0.</p>
+<p>Новый объект <code>ArrayBuffer</code> определённого размера. Изначально содержимое равно 0.</p>
 
 <h2 id="Описание">Описание</h2>
 
-<p>Конструктор <code>ArrayBuffer</code> создает новый <code>ArrayBuffer</code> установленного в байтах размера.</p>
+<p>Конструктор <code>ArrayBuffer</code> создаёт новый <code>ArrayBuffer</code> установленного в байтах размера.</p>
 
 <h3 id="Создание_буфера">Создание буфера</h3>
 
@@ -50,16 +50,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 <dl>
  <dt>{{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(arg)")}}</dt>
- <dd>Возвращает <code>true</code> если <code>arg</code> – одно из представлений <code>ArrayBuffer</code>, например <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">типизированный массив</a> или {{jsxref("DataView")}}. Вернет <code>false</code> в остальных случаях.</dd>
+ <dd>Возвращает <code>true</code> если <code>arg</code> – одно из представлений <code>ArrayBuffer</code>, например <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">типизированный массив</a> или {{jsxref("DataView")}}. Вернёт <code>false</code> в остальных случаях.</dd>
  <dt>{{jsxref("ArrayBuffer.transfer", "ArrayBuffer.transfer(oldBuffer [, newByteLength])")}} {{experimental_inline}}</dt>
  <dd>
- <div class="line" id="file-arraybuffer-transfer-LC6">Вернет новый <code>ArrayBuffer</code>, контент которого будет взят из данных <code>oldBuffer</code>, а затем усечен или дополнен нулевыми значениями до<font face="Open Sans, Arial, sans-serif"> </font><code>newByteLength</code>.</div>
+ <div class="line" id="file-arraybuffer-transfer-LC6">Вернёт новый <code>ArrayBuffer</code>, контент которого будет взят из данных <code>oldBuffer</code>, а затем усечён или дополнен нулевыми значениями до<font face="Open Sans, Arial, sans-serif"> </font><code>newByteLength</code>.</div>
  </dd>
 </dl>
 
 <h2 id="Пример">Пример</h2>
 
-<p>В этом примере мы создаем 8-байтный буфер с {{jsxref("Global_Objects/Int32Array", "Int32Array")}} представлением:</p>
+<p>В этом примере мы создаём 8-байтный буфер с {{jsxref("Global_Objects/Int32Array", "Int32Array")}} представлением:</p>
 
 <pre class="brush: js">var buffer = new ArrayBuffer(8);
 var view   = new Int32Array(buffer);</pre>
@@ -76,7 +76,7 @@ var view   = new Int32Array(buffer);</pre>
   <tr>
    <td>{{SpecName('Typed Array')}}</td>
    <td>{{Spec2('Typed Array')}}</td>
-   <td>Заменен спецификацией ECMAScript 6.</td>
+   <td>Заменён спецификацией ECMAScript 6.</td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}</td>

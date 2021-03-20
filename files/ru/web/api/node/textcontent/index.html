@@ -33,7 +33,7 @@ element.textContent = "Это просто текст";
 
 <h3 id="Отличие_от_innerText">Отличие от <code>innerText</code></h3>
 
-<p><code>element.innerText</code> был введен Internet Explorer-ом. Работает по тому же принципу за небольшими исключениями:</p>
+<p><code>element.innerText</code> был введён Internet Explorer-ом. Работает по тому же принципу за небольшими исключениями:</p>
 
 <ul>
  <li><code>textContent</code> получает содержимое <em>всех</em> элементов, включая  {{HTMLElement("script")}} и {{HTMLElement("style")}}, тогда как <code>innerText</code> этого не делает.</li>
@@ -50,7 +50,7 @@ element.textContent = "Это просто текст";
 <pre class="brush: js">// Дан следующий фрагмент:
 //   &lt;div id="block"&gt;Это — &lt;span&gt;просто&lt;/span&gt; текст&lt;/div&gt;
 
-// Достаем текстовое содержимое:
+// Достаём текстовое содержимое:
 var text = document.getElementById("block").textContent;
 // В переменной |text| находится: "Это — просто текст".
 

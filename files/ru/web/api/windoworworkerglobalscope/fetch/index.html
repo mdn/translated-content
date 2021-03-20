@@ -70,7 +70,7 @@ translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
  <tbody>
   <tr>
    <td><code>AbortError</code></td>
-   <td>Запрос был отменен (используя {{domxref("AbortController.abort()")}}).</td>
+   <td>Запрос был отменён (используя {{domxref("AbortController.abort()")}}).</td>
   </tr>
   <tr>
    <td><code>TypeError</code></td>
@@ -81,7 +81,7 @@ translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
 
 <h2 id="Пример">Пример</h2>
 
-<p>В нашем <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-request">Fetch Request примере</a> (см. <a href="https://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live</a>) мы создаем новый объект {{domxref("Request")}} (запроса), используя релевантный конструктор, а затем получаем его вызовом <code>fetch()</code>. Так как запрашиваемый ресурс - изображение, для того, чтобы присвоить ему подходящий MIME тип и обработать должным образом, мы применяем к ответу метод {{domxref("Body.blob()")}}, после чего создаем для него Object URL и передаем ее в элемент {{htmlelement("img")}}.</p>
+<p>В нашем <a href="https://github.com/mdn/fetch-examples/tree/master/fetch-request">Fetch Request примере</a> (см. <a href="https://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live</a>) мы создаём новый объект {{domxref("Request")}} (запроса), используя релевантный конструктор, а затем получаем его вызовом <code>fetch()</code>. Так как запрашиваемый ресурс - изображение, для того, чтобы присвоить ему подходящий MIME тип и обработать должным образом, мы применяем к ответу метод {{domxref("Body.blob()")}}, после чего создаём для него Object URL и передаём её в элемент {{htmlelement("img")}}.</p>
 
 <pre class="brush: js">var myImage = document.querySelector('img');
 
@@ -94,7 +94,7 @@ fetch(myRequest).then(function(response) {
   myImage.src = objectURL;
 });</pre>
 
-<p>В нашем <a href="https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html">Fetch with init then Request примере</a> (см. <a href="https://mdn.github.io/fetch-examples/fetch-with-init-then-request/">Fetch Request init live</a>) мы делаем тоже самое, за исключением того, что передаем в качестве аргумента для <code>fetch()</code> объект init:</p>
+<p>В нашем <a href="https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html">Fetch with init then Request примере</a> (см. <a href="https://mdn.github.io/fetch-examples/fetch-with-init-then-request/">Fetch Request init live</a>) мы делаем тоже самое, за исключением того, что передаём в качестве аргумента для <code>fetch()</code> объект init:</p>
 
 <pre class="brush: js">var myImage = document.querySelector('img');
 

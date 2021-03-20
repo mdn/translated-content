@@ -1,6 +1,6 @@
 ---
 title: >-
-  TypeError: can't redefine non-configurable property "x"(Тип ошибки: не удается
+  TypeError: can't redefine non-configurable property "x"(Тип ошибки: не удаётся
   переопределить настраиваемое свойство "x")
 slug: Web/JavaScript/Reference/Errors/Cant_redefine_property
 translation_of: Web/JavaScript/Reference/Errors/Cant_redefine_property
@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Errors/Cant_redefine_property
 
 <pre class="syntaxbox">TypeError: невозможно изменить свойство, недоступное для записи {x} (Edge)
 TypeError: невозможно переопределить не настраиваемое свойство "x" (Firefox)
-TypeError: не удается переопределить свойство: "x" (Chrome)
+TypeError: не удаётся переопределить свойство: "x" (Chrome)
 </pre>
 
 <h2 id="Тип_ошибки">Тип ошибки </h2>
@@ -26,13 +26,13 @@ TypeError: не удается переопределить свойство: "x
 
 <h3 id="Не_настраиваемые_свойства_созданные_Object.defineProperty">Не настраиваемые свойства, созданные <code>Object.defineProperty</code></h3>
 
-<p>The {{jsxref("Object.defineProperty()")}} создает не настраиваемые свойства, если они не указаны как настраиваемые.</p>
+<p>The {{jsxref("Object.defineProperty()")}} создаёт не настраиваемые свойства, если они не указаны как настраиваемые.</p>
 
 <pre class="brush: js example-bad">var obj = Object.create({});
 Object.defineProperty(obj, "foo", {value: "bar"});
 
 Object.defineProperty(obj, "foo", {value: "baz"});
-// TypeError: не удается переопределить не настраиваемое свойство "foo"
+// TypeError: не удаётся переопределить не настраиваемое свойство "foo"
 </pre>
 
 <p>Вам нужно будет установить свойство "foo" в конфигурируемое, если вы собираетесь переопределить его позже в коде.</p>

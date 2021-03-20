@@ -40,11 +40,11 @@ translation_of: Web/API/WebRTC_API/Taking_still_photos
 
 <h2 id="Код_JavaScript">Код JavaScript</h2>
 
-<p>Посмотрим на  <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill/capture.js" rel="noopener">JavaScript code</a>. Разобьем его на части, для упрощения объяснения.</p>
+<p>Посмотрим на  <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill/capture.js" rel="noopener">JavaScript code</a>. Разобьём его на части, для упрощения объяснения.</p>
 
 <h3 id="Инициализация">Инициализация</h3>
 
-<p>Начнем с обертки всего скрипта в анонимную функцию, во избежании конфликтов глобальных переменных, затем инициализируем различные нужные  переменные.</p>
+<p>Начнём с обёртки всего скрипта в анонимную функцию, во избежании конфликтов глобальных переменных, затем инициализируем различные нужные  переменные.</p>
 
 <pre>(function() {
   var width = 320;    // Этим создадим ширину фотографии
@@ -106,7 +106,7 @@ translation_of: Web/API/WebRTC_API/Taking_still_photos
 
 <p>Здесь мы называем метод  {{domxref("MediaDevices.getUserMedia()")}} , запрашивая медиапоток без аудиопотока (<code>audio : false</code>). Он возвращает промис, на котором мы определяем методы успешного и не успешного выполнений.</p>
 
-<p>Успешное выполнение промиса передает объект потока( <code>stream</code> ) в качестве параметра функции метода <code>then()</code>., который присваивается свойству <code>srcObject</code> элемента {{HTMLElement("video")}}, направляя поток в него.</p>
+<p>Успешное выполнение промиса передаёт объект потока( <code>stream</code> ) в качестве параметра функции метода <code>then()</code>., который присваивается свойству <code>srcObject</code> элемента {{HTMLElement("video")}}, направляя поток в него.</p>
 
 <p>Как только поток связан с элементом <code>&lt;video&gt;</code> ,  запускаем его воспроизведение, вызовом метода <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code>.</p>
 
@@ -114,7 +114,7 @@ translation_of: Web/API/WebRTC_API/Taking_still_photos
 
 <h4 id="Обработка_события_начала_воспроизведения">Обработка события начала воспроизведения</h4>
 
-<p>После момента вызова метода  <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> на элементе {{HTMLElement("video")}}, возникает промежуток времени до начала воспроизведения видеопотока. Для недопущения блокирования интерфейса пользователя в это промежуток, нужно установить обработчик события {{event("canplay")}} элемента <code>video</code> , который сработает, когда элемент начнет воспроизведение видеопотока. В этот момент все свойства элемента <code>video</code> конфигурируются на основе формата потока.</p>
+<p>После момента вызова метода  <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> на элементе {{HTMLElement("video")}}, возникает промежуток времени до начала воспроизведения видеопотока. Для недопущения блокирования интерфейса пользователя в это промежуток, нужно установить обработчик события {{event("canplay")}} элемента <code>video</code> , который сработает, когда элемент начнёт воспроизведение видеопотока. В этот момент все свойства элемента <code>video</code> конфигурируются на основе формата потока.</p>
 
 <pre>    video.addEventListener('canplay', function(ev){
       if (!streaming) {
@@ -147,7 +147,7 @@ translation_of: Web/API/WebRTC_API/Taking_still_photos
 
 <h4 id="Завершение_метода_startup">Завершение метода  startup() </h4>
 
-<p>Еще пара строк кода в методе <code>startup()</code>:</p>
+<p>Ещё пара строк кода в методе <code>startup()</code>:</p>
 
 <pre>    clearphoto();
   }</pre>
@@ -167,7 +167,7 @@ translation_of: Web/API/WebRTC_API/Taking_still_photos
     photo.setAttribute('src', data);
   }</pre>
 
-<p>Начнем с получения ссылки на скрытый элемент {{HTMLElement ("canvas")}}, который мы используем для рендеринга за пределами экрана. Затем мы устанавливаем свойство <code>fillStyle</code> в  <code>#AAA</code> ( светло-серый) и заполняем весь холст этим цветом, вызывая метод {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.</p>
+<p>Начнём с получения ссылки на скрытый элемент {{HTMLElement ("canvas")}}, который мы используем для рендеринга за пределами экрана. Затем мы устанавливаем свойство <code>fillStyle</code> в  <code>#AAA</code> ( светло-серый) и заполняем весь холст этим цветом, вызывая метод {{domxref("CanvasRenderingContext2D.fillRect()","fillRect()")}}.</p>
 
 <p>Наконец, в этой функции мы конвертируем <code>canvas</code> в изображение PNG и вызываем метод <code>{{domxref("Element.setAttribute", "photo.setAttribute()")}}</code> отображая захваченный цветовой фон в элементе изображения (бокса для фотографии).</p>
 
@@ -207,9 +207,9 @@ translation_of: Web/API/WebRTC_API/Taking_still_photos
 
 <p>Вы можете экспериментировать с этими эффектами, используя, например, инструмент разработчика FirefoxYou  <a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Style_Editor">редактор стилей</a>; смотрим <a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_filters">Редактирование с CSS фильтрами</a> о подробностях выполнения.</p>
 
-<h2 id="Использование_определенных_устройств">Использование определенных устройств</h2>
+<h2 id="Использование_определённых_устройств">Использование определённых устройств</h2>
 
-<p>При необходимости вы можете ограничить набор разрешенных источников видео, определенным устройством или набором устройств. Для этого нужно вызвать метод {{domxref("navigator.mediaDevices.enumerateDevices()")}}. Когда промис разрешиться массивом объектов {{domxref("MediaDeviceInfo")}} , описывающих доступные устройства , выберите те, которым хотите разрешить доступ и укажите соответствующий идентификатор устройства {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} или несколько <code>deviceId</code> в объекте  {{domxref("MediaTrackConstraints")}} , переданном в  {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.</p>
+<p>При необходимости вы можете ограничить набор разрешённых источников видео, определённым устройством или набором устройств. Для этого нужно вызвать метод {{domxref("navigator.mediaDevices.enumerateDevices()")}}. Когда промис разрешиться массивом объектов {{domxref("MediaDeviceInfo")}} , описывающих доступные устройства , выберите те, которым хотите разрешить доступ и укажите соответствующий идентификатор устройства {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} или несколько <code>deviceId</code> в объекте  {{domxref("MediaTrackConstraints")}} , переданном в  {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.</p>
 
 <h2 id="Смотри_так_же">Смотри так же</h2>
 

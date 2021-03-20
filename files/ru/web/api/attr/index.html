@@ -17,23 +17,23 @@ translation_of: Web/API/Attr
  <dt>{{domxref("Attr.name", "name")}} {{readOnlyInline}}</dt>
  <dd>Имя атрибута.</dd>
  <dt>{{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}</dt>
- <dd>{{domxref("DOMString")}}<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"> </span></font>представление URI пространства имен атрибута, или NULL если нет никакого пространства имен.</dd>
+ <dd>{{domxref("DOMString")}}<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"> </span></font>представление URI пространства имён атрибута, или NULL если нет никакого пространства имен.</dd>
  <dt>{{domxref("Attr.localName", "localName")}} {{readOnlyInline}}</dt>
  <dd>{{domxref("DOMString")}}  представление локальной части полного имени атрибута.</dd>
  <dt>{{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}</dt>
- <dd>{{domxref("DOMString")}}  представление префикс пространства имен атрибута, или NULL, если префикс не указан.</dd>
+ <dd>{{domxref("DOMString")}}  представление префикс пространства имён атрибута, или NULL, если префикс не указан.</dd>
  <dt>{{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}</dt>
  <dd>
  <p>Элемент, содержащий атрибут.</p>
 
  <div class="note">
- <p><strong>Примечание:</strong> DOM уровень 4 удалил это свойство.Предполагалось, что, поскольку Вы получаете объект Attr от {{domxref("Element")}}, вы заранее должны знать связанный элемент.  Поскольку это не верно в случаях, подобных объектам Attr, возвращаемым  {{domxref("Document.evaluate")}}, DOM уровень жизни вновь ввел это свойство. </p>
+ <p><strong>Примечание:</strong> DOM уровень 4 удалил это свойство.Предполагалось, что, поскольку Вы получаете объект Attr от {{domxref("Element")}}, вы заранее должны знать связанный элемент.  Поскольку это не верно в случаях, подобных объектам Attr, возвращаемым  {{domxref("Document.evaluate")}}, DOM уровень жизни вновь ввёл это свойство. </p>
 
  <p>Gecko выводит предупреждение об использовании, начиная с Gecko 7.0 {{geckoRelease("7.0")}}. Это предупреждение было удалено в Gecko 49.0 (Firefox 49.0 / Thunderbird 49.0 / SeaMonkey 2.46).</p>
  </div>
  </dd>
  <dt>{{domxref("Attr.specified", "specified")}} {{readOnlyInline}}</dt>
- <dd>Это свойство всегда возвращает true. Первоначально, оно возвращало true, если атрибут был явно определен в исходном коде или сценарием и false, если ее значение прибыло из значения по умолчанию  определенном в DTD документе.</dd>
+ <dd>Это свойство всегда возвращает true. Первоначально, оно возвращало true, если атрибут был явно определён в исходном коде или сценарием и false, если её значение прибыло из значения по умолчанию  определённом в DTD документе.</dd>
  <dt>{{domxref("Attr.value", "value")}}</dt>
  <dd>Значение атрибута</dd>
 </dl>
@@ -74,7 +74,7 @@ translation_of: Web/API/Attr
  <dt><code>previousSibling</code></dt>
  <dd>Это свойство всегда возвращает значение  <code>NULL</code>.</dd>
  <dt><code>schemaTypeInfo</code> {{obsolete_inline}} {{readOnlyInline}}</dt>
- <dd>Сведения о типе, связанные с этим атрибутом. В то время как информация о типе, содержащаяся в этом атрибуте, гарантированно будет правильной после загрузки документа или вызова  {{domxref("Document.normalizeDocument")}}, это свойство может быть ненадежным, если узел был перемещен.</dd>
+ <dd>Сведения о типе, связанные с этим атрибутом. В то время как информация о типе, содержащаяся в этом атрибуте, гарантированно будет правильной после загрузки документа или вызова  {{domxref("Document.normalizeDocument")}}, это свойство может быть ненадёжным, если узел был перемещен.</dd>
  <dt> </dt>
  <dt><code>specified</code></dt>
  <dd>Это свойство всегда возвращает значение  <code>true</code>.</dd>

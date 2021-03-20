@@ -9,7 +9,7 @@ translation_of: Web/API/WebVR_API
 
 <h2 id="Концепция_и_использование">Концепция и использование</h2>
 
-<p>Любые VR-устройства, подключенные к вашему компьютеру, будут возвращены методом {{domxref("Navigator.getVRDisplays()")}}; каждое из которых будет представлено  {{domxref("VRDisplay")}} объектом.</p>
+<p>Любые VR-устройства, подключённые к вашему компьютеру, будут возвращены методом {{domxref("Navigator.getVRDisplays()")}}; каждое из которых будет представлено  {{domxref("VRDisplay")}} объектом.</p>
 
 <p><img alt='Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"' src="https://mdn.mozillademos.org/files/11035/hw-setup.png" style="display: block; height: 78px; margin: 0px auto; width: 60%;"></p>
 
@@ -60,7 +60,7 @@ translation_of: Web/API/WebVR_API
  <dt>{{domxref("VREyeParameters")}}</dt>
  <dd>Предоставляет доступ ко все информации, необходимой для корректного отображения сцены для каждого заднего глаза, включая информацию о поле зрения.</dd>
  <dt>{{domxref("VRFieldOfView")}}</dt>
- <dd>Представляет поле зрения, определенное четырьмя различными значениями степени, описывающими представление из центральной точки.</dd>
+ <dd>Представляет поле зрения, определённое четырьмя различными значениями степени, описывающими представление из центральной точки.</dd>
  <dt>{{domxref("VRLayerInit")}}</dt>
  <dd>Представляет слой, который должен быть представлен в {{domxref("VRDisplay")}}.</dd>
  <dt>{{domxref("VRStageParameters")}}</dt>
@@ -84,7 +84,7 @@ translation_of: Web/API/WebVR_API
  <dt>{{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}}</dt>
  <dd>Возвращает массив, содержащий каждый {{domxref("VRDisplay")}} объект, который в настоящее время отображается ({{domxref("VRDisplay.ispresenting")}} является <code>true</code>).</dd>
  <dt>{{domxref("Navigator.getVRDisplays()")}}</dt>
- <dd>Возвращает обещание, которое преобразуется в массив {{domxref("VRDisplay")}} объектов,  представляющих любые доступные VR-дисплеи, подключенные к компьютеру.</dd>
+ <dd>Возвращает обещание, которое преобразуется в массив {{domxref("VRDisplay")}} объектов,  представляющих любые доступные VR-дисплеи, подключённые к компьютеру.</dd>
 </dl>
 
 <h4 id="Window_события">Window события</h4>
@@ -93,7 +93,7 @@ translation_of: Web/API/WebVR_API
  <dt>{{domxref("Window.onvrdisplaypresentchange")}}</dt>
  <dd>Представляет обработчик событий, который будет выполняться, при изменении состояния отображения VR-дисплея — т.е. идёт от отображения до неотображения, или наоборот (когда {{event("vrdisplaypresentchange")}} событие срабатывает).</dd>
  <dt>{{domxref("Window.onvrdisplayconnect")}}</dt>
- <dd>Представляет обработчик событий, который будет запускаться, когда к компьютеру подключен совместимый VR-дисплей (когда {{event("vrdisplayconnect")}} событие срабатывает).</dd>
+ <dd>Представляет обработчик событий, который будет запускаться, когда к компьютеру подключён совместимый VR-дисплей (когда {{event("vrdisplayconnect")}} событие срабатывает).</dd>
  <dt>{{domxref("Window.onvrdisplaydisconnect")}}</dt>
  <dd>Представляет обработчик событий, который будет запускаться, когда совместимый VR-дисплей был отключён от компьютера (когда {{event("vrdisplaydisconnect")}} событие срабатывает).</dd>
  <dt>{{domxref("Window.onvrdisplayactivate")}}</dt>

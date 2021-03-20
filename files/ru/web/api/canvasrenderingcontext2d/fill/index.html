@@ -12,7 +12,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fill
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fill()</code></strong> метод Canvas 2D API заполняет текущий или заданный путём с текущим стилем заливки, используя одно из двух правил - ненулевого индекса или четно-нечетное.</p>
+<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fill()</code></strong> метод Canvas 2D API заполняет текущий или заданный путём с текущим стилем заливки, используя одно из двух правил - ненулевого индекса или чётно-нечетное.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -28,7 +28,7 @@ void <var><em>ctx</em>.fill(path[, fillRule]);</var>
  Возможные значения:
  <ul>
   <li><code><strong>"nonzero</strong></code>": <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%BE_%D0%BD%D0%B5%D0%BD%D1%83%D0%BB%D0%B5%D0%B2%D0%BE%D0%B3%D0%BE_%D0%B8%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D0%B0">Правило ненулевого индекса</a>, значение по умолчанию</li>
-  <li><code><strong>"evenodd"</strong></code>: <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">Четно-нечетное правило</a></li>
+  <li><code><strong>"evenodd"</strong></code>: <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">Чётно-нечётное правило</a></li>
  </ul>
  </dd>
  <dt><code>path</code></dt>
@@ -54,7 +54,7 @@ ctx.rect(10, 10, 100, 100);
 ctx.fill();
 </pre>
 
-<p>Отредактируйте приведенный ниже код и посмотрите, как обновляется ваше обновление на холсте:</p>
+<p>Отредактируйте приведённый ниже код и посмотрите, как обновляется ваше обновление на холсте:</p>
 
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
@@ -116,7 +116,7 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="Совместимость">Совместимость</h2>
 
-<div class="hidden">Таблица совместимости на этой странице создается из структурированных данных. Если вы хотите внести свой вклад в данные, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте запрос, чтобы мы изменили данные.</div>
+<div class="hidden">Таблица совместимости на этой странице создаётся из структурированных данных. Если вы хотите внести свой вклад в данные, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправьте запрос, чтобы мы изменили данные.</div>
 
 <p>{{Compat("api.CanvasRenderingContext2D.fill")}}</p>
 

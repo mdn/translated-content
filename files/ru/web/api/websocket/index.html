@@ -69,7 +69,7 @@ WebSocket WebSocket(
   <tr>
    <td><code>bufferedAmount</code></td>
    <td><code><a href="/en/unsigned_long" title="en/unsigned long">unsigned long</a></code></td>
-   <td>Количество байтов данных, которые были поставлены в очередь, используя вызовы {{ manch("send") }}, но еще не переданные в сеть. Это значение не сбрасывается в ноль, при закрытии соединения; если продолжить вызывать  {{ manch("send") }}, значение будет расти. <strong>Только чтение.</strong></td>
+   <td>Количество байтов данных, которые были поставлены в очередь, используя вызовы {{ manch("send") }}, но ещё не переданные в сеть. Это значение не сбрасывается в ноль, при закрытии соединения; если продолжить вызывать  {{ manch("send") }}, значение будет расти. <strong>Только чтение.</strong></td>
   </tr>
   <tr>
    <td><code>extensions</code></td>
@@ -178,7 +178,7 @@ WebSocket WebSocket(
 
 <dl>
  <dt><code>code</code> {{ optional_inline() }}</dt>
- <dd>Числовое значение, обозначающее статус-код, описывающий почему подключение будет закрыто. Если параметр не указан, значение по умолчанию равно 1000(обозначает "обмен завершен"). Смотрите <a href="/en/WebSockets/WebSockets_reference/CloseEvent#Status_codes" title="en/WebSockets/WebSockets reference/CloseEvent#Status codes">list of status codes</a> для <code><a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="en/WebSockets/WebSockets reference/CloseEvent">CloseEvent</a></code>, чтобы узнать разрешенные значения.</dd>
+ <dd>Числовое значение, обозначающее статус-код, описывающий почему подключение будет закрыто. Если параметр не указан, значение по умолчанию равно 1000(обозначает "обмен завершён"). Смотрите <a href="/en/WebSockets/WebSockets_reference/CloseEvent#Status_codes" title="en/WebSockets/WebSockets reference/CloseEvent#Status codes">list of status codes</a> для <code><a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="en/WebSockets/WebSockets reference/CloseEvent">CloseEvent</a></code>, чтобы узнать разрешённые значения.</dd>
  <dt><code>reason</code> {{ optional_inline() }}</dt>
  <dd>Читаемая человеком строка, объясняющая, почему подключение закрывается. Строка должна быть не длиннее, чем 123 байта UTF-8 текста (<strong>не</strong> символов). </dd>
 </dl>
@@ -198,7 +198,7 @@ WebSocket WebSocket(
 
 <h3 id="send" name="send()">send()</h3>
 
-<p>Передает данные на сервер через WebSocket - соединение.</p>
+<p>Передаёт данные на сервер через WebSocket - соединение.</p>
 
 <pre class="eval">void send(
   in DOMString data
@@ -224,7 +224,7 @@ void send(
 
 <dl>
  <dt><code>INVALID_STATE_ERR</code></dt>
- <dd>Соединение еще не открыто.</dd>
+ <dd>Соединение ещё не открыто.</dd>
  <dt><code>SYNTAX_ERR</code></dt>
  <dd>Строка <code>data</code> содержит непарные суррогаты</dd>
 </dl>
@@ -252,7 +252,7 @@ void send(
 
 <h2 id="See_also" name="See_also">Пример</h2>
 
-<pre class="brush: js"><code>// Создает WebSocket - подключение.
+<pre class="brush: js"><code>// Создаёт WebSocket - подключение.
 const socket = new WebSocket('ws://localhost:8080');
 
 // Соединение открыто

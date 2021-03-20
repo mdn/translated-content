@@ -10,7 +10,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 <p>Обратите внимание, <code>fetch</code> спецификация отличается от <code>jQuery.ajax()</code> в основном в двух пунктах:</p>
 
 <ul>
- <li>Promise возвращаемый вызовом <code>fetch()</code> <strong>не перейдет в состояние "отклонено" из-за ответа HTTP, который считается ошибкой</strong>, даже если ответ HTTP 404 или 500.  Вместо этого, он будет выполнен нормально (с значением false в статусе <code>ok</code> ) и будет отклонён только при сбое сети или если что-то помешало запросу выполниться.</li>
+ <li>Promise возвращаемый вызовом <code>fetch()</code> <strong>не перейдёт в состояние "отклонено" из-за ответа HTTP, который считается ошибкой</strong>, даже если ответ HTTP 404 или 500.  Вместо этого, он будет выполнен нормально (с значением false в статусе <code>ok</code> ) и будет отклонён только при сбое сети или если что-то помешало запросу выполниться.</li>
  <li>По умолчанию, <code>fetch</code> <strong>не будет отправлять или получать cookie файлы </strong>с сервера, в результате чего запросы будут осуществляться без проверки подлинности, что приведёт<span class="tlid-translation translation" lang="ru"><span title=""> к неаутентифицированным запросам</span></span>, если сайт полагается на проверку пользовательской сессии (для отправки cookie файлов в аргументе <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">init options</a> должно быть задано значение свойства <em>credentials</em> отличное от значения по умолчанию <code>omit</code>).</li>
 </ul>
 
@@ -76,7 +76,7 @@ postData('https://example.com/answer', { answer: 42 })
   credentials: 'include'
 })</code></pre>
 
-<p>Если вы хотите отправлять запрос с учетными данными только если URL принадлежит одному источнику (origin) что и вызывающий его скрипт, добавьте <code>credentials: 'same-origin'</code>.</p>
+<p>Если вы хотите отправлять запрос с учётными данными только если URL принадлежит одному источнику (origin) что и вызывающий его скрипт, добавьте <code>credentials: 'same-origin'</code>.</p>
 
 <pre><code>// Вызывающий скрипт принадлежит источнику 'https://example.com'
 
@@ -316,7 +316,7 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
 
 <h2 id="Объекты_ответа">Объекты ответа</h2>
 
-<p>Как вы видели выше, экземпляр {{domxref("Response")}} будет возвращен когда <code>fetch()</code> промис будет исполнен.</p>
+<p>Как вы видели выше, экземпляр {{domxref("Response")}} будет возвращён когда <code>fetch()</code> промис будет исполнен.</p>
 
 <p>Свойства объекта-ответа которые чаще всего используются:</p>
 
@@ -371,7 +371,7 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
  <li>{{domxref("Body.formData","formData()")}}</li>
 </ul>
 
-<p>Это делает использование нетекстовых данных более легким, чем при XMR.</p>
+<p>Это делает использование нетекстовых данных более лёгким, чем при XMR.</p>
 
 <p>В запросе можно установить параметры для отправки тела запроса:</p>
 
@@ -385,7 +385,7 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
 
 <h2 id="Функция_обнаружения">Функция обнаружения</h2>
 
-<p>Поддержка Fetch API может быть обнаружена путем проверки наличия {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} или {{domxref("GlobalFetch.fetch","fetch()")}} в области видимости {{domxref("Window")}} или {{domxref("Worker")}}. Для примера:</p>
+<p>Поддержка Fetch API может быть обнаружена путём проверки наличия {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} или {{domxref("GlobalFetch.fetch","fetch()")}} в области видимости {{domxref("Window")}} или {{domxref("Worker")}}. Для примера:</p>
 
 <pre class="brush: js">if (self.fetch) {
     // запустить мой fetch запрос здесь
@@ -395,7 +395,7 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
 
 <h2 id="Полифил">Полифил</h2>
 
-<p>Для того, чтобы использовать Fetch в неподдерживаемых браузерах, существует  <a href="https://github.com/github/fetch">Fetch Polyfill</a> , который воссоздает функциональность для не поддерживающих браузеров.</p>
+<p>Для того, чтобы использовать Fetch в неподдерживаемых браузерах, существует  <a href="https://github.com/github/fetch">Fetch Polyfill</a> , который воссоздаёт функциональность для не поддерживающих браузеров.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

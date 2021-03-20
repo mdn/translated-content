@@ -13,7 +13,7 @@ translation_of: Web/API/FileReader
 
 <h2 id="Общая_информация">Общая информация</h2>
 
-<p>Объект <code>FileReader</code> позволяет веб-приложениям асинхронно читать содержимое файлов (или буферы данных), хранящиеся на компьютере пользователя, используя объекты {{domxref("File")}} или {{domxref("Blob")}}, с помощью которых задается файл или данные для чтения.</p>
+<p>Объект <code>FileReader</code> позволяет веб-приложениям асинхронно читать содержимое файлов (или буферы данных), хранящиеся на компьютере пользователя, используя объекты {{domxref("File")}} или {{domxref("Blob")}}, с помощью которых задаётся файл или данные для чтения.</p>
 
 <p>Объекты <code>File</code> можно получить через объект {{domxref("FileList")}}, который возвращается как результат при выборе файлов пользователем с помощью элемента {{HTMLElement("input")}}, через drag and drop из объекта {{domxref("DataTransfer")}}, или с помощью <code>mozGetAsFile()</code>, метода доступного в API элемента {{domxref("HTMLCanvasElement")}}.</p>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/FileReader
  <dt>{{domxref("FileReader.readyState")}} {{readonlyinline}}</dt>
  <dd>Число обозначающее состояние объекта <code>FileReader</code>. Принимает одно из значений {{ anch("State constants") }}.</dd>
  <dt>{{domxref("FileReader.result")}} {{readonlyinline}}</dt>
- <dd>Данные из файла. Значение свойства действительно только когда завершится операция чтения, причем формат данных зависит от способа, с помощью которого процесс был вызван.</dd>
+ <dd>Данные из файла. Значение свойства действительно только когда завершится операция чтения, причём формат данных зависит от способа, с помощью которого процесс был вызван.</dd>
 </dl>
 
 <h3 id="Обработка_событий">Обработка событий</h3>
@@ -64,7 +64,7 @@ translation_of: Web/API/FileReader
 <h3 id="State_constants" name="State_constants">Константы состояния</h3>
 
 <ul>
- <li><code>EMPTY </code> : <code>0</code> : Данные еще не были загружены.</li>
+ <li><code>EMPTY </code> : <code>0</code> : Данные ещё не были загружены.</li>
  <li><code>LOADING</code> : <code>1</code> : Данные в данный момент загружаются.</li>
  <li><code>DONE </code> : <code>2</code> : Операция чтения была завершена.</li>
 </ul>
@@ -118,7 +118,7 @@ translation_of: Web/API/FileReader
 
 <ul>
  <li>В версиях Gecko ниже 2.0 beta 7 (Firefox 4.0 beta 7), все параметры {{ domxref("Blob") }} были параметрами {{ domxref("File") }}; в последствии это было изменено, для соответствия спецификации.</li>
- <li>В версиях Gecko ниже 13.0 {{ geckoRelease("13.0") }} свойство <code>FileReader.error</code> возвращало объект {{ domxref("FileError") }}. Этот интерфейс был упразднен и теперь свойство <code>FileReader.error</code> возвращает объект {{ domxref("DOMError") }}, что соответствует определению FileAPI последней спецификации.</li>
+ <li>В версиях Gecko ниже 13.0 {{ geckoRelease("13.0") }} свойство <code>FileReader.error</code> возвращало объект {{ domxref("FileError") }}. Этот интерфейс был упразднён и теперь свойство <code>FileReader.error</code> возвращает объект {{ domxref("DOMError") }}, что соответствует определению FileAPI последней спецификации.</li>
 </ul>
 
 <h2 id="See_also" name="See_also">См. также</h2>

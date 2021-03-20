@@ -5,9 +5,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 <div>{{JSRef}}{{SeeCompatTable}}</div>
 
-<p>Объект JavaScript <strong><code>WebAssembly</code></strong> действует как пространство имен для всего <a href="/en-US/docs/WebAssembly">WebAssembly</a>-связанного функционала.</p>
+<p>Объект JavaScript <strong><code>WebAssembly</code></strong> действует как пространство имён для всего <a href="/en-US/docs/WebAssembly">WebAssembly</a>-связанного функционала.</p>
 
-<p>В отличие от большинства других глобальных объектов, <code>WebAssembly</code> не является конструктором (это не объект функции). Можно сравнить его с {{jsxref("Math")}}, который так же является пространством имен констант и функций, или  {{jsxref("Intl")}}, который является пространством имен для конструкторов интернационализации и других языково-чувствительных функций.</p>
+<p>В отличие от большинства других глобальных объектов, <code>WebAssembly</code> не является конструктором (это не объект функции). Можно сравнить его с {{jsxref("Math")}}, который так же является пространством имён констант и функций, или  {{jsxref("Intl")}}, который является пространством имён для конструкторов интернационализации и других языково-чувствительных функций.</p>
 
 <h2 id="Описание">Описание</h2>
 
@@ -34,24 +34,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 
 <dl>
  <dt>{{jsxref("WebAssembly.Module()")}}</dt>
- <dd>Создает новый объект WebAssembly <code>Module</code>.</dd>
+ <dd>Создаёт новый объект WebAssembly <code>Module</code>.</dd>
  <dt>{{jsxref("WebAssembly.Instance()")}}</dt>
- <dd>Создает новый объект WebAssembly <code>Instance</code>.</dd>
+ <dd>Создаёт новый объект WebAssembly <code>Instance</code>.</dd>
  <dt>{{jsxref("WebAssembly.Memory()")}}</dt>
- <dd>Создает новый объект WebAssembly <code>Memory</code>.</dd>
+ <dd>Создаёт новый объект WebAssembly <code>Memory</code>.</dd>
  <dt>{{jsxref("WebAssembly.Table()")}}</dt>
- <dd>Создает новый объект WebAssembly <code>Table</code>.</dd>
+ <dd>Создаёт новый объект WebAssembly <code>Table</code>.</dd>
  <dt>{{jsxref("WebAssembly.CompileError()")}}</dt>
- <dd>Создает новый объект WebAssembly <code>CompileError</code>.</dd>
+ <dd>Создаёт новый объект WebAssembly <code>CompileError</code>.</dd>
  <dt>{{jsxref("WebAssembly.LinkError()")}}</dt>
- <dd>Создает новый объект WebAssembly <code>LinkError</code>.</dd>
+ <dd>Создаёт новый объект WebAssembly <code>LinkError</code>.</dd>
  <dt>{{jsxref("WebAssembly.RuntimeError()")}}</dt>
- <dd>Создает новый объект WebAssembly <code>RuntimeError</code>.</dd>
+ <dd>Создаёт новый объект WebAssembly <code>RuntimeError</code>.</dd>
 </dl>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>После загрузки некоторого байт-кода WebAssembly с помощью fetch, мы компилируем и создаем экземпляр модуля с помощью функции {{jsxref("WebAssembly.instantiate()")}}, импортируя функции JavaScript в WebAssembly Module в процессе. Этот промис результирует в объект (<code>result</code>), содержащий скомпилированные <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module">Module</a></code> и объекты <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance">Instance</a></code>. Мы можем вызвать <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly function</a>, которая была экспортирована через <code>Instance</code>.</p>
+<p>После загрузки некоторого байт-кода WebAssembly с помощью fetch, мы компилируем и создаём экземпляр модуля с помощью функции {{jsxref("WebAssembly.instantiate()")}}, импортируя функции JavaScript в WebAssembly Module в процессе. Этот промис результирует в объект (<code>result</code>), содержащий скомпилированные <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module">Module</a></code> и объекты <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance">Instance</a></code>. Мы можем вызвать <a href="/en-US/docs/WebAssembly/Exported_functions">Exported WebAssembly function</a>, которая была экспортирована через <code>Instance</code>.</p>
 
 <pre class="brush: js">var importObject = {
   imports: {
@@ -148,7 +148,7 @@ fetch('simple.wasm').then(response =&gt;
 </table>
 </div>
 
-<p>[1] WebAssembly включен в Firefox 52+, хотя не валиден в <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 52 Extended Support Release</a> (ESR.)</p>
+<p>[1] WebAssembly включён в Firefox 52+, хотя не валиден в <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 52 Extended Support Release</a> (ESR.)</p>
 
 <p>[2] В настоящее время поддерживается флаг «Экспериментальные функции JavaScript».  Для более подробной информации смотрите <a href="https://blogs.windows.com/msedgedev/2017/04/20/improved-javascript-performance-webassembly-shared-memory/">этот blog post</a>.</p>
 

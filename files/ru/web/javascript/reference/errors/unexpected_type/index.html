@@ -25,7 +25,7 @@ TypeError: "x" is not a symbol
 
 <p>Встречен неожиданный тип. Это часто случается со значениями {{jsxref("null")}} или {{jsxref("undefined")}}.</p>
 
-<p>Так же, некоторые методы, такие как {{jsxref("Object.create()")}} или {{jsxref("Symbol.keyFor()")}}, требуют определенный тип, который должен быть предоставлен.</p>
+<p>Так же, некоторые методы, такие как {{jsxref("Object.create()")}} или {{jsxref("Symbol.keyFor()")}}, требуют определённый тип, который должен быть предоставлен.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -39,7 +39,7 @@ var foo = null;
 foo.substring(1); // TypeError: foo is null
 
 
-// Некоторые методы могут требовать определенный тип
+// Некоторые методы могут требовать определённый тип
 var foo = {}
 Symbol.keyFor(foo); // TypeError: foo is not a symbol
 

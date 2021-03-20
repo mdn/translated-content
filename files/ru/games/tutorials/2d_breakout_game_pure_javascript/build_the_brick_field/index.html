@@ -1,8 +1,8 @@
 ---
-title: Создаем зону кирпичей
+title: Создаём зону кирпичей
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаем_зону_кирпичей
+original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей
 ---
 <div>{{GamesSidebar}}</div>
 
@@ -44,7 +44,7 @@ for(var c=0; c&lt;brickColumnCount; c++) {
     }
 }</pre>
 
-<p>Вышеприведенный код будет прокручивать строки и столбцы и создавать новые кирпичи. Обратите внимание, что кирпичные объекты также будут использоваться для целей обнаружения столкновений позже.</p>
+<p>Вышеприведённый код будет прокручивать строки и столбцы и создавать новые кирпичи. Обратите внимание, что кирпичные объекты также будут использоваться для целей обнаружения столкновений позже.</p>
 
 <h2 id="Механизм_отрисовки_кирпичей">Механизм отрисовки кирпичей</h2>
 
@@ -71,7 +71,7 @@ var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;</pre>
 
 
 
-<p>Каждая позиция <code>brickX</code> разрабатывается как <code>brickWidth</code> + <code>brickPadding</code> , умноженная на номер столбца, <code>c</code> , плюс <code>brickOffsetLeft</code> ; логика для brickY идентична, за исключением того, что она использует значения для номера строки, <code>r</code>, <code>brickHeight</code> и <code>brickOffsetTop</code> . Теперь каждый отдельный кирпич может быть помещен в правильное место и столбец места, с отступом между каждым кирпичом, нарисованным на смещение от левого и верхнего краев холста.</p>
+<p>Каждая позиция <code>brickX</code> разрабатывается как <code>brickWidth</code> + <code>brickPadding</code> , умноженная на номер столбца, <code>c</code> , плюс <code>brickOffsetLeft</code> ; логика для brickY идентична, за исключением того, что она использует значения для номера строки, <code>r</code>, <code>brickHeight</code> и <code>brickOffsetTop</code> . Теперь каждый отдельный кирпич может быть помещён в правильное место и столбец места, с отступом между каждым кирпичом, нарисованным на смещение от левого и верхнего краёв холста.</p>
 
 <p>Окончательная версия функции <code>drawBricks()</code> после назначения <code>brickX</code> и <code>brickY</code> в качестве координат вместо <code>(0,0)</code> каждый раз будет выглядеть следующим образом: добавьте это в свой код ниже функции <code>drawPaddle()</code> :</p>
 

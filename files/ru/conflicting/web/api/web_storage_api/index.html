@@ -7,7 +7,7 @@ original_slug: Web/Guide/API/DOM/Storage
 ---
 <h2 id="sect1"> </h2>
 
-<p>DOM хранилище (DOM Storage) - это название для набора инструментов, <a href="http://www.whatwg.org/specs/web-apps/current-work/#storage">относящихся к хранилищам</a>, впервые представленных в спецификации <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/" title="http://www.whatwg.org/specs/web-apps/current-work/">Web Applications 1.0</a>,  и выделенных теперь в отдельную спецификацию <a class="external" href="http://dev.w3.org/html5/webstorage/" title="http://dev.w3.org/html5/webstorage/">W3C Web Storage</a>. DOM хранилище было разработано с целью предоставления альтернативы хранению информации в кукисах. Предполагается, что DOM хранилище предоставляет больше объема, оно более защищено и легче в использовании. Впервые оно было представлено  в браузерах <a href="/en-US/docs/Firefox_2_for_developers" title="Firefox_2_for_developers">Firefox 2</a> и <a class="external" href="http://developer.apple.com/safari/library/documentation/iPhone/Conceptual/SafariJSDatabaseGuide/Name-ValueStorage/Name-ValueStorage.html" title="http://developer.apple.com/safari/library/documentation/iPhone/Conceptual/SafariJSDatabaseGuide/Name-ValueStorage/Name-ValueStorage.html">Safari 4</a>.</p>
+<p>DOM хранилище (DOM Storage) - это название для набора инструментов, <a href="http://www.whatwg.org/specs/web-apps/current-work/#storage">относящихся к хранилищам</a>, впервые представленных в спецификации <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/" title="http://www.whatwg.org/specs/web-apps/current-work/">Web Applications 1.0</a>,  и выделенных теперь в отдельную спецификацию <a class="external" href="http://dev.w3.org/html5/webstorage/" title="http://dev.w3.org/html5/webstorage/">W3C Web Storage</a>. DOM хранилище было разработано с целью предоставления альтернативы хранению информации в кукисах. Предполагается, что DOM хранилище предоставляет больше объёма, оно более защищено и легче в использовании. Впервые оно было представлено  в браузерах <a href="/en-US/docs/Firefox_2_for_developers" title="Firefox_2_for_developers">Firefox 2</a> и <a class="external" href="http://developer.apple.com/safari/library/documentation/iPhone/Conceptual/SafariJSDatabaseGuide/Name-ValueStorage/Name-ValueStorage.html" title="http://developer.apple.com/safari/library/documentation/iPhone/Conceptual/SafariJSDatabaseGuide/Name-ValueStorage/Name-ValueStorage.html">Safari 4</a>.</p>
 
 <div class="note"><strong>Заметка:</strong> DOM хранилище - это не то же самое, что <a href="/en-US/docs/Storage" title="Storage">mozStorage</a> (Mozilla's XPCOM interfaces to SQLite) или <a href="/en-US/docs/Session_store_API" title="Session_store_API">Session store API</a> (утилита <a href="/en-US/docs/XPCOM" title="XPCOM">XPCOM</a> - хранилище для использования в расширениях).</div>
 
@@ -21,9 +21,9 @@ original_slug: Web/Guide/API/DOM/Storage
 
 <p>Браузеры на основе Mozilla, Internet Explorer 8 +, Safari 4 + и Chrome обеспечивают рабочую реализацию спецификации DOM хранилища. (В случае, если нужна кросс-браузерная поддержка функциональности, включая более старые версии IE, будет полезно отметить, что IE также имеет подобную легаси функциональность под названием "<a href="http://msdn.microsoft.com/en-us/library/ms531424(VS.85).aspx">USERDATA поведение</a>", которая дополнение DOM хранилище IE в IE8.)</p>
 
-<p>DOM хранилище удобно, потому что нет других хороших способов хранения разумных объемов данных за любой период времени, встроенных в браузер. <a href="http://en.wikipedia.org/wiki/HTTP_cookie">Кукисы </a>ограничены в количестве хранимой информации и не обеспечивают поддержку для организации постоянных данных, а другие методы (например, <a href="http://www.macromedia.com/support/documentation/en-US/docs/flashplayer/help/help02.html">флэш-локальное хранилище</a>) требуют плагина.</p>
+<p>DOM хранилище удобно, потому что нет других хороших способов хранения разумных объёмов данных за любой период времени, встроенных в браузер. <a href="http://en.wikipedia.org/wiki/HTTP_cookie">Кукисы </a>ограничены в количестве хранимой информации и не обеспечивают поддержку для организации постоянных данных, а другие методы (например, <a href="http://www.macromedia.com/support/documentation/en-US/docs/flashplayer/help/help02.html">флэш-локальное хранилище</a>) требуют плагина.</p>
 
-<p>Одним из первых известных приложений,  использующих новые функциональные возможности DOM хранилища(в дополнение к USERDATA поведения в Internet Explorer) было <a href="http://aaronboodman.com/halfnote/">halfnote </a>(приложение для заметок), написанное <a href="http://aaronboodman.com/">Аароном Будменом</a>. В своем приложении, Аарон одновременно сохранял заметки на сервере (когда/если Интернет-подключение  был доступно) и локального хранилища данных(в обратном случае). Это дало возможность пользователю смело писать резервные копии заметок даже при нерегулярном подключении к Интернету.</p>
+<p>Одним из первых известных приложений,  использующих новые функциональные возможности DOM хранилища(в дополнение к USERDATA поведения в Internet Explorer) было <a href="http://aaronboodman.com/halfnote/">halfnote </a>(приложение для заметок), написанное <a href="http://aaronboodman.com/">Аароном Будменом</a>. В своём приложении, Аарон одновременно сохранял заметки на сервере (когда/если Интернет-подключение  был доступно) и локального хранилища данных(в обратном случае). Это дало возможность пользователю смело писать резервные копии заметок даже при нерегулярном подключении к Интернету.</p>
 
 <p>Хотя идея и реализация halfnote были сравнительно простыми, создание halfnote показывает возможность для нового поколения веб-приложений, которые можно использовать как в онлайн-, так и оффлайн- режиме.</p>
 
@@ -39,7 +39,7 @@ original_slug: Web/Guide/API/DOM/Storage
 
 <p>Единицы <code>globalStorage</code> являются экземплярами <span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: 1.5;">StorageObsolete,</span> а <span style="line-height: 1.5;">не </span><code style="font-style: normal; line-height: 1.5;">Storage</code><span style="line-height: 1.5;">.</span></p>
 
-<p><code>Storage</code> определен в WhatWG <a class="external" href="http://dev.w3.org/html5/webstorage/#storage-0" title="http://dev.w3.org/html5/webstorage/#storage-0">Storage Interface</a> следующим образом:</p>
+<p><code>Storage</code> определён в WhatWG <a class="external" href="http://dev.w3.org/html5/webstorage/#storage-0" title="http://dev.w3.org/html5/webstorage/#storage-0">Storage Interface</a> следующим образом:</p>
 
 <pre class="eval">interface <dfn>Storage</dfn> {
   readonly attribute unsigned long <a class="external" href="http://dev.w3.org/html5/webstorage/#dom-storage-length" title="dom-Storage-length">length</a>;
@@ -53,16 +53,16 @@ original_slug: Web/Guide/API/DOM/Storage
 
 <div class="note"><strong>Заметка: </strong>Несмотря на то, что значения доступны для чтения и записи через стандартные способы Javascript, рекомендуется использование <span style="line-height: 1.5;">getItem и setItem.</span></div>
 
-<div class="note"><strong>Заметка:</strong> Обратите внимание, что любые данные, которые хранятся в любом из хранилищ, описанных на этой странице, преобразуются в строку, используя метод<span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: 1.5;">.toString</span><span style="line-height: 1.5;">. перед тем, как сохранить значение. Попытка сохранить объект приведет к сохранению строки </span><code style="font-style: italic;">"[object Object]"</code>  <span style="line-height: 1.5;">вместо объекта или его JSON </span><span style="line-height: 1.5;">представления</span><span style="line-height: 1.5;">. Самым лучшим и распространенным способом сохранения объектов в формате строки является использование п</span><span style="line-height: 1.5;">редоставляемых браузером </span><span style="line-height: 1.5;">методов JSON для парсинга</span><span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">и сериализации объектов.</span></div>
+<div class="note"><strong>Заметка:</strong> Обратите внимание, что любые данные, которые хранятся в любом из хранилищ, описанных на этой странице, преобразуются в строку, используя метод<span style="font-family: 'Courier New', 'Andale Mono', monospace; line-height: 1.5;">.toString</span><span style="line-height: 1.5;">. перед тем, как сохранить значение. Попытка сохранить объект приведёт к сохранению строки </span><code style="font-style: italic;">"[object Object]"</code>  <span style="line-height: 1.5;">вместо объекта или его JSON </span><span style="line-height: 1.5;">представления</span><span style="line-height: 1.5;">. Самым лучшим и распространённым способом сохранения объектов в формате строки является использование п</span><span style="line-height: 1.5;">редоставляемых браузером </span><span style="line-height: 1.5;">методов JSON для парсинга</span><span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">и сериализации объектов.</span></div>
 
 <h3 id="sessionStorage"><code>sessionStorage</code></h3>
 
-<p>Это глобальный объект <span style="line-height: 1.5;">(</span><code style="font-style: normal; line-height: 1.5;">sessionStorage</code><span style="line-height: 1.5;">), который сохраняет значения, которые доступны в течение периода текущей сессии. Сессия страницы длится, пока браузер открыт, и восстанавливает свои значения после перегрузки страницы. Открытие страницы в новой вкладке или окне приведет к созданию новой сессии для этой страницы.</span></p>
+<p>Это глобальный объект <span style="line-height: 1.5;">(</span><code style="font-style: normal; line-height: 1.5;">sessionStorage</code><span style="line-height: 1.5;">), который сохраняет значения, которые доступны в течение периода текущей сессии. Сессия страницы длится, пока браузер открыт, и восстанавливает свои значения после перегрузки страницы. Открытие страницы в новой вкладке или окне приведёт к созданию новой сессии для этой страницы.</span></p>
 
 <pre class="brush:js">// Сохранить данные в локальное хранилище текущей сессии
 sessionStorage.setItem("username", "John");
 
-// Получить значения сохраненного значения
+// Получить значения сохранённого значения
 alert( "username = " + sessionStorage.getItem("username"));
 </pre>
 
@@ -99,7 +99,7 @@ alert( "username = " + sessionStorage.getItem("username"));
 
 <p><code>localStorage</code> - это то же самое, что и<code> {{ Anch("sessionStorage") }},</code> поддерживает правила единого происхождения(same-origin rules), но хранение данных постоянно. <code>localStorage</code> был представлен в Firefox 3.5.</p>
 
-<div class="note"><strong>Заметка:</strong> Когда браузер переходит в частный режим браузера(<span style="line-height: 1.5;">private browsing mode), то новая, временная база данных создается для хранения данных локального хранилища; эта база данных очищается и удаляется, как только частный режим браузера выключается.</span></div>
+<div class="note"><strong>Заметка:</strong> Когда браузер переходит в частный режим браузера(<span style="line-height: 1.5;">private browsing mode), то новая, временная база данных создаётся для хранения данных локального хранилища; эта база данных очищается и удаляется, как только частный режим браузера выключается.</span></div>
 
 <h4 id="Совместимость">Совместимость</h4>
 

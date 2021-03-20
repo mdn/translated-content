@@ -6,7 +6,7 @@ original_slug: DOM/DOM_Reference/Locating_DOM_elements_using_selectors
 ---
 <div>{{ gecko_minversion_header("1.9.1") }}</div>
 
-<div>Selectors API предоставляет методы, с помощью которых можно быстро и просто получить доступ к узлам <code><a href="/en-US/docs/DOM/element">Element</a></code> из DOM путем сопоставления с набором селекторов. Это намного быстрее, чем прошлые техники, где надо было, например, использовать цикл в JS-коде, чтобы найти конкретные элементы.</div>
+<div>Selectors API предоставляет методы, с помощью которых можно быстро и просто получить доступ к узлам <code><a href="/en-US/docs/DOM/element">Element</a></code> из DOM путём сопоставления с набором селекторов. Это намного быстрее, чем прошлые техники, где надо было, например, использовать цикл в JS-коде, чтобы найти конкретные элементы.</div>
 
 <div> </div>
 
@@ -16,7 +16,7 @@ original_slug: DOM/DOM_Reference/Locating_DOM_elements_using_selectors
 
 <dl>
  <dt><code>querySelector</code></dt>
- <dd>Возвращает первый совпадающий узел <a class="internal" href="/en-US/docs/DOM/element" title="en-US/docs/DOM/Element"><code>Element</code></a> внутри поддерева. Если совпадающих узлов нет, будет возвращен <code>null</code>.</dd>
+ <dd>Возвращает первый совпадающий узел <a class="internal" href="/en-US/docs/DOM/element" title="en-US/docs/DOM/Element"><code>Element</code></a> внутри поддерева. Если совпадающих узлов нет, будет возвращён <code>null</code>.</dd>
  <dt><code>querySelectorAll</code></dt>
  <dd>Возвращает <a class="internal" href="/en-US/docs/DOM/NodeList" title="en-US/docs/DOM/NodeList"><code>NodeList</code></a><code>, </code>содержащий все подходящие узлы <code>Element</code> внутри поддерева узлов. Или возвращает пустой <code>NodeList</code>, если совпадений не найдено.</dd>
 </dl>
@@ -27,7 +27,7 @@ original_slug: DOM/DOM_Reference/Locating_DOM_elements_using_selectors
 
 <h2 id="Selectors">Selectors</h2>
 
-<p>Селекторные методы принимают один или больше селекторов, разделенных запятыми, чтобы определить, какие элементы должны быть возвращены. Например, чтобы все параграфы в документе, которые имеют классы <code>warning </code>или <code>note</code>, можно сделать следующее:</p>
+<p>Селекторные методы принимают один или больше селекторов, разделённых запятыми, чтобы определить, какие элементы должны быть возвращены. Например, чтобы все параграфы в документе, которые имеют классы <code>warning </code>или <code>note</code>, можно сделать следующее:</p>
 
 <pre><code>var special = document.querySelectorAll( "p.warning, p.note" );</code></pre>
 

@@ -19,7 +19,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <p><code>XMLHttpRequest</code> это API, который предоставляет клиенту функциональность для обмена данными между клиентом и сервером. Данный API предоставляет простой способ получения данных по ссылке без перезагрузки страницы. Это позволяет обновлять только часть веб-страницы не прерывая пользователя.  <code>XMLHttpRequest используется в AJAX запросах и особенно в single-page приложениях.</code></p>
 
-<p>XMLHttpRequest изначально был разработан Microsoft и позже заимствован Mozilla, Apple, и Google. Сейчас он <a href="https://xhr.spec.whatwg.org/">стандартизирован WHATWG</a>. Несмотря на свое название, <code>XMLHttpRequest</code> может быть использован для получения любых типов данных, не только XML, и поддерживает протоколы помимо <a href="https://developer.mozilla.org/ru/docs/Web/HTTP">HTTP</a> (включая <code>file</code> и <a href="https://developer.mozilla.org/ru/docs/Словарь/FTP">ftp</a>).</p>
+<p>XMLHttpRequest изначально был разработан Microsoft и позже заимствован Mozilla, Apple, и Google. Сейчас он <a href="https://xhr.spec.whatwg.org/">стандартизирован WHATWG</a>. Несмотря на своё название, <code>XMLHttpRequest</code> может быть использован для получения любых типов данных, не только XML, и поддерживает протоколы помимо <a href="https://developer.mozilla.org/ru/docs/Web/HTTP">HTTP</a> (включая <code>file</code> и <a href="https://developer.mozilla.org/ru/docs/Словарь/FTP">ftp</a>).</p>
 
 <p>Чтобы начать работать с <code>XMLHttpRequest</code>, выполните этот код:</p>
 
@@ -92,7 +92,7 @@ translation_of: Web/API/XMLHttpRequest
    </td>
    <td><code>Function?</code></td>
    <td>
-    <p>Callback - функция, которая вызывается всякий раз, когда поле <code>readyState меняет свое значение</code>. Callback выполняется в потоке работы приложения.</p>
+    <p>Callback - функция, которая вызывается всякий раз, когда поле <code>readyState меняет своё значение</code>. Callback выполняется в потоке работы приложения.</p>
 
     <div class="warning"><strong>Внимание:</strong> Он не должен использоваться в синхронных запросах, и не должен выполняться из нативного кода (? must not be used from native code).</div>
    </td>
@@ -113,7 +113,7 @@ translation_of: Web/API/XMLHttpRequest
       <tr>
        <td><code>0</code></td>
        <td><code>UNSENT</code></td>
-       <td>Клиент создан. Метод <code>open()</code> еще не вызван.</td>
+       <td>Клиент создан. Метод <code>open()</code> ещё не вызван.</td>
       </tr>
       <tr>
        <td><code>1</code></td>
@@ -143,13 +143,13 @@ translation_of: Web/API/XMLHttpRequest
    <td><code>response</code></td>
    <td>varies</td>
    <td>
-    <p>Тело сущности запроса. Согласно полю <code><a href="#responseType">responseType</a></code>, может быть <a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a>, <a href="/en/DOM/Blob" title="en/DOM/Blob"><code>Blob</code></a>, {{ domxref("Document") }}, JavaScript объектом (для "json"), или строкой. Равно <code>null</code> если запрос не завершен или окончен с ошибкой.</p>
+    <p>Тело сущности запроса. Согласно полю <code><a href="#responseType">responseType</a></code>, может быть <a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a>, <a href="/en/DOM/Blob" title="en/DOM/Blob"><code>Blob</code></a>, {{ domxref("Document") }}, JavaScript объектом (для "json"), или строкой. Равно <code>null</code> если запрос не завершён или окончен с ошибкой.</p>
    </td>
   </tr>
   <tr id="responseText">
    <td><code>responseText</code> {{ReadOnlyInline()}}</td>
    <td><code>DOMString</code></td>
-   <td>Ответ на запрос в виде строки или <code>null</code> в случае если запрос не успешен или ответ еще не получен.</td>
+   <td>Ответ на запрос в виде строки или <code>null</code> в случае если запрос не успешен или ответ ещё не получен.</td>
   </tr>
   <tr id="responseType">
    <td><code>responseType</code></td>
@@ -181,7 +181,7 @@ translation_of: Web/API/XMLHttpRequest
       </tr>
       <tr>
        <td><code>"json"</code></td>
-       <td>JavaScript объект, полученный путем парсинга JSON строки, полученной с сервера.</td>
+       <td>JavaScript объект, полученный путём парсинга JSON строки, полученной с сервера.</td>
       </tr>
       <tr>
        <td><code>"text"</code></td>
@@ -240,7 +240,7 @@ translation_of: Web/API/XMLHttpRequest
    <td><code>timeout</code></td>
    <td><code>unsigned long</code></td>
    <td>
-    <p>Время в миллисекундах, после которого запрос будет отменен. Значение 0 (по умолчанию) значит что таймаута не будет. Никогда.</p>
+    <p>Время в миллисекундах, после которого запрос будет отменён. Значение 0 (по умолчанию) значит что таймаута не будет. Никогда.</p>
 
     <div class="note"><strong>Примечание:</strong> Вы можете не использовать поле timeout для синхронных запросов из owning window.</div>
    </td>
@@ -339,9 +339,9 @@ translation_of: Web/API/XMLHttpRequest
 
 <h3 id="XMLHttpRequest()" name="XMLHttpRequest()">XMLHttpRequest()</h3>
 
-<p>Конструктор создает объект XMLHttpRequest. Он должен быть вызван перед обращением к любому методу класса.</p>
+<p>Конструктор создаёт объект XMLHttpRequest. Он должен быть вызван перед обращением к любому методу класса.</p>
 
-<p>Gecko/Firefox 16 добавляет нестандартные параметры в конструктор, для лучшего взаимодействия с режимом инкогнито, (смотри <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=692677" title="692677 – Relax same-origin XHR restrictions for privileged applications">Bug 692677</a>). Установка флага <code>mozAnon</code> в значение <code>true</code> создает сущность <a href="http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest" title="see AnonXMLHttpRequest in the XMLHttpRequest specification"><code>AnonXMLHttpRequest()</code></a> описанную в XMLHttpRequest спецификации, но не реализованную не в одном из браузеров (информация сентября 2012).</p>
+<p>Gecko/Firefox 16 добавляет нестандартные параметры в конструктор, для лучшего взаимодействия с режимом инкогнито, (смотри <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=692677" title="692677 – Relax same-origin XHR restrictions for privileged applications">Bug 692677</a>). Установка флага <code>mozAnon</code> в значение <code>true</code> создаёт сущность <a href="http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest" title="see AnonXMLHttpRequest in the XMLHttpRequest specification"><code>AnonXMLHttpRequest()</code></a> описанную в XMLHttpRequest спецификации, но не реализованную не в одном из браузеров (информация сентября 2012).</p>
 
 <pre>XMLHttpRequest (
   JSObject objParameters
@@ -354,7 +354,7 @@ translation_of: Web/API/XMLHttpRequest
  <dd>Вы можете использовать два флага:
  <dl>
   <dt><code>mozAnon</code></dt>
-  <dd>Boolean: Использование этого флага уберет из запроса заголовки origin, и <a href="http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials" title="Defintion of “User credentials” in the XMLHttpRequest specification.">user credentials</a>. Кроме этого, куки не будут отправлены в запросе, если только они не будут добавлены к запросу специально, через метод setRequestHeader.</dd>
+  <dd>Boolean: Использование этого флага уберёт из запроса заголовки origin, и <a href="http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials" title="Defintion of “User credentials” in the XMLHttpRequest specification.">user credentials</a>. Кроме этого, куки не будут отправлены в запросе, если только они не будут добавлены к запросу специально, через метод setRequestHeader.</dd>
   <dt><code>mozSystem</code></dt>
   <dd>Boolean: Если выставить этот флаг в значение <code>true</code> то это позволит делать cross-доменные запросы без необходимости получения специальных заголовков со стороны сервера (CORS). Для использования этого флага необходимо использовать дополнительный флаг<em> <code>mozAnon: true</code>, поскольку для отправки запроса на другой домен, нельзя использовать куки и креды пользователя. Этот флаг <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=692677#c68" title="Bug 692677 comment 68">работает только с привилегированными (одобренными) приложениями</a>; он не сработает с произвольно загруженными страницами.</em></dd>
  </dl>
@@ -380,7 +380,7 @@ translation_of: Web/API/XMLHttpRequest
 <p>Возвращает значение указанного заголовка из полученного ответа, или <code>null</code> в случает если ответ не получен, или такого заголовка в ответе нет. Возвращаемая строка имеет кодировку UTF.</p>
 
 <div class="note">
-<p><code><strong>Примечание: </strong>Если в ответе есть заголовки с одни названием, то значения этих заголовков будут объеденены в одну строку, разделенную запятой и пробелом.</code></p>
+<p><code><strong>Примечание: </strong>Если в ответе есть заголовки с одни названием, то значения этих заголовков будут объеденены в одну строку, разделённую запятой и пробелом.</code></p>
 </div>
 
 <h3 id="open()" name="open()">open()</h3>
@@ -406,7 +406,7 @@ translation_of: Web/API/XMLHttpRequest
  <dt><code>url</code></dt>
  <dd>URL адрес, на который будет отправлено сообщение.</dd>
  <dt><code>async</code></dt>
- <dd>Необязательный boolean параметр, по умолчанию равный <code>true. Определяет, будет ли запрос отправлен асинхронно. Если значение равно</code> <code>false</code>, метод <code>send() вернет ответ в общем потоке работы приложения (иначе говоря, приложение зависнет на некоторое время), в противном случае, ответ может быть получен только при помощи определенных </code> обработчиков событий. В случае, если используется отправка <code>multipart</code> запроса, то этот атрибут <strong>должен </strong>быть <code>true</code>, или будет выброшено исключение.
+ <dd>Необязательный boolean параметр, по умолчанию равный <code>true. Определяет, будет ли запрос отправлен асинхронно. Если значение равно</code> <code>false</code>, метод <code>send() вернёт ответ в общем потоке работы приложения (иначе говоря, приложение зависнет на некоторое время), в противном случае, ответ может быть получен только при помощи определённых </code> обработчиков событий. В случае, если используется отправка <code>multipart</code> запроса, то этот атрибут <strong>должен </strong>быть <code>true</code>, или будет выброшено исключение.
  <div class="note"><strong>Примечание:</strong> Начиная с Gecko 30.0 {{ geckoRelease("30.0") }}, синхронные запросы объявлены как deprecated, в силу того что все пользователи недовольны тем, что приложение "зависает".</div>
  </dd>
  <dt><code>user</code></dt>
@@ -423,13 +423,13 @@ translation_of: Web/API/XMLHttpRequest
 
 <h3 id="send()" name="send()">send()</h3>
 
-<p>Отправляет запрос. Если запрос асинхронный (а по умолчанию это так), этот метод вернет значение сразу после того как метод вызван.</p>
+<p>Отправляет запрос. Если запрос асинхронный (а по умолчанию это так), этот метод вернёт значение сразу после того как метод вызван.</p>
 
 <div class="note">
-<p><strong>Примечание переводчика: </strong>в этом случае, в ответе не будет содержаться информации, которая пришла с сервера, поскольку она еще не пришла. Для того чтобы получить эту информацию, нужно слушать события загрузки, или использовать promise.</p>
+<p><strong>Примечание переводчика: </strong>в этом случае, в ответе не будет содержаться информации, которая пришла с сервера, поскольку она ещё не пришла. Для того чтобы получить эту информацию, нужно слушать события загрузки, или использовать promise.</p>
 </div>
 
-<p>Если запрос синхронный, то метод вернет значение только после того, как придет запрос от сервера.</p>
+<p>Если запрос синхронный, то метод вернёт значение только после того, как придёт запрос от сервера.</p>
 
 <div class="note"><strong>Примечание:</strong> все необходимые обработчики событий должны быть установлены перед вызовом <code>send()</code>.</div>
 
@@ -510,7 +510,7 @@ void send(FormData <var>data</var>);</pre>
 
 <p>Вариант метода <code>send()</code> который посылает бинарные данные.</p>
 
-<div class="note"><strong>Примечание:</strong> Этот нестандартный метод считается устарелым по состоянию на Gecko 31 {{ geckoRelease(31) }}, и со временем будет удален. Взамен может использоваться стандарт метода <code>send(Blob data).</code> </div>
+<div class="note"><strong>Примечание:</strong> Этот нестандартный метод считается устарелым по состоянию на Gecko 31 {{ geckoRelease(31) }}, и со временем будет удалён. Взамен может использоваться стандарт метода <code>send(Blob data).</code> </div>
 
 <pre>void sendAsBinary(
    in DOMString body

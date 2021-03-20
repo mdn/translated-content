@@ -6,7 +6,7 @@ tags:
   - XMLHttpRequest
 original_slug: XMLHttpRequest
 ---
-<p><code>XMLHttpRequest</code> — это объект <a href="/ru/JavaScript" title="ru/JavaScript">JavaScript</a>, созданный Microsoft и адаптированный Mozilla. Вы можете использовать его для простой передачи данных через HTTP. Несмотря на свое название, он может быть использован не только для XML документов, но и, например, для <a href="/ru/JSON" title="ru/JSON">JSON</a>.</p>
+<p><code>XMLHttpRequest</code> — это объект <a href="/ru/JavaScript" title="ru/JavaScript">JavaScript</a>, созданный Microsoft и адаптированный Mozilla. Вы можете использовать его для простой передачи данных через HTTP. Несмотря на своё название, он может быть использован не только для XML документов, но и, например, для <a href="/ru/JSON" title="ru/JSON">JSON</a>.</p>
 
 <p>Оставшаяся часть статьи может содержать информацию, специфичную для <a href="/ru/Gecko" title="ru/Gecko">Gecko</a> или привилегированного кода, такого как дополнения.</p>
 
@@ -16,7 +16,7 @@ original_slug: XMLHttpRequest
 
 <p>Использовать <code>XMLHttpRequest</code> очень просто. Вы создаёте экземпляр объекта, открываете URL и отправляете запрос. Статус HTTP-ответа, так же как и возвращаемый документ, доступны в свойствах объекта запроса.</p>
 
-<div class="note"><strong>Замечание: </strong>Версии Firefox до версии 3 постоянно отправляют запрос, используя кодировку UTF-8. Отправляя документ, Firefox 3 использует кодировку, определенную в <code>data.inputEncoding</code> (где <code>data — </code>ненулевой объект, переданный в <code>send()</code>). Если не определено, то используется UTF-8.</div>
+<div class="note"><strong>Замечание: </strong>Версии Firefox до версии 3 постоянно отправляют запрос, используя кодировку UTF-8. Отправляя документ, Firefox 3 использует кодировку, определённую в <code>data.inputEncoding</code> (где <code>data — </code>ненулевой объект, переданный в <code>send()</code>). Если не определено, то используется UTF-8.</div>
 
 <h4 id=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80" name=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80">Пример</h4>
 
@@ -98,7 +98,7 @@ req.send(null);
 
 <h4 id="responseXML" name="responseXML">responseXML</h4>
 
-<p>Если вы загрузили <a href="/ru/XML" title="ru/XML">XML</a> документ свойство <code>responseXML</code> будет содержать документ в виде <code>XmlDocument</code> объекта которым вы можете манипулировать используя DOM методы. Если сервер отправляет правильно сформированные XML документы но не устанавливает Content-Type заголовок для него, вы можете использовать <code><a href="/ru/XMLHttpRequest#overrideMimeType.28.29" title="ru/XMLHttpRequest#overrideMimeType.28.29">overrideMimeType()</a></code> для того чтобы документ был обработан как XML. Если сервер не отправляет правильно сформированного документа XML, <code>responseXML</code> вернет null независимо от любых перезаписей Content-Type заголовка.</p>
+<p>Если вы загрузили <a href="/ru/XML" title="ru/XML">XML</a> документ свойство <code>responseXML</code> будет содержать документ в виде <code>XmlDocument</code> объекта которым вы можете манипулировать используя DOM методы. Если сервер отправляет правильно сформированные XML документы но не устанавливает Content-Type заголовок для него, вы можете использовать <code><a href="/ru/XMLHttpRequest#overrideMimeType.28.29" title="ru/XMLHttpRequest#overrideMimeType.28.29">overrideMimeType()</a></code> для того чтобы документ был обработан как XML. Если сервер не отправляет правильно сформированного документа XML, <code>responseXML</code> вернёт null независимо от любых перезаписей Content-Type заголовка.</p>
 
 <h4 id="overrideMimeType.28.29" name="overrideMimeType.28.29">overrideMimeType()</h4>
 
@@ -146,7 +146,7 @@ req.abort();
 
 <h4 id="mozBackgroundRequest" name="mozBackgroundRequest">mozBackgroundRequest</h4>
 
-<p>Это свойство может быть использовано чтобы уберечь от всплытия аутентификации и неправильных диалогов сертификации в ответ на запрос. Также запрос не будет отменен при закрытии его окна, которому он принадлежит. Это свойство работает только для кода chrome. {{ Fx_minversion_inline(3) }}</p>
+<p>Это свойство может быть использовано чтобы уберечь от всплытия аутентификации и неправильных диалогов сертификации в ответ на запрос. Также запрос не будет отменён при закрытии его окна, которому он принадлежит. Это свойство работает только для кода chrome. {{ Fx_minversion_inline(3) }}</p>
 
 <pre>var req = new XMLHttpRequest();
 req.mozBackgroundRequest = true;

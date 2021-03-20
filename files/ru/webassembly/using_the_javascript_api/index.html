@@ -9,7 +9,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 ---
 <div>{{WebAssemblySidebar}}</div>
 
-<p class="summary">Если вы уже <a href="/ru/docs/WebAssembly/C_to_wasm">компилировали модуль из другого языка, используя такие инструменты как Emscripten</a>, или загружали и запускали код, то следующим шагом будет углубленное изучение возможностей WebAssembly JavaScript API. Эта статья даст необходимые знания по этому вопросу.</p>
+<p class="summary">Если вы уже <a href="/ru/docs/WebAssembly/C_to_wasm">компилировали модуль из другого языка, используя такие инструменты как Emscripten</a>, или загружали и запускали код, то следующим шагом будет углублённое изучение возможностей WebAssembly JavaScript API. Эта статья даст необходимые знания по этому вопросу.</p>
 
 <div class="note">
 <p><strong>Примечание</strong>: Если вы незнакомы с фундаментальными понятиями, упомянутыми в этой статье, и вам нужны дополнительные объяснения, то вам нужно сначала прочитать про <a href="/ru/docs/WebAssembly/Concepts">Основы WebAssembly</a>.</p>
@@ -26,8 +26,8 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 <h3 id="Подготовка_примера">Подготовка примера</h3>
 
 <ol>
- <li>Для начала нам нужен wasm-модуль! Возьмите наш файл <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm">simple.wasm</a> и сохраните копию в новой директории на своем локальном компьютере.</li>
- <li>Далее, давайте создадим в той же директории что и wasm-модуль простой HTML-файл и назовем его <code>index.html</code> (можно использовать <a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">HTML шаблон</a> если вы этого еще не сделали).</li>
+ <li>Для начала нам нужен wasm-модуль! Возьмите наш файл <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm">simple.wasm</a> и сохраните копию в новой директории на своём локальном компьютере.</li>
+ <li>Далее, давайте создадим в той же директории что и wasm-модуль простой HTML-файл и назовём его <code>index.html</code> (можно использовать <a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">HTML шаблон</a> если вы этого ещё не сделали).</li>
  <li>Теперь, для того чтобы понять что происходит в коде модуля, давайте взглянем на его текстовое представление (которое мы также встречали в <a href="/en-US/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format">Перевод из текстового формата WebAssembly в wasm</a>):
   <pre>(module
   (func $i (import "imports" "imported_func") (param i32))
@@ -35,7 +35,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
     i32.const 42
     call $i))</pre>
  </li>
- <li>Во второй строчке вы видите что import имеет двухуровневое пространство имен - внутренняя функция <code>$i</code> импортирована из <code>imports.imported_func</code>. Нам нужно создать это двухуровневое пространство имен в JavaScript-объекте, который будет импортирован в wasm-модуль. Создайте <code>&lt;script&gt;&lt;/script&gt;</code> элемент в своем HTML-файле, и добавьте следующий код:
+ <li>Во второй строчке вы видите что import имеет двухуровневое пространство имён - внутренняя функция <code>$i</code> импортирована из <code>imports.imported_func</code>. Нам нужно создать это двухуровневое пространство имён в JavaScript-объекте, который будет импортирован в wasm-модуль. Создайте <code>&lt;script&gt;&lt;/script&gt;</code> элемент в своём HTML-файле, и добавьте следующий код:
   <pre class="brush: js">var importObject = {
   imports: { imported_func: arg =&gt; console.log(arg) }
 };</pre>
@@ -77,7 +77,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 
 <h3 id="Просмотр_wasm_в_инструментах_разработчика">Просмотр wasm в инструментах разработчика</h3>
 
-<p>В Firefox 54+, в отладочной панели инструментов разработчика имеется возможность отображения текстового представления любого wasm-кода, включенного в веб-страницу. Для того чтобы просмотреть его, вы можете перейти на отладочную панель и нажать на пункт "wasm://".</p>
+<p>В Firefox 54+, в отладочной панели инструментов разработчика имеется возможность отображения текстового представления любого wasm-кода, включённого в веб-страницу. Для того чтобы просмотреть его, вы можете перейти на отладочную панель и нажать на пункт "wasm://".</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15823/wasm-debug.png" style="display: block; height: 317px; margin: 0px auto; width: 1019px;"></p>
 
@@ -93,7 +93,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 
 <p>Давайте исследуем эту возможность рассмотрев небольшой пример.</p>
 
-<p>Создайте еще одну простую HTML страницу (скопируйте <a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">HTML шаблон</a>) и назовите её <code>memory.html</code>. Добавьте <code>&lt;script&gt;&lt;/script&gt;</code> элемент на страницу.</p>
+<p>Создайте ещё одну простую HTML страницу (скопируйте <a href="https://github.com/mdn/webassembly-examples/blob/master/template/template.html">HTML шаблон</a>) и назовите её <code>memory.html</code>. Добавьте <code>&lt;script&gt;&lt;/script&gt;</code> элемент на страницу.</p>
 
 <ol>
  <li>
@@ -125,7 +125,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 <p>При превышении максимального значения, указанного при создании объекта памяти, будет выброшено исключение {{jsxref("WebAssembly.RangeError")}}. Движок использует предоставленные верхние границы для резервирования памяти заранее, что делает расширение памяти более эффективным.</p>
 
 <div class="blockIndicator note">
-<p><strong>Примечание</strong>: Так как размер объекта {{domxref("ArrayBuffer")}} неизменен, после успешного вызова метода {{jsxref("Memory.prototype.grow()")}} свойство buffer объекта памяти будет возвращать уже новый объект {{domxref("ArrayBuffer")}} (с новым размером в свойстве byteLength) и любые предыдущие объекты ArrayBuffer станут в некотором роде “отсоединенными”, или отключенными от низкоуровневой памяти, к которой они ранее относились.</p>
+<p><strong>Примечание</strong>: Так как размер объекта {{domxref("ArrayBuffer")}} неизменен, после успешного вызова метода {{jsxref("Memory.prototype.grow()")}} свойство buffer объекта памяти будет возвращать уже новый объект {{domxref("ArrayBuffer")}} (с новым размером в свойстве byteLength) и любые предыдущие объекты ArrayBuffer станут в некотором роде “отсоединёнными”, или отключёнными от низкоуровневой памяти, к которой они ранее относились.</p>
 </div>
 
 <p>Подобно функциям, диапазоны линейной памяти могут быть импортированы или определены внутри модуля. Также, модуль имеет возможность экспортировать свою память. Это означает, что JavaScript-код может получить доступ к объекту памяти WebAssembly либо c помощью создания нового объекта через конструктор <code>WebAssembly.Memory</code> и передачи его в импортируемый объект, либо с помощью получения объекта памяти через экспортируемый объект (через <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports">Instance.prototype.exports</a></code>).</p>
@@ -151,7 +151,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 });</pre>
  </li>
  <li>
-  <p>Так как модуль экспортирует свою память, которая была передана экземпляру этого модуля при его создании, мы можем наполнить ранее импортированный массив прямо в линейной памяти экземпляра модуля (<code>mem</code>), и вызвать экспортированную функцию <code>accumulate()</code> для расчета суммы значений. Добавьте следующий код, в обозначенном месте: </p>
+  <p>Так как модуль экспортирует свою память, которая была передана экземпляру этого модуля при его создании, мы можем наполнить ранее импортированный массив прямо в линейной памяти экземпляра модуля (<code>mem</code>), и вызвать экспортированную функцию <code>accumulate()</code> для расчёта суммы значений. Добавьте следующий код, в обозначенном месте: </p>
 
   <pre class="brush: js">var i32 = new Uint32Array(memory.buffer);
 
@@ -164,7 +164,7 @@ console.log(sum);</pre>
  </li>
 </ol>
 
-<p>Обратите внимание на то, что мы создаем представление данных {{domxref("Uint32Array")}} с помощью свойства buffer объекта памяти (<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">Memory.prototype.buffer</a></code>), а не самого объекта памяти.</p>
+<p>Обратите внимание на то, что мы создаём представление данных {{domxref("Uint32Array")}} с помощью свойства buffer объекта памяти (<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer">Memory.prototype.buffer</a></code>), а не самого объекта памяти.</p>
 
 <p>Импорт памяти почти такой же как импорт функций, только вместо JavaScript функций передаются объекты памяти. Импорт памяти полезен по двум причинам:</p>
 
@@ -174,14 +174,14 @@ console.log(sum);</pre>
 </ul>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете найти полную демонстрацию в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">см. ее также вживую</a>) — эта версия использует функцию <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>.</p>
+<p><strong>Примечание</strong>: Вы можете найти полную демонстрацию в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">см. её также вживую</a>) — эта версия использует функцию <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>.</p>
 </div>
 
 <h2 id="Таблицы">Таблицы</h2>
 
-<p>Таблица WebAssembly - это расширяемый типизированный массив <a href="https://en.wikipedia.org/wiki/Reference_(computer_science)">ссылок</a>, доступ к которому может быть получен из JavaScript и WebAssembly кода. Так как линейная память предоставляет расширяемый массив незащищенных байт, слишком небезопасно размещать там ссылки, так как для движка ссылка является доверенным значением, чьи байты не должны быть прочитаны или записаны кодом напрямую по причинам безопасности, переносимости и стабильности.</p>
+<p>Таблица WebAssembly - это расширяемый типизированный массив <a href="https://en.wikipedia.org/wiki/Reference_(computer_science)">ссылок</a>, доступ к которому может быть получен из JavaScript и WebAssembly кода. Так как линейная память предоставляет расширяемый массив незащищённых байт, слишком небезопасно размещать там ссылки, так как для движка ссылка является доверенным значением, чьи байты не должны быть прочитаны или записаны кодом напрямую по причинам безопасности, переносимости и стабильности.</p>
 
-<p>У таблиц есть тип элемента, который ограничивает тип возможной ссылки, который может быть размещен в таблице. В текущей версии WebAssembly, только один тип ссылки используется в WebAssembly коде - функции - и поэтому существует только один возможный тип элемента. В следующих версиях их количество будет увеличено.</p>
+<p>У таблиц есть тип элемента, который ограничивает тип возможной ссылки, который может быть размещён в таблице. В текущей версии WebAssembly, только один тип ссылки используется в WebAssembly коде - функции - и поэтому существует только один возможный тип элемента. В следующих версиях их количество будет увеличено.</p>
 
 <p>Ссылки на функции необходимы для компиляции в таких языках как C/C++, которые имеют указатели на функции. В родной реализации C/C++, указатель на функцию представлен прямым адресом на код функции в виртуальном адресном пространстве процесса, и потому для ранее упомянутой безопасности, они не могут быть размещены прямо в линейной памяти. Вместо этого ссылки на функции размещаются в таблице, а её индексы, которые являются целыми числами могут быть размещены в линейной памяти и переданы куда угодно.</p>
 
@@ -191,7 +191,7 @@ console.log(sum);</pre>
 
 <h3 id="Пример_таблицы">Пример таблицы</h3>
 
-<p>Давайте взглянем на простой пример таблицы - модуль WebAssembly, который создает и экспортирует таблицу с двумя элементами: элемент под индексом 0 возвращает 13, а элемент под индексом 1 возвращает 42.</p>
+<p>Давайте взглянем на простой пример таблицы - модуль WebAssembly, который создаёт и экспортирует таблицу с двумя элементами: элемент под индексом 0 возвращает 13, а элемент под индексом 1 возвращает 42.</p>
 
 <ol>
  <li>
@@ -224,7 +224,7 @@ console.log(tbl.get(1)());  // 42</pre>
 <p>Этот код получает доступ к каждой ссылке на функцию, которая размещена в таблице, после чего вызывает её и выводит хранимое значение в консоль. Обратите внимание, что каждая ссылка на функцию получена с помощью вызова метода <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code>, после чего мы добавили пару круглых скобок для вызова самой функции.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете найти нашу полную демонстрацию в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html">table.html</a> (см. ее также <a href="https://mdn.github.io/webassembly-examples/js-api-examples/table.html">вживую</a>) — эта версия использует функцию <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>.</p>
+<p><strong>Примечание</strong>: Вы можете найти нашу полную демонстрацию в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html">table.html</a> (см. её также <a href="https://mdn.github.io/webassembly-examples/js-api-examples/table.html">вживую</a>) — эта версия использует функцию <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>.</p>
 </div>
 
 <h2 id="Глобальные_переменные">Глобальные переменные</h2>

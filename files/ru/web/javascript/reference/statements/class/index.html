@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Statements/class
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><strong>Class declaration</strong> создает новый класс с данным именем на основе прототипного наследования.</p>
+<p><strong>Class declaration</strong> создаёт новый класс с данным именем на основе прототипного наследования.</p>
 
 <div class="noinclude">
 <p>Можно так же определить класс, используя {{jsxref("Operators/class", "class expression", "", 1)}}. Но в отличие от class expression, class declaration не позволяет снова объявить уже существующий класс, это <strong>приведёт к ошибке типа</strong>.</p>
@@ -54,7 +54,7 @@ class Square extends Polygon {
 class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
 </pre>
 
-<p>Та же ошибка будет вызвана, если класс был определен перед использованием class declaration.</p>
+<p>Та же ошибка будет вызвана, если класс был определён перед использованием class declaration.</p>
 
 <pre class="brush: js notranslate">var Foo = class {};
 class Foo {}; // Uncaught TypeError: Identifier 'Foo' has already been declared
