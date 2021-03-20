@@ -31171,31 +31171,6 @@
       "Luejni"
     ]
   },
-  "orphaned/MDN/Contribute/Howto/Do_an_editorial_review": {
-    "modified": "2020-04-12T16:14:40.644Z",
-    "contributors": [
-      "ele-gall-ac-mineducation",
-      "wbamberg",
-      "ussmarc",
-      "SphinxKnight",
-      "Raulel",
-      "ThinkDumbIndustries",
-      "Fabienne1963",
-      "Requiem75020",
-      "tregagnon"
-    ]
-  },
-  "orphaned/MDN/Contribute/Howto/Do_a_technical_review": {
-    "modified": "2019-08-07T15:32:02.446Z",
-    "contributors": [
-      "mathildebuenerd",
-      "wbamberg",
-      "SphinxKnight",
-      "AlemFarid",
-      "vhf",
-      "tregagnon"
-    ]
-  },
   "orphaned/MDN/Contribute/Howto/Set_the_summary_for_a_page": {
     "modified": "2019-03-23T22:55:58.937Z",
     "contributors": [
@@ -31225,13 +31200,6 @@
     "modified": "2020-02-08T12:56:22.102Z",
     "contributors": [
       "tristantheb"
-    ]
-  },
-  "orphaned/MDN/Community/Conversations": {
-    "modified": "2019-01-17T02:52:45.654Z",
-    "contributors": [
-      "wbamberg",
-      "zakaila"
     ]
   },
   "orphaned/MDN/Community": {
@@ -31269,13 +31237,6 @@
       "wbamberg",
       "jcletousey",
       "loella16"
-    ]
-  },
-  "orphaned/MDN/Tools/Template_editing": {
-    "modified": "2020-09-30T16:48:33.737Z",
-    "contributors": [
-      "chrisdavidmills",
-      "JNa0"
     ]
   },
   "Mozilla/Firefox/Releases/3/Updating_web_applications": {
