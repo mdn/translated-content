@@ -14,14 +14,14 @@ translation_of: Web/SVG/Element/use
 
 <div id="Example">
 <div class="hidden">
-<pre class="brush: css notranslate">html,body,svg { height:100% }</pre>
+<pre class="brush: css">html,body,svg { height:100% }</pre>
 </div>
 
-<pre class="brush: html notranslate">&lt;svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/&gt;
-  &lt;use href="#myCircle" x="10" fill="blue"/&gt;
-  &lt;use href="#myCircle" x="20" fill="white" stroke="red"/&gt;
-  &lt;!--
+<pre class="brush: html">&lt;svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg"&gt;
+? &lt;circle id="myCircle" cx="5" cy="5" r="4" stroke="blue"/&gt;
+? &lt;use href="#myCircle" x="10" fill="blue"/&gt;
+? &lt;use href="#myCircle" x="20" fill="white" stroke="red"/&gt;
+? &lt;!--
 stroke="red" will be ignored here, as stroke was already set on myCircle.
 Most attributes (except for x, y, width, height and (xlink:)href)
 do not override those set in the ancestor.
@@ -34,17 +34,17 @@ That's why the circles have different x positions, but the same stroke value.
 
 <p>効果は、あたかもそのノードが非公開の DOM に配下を含めて複製され、 HTML5 の <a href="/ja/docs/Web/HTML/Element/template">template 要素</a>のように、 <code>use</code> 要素がある場所に貼り付けられたかのように同じになります。</p>
 
-<p><code>use</code> のほとんどの属性は、 <code>use</code> から<em>参照</em>される要素に既にある属性を上書きしません。 (これは CSS のスタイル属性がカスケードで「以前」に設定されたものを上書きする方法とは異なります)。 <code>use</code> 要素にある{{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("href")}} の各属性<strong>のみ</strong>が参照される要素に設定されているものを上書きします。ただし、参照される要素に設定されていない<em>他のすべての属性</em>は、 <code>use</code> 要素に適用されます。</p>
+<p><code>use</code> のほとんどの属性は、 <code>use</code> から<em>参照</em>される要素に既にある属性を上書き<strong>しません</strong>。 (これは CSS のスタイル属性がカスケードで「以前」に設定されたものを上書きする方法とは異なります)。 <code>use</code> 要素にある{{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("href")}} の各属性<strong>のみ</strong>が参照される要素に設定されているものを上書きします。ただし、参照される要素に設定されていない<em>他のすべての属性</em>は、 <code>use</code> 要素に適用<strong>され得ます</strong>。</p>
 
 <p>クローンされたノードは公開されないので、 <a href="/ja/docs/Web/CSS">CSS</a> を使って <code>use</code> 要素とその隠れた子孫要素にスタイル付けをする場合は注意が必要です。<a href="/ja/docs/Web/CSS/inheritance">CSS の継承</a>を使用して明示的に要求しない限り、CSS 属性は隠された複製の DOM によって継承されることが保証されません。</p>
 
-<p>セキュリティ上の理由で、ブラウザーは<a href="/en-US/docs/Web/Security/Same-origin_policy">同一オリジンポリシー</a>を <code>use</code> 要素に適用して、 {{SVGAttr("href")}} 属性にあるオリジンをまたがる URL を読み込むことを拒否することがあります。現在のところ、 <code>use</code> 要素のふぉういつオリジンポリシーを設定する方法は定義されていません。</p>
+<p>セキュリティ上の理由で、ブラウザーは<a href="/en-US/docs/Web/Security/Same-origin_policy">同一オリジンポリシー</a>を <code>use</code> 要素に適用して、 {{SVGAttr("href")}} 属性にあるオリジンをまたがる URL を読み込むことを拒否することがあります。現在のところ、 <code>use</code> 要素の同一オリジンポリシーを設定する方法は定義されていません。</p>
 
 <div class="warning">
-<p>SVG 2 で {{SVGAttr("xlink:href")}} 属性が非推奨になり、 {{SVGAttr("href")}} に置き換えられました。詳しくは {{SVGAttr("xlink:href")}} のページを参照してください。ただし、 {{SVGAttr("xlink:href")}} はブラウザー間の互換性のために今でも実装する必要があります (下記の<a href="#Browser_compatibility">互換性一覧表</a>を参照)。</p>
+<p>SVG 2 で {{SVGAttr("xlink:href")}} 属性が非推奨になり、 {{SVGAttr("href")}} に置き換えられました。詳しくは {{SVGAttr("xlink:href")}} のページを参照してください。ただし、 {{SVGAttr("xlink:href")}} はブラウザー間の互換性のために今でも実装する必要があります (下記の<a href="#browser_compatibility">互換性一覧表</a>を参照)。</p>
 </div>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
 <dl>
  <dt id="attr-cx">{{SVGAttr("href")}}</dt>
@@ -75,7 +75,7 @@ That's why the circles have different x positions, but the same stroke value.
 <p><strong>注:</strong> SVG2 から、 <code>x</code>, <code>y</code>, <code>width</code>, <code>height</code> は<em>位置プロパティ</em>となり、すなわちこれらの属性がその要素への CSS プロパティとしても使用することができるようになりました。</p>
 </div>
 
-<h3 id="Global_attributes" name="Global_attributes">グローバル属性</h3>
+<h3 id="Global_attributes">グローバル属性</h3>
 
 <dl>
  <dt><a href="/docs/Web/SVG/Attribute/Core">コア属性</a></dt>
@@ -94,11 +94,11 @@ That's why the circles have different x positions, but the same stroke value.
  <dd><small>{{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}</small></dd>
 </dl>
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+<h2 id="Usage_notes">使用上の注意</h2>
 
 <p>{{svginfo}}</p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -122,8 +122,6 @@ That's why the circles have different x positions, but the same stroke value.
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("svg.elements.use")}}</p>
