@@ -1,0 +1,63 @@
+---
+title: PerformanceObserverEntryList
+slug: Web/API/PerformanceObserverEntryList
+tags:
+  - API
+  - Interface
+  - Reference
+  - Performance Web
+translation_of: Web/API/PerformanceObserverEntryList
+---
+<div>{{APIRef("Performance Timeline API")}}</div>
+
+<p class="summary">L'interface <strong><code>PerformanceObserverEntryList</code></strong> est une liste d'{{domxref("PerformanceEntry", "événements de performance","",1)}} qui ont été explicitement <em>observés</em> via la méthode {{domxref("PerformanceObserver.observe", "observe()")}}.</p>
+
+<div class="notecard note">
+  <p>Remarque : cette interface est exposée à {{domxref("Window")}} et {{domxref("Worker")}}.</p>
+</div>
+
+<h2 id="Methods">Méthodes</h2>
+
+<dl>
+  <dt>{{domxref("PerformanceObserverEntryList.getEntries","PerformanceObserverEntryList.getEntries()")}}</dt>
+  <dd>Retourne une liste d'objets explicitement <em>observés</em> de {{domxref("PerformanceEntry")}} en fonction du <em>filtre</em> donné.</dd>
+  <dt>{{domxref("PerformanceObserverEntryList.getEntriesByType","PerformanceObserverEntryList.getEntriesByType()")}}</dt>
+  <dd>Retourne une liste d'objets explicitement <em>observés</em> {{domxref("PerformanceEntry")}} du <em>type d'entrée</em> donné.</dd>
+  <dt>{{domxref("PerformanceObserverEntryList.getEntriesByName","PerformanceObserverEntryList.getEntriesByName()")}}</dt>
+  <dd>Renvoie une liste d'objets explicitement <em>observés</em> {{domxref("PerformanceEntry")}} en fonction du <em>nom</em> et du <em>type d'entrée</em> donnés.</dd>
+</dl>
+
+<h2 id="Example">Exemple</h2>
+
+<pre class="brush: js">// Crée un observateur pour tous les types d'événements de performance
+// la liste est de type PerformanceObserveEntryList
+const <var>observe_all</var> = new PerformanceObserver(function(<var>list</var>, <var>obs</var>) {
+  let <var>perfEntries</var> = list.getEntries();
+  for (let <var>i</var> = 0; i &lt; perfEntries.length; i++) {
+    print_perf_entry(perfEntries[i]);
+    // faire quelque chose avec
+  }
+})</pre>
+
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Performance Timeline Level 2', '#idl-def-performanceobserverentrylist', 'PerformanceObserverEntryList')}}</td>
+      <td>{{Spec2('Performance Timeline Level 2')}}</td>
+      <td>Définition initiale.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.PerformanceObserverEntryList")}}</p>
