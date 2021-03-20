@@ -3124,7 +3124,6 @@
 /fr/docs/MDN/A_propos	/fr/docs/MDN/About
 /fr/docs/MDN/Contribute/Contenu	/fr/docs/MDN/Guidelines
 /fr/docs/MDN/Contribute/Contenu/Code_lignesdirectrices	/fr/docs/MDN/Guidelines/Code_guidelines
-/fr/docs/MDN/Contribute/Howto/Comment_créer_un_compte_sur_MDN	/fr/docs/orphaned/MDN/Contribute/Howto/Create_an_MDN_account
 /fr/docs/MDN/Contribute/Howto/Creer_un_exercice_interactif_pour_apprendre_le_web	/fr/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 /fr/docs/MDN/Contribute/Howto/Set_the_summary_for_a_page	/fr/docs/orphaned/MDN/Contribute/Howto/Set_the_summary_for_a_page
 /fr/docs/MDN/Contribute/Howto/Write_an_article_to_help_learn_about_the_Web	/fr/docs/orphaned/MDN/Contribute/Howto/Write_an_article_to_help_learn_about_the_Web
@@ -3141,8 +3140,6 @@
 /fr/docs/MDN/Feedback	/fr/docs/MDN/Contribute/Feedback
 /fr/docs/MDN/Guidelines/Code_lignesdirectrices	/fr/docs/MDN/Guidelines/Code_guidelines
 /fr/docs/MDN/Kuma	/fr/docs/MDN/Yari
-/fr/docs/MDN/Rejoindre_la_communauté	/fr/docs/orphaned/MDN/Community
-/fr/docs/MDN/Rejoindre_la_communauté/Whats_happening	/fr/docs/orphaned/MDN/Community/Whats_happening
 /fr/docs/MDN/Structures/Exemples_live	/fr/docs/MDN/Structures/Live_samples
 /fr/docs/MDN/Structures/Tables_de_compatibilité	/fr/docs/MDN/Structures/Compatibility_tables
 /fr/docs/MDN/User_guide	/fr/docs/conflicting/MDN/Tools

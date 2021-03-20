@@ -31097,14 +31097,6 @@
       "Anonymous"
     ]
   },
-  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
-    "modified": "2019-01-16T18:25:23.702Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "Goofy"
-    ]
-  },
   "MDN/Contribute/Howto/Convert_code_samples_to_be_live": {
     "modified": "2019-01-16T20:18:20.962Z",
     "contributors": [
@@ -31166,25 +31158,6 @@
     "modified": "2020-02-08T12:56:22.102Z",
     "contributors": [
       "tristantheb"
-    ]
-  },
-  "orphaned/MDN/Community": {
-    "modified": "2019-09-11T08:03:04.252Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "NerOcrO",
-      "loella16",
-      "ZakCodes",
-      "Mozinet",
-      "teoli",
-      "wakka27"
-    ]
-  },
-  "orphaned/MDN/Community/Whats_happening": {
-    "modified": "2020-10-05T06:56:25.370Z",
-    "contributors": [
-      "Voulto"
     ]
   },
   "MDN/Structures/Live_samples": {
