@@ -2,24 +2,25 @@
 title: Document.URL
 slug: Web/API/Document/URL
 tags:
-  - API
-  - Document
-  - HTML DOM
-  - URL
-  - プロパティ
-  - リファレンス
+- API
+- DOM
+- Document
+- Property
+- Reference
+- プロパティ
+- リファレンス
 translation_of: Web/API/Document/URL
 ---
 <div>{{APIRef("DOM")}}</div>
 
 <p>{{domxref("Document")}} インターフェイスの <code><strong>URL</strong></code> プロパティは読取専用で、文書の位置を文字列で返します。</p>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+<h2 id="Syntax">構文</h2>
 
-<pre class="syntaxbox">var <var>string</var> = document.URL
+<pre class="brush: js">const <em>url</em> = <em>document</em>.URL
 </pre>
 
-<h2 id="Example" name="Example">例</h2>
+<h2 id="Example">例</h2>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -32,44 +33,35 @@ translation_of: Web/API/Document/URL
   &lt;span id="url"&gt;URL goes here&lt;/span&gt;
 &lt;/p&gt;</pre>
 
-<h3 id="Result" name="Result">結果</h3>
+<h3 id="Result">結果</h3>
 
 <p>{{EmbedLiveSample("Example", "100%", 100)}}</p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<table class="spectable standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-document-url", "Document.URL")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>プロパティを {{domxref("DOMString")}} ではなく {{domxref("USVString")}} と定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM1", "level-one-html.html#attribute-URL", "Document.URL")}}</td>
-   <td>{{Spec2("DOM1")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">仕様書</th>
+      <th scope="col">状態</th>
+      <th scope="col">備考</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("DOM WHATWG", "#dom-document-url", "Document.URL")}}</td>
+      <td>{{Spec2("DOM WHATWG")}}</td>
+      <td>プロパティを {{domxref("DOMString")}} ではなく {{domxref("USVString")}} と定義</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
-
-<div>
-<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力したいのであれば、 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
+<h2 id="Browser_compatibility"">ブラウザーの互換性</h2>
 
 <p>{{Compat("api.Document.URL")}}</p>
-</div>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li>{{domxref("HTMLDocument")}}</li>
+	<li>同じ値を返す {{domxref("document.documentURI")}} プロパティ</li>
 </ul>
