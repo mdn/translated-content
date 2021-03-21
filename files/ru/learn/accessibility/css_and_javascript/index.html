@@ -25,31 +25,31 @@ original_slug: Learn/Доступность/CSS_and_JavaScript
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a basic understanding of HTML, CSS, and JavaScript, and understanding of <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">what accessibility is</a>.</td>
+   <th scope="row">Необходимые знания:</th>
+   <td>Базовая компьютерная грамотность, базовое понимание HTML, CSS и JavaScript, а также понимание <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">что такое доступность</a>.</td>
   </tr>
   <tr>
-   <th scope="row">Objective:</th>
-   <td>To gain familiarity with using CSS and JavaScript appropriately in your web documents to maximise accessibility and not detract from it.</td>
+   <th scope="row">Цель:</th>
+   <td>Ознакомиться со способами использования CSS и JavaScript таким образом, чтобы добиваться наилучшей возможной доступности.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="CSS_and_JavaScript_are_accessible">CSS and JavaScript are accessible?</h2>
+<h2 id="CSS_and_JavaScript_are_accessible">Доступны ли CSS и JavaScript?</h2>
 
-<p>CSS and JavaScript don't have the same immediate importance for accessibility as HTML, but they are still able to help or damage accessibility, depending on how they are used. To put it another way, it is important that you consider some best practice advice to make sure that your use of CSS and JavaScript doesn't ruin the accessibility of your documents.</p>
+<p>В сравнении с HTML, вклад CSS и JavaScript в доступность не настолько велик, однако, в зависимости от использования, они всё равно способны на неё повлиять. Иными словами, важно изучить некоторые рекомендации, чтобы CSS и JavaScript ненароком не ломали доступность ваших веб-страниц.</p>
 
 <h2 id="CSS">CSS</h2>
 
-<p>Let's start off by looking at CSS.</p>
+<p>Начнем с CSS.</p>
 
-<h3 id="Correct_semantics_and_user_expectation">Correct semantics and user expectation</h3>
+<h3 id="Correct_semantics_and_user_expectation">Правильная семантика и ожидаемое поведение</h3>
 
-<p>It is possible to use CSS to make any HTML element look like <em>anything</em>, but this doesn't mean that you should. As we frequently mentioned in our <a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> article, you should use the appropriate semantic element for the job, whenever possible. If you don't, it can cause confusion and usability issues for everyone, but particularly users with disabilities. Using correct semantics has a lot to do with user expectations — elements look and behave in certain ways, according to their functionality, and these common conventions are expected by users.</p>
+<p>С помощью CSS возможно заставить любой HTML-элемент выглядеть <em>как угодно</em>, однако это не означает, что делать так — правильно. Как мы часто упоминаем в статье <a href="/en-US/docs/Learn/Accessibility/HTML">HTML: Хорошая основа для доступности</a>, для каждой задачи всегда следует использовать соответствующий семантический элемент. Если не следовать данному правилу, то могут возникать проблемы и неудобства для всех, а в особенности для людей с ограниченными возможностями. Правильное использование семантики тесно связано с ожидаемым пользователем поведением — элементы выглядят и ведут себя определенным образом, в соответствии с их функциональностью.</p>
 
-<p>As an example, a screen reader user can't navigate a page via heading elements if the developer hasn't appropriately used heading elements to markup the content. By the same token, a heading loses its visual purpose if you style it so it doesn't look like a heading.</p>
+<p>Например, пользователь скринридера не сможет передвигаться по странице с помощью заголовков, если разработчик не разметит контент с помощью заголовков надлежащим образом. Аналогично, если заголовок стилизован так, что выглядит не как заголовок, то он теряет свое визуальное значение.</p>
 
-<p>The rule of thumb is that you can update the styling of a page feature to fit in your design, but don't change it so much that it no longer looks or behaves as expected. The following sections summarize the main HTML features to consider.</p>
+<p>Эмпирическое правило звучит следующим образом: стилизовать элементы страницы, подгоняя их по ваш дизайн, можно до той степени, пока они выглядят и ведут себя ожидаемым образом. В следующих разделах мы рассмотрим главные возможности HTML. </p>
 
 <h4 id="Standard_text_content_structure">"Standard" text content structure</h4>
 
