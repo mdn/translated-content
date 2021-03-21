@@ -37,7 +37,7 @@ translation_of: Web/API/CacheStorage/match
   <li><code>ignoreSearch</code>: {{domxref("Boolean")}} свойство. Определяет, следует ли игнорировать параметры запроса в строке url или нет.  Например, если установлено <code>true</code>, параметры <code>?value=bar</code> запроса <code>http://foo.com/?value=bar</code> будут проигнорированы во время сопоставления. Значением по умолчанию является <code>false</code>.</li>
   <li><code>ignoreMethod</code>: {{domxref("Boolean")}} свойство. Когда установлено <code>true</code>, предотвращает проверку <code>http</code> метода запроса {{domxref("Request")}}  (обычно разрешены  только <code>GET</code>  и <code>HEAD</code>.) По умолчанию установлено <code>false</code>.</li>
   <li><code>ignoreVary</code>: {{domxref("Boolean")}} свойство, определяющее, следует ли выполнять проверку заголовка <code>VARY.</code> Если установлено <code>true</code>, совпадения будут найдены, независимо от того, имеет ли {{domxref("Response")}} заголовок <code>VARY</code> или нет. По умолчанию установлено <code>false</code>.</li>
-  <li><code>cacheName</code>: Строка {{domxref("DOMString")}} - имя кэша для поиска.</li>
+  <li><code>cacheName</code>: Строка {{domxref("DOMString")}} - имя кеша для поиска.</li>
  </ul>
  </dd>
 </dl>
@@ -52,7 +52,7 @@ translation_of: Web/API/CacheStorage/match
 
 <ol>
  <li>Проверяем, совпадения для запроса в {{domxref("CacheStorage")}} используя {{domxref("CacheStorage.match","CacheStorage.match()")}}. Если совпадение найдено, возвращаем response.</li>
- <li>Если нет, открываем <code>v1</code> объект кэша, используя метод <code>open()</code>, добавляем изначальный запрос в кэш используя {{domxref("Cache.put","Cache.put()")}} и возвращаем клонированный объект запроса, используя <code>return response.clone()</code>. Это необходимо, потому что метод <code>put()</code> сохраняет в кэш тело запроса, изменяя, таким образом, изначальный запрос.</li>
+ <li>Если нет, открываем <code>v1</code> объект кеша, используя метод <code>open()</code>, добавляем изначальный запрос в кеш используя {{domxref("Cache.put","Cache.put()")}} и возвращаем клонированный объект запроса, используя <code>return response.clone()</code>. Это необходимо, потому что метод <code>put()</code> сохраняет в кеш тело запроса, изменяя, таким образом, изначальный запрос.</li>
  <li>Если произошла какая-либо ошибка (например, из-за проблем с сетью), возвращаем резервный ответ.</li>
 </ol>
 

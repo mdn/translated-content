@@ -95,7 +95,7 @@ translation_of: Tools/Network_Monitor
    <li><img alt="" src="https://mdn.mozillademos.org/files/10941/200.png" style="height: 17px; width: 17px;"> зелёный круг - для успеха (коды 2XX)</li>
    <li><img alt="" src="https://mdn.mozillademos.org/files/10945/300.png" style="height: 17px; width: 17px;"> оранжевый треугольник - для перенаправления (3XX)</li>
    <li><img alt="" src="https://mdn.mozillademos.org/files/10943/4-500.png" style="height: 17px; width: 17px;"> красный квадрат - для ошибок (4XX и 5XX)</li>
-   <li><img alt="" src="https://mdn.mozillademos.org/files/10947/cached.png" style="height: 17px; width: 17px;"> серая окружность - для ответов, которые получены из кэша браузера.</li>
+   <li><img alt="" src="https://mdn.mozillademos.org/files/10947/cached.png" style="height: 17px; width: 17px;"> серая окружность - для ответов, которые получены из кеша браузера.</li>
   </ul>
   Точный код отображён сразу после значка.</li>
  <li><strong>Метод (</strong><strong>Method</strong><strong>)</strong>: <a href="/ru/docs/Web/HTTP/Methods">HTTP-метод</a> запроса.</li>
@@ -114,7 +114,7 @@ translation_of: Tools/Network_Monitor
  <li><strong>Тип (</strong><strong>Type</strong><strong>)</strong>: <code>Content-type</code> ответа.</li>
  <li><strong>Куки</strong> (<strong>Cookies</strong>): Количество куки, связанных с запросом. (По умолчанию скрытая колонка. Новая в Firefox 55)</li>
  <li><strong>Set-Cookies</strong>: Количество куки, связанных с ответом. (По умолчанию скрытая колонка. Новая в Firefox 55)</li>
- <li><strong>Передано</strong> <strong>(Transferred)</strong>: число байт, которые фактически были переданы для загрузки ресурса. Это число будет меньше, чем <strong>Размер</strong>, если ресурс был упакован. Начиная с Firefox 47, если ресурс был получен из кэша <a href="/ru/docs/Web/API/Service_Worker_API">service worker</a>, то в этой ячейке будет отображено "service worker". Если значение получено из кэша браузера - то "кэшировано".</li>
+ <li><strong>Передано</strong> <strong>(Transferred)</strong>: число байт, которые фактически были переданы для загрузки ресурса. Это число будет меньше, чем <strong>Размер</strong>, если ресурс был упакован. Начиная с Firefox 47, если ресурс был получен из кеша <a href="/ru/docs/Web/API/Service_Worker_API">service worker</a>, то в этой ячейке будет отображено "service worker". Если значение получено из кеша браузера - то "кешировано".</li>
  <li><strong>Размер</strong> <strong>(Size)</strong>: размер переданного ресурса.</li>
 </ul>
 
@@ -304,7 +304,7 @@ translation_of: Tools/Network_Monitor
   </tr>
   <tr>
    <td><code>is</code></td>
-   <td><code>is:cached</code> и <code>is:from-cache</code> показывают только ресурсы, пришедшие из кэша.<br>
+   <td><code>is:cached</code> и <code>is:from-cache</code> показывают только ресурсы, пришедшие из кеша.<br>
     <code>is:running</code> показывает только ресурсы, передаваемые в настоящее время.</td>
    <td><code>is:cached</code><br>
     <code>-is:running</code></td>
@@ -525,7 +525,7 @@ translation_of: Tools/Network_Monitor
   </tr>
   <tr>
    <td>Получение (Receiving)</td>
-   <td>Время на чтение полного ответа с сервера (или из кэша).</td>
+   <td>Время на чтение полного ответа с сервера (или из кеша).</td>
   </tr>
  </tbody>
 </table>
@@ -577,7 +577,7 @@ translation_of: Tools/Network_Monitor
 
 <p>(Кроме того, если у вас только что открытый Сетевой монитор, и список запросов ещё пуст, то у вас будут "Часы" в главном окне.)</p>
 
-<p>Сетевой монитор загрузит сайт дважды: первый раз с пустым кэшем браузера, а второй - с заполненным. Это имитирует вход пользователя на сайт впервые и последующие посещения. Он показывает результаты обоих запусков бок о бок горизонтально, либо вертикально, если окно браузера сжатое:</p>
+<p>Сетевой монитор загрузит сайт дважды: первый раз с пустым кешем браузера, а второй - с заполненным. Это имитирует вход пользователя на сайт впервые и последующие посещения. Он показывает результаты обоих запусков бок о бок горизонтально, либо вертикально, если окно браузера сжатое:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12864/nm-performance.png" style="display: block; height: 1028px; margin-left: auto; margin-right: auto; width: 691px;"></p>
 

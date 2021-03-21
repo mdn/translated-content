@@ -5,7 +5,7 @@ translation_of: Web/HTTP/Status/304
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>Код "HTTP <strong>304 Not Modified</strong>" клиента указывает, что нет необходимости повторно передавать запрошенные ресурсы. Это неявное перенаправление на кэшированный ресурс. Это происходит, когда метод  {{glossary("safe")}}, например {{HTTPMethod("GET")}} или {{HTTPMethod("HEAD")}} запрос или когда запрос является условным и использует {{HTTPHeader("If-None-Match")}} или {{HTTPHeader("If-Modified-Since")}}.</p>
+<p>Код "HTTP <strong>304 Not Modified</strong>" клиента указывает, что нет необходимости повторно передавать запрошенные ресурсы. Это неявное перенаправление на кешированный ресурс. Это происходит, когда метод  {{glossary("safe")}}, например {{HTTPMethod("GET")}} или {{HTTPMethod("HEAD")}} запрос или когда запрос является условным и использует {{HTTPHeader("If-None-Match")}} или {{HTTPHeader("If-Modified-Since")}}.</p>
 
 <p>Если эквивалентный ответ {{HTTPStatus("200")}} <code>OK</code> включал {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}} и {{HTTPHeader("Vary")}}.</p>
 
