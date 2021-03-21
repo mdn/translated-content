@@ -27258,12 +27258,6 @@
       "SphinxKnight"
     ]
   },
-  "orphaned/Web/Security/Information_Security_Basics": {
-    "modified": "2019-03-23T22:46:47.760Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Learn/Common_questions/Using_Github_pages": {
     "modified": "2020-07-16T22:35:51.735Z",
     "contributors": [
@@ -31188,32 +31182,6 @@
       "RoyalPanda"
     ]
   },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Distribution_options/Add-ons_for_desktop_apps": {
-    "modified": "2019-09-30T14:55:22.937Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Distribution_options/Add-ons_in_the_enterprise": {
-    "modified": "2019-07-08T08:21:59.137Z",
-    "contributors": [
-      "hellosct1",
-      "JeffD"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Distribution_options": {
-    "modified": "2019-07-08T08:22:26.722Z",
-    "contributors": [
-      "hellosct1",
-      "SphinxKnight"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Distribution_options/Sideloading_add-ons": {
-    "modified": "2019-07-08T08:20:57.253Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/API/proxy/settings": {
     "modified": "2020-10-15T22:04:59.888Z",
     "contributors": [
@@ -31372,12 +31340,6 @@
       "wbamberg"
     ]
   },
-  "orphaned/Mozilla/Add-ons/WebExtensions/API/userScripts/APIScript": {
-    "modified": "2019-10-13T04:23:03.445Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
   "conflicting/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister": {
     "modified": "2020-10-15T22:23:34.113Z",
     "contributors": [
@@ -31390,36 +31352,11 @@
       "hellosct1"
     ]
   },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Best_practices_for_updating_your_extension": {
-    "modified": "2019-07-05T09:31:56.338Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Choose_a_Firefox_version_for_web_extension_develop": {
-    "modified": "2019-10-12T17:29:13.794Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK": {
-    "modified": "2019-05-19T07:28:28.529Z",
-    "contributors": [
-      "hellosct1",
-      "SphinxKnight"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs": {
     "modified": "2020-10-15T20:55:07.811Z",
     "contributors": [
       "hellosct1",
       "SphinxKnight"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Developer_accounts": {
-    "modified": "2019-10-12T19:14:11.531Z",
-    "contributors": [
-      "hellosct1"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension": {
@@ -31431,19 +31368,6 @@
   },
   "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)": {
     "modified": "2019-03-18T21:02:43.036Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions": {
-    "modified": "2019-07-03T12:00:26.344Z",
-    "contributors": [
-      "hellosct1",
-      "regseb"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Test_permission_requests": {
-    "modified": "2019-05-18T18:06:34.313Z",
     "contributors": [
       "hellosct1"
     ]
@@ -31460,12 +31384,6 @@
       "hellosct1",
       "NerOcrO",
       "gritchou"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/User_experience_best_practices": {
-    "modified": "2019-05-18T19:46:03.001Z",
-    "contributors": [
-      "hellosct1"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools": {
@@ -31489,14 +31407,6 @@
     "modified": "2019-07-03T12:00:39.099Z",
     "contributors": [
       "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox": {
-    "modified": "2019-03-28T06:57:14.853Z",
-    "contributors": [
-      "hellosct1",
-      "zecakeh",
-      "fbessou"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard": {
@@ -31550,44 +31460,8 @@
       "hellosct1"
     ]
   },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on": {
-    "modified": "2019-05-19T03:42:46.903Z",
-    "contributors": [
-      "hellosct1",
-      "TheSirC"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Package_your_extension_": {
-    "modified": "2019-09-22T20:09:03.419Z",
-    "contributors": [
-      "hellosct1",
-      "zecakeh",
-      "adorsaz",
-      "ValentinG",
-      "romainneutron"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/What_next_": {
     "modified": "2020-05-24T10:03:42.606Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/What_does_review_rejection_mean_to_users": {
-    "modified": "2019-09-30T16:27:32.411Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Security_best_practices": {
-    "modified": "2019-05-18T18:20:19.136Z",
-    "contributors": [
-      "hellosct1",
-      "JNa0"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Testing_persistent_and_restart_features": {
-    "modified": "2019-05-19T02:44:57.977Z",
     "contributors": [
       "hellosct1"
     ]
@@ -31623,12 +31497,6 @@
       "hellosct1",
       "chrisspb",
       "Outpox"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/user_interface/Accessibility_guidelines": {
-    "modified": "2019-10-12T19:02:53.249Z",
-    "contributors": [
-      "hellosct1"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages": {
@@ -45419,14 +45287,6 @@
       "AshfaqHossain",
       "Mgjbot",
       "BenoitL"
-    ]
-  },
-  "orphaned/Web/MathML/Element/mglyph": {
-    "modified": "2020-10-15T21:23:58.877Z",
-    "contributors": [
-      "SphinxKnight",
-      "Delapouite",
-      "Goofy"
     ]
   },
   "Web/API/Document/styleSheets": {
