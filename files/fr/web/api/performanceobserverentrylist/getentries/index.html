@@ -15,7 +15,7 @@ translation_of: Web/API/PerformanceObserverEntryList/getEntries
 <p class="summary">La méthode <strong><code>getEntries()</code></strong> de l'interface {{domxref("PerformanceObserverEntryList")}} retourne une liste d'objets explicitement <em>observés</em> d'{{domxref("PerformanceEntry","entrées de performance","",1)}} pour un filtre donné. Les membres de la liste sont déterminés par l'ensemble des {{domxref("PerformanceEntry.entryType","types d'entrée","",1)}} spécifiés dans l'appel à la méthode {{domxref("PerformanceObserver.observe", "observe()")}}. La liste est disponible dans la fonction de rappel de l'observateur (en tant que premier paramètre de la fonction de rappel).</p>
 
 <div class="notecard note">
-  <p>Remarque : cette interface est exposée à {{domxref("Window")}} et {{domxref("Worker")}}.</p>
+  <p><strong>Remarque :</strong> Cette interface est exposée à {{domxref("Window")}} et {{domxref("Worker")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntaxe</h2>
@@ -34,8 +34,8 @@ translation_of: Web/API/PerformanceObserverEntryList/getEntries
   <dd>Est un dictionnaire <code>PerformanceEntryFilterOptions</code>, comportant les champs suivants :
     <ul>
       <li><code>"name"</code>, le nom d'une entrée de performance.</li>
-      <li><code>"entryType"</code>, le type d'entrée. Les types d'entrée valides sont énumérés dans la méthode {{domxref("PerformanceEntry.entryType")}}.</li>
-      <li><code>"initiatorType"</code>, le type de la ressource initiatrice (par exemple un élément HTML). Les valeurs sont définies par l'interface {{domxref("PerformanceResourceTiming.initiatorType")}}.</li>
+      <li><code>"entryType"</code>, le type d'entrée. Les types d'entrée valides sont énumérés dans la propriété {{domxref("PerformanceEntry.entryType")}}.</li>
+      <li><code>"initiatorType"</code>, le type de la ressource initiatrice (par exemple un élément HTML). Les valeurs sont définies par la propriété {{domxref("PerformanceResourceTiming.initiatorType")}}.</li>
     </ul>
     Ce paramètre n'est actuellement pas pris en charge par Chrome ou Opera.
   </dd>

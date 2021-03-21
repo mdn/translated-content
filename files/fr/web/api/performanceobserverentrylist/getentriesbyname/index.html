@@ -15,7 +15,7 @@ translation_of: Web/API/PerformanceObserverEntryList/getEntriesByName
 <p class="summary">La méthode <strong><code>getEntriesByName()</code></strong> de l'interface {{domxref("PerformanceObserverEntryList")}} retourne une liste d'objets {{domxref("PerformanceEntry","d'entrée de performance","",1)}} explicitement <em>observés</em> pour un <em>{{domxref("PerformanceEntry.name","name")}}</em> et <em>{{domxref("PerformanceEntry.entryType","entryType")}}</em>. Les membres de la liste sont déterminés par l'ensemble des {{domxref("PerformanceEntry.entryType","types d'entrées","",1)}} spécifiés dans l'appel à la méthode {{domxref("PerformanceObserver.observe", "observe()")}}. La liste est disponible dans la fonction de rappel de l'observateur (en tant que premier paramètre de la fonction de rappel).</p>
 
 <div class="notecard note">
-  <p>Remarque : cette interface est exposée à {{domxref("Window")}} et {{domxref("Worker")}}.</p>
+  <p><strong>Remarque :</strong> Cette interface est exposée à {{domxref("Window")}} et {{domxref("Worker")}}.</p>
 </div>
 
 <h2 id="Syntax">Syntaxe</h2>
@@ -26,9 +26,9 @@ translation_of: Web/API/PerformanceObserverEntryList/getEntriesByName
 
 <dl>
   <dt><em><code>name</code></em></dt>
-  <dd>Une chaîne de caractère {{domxref("DOMString")}} représentant le nom de l'entrée à récupérer.</dd>
+  <dd>Une chaîne de caractères {{domxref("DOMString")}} représentant le nom de l'entrée à récupérer.</dd>
   <dt><em><code>type</code></em> {{optional_inline}}</dt>
-  <dd>Une chaîne de caractère {{domxref("DOMString")}} représentant le type d'entrée à récupérer tel que « <code>mark</code> ». Les types d'entrée valides sont énumérés dans {{domxref("PerformanceEntry.entryType")}}.</dd>
+  <dd>Une chaîne de caractères {{domxref("DOMString")}} représentant le type d'entrée à récupérer tel que « <code>mark</code> ». Les types d'entrée valides sont énumérés dans {{domxref("PerformanceEntry.entryType")}}.</dd>
 </dl>
 
 <h3 id="Return_Value">Valeur de retour</h3>
