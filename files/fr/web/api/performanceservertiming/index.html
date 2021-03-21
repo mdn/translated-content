@@ -1,0 +1,98 @@
+---
+title: PerformanceServerTiming
+slug: Web/API/PerformanceServerTiming
+tags:
+  - API
+  - Interface
+  - Reference
+  - Performance Web
+  - Resource Timing API
+translation_of: Web/API/PerformanceServerTiming
+---
+<div>{{APIRef("Resource Timing API")}} {{securecontext_header}}</div>
+
+<p class="summary">L'interface <strong><code>PerformanceServerTiming</code></strong> présente des métriques de serveur qui sont envoyées avec la réponse dans l'en-tête {{HTTPHeader("Server-Timing")}} dans l'en-tête HTTP.</p>
+
+<p>Cette interface est limitée à la même origine, mais vous pouvez utiliser l'en-tête {{HTTPHeader("Timing-Allow-Origin")}} pour spécifier les domaines qui sont autorisés à accéder aux paramètres du serveur. Notez que cette interface n'est disponible que dans des contextes sécurisés (HTTPS) dans certains navigateurs.</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Properties">Propriétés</h2>
+
+<dl>
+  <dt>{{domxref('PerformanceServerTiming.description')}}{{readonlyInline}}</dt>
+  <dd>Une chaîne de caractères {{domxref("DOMString")}} de la description métrique spécifiée par le serveur, ou une chaîne vide.</dd>
+  <dt>{{domxref('PerformanceServerTiming.duration')}}{{readonlyInline}}</dt>
+  <dd>Un <code>double</code> qui contient la durée de la métrique spécifiée par le serveur, ou la valeur <code>0.0</code>.</dd>
+  <dt>{{domxref('PerformanceServerTiming.name')}}{{readonlyInline}}</dt>
+  <dd>Une chaîne de caractères {{domxref("DOMString")}} du nom de la métrique spécifiée par le serveur.</dd>
+</dl>
+
+<h2 id="Methods">Methods</h2>
+
+<dl>
+  <dt>{{domxref('PerformanceServerTiming.toJSON()')}}</dt>
+  <dd>Retourne une chaîne de caractères {{domxref("DOMString")}} qui est la représentation JSON de l'objet <code>PerformanceServerTiming</code>.</dd>
+</dl>
+
+<h2 id="Example">Exemple</h2>
+
+<p>Étant donné un serveur qui envoie l'en-tête {{HTTPHeader("Server-Timing")}}, par exemple un serveur node.js comme celui-ci :</p>
+
+<pre class="brush: js">const <var>http</var> = require('http');
+
+function requestHandler(<var>request</var>, <var>response</var>) {
+  const <var>headers</var> = {
+    'Server-Timing': `
+      cache;desc="Cache Read";dur=23.2,
+      db;dur=53,
+      app;dur=47.2
+    `.replace(/\n/g, '')
+  };
+  response.writeHead(200, headers);
+  response.write('');
+  return setTimeout(_ =&gt; {
+    response.end();
+  }, 1000)
+};
+
+http.createServer(requestHandler).listen(3000).on('error', console.error);</pre>
+
+<p>Les entrées <code>PerformanceServerTiming</code> sont désormais observables depuis JavaScript via la propriété {{domxref("PerformanceResourceTiming.serverTiming")}} :</p>
+
+<pre class="brush: js">let <var>entries</var> = performance.getEntriesByType('resource');
+console.log(entries[0].serverTiming);
+// 0: PerformanceServerTiming {name: "cache", duration: 23.2, description: "Cache Read"}
+// 1: PerformanceServerTiming {name: "db", duration: 53, description: ""}
+// 2: PerformanceServerTiming {name: "app", duration: 47.2, description: ""}
+</pre>
+
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Server Timing','#the-performanceservertiming-interface', 'PerformanceServerTiming')}}</td>
+      <td>{{Spec2('Server Timing')}}</td>
+      <td>Définition initiale.</td>
+    </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.PerformanceServerTiming")}}</p>
+
+<h2 id="See_also">Voir aussi</h2>
+
+<ul>
+  <li>{{HTTPHeader("Server-Timing")}}</li>
+  <li>{{domxref("PerformanceResourceTiming.serverTiming")}}</li>
+</ul>
