@@ -101,7 +101,7 @@ app.use('/wiki', wiki);</code></pre>
 
 <h3 id="Функции_Route">Функции Route</h3>
 
-<p>В модуле выше определена пара типовых функций маршрута. Маршрут "about" (ещё раз показан ниже) определён при помощи метода <code>Router.get()</code>, который отвечает только на  HTTP GET-запросы. Первый аргумент метода - URL-путь, а второй -  колбэк-функция, которая будет вызвана, если получен HTTP GET-запрос с указанным путем.</p>
+<p>В модуле выше определена пара типовых функций маршрута. Маршрут "about" (ещё раз показан ниже) определён при помощи метода <code>Router.get()</code>, который отвечает только на  HTTP GET-запросы. Первый аргумент метода - URL-путь, а второй -  колбэк-функция, которая будет вызвана, если получен HTTP GET-запрос с указанным путём.</p>
 
 <pre class="brush: js"><code>router.get('/about', function (req, res) {
   res.send('About this wiki');
@@ -121,7 +121,7 @@ app.use('/wiki', wiki);</code></pre>
 
 <h3 id="HTTP_глаголы_(действия)">HTTP глаголы (действия)</h3>
 
-<p>Рассмотренный пример использует метод <code>Router.get()</code> для ответа на  HTTP GET- запросы с указанным путем.</p>
+<p>Рассмотренный пример использует метод <code>Router.get()</code> для ответа на  HTTP GET- запросы с указанным путём.</p>
 
 <p>Кроме того, <code>Router</code> обеспечивает также методы маршрутизации для других HTTP глаголов, которые обычно используются точно таким же способом: <code>post()</code>, <code>put()</code>, <code>delete()</code>, <code>options()</code>, <code>trace()</code>, <code>copy()</code>, <code>lock()</code>, <code>mkcol()</code>, <code>move()</code>, <code>purge()</code>, <code>propfind()</code>, <code>proppatch()</code>, <code>unlock()</code>, <code>report()</code>, ​​​​​​ <code>mkactivity()</code>, <code>checkout()</code>, <code>merge()</code>, <code>m-</code><code>search()</code>, <code>notify()</code>, <code>subscribe()</code>, <code>unsubscribe()</code>, <code>patch()</code>, <code>search()</code>, и <code>connect()</code>.</p>
 
