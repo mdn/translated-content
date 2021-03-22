@@ -22,12 +22,12 @@ translation_of: MDN/Contribute/GitHub_beginners
 <ul>
   <li>Git は<em>バージョン管理システム</em>のツールで、開発ワークフローには欠かせないものです。複数の開発者が同じコードベースで、互いの邪魔にならないように作業したり、コードベースをリモートの場所に安全に保管したり、必要に応じてコードを以前の状態に戻したりといったことができます。</li>
   <li>GitHub は、保存されたコードベースを操作するための便利なツールを Git の上に提供し、コードベースを保存するためのサーバースペースの提供も行うウェブアプリケーションです。この分野の他のアプリケーションである <a href="https://about.gitlab.com/">GitLab</a> や <a href="https://bitbucket.org/">Bitbucket</a> などと同様の機能を持っています。</li>
-  <li>それぞれのコードベースは、リポジトリ (<em>repository</em> または <em>repo</em>) と呼ばれるコンテナーに格納されます。</li>
-  <li>リポジトリに変更を加える最小限の手順は次の通りです。
+  <li>それぞれのコードベースは、リポジトリー (<em>repository</em> または <em>repo</em>) と呼ばれるコンテナーに格納されます。</li>
+  <li>リポジトリーに変更を加える最小限の手順は次の通りです。
     <ul>
-      <li>そのリポジトリの自分用のコピーを作成する (フォーク (<em>fork</em>) といいます)。</li>
-      <li>リポジトリのフォークに別なバージョンのコードを作成し (ブランチ (<em>branch</em>) といいます)、その別なバージョンに変更を加える。</li>
-      <li>プルリクエスト (<em>pull request</em>) によって元のリポジトリのコピーに変更を加えることを提案する。このガイドでは、これらの手順をすべて学ぶことができます。</li>
+      <li>そのリポジトリーの自分用のコピーを作成する (フォーク (<em>fork</em>) といいます)。</li>
+      <li>リポジトリーのフォークに別なバージョンのコードを作成し (ブランチ (<em>branch</em>) といいます)、その別なバージョンに変更を加える。</li>
+      <li>プルリクエスト (<em>pull request</em>) によって元のリポジトリーのコピーに変更を加えることを提案する。このガイドでは、これらの手順をすべて学ぶことができます。</li>
     </ul>
   </li>
 </ul>
@@ -44,7 +44,7 @@ translation_of: MDN/Contribute/GitHub_beginners
 
 <h2 id="initial_setup">初期設定</h2>
 
-<p>特定のリポジトリでの作業を開始する前に、以下の手順を実行してください。</p>
+<p>特定のリポジトリーでの作業を開始する前に、以下の手順を実行してください。</p>
 
 <ol>
   <li>Git をコンピューターにインストールしてください。 <a href="https://git-scm.com/downloads">Git ダウンロードページ</a>にアクセスして、自分のコンピューター用の最新バージョンをダウンロードし、インストールしてください。 Windows ユーザーの場合は、 <a href="https://gitforwindows.org/">Git for Windows</a> パッケージに Gitbash が含まれているのでインストールしてください。</li>
@@ -54,8 +54,8 @@ translation_of: MDN/Contribute/GitHub_beginners
       <li>Node.js をインストールしたら、 <code>npm install --global yarn</code> を実行して yarn をインストールしてください。</li>
     </ol>
   </li>
-  <li>すべての Git リポジトリを保存するための別のディレクトリを、コンピューターのどこか、コマンドラインで簡単に見つけて移動できるところに作成します。 mdn-git というディレクトリを home/user ディレクトリの中に作成するといいでしょう。</li>
-  <li>まだない場合は、 <a href="https://github.com/join">GitHub アカウントをサインアップ</a>してください。 MDN のリポジトリに貢献するのに必要です。</li>
+  <li>すべての Git リポジトリーを保存するための別のディレクトリーを、コンピューターのどこか、コマンドラインで簡単に見つけて移動できるところに作成します。 mdn-git というディレクトリーを home/user ディレクトリーの中に作成するといいでしょう。</li>
+  <li>まだない場合は、 <a href="https://github.com/join">GitHub アカウントをサインアップ</a>してください。 MDN のリポジトリーに貢献するのに必要です。</li>
 </ol>
 
 <h3 id="setting_up_ssh_authentication_on_github">GitHub での SSH 認証の設定</h3>
@@ -66,37 +66,37 @@ translation_of: MDN/Contribute/GitHub_beginners
 
 <p>これを行わなくても MDN に貢献することはできますが、 GitHub とやり取りするたびに (例えば、後で触れるようにプルリクエストを送信するたびに) ユーザー名とパスワードを入力しなければならなくなります。</p>
 
-<h2 id="setting_up_to_work_on_a_specific_repo">特定のリポジトリで作業するためのセットアップ</h2>
+<h2 id="setting_up_to_work_on_a_specific_repo">特定のリポジトリーで作業するためのセットアップ</h2>
 
-<p>MDN のさまざまなタスクに取り組む際には、いくつかの異なるリポジトリを更新する必要がありますが (<a href="/ja/docs/MDN/Contribute/Where_is_everything">MDN 上のものはどこにあるのか - リポジトリのガイド</a>を参照)、作業するどのリポジトリでも、より簡単で一貫した作業を行うために従うべきセットアップ手順がいくつかあります。</p>
+<p>MDN のさまざまなタスクに取り組む際には、いくつかの異なるリポジトリーを更新する必要がありますが (<a href="/ja/docs/MDN/Contribute/Where_is_everything">MDN 上のものはどこにあるのか - リポジトリーのガイド</a>を参照)、作業するどのリポジトリーでも、より簡単で一貫した作業を行うために従うべきセットアップ手順がいくつかあります。</p>
 
 <h3 id="forking_and_cloning">フォークとクローン</h3>
 
 <p><em>フォーク</em>と<em>クローン</em>という二つの用語は、 Git の世界ではよく遭遇するものです。</p>
 
 <ul>
-  <li>フォークは GitHub 上でリポジトリの自分用のコピーを作成するという意味です。</li>
-  <li>クローンは作業用のリポジトリのローカルコピーを作成するという意味です (すなわちローカルのハードディスク上に)。</li>
+  <li>フォークは GitHub 上でリポジトリーの自分用のコピーを作成するという意味です。</li>
+  <li>クローンは作業用のリポジトリーのローカルコピーを作成するという意味です (すなわちローカルのハードディスク上に)。</li>
 </ul>
 
-<p>この二つは個別に行うことができますが、実際には他人のプロジェクトに協力する場合、ほとんどは一緒に行うことになるでしょう。まず、作業したいと思っている各リポジトリのフォークを作成してください。これは、そのリポジトリのメインバージョンに変更要求を出すために必要となります (プルリクエストの作成方法については後ほど説明します)。セキュリティ上の理由から、メインバージョンのリポジトリに直接変更を加えることはできません。</p>
+<p>この二つは個別に行うことができますが、実際には他人のプロジェクトに協力する場合、ほとんどは一緒に行うことになるでしょう。まず、作業したいと思っている各リポジトリーのフォークを作成してください。これは、そのリポジトリーのメインバージョンに変更要求を出すために必要となります (プルリクエストの作成方法については後ほど説明します)。セキュリティ上の理由から、メインバージョンのリポジトリーに直接変更を加えることはできません。</p>
 
-<p>今ここで <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> をフォークしてみましょう。いつか必ずこのリポジトリに貢献することになるでしょう。以下の手順に従ってください。</p>
+<p>今ここで <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> をフォークしてみましょう。いつか必ずこのリポジトリーに貢献することになるでしょう。以下の手順に従ってください。</p>
 
 <ol>
   <li>
-    <p>content リポジトリのページの右上にある Fork ボタンを探して押してください。</p>
+    <p>content リポジトリーのページの右上にある Fork ボタンを探して押してください。</p>
 
     <p><img src="fork-button.png" alt="Fork と書かれたボタン、その隣に 609 という数値がある"></p>
   </li>
   <li>
-    <p>リポジトリをどこにフォークするかを尋ねるモーダルウィンドウが表示されます。個人の GitHub アカウントを選択してください。</p>
+    <p>リポジトリーをどこにフォークするかを尋ねるモーダルウィンドウが表示されます。個人の GitHub アカウントを選択してください。</p>
 
     <p>"Forking mdn/content. It should only take a few seconds." というようなメッセージが表示されます。 GitHub がフォークを完了すると、ブラウザーは新しいフォークのページにリダイレクトされます。たとえば、私がフォークした <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> は <a href="https://github.com/chrisdavidmills/content">https://github.com/chrisdavidmills/content</a> で利用できます。</p>
   </li>
 </ol>
 
-<p>リポジトリをフォークしたら、今度はフォークしたものをローカルにクローンしましょう。これは次のように行います。</p>
+<p>リポジトリーをフォークしたら、今度はフォークしたものをローカルにクローンしましょう。これは次のように行います。</p>
 
 <ol>
   <li>
@@ -111,7 +111,7 @@ translation_of: MDN/Contribute/GitHub_beginners
     <p>上で説明したように、 SSH 認証を設定した場合は "SSH" タブをクリックし、ボックス内のテキストフィールドから <code>git@github.com:<em>&lt;ユーザー名&gt;</em>/content.git</code> の URL をコピーしてください。 SSH 認証を設定していない場合は、代わりに "HTTPS" タブのテキストフィールドから <code>https://github.com/<em>&lt;ユーザー名&gt;</em>/content.git</code> のような URL をコピーしてください。</p>
   </li>
   <li>
-    <p>そして自分のコンピューターでコマンドラインを開き、 cd コマンドで先ほど git リポジトリのローカルのクローンを保存するために設定したディレクトリに移動します。</p>
+    <p>そして自分のコンピューターでコマンドラインを開き、 cd コマンドで先ほど git リポジトリーのローカルのクローンを保存するために設定したディレクトリーに移動します。</p>
 
     <pre class="brush: bash">cd git</pre>
   </li>
@@ -126,36 +126,36 @@ translation_of: MDN/Contribute/GitHub_beginners
   </li>
 </ol>
 
-<p>これで git ディレクトリの中に content ディレクトリができ、そこにリポジトリの内容が入っているはずです。</p>
+<p>これで git ディレクトリーの中に content ディレクトリーができ、そこにリポジトリーの内容が入っているはずです。</p>
 
-<h3 id="setting_up_a_remote_to_point_to_the_main_version_of_the_repo">リポジトリのメインバージョンを指すようリモートを設定する</h3>
+<h3 id="setting_up_a_remote_to_point_to_the_main_version_of_the_repo">リポジトリーのメインバージョンを指すようリモートを設定する</h3>
 
-<p>次に進む前の最後の作業として、リモートを設定してメインバージョンのリポジトリを指すようにしましょう。この例では <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> とします。リモートとは基本的に、GitHub 上の特定のリモートリポジトリの場所を指すものです。後述するように、ローカルのクローンを最新のメインリポジトリに更新するために最もよく使われます。</p>
+<p>次に進む前の最後の作業として、リモートを設定してメインバージョンのリポジトリーを指すようにしましょう。この例では <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> とします。リモートとは基本的に、GitHub 上の特定のリモートリポジトリーの場所を指すものです。後述するように、ローカルのクローンを最新のメインリポジトリーに更新するために最もよく使われます。</p>
 
 <p>リモートの設定は、次のように <code>git remote add</code> コマンドで行います。</p>
 
-<pre class="brush: bash">git remote add <em>リモート名</em> <em>指す先のリポジトリ</em></pre>
+<pre class="brush: bash">git remote add <em>リモート名</em> <em>指す先のリポジトリー</em></pre>
 
 <ul>
-  <li><em>リモート名</em> は自分で決めた名前で、後にリモートを参照するために使用されます。同じ目的を持つ異なるリポジトリ間では、一貫したリモート名にこだわるのと良いでしょう。同じリモート名であれば、どこでも同じことができ、混乱することも少なくなります。例えば、自分のバージョンをフォークしたリポジトリのメインバージョンは「upstream (上流) リポジトリ」と呼ばれることが多く、そのためよく "upstream" がリモートの上流の場所を表す名前として使われます。私は通常、上流のリモートを "mozilla" と呼んでいますが、これは Mozilla のメインのリポジトリを指していることを示すためです。</li>
-  <li><em>指す先のリポジトリ</em> は、指す先の SSH (またはHTTPS) の URL で、先ほどフォークのクローンを作ったときと同じ方法で取得します。</li>
+  <li><em>リモート名</em> は自分で決めた名前で、後にリモートを参照するために使用されます。同じ目的を持つ異なるリポジトリー間では、一貫したリモート名にこだわるのと良いでしょう。同じリモート名であれば、どこでも同じことができ、混乱することも少なくなります。例えば、自分のバージョンをフォークしたリポジトリーのメインバージョンは「upstream (上流) リポジトリー」と呼ばれることが多く、そのためよく "upstream" がリモートの上流の場所を表す名前として使われます。私は通常、上流のリモートを "mozilla" と呼んでいますが、これは Mozilla のメインのリポジトリーを指していることを示すためです。</li>
+  <li><em>指す先のリポジトリー</em> は、指す先の SSH (またはHTTPS) の URL で、先ほどフォークのクローンを作ったときと同じ方法で取得します。</li>
 </ul>
 
 <p>したがって、リモートを追加するには以下のようにします。</p>
 
 <ol>
   <li>
-    <p>github.com のリポジトリのメインバージョンのページへ行き (この例では <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> とします)、必要に応じて "Code" ポップアップから SSH または HTTPS の URL を取得します。</p>
+    <p>github.com のリポジトリーのメインバージョンのページへ行き (この例では <a href="https://github.com/mdn/content">https://github.com/mdn/content</a> とします)、必要に応じて "Code" ポップアップから SSH または HTTPS の URL を取得します。</p>
   </li>
   <li>
-    <p>コマンドラインから、 <code>cd</code> で自分の content ディレクトリに移動します。</p>
+    <p>コマンドラインから、 <code>cd</code> で自分の content ディレクトリーに移動します。</p>
 
     <pre class="brush: bash">cd content</pre>
   </li>
   <li>
-    <p>次のようなコマンドを、 <em>リモート名</em> と <em>指す先のリポジトリ</em> を適切に置き換えて実行してください。</p>
+    <p>次のようなコマンドを、 <em>リモート名</em> と <em>指す先のリポジトリー</em> を適切に置き換えて実行してください。</p>
 
-    <pre class="brush: bash">git remote add <em>リモート名</em> <em>指す先のリポジトリ</em></pre>
+    <pre class="brush: bash">git remote add <em>リモート名</em> <em>指す先のリポジトリー</em></pre>
 
     <p>したがって、例えば私は SSH の URL を使用してリモートの "mozilla" を呼び出したので、次のようにしました。</p>
 
@@ -170,15 +170,15 @@ mozilla    git@github.com:mdn/content.git (push)
 origin    git@github.com:chrisdavidmills/content.git (fetch)
 origin    git@github.com:chrisdavidmills/content.git (push)</pre>
 
-<h2 id="preparing_to_make_a_change_to_the_repo">リポジトリに変更を加えるための準備</h2>
+<h2 id="preparing_to_make_a_change_to_the_repo">リポジトリーに変更を加えるための準備</h2>
 
 <p>これで、ローカルのフォーククローンで作業できるようになりましたが、新しい変更を行う前に実行しておくべき一連のコマンドがあります。</p>
 
 <h3 id="switch_to_the_main_branch">メインブランチへの切り替え</h3>
 
-<p>それぞれのリポジトリにはいくつかの異なるブランチがあり、これは基本的に同じリポジトリの中にあるコードベースの異なるバージョンです。つまり、コードベースに変更を加えるたびに、別のブランチで変更を加え、まずそこでテストしてから、コードのメインコピーに変更を反映させるという考え方です。</p>
+<p>それぞれのリポジトリーにはいくつかの異なるブランチがあり、これは基本的に同じリポジトリーの中にあるコードベースの異なるバージョンです。つまり、コードベースに変更を加えるたびに、別のブランチで変更を加え、まずそこでテストしてから、コードのメインコピーに変更を反映させるという考え方です。</p>
 
-<p>コンテンツリポジトリのメインブランチは "main" と呼ばれています (他のリポジトリでは "master" などと呼ばれているかもしれません。その場合は、以下に示すすべてのコマンドでその名前を読み替える必要があります)。リポジトリをクローンしたばかりのときは既定ででこのブランチにいることになりますが、すでに作業を終えている場合は別のブランチにいるかもしれません。
+<p>コンテンツリポジトリーのメインブランチは "main" と呼ばれています (他のリポジトリーでは "master" などと呼ばれているかもしれません。その場合は、以下に示すすべてのコマンドでその名前を読み替える必要があります)。リポジトリーをクローンしたばかりのときは既定ででこのブランチにいることになりますが、すでに作業を終えている場合は別のブランチにいるかもしれません。
 
 何か作業をする前に、次のコマンドを実行してメインブランチに切り替えるようにしましょう。
 
@@ -187,14 +187,14 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
 <div class="notecard note">
   <h4>注</h4>
 
-  <p>他のチュートリアルで、リポジトリのブランチを変更するのに <code>git checkout</code> を使っているのを見たことがあるかもしれません。このチュートリアルでは、より新しい <code>git switch</code> コマンドをお勧めします。これは純粋にブランチを変更するために設計されたもので、失敗する可能性が低いからです。これらのコマンドの関連性や違いに興味がある方は、 <a href="https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout">Highlights from Git 2.23 > Experimental alternatives for git checkout</a> が良くまとまっています。</p>
+  <p>他のチュートリアルで、リポジトリーのブランチを変更するのに <code>git checkout</code> を使っているのを見たことがあるかもしれません。このチュートリアルでは、より新しい <code>git switch</code> コマンドをお勧めします。これは純粋にブランチを変更するために設計されたもので、失敗する可能性が低いからです。これらのコマンドの関連性や違いに興味がある方は、 <a href="https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout">Highlights from Git 2.23 > Experimental alternatives for git checkout</a> が良くまとまっています。</p>
 </div>
 
 <h3 id="update_your_main_branch">自分のメインブランチの更新</h3>
 
-<p>次は、メインブランチを更新して、メインリポジトリのメインブランチと同じ内容になるようにします。 content リポジトリは数多くの貢献者によって毎日何度も更新されているので、これをやらないとバージョンが古くなってしまい、更新を投稿する際に問題が発生します。ここで、リモートが役に立つのです。</p>
+<p>次は、メインブランチを更新して、メインリポジトリーのメインブランチと同じ内容になるようにします。 content リポジトリーは数多くの貢献者によって毎日何度も更新されているので、これをやらないとバージョンが古くなってしまい、更新を投稿する際に問題が発生します。ここで、リモートが役に立つのです。</p>
 
-<p>リポジトリを更新するには次のようにします。</p>
+<p>リポジトリーを更新するには次のようにします。</p>
 
 <ol>
   <li>
@@ -207,7 +207,7 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
     <pre class="brush: bash">git fetch mozilla</pre>
   </li>
   <li>
-    <p>次に、自分のメインブランチの内容を、リモートリポジトリのメインブランチに置き換えます。いろいろな方法がありますが、私は <code>rebase</code> コマンドをよく使います。</p>
+    <p>次に、自分のメインブランチの内容を、リモートリポジトリーのメインブランチに置き換えます。いろいろな方法がありますが、私は <code>rebase</code> コマンドをよく使います。</p>
 
     <pre class="brush: bash">git rebase <em>リモート名</em>/<em>メインブランチ名</em></pre>
 
@@ -266,7 +266,7 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
 
 <p>前の節では、フォークに新しいブランチを作成する方法を説明しましたが、現在はリモートバージョンのフォークにしか存在していません。このブランチで作業をするには、それを自分のローカルバージョンに取り込む必要があります。</p>
 
-<p>これを行うには、端末に戻って、作業しているリポジトリのディレクトリ (この例では <code>content</code>) の中にいることを確認してください。</p>
+<p>これを行うには、端末に戻って、作業しているリポジトリーのディレクトリー (この例では <code>content</code>) の中にいることを確認してください。</p>
 
 <ol>
   <li>リモートで変更した内容をローカルのクローンに取り込むには、 <code>git pull</code> コマンドを実行してください。</li>
@@ -279,7 +279,7 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
 <pre>Branch 'test-branch' set up to track remote branch 'test-branch' from 'origin'.
 Switched to a new branch 'test-branch'</pre>
 
-<p>なお、どのブランチにいるのかなど、自分のリポジトリの状態は <code>git status</code> コマンドを実行すればいつでも確認できます。このコマンドを実行すると、git は次のように表示します。</p>
+<p>なお、どのブランチにいるのかなど、自分のリポジトリーの状態は <code>git status</code> コマンドを実行すればいつでも確認できます。このコマンドを実行すると、git は次のように表示します。</p>
 
 <pre>On branch test-branch
 Your branch is up to date with 'origin/test-branch'.
@@ -290,7 +290,7 @@ nothing to commit, working tree clean</pre>
 
 <h2 id="adding_committing_and_pushing_changes">変更の追加、コミット、プッシュ</h2>
 
-<p>この時点で、作業しているリポジトリに変更を加える準備が整いました。 MDN のバグを修正したり、何かをするためです。この部分はこのチュートリアルの目的ではないので、ほとんど省略します。 MDN で実際の問題を修正したい場合は、<a href="https://github.com/mdn/content/issues/">コンテンツの問題一覧</a>から修正するバグを選択するか、より詳しいガイダンスが必要であれば <a href="/ja/docs/MDN/Contribute">MDN への貢献</a>をお読みください。</p>
+<p>この時点で、作業しているリポジトリーに変更を加える準備が整いました。 MDN のバグを修正したり、何かをするためです。この部分はこのチュートリアルの目的ではないので、ほとんど省略します。 MDN で実際の問題を修正したい場合は、<a href="https://github.com/mdn/content/issues/">コンテンツの問題一覧</a>から修正するバグを選択するか、より詳しいガイダンスが必要であれば <a href="/ja/docs/MDN/Contribute">MDN への貢献</a>をお読みください。</p>
 
 <p>例としての性質上、このチュートリアルに沿って進めるのであれば、簡単なことをやってみましょう。</p>
 
@@ -318,7 +318,7 @@ nothing to commit, working tree clean</pre>
     <div class="notecard note">
       <h3>注</h3>
 
-      <p><code>README.md</code> は、変更したファイルの名前だけではなく、そのファイルへのパスを書きます。サブディレクトリの中にあった場合は、そのファイルのフルパスを書かなければなりません。
+      <p><code>README.md</code> は、変更したファイルの名前だけではなく、そのファイルへのパスを書きます。サブディレクトリーの中にあった場合は、そのファイルのフルパスを書かなければなりません。
     </div>
   </li>
   <li>
@@ -374,7 +374,7 @@ To github.com:chrisdavidmills/content.git
 
 <ol>
   <li>
-    <p>自分の変更をリポジトリのメインコピーに送るには、プルリクエストを作成する必要があります。この作業は、ブランチに変更がプッシュされたときにファイル一覧の一番上に表示される "Compare & pull request" ボタンを使って簡単に行うことができます。</p>
+    <p>自分の変更をリポジトリーのメインコピーに送るには、プルリクエストを作成する必要があります。この作業は、ブランチに変更がプッシュされたときにファイル一覧の一番上に表示される "Compare & pull request" ボタンを使って簡単に行うことができます。</p>
 
     <p><img src="compare-and-pull-request.png" alt="test ブランチに最近のプッシュがあるというテキスト、そして compare and pull request と書かれたボタンが表示されているバナー"></p>
 
@@ -385,14 +385,14 @@ To github.com:chrisdavidmills/content.git
     <div class="notecard warning">
       <h3>警告</h3>
 
-      <p>ここから先の手順は、実際にリポジトリに変更を加える場合にのみ行ってください。実際にテスト PR をリポジトリに提出しないでください。</p>
+      <p>ここから先の手順は、実際にリポジトリーに変更を加える場合にのみ行ってください。実際にテスト PR をリポジトリーに提出しないでください。</p>
     </div>
   </li>
   <li>
     <p>ここでは、プルリクエストに役立つタイトルと説明を入力し、変更した内容、それがなぜ良いことなのかを正確に書いてください。必要に応じて、修正された関連する問題を書いてください。具体的には、 <code>Fixes <em>issue-url</em></code> という行を入れます。 GitHub は、自動的にこれを <code>Fixes #1234</code> のような課題番号へのリンクとして表示し、さらにプルリクエストがマージされると関連する課題を自動的にクローズします。 (訳注: <code>Fixes <em>issue-url</em></code> の部分は英語で入力してください。日本語で書くと自動的にクローズする機能が動作しないことがあります。)</p>
   </li>
   <li>
-    <p>プルリクエストを送信する準備ができたら、 "Create pull request" ボタンをクリックしてください。これにより、自分のプルリクエスト (PR) がリポジトリの<a href="https://github.com/mdn/content/pulls">プルリクエスト一覧</a>に表示され、レビューチームによるレビューを経て、メインのコードベースにマージされることになります。</p>
+    <p>プルリクエストを送信する準備ができたら、 "Create pull request" ボタンをクリックしてください。これにより、自分のプルリクエスト (PR) がリポジトリーの<a href="https://github.com/mdn/content/pulls">プルリクエスト一覧</a>に表示され、レビューチームによるレビューを経て、メインのコードベースにマージされることになります。</p>
 
     <p>レビューチームが変更を加えてほしい場合は、プルリクエストのスレッドのコメントで教えてくれます (その旨の通知メールが届くはずです)。</p>
   </li>
@@ -403,7 +403,7 @@ To github.com:chrisdavidmills/content.git
 
 <h2 id="troubleshooting">トラブルシューティング</h2>
 
-<p>上記のチュートリアルは、 GitHub のリポジトリに貢献するために必要な git と GitHub の基礎知識を基本レベルで提供することを目的としています。お役に立ちましたでしょうか。また、ウェブ業界の標準的なバージョン管理システムであるにもかかわらず、 Git は学ぶのも使うのも非常に難しいツールであるという神話的・伝説的な評判があることについても触れておきましょう。</p>
+<p>上記のチュートリアルは、 GitHub のリポジトリーに貢献するために必要な git と GitHub の基礎知識を基本レベルで提供することを目的としています。お役に立ちましたでしょうか。また、ウェブ業界の標準的なバージョン管理システムであるにもかかわらず、 Git は学ぶのも使うのも非常に難しいツールであるという神話的・伝説的な評判があることについても触れておきましょう。</p>
 
 <p>私たちは、これが完全に公平だとは思いません。 Git には多くのコマンドがあり、その使い方は時に非常に不可解で、マスターするには長い時間がかかります。また、コマンドのいくつかを忘れたり、間違った順序で実行したりすると、なかなか抜け出せない面白い混乱に陥る可能性があるのも事実です。しかし、上記のような良い習慣を身につけていれば、大きく間違えることはないでしょう。また、 Git は10年前に比べてはるかに使いやすくなっていることも特筆すべき点です。</p>
 
@@ -461,5 +461,5 @@ To github.com:chrisdavidmills/content.git
   <li><a href="/ja/docs/Learn/Tools_and_testing/GitHub">MDN 学習 > Git と GitHub</a></li>
   <li><a href="https://dangitgit.com/en">Dangit, Git</a> — その他の有用なトラブルシューティング技術</li>
   <li><a href="https://hackernoon.com/45-github-issues-dos-and-donts-dfec9ab4b612">45 Github Issues Dos and Don'ts</a></li>
-  <li><a href="https://cli.github.com/">GitHub CLI tool</a> — リポジトリの管理に git の CLI コマンドを使うことに慣れてきたら、 GitHub 独自の GitHub CLI ツールのインストールを検討してみてはいかがでしょうか。</li>
+  <li><a href="https://cli.github.com/">GitHub CLI tool</a> — リポジトリーの管理に git の CLI コマンドを使うことに慣れてきたら、 GitHub 独自の GitHub CLI ツールのインストールを検討してみてはいかがでしょうか。</li>
 </ul>
