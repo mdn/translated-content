@@ -50,7 +50,7 @@ translation_of: Web/API/XMLHttpRequest
    <td><code>void <a class="internal" href="/en/XMLHttpRequest#send()" title="/en/XMLHttpRequest#send()">send</a>([optional] in nsIVariant body);</code></td>
   </tr>
   <tr>
-   <td><code>void <a class="internal" href="/en/XMLHttpRequest#sendAsBinary()" title="/en/XMLHttpRequest#sendAsBinary()">sendAsBinary</a>(in DOMString body); {{ fx_minversion_inline(3) }}</code></td>
+   <td><code>void <a class="internal" href="/en/XMLHttpRequest#sendAsBinary()" title="/en/XMLHttpRequest#sendAsBinary()">sendAsBinary</a>(in DOMString body);</code></td>
   </tr>
   <tr>
    <td><code>void <a class="internal" href="/en/XMLHttpRequest#setRequestHeader()" title="/en/XMLHttpRequest#setRequestHeader()">setRequestHeader</a>(in AUTF8String header, in AUTF8String value);</code></td>
@@ -177,13 +177,13 @@ translation_of: Web/API/XMLHttpRequest
   <tr>
    <td><code>upload</code></td>
    <td>{{ Interface("nsIXMLHttpRequestUpload") }}</td>
-   <td>El proceso de subida puede ser rastreado al agregar un registro de evento a <code>upload</code>. {{ fx_minversion_inline(3.5) }}</td>
+   <td>El proceso de subida puede ser rastreado al agregar un registro de evento a <code>upload</code>.</td>
   </tr>
   <tr>
    <td><code>withCredentials</code></td>
    <td><code>booleano</code></td>
    <td>
-    <p>Indica cuando el pedido de Access-Control entre sitios debe o no ser realizado usando credenciales como cookies o encabezados de autorización. {{ fx_minversion_inline(3.5) }}</p>
+    <p>Indica cuando el pedido de Access-Control entre sitios debe o no ser realizado usando credenciales como cookies o encabezados de autorización.</p>
 
     <div class="note"><strong>Nota:</strong> Esto nunca afecta los pedidos en para el propio sitio.</div>
 

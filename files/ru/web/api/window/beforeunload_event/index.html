@@ -5,7 +5,7 @@ translation_of: Web/API/Window/beforeunload_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">Событие <strong>beforeunload </strong>запускается, когда окно, документ и его ресурсы вот-вот будут выгружены. Документ все еще виден, и событие в этот момент может быть отменено.</span></p>
+<p><span class="seoSummary">Событие <strong>beforeunload </strong>запускается, когда окно, документ и его ресурсы вот-вот будут выгружены. Документ все ещё виден, и событие в этот момент может быть отменено.</span></p>
 
 <table class="properties">
  <tbody>
@@ -43,7 +43,7 @@ translation_of: Web/API/Window/beforeunload_event
 
 <p>Для борьбы с нежелательными всплывающими окнами браузеры могут не отображать подсказки, созданные в обработчиках событий <strong>beforeunload</strong>, за исключением случаев, когда страница была обработана или даже не отображается вообще.</p>
 
-<p>Прикрепление обработчика/слушателя событий к <code>window</code> или <code>document</code>'s <code>beforeunload</code> событие не позволяет браузерам использовать кэш навигации по страницам в памяти, наподобие <a href="/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching">Firefox's Back-Forward cache</a> or <a href="https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/">WebKit's Page Cache</a>.</p>
+<p>Прикрепление обработчика событий к <code>window</code> или <code>document</code> <code>beforeunload</code> событие не позволяет браузерам использовать кеш навигации по страницам в памяти, наподобие <a href="/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching">Firefox's Back-Forward cache</a> or <a href="https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/">WebKit's Page Cache</a>.</p>
 
 <p>В спецификации HTML указано, что вызовы {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, и {{domxref("window.prompt()")}} методы могут быть проигнорированы во время этого события. Посмотреть <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts" lang="ru">HTML specification</a> для более подробной информации.</p>
 
@@ -91,7 +91,7 @@ translation_of: Web/API/Window/beforeunload_event
 
 <p>Смотрите <a href="/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload#Browser_compatibility">WindowEventHandlers/onbeforeunload</a> для получения более подробной информации о том, как различные браузеры обрабатывают это событие.</p>
 
-<h2 id="См._также">См. также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li>Related events: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}</li>

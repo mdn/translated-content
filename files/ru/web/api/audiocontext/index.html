@@ -10,7 +10,7 @@ translation_of: Web/API/AudioContext
 <div>
 <p>Интерфейс AudioContext можно представить как граф, состоящий из связанных между собой узлов {{domxref("AudioNode")}}. С помощью этого интерфейса можно контролировать как создание узлов, из которых состоит AudioContext, так и контролировать обработку и декодирование звука. Необходимо создать AudioContext перед тем как делать что-либо ещё со звуком, так как всё что происходит при обработке звука, происходит внутри AudioContext.</p>
 
-<p>AudioContext может выступать как слушатель событий, и он реализует интерфейс {{domxref("EventTarget")}}.</p>
+<p>AudioContext может выступать как обработчик событий, и он реализует интерфейс {{domxref("EventTarget")}}.</p>
 </div>
 
 <h2 id="Свойства">Свойства</h2>
@@ -66,7 +66,7 @@ translation_of: Web/API/AudioContext
  <dt>{{domxref("AudioContext.createOscillator()")}}</dt>
  <dd>Создаёт объект {{domxref("OscillatorNode")}}, источник, представляющий собой периодическую волну звукового сигнала.</dd>
  <dt>{{domxref("AudioContext.createPanner()")}}</dt>
- <dd>Создаёт объект {{domxref("PannerNode")}}, который используется для пространственного определения аудио-потока в трехмерном пространстве.</dd>
+ <dd>Создаёт объект {{domxref("PannerNode")}}, который используется для пространственного определения аудио-потока в трёхмерном пространстве.</dd>
  <dt>{{domxref("AudioContext.createPeriodicWave()")}}</dt>
  <dd>Создаёт объект {{domxref("PeriodicWave")}}, используемый для определения периодической волны звукового сигнала, которая, в свою очередь, используется для определения вывода в {{ domxref("OscillatorNode") }}.</dd>
  <dt>{{domxref("AudioContext.createWaveShaper()")}}</dt>

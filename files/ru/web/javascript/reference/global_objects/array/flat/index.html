@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Новый массив с объединенными в него подмассивами.</p>
+<p>Новый массив с объединёнными в него подмассивами.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -76,7 +76,7 @@ arr1.reduce((acc, val) =&gt; acc.concat(val), []);// [1, 2, 3, 4]
 const flatSingle = arr =&gt; [].concat(...arr);
 </pre>
 
-<pre class="brush: js notranslate">// Для развертывания многомерных массивов используем рекурсию, reduce и concat
+<pre class="brush: js notranslate">// Для развёртывания многомерных массивов используем рекурсию, reduce и concat
 const arr = [1, 2, [3, 4, [5, 6]]];
 
 function flatDeep(arr, d = 1) {

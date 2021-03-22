@@ -7,13 +7,13 @@ translation_of: >-
 ---
 <div class="summary">
 <blockquote>
-<p><span class="seoSummary">В других статьях мы рассмотрели как  <a href="https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/cross_browser_video_player">создать cross browser видео плеер</a> используя {{ domxref("HTMLMediaElement") }} и {{ domxref("Window.fullScreen") }} APIs, а так-же как  <a href="https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Video_player_styling_basics">стилизовать плеер</a>. В этой статье мы возьмем тот же плеер и покажем как добавить  подписи и субтитры, используя {{ domxref("Web_Video_Text_Tracks_Format","the WebVTT format") }} и {{ htmlelement("track") }} элемент.</span></p>
+<p><span class="seoSummary">В других статьях мы рассмотрели как  <a href="https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/cross_browser_video_player">создать cross browser видео плеер</a> используя {{ domxref("HTMLMediaElement") }} и {{ domxref("Window.fullScreen") }} APIs, а так-же как  <a href="https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Video_player_styling_basics">стилизовать плеер</a>. В этой статье мы возьмём тот же плеер и покажем как добавить  подписи и субтитры, используя {{ domxref("Web_Video_Text_Tracks_Format","the WebVTT format") }} и {{ htmlelement("track") }} элемент.</span></p>
 </blockquote>
 </div>
 
 <h2 id="Пример_видео_с_подписями">Пример видео с подписями</h2>
 
-<p>В этой статье мы сошлемся на пример плеера с подписями. Этот пример использует отрывок из <a href="http://www.sintel.org/">Sintel open movie</a>, созданного <a href="http://www.blender.org/foundation/">Blender Foundation</a>.</p>
+<p>В этой статье мы сошлёмся на пример плеера с подписями. Этот пример использует отрывок из <a href="http://www.sintel.org/">Sintel open movie</a>, созданного <a href="http://www.blender.org/foundation/">Blender Foundation</a>.</p>
 
 <p><img alt='Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."' src="https://mdn.mozillademos.org/files/7887/video-player-with-captions.png" style="display: block; height: 365px; margin: 0px auto; width: 593px;"></p>
 
@@ -29,7 +29,7 @@ translation_of: >-
 
 <p><a href="http://web.archive.org/web/20160117160743/http://screenfont.ca/learn/">Подписи и субтитры не одно и тоже</a>: они имеют существенные различия для зрителя, и передают различную информацию, мы рекомендуем ознакомится с различиями, если вы не уверены, что они есть. Однако технически они реализуются одинаково, поэтому материал в нашей статье применим к обоим.</p>
 
-<p>В этой статье мы сошлемся на text tracks, отображаемые как субтистры, т.к их контент направлен на слышащих людей, со сложностью понимания языка в фильме, а не на людей с плохим или отсутствием слуха.</p>
+<p>В этой статье мы сошлёмся на text tracks, отображаемые как субтистры, т.к их контент направлен на слышащих людей, со сложностью понимания языка в фильме, а не на людей с плохим или отсутствием слуха.</p>
 
 <h3 id="Элемент_&lt;track>">Элемент &lt;track&gt; </h3>
 
@@ -37,7 +37,7 @@ translation_of: >-
 
 <h3 id="WebVTT">WebVTT</h3>
 
-<p>Файлы содержащие данные о субтитрах - это простой текстовый файл, который следует специальному формату,  такому как <a href="https://developer.mozilla.org/en-US/docs/HTML/WebVTT">Web Video Text Tracks</a> (WebVTT) формат. <a href="http://dev.w3.org/html5/webvtt/">WebVTT specification</a> всё еще работает, по этому основные его части стабильны и мы можем использовать их сегодня. </p>
+<p>Файлы содержащие данные о субтитрах - это простой текстовый файл, который следует специальному формату,  такому как <a href="https://developer.mozilla.org/en-US/docs/HTML/WebVTT">Web Video Text Tracks</a> (WebVTT) формат. <a href="http://dev.w3.org/html5/webvtt/">WebVTT specification</a> всё ещё работает, по этому основные его части стабильны и мы можем использовать их сегодня. </p>
 
 <p>Поставщики видео контента (такие как <a href="http://www.blender.org/foundation/">Blender Foundation</a>) предоставляют и подписи и субтитры в текстовом формате с их видео, но они обычно в SubRip Text (SRT) формате. Этот формат может быть легко переконвертирован в WebVTT, используя  online  конвертер  например такой как <a href="https://atelier.u-sub.net/srt2vtt/">srt2vtt</a>.</p>
 
@@ -123,15 +123,15 @@ translation_of: >-
    video.textTracks[i].mode = 'hidden';
 }</pre>
 
-<p>Свойство <code>video.textTracks</code>  содержит массив всех текстовых треков, присоединенных к видео. Мы проходим по каждому и устанавливаем его  <code>mode</code> в <code>hidden</code></p>
+<p>Свойство <code>video.textTracks</code>  содержит массив всех текстовых треков, присоединённых к видео. Мы проходим по каждому и устанавливаем его  <code>mode</code> в <code>hidden</code></p>
 
-<p>Примечание:  <a href="http://dev.w3.org/html5/webvtt/#api">WebVTT API</a> дает нам доступ ко всем текстовым трекам, что определены в HTML5 video, c помощью элемента  <code>&lt;track&gt;</code></p>
+<p>Примечание:  <a href="http://dev.w3.org/html5/webvtt/#api">WebVTT API</a> даёт нам доступ ко всем текстовым трекам, что определены в HTML5 video, c помощью элемента  <code>&lt;track&gt;</code></p>
 
 <h3 id="Building_a_caption_menu">Building a caption menu</h3>
 
 <p>Наша цель - это использовать кнопку <code>subtitles</code> , которую мы добавили ранее, чтобы дать возможность пользователю выбрать тот язык, который он хочет или полностью отключить субтитры.</p>
 
-<p>Мы добавили кнопку, но перед тем как что-то сделать, мы должны создать меню, которое с ней идет. Это меню создается динамически, т.к языки могут быть добавлены или удалены после, простым редактированием элементов  <code>&lt;track&gt;</code> в разметке видео.</p>
+<p>Мы добавили кнопку, но перед тем как что-то сделать, мы должны создать меню, которое с ней идёт. Это меню создаётся динамически, т.к языки могут быть добавлены или удалены после, простым редактированием элементов  <code>&lt;track&gt;</code> в разметке видео.</p>
 
 <p>Все что нам необходимо сделать - это пройти через  <code>textTracks</code>, читая их свойства и строя меню из них:</p>
 

@@ -42,11 +42,11 @@ var myScript = document.querySelector('script');
 
 pre.innerHTML = myScript.innerHTML;
 
-// Создаем MediaElementAudioSourceNode
+// Создаём MediaElementAudioSourceNode
 // На основе HTMLMediaElement
 var source = audioCtx.createMediaElementSource(myAudio);
 
-// Создаем узел контроля громкости (усиления)
+// Создаём узел контроля громкости (усиления)
 var gainNode = audioCtx.createGain();
 
 // Переменные, содержащие Y координату курсора мыши

@@ -15,7 +15,7 @@ translation_of: Web/API/Notification
 
 <dl>
  <dt>{{domxref("Notification.Notification", "Notification()")}}</dt>
- <dd>Создает новый экземпляр объекта <code>Notification</code>.</dd>
+ <dd>Создаёт новый экземпляр объекта <code>Notification</code>.</dd>
 </dl>
 
 <h2 id="Свойства">Свойства</h2>
@@ -79,7 +79,7 @@ translation_of: Web/API/Notification
  <dt>{{domxref("Notification.title")}} {{readonlyinline}}</dt>
  <dd>Заголовок уведомления, указывается в опциях как параметр конструктора.</dd>
  <dt>{{domxref("Notification.vibrate")}} {{readonlyinline}}</dt>
- <dd>Задает шаблон вибрации для устройств с вибро.</dd>
+ <dd>Задаёт шаблон вибрации для устройств с вибро.</dd>
 </dl>
 
 <h4 id="Не_поддерживаемые_свойства">Не поддерживаемые свойства</h4>
@@ -106,7 +106,7 @@ translation_of: Web/API/Notification
 
 <h4 id="Устаревшие_обработчики_событий">Устаревшие обработчики событий</h4>
 
-<p>Следующие обработчики событий все еще поддерживаются, как указано в разделе {{anch("browser compatibility")}} ниже, но более не входят в актуальную спецификацию. Небезосновательно можно предположить, что они устарели и могут перестать работать в будущих версиях браузеров.</p>
+<p>Следующие обработчики событий все ещё поддерживаются, как указано в разделе {{anch("browser compatibility")}} ниже, но более не входят в актуальную спецификацию. Небезосновательно можно предположить, что они устарели и могут перестать работать в будущих версиях браузеров.</p>
 
 <dl>
  <dt>{{domxref("Notification.onclose")}}</dt>
@@ -153,21 +153,21 @@ translation_of: Web/API/Notification
 
   // Проверка разрешения на отправку уведомлений
   else if (Notification.permission === "granted") {
-    // Если разрешено, то создаем уведомление
+    // Если разрешено, то создаём уведомление
     var notification = new Notification("Hi there!");
   }
 
   // В противном случае, запрашиваем разрешение
   else if (Notification.permission !== 'denied') {
     Notification.requestPermission(function (permission) {
-      // Если пользователь разрешил, то создаем уведомление
+      // Если пользователь разрешил, то создаём уведомление
       if (permission === "granted") {
         var notification = new Notification("Hi there!");
       }
     });
   }
 
-  // В конечном счете, если пользователь отказался от получения
+  // В конечном счёте, если пользователь отказался от получения
   // уведомлений, то стоит уважать его выбор и не беспокоить его
   // по этому поводу.
 }</pre>
@@ -180,7 +180,7 @@ translation_of: Web/API/Notification
   console.log(result);
 });</code></pre>
 
-<p>Затем мы запускаем простую функцию <code>spawnNotification()</code>, когда мы хотим вывести уведомление, передающую аргументы для указания тела, иконки и заголовка, которые нам нужны, а затем она создает необходимый объект параметров <code>options</code> и запускает уведомление с помощью конструктора  {{domxref("Notification.Notification","Notification()")}}.</p>
+<p>Затем мы запускаем простую функцию <code>spawnNotification()</code>, когда мы хотим вывести уведомление, передающую аргументы для указания тела, иконки и заголовка, которые нам нужны, а затем она создаёт необходимый объект параметров <code>options</code> и запускает уведомление с помощью конструктора  {{domxref("Notification.Notification","Notification()")}}.</p>
 
 <pre class="brush: js"><code>function spawnNotification(body, icon, title) {
   var options = {

@@ -7,15 +7,15 @@ original_slug: Web/API/Storage/LocalStorage
 ---
 <p><code>localStorage</code> это аналог <code><a href="/en-US/docs/Web/API/sessionStorage">sessionStorage</a></code>, с некоторыми same-origin правилами, но значения хранятся постоянно (в отличии от sessions). <code>localStorage</code> появился в Firefox 3.5.</p>
 
-<div class="note"><strong>Примечание:</strong> Когда браузер переходит в режим приватного просмотра, создается новое временное хранилище. Изначально оно пустое. После выхода из режима приватного просмотра временное хранилище очищается.</div>
+<div class="note"><strong>Примечание:</strong> Когда браузер переходит в режим приватного просмотра, создаётся новое временное хранилище. Изначально оно пустое. После выхода из режима приватного просмотра временное хранилище очищается.</div>
 
 <pre class="brush:js" style="font-size: 14px;">// Сохраняет данные в текущий local store
 localStorage.setItem("username", "John");
 
-// Извлекает ранее сохраненные данные
+// Извлекает ранее сохранённые данные
 alert( "username = " + localStorage.getItem("username"));</pre>
 
-<p class="note"><code>localStorage</code>'s позволяет постоянно хранить некоторую полезную информацию, включая счетчики посещения страницы, как показано в примере <a href="http://codepen.io/awesom3/pen/Hlfma">this tutorial on Codepen</a>.</p>
+<p class="note"><code>localStorage</code>'s позволяет постоянно хранить некоторую полезную информацию, включая счётчики посещения страницы, как показано в примере <a href="http://codepen.io/awesom3/pen/Hlfma">this tutorial on Codepen</a>.</p>
 
 <h4 id="Совместимость" style="line-height: 18px; font-size: 1.28571428571429rem;">Совместимость</h4>
 

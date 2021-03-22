@@ -31,7 +31,7 @@ translation_of: Web/API/HTMLInputElement/setSelectionRange
  <dt><em>selectionEnd</em></dt>
  <dd>Индекс символа <em>после</em> последнего выделенного символа.</dd>
  <dt><em>selectionDirection</em> {{optional_inline}}</dt>
- <dd>Строка, определяющая направления произведенного выделения. Принимаются значения "forward", "backward" или "none", если направление выделение неизвестно или неважно.</dd>
+ <dd>Строка, определяющая направления произведённого выделения. Принимаются значения "forward", "backward" или "none", если направление выделение неизвестно или неважно.</dd>
 </dl>
 
 <h2 id="Пример">Пример</h2>
@@ -58,7 +58,7 @@ function SelectText () {
 &lt;/html&gt;
 </pre>
 
-<p>приведет к следующему результату:</p>
+<p>приведёт к следующему результату:</p>
 
 <p><img alt="example.png" class="default internal" src="/@api/deki/files/6104/=example.png"></p>
 
@@ -159,7 +159,7 @@ function SelectText () {
 
 <p>[1] Поддержка <code>selectionDirection</code> была добавлена Blink в {{WebkitBug("60403")}}.</p>
 
-<p>Требуется отметить, что согласно спецификации <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG forms</a> свойства <code>selectionStart</code>, <code>selectionEnd</code> и метод <code>setSelectionRange</code> применяются только к элементам <em>input</em> c типами <em>text</em>, <em>search</em>, <em>URL</em>, <em>tel</em> и <em>password</em>. Начиная с версии 33, Chrome, выдает исключение во время попытки доступа к этим свойствам и методу на других типах элемента <em>input</em>. Например, для элемента <em>input</em> типа <em>number</em> появится исключение с сообщением: "Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection." Ссылки по теме: <a href="http://stackoverflow.com/questions/21177489/selectionstart-selectionend-on-input-type-number-no-longer-allowed-in-chrome">вопрос на StackOverflow</a>, <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=24796">whatwg баг</a>, <a href="https://code.google.com/p/chromium/issues/detail?id=324360">Chromium баг</a>.</p>
+<p>Требуется отметить, что согласно спецификации <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG forms</a> свойства <code>selectionStart</code>, <code>selectionEnd</code> и метод <code>setSelectionRange</code> применяются только к элементам <em>input</em> c типами <em>text</em>, <em>search</em>, <em>URL</em>, <em>tel</em> и <em>password</em>. Начиная с версии 33, Chrome, выдаёт исключение во время попытки доступа к этим свойствам и методу на других типах элемента <em>input</em>. Например, для элемента <em>input</em> типа <em>number</em> появится исключение с сообщением: "Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection." Ссылки по теме: <a href="http://stackoverflow.com/questions/21177489/selectionstart-selectionend-on-input-type-number-no-longer-allowed-in-chrome">вопрос на StackOverflow</a>, <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=24796">whatwg баг</a>, <a href="https://code.google.com/p/chromium/issues/detail?id=324360">Chromium баг</a>.</p>
 
 <p>[2] Поддержка <code>selectionDirection</code> была добавлена в Gecko в {{bug("674558")}}.</p>
 

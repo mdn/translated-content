@@ -35,7 +35,7 @@ Int8Array(), Uint8Array(), Uint8ClampedArray(), Int16Array(), Uint16Array(), Int
  <dt>object</dt>
  <dd>Новый массив создаётся так, как если бы была вызвана функция <code><em>TypedArray</em>.from()</code></dd>
  <dt>buffer, byteOffset, length</dt>
- <dd>Когда происходит вызов с параметрами <strong><code>buffer</code> </strong>и опциональными параметрами <strong><code>byteOffset </code></strong>и<code> </code><strong><code>length</code></strong>, то будет создан новый типизированный массив, который будет отражать <code>buffer </code>типа {{jsxref("ArrayBuffer")}}. Параметры <code>byteOffset</code> и <code>length</code> определяют диапазон (размер) памяти, выводимый данным массивоподобным представлением. Если оба этих параметра (<code>byteOffset</code> и <code>length</code>) опущены, то будет использован весь буфер <code>buffer</code>; если опущен только <code>length</code>, то будет выведен весь остаток буфера после смещения начала отсчета элементов, заданного параметром <code>byteOffset</code>.</dd>
+ <dd>Когда происходит вызов с параметрами <strong><code>buffer</code> </strong>и опциональными параметрами <strong><code>byteOffset </code></strong>и<code> </code><strong><code>length</code></strong>, то будет создан новый типизированный массив, который будет отражать <code>buffer </code>типа {{jsxref("ArrayBuffer")}}. Параметры <code>byteOffset</code> и <code>length</code> определяют диапазон (размер) памяти, выводимый данным массивоподобным представлением. Если оба этих параметра (<code>byteOffset</code> и <code>length</code>) опущены, то будет использован весь буфер <code>buffer</code>; если опущен только <code>length</code>, то будет выведен весь остаток буфера после смещения начала отсчёта элементов, заданного параметром <code>byteOffset</code>.</dd>
 </dl>
 
 <h2 id="Описание"><a id="Description" name="Description">Описание</a></h2>
@@ -218,7 +218,7 @@ for (var k in typedArrayTypes)
   <tr>
    <td>{{SpecName('Typed Array')}}</td>
    <td>{{Spec2('Typed Array')}}</td>
-   <td>Определяет работу <code>TypedArray</code> и <code>ArrayBufferView</code>. Заменен в ECMAScript 6.</td>
+   <td>Определяет работу <code>TypedArray</code> и <code>ArrayBufferView</code>. Заменён в ECMAScript 6.</td>
   </tr>
   <tr>
    <td>{{SpecName('ES6', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>

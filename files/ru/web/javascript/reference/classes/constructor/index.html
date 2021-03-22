@@ -70,7 +70,7 @@ try {
 
 <p><code>ValidationError</code> классу не нужен явный (explicit) конструктор, потому что не требуется инициализация. Затем конструктор по умолчанию позаботится о инициализации родительского класса <code>Error</code> переданным ему аргументом.</p>
 
-<p>Однако, если определен ваш собственный конструктор и ваш класс является производным от какого-либо родительского класса, то вы должны явно объявить конструктор родительского класса, используя <code>super</code>. К примеру:</p>
+<p>Однако, если определён ваш собственный конструктор и ваш класс является производным от какого-либо родительского класса, то вы должны явно объявить конструктор родительского класса, используя <code>super</code>. К примеру:</p>
 
 <pre class="notranslate">class ValidationError extends Error {
 
@@ -109,7 +109,7 @@ try {
 <pre class="brush: js notranslate">class Square extends Polygon {
   constructor(length) {
     // Здесь вызывается конструктор родительского класса,
-    // в который передается length в качестве аргументов,
+    // в который передаётся length в качестве аргументов,
     // соответствующим полям width и height класса Polygon
     super(length, length);
     // Заметка: В производном классе, super() должен вызываться перед тем как
@@ -152,7 +152,7 @@ console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //
 let newInstance = new Square();
 console.log(newInstance.name); //Polygon</pre>
 
-<p>Здесь прототип <strong>Square</strong> класса изменен, но в то же время constructor предыдущего базового класса <strong>Polygon</strong> вызывается при создании нового экземпляра <strong>Square</strong>.</p>
+<p>Здесь прототип <strong>Square</strong> класса изменён, но в то же время constructor предыдущего базового класса <strong>Polygon</strong> вызывается при создании нового экземпляра <strong>Square</strong>.</p>
 
 <h3 id="Constructors_по_умолчанию.">Constructors по умолчанию.</h3>
 
@@ -190,7 +190,7 @@ console.log(newInstance.name); //Polygon</pre>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div class="hidden">Таблица совместимости на этой странице создается из структурированных данных. Если вы хотите внести свой вклад в данные, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправить нам запрос на слияние.</div>
+<div class="hidden">Таблица совместимости на этой странице создаётся из структурированных данных. Если вы хотите внести свой вклад в данные, ознакомьтесь с <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> и отправить нам запрос на слияние.</div>
 
 <p>{{Compat("javascript.classes.constructor")}}</p>
 

@@ -15,7 +15,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
  <dt>{{domxref("CanvasRenderingContext2D.save", "save()")}}</dt>
  <dd><span class="notranslate">Сохраняет все состояние холста.</span></dd>
  <dt>{{domxref("CanvasRenderingContext2D.restore", "restore()")}}</dt>
- <dd><span class="notranslate">Восстанавливает последнее сохраненное состояние холста.</span></dd>
+ <dd><span class="notranslate">Восстанавливает последнее сохранённое состояние холста.</span></dd>
 </dl>
 
 <p>Состояние холста сохраняется в стеке. Каждый раз, когда вызывается метод <code>save()</code>, текущее состояние отрисовки записывается в стек. Состояние отрисовки содержит:</p>
@@ -80,7 +80,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <h3 id="A_translate_example" name="A_translate_example">Пример использования <code>translate</code></h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Этот пример демонстрирует некоторые преимущества</span></span> при использовании смещения холста. Без использования метода <code>translate()</code> все прямоугольники будут отрисованы в одинаковой позиции (0,0). Метод <code>translate()</code> дает возможность размещения прямоугольника в любой позиции без изменения параметров функции <code>fillRect()</code>. Это может дать некоторое упрощение для понимания и использования.</p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Этот пример демонстрирует некоторые преимущества</span></span> при использовании смещения холста. Без использования метода <code>translate()</code> все прямоугольники будут отрисованы в одинаковой позиции (0,0). Метод <code>translate()</code> даёт возможность размещения прямоугольника в любой позиции без изменения параметров функции <code>fillRect()</code>. Это может дать некоторое упрощение для понимания и использования.</p>
 
 <p>Внутри функции <code>draw()</code> мы вызываем <code>fillRect()</code> девять раз, используя два цикла <code>for</code>. Каждый раз мы сохраняем состояние холста, смещаем его, рисуем прямоугольник, а затем восстанавливаем исходное состояние. Заметьте, что <code>fillRect()</code> всегда использует одни и те же параметры, а изменение позиции фигуры осуществляется с помощью <code>translate()</code>.</p>
 
@@ -192,7 +192,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
   ctx.fillRect(1, 10, 10, 10);
   ctx.restore();
 
-  // размещаем текст, отраженный по горизонтали
+  // размещаем текст, отражённый по горизонтали
   ctx.scale(-1, 1);
   ctx.font = '48px serif';
   ctx.fillText('MDN', -135, 120);
@@ -214,7 +214,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}</dt>
- <dd>Накладывает матрицу преобразования, заданную параметрами, на текущую матрицу. Матрица преобразования задается следующим образом: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math></dd>
+ <dd>Накладывает матрицу преобразования, заданную параметрами, на текущую матрицу. Матрица преобразования задаётся следующим образом: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math></dd>
 </dl>
 
 <dl>

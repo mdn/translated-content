@@ -33,7 +33,7 @@ var t1 = performance.now();
 console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
 </pre>
 
-<p>В отличие от других временны́х типов данных, доступных в JavaScript (таких как <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now" title="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>), метки времени, возвращенные из <code>performance.now(),</code> не ограничены кратностью в одну миллисекунду, а представляют значение времени как число с плавающей запятой, с точностью до микросекунд.</p>
+<p>В отличие от других временны́х типов данных, доступных в JavaScript (таких как <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now" title="/en-US/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>), метки времени, возвращённые из <code>performance.now(),</code> не ограничены кратностью в одну миллисекунду, а представляют значение времени как число с плавающей запятой, с точностью до микросекунд.</p>
 
 <p>Также, в противоположность <code>Date.now</code>, значение, возвращаемое из <code>performance.now(), всегда возрастает с постоянной скоростью, независимо от системного времени </code>(которое может быть установлено вручную или изменено программами наподобие NTP).</p>
 

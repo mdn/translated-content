@@ -46,14 +46,14 @@ p_list = doc.getElementsByTagName("para");
 
 <p><span id="result_box" lang="ru"><span>Вам не нужно делать что-то особенное, чтобы начать использовать DOM.</span> <span>Различные браузеры имеют различные реализации DOM, и эти реализации демонстрируют различную степень соответствия действующему стандарту DOM (тема, которую мы пытаемся избежать в этой документации), но каждый веб-браузер использует некоторую объектную модель документа, чтобы сделать веб-страницы доступными для скрипта</span></span>.</p>
 
-<p>Когда вы создаете код, <span id="result_box" lang="ru"><span>независимо от того, встроен ли он в элемент<code> &lt;script&gt;</code> или включен в веб-страницу с помощью инструкции по загрузке скрипта извне, вы можете сразу начать использовать API для элементов</span></span> <code><a href="/en-US/docs/DOM/document" title="DOM/document">document</a></code> или <code><a href="/en-US/docs/DOM/window" title="DOM/window">window</a></code>  для <span id="result_box" lang="ru"><span>манипулирования самим документом или получить</span> его дочерние элементы<span>, которые являются различными элементами веб-страницы.</span></span> Ваше программирование DOM может быть достаточно простым, как, например, следующий код, который выводит предупреждающее сообщение используя функцию <code><a href="/en-US/docs/DOM/window.alert" title="DOM/window.alert">alert()</a></code> из объекта <code><a href="/en-US/docs/DOM/window" title="DOM/window">window</a></code>, <span id="result_box" lang="ru"><span>или может использовать более сложные методы DOM для создания нового контента, как в более длинном примере ниже</span></span>.</p>
+<p>Когда вы создаёте код, <span id="result_box" lang="ru"><span>независимо от того, встроен ли он в элемент<code> &lt;script&gt;</code> или включён в веб-страницу с помощью инструкции по загрузке скрипта извне, вы можете сразу начать использовать API для элементов</span></span> <code><a href="/en-US/docs/DOM/document" title="DOM/document">document</a></code> или <code><a href="/en-US/docs/DOM/window" title="DOM/window">window</a></code>  для <span id="result_box" lang="ru"><span>манипулирования самим документом или получить</span> его дочерние элементы<span>, которые являются различными элементами веб-страницы.</span></span> Ваше программирование DOM может быть достаточно простым, как, например, следующий код, который выводит предупреждающее сообщение используя функцию <code><a href="/en-US/docs/DOM/window.alert" title="DOM/window.alert">alert()</a></code> из объекта <code><a href="/en-US/docs/DOM/window" title="DOM/window">window</a></code>, <span id="result_box" lang="ru"><span>или может использовать более сложные методы DOM для создания нового контента, как в более длинном примере ниже</span></span>.</p>
 
 <p>Следующий пример<span id="result_box" lang="ru"><span> кода JavaScript буде выводить предупреждение, когда загрузка документа завершена (и когда весь DOM доступен для использования).</span></span></p>
 
 <pre class="brush: html">&lt;body onload="window.alert('Welcome to my home page!');"&gt;
 </pre>
 
-<p>Эта функция создает новый элемент H1, добавляет в него текст и, затем, добавляет <code>H1</code> в дерево данного документа:</p>
+<p>Эта функция создаёт новый элемент H1, добавляет в него текст и, затем, добавляет <code>H1</code> в дерево данного документа:</p>
 
 <pre class="brush: html">&lt;html&gt;
   &lt;head&gt;
@@ -61,7 +61,7 @@ p_list = doc.getElementsByTagName("para");
        // запускает эту функцию, когда документ загружен
        window.onload = function() {
 
-         // создает пару элементов на пустой веб-странице
+         // создаёт пару элементов на пустой веб-странице
          var heading = document.createElement("h1");
          var heading_text = document.createTextNode("Big Head!");
          heading.appendChild(heading_text);
@@ -137,9 +137,9 @@ table.summary = "note: increased border";
 
 <p>This section lists some of the most commonly-used interfaces in the DOM. The idea is not to describe what these APIs do here but to give you an idea of the sorts of methods and properties you will see very often as you use the DOM. These common APIs are used in the longer examples in the <a href="/en-US/docs/Gecko_DOM_Reference/Examples" title="Gecko_DOM_Reference/Examples">DOM Examples</a> chapter at the end of this book.</p>
 
-<p><code>Document</code> и <code>window</code> объекты <span id="result_box" lang="ru"><span>являются объектами, интерфейсы которых наиболее  часто используются при программировании DOM.</span></span> Простыми словами, объект <code>window</code>  представляет собой что-то вроде браузера, а объект <code>document</code> корень самого документа. <code>Element</code> наследуется от общего интерфейса <code>Node</code>, <span id="result_box" lang="ru"><span>и вместе эти два интерфейса предоставляют множество методов и свойств, которые вы используете для отдельных элементов</span></span>. <span id="result_box" lang="ru"><span>Эти элементы также могут иметь определенные интерфейсы для обработки данных, которые хранятся в этих элементах, как в примере объекта </span></span><code>table</code><span lang="ru"><span>в предыдущем разделе.</span></span></p>
+<p><code>Document</code> и <code>window</code> объекты <span id="result_box" lang="ru"><span>являются объектами, интерфейсы которых наиболее  часто используются при программировании DOM.</span></span> Простыми словами, объект <code>window</code>  представляет собой что-то вроде браузера, а объект <code>document</code> корень самого документа. <code>Element</code> наследуется от общего интерфейса <code>Node</code>, <span id="result_box" lang="ru"><span>и вместе эти два интерфейса предоставляют множество методов и свойств, которые вы используете для отдельных элементов</span></span>. <span id="result_box" lang="ru"><span>Эти элементы также могут иметь определённые интерфейсы для обработки данных, которые хранятся в этих элементах, как в примере объекта </span></span><code>table</code><span lang="ru"><span>в предыдущем разделе.</span></span></p>
 
-<p><span id="result_box" lang="ru"><span>Ниже приведен краткий список общих API-интерфейсов в сценариях веб-страниц и XML-страниц с использованием DOM.</span></span></p>
+<p><span id="result_box" lang="ru"><span>Ниже приведён краткий список общих API-интерфейсов в сценариях веб-страниц и XML-страниц с использованием DOM.</span></span></p>
 
 <ul>
  <li><code><a href="/en-US/docs/DOM/document.getElementById" title="DOM/document.getElementById">document.getElementById</a>(id)</code></li>
