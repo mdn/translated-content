@@ -25,7 +25,7 @@ original_slug: Web/API/WindowTimers/setTimeout
  <li><code>delay</code>  {{optional_inline}} -  задержка в миллисекундах (тысячных долях секунды), после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. {{anch("Notes")}} ниже.</li>
 </ul>
 
-<p>Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этого функционала в таких браузерах, необходимо использовать код для совместимости (см. раздел <a href="#Аргументы_колбэк-функции">Аргументы колбэк-функции</a>).</p>
+<p>Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел <a href="#Аргументы_колбэк-функции">Аргументы колбэк-функции</a>).</p>
 
 <div class="warning"><strong>Important:</strong> Prior to Gecko 13 {{ geckoRelease("13.0") }}, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.</div>
 
