@@ -26,7 +26,7 @@ original_slug: Learn/Доступность/CSS_and_JavaScript
  <tbody>
   <tr>
    <th scope="row">Необходимые знания:</th>
-   <td>Базовая компьютерная грамотность, базовое понимание HTML, CSS и JavaScript, а также понимание <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility">что такое доступность</a>.</td>
+   <td>Базовая компьютерная грамотность, базовое понимание HTML, CSS и JavaScript, а также понимание <a href="/ru/docs/Learn/Accessibility/What_is_accessibility">что такое доступность</a>.</td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -45,7 +45,7 @@ original_slug: Learn/Доступность/CSS_and_JavaScript
 
 <h3 id="Correct_semantics_and_user_expectation">Правильная семантика и ожидаемое поведение</h3>
 
-<p>С помощью CSS возможно заставить любой HTML-элемент выглядеть <em>как угодно</em>, однако это не означает, что делать так — правильно. Как мы часто упоминаем в статье <a href="/en-US/docs/Learn/Accessibility/HTML">HTML: Хорошая основа для доступности</a>, для каждой задачи всегда следует использовать соответствующий семантический элемент. Если не следовать данному правилу, то могут возникать проблемы и неудобства для всех, а в особенности для людей с ограниченными возможностями. Правильное использование семантики тесно связано с ожидаемым пользователем поведением — элементы выглядят и ведут себя определенным образом, в соответствии с их функциональностью.</p>
+<p>С помощью CSS возможно заставить любой HTML-элемент выглядеть <em>как угодно</em>, однако это не означает, что делать так — правильно. Как мы часто упоминаем в статье <a href="/ru/docs/Learn/Accessibility/HTML">HTML: Хорошая основа для доступности</a>, для каждой задачи всегда следует использовать соответствующий семантический элемент. Если не следовать данному правилу, то могут возникать проблемы и неудобства для всех, а в особенности для людей с ограниченными возможностями. Правильное использование семантики тесно связано с ожидаемым пользователем поведением — элементы выглядят и ведут себя определенным образом, в соответствии с их функциональностью.</p>
 
 <p>Например, пользователь скринридера не сможет передвигаться по странице с помощью заголовков, если разработчик не разметит контент с помощью заголовков надлежащим образом. Аналогично, если заголовок стилизован так, что выглядит не как заголовок, то он теряет свое визуальное значение.</p>
 
@@ -83,7 +83,7 @@ p, li {
  <li>Цвет текста должен быть достаточно контрастен относительно цвета фона.</li>
 </ul>
 
-<p> Для более подробной информации смотрите <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">Основы редактирования текста в HTML</a> и <a href="/en-US/docs/Learn/CSS/Styling_text">Стилизация текста</a>.</p>
+<p> Для более подробной информации смотрите <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">Основы редактирования текста в HTML</a> и <a href="/ru/docs/Learn/CSS/Styling_text">Стилизация текста</a>.</p>
 
 <h4 id="Emphasised_text">Акцентированный текст</h4>
 
@@ -93,35 +93,35 @@ p, li {
 
 &lt;p&gt;Собирающиеся на поверхности капельки воды называются &lt;strong&gt;конденсатом&lt;/strong&gt;.&lt;/p&gt;</pre>
 
-<p>Возможно нам понадобится добавить немного цвета акцентированному тексту</p>
+<p>Возможно нам понадобится добавить цвета акцентированному тексту</p>
 
 <pre class="brush: css">strong, em {
   color: #a60000;
 }</pre>
 
-<p>Однако, не стоит сильно менять стандартную стилизацию акцентирующих элементов. Стандартные паттерны полужирного и курсивного текста хорошо узнаваемы, поэтому изменения стилизации может вызвать путаницу. Для более подробной информации смотрите <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Акцент_и_важность">Акцент и важность</a>.</p>
+<p>Однако, не стоит сильно менять стандартную стилизацию акцентирующих элементов. Стандартные паттерны полужирного и курсивного текста хорошо узнаваемы, поэтому изменения стилизации может вызвать путаницу. Для более подробной информации смотрите <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Акцент_и_важность">Акцент и важность</a>.</p>
 
-<h4 id="Abbreviations">Abbreviations</h4>
+<h4 id="Abbreviations">Аббревиатуры</h4>
 
-<p>An element that allows an abbreviation, acronym, or initialization to be associated with its expansion:</p>
+<p>Элемент, который разметить аббревиатуру или акроним и указать их расшифку:</p>
 
-<pre class="brush: html">&lt;p&gt;Web content is marked up using &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Веб-контент верстается с помощью &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;.&lt;/p&gt;</pre>
 
-<p>Again, you might want to style it in some simple way:</p>
+<p>И вновь, возможно нам понадобится немного стилизовать наши аббревиатуры:</p>
 
 <pre class="brush: css">abbr {
   color: #a60000;
 }</pre>
 
-<p>The recognized styling convention for abbreviations is a dotted underline, and it is unwise to significantly deviate from this. For more on abbreviations, see <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abbreviations">Abbreviations</a>.</p>
+<p>Стандартный паттерн стилизации для аббревиатур — это пунктирное подчеркивание, не стоит от этого сильно отклоняться. Для более подробной информации смотрите <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Аббревиатуры">Аббревиатуры</a>.</p>
 
-<h4 id="Links">Links</h4>
+<h4 id="Links">Ссылки</h4>
 
-<p>Hyperlinks — the way you get to new places on the web:</p>
+<p>Гиперссылки помогают нам переходить из одного места в сети в другое:</p>
 
-<pre class="brush: html">&lt;p&gt;Visit the &lt;a href="https://www.mozilla.org"&gt;Mozilla homepage&lt;/a&gt;.&lt;/p&gt;</pre>
+<pre class="brush: html">&lt;p&gt;Посетите &lt;a href="https://www.mozilla.org"&gt;домашнюю страницу Mozilla&lt;/a&gt;.&lt;/p&gt;</pre>
 
-<p>Some very simple link styling is shown below:</p>
+<p>Ниже приведена базовая стилизация для ссылок:</p>
 
 <pre class="brush: css">a {
   color: #ff0000;
@@ -137,13 +137,13 @@ a:active {
   background-color: #a60000;
 }</pre>
 
-<p>The standard link conventions are underlined and a different color (default: blue) in their standard state, another color variation when the link has previously been visited (default: purple), and yet another color when the link is activated (default: red). In addition, the mouse pointer changes to a pointer icon when links are moused over, and the link receives a highlight when focused (e.g. via tabbing) or activated. The following image shows the highlight in both Firefox (a dotted outline) and Chrome (a blue outline):</p>
+<p>Стандартная стилизация ссылки — подчеркивание и отличный от стандартного цвет (по-умолчанию, синий) в обычном состоянии, иной цвет в случае, если ссылка ранее была посещена (по-умолчанию, фиолетовый) и еще один цвет для состояния нажатости (по-умолчанию, красный). Кроме того, при наведении на ссылку указателя мыши, его иконка изменяется на указующую руку, а также ссылка выделяется когда находится в фокусе (при перемещении по странице с помощью клавиши tab) или активна. Изображение ниже показывает выделение в Firefox (пунктирная обводка) и Chrome (синяя обводка):</p>
 
 <p><img alt="" src="focus-highlight-firefox.png" style="display: block; margin: 0px auto;"></p>
 
 <p><img alt="" src="focus-highlight-chrome.png" style="display: block; margin: 0px auto;"></p>
 
-<p>You can be creative with link styles, as long as you keep giving users feedback when they interact with the links. Something should definitely happen when states change, and you shouldn't get rid of the pointer cursor or the outline — both are very important accessibility aids for those using keyboard controls.</p>
+<p>До тех пор, пока пользователи получают обратную связь при взаимодействии со ссылками, можно проявлять определенную креативность относительно их стилизации. Что-нибудь обязательно должно происходить при изменении состояния. Не следует также отключать стандартную иконку указателя мыши или обводку — она вносит очень важный вклад в доступность для тех, кто использует клавитуру для навигации по сайту.</p>
 
 <h4 id="Form_elements">Form elements</h4>
 
