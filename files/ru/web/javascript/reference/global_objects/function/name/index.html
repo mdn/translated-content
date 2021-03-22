@@ -44,7 +44,7 @@ alert(doSomething.name); // выведет "doSomething"
 
 <h3 id="Предполагаемые_имена_функций">Предполагаемые имена функций</h3>
 
-<p>Переменные и методы могут предположить название анонимной функции из ее синтаксической позиции  (new in ECMAScript 2015).</p>
+<p>Переменные и методы могут предположить название анонимной функции из её синтаксической позиции  (new in ECMAScript 2015).</p>
 
 <pre class="brush: js">var f = function() {};
 var object = {
@@ -79,7 +79,7 @@ alert(object.someMethod.name); //someMethod
 
 <p>Для изменения name можно использовать {{jsxref("Object.defineProperty()")}}.</p>
 
-<h3 id="Сокращенные_имена_методов">Сокращенные имена методов</h3>
+<h3 id="Сокращённые_имена_методов">Сокращённые имена методов</h3>
 
 <pre class="brush: js"><code>var o = {
   foo(){}
@@ -129,7 +129,7 @@ console.log(fooInstance.constructor.name); // logs "Foo"</code>
 }
 </code></pre>
 
-<p>Со <code>static name()</code> методом <code>Foo.name</code> больше не содержит название класса, но отсылает к функции <code>name()</code>. Приведенное выше определение класса в ES2015 будет вести себя в Chrome и Firefx как в  ES5:</p>
+<p>Со <code>static name()</code> методом <code>Foo.name</code> больше не содержит название класса, но отсылает к функции <code>name()</code>. Приведённое выше определение класса в ES2015 будет вести себя в Chrome и Firefx как в  ES5:</p>
 
 <pre><code>function Foo() {}
 Object.defineProperty(Foo, 'name', { writable: true });
@@ -189,7 +189,7 @@ if (b.constructor.name === 'Foo') {
   console.log('Oops!');
 }</code></pre>
 
-<p>В несжатой версии код выполняется ожидаемо <code>"'foo' is an instance of 'Foo'"</code>. В то время, как в сжатой версии он ведет себя иначе. Если вы полагаетесь на <code>Function.name</code>, как в примере, то убедитесь, что pipeline не меняет код или не ожидайте от функции определенного имени.</p>
+<p>В несжатой версии код выполняется ожидаемо <code>"'foo' is an instance of 'Foo'"</code>. В то время, как в сжатой версии он ведёт себя иначе. Если вы полагаетесь на <code>Function.name</code>, как в примере, то убедитесь, что pipeline не меняет код или не ожидайте от функции определённого имени.</p>
 
 <table class="standard-table">
  <tbody>

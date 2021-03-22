@@ -7,7 +7,7 @@ translation_of: Web/API/PushManager/subscribe
 
 <p><code style=""><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Метод </span></font><strong>subscribe()</strong></code> интерфейса {{domxref("PushManager")}} позволяет осуществлять подписку на push-уведомления.</p>
 
-<p>Возвращает {{jsxref("Promise")}}, который разрешается в объект {{domxref("PushSubscription")}}, содержащий детали push-подписки. Новая push-подписка создается в случае, если сервис-воркер не имеет существующей подписки.</p>
+<p>Возвращает {{jsxref("Promise")}}, который разрешается в объект {{domxref("PushSubscription")}}, содержащий детали push-подписки. Новая push-подписка создаётся в случае, если сервис-воркер не имеет существующей подписки.</p>
 
 <h2 id="Синтакс">Синтакс</h2>
 
@@ -52,7 +52,7 @@ navigator.serviceWorker.register('serviceworker.js').then(
         // при помощи XMLHttpRequest.</code>
       }, function(error) {
         <code>// При разработке это часто помогает отлавливать ошибки в консоли.
-        // В продакшен-среде это также может быть полезно для отправки отчета
+        // В продакшен-среде это также может быть полезно для отправки отчёта
         // об ошибках на сервер приложения.</code>
         console.log(error);
       }

@@ -9,7 +9,7 @@ translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 ---
 <div>{{CSSRef}}</div>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Спецификация <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Alignment">Выравнивание Блоков</a> подробно описывает, как выравнивание работает при использовании различных способов разметки.</span> <span title="">На этой странице мы рассмотрим, как работает выравнивание блоков в контексте разметки flexbox.</span> <span title="">Поскольку эта страница предназначена для подробного описания вещей, относящихся к разметке flexbox и выравниванию блоков, ее следует читать вместе с основной страницей <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Alignment">выравнивания блоков</a>, в которой подробно описываются общие характеристики выравнивания блоков при использовании разных методах разметки.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Спецификация <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Alignment">Выравнивание Блоков</a> подробно описывает, как выравнивание работает при использовании различных способов разметки.</span> <span title="">На этой странице мы рассмотрим, как работает выравнивание блоков в контексте разметки flexbox.</span> <span title="">Поскольку эта страница предназначена для подробного описания вещей, относящихся к разметке flexbox и выравниванию блоков, её следует читать вместе с основной страницей <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Alignment">выравнивания блоков</a>, в которой подробно описываются общие характеристики выравнивания блоков при использовании разных методах разметки.</span></span></p>
 
 <h2 id="Основной_пример">Основной пример</h2>
 
@@ -25,7 +25,7 @@ translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 
 <ul>
  <li>Главная ось = направление согласно атрибуту <code>flex-direction</code> = выравнивание через атрибут <code>justify-content</code></li>
- <li>Поперечная ось = проходит поперек главной оси = выравнивание через атрибут <code>align-content</code>, <code>align-self</code>/<code>align-items</code></li>
+ <li>Поперечная ось = проходит поперёк главной оси = выравнивание через атрибут <code>align-content</code>, <code>align-self</code>/<code>align-items</code></li>
 </ul>
 
 <h3 id="Выравнивание_по_Главной_Оси">Выравнивание по Главной Оси</h3>
@@ -48,13 +48,13 @@ translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Это означает, что атрибут <code>justify-self</code> нет имеет смысла использовать в разметке flexbox, поскольку мы всегда имеем дело с перемещением всей группы элементов.</span></span></p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Использовать атрибут <code>align-self</code> имеет смысл при работе с поперечной осью, так как потенциально есть дополнительное пространство во flex контейнере в этом измерении, один элемент которого может быть перемещен и в начало, и в конец.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Использовать атрибут <code>align-self</code> имеет смысл при работе с поперечной осью, так как потенциально есть дополнительное пространство во flex контейнере в этом измерении, один элемент которого может быть перемещён и в начало, и в конец.</span></span></p>
 
 <h2 id="Выравнивание_и_свойство_margin_auto">Выравнивание и свойство margin: auto</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">В разметке flexbox присутствует конкретный вариант использования, в котором, возможно, понадобится атрибут <code>justify-self</code>. Например, когда будет необходимо разделить набор flex элементов для создания отдельного шаблона навигации.</span> <span title="">В таком случае, можно использовать атрибут <code>margin</code> со значением <code>auto</code>.</span> <span title="">Атрибут с таким значением будет занимать все доступное пространство в своем измерении.</span> <span title="">Так работает центрирование блока со свойством <code>margin:auto</code>.</span> <span title="">Установив значение атрибутов <code>margin-left</code> и <code>margin-right</code> в значение <code>auto</code>, обе стороны нашего блока попытаются занять все доступное пространство и, таким образом, заставят двигаться блок в центр.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">В разметке flexbox присутствует конкретный вариант использования, в котором, возможно, понадобится атрибут <code>justify-self</code>. Например, когда будет необходимо разделить набор flex элементов для создания отдельного шаблона навигации.</span> <span title="">В таком случае, можно использовать атрибут <code>margin</code> со значением <code>auto</code>.</span> <span title="">Атрибут с таким значением будет занимать все доступное пространство в своём измерении.</span> <span title="">Так работает центрирование блока со свойством <code>margin:auto</code>.</span> <span title="">Установив значение атрибутов <code>margin-left</code> и <code>margin-right</code> в значение <code>auto</code>, обе стороны нашего блока попытаются занять все доступное пространство и, таким образом, заставят двигаться блок в центр.</span></span></p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Установив значение атрибута{{cssxref ("margin")}} в <code>auto</code> для одного элемента в наборе с flex-элементами, выровненных с начала, можно создать разделенную навигацию.</span> <span title="">Это хорошо работает с разметкой flexbox и свойствами выравнивания.</span> <span title="">Как только для элемента со свойством <code>margin: auto</code> не остается свободного места, он станет вести себя также, как и все остальные flex элементы, и сократится в объеме, пытаясь уместиться в доступное пространство.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Установив значение атрибута{{cssxref ("margin")}} в <code>auto</code> для одного элемента в наборе с flex-элементами, выровненных с начала, можно создать разделённую навигацию.</span> <span title="">Это хорошо работает с разметкой flexbox и свойствами выравнивания.</span> <span title="">Как только для элемента со свойством <code>margin: auto</code> не остаётся свободного места, он станет вести себя также, как и все остальные flex элементы, и сократится в объёме, пытаясь уместиться в доступное пространство.</span></span></p>
 
 <p>{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/auto-margins.html", '100%', 500)}}</p>
 
@@ -70,7 +70,7 @@ translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">На главной оси атрибут <code>column-gap</code> будет создавать разрывы фиксированного размера между соседними элементами.</span><br>
  <br>
- <span title="">На поперечной оси атрибут <code>row-gap</code> создает разрыв между соседними flex линиями, поэтому необходимо также установить атрибут <code>flex-wrap</code> в значение <code>wrap</code>, чтобы применить эффект.</span></span></p>
+ <span title="">На поперечной оси атрибут <code>row-gap</code> создаёт разрыв между соседними flex линиями, поэтому необходимо также установить атрибут <code>flex-wrap</code> в значение <code>wrap</code>, чтобы применить эффект.</span></span></p>
 
 <div class="note">
 <p><span class="tlid-translation translation" lang="ru"><span title="">Примечание. Начиная с версии 63, Firefox является единственным браузером, в котором реализованы свойства разрыва в разметке Flexbox.</span></span></p>

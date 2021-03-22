@@ -3,7 +3,6 @@ title: DNS プリフェッチの制御
 slug: conflicting/Web/HTTP/Headers/X-DNS-Prefetch-Control
 original_slug: Controlling_DNS_prefetching
 ---
-<p>{{ fx_minversion_header(3.5) }}</p>
 <p>Firefox 3.5 では <strong>DNS prefetching </strong>が導入されました。これにより、 Firefox は文書中に埋め込まれたアンカーに加え、画像、CSS、JavaScript などの文書内で参照されている外部リソースの URL に対し、予めドメインの名前解決を行います。</p>
 <p>このプリフェッチはバックグラウンドで行われるため、実際にリソースが必要となった際には既に名前解決が終了していることになります。これにより、例えばユーザーがリンクをクリックした際の待ち時間を減らすことができます。</p>
 <h2 id="背景">背景</h2>

@@ -15,7 +15,7 @@ translation_of: Web/API/ServiceWorkerState
  <dt><code>installed</code></dt>
  <dd>Service worker находится в состоянии ожидания и будет активирован после закрытия всех страниц его источника, использующих предыдущую версию service worker'а.</dd>
  <dt><code>activating</code></dt>
- <dd>Service worker в данном состоянии считается активным. В этом состоянии, метод {{DOMxRef("ExtendableEvent.waitUntil()")}} может быть вызван в обработчике события <code>onactivate</code> для продления этапа активации до успешного завершения переданного промиса. Service worker не начнет обрабатывать события до перехода в состояние <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">activated</span></font>.</dd>
+ <dd>Service worker в данном состоянии считается активным. В этом состоянии, метод {{DOMxRef("ExtendableEvent.waitUntil()")}} может быть вызван в обработчике события <code>onactivate</code> для продления этапа активации до успешного завершения переданного промиса. Service worker не начнёт обрабатывать события до перехода в состояние <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">activated</span></font>.</dd>
  <dt><code>activated</code></dt>
  <dd>Service worker в данном состоянии активен и готов обрабатывать события.</dd>
  <dt><code>redundant</code></dt>

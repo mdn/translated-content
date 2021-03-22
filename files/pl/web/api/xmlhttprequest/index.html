@@ -117,7 +117,7 @@ req.send(null);
 req.abort();
 </pre>
 <h4 id="mozBackgroundRequest" name="mozBackgroundRequest">mozBackgroundRequest</h4>
-<p>{{ Fx_minversion_inline(3) }} Za pomocą tej własności można wyłączyć okna dialogowe uwierzytelniania i niewłaściwego certyfikatu, które mogą pojawiać się przy wysyłaniu żądania. Żądanie, dla którego ustawiono tę własność, nie będzie ponadto anulowane nawet w przypadku zamknięcia okna, z którego zostało wysłane. Własność ta działa wyłącznie w kodzie chrome.
+<p>Za pomocą tej własności można wyłączyć okna dialogowe uwierzytelniania i niewłaściwego certyfikatu, które mogą pojawiać się przy wysyłaniu żądania. Żądanie, dla którego ustawiono tę własność, nie będzie ponadto anulowane nawet w przypadku zamknięcia okna, z którego zostało wysłane. Własność ta działa wyłącznie w kodzie chrome.
 </p>
 <pre>var req = new XMLHttpRequest();
 req.mozBackgroundRequest = true;

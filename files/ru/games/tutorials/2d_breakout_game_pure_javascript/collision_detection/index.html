@@ -8,12 +8,12 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Обнаруже
 
 <div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
 
-<p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаем_зону_кирпичей", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}</p>
+<p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}</p>
 
 <div class="summary">
 <p>Это 7 шаг из 10 в <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>. Вы можете найти исходный код, как он будет выглядеть после завершения этого урока, тут <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html">Gamedev-Canvas-workshop/lesson7.html</a>.</p>
 
-<p>У нас уже есть кирпичи, появляющиеся на экране, но игра все еще не так интересна, ведь мяч проходит сквозь них. Нам нужно подумать о добавлении обнаружения столкновений, чтобы он мог отскакивать от кирпичей и ломать их.</p>
+<p>У нас уже есть кирпичи, появляющиеся на экране, но игра все ещё не так интересна, ведь мяч проходит сквозь них. Нам нужно подумать о добавлении обнаружения столкновений, чтобы он мог отскакивать от кирпичей и ломать их.</p>
 </div>
 
 <p>Конечно, это наше решение, как реализовать это, но может быть сложно рассчитать, касается ли шар прямоугольника или нет, потому что в Canvas нет вспомогательных функций для этого. В этом уроке мы сделаем это самым простым способом. Мы проверим, сталкивается ли центр мяча с любым из данных кирпичей. Это не идеальное решение на все случаи жизни, и есть намного более сложные и эффективные способы обнаружения столкновений, но это научит вас основным понятиям.</p>
@@ -53,11 +53,11 @@ original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Обнаруже
     }
 }</pre>
 
-<p>Добавьте вышеприведенный блок к вашему коду под <code>keyUpHandler() </code>функцией .</p>
+<p>Добавьте вышеприведённый блок к вашему коду под <code>keyUpHandler() </code>функцией .</p>
 
 <h2 id="Удаление_кирпичей_после_их_попадания">Удаление кирпичей после их попадания</h2>
 
-<p>Вышеприведенный код будет работать, как и задумано, и мяч изменит свое направление. Проблема в том, что кирпичи остаются на своих местах. Мы должны придумать, как избавляться от тех, в которые мы уже попали мячом. Мы можем сделать это, добавив дополнительный параметр кирпичам, определяющий, будет ли кирпич отрисовываться на экране или нет. В той части кода, где мы инициализируем кирпичи, добавим свойство <code>status</code> к каждому кирпичному объекту. Обновите следующую часть кода, как показано ниже:</p>
+<p>Вышеприведённый код будет работать, как и задумано, и мяч изменит своё направление. Проблема в том, что кирпичи остаются на своих местах. Мы должны придумать, как избавляться от тех, в которые мы уже попали мячом. Мы можем сделать это, добавив дополнительный параметр кирпичам, определяющий, будет ли кирпич отрисовываться на экране или нет. В той части кода, где мы инициализируем кирпичи, добавим свойство <code>status</code> к каждому кирпичному объекту. Обновите следующую часть кода, как показано ниже:</p>
 
 <pre class="brush: js; highlight:[5]">var bricks = [];
 for(var c=0; c&lt;brickColumnCount; c++) {
@@ -124,6 +124,6 @@ for(var c=0; c&lt;brickColumnCount; c++) {
 
 <h2 id="Следующие_шаги">Следующие шаги</h2>
 
-<p>Мы уверенно движемся вперёд! Поехали! В восьмой главе мы будем учиться <a href="https://translate.googleusercontent.com/translate_c?act=url&amp;depth=1&amp;hl=ru&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win&amp;xid=25657,15700022,15700124,15700149,15700168,15700186,15700190,15700201,15700205&amp;usg=ALkJrhhN9U9TuRM07dQaU3Oyqz2-F5ctig">отслеживать счет и выигрывать</a> .</p>
+<p>Мы уверенно движемся вперёд! Поехали! В восьмой главе мы будем учиться <a href="https://translate.googleusercontent.com/translate_c?act=url&amp;depth=1&amp;hl=ru&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win&amp;xid=25657,15700022,15700124,15700149,15700168,15700186,15700190,15700201,15700205&amp;usg=ALkJrhhN9U9TuRM07dQaU3Oyqz2-F5ctig">отслеживать счёт и выигрывать</a> .</p>
 
 <p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}</p>

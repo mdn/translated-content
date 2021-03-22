@@ -27,7 +27,7 @@ translation_of: Web/API/Node
 <dl>
  <dt>{{domxref("Node.baseURI")}} {{readonlyInline}}</dt>
  <dd>ベース URL を表す {{domxref("DOMString")}} を返します。ベース URL の概念は、言語によって変わります。HTML ではプロトコル、ドメイン名、ディレクトリー構造に対応しており、最後の <code>'/'</code> までのすべてになります。</dd>
- <dt>{{domxref("Node.baseURIObject")}} {{Non-standard_inline}} {{Fx_minversion_inline("3")}}</dt>
+ <dt>{{domxref("Node.baseURIObject")}} {{Non-standard_inline}}</dt>
  <dd>(ウェブコンテンツでは使用できません) 要素のベース URI を表す、読み取り専用の {{Interface("nsIURI")}} オブジェクトを返します。</dd>
  <dt>{{domxref("Node.childNodes")}} {{readonlyInline}}</dt>
  <dd>このノードのすべての子孫を含む、生きている {{domxref("NodeList")}} を返します。{{domxref("NodeList")}} が生きているとは、<code>Node</code> の子が変化すれば自動的に {{domxref("NodeList")}} オブジェクトが更新されることを意味します。</dd>
@@ -41,7 +41,7 @@ translation_of: Web/API/Node
  <dd>ツリー構造で次のノードを表す {{domxref("Node")}} を返します。該当するノードがない場合は <code>null</code> を返します。</dd>
  <dt>{{domxref("Node.nodeName")}} {{readonlyInline}}</dt>
  <dd><code>Node</code> の名前を持つ {{domxref("DOMString")}} を返します。名前の構造は、ノードの型によって異なります。例えば、{{domxref("HTMLElement")}} は {{domxref("HTMLAudioElement")}} に対して <code>'audio'</code> というように対応するタグの名前、{{domxref("Text")}} ノードは <code>'#text'</code> という文字列、{{domxref("Document")}} ノードは <code>'#document'</code> という文字列になります。</dd>
- <dt>{{domxref("Node.nodePrincipal")}} {{Non-standard_inline}}{{Fx_minversion_inline("3")}}</dt>
+ <dt>{{domxref("Node.nodePrincipal")}} {{Non-standard_inline}}</dt>
  <dd>ノードのプリンシパルを表す {{Interface("nsIPrincipal")}} を返します。</dd>
  <dt>{{domxref("Node.nodeType")}}{{readonlyInline}}</dt>
  <dd>ノードの型を表す <code>unsigned short</code> を返します。使用できる値:

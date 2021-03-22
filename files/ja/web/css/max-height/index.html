@@ -4,8 +4,15 @@ slug: Web/CSS/max-height
 tags:
   - CSS
   - CSS Property
-  - CSS プロパティ
+  - Layout
+  - Maximum
   - Reference
+  - dimensions
+  - height
+  - limit
+  - max-height
+  - 'recipe:css-property'
+  - size
 translation_of: Web/CSS/max-height
 ---
 <div>{{CSSRef}}</div>
@@ -18,7 +25,7 @@ translation_of: Web/CSS/max-height
 
 <p><code>max-height</code> は {{cssxref("height")}} を上書きしますが、 {{cssxref("min-height")}} は <code>max-height</code> を上書きします。</p>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+<h2 id="Syntax">構文</h2>
 
 <pre class="brush:css no-line-numbers">/* &lt;length&gt; 値 */
 max-height: 3.5em;
@@ -38,15 +45,13 @@ max-height: initial;
 max-height: unset;
 </pre>
 
-<h3 id="Values" name="Values">値</h3>
+<h3 id="Values">値</h3>
 
 <dl>
  <dt>{{cssxref("&lt;length&gt;")}}</dt>
  <dd><code>max-height</code> を絶対的な値で定義します。</dd>
  <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
  <dd><code>max-height</code> を包含ブロックの高さに対するパーセント値で定義します。</dd>
- <dt><code>auto</code></dt>
- <dd>ブラウザーは指定された要素の <code>max-height</code> を計算して選択します。</dd>
  <dt><code>none</code></dt>
  <dd>ボックスの寸法を制限しません。</dd>
  <dt><code>max-content</code></dt>
@@ -57,27 +62,33 @@ max-height: unset;
  <dd>利用可能な空白を指定された引数で置き換えた <code>fit-content</code> 式を使用します。すなわち、 <code>min(max-content, max(min-content, <var>引数</var>))</code> です。</dd>
 </dl>
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+<h2 id="Accessibility_concerns">アクセシビリティの考慮</h2>
+
+<p>テキストを大きくするためにページを拡大したときに、 <code>max-height</code> を設定した要素が切り取られたり、他のコンテンツを覆い隠したりしないことを確認してください。</p>
+
+<ul>
+ <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN WCAG を理解する ― ガイドライン 1.4 の解説</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
+</ul>
+
+<h2 id="Formal_definition">公式定義</h2>
+
+<p>{{cssinfo}}</p>
+
+<h2 id="Formal_syntax">形式文法</h2>
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
+
+<h3 id="Setting_max-height_using_percentage_and_keyword_values">パーセント値とキーワード値を用いた max-height の設定</h3>
 
 <pre class="brush: css">table { max-height: 75%; }
 
 form { max-height: none; }
 </pre>
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
-
-<p>ページを拡大縮小して文字サイズを拡大した際に、 <code>max-height</code> を設定した要素が他のコンテンツを切り捨てたり妨げたりしないことを確認してください。</p>
-
-<ul>
- <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN "WCAG を理解する ― ガイドライン 1.4 の解説"</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
-</ul>
-
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -106,17 +117,16 @@ form { max-height: none; }
  </tbody>
 </table>
 
-<p>{{cssinfo}}</p>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("css.properties.max-height")}}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model" title="en/CSS/box_model">The box model</a>, {{cssxref("box-sizing")}}</li>
+ <li><a href="/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">ボックスモデル</a>、 {{cssxref("box-sizing")}}</li>
  <li>{{Cssxref("height")}}, {{Cssxref("min-height")}}</li>
+ <li>対応する論理プロパティ: {{cssxref("max-inline-size")}}, {{cssxref("max-block-size")}}</li>
 </ul>

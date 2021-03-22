@@ -19,7 +19,7 @@ translation_of: Web/API/Document/getElementsByTagName
 <pre class="syntaxbox">var <var>elements</var> = document.getElementsByTagName(<em>name</em>);</pre>
 
 <ul>
- <li><code>elements</code> это живая {{domxref("HTMLCollection")}} (с учетом примечания внизу) найденных документов в таком порядке в каком они появляются в дереве.</li>
+ <li><code>elements</code> это живая {{domxref("HTMLCollection")}} (с учётом примечания внизу) найденных документов в таком порядке в каком они появляются в дереве.</li>
  <li><code>name</code> строка представляющая собой имя элемента. Специальная строка "*" позволяет получить все элементы.</li>
 </ul>
 
@@ -91,7 +91,7 @@ translation_of: Web/API/Document/getElementsByTagName
 
 <h2 id="Примечания">Примечания</h2>
 
-<p>Когда вызывается на HTML document, <code>getElementsByTagName()</code> переводит в нижний регистр свой аргумент перед работой. Это может быть неожиданным при попытке найти соответствие для camelCase SVG элементов в поддереве HTML документа. В таком случае может быть полезен {{Domxref("document.getElementsByTagNameNS()")}}. См. также {{Bug(499656)}}.</p>
+<p>Когда вызывается на HTML document, <code>getElementsByTagName()</code> переводит в нижний регистр свой аргумент перед работой. Это может быть неожиданным при попытке найти соответствие для camelCase SVG элементов в поддереве HTML документа. В таком случае может быть полезен {{Domxref("document.getElementsByTagNameNS()")}}. Смотрите также {{Bug(499656)}}.</p>
 
 <p><code>document.getElementsByTagName()</code> подобен {{domxref("element.getElementsByTagName()")}}, за исключением того что поиск охватывает весь документ.</p>
 

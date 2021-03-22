@@ -48,7 +48,7 @@ translation_of: Web/API/Media_Session_API
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Данный пример демонстрирует работу и определение доступности Media Session API. Также, он передает метаданные и определяет собственные обработчики событий:</p>
+<p>Данный пример демонстрирует работу и определение доступности Media Session API. Также, он передаёт метаданные и определяет собственные обработчики событий:</p>
 
 <pre class="brush: js notranslate">if ('mediaSession' in navigator) {
   navigator.mediaSession.metadata = new MediaMetadata({
@@ -73,7 +73,7 @@ translation_of: Web/API/Media_Session_API
   navigator.mediaSession.setActionHandler('nexttrack', function() { /* Code excerpted. */ });
 }</pre>
 
-<p>Некоторые браузеры отключают автовоспроизведение медиаэлементов на мобильных устройствах и требуют действий пользователя для начала воспроизведения. Этот пример добавит обработчик события <code>pointerup</code> для кнопки воспроизведения на странице, который начнет работу с медиасессией:</p>
+<p>Некоторые браузеры отключают автовоспроизведение медиаэлементов на мобильных устройствах и требуют действий пользователя для начала воспроизведения. Этот пример добавит обработчик события <code>pointerup</code> для кнопки воспроизведения на странице, который начнёт работу с медиасессией:</p>
 
 <pre class="brush: js notranslate">playButton.addEventListener('pointerup', function(event) {
   var audio = document.querySelector('audio');

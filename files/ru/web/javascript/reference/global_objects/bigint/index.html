@@ -10,14 +10,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 <p>{{JSRef}}</p>
 
-<p><strong><code>BigInt</code></strong> это встроенный объект, который предоставляет способ представлять целые числа больше 2<sup>53</sup> - 1, наибольшего числа, которое JavaScript может надежно представить с {{JSxRef("Number")}} примитивом. Это максимальное значение можно получить, обратившись к {{JSxRef("Number.MAX_SAFE_INTEGER")}}.</p>
+<p><strong><code>BigInt</code></strong> это встроенный объект, который предоставляет способ представлять целые числа больше 2<sup>53</sup> - 1, наибольшего числа, которое JavaScript может надёжно представить с {{JSxRef("Number")}} примитивом. Это максимальное значение можно получить, обратившись к {{JSxRef("Number.MAX_SAFE_INTEGER")}}.</p>
 
 <dl>
 </dl>
 
 <h2 id="Описание">Описание</h2>
 
-<p><code>BigInt</code> создается путем добавления <code>n</code> в конец целочисленного литерала — <code>10n</code> — или вызовом функции <code>BigInt()</code>.</p>
+<p><code>BigInt</code> создаётся путём добавления <code>n</code> в конец целочисленного литерала — <code>10n</code> — или вызовом функции <code>BigInt()</code>.</p>
 
 <pre class="brush: js">const theBiggestInt = 9007199254740991n;
 
@@ -44,7 +44,7 @@ const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111"
 
 <h3 id="Тип">Тип</h3>
 
-<p>При проверке с использованием оператора <code>typeof</code>, <code>BigInt</code> выдает тип <code>"bigint"</code>:</p>
+<p>При проверке с использованием оператора <code>typeof</code>, <code>BigInt</code> выдаёт тип <code>"bigint"</code>:</p>
 
 <pre class="brush: js">typeof 1n === 'bigint'; // true
 typeof BigInt('1') === 'bigint'; // true
@@ -57,7 +57,7 @@ typeof BigInt('1') === 'bigint'; // true
 
 <h3 id="Операторы">Операторы</h3>
 
-<p>Следующие операторы могут использоваться с <code>BigInt</code> (или объектом-оберткой <code>BigInt</code>): <code>+</code>, <code>*</code>, <code>-</code>, <code>**</code>, <code>%</code>.</p>
+<p>Следующие операторы могут использоваться с <code>BigInt</code> (или объектом-обёрткой <code>BigInt</code>): <code>+</code>, <code>*</code>, <code>-</code>, <code>**</code>, <code>%</code>.</p>
 
 <p><a href="/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">Побитовые операции</a> также поддерживаются, кроме <code>&gt;&gt;&gt;</code> (сдвиг вправо с заполнением нулями).</p>
 
@@ -91,7 +91,7 @@ bigN * -1n
 <p>Оператор <code>/</code> также работает, как и ожидалось, с целыми числами. Однако, поскольку это BigInt, эта операция будет округляться в меньшую сторону, то есть она не будет возвращать какие-либо дробные цифры.</p>
 
 <div class="blockIndicator warning">
-<p>Результат операции с дробным результатом будет округлен в <strong><u>меньшую</u></strong> сторону при использовании  <code>BigInt</code>.</p>
+<p>Результат операции с дробным результатом будет округлён в <strong><u>меньшую</u></strong> сторону при использовании  <code>BigInt</code>.</p>
 </div>
 
 <pre class="brush: js">const expected = 4n / 2n;
@@ -138,7 +138,7 @@ mixed.sort();
 // ↪ [-12n, 0, 0n, 10, 4n, 4, 6]
 </pre>
 
-<p>Обратите внимание, что сравнения с <code>обьектом</code>-оберткой <code>BigInt</code> действуют как с другими объектами, указывая на равенство только когда сравнивается идентичный экземпляр объекта:</p>
+<p>Обратите внимание, что сравнения с <code>обьектом</code>-обёрткой <code>BigInt</code> действуют как с другими объектами, указывая на равенство только когда сравнивается идентичный экземпляр объекта:</p>
 
 <pre class="brush: js">0n === Object(0n); // false
 Object(0n) === Object(0n); // false
@@ -236,7 +236,7 @@ Boolean(12n)
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Расчет_простых_чисел">Расчет простых чисел</h3>
+<h3 id="Расчёт_простых_чисел">Расчёт простых чисел</h3>
 
 <pre class="brush: js">// Возвращает true, если BigInt — простое число
 function isPrime(p) {

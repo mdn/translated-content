@@ -26367,15 +26367,6 @@
       "rtabusse"
     ]
   },
-  "orphaned/Learn/How_to_contribute": {
-    "modified": "2020-07-16T22:33:43.608Z",
-    "contributors": [
-      "SphinxKnight",
-      "Dralyab",
-      "loella16",
-      "PetiPandaRou"
-    ]
-  },
   "Learn/Common_questions/set_up_a_local_testing_server": {
     "modified": "2020-07-16T22:35:52.861Z",
     "contributors": [
@@ -27263,12 +27254,6 @@
   },
   "Learn/Common_questions/Upload_files_to_a_web_server": {
     "modified": "2020-07-16T22:35:41.575Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "orphaned/Web/Security/Information_Security_Basics": {
-    "modified": "2019-03-23T22:46:47.760Z",
     "contributors": [
       "SphinxKnight"
     ]
@@ -30053,9 +30038,12 @@
     ]
   },
   "Glossary/Signature/Security": {
-    "modified": "2019-03-23T22:40:22.990Z",
+    "modified": "2019-03-23T23:47:49.334Z",
     "contributors": [
-      "xdelatour"
+      "fsiliadin",
+      "Sebastianz",
+      "CedricP",
+      "Fredchat"
     ]
   },
   "Glossary/SIMD": {
@@ -30757,88 +30745,6 @@
       "rachelandrew"
     ]
   },
-  "orphaned/Tools/Add-ons/DOM_Inspector/DOM_Inspector_FAQ": {
-    "modified": "2020-07-16T22:36:25.515Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Add-ons/DOM_Inspector": {
-    "modified": "2020-07-16T22:36:24.288Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore",
-      "tregagnon",
-      "Delapouite",
-      "Mgjbot",
-      "BenoitL",
-      "Sheppy",
-      "Chbok"
-    ]
-  },
-  "orphaned/Tools/Add-ons/DOM_Inspector/Internals": {
-    "modified": "2020-07-16T22:36:25.144Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Add-ons/DOM_Inspector/Introduction_to_DOM_Inspector": {
-    "modified": "2020-07-16T22:36:25.833Z",
-    "contributors": [
-      "maximelore",
-      "wbamberg"
-    ]
-  },
-  "orphaned/Introduction_à_la_cryptographie_à_clef_publique/Certificats_et_authentification": {
-    "modified": "2019-03-24T00:12:07.320Z",
-    "contributors": [
-      "fsiliadin",
-      "SphinxKnight",
-      "Sebastianz",
-      "Sheppy",
-      "nterray",
-      "BenoitL",
-      "Fredchat"
-    ]
-  },
-  "orphaned/Introduction_à_la_cryptographie_à_clef_publique/Chiffrement_et_déchiffrement": {
-    "modified": "2019-03-23T23:47:48.910Z",
-    "contributors": [
-      "acemann",
-      "Sebastianz",
-      "CedricP",
-      "Fredchat"
-    ]
-  },
-  "orphaned/Introduction_à_la_cryptographie_à_clef_publique/Gestion_des_certificats": {
-    "modified": "2019-03-23T23:47:44.500Z",
-    "contributors": [
-      "acemann",
-      "Sebastianz",
-      "fscholz",
-      "CedricP",
-      "Fredchat"
-    ]
-  },
-  "orphaned/Introduction_à_la_cryptographie_à_clef_publique/Les_problèmes_de_sécurité_sur_Internet": {
-    "modified": "2019-03-23T23:47:50.104Z",
-    "contributors": [
-      "Sebastianz",
-      "CedricP",
-      "Fredchat"
-    ]
-  },
-  "orphaned/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques": {
-    "modified": "2019-03-23T23:47:49.334Z",
-    "contributors": [
-      "fsiliadin",
-      "Sebastianz",
-      "CedricP",
-      "Fredchat"
-    ]
-  },
   "Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
     "modified": "2020-03-12T19:36:16.242Z",
     "contributors": [
@@ -31185,14 +31091,6 @@
       "Anonymous"
     ]
   },
-  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
-    "modified": "2019-01-16T18:25:23.702Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "Goofy"
-    ]
-  },
   "MDN/Contribute/Howto/Convert_code_samples_to_be_live": {
     "modified": "2019-01-16T20:18:20.962Z",
     "contributors": [
@@ -31209,94 +31107,6 @@
       "AkwindFr"
     ]
   },
-  "orphaned/MDN/Contribute/Howto/Tag_JavaScript_pages": {
-    "modified": "2019-01-16T19:52:49.003Z",
-    "contributors": [
-      "wbamberg",
-      "NerOcrO",
-      "jswisher",
-      "Johann-S",
-      "Maamouch",
-      "BiGrEgGaErOoTs",
-      "Bath66",
-      "ainouss",
-      "Wladek92",
-      "DOCUBE",
-      "Luejni"
-    ]
-  },
-  "orphaned/MDN/Contribute/Howto/Do_an_editorial_review": {
-    "modified": "2020-04-12T16:14:40.644Z",
-    "contributors": [
-      "ele-gall-ac-mineducation",
-      "wbamberg",
-      "ussmarc",
-      "SphinxKnight",
-      "Raulel",
-      "ThinkDumbIndustries",
-      "Fabienne1963",
-      "Requiem75020",
-      "tregagnon"
-    ]
-  },
-  "orphaned/MDN/Contribute/Howto/Do_a_technical_review": {
-    "modified": "2019-08-07T15:32:02.446Z",
-    "contributors": [
-      "mathildebuenerd",
-      "wbamberg",
-      "SphinxKnight",
-      "AlemFarid",
-      "vhf",
-      "tregagnon"
-    ]
-  },
-  "orphaned/MDN/Contribute/Howto/Set_the_summary_for_a_page": {
-    "modified": "2019-03-23T22:55:58.937Z",
-    "contributors": [
-      "wbamberg",
-      "loella16",
-      "Hell_Carlito",
-      "pixoux",
-      "diomabb"
-    ]
-  },
-  "orphaned/MDN/Contribute/Howto/Write_an_article_to_help_learn_about_the_Web": {
-    "modified": "2020-02-28T22:24:52.629Z",
-    "contributors": [
-      "As-Sinder",
-      "wbamberg",
-      "Dralyab"
-    ]
-  },
-  "orphaned/MDN/Editor/Basics": {
-    "modified": "2020-09-30T15:38:34.461Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Voulto",
-      "jswisher"
-    ]
-  },
-  "orphaned/MDN/Editor/Basics/Attachments": {
-    "modified": "2020-09-30T15:38:34.580Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ele-gall-ac-mineducation"
-    ]
-  },
-  "orphaned/MDN/Editor": {
-    "modified": "2020-09-30T15:38:34.314Z",
-    "contributors": [
-      "chrisdavidmills",
-      "verdy_p",
-      "wbamberg",
-      "Keyrolus",
-      "ftoulouse",
-      "Mylainos",
-      "Jeremie",
-      "teoli",
-      "BenoitL"
-    ]
-  },
   "MDN/Guidelines/Code_guidelines": {
     "modified": "2020-09-30T15:29:18.597Z",
     "contributors": [
@@ -31308,40 +31118,6 @@
     "modified": "2020-02-08T12:56:22.102Z",
     "contributors": [
       "tristantheb"
-    ]
-  },
-  "orphaned/MDN/Community/Conversations": {
-    "modified": "2019-01-17T02:52:45.654Z",
-    "contributors": [
-      "wbamberg",
-      "zakaila"
-    ]
-  },
-  "orphaned/MDN/Community/Doc_sprints": {
-    "modified": "2019-03-23T22:40:48.518Z",
-    "contributors": [
-      "wbamberg",
-      "qwincy_p",
-      "Manuela"
-    ]
-  },
-  "orphaned/MDN/Community": {
-    "modified": "2019-09-11T08:03:04.252Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "NerOcrO",
-      "loella16",
-      "ZakCodes",
-      "Mozinet",
-      "teoli",
-      "wakka27"
-    ]
-  },
-  "orphaned/MDN/Community/Whats_happening": {
-    "modified": "2020-10-05T06:56:25.370Z",
-    "contributors": [
-      "Voulto"
     ]
   },
   "MDN/Structures/Live_samples": {
@@ -31360,13 +31136,6 @@
       "wbamberg",
       "jcletousey",
       "loella16"
-    ]
-  },
-  "orphaned/MDN/Tools/Template_editing": {
-    "modified": "2020-09-30T16:48:33.737Z",
-    "contributors": [
-      "chrisdavidmills",
-      "JNa0"
     ]
   },
   "Mozilla/Firefox/Releases/3/Updating_web_applications": {
@@ -31398,12 +31167,6 @@
       "Fredchat"
     ]
   },
-  "orphaned/Mozilla/Add-ons_bonnes_pratiques_performances_extensions": {
-    "modified": "2019-03-23T22:52:30.998Z",
-    "contributors": [
-      "ArakNoPhob"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar": {
     "modified": "2019-07-03T05:22:48.886Z",
     "contributors": [
@@ -31417,32 +31180,6 @@
     "contributors": [
       "hellosct1",
       "RoyalPanda"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Distribution_options/Add-ons_for_desktop_apps": {
-    "modified": "2019-09-30T14:55:22.937Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Distribution_options/Add-ons_in_the_enterprise": {
-    "modified": "2019-07-08T08:21:59.137Z",
-    "contributors": [
-      "hellosct1",
-      "JeffD"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Distribution_options": {
-    "modified": "2019-07-08T08:22:26.722Z",
-    "contributors": [
-      "hellosct1",
-      "SphinxKnight"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Distribution_options/Sideloading_add-ons": {
-    "modified": "2019-07-08T08:20:57.253Z",
-    "contributors": [
-      "hellosct1"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/API/proxy/settings": {
@@ -31603,12 +31340,6 @@
       "wbamberg"
     ]
   },
-  "orphaned/Mozilla/Add-ons/WebExtensions/API/userScripts/APIScript": {
-    "modified": "2019-10-13T04:23:03.445Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
   "conflicting/Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister": {
     "modified": "2020-10-15T22:23:34.113Z",
     "contributors": [
@@ -31621,36 +31352,11 @@
       "hellosct1"
     ]
   },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Best_practices_for_updating_your_extension": {
-    "modified": "2019-07-05T09:31:56.338Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Choose_a_Firefox_version_for_web_extension_develop": {
-    "modified": "2019-10-12T17:29:13.794Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK": {
-    "modified": "2019-05-19T07:28:28.529Z",
-    "contributors": [
-      "hellosct1",
-      "SphinxKnight"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs": {
     "modified": "2020-10-15T20:55:07.811Z",
     "contributors": [
       "hellosct1",
       "SphinxKnight"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Developer_accounts": {
-    "modified": "2019-10-12T19:14:11.531Z",
-    "contributors": [
-      "hellosct1"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension": {
@@ -31662,19 +31368,6 @@
   },
   "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)": {
     "modified": "2019-03-18T21:02:43.036Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions": {
-    "modified": "2019-07-03T12:00:26.344Z",
-    "contributors": [
-      "hellosct1",
-      "regseb"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Test_permission_requests": {
-    "modified": "2019-05-18T18:06:34.313Z",
     "contributors": [
       "hellosct1"
     ]
@@ -31691,12 +31384,6 @@
       "hellosct1",
       "NerOcrO",
       "gritchou"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/User_experience_best_practices": {
-    "modified": "2019-05-18T19:46:03.001Z",
-    "contributors": [
-      "hellosct1"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools": {
@@ -31720,14 +31407,6 @@
     "modified": "2019-07-03T12:00:39.099Z",
     "contributors": [
       "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox": {
-    "modified": "2019-03-28T06:57:14.853Z",
-    "contributors": [
-      "hellosct1",
-      "zecakeh",
-      "fbessou"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard": {
@@ -31781,44 +31460,8 @@
       "hellosct1"
     ]
   },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on": {
-    "modified": "2019-05-19T03:42:46.903Z",
-    "contributors": [
-      "hellosct1",
-      "TheSirC"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Package_your_extension_": {
-    "modified": "2019-09-22T20:09:03.419Z",
-    "contributors": [
-      "hellosct1",
-      "zecakeh",
-      "adorsaz",
-      "ValentinG",
-      "romainneutron"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/What_next_": {
     "modified": "2020-05-24T10:03:42.606Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/What_does_review_rejection_mean_to_users": {
-    "modified": "2019-09-30T16:27:32.411Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Security_best_practices": {
-    "modified": "2019-05-18T18:20:19.136Z",
-    "contributors": [
-      "hellosct1",
-      "JNa0"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Testing_persistent_and_restart_features": {
-    "modified": "2019-05-19T02:44:57.977Z",
     "contributors": [
       "hellosct1"
     ]
@@ -31854,12 +31497,6 @@
       "hellosct1",
       "chrisspb",
       "Outpox"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/user_interface/Accessibility_guidelines": {
-    "modified": "2019-10-12T19:02:53.249Z",
-    "contributors": [
-      "hellosct1"
     ]
   },
   "Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages": {
@@ -32326,13 +31963,6 @@
       "maximelore"
     ]
   },
-  "orphaned/Tools/Add-ons": {
-    "modified": "2020-07-16T22:36:23.351Z",
-    "contributors": [
-      "maximelore",
-      "wbamberg"
-    ]
-  },
   "Tools/Browser_Toolbox": {
     "modified": "2020-07-16T22:35:55.531Z",
     "contributors": [
@@ -32443,13 +32073,6 @@
       "maximelore",
       "wbamberg",
       "teoli"
-    ]
-  },
-  "orphaned/Tools/CSS_Coverage": {
-    "modified": "2019-03-23T22:51:54.141Z",
-    "contributors": [
-      "maximelore",
-      "wbamberg"
     ]
   },
   "Tools/Remote_Debugging/Chrome_Desktop": {
@@ -32632,13 +32255,6 @@
       "nora"
     ]
   },
-  "orphaned/Tools/Debugger/Limitations_of_the_new_debugger": {
-    "modified": "2019-03-23T22:22:02.266Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
   "Tools/Debugger/Keyboard_shortcuts": {
     "modified": "2020-07-16T22:35:18.146Z",
     "contributors": [
@@ -32667,161 +32283,6 @@
       "wbamberg",
       "teoli",
       "Goofy"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/Disable_breakpoints": {
-    "modified": "2019-03-23T22:21:17.073Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Access_debugging_in_add-ons": {
-    "modified": "2019-03-23T22:21:33.063Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Black_box_a_source": {
-    "modified": "2019-03-23T22:21:44.269Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Break_on_a_DOM_event": {
-    "modified": "2019-03-23T22:22:11.943Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Debug_eval_sources": {
-    "modified": "2019-03-23T22:22:29.066Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Disable_breakpoints": {
-    "modified": "2019-03-23T22:22:13.461Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Examine,_modify,_and_watch_variables": {
-    "modified": "2019-03-23T22:22:09.066Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Highlight_and_inspect_DOM_nodes": {
-    "modified": "2019-03-23T22:22:10.389Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to": {
-    "modified": "2019-03-23T22:22:26.886Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Open_the_debugger": {
-    "modified": "2019-03-23T22:22:10.293Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore",
-      "teoli"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Pretty-print_a_minified_file": {
-    "modified": "2019-03-23T22:22:11.012Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Search_and_filter": {
-    "modified": "2019-03-23T22:21:42.961Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Set_a_breakpoint": {
-    "modified": "2019-03-23T22:21:42.671Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Set_a_conditional_breakpoint": {
-    "modified": "2019-03-23T22:21:51.627Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Step_through_code": {
-    "modified": "2019-03-23T22:21:44.640Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/How_to/Use_a_source_map": {
-    "modified": "2019-03-23T22:21:49.457Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)": {
-    "modified": "2019-03-23T22:22:28.971Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/Keyboard_shortcuts": {
-    "modified": "2019-03-23T22:21:50.707Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/Settings": {
-    "modified": "2019-03-23T22:14:03.961Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
-    ]
-  },
-  "orphaned/Tools/Debugger_(before_Firefox_52)/UI_Tour": {
-    "modified": "2019-03-23T22:19:32.754Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
     ]
   },
   "Tools/DevToolsAPI": {
@@ -33951,18 +33412,6 @@
       "alexandre-le-borgne"
     ]
   },
-  "orphaned/Web/API/Entity": {
-    "modified": "2019-03-18T21:40:22.544Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "orphaned/Web/API/EntityReference": {
-    "modified": "2019-03-18T21:40:29.302Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/Event/Comparison_of_Event_Targets": {
     "modified": "2019-03-18T21:39:09.103Z",
     "contributors": [
@@ -34039,12 +33488,6 @@
       "wbamberg",
       "fscholz",
       "Kalwyn"
-    ]
-  },
-  "orphaned/Web/API/NameList": {
-    "modified": "2020-10-13T11:05:39.955Z",
-    "contributors": [
-      "Voulto"
     ]
   },
   "Web/API/NavigatorOnLine/Online_and_offline_events": {
@@ -34465,12 +33908,6 @@
   },
   "Web/CSS/@media/-ms-high-contrast": {
     "modified": "2019-04-06T12:02:58.663Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "orphaned/Web/CSS/@media/Index": {
-    "modified": "2019-04-06T12:02:15.887Z",
     "contributors": [
       "SphinxKnight"
     ]
@@ -35156,13 +34593,6 @@
       "Mgjbot",
       "Fredchat",
       "Kyodev"
-    ]
-  },
-  "orphaned/Web/CSS/Index": {
-    "modified": "2019-04-06T13:12:11.177Z",
-    "contributors": [
-      "SphinxKnight",
-      "xdelatour"
     ]
   },
   "Web/CSS/CSS_Charsets": {
@@ -36193,15 +35623,6 @@
       "SphinxKnight"
     ]
   },
-  "orphaned/Web/HTML/Global_attributes/dropzone": {
-    "modified": "2020-10-15T21:33:33.621Z",
-    "contributors": [
-      "tristantheb",
-      "SphinxKnight",
-      "Goofy",
-      "guillaumev"
-    ]
-  },
   "Web/HTML/Global_attributes/hidden": {
     "modified": "2020-10-15T21:33:54.525Z",
     "contributors": [
@@ -36371,25 +35792,6 @@
     "contributors": [
       "tregagnon",
       "SphinxKnight"
-    ]
-  },
-  "orphaned/Web/HTML/Element/command": {
-    "modified": "2020-10-15T21:20:20.685Z",
-    "contributors": [
-      "SphinxKnight",
-      "JNa0",
-      "tregagnon",
-      "DirtyVader"
-    ]
-  },
-  "orphaned/Web/HTML/Element/element": {
-    "modified": "2020-10-15T21:26:29.511Z",
-    "contributors": [
-      "SphinxKnight",
-      "JNa0",
-      "teoli",
-      "louuis",
-      "ylerjen"
     ]
   },
   "Web/HTML/Block-level_elements": {
@@ -38278,15 +37680,6 @@
       "PifyZ"
     ]
   },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {
-    "modified": "2020-10-15T21:26:50.016Z",
-    "contributors": [
-      "SphinxKnight",
-      "gloucklegnou",
-      "teoli",
-      "greygjhart"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Array/push": {
     "modified": "2020-10-15T21:26:49.987Z",
     "contributors": [
@@ -38507,12 +37900,6 @@
       "SphinxKnight"
     ]
   },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype": {
-    "modified": "2020-10-15T21:50:20.188Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Atomics/add": {
     "modified": "2020-10-15T21:42:58.119Z",
     "contributors": [
@@ -38608,12 +37995,6 @@
     "contributors": [
       "SphinxKnight",
       "sarahgp"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/BigInt/prototype": {
-    "modified": "2020-10-15T22:12:26.325Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString": {
@@ -44276,20 +43657,6 @@
       "Chbok"
     ]
   },
-  "orphaned/XPCOM/Liaisons_de_langage/Objet_Components": {
-    "modified": "2019-04-18T20:34:34.205Z",
-    "contributors": [
-      "wbamberg",
-      "jmh"
-    ]
-  },
-  "orphaned/XPCOM/Reference/Standard_XPCOM_components": {
-    "modified": "2019-04-18T20:35:41.986Z",
-    "contributors": [
-      "wbamberg",
-      "jmh"
-    ]
-  },
   "Web/API/XSLTProcessor/Browser_Differences": {
     "modified": "2019-03-23T23:49:52.590Z",
     "contributors": [
@@ -45912,12 +45279,6 @@
       "paul.bignier"
     ]
   },
-  "orphaned/Web/API/HTMLHyperlinkElementUtils": {
-    "modified": "2019-03-23T23:15:38.230Z",
-    "contributors": [
-      "Watilin"
-    ]
-  },
   "Web/API/Document/activeElement": {
     "modified": "2019-03-23T23:12:53.004Z",
     "contributors": [
@@ -45926,21 +45287,6 @@
       "AshfaqHossain",
       "Mgjbot",
       "BenoitL"
-    ]
-  },
-  "orphaned/Web/API/XMLHttpRequest/sendAsBinary": {
-    "modified": "2020-10-15T22:26:07.337Z",
-    "contributors": [
-      "SphinxKnight",
-      "MasterFox"
-    ]
-  },
-  "orphaned/Web/MathML/Element/mglyph": {
-    "modified": "2020-10-15T21:23:58.877Z",
-    "contributors": [
-      "SphinxKnight",
-      "Delapouite",
-      "Goofy"
     ]
   },
   "Web/API/Document/styleSheets": {
@@ -45995,12 +45341,6 @@
     "contributors": [
       "SphinxKnight",
       "RolandGautier"
-    ]
-  },
-  "orphaned/Web/API/DocumentOrShadowRoot": {
-    "modified": "2020-10-15T22:25:01.411Z",
-    "contributors": [
-      "tristantheb"
     ]
   }
 }

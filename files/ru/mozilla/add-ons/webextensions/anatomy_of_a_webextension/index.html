@@ -73,7 +73,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <h4 id="DOM_APIs">DOM APIs</h4>
 
-<p>Фоновые скрипты запускаются в пространстве специальной страницы, называемой фоновой. Это дает им доступ к глобальному <code><a href="/en-US/docs/Web/API/Window">window</a></code> объекту, а так же ко всем его DOM APIs.</p>
+<p>Фоновые скрипты запускаются в пространстве специальной страницы, называемой фоновой. Это даёт им доступ к глобальному <code><a href="/en-US/docs/Web/API/Window">window</a></code> объекту, а так же ко всем его DOM APIs.</p>
 
 <h4 id="WebExtension_APIs">WebExtension APIs</h4>
 
@@ -101,7 +101,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
  <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Страница настроек</a> открывается, когда пользователь обращается к настройкам расширения на странице менеджера расширений.</li>
 </ul>
 
-<p>Для каждого из этих компонентов вы создаете HTML файл и помещаете специальную информацию в <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>. HTML файл может в себя включать CSS и JavaScript файлы, как и любая web-страница.</p>
+<p>Для каждого из этих компонентов вы создаёте HTML файл и помещаете специальную информацию в <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>. HTML файл может в себя включать CSS и JavaScript файлы, как и любая web-страница.</p>
 
 <p>Всё это типы <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">веб-страниц расширения</a>, и, в отличие от нормальных веб-страниц, ваш JavaScript может использовать все привелегии WebExtension APIs, как и ваши фоновые скрипты. Они даже могут получить доступ к переменным в фоновой странице, используя {{WebExtAPIRef("runtime.getBackgroundPage()")}}.</p>
 

@@ -52,7 +52,7 @@ var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; 
 my_obj.foo = "bar";
 console.log(Object.values(my_obj)); // ['bar']
 
-// Аргумент, не являющийся объектом, будет приведен к объекту
+// Аргумент, не являющийся объектом, будет приведён к объекту
 console.log(Object.values("foo")); // ['f', 'o', 'o']
 </pre>
 

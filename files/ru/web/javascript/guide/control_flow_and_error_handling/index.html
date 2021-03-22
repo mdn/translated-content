@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 <p>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}</p>
 
 <div class="summary">
-<p>JavaScript поддерживает компактный набор инструкций, особенно управляющих инструкций, которые вы можете использовать, чтобы реализовать интерактивность в вашем приложении. В данной главе дается обзор этих инструкций.</p>
+<p>JavaScript поддерживает компактный набор инструкций, особенно управляющих инструкций, которые вы можете использовать, чтобы реализовать интерактивность в вашем приложении. В данной главе даётся обзор этих инструкций.</p>
 </div>
 
 <p>Более подробная информация об инструкциях, рассмотренных в данной главе, содержится в <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements">справочнике по JavaScript</a>. Точка с запятой ( <code>;</code> ) используется для разделения инструкций в коде.</p>
@@ -26,9 +26,9 @@ translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 
 <pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">while</span> <span class="punctuation token" style="color: #999999;">(</span>x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">&lt;</span> <span class="number token" style="color: #990055;">10</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{ </span>x<span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">++</span><span class="punctuation token" style="color: #999999;">;</span><span class="punctuation token"> </span><span class="punctuation token" style="color: #999999;">}</span></code></pre>
 
-<p>В вышеприведенном примере <code>{ x++; }</code> является блоком.</p>
+<p>В вышеприведённом примере <code>{ x++; }</code> является блоком.</p>
 
-<p><strong>Обратите внимание:</strong> в JavaScript <strong>отсутствует</strong> область видимости блока до ECMAScript2015. Переменные, объявленные внутри блока, имеют область видимости функции (или скрипта), в которой находится данный блок, вследствие чего они сохранят свои значения при выходе за пределы блока. Другими словами, блок не создает новую область видимости. "Автономные" (standalone) блоки в JavaScript могут продуцировать полностью отличающийся результат, от результата в языках C или Java. Например:</p>
+<p><strong>Обратите внимание:</strong> в JavaScript <strong>отсутствует</strong> область видимости блока до ECMAScript2015. Переменные, объявленные внутри блока, имеют область видимости функции (или скрипта), в которой находится данный блок, вследствие чего они сохранят свои значения при выходе за пределы блока. Другими словами, блок не создаёт новую область видимости. "Автономные" (standalone) блоки в JavaScript могут продуцировать полностью отличающийся результат, от результата в языках C или Java. Например:</p>
 
 <pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">var</span> x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> <span class="number token" style="color: #990055;">1</span><span class="punctuation token" style="color: #999999;">;</span>
 <span class="punctuation token" style="color: #999999;">{
@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 </span><span class="punctuation token" style="color: #999999;">}</span>
 console<span class="punctuation token" style="color: #999999;">.</span><span class="function token" style="color: #dd4a68;">log<span class="punctuation token" style="color: #999999;">(</span></span>x<span class="punctuation token" style="color: #999999;">)</span><span class="punctuation token" style="color: #999999;">;</span><span class="comment token" style="color: #708090;"> // выведет 2</span></code></pre>
 
-<p>В вышеприведенном примере инструкция <code>var x</code> внутри блока находится в той же области видимости, что и инструкция <code>var x</code> перед блоком. В C или Java эквивалентный код выведет значение 1.</p>
+<p>В вышеприведённом примере инструкция <code>var x</code> внутри блока находится в той же области видимости, что и инструкция <code>var x</code> перед блоком. В C или Java эквивалентный код выведет значение 1.</p>
 
 <p>Начиная с ECMAScript 6, оператор <code>let</code> позволяет объявить переменную в области видимости блока. Чтобы получить более подробную информацию, прочитайте {{jsxref("Statements/let", "let")}}.</p>
 
@@ -75,7 +75,7 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 <pre class="brush: js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> y<span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span><span class="punctuation token"> </span><span class="comment token" style="color: #708090;">/* ... */</span><span class="comment token"> </span><span class="punctuation token" style="color: #999999;">}</span>
 </code></pre>
 
-<p>Если вам нужно использовать присваивание в условном выражении, то распространенной практикой является заключение операции присваивания в дополнительные скобки. Например:</p>
+<p>Если вам нужно использовать присваивание в условном выражении, то распространённой практикой является заключение операции присваивания в дополнительные скобки. Например:</p>
 
 <pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">( </span><span class="punctuation token" style="color: #999999;">(</span>x <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">=</span> y<span class="punctuation token" style="color: #999999;">) </span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span><span class="punctuation token"> </span><span class="comment token" style="color: #708090;">/* ... */</span><span class="comment token"> </span><span class="punctuation token" style="color: #999999;">}</span></code></pre>
 
@@ -101,7 +101,7 @@ if (b) // это условие true
 if (b == true) // это условие false
 </pre>
 
-<p>В следующем примере функция <code>checkData</code> возвращает <code>true</code>, если число символов в объекте <code>Text</code> равно трем; в противном случае функция отображает окно alert и возвращает <code>false</code>.</p>
+<p>В следующем примере функция <code>checkData</code> возвращает <code>true</code>, если число символов в объекте <code>Text</code> равно трём; в противном случае функция отображает окно alert и возвращает <code>false</code>.</p>
 
 <pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">function</span> <span class="function token" style="color: #dd4a68;">checkData<span class="punctuation token" style="color: #999999;">(</span></span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
   <span class="keyword token" style="color: #0077aa;">if</span> <span class="punctuation token" style="color: #999999;">(</span>document<span class="punctuation token" style="color: #999999;">.</span>form1<span class="punctuation token" style="color: #999999;">.</span>threeChar<span class="punctuation token" style="color: #999999;">.</span>value<span class="punctuation token" style="color: #999999;">.</span>length <span class="operator token" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">==</span> <span class="number token" style="color: #990055;">3</span><span class="punctuation token" style="color: #999999;">)</span> <span class="punctuation token" style="color: #999999;">{</span>
@@ -131,9 +131,9 @@ if (b == true) // это условие false
 }
 </pre>
 
-<p>Сначала производится поиск ветви <code>case</code> с меткой <code>label</code>, совпадающей со значением выражения <code>expression</code>. Если совпадение найдено, то соответствующий данной ветви код выполняется до оператора <code>break</code>, который прекращает выполнение <code>switch</code> и передает управление дальше. В противном случае управление передается необязательной ветви <code>default</code> и выполняется соответствующий ей код. Если ветвь <code>default</code> не найдена, то программа продолжит выполняться со строчки, следующей за инструкцией <code>switch</code>. По соглашению ветвь <code>default</code> является последней ветвью, но следовать этому соглашению необязательно.</p>
+<p>Сначала производится поиск ветви <code>case</code> с меткой <code>label</code>, совпадающей со значением выражения <code>expression</code>. Если совпадение найдено, то соответствующий данной ветви код выполняется до оператора <code>break</code>, который прекращает выполнение <code>switch</code> и передаёт управление дальше. В противном случае управление передаётся необязательной ветви <code>default</code> и выполняется соответствующий ей код. Если ветвь <code>default</code> не найдена, то программа продолжит выполняться со строчки, следующей за инструкцией <code>switch</code>. По соглашению ветвь <code>default</code> является последней ветвью, но следовать этому соглашению необязательно.</p>
 
-<p>Если оператор <code>break</code> отсутствует, то после выполнения кода, который соответствует выбранной ветви, начнется выполнение кода, который следует за ней.</p>
+<p>Если оператор <code>break</code> отсутствует, то после выполнения кода, который соответствует выбранной ветви, начнётся выполнение кода, который следует за ней.</p>
 
 <p>В следующем примере если <code>fruittype</code> имеет значение <code>"Bananas"</code>, то будет выведено сообщение<code> "Bananas are $0.48 a pound."</code> и оператор <code>break</code> прекратит выполнение <code>switch</code>. Если бы оператор <code>break</code> отсутствовал, то был бы также выполнен код, соответствующий ветви <code>"Cherries"</code>, т.е. выведено сообщение <code>"Cherries are $3.00 a pound."</code>.</p>
 
@@ -180,7 +180,7 @@ console<span class="punctuation token" style="color: #999999;">.</span><span cla
 
 <pre style="font-size: 14px; white-space: normal;">throw expression;</pre>
 
-<p>Вы можете выбросить любое выражение, а не только выражения определенного типа. В следующем примере выбрасываются исключения различных типов:</p>
+<p>Вы можете выбросить любое выражение, а не только выражения определённого типа. В следующем примере выбрасываются исключения различных типов:</p>
 
 <pre class="brush: js  language-js notranslate" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-js" style="direction: ltr; white-space: pre;"><span class="keyword token" style="color: #0077aa;">throw</span> <span class="string token" style="color: #669900;">"Error2"</span><span class="punctuation token" style="color: #999999;">;</span>  <span class="comment token" style="color: #708090;">                                            // string
 </span><span class="keyword token" style="color: #0077aa;">throw</span> <span class="number token" style="color: #990055;">42</span><span class="punctuation token" style="color: #999999;">;</span>        <span class="comment token" style="color: #708090;">                                            // number
@@ -235,7 +235,7 @@ catch (e) {
 
 <pre style="font-size: 14px; white-space: normal;">catch (catchID) { statements }</pre>
 
-<p>JavaScript создает идентификатор <code>catchID</code>, которому присваивается перехваченное исключение, при входе в блок <code>catch</code>; данный идентификатор доступен только в пределах блока <code>catch</code> и уничтожается при выходе из него.</p>
+<p>JavaScript создаёт идентификатор <code>catchID</code>, которому присваивается перехваченное исключение, при входе в блок <code>catch</code>; данный идентификатор доступен только в пределах блока <code>catch</code> и уничтожается при выходе из него.</p>
 
 <p>В следующем примере выбрасывается исключение, которое перехватывается в блоке <code>catch</code>:</p>
 

@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 var args = [0, 1, 2];
 myFunction.apply(null, args);</pre>
 
-<p>С <strong>spread syntax</strong> вышеприведенное можно записать как:</p>
+<p>С <strong>spread syntax</strong> вышеприведённое можно записать как:</p>
 
 <pre class="brush: js notranslate">function myFunction(x, y, z) { }
 var args = [0, 1, 2];
@@ -58,7 +58,7 @@ myFunction(-1, ...args, 2, ...[3]);</pre>
 
 <h4 id="Apply_для_new">Apply для new</h4>
 
-<p>Вызывая конструктор через ключевое слово <code>new</code>, невозможно использовать массив и <code>apply</code> <strong>напрямую </strong>(<code>apply</code> выполняет <code>[[Call]]</code>, а не <code>[[Construct]]</code>).Однако благодаря spread syntax, массив может быть с легкостью использован со словом <code>new:</code></p>
+<p>Вызывая конструктор через ключевое слово <code>new</code>, невозможно использовать массив и <code>apply</code> <strong>напрямую </strong>(<code>apply</code> выполняет <code>[[Call]]</code>, а не <code>[[Construct]]</code>).Однако благодаря spread syntax, массив может быть с лёгкостью использован со словом <code>new:</code></p>
 
 <pre class="brush: js notranslate">var dateFields = [1970, 0, 1];  // 1 Jan 1970
 var d = new Date(...dateFields);
@@ -103,7 +103,7 @@ var lyrics = ['head', ...parts, 'and', 'toes'];
 // ["head", "shoulders", "knees", "and", "toes"]
 </pre>
 
-<p>Аналогично развертыванию в массиве аргументов, <code>...</code> может быть использован повсеместно и многократно в литерале массива.</p>
+<p>Аналогично развёртыванию в массиве аргументов, <code>...</code> может быть использован повсеместно и многократно в литерале массива.</p>
 
 <h4 id="Копирование_массива">Копирование массива</h4>
 
@@ -147,7 +147,7 @@ var arr2 = [3, 4, 5];
 // Prepend all items from arr2 onto arr1
 Array.prototype.unshift.apply(arr1, arr2) // arr1 is now [3, 4, 5, 0, 1, 2]</pre>
 
-<p>С использованием spread syntax [Следует отметить, что такой способ создает новый массив <code>arr1</code>. В отличие от {{jsxref("Array.unshift")}}, исходный массив не мутируется]:</p>
+<p>С использованием spread syntax [Следует отметить, что такой способ создаёт новый массив <code>arr1</code>. В отличие от {{jsxref("Array.unshift")}}, исходный массив не мутируется]:</p>
 
 <pre class="brush: js notranslate">var arr1 = [0, 1, 2];
 var arr2 = [3, 4, 5];
@@ -183,11 +183,11 @@ var mergedObj = merge ( obj1, obj2);
 var mergedObj = merge ( {}, obj1, obj2);
 // Object { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 13 } }</pre>
 
-<p>В приведенном выше примере оператор распространения не работает так, как можно было бы ожидать: он распространяет <em>массив</em> аргументов в литерал <em>объекта</em> благодаря параметру rest.</p>
+<p>В приведённом выше примере оператор распространения не работает так, как можно было бы ожидать: он распространяет <em>массив</em> аргументов в литерал <em>объекта</em> благодаря параметру rest.</p>
 
 <h3 id="Только_для_итерируемых_объектов">Только для итерируемых объектов</h3>
 
-<p>Spread syntax ( кроме случаев spread properties) может быть применен только к итерируемым объектам (<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator">iterable</a> objects) :</p>
+<p>Spread syntax ( кроме случаев spread properties) может быть применён только к итерируемым объектам (<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator">iterable</a> objects) :</p>
 
 <pre class="brush: js notranslate">var obj = {'key1': 'value1'};
 var array = [...obj]; // TypeError: obj is not iterable

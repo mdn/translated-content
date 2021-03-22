@@ -11,7 +11,7 @@ translation_of: Web/API/History/go
 ---
 <div>{{APIRef("History API")}}</div>
 
-<p>Метод <strong><code>History.go()</code></strong> выполняет переход на определенную страницу в истории текущей сессии. С его помощью можно перемещаться как вперед, так и назад, в зависимости от значения параметра.</p>
+<p>Метод <strong><code>History.go()</code></strong> выполняет переход на определённую страницу в истории текущей сессии. С его помощью можно перемещаться как вперёд, так и назад, в зависимости от значения параметра.</p>
 
 <p>Данный метод является {{glossary("asynchronous", "асинхронным")}}. Добавьте обработчик для события {{event("popstate")}}, чтобы определить, когда переход закончен.</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/History/go
 
 <dl>
  <dt><code>delta</code> {{optional_inline}}</dt>
- <dd>Относительное положение в истории, куда вы хотите переместиться. Отрицательные значения перемещают назад, а положительные -- вперед. Например, <code>history.go(2)</code> перемещает вперед на 2 страницы, а <code>history.go(-2)</code> перемещает на 2 страницы назад. Если метод вызван без параметра или же <code>delta</code> равна 0, результат выполнения будет такой же, как у <code>location.reload()</code>.</dd>
+ <dd>Относительное положение в истории, куда вы хотите переместиться. Отрицательные значения перемещают назад, а положительные -- вперёд. Например, <code>history.go(2)</code> перемещает вперёд на 2 страницы, а <code>history.go(-2)</code> перемещает на 2 страницы назад. Если метод вызван без параметра или же <code>delta</code> равна 0, результат выполнения будет такой же, как у <code>location.reload()</code>.</dd>
 </dl>
 
 <h2 id="Примеры">Примеры</h2>
@@ -32,11 +32,11 @@ translation_of: Web/API/History/go
 
 <pre class="brush: js line-numbers language-js notranslate"><code class="language-js">history<span class="punctuation token">.</span><span class="function token">go</span><span class="punctuation token">(</span><span class="operator token">-</span><span class="number token">1</span><span class="punctuation token">)</span></code></pre>
 
-<p>Перемещение на страницу вперед, как {{domxref("History.forward", "forward()")}}:</p>
+<p>Перемещение на страницу вперёд, как {{domxref("History.forward", "forward()")}}:</p>
 
 <pre class="brush: js line-numbers language-js notranslate"><code class="language-js">history<span class="punctuation token">.</span><span class="function token">go</span><span class="punctuation token">(</span><span class="number token">1</span><span class="punctuation token">)</span></code></pre>
 
-<p>Перемещение на 2 страницы вперед:</p>
+<p>Перемещение на 2 страницы вперёд:</p>
 
 <pre class="brush: js notranslate">history.go(2);</pre>
 
