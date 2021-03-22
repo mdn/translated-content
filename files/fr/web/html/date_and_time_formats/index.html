@@ -24,17 +24,17 @@ original_slug: Web/HTML/Formats_date_heure_HTML
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">Certains éléments HTML manipulent des valeurs temporelles pour des dates ou des heures. Les formats utilisés pour les chaînes de caractères qui définissent ces valeurs sont décrits dans cet article. Les éléments qui utilisent ces données sont notamment les éléments <code><a href="/fr/docs/Web/HTML/Element/Input">&lt;input&gt;</a></code> qui permettent de choisir une date, une heure ou les deux, les éléments <code><a href="/fr/docs/Web/HTML/Element/ins">&lt;ins&gt;</a></code> et <code><a href="/fr/docs/Web/HTML/Element/del">&lt;del&gt;</a></code> dont l'attribut <code><a href="/fr/docs/Web/HTML/Element/ins#attr-datetime">ins</a></code> indique la date (ou la date et l'heure) à laquelle l'ajout ou la suppression de contenu a eu lieu.</p>
+<p class="summary">Certains éléments HTML manipulent des valeurs temporelles pour des dates ou des heures. Les formats utilisés pour les chaînes de caractères qui définissent ces valeurs sont décrits dans cet article. Les éléments qui utilisent ces données sont notamment les éléments <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> qui permettent de choisir une date, une heure ou les deux, les éléments <a href="/fr/docs/Web/HTML/Element/ins"><code>&lt;ins&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/del"><code>&lt;del&gt;</code></a> dont l'attribut <a href="/fr/docs/Web/HTML/Element/ins#attr-datetime"><code>ins</code></a> indique la date (ou la date et l'heure) à laquelle l'ajout ou la suppression de contenu a eu lieu.</p>
 
-<p>Pour les éléments <code>&lt;input&gt;</code>, voici les différents type (cf. <code><a href="/fr/docs/Web/HTML/Element/Input#attr-type">input</a></code>) pour lesquels l'attribut <a href="/fr/docs/Web/HTML/Global_attributes#attr-value"><code>value</code></a> contient une chaîne de caractères représentant une date ou une heure :</p>
+<p>Pour les éléments <code>&lt;input&gt;</code>, voici les différents type (cf. <a href="/fr/docs/Web/HTML/Element/Input#attr-type"><code>input</code></a>) pour lesquels l'attribut <a href="/fr/docs/Web/HTML/Global_attributes#attr-value"><code>value</code></a> contient une chaîne de caractères représentant une date ou une heure :</p>
 
 <ul class="index">
-  <li><code><a href="/fr/docs/Web/HTML/Element/Input/date">date</a></code></li>
-  <li><code><a href="/fr/docs/Web/HTML/Element/Input/datetime">datetime</a></code> {{deprecated_inline}}</li>
+  <li><a href="/fr/docs/Web/HTML/Element/Input/date"><code>date</code></a></li>
+  <li><a href="/fr/docs/Web/HTML/Element/Input/datetime"><code>datetime</code></a> {{deprecated_inline}}</li>
   <li><code><a href="/fr/docs/Web/HTML/Element/Input/datetime-local">datetime-local</a></code></li>
-  <li><code><a href="/fr/docs/Web/HTML/Element/Input/month">month</a></code></li>
-  <li><code><a href="/fr/docs/Web/HTML/Element/Input/time">time</a></code></li>
-  <li><code><a href="/fr/docs/Web/HTML/Element/Input/week">week</a></code></li>
+  <li><a href="/fr/docs/Web/HTML/Element/Input/month"><code>month</code></a></li>
+  <li><a href="/fr/docs/Web/HTML/Element/Input/time"><code>time</code></a></li>
+  <li><a href="/fr/docs/Web/HTML/Element/Input/week"><code>week</code></a></li>
 </ul>
 
 <h2 id="Examples">Exemples</h2>
@@ -370,7 +370,7 @@ original_slug: Web/HTML/Formats_date_heure_HTML
 
 <p>Une chaîne de caractères <code><a href="/fr/docs/Web/HTML/Element/Input/datetime-local">datetime-local</a></code> se compose d'une chaîne de caractères représentant une date, suivie de la lettre "<code>T</code>" ou d'une espace puis d'une chaîne de caractères représentant une heure. La représentation ne contient aucune information quant au fuseau horaire dont il est question et on présume que la valeur temporelle indiquée est relative au fuseau horaire de l'utilisateur.</p>
 
-<p>Lorsqu'on définit la valeur de l'attribut <code><a href="/fr/docs/Web/HTML/Element/Input#attr-value">input</a></code> d'un champ <code>datetime-local</code>, la chaîne de caractères est normalisée. Les formes normalisées utilisent toujours la lettre T comme séparateur entre la date et l'heure. De plus, les formes normalisées utilisent toujours la forme la plus courte pour exprimer l'heure (les secondes sont omises si leur valeur est <code>:00</code>).</p>
+<p>Lorsqu'on définit la valeur de l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-value"><code>input</code></a> d'un champ <code>datetime-local</code>, la chaîne de caractères est normalisée. Les formes normalisées utilisent toujours la lettre T comme séparateur entre la date et l'heure. De plus, les formes normalisées utilisent toujours la forme la plus courte pour exprimer l'heure (les secondes sont omises si leur valeur est <code>:00</code>).</p>
 
 <table class="standard-table">
   <caption>Exemples de chaînes de caractères valides pour l'expression de dates/heures</caption>
@@ -460,8 +460,8 @@ original_slug: Web/HTML/Formats_date_heure_HTML
 <h2 id="See_also">Voir aussi</h2>
 
 <ul>
-  <li><code><a href="/fr/docs/Web/HTML/Element/Input">&lt;input&gt;</a></code></li>
-  <li>Les éléments <code><a href="/fr/docs/Web/HTML/Element/ins">&lt;ins&gt;</a></code> et <code><a href="/fr/docs/Web/HTML/Element/del">&lt;del&gt;</a></code> qui possèdent l'attribut <code>datetime</code> qui permet de définir une date ou une date et une heure locales pour indiquer le moment où le contenu a été inséré ou supprimé</li>
+  <li><a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a></li>
+  <li>Les éléments <a href="/fr/docs/Web/HTML/Element/ins"><code>&lt;ins&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/del"><code>&lt;del&gt;</code></a> qui possèdent l'attribut <code>datetime</code> qui permet de définir une date ou une date et une heure locales pour indiquer le moment où le contenu a été inséré ou supprimé</li>
   <li><a href="https://www.iso.org/iso-8601-date-and-time-format.html">La spécification ISO 8601</a></li>
   <li><a href="/fr/docs/Web/JavaScript/Guide/Numbers_and_dates">Le chapitre sur les nombres et les dates</a> dans le <a href="/fr/docs/Web/JavaScript/Guide">Guide JavaScript</a></li>
   <li>L'objet JavaScript <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code></li>

@@ -29,14 +29,14 @@ original_slug: Web/HTML/Appliquer_des_couleurs
 
 <p>On peut appliquer une couleur sur chaque élément HTML. Voyons plutôt quels sont les choses que l'on peut dessiner sur les éléments : le texte, la bordure, etc. Pour chacune de ces choses, nous verrons la liste des propriétés CSS qui permettent de les colorer.</p>
 
-<p>De façon générale, la propriété <code><a href="/fr/docs/Web/CSS/color">color</a></code> permet de définir la couleur de premier plan pour le contenu d'un élément HTML et la propriété <a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a> permete de définir la couleur utilisé pour l'arrière-plan de l'élément. Ces propriétés peuvent être utilisées sur la quasi-totalité des éléments HTML.</p>
+<p>De façon générale, la propriété <a href="/fr/docs/Web/CSS/color"><code>color</code></a> permet de définir la couleur de premier plan pour le contenu d'un élément HTML et la propriété <a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a> permete de définir la couleur utilisé pour l'arrière-plan de l'élément. Ces propriétés peuvent être utilisées sur la quasi-totalité des éléments HTML.</p>
 
 <h3 id="Text">Texte</h3>
 
 <p>Lorsqu'un élément est affiché à l'écran, les propriétés suivantes déterminent la couleur du texte, celle de son arrière-plan et celle des décorations.</p>
 
 <dl>
- <dt><code><a href="/fr/docs/Web/CSS/color">color</a></code></dt>
+ <dt><a href="/fr/docs/Web/CSS/color"><code>color</code></a></dt>
  <dd>Cette propriété correspondra à la couleur utilisée pour dessiner le texte ainsi que <a href="/fr/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration">ses décorations</a> (tels que le soulignement, le surlingement, les rayures, etc.).</dd>
  <dt><a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a></dt>
  <dd>Cette propriété correspondra à la couleur utilisée en arrière-plan du texte.</dd>
@@ -47,7 +47,7 @@ original_slug: Web/HTML/Appliquer_des_couleurs
  <dt><a href="/fr/docs/Web/CSS/text-emphasis-color"><code>text-emphasis-color</code></a></dt>
  <dd>Cette propriété correspondra à la couleur utilisée pour dessiner les symboles d'emphase utilisés à côté des caractères du texte. Ces symboles sont principalement utilisés dans des textes écrits dans des langues d'Asie orientale.</dd>
  <dt><a href="/fr/docs/Web/CSS/caret-color"><code>caret-color</code></a></dt>
- <dd>Cette propriété correspondra à la couleur utilisée pour dessiner le curseur de saisie de texte dans l'élément. Cette propriété est uniquement pertinente pour les éléments qui sont éditables (par exemple <code><a href="/fr/docs/Web/HTML/Element/Input">&lt;input&gt;</a></code> et <code><a href="/fr/docs/Web/HTML/Element/Textarea">&lt;textarea&gt;</a></code> ou les éléments dont l'attribut <a href="/fr/docs/Web/HTML/Global_attributes#attr-contenteditable"><code>contenteditable</code></a> est activé).</dd>
+ <dd>Cette propriété correspondra à la couleur utilisée pour dessiner le curseur de saisie de texte dans l'élément. Cette propriété est uniquement pertinente pour les éléments qui sont éditables (par exemple <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a> ou les éléments dont l'attribut <a href="/fr/docs/Web/HTML/Global_attributes#attr-contenteditable"><code>contenteditable</code></a> est activé).</dd>
 </dl>
 
 <h3 id="Boxes">Boîtes</h3>
@@ -69,7 +69,7 @@ original_slug: Web/HTML/Appliquer_des_couleurs
 
 <p>Tout élément possède une <a href="/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">bordure</a> dessinée autour. Une bordure simple est représentée par une ligne dessinant un rectangle autour du contenu de l'élément. Vous pouvez lire <a href="/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">la mise en forme des bordures grâce à CSS</a> afin d'approfondir ce sujet.</p>
 
-<p>Il est possible d'utiliser la propriété raccourcie <code><a href="/fr/docs/Web/CSS/border">border</a></code> qui permet de configurer l'ensemble des caractéristiques d'une bordure en une seule règle (y compris les caractéristiques qui ne sont pas liées aux couleurs comme <a href="/fr/docs/Web/CSS/border-width">la largeur</a>, <a href="/fr/docs/Web/CSS/border-style">le style</a> (ligne pleine, pointillés, etc.) et ainsi de suite).</p>
+<p>Il est possible d'utiliser la propriété raccourcie <a href="/fr/docs/Web/CSS/border"><code>border</code></a> qui permet de configurer l'ensemble des caractéristiques d'une bordure en une seule règle (y compris les caractéristiques qui ne sont pas liées aux couleurs comme <a href="/fr/docs/Web/CSS/border-width">la largeur</a>, <a href="/fr/docs/Web/CSS/border-style">le style</a> (ligne pleine, pointillés, etc.) et ainsi de suite).</p>
 
 <dl>
  <dt><a href="/fr/docs/Web/CSS/border-color"><code>border-color</code></a></dt>
@@ -79,7 +79,7 @@ original_slug: Web/HTML/Appliquer_des_couleurs
  <dt><a href="/fr/docs/Web/CSS/border-block-start-color"><code>border-block-start-color</code></a> et <a href="/fr/docs/Web/CSS/border-block-end-color"><code>border-block-end-color</code></a></dt>
  <dd>Ces propriétés permettent de définir les couleurs utilisées pour les côtés de la bordure dans l'axe orthogonal au sens d'écriture. Ainsi, si le texte est écrit en français (de gauche à droite), <code>border-block-start-color</code> permettra de définir le côté haut de la bordure et <code>border-block-end-color</code> le côté bas.</dd>
  <dt><a href="/fr/docs/Web/CSS/border-inline-start-color"><code>border-inline-start-color</code></a> et <a href="/fr/docs/Web/CSS/border-inline-end-color"><code>border-inline-end-color</code></a></dt>
- <dd>Ces propriétés permettent de définir les couleurs utilisées pour les bordures pour les côtés sur l'axe du sens d'écriture. Les côtés impactés dépendent donc des propriétés <a href="/fr/docs/Web/CSS/writing-mode"><code>writing-mode</code></a>, <code><a href="/fr/docs/Web/CSS/direction">direction</a></code>, and <a href="/fr/docs/Web/CSS/text-orientation"><code>text-orientation</code></a> qui permettent, la plupart du temps, d'ajuster la directionnalité du texte en fonction de la langue utilisée. Si le texte est écrit de droite à gauche, <code>border-inline-start-color</code> correspondra à la couleur appliquée sur le côté droit.</dd>
+ <dd>Ces propriétés permettent de définir les couleurs utilisées pour les bordures pour les côtés sur l'axe du sens d'écriture. Les côtés impactés dépendent donc des propriétés <a href="/fr/docs/Web/CSS/writing-mode"><code>writing-mode</code></a>, <a href="/fr/docs/Web/CSS/direction"><code>direction</code></a>, and <a href="/fr/docs/Web/CSS/text-orientation"><code>text-orientation</code></a> qui permettent, la plupart du temps, d'ajuster la directionnalité du texte en fonction de la langue utilisée. Si le texte est écrit de droite à gauche, <code>border-inline-start-color</code> correspondra à la couleur appliquée sur le côté droit.</dd>
 </dl>
 
 <h3 id="Other_ways_to_use_color">Les autres méthodes pour utiliser de la couleur</h3>
@@ -88,9 +88,9 @@ original_slug: Web/HTML/Appliquer_des_couleurs
 
 <dl>
  <dt><a href="/fr/docs/Web/API/Canvas_API">L'API Canvas</a></dt>
- <dd>Cette API permet de dessiner des graphiques matriciels en deux dimensions à l'intérieur d'un élément <code><a href="/fr/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code>. Vous pouvez lire <a href="/fr/docs/Web/API/Canvas_API/Tutorial">le tutoriel sur l'API Canvas</a> pour en savoir plus.</dd>
+ <dd>Cette API permet de dessiner des graphiques matriciels en deux dimensions à l'intérieur d'un élément <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a>. Vous pouvez lire <a href="/fr/docs/Web/API/Canvas_API/Tutorial">le tutoriel sur l'API Canvas</a> pour en savoir plus.</dd>
  <dt><a href="/fr/docs/Web/SVG">SVG</a> (<em>Scalable Vector Graphics</em>)</dt>
- <dd>Ce format permet de dessiner des images en indiquant des commandes pour dessiner des formes, des motifs et des lignes afin de composer une image. Les commandes SVG sont construites dans un fichier XML et peuvent être embarquées dans une page web grâce à un élément <code><a href="/fr/docs/Web/HTML/Element/Img">&lt;img&gt;</a></code>.</dd>
+ <dd>Ce format permet de dessiner des images en indiquant des commandes pour dessiner des formes, des motifs et des lignes afin de composer une image. Les commandes SVG sont construites dans un fichier XML et peuvent être embarquées dans une page web grâce à un élément <a href="/fr/docs/Web/HTML/Element/Img"><code>&lt;img&gt;</code></a>.</dd>
  <dt><a href="/fr/docs/Web/API/WebGL_API">WebGL</a></dt>
  <dd>L'API Web Graphics Library est une API basée sur OpenGL ES qui permet de dessiner en deux ou trois dimensions sur le Web. Voir <a href="/fr/docs/Web/API/WebGL_API/Tutorial">Apprendre WebGL pour les graphismes en 2D et 3D</a> afin d'en savoir plus.</dd>
 </dl>
@@ -138,7 +138,7 @@ original_slug: Web/HTML/Appliquer_des_couleurs
 
 <dl>
  <dt><code>red</code>, <code>green</code> et <code>blue</code></dt>
- <dd>Chaque composante doit être un entier (type <code><a href="/fr/docs/Web/CSS/integer">&lt;integer&gt;</a></code>) compris entre 0 et 255 (inclus) ou un pourcentage (type <code><a href="/fr/docs/Web/CSS/percentage">&lt;percentage&gt;</a></code>) compris entre 0% et 100%.</dd>
+ <dd>Chaque composante doit être un entier (type <a href="/fr/docs/Web/CSS/integer"><code>&lt;integer&gt;</code></a>) compris entre 0 et 255 (inclus) ou un pourcentage (type <a href="/fr/docs/Web/CSS/percentage"><code>&lt;percentage&gt;</code></a>) compris entre 0% et 100%.</dd>
  <dt><code>alpha</code></dt>
  <dd>Le canal alpha est un nombre entre 0.0 (la couleur est alors totalement transparente) et 1.0 (complètement opaque). On peut également utiliser un pourcentage où 0% correspondra à la valeur 0.0 et 100% correspondra à la valeur 1.0.</dd>
 </dl>
@@ -153,7 +153,7 @@ original_slug: Web/HTML/Appliquer_des_couleurs
 
 <p><em><strong>Figure 1. Le cylindre HSL.</strong> Hue (la teinte) définit la couleur sur un axe radial qui parcourt les couleurs du spectre visible. La saturation est un pourcentage de la teinte entre un gris total et la couleur de la teinte vive. Enfin, la luminosité permet d'avoir des couleurs plus sombres (noir pour une luminosité nulle ou blanc pour une luminosité maximale). Cette image a été créée par <a href="http://commons.wikimedia.org/wiki/User:SharkD">SharkD</a> sur <a href="https://www.wikipedia.org/">Wikipédia</a> et est distribuée avec la licence <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>.</em></p>
 
-<p>La valeur de la teinte (<strong>H</strong>) est un angle qui début au rouge, parcourt le jaune, le vert, le cyan, le bleu et le magenta (avant de revenir à rouge avec un angle de 360°). Cette valeur identifie la teinte de base. La valeur utilisée est de type <code><a href="/fr/docs/Web/CSS/angle">&lt;angle&gt;</a></code> et on peut utiliser différentes unités disponibles en CSS comme les degrés (<code>deg</code>), les radians (<code>rad</code>), les grades (<code>grad</code>) ou les tours (<code>turn</code>).</p>
+<p>La valeur de la teinte (<strong>H</strong>) est un angle qui début au rouge, parcourt le jaune, le vert, le cyan, le bleu et le magenta (avant de revenir à rouge avec un angle de 360°). Cette valeur identifie la teinte de base. La valeur utilisée est de type <a href="/fr/docs/Web/CSS/angle"><code>&lt;angle&gt;</code></a> et on peut utiliser différentes unités disponibles en CSS comme les degrés (<code>deg</code>), les radians (<code>rad</code>), les grades (<code>grad</code>) ou les tours (<code>turn</code>).</p>
 
 <p>Ensuite, la saturation (<strong>S</strong>) indique la force de la teinte dans la couleur. Enfin, la luminosité (<strong>L</strong>) indique le niveau de gris de la couleur.</p>
 
@@ -260,7 +260,7 @@ th {
   &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>Ce fragment est plutôt simple : on utilise un élément <code><a href="/fr/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> qui enveloppe le contenu, constitué de deux <code>&lt;div&gt;</code>, chacun avec une classe différente et contenant chacun un paragraphe (c'est-à-dire un élément <code><a href="/fr/docs/Web/HTML/Element/p">&lt;p&gt;</a></code>).</p>
+<p>Ce fragment est plutôt simple : on utilise un élément <a href="/fr/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a> qui enveloppe le contenu, constitué de deux <code>&lt;div&gt;</code>, chacun avec une classe différente et contenant chacun un paragraphe (c'est-à-dire un élément <a href="/fr/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a>).</p>
 
 <p>Voyons ensuite la feuille de style CSS appliquée au bloc HTML précédent.</p>
 
@@ -276,9 +276,9 @@ th {
   border: 6px solid mediumturquoise;
 }</pre>
 
-<p>Le sélecteur de classe <code>.conteneur</code> permet d'appliquer des styles à l'élément <code><a href="/fr/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> qui enveloppe le reste du contenu. Pour ce style, on indique une largeur avec la propriété <code><a href="/fr/docs/Web/CSS/width">width</a></code> et une hauteur avec la propriété <code><a href="/fr/docs/Web/CSS/height">height</a></code>, on définit aussi une marge et une zone de remplissage avec <code><a href="/fr/docs/Web/CSS/margin">margin</a></code> et <code><a href="/fr/docs/Web/CSS/padding">padding</a></code>.</p>
+<p>Le sélecteur de classe <code>.conteneur</code> permet d'appliquer des styles à l'élément <a href="/fr/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a> qui enveloppe le reste du contenu. Pour ce style, on indique une largeur avec la propriété <a href="/fr/docs/Web/CSS/width"><code>width</code></a> et une hauteur avec la propriété <a href="/fr/docs/Web/CSS/height"><code>height</code></a>, on définit aussi une marge et une zone de remplissage avec <a href="/fr/docs/Web/CSS/margin"><code>margin</code></a> et <a href="/fr/docs/Web/CSS/padding"><code>padding</code></a>.</p>
 
-<p>La règle la plus intéressante est celle où on manipule la propriété <code><a href="/fr/docs/Web/CSS/border">border</a></code> afin de dessiner une bordure sur l'extérieur de l'élément. Cette bordure sera une ligne pleine de 6 pixels avec la couleur <code>mediumturquoise</code>.</p>
+<p>La règle la plus intéressante est celle où on manipule la propriété <a href="/fr/docs/Web/CSS/border"><code>border</code></a> afin de dessiner une bordure sur l'extérieur de l'élément. Cette bordure sera une ligne pleine de 6 pixels avec la couleur <code>mediumturquoise</code>.</p>
 
 <p>Les deux boîtes colorées possèdent un certain nombre de propriétés communes. On utilise donc une classe : <code>.boite</code> pour laquelle on définit ces propriétés qui seront appliquées sur les deux éléments :</p>
 
@@ -305,8 +305,8 @@ th {
 
 <ul>
   <li>La couleur de l'arrière-plan est définie grâce à la propriété <a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a> pour laquelle on fournit la valeur <code>rgb(245, 130, 130)</code>.</li>
-  <li>Un contour est défini autour de la boîte grâce à la propriété <code><a href="/fr/docs/Web/CSS/outline">outline</a></code>. Ici, ce contour est une ligne pleine, rouge foncée (le mot-clé <code>darkred</code>) de deux pixels.</li>
-  <li>On notera ici qu'on ne définit pas de couleur pour le texte. La valeur qui sera utilisée pour la propriété <code><a href="/fr/docs/Web/CSS/color">color</a></code> sera celle qui est héritée par le plus proche élément englobant qui définit cette propriété. La couleur par défaut est le noir.</li>
+  <li>Un contour est défini autour de la boîte grâce à la propriété <a href="/fr/docs/Web/CSS/outline"><code>outline</code></a>. Ici, ce contour est une ligne pleine, rouge foncée (le mot-clé <code>darkred</code>) de deux pixels.</li>
+  <li>On notera ici qu'on ne définit pas de couleur pour le texte. La valeur qui sera utilisée pour la propriété <a href="/fr/docs/Web/CSS/color"><code>color</code></a> sera celle qui est héritée par le plus proche élément englobant qui définit cette propriété. La couleur par défaut est le noir.</li>
 </ul>
 
 <pre class="brush: css">.boiteDroite {
@@ -323,14 +323,14 @@ th {
 <ul>
   <li>La propriété <code>background-color</code> est définie avec la notation fonctionnelle HSL : <code>hsl(270deg, 50%, 75%)</code>. Cela correspond à un violet.</li>
   <li>La propriété <code>outline</code> permet d'indiquer un contour de 4 pixels formé par une ligne pointillée dont la couleur est exprimée avec la notation fonctionnelle RGB <code>rgb(110, 20, 120)</code> (violet foncé).</li>
-  <li>La couleur de premier plan (c'est-à-dire celle utilisée pour le texte) est définie avec la propriété <code><a href="/fr/docs/Web/CSS/color">color</a></code> et la valeur <code>hsl(0deg, 100%, 100%)</code> qui correspond au blanc.</li>
+  <li>La couleur de premier plan (c'est-à-dire celle utilisée pour le texte) est définie avec la propriété <a href="/fr/docs/Web/CSS/color"><code>color</code></a> et la valeur <code>hsl(0deg, 100%, 100%)</code> qui correspond au blanc.</li>
   <li>On ajoute une ligne verte ondulée sous le texte avec <a href="/fr/docs/Web/CSS/text-decoration"><code>text-decoration</code></a>.</li>
   <li>Enfin, on ajoute une ombre au texte avec la propriété <a href="/fr/docs/Web/CSS/text-shadow"><code>text-shadow</code></a> dont le paramètre de couleur vaut <code>black</code> (noir).</li>
 </ul>
 
 <h2 id="Letting_the_user_pick_a_color">Permettre à l'utilisateur de choisir une couleur</h2>
 
-<p>Il existe différentes situations où l'on peut/doit permettre à l'utilisateur de sélectionner une couleur. Il peut s'agir d'une interface personnalisable, d'une application de dessin, d'une application d'édition où on peut choisir la couleur du texte, etc. Bien que, par le passé, il fut nécessaire d'implémenter son propre sélecteur de couleur, HTML fournit désormais au navigateurs une façon homogène de le faire avec un élément <code><a href="/fr/docs/Web/HTML/Element/Input">&lt;input&gt;</a></code> dont l'attribut <code><a href="/fr/docs/Web/HTML/Element/Input#attr-type">type</a></code> vaut <code>"color"</code>.</p>
+<p>Il existe différentes situations où l'on peut/doit permettre à l'utilisateur de sélectionner une couleur. Il peut s'agir d'une interface personnalisable, d'une application de dessin, d'une application d'édition où on peut choisir la couleur du texte, etc. Bien que, par le passé, il fut nécessaire d'implémenter son propre sélecteur de couleur, HTML fournit désormais au navigateurs une façon homogène de le faire avec un élément <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> dont l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-type"><code>type</code></a> vaut <code>"color"</code>.</p>
 
 <p>Lorsqu'on choisit une couleur via un élément <code>&lt;input&gt;</code>, la valeur stockée dans le document et envoyée via le formulaire est représentée avec une chaîne de caractères hexadécimale.</p>
 
@@ -346,7 +346,7 @@ th {
 
 <h4 id="HTML_2">HTML</h4>
 
-<p>Voici le fragment HTML qui permet de créer une boîte qui contient un sélecteur de couleur avec un libellé associé (l'élément <code><a href="/fr/docs/Web/HTML/Element/Label">&lt;label&gt;</a></code>) ainsi qu'un paragraphe (<code><a href="/fr/docs/Web/HTML/Element/p">&lt;p&gt;</a></code>) vide dans lequel nous placerons plus tard du texte avec JavaScript.</p>
+<p>Voici le fragment HTML qui permet de créer une boîte qui contient un sélecteur de couleur avec un libellé associé (l'élément <a href="/fr/docs/Web/HTML/Element/Label"><code>&lt;label&gt;</code></a>) ainsi qu'un paragraphe (<a href="/fr/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a>) vide dans lequel nous placerons plus tard du texte avec JavaScript.</p>
 
 <pre class="brush: html">&lt;div id="box"&gt;
   &lt;label for="colorPicker"&gt;Couleur de la bordure :&lt;/label&gt;
