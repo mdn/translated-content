@@ -145,20 +145,20 @@ a:active {
 
 <p>До тех пор, пока пользователи получают обратную связь при взаимодействии со ссылками, можно проявлять определенную креативность относительно их стилизации. Что-нибудь обязательно должно происходить при изменении состояния. Не следует также отключать стандартную иконку указателя мыши или обводку — она вносит очень важный вклад в доступность для тех, кто использует клавитуру для навигации по сайту.</p>
 
-<h4 id="Form_elements">Form elements</h4>
+<h4 id="Form_elements">Формы</h4>
 
-<p>Elements to allow users to input data into websites:</p>
+<p>Формы - это DOM-элементы, которые позволяют пользователям вводить данные на веб-сайтах:</p>
 
 <pre class="brush: html">&lt;div&gt;
-  &lt;label for="name"&gt;Enter your name&lt;/label&gt;
+  &lt;label for="name"&gt;Введите имя&lt;/label&gt;
   &lt;input type="text" id="name" name="name"&gt;
 &lt;/div&gt;</pre>
 
-<p>You can see some good example CSS in our <a href="https://github.com/mdn/learning-area/blob/master/accessibility/css/form-css.html">form-css.html</a> example (<a href="https://mdn.github.io/learning-area/accessibility/css/form-css.html">see it live</a> also).</p>
+<p>Вы можете найти пример хорошей стилизации формы здесь: <a href="https://github.com/mdn/learning-area/blob/master/accessibility/css/form-css.html">form-css.html</a> (а также <a href="https://mdn.github.io/learning-area/accessibility/css/form-css.html">посмотреть вживую</a>).</p>
 
-<p>Most of the CSS you'll write for forms will be for sizing the elements, lining up labels and inputs, and getting them looking neat and tidy.</p>
+<p>При стилизации форм обычно производится подгонка размеров элементов, выравнивание лейблов и полей ввода, а также придание им изящного внешнего вида.</p>
 
-<p>You shouldn't however deviate too much from the expected visual feedback form elements receive when they are focused, which is basically the same as links (see above). You could style form focus/hover states to make this behavior more consistent across browsers or fit in better with your page design, but don't get rid of it altogether — again, people rely on these clues to help them know what is going on.</p>
+<p>Не следует сильно отклоняться от стандартной стилизации фокуса на элементах формы. По-умолчанию, это состояние выглядит так же, как у ссылок (смотрите выше). Стилизовать фокус и наведение указателя мыши на элементы формы можно, например, для придания им универсального внешнего вида в разных браузерах или же для лучшего соответствия дизайну сайта. При этом не стоит совсем отключать отображение этих состояний, потому что с их помощью пользователи ориентируются в происходящем на странице.</p>
 
 <h4 id="Tables">Tables</h4>
 
