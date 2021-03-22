@@ -694,7 +694,7 @@ Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
 <p>Первое, что нужно заметить, это дополнительный кусок кода, расположенный в основном JavaScript файле (см. <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js">index.js</a>). Первое,что мы делаем, это проверка на то, что <code>serviceWorker</code> доступен в объекте {{domxref("Navigator")}}. Если этот так, тогда мы знаем, что как минимум, базовые функции сервис-воркера доступны. Внутри проверки мы используем метод {{domxref("ServiceWorkerContainer.register()")}} для регистрации сервис-воркера, находящегося в файле <code>sw.js</code> на текущем источнике, таким образом, он может управлять страницами в текущей или внутренних директориях. Когда обещание выполнится, сервис-воркер считается зарегистрированным.</p>
 
-<pre class="brush: js notranslate">  // Регистрация сервис-воркера для обеспечения офлайн-доступности сайта
+<pre class="brush: js notranslate">  // Регистрация сервис-воркера для обеспечения доступности сайта в офлайне
 
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
