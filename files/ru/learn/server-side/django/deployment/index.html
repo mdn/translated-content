@@ -349,7 +349,7 @@ db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)</pre>
 
 <div class="note">
-<p><strong>Заметка:</strong></p>
+<p><strong>Примечание:</strong></p>
 
 <ul>
  <li>Мы все ещё будем использовать SQLite во время разработки, поскольку <code>DATABASE_URL</code> переменная среды не будет установлена ​​на нашем компьютере разработки.</li>
@@ -410,7 +410,7 @@ STATIC_URL = '/static/'
  Существует множество способов обслуживания статических файлов на производстве (мы видели соответствующие настройки Django в предыдущих разделах). Heroku рекомендует использовать проект WhiteNoise для обслуживания статических активов непосредственно из Gunicorn в производстве.</p>
 
 <div class="note">
-<p><strong>Заметка: </strong>Heroku автоматически вызывает collectstatic и готовит ваши статические файлы для использования WhiteNoise после того, как он загрузит ваше приложение. Посмотрите <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> документацию для объяснения того, как она работает, и почему реализация является относительно эффективным методом для обслуживания этих файлов.</p>
+<p><strong>Примечание: </strong>Heroku автоматически вызывает collectstatic и готовит ваши статические файлы для использования WhiteNoise после того, как он загрузит ваше приложение. Посмотрите <a href="https://warehouse.python.org/project/whitenoise/">WhiteNoise</a> документацию для объяснения того, как она работает, и почему реализация является относительно эффективным методом для обслуживания этих файлов.</p>
 </div>
 
 <p>Шаги по настройке <em>WhiteNoise</em> для использования в проекте:</p>
@@ -471,7 +471,7 @@ whitenoise==3.2.2
 <pre class="notranslate">python-3.5.2</pre>
 
 <div class="note">
-<p><strong>Заметка:</strong> Heroku поддерживает только небольшое количество <a href="https://devcenter.heroku.com/articles/python-support#supported-python-runtimes">Python runtimes</a>. (на момент написания статьи, в том числе и выше). Heroku будет использовать поддерживаемую среду выполнения независимо от значения, указанного в этом файле.</p>
+<p><strong>Примечание:</strong> Heroku поддерживает только небольшое количество <a href="https://devcenter.heroku.com/articles/python-support#supported-python-runtimes">Python runtimes</a>. (на момент написания статьи, в том числе и выше). Heroku будет использовать поддерживаемую среду выполнения независимо от значения, указанного в этом файле.</p>
 </div>
 
 <h4 id="Сохраните_изменения_в_Github_и_перепроверьте">Сохраните изменения в Github и перепроверьте</h4>
@@ -516,7 +516,7 @@ git push origin master</pre>
 <pre class="brush: bash notranslate">heroku create</pre>
 
 <div class="note">
-<p><strong>Заметка:</strong> вы можете назвать удалённый, если хотите, указав значение после «create». Если вы этого не сделаете, вы получите случайное имя. Имя используется в URL-адресе по умолчанию.</p>
+<p><strong>Примечание:</strong> вы можете назвать удалённый, если хотите, указав значение после «create». Если вы этого не сделаете, вы получите случайное имя. Имя используется в URL-адресе по умолчанию.</p>
 </div>
 
 <p>Затем мы можем подтолкнуть наше приложение в репозиторий heroku как показано ниже. Это позволит загрузить приложение, упаковать его в dyno, запустить collectstatic, и запустить сам сайт.</p>
@@ -567,7 +567,7 @@ DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-20
 <p>Если вы вспомните из раздела, посвящённого  <a href="#Getting_your_website_ready_to_publish">getting the website ready to publish</a>, мы должны установить переменные среды для <code>DJANGO_SECRET_KEY</code> и <code>DJANGO_DEBUG</code>. Давайте сделаем это сейчас.</p>
 
 <div class="note">
-<p><strong>Заметка:</strong> Секретный ключ должен быть действительно секретным! Один из способов генерации нового ключа - создать новый проект Django (<code>django-admin startproject someprojectname</code>) а затем получить ключ, который генерируется для вас в его <strong>settings.py</strong>.</p>
+<p><strong>Примечание:</strong> Секретный ключ должен быть действительно секретным! Один из способов генерации нового ключа - создать новый проект Django (<code>django-admin startproject someprojectname</code>) а затем получить ключ, который генерируется для вас в его <strong>settings.py</strong>.</p>
 </div>
 
 <p>Мы устанавливаем  <code>DJANGO_SECRET_KEY</code> используя команду <code>config:set</code> (как показано ниже). Не забудьте использовать свой секретный ключ!</p>

@@ -71,7 +71,7 @@ btn.addEventListener('click', () =&gt; {
 <p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '70px')}}</p>
 
 <div class="blockIndicator note">
-<p><strong>Заметка</strong>: Важно помнить, что <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code>, хоть и часто используется для демонстрации синхронных блокирующих операций, сильно не рекомендован к использованию в реальных приложениях.</p>
+<p><strong>Примечание</strong>: Важно помнить, что <code><a href="/en-US/docs/Web/API/Window/alert">alert()</a></code>, хоть и часто используется для демонстрации синхронных блокирующих операций, сильно не рекомендован к использованию в реальных приложениях.</p>
 </div>
 
 <h2 id="Асинхронный_JavaScript">Асинхронный JavaScript</h2>
@@ -158,7 +158,7 @@ gods.forEach(function (eachName, index){
 });</pre>
 
 <div class="blockIndicator note">
-<p><strong>Заметка</strong>: вы можете посмотреть законченную версию на github (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js">посмотрите исходный код</a> и <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/">запустите пример</a>).</p>
+<p><strong>Примечание</strong>: вы можете посмотреть законченную версию на github (<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store-xhr/can-script.js">посмотрите исходный код</a> и <a href="https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store-xhr/">запустите пример</a>).</p>
 </div>
 
 <p>В примере видно, как <code>fetch()</code> принимает один параметр — URL ресурса, который нужно  получить из сети, — и возвращает <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">промис</a>. Промис или обещание — это объект, представляющий асинхронную операцию, выполненную удачно или неудачно. Он представляет собой как бы промежуточное состояние. По сути, это способ браузера сказать: "я обещаю вернуться к вам с ответом как можно скорее," отсюда и название "обещание."</p>
@@ -171,7 +171,7 @@ gods.forEach(function (eachName, index){
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>Заметка</strong>: вы узнаете намного больше о promise позже в этом модуле, так что не волнуйтесь если вы что-нибудь не поняли.</p>
+<p><strong>Примечание</strong>: вы узнаете намного больше о promise позже в этом модуле, так что не волнуйтесь если вы что-нибудь не поняли.</p>
 </div>
 
 <h3 id="Очередь_событий">Очередь событий</h3>
@@ -249,7 +249,7 @@ console.log("all done");</pre>
 <p>Это происходит потому, что в то же время браузер пытается запустить третий <code>console.log()</code>, блок <code>fetch()</code> ещё не закончил выполнение, поэтому переменная <code>image</code> ещё не имеет значения.</p>
 
 <div class="blockIndicator note">
-<p><strong>Заметка</strong>: Из соображений безопасности вы не можете применять <code>fetch() </code> к файлам из вашей локальной системы (или запустить другие такие операции локально); чтобы запустить локально пример выше вам необходимо запустить его через <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">локальный веб-сервер</a>.</p>
+<p><strong>Примечание</strong>: Из соображений безопасности вы не можете применять <code>fetch() </code> к файлам из вашей локальной системы (или запустить другие такие операции локально); чтобы запустить локально пример выше вам необходимо запустить его через <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">локальный веб-сервер</a>.</p>
 </div>
 
 <h2 id="Активное_обучение_сделайте_все_это_асинхронно!">Активное обучение: сделайте все это асинхронно!</h2>
@@ -257,7 +257,7 @@ console.log("all done");</pre>
 <p>Чтобы исправить проблемный пример с  <code>fetch()</code> и заставить все три сообщения <code>console.log()</code> появиться в желаемом порядке, вы можете также запустить третье сообщение <code>console.log()</code> асинхронно. Этого можно добиться, переместив его внутрь другого блока <code>.then()</code> присоединённого к концу второго, или просто переместив его внутрь второго блока  <code>then()</code>. Попробуйте исправить это сейчас..</p>
 
 <div class="blockIndicator note">
-<p><strong>Заметка</strong>: Если вы застряли, вы можете <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">найти ответ здесь</a> (также можно посмотреть <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">запущенный пример</a>). Также вы можете найти много информации о промисах в нашем гайде <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Основные понятия асинхронного программирования</a> позднее в этом модуле.</p>
+<p><strong>Примечание</strong>: Если вы застряли, вы можете <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/async-sync-fixed.html">найти ответ здесь</a> (также можно посмотреть <a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/async-sync-fixed.html">запущенный пример</a>). Также вы можете найти много информации о промисах в нашем гайде <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Основные понятия асинхронного программирования</a> позднее в этом модуле.</p>
 </div>
 
 <h2 id="Заключение">Заключение</h2>
