@@ -1,5 +1,5 @@
 ---
-title: Принятие решений в Вашем коде — условные конструкции
+title: Принятие решений в вашем коде — условные конструкции
 slug: Learn/JavaScript/Building_blocks/conditionals
 tags:
   - JavaScript
@@ -96,7 +96,7 @@ if (shoppingDone === true) {
 <p>В этом коде, как показано, всегда будет <code>shoppingDone</code> равный <code>false</code>, что означает разочарование для нашего бедного ребёнка. Мы должны предоставить механизм для родителя, чтобы установить для переменной <code>shoppingDone</code> значение  <code>true</code> , если ребёнок помог с покупками.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете увидеть больше в <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">полной версии этого примера на GitHub</a> (также посмотреть как он <a href="http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">работает вживую</a>.)</p>
+<p><strong>Примечание</strong>: вы можете увидеть больше в <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html">полной версии этого примера на GitHub</a> (также посмотреть как он <a href="http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html">работает вживую</a>.)</p>
 </div>
 
 <h3 id="else_if">else if</h3>
@@ -149,7 +149,7 @@ function setWeather() {
 </ol>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">найти этот пример на GitHub</a> (также <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">увидеть как он работает</a>)</p>
+<p><strong>Примечание</strong>: вы можете <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html">найти этот пример на GitHub</a> (также <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html">увидеть как он работает</a>)</p>
 </div>
 
 <h3 id="Примечание_об_операторах_сравнения">Примечание об операторах сравнения</h3>
@@ -202,7 +202,7 @@ if (shoppingDone) { // не нужно явно указывать '=== true'
 
 <h3 id="Логические_операторы_И_ИЛИ_и_НЕ">Логические операторы: И, ИЛИ и НЕ</h3>
 
-<p>Если Вы хотите проверить несколько условий без записи вложенных <code>if...else</code> условий, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">логические операторы</a> помогут Вам. При использовании в условиях, первые два оператора делают следующее:</p>
+<p>Если вы хотите проверить несколько условий без записи вложенных <code>if...else</code> условий, <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">логические операторы</a> помогут вам. При использовании в условиях, первые два оператора делают следующее:</p>
 
 <ul>
  <li><code>&amp;&amp;</code> — И; позволяет объединить два или более выражения так, что каждое из них отдельно должно иметь значение <code>true</code> , чтобы в итоге общее выражение имело значение <code>true</code>.</li>
@@ -338,7 +338,7 @@ function setWeather() {
 <p>{{ EmbedLiveSample('Пример_оператора_switch', '100%', 100) }}</p>
 
 <div class="note">
-<p><strong>Note</strong>: Вы можете <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">найти этот пример на GitHub</a> (также увидеть <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">как он работает</a>.)</p>
+<p><strong>Note</strong>: вы можете <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html">найти этот пример на GitHub</a> (также увидеть <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html">как он работает</a>.)</p>
 </div>
 
 <h2 id="Тернарный_оператор">Тернарный оператор</h2>
@@ -349,7 +349,7 @@ function setWeather() {
 
 <p>Приведём простой пример:</p>
 
-<pre class="brush: js notranslate">var greeting = ( isBirthday ) ? 'С днём рождения, г-н Кузнецов! Хорошо Вам повеселиться!' : 'Доброе утро, г-н Кузнецов.';</pre>
+<pre class="brush: js notranslate">var greeting = ( isBirthday ) ? 'С днём рождения, г-н Кузнецов! Хорошо вам повеселиться!' : 'Доброе утро, г-н Кузнецов.';</pre>
 
 <p>У нас есть переменная <code>isBirthday</code> , если она <code>true</code>, мы отправляем посетителю поздравление с днём рождения; если нет – выдаём стандартное приветствие.</p>
 
@@ -386,7 +386,7 @@ select.onchange = function() {
 <p>Наконец, у нас есть обработчик событий <a href="/en-US/docs/Web/API/GlobalEventHandlers/onchange">onchange</a> , использующийся для запуска функции, содержащей тернарный оператор. Сначала она проверяет условие — <code>select.value === 'black'</code>. Если возвращается <code>true</code>, мы запускаем функцию <code>update()</code> с параметрами чёрного и белого, в результате чего получаем чёрный цвет фона и белый цвет текста. Если возвращается <code>false</code>, мы запускаем функцию <code>update()</code> с параметрами белого и чёрного, в результате чего цвета веб-сайта меняются на противоположные.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Вы можете <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">найти этот пример на GitHub</a> (также увидеть <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">как он работает</a>.)</p>
+<p><strong>Note</strong>: вы можете <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html">найти этот пример на GitHub</a> (также увидеть <a href="http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html">как он работает</a>.)</p>
 </div>
 
 <h2 id="Практическое_упражнение_простой_календарь">Практическое упражнение: простой календарь</h2>

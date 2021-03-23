@@ -131,12 +131,12 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 <p>Все это происходит асинхронно.</p>
 
 <div class="note">
-<p><strong>На заметку</strong>: Вы можете также объединять вызов нескольких промис-методов в одну цепочку, как в этом примере:<br>
+<p><strong>На заметку</strong>: вы можете также объединять вызов нескольких промис-методов в одну цепочку, как в этом примере:<br>
  <code>myPromise().then(success, failure).then(success).catch(failure);</code></p>
 </div>
 
 <div class="note">
-<p><strong>На заметку</strong>: Вы можете получить гораздо больше информации о промисах, прочитав превосходную статью Джейка Арчибальда (Jake Archibald’s) <a href="http://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
+<p><strong>На заметку</strong>: вы можете получить гораздо больше информации о промисах, прочитав превосходную статью Джейка Арчибальда (Jake Archibald’s) <a href="http://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
 </div>
 
 <h2 id="Демонстрация_Service_Workers">Демонстрация Service Workers</h2>
@@ -145,7 +145,7 @@ imgLoad('myLittleVader.jpg').then((response) =&gt; {
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/8243/demo-screenshot.png" style="display: block; height: 410px; margin: 0px auto; width: 480px;"><br>
  <br>
- Вы можете посмотреть <a href="https://github.com/mdn/sw-test/">исходный код на GitHub</a>, а также <a href="https://mdn.github.io/sw-test/">этот живой пример</a>. Единственное, что мы тут рассмотрим, это промис (смотрите <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47">app.js строки 22-47</a>), модифицированная версия того, о котором вы читали выше в разделе <a href="https://github.com/mdn/promises-test">Тестовая демонстрация промисов</a>. Разница в следующем:</p>
+Вы можете посмотреть <a href="https://github.com/mdn/sw-test/">исходный код на GitHub</a>, а также <a href="https://mdn.github.io/sw-test/">этот живой пример</a>. Единственное, что мы тут рассмотрим, это промис (смотрите <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47">app.js строки 22-47</a>), модифицированная версия того, о котором вы читали выше в разделе <a href="https://github.com/mdn/promises-test">Тестовая демонстрация промисов</a>. Разница в следующем:</p>
 
 <ol>
  <li>Ранее мы передавали параметром лишь URL изображения, которое мы хотели загрузить. Теперь же, мы передаём JSON-фрагмент, содержащий все данные для изображения (посмотрите, как это выглядит в <a href="https://github.com/mdn/sw-test/blob/gh-pages/image-list.js">image-list.js</a>). Это сделано потому, что все данные для выполнения каждого промиса должны быть переданы ему, так как он выполняется асинхронно. Если же вы передали лишь URL, а чуть позже попытались получить доступ к другим атрибутам в JSON-фрагменте внутри цикла <code>for()</code>, это бы не сработало, так как этот промис не был бы выполнен во время текущей итерации цикла (это синхронный процесс).</li>
@@ -437,7 +437,7 @@ event.request.body</pre>
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>На заметку</strong>: Вы можете держать своё приложение на <code>http://localhost</code> (например, используя <code>me@localhost:/my/app$ <strong>python -m SimpleHTTPServer</strong></code>) для локальной разработки. См. <a href="https://www.w3.org/TR/service-workers/#security-considerations">Security considerations</a></p>
+<p><strong>На заметку</strong>: вы можете держать своё приложение на <code>http://localhost</code> (например, используя <code>me@localhost:/my/app$ <strong>python -m SimpleHTTPServer</strong></code>) для локальной разработки. См. <a href="https://www.w3.org/TR/service-workers/#security-considerations">Security considerations</a></p>
 </div>
 
 <h2 id="Спецификации">Спецификации</h2>

@@ -7,10 +7,10 @@ tags:
 original_slug: Building_an_Extension
 ---
 <h2 id="Introduction" name="Introduction">Введение</h2>
-<p>Этот урок по шагам покажет Вам как создать простое <a href="/en/Extensions" title="en/Extensions">Расширение</a> – сутью которого является добавление в панель статуса Firefox блока со строкой "Hello, World!"</p>
+<p>Этот урок по шагам покажет вам как создать простое <a href="/en/Extensions" title="en/Extensions">Расширение</a> – сутью которого является добавление в панель статуса Firefox блока со строкой "Hello, World!"</p>
 <div class="note">
  <p><strong>Отметьте</strong> Данный урок о создании Расширений для Firefox 1.5 и более поздних версий. Другие существующие уроки для создания Расширений, предназначены для более ранних версий.</p>
- <p>Если Вас интересует урок по созданию Расширения для Thunderbird, смотрите <a href="/en/Building_a_Thunderbird_extension" title="en/Building_a_Thunderbird_extension">Создание Расширения для Thunderbird</a></p>
+ <p>Если вас интересует урок по созданию Расширения для Thunderbird, смотрите <a href="/en/Building_a_Thunderbird_extension" title="en/Building_a_Thunderbird_extension">Создание Расширения для Thunderbird</a></p>
 </div>
 <h2 id="Setting_up_the_Development_Environment" name="Setting_up_the_Development_Environment">Настройка окружения</h2>
 <p>Начнём с того, что Расширение распространяется в виде zip архива или <a href="/en/Bundles" title="en/Bundles">Пакетов</a>, с расширением <code>XPI</code> (<em>произносится как “зиппи”</em>).</p>
@@ -39,7 +39,7 @@ original_slug: Building_an_Extension
 </pre>
 <p><span class="comment">&lt;pre&gt; #!/bin/sh h=$HOME/moExt mkdir -p $h/my_extension/chrome/content touch $h/my_extension/chrome.manifest $h/my_extension/install.rdf &lt;/pre&gt;</span> Более подробную информацию по настройке окружения читайте в статье <a href="/en/Setting_up_extension_development_environment" title="en/Setting_up_extension_development_environment">Setting up extension development environment</a>.</p>
 <h2 id="Create_the_Install_Manifest" name="Create_the_Install_Manifest">Создание файла инсталляции</h2>
-<p>Откройте файл <code><a href="/en/Install_Manifests" title="en/Install_Manifests">install.rdf</a></code> который Вы создали на предыдущем этапе и вставьте эти строки:</p>
+<p>Откройте файл <code><a href="/en/Install_Manifests" title="en/Install_Manifests">install.rdf</a></code> который вы создали на предыдущем этапе и вставьте эти строки:</p>
 <pre class="eval">&lt;?xml version="1.0"?&gt;
 
 &lt;RDF xmlns="<span class="nowiki">http://www.w3.org/1999/02/22-rdf-syntax-ns#</span>"
@@ -70,13 +70,13 @@ original_slug: Building_an_Extension
 &lt;/RDF&gt;
 </pre>
 <ul>
- <li><strong><a class="link-mailto" href="mailto:sample@example.net" rel="freelink">sample@example.net</a></strong> - идентификатор вашего Расширения. Это - значение, которое Вы должны придумать сами, чтобы идентифицировать Ваше Расширение, в данном случае оно в формате адреса электронной почты (это не обязательно должна быть <em>Ваша</em> электронная почта). Этот идентификатор должен быть уникальным. Вы можете также использовать GUID. ЗАМЕТКА: Хотя этот параметр и ДОЛЖЕН быть в формате адреса электронной почты, но не обязательно должен быть действительным адресом электронной почты. (example.example.example)</li>
- <li>Определение <code>&lt;em:type&gt;2&lt;/em:type&gt;</code> -- объявляет, что устанавливается именно расширение. Если бы Вы устанавливали тему, то это было бы 4 ( <a href="/en/Install_Manifests#type" title="en/Install_Manifests#type">Install Manifests#type</a> for other type codes).</li>
+ <li><strong><a class="link-mailto" href="mailto:sample@example.net" rel="freelink">sample@example.net</a></strong> - идентификатор вашего Расширения. Это - значение, которое вы должны придумать сами, чтобы идентифицировать ваше Расширение, в данном случае оно в формате адреса электронной почты (это не обязательно должна быть <em>Ваша</em> электронная почта). Этот идентификатор должен быть уникальным. Вы можете также использовать GUID. ЗАМЕТКА: Хотя этот параметр и ДОЛЖЕН быть в формате адреса электронной почты, но не обязательно должен быть действительным адресом электронной почты. (example.example.example)</li>
+ <li>Определение <code>&lt;em:type&gt;2&lt;/em:type&gt;</code> -- объявляет, что устанавливается именно расширение. Если бы вы устанавливали тему, то это было бы 4 ( <a href="/en/Install_Manifests#type" title="en/Install_Manifests#type">Install Manifests#type</a> for other type codes).</li>
  <li><strong>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</strong> - Идентификатор приложения Firefox.</li>
- <li><strong>1.5</strong> - минимальная версия Firefox, с которой будет работать Ваше Расширение. Укажите здесь минимальную версию, для которой будет выполняться все необходимые тесты.</li>
- <li><strong>3.0.*</strong> - - максимальная версия Firefox, с которой будет работать Ваше Расширение. Укажите здесь, самую свежую, доступную в данный момент версию. В этом случае, "3.0.*" указывает на то, что расширение работает с Firefox 3.0 и любыми последующими 3.0.x версиями.</li>
+ <li><strong>1.5</strong> - минимальная версия Firefox, с которой будет работать ваше Расширение. Укажите здесь минимальную версию, для которой будет выполняться все необходимые тесты.</li>
+ <li><strong>3.0.*</strong> - - максимальная версия Firefox, с которой будет работать ваше Расширение. Укажите здесь, самую свежую, доступную в данный момент версию. В этом случае, "3.0.*" указывает на то, что расширение работает с Firefox 3.0 и любыми последующими 3.0.x версиями.</li>
 </ul>
-<p>(В Firefox версии 3.0.1, вы не сможете установить для em:minVersion и em:maxVersion значение "<strong>3.0.*</strong>". Если Вы попытаетесь установить Расширение, то получите ошибку "Not compatible with Firefox 3.0.1". Мне не ясны причины этого, так что я оставлю объяснение тому, кто имеет больше информации по этому поводу. Установка em:minVersion равным "<strong>3</strong>" и em:maxVersion равным "<strong>3.0.*</strong>" решило проблему для меня.)</p>
+<p>(В Firefox версии 3.0.1, вы не сможете установить для em:minVersion и em:maxVersion значение "<strong>3.0.*</strong>". Если вы попытаетесь установить Расширение, то получите ошибку "Not compatible with Firefox 3.0.1". Мне не ясны причины этого, так что я оставлю объяснение тому, кто имеет больше информации по этому поводу. Установка em:minVersion равным "<strong>3</strong>" и em:maxVersion равным "<strong>3.0.*</strong>" решило проблему для меня.)</p>
 <p>Расширения разработанные для работы только с последними версиями Firefox 2.0.0.x, должны иметь установленным максимальную версию в "2.0.0. *". Расширения, разработанные для работы с только с последними версиями Firefox 1.5.0.x, должны иметь установленным максимальную версию "1.5.0. *".</p>
 <p>Более подробно См. <a href="/en/Install_Manifests" title="en/Install_Manifests">Install Manifests</a> с полным перечнем основных и дополнительных свойств.</p>
 <p>Сохраните файл.</p>
@@ -115,10 +115,10 @@ original_slug: Building_an_Extension
  <li>Путь файла, для загрузки.</li>
 </ul>
 <p>Так, <code><a class="external" rel="freelink">chrome://foo/skin/bar.png</a></code>  загружает файл <code>bar.png</code> из темы foo раздела <code>skin</code>.</p>
-<p>Когда Вы загружаете содержимое, используя Chrome URI, Firefox использует системный реестр Chrome, чтобы транслировать URIs в фактические исходные файлы на диске (или в пакетах JAR).</p>
+<p>Когда вы загружаете содержимое, используя Chrome URI, Firefox использует системный реестр Chrome, чтобы транслировать URIs в фактические исходные файлы на диске (или в пакетах JAR).</p>
 <h2 id="Create_a_Chrome_Manifest" name="Create_a_Chrome_Manifest">Создание установок Chrome</h2>
 <p>Для получения дополнительной информации об установках Chrome и о поддерживаемых свойствах руководство по <a href="/en/Chrome_Registration" title="en/Chrome_Registration">Chrome Manifest</a>.</p>
-<p>Откройте файл с названием <strong>chrome.manifest</strong> который Вы создали рядом с каталогом <code>chrome</code> в корне исходной иерархии директории Вашего Расширения.</p>
+<p>Откройте файл с названием <strong>chrome.manifest</strong> который вы создали рядом с каталогом <code>chrome</code> в корне исходной иерархии директории вашего Расширения.</p>
 <p>Добавьте в него код:</p>
 <pre class="eval">content     sample    chrome/content/
 </pre>
@@ -126,12 +126,12 @@ original_slug: Building_an_Extension
 <p>Здесь определяется:</p>
 <ol>
  <li>тип материала в пределах chrome пакета</li>
- <li>название chrome пакета (удостоверьтесь, что Вы используете все символы в нижнем регистре для имени пакета ("sample"), так как во 2-й версии не поддерживается смешанные регистры и вы получите ошибку {{ Bug(132183) }}</li>
+ <li>название chrome пакета (удостоверьтесь, что вы используете все символы в нижнем регистре для имени пакета ("sample"), так как во 2-й версии не поддерживается смешанные регистры и вы получите ошибку {{ Bug(132183) }}</li>
  <li>местоположение файлов chrome пакета</li>
 </ol>
 <p>Эта строка говорит, что для chrome пакета с именем <strong>sample</strong>, файлы информационного наполнения находятся в <code>chrome/content</code>, который является путём относительно местоположения <code>chrome.manifest</code>.</p>
 <p>Заметьте, что content, locale и skin должны быть сохранены как каталоги, с соответствующими именами content, locale и skin в подкаталоге <code>chrome</code>.</p>
-<p>Сохраните файл. Когда Вы запустите Firefox со своим расширением, (это будет позже в данном уроке), chrome пакет будет зарегистрирован.</p>
+<p>Сохраните файл. Когда вы запустите Firefox со своим расширением, (это будет позже в данном уроке), chrome пакет будет зарегистрирован.</p>
 <h2 id="Register_an_Overlay" name="Register_an_Overlay">Регистрация Оверлея</h2>
 <p>Вам нужно присоединить ваш оверлей к окну браузера Firefox, при его отображении. Для этого добавьте следующую строку файл <code>chrome.manifest</code>:</p>
 <pre class="eval">overlay <a class="external" rel="freelink">chrome://browser/content/browser.xul</a> <a class="external" rel="freelink">chrome://sample/content/sample.xul</a>
@@ -159,7 +159,7 @@ original_slug: Building_an_Extension
 <h5 id="Installing_from_a_web_page" name="Installing_from_a_web_page">Установка с web-страниц</h5>
 <p>Существует множество путей, которыми вы можете устанавливать ваши расширения прямо с web-страниц, в том числе использование прямых ссылок на файлы XPI и использование <a href="/en/Installing_Extensions_and_Themes_From_Web_Pages" title="en/Installing_Extensions_and_Themes_From_Web_Pages"> InstallTrigger method</a> объекта. Разработчикам расширений и веб разработчикам, рекомендуется использовать для установки XPI методы InstallTrigger, которые дают больше возможностей их пользователям.</p>
 <h5 id="Using_addons.mozilla.org" name="Using_addons.mozilla.org">Использование addons.mozilla.org</h5>
-<p>С помощью сайта Mozilla Add-ons вы может распространять ваше Расширение для бесплатного пользования. Вше расширение будет иметь зеркала на Mozilla, что обеспечит доступность вашего расширения, если оно станет очень популярным. Сайт Mozilla также упрощает установку расширений для пользователей , и автоматически сделает доступными ваши новые версии для пользователей вашей текущей версии, после того как вы загрузите их. Кроме того Mozilla Add-ons позволяет пользователям оставлять комментарии и тем самым обеспечивает обратную связь с Вашим Расширением. Настоятельно рекомендуется использовать Mozilla Add-ons для распространения ваших расширений!</p>
+<p>С помощью сайта Mozilla Add-ons вы может распространять ваше Расширение для бесплатного пользования. Вше расширение будет иметь зеркала на Mozilla, что обеспечит доступность вашего расширения, если оно станет очень популярным. Сайт Mozilla также упрощает установку расширений для пользователей , и автоматически сделает доступными ваши новые версии для пользователей вашей текущей версии, после того как вы загрузите их. Кроме того Mozilla Add-ons позволяет пользователям оставлять комментарии и тем самым обеспечивает обратную связь с вашим Расширением. Настоятельно рекомендуется использовать Mozilla Add-ons для распространения ваших расширений!</p>
 <p>Зайдите на <a class="external" href="http://addons.mozilla.org/developers/" rel="freelink">http://addons.mozilla.org/developers/</a> создайте учётную запись и начинайте распространение ваших расширений!</p>
 <p><em>Примечание:</em>Ваше Расширение будет скачиваться быстрее и чаще, если у вас будет хорошее описание и скриншоты с вашим расширением в действии.</p>
 <h5 id="Registering_Extensions_in_the_Windows_Registry" name="Registering_Extensions_in_the_Windows_Registry">Регистрация расширений в реестре Windows</h5>
@@ -197,7 +197,7 @@ pref("extensions.sample.showAdvanced", true); //булево
 </pre>
 <p><span class="comment">I should move the useful parts of this to the Command Line page. -Nickolay This is done by adding a component containing the function... function NSGetModule(comMgr, fileSpec) { return myAppHandlerModule; } This function is run by firefox each time firefox is started. Firefox registers the myAppHandlerModule's by calling its 'registerSelf()'. Then it obtains the myAppHandlerModule's handler factory via 'getClassObject()'. The handler factory is then used to create the handle using its 'createInstance(). Finally, the handle's 'handle(cmdline)' processes the command line cmdline's handleFlagWithParam() and handleFlag().</span> Смотрите <a href="/en/Chrome/Command_Line" title="en/Chrome/Command_Line">Chrome: Command Line</a> , а также обсуждения <a class="external" href="http://forums.mozillazine.org/viewtopic.php?t=365297">на форуме</a>.</p>
 <h2 id="Localization" name="Localization">Локализация</h2>
-<p>Для поддержки более чем одного языка, вы должны вместо отдельных строк из вашего содержимого использовать <a href="/en/XUL_Tutorial/Localization" title="en/XUL_Tutorial/Localization">"сущности"</a> или a href="<a class="external" rel="freelink">mks://localhost/en/XUL_Tutorial/Property_Files</a>" title="en/XUL_Tutorial/Property_Files"&gt;"связки строк". Это лучше делать в самом начале разработки Вашего Расширения, а не возвращаться, к этому позже!</p>
+<p>Для поддержки более чем одного языка, вы должны вместо отдельных строк из вашего содержимого использовать <a href="/en/XUL_Tutorial/Localization" title="en/XUL_Tutorial/Localization">"сущности"</a> или a href="<a class="external" rel="freelink">mks://localhost/en/XUL_Tutorial/Property_Files</a>" title="en/XUL_Tutorial/Property_Files"&gt;"связки строк". Это лучше делать в самом начале разработки вашего Расширения, а не возвращаться, к этому позже!</p>
 <p>Информация о локализации хранится в каталоге локализации расширения. Например, чтобы добавить локализацию для нашего расширения, создайте директорию с именем "locale" в каталоге chrome (где находится каталог "content" ) и добавьте следующую строчку в файл chrome.manifest:</p>
 <pre class="eval">locale sample en-US chrome/locale/en-US/
 </pre>
@@ -220,7 +220,7 @@ pref("extensions.sample.showAdvanced", true); //булево
 <h2 id="Understanding_the_Browser" name="Understanding_the_Browser">Understanding the Browser</h2>
 <p>Use the <a href="/en/DOM_Inspector" title="en/DOM_Inspector">DOM Inspector</a> to inspect the browser window or any other XUL window you want to extend.</p>
 <p><strong>Примечание:</strong> <strong>DOM Inspector</strong> не устанавливается в режиме <strong>стандартной</strong> установки Firefox. Начиная с версии Firefox 3 Beta 4, DOM Inspector доступен с сайта <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/6622">Firefox Add-ons</a>, как автономное расширение. Для более ранних версий, вам необходимо переустановить FireFox в режиме Пользовательской установки и выбрать путь к DOM Inspector(или <strong>Developer Tools</strong> в Firefox 1.5), если DOM Inspector'a нет в меню Инструменты (Tools) в вашего браузера.</p>
-<p>Используйте кнопку <img alt="Point-and-click icon" src="https://mdn.mozillademos.org/files/8571/point-and-click.png" style="width: 17px; height: 17px;"> в верхнем правом углу панели инструментов DOM Inspector для визуального выбора интересующего элемента в окне XUL. После выбора элемента, в окне DOM inspector появится DOM иерархия интересующего Вас элемента.</p>
+<p>Используйте кнопку <img alt="Point-and-click icon" src="https://mdn.mozillademos.org/files/8571/point-and-click.png" style="width: 17px; height: 17px;"> в верхнем правом углу панели инструментов DOM Inspector для визуального выбора интересующего элемента в окне XUL. После выбора элемента, в окне DOM inspector появится DOM иерархия интересующего вас элемента.</p>
 <p><span style="line-height: 1.5;">Use the DOM Inspector's right side panel to discover merge points with ids that you can use to insert your elements from overlays. If you cannot discover an element with an id that you can merge into, you may need to attach a script in your overlay and insert your elements when the </span><code style="font-style: normal; line-height: 1.5;">load</code><span style="line-height: 1.5;"> event fires on the master XUL window.</span></p>
 <h2 id="Debugging_Extensions" name="Debugging_Extensions">Debugging Extensions</h2>
 <p><strong>Analytical Tools for Debugging</strong></p>
