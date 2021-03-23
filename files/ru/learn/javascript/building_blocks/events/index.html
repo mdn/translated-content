@@ -112,7 +112,7 @@ btn.onclick = function() {
 
 <p>В данной ситуации свойство <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick">onclick</a></code> — это свойство обработчика события. В принципе это обычное свойство кнопки как элемента (наравне с <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent">btn.textContent</a></code> или <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style">btn.style</a></code>), но оно относится к особому типу. Если вы установите его равным какому-нибудь коду, этот код будет запущен при возникновении события (при нажатии на кнопку).</p>
 
-<p>Для получения того же результата, Вы также можете присвоить свойству обработчика имя уже описанной функции (как мы видели в статье <a href="/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Создайте свою функцию</a>):</p>
+<p>Для получения того же результата, вы также можете присвоить свойству обработчика имя уже описанной функции (как мы видели в статье <a href="/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Создайте свою функцию</a>):</p>
 
 <pre class="brush: js notranslate">const btn = document.querySelector('button');
 
@@ -149,7 +149,7 @@ btn.onclick = bgChange;</pre>
 }</pre>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете найти <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html">полный исходник кода</a> из этого примера на GitHub (также <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html">взгляните на его выполнение</a>).</p>
+<p><strong>Примечание</strong>: вы можете найти <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html">полный исходник кода</a> из этого примера на GitHub (также <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html">взгляните на его выполнение</a>).</p>
 </div>
 
 <p>Значение атрибута —  это буквально код JavaScript, который вы хотите запустить при возникновении события. В приведённом выше примере вызывается функция, определённая внутри элемента {{htmlelement ("script")}} на той же странице, но вы также можете вставить JavaScript непосредственно внутри атрибута, например:</p>
@@ -160,7 +160,7 @@ btn.onclick = bgChange;</pre>
 
 <p>Более того, не рекомендуется смешивать HTML и JavaScript файлы, так как в дальнейшем такой код становится сложнее с точки зрения обработки (парсинга). Лучше держать весь JavaScript в одном месте. Также, если он находится в отдельном файле, вы можете применить его к нескольким документам HTML.</p>
 
-<p>Даже при работе только в одном файле использование встроенных обработчиков не является хорошей идеей. Ладно, если у Вас одна кнопка, но что, если у вас их 100? Вам нужно добавить в файл 100 атрибутов; обслуживание такого кода очень быстро превратится в кошмар. С помощью JavaScript вы можете легко добавить функцию обработчика событий ко всем кнопкам на странице независимо от того, сколько их было.</p>
+<p>Даже при работе только в одном файле использование встроенных обработчиков не является хорошей идеей. Ладно, если у вас одна кнопка, но что, если у вас их 100? Вам нужно добавить в файл 100 атрибутов; обслуживание такого кода очень быстро превратится в кошмар. С помощью JavaScript вы можете легко добавить функцию обработчика событий ко всем кнопкам на странице независимо от того, сколько их было.</p>
 
 <p>Например:</p>
 
@@ -177,7 +177,7 @@ for (var i = 0; i &lt; buttons.length; i++) {
 });</pre>
 
 <div class="note">
-<p><strong>Примечание</strong>: Разделение логики Вашей программы и Вашего контента также делает Ваш сайт более дружественным к поисковым системам.</p>
+<p><strong>Примечание</strong>: Разделение логики вашей программы и вашего контента также делает ваш сайт более дружественным к поисковым системам.</p>
 </div>
 
 <h3 id="Функции_addEventListener_и_removeEventListener">Функции addEventListener() и removeEventListener()</h3>
@@ -194,7 +194,7 @@ function bgChange() {
 btn.addEventListener('click', bgChange);</pre>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете найти <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html">исходный код</a> из этого примера на GitHub (также <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html">взгляните на его выполнение</a>).</p>
+<p><strong>Примечание</strong>: вы можете найти <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html">исходный код</a> из этого примера на GitHub (также <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html">взгляните на его выполнение</a>).</p>
 </div>
 
 <p>Внутри функции <code>addEventListener()</code> мы указываем два параметра — имя события, для которого мы хотим зарегистрировать этот обработчик, и код, содержащий функцию обработчика, которую мы хотим запустить в ответ. Обратите внимание, что будет целесообразно поместить весь код внутри функции <code>addEventListener()</code> в анонимную функцию, например:</p>
@@ -262,7 +262,7 @@ etc.</pre>
 btn.addEventListener('click', bgChange);</pre>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете найти <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html">исходник кода</a> для этого примера на GitHub (также <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html">взгляните на его выполнение</a>).</p>
+<p><strong>Примечание</strong>: вы можете найти <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html">исходник кода</a> для этого примера на GitHub (также <a href="http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html">взгляните на его выполнение</a>).</p>
 </div>
 
 <p>Итак в коде выше мы включаем объект события <strong><code>e</code></strong> в функцию, а в функции — настройку стиля фона для <code>e.target</code>, который является кнопкой. Свойство объекта события <code>target</code> всегда является ссылкой на элемент, с которым только что произошло событие. Поэтому в этом примере мы устанавливаем случайный цвет фона на кнопке, а не на странице.</p>
@@ -591,7 +591,7 @@ video.onclick = function() {
 <h2 id="В_этом_модуле">В этом модуле</h2>
 
 <ul>
- <li><a href="/ru/docs/Learn/JavaScript/Building_blocks/conditionals">Принятие решений в Вашем коде — условные конструкции</a></li>
+ <li><a href="/ru/docs/Learn/JavaScript/Building_blocks/conditionals">Принятие решений в вашем коде — условные конструкции</a></li>
  <li><a href="/ru/docs/Learn/JavaScript/Building_blocks/Looping_code">Зацикливание кода</a></li>
  <li><a href="/ru/docs/Learn/JavaScript/Building_blocks/Functions">Функции — Переиспользуемые блоки кода</a></li>
  <li><a href="/ru/docs/Learn/JavaScript/Building_blocks/Build_your_own_function">Создайте свою собственную функцию</a></li>

@@ -29,7 +29,7 @@ translation_of: Tools/Web_Console
 
 <h2 id="Opening_the_Web_Console" name="Opening_the_Web_Console">Как открыть Веб Консоль</h2>
 
-<p>Чтобы открыть Веб-консоль, выберите «Веб-консоль» в меню (Веб-)разработка в Меню Firefox (или меню Инструменты, если Вы настроили показывать панель меню или Вы работаете на Mac OS X), или нажмите её комбинацию клавиш <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>K</kbd> (<kbd>Command</kbd><kbd>Option</kbd><kbd>K</kbd> в OS X).</p>
+<p>Чтобы открыть Веб-консоль, выберите «Веб-консоль» в меню (Веб-)разработка в Меню Firefox (или меню Инструменты, если вы настроили показывать панель меню или вы работаете на Mac OS X), или нажмите её комбинацию клавиш <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>K</kbd> (<kbd>Command</kbd><kbd>Option</kbd><kbd>K</kbd> в OS X).</p>
 
 <p>Внизу окна браузера появится <a href="https://developer.mozilla.org/ru/docs/Tools/DevTools_Window" title="/ru/docs/Tools/DevTools_Window">Набор инструментов</a> с выбранной Веб-консолью (в <a href="https://developer.mozilla.org/ru/docs/Tools/DevTools_Window#Toolbar" title="/ru/docs/Tools/DevTools_Window#Toolbar">Панели инструментов разработчика</a> она называется просто «Консоль»):</p>
 
@@ -517,7 +517,7 @@ console.trace();</pre>
 
 <h4 id="Очистка_содержимого">Очистка содержимого</h4>
 
-<p>Наконец, Вы можете использовать эту панель для очистки всех выведенных сообщений.</p>
+<p>Наконец, вы можете использовать эту панель для очистки всех выведенных сообщений.</p>
 
 <dl>
 </dl>
@@ -546,9 +546,9 @@ console.trace();</pre>
 
 <p>У командной строки есть функциональность автоподстановки: начните вводить несколько начальных букв - и появится всплывающее окно с возможными вариантами завершения команды:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7375/commandline-autocomplete.png" style="display: block; margin-left: auto; margin-right: auto;">Нажмите <kbd>Enter</kbd> или <kbd>Tab</kbd>, чтобы принять нужную подсказку, перемещайтесь вверх/вниз с помощью стрелок к другим вариантам подсказок или просто продолжайте набирать текст, если Вам не подходит ни один из вариантов.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/7375/commandline-autocomplete.png" style="display: block; margin-left: auto; margin-right: auto;">Нажмите <kbd>Enter</kbd> или <kbd>Tab</kbd>, чтобы принять нужную подсказку, перемещайтесь вверх/вниз с помощью стрелок к другим вариантам подсказок или просто продолжайте набирать текст, если вам не подходит ни один из вариантов.</p>
 
-<p>Консоль выдаёт подсказки из области видимости текущего активного фрейма. Это значит, что если Вы уже достигли точки останова в функции, то у Вас будут доступны автоподстановки только для объектов, которые находятся в одной области видимости с этой функцией.</p>
+<p>Консоль выдаёт подсказки из области видимости текущего активного фрейма. Это значит, что если вы уже достигли точки останова в функции, то у вас будут доступны автоподстановки только для объектов, которые находятся в одной области видимости с этой функцией.</p>
 
 <p>Вы можете получать такие же подсказки для элементов массива:</p>
 
@@ -568,7 +568,7 @@ console.trace();</pre>
 
 <h3 id="Работа_с_iframes">Работа с iframes</h3>
 
-<p>Если страница содержит встроенные <a href="/ru/docs/Web/HTML/Element/iframe">iframes</a>, Вы можете использовать команду <code>cd()</code> чтобы изменить область видимости в консоли на область определённого iframe, и после этого Вы сможете выполнять функции, которые содержит объект <a href="https://developer.mozilla.org/ru/docs/Web/API/Document">document</a> в этом iframe. Существует три способа выбрать iframe используя <code>cd()</code>:</p>
+<p>Если страница содержит встроенные <a href="/ru/docs/Web/HTML/Element/iframe">iframes</a>, вы можете использовать команду <code>cd()</code> чтобы изменить область видимости в консоли на область определённого iframe, и после этого вы сможете выполнять функции, которые содержит объект <a href="https://developer.mozilla.org/ru/docs/Web/API/Document">document</a> в этом iframe. Существует три способа выбрать iframe используя <code>cd()</code>:</p>
 
 <p>Вы можете передать DOM-элемент для определённого iframe :</p>
 
@@ -621,7 +621,7 @@ cd(frame.contentWindow);
 
 <pre class="brush: js notranslate">cd("#frame1");</pre>
 
-<p>Сейчас Вы сможете видеть, что глобальный объект <a href="https://developer.mozilla.org/ru/docs/Web/API/Window">Window</a> это теперь наш iframe:</p>
+<p>Сейчас вы сможете видеть, что глобальный объект <a href="https://developer.mozilla.org/ru/docs/Web/API/Window">Window</a> это теперь наш iframe:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/7355/web-console-iframe-document.png" style="display: block; height: 75px; margin-left: auto; margin-right: auto; width: 632px;">и сможете выполнить вызов функции, определённой в этом iframe:</p>
 

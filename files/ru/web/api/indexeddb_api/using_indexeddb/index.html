@@ -12,7 +12,7 @@ translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 
 <p>Это руководство по использованию асинхронного API для IndexedDB. Если вы не знакомы с IndexedDB, то обратитесь для начала к документу <a href="https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB" title="en/IndexedDB/Basic Concepts Behind IndexedDB">Basic Concepts About IndexedDB</a>.<a href="/en/IndexedDB/Basic_Concepts_Behind_IndexedDB" title="en/IndexedDB/Basic Concepts Behind IndexedDB"> </a>.</p>
 
-<div class="warning">Некоторые части документа не переведены, в основном это повсеместно принятые в программировании рекомендации, такие как обработка ошибок или что-то очевидное. Тем не менее Вы можете/должны продолжить перевод. Главная цель перевода - понять основные концепции IndexedDB, обратить внимание на важные нюансы, прокомментировать исходный код и может быть добавить примеры.</div>
+<div class="warning">Некоторые части документа не переведены, в основном это повсеместно принятые в программировании рекомендации, такие как обработка ошибок или что-то очевидное. Тем не менее вы можете/должны продолжить перевод. Главная цель перевода - понять основные концепции IndexedDB, обратить внимание на важные нюансы, прокомментировать исходный код и может быть добавить примеры.</div>
 
 <p>Справочную документацию по IndexedDB API вы найдёте в документе <a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB.</a> В нем описаны типы объектов, используемых в IndexedDB, а также синхронный и асинхронный API.</p>
 
@@ -99,7 +99,7 @@ request.onsuccess = function(event) {
 <pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> db<span class="punctuation token">;</span>
 <span class="keyword token">var</span> request <span class="operator token">=</span> indexedDB<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span><span class="string token">"MyTestDatabase"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 request<span class="punctuation token">.</span>onerror <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="function token">alert<span class="punctuation token">(</span></span><span class="string token">"Почему Вы не позволяете моему веб-приложению использовать IndexedDB?!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  <span class="function token">alert<span class="punctuation token">(</span></span><span class="string token">"Почему вы не позволяете моему веб-приложению использовать IndexedDB?!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="punctuation token">}</span><span class="punctuation token">;</span>
 request<span class="punctuation token">.</span>onsuccess <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   db <span class="operator token">=</span> event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>result<span class="punctuation token">;</span>
