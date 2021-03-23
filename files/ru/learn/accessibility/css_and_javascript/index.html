@@ -180,18 +180,18 @@ a:active {
 
 <p>Кроме того, не следует полагаться только на цвет при выделении важной информации, потому что некоторые пользователи не распознают цвета. Например, стоит не просто пометить обязательные поля формы красным, но также добавить звёздочку рядом.</p>
 
-<h3 id="Hiding_things">Hiding things</h3>
+<h3 id="Hiding_things">Скрытые элементы</h3>
 
-<p>There are many instances where a visual design will require that not all content is shown at once. For example, in our <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Tabbed info box example</a> (see <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">source code</a>) we have three panels of information, but we are <a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a> them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).</p>
+<p>Существует множество ситуаций в дизайне, когда не нужно показывать сразу весь контент. Например, в нашем прототипе <a href="https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html">Панели вкладок</a> (здесь можно посмотреть <a href="https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html">исходный код</a>) имеется три секции с информацией, но мы <a href="/ru/docs/Learn/CSS/CSS_layout/Positioning">располагаем</a> их одна над другой и предоставляем набор заголовков вкладок, которые позволяют переключаться между вкладками при клике (они также достпны с помощью клавитуры — и можно выбирать используя клавиши Таб и Enter/Return).</p>
 
 <p><img alt="" src="tabbed-info-box.png" style="display: block; margin: 0px auto;"></p>
 
-<p>Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect, because it doesn't stop screen readers from getting to it.</p>
+<p>В целом это никак не касается пользователей скринридеров — до тех пор, пока контент в верстке расположен в правильном порядке, у них не будет никаких проблем. Абсолютное позиционирование (как в примере выше) считается одним из лучших механизмов для визуального скрытия контента, потому что никак не мешает скринридерам.</p>
 
-<p>On the other hand, you shouldn't use {{cssxref("visibility")}}<code>:hidden</code> or {{cssxref("display")}}<code>:none</code>, because they do hide content from screen readers. Unless of course, there is a good reason why you want this content to be hidden from screen readers.</p>
+<p>А вот {{cssxref("visibility")}}<code>:hidden</code> и {{cssxref("display")}}<code>:none</code>, напротив, использовать не стоит, потому что они, в свою очередь, контент от скринридеров успешно скрывают. Конечно, только если это не является вашей целью.</p>
 
 <div class="note">
-<p><strong>Note</strong>: <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> has a lot more useful detail surrounding this topic.</p>
+<p><strong>Примечание</strong>: В статье <a href="http://webaim.org/techniques/css/invisiblecontent/">Invisible Content Just for Screen Reader Users</a> содержится множество полезной информации по данной теме.</p>
 </div>
 
 <h3 id="Accept_that_users_can_override_styles">Accept that users can override styles</h3>
