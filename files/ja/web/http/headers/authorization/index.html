@@ -34,7 +34,7 @@ translation_of: Web/HTTP/Headers/Authorization
 
 <dl>
   <dt>&lt;type&gt;</dt>
-  <dd><a href="/ja/docs/Web/HTTP/Authentication#Authentication_schemes">認証の種類</a>。一般的には <a href="/ja/docs/Web/HTTP/Authentication#Basic_authentication_scheme">"Basic"</a> です。それ以外に以下のような種類があります。
+  <dd><a href="/ja/docs/Web/HTTP/Authentication#authentication_schemes">認証の種類</a>。一般的には <a href="/ja/docs/Web/HTTP/Authentication#basic_authentication_scheme">"Basic"</a> です。それ以外に以下のような種類があります。
     <ul>
       <li><a href="http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">認証スキームの IANA レジストリ</a></li>
       <li><a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">AWS サーバーの認証 (<code>AWS4-HMAC-SHA256</code>)</a></li>
@@ -44,7 +44,7 @@ translation_of: Web/HTTP/Headers/Authorization
   <dd>"Basic" 認証方式を使用している場合、認証情報は次のように構築されます。
     <ul>
       <li>コロンで結合したユーザー名とパスワード (<code>aladdin:opensesame</code>)。</li>
-      <li>結果の文字列は <a href="/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">base64</a> でエンコードされます (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>)。</li>
+      <li>結果の文字列は <a href="/ja/docs/Glossary/Base64">base64</a> でエンコードされます (<code>YWxhZGRpbjpvcGVuc2VzYW1l</code>)。</li>
     </ul>
 
     <div class="note">
