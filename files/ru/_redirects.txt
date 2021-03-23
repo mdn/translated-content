@@ -294,7 +294,6 @@
 /ru/docs/Learn/Доступность/Multimedia	/ru/docs/Learn/Accessibility/Multimedia
 /ru/docs/Learn/Доступность/WAI-ARIA_basics	/ru/docs/Learn/Accessibility/WAI-ARIA_basics
 /ru/docs/Learn/Доступность/What_is_accessibility	/ru/docs/Learn/Accessibility/What_is_accessibility
-/ru/docs/Learn/Как_сделать_вклад	/ru/docs/orphaned/Learn/How_to_contribute
 /ru/docs/Learn/Фронтенд_разработчик	/ru/docs/Learn/Front-end_web_developer
 /ru/docs/Learn/Что_такое_веб_сервер	/ru/docs/Learn/Common_questions/What_is_a_web_server
 /ru/docs/MDN/Contribute/Creating_and_editing_pages	/ru/docs/MDN/Contribute/Howto/Create_and_edit_pages
