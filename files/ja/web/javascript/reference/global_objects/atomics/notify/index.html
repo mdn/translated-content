@@ -1,143 +1,95 @@
 ---
-title: Atomics.wake()
+title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
+tags:
+- Atomics
+- JavaScript
+- Method
+- Shared Memory
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 original_slug: Web/JavaScript/Reference/Global_Objects/Atomics/wake
 ---
-<div>{{JSRef}} {{SeeCompatTable}}</div>
+<div>{{JSRef}}</div>
 
-<p>静的メソッドである <code><strong>Atomics</strong></code><strong><code>.wake()</code></strong> は待ち行列中のいくつかのエージェントを起こします。</p>
+<p>静的メソッドである <code><strong>Atomics</strong></code><strong><code>.notify()</code></strong> は、待ち行列で休眠状態にあるいくつかのエージェントに通知します。</p>
 
 <div class="note">
-<p><strong>付記：</strong>この操作は共有された {{jsxref("Int32Array")}} に対してのみ許可されています。</p>
+<p><strong>注:</strong> この操作は共有された {{jsxref("Int32Array")}} に対してのみ許可されています。<br>
+共有されていない <code>ArrayBuffer</code> オブジェクトでは <code>0</code> を返します。</code></p>
 </div>
 
-<h2 id="構文">構文</h2>
+<h2 id="Syntax">構文</h2>
 
-<pre class="syntaxbox">Atomics.wake(typedArray, index, count)
+<pre class="brush: js">Atomics.notify(typedArray, index, count)
 </pre>
 
-<h3 id="引数">引数</h3>
+<h3 id="Parameters">引数</h3>
 
 <dl>
- <dt><code>typedArray</code></dt>
- <dd>共有された {{jsxref("Int32Array")}}。</dd>
- <dt><code>index</code></dt>
- <dd>起こす対象となる <code>typedArray</code> 中の位置。</dd>
- <dt><code>count</code></dt>
- <dd>起こすエージェントの数。既定値は {{jsxref("Infinity", "+Infinity")}} である。</dd>
+  <dt><code>typedArray</code></dt>
+  <dd>共有された {{jsxref("Int32Array")}}。</dd>
+  <dt><code>index</code></dt>
+  <dd>起動する対象となる <code>typedArray</code> 中の位置。</dd>
+  <dt><code>count</code></dt>
+  <dd>起動するエージェントの数。既定値は {{jsxref("Infinity", "+Infinity")}} です。</dd>
 </dl>
 
-<h3 id="返り値">返り値</h3>
-
-<p>起きたエージェントの数。</p>
-
-<h3 id="例外">例外</h3>
+<h3 id="Return_value">返値</h3>
 
 <ul>
- <li><code>typedArray</code> が共有されている {{jsxref("Int32Array")}} でない場合、{{jsxref("TypeError")}} が送出される。</li>
- <li><code>index </code>が <code>typedArray</code> の範囲を超えている場合 {{jsxref("RangeError")}} が送出される。</li>
+  <li>起動したエージェントの数を返します。</li>
+  <li>共有されていない {{jsxref("ArrayBuffer")}} オブジェクトが使用された場合は、 <code>0</code>
+ を返します。</li>
 </ul>
 
-<h2 id="例">例</h2>
+<h3 id="Exceptions">例外</h3>
+
+<ul>
+ <li><code>typedArray</code> が {{jsxref("Int32Array")}} でない場合、{{jsxref("TypeError")}} が送出される。</li>
+ <li><code>index</code> が <code>typedArray</code> の範囲を超えている場合 {{jsxref("RangeError")}} が送出される。</li>
+</ul>
+
+<h2 id="Examples">例</h2>
+
+<h3 id="Using_notify"><code>notify</code> の使用</h3>
 
 <p>共有された <code>Int32Array</code> を用意します：</p>
 
-<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
-var int32 = new Int32Array(sab);
+<pre class="brush: js">const sab = new SharedArrayBuffer(1024);
+const int32 = new Int32Array(sab);
 </pre>
 
-<p>読み手のスレッドは、0 番目の値が 0 であることを期待してスリープします。それが満たされている間、この場合は 0 番目の値が 0 である間は処理が進みません。しかし書き手のスレッドが新しい値 (この場合は 123)をストアした場合、読み手のスレッドは読み手のスレッドによって起こされ、新しい値 (123)を取得します。</p>
+<p>読み手のスレッドは、0 番目の値が 0 であることを期待してスリープします。それが満たされている間は処理が進みません。しかし、書き手のスレッドが新しい値をストアした場合、読み手のスレッドは読み手のスレッドによって起こされ、新しい値 (123) を取得します。</p>
 
 <pre class="brush: js">Atomics.wait(int32, 0, 0);
 console.log(int32[0]); // 123</pre>
 
-<p>書き手のスレッドは新しい値をストアし、待っているスレッドを起こします：</p>
+<p>書き手のスレッドは新しい値を格納し、待機中のスレッドに通知を行います。</p>
 
 <pre class="brush: js">console.log(int32[0]); // 0;
 Atomics.store(int32, 0, 123);
-Atomics.wake(int32, 0, 1);</pre>
+Atomics.notify(int32, 0, 1);</pre>
 
-<h2 id="仕様">仕様</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Shared Memory', '#Atomics.wake', 'Atomics.wake')}}</td>
-   <td>{{Spec2('Shared Memory')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">仕様書</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-atomics.notify', 'Atomics.notify')}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{CompatibilityTable}}</p>
+<p>{{Compat("javascript.builtins.Atomics.notify")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}} [2]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("46")}} [1] [3]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("46")}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 設定で無効になっています。about:config で <code>javascript.options.shared_memory</code> を <code>true</code> に設定することで利用できます。</p>
-
-<p>[2] 現在実装中で、利用には次のオプションをつけて起動する必要があります：<code>--js-flags=--harmony-sharedarraybuffer --enable-blink-feature=SharedArrayBuffer</code></p>
-
-<p>[3] バージョン 46 と 47 では <code>Atomics.futexWake()</code> という名前で利用できます。また引数 <code>count </code>の既定値は 0 となっています。列の代わりに <code>Atomics.OK、</code><code>Atomics.TIMEDOUT、</code><code>Atomics.NOTEQUAL</code> を返します</p>
-
-<h2 id="関連情報">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li>{{jsxref("Atomics")}}</li>
- <li>{{jsxref("Atomics.wait()")}}</li>
+  <li>{{jsxref("Atomics")}}</li>
+  <li>{{jsxref("Atomics.wait()")}}</li>
 </ul>
