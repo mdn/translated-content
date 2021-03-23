@@ -96,7 +96,6 @@
 /ru/docs/Games/Инструменты	/ru/docs/Games/Tools
 /ru/docs/Games/Инструменты/asm.js	/ru/docs/Games/Tools/asm.js
 /ru/docs/Glossary/Block/Скриптинг	/ru/docs/Glossary/Block/Scripting
-/ru/docs/Glossary/Polifill	/ru/docs/orphaned/Glossary/Polifill
 /ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Empty_element
 /ru/docs/HTML	/ru/docs/Web/HTML
 /ru/docs/HTML/Canvas	/ru/docs/Web/API/Canvas_API
