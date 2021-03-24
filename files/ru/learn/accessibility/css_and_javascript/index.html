@@ -230,23 +230,23 @@ a:active {
 
 <p>Для каждой задачи хорош свой инструмент — это правило справедливо как для HTML-элементов, так и для используемой технологии в целом. Стоит хорошенько обдумать, нужно ли использовать тот восхитительный, написанный на JavaScript 3D блок с информацией или же воспользоваться старым добрым текстовым блоком. Нужен ли тот сложный нестандартный виджет в форме или будет достаточно простого поля для ввода текста. Не следует генерировать весь HTML с помощью JavaScript, если это возможно.</p>
 
-<h3 id="Keeping_it_unobtrusive">Keeping it unobtrusive</h3>
+<h3 id="Keeping_it_unobtrusive">Ненавязчивый JavaScript</h3>
 
-<p>You should keep <strong>unobtrusive JavaScript</strong> in mind when creating your content. The idea of unobtrusive JavaScript is that it should be used wherever possible to enhance functionality, not build it in entirely — basic functions should ideally work without JavaScript, although it is appreciated that this is not always an option. But again, a large part of it is using built-in browser functionality where possible.</p>
+<p>Когда вы создаете свой контент, стоит помнить о понятии <strong>ненавязчивый JavaScript</strong>. Идея ненавязчивого JavaScript состоит в том, что следует использовать его только для дополнительного улучшения пользовательского опыта — базовые возможности, в идеале, должны работать без JavaScript. И вновь, здесь мы говорим в основном об использовании стандартных браузерных возможностей когда это возможно.</p>
 
-<p>Good example uses of unobtrusive JavaScript include:</p>
+<p>Хорошие примеры использования ненавязчивого JavaScript:</p>
 
 <ul>
- <li>Providing client-side form validation, which alerts users to problems with their form entries quickly, without having to wait for the server to check the data. If it isn't available, the form will still work, but validation might be slower.</li>
- <li>Providing custom controls for HTML5 <code>&lt;video&gt;</code>s that are accessible to keyboard-only users, along with a direct link to the video that can be used to access it if JavaScript is not available (the default <code>&lt;video&gt;</code> browser controls aren't keyboard accessible in most browsers).</li>
+ <li>Валидация формы на клиенте, которая показывает пользователю сообщение о проблемах с заполнением формы без необходимости отправлять данные для проверки на сервер. Если скриптов не будет, то форма продолжит работить, просто валидация будет несколько медленнее.</li>
+ <li>Создание нестандартных элементов управления для HTML5 <code>&lt;video&gt;</code>, которыми возможно пользоваться с клавиатуры. И в то же самое время, указание прямой ссылки на видео, которой можно воспользоваться, если JavaScript недоступен (стандартные элементы управления <code>&lt;video&gt;</code> не доступны с клавиатуры в большинстве браузеров).</li>
 </ul>
 
-<p id="Client-side_form_validation">As an example, we've written a quick and dirty client-side form validation example — see <a href="https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html">form-validation.html</a> (also <a href="https://mdn.github.io/learning-area/accessibility/css/form-validation.html">see the demo live</a>). Here you'll see a simple form; when you try to submit the form with one or both fields left empty, the submit fails, and an error message box appears to tell you what is wrong.</p>
+<p id="Client-side_form_validation">Для примера, мы подготовили простенькую черновую версию клиентской валидации формы — <a href="https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html">form-validation.html</a> (здесь можно <a href="https://mdn.github.io/learning-area/accessibility/css/form-validation.html">посмотреть вживую</a>). Если попытаться нажать на кнопку отправки не заполнив одно из полей, то отправка не произойдет и появится сообщение, с информацией что пошло не так.</p>
 
-<p>This kind of form validation is unobtrusive — you can still use the form absolutely fine without the JavaScript being available, and any sensible form implementation will have server-side validation active as well, because it is too easy for malicious users to bypass client-side validation (for example, by turning JavaScript off in the browser). The client-side validation is still really useful for reporting errors — users can know about mistakes they make instantly, rather than having to wait for a round trip to the server and a page reload. This is a definite usability advantage.</p>
+<p>Такой тип валидации формы является ненавязчивым — вы все еще сможете абсолютно корректно использовать форму вообще без JavaScript. Ведь любая форма для ввода важной информации будет также валидироваться и на сервере — потому что злонамеренные пользователи могут очень просто обойти клиентскую валидацию (например, просто отключив JavaScript в браузере). При этом валидация на стороне клиента всё ещё остается очень польезной для показа ошибок — пользователи мгновенно узнают об ошибках в вводе, вместо того, чтобы ждать цикла: отправка на сервер - валидация - перезагрузка страницы. Это очень хорошее улучшение пользовательского опыта.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Server-side validation has not been implemented in this simple demo.</p>
+<p><strong>Примечание</strong>: В этом простом примере серверная валидация не реализована.</p>
 </div>
 
 <p>We've made this form validation pretty accessible too. We've used {{htmlelement("label")}} elements to make sure the form labels are unambiguously linked to their inputs, so screen readers can read them out alongside:</p>
