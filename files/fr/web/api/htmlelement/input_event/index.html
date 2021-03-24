@@ -65,189 +65,30 @@ translation_of: Web/API/HTMLElement/input_event
  </tbody>
 </table>
 
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "forms.html#event-input-input", "input event")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM3 Events', "#event-type-input", "input event")}}</td>
+      <td>{{Spec2('DOM3 Events')}}</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>9<sup>[2][3]</sup></td>
-   <td>{{CompatVersionUnknown}}<sup>[4]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>immediately after <code>compositionupdate</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("12")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>15</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>on <code>contenteditable</code> element</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("14")}}</td>
-   <td>{{CompatNo}}<sup>[5]</sup>
-    <p> </p>
-   </td>
-   <td>15</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>when <code>designMode</code> is "on"</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("14")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>15</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>data</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>isComposing</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("31")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>&lt;select&gt;</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("49")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>immediately after <code>compositionupdate</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("12")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>on <code>contenteditable</code> element</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("14")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>when <code>designMode</code> is "on"</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("14")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>data</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>isComposing</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("31")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>&lt;select&gt;</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] <span id="result_box" lang="fr"><span>Avant Gecko 12.0 {GeckoRelease ("12.0")}}, Gecko ne déclenchait pas les événements </span></span> "input" <span lang="fr"><span> pendant que la composition était en cours en utilisant des IME ou lorsque des clés mortes étaient utilisées sur Mac OS X.</span></span></p>
-
-<p>[2] IE 9 ne déclenche pas un événement "input" lorsque l'utilisateur supprime des caractères d'une entrée (par exemple en appuyant sur Retour arrière ou Suppr., ou en utilisant l'opération "Cut" <em>(couper)</em>).</p>
-
-<p>[3] IE 10 et 11 ont un bogue, l'évènement "input"  s'y déclenche lors des changements de l'attribut "placeholder" (espace réservé).</p>
-
-<p>[4] <span id="result_box" lang="fr"><span>Avant Opera 15, Opera ne déclenchait pas un événement </span></span> "input" <span lang="fr"><span> après la suppression du texte dans un champ de saisie</span></span> .</p>
-
-<p>[5] <span id="result_box" lang="fr"><span>La cible de l'événement est l'élément "</span></span> innermost" <span lang="fr"><span> à la position du curseur.</span></span></p>
-</div>
+<p>{{Compat("api.HTMLElement.input_event")}}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
@@ -257,5 +98,3 @@ translation_of: Web/API/HTMLElement/input_event
  <li>{{event("keypress")}}</li>
  <li>{{event("input")}}</li>
 </ul>
-
-<p>L'évènement <a href="/en-US/docs/Web/Reference/Events/change">change</a> est lié . "change"<span id="result_box" lang="fr"><span> se déclenche moins souvent que "input" - il n'est lancé que lorsque les modifications sont validées par l'utilisateur.</span></span></p>
