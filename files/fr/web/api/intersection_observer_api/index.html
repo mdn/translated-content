@@ -532,63 +532,7 @@ window.addEventListener("load", function(event) {
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Support simple</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>15</td>
-   <td>{{CompatGeckoDesktop(55)}}<sup>[1][2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(38)}}</td>
-   <td>{{WebKitBug(159475)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Webview Android</th>
-   <th>Chrome pour Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support simple</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{CompatGeckoMobile(55)}}<sup>[1][2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOperaMobile(38)}}</td>
-   <td>{{WebKitBug(159475)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Cette fonctionnalité a été implémentée depuis Gecko 53.0 {{geckoRelease("53.0")}} derrière la préférence <code>dom.IntersectionObserver.enabled</code>, qui vaut <code>false</code> par défaut. Elle est activée par défaut à partir de Firefox 55, cf {{bug(1243846)}}.</p>
-
-<p>[2] Firefox ne prend pas actuellement le {{cssxref("clip-path")}} d'éléments ancêtres en compte quand il évalue la visibilité d'un élément au sein de sa racine. Voir {{bug(1319140)}} pour le statut de ce problème.</p>
+<p>{{Compat("api.IntersectionObserver")}}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

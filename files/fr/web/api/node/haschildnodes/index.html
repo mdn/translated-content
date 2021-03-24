@@ -4,119 +4,75 @@ slug: Web/API/Node/hasChildNodes
 tags:
   - API
   - DOM
-  - Enfant
-  - Méthodes
-  - Noeuds
+  - Method
+  - NeedsSpecTable
+  - Node
+  - Reference
 translation_of: Web/API/Node/hasChildNodes
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>La méthode  <code><strong>Node.hasChildNodes()</strong></code> renvoie une valeur <strong>booléenne</strong> indiquant si le {{domxref("Node","noeud")}} actuel possède des <a href="https://developer.mozilla.org/fr/docs/Web/API/Node/childNodes">nœuds enfants</a> ou non.</p>
+<p class="summary">La méthode <code><strong>Node.hasChildNodes()</strong></code> renvoie un {{jsxref("Boolean")}} indiquant si le {{domxref("Node","noeud")}} actuel possède des <a href="/fr/docs/Web/API/Node/childNodes">nœuds enfants</a> ou non.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
-<pre class="eval">resultat =<em>element</em>.hasChildNodes();
-</pre>
+<pre class="brush: js"><var>bool</var> = <var>node</var>.hasChildNodes();</pre>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h3 id="Return_value">Valeur de retour</h3>
 
-<p>L'exemple suivant supprime le premier noeud enfant à l'intérieur de l'élément avec l'identifiant <code>"foo"</code> si "foo" a des noeuds enfant.</p>
+<p>Un {{jsxref("Boolean")}} qui est <code>true</code> si le nœud a des nœuds enfants, et <code>false</code> dans le cas contraire.</p>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> foo <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"foo"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">if</span> <span class="punctuation token">(</span>foo<span class="punctuation token">.</span><span class="function token">hasChildNodes</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// faire quelque chose avec les 'foo.childNodes'</span>
-<span class="punctuation token">}</span></code></pre>
+<h2 id="Example">Exemple</h2>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Polyfill</h2>
+<pre class="brush:js">let foo = document.getElementById('foo');
 
-<p> </p>
+if (foo.hasChildNodes()) {
+  // Faire quelque chose avec 'foo.childNodes'
+}</pre>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="punctuation token">;</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>prototype<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    prototype<span class="punctuation token">.</span>hasChildNodes <span class="operator token">=</span> prototype<span class="punctuation token">.</span>hasChildNodes <span class="operator token">||</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        <span class="keyword token">return</span> <span class="operator token">!</span><span class="operator token">!</span><span class="keyword token">this</span><span class="punctuation token">.</span>firstChild<span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">(</span>Node<span class="punctuation token">.</span>prototype<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<h2 id="Polyfill">Prothèse d'émulation</h2>
 
-<h2 id="Résumé">Résumé</h2>
+<pre class="brush:js">(function(prototype) {
+  prototype.hasChildNodes = prototype.hasChildNodes || function() {
+    return !!this.firstChild;
+  }
+})(Node.prototype);</pre>
 
 <p>Il y a différentes façons de déterminer si le noeud a un noeud enfant :</p>
 
 <ul>
- <li>node.hasChildNodes()</li>
- <li>node.firstChild != null (ou juste node.firstChild)</li>
- <li>node.childNodes &amp;&amp; node.childNodes.length (ou node.childNodes.length &gt; 0)</li>
+  <li><code>node.hasChildNodes()</code></li>
+  <li><code>node.firstChild != null</code> (ou simplement <code>node.firstChild</code>)</li>
+  <li><code>node.childNodes &amp;&amp; node.childNodes.length</code> (ou <code>node.childNodes.length &gt; 0</code>)</li>
 </ul>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécification</h2>
+<h2 id="Specifications">Spécification</h2>
 
-<ul>
- <li><a href="https://dom.spec.whatwg.org/#dom-node-haschildnodes">WHATWG: hasChildNodes</a></li>
- <li><a class="external external-icon" href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-810594187">hasChildNodes</a></li>
-</ul>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>7.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("DOM WHATWG", "#dom-node-haschildnodes", "Node: hasChildNodes")}}
+      </td>
+      <td>{{Spec2("DOM WHATWG")}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
-</div>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<p> </p>
+<p>{{Compat("api.Node.hasChildNodes")}}</p>
 
-<h2 id="See_also" name="See_also">Voir aussi</h2>
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
  <li>{{domxref("Node.childNodes")}}</li>
  <li>{{domxref("Node.hasAttributes")}}</li>
 </ul>
-
-<div class="noinclude"> </div>
-
-<p> </p>
