@@ -338,7 +338,7 @@ var pasUnNombre = Number.NaN;
 
 <p>Par exemple, les instructions suivantes affichent le nombre de jours qui restent pour l'année courante :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var aujourdhui = new Date();
+<pre class="brush: js">var aujourdhui = new Date();
 
 // On définit le jour et le mois
 var finAnnée = new Date(1995, 11, 31, 23, 59, 59, 999);
@@ -352,7 +352,7 @@ var msParJour = 24 * 60 * 60 * 1000;
 // On renvoie le nombre de jours restants dans l'année
 var joursRestants = (finAnnée.getTime() - aujourdhui.getTime()) / msParJour;
 
-joursRestants = Math.round(joursRestants);</code></pre>
+joursRestants = Math.round(joursRestants);</pre>
 
 <p>Cet exemple crée un objet <code>Date</code> nommé <code>aujourdhui</code> qui contient la date du jour. On crée ensuite un objet <code>Date</code> nommé <code>finAnnée</code> pour lequel on définit ensuite l'année avec l'année courante. Après, on calcule le nombre de millisecondes qui s'écoulent dans une journée. Enfin, on calcule le nombre de jours entre <code>aujourdhui</code> et <code>finAnnée</code> en utilisant <code>getTime</code> puis on arrondit le tout pour avoir un nombre de jours.</p>
 
