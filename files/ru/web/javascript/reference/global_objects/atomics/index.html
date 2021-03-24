@@ -149,7 +149,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 
 <ul>
  <li>Методы <code>Atomics.futexWakeOrRequeue()</code> и <code>Atomics.fence()</code> полностью удалены ({{bug(1259544)}} и {{bug(1225028)}}).</li>
- <li>Методы {{jsxref("Atomics.wait()")}} и {{jsxref("Atomics.wake()")}} были названы <code>Atomics.futexWait()</code> и <code>Atomics.futexWake()</code> ({{bug(1260910)}}). Заметка: старые имена были удалены в версии 49 и младше ({{bug(1262062)}}).</li>
+ <li>Методы {{jsxref("Atomics.wait()")}} и {{jsxref("Atomics.wake()")}} были названы <code>Atomics.futexWait()</code> и <code>Atomics.futexWake()</code> ({{bug(1260910)}}). Примечание: старые имена были удалены в версии 49 и младше ({{bug(1262062)}}).</li>
  <li>Свойства <code>Atomics.OK</code>, <code>Atomics.TIMEDOUT</code>, <code>Atomics.NOTEQUAL</code> были удалены. {{jsxref("Atomics.wait()")}} метод теперь возвращает строки "ok", "timed-out" и "not-equal" ({{bug(1260835)}}).</li>
  <li>
   <p>Параметр <code>count</code> метода {{jsxref("Atomics.wake()")}} изменился: теперь он по умолчанию равен <code>+Infinity</code>, а не <code>0</code> ({{bug(1253350)}}).</p>
