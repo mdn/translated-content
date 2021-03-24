@@ -209,20 +209,20 @@ a:active {
 
 <h2 id="JavaScript">JavaScript</h2>
 
-<p>JavaScript can also break accessibility, depending on how it is used.</p>
+<p>При неправильном использовании, JavaScript тоже способен вредить доступности.</p>
 
-<p>Modern JavaScript is a powerful language, and we can do so much with it these days, from simple content and UI updates to fully-fledged 2D and 3D games. There is no rule that says all content has to be 100% accessible to all people — you just need to do what you can, and make your apps as accessible as possible.</p>
+<p>Современный JavaScript — это очень мощный язык, с помощью которого можно делать кучу разных вещей: от простых обновлений пользовательского интерфейса до полноценных 2D и 3D игр. Не существует строгого правила, что любой тип контента должен быть на 100% доступен для всех — просто нужно прилагать все усилия, чтобы делать веб-приложения доступными настолько, насколько это возможно.</p>
 
-<p>Simple content and functionality is arguably easy to make accessible — for example text, images, tables, forms and push button that activate functions. As we looked at in our <a href="/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility</a> article, the key considerations are:</p>
+<p>Простой контент сравнительно несложно сделать доступным — например, текст, изображения, таблицы, формы и кнопки. Как было разобрано в статье <a href="/ru/docs/Learn/Accessibility/HTML">HTML: Хорошая основа для доступности</a>, основные тезисы следующие:</p>
 
 <ul>
- <li>Good semantics: Using the right element for the right job. For example, making sure you use headings and paragraphs, and {{htmlelement("button")}} and {{htmlelement("a")}} elements</li>
- <li>Making sure content is available as text, either directly as text content, good text labels for form elements, or <a href="/en-US/docs/Learn/Accessibility/HTML#text_alternatives">text alternatives</a>, e.g. alt text for images.</li>
+ <li>Хорошая семантика: использование каждого элемента для своей задачи. Например, следует убедиться, что используются различные типы элементов: заголовки, параграфы, {{htmlelement("button")}}, {{htmlelement("a")}} и так далее.</li>
+ <li>Контент должен быть доступен либо как обычный текст, либо как <a href="/ru/docs/Learn/Accessibility/HTML#Альтернативный_текст">альтернативный текст</a>, например атрибут alt для изображений.</li>
 </ul>
 
-<p>We also looked at an example of how to use JavaScript to build in functionality where it is missing — see <a href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in">Building keyboard accessibility back in</a>. This is not ideal — really you should just use the right element for the right job — but it shows that it is possible in situations where for some reason you can't control the markup that is used. Another way to improve accessibility for non-semantic JavaScript-powered widgets is to use WAI-ARIA to provide extra semantics for screen reader users. The next article will also cover this in detail.</p>
+<p>Мы также показали пример использования JavaScript для добавления некоторым элементам свойств, которых по-умолчанию они лишены — смотрите в разделе <a href="/ru/docs/Learn/Accessibility/HTML#Добавление_доступности_с_клавиатуры">Добавление доступности с клавиатуры</a>. Такую возможность стоит рассматривать только для ситуаций, когда, по какой-то причине, у вас нет возможности изменять разметку. Намного надежнее и универсальнее просто использовать для каждой задачи соответствующий элемент. Другой способ улучшить доступность для не семантичных JavaScript-виджетов — это использование <abbr title="Web Accessibility Initiative — Accessible Rich Internet Applications">WAI-ARIA</abbr> для добавления некоторой искусственной семантики для пользователей скринридеров. В следующей статье мы рассмотрим эту тему подробнее.</p>
 
-<p>Complex functionality like 3D games are not so easy to make accessible — a complex 3D game created using <a href="/en-US/docs/Web/API/WebGL_API">WebGL</a> will be rendered on a {{htmlelement("canvas")}} element, which has no facility at this time to provide text alternatives or other information for severely visually impaired users to make use of. It is arguable that such a game doesn't really have this group of people as a part of its main target audience, and it would be unreasonable to expect you to make it 100% accessible to blind people, however you could implement <a href="/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">keyboard controls</a> so it is usable by non-mouse users, and make the color scheme contrasting enough to be usable by those with color deficiencies.</p>
+<p>Сложные приложения, например 3D игры, сделать доступными непросто — написанная с использованием <a href="/ru/docs/Web/API/WebGL_API">WebGL</a> игра рендерится в элементе {{htmlelement("canvas")}}, который в настоящее время не предоставляет никаких возможностей для использования людьми с дефектами зрения. Можно оправдываться тем, что данная группа не входит в целевую аудиторию, поэтому не стоит ожидать полной доступности. Однако вы всё ещё моежете реализовать <a href="/ru/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard">управление с помощью клавиатуры</a> для игроков, которые не могут использовать мышь и сделать цветовую схему достаточно контрастной для игроков с дальтонизмом.</p>
 
 <h3 id="The_problem_with_too_much_JavaScript">The problem with too much JavaScript</h3>
 
