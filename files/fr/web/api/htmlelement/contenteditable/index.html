@@ -50,59 +50,9 @@ element.contentEditable = "true"
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<div>{{CompatibilityTable}}</div>
+<p>{{Compat("api.HTMLElement.contentEditable")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>11</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1.9)}}</td>
-   <td>6<sup>[1]</sup></td>
-   <td>10.6</td>
-   <td>3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>3</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(1.9)}}</td>
-   <td>6<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>5</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Internet Explorer a un tas de bogues concernant l'implémentation de cette fonctionnalité. IE10 se bloque dans certains cas lors de la modification des listes (<a href="https://connect.microsoft.com/IE/feedback/details/796187/internet-explorer-10-crash-with-contenteditable-list">bug 796187</a>). IE11 + utilise un positionnement non valide pour lorsqu'un élément est flottant (<a href="https://connect.microsoft.com/IE/feedback/details/858749">bug 858749</a>). Dans IE9-10, la fenêtre se fige lorsque vous utilisez la molette de la souris pendant le déplacement (<a href="https://connect.microsoft.com/IE/feedbackdetail/view/809254">bug 809254</a>). IE10-11 ne déclenche pas l'événement d'<a href="/en-US/docs/Web/Events/input"><code>input</code></a> (<a href="https://connect.microsoft.com/IE/feedbackdetail/view/794285">bug 794285</a>). IE10 se bloque après avoir sélectionné "Couper" dans le menu contextuel (<a href="https://connect.microsoft.com/IE/feedbackdetail/view/801770">bug 801770</a>). IE11 + ne permet pas de placer le caret dans une cellule de tableau vide (bug 807199). IE10 ne déclenche pas d'événement de <a href="https://developer.mozilla.org/fr/docs/Web/Events/contextmenu"><code>contextmenu</code></a> lorsque vous cliquez avec le bouton droit sur des mots mal orthographiés (<a href="https://connect.microsoft.com/IE/feedbackdetail/view/774350">bug 774350</a>). IE11 ajoute des éléments {{HTMLElement ("br")}} à {{HTMLElement ("body")}} lors de l'affichage / dissimulation d'un {{HTMLElement ("iframe")}} avec un document contenteditable à l'intérieur (<a href="https://connect.microsoft.com/IE/feedbackdetail/view/864804">bug 864804</a>). IE11 ne permet pas de désactiver les poignées de redimensionnement pour les images / entrées (<a href="https://connect.microsoft.com/IE/feedbackdetail/view/907422">bug 907422</a>).</p>
+<p>Dans Internet Explorer, le <code>contentable</code> ne peut pas être appliqué aux {{htmlelement("table")}}, {{htmlelement("col")}}, {{htmlelement("colgroup")}}, {{htmlelement("tbody")}}, {{htmlelement("td")}}, {{htmlelement("tfoot")}}, {{htmlelement("th")}}, {{htmlelement("thead")}} et {{htmlelement("tr")}} directement. Un élément {{htmlelement("span")}} ou {{htmlelement("div")}} modifiable au niveau du contenu peut être placé à l'intérieur de chaque cellule du tableau.</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
