@@ -50,12 +50,12 @@ original_slug: Web/CSS/Sélecteurs_CSS
  <dd>Le combinateur <code>'~'</code> permet de sélectionner les nœuds qui suivent un élément et qui ont le même parent.<br>
  <strong>Syntaxe :</strong> <code><var>A</var> ~ <var>B</var></code><br>
  <strong>Exemple :</strong> <code>p ~ span</code> permettra de cibler les éléments {{HTMLElement('span')}} qui suivent (immédiatement ou non) un élément {{HTMLElement('p')}} et qui ont le même élément parent.</dd>
- <dt><a href="/fr/docs/Web/CSS/Sélecteurs_enfant">Les sélecteurs d'éléments fils</a></dt>
- <dd>Le combinateur <code>'&gt;'</code> permet de sélectionner les nœuds qui sont des fils directs d'un élément donné.<br>
+ <dt><a href="/fr/docs/Web/CSS/Sélecteurs_enfant">Les sélecteurs d'éléments enfants</a></dt>
+ <dd>Le combinateur <code>'&gt;'</code> permet de sélectionner les nœuds qui sont des enfants directs d'un élément donné.<br>
  <strong>Syntaxe :</strong> <code><var>A</var> &gt; <var>B</var></code><br>
  <strong>Exemple :</strong> <code>ul &gt; li</code> permettra de cibler tous les éléments {{HTMLElement('li')}} qui sont directement situés sous un élément {{HTMLElement('ul')}}.</dd>
  <dt><a href="/fr/docs/Web/CSS/Sélecteurs_descendant">Les sélecteurs d'éléments descendants</a></dt>
- <dd>Le combinateur <code> </code> (espace) permet de sélectionner les nœuds qui sont des descendants (pas nécessairement des fils directs) d'un élément donné.<br>
+ <dd>Le combinateur <code> </code> (espace) permet de sélectionner les nœuds qui sont des descendants (pas nécessairement des enfants directs) d'un élément donné.<br>
  <strong>Syntaxe :</strong> <code>A B</code><br>
  <strong>Exemple :</strong> <code>div span</code> permettra de cibler n'importe quel élément {{HTMLElement('span')}} situé à l'intérieur d'un élément {{HTMLElement('div')}}.</dd>
  <dt><a href="/fr/docs/Web/CSS/Combinateur_colonne">Le combinateur de colonne</a>{{experimental_inline}}</dt>
@@ -102,7 +102,7 @@ original_slug: Web/CSS/Sélecteurs_CSS
    <td>{{SpecName('CSS2.1', 'selector.html')}}</td>
    <td>{{Spec2('CSS2.1')}}</td>
    <td>
-    <p>Ajout des combinateurs pour les fils (<code>&gt;</code>) et voisins adjacents (<code>+</code>).<br>
+    <p>Ajout des combinateurs pour les enfants (<code>&gt;</code>) et voisins adjacents (<code>+</code>).<br>
      Ajout du sélecteur universel et du sélecteur d'attribut.</p>
    </td>
   </tr>

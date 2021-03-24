@@ -70,7 +70,7 @@ translation_of: Web/HTML/Element/meta
    Нет веских оснований для объявления неточного набора символов.</li>
   <li><code>&lt;meta&gt;</code> элемент должен находиться внутри элемента {{HTMLElement("head")}} и задаваться в <strong>1024 первых байтах</strong> HTML страницы, поскольку некоторые браузеры смотрят только эти байты перед выбором кодировки.</li>
   <li>Этот <code>&lt;meta&gt;</code> элемент - часть алгоритма, определяющего набор символов (<a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/parsing.html#encoding-sniffing-algorithm" title="Algorithm charset page">algorithm to determine the character set</a>) страницы, который браузер поддерживает. Заголовок {{HTTPHeader("Content-Type")}} и любые {{Glossary("Byte-Order Mark","Byte-Order Marks")}} элементы переопределяют данный элемент.</li>
-  <li>Настоятельно рекомендуется определить кодировку символов. Если для страницы не определён набор символов, то некоторые cross-scripting технологии могут повредить страницу, например такие как <a class="external" href="https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7">UTF-7 fallback cross-scripting technique</a>. Постоянная установка этого элемента будет защищать Вас от этого риска.</li>
+  <li>Настоятельно рекомендуется определить кодировку символов. Если для страницы не определён набор символов, то некоторые cross-scripting технологии могут повредить страницу, например такие как <a class="external" href="https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7">UTF-7 fallback cross-scripting technique</a>. Постоянная установка этого элемента будет защищать вас от этого риска.</li>
   <li>Этот {{HTMLElement("meta")}} элемент это синоним для pre-HTML5 <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=<em>IANAcharset</em>"&gt; </code>где <em><code>IANAcharset</code> </em>соответствует значению эквивалентного {{htmlattrxref("charset", "meta")}} атрибута.<br>
    Этот синтаксис по-прежнему разрешён, хотя и устарел и больше не рекомендуется.</li>
  </ul>
@@ -243,7 +243,7 @@ translation_of: Web/HTML/Element/meta
 
    <ul>
     <li>Только кооперативные роботы будут следовать правилам, определённым именем роботов. </li>
-    <li>Роботу необходимо получить доступ к странице, чтобы считать мета значение. Если Вы хотите скрыть от них информацию, то используйте  <em><a href="/en-US/docs/Robot_Exclusion_Protocol" title="Robot Exclusion Protocol">robots.txt</a></em> файл.</li>
+    <li>Роботу необходимо получить доступ к странице, чтобы считать мета значение. Если вы хотите скрыть от них информацию, то используйте  <em><a href="/en-US/docs/Robot_Exclusion_Protocol" title="Robot Exclusion Protocol">robots.txt</a></em> файл.</li>
     <li>Если вы хотите удалить страницу индекса, изменение мета в noindex будет работать, но только тогда, когда робот снова посетит страницу. Убедитесь, что файл robots.txt не предотвращает такие посещения. Некоторые поисковые системы имеют инструменты, позволяющие быстро удалить какую-либо страницу.</li>
     <li>Некоторые возможные значения взаимно исключают друг друга, такие как использование индекса и noindex или follow и nofollow одновременно. В этих случаях поведение робота не определено и может варьироваться от одного к другому. Поэтому избегайте этих случаев.</li>
     <li>Некоторые поисковые роботы-роботы, такие как Google, Yahoo Search или Bing, поддерживают те же значения в директиве HTTP, X-Robot-Tags: это позволяет им использовать эту прагму для документов, отличных от HTML, например изображений.</li>

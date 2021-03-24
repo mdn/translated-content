@@ -9,7 +9,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 <div>{{AddonSidebar}}
-<p>Если Вы уже прочитали статью <a dir="ltr" href="/ru/Add-ons/WebExtensions/Your_first_WebExtension" lang="ru-ru">Ваш первый WebExtension</a>, то уже представляете, как создавать WebExtension. В этой статье мы напишем более сложное дополнение, которое демонстрирует ещё несколько API.</p>
+<p>Если вы уже прочитали статью <a dir="ltr" href="/ru/Add-ons/WebExtensions/Your_first_WebExtension" lang="ru-ru">Ваш первый WebExtension</a>, то уже представляете, как создавать WebExtension. В этой статье мы напишем более сложное дополнение, которое демонстрирует ещё несколько API.</p>
 
 <p>Дополнение добавляет новую кнопку на панель инструментов Firefox. Когда пользователь кликает по кнопке, мы показываем ему всплывающую панель с предложением выбрать животное. Когда животное выбрано, мы заменяем содержимое текущей страницы на изображение выбранного животного.</p>
 
@@ -41,12 +41,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
  <li>определение всплывающей панели используя HTML, CSS, и JavaScript</li>
  <li>встраивание контент-скрипта в веб-страницы</li>
  <li>взаимодействие между сценарием содержимого и остальным дополнением</li>
- <li>упаковка ресурсов с Вашим дополнением, которые будут использованы веб-страницами</li>
+ <li>упаковка ресурсов с вашим дополнением, которые будут использованы веб-страницами</li>
 </ul>
 
 <p>Вы можете найти <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">полный исходный код дополнения на GitHub</a>.</p>
 
-<p>Чтобы написать это дополнение, Вам нужен Firefox 45 или новее.</p>
+<p>Чтобы написать это дополнение, вам нужен Firefox 45 или новее.</p>
 
 <h2 id="Написание_WebExtension">Написание WebExtension</h2>
 
@@ -93,13 +93,13 @@ cd beastify</pre>
 <ul>
  <li>Первые три ключа: <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version">manifest_version</a></code>, <code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name">name</a></code>, <code>и <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version">version</a></code>, являются обязательными и содержат основные мета-данные для дополнения.</li>
  <li><code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description">description</a></code> <code>и <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url">homepage_url</a></code> необязательны, но рекомендуемы: они предоставляют полезную информацию о дополнении.</li>
- <li><code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> необязательный, но рекомендуемый: позволяет Вам определять иконку для дополнения, которая будет показана в Менеджере Дополнений.</li>
+ <li><code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons">icons</a></code> необязательный, но рекомендуемый: позволяет вам определять иконку для дополнения, которая будет показана в Менеджере Дополнений.</li>
  <li><code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code> перечисляет разрешения для нужд дополнения. Здесь мы просто спрашиваем разрешения для <a href="/ru/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission"><code>activeTab</code> permission</a>.</li>
  <li><code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> задаёт кнопку на панели инструментов. Здесь мы предоставляем три вида информации:
   <ul>
    <li><code>default_icon</code> это обязательная иконка для кнопки</li>
    <li><code>default_title</code> необязательный заголовок, будет показан в подсказке</li>
-   <li><code>default_popup</code> используется, если Вы хотите, чтобы всплывающая панель была показана когда пользователь кликает по кнопке. В нашем примере мы использовали этот ключ и он указывает на HTML файл, подключённый к дополнению.</li>
+   <li><code>default_popup</code> используется, если вы хотите, чтобы всплывающая панель была показана когда пользователь кликает по кнопке. В нашем примере мы использовали этот ключ и он указывает на HTML файл, подключённый к дополнению.</li>
   </ul>
  </li>
  <li><code><a href="/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources">web_accessible_resources</a></code> перечисляет файлы, которые мы хотим сделать доступными для веб-страниц. Поскольку дополнение заменяет содержимое страницы на изображения, которые мы упаковали вместе с дополнением, нам нужно сделать эти изображения доступными для страницы.</li>
@@ -113,7 +113,7 @@ cd beastify</pre>
 
 <p>Создайте папку "icons" и сохраните там иконку с именем "beasts-48.png". Вы можете использовать <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png">иконку из нашего примера</a>, которая взята из <a href="https://www.iconfinder.com/iconsets/free-retina-icon-set">набора Aha-Soft’s Free Retina</a> и используется на условиях этой <a href="http://www.aha-soft.com/free-icons/free-retina-icon-set/">лицензии</a>.</p>
 
-<p>Если Вы выберете свою иконку, она должна быть размером 48x48 пикселей. Вы также можете предоставить иконку размером 96x96 пикселей для дисплеев с высоким разрешением, определив свойство <code>"96"</code> объекта <code>icons</code> в файле manifest.json:</p>
+<p>Если вы выберете свою иконку, она должна быть размером 48x48 пикселей. Вы также можете предоставить иконку размером 96x96 пикселей для дисплеев с высоким разрешением, определив свойство <code>"96"</code> объекта <code>icons</code> в файле manifest.json:</p>
 
 <pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
   <span class="key token">"48":</span> <span class="string token">"icons/beasts-48.png"</span><span class="punctuation token">,</span>
@@ -126,7 +126,7 @@ cd beastify</pre>
 
 <p>Сохраните иконку с именем "beasts-32.png" в папке "icons". Вы можете использовать <a href="https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png">иконку из нашего примера</a>, которая взята из набора <a href="http://www.iconbeast.com/free">IconBeast Lite </a>и используется на условиях этой <a href="http://www.iconbeast.com/faq/">лицензии</a>.</p>
 
-<p>Если Вы не предоставите всплывающую панель, то событие click отправляется в Ваше дополнение, когда пользователь кликает кнопку. Если Вы предоставите всплывающую панель, то событие click не отправляется, зато появляется всплывающая панель. Мы хотим панель, давайте создадим её.</p>
+<p>Если вы не предоставите всплывающую панель, то событие click отправляется в ваше дополнение, когда пользователь кликает кнопку. Если вы предоставите всплывающую панель, то событие click не отправляется, зато появляется всплывающая панель. Мы хотим панель, давайте создадим её.</p>
 
 <h3 id="Всплывающая_панель">Всплывающая панель</h3>
 
@@ -344,9 +344,9 @@ browser.runtime.onMessage.addListener(beastify);
 
     manifest.json</pre>
 
-<p>Начиная с Firefox 45 Вы можете временно установить дополнения с жёсткого диска.</p>
+<p>Начиная с Firefox 45 вы можете временно установить дополнения с жёсткого диска.</p>
 
-<p>Откройте "about:debugging" в Firefox, кликните "Загрузить временное дополнение", и выберете Ваш файл manifest.json. После этого Вы должны увидеть иконку дополнения на панели инструментов Firefox:</p>
+<p>Откройте "about:debugging" в Firefox, кликните "Загрузить временное дополнение", и выберете ваш файл manifest.json. После этого вы должны увидеть иконку дополнения на панели инструментов Firefox:</p>
 
 <p>{{EmbedYouTube("sAM78GU4P34")}}</p>
 

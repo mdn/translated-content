@@ -44,7 +44,7 @@ original_slug: Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API
 <p>Если данные о местоположении меняются (либо устройство находится в движении, либо пришли более точные данные о геопозиции), вы можете указать callback функцию, которая будет вызывается при любом обновлении данных о местоположении. Это делается с использованием функции {{domxref("Geolocation.watchPosition()","watchPosition()")}}, которая имеет несколько входных параметров: {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}. Эта функция вызывается много раз, позволяя браузеру обновлять данные о текущей локации либо во время движения, либо после получения более точной информации о местоположении (после применения более точных приёмов). Функция, которая вызывается при ошибке, для {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}, при желании, может быть вызвана неоднократно.</p>
 
 <div class="note">
-<p><strong>Примечание:</strong> Вы можете использовать {{domxref("Geolocation.watchPosition()","watchPosition()")}} без вызова {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.</p>
+<p><strong>Примечание:</strong> вы можете использовать {{domxref("Geolocation.watchPosition()","watchPosition()")}} без вызова {{domxref("Geolocation.getCurrentPosition()","getCurrentPosition()")}}.</p>
 </div>
 
 <pre class="brush: js">var watchID = navigator.geolocation.watchPosition(function(position) {

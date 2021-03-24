@@ -398,9 +398,9 @@
 /pl/docs/DOM/element.lang	/pl/docs/Web/API/HTMLElement/lang
 /pl/docs/DOM/element.lastChild	/pl/docs/Web/API/Node/lastChild
 /pl/docs/DOM/element.length	/pl/docs/Web/API/NodeList/length
-/pl/docs/DOM/element.localName	/pl/docs/Web/API/Node/localName
+/pl/docs/DOM/element.localName	/pl/docs/Web/API/Element/localName
 /pl/docs/DOM/element.name	/pl/docs/conflicting/Web/API
-/pl/docs/DOM/element.namespaceURI	/pl/docs/Web/API/Node/namespaceURI
+/pl/docs/DOM/element.namespaceURI	/pl/docs/Web/API/Element/namespaceURI
 /pl/docs/DOM/element.nextSibling	/pl/docs/Web/API/Node/nextSibling
 /pl/docs/DOM/element.nodeName	/pl/docs/Web/API/Node/nodeName
 /pl/docs/DOM/element.nodeType	/pl/docs/Web/API/Node/nodeType
@@ -418,7 +418,7 @@
 /pl/docs/DOM/element.onmousemove	/pl/docs/Web/API/GlobalEventHandlers/onmousemove
 /pl/docs/DOM/element.ownerDocument	/pl/docs/Web/API/Node/ownerDocument
 /pl/docs/DOM/element.parentNode	/pl/docs/Web/API/Node/parentNode
-/pl/docs/DOM/element.prefix	/pl/docs/Web/API/Node/prefix
+/pl/docs/DOM/element.prefix	/pl/docs/Web/API/Element/prefix
 /pl/docs/DOM/element.previousSibling	/pl/docs/Web/API/Node/previousSibling
 /pl/docs/DOM/element.removeAttribute	/pl/docs/Web/API/Element/removeAttribute
 /pl/docs/DOM/element.removeAttributeNS	/pl/docs/Web/API/Element/removeAttributeNS
@@ -646,9 +646,9 @@
 /pl/docs/DOM:element.lang	/pl/docs/Web/API/HTMLElement/lang
 /pl/docs/DOM:element.lastChild	/pl/docs/Web/API/Node/lastChild
 /pl/docs/DOM:element.length	/pl/docs/Web/API/NodeList/length
-/pl/docs/DOM:element.localName	/pl/docs/Web/API/Node/localName
+/pl/docs/DOM:element.localName	/pl/docs/Web/API/Element/localName
 /pl/docs/DOM:element.name	/pl/docs/conflicting/Web/API
-/pl/docs/DOM:element.namespaceURI	/pl/docs/Web/API/Node/namespaceURI
+/pl/docs/DOM:element.namespaceURI	/pl/docs/Web/API/Element/namespaceURI
 /pl/docs/DOM:element.nextSibling	/pl/docs/Web/API/Node/nextSibling
 /pl/docs/DOM:element.nodeName	/pl/docs/Web/API/Node/nodeName
 /pl/docs/DOM:element.nodeType	/pl/docs/Web/API/Node/nodeType
@@ -666,7 +666,7 @@
 /pl/docs/DOM:element.onmousemove	/pl/docs/Web/API/GlobalEventHandlers/onmousemove
 /pl/docs/DOM:element.ownerDocument	/pl/docs/Web/API/Node/ownerDocument
 /pl/docs/DOM:element.parentNode	/pl/docs/Web/API/Node/parentNode
-/pl/docs/DOM:element.prefix	/pl/docs/Web/API/Node/prefix
+/pl/docs/DOM:element.prefix	/pl/docs/Web/API/Element/prefix
 /pl/docs/DOM:element.previousSibling	/pl/docs/Web/API/Node/previousSibling
 /pl/docs/DOM:element.removeAttribute	/pl/docs/Web/API/Element/removeAttribute
 /pl/docs/DOM:element.removeAttributeNS	/pl/docs/Web/API/Element/removeAttributeNS
@@ -1946,9 +1946,7 @@
 /pl/docs/Web/API/Element/lang	/pl/docs/Web/API/HTMLElement/lang
 /pl/docs/Web/API/Element/lastChild	/pl/docs/Web/API/Node/lastChild
 /pl/docs/Web/API/Element/length	/pl/docs/Web/API/NodeList/length
-/pl/docs/Web/API/Element/localName	/pl/docs/Web/API/Node/localName
 /pl/docs/Web/API/Element/name	/pl/docs/conflicting/Web/API
-/pl/docs/Web/API/Element/namespaceURI	/pl/docs/Web/API/Node/namespaceURI
 /pl/docs/Web/API/Element/nextSibling	/pl/docs/Web/API/Node/nextSibling
 /pl/docs/Web/API/Element/nodeName	/pl/docs/Web/API/Node/nodeName
 /pl/docs/Web/API/Element/nodeType	/pl/docs/Web/API/Node/nodeType
@@ -1965,7 +1963,6 @@
 /pl/docs/Web/API/Element/onmousemove	/pl/docs/Web/API/GlobalEventHandlers/onmousemove
 /pl/docs/Web/API/Element/ownerDocument	/pl/docs/Web/API/Node/ownerDocument
 /pl/docs/Web/API/Element/parentNode	/pl/docs/Web/API/Node/parentNode
-/pl/docs/Web/API/Element/prefix	/pl/docs/Web/API/Node/prefix
 /pl/docs/Web/API/Element/previousSibling	/pl/docs/Web/API/Node/previousSibling
 /pl/docs/Web/API/Element/removeChild	/pl/docs/Web/API/Node/removeChild
 /pl/docs/Web/API/Element/replaceChild	/pl/docs/Web/API/Node/replaceChild
@@ -2005,6 +2002,10 @@
 /pl/docs/Web/API/Navigator/plugins	/pl/docs/Web/API/NavigatorPlugins/plugins
 /pl/docs/Web/API/Navigator/product	/pl/docs/Web/API/NavigatorID/product
 /pl/docs/Web/API/NavigatorOnLine/Zdarzenia_online_i_offline	/pl/docs/Web/API/NavigatorOnLine/Online_and_offline_events
+/pl/docs/Web/API/Node/localName	/pl/docs/Web/API/Element/localName
+/pl/docs/Web/API/Node/namespaceURI	/pl/docs/Web/API/Element/namespaceURI
+/pl/docs/Web/API/Node/prefix	/pl/docs/Web/API/Element/prefix
+/pl/docs/Web/API/ParentNode/childElementCount	/pl/docs/Web/API/Element/childElementCount
 /pl/docs/Web/API/Storage	/pl/docs/Web/API/Web_Storage_API
 /pl/docs/Web/API/Stylesheet	/pl/docs/Web/API/CSSStyleSheet
 /pl/docs/Web/API/Stylesheet/cssRules	/pl/docs/Web/API/CSSRuleList
