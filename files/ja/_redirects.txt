@@ -1362,8 +1362,8 @@
 /ja/docs/DOM/Node.isSameNode	/ja/docs/Web/API/Node/isSameNode
 /ja/docs/DOM/Node.isSupported	/ja/docs/Web/API/Node/isSupported
 /ja/docs/DOM/Node.lastChild	/ja/docs/Web/API/Node/lastChild
-/ja/docs/DOM/Node.localName	/ja/docs/Web/API/Node/localName
-/ja/docs/DOM/Node.namespaceURI	/ja/docs/Web/API/Node/namespaceURI
+/ja/docs/DOM/Node.localName	/ja/docs/conflicting/Web/API/Element/localName
+/ja/docs/DOM/Node.namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/DOM/Node.nextSibling	/ja/docs/Web/API/Node/nextSibling
 /ja/docs/DOM/Node.nodeName	/ja/docs/Web/API/Node/nodeName
 /ja/docs/DOM/Node.nodePrincipal	/ja/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
@@ -1372,7 +1372,7 @@
 /ja/docs/DOM/Node.normalize	/ja/docs/Web/API/Node/normalize
 /ja/docs/DOM/Node.ownerDocument	/ja/docs/Web/API/Node/ownerDocument
 /ja/docs/DOM/Node.parentNode	/ja/docs/Web/API/Node/parentNode
-/ja/docs/DOM/Node.prefix	/ja/docs/Web/API/Node/prefix
+/ja/docs/DOM/Node.prefix	/ja/docs/conflicting/Web/API/Element/prefix
 /ja/docs/DOM/Node.previousSibling	/ja/docs/Web/API/Node/previousSibling
 /ja/docs/DOM/Node.removeChild	/ja/docs/Web/API/Node/removeChild
 /ja/docs/DOM/Node.replaceChild	/ja/docs/Web/API/Node/replaceChild
@@ -1508,9 +1508,9 @@
 /ja/docs/DOM/element.lang	/ja/docs/Web/API/HTMLElement/lang
 /ja/docs/DOM/element.lastChild	/ja/docs/Web/API/Node/lastChild
 /ja/docs/DOM/element.length	/ja/docs/Web/API/NodeList/length
-/ja/docs/DOM/element.localName	/ja/docs/Web/API/Node/localName
+/ja/docs/DOM/element.localName	/ja/docs/conflicting/Web/API/Element/localName
 /ja/docs/DOM/element.name	/ja/docs/conflicting/Web/API
-/ja/docs/DOM/element.namespaceURI	/ja/docs/Web/API/Node/namespaceURI
+/ja/docs/DOM/element.namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/DOM/element.nextSibling	/ja/docs/Web/API/Node/nextSibling
 /ja/docs/DOM/element.nodeName	/ja/docs/Web/API/Node/nodeName
 /ja/docs/DOM/element.nodeType	/ja/docs/Web/API/Node/nodeType
@@ -1525,7 +1525,7 @@
 /ja/docs/DOM/element.onpaste	/ja/docs/Web/API/HTMLElement/onpaste
 /ja/docs/DOM/element.ownerDocument	/ja/docs/Web/API/Node/ownerDocument
 /ja/docs/DOM/element.parentNode	/ja/docs/Web/API/Node/parentNode
-/ja/docs/DOM/element.prefix	/ja/docs/Web/API/Node/prefix
+/ja/docs/DOM/element.prefix	/ja/docs/conflicting/Web/API/Element/prefix
 /ja/docs/DOM/element.previousSibling	/ja/docs/Web/API/Node/previousSibling
 /ja/docs/DOM/element.querySelectorAll	/ja/docs/Web/API/Element/querySelectorAll
 /ja/docs/DOM/element.removeAttribute	/ja/docs/Web/API/Element/removeAttribute
@@ -1812,8 +1812,8 @@
 /ja/docs/DOM:element.lang	/ja/docs/Web/API/HTMLElement/lang
 /ja/docs/DOM:element.lastChild	/ja/docs/Web/API/Node/lastChild
 /ja/docs/DOM:element.length	/ja/docs/Web/API/NodeList/length
-/ja/docs/DOM:element.localName	/ja/docs/Web/API/Node/localName
-/ja/docs/DOM:element.namespaceURI	/ja/docs/Web/API/Node/namespaceURI
+/ja/docs/DOM:element.localName	/ja/docs/conflicting/Web/API/Element/localName
+/ja/docs/DOM:element.namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/DOM:element.nextSibling	/ja/docs/Web/API/Node/nextSibling
 /ja/docs/DOM:element.nodeName	/ja/docs/Web/API/Node/nodeName
 /ja/docs/DOM:element.nodeType	/ja/docs/Web/API/Node/nodeType
@@ -1823,7 +1823,7 @@
 /ja/docs/DOM:element.onpaste	/ja/docs/Web/API/HTMLElement/onpaste
 /ja/docs/DOM:element.ownerDocument	/ja/docs/Web/API/Node/ownerDocument
 /ja/docs/DOM:element.parentNode	/ja/docs/Web/API/Node/parentNode
-/ja/docs/DOM:element.prefix	/ja/docs/Web/API/Node/prefix
+/ja/docs/DOM:element.prefix	/ja/docs/conflicting/Web/API/Element/prefix
 /ja/docs/DOM:element.previousSibling	/ja/docs/Web/API/Node/previousSibling
 /ja/docs/DOM:element.removeAttribute	/ja/docs/Web/API/Element/removeAttribute
 /ja/docs/DOM:element.removeAttributeNS	/ja/docs/Web/API/Element/removeAttributeNS
@@ -3895,8 +3895,8 @@
 /ja/docs/Web/API/Node.isSameNode	/ja/docs/Web/API/Node/isSameNode
 /ja/docs/Web/API/Node.isSupported	/ja/docs/Web/API/Node/isSupported
 /ja/docs/Web/API/Node.lastChild	/ja/docs/Web/API/Node/lastChild
-/ja/docs/Web/API/Node.localName	/ja/docs/Web/API/Node/localName
-/ja/docs/Web/API/Node.namespaceURI	/ja/docs/Web/API/Node/namespaceURI
+/ja/docs/Web/API/Node.localName	/ja/docs/conflicting/Web/API/Element/localName
+/ja/docs/Web/API/Node.namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/Web/API/Node.nextSibling	/ja/docs/Web/API/Node/nextSibling
 /ja/docs/Web/API/Node.nodeName	/ja/docs/Web/API/Node/nodeName
 /ja/docs/Web/API/Node.nodePrincipal	/ja/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
@@ -3906,7 +3906,7 @@
 /ja/docs/Web/API/Node.ownerDocument	/ja/docs/Web/API/Node/ownerDocument
 /ja/docs/Web/API/Node.parentElement	/ja/docs/Web/API/Node/parentElement
 /ja/docs/Web/API/Node.parentNode	/ja/docs/Web/API/Node/parentNode
-/ja/docs/Web/API/Node.prefix	/ja/docs/Web/API/Node/prefix
+/ja/docs/Web/API/Node.prefix	/ja/docs/conflicting/Web/API/Element/prefix
 /ja/docs/Web/API/Node.previousSibling	/ja/docs/Web/API/Node/previousSibling
 /ja/docs/Web/API/Node.removeChild	/ja/docs/Web/API/Node/removeChild
 /ja/docs/Web/API/Node.replaceChild	/ja/docs/Web/API/Node/replaceChild
@@ -3915,9 +3915,13 @@
 /ja/docs/Web/API/Node/cloneNode-old	/ja/docs/Web/API/Node/getUserData
 /ja/docs/Web/API/Node/firstChild-temp	/ja/docs/Web/API/Node/firstChild
 /ja/docs/Web/API/Node/innerText	/ja/docs/Web/API/HTMLElement/innerText
+/ja/docs/Web/API/Node/localName	/ja/docs/conflicting/Web/API/Element/localName
+/ja/docs/Web/API/Node/namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/Web/API/Node/nodePrincipal	/ja/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
+/ja/docs/Web/API/Node/prefix	/ja/docs/conflicting/Web/API/Element/prefix
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e
+/ja/docs/Web/API/ParentNode/childElementCount	/ja/docs/Web/API/Element/childElementCount
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API

@@ -16391,15 +16391,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/Node/localName": {
-    "modified": "2019-03-24T00:17:44.401Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "AshfaqHossain",
-      "ziyunfei"
-    ]
-  },
   "Web/API/Node/lookupNamespaceURI": {
     "modified": "2019-03-24T00:17:51.844Z",
     "contributors": [
@@ -16412,14 +16403,6 @@
     "contributors": [
       "teoli",
       "ziyunfei"
-    ]
-  },
-  "Web/API/Node/namespaceURI": {
-    "modified": "2019-03-23T23:09:34.483Z",
-    "contributors": [
-      "LoveofRedMoon",
-      "teoli",
-      "AlexChao"
     ]
   },
   "Web/API/Node/nextSibling": {
@@ -16500,15 +16483,6 @@
     "contributors": [
       "teoli",
       "khalid32",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/Node/prefix": {
-    "modified": "2019-03-24T00:17:52.444Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "AshfaqHossain",
       "ziyunfei"
     ]
   },
@@ -16817,16 +16791,6 @@
       "Ende93",
       "zhangchen",
       "xgqfrms-GitHub",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/ParentNode/childElementCount": {
-    "modified": "2019-04-28T01:50:12.243Z",
-    "contributors": [
-      "frankfang1990",
-      "xgqfrms-GitHub",
-      "teoli",
-      "AlexChao",
       "ziyunfei"
     ]
   },
@@ -50797,6 +50761,42 @@
     "modified": "2020-10-15T22:32:52.448Z",
     "contributors": [
       "tiny-gravel"
+    ]
+  },
+  "conflicting/Web/API/Element/localName": {
+    "modified": "2019-03-24T00:17:44.401Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "AshfaqHossain",
+      "ziyunfei"
+    ]
+  },
+  "conflicting/Web/API/Element/namespaceURI": {
+    "modified": "2019-03-23T23:09:34.483Z",
+    "contributors": [
+      "LoveofRedMoon",
+      "teoli",
+      "AlexChao"
+    ]
+  },
+  "conflicting/Web/API/Element/prefix": {
+    "modified": "2019-03-24T00:17:52.444Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "AshfaqHossain",
+      "ziyunfei"
+    ]
+  },
+  "Web/API/Element/childElementCount": {
+    "modified": "2019-04-28T01:50:12.243Z",
+    "contributors": [
+      "frankfang1990",
+      "xgqfrms-GitHub",
+      "teoli",
+      "AlexChao",
+      "ziyunfei"
     ]
   }
 }

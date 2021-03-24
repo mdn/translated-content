@@ -6680,12 +6680,6 @@
       "Yuri"
     ]
   },
-  "Web/API/Node/localName": {
-    "modified": "2019-03-23T22:53:27.435Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
   "Web/API/Node/lookupNamespaceURI": {
     "modified": "2019-03-23T22:53:25.440Z",
     "contributors": [
@@ -6694,12 +6688,6 @@
   },
   "Web/API/Node/lookupPrefix": {
     "modified": "2019-03-23T22:53:32.113Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/Node/namespaceURI": {
-    "modified": "2019-03-23T22:53:39.665Z",
     "contributors": [
       "AlexAlex"
     ]
@@ -6765,12 +6753,6 @@
       "fscholz",
       "khalid32",
       "Troynov"
-    ]
-  },
-  "Web/API/Node/prefix": {
-    "modified": "2019-03-23T22:53:39.207Z",
-    "contributors": [
-      "AlexAlex"
     ]
   },
   "Web/API/Node/previousSibling": {
@@ -6844,15 +6826,6 @@
       "chrisdavidmills",
       "KonstantinBuza",
       "madebydima"
-    ]
-  },
-  "Web/API/ParentNode/childElementCount": {
-    "modified": "2019-08-28T05:06:44.542Z",
-    "contributors": [
-      "Yialo",
-      "vitya-ne",
-      "alexsakhnov",
-      "In4in"
     ]
   },
   "Web/API/ParentNode/children": {
@@ -25987,6 +25960,33 @@
     "modified": "2019-03-23T22:34:05.751Z",
     "contributors": [
       "YakovL"
+    ]
+  },
+  "Web/API/Element/localName": {
+    "modified": "2019-03-23T22:53:27.435Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "Web/API/Element/namespaceURI": {
+    "modified": "2019-03-23T22:53:39.665Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "Web/API/Element/prefix": {
+    "modified": "2019-03-23T22:53:39.207Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "Web/API/Element/childElementCount": {
+    "modified": "2019-08-28T05:06:44.542Z",
+    "contributors": [
+      "Yialo",
+      "vitya-ne",
+      "alexsakhnov",
+      "In4in"
     ]
   }
 }

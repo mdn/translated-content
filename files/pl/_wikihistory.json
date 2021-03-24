@@ -2165,13 +2165,6 @@
   "Web/API/ParentNode": {
     "modified": "2020-10-15T22:19:13.921Z"
   },
-  "Web/API/ParentNode/childElementCount": {
-    "modified": "2020-10-15T22:19:13.324Z",
-    "contributors": [
-      "kaka0204",
-      "SurmaAa"
-    ]
-  },
   "Web/API/ParentNode/children": {
     "modified": "2020-10-29T07:01:42.075Z",
     "contributors": [
@@ -5736,26 +5729,6 @@
       "Ptak82"
     ]
   },
-  "Web/API/Node/localName": {
-    "modified": "2019-03-23T23:46:58.657Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Mgjbot",
-      "Ptak82",
-      "Jan Dudek"
-    ]
-  },
-  "Web/API/Node/namespaceURI": {
-    "modified": "2019-03-23T23:46:57.209Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Mgjbot",
-      "Jan Dudek",
-      "Ptak82"
-    ]
-  },
   "Web/API/Node/nextSibling": {
     "modified": "2019-03-23T23:53:02.853Z",
     "contributors": [
@@ -5921,16 +5894,6 @@
       "Ptak82",
       "Jan Dudek",
       "Takenbot"
-    ]
-  },
-  "Web/API/Node/prefix": {
-    "modified": "2019-03-23T23:47:17.259Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "Mgjbot",
-      "Ptak82",
-      "Jan Dudek"
     ]
   },
   "Web/API/Node/previousSibling": {
@@ -11744,6 +11707,43 @@
       "Robson",
       "Mgjbot",
       "Jan Dudek"
+    ]
+  },
+  "Web/API/Element/localName": {
+    "modified": "2019-03-23T23:46:58.657Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Mgjbot",
+      "Ptak82",
+      "Jan Dudek"
+    ]
+  },
+  "Web/API/Element/namespaceURI": {
+    "modified": "2019-03-23T23:46:57.209Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Mgjbot",
+      "Jan Dudek",
+      "Ptak82"
+    ]
+  },
+  "Web/API/Element/prefix": {
+    "modified": "2019-03-23T23:47:17.259Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "Mgjbot",
+      "Ptak82",
+      "Jan Dudek"
+    ]
+  },
+  "Web/API/Element/childElementCount": {
+    "modified": "2020-10-15T22:19:13.324Z",
+    "contributors": [
+      "kaka0204",
+      "SurmaAa"
     ]
   }
 }
