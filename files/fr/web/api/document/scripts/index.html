@@ -1,72 +1,55 @@
 ---
 title: Document.scripts
 slug: Web/API/Document/scripts
+tags:
+  - API
+  - Document
+  - HTML DOM
+  - Property
+  - Reference
 translation_of: Web/API/Document/scripts
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary"> </h2>
-<p>Retourne une liste des scripts (éléments {{HTMLElement("script")}}) présents dans le document. L'objet retourné est une liste du type {{domxref("HTMLCollection")}}.</p>
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
-<pre class="syntaxbox"><code>var <em>scriptList</em></code> = document.scripts;
+<div>{{ApiRef}}</div>
+
+<p class="summary">Retourne une liste des scripts (éléments {{HTMLElement("script")}}) présents dans le document. L'objet retourné est une liste du type {{domxref("HTMLCollection")}}.</p>
+
+<h2 id="Syntax">Syntaxe</h2>
+
+<pre class="brush: js">var <var>scriptList</var> = document.scripts;
 </pre>
+
 <p>La liste <code>scriptList</code> est un objet {{domxref("HTMLCollection")}} qu'on peut utiliser comme un tableau pour accéder aux éléments qu'elle contient.</p>
-<h2 id="Exemple">Exemple</h2>
+
+<h2 id="Example">Exemple</h2>
+
 <p>Cet exemple détecte la présence d'éléments {{HTMLElement("script")}} dans le document.</p>
+
 <pre class="brush:js">var scripts = document.scripts;
 
 if (scripts.length) {
   alert("This page has scripts!");
 }
 </pre>
-<h2 id="Specification" name="Specification">Browser compatibility</h2>
-<div>
- {{CompatibilityTable}}</div>
-<div id="compat-desktop">
- <table class="compat-table">
+
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
   <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatGeckoDesktop("9.0")}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-   </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-document-scripts', 'Document.scripts')}}</td>
+      <td>{{ Spec2('HTML WHATWG') }}</td>
+      <td></td>
+    </tr>
   </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Feature</th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Mobile</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Basic support</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatGeckoMobile("9.0")}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<h2 id="Specification" name="Specification">Specification</h2>
-<ul>
- <li>{{spec("http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#dom-document-scripts", "DOM: document scripts")}}</li>
-</ul>
+</table>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<div>{{Compat("api.Document.scripts")}}</div>
