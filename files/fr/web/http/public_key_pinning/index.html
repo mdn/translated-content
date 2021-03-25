@@ -106,66 +106,32 @@ original_slug: Web/Security/Public_Key_Pinning
 
 <pre><code>server.modules += ( "mod_setenv" )</code></pre>
 
-<h2 id="sect3"> </h2>
+<h2 id="Specifications">Spécifications</h2>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome("38") }}</td>
-   <td>{{ CompatGeckoDesktop("35") }}</td>
-   <td>{{ CompatNo()}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{RFC("7469", "Public-Key-Pins", "2.1")}}</td>
+      <td>Extension de l'épinglage des clés publiques pour HTTP</td>
+    </tr>
+  </tbody>
 </table>
-</div>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome pour Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("35") }}</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<h2 id="Spécifications">Spécifications</h2>
+<p>{{Compat("http.headers.Public-Key-Pins")}}</p>
+
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
- <li><a href="https://tools.ietf.org/html/rfc7469">IETF RFC - Public Key Pinning Extension for HTTP</a></li>
-</ul>
-
-<h2 id="Voir_également">Voir également</h2>
-
-<ul>
- <li><a href="/fr/docs/S%C3%A9curit%C3%A9/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a></li>
+  <li>{{HTTPHeader("Public-Key-Pins")}}</li>
+  <li>{{HTTPHeader("Public-Key-Pins-Report-Only")}}</li>
+  <li>Browser test site: <a href="https://projects.dm.id.lv/Public-Key-Pins_test">HSTS and HPKP test</a></li>
+  <li>{{HTTPHeader("Expect-CT")}}</li>
 </ul>

@@ -307,123 +307,31 @@ translation_of: Web/Manifest
 
 <p>Les manifestes doivent être servies en utilisant l'<font face="Consolas">application/manifest+json</font> MIME type. Cependant, c'est facultatif.</p>
 
-<h2 id="Spécification">Spécification</h2>
+<h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Manifest')}}</td>
-   <td>{{Spec2('Manifest')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Manifest')}}</td>
+      <td>{{Spec2('Manifest')}}</td>
+      <td>Définition initiale</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<div>
-<div>{{CompatibilityTable}}</div>
+<p>{{Compat("html.manifest")}}</p>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalités</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>32.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>background_color</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}<sup><font size="2">[1]</font></sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>theme_color</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}<sup><font size="2">[1]</font></sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>icons</code>, <code>name</code>, <code>short_name</code>, and <code>theme_color</code> used for <a href="https://support.mozilla.org/t5/Other/How-to-add-a-shortcut-to-a-website-on-Android/ta-p/21992"><u><font color="#0066cc">Add to home screen</font></u></a> feature.</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(53)}}<sup><font size="2">[2]</font></sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>display</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(47)}}<sup><font size="2">[3]</font></sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="See_also">Voir aussi</h2>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-</div>
-
-<div></div>
-
-<p>[1] Ne supportent pas <code>lang</code>, <code>scope</code>, or <code>splash_screens</code>.</p>
-
-<p>[2] Les champs <font face="Consolas">icons</font>, <code>name</code>, <code>short_name</code>, et <code>theme_color </code>of the <u><font color="#0066cc">Web App Manifest </font></u>(si présent) peut maintenant être la source des icônes, titres,  couleur des écrans d'accueil des fenêtres des applications avec,"Add to home screen" (Firefox Mobile only; see {{bug("1234558")}}). Un support expérimental pour cette fonctionnalité est disponible derrière le drapeau booléen (boolean flag)  <font face="Consolas">manifest.install.enabled </font>dans <code>about:config</code>.</p>
-
-<p>[3] <span id="result_box" lang="fr"><span>Seule la valeur de l'affichage du navigateur a été prise en charge dans la version 47. Dans Firefox 57, on a ajouté </span></span><font face="Consolas">minimal-ui</font>, <code>standalone</code> , and <code>fullscreen.</code></p>
+<ul>
+	<li><a href="/fr/docs/Web/Progressive_web_apps">Progressive Web Apps (PWAs)</a></li>
+</ul>
