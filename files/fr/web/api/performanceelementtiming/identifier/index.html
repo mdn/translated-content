@@ -12,14 +12,14 @@ translation_of: Web/API/PerformanceElementTiming/identifier
 ---
 <div>{{SeeCompatTable}}{{Non-Standard_Header}}{{APIRef("Element Timing API")}}</div>
 
-<p class="summary">La propriété en lecture seule <strong><code>identifier</code></strong> de l'interface {{domxref("PerformanceElementTiming")}} renvoie la valeur de l'attribut <code><a href="/fr/docs/Web/HTML/Attributes/elementtiming">elementtiming</a></code> sur l'élément.</p>
+<p class="summary">La propriété en lecture seule <strong><code>identifier</code></strong> de l'interface <a href="/fr/docs/Web/API/PerformanceElementTiming"><code>PerformanceElementTiming</code></a> renvoie la valeur de l'attribut <code><a href="/fr/docs/Web/HTML/Attributes/elementtiming">elementtiming</a></code> sur l'élément.</p>
 
 <h2 id="Syntax">Syntaxe</h2>
 
 <pre class="brush:js">var <var>identifier</var> = <var>PerformanceElementTiming</var>.identifier;</pre>
 
 <h3>Valeur</h3>
-<p>Une chaîne de caractères {{domxref("DOMString")}}.</p>
+<p>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>.</p>
 
 <h2 id="Examples">Examples</h2>
 
@@ -27,8 +27,8 @@ translation_of: Web/API/PerformanceElementTiming/identifier
 
 <pre class="brush:html">&lt;img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage"&gt;</pre>
 
-<pre class="brush:js">const <var>observer</var> = new PerformanceObserver((list) => {
-  let <var>entries</var> = list.getEntries().forEach(function (entry) {
+<pre class="brush:js">const observer = new PerformanceObserver((list) => {
+  let entries = list.getEntries().forEach(function (entry) {
     if (entry.identifier === "big-image") {
       console.log(entry.naturalWidth);
     }
@@ -36,12 +36,12 @@ translation_of: Web/API/PerformanceElementTiming/identifier
 });
 observer.observe({ entryTypes: ["element"] });</pre>
 
-<p class="notecard note">Cet exemple utilise l'interface {{domxref("PerformanceObserver")}} pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément {{domxref("PerformanceEntry.entrytype")}} <code>element</code> afin d'utiliser l'interface <code>PerformanceElementTiming</code>.</p>
+<p class="notecard note">Cet exemple utilise l'interface <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a> pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>entryType</code></a> <code>element</code> afin d'utiliser l'interface <code>PerformanceElementTiming</code>.</p>
 
 <h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
-  <thead>    
+  <thead>
     <tr>
       <th scope="col">Spécification</th>
       <th scope="col">Statut</th>
