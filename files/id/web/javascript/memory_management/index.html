@@ -1,15 +1,13 @@
 ---
-title: Memory Management
+title: Pengelolaan Memory
 slug: Web/JavaScript/Memory_Management
 translation_of: Web/JavaScript/Memory_Management
 ---
 <div>{{JsSidebar("Advanced")}}</div>
 
-<h2 id="Introduction">Introduction</h2>
+<h2 id="Introduction">Pengantar</h2>
 
-<p>Bahasa-bahasa Level Bawah, seperti C, memiliki manajemen memory level rendah yang primitiv seperti <code>malloc()</code> dan  <code>free()</code>. Pada bagian lain, nilai Javascript dialokasikan ketika sesuatu (objek, string,dll.) dibuat dan secara otomatis dibebaskan ketika tidak digunakan lagi. Proses terakhir disebut <em>garbage collection. "</em>Secara Otomatis" ini adalah sumber kekeliruan dan memberikan kesan developer Javascript (dan Bahasa tingkat tinggi lainnya) bahwa mereka bisa memilih untuk tidak mempedulikan tentang manajemen memory, maka itu adalah suatu kesalahan</p>
-
-<p>Low-level languages, like C, have low-level memory management primitives like <code>malloc()</code> and <code>free()</code>. On the other hand, JavaScript values are allocated when things (objects, strings, etc.) are created and "automatically" freed when they are not used anymore. The latter process is called <em>garbage collection</em>. This "automatically" is a source of confusion and gives JavaScript (and high-level languages) developers the impression they can decide not to care about memory management. This is a mistake.</p>
+<p>Bahasa-bahasa Level Bawah, seperti C, memiliki manajemen memory level rendah yang primitiv seperti <code>malloc()</code> dan  <code>free()</code>. Pada bagian lain, nilai Javascript dialokasikan ketika sesuatu (objek, string,dll.) dibuat dan secara otomatis dibuang ketika tidak digunakan lagi. Proses terakhir disebut <em>garbage collection</em>. "Secara Otomatis" ini adalah sumber kekeliruan dan memberikan kesan developer Javascript (dan Bahasa tingkat tinggi lainnya) bahwa mereka bisa memilih untuk tidak mempedulikan tentang manajemen memory, maka itu adalah suatu kesalahan</p>
 
 <h2 id="Siklus_hidup_sebuah_memori">Siklus hidup sebuah memori</h2>
 
@@ -23,120 +21,120 @@ translation_of: Web/JavaScript/Memory_Management
 
 <p>Bagian pertama dan kedua bersifat ekplisit untuk semua bahasa. Sedangkan untuk bagian terakhir adalah eksplisit untuk bahasa tingkat rendah, tetapi hampir semua bahasa tingkat atas seperti JavaScript juga bersifat implisit.</p>
 
-<h3 id="Allocation_in_JavaScript">Allocation in JavaScript</h3>
+<h3 id="Allocation_in_JavaScript">Alokasi dalam JavaScript</h3>
 
-<h4 id="Value_initialization">Value initialization</h4>
+<h4 id="Value_initialization">Inisialisasi nilai</h4>
 
-<p>In order not to bother the programmer with allocations, JavaScript does it alongside with declaring values.</p>
+<p>Agar tidak mengganggu pemrogram dengan alokasi, JavaScript melakukannya bersama dengan mendeklarasikan nilai.</p>
 
-<pre class="brush: js">var n = 123; // allocates memory for a number
-var s = "azerty"; // allocates memory for a string
+<pre class="brush: js">var n = 123; // mengalokasikan memori untuk sebuah nomor
+var s = "azerty"; // mengalokasikan memori untuk string
 
 var o = {
   a: 1,
   b: null
-}; // allocates memory for an object and contained values
+}; // mengalokasikan memori untuk suatu objek dan nilai yang terkandung
 
-// (like object) allocates memory for the array and
-// contained values
+// (seperti objek) mengalokasikan memori untuk array dan
+// berisi nilai
 var a = [1, null, "abra"];
 
 function f(a){
   return a + 2;
-} // allocates a function (which is a callable object)
+} // mengalokasikan fungsi (yang merupakan objek yang dapat dipanggil)
 
-// function expressions also allocate an object
+// ekspresi fungsi juga mengalokasikan objek
 someElement.addEventListener('click', function(){
   someElement.style.backgroundColor = 'blue';
 }, false);
 </pre>
 
-<h4 id="Allocation_via_function_calls">Allocation via function calls</h4>
+<h4 id="Allocation_via_function_calls">Alokasi melalui panggilan fungsi</h4>
 
-<p>Some function calls result in object allocation.</p>
+<p>Beberapa panggilan fungsi menghasilkan alokasi objek.</p>
 
-<pre class="brush: js">var d = new Date(); // allocates a Date object
+<pre class="brush: js">var d = new Date(); // mengalokasikan objek Date
 
-var e = document.createElement('div'); // allocates a DOM element</pre>
+var e = document.createElement('div'); // mengalokasikan elemen DOM</pre>
 
-<p>Some methods allocate new values or objects:</p>
+<p>Beberapa metode mengalokasikan nilai atau objek baru:</p>
 
 <pre class="brush: js">var s = "azerty";
-var s2 = s.substr(0, 3); // s2 is a new string
-// Since strings are immutable value,
-// JavaScript may decide to not allocate memory,
-// but just store the [0, 3] range.
+var s2 = s.substr(0, 3); // s2 adalah string baru
+// Karena string adalah nilai yang tidak bisa diubah,
+// JavaScript mungkin memutuskan untuk tidak mengalokasikan memori,
+// tapi simpan saja kisaran [0, 3].
 
 var a = ["ouais ouais", "nan nan"];
 var a2 = ["generation", "nan nan"];
 var a3 = a.concat(a2);
-// new array with 4 elements being
-// the concatenation of a and a2 elements
+// larik baru dengan 4 elemen
+// penggabungan elemen a dan a2
 </pre>
 
-<h3 id="Using_values">Using values</h3>
+<h3 id="Using_values">Menggunakan nilai</h3>
 
-<p>Using value basically means reading and writing in allocated memory. This can be done by reading or writing the value of a variable or an object property or even passing an argument to a function.</p>
+<p>Menggunakan nilai pada dasarnya berarti membaca dan menulis dalam memori yang dialokasikan. Ini dapat dilakukan dengan membaca atau menulis nilai variabel atau properti objek atau bahkan meneruskan argumen ke suatu fungsi.</p>
 
-<h3 id="Release_when_the_memory_is_not_needed_anymore">Release when the memory is not needed anymore</h3>
+<h3 id="Release_when_the_memory_is_not_needed_anymore"> Lepaskan saat memori tidak diperlukan lagi</h3>
 
-<p>Most of memory management issues come at this phase. The hardest task here is to find when "the allocated memory is not needed any longer". It often requires for the developer to determine where in the program such piece of memory is not needed anymore and free it.</p>
+<p>Sebagian besar masalah manajemen memori terjadi pada fase ini. Tugas tersulit di sini adalah menemukan kapan "memori yang dialokasikan tidak diperlukan lagi". Ini sering kali mengharuskan pengembang untuk menentukan di bagian mana dalam program, bagian memori itu tidak diperlukan lagi dan membuangnya.</p>
 
-<p>High-level languages embed a piece of software called "garbage collector" whose job is to track memory allocation and use in order to find when a piece of allocated memory is not needed any longer in which case, it will automatically free it. This process is an approximation since the general problem of knowing whether some piece of memory is needed is <a class="external" href="http://en.wikipedia.org/wiki/Decidability_%28logic%29">undecidable</a> (can't be solved by an algorithm).</p>
+<p>Bahasa tingkat tinggi menyematkan perangkat lunak yang disebut "pengumpul sampah" yang tugasnya melacak alokasi dan penggunaan memori untuk mengetahui kapan bagian dari memori yang dialokasikan tidak lagi diperlukan, yang secara otomatis akan membuangnya. Proses ini merupakan perkiraan karena masalah umum untuk mengetahui apakah sebagian memori diperlukan <a class="external" href="http://en.wikipedia.org/wiki/Decidability_%28logic%29">tidak dapat diputuskan</a> (tidak dapat diselesaikan dengan algoritma).</p>
 
-<h2 id="Garbage_collection">Garbage collection</h2>
+<h2 id="Garbage_collection">Pengumpulan sampah</h2>
 
-<p>As stated above the general problem of automatically finding whether some memory "is not needed anymore" is undecidable. As a consequence, garbage collections implement a restriction of a solution to the general problem. This section will explain the necessary notions to understand the main garbage collection algorithms and their limitations.</p>
+<p>Seperti yang dinyatakan di atas, masalah umum dalam menemukan secara otomatis apakah beberapa memori "tidak diperlukan lagi" tidak dapat diputuskan. Akibatnya, pengumpulan sampah menerapkan pembatasan solusi untuk masalah umum. Bagian ini akan menjelaskan pengertian yang diperlukan untuk memahami algoritma pengumpulan sampah utama dan batasannya.</p>
 
-<h3 id="References">References</h3>
+<h3 id="References">Referensi</h3>
 
-<p>The main notion garbage collection algorithms rely on is the notion of <em>reference</em>. Within the context of memory management, an object is said to reference another object if the former has an access to the latter (either implicitly or explicitly). For instance, a JavaScript object has a reference to its <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype</a> (implicit reference) and to its properties values (explicit reference).</p>
+<p>Gagasan utama yang diandalkan oleh algoritme pengumpulan sampah adalah gagasan <em>referensi</em>. Dalam konteks manajemen memori, suatu objek dikatakan mereferensikan objek lain jika yang pertama memiliki akses ke yang terakhir (baik secara implisit maupun eksplisit). Misalnya, objek JavaScript memiliki referensi ke <a href="/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain">prototype</a> (referensi implisit) dan nilai propertinya (referensi eksplisit).</p>
 
-<p>In this context, the notion of "object" is extended to something broader than regular JavaScript objects and also contains function scopes (or the global lexical scope).</p>
+<p>Dalam konteks ini, pengertian "objek" diperluas ke sesuatu yang lebih luas dari objek JavaScript biasa dan juga berisi cakupan fungsi (atau cakupan leksikal global).</p>
 
-<h3 id="Reference-counting_garbage_collection">Reference-counting garbage collection</h3>
+<h3 id="Reference-counting_garbage_collection">Pengumpulan sampah penghitung-referensi</h3>
 
-<p>This is the most naive garbage collection algorithm. This algorithm reduces the definition of "an object is not needed anymore" to "an object has no other object referencing to it". An object is considered garbage collectable if there is zero reference pointing at this object.</p>
+<p>Ini adalah algoritma pengumpulan sampah yang alami. Algoritma ini mengurangi definisi "sebuah objek tidak diperlukan lagi" menjadi "sebuah objek tidak memiliki objek lain yang merujuk padanya". Sebuah objek dianggap sampah yang dapat dikumpulkan jika tidak ada referensi yang menunjuk ke objek ini.</p>
 
-<h4 id="Example">Example</h4>
+<h4 id="Example">Contoh</h4>
 
 <pre class="brush: js">var o = {
   a: {
     b:2
   }
 };
-// 2 objects are created. One is referenced by the other as one of its properties.
-// The other is referenced by virtue of being assigned to the 'o' variable.
-// Obviously, none can be garbage-collected
+// 2 objek dibuat. Yang satu direferensikan oleh yang lain sebagai
+// salah satu propertinya. Yang lain direferensikan karena ditugaskan
+// ke variabel 'o'. Jelas, tidak ada yang bisa dikumpulkan dari sampah
 
+var o2 = o; // 'o2' adalah variabel kedua yang
+            // memiliki referensi ke objek
+o = 1;      // Sekarang, objek yang semula di 'o' memiliki referensi
+            // unik diwujudkan oleh variabel 'o2'
 
-var o2 = o; // the 'o2' variable is the second thing that
-            // has a reference to the object
-o = 1;      // now, the object that was originally in 'o' has a unique reference
-            // embodied by the 'o2' variable
+var oa = o2.a; // referensi ke properti 'a' dari objek.
+               // Objek ini sekarang memiliki 2 referensi: satu
+               // sebagai properti, yang lainnya sebagai variabel 'oa'
 
-var oa = o2.a; // reference to 'a' property of the object.
-               // This object has now 2 references: one as a property,
-               // the other as the 'oa' variable
+o2 = "yo"; // Objek yang awalnya di 'o' sekarang menjadi nol
+           // referensi untuk itu. Itu bisa dikumpulkan sampah.
+           // Namun apa itu properti 'a' masih direferensikan oleh
+           // variabel 'oa', jadi tidak bisa dibebaskan
 
-o2 = "yo"; // The object that was originally in 'o' has now zero
-           // references to it. It can be garbage-collected.
-           // However what was its 'a' property is still referenced by
-           // the 'oa' variable, so it cannot be freed
-
-oa = null; // what was the 'a' property of the object originally in o
-           // has zero references to it. It can be garbage collected.
+oa = null; // Apa properti 'a' dari objek yang aslinya di o
+           // tidak memiliki referensi untuk itu. Bisa jadi sampah
+           // dikumpulkan.
 </pre>
 
-<h4 id="Limitation_cycles">Limitation: cycles</h4>
+<h4 id="Limitation_cycles">Batasan: Siklus</h4>
 
-<p>There is a limitation when it comes to cycles. In the following example two objects are created and reference one another – thus creating a cycle. They will not get out of the function scope after the function call, so they are effectively useless and could be freed. However, the reference-counting algorithm considers that since each of both object is referenced at least once and none can be garbage-collected.</p>
+<p>Ada batasan dalam hal siklus. Dalam contoh berikut, dua objek dibuat dan mereferensikan satu sama lain - sehingga menciptakan sebuah siklus. Mereka tidak akan keluar dari ruang lingkup fungsi setelah pemanggilan fungsi, sehingga mereka secara efektif tidak berguna dan dapat dibebaskan. Namun, algoritme penghitungan referensi menganggap bahwa karena masing-masing dari kedua objek direferensikan setidaknya sekali dan tidak ada yang dapat dikumpulkan dari sampah.</p>
 
 <pre class="brush: js">function f(){
   var o = {};
   var o2 = {};
-  o.a = o2; // o references o2
-  o2.a = o; // o2 references o
+  o.a = o2; // o referensi o2
+  o2.a = o; // o2 referensi o
 
   return "azerty";
 }
@@ -144,9 +142,9 @@ oa = null; // what was the 'a' property of the object originally in o
 f();
 </pre>
 
-<h4 id="Real-life_example">Real-life example</h4>
+<h4 id="Real-life_example">Contoh nyata</h4>
 
-<p>Internet Explorer 6 and 7 are known to have reference-counting garbage collectors for DOM objects. Cycles are a common mistake that can generate memory leaks:</p>
+<p>Internet Explorer 6 dan 7 dikenal memiliki pengumpul sampah penghitung referensi untuk objek DOM. Siklus adalah kesalahan umum yang dapat menyebabkan kebocoran memori:</p>
 
 <pre class="brush: js">var div;
 window.onload = function(){
@@ -156,29 +154,29 @@ window.onload = function(){
 };
 </pre>
 
-<p>In the above example, the DOM element "myDivElement" has a circular reference to itself in the "circularReference" property. If the property is not explicitly removed or nulled, a reference-counting garbage collector will always have at least one reference intact and will keep the DOM element in memory even if it was removed from the DOM tree. If the DOM element holds lots of data (illustrated in the above example with the "lotsOfData" property), the memory consumed by this data will never be released.</p>
+<p>Pada contoh di atas, elemen DOM "myDivElement" memiliki referensi melingkar ke dirinya sendiri dalam properti "circularReference". Jika properti tidak secara eksplisit dihapus atau dinihilkan, sampah pengumpul sampah reference-counting akan selalu memiliki setidaknya satu referensi utuh dan akan menyimpan elemen DOM dalam memori meskipun dihapus dari pohon DOM. Jika elemen DOM menyimpan banyak data (diilustrasikan dalam contoh di atas dengan properti "lotsOfData"), memori yang dikonsumsi oleh data ini tidak akan pernah dilepaskan.</p>
 
-<h3 id="Mark-and-sweep_algorithm">Mark-and-sweep algorithm</h3>
+<h3 id="Mark-and-sweep_algorithm">Algoritma Mark-and-sweep (Tendai dan Sapu)</h3>
 
-<p>This algorithm reduces the definition of "an object is not needed anymore" to "an object is unreachable".</p>
+<p>Algoritma ini mengurangi definisi "objek tidak dibutuhkan lagi" menjadi "objek tidak terjangkau".</p>
 
-<p>This algorithm assumes the knowledge of a set of objects called <em>roots</em> (In JavaScript, the root is the global object). Periodically, the garbage-collector will start from these roots, find all objects that are referenced from these roots, then all objects referenced from these, etc. Starting from the roots, the garbage collector will thus find all <em>reachable</em> objects and collect all non-reachable objects.</p>
+<p>Algoritma ini mengasumsikan pengetahuan sekumpulan objek yang disebut <em>roots</em> (Dalam JavaScript, root adalah objek global). Secara berkala, pengumpul sampah akan mulai dari akar ini, mencari semua objek yang dirujuk dari akar ini, kemudian semua objek yang dirujuk dari akar ini, dll. Mulai dari akar, pengumpul sampah akan menemukan semua <em> dapat dijangkau </ em > objek dan kumpulkan semua objek yang tidak dapat dijangkau.</p>
 
-<p>This algorithm is better than the previous one since "an object has zero reference" leads to this object being unreachable. The opposite is not true as we have seen with cycles.</p>
+<p>Algoritma ini lebih baik daripada yang sebelumnya karena "suatu objek memiliki referensi nol" menyebabkan objek ini tidak dapat dijangkau. Kebalikannya tidak benar seperti yang kita lihat dengan siklus.</p>
 
-<p>As of 2012, all modern browsers ship a mark-and-sweep garbage-collector. All improvements made in the field of JavaScript garbage collection (generational/incremental/concurrent/parallel garbage collection) over the last few years are implementation improvements of this algorithm, but not improvements over the garbage collection algorithm itself nor its reduction of the definition of when "an object is not needed anymore".</p>
+<p>Mulai tahun 2012, semua peramban modern mengirimkan pengumpul sampah mark-and-sweep. Semua peningkatan yang dibuat di bidang pengumpulan sampah JavaScript (pengumpulan sampah generasi / inkremental / serentak / paralel) selama beberapa tahun terakhir merupakan peningkatan implementasi algoritme ini, tetapi bukan peningkatan atas algoritme pengumpulan sampah itu sendiri atau pengurangan definisi kapan "sebuah objek tidak dibutuhkan lagi".</p>
 
-<h4 id="Cycles_are_not_a_problem_anymore">Cycles are not a problem anymore</h4>
+<h4 id="Cycles_are_not_a_problem_anymore">Siklus bukan masalah lagi</h4>
 
-<p>In the first above example, after the function call returns, the 2 objects are not referenced anymore by something reachable from the global object. Consequently, they will be found unreachable by the garbage collector.</p>
+<p>Pada contoh pertama di atas, setelah pemanggilan fungsi kembali, 2 objek tidak direferensikan lagi oleh sesuatu yang dapat dijangkau dari objek global. Akibatnya, mereka akan ditemukan tidak terjangkau oleh pengumpul sampah.</p>
 
-<p>The same thing goes with the second example. Once the div and its handler are made unreachable from the roots, they can both be garbage-collected despite referencing each other.</p>
+<p>Hal yang sama berlaku untuk contoh kedua. Setelah div dan penangannya tidak dapat dijangkau dari root, keduanya dapat dikumpulkan dari sampah meskipun saling mereferensikan.</p>
 
-<h4 id="Limitation_objects_need_to_be_made_explicitly_unreachable">Limitation: objects need to be made explicitly unreachable</h4>
+<h4 id="Limitation_objects_need_to_be_made_explicitly_unreachable">Batasan: objek harus dibuat tidak terjangkau secara eksplisit</h4>
 
-<p>Although this is marked as a limitation, it is one that is rarely reached in practice which is why no one usually cares that much about garbage collection.</p>
+<p>Meskipun ini ditandai sebagai batasan, ini adalah salah satu yang jarang tercapai dalam praktiknya, itulah sebabnya biasanya tidak ada orang yang terlalu peduli dengan pengumpulan sampah.</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">Lihat juga</h2>
 
 <ul>
  <li><a class="external" href="http://www.ibm.com/developerworks/web/library/wa-memleak/">IBM article on "Memory leak patterns in JavaScript" (2007)</a></li>
