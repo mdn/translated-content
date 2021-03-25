@@ -19,14 +19,14 @@ translation_of: Web/Web_Components
 <div>{{DefaultAPISidebar("Web Components")}}</div>
 
 <div class="summary">
-<p>Web Components adalah kumpulan fitur teknologi yang memungkinkan Anda membuat elemen khusus yang dapat digunakan kembali dengan fungsionalitasnya yang dikemas jauh dari sisa kode Anda dan menggunakannya di aplikasi web Anda.</p>
+<p>Web Components adalah kumpulan fitur teknologi yang memungkinkan Anda membuat elemen khusus yang dapat digunakan kembali dengan fungsionalitas yang dikemas lebih jauh dari sisa kode Anda dan menggunakannya di aplikasi web Anda.</p>
 </div>
 
 <h2 id="Konsep_dan_penggunaan">Konsep dan penggunaan</h2>
 
-<p>Sebagai pengembang, kita semua tahu bahwa menggunakan kembali kode sebanyak mungkin merupakan ide yang bagus. Hal ini biasanya tidak mudah untuk struktur <em>markup </em>kustom memikirkan HTML kompleks (serta gaya dan skrip terkait) yang terkadang harus Anda tulis untuk memnuat kontrol UI khusus, dan bagaimana menggunakannya beberapa kali dapat mengubah halaman Anda menjadi berantankan jika Anda tidak berhati-hati.</p>
+<p>Sebagai pengembang, kita semua tahu bahwa menggunakan kembali kode sebanyak mungkin merupakan ide yang bagus. Hal ini biasanya tidak mudah untuk struktur <em>markup </em>kustom memikirkan HTML kompleks (serta gaya dan skrip terkait) yang terkadang harus Anda tulis untuk membuat kontrol UI khusus, dan bagaimana menggunakannya beberapa kali dapat mengubah halaman Anda menjadi berantakan jika Anda tidak berhati-hati.</p>
 
-<p>Web Components bertujun untuk menyelesaikan masalah yang terdiri dari tiga teknologi utama, yang dapat digunakan bersama untuk membuat elemen kustom serbaguna dengan fungsionalitas terenkapsulasi yang dapat digunakan kembali di mana pun Anda suka tanpa takut benturan kode.</p>
+<p>Web Components bertujuan untuk menyelesaikan masalah yang terdiri dari tiga teknologi utama, yang dapat digunakan bersama untuk membuat elemen kustom serbaguna dengan fungsionalitas terenkapsulasi yang dapat digunakan kembali di mana pun Anda suka tanpa takut benturan kode.</p>
 
 <ul>
  <li><strong>Custom elements</strong>: Sekumpulan API JavaScript yang memungkinkan Anda menentukan <em>custom element </em>dan perilakunya, yang kemudian dapat digunakan sesuai keinginan di antarmuka pengguna Anda.</li>
@@ -38,7 +38,7 @@ translation_of: Web/Web_Components
 
 <ol>
  <li>Buat kelas di mana Anda menentukan fungsionalitas <em>web component</em> Anda, menggunakan sintaks kelas ECMAScript 2015 (lihat <a href="https://wiki.developer.mozilla.org/id/docs/Web/JavaScript/Reference/Classes">Kelas</a> untuk informasi lebih lanjut).</li>
- <li>Daftarkan elemen kustom baru Anda menggunakan metode {{domxref ("CustomElementRegistry.define ()")}}, meneruskan nama elemen yang akan ditentukan, kelas atau fungsi di mana fungsionalitasnya ditentukan, dan secara opsional, elemen apa yang diwarisi dari.</li>
+ <li>Daftarkan elemen kustom baru Anda menggunakan metode {{domxref ("CustomElementRegistry.define ()")}}, meneruskan nama elemen yang akan ditentukan, kelas atau fungsi di mana fungsionalitasnya ditentukan, dan secara opsional, dari elemen apa yang diwarisi.</li>
  <li>Jika perlu, lampirkan shadow DOM ke elemen khusus menggunakan metode {{domxref ("Element.attachShadow ()")}}. Tambahkan child element, event listener, dll., Ke shadow DOM menggunakan metode DOM biasa.</li>
  <li>Jika perlu, tentukan template HTML menggunakan {{htmlelement ("template")}} dan {{htmlelement ("slot")}}. Sekali lagi gunakan metode DOM biasa untuk mengkloning template dan melampirkannya ke shadow DOM Anda.</li>
  <li>Gunakan elemen kustom Anda di mana pun Anda suka di halaman Anda, seperti yang Anda lakukan pada elemen HTML biasa.</li>
@@ -48,7 +48,7 @@ translation_of: Web/Web_Components
 
 <dl>
  <dt><a href="/en-US/docs/Web/Web_Components/Using_custom_elements">Menggunakan custom element</a></dt>
- <dd>Panduan yang menunjukkan cara menggunakan fitur elemen khusus untuk membuat komponen web sederhana, serta melihat callback siklus proses dan beberapa fitur lanjutan lainnya.</dd>
+ <dd>Panduan yang menunjukkan cara menggunakan fitur elemen khusus untuk membuat komponen web sederhana, serta melihat proses panggilan balik siklus dan beberapa fitur lanjutan lainnya.</dd>
  <dt><a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Menggunakan shadow DOM</a></dt>
  <dd>Panduan yang mempelajari dasar-dasar shadow DOM, menunjukkan cara melampirkan shadow DOM ke elemen, menambahkan ke shadow DOM tree, menatanya, dan banyak lagi.</dd>
  <dt><a href="/en-US/docs/Web/Web_Components/Using_templates_and_slots">Menggunakan templates and slots</a></dt>
@@ -92,8 +92,8 @@ translation_of: Web/Web_Components
  <ul>
   <li>{{cssxref(":defined")}}: Mencocokkan elemen apa pun yang ditentukan, termasuk elemen bawaan dan elemen khusus yang ditentukan dengan <code>CustomElementRegistry.define()</code>).</li>
   <li>{{cssxref(":host")}}: Memilih shadow host dari shadow DOM yang berisi CSS yang digunakan di dalamnya.</li>
-  <li>{{cssxref(":host()")}}: Memilih shadow host dari <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> yang berisi CSS yang digunakan di dalamnya (sehingga Anda dapat memilih elemen khusus dari dalam shadow DOM-nya) tetapi hanya jika pemilih yang diberikan sebagai parameter fungsi cocok dengan shadow host.</li>
-  <li>{{cssxref(":host-context()")}}: Memilih shadow host dari <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> yang berisi CSS yang digunakan di dalamnya (sehingga Anda dapat memilih elemen khusus dari dalam shadow DOM-nya) tetapi hanya jika pemilih yang diberikan sebagai parameter fungsi cocok dengan leluhur host bayangan di tempat itu itu berada di dalam hierarki DOM.</li>
+  <li>{{cssxref(":host()")}}: Memilih shadow host dari <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> yang berisi CSS yang digunakan di dalamnya (sehingga Anda dapat memilih elemen khusus dari dalam shadow DOM-nya) tetapi hanya jika pilihan yang diberikan sebagai parameter fungsi cocok dengan shadow host.</li>
+  <li>{{cssxref(":host-context()")}}: Memilih shadow host dari <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a> yang berisi CSS yang digunakan di dalamnya (sehingga Anda dapat memilih elemen khusus dari dalam shadow DOM-nya) tetapi hanya jika pilihan yang diberikan sebagai parameter fungsi cocok dengan leluhur host bayangan di tempat itu yang berada di dalam hierarki DOM.</li>
  </ul>
  </dd>
  <dd>Pseudo-elements yang berkaitan secara khusus dengan elemen khusus:
@@ -128,7 +128,7 @@ translation_of: Web/Web_Components
  <dd>Ekstensi ke antarmuka <code>Event</code> yang terkait dengan shadow DOM:
  <ul>
   <li>{{domxref ("Event.composed")}}: Mengembalikan {{jsxref ("Boolean")}} yang menunjukkan apakah acara akan menyebar melintasi batas shadow DOM ke DOM standar (<code>true</code>), atau tidak (<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">false</span></font>).</li>
-  <li>{{domxref("Event.composedPath")}}: Mengembalikan event's path (objek tempat pemroses akan dipanggil). Ini tidak termasuk node dalam shadow tree jika shadow root dibuat dengan {{domxref ("ShadowRoot.mode")}} ditutup.</li>
+  <li>{{domxref("Event.composedPath")}}: Mengembalikan event's path (objek tempat pemroses yang akan dipanggil). Ini tidak termasuk dalam node shadow tree jika shadow root dibuat dengan {{domxref ("ShadowRoot.mode")}} ditutup.</li>
  </ul>
  </dd>
 </dl>
@@ -225,6 +225,6 @@ translation_of: Web/Web_Components
  <li><a href="https://github.com/hybridsjs/hybrids">Hybrids</a> Pustaka web component sumber terbuka, yang mendukung objek biasa dan fungsi murni di atas <code>class</code> dan sintaks <code><font face="consolas, Liberation Mono, courier, monospace">this</font></code>. Ini menyediakan API sederhana dan fungsional untuk membuat elemen khusus.</li>
  <li><a href="https://www.polymer-project.org/">Polymer</a> framework web component Google, satu set polyfill, penyempurnaan, dan contoh. Saat ini cara termudah untuk menggunakan komponen web lintas browser.</li>
  <li><a href="https://github.com/devpunks/snuggsi#readme">Snuggsi</a> Web Component Mudah dalam ~ 1kB Termasuk polyfill - Yang Anda butuhkan hanyalah browser dan pemahaman dasar tentang kelas HTML, CSS, dan JavaScript agar produktif.</li>
- <li><a href="https://github.com/slimjs/slim.js">Slim.js</a> Pustaka web component sumber terbuka, pustaka berkinerja tinggi untuk pembuatan komponen yang cepat dan mudah; dapat diperluas dan <em>pluggable</em> dan kompatibel <em>cross-framwork</em>.</li>
+ <li><a href="https://github.com/slimjs/slim.js">Slim.js</a> Pustaka web component sumber terbuka, pustaka berkinerja tinggi untuk pembuatan komponen yang cepat dan mudah; dapat diperluas dan <em>pluggable</em> dan kompatibel <em>cross-framework</em>.</li>
  <li><a href="https://stenciljs.com/">Stencil</a> — TToolchain untuk membangun sistem desain yang dapat digunakan kembali dan terukur dalam web component.</li>
 </ul>
