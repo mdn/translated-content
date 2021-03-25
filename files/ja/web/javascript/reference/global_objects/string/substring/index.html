@@ -75,7 +75,7 @@ console.log(anyString.substring(0, 10))
 
 <h3 id="Using_substring_with_length_property" name="Using_substring_with_length_property">substring() と length プロパティの使用</h3>
 
-<p>次の例では <code>substring()</code> メソッドと {{jsxref("String.length", "length")}} プロパティを使用して、、特定の文字列の最後の文字を抜き出しています。この方法では、上記の例と同じようあなたが最初と最後の位置を知っている必要がないこと考えると、覚えやすいかもしれません。</p>
+<p>次の例では <code>substring()</code> メソッドと {{jsxref("String.length", "length")}} プロパティを使用して、特定の文字列の最後の文字を抜き出しています。この方法では、上記の例と同じようあなたが最初と最後の位置を知っている必要がないこと考えると、覚えやすいかもしれません。</p>
 
 <pre class="brush: js notranslate">// 最後の 4 文字の 'illa' を表示します
 let anyString = 'Mozilla'
@@ -104,7 +104,7 @@ console.log(text.substr(2,3))     // =&gt; "zil"</pre>
 
 <p><code>substring()</code> メソッドと {{jsxref("String.slice", "slice()")}} メソッドはほぼ同じですが、特に負の数の引数の扱いについて、いくつかの微妙な違いがあります。</p>
 
-<p><code>substring()</code> メソッドは <code><var>indexStart</var></code> が <code><var>indexEnd</var></code> よりも大きい場合に二つの引数をするので、文字列が返されます。 {{jsxref("String.slice", "slice()")}} メソッドはこの場合には空文字列を返します。</p>
+<p><code>substring()</code> メソッドは <code><var>indexStart</var></code> が <code><var>indexEnd</var></code> よりも大きい場合に二つの引数を交換するので、文字列が返されます。 {{jsxref("String.slice", "slice()")}} メソッドはこの場合には空文字列を返します。</p>
 
 <pre class="brush: js notranslate">let text = 'Mozilla'
 console.log(text.substring(5, 2))  // =&gt; "zil"
