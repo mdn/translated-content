@@ -5,24 +5,25 @@ tags:
   - Guide
   - Performance
   - Performance Web
+  - Web Performance
 translation_of: Web/API/Performance_Timeline/Using_Performance_Timeline
 ---
 <div>{{DefaultAPISidebar("Performance Timeline API")}}</div>
 
-<p class="summary"><span class="seoSummary">La norme <strong><a href="https://w3c.github.io/performance-timeline/">Performance Timeline</a></strong> définit des extensions de l'interface {{domxref("Performance")}} pour prendre en charge les mesures de latence côté client au sein des applications.</span> La norme comprend également des interfaces qui permettent à une application d'être notifiée lorsque des événements de performance spécifiques se produisent. Ensemble, ces interfaces peuvent être utilisées pour aider à identifier les goulots d'étranglement des performances d'une application.</p>
+<p><span class="seoSummary">La norme <strong><a href="https://w3c.github.io/performance-timeline/">Performance Timeline</a></strong> définit des extensions de l'interface <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> pour prendre en charge les mesures de latence côté client au sein des applications.</span> La norme comprend également des interfaces qui permettent à une application d'être notifiée lorsque des événements de performance spécifiques se produisent. Ensemble, ces interfaces peuvent être utilisées pour aider à identifier les goulots d'étranglement des performances d'une application.</p>
 
 <h2 id="Performance_extensions">Extensions de <code>Performance</code></h2>
 
-<p><strong>Performance Timeline</strong> étend l'objet {{domxref("Performance")}} avec trois méthodes qui fournissent différents mécanismes pour obtenir un ensemble d'{{domxref("PerformanceEntry", "enregistrements des performances (métriques)", "", 1)}}, selon les critères de filtrage spécifiés. L'exemple suivant montre l'utilisation de ces méthodes {{domxref("Performance.getEntries", "getEntries()")}}, {{domxref("Performance.getEntriesByName", "getEntriesByName()")}} et {{domxref("Performance.getEntriesByType", "getEntriesByType()")}}.</p>
+<p><strong>Performance Timeline</strong> étend l'objet <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> avec trois méthodes qui fournissent différents mécanismes pour obtenir un ensemble d'<a href="/fr/docs/Web/API/PerformanceEntry">enregistrements des performances (métriques)</a>, selon les critères de filtrage spécifiés. L'exemple suivant montre l'utilisation de ces méthodes <a href="/fr/docs/Web/API/Performance/getEntries"><code>getEntries()</code></a>, <a href="/fr/docs/Web/API/Performance/getEntriesByName"><code>getEntriesByName()</code></a> et <a href="/fr/docs/Web/API/Performance/getEntriesByType"><code>getEntriesByType()</code></a>.</p>
 
 <pre class="brush: js">
-function log(<var>s</var>) {
-  let <var>o</var> = document.getElementsByTagName("output")[0];
+function log(s) {
+  let o = document.getElementsByTagName("output")[0];
   o.innerHTML += s + " &lt;br&gt;";
 }
-function do_work(<var>n</var>) {
-  for (let <var>i</var>=0 ; i &lt; n; i++) {
-      let <var>m</var> = Math.random();
+function do_work(n) {
+  for (let i=0 ; i &lt; n; i++) {
+      let m = Math.random();
   }
 }
 function print_perf_entry(pe) {
@@ -45,29 +46,29 @@ function print_PerformanceEntries() {
   performance.measure("Measure1", "Begin", "End");
 
   // Utilise getEntries() pour itérer toutes les entrées.
-  let <var>p</var> = performance.getEntries();
-  for (let <var>i</var>=0; i &lt; p.length; i++) {
+  let p = performance.getEntries();
+  for (let i=0; i &lt; p.length; i++) {
     log("Toutes les entrées [" + i + "]");
     print_perf_entry(p[i]);
   }
 
   // Utilise getEntries(name, entryType) pour obtenir des entrées spécifiques.
   p = performance.getEntries({name : "Measure1", entryType:   "measure"});
-  for (let <var>i</var>=0; i &lt; p.length; i++) {
+  for (let i=0; i &lt; p.length; i++) {
     log("Begin et Measure [" + i + "]");
     print_perf_entry(p[i]);
   }
 
   // Utilisez getEntriesByType() pour obtenir toutes les entrées "mark".
   p = performance.getEntriesByType("mark");
-  for (let <var>i</var>=0; i &lt; p.length; i++) {
+  for (let i=0; i &lt; p.length; i++) {
     log ("Mark seulement [" + i + "]");
     print_perf_entry(p[i]);
   }
 
   // Utilise getEntriesByName() pour obtenir toutes les entrées "mark" nommées "Begin".
   p = performance.getEntriesByName("Begin", "mark");
-  for (let <var>i</var>=0; i &lt; p.length; i++) {
+  for (let i=0; i &lt; p.length; i++) {
     log ("Begin et Mark [" + i + "]");
     print_perf_entry(p[i]);
   }
@@ -76,11 +77,11 @@ function print_PerformanceEntries() {
 
 <h2 id="PerformanceEntry_interface">L'interface <code>PerformanceEntry</code></h2>
 
-<p>L'interface {{domxref("PerformanceEntry")}} encapsule une seule <em>entrée de performance</em>, c'est-à-dire une seule métrique de performance. Cette interface possède quatre propriétés et un <em>sérialiseur</em> JSON : ({{domxref("Performance.toJSON", "toJSON()")}}. L'exemple suivant montre l'utilisation de ces propriétés.</p>
+<p>L'interface <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> encapsule une seule <em>entrée de performance</em>, c'est-à-dire une seule métrique de performance. Cette interface possède quatre propriétés et un <em>sérialiseur</em> JSON : (<a href="/fr/docs/Web/API/Performance/toJSON"><code>toJSON()</code></a>. L'exemple suivant montre l'utilisation de ces propriétés.</p>
 
 <pre class="brush: js">
-function print_PerformanceEntry(<var>ev</var>) {
-  let <var>properties</var> = ["name", "entryType", "startTime", "duration"];
+function print_PerformanceEntry(ev) {
+  let properties = ["name", "entryType", "startTime", "duration"];
 
   // Crée quelques entrées de performance
   performance.mark("Start");
@@ -88,14 +89,14 @@ function print_PerformanceEntry(<var>ev</var>) {
   performance.mark("Stop");
   performance.measure("measure-1");
 
-  let <var>p</var> = performance.getEntries();
-  for (let <var>i</var>=0; i &lt; p.length; i++) {
+  let p = performance.getEntries();
+  for (let i=0; i &lt; p.length; i++) {
     log("PerfEntry[" + i + "]");
-    for (let <var></var>=0; j &lt; properties.length; j++) {
+    for (let =0; j &lt; properties.length; j++) {
       // check each property in window.performance
-      let <var>supported</var> = properties[j] in p[i];
+      let supported = properties[j] in p[i];
       if (supported) {
-        let <var>pe</var> = p[i];
+        let pe = p[i];
         log("... " + properties[j] + " = " + pe[properties[j]]);
       } else {
         log("... " + properties[j] + " = N'est pas pris en charge");
@@ -105,7 +106,7 @@ function print_PerformanceEntry(<var>ev</var>) {
 }
 </pre>
 
-<p>Cette interface comprend également une méthode {{domxref("PerformanceEntry.toJSON", "toJSON()")}} qui renvoie la sérialisation de l'objet {{domxref("PerformanceEntry")}}. Les exemples suivants montrent l'utilisation de cette méthode.</p>
+<p>Cette interface comprend également une méthode <a href="/fr/docs/Web/API/PerformanceEntry/toJSON"><code>toJSON()</code></a> qui renvoie la sérialisation de l'objet <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a>. Les exemples suivants montrent l'utilisation de cette méthode.</p>
 
 <pre class="brush: js">
 function PerfEntry_toJSON() {
@@ -115,8 +116,8 @@ function PerfEntry_toJSON() {
   performance.mark("mark-2");
   performance.measure("meas-1", "mark-1", "mark-2");
 
-  let <var>peList</var> = performance.getEntries();
-  let <var>pe</var> = peList[0];
+  let peList = performance.getEntries();
+  let pe = peList[0];
 
   if (pe.toJSON === undefined) {
     log("PerformanceEntry.toJSON() n'est PAS pris en charge");
@@ -124,8 +125,8 @@ function PerfEntry_toJSON() {
   }
 
   // Imprime l'objet PerformanceEntry
-  let <var>json</var> = pe.toJSON();
-  let <var>s</var> = JSON.stringify(json);
+  let json = pe.toJSON();
+  let s = JSON.stringify(json);
   log("PerformanceEntry.toJSON = " + s);
 }
 </pre>
@@ -134,31 +135,31 @@ function PerfEntry_toJSON() {
 
 <p>{{SeeCompatTable}}</p>
 
-<p>Les interfaces <em>Performance Observer</em> permettent à une application d'enregistrer un <em>observateur</em> pour des types d'événements de performance spécifiques, et lorsqu'un de ces types d'événements est enregistré, l'application est <em>notifiée</em> de l'événement via la fonction de rappel de l'observateur qui a été spécifiée au moment, où l'observateur a été créé. Lorsque l'observateur (rappel ou « callback ») est invoqué, les paramètres du rappel incluent une <em>{{domxref("PerformanceObserverEntryList", "liste d'entrées de l'observateur de performance", "", 1)}}</em> qui contient uniquement des {{domxref("PerformanceEntry", "entrées de performance", "", 1)}} <em>observées</em>. C'est-à-dire que la liste ne contient que des entrées pour les types d'événements qui ont été spécifiés lorsque la méthode {{domxref("PerformanceObserver.observe", "observe()")}} de l'observateur a été invoquée.</p>
+<p>Les interfaces <em>Performance Observer</em> permettent à une application d'enregistrer un <em>observateur</em> pour des types d'événements de performance spécifiques, et lorsqu'un de ces types d'événements est enregistré, l'application est <em>notifiée</em> de l'événement via la fonction de rappel de l'observateur qui a été spécifiée au moment, où l'observateur a été créé. Lorsque l'observateur (rappel ou « callback ») est invoqué, les paramètres du rappel incluent une <em><a href="/fr/docs/Web/API/PerformanceObserverEntryList">liste d'entrées de l'observateur de performance</a></em> qui contient uniquement des <a href="/fr/docs/Web/API/PerformanceEntry">entrées de performance</a> <em>observées</em>. C'est-à-dire que la liste ne contient que des entrées pour les types d'événements qui ont été spécifiés lorsque la méthode <a href="/fr/docs/Web/API/PerformanceObserver/observe"><code>observe()</code></a> de l'observateur a été invoquée.</p>
 
 <p>L'exemple suivant montre comment enregistrer deux observateurs : le premier s'enregistre pour plusieurs types d'événements et le second ne s'enregistre que pour un seul type d'événement.</p>
 
 <pre class="brush: js">
 function PerformanceObservers() {
   // Crée un observateur pour tous les types d'événements de performance
-  let <var>observe_all</var> = new PerformanceObserver(function(list, obs) {
-    let <var>perfEntries</var>;
+  let observe_all = new PerformanceObserver(function(list, obs) {
+    let perfEntries;
 
     // Imprime toutes les entrées
     perfEntries = list.getEntries();
-    for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+    for (let i=0; i &lt; perfEntries.length; i++) {
       print_perf_entry(perfEntries[i]);
     }
 
     // Imprime les entrées nommées "Begin" avec le type "mark".
     perfEntries = list.getEntriesByName("Begin", "mark");
-    for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+    for (let i=0; i &lt; perfEntries.length; i++) {
       print_perf_entry(perfEntries[i]);
     }
 
     // Imprime les entrées avec le type "mark".
     perfEntries = list.getEntriesByType("mark");
-    for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+    for (let i=0; i &lt; perfEntries.length; i++) {
       print_perf_entry(perfEntries[i]);
     }
   });
@@ -166,10 +167,10 @@ function PerformanceObservers() {
   observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
 
   // Crée un observateur pour le seul type d'événement "mark".
-  let <var>observe_mark</var> = new PerformanceObserver(function(list, obs) {
-    let <var>perfEntries</var> = list.getEntries();
+  let observe_mark = new PerformanceObserver(function(list, obs) {
+    let perfEntries = list.getEntries();
     // Ne devrait avoir que des entrées de type "mark".
-    for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+    for (let i=0; i &lt; perfEntries.length; i++) {
       print_perf_entry(perfEntries[i]);
     }
   });
@@ -184,7 +185,7 @@ function print_perf_entry(pe) {
 }
 </pre>
 
-<p>L'interface {{domxref("PerformanceObserverEntryList", "liste des entrées de l'observateur de performance", "", 1)}} possède les trois mêmes méthodes <code>getEntries*()</code> que l'interface {{domxref("Performance")}} et ces méthodes sont utilisées pour récupérer les entrées de performance <em>observées</em> dans le rappel de l'observateur. Ces méthodes ont été utilisées dans l'exemple cité ci-dessus.</p>
+<p>L'interface <a href="/fr/docs/Web/API/PerformanceObserverEntryList">liste des entrées de l'observateur de performance</a> possède les trois mêmes méthodes <code>getEntries*()</code> que l'interface <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> et ces méthodes sont utilisées pour récupérer les entrées de performance <em>observées</em> dans le rappel de l'observateur. Ces méthodes ont été utilisées dans l'exemple cité ci-dessus.</p>
 
 <h2 id="Specifications">Spécifications</h2>
 
