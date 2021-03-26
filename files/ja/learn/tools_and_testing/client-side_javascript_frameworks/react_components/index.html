@@ -23,7 +23,7 @@ tags:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <p><a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、<a href="/ja/docs/Learn/JavaScript">JavaScript</a>　のコア言語に精通していること、<a href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">ターミナル/コマンドライン</a>の知識があること。</p>
+        <p><a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、<a href="/ja/docs/Learn/JavaScript">JavaScript</a>　の コア言語に精通していること、<a href="/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">ターミナル/コマンドライン</a>の知識があること。</p>
       </td>
     </tr>
     <tr>
@@ -46,7 +46,7 @@ tags:
 
 <h2 id="Make_a_&lt;Todo_&gt;"><code>&lt;Todo /&gt;</code> の作成</h2>
 
-<p>コンポーネントを作る前に、そのための新しいファイルを作らなければなりません。実は、コンポーネント用の新しいディレクトリの作成が必要です。次のコマンドは、<code>components</code> ディレクトリを作成し、その中に <code>Todo.js</code> というファイルを作成します。これらを実行する前に、アプリのルートにいることを確認してください！</p>
+<p>コンポーネントを作る前に、そのための新しいファイルを作らなければなりません。実際は、コンポーネント用の新しいディレクトリーの作成が必要です。次のコマンドは、<code>components</code> ディレクトリーを作成し、その中に <code>Todo.js</code> というファイルを作成します。これらを実行する前に、アプリのルートにいることを確認してください！</p>
 
 <pre class="brush: bash">mkdir src/components
 touch src/components/Todo.js</pre>
@@ -63,7 +63,7 @@ touch src/components/Todo.js</pre>
   );
 }</pre>
 
-<p>ここまでは問題ありませんが、このコンポーネントは何かを返さなければなりません！<code>src/App.js</code> に戻って、最初の <code><a href="/ja/docs/Web/HTML/Element/li">&lt;li&gt;</a></code> をコピーし、<code>Todo.js</code> に貼り付けて、以下のように読み込みます。</p>
+<p>ここまでは問題ありませんが、このコンポーネントは何かを返さなければなりません！<code>src/App.js</code> に戻って、最初の <code><a href="/ja/docs/Web/HTML/Element/li">&lt;li&gt;</a></code> をコピーし、<code>Todo.js</code> に貼り付けて、以下のようになります。</p>
 
 <pre class="brush: js">export default function Todo() {
   return (
@@ -110,7 +110,7 @@ touch src/components/Todo.js</pre>
 
 <p><img alt="Todo リストアプリの Todo コンポーネントラベルがコンポーネントにハードコードされているため、繰り返し使用されています。" src="todo-list-repeating-todos.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>私たちは食べたいだけではなく、他にもやるべきこと — そう、TODO があります。次に、異なるコンポーネント呼び出しで別々のコンテンツをレンダリングする方法を見てみましょう。</p>
+<p>私たちがすべきことは、食べることだけではありません。そう、他にもすべきことがあります。— そう、TODO があります。次に、異なるコンポーネント呼び出しで別々のコンテンツをレンダリングする方法を見てみましょう。</p>
 
 <h2 id="Make_a_unique_&lt;Todo_&gt;"><em>「一意の」</em> <code>&lt;Todo /&gt;</code> を作成</h2>
 
@@ -120,7 +120,7 @@ touch src/components/Todo.js</pre>
 
 <p>完了させたいタスクの名前を追跡するために、それぞれの <code>&lt;Todo /&gt;</code> コンポーネントが一意の名前を表示するようにしなければなりません。</p>
 
-<p><code>App.js</code> では、それぞれの <code>&lt;Todo /&gt;</code> に名前の props を与えます。先ほどのタスクの名前を使ってみましょう。</p>
+<p><code>App.js</code> では、それぞれの <code>&lt;Todo /&gt;</code> に name の prop を与えます。先ほどのタスクの名前を使ってみましょう。</p>
 
 <pre class="brush: js">&lt;Todo name="Eat" /&gt;
 &lt;Todo name="Sleep" /&gt;
@@ -155,13 +155,13 @@ touch src/components/Todo.js</pre>
   );
 }</pre>
 
-<p><em>これで、</em>ブラウザーには3つの一意のタスクが表示されるようになりました。しかし、もう一つの問題が残っています: これらはすべてデフォルトでチェックされています。</p>
+<p><em>これで、</em>ブラウザーには 3 つの一意のタスクが表示されるようになりました。しかし、もう一つの問題が残っています: これらはすべてデフォルトでチェックされています。</p>
 
 <p><img alt="Todo リストアプリには、異なる Todo ラベルが付けられており、それらはコンポーネントに props として渡されます。" src="todo-list-unique-todos.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h3 id="Is_it_completed">それは <code>completed</code> ですか？</h3>
 
-<p>元の静的リストでは、<code>Eat</code> だけがチェックされていました。もう一度言いますが、<code>&lt;Todo /&gt;</code> コンポーネントを構成するUIのほとんどを再利用しつつ、一つだけ変更したいのです。これは別の props が良い仕事をしてくれます！ <code>App.js</code> での各 <code>&lt;Todo /&gt;</code> の呼び出しには、完了したことを示す新しい props を与えます。最初の (<code>Eat</code>) は <code>true</code> の値を持ち、残りは <code>false</code> にします。</p>
+<p>元の静的リストでは、<code>Eat</code> だけがチェックされていました。もう一度言いますが、<code>&lt;Todo /&gt;</code> コンポーネントを構成する UI のほとんどを再利用しつつ、一つだけ変更したいのです。これは別の props が良い仕事をしてくれます！ <code>App.js</code> での各 <code>&lt;Todo /&gt;</code> の呼び出しには、完了したことを示す新しい props を与えます。最初の (<code>Eat</code>) は <code>true</code> の値を持ち、残りは <code>false</code> にします。</p>
 
 <pre class="brush: js">&lt;Todo name="Eat" completed={true} /&gt;
 &lt;Todo name="Sleep" completed={false} /&gt;
@@ -173,7 +173,7 @@ touch src/components/Todo.js</pre>
 
 <p>そして、ブラウザーを更新すると、<code>Eat</code> だけがチェックされていることが表示されるようになるはずです。</p>
 
-<p><img alt="Todo リストアプリで、チェックの状態が異なるようになった。- あるチェックボックスはチェックされ、他のチェックボックスはチェックされませんでした。" src="todo-list-differing-checked-states.png" style="border-style: solid; border-width: 1px;"></p>
+<p><img alt="Todo リストアプリで、チェックの状態が異なるようになった。- あるチェックボックスはチェックされ、他のチェックボックスはチェックされない。" src="todo-list-differing-checked-states.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>各 <code>&lt;Todo /&gt;</code> コンポーネントの <code>completed</code> props を変更すると、ブラウザーはそれに応じてレンダリングされた同等のチェックボックスをチェックしたり、チェックを外したりします。</p>
 
@@ -206,7 +206,7 @@ touch src/components/Todo.js</pre>
 
 <p>それぞれのタスクには現在、3つの情報が含まれています: 名前、チェック済みかどうか、そして一意な ID です。このデータはうまくオブジェクトに変換されます。複数のタスクがあるので、このデータを表現するにはオブジェクトの配列が有効です。</p>
 
-<p>import の後 <code>ReactDOM.render()</code> より前の行で以下の <code>const</code> を作成してください。</p>
+<p><code>src/index.js</code> で、 import の後 <code>ReactDOM.render()</code> より前の行で以下の <code>const</code> を作成してください。</p>
 
 <pre class="brush: js">const DATA = [
   { id: "todo-0", name: "Eat", completed: true },
@@ -221,7 +221,7 @@ touch src/components/Todo.js</pre>
 <p>この配列は、App コンポーネントで <code>props.tasks</code> として利用できるようになりました。よかったら <code>console.log()</code> で確認してください。</p>
 
 <div class="notecard note">
-  <p><strong>注</strong>: <code>ALL_CAPS</code> 定数名は JavaScript では特別な意味はありません; 他の開発者に「このデータはここで定義された後は変更されません」と伝えるための慣習です。 </p>
+  <p><strong>注</strong>: <code>ALL_CAPS</code> (上記した <code>const DATA</code> のように) 定数名は JavaScript では特別な意味はありません; 他の開発者に「このデータはここで定義された後は変更されません」と伝えるための慣習です。 </p>
 </div>
 
 <h2 id="Rendering_with_iteration">イテレーションによるレンダリング</h2>
@@ -242,7 +242,7 @@ touch src/components/Todo.js</pre>
   {taskList}
 &lt;/ul&gt;</pre>
 
-<p>これで、すべてのコンポーネントを再表示できるようになりましたが、まだやるべきことがあります。現在、ブラウザーは各タスクの名前を構造化されていないテキストとして表示しています。私たちが HTML の構造を失っているからです。— <code>&lt;li&gt;</code> と checkboxes、buttons! のことです。</p>
+<p>これで、すべてのコンポーネントを再表示できるようになりましたが、まだやるべきことがあります。現在、ブラウザーは各タスクの名前を構造化されていないテキストとして表示しています。私たちが HTML の構造を見失っているからです。— <code>&lt;li&gt;</code> と checkboxes、buttons! のことです。</p>
 
 <p><img alt="Todo リストアプリで、Todo アイテムのラベルが1行にまとまって表示されています。" src="todo-list-unstructured-names.png" style="border-style: solid; border-width: 1px;"></p>
 
@@ -276,7 +276,7 @@ touch src/components/Todo.js</pre>
 
 <p><strong>イテレーションでレンダリングするものには、常に固有な key を渡す必要があります。</strong>ブラウザー上では何も明らかな変化はありませんが、もし固有な key を使用していない場合、React はコンソールに警告し、アプリは奇妙な動作をするかもしれません。</p>
 
-<h2 id="Componentizing_the_rest_of_the_app">アプリの残り部分をコンポネント化 </h2>
+<h2 id="Componentizing_the_rest_of_the_app">アプリの残り部分をコンポーネント化 </h2>
 
 <p>最も重要なコンポーネントを整理したので、アプリの残りの部分をコンポーネント化することができます。アプリの残りの部分をコンポーネント化します。ここでコンポーネントは次のいずれかであることを覚えておいてください。コンポーネントが UI の一部か、再利用された UI の一部、またはその両方であることを覚えておいて、さらに2つのコンポーネントを作ります。</p>
 
@@ -285,16 +285,16 @@ touch src/components/Todo.js</pre>
   <li><code>&lt;FilterButton/&gt;</code></li>
 </ul>
 
-<p>両方、必要ですのでファイルをターミナルコマンドで一括して行いましょう。ターミナルで次のコマンドを実行してください。アプリのルートディレクトリにいることに注意してください。</p>
+<p>両方、必要ですのでファイルをターミナルコマンドで一括して行いましょう。ターミナルで次のコマンドを実行してください。アプリのルートディレクトリーにいることに注意してください。</p>
 
 <pre class="brush: bash">touch src/components/Form.js src/components/FilterButton.js</pre>
 
 <h3 id="The_&lt;Form_&gt;">The <code>&lt;Form /&gt;</code></h3>
 
-<p><code>components/Form.js</code> 開いて、以下のようにしてください。</p>
+<p><code>components/Form.js</code> を開いて、以下のようにしてください。</p>
 
 <ul>
-  <li>Todo.js で行ったように、ファイルの先頭で React を Import します。</li>
+  <li>Todo.js で行ったように、ファイルの先頭で React を import します。</li>
   <li><code>Todo()</code> と同じ基本構造を持つ新しい <code>Form()</code> コンポーネントを作成し、そのコンポーネントを export します。</li>
   <li><code>App.js</code> の中から <code>&lt;form&gt;</code> タグとその間のものをコピーして、<code>Form()</code> の <code>return</code> 文の中に貼り付けます。</li>
   <li>最後に <code>Form</code> を export します。</li>
@@ -330,9 +330,9 @@ export default Form;</pre>
 
 <h3 id="The_&lt;FilterButton_&gt;">The &lt;FilterButton /&gt;</h3>
 
-<p><code>FilterButton.js</code> を <code>Form.js</code> のようにします。でもコンポーネントの <code>FilterButton()</code> を呼び出し、<div>要素内の最初のボタンの HTML をコピーして <code>App.js</code> の <code>filters</code> のクラスを <code>return</code> 文に入れます。</p>
+<p><code>FilterButton.js</code> を <code>Form.js</code> のようにします。でもコンポーネントの <code>FilterButton()</code> を呼び出し、<div>要素内の最初のボタンの HTML をコピーして <code>App.js</code> の <code>filters</code> の <code>class</code> を <code>return</code> 文に入れます。</p>
 
-<p>ファイルの内容は以下のようになります:</p>
+<p>ファイルの内容は以下のようになります。</p>
 
 <pre class="brush: js">import React from "react";
 
@@ -349,7 +349,7 @@ function FilterButton(props) {
 export default FilterButton;</pre>
 
 <div class="notecard note">
-  <p><strong>注</strong>: ここでは、最初に <code>&lt;Todo /&gt;</code> コンポーネントで行ったのと同じ間違いをしていることに気づくかもしれません。つまり、それぞれのボタンは同じものになるということです。これでいいのです。このコンポーネントの修正は、後ほどで行います <a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#Back_to_the_filter_buttons">(filter buttons を戻す)</a></p>
+  <p><strong>注</strong>: ここでは、最初に <code>&lt;Todo /&gt;</code> コンポーネントで行ったのと同じ間違いをしていることに気づくかもしれません。つまり、それぞれのボタンは同じものになるということです。これでいいのです。このコンポーネントの修正は、後ほどで行います。(<a href="/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons">Back to the filter buttons</a>)</p>
 </div>
 
 <h2 id="Importing_all_our_components">すべてのコンポーネントの Import</h2>
