@@ -12,18 +12,18 @@ translation_of: Web/API/PerformanceEntry/duration
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p class="summary">La propriété <strong><code>duration</code></strong> renvoie un {{domxref("DOMHighResTimeStamp", "timestamp")}} qui correspond à la durée de l'{{domxref("PerformanceEntry", "entrée de performance","",1)}}.</p>
+<p class="summary">La propriété <strong><code>duration</code></strong> renvoie un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> qui correspond à la durée de l'<a href="/fr/docs/Web/API/PerformanceEntry">entrée de performance</a>.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
-<p>La valeur retournée par cette propriété dépend du {{domxref("PerformanceEntry.entryType", "type")}} de l'entrée de performance :</p>
+<p>La valeur retournée par cette propriété dépend du <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type</a> de l'entrée de performance :</p>
 
 <ul>
-  <li>« <code>frame</code> » - retourne un {{domxref("DOMHighResTimeStamp", "timestamp")}} indiquant la différence entre le <code>startTime</code> de deux vues successives.</li>
-  <li>« <code>mark</code> » - retourne "<code>0</code>" (un marquage n'a pas de durée).</li>
-  <li>« <code>measure</code> » - retourne le {{domxref("DOMHighResTimeStamp", "timestamp")}} qui correspond à la durée de la mesure.</li>
-  <li>« <code>navigation</code> » - retourne le {{domxref("DOMHighResTimeStamp", "timestamp")}} qui est respectivement la différence entre les propriétés {{domxref("PerformanceNavigationTiming.loadEventEnd")}} et {{domxref("PerformanceEntry.startTime")}}.</li>
-  <li>« <code>resource</code> » - renvoie la différence entre {{domxref("PerformanceEntry.responseEnd", "responseEnd")}} {{domxref("DOMHighResTimeStamp", "timestamp")}} (le moment de la fin de la réponse) de la ressource et son {{domxref("PerformanceEntry.startTime", "startTime")}} {{domxref("DOMHighResTimeStamp", "timestamp")}} (le point de départ).</li>
+  <li>« <code>frame</code> » - retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> indiquant la différence entre le <code>startTime</code> de deux <i>frames</i> successives.</li>
+  <li>« <code>mark</code> » - retourne "<code>0</code>" (une marque n'a pas de durée).</li>
+  <li>« <code>measure</code> » - retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> qui correspond à la durée de la mesure.</li>
+  <li>« <code>navigation</code> » - retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> qui est respectivement la différence entre les propriétés <a href="/fr/docs/Web/API/PerformanceNavigationTiming/loadEventEnd"><code>PerformanceNavigationTiming.loadEventEnd</code></a> et <a href="/fr/docs/Web/API/PerformanceEntry/startTime"><code>PerformanceEntry.startTime</code></a>.</li>
+  <li>« <code>resource</code> » - renvoie la différence entre les deux <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamps</code></a> <a href="/fr/docs/Web/API/PerformanceResourceTiming/responseEnd"><code>responseEnd</code></a> (le moment de la fin de la réponse) de la ressource et <a href="/fr/docs/Web/API/PerformanceEntry/startTime"><code>startTime</code></a> (le point de départ).</li>
 </ul>
 
 <p>Cette propriété est en {{readonlyInline}}.</p>
@@ -34,10 +34,10 @@ translation_of: Web/API/PerformanceEntry/duration
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Un objet {{domxref("DOMHighResTimeStamp")}} représentant la durée de l'{{domxref("PerformanceEntry","entrée de performance","",1)}}. Si le concept de durée ne s'applique pas à une mesure de performance particulière, le navigateur peut choisir de renvoyer une durée de 0.</p>
+<p>Un objet <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant la durée de l'<a href="/fr/docs/Web/API/PerformanceEntry">entrée de performance</a>. Si le concept de durée ne s'applique pas à une mesure de performance particulière, le navigateur peut choisir de renvoyer une durée de 0.</p>
 
 <div class="notecard note">
-  <p><strong>Note :</strong> si l'entrée de performance a un {{domxref("PerformanceEntry.entryType", "entryType")}}  "<code>resource</code>" (c-à-d. l'entrée est un objet {{domxref("PerformanceResourceTiming")}}), cette propriété renvoie la différence entre les {{domxref("PerformanceEntry.responseEnd")}} et {{domxref("PerformanceEntry.startTime")}} {{domxref("DOMHighResTimeStamp", "timestamps")}}.</p>
+  <p><strong>Note :</strong> si l'entrée de performance a un <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>entryType</code></a>  "<code>resource</code>" (c'est-à-dire que l'entrée est un objet <a href="/fr/docs/Web/API/PerformanceResourceTiming"><code>PerformanceResourceTiming</code></a>), cette propriété renvoie la différence entre les <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamps</code></a> <a href="/fr/docs/Web/API/PerformanceResourceTiming/responseEnd"><code>PerformanceEntry.responseEnd</code></a> et <a href="/fr/docs/Web/API/PerformanceEntry/startTime"><code>PerformanceEntry.startTime</code></a>.</p>
 </div>
 
 <h2 id="Example">Exemple</h2>
