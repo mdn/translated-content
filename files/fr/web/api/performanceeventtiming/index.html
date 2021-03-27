@@ -11,7 +11,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceEventTiming
 ---
-<div>{{SeeCompatTable}}{{APIRef("Event Timing API")}}</div>
+<div>{{APIRef("Event Timing API")}}</div>
 
 <p class="summary">L'interface <code>PerformanceEventTiming</code> des événements de l'<code>Event Timing API</code> fournit des informations de chronométrage pour les types d'événements énumérés ci-dessous.</p>
 
@@ -59,35 +59,35 @@ translation_of: Web/API/PerformanceEventTiming
 <h2 id="Properties">Propriétés</h2>
 
 <dl>
-  <dt>{{domxref("PerformanceEventTiming.processingStart")}} {{ReadOnlyInline}} {{ExperimentalBadge}}</dt>
-  <dd>Retourne un {{domxref("DOMHighResTimeStamp")}} représentant l'heure à laquelle la diffusion des événements a commencé.</dd>
-  <dt>{{domxref("PerformanceEventTiming.processingEnd")}} {{ReadOnlyInline}} {{ExperimentalBadge}}</dt>
-  <dd>Retourne un {{domxref("DOMHighResTimeStamp")}} représentant l'heure à laquelle la diffusion de l'événement s'est terminée.</dd>
-  <dt>{{domxref("PerformanceEventTiming.cancelable")}} {{ReadOnlyInline}} {{ExperimentalBadge}}</dt>
-  <dd>Retourne un {{domxref("Boolean")}} représentant l'attribut annulable de l'événement associé.</dd>
-  <dt>{{domxref("PerformanceEventTiming.target")}} {{ReadOnlyInline}} {{NonStandardBadge}}</dt>
-  <dd>Retourne un {{domxref("Node")}} représentant la dernière cible de l'événement associé, si elle n'est pas supprimée.</dd>
+  <dt><a href="/fr/docs/Web/API/PerformanceEventTiming/processingStart"><code>PerformanceEventTiming.processingStart</code></a> <em>lecture seule</em> {{ExperimentalBadge}}</dt>
+  <dd>Retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant l'heure à laquelle la diffusion des événements a commencé.</dd>
+  <dt><a href="/fr/docs/Web/API/PerformanceEventTiming/processingEnd"><code>PerformanceEventTiming.processingEnd</code></a> <em>lecture seule</em> {{ExperimentalBadge}}</dt>
+  <dd>Retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant l'heure à laquelle la diffusion de l'événement s'est terminée.</dd>
+  <dt><a href="/fr/docs/Web/API/PerformanceEventTiming/cancelable"><code>PerformanceEventTiming.cancelable</code></a> <em>lecture seule</em> {{ExperimentalBadge}}</dt>
+  <dd>Retourne un <a href="/fr/docs/Web/API/Boolean"><code>Boolean</code></a> représentant l'attribut annulable de l'événement associé.</dd>
+  <dt><a href="/fr/docs/Web/API/PerformanceEventTiming/target"><code>PerformanceEventTiming.target</code></a> <em>lecture seule</em> {{NonStandardBadge}}</dt>
+  <dd>Retourne un <a href="/fr/docs/Web/API/Node"><code>Node</code></a> représentant la dernière cible de l'événement associé, si elle n'est pas supprimée.</dd>
 </dl>
 
 <h2 id="Methods">Méthodes</h2>
 
 <dl>
-  <dt>{{domxref("PerformanceEventTiming.toJSON()")}} {{ExperimentalBadge}}</dt>
-  <dd>Convertit l'objet {{domxref("PerformanceEventTiming")}} en JSON.</dd>
+  <dt><a href="/fr/docs/Web/API/PerformanceEventTiming/toJSON()"><code>PerformanceEventTiming.toJSON()</code></a> {{ExperimentalBadge}}</dt>
+  <dd>Convertit l'objet <a href="/fr/docs/Web/API/PerformanceEventTiming"><code>PerformanceEventTiming</code></a> en JSON.</dd>
 </dl>
 
 <h2 id="Examples">Exemples</h2>
 
 <p>L'exemple suivant montre comment utiliser l'API pour tous les événements :</p>
 
-<pre class="brush:js">const <var>observer</var> = new PerformanceObserver(function(list) {
-  const <var>perfEntries</var> = list.getEntries().forEach(entry =&gt; {
+<pre class="brush:js">const observer = new PerformanceObserver(function(list) {
+  const perfEntries = list.getEntries().forEach(entry =&gt; {
     // Durée totale
-    const <var>inputDuration</var> = entry.duration;
+    const inputDuration = entry.duration;
     // Retard d'entrée (avant l'événement de traitement)
-    const <var>inputDelay</var> = entry.processingStart - entry.startTime;
+    const inputDelay = entry.processingStart - entry.startTime;
     // Temps de traitement d'un événement synchrone (entre le début et la fin de la diffusion).
-    const <var>inputSyncProcessingTime</var> = entry.processingEnd - entry.processingStart;
+    const inputSyncProcessingTime = entry.processingEnd - entry.processingStart;
   });
 });
 // Enregistre un observateur pour l'événement.
@@ -100,15 +100,15 @@ observer.observe({entryTypes: ["event"]});
 // https://github.com/w3c/page-visibility/issues/29
 // NOTE : idéalement, cette vérification devrait être effectuée dans le &lt;head&gt; du document
 // pour éviter les cas où l'état de visibilité change avant l'exécution de ce code.
-let <var>firstHiddenTime</var> = document.visibilityState === 'hidden' ? 0 : Infinity;
+let firstHiddenTime = document.visibilityState === 'hidden' ? 0 : Infinity;
 document.addEventListener('visibilitychange', (event) =&gt; {
   firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
 }, {once: true});
 
 // Envoie les données transmises à un point de terminaison analytique. Ce code
 // utilise `/analytics` ; vous pouvez le remplacer par votre propre URL.
-function sendToAnalytics(<var>data</var>) {
-  const <var>body</var> = JSON.stringify(data);
+function sendToAnalytics(data) {
+  const body = JSON.stringify(data);
   // Utilise `navigator.sendBeacon()` si disponible, en revenant à `fetch()`.
   (navigator.sendBeacon &amp;&amp; navigator.sendBeacon('/analytics', body)) ||
       fetch('/analytics', {body, method: 'POST', keepalive: true});
@@ -118,12 +118,12 @@ function sendToAnalytics(<var>data</var>) {
 // car certains navigateurs lancent des requêtes lorsqu'ils utilisent la nouvelle option `type`.
 // https://bugs.webkit.org/show_bug.cgi?id=209216
 try {
-  function onFirstInputEntry(<var>entry</var>) {
+  function onFirstInputEntry(entry) {
     // Ne rapporte le FID que si la page n'était pas cachée avant que
     // l'entrée soit envoyée. Cela se produit généralement lorsqu'une
     // page est chargée dans un onglet en arrière-plan.
     if (entry.startTime &lt; firstHiddenTime) {
-      const <var>fid</var> = entry.processingStart - entry.startTime;
+      const fid = entry.processingStart - entry.startTime;
 
       // Rapporte la valeur du FID à un terminal d'analyse.
       sendToAnalytics({fid});
@@ -131,7 +131,7 @@ try {
   }
 
   // Crée un PerformanceObserver qui appelle `onFirstInputEntry` pour chaque entrée.
-  const <var>po</var> = new PerformanceObserver((entryList) =&gt; {
+  const po = new PerformanceObserver((entryList) =&gt; {
     entryList.getEntries().forEach(onFirstInputEntry);
   });
 
@@ -141,7 +141,7 @@ try {
     type: 'first-input',
     buffered: true,
   });
-} catch (<var>e</var>) {
+} catch (e) {
   // Ne fait rien si le navigateur ne prend pas en charge cette API.
 }
 </pre>
@@ -160,7 +160,7 @@ try {
     <tr>
       <td>{{SpecName('Event Timing API','#sec-performance-event-timing','PerformanceEventTiming')}}</td>
       <td>{{Spec2('Event Timing API')}}</td>
-      <td>Définition Initiale.</td>
+      <td>Définition initiale.</td>
     </tr>
   </tbody>
 </table>
