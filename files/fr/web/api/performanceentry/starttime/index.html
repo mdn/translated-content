@@ -13,33 +13,33 @@ translation_of: Web/API/PerformanceEntry/startTime
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p class="summary">La propriété <strong><code>startTime</code></strong> renvoie le premier {{domxref("DOMHighResTimeStamp", "timestamp")}} enregistré de l{{domxref("PerformanceEntry", "entrée de performance")}}.</p>
+<p class="summary">La propriété <strong><code>startTime</code></strong> renvoie le premier <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> enregistré pour l'<a href="/fr/docs/Web/API/PerformanceEntry">entrée de performance</a>.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
-<p>La valeur renvoyée par cette propriété dépend du {{domxref("PerformanceEntry.entryType", "type")}} de l'entrée de performance :</p>
+<p>La valeur renvoyée par cette propriété dépend du <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>type</code></a> de l'entrée de performance :</p>
 
 <ul>
   <li>« <code>frame</code> » - retourne le 
-    {{domxref("DOMHighResTimeStamp", "timestamp")}} quand l'affichage a été démarré.</li>
-  <li>« <code>mark</code> » - retourne le {{domxref("DOMHighResTimeStamp", "timestamp")}} lorsque le marquage a été créé par un appel de {{domxref("Performance.mark", "performance.mark()")}}.</li>
-  <li>« <code>measure</code> » - retourne le {{domxref("DOMHighResTimeStamp", "timestamp")}} lorsque la mesure a été créée par un appel de {{domxref("Performance.measure", "performance.measure()")}}.</li>
-  <li>« <code>navigation</code> » - retourne le {{domxref("DOMHighResTimeStamp", "timestamp")}} avec une valeur de "<code>0</code>".</li>
-  <li>« <code>resource</code> » - retourne le {{domxref("DOMHighResTimeStamp", "timestamp")}} immédiatement avant que le navigateur ne {{domxref("PerformanceEntry.fetchStart","commence à récupérer la ressource","",1)}}.</li>
+    <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> quand l'affichage a été démarré.</li>
+  <li>« <code>mark</code> » - retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> lorsque le marquage a été créé par un appel de <a href="/fr/docs/Web/API/Performance/mark"><code>performance.mark()</code></a>.</li>
+  <li>« <code>measure</code> » - retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> lorsque la mesure a été créée par un appel à <a href="/fr/docs/Web/API/Performance/measure"><code>performance.measure()</code></a>.</li>
+  <li>« <code>navigation</code> » - retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> avec une valeur de "<code>0</code>".</li>
+  <li>« <code>resource</code> » - retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> immédiatement avant que le navigateur ne <a href="/fr/docs/Web/API/PerformanceResourceTiming/fetchStart">commence à récupérer la ressource</a>.</li>
 </ul>
 
-<p>Cette propriété est en {{readonlyInline}}.</p>
+<p>Cette propriété est en lecture seule.</p>
 
 <h2 id="Syntax">Syntaxe</h2>
 
-<pre class="brush:js"><var>entry</var>.startTime;</pre>
+<pre class="brush:js">entry.startTime;</pre>
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Un objet {{domxref("DOMHighResTimeStamp")}} représentant le premier horodatage lorsque l'{{domxref("PerformanceEntry", "entrée de performance")}} a été créée.</p>
+<p>Un objet <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant le premier horodatage lorsque l'<a href="/fr/docs/Web/API/PerformanceEntry">entrée de performance</a> a été créée.</p>
 
 <div class="notecard note">
-  <p><strong>Note :</strong> Si l'entrée de performance a un {{domxref("PerformanceEntry.entryType", "entryType")}} "<code>resource</code>" (c-à-d. que l'entrée est un objet {{domxref("PerformanceResourceTiming")}}), cette propriété renvoie le {{domxref("PerformanceEntry.fetchStart")}} {{domxref("DOMHighResTimeStamp", "timestamp")}}.</p>
+  <p><strong>Note :</strong> Si l'entrée de performance a un <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>entryType</code></a> "<code>resource</code>" (c'est-à-dire que l'entrée est un objet <a href="/fr/docs/Web/API/PerformanceResourceTiming"><code>PerformanceResourceTiming</code></a>), cette propriété renvoie la valeur de l'horodatage fournie par <a href="/fr/docs/Web/API/PerformanceResourceTiming/fetchStart"><code>PerformanceResourceTiming.fetchStart</code></a>.</p>
 </div>
 
 <h2 id="Example">Exemple</h2>
@@ -60,29 +60,29 @@ translation_of: Web/API/PerformanceEntry/startTime
   performance.mark("End");
 
   // Utilise getEntries() pour itérer à travers chaque entrée
-  let <var>p</var> = performance.getEntries();
-  for (let <var>i</var>=0; i &lt; p.length; i++) {
+  let p = performance.getEntries();
+  for (let i = 0; i &lt; p.length; i++) {
     log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 }
-function check_PerformanceEntry(<var>obj</var>) {
-  let <var>properties</var> = ["name", "entryType", "startTime", "duration"];
-  let <var>methods</var> = ["toJSON"];
+function check_PerformanceEntry(obj) {
+  let properties = ["name", "entryType", "startTime", "duration"];
+  let methods = ["toJSON"];
 
-  for (let <var>i</var>=0; i &lt; properties.length; i++) {
-    // check each property
-    let <var>supported</var> = properties[i] in obj;
+  for (let i = 0; i &lt; properties.length; i++) {
+    // On vérifie chaque propriété
+    let supported = properties[i] in obj;
     if (supported)
       log("..." + properties[i] + " = " + obj[properties[i]]);
     else
       log("..." + properties[i] + " = N'est pas pris en charge");
   }
-  for (let <var>i</var>=0; i &lt; methods.length; i++) {
-    // check each method
-    let <var>supported</var> = typeof obj[methods[i]] == "function";
+  for (let i = 0; i &lt; methods.length; i++) {
+    // On vérifie chaque méthode
+    let supported = typeof obj[methods[i]] == "function";
     if (supported) {
-      let <var>js</var> = obj[methods[i]]();
+      let js = obj[methods[i]]();
       log("..." + methods[i] + "() = " + JSON.stringify(js));
     } else {
       log("..." + methods[i] + " = N'est pas pris en charge");
