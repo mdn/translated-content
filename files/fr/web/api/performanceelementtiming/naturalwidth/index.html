@@ -10,15 +10,15 @@ tags:
   - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/naturalWidth
 ---
-<div>{{SeeCompatTable}}{{Non-Standard_Header}}{{APIRef("Element Timing API")}}</div>
+<div>{{APIRef("Element Timing API")}}</div>
 
-<p class="summary">La propriété en lecture seule <strong><code>naturalWidth</code></strong> de l'interface {{domxref("PerformanceElementTiming")}} renvoie la largeur intrinsèque de l'élément image.</p>
+<p class="summary">La propriété en lecture seule <strong><code>naturalWidth</code></strong> de l'interface <a href="/fr/docs/Web/API/PerformanceElementTiming"><code>PerformanceElementTiming</code></a> renvoie la largeur intrinsèque de l'élément image.</p>
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush:js">var <var>width</var> = <var>PerformanceElementTiming</var>.naturalWidth;</pre>
 
 <h3>Valeur</h3>
-<p>Un entier de 32 bits non signé (unsigned long) qui est la largeur intrinsèque de l'image si cela est appliqué à une image, 0 pour le texte.</p>
+<p>Un entier de 32 bits non signé (<i>unsigned long</i>) qui est la largeur intrinsèque de l'image si cela est appliqué à une image, 0 pour le texte.</p>
 
 <h2 id="Examples">Exemples</h2>
 
@@ -35,12 +35,12 @@ translation_of: Web/API/PerformanceElementTiming/naturalWidth
 });
 observer.observe({ entryTypes: ["element"] });</pre>
 
-<p class="notecard note">Cet exemple utilise l'interface {{domxref("PerformanceObserver")}} pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément {{domxref("PerformanceEntry.entrytype")}} <code>element</code> afin d'utiliser l'interface <code>PerformanceElementTiming</code>.</p>
+<p class="notecard note">Cet exemple utilise l'interface <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a> pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a> afin d'utiliser l'interface <code>PerformanceElementTiming</code>.</p>
 
 <h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
-  <thead>    
+  <thead>
     <tr>
       <th scope="col">Spécification</th>
       <th scope="col">Statut</th>
