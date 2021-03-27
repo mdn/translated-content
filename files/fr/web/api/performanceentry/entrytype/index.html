@@ -13,7 +13,7 @@ translation_of: Web/API/PerformanceEntry/entryType
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p class="summary">La propriété <strong><code>entryType</code></strong> renvoie un {{domxref("DOMString")}} représentant le type de mesure de performance tel que, par exemple, « <code>mark</code> ». Cette propriété est en lecture seule.</p>
+<p class="summary">La propriété <strong><code>entryType</code></strong> renvoie un <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> représentant le type de mesure de performance tel que, par exemple, « <code>mark</code> ». Cette propriété est en lecture seule.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/PerformanceEntry/entryType
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>La valeur de retour dépend du sous-type de l'objet <code>PerformanceEntry</code> et affecte la valeur de la propriété {{domxref('PerformanceEntry.name')}} comme le montre le tableau ci-dessous.</p>
+<p>La valeur de retour dépend du sous-type de l'objet <code>PerformanceEntry</code> et affecte la valeur de la propriété <a href="/fr/docs/Web/API/PerformanceEntry/name"><code>PerformanceEntry.name</code></a> comme le montre le tableau ci-dessous.</p>
 
 <h3 id="Performance_entry_type_names">Noms des types d'entrée de performance</h3>
 
@@ -32,52 +32,52 @@ translation_of: Web/API/PerformanceEntry/entryType
     <tr>
       <th scope="col">Valeur</th>
       <th scope="col">Sous-type</th>
-      <th scope="col">Type de propriété de nom</th>
-      <th scope="col">Description de la propriété de nom.</th>
+      <th scope="col">Type de propriété pour le nom</th>
+      <th scope="col">Description de la valeur du nom.</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code>element</code></td>
-      <td>{{domxref('PerformanceElementTiming')}}</td>
-      <td>{{domxref("DOMString")}}</td>
+      <td><a href="/fr/docs/Web/API/PerformanceElementTiming"><code>PerformanceElementTiming</code></a></td>
+      <td><a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a></td>
       <td>Rapporte le temps de chargement des éléments.</td>
     </tr>
     <tr>
       <td><code>frame</code>, <code>navigation</code></td>
-      <td>{{domxref('PerformanceFrameTiming')}},
-        {{domxref('PerformanceNavigationTiming')}}</td>
-      <td>{{domxref("URL")}}</td>
+      <td><a href="/fr/docs/Web/API/PerformanceFrameTiming"><code>PerformanceFrameTiming</code></a>,
+        <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a></td>
+      <td><a href="/fr/docs/Web/API/URL"><code>URL</code></a></td>
       <td>L'adresse du document.</td>
     </tr>
     <tr>
       <td><code>resource</code></td>
-      <td>{{domxref('PerformanceResourceTiming')}}</td>
-      <td>{{domxref("URL")}}</td>
+      <td><a href="/fr/docs/Web/API/PerformanceResourceTiming"><code>PerformanceResourceTiming</code></a></td>
+      <td><a href="/fr/docs/Web/API/URL"><code>URL</code></a></td>
       <td>L'URL résolue de la ressource demandée. Cette valeur ne change pas même si la demande est redirigée.</td>
     </tr>
     <tr>
       <td><code>mark</code></td>
-      <td>{{domxref('PerformanceMark')}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>Le nom utilisé lorsque la marque a été créée en appelant {{domxref("Performance.mark", "mark()")}}.</td>
+      <td><a href="/fr/docs/Web/API/PerformanceMark"><code>PerformanceMark</code></a></td>
+      <td><a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a></td>
+      <td>Le nom utilisé lorsque la marque a été créée en appelant <a href="/fr/docs/Web/API/Performance/mark"><code>mark()</code></a>.</td>
     </tr>
     <tr>
       <td><code>measure</code></td>
-      <td>{{domxref('PerformanceMeasure')}}</td>
-      <td>{{domxref("DOMString")}}</td>
-      <td>Le nom utilisé lorsque la mesure a été créée en appelant {{domxref("Performance.measure", "measure()")}}.</td>
+      <td><a href="/fr/docs/Web/API/PerformanceMeasure"><code>PerformanceMeasure</code></a></td>
+      <td><a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a></td>
+      <td>Le nom utilisé lorsque la mesure a été créée en appelant <a href="/fr/docs/Web/API/Performance/measure"><code>measure()</code></a>.</td>
     </tr>
     <tr>
       <td><code>paint</code></td>
-      <td>{{domxref('PerformancePaintTiming')}}</td>
-      <td>{{domxref("DOMString")}}</td>
+      <td><a href="/fr/docs/Web/API/PerformancePaintTiming"><code>PerformancePaintTiming</code></a></td>
+      <td><a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a></td>
       <td>Soit <code>'first-paint'</code> ou <code>'first-contentful-paint'</code>.</td>
     </tr>
     <tr>
       <td><code>longtask</code></td>
-      <td>{{domxref('PerformanceLongTaskTiming')}}</td>
-      <td>{{domxref("DOMString")}}</td>
+      <td><a href="/fr/docs/Web/API/PerformanceLongTaskTiming"><code>PerformanceLongTaskTiming</code></a></td>
+      <td><a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a></td>
       <td>Signale les cas de tâches longues.</td>
     </tr>
   </tbody>
@@ -99,9 +99,9 @@ translation_of: Web/API/PerformanceEntry/entryType
   performance.mark("begin");
 
   // Vérifie le type d'entrée de toutes les entrées "begin".
-  let <var>entriesNamedBegin</var> = performance.getEntriesByName("begin");
-  for (let <var>i</var>=0; i &lt; entriesNamedBegin.length; i++) {
-    let <var>typeOfEntry</var> = entriesNamedBegin[i].entryType;
+  let entriesNamedBegin = performance.getEntriesByName("begin");
+  for (let i=0; i &lt; entriesNamedBegin.length; i++) {
+    let typeOfEntry = entriesNamedBegin[i].entryType;
     console.log("L'entrée est de type : " + typeOfEntry);
   }
 }
