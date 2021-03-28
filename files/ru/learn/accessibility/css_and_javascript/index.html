@@ -249,45 +249,45 @@ a:active {
 <p><strong>Примечание</strong>: В этом простом примере серверная валидация не реализована.</p>
 </div>
 
-<p>We've made this form validation pretty accessible too. We've used {{htmlelement("label")}} elements to make sure the form labels are unambiguously linked to their inputs, so screen readers can read them out alongside:</p>
+<p>Также мы постарались сделать эту валидацию формы довольно доступной. Мы использовали элементы {{htmlelement("label")}} и корректно связали их со своими полями ввода, таким образом скринридеры смогут корректно их озвучить:</p>
 
-<pre class="brush: html">&lt;label for="name"&gt;Enter your name:&lt;/label&gt;
+<pre class="brush: html">&lt;label for="name"&gt;Введите ваше имя:&lt;/label&gt;
 &lt;input type="text" name="name" id="name"&gt;</pre>
 
-<p>We only do the validation when the form is submitted — this is so that we don't update the UI too often and potentially confuse screen reader (and possibly other) users:</p>
+<p>Мы производим валидацию только при отправке формы, чтобы избежать слишком частого обновления пользовательского интерфейса и возможных проблем для пользователей скринридеров:</p>
 
 <pre class="brush: js">form.onsubmit = validate;
 
 function validate(e) {
   errorList.innerHTML = '';
-  for(let i = 0; i &lt; formItems.length; i++) {
+  for (let i = 0; i &lt; formItems.length; i++) {
     const testItem = formItems[i];
-    if(testItem.input.value === '') {
+    if (testItem.input.value === '') {
       errorField.style.left = '360px';
       createLink(testItem);
     }
   }
 
-  if(errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== '') {
     e.preventDefault();
   }
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: In this example, we are hiding and showing the error message box using absolute positioning rather than another method such as visibility or display, because it doesn't interfere with the screen reader being able to read content from it.</p>
+<p><strong>Примечание</strong>: В данном примере мы скрываем и показываем сообщение об ошибке с именно помощью абсолютного позиционирования, а не каким-то иным методом, потому что такой способ никак не мешает скринридерам читать контент.</p>
 </div>
 
-<p>Real form validation would be much more complex than this — you'd want to check that the entered name actually looks like a name, the entered age is actually a number and is realistic (e.g. nonnegative and less than 4 digits). Here we've just implemented a simple check that a value has been filled in to each input field (<code>if(testItem.input.value === '')</code>).</p>
+<p>В реальности валидация форма может быть в разы сложнее — может понадобиться проверять, что введенное имя действительно выглядит как имя, а возраст — число, да ещё и реалистичное (например, не отрицательное и состоящее не более чем из 4 цифр). Здесь мы реализовали лишь простою проверку на наличие хоть какого-то текста в полях ввода (<code>if (testItem.input.value === '')</code>).</p>
 
-<p>When the validation has been performed, if the tests pass then the form is submitted. If there are errors (<code>if(errorList.innerHTML !== '')</code>) then we stop the form submitting (using <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code>), and display any error messages that have been created (see below). This mechanism means that the errors will only be shown if there are errors, which is better for usability.</p>
+<p>Когда валидация проходит успешно — форма отправляется на сервер. Если же были найдены ошибки (<code>if (errorList.innerHTML !== '')</code>), то мы прерываем отправку формы (при помощи <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code>) и отображаем сообщения обо всех найденых ошибках (смотрите далее). Следовательно, сообщения об ошибках будут показаны только если ошибки есть.</p>
 
-<p>For each input that doesn't have a value filled in when the form is submitted, we create a list item with a link and insert it in the <code>errorList</code>.</p>
+<p>Для каждого пустого на момент отправки формы поля ввода мы создаем элемент списка с ссылкой и добавляем в <code>errorList</code>.</p>
 
 <pre class="brush: js">function createLink(testItem) {
   const listItem = document.createElement('li');
   const anchor = document.createElement('a');
 
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
+  anchor.textContent = 'Поле ввода ' + testItem.input.name + ' пусто: введите ' + testItem.input.name + '.';
   anchor.href = '#' + testItem.input.name;
   anchor.onclick = function() {
     testItem.input.focus();
@@ -296,29 +296,29 @@ function validate(e) {
   errorList.appendChild(listItem);
 }</pre>
 
-<p>Each link serves a dual purpose — it tells you what the error is, plus you can click on it/activate it to jump straight to the input element in question and correct your entry.</p>
+<p>Каждая ссылка служит двум целям — она рассказыает какая случилась ошибка, а также на неё можно кликнуть, чтобы перейти прямо в связанное поле ввода и скорректировать значение.</p>
 
 <div class="note">
-<p><strong>Note</strong>: The <code>focus()</code> part of this example is a bit tricky. Chrome and Edge (and newer versions of IE) will focus the element when the link is clicked, without needing the <code>onclick</code>/<code>focus()</code> block. Safari will only highlight the form element with the link on its own, so needs the <code>onclick</code>/<code>focus()</code> block to actually focus it. Firefox doesn't focus the inputs properly at all in this context, so Firefox users can't take advantage of this at present (although everything else works fine). The Firefox issue should be fixed soon — work is being done to give Firefox behavior parity with other browsers (see {{bug(277178)}}).</p>
+<p><strong>Примечание</strong>: Часть этого примера, связанная с <code>focus()</code>, довольно хитрая. Chrome и Edge (а также новые версии IE) переведут фокус на элемент, когда случится клик по ссылке, без необходимости в блоке кода <code>onclick</code>/<code>focus()</code>. Safari лишь выделит нужный элемент, так что этот блок кода нужен для установки фокуса. В Firefox же трюк с выделением элемента при клике по ссылке не работает вообще. Данная ошибка должна быть вскоре исправлена — тогда Firefox придет к паритету с прочими браузерами (смотрите {{bug(277178)}}).</p>
 </div>
 
-<p>In addition, the <code>errorField</code> is placed at the top of the source order (although it is positioned differently in the UI using CSS), meaning that users can find out exactly what's wrong with their form submissions and get to the input elements in question by going back up to the start of the page.</p>
+<p>Дополнительно, то что <code>errorField</code> расположено в самом начале исходного кода (тогда как в пользовательском интерфейсе при помощи CSS расположено иначе), позволит пользователям увидеть, что именно не так с заполнением формы и вернуться обратно к полям формы в начале страницы.</p>
 
-<p>As a final note, we have used some WAI-ARIA attributes in our demo to help solve accessibility problems caused by areas of content constantly updating without a page reload (screen readers won't pick this up or alert users to it by default):</p>
+<p>Кроме того, мы использовали несколько WAI-ARIA атрибутов в нашем примере, чтобы решить проблемы с доступностью, вызванные обновлением контента без перезагрузки страницы (по-умолчанию, скринридеры не могут подхватить эти изменения или уведомить пользователя):</p>
 
 <pre>&lt;div class="errors" role="alert" aria-relevant="all"&gt;
   &lt;ul&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
 
-<p>We will explain these attributes in our next article, which covers <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> in much more detail.</p>
+<p>Мы разберем эти атрибуты в следующей статье, которая подробно описывает <a href="/ru/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Some of you will probably be thinking about that fact that HTML5 forms have built-in validation mechanisms like the <code>required</code>, <code>min</code>/<code>minlength</code>, and <code>max</code>/<code>maxlength</code> attributes (see the {{htmlelement("input")}} element reference for more information). We didn't end up using these in the demo because cross-browser support for them is patchy (for example IE10 and above only).</p>
+<p><strong>Примечание</strong>: Кто-то из читателей мог задуматься о том факте, что в HTML5 формах есть встроенные механизмы валидации, такие как атрибуты <code>required</code>, <code>min</code>/<code>minlength</code> и <code>max</code>/<code>maxlength</code> (смотрите подробнее на странице элемента {{htmlelement("input")}}). Мы не использовали их в примере, потому что поддержка браузерами у HTML5 валидации варьируется (например, только IE10 и новее).</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: WebAIM's <a href="http://webaim.org/techniques/formvalidation/">Usable and Accessible Form Validation and Error Recovery</a> provides some further useful information about accessible form validation.</p>
+<p><strong>Примечание</strong>: Статья <a href="http://webaim.org/techniques/formvalidation/">Usable and Accessible Form Validation and Error Recovery</a> от WebAIM содержит дополнительную полезную информацию о доступной валидации форм.</p>
 </div>
 
 <h3 id="Other_JavaScript_accessibility_concerns">Other JavaScript accessibility concerns</h3>
