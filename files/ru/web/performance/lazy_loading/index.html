@@ -37,7 +37,7 @@ translation_of: Web/Performance/Lazy_loading
 
 <h3 id="CSS">    CSS</h3>
 
-<p>По умолчанию, CSS рассматривается как блокирующий рендер (<a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path">render blocking</a>) ресурс, так что браузер не отобразит контент, пока объектная модель CSS (<a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a>) не будет завершена. Поэтому начальный CSS файл должен небольшим, чтобы быть доставленным так быстро, как это возможно. Рекомендуется использовать media-queries для того, чтобы вместо одного монолитного css-файла грузить специализированные</p>
+<p>По умолчанию CSS считается ресурсом, блокирующим рендеринг (<a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path">render blocking</a>). Это означает, что браузер не будет отображать контент до тех пор, пока не будет построена объектная модель CSS (<a href="https://developer.mozilla.org/en-US/docs/Web/API/CSS_Object_Model">CSSOM</a>). Поэтому CSS-файл должен быть небольшим, чтобы он был доставлен так быстро, насколько это возможно. Рекомендуется использовать медиавыражения, для того чтобы вместо одного монолитного CSS-файла грузить специализированные.</p>
 
 <pre>&lt;link href="style.css"    rel="stylesheet" media="all"&gt;
 &lt;link href="portrait.css" rel="stylesheet" media="orientation:portrait"&gt;
