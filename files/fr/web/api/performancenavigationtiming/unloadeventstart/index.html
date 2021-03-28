@@ -12,7 +12,7 @@ translation_of: Web/API/PerformanceNavigationTiming/unloadEventStart
 ---
 <div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
 
-<p>La propriété en lecture seule <strong><code>unloadEventStart</code></strong> renvoie un {{domxref("DOMHighResTimeStamp", "timestamp")}} représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne commence l'événement de déchargement du document précédent. S'il n'y a pas de document précédent, cette propriété renvoie <code>0</code>.</p>
+<p>La propriété en lecture seule <strong><code>unloadEventStart</code></strong> renvoie un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne commence l'événement de déchargement du document précédent. S'il n'y a pas de document précédent, cette propriété renvoie <code>0</code>.</p>
 
 <h2 id="Syntax">Syntaxe</h2>
 
@@ -20,7 +20,7 @@ translation_of: Web/API/PerformanceNavigationTiming/unloadEventStart
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Un {{domxref("DOMHighResTimeStamp", "timestamp")}} représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne lance l'événement de déchargement du document précédent.</p>
+<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne lance l'événement de déchargement du document précédent.</p>
 
 <h2 id="Example">Exemple</h2>
 
@@ -28,11 +28,11 @@ translation_of: Web/API/PerformanceNavigationTiming/unloadEventStart
 
 <pre class="brush:js">function print_nav_timing_data() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
-  let <var>perfEntries</var> = performance.getEntriesByType("navigation");
+  let perfEntries = performance.getEntriesByType("navigation");
 
-  for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i &lt; perfEntries.length; i++) {
     console.log("= Entrée de navigation : entry[" + i + "]");
-    let <var>p</var> = perfEntries[i];
+    let p = perfEntries[i];
     // propriétés du DOM
     console.log("Contenu du DOM chargé = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
     console.log("Contenu du DOM complet = " + p.domComplete);
