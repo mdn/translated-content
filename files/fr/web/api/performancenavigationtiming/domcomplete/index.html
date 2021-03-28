@@ -12,15 +12,15 @@ translation_of: Web/API/PerformanceNavigationTiming/domComplete
 ---
 <div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
 
-<p class="summary">La propriété <strong><code>domComplete</code></strong> en lecture seule renvoie une {{domxref("DOMHighResTimeStamp", "timestamp")}} représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne définisse la disponibilité du document actuel à <code><a href="https://html.spec.whatwg.org/multipage/syntax.html#the-end">complete</a></code>.</p>
+<p class="summary">La propriété en lecture seule <strong><code>domComplete</code></strong> renvoie un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne définisse la disponibilité du document actuel à <code><a href="https://html.spec.whatwg.org/multipage/syntax.html#the-end">complete</a></code>.</p>
 
 <h2 id="Syntax">Syntaxe</h2>
 
-<pre class="brush:js"><var>perfEntry</var>.domComplete;</pre>
+<pre class="brush:js">perfEntry.domComplete;</pre>
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Un {{domxref("DOMHighResTimeStamp", "timestamp")}} représentant une valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne définisse la disponibilité du document actuel à <code><a href="https://html.spec.whatwg.org/multipage/syntax.html#the-end">complete</a></code>.</p>
+<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant une valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne définisse la disponibilité du document actuel à <code><a href="https://html.spec.whatwg.org/multipage/syntax.html#the-end">complete</a></code>.</p>
 
 <h2 id="Example">Exemple</h2>
 
@@ -28,11 +28,11 @@ translation_of: Web/API/PerformanceNavigationTiming/domComplete
 
 <pre class="brush:js">function print_nav_timing_data() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
-  let <var>perfEntries</var> = performance.getEntriesByType("navigation");
+  let perfEntries = performance.getEntriesByType("navigation");
 
-  for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i &lt; perfEntries.length; i++) {
     console.log("= Entrée de navigation : entry[" + i + "]");
-    let <var>p</var> = perfEntries[i];
+    let p = perfEntries[i];
     // propriétés du DOM
     console.log("Contenu du DOM chargé = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
     console.log("Contenu du DOM complet = " + p.domComplete);
