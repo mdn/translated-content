@@ -12,13 +12,13 @@ translation_of: Web/API/PerformanceNavigationTiming/type
 ---
 <div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
 
-<p>La propriété en lecture seule <strong><code>type</code></strong> renvoie un {{domxref("DOMString", "string")}} représentant le type de navigation. La valeur doit être l'une des suivantes :</p>
+<p>La propriété en lecture seule <strong><code>type</code></strong> renvoie une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> représentant le type de navigation. La valeur doit être l'une des suivantes :</p>
 
 <dl>
   <dt><code>navigate</code></dt>
   <dd>La navigation a commencé en cliquant sur un lien, en saisissant l'URL dans la barre d'adresse du navigateur, en soumettant un formulaire ou en s'initialisant par une opération de script autre que reload et back_forward, comme indiqué ci-dessous.</dd>
   <dt><code>reload</code></dt>
-  <dd>La navigation s'effectue par l'opération de rechargement du navigateur ou {{domxref("location.reload()")}}.</dd>
+  <dd>La navigation s'effectue par l'opération de rechargement du navigateur ou <a href="/fr/docs/Web/API/location/reload"><code>location.reload()</code></a>.</dd>
   <dt><code>back_forward</code></dt>
   <dd>La navigation se fait par l'opération de traversée de l'historique du navigateur.</dd>
   <dt><code>prerender</code></dt>
@@ -31,7 +31,7 @@ translation_of: Web/API/PerformanceNavigationTiming/type
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Une {{domxref("DOMString", "string")}} qui est l'une des valeurs énumérées ci-dessus.</p>
+<p>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui est l'une des valeurs énumérées ci-dessus.</p>
 
 <h2 id="Example">Exemple</h2>
 
@@ -39,11 +39,11 @@ translation_of: Web/API/PerformanceNavigationTiming/type
 
 <pre class="brush:js">function print_nav_timing_data() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
-  let <var>perfEntries</var> = performance.getEntriesByType("navigation");
+  let perfEntries = performance.getEntriesByType("navigation");
 
-  for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i &lt; perfEntries.length; i++) {
     console.log("= Entrée de navigation : entry[" + i + "]");
-    let <var>p</var> = perfEntries[i];
+    let p = perfEntries[i];
     // propriétés du DOM
     console.log("Contenu du DOM chargé = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
     console.log("Contenu du DOM complet = " + p.domComplete);
