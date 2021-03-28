@@ -12,7 +12,7 @@ translation_of: Web/API/PerformanceNavigationTiming/redirectCount
 ---
 <div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
 
-<p>La propriété en lecture seule <strong><code>redirectCount</code></strong> renvoie un {{domxref("DOMHighResTimeStamp", "timestamp")}} représentant le nombre de redirections depuis la dernière navigation sans redirection dans le contexte de navigation actuel.</p>
+<p>La propriété en lecture seule <strong><code>redirectCount</code></strong> renvoie un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant le nombre de redirections depuis la dernière navigation sans redirection dans le contexte de navigation actuel.</p>
 
 <h2 id="Syntax">Syntaxe</h2>
 
@@ -28,11 +28,11 @@ translation_of: Web/API/PerformanceNavigationTiming/redirectCount
 
 <pre class="brush:js">function print_nav_timing_data() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements de type "navigation".
-  let <var>perfEntries</var> = performance.getEntriesByType("navigation");
+  let perfEntries = performance.getEntriesByType("navigation");
 
-  for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i &lt; perfEntries.length; i++) {
     console.log("= Entrée de navigation : entry[" + i + "]");
-    let <var>p</var> = perfEntries[i];
+    let p = perfEntries[i];
     // propriétés du DOM
     console.log("Contenu du DOM chargé = " + (p.domContentLoadedEventEnd - p.domContentLoadedEventStart));
     console.log("Contenu du DOM complet = " + p.domComplete);
