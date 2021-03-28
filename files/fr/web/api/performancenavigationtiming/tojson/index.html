@@ -12,7 +12,7 @@ translation_of: Web/API/PerformanceNavigationTiming/toJSON
 ---
 <div>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</div>
 
-<p>La méthode <strong><code>toJSON()</code></strong> est un <em>sérialiseur</em> - elle renvoie une représentation JSON de l'objet {{domxref("PerformanceNavigationTiming")}}.</p>
+<p>La méthode <strong><code>toJSON()</code></strong> est un <em>sérialiseur</em> - elle renvoie une représentation JSON de l'objet <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a>.</p>
 
 <h2 id="Syntax">Syntaxe</h2>
 
@@ -26,18 +26,18 @@ translation_of: Web/API/PerformanceNavigationTiming/toJSON
 
 <dl>
   <dt><code>json</code></dt>
-  <dd>Un objet JSON qui est la sérialisation de l'objet {{domxref("PerformanceNavigationTiming")}} comme une carte avec des entrées de l'interface héritée la plus proche et avec des entrées pour chacun des attributs sérialisables.</dd>
+  <dd>Un objet JSON qui est la sérialisation de l'objet <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a> comme une carte avec des entrées de l'interface héritée la plus proche et avec des entrées pour chacun des attributs sérialisables.</dd>
 </dl>
 
 <h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">// Obtient une entrée de performance des ressources
-let <var>perfEntries</var> = performance.getEntriesByType("navigation");
-let <var>entry</var> = perfEntries[0];
+let perfEntries = performance.getEntriesByType("navigation");
+let entry = perfEntries[0];
 
 // Récupère le JSON et l'affiche dans les journaux
-let <var>json</var> = entry.toJSON();
-let <var>s</var> = JSON.stringify(json);
+let json = entry.toJSON();
+let s = JSON.stringify(json);
 console.log("PerformanceNavigationTiming.toJSON() = " + s);
 </pre>
 
