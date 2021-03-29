@@ -13,9 +13,9 @@ translation_of: Web/API/PerformanceResourceTiming/domainLookupEnd
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p class="summary">La propriété en lecture seule <strong><code>domainLookupEnd</code></strong> retourne le {{domxref("DOMHighResTimeStamp", "timestamp")}} immédiatement après que le navigateur ait terminé la recherche du nom de domaine pour la ressource.</p>
+<p class="summary">La propriété en lecture seule <strong><code>domainLookupEnd</code></strong> retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> immédiatement après que le navigateur ait terminé la recherche du nom de domaine pour la ressource.</p>
 
-<p>Si l'agent utilisateur dispose des informations de domaine dans le cache, {{domxref("PerformanceResourceTiming.domainLookupStart", "domainLookupStart")}} et {{domxref("PerformanceResourceTiming.domainLookupEnd", "domainLookupEnd")}} représentent les moments où l'agent utilisateur commence et termine la récupération des données de domaine dans le cache.</p>
+<p>Si l'agent utilisateur dispose des informations de domaine dans le cache, <a href="/fr/docs/Web/API/PerformanceResourceTiming/domainLookupStart"><code>domainLookupStart</code></a> et <a href="/fr/docs/Web/API/PerformanceResourceTiming/domainLookupEnd"><code>domainLookupEnd</code></a> représentent les moments où l'agent utilisateur commence et termine la récupération des données de domaine dans le cache.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -25,11 +25,11 @@ translation_of: Web/API/PerformanceResourceTiming/domainLookupEnd
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Un {{domxref("DOMHighResTimeStamp")}} représentant l'heure immédiatement après la fin de la recherche du nom de domaine de la ressource par le navigateur.</p>
+<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant l'heure immédiatement après la fin de la recherche du nom de domaine de la ressource par le navigateur.</p>
 
 <h2 id="Example">Exemple</h2>
 
-<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de {{domxref("PerformanceEntry.entryType","type","",1)}} <code>"resource"</code> sont enregistrés.</p>
+<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type</a> <code>"resource"</code> sont enregistrés.</p>
 
 <pre class="brush: js">function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"

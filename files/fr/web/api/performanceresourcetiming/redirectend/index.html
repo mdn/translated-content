@@ -13,7 +13,7 @@ translation_of: Web/API/PerformanceResourceTiming/redirectEnd
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p class="summary">La propriété en lecture seule <strong><code>redirectEnd</code></strong> retourne un {{domxref("DOMHighResTimeStamp", "timestamp")}} immédiatement après la réception du dernier octet de la réponse de la dernière redirection.</p>
+<p class="summary">La propriété en lecture seule <strong><code>redirectEnd</code></strong> retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> immédiatement après la réception du dernier octet de la réponse de la dernière redirection.</p>
 
 <p>Lors de l'extraction d'une ressource, s'il y a plusieurs redirections HTTP et que l'une d'entre elles a une origine différente du document actuel, et que l'algorithme de vérification d'autorisation de synchronisation réussit pour chaque ressource redirigée, cette propriété renvoie l'heure immédiatement après la réception du dernier octet de la réponse de la dernière redirection ; sinon, zéro est retourné.</p>
 
@@ -25,11 +25,11 @@ translation_of: Web/API/PerformanceResourceTiming/redirectEnd
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Un {{domxref("DOMHighResTimeStamp", "timestamp")}} immédiatement après la réception du dernier octet de la réponse de la dernière redirection.</p>
+<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> immédiatement après la réception du dernier octet de la réponse de la dernière redirection.</p>
 
 <h2 id="Example">Exemple</h2>
 
-<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de {{domxref("PerformanceEntry.entryType","type","",1)}} <code>"resource"</code> sont enregistrés.</p>
+<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type</a> <code>"resource"</code> sont enregistrés.</p>
 
 <pre class="brush: js">function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"

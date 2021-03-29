@@ -13,7 +13,7 @@ translation_of: Web/API/PerformanceResourceTiming/connectEnd
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p class="summary">La propriété en lecture seule <strong><code>connectEnd</code></strong> renvoie le {{domxref("DOMHighResTimeStamp", "timestamp")}} immédiatement après que le navigateur a fini d'établir la connexion au serveur pour récupérer la ressource. La valeur de l'horodatage comprend l'intervalle de temps pour établir la connexion de transport, ainsi que d'autres intervalles de temps tels que la poignée de main SSL et l'authentification SOCKS.</p>
+<p class="summary">La propriété en lecture seule <strong><code>connectEnd</code></strong> renvoie le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> immédiatement après que le navigateur a fini d'établir la connexion au serveur pour récupérer la ressource. La valeur de l'horodatage comprend l'intervalle de temps pour établir la connexion de transport, ainsi que d'autres intervalles de temps tels que la poignée de main SSL et l'authentification SOCKS.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -23,11 +23,11 @@ translation_of: Web/API/PerformanceResourceTiming/connectEnd
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Un {{domxref("DOMHighResTimeStamp")}} représentant le temps après l'établissement d'une connexion.</p>
+<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant le temps après l'établissement d'une connexion.</p>
 
 <h2 id="Example">Exemple</h2>
 
-<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de {{domxref("PerformanceEntry.entryType","type","",1)}} <code>"resource"</code> sont consignés.</p>
+<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type</a> <code>"resource"</code> sont consignés.</p>
 
 <pre class="brush: js">function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"

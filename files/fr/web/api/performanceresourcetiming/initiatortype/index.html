@@ -13,15 +13,15 @@ translation_of: Web/API/PerformanceResourceTiming/initiatorType
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p class="summary">La propriété <strong><code>initiatorType</code></strong> en lecture seule est une {{domxref("DOMString","chaîne de caractères","",1)}} qui représente le <em>type</em> de ressource qui a initié l'événement de performance.</p>
+<p class="summary">La propriété <strong><code>initiatorType</code></strong> en lecture seule est une <a href="/fr/docs/Web/API/DOMString">chaîne de caractères</a> qui représente le <em>type</em> de ressource qui a initié l'événement de performance.</p>
 
 <p>La valeur de cette chaîne est la suivante:</p>
 
 <ul>
-  <li>Si l'initiateur est un {{domxref("Element")}}, la propriété retourne le {{domxref("Node.localName", "localName")}} de l'élément.</li>
-  <li>Si l'initiateur est une ressource {{domxref("CSS")}}, la propriété renvoie « <code>css</code> ».</li>
-  <li>Si l'initiateur est un objet {{domxref("XMLHttpRequest")}}, la propriété renvoie « <code>xmlhttprequest</code> ».</li>
-  <li>Si l'initiateur est un objet {{domxref("PerformanceNavigationTiming")}}, la propriété renvoie une chaîne vide (<code>""</code>).</li>
+  <li>Si l'initiateur est un <a href="/fr/docs/Web/API/Element"><code>Element</code></a>, la propriété retourne le <a href="/fr/docs/Web/API/Node/localName"><code>localName</code></a> de l'élément.</li>
+  <li>Si l'initiateur est une ressource <a href="/fr/docs/Web/API/CSS"><code>CSS</code></a>, la propriété renvoie « <code>css</code> ».</li>
+  <li>Si l'initiateur est un objet <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a>, la propriété renvoie « <code>xmlhttprequest</code> ».</li>
+  <li>Si l'initiateur est un objet <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a>, la propriété renvoie une chaîne vide (<code>""</code>).</li>
 </ul>
 
 <p>{{AvailableInWorkers}}</p>
@@ -32,7 +32,7 @@ translation_of: Web/API/PerformanceResourceTiming/initiatorType
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Une chaîne de caractères {{domxref("DOMString", "string")}} représentant le <em>type</em> de ressource qui a initié l'événement de performance, comme spécifié ci-dessus.</p>
+<p>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>string</code></a> représentant le <em>type</em> de ressource qui a initié l'événement de performance, comme spécifié ci-dessus.</p>
 
 <h2 id="Example">Exemple</h2>
 

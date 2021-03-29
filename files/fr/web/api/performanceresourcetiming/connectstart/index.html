@@ -13,7 +13,7 @@ translation_of: Web/API/PerformanceResourceTiming/connectStart
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p class="summary">La propriété en lecture seule <strong><code>connectStart</code></strong> retourne le {{domxref("DOMHighResTimeStamp", "timestamp")}} immédiatement avant que l'agent utilisateur ne commence à établir la connexion au serveur pour récupérer la ressource.</p>
+<p class="summary">La propriété en lecture seule <strong><code>connectStart</code></strong> retourne le <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> immédiatement avant que l'agent utilisateur ne commence à établir la connexion au serveur pour récupérer la ressource.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -23,11 +23,11 @@ translation_of: Web/API/PerformanceResourceTiming/connectStart
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Un {{domxref("DOMHighResTimeStamp")}} immédiatement avant que le navigateur ne commence à établir la connexion avec le serveur pour récupérer la ressource.</p>
+<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement avant que le navigateur ne commence à établir la connexion avec le serveur pour récupérer la ressource.</p>
 
 <h2 id="Example">Exemple</h2>
 
-<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de {{domxref("PerformanceEntry.entryType","type","",1)}} <code>"resource"</code> sont consignés.</p>
+<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de <a href="/fr/docs/Web/API/PerformanceEntry/ntryType">type</a> <code>"resource"</code> sont consignés.</p>
 
 <pre class="brush: js">function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"

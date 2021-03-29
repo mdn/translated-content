@@ -13,7 +13,7 @@ translation_of: Web/API/PerformanceResourceTiming/requestStart
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p class="summary">La propriété en lecture seule <strong><code>requestStart</code></strong> renvoie un {{domxref("DOMHighResTimeStamp", "timestamp")}} de l'heure immédiatement avant que le navigateur ne commence à demander la ressource au serveur, au cache ou à la ressource locale. Si la connexion de transport échoue et que le navigateur retire la demande, la valeur renvoyée sera le début de la nouvelle demande.</p>
+<p class="summary">La propriété en lecture seule <strong><code>requestStart</code></strong> renvoie un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> de l'heure immédiatement avant que le navigateur ne commence à demander la ressource au serveur, au cache ou à la ressource locale. Si la connexion de transport échoue et que le navigateur retire la demande, la valeur renvoyée sera le début de la nouvelle demande.</p>
 
 <p>Il n'y a pas de propriété <em>end</em> pour <code>requestStart</code>.</p>
 
@@ -25,11 +25,11 @@ translation_of: Web/API/PerformanceResourceTiming/requestStart
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Un {{domxref("DOMHighResTimeStamp")}} représentant le moment immédiatement avant que le navigateur ne commence à demander la ressource au serveur.</p>
+<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant le moment immédiatement avant que le navigateur ne commence à demander la ressource au serveur.</p>
 
 <h2 id="Example">Example</h2>
 
-<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de {{domxref("PerformanceEntry.entryType","type","",1)}} <code>"resource"</code> sont enregistrés.</p>
+<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type</a> <code>"resource"</code> sont enregistrés.</p>
 
 <pre class="brush: js">function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"

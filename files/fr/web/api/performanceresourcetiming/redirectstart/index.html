@@ -13,7 +13,7 @@ translation_of: Web/API/PerformanceResourceTiming/redirectStart
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p class="summary">La propriété en lecture seule <strong><code>redirectStart</code></strong> retourne un {{domxref("DOMHighResTimeStamp", "timestamp")}} représentant l'heure de début du fetch qui initie la redirection.</p>
+<p class="summary">La propriété en lecture seule <strong><code>redirectStart</code></strong> retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant l'heure de début du fetch qui initie la redirection.</p>
 
 <p>S'il y a des redirections HTTP lors de l'extraction de la ressource et si l'une des redirections ne provient pas de la même origine que le document actuel, mais que l'algorithme de vérification de l'autorisation de synchronisation réussit pour chaque ressource redirigée, cette propriété renvoie l'heure de début de l'extraction qui initie la redirection ; sinon, zéro est renvoyé.</p>
 
@@ -25,11 +25,11 @@ translation_of: Web/API/PerformanceResourceTiming/redirectStart
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Un {{domxref("DOMHighResTimeStamp", "timestamp")}} représentant l'heure de début de l'extraction qui déclenche la redirection.</p>
+<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant l'heure de début de l'extraction qui déclenche la redirection.</p>
 
 <h2 id="Example">Exemple</h2>
 
-<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de {{domxref("PerformanceEntry.entryType","type","",1)}} <code>"resource"</code> sont enregistrés.</p>
+<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type</a> <code>"resource"</code> sont enregistrés.</p>
 
 <pre class="brush: js">function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"

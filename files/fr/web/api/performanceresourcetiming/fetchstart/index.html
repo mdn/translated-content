@@ -13,7 +13,7 @@ translation_of: Web/API/PerformanceResourceTiming/fetchStart
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p class="summary">La propriété en lecture seule <strong><code>fetchStart</code></strong> représente un {{domxref("DOMHighResTimeStamp", "timestamp")}} immédiatement avant que le navigateur ne commence à récupérer la ressource.</p>
+<p class="summary">La propriété en lecture seule <strong><code>fetchStart</code></strong> représente un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> immédiatement avant que le navigateur ne commence à récupérer la ressource.</p>
 
 <p>S'il y a des redirections HTTP, la propriété renvoie le temps immédiatement avant que l'agent utilisateur ne commence à récupérer la ressource finale dans la redirection.</p>
 
@@ -25,11 +25,11 @@ translation_of: Web/API/PerformanceResourceTiming/fetchStart
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Un {{domxref("DOMHighResTimeStamp")}} immédiatement avant que le navigateur ne commence à récupérer la ressource.</p>
+<p>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> immédiatement avant que le navigateur ne commence à récupérer la ressource.</p>
 
 <h2 id="Example">Exemple</h2>
 
-<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de {{domxref("PerformanceEntry.entryType","type","",1)}} <code>"resource"</code> sont enregistrés.</p>
+<p>Dans l'exemple suivant, la valeur des propriétés <code>*Start</code> et <code>*End</code> de tous les événements de <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type</a> <code>"resource"</code> sont enregistrés.</p>
 
 <pre class="brush: js">function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
