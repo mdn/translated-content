@@ -21,18 +21,18 @@ translation_of: Web/API/PerformanceServerTiming
 
 <dl>
   <dt>{{domxref('PerformanceServerTiming.description')}}{{readonlyInline}}</dt>
-  <dd>Une chaîne de caractères {{domxref("DOMString")}} de la description métrique spécifiée par le serveur, ou une chaîne vide.</dd>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> de la description métrique spécifiée par le serveur, ou une chaîne vide.</dd>
   <dt>{{domxref('PerformanceServerTiming.duration')}}{{readonlyInline}}</dt>
   <dd>Un <code>double</code> qui contient la durée de la métrique spécifiée par le serveur, ou la valeur <code>0.0</code>.</dd>
   <dt>{{domxref('PerformanceServerTiming.name')}}{{readonlyInline}}</dt>
-  <dd>Une chaîne de caractères {{domxref("DOMString")}} du nom de la métrique spécifiée par le serveur.</dd>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> du nom de la métrique spécifiée par le serveur.</dd>
 </dl>
 
 <h2 id="Methods">Methods</h2>
 
 <dl>
   <dt>{{domxref('PerformanceServerTiming.toJSON()')}}</dt>
-  <dd>Retourne une chaîne de caractères {{domxref("DOMString")}} qui est la représentation JSON de l'objet <code>PerformanceServerTiming</code>.</dd>
+  <dd>Retourne une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui est la représentation JSON de l'objet <code>PerformanceServerTiming</code>.</dd>
 </dl>
 
 <h2 id="Example">Exemple</h2>
@@ -58,7 +58,7 @@ function requestHandler(<var>request</var>, <var>response</var>) {
 
 http.createServer(requestHandler).listen(3000).on('error', console.error);</pre>
 
-<p>Les entrées <code>PerformanceServerTiming</code> sont désormais observables depuis JavaScript via la propriété {{domxref("PerformanceResourceTiming.serverTiming")}} :</p>
+<p>Les entrées <code>PerformanceServerTiming</code> sont désormais observables depuis JavaScript via la propriété <a href="/fr/docs/Web/API/PerformanceResourceTiming/serverTiming"><code>PerformanceResourceTiming.serverTiming</code></a> :</p>
 
 <pre class="brush: js">let <var>entries</var> = performance.getEntriesByType('resource');
 console.log(entries[0].serverTiming);
@@ -94,5 +94,5 @@ console.log(entries[0].serverTiming);
 
 <ul>
   <li>{{HTTPHeader("Server-Timing")}}</li>
-  <li>{{domxref("PerformanceResourceTiming.serverTiming")}}</li>
+  <li><a href="/fr/docs/Web/API/PerformanceResourceTiming/serverTiming"><code>PerformanceResourceTiming.serverTiming</code></a></li>
 </ul>
