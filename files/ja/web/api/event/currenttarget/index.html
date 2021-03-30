@@ -50,55 +50,7 @@ for(var i = 0; i &lt; ps.length; i++){
 
 <h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>機能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本サポート</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>機能</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本サポート</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Internet Explorer 6 から 8 では、イベントモデルが異なります。イベントリスナは非標準の <code>element.attachEvent</code> メソッドでアタッチされます。このモデルでは、<code>event.currentTarget</code> と同等の機能はなく、<code>this</code> はグローバルオブジェクトです。<code>event.currentTarget</code> 機能をエミュレートするための 1 つの解決策は、ハンドラを最初の引数として要素とともに <code>Function.prototype.call</code> を使用するハンドラを呼び出す関数でラップすることです。この方法であれば、 <code>this</code> は予想通りの値になります。</p>
+<p>{{Compat("api.Event.currentTarget")}}</p>
 
 <h2 id="関連項目">関連項目</h2>
 

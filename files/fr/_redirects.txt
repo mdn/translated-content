@@ -969,9 +969,9 @@
 /fr/docs/DOM/element.isSupported	/fr/docs/Web/API/Node/isSupported
 /fr/docs/DOM/element.lang	/fr/docs/Web/API/HTMLElement/lang
 /fr/docs/DOM/element.lastChild	/fr/docs/Web/API/Node/lastChild
-/fr/docs/DOM/element.localName	/fr/docs/Web/API/Node/localName
+/fr/docs/DOM/element.localName	/fr/docs/conflicting/Web/API/Element/localName
 /fr/docs/DOM/element.name	/fr/docs/conflicting/Web/API
-/fr/docs/DOM/element.namespaceURI	/fr/docs/Web/API/Node/namespaceURI
+/fr/docs/DOM/element.namespaceURI	/fr/docs/conflicting/Web/API/Element/namespaceURI
 /fr/docs/DOM/element.nextSibling	/fr/docs/Web/API/Node/nextSibling
 /fr/docs/DOM/element.nodeName	/fr/docs/Web/API/Node/nodeName
 /fr/docs/DOM/element.nodeType	/fr/docs/Web/API/Node/nodeType
@@ -999,7 +999,7 @@
 /fr/docs/DOM/element.onscroll	/fr/docs/Web/API/GlobalEventHandlers/onscroll
 /fr/docs/DOM/element.ownerDocument	/fr/docs/Web/API/Node/ownerDocument
 /fr/docs/DOM/element.parentNode	/fr/docs/Web/API/Node/parentNode
-/fr/docs/DOM/element.prefix	/fr/docs/Web/API/Node/prefix
+/fr/docs/DOM/element.prefix	/fr/docs/conflicting/Web/API/Element/prefix
 /fr/docs/DOM/element.previousSibling	/fr/docs/Web/API/Node/previousSibling
 /fr/docs/DOM/element.removeAttribute	/fr/docs/Web/API/Element/removeAttribute
 /fr/docs/DOM/element.removeAttributeNS	/fr/docs/Web/API/Element/removeAttributeNS
@@ -1128,9 +1128,9 @@
 /fr/docs/DOM:element.isSupported	/fr/docs/Web/API/Node/isSupported
 /fr/docs/DOM:element.lang	/fr/docs/Web/API/HTMLElement/lang
 /fr/docs/DOM:element.lastChild	/fr/docs/Web/API/Node/lastChild
-/fr/docs/DOM:element.localName	/fr/docs/Web/API/Node/localName
+/fr/docs/DOM:element.localName	/fr/docs/conflicting/Web/API/Element/localName
 /fr/docs/DOM:element.name	/fr/docs/conflicting/Web/API
-/fr/docs/DOM:element.namespaceURI	/fr/docs/Web/API/Node/namespaceURI
+/fr/docs/DOM:element.namespaceURI	/fr/docs/conflicting/Web/API/Element/namespaceURI
 /fr/docs/DOM:element.nextSibling	/fr/docs/Web/API/Node/nextSibling
 /fr/docs/DOM:element.nodeName	/fr/docs/Web/API/Node/nodeName
 /fr/docs/DOM:element.nodeType	/fr/docs/Web/API/Node/nodeType
@@ -1158,7 +1158,7 @@
 /fr/docs/DOM:element.onscroll	/fr/docs/Web/API/GlobalEventHandlers/onscroll
 /fr/docs/DOM:element.ownerDocument	/fr/docs/Web/API/Node/ownerDocument
 /fr/docs/DOM:element.parentNode	/fr/docs/Web/API/Node/parentNode
-/fr/docs/DOM:element.prefix	/fr/docs/Web/API/Node/prefix
+/fr/docs/DOM:element.prefix	/fr/docs/conflicting/Web/API/Element/prefix
 /fr/docs/DOM:element.previousSibling	/fr/docs/Web/API/Node/previousSibling
 /fr/docs/DOM:element.removeAttribute	/fr/docs/Web/API/Element/removeAttribute
 /fr/docs/DOM:element.removeAttributeNS	/fr/docs/Web/API/Element/removeAttributeNS
@@ -3703,9 +3703,9 @@
 /fr/docs/Web/API/Element.isSupported	/fr/docs/Web/API/Node/isSupported
 /fr/docs/Web/API/Element.lang	/fr/docs/Web/API/HTMLElement/lang
 /fr/docs/Web/API/Element.lastChild	/fr/docs/Web/API/Node/lastChild
-/fr/docs/Web/API/Element.localName	/fr/docs/Web/API/Node/localName
+/fr/docs/Web/API/Element.localName	/fr/docs/conflicting/Web/API/Element/localName
 /fr/docs/Web/API/Element.name	/fr/docs/conflicting/Web/API
-/fr/docs/Web/API/Element.namespaceURI	/fr/docs/Web/API/Node/namespaceURI
+/fr/docs/Web/API/Element.namespaceURI	/fr/docs/conflicting/Web/API/Element/namespaceURI
 /fr/docs/Web/API/Element.nodeName	/fr/docs/Web/API/Node/nodeName
 /fr/docs/Web/API/Element.nodeType	/fr/docs/Web/API/Node/nodeType
 /fr/docs/Web/API/Element.normalize	/fr/docs/Web/API/Node/normalize
@@ -3731,7 +3731,7 @@
 /fr/docs/Web/API/Element.onscroll	/fr/docs/Web/API/GlobalEventHandlers/onscroll
 /fr/docs/Web/API/Element.outerHTML	/fr/docs/Web/API/Element/outerHTML
 /fr/docs/Web/API/Element.parentNode	/fr/docs/Web/API/Node/parentNode
-/fr/docs/Web/API/Element.prefix	/fr/docs/Web/API/Node/prefix
+/fr/docs/Web/API/Element.prefix	/fr/docs/conflicting/Web/API/Element/prefix
 /fr/docs/Web/API/Element.querySelector	/fr/docs/Web/API/Element/querySelector
 /fr/docs/Web/API/Element.querySelectorAll	/fr/docs/Web/API/Element/querySelectorAll
 /fr/docs/Web/API/Element.removeAttribute	/fr/docs/Web/API/Element/removeAttribute
@@ -3791,8 +3791,12 @@
 /fr/docs/Web/API/Node.contains	/fr/docs/Web/API/Node/contains
 /fr/docs/Web/API/Node/baseURIObject	/fr/docs/conflicting/Web/API/Node
 /fr/docs/Web/API/Node/innerText	/fr/docs/Web/API/HTMLElement/innerText
+/fr/docs/Web/API/Node/localName	/fr/docs/conflicting/Web/API/Element/localName
+/fr/docs/Web/API/Node/namespaceURI	/fr/docs/conflicting/Web/API/Element/namespaceURI
 /fr/docs/Web/API/Node/nodePrincipal	/fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
+/fr/docs/Web/API/Node/prefix	/fr/docs/conflicting/Web/API/Element/prefix
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
+/fr/docs/Web/API/ParentNode/childElementCount	/fr/docs/Web/API/Element/childElementCount
 /fr/docs/Web/API/PasswordCredential/additionalData	/fr/docs/conflicting/Web/API/PasswordCredential
 /fr/docs/Web/API/PasswordCredential/idName	/fr/docs/conflicting/Web/API/PasswordCredential_cbf7b306e83a3f58ff06bccf89637c12
 /fr/docs/Web/API/PasswordCredential/passwordName	/fr/docs/conflicting/Web/API/PasswordCredential_bc57d5dfa87242b4fb83497887124f41

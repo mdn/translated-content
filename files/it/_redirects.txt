@@ -100,7 +100,7 @@
 /it/docs/DOM/document.importNode	/it/docs/Web/API/Document/importNode
 /it/docs/DOM/document.lastModified	/it/docs/Web/API/Document/lastModified
 /it/docs/DOM/document.links	/it/docs/Web/API/Document/links
-/it/docs/DOM/document.namespaceURI	/it/docs/Web/API/Node/namespaceURI
+/it/docs/DOM/document.namespaceURI	/it/docs/Web/API/Element/namespaceURI
 /it/docs/DOM/document.open	/it/docs/Web/API/Document/open
 /it/docs/DOM/document.referrer	/it/docs/Web/API/Document/referrer
 /it/docs/DOM/document.styleSheets	/it/docs/Web/API/Document/styleSheets
@@ -118,7 +118,7 @@
 /it/docs/DOM/element.nodeType	/it/docs/Web/API/Node/nodeType
 /it/docs/DOM/element.nodeValue	/it/docs/Web/API/Node/nodeValue
 /it/docs/DOM/element.parentNode	/it/docs/Web/API/Node/parentNode
-/it/docs/DOM/element.prefix	/it/docs/Web/API/Node/prefix
+/it/docs/DOM/element.prefix	/it/docs/Web/API/Element/prefix
 /it/docs/DOM/element.textContent	/it/docs/Web/API/Node/textContent
 /it/docs/DOM/event	/it/docs/Web/API/Event
 /it/docs/DOM/event.altKey	/it/docs/Web/API/MouseEvent/altKey
@@ -246,7 +246,7 @@
 /it/docs/DOM:document.importNode	/it/docs/Web/API/Document/importNode
 /it/docs/DOM:document.lastModified	/it/docs/Web/API/Document/lastModified
 /it/docs/DOM:document.links	/it/docs/Web/API/Document/links
-/it/docs/DOM:document.namespaceURI	/it/docs/Web/API/Node/namespaceURI
+/it/docs/DOM:document.namespaceURI	/it/docs/Web/API/Element/namespaceURI
 /it/docs/DOM:document.open	/it/docs/Web/API/Document/open
 /it/docs/DOM:document.referrer	/it/docs/Web/API/Document/referrer
 /it/docs/DOM:document.styleSheets	/it/docs/Web/API/Document/styleSheets
@@ -264,7 +264,7 @@
 /it/docs/DOM:element.nodeType	/it/docs/Web/API/Node/nodeType
 /it/docs/DOM:element.nodeValue	/it/docs/Web/API/Node/nodeValue
 /it/docs/DOM:element.parentNode	/it/docs/Web/API/Node/parentNode
-/it/docs/DOM:element.prefix	/it/docs/Web/API/Node/prefix
+/it/docs/DOM:element.prefix	/it/docs/Web/API/Element/prefix
 /it/docs/DOM:element.textContent	/it/docs/Web/API/Node/textContent
 /it/docs/DOM:event	/it/docs/Web/API/Event
 /it/docs/DOM:event.altKey	/it/docs/Web/API/MouseEvent/altKey
@@ -491,7 +491,7 @@
 /it/docs/Usare_le_URL_nella_proprietà_cursor	/it/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 /it/docs/Usare_valori_URL_per_la_proprietà_cursor	/it/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 /it/docs/Web/API/Document/firstChild	/it/docs/conflicting/Web/API/Node/firstChild
-/it/docs/Web/API/Document/namespaceURI	/it/docs/Web/API/Node/namespaceURI
+/it/docs/Web/API/Document/namespaceURI	/it/docs/Web/API/Element/namespaceURI
 /it/docs/Web/API/DocumentOrShadowRoot/styleSheets	/it/docs/Web/API/Document/styleSheets
 /it/docs/Web/API/Document_Object_Model/Introduzione	/it/docs/Web/API/Document_Object_Model/Introduction
 /it/docs/Web/API/Element.getElementsByTagName	/it/docs/Web/API/Element/getElementsByTagName
@@ -503,7 +503,6 @@
 /it/docs/Web/API/Element/nodeType	/it/docs/Web/API/Node/nodeType
 /it/docs/Web/API/Element/nodeValue	/it/docs/Web/API/Node/nodeValue
 /it/docs/Web/API/Element/parentNode	/it/docs/Web/API/Node/parentNode
-/it/docs/Web/API/Element/prefix	/it/docs/Web/API/Node/prefix
 /it/docs/Web/API/Element/textContent	/it/docs/Web/API/Node/textContent
 /it/docs/Web/API/Event/altKey	/it/docs/Web/API/MouseEvent/altKey
 /it/docs/Web/API/Event/button	/it/docs/Web/API/MouseEvent/button
@@ -522,6 +521,8 @@
 /it/docs/Web/API/Geolocation/Using_geolocation	/it/docs/Web/API/Geolocation_API
 /it/docs/Web/API/HTMLHyperlinkElementUtils	/it/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /it/docs/Web/API/Navigator.cookieEnabled	/it/docs/Web/API/Navigator/cookieEnabled
+/it/docs/Web/API/Node/namespaceURI	/it/docs/Web/API/Element/namespaceURI
+/it/docs/Web/API/Node/prefix	/it/docs/Web/API/Element/prefix
 /it/docs/Web/API/Position	/it/docs/Web/API/GeolocationPosition
 /it/docs/Web/API/URLUtils	/it/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /it/docs/Web/API/WindowTimers	/it/docs/conflicting/Web/API/WindowOrWorkerGlobalScope

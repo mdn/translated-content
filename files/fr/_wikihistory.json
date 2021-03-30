@@ -11342,16 +11342,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/Node/localName": {
-    "modified": "2020-10-15T21:17:55.986Z",
-    "contributors": [
-      "loella16",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "BenoitL"
-    ]
-  },
   "Web/API/Node/lookupNamespaceURI": {
     "modified": "2019-03-18T21:39:45.898Z",
     "contributors": [
@@ -11362,16 +11352,6 @@
     "modified": "2019-03-18T21:40:12.652Z",
     "contributors": [
       "loella16"
-    ]
-  },
-  "Web/API/Node/namespaceURI": {
-    "modified": "2020-10-15T21:17:54.747Z",
-    "contributors": [
-      "loella16",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "BenoitL"
     ]
   },
   "Web/API/Node/nextSibling": {
@@ -11468,16 +11448,6 @@
       "jsx",
       "Mgjbot",
       "Takenbot",
-      "BenoitL"
-    ]
-  },
-  "Web/API/Node/prefix": {
-    "modified": "2020-10-15T21:17:23.469Z",
-    "contributors": [
-      "loella16",
-      "fscholz",
-      "teoli",
-      "soumya",
       "BenoitL"
     ]
   },
@@ -11728,15 +11698,6 @@
       "Yukulele.",
       "Watilin",
       "ayshiff"
-    ]
-  },
-  "Web/API/ParentNode/childElementCount": {
-    "modified": "2020-10-15T21:37:50.913Z",
-    "contributors": [
-      "abvll",
-      "loella16",
-      "xavierartot",
-      "vava"
     ]
   },
   "Web/API/ParentNode/children": {
@@ -45341,6 +45302,45 @@
     "contributors": [
       "SphinxKnight",
       "RolandGautier"
+    ]
+  },
+  "conflicting/Web/API/Element/localName": {
+    "modified": "2020-10-15T21:17:55.986Z",
+    "contributors": [
+      "loella16",
+      "fscholz",
+      "teoli",
+      "khalid32",
+      "BenoitL"
+    ]
+  },
+  "conflicting/Web/API/Element/namespaceURI": {
+    "modified": "2020-10-15T21:17:54.747Z",
+    "contributors": [
+      "loella16",
+      "fscholz",
+      "teoli",
+      "khalid32",
+      "BenoitL"
+    ]
+  },
+  "conflicting/Web/API/Element/prefix": {
+    "modified": "2020-10-15T21:17:23.469Z",
+    "contributors": [
+      "loella16",
+      "fscholz",
+      "teoli",
+      "soumya",
+      "BenoitL"
+    ]
+  },
+  "Web/API/Element/childElementCount": {
+    "modified": "2020-10-15T21:37:50.913Z",
+    "contributors": [
+      "abvll",
+      "loella16",
+      "xavierartot",
+      "vava"
     ]
   }
 }

@@ -8,7 +8,7 @@ translation_of: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 </div>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете найти рабочие примеры всех фрагментов кода в нашей демонстрации <a href="https://mdn.github.io/voice-change-o-matic/">автоизменения голоса</a>.</p>
+<p><strong>Примечание</strong>: вы можете найти рабочие примеры всех фрагментов кода в нашей демонстрации <a href="https://mdn.github.io/voice-change-o-matic/">автоизменения голоса</a>.</p>
 </div>
 
 <h2 id="Основные_концепции">Основные концепции</h2>
@@ -33,12 +33,12 @@ distortion.connect(audioCtx.destination);</pre>
 <p>Затем анализатор захватит аудиоданные, используя быстрое преобразование Фурье (БПФ) в определённой частотной области, в зависимости от того, что вы укажете как значение свойства {{ domxref("AnalyserNode.fftSize") }} (если свойство не задано, то значение по умолчанию равно 2048).</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы так же можете указать значения минимума и максимума для диапазона масштабирования данных БПФ, используя {{ domxref("AnalyserNode.minDecibels") }} и {{ domxref("AnalyserNode.maxDecibels") }}, и разные константы усреднения данных с помощью {{ domxref("AnalyserNode.smoothingTimeConstant") }}. Прочтите эти страницы, чтобы получить больше информации о том как их использовать.</p>
+<p><strong>Примечание</strong>: вы так же можете указать значения минимума и максимума для диапазона масштабирования данных БПФ, используя {{ domxref("AnalyserNode.minDecibels") }} и {{ domxref("AnalyserNode.maxDecibels") }}, и разные константы усреднения данных с помощью {{ domxref("AnalyserNode.smoothingTimeConstant") }}. Прочтите эти страницы, чтобы получить больше информации о том как их использовать.</p>
 </div>
 
-<p>Чтобы получить данные, Вам нужно использовать методы {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getByteFrequencyData()") }}, чтобы получить данные о частоте, и {{ domxref("AnalyserNode.getByteTimeDomainData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} чтобы получить данные о форме волны.</p>
+<p>Чтобы получить данные, вам нужно использовать методы {{ domxref("AnalyserNode.getFloatFrequencyData()") }} и {{ domxref("AnalyserNode.getByteFrequencyData()") }}, чтобы получить данные о частоте, и {{ domxref("AnalyserNode.getByteTimeDomainData()") }} и {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} чтобы получить данные о форме волны.</p>
 
-<p>Эти методы копируют данные в указанный массив, поэтому Вам необходимо создать новый массив для хранения данных, прежде чем вызывать эти функции . Результат первой из них - числа типа float32, второй и третьей - uint8, поэтому стандартный массив JavaScript не подойдёт для их хранения — следует использовать массивы {{ domxref("Float32Array") }} или {{ domxref("Uint8Array") }}, в зависимости от нужных Вам данных.</p>
+<p>Эти методы копируют данные в указанный массив, поэтому вам необходимо создать новый массив для хранения данных, прежде чем вызывать эти функции . Результат первой из них - числа типа float32, второй и третьей - uint8, поэтому стандартный массив JavaScript не подойдёт для их хранения — следует использовать массивы {{ domxref("Float32Array") }} или {{ domxref("Uint8Array") }}, в зависимости от нужных вам данных.</p>
 
 <p>Например, если параметр AnalyserNode.fftSize установлен на 2048, мы возвращаем значение {{ domxref("AnalyserNode.frequencyBinCount") }}, равное половине fft, затем вызываем Uint8Array() с frequencyBinCount в качестве длины — столько измерений мы произведём для данного размера fft.</p>
 

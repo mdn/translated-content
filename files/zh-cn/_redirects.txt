@@ -311,7 +311,7 @@
 /zh-CN/docs/DOM/Node.isSameNode	/zh-CN/docs/Web/API/Node/isSameNode
 /zh-CN/docs/DOM/Node.isSupported	/zh-CN/docs/Web/API/Node/isSupported
 /zh-CN/docs/DOM/Node.lastChild	/zh-CN/docs/Web/API/Node/lastChild
-/zh-CN/docs/DOM/Node.localName	/zh-CN/docs/Web/API/Node/localName
+/zh-CN/docs/DOM/Node.localName	/zh-CN/docs/conflicting/Web/API/Element/localName
 /zh-CN/docs/DOM/Node.lookupNamespaceURI	/zh-CN/docs/Web/API/Node/lookupNamespaceURI
 /zh-CN/docs/DOM/Node.lookupPrefix	/zh-CN/docs/Web/API/Node/lookupPrefix
 /zh-CN/docs/DOM/Node.nodeName	/zh-CN/docs/Web/API/Node/nodeName
@@ -321,7 +321,7 @@
 /zh-CN/docs/DOM/Node.ownerDocument	/zh-CN/docs/Web/API/Node/ownerDocument
 /zh-CN/docs/DOM/Node.parentElement	/zh-CN/docs/Web/API/Node/parentElement
 /zh-CN/docs/DOM/Node.parentNode	/zh-CN/docs/Web/API/Node/parentNode
-/zh-CN/docs/DOM/Node.prefix	/zh-CN/docs/Web/API/Node/prefix
+/zh-CN/docs/DOM/Node.prefix	/zh-CN/docs/conflicting/Web/API/Element/prefix
 /zh-CN/docs/DOM/Node.previousSibling	/zh-CN/docs/Web/API/Node/previousSibling
 /zh-CN/docs/DOM/Node.removeChild	/zh-CN/docs/Web/API/Node/removeChild
 /zh-CN/docs/DOM/Node.replaceChild	/zh-CN/docs/Web/API/Node/replaceChild
@@ -418,7 +418,7 @@
 /zh-CN/docs/DOM/element.addEventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
 /zh-CN/docs/DOM/element.attributes	/zh-CN/docs/Web/API/Element/attributes
 /zh-CN/docs/DOM/element.blur	/zh-CN/docs/Web/API/HTMLOrForeignElement/blur
-/zh-CN/docs/DOM/element.childElementCount	/zh-CN/docs/Web/API/ParentNode/childElementCount
+/zh-CN/docs/DOM/element.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/DOM/element.childNodes	/zh-CN/docs/Web/API/Node/childNodes
 /zh-CN/docs/DOM/element.classList	/zh-CN/docs/Web/API/Element/classList
 /zh-CN/docs/DOM/element.className	/zh-CN/docs/Web/API/Element/className
@@ -1683,10 +1683,10 @@
 /zh-CN/docs/Web/API/Node.isSameNode	/zh-CN/docs/Web/API/Node/isSameNode
 /zh-CN/docs/Web/API/Node.isSupported	/zh-CN/docs/Web/API/Node/isSupported
 /zh-CN/docs/Web/API/Node.lastChild	/zh-CN/docs/Web/API/Node/lastChild
-/zh-CN/docs/Web/API/Node.localName	/zh-CN/docs/Web/API/Node/localName
+/zh-CN/docs/Web/API/Node.localName	/zh-CN/docs/conflicting/Web/API/Element/localName
 /zh-CN/docs/Web/API/Node.lookupNamespaceURI	/zh-CN/docs/Web/API/Node/lookupNamespaceURI
 /zh-CN/docs/Web/API/Node.lookupPrefix	/zh-CN/docs/Web/API/Node/lookupPrefix
-/zh-CN/docs/Web/API/Node.namespaceURI	/zh-CN/docs/Web/API/Node/namespaceURI
+/zh-CN/docs/Web/API/Node.namespaceURI	/zh-CN/docs/conflicting/Web/API/Element/namespaceURI
 /zh-CN/docs/Web/API/Node.nextSibling	/zh-CN/docs/Web/API/Node/nextSibling
 /zh-CN/docs/Web/API/Node.nodeName	/zh-CN/docs/Web/API/Node/nodeName
 /zh-CN/docs/Web/API/Node.nodePrincipal	/zh-CN/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
@@ -1696,7 +1696,7 @@
 /zh-CN/docs/Web/API/Node.ownerDocument	/zh-CN/docs/Web/API/Node/ownerDocument
 /zh-CN/docs/Web/API/Node.parentElement	/zh-CN/docs/Web/API/Node/parentElement
 /zh-CN/docs/Web/API/Node.parentNode	/zh-CN/docs/Web/API/Node/parentNode
-/zh-CN/docs/Web/API/Node.prefix	/zh-CN/docs/Web/API/Node/prefix
+/zh-CN/docs/Web/API/Node.prefix	/zh-CN/docs/conflicting/Web/API/Element/prefix
 /zh-CN/docs/Web/API/Node.previousSibling	/zh-CN/docs/Web/API/Node/previousSibling
 /zh-CN/docs/Web/API/Node.removeChild	/zh-CN/docs/Web/API/Node/removeChild
 /zh-CN/docs/Web/API/Node.replaceChild	/zh-CN/docs/Web/API/Node/replaceChild
@@ -1707,8 +1707,11 @@
 /zh-CN/docs/Web/API/Node/childNodes_temp	/zh-CN/docs/Web/API/Node/childNodes
 /zh-CN/docs/Web/API/Node/hasAttributes	/zh-CN/docs/Web/API/Element/hasAttributes
 /zh-CN/docs/Web/API/Node/innerText	/zh-CN/docs/Web/API/HTMLElement/innerText
+/zh-CN/docs/Web/API/Node/localName	/zh-CN/docs/conflicting/Web/API/Element/localName
+/zh-CN/docs/Web/API/Node/namespaceURI	/zh-CN/docs/conflicting/Web/API/Element/namespaceURI
 /zh-CN/docs/Web/API/Node/nodePrincipal	/zh-CN/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
 /zh-CN/docs/Web/API/Node/outerText	/zh-CN/docs/conflicting/Web/API/HTMLElement/outerText
+/zh-CN/docs/Web/API/Node/prefix	/zh-CN/docs/conflicting/Web/API/Element/prefix
 /zh-CN/docs/Web/API/Node/rootNode	/zh-CN/docs/conflicting/Web/API/Node/getRootNode
 /zh-CN/docs/Web/API/NodeList.item	/zh-CN/docs/Web/API/NodeList/item
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode	/zh-CN/docs/conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e
@@ -1717,10 +1720,11 @@
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
 /zh-CN/docs/Web/API/OfflineAudioContext/complete	/zh-CN/docs/Web/API/OfflineAudioContext/complete_event
-/zh-CN/docs/Web/API/ParentNode.childElementCount	/zh-CN/docs/Web/API/ParentNode/childElementCount
+/zh-CN/docs/Web/API/ParentNode.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/ParentNode.children	/zh-CN/docs/Web/API/ParentNode/children
 /zh-CN/docs/Web/API/ParentNode.firstElementChild	/zh-CN/docs/Web/API/ParentNode/firstElementChild
 /zh-CN/docs/Web/API/ParentNode.lastElementChild	/zh-CN/docs/Web/API/ParentNode/lastElementChild
+/zh-CN/docs/Web/API/ParentNode/childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/Performance.now()	/zh-CN/docs/Web/API/Performance/now
 /zh-CN/docs/Web/API/Performance/内存	/zh-CN/docs/Web/API/Performance/memory
 /zh-CN/docs/Web/API/Position	/zh-CN/docs/Web/API/GeolocationPosition

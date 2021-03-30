@@ -291,7 +291,7 @@ displayContent()
 <p>Для обработки ошибок мы добавили блок <code>.catch()</code> для функции <code>displayContent()</code>; Это позволило нам отловить ошибки в обоих функциях.</p>
 
 <div class="blockIndicator note">
-<p><strong>Заметка</strong>: Мы также можем использовать синхронный блок <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause">finally</a></code> внутри асинхронной функции, вместо асинхронного <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause">.finally</a>()</code>, чтобы получить информацию о результате нашей операции — смотрите в действии в нашем <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html">live example</a> (смотрите <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html">source code</a>).</p>
+<p><strong>Примечание</strong>: Мы также можем использовать синхронный блок <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause">finally</a></code> внутри асинхронной функции, вместо асинхронного <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause">.finally</a>()</code>, чтобы получить информацию о результате нашей операции — смотрите в действии в нашем <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html">live example</a> (смотрите <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html">source code</a>).</p>
 </div>
 
 <h2 id="Недостатки_asyncawait">Недостатки async/await</h2>
@@ -300,7 +300,7 @@ displayContent()
 
 <p>Async/await позволяет вам писать код в синхронном стиле. Ключевое слово <code>await</code> блокирует приостанавливает выполнение ptomise-based функции до того момента, пока promise примет статус fulfilled. Это не блокирует код за пределами вашей асинхронной функции, тем не менее важно помнить, что внутри асинхронной функции поток выполнения блокируется.<br>
  <br>
- Ваш код может стать медленнее за счёт большого количества awaited promises, которые идут один за другим. Каждый <code>await</code> должен дождаться выполнения предыдущего, тогда как на самом деле мы хотим, чтобы наши Promises выполнялись одновременно, как если бы мы не использовали async/await.<br>
+ ваш код может стать медленнее за счёт большого количества awaited promises, которые идут один за другим. Каждый <code>await</code> должен дождаться выполнения предыдущего, тогда как на самом деле мы хотим, чтобы наши Promises выполнялись одновременно, как если бы мы не использовали async/await.<br>
  <br>
  Есть подход, который позволяет обойти эту проблему - сохранить все выполняющиеся Promises в переменные, а уже после этого дожидаться (awaiting) их результата. Давайте посмотрим на несколько примеров.</p>
 

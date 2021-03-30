@@ -20,7 +20,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 <p>Давайте запустим несколько примеров, которые объяснят как использовать WebAssembly JavaScript API, и как использовать его для загрузки wasm-модуля в web-странице.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете найти примеры кода в нашем репозитории <a href="https://github.com/mdn/webassembly-examples">webassembly-examples</a> на GitHub.</p>
+<p><strong>Примечание</strong>: вы можете найти примеры кода в нашем репозитории <a href="https://github.com/mdn/webassembly-examples">webassembly-examples</a> на GitHub.</p>
 </div>
 
 <h3 id="Подготовка_примера">Подготовка примера</h3>
@@ -139,7 +139,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
   <p>Скопируйте файл <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm">memory.wasm</a> в локальную директорию в которой вы работаете.</p>
 
   <div class="note">
-  <p><strong>Примечание</strong>: Вы можете увидеть текстовое представление модуля в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat">memory.wat</a>.</p>
+  <p><strong>Примечание</strong>: вы можете увидеть текстовое представление модуля в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat">memory.wat</a>.</p>
   </div>
  </li>
  <li>
@@ -174,7 +174,7 @@ console.log(sum);</pre>
 </ul>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете найти полную демонстрацию в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">см. её также вживую</a>) — эта версия использует функцию <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>.</p>
+<p><strong>Примечание</strong>: вы можете найти полную демонстрацию в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html">memory.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/memory.html">см. её также вживую</a>) — эта версия использует функцию <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>.</p>
 </div>
 
 <h2 id="Таблицы">Таблицы</h2>
@@ -198,7 +198,7 @@ console.log(sum);</pre>
   <p>Сделайте локальную копию файла <a href="https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm">table.wasm</a> в новой директории.</p>
 
   <div class="note">
-  <p><strong>Примечание</strong>: Вы можете посмотреть текстовое представление модуля в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat">table.wat</a>.</p>
+  <p><strong>Примечание</strong>: вы можете посмотреть текстовое представление модуля в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat">table.wat</a>.</p>
   </div>
  </li>
  <li>
@@ -224,7 +224,7 @@ console.log(tbl.get(1)());  // 42</pre>
 <p>Этот код получает доступ к каждой ссылке на функцию, которая размещена в таблице, после чего вызывает её и выводит хранимое значение в консоль. Обратите внимание, что каждая ссылка на функцию получена с помощью вызова метода <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a></code>, после чего мы добавили пару круглых скобок для вызова самой функции.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете найти нашу полную демонстрацию в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html">table.html</a> (см. её также <a href="https://mdn.github.io/webassembly-examples/js-api-examples/table.html">вживую</a>) — эта версия использует функцию <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>.</p>
+<p><strong>Примечание</strong>: вы можете найти нашу полную демонстрацию в файле <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html">table.html</a> (см. её также <a href="https://mdn.github.io/webassembly-examples/js-api-examples/table.html">вживую</a>) — эта версия использует функцию <code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>.</p>
 </div>
 
 <h2 id="Глобальные_переменные">Глобальные переменные</h2>
@@ -273,7 +273,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 });</pre>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете увидеть этот пример вживую на <a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html"> GitHub</a>; смотрите также <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">исходники</a>.</p>
+<p><strong>Примечание</strong>: вы можете увидеть этот пример вживую на <a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html"> GitHub</a>; смотрите также <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">исходники</a>.</p>
 </div>
 
 <h2 id="Множественность">Множественность</h2>
