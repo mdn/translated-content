@@ -205,7 +205,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 
 <p>Обратите внимание: несмотря на то, что анонимные и стрелочные функции схожи, они имеют разные значения <code>this</code>.</p>
 
-<h2 id="Заметки">Заметки</h2>
+<h2 id="Примечания">Примечания</h2>
 
 <h3 id="Why_use_addEventListener.3F" name="Why_use_addEventListener.3F">Зачем использовать <code>addEventListener</code>?</h3>
 
@@ -443,13 +443,13 @@ elem.addEventListener(
 
 <div>{{Compat("api.EventTarget.addEventListener", 3)}}</div>
 
-<h3 id="Заметки_по_Gecko">Заметки по Gecko</h3>
+<h3 id="Примечания_по_Gecko">Примечания по Gecko</h3>
 
 <ul>
  <li>До Firefox 6, браузер выбросит исключение, если параметр <code>useCapture</code> не был точно равен <code>false</code>. До Gecko 9.0 {{geckoRelease("9.0")}}, <code>addEventListener()</code> выбросит исключение, если параметр <code>listener</code> был равен <code>null</code>; сейчас метод завершается без ошибки, но ничего не делает.</li>
 </ul>
 
-<h3 id="Заметки_по_WebKit">Заметки по WebKit</h3>
+<h3 id="Примечания_по_WebKit">Примечания по WebKit</h3>
 
 <ul>
  <li>Несмотря на то, что в WebKit параметр <code>useCapture</code> был объявлен необязательным <a href="http://trac.webkit.org/changeset/89781">только в июне 2011 года</a>, это работало и до этого изменения. Новые изменения были добавлены в Safari 5.1 и Chrome 13.</li>

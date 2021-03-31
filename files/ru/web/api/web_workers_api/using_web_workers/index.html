@@ -18,7 +18,7 @@ original_slug: DOM/Using_web_workers
 <p>Контекст Worker'а представлен объектом {{domxref("DedicatedWorkerGlobalScope")}} в случае выделенных Workers (обычные Workers используются одним скриптом; совместные Workers используют объект {{domxref("SharedWorkerGlobalScope")}}). Выделенный Worker доступен только из скрипта-родителя, в то время как совместные Workers могут быть доступны из нескольких сценариев.</p>
 
 <div class="note">
-<p><strong>Заметка</strong>: Смотрите <a href="/en-US/docs/Web/API/Web_Workers_API">страницу Web Workers API</a> для справки по Workers и прочие руководства.</p>
+<p><strong>Примечание</strong>: Смотрите <a href="/en-US/docs/Web/API/Web_Workers_API">страницу Web Workers API</a> для справки по Workers и прочие руководства.</p>
 </div>
 
 <p>Вы можете запускать любой код внутри потока worker-а, за некоторыми исключениями. Например, вы не можете прямо манипулировать DOM внутри worker-а, или использовать некоторые методы по умолчанию и свойства объекта {{domxref("window")}}. Но вы можете использовать большой набор опций, доступный под <code>Window</code>, включая <a href="/en-US/docs/Web/API/WebSockets_API">WebSockets</a>, и механизмы хранения данных, таких как <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> и относящихся только к Firefox OS <a href="/en-US/docs/Web/API/Data_Store_API">Data Store API</a>. Для дополнительной информации смотрите <a href="/en-US/docs/Web/API/Worker/Functions_and_classes_available_to_workers">Functions and classes available to workers</a>.</p>
@@ -88,9 +88,9 @@ second.onchange = function() {
 
 <p>В примере выше мы берём данные из события сообщения и ставим их как <code>textContent</code> у результирующего абзаца, чтобы показать пользователю результат этой калькуляции.</p>
 
-<p class="note"><strong>Заметка</strong>: Обратите внимание, что <font face="consolas, Liberation Mono, courier, monospace"><code>onmessage()</code>​ и <code>postmessage()</code> должны вызываться из экземпляра Worker в главном потоке, но не в потоке worker-а. Это связано с тем, что внутри потока worker-а, worker выступает в качестве глобального объекта.</font></p>
+<p class="note"><strong>Примечание</strong>: Обратите внимание, что <font face="consolas, Liberation Mono, courier, monospace"><code>onmessage()</code>​ и <code>postmessage()</code> должны вызываться из экземпляра Worker в главном потоке, но не в потоке worker-а. Это связано с тем, что внутри потока worker-а, worker выступает в качестве глобального объекта.</font></p>
 
-<p class="note"><strong>Заметка</strong>: При передаче сообщения между основным потоком и потоком worker-а, оно копируется или "передаётся" (перемещается), не делится между потоками. Читайте {{anch("Transferring data to and from workers: further details")}} для более подробного объяснения.</p>
+<p class="note"><strong>Примечание</strong>: При передаче сообщения между основным потоком и потоком worker-а, оно копируется или "передаётся" (перемещается), не делится между потоками. Читайте {{anch("Transferring data to and from workers: further details")}} для более подробного объяснения.</p>
 
 <h3 id="Завершение_работы_worker-а">Завершение работы worker-а</h3>
 
@@ -132,7 +132,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 
 <p>Браузер загружает каждый указанный скрипт и исполняет его. Любые глобальные объекты, создаваемые каждым скриптом могут быть использованы в worker'е. Если скрипт не удалось загрузить, будет брошена ошибка <code>NETWORK_ERROR</code>, и последующий код не будет исполнен. Тем не менее код, исполненный ранее (включая отложенный при помощи {{domxref("window.setTimeout()")}}) останется функционален. Объявления функций идущие <strong>после</strong> вызова метода <code>importScripts()</code> также будут доступны, т.к. объявления функций всегда обрабатываются перед остальным кодом.</p>
 
-<div class="note"><strong>Заметка</strong>: Скрипты могут быть загружены в произвольном порядке, но их исполнение будет в  том порядке, в котором имена файлов были переданы в <code>importScripts()</code>. Функция выполняется синхронно; <code>importScripts()</code> не вернёт исполнение, пока все скрипты не будут загружены и исполнены.</div>
+<div class="note"><strong>Примечание</strong>: Скрипты могут быть загружены в произвольном порядке, но их исполнение будет в  том порядке, в котором имена файлов были переданы в <code>importScripts()</code>. Функция выполняется синхронно; <code>importScripts()</code> не вернёт исполнение, пока все скрипты не будут загружены и исполнены.</div>
 
 <h2 id="Разделяемые_worker-ы_Shared_workers">Разделяемые worker-ы (Shared workers)</h2>
 
@@ -141,11 +141,11 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 <p>Здесь мы сосредоточимся на разнице между выделенными и разделёнными worker-ами. Обратите внимание, что в данном примере есть две HTML страницы с JavaScript кодом, которые используют один и тот же файл worker-а.</p>
 
 <div class="note">
-<p><strong>Заметка</strong>: Если разделяемый worker может быть доступен из нескольких контекстов просмотра, то все они должны иметь одно и то же происхождение (одни и те же протокол, хост и порт).</p>
+<p><strong>Примечание</strong>: Если разделяемый worker может быть доступен из нескольких контекстов просмотра, то все они должны иметь одно и то же происхождение (одни и те же протокол, хост и порт).</p>
 </div>
 
 <div class="note">
-<p><strong>Заметка: </strong>В Firefox разделяемый worker не может быть использован совместно документами в приватном и неприватном окне ({{bug(1177621)}}).</p>
+<p><strong>Примечание: </strong>В Firefox разделяемый worker не может быть использован совместно документами в приватном и неприватном окне ({{bug(1177621)}}).</p>
 </div>
 
 <h3 id="Создание_разделяемого_worker-а">Создание разделяемого worker-а</h3>
@@ -159,7 +159,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 <p>Соединение с портом должно быть осуществлено либо неявно, используя обработчик событие <code>onmessage</code>, либо явно, вызвав метод <strong>start()</strong> перед тем, как отправлять любые сообщения. Вызов метода start() необходим только тогда, когда подписка на событие реализована через метод <code>addEventListener()</code>.</p>
 
 <div class="blockIndicator note">
-<p><strong>Заметка: </strong>Когда используется метод <code>start()</code> чтобы открыть соединение с портом, его необходимо вызывать и в родительском потоке и в потоке worker-а, если необходима двухсторонняя коммуникация.</p>
+<p><strong>Примечание: </strong>Когда используется метод <code>start()</code> чтобы открыть соединение с портом, его необходимо вызывать и в родительском потоке и в потоке worker-а, если необходима двухсторонняя коммуникация.</p>
 </div>
 
 <pre class="brush: js notranslate">myWorker.port.start();  // в родительском потоке</pre>
@@ -528,7 +528,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 </pre>
 
 <div class="note">
-<p><strong>Заметка</strong>: Для дополнительной информации о передаваемых объектах, производительности и поддержки для этого метода, читайте  <a href="http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> на HTML5 Rocks.</p>
+<p><strong>Примечание</strong>: Для дополнительной информации о передаваемых объектах, производительности и поддержки для этого метода, читайте  <a href="http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">Transferable Objects: Lightning Fast!</a> на HTML5 Rocks.</p>
 </div>
 
 <h2 id="Встроенные_worker-ы">Встроенные worker-ы</h2>
@@ -710,7 +710,7 @@ onmessage = function(event) {
 <p>Главное, что вы не можете сделать в Worker это напрямую повлиять на родительскую страницу. Это включает в себя манипулирование DOM и использование объектов этой страницы. Вы должны сделать это косвенно, отправив сообщение обратно основному сценарию через {{domxref("DedicatedWorkerGlobalScope.postMessage")}}, а затем выполнив изменения оттуда.</p>
 
 <div class="note">
-<p><strong>Заметка</strong>: Для знакомства с  полным списком функций,  доступных для worker-ов, смотрите статью <a href="/en-US/docs/Web/Reference/Functions_and_classes_available_to_workers">Функции и интерфейсы доступные worker-ам</a>.</p>
+<p><strong>Примечание</strong>: Для знакомства с  полным списком функций,  доступных для worker-ов, смотрите статью <a href="/en-US/docs/Web/Reference/Functions_and_classes_available_to_workers">Функции и интерфейсы доступные worker-ам</a>.</p>
 </div>
 
 <h2 id="Спецификации">Спецификации</h2>

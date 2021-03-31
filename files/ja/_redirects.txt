@@ -4875,6 +4875,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Locale	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Locale/Locale	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale

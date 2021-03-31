@@ -162,7 +162,7 @@ translation_of: Mozilla/Firefox/Releases/68
   <p>{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} больше не может быть использован из небезопасного контекста; попытки сделать это будут сопровождаться исключением <code>NotAllowedError</code>. Безопасными контекстами считаются те, которые загруженные через HTTPS, либо которые использую схему  <code>file:///</code>, либо загружены из <code>localhost</code>. Сейчас, если необходимо, вы можете включить возможность совершать небезопасные вызовы <code>getUserMedia()</code>, установив надстройку <code>media.getusermedia.insecure.enabled</code> в состояние <code>true</code> ({{bug(1335740)}}).</p>
 
   <div class="blockIndicator note">
-  <p><strong>Заметка:</strong> В будущем, Firefox также удалит свойство {{domxref("navigator.mediaDevices")}} на незащищённых контекстах, предотвратив доступ к  {{domxref("MediaDevices")}} API. <strong>Это уже так в Nightly сборках.</strong></p>
+  <p><strong>Примечание:</strong> В будущем, Firefox также удалит свойство {{domxref("navigator.mediaDevices")}} на незащищённых контекстах, предотвратив доступ к  {{domxref("MediaDevices")}} API. <strong>Это уже так в Nightly сборках.</strong></p>
   </div>
  </li>
 </ul>
