@@ -61,7 +61,7 @@ translation_of: Web/JavaScript/Guide/Functions
 
 <p>Примитивные параметры (например, число) передаются функции значением; <strong>значение</strong> передаётся в функцию, но если функция меняет значение параметра,<strong> это изменение не отразится глобально или после вызова функции.</strong></p>
 
-<p>Если Вы передадите объект как параметр (не примитив, например, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects.">массив</a></code> или определяемые пользователем объекты), и функция изменит свойство переданного в неё объекта, это изменение будет видно и вне функции, как показано в следующим примере:</p>
+<p>Если вы передадите объект как параметр (не примитив, например, <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects.">массив</a></code> или определяемые пользователем объекты), и функция изменит свойство переданного в неё объекта, это изменение будет видно и вне функции, как показано в следующим примере:</p>
 
 <pre class="brush: js">function myFunc(theObject) {
   theObject.make = 'Toyota';
@@ -130,7 +130,7 @@ if (num === 0) {
   }
 }</pre>
 
-<p>В дополнение к объявлениям функций, описанных здесь, Вы также можете использовать конструктор <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a> для создания функций из строки во время выполнения (<em>runtime</em>), подобно <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/eval" title="The eval() method evaluates JavaScript code represented as a string."><code>eval()</code></a>.</p>
+<p>В дополнение к объявлениям функций, описанных здесь, вы также можете использовать конструктор <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a> для создания функций из строки во время выполнения (<em>runtime</em>), подобно <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/eval" title="The eval() method evaluates JavaScript code represented as a string."><code>eval()</code></a>.</p>
 
 <p><strong>Метод</strong> — это функция, которая является свойством объекта. Узнать больше про объекты и методы можно по ссылке: <a href="/ru/docs/Web/JavaScript/Guide/Working_with_Objects">Работа с объектами</a>.</p>
 
@@ -138,7 +138,7 @@ if (num === 0) {
 
 <p>Объявление функции не выполняет её. Объявление функции просто называет функцию и указывает, что делать при вызове функции.</p>
 
-<p><strong>Вызов</strong> функции фактически выполняет указанные действия с указанными параметрами. Например, если Вы определите функцию <code>square</code>, Вы можете вызвать её следующим образом:</p>
+<p><strong>Вызов</strong> функции фактически выполняет указанные действия с указанными параметрами. Например, если вы определите функцию <code>square</code>, вы можете вызвать её следующим образом:</p>
 
 <pre class="brush: js">square(5);</pre>
 
@@ -332,7 +332,7 @@ b = addSquares(3, 4); // возвращает 25
 c = addSquares(4, 5); // возвращает 41
 </pre>
 
-<p>Поскольку вложенная функция формирует closure, Вы можете вызвать внешнюю функцию и указать аргументы для обоих функций (для outer и innner).</p>
+<p>Поскольку вложенная функция формирует closure, вы можете вызвать внешнюю функцию и указать аргументы для обоих функций (для outer и innner).</p>
 
 <pre class="brush: js">function outside(x) {
   function inside(y) {
@@ -484,14 +484,14 @@ getCode();    // Returns the apiCode
 
 <h2 id="Использование_объекта_arguments"><a id="definition" name="definition"></a>Использование объекта arguments</h2>
 
-<p>Объект arguments функции является псевдо-массивом. Внутри функции Вы можете ссылаться к аргументам следующим образом:</p>
+<p>Объект arguments функции является псевдо-массивом. Внутри функции вы можете ссылаться к аргументам следующим образом:</p>
 
 <pre class="brush: js">arguments[i]
 </pre>
 
 <p>где <code>i</code> — это порядковый номер аргумента, отсчитывающийся с 0. К первому аргументу, переданному функции, обращаются так <code>arguments[0]</code>. А получить количество всех аргументов — <code>arguments.length</code>.</p>
 
-<p>С помощью объекта <code>arguments</code> Вы можете вызвать функцию, передавая в неё больше аргументов, чем формально объявили принять. Это очень полезно, если Вы не знаете точно, сколько аргументов должна принять Ваша функция. Вы можете использовать <code>arguments.length</code> для определения количества аргументов, переданных функции, а затем получить доступ к каждому аргументу, используя объект <code>arguments</code>.</p>
+<p>С помощью объекта <code>arguments</code> Вы можете вызвать функцию, передавая в неё больше аргументов, чем формально объявили принять. Это очень полезно, если вы не знаете точно, сколько аргументов должна принять ваша функция. Вы можете использовать <code>arguments.length</code> для определения количества аргументов, переданных функции, а затем получить доступ к каждому аргументу, используя объект <code>arguments</code>.</p>
 
 <p>Для примера рассмотрим функцию, которая конкатенирует несколько строк. Единственным формальным аргументом для функции будет строка, которая указывает символы, которые разделяют элементы для конкатенации. Функция определяется следующим образом:</p>
 
@@ -556,7 +556,7 @@ func(1, 2, 3);
 
 multiply(5); // 5</pre>
 
-<p>С параметрами по умолчанию проверка наличия значения параметра в теле функции не нужна. Теперь Вы можете просто указать значение по умолчанию для параметра <code>b</code> в объявлении функции:</p>
+<p>С параметрами по умолчанию проверка наличия значения параметра в теле функции не нужна. Теперь вы можете просто указать значение по умолчанию для параметра <code>b</code> в объявлении функции:</p>
 
 <pre class="brush: js">function multiply(a, b = 1) {
   return a * b;

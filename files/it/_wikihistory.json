@@ -5144,14 +5144,6 @@
       "Federico"
     ]
   },
-  "Web/API/Node/prefix": {
-    "modified": "2019-03-23T23:47:01.925Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "Federico"
-    ]
-  },
   "Web/API/Node/textContent": {
     "modified": "2020-10-15T21:17:56.553Z",
     "contributors": [
@@ -5840,13 +5832,6 @@
       "Federico"
     ]
   },
-  "Web/API/Node/namespaceURI": {
-    "modified": "2019-03-23T23:45:08.038Z",
-    "contributors": [
-      "teoli",
-      "Federico"
-    ]
-  },
   "Web/API/MouseEvent/altKey": {
     "modified": "2019-03-23T23:46:44.336Z",
     "contributors": [
@@ -5992,6 +5977,21 @@
     "contributors": [
       "teoli",
       "khalid32",
+      "Federico"
+    ]
+  },
+  "Web/API/Element/namespaceURI": {
+    "modified": "2019-03-23T23:45:08.038Z",
+    "contributors": [
+      "teoli",
+      "Federico"
+    ]
+  },
+  "Web/API/Element/prefix": {
+    "modified": "2019-03-23T23:47:01.925Z",
+    "contributors": [
+      "teoli",
+      "jsx",
       "Federico"
     ]
   }

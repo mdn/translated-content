@@ -20,7 +20,7 @@ var source = audioCtx.createMediaElementSource(myMediaElement);</pre>
 
 <dl>
  <dt><code>myMediaElement</code></dt>
- <dd>Объект {{domxref("HTMLMediaElement")}}, который Вы хотите использовать в качестве исходного звука.</dd>
+ <dd>Объект {{domxref("HTMLMediaElement")}}, который вы хотите использовать в качестве исходного звука.</dd>
 </dl>
 
 <h3 id="Возвращаемые_значения">Возвращаемые значения</h3>
@@ -29,10 +29,10 @@ var source = audioCtx.createMediaElementSource(myMediaElement);</pre>
 
 <h2 id="Пример">Пример</h2>
 
-<p>Простой пример создания аудио узла из элемента {{htmlelement("audio") }} используя <code>createMediaElementSource()</code>, и управления усилением звука через {{ domxref("GainNode") }} перед подачей в {{ domxref("AudioDestinationNode") }} для воспроизведения. При движении мыши вызывается функция <code>updatePage()</code>, вычисляющая текущее усиление как отношение Y позиции курсора к общей высоте окна. Таким образом Вы можете увеличивать/уменьшать громкость звучания аудио движениями мыши вверх/вниз.</p>
+<p>Простой пример создания аудио узла из элемента {{htmlelement("audio") }} используя <code>createMediaElementSource()</code>, и управления усилением звука через {{ domxref("GainNode") }} перед подачей в {{ domxref("AudioDestinationNode") }} для воспроизведения. При движении мыши вызывается функция <code>updatePage()</code>, вычисляющая текущее усиление как отношение Y позиции курсора к общей высоте окна. Таким образом вы можете увеличивать/уменьшать громкость звучания аудио движениями мыши вверх/вниз.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете также посмотреть <a href="http://mdn.github.io/media-source-buffer/">демонстрацию</a> или <a href="https://github.com/mdn/media-source-buffer">исходники</a>.</p>
+<p><strong>Примечание</strong>: вы можете также посмотреть <a href="http://mdn.github.io/media-source-buffer/">демонстрацию</a> или <a href="https://github.com/mdn/media-source-buffer">исходники</a>.</p>
 </div>
 
 <pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();

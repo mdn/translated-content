@@ -43,7 +43,7 @@ translation_of: Web/API/Window/beforeunload_event
 
 <p>Для борьбы с нежелательными всплывающими окнами браузеры могут не отображать подсказки, созданные в обработчиках событий <strong>beforeunload</strong>, за исключением случаев, когда страница была обработана или даже не отображается вообще.</p>
 
-<p>Прикрепление обработчика событий к <code>window</code> или <code>document</code> <code>beforeunload</code> событие не позволяет браузерам использовать кэш навигации по страницам в памяти, наподобие <a href="/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching">Firefox's Back-Forward cache</a> or <a href="https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/">WebKit's Page Cache</a>.</p>
+<p>Прикрепление обработчика событий к <code>window</code> или <code>document</code> <code>beforeunload</code> событие не позволяет браузерам использовать кеш навигации по страницам в памяти, наподобие <a href="/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching">Firefox's Back-Forward cache</a> or <a href="https://webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/">WebKit's Page Cache</a>.</p>
 
 <p>В спецификации HTML указано, что вызовы {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, и {{domxref("window.prompt()")}} методы могут быть проигнорированы во время этого события. Посмотреть <a href="https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts" lang="ru">HTML specification</a> для более подробной информации.</p>
 
@@ -85,13 +85,13 @@ translation_of: Web/API/Window/beforeunload_event
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div class="hidden">Таблица совместимости на этой странице составлена из структурированных данных. Если Вы хотите внести свой вклад в данные, пожалуйста, посетите https://github.com/mdn/browser-compat-data и отправьте нам запрос.</div>
+<div class="hidden">Таблица совместимости на этой странице составлена из структурированных данных. Если вы хотите внести свой вклад в данные, пожалуйста, посетите https://github.com/mdn/browser-compat-data и отправьте нам запрос.</div>
 
 <p>{{Compat("api.Window.beforeunload_event")}}</p>
 
 <p>Смотрите <a href="/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload#Browser_compatibility">WindowEventHandlers/onbeforeunload</a> для получения более подробной информации о том, как различные браузеры обрабатывают это событие.</p>
 
-<h2 id="См._также">См. также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li>Related events: {{domxref("Window/DOMContentLoaded_event", "DOMContentLoaded")}}, {{domxref("Document/readystatechange_event", "readystatechange")}}, {{domxref("Window/load_event", "load")}}, {{domxref("Window/unload_event", "unload")}}</li>

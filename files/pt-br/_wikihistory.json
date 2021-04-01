@@ -3341,12 +3341,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/ParentNode/childElementCount": {
-    "modified": "2020-10-15T22:28:04.061Z",
-    "contributors": [
-      "leofalcao10"
-    ]
-  },
   "Web/API/ParentNode/children": {
     "modified": "2019-03-23T22:19:42.340Z",
     "contributors": [
@@ -17366,6 +17360,12 @@
     "modified": "2019-03-23T22:29:17.399Z",
     "contributors": [
       "cezaraugusto"
+    ]
+  },
+  "Web/API/Element/childElementCount": {
+    "modified": "2020-10-15T22:28:04.061Z",
+    "contributors": [
+      "leofalcao10"
     ]
   }
 }

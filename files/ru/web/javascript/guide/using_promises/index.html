@@ -90,7 +90,7 @@ let promise2 = promise.then(successCallback, failureCallback);
 <pre class="brush: js">let promise2 = doSomething().then(successCallback, failureCallback);
 </pre>
 
-<p>Второй промис представляет завершение не только <code>doSomething()</code>, но и функций <code>successCallback</code> или <code>failureCallback</code>, переданных Вами, а они тоже могут быть асинхронными функциями, возвращающими промис. В этом случае все колбэки, добавленные к <code>promise2</code> будут поставлены в очередь за промисом, возвращаемым <code>successCallback</code> или <code>failureCallback</code>.</p>
+<p>Второй промис представляет завершение не только <code>doSomething()</code>, но и функций <code>successCallback</code> или <code>failureCallback</code>, переданных вами, а они тоже могут быть асинхронными функциями, возвращающими промис. В этом случае все колбэки, добавленные к <code>promise2</code> будут поставлены в очередь за промисом, возвращаемым <code>successCallback</code> или <code>failureCallback</code>.</p>
 
 <p>По сути, каждый вызванный промис означает успешное завершение предыдущих шагов в цепочке.</p>
 

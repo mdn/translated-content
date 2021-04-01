@@ -21,9 +21,9 @@ translation_of: Web/API/CacheStorage
 
 <p>Вы можете получить доступ к <code>CacheStorage</code> через глобальное свойство {{domxref("WorkerGlobalScope.caches", "caches")}}.</p>
 
-<div class="note"><strong>Заметка</strong>: CacheStorage всегда возвращает отказ с <code>SecurityError</code> для ненадёжных источников (т.e. тех, что не используют HTTPS, хотя это утверждение, вероятно, станет более общим в будущем). При тестировании это можно обойти, установив опцию "Enable Service Workers over HTTP (when toolbox is open)" в меню Firefox Devtools options/gear.</div>
+<div class="note"><strong>Примечание</strong>: CacheStorage всегда возвращает отказ с <code>SecurityError</code> для ненадёжных источников (т.e. тех, что не используют HTTPS, хотя это утверждение, вероятно, станет более общим в будущем). При тестировании это можно обойти, установив опцию "Enable Service Workers over HTTP (when toolbox is open)" в меню Firefox Devtools options/gear.</div>
 
-<div class="note"><strong>Заметка</strong>: {{domxref("CacheStorage.match()")}} удобный метод. Подобный функционал сопоставления записей кеша может быть реализован путём открытия вашего кеша с помощью {{domxref("CacheStorage.open()")}}, возвращения записей, в ней содержащихся, через {{domxref("CacheStorage.keys()")}} и сравнения необходимой {{domxref("CacheStorage.match()")}}.</div>
+<div class="note"><strong>Примечание</strong>: {{domxref("CacheStorage.match()")}} удобный метод. Подобная функциональность сопоставления записей кеша может быть реализован путём открытия вашего кеша с помощью {{domxref("CacheStorage.open()")}}, возвращения записей, в ней содержащихся, через {{domxref("CacheStorage.keys()")}} и сравнения необходимой {{domxref("CacheStorage.match()")}}.</div>
 
 <h2 id="Методы">Методы</h2>
 
@@ -196,7 +196,7 @@ this.addEventListener('fetch', function(event) {
 
 <p>[1] Сервисные воркеры (и <a href="/en-US/docs/Web/API/Push_API">Push</a>) были отключены в <a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox 45 Extended Support Release</a> (ESR.)</p>
 
-<h2 id="Смотри_также">Смотри также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Using Service Workers</a></li>
