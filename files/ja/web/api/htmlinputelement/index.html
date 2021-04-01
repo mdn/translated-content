@@ -19,7 +19,7 @@ translation_of: Web/API/HTMLInputElement
 
 <p>{{InheritanceDiagram(600, 120)}}</p>
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+<h2 id="Properties">プロパティ</h2>
 
 <table class="standard-table">
  <caption>親フォームに関連するプロパティ</caption>
@@ -35,7 +35,7 @@ translation_of: Web/API/HTMLInputElement
    <td><em><code>string</code>:</em> その要素の {{ htmlattrxref("formaction", "input") }} 属性を<strong>返却または設定</strong>します。ここには要素によって送信された情報を処理するプログラムの URI が入ります。これは親フォームの {{ htmlattrxref("action", "form") }} 属性を上書きします。</td>
   </tr>
   <tr>
-   <td><code>formEncType</code></td>
+   <td><code>formEnctype</code></td>
    <td><em><code>string</code>:</em> その要素の {{ htmlattrxref("formenctype", "input") }} 属性を<strong>返却または設定</strong>します。ここにはフォームをサーバーに送信する際のコンテンツの型が入ります。これは親フォームの {{ htmlattrxref("enctype", "form") }} 属性を上書きします。</td>
   </tr>
   <tr>
@@ -54,7 +54,7 @@ translation_of: Web/API/HTMLInputElement
 </table>
 
 <table class="standard-table">
- <caption>hidden 以外のあらゆる型の入力要素に適用されるプロパティ</caption>
+ <caption>hidden 以外のあらゆる型のinput 要素に適用されるプロパティ</caption>
  <tbody>
   <tr>
    <td><code>name</code></td>
@@ -88,11 +88,11 @@ translation_of: Web/API/HTMLInputElement
   </tr>
   <tr>
    <td><code>validationMessage</code> {{readonlyInline}}</td>
-   <td><em><code>string</code>:</em> 制約検証をそのコントロールが満たさな買った場合、それを記述したローカライズされたメッセージを<strong>返します</strong> (もしあれば)。これは、コントロールが制約検証の候補ではない場合 ({{htmlattrxref("willValidate","input")}} が <code>false</code> の場合)、または制約を満たしている場合は空の文字列です。この値は、 <code>setCustomValidity</code> メソッドで設定できます。</td>
+   <td><em><code>string</code>:</em> 制約検証をそのコントロールが満たさなかった場合、それを記述したローカライズされたメッセージを<strong>返します</strong> (もしあれば)。これは、コントロールが制約検証の候補ではない場合 ({{htmlattrxref("willValidate","input")}} が <code>false</code> の場合)、または制約を満たしている場合は空の文字列です。この値は、 <code>setCustomValidity</code> メソッドで設定できます。</td>
   </tr>
   <tr>
    <td><code>willValidate</code> {{readonlyInline}}</td>
-   <td><em>{{jsxref("Boolean")}}:</em> その要素が制約検証の候補であるかどうかを<strong>返します</strong>。これは何か制約検証を阻む条件がある場合、例えば、 <code>type</code> が <code>hidden</code>, <code>reset</code>, <code>button</code> のいずれかである、祖先に {{HTMLElement("datalist")}} がある、 <code>disabled</code> プロパティが <code>true</code> である、などです。</td>
+   <td><em>{{jsxref("Boolean")}}:</em> その要素が制約検証の候補であるかどうかを<strong>返します</strong>。これは何か制約検証を阻む条件がある場合、例えば、 <code>type</code> が <code>hidden</code>、<code>reset</code>、<code>button</code> のいずれかである、祖先に {{HTMLElement("datalist")}} がある、 <code>disabled</code> プロパティが <code>true</code> である、などです。</td>
   </tr>
  </tbody>
 </table>
@@ -102,15 +102,15 @@ translation_of: Web/API/HTMLInputElement
  <tbody>
   <tr>
    <td><code>checked</code></td>
-   <td><em>{{jsxref("Boolean")}}:</em> <strong>Returns / Sets</strong> the current state of the element when {{htmlattrxref("type","input")}} is <code>checkbox</code> or <code>radio</code>.</td>
+   <td><em>{{jsxref("Boolean")}}:</em> {{htmlattrxref("type","input")}} が <code>checkbox</code> または <code>radio</code> の場合、要素の現在の状態を<strong>返却または設定</strong>します。</td>
   </tr>
   <tr>
    <td><code>defaultChecked</code></td>
-   <td><em>{{jsxref("Boolean")}}:</em> <strong>Returns / Sets</strong> the default state of a radio button or checkbox as originally specified in HTML that created this object.</td>
+   <td><em>{{jsxref("Boolean")}}:</em> このオブジェクトを生成した HTML でもともと指定されていたラジオボタンまたはチェックボックスの既定の状態を<strong>返却または設定</strong>します。</td>
   </tr>
   <tr>
    <td><code id="indeterminate">indeterminate</code></td>
-   <td><em>{{jsxref("Boolean")}}:</em> <strong>Returns</strong> whether the checkbox or radio button is in indeterminate state. For checkboxes, the effect is that the appearance of the checkbox is obscured/greyed in some way as to indicate its state is indeterminate (not checked but not unchecked). Does not affect the value of the <code>checked</code> attribute, and clicking the checkbox will set the value to false.</td>
+   <td><em>{{jsxref("Boolean")}}:</em> チェックボックスやラジオボタンの状態が不確定であるかどうかを<strong>返します</strong>。チェックボックスの場合は、その状態が不確定 (チェックでも未チェックでもない状態) であることを示すために、チェックボックスの外観が何らかの方法で不明瞭になったり、灰色になったりする効果があります。 <code>checked</code> 属性の値には影響を与えず、チェックボックスをクリックするとその値は false になります。</td>
   </tr>
  </tbody>
 </table>
@@ -120,45 +120,45 @@ translation_of: Web/API/HTMLInputElement
  <tbody>
   <tr>
    <td><code>alt</code></td>
-   <td><em><code>string</code>: </em><strong>Returns / Sets</strong> the element's {{ htmlattrxref("alt", "input") }} attribute, containing alternative text to use when {{htmlattrxref("type","input")}} is <code>image.</code></td>
+   <td><em><code>string</code>: </em>{{htmlattrxref("type","input")}} が <code>image</code> である場合、その要素の代替テキストが設定された {{ htmlattrxref("alt", "input") }} 属性を<strong>返却または設定</strong>します。</td>
   </tr>
   <tr>
    <td><code>height</code></td>
-   <td><em><code>string</code>: </em><strong>Returns / Sets</strong> the element's {{ htmlattrxref("height", "input") }} attribute, which defines the height of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is <code>image</code>.</td>
+   <td><em><code>string</code>: </em>{{htmlattrxref("type","input")}} の値が <code>image</code> である場合、ボタンに表示される画像の高さを定義するその要素の {{ htmlattrxref("height", "input") }} 属性を<strong>返却または設定</strong>します。</td>
   </tr>
   <tr>
    <td><code>src</code></td>
-   <td><code><em>string</em></code><em>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("src", "input") }} attribute, which specifies a URI for the location of an image to display on the graphical submit button, if the value of {{htmlattrxref("type","input")}} is <code>image</code>; otherwise it is ignored.</td>
+   <td><code><em>string</em></code><em>:</em> {{htmlattrxref("type","input")}} の値が <code>image</code> である場合、グラフィックの送信ボタンを表示する画像の場所を示す URI を指定する、その要素の {{ htmlattrxref("src", "input") }} 属性を<strong>返却または設定</strong>します。それ以外の場合は無視されます。</td>
   </tr>
   <tr>
    <td><code>width</code></td>
-   <td><code><em>string</em></code><em>:</em> <strong>Returns / Sets</strong> the document's {{ htmlattrxref("width", "input") }} attribute, which defines the width of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is <code>image</code>.</td>
+   <td><code><em>string</em></code><em>:</em> {{htmlattrxref("type","input")}} の値が <code>image</code> である場合、ボタンに表示される画像の幅を定義する、文書の {{ htmlattrxref("width", "input") }} 属性を<strong>返却または設定</strong>します。</td>
   </tr>
  </tbody>
 </table>
 
 <table class="standard-table" id="Properties_file">
- <caption><code>file</code> 型の要素のみに適用できるプロパティ/caption&gt;</caption>
+ <caption><code>file</code> 型の要素のみに適用できるプロパティ</caption>
  <tbody>
   <tr>
    <td><code>accept</code></td>
-   <td><em><code>string</code>: </em><strong>Returns / Sets</strong> the element's {{ htmlattrxref("accept", "input") }} attribute, containing comma-separated list of file types accepted by the server when {{htmlattrxref("type","input")}} is <code>file</code>.</td>
+   <td><em><code>string</code>: </em>{{htmlattrxref("type","input")}} が <code>file</code> である場合、サーバーが受け入れるファイル形式をカンマ区切りのリストで表すその要素の {{ htmlattrxref("accept", "input") }} 属性を<strong>返却または設定</strong>します。</td>
   </tr>
   <tr>
    <td><code>allowdirs</code> {{non-standard_inline}}</td>
-   <td><em>{{jsxref("Boolean")}}:</em> Part of the non-standard Directory Upload API; <strong>indicates</strong> whether or not to allow directories and files both to be selected in the file list. Implemented only in Firefox and is hidden behind a preference.</td>
+   <td><em>{{jsxref("Boolean")}}:</em> 標準外の Directory Upload API の一部です。ファイルリストでディレクトリーとファイルの両方を選択できるようにするかどうかを<strong>示します</strong>。 Firefox でのみ実装されており、設定で隠されています。</td>
   </tr>
   <tr>
    <td><code id="files_prop">files</code></td>
-   <td><strong>Returns/accepts</strong> a {{domxref("FileList")}} object, which contains a list of {{domxref("File")}} objects representing the files selected for upload.</td>
+   <td>{{domxref("FileList")}} オブジェクトを<strong>返却または設定</strong>し、これはアップロードするために選択されたファイルを表す {{domxref("File")}} オブジェクトのリストが入ります。</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}} {{Non-standard_inline}}</td>
-   <td><em>{{jsxref("Boolean")}}:</em><strong> Returns</strong> the {{htmlattrxref("webkitdirectory", "input")}} attribute; if true, the file system picker interface only accepts directories instead of files.</td>
+   <td><em>{{jsxref("Boolean")}}:</em> {{htmlattrxref("webkitdirectory", "input")}} 属性を<strong>返します</strong>。 true の場合、ファイルシステム選択インターフェイスはファイルではなくディレクトリーのみが選択できるようになります。</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} {{Non-standard_inline}}</td>
-   <td><em>Array of {{domxref("FileSystemEntry")}} objects:</em> <strong>Describes</strong> the currently selected files or directories.</td>
+   <td><em>{{domxref("FileSystemEntry")}} オブジェクトの配列:</em> 現在選択されているファイルまたはディレクトリーを<strong>示します</strong>。</td>
   </tr>
  </tbody>
 </table>
@@ -168,57 +168,57 @@ translation_of: Web/API/HTMLInputElement
  <tbody>
   <tr>
    <td><code>autocomplete</code></td>
-   <td><em><code>string</code>: </em><strong>Returns / Sets</strong> the element's {{htmlattrxref("autocomplete", "input")}} attribute, indicating whether the value of the control can be automatically completed by the browser. Ignored if the value of the {{htmlattrxref("type","input")}} attribute is <code>hidden</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type (<code>button</code>, <code>submit</code>, <code>reset</code>, <code>image</code>). Possible values are:<br>
-    <code>on</code>: the browser can autocomplete the value using previously stored value<br>
-    <code>off</code>: the user must explicity enter a value</td>
+   <td><em><code>string</code>: </em>その要素の {{htmlattrxref("autocomplete", "input")}} 属性を<strong>返却または設定</strong>します。これはコントロールの値をブラウザーで自動的に補完できるかどうかを示します。 {{htmlattrxref("type","input")}} 属性の値が <code>hidden</code>、<code>checkbox</code>、<code>radio</code>、<code>file</code>、またはボタン型 (<code>button</code>、<code>submit</code>、<code>reset</code>、<code>image</code>) の場合は無視されます。可能な値は次の通りです。<br>
+    <code>on</code>: ブラウザーが以前入力された値を使用して値を自動補完することができる<br>
+    <code>off</code>: ユーザーは明示的に値を入力しなければならない</td>
   </tr>
   <tr>
    <td><code>max</code></td>
-   <td><em><code>string</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("max", "input") }} attribute, containing the maximum (numeric or date-time) value for this item, which must not be less than its minimum ({{htmlattrxref("min","input")}} attribute) value.</td>
+   <td><em><code>string</code>:</em> その要素の {{ htmlattrxref("max", "input") }} 属性を<strong>返却または設定</strong>します。この属性には、この項目の (数値または日時の) 最大値が含まれ、最小値 ({{htmlattrxref("min","input")}} 属性) より小さくすることはできません。</td>
   </tr>
   <tr>
    <td><code>maxLength</code></td>
-   <td><em><code>long</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("maxlength", "input") }} attribute, containing the <u><strong>maximum number of characters</strong></u> (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)</td>
+   <td><em><code>long</code>:</em> その要素の {{ htmlattrxref("maxlength", "input") }} 属性を<strong>返却または設定</strong>します。この属性には、値が持つことのできる (Unicode コードポイントでの) <u><strong>最大文字数</strong></u>が含まれます。 (これを負の数に設定した場合、例外が発生します。)</td>
   </tr>
   <tr>
    <td><code>min</code></td>
-   <td><em><code>string</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("min", "input") }} attribute, containing the minimum (numeric or date-time) value for this item, which must not be greater than its maximum ({{htmlattrxref("max","input")}} attribute) value.</td>
+   <td><em><code>string</code>:</em> その要素の {{ htmlattrxref("min", "input") }} 属性を<strong>返却または設定</strong>します。この属性には、この項目の (数値または日時の) 最小値が含まれ、最大値 ({{htmlattrxref("max","input")}} 属性) より大きくすることはできません。</td>
   </tr>
   <tr>
    <td><code>minLength</code></td>
-   <td><em><code>long</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("minlength", "input") }} attribute, containing the <u><strong>minimum number of characters</strong></u> (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)</td>
+   <td><em><code>long</code>:</em> その要素の {{ htmlattrxref("minlength", "input") }} 属性を<strong>返却または設定</strong>します。この属性には、値が持つことのできる (Unicode コードポイントでの) <u><strong>最小文字数</strong></u>が含まれます。 (これを負の数に設定した場合、例外が発生します。)</td>
   </tr>
   <tr>
    <td><code>pattern</code></td>
-   <td><em><code>string</code>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("pattern", "input") }} attribute, containing a <u><strong>regular expression</strong></u> that the control's value is checked against. Use the {{htmlattrxref("title","input")}} attribute to describe the pattern to help the user. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code> or <code>email</code>; otherwise it is ignored.</td>
+   <td><em><code>string</code>:</em> その要素の {{ htmlattrxref("pattern", "input") }} 属性を<strong>返却または設定</strong>します。ここにはコントロールの値をチェックするための<u><strong>正規表現</strong></u>を含みます。 {{htmlattrxref("title","input")}} 属性を使用してユーザーにパターンを説明してください。この属性は、 {{htmlattrxref("type","input")}} 属性の値が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code> の場合に適用され、それ以外の場合は無視されます。</td>
   </tr>
   <tr>
    <td><code>placeholder</code></td>
-   <td><em><code>string</code>: </em><strong>Returns / Sets </strong>the element's {{ htmlattrxref("placeholder", "input") }} attribute, containing a hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code> or <code>email</code>; otherwise it is ignored.</td>
+   <td><em><code>string</code>: </em>その要素の {{ htmlattrxref("placeholder", "input") }} 属性を<strong>返却または設定</strong>します。ここには、ユーザーがコントロールに何を入力できるかのヒントが設定されます。プレイスホルダーのテキストには、キャリッジリターンやラインフィードを含むことはできません。この属性は、type属性の値がtext、search、tel、url、emailの場合に適用され、それ以外の場合は無視されます。この属性は、 {{htmlattrxref("type","input")}} 属性の値が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code> の場合に適用され、それ以外の場合は無視されます。</td>
   </tr>
   <tr>
    <td><code>readOnly</code></td>
-   <td><em><code>boolean</code>:</em><strong> Returns / Sets</strong> the element's {{ htmlattrxref("readonly", "input") }} attribute, indicating that the user cannot modify the value of the control.<br>
-    {{HTMLVersionInline(5)}}This is ignored if the value of the {{htmlattrxref("type","input")}} attribute is <code>hidden</code>, <code>range</code>, <code>color</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or a button type.</td>
+   <td><em><code>boolean</code>:</em>その要素の {{ htmlattrxref("readonly", "input") }} 属性を<strong>返却または設定</strong>します。これは、ユーザーがコントロールの値を変更できないことを示します。<br>
+    {{htmlattrxref("type","input")}} 属性の値が <code>hidden</code>、<code>range</code>、<code>color</code>、<code>checkbox</code>、<code>radio</code>、<code>file</code>、またはボタン型の場合は無視されます。</td>
   </tr>
   <tr>
    <td><code>selectionStart</code></td>
-   <td><em><code>unsigned long</code>:</em> 選択した文章の開始点を<strong>返却・設定</strong>する。何も選択していない場合，{{HTMLElement("input")}}要素内の文章入力カーソル（編集子）の位置を返す。</td>
+   <td><em><code>unsigned long</code>:</em> 選択中のテキストの先頭の位置を<strong>返却または設定</strong>します。何も選択していない場合は、その {{HTMLElement("input")}} 要素内にあるテキスト入力カーソル (キャレット) の位置を返します。</td>
   </tr>
   <tr>
    <td><code>selectionEnd</code></td>
-   <td><em><code>unsigned long</code>:</em> <strong>Returns / Sets </strong>the end index of the selected text. When there's no selection, this returns the offset of the character immediately following the current text input cursor position.</td>
+   <td><em><code>unsigned long</code>:</em> 選択中のテキストの末尾の位置を<strong>返却または設定</strong>します。選択がない場合は、現在のテキスト入力カーソル位置の直後の文字のオフセットを返します。</td>
   </tr>
   <tr>
    <td><code>selectionDirection</code></td>
-   <td><em><code>string</code>:</em> <strong>Returns / Sets</strong> the direction in which selection occurred. Possible values are:<br>
-    <code>forward</code> if selection was performed in the start-to-end direction of the current locale<br>
-    <code>backward</code> for the opposite direction<br>
-    <code>none</code> if the direction is unknown</td>
+   <td><em><code>string</code>:</em> 選択が行われた方向を<strong>返却または設定</strong>します。可能な値は次のとおりです。<br>
+    <code>forward</code> は現在のロケールにおいての先頭から末尾の方向で選択された場合<br>
+    <code>backward</code> は逆方向の場合<br>
+    <code>none</code> は方向が不明な場合</td>
   </tr>
   <tr>
    <td><code>size</code></td>
-   <td><em><code>unsigned long</code>:</em> <strong>Returns / Sets </strong>the element's {{ htmlattrxref("size", "input") }} attribute, containing <u><strong>visual size of the control</strong></u>. This value is in pixels unless the value of {{htmlattrxref("type","input")}} is <code>text</code> or <code>password</code>, in which case, it is an integer number of characters. Applies only when {{htmlattrxref("type","input")}} is set to <code>text</code>, <code>search</code>, <code>tel</code>, <code>url</code>, <code>email</code>, or <code>password</code>; otherwise it is ignored.</td>
+   <td><em><code>unsigned long</code>:</em> その要素の {{ htmlattrxref("size", "input") }} 属性を<strong>返却または設定</strong>します。これは<u><strong>コントロールの外見の大きさ</strong></u>が入ります。この値は {{htmlattrxref("type","input")}} の値が <code>text</code> または <code>password</code> の場合は整数で文字数であり、それ以外の場合はピクセル単位です。 {{htmlattrxref("type","input")}} が <code>text</code>、<code>search</code>、<code>tel</code>、<code>url</code>、<code>email</code>、<code>password</code> のいずれかに設定されている場合のみ適用され、それ以外の場合は無視されます。</td>
   </tr>
  </tbody>
 </table>
@@ -228,155 +228,155 @@ translation_of: Web/API/HTMLInputElement
  <tbody>
   <tr>
    <td><code>defaultValue</code></td>
-   <td><em><code>string</code>:</em> <strong>Returns / Sets</strong> the default value as originally specified in the HTML that created this object.</td>
+   <td><em><code>string</code>:</em> このオブジェクトを生成した HTML で最初に指定された既定値を<strong>返却または設定</strong>します。</td>
   </tr>
   <tr>
    <td><code>dirName</code></td>
-   <td><em><code>string</code>:</em> <strong>Returns / Sets </strong>the directionality of the element.</td>
+   <td><em><code>string</code>:</em> 要素の書字方向を<strong>返却または設定</strong>します。</td>
   </tr>
   <tr>
    <td><code>accessKey</code></td>
-   <td><em><code>string</code>: </em><strong>Returns</strong> a string containing a single character that switches input focus to the control when pressed.</td>
+   <td><em><code>string</code>: </em>押されるとコントロールへの入力フォーカスを切り替える単一の文字が入った文字列を<strong>返します</strong>。</td>
   </tr>
   <tr>
    <td><code>list</code> {{readonlyInline}}</td>
-   <td><em>{{domxref("HTMLElement")}}<code> object</code>:</em> <strong>Returns</strong> the element pointed by the {{ htmlattrxref("list", "input") }} attribute. The property may be <code>null</code> if no HTML element found in the same tree.</td>
+   <td><em>{{domxref("HTMLElement")}}<code> object</code>:</em> {{ htmlattrxref("list", "input") }} 属性が指す要素を<strong>返します</strong>。同じツリーに HTML 要素がない場合、プロパティは <code>null</code> になることがあります。</td>
   </tr>
   <tr>
    <td><code>multiple</code></td>
-   <td><em>{{jsxref("Boolean")}}:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("multiple", "input") }} attribute, indicating whether more than one value is possible (e.g., multiple files).</td>
+   <td><em>{{jsxref("Boolean")}}:</em> その要素の {{ htmlattrxref("multiple", "input") }} 属性を<strong>返却または設定</strong>します。これは複数の値 (例えば複数のファイル) を持つことが可能であるかどうかを示します。</td>
   </tr>
   <tr>
    <td><code>files</code></td>
-   <td><em>{{domxref("FileList")}}<code> array</code>:</em> <strong>Returns</strong> the list of selected files.</td>
+   <td><em>{{domxref("FileList")}}<code> array</code>:</em> 選択されたファイルのリストを<strong>返します</strong>。</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLInputElement.labels")}} {{readonlyInline}}</td>
-   <td><em>{{domxref("NodeList")}}<code> array</code>:</em> <strong>Returns</strong> a list of {{ HTMLElement("label") }} elements that are labels for this element.</td>
+   <td><em>{{domxref("NodeList")}}<code> array</code>:</em> この要素のラベルである {{ HTMLElement("label") }} 要素のリストを<strong>返します</strong>。</td>
   </tr>
   <tr>
    <td><code>step</code></td>
-   <td><code><em>string</em></code><em>:</em> <strong>Returns / Sets</strong> the element's {{ htmlattrxref("step", "input") }} attribute, which works with<strong> </strong>{{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} to limit the increments at which a numeric or date-time value can be set. It can be the string <code>any</code> or a positive floating point number. If this is not set to <code>any</code>, the control accepts only values at multiples of the step value greater than the minimum.</td>
+   <td><code><em>string</em></code><em>:</em> その要素の {{ htmlattrxref("step", "input") }} 属性を<strong>返却または設定</strong>します。これは、 {{htmlattrxref("min","input")}} や {{htmlattrxref("max","input")}} と共に、数値や日時の値を設定する際の増分を制限します。文字列 <code>any</code> または正の浮動小数点数を設定することができます。 <code>any</code> が設定されていない場合、コントロールは最小値よりも大きい step 値の倍数のみを受け入れます。</td>
   </tr>
   <tr>
    <td><code>valueAsDate</code></td>
-   <td><em>{{jsxref("Date")}}<code> object</code>:</em> <strong>Returns / Sets</strong> the value of the element, interpreted as a date, or <code>null</code> if conversion is not possible.</td>
+   <td><em>{{jsxref("Date")}}<code> object</code>:</em> その要素の値を、日時として解釈して<strong>返却または設定</strong>します。変換が不可能であれば <code>null</code> を返します。</td>
   </tr>
   <tr>
    <td><code>valueAsNumber</code></td>
-   <td><em><code>double</code>:</em> <strong>Returns</strong> the value of the element, interpreted as one of the following, in order:
+   <td><em><code>double</code>:</em> その要素の値を、次のいずれかのうち一つとして解釈して<strong>返します</strong>。解釈は以下の順で行われます。
     <ul>
-     <li>A time value</li>
-     <li>A number</li>
-     <li><code>NaN</code> if conversion is impossible</li>
+     <li>時刻の値</li>
+     <li>数値</li>
+     <li>変換が不可能であれば <code>NaN</code></li>
     </ul>
    </td>
   </tr>
   <tr>
    <td><code>autocapitalize</code> {{experimental_inline}}</td>
-   <td><code><em>string</em></code><em>:</em> <strong>Defines</strong> the capitalization behavior for user input. Valid values are <code>none</code>, <code>off</code>, <code>characters</code>, <code>words</code>, or <code>sentences</code>.</td>
+   <td><code><em>string</em></code><em>:</em> ユーザーの入力を大文字化する動作を<strong>定義します</strong>。有効な値は <code>none</code>、<code>off</code>、<code>characters</code>、<code>words</code>、<code>sentences</code> です。</td>
   </tr>
   <tr>
    <td><code>inputmode</code></td>
-   <td>Provides a hint to browsers as to the type of virtual keyboard configuration to use when editing this element or its contents.</td>
+   <td>この要素またはその内容を編集する際に使用する仮想キーボード設定の種類について、ブラウザーにヒントを与えます。</td>
   </tr>
  </tbody>
 </table>
 
 <dl>
  <dt>{{domxref("HTMLInputElement.align")}} {{obsolete_inline}}</dt>
- <dd><code><em>string</em></code><em>:</em> <strong>Represents</strong> the alignment of the element. <em>Use CSS instead.</em></dd>
+ <dd><code><em>string</em></code><em>:</em> 要素の配置を<strong>表します</strong>。<em>代わりに CSS を使用してください。</em></dd>
  <dt>{{domxref("HTMLInputElement.useMap")}} {{ obsolete_inline }}</dt>
- <dd><code><em>string</em></code><em>:</em> <strong>Represents</strong> a client-side image map.</dd>
+ <dd><code><em>string</em></code><em>:</em> クライアント側イメージマップを<strong>表します</strong>。</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+<h2 id="Methods">メソッド</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <td>{{domxref("HTMLElement.blur()", "blur()")}}</td>
-   <td>Removes focus from the input element; keystrokes will subsequently go nowhere.</td>
+   <td>{{domxref("HTMLOrForeignElement/blur", "blur()")}}</td>
+   <td>input 要素からフォーカスを外します。キー入力はどこにも行かなくなります。</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLElement.click()", "click()")}}</td>
-   <td>Simulates a click on the input element.</td>
+   <td>input 要素のクリックをシミュレートします。</td>
   </tr>
   <tr>
-   <td>{{domxref("HTMLElement.focus()", "focus()")}}</td>
-   <td>Focuses on the input element; keystrokes will subsequently go to this element.</td>
+   <td>{{domxref("HTMLOrForeignElement/focus", "focus()")}}</td>
+   <td>input 要素にフォーカスを与えます。キー入力がこの要素に行くようになります。</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLInputElement.select()", "select()")}}</td>
-   <td>Selects all the text in the input element, and focuses it so the user can subsequently replace all of its content.</td>
+   <td>input 要素のすべてのテキストを選択し、ユーザーがその内容をすべて置き換えることができるように、テキストにフォーカスを与えます。</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLInputElement.setSelectionRange()", "setSelectionRange()")}}</td>
-   <td>Selects a range of text in the input element (but does not focus it).</td>
+   <td>input 要素のテキストの範囲を選択します (ただし、フォーカスは与えません)。</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLInputElement.setRangeText()", "setRangeText()")}}</td>
-   <td>Replaces a range of text in the input element with new text.</td>
+   <td>input 要素のテキストの範囲を新しいテキストで置き換えます。</td>
   </tr>
   <tr>
    <td><code>setCustomValidity()</code></td>
-   <td>Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.</td>
+   <td>要素に独自の検証メッセージ設定します。このメッセージが空の文字列ではない場合、その要素は独自の検証のエラーに見舞われており、検証に不合格になります。</td>
   </tr>
   <tr>
    <td><code>checkValidity()</code></td>
-   <td>Returns a {{jsxref("Boolean")}} that is <code>false</code> if the element is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires an {{event("invalid")}} event at the element. It returns <code>true</code> if the element is not a candidate for constraint validation, or if it satisfies its constraints.</td>
+   <td>{{jsxref("Boolean")}} を返します。 <code>false</code> の場合はその要素が制約検証の候補であり、制約を満たしていないことを表します。この場合、その要素で {{event("invalid")}} イベントも発生します。 <code>true</code> の場合はその要素が制約検証の候補でないか、制約を満たしていることを表します。</td>
   </tr>
   <tr>
    <td><code>reportValidity()</code></td>
-   <td>Runs the <code>checkValidity()</code> method, and if it returns false (for an invalid input or no pattern attribute provided), then it reports to the user that the input is invalid in the same manner as if you submitted a form.</td>
+   <td><code>checkValidity()</code> メソッドを実行し、 false が返された場合 (無効な入力や pattern 属性が提供されていない場合) には、フォームを送信した場合と同様に、入力が無効であることをユーザーに報告します。</td>
   </tr>
  </tbody>
 </table>
 
 <dl>
  <dt>{{domxref("HTMLInputElement.stepDown()")}}</dt>
- <dd>Decrements the {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} * n), where n defaults to 1 if not specified. Throws an INVALID_STATE_ERR exception:
+ <dd>{{htmlattrxref("value","input")}} を ({{htmlattrxref("step","input")}} * n) だけ減少させます。 n が指定されなかった場合の既定値は 1 です。次の場合は INVALID_STATE_ERR 例外が発生します。
  <ul>
-  <li>if the method is not applicable to for the current {{htmlattrxref("type","input")}} value,</li>
-  <li>if the element has no {{htmlattrxref("step","input")}} value,</li>
-  <li>if the {{htmlattrxref("value","input")}} cannot be converted to a number,</li>
-  <li>if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.</li>
+  <li>現在の {{htmlattrxref("type","input")}} の値にこのメソッドが適用できない場合</li>
+  <li>要素に {{htmlattrxref("step","input")}} 値が設定されていない場合</li>
+  <li>{{htmlattrxref("value","input")}} が数値に変換できない場合</li>
+  <li>結果の値が {{htmlattrxref("max","input")}} を超えたり、 {{htmlattrxref("min","input")}} を下回ったりする場合</li>
  </ul>
  </dd>
  <dt>{{domxref("HTMLInputElement.stepUp()")}}</dt>
- <dd>Increments the {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} * n), where n defaults to 1 if not specified. Throws an INVALID_STATE_ERR exception:
+ <dd>{{htmlattrxref("value","input")}} を ({{htmlattrxref("step","input")}} * n) だけ増加させます。 n が指定されなかった場合の既定値は 1 です。次の場合は INVALID_STATE_ERR 例外が発生します。
  <ul>
-  <li>if the method is not applicable to for the current {{htmlattrxref("type","input")}} value.,</li>
-  <li>if the element has no {{htmlattrxref("step","input")}} value,</li>
-  <li>if the {{htmlattrxref("value","input")}} cannot be converted to a number,</li>
-  <li>if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.</li>
+  <li>現在の {{htmlattrxref("type","input")}} の値にこのメソッドが適用できない場合</li>
+  <li>要素に {{htmlattrxref("step","input")}} 値が設定されていない場合</li>
+  <li>{{htmlattrxref("value","input")}} が数値に変換できない場合</li>
+  <li>結果の値が {{htmlattrxref("max","input")}} を超えたり、 {{htmlattrxref("min","input")}} を下回ったりする場合</li>
  </ul>
  </dd>
  <dt>{{domxref("HTMLInputElement.mozSetFileArray()")}} {{non-standard_inline}}</dt>
- <dd>Sets the files selected on the input to the given array of {{domxref("File")}} objects. This is an alternative to <code>mozSetFileNameArray()</code> which can be used in frame scripts: a chrome script can <a href="/ja/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">open files as File objects</a> and send them via <a href="/ja/Firefox/Multiprocess_Firefox/The_message_manager">message manager</a>.</dd>
+ <dd>入力欄で選択されたファイルを、与えられた {{domxref("File")}} オブジェクトの配列に設定します。これは、フレームスクリプトで使用可能な <code>mozSetFileNameArray()</code> の代替となるものです。クロームスクリプトは<a href="/ja/docs/Extensions/Using_the_DOM_File_API_in_chrome_code">ファイルを File オブジェクトとして開き</a>、<a href="/ja/docs/Mozilla/Firefox/Multiprocess_Firefox/The_message_manager">メッセージマネージャー</a>を介してそれらを送信することができます。</dd>
  <dt>{{domxref("HTMLInputElement.mozGetFileNameArray()")}} {{non-standard_inline}}</dt>
- <dd>Returns an array of all the file names from the input.</dd>
+ <dd>その入力欄からすべてのファイル名の配列を返します。</dd>
  <dt>{{domxref("HTMLInputElement.mozSetFileNameArray()")}} {{non-standard_inline}}</dt>
- <dd>Sets the filenames for the files selected on the input. Not for use in <a href="/ja/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts">frame scripts</a>, because it accesses the file system.</dd>
+ <dd>入力で選択されたファイルのファイル名を設定します。ファイルシステムにアクセスするので、<a href="/ja/docs/Mozilla/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts">フレームスクリプト</a>では使用できません。</dd>
 </dl>
 
-<h2 id="Events" name="Events">イベント</h2>
+<h2 id="Events">イベント</h2>
 
-<p>Listen to these events using <code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface:</p>
+<p>以下のイベントは、 <code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> を用いるか、このインターフェイスの <code>on<em>イベント名</em></code> プロパティにイベントリスナーを割り当てるかして待ち受けしてください。</p>
 
 <dl>
  <dt><a href="/ja/docs/Web/API/HTMLElement/input_event"><code>input</code></a></dt>
- <dd>Fires when the <code>value</code> of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed. Note that this is actually fired on the {{domxref("HTMLElement")}} interface and also applies to <code><a href="/ja/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code> elements, but we've listed it here because it is most commonly used with form input elements.<br>
- Also available via the <code><a href="/ja/docs/Web/API/GlobalEventHandlers/oninput">oninput</a></code> event handler property.</dd>
+ <dd>{{HTMLElement("input")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}} のいずれかの要素の <code>value</code> が変更されたときに発生します。なお、このイベントは実際には {{domxref("HTMLElement")}} インターフェイス上で発生し、 <code><a href="/ja/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code> 要素にも適用されますが、フォーム入力要素で最も一般的に使用されるため、ここに挙げています。<br>
+<code><a href="/ja/docs/Web/API/GlobalEventHandlers/oninput">oninput</a></code> イベントハンドラープロパティからも利用できます。</dd>
  <dt><code><a href="/ja/docs/Web/API/HTMLElement/invalid_event">invalid</a></code></dt>
- <dd>Fired when an element does not satisfy its constraints during constraint validation.<br>
- Also available via the <code><a href="/ja/docs/Web/API/GlobalEventHandlers/oninvalid">oninvalid</a></code> event handler property.</dd>
+ <dd>制約検証時に、要素が制約を満たしていなかった場合に発生します。<br>
+ <code><a href="/ja/docs/Web/API/GlobalEventHandlers/oninvalid">oninvalid</a></code> イベントハンドラープロパティからも利用できます。</dd>
  <dt><code><a href="/ja/docs/Web/API/HTMLInputElement/search_event">search</a></code></dt>
- <dd>Fired when a search is initiated on an {{HTMLElement("input")}} of <code>type="search"</code>.<br>
- Also available via the <code><a href="/ja/docs/Web/API/GlobalEventHandlers/onsearch">onsearch</a></code> event handler property.</dd>
+ <dd>{{HTMLElement("input")}} の <code>type="search"</code> で検索が開始されたときに発生します。<br>
+ <code><a href="/ja/docs/Web/API/GlobalEventHandlers/onsearch">onsearch</a></code> イベントハンドラープロパティからも利用できます。</dd>
 </dl>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -395,15 +395,15 @@ translation_of: Web/API/HTMLInputElement
   <tr>
    <td>{{SpecName('HTML5 W3C', "forms.html#the-input-element", "HTMLInputElement")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>技術的には、<code>tabindex</code> プロパティと <code>accesskey</code> プロパティ、ならびに <code>blur()</code>、<code>click()</code>、および <code>focus()</code> メソッドは、現在 {{domxref("HTMLElement")}} で定義されています。<br>
+   <td>技術的に、<code>tabindex</code> と <code>accesskey</code> の各プロパティ、ならびに <code>blur()</code>、<code>click()</code>、<code>focus()</code> の各メソッドが {{domxref("HTMLElement")}} で定義されるようになりました。<br>
     次のプロパティは廃止されました: <code>align</code> および <code>useMap</code>。<br>
-    次のプロパティが追加されました: <code>autocomplete</code>, <code>autofocus</code>, <code>dirName</code>, <code>files</code>, <code>formAction</code>, <code>formEncType</code>, <code>formMethod</code>, <code>formNoValidate</code>, <code>formTarget</code>, <code>height</code>, <code>indeterminate</code>, <code>labels</code>, <code>list</code>, <code>max</code>, <code>min</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>required</code>, <code>selectionDirection</code>, <code>selectionEnd</code>, <code>selectionStart</code>, <code>step</code>, <code>validationMessage</code>, <code>validity</code>, <code>valueAsDate</code>, <code>valueAsNumber</code>, <code>width</code>, <code>willValidate</code>.<br>
+    次のプロパティが追加されました: <code>autocomplete</code>, <code>autofocus</code>, <code>dirName</code>, <code>files</code>, <code>formAction</code>, <code>formEnctype</code>, <code>formMethod</code>, <code>formNoValidate</code>, <code>formTarget</code>, <code>height</code>, <code>indeterminate</code>, <code>labels</code>, <code>list</code>, <code>max</code>, <code>min</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>required</code>, <code>selectionDirection</code>, <code>selectionEnd</code>, <code>selectionStart</code>, <code>step</code>, <code>validationMessage</code>, <code>validity</code>, <code>valueAsDate</code>, <code>valueAsNumber</code>, <code>width</code>, <code>willValidate</code>.<br>
     次のメソッドが追加されました: <code>checkValidity()</code>, <code>setCustomValidity()</code>, <code>setSelectionRange()</code>, <code>stepUp()</code>, <code>stepDown()</code></td>
   </tr>
   <tr>
    <td>{{SpecName('DOM2 HTML', 'html.html#ID-6043025', 'HTMLInputElement')}}</td>
    <td>{{Spec2('DOM2 HTML')}}</td>
-   <td><code>size</code> プロパティは、<code>unsigned long</code> になりました。<code>type</code> プロパティはすべて小文字で指定する必要があります。</td>
+   <td><code>size</code> プロパティが <code>unsigned long</code> になりました。<code>type</code> プロパティはすべて小文字で指定する必要があります。</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM1', 'level-one-html.html#ID-6043025', 'HTMLInputElement')}}</td>
@@ -413,7 +413,7 @@ translation_of: Web/API/HTMLInputElement
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <div>
 <div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
@@ -421,7 +421,7 @@ translation_of: Web/API/HTMLInputElement
 <p>{{Compat("api.HTMLInputElement")}}</p>
 </div>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>このインターフェイスを実装している HTML 要素: {{ HTMLElement("input") }}</li>
