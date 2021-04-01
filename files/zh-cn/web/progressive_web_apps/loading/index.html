@@ -15,13 +15,13 @@ original_slug: Web/Progressive_web_apps/加载
 
 <p>尽快把有效的信息输送给用户是一件非常重要的事情：等待页面加载的时间越长，用户在页面加载完成之前离开的概率就越大。为了达到这个目的，网页加载完成前，我们应该用占位符在最终资源将会加载的地方展示最起码的视图骨架。</p>
 
-<p>这个功能可以用渐进式加载来实现，它也被称为<a href="https://en.wikipedia.org/wiki/Lazy_loading">懒加载</a>。它的做法是延迟加载尽可能多的资源（HTML、CSS 和 JavaScript），只有在用户第一次使用到它的时候，它才会被立刻加载。</p>
+<p>这个功能可以用渐进式加载来实现，它也被称为<a href="https://zh.wikipedia.org/wiki/%E6%83%B0%E6%80%A7%E8%BC%89%E5%85%A5">惰性加载</a>。它的做法是延迟加载尽可能多的资源（HTML、CSS 和 JavaScript），只有在用户第一次使用到它的时候，它才会被立刻加载。</p>
 
 <h2 id="打包还是拆分">打包还是拆分</h2>
 
-<p>大部分用户不会用到一个网站的所有页面，但我们通常的做法却是把所有的功能都打包进一个很大的文件里面。一个 <code>bundle.js</code> 文件的大小可能会有几 M，一个打包后的 <code>style.css</code> 会包含一切东西，从 CSS 结构定义到各个版本的网站的样式：移动端、平板、桌面、打印等等。</p>
+<p>大部分用户不会用到一个网站的所有页面，但我们通常的做法却是把所有的功能都打包进一个很大的文件里面。一个 <code>bundle.js</code> 文件的大小可能会有几 M，一个打包后的 <code>style.css</code> 会包含网站的一切样式，从 CSS 结构定义到网站在各个版本的样式：移动端、平板、桌面、打印版等等。</p>
 
-<p>通常来说只加载一个较大的打包后文件会比加载很多个小文件要快一些，但如果用户并不是一开始就需要所有的资源，我们就可以首先加载那些关键的资源，其他的资源等到需要的时候再去加载它。</p>
+<p>通常来说，只加载一个较大的打包后文件会比加载很多个小文件要快一些，但如果用户并不是一开始就需要所有的资源，我们就可以首先加载那些关键的资源，其他的资源等到需要的时候再去加载它。</p>
 
 <h2 id="阻塞渲染的资源">阻塞渲染的资源</h2>
 
@@ -44,7 +44,7 @@ original_slug: Web/Progressive_web_apps/加载
 
 <h2 id="图片">图片</h2>
 
-<p>除了 JavaScript 和 CSS，网站通常还会包含大量的图片。当你把 {{htmlelement("img")}} 素添加到网站里面时，对应的所有图片资源都会在页面初始化时被下载下来。在网站就绪之前下载几 M 的图片资源并不罕见，但它还是会给人一种性能不好的印象。我们并不需要在一打开网站的时候就以最高的画质呈现所有的图片。</p>
+<p>除了 JavaScript 和 CSS，网站通常还会包含大量的图片。当你把 {{htmlelement("img")}} 元素添加到网站里面时，对应的所有图片资源都会在页面初始化时被下载下来。在网站就绪之前下载几 M 的图片资源并不罕见，但它还是会给人一种性能不好的印象。我们并不需要在一打开网站的时候就以最高的画质呈现所有的图片。</p>
 
 <p>这也是可以优化的。首先，你可以使用类似 <a href="https://tinypng.com/">TinyPNG</a> 这类服务，它可以在不过分降低画质的情况下压缩文件的大小。如果你已经做了这一点，那就可以考虑一下如何通过 JavaScript 来优化图片的下载了，我们将会在下面的篇幅提到这些内容。</p>
 
@@ -69,19 +69,19 @@ const loadImages = (image) =&gt; {
   };
 };</pre>
 
-<p>当函数 <code>loadImages</code> 把图片地址从  <code>data-src</code> 移动到 <code>src</code> 上时，  <code>imagesToLoad</code> 变量包含了所有图片的链接。当每个图片都已经加载完成时，我们会把 <code>data-src</code> 属性移除掉，因为它已经没有任何用处了。我们遍历所有的图片，然后加载它们：</p>
+<p>当函数 <code>loadImages</code> 把图片地址从 <code>data-src</code> 移动到 <code>src</code> 上时，<code>imagesToLoad</code> 变量包含了所有图片的链接。当每个图片都已经加载完成时，我们会把 <code>data-src</code> 属性移除掉，因为它已经没有任何用处了。我们遍历所有的图片，然后加载它们：</p>
 
 <pre class="brush: js">imagesToLoad.forEach((img) =&gt; {
   loadImages(img);
 });</pre>
 
-<h3 id="用_CSS_制造模糊">用 CSS 制造模糊</h3>
+<h3 id="用_CSS_制造模糊效果">用 CSS 制造模糊效果</h3>
 
-<p>为了让整个过程视觉效果更好，图片占位符的样式用 CSS 做了模糊处理.</p>
+<p>为了让整个过程视觉效果更好，图片占位符的样式用 CSS 做了模糊处理：</p>
 
-<p><img alt="Screenshot of placeholder images in the js13kPWA app." src="https://mdn.mozillademos.org/files/15992/js13kpwa-placeholders.png" style="height: 684px; width: 675px;"></p>
+<p><img alt="js13kPWA 应用中占位符图片的效果截图" src="https://mdn.mozillademos.org/files/15992/js13kpwa-placeholders.png" style="height: 684px; width: 675px;"></p>
 
-<p>我们在开始时用模糊滤镜来渲染图像，因此可以实现一个从模糊到清晰图像的过渡效果：</p>
+<p>我们一开始用模糊滤镜来渲染图像，然后就可以实现从模糊到清晰图像的过渡效果：</p>
 
 <pre class="brush: css">article img[data-src] {
   filter: blur(0.2em);
@@ -126,15 +126,15 @@ article img {
 
 <p>如果浏览器支持 {{domxref("IntersectionObserver")}} 对象，应用会新建一个它的实例。当一个或多个监听对象跟 Observer 发生交互时（即图片出现在视口中时），作为参数传递的函数可以用来处理一些回调事务（例如图片加载，译者注）。我们可以迭代每一个对象，并对它们进行相应的处理：当图片可见时，我们开始加载真正的图片并且停止监听这张图片，因为在图片加载完成之后，我们已经没必要再知道它的状态了。</p>
 
-<p>让我们来重申一下我们之前提到的渐进增强：代码这么写的好处在于，不管浏览器支不支持 Intersection Observer，应用都能够正常工作。如果浏览器不支持 Intersection Observer，我们就会用上面提到的基础方法来实现图片的加载。</p>
+<p>重申我们之前提到的渐进增强理念：代码这么写的好处在于，不管浏览器支不支持 Intersection Observer，应用都能够正常工作。如果浏览器不支持 Intersection Observer，我们就会用上面提到的基础方法来实现图片的加载。</p>
 
 <h2 id="更多改进">更多改进</h2>
 
-<p>要记得，有许多方法都可以用来优化应用加载时间，这个示例只探讨了其中的一种方法。你可以尝试让你的应用变的更加健壮，让它在没有 JavaScript 的情况下也能工作：使用 {{htmlelement("noscript")}} 标签来展示已经分配了最终 <code>src</code> 路径的图片，或者在 <code>&lt;img&gt;</code> 外面套上一个 {{htmlelement("a")}} 标签并指向对应的图片资源，当用户想看的时候，他们可以点击图片来查看。</p>
+<p>要记得，有许多方法都可以用来优化应用加载时间，这个示例只探讨了其中的一种方法。你可以尝试让你的应用变的更加健壮，让它在没有 JavaScript 的情况下也能工作，例如使用 {{htmlelement("noscript")}} 标签来展示已经分配了最终 <code>src</code> 路径的图片，或者在 <code>&lt;img&gt;</code> 外面套上一个 {{htmlelement("a")}} 标签并指向对应的图片资源，当用户想看的时候，他们可以点击图片来查看。</p>
 
 <p>不过这个 app 本身依赖于 JavaScript，所以我们没有这么做：没有 JavaScript，游戏列表就无法加载，Service Worker 相关的代码也将无法执行。</p>
 
-<p>我们可以重写整个加载过程，让它不止加载图片，而是加载整个列表项，包括详细介绍和链接。当用户往下滚动的时候，就加载新的项目，让它像一个可以无限滚动的页面。通过这样的方式，HTML 页面体积会达到最小，加载时间可以更短，我们也可以从中得到更大的性能优势。</p>
+<p>我们可以重写整个加载过程，让它不止加载图片，而是加载整个列表项，包括详细介绍和链接。当用户往下滚动的时候，就加载新的项目，让它像一个可以无限滚动的页面。这样，HTML 页面体积就能达到最小，加载时间可以更短，我们也可以获得更大的性能优势。</p>
 
 <h2 id="结论">结论</h2>
 
@@ -142,7 +142,7 @@ article img {
 
 <p>记住渐进增强的要点：不管在任何硬件或平台，都能提供一个可用的应用，但在现代浏览器中可以有更好的用户体验。</p>
 
-<h2 id="最后的思考">最后的思考</h2>
+<h2 id="结语">结语</h2>
 
 <p>这就是这个系列的所有内容了。我们通过 <a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa"> js13kPWA 示例应用的源码</a> 学习了渐进式 Web 应用的的用法，包括 <a href="/en-US/docs/Web/Apps/Progressive/Introduction">PWA 介绍</a>、<a href="/en-US/docs/Web/Apps/Progressive/App_structure">PWA 结构</a>、<a href="/en-US/docs/Web/Apps/Progressive/Offline_Service_workers">通过 Service Worker 让 PWA 离线工作</a>、<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Progressive/Installable_PWAs">让 PWA 易于安装</a>，以及最后的通知功能。在 <a href="https://serviceworke.rs/">Service Worker Cookbook</a> 的帮助下，我们还解释了推送的原理。而在本篇文章中，我们探讨了渐进式加载的概念，包括一个使用了 <a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a> 的有趣示例。</p>
 
