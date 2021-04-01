@@ -18,17 +18,20 @@ like to add here, feel free to create an issue to talk about it.
 
 Our article headings are nearly always given IDs, so that we can automatically
 generate in-article navigation, identify code blocks to create live samples,
-and other reasons too. When translating headings, you should always translate
-the ID too, so for example:
+and other reasons too. When translating headings, you don't need to translate
+the ID too; the rest of the slug is not translated, so this keeps it all
+consistent.
+
+For example:
 
 ```html
 <h2 id="tutorials">Tutorials</h2>
 ```
 
-in the fr locale would be
+in the `fr` locale would be
 
 ```html
-<h2 id="tutoriels">Tutoriels</h2>
+<h2 id="tutorials">Tutoriels</h2>
 ```
 
 We generally advise that you write all IDs in lower-case. The platform
