@@ -7,22 +7,46 @@ translation_of: Web/API/Window/opener
 
 <h2 id="Summary" name="Summary">Resumen</h2>
 
-<p>Devuelve una referencia de, la ventana que abrió la ventana actuál.</p>
+<p>
+  <span class="seoSummary">
+    La propiedad <code><strong>opener</strong></code>, de la interfaz {{domxref("Window")}},
+    devuelve una referencia de la ventana que abrió otra ventana,
+    ya fuese con {{domxref("Window.open", "open()")}}, o navegando
+    un enlace que tuviese el atributo {{htmlattrxref("target", "a")}} con el valor <code>"_blank"</code>.
+  </span>
+  La referencia es un objeto {{domxref("Window")}}.
+</p>
+<p>
+  En otras palabras, si la ventana <code>A</code> abre la ventana <code>B</code>,
+  y se escribe en la consola de la ventana <code>B</code> <code>window.opener</code>, se devuelve un objeto
+  {{domxref("Window")}} de la ventana <code>A</code>.
+</p>
+
 
 <h2 id="Syntax" name="Syntax">Sintaxis</h2>
 
-<pre class="syntaxbox"><var>objRef</var> = window.opener;
+<pre class="syntaxbox"><var>const ventanaReferida</var> = window.opener;
 </pre>
-
 <h2 id="Example" name="Example">Ejemplo</h2>
 
-<pre class="brush:js">if (window.opener != indexWin) {
-  referToTop(window.opener);
-}
+<pre class="brush:js">
+  //Código para la ventana que fue abierta
+  if (window.opener != null) {
+   const ventanaReferida = window.opener;
+   ventanaReferida.document.write("Este es el nuevo contenido de la ventana referida");
+   ventanaReferida.alert("Se ha sobrescrito el contenido");
+  }
 </pre>
 
 <h2 id="Notes" name="Notes">Notas</h2>
 
-<p>Cuando una ventana es abierta desde otra utilizando "Window.open()", esta, mantiene una referencia a la primera mediante "window.opener".  Si la ventana actuál no fué abierta, el metodo retorna NULL.</p>
-
-<p>El navegador de Windows Phone no soporta window.opener. Tampoco es soportado en Internet Explorer si la ventana nueva se encuentra en una zona de seguridad distinta.</p>
+<p>
+  Por motivos de seguridad, es posible que esta propiedad sólo devuelva la ventana referida si ambas páginas tienen el
+  mismo origen ({{HTTPHeader("Origin")}});
+  devolviendo {{jsxref("null")}} si se intenta usar en una página externa.
+</p>
+</p>
+<p>
+  El navegador de Windows Phone no soporta <code>window.opener</code>.
+  Tampoco es soportado en Internet Explorer si la ventana nueva se encuentra en una zona de seguridad distinta.
+</p>
