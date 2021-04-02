@@ -69,69 +69,7 @@ translation_of: Web/API/BatteryManager
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionalité</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Support basique</td>
-   <td>
-    <p>{{CompatChrome(39.0)}}</p>
-
-    <p>{{CompatNo()}}</p>
-   </td>
-   <td>{{CompatGeckoDesktop("10")}} {{ property_prefix("moz") }} [1]<br>
-    {{CompatGeckoDesktop("16")}} (without prefix) [2]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>25</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionalité</th>
-   <th>Android</th>
-   <th>Chrome Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support basique</td>
-   <td>{{CompatNo()}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{CompatGeckoMobile("10")}} {{ property_prefix("moz") }} [1]<br>
-    {{CompatGeckoMobile("16")}} (without prefix) [2]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notes_Gecko">Notes Gecko</h3>
-
-<div class="note">
-<p>[1] désactivée par défaut dans Firefox 10.0, mais peut être activé réglant la préférence <code>dom.battery.enabled </code>à <code>true</code>. À partir de Firefox 11.0, <code>mozBattery </code>est activée par défaut pour mac le support est venus avec Gecko 18.0 {{geckoRelease("18.0")}}.</p>
-</div>
-
-<p class="note">[2] L'API batterie est actuellement supportée sur Android, Windows et Linux avec UPower installé. Support de MacOS est disponible à partir de Gecko 18.0 {{geckoRelease ("18.0")}}.</p>
+<p>{{Compat("api.BatteryManager")}}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

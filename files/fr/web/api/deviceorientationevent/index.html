@@ -42,12 +42,14 @@ translation_of: Web/API/DeviceOrientationEvent
 <pre class="brush: js">window.addEventListener('deviceorientation', function(event) {
   console.log("z : " + event.alpha + "\n x : " + event.beta + "\n y : " + event.gamma);
 });</pre>
-<h2 id="Spécifications">Spécifications</h2>
+
+<h2 id="Specifications">Spécifications</h2>
+
 <table class="standard-table">
  <thead>
   <tr>
    <th scope="col">Spécification</th>
-   <th scope="col">État</th>
+   <th scope="col">Statut</th>
    <th scope="col">Commentaires</th>
   </tr>
  </thead>
@@ -55,62 +57,17 @@ translation_of: Web/API/DeviceOrientationEvent
   <tr>
    <td>{{SpecName('Device Orientation')}}</td>
    <td>{{Spec2('Device Orientation')}}</td>
-   <td>Spécification initiale.</td>
+   <td>Définition initiale.</td>
   </tr>
  </tbody>
 </table>
-<h2 id="Compatibilité_entre_les_navigateurs">Compatibilité entre les navigateurs</h2>
-<p>Compatibilité pour DeviceOrientationEvent:</p>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Technologie</th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari (WebKit)</th>
-   </tr>
-   <tr>
-    <td>Support de base</td>
-    <td>7.0</td>
-    <td>3.6 (mozOrientation),<br>
-     6</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-    <td>{{ CompatUnknown() }}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th>Technologie</th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Phone</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>Support de base</td>
-    <td>3.0</td>
-    <td>3.6 (mozOrientation),<br>
-     6</td>
-    <td>{{ CompatNo() }}</td>
-    <td>{{ CompatNo() }}</td>
-    <td>4.2</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<h3 id="Notes_spécifiques_à_Gecko">Notes spécifiques à Gecko</h3>
-<p>Firefox 3.6, 4, et 5 supportent <a href="/en-US/DOM/MozOrientation" title="MozOrientation">mozOrientation </a>au lieu de l'interface  standard <code>DeviceOrientationEvent.</code></p>
-<h2 id="Voir_aussi">Voir aussi</h2>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.DeviceMotionEvent")}}</p>
+
+<h2 id="See_also">Voir aussi</h2>
+
 <ul>
  <li>{{ event("deviceorientation") }}</li>
  <li>{{ domxref("DeviceMotionEvent") }}</li>

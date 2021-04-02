@@ -50,65 +50,7 @@ translation_of: Web/API/Element/requestFullScreen
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Firefox</th>
-   <th>Internet Explorer</th>
-   <th>Edge</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Support basique</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("webkit")}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("9.0")}} as <code>mozRequestFullScreen</code><sup>[2]</sup><br>
-    {{CompatGeckoDesktop("47.0")}} (behind full-screen-api.unprefix.enabled</td>
-   <td>11{{property_prefix("ms")}}<sup>[3]</sup></td>
-   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support basique</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("webkit")}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("9.0")}} as <code>mozRequestFullScreen</code><sup>[2]</sup><br>
-    {{CompatGeckoMobile("47.0")}} (behind full-screen-api.unprefix.enabled</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Également implémenté en tant que <code>webkitRequestFullScreen</code>.</p>
-
-<p>[2] Implémenté en tant que <code>mozRequestFullScreen</code> (remarquez le S majuscule pour <em>Screen</em>). Avant Firefox 44, Gecko autorisait incorrectement les éléments présents dans une  {{HTMLElement('frame')}} ou un {{HTMLElement('object')}} de demander, et d'obtenir, le mode plein écran. Dans les versions 44 et supérieures de Firefox, ceci a été corrigé : seuls les éléments dans le plus haut niveau du document ou dans une {{HTMLElement('iframe')}} avec l'attribut {{htmlattrxref("allowfullscreen", "iframe")}} peuvent être affichés en plein écran.</p>
-
-<p>[3] Voir la <a href="https://msdn.microsoft.com/en-us/library/dn254939%28v=vs.85%29.aspx">documentation sur MSDN</a>.</p>
+<p>{{Compat("api.Element.requestFullscreen")}}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

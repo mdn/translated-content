@@ -25,7 +25,9 @@ original_slug: WebAPI/Utiliser_les_événéments_de_luminosité
     html.classList.remove('darklight');
   }
 });</pre>
-<h2 id="Specifications" name="Specifications">Spécifications</h2>
+
+<h2 id="Specifications">Spécifications</h2>
+
 <table class="standard-table">
   <thead>
     <tr>
@@ -38,61 +40,17 @@ original_slug: WebAPI/Utiliser_les_événéments_de_luminosité
     <tr>
       <td>{{ SpecName('AmbientLight', '', 'Ambient Light Events') }}</td>
       <td>{{ Spec2('AmbientLight') }}</td>
-      <td>Spécification initiale</td>
+      <td>Définition initiale</td>
     </tr>
   </tbody>
 </table>
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
-  <table class="compat-table">
-    <tbody>
-      <tr>
-        <th>Fonctionnalité</th>
-        <th>Chrome</th>
-        <th>Firefox (Gecko)</th>
-        <th>Internet Explorer</th>
-        <th>Opera</th>
-        <th>Safari</th>
-      </tr>
-      <tr>
-        <td>{{domxref("DeviceLightEvent")}}</td>
-        <td>{{CompatNo()}}</td>
-        <td>{{CompatGeckoDesktop("22.0")}} (Mac OS X seulement)</td>
-        <td>{{CompatNo()}}</td>
-        <td>{{CompatNo()}}</td>
-        <td>{{CompatNo()}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div id="compat-mobile">
-  <table class="compat-table">
-    <tbody>
-      <tr>
-        <th>Fonctionnalité</th>
-        <th>Android</th>
-        <th>Chrome for Android</th>
-        <th>Firefox Mobile (Gecko)</th>
-        <th>IE Mobile</th>
-        <th>Opera Mobile</th>
-        <th>Safari Mobile</th>
-      </tr>
-      <tr>
-        <td>{{domxref("DeviceLightEvent")}}</td>
-        <td>{{CompatNo()}}</td>
-        <td>{{CompatNo()}}</td>
-        <td>{{CompatGeckoMobile("15.0")}}</td>
-        <td>{{CompatNo()}}</td>
-        <td>{{CompatNo()}}</td>
-        <td>{{CompatNo()}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h3 id="Notes_relatives_à_Gecko">Notes relatives à Gecko</h3>
-<p>L'événement {{event("devicelight")}} est implémenté et activé par défaut via un paramètre dans Firefox Mobile pour Android (15.0) et dans Firefox OS (B2G). Une implémentation pour un navigateur de bureau sur Mac OS X est également disponible à partir de Gecko 22.0 {{geckoRelease("22.0")}}. Le support pour Windows 7 est en cours de progression (voir {{bug(754199)}}).</p>
-<h2 id="Voir_aussi">Voir aussi</h2>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.DeviceLightEvent")}}</p>
+
+<h2 id="See_also">Voir aussi</h2>
+
 <ul>
   <li>{{domxref("DeviceLightEvent")}}</li>
   <li>{{event("devicelight")}}</li>

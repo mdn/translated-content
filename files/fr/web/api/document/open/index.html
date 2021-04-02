@@ -40,79 +40,37 @@ document.open();
 
 <p>Si vous ne voulez pas créer une entrée d'historique, remplacez <code>open()</code> par <code>open("text/html", "replace")</code>.</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+<h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}}</td>
-   <td>{{Spec2("DOM2 HTML")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("HTML WHATWG", "#dom-document-open", "document.open()")}}</td>
+      <td>{{Spec2("HTML WHATWG")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM2 HTML", "html.html#ID-72161170", "document.open()")}}</td>
+      <td>{{Spec2("DOM2 HTML")}}</td>
+      <td>Définition initiale.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+<p>{{Compat("api.Document.open")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="See_also">Voir aussi</h2>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="Notes_propres_à_Gecko">Notes propres à Gecko</h2>
-
-<p><span id="result_box" lang="fr"><span>À partir de Gecko 1.9, cette méthode est soumise à la même règle d'origine que les autres propriétés et ne fonctionne pas si cela change l'origine du document.</span></span></p>
-
-<p><span id="result_box" lang="fr"><span>À partir de Gecko 1.9.2, <code>document.open()</code> utilise le <a href="https://developer.mozilla.org/fr/docs/Mozilla/Gecko/Script_security#Security_checks">principal</a> du document dont il utilise l'URI, au lieu de récupérer le principal hors de la pile.</span> <span>Par conséquent, vous ne pouvez plus appeler {{domxref ("document.write ()")}} dans un document non approuvé à partir de chrome, même en utilisant <code><a href="https://developer.mozilla.org/fr/docs/wrappedJSObject">wrappedJSObject</a></code>.</span></span></p>
+<ul>
+  <li>{{domxref("Document")}}</li>
+  <li>{{domxref("Window.open()")}}</li>
+</ul>
