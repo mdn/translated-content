@@ -14,9 +14,18 @@ tags:
   - text input
 translation_of: Web/Guide/HTML/Editable_content
 ---
-<p><span class="seoSummary">HTML では、すべての要素を{{原語併記("編集可能状態", "editable")}} にすることができます。JavaScript のいくつかのイベントハンドラーと併用することで、ウェブページを多機能でかつ高速に動作するリッチテキスト・エディターにしてしまうことも可能です。本記事では、この機能に関する情報を提供します。</span></p>
+<div class="notecard warning">
+  <h2>警告</h2>
+  <p><a href="https://w3c.github.io/editing/docs/execCommand/"><code>execCommand()</code> 仕様書</a>で警告しているように、この機能は<q>すべてのユーザーエージェントで一貫した、または完全な実装が行われているわけではなく</q>、それに加えて、 <a href="/ja/docs/Web/API/Document/execCommand"><code>Document.execCommand()</code></a> リファレンスページでは非推奨とされています。したがって、このページの内容の多くは、本番コードで使用するには信頼できません。</p>
+</div>
 
-<h2 id="How_does_it_work" name="How_does_it_work">どのような挙動を示すか</h2>
+<p><span class="seoSummary">HTML では、すべての要素を{{原語併記("編集可能状態", "editable")}} にすることができます。JavaScript のいくつかのイベントハンドラーと併用することで、ウェブページを多機能でかつ高速に動作するリッチテキストエディターにしてしまうことも可能です。本記事では、この機能に関する情報を提供します。</span></p>
+
+<div class="note">
+<p><strong>注</strong>: Firefox 63 Beta/Dev Edition では、ブラウザー間の互換性を高めるために、一部のリッチテキスト編集機能を既定で無効にしています。具体的には、 {{htmlelement("img")}}, {{htmlelement("table")}} および絶対位置指定要素のオブジェクトのサイズ変更、インラインテーブルを編集して行や列の追加や削除すること、および絶対位置指定要素の移動を可能にするグラバーです。詳しくは {{bug("1449564")}} を参照してください。</p>
+</div>
+
+<h2 id="How_does_it_work">どのような挙動を示すか</h2>
 
 <p>編集可能にする個所と密接に関係する要素へ {{htmlattrxref("contenteditable")}} 属性を設定しなければなりません。</p>
 
@@ -30,11 +39,11 @@ translation_of: Web/Guide/HTML/Editable_content
 
 <p>{{EmbedLiveSample('How_does_it_work')}}</p>
 
-<h2 id="Executing_commands" name="Executing_commands">コマンドを実行する</h2>
+<h2 id="Executing_commands">コマンドを実行する</h2>
 
-<p>HTML 要素の <code>contenteditable</code> 属性を <code>true</code> に設定すると、{{domxref("document.execCommand()")}} メソッドが使用可能になります。これは、編集可能な部分の内容物を操作する <a href="/ja/docs/Web/API/document.execCommand#Commands">コマンド</a> を実行できます。ほとんどのコマンドは文書の選択範囲に作用します (例えば、テキストに太字や斜体などのスタイルを適用する) が、新しい要素を挿入する (リンクを追加するなど) コマンドや行全体に作用する (インデント) コマンドもあります。<code>contentEditable</code> を使用しているときに <code>execCommand()</code> を呼び出すと、現在アクティブな編集可能要素に作用します。</p>
+<p>HTML 要素の <code>contenteditable</code> 属性を <code>true</code> に設定すると、{{domxref("document.execCommand()")}} メソッドが使用可能になります。これは、編集可能な部分の内容物を操作する <a href="/ja/docs/Web/API/document/execCommand#commands">コマンド</a> を実行できます。ほとんどのコマンドは文書の選択範囲に作用します (例えば、テキストに太字や斜体などのスタイルを適用する) が、新しい要素を挿入する (リンクを追加するなど) コマンドや行全体に作用する (インデント) コマンドもあります。<code>contentEditable</code> を使用しているときに <code>execCommand()</code> を呼び出すと、現在アクティブな編集可能要素に作用します。</p>
 
-<h2 id="Differences_in_markup_generation" name="Differences_in_markup_generation">マークアップ生成の違い</h2>
+<h2 id="Differences_in_markup_generation">マークアップ生成の違い</h2>
 
 <p>さまざまなブラウザーで <code>contenteditable</code> を使用することは、ブラウザーが生成するマークアップの違いのために、長い間苦痛でした。例えば、編集可能な要素内で新しいテキストの行を作成するために Enter/Return を押下したときのようなシンプルな場合でさえ、主要なブラウザー間で扱いが異なっていました (Firefox は {{htmlelement("br")}} 要素を挿入、IE/Opera は {{htmlelement("p")}} を使用、Chrome/Safari は {{htmlelement("div")}} を使用)。</p>
 
@@ -54,7 +63,7 @@ translation_of: Web/Guide/HTML/Editable_content
 
 <pre class="brush: js">document.execCommand("defaultParagraphSeparator", false, "br")<span class="punctuation token">;</span></pre>
 
-<h2 id="Security" name="Security">セキュリティ</h2>
+<h2 id="Security">セキュリティ</h2>
 
 <p>セキュリティ上の理由で Firefox は、JavaScript コードがクリップボード関連の機能 (コピーや貼り付けなど) を使用することをデフォルトで許可していません。<code>about:config</code> を使用して以下の設定を行うと、これらを有効化できます:</p>
 
@@ -63,10 +72,9 @@ user_pref("capability.policy.allowclipboard.sites", "https://www.mozilla.org");
 user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
 user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");</pre>
 
-<h2 id="Example_A_simple_but_complete_rich_text_editor" name="Example_A_simple_but_complete_rich_text_editor">例: シンプルであるが完成されたリッチテキストエディター</h2>
+<h2 id="Example_A_simple_but_complete_rich_text_editor">例: シンプルであるが完成されたリッチテキストエディター</h2>
 
-<div style="height: 500px; width: auto; overflow: auto;">
-<pre class="brush: html">&lt;!doctype html&gt;
+<pre class="brush: html" style="height: 500px; width: auto; overflow: auto;">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;title&gt;Rich Text Editor&lt;/title&gt;
@@ -218,11 +226,8 @@ img.intLink { border: 0; }
 &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-</div>
 
-<div class="note"><strong>注記:</strong> ページ内でエディターの作成や挿入を標準化する方法を知りたい場合は、<a href="/@api/deki/files/6243/=rich-text-editor.zip" title="rich-text-editor.zip">より複雑なリッチテキストエディターの例</a> をご覧ください。</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>{{domxref("HTMLElement.contentEditable")}}</li>
