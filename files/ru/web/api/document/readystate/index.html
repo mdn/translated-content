@@ -11,7 +11,7 @@ translation_of: Web/API/Document/readyState
 
 <p>Свойство<strong> <code>Document.readyState</code></strong> описывает состояние загрузки {{domxref("document")}}.</p>
 
-<p>Когда значение этого свойства изменяется, в объетке {{domxref("document")}} запускается событие {{event("readystatechange")}}.</p>
+<p>Когда значение этого свойства изменяется, в объекте {{domxref("document")}} запускается событие {{event("readystatechange")}}.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -24,9 +24,9 @@ translation_of: Web/API/Document/readyState
 
 <dl>
  <dt><code>loading</code></dt>
- <dd>Страница все еще загружается.</dd>
+ <dd>Страница все ещё загружается.</dd>
  <dt><code>interactive</code></dt>
- <dd>Страница уже загружена и <a href="/en-US/docs/Glossary/DOM">DOM</a> дерево построено, но дополнительные ресурсы, такие как изображения и <a href="/en-US/docs/Web/HTML/Element/iframe">iframe</a>, все еще загружаются.</dd>
+ <dd>Страница уже загружена и <a href="/en-US/docs/Glossary/DOM">DOM</a> дерево построено, но дополнительные ресурсы, такие как изображения и <a href="/en-US/docs/Web/HTML/Element/iframe">iframe</a>, все ещё загружаются.</dd>
  <dt><code>complete</code></dt>
  <dd>Страница и все дополнительные ресурсы уже загружены. Это состояние указывает, что событие {{event("load")}} уже вызвано.</dd>
 </dl>
@@ -37,9 +37,9 @@ translation_of: Web/API/Document/readyState
 
 <h3 id="Разные_состояния_загрузки_страницы">Разные состояния загрузки страницы</h3>
 
-<pre class="brush: js notranslate" dir="rtl"><span>switch (document.readyState) {
+<pre class="brush: js notranslate"><span>switch (document.readyState) {
   case "loading":
-    // Страница все еще загружается
+    // Страница все ещё загружается
     break;
   case "interactive":
     // Страница уже загружена. Теперь мы можем получить доступ к DOM объектам.

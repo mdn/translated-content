@@ -15,7 +15,7 @@ translation_of: WebAssembly/Loading_and_running
 
 <h2 id="Какие_есть_варианты">Какие есть варианты?</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">WebAssembly еще не интегрирована с </span></span> <code>&lt;script type='module'&gt;</code> <span class="tlid-translation translation" lang="ru"><span title="">или ES2015 </span><span class="alt-edited" title="">оператором</span></span> <code>import</code>, <span class="tlid-translation translation" lang="ru"><span title="">поэтому не существует пути, позволяющего использовать модули загрузки браузера для использования импорта.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">WebAssembly ещё не интегрирована с </span></span> <code>&lt;script type='module'&gt;</code> <span class="tlid-translation translation" lang="ru"><span title="">или ES2015 </span><span class="alt-edited" title="">оператором</span></span> <code>import</code>, <span class="tlid-translation translation" lang="ru"><span title="">поэтому не существует пути, позволяющего использовать модули загрузки браузера для использования импорта.</span></span></p>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Старые методы</span></span> {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} <span class="tlid-translation translation" lang="ru"><span title="">требуют создания </span></span>{{domxref("ArrayBuffer")}}, <span class="tlid-translation translation" lang="ru"><span title="">содержащего двоичный файл модуля WebAssembly после загрузки необработанных байтов, а затем скомпилировать/создать его экземпляр.</span></span> <span class="tlid-translation translation" lang="ru"><span title="">Это аналог</span></span> <code>new Function(string)</code>,<span class="tlid-translation translation" lang="ru"><span title=""> за исключением того, что мы заменяем строку символов (исходный код JavaScript) буфером байтов массива (исходный код WebAssembly).</span></span></p>
 
@@ -86,7 +86,7 @@ translation_of: WebAssembly/Loading_and_running
 
 <h2 id="Используя_XMLHttpRequest">Используя XMLHttpRequest</h2>
 
-<p><code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> <span class="tlid-translation translation" lang="ru"><span title="">несколько старше, чем</span></span> Fetch, <span class="tlid-translation translation" lang="ru"><span title="">но все же может успешно использоваться для получения типизированного массива.</span> <span title="">Опять же, если предположить, что наш модуль называется </span></span><code>simple.wasm</code>:</p>
+<p><code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> <span class="tlid-translation translation" lang="ru"><span title="">несколько старше, чем</span></span> Fetch, <span class="tlid-translation translation" lang="ru"><span title="">но всё же может успешно использоваться для получения типизированного массива.</span> <span title="">Опять же, если предположить, что наш модуль называется </span></span><code>simple.wasm</code>:</p>
 
 <ol>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Создайте новый экземпляр </span></span>{{domxref("XMLHttpRequest()")}} <span class="tlid-translation translation" lang="ru"><span title="">и используйте его метод </span></span>{{domxref("XMLHttpRequest.open","open()")}} <span class="tlid-translation translation" lang="ru"><span title="">для открытия запроса, задав для метода запроса значение </span></span> <code>GET</code> <span class="tlid-translation translation" lang="ru"><span title="">и указав путь к файлу, который мы хотим получить.</span></span></li>
@@ -110,5 +110,5 @@ request.onload = function() {
 };</pre>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы можете увидеть пример этого в действии в <a href="https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html">xhr-wasm.html</a>.</p>
+<p><strong>Примечание</strong>: вы можете увидеть пример этого в действии в <a href="https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html">xhr-wasm.html</a>.</p>
 </div>

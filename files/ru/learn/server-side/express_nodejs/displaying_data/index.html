@@ -7,7 +7,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 
 <div>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">Теперь мы готовы добавить страницы, на которых будут отображаться книги веб-сайта  <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> и другие данные. Страницы будут включать главную страницу, которая показывает сколько записей определенного типа мы имеем и отдельные страницы для детального просмотра записей. Попутно мы приобретем практический опыт в получении записей из баз данных и использовании шаблонов.</p>
+<p class="summary">Теперь мы готовы добавить страницы, на которых будут отображаться книги веб-сайта  <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">LocalLibrary</a> и другие данные. Страницы будут включать главную страницу, которая показывает сколько записей определённого типа мы имеем и отдельные страницы для детального просмотра записей. Попутно мы приобретём практический опыт в получении записей из баз данных и использовании шаблонов.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -28,7 +28,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 
 <p>Следующим шагом является обеспечение правильных реализаций для страниц, которые отображают информацию из библиотеки (мы рассмотрим реализацию страниц с формами для создания, обновления или удаления информации в последующих статьях). Это включает в себя обновление функций контроллера для извлечения записей с помощью наших моделей и определение шаблонов для отображения этой информации пользователям.</p>
 
-<p>Мы начнем с обзорных / основных тем, объясняющих, как управлять асинхронными операциями в функциях контроллера и как писать шаблоны с помощью Pug. Затем мы предоставим реализации для каждой из наших основных страниц" только для чтения " с кратким объяснением любых специальных или новых функций, которые они используют.</p>
+<p>Мы начнём с обзорных / основных тем, объясняющих, как управлять асинхронными операциями в функциях контроллера и как писать шаблоны с помощью Pug. Затем мы предоставим реализации для каждой из наших основных страниц" только для чтения " с кратким объяснением любых специальных или новых функций, которые они используют.</p>
 
 <p>В конце этой статьи вы должны иметь хорошее сквозное понимание того, как маршруты, асинхронные функции, представления и модели работают на практике.</p>
 
@@ -37,7 +37,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 <p>Следующие подразделы проходят процесс добавления различных функций, необходимых для отображения необходимых страниц веб-сайта. Вы должны прочитать и проработать каждый из них по очереди, прежде чем перейти к следующему.</p>
 
 <ol>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async">Aсинхронное управление потоками с помощью async</a></li>
+ <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async">Асинхронное управление потоками с помощью async</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer">Пример шаблона</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template">Базовые шаблоны LocalLibrary</a></li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page">Домашняя страница</a></li>
@@ -57,10 +57,10 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 
 <p>В нашей следующей статье мы будем опираться на наши знания, создавая HTML-формы и код обработки форм, чтобы начать изменять данные, хранящиеся на сайте.</p>
 
-<h2 id="Смотрите_так_же">Смотрите так же</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a href="http://caolan.github.io/async/docs.html">Aссинхроный модуль</a> (Асинхронные документация)</li>
+ <li><a href="http://caolan.github.io/async/docs.html">Асинхронный модуль</a> (Асинхронные документация)</li>
  <li><a href="https://expressjs.com/en/guide/using-template-engines.html">Использование механизмов шаблонов с Express</a> (Express документация)</li>
  <li><a href="https://pugjs.org/api/getting-started.html">Pug</a> (Pug документация)</li>
  <li><a href="http://momentjs.com/docs/">Moment</a> (Moment документация)</li>

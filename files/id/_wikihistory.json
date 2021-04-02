@@ -1,16 +1,4 @@
 {
-  "Developer_Guide": {
-    "modified": "2019-03-23T23:27:41.297Z",
-    "contributors": [
-      "bskari"
-    ]
-  },
-  "Developer_Guide/Virtual_ARM_di_Lingkungan_Linux": {
-    "modified": "2019-03-23T23:27:45.214Z",
-    "contributors": [
-      "ariestiyansyah"
-    ]
-  },
   "Games": {
     "modified": "2020-07-23T02:23:56.130Z",
     "contributors": [
@@ -67,14 +55,6 @@
     "modified": "2019-03-23T22:32:10.841Z",
     "contributors": [
       "bekti"
-    ]
-  },
-  "Glossary/Algoritma": {
-    "modified": "2019-03-23T22:41:10.845Z",
-    "contributors": [
-      "yayansupiana",
-      "astrominion",
-      "agungprasetyosakti"
     ]
   },
   "Glossary/Asynchronous": {
@@ -229,19 +209,6 @@
       "stephaniehobson"
     ]
   },
-  "Learn/Common_questions/Bagaimana_cara_kerja_Internet": {
-    "modified": "2020-07-16T22:35:36.880Z",
-    "contributors": [
-      "xenavrt",
-      "dennisblight"
-    ]
-  },
-  "Learn/Common_questions/Berfikir_sebelum_membuat_kode": {
-    "modified": "2020-07-16T22:35:34.339Z",
-    "contributors": [
-      "wahyuakbarwibowo"
-    ]
-  },
   "Learn/Common_questions/Pages_sites_servers_and_search_engines": {
     "modified": "2020-07-16T22:35:39.876Z",
     "contributors": [
@@ -265,15 +232,6 @@
       "miftahafina",
       "adeyahya",
       "chrisdavidmills"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/Akan_terlihat_seperti_apa_website_anda": {
-    "modified": "2020-07-16T22:34:16.825Z",
-    "contributors": [
-      "thickkoezz",
-      "bekti",
-      "dovjay",
-      "yayansupiana"
     ]
   },
   "Learn/Getting_started_with_the_web/CSS_basics": {
@@ -322,15 +280,6 @@
       "adeyahya"
     ]
   },
-  "Learn/Getting_started_with_the_web/Mengelola_file": {
-    "modified": "2020-07-16T22:34:33.806Z",
-    "contributors": [
-      "thickkoezz",
-      "galuhsahid",
-      "BPiVcarD",
-      "vdanny"
-    ]
-  },
   "Learn/Getting_started_with_the_web/Publishing_your_website": {
     "modified": "2020-07-16T22:34:25.723Z",
     "contributors": [
@@ -348,67 +297,6 @@
     "modified": "2020-08-21T10:36:52.641Z",
     "contributors": [
       "ikramwadudu99"
-    ]
-  },
-  "Learn/HTML/Multimedia_dan_embedding": {
-    "modified": "2020-07-16T22:24:25.764Z",
-    "contributors": [
-      "SphinxKnight",
-      "putrapuices",
-      "thickkoezz"
-    ]
-  },
-  "Learn/HTML/Multimedia_dan_embedding/Adding_vector_graphics_to_the_Web": {
-    "modified": "2020-07-16T22:24:40.529Z",
-    "contributors": [
-      "mujahid-it"
-    ]
-  },
-  "Learn/HTML/Multimedia_dan_embedding/Responsive_images": {
-    "modified": "2020-07-16T22:24:34.275Z",
-    "contributors": [
-      "mujahid-it"
-    ]
-  },
-  "Learn/HTML/Pengenalan_HTML": {
-    "modified": "2020-07-30T01:00:05.720Z",
-    "contributors": [
-      "setyadi",
-      "Zen-Akira",
-      "thickkoezz",
-      "ariaenggar"
-    ]
-  },
-  "Learn/HTML/Pengenalan_HTML/Document_and_website_structure": {
-    "modified": "2020-07-16T22:24:04.997Z",
-    "contributors": [
-      "mujahid-it"
-    ]
-  },
-  "Learn/HTML/Pengenalan_HTML/HTML_text_fundamentals": {
-    "modified": "2020-07-16T22:23:32.925Z",
-    "contributors": [
-      "Transamunos"
-    ]
-  },
-  "Learn/HTML/Pengenalan_HTML/Structuring_a_page_of_content": {
-    "modified": "2020-07-16T22:24:19.411Z",
-    "contributors": [
-      "mujahid-it"
-    ]
-  },
-  "Learn/HTML/Tabel": {
-    "modified": "2020-07-16T22:25:12.167Z",
-    "contributors": [
-      "jatmikaekachandra"
-    ]
-  },
-  "Learn/How_to_contribute": {
-    "modified": "2020-07-16T22:33:44.062Z",
-    "contributors": [
-      "SphinxKnight",
-      "bekti",
-      "ariestiyansyah"
     ]
   },
   "Learn/JavaScript": {
@@ -460,12 +348,6 @@
       "Fidelstu"
     ]
   },
-  "Learn/JavaScript/Objects/Dasar-dasar": {
-    "modified": "2020-07-16T22:31:59.183Z",
-    "contributors": [
-      "indrayoganata"
-    ]
-  },
   "Learn/Server-side": {
     "modified": "2020-07-16T22:35:58.563Z",
     "contributors": [
@@ -498,12 +380,6 @@
     "modified": "2020-07-16T22:36:09.052Z",
     "contributors": [
       "ferdian89"
-    ]
-  },
-  "Learn/Web_Mechanics": {
-    "modified": "2020-07-16T22:22:13.418Z",
-    "contributors": [
-      "miftahafina"
     ]
   },
   "MDN": {
@@ -577,39 +453,6 @@
       "Sheppy"
     ]
   },
-  "MDN/Contribute/Howto/Create_an_MDN_account": {
-    "modified": "2019-03-23T22:38:48.748Z",
-    "contributors": [
-      "wbamberg",
-      "padila50",
-      "firmanwyd",
-      "taqiyyuki02",
-      "Lukman04"
-    ]
-  },
-  "MDN/Contribute/Howto/Do_a_technical_review": {
-    "modified": "2019-03-23T22:32:05.940Z",
-    "contributors": [
-      "wbamberg",
-      "heasanking"
-    ]
-  },
-  "MDN/Contribute/Howto/Do_an_editorial_review": {
-    "modified": "2019-03-23T22:31:28.587Z",
-    "contributors": [
-      "wbamberg",
-      "ElangSBP",
-      "bekti",
-      "Pieteru"
-    ]
-  },
-  "MDN/Contribute/Howto/Set_the_summary_for_a_page": {
-    "modified": "2019-01-16T19:13:18.495Z",
-    "contributors": [
-      "wbamberg",
-      "zekaras"
-    ]
-  },
   "MDN/Contribute/Howto/Tag": {
     "modified": "2019-03-23T23:04:03.858Z",
     "contributors": [
@@ -623,14 +466,6 @@
       "ignchristian",
       "wbamberg",
       "jswisher"
-    ]
-  },
-  "MDN/Contribute/Tugas": {
-    "modified": "2019-01-16T19:13:42.819Z",
-    "contributors": [
-      "wbamberg",
-      "firmanwyd",
-      "Cr7Pramana"
     ]
   },
   "MDN/Guidelines": {
@@ -647,41 +482,6 @@
     "contributors": [
       "chrisdavidmills",
       "alvisolikah0507"
-    ]
-  },
-  "MDN/Komunitas": {
-    "modified": "2019-05-29T21:20:10.743Z",
-    "contributors": [
-      "alattalatta",
-      "KLIWONJagung",
-      "wbamberg",
-      "Makarim",
-      "firmanwyd",
-      "padila50",
-      "bekti",
-      "eriskatp"
-    ]
-  },
-  "MDN/Komunitas/Conversations": {
-    "modified": "2019-03-23T22:41:40.315Z",
-    "contributors": [
-      "wbamberg",
-      "jswisher",
-      "randiproska"
-    ]
-  },
-  "MDN/User_guide": {
-    "modified": "2020-12-14T09:31:03.075Z",
-    "contributors": [
-      "wbamberg",
-      "Sheppy"
-    ]
-  },
-  "MDN/User_guide/Menghapus_halaman": {
-    "modified": "2019-01-16T18:55:32.659Z",
-    "contributors": [
-      "wbamberg",
-      "helloeny"
     ]
   },
   "Mozilla": {
@@ -725,14 +525,6 @@
       "didikpramono"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/notifikasi": {
-    "modified": "2020-10-15T22:05:36.197Z",
-    "contributors": [
-      "asiongtobing",
-      "wbamberg",
-      "Azhe403"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/API/windows": {
     "modified": "2020-10-15T21:51:41.708Z",
     "contributors": [
@@ -744,12 +536,6 @@
     "modified": "2020-10-15T21:51:40.999Z",
     "contributors": [
       "wbamberg",
-      "fesuydev"
-    ]
-  },
-  "Mozilla/Add-ons/WebExtensions/Apa_Itu_WebExtensions": {
-    "modified": "2019-03-18T21:06:29.401Z",
-    "contributors": [
       "fesuydev"
     ]
   },
@@ -788,12 +574,6 @@
       "wbamberg",
       "bekti",
       "ziyunfei"
-    ]
-  },
-  "Pengembangan_Web": {
-    "modified": "2019-03-23T22:51:52.244Z",
-    "contributors": [
-      "rahmatsubekti"
     ]
   },
   "Tools": {
@@ -878,12 +658,6 @@
       "ethertank",
       "Sheppy",
       "pieteru_insekai"
-    ]
-  },
-  "Web/API/API_Push": {
-    "modified": "2019-03-23T22:39:12.627Z",
-    "contributors": [
-      "bayuah"
     ]
   },
   "Web/API/AbstractWorker": {
@@ -1149,12 +923,6 @@
       "alifudinashfa7"
     ]
   },
-  "Web/CSS/referensi": {
-    "modified": "2020-10-11T06:52:29.728Z",
-    "contributors": [
-      "liimep"
-    ]
-  },
   "Web/CSS/text-transform": {
     "modified": "2020-10-15T22:00:17.057Z",
     "contributors": [
@@ -1166,13 +934,6 @@
     "contributors": [
       "wbamberg",
       "bep"
-    ]
-  },
-  "Web/Events/error": {
-    "modified": "2019-03-23T22:33:54.573Z",
-    "contributors": [
-      "fscholz",
-      "bekti"
     ]
   },
   "Web/Guide": {
@@ -1190,42 +951,6 @@
     "contributors": [
       "SphinxKnight",
       "steffix.h2"
-    ]
-  },
-  "Web/Guide/API/WebRTC": {
-    "modified": "2019-03-23T22:55:51.386Z",
-    "contributors": [
-      "fitra",
-      "yuan8"
-    ]
-  },
-  "Web/Guide/CSS/Getting_started": {
-    "modified": "2019-03-23T23:14:57.144Z",
-    "contributors": [
-      "mahfudhi"
-    ]
-  },
-  "Web/Guide/CSS/Media_queries": {
-    "modified": "2019-03-23T23:17:04.703Z",
-    "contributors": [
-      "Sebastianz",
-      "mrstork",
-      "malayaleecoder",
-      "dpitaloka"
-    ]
-  },
-  "Web/Guide/Grafis": {
-    "modified": "2019-03-23T23:29:12.829Z",
-    "contributors": [
-      "firmanwyd",
-      "bekti",
-      "pieteru_insekai"
-    ]
-  },
-  "Web/Guide/HTML/Forms": {
-    "modified": "2020-07-16T22:20:57.894Z",
-    "contributors": [
-      "ariona_rian"
     ]
   },
   "Web/Guide/HTML/HTML5": {
@@ -1296,13 +1021,6 @@
       "mfuji09"
     ]
   },
-  "Web/HTTP/Gambaran": {
-    "modified": "2020-11-29T00:41:21.794Z",
-    "contributors": [
-      "mzgndrg",
-      "bcnight"
-    ]
-  },
   "Web/HTTP/Methods": {
     "modified": "2020-10-15T21:55:31.625Z",
     "contributors": [
@@ -1320,13 +1038,6 @@
     "modified": "2020-10-19T13:06:42.068Z",
     "contributors": [
       "jwerre"
-    ]
-  },
-  "Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file": {
-    "modified": "2020-10-20T02:03:59.798Z",
-    "contributors": [
-      "SphinxKnight",
-      "worabaiyan"
     ]
   },
   "Web/HTTP/Status": {
@@ -1418,12 +1129,6 @@
       "witart"
     ]
   },
-  "Web/JavaScript/Inheritance_dan_prototype_chain": {
-    "modified": "2020-03-12T19:46:21.083Z",
-    "contributors": [
-      "bekti"
-    ]
-  },
   "Web/JavaScript/Language_Resources": {
     "modified": "2020-03-12T19:44:02.368Z",
     "contributors": [
@@ -1435,72 +1140,6 @@
     "contributors": [
       "martinserafim93",
       "agungprasetyosakti"
-    ]
-  },
-  "Web/JavaScript/Panduan": {
-    "modified": "2020-03-12T19:38:02.146Z",
-    "contributors": [
-      "bekti",
-      "teoli",
-      "kuntoaji"
-    ]
-  },
-  "Web/JavaScript/Panduan/Closures": {
-    "modified": "2019-05-16T14:59:16.458Z",
-    "contributors": [
-      "wbamberg",
-      "xlobin",
-      "sutikno"
-    ]
-  },
-  "Web/JavaScript/Panduan/Loops_and_iteration": {
-    "modified": "2020-03-12T19:46:18.223Z",
-    "contributors": [
-      "Fidelstu",
-      "jakarta"
-    ]
-  },
-  "Web/JavaScript/Panduan/Numbers_and_dates": {
-    "modified": "2020-03-12T19:48:12.489Z",
-    "contributors": [
-      "triashand"
-    ]
-  },
-  "Web/JavaScript/Panduan/Tentang": {
-    "modified": "2019-05-16T15:03:14.492Z",
-    "contributors": [
-      "wbamberg",
-      "adeyahya"
-    ]
-  },
-  "Web/JavaScript/Panduan/Values,_variables,_and_literals": {
-    "modified": "2020-03-12T19:40:01.295Z",
-    "contributors": [
-      "wbamberg",
-      "wawansumardi",
-      "sori-goklas-hutagalung",
-      "Fidelstu",
-      "bekti",
-      "kangfend",
-      "adeyahya"
-    ]
-  },
-  "Web/JavaScript/Panduan/Working_with_Objects": {
-    "modified": "2020-03-12T19:48:10.821Z",
-    "contributors": [
-      "thickkoezz",
-      "Fidelstu"
-    ]
-  },
-  "Web/JavaScript/Panduan/pengenalan": {
-    "modified": "2020-03-12T19:41:22.637Z",
-    "contributors": [
-      "snaztoz",
-      "thickkoezz",
-      "Fidelstu",
-      "ardhyui",
-      "bekti",
-      "adeyahya"
     ]
   },
   "Web/JavaScript/Reference": {
@@ -1780,12 +1419,6 @@
       "bekti"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Function/prototype": {
-    "modified": "2019-03-23T22:32:00.489Z",
-    "contributors": [
-      "bekti"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/JSON": {
     "modified": "2019-01-16T22:42:04.885Z",
     "contributors": [
@@ -1994,13 +1627,6 @@
       "bekti"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/purwarupa": {
-    "modified": "2019-03-23T22:54:49.067Z",
-    "contributors": [
-      "bekti",
-      "srifqi"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/String/split": {
     "modified": "2019-03-23T22:31:50.185Z",
     "contributors": [
@@ -2065,12 +1691,6 @@
       "zainalmustofa"
     ]
   },
-  "Web/JavaScript/Reference/Operators/fungsi": {
-    "modified": "2020-03-12T19:45:02.306Z",
-    "contributors": [
-      "opblang"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/yield": {
     "modified": "2020-10-15T21:58:01.116Z",
     "contributors": [
@@ -2120,18 +1740,6 @@
       "haris"
     ]
   },
-  "Web/JavaScript/Reference/Statements/fungsi": {
-    "modified": "2020-03-12T19:46:13.838Z",
-    "contributors": [
-      "irhamkim"
-    ]
-  },
-  "Web/JavaScript/sekilas_teknologi_JavaScript": {
-    "modified": "2020-03-12T19:45:33.240Z",
-    "contributors": [
-      "arifpedia"
-    ]
-  },
   "Web/MathML": {
     "modified": "2020-10-15T22:09:52.119Z",
     "contributors": [
@@ -2172,6 +1780,398 @@
     "modified": "2020-10-19T12:17:25.927Z",
     "contributors": [
       "guciano"
+    ]
+  },
+  "Mozilla/Developer_guide": {
+    "modified": "2019-03-23T23:27:41.297Z",
+    "contributors": [
+      "bskari"
+    ]
+  },
+  "Mozilla/Developer_guide/Virtual_ARM_Linux_environment": {
+    "modified": "2019-03-23T23:27:45.214Z",
+    "contributors": [
+      "ariestiyansyah"
+    ]
+  },
+  "Glossary/Algorithm": {
+    "modified": "2019-03-23T22:41:10.845Z",
+    "contributors": [
+      "yayansupiana",
+      "astrominion",
+      "agungprasetyosakti"
+    ]
+  },
+  "Learn/Common_questions/How_does_the_Internet_work": {
+    "modified": "2020-07-16T22:35:36.880Z",
+    "contributors": [
+      "xenavrt",
+      "dennisblight"
+    ]
+  },
+  "Learn/Common_questions/Thinking_before_coding": {
+    "modified": "2020-07-16T22:35:34.339Z",
+    "contributors": [
+      "wahyuakbarwibowo"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/What_will_your_website_look_like": {
+    "modified": "2020-07-16T22:34:16.825Z",
+    "contributors": [
+      "thickkoezz",
+      "bekti",
+      "dovjay",
+      "yayansupiana"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/Dealing_with_files": {
+    "modified": "2020-07-16T22:34:33.806Z",
+    "contributors": [
+      "thickkoezz",
+      "galuhsahid",
+      "BPiVcarD",
+      "vdanny"
+    ]
+  },
+  "orphaned/Learn/How_to_contribute": {
+    "modified": "2020-07-16T22:33:44.062Z",
+    "contributors": [
+      "SphinxKnight",
+      "bekti",
+      "ariestiyansyah"
+    ]
+  },
+  "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web": {
+    "modified": "2020-07-16T22:24:40.529Z",
+    "contributors": [
+      "mujahid-it"
+    ]
+  },
+  "Learn/HTML/Multimedia_and_embedding": {
+    "modified": "2020-07-16T22:24:25.764Z",
+    "contributors": [
+      "SphinxKnight",
+      "putrapuices",
+      "thickkoezz"
+    ]
+  },
+  "Learn/HTML/Multimedia_and_embedding/Responsive_images": {
+    "modified": "2020-07-16T22:24:34.275Z",
+    "contributors": [
+      "mujahid-it"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML/Document_and_website_structure": {
+    "modified": "2020-07-16T22:24:04.997Z",
+    "contributors": [
+      "mujahid-it"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals": {
+    "modified": "2020-07-16T22:23:32.925Z",
+    "contributors": [
+      "Transamunos"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML": {
+    "modified": "2020-07-30T01:00:05.720Z",
+    "contributors": [
+      "setyadi",
+      "Zen-Akira",
+      "thickkoezz",
+      "ariaenggar"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content": {
+    "modified": "2020-07-16T22:24:19.411Z",
+    "contributors": [
+      "mujahid-it"
+    ]
+  },
+  "Learn/HTML/Tables": {
+    "modified": "2020-07-16T22:25:12.167Z",
+    "contributors": [
+      "jatmikaekachandra"
+    ]
+  },
+  "Learn/JavaScript/Objects/Basics": {
+    "modified": "2020-07-16T22:31:59.183Z",
+    "contributors": [
+      "indrayoganata"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
+    "modified": "2019-03-23T22:38:48.748Z",
+    "contributors": [
+      "wbamberg",
+      "padila50",
+      "firmanwyd",
+      "taqiyyuki02",
+      "Lukman04"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Do_a_technical_review": {
+    "modified": "2019-03-23T22:32:05.940Z",
+    "contributors": [
+      "wbamberg",
+      "heasanking"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Do_an_editorial_review": {
+    "modified": "2019-03-23T22:31:28.587Z",
+    "contributors": [
+      "wbamberg",
+      "ElangSBP",
+      "bekti",
+      "Pieteru"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Set_the_summary_for_a_page": {
+    "modified": "2019-01-16T19:13:18.495Z",
+    "contributors": [
+      "wbamberg",
+      "zekaras"
+    ]
+  },
+  "orphaned/MDN/Community/Conversations": {
+    "modified": "2019-03-23T22:41:40.315Z",
+    "contributors": [
+      "wbamberg",
+      "jswisher",
+      "randiproska"
+    ]
+  },
+  "orphaned/MDN/Community": {
+    "modified": "2019-05-29T21:20:10.743Z",
+    "contributors": [
+      "alattalatta",
+      "KLIWONJagung",
+      "wbamberg",
+      "Makarim",
+      "firmanwyd",
+      "padila50",
+      "bekti",
+      "eriskatp"
+    ]
+  },
+  "orphaned/MDN/Tools/Page_deletion": {
+    "modified": "2019-01-16T18:55:32.659Z",
+    "contributors": [
+      "wbamberg",
+      "helloeny"
+    ]
+  },
+  "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
+    "modified": "2019-03-18T21:06:29.401Z",
+    "contributors": [
+      "fesuydev"
+    ]
+  },
+  "Mozilla/Add-ons/WebExtensions/API/notifications": {
+    "modified": "2020-10-15T22:05:36.197Z",
+    "contributors": [
+      "asiongtobing",
+      "wbamberg",
+      "Azhe403"
+    ]
+  },
+  "Web/API/Push_API": {
+    "modified": "2019-03-23T22:39:12.627Z",
+    "contributors": [
+      "bayuah"
+    ]
+  },
+  "Web/CSS/Reference": {
+    "modified": "2020-10-11T06:52:29.728Z",
+    "contributors": [
+      "liimep"
+    ]
+  },
+  "Web/API/Element/error_event": {
+    "modified": "2019-03-23T22:33:54.573Z",
+    "contributors": [
+      "fscholz",
+      "bekti"
+    ]
+  },
+  "Web/CSS/Media_Queries/Using_media_queries": {
+    "modified": "2019-03-23T23:17:04.703Z",
+    "contributors": [
+      "Sebastianz",
+      "mrstork",
+      "malayaleecoder",
+      "dpitaloka"
+    ]
+  },
+  "Web/Guide/Graphics": {
+    "modified": "2019-03-23T23:29:12.829Z",
+    "contributors": [
+      "firmanwyd",
+      "bekti",
+      "pieteru_insekai"
+    ]
+  },
+  "Learn/Forms": {
+    "modified": "2020-07-16T22:20:57.894Z",
+    "contributors": [
+      "ariona_rian"
+    ]
+  },
+  "Web/HTTP/Overview": {
+    "modified": "2020-11-29T00:41:21.794Z",
+    "contributors": [
+      "mzgndrg",
+      "bcnight"
+    ]
+  },
+  "Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file": {
+    "modified": "2020-10-20T02:03:59.798Z",
+    "contributors": [
+      "SphinxKnight",
+      "worabaiyan"
+    ]
+  },
+  "Web/JavaScript/Inheritance_and_the_prototype_chain": {
+    "modified": "2020-03-12T19:46:21.083Z",
+    "contributors": [
+      "bekti"
+    ]
+  },
+  "Web/JavaScript/Closures": {
+    "modified": "2019-05-16T14:59:16.458Z",
+    "contributors": [
+      "wbamberg",
+      "xlobin",
+      "sutikno"
+    ]
+  },
+  "Web/JavaScript/Guide": {
+    "modified": "2020-03-12T19:38:02.146Z",
+    "contributors": [
+      "bekti",
+      "teoli",
+      "kuntoaji"
+    ]
+  },
+  "Web/JavaScript/Guide/Loops_and_iteration": {
+    "modified": "2020-03-12T19:46:18.223Z",
+    "contributors": [
+      "Fidelstu",
+      "jakarta"
+    ]
+  },
+  "Web/JavaScript/Guide/Numbers_and_dates": {
+    "modified": "2020-03-12T19:48:12.489Z",
+    "contributors": [
+      "triashand"
+    ]
+  },
+  "Web/JavaScript/Guide/Introduction": {
+    "modified": "2020-03-12T19:41:22.637Z",
+    "contributors": [
+      "snaztoz",
+      "thickkoezz",
+      "Fidelstu",
+      "ardhyui",
+      "bekti",
+      "adeyahya"
+    ]
+  },
+  "Web/JavaScript/Guide/Grammar_and_types": {
+    "modified": "2020-03-12T19:40:01.295Z",
+    "contributors": [
+      "wbamberg",
+      "wawansumardi",
+      "sori-goklas-hutagalung",
+      "Fidelstu",
+      "bekti",
+      "kangfend",
+      "adeyahya"
+    ]
+  },
+  "Web/JavaScript/Guide/Working_with_Objects": {
+    "modified": "2020-03-12T19:48:10.821Z",
+    "contributors": [
+      "thickkoezz",
+      "Fidelstu"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/function": {
+    "modified": "2020-03-12T19:45:02.306Z",
+    "contributors": [
+      "opblang"
+    ]
+  },
+  "Web/JavaScript/Reference/Statements/function": {
+    "modified": "2020-03-12T19:46:13.838Z",
+    "contributors": [
+      "irhamkim"
+    ]
+  },
+  "Web/JavaScript/JavaScript_technologies_overview": {
+    "modified": "2020-03-12T19:45:33.240Z",
+    "contributors": [
+      "arifpedia"
+    ]
+  },
+  "conflicting/Learn/Common_questions": {
+    "modified": "2020-07-16T22:22:13.418Z",
+    "contributors": [
+      "miftahafina"
+    ]
+  },
+  "conflicting/MDN/Contribute/Getting_started": {
+    "modified": "2019-01-16T19:13:42.819Z",
+    "contributors": [
+      "wbamberg",
+      "firmanwyd",
+      "Cr7Pramana"
+    ]
+  },
+  "MDN/Tools": {
+    "modified": "2020-12-14T09:31:03.075Z",
+    "contributors": [
+      "wbamberg",
+      "Sheppy"
+    ]
+  },
+  "conflicting/Web/Guide": {
+    "modified": "2019-03-23T22:51:52.244Z",
+    "contributors": [
+      "rahmatsubekti"
+    ]
+  },
+  "conflicting/Web/API/WebRTC_API": {
+    "modified": "2019-03-23T22:55:51.386Z",
+    "contributors": [
+      "fitra",
+      "yuan8"
+    ]
+  },
+  "Learn/CSS/First_steps": {
+    "modified": "2019-03-23T23:14:57.144Z",
+    "contributors": [
+      "mahfudhi"
+    ]
+  },
+  "conflicting/Web/JavaScript/Guide/Introduction": {
+    "modified": "2019-05-16T15:03:14.492Z",
+    "contributors": [
+      "wbamberg",
+      "adeyahya"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Function": {
+    "modified": "2019-03-23T22:32:00.489Z",
+    "contributors": [
+      "bekti"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
+    "modified": "2019-03-23T22:54:49.067Z",
+    "contributors": [
+      "bekti",
+      "srifqi"
     ]
   }
 }

@@ -14,9 +14,9 @@ translation_of: Web/CSS/filter
 
 <h2 id="Описание">Описание</h2>
 
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>filter</code></strong>  позволяет Вам применять к элементу такие графические эффекты, как размытие и смещение цвета. Фильтры обычно используются для регулировки рендеринга изображений, фонов и рамок.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> свойство <strong><code>filter</code></strong>  позволяет вам применять к элементу такие графические эффекты, как размытие и смещение цвета. Фильтры обычно используются для регулировки рендеринга изображений, фонов и рамок.</p>
 
-<p>В стандарт CSS включены несколько функций, которые обеспечивают предопределенные эффекты. Вы также можете ссылаться на SVG фильтр с URL-адресом на <a href="/en-US/docs/Web/SVG/Element/filter">элемент фильтра SVG</a>.</p>
+<p>В стандарт CSS включены несколько функций, которые обеспечивают предопределённые эффекты. Вы также можете ссылаться на SVG фильтр с URL-адресом на <a href="/en-US/docs/Web/SVG/Element/filter">элемент фильтра SVG</a>.</p>
 
 <div class="note"><strong>Предупреждение:</strong> Старые версии (с 4.0 до 9.0) браузера Windows Internet Explorer поддерживают нестандартный <a class="external" href="http://msdn.microsoft.com/en-us/library/ms532853(v=vs.85).aspx">"filter"</a>, который с тех пор устарел.</div>
 
@@ -57,7 +57,7 @@ filter: unset;
 
 <h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
 
-<pre class="syntaxbox">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -79,7 +79,7 @@ img {
 
 <h2 id="Функции">Функции</h2>
 
-<p>Для использования CSS свойства <code>filter</code>, Вы указываете значение для одной из выбранных функций. Если это значение недействительно, функция возвращает "none." За исключением тех случаев, когда функции, которые принимают значение, выраженное в процентах (34%), также принимают значение, выраженное как десятичная дробь (0.34).</p>
+<p>Для использования CSS свойства <code>filter</code>, вы указываете значение для одной из выбранных функций. Если это значение недействительно, функция возвращает "none." За исключением тех случаев, когда функции, которые принимают значение, выраженное в процентах (34%), также принимают значение, выраженное как десятичная дробь (0.34).</p>
 
 <h3 id="url"><code>url()</code></h3>
 
@@ -95,7 +95,7 @@ img {
 <pre class="brush: css">filter: blur(5px)
 </pre>
 
-<div id="blur_example" style="display: none;">
+<div id="blur_example" class="hidden">
 <pre class="brush: html">  &lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -190,7 +190,7 @@ table.standard-table td {
   &lt;/filter&gt;
 &lt;/svg&gt;</pre>
 
-<div id="brightness_example" style="display: none;">
+<div id="brightness_example" class="hidden">
 <pre class="brush: html">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -286,7 +286,7 @@ table.standard-table td {
 &lt;/svg&gt;
 </pre>
 
-<div id="contrast_example" style="display: none;">
+<div id="contrast_example" class="hidden">
 <pre class="brush: html">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -397,7 +397,7 @@ table.standard-table td {
 &lt;/svg&gt;
 </pre>
 
-<div id="shadow_example" style="display: none;">
+<div id="shadow_example" class="hidden">
 <pre class="brush: html">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -515,7 +515,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: grayscale(100%)</pre>
 
-<div id="grayscale_example" style="display: none;">
+<div id="grayscale_example" class="hidden">
 <pre class="brush: html">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -599,7 +599,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: hue-rotate(90deg)</pre>
 
-<div id="huerotate_example" style="display: none;">
+<div id="huerotate_example" class="hidden">
 <pre class="brush: html">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -686,7 +686,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: invert(100%)</pre>
 
-<div id="invert_example" style="display: none;">
+<div id="invert_example" class="hidden">
 <pre class="brush: html">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -770,7 +770,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: opacity(50%)</pre>
 
-<div id="opacity_example" style="display: none;">
+<div id="opacity_example" class="hidden">
 <pre class="brush: html">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -852,7 +852,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: saturate(200%)</pre>
 
-<div id="saturate_example" style="display: none;">
+<div id="saturate_example" class="hidden">
 <pre class="brush: html">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -933,7 +933,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: sepia(100%)</pre>
 
-<div id="sepia_example" style="display: none;">
+<div id="sepia_example" class="hidden">
 <pre class="brush: html">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -1017,7 +1017,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: contrast(175%) brightness(103%)</pre>
 
-<div id="combination_example" style="display: none;">
+<div id="combination_example" class="hidden">
 <pre class="brush: html">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;

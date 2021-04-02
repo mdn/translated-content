@@ -9,15 +9,15 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 
 <p>В Express можно использовать много движков отображающих шаблонов ( <a class="external external-icon" href="https://expressjs.com/en/guide/using-template-engines.html" rel="noopener">template rendering engines</a>). В этом руководстве для шаблонов будет использован <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> (ранее известный как Jade) . Это наиболее популярный в  Node язык шаблонов, который о себе заявляет так: чистый, чувствительный к пробелам синтаксис для написания HTML, на который сильно повлиял <a class="external external-icon" href="http://haml.info/" rel="noopener">Haml</a>.</p>
 
-<p>Разные языки шаблонов используют различные подходы для определения внешнего вида и разметки позиций для данных—некоторые используют HTML для определения внешнего вида, тогда как другие применяют различные форматы разметки, которые затем должы компилироваться в  HTML. Pug - второго типа; он использует <em>представление</em> (<em>representation) </em> HTML, в котором первое слово в каждой строке обычно представляет элемент HTML, а отступы в следующих строках применяются, чтобы представить вложенные элементы. Результатом является определение страницы, которое транслируется непосредственно в HTML, и которое, вероятно, более краткое и легче читается.</p>
+<p>Разные языки шаблонов используют различные подходы для определения внешнего вида и разметки позиций для данных—некоторые используют HTML для определения внешнего вида, тогда как другие применяют различные форматы разметки, которые затем должны компилироваться в  HTML. Pug - второго типа; он использует <em>представление</em> (<em>representation) </em> HTML, в котором первое слово в каждой строке обычно представляет элемент HTML, а отступы в следующих строках применяются, чтобы представить вложенные элементы. Результатом является определение страницы, которое транслируется непосредственно в HTML, и которое, вероятно, более краткое и легче читается.</p>
 
 <div class="note">
-<p><strong>Заметка:</strong> недостаток применения <em>Pug</em> - это чувствительность к отступам и пробелам (если добавить лишний пробел в "плохом" месте, можно получить невразумительный код ошибки). Однако, если ваши шаблоны уже действуют, их очень легко читать и поддерживать.</p>
+<p><strong>Примечание:</strong> недостаток применения <em>Pug</em> - это чувствительность к отступам и пробелам (если добавить лишний пробел в "плохом" месте, можно получить невразумительный код ошибки). Однако, если ваши шаблоны уже действуют, их очень легко читать и поддерживать.</p>
 </div>
 
 <h2 class="highlight-spanned" id="Конфигурация_шаблона"><span class="highlight-span">Конфигурация шаблона</span></h2>
 
-<p>Когда создавался каркас (<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">the skeleton website</a>) веб-сайта <em>LocalLibrary, </em>он был настроен  на использование <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> . Можно было заметить, что модуль pug включен в зависимости в файле <strong>package.json</strong>, и установлен (app.set(...)) как движок представлений в файле <strong>app.js</strong>. Эта установка показывает,, что движок представлений -  pug, и что  <em>Express</em> должен искать шаблоны в подкаталоге <strong>/views</strong>.</p>
+<p>Когда создавался каркас (<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">the skeleton website</a>) веб-сайта <em>LocalLibrary, </em>он был настроен  на использование <a class="external external-icon" href="https://pugjs.org/api/getting-started.html" rel="noopener">Pug</a> . Можно было заметить, что модуль pug включён в зависимости в файле <strong>package.json</strong>, и установлен (app.set(...)) как движок представлений в файле <strong>app.js</strong>. Эта установка показывает,, что движок представлений -  pug, и что  <em>Express</em> должен искать шаблоны в подкаталоге <strong>/views</strong>.</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// View engine setup.</span>
 app<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">(</span><span class="string token">'views'</span><span class="punctuation token">,</span> path<span class="punctuation token">.</span><span class="function token">join</span><span class="punctuation token">(</span>__dirname<span class="punctuation token">,</span> <span class="string token">'views'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
@@ -36,7 +36,7 @@ app<span class="punctuation token">.</span><span class="keyword token">set</span
 
 <p>Пример файла шаблона (ниже) демонстрирует многие наиболее полезные черты  Pug.</p>
 
-<p>Сначала отметим, что файл отражает структуру типового HTML-файла, причем первое слов в (почти) каждой строке является элементом HTML, а отступы используются, чтобы показать вложенные элементы. Так, например, элемент <code>body</code> находится внутри элемента <code>html</code>, а элементы <code>p</code>  (параграфы) - внутри элемента <code>body,</code> и так далее. Невложенные элементы (т.е. индивидуальные параграфы) располагаются в отдельных строках.</p>
+<p>Сначала отметим, что файл отражает структуру типового HTML-файла, причём первое слов в (почти) каждой строке является элементом HTML, а отступы используются, чтобы показать вложенные элементы. Так, например, элемент <code>body</code> находится внутри элемента <code>html</code>, а элементы <code>p</code>  (параграфы) - внутри элемента <code>body,</code> и так далее. Невложенные элементы (т.е. индивидуальные параграфы) располагаются в отдельных строках.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">doctype html
 html(lang="en")
@@ -74,7 +74,7 @@ html(lang="en")
       each val in [1, 2, 3, 4, 5]
         li= val</code></pre>
 
-<p>Атрибуты элементов определены в скобках после соответствующих элементов. В скобках располагается список пар <em>имя атрибута=значение,</em>причем элементы списка разделяются запятой или пробелом. Например:</p>
+<p>Атрибуты элементов определены в скобках после соответствующих элементов. В скобках располагается список пар <em>имя атрибута=значение,</em>причём элементы списка разделяются запятой или пробелом. Например:</p>
 
 <ul>
  <li><code>script(type='text/javascript')</code>, <code>link(rel='stylesheet', href='/stylesheets/style.css')</code></li>
@@ -83,7 +83,7 @@ html(lang="en")
 
 <p>Значения всех атрибутов <em>экранируются</em> (т.е. такие символы как "<code>&gt;</code>" заменяются эквивалентными кодами HTML как "<code>&amp;gt;"</code>) , чтобы предотвратить JavaScript инъекции и межсайтовые атаки.</p>
 
-<p>Если после тэга стоит знак = , следующий текст рассматривается как <em>выражение</em> JavaScript. Например, шиже в первой строке, содержимое тэга <code>h1</code> будет <em>переменной </em> <code>title</code> (которая определена в файле или передана в шаблон из Express). Во второй строке содержимое параграфа - это текстовая строка, соединенная с переменной  <code>title</code> . В каждом из случаев поведение по умолчанию - экранировать строки.</p>
+<p>Если после тэга стоит знак = , следующий текст рассматривается как <em>выражение</em> JavaScript. Например, ниже в первой строке, содержимое тэга <code>h1</code> будет <em>переменной </em> <code>title</code> (которая определена в файле или передана в шаблон из Express). Во второй строке содержимое параграфа - это текстовая строка, соединённая с переменной  <code>title</code> . В каждом из случаев поведение по умолчанию - экранировать строки.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">h1= title
 p= 'Evaluated and <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>em</span><span class="punctuation token">&gt;</span></span>escaped expression<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>em</span><span class="punctuation token">&gt;</span></span>:' + title</code></pre>
@@ -97,19 +97,19 @@ p This line has an un-escaped string: !{'<span class="tag token"><span class="ta
 <p><strong>Совет:</strong> Почти всегда желательно экранировать данные, полученные от пользователей (при помощи синтаксиса <strong><code>#{}</code></strong> ). Данные, которым можно верить (т.е. подсчитанное количество  записей,  могут быть выведены без экранирования значений.</p>
 </div>
 
-<p>Можно использовать символ конвейера ('<strong>|</strong>') в начале строки, чтобы отметить простой текст ("<a class="external external-icon" href="https://pugjs.org/language/plain-text.html" rel="noopener">plain text</a>"). Например, дополнительный текст, приведенный ниже, будет показан в той же строке, что и предыдущий, но не будет относиться к ссылке.</p>
+<p>Можно использовать символ конвейера ('<strong>|</strong>') в начале строки, чтобы отметить простой текст ("<a class="external external-icon" href="https://pugjs.org/language/plain-text.html" rel="noopener">plain text</a>"). Например, дополнительный текст, приведённый ниже, будет показан в той же строке, что и предыдущий, но не будет относиться к ссылке.</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">a(href='http://someurl/') Link text
 | Plain text</code></pre>
 
-<p>Pug позволяет выполнять условные операции <code>if</code>, <code>else</code> , <code>else if</code> и <code>unless</code>— пример приведен ниже:</p>
+<p>Pug позволяет выполнять условные операции <code>if</code>, <code>else</code> , <code>else if</code> и <code>unless</code>— пример приведён ниже:</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">if title
   p Переменная с именем "title" существует
 else
   p Переменной с именем "title" не существует</code></pre>
 
-<p>Можно также выполнять циклы (итерации), применяя ситаксис <code>each-in</code> или <code>while</code> . Фрагмент кода (ниже)  содержит цикл по элементам массива, чтобы показать список элементов (отметим применение 'li=' для оценки "val" как переменной). Значение итератора val может быть также передано в шаблон как переменная!</p>
+<p>Можно также выполнять циклы (итерации), применяя синтаксис <code>each-in</code> или <code>while</code> . Фрагмент кода (ниже)  содержит цикл по элементам массива, чтобы показать список элементов (отметим применение 'li=' для оценки "val" как переменной). Значение итератора val может быть также передано в шаблон как переменная!</p>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">ul
   each val in [1, 2, 3, 4, 5]
@@ -119,7 +119,7 @@ else
 
 <h2 class="highlight-spanned" id="Расширение_шаблонов"><span class="highlight-span">Расширение шаблонов</span></h2>
 
-<p>Принято иметь общую структуру для всех страниц сайта, <span class="highlight-span">включая стандартную HTML-разметку для </span>заголовка, футера, навигации и т.д. Вместо того, чтобы засталять разработчиков дублировать эти образцы на каждой странице, <em>Pug</em> позволяет объявить базовай шаблон, а затем модифицировать его, заменяя только те небольшие части, которые различны на каждой конкретной странице.</p>
+<p>Принято иметь общую структуру для всех страниц сайта, <span class="highlight-span">включая стандартную HTML-разметку для </span>заголовка, футера, навигации и т.д. Вместо того, чтобы заставлять разработчиков дублировать эти образцы на каждой странице, <em>Pug</em> позволяет объявить базовой шаблон, а затем модифицировать его, заменяя только те небольшие части, которые различны на каждой конкретной странице.</p>
 
 <p>Например, базовый шаблон <strong>layout.pug,</strong> созданный в каркасе проекта, имеет такой вид:</p>
 
@@ -131,7 +131,7 @@ html
   body
     block content</code></pre>
 
-<p>Тэг  <code>block</code> применен для отметки разделов контента, которые могут быть заменены в производных шаблона (если блок не переопределяется, будет использованиа его реализация в базовом классе).</p>
+<p>Тэг  <code>block</code> применён для отметки разделов контента, которые могут быть заменены в производных шаблона (если блок не переопределяется, будет использования его реализация в базовом классе).</p>
 
 <p>Умолчание для  <strong>index.pug</strong> (созданный для каркаса проекта) показывает, как можно заменить базовый шаблон. Тэг <code>extends</code> идентифицирует базовый шаблон, который следует использовать, а затем мы используем  <code>block <em>section_name,</em></code> чтобы отметить новый контент раздела, который мы заменяем.</p>
 

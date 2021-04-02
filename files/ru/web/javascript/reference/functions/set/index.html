@@ -41,13 +41,13 @@ translation_of: Web/JavaScript/Reference/Functions/set
 </ul>
 </div>
 
-<p>Сеттер может быть удален оператором <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete"><code>delete</code></a>.</p>
+<p>Сеттер может быть удалён оператором <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete"><code>delete</code></a>.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
 <h3 id="Определение_сеттера_при_инициализации_новых_объектов">Определение сеттера при инициализации новых объектов</h3>
 
-<p>Это позволит определить псевдо-параметр <code>current</code> объекта <code>o</code>, который задает значение, обновляющее значение <code>log</code>:</p>
+<p>Это позволит определить псевдо-параметр <code>current</code> объекта <code>o</code>, который задаёт значение, обновляющее значение <code>log</code>:</p>
 
 <pre class="brush: js">var o = {
   set current (str) {
@@ -57,7 +57,7 @@ translation_of: Web/JavaScript/Reference/Functions/set
 }
 </pre>
 
-<p><code>обратите внимание, что current</code> не определен и любые попытки доступа к нему вернут <code>undefined</code>.</p>
+<p><code>обратите внимание, что current</code> не определён и любые попытки доступа к нему вернут <code>undefined</code>.</p>
 
 <h3 id="Удаление_сеттера_оператором_delete">Удаление сеттера оператором <code>delete</code></h3>
 
@@ -108,7 +108,7 @@ console.log(obj.baz); // "baz"
   <tr>
    <td>{{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}</td>
    <td>{{Spec2('ES6')}}</td>
-   <td>Добавлены вычесляемые имена свойств</td>
+   <td>Добавлены вычисляемые имена свойств</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
@@ -130,5 +130,5 @@ console.log(obj.baz); // "baz"
  <li>{{jsxref("Object.defineProperty()")}}</li>
  <li>{{jsxref("Object.defineGetter", "__defineGetter__")}}</li>
  <li>{{jsxref("Object.defineSetter", "__defineSetter__")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">Defining Getters and Setters</a> в реководстве по JavaScript</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">Defining Getters and Setters</a> в руководстве по JavaScript</li>
 </ul>

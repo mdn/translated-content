@@ -35,7 +35,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p><span class="notranslate">Расширения часто должны поддерживать долгосрочное состояние или выполнять долгосрочные операции независимо от срока жизни любой конкретной веб-страницы или окна браузера.</span> <span class="notranslate"> Для этого нужны фоновые сценарии.</span></p>
 
-<p><span class="notranslate">Фоновые сценарии загружаются сразу после загрузки расширения и остаются загруженными до тех пор, пока расширение не будет отключено или удалено.</span> <span class="notranslate"> Вы можете использовать любой</span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/API">API расширений</a> <span class="notranslate">в сценарии, если вы запросили необходимые </span><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">разрешения</a>.</p>
+<p><span class="notranslate">Фоновые сценарии загружаются сразу после загрузки расширения и остаются загруженными до тех пор, пока расширение не будет отключено или удалено.</span> <span class="notranslate"> вы можете использовать любой</span> <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/API">API расширений</a> <span class="notranslate">в сценарии, если вы запросили необходимые </span><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">разрешения</a>.</p>
 
 <h3 id="Спецификации_фоновых_скриптов">Спецификации фоновых скриптов</h3>
 
@@ -49,7 +49,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p><span class="notranslate">Вы можете указать несколько фоновых сценариев: если вы это сделаете, они выполняются в том же контексте, как и несколько сценариев, загруженных на одной веб-странице.</span></p>
 
-<p>Вместо указания <span class="notranslate">несколько фоновых сценариев</span> выможете указать фоновую страницу, которая так же преимущества поддержки ES6 модулей:</p>
+<p>Вместо указания <span class="notranslate">несколько фоновых сценариев</span> вы можете указать фоновую страницу, которая так же преимущества поддержки ES6 модулей:</p>
 
 <p style="margin-bottom: 0em;"><strong>manifest.json</strong></p>
 
@@ -73,7 +73,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <h4 id="DOM_APIs">DOM APIs</h4>
 
-<p>Фоновые скрипты запускаются в пространстве специальной страницы, называемой фоновой. Это дает им доступ к глобальному <code><a href="/en-US/docs/Web/API/Window">window</a></code> объекту, а так же ко всем его DOM APIs.</p>
+<p>Фоновые скрипты запускаются в пространстве специальной страницы, называемой фоновой. Это даёт им доступ к глобальному <code><a href="/en-US/docs/Web/API/Window">window</a></code> объекту, а так же ко всем его DOM APIs.</p>
 
 <h4 id="WebExtension_APIs">WebExtension APIs</h4>
 
@@ -87,7 +87,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>Фоновые скрипты не получают прямого доступа к веб-страницам. Однако они могут загружать <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">скрипты содержимого</a> на веб-страницы и <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">взаимодействовать с этими скриптами с помощью API передачи сообщений</a>.</p>
 
-<h4 id="Политика_безопастности_содержимого">Политика безопастности содержимого</h4>
+<h4 id="Политика_безопасности_содержимого">Политика безопасности содержимого</h4>
 
 <p>Фоновые скрипты ограничены в выполнении потенциально опасных операций, таких как <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>, через политику безопасности содержимого. Подробнее см. <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a>.</p>
 
@@ -96,12 +96,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 <p>Ваше расширение может иметь разнообразные компоненты интерфейса, определённые в HTML документах:</p>
 
 <ul>
- <li><font color="#0b0116"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">Боковая панель (sidebar</a></font>) - это панель, отображаемая в окне браузера с левой строны, рядом с веб-страницей</li>
+ <li><font color="#0b0116"><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">Боковая панель (sidebar</a></font>) - это панель, отображаемая в окне браузера с левой стороны, рядом с веб-страницей</li>
  <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Всплывающие окна (popup</a>) - диалоговое окно, отображаемое по клику на <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">кнопке</a> на <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">панели инструментов</a> или в адресной строке</li>
  <li><a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">Страница настроек</a> открывается, когда пользователь обращается к настройкам расширения на странице менеджера расширений.</li>
 </ul>
 
-<p>Для каждого из этих компонентов вы создаете HTML файл и помещаете специальную информацию в <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>. HTML файл может в себя включать CSS и JavaScript файлы, как и любая web-страница.</p>
+<p>Для каждого из этих компонентов вы создаёте HTML файл и помещаете специальную информацию в <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>. HTML файл может в себя включать CSS и JavaScript файлы, как и любая web-страница.</p>
 
 <p>Всё это типы <a href="https://developer.mozilla.org/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages">веб-страниц расширения</a>, и, в отличие от нормальных веб-страниц, ваш JavaScript может использовать все привелегии WebExtension APIs, как и ваши фоновые скрипты. Они даже могут получить доступ к переменным в фоновой странице, используя {{WebExtAPIRef("runtime.getBackgroundPage()")}}.</p>
 

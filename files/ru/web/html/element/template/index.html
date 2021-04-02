@@ -26,7 +26,7 @@ translation_of: Web/HTML/Element/template
    <td>{{no_tag_omission}}</td>
   </tr>
   <tr>
-   <th scope="row">Разрешенные родители</th>
+   <th scope="row">Разрешённые родители</th>
    <td>Any element that accepts <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Metadata_content">metadata content</a>, <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content">phrasing content</a>, or <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Script-supporting_elements">script-supporting elements</a>. Also allowed as a child of a {{HTMLElement("colgroup")}} element that does <em>not</em> have a {{htmlattrxref("span", "colgroup")}} attribute.</td>
   </tr>
   <tr>
@@ -34,7 +34,7 @@ translation_of: Web/HTML/Element/template
    <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Нет соответствующей роли</a></td>
   </tr>
   <tr>
-   <th scope="row">Разрешенные роли ARIA</th>
+   <th scope="row">Разрешённые роли ARIA</th>
    <td>Отсутствует</td>
   </tr>
   <tr>
@@ -79,7 +79,7 @@ translation_of: Web/HTML/Element/template
 <p>Теперь, когда таблица была создана и шаблон определён, мы используем JavaScript чтобы вставить строки в таблицу. Каждая строка строится с использованием шаблона.</p>
 
 <pre class="brush:js;">// Проверяем поддерживает ли браузер тег &lt;template&gt;
-// проверив наличие аттрибута content у элемента template
+// проверив наличие атрибута content у элемента template
 if ('content' in document.createElement('template')) {
 
   // Instantiate the table with the existing HTML tbody and the row with the template
@@ -103,7 +103,7 @@ if ('content' in document.createElement('template')) {
 
 } else {
   // необходимо найти другой способ добавить строку в таблицу т.к.
-  // тег &lt;template&gt; не поддерживатся браузером
+  // тег &lt;template&gt; не поддерживается браузером
 }
 </pre>
 

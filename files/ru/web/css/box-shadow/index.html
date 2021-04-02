@@ -53,7 +53,7 @@ box-shadow: unset;
   <ul>
    <li>Если задано только два значения, они интерпретируется как <code><a href="#&lt;offset-x> &lt;offset-y>">&lt;offset-x&gt;&lt;offset-y&gt;</a></code> values.</li>
    <li>Если задано третье значение, оно понимается как <code><a href="#&lt;blur-radius>">&lt;blur-radius&gt;</a></code>.</li>
-   <li>Если задано чертвёртое значение, оно интерпретируется <code><a href="#&lt;spread-radius>">&lt;spread-radius&gt;</a></code>.</li>
+   <li>Если задано четвёртое значение, оно интерпретируется <code><a href="#&lt;spread-radius>">&lt;spread-radius&gt;</a></code>.</li>
   </ul>
  </li>
  <li>Дополнительно, можно задать ключевое слово <code><a href="#inset">inset</a></code>.</li>
@@ -72,7 +72,7 @@ box-shadow: unset;
  <dd>Существуют 2 значения {{ cssxref("&lt;length&gt;") }}, которые устанавливают смещение тени. <code>&lt;offset-x&gt;</code> определяет горизонтальное расстояние. Отрицательные значения располагают тень слева от элемента. <code>&lt;offset-y&gt;</code> определяет вертикальное расстояние. Отрицательные значения располагают тень выше элемента. Посмотрите какие единицы {{ cssxref("&lt;length&gt;") }} можно задать.<br>
  Если оба значения равны <code>0</code>, то тень расположится за элементом (и будет отображаться размытие, если <code>&lt;blur-radius&gt;</code> и/или <code>&lt;spread-radius&gt;</code> установлены).</dd>
  <dt><a id="&lt;blur-radius>" name="&lt;blur-radius>"><code>&lt;blur-radius&gt;</code></a></dt>
- <dd>Это третье значение {{ cssxref("&lt;length&gt;") }}. Чем больше это значение, тем больше и светлее размытие. Отрицательные значения не поддерживаются. Если не определено, будет использоваться <code>0</code> (резкий край тени). Спецификация не содержит в себе точного алгоритма расчёта размытости теней, однако, в ней указано следущее:</dd>
+ <dd>Это третье значение {{ cssxref("&lt;length&gt;") }}. Чем больше это значение, тем больше и светлее размытие. Отрицательные значения не поддерживаются. Если не определено, будет использоваться <code>0</code> (резкий край тени). Спецификация не содержит в себе точного алгоритма расчёта размытости теней, однако, в ней указано следующее:</dd>
  <dd>
  <blockquote>…for a long, straight shadow edge, this should create a color transition the length of the blur distance that is perpendicular to and centered on the shadow’s edge, and that ranges from the full shadow color at the radius endpoint inside the shadow to fully transparent at the endpoint outside it.</blockquote>
  </dd>
@@ -89,7 +89,7 @@ box-shadow: unset;
 
 <h3 id="Формальный_синтаксис">Формальный синтаксис</h3>
 
-<pre class="syntaxbox">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Примеры">Примеры</h2>
 

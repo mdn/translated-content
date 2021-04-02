@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
 
 <h3 id="Неправильный_синтаксис">Неправильный синтаксис</h3>
 
-<p>В {{jsxref("Date.prototype.toLocaleFormat")}} метод устарел и будет удален (поддержка кроссбраузерных браузеров, доступна только в Firefox).</p>
+<p>В {{jsxref("Date.prototype.toLocaleFormat")}} метод устарел и будет удалён (поддержка кроссбраузерных браузеров, доступна только в Firefox).</p>
 
 <pre class="brush: js example-bad">var today = new Date();
 var date = today.toLocaleFormat('%A, %e. %B %Y');
@@ -34,7 +34,7 @@ console.log(date);
 
 <h3 id="Альтернативный_стандартный_синтаксис_с_использованием_ECMAScript_IntlAPI">Альтернативный стандартный синтаксис с использованием ECMAScript IntlAPI</h3>
 
-<p>Стандарт ECMA-402 (ECMAScript Intl API) определяет стандартные объекты и методы, которые позволяют форматировать дату и время с учетом языка (доступно в Chrome 24+, Firefox 29+, IE11+, Safari10+).</p>
+<p>Стандарт ECMA-402 (ECMAScript Intl API) определяет стандартные объекты и методы, которые позволяют форматировать дату и время с учётом языка (доступно в Chrome 24+, Firefox 29+, IE11+, Safari10+).</p>
 
 <p>You can now either use the {{jsxref("Date.prototype.toLocaleDateString")}} method if you just want to format one date.</p>
 
@@ -49,7 +49,7 @@ console.log(date);
 
 <p> </p>
 
-<p>Или, вы можете использовать {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} объект, который позволяет кэшировать объект с большинством вычислений, выполненных таким образом, чтобы Форматирование было быстрым. Это полезно, если у вас есть цикл дат для форматирования.</p>
+<p>Или, вы можете использовать {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} объект, который позволяет кешировать объект с большинством вычислений, выполненных таким образом, чтобы Форматирование было быстрым. Это полезно, если у вас есть цикл дат для форматирования.</p>
 
 <pre class="brush: js example-good">var options = { weekday: 'long', year: 'numeric',
                 month: 'long', day: 'numeric' };
@@ -64,7 +64,7 @@ dates.forEach(date =&gt; console.log(dateFormatter.format(date)));
 // "Montag, 12. Mai 2014"
 </pre>
 
-<h3 id="Альтернативный_стандартный_ситнаксис_с_использованием_Дата_методов">Альтернативный стандартный ситнаксис с использованием Дата методов</h3>
+<h3 id="Альтернативный_стандартный_синтаксис_с_использованием_Дата_методов">Альтернативный стандартный синтаксис с использованием Дата методов</h3>
 
 <p>{{jsxref("Date")}} объект предлагает несколько методов для построения пользовательской строки даты.</p>
 

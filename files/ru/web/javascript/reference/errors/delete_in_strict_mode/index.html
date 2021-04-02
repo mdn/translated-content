@@ -10,9 +10,9 @@ translation_of: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 
 <h2 id="Сообщение">Сообщение</h2>
 
-<pre class="syntaxbox">SyntaxError: вызов delete on expression запрещен в строгом режиме в (Edge)
+<pre class="syntaxbox">SyntaxError: вызов delete on expression запрещён в строгом режиме в (Edge)
 SyntaxError: применение оператора 'delete' к неполному имени не рекомендуется в (Firefox)
-SyntaxError: удаление неполного идентификатора в строгом режиме запрещенно в (Chrome)
+SyntaxError: удаление неполного идентификатора в строгом режиме запрещено в (Chrome)
 </pre>
 
 <h2 id="Тип_ошибки">Тип ошибки</h2>
@@ -33,7 +33,7 @@ SyntaxError: удаление неполного идентификатора в
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Попытка удалить простую переменную не работает в JavaScript и выдает ошибку в строгом режиме:</p>
+<p>Попытка удалить простую переменную не работает в JavaScript и выдаёт ошибку в строгом режиме:</p>
 
 <pre class="brush: js example-bad">'use strict';
 
@@ -46,7 +46,7 @@ delete x;
 // SyntaxError: применение оператора 'delete' к неполному имени является устаревшим
 </pre>
 
-<p>Чтобы освободить содержимое переменной, задайте для нее значение {{jsxref("null")}}:</p>
+<p>Чтобы освободить содержимое переменной, задайте для неё значение {{jsxref("null")}}:</p>
 
 <pre class="brush: js example-good">'use strict';
 
@@ -59,7 +59,7 @@ x = null;
 // X может быть собран "мусор"
 </pre>
 
-<h2 id="Смотри_также">Смотри также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code></li>

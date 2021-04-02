@@ -2,14 +2,14 @@
 title: <time>
 slug: Web/CSS/time
 tags:
-  - Верстка
+  - Вёрстка
   - Типы данных
   - время
 translation_of: Web/CSS/time
 ---
 <div>{{CSSRef}}</div>
 
-<p><a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Types">Тип данных</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>&lt;time&gt;</code></strong> представляет значение времени, выраженное в секундах или милисекундах. Он используется в {{cssxref("animation")}}, {{cssxref("transition")}}, и связанных свойствах.</p>
+<p><a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Types">Тип данных</a> <a href="/en-US/docs/Web/CSS">CSS</a> <strong><code>&lt;time&gt;</code></strong> представляет значение времени, выраженное в секундах или миллисекундах. Он используется в {{cssxref("animation")}}, {{cssxref("transition")}}, и связанных свойствах.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -25,7 +25,7 @@ translation_of: Web/CSS/time
  <dt><strong><code id="s">s</code></strong></dt>
  <dd>Представляет время в секундах. Примеры: <code>0s</code>, <code>1.5s</code>, <code>-60s</code>.</dd>
  <dt><strong><code id="ms">ms</code></strong></dt>
- <dd>Представляет время в милисекундах. Примеры: <code>0ms</code>, <code>150.25ms</code>, <code>-60000ms</code>.</dd>
+ <dd>Представляет время в миллисекундах. Примеры: <code>0ms</code>, <code>150.25ms</code>, <code>-60000ms</code>.</dd>
 </dl>
 
 <div class="note">
@@ -46,7 +46,7 @@ translation_of: Web/CSS/time
 
 <h3 id="Невалидное_время">Невалидное время</h3>
 
-<pre class="example-bad">0           Хотя ноль разрешен без единиц измерения для &lt;length&gt;, это невалидно для &lt;time&gt;.
+<pre class="example-bad">0           Хотя ноль разрешён без единиц измерения для &lt;length&gt;, это невалидно для &lt;time&gt;.
 12.0        Это &lt;number&gt;, а не &lt;time&gt;, так как пропущена единица измерения.
 7 ms        Пробел между числом и единицей измерения не допускается.
 </pre>

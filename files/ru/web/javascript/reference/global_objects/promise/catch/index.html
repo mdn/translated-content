@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
 <div>{{JSRef}}</div>
 
-<p>Метод <strong>catch()</strong> возвращает <code>Promise(</code>обещание) и работает только в случае отклонения обещания. Ведет себя аналогично вызову {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}.</p>
+<p>Метод <strong>catch()</strong> возвращает <code>Promise(</code>обещание) и работает только в случае отклонения обещания. Ведёт себя аналогично вызову {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}}.</p>
 
 <h2 id="Syntax">Syntax</h2>
 
@@ -31,7 +31,7 @@ p.catch(function(reason) {
   <dt><code>reason</code></dt>
   <dd>Причина отказа.</dd>
   <dt>
-  <p>Promise( Обещание ), возвращенное catch (), отклоняется, если onRejected выдает ошибку(throw) или возвращает Promise, который был отклонен; В противном случае Promise, возвращаемый catch () имеет статус  выполнено  (fulfilled)</p>
+  <p>Promise( Обещание ), возвращённое catch (), отклоняется, если onRejected выдаёт ошибку(throw) или возвращает Promise, который был отклонён; В противном случае Promise, возвращаемый catch () имеет статус  выполнено  (fulfilled)</p>
   </dt>
  </dl>
  </dd>
@@ -72,7 +72,7 @@ p1.then(function(value) {
   console.log('Not fired due to the catch');
 });
 
-// Следующий код ведет себя также, как вышенаписанный
+// Следующий код ведёт себя также, как вышенаписанный
 p1.then(function(value) {
   console.log(value); // "Success!"
   return Promise.reject('oh, no!');
@@ -91,7 +91,7 @@ p1.then(function(value) {
 });
 </pre>
 
-<h3 id="Ловим_выброшеные_исключения">Ловим выброшеные исключения</h3>
+<h3 id="Ловим_выброшенные_исключения">Ловим выброшенные исключения</h3>
 
 <pre class="brush: js">// Выкидываемая ошибка вызовет метод catch
 var p1 = new Promise(function(resolve, reject) {
@@ -102,7 +102,7 @@ p1.catch(function(e) {
   console.log(e); // "Uh-oh!"
 });
 
-// Ошибки выброшеные из асинхронных функций не будут пойманы методом catch
+// Ошибки выброшенные из асинхронных функций не будут пойманы методом catch
 var p2 = new Promise(function(resolve, reject) {
   setTimeout(function() {
     throw 'Uncaught Exception!';
@@ -113,7 +113,7 @@ p2.catch(function(e) {
   console.log(e); // Никогда не вызовется
 });
 
-// Ошибки выброшеные после выполнения обещания будут проигнорированны
+// Ошибки выброшенные после выполнения обещания будут проигнорированны
 var p3 = new Promise(function(resolve, reject) {
   resolve();
   throw 'Silenced Exception!';
@@ -149,7 +149,7 @@ p3.catch(function(e) {
 
 <p>{{Compat("javascript.builtins.Promise.catch")}}</p>
 
-<h2 id="Смотри_также">Смотри также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Promise")}}</li>

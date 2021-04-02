@@ -32,7 +32,7 @@ translation_of: Web/API/HTMLScriptElement
   <tr>
    <td><code id="src_property">src</code></td>
    <td>{{domxref("DOMString")}}</td>
-   <td>Получает и отдает URL внешнего скрипта. Он отражает атрибут {{htmlattrxref("src","script")}}.</td>
+   <td>Получает и отдаёт URL внешнего скрипта. Он отражает атрибут {{htmlattrxref("src","script")}}.</td>
   </tr>
   <tr>
    <td><code id="event_property">event</code>{{obsolete_inline}}</td>
@@ -102,7 +102,7 @@ translation_of: Web/API/HTMLScriptElement
 
 <h3 id="Динамическое_импортирование_скриптов">Динамическое импортирование скриптов</h3>
 
-<p>Давайте создадим функцию. которая импортирует новый скрипт в документ, создавая ноду {{HTMLElement("script")}} <em>непосредственно перед</em> {{HTMLElement("script")}}, в котором размещается следующий код (через {{domxref("document.currentScript")}}). Эти скрипты будут выполняться <strong>асинхронно</strong>. Для получения пдробной информации смотрите свойства <a href="#defer_property"><code>defer</code></a> и <a href="#async_property"><code>async</code></a>.</p>
+<p>Давайте создадим функцию. которая импортирует новый скрипт в документ, создавая ноду {{HTMLElement("script")}} <em>непосредственно перед</em> {{HTMLElement("script")}}, в котором размещается следующий код (через {{domxref("document.currentScript")}}). Эти скрипты будут выполняться <strong>асинхронно</strong>. Для получения подробной информации смотрите свойства <a href="#defer_property"><code>defer</code></a> и <a href="#async_property"><code>async</code></a>.</p>
 
 <pre class="brush: js">function loadError(oError) {
   throw new URIError("The script " + oError.target.src + " didn't load correctly.");

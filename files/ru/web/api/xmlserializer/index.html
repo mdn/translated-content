@@ -3,9 +3,9 @@ title: XMLSerializer
 slug: Web/API/XMLSerializer
 translation_of: Web/API/XMLSerializer
 ---
-<div dir="ltr" id="result_box" style="text-align: left;"><code>XMLSerializer </code>может быть использован для конвертации веток DOM-дерева или дерева целиком в текст. <code>XMLSerializer </code>доступен непривелегированным скриптам.</div>
+<div dir="ltr" id="result_box" style="text-align: left;"><code>XMLSerializer </code>может быть использован для конвертации веток DOM-дерева или дерева целиком в текст. <code>XMLSerializer </code>доступен непривилегированным скриптам.</div>
 
-<p>Для получения более подробной информации об <code>XMLSerializer</code> в расширениях для браузера Firefox, пожалуйста обратитесь к документции <code><a href="/en-US/docs/nsIDOMSerializer" title="nsIDOMSerializer">nsIDOMSerializer</a></code>.</p>
+<p>Для получения более подробной информации об <code>XMLSerializer</code> в расширениях для браузера Firefox, пожалуйста обратитесь к документации <code><a href="/en-US/docs/nsIDOMSerializer" title="nsIDOMSerializer">nsIDOMSerializer</a></code>.</p>
 
 <h2 id="Methods" name="Methods">Методы</h2>
 
@@ -13,7 +13,7 @@ translation_of: Web/API/XMLSerializer
  <dt id="serializeToString"><code>XMLSerializer.serializeToString</code>()</dt>
  <dd>Возвращает сериализованное дерево или ветку в виде строки</dd>
  <dt id="serializeToStream"><code>XMLSerializer.serializeToStream()</code> {{ non-standard_inline() }}{{ deprecated_inline() }}</dt>
- <dd>Поддерево, обернутое в указанный элемент, сериализуется в поток байтов с использованием указанной кодировки.</dd>
+ <dd>Поддерево, обёрнутое в указанный элемент, сериализуется в поток байтов с использованием указанной кодировки.</dd>
 </dl>
 
 <h2 id="Examples" name="Examples">Примеры</h2>
@@ -27,7 +27,7 @@ translation_of: Web/API/XMLSerializer
 
 <pre class="brush: js">var inp = document.createElement('input');
 var XMLS = new XMLSerializer();
-var inp_xmls = XMLS.serializeToString(inp); // Конвертируем DOM эелемент в сторку
+var inp_xmls = XMLS.serializeToString(inp); // Конвертируем DOM-элемент в строку
 
 
 // Вставляет вновь созданный элемент в тело документа
@@ -99,7 +99,7 @@ document.body.insertAdjacentHTML('afterbegin', inp_xmls);</pre>
 </table>
 </div>
 
-<h2 id="See_also" name="See_also">Смотрите так же</h2>
+<h2 id="See_also" name="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/Parsing_and_serializing_XML" title="en-US/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>

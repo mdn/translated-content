@@ -7,7 +7,7 @@ translation_of: Web/API/FormData/Using_FormData_Objects
 
 <h2 id="Создание_объекта_FormData">Создание объекта FormData</h2>
 
-<p>Вы можете самостоятельно создать пустой объект <code>FormData</code>, наполнив его затем данными, используя его метод {<code>{domxref("FormData.append","append()")}}:</code></p>
+<p>Вы можете самостоятельно создать пустой объект <code>FormData</code>, наполнив его затем данными, используя его метод <code>{{domxref("FormData.append","append()")}}:</code></p>
 
 <pre class="brush: js">var formData = new FormData();
 
@@ -30,7 +30,7 @@ request.send(formData);
 
 <div class="note"><strong>Примечание:</strong>  Поля "userfile" и "webmasterfile" оба содержат файлы. Число, переданное полю "accountnum" немедленно преобразуется в строку. Преобразование осуществляется методом <code><a href="/en/DOM/XMLHttpRequest/FormData#append()" title="en/XMLHttpRequest/FormData#append()">FormData.append()</a></code> (Значение поля может быть {{ domxref("Blob") }}, {{ domxref("File") }}, или строкой: <strong>если значение не является ни Blob, ни File, то оно автоматически преобразуется в строку).</strong></div>
 
-<p>Данный пример показывает создание экземпляра <code>FormData</code>, содержащего поля "username", "accountnum", "userfile" и "webmasterfile". Экземпляр <code>FormData</code> затем отправляется при помощи метода <code><a href="/en/DOM/XMLHttpRequest#send()" title="en/XMLHttpRequest#send()">send()</a></code> объекта <code>XMLHttpRequest</code>. Поле "webmasterfile" является экземпляром класса <code>{{domxref("Blob")}}</code>. Объект класса <code>Blob</code> является файло-подобным объектом, содержащим "сырые" данные. Определение данных как <code>Blob</code> не является обязательным в нативном javascript. Интерфейс<code> {{ domxref("File") }} </code>базируется на <code>Blob</code>, наследуя его функциональность и расширяя его для поддержки файлов в ОС пользователя. Для создания объектов класса <code>Blob</code> используйте <code>{{domxref("Blob.Blob","Blob() constructor")}}</code>.</p>
+<p>Данный пример показывает создание экземпляра <code>FormData</code>, содержащего поля "username", "accountnum", "userfile" и "webmasterfile". Экземпляр <code>FormData</code> затем отправляется при помощи метода <code><a href="/en/DOM/XMLHttpRequest#send()" title="en/XMLHttpRequest#send()">send()</a></code> объекта <code>XMLHttpRequest</code>. Поле "webmasterfile" является экземпляром класса <code>{{domxref("Blob")}}</code>. Объект класса <code>Blob</code> является файлом-подобным объектом, содержащим "сырые" данные. Определение данных как <code>Blob</code> не является обязательным в нативном javascript. Интерфейс<code> {{ domxref("File") }} </code>базируется на <code>Blob</code>, наследуя его функциональность и расширяя его для поддержки файлов в ОС пользователя. Для создания объектов класса <code>Blob</code> используйте <code>{{domxref("Blob.Blob","Blob() constructor")}}</code>.</p>
 
 <h2 id="Получение_объекта_FormData_из_HTML_формы">Получение объекта FormData из HTML формы</h2>
 

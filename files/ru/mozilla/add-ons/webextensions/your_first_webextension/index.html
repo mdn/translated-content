@@ -10,7 +10,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>В этой статье мы пройдем весь путь создания WebExtension для Firefox, от начала и до конца. Это дополнение будет просто добавлять красную рамку ко всем страницам, загруженным с "mozilla.org" или любого из его поддоменов.</p>
+<p>В этой статье мы пройдём весь путь создания WebExtension для Firefox, от начала и до конца. Это дополнение будет просто добавлять красную рамку ко всем страницам, загруженным с "mozilla.org" или любого из его поддоменов.</p>
 
 <p>Исходный код этого дополнения доступен на GitHub: <a href="https://github.com/mdn/webextensions-examples/tree/master/borderify">https://github.com/mdn/webextensions-examples/tree/master/borderify</a>.</p>
 
@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 
 <h2 id="Написание_WebExtension">Написание WebExtension</h2>
 
-<p>Создайте новую директорию (папку) и перейдите в нее:</p>
+<p>Создайте новую директорию (папку) и перейдите в неё:</p>
 
 <pre class="brush: bash">mkdir borderify
 cd borderify</pre>
@@ -84,14 +84,14 @@ cd borderify</pre>
 
 <p>Создайте директорию (папку) "icons" внутри директории "borderify" . Сохраните в ней иконку под именем "border-48.png".  Вы можете использовать <a href="https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png">иконку из нашего примера</a>, которая взята из набора иконок Google Material Design, и используется по лицензии <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike</a>.</p>
 
-<p>Вы можете использовать собственную иконку. Её размер должен быть 48x48 пикселей. Вы можете также использовать иконку размером 96x96 пикселей для отображения на мониторах высокого разрешения. В этом случае Вам необходимо указать её в качестве свойства "96" объекта "<code>icons"</code> в файле manifest.json:</p>
+<p>Вы можете использовать собственную иконку. Её размер должен быть 48x48 пикселей. Вы можете также использовать иконку размером 96x96 пикселей для отображения на мониторах высокого разрешения. В этом случае вам необходимо указать её в качестве свойства "96" объекта "<code>icons"</code> в файле manifest.json:</p>
 
 <pre class="brush: json line-numbers  language-json"><code class="language-json"><span class="key token">"icons":</span> <span class="punctuation token">{</span>
   <span class="key token">"48":</span> <span class="string token">"icons/border-48.png",
   "96": "icons/border-96.png"</span>
 <span class="punctuation token">}</span></code></pre>
 
-<p>Также Вы можете создать иконку в формате SVG и она будет корректно масштабироваться.</p>
+<p>Также вы можете создать иконку в формате SVG и она будет корректно масштабироваться.</p>
 
 <ul>
  <li><a href="/ru/Add-ons/WebExtensions/manifest.json/icons">Узнать больше о ключе icons</a></li>
@@ -111,7 +111,7 @@ cd borderify</pre>
 
 <h2 id="Пробуем">Пробуем</h2>
 
-<p>Сначала внимательно проверьте, что Вы правильно разместили файлы и дали им правильные имена:</p>
+<p>Сначала внимательно проверьте, что вы правильно разместили файлы и дали им правильные имена:</p>
 
 <pre>borderify/
     icons/
@@ -121,7 +121,7 @@ cd borderify</pre>
 
 <h3 id="Установка">Установка</h3>
 
-<p>Начиная с версии Firefox 45 Вы можете временно установить WebExtension с локального диска.</p>
+<p>Начиная с версии Firefox 45 вы можете временно установить WebExtension с локального диска.</p>
 
 <p>Откройте страницу "about:debugging", кликните "Load Temporary Add-on" и выберите файл manifest.json:</p>
 
@@ -133,7 +133,7 @@ cd borderify</pre>
 
 <p>{{EmbedYouTube("WpUL3-qmenE")}}</p>
 
-<p>Также, Вы можете запускать WebExtension из командной строки, используя <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a>.</p>
+<p>Также, вы можете запускать WebExtension из командной строки, используя <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext">web-ext</a>.</p>
 
 <h3 id="Тестирование">Тестирование</h3>
 

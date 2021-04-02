@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Errors/Not_a_function
 
 <p>Возможно, есть ошибка в имени функции? Возможно, объект, метод которого вы вызываете, не содержит в себе этой функции? Для примера, JavaScript объекты не имеют <code>map</code> функции, а JavaScript Array - имеют.</p>
 
-<p>Есть множество функций нуждающихся в функциях обратного вызова. <span id="result_box" lang="ru"><span>Вы должны будете</span> <span class="alt-edited">предоставить функцию обратного вызова</span> <span>для того,</span> <span>чтобы эти</span> <span>методы работы</span> <span class="alt-edited">правильно</span></span>:</p>
+<p>Есть множество функций, нуждающихся в колбэк-функциях. <span id="result_box" lang="ru"><span>Вы должны будете</span> <span class="alt-edited">предоставить колбэк-функцию</span> <span>для того,</span> <span>чтобы эти</span> <span>методы работы</span> <span class="alt-edited">правильно</span></span>:</p>
 
 <ul>
  <li>Когда работаете с  {{jsxref("Array")}} или {{jsxref("TypedArray")}} объектами:
@@ -56,7 +56,7 @@ translation_of: Web/JavaScript/Reference/Errors/Not_a_function
 
 <h3 id="Функция_вызвана_с_неверным_объектом">Функция вызвана с неверным объектом</h3>
 
-<p>Для некоторых методов, вы должны предоставить функцию обратного вызова и она будет работать только на корректных объектах.  В этом примере используется {{jsxref("Array.prototype.map()")}}, в котором {{jsxref("Array")}} будет работать только с массивами.</p>
+<p>Для некоторых методов вы должны предоставить колбэк-функцию, и она будет работать только на корректных объектах.  В этом примере используется {{jsxref("Array.prototype.map()")}}, в котором {{jsxref("Array")}} будет работать только с массивами.</p>
 
 <pre class="brush: js example-bad">var obj = { a: 13, b: 37, c: 42 };
 
@@ -77,7 +77,7 @@ numbers.map(function(num) {
 // Array [ 2, 8, 18 ]
 </pre>
 
-<h2 id="Смотри_также">Смотри также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions">Functions</a></li>

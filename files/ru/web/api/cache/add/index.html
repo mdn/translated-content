@@ -5,7 +5,7 @@ translation_of: Web/API/Cache/add
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p>Метод <strong><code>add()</code></strong> интерфейса {{domxref("Cache")}} принимает в качестве параметра URL, загружает его и добавляет полученный объект ответа в заданный кеш. Метод <code>add()</code> функционально эквивалентен соедующему коду:</p>
+<p>Метод <strong><code>add()</code></strong> интерфейса {{domxref("Cache")}} принимает в качестве параметра URL, загружает его и добавляет полученный объект ответа в заданный кеш. Метод <code>add()</code> функционально эквивалентен следующему коду:</p>
 
 <pre class="brush: js">fetch(url).then(function (response) {
   if (!response.ok) {
@@ -17,7 +17,7 @@ translation_of: Web/API/Cache/add
 <p>Для более сложных операций, вам нужно использовать {{domxref("Cache.put","Cache.put()")}}.</p>
 
 <div class="note">
-<p><strong>Замечание</strong>: <code>add()</code> перезапишет любую пару ключ/значение, сохраненную ранее в кеше, соответствующем запросу.</p>
+<p><strong>Замечание</strong>: <code>add()</code> перезапишет любую пару ключ/значение, сохранённую ранее в кеше, соответствующем запросу.</p>
 </div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
@@ -79,7 +79,7 @@ translation_of: Web/API/Cache/add
   <tr>
    <th scope="col">Спецификация</th>
    <th scope="col">Статус</th>
-   <th scope="col">Комменатрий</th>
+   <th scope="col">Комментарий</th>
   </tr>
   <tr>
    <td>{{SpecName('Service Workers', '#cache', 'Cache')}}</td>

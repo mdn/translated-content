@@ -14,7 +14,7 @@ translation_of: WebAssembly/Exported_functions
 
 <h2 id="Экспортированные…_что">Экспортированные… что?</h2>
 
-<p>Экспортированные функции это просто JavaScript обертки, которые вызывают функции модуля WebAssembly. При их использовании происходит неявное преобразование типов аргументов функции в типы, с которыми может работать WebAssembly (например, преобразование number в int32). Дальше эти аргументы передаются функции вашего модуля и она вызывается. Результат также преобразовывается и возвращается в JavaScript.</p>
+<p>Экспортированные функции это просто JavaScript обёртки, которые вызывают функции модуля WebAssembly. При их использовании происходит неявное преобразование типов аргументов функции в типы, с которыми может работать WebAssembly (например, преобразование number в int32). Дальше эти аргументы передаются функции вашего модуля и она вызывается. Результат также преобразовывается и возвращается в JavaScript.</p>
 
 <p>Вы можете получить список экспортированных функций двумя способами:</p>
 
@@ -23,11 +23,11 @@ translation_of: WebAssembly/Exported_functions
  <li>Через <code><a href="/en-US/docs/WebAssembly/API/Instance/exports">Instance.exports</a></code> существующего экземпляра модуля.</li>
 </ul>
 
-<p>В любом случае вы получаете одну и туже обертку функции вашего модуля. С точки зрения JavaScript, все экспортированные функции wasm являются функциями JavaScript, но они инкапсулированы экземпляром модуля wasm, и имеют только ограниченный способ доступа к ним.</p>
+<p>В любом случае вы получаете одну и туже обёртку функции вашего модуля. С точки зрения JavaScript, все экспортированные функции wasm являются функциями JavaScript, но они инкапсулированы экземпляром модуля wasm, и имеют только ограниченный способ доступа к ним.</p>
 
 <h2 id="Пример">Пример</h2>
 
-<p>Давайте посмотрим на пример, чтобы прояснить ситуацию (вы можете найти его на GitHub как <a href="https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html">table-set.html</a> или <a href="https://mdn.github.io/webassembly-examples/other-examples/table-set.html">запустить в своем браузере</a>, и посмотерть <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat">текстовое представление модуля wasm</a>):</p>
+<p>Давайте посмотрим на пример, чтобы прояснить ситуацию (вы можете найти его на GitHub как <a href="https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html">table-set.html</a> или <a href="https://mdn.github.io/webassembly-examples/other-examples/table-set.html">запустить в своём браузере</a>, и посмотреть <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat">текстовое представление модуля wasm</a>):</p>
 
 <pre class="brush: js">var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
@@ -42,7 +42,7 @@ WebAssembly.instantiateStreaming(fetch('table.wasm'))
   console.log(otherTable.get(1)());
 });</pre>
 
-<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Здесь мы создаем таблицу </span></font>otherTable</code> из JavaScript используя конструктор {{jsxref("WebAssembly.Table")}}, после этого мы загружаем модуль <code>table.wasm</code> при помощи функции {{jsxref("WebAssembly.instantiateStreaming()")}}.</p>
+<p><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Здесь мы создаём таблицу </span></font>otherTable</code> из JavaScript используя конструктор {{jsxref("WebAssembly.Table")}}, после этого мы загружаем модуль <code>table.wasm</code> при помощи функции {{jsxref("WebAssembly.instantiateStreaming()")}}.</p>
 
 <p>Затем мы получаем объект содержащий все функции, экспортированные из экземпляра модуля. Извлекаем ссылки на эти функции через  <code><a href="/en-US/docs/WebAssembly/API/Table/get">tbl.get()</a>,</code> вызываем их и выводим результат работы в консоль. Затем мы используем <code>set()</code> чтобы таблица  <code>otherTable</code> содержала ссылки на те же функции, что и таблица <code>tbl</code>.</p>
 
@@ -52,7 +52,7 @@ WebAssembly.instantiateStreaming(fetch('table.wasm'))
 
 <p>В предыдущем примере возвращаемое значение каждого вызова <code><a href="/en-US/docs/WebAssembly/API/Table/get">Table.prototype.get()</a></code> является экспортированной функцией WebAssembly — это именно то, о чем мы говорили.</p>
 
-<p>Стоит заметить что помимо того что они являются обертками для функций WebAssembly, это обычные функции JavaScript. Если вы загрузите приведенный выше пример в <a href="/en-US/docs/WebAssembly#Browser_compatibility">браузере с поддержкой WebAssembly</a>, и запустите следующие строки в консоли:</p>
+<p>Стоит заметить что помимо того что они являются обёртками для функций WebAssembly, это обычные функции JavaScript. Если вы загрузите приведённый выше пример в <a href="/en-US/docs/WebAssembly#Browser_compatibility">браузере с поддержкой WebAssembly</a>, и запустите следующие строки в консоли:</p>
 
 <pre class="brush: js">var testFunc = otherTable.get(0);
 typeof testFunc;</pre>
@@ -63,12 +63,12 @@ typeof testFunc;</pre>
     [native code]
 }</pre>
 
-<p>Это наводит на мысль о том что эта функция является оберткой.</p>
+<p>Это наводит на мысль о том что эта функция является обёрткой.</p>
 
 <p>Дополнительные сведения которые нужно знать при работе с экспортированными функциями:</p>
 
 <ul>
  <li>Их свойство <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length">length</a> это количество аргументов указанных в сигнатуре wasm функции.</li>
  <li>Их свойство <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name">name</a> является результатом вызова <code>toString()</code> индекса функции в модуле wasm.</li>
- <li>Если вы попытаетесь вызвать экспортированную функцию wasm, которая принимает или возвращает значение типа i64, то это приведет к ошибке, поскольку в настоящее время JavaScript не имеет точного способа представления i64. Однако в дальнейшем это может измениться - новый тип int64 рассматривается для будущих стандартов, который затем может использоваться wasm.</li>
+ <li>Если вы попытаетесь вызвать экспортированную функцию wasm, которая принимает или возвращает значение типа i64, то это приведёт к ошибке, поскольку в настоящее время JavaScript не имеет точного способа представления i64. Однако в дальнейшем это может измениться - новый тип int64 рассматривается для будущих стандартов, который затем может использоваться wasm.</li>
 </ul>

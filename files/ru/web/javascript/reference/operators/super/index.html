@@ -42,14 +42,14 @@ super.functionOnParent([arguments]);
 
 class Square extends Polygon {
   constructor(length) {
-    this.height; // ReferenceError, super должен быть вызыван первым!
+    this.height; // ReferenceError, super должен быть вызван первым!
 
     // Здесь, вызывается метод конструктора родительского класса с длинами,
     // указанными для ширины и высоты класса Polygon
     super(length, length);
 
     // Примечание: в производных классах, super() необходимо вызывать прежде чем
-    // использывать 'this'. Если этого не сделать будет сообщение об ошибке ссылки.
+    // использовать 'this'. Если этого не сделать будет сообщение об ошибке ссылки.
     this.name = 'Square';
   }
 

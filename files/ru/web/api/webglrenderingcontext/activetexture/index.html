@@ -16,7 +16,7 @@ translation_of: Web/API/WebGLRenderingContext/activeTexture
 
 <dl>
  <dt><code>texture</code></dt>
- <dd>Номер текстуры которую необходимо активировать. Значение <code>gl.TEXTURE<em>I</em></code> где <em>I</em> значение в диапозоне от 0 до <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>.</dd>
+ <dd>Номер текстуры которую необходимо активировать. Значение <code>gl.TEXTURE<em>I</em></code> где <em>I</em> значение в диапазоне от 0 до <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>.</dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
@@ -25,7 +25,7 @@ translation_of: Web/API/WebGLRenderingContext/activeTexture
 
 <h3 id="Исключения">Исключения</h3>
 
-<p>Если <em>texture</em> не относится к <code>gl.TEXTURE<em>I</em></code>, где <em>I</em> значение в диапозоне от 0 до <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>, то получаем исключение <code>gl.INVALID_ENUM</code> .</p>
+<p>Если <em>texture</em> не относится к <code>gl.TEXTURE<em>I</em></code>, где <em>I</em> значение в диапазоне от 0 до <code>gl.MAX_COMBINED_TEXTURE_IMAGE_UNITS - 1</code>, то получаем исключение <code>gl.INVALID_ENUM</code> .</p>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -43,7 +43,7 @@ translation_of: Web/API/WebGLRenderingContext/activeTexture
 
 <pre class="brush: js">gl.activeTexture(gl.TEXTURE0);
 gl.getParameter(gl.ACTIVE_TEXTURE);
-// вернет "33984" (0x84C0, gl.TEXTURE0 enum value)
+// вернёт "33984" (0x84C0, gl.TEXTURE0 enum value)
 </pre>
 
 <h2 id="Спецификация">Спецификация</h2>
@@ -70,7 +70,7 @@ gl.getParameter(gl.ACTIVE_TEXTURE);
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p class="hidden">Таблица совместимости на этой странице создается из структурированных данных. Если вы хотите внести свой вклад в данные, ознакомьтесь с https://github.com/mdn/browser-compat-data и отправить нам запрос на слияние.</p>
+<p class="hidden">Таблица совместимости на этой странице создаётся из структурированных данных. Если вы хотите внести свой вклад в данные, ознакомьтесь с https://github.com/mdn/browser-compat-data и отправить нам запрос на слияние.</p>
 
 <p>{{Compat("api.WebGLRenderingContext.activeTexture")}}</p>
 

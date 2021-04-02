@@ -5,7 +5,7 @@ translation_of: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">Метод <strong><code>setInterval()</code></strong> предложен для {{domxref("Window")}} и {{domxref("Worker")}} интерфейсов. Он циклически вызывает функцию или участок кода с фиксированной паузой между каждым вызовом.</span> Уникальный идентификатор intervalID, возвращаемый методом, позволяет впоследствии удалить запущенный <span class="seoSummary"><strong><code>setInterval</code></strong></span> c помощью {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Метод определен с помощью миксина {{domxref("WindowOrWorkerGlobalScope")}}.</p>
+<p><span class="seoSummary">Метод <strong><code>setInterval()</code></strong> предложен для {{domxref("Window")}} и {{domxref("Worker")}} интерфейсов. Он циклически вызывает функцию или участок кода с фиксированной паузой между каждым вызовом.</span> Уникальный идентификатор intervalID, возвращаемый методом, позволяет впоследствии удалить запущенный <span class="seoSummary"><strong><code>setInterval</code></strong></span> c помощью {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Метод определён с помощью миксина {{domxref("WindowOrWorkerGlobalScope")}}.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -17,11 +17,11 @@ translation_of: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 <dl>
  <dt><code>func</code></dt>
- <dd>{{jsxref("function")}} - функция, которая будет вызыватся каждые <code>delay</code> милисекунд. Ожидается, что функция не принимает параметры и ничего не возвращает.</dd>
+ <dd>{{jsxref("function")}} - функция, которая будет вызываться каждые <code>delay</code> миллисекунд. Ожидается, что функция не принимает параметры и ничего не возвращает.</dd>
  <dt><code>code</code></dt>
- <dd>Этот необязательный синтаксис позволяет вам включать строку вметсо функции, которая компилируется и выполняется каждые <code>delay</code> миллисекунд. Однако такая форма не комендуется по тем же причинам, которые делают {{jsxref("eval", "eval()")}} угрозой безопасности.</dd>
+ <dd>Этот необязательный синтаксис позволяет вам включать строку вместо функции, которая компилируется и выполняется каждые <code>delay</code> миллисекунд. Однако такая форма не рекомендуется по тем же причинам, которые делают {{jsxref("eval", "eval()")}} угрозой безопасности.</dd>
  <dt><code>delay</code></dt>
- <dd>Время в милисекундах (одна тысячная секунды), на которое таймер выполнит задержку между вызовом функции. Если задано значение меньше 10, то будет использовано число 10. На самом деле задержка может быть больше чем указано, дополнительное объяснение приведено здесь:  {{SectionOnPage("/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for delays longer than specified")}}.</dd>
+ <dd>Время в миллисекундах (одна тысячная секунды), на которое таймер выполнит задержку между вызовом функции. Если задано значение меньше 10, то будет использовано число 10. На самом деле задержка может быть больше чем указано, дополнительное объяснение приведено здесь:  {{SectionOnPage("/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for delays longer than specified")}}.</dd>
  <dt><code>param1, ..., paramN</code> {{optional_inline}}</dt>
  <dd>Дополнительные параметры, передаваемые в функцию <em>func</em>.</dd>
 </dl>
@@ -253,7 +253,7 @@ Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin ac an
 
 <p><a href="/files/3997/typewriter.html">View this demo in action</a>. See also: <a href="/en-US/docs/DOM/window.clearInterval"><code>clearInterval()</code></a>.</p>
 
-<h2 id="Аргументы_функции_обратного_вызова">Аргументы функции обратного вызова</h2>
+<h2 id="Аргументы_колбэк-функции">Аргументы колбэк-функции</h2>
 
 <p>As previously discussed, Internet Explorer versions 9 and below do not support the passing of arguments to the callback function in either <code>setTimeout()</code> or <code>setInterval()</code>. The following <strong>IE-specific</strong> code demonstrates a method for overcoming this limitation.  To use, simply add the following code to the top of your script.</p>
 
@@ -377,7 +377,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 <div class="note">JavaScript 1.8.5 introduces the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method, which lets you specify the value that should be used as <code>this</code> for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow functions</a>, with lexical this allowing us to write setInterval( () =&gt; this.myMethod) if we're inside myArray method.</div>
 
-<h2 id="MiniDaemon_-_фреймворд_для_упраления_таймерами">MiniDaemon - фреймворд для упраления таймерами</h2>
+<h2 id="MiniDaemon_-_фреймворк_для_управления_таймерами">MiniDaemon - фреймворк для управления таймерами</h2>
 
 <p>In pages requiring many timers, it can often be difficult to keep track of all of the running timer events. One approach to solving this problem is to store information about the state of a timer in an object. Following is a minimal example of such an abstraction. The constructor architecture explicitly avoids the use of closures. It also offers an alternative way to pass the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> object to the callback function (see <a href="#The_.22this.22_problem">The "this" problem</a> for details). The following code is also <a href="https://github.com/madmurphy/minidaemon.js">available on GitHub</a>.</p>
 

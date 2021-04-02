@@ -135,7 +135,7 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', function(k, v) {
 <p>На основе <a class="external" href="http://kangax.github.com/es5-compat-table/">таблицы совместимости Kangax</a>.</p>
 
 <h3 id="Gecko-specific_notes" name="Gecko-specific_notes">Примечания по Gecko</h3>
-<p>Начиная с Gecko 29 {{geckoRelease("29")}}, при передаче некорректной строки JSON выдаётся более подробное собщение об ошибке, содержащее номер строки и колонки, в которых была обнаружена ошибка разбора. Это полезно при отладке больших данных JSON.</p>
+<p>Начиная с Gecko 29 {{geckoRelease("29")}}, при передаче некорректной строки JSON выдаётся более подробное сообщение об ошибке, содержащее номер строки и колонки, в которых была обнаружена ошибка разбора. Это полезно при отладке больших данных JSON.</p>
 <pre class="brush: js">JSON.parse('[1, 2, 3,]');
 // SyntaxError: JSON.parse: unexpected character at
 // line 1 column 10 of the JSON data

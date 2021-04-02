@@ -1,11 +1,11 @@
 ---
-title: 'Задание: DIY Джанго мини блог'
+title: 'Задание: DIY Django мини блог'
 slug: Learn/Server-side/Django/django_assessment_blog
 tags:
   - Аттестация
-  - Бэкэнд
-  - Бэкэнд программирование
-  - Джанго
+  - Бэкенд
+  - Бэкенд программирование
+  - Django
   - Изучение
   - Начинающий
   - блог
@@ -101,7 +101,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
    <td>List of all bloggers</td>
    <td><code>/blog/bloggers/</code></td>
    <td>
-    <p>Список блоггеров в системе:</p>
+    <p>Список блогеров в системе:</p>
 
     <ul>
      <li>Доступный для всех пользователей с боковой панели сайта</li>
@@ -140,7 +140,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
    <td>Admin site</td>
    <td><code>/admin/<em>&lt;standard urls&gt;</em></code></td>
    <td>
-    <p>Админ-сайт должен быть включен, чтобы разрешить создание / редактирование / удаление сообщений в блогах, авторов блога и комментариев блога (это механизм для создания блоггеров в блогах):</p>
+    <p>Админ-сайт должен быть включён, чтобы разрешить создание / редактирование / удаление сообщений в блогах, авторов блога и комментариев блога (это механизм для создания блогеров в блогах):</p>
 
     <ul>
      <li>В админ панеле должен отображаться список комментариев в строке (внизу каждого сообщения в блоге).</li>
@@ -156,7 +156,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 
 <ul>
  <li>Все поля модели имеют правильную метку и длину.</li>
- <li>Все модели имеют ожидаемое имя объекта (например,<code> __str__()</code>выдает ожидаемое значение).</li>
+ <li>Все модели имеют ожидаемое имя объекта (например,<code> __str__()</code>выдаёт ожидаемое значение).</li>
  <li>Модели имеют ожидаемый URL для отдельных записей в блогах и комментариях (например,<code>get_absolute_url()</code> возвращает ожидаемый URL-адрес).</li>
  <li>Страница BlogListView (страница на всех блогах) доступна в ожидаемом месте (например, /blog/blogs)</li>
  <li>Страница BlogListView (страница на всех блогах) доступна на ожидаемом именованном URL-адресе (например, 'blogs')</li>
@@ -165,7 +165,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 </ul>
 
 <div class="note">
-<p><strong>Заметка</strong>: Конечно, есть много других тестов, которые вы можете запустить. Используйте на свое усмотрение, но мы ожидаем, что вы сделаете хотя бы тесты выше.</p>
+<p><strong>Примечание</strong>: Конечно, есть много других тестов, которые вы можете запустить. Используйте на своё усмотрение, но мы ожидаем, что вы сделаете хотя бы тесты выше.</p>
 </div>
 
 <p>В следующем разделе показаны <a href="#Screenshots">скриншоты</a> сайта, который выполняет перечисленные выше требования.</p>
@@ -187,11 +187,11 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 
 <p><img alt="List of all blogs" src="https://mdn.mozillademos.org/files/14319/diyblog_allblogs.png" style="border-style: solid; border-width: 1px; display: block; height: 363px; margin: 0px auto; width: 986px;"></p>
 
-<h3 id="Список_всех_блоггеров">Список всех блоггеров</h3>
+<h3 id="Список_всех_блогеров">Список всех блогеров</h3>
 
 <p> </p>
 
-<p>Это ссылки на всех блоггеров в "All bloggers" по ссылке, которая на боковой панели. В этом случае мы можем увидеть на боковой панели, что ни один пользователь не вошел в систему.</p>
+<p>Это ссылки на всех блогеров в "All bloggers" по ссылке, которая на боковой панели. В этом случае мы можем увидеть на боковой панели, что ни один пользователь не вошёл в систему.</p>
 
 <p><img alt="List of all bloggers" src="https://mdn.mozillademos.org/files/14321/diyblog_blog_allbloggers.png" style="border-style: solid; border-width: 1px; display: block; height: 256px; margin: 0px auto; width: 493px;"></p>
 
@@ -201,7 +201,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 
 <p><img alt="Blog detail with add comment link" src="https://mdn.mozillademos.org/files/14323/diyblog_blog_detail_add_comment.png" style="border-style: solid; border-width: 1px; display: block; height: 640px; margin: 0px auto; width: 986px;"></p>
 
-<p>Обратите внимание, что комментарии имеют дату <em>и</em> время, и расположены в порядке от самых старых до новейших (противоположно порядку ведения блога). В конце у нас есть ссылка для доступа к форме, чтобы добавить новый комментарий. Если пользователь не вошел в систему, мы бы увидели предложение войти в систему.</p>
+<p>Обратите внимание, что комментарии имеют дату <em>и</em> время, и расположены в порядке от самых старых до новейших (противоположно порядку ведения блога). В конце у нас есть ссылка для доступа к форме, чтобы добавить новый комментарий. Если пользователь не вошёл в систему, мы бы увидели предложение войти в систему.</p>
 
 <p><img alt="Comment link when not logged in" src="https://mdn.mozillademos.org/files/14325/diyblog_blog_detail_not_logged_in.png" style="border-style: solid; border-width: 1px; display: block; height: 129px; margin: 0px auto; width: 646px;"></p>
 
@@ -213,7 +213,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
 
 <h3 id="Об_авторе">Об авторе</h3>
 
-<p>Здесь отображается информация о блоггере вместе со списком его блогов.</p>
+<p>Здесь отображается информация о блогере вместе со списком его блогов.</p>
 
 <p><img alt="Blogger detail page" src="https://mdn.mozillademos.org/files/14327/diyblog_blogger_detail.png" style="border-style: solid; border-width: 1px; display: block; height: 379px; margin: 0px auto; width: 982px;"></p>
 
@@ -233,8 +233,8 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
  </li>
  <li>Запустите миграцию для новых моделей и создайте суперпользователя.</li>
  <li>Используйте админ панель, чтобы создать какой-нибудь пример блога и комментарии в блогах.</li>
- <li>Создайте представления, шаблоны, и URL-конфигурации для публикации блога и списка страниц блоггера.</li>
- <li>Создайте представления, шаблоны, и URL-конфигурации для публикации блога и подробных страниц блоггера.</li>
+ <li>Создайте представления, шаблоны, и URL-конфигурации для публикации блога и списка страниц блогера.</li>
+ <li>Создайте представления, шаблоны, и URL-конфигурации для публикации блога и подробных страниц блогера.</li>
  <li>Создайте страницу с формой для добавления новых комментариев (не забудьте сделать это доступным только для зарегистрированных пользователей!)</li>
 </ol>
 
@@ -249,14 +249,14 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
  <li>Просмотр списка публикаций блога и блогеров, а также подробное представление для сообщений в блоге можно создать с помощью  <a href="/en-US/docs/Learn/Server-side/Django/Generic_views">generic list and detail views</a>.</li>
  <li>Список постов в блоге конкретного автора может быть создан с помощью общего списка Blog list view и фильтрация для объекта блога, соответствующего указанному автору.
   <ul>
-   <li>Вам придется реализовать  <code>get_queryset(self)</code> для фильтрации (как и в нашем классе библиотеки <code>LoanedBooksAllListView</code>) и получить информацию об авторе из URL-адреса.</li>
+   <li>Вам придётся реализовать  <code>get_queryset(self)</code> для фильтрации (как и в нашем классе библиотеки <code>LoanedBooksAllListView</code>) и получить информацию об авторе из URL-адреса.</li>
    <li>Вам также необходимо передать имя автора на страницу в контексте. Чтобы сделать это в представлении на основе классов, вам необходимо реализовать  <code>get_context_data()</code> (обсуждается ниже).</li>
   </ul>
  </li>
  <li>Форма <em>добавления комментариев</em> может быть создана с использованием функционального представления (и связанной модели и формы) или с использованием общего <code>CreateView</code>. Если вы используете <code>CreateView</code> (рекомендуется):
   <ul>
    <li>Вам также нужно будет передать имя блога на страницу комментариев в контексте (реализовать  <code>get_context_data()</code> как обсуждается ниже).</li>
-   <li>Форма должна отображать только комментарий «описание» для записи пользователя (дата и связанная с ними запись в блоге не должны редактироваться). Поскольку они не будут в форме, ваш код должен будет установить автора комментария в <code> form_valid()</code> функцию, поэтому он может быть сохранен в модели (<a href="https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user">as described here</a> — Django docs). В этой же функции мы устанавливаем связанный блог. Возможная реализация показана ниже (<code>pk</code> это идентификатор блога, переданный из URL / URL конфигурации ).
+   <li>Форма должна отображать только комментарий «описание» для записи пользователя (дата и связанная с ними запись в блоге не должны редактироваться). Поскольку они не будут в форме, ваш код должен будет установить автора комментария в <code> form_valid()</code> функцию, поэтому он может быть сохранён в модели (<a href="https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user">as described here</a> — Django docs). В этой же функции мы устанавливаем связанный блог. Возможная реализация показана ниже (<code>pk</code> это идентификатор блога, переданный из URL / URL конфигурации ).
     <pre class="brush: python">    def form_valid(self, form):
         """
         Add author and associated blog to form data before setting it as valid (so it is saved to model)
@@ -274,7 +274,7 @@ translation_of: Learn/Server-side/Django/django_assessment_blog
  </li>
 </ol>
 
-<p>Мы кратко говорили о передаче контекста шаблону в представлении на основе классов в теме  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views">Django Tutorial Part 6: Generic list and detail views</a>. Для этого вам нужно переопределить <code>get_context_data()</code> (сначала получить существующий контекст, обновить его любыми дополнительными переменными, которые вы хотите передать шаблону, а затем вернуть обновленный контекст). Например, фрагмент кода ниже показывает, как вы можете добавить объект blogger в контекст на основе его <code>BlogAuthor</code> id.</p>
+<p>Мы кратко говорили о передаче контекста шаблону в представлении на основе классов в теме  <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views">Django Tutorial Part 6: Generic list and detail views</a>. Для этого вам нужно переопределить <code>get_context_data()</code> (сначала получить существующий контекст, обновить его любыми дополнительными переменными, которые вы хотите передать шаблону, а затем вернуть обновлённый контекст). Например, фрагмент кода ниже показывает, как вы можете добавить объект blogger в контекст на основе его <code>BlogAuthor</code> id.</p>
 
 <pre class="brush: python">class SomeView(generic.ListView):
     ...

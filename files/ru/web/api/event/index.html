@@ -78,16 +78,16 @@ translation_of: Web/API/Event
 
 <dl>
  <dt>{{domxref("Event.Event", "Event()")}}</dt>
- <dd>Создает объект <code>Event</code> и возвращает его вызывающему.</dd>
+ <dd>Создаёт объект <code>Event</code> и возвращает его вызывающему.</dd>
 </dl>
 
 <h2 id="Properties" name="Properties">Свойства</h2>
 
 <dl>
  <dt>{{domxref("Event.bubbles")}} {{readonlyinline}}</dt>
- <dd>Логическое значение, указывающее, вспыло ли событие вверх по DOM или нет.</dd>
+ <dd>Логическое значение, указывающее, всплыло ли событие вверх по DOM или нет.</dd>
  <dt>{{domxref("Event.cancelBubble")}}</dt>
- <dd>Историческое название синонима {{domxref("Event.stopPropagation()")}}. Если установить знаение в <code>true</code> до возврата из обработчика события (Event Handler), то событие не будет распространяться дальше (например, на обрабочики для родительских узлов).</dd>
+ <dd>Историческое название синонима {{domxref("Event.stopPropagation()")}}. Если установить значение в <code>true</code> до возврата из обработчика события (Event Handler), то событие не будет распространяться дальше (например, на обработчики для родительских узлов).</dd>
  <dt>{{domxref("Event.cancelable")}} {{readonlyinline}}</dt>
  <dd>Логическое значение, показывающее возможность отмены события.</dd>
  <dt>{{domxref("Event.composed")}} {{ReadOnlyInline}}</dt>
@@ -115,7 +115,7 @@ translation_of: Web/API/Event
  <dt>{{domxref("Event.timeStamp")}} {{readonlyinline}}</dt>
  <dd>Время, когда событие было создано (в миллисекундах). По спецификации это время от начала Эпохи (Unix Epoch), но в действительности в разных браузерах определяется по-разному; кроме того, ведётся работа по изменению его на {{domxref("DOMHighResTimeStamp")}} тип.</dd>
  <dt>{{domxref("Event.type")}} {{readonlyinline}}</dt>
- <dd>Название события (без учета регистра символов).</dd>
+ <dd>Название события (без учёта регистра символов).</dd>
  <dt>{{domxref("Event.isTrusted")}} {{readonlyinline}}</dt>
  <dd>Показывает было или нет событие инициировано браузером (например, по клику мышью) или из скрипта (например, через функцию создания события, такую как <a href="/en-US/docs/DOM/event.initEvent">event.initEvent</a>)</dd>
 </dl>
@@ -235,7 +235,7 @@ translation_of: Web/API/Event
 
 <p>[1] До Firefox 52, это свойство было определено в интерфейсе {{domxref("UIEvent")}}. Для деталей смотрите {{bug(1298970)}}.</p>
 
-<h2 id="See_also" name="See_also">Смотрите так же</h2>
+<h2 id="See_also" name="See_also">Смотрите также</h2>
 
 <ul>
  <li>Типы событий: <a href="/en-US/docs/Web/Reference/Events">Event reference</a></li>

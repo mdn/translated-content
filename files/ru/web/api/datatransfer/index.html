@@ -96,16 +96,16 @@ translation_of: Web/API/DataTransfer
 
 <p>Для событий <strong>dragenter</strong> и <strong>dragover</strong>, <strong>dropEffect</strong> будет инициализировано значением, зависящим от того, какое действие запрашивает пользователь. То, как это определяется, зависит от платформы, но, как правило, пользователи могут зажать клавиши-модификаторы для выбора желаемого действия. В обработчике событий для <strong>dragenter</strong> и <strong>dragover</strong>, <strong>dropEffect</strong> следует модифицировать, если запрашиваемое пользователем действие не то, которое требовалось.</p>
 
-<p>Для событий <strong>dragstart</strong>, <strong>drag</strong>, и <strong>dragleave</strong>,<strong> dropEffect</strong> будет инициализировано значением "none". Cвойству <strong>dropEffect</strong> можно присвоить любое значение, но оно не будет ни для чего использоваться.</p>
+<p>Для событий <strong>dragstart</strong>, <strong>drag</strong>, и <strong>dragleave</strong>,<strong> dropEffect</strong> будет инициализировано значением "none". Свойства <strong>dropEffect</strong> можно присвоить любое значение, но оно не будет ни для чего использоваться.</p>
 
 <p>Для событий <strong>drop</strong> и <strong>dragend</strong>, <strong>dropEffect</strong> будет инициализировано значением, которое было назначено свойству <strong>dropEffect</strong> после последнего события <strong>dragenter</strong> или <strong>dragover</strong>.</p>
 
 <p>Возможные значения:</p>
 
 <ul>
- <li><strong>copy</strong>: в новом расположении создается копия исходного элемента.</li>
+ <li><strong>copy</strong>: в новом расположении создаётся копия исходного элемента.</li>
  <li><strong>move</strong>: элемент перемещается в новое расположение.</li>
- <li><strong>link</strong>: в новом расположении создается ссылка на исходный элемент.</li>
+ <li><strong>link</strong>: в новом расположении создаётся ссылка на исходный элемент.</li>
  <li><strong>none</strong>: элемент не может быть брошен.</li>
 </ul>
 
@@ -113,13 +113,13 @@ translation_of: Web/API/DataTransfer
 
 <h3 id="effectAllowed.28.29" name="effectAllowed.28.29">effectAllowed</h3>
 
-<p>Определяет эффекты, которые разрешены для этого перетаскивания (дрэг). Вы можете указать их в собитии <code>dragstart </code>чтобы желаемый эффект сработал на перетаскиваемом элементе (что перетаскиваем),  или в событии  <code>dragenter </code>и<code> dragenter </code>чтобы желаемый эффект сработал для цели перетаскивания (куда перетаскиваем). В других событиях значение не используется.</p>
+<p>Определяет эффекты, которые разрешены для этого перетаскивания. Вы можете указать их в событии <code>dragstart </code>чтобы желаемый эффект сработал на перетаскиваемом элементе (что перетаскиваем),  или в событии  <code>dragenter </code>и<code> dragenter </code>чтобы желаемый эффект сработал для цели перетаскивания (куда перетаскиваем). В других событиях значение не используется.</p>
 
 <p>Возможные значения:</p>
 
 <ul>
  <li><strong>copy</strong>: Копия ресурса может быть сделана в новом месте.</li>
- <li><strong>move</strong>: Элемент может быть перемещен в новое место. </li>
+ <li><strong>move</strong>: Элемент может быть перемещён в новое место. </li>
  <li><strong>link</strong>: A link may be established to the source at the new location.</li>
  <li><strong>copyLink</strong>: A copy or link operation is permitted.</li>
  <li><strong>copyMove</strong>: A copy or move operation is permitted.</li>
@@ -233,7 +233,7 @@ translation_of: Web/API/DataTransfer
 
 <h6 id="Parameters_getData" name="Parameters_getData">Параметры</h6>
 
-<p>Тип данных который будет возвращен.</p>
+<p>Тип данных который будет возвращён.</p>
 
 <dl>
  <dt><code>type </code></dt>
@@ -260,7 +260,7 @@ translation_of: Web/API/DataTransfer
 
 <h3 id="setDragImage.28.29" name="setDragImage.28.29">setDragImage()</h3>
 
-<p>Устанавливает изображение, которое будет использоваться для перетаскивания если нужно. В большинстве случаев это не будет установлено, так как изображение по умолчанию создается из перетаскиваемого узла.</p>
+<p>Устанавливает изображение, которое будет использоваться для перетаскивания если нужно. В большинстве случаев это не будет установлено, так как изображение по умолчанию создаётся из перетаскиваемого узла.</p>
 
 <p>Если узел является HTML-элементом img, HTML-элементом canvas или XUL-элементом изображения, тогда используются данные изображения. В противном случае изображение должно быть видимым узлом, и из этого будет создано перетаскиваемое изображение. Если изображение равно null, любое пользовательское изображение перетаскиваемое очищается и вместо него используется значение по умолчанию.</p>
 

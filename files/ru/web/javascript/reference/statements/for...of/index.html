@@ -213,7 +213,7 @@ for (var value of iterable) {
 
 <p>Для {{jsxref("Statements/for...in", "for...in")}} обход <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties" title="перечисляемые свойства">перечисляемых свойств</a> объекта осуществляется в произвольном порядке.</p>
 
-<p>Для <code>for...of</code> обход происходит в соответствии с тем, какой порядок определен в <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable">итерируемом объекте</a>.</p>
+<p>Для <code>for...of</code> обход происходит в соответствии с тем, какой порядок определён в <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/iterable">итерируемом объекте</a>.</p>
 
 <p>Следующий пример показывает различия в работе циклов <code>for...of</code> и <code>for...in</code> при обходе {{jsxref("Array")}}.</p>
 
@@ -237,7 +237,7 @@ for (let i of iterable) {
   console.log(i); // выведет 3, 5, 7
 }</code></pre>
 
-<p>Разберемся шаг за шагом в вышеописанном коде.</p>
+<p>Разберёмся шаг за шагом в вышеописанном коде.</p>
 
 <pre class="notranslate"><code>Object.prototype.objCustom = function() {};
 Array.prototype.arrCustom = function() {};
@@ -251,7 +251,7 @@ iterable.foo = 'hello';</code></pre>
   console.log(i); // выведет 0, 1, 2, "foo", "arrCustom", "objCustom"
 }</code></pre>
 
-<p>Цикл выводит только <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">перечисляемые свойства</a> объекта <code>iterable</code>, в порядке их создания. Он не выводит <strong>значения</strong> <code>3</code>, <code>5</code>, <code>7</code> и <code>hello</code> поскольку они <strong>не являются</strong> перечисляемыми, фактически они вообще не являются свойствами, они являютя <strong>значениями</strong>. Выводятся же <strong>имена свойств и методов</strong>, например <code>arrCustom</code> и <code>objCustom</code>. Если вы еще не совсем поняли, по каким свойствам осуществляется обход, вот дополнительное объяснение того, как работает {{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}} .</p>
+<p>Цикл выводит только <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">перечисляемые свойства</a> объекта <code>iterable</code>, в порядке их создания. Он не выводит <strong>значения</strong> <code>3</code>, <code>5</code>, <code>7</code> и <code>hello</code> поскольку они <strong>не являются</strong> перечисляемыми, фактически они вообще не являются свойствами, они являются <strong>значениями</strong>. Выводятся же <strong>имена свойств и методов</strong>, например <code>arrCustom</code> и <code>objCustom</code>. Если вы ещё не совсем поняли, по каким свойствам осуществляется обход, вот дополнительное объяснение того, как работает {{jsxref("Statements/for...in", "array iteration and for...in", "#Array_iteration_and_for...in")}} .</p>
 
 <pre class="notranslate"><code>for (let i in iterable) {
   if (iterable.hasOwnProperty(i)) {
@@ -259,7 +259,7 @@ iterable.foo = 'hello';</code></pre>
   }
 }</code></pre>
 
-<p>Цикл аналогичен предыдущему, но использует {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} для проверки того, собственное ли это свойство объекта или унаследованое. Выводятся только собственные свойства. Имена <code>0</code>, <code>1</code>, <code>2</code> и <code>foo</code> принадлежат только экземпляру объекта (<strong>не унаследованы</strong>). Методы <code>arrCustom</code> и <code>objCustom</code> не выводятся, поскольку они <strong>унаследованы</strong>.</p>
+<p>Цикл аналогичен предыдущему, но использует {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}} для проверки того, собственное ли это свойство объекта или унаследованное. Выводятся только собственные свойства. Имена <code>0</code>, <code>1</code>, <code>2</code> и <code>foo</code> принадлежат только экземпляру объекта (<strong>не унаследованы</strong>). Методы <code>arrCustom</code> и <code>objCustom</code> не выводятся, поскольку они <strong>унаследованы</strong>.</p>
 
 <pre class="notranslate"><code>for (let i of iterable) {
   console.log(i); // выведет 3, 5, 7
@@ -279,7 +279,7 @@ iterable.foo = 'hello';</code></pre>
   <tr>
    <td>{{SpecName('ES2015', '#sec-for-in-and-for-of-statements', 'for...of statement')}}</td>
    <td>{{Spec2('ES2015')}}</td>
-   <td>Изначальное опеределение.</td>
+   <td>Изначальное определение.</td>
   </tr>
   <tr>
    <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}}</td>

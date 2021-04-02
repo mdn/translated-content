@@ -14,11 +14,11 @@ translation_of: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 
 <h2 id="Что_пошло_не_так">Что пошло не так?</h2>
 
-<p>JavaScript 1.6's {{jsxref("Statements/for_each...in", "for each (variable in obj)")}} оператор устарел и будет удален в ближайшем будущем.</p>
+<p>JavaScript 1.6's {{jsxref("Statements/for_each...in", "for each (variable in obj)")}} оператор устарел и будет удалён в ближайшем будущем.</p>
 
 <h2 id="Примеры">Примеры</h2>
 
-<h3 id="Итерация_обьекта">Итерация обьекта</h3>
+<h3 id="Итерация_объекта">Итерация объекта</h3>
 
 <p>{{jsxref("Statements/for_each...in", "for each...in")}} используется для итерации по указанным значениям объектов.</p>
 
@@ -87,7 +87,7 @@ for (var x of array) {
 
 <p>{{jsxref("Statements/for_each...in", "for each...in")}} ничего не делает, если указанное значение <code>null</code> или <code>undefined</code>, но {{jsxref("Statements/for...of", "for...of")}} выдаст исключение в этих случаях.</p>
 
-<h4 id="Непрвильный_синтаксис">Непрвильный синтаксис</h4>
+<h4 id="Неправильный_синтаксис">Неправильный синтаксис</h4>
 
 <pre class="brush: js example-bad">function func(array) {
   for each (var x in array) {
@@ -121,7 +121,7 @@ func(undefined);       // prints nothing
 
 <h4 id="Неправильный_синтаксис">Неправильный синтаксис</h4>
 
-<p>Существует устаревшая идиома для итерации по парам ключ-значение указанного объекта с помощью {{jsxref("Statements/for_each...in", "for each...in")}} и осужденный {{jsxref("Iterator")}} обьект.</p>
+<p>Существует устаревшая идиома для итерации по парам ключ-значение указанного объекта с помощью {{jsxref("Statements/for_each...in", "for each...in")}} и осуждённый {{jsxref("Iterator")}} объект.</p>
 
 <pre class="brush: js example-bad">var object = { a: 10, b: 20 };
 
@@ -131,7 +131,7 @@ for each (var [key, value] in Iterator(object)) {
 }
 </pre>
 
-<h4 id="Альтернативный_стандартный_ситнтаксис">Альтернативный стандартный ситнтаксис</h4>
+<h4 id="Альтернативный_стандартный_синтаксис">Альтернативный стандартный синтаксис</h4>
 
 <p>Теперь можно использовать стандартный цикл {{jsxref("Statements/for...in", "for...in")}} цикл для итерации по указанным ключам объекта и получения каждого значения внутри цикла:</p>
 

@@ -64,7 +64,7 @@ translation_of: Web/API/ReadableStream
     start(controller) {
       // 下面的函数处理每个数据块
       function push() {
-        // "done"是一个布尔型，"value"是一个Unit8Array
+        // "done"是一个布尔型，"value"是一个Uint8Array
         reader.read().then(({ done, value }) =&gt; {
           // 判断是否还有可读的数据？
           if (done) {

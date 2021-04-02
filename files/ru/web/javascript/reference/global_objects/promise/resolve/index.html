@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
 <div>{{JSRef}}</div>
 
-<p>Метод <code><strong>Promise.resolve(value)</strong></code> возвращает {{jsxref("Promise")}} выполненый с переданным значением. Если переданное значение является thenable - обьект (т.е. имеет метод {{jsxref("Promise.then", "\"then\" method")}}), возвращаемое обещание будет следовать thenable - обьекту, принимая свое состояние; в ином случае возвращаемое обещание будет выполнено с переданным значением.</p>
+<p>Метод <code><strong>Promise.resolve(value)</strong></code> возвращает {{jsxref("Promise")}} выполненный с переданным значением. Если переданное значение является thenable - объект (т.е. имеет метод {{jsxref("Promise.then", "\"then\" method")}}), возвращаемое обещание будет следовать thenable - объекту, принимая своё состояние; в ином случае возвращаемое обещание будет выполнено с переданным значением.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -23,16 +23,16 @@ Promise.resolve(thenable);
 
 <dl>
  <dt>value</dt>
- <dd>Значение с которым будет выполнено обещание. Может также быть обещанием или обьект подобный обещанию (thenable - обьект имеющий метод then).</dd>
+ <dd>Значение с которым будет выполнено обещание. Может также быть обещанием или объект подобный обещанию (thenable - объект имеющий метод then).</dd>
 </dl>
 
-<h3 id="Возращаемое_значение">Возращаемое значение</h3>
+<h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Выполненый с переданным значением {{jsxref("Promise")}}.</p>
+<p>Выполненный с переданным значением {{jsxref("Promise")}}.</p>
 
 <h2 id="Описание">Описание</h2>
 
-<p><code>Метод Promise.resolve</code> возвращает выполненое обещание (<code>Promise</code>).</p>
+<p><code>Метод Promise.resolve</code> возвращает выполненное обещание (<code>Promise</code>).</p>
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -77,7 +77,7 @@ p1.then(function(v) {
 });
 
 // Thenable объект выбрасывает исключение
-// перед вызовом колбека Promise resolves
+// перед вызовом колбэка Promise resolves
 var thenable = { then: function(resolve) {
   throw new TypeError("Throwing");
   resolve("Resolving");
@@ -91,7 +91,7 @@ p2.then(function(v) {
 });
 
 // Thenable объект выбрасывает исключение
-// после вызова колбека Promise resolves
+// после вызова колбэка Promise resolves
 var thenable = { then: function(resolve) {
   resolve("Resolving");
   throw new TypeError("Throwing");
@@ -131,7 +131,7 @@ p3.then(function(v) {
 
 <p>{{Compat("javascript/promise","Promise.resolve")}}</p>
 
-<h2 id="Смотри_также">Смотри также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Promise")}}</li>

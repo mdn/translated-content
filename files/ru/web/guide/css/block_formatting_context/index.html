@@ -30,7 +30,7 @@ translation_of: Web/Guide/CSS/Block_formatting_context
  <li>флекс-элементы (непосредственные потомки элемента с {{ cssxref("display") }}<code>: flex</code> или <code>inline-flex</code>)</li>
  <li>грид-элементы (непосредственные потомки элемента с {{ cssxref("display") }}<code>: grid</code> или <code>inline-grid</code>)</li>
  <li>многоколоночные контейнеры (элементы, у которых {{ cssxref("column-count") }} или {{ cssxref("column-width") }}  не равно <code>auto</code>, включая элементы с <code>column-count: 1</code>)</li>
- <li>{{ cssxref("column-span") }}<code>: all</code> должно всегда создавать новый блочный контекст форматирования, даже если элемент с <code>column-span: all</code> не находится в многоголоночном контейнере (<a href="https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51">изменение в спецификации</a>, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=709362">баг Chrome</a>).</li>
+ <li>{{ cssxref("column-span") }}<code>: all</code> должно всегда создавать новый блочный контекст форматирования, даже если элемент с <code>column-span: all</code> не находится в многоколоночном контейнере (<a href="https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51">изменение в спецификации</a>, <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=709362">баг Chrome</a>).</li>
 </ul>
 
 <p>Блочный контекст форматирования применяется ко всему содержимому того элемента, который его создал.</p>
@@ -43,7 +43,7 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 
 <p>Давайте рассмотрим пару примеров, чтобы рассмотреть эффект от создания нового блочного контекста форматирования.</p>
 
-<p>В примере ниже мы имеем плавающий элемент внутри <code>&lt;</code><code>div&gt;</code> с заданным <code>border</code>. Содержимое этого <code>&lt;div&gt;</code> обтекает плавающий элемент. Так как содержимое <code>float</code> выше, чем остальное содержимое, обтекающее его, <code>border</code> элемента <code>div</code> теперь проходит сквозь <code>float</code>. Как объясняется в руководстве <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">In Flow and Out of Flow</a>, плавающий элемент был исключен из потока элементов, так что фон и граница <code>div</code> включает только его содержимое, но не элемент <code>float</code>. </p>
+<p>В примере ниже мы имеем плавающий элемент внутри <code>&lt;</code><code>div&gt;</code> с заданным <code>border</code>. Содержимое этого <code>&lt;div&gt;</code> обтекает плавающий элемент. Так как содержимое <code>float</code> выше, чем остальное содержимое, обтекающее его, <code>border</code> элемента <code>div</code> теперь проходит сквозь <code>float</code>. Как объясняется в руководстве <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">In Flow and Out of Flow</a>, плавающий элемент был исключён из потока элементов, так что фон и граница <code>div</code> включает только его содержимое, но не элемент <code>float</code>. </p>
 
 <p>{{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}</p>
 
@@ -90,9 +90,9 @@ translation_of: Web/Guide/CSS/Block_formatting_context
 <p>{{EmbedLiveSample("flowroot", 200, 200)}}</p>
 </div>
 
-<p>С помощью <code>display: flow-root;</code> применённом на элементе <code>&lt;div&gt;</code>, всё внутри этого контейнера будет учавствовать в едином блочном контексте форматирования этого контейнера, и плавающие элементы не будут торчать из нижней части контейнера.</p>
+<p>С помощью <code>display: flow-root;</code> применённом на элементе <code>&lt;div&gt;</code>, всё внутри этого контейнера будет участвовать в едином блочном контексте форматирования этого контейнера, и плавающие элементы не будут торчать из нижней части контейнера.</p>
 
-<p>Задание значения <code>flow-root</code> имеет смысл тогда, когда Вы понимаете, что Вы создаёте что-то, что будет действовать так же, как действует корневой <code>root</code> элемент (<code>&lt;html&gt;</code> в браузерах) в том плане, что он создаёт новый контекст для компоновки потока внутри него.</p>
+<p>Задание значения <code>flow-root</code> имеет смысл тогда, когда вы понимаете, что вы создаёте что-то, что будет действовать так же, как действует корневой <code>root</code> элемент (<code>&lt;html&gt;</code> в браузерах) в том плане, что он создаёт новый контекст для компоновки потока внутри него.</p>
 
 <div class="blockIndicator note">
 <p><strong>Примечание:</strong>  <code>display: flow-root;</code> <a href="https://caniuse.com/#search=flow-root">не поддерживается</a> в Safari.</p>

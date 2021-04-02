@@ -35,7 +35,7 @@ translation_of: Learn/Server-side/Express_Nodejs/development_environment
  NPM также можно использовать для (глобальной) установки Express Application Generator, удобного инструмента для создания каркасных веб-приложений Express, которые следуют шаблону MVC. Генератор приложений является необязательным, поскольку вам не нужно использовать этот инструмент для создания приложений, использующих Express, или для приложений для создан Express, имеющих одинаковую архитектурную разметку или зависимости. Мы будем использовать его, потому что это значительно облегчает начало работы и продвигает модульную структуру приложения.</span></p>
 
 <div class="note">
-<p><span class="tlid-translation translation" lang="ru"><span title="">Примечание: в отличие от некоторых других веб-сред, среда разработки не включает отдельный веб-сервер разработки.</span> <span title="">В Node / Express веб-приложение создает и запускает собственный веб-сервер!</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Примечание: в отличие от некоторых других веб-сред, среда разработки не включает отдельный веб-сервер разработки.</span> <span title="">В Node / Express веб-приложение создаёт и запускает собственный веб-сервер!</span></span></p>
 </div>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Существуют и другие периферийные инструменты, которые являются частью типичной среды разработки, в том числе текстовые редакторы или IDE для редактирования кода и инструменты управления исходным кодом, такие как Git, для безопасного управления различными версиями вашего кода.</span> <span title="">Мы предполагаем, что вы уже установили подобные инструменты (в частности, текстовый редактор).</span></span></p>
@@ -50,11 +50,11 @@ translation_of: Learn/Server-side/Express_Nodejs/development_environment
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Существует множество выпусков Node - более новые выпуски содержат исправления ошибок, поддержку более свежих версий стандартов ECMAScript (JavaScript) и улучшения API-интерфейсов Node.</span><br>
  <br>
- <span title="">Как правило, вы должны использовать самый последний выпуск LTS (с долгосрочной поддержкой), поскольку он будет более стабильным, чем «текущий» выпуск, при этом все еще имея относительно недавние функции (и все еще активно поддерживается).</span> <span title="">Вы должны использовать Текущий выпуск, если вам нужна функция, которой нет в версии LTS.</span><br>
+ <span title="">Как правило, вы должны использовать самый последний выпуск LTS (с долгосрочной поддержкой), поскольку он будет более стабильным, чем «текущий» выпуск, при этом все ещё имея относительно недавние функции (и все ещё активно поддерживается).</span> <span title="">Вы должны использовать Текущий выпуск, если вам нужна функция, которой нет в версии LTS.</span><br>
  <br>
  <span title="">Для Express вы всегда должны использовать последнюю версию.</span></span></p>
 
-<h3 id="Как_насчет_баз_данных_и_других_зависимостей"><span class="tlid-translation translation" lang="ru"><span title="">Как насчет баз данных и других зависимостей?</span></span></h3>
+<h3 id="Как_насчёт_баз_данных_и_других_зависимостей"><span class="tlid-translation translation" lang="ru"><span title="">Как насчёт баз данных и других зависимостей?</span></span></h3>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Другие зависимости, такие как драйверы баз данных, механизмы шаблонов, механизмы аутентификации и т. д., Являются частью приложения и импортируются в среду приложения с помощью диспетчера пакетов NPM.</span> <span title="">Мы обсудим их в следующих статьях для конкретных приложений.</span></span></p>
 
@@ -78,7 +78,7 @@ translation_of: Learn/Server-side/Express_Nodejs/development_environment
    <li><span class="tlid-translation translation" lang="ru"><span title="">Нажмите кнопку, чтобы загрузить сборку LTS, которая «Рекомендуется для большинства пользователей».</span></span></li>
   </ol>
  </li>
- <li><span class="tlid-translation translation" lang="ru"><span title="">Установите Node, дважды щелкнув по загруженному файлу и следуя инструкциям по установке.</span></span></li>
+ <li><span class="tlid-translation translation" lang="ru"><span title="">Установите Node, дважды щёлкнув по загруженному файлу и следуя инструкциям по установке.</span></span></li>
 </ol>
 
 <h3 id="Ubuntu_16.04">Ubuntu 16.04</h3>
@@ -98,7 +98,7 @@ sudo apt-get install -y nodejs</code>
 
 <h3 id="Проверка_вашей_установки_Nodejs_и_NPM">Проверка вашей установки Nodejs и NPM</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Самый простой способ проверить, установлен ли этот узел, - это запустить команду «версия» в своем терминале / командной строке и проверить, что возвращается строка версии:</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Самый простой способ проверить, установлен ли этот узел, - это запустить команду «версия» в своём терминале / командной строке и проверить, что возвращается строка версии:</span></span></p>
 
 <pre class="brush: bash notranslate">&gt;node -v
 v8.11.3</pre>
@@ -113,7 +113,7 @@ v8.11.3</pre>
 <ol>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Скопируйте следующий текст в файл с именем hellonode.js.</span> <span title="">Здесь используются чистые функции Node (ничего из Express) и некоторый синтаксис ES6:</span></span>
 
-  <pre class="brush: js notranslate">//Загрузка моделя HTTP
+  <pre class="brush: js notranslate">//Загрузка модуля HTTP
 const http = require("http");
 <code>const hostname = '127.0.0.1';
 const port = 3000;
@@ -134,10 +134,10 @@ server.listen(port, hostname, () =&gt; {
 
 </pre>
 
-  <p><span class="tlid-translation translation" lang="ru"><span title="">Код импортирует модуль «http» и использует его для создания сервера (createServer ()), который прослушивает HTTP-запросы на порту 3000. Затем сценарий выводит на консоль сообщение о том, какой URL-адрес браузера можно использовать для тестирования сервера.</span> <span title="">Функция createServer () принимает в качестве аргумента функцию обратного вызова, которая будет вызываться при получении HTTP-запроса - она просто возвращает ответ с кодом состояния HTTP 200 («ОК») и простым текстом «Hello World».</span></span></p>
+  <p><span class="tlid-translation translation" lang="ru"><span title="">Код импортирует модуль «http» и использует его для создания сервера (createServer ()), который обрабатывает HTTP-запросы на порту 3000. Затем сценарий выводит на консоль сообщение о том, какой URL-адрес браузера можно использовать для тестирования сервера.</span> <span title="">Функция createServer () принимает в качестве аргумента колбэк-функцию, которая будет вызываться при получении HTTP-запроса - она просто возвращает ответ с кодом состояния HTTP 200 («ОК») и простым текстом «Hello World».</span></span></p>
 
   <div class="note">
-  <p><span class="tlid-translation translation" lang="ru"><span title="">Замечание: не беспокойтесь, если вы еще не совсем понимаете, что делает этот код!</span> <span title="">Мы объясним наш код более подробно, как только мы начнем использовать Express!</span></span></p>
+  <p><span class="tlid-translation translation" lang="ru"><span title="">Замечание: не беспокойтесь, если вы ещё не совсем понимаете, что делает этот код!</span> <span title="">Мы объясним наш код более подробно, как только мы начнём использовать Express!</span></span></p>
   </div>
  </li>
  <li><span class="tlid-translation translation" lang="ru"><span title="">Запустите сервер, перейдя в тот же каталог, что и ваш файл hellonode.js в командной строке, и вызвав узел вместе с именем скрипта, например так:</span></span>
@@ -153,7 +153,7 @@ Server running at http://127.0.0.1:3000/
 <p><span class="tlid-translation translation" lang="ru"><span title="">Помимо самого Node, NPM является наиболее важным инструментом для работы с приложениями Node.</span> <span title="">NPM используется для получения любых пакетов (библиотек JavaScript), которые необходимы приложению для разработки, тестирования и / или производства, а также может использоваться для запуска тестов и инструментов, используемых в процессе разработки.</span></span></p>
 
 <div class="note">
-<p><strong>Замечание:</strong>  <span class="tlid-translation translation" lang="ru"><span title="">С точки зрения Node, Express - это просто еще один пакет, который вам нужно установить с помощью NPM, а затем установить его в своем собственном коде.</span></span></p>
+<p><strong>Замечание:</strong>  <span class="tlid-translation translation" lang="ru"><span title="">С точки зрения Node, Express - это просто ещё один пакет, который вам нужно установить с помощью NPM, а затем установить его в своём собственном коде.</span></span></p>
 </div>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете вручную использовать NPM для получения каждого необходимого пакета отдельно.</span> <span title="">Обычно мы вместо этого управляем зависимостями, используя простой текстовый файл с именем package.json.</span> <span title="">В этом файле перечислены все зависимости для конкретного «пакета» JavaScript, включая имя пакета, версию, описание, исходный файл для выполнения, производственные зависимости, зависимости разработки, версии Node, с которыми он может работать, и т. Д. Файл package.json должен</span> <span title="">содержать все, что нужно NPM для загрузки и запуска вашего приложения (если вы пишете библиотеку многократного использования, вы можете использовать это определение для загрузки пакета в репозиторий npm и сделать его доступным для других пользователей).</span></span></p>
@@ -163,7 +163,7 @@ Server running at http://127.0.0.1:3000/
 <p><span class="tlid-translation translation" lang="ru"><span title="">Следующие шаги показывают, как вы можете использовать NPM для загрузки пакета, сохранить его в зависимостях проекта, а затем потребовать его в приложении Node.</span></span></p>
 
 <div class="note">
-<p><strong>Замечание:</strong>  <span class="tlid-translation translation" lang="ru"><span title="">Здесь мы показываем инструкции для получения и установки пакета Express.</span> <span title="">Позже мы покажем, как этот пакет и другие уже указаны для нас с помощью Express Application Generator.</span> <span title="">Этот раздел предоставлен, потому что полезно понять, как работает NPM и что создается генератором приложений.</span></span></p>
+<p><strong>Замечание:</strong>  <span class="tlid-translation translation" lang="ru"><span title="">Здесь мы показываем инструкции для получения и установки пакета Express.</span> <span title="">Позже мы покажем, как этот пакет и другие уже указаны для нас с помощью Express Application Generator.</span> <span title="">Этот раздел предоставлен, потому что полезно понять, как работает NPM и что создаётся генератором приложений.</span></span></p>
 </div>
 
 <ol>
@@ -225,7 +225,7 @@ app.listen(</code>8000<code>, () =&gt; {
 });</code>
 </pre>
 
-  <p><span class="tlid-translation translation" lang="ru"><span title="">Этот код показывает минимальное веб-приложение Express «HelloWorld».</span> <span title="">Это импортирует модуль «экспресс» и использует его для создания сервера (приложения), который прослушивает HTTP-запросы на порту 8000 и выводит на консоль сообщение, объясняющее, какой URL-адрес браузера можно использовать для тестирования сервера.</span> <span title="">Функция app.get () отвечает только на запросы HTTP GET с указанным URL-путем ('/'), в этом случае вызывая функцию для отправки нашего Hello World!</span> <span title="">сообщение.</span></span><br>
+  <p><span class="tlid-translation translation" lang="ru"><span title="">Этот код показывает минимальное веб-приложение Express «HelloWorld».</span> <span title="">Это импортирует модуль «экспресс» и использует его для создания сервера (приложения), который обрабатывает HTTP-запросы на порту 8000 и выводит на консоль сообщение, объясняющее, какой URL-адрес браузера можно использовать для тестирования сервера.</span> <span title="">Функция app.get () отвечает только на запросы HTTP GET с указанным URL-путём ('/'), в этом случае вызывая функцию для отправки нашего Hello World!</span> <span title="">сообщение.</span></span><br>
    <br>
    <span class="tlid-translation translation" lang="ru"><span title="">Создайте файл с именем index.js в корне каталога приложения «myapp» и передайте ему содержимое, показанное выше.</span></span></p>
  </li>
@@ -239,7 +239,7 @@ Example app listening on port 8000
 
 <h3 id="Зависимости_разработки">Зависимости разработки</h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Если зависимость используется только во время разработки, вы должны вместо этого сохранить ее как «зависимость разработки» (чтобы пользователям вашего пакета не приходилось устанавливать ее в производстве).</span> <span title="">Например, чтобы использовать популярный инструмент JavaScript Linting eslint, вы должны вызвать NPM, как показано ниже:</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Если зависимость используется только во время разработки, вы должны вместо этого сохранить её как «зависимость разработки» (чтобы пользователям вашего пакета не приходилось устанавливать её в производстве).</span> <span title="">Например, чтобы использовать популярный инструмент JavaScript Linting eslint, вы должны вызвать NPM, как показано ниже:</span></span></p>
 
 <pre class="brush: bash notranslate"><code>npm install eslint --save-dev</code></pre>
 
@@ -284,7 +284,7 @@ npm run lint</code>
 
 <h2 id="Установка_Express_Application_Generator">Установка Express Application Generator</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Инструмент Express Application Generator создает «скелет» приложения Express.</span> <span title="">Установите генератор, используя NPM, как показано (флаг -g устанавливает инструмент глобально, чтобы вы могли вызывать его из любого места):</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Инструмент Express Application Generator создаёт «скелет» приложения Express.</span> <span title="">Установите генератор, используя NPM, как показано (флаг -g устанавливает инструмент глобально, чтобы вы могли вызывать его из любого места):</span></span></p>
 
 <pre class="notranslate"><code>npm install express-generator -g</code></pre>
 
@@ -302,7 +302,7 @@ npm run lint</code>
 <p><span class="tlid-translation translation" lang="ru"><span title="">NPM создаст новое приложение Express в подпапке вашего текущего местоположения, отображая процесс сборки на консоли.</span> <span title="">По завершении инструмент отобразит команды, которые необходимо ввести, чтобы установить зависимости Node и запустить приложение.</span></span></p>
 
 <div class="note">
-<p><span class="tlid-translation translation" lang="ru"><span title="">Новое приложение будет иметь файл package.json в своем корневом каталоге.</span> <span title="">Вы можете открыть это, чтобы увидеть, какие зависимости установлены, включая Express и библиотеку шаблонов Jade:</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Новое приложение будет иметь файл package.json в своём корневом каталоге.</span> <span title="">Вы можете открыть это, чтобы увидеть, какие зависимости установлены, включая Express и библиотеку шаблонов Jade:</span></span></p>
 
 <pre class="brush: js notranslate">{
   "name": "helloworld",
@@ -341,7 +341,7 @@ SET DEBUG=helloworld:* | npm start
 DEBUG=helloworld:* npm start
 </pre>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Команда DEBUG создает полезное ведение журнала, что приводит к выводу, подобному показанному ниже.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Команда DEBUG создаёт полезное ведение журнала, что приводит к выводу, подобному показанному ниже.</span></span></p>
 
 <pre class="brush: bash notranslate">&gt;SET DEBUG=helloworld:* &amp; npm start
 
@@ -354,7 +354,7 @@ DEBUG=helloworld:* npm start
 
 <p><img alt="Express - Generated App Default Screen" src="https://mdn.mozillademos.org/files/14331/express_default_screen.png" style="border-style: solid; border-width: 1px; display: block; height: 301px; margin: 0px auto; width: 675px;"></p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Мы поговорим больше о сгенерированном приложении, когда перейдем к статье о создании каркасного приложения.</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Мы поговорим больше о сгенерированном приложении, когда перейдём к статье о создании каркасного приложения.</span></span></p>
 
 <ul>
 </ul>
@@ -363,7 +363,7 @@ DEBUG=helloworld:* npm start
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Теперь на вашем компьютере установлена и запущена среда разработки Node, которую можно использовать для создания веб-приложений Express.</span> <span title="">Вы также увидели, как NPM можно использовать для импорта Express в приложение, а также как вы можете создавать приложения с помощью инструмента Express Application Generator и затем запускать их.</span><br>
  <br>
- <span title="">В следующей статье мы начнем работу с учебным пособием по созданию полноценного веб-приложения с использованием этой среды и связанных инструментов.</span></span></p>
+ <span title="">В следующей статье мы начнём работу с учебным пособием по созданию полноценного веб-приложения с использованием этой среды и связанных инструментов.</span></span></p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

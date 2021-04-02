@@ -1,125 +1,48 @@
 ---
-title: window.navigator
+title: Window.navigator
 slug: Web/API/Window/navigator
 tags:
-  - DOM
-  - DOM_0
-  - Référence_du_DOM_Gecko
+  - API
+  - HTML DOM
+  - Property
+  - Read-only
+  - Reference
+  - Window
 translation_of: Web/API/Window/navigator
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id="R.C3.A9sum.C3.A9" name="R.C3.A9sum.C3.A9">Résumé</h3>
-<p>Renvoie une référence à l'objet
- <i>
-  navigator</i>
- , qui peut être interrogé pour obtenir des informations concernant l'application exécutant le script.</p>
-<h3 id="Exemple" name="Exemple">Exemple</h3>
-<pre class="eval">alert("Vous utilisez " + navigator.appName);
+<div>{{APIRef}}</div>
+
+<p>La propriété en lecture-seule <strong><code>Window.navigator</code></strong> renvoie une référence à un objet qui est une instance de {{domxref("Navigator")}} et possède des méthodes et propriétés à propos de l'application qui exécute le script.</p>
+
+<h2 id="Syntax">Syntaxe</h2>
+
+<pre class="brush: js"><var>navigatorObject</var> = window.navigator</pre>
+
+<h2 id="Example">Exemple</h2>
+
+<pre class="brush: js">var sUsrAg = navigator.userAgent;
+console.log("Voici l'agent utilisateur du navigateur courant", sUsrAg);
 </pre>
-<h3 id="Notes" name="Notes">Notes</h3>
-<p>L'objet navigator est utilisé pour connaître le navigateur en cours d'utilisation. Il fournit des propriétés permettant d'obtenir des informations sur le navigateur lui-même. Toutes les propriétés et méthodes disponibles depuis window.navigator peuvent également être référencées simplement avec navigator.</p>
-<h3 id="Propri.C3.A9t.C3.A9s" name="Propri.C3.A9t.C3.A9s">Propriétés</h3>
-<dl>
- <dt>
-  <a href="fr/DOM/window.navigator.appcodeName">navigator.appCodeName</a></dt>
- <dd>
-  Renvoie le nom de code interne du navigateur courant.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.appName">navigator.appName</a></dt>
- <dd>
-  Renvoie le nom officiel du navigateur.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.appVersion">navigator.appVersion</a></dt>
- <dd>
-  Renvoie la version du navigateur sous la forme d'une chaîne.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.buildID">navigator.buildID</a></dt>
- <dd>
-  Renvoie l'identifiant de compilation du navigateur (par exemple « 2006090803 »)</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.cookieEnabled">navigator.cookieEnabled</a></dt>
- <dd>
-  Renvoie un booléen indiquant si les cookies sont activés ou non dans le navigateur.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.language">navigator.language</a></dt>
- <dd>
-  Renvoie une chaîne représentant la langue utilisée par le navigateur.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.mimeTypes">navigator.mimeTypes</a></dt>
- <dd>
-  Renvoie une liste des types MIME gérés par le navigateur.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.onLine">navigator.onLine</a></dt>
- <dd>
-  Renvoie un booléen indiquant si le navigateur est en mode en ligne.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.oscpu">navigator.oscpu</a></dt>
- <dd>
-  Renvoie une chaîne indiquant le système d'exploitation.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.platform">navigator.platform</a></dt>
- <dd>
-  Renvoie une chaîne représentant la plateforme du navigateur.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.plugins">navigator.plugins</a></dt>
- <dd>
-  Renvoie un tableau listant les plugins installés dans le navigateur.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.product">navigator.product</a></dt>
- <dd>
-  Renvoie le nom de produit du navigateur (par exemple « Gecko »)</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.productSub">navigator.productSub</a></dt>
- <dd>
-  Renvoie le numéro de compilation du produit (par exemple « 20060909 »)</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.securityPolicy">navigator.securityPolicy</a></dt>
- <dd>
-  Renvoie une chaîne vide. Dans Netscape 4.7x, renvoyait « US &amp; CA domestic policy » ou « Export policy ».</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.userAgent">navigator.userAgent</a></dt>
- <dd>
-  Renvoie la chaîne d'identification d'agent utilisateur pour le navigateur courant.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.vendor">navigator.vendor</a></dt>
- <dd>
-  Renvoie le nom du vendeur du navigateur (par exemple « Netscape6 »)</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.vendorSub">navigator.vendorSub</a></dt>
- <dd>
-  Renvoie le numéro de version du vendeur (par exemple « 6.1 »)</dd>
-</dl>
-<h3 id="M.C3.A9thodes" name="M.C3.A9thodes">Méthodes</h3>
-<dl>
- <dt>
-  <a href="fr/DOM/window.navigator.javaEnabled">navigator.javaEnabled</a></dt>
- <dd>
-  Indique si le navigateur hôte dispose de Java activé ou non.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.isLocallyAvailable">navigator.isLocallyAvailable</a></dt>
- <dd>
-  Permet de vérifier si le document à une URI donnée est disponible sans utiliser le réseau.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.preference">navigator.preference</a></dt>
- <dd>
-  Définit une préférence utilisateur. Cette méthode est <a class="external" href="http://www.faqts.com/knowledge_base/view.phtml/aid/1608/fid/125/lang/en">uniquement disponible pour du code privilégié</a>, et il est préférable d'utiliser l'<a href="fr/API_des_pr%c3%a9f%c3%a9rences">API des préférences</a> XPCOM à la place.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.registerContentHandler">navigator.registerContentHandler</a></dt>
- <dd>
-  Permet aux sites Web de s'enregistrer comme gestionnaires possibles pour un type MIME donné.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.registerProtocolHandler">navigator.registerProtocolHandler</a> {{ Fx_minversion_inline(3) }} </dt>
- <dd>
-  Permet aux sites Web de s'enregistrer comme gestionnaires possibles pour un protocole donné.</dd>
- <dt>
-  <a href="fr/DOM/window.navigator.taintEnabled">navigator.taintEnabled</a> {{ Obsolete_inline() }} </dt>
- <dd>
-  Renvoie <code>false</code>. Les fonctions JavaScript taint/untaint ont été retirées de JavaScript dans sa version 1.2<a class="external" href="http://devedge-temp.mozilla.org/library/manuals/2000/javascript/1.3/reference/nav.html#1194117"> </a></dd>
-</dl>
-<h3 id="Voir_.C3.A9galement" name="Voir_.C3.A9galement"><a class="external" href="http://devedge-temp.mozilla.org/library/manuals/2000/javascript/1.3/reference/nav.html#1194117">Voir également </a></h3>
-<p><a href="fr/R%c3%a9f%c3%a9rence_objet_crois%c3%a9e_des_clients_DOM/navigator">Référence objet croisée des clients DOM:navigator</a></p>
-<h3 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécification</h3>
-<p>{{ DOM0() }}</p>
-<div class="noinclude">
-  </div>
-<p>{{ languages( { "en": "en/DOM/window.navigator", "ja": "ja/DOM/window.navigator", "pl": "pl/DOM/window.navigator" } ) }}</p>
+
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaires</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-navigator', 'Window: navigator')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.Window.navigator")}}</p>

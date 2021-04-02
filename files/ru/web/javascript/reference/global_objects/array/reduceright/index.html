@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 
 <h2 id="Description" name="Description">Описание</h2>
 <p>Метод <code>reduceRight()</code> выполняет функцию <code>callback</code> один раз для каждого элемента, присутствующего в массиве, за исключением пустот, принимая четыре аргумента: начальное значение (или значение от предыдущего вызова <code>callback</code>), значение текущего элемента, текущий индекс и массив, по которому происходит итерация.</p>
-<p>Вызов функции обратного вызова <code>callback</code> будет выглядеть так:</p>
+<p>Вызов колбэк-функции <code>callback</code> будет выглядеть так:</p>
 <pre class="brush: js">array.reduceRight(function(previousValue, currentValue, index, array) {
   // ...
 });
@@ -53,7 +53,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
   return previousValue + currentValue;
 });
 </pre>
-<p>Функция обратного вызова будет вызвана четыре раза, аргументы и возвращаемое значение при каждом вызове будут следующими:</p>
+<p>Колбэк-функция будет вызвана четыре раза, аргументы и возвращаемое значение при каждом вызове будут следующими:</p>
 <table style="width: 100%;">
  <thead>
   <tr>
@@ -100,7 +100,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
   </tr>
  </tbody>
 </table>
-<p>Значение, возвращённое методом <code>reduceRight()</code> будет равным последнему результату выполнения функции обратного вызова (<code>10</code>).</p>
+<p>Значение, возвращённое методом <code>reduceRight()</code> будет равным последнему результату выполнения колбэк-функции — <code>10</code>.</p>
 <p>Если же вы зададите начальное значение <code>initialValue</code>, результат будет выглядеть так:</p>
 <pre class="brush: js">[0, 1, 2, 3, 4].reduceRight(function(previousValue, currentValue, index, array) {
   return previousValue + currentValue;
@@ -178,7 +178,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/ReduceRight
 // flattened равен [4, 5, 2, 3, 0, 1]
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифилл</h2>
+<h2 id="Polyfill" name="Polyfill">Полифил</h2>
 <p>Метод <code>Array.prototype.reduceRight()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>reduceRight()</code> в реализациях, которые не поддерживают этот метод.</p>
 <pre class="brush: js">// Шаги алгоритма ECMA-262, 5-е издание, 15.4.4.22
 // Ссылка (en): http://es5.github.io/#x15.4.4.22

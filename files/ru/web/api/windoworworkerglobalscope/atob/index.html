@@ -5,7 +5,7 @@ translation_of: Web/API/WindowOrWorkerGlobalScope/atob
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>Функция <strong><code>WindowOrWorkerGlobalScope.atob()</code></strong> декодирует строку данных, которая была закодированa с использованием  base-64. Вы можете использовать метод {{domxref("WindowOrWorkerGlobalScope.btoa","btoa()")}}, чтобы декодировать и передать данные, которые в исходном виде могут вызвать проблемы  передачи, затем отправить их, и использовать метод <code>atob()</code> чтобы декодировать данны снова. Например, вы можете закодировать, передать, и декодировать управляющие символы, такие как ASCII значения от 0 до 31.</p>
+<p>Функция <strong><code>WindowOrWorkerGlobalScope.atob()</code></strong> декодирует строку данных, которая была закодирована с использованием  base-64. Вы можете использовать метод {{domxref("WindowOrWorkerGlobalScope.btoa","btoa()")}}, чтобы декодировать и передать данные, которые в исходном виде могут вызвать проблемы  передачи, затем отправить их, и использовать метод <code>atob()</code> чтобы декодировать даны снова. Например, вы можете закодировать, передать, и декодировать управляющие символы, такие как ASCII значения от 0 до 31.</p>
 
 <p>В случаях использования с Unicode или UTF-8 строками, смотрите <a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#The_.22Unicode_Problem.22">this note at Base64 encoding and decoding</a> и <a href="/en-US/docs/Web/API/window.btoa#Unicode_Strings">this note at <code>btoa()</code></a>.</p>
 
@@ -117,9 +117,9 @@ var decodedData = window.atob(encodedData); // декодирует строку
 
 <p>[2] Начиная с <a href="/en-US/Firefox/Releases/27/Site_Compatibility">Firefox 27</a>, <code>atob()</code> игнорирует все символы пробелов в аргументе, чтобы соответствовать последним  HTML5 спецификациям (смотри {{bug(711180)}}).</p>
 
-<p>[3] <code>atob()</code> теперь определен в  миксине {{domxref("WindowOrWorkerGlobalScope")}}.</p>
+<p>[3] <code>atob()</code> теперь определён в  миксине {{domxref("WindowOrWorkerGlobalScope")}}.</p>
 
-<h2 id="Смотри_также">Смотри также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><a href="/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>

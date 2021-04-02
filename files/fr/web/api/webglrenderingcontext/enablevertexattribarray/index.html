@@ -27,7 +27,7 @@ translation_of: Web/API/WebGLRenderingContext/enableVertexAttribArray
 
 <p>Dans WebGL, les valeurs s'appliquant à un sommet particulier sont stockées dans des attributs. Ceux-ci ne sont disponibles que pour le code JavaScript et le shader de sommet. Les attributs sont référencés par un numéro d'indice dans la liste des attributs gérés par la GPU. Certains indices d'attributs de sommet peuvent avoir des buts prédéfinis, suivant la plate-forme et/ou la GPU. D'autres sont affectés par la couche WebGL lorsque vous créez les attributs.</p>
 
-<p>De toute façon, puisque les attributs ne peuvent pas être utilisés sauf s'ils sont activés, et ils sont activés par défaut, vous devez appeler <code>enableVertexAttribArray()</code> pour activer les attributs individuels, afin qu'ils puissent être utilisés. Ceci fait, d'autres méthodes peuvent être utilisées pour accéder à l'attribut, y compris {{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}}, {{domxref("WebGLRenderingContext.vertexAttrib", "vertexAttrib*()")}}, et {{domxref("WebGLRenderingContext.getVertexAttrib"," getVertexAttrib()")}}.</p>
+<p>De toute façon, puisque les attributs ne peuvent pas être utilisés sauf s'ils sont activés, et ils sont désactivés par défaut, vous devez appeler <code>enableVertexAttribArray()</code> pour activer les attributs individuels, afin qu'ils puissent être utilisés. Ceci fait, d'autres méthodes peuvent être utilisées pour accéder à l'attribut, y compris {{domxref("WebGLRenderingContext.vertexAttribPointer", "vertexAttribPointer()")}}, {{domxref("WebGLRenderingContext.vertexAttrib", "vertexAttrib*()")}}, et {{domxref("WebGLRenderingContext.getVertexAttrib"," getVertexAttrib()")}}.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 

@@ -5,7 +5,7 @@ translation_of: Web/API/DOMTokenList/replace
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>Метод <code><strong>replace()</strong></code> интерфейса {{domxref("DOMTokenList")}} заменяет существующий класс на новый класс. Если первый не существует, то <code>replace()</code> сразу же возрващает <code>false</code>, без добавления нового класса в список классов.</p>
+<p>Метод <code><strong>replace()</strong></code> интерфейса {{domxref("DOMTokenList")}} заменяет существующий класс на новый класс. Если первый не существует, то <code>replace()</code> сразу же возвращает <code>false</code>, без добавления нового класса в список классов.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -22,7 +22,7 @@ translation_of: Web/API/DOMTokenList/replace
 
 <h3 id="Возвращает_значение">Возвращает значение</h3>
 
-<p>Boolean, которое будет <code>true</code>, если <code><var>oldToken</var></code> был успешно заменен, или <code>false</code> в противном случе.</p>
+<p>Boolean, которое будет <code>true</code>, если <code><var>oldToken</var></code> был успешно заменён, или <code>false</code> в противном случае.</p>
 
 <div class="note">
 <p><strong>Примечание</strong>: В старых браузерах <code>replace()</code> возвращает void.</p>
@@ -54,9 +54,9 @@ if (result) {
 
 <p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
 
-<h2 id="Полифилл">Полифилл</h2>
+<h2 id="Полифил">Полифил</h2>
 
-<p>Следующий полифилл добавит метод replace в класс <code>DOMTokenList</code>.  Селудющий код будет работать только с <strong>IE10-11</strong>. Чтобы использовать с более ранними версиями IE, обратитесь к полифиллу по {{domxref("element.classList#Polyfill")}}</p>
+<p>Следующий полифил добавит метод replace в класс <code>DOMTokenList</code>.  Следующий код будет работать только с <strong>IE10-11</strong>. Чтобы использовать с более ранними версиями IE, обратитесь к полифилу по {{domxref("element.classList#Polyfill")}}</p>
 
 <pre class="brush: js notranslate"><code>DOMTokenList.prototype.replace = function (a, b) {
     if (this.contains(a)) {
@@ -81,7 +81,7 @@ if (result) {
   <tr>
    <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-replace','replace()')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Первоначальное опредение</td>
+   <td>Первоначальное определение</td>
   </tr>
  </tbody>
 </table>

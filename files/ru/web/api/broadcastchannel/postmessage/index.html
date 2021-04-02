@@ -13,7 +13,7 @@ translation_of: Web/API/BroadcastChannel/postMessage
 ---
 <p>{{APIRef("BroadCastChannel API")}}</p>
 
-<p><strong><code>BroadcastChannel.postMessage()</code></strong> отправляет сообщение, которое может быть любым {{jsxref("Object", "объектом")}}, каждому слушателю в {{glossary("browsing context", "контексте браузера")}} с тем же {{glossary("origin")}}. Сообщение передается в виде события {{event("message")}} к каждому <code>BroadcastChannel</code>, привязанному к данному каналу.</p>
+<p><strong><code>BroadcastChannel.postMessage()</code></strong> отправляет сообщение, которое может быть любым {{jsxref("Object", "объектом")}}, каждому обработчику в {{glossary("browsing context", "контексте браузера")}} с тем же {{glossary("origin")}}. Сообщение передаётся в виде события {{event("message")}} к каждому <code>BroadcastChannel</code>, привязанному к данному каналу.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -45,7 +45,7 @@ translation_of: Web/API/BroadcastChannel/postMessage
 
 <p>{{Compat("api.BroadcastChannel.postMessage")}}</p>
 
-<h2 id="См._также">См. также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("BroadcastChannel")}}, интерфейс, к которому относится <strong><code>postMessage</code></strong>.</li>

@@ -2,16 +2,16 @@
 title: Document.documentURIObject
 slug: Web/API/Document/documentURIObject
 tags:
-  - свойства дом
+  - свойства DOM
 translation_of: Web/API/Document/documentURIObject
 ---
 <p>{{ ApiRef("DOM") }}</p>
 
 <p><code><strong>Document.documentURIObject</strong></code> свойство только для чтения возвращает {{ Interface("nsIURI") }} объект представляющий URI <a href="/en-US/docs/">документа</a>.</p>
 
-<p>Это работает только для привилегированных  (UniversalXPConnect) скриптов, включая расширенный код. Для веб содержания это свойство не имеет какого-либо специального значения и может быть использованно так же как и любое другое обычное свойство.</p>
+<p>Это работает только для привилегированных  (UniversalXPConnect) скриптов, включая расширенный код. Для веб содержания это свойство не имеет какого-либо специального значения и может быть использовано так же как и любое другое обычное свойство.</p>
 
-<p>Превилегированный код должен быть осторожным не пытаясь получить или установить это свойство на объект с незапакованным  содержанием (e.g. on a <code>wrappedJSObject</code> of an <code><a href="/en/XPCNativeWrapper" title="en/XPCNativeWrapper">XPCNativeWrapper</a></code>). Смотрите {{ Bug(324464) }}' комментарии для детализации.</p>
+<p>Привилегированный код должен быть осторожным не пытаясь получить или установить это свойство на объект с незапакованным  содержанием (e.g. on a <code>wrappedJSObject</code> of an <code><a href="/en/XPCNativeWrapper" title="en/XPCNativeWrapper">XPCNativeWrapper</a></code>). Смотрите {{ Bug(324464) }}' комментарии для детализации.</p>
 
 <h2 id="Syntax" name="Syntax">Синтаксис</h2>
 

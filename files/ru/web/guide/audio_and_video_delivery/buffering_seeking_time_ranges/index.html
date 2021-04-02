@@ -32,7 +32,7 @@ var bufferedTimeRanges = myAudio.buffered;</pre>
 
 <h2 id="Объект_TimeRanges">Объект TimeRanges</h2>
 
-<p>TimeRanges cодержит данные о частях буферизованных участков медиафайла (один или более — сколько успело буферизоваться) (<a href="https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges">Узнать больше о TimeRanges</a>).</p>
+<p>TimeRanges содержит данные о частях буферизованных участков медиафайла (один или более — сколько успело буферизоваться) (<a href="https://developer.mozilla.org/en-US/docs/Web/API/TimeRanges">Узнать больше о TimeRanges</a>).</p>
 
 <p>Объект {{ domxref("TimeRanges") }} имеет следующие свойства:</p>
 
@@ -211,6 +211,6 @@ myAudio.buffered.end(1);   // returns 19</pre>
 
 <p>Надо заметить, что есть свойство <code>played</code>, сообщающее, были ли воспроизведены интервалы полностью. Пример:</p>
 
-<pre class="brush: js">var played = audio.played; // вернет объект TimeRanges</pre>
+<pre class="brush: js">var played = audio.played; // вернёт объект TimeRanges</pre>
 
 <p>Если просуммировать все интервалы <code>audio.played</code>, то получим долю прослушанного аудио, что может быть полезно для сбора метрик.</p>

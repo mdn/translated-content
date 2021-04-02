@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/meta
    <td>Мета данные. Если задан {{htmlattrxref("itemprop")}} атрибут: <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">flow content</a>, <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
-   <th>Разрешенное содержимое</th>
+   <th>Разрешённое содержимое</th>
    <td>Отсутствует - это {{Glossary("empty element","пустой элемент")}}.</td>
   </tr>
   <tr>
@@ -22,11 +22,11 @@ translation_of: Web/HTML/Element/meta
    <td>Так как это пустой элемент, то открывающий тег должен присутствовать, а закрывающий - отсутствовать.</td>
   </tr>
   <tr>
-   <th>Разрешенные родительские элементы</th>
+   <th>Разрешённые родительские элементы</th>
    <td><code>&lt;meta charset&gt;</code>, <code>&lt;meta http-equiv&gt;</code>: {{HTMLElement("head")}} элемент. Если {{htmlattrxref("http-equiv", "meta")}} это не заявленная декларация, то может быть внутри элемента {{HTMLElement("noscript")}} или {{HTMLElement("head")}}.</td>
   </tr>
   <tr>
-   <th scope="row">Разрешёные роли ARIA</th>
+   <th scope="row">Разрешённые роли ARIA</th>
    <td>Отсутствуют</td>
   </tr>
   <tr>
@@ -46,7 +46,7 @@ translation_of: Web/HTML/Element/meta
 
 <dl>
  <dt>{{htmlattrdef("charset")}}</dt>
- <dd>Этот атрибут задает кодировку символов, используемую на странице. Он должен содержать <a class="external" href="https://www.iana.org/assignments/character-sets">стандартное имя IANA MIME для кодировки символов</a>. Хотя стандарт не требует определенной кодировки, он рекомендует:
+ <dd>Этот атрибут задаёт кодировку символов, используемую на странице. Он должен содержать <a class="external" href="https://www.iana.org/assignments/character-sets">стандартное имя IANA MIME для кодировки символов</a>. Хотя стандарт не требует определённой кодировки, он рекомендует:
  <ul>
   <li>Авторам рекомендуется использовать <code>{{glossary("UTF-8")}}</code>.</li>
   <li>Не следует использовать ASCII-несовместимые кодировки, чтобы избежать угроз безопасности: браузеры, не поддерживающие их, могут интерпретировать вредоносный контент как HTML. Это относится к семейству кодировок <code>JIS_C6226-1983</code>, <code>JIS_X0212-1990</code>, <code>HZ-GB-2312</code>, <code>JOHAB</code> и <code>EBCDIC</code>.</li>
@@ -70,9 +70,9 @@ translation_of: Web/HTML/Element/meta
    Нет веских оснований для объявления неточного набора символов.</li>
   <li><code>&lt;meta&gt;</code> элемент должен находиться внутри элемента {{HTMLElement("head")}} и задаваться в <strong>1024 первых байтах</strong> HTML страницы, поскольку некоторые браузеры смотрят только эти байты перед выбором кодировки.</li>
   <li>Этот <code>&lt;meta&gt;</code> элемент - часть алгоритма, определяющего набор символов (<a href="https://www.whatwg.org/specs/web-apps/current-work/multipage/parsing.html#encoding-sniffing-algorithm" title="Algorithm charset page">algorithm to determine the character set</a>) страницы, который браузер поддерживает. Заголовок {{HTTPHeader("Content-Type")}} и любые {{Glossary("Byte-Order Mark","Byte-Order Marks")}} элементы переопределяют данный элемент.</li>
-  <li>Настоятельно рекомендуется определить кодировку символов. Если для страницы не определён набор символов, то некоторые cross-scripting тхнологии могут повредить страницу, например такие как <a class="external" href="https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7">UTF-7 fallback cross-scripting technique</a>. Постоянная установка этого элемента будет защищать Вас от этого риска.</li>
+  <li>Настоятельно рекомендуется определить кодировку символов. Если для страницы не определён набор символов, то некоторые cross-scripting технологии могут повредить страницу, например такие как <a class="external" href="https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7">UTF-7 fallback cross-scripting technique</a>. Постоянная установка этого элемента будет защищать вас от этого риска.</li>
   <li>Этот {{HTMLElement("meta")}} элемент это синоним для pre-HTML5 <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=<em>IANAcharset</em>"&gt; </code>где <em><code>IANAcharset</code> </em>соответствует значению эквивалентного {{htmlattrxref("charset", "meta")}} атрибута.<br>
-   Этот синтаксис по-прежнему разрешен, хотя и устарел и больше не рекомендуется.</li>
+   Этот синтаксис по-прежнему разрешён, хотя и устарел и больше не рекомендуется.</li>
  </ul>
  </div>
  </dd>
@@ -92,7 +92,7 @@ translation_of: Web/HTML/Element/meta
   Поэтому допустимым синтаксисом для его содержимого является литеральная строка '<code>text/html</code>', за которой следует набор символов со следующим синтаксисом: '<code>; charset=</code><em><code>IANAcharset</code></em>' где  <code>IANAcharset</code> это предпочтительное<em> MIME имя</em> для набора символов, который определяется как<a class="external" href="https://www.iana.org/assignments/character-sets"> IANA.</a>
   <div class="note"><strong>Замечания:</strong>
   <ul>
-   <li>Не используйте эту прагму, так как она устарела. Используйте атибут{{htmlattrxref("charset", "meta")}} в элементе {{HTMLElement("meta")}} вместо этого.</li>
+   <li>Не используйте эту прагму, так как она устарела. Используйте атрибут{{htmlattrxref("charset", "meta")}} в элементе {{HTMLElement("meta")}} вместо этого.</li>
    <li>{{HTMLElement("meta")}} не может быть использована для выбора типа документа в XHTML документе, или в HTML5 документе, за которым следует XHTML синтаксис, никогда не задавайте MIME тип как XHTML MIME. Это будет некорректно.</li>
    <li>Только HTML документ может использовать контент-тип, так что большинство из них являются неиспользуемыми, поэтому они являются устаревшими и заменяются {{htmlattrxref("charset", "meta")}} атрибутом.</li>
   </ul>
@@ -116,12 +116,12 @@ translation_of: Web/HTML/Element/meta
  <dt>{{htmlattrdef("name")}}</dt>
  <dd>Этот атрибут определяет имя уровня документа метаданных. <br>
  Его не следует устанавливать, если один из атрибутов {{htmlattrxref("itemprop", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} или {{htmlattrxref("charset", "meta")}} также указан в наборе.<br>
- Имя этого документального уровня метаданных связано со значением, которое содержится в {{htmlattrxref("content", "meta")}} атрибуте.Допустимые значения для имени элемента, со связанными с ними значениями, хранятся посредтвом {{htmlattrxref("content", "meta")}} атрибута:
+ Имя этого документального уровня метаданных связано со значением, которое содержится в {{htmlattrxref("content", "meta")}} атрибуте.Допустимые значения для имени элемента, со связанными с ними значениями, хранятся посредством {{htmlattrxref("content", "meta")}} атрибута:
  <ul>
   <li><code>application-name</code>, определяет имя веб-приложения, запущенного на веб-странице;
    <div class="note"><strong>Замечание:</strong>
    <ul>
-    <li>Браузеры могут использовать его для идентификации приложения. Он отличается от  {{HTMLElement("title")}} элемента, который обычно состоит из имени приложения, но также может содержать специальную информацию, как например име документа или статус;</li>
+    <li>Браузеры могут использовать его для идентификации приложения. Он отличается от  {{HTMLElement("title")}} элемента, который обычно состоит из имени приложения, но также может содержать специальную информацию, как например имя документа или статус;</li>
     <li>Простые веб-страницы не определяют application-name meta.</li>
    </ul>
    </div>
@@ -129,8 +129,8 @@ translation_of: Web/HTML/Element/meta
   <li><code>автор</code> определяет в свободном формате имя автора документа;</li>
   <li>описание, содержащее краткое и точное резюме содержания страницы. В некоторых браузерах, среди которых Firefox и Opera, этот мета используется как описание страницы по умолчанию в закладке;</li>
   <li>генератор, содержащий в свободном формате идентификатор программного обеспечения, создавшего страницу;;</li>
-  <li>Ключевые слова, представленные строками, разделенными запятыми, связанные с содержанием страницы</li>
-  <li><code>referrer</code> {{experimental_inline}} контролирует содержимое HTTP. <code>Referer</code> HTTP - заголовок, прикрепленный к любому запросу, отправленному из этого документа:
+  <li>Ключевые слова, представленные строками, разделёнными запятыми, связанные с содержанием страницы</li>
+  <li><code>referrer</code> {{experimental_inline}} контролирует содержимое HTTP. <code>Referer</code> HTTP - заголовок, прикреплённый к любому запросу, отправленному из этого документа:
    <table class="standard-table">
     <caption>Значения содержимого атрибута &lt;meta name="referrer"&gt;</caption>
     <tbody>
@@ -148,11 +148,11 @@ translation_of: Web/HTML/Element/meta
      </tr>
      <tr>
       <td><code>origin-when-crossorigin</code></td>
-      <td>Отправляет полный URL (удаленный из параметров) при выполнении запроса с тем же источником, или только оригинал документа в других случаях.</td>
+      <td>Отправляет полный URL (удалённый из параметров) при выполнении запроса с тем же источником, или только оригинал документа в других случаях.</td>
      </tr>
      <tr>
       <td><code>unsafe-URL</code></td>
-      <td>Отправляет полный URL (удалённый из параметров), при выполнении запроса того же или перекрестного происхождения.</td>
+      <td>Отправляет полный URL (удалённый из параметров), при выполнении запроса того же или перекрёстного происхождения.</td>
      </tr>
     </tbody>
    </table>
@@ -167,10 +167,10 @@ translation_of: Web/HTML/Element/meta
   </li>
  </ul>
 
- <p>Атрибут также может иметь значение, взятое из существующего листа определений  <a class="external" href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Wiki MetaExtensions page</a>. Хотя ни один из них официально не был принят, в число предложений входят несколько часто используемых имен:</p>
+ <p>Атрибут также может иметь значение, взятое из существующего листа определений  <a class="external" href="https://wiki.whatwg.org/wiki/MetaExtensions">WHATWG Wiki MetaExtensions page</a>. Хотя ни один из них официально не был принят, в число предложений входят несколько часто используемых имён:</p>
 
  <ul>
-  <li><code>creator</code>, определят в свободном формате имя создателя документа. Это также может быть имя института. Если же имен больше чем одно, то несколько {{HTMLElement("meta")}} элементов должны быть использованы;</li>
+  <li><code>creator</code>, определят в свободном формате имя создателя документа. Это также может быть имя института. Если же имён больше чем одно, то несколько {{HTMLElement("meta")}} элементов должны быть использованы;</li>
   <li><code>googlebot</code>, синоним <code>robots</code>, но только следует за Googlebot, сканирует индексы для Google;</li>
   <li><code>publisher</code>, определяет в свободном формате имя того, кто опубликовал документ. Это также может быть имя института;</li>
   <li><code>robots</code>, определяет поведение, поисковых роботов на странице. Список этих значений представлен ниже:
@@ -191,7 +191,7 @@ translation_of: Web/HTML/Element/meta
      </tr>
      <tr>
       <td><code>noindex</code></td>
-      <td>Освобождает робота от идексирования страниц</td>
+      <td>Освобождает робота от индексирования страниц</td>
       <td>All</td>
      </tr>
      <tr>
@@ -206,7 +206,7 @@ translation_of: Web/HTML/Element/meta
      </tr>
      <tr>
       <td><code>none</code></td>
-      <td>Эквивалетно <code>noindex, nofollow</code></td>
+      <td>Эквивалентно <code>noindex, nofollow</code></td>
       <td><a class="external" href="https://support.google.com/webmasters/answer/79812">Google</a></td>
      </tr>
      <tr>
@@ -218,7 +218,7 @@ translation_of: Web/HTML/Element/meta
      </tr>
      <tr>
       <td><code>noarchive</code></td>
-      <td>Запрещает поисковой системе кэшировать содержимое страницы.</td>
+      <td>Запрещает поисковой системе кешировать содержимое страницы.</td>
       <td><a class="external" href="https://www.google.com/support/webmasters/bin/answer.py?hl=en&amp;answer=79812">Google</a>, <a class="external" href="https://help.yahoo.com/l/us/yahoo/search/indexing/basics-10.html;_ylt=Aszma_Ly8TfhL7mn_LGWn5RYqCN4">Yahoo</a>, <a class="external" href="https://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240">Bing</a></td>
      </tr>
      <tr>
@@ -242,8 +242,8 @@ translation_of: Web/HTML/Element/meta
    <div class="note"><strong>Замечания:</strong>
 
    <ul>
-    <li>Только кооперативные роботы будут следовать правилам, определенным именем роботов. </li>
-    <li>Роботу необходимо получить доступ к странице, чтобы считать мета значение. Если Вы хотите скрыть от них информацию, то используйте  <em><a href="/en-US/docs/Robot_Exclusion_Protocol" title="Robot Exclusion Protocol">robots.txt</a></em> файл.</li>
+    <li>Только кооперативные роботы будут следовать правилам, определённым именем роботов. </li>
+    <li>Роботу необходимо получить доступ к странице, чтобы считать мета значение. Если вы хотите скрыть от них информацию, то используйте  <em><a href="/en-US/docs/Robot_Exclusion_Protocol" title="Robot Exclusion Protocol">robots.txt</a></em> файл.</li>
     <li>Если вы хотите удалить страницу индекса, изменение мета в noindex будет работать, но только тогда, когда робот снова посетит страницу. Убедитесь, что файл robots.txt не предотвращает такие посещения. Некоторые поисковые системы имеют инструменты, позволяющие быстро удалить какую-либо страницу.</li>
     <li>Некоторые возможные значения взаимно исключают друг друга, такие как использование индекса и noindex или follow и nofollow одновременно. В этих случаях поведение робота не определено и может варьироваться от одного к другому. Поэтому избегайте этих случаев.</li>
     <li>Некоторые поисковые роботы-роботы, такие как Google, Yahoo Search или Bing, поддерживают те же значения в директиве HTTP, X-Robot-Tags: это позволяет им использовать эту прагму для документов, отличных от HTML, например изображений.</li>
@@ -256,7 +256,7 @@ translation_of: Web/HTML/Element/meta
  <p>Наконец несколько общих терминов:</p>
 
  <ul>
-  <li><code>viewport</code>, который дает подсказки о размере изначального размера {{glossary("viewport")}}. Эта прагма используется только на некоторых мобильных устройствах.
+  <li><code>viewport</code>, который даёт подсказки о размере изначального размера {{glossary("viewport")}}. Эта прагма используется только на некоторых мобильных устройствах.
 
    <table class="fullwidth-table">
     <caption>Значения для содержания <code>&lt;meta name="viewport"&gt;</code></caption>
@@ -286,12 +286,12 @@ translation_of: Web/HTML/Element/meta
      <tr>
       <td><code>maximum-scale</code></td>
       <td>положительное число между <code>0.0</code> и <code>10.0</code></td>
-      <td>Определяет максимальное значение зума; должен быть больше или равен минимальному масштабу или быть неопределенным.</td>
+      <td>Определяет максимальное значение зума; должен быть больше или равен минимальному масштабу или быть неопределённым.</td>
      </tr>
      <tr>
       <td><code>minimum-scale</code></td>
       <td>положительное число между <code>0.0</code> и <code>10.0</code></td>
-      <td>Определяет минимальное значение зума; должен быть меньше или равен максимальному масштабу или быть неопределенным.</td>
+      <td>Определяет минимальное значение зума; должен быть меньше или равен максимальному масштабу или быть неопределённым.</td>
      </tr>
      <tr>
       <td><code>user-scalable</code></td>

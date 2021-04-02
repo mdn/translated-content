@@ -7,7 +7,7 @@ translation_of: Web/API/Element/innerHTML
 
 <p>Свойство интерфейса {{domxref("Element")}} <strong><code>innerHTML</code></strong> устанавливает или получает HTML или XML разметку дочерних элементов.</p>
 
-<div class="note"><strong>Примечание: </strong>Если узлы {{HTMLElement("div")}}, {{HTMLElement("span")}}, или {{HTMLElement("noembed")}} имеют дочерние текстовые узлы, содержащие символы <code>(&amp;), (&lt;),</code> или <code>(&gt;)</code>, <code>innerHTML</code> вернет эти символы как &amp;amp, &amp;lt и &amp;gt соответсвенно. Используйте {{domxref("Node.textContent")}} для получения правильной копии содержимого этих текстовых узлов. </div>
+<div class="note"><strong>Примечание: </strong>Если узлы {{HTMLElement("div")}}, {{HTMLElement("span")}}, или {{HTMLElement("noembed")}} имеют дочерние текстовые узлы, содержащие символы <code>(&amp;), (&lt;),</code> или <code>(&gt;)</code>, <code>innerHTML</code> вернёт эти символы как &amp;amp, &amp;lt и &amp;gt соответственно. Используйте {{domxref("Node.textContent")}} для получения правильной копии содержимого этих текстовых узлов. </div>
 
 <p> Чтобы вставить HTML в документ, не меняя содержимое элемента, используйте {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.</p>
 
@@ -43,7 +43,7 @@ translation_of: Web/API/Element/innerHTML
 javascript:"&lt;pre&gt;"+document.documentElement.innerHTML.replace(/&lt;/g,"&amp;lt;") + "&lt;/pre&gt;";
 </pre>
 
-<p>Это свойство было первоначально реализовано веб браузерами, затем описано WHATWG и W3C в HTML5. Старые реализации могут отличаться от новых. Для примера, когда введен текст в поле ввода &lt;input&gt;, IE меняет значение атрибута &lt;input&gt; свойства innerHTML, но браузеры Gecko не делают этого.</p>
+<p>Это свойство было первоначально реализовано веб браузерами, затем описано WHATWG и W3C в HTML5. Старые реализации могут отличаться от новых. Для примера, когда введён текст в поле ввода &lt;input&gt;, IE меняет значение атрибута &lt;input&gt; свойства innerHTML, но браузеры Gecko не делают этого.</p>
 
 <h3 id="Соображения_безопасности">Соображения безопасности</h3>
 
@@ -69,7 +69,7 @@ el.innerHTML = name; // показывает alert</pre>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Этот пример использует <code>innerHTML</code> для создания механизма логгирования сообщений внутри элемента на странице.</p>
+<p>Этот пример использует <code>innerHTML</code> для создания механизма логирования сообщений внутри элемента на странице.</p>
 
 <h3 id="JavaScript">JavaScript</h3>
 
@@ -83,9 +83,9 @@ el.innerHTML = name; // показывает alert</pre>
 
 log("Регистрация событий мыши внутри этого контейнера...");</pre>
 
-<p>Функция <code>log()</code> создаёт сообщение получая текущее время из объекта {{jsxref("Date")}}, используя {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, и соединяя стороку с временной меткой с текстовым сообщением. Затем сообщение добавляется в элемент с классом <code>"log"</code>.</p>
+<p>Функция <code>log()</code> создаёт сообщение получая текущее время из объекта {{jsxref("Date")}}, используя {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}, и соединяя строку с временной меткой с текстовым сообщением. Затем сообщение добавляется в элемент с классом <code>"log"</code>.</p>
 
-<p>Мы добавляем второй метод, который логгирует информацию о событиях на основе {{domxref("MouseEvent")}} (например, {{event("mousedown")}}, {{event("click")}}, и {{event("mouseenter")}}):</p>
+<p>Мы добавляем второй метод, который логирует информацию о событиях на основе {{domxref("MouseEvent")}} (например, {{event("mousedown")}}, {{event("click")}}, и {{event("mouseenter")}}):</p>
 
 <pre class="brush: js notranslate">function logEvent(event) {
   var msg = "Event &lt;strong&gt;" + event.type + "&lt;/strong&gt; at &lt;em&gt;" +
@@ -93,7 +93,7 @@ log("Регистрация событий мыши внутри этого ко
   log(msg);
 }</pre>
 
-<p>Затем мы используем этот обработчик событий на элементе, который содержит наше логгирование, для каждого события мыши:</p>
+<p>Затем мы используем этот обработчик событий на элементе, который содержит наше логирование, для каждого события мыши:</p>
 
 <pre class="brush: js notranslate">var boxElem = document.querySelector(".box");
 
@@ -112,7 +112,7 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
   &lt;div class="log"&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{HTMLElement("div")}} c классом <code>"box"</code> – просто контейнер для, который даст содержимому пространство вокруг себя. <code>&lt;div&gt;</code> с классом <code>"log"</code> является контейнером для логгирования текста внутри себя.</p>
+<p>{{HTMLElement("div")}} c классом <code>"box"</code> – просто контейнер для, который даст содержимому пространство вокруг себя. <code>&lt;div&gt;</code> с классом <code>"log"</code> является контейнером для логирования текста внутри себя.</p>
 
 <h3 id="CSS">CSS</h3>
 
@@ -160,8 +160,8 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a class="external" href="http://innerdom.sourceforge.net/"><code>innerDOM</code></a> - Для тех, кто хочет придерживаться стандартов, вот один набор функций JavaScript, предлагающий сериализовать или разобрать XML так, чтобы установить содержимое элемента, определенное как строка(и) через DOM или получить содержимое элемента, полученное из DOM как строку.</li>
+ <li><a class="external" href="http://innerdom.sourceforge.net/"><code>innerDOM</code></a> - Для тех, кто хочет придерживаться стандартов, вот один набор функций JavaScript, предлагающий сериализовать или разобрать XML так, чтобы установить содержимое элемента, определённое как строка(и) через DOM или получить содержимое элемента, полученное из DOM как строку.</li>
  <li>{{domxref("Element.insertAdjacentHTML")}} - <span id="result_box" lang="ru"><span>Альтернатива для innerHTML, позволяющая добавлять новый HTML</span></span>.</li>
- <li><a class="external" href="https://github.com/ndebeiss/jsxmlsaxparser">jssaxparser</a> -  Более надежным (хотя и более тяжелым) решением, чем innerDOM (поддерживает парсинг с пространствами имен, однокавычками атрибутов, секциями CDATA и т.д.), является этот SAX2 парсер при использовании с его обработчиком DOM-контента. (Предлагает строку на DOM; DOM на строку <a href="https://app.assembla.com/spaces/brettz9/bize6mebSr3B31ab7jnrAJ/source/DOMToString">значительно проще</a>).</li>
+ <li><a class="external" href="https://github.com/ndebeiss/jsxmlsaxparser">jssaxparser</a> -  Более надёжным (хотя и более тяжёлым) решением, чем innerDOM (поддерживает парсинг с пространствами имён, однокавычками атрибутов, секциями CDATA и т.д.), является этот SAX2 парсер при использовании с его обработчиком DOM-контента. (Предлагает строку на DOM; DOM на строку <a href="https://app.assembla.com/spaces/brettz9/bize6mebSr3B31ab7jnrAJ/source/DOMToString">значительно проще</a>).</li>
  <li>Эффективность соображений: <a class="external" href="http://www.quirksmode.org/dom/innerhtml.html">quirksmode.</a></li>
 </ul>

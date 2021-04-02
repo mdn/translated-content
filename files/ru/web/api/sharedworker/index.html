@@ -30,7 +30,7 @@ translation_of: Web/API/SharedWorker
 
 <dl>
  <dt>{{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}</dt>
- <dd>Создает разделяемый веб воркер, который выполняет скрипт по указанному URL.</dd>
+ <dd>Создаёт разделяемый веб воркер, который выполняет скрипт по указанному URL.</dd>
 </dl>
 
 <h2 id="Методы">Методы</h2>
@@ -46,7 +46,7 @@ translation_of: Web/API/SharedWorker
 <pre class="brush: js">var myWorker = new SharedWorker("worker.js");
 </pre>
 
-<p>далее скрипты получают доступ к воркеру через объект {{domxref("MessagePort")}}, находящийся в свойстве {{domxref("SharedWorker.port")}}. Если устанавливается хэндлер события onmessage, port самостоятельно начинает работу, вызывая собственный метод <code>start(), </code>если же принимать события с помощью слушателя события  "message" через addEventListener, необходимо вызвать метод <code>start()</code> самостоятельно:</p>
+<p>далее скрипты получают доступ к воркеру через объект {{domxref("MessagePort")}}, находящийся в свойстве {{domxref("SharedWorker.port")}}. Если устанавливается обработчик события onmessage, port самостоятельно начинает работу, вызывая собственный метод <code>start(), </code>если же принимать события с помощью обработчика события  "message" через addEventListener, необходимо вызвать метод <code>start()</code> самостоятельно:</p>
 
 <pre class="brush: js">myWorker.port.start();</pre>
 
@@ -78,7 +78,7 @@ translation_of: Web/API/SharedWorker
       port.postMessage(workerResult);
     });
 
-    port.start(); // обязательно при использовании addEventListener. Иначе вызывается неявно после установки хэндлера onmessage.
+    port.start(); // необходимо при добавлении обработчиков с помощью addEventListener. При использовании сеттера port.onmessage, данный метод вызывается автоматически, неявно
 }</pre>
 
 <h3 id="Пример_с_несколькими_страницами">Пример с несколькими страницами</h3>

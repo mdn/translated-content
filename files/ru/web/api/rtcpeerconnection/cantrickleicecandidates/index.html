@@ -7,9 +7,9 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 <div></div>
 
-<div><span class="seoSummary">Свойство только для чтения <code><strong>canTrickleIceCandidates</strong></code> , объекта <strong>{{domxref("RTCPeerConnection")}}</strong>, возвращает значение типа {{jsxref("Boolean")}} , которое указывает на то, может ли удаленный пир принимать кандидаты, согласно спецификации  <a href="https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice">trickled ICE candidates</a>.</span></div>
+<div><span class="seoSummary">Свойство только для чтения <code><strong>canTrickleIceCandidates</strong></code> , объекта <strong>{{domxref("RTCPeerConnection")}}</strong>, возвращает значение типа {{jsxref("Boolean")}} , которое указывает на то, может ли удалённый пир принимать кандидаты, согласно спецификации  <a href="https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice">trickled ICE candidates</a>.</span></div>
 
-<p><strong>ICE trickling (ICE просачивание)</strong>  - процесс продолжающейся отправки кандидатов, после первоначальной передачи предложения или ответа удаленному пиру..</p>
+<p><strong>ICE trickling (ICE просачивание)</strong>  - процесс продолжающейся отправки кандидатов, после первоначальной передачи предложения или ответа удалённому пиру..</p>
 
 <p>Свойство инициализируется только после вызова метода  {{domxref("RTCPeerConnection.setRemoteDescription()")}}.  Было бы идеально, если бы ваш протокол сигнализации предоставлял способ определения поддержки просачивания кандидатов, для того, что бы не полагаться на это свойство. Браузер, поддерживающий WebRTC, всегда будет поддерживать ICE просачивание.</p>
 
@@ -21,10 +21,10 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 <h3 id="Значение">Значение</h3>
 
-<p>Тип  {{jsxref("Boolean")}} содержит <code>true</code> , если удаленный пир может принимать просачивающие ICE кандидаты, и  <code>false</code> , если не может. Если удаленный пир еще не инициализирован, свойство возвращает <code>null</code>.</p>
+<p>Тип  {{jsxref("Boolean")}} содержит <code>true</code> , если удалённый пир может принимать просвечивающие ICE кандидаты, и  <code>false</code> , если не может. Если удалённый пир ещё не инициализирован, свойство возвращает <code>null</code>.</p>
 
 <div class="note">
-<p><strong>Примечание :</strong> Значение свойсва инициализируется после того, как локальный пир вызовет метод {{domxref("RTCPeerConnection.setRemoteDescription()")}};  Возвращаемый объект описания используется агентом ICE для определения возможности удаленного пира поддерживать просачивающихся  ICE кандидатов.</p>
+<p><strong>Примечание :</strong> Значение свойства инициализируется после того, как локальный пир вызовет метод {{domxref("RTCPeerConnection.setRemoteDescription()")}};  Возвращаемый объект описания используется агентом ICE для определения возможности удалённого пира поддерживать просачивающихся  ICE кандидатов.</p>
 </div>
 
 <h2 id="Пример">Пример</h2>
@@ -82,7 +82,7 @@ pc.addEventListener('icecandidate', e =&gt; {
 
 <p>{{Compat("api.RTCPeerConnection.canTrickleIceCandidates")}}</p>
 
-<h2 id="Смотри_так_же">Смотри так же</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/Guide/API/WebRTC">WebRTC</a></li>

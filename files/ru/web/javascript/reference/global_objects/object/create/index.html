@@ -34,7 +34,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 
 <h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
 
-<p>Выбрасывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если параметр <code>proto</code> не является {{jsxref("Global_Objects/null", "null")}} или объектом (исключение составляют объекты-обертки примитивных типов).</p>
+<p>Выбрасывает исключение {{jsxref("Global_Objects/TypeError", "TypeError")}}, если параметр <code>proto</code> не является {{jsxref("Global_Objects/null", "null")}} или объектом (исключение составляют объекты-обёртки примитивных типов).</p>
 
 <h2 id="Examples" name="Examples">Примеры</h2>
 
@@ -71,7 +71,7 @@ console.log('Является ли rect экземпляром Shape? ' + (rect 
 rect.move(1, 1); // выведет 'Фигура переместилась.'
 </pre>
 
-<p>Если вы хотите унаследоваться от нескольких объектов, то это возможно сделать при помощи примесей.</p>
+<p>Если вы хотите наследоваться от нескольких объектов, то это возможно сделать при помощи примесей.</p>
 
 <pre class="brush: js notranslate">function MyClass() {
   SuperClass.call(this);
@@ -155,9 +155,9 @@ o2 = Object.create({}, {
 });
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифилл</h2>
+<h2 id="Polyfill" name="Polyfill">Полифил</h2>
 
-<p>Для этого полифилла необходима правильно работающая Object.prototype.hasOwnProperty.</p>
+<p>Для этого полифила необходима правильно работающая Object.prototype.hasOwnProperty.</p>
 
 <pre class="brush: js notranslate">if (typeof Object.create != 'function') {
   // Этапы производства ECMA-262, издание 5, 15.2.3.5
@@ -170,7 +170,7 @@ o2 = Object.create({}, {
     var hasOwn = Object.prototype.hasOwnProperty;
 
     return function (O) {
-      // 1. Если Type(O) не является Object or Null выдается исключениеTypeError.
+      // 1. Если Type(O) не является Object or Null выдаётся исключение TypeError.
       if (typeof O != 'object') {
         throw TypeError('Object prototype may only be an Object or null');
       }
@@ -183,7 +183,7 @@ o2 = Object.create({}, {
       var obj = new Temp();
       Temp.prototype = null; // Давайте не будем держать случайные ссылки на О...
 
-      // 4.  Если аргумент Properties присутствует и не определен, добавляем
+      // 4.  Если аргумент Properties присутствует и не определён, добавляем
       //    собственные свойства к obj, как будто вызывая стандартную встроенную
       //    функцию Object.defineProperties с аргументами obj и
       //    Properties.
@@ -197,7 +197,7 @@ o2 = Object.create({}, {
         }
       }
 
-      // 5. Возращает obj
+      // 5. Возвращает obj
       return obj;
     };
   })();

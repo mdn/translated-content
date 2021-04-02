@@ -7,7 +7,7 @@ translation_of: Web/API/EventSource
 
 <p><code><font face="Open Sans, Arial, sans-serif">Интерфейс </font>EventSource</code> используется для получения серверных событий (Server-sent events). Он устанавливает соединение с сервером по HTTP и получает события в формате text/event-stream без закрытия соединения.</p>
 
-<p><span style="line-height: 1.5;">Вы можете присвоить атрибуту <code>onmessage</code> JavaScript-функцию для получения нетипизированных сообщений (то есть сообщений без поля </span><code style="font-size: 14px;">event</code><span style="line-height: 1.5;">). Вы так же можете вызвать функцию </span><code style="font-size: 14px;">addEventListener()</code><span style="line-height: 1.5;"> для прослушивания событий так же, как для любого другого источника событий.</span></p>
+<p><span style="line-height: 1.5;">Вы можете присвоить атрибуту <code>onmessage</code> JavaScript-функцию для получения нетипизированных сообщений (то есть сообщений без поля </span><code style="font-size: 14px;">event</code><span style="line-height: 1.5;">). Вы так же можете вызвать функцию </span><code style="font-size: 14px;">addEventListener()</code><span style="line-height: 1.5;"> для обработки событий так же, как для любого другого источника событий.</span></p>
 
 <p>См. <a href="/en/Server-sent_events/Using_server-sent_events" title="en/Server-sent events/Using server-sent events">Using server-sent events</a> для более детальной информации </p>
 
@@ -58,13 +58,13 @@ translation_of: Web/API/EventSource
  </tbody>
 </table>
 
-<p>В дополение к открытым атрибутам два внутренних атрибута, которые не открыты напрямую:</p>
+<p>В дополнение к открытым атрибутам два внутренних атрибута, которые не открыты напрямую:</p>
 
 <dl>
  <dt>reconnection time</dt>
  <dd>Это время в миллисекундах, используемое для определения продолжительности ожидания после неудачной попытки соединения до повторного соединения</dd>
  <dt>last event ID string</dt>
- <dd>По-умолчания пустая строка. Сервер может отправлять сообщение с полем <code>id </code>для установки этого значения.</dd>
+ <dd>По умолчанию пустая строка. Сервер может отправлять сообщение с полем <code>id </code>для установки этого значения.</dd>
 </dl>
 
 <h2 id="Constants" name="Constants">Константы</h2>
@@ -107,7 +107,7 @@ translation_of: Web/API/EventSource
 
 <p>Нет</p>
 
-<h2 id="See_also" name="See_also">См. также</h2>
+<h2 id="See_also" name="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{ spec("https://html.spec.whatwg.org/multipage/comms.html#the-eventsource-interface","Server-Sent Events: The EventSource Interface","CR") }}</li>

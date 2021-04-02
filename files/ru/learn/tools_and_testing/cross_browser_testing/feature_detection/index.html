@@ -7,7 +7,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}</div>
 
-<p class="summary">Обнаружение функций включает определение того, поддерживает ли браузер определенный блок кода, и выполнение другого кода в зависимости от того, поддерживает ли он или нет, так что браузер всегда может обеспечить работу, а не сбой / ошибку в некоторых браузерах. В этой статье подробно описывается, как написать собственное простое обнаружение функций, как использовать библиотеку для ускорения реализации, а также встроенные функции для обнаружения функций, такие как <code>@supports</code>.</p>
+<p class="summary">Обнаружение функций включает определение того, поддерживает ли браузер определённый блок кода, и выполнение другого кода в зависимости от того, поддерживает ли он или нет, так что браузер всегда может обеспечить работу, а не сбой / ошибку в некоторых браузерах. В этой статье подробно описывается, как написать собственное простое обнаружение функций, как использовать библиотеку для ускорения реализации, а также встроенные функции для обнаружения функций, такие как <code>@supports</code>.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -24,9 +24,9 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 <h2 id="Концепция_обнаружения_функций.">Концепция обнаружения функций.</h2>
 
-<p>Идея обнаружения функции заключается в том, что вы можете запустить тест, чтобы определить, поддерживается ли функция в текущем браузере, а затем условно запустить код, чтобы обеспечить приемлемый опыт как в браузерах, которые поддерживают функцию, так и в браузере, который не поддерживает. Если вы этого не сделаете, браузеры, которые не поддерживают функции, которые вы используете в своем коде, не будут отображать ваши сайты должным образом и просто не сработают, создавая плохой опыт пользователя.</p>
+<p>Идея обнаружения функции заключается в том, что вы можете запустить тест, чтобы определить, поддерживается ли функция в текущем браузере, а затем условно запустить код, чтобы обеспечить приемлемый опыт как в браузерах, которые поддерживают функцию, так и в браузере, который не поддерживает. Если вы этого не сделаете, браузеры, которые не поддерживают функции, которые вы используете в своём коде, не будут отображать ваши сайты должным образом и просто не сработают, создавая плохой опыт пользователя.</p>
 
-<p>Давайте подведем итоги и посмотрим на пример, который мы затронули в нашем документе <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection">Решение самых распространненых проблем JavaScript</a>— <a href="/en-US/docs/Web/API/Geolocation/Using_geolocation">Использование геолокации</a> (который предоставляет доступные данные о местоположении для устройства, на котором работает веб-браузер) есть основная точка входа для его использования, свойство <code>geolocation,</code>  доступное на глобальном объекте <a href="/en-US/docs/Web/API/Navigator">Navigator</a>. Следовательно, вы можете определить, поддерживает ли браузер геолокацию или нет, используя что-то вроде следующего:</p>
+<p>Давайте подведём итоги и посмотрим на пример, который мы затронули в нашем документе <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection">Решение самых распространённых проблем JavaScript</a>— <a href="/en-US/docs/Web/API/Geolocation/Using_geolocation">Использование геолокации</a> (который предоставляет доступные данные о местоположении для устройства, на котором работает веб-браузер) есть основная точка входа для его использования, свойство <code>geolocation,</code>  доступное на глобальном объекте <a href="/en-US/docs/Web/API/Navigator">Navigator</a>. Следовательно, вы можете определить, поддерживает ли браузер геолокацию или нет, используя что-то вроде следующего:</p>
 
 <pre class="language-js"><span class="keyword token">if </span><span class="punctuation token">(</span><span class="string token">"geolocation"</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
   navigator<span class="punctuation token">.</span>geolocation<span class="punctuation token">.</span><span class="function token">getCurrentPosition</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>position<span class="punctuation token">)</span> <span class="punctuation token">{</span>
@@ -48,7 +48,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 <p>Вы можете написать тесты для функций CSS, протестировав существование <em><a href="/en-US/docs/Web/API/HTMLElement/style">element.style.property</a></em> (например, <code>paragraph.style.transform</code>) в JavaScript.</p>
 
-<p>Классическим примером может быть проверка поддержки <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> в браузере; для браузеров, которые поддерживают новейшие спецификации Flexbox, мы могли бы использовать гибкую и надежную гибкую компоновку. Для браузеров, которые этого не делают, мы могли бы использовать плавающий макет, который работает нормально, хотя он немного более хрупкий и хакерский, и не такой привлекательный.</p>
+<p>Классическим примером может быть проверка поддержки <a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a> в браузере; для браузеров, которые поддерживают новейшие спецификации Flexbox, мы могли бы использовать гибкую и надёжную гибкую компоновку. Для браузеров, которые этого не делают, мы могли бы использовать плавающий макет, который работает нормально, хотя он немного более хрупкий и хакерский, и не такой привлекательный.</p>
 
 <p>Давайте реализуем что-то, что демонстрирует это, хотя мы пока оставим это простым.</p>
 
@@ -71,13 +71,13 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
  </li>
 </ol>
 
-<p>Здесь мы берем ссылку на второй элемент <code>&lt;link&gt;</code> и создаем элемент <code>&lt;div&gt;</code> как часть нашего теста.  В нашем условном выражении мы проверяем, что свойства {{cssxref ("flex")}} и {{cssxref ("flex-flow")}} существуют в браузере. Обратите внимание, что представления JavaScript этих свойств, которые хранятся внутри объекта {{domxref ("HTMLElement.style")}}, используют нижний горбатый регистр, а не дефисы, для разделения слов.</p>
+<p>Здесь мы берём ссылку на второй элемент <code>&lt;link&gt;</code> и создаём элемент <code>&lt;div&gt;</code> как часть нашего теста.  В нашем условном выражении мы проверяем, что свойства {{cssxref ("flex")}} и {{cssxref ("flex-flow")}} существуют в браузере. Обратите внимание, что представления JavaScript этих свойств, которые хранятся внутри объекта {{domxref ("HTMLElement.style")}}, используют нижний горбатый регистр, а не дефисы, для разделения слов.</p>
 
 <div class="note">
 <p><strong>Примечание: </strong>Если у вас возникли проблемы с выполнением этого, вы можете сравнить его с нашим кодом <a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html">css-feature-detect-finished.html</a> (см. Также <a href="http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/feature-detection/css-feature-detect-finished.html">живую версию</a>).</p>
 </div>
 
-<p>Когда вы сохраните все и опробуете свой пример, вы должны увидеть макет flexbox, примененный к странице, если браузер поддерживает современный flexbox, и макет float, если нет.</p>
+<p>Когда вы сохраните все и опробуете свой пример, вы должны увидеть макет flexbox, применённый к странице, если браузер поддерживает современный flexbox, и макет float, если нет.</p>
 
 <div class="note">
 <p><strong>Примечание:</strong> Часто такой подход является излишним из-за незначительной проблемы с обнаружением функций - вы часто можете обойтись без использования префиксов нескольких поставщиков и свойств резервирования, как описано в разделе <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#CSS_fallback_behaviour">Поведение CSS-откат</a> и <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Handling_CSS_prefixes">Обработка префиксов CSS</a>.</p>
@@ -85,7 +85,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 
 <h4 id="supports">@supports</h4>
 
-<p>Недавно, в CSS появился собственный механизм обнаружения собственных функций — {{cssxref("@supports")}} at-rule. Это работает аналогично <a href="/en-US/docs/Web/CSS/Media_Queries">медиазапросам</a> (см. Также <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems">Адаптивные проблемы дизайна</a>) — за исключением того, что вместо выборочного применения CSS в зависимости от медиа-функции, такой как разрешение, ширина экрана или соотношение сторон, выборочно применяется CSS в зависимости от того, поддерживается ли функция CSS.</p>
+<p>Недавно, в CSS появился собственный механизм обнаружения собственных функций — {{cssxref("@supports")}} at-rule. Это работает аналогично <a href="/en-US/docs/Web/CSS/Media_Queries">медиавыражениям</a> (см. Также <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#Responsive_design_problems">Адаптивные проблемы дизайна</a>) — за исключением того, что вместо выборочного применения CSS в зависимости от медиа-функции, такой как разрешение, ширина экрана или соотношение сторон, выборочно применяется CSS в зависимости от того, поддерживается ли функция CSS.</p>
 
 <p>Например, мы могли бы переписать наш предыдущий пример для использования <code>@supports</code> — см. <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html">supports-feature-detect.html</a></code> и <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css">supports-styling.css</a></code>. Если вы посмотрите на последнее, вы увидите пару блоков <code>@supports</code> например:</p>
 
@@ -134,7 +134,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
  <tbody>
   <tr>
    <td><em>Если член в объекте</em></td>
-   <td>Проверьте, существует ли определенный метод или свойство (обычно точка входа в использование API или другой функции, которую вы обнаруживаете) в его родительском объекте.</td>
+   <td>Проверьте, существует ли определённый метод или свойство (обычно точка входа в использование API или другой функции, которую вы обнаруживаете) в его родительском объекте.</td>
    <td>
     <p><code>if("geolocation" in navigator) { ... }</code></p>
    </td>
@@ -155,27 +155,27 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
   </tr>
   <tr>
    <td><em>Свойство на сохраняемое значение элемента</em></td>
-   <td>Создайте элемент в памяти, используя {{domxref ("Document.createElement()")}}, установите для свойства определенное значение, затем проверьте, сохраняется ли значение.</td>
+   <td>Создайте элемент в памяти, используя {{domxref ("Document.createElement()")}}, установите для свойства определённое значение, затем проверьте, сохраняется ли значение.</td>
    <td>См. <a href="http://diveinto.html5doctor.com/detect.html#input-types">Dive into HTML5 <code>&lt;input&gt;</code> types detection</a>.</td>
   </tr>
  </tbody>
 </table>
 
 <div class="note">
-<p><strong>Примечание:</strong> Двойное <code>NOT</code> в приведенном выше примере (<code>!!</code>) это способ заставить возвращаемое значение стать «правильным» логическим значением, а не {{glossary("Truthy")}}/{{glossary("Falsy")}} значение, которое может исказить результаты.</p>
+<p><strong>Примечание:</strong> Двойное <code>NOT</code> в приведённом выше примере (<code>!!</code>) это способ заставить возвращаемое значение стать «правильным» логическим значением, а не {{glossary("Truthy")}}/{{glossary("Falsy")}} значение, которое может исказить результаты.</p>
 </div>
 
 <p>Страница <a href="http://diveinto.html5doctor.com/detect.html">Погружение в HTML5 Обнаружение функций HTML5</a> содержит гораздо больше полезных тестов для обнаружения функций, помимо перечисленных выше, и вы можете найти тест обнаружения функций для большинства вещей, выполнив поиск «обнаружение поддержки для ВАШИ-ФУНКЦИИ-ЗДЕСЬ» в своей любимой поисковой системе. Имейте в виду, однако, что некоторые функции, как известно, не обнаруживаются - см. список Modernizr <a href="https://github.com/Modernizr/Modernizr/wiki/Undetectables">Необнаруживаемые</a>.</p>
 
 <h4 id="matchMedia">matchMedia</h4>
 
-<p>Мы также хотели упомянуть функцию JavaScript {{domxref("Window.matchMedia")}} на этом этапе. Это свойство, которое позволяет вам запускать тесты медиа-запросов внутри JavaScript. Это выглядит так:</p>
+<p>Мы также хотели упомянуть функцию JavaScript {{domxref("Window.matchMedia")}} на этом этапе. Это свойство, которое позволяет вам запускать тесты медиавыражений внутри JavaScript. Это выглядит так:</p>
 
 <pre class="brush: js">if (window.matchMedia("(max-width: 480px)").matches) {
   // run JavaScript in here.
 }</pre>
 
-<p>В качестве примера, наша демо версия <a href="https://github.com/chrisdavidmills/snapshot">Snapshot</a> использует ее для выборочного применения библиотеки Brick JavaScript и ее использования для обработки макета пользовательского интерфейса, но только для небольшого экрана (шириной 480 пикселей или меньше). Сначала мы используем атрибут <code>media</code>,чтобы применить CSS-код Brick к странице, только если ширина страницы составляет 480px или меньше:</p>
+<p>В качестве примера, наша демо версия <a href="https://github.com/chrisdavidmills/snapshot">Snapshot</a> использует её для выборочного применения библиотеки Brick JavaScript и её использования для обработки макета пользовательского интерфейса, но только для небольшого экрана (шириной 480 пикселей или меньше). Сначала мы используем атрибут <code>media</code>,чтобы применить CSS-код Brick к странице, только если ширина страницы составляет 480px или меньше:</p>
 
 <pre class="brush: css">&lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>dist/brick.css<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">media</span>=<span class="pl-s"><span class="pl-pds">"</span>all and (max-width: 480px)<span class="pl-pds">"</span></span>&gt;</pre>
 
@@ -199,7 +199,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 
 <p>Сохраните его где-нибудь разумно, например, в директории, для которой вы создавали другие примеры в этой статье.</p>
 
-<p>Когда вы используете Modernizr в рабочей среде, вы можете перейти на <a href="https://modernizr.com/download">Страницу скачивания</a> которую вы уже посетили, и нажимать кнопки плюс только для тех функций, которые вам нужны. Затем, когда вы нажмете кнопку <em>Build</em> вы загрузите пользовательскую сборку, содержащую только те функции, которые обнаружены, что позволит значительно уменьшить размер файла.</p>
+<p>Когда вы используете Modernizr в рабочей среде, вы можете перейти на <a href="https://modernizr.com/download">Страницу скачивания</a> которую вы уже посетили, и нажимать кнопки плюс только для тех функций, которые вам нужны. Затем, когда вы нажмёте кнопку <em>Build</em> вы загрузите пользовательскую сборку, содержащую только те функции, которые обнаружены, что позволит значительно уменьшить размер файла.</p>
 
 <h3 id="CSS_2">CSS</h3>
 
@@ -207,10 +207,10 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 
 <ol>
  <li>Во-первых, создайте копию <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html">supports-feature-detect.html</a></code> и <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css">supports-styling.css</a></code>. Сохраните их как <code>modernizr-css.html</code> и <code>modernizr-css.css</code>.</li>
- <li>Обновите ваш элемент {{htmlelement ("link")}} в своем HTML-коде, чтобы он указывал на правильный файл CSS (также следует обновить элемент {{htmlelement ("title")}} на что-то более подходящее!):
+ <li>Обновите ваш элемент {{htmlelement ("link")}} в своём HTML-коде, чтобы он указывал на правильный файл CSS (также следует обновить элемент {{htmlelement ("title")}} на что-то более подходящее!):
   <pre class="brush: html">&lt;link href="modernizr-css.css" rel="stylesheet"&gt;</pre>
  </li>
- <li>Над этим элементом <code>&lt;link&gt;</code> добавьте элемент {{htmlelement ("script")}}, чтобы применить библиотеку Modernizr к странице, как показано ниже. Это должно быть применено к странице перед любым CSS (или JavaScript), который может ее использовать.
+ <li>Над этим элементом <code>&lt;link&gt;</code> добавьте элемент {{htmlelement ("script")}}, чтобы применить библиотеку Modernizr к странице, как показано ниже. Это должно быть применено к странице перед любым CSS (или JavaScript), который может её использовать.
   <pre class="brush: html">&lt;script src="modernizr-custom.js"&gt;&lt;/script&gt;</pre>
  </li>
  <li>Теперь отредактируйте открывающий тег <code>&lt;html&gt;</code>, чтобы он выглядел так:
@@ -232,7 +232,7 @@ blob-constructor cookies cors ...AND LOADS MORE VALUES!&gt;</pre>
 </ul>
 
 <div class="note">
-<p><strong>Примечание:</strong> Вы можете найти список того, что означают все имена классов — см.  <a href="https://modernizr.com/docs#features">Функции, обнаруженные Modernizr</a>.</p>
+<p><strong>Примечание:</strong> вы можете найти список того, что означают все имена классов — см.  <a href="https://modernizr.com/docs#features">Функции, обнаруженные Modernizr</a>.</p>
 </div>
 
 <p>Далее, давайте обновим наш CSS, чтобы использовать Modernizr вместо <code>@supports</code>. Перейдите в <code>modernizr-css.css</code>, и замените два блока <code>@supports</code> следующим:</p>
@@ -268,7 +268,7 @@ blob-constructor cookies cors ...AND LOADS MORE VALUES!&gt;</pre>
   clear: left;
 }</pre>
 
-<p>Так как же это работает? Поскольку все эти имена классов были помещены в элемент <code>&lt;html&gt;</code> вы можете настроить таргетинг на браузеры, которые поддерживают или не поддерживают функцию, используя определенные селекторы-потомки. Поэтому здесь мы применяем верхний набор правил только для браузеров, которые поддерживают flexbox, а нижний набор правил - только для браузеров, которые не поддерживают (<code>no-flexbox</code>).</p>
+<p>Так как же это работает? Поскольку все эти имена классов были помещены в элемент <code>&lt;html&gt;</code> вы можете настроить таргетинг на браузеры, которые поддерживают или не поддерживают функцию, используя определённые селекторы-потомки. Поэтому здесь мы применяем верхний набор правил только для браузеров, которые поддерживают flexbox, а нижний набор правил - только для браузеров, которые не поддерживают (<code>no-flexbox</code>).</p>
 
 <div class="note">
 <p><strong>Примечание:</strong> Имейте в виду, что все тесты функций HTML и JavaScript Modernizr также представлены в этих именах классов, так что вы можете свободно применять CSS выборочно в зависимости от того, поддерживает ли браузер функции HTML или JavaScript, если это необходимо.</p>
@@ -280,24 +280,24 @@ blob-constructor cookies cors ...AND LOADS MORE VALUES!&gt;</pre>
 
 <h3 id="JavaScript_2">JavaScript</h3>
 
-<p>Modernizr также одинаково хорошо подготовлен для реализации функций обнаружения JavaScript. Это достигается за счет того, что глобальный объект <code>Modernizr</code> становится доступным для страницы, к которой он применяется, и содержит результаты функции, определяемой как свойства <code>true</code>/<code>false</code>.</p>
+<p>Modernizr также одинаково хорошо подготовлен для реализации функций обнаружения JavaScript. Это достигается за счёт того, что глобальный объект <code>Modernizr</code> становится доступным для страницы, к которой он применяется, и содержит результаты функции, определяемой как свойства <code>true</code>/<code>false</code>.</p>
 
-<p>Например, загрузите наш пример <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html">modernizr-css.html</a></code> в своем браузере, затем попробуйте перейти на консоль JavaScript и набрать  <code>Modernizr.</code>, а после некоторые из этих имен классов (они тоже здесь одинаковы). Например:</p>
+<p>Например, загрузите наш пример <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-css.html">modernizr-css.html</a></code> в своём браузере, затем попробуйте перейти на консоль JavaScript и набрать  <code>Modernizr.</code>, а после некоторые из этих имён классов (они тоже здесь одинаковы). Например:</p>
 
 <pre>Modernizr.flexbox
 Modernizr.websqldatabase
 Modernizr.xhr2
 Modernizr.fetch</pre>
 
-<p>Консоль вернет значения <code>true</code>/<code>false</code>, чтобы указать, поддерживает ли ваш браузер эти функции или нет.</p>
+<p>Консоль вернёт значения <code>true</code>/<code>false</code>, чтобы указать, поддерживает ли ваш браузер эти функции или нет.</p>
 
 <p>Давайте посмотрим на пример, чтобы показать, как вы бы пользовали эти свойства.</p>
 
 <ol>
  <li>Прежде всего, сделайте локальную копию файла примера <code><a href="https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-js.html">modernizr-js.html</a></code>.</li>
  <li>Присоедините библиотеку Modernizr к HTML, используя элемент <code>&lt;script&gt;</code> , как мы делали в предыдущих демонстрациях. Поместите его над существующим элементом <code>&lt;script&gt;</code> который прикрепляет API Google Maps к странице.</li>
- <li>Затем заполните текст-заполнитель <code>YOUR-API-KEY</code> во втором элементе <code>&lt;script&gt;</code> (как он есть сейчас) действительным ключом API Google Maps. Чтобы получить ключ, войдите в учетную запись Google, перейдите на страницу <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Получить ключ / Аутентификация</a> затем нажмите синюю кнопку <em>Get a Key</em> и следуйте инструкциям.</li>
- <li>Наконец, добавьте еще один элемент <code>&lt;script&gt;</code> внизу тела HTML (непосредственно перед тегом <code>&lt;/body&gt;</code> ) и поместите следующий скрипт в теги:
+ <li>Затем заполните текст-заполнитель <code>YOUR-API-KEY</code> во втором элементе <code>&lt;script&gt;</code> (как он есть сейчас) действительным ключом API Google Maps. Чтобы получить ключ, войдите в учётную запись Google, перейдите на страницу <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">Получить ключ / Аутентификация</a> затем нажмите синюю кнопку <em>Get a Key</em> и следуйте инструкциям.</li>
+ <li>Наконец, добавьте ещё один элемент <code>&lt;script&gt;</code> внизу тела HTML (непосредственно перед тегом <code>&lt;/body&gt;</code> ) и поместите следующий скрипт в теги:
   <pre class="brush: js">if (Modernizr.geolocation) {
 
   navigator.geolocation.getCurrentPosition(function(position) {
@@ -324,9 +324,9 @@ Modernizr.fetch</pre>
 
 <h2 id="Подведение_итогов">Подведение итогов</h2>
 
-<p>В этой статье было рассмотрено обнаружение функций с достаточным количеством подробностей, рассмотрены основные концепции и показано, как реализовать свои собственные тесты обнаружения функций и использовать библиотеку Modernizr для более легкой реализации тестов.</p>
+<p>В этой статье было рассмотрено обнаружение функций с достаточным количеством подробностей, рассмотрены основные концепции и показано, как реализовать свои собственные тесты обнаружения функций и использовать библиотеку Modernizr для более лёгкой реализации тестов.</p>
 
-<p>Далее мы начнем изучать автоматизированное тестирование.</p>
+<p>Далее мы начнём изучать автоматизированное тестирование.</p>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}</p>
 
@@ -335,9 +335,9 @@ Modernizr.fetch</pre>
 <ul>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">Введение в кросс-браузерное тестирование</a></li>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies">Стратегии проведения тестирования</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Решение распространенных проблем HTML и CSS</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Решение распространенных проблем JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Решение распространенных проблем доступности</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS">Решение распространённых проблем HTML и CSS</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript">Решение распространённых проблем JavaScript</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility">Решение распространённых проблем доступности</a></li>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection">Реализация функции обнаружения</a></li>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">Введение в автоматизированное тестирование</a></li>
  <li><a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment">Настройка собственной среды автоматизации тестирования</a></li>

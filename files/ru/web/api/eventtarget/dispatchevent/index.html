@@ -26,7 +26,7 @@ translation_of: Web/API/EventTarget/dispatchEvent
 
 <p>Метод <code>dispatchEvent</code> генерирует исключение <code>UNSPECIFIED_EVENT_TYPE_ERR</code>, если тип события не был указан при инициализации до вызова метода, или если тип события равен <code>null</code><strong> </strong>или пустой строке. Исключения возникающие в обработчиках события работают как неперехваченные исключения; обработчики события отрабатывают во вложенном стеке вызовов: они блокируют вызывающий код до окончания своего выполнения, но исключения не распространяются на вызывающего.</p>
 
-<h2 id="Заметки">Заметки</h2>
+<h2 id="Примечания">Примечания</h2>
 
 <p>dispatchEvent является последним шагом для процесса создание =&gt; инициализация =&gt; диспетчер, который используется для контроля  событий внутри модели выполнения событий.Событие может быть создано используя метод  <a href="https://developer.mozilla.org/en-US/docs/DOM/document.createEvent" title="DOM/document.createEvent">document.createEvent</a> и инициализировано используя <a href="https://developer.mozilla.org/en-US/docs/DOM/event.initEvent" title="DOM/event.initEvent">initEvent</a> или другой, более конкретный, метод инициализации, такой как <a href="https://developer.mozilla.org/en-US/docs/DOM/event.initMouseEvent" title="DOM/event.initMouseEvent">initMouseEvent</a> или <a href="https://developer.mozilla.org/en-US/docs/DOM/event.initUIEvent" title="DOM/event.initUIEvent">initUIEvent</a>.</p>
 

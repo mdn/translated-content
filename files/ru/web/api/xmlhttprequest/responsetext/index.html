@@ -15,9 +15,9 @@ translation_of: Web/API/XMLHttpRequest/responseText
 
 <h3 id="Значение">Значение</h3>
 
-<p>Строка {{domxref("DOMString")}} содержащая либо <code>текстовые данные, </code>полученные при использовании <code>XMLHttpRequest, либо</code> <code>null</code> в случае, когда вопрос возвратил ошибку, или же еще не был  отослан на сервер вызовом функции {{domxref("XMLHttpRequest.send", "send()")}}.</p>
+<p>Строка {{domxref("DOMString")}} содержащая либо <code>текстовые данные, </code>полученные при использовании <code>XMLHttpRequest, либо</code> <code>null</code> в случае, когда вопрос возвратил ошибку, или же ещё не был  отослан на сервер вызовом функции {{domxref("XMLHttpRequest.send", "send()")}}.</p>
 
-<p>Во время выполнения асинхронных запросов, в значении <code>responseText</code> всегда находится текущее содержимое, полученное от сервера, даже если запрос еще не завершен, и данные от сервера не получены полностью.</p>
+<p>Во время выполнения асинхронных запросов, в значении <code>responseText</code> всегда находится текущее содержимое, полученное от сервера, даже если запрос ещё не завершён, и данные от сервера не получены полностью.</p>
 
 <p>Понять, что ответ получен полностью, можно когда значение {{domxref("XMLHttpRequest.readyState", "readyState")}} становится {{domxref("XMLHttpRequest.DONE", "XMLHttpRequest.DONE")}} (<code>4</code>), а значение {{domxref("XMLHttpRequest.status", "status")}} становится 200 (<code>"OK"</code>).</p>
 

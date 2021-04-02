@@ -19,14 +19,14 @@ translation_of: Web/API/MutationObserver
 
 <dl>
  <dt>{{domxref("MutationObserver.MutationObserver", "MutationObserver()")}}</dt>
- <dd>Создает и возвращает новый <code>MutationObserver</code>, который вызовет определенную функцию обратного вызова при изменении в DOM.</dd>
+ <dd>Создаёт и возвращает новый <code>MutationObserver</code>, который вызовет определённую колбэк-функцию при изменении в DOM.</dd>
 </dl>
 
 <h2 id="Параметры">Параметры</h2>
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>Вызывается при каждом изменении DOM-элемента. Обзёрвер вызывает данную функцию с двумя аргументами. Первым аргументом является массив объектов <a href="/en-US/docs/Web/API/MutationRecord">MutationRecord</a>, вторым аргументом является экземпляр <code>MutationObserver.</code></dd>
+ <dd>Вызывается при каждом изменении DOM-элемента. Наблюдатель вызывает данную функцию с двумя аргументами. Первым аргументом является массив объектов <a href="/en-US/docs/Web/API/MutationRecord">MutationRecord</a>, вторым аргументом является экземпляр <code>MutationObserver.</code></dd>
 </dl>
 
 <h2 id="Методы_экземпляра">Методы экземпляра</h2>
@@ -44,7 +44,7 @@ translation_of: Web/API/MutationObserver
 
 <p><code>MutationObserverInit</code> — объект, который может содержать следующие свойства:</p>
 
-<div class="note"><strong>Примечание:</strong> Так или иначе необходимо установить <code>true</code> для одного из следующих cвойств: <code>childList</code>, <code>attributes</code>, <code>characterData</code>. В противном случае будет вызвана ошибка "An invalid or illegal string was specified"</div>
+<div class="note"><strong>Примечание:</strong> Так или иначе необходимо установить <code>true</code> для одного из следующих свойств: <code>childList</code>, <code>attributes</code>, <code>characterData</code>. В противном случае будет вызвана ошибка "An invalid or illegal string was specified"</div>
 
 <table class="standard-table">
  <tbody>
@@ -91,7 +91,7 @@ translation_of: Web/API/MutationObserver
   <tr>
    <td><code>attributeFilter</code></td>
    <td>
-    <p>Устанавливает массив названий атрибутов (без указания пространства имен), если требуется наблюдать за изменениями конкретных атрибутов. </p>
+    <p>Устанавливает массив названий атрибутов (без указания пространства имён), если требуется наблюдать за изменениями конкретных атрибутов. </p>
    </td>
   </tr>
  </tbody>
@@ -115,7 +115,7 @@ const config = {
     subtree: true
 };
 
-// Функция обратного вызова при срабатывании мутации
+// Колбэк-функция при срабатывании мутации
 const callback = function(mutationsList, observer) {
     for (let mutation of mutationsList) {
         if (mutation.type === 'childList') {
@@ -126,7 +126,7 @@ const callback = function(mutationsList, observer) {
     }
 };
 
-// Создаем<code> </code>экземпляр наблюдателя с указанной функцией обратного вызова
+// Создаём<code> </code>экземпляр наблюдателя с указанной функцией колбэка
 const observer = new MutationObserver(callback);
 
 // Начинаем наблюдение за настроенными изменениями целевого элемента<code>

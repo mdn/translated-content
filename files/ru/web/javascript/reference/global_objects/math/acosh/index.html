@@ -47,7 +47,7 @@ Math.acosh(2);  // 1.3169578969248166
 
 <p>Для значений, меньших 1, метод <code>Math.acosh()</code> возвращает {{jsxref("NaN")}}.</p>
 
-<h2 id="Polyfill" name="Polyfill">Полифилл</h2>
+<h2 id="Polyfill" name="Polyfill">Полифил</h2>
 
 <p>Для всех <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x \geq 1</annotation></semantics></math>, мы имеем <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arcosh} (x) = \ln \left(x + \sqrt{x^{2} - 1} \right)</annotation></semantics></math>, так что этот метод может эмулироваться следующим образом:</p>
 

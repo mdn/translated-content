@@ -10,7 +10,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 <p>Обратите внимание, <code>fetch</code> спецификация отличается от <code>jQuery.ajax()</code> в основном в двух пунктах:</p>
 
 <ul>
- <li>Promise возвращаемый вызовом <code>fetch()</code> <strong>не перейдет в состояние "отклонено" из-за ответа HTTP, который считается ошибкой</strong>, даже если ответ HTTP 404 или 500.  Вместо этого, он будет выполнен нормально (с значением false в статусе <code>ok</code> ) и будет отклонён только при сбое сети или если что-то помешало запросу выполниться.</li>
+ <li>Promise возвращаемый вызовом <code>fetch()</code> <strong>не перейдёт в состояние "отклонено" из-за ответа HTTP, который считается ошибкой</strong>, даже если ответ HTTP 404 или 500.  Вместо этого, он будет выполнен нормально (с значением false в статусе <code>ok</code> ) и будет отклонён только при сбое сети или если что-то помешало запросу выполниться.</li>
  <li>По умолчанию, <code>fetch</code> <strong>не будет отправлять или получать cookie файлы </strong>с сервера, в результате чего запросы будут осуществляться без проверки подлинности, что приведёт<span class="tlid-translation translation" lang="ru"><span title=""> к неаутентифицированным запросам</span></span>, если сайт полагается на проверку пользовательской сессии (для отправки cookie файлов в аргументе <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">init options</a> должно быть задано значение свойства <em>credentials</em> отличное от значения по умолчанию <code>omit</code>).</li>
 </ul>
 
@@ -40,7 +40,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 
 <h3 id="Установка_параметров_запроса">Установка параметров запроса</h3>
 
-<p>Метод <code>fetch()</code> может принимать второй параметр - обьект <code>init</code>, который позволяет вам контролировать различные настройки:</p>
+<p>Метод <code>fetch()</code> может принимать второй параметр - объект <code>init</code>, который позволяет вам контролировать различные настройки:</p>
 
 <pre class="brush: js">// Пример отправки POST запроса:
 async function postData(url = '', data = {}) {
@@ -76,7 +76,7 @@ postData('https://example.com/answer', { answer: 42 })
   credentials: 'include'
 })</code></pre>
 
-<p>Если вы хотите отправлять запрос с учетными данными только если URL принадлежит одному источнику (origin) что и вызывающий его скрипт, добавьте <code>credentials: 'same-origin'</code>.</p>
+<p>Если вы хотите отправлять запрос с учётными данными только если URL принадлежит одному источнику (origin) что и вызывающий его скрипт, добавьте <code>credentials: 'same-origin'</code>.</p>
 
 <pre><code>// Вызывающий скрипт принадлежит источнику 'https://example.com'
 
@@ -311,22 +311,22 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
 </ul>
 
 <div class="note">
-<p><strong>Примечание</strong>: Вы не можете добавить или установить <code>request</code> защищаемые Headers’ заголовок <code>Content-Length</code>. Аналогично, вставка <code>Set-Cookie</code> в заголовок ответа недопустимо: ServiceWorkers не допускают установки cookies через синтезированные ответы.</p>
+<p><strong>Примечание</strong>: вы не можете добавить или установить <code>request</code> защищаемые Headers’ заголовок <code>Content-Length</code>. Аналогично, вставка <code>Set-Cookie</code> в заголовок ответа недопустимо: ServiceWorkers не допускают установки cookies через синтезированные ответы.</p>
 </div>
 
 <h2 id="Объекты_ответа">Объекты ответа</h2>
 
-<p>Как вы видели выше, экземпляр {{domxref("Response")}} будет возвращен когда <code>fetch()</code> промис будет исполнен.</p>
+<p>Как вы видели выше, экземпляр {{domxref("Response")}} будет возвращён когда <code>fetch()</code> промис будет исполнен.</p>
 
 <p>Свойства объекта-ответа которые чаще всего используются:</p>
 
 <ul>
  <li>{{domxref("Response.status")}} — Целочисленное (по умолчанию 200) содержит код статуса ответа.</li>
  <li>{{domxref("Response.statusText")}} — Строка (по умолчанию"OK"), которая соответствует HTTP коду статуса.</li>
- <li>{{domxref("Response.ok")}} — как сказано ранее, это короткое свойство для упрощения проверки на то что статус ответа находится гдето между 200-299 включительно. Это свойство типа {{domxref("Boolean")}}.</li>
+ <li>{{domxref("Response.ok")}} — как сказано ранее, это короткое свойство для упрощения проверки на то что статус ответа находится где-то между 200-299 включительно. Это свойство типа {{domxref("Boolean")}}.</li>
 </ul>
 
-<p>Они так же могут быть созданы с помощью JavaScript, но реальная польза от этого есть только при использовании  {{domxref("ServiceWorker_API", "сервисворкеров")}}, когда вы предоставляете собственный ответ на запрос с помощью метода {{domxref("FetchEvent.respondWith","respondWith()")}}:</p>
+<p>Они так же могут быть созданы с помощью JavaScript, но реальная польза от этого есть только при использовании  {{domxref("ServiceWorker_API", "сервис-воркеров")}}, когда вы предоставляете собственный ответ на запрос с помощью метода {{domxref("FetchEvent.respondWith","respondWith()")}}:</p>
 
 <pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> myBody <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Blob</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 
@@ -361,7 +361,7 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
  <li>{{domxref("FormData")}}</li>
 </ul>
 
-<p>{{domxref("Body")}} примесь определяет следующие методы для извлечения тела (реализованны как для {{domxref("Request")}} так и для {{domxref("Response")}}). Все они возвращают promise, который в конечном итоге исполняется и выводит содержимое.</p>
+<p>{{domxref("Body")}} примесь определяет следующие методы для извлечения тела (реализованы как для {{domxref("Request")}} так и для {{domxref("Response")}}). Все они возвращают promise, который в конечном итоге исполняется и выводит содержимое.</p>
 
 <ul>
  <li>{{domxref("Body.arrayBuffer","arrayBuffer()")}}</li>
@@ -371,7 +371,7 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
  <li>{{domxref("Body.formData","formData()")}}</li>
 </ul>
 
-<p>Это делает использование нетекстовых данных более легким, чем при XMR.</p>
+<p>Это делает использование нетекстовых данных более лёгким, чем при XMR.</p>
 
 <p>В запросе можно установить параметры для отправки тела запроса:</p>
 
@@ -385,7 +385,7 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
 
 <h2 id="Функция_обнаружения">Функция обнаружения</h2>
 
-<p>Поддержка Fetch API может быть обнаружена путем проверки наличия {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} или {{domxref("GlobalFetch.fetch","fetch()")}} в области видимости {{domxref("Window")}} или {{domxref("Worker")}}. Для примера:</p>
+<p>Поддержка Fetch API может быть обнаружена путём проверки наличия {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} или {{domxref("GlobalFetch.fetch","fetch()")}} в области видимости {{domxref("Window")}} или {{domxref("Worker")}}. Для примера:</p>
 
 <pre class="brush: js">if (self.fetch) {
     // запустить мой fetch запрос здесь
@@ -393,9 +393,9 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
     // Сделать что-то с XMLHttpRequest?
 }</pre>
 
-<h2 id="Полифилл">Полифилл</h2>
+<h2 id="Полифил">Полифил</h2>
 
-<p>Для того, чтобы использовать Fetch в неподдерживаемых браузерах, существует  <a href="https://github.com/github/fetch">Fetch Polyfill</a> , который воссоздает функциональность для не поддерживающих браузеров.</p>
+<p>Для того, чтобы использовать Fetch в неподдерживаемых браузерах, существует  <a href="https://github.com/github/fetch">Fetch Polyfill</a> , который воссоздаёт функциональность для не поддерживающих браузеров.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
@@ -475,9 +475,9 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
 
 <p>[1] Этот API  is implemented behind a preference.</p>
 
-<p>[2] До Firefox 52, <code>get()</code> возращал только  первое значение в указанном заголовке, а <code>getAll()</code> возращал все значения. Начиная с 52, <code>get()</code> теперь возращает все значения и <code>getAll()</code> был удален.</p>
+<p>[2] До Firefox 52, <code>get()</code> возвращал только  первое значение в указанном заголовке, а <code>getAll()</code> возвращал все значения. Начиная с 52, <code>get()</code> теперь возвращает все значения и <code>getAll()</code> был удалён.</p>
 
-<h2 id="См._также">См. также</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>

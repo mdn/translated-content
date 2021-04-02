@@ -1,0 +1,146 @@
+---
+title: compositionupdate
+slug: Web/API/Element/compositionupdate_event
+translation_of: Web/API/Element/compositionupdate_event
+original_slug: Web/Events/compositionupdate
+---
+<p><strong><code>compositionupdate</code></strong> 事件触发于字符被输入到一段文字的时候（这些可见字符的输入可能需要一连串的键盘操作、语音识别或者点击输入法的备选词）</p>
+
+<table class="properties">
+ <tbody>
+  <tr>
+   <td>Bubbles</td>
+   <td>Yes</td>
+  </tr>
+  <tr>
+   <td>Cancelable</td>
+   <td>No</td>
+  </tr>
+  <tr>
+   <td>Target objects</td>
+   <td>{{domxref("Element")}}</td>
+  </tr>
+  <tr>
+   <td>Interface</td>
+   <td>{{domxref("TouchEvent")}}</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="属性">属性</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Property</th>
+   <th scope="col">Type</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>target</code> {{ReadOnlyInline}}</td>
+   <td>{{domxref("EventTarget")}}</td>
+   <td>焦点所在的，处理文字输入的元素。</td>
+  </tr>
+  <tr>
+   <td><code>type</code> {{ReadOnlyInline}}</td>
+   <td>{{domxref("DOMString")}}</td>
+   <td>The type of event.</td>
+  </tr>
+  <tr>
+   <td><code>bubbles</code> {{ReadOnlyInline}}</td>
+   <td><code>boolean</code></td>
+   <td>Does the event normally bubble?</td>
+  </tr>
+  <tr>
+   <td><code>cancelable</code> {{ReadOnlyInline}}</td>
+   <td><code>boolean</code></td>
+   <td>Is it possible to cancel the event?</td>
+  </tr>
+  <tr>
+   <td><code>view</code> {{ReadOnlyInline}}</td>
+   <td>{{domxref("WindowProxy")}}</td>
+   <td>{{domxref("Document.defaultView")}} (the <code>window</code> of the document).</td>
+  </tr>
+  <tr>
+   <td><code>detail</code> {{ReadOnlyInline}}</td>
+   <td><code>long</code> (<code>float</code>)</td>
+   <td>0.</td>
+  </tr>
+  <tr>
+   <td><code>data </code>{{ReadOnlyInline}}</td>
+   <td>{{domxref("DOMString")}} (string)</td>
+   <td>要被替换掉的字符串，如果输入时没有字符串被选，则为空字符串。只读。</td>
+  </tr>
+  <tr>
+   <td><code>locale </code>{{ReadOnlyInline}}</td>
+   <td>{{domxref("DOMString")}} (string)</td>
+   <td>输入事件的语言代号，或者空字符串。只读。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
+   <td>{{CompatGeckoDesktop("9.0")}}<sup>[2]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("9.0")}}<sup>[2]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] 在 <code>compositionstart</code> 事件之后不会立即执行。</p>
+
+<p>[2] <code>compositionupdate</code> 事件在编辑器里的内容改变之前就会触发。自从 Gecko 12.0 {{geckoRelease("12.0")}} 开始 <code>input</code> 事件在输入过程中、内容变化后就触发。使用它可以在输入过程中就获得新的内容。</p>
+
+<p>Gecko 在可信事件（trusted events）中还不支持 <code>locale</code> 属性。但是开发者可以在使用 <code>initCompositionEvent()</code> 创建不可信事件时指定一个值。</p>
+
+<h2 id="参阅">参阅</h2>
+
+<ul>
+ <li>{{Event("compositionstart")}}</li>
+ <li>{{Event("compositionupdate")}}</li>
+ <li>{{Event("compositionend")}}</li>
+</ul>

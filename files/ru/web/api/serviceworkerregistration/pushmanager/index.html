@@ -5,9 +5,9 @@ translation_of: Web/API/ServiceWorkerRegistration/pushManager
 ---
 <div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
 
-<p>Свойство <strong><code>pushManager</code></strong> интерфейса {{domxref("ServiceWorkerRegistration")}} возвращает ссылку на интерфейс {{domxref("PushManager")}}, позволяющий управлять подписками на push-уведомления. Включает поддержку процедуры подписки, получения активной подписки, а также предоставляет доступ к стутусу разрешений на push-уведомления.</p>
+<p>Свойство <strong><code>pushManager</code></strong> интерфейса {{domxref("ServiceWorkerRegistration")}} возвращает ссылку на интерфейс {{domxref("PushManager")}}, позволяющий управлять подписками на push-уведомления. Включает поддержку процедуры подписки, получения активной подписки, а также предоставляет доступ к статусу разрешений на push-уведомления.</p>
 
-<h2 id="Syntax" name="Syntax" style="line-height: 30px; font-size: 2.14285714285714rem;">Синтакс</h2>
+<h2 id="Syntax" name="Syntax" style="line-height: 30px; font-size: 2.14285714285714rem;">Синтаксис</h2>
 
 <pre class="syntaxbox" style="font-size: 14px;">myPushManager = ServiceWorker.pushManager
 </pre>
@@ -35,7 +35,7 @@ navigator.serviceWorker.register('serviceworker.js').then(
         // при помощи XMLHttpRequest.
       }, function(error) {
         // При разработке это часто помогает отлавливать ошибки в консоли.
-        // В продакшен-среде это также может быть полезно для отправки отчета
+        // В продакшен-среде это также может быть полезно для отправки отчёта
         // об ошибках на сервер приложения.
         console.log(error);
       }

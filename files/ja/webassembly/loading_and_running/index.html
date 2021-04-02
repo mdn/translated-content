@@ -13,7 +13,7 @@ translation_of: WebAssembly/Loading_and_running
 
 <p class="summary">JavaScript で WebAssembly を使用するには、まずコンパイル/インスタンス化の前にモジュールをメモリにプルする必要があります。この記事では、WebAssembly バイトコードをフェッチするために使用できるさまざまなメカニズムのリファレンスと、それをコンパイル/インスタンス化して実行する方法について説明します。</p>
 
-<h2 id="何が問題なの">何が問題なの?</h2>
+<h2 id="What_are_the_options">どんな方法があるの?</h2>
 
 <p>WebAssemblyは <code>&lt;script type='module'&gt;</code> または ES2015 の  <code>import</code> 文とまだ統合されていないため、インポートを使用してブラウザでモジュールをフェッチする組み込みの方法はありません。</p>
 
@@ -23,7 +23,7 @@ translation_of: WebAssembly/Loading_and_running
 
 <p>では、どのようにバイト列を配列バッファに読み込んでコンパイルするのでしょうか? 次の章で説明します。</p>
 
-<h2 id="Fetchを使用する">Fetchを使用する</h2>
+<h2 id="Using_Fetch">Fetchを使用する</h2>
 
 <p><a href="/ja/docs/Web/API/Fetch_API">Fetch</a> はネットワークリソースを取得するための便利でモダンな API です。</p>
 
@@ -44,7 +44,7 @@ translation_of: WebAssembly/Loading_and_running
   // コンパイルされた結果(results)で何かする!
 });</pre>
 
-<h3 id="余談_instantiate()_のオーバーロード">余談: instantiate() のオーバーロード</h3>
+<h3 id="Aside_on_instantiate_overloads">余談: instantiate() のオーバーロード</h3>
 
 <p>{{jsxref("WebAssembly.instantiate()")}} 関数は2つのオーバーロードを持ちます — 1つ目 (上の例を参照)はバイトコードを受け取ってプロミスを返します。解決されたプロミスでコンパイルされたモジュールと、それをインスタンス化したものを含むオブジェクトとして受け取ります。オブジェクトの構造は以下のようになります:</p>
 
@@ -61,7 +61,7 @@ translation_of: WebAssembly/Loading_and_running
 <p><strong>注</strong>: 2番目のオーバーロードフォームは {{jsxref("WebAssembly.Module")}} オブジェクトを引数としてとり、結果としてインスタンスオブジェクトを直接含む Promise を返します。<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example">2番目のオーバーロードの例</a>を参照してください。</p>
 </div>
 
-<h3 id="WebAssembly_コードを実行する">WebAssembly コードを実行する</h3>
+<h3 id="Running_your_WebAssembly_code">WebAssembly コードを実行する</h3>
 
 <p>JavaScript 内で WebAssembly インスタンスが 有効になったら {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} プロパティを通してエクスポートされた機能を使い始める事ができます。コードは以下のようになるでしょう:</p>
 
@@ -82,7 +82,7 @@ translation_of: WebAssembly/Loading_and_running
 <p><strong>注</strong>: WebAssembly モジュールからのエクスポートの仕組みの詳細については <a href="https://developer.mozilla.org/ja/docs/WebAssembly/Using_the_JavaScript_API">WebAssembly JavaScript APIを使用する</a> と <a href="https://developer.mozilla.org/ja/docs/WebAssembly/Understanding_the_text_format">WebAssemblyテキストフォーマットを理解する</a> を参照してください。</p>
 </div>
 
-<h2 id="XMLHttpRequest_を使用する">XMLHttpRequest を使用する</h2>
+<h2 id="Using_XMLHttpRequest">XMLHttpRequest を使用する</h2>
 
 <p><code><a href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> は Fetch よりやや古いですが、引き続き型付き配列を取得するために適切に使用することができます。繰り返しますが、モジュール名は <code>simple.wasm</code> とします:</p>
 

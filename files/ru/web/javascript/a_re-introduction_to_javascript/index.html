@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 
 <p>Было бы полезно начать с истории языка. JavaScript был создан в 1995 Бренданом Айком, инженером в компании Netscape. Первый релиз состоялся вместе с выходом браузера Netscape 2 в начале 1996 года. Сначала язык назывался LiveScript, но затем был переименован в связи с маркетинговыми целями, чтобы сыграть на популярности языка Java компании Sun Microsystem — несмотря на это языки практически не имеют ничего общего друг с другом. Так было положено начало путаницы между этими языками.</p>
 
-<p>Чуть позже Microsoft выпустила очень похожий и практически совместимый язык JScript, который шёл вместе с IE3. Через пару месяцев Netscape отправил язык в <a href="http://www.ecma-international.org/">Ecma International</a>, Европейскую организацию занимающуюся стандартами, которая выпустила первую версию стандарта <a href="https://developer.mozilla.org/en/JavaScript/Language_Resources" title="en/ECMAScript">ECMAScript</a> в 1997. Стандарт получил значимое обновление в <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript edition 3</a> в 1999, и остается самым стабильным до сегодняшнего дня. Четвертая версия была отклонена, из-за проблем с усложнениями в языке. Многие вещи из четвертого издания послужили основой для стандарта ECMAScript 5 (декабрь 2009) и ECMAScript 6 (июнь 2015).</p>
+<p>Чуть позже Microsoft выпустила очень похожий и практически совместимый язык JScript, который шёл вместе с IE3. Через пару месяцев Netscape отправил язык в <a href="http://www.ecma-international.org/">Ecma International</a>, Европейскую организацию занимающуюся стандартами, которая выпустила первую версию стандарта <a href="https://developer.mozilla.org/en/JavaScript/Language_Resources" title="en/ECMAScript">ECMAScript</a> в 1997. Стандарт получил значимое обновление в <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript edition 3</a> в 1999, и остаётся самым стабильным до сегодняшнего дня. Четвёртая версия была отклонена, из-за проблем с усложнениями в языке. Многие вещи из четвёртого издания послужили основой для стандарта ECMAScript 5 (декабрь 2009) и ECMAScript 6 (июнь 2015).</p>
 
 <div class="note">
 <p><strong>На заметку</strong>: Далее по тексту мы будем называть язык ECMAScript как "JavaScript".</p>
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 
 <p>JavaScript является объектно-ориентированным языком, имеющий типы и операторы, встроенные объекты и методы. Его синтаксис происходит от языков Java и C, поэтому много конструкций из этих языков применимы и к JavaScript. Одним из ключевых отличий JavaScript является отсутствие классов, вместо этого функциональность классов осуществляется прототипами объектов (смотрите ES6 {{jsxref("Classes")}}) . Другое главное отличие в том, что функции это объекты, в которых содержится исполняемый код и которые могут быть переданы куда-либо, как и любой другой объект.</p>
 
-<p>Начнём с основы любого языка: с типов данных. Программы на JavaScript оперируют значениями, и все эти значения принадлежат к определенному типу. Типы данных в JavaScript:</p>
+<p>Начнём с основы любого языка: с типов данных. Программы на JavaScript оперируют значениями, и все эти значения принадлежат к определённому типу. Типы данных в JavaScript:</p>
 
 <ul>
  <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Number" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Number">Числа</a></li>
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
  <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Символы</a> (новый тип из шестой редакции)</li>
 </ul>
 
-<p>Да, еще <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined">Undefined</a> и <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/null">Null</a>, которые немного обособлены. И <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Array">Массивы</a>, которые являются особым видом объектов. А также <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Date">Даты</a> и <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp" title="en/Core_JavaScript_1.5_Reference/Global_Objects/RegExp">Регулярные выражения</a>, тоже являющиеся объектами. И, если быть технически точным, функции это тоже особый вид объекта. Поэтому схема типов выглядит скорее так:</p>
+<p>Да, ещё <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined">Undefined</a> и <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/null">Null</a>, которые немного обособлены. И <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Array">Массивы</a>, которые являются особым видом объектов. А также <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date" title="en/Core_JavaScript_1.5_Reference/Global_Objects/Date">Даты</a> и <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp" title="en/Core_JavaScript_1.5_Reference/Global_Objects/RegExp">Регулярные выражения</a>, тоже являющиеся объектами. И, если быть технически точным, функции это тоже особый вид объекта. Поэтому схема типов выглядит скорее так:</p>
 
 <ul>
  <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Number">Числа</a></li>
@@ -589,7 +589,7 @@ avg(2, 3, 4, 5); // 3.5</pre>
 <div class="blockIndicator note">
 <p>В вышенаписанном коде переменная <strong>args</strong> содержит все значения, которые были переданы в функцию.<br>
  <br>
- Важно отметить, что где бы ни был  размещен <em>rest parameter operator</em> в объявлении функции, он будет содержать все аргументы  <em>после</em> его объявления, не раньше. например: <em>function</em> <em>avg(</em><strong>firstValue, </strong><em>...args)</em><strong> </strong>будет хранить первое переданное значение в переменной <strong>firstValue </strong>и оставшиеся в <strong>args</strong>. Это еще одно полезное свойство языка, однако оно ведет нас к новой проблеме.  <code>avg()</code> функция принимает список аргументов, разделенный запятыми. Но что если вы хотите найти среднее значение в массиве? Вы можете переписать функцию следующим образом:</p>
+ Важно отметить, что где бы ни был  размещён <em>rest parameter operator</em> в объявлении функции, он будет содержать все аргументы  <em>после</em> его объявления, не раньше. например: <em>function</em> <em>avg(</em><strong>firstValue, </strong><em>...args)</em><strong> </strong>будет хранить первое переданное значение в переменной <strong>firstValue </strong>и оставшиеся в <strong>args</strong>. Это ещё одно полезное свойство языка, однако оно ведёт нас к новой проблеме.  <code>avg()</code> функция принимает список аргументов, разделённый запятыми. Но что если вы хотите найти среднее значение в массиве? Вы можете переписать функцию следующим образом:</p>
 </div>
 
 <pre class="brush: js notranslate">function avgArray(arr) {
@@ -895,6 +895,6 @@ y(7); // возвратит 27
 
 <p>Так что при вызове функции <code>makeAdder</code> создаётся новый объект 'scope' с единственным свойством: <code>a</code>, которому присваивается значение, переданное функции в качестве аргумента.  Потом <code>makeAdder</code> возвращает новую анонимную функцию. В любом другом случае 'сборщик мусора' удалил бы объект scope, но возвращаемая функция ссылается на этот объект. В итоге объект scope не удаляется до тех пор, пока существует хотя бы одна ссылка на него.</p>
 
-<p>Все объекты scope соединяются в цепочку областей видимости, которая похожа на цепочку прототипов в объектной системе JavaScript'а.</p>
+<p>Все объекты scope соединяются в цепочку областей видимости, которая похожа на цепочку прототипов в объектной системе JavaScript.</p>
 
 <p><strong>Замыкание</strong> это связка из функции и объекта scope, созданного при её вызове. <a href="http://stackoverflow.com/questions/111102/how-do-javascript-closures-work">Подробнее о замыканиях здесь</a>.</p>

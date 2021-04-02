@@ -17,7 +17,7 @@ translation_of: Web/API/CacheStorage/match
 
 <p>Объекты Cache проверяются в порядке создания.</p>
 
-<div class="note"><strong>Note</strong>: {{domxref("CacheStorage.match()", "caches.match()")}} это метод для удобства в работе. Такая функциональность достигается вызовом {{domxref("cache.match()")}} для каждого объекта cache (в порядке полученом запросом {{domxref("CacheStorage.keys()", "caches.keys()")}}) пока {{domxref("Response")}} не будет найден.</div>
+<div class="note"><strong>Note</strong>: {{domxref("CacheStorage.match()", "caches.match()")}} это метод для удобства в работе. Такая функциональность достигается вызовом {{domxref("cache.match()")}} для каждого объекта cache (в порядке полученном запросом {{domxref("CacheStorage.keys()", "caches.keys()")}}) пока {{domxref("Response")}} не будет найден.</div>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -37,22 +37,22 @@ translation_of: Web/API/CacheStorage/match
   <li><code>ignoreSearch</code>: {{domxref("Boolean")}} свойство. Определяет, следует ли игнорировать параметры запроса в строке url или нет.  Например, если установлено <code>true</code>, параметры <code>?value=bar</code> запроса <code>http://foo.com/?value=bar</code> будут проигнорированы во время сопоставления. Значением по умолчанию является <code>false</code>.</li>
   <li><code>ignoreMethod</code>: {{domxref("Boolean")}} свойство. Когда установлено <code>true</code>, предотвращает проверку <code>http</code> метода запроса {{domxref("Request")}}  (обычно разрешены  только <code>GET</code>  и <code>HEAD</code>.) По умолчанию установлено <code>false</code>.</li>
   <li><code>ignoreVary</code>: {{domxref("Boolean")}} свойство, определяющее, следует ли выполнять проверку заголовка <code>VARY.</code> Если установлено <code>true</code>, совпадения будут найдены, независимо от того, имеет ли {{domxref("Response")}} заголовок <code>VARY</code> или нет. По умолчанию установлено <code>false</code>.</li>
-  <li><code>cacheName</code>: Строка {{domxref("DOMString")}} - имя кэша для поиска.</li>
+  <li><code>cacheName</code>: Строка {{domxref("DOMString")}} - имя кеша для поиска.</li>
  </ul>
  </dd>
 </dl>
 
 <h3 id="Возвращаемое_значение">Возвращаемое значение</h3>
 
-<p>Метод возвращает {{jsxref("Promise")}} который разрешается совпавшим {{domxref("Response")}}. Если ни одного совпадени не было найдено, promise разрешается с <code>undefined</code>.</p>
+<p>Метод возвращает {{jsxref("Promise")}} который разрешается совпавшим {{domxref("Response")}}. Если ни одного совпадений не было найдено, promise разрешается с <code>undefined</code>.</p>
 
 <h2 id="Примеры" style="line-height: 30px; font-size: 2.14285714285714rem;">Примеры</h2>
 
-<p>Это пример  из MDN <a href="https://github.com/mdn/sw-test/">sw-test example</a> (см. <a href="https://mdn.github.io/sw-test/">sw-test running live</a>). В данном примере, мы слушаем событие {{domxref("FetchEvent")}}. Мы строим проверку ответа следующим образом:</p>
+<p>Это пример  из MDN <a href="https://github.com/mdn/sw-test/">sw-test example</a> (см. <a href="https://mdn.github.io/sw-test/">sw-test running live</a>). В данном примере, мы обрабатываем событие {{domxref("FetchEvent")}}. Мы строим проверку ответа следующим образом:</p>
 
 <ol>
  <li>Проверяем, совпадения для запроса в {{domxref("CacheStorage")}} используя {{domxref("CacheStorage.match","CacheStorage.match()")}}. Если совпадение найдено, возвращаем response.</li>
- <li>Если нет, открываем <code>v1</code> объект кэша, используя метод <code>open()</code>, добавляем изначальный запрос в кэш используя {{domxref("Cache.put","Cache.put()")}} и возвращаем клонированный объект запроса, используя <code>return response.clone()</code>. Это необходимо, потому что метод <code>put()</code> сохраняет в кэш тело запроса, изменяя, таким образом, изначальный запрос.</li>
+ <li>Если нет, открываем <code>v1</code> объект кеша, используя метод <code>open()</code>, добавляем изначальный запрос в кеш используя {{domxref("Cache.put","Cache.put()")}} и возвращаем клонированный объект запроса, используя <code>return response.clone()</code>. Это необходимо, потому что метод <code>put()</code> сохраняет в кеш тело запроса, изменяя, таким образом, изначальный запрос.</li>
  <li>Если произошла какая-либо ошибка (например, из-за проблем с сетью), возвращаем резервный ответ.</li>
 </ol>
 

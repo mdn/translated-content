@@ -32,18 +32,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <h2 id="Description" name="Description">Описание</h2>
 
-<p>Метод <code>bind()</code> создаёт новую "<strong>привязанную функцию</strong>" (<strong>ПФ</strong>).  <strong>ПФ</strong> <span class="translation-chunk">- это "необычный </span> <span class="translation-chunk">функциональный объект" ( термин из </span> <strong>ECMAScript 6</strong> <span class="translation-chunk"> ), который является оберткой над исходным </span> <span class="translation-chunk">функциональным объектом. Вызов </span> <strong>ПФ</strong> <span class="translation-chunk">  приводит к исполнению кода обернутой функции.</span></p>
+<p>Метод <code>bind()</code> создаёт новую "<strong>привязанную функцию</strong>" (<strong>ПФ</strong>).  <strong>ПФ</strong> <span class="translation-chunk">- это "необычный </span> <span class="translation-chunk">функциональный объект" ( термин из </span> <strong>ECMAScript 6</strong> <span class="translation-chunk"> ), который является обёрткой над исходным </span> <span class="translation-chunk">функциональным объектом. Вызов </span> <strong>ПФ</strong> <span class="translation-chunk">  приводит к исполнению кода обёрнутой функции.</span></p>
 
 <p><strong>ПФ</strong> <span class="translation-chunk"> имеет следующие внутренние ( скрытые ) свойства:</span></p>
 
 <ul>
  <li><span class="translation-chunk"><strong>[[BoundTargetFunction]]</strong> - оборачиваемый  (целевой ) </span> <span class="translation-chunk">функциональный </span><span class="translation-chunk">объект</span></li>
- <li><span class="translation-chunk"><strong>[[BoundThis]]</strong> - значение, которое всегда передается в качестве значения   <strong>this </strong>при вызове обернутой функции.</span></li>
+ <li><span class="translation-chunk"><strong>[[BoundThis]]</strong> - значение, которое всегда передаётся в качестве значения   <strong>this </strong>при вызове обёрнутой функции.</span></li>
  <li><span class="translation-chunk"><strong>[[BoundArguments]] </strong>- список значений, элементы которого используются в качестве первого аргумента при вызове оборачиваемой функции.</span></li>
  <li><strong><span class="translation-chunk">[[</span>Call</strong><span class="translation-chunk"><strong>]] </strong>- внутренний метод. Выполняет код (функциональное выражение), связанный с функциональным объектом. </span></li>
 </ul>
 
-<p><span class="translation-chunk">Когда <strong>ПФ </strong>вызывается, исполняется ее внутренний метод </span> <strong>[[Call]]</strong> <span class="translation-chunk"> со следующими аргументами </span> <strong>Call(<em>target</em>, <em>boundThis</em>, <em>args</em>).</strong></p>
+<p><span class="translation-chunk">Когда <strong>ПФ </strong>вызывается, исполняется её внутренний метод </span> <strong>[[Call]]</strong> <span class="translation-chunk"> со следующими аргументами </span> <strong>Call(<em>target</em>, <em>boundThis</em>, <em>args</em>).</strong></p>
 
 <ul>
  <li><strong><em>target</em></strong> <span class="translation-chunk">  -    <strong>[[BoundTargetFunction]]</strong>;</span></li>
@@ -57,7 +57,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <h3 id="Example:_Creating_a_bound_function" name="Example:_Creating_a_bound_function">Пример: создание привязанной функции</h3>
 
-<p>Простейшим способом использования <code>bind()</code> является создание функции, которая, вне зависимости от способа её вызова, вызывается с определённым значением <code>this</code>. Обычным заблуждением для новичков в JavaScript является извлечение метода из объекта с целью его дальнейшего вызова в качестве функции и ожидание того, что он будет использовать оригинальный объект в качестве своего значения <code>this</code> (например, такое может случиться при использовании метода как функции обратного вызова). Однако, без специальной обработки, оригинальный объект зачастую теряется. Создание привязанной функции из функции, использующей оригинальный объект, изящно решает эту проблему:</p>
+<p>Простейшим способом использования <code>bind()</code> является создание функции, которая, вне зависимости от способа её вызова, вызывается с определённым значением <code>this</code>. Обычным заблуждением для новичков в JavaScript является извлечение метода из объекта с целью его дальнейшего вызова в качестве функции и ожидание того, что он будет использовать оригинальный объект в качестве своего значения <code>this</code> (например, такое может случиться при использовании метода как колбэк-функции). Однако, без специальной обработки, оригинальный объект зачастую теряется. Создание привязанной функции из функции, использующей оригинальный объект, изящно решает эту проблему:</p>
 
 <pre class="brush: js">this.x = 9;
 var module = {
@@ -94,7 +94,7 @@ var list3 = leadingThirtysevenList(1, 2, 3); // [37, 1, 2, 3]
 
 <h3 id="Example:_With_setTimeout" name="Example:_With_setTimeout">Пример: с <code>setTimeout</code></h3>
 
-<p>По умолчанию, внутри {{domxref("window.setTimeout()")}} контекст <code>this</code> устанавливается в объект {{domxref("window")}} (или <code>global</code>). При работе с методами класса, требующими <code>this</code> для ссылки на экземпляры класса, вы можете явно привязать <code>this</code> к функции обратного вызова для сохранения экземпляра.</p>
+<p>По умолчанию, внутри {{domxref("window.setTimeout()")}} контекст <code>this</code> устанавливается в объект {{domxref("window")}} (или <code>global</code>). При работе с методами класса, требующими <code>this</code> для ссылки на экземпляры класса, вы можете явно привязать <code>this</code> к колбэк-функции для сохранения экземпляра.</p>
 
 <pre class="brush: js">function LateBloomer() {
   this.petalCount = Math.ceil(Math.random() * 12) + 1;
@@ -134,7 +134,7 @@ p.toString(); // '1,2'
 
 var emptyObj = {};
 var YAxisPoint = Point.bind(emptyObj, 0/*x*/);
-// не поддерживается полифиллом, приведённым ниже,
+// не поддерживается полифилом, приведённым ниже,
 // но отлично работает с родным bind:
 var YAxisPoint = Point.bind(null, 0/*x*/);
 
@@ -163,7 +163,7 @@ emptyObj.x + ',' + emptyObj.y;
 
 <h3 id="Example:_Creating_shortcuts" name="Example:_Creating_shortcuts">Пример: создание сокращений</h3>
 
-<p>Метод <code>bind()</code> также полезен в случаях, если вы хотите создать сокращение для функции, требующей определёное значение <code>this</code>.</p>
+<p>Метод <code>bind()</code> также полезен в случаях, если вы хотите создать сокращение для функции, требующей определённое значение <code>this</code>.</p>
 
 <p>Возьмём, например, метод {{jsxref("Array.prototype.slice")}}, который вы можете использовать для преобразования массивоподобного объекта в настоящий массив. Вы можете создать подобное сокращение:</p>
 
@@ -185,7 +185,7 @@ var slice = Function.prototype.call.bind(unboundSlice);
 slice(arguments);
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифилл</h2>
+<h2 id="Polyfill" name="Polyfill">Полифил</h2>
 
 <p>Функция <code>bind</code> является дополнением к стандарту ECMA-262 5-го издания; поэтому она может присутствовать не во всех браузерах. Вы можете частично обойти это ограничение, вставив следующий код в начало ваших скриптов, он позволяет использовать большую часть возможностей <code>bind()</code> в реализациях, не имеющих его родной поддержки.</p>
 

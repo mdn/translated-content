@@ -1,0 +1,329 @@
+---
+title: Использование кеширования приложений
+slug: Web/HTML/Using_the_application_cache
+translation_of: Web/HTML/Using_the_application_cache
+original_slug: Web/HTML/Использование_кеширования_приложений
+---
+<h2 id="Введение">Введение</h2>
+<p><a href="/en-US/docs/HTML/HTML5" title="HTML/HTML5">HTML5</a> предоставляет механизм <em>кеширования приложения</em>, позволяющий веб-приложениям работать в автономном режиме. Разработчики теперь могут использовать интерфейс <strong>Кеша приложения</strong> (<em>AppCache</em>), сообщая браузеру, какие из ресурсов браузеру следует закешировать и сделать доступными в режиме офлайн. Закодированные приложения загружаются и работают корректно, даже если пользователь обновляет страницу в тот момент, когда он отключён от сети.</p>
+<p>Использование механизма кеширования даёт следующие преимущества:</p>
+<ul>
+ <li>Просмотр страниц в автономном режиме: пользователи могут переходить по сайту даже в режиме офлайн.</li>
+ <li>Скорость: закешированные ресурсы хранятся на устройстве пользователя и, следовательно, загружаются быстрее.</li>
+ <li>Уменьшение нагрузки на сервер: браузер загружает с сервера только те ресурсы, которые были изменены.</li>
+</ul>
+<h2 id="Как_работает_кеш_приложения">Как работает кеш приложения</h2>
+<h3 id="Включение_механизма_кеширования">Включение механизма кеширования</h3>
+<p>Для включения механизма кеширования приложения вам необходимо включить атрибут {{htmlattrxref("manifest", "html")}} в элемент {{HTMLElement("html")}} на странице вашего приложения, как показано примере ниже:</p>
+<div style="overflow: hidden;">
+ <pre class="brush: html">&lt;html manifest="example.appcache"&gt;
+  ...
+&lt;/html&gt;
+</pre>
+</div>
+<p>Атрибут <code>manifest</code> ссылается на файл <strong>манифеста кеша</strong>, который является текстовым файлом и содержит список ресурсов (файлов), которые браузеру следует закешировать для вашего приложения.</p>
+<p>Вам следует включить атрибут <code>manifest</code> в каждую страницу вашего приложения, внутри которой вы хотели бы осуществлять кеширование. Браузер не закеширует страницы, не содержащие атрибута <code>manifest</code>, пока такие страницы не будут явно указаны в файле манифеста. Вам не обязательно перечислять все страницы, которые вы хотите закешировать, в файле манифеста, т.к. браузер неявно добавляет в кеш приложения каждую посещаемую пользователем страницу, где есть атрибут  <code>manifest</code>.</p>
+<p>Некоторые браузеры (например, Firefox) показывают панель уведомлений , когда пользователь загружает использующее кеш приложение в первый раз. Панель уведомлений может показывать примерно такое сообщение::</p>
+<p style="margin-left: 40px;">Этот веб-сайт (<code>www.example.com</code>) запрашивает у вас разрешение на хранение данных для автономной работы на вашем компьютере. [Разрешить] [Никогда для этого сайта] [Не сейчас]</p>
+<p>Термин "офлайн(-доступные) приложения" иногда относится конкретно к приложениям, которым пользователь разрешил использовать возможности работы офлайн.</p>
+<h3 id="Загрузка_документов">Загрузка документов</h3>
+<p>Использование кеша приложений изменяет обычный процесс загрузки документа:</p>
+<ul>
+ <li>Если существует кеш приложения, браузер загружает документ и связанные с ним ресурсы напрямую из кеша без использования сети. Это ускоряет загрузку документа.</li>
+ <li>Затем браузер проверяет, был ли изменён манифест кеша на стороне сервера.</li>
+ <li>Если манифест кеша изменён, браузер загружает новую версию манифеста и перечисленных в нём ресурсов. Данные действия происходят в фоновом режиме и почти не влияют на производительность.</li>
+</ul>
+<p>Ниже приведено более подробное описание процесса загрузки документов и обновления кеша приложения:</p>
+<ol>
+ <li>Когда браузер посещает страницу со включённым атрибутом <code>manifest</code> и кеша приложения не существует, браузер загружает документ, а затем получает все пункты файла манифеста, создавая тем самым первую версию кеша приложения.</li>
+ <li>Последующие посещения данной страницы приводят к загрузке документа и других ресурсов, указанных в файле манифеста, уже из кеша приложения (не с сервера). К тому же браузер также посылает событие <code>checking</code> объекту <code><a href="/en-US/docs/DOM/window.applicationCache" title="DOM/window.applicationCache">window.applicationCache</a></code> и получает файл манифеста в соответствии с правилами кеширования HTTP.</li>
+ <li>Если текущая закешированная копия манифеста совпадает со скачанной, браузер посылает событие <code>noupdate</code> объекту <code>applicationCache</code>, завершая процесс обновления. Обратите внимание, если вы изменили закешированные ресурсы на стороне сервера, вам также необходимо изменить и файл манифеста, тем самым давая браузеру знать, какие из ресурсов нужно получить повторно.</li>
+ <li>Если файл манифеста изменился, то все перечисленные в нём файлы, так же, как и добавленные в кеш с помощью вызова <code><a href="/en-US/docs/nsIDOMOfflineResourceList#add.28.29" title="nsIDOMOfflineResourceList#add.28.29">applicationCache.add()</a></code>, попадают во временный кеш с учётом правил кеширования HTTP. Во время обновления каждого файла в этом временном кеше браузер посылает событие <code>progress</code> объекту <code>applicationCache</code>. Если происходит ошибка, браузер посылает событие <code>error</code>, а обновление прекращается.</li>
+ <li>Как только успешно получены все файлы, они автоматически отправляются в настоящий офлайн-кеш, а объекту <code>applicationCache</code> посылается событие <code>cached</code>. Поскольку документ уже был загружен в браузер из кеша, обновлённый документ не перерисуется, пока страница не будет перезагружена (неважно как, вручную или программно).</li>
+</ol>
+<h2 id="Место_хранения_и_очистка_офлайн-кеша">Место хранения и очистка офлайн-кеша</h2>
+<p>В Chrome офлайн-кеш можно очистить, выбрав «Очистить историю...» в настройках или перейдя на адрес <a title="chrome://appcache-internals/">chrome://appcache-internals/</a>. У Safari также есть похожий пункт «Очистить кеш» в настройках, но для этого также может  понадобиться перезапуск браузера.</p>
+<p>Firefox хранит данные офлайн-кеша отдельно от профиля — по соседству с обычным дисковым кешем:</p>
+<ul>
+ <li>В Windows Vista/7: <code>C:\Users\&lt;пользователь&gt;\AppData\<strong>Local</strong>\Mozilla\Firefox\Profiles\&lt;соль&gt;.&lt;имя профиля&gt;\OfflineCache</code></li>
+ <li>В Mac/Linux: <code>/Users/&lt;<code>пользователь</code>&gt;/Library/Caches/Firefox/Profiles/&lt;<code>соль</code>&gt;.&lt;<code>имя профиля</code>&gt;/OfflineCache</code></li>
+</ul>
+<p>Текущее состояние офлайн-кеша в Firefox можно посмотреть на странице <code>about:cache</code> (в разделе «Offline cache device»). Офлайн-кеш можно очистить по отдельности для каждого сайта, используя кнопку «Удалить...» в разделе Инструменты -&gt; Настройки -&gt; Дополнительные -&gt; Сеть -&gt; Автономное содержимое.</p>
+<p>До Firefox 11 кеш нельзя было очистить ни кнопкой Инструменты -&gt; Удалить недавнюю историю, ни Инструменты -&gt; Настройки -&gt; Дополнительные -&gt; Сеть -&gt; Автономное содержимое -&gt; Очистить сейчас. Сейчас эта проблема устранена.</p>
+<p>В Linux настройки офлайн-кеша можно найти в разделе Инструменты -&gt; Настройки -&gt; Дополнительные -&gt; Сеть -&gt; Автономное содержимое и данные пользователя</p>
+<p>Смотрите также <a href="/en-US/docs/DOM/Storage#Storage_location_and_clearing_the_data" title="DOM/Storage#Storage location and clearing the data">очистка данных хранилища DOM</a>.</p>
+<p>Также кеши приложения могут устареть. Если с сервера удалить файл манифеста, браузер удалит все кеши, которые были в нём указаны, и пошлёт событие <code>obsoleted</code> объекту <code>applicationCache</code>, что установит состояние кеша в <code>OBSOLETE</code>.</p>
+<h2 id="Файл_манифеста_кеша">Файл манифеста кеша</h2>
+<h3 id="Ссылки_на_файл_манифеста_кеша">Ссылки на файл манифеста кеша</h3>
+<p><code>Атрибут manifest</code> может содержать как относительный путь, так и абсолютный URL (который должен соответствовать принципу единого источника) к файлу манифеста. Файл манифеста кеша может иметь любое расширение, но его MIME- тип должен быть <code>text/cache-manifest</code>.</p>
+<div class="note">
+ <strong>Примечание: </strong>На серверах Apache MIME-тип файлов манифеста (.appcache) можно настроить, добавив строчку <code>AddType text/cache-manifest .appcache</code> в файл .htaccess в корневой директории или же директории приложения.</div>
+<h3 id="Пункты_манифеста_кеша">Пункты манифеста кеша</h3>
+<p>Манифест кеша представляет собой обычный текстовый файл, содержащий список ресурсов, которые браузеру следует закешировать для обеспечения автономного доступа. Ресурсы идентифицируются по URI. Объекты, перечисленные в манифесте кеша должны иметь те же протокол, хост и порт, что и сам манифест.</p>
+<h3 id="Пример_1_простой_файл_манифеста_кеша">Пример 1: простой файл манифеста кеша</h3>
+<p>Ниже приведено содержимое простого файла манифеста кеша для воображаемого веб-сайта <span class="nowiki">www.example.com</span>.</p>
+<pre>CACHE MANIFEST
+# v1 - 2011-08-13
+# Это комментарий.
+<span class="nowiki">http://www.example.com/index.html</span>
+<span class="nowiki">http://www.example.com/header.png</span>
+<span class="nowiki">http://www.example.com/blah/blah</span>
+</pre>
+<p>Манифест кеша может включать три секции (<code>CACHE</code>, <code>NETWORK</code> и <code>FALLBACK</code>, которые будут рассмотрены далее). В приведённом примере нет заголовков секций, поэтому предполагается, что все строчки находятся в явной секции <code>CACHE</code>,  подразумевая, что все указанные в них ресурсы браузеру следует сохранить в кеше приложения. Ресурсы могут быть указаны с использованием как абсолютных, так и относительных URL (например, <code>index.html</code>).</p>
+<p>Для наличия в кеше комментария «v1» есть веские основания. Браузер обновляет кеш приложения, только если изменён файл манифеста, хотя бы один байт в нём. Если вы изменяете закешированный ресурс на стороне сервера, (например, при обновлении содержимого картинки  <code>header.png</code>), вы также должны изменить содержимое файла манифеста, тем самым сообщая браузеру, что нужно обновить кеш. Вы можете изменять файл манифеста так, как вам угодно, но лучшие практики рекомендуют использовать изменение номера пересмотра.</p>
+<div class="warning">
+  
+ <strong>Важное замечание:</strong> Не указывайте в манифесте ссылку на него самого, в противном случае будет невозможно сообщить браузеру о том, что кеш обновился.</div>
+<h3 id="Sections_in_a_cache_manifest_file_CACHE_NETWORK_and_FALLBACK">Sections in a cache manifest file: <code>CACHE</code>, <code>NETWORK</code>, and <code>FALLBACK</code></h3>
+<p>A manifest can have three distinct sections: <code>CACHE</code>, <code>NETWORK</code>, and <code>FALLBACK</code>.</p>
+<dl>
+ <dt>
+  <code>CACHE:</code></dt>
+ <dd>
+  This is the default section for entries in a cache manifest file. Files listed under the <code>CACHE:</code> section header (or immediately after the <code>CACHE MANIFEST</code> line) are explicitly cached after they're downloaded for the first time.</dd>
+ <dt>
+  <code>NETWORK:</code></dt>
+ <dd>
+  Files listed under the <code>NETWORK:</code> section header in the cache manifest file are white-listed resources that require a connection to the server. All requests to such resources bypass the cache, even if the user is offline. Wildcards may be used.</dd>
+ <dt>
+  <code>FALLBACK:</code></dt>
+ <dd>
+  The <code>FALLBACK:</code> section specifies fallback pages the browser should use if a resource is inaccessible. Each entry in this section lists two URIs—the first is the resource, the second is the fallback. Both URIs must be relative and from the same origin as the manifest file. Wildcards may be used.</dd>
+</dl>
+<p>The <code>CACHE</code>, <code>NETWORK</code>, and <code>FALLBACK </code>sections can be listed in any order in a cache manifest file, and each section can appear more than once in a single manifest.</p>
+<h3 id="Example_2_a_more_complete_cache_manifest_file">Example 2: a more complete cache manifest file</h3>
+<p>The following is a more complete cache manifest file for the imaginary web site at <span class="nowiki">www.example.com</span>:</p>
+<pre>CACHE MANIFEST
+# v1 2011-08-14
+# This is another comment
+index.html
+cache.html
+style.css
+image1.png
+
+# Use from network if available
+NETWORK:
+network.html
+
+# Fallback content
+FALLBACK:
+/ fallback.html
+</pre>
+<p>This example uses <code>NETWORK</code> and <code>FALLBACK</code> sections to specify that the <code>network.html</code> page must always be retrieved from the network, and that the <code>fallback.html</code> page should be served as a fallback resource (e.g., in case a connection to the server cannot be established).</p>
+<h3 id="Structure_of_a_cache_manifest_file">Structure of a cache manifest file</h3>
+<p>Cache manifest files must be served with the <code>text/cache-manifest</code> MIME type. All resources served using this MIME type must follow the syntax for an application cache manifest, as defined in this section.</p>
+<p>Cache manifests are UTF-8 format text files, and may optionally include a BOM character. Newlines may be represented by line feed (<code>U+000A</code>), carriage return (<code>U+000D</code>), or carriage return and line feed both.</p>
+<p>The first line of the cache manifest must consist of the string <code>CACHE MANIFEST</code> (with a single <code>U+0020</code> space between the two words), followed by zero or more space or tab characters. Any other text on the line is ignored.</p>
+<p>The remainder of the cache manifest must be comprised of zero or more of the following lines:</p>
+<dl>
+ <dt>
+  Blank line</dt>
+ <dd>
+  You may use blank lines comprised of zero or more space and tab characters.</dd>
+ <dt>
+  Comment</dt>
+ <dd>
+  Comments consist of zero or more tabs or spaces followed by a single <code>#</code> character, followed by zero or more characters of comment text. Comments may only be used on their own lines (after the initial <span style='line-height: normal; font-family: "Courier New", "Andale Mono", monospace; font-size: 14px;'>CACHE MANIFEST </span><span style="line-height: 1.572; font-size: 14px;">line), and cannot be appended to other lines. This means that you cannot specify fragment identifiers.</span></dd>
+ <dt>
+  Section header</dt>
+ <dd>
+  Section headers specify which section of the cache manifest is being manipulated. There are three possible section headers:</dd>
+</dl>
+<blockquote>
+ <table class="standard-table">
+  <tbody>
+   <tr>
+    <th>Section header</th>
+    <th>Description</th>
+   </tr>
+   <tr>
+    <td><code>CACHE:</code></td>
+    <td>Switches to the explicit section of the cache manifest (this is the default section).</td>
+   </tr>
+   <tr>
+    <td><code>NETWORK:</code></td>
+    <td>Switches to the online whitelist section of the cache manifest.</td>
+   </tr>
+   <tr>
+    <td><code>FALLBACK:</code></td>
+    <td>Switches to the fallback section of the cache manifest.</td>
+   </tr>
+  </tbody>
+ </table>
+</blockquote>
+<dl>
+ <dd>
+  The section header line may include whitespaces, but must include the colon (<code>:</code>) in the section name.</dd>
+ <dt>
+  Section data</dt>
+ <dd>
+  The format for lines of data varies from section to section. In the explicit (<code>CACHE:</code>) section, each line is a valid URI or IRI reference to a resource to cache (no wildcard characters are allowed in this sections). Whitespace is allowed before and after the URI or IRI on each line. In the Fallback section each line is a valid URI or IRI reference to a resource, followed by a fallback resource that is to be served up when a connection with the server cannot be made. In the network section, each line is a valid URI or IRI reference to a resource to fetch from the network (the wildcard character * is allowed in this section).<br>
+  <div class="note">
+   <strong>Note: </strong>Relative URIs are relative to the cache manifest's URI, not to the URI of the document referencing the manifest.</div>
+ </dd>
+</dl>
+<p>Cache manifest files can switch from section to section at will (each section header can be used more than once), and sections are allowed to be empty.</p>
+<h2 id="Resources_in_an_application_cache">Resources in an application cache</h2>
+<p>An application cache always includes at least one resource, identified by URI. All resources fit into one of the following categories:</p>
+<dl>
+ <dt>
+  Master entries</dt>
+ <dd>
+  These are resources added to the cache because a browsing context visited by the user included a document that indicated that it was in this cache using its <code>manifest</code> attribute.</dd>
+ <dt>
+  Explicit entries</dt>
+ <dd>
+  These are resources explicitly listed in the application's cache manifest file.</dd>
+ <dt>
+  Network entries</dt>
+ <dd>
+  These are resources listed in the application's cache manifest files as network entries.</dd>
+ <dt>
+  Fallback entries</dt>
+ <dd>
+  These are resources listed in the application's cache manifest files as fallback entries.</dd>
+</dl>
+<div class="note">
+ <strong>Note:</strong> Resources can be tagged with multiple categories, and can therefore be categorized as multiple entries. For example, an entry can be both an explicit entry and a fallback entry.</div>
+<p>Resource categories are described in greater detail below.</p>
+<h3 id="Master_entries">Master entries</h3>
+<p>Master entries are any HTML files that include a {{htmlattrxref("manifest","html")}} attribute in their {{HTMLElement("html")}} element. For example, let's say we have the HTML file <code><a class="linkification-ext external" href="http://www.foo.bar/entry.html" title="Linkification: http://www.foo.bar/entry.html">http://www.example.com/entry.html</a></code>, which looks like this:</p>
+<pre class="brush: html">&lt;html manifest="example.appcache"&gt;
+  &lt;h1&gt;Application Cache Example&lt;/h1&gt;
+&lt;/html&gt;
+</pre>
+<p>If <code>entry.html</code> is not listed in the <code>example.appcache</code> cache manifest file, visiting the <code>entry.html</code> page causes <code>entry.html</code> to be added to the application cache as a master entry.</p>
+<h3 id="Explicit_entries">Explicit entries</h3>
+<p>Explicit entries are resources that are explicitly listed in the <code>CACHE </code>section of a cache manifest file.</p>
+<h3 id="Network_entries">Network entries</h3>
+<p>The <code>NETWORK</code> section of a cache manifest file specifies resources for which a web application requires online access. Network entries in an application cache are essentially an "online whitelist"—URIs specified in the <code>NETWORK</code> section are loaded from the server instead of the cache. This lets the browser's security model protect the user from potential security breaches by limiting access to approved resources.</p>
+<p>As an example, you can use network entries to load and execute scripts and other code from the server instead of the cache:</p>
+<pre>CACHE MANIFEST
+NETWORK:
+/api
+</pre>
+<p>The cache manifest section listed above ensures that requests to load resources contained in the <code><a href="http://www.example.com/api/" rel="freelink">http://www.example.com/api/</a></code> subtree always go to the network without attempting to access the cache.</p>
+<div class="note">
+ <strong>Note</strong>: Simply omitting master entries (files that have the <code>manifest</code> attribute set in the <code>html</code> element) from the manifest file would not have the same result, because master entries will be added—and subsequently served from—the application cache.</div>
+<h3 id="Fallback_entries">Fallback entries</h3>
+<p>Fallback entries are used when an attempt to load a resource fails. For example, let's say the cache manifest file <code><a href="http://www.example.com/example.appcache" rel="freelink">http://www.example.com/example.appcache</a></code> includes the following content:</p>
+<pre>CACHE MANIFEST
+FALLBACK:
+example/bar/ example.html
+</pre>
+<p>Any request to <code><a href="http://www.example.com/example/bar/" rel="freelink">http://www.example.com/example/bar/</a></code> or any of its subdirectories and their content cause the browser to issue a network request to attempt to load the requested resource. If the attempt fails, due to either a network failure or a server error of some kind, the browser loads the file <code>example.html</code> instead.</p>
+<h2 id="Cache_states">Cache states</h2>
+<p>Each application cache has a <strong>state</strong>, which indicates the current condition of the cache. Caches that share the same manifest URI share the same cache state, which can be one of the following:</p>
+<dl>
+ <dt>
+  <code>UNCACHED</code></dt>
+ <dd>
+  A special value that indicates that an application cache object is not fully initialized.</dd>
+ <dt>
+  <code>IDLE</code></dt>
+ <dd>
+  The application cache is not currently in the process of being updated.</dd>
+ <dt>
+  <code>CHECKING</code></dt>
+ <dd>
+  The manifest is being fetched and checked for updates.</dd>
+ <dt>
+  <code>DOWNLOADING</code></dt>
+ <dd>
+  Resources are being downloaded to be added to the cache, due to a changed resource manifest.</dd>
+ <dt>
+  <code>UPDATEREADY</code></dt>
+ <dd>
+  There is a new version of the application cache available. There is a corresponding <code>updateready</code> event, which is fired instead of the <code>cached</code> event when a new update has been downloaded but not yet activated using the <code>swapCache()</code> method.</dd>
+ <dt>
+  <code>OBSOLETE</code></dt>
+ <dd>
+  The application cache group is now obsolete.</dd>
+</dl>
+<h2 id="Testing_for_updates_to_the_cache_manifest">Testing for updates to the cache manifest</h2>
+<p>You can programmatically test to see if an application has an updated cache manifest file, using JavaScript. Since a cache manifest file may have been updated before a script attaches event listeners to test for updates, scripts should always test <code>window.applicationCache.status</code>.</p>
+<pre class="brush: js">function onUpdateReady() {
+  alert('found new version!');
+}
+window.applicationCache.addEventListener('updateready', onUpdateReady);
+if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+  onUpdateReady();
+}</pre>
+<p>To manually start testing for a new manifest file, you can use <code>window.applicationCache.update()</code>.</p>
+<h2 id="Gotchas">Gotchas</h2>
+<ul>
+ <li>Never access cached files by using traditional GET parameters (like <code>other-cached-page.html?parameterName=value</code>). This will make the browser bypass the cache and attempt to get it from network. To link to cached resources that have parameters parsed in JavaScript use parameters in the hash part of the link, such as <code>other-cached-page.html#whatever?parameterName=value</code>.</li>
+ <li>When applications are cached, simply updating the resources (files) that are used in a web page is not enough to update the files that have been cached. You must update the cache manifest file itself before the browser retrieves and uses the updated files. You can do this programmatically using <code>window.applicationCache.swapCache()</code>, though resources that have already been loaded will not be affected. To make sure that resources are loaded from a new version of the application cache, refreshing the page is ideal.</li>
+ <li>It's a good idea to set expires headers on your web server for <code>*.appcache</code> files to expire immediately. This avoids the risk of caching manifest files. For example, in Apache you can specify such a configuration as follows:<br>
+  <code>ExpiresByType text/cache-manifest "access plus 0 seconds"</code></li>
+</ul>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+<p>{{CompatibilityTable}}</p>
+<div id="compat-desktop">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Feature</th>
+    <th>Chrome</th>
+    <th>Firefox (Gecko)</th>
+    <th>Internet Explorer</th>
+    <th>Opera</th>
+    <th>Safari</th>
+   </tr>
+   <tr>
+    <td>Basic support</td>
+    <td>4.0</td>
+    <td>3.5</td>
+    <td>10.0</td>
+    <td>10.6</td>
+    <td>4.0</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<div id="compat-mobile">
+ <table class="compat-table">
+  <tbody>
+   <tr>
+    <th>Feature</th>
+    <th>Android</th>
+    <th>Firefox Mobile (Gecko)</th>
+    <th>IE Mobile</th>
+    <th>Opera Mobile</th>
+    <th>Safari Mobile</th>
+   </tr>
+   <tr>
+    <td>Basic support</td>
+    <td>2.1</td>
+    <td>{{CompatVersionUnknown}}</td>
+    <td>{{CompatNo}}</td>
+    <td>11.0</td>
+    <td>3.2</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+<p>Note: Versions of Firefox prior to 3.5 ignore the <code>NETWORK </code>and <code>FALLBACK </code>sections of the cache manifest file.</p>
+<h2 id="See_also">See also</h2>
+<ul>
+ <li><a href="http://www.html5rocks.com/en/tutorials/appcache/beginner/" title="http://www.html5rocks.com/en/tutorials/appcache/beginner/">HTML5Rocks - A Beginner's Guide to Using the Application Cache</a></li>
+ <li><a href="http://appcache.offline.technology/" title="http://appcache.offline.technology/">Appcache Facts</a> - detailed information on AppCache idiosyncrasies</li>
+ <li><a href="http://alistapart.com/article/application-cache-is-a-douchebag" title="http://alistapart.com/article/application-cache-is-a-douchebag">A List Apart: Application Cache is a Douchebag</a>
+  <ul>
+   <li><a href="http://flailingmonkey.com/application-cache-not-a-douchebag" title="http://flailingmonkey.com/application-cache-not-a-douchebag">The Application Cache is no longer a Douchebag</a> - an overview of the app cache debugging tools added in Firefox 23.</li>
+  </ul>
+ </li>
+ <li><a href="http://hacks.mozilla.org/2010/01/offline-web-applications/" title="http://hacks.mozilla.org/2010/01/offline-web-applications/">offline web applications</a> at hacks.mozilla.org - showcases an offline app demo and explains how it works.</li>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html#offline" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html#offline">HTML 5 working draft: Offline web applications</a></li>
+ <li><a href="http://www.w3.org/TR/offline-webapps/" title="http://www.w3.org/TR/offline-webapps/">W3C Working Group Note: Offline Web Applications</a></li>
+ <li><a href="http://developer.teradata.com/blog/js186040/2011/11/html5-cache-manifest-an-off-label-usage" title="http://developer.teradata.com/blog/js186040/2011/11/html5-cache-manifest-an-off-label-usage">HTML5 Cache Manifest: An Off-label Usage</a></li>
+ <li><a href="http://manifest-validator.com" title="http://manifest-validator.com">Cache Manifest Validator</a></li>
+ <li>{{interface("nsIApplicationCache")}}</li>
+ <li>{{interface("nsIApplicationCacheNamespace")}}</li>
+ <li>{{interface("nsIApplicationCacheContainer")}}</li>
+ <li>{{interface("nsIApplicationCacheChannel")}}</li>
+ <li>{{interface("nsIApplicationCacheService")}}</li>
+ <li>{{interface("nsIDOMOfflineResourceList")}}</li>
+ <li><a href="http://www.ibm.com/developerworks/web/library/wa-ffox3/">Get ready for Firefox 3.0 - A Web developer's guide to the many new features in this popular browser, especially the offline application features</a> (IBM developerWorks)</li>
+ <li><a href="/en-US/docs/Application_cache_implementation_overview" title="/en-US/docs/Application_cache_implementation_overview">Application cache implementation overview</a></li>
+</ul>

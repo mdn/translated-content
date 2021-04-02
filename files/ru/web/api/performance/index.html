@@ -16,7 +16,7 @@ translation_of: Web/API/Performance
 <p>Объект этого типа может быть получен в результате вызова атрибута {{domxref("Window.performance")}}, доступного только для чтения.</p>
 
 <div class="note">
-<p><strong><em>Замечание</em>: </strong>Этот интерфейс и его составляющие доступны в <a href="/ru/docs/Web/API/Web_Workers_API">фоновых потоках выполнения</a>, за исключением случаев, перечисленных ниже. Заметим, что некоторые доступные части интерфейса еще не документированы (подробнее см. разделы документации <a href="http://www.w3.org/TR/performance-timeline/#sec-window.performance-attribute">Performance Timeline</a> и <a href="http://www.w3.org/TR/user-timing/#extensions-performance-interface">User Timing</a>). Также заметим, что временные метки производительности относятся к текущему контексту. Если Вы создадите метку в основном потоке (или в другом фоновом потоке), то ее нельзя будет увидеть в другом фоновом потоке и наоборот.</p>
+<p><strong><em>Замечание</em>: </strong>Этот интерфейс и его составляющие доступны в <a href="/ru/docs/Web/API/Web_Workers_API">фоновых потоках выполнения</a>, за исключением случаев, перечисленных ниже. Заметим, что некоторые доступные части интерфейса ещё не документированы (подробнее см. разделы документации <a href="http://www.w3.org/TR/performance-timeline/#sec-window.performance-attribute">Performance Timeline</a> и <a href="http://www.w3.org/TR/user-timing/#extensions-performance-interface">User Timing</a>). Также заметим, что временные метки производительности относятся к текущему контексту. Если вы создадите метку в основном потоке (или в другом фоновом потоке), то её нельзя будет увидеть в другом фоновом потоке и наоборот.</p>
 </div>
 
 <h2 id="Свойства">Свойства</h2>
@@ -30,7 +30,7 @@ translation_of: Web/API/Performance
 
 <dl>
  <dt>{{domxref("Performance.onresourcetimingbufferfull")}}</dt>
- <dd>Функция обратного вызова, реализующая интерфейс {{domxref("EventTarget")}}, вызываемая при наступлении события {{event("resourcetimingbufferfull")}}.</dd>
+ <dd>Колбэк-функция, реализующая интерфейс {{domxref("EventTarget")}}, вызываемая при наступлении события {{event("resourcetimingbufferfull")}}.</dd>
 </dl>
 
 <dl>
@@ -56,11 +56,11 @@ translation_of: Web/API/Performance
  <dt>{{domxref("Performance.getEntriesByType()")}}</dt>
  <dd>Возвращает список объектов {{domxref("PerformanceEntry")}} переданного, как аргумент, <em>типа записи</em>.</dd>
  <dt>{{domxref("Performance.mark()")}}</dt>
- <dd>Создает {{domxref("DOMHighResTimeStamp","временну́ю метку")}} с заданным именем в <em>буфере записей производительности.</em></dd>
+ <dd>Создаёт {{domxref("DOMHighResTimeStamp","временну́ю метку")}} с заданным именем в <em>буфере записей производительности.</em></dd>
  <dt>{{domxref("Performance.measure()")}}</dt>
- <dd>Создает именованную {{domxref("DOMHighResTimeStamp","временну́ю метку")}} в буфере записей производительности браузера между двумя определенными метками (известных как <em>start mark</em> (начальная метка) и <em>end mark </em>(конечная метка), соответственно).</dd>
+ <dd>Создаёт именованную {{domxref("DOMHighResTimeStamp","временну́ю метку")}} в буфере записей производительности браузера между двумя определёнными метками (известных как <em>start mark</em> (начальная метка) и <em>end mark </em>(конечная метка), соответственно).</dd>
  <dt>{{domxref("Performance.now()")}}</dt>
- <dd>Возвращает объект {{domxref("DOMHighResTimeStamp")}}, представляющий количество милисекунд, прошедших с начала момента отсчета.</dd>
+ <dd>Возвращает объект {{domxref("DOMHighResTimeStamp")}}, представляющий количество миллисекунд, прошедших с начала момента отсчёта.</dd>
  <dt>{{domxref("Performance.setResourceTimingBufferSize()")}}</dt>
  <dd>Устанавливает размер буфера измерения ресурсов браузера равным указанному числу объектов {{domxref("PerformanceEntry","записей производительности")}} {{domxref("PerformanceEntry.entryType","типа")}} "<code>resource</code>".</dd>
  <dt>{{domxref("Performance.toJSON()")}}</dt>

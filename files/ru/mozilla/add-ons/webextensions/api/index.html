@@ -43,9 +43,9 @@ setCookie.then(logCookie, logError);</pre>
 
 <p>Для поддержки портирования, реализация Firefox WebExtensions API так же поддерживает пространство имён <code>chrome</code> и использование колбэков. Это позволяет в большинстве случаев не изменять код, изначально написанный для Chrome.</p>
 
-<p>Mozilla так же предоставляет полифилл, который позволяет коду, использующему <code>browser</code> и промисы, работать без изменений в Chrome: <a class="external external-icon" href="https://github.com/mozilla/webextension-polyfill">https://github.com/mozilla/webextension-polyfill</a>.</p>
+<p>Mozilla так же предоставляет полифил, который позволяет коду, использующему <code>browser</code> и промисы, работать без изменений в Chrome: <a class="external external-icon" href="https://github.com/mozilla/webextension-polyfill">https://github.com/mozilla/webextension-polyfill</a>.</p>
 
-<p>Microsoft Edge использует пространство имен <code>browser</code>, но ещё не поддерживает, основанный на промисах асинхронный API. В Edge на данный момент асинхронные вызовы API должны использовать колбэки.</p>
+<p>Microsoft Edge использует пространство имён <code>browser</code>, но ещё не поддерживает, основанный на промисах асинхронный API. В Edge на данный момент асинхронные вызовы API должны использовать колбэки.</p>
 
 <p>Не все браузеры поддерживают все API: детали см. <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Browser support for JavaScript APIs</a>.</p>
 </div>

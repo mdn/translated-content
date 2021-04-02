@@ -35,7 +35,7 @@ translation_of: Web/API/WindowClient
  <dt>{{domxref("WindowClient.focused")}} {{readonlyInline}}</dt>
  <dd>Логическое значение, указывающее, находится ли текущая страница в фокусе.</dd>
  <dt>{{domxref("WindowClient.visibilityState")}} {{readonlyInline}}</dt>
- <dd>Указывает, отоборажается ли текущая страница. Это значение может быть одним из <code>"hidden" (скрыта)</code>, <code>"visible" (отображена)</code> или <code>"prerender" (предварительно отрисована)</code>.</dd>
+ <dd>Указывает, отображается ли текущая страница. Это значение может быть одним из <code>"hidden" (скрыта)</code>, <code>"visible" (отображена)</code> или <code>"prerender" (предварительно отрисована)</code>.</dd>
 </dl>
 
 <h2 id="Пример">Пример</h2>
@@ -45,7 +45,7 @@ translation_of: Web/API/WindowClient
   event.notification.close();
 
   // Проверяем, открыто ли окно и
-  // сфокусрованы ли на нем
+  // сфокусированы ли на нем
   event.waitUntil(clients.matchAll({
     type: "window"
   }).then(function(clientList) {

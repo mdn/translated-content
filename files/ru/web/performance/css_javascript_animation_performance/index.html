@@ -10,7 +10,7 @@ tags:
   - Производительность
 translation_of: Web/Performance/CSS_JavaScript_animation_performance
 ---
-<p class="summary">Анимация является критичным инструментов для улучшения пользовательнского опыта во многих приложениях. Существует много путей создания анимации в web, например, основанные на CSS-свойствах {{cssxref("transition","transitions")}}/{{cssxref("animation","animations")}} или на JavaScript  (using {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}). В этой статье мы проанализируем производительность CSS и JavaScript анимаций и сравним их.</p>
+<p class="summary">Анимация является критичным инструментом для улучшения пользовательского опыта во многих приложениях. Существует много путей создания анимации в web, например, основанные на CSS-свойствах {{cssxref("transition","transitions")}}/{{cssxref("animation","animations")}} или на JavaScript  (using {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}). В этой статье мы проанализируем производительность CSS и JavaScript анимаций и сравним их.</p>
 
 <h2 id="CSS_transition_и_animation">CSS transition и animation</h2>
 
@@ -25,10 +25,10 @@ translation_of: Web/Performance/CSS_JavaScript_animation_performance
 
 <h2 id="requestAnimationFrame">requestAnimationFrame</h2>
 
-<p>API {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} предоставляет эффективный способ создания анимаций в JavaScript. Функция (callback), которую вы передаете в этот метод, будет вызываться перед каждой следующей отрисовкой нового фрейма. Главное отличие от {{domxref("WindowTimers.setTimeout","setTimeout()")}}/{{domxref("WindowTimers.setInterval","setInterval()")}} в том, что здесь вам не нужно указывать время, через которое функция запустится. <code>requestAnimationFrame()</code> работает гораздо эффективнее, учитывая частоту кадров и производительность системы. Разработчики могут создавать  анимацию, просто изменяя стили элемента каждый раз, когда происходит подготовка нового кадра (или когда обновляется полотно Canvas или в других случаях).</p>
+<p>API {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} предоставляет эффективный способ создания анимаций в JavaScript. Функция (callback), которую вы передаёте в этот метод, будет вызываться перед каждой следующей отрисовкой нового фрейма. Главное отличие от {{domxref("WindowTimers.setTimeout","setTimeout()")}}/{{domxref("WindowTimers.setInterval","setInterval()")}} в том, что здесь вам не нужно указывать время, через которое функция запустится. <code>requestAnimationFrame()</code> работает гораздо эффективнее, учитывая частоту кадров и производительность системы. Разработчики могут создавать  анимацию, просто изменяя стили элемента каждый раз, когда происходит подготовка нового кадра (или когда обновляется полотно Canvas или в других случаях).</p>
 
 <div class="note">
-<p><strong>Заметка</strong>: Подобно CSS transition и animation, <code>requestAnimationFrame()</code> приостанавливает работу, когда текущий таб переводится в фоновый режим (например, при смене фокуса)</p>
+<p><strong>Примечание</strong>: Подобно CSS transition и animation, <code>requestAnimationFrame()</code> приостанавливает работу, когда текущий таб переводится в фоновый режим (например, при смене фокуса)</p>
 </div>
 
 <p>Для подробностей ознакомьтесь с <a href="https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/">анимирование с JavaScript: от setinterval до requestAnimationFrame</a>.</p>
@@ -38,7 +38,7 @@ translation_of: Web/Performance/CSS_JavaScript_animation_performance
 
 <p>По факту, в большинстве случаев, производительность анимаций CSS практически идентична анимациям на JavaScript. По крайней мере в Firefox. Авторы некоторых JavaScript библиотек для анимации, например GSAP или Velocity.JS, даже берутся утверждать, что их решения могут работать быстрее, чем аналогичные решения на CSS. Такое возможно, потому что CSS transitions/animations просто заново вычисляют стили элементов в основном потоке процессора сразу перед тем, как срабатывает событие repaint, что примерно то же самое, что вычислять стили заново с помощью <code>requestAnimationFrame()</code>. Если обе анимации выполняются в одном потоке, то разницы в производительности не будет.</p>
 
-<p>В следующей секции мы пройдемся по тестам производительности, используя Firefox, чтобы увидеть, какие методы анимации работают эффективнее.</p>
+<p>В следующей секции мы пройдёмся по тестам производительности, используя Firefox, чтобы увидеть, какие методы анимации работают эффективнее.</p>
 
 <h3 id="Включение_измерения_частоты_кадров_FPS">Включение измерения частоты кадров FPS</h3>
 
@@ -55,7 +55,7 @@ translation_of: Web/Performance/CSS_JavaScript_animation_performance
 
 <h3 id="Запуск_теста">Запуск теста</h3>
 
-<p>Для начала, в нашем тесте мы будем анимаировать 1000 элементов {{htmlelement("div")}}  с помощью CSS.</p>
+<p>Для начала, в нашем тесте мы будем анимировать 1000 элементов {{htmlelement("div")}}  с помощью CSS.</p>
 
 <p><span style="line-height: 16.7999992370605px;">{{JSFiddleEmbed("https://jsfiddle.net/zt94oew2/1/","","480")}}</span></p>
 

@@ -9,7 +9,7 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 <h2 id="How_does_Mozilla_determine_which_mode_to_use.3F" name="How_does_Mozilla_determine_which_mode_to_use.3F">Как браузеры понимают, какой режим использовать?</h2>
 
-<p>Браузеры используют тег DOCTYPE, чтобы определить в каком режиме обрабатывать документ. Для отображения страницы в стандартном режиме необходмо добавить тег DOCTYPE в HTML-код страницы как показано в примере ниже:</p>
+<p>Браузеры используют тег DOCTYPE, чтобы определить в каком режиме обрабатывать документ. Для отображения страницы в стандартном режиме необходимо добавить тег DOCTYPE в HTML-код страницы как показано в примере ниже:</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -27,11 +27,11 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 <p>В стандарте HTML5 тег DOCTYPE используется исключительно для активации стандартного режима отображения. Предыдущие версии HTML придавали дополнительное значение использованию тега DOCTYPE, но браузеры использовали тег DOCTYPE исключительно для переключения между режимом совместимости и стандартным режимом. </p>
 
-<p>См. также детальное описание того, <a class="external" href="http://hsivonen.iki.fi/doctype/" title="http://hsivonen.iki.fi/doctype/">как разные браузеры выбирают режимы</a>.</p>
+<p>Смотрите также детальное описание того, <a class="external" href="http://hsivonen.iki.fi/doctype/" title="http://hsivonen.iki.fi/doctype/">как разные браузеры выбирают режимы</a>.</p>
 
 <h3 id="XHTML">XHTML</h3>
 
-<p>Если страница написана в <a href="/en-US/docs/XHTML" title="XHTML">XHTML</a> формате с указаннием типа MIME <code>application/xhtml+xml</code> в заголовке <code>Content-Type</code>, то не нужно указывать DOCTYPE для активации стандартного режима, так как подобные документы всегда отображаются в стандартном режиме. Важно иметь в виду, что Internet Explorer 8 вместо контента такой страницы отображает <a href="/en-US/docs/XHTML#Support" title="XHTML">диалоговое окно загрузки</a> как для неизвестного формата, поскольку поддержка XHTML реализована в Internet Explorer, начиная с 9 версии.</p>
+<p>Если страница написана в <a href="/en-US/docs/XHTML" title="XHTML">XHTML</a> формате с указанием типа MIME <code>application/xhtml+xml</code> в заголовке <code>Content-Type</code>, то не нужно указывать DOCTYPE для активации стандартного режима, так как подобные документы всегда отображаются в стандартном режиме. Важно иметь в виду, что Internet Explorer 8 вместо контента такой страницы отображает <a href="/en-US/docs/XHTML#Support" title="XHTML">диалоговое окно загрузки</a> как для неизвестного формата, поскольку поддержка XHTML реализована в Internet Explorer, начиная с 9 версии.</p>
 
 <p>Если страница написана в  XHTML формате с использованием типа MIME <code>text/html</code>, браузер будет интерпретировать его как HTML, поэтому для использования браузером стандартного режима отображения необходимо  указать тег DOCTYPE. </p>
 

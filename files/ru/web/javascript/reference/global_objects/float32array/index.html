@@ -70,11 +70,11 @@ new Float32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.fill", "Float32Array.prototype.fill()")}}</dt>
  <dd>Заполняет весь массив от начального до последнего индекса одинаковыми элементами. Смотрите также {{jsxref("Array.prototype.fill()")}}.</dd>
  <dt>{{jsxref("TypedArray.filter", "Float32Array.prototype.filter()")}}</dt>
- <dd>Возвращает новый массив со всеми элементами удовлетворяющеми условию. Смотрите также {{jsxref("Array.prototype.filter()")}}.</dd>
+ <dd>Возвращает новый массив со всеми элементами удовлетворяющей условию. Смотрите также {{jsxref("Array.prototype.filter()")}}.</dd>
  <dt>{{jsxref("TypedArray.find", "Float32Array.prototype.find()")}}</dt>
- <dd>Возвращает найденное значение в массиве, если найден элемент соответствуший условию, в противном случае возвращает <code>undefined</code>. Смотрите также {{jsxref("Array.prototype.find()")}}.</dd>
+ <dd>Возвращает найденное значение в массиве, если найден элемент соответствующий условию, в противном случае возвращает <code>undefined</code>. Смотрите также {{jsxref("Array.prototype.find()")}}.</dd>
  <dt>{{jsxref("TypedArray.findIndex", "Float32Array.prototype.findIndex()")}}</dt>
- <dd>Возвращает индекс найденного значения в массиве, если найден элемент соответствуеший условию, в противном случае возвращает <font face="Consolas, Liberation Mono, Courier, monospace">-1</font>. Смотрите также {{jsxref("Array.prototype.findIndex()")}}.</dd>
+ <dd>Возвращает индекс найденного значения в массиве, если найден элемент соответствующий условию, в противном случае возвращает <font face="Consolas, Liberation Mono, Courier, monospace">-1</font>. Смотрите также {{jsxref("Array.prototype.findIndex()")}}.</dd>
  <dt>{{jsxref("TypedArray.forEach", "Float32Array.prototype.forEach()")}}</dt>
  <dd>Вызывает функцию для каждого элемента в массиве. Смотрите также {{jsxref("Array.prototype.forEach()")}}.</dd>
  <dt>{{jsxref("TypedArray.includes", "Float32Array.prototype.includes()")}} {{experimental_inline}}</dt>
@@ -90,7 +90,7 @@ new Float32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.map", "Float32Array.prototype.map()")}}</dt>
  <dd>Возвращает новый массив с результатом применения функции к каждому элементу в этом массиве. Смотрите также {{jsxref("Array.prototype.map()")}}.</dd>
  <dt>{{jsxref("TypedArray.move", "Float32Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}</dt>
- <dd>Нестандаризированная версия {{jsxref("TypedArray.copyWithin", "Float32Array.prototype.copyWithin()")}}.</dd>
+ <dd>Нестандартизированная версия {{jsxref("TypedArray.copyWithin", "Float32Array.prototype.copyWithin()")}}.</dd>
  <dt>{{jsxref("TypedArray.reduce", "Float32Array.prototype.reduce()")}}</dt>
  <dd>Применяет функцию к каждому элементу в массиве (слева-направо) и накапливает результат в переменной. Смотрите также {{jsxref("Array.prototype.reduce()")}}.</dd>
  <dt>{{jsxref("TypedArray.reduceRight", "Float32Array.prototype.reduceRight()")}}</dt>
@@ -108,7 +108,7 @@ new Float32Array(buffer [, byteOffset [, length]]);</pre>
  <dt>{{jsxref("TypedArray.subarray", "Float32Array.prototype.subarray()")}}</dt>
  <dd><code>Возваращает новый Float32Array</code> с заданного начального по конечный индекс.</dd>
  <dt>{{jsxref("TypedArray.values", "Float32Array.prototype.values()")}}</dt>
- <dd>Возвращает новый объект <code>Array Iterator</code> котрый содержит значения всех элементов в массиве. Смотрите также {{jsxref("Array.prototype.values()")}}.</dd>
+ <dd>Возвращает новый объект <code>Array Iterator</code> который содержит значения всех элементов в массиве. Смотрите также {{jsxref("Array.prototype.values()")}}.</dd>
  <dt>{{jsxref("TypedArray.toLocaleString", "Float32Array.prototype.toLocaleString()")}}</dt>
  <dd>Возвращает локализированную строку представляющую массив и его элементы. Смотрите также {{jsxref("Array.prototype.toLocaleString()")}}.</dd>
  <dt>{{jsxref("TypedArray.toString", "Float32Array.prototype.toString()")}}</dt>
@@ -183,9 +183,9 @@ var z = new Float32Array(buffer, 0, 4);
 
 
 
-<h2 id="Заметки_по_совместимости">Заметки по совместимости</h2>
+<h2 id="Примечания_по_совместимости">Примечания по совместимости</h2>
 
-<p>Начиная с ECMAScript 2015 (ES6), <code>Float32Array</code> конструктор обязательно должен вызываться с ключевым словом {{jsxref("Operators/new", "new")}}. Вызов <code>Float32Array</code> конструктора как функцию приведет к исключению {{jsxref("TypeError")}}.</p>
+<p>Начиная с ECMAScript 2015 (ES6), <code>Float32Array</code> конструктор обязательно должен вызываться с ключевым словом {{jsxref("Operators/new", "new")}}. Вызов <code>Float32Array</code> конструктора как функцию приведёт к исключению {{jsxref("TypeError")}}.</p>
 
 <pre class="brush: js example-bad">var dv = Float32Array([1, 2, 3]);
 // TypeError: calling a builtin Float32Array constructor

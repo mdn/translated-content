@@ -11,7 +11,7 @@ translation_of: Web/API/Node/baseURI
 
 <p>Базовый URL используется для <a href="http://developers.whatwg.org/urls.html#resolving-urls">разрешения</a> относительных URLs, когда браузеру  нужно получить абсолютный URL, например, когда обрабатывает элемент HTML {{HTMLElement("img")}}, <code>src</code> атрибут или XML <code><a href="/en-US/docs/XLink">xlink</a>:href</code> атрибут.</p>
 
-<p>В самом простом случае, базовывый URL это просто местонахождение документа, но это может зависеть от многих факторов, включая элемент {{HTMLElement("base")}} в HTML и атрибут <code><a href="/en-US/docs/XML/xml:base">xml:base</a></code> в XML.</p>
+<p>В самом простом случае, базовый URL это просто местонахождение документа, но это может зависеть от многих факторов, включая элемент {{HTMLElement("base")}} в HTML и атрибут <code><a href="/en-US/docs/XML/xml:base">xml:base</a></code> в XML.</p>
 
 <h2 id="Syntax" name="Syntax">Синтаксис</h2>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/Node/baseURI
 
 <p>Смотрите <a href="http://developers.whatwg.org/urls.html#base-urls">Раздел базовый URLs в действующем стандарте HTML</a> для уточнения деталей.</p>
 
-<p>Вы можите использовать <code><em>{{domxref("document")}}</em>.baseURI</code> для получения базового URL документа. Заметим, что получение базового URL для документа, может возвращать различные URLs в течение долгого времени, если {{HTMLElement("base")}} теги или местонахождение документа изменилось.</p>
+<p>Вы можете использовать <code><em>{{domxref("document")}}</em>.baseURI</code> для получения базового URL документа. Заметим, что получение базового URL для документа, может возвращать различные URLs в течение долгого времени, если {{HTMLElement("base")}} теги или местонахождение документа изменилось.</p>
 
 <h3 id="Базовый_URL_элемента">Базовый URL элемента</h3>
 
@@ -45,7 +45,7 @@ translation_of: Web/API/Node/baseURI
 
 <p>Если документ содержит атрибуты <code><a href="/en-US/docs/XML/xml:base">xml:base</a></code> (которые вы не должны использовать в документах HTML), <code><em>element</em>.baseURI</code> принимает во внимание <code>xml:base</code> атрибуты родительского элемента, когда вычисляет базовый URL. Для уточнения деталей смотрите <a href="/en-US/docs/XML/xml:base">xml:base</a>.</p>
 
-<p>Вы можите использовать <code><em>{{domxref("element")}}</em>.baseURI</code> для получения базового URL of элемента.</p>
+<p>Вы можете использовать <code><em>{{domxref("element")}}</em>.baseURI</code> для получения базового URL of элемента.</p>
 
 <h2 id="Specification" name="Specification">Спецификация</h2>
 

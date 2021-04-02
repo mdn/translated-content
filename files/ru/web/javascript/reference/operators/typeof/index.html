@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Operators/typeof
 
 <h3 id="Параметры">Параметры</h3>
 
-<p><code><em>operand</em></code> является выражением, представляющим объект или {{Glossary("Primitive", "примитив")}}, тип которого должен быть возвращен.</p>
+<p><code><em>operand</em></code> является выражением, представляющим объект или {{Glossary("Primitive", "примитив")}}, тип которого должен быть возвращён.</p>
 
 <h2 id="Описание">Описание</h2>
 
@@ -171,7 +171,7 @@ typeof /s/ === 'object';   // Firefox 5+  Соответствует ECMAScript 
 
 <h3 id="Ошибки_связанные_с_временными_мёртвыми_зонами">Ошибки, связанные с временными мёртвыми зонами</h3>
 
-<p>До ECMAScript 2015, гарантировалось, что оператор <code>typeof</code> вернёт строку для любого операнда, с которым он был вызван. Это изменилось после добавления неподнимающихся объявлений <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/let">let</a></code> and <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/const">const</a></code> с блочной областью  видимости. Теперь, если переменные объявлены с помощью <code>let</code> и <code>const</code>, и для них вызывается <code>typeof</code> в блоке объявления переменных, но до объявления, то выбрасывается <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a></code>. Поведение отличается от необъявленных переменных, для которых <code>typeof</code> вернёт 'undefined'. Переменные с блочной областью видимости находятся в "<a href="/ru/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let">временной мёртвой зоне</a>", которая длится от начала блока до момента объявления переменных. В этой зоне попытка доступа к переменным выбрасывает исключение.</p>
+<p>До ECMAScript 2015, гарантировалось, что оператор <code>typeof</code> вернёт строку для любого операнда, с которым он был вызван. Это изменилось после добавления не поднимающихся объявлений <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/let">let</a></code> and <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/const">const</a></code> с блочной областью  видимости. Теперь, если переменные объявлены с помощью <code>let</code> и <code>const</code>, и для них вызывается <code>typeof</code> в блоке объявления переменных, но до объявления, то выбрасывается <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a></code>. Поведение отличается от необъявленных переменных, для которых <code>typeof</code> вернёт 'undefined'. Переменные с блочной областью видимости находятся в "<a href="/ru/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let">временной мёртвой зоне</a>", которая длится от начала блока до момента объявления переменных. В этой зоне попытка доступа к переменным выбрасывает исключение.</p>
 
 <pre class="brush: js">typeof undeclaredVariable === 'undefined';
 typeof newLetVariable; let newLetVariable; // ReferenceError

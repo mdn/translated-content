@@ -5,7 +5,7 @@ translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 ---
 <p>{{WebRTCSidebar}} </p>
 
-<p>Только для чтения свойство  <code><strong>RTCPeerConnection.currentLocalDescription</strong></code> возвращает объект  {{domxref("RTCSessionDescription")}} , описывающий локальную сторону соединения, как  самый последний, удачно согласованный объект описания, с момента последнего завершения согласования  {{domxref("RTCPeerConnection")}} и соединения с удаленным пиром (участником соединения) . </p>
+<p>Только для чтения свойство  <code><strong>RTCPeerConnection.currentLocalDescription</strong></code> возвращает объект  {{domxref("RTCSessionDescription")}} , описывающий локальную сторону соединения, как  самый последний, удачно согласованный объект описания, с момента последнего завершения согласования  {{domxref("RTCPeerConnection")}} и соединения с удалённым пиром (участником соединения) . </p>
 
 <p>Для изменения <code>currentLocalDescription</code>, вызовите метод {{domxref("RTCPeerConnection.setLocalDescription()")}}, который запускает серию событий, приводящих к присвоению значения. Более подробно о том, что точно происходит и почему изменения происходят не сразу, смотрите   {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Ожидающие и текущие объекты описания")}}.</p>
 
@@ -34,7 +34,7 @@ if (sd) {
         sd.sdp + "'");
 }
 else {
-  alert("Локальной сессии еще нет.");
+  alert("Локальной сессии ещё нет.");
 }
 </pre>
 

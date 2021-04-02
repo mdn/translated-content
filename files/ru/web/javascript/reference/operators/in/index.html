@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Operators/in
 
 <dl>
  <dt><code>object</code></dt>
- <dd>Объект, в котором нужно проверить содежание свойства с заданным именем.</dd>
+ <dd>Объект, в котором нужно проверить содержание свойства с заданным именем.</dd>
 </dl>
 
 <h2 id="Описание">Описание</h2>
@@ -58,7 +58,7 @@ var color2 = "coral";
 "length" in color2
 </pre>
 
-<h3 id="Использование_оператора_in_с_неопределенными_или_с_уже_удаленными_свойствами">Использование оператора <code>in</code> с неопределенными или с уже удаленными свойствами</h3>
+<h3 id="Использование_оператора_in_с_неопределёнными_или_с_уже_удалёнными_свойствами">Использование оператора <code>in</code> с неопределёнными или с уже удалёнными свойствами</h3>
 
 <p>Если вы удалили свойство при помощи оператора <code style="font-style: normal;"><a href="/ru/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete">delete</a></code>, то оператор <code>in</code> возвратит <code>false</code> для этого свойства.</p>
 
@@ -71,7 +71,7 @@ delete trees[3];
 3 in trees; // false
 </pre>
 
-<p>Если вы зададите свойству значение {{jsxref("Global_Objects/undefined", "undefined")}}, но не удалите его, то для этого свойства оператор <code>in</code> вернет значение <code>true</code>.</p>
+<p>Если вы зададите свойству значение {{jsxref("Global_Objects/undefined", "undefined")}}, но не удалите его, то для этого свойства оператор <code>in</code> вернёт значение <code>true</code>.</p>
 
 <pre class="brush:js">var mycar = {make: "Honda", model: "Accord", year: 1998};
 mycar.make = undefined;

@@ -5,7 +5,6 @@ tags:
   - API веб-аудио
   - Firefox
   - Mozilla
-  - Мозилла
   - инструменты
 translation_of: Tools/Web_Audio_Editor
 ---
@@ -17,17 +16,17 @@ translation_of: Tools/Web_Audio_Editor
  <li><span id="result_box" lang="ru"><span>Узлы, представляющие <a href="/en-US/docs/Web/API/Web_Audio_API#Defining_audio_destinations">назначение аудиопотока</a>,</span></span> <span id="result_box" lang="ru"><span>такие как динамики</span></span></li>
 </ul>
 
-<p><span id="result_box" lang="ru"><span>Каждый узел имеет ноль или более свойств</span></span> {{domxref ("AudioParam")}} <span id="result_box" lang="ru"><span>которые настраивают его работу.</span> <span>Например </span></span>{{domxref ("GainNode")}} <span id="result_box" lang="ru"><span> имеет одно свойство усиления, в то время как</span></span> {{domxref ("OscillatorNode")}} <span id="result_box" lang="ru"><span>имеет частоту и свойства насстройки.</span></span></p>
+<p><span id="result_box" lang="ru"><span>Каждый узел имеет ноль или более свойств</span></span> {{domxref ("AudioParam")}} <span id="result_box" lang="ru"><span>которые настраивают его работу.</span> <span>Например </span></span>{{domxref ("GainNode")}} <span id="result_box" lang="ru"><span> имеет одно свойство усиления, в то время как</span></span> {{domxref ("OscillatorNode")}} <span id="result_box" lang="ru"><span>имеет частоту и свойства настройки.</span></span></p>
 
 <p><span id="result_box" lang="ru"><span>Разработчик соединяет узлы в виде графика, а полный граф определяет поведение аудиопотока.</span></span></p>
 
-<p><span id="result_box" lang="ru"><span>Web Audio Editor исследует аудиоконтекст, созданный на странице, и обеспечивает визуализацию его графика.</span> <span>Это дает вам представление о его работе на высоком уровне и позволяет вам убедиться, что все узлы подключены так, как вы ожидаете.</span> <span>Затем вы можете изучить и отредактировать свойства AudioParam для каждого узла на графике.</span> <span>Некоторые свойства non-AudioParam, например свойство типа OscillatorNode, отображаются, и вы также можете их редактировать.</span></span></p>
+<p><span id="result_box" lang="ru"><span>Web Audio Editor исследует аудиоконтекст, созданный на странице, и обеспечивает визуализацию его графика.</span> <span>Это даёт вам представление о его работе на высоком уровне и позволяет вам убедиться, что все узлы подключены так, как вы ожидаете.</span> <span>Затем вы можете изучить и отредактировать свойства AudioParam для каждого узла на графике.</span> <span>Некоторые свойства non-AudioParam, например свойство типа OscillatorNode, отображаются, и вы также можете их редактировать.</span></span></p>
 
-<p><span id="result_box" lang="ru"><span>Этот инструмент все еще экспериментальный.</span></span> <span id="result_box" lang="ru"><span>Если вы найдете ошибки, мы будем рады,</span></span> <a class="external external-icon" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor">если вы отправите их в Bugzilla</a>. <span id="result_box" lang="ru"><span>Если у вас есть вопросы или предложения по новым функциям, </span></span> <a href="http://ffdevtools.uservoice.com/forums/246087-firefox-developer-tools-ideas">ffdevtools.uservoice.com</a> или <a href="http://twitter.com/firefoxdevtools">Twitter</a> <span id="result_box" lang="ru"><span>отличные места для их регистрации.</span></span></p>
+<p><span id="result_box" lang="ru"><span>Этот инструмент все ещё экспериментальный.</span></span> <span id="result_box" lang="ru"><span>Если вы найдёте ошибки, мы будем рады,</span></span> <a class="external external-icon" href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor">если вы отправите их в Bugzilla</a>. <span id="result_box" lang="ru"><span>Если у вас есть вопросы или предложения по новым функциям, </span></span> <a href="http://ffdevtools.uservoice.com/forums/246087-firefox-developer-tools-ideas">ffdevtools.uservoice.com</a> или <a href="http://twitter.com/firefoxdevtools">Twitter</a> <span id="result_box" lang="ru"><span>отличные места для их регистрации.</span></span></p>
 
 <h2 id="Открытие_веб-аудиоредактора"><span class="short_text" id="result_box" lang="ru"><span>Открытие веб-аудиоредактора</span></span></h2>
 
-<p><span id="result_box" lang="ru"><span>Web Audio Editor по умолчанию</span></span><span lang="ru"><span> не включен в Firefox 32. Чтобы включить его, откройте Настройки инструмента разработчика и отметьте «Web Audio».</span> <span>Теперь на панели инструментов Toolbox должна быть дополнительная вкладка с надписью «Web Audio».</span> <span>Щелкните вкладку и загрузите страницу, которая создает звуковой контекст.</span> <span>Два хороших демки:</span></span></p>
+<p><span id="result_box" lang="ru"><span>Web Audio Editor по умолчанию</span></span><span lang="ru"><span> не включён в Firefox 32. Чтобы включить его, откройте Настройки инструмента разработчика и отметьте «Web Audio».</span> <span>Теперь на панели инструментов Toolbox должна быть дополнительная вкладка с надписью «Web Audio».</span> <span>Щёлкните вкладку и загрузите страницу, которая создаёт звуковой контекст.</span> <span>Два хороших демки:</span></span></p>
 
 <ul>
  <li><a href="https://github.com/mdn/voice-change-o-matic">Voice-change-O-Matic</a> <span id="result_box" lang="ru"><span> может применять различные эффекты к входу микрофона, а также обеспечивает визуализацию результата</span></span></li>
@@ -50,11 +49,11 @@ translation_of: Tools/Web_Audio_Editor
 
 <h2 id="Проверка_и_изменение_AudioNodes"><span class="short_text" id="result_box" lang="ru"><span>Проверка и изменение AudioNodes</span></span></h2>
 
-<p><span id="result_box" lang="ru"><span>Если вы нажмете на узел, он подсветится, и вы получите инспектор узла справа.</span> <span>В этом списке перечислены значения свойств AudioParam этого узла.</span> <span>Например, вот как выглядит OscillatorNode:</span></span></p>
+<p><span id="result_box" lang="ru"><span>Если вы нажмёте на узел, он подсветится, и вы получите инспектор узла справа.</span> <span>В этом списке перечислены значения свойств AudioParam этого узла.</span> <span>Например, вот как выглядит OscillatorNode:</span></span></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10173/web-audio-editor-props.png" style="display: block; height: 648px; margin-left: auto; margin-right: auto; width: 868px;"> <span id="result_box" lang="ru"><span>В демоверсии Viplent, параметр частоты изменяется когда пользователь перемещает мышь влево и вправо, и вы можете увидеть это, отраженное в инспекторе узлов.</span> <span>Однако значение не обновляется в реальном времени: вам нужно снова щелкнуть узел, чтобы увидеть обновленное значение.</span></span></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10173/web-audio-editor-props.png" style="display: block; height: 648px; margin-left: auto; margin-right: auto; width: 868px;"> <span id="result_box" lang="ru"><span>В демоверсии Viplent, параметр частоты изменяется когда пользователь перемещает мышь влево и вправо, и вы можете увидеть это, отражённое в инспекторе узлов.</span> <span>Однако значение не обновляется в реальном времени: вам нужно снова щёлкнуть узел, чтобы увидеть обновлённое значение.</span></span></p>
 
-<p><span id="result_box" lang="ru"><span>Если вы щелкнете значение в инспекторе узлов, вы можете изменить его: нажмите</span></span> <kbd>Enter</kbd> или <kbd>Tab</kbd> <span id="result_box" lang="ru"><span>и новое значение вступит в силу немедленно.</span></span></p>
+<p><span id="result_box" lang="ru"><span>Если вы щёлкнете значение в инспекторе узлов, вы можете изменить его: нажмите</span></span> <kbd>Enter</kbd> или <kbd>Tab</kbd> <span id="result_box" lang="ru"><span>и новое значение вступит в силу немедленно.</span></span></p>
 
 <h2 id="Обход_узлов"><span class="short_text" id="result_box" lang="ru"><span>Обход узлов</span></span></h2>
 
@@ -64,6 +63,6 @@ translation_of: Tools/Web_Audio_Editor
 
 <p><span id="result_box" lang="ru"><span>В панели, которая показывает детали узла, есть кнопка включения / выключения:</span></span></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10183/web-audio-editor-on-off.png" style="display: block; height: 97px; margin-left: auto; margin-right: auto; width: 316px;"> <span id="result_box" lang="ru"><span>Нажмите на него, и график будет изменен для обхода этого узла, поэтому он больше не будет иметь никакого эффекта.</span> <span>Узлы, которые обойдены, показаны заштрихованным фоном:</span></span></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/10183/web-audio-editor-on-off.png" style="display: block; height: 97px; margin-left: auto; margin-right: auto; width: 316px;"> <span id="result_box" lang="ru"><span>Нажмите на него, и график будет изменён для обхода этого узла, поэтому он больше не будет иметь никакого эффекта.</span> <span>Узлы, которые обойдены, показаны заштрихованным фоном:</span></span></p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10181/web-audio-editor-bypassed.png" style="display: block; height: 74px; margin-left: auto; margin-right: auto; width: 348px;"></p>

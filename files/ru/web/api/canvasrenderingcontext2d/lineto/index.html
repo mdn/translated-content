@@ -9,9 +9,9 @@ translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
 <div>{{APIRef}}</div>
 
-<p><code><strong>lineTo()</strong></code> - метод {{domxref("CanvasRenderingContext2D")}}, часть Canvas 2D API, добавляет линию к текущему под пути с конечной точкой с короординатами <code>(x, y)</code>.</p>
+<p><code><strong>lineTo()</strong></code> - метод {{domxref("CanvasRenderingContext2D")}}, часть Canvas 2D API, добавляет линию к текущему под пути с конечной точкой с координатами <code>(x, y)</code>.</p>
 
-<p>Сам метод ничего не рисует, он лишь добавляет подпуть к текущему пути, предоствляя его таким методам, как {{domxref("CanvasRenderingContext2D.fill", "fill()")}} и {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}, отрисовывающим сам путь.</p>
+<p>Сам метод ничего не рисует, он лишь добавляет подпуть к текущему пути, предоставляя его таким методам, как {{domxref("CanvasRenderingContext2D.fill", "fill()")}} и {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}, отрисовывающим сам путь.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -50,7 +50,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineTo
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();       // Начинает новый путь
-ctx.moveTo(30, 50);    // Рередвигает перо в точку (30, 50)
+ctx.moveTo(30, 50);    // Передвигает перо в точку (30, 50)
 ctx.lineTo(150, 100);  // Рисует линию до точки (150, 100)
 ctx.stroke();          // Отображает путь</pre>
 
@@ -58,7 +58,7 @@ ctx.stroke();          // Отображает путь</pre>
 
 <p>{{ EmbedLiveSample('Рисование_прямых_линий', 700, 180) }}</p>
 
-<h3 id="Рисование_соединенных_линий">Рисование соединенных линий</h3>
+<h3 id="Рисование_соединённых_линий">Рисование соединённых линий</h3>
 
 <p>Каждый вызов <code>lineTo()</code> автоматически добавляет текущий подпуть, это означает, что все линии будут обведены и закрашены вместе. Этот пример рисует букву 'M' линиями одного пути.</p>
 
@@ -82,7 +82,7 @@ ctx.stroke();</pre>
 
 <h4 id="Результаты">Результаты</h4>
 
-<p>{{ EmbedLiveSample('Рисование_соединенных_линий', 700, 180) }}</p>
+<p>{{ EmbedLiveSample('Рисование_соединённых_линий', 700, 180) }}</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 

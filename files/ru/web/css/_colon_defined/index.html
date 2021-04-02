@@ -5,7 +5,7 @@ translation_of: 'Web/CSS/:defined'
 ---
 <div>{{ CSSRef }}</div>
 
-<p><span class="seoSummary"><a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">псевдо-класс</a> <strong><code>:defined</code></strong> находит любой элемент, который был определён, включая любой стандартный встроенные в браузер элемент и <a href="/ru/docs/Web/Web_Components/Использование_пользовательских_элементов">пользовательские элементы</a> (то есть определённые с помощью метода {{domxref("CustomElementRegistry.define()")}}).</span></p>
+<p><span class="seoSummary"><a href="/en-US/docs/Web/CSS">CSS</a> <a href="/en-US/docs/Web/CSS/Pseudo-classes">псевдокласс</a> <strong><code>:defined</code></strong> находит любой элемент, который был определён, включая любой стандартный встроенные в браузер элемент и <a href="/ru/docs/Web/Web_Components/Использование_пользовательских_элементов">пользовательские элементы</a> (то есть определённые с помощью метода {{domxref("CustomElementRegistry.define()")}}).</span></p>
 
 <pre class="brush: css no-line-numbers">/* Находит любой элемент, который был определён */
 :defined {
@@ -20,7 +20,7 @@ simple-custom:defined {
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox">{{csssyntax}}</pre>
+{{csssyntax}}
 
 <h2 id="Примеры">Примеры</h2>
 
@@ -57,7 +57,7 @@ simple-custom {
   background: cyan;
 }
 
-/* И пользовательский, и встроенныйэлементы будет отображены курсивом */
+/* И пользовательский, и встроенный элементы будет отображены курсивом */
 :defined {
   font-style: italic;
 }</pre>
@@ -73,7 +73,7 @@ simple-custom:defined {
   text-decoration: underline;
 }</pre>
 
-<p>Это полезно, если у вас есть сложный пользовательский элемент, который требует какое-то время для загрузки — возможно, вы захотите спрятать его до определения, чтобы на странице не появились искажения или не тилизованные элементы.</p>
+<p>Это полезно, если у вас есть сложный пользовательский элемент, который требует какое-то время для загрузки — возможно, вы захотите спрятать его до определения, чтобы на странице не появились искажения или не стилизованные элементы.</p>
 
 <h3 id="результат">результат</h3>
 

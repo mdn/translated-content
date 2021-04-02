@@ -7,9 +7,9 @@ translation_of: Web/API/Element/attachShadow
 
 <p>Метод <strong><code>Element.attachShadow()</code></strong> добавляет<span id="result_box" lang="ru"><span> теневое DOM дерево к указанному элементу и возвращает ссылку на его </span></span><a href="https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot" title="Use Element.attachShadow to create an instance of shadow DOM. When shadow DOM is created, it is always attached to an existing element. After the shadow DOM is created, the element that it is attached to is called the shadow root."><code>ShadowRoot</code></a>( корневой элемент созданного дерева).</p>
 
-<h4 id="Элементы_которые_можно_добавить_в_тенейвой_DOM">Элементы которые можно добавить в тенейвой DOM</h4>
+<h4 id="Элементы_которые_можно_добавить_в_теневой_DOM">Элементы которые можно добавить в теневой DOM</h4>
 
-<p>Обратите внимание, что не каждый элемент можно добавить в корень теневого дерева. Некоторые типы исключены по соображениям безопасности(например {{htmlelement("a")}}), и некоторые другие. Вот список разрешенных элементов:</p>
+<p>Обратите внимание, что не каждый элемент можно добавить в корень теневого дерева. Некоторые типы исключены по соображениям безопасности(например {{htmlelement("a")}}), и некоторые другие. Вот список разрешённых элементов:</p>
 
 <ul>
  <li>Любой пользовательский элемент с <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name">валидным именем</a></li>
@@ -52,7 +52,7 @@ translation_of: Web/API/Element/attachShadow
    <pre>element.shadowRoot === shadowroot; // returns true</pre>
   </li>
   <li><code>closed.</code> Указывает на закрытие режима инкапсуляции.<br>
-   Этот режим запрещает доступ к узлам node(s) и закрыват теневой корень для внешнего мира<br>
+   Этот режим запрещает доступ к узлам node(s) и закрывать теневой корень для внешнего мира<br>
 
    <pre>element.shadowRoot === shadowroot; // returns false
 element.shadowRoot === null; // returns true
@@ -80,14 +80,14 @@ element.shadowRoot === null; // returns true
   </tr>
   <tr>
    <td>NotSupportedError</td>
-   <td>Вы пытаетесь прикрепить shadow DOM к HTML элементу с некоректным именем, или к запрещенному элементу. (см. выше)</td>
+   <td>Вы пытаетесь прикрепить shadow DOM к HTML элементу с некорректным именем, или к запрещённому элементу. (см. выше)</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Примеры">Примеры</h2>
 
-<p>Пример взят из демо компонента <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a>, так-же доступно <a href="https://mdn.github.io/web-components-examples/word-count-web-component/">live demo</a>. Вы можете найти метод attachShadow()  примерно в середине кода. Метод создает корневой элемент теневого DOM  к которому потом добавляется содержимое шаблона элемента.</p>
+<p>Пример взят из демо компонента <a href="https://github.com/mdn/web-components-examples/tree/master/word-count-web-component">word-count-web-component</a>, так-же доступно <a href="https://mdn.github.io/web-components-examples/word-count-web-component/">live demo</a>. Вы можете найти метод attachShadow()  примерно в середине кода. Метод создаёт корневой элемент теневого DOM  к которому потом добавляется содержимое шаблона элемента.</p>
 
 <pre class="brush: js"><code>//Create a class for the element
 class WordCount extends HTMLParagraphElement {

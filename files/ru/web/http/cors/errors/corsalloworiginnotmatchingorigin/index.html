@@ -19,13 +19,13 @@ translation_of: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 
 <h2 id="Reason">Reason</h2>
 
-<pre class="syntaxbox notranslate">Причина: CORS заголовок 'Access-Control-Allow-Origin' не соответсвует 'xyz'</pre>
+<pre class="syntaxbox notranslate">Причина: CORS заголовок 'Access-Control-Allow-Origin' не соответствует 'xyz'</pre>
 
 <h2 id="Что_пошло_не_так">Что пошло не так?</h2>
 
-<p>Проще говоря, источник делает запрос который не совпадает ни с одним из источников разрешенных заголовком - {{HTTPHeader("Access-Control-Allow-Origin")}}.</p>
+<p>Проще говоря, источник делает запрос который не совпадает ни с одним из источников разрешённых заголовком - {{HTTPHeader("Access-Control-Allow-Origin")}}.</p>
 
-<p>Эта ошибка также может произойти, если ответ содежит более одного заголовка <code>Access-Control-Allow-Origin</code>.</p>
+<p>Эта ошибка также может произойти, если ответ содержит более одного заголовка <code>Access-Control-Allow-Origin</code>.</p>
 
 <p>Если сервис, к которому ваш код обращается с помощью CORS запроса находится под вашим контролем, убедитесь что он настроен для включения в себя вашего источника в заголовке <code>Access-Control-Allow-Origin</code> и что в ответах от сервера присутствует только один такой заголовок. Заголовок принимает список источников, поэтому указать новый источник совсем не сложно.</p>
 

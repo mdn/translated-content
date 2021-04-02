@@ -1,0 +1,340 @@
+---
+title: 基本的なネイティブフォームコントロール
+slug: Learn/Forms/Basic_native_form_controls
+tags:
+  - Example
+  - Forms
+  - Guide
+  - HTML
+  - Intermediate
+  - Web
+translation_of: Learn/Forms/Basic_native_form_controls
+original_slug: Learn/Forms/The_native_form_widgets
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}</div>
+
+<p class="summary"><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/How_to_structure_a_web_form">直前の記事</a>では、機能的なウェブフォームの例をマークアップし、いくつかのフォームコントロールとよくある構造要素を導入し、アクセシビリティのベストプラクティスを見てきました。次にさまざまなフォームコントロールやウィジェットの機能を詳しく見ていきます — 色々な種類のデータを集めるのにどんなオプションが使えるのかを見ていきます。とりわけこの記事では、ウェブの初期からある全てのブラウザーで利用できる、オリジナルのフォームコントロールを見ていきます。</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">前提条件:</th>
+   <td>基本的なコンピューターリテラシーと、基本的な <a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML">HTML の理解</a>。</td>
+  </tr>
+  <tr>
+   <th scope="row">目的:</th>
+   <td>データを収集するためにブラウザーで使用できるネイティブフォームウィジェットの種類と、それらを HTML を使用して実装する方法を理解する。</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>{{HTMLelement('form')}}, {{HTMLelement('fieldset')}}, {{HTMLelement('legend')}}, {{HTMLelement('textarea')}}, {{HTMLelement('label')}}, {{HTMLelement('button')}},  {{HTMLelement('input')}}といったフォーム要素については既に見てきました。この記事では次を網羅します:</p>
+
+<ul>
+ <li>{{HTMLelement('input/button', 'button')}}, {{HTMLelement('input/checkbox', 'checkbox')}}, {{HTMLelement('input/file', 'file')}}, {{HTMLelement('input/hidden', 'hidden')}}, {{HTMLelement('input/image', 'image')}}, {{HTMLelement('input/password', 'password')}}, {{HTMLelement('input/radio', 'radio')}}, {{HTMLelement('input/reset', 'reset')}}, {{HTMLelement('input/submit', 'submit')}}, and {{HTMLelement('input/text', 'text')}}といったよくある入力タイプ</li>
+ <li>すべてのフォームコントロールに共通する属性のいくつか</li>
+</ul>
+
+<div class="note">
+<p><strong>注</strong>: この記事で説明されている機能のほとんどは、ブラウザー間で幅広くサポートされています。これに対する例外に注意しましょう。より正確な詳細が必要な場合は、<a href="/ja/docs/Web/HTML/Element#Forms">HTML フォーム要素のリファレンス</a>、特に広範囲にわたる <a href="/ja/docs/Web/HTML/Element/input">&lt;input&gt; 型</a>の参照を参照してください。</p>
+</div>
+
+<h2 id="Text_input_fields" name="Text_input_fields">テキスト入力フィールド</h2>
+
+<p>テキスト {{htmlelement("input", "入力")}} フィールドは最も基本的なフォームウィジェットです。これらはユーザーがあらゆる種類のデータを入力できるとても便利な方法です。</p>
+
+<div class="note">
+<p><strong>注</strong>: HTML フォームのテキストフィールドは単純なプレーンテキストの入力コントロールです。つまり、これらを使って<a href="/ja/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla">リッチエディット</a> (太字、斜体など) を実行することはできません。見かけるすべてのリッチテキストエディタは、HTML、CSS、および JavaScript で作成されたカスタムウィジェットです。</p>
+</div>
+
+<p>すべてのテキストフィールドに共通する動作があります:</p>
+
+<ul>
+ <li>{{htmlattrxref("readonly","input")}} (ユーザーは入力値を変更できないが他のフォーム値とともに送信される) あるいは {{htmlattrxref("disabled","input")}} (入力値は編集できず、値も他のフォームデータとともに送られません) とすることができます。</li>
+ <li>{{htmlattrxref("placeholder","input")}} を設定することができます。これは、ボックスの目的を簡単に説明する、ボックス内に表示されるテキストです。</li>
+ <li><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/size"><code>size</code></a> (ボックスの物理的なサイズ) や <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/maxlength"><code>maxlength</code></a> (ボックスに入力できる最大文字数) による制限が可能です。</li>
+ <li>ブラウザーがサポートしていれば、(<a href="/ja/docs/Web/HTML/Global_attributes/spellcheck"><code>spellcheck</code></a>属性を用いて) <a href="/ja/docs/Web/HTML/Element/Input#attr-spellcheck" title="HTML/Element/input#attr-spellcheck">スペルチェック</a>の恩恵を受けられます。</li>
+</ul>
+
+<div class="note">
+<p><strong>注</strong>: {{htmlelement("input")}} 要素は、<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/type">type</a></code> 属性によってさまざまなフォームとなるため、、HTML要素の中でも特別です。単一行のテキストフィールド、テキスト入力のないコントロール、時間と日付のコントロール、チェックボックス、カラーピッカー、ボタンといったテキスト入力のないコントロールなど、ほとんどのタイプのフォームウィジェットの作成に使用されます。</p>
+</div>
+
+<h3 id="Single_line_text_fields" name="Single_line_text_fields">単一行のテキストフィールド</h3>
+
+<p>単一行のテキストフィールドは、{{htmlattrxref("type","input")}} 属性値が <code>text</code> に設定されている {{HTMLElement("input")}} 要素を使用するか、{{htmlattrxref("type","input")}} 属性を指定しない場合( <code>text</code> がデフォルト値になり)に作成されます。{{htmlattrxref("type","input")}} 属性に指定した値がブラウザーに認識されない場合 (たとえば <code>type="color"</code> を指定してブラウザーがネイティブの色ピッカーをサポートしていない場合)、この属性の値のテキストは代替値になります。</p>
+
+<div class="note">
+<p><strong>注</strong>: GitHub の <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html">single-line-text-fields.html</a> に、すべての単一行テキストフィールドタイプの例があります (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html">こちらも参照してください</a>)。</p>
+</div>
+
+<p>これは基本的な単一行のテキストフィールドの例です。</p>
+
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>comment<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>comment<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>I<span class="punctuation token">'</span>m a text field<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p>単一行のテキストフィールドは、ひとつだけ厳密な制約があります: 改行を含むテキストを入力した場合、ブラウザーはデータを送信する前に改行を取り除きます。</p>
+
+<p><em>下記のスクリーンショットは macOS での Firefox 71 と Safari と Windows 10 の Chrome 79 と Edge 18 にて、既定の、フォーカスされた、無効にされたテキスト入力を示しています。</em></p>
+
+<p><img alt="Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge." src="https://mdn.mozillademos.org/files/17021/disabled.png" style="height: 113px; width: 442px;"></p>
+
+<div class="blockIndicator note">
+<p>HTML5 では {{htmlattrxref("type","input")}} 属性に専用の値を追加することで、基本的な単一行のテキストフィールドを拡張しています。これらの値もやはり {{HTMLElement("input")}} 要素を単一行のテキストフィールドにしますが、フィールドに対して追加の制約や機能を付加します。</p>
+</div>
+
+<h4 id="Password_field" name="Password_field">パスワードフィールド</h4>
+
+<p>このタイプのフィールドは、{{htmlattrxref("type","input")}} 属性の値 <code>password</code> を使用して設定できます:</p>
+
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>password<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>pwd<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>pwd<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p><code>password</code> の値は入力したテキストに対する特別な制約は付加しませんが、フィールドの値を隠します(例、ドットやアスタリスク)ので読むことができません。</p>
+
+<p>これはユーザーインターフェイスの機能でしかないことに注意してください。テキストは JavaScript を使用してあなた自身でエンコードしなければ、平文で送信されてしまい、セキュリティには良くありません — 悪い組織がデータを遮ってパスワードや、クレジットカードデータや、送信したあらゆるものを盗むことがあります。ユーザーからこれを保護するためにはフォームを含むあらゆるページをセキュア通信でホストし (つまり <code>https://</code> ... アドレスにて) 、データ送信前に暗号化することです。</p>
+
+<p>最近のブラウザーは、安全でない接続を介してフォームデータを送信することによるセキュリティへの影響を認識しており、ユーザーが安全でないフォームを使用しないように警告を実装しています。Firefox が実装しているものの詳細については、<a href="/ja/docs/Web/Security/Insecure_passwords">安全でないパスワード</a>をご覧ください。</p>
+
+<h3 id="Hidden_content" name="Hidden_content">隠しコンテンツ</h3>
+
+<p>もう１つのオリジナルなテキストコントロールは <code>hidden</code> 入力タイプです。これは他のフォームデータとともにサーバー送信されるがユーザーからは見えないデータを持つのに使われています — 例えば命令を発行するときにサーバーにタイムスタンプを送りたい場合。これは隠れているので、ユーザーが見ることも、意図せずに値を編集することもなく、フォーカスを得ることもないしスクリーンリーダーが気づくこともありません。</p>
+
+<pre class="brush: html notranslate">&lt;input type="hidden" id="timestamp" name="timestamp" value="1286705410"&gt;
+</pre>
+
+<p>このような要素を作成する場合は、<code>name</code> 属性と <code>value</code> 属性の設定が必要です。この値は JavaScript にて動的にセットできます。<code>hidden</code> 入力タイプには関連したラベルはありません。</p>
+
+<p>その他のテキストタイプ、{{HTMLElement("input/search", "search")}}, {{HTMLElement("input/url", "url")}}, と{{HTMLElement("input/tel", "tel")}}, は HTML5 で追加されました。これは次のチュートリアルの「HTML5 入力タイプ」にて網羅されます。</p>
+
+<h2 id="Checkable_items" name="Checkable_items">チェック可能アイテム:チェックボックスとラジオボタン</h2>
+
+<p>チェック可能アイテムは、そのものや、関連したラベルをクリックすることで状態を変更できるコントロールです。チェック可能アイテムは 2 種類あります: チェックボックスとラジオボタンです。どちらもデフォルトでチェックするかを示すために、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes//checked"><code>checked</code></a> 属性を使用します。</p>
+
+<p>これらのウィジェットは、他のフォームウィジェットと同じようには動作しない点が特筆されます。ほとんどのフォームウィジェットではフォームを送信すると、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/name"><code>name</code></a> 属性を持つすべてのウィジェットは値がなくても送信します。チェック可能アイテムでは、それらがチェックされている場合にのみ値を送信します。チェックされていない場合は、name も含めて何も送信しません。チェックされているが値がない場合、name が <em>on</em> という値で送信されます。</p>
+
+<div class="note">
+<p><strong>注</strong>: このセクションの例は、<a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html">checkable-items.html</a> として GitHub にあります (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html">こちらも参照してください</a>)。</p>
+</div>
+
+<p>最大限のユーザービリティ/アクセシビリティを実現するために、関連項目の各リストを {{htmlelement("fieldset")}} で囲み、リストの全体的な説明を示す {{htmlelement("legend")}} で囲むことをお勧めします。{{htmlelement("label")}}/{{htmlelement("input")}} 要素の個々のペアは、それぞれ独自のリスト項目 (または同様のもの) に含める必要があります。関連した {{htmlelement('label')}} はラジオボタンやチェックボックスの直後に、{{htmlelement("legend")}}の中身にラジオボタンやチェックボックスのグループの説明が置かれます。これは上の例に示されています。</p>
+
+<h3 id="Check_box" name="Check_box">チェックボックス</h3>
+
+<p>チェックボックスは、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/type"><code>type</code></a> 属性を {{HTMLElement("input/checkbox", "checkbox")}} に設定した {{HTMLElement("input")}} 要素で作成します。</p>
+
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>checkbox<span class="punctuation token">"</span></span> <span class="attr-name token">checked</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>carrots<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>carrots<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>carrots<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/checked">checked</a></code> 属性を含んだチェックボックスはページ読み込み時に自動的にチェックされます。チェックボックスまたはその関連ラベルをチェックするとチェックボックスのオン/オフがトグルされます。</p>
+
+<p>下記のスクリーンショットは macOS での Firefox 71 と Safari と Windows 10 の Chrome 79 と Edge 18 にて、既定の、フォーカスされた、無効にされたチェックボックスを示しています。</p>
+
+<p><img alt="﻿Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10" src="https://mdn.mozillademos.org/files/17024/checkboxes.png" style="height: 203px; width: 293px;"></p>
+
+<div class="blockIndicator note">
+<p><strong>注</strong>: <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/checked">checked</a></code> 属性のあるあらゆるチェックボックスやラジオボタンには、チェックされていない場合でも、対応する {{cssxref('<code>:default')}}</code> 仮想クラスがあります。現在チェックされているものには<code>{{cssxref(':checked')}}</code> 仮想クラスがあります。</p>
+</div>
+
+<p id="Radio_button">チェックボックスのオンオフ性質により、チェックボックスは、規定のチェックボックスを拡張してトグルスイッチのように見えるボタンを作っている開発者やデザイナーにとって、トグルボタンとして考えられます。<a href="https://mdn.github.io/learning-area/html/forms/toggle-switch-example/">ここで動作する例を</a> 見ることができます(<a href="https://github.com/mdn/learning-area/blob/master/html/forms/toggle-switch-example/index.html">ソースコード</a>も見られます)。</p>
+
+<h3 id="Radio_button" name="Radio_button">ラジオボタン</h3>
+
+<p>ラジオボタンは、{{htmlattrxref("type","input")}} 属性を <code>radio</code> に設定した {{HTMLElement("input")}} 要素で作成します。</p>
+
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>radio<span class="punctuation token">"</span></span> <span class="attr-name token">checked</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>soup<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>meal<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p>いくつかのラジオボタンをまとめることができます。{{htmlattrxref("name","input")}} 属性で同じ値を共有すると、それらのラジオボタンは同じボタングループに属するとみなされます。グループ内でボタンは同時に 1 つだけチェックできます。つまり、あるラジオボタンをチェックすると、他のラジオボタンは自動的にチェックが外れます。フォームを送信するときは、チェックしているラジオボタンのみの値を送信します。何もチェックしていない場合はラジオボタンの集まり全体が未知の状態であるとみなし、フォーム送信時は値を送信しません。</p>
+
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>fieldset</span><span class="punctuation token">&gt;</span></span>
+  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>legend</span><span class="punctuation token">&gt;</span></span>What is your favorite meal?<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>legend</span><span class="punctuation token">&gt;</span></span>
+  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>ul</span><span class="punctuation token">&gt;</span></span>
+    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>
+      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>soup<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Soup<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
+      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>radio<span class="punctuation token">"</span></span> <span class="attr-name token">checked</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>soup<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>meal<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>soup<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
+    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>
+      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>curry<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Curry<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
+      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>radio<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>curry<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>meal<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>curry<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
+    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>li</span><span class="punctuation token">&gt;</span></span>
+      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span> <span class="attr-name token">for</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>pizza<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Pizza<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
+      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>radio<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>pizza<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>meal<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>pizza<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>li</span><span class="punctuation token">&gt;</span></span>
+  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>ul</span><span class="punctuation token">&gt;</span></span>
+<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>fieldset</span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p>下記のスクリーンショットは macOS での Firefox 71 と Safari と Windows 10 の Chrome 79 と Edge 18 にて、チェックなしとチェックされたラジオボタン、フォーカスされた、また無効でチェックなしとチェックされたラジオボタンを示しています。</p>
+
+<p><img alt="Radio buttons on Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10" src="https://mdn.mozillademos.org/files/17022/radios.png" style="height: 142px; width: 196px;"></p>
+
+<h2 id="Buttons" name="Buttons">ボタン</h2>
+
+<p>ラジオボタンはその名に反して、実際のボタンではありません。実際のボタンを見てみましょう! ボタンを生成するには、3 種類の入力タイプがあります:</p>
+
+<dl>
+ <dt>{{原語併記("送信", "Submit")}}</dt>
+ <dd>フォームデータをサーバーに送信します。{{HTMLElement("button")}} 要素の場合、<code>type</code> 属性 (または <code>type</code> の無効な値) を省略すると、送信ボタンが表示されます。</dd>
+ <dt>{{原語併記("リセット", "Reset")}}</dt>
+ <dd>すべてのフォームウィジェットをデフォルト値にリセットします。</dd>
+ <dt><code>button</code></dt>
+ <dd>自動的な効果のないボタンで、JavaScript コードを用いてカスタマイズできるもの。</dd>
+</dl>
+
+<p>それから、{{htmlelement("button")}} 要素それ自体もあります。これは値が <code>submit</code>、<code>reset</code> または <code>button</code> である <code>type</code> 属性をとり、上記の 3 つの <code>&lt;input&gt;</code> 種別を模倣できます。この 2 つの主な違いは実際の <code>&lt;button&gt;</code> 要素の方が多くのスタイル設定できることです。</p>
+
+<div class="blockIndicator note">
+<p><strong>注</strong>: <code>image</code> 入力タイプもボタンとしてレンダリングされます。それはあとで見ます。</p>
+</div>
+
+<div class="note">
+<p><strong>注</strong>: このセクションの例は <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/button-examples.html">button-examples.html</a> として GitHub にあります (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html">こちらも参照してください</a>)。</p>
+</div>
+
+<p>ボタンは {{HTMLElement("button")}} 要素か {{HTMLElement("input")}} 要素で作成します。どの種類のボタンを表示するかを指定するのは、{{htmlattrxref("type","input")}} 属性の値です:</p>
+
+<h3 id="submit" name="submit">送信</h3>
+
+<pre class="brush: html notranslate">&lt;button type="submit"&gt;
+    This a &lt;br&gt;&lt;strong&gt;submit button&lt;/strong&gt;
+&lt;/button&gt;
+
+&lt;input type="submit" value="This is a submit button"&gt;</pre>
+
+<h3 id="reset" name="reset">リセット</h3>
+
+<pre class="brush: html notranslate">&lt;button type="reset"&gt;
+    This a &lt;br&gt;&lt;strong&gt;reset button&lt;/strong&gt;
+&lt;/button&gt;
+
+&lt;input type="reset" value="This is a reset button"&gt;</pre>
+
+<h3 id="anonymous" name="anonymous">無名</h3>
+
+<pre class="brush: html notranslate">&lt;button type="button"&gt;
+    This an &lt;br&gt;&lt;strong&gt;anonymous button&lt;/strong&gt;
+&lt;/button&gt;
+
+&lt;input type="button" value="This is an anonymous button"&gt;</pre>
+
+<p>ボタンは {{HTMLElement("button")}} 要素でも {{HTMLElement("input")}} 要素でも、常に同じ動作になります。上記のサンプルでわかるように、{{HTMLElement("button")}} 要素はラベルとして HTML コンテンツを使用できて、これは開始と終了の<code>&lt;button&gt;</code>タグの間に挿入されます。一方で{{HTMLElement("input")}} 要素は空要素です。つまり <code>value</code> 属性の中にラベルが挿入され、このためプレーンテキストのコンテンツのみ使用できます。</p>
+
+<p>下記の例は macOS での Firefox 71 と Safari と Windows 10 の Chrome 79 と Edge 18 にて、既定の、フォーカスされた、無効なボタンを示しています。</p>
+
+<p><img alt="Default, focused and disabled button input types in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10" src="https://mdn.mozillademos.org/files/17023/buttons.png" style="height: 182px; width: 286px;"></p>
+
+<h3 id="Image_button" name="Image_button">画像ボタン</h3>
+
+<p><strong>画像ボタン</strong>コントロールは {{HTMLElement("img")}} 要素とまったく同じように表示されますが、ユーザーがクリックすると送信ボタン (前述) のように動作します。</p>
+
+<p>画像ボタンは、{{htmlattrxref("type","input")}} 属性を <code>image</code> に設定した {{HTMLElement("input")}} 要素で作成します。</p>
+
+<p>この要素は {{HTMLElement("img")}} 要素とまったく同じ属性をサポートして、さらにフォームボタンがサポートする属性もすべてサポートします。</p>
+
+<pre class="brush: html notranslate">&lt;input type="image" alt="Click me!" src="my-img.png" width="80" height="30" /&gt;</pre>
+
+<p>画像ボタンをフォームの送信に使用する際にこのウィジェットは自身の値を送信しませんが、代わりに画像上でクリックした位置の X 座標と Y 座標を送信します (座標は画像に対して相対的、つまり画像の左上隅が座標 0, 0 になります)。座標は 2 つのキーと値の組として送信されます。</p>
+
+<ul>
+ <li>X 値のキーは {{htmlattrxref("name","input")}} 属性の値の後ろに文字列 "<em>.x</em>" をつけたもの、</li>
+ <li>Y 値のキーは {{htmlattrxref("name","input")}} 属性の値の後ろに文字列 "<em>.y</em>" をつけたものです。</li>
+</ul>
+
+<p>サンプルをご覧ください。フォームの画像上の座標 (123, 456) でクリックすると、 <code>get</code> メソッド経由で送信されて、以下のような値の追加された URL が送信されます:</p>
+
+<pre class="notranslate">http://foo.com?pos.x=123&amp;pos.y=456</pre>
+
+<p>これは "hot map" を作成するためにとても便利な手段です。これらの値がどのように送信あるいは取得されるかについては、<a href="https://developer.mozilla.org/ja/docs/HTML/Forms/Sending_and_retrieving_form_data" title="HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a>の記事で詳しく説明します。</p>
+
+<h2 id="File_picker" name="File_picker">ファイルピッカー</h2>
+
+<p>初期のHTMLであった最後の <code>&lt;input&gt;</code> タイプがあります: ファイル入力タイプです。フォームで、ファイルをサーバーに送信できます。この特定操作については以下の記事で詳しく説明します: <a href="/ja/docs/HTML/Forms/Sending_and_retrieving_form_data" title="HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a>。ファイルピッカーウィジェットで、ユーザーは送信するファイルを 1 つ以上選択できます。</p>
+
+<p><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file">ファイルピッカーウィジェット</a>を作成するには、{{htmlattrxref("type","input")}} 属性を <code>file</code> に設定した {{HTMLElement("input")}} 要素を使用します。{{htmlattrxref("accept","input")}} 属性を使用して、受け入れるファイルの種類を制限できます。加えて、ユーザーが複数のファイルを選択できるようにしたい場合は、{{htmlattrxref("multiple","input")}} 属性を付加します。</p>
+
+<h4 id="Example_3" name="Example_3">例</h4>
+
+<p>以下の例では、画像ファイルを要求するファイルピッカーを作成しています。ユーザーは複数のファイルを指定できます。</p>
+
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>file<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>file<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>file<span class="punctuation token">"</span></span> <span class="attr-name token">accept</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>image/*<span class="punctuation token">"</span></span> <span class="attr-name token">multiple</span><span class="punctuation token">&gt;</span></span></code></pre>
+
+<p>いくつかのモバイルデバイスでは、ファイルピッカーは、次のようにキャプチャー情報を <code>accept</code> 属性に追加することで、端末のカメラやマイクでキャプチャーされた写真、動画、オーディオにアクセスできます:</p>
+
+<pre class="notranslate">&lt;input type="file" accept="image/*;capture=camera"&gt;
+&lt;input type="file" accept="video/*;capture=camcorder"&gt;
+&lt;input type="file" accept="audio/*;capture=microphone"&gt;</pre>
+
+<h2 id="Common_attributes" name="Common_attributes">共通属性</h2>
+
+<p>フォームウィジェットを定義するために使用される要素の多くは、独自の属性をいくつか持っています。ただし、すべてのフォーム要素に共通の一連の属性があり、それによりウィジェットをある程度制御できます。共通属性のリストは以下のとおりです。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">属性名</th>
+   <th scope="col">既定値</th>
+   <th scope="col">説明</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/autofocus">autofocus</a></code></td>
+   <td>false</td>
+   <td>この真偽値属性を使用すると、ユーザーがページをロードするときに、たとえば別のコントロールを入力して上書きしない限り、要素に自動的に入力フォーカスするように指定できます。この属性を指定できるのは、文書内の 1 つのフォーム関連要素だけです。</td>
+  </tr>
+  <tr>
+   <td><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/disabled">disabled</a></code></td>
+   <td>false</td>
+   <td>この真偽値属性は、ユーザーが要素と対話できないことを示します。この属性が指定されていない場合、要素はそれを含む要素 (例えば {{HTMLElement("fieldset")}}) からその設定を継承します。<code>disabled</code><span class="tlid-translation translation" lang="ja"><span title=""> 属性が設定されている包含要素がない場合は、その要素が有効になります。</span></span></td>
+  </tr>
+  <tr>
+   <td><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/form">form</a></code></td>
+   <td></td>
+   <td>ウィジェットが関連付けられている <code>&lt;form&gt;</code> 要素。属性の値は、同じ文書内の {{HTMLElement("form")}} 要素の <code>id</code> 属性でなければなりません。理論的には、フォームウィジェットを {{HTMLElement("form")}} 要素の外側に設定できます。しかし実際には、その機能をサポートするブラウザーはありません。</td>
+  </tr>
+  <tr>
+   <td><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/name">name</a></code></td>
+   <td></td>
+   <td>要素の名前。これはフォームデータとともに送信されます。</td>
+  </tr>
+  <tr>
+   <td><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/value">value</a></code></td>
+   <td></td>
+   <td>要素の初期値</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="スキルをテストしましょう!">スキルをテストしましょう!</h2>
+
+<p>この記事の最後に到着しましたが、最も大事な情報を覚えていますか？ 次に進む前に、この情報を保持しているか検証するテストがあります — <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Forms/Test_your_skills:_Basic_controls">Test your skills: Basic controls</a> を見てください。</p>
+
+<h2 id="Conclusion" name="Conclusion">まとめ</h2>
+
+<p>上で見たように、利用可能なフォーム要素には多くの異なるタイプがあります。一度にこれらの詳細の全てを覚えておく必要はありません。詳細について調べるために好きなだけこの記事に戻ることができます 。</p>
+
+<p>この記事では古い入力タイプをカバーしてきました — これは HTML の初期の頃に導入されたオリジナルで、すべてのブラウザーでよくサポートされます。次のセクションでは、HTML 5 で追加された新しい <code>type</code> 属性の値を見ていきます。</p>
+
+<p>{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}</p>
+
+<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Your_first_HTML_form">初めてのフォーム</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">フォームの構築方法</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/The_native_form_widgets">ネイティブフォームウィジェット</a></li>
+ <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/HTML5_input_types" rel="noopener">The HTML5 input types</a></li>
+ <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Other_form_controls" rel="noopener">Other form controls</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Styling_HTML_forms">フォームへのスタイル設定</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">フォームへの高度なスタイル設定</a></li>
+ <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/UI_pseudo-classes" rel="noopener">UI pseudo-classes</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Data_form_validation">フォームデータの検証</a></li>
+ <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
+</ul>
+
+<h3 id="Advanced_Topics" name="Advanced_Topics">上級トピック</h3>
+
+<ul>
+ <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/How_to_build_custom_form_controls" rel="noopener">カスタムフォームコントロールの作成方法</a></li>
+ <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Sending_forms_through_JavaScript" rel="noopener">JavaScript によるフォームの送信</a></li>
+ <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets" rel="noopener">フォームウィジェット向けプロパティ実装状況一覧</a></li>
+</ul>

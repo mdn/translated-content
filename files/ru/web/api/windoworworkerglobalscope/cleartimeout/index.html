@@ -17,14 +17,14 @@ translation_of: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 <dl>
  <dt><code><em>timeoutID</em></code></dt>
  <dd></dd>
- <dd>Идентификатор таймаута, который вы хотите отменить. Этот идентификатор был возвращен соответствующим вызовом <code>setTimeout()</code>.</dd>
+ <dd>Идентификатор таймаута, который вы хотите отменить. Этот идентификатор был возвращён соответствующим вызовом <code>setTimeout()</code>.</dd>
 </dl>
 
 <p>It's worth noting that the pool of IDs used by {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} and {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} are shared, which means you can technically use <code>clearTimeout()</code> and {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} interchangeably. However, for clarity, you should avoid doing so.</p>
 
 <h2 id="Example" name="Example">Пример использования:</h2>
 
-<p>Запустите приведенный ниже скрипт в контекте веб-страницы и кликните один раз. Вы увидите всплывающее сообщение через 1 секунду. Если вы щелкните страницу несколько раз за одну секунду, предупреждение появится только один раз.</p>
+<p>Запустите приведённый ниже скрипт в контакте веб-страницы и кликните один раз. Вы увидите всплывающее сообщение через 1 секунду. Если вы щёлкните страницу несколько раз за одну секунду, предупреждение появится только один раз.</p>
 
 <pre class="brush: js notranslate">var alarm = {
   remind: function(aMessage) {
@@ -51,7 +51,7 @@ window.onclick = function() { alarm.setup(); };
 
 <h2 id="Notes" name="Notes">Примечания</h2>
 
-<p>Передача недействительного ID <code>clearTimeout()</code> ни к чему не приведет. Исключение не создается.</p>
+<p>Передача недействительного ID <code>clearTimeout()</code> ни к чему не приведёт. Исключение не создается.</p>
 
 <h2 id="Specification" name="Specification">Спецификация</h2>
 

@@ -5,7 +5,7 @@ translation_of: Web/API/RTCPeerConnection/icecandidate_event
 ---
 <div>{{WebRTCSidebar}}</div>
 
-<p>Событие <strong><code>icecandidate</code></strong> отправляется {{domxref("RTCPeerConnection")}} когда {{domxref("RTCIceCandidate")}} был идентифицирован и добавлен к локальному клиенту (local peer) через вызов {{domxref("RTCPeerConnection.setLocalDescription()")}}. Обработчик события должен передать кандидата удаленному клиенту (remote peer) по каналу сигнализации (signaling channel), чтобы удаленный клиент (remote peer) смог добавить его в свой набор удаленных кандидатов (remote candidates).</p>
+<p>Событие <strong><code>icecandidate</code></strong> отправляется {{domxref("RTCPeerConnection")}} когда {{domxref("RTCIceCandidate")}} был идентифицирован и добавлен к локальному клиенту (local peer) через вызов {{domxref("RTCPeerConnection.setLocalDescription()")}}. Обработчик события должен передать кандидата удалённому клиенту (remote peer) по каналу сигнализации (signaling channel), чтобы удалённый клиент (remote peer) смог добавить его в свой набор удалённых кандидатов (remote candidates).</p>
 
 <table class="properties">
  <tbody>
@@ -34,7 +34,7 @@ translation_of: Web/API/RTCPeerConnection/icecandidate_event
 
 <h3 id="Делимся_Sharing_новым_кандидатом">Делимся (Sharing) новым кандидатом</h3>
 
-<p>В основном события <code>icecandidate</code> происходят, чтобы указать, что новый кандидат был построен (gathered). Этого кондидата нужно доставить удаленному клиенту (remote peer) через канал сигнализации (signaling channel), которым управляет ваш код.</p>
+<p>В основном события <code>icecandidate</code> происходят, чтобы указать, что новый кандидат был построен (gathered). Этого кандидата нужно доставить удалённому клиенту (remote peer) через канал сигнализации (signaling channel), которым управляет ваш код.</p>
 
 <pre class="brush: js notranslate">rtcPeerConnection.onicecandidate = (event) =&gt; {
   if (event.candidate) {
@@ -45,7 +45,7 @@ translation_of: Web/API/RTCPeerConnection/icecandidate_event
 }
 </pre>
 
-<p>Удаленный клиент (peer), получив кандидата, добавит этого кандидата в свой пул кандидатов, используя вызов {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}, передавая в {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} строку, которую вы передали с помощью сервера сигнализации (signaling server).</p>
+<p>Удалённый клиент (peer), получив кандидата, добавит этого кандидата в свой пул кандидатов, используя вызов {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}, передавая в {{domxref("RTCPeerConnectionIceEvent.candidate", "candidate")}} строку, которую вы передали с помощью сервера сигнализации (signaling server).</p>
 
 <h3 id="Indicating_the_end_of_a_generation_of_candidates">Indicating the end of a generation of candidates</h3>
 

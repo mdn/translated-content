@@ -88,16 +88,16 @@ translation_of: Tools/Network_Monitor
 <p>Начиная с Firefox 55, вы можете выбирать разные колонки, кликая правой кнопкой мыши на заголовок таблицы, а затем выбирая нужные колонки в выпадающем меню. Опция "Восстановить колонки" доступна для сброса списка колонок к исходному варианту. Список колонок:</p>
 
 <ul>
- <li><strong>Статус (</strong><strong>Status</strong><strong>)</strong>: возвращенный HTTP-код статуса. Здесь есть цветной значок:
+ <li><strong>Статус (</strong><strong>Status</strong><strong>)</strong>: возвращённый HTTP-код статуса. Здесь есть цветной значок:
 
   <ul>
    <li><img alt="" src="https://mdn.mozillademos.org/files/13136/1x.png" style="height: 17px; width: 17px;">синий круг - для информационных кодов (коды 1XX). В частности включает код 101 (переключение протоколов) для <a href="/ru/docs/Web/API/WebSocket">WebSocket</a>-переключения.</li>
    <li><img alt="" src="https://mdn.mozillademos.org/files/10941/200.png" style="height: 17px; width: 17px;"> зелёный круг - для успеха (коды 2XX)</li>
    <li><img alt="" src="https://mdn.mozillademos.org/files/10945/300.png" style="height: 17px; width: 17px;"> оранжевый треугольник - для перенаправления (3XX)</li>
    <li><img alt="" src="https://mdn.mozillademos.org/files/10943/4-500.png" style="height: 17px; width: 17px;"> красный квадрат - для ошибок (4XX и 5XX)</li>
-   <li><img alt="" src="https://mdn.mozillademos.org/files/10947/cached.png" style="height: 17px; width: 17px;"> серая окружность - для ответов, которые получены из кэша браузера.</li>
+   <li><img alt="" src="https://mdn.mozillademos.org/files/10947/cached.png" style="height: 17px; width: 17px;"> серая окружность - для ответов, которые получены из кеша браузера.</li>
   </ul>
-  Точный код отображен сразу после значка.</li>
+  Точный код отображён сразу после значка.</li>
  <li><strong>Метод (</strong><strong>Method</strong><strong>)</strong>: <a href="/ru/docs/Web/HTTP/Methods">HTTP-метод</a> запроса.</li>
  <li><strong>Файл (</strong><strong>File</strong><strong>)</strong>: базовое имя запрошенного файла.</li>
  <li><strong>Протокол</strong> (<strong>Protocol</strong>): Используемый сетевой протокол. (По умолчанию скрытая колонка. Новая в Firefox 55)</li>
@@ -114,7 +114,7 @@ translation_of: Tools/Network_Monitor
  <li><strong>Тип (</strong><strong>Type</strong><strong>)</strong>: <code>Content-type</code> ответа.</li>
  <li><strong>Куки</strong> (<strong>Cookies</strong>): Количество куки, связанных с запросом. (По умолчанию скрытая колонка. Новая в Firefox 55)</li>
  <li><strong>Set-Cookies</strong>: Количество куки, связанных с ответом. (По умолчанию скрытая колонка. Новая в Firefox 55)</li>
- <li><strong>Передано</strong> <strong>(Transferred)</strong>: число байт, которые фактически были переданы для загрузки ресурса. Это число будет меньше, чем <strong>Размер</strong>, если ресурс был упакован. Начиная с Firefox 47, если ресурс был получен из кэша <a href="/ru/docs/Web/API/Service_Worker_API">service worker</a>, то в этой ячейке будет отображено "service worker". Если значение получено из кэша браузера - то "кэшировано".</li>
+ <li><strong>Передано</strong> <strong>(Transferred)</strong>: число байт, которые фактически были переданы для загрузки ресурса. Это число будет меньше, чем <strong>Размер</strong>, если ресурс был упакован. Начиная с Firefox 47, если ресурс был получен из кеша <a href="/ru/docs/Web/API/Service_Worker_API">service worker</a>, то в этой ячейке будет отображено "service worker". Если значение получено из кеша браузера - то "кешировано".</li>
  <li><strong>Размер</strong> <strong>(Size)</strong>: размер переданного ресурса.</li>
 </ul>
 
@@ -122,7 +122,7 @@ translation_of: Tools/Network_Monitor
 
 <h4 id="Миниатюры_изображений">Миниатюры изображений</h4>
 
-<p>Если файл является изображением, то в строку будет включена его миниатюра, при наведении на которую появится посмотр изображения во всплывающей подсказке:</p>
+<p>Если файл является изображением, то в строку будет включена его миниатюра, при наведении на которую появится просмотр изображения во всплывающей подсказке:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13539/6-new-thumb-small.png" style="display: block; height: 241px; margin: 0px auto; width: 900px;"></p>
 
@@ -148,7 +148,7 @@ translation_of: Tools/Network_Monitor
   </tr>
   <tr>
    <td><img alt="" src="https://mdn.mozillademos.org/files/11653/https-weak.svg" style="height: 16px; width: 16px;"></td>
-   <td>Слабый HTTPS (наример, использовался некриптостойкий шифр)</td>
+   <td>Слабый HTTPS (например, использовался некриптостойкий шифр)</td>
   </tr>
   <tr>
    <td><img alt="" src="https://mdn.mozillademos.org/files/11649/https-failed.svg" style="height: 16px; width: 16px;"></td>
@@ -242,7 +242,7 @@ translation_of: Tools/Network_Monitor
 <p>Новое в Firefox 55</p>
 </div>
 
-<p>Для фильтрации по конкретным свойствам запроса используйте поле поиска на <a href="/ru/docs/Tools/Network_Monitor#Toolbar">Панели инструментов</a>. Но это поле признаёт только определённые ключевые слова, которые используются для фильтрации по конкретным свойствам запроса. За ключевым словом следует двоеточие, а затем значение фильтра. Значение фильтра <em>регистро<strong>не</strong>зависимое</em>. Если написать знак "минус" (<code>-</code>), то это применит к фильтру отрицание. Также можно комбинировать несколько фильтров через пробел.</p>
+<p>Для фильтрации по конкретным свойствам запроса используйте поле поиска на <a href="/ru/docs/Tools/Network_Monitor#Toolbar">Панели инструментов</a>. Но это поле признаёт только определённые ключевые слова, которые используются для фильтрации по конкретным свойствам запроса. За ключевым словом следует двоеточие, а затем значение фильтра. Значение фильтра <em>регистров<strong>не</strong>зависимое</em>. Если написать знак "минус" (<code>-</code>), то это применит к фильтру отрицание. Также можно комбинировать несколько фильтров через пробел.</p>
 
 <table class="standard-table">
  <thead>
@@ -268,7 +268,7 @@ translation_of: Tools/Network_Monitor
   </tr>
   <tr>
    <td><code>remote-ip</code></td>
-   <td>Показать ресурсы, пришедшие с сервера с указанным IP-адреcом.</td>
+   <td>Показать ресурсы, пришедшие с сервера с указанным IP-адресом.</td>
    <td><code>remote-ip:63.245.215.53</code><br>
     <code>remote-ip:[2400:cb00:2048:1::6810:2802]</code></td>
   </tr>
@@ -304,7 +304,7 @@ translation_of: Tools/Network_Monitor
   </tr>
   <tr>
    <td><code>is</code></td>
-   <td><code>is:cached</code> и <code>is:from-cache</code> показывают только ресурсы, пришедшие из кэша.<br>
+   <td><code>is:cached</code> и <code>is:from-cache</code> показывают только ресурсы, пришедшие из кеша.<br>
     <code>is:running</code> показывает только ресурсы, передаваемые в настоящее время.</td>
    <td><code>is:cached</code><br>
     <code>-is:running</code></td>
@@ -346,7 +346,7 @@ translation_of: Tools/Network_Monitor
 
 <h3 id="Контекстное_меню">Контекстное меню</h3>
 
-<p>При кликне правой клавишей мыши по строке отобразится контекстное меню:</p>
+<p>При клике правой клавишей мыши по строке отобразится контекстное меню:</p>
 
 <ul>
  <li>Копировать URL</li>
@@ -459,7 +459,7 @@ translation_of: Tools/Network_Monitor
 <p>Новое в Firefox 54</p>
 </div>
 
-<p>Кроме того, каждый заголовок это ссылка для углубленного изучения <a href="/en-US/docs/Web/HTTP/Headers">документации заголовков HTTP</a>.</p>
+<p>Кроме того, каждый заголовок это ссылка для углублённого изучения <a href="/en-US/docs/Web/HTTP/Headers">документации заголовков HTTP</a>.</p>
 
 <h3 id="Куки_Cookies">Куки <em>(Cookies)</em></h3>
 
@@ -525,7 +525,7 @@ translation_of: Tools/Network_Monitor
   </tr>
   <tr>
    <td>Получение (Receiving)</td>
-   <td>Время на чтение полного ответа с сервера (или из кэша).</td>
+   <td>Время на чтение полного ответа с сервера (или из кеша).</td>
   </tr>
  </tbody>
 </table>
@@ -561,7 +561,7 @@ translation_of: Tools/Network_Monitor
 
 <p>В Firefox 58 и далее, Сетевой монитор имеет кнопку, которая приостанавливает и возобновляет запись трафика текущей страницы. Это полезно, когда, например, вы хотите получить установившийся вид страницы для отладки, но вид страницы пока ещё меняется, потому что она ещё грузится или выполняются запросы. Кнопка "Пауза" позволяет увидеть текущий снимок состояния (snapshot).</p>
 
-<p>Эта кнопка находится скраю слева на главной панели Сетевого монитора, и выгдялит как обычная кнопка "Пауза" — <img alt="" src="https://mdn.mozillademos.org/files/15625/pause-icon.png" style="height: 23px; width: 34px;">.</p>
+<p>Эта кнопка находится с краю слева на главной панели Сетевого монитора, и выглядит как обычная кнопка "Пауза" — <img alt="" src="https://mdn.mozillademos.org/files/15625/pause-icon.png" style="height: 23px; width: 34px;">.</p>
 
 <p>Вот её вид:</p>
 
@@ -577,7 +577,7 @@ translation_of: Tools/Network_Monitor
 
 <p>(Кроме того, если у вас только что открытый Сетевой монитор, и список запросов ещё пуст, то у вас будут "Часы" в главном окне.)</p>
 
-<p>Сетевой монитор загрузит сайт дважды: первый раз с пустым кэшем браузера, а второй - с заполненным. Это имитирует вход пользователя на сайт впервые и последующие посещения. Он показывает результаты обоих запусков бок о бок горизонтально, либо вертикально, если окно браузера сжатое:</p>
+<p>Сетевой монитор загрузит сайт дважды: первый раз с пустым кешем браузера, а второй - с заполненным. Это имитирует вход пользователя на сайт впервые и последующие посещения. Он показывает результаты обоих запусков бок о бок горизонтально, либо вертикально, если окно браузера сжатое:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/12864/nm-performance.png" style="display: block; height: 1028px; margin-left: auto; margin-right: auto; width: 691px;"></p>
 

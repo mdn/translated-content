@@ -3,7 +3,7 @@ title: Работа с History API
 slug: Web/API/History_API/Working_with_the_History_API
 translation_of: Web/API/History_API/Working_with_the_History_API
 ---
-<p>В HTML5 стали доступны методы {{DOMxRef("History.pushState","pushState()")}} и {{DOMxRef("History.replaceState","replaceState()")}} для добавления и изменения записей в истории. Эти методыработают в сочетании с событием {{domxref("Window.onpopstate","onpopstate")}}</p>
+<p>В HTML5 стали доступны методы {{DOMxRef("History.pushState","pushState()")}} и {{DOMxRef("History.replaceState","replaceState()")}} для добавления и изменения записей в истории. Эти методы работают в сочетании с событием {{domxref("Window.onpopstate","onpopstate")}}</p>
 
 <h2 id="Добавление_и_изменение_записей_в_истории">Добавление и изменение записей в истории</h2>
 
@@ -24,7 +24,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 <p>В результате этого в URL-строке отобразится адрес <code>http://mozilla.org/bar.html</code>, но браузер не будет загружать страницу <code>bar.html</code> и даже не будет проверять, существует ли она..</p>
 
-<p>Теперь предположим, что пользователь перешел по адресу <code>http://google.com</code> и затем нажал на кнопку "<strong>Назад</strong>". В результате этого в URL будет отображаться <code>http://mozilla.org/bar.html</code>, а <code>history.state</code> будет содержать <code>stateObj</code>. Событие popstate не будет вызвано, поскольку страница была перезагружена. Сама страница будет выглядеть как <code>bar.html</code>.</p>
+<p>Теперь предположим, что пользователь перешёл по адресу <code>http://google.com</code> и затем нажал на кнопку "<strong>Назад</strong>". В результате этого в URL будет отображаться <code>http://mozilla.org/bar.html</code>, а <code>history.state</code> будет содержать <code>stateObj</code>. Событие popstate не будет вызвано, поскольку страница была перезагружена. Сама страница будет выглядеть как <code>bar.html</code>.</p>
 
 <p>Если пользователь ещё раз нажимает кнопку <strong>"Назад"</strong>, URL изменится на <code>http://mozilla.org/foo.html</code>, а в документе снова произойдёт событие <code>popstate</code>, на этот раз с объектом состояния, имеющим значение <code>null</code>. В этом случае возврат назад также не меняет содержимое документа, как и на предыдущем шаге, хотя документ может сам обновить своё содержимое после получения события <code>popstate</code>.</p>
 
@@ -48,7 +48,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 <dl>
  <dt><strong>title</strong></dt>
- <dd>Заголовок - <a href="https://github.com/whatwg/html/issues/2174">все браузеры, кроме Safari, на данный момент игнорируют этот параметр</a>, но могут начать использовать в будущем. Ввиду будущих изменений метода, безопасным решением является передача пустой строки. В качестве альтернативы вы можете передать короткий заголовок для состояни, в которое переходите.</dd>
+ <dd>Заголовок - <a href="https://github.com/whatwg/html/issues/2174">все браузеры, кроме Safari, на данный момент игнорируют этот параметр</a>, но могут начать использовать в будущем. Ввиду будущих изменений метода, безопасным решением является передача пустой строки. В качестве альтернативы вы можете передать короткий заголовок для состоянии, в которое переходите.</dd>
 </dl>
 
 <dl>

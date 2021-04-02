@@ -43,7 +43,7 @@ translation_of: Web/API/Storage_Access_API
 
 <p>When <code>requestStorageAccess()</code> is called by an embedded, cross-origin document, the user agent may choose to involve the user in the decision of whether to grant storage access to the requesting origin. Prompting heuristics currently vary across the two implementers of the Storage Access API — Safari shows prompts for all embedded tracking content that has not previously received storage access, while Firefox only prompts users after a tracking origin has requested storage access on more than a threshold number of sites. See {{domxref("Document.requestStorageAccess()")}} for more details.</p>
 
-<h2 id="Отичия_реализации_в_Safari">Отичия реализации в Safari</h2>
+<h2 id="Отличия_реализации_в_Safari">Отличия реализации в Safari</h2>
 
 <p>Although the API surface is the same, websites using the Storage Access API should expect differences in the level and extent of storage access they receive between Firefox and Safari. This is caused by differences in the storage access policies implemented in the two browsers. Design properties unique to Firefox are summarized here:</p>
 
@@ -74,11 +74,11 @@ translation_of: Web/API/Storage_Access_API
 
 <h2 id="Расширение_&lt;iframe>_sandbox">Расширение &lt;iframe&gt; sandbox</h2>
 
-<p>{{htmlelement("iframe")}} <code>sandbox</code> появился новый признак, <code>allow-storage-access-by-user-activation</code>, который позволяет изолированому <code>&lt;iframe&gt;</code> использовать Storage Access API для запроса доступа к хранилищу.</p>
+<p>{{htmlelement("iframe")}} <code>sandbox</code> появился новый признак, <code>allow-storage-access-by-user-activation</code>, который позволяет изолированному <code>&lt;iframe&gt;</code> использовать Storage Access API для запроса доступа к хранилищу.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<p>API на стадии обсуждения — стандартизация не начата. Сейчас Вы можете ознакомиться с подробной спецификацией API в блоге Apple <a href="https://webkit.org/blog/8124/introducing-storage-access-api/">Introducing Storage Access API</a> и <a href="https://github.com/whatwg/html/issues/3338">WHATWG HTML issue 3338 — Proposal: Storage Access API</a>.</p>
+<p>API на стадии обсуждения — стандартизация не начата. Сейчас вы можете ознакомиться с подробной спецификацией API в блоге Apple <a href="https://webkit.org/blog/8124/introducing-storage-access-api/">Introducing Storage Access API</a> и <a href="https://github.com/whatwg/html/issues/3338">WHATWG HTML issue 3338 — Proposal: Storage Access API</a>.</p>
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
@@ -90,4 +90,4 @@ translation_of: Web/API/Storage_Access_API
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
-<p><a href="/en-US/docs/Web/API/Storage_Access_API/Using">Использоваие Storage Access API</a></p>
+<p><a href="/en-US/docs/Web/API/Storage_Access_API/Using">Использование Storage Access API</a></p>
