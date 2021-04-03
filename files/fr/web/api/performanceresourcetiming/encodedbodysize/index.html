@@ -31,7 +31,7 @@ translation_of: Web/API/PerformanceResourceTiming/encodedBodySize
 
 <p>Dans l'exemple suivant, la valeur des propriétés de taille de tous les <a href="/fr/docs/Web/API/PerformanceEntry/entryType">types</a> <code>"resource"</code> sont enregistrées.</p>
 
-<pre class="brush: js">function log_sizes(<var>perfEntry</var>){
+<pre class="brush: js">function log_sizes(perfEntry){
   // Vérifie la prise en charge des propriétés PerformanceEntry.*size et imprime leurs valeurs
   // si elles sont prises en charge
   if ("decodedBodySize" in perfEntry)
@@ -51,8 +51,8 @@ translation_of: Web/API/PerformanceResourceTiming/encodedBodySize
 }
 function check_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let <var>p</var> = performance.getEntriesByType("resource");
-  for (let <var>i</var>=0; i &lt; p.length; i++) {
+  let p = performance.getEntriesByType("resource");
+  for (let i = 0; i &lt; p.length; i++) {
     log_sizes(p[i]);
   }
 }
