@@ -13,7 +13,7 @@ translation_of: Web/API/PerformanceResourceTiming/transferSize
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p class="summary">La propriété en lecture seule <strong><code>transferSize</code></strong> représente la taille (en octets) de la ressource extraite. La taille comprend les champs d'en-tête de la réponse plus le corps de la donnée utile de la réponse (comme défini par <a href="https://httpwg.github.io/specs/rfc7230.html#message.body">RFC7230</a>).</p>
+<p class="summary">La propriété en lecture seule <strong><code>transferSize</code></strong> représente la taille (en octets) de la ressource extraite. La taille comprend les champs d'en-tête de la réponse plus la charge utile du corps de la réponse (comme défini par la <a href="https://httpwg.github.io/specs/rfc7230.html#message.body">RFC 7230</a>).</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -25,13 +25,13 @@ translation_of: Web/API/PerformanceResourceTiming/transferSize
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Un <code>number</code> représentant la taille (en octets) de la ressource extraite. La taille comprend les champs d'en-tête de la réponse plus le <a href="https://httpwg.github.io/specs/rfc7230.html#message.body">corps de la donnée utile de la réponse</a> (RFC7230).</p>
+<p>Un <code>number</code> représentant la taille (en octets) de la ressource extraite. La taille comprend les champs d'en-tête de la réponse plus la taille <a href="https://httpwg.github.io/specs/rfc7230.html#message.body">de la charge utile du corps de la réponse</a> (RFC7230).</p>
 
 <h2 id="Example">Exemple</h2>
 
-<p>Dans l'exemple suivant, la valeur des propriétés de taille de tous les <a href="/fr/docs/Web/API/PerformanceEntry/entryType">types</a> <code>"resource"</code> sont enregistrées.</p>
+<p>Dans l'exemple suivant, les valeurs des propriétés de taille de tous les <a href="/fr/docs/Web/API/PerformanceEntry/entryType">types</a> <code>"resource"</code> sont enregistrées.</p>
 
-<pre class="brush: js">function log_sizes(<var>perfEntry</var>){
+<pre class="brush: js">function log_sizes(perfEntry){
   // Vérifie la prise en charge des propriétés PerformanceEntry.*size et imprime leurs valeurs
   // si elles sont prises en charge
   if ("decodedBodySize" in perfEntry)
@@ -51,8 +51,8 @@ translation_of: Web/API/PerformanceResourceTiming/transferSize
 }
 function check_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let <var>p</var> = performance.getEntriesByType("resource");
-  for (let <var>i</var>=0; i &lt; p.length; i++) {
+  let p = performance.getEntriesByType("resource");
+  for (let i = 0; i &lt; p.length; i++) {
     log_sizes(p[i]);
   }
 }
