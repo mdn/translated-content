@@ -864,7 +864,6 @@
 /fr/docs/Canvas_tutoriel	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Canvas_tutoriel/Utilisation_d'images	/fr/docs/Web/API/Canvas_API/Tutorial/Using_images
 /fr/docs/Changements_dans_Gecko_1.9_affectant_les_sites_Web	/fr/docs/Mozilla/Firefox/Releases/3/Site_compatibility
-/fr/docs/Chrome	/fr/docs/conflicting/Glossary/Chrome
 /fr/docs/Colonnes_CSS3	/fr/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /fr/docs/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /fr/docs/Comment_créer_un_arbre_DOM	/fr/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
