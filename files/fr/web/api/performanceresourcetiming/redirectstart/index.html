@@ -13,7 +13,7 @@ translation_of: Web/API/PerformanceResourceTiming/redirectStart
 ---
 <div>{{APIRef("Resource Timing API")}}</div>
 
-<p class="summary">La propriété en lecture seule <strong><code>redirectStart</code></strong> retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant l'heure de début du fetch qui initie la redirection.</p>
+<p class="summary">La propriété en lecture seule <strong><code>redirectStart</code></strong> retourne un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>timestamp</code></a> représentant l'instant du début de la récupération qui initie la redirection.</p>
 
 <p>S'il y a des redirections HTTP lors de l'extraction de la ressource et si l'une des redirections ne provient pas de la même origine que le document actuel, mais que l'algorithme de vérification de l'autorisation de synchronisation réussit pour chaque ressource redirigée, cette propriété renvoie l'heure de début de l'extraction qui initie la redirection ; sinon, zéro est renvoyé.</p>
 
@@ -33,12 +33,12 @@ translation_of: Web/API/PerformanceResourceTiming/redirectStart
 
 <pre class="brush: js">function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let <var>p</var> = performance.getEntriesByType("resource");
-  for (let <var>i</var>=0; i &lt; p.length; i++) {
+  let p = performance.getEntriesByType("resource");
+  for (let i = 0; i &lt; p.length; i++) {
     print_start_and_end_properties(p[i]);
   }
 }
-function print_start_and_end_properties(<var>perfEntry</var>) {
+function print_start_and_end_properties(perfEntry) {
   // Imprime les horodatages des propriétés *start et *end
   properties = ["connectStart", "connectEnd",
                 "domainLookupStart", "domainLookupEnd",
@@ -48,11 +48,11 @@ function print_start_and_end_properties(<var>perfEntry</var>) {
                 "responseStart", "responseEnd",
                 "secureConnectionStart"];
 
-  for (let <var>i</var>=0; i &lt; properties.length; i++) {
-    // vérifie chaque propriétés
-    let <var>supported</var> = properties[i] in perfEntry;
+  for (let i = 0; i &lt; properties.length; i++) {
+    // vérifie chaque propriété
+    let supported = properties[i] in perfEntry;
     if (supported) {
-      let <var>value</var> = perfEntry[properties[i]];
+      let value = perfEntry[properties[i]];
       console.log("... " + properties[i] + " = " + value);
     } else {
       console.log("... " + properties[i] + " = N'EST PAS pris en charge");
