@@ -4419,13 +4419,11 @@
 /fr/docs/Web/Guide/DOM/Events/Les_données_d_orientation_et_de_mouvement_expliquées	/fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained
 /fr/docs/Web/Guide/DOM/Events/Touch_events	/fr/docs/Web/API/Touch_events
 /fr/docs/Web/Guide/DOM/Events/Touch_events/Gérer_à_la_fois_événement_tactile_et_événement_de_la_souris	/fr/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
-/fr/docs/Web/Guide/DOM/Events/evenement_medias	/fr/docs/orphaned/Web/Guide/Events/Media_events
 /fr/docs/Web/Guide/DOM/Manipuler l'historique du navigateur	/fr/docs/Web/API/History_API
 /fr/docs/Web/Guide/DOM/Manipuler l'historique du navigateur/Example	/fr/docs/Web/API/History_API/Example
 /fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur	/fr/docs/Web/API/History_API
 /fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur/Example	/fr/docs/Web/API/History_API/Example
 /fr/docs/Web/Guide/DOM/Using_full_screen_mode	/fr/docs/Web/API/Fullscreen_API
-/fr/docs/Web/Guide/Events/Media_events	/fr/docs/orphaned/Web/Guide/Events/Media_events
 /fr/docs/Web/Guide/Graphics/Dessiner_avec_canvas	/fr/docs/conflicting/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/Guide/HTML	/fr/docs/Learn/HTML
 /fr/docs/Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide	/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
@@ -5946,6 +5944,7 @@
 /fr/docs/nsIURI	/fr/docs/XPCOM_Interface_Reference/nsIURI
 /fr/docs/nsIXULAppInfo	/fr/docs/XPCOM_Interface_Reference/nsIXULAppInfo
 /fr/docs/orphaned/Introduction_à_la_cryptographie_à_clef_publique/Signatures_numériques	/fr/docs/Glossary/Signature/Security
+/fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
 /fr/docs/setAttribute	/fr/docs/Web/API/Element/setAttribute
 /fr/docs/toSource	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toSource
 /fr/docs/toString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
