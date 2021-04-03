@@ -52,8 +52,8 @@ translation_of: Web/API/PerformanceResourceTiming/decodedBodySize
 }
 function check_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let <var>p</var> = performance.getEntriesByType("resource");
-  for (let <var>i</var>=0; i &lt; p.length; i++) {
+  let p = performance.getEntriesByType("resource");
+  for (let i = 0; i &lt; p.length; i++) {
     log_sizes(p[i]);
   }
 }
