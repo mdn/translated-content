@@ -38,7 +38,7 @@ translation_of: Web/Performance/dns-prefetch
 
 <p id="Three_things_to_keep_in_mind">Необходимо учитывать 3 вещи:</p>
 
-<p><strong>Во-первых,</strong> <code>dns-prefetch</code> эффективен только для выполнения DNS запросов не сторонние <a href="/en-US/docs/Web/HTTP/CORS">cross-origin</a> домены, поэтому следует избегать этой инструкции при попытке загрузить ресурсы с текущего домена. Связано это с тем, что IP вашего домена уже был определён к тому времени, когда браузер увидел эту инструкцию.</p>
+<p><strong>Во-первых,</strong> <code>dns-prefetch</code> эффективен только для выполнения DNS запросов на сторонние <a href="/en-US/docs/Web/HTTP/CORS">cross-origin</a> домены, поэтому следует избегать этой инструкции при попытке загрузить ресурсы с текущего домена. Связано это с тем, что IP вашего домена уже был определён к тому времени, когда браузер увидел эту инструкцию.</p>
 
 <p><strong>Во-вторых,</strong> существует возможность добавить <code>dns-prefetch</code> (и другие подсказки) как <a href="/en-US/docs/Web/HTTP/Headers">HTTP заголовок</a> с помощью <a href="/en-US/docs/Web/HTTP/Headers/Link">HTTP Link field</a>:</p>
 
