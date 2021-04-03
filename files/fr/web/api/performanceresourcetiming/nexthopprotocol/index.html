@@ -33,13 +33,13 @@ translation_of: Web/API/PerformanceResourceTiming/nextHopProtocol
 
 <pre class="brush: js">function print_PerformanceEntries() {
   // Utilise getEntriesByType() pour obtenir uniquement les événements "resource"
-  let <var>p</var> = performance.getEntriesByType("resource");
-  for (let <var>i</var>=0; i &lt; p.length; i++) {
+  let p = performance.getEntriesByType("resource");
+  for (let i = 0; i &lt; p.length; i++) {
     print_nextHopProtocol(p[i]);
   }
 }
-function print_nextHopProtocol(<var>perfEntry</var>) {
-  let <var>value</var> = "nextHopProtocol" in perfEntry;
+function print_nextHopProtocol(perfEntry) {
+  let value = "nextHopProtocol" in perfEntry;
   if (value)
     console.log("nextHopProtocol = " + perfEntry.nextHopProtocol);
   else
