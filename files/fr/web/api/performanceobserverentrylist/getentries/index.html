@@ -12,10 +12,10 @@ translation_of: Web/API/PerformanceObserverEntryList/getEntries
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p class="summary">La méthode <strong><code>getEntries()</code></strong> de l'interface {{domxref("PerformanceObserverEntryList")}} retourne une liste d'objets explicitement <em>observés</em> d'{{domxref("PerformanceEntry","entrées de performance","",1)}} pour un filtre donné. Les membres de la liste sont déterminés par l'ensemble des {{domxref("PerformanceEntry.entryType","types d'entrée","",1)}} spécifiés dans l'appel à la méthode {{domxref("PerformanceObserver.observe", "observe()")}}. La liste est disponible dans la fonction de rappel de l'observateur (en tant que premier paramètre de la fonction de rappel).</p>
+<p class="summary">La méthode <strong><code>getEntries()</code></strong> de l'interface <a href="/fr/docs/Web/API/PerformanceObserverEntryList"><code>PerformanceObserverEntryList</code></a> retourne une liste d'objets explicitement <em>observés</em> d'<a href="/fr/docs/Web/API/PerformanceEntry">entrées de performance</a> pour un filtre donné. Les membres de la liste sont déterminés par l'ensemble des <a href="/fr/docs/Web/API/PerformanceEntry/entryType">types d'entrée</a> spécifiés dans l'appel à la méthode <a href="/fr/docs/Web/API/PerformanceObserver/observe"><code>observe()</code></a>. La liste est disponible dans la fonction de rappel de l'observateur (en tant que premier paramètre de la fonction de rappel).</p>
 
 <div class="notecard note">
-  <p><strong>Remarque :</strong> Cette interface est exposée à {{domxref("Window")}} et {{domxref("Worker")}}.</p>
+  <p><strong>Remarque :</strong> Cette interface est exposée à <a href="/fr/docs/Web/API/Window"><code>Window</code></a> et <a href="/fr/docs/Web/API/Worker"><code>Worker</code></a>.</p>
 </div>
 
 <h2 id="Syntax">Syntaxe</h2>
@@ -34,8 +34,8 @@ translation_of: Web/API/PerformanceObserverEntryList/getEntries
   <dd>Est un dictionnaire <code>PerformanceEntryFilterOptions</code>, comportant les champs suivants :
     <ul>
       <li><code>"name"</code>, le nom d'une entrée de performance.</li>
-      <li><code>"entryType"</code>, le type d'entrée. Les types d'entrée valides sont énumérés dans la propriété {{domxref("PerformanceEntry.entryType")}}.</li>
-      <li><code>"initiatorType"</code>, le type de la ressource initiatrice (par exemple un élément HTML). Les valeurs sont définies par la propriété {{domxref("PerformanceResourceTiming.initiatorType")}}.</li>
+      <li><code>"entryType"</code>, le type d'entrée. Les types d'entrée valides sont énumérés dans la propriété <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a>.</li>
+      <li><code>"initiatorType"</code>, le type de la ressource initiatrice (par exemple un élément HTML). Les valeurs sont définies par la propriété <a href="/fr/docs/Web/API/PerformanceResourceTiming/initiatorType"><code>PerformanceResourceTiming.initiatorType</code></a>.</li>
     </ul>
     Ce paramètre n'est actuellement pas pris en charge par Chrome ou Opera.
   </dd>
@@ -43,7 +43,7 @@ translation_of: Web/API/PerformanceObserverEntryList/getEntries
 
 <h3 id="Return_Value">Valeur de retour</h3>
 
-<p>Une liste d'objets {{domxref("PerformanceEntry")}} explicitement <em>observés</em> qui répondent aux critères du filtre. Les éléments seront dans l'ordre chronologique basé sur les {{domxref("PerformanceEntry.startTime", "startTime")}} des entrées. Si aucun objet répondant au filtre n'est trouvé, une liste vide est renvoyée. Si aucun argument n'est fourni, toutes les entrées sont renvoyées.</p>
+<p>Une liste d'objets <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> explicitement <em>observés</em> qui répondent aux critères du filtre. Les éléments seront dans l'ordre chronologique basé sur les <a href="/fr/docs/Web/API/PerformanceEntry/startTime"><code>startTime</code></a> des entrées. Si aucun objet répondant au filtre n'est trouvé, une liste vide est renvoyée. Si aucun argument n'est fourni, toutes les entrées sont renvoyées.</p>
 
 <h2 id="Example">Exemple</h2>
 
@@ -55,34 +55,34 @@ translation_of: Web/API/PerformanceObserverEntryList/getEntries
 }
 
 // Crée un observateur pour tous les types d'événements de performance
-const <var>observe_all</var> = new PerformanceObserver(function(<var>list</var>, <var>obs</var>) {
-  let <var>perfEntries</var>;
+const observe_all = new PerformanceObserver(function(list, obs) {
+  let perfEntries;
 
   // Imprime toutes les entrées
   perfEntries = list.getEntries();
-  for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i &lt; perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 
   // Imprime les entrées nommées "Begin" avec le type "mark".
   perfEntries = list.getEntriesByName("Begin", "mark");
-  for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i &lt; perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 
   // Imprime les entrées de type "mark".
   perfEntries = list.getEntriesByType("mark");
-  for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i &lt; perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 });
 // inscrire tous les types d'événements de performance
 observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
 
-const <var>observe_frame</var> = new PerformanceObserver(function(<var>list</var>, <var>obs</var>) {
-  let <var>perfEntries</var> = list.getEntries();
+const observe_frame = new PerformanceObserver(function(list, obs) {
+  let perfEntries = list.getEntries();
   // Ne devrait avoir que des entrées "frame"
-  for (let <var>i</var>=0; i &lt; perfEntries.length; i++) {
+  for (let i = 0; i &lt; perfEntries.length; i++) {
     print_perf_entry(perfEntries[i]);
   }
 });
