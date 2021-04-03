@@ -14,7 +14,7 @@ translation_of: Web/API/PerformanceObserver/disconnect
 ---
 <div>{{APIRef("Performance Timeline API")}}</div>
 
-<p>La méthode <strong><code>takeRecords()</code></strong> de l'interface {{domxref('PerformanceObserver')}} renvoie la liste actuelle des {{domxref("PerformanceEntry", "entrées de performances","",1)}} stockés dans l'observateur de performance, en la vidant.</p>
+<p>La méthode <strong><code>takeRecords()</code></strong> de l'interface <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code> renvoie la liste actuelle des <a href="/fr/docs/Web/API/PerformanceEntry">entrées de performance</a> stockées dans l'observateur de performance, en la vidant.</p>
 
 <h2 id="Syntax">Syntaxe</h2>
 
@@ -26,18 +26,18 @@ translation_of: Web/API/PerformanceObserver/disconnect
 
 <h3 id="Return_value">Valeur de retour</h3>
 
-<p>Une liste d'objets {{domxref("PerformanceEntry")}}.</p>
+<p>Une liste d'objets <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a>.</p>
 
 <h2 id="Example">Exemple</h2>
 
-<pre class="brush: js">const <var>observer</var> = new PerformanceObserver(function(<var>list</var>, <var>obj</var>) {
-  let <var>entries</var> = list.getEntries();
-  for (let <var>i</var>=0; i &lt; entries.length; i++) {
+<pre class="brush: js">const observer = new PerformanceObserver(function(list, obj) {
+  let entries = list.getEntries();
+  for (let i= 0; i &lt; entries.length; i++) {
     // Traiter les événements "mark" et "frame"
   }
 });
 observer.observe({entryTypes: ["mark", "frame"]});
-let <var>records</var> = observer.takeRecords();
+let records = observer.takeRecords();
 console.log(records[0].name);
 console.log(records[0].startTime);
 console.log(records[0].duration);
