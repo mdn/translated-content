@@ -63,10 +63,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/String/split
 
   console.log('La chaine d\'origine est : "' + stringToSplit + '"');
   console.log('Le délimiteur est : "' + separator + '"');
-  console.log("Le tableau comporte " + arrayOfStrings.length + " elements : ");
-
-  for (var i=0; i &lt; arrayOfStrings.length; i++)
-    print(arrayOfStrings[i] + " / ");
+  console.log("Le tableau comporte " + arrayOfStrings.length + " elements : ", arrayOfStrings.join(' / '));
 }
 
 var tempestString = "Oh brave new world that has such people in it.";
