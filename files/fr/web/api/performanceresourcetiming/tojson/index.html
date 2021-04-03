@@ -33,12 +33,12 @@ translation_of: Web/API/PerformanceResourceTiming/toJSON
 <h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">// Obtient une entrée de performance des ressources
-let <var>perfEntries</var> = performance.getEntriesByType("resource");
-let <var>entry</var> = perfEntries[0];
+let perfEntries = performance.getEntriesByType("resource");
+let entry = perfEntries[0];
 
 // Récupère le JSON et l'enregistre
-let <var>json</var> = entry.toJSON();
-let <var>s</var> = JSON.stringify(json);
+let json = entry.toJSON();
+let s = JSON.stringify(json);
 console.log("PerformanceEntry.toJSON = " + s);
 </pre>
 
