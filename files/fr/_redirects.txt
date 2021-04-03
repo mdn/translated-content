@@ -3463,7 +3463,6 @@
 /fr/docs/Précis_CSS_2:Tout_en_un	/fr/docs/Web/CSS/Reference
 /fr/docs/Qualité	/fr/docs/QA
 /fr/docs/Ressources_hors_ligne_dans_Firefox	/fr/docs/Web/HTML/Using_the_application_cache
-/fr/docs/Référence_DOM_Gecko	/fr/docs/conflicting/Glossary/DOM
 /fr/docs/Référence_de_JavaScript_1.5_Core	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Référence_de_JavaScript_1.5_Core/A_propos_de_cette_reference	/fr/docs/Web/JavaScript/Reference/About
 /fr/docs/Référence_de_JavaScript_1.5_Core/Fonctions_et_portee_des_fonctions	/fr/docs/Web/JavaScript/Reference/Functions

@@ -44177,14 +44177,6 @@
       "maximelore"
     ]
   },
-  "conflicting/Glossary/DOM": {
-    "modified": "2019-03-24T00:11:57.509Z",
-    "contributors": [
-      "Goofy",
-      "teoli",
-      "bou22"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toSource": {
     "modified": "2019-03-24T00:05:25.191Z",
     "contributors": [
