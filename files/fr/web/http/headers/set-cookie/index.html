@@ -93,7 +93,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
  <dd>
  <ul>
   <li><code>Strict</code>: Le navigateur envoie le cookie uniquement pour les requêtes sur le même site (c'est à dire, les requêtes où le cookie a été défini). Si la requête vient d'une autre URL que celle courante, aucun cookie avec d'attribut <code>SameSite=Strict</code> n'est envoyé.</li>
-  <li><code>Lax</code>: Le cookie n'est pas envoyé pour des requêtes <strong>croos-site</strong>, comme le chargement d'image ou de cadre, mais est envoyé quand un utilisateur va sur une autre site, comme lorsqu’il suit un lien.</li>
+  <li><code>Lax</code>: Le cookie n'est pas envoyé pour des requêtes <strong>cross-site</strong>, comme le chargement d'image ou de cadre, mais est envoyé quand un utilisateur va sur une autre site, comme lorsqu’il suit un lien.</li>
   <li><code>None</code>: Le navigateur envoie le cookie à la fois pour les requêtes cross-site et same-site.</li>
  </ul>
 
