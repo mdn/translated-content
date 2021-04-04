@@ -450,7 +450,6 @@
 /fr/docs/CSS/Premiers_pas/Pourquoi_utiliser_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_ecbda2160290b96c02dcfa8276c0333a
 /fr/docs/CSS/Premiers_pas/Présentation_des_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c
 /fr/docs/CSS/Premiers_pas/Styles_de_texte	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b
-/fr/docs/CSS/Premiers_pas/Tableaux	/fr/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
 /fr/docs/CSS/Propriétés_raccourcies	/fr/docs/Web/CSS/Shorthand_properties
 /fr/docs/CSS/Pseudo-classes	/fr/docs/Web/CSS/Pseudo-classes
 /fr/docs/CSS/Pseudo-éléments	/fr/docs/Web/CSS/Pseudo-elements
@@ -770,7 +769,6 @@
 /fr/docs/CSS:Premiers_pas:Pourquoi_utiliser_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_ecbda2160290b96c02dcfa8276c0333a
 /fr/docs/CSS:Premiers_pas:Présentation_des_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c
 /fr/docs/CSS:Premiers_pas:Styles_de_texte	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b
-/fr/docs/CSS:Premiers_pas:Tableaux	/fr/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
 /fr/docs/CSS:Valeur_calculée	/fr/docs/Web/CSS/computed_value
 /fr/docs/CSS:Valeur_initiale	/fr/docs/Web/CSS/initial_value
 /fr/docs/CSS:azimuth	/fr/docs/Web/CSS/azimuth
