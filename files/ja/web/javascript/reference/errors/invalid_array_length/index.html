@@ -2,42 +2,46 @@
 title: 'RangeError: invalid array length'
 slug: Web/JavaScript/Reference/Errors/Invalid_array_length
 tags:
-  - Errors
-  - JavaScript
-  - RangeError
+- Error
+- Errors
+- JavaScript
+- RangeError
 translation_of: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<h2 id="メッセージ">メッセージ</h2>
+<p>JavaScript の例外 "Invalid array length" は、 {{jsxref("Array")}} または {{jsxref("ArrayBuffer")}} を長さが負の数か 2<sup>32</sup> 以上で生成しようとした場合、または {{jsxref("Array.length")}} プロパティに負の数か 2<sup>32</sup> 以上の値を設定しようとした場合に発生します。</p>
 
-<pre class="syntaxbox">RangeError: invalid array length (Firefox)
+<h2 id="Message">メッセージ</h2>
+
+<pre class="brush: js">RangeError: Array length must be a finite positive integer (Edge)
+RangeError: invalid array length (Firefox)
 RangeError: Invalid array length (Chrome)
 RangeError: Invalid array buffer length (Chrome)
 </pre>
 
-<h2 id="エラータイプ">エラータイプ</h2>
+<h2 id="Error_type">エラー種別</h2>
 
 <p>{{jsxref("RangeError")}}</p>
 
-<h2 id="何が悪かったの">何が悪かったの?</h2>
+<h2 id="What_went_wrong">原因</h2>
 
-<p>以下のいずれかです：</p>
+<p>配列の長さが不正になるのは、以下のような場合です。</p>
 
 <ul>
- <li>負数や 2<sup>32</sup> 以上の値の数を {{jsxref("Array")}} や {{jsxref("ArrayBuffer")}} に設定した。</li>
- <li>{{jsxref("Array.length")}} プロパティを負数や 2<sup>32</sup> 以上の値の数に設定した。</li>
+ <li>{{jsxref("Array")}} や {{jsxref("ArrayBuffer")}} を、負の数や 2<sup>32</sup> 以上の長さで生成しようとした。</li>
+ <li>{{jsxref("Array.length")}} プロパティに負の数や 2<sup>32</sup> 以上の値を設定しようとした。</li>
 </ul>
 
-<p>なぜ <code>Array</code> と <code>ArrayBuffer</code> の length が制限されるのでしょうか？<code>配列</code>と <code>ArrayBuffer</code> の <code>length</code> プロパティは、符号なし 32-bit 整数を表し、値は 0 から 2<sup><font size="2">32-1</font></sup> の範囲の値しか保持できません。</p>
+<p>なぜ <code>Array</code> と <code>ArrayBuffer</code> の length が制限されるのでしょうか？ <code>Array</code> と <code>ArrayBuffer</code> の <code>length</code> プロパティは、符号なし 32 ビット整数で表されるため、値は 0 から 2<sup>32</sup>-1 の範囲の値しか保持できません。</p>
 
-<p>コンストラクタを使用して<code>配列</code>を生成した場合、最初の引数が<code><font face="Courier New">配列</font></code>の length と解釈されるように、リテラル表記を使用したいかもしれません。</p>
+<p>コンストラクターを使用して <code>Array</code> を生成すると、最初の引数が <code>Array</code> の長さとして解釈されるので、代わりにリテラル表記を使った方が良いかもしれません。</p>
 
-<p>さもなければ、length プロパティが設定される前、またはコンストラクタの引数として使用される前に、length を制限したいかもしれません。</p>
+<p>そうでない場合は、 length プロパティを設定する前、またはコンストラクターの引数として使用する前に、長さを制限しておくとよいでしょう。</p>
 
-<h2 id="例">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="無効なケース">無効なケース</h3>
+<h3 id="Invalid_cases">不正なケース</h3>
 
 <pre class="brush: js example-bad">new Array(Math.pow(2, 40))
 new Array(-1)
@@ -51,7 +55,7 @@ let b = new Array(Math.pow(2, 32) - 1);
 b.length = b.length + 1;         // length プロパティに 2^32 を設定
 </pre>
 
-<h3 id="有効なケース">有効なケース</h3>
+<h3 id="Valid_cases">有効なケース</h3>
 
 <pre class="brush: js example-good">[ Math.pow(2, 40) ]                     // [ 1099511627776 ]
 [ -1 ]                                  // [ -1 ]
@@ -68,10 +72,10 @@ b.length = Math.min(0xffffffff, b.length + 1);
 // which can also be written as (-1 &gt;&gt;&gt; 0)
 </pre>
 
-<h2 id="関連項目">関連項目</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Array.length")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
+  <li>{{jsxref("Array")}}</li>
+  <li>{{jsxref("Array.length")}}</li>
+  <li>{{jsxref("ArrayBuffer")}}</li>
 </ul>
