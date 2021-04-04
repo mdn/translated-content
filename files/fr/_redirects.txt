@@ -260,8 +260,6 @@
 /fr/docs/Apprendre/Tester_le_bon_fonctionnement_de_votre_site_web	/fr/docs/Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 /fr/docs/Apprendre/Threats	/fr/docs/Apprendre/Les_menaces
 /fr/docs/Apprendre/Transférer_des_fichiers_vers_un_serveur_web	/fr/docs/Learn/Common_questions/Upload_files_to_a_web_server
-/fr/docs/Apprendre/Tutoriels	/fr/docs/conflicting/Learn_6767a192c90d2c9c5179cf004fce2ee8
-/fr/docs/Apprendre/Tutoriels/Comment_construire_un_site_web	/fr/docs/conflicting/Learn_370bfb0fa23e42f4384f010341852c43
 /fr/docs/Apprendre/Utiliser_les_pages_GitHub	/fr/docs/Learn/Common_questions/Using_Github_pages
 /fr/docs/Apprendre/WebGL/Par_exemple	/fr/docs/Web/API/WebGL_API/By_example
 /fr/docs/Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs	/fr/docs/Web/API/WebGL_API/By_example/Clearing_with_colors
@@ -3116,7 +3114,6 @@
 /fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibilité	/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility
 /fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS	/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 /fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Ligne_de_commande	/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
-/fr/docs/Learn/tutorial	/fr/docs/conflicting/Learn_6767a192c90d2c9c5179cf004fce2ee8
 /fr/docs/Liste_des_composants_XPCOM	/fr/docs/XPCOM_Interface_Reference
 /fr/docs/Littéraux_gabarits	/fr/docs/Web/JavaScript/Reference/Template_literals
 /fr/docs/Localisation	/fr/docs/Glossary/Localization
