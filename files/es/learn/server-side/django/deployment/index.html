@@ -108,7 +108,7 @@ translation_of: Learn/Server-side/Django/Deployment
 
 <ul>
  <li><code>DEBUG</code>. Debería establecerse como <code>False</code> en producción (<code>DEBUG = False</code>). Así se evita que se muestre la traza de depuración sensible/confidencial y la información variable.</li>
- <li><code>SECRET_KEY</code>. Es un valor aleatorio grande utilizado para la protección CRSF etc. Es importante que la clave utilizada en producción no esté en el control fuente ni accesible desde fuera del servidor de producción. La documentación Django sugiere que debería ser cargada desde una variable de entorno o leída desde un archivo de sólo servicio (<em>serve-only file</em>).</li>
+ <li><code>SECRET_KEY</code>. Es un valor aleatorio grande utilizado para la protección CRSF etc. Es importante que la clave utilizada en producción no esté en el control de versiones ni accesible desde fuera del servidor de producción. La documentación Django sugiere que debería ser cargada desde una variable de entorno o leída desde un archivo de sólo servicio (<em>serve-only file</em>).</li>
  <li>
   <pre class="notranslate"># Read SECRET_KEY from an environment variable
 import os
