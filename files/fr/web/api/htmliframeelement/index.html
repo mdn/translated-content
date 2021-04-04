@@ -1,279 +1,110 @@
 ---
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
+tags:
+  - API
+  - HTML DOM
+  - Interface
+  - Reference
 translation_of: Web/API/HTMLIFrameElement
 ---
-<div>
 <div>{{APIRef("HTML DOM")}}</div>
-</div>
 
-<p>L'interface <strong><code>HTMLIFrameElement</code></strong> fournit des propriétés et des méthodes spéciales (en plus de celles de l'interface {{domxref("HTMLElement")}} auxquelles il peut accéder par héritage) pour manipuler la disposition et la présentation des éléments "en-ligne" d'une frame.</p>
+<p>L'interface <strong><code>HTMLIFrameElement</code></strong> fournit des propriétés et des méthodes spéciales (en plus de celles de l'interface {{domxref("HTMLElement")}} auxquelles elle peut accéder par héritage) pour manipuler la disposition et la présentation des éléments "en-ligne" d'un cadre.</p>
 
-<h2 id="Propriétés">Propriétés</h2>
+<p>{{InheritanceDiagram(600,120)}}</p>
 
-<p><em>Propriétés héritées de son parent,, {{domxref("HTMLElement")}}</em>.</p>
+<h2 id="Properties">Propriétés</h2>
+
+<p><em>Propriétés héritées de son parent, {{domxref("HTMLElement")}}</em>.</p>
 
 <dl>
- <dt>{{domxref("HTMLIFrameElement.align")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that specifies the alignment of the frame with respect to the surrounding context.</dd>
- <dt>{{domxref("HTMLIFrameElement.allowfullscreen")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("Boolean")}} that indicates whether or not the inline frame is willing to be placed into full screen mode. See <a href="/en-US/docs/DOM/Using_full-screen_mode" title="https://developer.mozilla.org/en/DOM/Using_full-screen_mode">Using full-screen mode</a> for details.</dd>
- <dt>{{domxref("HTMLIFrameElement.contentDocument")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("Document")}}, the active document in the inline frame's nested browsing context.</dd>
- <dt>{{domxref("HTMLIFrameElement.contentWindow")}} {{readonlyInline}}</dt>
- <dd>Returns a {{domxref("WindowProxy")}}, the window proxy for the nested browsing context.</dd>
- <dt>{{domxref("HTMLIFrameElement.frameborder")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that indicates whether to create borders between frames.</dd>
- <dt>{{domxref("HTMLIFrameElement.height")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("height", "iframe")}} HTML attribute, indicating the height of the frame.</dd>
- <dt>{{domxref("HTMLIFrameElement.longDesc")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that contains the URI of a long description of the frame.</dd>
- <dt>{{domxref("HTMLIFrameElement.marginHeight")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} being the height of the frame margin.</dd>
- <dt>{{domxref("HTMLIFrameElement.marginWidth")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} being the width of the frame margin.</dd>
- <dt>{{domxref("HTMLIFrameElement.name")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("name", "iframe")}} HTML attribute, containing a name by which to refer to the frame.</dd>
- <dt>{{domxref("HTMLIFrameElement.sandbox")}}</dt>
- <dd>Is a {{domxref("DOMSettableTokenList")}} that reflects the {{htmlattrxref("sandbox", "iframe")}} HTML attribute, indicating extra restrictions on the behavior of the nested content.</dd>
- <dt>{{domxref("HTMLIFrameElement.scrolling")}} {{obsolete_inline}}</dt>
- <dd>Is a {{domxref("DOMString")}} that indicates whether the browser should provide scrollbars for the frame.</dd>
- <dt>{{domxref("HTMLIFrameElement.seamless")}} {{experimental_inline}}</dt>
- <dd>Is a {{domxref("Boolean")}} that reflects the {{htmlattrxref("seamless", "iframe")}} HTML attribute, indicating that the inline frame should be rendered seamlessly within the parent document.</dd>
- <dt>{{domxref("HTMLIFrameElement.src")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("src", "iframe")}} HTML attribute, containing the address of the content to be embedded.</dd>
- <dt>{{domxref("HTMLIFrameElement.srcdoc")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that represents the content to display in the frame.</dd>
- <dt>{{domxref("HTMLIFrameElement.width")}}</dt>
- <dd>Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("width", "iframe")}} HTML attribute, indicating the width of the frame.</dd>
+  <dt>{{domxref("HTMLIFrameElement.align")}} {{obsolete_inline}}</dt>
+  <dd>Est une caîne de caractères {{domxref("DOMString")}} qui spécifie l'alignement du cadre par rapport au contexte environnant.</dd>
+  <dt>{{domxref("HTMLIFrameElement.allow")}} {{experimental_inline}}</dt>
+  <dd>Est une liste d'origines à partir desquelles le cadre est autorisé à afficher du contenu. Cet attribut accepte également les valeurs <code>self</code> et <code>src</code> qui représentent l'origine dans l'attribut src de l'iframe. La valeur par défaut est <code>src</code>.</dd>
+  <dt>{{domxref("HTMLIFrameElement.allowfullscreen")}} {{experimental_inline}}</dt>
+  <dd>Est un {{domxref("Boolean")}} indiquant si le cadre en ligne est prêt à être placé en mode plein écran. Voir <a href="/fr/docs/Web/API/Fullscreen_API">Utiliser le mode plein écran</a> pour plus de détails.</dd>
+  <dt>{{domxref("HTMLIFrameElement.allowPaymentRequest")}}</dt>
+  <dd>Est un {{domxref("Boolean")}} indiquant si l'API' <a href="/fr/docs/Web/API/Payment_Request_API">Payment Request API</a> peut être appelée à l'intérieur d'une iframe cross-origin.</dd>
+  <dt>{{domxref("HTMLIFrameElement.contentDocument")}} {{readonlyInline}}</dt>
+  <dd>Retourne un {{domxref("Document")}}, le document actif dans le contexte de navigation imbriqué du cadre en ligne.</dd>
+  <dt>{{domxref("HTMLIFrameElement.contentWindow")}} {{readonlyInline}}</dt>
+  <dd>Renvoie un {{domxref("WindowProxy")}}, la fenêtre proxy pour le contexte de navigation imbriqué.</dd>
+  <dt>{{domxref("HTMLIFrameElement.csp")}}</dt>
+  <dd>Spécifie la politique de sécurité du contenu qu'un document incorporé doit accepter d'appliquer à lui-même.</dd>
+  <dt>{{domxref("HTMLIFrameElement.frameBorder")}} {{obsolete_inline}}</dt>
+  <dd>Est une chaîne de caractères {{domxref("DOMString")}} qui indique s'il faut créer des bordures entre les cadres.</dd>
+  <dt>{{domxref("HTMLIFrameElement.height")}}</dt>
+  <dd>Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("height", "iframe")}} indiquant la hauteur du cadre.</dd>
+  <dt>{{domxref("HTMLIFrameElement.longDesc")}} {{obsolete_inline}}</dt>
+  <dd>Est une chaîne de caractères {{domxref("DOMString")}} qui contient l'URI d'une description longue du cadre.</dd>
+  <dt>{{domxref("HTMLIFrameElement.marginHeight")}} {{obsolete_inline}}</dt>
+  <dd>Est une chaîne de caractères {{domxref("DOMString")}} représentant la hauteur de la marge du cadre.</dd>
+  <dt>{{domxref("HTMLIFrameElement.marginWidth")}} {{obsolete_inline}}</dt>
+  <dd>Est une chaîne de caractères {{domxref("DOMString")}} représentant la largeur de la marge du cadre.</dd>
+  <dt>{{domxref("HTMLIFrameElement.name")}}</dt>
+  <dd>Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("name", "iframe")}} contenant un nom permettant de faire référence au cadre.</dd>
+  <dt>{{domxref("HTMLIFrameElement.featurePolicy")}} {{readonlyinline}}{{experimental_inline}}</dt>
+  <dd>Retourne l'interface {{domxref("FeaturePolicy")}} qui fournit une API simple pour l'introspection des politiques de fonctionnalité appliquées à un document spécifique.</dd>
+  <dt>{{domxref("HTMLIFrameElement.referrerPolicy")}} {{experimental_inline}}</dt>
+  <dd>Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("referrerPolicy", "iframe")}} attribut HTML indiquant le référent à utiliser lors de l'extraction de la ressource liée.</dd>
+  <dt>{{domxref("HTMLIFrameElement.sandbox")}}</dt>
+  <dd>Est un {{domxref("DOMSettableTokenList")}} qui reflète l'attribut {{htmlattrxref("sandbox", "iframe")}} indiquant des restrictions supplémentaires sur le comportement du contenu imbriqué.</dd>
+  <dt>{{domxref("HTMLIFrameElement.scrolling")}} {{obsolete_inline}}</dt>
+  <dd>Est une chaîne de caractères {{domxref("DOMString")}} qui indique si le navigateur doit fournir des barres de défilement pour le cadre.</dd>
+  <dt>{{domxref("HTMLIFrameElement.src")}}</dt>
+  <dd>Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("src", "iframe")}} contenant l'adresse du contenu à intégrer. Notez que la suppression programmatique de l'attribut src d'un <code>&lt;iframe&gt;</code> (par exemple via {{domxref("Element.removeAttribute()")}}) entraîne le chargement de <code>about:blank</code> dans le cadre dans Firefox (à partir de la version 65), les navigateurs basés sur Chromium et Safari/iOS.</dd>
+  <dt>{{domxref("HTMLIFrameElement.srcdoc")}}</dt>
+  <dd>Est une chaîne de caractères {{domxref("DOMString")}} qui représente le contenu à afficher dans le cadre.</dd>
+  <dt>{{domxref("HTMLIFrameElement.width")}}</dt>
+  <dd>Est une chaîne de caractères {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("width", "iframe")}} indiquant la largeur du cadre.</dd>
 </dl>
 
-<h2 id="Méthodes">Méthodes</h2>
+<h2 id="Methods">Méthodes</h2>
 
-<p><em>No specific method; inherits properties from its parent, {{domxref("HTMLElement")}}</em>.</p>
+<p><em>Aucune méthode spécifique ; hérite des propriétés de son parent, {{domxref("HTMLElement")}}</em>.</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "the-iframe-element.html#the-iframe-element", "HTMLIFrameElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>The following property has been added: <code>allowFullscreen</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-iframe-element", "HTMLIFrameElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>The following properties are now obsolete: <code>scrolling</code>, <code>marginWidth</code>, <code>marginHeight</code>, <code>longDesc</code>, <code>frameBorder</code>, and <code>align</code>.<br>
-    The following properties have been added: <code>srcdoc</code>, <code>sandbox</code>, <code>seamless</code>, and <code>contentWindow</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-50708718', 'HTMLIFrameElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>The <code>contentDocument</code> property has been added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-50708718', 'HTMLIFrameElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "#htmliframeelement", "HTMLIFrameElement")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>La propriété suivante a été ajoutée : <code>allowFullscreen</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', "embedded-content-0.html#the-iframe-element", "HTMLIFrameElement")}}</td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td>Les propriétés suivantes sont désormais obsolètes : <code>scrolling</code>, <code>marginWidth</code>, <code>marginHeight</code>, <code>longDesc</code>, <code>frameBorder</code> et <code>align</code>.<br>Les propriétés suivantes ont été ajoutées : <code>srcdoc</code>, <code>sandbox</code>, et <code>contentWindow</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 HTML', 'html.html#ID-50708718', 'HTMLIFrameElement')}}</td>
+      <td>{{Spec2('DOM2 HTML')}}</td>
+      <td>La propriété <code>contentDocument</code> a été ajoutée.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM1', 'level-one-html.html#ID-50708718', 'HTMLIFrameElement')}}</td>
+      <td>{{Spec2('DOM1')}}</td>
+      <td>Définition initiale.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<div>{{CompatibilityTable}}</div>
+<p>{{Compat("api.HTMLIFrameElement")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>srcdoc</code></td>
-   <td>4</td>
-   <td>{{CompatGeckoDesktop(25)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>sandbox</code></td>
-   <td>4</td>
-   <td>{{CompatGeckoDesktop(17)}} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>seamless</code> {{experimental_inline}}</td>
-   <td>4</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>contentDocument</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>8.0 (for older version use <code>HTMLIFrameElement.contentWindow.document</code> instead)</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>contentWindow</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>allowFullScreen</code> {{experimental_inline}}</td>
-   <td>17 {{property_prefix("-webkit")}}<br>
-    <em>Daily test builds only</em></td>
-   <td>{{compatGeckoDesktop(9.0)}} {{property_prefix("-moz")}}<br>
-    {{compatGeckoDesktop(18.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(1.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>srcdoc</code></td>
-   <td>4</td>
-   <td>{{CompatGeckoMobile(25)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>sandbox</code></td>
-   <td>4</td>
-   <td>{{CompatGeckoMobile(17)}} [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>seamless</code> {{experimental_inline}}</td>
-   <td>4</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>contentDocument</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>contentWindow</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>allowFullScreen</code> {{experimental_inline}}</td>
-   <td>17 {{property_prefix("-webkit")}}<br>
-    <em>Daily test builds only</em></td>
-   <td>{{compatGeckoMobile(9.0)}} {{property_prefix("-moz")}}<br>
-    {{compatGeckoMobile(18.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Previously, the type of <code>sandbox</code> was a {{domxref("DOMString")}} instead of a {{domxref("DOMSettableTokenList")}}. This has been fixed with <a href="/en-US/Firefox/Releases/29/Site_Compatibility">Gecko 29.0</a> {{geckoRelease(29)}}) ({{bug(845067)}}). Other browsers may still implement the property as <code>DOMString</code> since it was a late change in the specification.</p>
-
-<h3 id="Firefox_OS_notes">Firefox OS notes</h3>
-
-<p>Firefox OS extend the <code>HTMLIFrameElement</code> interface to support browser iframes. Those extra methods are made for <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Security/Application_security" title="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS/Security/Application_security">privileged applications</a> which want to implement a browser like application for Firefox OS devices. Not that in that context, the <code>HTMLIFrameElement</code> also inherit methods from the {{domxref("EventTarget")}} interface. To learn how to implement such applications, see the <a href="/en-US/docs/WebAPI/Browser" title="/en-US/docs/WebAPI/Browser">Using the Browser API</a> article.</p>
-
-<dl>
- <dt>{{domxref("HTMLIFrameElement.setVisible()","HTMLIFrameElement.setVisible(visible)")}}</dt>
- <dd>Allows the parent to explicitly change the visibility state of the browser iframes.</dd>
- <dt>{{domxref("HTMLIFrameElement.getVisible()","HTMLIFrameElement.getVisible()")}}</dt>
- <dd>Returns the current visibility state of the browser iframe. Returns a {{domxref("DOMRequest")}}.</dd>
- <dt>{{domxref("HTMLIFrameElement.sendMouseEvent()","HTMLIFrameElement.sendMouseEvent(type, x, y, button, clickCount, modifiers)")}}</dt>
- <dd>Send a mouse event to the browser iframe.</dd>
- <dt>{{domxref("HTMLIFrameElement.sendTouchEvent()","HTMLIFrameElement.sendTouchEvent(type, identifiers, touchesX, touchesY,radiisX, radiisY, rotationAngles, forces,count, modifiers)")}}</dt>
- <dd>Send a touch event to the browser iframe.</dd>
- <dt>{{domxref("HTMLIFrameElement.goBack()","HTMLIFrameElement.goBack()")}}</dt>
- <dd>Navigate the browser iframe back.</dd>
- <dt>{{domxref("HTMLIFrameElement.goForward()","HTMLIFrameElement.goForward()")}}</dt>
- <dd>Navigate the browser iframe forward.</dd>
- <dt>{{domxref("HTMLIFrameElement.reload()","HTMLIFrameElement.reload()")}}</dt>
- <dd>Reload the browser iframe.</dd>
- <dt>{{domxref("HTMLIFrameElement.stop()","HTMLIFrameElement.stop()")}}</dt>
- <dd>Stop loading the browser iframe content.</dd>
- <dt>{{domxref("HTMLIFrameElement.purgeHistory()","HTMLIFrameElement.purgeHistory()")}}</dt>
- <dd>Allows to remove the all browsing history of the browser iframe.</dd>
- <dt>{{domxref("HTMLIFrameElement.getScreenshot()","HTMLIFrameElement.getScreenshot(maxWidth, maxHeight)")}}</dt>
- <dd>Allows to take a screenshot of the browser iframe's content, scaled to fit within <code>maxWidth</code> and <code>maxHeight</code> pixels. Returns a {{domxref("DOMRequest")}}.</dd>
- <dt>{{domxref("HTMLIFrameElement.addNextPaintListener()","HTMLIFrameElement.addNextPaintListener()")}}</dt>
- <dd>Add a listener to recieve an event the first time the browser iframe is ready to paint (This listener is sent an event after the first {{event("MozAfterPaint")}} event is dispacted in the iframe.)</dd>
- <dt>{{domxref("HTMLIFrameElement.removeNextPaintListener()","HTMLIFrameElement.removeNextPaintListener()")}}</dt>
- <dd>Remove the listener added by the previous function.</dd>
- <dt>{{domxref("HTMLIFrameElement.getCanGoBack()","HTMLIFrameElement.getCanGoBack()")}}</dt>
- <dd>Returns a {{domxref("DOMRequest")}} which <code>result</code> is a boolean indicating wether the browser iframe can be navigate backward.</dd>
- <dt>{{domxref("HTMLIFrameElement.getCanGoForward()","HTMLIFrameElement.getCanGoForward()")}}</dt>
- <dd>Returns a {{domxref("DOMRequest")}} which <code>result</code> is a boolean indicating wether the browser iframe can be navigate forward.</dd>
-</dl>
-
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
- <li>The HTML element implementing this interface: {{HTMLElement("iframe")}}</li>
+  <li>L'élément HTML implémentant cette interface : {{HTMLElement("iframe")}}</li>
 </ul>

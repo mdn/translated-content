@@ -5183,12 +5183,6 @@
       "ChanMyeong"
     ]
   },
-  "Web/API/ParentNode/childElementCount": {
-    "modified": "2020-10-24T00:56:18.797Z",
-    "contributors": [
-      "zzoPark"
-    ]
-  },
   "Web/API/ParentNode/children": {
     "modified": "2020-10-15T22:08:09.823Z",
     "contributors": [
@@ -18703,6 +18697,12 @@
     "contributors": [
       "DeadIntegral",
       "Sheppy"
+    ]
+  },
+  "Web/API/Element/childElementCount": {
+    "modified": "2020-10-24T00:56:18.797Z",
+    "contributors": [
+      "zzoPark"
     ]
   }
 }

@@ -145,7 +145,7 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
  </dd>
 </dl>
 
-<h2 id="Spécifications">Spécifications</h2>
+<h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
  <thead>
@@ -159,103 +159,16 @@ document.addEventListener("visibilitychange", handleVisibilityChange, false);
   <tr>
    <td>{{SpecName('Page Visibility API')}}</td>
    <td>{{Spec2('Page Visibility API')}}</td>
-   <td>Initial definition.</td>
+   <td>Définition initiale.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<div>{{CompatibilityTable}}</div>
+<p>{{Compat("api.Document.visibilityState")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Support de base</td>
-   <td>13 {{property_prefix("webkit")}}<br>
-    33</td>
-   <td>{{CompatGeckoDesktop(18)}}<sup>[2]</sup></td>
-   <td>10</td>
-   <td>12.10<sup>[1]</sup></td>
-   <td>7</td>
-  </tr>
-  <tr>
-   <td><code>onvisibilitychange</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(56)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Retardement à budget</td>
-   <td>57</td>
-   <td>{{CompatGeckoDesktop(58)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support de base</td>
-   <td>5.0<sup>[3]</sup></td>
-   <td>{{CompatGeckoMobile(18)}}<sup>[2]</sup></td>
-   <td>10</td>
-   <td>12.10<sup>[1]</sup></td>
-   <td>7<sup>[4]</sup></td>
-  </tr>
-  <tr>
-   <td><code>onvisibilitychange</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(56)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Retardement à budget</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(58)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] N’émet pas d’évènement {{event("visibilitychange")}} quand la fenêtre du navigateur est minimisée, ni ne passe <code>hidden</code> à <code>true</code>.</p>
-
-<p>[2] De Firefox 10 à Firefox 51 inclus, cette propriété pouvait être utilisée avec le préfixe <code>moz</code>.</p>
-
-<p>[3] Android 4.4 supporte cette fonctionnalité avec le préfixe <code>webkit</code>.</p>
-
-<p>[4] À partir d’iOS 11.0.2, les valeurs sont incorrectes en mode standalone (quand vous pressez « ajouter à l’écran d’accueil ») et quand l’écran est verrouillé (le bouton d’alimentation a été pressé). La valeur pour <code>hidden</code> est <code>false</code> et <code>visibilityState</code> est <code>visible</code>.</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
  <li>La description de <a href="http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx" title="Page Visibility on IEBlog">l’API Page Visibility</a> sur l’IEBlog</li>

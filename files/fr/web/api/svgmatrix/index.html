@@ -215,54 +215,29 @@ translation_of: Web/API/SVGMatrix
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilité avec les navigateurs</h2>
+<h2 id="Exceptions">Exceptions</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+<p>Une {{domxref("DOMException")}} avec le code <code>NO_MODIFICATION_ALLOWED_ERR</code> est levée lors d'une tentative de mise à jour d'un attribut en lecture seule ou lorsque l'objet lui-même est en lecture seule.</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Support basique</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>9</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("SVG1.1", "coords.html#InterfaceSVGMatrix", "SVGMatrix")}}</td>
+      <td>{{Spec2("SVG1.1")}}</td>
+      <td>Définition initiale</td>
+    </tr>
  </tbody>
 </table>
-</div>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support basique</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="Browser_compatibility"">Compatibilité des navigateurs</h2>
 
-<p> </p>
+<p>{{Compat("api.SVGMatrix")}}</p>

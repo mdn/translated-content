@@ -25,109 +25,66 @@ translation_of: Web/API/Node/replaceChild
  <li><code>replaceNode</code> est le nœud remplacé. C'est le même nœud que <code>oldChild</code>.</li>
 </ul>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="comment token">// &lt;div&gt;</span>
-<span class="comment token">//  &lt;span id="childSpan"&gt;foo bar&lt;/span&gt;</span>
-<span class="comment token">// &lt;/div&gt;</span>
+<pre class="brush:js">// Étant donné que :
+// &lt;div&gt;
+//   &lt;span id="childSpan"&gt;foo bar&lt;/span&gt;
+// &lt;/div&gt;
 
-<span class="comment token">// crée un noeud élément vide</span>
-<span class="comment token">// sans ID, aucun attribut ni contenu</span>
-<span class="keyword token">var</span> sp1 <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"span"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+// Crée un nœud d'élément vide
+// sans ID, sans attributs et sans contenu
+var sp1 = document.createElement("span");
 
-<span class="comment token">// lui donne un attribut id appelé 'newSpan'</span>
-sp1<span class="punctuation token">.</span>id <span class="operator token">=</span> <span class="string token">"newSpan"</span><span class="punctuation token">;</span>
+// Donne un attribut id appelé "newSpan"
+sp1.id = "newSpan";
 
-<span class="comment token">// crée un contenu pour le nouvel élément.</span>
-<span class="keyword token">var</span> sp1_content <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createTextNode</span><span class="punctuation token">(</span><span class="string token">"new replacement span element."</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+// Crée du contenu pour le nouvel élément
+var sp1_content = document.createTextNode("nouvel élément span de remplacement.");
 
-<span class="comment token">// applique ce contenu au nouvel élément</span>
-sp1<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>sp1_content<span class="punctuation token">)</span><span class="punctuation token">;</span>
+// Applique ce contenu au nouvel élément
+sp1.appendChild(sp1_content);
 
-<span class="comment token">// construit une référence au noeud existant devant être remplacé</span>
-<span class="keyword token">var</span> sp2 <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"childSpan"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> parentDiv <span class="operator token">=</span> sp2<span class="punctuation token">.</span>parentNode<span class="punctuation token">;</span>
+// Construit une référence au nœud existant à remplacer
+var sp2 = document.getElementById("childSpan");
+var parentDiv = sp2.parentNode;
 
-<span class="comment token">// remplace le noeud existant sp2 avec le nouvel élément span sp1</span>
-parentDiv<span class="punctuation token">.</span><span class="function token">replaceChild</span><span class="punctuation token">(</span>sp1<span class="punctuation token">,</span> sp2<span class="punctuation token">)</span><span class="punctuation token">;</span>
+// Remplacer le noeud existant sp2 par le nouvel élément span sp1
+parentDiv.replaceChild(sp1, sp2);
 
-<span class="comment token">// résultat :</span>
-<span class="comment token">// &lt;div&gt;</span>
-<span class="comment token">//   &lt;span id="newSpan"&gt;nouvel élément span de remplacement.&lt;/span&gt;</span>
-<span class="comment token">// &lt;/div&gt;</span></code></pre>
+// Résultat :
+// &lt;div&gt;
+//   &lt;span id="newSpan"&gt;nouvel élément span de remplacement.&lt;/span&gt;
+// &lt;/div&gt;
+</pre>
 
-<div> </div>
+<h2 id="Specifications">Spécifications</h2>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
-
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-replaceChild">DOM Level 1 Core: replaceChild</a></li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-785887307">DOM Level 2 Core : replaceChild</a> — <small><a class="external" href="http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-785887307">traduction en français</a> (non normative)</small></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-785887307">DOM Level 3 Core: replaceChild</a></li>
-</ul>
-
-<p> </p>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Edge</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(1.0)}}</td>
-   <td>{{CompatGeckoDesktop(1)}}</td>
-   <td>    IE6 (Maybe Earlier)</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatOpera(1.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
+<table class="standard-table">
+	<thead>
+		<tr>
+			<th scope="col">Spécification</th>
+			<th scope="col">Statut</th>
+			<th scope="col">Commentaire</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName("DOM WHATWG", "#dom-node-replacechild", "Node: replaceChild")}}
+			</td>
+			<td>{{Spec2("DOM WHATWG")}}</td>
+			<td></td>
+		</tr>
+	</tbody>
 </table>
-</div>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Edge Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(1)}}</td>
-   <td>IE6 (Maybe Earlier)</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatOperaMobile(1.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatChrome(1.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<h2 id="See_also" name="See_also">Voir aussi</h2>
+<p>{{Compat("api.Node.replaceChild")}}</p>
+
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
  <li>{{domxref("Node.removeChild")}}</li>
+ <li>{{domxref("ChildNode.replaceWith")}}</li>
 </ul>
-
-<p> </p>

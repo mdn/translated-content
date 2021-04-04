@@ -5762,12 +5762,6 @@
       "tureey"
     ]
   },
-  "Web/API/Node/namespaceURI": {
-    "modified": "2019-03-23T22:08:52.990Z",
-    "contributors": [
-      "tureey"
-    ]
-  },
   "Web/API/Node/nextSibling": {
     "modified": "2020-10-15T21:27:47.909Z",
     "contributors": [
@@ -5875,12 +5869,6 @@
     "modified": "2020-10-15T22:24:28.452Z",
     "contributors": [
       "Kyuoraku"
-    ]
-  },
-  "Web/API/ParentNode/childElementCount": {
-    "modified": "2019-03-23T22:43:24.721Z",
-    "contributors": [
-      "joselix"
     ]
   },
   "Web/API/ParentNode/children": {
@@ -23742,6 +23730,18 @@
     "modified": "2019-03-23T22:54:50.239Z",
     "contributors": [
       "Diferno"
+    ]
+  },
+  "conflicting/Web/API/Element/namespaceURI": {
+    "modified": "2019-03-23T22:08:52.990Z",
+    "contributors": [
+      "tureey"
+    ]
+  },
+  "Web/API/Element/childElementCount": {
+    "modified": "2019-03-23T22:43:24.721Z",
+    "contributors": [
+      "joselix"
     ]
   }
 }
