@@ -247,7 +247,6 @@
 /fr/docs/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 /fr/docs/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs	/fr/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 /fr/docs/Apprendre/Le_fonctionnement_des_liens_sur_le_Web	/fr/docs/Learn/Common_questions/What_are_hyperlinks
-/fr/docs/Apprendre/Mettre_en_place_un_environnement_de_travail	/fr/docs/conflicting/Learn/Common_questions/set_up_a_local_testing_server
 /fr/docs/Apprendre/Mécanismes_Web	/fr/docs/Learn/Common_questions
 /fr/docs/Apprendre/Outils_et_tests	/fr/docs/Learn/Tools_and_testing
 /fr/docs/Apprendre/Outils_et_tests/GitHub	/fr/docs/Learn/Tools_and_testing/GitHub
