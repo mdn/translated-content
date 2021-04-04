@@ -114,7 +114,6 @@
 /fr/docs/Apprendre/CSS/CSS_layout/Normal_Flow	/fr/docs/Learn/CSS/CSS_layout/Normal_Flow
 /fr/docs/Apprendre/CSS/CSS_layout/Prise_En_Charge_Des_Anciens_Navigateurs	/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers
 /fr/docs/Apprendre/CSS/CSS_layout/Responsive_Design	/fr/docs/Learn/CSS/CSS_layout/Responsive_Design
-/fr/docs/Apprendre/CSS/CSS_properties	/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors
 /fr/docs/Apprendre/CSS/Comment	/fr/docs/Learn/CSS/Howto
 /fr/docs/Apprendre/CSS/Comment/Créer_de_belles_boîtes	/fr/docs/Learn/CSS/Howto/create_fancy_boxes
 /fr/docs/Apprendre/CSS/Comment/Generated_content	/fr/docs/Learn/CSS/Howto/Generated_content
@@ -141,7 +140,6 @@
 /fr/docs/Apprendre/CSS/Les_bases/Le_fonctionnement_de_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /fr/docs/Apprendre/CSS/Les_bases/Le_modèle_de_boîte	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 /fr/docs/Apprendre/CSS/Les_bases/Les_sélecteurs	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/fr/docs/Apprendre/CSS/Les_propriétés_CSS	/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors
 /fr/docs/Apprendre/CSS/Utiliser_CSS_dans_une_page_web	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works
 /fr/docs/Apprendre/CSS/formatage_texte_CSS	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_9e7ba587262abbb02304cbc099c1f0d8
 /fr/docs/Apprendre/CSS/styliser_boites	/en-US/docs/Learn/CSS/Building_blocks
@@ -446,14 +444,12 @@
 /fr/docs/CSS/Premiers_pas/Fonctionnement_de_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_cdccf923f6bd040e8d243ee03d223ddc
 /fr/docs/CSS/Premiers_pas/Graphiques_SVG	/fr/docs/Web/SVG/Tutorial/SVG_and_CSS
 /fr/docs/CSS/Premiers_pas/JavaScript	/fr/docs/conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-/fr/docs/CSS/Premiers_pas/Les_sélecteurs	/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors_9bc80fea302c91cd60fb72c4e83c83e9
 /fr/docs/CSS/Premiers_pas/Listes	/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2
 /fr/docs/CSS/Premiers_pas/Mise_en_page	/fr/docs/conflicting/Learn/CSS/CSS_layout
 /fr/docs/CSS/Premiers_pas/Médias	/fr/docs/Web/Progressive_web_apps/Responsive/Media_types
 /fr/docs/CSS/Premiers_pas/Pourquoi_utiliser_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_ecbda2160290b96c02dcfa8276c0333a
 /fr/docs/CSS/Premiers_pas/Présentation_des_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c
 /fr/docs/CSS/Premiers_pas/Styles_de_texte	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b
-/fr/docs/CSS/Premiers_pas/Sélecteurs	/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors_9bc80fea302c91cd60fb72c4e83c83e9
 /fr/docs/CSS/Premiers_pas/Tableaux	/fr/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
 /fr/docs/CSS/Propriétés_raccourcies	/fr/docs/Web/CSS/Shorthand_properties
 /fr/docs/CSS/Pseudo-classes	/fr/docs/Web/CSS/Pseudo-classes
@@ -767,7 +763,6 @@
 /fr/docs/CSS:Premiers_pas:Graphiques_SVG	/fr/docs/Web/SVG/Tutorial/SVG_and_CSS
 /fr/docs/CSS:Premiers_pas:Interfaces_utilisateur_XUL	/fr/docs/CSS/Premiers_pas/Interfaces_utilisateur_XUL
 /fr/docs/CSS:Premiers_pas:JavaScript	/fr/docs/conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-/fr/docs/CSS:Premiers_pas:Les_sélecteurs	/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors_9bc80fea302c91cd60fb72c4e83c83e9
 /fr/docs/CSS:Premiers_pas:Liaisons_XBL	/fr/docs/CSS/Premiers_pas/Liaisons_XBL
 /fr/docs/CSS:Premiers_pas:Listes	/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2
 /fr/docs/CSS:Premiers_pas:Mise_en_page	/fr/docs/conflicting/Learn/CSS/CSS_layout
@@ -775,7 +770,6 @@
 /fr/docs/CSS:Premiers_pas:Pourquoi_utiliser_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_ecbda2160290b96c02dcfa8276c0333a
 /fr/docs/CSS:Premiers_pas:Présentation_des_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c
 /fr/docs/CSS:Premiers_pas:Styles_de_texte	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b
-/fr/docs/CSS:Premiers_pas:Sélecteurs	/fr/docs/conflicting/Learn/CSS/Building_blocks/Selectors_9bc80fea302c91cd60fb72c4e83c83e9
 /fr/docs/CSS:Premiers_pas:Tableaux	/fr/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
 /fr/docs/CSS:Valeur_calculée	/fr/docs/Web/CSS/computed_value
 /fr/docs/CSS:Valeur_initiale	/fr/docs/Web/CSS/initial_value

@@ -14,13 +14,13 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 ---
 <p>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}</p>
 
-<p>Voyons maintenant les sélecteurs de<span> <strong>pseudo-classes</strong> et de <strong>pseudo-éléments</strong>. Il en existe un grand nombre, ces sélecteurs sont souvent assez spécifiques. Une fois que vous aurez compris comment les utiliser, revenez consulter leur liste pour voir si quelque chose peut fonctionner dans la tâche que vous essayez d'accomplir. Une fois encore, vérifiez la prise en charge par les navigateurs sur la page MDN associée à chaque sélecteur.</span></p>
+<p>Voyons maintenant les sélecteurs de<span> <strong>pseudo-classes</strong> et de <strong>pseudo-éléments</strong>. Il en existe un grand nombre, ces sélecteurs sont souvent assez spécifiques. Une fois que vous aurez compris comment les utiliser, revenez consulter leur liste pour voir si quelque chose peut fonctionner dans la tâche que vous essayez d'accomplir. Une fois encore, vérifiez la prise en charge par les navigateurs sur la page MDN associée à chaque sélecteur.</span></p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Maîtrise élémentaire de l'informatique, <a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base">suite logicielle de base installée</a>, compétences élémentaires pour <a href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers">travailler avec des fichiers</a>, connaissance de base du HTML  (cf. <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML">Introduction à HTML</a>), et une idée de <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works">Comment fonctionne CSS</a>.</td>
+   <td>Maîtrise élémentaire de l'informatique, <a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base">suite logicielle de base installée</a>, compétences élémentaires pour <a href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers">travailler avec des fichiers</a>, connaissance de base du HTML  (cf. <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML">Introduction à HTML</a>), et une idée de <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works">Comment fonctionne CSS</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
@@ -29,25 +29,25 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
  </tbody>
 </table>
 
-<h2 id="Quest_ce_quune_pseudo-classe">Qu'est ce qu'une pseudo-classe ?</h2>
+<h2 id="What_is_a_pseudo-class">Qu'est ce qu'une pseudo-classe ?</h2>
 
-<p>Une pseudo-classe est un sélecteur ciblant des éléments dans un état spécifique, par ex. le premier élément d'un type, ou un élément survolé par le pointeur de la souris. Leur comportement correspond à celui d'une classe, mais qui ne s'appliquerait que partiellement. On gagne ainsi en flexibilité, en éliminant du code inutile. Le résultat est plus facile à maintenir.</p>
+<p>Une pseudo-classe est un sélecteur ciblant des éléments dans un état spécifique, par ex. le premier élément d'un type, ou un élément survolé par le pointeur de la souris. Leur comportement correspond à celui d'une classe, mais qui ne s'appliquerait que partiellement. On gagne ainsi en flexibilité, en éliminant du code inutile. Le résultat est plus facile à maintenir.</p>
 
-<p>Les pseudo-classes sont signalées par un mot clé commençant par deux points <code>:</code></p>
+<p>Les pseudo-classes sont signalées par un mot clé commençant par deux points <code>:</code></p>
 
 <pre class="notranslate">:<em>pseudo-class-name</em></pre>
 
-<h3 id="Exemple_dune_pseudo-classe_élémentaire">Exemple d'une pseudo-classe élémentaire </h3>
+<h3 id="Simple_pseudo-class_example">Exemple d'une pseudo-classe élémentaire </h3>
 
-<p>Voyons cela dans un premier exemple. Pour agrandir et mettre en gras le texte du premier paragraphe d'un article, on pourrait attribuer une classe à ce paragraphe, puis lui ajouter du CSS, comme ci-dessous :</p>
+<p>Voyons cela dans un premier exemple. Pour agrandir et mettre en gras le texte du premier paragraphe d'un article, on pourrait attribuer une classe à ce paragraphe, puis lui ajouter du CSS, comme ci-dessous :</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/first-child.html", '100%', 800)}}</p>
 
-<p>Mais cette solution est difficile à maintenir — que se passe-t-il si un nouveau paragraphe est ajouté en haut du document ? Il faut dans ce cas déplacer manuellement la classe vers le nouveau paragraphe. Une solution plus souple est d'utiliser le sélecteur de pseudo-classe {{cssxref (": first-child")}} — cela cible <em>dans tous les cas</em> le premier élément enfant de l'article : plus nécessaire d'éditer le code HTML (particulièrement utile en particulier quand le code HTML est généré par un CMS.)</p>
+<p>Mais cette solution est difficile à maintenir — que se passe-t-il si un nouveau paragraphe est ajouté en haut du document ? Il faut dans ce cas déplacer manuellement la classe vers le nouveau paragraphe. Une solution plus souple est d'utiliser le sélecteur de pseudo-classe {{cssxref (": first-child")}} — cela cible <em>dans tous les cas</em> le premier élément enfant de l'article : plus nécessaire d'éditer le code HTML (particulièrement utile en particulier quand le code HTML est généré par un CMS.)</p>
 
 <p>{{EmbedGHLiveSample ("css-examples/learn/selectors/first-child2.html", '100%', 700)}}</p>
 
-<p>Toutes les pseudo-classes se comportent de la même manière. Elles ciblent les éléments du document dans un état donné, comme si vous aviez ajouté une classe dans votre code HTML. Jetez un œil à quelques exemples sur MDN :</p>
+<p>Toutes les pseudo-classes se comportent de la même manière. Elles ciblent les éléments du document dans un état donné, comme si vous aviez ajouté une classe dans votre code HTML. Jetez un œil à quelques exemples sur MDN :</p>
 
 <ul>
  <li><code><a href="/en-US/docs/Web/CSS/:last-child">:last-child</a></code></li>
@@ -55,28 +55,28 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
  <li><code><a href="/en-US/docs/Web/CSS/:invalid">:invalid</a></code></li>
 </ul>
 
-<h3 id="Pseudo-classes_daction_utilisateur">Pseudo-classes d'action utilisateur</h3>
+<h3 id="User-action_pseudo_classes">Pseudo-classes d'action utilisateur</h3>
 
 <p>Certaines pseudo-classes ne s'appliquent que lorsque l'utilisateur interagit avec le document d'une manière ou d'une autre. Ces pseudo-classes d'action utilisateur, parfois appelées <em>pseudo-classes dynamiques</em>, agissent comme si une classe avait été ajoutée à l'élément lorsque l'utilisateur interagit avec lui. Par exemple :</p>
 
-<p><code><a href="/en-US/docs/Web/CSS/:hover">:hover</a></code> — mentionné ci-dessus ; s'applique quand l'utilisateur déplace son pointeur sur un élément, généralement un lien.<br>
- <code><a href="/en-US/docs/Web/CSS/:focus">:focus</a></code> — s'applique uniquement si l'utilisateur concentre l'élément à l'aide des commandes du clavier.</p>
+<p><code><a href="/en-US/docs/Web/CSS/:hover">:hover</a></code> — mentionné ci-dessus ; s'applique quand l'utilisateur déplace son pointeur sur un élément, généralement un lien.<br>
+ <code><a href="/en-US/docs/Web/CSS/:focus">:focus</a></code> — s'applique uniquement si l'utilisateur concentre l'élément à l'aide des commandes du clavier.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/hover.html", '100%', 500)}}</p>
 
-<h2 id="Quest_ce_quun_pseudo-élément">Qu'est ce qu'un pseudo-élément ?</h2>
+<h2 id="What_is_a_pseudo-element">Qu'est ce qu'un pseudo-élément ?</h2>
 
 <p>Les pseudo-éléments se comportent de manière similaire, même s'ils se comportent comme si vous aviez ajouté un tout nouvel élément HTML dans le balisage, au lieu d'appliquer une classe à des éléments existants. Les pseudo-éléments commencent avec un double deux-points <code>::</code>.</p>
 
 <pre class="notranslate"><em>::pseudo-element-name</em></pre>
 
 <div class="blockIndicator note">
-<p><strong>Note </strong>: Certains anciens pseudo-éléments utilisaient un simple deux-points, vous pouvez donc parfois rencontrer cette syntaxe dans du code ou des exemples. Les navigateurs modernes supportent les anciens pseudo-éléments avec un simple ou double deux-points pour assurer la compatibilité.</p>
+<p><strong>Note </strong>: Certains anciens pseudo-éléments utilisaient un simple deux-points, vous pouvez donc parfois rencontrer cette syntaxe dans du code ou des exemples. Les navigateurs modernes supportent les anciens pseudo-éléments avec un simple ou double deux-points pour assurer la compatibilité.</p>
 </div>
 
 <p>Par exemple, si vous souhaitez sélectionner la première ligne d'un paragraphe, vous pouvez l'entourer d'un élément &lt;span&gt; et utiliser un sélecteur d'éléments ; cependant, cela échouerait si le nombre de mots que vous avez entourés était plus long ou plus court que la largeur de l'élément parent. Comme nous avons tendance à ne pas savoir combien de mots tiendront sur une ligne - étant donné que cela peut varier si la largeur de l'écran ou la taille de la police change - il est impossible de le faire de manière robuste en ajoutant du HTML.</p>
 
-<p>Le pseudo-sélecteur d'éléments <code>::first-line</code>  le fera pour vous de manière fiable - même si le nombre de mots augmente ou diminue, il ne sélectionnera que la première ligne.</p>
+<p>Le pseudo-sélecteur d'éléments <code>::first-line</code>  le fera pour vous de manière fiable - même si le nombre de mots augmente ou diminue, il ne sélectionnera que la première ligne.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/first-line.html", '100%', 800)}}</p>
 
@@ -84,7 +84,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 
 <p>Vous pouvez voir que cela sélectionne la première ligne des deux paragraphes.</p>
 
-<h2 id="Combiner_pseudo-classes_et_pseudo-éléments">Combiner pseudo-classes et pseudo-éléments</h2>
+<h2 id="Combining_pseudo-classes_and_pseudo-elements">Combiner pseudo-classes et pseudo-éléments</h2>
 
 <p>Si vous souhaitez mettre en gras la première ligne du premier paragraphe, vous pouvez enchaîner les sélecteurs <code>:first-child</code> et <code>::first-line</code> Essayez de modifier l'exemple précédent en direct pour qu'il utilise le CSS suivant. Nous souhaitons sélectionner la première ligne du premier élément <code>&lt;p&gt;</code>, qui se trouve à l'intérieur d'un élément <code>&lt;article&gt;</code></p>
 
@@ -93,11 +93,11 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
   font-weight: bold;
 }</code></pre>
 
-<h2 id="Générer_du_contenu_avec_before_et_after">Générer du contenu avec ::before et ::after</h2>
+<h2 id="Generating_content_with_before_and_after">Générer du contenu avec ::before et ::after</h2>
 
 <p>Il existe quelques pseudo-éléments spéciaux, qui sont utilisés avec la propriété <code><a href="/en-US/docs/Web/CSS/content">content</a></code> pour insérer du contenu dans votre document en utilisant le CSS.</p>
 
-<p>Vous pouvez les utiliser pour insérer une chaîne de texte, comme dans l'exemple ci-dessous. Essayez de changer la valeur du texte de la propriété {{cssxref("content")}} et vous verrez qu'elle change en sortie. Vous pouvez également changer le pseudo-élément <code>::before</code> en  <code>::after</code> et voir le texte inséré à la fin de l'élément au lieu du début.</p>
+<p>Vous pouvez les utiliser pour insérer une chaîne de texte, comme dans l'exemple ci-dessous. Essayez de changer la valeur du texte de la propriété {{cssxref("content")}} et vous verrez qu'elle change en sortie. Vous pouvez également changer le pseudo-élément <code>::before</code> en  <code>::after</code> et voir le texte inséré à la fin de l'élément au lieu du début.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/before.html", '100%', 400)}}</p>
 
@@ -109,15 +109,15 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 
 <p>Ces pseudo-éléments sont aussi fréquemment utilisés pour insérer une chaîne vide, qui peut ensuite être stylisée comme n'importe quel élément de la page.</p>
 
-<p>Dans l'exemple suivant, nous avons ajouté une chaîne vide en utilisant le e pseudo-élément <code>::before</code> pseudo-element. Nous l'avons défini en <code>display: block</code> afin de pouvoir la styliser avec une largeur et une hauteur. Nous utilisons ensuite le CSS pour la styliser comme n'importe quel élément. Vous pouvez jouer avec le CSS et modifier son apparence et son comportement.</p>
+<p>Dans l'exemple suivant, nous avons ajouté une chaîne vide en utilisant le e pseudo-élément <code>::before</code> pseudo-element. Nous l'avons défini en <code>display: block</code> afin de pouvoir la styliser avec une largeur et une hauteur. Nous utilisons ensuite le CSS pour la styliser comme n'importe quel élément. Vous pouvez jouer avec le CSS et modifier son apparence et son comportement.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/selectors/before-styled.html", '100%', 500)}}</p>
 
 <p>L'utilisation des pseudo-éléments <code>::before</code> et <code>::after</code> avec la propriété <code>content</code> est appelée "Generated Content" en CSS, et vous verrez souvent cette technique utilisée pour diverses tâches. Un bon exemple est le site <a href="http://www.cssarrowplease.com/">CSS Arrow Please</a>, qui vous aide à générer une flèche avec le CSS. Examinez le CSS lorsque vous créez votre flèche et vous verrez les pseudo-éléments {{cssxref("::before")}} and {{cssxref("::after")}}utilisés. Chaque fois que vous voyez ces sélecteurs, regardez la propriété {{cssxref("content")}} pour voir ce qui est ajouté au document.</p>
 
-<h2 id="Section_de_référence">Section de référence</h2>
+<h2 id="Reference_section">Section de référence</h2>
 
-<p>Il existe un grand nombre de pseudo-classes et pseudo-éléments, une bonne liste de références est donc utile. Vous trouverez ci-dessous des tableaux les répertoriant, avec pour chacun le lien vers la page de référence sur MDN. Vous y trouverez toutes les informations sur leur utilisation.</p>
+<p>Il existe un grand nombre de pseudo-classes et pseudo-éléments, une bonne liste de références est donc utile. Vous trouverez ci-dessous des tableaux les répertoriant, avec pour chacun le lien vers la page de référence sur MDN. Vous y trouverez toutes les informations sur leur utilisation.</p>
 
 <h3 id="Pseudo-classes">Pseudo-classes</h3>
 
@@ -332,7 +332,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
  </tbody>
 </table>
 
-<h3 id="Pseudo-éléments">Pseudo-éléments</h3>
+<h3 id="Pseudo-elements">Pseudo-éléments</h3>
 
 <table class="standard-table">
  <thead>
@@ -375,7 +375,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}</p>
 
-<h2 id="Dans_ce_cours">Dans ce cours</h2>
+<h2 id="In_this_module">Dans ce cours</h2>
 
 <ol>
  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
