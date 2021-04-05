@@ -96,31 +96,31 @@ alertBtn.addEventListener('click', () =&gt;
   <p>D'accord, dans notre cas, c'est laid et nous simulons l'effet de blocage, mais il s'agit d'un problème courant que les développeurs d'applications réelles se battent sans cesse pour l'atténuer.</p>
 </div>
 
-<p>Pourquoi ? La réponse est que le JavaScript, de manière générale, est <strong>single-threaded</strong> « à fil d'exécution unique ». À ce stade, nous devons introduire le concept de <strong>threads</strong>.</p>
+<p>Pourquoi ? La réponse est que le JavaScript, de manière générale, est <strong>single-threaded</strong> « à processus unique ». À ce stade, nous devons introduire le concept de <strong>threads</strong>.</p>
 
-<h2 id="Threads">Les fils d'exécution</h2>
+<h2 id="Threads">Les processus</h2>
 
-<p>Un <strong>thread</strong> est fondamentalement un processus unique qu'un programme peut utiliser pour accomplir des tâches. Chaque fil d'exécution ne peut effectuer qu'une seule tâche à la fois :</p>
+<p>Un <strong>thread</strong> est fondamentalement un processus unique qu'un programme peut utiliser pour accomplir des tâches. Chaque processus ne peut effectuer qu'une seule tâche à la fois :</p>
 
 <pre>Tâche A --&gt; Tâche B --&gt; Tâche C</pre>
 
 <p>Chaque tâche sera exécutée de manière séquentielle ; une tâche doit être terminée avant que la suivante puisse être lancée.</p>
 
-<p>Comme nous l'avons dit précédemment, de nombreux ordinateurs sont désormais dotés de plusieurs cœurs et peuvent donc faire plusieurs choses à la fois. Les langages de programmation qui prennent en charge plusieurs fils d'exécution peuvent utiliser plusieurs cœurs pour accomplir de multiples tâches simultanément :</p>
+<p>Comme nous l'avons dit précédemment, de nombreux ordinateurs sont désormais dotés de plusieurs cœurs et peuvent donc faire plusieurs choses à la fois. Les langages de programmation qui prennent en charge plusieurs processus peuvent utiliser plusieurs cœurs pour accomplir de multiples tâches simultanément :</p>
 
-<pre>Fil d'exécution 1: Tâche A --&gt; Tâche B
-Fil d'exécution 2: Tâche C --&gt; Tâche D</pre>
+<pre>Processus 1: Tâche A --&gt; Tâche B
+Processus 2: Tâche C --&gt; Tâche D</pre>
 
-<h3 id="JavaScript_is_single-threaded">JavaScript est à fil d'exécution unique</h3>
+<h3 id="JavaScript_is_single-threaded">JavaScript est à processus unique</h3>
 
-<p>JavaScript est traditionnellement « single-threaded ». Même avec plusieurs cœurs, vous ne pouviez le faire exécuter des tâches que sur un seul fil d'exécution, appelé le <strong>main thread</strong>. Notre exemple ci-dessus est exécuté comme ceci :</p>
+<p>JavaScript est traditionnellement « single-threaded ». Même avec plusieurs cœurs, vous ne pouviez le faire exécuter des tâches que sur un seul processus, appelé le <strong>main thread</strong>. Notre exemple ci-dessus est exécuté comme ceci :</p>
 
-<pre>Fil d'exécution principal : Rendre des cercles dans &lt;canvas&gt; --&gt; Afficher alert()</pre>
+<pre>processus principal : Rendre des cercles dans &lt;canvas&gt; --&gt; Afficher alert()</pre>
 
-<p>Après un certain temps, JavaScript a gagné quelques outils pour aider à résoudre de tels problèmes. <a href="/fr/docs/Web/API/Web_Workers_API">Les Web workers</a> vous permettent d'envoyer une partie du traitement JavaScript hors d'un fil d'exécution distinct, appelé worker, afin que vous puissiez exécuter plusieurs morceaux JavaScript simultanément. Vous utiliserez généralement un worker pour exécuter des processus coûteux hors du fil d'exécution principal afin de ne pas bloquer l'interaction avec l'utilisateur.</p>
+<p>Après un certain temps, JavaScript a gagné quelques outils pour aider à résoudre de tels problèmes. <a href="/fr/docs/Web/API/Web_Workers_API">Les Web workers</a> vous permettent d'envoyer une partie du traitement JavaScript hors d'un processus distinct, appelé worker, afin que vous puissiez exécuter plusieurs morceaux JavaScript simultanément. Vous utiliserez généralement un worker pour exécuter des processus coûteux hors du processus principal afin de ne pas bloquer l'interaction avec l'utilisateur.</p>
 
-<pre>Fil d'exécution principal : Tâche A --&gt; Tâche C
-Fil d'exécution du Worker : Tâche coûteuse B</pre>
+<pre>Processus principal : Tâche A --&gt; Tâche C
+Processus du Worker : Tâche coûteuse B</pre>
 
 <p>Dans cette optique, jetez un coup d'œil à <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html">simple-sync-worker.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html">voyez-le fonctionner en direct</a>), toujours avec la console JavaScript de votre navigateur ouverte. Il s'agit d'une réécriture de notre exemple précédent qui calcule les 10 millions de dates dans un fil de travail séparé. Désormais, lorsque vous cliquez sur le bouton, le navigateur est capable d'afficher le paragraphe avant que les dates n'aient fini d'être calculées. La première opération ne bloque plus la seconde.</p>
 
@@ -128,23 +128,23 @@ Fil d'exécution du Worker : Tâche coûteuse B</pre>
 
 <p>Les Web workers sont très utiles, mais ils ont leurs limites. L'une des principales est qu'ils ne peuvent pas accéder au <a href="/fr/docs/Glossary/DOM">DOM</a>. - vous ne pouvez pas demander à un worker de faire directement quelque chose pour mettre à jour l'interface utilisateur. Nous n'avons pas pu rendre nos 1 million de cercles bleus à l'intérieur de notre worker ; il ne peut faire que le calcul des chiffres.</p>
 
-<p>Le deuxième problème est que, bien que le code exécuté dans un worker ne soit pas bloquant, il reste fondamentalement synchrone. Cela devient un problème lorsqu'une fonction s'appuie sur les résultats de plusieurs processus précédents pour fonctionner. Considérons les diagrammes de fils d'exécution suivants :</p>
+<p>Le deuxième problème est que, bien que le code exécuté dans un worker ne soit pas bloquant, il reste fondamentalement synchrone. Cela devient un problème lorsqu'une fonction s'appuie sur les résultats de plusieurs processus précédents pour fonctionner. Considérons les diagrammes de processus suivants :</p>
 
-<pre>Fil d'exécution principal : Tâche A --&gt; Tâche B</pre>
+<pre>Processus principal : Tâche A --&gt; Tâche B</pre>
 
 <p>Dans ce cas, disons que la tâche A fait quelque chose comme récupérer une image du serveur et que la tâche B fait ensuite quelque chose à l'image comme lui appliquer un filtre. Si vous lancez la tâche A et essayez immédiatement d'exécuter la tâche B, vous obtiendrez une erreur, car l'image ne sera pas encore disponible.</p>
 
-<pre>Fil d'exécution principal : Tâche A --&gt; Tâche B --&gt; |Tâche D|
-Fil d'exécution du Worker : Tâche C --------------&gt; |       |</pre>
+<pre>Processus principal : Tâche A --&gt; Tâche B --&gt; |Tâche D|
+Processus du Worker : Tâche C --------------&gt; |       |</pre>
 
 <p>Dans ce cas, disons que la tâche D utilise les résultats de la tâche B et de la tâche C. Si nous pouvons garantir que ces résultats seront tous deux disponibles au même moment, alors nous pourrions être OK, mais c'est peu probable. Si la tâche D tente de s'exécuter alors que l'une de ses entrées n'est pas encore disponible, elle déclenchera une erreur.</p>
 
 <p>Pour résoudre ces problèmes, les navigateurs nous permettent d'exécuter certaines opérations de manière asynchrone. Des fonctionnalités telles que <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> permettent de lancer une opération (par exemple, la récupération d'une image sur le serveur), puis d'attendre le retour du résultat avant de lancer une autre opération :</p>
 
-<pre>Fil d'exécution principal : Tâche A                   Tâche B
-Promesse :                     |__opération asynchrone__|</pre>
+<pre>Processus principal : Tâche A                   Tâche B
+Promesse :               |__opération asynchrone__|</pre>
 
-<p>Comme l'opération se déroule ailleurs, le fil d'exécution principal n'est pas bloqué pendant le traitement de l'opération asynchrone.</p>
+<p>Comme l'opération se déroule ailleurs, le processus principal n'est pas bloqué pendant le traitement de l'opération asynchrone.</p>
 
 <p>Nous allons commencer à examiner comment écrire du code asynchrone dans le prochain article. C'est passionnant, non ? Bonne continuation !</p>
 

@@ -64,7 +64,7 @@ btn.addEventListener('click', () =&gt; {
   </li>
 </ol>
 
-<p>Pendant que chaque opération est en cours de traitement, rien d'autre ne peut se produire - le rendu est mis en pause. Cela est dû au fait que, comme nous l'avons dit dans l'<a href="/fr/docs/Learn/JavaScript/Asynchronous/Introducing">article précédent</a>, <a href="/fr/docs/Learn/JavaScript/Asynchronous/Concepts#javascript_is_single_threaded">JavaScript est à fil d'exécution unique</a>. Une seule chose peut se produire à la fois, sur le fil d'execution principal, et tout le reste est bloqué jusqu'à la fin d'une opération.</p>
+<p>Pendant que chaque opération est en cours de traitement, rien d'autre ne peut se produire - le rendu est mis en pause. Cela est dû au fait que, comme nous l'avons dit dans l'<a href="/fr/docs/Learn/JavaScript/Asynchronous/Introducing">article précédent</a>, <a href="/fr/docs/Learn/JavaScript/Asynchronous/Concepts#javascript_is_single_threaded">JavaScript est à processus unique</a>. Une seule chose peut se produire à la fois, sur le processus principal, et tout le reste est bloqué jusqu'à la fin d'une opération.</p>
 
 <p>Ainsi, dans l'exemple ci-dessus, après avoir cliqué sur le bouton, le paragraphe n'apparaîtra qu'après avoir appuyé sur le bouton OK dans la boîte d'alerte. Vous pouvez l'essayer vous-même :</p>
 
@@ -183,7 +183,7 @@ gods.forEach(function (eachName, index){
 
 <h3 id="The_event_queue">La file d'attente des événements</h3>
 
-<p>Les opérations asynchrones comme les promesses sont placées dans une <strong>file d'attente d'événements</strong>, qui s'exécute après que le fil d'exécution principal a terminé son traitement afin qu'elles <em>ne bloquent pas</em> l'exécution du code JavaScript suivant. Les opérations mises en file d'attente se terminent dès que possible puis renvoient leurs résultats à l'environnement JavaScript.</p>
+<p>Les opérations asynchrones comme les promesses sont placées dans une <strong>file d'attente d'événements</strong>, qui s'exécute après que le processus principal a terminé son traitement afin qu'elles <em>ne bloquent pas</em> l'exécution du code JavaScript suivant. Les opérations mises en file d'attente se terminent dès que possible puis renvoient leurs résultats à l'environnement JavaScript.</p>
 
 <h3 id="Promises_versus_callbacks">Promesses contre rappels (callbacks)</h3>
 
@@ -271,7 +271,7 @@ console.log(`Tout est bon !`);</pre>
 
 <h2 id="Conclusion">Conclusion</h2>
 
-<p>Dans sa forme la plus élémentaire, JavaScript est un langage synchrone, bloquant et à un seul fil d'exécution, dans lequel une seule opération peut être en cours à la fois. Mais les navigateurs Web définissent des fonctions et des API qui nous permettent d'enregistrer des fonctions qui ne doivent pas être exécutées de manière synchrone, mais qui doivent être invoquées de manière asynchrone lorsqu'un événement quelconque se produit (le passage du temps, l'interaction de l'utilisateur avec la souris ou l'arrivée de données sur le réseau, par exemple). Cela signifie que vous pouvez laisser votre code faire plusieurs choses en même temps sans arrêter ou bloquer votre fil d'exécution principal.</p>
+<p>Dans sa forme la plus élémentaire, JavaScript est un langage synchrone, bloquant et à un seul processus, dans lequel une seule opération peut être en cours à la fois. Mais les navigateurs Web définissent des fonctions et des API qui nous permettent d'enregistrer des fonctions qui ne doivent pas être exécutées de manière synchrone, mais qui doivent être invoquées de manière asynchrone lorsqu'un événement quelconque se produit (le passage du temps, l'interaction de l'utilisateur avec la souris ou l'arrivée de données sur le réseau, par exemple). Cela signifie que vous pouvez laisser votre code faire plusieurs choses en même temps sans arrêter ou bloquer votre processus principal.</p>
 
 <p>Le fait de vouloir exécuter du code de manière synchrone ou asynchrone dépend de ce que l'on essaie de faire.</p>
 
