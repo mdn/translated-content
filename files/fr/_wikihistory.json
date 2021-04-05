@@ -43700,13 +43700,6 @@
       "SphinxKnight"
     ]
   },
-  "conflicting/Learn/CSS/Building_blocks/Selectors": {
-    "modified": "2020-07-16T22:25:39.574Z",
-    "contributors": [
-      "SphinxKnight",
-      "Oliviermoz"
-    ]
-  },
   "conflicting/Learn/CSS/First_steps/How_CSS_works": {
     "modified": "2020-07-16T22:25:39.949Z",
     "contributors": [
@@ -43823,32 +43816,11 @@
       "SphinxKnight"
     ]
   },
-  "conflicting/Learn/Common_questions/set_up_a_local_testing_server": {
-    "modified": "2020-07-16T22:35:46.563Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "conflicting/Learn/Getting_started_with_the_web/Dealing_with_files": {
     "modified": "2020-07-16T22:35:20.536Z",
     "contributors": [
       "ILIKECOOKIE",
       "SphinxKnight"
-    ]
-  },
-  "conflicting/Learn_370bfb0fa23e42f4384f010341852c43": {
-    "modified": "2020-07-16T22:33:41.155Z",
-    "contributors": [
-      "SphinxKnight",
-      "Thegennok"
-    ]
-  },
-  "conflicting/Learn_6767a192c90d2c9c5179cf004fce2ee8": {
-    "modified": "2020-08-30T08:21:58.955Z",
-    "contributors": [
-      "Voulto",
-      "SphinxKnight",
-      "Andrew_Pfeiffer"
     ]
   },
   "conflicting/Web/CSS/color_value": {
@@ -43883,17 +43855,6 @@
       "Mgjbot"
     ]
   },
-  "conflicting/Glossary/Chrome": {
-    "modified": "2019-03-23T23:48:48.795Z",
-    "contributors": [
-      "Delapouite",
-      "BenoitL",
-      "Mgjbot",
-      "VincentN",
-      "Chbok",
-      "Fredchat"
-    ]
-  },
   "Mozilla/Developer_guide/Build_Instructions": {
     "modified": "2019-03-23T23:48:28.119Z",
     "contributors": [
@@ -43903,36 +43864,6 @@
       "The RedBurn",
       "BenoitL",
       "Mgjbot"
-    ]
-  },
-  "conflicting/Learn/CSS/Building_blocks": {
-    "modified": "2019-03-24T00:11:28.445Z",
-    "contributors": [
-      "grandoc",
-      "Fredchat",
-      "Altinfo",
-      "Verruckt",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Learn/CSS/Building_blocks/Cascade_and_inheritance": {
-    "modified": "2019-03-23T23:43:29.860Z",
-    "contributors": [
-      "teoli",
-      "Verruckt",
-      "Mgjbot",
-      "Mozinet",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Learn/CSS/Building_blocks/Values_and_units": {
-    "modified": "2019-03-23T23:48:37.546Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Verruckt",
-      "Indigo",
-      "BenoitL"
     ]
   },
   "conflicting/Learn/CSS/First_steps/How_CSS_is_structured": {
@@ -43981,20 +43912,6 @@
       "Verruckt",
       "Sheppy",
       "BenoitL"
-    ]
-  },
-  "conflicting/Learn/CSS/Building_blocks/Selectors_9bc80fea302c91cd60fb72c4e83c83e9": {
-    "modified": "2019-03-24T00:11:21.423Z",
-    "contributors": [
-      "xseignard",
-      "teoli",
-      "grandoc",
-      "R greg",
-      "Mgjbot",
-      "Verruckt",
-      "BenoitL",
-      "Mozinet",
-      "Christian13"
     ]
   },
   "conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2": {
@@ -44049,16 +43966,6 @@
       "Indigo"
     ]
   },
-  "conflicting/Learn/CSS/Building_blocks/Styling_tables": {
-    "modified": "2019-03-24T00:11:25.378Z",
-    "contributors": [
-      "teoli",
-      "grandoc",
-      "Verruckt",
-      "Pitchum",
-      "BenoitL"
-    ]
-  },
   "conflicting/Web/Guide": {
     "modified": "2019-03-24T00:13:07.123Z",
     "contributors": [
@@ -44098,13 +44005,6 @@
   },
   "conflicting/Web/HTML/Global_attributes": {
     "modified": "2019-03-23T22:41:06.193Z",
-    "contributors": [
-      "loella16",
-      "xdelatour"
-    ]
-  },
-  "conflicting/Glossary/Doctype": {
-    "modified": "2019-01-16T21:53:56.898Z",
     "contributors": [
       "loella16",
       "xdelatour"
@@ -44193,14 +44093,6 @@
     "contributors": [
       "wbamberg",
       "maximelore"
-    ]
-  },
-  "conflicting/Glossary/DOM": {
-    "modified": "2019-03-24T00:11:57.509Z",
-    "contributors": [
-      "Goofy",
-      "teoli",
-      "bou22"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Object/toSource": {
