@@ -24,13 +24,13 @@ translation_of: Web/API/IntersectionObserver/thresholds
 
 <h3 id="value">Valeur</h3>
 
-<p>Un tableau de seuils d'intersection, originellement spécifié au moyen de la propriété <code>threshold</code> à l'instanciation d'un observateur. Si un unique observateur a été spécifié, sans être donné dans un tableau (valeur numérique), cette valeur se traduite comme un tableau d'un élément la contenant. Quelque fut l'ordre de votre tableau original de <code>threshold</code>, il sera trié par ordre croissant.</p>
+<p>Un tableau de seuils d'intersection, originellement spécifié au moyen de la propriété <code>threshold</code> à l'instanciation d'un observateur. Si un unique observateur a été spécifié, sans être donné dans un tableau (valeur numérique), cette valeur se traduit comme un tableau d'un élément la contenant. Quelque fut l'ordre de votre tableau original de <code>threshold</code>, il sera trié par ordre croissant.</p>
 
 <p>Si aucune option <code>threshold</code> n'est donnée lorsque <code>IntersectionObserver()</code> est utilisé pour instantier l'observateur, la valeur de <code>thresholds</code> est par défaut définie à <code>[0]</code>.</p>
 
 <div class="notecard warning">
   <p><b>Attention !</b></p>
-  <p>Bien que l'objet d'<code>options</code> que vous pouvez spécifier lorsque vous créez un <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> a un champ nommé <a href="/fr/docs/Web/API/Intersection_Observer_API"><code>threshold</code></a>, cette propriété-ci s'appelle <code>thresholds</code>. Cela peut porter à confusion. Si vous utilisez <code>thresholds</code> par erreur comme nom du champ votre objet d'<code>options</code>, le tableau de <code>thresholds</code> va se retrouver égal à <code>[0.0]</code>, ce qui n'est probablement pas ce à quoi vous vous attendiez. Le déboguage n'en sera que plus chaotique.</p>
+  <p>Bien que l'objet d'<code>options</code> que vous pouvez spécifier lorsque vous créez un <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> a un champ nommé <a href="/fr/docs/Web/API/IntersectionObserver/IntersectionObserver"><code>threshold</code></a>, cette propriété-ci s'appelle <code>thresholds</code>. Cela peut porter à confusion. Si vous utilisez <code>thresholds</code> par erreur comme nom du champ votre objet d'<code>options</code>, le tableau de <code>thresholds</code> va se retrouver égal à <code>[0.0]</code>, ce qui n'est probablement pas ce à quoi vous vous attendiez. Le déboguage n'en sera que plus chaotique.</p>
 </div>
 
 <h2 id="specifications">Spécifications</h2>
