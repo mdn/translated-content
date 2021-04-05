@@ -43694,12 +43694,6 @@
       "Oliviermoz"
     ]
   },
-  "conflicting/Learn/CSS/CSS_layout/Introduction": {
-    "modified": "2020-07-16T22:25:40.392Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "conflicting/Learn/CSS/First_steps/How_CSS_works": {
     "modified": "2020-07-16T22:25:39.949Z",
     "contributors": [
@@ -43916,14 +43910,6 @@
   },
   "conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2": {
     "modified": "2019-03-23T23:43:24.796Z",
-    "contributors": [
-      "teoli",
-      "Verruckt",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Learn/CSS/CSS_layout": {
-    "modified": "2019-03-23T23:43:29.436Z",
     "contributors": [
       "teoli",
       "Verruckt",

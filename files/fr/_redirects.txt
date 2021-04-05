@@ -125,7 +125,6 @@
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/Debugging_CSS	/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/Fundamental_CSS_comprehension	/fr/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
-/fr/docs/Apprendre/CSS/Introduction_à_CSS/La_disposition	/fr/docs/conflicting/Learn/CSS/CSS_layout/Introduction
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/La_syntaxe	/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_fonctionnement_de_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
@@ -135,7 +134,6 @@
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/Values_and_units	/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
 /fr/docs/Apprendre/CSS/Les_bases	/en-US/docs/Learn/CSS/First_steps
 /fr/docs/Apprendre/CSS/Les_bases/La_cascade_et_l_héritage	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
-/fr/docs/Apprendre/CSS/Les_bases/La_disposition	/fr/docs/conflicting/Learn/CSS/CSS_layout/Introduction
 /fr/docs/Apprendre/CSS/Les_bases/La_syntaxe	/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /fr/docs/Apprendre/CSS/Les_bases/Le_fonctionnement_de_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /fr/docs/Apprendre/CSS/Les_bases/Le_modèle_de_boîte	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
@@ -443,7 +441,6 @@
 /fr/docs/CSS/Premiers_pas/Graphiques_SVG	/fr/docs/Web/SVG/Tutorial/SVG_and_CSS
 /fr/docs/CSS/Premiers_pas/JavaScript	/fr/docs/conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /fr/docs/CSS/Premiers_pas/Listes	/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2
-/fr/docs/CSS/Premiers_pas/Mise_en_page	/fr/docs/conflicting/Learn/CSS/CSS_layout
 /fr/docs/CSS/Premiers_pas/Médias	/fr/docs/Web/Progressive_web_apps/Responsive/Media_types
 /fr/docs/CSS/Premiers_pas/Pourquoi_utiliser_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_ecbda2160290b96c02dcfa8276c0333a
 /fr/docs/CSS/Premiers_pas/Présentation_des_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c
@@ -760,7 +757,6 @@
 /fr/docs/CSS:Premiers_pas:JavaScript	/fr/docs/conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /fr/docs/CSS:Premiers_pas:Liaisons_XBL	/fr/docs/CSS/Premiers_pas/Liaisons_XBL
 /fr/docs/CSS:Premiers_pas:Listes	/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2
-/fr/docs/CSS:Premiers_pas:Mise_en_page	/fr/docs/conflicting/Learn/CSS/CSS_layout
 /fr/docs/CSS:Premiers_pas:Médias	/fr/docs/Web/Progressive_web_apps/Responsive/Media_types
 /fr/docs/CSS:Premiers_pas:Pourquoi_utiliser_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_ecbda2160290b96c02dcfa8276c0333a
 /fr/docs/CSS:Premiers_pas:Présentation_des_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c
