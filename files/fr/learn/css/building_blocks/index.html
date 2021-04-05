@@ -1,5 +1,5 @@
 ---
-title: Blocs de base en CSS
+title: Briques de base en CSS
 slug: Learn/CSS/Building_blocks
 tags:
   - CSS
@@ -10,70 +10,86 @@ original_slug: Apprendre/CSS/Building_blocks
 ---
 <div>{{LearnSidebar}}</div>
 
-<p>Ce cours fait suite aux <a href="/fr/docs/Learn/CSS/First_steps">premiers pas avec CSS</a> : vous avez déjà acquis une bonne familiarité avec le langage et sa syntaxe, avec déjà des expériences d'utilisation de CSS. Il est donc temps d'approfondir le sujet. On examine ici les principes de cascade et d’héritage, tous les types de sélecteurs à notre disposition, les unités, le dimensionnement, les arrière-plans de style et les limites, le débogage, et bien d'autres choses.<br>
- <br>
- L'objectif est d'introduire les outils qui feront de vous un utilisateur CSS compétent avec une bonne compréhension du cœur de la théorie CSS. Nous étudierons plus tard des sujets plus spécifiques comme <a href="/fr/docs/Learn/CSS/Styling_text">le style de texte</a> et la <a href="/fr/docs/Apprendre/CSS/CSS_layout">mise en page CSS</a>.</p>
+<p class="summary">Ce module prend la suite <a href="/fr/docs/Learn/CSS/First_steps">du module précédent : « Premiers pas en CSS »</a>. Maintenant que vous avez acquis une familiarité avec le langage et sa syntaxe, que vous avez déjà expérimenté avec, il est temps d'approfondir. Dans ce module, nous verrons la cascade et l'héritage, les différents types de sélecteurs disponibles, les unités, le dimensionnement, la mise en forme des arrière-plans et des bordures, comment déboguer et plus encore.</p>
 
-<h2 id="Prérequis">Prérequis</h2>
+<p class="summary">L'objectif est de vous fournir les outils pour écrire du CSS qualifié et pour comprendre les briques théoriques essentielles avant d'aborder certains sujets plus spécifiques comme <a href="/fr/docs/Learn/CSS/Styling_text">la mise en forme du texte</a> et <a href="/fr/docs/Learn/CSS/CSS_layout">les dispositions en CSS</a>.</p>
 
-<p>Avant de commencer ce cours, nous vous recommandons :</p>
+<div class="callout">
+  <h4 id="Looking_to_become_a_front-end_web_developer">Vous souhaitez devenir un développeur web front-end ?</h4>
+  <p>Nous avons regroupé ensemble différents cours qui contiennent l'ensemble des informations à connaître pour cet objectif.</p>
+  <p><a class="button primary" href="/fr/docs/Learn/Front-end_web_developer">Démarrer le parcours</a>
+  </p>
+</div>
+
+<h2 id="Prerequisites">Prérequis</h2>
+
+<p>Avant de démarrer ce module, vous devriez :</p>
 
 <ol>
- <li>D'être familiarisé avec l'usage des ordinateurs et avec la navigation sur internet.</li>
- <li>De disposer d'un environnement de travail comme il est décrit dans l'article <a href="/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base">installation des outils de base</a> et de savoir créer et gérer des fichiers (cf. leçon <a href="/fr/docs/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers">gérer les fichiers</a>).</li>
- <li>D'être suffisamment à votre aise avec HTML (voir le cours <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML">introduction au HTML</a>).</li>
- <li>D'avoir compris les bases du CSS telles qu'exposées dans le cours <a href="/fr/docs/Learn/CSS/First_steps">premiers pas avec CSS.</a></li>
+ <li>Savoir utiliser un ordinateur et naviguer sur le Web (consultation de sites web)</li>
+ <li>Disposer d'un environnement de travail de base comme vu dans <a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Installer les logiciels de base</a>, et comprendre comment créer et gérer des fichiers comme abordé dans l'article <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Manipuler des fichiers</a>.</li>
+ <li>Connaître les bases de HTML, indiquées dans le module <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction à HTML</a>.</li>
+ <li>Connaître les bases de CSS, indiquées dans le module <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a>.</li>
 </ol>
 
 <div class="note">
-<p><strong>Note :</strong> Si vous travaillez sur un ordinateur, une tablette ou tout autre appareil sur lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous pourrez tester (la plupart) des exemples de code dans un site de programmation en ligne comme <a href="http://jsbin.com/">JSBin</a> ou <a href="https://thimble.mozilla.org/fr/">Thimble</a>.</p>
+<p><strong>Note</strong> : Si vous travaillez sur un appareil (ordinateur, tablette ou autre) sur lequel vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer la plupart des exemples sur des sites de code en ligne tels que <a href="https://jsbin.com/">JSBin</a> ou <a href="https://glitch.com/">Glitch</a>.</p>
 </div>
 
 <h2 id="Guides">Guides</h2>
 
-<p>Les articles qui composent ce module traitent la majeure partie du langage CSS. En les parcourant, vous découvrirez de nombreux exercices qui vous permettront d'évaluer votre bonne compréhension.</p>
-
-<div class="note">
-<p><strong>Note : </strong>Les articles dont le titre apparaît en anglais ne sont pas encore traduits au moment de la traduction de la page que vous lisez.</p>
-</div>
+<p>Ce module contient les articles suivants qui couvrent les aspects essentiels de CSS. Tout au long de ce module, vous aurez différents exercices qui vous permettront d'évaluer votre compréhension.</p>
 
 <dl>
- <dt><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance (Cascade et héritage)</a></dt>
- <dd>Le but de cette leçon est de vous permettre d'acquérir des concepts fondamentaux du CSS : la cascade, la spécificité et l'héritage... et ainsi d'apprendre comment le CSS s'applique au HTML, et comment les conflits se résolvent.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors (sélecteurs CSS)</a></dt>
- <dd>Il y a une large palette de sélecteurs CSS disponibles permettant avec une fine granularité de désigner les éléments auxquels appliquer des styles. Dans cet article, nous verrons avec moult détails comment ces différents types de sélecteurs fonctionnent, au travers de plusieurs parties :
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade et héritage</a></dt>
+ <dd>L'objectif de cet article est d'améliorer votre compréhension de concepts fondamentaux en CSS : la cascade, la spécificité et l'héritage. Ceux-ci contrôlent la façon dont le CSS s'applique au document HTML et comment les conflits associés sont résolus.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors">Sélecteurs CSS</a></dt>
+ <dd>Il existe une large palette de sélecteurs CSS disponibles qui permettent de cibler finement les éléments à mettre en forme. Dans cet article et les sous-articles associés, nous verrons dans le détail les différents types de sélecteur, leur fonctionnement. Les sous-articles associés sont :
  <ul>
-  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
-  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
-  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
-  <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Sélecteurs de type, de classe et d'identifiant</a></li>
+  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Sélecteurs d'attribut</a></li>
+  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes et pseudo-éléments</a></li>
+  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinateurs</a></li>
  </ul>
  </dd>
- <dt><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model (le modèle des boîtes)</a></dt>
- <dd>Tout en CSS a une boîte autour de lui, et comprendre ces boîtes est la clef pour être capable de créer des mises en page avec CSS, ou d'aligner des éléments avec d'autres. Dans cette leçon, nous nous attarderons sur le modèle de boîte CSS, afin que vous puissiez passer à des mises en page plus complexes grâce à une meilleure compréhension du fonctionnement et de la terminologie.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders (arrières-plans et bordures)</a></dt>
- <dd>Dans cette leçon, nous illustrerons des usages créatifs des arrières-plans et bordures en CSS. Des dégradés, des images de fond, des coins arrondis.... les arrières plans et les bordures sont les réponses à de nombreuses questions de style en CSS.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions (manipuler les différentes directions du texte)</a></dt>
- <dd>Ces dernières années, le CSS a évolué afin de permettre aux contenus de prendre des directions différentes ; pas seuleument de droite à gauche mais aussi de haut en bas (comme au Japon) ; ces différentes directions sont appelées modes d'écriture (<strong>writing modes</strong>). Comme vous progressez dans l'étude du CSS et commencez à travailler la mise en page, la compréhension des modes d'écriture vous sera fort utile, c'est pour cela que nous vous les présentons dans cet article. .</dd>
- <dt><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content (quand ça dépasse)</a></dt>
- <dd>Autre concept important du CSS: le dépassement (<strong>overflow</strong>) : c'est ce qui se passe quand il y a trop de contenu pour qu'il puisse tenir dans la boîte. Dans cette leçon, vous apprendrez comment le gérer.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units (valeurs et unités)</a></dt>
- <dd>Toute propriété utilisée en CSS dispose de valeurs ou d'ensembles de valeurs autorisées pour cette propriété. Dans cette leçon, nous aborderons les valeurs et unités les plus communément utilisées.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS (dimensionner les éléments en CSS)</a></dt>
- <dd>Dans plusieurs leçons précédentes, vous avez abordé plusieurs façons de dimensionner de nombreux éléments d'une page web en utilisant le CSS. Comprendre pour anticiper les tailles des composants de votre design est important. Dans cette leçon nous résumerons par quels différents biais les éléments sont dimensionnés en CSS et définirons quelques termes qui vous aideront à l'avenir.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements (images, médias et éléments de formulaires)</a></dt>
- <dd>Dans cet article, nous verrons comment des éléments particuliers sont traités en CSS. Les images, les autres médias, ou encore le éléments de formulaires se comportent légèrement différement des boîtes habituelles lorsque vous souhaitez leur appliquer un style CSS. Comprendre ce qu'il est possible ou non de faire vous évitera d'éventuelles déceptions cette leçon soulignera ce qu'il vous faut savoir.</dd>
- <dt><a href="/fr/docs/Apprendre/CSS/Building_blocks/Styling_tables">Mise en page des tableaux</a></dt>
- <dd>Styliser un tableau HTML n'est pas le travail qui fait rêver, mais vous pouvez parfois avoir à le faire. Cet article vous guide pour réussir l'apparence de vos tableaux en soulignant les techniques spécifiques applicables.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS (déboguer le CSS)</a></dt>
- <dd>Parfois, lorsque vous écrivez du CSS, le résultat n'est pas ce que vous attendiez. Cet article vous guidera pour déboguer un problème de CSS en vous montrant comment utiliser les outils de développement contenus dans tout navigateur moderne pour vous aider à trouver ce qui se passe.</dd>
- <dt><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS (organiser votre CSS)</a></dt>
- <dd>Au fur et à mesure que vous travaillerez sur des feuilles de style de plus en plus longues et des projets de plus en plus volumineux, vous découvrirez que maintenir un énorme fichier CSS peut être problématique. Dans cet article, nous aborderons les bonnes pratiques pour écrire votre CSS, le rendre facile à maintenir, et d'autres solutions pouvant vous aider à améliorer cette maintenabilité.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/The_box_model">Le modèle de boîte</a></dt>
+ <dd>En CSS, tout élément possède une boîte autour de lui. Comprendre le rôle de ces boîtes est primordial lorsqu'on souhaite organiser des dispositions en CSS ou aligner des éléments les uns par rapport aux autres. Dans cette leçon, nous verrons <em>le modèle de boîte</em> CSS afin que vous puissiez vous atteler à des tâches plus complexes tout en comprenant ce fonctionnement et la terminologie associée.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Arrière-plans et bordures</a></dt>
+ <dd>Dans cet article, nous verrons les effets créatifs qu'on peut obtenir avec les arrière-plans et les bordures en CSS. Que ce soit pour l'ajout de dégradé, les images d'arrière-plan, les angles arrondis, les arrière-plans et les bordures répondent à de nombreuses questions en CSS.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Gérer différentes directions de texte</a></dt>
+ <dd>Depuis quelques années, CSS a évolué afin de mieux prendre en charge la directionnalité du contenu, que ce soit pour les langues écrites de droite à gauche ou celles écrites du haut vers le bas (comme le japonais par exemple). Ces différentes directionnalités sont appelées des <strong>modes d'écriture</strong>. En avançant dans l'étude et la manipulation de CSS, comprendre les modes d'écriture vous sera utile, c'est pourquoi nous les verrons dans cet article.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Overflowing_content">Dépassement du contenu</a></dt>
+ <dd>Ici nous verrons un autre concept majeur de CSS : <strong>le dépassement</strong>. Le dépassement se produit lorsqu'il y a trop de contenu pour que celui-ci puisse tenir à l'intérieur d'une boîte. Dans ce guide, nous verrons ce qu'il en est et comment gérer les différents cas.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Values_and_units">Unités et valeurs en CSS</a></dt>
+ <dd>Chaque propriété CSS possède une valeur ou un ensemble de valeurs autorisés. Dans cet article, nous verrons les valeurs et les unités les plus fréquemment utilisées.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Dimensionnement des objets en CSS</a></dt>
+ <dd>Dans les différentes parties de ce module, vous aurez vu différentes méthodes pour dimensionner des objets sur une page web en utilisant CSS. Comprendre comment définir la taille des différents aspects d'un document est important et nous résumerons ici les différents facteurs qui influent sur la taille d'un élément en CSS. Nous définirons également quelques termes sur le sujet pour vous aider par la suite.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, médias et formulaires</a></dt>
+ <dd>Dans cet article, nous verrons comment certains éléments spécifiques sont gérés en CSS. Les images et autres médias ainsi que les éléments de formulaire se comportent différemment des autres boîtes lorsqu'il s'agit de les mettre en forme avec CSS. Comprendre ce qu'il est possible ou non de faire pourra vous épargner de la frustration et vous faire gagner du temps. Cet article mettra en lumière les notions principales à connaître à ce sujet.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Styling_tables">Mise en forme des tableaux</a></dt>
+ <dd>La mise en forme d'un tableau HTML n'est peut-être pas la tâche la plus avenante au premier regard. Il n'en reste pas moins que ça peut être nécessaire. Dans cet article, nous verrons comment afficher correctement des tableaux HTML et différentes techniques spécifiques associées.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS">Débogage du CSS</a></dt>
+ <dd>Lorsqu'on écrit du CSS, il arrive de rencontrer un problème où le résultat obtenu n'est pas celui attendu. Dans cet article, nous verrons comment analyser et déboguer un problème en CSS. Nous verrons comment utiliser les outils de développement intégrés aux navigateurs afin de déterminer ce qui pose problème.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Organizing">Organiser son code CSS</a></dt>
+ <dd>Au fur et à mesure que vos feuilles de style s'agrandiront et que vous travaillerez sur des projets de plus grande ampleur, vous pourrez voir que la maintenance d'un énorme fichier CSS peut s'avérer délicate. Dans cet article, nous verrons certaines des bonnes pratiques pour écrire du CSS maintenable.</dd>
 </dl>
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+<h2 id="Assessments">Évaluations</h2>
+
+<p>Vous souhaitez tester vos compétences en CSS ? Les évaluations suivantes vous permettront de vérifier votre compréhension pour les sujets abordés dans les guides listés ci-avant.</p>
 
 <dl>
- <dt><a href="/fr/docs/Apprendre/CSS/Building_blocks/Advanced_styling_effects">Effets de boîte avancés</a></dt>
- <dd>Cet article est un "trucs et astuces" vous fournissant un aperçu de fonctionnalités intéressantes comme l'ombre des boîtes, les mélanges de couleurs ou les filtres.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension">Compréhension des fondamentaux de CSS</a></dt>
+ <dd>Cette évaluation teste votre compréhension de la syntaxe de base, des sélecteurs, de la spécificité, du modèle de boîte, etc.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper">Créer une lettre à en-tête stylisé</a></dt>
+ <dd>Pour faire une bonne impression, écrire une lettre avec un en-tête raffiné peut être un bon point de départ. Dans cette évaluation, vous devrez créer un modèle d'une telle lettre.</dd>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/A_cool_looking_box">Une boîte remarquable</a></dt>
+ <dd>Ici, vous pourrez pratiquer l'utilisation des arrière-plans et la mise en forme des bordures afin de créer une boîte qui ne laisse pas insensible.</dd>
+</dl>
+
+<h2 id="See_also">Voir aussi</h2>
+
+<dl>
+ <dt><a href="/fr/docs/Learn/CSS/Building_blocks/Advanced_styling_effects">Les effets de mise en forme avancés</a></dt>
+ <dd>Cet article fournit un ensemble d'astuces qui introduit différentes fonctionnalités de mise en forme avancées comme les ombres de boîtes, les modes de fusion et les filtres.</dd>
 </dl>
