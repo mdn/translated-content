@@ -612,7 +612,6 @@
 /ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/ru/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ru/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/ru/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /ru/docs/Web/Guide/HTML/Using_data_attributes	/ru/docs/Learn/HTML/Howto/Use_data_attributes
-/ru/docs/Web/Guide/HTML/Формы_в_HTML	/ru/docs/orphaned/Learn/HTML/Forms/HTML5_updates
 /ru/docs/Web/Guide/Графика	/ru/docs/Web/Guide/Graphics
 /ru/docs/Web/Guide/Производительность	/ru/docs/Web/Guide/Performance
 /ru/docs/Web/HTML/CORS_settings_attributes	/ru/docs/Web/HTML/Attributes/crossorigin
