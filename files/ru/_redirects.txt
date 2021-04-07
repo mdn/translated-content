@@ -349,7 +349,6 @@
 /ru/docs/MDN/User_guide/Advanced_search	/ru/docs/orphaned/MDN/Tools/Search
 /ru/docs/MDN/User_guide/Deleting_pages	/ru/docs/orphaned/MDN/Tools/Page_deletion
 /ru/docs/MDN/User_guide/Feeds	/ru/docs/orphaned/MDN/Tools/Feeds
-/ru/docs/MDN/User_guide/Linking_to_MDN	/ru/docs/orphaned/MDN/About/Linking_to_MDN
 /ru/docs/MDN/Сообщество	/ru/docs/orphaned/MDN/Community
 /ru/docs/MDN/Сообщество/Conversations	/ru/docs/orphaned/MDN/Community/Conversations
 /ru/docs/MDN/Сообщество/Whats_happening	/ru/docs/orphaned/MDN/Community/Whats_happening
