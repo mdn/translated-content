@@ -1,96 +1,31 @@
 ---
-title: URL 引数と文書メタデータ
+title: 非公式の GET API
 slug: MDN/Tools/Unsupported_GET_API
 tags:
+  - Advanced
+  - Automation
   - Documentation
-  - Kuma
+  - Draft
+  - Guide
   - MDN Meta
+  - PUT API
   - Page-level
-  - Reference
   - Tools
-translation_of: MDN/Tools/Document_parameters
-original_slug: MDN/Tools/Document_parameters
+translation_of: MDN/Tools/Unsupported_GET_API
 ---
 <div>{{MDNSidebar}}</div>
 
-<section id="intro">
-<p id="Introduction"><span class="seoSummary">MDN の Kuma Wiki プラットホームには、外からアクセスする API がありません。代わりに、人間がアクセスできるリソースを機械的に扱いやすいデータに変換する手段を提供するというのが私たちのアプローチです。</span></p>
-</section>
+<p><span class="seoSummary">MDN のプラットフォームである <a href="https://github.com/mdn/yari">Yari</a> は、公式の GET API を提供していません。しかし、 Yari は現在、 HTTP の <code>GET</code> リクエストで受け取ることができる JSON リソースを後悔する非公式の仕組みを提供しており、プログラム的に処理することができます。</span></p>
 
-<section id="params">
-<h2 id="URL_GET_parameters" name="URL_GET_parameters">URL の GET 引数</h2>
+<h2>index.json リソース</h2>
 
-<p>すべての Kuma wiki 文書の URL が HTTP GET で取得されたりブラウザーで見られる時に役立つクエリ引数オプションをサポートしています。</p>
+<p>特定の MDN の記事の URL が与えられた場合、対応する URL に <code>/index.json</code> を付加したものに HTTP の GET リクエストを行うことで、関連する JSON データを取得することができます。</p>
 
-<p>複数のクエリ引数は最初の <kbd>?</kbd> の代わりに <kbd>&amp;</kbd> で区切られます (マクロの例を見てください)。</p>
+<p>例えば、 MDN の次の記事について、</p>
+<p><a href="/ja/docs/Web/API/Fetch_API/Using_Fetch">https://developer.mozilla.org/ja/docs/Web/API/Fetch_API/Using_Fetch</a></p>
+<p>...次の場所から関連する JSON データを受け取ることができます。</p>
+<p><a href="/ja/docs/Web/API/Fetch_API/Using_Fetch/index.json">https://developer.mozilla.org/ja/docs/Web/API/Fetch_API/Using_Fetch/index.json</a></p>
 
-<dl>
- <dt><code>summary</code></dt>
- <dd>
- <p>Kuma にページの概要のみを返すよう指示します。 "SEO summary" クラスでマークされたコンテンツがある場合、そのコンテンツが返されます。そのようなコンテンツがない場合、 "Summary" というタイトルのあるコンテンツが返されます。そうならない場合、最初のブロックのコンテンツが返されます。</p>
-
- <div class="note"><strong>バグのお知らせ:</strong> 現在、 <code>summary</code> 引数は <code>raw</code> 引数も指定しないと文書全体を返すというバグがあります。なお、 <a href="#json-view"><code>$json</code> 代替ビュー</a>を使用して返される JSON から概要を取得することもできます。</div>
- </dd>
- <dt><code>raw</code></dt>
- <dd>Kuma に、ヘッダーやフッターなどのスキン素材のない、ページの生コンテンツを返すよう指示します。これはエディターを手軽に構築するテンプレートやスクリプトを実行しません。</dd>
- <dd><strong>例:</strong> <code><a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5?raw">https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5?raw</a></code></dd>
- <dt><code>macros</code></dt>
- <dd>Kuma にページ内のすべてのテンプレートを実行するよう指示します。 <code>?raw</code> と組み合わせると、これはサイトラッパーを除くすべてをレンダリングした MDN コンテンツを提供します。既定では <code>?raw</code> なしです (つまり、通常のサイト表示です) <code>?raw</code> がある時は既定でオフです。</dd>
- <dd><strong>例:</strong> <code><a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5?raw&amp;macros">https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5?raw&amp;macros</a></code></dd>
- <dt><code>nomacros</code></dt>
- <dd>Kuma にページ内の KumaScript テンプレートを実行しないよう指示します。通常のサイト表示では <code>?macros</code> が既定で「オン」になっていますが、このオプションはオフにします。</dd>
- <dd><strong>例:</strong> <code><a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5?nomacros">https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5?nomacros</a></code></dd>
- <dt><code>include</code></dt>
- <dd>Kuma に <code>noinclude</code> クラスを持つブロックを除くように命じます。これは単体のページではなく、他のページに含まれた場合のような出力を得るのに便利です。よくサンプルコードなどを除きます (いつもではありませんが)。</dd>
- <dd><strong>例:</strong> <code><a href="https://developer.mozilla.org/ja/docs/XUL/Attribute/align?raw&amp;macros&amp;include">https://developer.mozilla.org/ja/docs/XUL/Attribute/align?raw&amp;macros&amp;include</a></code></dd>
- <dt><code>section=id</code></dt>
- <dd>Kuma に指定したアンカー名を持つセクションのみのコンテンツを返すように指示します。</dd>
- <dd><strong>例:</strong>
- <ul>
-  <li><code><a href="https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters?raw&amp;section=params">https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters?raw&amp;section=params</a></code><br>
-   (...また、もっと興味深いものは...)</li>
-  <li><code><a href="https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters?raw&amp;macros&amp;section=params">https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters?raw&amp;macros&amp;section=params</a></code></li>
- </ul>
-
- <div class="note"><strong>バグのお知らせ:</strong> 現在、 <code>section</code> 引数は <code>raw</code> 引数も使用しないと文書全体を返すというバグがあります。</div>
- </dd>
- <dt><code>expand</code></dt>
- <dd>
- <p><code>$children</code> ビューと連結して、サブページごとの詳細情報つきの JSON レスポンスを展開します。これは各サブページごとの <code>$children</code> と <code>$json</code> の連結のように動作します。この方法は、サブページのタグについて学べます。</p>
-
- <p><strong>例:</strong> <code><a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5$children?expand">https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5$children?expand</a></code></p>
- </dd>
-</dl>
-</section>
-
-<section id="metadata">
-<h2 id="Document_metadata_resources" name="Document_metadata_resources">文書のメタデータリソース</h2>
-
-<p>文書の URL のレスポンスを微調整するための引数と一緒に、 URL 接尾辞で指定される文書の代替ビューもいくつかあります。</p>
-
-<dl>
- <dt><code>$toc</code></dt>
- <dd>Kuma に HTML のページの目次のみを返すよう命じます。順序付きリスト (つまり {{HTMLElement("ol")}}) として返されます。</dd>
- <dd><strong>例:</strong> <code><a href="https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters$toc">https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters$toc</a></code></dd>
- <dt id="json-view"><code>$json</code></dt>
- <dd>Kuma に JSON オブジェクトでページを記述するよう命じます。このオブジェクトは基本的に、 KumaScript の処理 <code>wiki.getPage()</code> を使用して得られるものと同じです。</dd>
- <dd><strong>例:</strong> <code><a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5$json">https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5$json</a></code></dd>
- <dt><code>$children</code></dt>
- <dd>Kuma にページのトピックの子を JSON で列挙するよう命じます。このオブジェクトは基本的に、 KumaScript の処理 <code>pages.subpages()</code> を使用して得られるものと同じです。</dd>
- <dd><strong>例:</strong> <code><a href="https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5$children
-">https://developer.mozilla.org/ja/docs/Web/Guide/HTML/HTML5$children</a></code></dd>
- <dd>(これは <code>?expand</code> 引数と共に使用して、もっと詳細のレスポンスを得ることもできます。)</dd>
- <dt><code>$compare</code></dt>
- <dd>必須のクエリ引数 <code>?from</code> および <code>?to</code>で指定されたリビジョン間のソーステキスト行の違いを表示します。</dd>
- <dd><strong>例:</strong> <code><a href="https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters$compare?to=911697&amp;from=911067">https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters$compare?to=911697&amp;from=911067</a></code></dd>
- <dt><code>$edit</code></dt>
- <dd>指定された文書の現在のリビジョンを、表示する代わりに編集します。</dd>
- <dd><strong>例:</strong> <code><a href="https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters$edit">https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters$edit</a></code></dd>
- <dt><code>$history</code></dt>
- <dd>指定された文書の内容を表示する代わりに、最新の10リビジョンのリビジョン履歴を表示します。履歴全体は、クエリ引数の値に <code>?limit=all</code> を付けることで要求できます。</dd>
- <dd><strong>例:</strong> <code><a href="https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters$history?limit=all">https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters$history?limit=all</a></code></dd>
- <dt><code>$revision</code></dt>
- <dd>文書の "<code>/</code>" の後に指定された番号のリビジョンを表示します。</dd>
- <dd><strong>例:</strong> <code><a href="https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters$revision/915141">https://developer.mozilla.org/ja/docs/MDN/Contribute/Tools/Document_parameters$revision/915141</a></code></dd>
-</dl>
-</section>
+<div class="warning">
+<p><strong>警告:</strong> MDN の <code>index.json</code> リソースの JSON データに使用されるファイル形式は、バージョン管理されておらず、意図的に文書化されていません。構造やキーの名前など、書式ののあらゆる部分が変更される可能性があります。 Yari が変更されて、 <code>index.json</code> リソースが提供されなくなる可能性もあります。</p>
+</div>
