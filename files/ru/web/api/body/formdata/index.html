@@ -5,7 +5,7 @@ translation_of: Web/API/Body/formData
 ---
 <div>{{APIRef("Fetch")}}</div>
 
-<p>Метод <strong><code>formData()</code></strong> из {{domxref("Body")}} принимает поток ответа {{domxref("Response")}} и считывает его до завершения. Он возвращает обещание, которое разрешается с помощью объекта {{domxref("FormData")}}.</p>
+<p>Метод <strong><code>formData()</code></strong> из {{domxref("Body")}} принимает поток ответа {{domxref("Response")}} и считывает его до завершения. Он возвращает промис, который разрешается с помощью объекта {{domxref("FormData")}}.</p>
 
 <div class="note">
 <p><strong>Примечание:</strong>  Это в основном относится к <a href="/en-US/docs/Web/API/ServiceWorker_API">service workers</a>. Если пользователь отправляет форму а service worker перехватывает запрос,  можно, например, вызвать <code>formData()</code> чтобы получить набор данных в формате ключ-значение, изменить некоторые поля, а затем отправить форму на сервер, или использовать её локально.</p>
