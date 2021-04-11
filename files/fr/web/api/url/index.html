@@ -138,138 +138,15 @@ console<span class="punctuation token">.</span><span class="function token">log<
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<p>{{CompatibilityTable}}</p>
+<p>{{Compat("api.URL")}}</p>
 
-<div id="compat-desktop">
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalités</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>8.0<sup>[2]</sup><br>
-    32</td>
-   <td>In Development<sup>[5]</sup></td>
-   <td>{{CompatGeckoDesktop("2.0")}}<sup>[1][3][6]</sup><br>
-    {{CompatGeckoDesktop("19.0")}}</td>
-   <td>{{CompatNo}}<sup>[4]</sup></td>
-   <td>15.0<sup>[2]</sup><br>
-    19</td>
-   <td>6.0<sup>[2]</sup><br>
-    7.0</td>
-  </tr>
-  <tr>
-   <td><code>username</code>, <code>password</code>, and <code>origin</code></td>
-   <td>{{CompatChrome(52)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("26.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>19</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>searchParams</code></td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("29.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>36</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>toJSON</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("54")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile"> </div>
-
-<div>
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalités</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4<sup>[2]</sup><br>
-    4.4</td>
-   <td>8.0<sup>[2]</sup><br>
-    32</td>
-   <td>{{CompatGeckoMobile("14.0")}}<sup>[1][3][6]</sup><br>
-    {{CompatGeckoMobile("19.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>15.0<sup>[2]</sup></td>
-   <td>6.0<sup>[2]</sup></td>
-  </tr>
-  <tr>
-   <td><code>username</code>, <code>password</code>, and <code>origin</code></td>
-   <td>{{CompatChrome(52)}}</td>
-   <td>{{CompatChrome(52)}}</td>
-   <td>{{CompatGeckoDesktop("26.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>searchParams</code></td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{CompatGeckoMobile("29.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div> </div>
-</div>
-
-<p>[1] De Gecko 2 (Firefox 4) à Gecko 18 inclus, Gecko a mis en oeuvre cette interface avec le type interne non-standard <code>nsIDOMMozURLProperty</code> . <span class="short_text" id="result_box" lang="fr"><span>Comme le seul accès à ce type d'objet était à travers</span></span> {{domxref("window.URL")}}, <span class="short_text" id="result_box" lang="fr"><span>en pratique, cela ne faisait aucune différence.</span></span></p>
-
-<p>[2] Cette fonctionnalité est implémentée sous le nom non-standard <code>webkitURL</code>.</p>
-
-<p>[3] <span id="result_box" lang="fr"><span>Pour Firefox, à utiliser à partir du code chrome, portée JSM et Bootstrap, vous devez l'importer comme ceci :</span></span></p>
-
-<pre class="brush: js line-numbers  language-js"><code class="language-js">Cu<span class="punctuation token">.</span><span class="function token">importGlobalProperties</span><span class="punctuation token">(</span><span class="punctuation token">[</span><span class="string token">'URL'</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-
-<p><code>URL</code> est disponible pour les portées du "Worker" .</p>
-
-<p>[4] <span id="result_box" lang="fr"><span>Depuis IE11, l'instanciation de nouveaux objets URL n'est pas prise en charge,</span> c'est-à-dire que la <span>nouvelle </span></span> <code>URL()</code> <span lang="fr"><span> ne fonctionne pas.</span></span></p>
-
-<p>[5] Edge en développement : voir <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/urlapi/">https://developer.microsoft.com/en-us/microsoft-edge/platform/status/urlapi/</a>  et <a href="https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer/suggestions/6263638-url-api">https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer/suggestions/6263638-url-api</a>.</p>
-
-<p>[6] Firefox a un bogue <span id="result_box" lang="fr"><span>dans lequel les apostrophes contenues dans les URL s'échappent lorsqu'elles sont accessibles par les URL des API </span></span> ({{bug(1386683)}}). <span class="short_text" id="result_box" lang="fr"><span>Cela a été corrigé à partir de Firefox 57</span></span> .</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
- <li><span class="short_text" id="result_box" lang="fr"><span>Propriété permettant d'obtenir cet objet</span></span> : {{domxref("Window.URL")}}.</li>
- <li>{{domxref("URLSearchParams")}}.</li>
- <li><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties (en)</a></li>
+  <li><a href="/fr/docs/Web/API/URL_API">URL API</a></li>
+  <li><a href="/fr/docs/Learn/Common_questions/What_is_a_URL">Qu'est-ce qu'un URL ?</a></li>
+  <li>Propriété permettant d'obtenir un objet <code>URL</code> : {{domxref("Window.URL")}}.</li>
+  <li>{{domxref("URLSearchParams")}}.</li>
 </ul>

@@ -18,7 +18,7 @@ translation_of: Web/CSS/Inline_formatting_context
 
 <p>{{EmbedGHLiveSample("css-examples/inline-formatting/inline.html", '100%', 720)}}</p>
 
-<p>各个框组成了一行，而该行位于一个称为“行框（line box）”的矩形区域之中。该行框的大小将足以包含该行中所有的行内框（inline boxes）；如果一行的空间不够，将在行内方向上新开一行。因此，一个段落实际上是一系列行框的集合，这些行框在块的方向上排列。</p>
+<p>各个框组成了一行，而该行位于一个称为“行框（line box）”的矩形区域之中。该行框的大小将足以包含该行中所有的行内框（inline boxes）；当行内方向上没有剩余空间时，将会创建新行。因此，一个段落实际上是一系列行框的集合，这些行框在块的方向上排列。</p>
 
 <p>一个行内框（inline box）被分割到多行中时， margins, borders, 以及 padding 的设定均不会在断裂处生效。 下例中有一个 ({{HTMLElement("span")}}) 元素，它包裹了一系列单词，占据了两行。可以看见在断裂处，<code>&lt;span&gt;</code> 的 border 同样发生了断裂。</p>
 

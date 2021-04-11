@@ -3,11 +3,9 @@ title: OscillatorNode
 slug: Web/API/OscillatorNode
 translation_of: Web/API/OscillatorNode
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+<div>{{APIRef("Web Audio API")}}</div>
 
-<div>
 <p>L'interface <code>OscillatorNode</code> représente un signal périodique, une sinusoïde par exemple. C'est un module de traitement audio {{domxref("AudioNode")}} qui crée un signal sinusoïdal à une fréquence donnée — c'est-à-dire génère une tonalité constante.</p>
-</div>
 
 <p>On crée un <code style="font-size: 14px;">OscillatorNode</code> en utilisant la méthode {{domxref("AudioContext.createOscillator")}}. Il a toujours exactement une sortie, et aucune entrée. Ses propriétés par défaut (voir {{domxref("AudioNode")}} pour la définition) sont :</p>
 
@@ -26,19 +24,13 @@ translation_of: Web/API/OscillatorNode
 <dl>
  <dt>{{domxref("OscillatorNode.frequency")}}</dt>
  <dd>{{domxref("AudioParam")}} de type <a href="/fr/docs/Web/API/AudioParam#a-rate">a-rate</a> représentant la fréquence d'oscillation en Hertz (la propriété frequency est en lecture seule, mais sa sous-propriété value ne l'est pas).</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("OscillatorNode.detune")}}</dt>
  <dd>{{domxref("AudioParam")}} de type <a href="/fr/docs/Web/API/AudioParam#a-rate">a-rate</a> représentant le désaccordage de l' oscillation exprimé en cents  (la propriété detune est en lecture seule, mais sa sous-propriété value ne l'est pas).</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("OscillatorNode.type")}}</dt>
  <dd>Chaîne de caractères indiquant la forme de l'onde générée. Différentes ondes produisent différentes tonalités.  Les valeurs standard sont <code>"sine"</code>, <code>"square"</code>, <code>"sawtooth"</code>, <code>"triangle"</code> et <code>"custom"</code>. La valeur par défault is <code>"sine"</code>. <code>custom</code> permet d'utiliser une {{domxref("PeriodicWave")}} pour décrire une forme d'onde personnalisée.</dd>
 </dl>
 
-<h2 id="Méthodes">Méthodes</h2>
+<h2 id="Methods">Méthodes</h2>
 
 <p><em>Hérite des méthodes de ses parents, {{domxref("AudioNode")}}</em>.</p>
 
@@ -58,7 +50,7 @@ translation_of: Web/API/OscillatorNode
  <dd>Propriété utilisée pour assigner un gestionnaire d'évènement à l'évènement <code>ended</code>, qui est émis une fois que la lecture du son est terminée.</dd>
 </dl>
 
-<h2 id="Exemples">Exemples</h2>
+<h2 id="Examples">Exemples</h2>
 
 <p>L'exemple suivant montre une utilisation basique d'un {{ domxref("AudioContext") }} pour créer un <code>OscillatorNode</code>. Pour un exemple appliqué, jetez un oeil à notre <a href="http://mdn.github.io/violent-theremin/">Violent Theremin demo</a> (voir<a href="https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js"> app.js</a> pour l'intégralité du code).</p>
 
@@ -73,84 +65,29 @@ oscillator.frequency.value = 440; // valeur en hertz
 
 oscillator.start();</pre>
 
-<div>
-<h2 id="Specifications">Specifications</h2>
+<h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
   </tr>
   <tr>
    <td>{{SpecName('Web Audio API', '#the-oscillatornode-interface', 'OscillatorNode')}}</td>
    <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Compatibilité_avec_les_navigateurs">Compatibilité avec les navigateurs</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<div>{{CompatibilityTable}}</div>
+<p>{{Compat("api.OscillatorNode")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>14 {{property_prefix("webkit")}}</td>
-   <td>23</td>
-   <td>{{CompatNo}}</td>
-   <td>15 {{property_prefix("webkit")}}<br>
-    22 (unprefixed)</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>28 {{property_prefix("webkit")}}</td>
-   <td>25</td>
-   <td>1.2</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>6 {{property_prefix("webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="Voir_également">Voir également</h2>
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
  <li><a href="/fr/docs/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
 </ul>
-</div>
-
-<p> </p>

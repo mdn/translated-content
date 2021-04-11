@@ -50,62 +50,7 @@ document.onclick = function (event) {
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatChrome(45)}} (unprefixed)</td>
-   <td>{{CompatGeckoDesktop("9.0")}} as <code>mozCancelFullScreen</code><sup>[1]</sup><br>
-    {{CompatGeckoDesktop("47.0")}}<sup>[1]</sup> (behind <code>full-screen-api.unprefix.enabled</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android Webkit</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatChrome(45)}} (unprefixed)</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatChrome(45)}} (unprefixed)</td>
-   <td>{{CompatGeckoMobile("9.0")}} as <code>mozCancelFullScreen</code><sup>[1]</sup><br>
-    {{CompatGeckoMobile("47.0")}}<sup>[1]</sup> (behind <code>full-screen-api.unprefix.enabled</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] La "pile" du mode plein écran qui permet d'annuler le plein écran pour un élément et de le restaurer pour un élément précédent automatiquement, a été implémentée dans Gecko 11.0 {{geckoRelease("11.0")}}.</p>
+<p>{{Compat("api.Document.exitFullscreen")}}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

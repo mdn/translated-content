@@ -13,7 +13,7 @@ translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
 
 <p><code>WorkerOrGlobalScope</code> относится к {{domxref("Window")}} и {{domxref("WorkerGlobalScope")}} сразу. Это означает, что метод <code>fetch()</code> доступен практически в любом контексте, в котором бы вы не захотели получить ресурсы.</p>
 
-<p>{{domxref("WindowOrWorkerGlobalScope.fetch","Fetch()")}} promise (обещание) завершается {{jsxref("TypeError")}}, если возникает сетевая ошибка, хотя обычно это означает проблему с доступами или аналогичную ей. Для успешного завершения <code>fetch()</code> достаточно удостовериться в том, что обещание выполнено и что свойство {{domxref("Response.ok")}} имеет значение <code>true</code>. HTTP статус 404 не является сетевой ошибкой.</p>
+<p>Промис {{domxref("WindowOrWorkerGlobalScope.fetch","Fetch()")}} завершается {{jsxref("TypeError")}}, если возникает сетевая ошибка, хотя обычно это означает проблему с доступами или аналогичную ей. Для успешного завершения <code>fetch()</code> достаточно удостовериться в том, что промис выполнен и что свойство {{domxref("Response.ok")}} имеет значение <code>true</code>. HTTP статус 404 не является сетевой ошибкой.</p>
 
 <p>Метод <code>fetch()</code> контролируется директивой <code>connect-src</code> directive of <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a> (политика безопасности контента), а не директивой ресурсов, которые извлекает.</p>
 

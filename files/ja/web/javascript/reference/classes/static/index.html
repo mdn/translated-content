@@ -2,11 +2,11 @@
 title: static
 slug: Web/JavaScript/Reference/Classes/static
 tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Static
+- Classes
+- ECMAScript 2015
+- JavaScript
+- Language feature
+- Static
 translation_of: Web/JavaScript/Reference/Classes/static
 ---
 <div>{{jsSidebar("Classes")}}</div>
@@ -15,17 +15,16 @@ translation_of: Web/JavaScript/Reference/Classes/static
 
 <div>{{EmbedInteractiveExample("pages/js/classes-static.html")}}</div>
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+<h2 id="Syntax">構文</h2>
 
-<pre class="syntaxbox notranslate">static <var>methodName</var>() { ... }
+<pre class="brush: js">static <var>methodName</var>() { ... }
 static <var>propertyName </var>[= <var>value</var>];
 </pre>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="Using_static_members_in_classes" name="Using_static_members_in_classes">クラスでの静的メンバーの使用</h3>
+<h3 id="Using_static_members_in_classes">クラスでの静的メンバーの使用</h3>
 
 <p>次の例はいくつかのことを説明しています。</p>
 
@@ -35,42 +34,43 @@ static <var>propertyName </var>[= <var>value</var>];
  <li>静的メンバーがどう呼び出せて、どう呼び出せないか</li>
 </ol>
 
-<pre class="brush: js notranslate">class Triple {
-  static customName = 'Tripler';
-  static description = 'I triple any number you provide';
-  static triple(n = 1) {
+<pre class="brush: js">class Triple {
+  static customName = 'Tripler';
+  static description = 'I triple any number you provide';
+  static calculate(n = 1) {
     return n * 3;
   }
 }
 
-class BiggerTriple extends Triple {
-  static longDescription;
+class SquaredTriple extends Triple {
+  static longDescription;
   static description = 'I square the triple of any number you provide';
-  static triple(n) {
-    return super.triple(n) * super.triple(n);
+  static calculate(n) {
+    return super.calculate(n) * super.calculate(n);
   }
 }
 
-console.log(Triple.description);   // 'I triple any number you provide'
-console.log(Triple.triple());      // 3
-console.log(Triple.triple(6));     // 18
+console.log(Triple.description);            // 'I triple any number you provide'
+console.log(Triple.calculate());            // 3
+console.log(Triple.calculate(6));           // 18
 
-var tp = new Triple();
+const tp = new Triple();
 
-console.log(BiggerTriple.triple(3));        // 81 (not affected by parent's instantiation)
-console.log(BiggerTriple.description);      // 'I square the triple of any number you provide'
-console.log(BiggerTriple.longDescription);  // undefined
-console.log(BiggerTriple.customName);       // 'Tripler'
+console.log(SquaredTriple.calculate(3));    // 81 (not affected by parent's instantiation)
+console.log(SquaredTriple.description);     // 'I square the triple of any number you provide'
+console.log(SquaredTriple.longDescription); // undefined
+console.log(SquaredTriple.customName);      // 'Tripler'
 
-console.log(tp.triple());         // 'tp.triple is not a function'.
+// This throws because calculate() is a static member, not an instance member.
+console.log(tp.calculate());                // 'tp.calculate is not a function'
 </pre>
 
-<h3 id="Calling_static_members_from_another_static_method" name="Calling_static_members_from_another_static_method">静的メンバーの別な静的メソッドからの呼び出し</h3>
+<h3 id="Calling_static_members_from_another_static_method">静的メンバーの別な静的メソッドからの呼び出し</h3>
 
 <p>同じクラス内の静的メソッドまたはプロパティを静的メソッドから呼び出すには、 <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/this">this</a></code> キーワードを使います。</p>
 
-<pre class="brush: js notranslate">class StaticMethodCall {
-  static staticProperty = 'static property';
+<pre class="brush: js">class StaticMethodCall {
+  static staticProperty = 'static property';
   static staticMethod() {
     return 'Static method and ' + this.staticProperty + ' has been called';
   }
@@ -84,11 +84,11 @@ StaticMethodCall.staticMethod();
 StaticMethodCall.anotherStaticMethod();
 // 'Static method and static property has been called from another static method'</pre>
 
-<h3 id="Calling_static_members_from_a_class_constructor_and_other_methods" name="Calling_static_members_from_a_class_constructor_and_other_methods">クラスのコンストラクターや他のメソッドからの静的メソッドの呼び出し</h3>
+<h3 id="Calling_static_members_from_a_class_constructor_and_other_methods">クラスのコンストラクターや他のメソッドからの静的メソッドの呼び出し</h3>
 
-<p>静的メソッドは静的ではないメソッドの {{jsxref("this")}} キーワードを使用して直接アクセスすることができません。呼び出すにはクラス名を使用して <code>クラス名.静的メソッド名()</code> / <code>クラス名.静的プロパティ名</code> のようにするか、 <code>constructor</code> プロパティのメソッドとして <code>this.constructor.静的メソッド名() </code> / <code>this.constructor.静的プロパティ名</code> のようにしてください。</p>
+<p>静的メソッドは静的ではないメソッドの {{JSxRef("Operators/this", "this")}} キーワードを使用して直接アクセスすることができません。呼び出すにはクラス名を使用して <code>クラス名.静的メソッド名()</code> / <code>クラス名.静的プロパティ名</code> のようにするか、 <code>constructor</code> プロパティのメソッドとして <code>this.constructor.静的メソッド名() </code> / <code>this.constructor.静的プロパティ名</code> のようにしてください。</p>
 
-<pre class="brush: js notranslate">class StaticMethodCall {
+<pre class="brush: js">class StaticMethodCall {
   constructor() {
     console.log(StaticMethodCall.staticProperty); // 'static property'
     console.log(this.constructor.staticProperty); // 'static property'
@@ -102,28 +102,26 @@ StaticMethodCall.anotherStaticMethod();
   }
 }</pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">仕様書</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("javascript.classes.static")}}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/class"><code>class</code> 式</a></li>
