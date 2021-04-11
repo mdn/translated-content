@@ -28,7 +28,7 @@ original_slug: Web/HTML/Formats_date_heure_HTML
 
 <p>Pour les éléments <code>&lt;input&gt;</code>, voici les différents type (cf. <a href="/fr/docs/Web/HTML/Element/Input#attr-type"><code>input</code></a>) pour lesquels l'attribut <a href="/fr/docs/Web/HTML/Global_attributes#attr-value"><code>value</code></a> contient une chaîne de caractères représentant une date ou une heure :</p>
 
-<ul class="index">
+<ul>
   <li><a href="/fr/docs/Web/HTML/Element/Input/date"><code>date</code></a></li>
   <li><a href="/fr/docs/Web/HTML/Element/Input/datetime"><code>datetime</code></a> {{deprecated_inline}}</li>
   <li><code><a href="/fr/docs/Web/HTML/Element/Input/datetime-local">datetime-local</a></code></li>
@@ -90,7 +90,7 @@ original_slug: Web/HTML/Formats_date_heure_HTML
 
 <h2 id="Basics">Notions essentielles</h2>
 
-<p>Avant de s'intéresser aux différents formats pour la représentation textuelle des valeurs temporelles en HTML, commençons par décrire comment ces valeurs sont définies formellement. HTML utilise une variation du standard <a class="external" href="https://fr.wikipedia.org/wiki/ISO_8601">ISO 8601</a> pour les chaînes de caractères représentant les dates et les heures. Il est toujours utile de vérifier que le format utilisé est compatible avec HTML car la spécification HTML utilise des algorithmes pour analyser ces chaînes qui sont plus précis que le standard ISO 8601 (il peut donc y avoir quelques fines différences).</p>
+<p>Avant de s'intéresser aux différents formats pour la représentation textuelle des valeurs temporelles en HTML, commençons par décrire comment ces valeurs sont définies formellement. HTML utilise une variation du standard <a class="external" href="https://fr.wikipedia.org/wiki/ISO_8601">ISO 8601</a> pour les chaînes de caractères représentant les dates et les heures. Il est toujours utile de vérifier que le format utilisé est compatible avec HTML, car la spécification HTML utilise des algorithmes pour analyser ces chaînes qui sont plus précis que le standard ISO 8601 (il peut donc y avoir quelques fines différences).</p>
 
 <h3 id="Character_set">Jeu de caractères</h3>
 
@@ -104,11 +104,11 @@ original_slug: Web/HTML/Formats_date_heure_HTML
 
 <p>En HTML, les années sont toujours écrites avec au moins 4 chiffres. Aussi, les années antérieures à l'an 1000 sont complétées avec des zéros : l'an 72 est donc écrit <code>0072</code>. Les années antérieures à l'an 1 ne sont pas prises en charge par HTML.</p>
 
-<p>Une année est normalement constituée de 365 jours, sauf pendant les <strong><a href="#leap_years">Années bissextiles</a></strong>.</p>
+<p>Une année est normalement constituée de 365 jours, sauf pendant les <strong><a href="#leap_years">années bissextiles</a></strong>.</p>
 
 <h4 id="leap_years">Années bissextiles</h4>
 
-<p>Une année bissextile est une année dont le numéro est:</p>
+<p>Une année bissextile est une année dont le numéro est :</p>
 
 <ul>
   <li>Divisible par 400 ou,</li>
@@ -117,7 +117,7 @@ original_slug: Web/HTML/Formats_date_heure_HTML
 
 <p>Bien qu'une année calendaire s'étende sur 365 jours, la Terre met environ 365,2422 jours avant d'effectuer une orbite complète autour du soleil. Les années bissextiles permettent d'ajuster le calendrier et de le synchroniser avec la position de la planète le long de l'orbite. Ajouter un jour tous les 4 ans (environ) permet d'avoir une année moyenne longue de 365,25 jours, ce qui est relativement correct.</p>
 
-<p>En ajustant l'algorithme avec les contraintes ci-avant (divisible par 400 ou divisible par 4 mais pas par 100), on s'approche plus précisement du nombre correct de jours (365,2425). Des secondes intercalaires sont parfois ajoutées au calendrier afin de compenser les trois millièmes restant et le ralentissement naturel de la rotation de la Terre.</p>
+<p>En ajustant l'algorithme avec les contraintes ci-avant (divisible par 400 ou divisible par 4 mais pas par 100), on s'approche plus précisément du nombre correct de jours (365,2425). Des secondes intercalaires sont parfois ajoutées au calendrier afin de compenser les trois millièmes restant et le ralentissement naturel de la rotation de la Terre.</p>
 
 <p>Le deuxième mois de l'année (février) possède 28 jours pendant les années non-bissextiles et 29 jours pendant les années bissextiles.</p>
 
@@ -134,7 +134,7 @@ original_slug: Web/HTML/Formats_date_heure_HTML
   <thead>
     <tr>
       <th scope="row">Numéro du mois</th>
-      <th scope="col">Nom (en français))</th>
+      <th scope="col">Nom (en français)</th>
       <th scope="col">Durée du mois (en nombre de jours)</th>
     </tr>
   </thead>
@@ -257,7 +257,7 @@ original_slug: Web/HTML/Formats_date_heure_HTML
 
 <h2 id="Month_strings">Représentation des mois</h2>
 
-<p>Une chaîne de caractères pour un mois représente un mois d'une année donnée (plutôt qu'un mois « générique »). Aussi, on ne représentera pas simplement le mois de janvier mais le mois de janvier de l'année 1972.</p>
+<p>Une chaîne de caractères pour un mois représente un mois d'une année donnée (plutôt qu'un mois «&nbsp;générique&nbsp;»). Aussi, on ne représentera pas simplement le mois de janvier mais le mois de janvier de l'année 1972.</p>
 
 <p>Une chaîne de caractères représentant un mois est valide si elle commence par un numéro d'année valide (une chaîne de caractères composée de quatre chiffres), suivie d'un tiret ("<code>-</code>", ou U+002D), suivi d'un nombre sur deux chiffres où <code>01</code> représente janvier et où <code>12</code> représente décembre.</p>
 
@@ -368,9 +368,9 @@ original_slug: Web/HTML/Formats_date_heure_HTML
 
 <h2 id="Local_date_and_time_strings">Représentation des dates et heures locales</h2>
 
-<p>Une chaîne de caractères <code><a href="/fr/docs/Web/HTML/Element/Input/datetime-local">datetime-local</a></code> se compose d'une chaîne de caractères représentant une date, suivie de la lettre "<code>T</code>" ou d'une espace puis d'une chaîne de caractères représentant une heure. La représentation ne contient aucune information quant au fuseau horaire dont il est question et on présume que la valeur temporelle indiquée est relative au fuseau horaire de l'utilisateur.</p>
+<p>Une chaîne de caractères valide pour un élément de saisie <code><a href="/fr/docs/Web/HTML/Element/Input/datetime-local">datetime-local</a></code> se compose d'une chaîne de caractères représentant une date, suivie de la lettre "<code>T</code>" ou d'une espace puis d'une chaîne de caractères représentant une heure. La représentation ne contient aucune information quant au fuseau horaire dont il est question et on présume que la valeur temporelle indiquée est relative au fuseau horaire de l'utilisateur.</p>
 
-<p>Lorsqu'on définit la valeur de l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-value"><code>input</code></a> d'un champ <code>datetime-local</code>, la chaîne de caractères est normalisée. Les formes normalisées utilisent toujours la lettre T comme séparateur entre la date et l'heure. De plus, les formes normalisées utilisent toujours la forme la plus courte pour exprimer l'heure (les secondes sont omises si leur valeur est <code>:00</code>).</p>
+<p>Lorsqu'on définit la valeur de l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-value"><code>value</code></a> d'un champ <code>&lt;input&gt;</code> de type <code>datetime-local</code>, la chaîne de caractères est normalisée. Les formes normalisées utilisent toujours la lettre T comme séparateur entre la date et l'heure. De plus, les formes normalisées utilisent toujours la forme la plus courte pour exprimer l'heure (les secondes sont omises si leur valeur est <code>:00</code>).</p>
 
 <table class="standard-table">
   <caption>Exemples de chaînes de caractères valides pour l'expression de dates/heures</caption>
