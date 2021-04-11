@@ -19,11 +19,11 @@ translation_of: Web/HTML/Element/ol
   <tbody>
      <tr>
       <th scope="row"><dfn><a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a></dfn></th>
-      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>, et du <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content">contenu tangible</a> si les enfants de l'élément <code>&lt;ol&gt;</code> incluent au moins un élément <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>.</td>
+      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content">contenu tangible</a> si les enfants de l'élément <code>&lt;ol&gt;</code> incluent au moins un élément <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>.</td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td>Zéro, un, ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a> (qui peuvent imbriquer d'autres éléments <a href="/fr/docs/Web/HTML/Element/ol"><code>&lt;ol&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/ul"><code>&lt;ul&gt;</code></a>).</td>
+      <td>Zéro, un, ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a> (qui peuvent imbriquer d'autres éléments <a href="/fr/docs/Web/HTML/Element/ol"><code>&lt;ol&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/ul"><code>&lt;ul&gt;</code></a>), <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>.</td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
@@ -39,7 +39,7 @@ translation_of: Web/HTML/Element/ol
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td><a href="https://w3c.github.io/aria/#directory">directory</a>, <a href="https://w3c.github.io/aria/#group">group</a>, <a href="https://w3c.github.io/aria/#listbox">listbox</a>, <a href="https://w3c.github.io/aria/#menu">menu</a>, <a href="https://w3c.github.io/aria/#menubar">menubar</a>, <a href="https://w3c.github.io/aria/#radiogroup">radiogroup</a>, <a href="https://w3c.github.io/aria/#tablist">tablist</a>, <a href="https://w3c.github.io/aria/#toolbar">toolbar</a>, <a href="https://w3c.github.io/aria/#tree">tree</a>, <a href="https://w3c.github.io/aria/#presentation">presentation</a></td>
+      <td><a href="https://w3c.github.io/aria/#directory">directory</a>, <a href="https://w3c.github.io/aria/#group">group</a>, <a href="https://w3c.github.io/aria/#listbox">listbox</a>, <a href="https://w3c.github.io/aria/#menu">menu</a>, <a href="https://w3c.github.io/aria/#menubar">menubar</a>, <a href="https://w3c.github.io/aria/#none">none</a>, <a href="https://w3c.github.io/aria/#presentation">presentation</a>, <a href="https://w3c.github.io/aria/#radiogroup">radiogroup</a>, <a href="https://w3c.github.io/aria/#tablist">tablist</a>, <a href="https://w3c.github.io/aria/#toolbar">toolbar</a>, <a href="https://w3c.github.io/aria/#tree">tree</a>.</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
@@ -49,6 +49,8 @@ translation_of: Web/HTML/Element/ol
 </table>
 
 <h2 id="attributes">Attributs</h2>
+
+<p>À l'instar des autres éléments HTML, il est possible d'utiliser <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a> sur cet élément.</p>
 
 <dl>
   <dt><strong id="attr-reversed"><code>reversed</code></strong></dt>
@@ -75,7 +77,7 @@ translation_of: Web/HTML/Element/ol
 
 <h2 id="usage_notes">Note d'utilisation</h2>
 
-<p>En général, les éléments d'une liste ordonnée s'affichent avec un <a href="/en-US/docs/Web/CSS/::marker">marqueur</a> précédent, tel qu'un chiffre ou une lettre.</p>
+<p>En général, les éléments d'une liste ordonnée s'affichent avec un <a href="/en-US/docs/Web/CSS/::marker">marqueur</a> précédant l'élément, tel qu'un chiffre ou une lettre.</p>
 
 <p>Les éléments <code>&lt;ol&gt;</code> et <a href="/fr/docs/Web/HTML/Element/ul"><code>&lt;ul&gt;</code></a> peuvent s'imbriquer aussi profondément que vous le souhaitez, alternant entre <code>&lt;ol&gt;</code> et <code>&lt;ul&gt;</code> comme vous le souhaitez.</p>
 
@@ -130,13 +132,13 @@ translation_of: Web/HTML/Element/ol
 
 <p>Le HTML ci-dessus affichera :</p>
 
-<p>{{EmbedLiveSample("using_the_start_attribute", 400, 150)}}</p>
+<p>{{EmbedLiveSample("using_the_start_attribute", 400, 160)}}</p>
 
 <h3 id="nesting_lists">Listes imbriquées</h3>
 
 <pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;Premier élément&lt;/li&gt;
-  &lt;li&gt;Deuxième élément  &lt;!-- La fermetute &lt;/li&gt; n'est pas encore placée ! --&gt;
+  &lt;li&gt;Deuxième élément  &lt;!-- La fermeture &lt;/li&gt; n'est pas encore placée ! --&gt;
     &lt;ol&gt;
       &lt;li&gt;Premier élément de la liste imbriquée&lt;/li&gt;
       &lt;li&gt;Deuxième élément de la liste imbriquée&lt;/li&gt;
@@ -149,7 +151,7 @@ translation_of: Web/HTML/Element/ol
 
 <p>Le HTML ci-dessus affichera :</p>
 
-<p>{{EmbedLiveSample("nesting_lists", 400, 150)}}</p>
+<p>{{EmbedLiveSample("nesting_lists", 400, 200)}}</p>
 
 <h3 id="unordered_list_inside_ordered_list">Liste non ordonnée dans une liste ordonnée</h3>
 
@@ -168,7 +170,7 @@ translation_of: Web/HTML/Element/ol
 
 <p>Le HTML ci-dessus affichera :</p>
 
-<p>{{EmbedLiveSample("unordered_list_inside_ordered_list", 400, 150)}}</p>
+<p>{{EmbedLiveSample("unordered_list_inside_ordered_list", 400, 200)}}</p>
 
 <h2 id="specifications">Spécifications</h2>
 
