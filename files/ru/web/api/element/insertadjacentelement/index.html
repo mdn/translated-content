@@ -25,10 +25,10 @@ translation_of: Web/API/Element/insertAdjacentElement
  <dt>position</dt>
  <dd>{{domxref("DOMString")}} - определяет позицию добавляемого элемента относительно элемента, вызвавшего метод. Должно соответствовать одному из следующих значений (чувствительно к регистру):
  <ul>
-  <li><code style="color: red;">'beforebegin'</code>: до самого <code>element</code> (до открывающего тега).</li>
-  <li><code style="color: green;">'afterbegin'</code>: сразу после открывающего тега  <code>element </code>(перед первым потомком).</li>
-  <li><code style="color: blue;">'beforeend'</code>: сразу перед закрывающим тегом <code>element</code> (после последнего потомка).</li>
-  <li><code style="color: magenta;">'afterend'</code>: после <code>element</code> (после закрывающего тега).</li>
+  <li><code style="color: red;">'beforebegin'</code>: перед самим элементом <code>targetElement</code>.</li>
+  <li><code style="color: green;">'afterbegin'</code>: внутри элемента <code>targetElement</code>, перед его первым потомком.</li>
+  <li><code style="color: blue;">'beforeend'</code>: внутри элемента <code>targetElement</code>, после его последнего потомка.</li>
+  <li><code style="color: magenta;">'afterend'</code>: после самого элемента <code>targetElement</code>.</li>
  </ul>
  </dd>
  <dt>element</dt>
