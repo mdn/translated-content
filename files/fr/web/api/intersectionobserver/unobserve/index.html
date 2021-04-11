@@ -11,19 +11,19 @@ tags:
   - unobserve
 translation_of: Web/API/IntersectionObserver/unobserve
 ---
-<div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("Intersection Observer API")}}</div>
 
-<p class="summary">La méthode <code><strong>unobserve()</strong></code> de l'interface <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> indique à l'<code>IntersectionObserver</code> de cesser d'observer l'élément cible spécifié.</p>
+<p class="summary">La méthode <code><strong>unobserve()</strong></code> de l'interface <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> indique à l'objet <code>IntersectionObserver</code> courant de cesser d'observer l'élément cible spécifié.</p>
 
 <h2 id="syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>IntersectionObserver</var>.unobserve(<var>target</var>);</pre>
 
-<h3 id="parameters">Paramètress</h3>
+<h3 id="parameters">Paramètres</h3>
 
 <dl>
   <dt><code>target</code></dt>
-  <dd>L'<a href="/fr/docs/Web/API/Element"><code>Element</code></a> à cesser d'observer. Si l'élément spécifié n'est pas en cours d'observation, cette méthode ne fait rien et ne jette pas d'erreur.</dd>
+  <dd>L'<a href="/fr/docs/Web/API/Element"><code>élément</code></a> à cesser d'observer. Si l'élément spécifié n'est pas en cours d'observation, cette méthode ne fait rien et ne lève pas d'exception.</dd>
 </dl>
 
 <h3 id="return_value">Valeur de retour</h3>
@@ -32,14 +32,14 @@ translation_of: Web/API/IntersectionObserver/unobserve
 
 <h2 id="example">Exemple</h2>
 
-<p>Ce bout de code montre simplement la création d'un observateur, l'ajout d'un élément sous observation puis sa fin d'observation.</p>
+<p>Ce fragment de code illustre la création d'un observateur, l'ajout d'un élément sous observation puis l'arrêt de cette d'observation.</p>
 
 <pre class="brush: js">let observer = new IntersectionObserver(callback);
-observer.observe(document.getElementById("elementToObserve"));
+observer.observe(document.getElementById("elementAObserver"));
 
 /* ... */
 
-observer.unobserve(document.getElementById("elementToObserve"));</pre>
+observer.unobserve(document.getElementById("elementAObserver"));</pre>
 
 <h2 id="specifications">Spécifications</h2>
 
@@ -67,6 +67,6 @@ observer.unobserve(document.getElementById("elementToObserve"));</pre>
 <h2 id="see_also">Voir aussi</h2>
 
 <ul>
-  <li><a href="/fr/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a></li>
+  <li><a href="/fr/docs/Web/API/Intersection_Observer_API">L'API <i>Intersection Observer</i></a></li>
   <li><a href="/fr/docs/Web/API/IntersectionObserver/observe"><code>IntersectionObserver.observe()</code></a></li>
 </ul>
