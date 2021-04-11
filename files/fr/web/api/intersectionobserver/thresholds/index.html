@@ -3,64 +3,55 @@ title: IntersectionObserver.thresholds
 slug: Web/API/IntersectionObserver/thresholds
 tags:
   - API
+  - Draft
   - Intersection Observer
   - Intersection Observer API
   - IntersectionObserver
-  - Propriété
+  - NeedsExample
+  - Property
+  - Reference
 translation_of: Web/API/IntersectionObserver/thresholds
 ---
-<div>{{APIRef("Intersection Observer API")}}{{draft}}{{SeeCompatTable}}</div>
+<div>{{APIRef("Intersection Observer API")}}</div>
 
-<p>La propriété en lecture seule <strong><code>thresholds</code></strong> de l'interface {{domxref("IntersectionObserver")}} retourne la liste des seuils d'intersection spécifiés lorsque l'observateur a été instancié avec {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}}. Si un unique ratio seuil a été donné comme valeur numérique à l'instanciation de l'objet, cette valeur sera un tableau contenant uniquement cette valeur.</p>
+<p>La propriété en lecture seule <strong><code>thresholds</code></strong> de l'interface <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> retourne la liste des seuils d'intersection spécifiés lors de l'instanciation avec <a href="/fr/docs/Web/API/IntersectionObserver/IntersectionObserver"><code>IntersectionObserver()</code></a>. Si un seul seuil a été fourni lors de l'instanciation de l'objet, cette propriété sera un tableau contenant cette unique valeur numérique.</p>
 
-<p>Voir {{SectionOnPage("/fr-FR/docs/Web/API/Intersection_Observer_API", "Thresholds")}} pour apprendre comment fonctionnent les seuils d'intersection.</p>
+<p>Voir <a href="/fr/docs/Web/API/Intersection_Observer_API#Thresholds">la section sur les seuils</a> pour apprendre comment fonctionnent les seuils d'intersection.</p>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+<h2 id="syntax">Syntaxe</h2>
 
-<pre class="syntaxbox"><var><code><em>let thresholds</em> = </code>IntersectionObserver</var>.thresholds;
-</pre>
+<pre class="syntaxbox"><var>thresholds</var> = IntersectionObserver.thresholds;</pre>
 
-<h3 id="Valeur">Valeur</h3>
+<h3 id="value">Valeur</h3>
 
-<p>Un tableau de seuils d'intersection, originellement spécifié au moyen de la propriété <code>threshold</code> à l'instanciation d'un observateur. Si un unique observateur a été spécifié, sans être donné dans un tableau (valeur numérique), cette valeur se traduite comme un tableau d'un élément la contenant. Quelque fut l'ordre de votre tableau original de <code>threshold</code>, il sera trié par ordre croissant.</p>
+<p>Un tableau de seuils d'intersection, spécifiés lors de l'instanciation via <code>options.threshold</code>. Si un seul seuil a été fourni, sans être donné dans un tableau (avec une valeur numérique « brute » donc), la valeur de la propriété sera un tableau contenant cette unique valeur. Quel qu'ait été l'ordre du tableau fourni à l'origine, celui fournit par <code>thresholds</code> sera trié par ordre croissant.</p>
 
-<p>Si aucune option <code>threshold</code> n'est donnée lorsque <code>IntersectionObserver()</code> est utilisé pour instantier l'observateur, la valeur de <code>thresholds</code> est par défaut définie à <code>[0]</code>.</p>
+<p>Si aucune option <code>threshold</code> n'est fournie lors de l'instanciation avec <code>IntersectionObserver()</code>, la valeur par défaut de <code>thresholds</code> est définie à <code>[0]</code>.</p>
 
-<div class="note">
-<p>Attention! Bien que l'objet d'<code>options</code> que vous pouvez spécifier lorsque vous créez un {{domxref("IntersectionObserver")}} a un champ nommé {{domxref("IntersectionObserver.threshold", "threshold")}}, cette propriété-ci s'appelle <code>thresholds</code>. Cela peut porter à confusion. Si vous utilisez <code>thresholds</code> par erreur comme nom du champ votre objet d'<code>options</code>, le tableau de <code>thresholds</code> va se retrouver égal à <code>[0.0]</code>, ce qui n'est probablement pas ce à quoi vous vous attendiez. Le déboguage n'en sera que plus chaotique.</p>
+<div class="notecard warning">
+  <p><b>Attention !</b></p>
+  <p>Bien que l'objet d'<code>options</code> qu'on peut spécifier à la création d'un <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> possède une propriété champ nommée <a href="/fr/docs/Web/API/IntersectionObserver/IntersectionObserver"><code>threshold</code></a>, cette propriété-ci s'appelle <code>thresholds</code> (avec un « s » supplémentaire donc). <em>Cela peut porter à confusion</em>. Si vous utilisez <code>thresholds</code> par erreur comme nom pour la propriété de l'objet <code>options</code>, le tableau porté par <code>thresholds</code> va se retrouver égal à <code>[0.0]</code>, ce qui n'est probablement pas ce à quoi vous vous attendiez. Le déboguage n'en sera que plus chaotique.</p>
 </div>
 
-<h2 id="Exemple">Exemple</h2>
-
-<pre class="syntaxbox">// Instanciation d'un observateur, c'est l'objet d'options qui contient le tableau des seuils (propriété threshold)
-observateur = new IntersectionObserver(fonctionRappel, optionsObservateur)
-</pre>
-
-<p>Puis faire simplement :</p>
-
-<pre class="syntaxbox">observateur.thresholds</pre>
-
-<p>Pour afficher la liste des seuils fournie à l'initialisation.</p>
-
-<h2 id="Spécifications">Spécifications</h2>
+<h2 id="specifications">Spécifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IntersectionObserver', '#dom-intersectionobserver-thresholds', 'IntersectionObserver.thresholds')}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+     <th scope="col">Spécification</th>
+     <th scope="col">Statut</th>
+     <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('IntersectionObserver', '#dom-intersectionobserver-thresholds', 'IntersectionObserver.thresholds')}}</td>
+      <td>{{Spec2('IntersectionObserver')}}</td>
+      <td>Définition initiale.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("api.IntersectionObserver.thresholds")}}</p>
