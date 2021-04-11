@@ -15,7 +15,9 @@ tags:
 translation_of: Web/HTML/Preloading_content
 original_slug: Web/HTML/Précharger_du_contenu
 ---
-<p class="summary">La valeur <code>preload</code> de l'attribut <a href="/fr/docs/Web/HTML/Element/link#attr-rel"><code>rel</code></a> pour l'élément <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> permet d'écrire des requêtes déclaratives de récupération au sein de l'élément <a href="/fr/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a>. On peut ainsi indiquer les ressources dont la page aura besoin peu après son chargement. Cela permet de les précharger au début du chargement de la page, avant que le rendu intervienne. On s'assure donc que les ressources nécessaires soient disponibles plus tôt, évitant ainsi de bloquer le rendu initial de la page et améliorant les performances. Dans cet article, on voit comment utiliser <code>preload</code>.</p>
+<p class="summary">La valeur <code>preload</code> de l'attribut <a href="/fr/docs/Web/HTML/Element/link#attr-rel"><code>rel</code></a> pour l'élément <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> permet d'écrire des requêtes déclaratives de récupération au sein de l'élément <a href="/fr/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a>. On peut ainsi indiquer les ressources dont la page aura besoin peu après son chargement. Cela permet de les précharger au début du chargement de la page, avant que le rendu intervienne. On s'assure donc que les ressources nécessaires soient disponibles plus tôt, évitant ainsi de bloquer le rendu initial de la page et améliorant les performances.</p>
+
+<p class="summary">Cet article est un guide sur le fonctionnement de <code>&lt;link rel="preload"&gt;</code>.</p>
 
 <h2 id="Les_bases">Les bases</h2>
 
@@ -23,13 +25,18 @@ original_slug: Web/HTML/Précharger_du_contenu
 
 <pre class="brush: html">&lt;link rel="stylesheet" href="styles/main.css"&gt;</pre>
 
-<p>Dans le cas qui va nous intéresser, on utilisera l'attribut <code>rel</code> avec la valeur <code>preload</code>. Cela va permettre d'utiliser l'élément <code>&lt;link&gt;</code> pour précharger à peu près n'importe quelle ressource dont on aurait besoin. Dans la version la plus simple, il suffit d'indiquer le chemin de la ressource à précharger via l'attribut <a href="/fr/docs/Web/HTML/Element/link#attr-href"><code>href</code></a> et le type de la ressource via l'attribut <a href="/fr/docs/Web/HTML/Element/link#attr-as"><code>as</code></a>.</p>
+<p>Dans le cas qui va nous intéresser, on utilisera l'attribut <code>rel</code> avec la valeur <code>preload</code>. Cela va permettre d'utiliser l'élément <code>&lt;link&gt;</code> pour précharger à peu près n'importe quelle ressource dont on aurait besoin. Dans la version la plus simple, il suffit d'indiquer :</p>
 
-<p>Voici un exemple d'application simple (vous pouvez consulter <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css">le code source de cet exemple JS et CSS</a> et visualiser <a href="https://mdn.github.io/html-examples/link-rel-preload/js-and-css/">la démo <em>live</em></a>) :</p>
+<ul>
+  <li>le chemin de la ressource à précharger via l'attribut <a href="/fr/docs/Web/HTML/Element/link#attr-href"><code>href</code></a></li>
+  <li>et le type de la ressource via l'attribut <a href="/fr/docs/Web/HTML/Element/link#attr-as"><code>as</code></a>.</li>
+</ul>
+
+<p>Voici un exemple d'application simple (vous pouvez consulter <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css">le code source de cet exemple JS et CSS</a> et visualiser <a href="https://mdn.github.io/html-examples/link-rel-preload/js-and-css/">la démo <i>live</i></a>) :</p>
 
 <pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Exemple de preload avec JS et CSS&lt;/title&gt;
+  &lt;title&gt;Exemple de préchargement pour JS et CSS&lt;/title&gt;
 
   &lt;link rel="preload" href="style.css" as="style"&gt;
   &lt;link rel="preload" href="main.js" as="script"&gt;
@@ -48,7 +55,7 @@ original_slug: Web/HTML/Précharger_du_contenu
 
 <ul>
 	<li>Les ressources qui sont pointées à partir du CSS, comme les polices ou les images.</li>
-	<li>Les ressources que JavaScript peut demander, comme JSON, les scripts importés ou les travailleurs Web.</li>
+	<li>Les ressources que JavaScript peut demander, comme JSON, les scripts importés ou les <i>web workers</i>.</li>
 	<li>Images et fichiers vidéo plus volumineux.</li>
 </ul>
 
@@ -72,12 +79,12 @@ original_slug: Web/HTML/Précharger_du_contenu
   <li><code>fetch</code> : une ressource à laquelle on accèdera via une requête <code>fetch</code> ou via une requête XHR (par exemple un <code>ArrayBuffer</code> ou un fichier JSON).</li>
   <li><code>font</code> : un fichier de police de caractère.</li>
   <li><code>image</code> : un fichier contenant une image .</li>
-  <li><code>object</code> : une ressource à intégrer dans un élément <a href="/fr/docs/Web/HTML/Element/embed"><code>&lt;embed&gt;</code></a>.</li>
+  <li><code>object</code> : une ressource à intégrer dans un élément <a href="/fr/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a>.</li>
   <li><code>script</code> : un fichier JavaScript.</li>
-  <li><code>style</code> : une feuille de style.</li>
+  <li><code>style</code> : une feuille de style CSS.</li>
   <li><code>track</code> : un fichier WebVTT.</li>
-  <li><code>worker</code> : un <em>web worker</em> ou un <em>worker</em> partagé JavaScript.</li>
-  <li><code>video</code> : un fichier vidéo.</li>
+  <li><code>worker</code> : un <i>web worker</i> ou un <i>worker</i> partagé JavaScript.</li>
+  <li><code>video</code> : un fichier vidéo, généralement utilisé dans un élément <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>.</li>
 </ul>
 
 <div class="notecard note">
@@ -198,7 +205,7 @@ document.body.appendChild(preloadedScript);</pre>
 <p>Il existe d'autres fonctionnalités qui permettent de précharger des ressources mais aucune n'est aussi flexible que <code>&lt;link rel="preload"&gt;</code> :</p>
 
 <ul>
-  <li><code>&lt;link rel="prefetch"&gt;</code> est pris en charge par les navigateurs depuis longtemps mais sert pour précharger des ressources qui seront utilisées sur la prochaine page vers laquelle on navigue. Autrement dit, c'est utile mais pas pour la page courante ! De plus, les navigateurs choisiront une priorité moins élevée pour les ressources <code>prefetch</code> que pour celles utilisant <code>preload</code> (la page actuelle est considérée comme plus importante que la suivante). Pour plus de détails, lire <a href="/fr/docs/Web/HTTP/Link_prefetching_FAQ">la FAQ sur le préchargement des liens</a>.</li>
+  <li><code>&lt;link rel="prefetch"&gt;</code> est pris en charge par les navigateurs depuis longtemps mais sert pour précharger des ressources qui seront utilisées sur la <strong>prochaine</strong> page vers laquelle on navigue. Autrement dit, c'est utile mais pas pour la page courante ! De plus, les navigateurs choisiront une priorité moins élevée pour les ressources <code>prefetch</code> que pour celles utilisant <code>preload</code> (la page actuelle est considérée comme plus importante que la suivante). Pour plus de détails, lire <a href="/fr/docs/Web/HTTP/Link_prefetching_FAQ">la FAQ sur le préchargement des liens</a>.</li>
   <li><code>&lt;link rel="prerender"&gt;</code> est utilisé afin d'afficher la page indiquée en arrière-plan, accélérant le chargement de la page si l'utilisateur navigue vers cette page. Pouvant entraîner une consommation de bande passante plus importante, Chrome considère <code>prerender</code> comme <a href="https://developers.google.com/web/updates/2018/07/nostate-prefetch">un préchargement NoState</a>.</li>
   <li><code>&lt;link rel="subresource"&gt;</code> {{non-standard_inline}} était pris en charge par Chrome par le passé et devait permettre de précharger les ressources pour le chargement et la navigation dans la page mais il n'existait de moyen de priorisation (l'attribut <code>as</code> n'existait pas) et l'ensemble des ressources recevait donc une priorité assez basse.</li>
   <li>De nombreux utilitaires de chargement scriptés existent par ailleurs mais ils ne disposent pas du contexte de priorisation disponible dans le navigateur et, en tant que ressources, peuvent participer à ces problèmes de performances de chargement.</li>
