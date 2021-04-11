@@ -27,7 +27,7 @@ translation_of: Learn/JavaScript/Asynchronous/Concepts
   </tbody>
 </table>
 
-<h2 id="Asynchronous">Asynchrone ?</h2>
+<h2 id="asynchronous">Asynchrone ?</h2>
 
 <p>Normalement, le code d'un programme donné se déroule sans interruption, une seule chose se produisant à la fois. Si une fonction dépend du résultat d'une autre fonction, elle doit attendre que l'autre fonction se termine et retourne sa réponse, et jusqu'à ce que cela se produise, le programme entier est essentiellement arrêté du point de vue de l'utilisateur.</p>
 
@@ -37,7 +37,7 @@ translation_of: Learn/JavaScript/Asynchronous/Concepts
 
 <p>C'est une expérience frustrante qui n'est pas une bonne utilisation de la puissance de traitement de l'ordinateur, surtout à une époque où les ordinateurs disposent de plusieurs cœurs de processeur. Il est inutile de rester assis à attendre quelque chose alors que vous pouvez laisser une tâche se dérouler sur un autre cœur de processeur et être averti quand elle a terminé. Cela vous permet d'effectuer d'autres travaux en même temps, ce qui est la base de la <strong>programmation asynchrone</strong>. C'est à l'environnement de programmation que vous utilisez (les navigateurs web, dans le cas du développement web) de vous fournir des API qui vous permettent d'exécuter de telles tâches de manière asynchrone.</p>
 
-<h2 id="Blocking_code">Code bloquant</h2>
+<h2 id="blocking_code">Code bloquant</h2>
 
 <p>Les techniques asynchrones sont très utiles, notamment dans la programmation web. Lorsqu'une application web s'exécute dans un navigateur et qu'elle exécute un morceau de code considérable sans rendre le contrôle au navigateur, ce dernier peut sembler figé. C'est ce qu'on appelle le <strong>blocage</strong> ; le navigateur est incapable de continuer à traiter les entrées de l'utilisateur et d'effectuer d'autres tâches jusqu'à ce que l'application web rende le contrôle du processeur.</p>
 
@@ -98,7 +98,7 @@ alertBtn.addEventListener('click', () =&gt;
 
 <p>Pourquoi ? La réponse est que le JavaScript, de manière générale, est <strong>single-threaded</strong> « à processus unique ». À ce stade, nous devons introduire le concept de <strong>threads</strong>.</p>
 
-<h2 id="Threads">Les processus</h2>
+<h2 id="threads">Les processus</h2>
 
 <p>Un <strong>thread</strong> est fondamentalement un processus unique qu'un programme peut utiliser pour accomplir des tâches. Chaque processus ne peut effectuer qu'une seule tâche à la fois :</p>
 
@@ -111,7 +111,7 @@ alertBtn.addEventListener('click', () =&gt;
 <pre>Processus 1: Tâche A --&gt; Tâche B
 Processus 2: Tâche C --&gt; Tâche D</pre>
 
-<h3 id="JavaScript_is_single-threaded">JavaScript est à processus unique</h3>
+<h3 id="javascript_is_single-threaded">JavaScript est à processus unique</h3>
 
 <p>JavaScript est traditionnellement « single-threaded ». Même avec plusieurs cœurs, vous ne pouviez le faire exécuter des tâches que sur un seul processus, appelé le <strong>main thread</strong>. Notre exemple ci-dessus est exécuté comme ceci :</p>
 
@@ -124,7 +124,7 @@ Processus du Worker : Tâche coûteuse B</pre>
 
 <p>Dans cette optique, jetez un coup d'œil à <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html">simple-sync-worker.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html">voyez-le fonctionner en direct</a>), toujours avec la console JavaScript de votre navigateur ouverte. Il s'agit d'une réécriture de notre exemple précédent qui calcule les 10 millions de dates dans un fil de travail séparé. Désormais, lorsque vous cliquez sur le bouton, le navigateur est capable d'afficher le paragraphe avant que les dates n'aient fini d'être calculées. La première opération ne bloque plus la seconde.</p>
 
-<h2 id="Asynchronous_code">Code asynchrone</h2>
+<h2 id="asynchronous_code">Code asynchrone</h2>
 
 <p>Les Web workers sont très utiles, mais ils ont leurs limites. L'une des principales est qu'ils ne peuvent pas accéder au <a href="/fr/docs/Glossary/DOM">DOM</a>. - vous ne pouvez pas demander à un worker de faire directement quelque chose pour mettre à jour l'interface utilisateur. Nous n'avons pas pu rendre nos 1 million de cercles bleus à l'intérieur de notre worker ; il ne peut faire que le calcul des chiffres.</p>
 
@@ -148,13 +148,13 @@ Promesse :               |__opération asynchrone__|</pre>
 
 <p>Nous allons commencer à examiner comment écrire du code asynchrone dans le prochain article. C'est passionnant, non ? Bonne continuation !</p>
 
-<h2 id="Conclusion">Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>La conception de logiciels modernes s'articule de plus en plus autour de l'utilisation de la programmation asynchrone, afin de permettre aux programmes de faire plusieurs choses à la fois. À mesure que vous utilisez des API plus récentes et plus puissantes, vous trouverez de plus en plus de cas où la seule façon de faire les choses est asynchrone. Il était autrefois difficile d'écrire du code asynchrone. Il faut encore s'y habituer, mais c'est devenu beaucoup plus facile. Dans la suite de ce module, nous étudierons plus en détail pourquoi le code asynchrone est important et comment concevoir un code qui évite certains des problèmes décrits ci-dessus.</p>
 
 <div>{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}</div>
 
-<h2 id="In_this_module">Dans ce module</h2>
+<h2 id="in_this_module">Dans ce module</h2>
 
 <ul>
   <li><a href="/fr/docs/Learn/JavaScript/Asynchronous/Concepts">Concepts généraux de programmation asynchrone</a></li>
