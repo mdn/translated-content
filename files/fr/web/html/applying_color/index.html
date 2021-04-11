@@ -23,13 +23,13 @@ original_slug: Web/HTML/Appliquer_des_couleurs
 
 <p>Nous allons aborder la plupart des points que vous devez connaître lorsque vous utilisez des couleurs, y compris une <a href="#things_that_can_have_color">liste de ce que vous pouvez colorer et des propriétés CSS concernées</a>, <a href="#how_to_describe_a_color">comment décrire une couleur</a>, et comment <a href="#using_color">utiliser les couleurs à la fois dans les feuilles de style et dans les scripts</a>. Nous verrons également comment <a href="#letting_the_user_pick_a_color">permettre à l'utilisateur de choisir une couleur</a>.</p>
 
-<p>Then we'll wrap things up with a brief discussion of how to {{anch("Using color wisely", "use color wisely")}}: how to select appropriate colors, keeping in mind the needs of people with differing visual capabilities.</p>
+<p>Ensuite, nous terminerons avec une brève discussion sur <a href="#using_color_wisely">l'utilisation judicieuse des couleurs</a> : comment sélectionner les couleurs adéquates tout en gardant à l'esprit les besoins des personnes daltoniennes par exemple.</p>
 
 <h2 id="Things_that_can_have_color">Ce qui peut être coloré</h2>
 
-<p>On peut appliquer une couleur sur chaque élément HTML. Voyons plutôt quels sont les choses que l'on peut dessiner sur les éléments : le texte, la bordure, etc. Pour chacune de ces choses, nous verrons la liste des propriétés CSS qui permettent de les colorer.</p>
+<p>On peut appliquer une couleur sur chaque élément HTML. Voyons plutôt quelles sont les choses que l'on peut dessiner sur les éléments : le texte, la bordure, etc. Pour chacune de ces choses, nous verrons la liste des propriétés CSS qui permettent de les colorer.</p>
 
-<p>De façon générale, la propriété <a href="/fr/docs/Web/CSS/color"><code>color</code></a> permet de définir la couleur de premier plan pour le contenu d'un élément HTML et la propriété <a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a> permete de définir la couleur utilisé pour l'arrière-plan de l'élément. Ces propriétés peuvent être utilisées sur la quasi-totalité des éléments HTML.</p>
+<p>De façon générale, la propriété <a href="/fr/docs/Web/CSS/color"><code>color</code></a> permet de définir la couleur de premier plan pour le contenu d'un élément HTML et la propriété <a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a> permet de définir la couleur utilisée pour l'arrière-plan de l'élément. Ces propriétés peuvent être utilisées sur la quasi-totalité des éléments HTML.</p>
 
 <h3 id="Text">Texte</h3>
 
@@ -37,7 +37,7 @@ original_slug: Web/HTML/Appliquer_des_couleurs
 
 <dl>
  <dt><a href="/fr/docs/Web/CSS/color"><code>color</code></a></dt>
- <dd>Cette propriété correspondra à la couleur utilisée pour dessiner le texte ainsi que <a href="/fr/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration">ses décorations</a> (tels que le soulignement, le surlingement, les rayures, etc.).</dd>
+ <dd>Cette propriété correspondra à la couleur utilisée pour dessiner le texte ainsi que <a href="/fr/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration">ses décorations</a> (tels que le soulignement, le surlignement, les rayures, etc.).</dd>
  <dt><a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a></dt>
  <dd>Cette propriété correspondra à la couleur utilisée en arrière-plan du texte.</dd>
  <dt><a href="/fr/docs/Web/CSS/text-shadow"><code>text-shadow</code></a></dt>
@@ -62,7 +62,7 @@ original_slug: Web/HTML/Appliquer_des_couleurs
  <dt><a href="/fr/docs/Web/CSS/column-rule-color"><code>column-rule-color</code></a></dt>
  <dd>Cette propriété correspondra à la couleur utilisée pour dessiner la ligne qui sépare des colonnes de texte.</dd>
  <dt><a href="/fr/docs/Web/CSS/outline-color"><code>outline-color</code></a></dt>
- <dd>Cette propriété correspondra à la couleur utilisée pour le contour de l'élément. Le contour est différent de la bordure car il occupe un espace autour de la boîte et peut alors chevaucher le contenu d'une autre boîte. Le contour est généralement utilisé afin d'indiquer que l'élément a le focus et ainsi montrer quel élément reçoit les évènements de saisie.</dd>
+ <dd>Cette propriété correspondra à la couleur utilisée pour le contour de l'élément. Le contour est différent de la bordure, car il occupe un espace autour de la boîte et peut alors chevaucher le contenu d'une autre boîte. Le contour est généralement utilisé afin d'indiquer que l'élément a le focus et ainsi montrer quel élément reçoit les évènements de saisie.</dd>
 </dl>
 
 <h3 id="Borders">Bordures</h3>
@@ -77,12 +77,12 @@ original_slug: Web/HTML/Appliquer_des_couleurs
  <dt><a href="/fr/docs/Web/CSS/border-left-color"><code>border-left-color</code></a>, <a href="/fr/docs/Web/CSS/border-right-color"><code>border-right-color</code></a>, <a href="/fr/docs/Web/CSS/border-top-color"><code>border-top-color</code></a>, <a href="/fr/docs/Web/CSS/border-bottom-color"><code>border-bottom-color</code></a></dt>
  <dd>Ces propriétés permettent d'indiquer une couleur différente pour chaque côté de la bordure de l'élément.</dd>
  <dt><a href="/fr/docs/Web/CSS/border-block-start-color"><code>border-block-start-color</code></a> et <a href="/fr/docs/Web/CSS/border-block-end-color"><code>border-block-end-color</code></a></dt>
- <dd>Ces propriétés permettent de définir les couleurs utilisées pour les côtés de la bordure dans l'axe orthogonal au sens d'écriture. Ainsi, si le texte est écrit en français (de gauche à droite), <code>border-block-start-color</code> permettra de définir le côté haut de la bordure et <code>border-block-end-color</code> le côté bas.</dd>
+ <dd>Ces propriétés permettent de définir les couleurs utilisées pour les côtés de la bordure dans l'axe orthogonal au sens d'écriture. Ainsi, si le texte est écrit en français (de gauche à droite), <code>border-block-start-color</code> permettra de définir le côté haut de la bordure et <code>border-block-end-color</code> le côté bas. Ces propriétés sont complétées par les propriétés <code>border-inline-*</code> qui agissent sur l'autre axe.</dd>
  <dt><a href="/fr/docs/Web/CSS/border-inline-start-color"><code>border-inline-start-color</code></a> et <a href="/fr/docs/Web/CSS/border-inline-end-color"><code>border-inline-end-color</code></a></dt>
  <dd>Ces propriétés permettent de définir les couleurs utilisées pour les bordures pour les côtés sur l'axe du sens d'écriture. Les côtés impactés dépendent donc des propriétés <a href="/fr/docs/Web/CSS/writing-mode"><code>writing-mode</code></a>, <a href="/fr/docs/Web/CSS/direction"><code>direction</code></a>, and <a href="/fr/docs/Web/CSS/text-orientation"><code>text-orientation</code></a> qui permettent, la plupart du temps, d'ajuster la directionnalité du texte en fonction de la langue utilisée. Si le texte est écrit de droite à gauche, <code>border-inline-start-color</code> correspondra à la couleur appliquée sur le côté droit.</dd>
 </dl>
 
-<h3 id="Other_ways_to_use_color">Les autres méthodes pour utiliser de la couleur</h3>
+<h3 id="Other_ways_to_use_color">Autres méthodes pour utiliser de la couleur</h3>
 
 <p>CSS n'est pas la seule technologie web qui gère des couleurs. Voici les autres technologies qui permettent d'apporter de la couleur sur une page web.</p>
 
@@ -92,12 +92,12 @@ original_slug: Web/HTML/Appliquer_des_couleurs
  <dt><a href="/fr/docs/Web/SVG">SVG</a> (<em>Scalable Vector Graphics</em>)</dt>
  <dd>Ce format permet de dessiner des images en indiquant des commandes pour dessiner des formes, des motifs et des lignes afin de composer une image. Les commandes SVG sont construites dans un fichier XML et peuvent être embarquées dans une page web grâce à un élément <a href="/fr/docs/Web/HTML/Element/Img"><code>&lt;img&gt;</code></a>.</dd>
  <dt><a href="/fr/docs/Web/API/WebGL_API">WebGL</a></dt>
- <dd>L'API Web Graphics Library est une API basée sur OpenGL ES qui permet de dessiner en deux ou trois dimensions sur le Web. Voir <a href="/fr/docs/Web/API/WebGL_API/Tutorial">Apprendre WebGL pour les graphismes en 2D et 3D</a> afin d'en savoir plus.</dd>
+ <dd>L'API Web Graphics Library est une API basée sur OpenGL ES qui permet de dessiner en deux ou trois dimensions sur le Web. Voir <a href="/fr/docs/Web/API/WebGL_API/Tutorial">le tutoriel WebGL</a> afin d'en savoir plus.</dd>
 </dl>
 
 <h2 id="How_to_describe_a_color">Comment décrire une couleur</h2>
 
-<p>Afin de représente une couleur en CSS, il est nécessaire de trouver une méthode pour « traduire » le concept analogique de couleur dans un format numérique qu'un ordinateur pourra utiliser. Pour ce faire, on décompose la couleur en différentes composantes. Cela peut être la part de chaque couleur primaire ou bien la teinte et la luminosité de la couleur. Bref, il existe différentes façons de décrire une couleur en CSS.</p>
+<p>Afin de représenter une couleur en CSS, il est nécessaire de trouver une méthode pour « traduire » le concept analogique de couleur dans un format numérique qu'un ordinateur pourra utiliser. Pour ce faire, on décompose la couleur en différentes composantes. Cela peut être la part de chaque couleur primaire ou bien la teinte et la luminosité de la couleur. Bref, il existe différentes façons de décrire une couleur en CSS.</p>
 
 <p>Pour des informations plus détaillées sur chaque type de valeur, vous pouvez consulter la page de la référence CSS à propos de l'unité <a href="/fr/docs/Web/CSS/color_value"><code>&lt;color&gt;</code></a>.</p>
 
@@ -113,9 +113,9 @@ original_slug: Web/HTML/Appliquer_des_couleurs
 
 <h4 id="Hexadecimal_string_notation">La notation hexadécimale</h4>
 
-<p>On peut utiliser une chaîne de caractères avec des chiffres hexadécimaux afin de représenter chacune des composantes (rouge, verte, bleue). On peut également décrire une quatrième composante pour l'opacité. Chaque composante est représentée par un nombre entre 0 et 255 (ce qui correspond à 0x00 et 0xFF en notation hexadécimale) ou par un nombre entre 0 et 15 (ce qui correspond à 0x0 et 0xF en notation hexadécimale). Toutes les composantes doivent être indiquées avec le même nombre de chiffres. Si c'est la notation à un seul chiffre qui est utilisée, la couleur finale sera calculée avec chaque composante doublée, autrement dit, <code>"#D"</code> sera converti en <code>"#DD"</code>.</p>
+<p>On peut utiliser une chaîne de caractères avec des chiffres hexadécimaux afin de représenter chacune des composantes (rouge, verte, bleue) (soit, en anglais, <i>red</i>, <i>green</i>, <i>blue</i> qui donne l'acronyme RGB). On peut également décrire une quatrième composante pour l'opacité. Chaque composante est représentée par un nombre entre 0 et 255 (ce qui correspond à 0x00 et 0xFF en notation hexadécimale) ou par un nombre entre 0 et 15 (ce qui correspond à 0x0 et 0xF en notation hexadécimale). Toutes les composantes doivent être indiquées avec le même nombre de chiffres. Si c'est la notation à un seul chiffre qui est utilisée, la couleur finale sera calculée avec chaque composante doublée, autrement dit, <code>"#D"</code> sera converti en <code>"#DD"</code>.</p>
 
-<p>Lorsqu'on utilise une chaîne de caractères avec un code hexadécimale, la chaîne de caractères commence toujours par le caractère <code>"#"</code>. Le reste de la chaîne correspond aux chiffres hexadécimaux. L'utilisation des majuscules ou minuscules n'a pas d'importance.</p>
+<p>Lorsqu'on utilise une chaîne de caractères avec un code hexadécimal, la chaîne de caractères commence toujours par le caractère <code>"#"</code>. Le reste de la chaîne correspond aux chiffres hexadécimaux. L'utilisation des majuscules ou minuscules n'a pas d'importance.</p>
 
 <dl>
  <dt><code>"#rrggbb"</code></dt>
@@ -128,7 +128,7 @@ original_slug: Web/HTML/Appliquer_des_couleurs
  <dd>Cette forme indique une couleur dont la composante rouge vaut <code>0xrr</code>, la composante verte vaut <code>0xgg</code> et dont la composante bleue vaut <code>0xbb</code>. Le canal alpha vaut <code>0xaa</code> (plus la valeur est faible, plus la couleur sera transparente).</dd>
 </dl>
 
-<p>Par exemple, on pourra représenter un bleu pur et opaque avec les chaînes de caractères <code>"#0000ff"</code> ou <code>"#00f"</code>. Pour le rendre opaquee à 25%, on utilisera <code>"#0000ff44"</code> ou <code>"#00f4"</code>.</p>
+<p>Par exemple, on pourra représenter un bleu pur et opaque avec les chaînes de caractères <code>"#0000ff"</code> ou <code>"#00f"</code>. Pour le rendre opaque à 25%, on utilisera <code>"#0000ff44"</code> ou <code>"#00f4"</code>.</p>
 
 <h4 id="RGB_functional_notation">La notation fonctionnelle RGB</h4>
 
@@ -147,13 +147,15 @@ original_slug: Web/HTML/Appliquer_des_couleurs
 
 <h3 id="HSL_functional_notation">La notation fonctionnelle HSL</h3>
 
-<p>D'autres personnes préfèrent manipuler <a href="https://fr.wikipedia.org/wiki/Teinte_saturation_luminosit%C3%A9">la notation HSL ou aussi appeléee « Teinte saturation luminosité »</a> (NDT : HSL signifie <em>Hue Saturation Lightness</em> en anglais). Sur le Web, les couleurs HSL sont représentées grâce à la notation fonctionnelle <code>hsl()</code> (qui fonctionne de façon analogue à la fonction <code>rgb()</code>).</p>
+<p>D'autres personnes préfèrent manipuler <a href="https://fr.wikipedia.org/wiki/Teinte_saturation_luminosit%C3%A9">la notation HSL ou aussi appelée « Teinte saturation luminosité »</a> (NDT : HSL signifie <em>Hue Saturation Lightness</em> en anglais). Sur le Web, les couleurs HSL sont représentées grâce à la notation fonctionnelle <code>hsl()</code> (qui fonctionne de façon analogue à la fonction <code>rgb()</code>).</p>
 
-<p><img alt="HSL color cylinder" src="1200px-HSL_color_solid_cylinder_alpha_lowgamma.png"></p>
+<div style="padding-bottom: 20px;">
+  <figure style="width: 500px;"><img alt="HSL color cylinder" src="1200px-hsl_color_solid_cylinder_alpha_lowgamma.png">
+  <figcaption><em><strong>Figure 1. Le cylindre HSL.</strong> <i>Hue</i> (la teinte) définit la couleur sur un axe radial qui parcourt les couleurs du spectre visible. La saturation est un pourcentage de la teinte entre un gris total et la couleur de la teinte vive. Enfin, la luminosité permet d'avoir des couleurs plus sombres (noir pour une luminosité nulle ou blanc pour une luminosité maximale). Cette image a été créée par <a href="http://commons.wikimedia.org/wiki/User:SharkD">SharkD</a> sur <a href="https://www.wikipedia.org/">Wikipédia</a> et est distribuée avec la licence <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>.</em></figcaption>
+  </figure>
+  </div>
 
-<p><em><strong>Figure 1. Le cylindre HSL.</strong> Hue (la teinte) définit la couleur sur un axe radial qui parcourt les couleurs du spectre visible. La saturation est un pourcentage de la teinte entre un gris total et la couleur de la teinte vive. Enfin, la luminosité permet d'avoir des couleurs plus sombres (noir pour une luminosité nulle ou blanc pour une luminosité maximale). Cette image a été créée par <a href="http://commons.wikimedia.org/wiki/User:SharkD">SharkD</a> sur <a href="https://www.wikipedia.org/">Wikipédia</a> et est distribuée avec la licence <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a>.</em></p>
-
-<p>La valeur de la teinte (<strong>H</strong>) est un angle qui début au rouge, parcourt le jaune, le vert, le cyan, le bleu et le magenta (avant de revenir à rouge avec un angle de 360°). Cette valeur identifie la teinte de base. La valeur utilisée est de type <a href="/fr/docs/Web/CSS/angle"><code>&lt;angle&gt;</code></a> et on peut utiliser différentes unités disponibles en CSS comme les degrés (<code>deg</code>), les radians (<code>rad</code>), les grades (<code>grad</code>) ou les tours (<code>turn</code>).</p>
+<p>La valeur de la teinte (<strong>H</strong>) est un angle qui commence au rouge, parcourt le jaune, le vert, le cyan, le bleu et le magenta (avant de revenir à rouge avec un angle de 360°). Cette valeur identifie la teinte de base. La valeur utilisée est de type <a href="/fr/docs/Web/CSS/angle"><code>&lt;angle&gt;</code></a> et on peut utiliser différentes unités disponibles en CSS comme les degrés (<code>deg</code>), les radians (<code>rad</code>), les grades (<code>grad</code>) ou les tours (<code>turn</code>).</p>
 
 <p>Ensuite, la saturation (<strong>S</strong>) indique la force de la teinte dans la couleur. Enfin, la luminosité (<strong>L</strong>) indique le niveau de gris de la couleur.</p>
 
@@ -241,7 +243,7 @@ th {
 
 <p>Prenons un exemple et commençons par le résultat :</p>
 
-<div>{{EmbedLiveSample("Specifying_colors_in_stylesheets", 650, 150)}}</div>
+<div>{{EmbedLiveSample("Specifying_colors_in_stylesheets", 650, 200)}}</div>
 
 <h4 id="HTML">HTML</h4>
 
@@ -330,7 +332,7 @@ th {
 
 <h2 id="Letting_the_user_pick_a_color">Permettre à l'utilisateur de choisir une couleur</h2>
 
-<p>Il existe différentes situations où l'on peut/doit permettre à l'utilisateur de sélectionner une couleur. Il peut s'agir d'une interface personnalisable, d'une application de dessin, d'une application d'édition où on peut choisir la couleur du texte, etc. Bien que, par le passé, il fut nécessaire d'implémenter son propre sélecteur de couleur, HTML fournit désormais au navigateurs une façon homogène de le faire avec un élément <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> dont l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-type"><code>type</code></a> vaut <code>"color"</code>.</p>
+<p>Il existe différentes situations où l'on peut/doit permettre à l'utilisateur de sélectionner une couleur. Il peut s'agir d'une interface personnalisable, d'une application de dessin, d'une application d'édition où on peut choisir la couleur du texte, etc. Bien que, par le passé, il fût nécessaire d'implémenter son propre sélecteur de couleur, HTML fournit désormais aux navigateurs une façon homogène de le faire avec un élément <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> dont l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-type"><code>type</code></a> vaut <code>"color"</code>.</p>
 
 <p>Lorsqu'on choisit une couleur via un élément <code>&lt;input&gt;</code>, la valeur stockée dans le document et envoyée via le formulaire est représentée avec une chaîne de caractères hexadécimale.</p>
 
@@ -401,11 +403,11 @@ colorPicker.addEventListener("change", function(event) {
 <p>La première étape consiste à choisir la couleur de base. C'est la couleur principale qui participe à la définition du site web ou du sujet dont il est question. Par exemple, on associe la couleur jaune à La Poste, le bleu au ciel ou à quelque chose de marin, etc. Voici quelques idées (parmi les nombreuses qui existent) pour choisir une couleur de base :</p>
 
 <ul>
- <li>Une couleur naturellement associée au contenu : la couleur d'un produit ou une couleur rattachée à un concept/une émotion dont il serait question sur le site.</li>
+ <li>Une couleur naturellement associée au contenu : la couleur d'un produit ou une couleur rattachée à un concept ou une émotion dont il serait question sur le site.</li>
  <li>Naviguer parmi les sites existants et les bibliothèques d'image pour puiser de l'inspiration parmi les couleurs.</li>
 </ul>
 
-<p>Une fois la couleur de base sélectionnéee, vous pouvez utiliser certaines extensions de navigateur pour « prélever » des couleurs existantes sur le web. Le site web <a href="http://www.colorzilla.com/">ColorZilla</a>, par exemple, propose une extension (<a href="http://www.colorzilla.com/chrome">Chrome</a> / <a href="http://www.colorzilla.com/firefox">Firefox</a>) qui permet d'utiliser une pipette pour identifier les couleurs utilisées à un endroit d'une page web. Cette extension permet également de mesurer la couleur moyenne des pixels d'une zone donnée.</p>
+<p>Une fois la couleur de base sélectionnée, vous pouvez utiliser certaines extensions de navigateur pour « prélever » des couleurs existantes sur le web. Le site web <a href="http://www.colorzilla.com/">ColorZilla</a>, par exemple, propose une extension (<a href="http://www.colorzilla.com/chrome">Chrome</a> / <a href="http://www.colorzilla.com/firefox">Firefox</a>) qui permet d'utiliser une pipette pour identifier les couleurs utilisées à un endroit d'une page web. Cette extension permet également de mesurer la couleur moyenne des pixels d'une zone donnée.</p>
 
 <div class="notecard note">
   <p><strong>Note :</strong> On peut s'apercevoir qu'un site contient plusieurs couleurs très proches les unes des autres, utiliser une « moyenne » permet alors de récupérer le ton principal sous la forme d'une seule couleur.</p>
@@ -431,7 +433,7 @@ colorPicker.addEventListener("change", function(event) {
 
 <h3 id="Color_theory_resources">Quelques ressources sur la théorie des couleurs</h3>
 
-<p>Décrire l'ensemble des notions liées à la théorie des couleurs dépasse le sujet de cet article. Toutefois, il existe de nombreux articles traitant de ce sujet ainsi que des cours pour apprendre ces notions. Voici quelques unes des ressources disponibles en ligne à propos de la théorie des couleurs :</p>
+<p>Décrire l'ensemble des notions liées à la théorie des couleurs dépasse le sujet de cet article. Toutefois, il existe de nombreux articles traitant de ce sujet ainsi que des cours pour apprendre ces notions. Voici quelques-unes des ressources disponibles en ligne à propos de la théorie des couleurs :</p>
 
 <dl>
  <dt><a href="https://www.khanacademy.org/partner-content/pixar/color">La science des couleurs (en anglais)</a> (<a href="https://www.khanacademy.org/">Khan Academy</a> en association avec <a href="https://www.pixar.com/">Pixar</a>)</dt>
@@ -468,11 +470,11 @@ colorPicker.addEventListener("change", function(event) {
 
 <p><img alt="L'affichage du site Palleton après l'ouverture" src="paletton1.png"></p>
 
-<p>Ensuite, on saisi le code de la couleur (<code>D79C7A</code>) dans le champ "Base RGB" situé en bas à gauche de l'outil :</p>
+<p>Ensuite, on saisit le code de la couleur (<code>D79C7A</code>) dans le champ "Base RGB" situé en bas à gauche de l'outil :</p>
 
 <p><img alt="After entering base color" src="paletton2.png"></p>
 
-<p>On obtient alors une palette monochromatique, basée sur la couleur sélectionnée. Si vous avez besoin d'un nuancier autour de cette couleur, la palette monochromatique pourra sans doute vous aider. Mais ici, on souhaite plutôt avoir une couleur qui ressorte, pour cela on clique sur le case "<em>add complementary</em>"sous le menu permettant de sélectionner le type de palette (et qui vaut "Monochromatic"). Paletteon calcule alors une couleur complémentaire appropriée et indique le code de cette nouvelle couleur dans le coin inférieur droit : <code>#508D7C</code>.</p>
+<p>On obtient alors une palette monochromatique, basée sur la couleur sélectionnée. Si vous avez besoin d'un nuancier autour de cette couleur, la palette monochromatique pourra sans doute vous aider. Mais ici, on souhaite plutôt avoir une couleur qui ressorte, pour cela on clique sur la case "<em>add complementary</em>" sous le menu permettant de sélectionner le type de palette (et qui vaut "Monochromatic"). Paletteon calcule alors une couleur complémentaire appropriée et indique le code de cette nouvelle couleur dans le coin inférieur droit : <code>#508D7C</code>.</p>
 
 <p><img alt="Now with complementary colors included." src="paletton3.png"></p>
 
@@ -486,11 +488,11 @@ colorPicker.addEventListener("change", function(event) {
 
 <p>Maintenant, nous disposons d'une couleur de base, d'une couleur d'accentuation ainsi que de variations autour de celles-ci au cas où nous aurions besoin de dégradés. On peut exporter les couleurs sous différents formats afin de les utiliser.</p>
 
-<p>Avec ces couleurs, il faudra probablement sélectionner quelques couleurs neutres. Une pratique courante consiste à trouver le contraste suffisant pour que le texte soit pleinement lisible mais sans que ce contraste soit trop fort. Il est facile de s'égarer dans l'une ou l'autre des directions : n'hésitez pas à demander des retours sur les couleurs que vous avez sélectionnées. Si le contraste est trop faible, le texte sera illisible et on ne pourra pas le distinger de l'arrière-plan, cela pourra également poser des problèmes d'accessibilité. Si le contraste est trop élevé, le site pourra paraître criard.</p>
+<p>Avec ces couleurs, il faudra probablement sélectionner quelques couleurs neutres. Une pratique courante consiste à trouver le contraste suffisant pour que le texte soit pleinement lisible mais sans que ce contraste soit trop fort. Il est facile de s'égarer dans l'une ou l'autre des directions : n'hésitez pas à demander des retours sur les couleurs que vous avez sélectionnées. Si le contraste est trop faible, le texte sera illisible et on ne pourra pas le distinguer de l'arrière-plan, cela pourra également poser des problèmes d'accessibilité. Si le contraste est trop élevé, le site pourra paraître criard.</p>
 
-<h3 id="Color_backgrounds_contrast_and_printing">Les couleurs, les arrière-plans, le contraste et l'impression</h3>
+<h3 id="Color_backgrounds_contrast_and_printing">Couleurs, arrière-plans, contraste et impression</h3>
 
-<p>Le rendu d'un document peut être différent selon que ce dernier est affiché sur un écran ou sur du papier. De plus, sur papier, on peut chercher à économiser l'encre superflu. Lorsqu'un utilisateur imprime une page, il n'est par exemple peut-être pas nécessaire d'imprimer les arrière-plans. Par défaut, la plupart des navigateurs retire les images d'arrière-plan à l'impression.</p>
+<p>Le rendu d'un document peut être différent selon que ce dernier est affiché sur un écran ou sur du papier. De plus, sur papier, on peut chercher à économiser l'encre superflu. Lorsqu'un utilisateur imprime une page, il n'est par exemple peut-être pas nécessaire d'imprimer les arrière-plans. Par défaut, la plupart des navigateurs retirent les images d'arrière-plan à l'impression.</p>
 
 <p>Si les couleurs d'arrière-plan ou les images sont importantes pour l'ensemble du document, on peut utiliser la propriété <a href="/fr/docs/Web/CSS/color-adjust"><code>color-adjust</code></a> afin d'indiquer au navigateur qu'il ne faut pas modifier l'apparence du contenu.</p>
 
