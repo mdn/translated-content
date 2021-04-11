@@ -14,7 +14,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role
 <pre class="brush: html">&lt;span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="chk1-label"&gt;
 &lt;/span&gt; &lt;label id="chk1-label"&gt;Remember my preferences&lt;/label&gt;</pre>
 
-<p>ARIA の最初のルールは、ネイティブな HTML の要素や属性に必要な意味論と振る舞いがある場合、要素を転用して ARIA を追加する代わりにネイティブなものを使用することです。 次のように、代わりに <code><a href="/ja/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code> のネイティブな <a href="/ja/docs/Web/HTML/Element/input/checkbox">HTML チェックボックス</a>を使用してください。 これは、必要なすべての機能をネイティブに提供します。</p>
+<p>ARIA の第一のルールは、ネイティブな HTML の要素や属性に必要としている意味論と振る舞いがある場合、要素を転用して ARIA を追加する代わりにネイティブなものを使用することです。 次のように、代わりに <code><a href="/ja/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code> のネイティブな <a href="/ja/docs/Web/HTML/Element/input/checkbox">HTML チェックボックス</a>を使用してください。 これは、必要なすべての機能をネイティブに提供します。</p>
 
 <pre class="brush: html">&lt;input type="checkbox" id="chk1-label"&gt;
 &lt;label for="chk1-label"&gt;Remember my preferences&lt;/label&gt;</pre>
@@ -130,7 +130,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role
 
 <h2 id="Best_practices">ベストプラクティス</h2>
 
-<p>ARIA の最初のルールは、ネイティブな HTML の要素や属性に必要な意味論と振る舞いがある場合、要素を転用して ARIA のロール、ステート、またはプロパティを追加してアクセス可能にする代わりに、ネイティブなものを使用することです。 そのため、JavaScript と ARIA でチェックボックスの機能を再作成するのではなく、フォームコントロールを使用してネイティブな <a href="/ja/docs/Web/HTML/Element/input/checkbox">HTML チェックボックス</a>を使用することをお勧めします。</p>
+<p>ARIA の第一のルールは、ネイティブな HTML の要素や属性に必要としている意味論と振る舞いがある場合、要素を転用して ARIA のロール、ステート、またはプロパティを追加してアクセス可能にする代わりに、ネイティブなものを使用することです。 そのため、JavaScript と ARIA でチェックボックスの機能を再作成するのではなく、フォームコントロールを使用してネイティブな <a href="/ja/docs/Web/HTML/Element/input/checkbox">HTML チェックボックス</a>を使用することをお勧めします。</p>
 
 <h2 id="See_also">関連情報</h2>
 
