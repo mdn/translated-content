@@ -11,220 +11,88 @@ translation_of: Web/API/DOMParser
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>L'interface <strong><code>DOMParser</code></strong> permet d'analyser le code source {{Glossary("XML")}} ou {{Glossary("HTML")}}  à partir d'une chaîne dans un {{domxref("Document")}} DOM.</p>
-
-<div class="note">
-<p><strong>Note :</strong>  {{domxref("XMLHttpRequest")}}  prend en charge l'analyse XML et HTML directement à partir des ressources adressables par URL, retournant un  <code>Document</code> dans sa propriété  {{domxref("XMLHttpRequest.reponse", "response")}} .</p>
-</div>
+<p class="summary">L'interface <strong><code>DOMParser</code></strong> permet d'analyser le code source {{Glossary("XML")}} ou {{Glossary("HTML")}} d'une chaîne de caractères dans le DOM {{domxref("Document")}}.</p>
 
 <p>Vous pouvez effectuer l'opération inverse - convertir un arbre DOM en source XML ou HTML - en utilisant l'interface {{domxref("XMLSerializer")}}.</p>
 
-<p>Dans le cas d'un document HTML, vous pouvez également remplacer des parties du DOM par de nouveaux arbres DOM construits à partir de HTML en définissant la valeur de {{domxref("Element.innerHTML")}} et des propriétés {{domxref("Element.outerHTML","outerHTML")}}. Ces propriétés peuvent également être lues pour récupérer des fragments HTML liés à la sous-arborescence DOM correspondante.</p>
+<p>Dans le cas d'un document HTML, vous pouvez également remplacer des parties du DOM par de nouveaux arbres DOM construits à partir de HTML en définissant la valeur des propriétés {{domxref("Element.innerHTML", "innerHTML")}} et {{domxref("Element.outerHTML", "outerHTML")}}. Ces propriétés peuvent également être lues pour récupérer les fragments HTML correspondant au sous-arbre DOM correspondant.</p>
 
-<h2 id="Gestion_d.27erreurs" name="Gestion_d.27erreurs">Création d'un DOMParser</h2>
+<p>Notez que {{domxref("XMLHttpRequest")}} peut analyser le XML et le HTML directement à partir d'une ressource adressable par URL, en renvoyant un <code>Document</code> dans sa propriété {{domxref("XMLHttpRequest.response", "response")}}.</p>
 
-<p>Pour créer un objet <code>DOMParser</code>, utilisez simplement <code>DOMParser()</code>.</p>
+<h2 id="Constructor">Constructeur</h2>
 
-<h2 id="Analyse_XML">Analyse XML</h2>
+<dl>
+  <dt>{{domxref("DOMParser.DOMParser","DOMParser()")}}</dt>
+  <dd>Crée un nouvel objet <code>DOMParser</code>.</dd>
+</dl>
 
-<p>Une fois que vous avez créé un objet d'analyse, <span id="result_box" lang="fr"><span>vous pouvez analyser XML à partir d'une chaîne à l'aide de la méthode </span></span> {{domxref("DOMParser.parseFromString","parseFromString()")}} <span lang="fr"><span> :</span></span></p>
+<h2 id="Methods">Méthodes</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> parser <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">DOMParser</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> doc <span class="operator token">=</span> parser<span class="punctuation token">.</span><span class="function token">parseFromString</span><span class="punctuation token">(</span>stringContainingXMLSource<span class="punctuation token">,</span> <span class="string token">"application/xml"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<dl>
+  <dt>{{domxref("DOMParser.parseFromString()")}}</dt>
+  <dd>Analyse une chaîne de caractères à l'aide de l'analyseur HTML ou de l'analyseur XML, et retourne un {{domxref("HTMLDocument")}} ou {{domxref("XMLDocument")}}.</dd>
+</dl>
 
-<h3 id="Gestion_d.27erreurs" name="Gestion_d.27erreurs">Gestion d'erreurs</h3>
+<h2 id="Example">Exemple</h2>
 
-<p>Notez que si le processus de traitement échoue, <code>DOMParser</code> ne génère aucune exception mais retourne à la place un document d'erreur :</p>
+<h3>Analyse syntaxique de XML, SVG et HTML</h3>
 
-<pre class="brush:xml line-numbers  language-xml"><code class="language-xml"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>parsererror</span> <span class="attr-name token">xmlns</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>http://www.mozilla.org/newlayout/xml/parsererror.xml<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-(error description)
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>sourcetext</span><span class="punctuation token">&gt;</span></span>(a snippet of the source XML)<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>sourcetext</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>parsererror</span><span class="punctuation token">&gt;</span></span></code></pre>
+<p>Cet exemple montre comment analyser le XML, le SVG et le HTML. Notez qu'un type MIME de <code>text/html</code> invoquera l'analyseur HTML, et que tout autre type MIME accepté par cette méthode invoquera l'analyseur XML.</p>
 
-<p>Les erreurs d'analyse sont aussi renvoyées à la <a href="https://developer.mozilla.org/fr/docs/Console_d'erreurs">console d'erreur</a>, avec l'URI du document (voir plus bas) comme la source d'erreur.</p>
+<pre class="brush: js">const parser = new DOMParser();
 
-<h2 id="Analyse_d'un_document_SVG_ou_HTML">Analyse d'un document SVG ou HTML</h2>
+const xmlString = "&lt;warning&gt;Attention au tigre&lt;/warning&gt;";
+const doc1 = parser.parseFromString(xmlString, "application/xml");
+// XMLDocument
 
-<p><span id="result_box" lang="fr"><span>Le <code>DOMParser</code> peut également être utilisé pour analyser un document SVG {{geckoRelease ("10.0")}} ou un document HTML {{geckoRelease ("12.0")}}.</span> <span>Trois résultats différents sont possibles, sélectionnés par le type MIME donné.</span> <span>Si le type MIME est <code>text/xml</code>, l'objet résultant sera un <code>XMLDocument</code>, si le type MIME est <code>image/svg + xml</code>, ce sera un <code>SVGDocument</code> et si le type MIME est <code>text/html</code>, ce sera un <code>HTMLDocument</code>.</span></span></p>
+const svgString = "&lt;circle cx=\"50\" cy=\"50\" r=\"50\"/&gt;";
+const doc2 = parser.parseFromString(svgString, "image/svg+xml");
+// XMLDocument
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> parser <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">DOMParser</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> doc <span class="operator token">=</span> parser<span class="punctuation token">.</span><span class="function token">parseFromString</span><span class="punctuation token">(</span>stringContainingXMLSource<span class="punctuation token">,</span> <span class="string token">"application/xml"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// retourne un document, mais pas un SVGDocument ni un HTMLDocument</span>
+const htmlString = "&lt;strong&gt;Attention au léopard&lt;/strong&gt;";
+const doc3 = parser.parseFromString(htmlString, "text/html");
+// HTMLDocument
 
-parser <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">DOMParser</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-doc <span class="operator token">=</span> parser<span class="punctuation token">.</span><span class="function token">parseFromString</span><span class="punctuation token">(</span>stringContainingSVGSource<span class="punctuation token">,</span> <span class="string token">"image/svg+xml"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// retourne un SVGDocument, </span></code><code><span class="short_text" id="result_box" lang="fr"><span>qui est aussi un document</span></span></code><code class="language-js"><span class="comment token">.</span>
+console.log(doc1.documentElement.textContent)
+// "Attention au tigre"
 
-parser <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">DOMParser</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-doc <span class="operator token">=</span> parser<span class="punctuation token">.</span><span class="function token">parseFromString</span><span class="punctuation token">(</span>stringContainingHTMLSource<span class="punctuation token">,</span> <span class="string token">"text/html"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// retourne un HTMLDocument, </span></code><code><span class="short_text" id="result_box" lang="fr"><span>qui est aussi un document</span></span></code><code class="language-js"><span class="comment token">.</span></code></pre>
+console.log(doc2.firstChild.tagName);
+// "circle"
 
-<h3 id="Extension_HTML_DOMParser_pour_les_autres_navigateurs">Extension HTML DOMParser pour les autres navigateurs</h3>
+console.log(doc3.body.firstChild.textContent);
+// "Attention au léopard"
+</pre>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">/*
- * DOMParser HTML extension
- * 2012-09-04
- *
- * By Eli Grey, http://eligrey.com
- * Public domain.
- * </span></code><span id="result_box" lang="fr"><span>AUCUNE GARANTIE EXPRESSE OU IMPLICITE.</span> <span>À UTILISER À VOS RISQUES ET PÉRILS.</span></span> <code class="language-js"><span class="comment token">
- */</span>
-
-<span class="comment token">/*! @source https://gist.github.com/1129031 */</span>
-<span class="comment token">/*global document, DOMParser*/</span>
-
-<span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>DOMParser<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-	<span class="string token">"use strict"</span><span class="punctuation token">;</span>
-
-	<span class="keyword token">var</span> proto <span class="operator token">=</span> DOMParser<span class="punctuation token">.</span>prototype<span class="punctuation token">,</span>
-        nativeParse <span class="operator token">=</span> proto<span class="punctuation token">.</span>parseFromString<span class="punctuation token">;</span>
-
-	<span class="comment token">// Firefox/Opera/IE </span></code><span id="result_box" lang="fr"><span>lancent des erreurs sur les types non pris en charge</span></span> <code class="language-js">
-	<span class="keyword token">try</span> <span class="punctuation token">{</span>
-		<span class="comment token">// </span></code> <span id="result_box" lang="fr"><span>WebKit renvoie null sur les types non pris en charge</span></span> <code class="language-js">
-		<span class="keyword token">if</span> <span class="punctuation token">(</span><span class="punctuation token">(</span><span class="keyword token">new</span> <span class="class-name token">DOMParser</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">parseFromString</span><span class="punctuation token">(</span><span class="string token">""</span><span class="punctuation token">,</span> <span class="string token">"text/html"</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-			<span class="comment token">// text/html </span></code><span class="short_text" id="result_box" lang="fr"><span>l'analyse est supportée nativement</span></span> <code class="language-js">
-			<span class="keyword token">return</span><span class="punctuation token">;</span>
-		<span class="punctuation token">}</span>
-	<span class="punctuation token">}</span> <span class="keyword token">catch</span> <span class="punctuation token">(</span><span class="class-name token">ex</span><span class="punctuation token">)</span> <span class="punctuation token">{</span><span class="punctuation token">}</span>
-
-	proto<span class="punctuation token">.</span>parseFromString <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>markup<span class="punctuation token">,</span> type<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-		<span class="keyword token">if</span> <span class="punctuation token">(</span><span class="regex token">/^\s*text\/html\s*(?:;|$)/i</span><span class="punctuation token">.</span><span class="function token">test</span><span class="punctuation token">(</span>type<span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-			<span class="keyword token">var</span>
-			  doc <span class="operator token">=</span> document<span class="punctuation token">.</span>implementation<span class="punctuation token">.</span><span class="function token">createHTMLDocument</span><span class="punctuation token">(</span><span class="string token">""</span><span class="punctuation token">)</span>
-			<span class="punctuation token">;</span>
-	      		<span class="keyword token">if</span> <span class="punctuation token">(</span>markup<span class="punctuation token">.</span><span class="function token">toLowerCase</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">indexOf</span><span class="punctuation token">(</span><span class="string token">'&lt;!doctype'</span><span class="punctuation token">)</span> <span class="operator token">&gt;</span> <span class="operator token">-</span><span class="number token">1</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        			doc<span class="punctuation token">.</span>documentElement<span class="punctuation token">.</span>innerHTML <span class="operator token">=</span> markup<span class="punctuation token">;</span>
-      			<span class="punctuation token">}</span>
-      			<span class="keyword token">else</span> <span class="punctuation token">{</span>
-        			doc<span class="punctuation token">.</span>body<span class="punctuation token">.</span>innerHTML <span class="operator token">=</span> markup<span class="punctuation token">;</span>
-      			<span class="punctuation token">}</span>
-			<span class="keyword token">return</span> doc<span class="punctuation token">;</span>
-		<span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-			<span class="keyword token">return</span> nativeParse<span class="punctuation token">.</span><span class="function token">apply</span><span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">,</span> arguments<span class="punctuation token">)</span><span class="punctuation token">;</span>
-		<span class="punctuation token">}</span>
-	<span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">(</span>DOMParser<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-
-<h2 id="Spécifications">Spécifications</h2>
+<h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#the-domparser-interface', 'DOMParser')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-parsing-and-serialization', 'DOM parsing')}}
+      </td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Voir_aussi" name="Voir_aussi">Compatibilité des navigateurs</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<p>{{CompatibilityTable}}</p>
+<p>{{Compat("api.DOMParser", 3)}}</p>
 
-<article class="approved text-content">
-<div class="boxed translate-rendered">
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>XML support</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1)}}</td>
-   <td>{{CompatIE(9)}}</td>
-   <td>{{CompatOpera(8)}}</td>
-   <td>{{CompatSafari(3.2)}}</td>
-  </tr>
-  <tr>
-   <td>SVG support</td>
-   <td>{{CompatChrome(4)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(10.0)}}</td>
-   <td>{{CompatIE(10)}}</td>
-   <td>{{CompatOpera(15)}}</td>
-   <td>{{CompatSafari(3.2)}}</td>
-  </tr>
-  <tr>
-   <td>HTML support</td>
-   <td>{{CompatChrome(30)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(12.0)}}</td>
-   <td>{{CompatIE(10)}}</td>
-   <td>{{CompatOpera(17)}}</td>
-   <td>{{CompatSafari(7.1)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>XML support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>SVG support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(10.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>HTML support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(12.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">Voir aussi</h2>
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/Guide/Parsing_and_serializing_XML" title="Parsing_and_serializing_XML">Analyse et sérialisation du XML</a></li>
- <li>{{domxref("XMLHttpRequest")}}</li>
- <li>{{domxref("XMLSerializer")}}</li>
+  <li><a href="/efr/docs/Web/Guide/Parsing_and_serializing_XML">Analyse syntaxique et sérialisation du XML</a>
+  </li>
+  <li>{{domxref("XMLHttpRequest")}}</li>
+  <li>{{domxref("XMLSerializer")}}</li>
+  <li>{{jsxref("JSON.parse()")}} - contrepartie pour les documents {{jsxref("JSON")}}.</li>
 </ul>
-</div>
-</article>
-
-<article class="localized"> </article>

@@ -57,65 +57,7 @@ updateBatteryStatus();
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>20 {{ property_prefix("webkit") }}</td>
-   <td>10.0</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>20 {{ property_prefix("webkit") }}</td>
-   <td>10.0 {{ property_prefix("moz") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko_notes">Gecko notes</h3>
-
-<p>Désactivée par défaut dans Firefox 10.0, mais peut etre activée en réglant <code>dom.battery.enabled</code> à <code>vrai</code>. A partir de Firefox 11.0, <code>mozBattery</code> est activé par défaut.</p>
-
-<div class="note"><strong>Note:</strong> L'API Batterie est actuellement supportée sur Android, Windows et Linux avec UPower installé. Le support de MacOS est disponible à partir de Gecko 18.0 {{geckoRelease("18.0")}}.</div>
-
-<h2 id="Spécification">Spécification</h2>
-
-<ul>
- <li>{{ spec("http://dev.w3.org/2009/dap/system-info/battery-status.html", "Battery Status API Specification", "ED") }}</li>
-</ul>
+<p>{{Compat("api.Navigator.battery")}}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

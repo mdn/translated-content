@@ -77,88 +77,38 @@ var style = window.getComputedStyle(elem1, null);
 
 <p>Le premier argument doit être un Element, sinon, si par exemple un #text Node est utilisé, une exception sera lancée. Depuis la version 1.9.2 de Gecko {{geckoRelease("1.9.2")}}, les URLs renvoyées ont désormais des guillemets autour de celles-ci: <code>url("http://foo.com/bar.jpg")</code>.</p>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<h2 id="Specification">Spécification</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>9</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>pseudo-element support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>9</td>
-   <td>15</td>
-   <td>{{CompatVersionUnknown}} </td>
-  </tr>
- </tbody>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("CSSOM", "#dom-window-getcomputedstyle", "getComputedStyle()")}}</td>
+      <td>{{Spec2("CSSOM")}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName("DOM2 Style", "#CSS-CSSview-getComputedStyle",
+        "getComputedStyle()")}}</td>
+      <td>{{Spec2("DOM2 Style")}}</td>
+      <td>Définition initiale.</td>
+    </tr>
+  </tbody>
 </table>
-</div>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>WP7 Mango</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>pseudo-element support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<h2 id="Spécification">Spécification</h2>
+<p>{{Compat("api.Window.getComputedStyle")}}</p>
+
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSview-getComputedStyle">DOM Level 2 Style: getComputedStyle</a></li>
- <li><a href="http://dev.w3.org/csswg/cssom/#resolved-values" title="http://dev.w3.org/csswg/cssom/#resolved-values">CSS Object Model specification</a></li>
-</ul>
-
-<h2 id="See_also" name="See_also">Voir aussi</h2>
-
-<ul>
- <li>{{domxref("window.getDefaultComputedStyle")}}</li>
- <li>{{cssxref("resolved_value", "Resolved Value")}}</li>
+  <li>{{domxref("window.getDefaultComputedStyle")}}</li>
+  <li>{{cssxref("resolved_value", "Valeur résolue")}}</li>
 </ul>

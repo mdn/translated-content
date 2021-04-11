@@ -149,82 +149,31 @@ translation_of: Web/API/CloseEvent
  <dd>Initialise la valeur d'un <code>CloseEvent</code>. Si l'événement a déjà été envoyé, cette méthode ne fait rien.</dd>
 </dl>
 
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('HTML WHATWG', 'web-sockets.html#the-closeevent-interface', 'CloseEvent') }}</td>
+      <td>{{ Spec2('HTML WHATWG') }}</td>
+      <td>Définition initiale.</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Support de base</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("8.0") }} [1][2]</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>initCloseEvent</code><code>()</code> {{Non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoDesktop("8.0") }}<br>
-    Removed in {{CompatGeckoDesktop("41") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support de base</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("8.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td><code>initCloseEvent</code><code>()</code> {{Non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatGeckoMobile("8.0") }}<br>
-    Removed in {{CompatGeckoMobile("41") }}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Avant Gecko 8.0 {{ geckoRelease("8.0") }}, Gecko envoyait l'événement {{event("close")}} des WebSocket au listener en tant que simple événement. Le support de l'événement <code>CloseEvent</code> a été implémenté dans Gecko 8.0.</p>
-
-<p>[2] Avant Gecko 12.0 {{ geckoRelease("12.0") }}, Gecko envoyait le code de fermeture <code>CLOSE_NORMAL</code> quand la connexion était fermée à cause d'une erreur inconnue, ou si elle était fermée à cause d'une erreur que la spécification ne couvre pas. Maintenant, <code>CLOSE_GOING_AWAY</code> est envoyé à la place.</p>
+<p>{{Compat("api.CloseEvent")}}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/en/WebSockets/WebSockets_reference/WebSocket" title="en/WebSockets/WebSockets reference/WebSocket"><code>WebSocket</code></a></li>
+  <li>{{domxref("WebSocket")}}</li>
 </ul>
-
-<p> </p>

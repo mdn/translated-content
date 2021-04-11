@@ -11601,15 +11601,6 @@
       "ellizii"
     ]
   },
-  "Web/Guide/Events/Media_events": {
-    "modified": "2019-04-16T19:26:35.650Z",
-    "contributors": [
-      "vamo089",
-      "TaizoGem",
-      "undgrnd",
-      "nechehin"
-    ]
-  },
   "Web/Guide/Events/Overview_of_Events_and_Handlers": {
     "modified": "2019-06-24T11:18:00.027Z",
     "contributors": [
@@ -25987,6 +25978,15 @@
       "vitya-ne",
       "alexsakhnov",
       "In4in"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Media_events": {
+    "modified": "2019-04-16T19:26:35.650Z",
+    "contributors": [
+      "vamo089",
+      "TaizoGem",
+      "undgrnd",
+      "nechehin"
     ]
   }
 }

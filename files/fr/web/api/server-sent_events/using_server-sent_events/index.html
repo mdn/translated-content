@@ -182,83 +182,8 @@ data: pour accomplir une tâche.
 event: usermessage
 data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}</pre>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+<h3 id="EventSource"><code>EventSource</code></h3>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Support de EventSource</td>
-   <td>6</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatGeckoDesktop("6.0") }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>5</td>
-  </tr>
-  <tr>
-   <td>Disponible dans les workers partagés et dédiés<sup>[1]</sup></td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatGeckoDesktop("53.0") }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support de EventSource</td>
-   <td>4.4</td>
-   <td>45</td>
-   <td>{{ CompatNo }}</td>
-   <td>12</td>
-   <td>4.1</td>
-  </tr>
-  <tr>
-   <td>Disponible dans les workers partagés et dédiés<sup>[1]</sup></td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatGeckoMobile("53.0") }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Mais <a href="https://github.com/w3c/ServiceWorker/issues/947">pas dans les service workers pour le moment</a>.</p>
-
-<h2 id="Références">Références</h2>
-
-<h4 id="Communauté_WHATWG">Communauté WHATWG</h4>
-
-<p><a href="https://html.spec.whatwg.org/multipage/comms.html#server-sent-events">https://html.spec.whatwg.org/multipage/comms.html#server-sent-events</a></p>
-
-<p><a href="http://www.html5rocks.com/profiles/#ericbidelman">Eric Bidelman</a> sur le blog HTML5 ROCKS</p>
-
-<p><a href="http://www.html5rocks.com/en/tutorials/eventsource/basics/?redirect_from_locale=fr">http://www.html5rocks.com/en/tutorials/eventsource/basics/?redirect_from_locale=fr</a></p>
+<p>{{Compat("api.EventSource")}}</p>

@@ -75,59 +75,7 @@ original_slug: Web/Events/compositionupdate
 
 <h2 id="Compatibilités_navigateur">Compatibilités navigateur</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Navigateur</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Support basique</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("9.0")}}<sup>[2]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Navigateur</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suport basique</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("9.0")}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] N'est pas<span id="result_box" lang="fr"><span> distribué immédiatement après l'événement <code>compositionstart</code>. </span></span></p>
-
-<p>[2] <code>Les événements <strong>compositionupdate</strong> sont déclenchés avant </code><span id="result_box" lang="fr"><span>avant que le contenu éditable ne soit réellement modifié; C'est-à-dire que la valeur d'un élément éditable n'a pas encore été modifiée lorsque les gestionnaires de </span></span><strong><code>compositionupdate</code></strong><span lang="fr"><span> sont appelés. A partir de Gecko 12.0 </span></span>{{geckoRelease("12.0")}}, les événements <code>input</code> sont déclenchés durant l'édition, après que le contenu de l'élément a été modifié. <span id="result_box" lang="fr"><span>Cela permet d'obtenir le contenu mis à jour pendant que l'édition est en cours.</span></span></p>
-
-<p>Gecko ne supporte pas l'attribut <em>local</em>e pour les événements approuvés pour l'instant. Cependant, cette valeur peut être définie via <code><a href="/fr/docs/Web/API/CompositionEvent#initCompositionEvent()">initCompositionEvent()</a> à la création d'événements non-approuvés.</code></p>
+<p>{{Compat("api.Element.compositionupdate_event")}}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

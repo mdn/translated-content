@@ -28865,30 +28865,6 @@
       "Darrel.Hsu"
     ]
   },
-  "Web/Guide/Events/Media_events": {
-    "modified": "2020-07-02T07:14:48.714Z",
-    "contributors": [
-      "9aoyang",
-      "haocity",
-      "TimRChen",
-      "maicss",
-      "GSBL",
-      "bizbin",
-      "esterTion",
-      "SudoKillMe",
-      "zilong-thu",
-      "ziyunfei",
-      "Anonymous"
-    ]
-  },
-  "Web/Guide/Events/Mutation_events": {
-    "modified": "2019-03-23T22:51:23.609Z",
-    "contributors": [
-      "Pada",
-      "peonyriver",
-      "FredWe"
-    ]
-  },
   "Web/Guide/Events/Orientation_and_motion_data_explained": {
     "modified": "2019-03-23T23:10:07.666Z",
     "contributors": [
@@ -50797,6 +50773,30 @@
       "teoli",
       "AlexChao",
       "ziyunfei"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Media_events": {
+    "modified": "2020-07-02T07:14:48.714Z",
+    "contributors": [
+      "9aoyang",
+      "haocity",
+      "TimRChen",
+      "maicss",
+      "GSBL",
+      "bizbin",
+      "esterTion",
+      "SudoKillMe",
+      "zilong-thu",
+      "ziyunfei",
+      "Anonymous"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Mutation_events": {
+    "modified": "2019-03-23T22:51:23.609Z",
+    "contributors": [
+      "Pada",
+      "peonyriver",
+      "FredWe"
     ]
   }
 }

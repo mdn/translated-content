@@ -58,7 +58,7 @@ p1.then(function(value) {
 
 <h3 id="Соединение">Соединение</h3>
 
-<p>Так как метод <code>then</code> возвращает <code>Promise</code> (обещание), вы можете объединить несколько вызовов <code>then</code> в цепочку. Значения возвращаемые из onFulfilled или onRejected колбэков будут автоматически обёрнуты в обещание.</p>
+<p>Так как метод <code>then</code> возвращает промис (<code>Promise</code>), вы можете объединить несколько вызовов <code>then</code> в цепочку. Значения возвращаемые из колбэков onFulfilled или onRejected будут автоматически обёрнуты в промис.</p>
 
 <pre class="brush: js notranslate">var p2 = new Promise(function(resolve, reject) {
   resolve(1);
@@ -76,10 +76,10 @@ p2.then(function(value) {
 });
 </pre>
 
-<p>Вы также можете соединить одну функцию, имеющую подобную с обещаниями API, с другой функцией.</p>
+<p>Вы также можете соединить одну функцию, имеющую подобный с промисами API, с другой функцией.</p>
 
 <pre class="brush: js notranslate">function fetch_current_data() {
-  // API функции fetch() возвращает обещание. Эта функция
+  // API функции fetch() возвращает промис. Эта функция
   // имеет аналогичный API, за исключением значения в случае выполнения
   return fetch("current-data.json").then((response) =&gt; {
     if (response.headers.get("content-type") != "application/json") {
@@ -87,13 +87,13 @@ p2.then(function(value) {
     }
     var j = response.json();
     // можем что-нибудь делать с j
-    return j; // в случае выполнения обещания, значение
+    return j; // в случае выполнения промиса, значение
               // передаётся в fetch_current_data().then()
   });
 }
 </pre>
 
-<p>Если onFulfilled возвращает обещание, возвращаемое значение может быть выполнено (resolved) / отклонено (rejected) обещанием.</p>
+<p>Если onFulfilled возвращает промис, возвращаемое значение может быть выполнено (resolved) / отклонено (rejected) промисом.</p>
 
 <pre class="brush: js notranslate">function resolveLater(resolve, reject) {
   setTimeout(function () {
@@ -108,7 +108,7 @@ function rejectLater(resolve, reject) {
 
 var p1 = Promise.resolve("foo");
 var p2 = p1.then(function() {
-  // Возвращает обещание, которое будет разрешено значением 10 через 1 секунду
+  // Возвращает промис, который будет разрешен значением 10 через 1 секунду
   return new Promise(resolveLater);
 });
 p2.then(function(v) {
@@ -119,7 +119,7 @@ p2.then(function(v) {
 });
 
 var p3 = p1.then(function() {
-// Возвращает обещание, которое будет отброшено значением 20 через 1 секунду
+// Возвращает промис, который будет отброшен значением 20 через 1 секунду
   return new Promise(rejectLater);
 });
 p3.then(function(v) {

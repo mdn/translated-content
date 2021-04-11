@@ -103,119 +103,31 @@ recognition.onresult = function(event) {
   bg.style.backgroundColor = color;
 }</pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Speech API', '#speechreco-section', 'SpeechRecognition')}}</td>
-   <td>{{Spec2('Web Speech API')}}</td>
-   <td> </td>
-  </tr>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Web Speech API', '#speechreco-section', 'SpeechRecognition')}}</td>
+      <td>{{Spec2('Web Speech API')}}</td>
+      <td></td>
+    </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<div>{{CompatibilityTable}}</div>
+<p>{{Compat("api.SpeechRecognition")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(33)}}{{property_prefix("webkit")}} <sup>[1]</sup></td>
-   <td>{{CompatNo}} <sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>continuous</code></td>
-   <td>{{CompatChrome(33)}} <sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}[1]</td>
-   <td>{{CompatGeckoMobile(44)}}</td>
-   <td>2.5</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>continuous</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}[1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
- <li>[1] Speech recognition interfaces are currently prefixed in Chrome, so you'll need to prefix interface names appropriately, e.g. <code>webkitSpeechRecognition</code>; You'll also need to serve your code through a web server for recognition to work.</li>
- <li>[2] Can be enabled via the <code>media.webspeech.recognition.enable</code> flag in <a>about:config</a> on mobile. Not implemented at all on Desktop Firefox — see {{bug(1248897)}}.</li>
-</ul>
-
-<h3 id="Firefox_OS_permissions">Firefox OS permissions</h3>
-
-<p>To use speech recognition in an app, you need to specify the following permissions in your <a href="/en-US/docs/Web/Apps/Build/Manifest">manifest</a>:</p>
-
-<pre class="brush: json">"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}</pre>
-
-<p>You also need a privileged app, so you need to include this as well:</p>
-
-<pre class="brush: json">  "type": "privileged"</pre>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
+  <li><a href="/fr/docs/Web/API/Web_Speech_API">Web Speech API</a></li>
 </ul>

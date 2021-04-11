@@ -242,106 +242,16 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<div>{{CompatibilityTable}}</div>
+<p>{{Compat("api.MediaDevices.getUserMedia")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Microsoft Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(53.0)}}<sup>[1][3]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(36)}}<sup>[2][4]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(40)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Promises</td>
-   <td>{{CompatChrome(53.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(38)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(53.0)}}<sup>[1][3]</sup></td>
-   <td>{{CompatChrome(53.0)}}<sup>[1][3]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(36)}} <sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOperaMobile(40)}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>Promises</td>
-   <td>{{CompatChrome(53.0)}}</td>
-   <td>{{CompatChrome(53.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(38)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] <span class="notranslate"> Les versions plus anciennes de Chrome et Opera implémentent <code>navigator.webkitGetUserMedia</code> , la version préfixée de la méthode </span> {{domxref("navigator.getUserMedia")}} <span class="notranslate"> .</span></p>
-
-<p><span class="notranslate">De la version 47 à la 52, l'interface promise n'est disponible que via  </span> <a href="https://github.com/webrtc/adapter">adapter.js</a><span class="notranslate">, ou en utilisant les options flag</span> <a>chrome://flags/#enable-experimental-web-platform-features</a> <span class="notranslate">.</span> <span class="notranslate"> À partir de la version 53, l'interface promise est activée par défaut, même si cette interface n'est toujours pas disponible via le <code>navigator</code> .</span></p>
-
-<p>[2] <span class="notranslate">Les anciennes versions de Firefox implémentent <code>navigator.mozGetUserMedia()</code> , la version préfixée de la méthode </span> {{domxref("navigator.getUserMedia")}} <span class="notranslate"> .</span></p>
-
-<p><span class="notranslate">La version prometteuse de cette méthode et la syntaxe de contrainte décrites ici sont disponibles à partir de Firefox 38. Les versions antérieures (32-37) ont utilisé une syntaxe de contrainte périmée, mais la syntaxe décrite ici, ainsi que l'interface promise est Disponible à l'aide de </span> <a href="https://github.com/webrtc/adapter">adapter.js</a> <span class="notranslate">.</span></p>
-
-<p><span class="notranslate">Firefox 49 comprend des modifications pour mettre les </span> {{anch("Errors", "erreurs")}} <span class="notranslate"> possibles à jour avec la spécification, y compris la modification de la signification de <code>SecurityError</code> .</span> <span class="notranslate"> De plus, si les pistes vidéo et audio sont demandées, <code>getUserMedia()</code> échoue maintenant pour ne pas pouvoir accéder aux deux.</span> <span class="notranslate"> Auparavant, il créerait un flux qui disposait de la partie réussie des médias.</span> <span class="notranslate"> Par exemple, si l'utilisateur dispose d'un microphone mais pas d'appareil photo (ou refusé l'accès à la caméra), les versions précédentes de Firefox renverraient un flux avec une piste audio mais pas de vidéo.</span> <span class="notranslate"> Maintenant, cela entraîne correctement une erreur.</span></p>
-
-<p><span class="notranslate">Opera utilise une syntaxe de contrainte périmée, mais la syntaxe décrite ici est disponible via </span> <a href="https://github.com/webrtc/adapter">adapter.js</a>.</p>
-
-<p>[3] <span class="notranslate">Chrome lance une erreur si la page qui sert le script est chargée d'origine non sécurisée (c'est-à-dire HTTP).</span></p>
-
-<p>[4] <span class="notranslate">Avant Firefox 55, <code>getUserMedia()</code> renvoie incorrectement <code>NotSupportedError</code> lorsque la liste des contraintes spécifiées est vide ou que toutes les contraintes sont définies comme <code>false</code> .</span> <span class="notranslate"> À partir de Firefox 55, cette situation appelle correctement le gestionnaire d'échec avec un <code>TypeError</code> .</span></p>
-
-<h2 id="Voir_également"><span class="notranslate">Voir également</span></h2>
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
- <li><span class="notranslate">L'ancien API</span> {{domxref("navigator.getUserMedia()")}}.</li>
- <li>{{domxref("mediaDevices.enumerateDevices()")}}: <span class="notranslate">Apprenez les types et le nombre de périphériques que l'utilisateur dispose.</span></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC API</a></li>
- <li><a href="/en-US/docs/Web/API/Media_Streams_API">Media Capture and Streams API (Media Streams)</a></li>
- <li><a href="/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">Taking webcam photos</a>: <span class="notranslate">un didacticiel sur l'utilisation de <code>getUserMedia()</code> pour prendre des photos plutôt que de la vidéo.</span></li>
+  <li>L'ancienne API {{domxref("navigator.getUserMedia()")}}.</li>
+  <li>{{domxref("mediaDevices.enumerateDevices()")}} : Apprenez les types et le nombre de périphériques que l'utilisateur dispose.</li>
+  <li><a href="/fr/docs/Web/API/WebRTC_API">WebRTC API</a></li>
+  <li><a href="/fr/docs/Web/API/Media_Streams_API">Media Capture and Streams API (Media Streams)</a></li>
+  <li><a href="/fr/docs/Web/API/WebRTC_API/Taking_still_photos">Taking webcam photos</a> : un tutoriel sur l'utilisation de <code>getUserMedia()</code> pour prendre des photos plutôt que de la vidéo.</li>
 </ul>

@@ -1,12 +1,20 @@
 ---
 title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
+tags:
+  - API
+  - HTML DOM
+  - Interface
+  - NeedsNewLayout
+  - Reference
 translation_of: Web/API/HTMLOptionElement
 ---
-<div>
- {{ApiRef}}</div>
+<div>{{APIRef("HTML DOM")}}</div>
+
 <p>L'interface <code>HTMLOptionElement</code> représente l'élément {{HTMLElement("option")}} et hérite de toutes les classes et méthodes de l'intreface {{domxref("HTMLElement")}} .</p>
-<h2 id="Propriétés"><em>Propriétés</em></h2>
+
+<h2 id="Properties"><em>Propriétés</em></h2>
+
 <p><em>hérite des propriétés de son parent, {{domxref("HTMLElement")}}.</em></p>
 <table class="standard-table">
  <thead>
@@ -76,7 +84,9 @@ translation_of: Web/API/HTMLOptionElement
   </tr>
  </tbody>
 </table>
-<h2 id="Méthodes">Méthodes</h2>
+
+<h2 id="Methods">Méthodes</h2>
+
 <p><em>Hérite des méthodes de son parent , {{domxref("HTMLElement")}}.</em></p>
 <dl>
  <dt>
@@ -88,90 +98,54 @@ translation_of: Web/API/HTMLOptionElement
  <dd>
   c'est le constructeur créant l'objet <code>HTMLOptionElement</code> object. il accepte quatre valeurs : le texte à afficher , <code>text</code>, la valeur associée au texte , <code>value</code>, la valeur du <code>defaultSelected</code>, et la valeur du <code>selected</code>. les trois dernières sont optionnelles.</dd>
 </dl>
-<h2 id="Spécifications">Spécifications</h2>
+
+<h2 id="Specifications">Spécifications</h2>
+
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Etat</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "the-button-element.html#the-option-element", "HTMLOptionElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>
-    <p>pas de changement depuis la {{SpecName("HTML5 W3C")}}.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "forms.html#the-option-element", "HTMLOptionElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>
-    <p>Le constructeur, <code>Option()</code>, a été ajouté. la propriété <code>form </code>peut avoir la valeur <code>null</code>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-70901257', 'HTMLOptionElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>
-    <p>Le sens de la propriété <code>selected a changé</code>: elle indique désormais si l'option est sélectionnée à l'instant , au lieu d'indiquer si elle a été initialement sélectionnée.</p>
-    <p>La propriété <code>defaultSelected</code> n'est plus en lecture seule</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-70901257', 'HTMLOptionElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>La définition initiale .</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', "the-button-element.html#the-option-element", "HTMLOptionElement")}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>
+        <p>pas de changement depuis la {{SpecName("HTML5 W3C")}}.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', "forms.html#the-option-element", "HTMLOptionElement")}}</td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td>
+        <p>Le constructeur, <code>Option()</code>, a été ajouté. la propriété <code>form </code>peut avoir la valeur <code>null</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM2 HTML', 'html.html#ID-70901257', 'HTMLOptionElement')}}</td>
+      <td>{{Spec2('DOM2 HTML')}}</td>
+      <td>
+        <p>Le sens de la propriété <code>selected a changé</code>: elle indique désormais si l'option est sélectionnée à l'instant , au lieu d'indiquer si elle a été initialement sélectionnée.</p>
+        <p>La propriété <code>defaultSelected</code> n'est plus en lecture seule</p>
+      </td>
+    </tr>
+    <tr>
+      <td>{{SpecName('DOM1', 'level-one-html.html#ID-70901257', 'HTMLOptionElement')}}</td>
+      <td>{{Spec2('DOM1')}}</td>
+      <td>La définition initiale .</td>
+    </tr>
+  </tbody>
 </table>
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-<p>{{CompatibilityTable}}</p>
-<div id="compat-desktop">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th><span class="short_text" id="result_box" lang="fr"><span class="hps">caractéristique</span></span></th>
-    <th>Chrome</th>
-    <th>Firefox (Gecko)</th>
-    <th>Internet Explorer</th>
-    <th>Opera</th>
-    <th>Safari (WebKit)</th>
-   </tr>
-   <tr>
-    <td>support basique</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatGeckoDesktop(1.0)}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<div id="compat-mobile">
- <table class="compat-table">
-  <tbody>
-   <tr>
-    <th><span class="short_text" id="result_box" lang="fr"><span class="hps">caractéristique</span></span></th>
-    <th>Android</th>
-    <th>Firefox Mobile (Gecko)</th>
-    <th>IE Phone</th>
-    <th>Opera Mobile</th>
-    <th>Safari Mobile</th>
-   </tr>
-   <tr>
-    <td>support basique</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatGeckoMobile(1.0)}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-    <td>{{CompatVersionUnknown}}</td>
-   </tr>
-  </tbody>
- </table>
-</div>
-<h2 id="Voir_aussi">Voir aussi</h2>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.HTMLOptionElement")}}</p>
+
+<h2 id="See_also">Voir aussi</h2>
+
 <ul>
- <li>L'élement HTML  implèmentant cette interface : {{ HTMLElement("option") }}.</li>
+  <li>L'élément HTML qui implémente cette interface : {{ HTMLElement("option") }}.</li>
 </ul>

@@ -66,62 +66,7 @@ original_slug: Web/API/WindowBase64/atob
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Support de base</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(1)}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop(27)}}<sup>[2]</sup><br>
-    {{CompatGeckoDesktop(52)}}<sup>[3]</sup></td>
-   <td>10</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support de base</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(1)}}<br>
-    {{CompatGeckoDesktop(52)}}<sup>[3]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-
-<p>[1] <code>atob()</code> est aussi disponible pour les composants XPCOM implémentés en JavaScript, même si <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">window</a></code> n'est pas l'objet global dans les composants.</p>
-
-<p>[2] A partir de <a href="https://developer.mozilla.org/en-US/Firefox/Releases/27/Site_Compatibility">Firefox 27</a>, <code>atob()</code> ignore tous les caractères espace dans l'argument pour se conformer à la spéc HTML5 la plus récente (voir {{bug(711180)}}).</p>
-
-<p>[3] <code>atob()</code> maintenant définie dans le mixin {{domxref("WindowOrWorkerGlobalScope")}}.</p>
+<p>{{Compat("api.WindowOrWorkerGlobalScope.atob")}}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

@@ -65,60 +65,6 @@ translation_of: Web/API/Window/popstate_event
  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Supportbasique</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>10.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}[1]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support basique</td>
-   <td>3.0[2]</td>
-   <td>{{CompatGeckoMobile("2")}}</td>
-   <td>10.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}[1]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] L'implémentation est supportée de façon limitée.</p>
-
-<p>[2] L'implémentation sous Android 2.2 et 2.3 était buggée.</p>
-
 <h2 id="Exemple">Exemple</h2>
 
 <p>Une page <code>http://example.com/example.html</code> exécutant le code suivant génèrera un journal comme spécifié :</p>
@@ -136,8 +82,30 @@ history.go(2);  // Logs "location: http://example.com/example.html?page=3, state
 
 <p>Notez que même si l'entrée d'historique originelle (pour <code>http://example.com/example.html</code>) n'a pas d'objet state associé, un événement <code>popstate</code> est tout de même exécuté lorsque nous activons cette entrée au second appel à <code>history.back()</code>.</p>
 
-<h2 id="Événements_liés">Événements liés</h2>
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'indices.html#event-popstate', 'popstate')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.Window.popstate_event")}}</p>
+
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
- <li><a href="/en-US/docs/Mozilla_event_reference/hashchange"><code>hashchange</code></a></li>
-</ul>
+  <li><a href="/fr/docs/Web/API/History_API">Manipulation de l'historique du navigateur (l'API History)</a></li>
+  <li><a href="/fr/docs/Web/API/Window/hashchange_event">Window : événement <code>hashchange</code></a></li>
+ </ul>

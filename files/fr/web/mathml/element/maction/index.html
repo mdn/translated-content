@@ -76,123 +76,37 @@ translation_of: Web/MathML/Element/maction
 
 &lt;/math&gt;
 </pre>
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
-  <table class="compat-table">
-    <tbody>
-      <tr>
-        <th>Fonctionnalité</th>
-        <th>Chrome</th>
-        <th>Firefox (Gecko)</th>
-        <th>Internet Explorer</th>
-        <th>Opera</th>
-        <th>Safari</th>
-      </tr>
-      <tr>
-        <td>Support simple</td>
-        <td>{{ CompatNo() }} {{webkitbug(85734) }}</td>
-        <td>{{ CompatGeckoDesktop("1.0") }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }} {{webkitbug(85734) }}</td>
-      </tr>
-      <tr>
-        <td><code>actiontype</code></td>
-        <td>{{ CompatNo() }}</td>
-        <td><code>toggle</code> &amp; <code>statusline</code>. <code>tooltip</code> is not implemented {{ bug(544001) }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-      </tr>
-      <tr>
-        <td><code>href</code></td>
-        <td>{{ CompatNo() }} {{webkitbug(85733)}}</td>
-        <td>{{ CompatGeckoDesktop("7.0") }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }} {{webkitbug(85733)}}</td>
-      </tr>
-      <tr>
-        <td><code>mathbackground</code></td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatGeckoDesktop("2.0") }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-      </tr>
-      <tr>
-        <td><code>mathcolor</code></td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatGeckoDesktop("2.0") }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div id="compat-mobile">
-  <table class="compat-table">
-    <tbody>
-      <tr>
-        <th>Fonctionnalité</th>
-        <th>Android</th>
-        <th>Chrome for Android</th>
-        <th>Firefox Mobile (Gecko)</th>
-        <th>IE Mobile</th>
-        <th>Opera Mobile</th>
-        <th>Safari Mobile</th>
-      </tr>
-      <tr>
-        <td>Support simple</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatGeckoMobile("1.0") }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-      </tr>
-      <tr>
-        <td><code>actiontype</code></td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td><code>toggle</code> &amp; <code>statusline</code>. <code>tooltip</code> is not implemented {{ bug(544001) }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-      </tr>
-      <tr>
-        <td><code>href</code></td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatGeckoMobile("7.0") }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-      </tr>
-      <tr>
-        <td><code>mathbackground</code></td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatGeckoMobile("2.0") }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-      </tr>
-      <tr>
-        <td><code>mathcolor</code></td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatGeckoMobile("2.0") }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatNo() }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<h3 id="Notes_relatives_à_Gecko">Notes relatives à Gecko</h3>
+
+<h2 id="Specifications">Spécifications</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('MathML3', 'chapter3.html#presm.maction', 'maction') }}</td>
+      <td>{{ Spec2('MathML3') }}</td>
+      <td>Définition actuelle</td>
+    </tr>
+    <tr>
+      <td>{{ SpecName('MathML2', 'chapter3.html#presm.maction', 'maction') }}</td>
+      <td>{{ Spec2('MathML2') }}</td>
+      <td>Définition initiale</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("mathml.elements.maction")}}</p>
+
+<h3 id="Gecko-specific_notes">Notes relatives à Gecko</h3>
+
 <ul>
   <li>Avant Gecko 9.0 {{ geckoRelease("9.0") }} la valeur <code>restyle</code> (non-standard) était supportée pour l'attribut <code>actiontype</code>. Cette valeur a été retirée.</li>
   <li>Avant Gecko 14.0 {{ geckoRelease("14.0") }} le type d'action <code>statusline</code> utilisait une syntaxe non-standard (voir ci-dessous). Cela a été résolu afin de respecter la spécification MathML.<br>
@@ -204,27 +118,3 @@ translation_of: Web/MathML/Element/maction
   <li>Gecko 15.0 {{geckoRelease("15.0")}} ne prend en compte l'attribut <code>selection</code> seulement s'il est utilisé avec le type d'action <code>toggle</code>.</li>
   <li>À partir de Gecko 16.0 {{geckoRelease("16.0")}} l'attribut <code>selection</code> est également pris en compte lorsqu'un <code>actiontype</code> inconnu est spécifié. Si un <code>actiontype</code> n'est pas spécifié (il est vide) ou que l'attribut <code>selection</code> est invalide, cela entraînera une erreur de balisage MathML (« invalid-markup »).</li>
 </ul>
-<h2 id="Specifications" name="Specifications">Spécifications</h2>
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ SpecName('MathML3', 'chapter3.html#presm.maction', 'maction') }}</td>
-      <td>{{ Spec2('MathML3') }}</td>
-      <td>Spécification actuelle</td>
-    </tr>
-    <tr>
-      <td>{{ SpecName('MathML2', 'chapter3.html#presm.maction', 'maction') }}</td>
-      <td>{{ Spec2('MathML2') }}</td>
-      <td>Spécification initiale</td>
-    </tr>
-  </tbody>
-</table>
-<p><br>
-  th</p>

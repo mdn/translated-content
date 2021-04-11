@@ -11,88 +11,28 @@ original_slug: WebRTC/communication-de-pair-a-pair-avec-WebRTC
 <p>Un bon tutoriel sur les fonctionnalités de base de WebRTC peut-être trouvé sur <a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/">HTML5 Rocks</a>. On pourra trouver sur le site <a href="http://mozilla.github.com/webrtc-landing" style="line-height: inherit;" title="http://mozilla.github.com/webrtc-landing">webrtc-landing</a> u<span style="line-height: inherit;">ne série de page de test basique</span><span style="line-height: inherit;">.</span></p>
 <p><span style="line-height: inherit;">Il est possible de faire un appel simple de personne à personne  (y compris à ceux utilisant Chrome) à </span><a href="https://apprtc.appspot.com/" style="line-height: inherit;" title="https://apprtc.appspot.com/">apprtc.appspot.com</a>.</p>
 <p>Un article de <a href="https://hacks.mozilla.org/category/webrtc/">Hacks</a> décrit avec précision ce qu'il se passe dans une connexion <code>RTCPeerConnecion </code>(<a href="https://hacks.mozilla.org/2013/05/embedding-webrtc-video-chat-right-into-your-website/">lien</a>) :</p>
-<p><img alt="Basics of RTCPeerConnection call setup" src="https://hacks.mozilla.org/wp-content/uploads/2013/05/webRTC-BasicsOfHowItWorks2.png" style="line-height: inherit; width: 898px; height: 805px;"></p>
-<h2 id="Spécifications">Spécifications</h2>
+<p><img alt="Basics of RTCPeerConnection call setup" src="webRTC-BasicsOfHowItWorks2.png"></p>
+
+<h2 id="Specifications">Spécifications</h2>
+
 <table class="standard-table">
-  <tbody>
+  <thead>
     <tr>
       <th scope="col">Spécification</th>
       <th scope="col">Statut</th>
       <th scope="col">Commentaire</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
-      <td>WebRTC API</td>
-      <td>En cours de définition</td>
-      <td> </td>
+      <td>{{SpecName("Media Capture")}}</td>
+      <td>{{Spec2("Media Capture")}}</td>
+      <td>Définition de <code>getUserMedia</code> API.</td>
     </tr>
     <tr>
-      <td>getUserMedia API</td>
-      <td>En cours definition</td>
-      <td><a href="http://dev.w3.org/2011/webrtc/editor/getusermedia.html" title="http://dev.w3.org/2011/webrtc/editor/getusermedia.html">http://dev.w3.org/2011/webrtc/editor/getusermedia.html</a></td>
-    </tr>
+      <td>{{SpecName("WebRTC 1.0")}}</td>
+      <td>{{Spec2("WebRTC 1.0")}}</td>
+      <td>Définition initiale.</td>
+     </tr>
   </tbody>
 </table>
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-<div>
-  {{CompatibilityTable}}</div>
-<div id="compat-desktop">
-  <table class="compat-table">
-    <tbody>
-      <tr>
-        <th>Fonctionnalité</th>
-        <th>Chrome</th>
-        <th>Firefox (Gecko)</th>
-        <th>Internet Explorer</th>
-        <th>Opera</th>
-        <th>Safari (WebKit)</th>
-      </tr>
-      <tr>
-        <td>Support de base</td>
-        <td>Oui{{property_prefix("webkit")}}</td>
-        <td>Firefox 22</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-      </tr>
-      <tr>
-        <td>DataChannels</td>
-        <td>A partir de Chrome 29</td>
-        <td>Firefox 22</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div id="compat-mobile">
-  <table class="compat-table">
-    <tbody>
-      <tr>
-        <th>Fontionnalité</th>
-        <th>Android</th>
-        <th>Firefox Mobile (Gecko)</th>
-        <th>IE Phone</th>
-        <th>Opera Mobile</th>
-        <th>Safari Mobile</th>
-      </tr>
-      <tr>
-        <td>Support préliminaire</td>
-        <td>Via Chrome (behind flag)</td>
-        <td>Activé sur versions Nightly et Aurora</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-      </tr>
-      <tr>
-        <td>DataChannels</td>
-        <td>{{CompatUnknown}}</td>
-        <td>Activé sur versions Nightly et Aurora</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-        <td>{{CompatNo}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<p> </p>

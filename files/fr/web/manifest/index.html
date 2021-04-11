@@ -10,7 +10,7 @@ translation_of: Web/Manifest
 
 <p>Les manifestes font partie d'un ensemble de technologies appelées les <a href="/fr/docs/Web/Apps/Progressive">applications web progressives</a> (<em>progressive web apps</em>). Il s'agit d'applications web qui peuvent être installées sur la page d'accueil d'un appareil sans que l'utilisateur ait à se rendre dans une boutique d'applications. De plus, une fois installées, elles peuvent être utilisées sans connexion internet et sont capables de recevoir des notifications <em>push.</em></p>
 
-<h2 id="Deploying_a_manifest_with_the_link_tag" name="Deploying_a_manifest_with_the_link_tag">Déployer un manifeste</h2>
+<h2 id="Deploying_a_manifest_with_the_link_tag">Déployer un manifeste</h2>
 
 <p>Les manifestes des applications Web sont déployés dans vos pages HTML en utilisant une balise lien (<em>link</em>) dans l'entête (<em>head</em>) de votre document :</p>
 
@@ -18,7 +18,7 @@ translation_of: Web/Manifest
 
 <h2 id="Exemple_de_manifeste">Exemple de manifeste</h2>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "Google I/O 2015",
   "short_name": "I/O 2015",
   "start_url": "./?utm_source=web_app_manifest",
@@ -68,24 +68,24 @@ translation_of: Web/Manifest
 <p><strong>Note</strong> : Le membre Background_color est uniquement destiné à améliorer l'expérience de l'utilisateur alors qu'une application Web est en cours de chargement et ne doit pas être utilisé par l'agent utilisateur comme couleur d'arrière-plan lorsque la feuille de style de l'application Web est disponible</p>
 </div>
 
-<h3 id="description"><font face="Consolas">description</font></h3>
+<h3 id="description"><code>description</code></h3>
 
 <p>Fournit une description générale de ce que fait l'application web.</p>
 
 <pre class="brush: json notranslate">"description": "L'application qui vous aide à trouver la meilleure nourriture en ville !"</pre>
 
-<h3 id="dir"><font face="Consolas">dir</font></h3>
+<h3 id="dir"><code>dir</code></h3>
 
 <p>Spécifie la direction du texte pour le nom, le nom court et les membres de description. Ensemble avec le membre lang, il peut aider à afficher correctement les langues de droite à gauche.</p>
 
-<pre class="brush: json notranslate"><span class="key token">"dir":</span> <span class="string token">"rtl"</span><span class="punctuation token">,</span>
-<span class="key token">"lang":</span> <span class="string token">"ar"</span><span class="punctuation token">,</span>
-<span class="key token">"short_name":</span> <span class="string token">"أنا من التطبيق!"</span></pre>
+<pre class="brush: json notranslate">"dir": "rtl",
+"lang": "ar",
+"short_name": "أنا من التطبيق!"</pre>
 
 <p>Il peut contenir l'une des valeurs suivantes :</p>
 
 <ul>
- <li><font face="Consolas">ltr</font> (de gauche à droite)</li>
+ <li><code>ltr</code> (de gauche à droite)</li>
  <li><code>rtl</code> (de droite à gauche)</li>
  <li><code>auto</code> (conseille au navigateur d'utiliser l'algorithme bidirectionnel Unicode pour mieux comprendre la direction du texte.)</li>
 </ul>
@@ -98,7 +98,7 @@ translation_of: Web/Manifest
 
 <p>Définit le mode d'affichage préféré du développeur pour l'application web.</p>
 
-<pre class="brush: json notranslate"><span class="key token">"display":</span> <span class="string token">"standalone"</span></pre>
+<pre class="brush: json ">"display": "standalone"</pre>
 
 <p>Les valeurs valides sont :</p>
 
@@ -142,7 +142,7 @@ translation_of: Web/Manifest
 
 <p>Un ensemble d'images qui peuvent servir d'icônes pour l'application dans différents contextes. Par exemple, elles peuvent être utilisées pour réprésenter l'application web dans une liste d'autres applications, ou pour intégrer l'application web dans les tâches d'un OS et/ou dans les préférences du système.</p>
 
-<pre class="brush: json notranslate">"icons": [
+<pre class="brush: json">"icons": [
   {
     "src": "icon/lowres.webp",
     "sizes": "48x48",
@@ -174,7 +174,7 @@ translation_of: Web/Manifest
  </thead>
  <tbody>
   <tr>
-   <td><span class="hidden"> </span> </td>
+   <td></td>
    <td></td>
   </tr>
   <tr>
@@ -183,7 +183,7 @@ translation_of: Web/Manifest
   </tr>
   <tr>
    <td><code>src</code></td>
-   <td>Le chemin du fichier image. Si <font face="Consolas">src </font>est une URL relative, l'URL de base sera celle du manifeste.</td>
+   <td>Le chemin du fichier image. Si <code>src</code> est une URL relative, l'URL de base sera celle du manifeste.</td>
   </tr>
   <tr>
    <td><code>type</code></td>
@@ -305,125 +305,33 @@ translation_of: Web/Manifest
 
 <h2 id="Mime_type">Mime type</h2>
 
-<p>Les manifestes doivent être servies en utilisant l'<font face="Consolas">application/manifest+json</font> MIME type. Cependant, c'est facultatif.</p>
+<p>Les manifestes doivent être servies en utilisant l'<code>application/manifest+json</code> MIME type. Cependant, c'est facultatif.</p>
 
-<h2 id="Spécification">Spécification</h2>
+<h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Manifest')}}</td>
-   <td>{{Spec2('Manifest')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('Manifest')}}</td>
+      <td>{{Spec2('Manifest')}}</td>
+      <td>Définition initiale</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-<div>
-<div>{{CompatibilityTable}}</div>
+<p>{{Compat("html.manifest")}}</p>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Fonctionnalités</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>32.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(39.0)}}</td>
-  </tr>
-  <tr>
-   <td><code>background_color</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}<sup><font size="2">[1]</font></sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>theme_color</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(46.0)}}<sup><font size="2">[1]</font></sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(46.0)}} [1]</td>
-  </tr>
-  <tr>
-   <td><code>icons</code>, <code>name</code>, <code>short_name</code>, and <code>theme_color</code> used for <a href="https://support.mozilla.org/t5/Other/How-to-add-a-shortcut-to-a-website-on-Android/ta-p/21992"><u><font color="#0066cc">Add to home screen</font></u></a> feature.</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(53)}}<sup><font size="2">[2]</font></sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>display</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(47)}}<sup><font size="2">[3]</font></sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="See_also">Voir aussi</h2>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-</div>
-
-<div></div>
-
-<p>[1] Ne supportent pas <code>lang</code>, <code>scope</code>, or <code>splash_screens</code>.</p>
-
-<p>[2] Les champs <font face="Consolas">icons</font>, <code>name</code>, <code>short_name</code>, et <code>theme_color </code>of the <u><font color="#0066cc">Web App Manifest </font></u>(si présent) peut maintenant être la source des icônes, titres,  couleur des écrans d'accueil des fenêtres des applications avec,"Add to home screen" (Firefox Mobile only; see {{bug("1234558")}}). Un support expérimental pour cette fonctionnalité est disponible derrière le drapeau booléen (boolean flag)  <font face="Consolas">manifest.install.enabled </font>dans <code>about:config</code>.</p>
-
-<p>[3] <span id="result_box" lang="fr"><span>Seule la valeur de l'affichage du navigateur a été prise en charge dans la version 47. Dans Firefox 57, on a ajouté </span></span><font face="Consolas">minimal-ui</font>, <code>standalone</code> , and <code>fullscreen.</code></p>
+<ul>
+	<li><a href="/fr/docs/Web/Progressive_web_apps">Progressive Web Apps (PWAs)</a></li>
+</ul>

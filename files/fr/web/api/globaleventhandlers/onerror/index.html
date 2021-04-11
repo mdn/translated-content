@@ -86,9 +86,7 @@ translation_of: Web/API/GlobalEventHandlers/onerror
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<p>Avant Firefox 14, quand le chargement d'un {{HTMLElement("script")}} échouait, <code>window.onerror</code> était invoqué avec le message <strong>"Error loading script"</strong>. Ce bug a été corrigé dans {{bug("737087")}}. A présent, <code>scriptElement.onerror</code> est invoqué à la place dans de tels cas.</p>
-
-<p>Depuis Firefox 31, les 2 derniers arguments (<code>colno</code> et <code>error</code>) ont été ajoutés, ce qui signifie que vous pouvez accéder à la trace de la pile d'une erreur de script via l'objet <code>Error</code> fourni({{bug("355430")}}).</p>
+<p>{{Compat("api.GlobalEventHandlers.onerror")}}</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
@@ -96,57 +94,3 @@ translation_of: Web/API/GlobalEventHandlers/onerror
  <li><a href="http://blog.getsentry.com/2016/01/04/client-javascript-reporting-window-onerror.html">Capture and report JavaScript errors with window.onerror (blog.getsentry.com, 2016)</a></li>
  <li><a href="https://danlimerick.wordpress.com/2014/01/18/how-to-catch-javascript-errors-with-window-onerror-even-on-chrome-and-firefox/">How to catch JavaScript Errors with window.onerror (even on Chrome and Firefox) (danlimerick.wordpress.com, 2014)</a></li>
 </ul>
-
-<h2 id="Compatibilité_des_navigateurs_2">Compatibilité des navigateurs</h2>
-
-<p>{{CompatibilityTable}}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Support de base</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-
-<article>
-<table>
- <tbody>
-  <tr>
-   <th>Fonctionnalité</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome pour Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support de base</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</article>
