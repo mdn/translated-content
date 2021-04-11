@@ -23,8 +23,8 @@ translation_of: Web/API/Performance_API/Using_the_Performance_API
 
 <pre class="brush: js">
 function calculate_time() {
-  let <var>startTime</var>;
-  let <var>endTime</var>;
+  let startTime;
+  let endTime;
 
   startTime = performance.now();
   do_task();
@@ -40,14 +40,14 @@ function calculate_time() {
 
 <pre class="brush: js">
 function print_json() {
-  let <var>json</var>;
-  let <var>o</var> = document.getElementsByTagName("output")[0];
+  let json;
+  let o = document.getElementsByTagName("output")[0];
 
   if (window.performance.toJSON === undefined) {
     json = "window.performance.toJSON() n'est PAS pris en charge";
     o.innerHTML += json + "&lt;br&gt;";
   } else {
-    let <var>s</var>;
+    let s;
     json = window.performance.toJSON();
 
     // Imprimer l'objet de performance
@@ -55,12 +55,12 @@ function print_json() {
     o.innerHTML = "&lt;p&gt;performance = " + s + "&lt;/p&gt;";
 
     // Imprimer les objets performance.timing et performance.navigation
-    let <var>perf</var> = JSON.parse(s);
+    let perf = JSON.parse(s);
 
-    let <var>timing</var> = perf.timing;
+    let timing = perf.timing;
     o.innerHTML += "&lt;p&gt;peformance.timing = " + JSON.stringify(timing) + "&lt;/p&gt;";
 
-    let <var>navigation</var> = perf.navigation;
+    let navigation = perf.navigation;
     o.innerHTML += "&lt;p&gt;peformance.navigation = " + JSON.stringify(navigation) + "&lt;/p&gt;";
   }
 }
@@ -99,7 +99,7 @@ function print_json() {
 <h2 id="See_also">Voir aussi</h2>
 
 <ul>
-  <li>{{domxref("Performance_API","Aperçu de l'API Performance", "", 1)}}</li>
+  <li><a href="/fr/docs/Web/API/Performance_API">Aperçu de l'API Performance</a></li>
   <li><a href="https://siusin.github.io/perf-timing-primer/">Une introduction aux API de chronométrage des performances du Web</a> <small>(en)</small></li>
   <li><a href="https://docs.google.com/document/d/1ZKW9N0cteHgK91SyYQONFuy2ZW6J4Oak398niTo232E/edit">Graphique des couches de performance Web</a> <small>(en)</small></li>
   <li><a href="https://caniuse.com/#search=high-resolution-time">CanIUse données pour le Temps à haute résolution</a> <small>(en)</small></li>

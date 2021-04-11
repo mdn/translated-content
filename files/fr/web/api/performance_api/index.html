@@ -11,46 +11,46 @@ translation_of: Web/API/Performance_API
 ---
 <div>{{DefaultAPISidebar("High Resolution Time")}}</div>
 
-<p class="summary"><span class="seoSummary">La norme <a href="https://www.w3.org/TR/hr-time/">High Resolution Time</a> définit l'interface {{domxref("Performance")}} qui prend en charge les mesures de latence côté client au sein des applications. Les interfaces {{domxref("Performance")}} sont considérées comme étant à <em>haute résolution</em>, car elles sont précises au millième de milliseconde (sous réserve de contraintes matérielles ou logicielles).</span> Les interfaces prennent en charge un certain nombre de cas d'utilisation, notamment le calcul des taux de trame (potentiellement important dans les animations) et l'évaluation comparative (comme le temps de chargement d'une ressource).</p>
+<p class="summary"><span class="seoSummary">La norme <a href="https://www.w3.org/TR/hr-time/">High Resolution Time</a> définit l'interface <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> qui prend en charge les mesures de latence côté client au sein des applications. Les interfaces <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> sont considérées comme étant à <em>haute résolution</em>, car elles sont précises au millième de milliseconde (sous réserve de contraintes matérielles ou logicielles).</span> Les interfaces prennent en charge un certain nombre de cas d'utilisation, notamment le calcul des taux de trame (potentiellement important dans les animations) et l'évaluation comparative (comme le temps de chargement d'une ressource).</p>
 
-<p>Comme l'<em>horloge système</em> d'une plateforme est sujette à divers <em>décalages</em> (comme les ajustements NTP), les interfaces prennent en charge une <em>horloge monotone</em>, c'est-à-dire une horloge toujours croissante. À ce titre, l'API {{domxref("Performance")}} définit un type {{domxref("DOMHighResTimeStamp")}} plutôt que d'utiliser l'interface {{jsxref("Date.now", "Date.now()")}}.</p>
+<p>Comme l'<em>horloge système</em> d'une plateforme est sujette à divers <em>décalages</em> (comme les ajustements NTP), les interfaces prennent en charge une <em>horloge monotone</em>, c'est-à-dire une horloge toujours croissante. À ce titre, l'API <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> définit un type <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> plutôt que d'utiliser l'interface {{jsxref("Date.now", "Date.now()")}}.</p>
 
 <h2 id="DOMHighResTimeStamp">DOMHighResTimeStamp</h2>
 
-<p>Le type {{domxref("DOMHighResTimeStamp")}}, comme son nom l'indique, représente un point temporel de haute résolution. Ce type est un <code>double</code> et est utilisé par les interfaces de performance. La valeur peut être un point discret dans le temps ou la différence de temps entre deux points discrets dans le temps.</p>
+<p>Le type <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a>, comme son nom l'indique, représente un point temporel de haute résolution. Ce type est un <code>double</code> et est utilisé par les interfaces de performance. La valeur peut être un point discret dans le temps ou la différence de temps entre deux points discrets dans le temps.</p>
 
-<p>L'unité de {{domxref("DOMHighResTimeStamp")}} est la milliseconde et doit être précise à 5 µs (microsecondes). Toutefois, si le navigateur n'est pas en mesure de fournir une valeur temporelle précise à 5 microsecondes (en raison, par exemple, de contraintes matérielles ou logicielles), le navigateur peut représenter la valeur comme un temps en millisecondes précis à la milliseconde près.</p>
+<p>L'unité de <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> est la milliseconde et doit être précise à 5 µs (microsecondes). Toutefois, si le navigateur n'est pas en mesure de fournir une valeur temporelle précise à 5 microsecondes (en raison, par exemple, de contraintes matérielles ou logicielles), le navigateur peut représenter la valeur comme un temps en millisecondes précis à la milliseconde près.</p>
 
 <h2 id="Methods">Méthodes</h2>
 
-<p>L'interface {{domxref("Performance")}} possède deux méthodes. La méthode {{domxref("Performance.now", "now()")}} renvoie un {{domxref("DOMHighResTimeStamp")}} dont la valeur dépend de {{domxref("PerformanceTiming.navigationStart", "navigationStart")}} et du contexte. Si le contexte est une fenêtre, la valeur est l'heure de création du contexte du navigateur et si le contexte est un {{domxref("Worker", "worker")}}, la valeur est l'heure de création du worker.</p>
+<p>L'interface <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> possède deux méthodes. La méthode <a href="/fr/docs/Web/API/Performance/now"><code>now()</code></a> renvoie un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> dont la valeur dépend de <a href="/fr/docs/Web/API/PerformanceTiming/navigationStart"><code>navigationStart</code></a> et du contexte. Si le contexte est une fenêtre, la valeur est l'heure de création du contexte du navigateur et si le contexte est un <a href="/fr/docs/Web/API/Worker"><code>Worker</code></a>, la valeur est l'heure de création du worker.</p>
 
-<p>La méthode {{domxref("Performance.toJSON", "toJSON()")}} renvoie une sérialisation de l'objet {{domxref("Performance")}}, pour les attributs qui peuvent être sérialisés.</p>
+<p>La méthode <a href="/fr/docs/Web/API/Performance/toJSON"><code>toJSON()</code></a> renvoie une sérialisation de l'objet <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a>, pour les attributs qui peuvent être sérialisés.</p>
 
 <h2 id="Properties">Propriétés</h2>
 
-<p>L'interface {{domxref("Performance")}} possède deux propriétés. La propriété {{domxref("Performance.timing", "timing")}} {{deprecated_inline}} renvoie un objet {{domxref("PerformanceTiming")}} contenant des informations de performance liées à la latence, telles que l'heure de début de navigation, les heures de début et de fin des redirections, les heures de début et de fin des réponses, etc.</p>
+<p>L'interface <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> possède deux propriétés. La propriété <a href="/fr/docs/Web/API/Performance/timing"><code>timing</code></a> {{deprecated_inline}} renvoie un objet <a href="/fr/docs/Web/API/PerformanceTiming"><code>PerformanceTiming</code></a> contenant des informations de performance liées à la latence, telles que l'heure de début de navigation, les heures de début et de fin des redirections, les heures de début et de fin des réponses, etc.</p>
 
-<p>La propriété {{domxref("Performance.navigation", "navigation")}} {{deprecated_inline}} renvoie un objet {{domxref("PerformanceNavigation")}} représentant le type de navigation qui se produit dans le contexte de navigation donné, comme la page vers laquelle on a navigué depuis l'historique, la page vers laquelle on a navigué en suivant un lien, etc.</p>
+<p>La propriété <a href="/fr/docs/Web/API/Performance/navigation"><code>navigation</code></a> {{deprecated_inline}} renvoie un objet <a href="/fr/docs/Web/API/PerformanceNavigation"><code>PerformanceNavigation</code></a> représentant le type de navigation qui se produit dans le contexte de navigation donné, comme la page vers laquelle on a navigué depuis l'historique, la page vers laquelle on a navigué en suivant un lien, etc.</p>
 
 <h2 id="Interfaces">Interfaces</h2>
 
 <dl>
-  <dt>{{domxref('Performance')}}</dt>
+  <dt><a href="/fr/docs/Web/API/Performance"><code>Performance</code></a></dt>
   <dd>Fournit des méthodes et des propriétés contenant des informations sur les performances liées au temps pour la page donnée.</dd>
-  <dt>{{domxref('PerformanceEntry')}}</dt>
+  <dt><a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a></dt>
   <dd>Fournit des méthodes et des propriétés pour encapsuler une seule mesure de performance qui fait partie de la chronologie des performances.</dd>
-  <dt>{{domxref('PerformanceFrameTiming')}}</dt>
+  <dt><a href="/fr/docs/Web/API/PerformanceFrameTiming"><code>PerformanceFrameTiming</code></a></dt>
   <dd>Fournit des méthodes et des propriétés contenant des données de synchronisation de trame sur la boucle d'événements du navigateur.</dd>
-  <dt>{{domxref('PerformanceMark')}}</dt>
+  <dt><a href="/fr/docs/Web/API/PerformanceMark"><code>PerformanceMark</code></a></dt>
   <dd>Une interface abstraite pour les <a href="/fr/docs/Web/API/PerformanceEntry">entrées de performance</a> avec un <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type d'entrée</a> de « <code>mark</code> ». Les entrées de ce type sont créées en appelant <a href="/fr/docs/Web/API/Performance/mark"><code>performance.mark()</code></a> pour ajouter un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> (un marqueur) à la chronologie des performances du navigateur.</dd>
-  <dt>{{domxref('PerformanceMeasure')}}</dt>
+  <dt><a href="/fr/docs/Web/API/PerformanceMeasure"><code>PerformanceMeasure</code></a></dt>
   <dd>Une interface abstraite pour les <a href="/fr/docs/Web/API/PerformanceEntry">entrées de performance</a> avec un <a href="/fr/docs/Web/API/PerformanceEntry/entryType">type d'entrée</a> de « <code>measure</code> ». Les entrées de ce type sont créées en appelant <a href="/fr/docs/Web/API/Performance/measure"><code>performance.measure()</code></a> pour ajouter un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> (une mesure) entre deux marqueurs à la chronologie des performances du navigateur.</dd>
-  <dt>{{domxref('PerformanceNavigationTiming')}}</dt>
+  <dt><a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a></dt>
   <dd>Fournit des méthodes et des propriétés pour stocker et récupérer <a href="/fr/docs/Web/API/DOMHighResTimeStamp">les horodatages haute résolution</a> ou des métriques concernant les événements de navigation de document du navigateur.</dd>
-  <dt>{{domxref('PerformanceObserver')}}</dt>
+  <dt><a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a></dt>
   <dd>Fournit des méthodes et des propriétés utilisées pour observer les événements de mesure des performances et être informé des nouvelles <a href="/fr/docs/Web/API/PerformanceEntry">entrées de performance</a> lorsqu'elles sont enregistrées dans la chronologie des performances du navigateur.</dd>
-  <dt>{{domxref('PerformanceResourceTiming')}}</dt>
+  <dt><a href="/fr/docs/Web/API/PerformanceResourceTiming"><code>PerformanceResourceTiming</code></a></dt>
   <dd>Fournit des méthodes et des propriétés permettant de récupérer et d'analyser des données détaillées de synchronisation du réseau concernant le chargement des ressources d'une application.</dd>
 </dl>
 
@@ -135,9 +135,9 @@ translation_of: Web/API/Performance_API
 
 <h2 id="Implementation_status">État de l'implémentation'</h2>
 
-<p>Comme le montre le tableau <a href="/fr/docs/Web/API/Performance#browser_compatibility">Compatibilité des navigateurs</a> de l'interface {{domxref("Performance")}}, la plupart de ces interfaces sont largement implémentées par les navigateurs de bureau.</p>
+<p>Comme le montre le tableau <a href="/fr/docs/Web/API/Performance#browser_compatibility">Compatibilité des navigateurs</a> de l'interface <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a>, la plupart de ces interfaces sont largement implémentées par les navigateurs de bureau.</p>
 
-<p>Pour tester le support de votre navigateur pour l'interface {{domxref("Performance")}}, exécutez l'application <code><a href="https://mdn.github.io/web-performance/perf-api-support.html">perf-api-support</a></code>.</p>
+<p>Pour tester le support de votre navigateur pour l'interface <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a>, exécutez l'application <code><a href="https://mdn.github.io/web-performance/perf-api-support.html">perf-api-support</a></code>.</p>
 
 <h2 id="See_also">Voir aussi</h2>
 
