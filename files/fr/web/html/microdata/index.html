@@ -26,7 +26,7 @@ original_slug: Web/HTML/Microdonnées
 <p>Google et les autres moteurs de recherches participent au vocabulaire défini par <a href="https://schema.org/">schema.org</a> pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple <code><a href="https://schema.org/MusicEvent">MusicEvent</a></code> indique un événement musical dont les propriétés <code><a href="https://schema.org/startDate">startDate</a></code> et <code><a href="https://schema.org/location">location</a></code> utilisées pour définir les détails du concert. Dans ce cas, l'URL <code><a href="https://schema.org/MusicEvent">https://schema.org/MusicEvent</a></code> sera l'URL utilisée pour l'attribut <code>itemtype</code> et les propriétés <code>startDate</code> et <code>location</code> seront les propriétés utilisées, définies par <code><a href="https://schema.org/MusicEvent">https://schema.org/MusicEvent</a></code>.</p>
 
 <div class="notecard note">
-  <p><strong>Note :</strong> Pour en savoir plus sur les attributs itemtype, consultez le site <a href="http://schema.org/Thing">http://schema.org/Thing</a>.</p>
+  <p><strong>Note :</strong> Pour en savoir plus sur les attributs <code>itemtype</code>, consultez le site <a href="http://schema.org/Thing">http://schema.org/Thing</a>.</p>
 </div>
 
 <p>Les vocabulaires de microdonnées fournissent la sémantique ou la signification d'un élément. Les développeurs Web peuvent concevoir un vocabulaire personnalisé ou utiliser des vocabulaires disponibles sur le Web, tels que le vocabulaire largement utilisé <a href="http://schema.org">schema.org</a>. Une collection de vocabulaires de balisage couramment utilisés est fournie par Schema.org.</p>
@@ -52,7 +52,7 @@ original_slug: Web/HTML/Microdonnées
 
 <h2 id="Localization">Localisation</h2>
 
-<p>Dans certains cas, les moteurs de recherche couvrent un public régional. Certaines extensions sont donc ajoutées aux microdonnées pour fournir du contenu spécifique. Ainsi, <a href="https://www.yandex.com/">Yandex</a> qui est un moteur de recherche très présent en Russie supporte des microformats comme <em>hCard</em>, <em>hRecipe</em>, <em>hReview</em> et <em>hProduct</em> et fournit son propre format pour dédfinir les termes et les articles encyclopédiques. Cette extension a été construite afin de résoudre les problème de translitération entre les alphabets cyrillique et latin.</p>
+<p>Dans certains cas, les moteurs de recherche couvrent un public régional. Certaines extensions sont donc ajoutées aux microdonnées pour fournir du contenu spécifique. Ainsi, <a href="https://www.yandex.com/">Yandex</a> qui est un moteur de recherche très présent en Russie supporte des microformats comme <em>hCard</em>, <em>hRecipe</em>, <em>hReview</em> et <em>hProduct</em> et fournit son propre format pour dédfinir les termes et les articles encyclopédiques. Cette extension a été construite afin de résoudre les problèmes de translitération entre les alphabets cyrillique et latin.</p>
 
 <h2 id="Global_attributes">Attributs globaux liés aux microdonnées</h2>
 
@@ -66,7 +66,7 @@ original_slug: Web/HTML/Microdonnées
  <dt><a href="/fr/docs/Web/HTML/Global_attributes/itemscope"><code>itemscope</code></a></dt>
  <dd>Cet attribut définit la portée du vocabulaire déclaré par <code>itemtype</code> et englobe généralement un objet.</dd>
  <dt><a href="/fr/docs/Web/HTML/Global_attributes/itemtype"><code>itemtype</code></a></dt>
- <dd>Cet attribut définit le vocabulaire qui spécifie le modèle de données utilisé pour décrire les objets.</dd>
+ <dd>Cet attribut définit l'URL du vocabulaire qui spécifie le modèle de données utilisé pour décrire les objets.</dd>
 </dl>
 
 <h2 id="Example">Exemple</h2>
@@ -150,10 +150,10 @@ original_slug: Web/HTML/Microdonnées
 
 <h3 id="Result">Résultat</h3>
 
-<p>{{EmbedLiveSample("HTML", "", "")}}</p>
+<p>{{EmbedLiveSample("HTML", "", "100")}}</p>
 
 <div class="note">
-  <p><strong>Note :</strong> Un outil pratique pour extraire les structures de microdonnées du HTML est l'<a href="https://developers.google.com/search/docs/guides/intro-structured-data">Outil de test des données structurées</a> de Google. Essayez-le sur le HTML présenté ci-dessus.</p>
+  <p><strong>Note :</strong> Un outil pratique pour extraire les structures de microdonnées du HTML est l'<a href="https://developers.google.com/search/docs/guides/intro-structured-data">outil de test des données structurées</a> de Google. Essayez-le sur le HTML présenté ci-dessus.</p>
 </div>
 
 <h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
