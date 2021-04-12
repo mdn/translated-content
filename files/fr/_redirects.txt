@@ -435,7 +435,6 @@
 /fr/docs/CSS/Média/Visuel	/fr/docs/Web/CSS/@media
 /fr/docs/CSS/Premiers_pas	/fr/docs/conflicting/Learn/CSS/First_steps
 /fr/docs/CSS/Premiers_pas/Contenu	/fr/docs/Learn/CSS/Howto/Generated_content
-/fr/docs/CSS/Premiers_pas/Des_CSS_lisibles	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_is_structured
 /fr/docs/CSS/Premiers_pas/Définition_des_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c
 /fr/docs/CSS/Premiers_pas/Fonctionnement_de_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_cdccf923f6bd040e8d243ee03d223ddc
 /fr/docs/CSS/Premiers_pas/Graphiques_SVG	/fr/docs/Web/SVG/Tutorial/SVG_and_CSS
@@ -748,7 +747,6 @@
 /fr/docs/CSS:Média:Visuel	/fr/docs/Web/CSS/@media
 /fr/docs/CSS:Premiers_pas	/fr/docs/conflicting/Learn/CSS/First_steps
 /fr/docs/CSS:Premiers_pas:Contenu	/fr/docs/Learn/CSS/Howto/Generated_content
-/fr/docs/CSS:Premiers_pas:Des_CSS_lisibles	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_is_structured
 /fr/docs/CSS:Premiers_pas:Données_XML	/fr/docs/CSS/Premiers_pas/Données_XML
 /fr/docs/CSS:Premiers_pas:Définition_des_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c
 /fr/docs/CSS:Premiers_pas:Fonctionnement_de_CSS	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_cdccf923f6bd040e8d243ee03d223ddc
