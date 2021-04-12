@@ -5,7 +5,7 @@ translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 <div>{{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}</div>
 
-<p class="summary">通过本地缓存能力实现离线应用是一个强大的特性。允许用户在主屏幕上安装 Web 应用程序则显得更了不起。但除了单纯依赖用户手动打开应用之外，我们还可以走的更远，利用通知和消息推送提高用户参与度，并且随时提供新的内容。</p>
+<p class="summary">以本地缓存实现离线应用是一个强大的特性。允许用户在主屏幕上安装 Web 应用程序则显得更了不起。但除了单纯依赖用户手动打开应用之外，我们还可以走得更远，利用通知和消息推送提高用户参与度，并且随时提供新的内容。</p>
 
 <h2 id="两个_API，一个目标">两个 API，一个目标</h2>
 
@@ -32,15 +32,15 @@ button.addEventListener('click', function(e) {
 
 <p>下面的图片展示了如何通过系统的通知服务显示一个授权窗口：</p>
 
-<p><img alt="Notification of js13kPWA." src="https://mdn.mozillademos.org/files/15930/js13kpwa-notification.png" style="display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
+<p><img alt="js13kPWA 的授权窗口。" src="https://mdn.mozillademos.org/files/15930/js13kpwa-notification.png" style="display: block; height: 640px; margin: 0px auto; width: 360px;"></p>
 
-<p>当用户确定接收通知，应用就可以获得推送通知的功能。用户的授权的结果有三种，default（默认）、granted（允许） 或者 denied（拒绝），当用户没有做出选择的时候，授权结果会返回 default，另外两种结果分别在用户选择了允许或者拒绝的时候返回。</p>
+<p>当用户确定接收通知，应用就可以获得推送通知的功能。用户的授权的结果有三种，default（默认）、granted（允许）或者 denied（拒绝），当用户没有做出选择的时候，授权结果会返回 default，另外两种结果分别在用户选择了允许或者拒绝的时候返回。</p>
 
 <p>一旦用户选择授权，这个授权结果对通知 API 和推送 API 两者都有效。</p>
 
 <h3 id="创建一个通知">创建一个通知</h3>
 
-<p>我们的示例应用通过可用的数据来创建通知 —— 随机选择一个游戏数据来填充通知的主体：用游戏的名称来作为通知的标题，通知的主体会提及游戏的作者，用游戏的图片来作为通知的图标：</p>
+<p>我们的示例应用通过可用的数据来创建通知。随机选择一个游戏数据来填充通知的主体：用游戏的名称来作为通知的标题，通知的主体会提及游戏的作者，用游戏的图片来作为通知的图标：</p>
 
 <pre class="brush: js">function randomNotification() {
     var randomItem = Math.floor(Math.random()*games.length);
@@ -55,7 +55,7 @@ button.addEventListener('click', function(e) {
     setTimeout(randomNotification, 30000);
 }</pre>
 
-<p>上述代码每隔三十秒会创建一个通知，直到用户觉得通知有点烦人并手动关闭掉它为止。一个真正的 app，对通知的频率必须进行严格的控制，通知内容也要更加有用才行。通知 API 的优势在于它使用了操作系统的通知功能，这意味着即使用户当前并没有在使用我们的应用，我们的通知也能够展示，它看起来跟一个原生应用发出的通知差不多。</p>
+<p>上述代码每隔三十秒会创建一个通知，直到用户觉得通知有点烦人并手动关闭掉它为止。一个真正的 App，对通知的频率必须进行严格的控制，通知内容也要更加有用才行。通知 API 的优势在于它使用了操作系统的通知功能，这意味着即使用户当前并没有在使用我们的应用，我们的通知也能够展示，它看起来跟一个原生应用发出的通知差不多。</p>
 
 <h2 id="推送">推送</h2>
 
@@ -122,7 +122,7 @@ const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);</pre>
 
 <p>App 会从服务器请求一个公钥并且把响应结果转化成文本，最后它还需要转化成一个 Uint8Array（为了兼容 Chrome）。如果你想学习更多关于 VAPID 的内容可以阅读 <a href="https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/">Sending VAPID identified WebPush Notifications via Mozilla’s Push Service</a> 这篇文章。</p>
 
-<p>App 现在可以使用 {{domxref("PushManager")}}  来订阅新用户。这个方法支持传递两个参数：第一个是 <code>userVisibleOnly: true</code>，意思是发送给用户的所有通知对他们都是可见的，第二个是 <code>applicationServerKey</code>，这个参数包含我们之前从服务端取得并转化的 VAPID key。</p>
+<p>App 现在可以使用 {{domxref("PushManager")}} 来订阅新用户。这个方法支持传递两个参数：第一个是 <code>userVisibleOnly: true</code>，意思是发送给用户的所有通知对他们都是可见的，第二个是 <code>applicationServerKey</code>，这个参数包含我们之前从服务端取得并转化的 VAPID key。</p>
 
 <pre class="brush: js">return registration.pushManager.subscribe({
     userVisibleOnly: true,
@@ -168,7 +168,7 @@ const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);</pre>
 
 <h4 id="server.js">server.js</h4>
 
-<p>服务端的代码是用  Node.js编写的，它需要被托管在合适的地方。这部分内容已经够单独再写一篇文章了。所以这里我们只提供一个简单的概览。</p>
+<p>服务端的代码是用 Node.js 编写的，它需要被托管在合适的地方。这部分内容已经够单独再写一篇文章了。所以这里我们只提供一个简单的概览。</p>
 
 <p><a href="https://www.npmjs.com/package/web-push">web-push</a> 模块被用来配置 VAPID 密钥，如果没有的话，还可以生成一个。</p>
 
