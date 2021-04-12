@@ -115,7 +115,6 @@
 /ru/docs/HTML/HTML5/Constraint_validation	/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation
 /ru/docs/HTML/HTML5/Введение_в_HTML5	/ru/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ru/docs/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/ru/docs/Glossary/speculative_parsing
-/ru/docs/HTML/Использование_кэширования_приложений	/ru/docs/Web/HTML/Using_the_application_cache
 /ru/docs/IndexedDB	/ru/docs/Web/API/IndexedDB_API
 /ru/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ru/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ru/docs/IndexedDB/Using_IndexedDB	/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB
@@ -624,7 +623,6 @@
 /ru/docs/Web/HTML/Global_attributes/dropzone	/ru/docs/orphaned/Web/HTML/Global_attributes/dropzone
 /ru/docs/Web/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/ru/docs/Glossary/speculative_parsing
 /ru/docs/Web/HTML/Использование_HTML5_audio_и_video	/ru/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-/ru/docs/Web/HTML/Использование_кэширования_приложений	/ru/docs/Web/HTML/Using_the_application_cache
 /ru/docs/Web/HTML/Общие_атрибуты	/ru/docs/Web/HTML/Global_attributes
 /ru/docs/Web/HTML/Общие_атрибуты/accesskey	/ru/docs/Web/HTML/Global_attributes/accesskey
 /ru/docs/Web/HTML/Общие_атрибуты/class	/ru/docs/Web/HTML/Global_attributes/class

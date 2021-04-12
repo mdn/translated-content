@@ -346,7 +346,6 @@
 /pt-BR/docs/HTML/Introducao	/pt-BR/docs/Learn/HTML/Introduction_to_HTML
 /pt-BR/docs/HTML/Introduction	/pt-BR/docs/Learn/HTML/Introduction_to_HTML
 /pt-BR/docs/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/pt-BR/docs/Glossary/speculative_parsing
-/pt-BR/docs/HTML/Using_the_application_cache	/pt-BR/docs/Web/HTML/Using_the_application_cache
 /pt-BR/docs/Hello_World_Rust	/pt-BR/docs/orphaned/Hello_World_Rust
 /pt-BR/docs/IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API
 /pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
