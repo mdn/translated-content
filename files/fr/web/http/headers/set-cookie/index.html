@@ -6,7 +6,6 @@ tags:
   - HTTP
   - Reference
   - Response
-  - TopicStub
   - header
   - samesite
 translation_of: Web/HTTP/Headers/Set-Cookie
@@ -39,7 +38,7 @@ translation_of: Web/HTTP/Headers/Set-Cookie
 
 <h2 id="syntax">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;
+<pre class="syntaxbox">Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Expires=&lt;date&gt;
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Max-Age=&lt;non-zero-digit&gt;
 Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt;
@@ -61,8 +60,8 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
   <dd>Un cookie commence avec la paire nom-valeur:
     <ul>
       <li>Un <code>&lt;cookie-name&gt;</code> peut-être de n'importe quels caractères US-ASCII, à part les caractères de contrôle, d'espace, de tabulation et les caractères de séparation: <code>( ) &lt; &gt; @ , ; : \ " / [ ] ? = { }</code>.</li>
-      <li>Un <code>&lt;cookie-value&gt;</code> peut éventuellement être entouré de doubles guillemets et inclut tous les caractères US-ASCII sauf les caractères de contrôle, <a href="/fr/docs/Glossary/Whitespace">Whitespace</a>, doubles guillemets, virgule, point-virgule et antislash. <strong>Encodage</strong>: plusieurs implémentations font un codage d'URL, cependant ce n'est pas obligatoire par la spécification RCF même si cela peut aider pour avoir des caractères permis.</li>
-      <li>Le préfixe <strong><code>__Secure-</code></strong> : Les cookies commençant par <code>__Secure-</code> (le tiret fait partit du préfixe) doivent être défini avec le drapeau <code>secure</code> depuis une page sécurisée (HTTPS).</li>
+      <li>Un <code>&lt;cookie-value&gt;</code> peut éventuellement être entouré de guillemets doubles et inclut tous les caractères US-ASCII sauf les caractères de contrôle, <a href="/fr/docs/Glossary/Whitespace">Whitespace</a>, guillemets doubles, virgule, point-virgule et antislash. <strong>Encodage</strong>: plusieurs implémentations font un codage d'URL, cependant ce n'est pas obligatoire par la spécification RCF même si cela peut aider pour avoir des caractères permis.</li>
+      <li>Le préfixe <strong><code>__Secure-</code></strong> : Les cookies commençant par <code>__Secure-</code> (le tiret fait partie du préfixe) doivent être défini avec le drapeau <code>secure</code> depuis une page sécurisée (HTTPS).</li>
       <li>Le préfixe <strong><code>__Host-</code></strong> : Les cookies commençant par <code>__Host-</code> doivent être défini avec le drapeau <code>secure</code>, depuis une page sécurisée (HTTPS), ne doivent pas avoir de domaine spécifié (et donc pas envoyé à un sous-domaine) et le chemin doit être <code>/</code>.</li>
     </ul>
   </dd>
