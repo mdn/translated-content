@@ -3,87 +3,90 @@ title: IntersectionObserver
 slug: Web/API/IntersectionObserver
 tags:
   - API
-  - Experimental
   - Interface
+  - Intersection Observer API
   - IntersectionObserver
-  - Observation
-  - Visibilité
+  - Reference
+  - observers
 translation_of: Web/API/IntersectionObserver
 ---
-<div>{{SeeCompatTable}}{{APIRef("Intersection Observer API")}}</div>
+<div>{{APIRef("Intersection Observer API")}}</div>
 
-<p><span class="seoSummary">L'interface <code><strong>IntersectionObserver</strong></code> de l'<a href="/en-US/docs/Web/API/Intersection_Observer_API">API Intersection Observer</a> fournit un moyen d'observer de manière asynchrone les changements d'intersection d'un élément cible avec un élément ancêtre ou avec la fenêtre du document {{Glossary('viewport')}}.</span> L'ancêtre ou la fenêtre du document racine est alors appelé racine.</p>
+<p class="summary">L'interface <code><strong>IntersectionObserver</strong></code> de l'<a href="/fr/docs/Web/API/Intersection_Observer_API">API <i>Intersection Observer</i></a> fournit un moyen d'observer de manière asynchrone les changements d'intersection d'un élément cible avec un élément ancêtre ou avec la fenêtre du document (<a href="/fr/docs/Glossary/Viewport"><i>viewport</i></a>). L'ancêtre ou la fenêtre du document est alors appelé racine dans ce contexte.</p>
 
-<p>Lorsqu'un <code>IntersectionObserver</code> est créé, il est configuré pour surveiller des ratios donnés de visibilité au sein de la racine. La configuration ne peut être changé après initialisation de l'<code>IntersectionObserver</code>, ainsi un certain objet d'observation n'est utile que pour surveiller des changements spécifiques en mesure de visibilité ; toutefois, l'on peut observer de multiples éléments avec un unique observateur.</p>
+<p>Lorsqu'un objet implémentant <code>IntersectionObserver</code> est créé, il est configuré pour surveiller des ratios donnés de visibilité au sein de la racine. La configuration ne peut être changée après initialisation de l'<code>IntersectionObserver</code>. Ainsi un certain observateur ne sera utile que pour surveiller certains changements spécifiques de visibilité ; toutefois, on peut observer de multiples éléments avec un unique observateur.</p>
 
-<h2 id="Constructeur">Constructeur</h2>
+<h2 id="constructor">Constructeur</h2>
 
 <dl>
- <dt>{{domxref("IntersectionObserver.IntersectionObserver()")}}</dt>
- <dd>Crée un nouvel objet <code>IntersectionObserver</code> qui exécutera une fonction de rappel spécifiée lorsqu'il détectera que la visibilité de l'élément cible a franchi un ou plusieurs des seuils.</dd>
+ <dt><a href="/fr/docs/Web/API/IntersectionObserver/IntersectionObserver"><code>IntersectionObserver.IntersectionObserver()</code></a> {{Experimental_inline}}</dt>
+ <dd>Crée un nouvel objet <code>IntersectionObserver</code> qui exécutera une fonction de rappel lorsqu'il détectera que la visibilité de l'élément cible a franchi un ou plusieurs seuils.</dd>
 </dl>
 
-<h2 id="Propriétés">Propriétés</h2>
+<h2 id="properties">Propriétés</h2>
 
 <dl>
- <dt>{{domxref("IntersectionObserver.root")}} {{readonlyinline}}</dt>
- <dd>Un ancêtre spécifique de la cible {{domxref("element")}} étant observé. Si aucune valeur n'a été donnée au constructeur ou qu'il vaut <code>null</code>, la fenêtre du document racine est utilisée.</dd>
- <dt>{{domxref("IntersectionObserver.rootMargin")}} {{readonlyinline}}</dt>
- <dd>
- <div id="gt-res-content">
- <div class="trans-verified-button-small" dir="ltr" id="gt-res-dir-ctr"><span id="result_box" lang="fr"><span>Un rectangle de décalage appliqué au {{Glossary ('bounding box')}} de la racine lors du calcul des intersections, réduisant ou développant la racine à des fins de calcul.</span> <span>La valeur renvoyée par cette propriété peut différer de celle spécifiée lors de l'appel du constructeur, car elle peut être modifiée pour répondre aux exigences internes.</span> <span>Chaque décalage peut être exprimé en pixels (px) ou en pourcentage (%).</span> <span>La valeur par défaut est "0px 0px 0px 0px".</span></span></div>
- </div>
- </dd>
- <dt>{{domxref("IntersectionObserver.thresholds")}} {{readonlyinline}}</dt>
- <dd>Une liste de seuils, triée par ordre numérique croissant, où chaque seuil est un rapport de la surface d'intersection à la surface de la zone de délimitation de l'élément observé. Les notifications pour une cible sont émises dès lors qu'un seuil au moins est franchi pour cette cible. Si aucune valeur n'est donnée, 0 est définie par défaut.</dd>
+ <dt><a href="/fr/docs/Web/API/IntersectionObserver/root"><code>IntersectionObserver.root</code></a> {{readonlyinline}} {{Experimental_inline}}</dt>
+ <dd>L'<a href="/fr/docs/Web/API/Element">élément</a> ou le <a href="/fr/docs/Web/API/Document">document</a> dont les limites sont utilisées comme boîte englobante pour le test de l'intersection. Si aucune racine n'est passée au constructeur ou que sa valeur est <code>null</code>, c'est la zone d'affichage (<i>viewport</i>) de plus haut niveau qui est utilisée.</dd>
+ <dt><a href="/fr/docs/Web/API/IntersectionObserver/rootMargin"><code>IntersectionObserver.rootMargin</code></a> {{readonlyinline}} {{Experimental_inline}}</dt>
+ <dd>Un rectangle de décalage appliqué à <a href="/fr/docs/Glossary/bounding_box">la boîte englobante</a> de la racine lors du calcul des intersections. La zone de la racine est ainsi réduite ou étendue pour les calculs. La valeur renvoyée par cette propriété peut différer de celle spécifiée lors de l'appel du constructeur, car elle peut être modifiée pour répondre aux exigences internes. Chaque décalage peut être exprimé en pixels (px) ou en pourcentage (%). La valeur par défaut est <code>"0px 0px 0px 0px"</code>.</dd>
+ <dt><a href="/fr/docs/Web/API/IntersectionObserver/thresholds"><code>IntersectionObserver.thresholds</code></a> {{readonlyinline}} {{Experimental_inline}}</dt>
+ <dd>Une liste de seuils, triée par ordre numérique croissant, où chaque seuil est un rapport de la surface d'intersection à la surface de la zone de délimitation de l'élément observé. Les notifications pour une cible sont émises dès lors qu'un seuil au moins est franchi pour cette cible. Si aucune valeur n'est donnée, 0 est utilisé comme seuil par défaut.</dd>
 </dl>
 
-<h2 id="Méthodes">Méthodes</h2>
+<h2 id="methods">Méthodes</h2>
 
 <dl>
- <dt>{{domxref("IntersectionObserver.disconnect()")}}</dt>
+ <dt><a href="/fr/docs/Web/API/IntersectionObserver/disconnect"><code>IntersectionObserver.disconnect()</code></a> {{Experimental_inline}}</dt>
  <dd>Indique à l'objet <code>IntersectionObserver</code> de ne plus observer aucune cible.</dd>
- <dt>{{domxref("IntersectionObserver.observe()")}}</dt>
- <dd>Indique à l'<code>IntersectionObserver</code> un nouvel élément à observer.</dd>
- <dt>{{domxref("IntersectionObserver.takeRecords()")}}</dt>
- <dd>Retourne un tableau d'objets {{domxref("IntersectionObserverEntry")}} pour toutes les cibles observées et cesse de surveiller chacune d'elles.</dd>
- <dt>{{domxref("IntersectionObserver.unobserve()")}}</dt>
- <dd>Indique à l'<code>IntersectionObserver</code> de cesser d'observer un élément cible particuler.</dd>
- <dt>
- <h2 id="Exemples">Exemples</h2>
- </dt>
+ <dt><a href="/fr/docs/Web/API/IntersectionObserver/observe"><code>IntersectionObserver.observe()</code></a> {{Experimental_inline}}</dt>
+ <dd>Indique à l'objet <code>IntersectionObserver</code> un nouvel élément à observer.</dd>
+ <dt><a href="/fr/docs/Web/API/IntersectionObserver/takeRecords"><code>IntersectionObserver.takeRecords()</code></a> {{Experimental_inline}}</dt>
+ <dd>Retourne un tableau d'objets <a href="/fr/docs/Web/API/IntersectionObserverEntry"><code>IntersectionObserverEntry</code></a> pour toutes les cibles observées et cesse de surveiller chacune d'elles.</dd>
+ <dt><a href="/fr/docs/Web/API/IntersectionObserver/unobserve"><code>IntersectionObserver.unobserve()</code></a> {{Experimental_inline}}</dt>
+ <dd>Indique à l'objet <code>IntersectionObserver</code> de cesser d'observer un élément cible particuler.</dd>
 </dl>
 
-<pre class="brush: js">var intersectionObserver = new IntersectionObserver(function (entrées) {
-  // Si ratioIntersection vaut 0 ou moins, la cible
+<h2 id="example">Exemple</h2>
+
+<pre class="brush: js">var intersectionObserver = new IntersectionObserver(function(entries) {
+  // Si intersectionRatio vaut 0 ou moins, la cible
   // est hors de vue et rien n'est alors fait
-  if (entrées[0].intersectionRatio &lt;= 0) return;
+  if (entries[0].intersectionRatio &lt;= 0) return;
 
-  chargerÉléments(10);
-  console.log("Nouveaux éléments chargés");
+  loadItems(10);
+  console.log('Nouveaux éléments chargés');
 });
-// commencement de l'observation
-intersectionObserver.observe(document.querySelector("sélecteur CSS"));</pre>
+// début de l'observation
+intersectionObserver.observe(document.querySelector('.scrollerFooter'));</pre>
 
-<h2 id="Spécifications">Spécifications</h2>
+<h2 id="specifications">Spécifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IntersectionObserver')}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('IntersectionObserver')}}</td>
+      <td>{{Spec2('IntersectionObserver')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("api.IntersectionObserver")}}</p>
+
+<h2 id="see_also">Voir aussi</h2>
+
+<ul>
+  <li><a href="/fr/docs/Web/API/MutationObserver"><code>MutationObserver</code></a></li>
+  <li><a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a></li>
+  <li><a href="/fr/docs/Web/API/ResizeObserver"><code>ResizeObserver</code></a></li>
+</ul>

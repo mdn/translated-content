@@ -3464,7 +3464,6 @@
 /fr/docs/Précis_CSS_2/Tout_en_un	/fr/docs/Web/CSS/Reference
 /fr/docs/Précis_CSS_2:Tout_en_un	/fr/docs/Web/CSS/Reference
 /fr/docs/Qualité	/fr/docs/QA
-/fr/docs/Ressources_hors_ligne_dans_Firefox	/fr/docs/Web/HTML/Using_the_application_cache
 /fr/docs/Référence_DOM_Gecko	/fr/docs/conflicting/Glossary/DOM
 /fr/docs/Référence_de_JavaScript_1.5_Core	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Référence_de_JavaScript_1.5_Core/A_propos_de_cette_reference	/fr/docs/Web/JavaScript/Reference/About
@@ -3590,7 +3589,6 @@
 /fr/docs/Utilisation_du_DOM_Level_1_Core_du_W3C/Exemple	/fr/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
 /fr/docs/Utilisation_du_cache_dans_Firefox_1.5	/fr/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /fr/docs/Utilisation_du_cache_de_Firefox_1.5	/fr/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
-/fr/docs/Utiliser_Application_Cache	/fr/docs/Web/HTML/Using_the_application_cache
 /fr/docs/Web/API/API_HTML_Drag_and_Drop	/fr/docs/Web/API/HTML_Drag_and_Drop_API
 /fr/docs/Web/API/API_HTML_Drag_and_Drop/Opérations_de_glissement	/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /fr/docs/Web/API/API_IndexedDB	/fr/docs/Web/API/IndexedDB_API
@@ -4546,7 +4544,6 @@
 /fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /fr/docs/Web/HTML/Types_de_lien	/fr/docs/Web/HTML/Link_types
 /fr/docs/Web/HTML/Utilisation_d'audio_et_video_en_HTML5	/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content_040b1c36f4218ba488ffb0284dfe52bf
-/fr/docs/Web/HTML/Utiliser_Application_Cache	/fr/docs/Web/HTML/Using_the_application_cache
 /fr/docs/Web/HTML/Utiliser_DASH_avec_les_vidéos_en_HTML	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /fr/docs/Web/HTML/formats_media_support	/fr/docs/Web/Media/Formats
 /fr/docs/Web/HTML/Éléments_en_bloc	/fr/docs/Web/HTML/Block-level_elements

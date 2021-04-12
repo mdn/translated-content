@@ -5831,12 +5831,6 @@
       "eziotristao"
     ]
   },
-  "Web/Guide/Events/Mutation_events": {
-    "modified": "2019-03-23T22:59:51.382Z",
-    "contributors": [
-      "diegolw"
-    ]
-  },
   "Web/Guide/Events/Overview_of_Events_and_Handlers": {
     "modified": "2020-09-28T23:35:22.348Z",
     "contributors": [
@@ -17366,6 +17360,12 @@
     "modified": "2020-10-15T22:28:04.061Z",
     "contributors": [
       "leofalcao10"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Mutation_events": {
+    "modified": "2019-03-23T22:59:51.382Z",
+    "contributors": [
+      "diegolw"
     ]
   }
 }

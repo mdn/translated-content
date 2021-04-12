@@ -92,7 +92,7 @@ WebSocket WebSocket(
    <td><code>onmessage</code></td>
    <td>{{ domxref("EventListener") }}</td>
    <td>
-    <p>Обработчик событий , вызываемый, когда получается сообщение с сервера. Наблюдатель получает <code><a href="/en/WebSockets/WebSockets_reference/MessageEvent" title="en/WebSockets/WebSockets reference/MessageEvent">MessageEvent</a></code>,  называемое "message".</p>
+    <p>Обработчик событий , вызываемый, когда получается сообщение с сервера. Наблюдатель получает <code><a href="en-US/docs/Web/API/MessageEvent" title="en-US/docs/Web/API/MessageEvent">MessageEvent</a></code>,  называемое "message".</p>
    </td>
   </tr>
   <tr>
@@ -178,7 +178,7 @@ WebSocket WebSocket(
 
 <dl>
  <dt><code>code</code> {{ optional_inline() }}</dt>
- <dd>Числовое значение, обозначающее статус-код, описывающий почему подключение будет закрыто. Если параметр не указан, значение по умолчанию равно 1000(обозначает "обмен завершён"). Смотрите <a href="/en/WebSockets/WebSockets_reference/CloseEvent#Status_codes" title="en/WebSockets/WebSockets reference/CloseEvent#Status codes">list of status codes</a> для <code><a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="en/WebSockets/WebSockets reference/CloseEvent">CloseEvent</a></code>, чтобы узнать разрешённые значения.</dd>
+ <dd>Числовое значение, обозначающее статус-код, описывающий почему подключение будет закрыто. Если параметр не указан, значение по умолчанию равно 1000(обозначает "обмен завершён"). Смотрите <a href="en-US/docs/Web/API/CloseEvent#properties" title="en-US/docs/Web/API/CloseEvent#properties">list of status codes</a> для <code><a href="en-US/docs/Web/API/CloseEvent" title="en-US/docs/Web/API/CloseEvent">CloseEvent</a></code>, чтобы узнать разрешённые значения.</dd>
  <dt><code>reason</code> {{ optional_inline() }}</dt>
  <dd>Читаемая человеком строка, объясняющая, почему подключение закрывается. Строка должна быть не длиннее, чем 123 байта UTF-8 текста (<strong>не</strong> символов). </dd>
 </dl>

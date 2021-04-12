@@ -69,11 +69,11 @@ var obj = new f;
 
 <pre class="brush: js">var mycar = new Car('Лада', 'Самара', 1993);</pre>
 
-<h3 id="В_Обещаниях_(Promises)">В Обещаниях (Promises)</h3>
+<h3 id="В_Промисах">В Промисах</h3>
 
-<p>В случае, когда возвращается незамедлительно разрешённое или незамедлительно отклонённое Обещание, вам не нужно создавать новое Обещание <em>new Promise(...)</em> и работать с ним.</p>
+<p>В случае, когда возвращается незамедлительно разрешённый или незамедлительно отклонённый промис, вам не нужно создавать новый промис <em>new Promise(...)</em> и работать с ним.</p>
 
-<p>Это неправильно (<a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor">конструктор Обещания</a> вызывается неправильно) и будет вызывать исключение <code>TypeError: this is not a constructor</code>:</p>
+<p>Это неправильно (<a href="/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise#Constructor">конструктор Promise</a> вызывается неправильно) и будет вызывать исключение <code>TypeError: this is not a constructor</code>:</p>
 
 <pre class="brush: js example-bad">return new Promise.resolve(true);
 </pre>

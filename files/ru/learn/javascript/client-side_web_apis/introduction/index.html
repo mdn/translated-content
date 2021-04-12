@@ -153,7 +153,7 @@ myGeo.getCurrentPosition(function(position) { ... });</pre>
 <pre class="brush: js example-bad notranslate">var position = navigator.geolocation.getCurrentPosition();
 var myLatitude = position.coords.latitude;</pre>
 
-<p>Если первая строка ещё не вернула результат, вторая вызовет ошибку из-за того, что данные геолокации ещё не стали доступны. По этой причине, API, использующие асинхронные операции, разрабатываются с использованием {{glossary("callback function")}}, или более современной системы <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Обещаний(Promises)</a>, которая появилась в ECMAScript 6 и широко используются в новых API.</p>
+<p>Если первая строка ещё не вернула результат, вторая вызовет ошибку из-за того, что данные геолокации ещё не стали доступны. По этой причине, API, использующие асинхронные операции, разрабатываются с использованием {{glossary("callback function")}}, или более современной системы <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">промисов</a>, которая появилась в ECMAScript 6 и широко используются в новых API.</p>
 
 <p>Мы совмещаем API Геолокации со сторонним API - Google Maps API, который используем для того, чтобы отметить расположение, возвращаемое  <code>getCurrentPosition()</code> , на Google Map. Чтобы Google Maps API стал доступен на нашей странице, мы включаем его в HTML документ:</p>
 
