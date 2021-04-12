@@ -705,7 +705,6 @@
 /zh-CN/docs/HTML/HTML_Elements	/zh-CN/docs/Web/HTML/Element/Heading_Elements
 /zh-CN/docs/HTML/HTML_Elements/time	/zh-CN/docs/Web/HTML/Element/time
 /zh-CN/docs/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
-/zh-CN/docs/HTML/Using_the_application_cache	/zh-CN/docs/Web/HTML/Using_the_application_cache
 /zh-CN/docs/HTML/块级元素	/zh-CN/docs/Web/HTML/Block-level_elements
 /zh-CN/docs/HTML\Canvas\Tutorial	/zh-CN/docs/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/HTTP	/zh-CN/docs/Web/HTTP
