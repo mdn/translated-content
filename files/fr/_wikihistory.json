@@ -43694,14 +43694,6 @@
       "Oliviermoz"
     ]
   },
-  "conflicting/Learn/CSS/First_steps/How_CSS_works": {
-    "modified": "2020-07-16T22:25:39.949Z",
-    "contributors": [
-      "Loliwe",
-      "SphinxKnight",
-      "Oliviermoz"
-    ]
-  },
   "conflicting/Learn/HTML/Introduction_to_HTML": {
     "modified": "2020-07-16T22:22:27.345Z",
     "contributors": [
@@ -43744,12 +43736,6 @@
   },
   "conflicting/Learn/HTML/Multimedia_and_embedding/Images_in_HTML_2c0377f7605f693cad465c2b4839addc": {
     "modified": "2020-07-16T22:22:41.471Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "conflicting/Learn/CSS/First_steps/How_CSS_works_cf31463f874ecd8e10e648dacde4a995": {
-    "modified": "2020-07-16T22:22:39.866Z",
     "contributors": [
       "SphinxKnight"
     ]
@@ -43860,33 +43846,6 @@
       "Mgjbot"
     ]
   },
-  "conflicting/Learn/CSS/First_steps/How_CSS_works_cdccf923f6bd040e8d243ee03d223ddc": {
-    "modified": "2019-03-23T23:43:30.663Z",
-    "contributors": [
-      "teoli",
-      "Verruckt",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Learn/CSS/First_steps": {
-    "modified": "2019-03-23T23:43:26.964Z",
-    "contributors": [
-      "Avent",
-      "wakka27",
-      "jparker",
-      "Delapouite",
-      "Verruckt",
-      "VincentN",
-      "Mgjbot",
-      "Indigo",
-      "BenoitL",
-      "Gorrk",
-      "Anonymous",
-      "Nickolay",
-      "TestUser"
-    ]
-  },
   "conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents": {
     "modified": "2019-03-23T23:43:36.441Z",
     "contributors": [
@@ -43902,31 +43861,6 @@
       "teoli",
       "Verruckt",
       "BenoitL"
-    ]
-  },
-  "conflicting/Learn/CSS/First_steps/How_CSS_works_ecbda2160290b96c02dcfa8276c0333a": {
-    "modified": "2019-03-23T23:47:29.274Z",
-    "contributors": [
-      "teoli",
-      "Fredchat",
-      "Verruckt",
-      "Mgjbot",
-      "Indigo",
-      "BenoitL",
-      "Gorrk"
-    ]
-  },
-  "conflicting/Learn/CSS/First_steps/How_CSS_works_dba75d8c56ccc773f03d946ce2dbb25c": {
-    "modified": "2019-03-23T23:47:23.927Z",
-    "contributors": [
-      "wakka27",
-      "teoli",
-      "Fredchat",
-      "Verruckt",
-      "Mgjbot",
-      "BenoitL",
-      "Gorrk",
-      "Anonymous"
     ]
   },
   "conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b": {
