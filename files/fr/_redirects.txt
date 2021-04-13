@@ -117,7 +117,6 @@
 /fr/docs/Apprendre/CSS/Comment	/fr/docs/Learn/CSS/Howto
 /fr/docs/Apprendre/CSS/Comment/Créer_de_belles_boîtes	/fr/docs/Learn/CSS/Howto/create_fancy_boxes
 /fr/docs/Apprendre/CSS/Comment/Generated_content	/fr/docs/Learn/CSS/Howto/Generated_content
-/fr/docs/Apprendre/CSS/Comment/Mettre_en_forme_du_texte	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals
 /fr/docs/Apprendre/CSS/Comment/personnaliser_une_liste	/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /fr/docs/Apprendre/CSS/Introduction_à_CSS	/en-US/docs/Learn/CSS/First_steps
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/Attribute_selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors
@@ -138,7 +137,6 @@
 /fr/docs/Apprendre/CSS/Les_bases/Le_fonctionnement_de_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /fr/docs/Apprendre/CSS/Les_bases/Le_modèle_de_boîte	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 /fr/docs/Apprendre/CSS/Les_bases/Les_sélecteurs	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/fr/docs/Apprendre/CSS/formatage_texte_CSS	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_9e7ba587262abbb02304cbc099c1f0d8
 /fr/docs/Apprendre/CSS/styliser_boites	/en-US/docs/Learn/CSS/Building_blocks
 /fr/docs/Apprendre/CSS/styliser_boites/A_cool_looking_box	/fr/docs/Learn/CSS/Building_blocks/A_cool_looking_box
 /fr/docs/Apprendre/CSS/styliser_boites/Advanced_box_effects	/fr/docs/Learn/CSS/Building_blocks/Advanced_styling_effects
@@ -436,7 +434,6 @@
 /fr/docs/CSS/Premiers_pas/JavaScript	/fr/docs/conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /fr/docs/CSS/Premiers_pas/Listes	/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2
 /fr/docs/CSS/Premiers_pas/Médias	/fr/docs/Web/Progressive_web_apps/Responsive/Media_types
-/fr/docs/CSS/Premiers_pas/Styles_de_texte	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b
 /fr/docs/CSS/Propriétés_raccourcies	/fr/docs/Web/CSS/Shorthand_properties
 /fr/docs/CSS/Pseudo-classes	/fr/docs/Web/CSS/Pseudo-classes
 /fr/docs/CSS/Pseudo-éléments	/fr/docs/Web/CSS/Pseudo-elements
@@ -746,7 +743,6 @@
 /fr/docs/CSS:Premiers_pas:Liaisons_XBL	/fr/docs/CSS/Premiers_pas/Liaisons_XBL
 /fr/docs/CSS:Premiers_pas:Listes	/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists_06e9538892250c13976a84639f0dadd2
 /fr/docs/CSS:Premiers_pas:Médias	/fr/docs/Web/Progressive_web_apps/Responsive/Media_types
-/fr/docs/CSS:Premiers_pas:Styles_de_texte	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b
 /fr/docs/CSS:Valeur_calculée	/fr/docs/Web/CSS/computed_value
 /fr/docs/CSS:Valeur_initiale	/fr/docs/Web/CSS/initial_value
 /fr/docs/CSS:azimuth	/fr/docs/Web/CSS/azimuth

@@ -43673,25 +43673,10 @@
       "SphinxKnight"
     ]
   },
-  "conflicting/Learn/CSS/Styling_text/Fundamentals": {
-    "modified": "2020-07-16T22:25:49.005Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "conflicting/Learn/CSS/Styling_text/Styling_lists": {
     "modified": "2020-07-16T22:25:49.686Z",
     "contributors": [
       "xdelatour"
-    ]
-  },
-  "conflicting/Learn/CSS/Styling_text/Fundamentals_9e7ba587262abbb02304cbc099c1f0d8": {
-    "modified": "2020-07-16T22:25:39.378Z",
-    "contributors": [
-      "teoli",
-      "SphinxKnight",
-      "Mozinet",
-      "Oliviermoz"
     ]
   },
   "conflicting/Learn/HTML/Introduction_to_HTML": {
@@ -43861,17 +43846,6 @@
       "teoli",
       "Verruckt",
       "BenoitL"
-    ]
-  },
-  "conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b": {
-    "modified": "2019-03-24T00:11:21.618Z",
-    "contributors": [
-      "grandoc",
-      "Mgjbot",
-      "Verruckt",
-      "BenoitL",
-      "Loveuzz59",
-      "Indigo"
     ]
   },
   "conflicting/Web/Guide": {
