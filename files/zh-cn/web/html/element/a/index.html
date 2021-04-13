@@ -104,7 +104,7 @@ translation_of: Web/HTML/Element/a
  </dd>
  <dd>
  <div class="note">
- <p><strong>注意：</strong>使用target时，考虑添加 rel="noopener noreferrer" 以防止针对 window.opener API 的恶意行为。</p>
+ <p><strong>注意：</strong>在 <code>&lt;a&gt;</code> 元素上使用 <code>target="_blank"</code> 隐式提供了与使用 <code><a href="/zh-CN/docs/Web/HTML/Link_types/noopener">rel="noopener"</a></code> 相同的 <code>rel</code> 行为，即不会设置 <code>window.opener</code>。
  </div>
  </dd>
  <dd>
