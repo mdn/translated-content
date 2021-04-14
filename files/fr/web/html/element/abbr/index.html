@@ -19,11 +19,9 @@ translation_of: Web/HTML/Element/abbr
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément <strong><code>&lt;abbr&gt;</code></strong> (<strong>Abréviation</strong> en Français) représente une abréviation ou un acronyme ; l'attribut facultatif <a href="/fr/docs/Web/HTML/Global_attributes#attr-title"><code>title</code></a> peut fournir une explication ou une description de l'abréviation. S'il est présent, <code>title</code> doit contenir cette description complète et rien d'autre.</p>
+<p class="summary">L'élément <strong><code>&lt;abbr&gt;</code></strong> (<strong>abréviation</strong> en français) représente une abréviation ou un acronyme ; l'attribut facultatif <a href="/fr/docs/Web/HTML/Global_attributes#attr-title"><code>title</code></a> peut fournir une explication ou une description de l'abréviation. S'il est présent, <code>title</code> doit contenir cette description complète et rien d'autre.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}</div>
-
-<h2 id="properties">Propriétés</h2>
 
 <table class="properties">
   <tbody>
@@ -77,7 +75,7 @@ translation_of: Web/HTML/Element/abbr
 
 <h3 id="grammar_considerations">Grammaire</h3>
 
-<p>Lorsqu'il est présent, le nombre (grammatical) du texte de l'attribut <code><strong>title</strong></code> devrait correspondre à celui du contenu de l'élément <code>abbr</code>. C'est également le cas dans les langues avec plus de deux genres grammaticaux (par exemple, l'Arabe, en plus des catégories pour le singulier et le pluriel, possède également une catégorie double).</p>
+<p>Lorsqu'il est présent, le nombre (grammatical) du texte de l'attribut <code><strong>title</strong></code> devrait correspondre à celui du contenu de l'élément <code>abbr</code>. C'est également le cas dans les langues avec plus de deux genres grammaticaux (par exemple, l'arabe, en plus des catégories pour le singulier et le pluriel, possède également une catégorie double).</p>
 
 <h2 id="default_styling">Mise en forme par défaut</h2>
 
@@ -98,12 +96,13 @@ translation_of: Web/HTML/Element/abbr
 <h4 id="html">HTML</h4>
 
 <pre class="brush: html">&lt;p&gt;
-  Nous allons voir le &lt;abbr&gt;HTML&lt;/abbr&gt; qui sert à construire des pages web.
+  Nous allons voir le &lt;abbr&gt;HTML&lt;/abbr&gt; qui sert à construire
+  des pages web.
 &lt;/p&gt;</pre>
 
 <h4 id="result">Résultat</h4>
 
-<p>{{EmbedLiveSample("marking_up_an_abbreviation_semantically", "100%", 100)}}</p>
+<p>{{EmbedLiveSample("marking_up_an_abbreviation_semantically", "100%", 80)}}</p>
 
 <h3 id="styling_abbreviations">Mettre en forme des abréviations</h3>
 
@@ -121,7 +120,7 @@ translation_of: Web/HTML/Element/abbr
 
 <h4 id="result_2">Résultat</h4>
 
-<p>{{EmbedLiveSample("styling_abbreviations", "100%", 100)}}</p>
+<p>{{EmbedLiveSample("styling_abbreviations", "100%", 80)}}</p>
 
 <h3 id="providing_an_expansion">Fournir une description</h3>
 
@@ -133,7 +132,7 @@ translation_of: Web/HTML/Element/abbr
 
 <h4 id="result_3">Résultat</h4>
 
-<p>{{EmbedLiveSample("providing_an_expansion", "100%", 100)}}</p>
+<p>{{EmbedLiveSample("providing_an_expansion", "100%", 80)}}</p>
 
 <h3 id="defining_an_abbreviation">Définir une abréviation</h3>
 
@@ -142,16 +141,17 @@ translation_of: Web/HTML/Element/abbr
 <h4 id="html_4">HTML</h4>
 
 <pre class="brush: html">&lt;p&gt;&lt;dfn id="html"&gt;&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;
-&lt;/dfn&gt; est un langage de balise qui permet de créer la structure et d'organiser
-la sémantique d'une page web.&lt;/p&gt;
+&lt;/dfn&gt; est un langage de balise qui permet de créer la structure
+et d'organiser la sémantique d'une page web.&lt;/p&gt;
 
-&lt;p&gt;Une &lt;dfn id="spec"&gt;Spécification&lt;/dfn&gt;
-(&lt;abbr title="Spécification"&gt;spec&lt;/abbr&gt;) est un document qui décrit, de façon
-détaillée comme une technologie ou une API fonctionne et comment l'utiliser.&lt;/p&gt;</pre>
+&lt;p&gt;Une &lt;dfn id="spec"&gt;spécification&lt;/dfn&gt;
+(&lt;abbr title="spécification"&gt;spec&lt;/abbr&gt;) est un document qui décrit,
+de façon détaillée comme une technologie ou une API fonctionne et comment
+l'utiliser.&lt;/p&gt;</pre>
 
 <h4 id="result_4">Résultat</h4>
 
-<p>{{EmbedLiveSample("defining_an_abbreviation", "100%", 150)}}</p>
+<p>{{EmbedLiveSample("defining_an_abbreviation", "100%", 160)}}</p>
 
 <h2 id="accessibility_concerns">Accessibilité</h2>
 
@@ -159,7 +159,8 @@ détaillée comme une technologie ou une API fonctionne et comment l'utiliser.&l
 
 <h4 id="example">Exemple</h4>
 
-<pre class="brush: html">&lt;p&gt;JavaScript Object Notation (&lt;abbr&gt;JSON&lt;/abbr&gt;) est un format léger d'échange de données.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;JavaScript Object Notation (&lt;abbr&gt;JSON&lt;/abbr&gt;) est un format léger
+  d'échange de données.&lt;/p&gt;
 </pre>
 
 <p>Cela peut servir aux personnes qui découvrent ces concepts pour la première fois ou pour les personnes souffrant de troubles cognitifs.</p>
