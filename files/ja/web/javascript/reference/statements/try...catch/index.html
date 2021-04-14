@@ -111,7 +111,7 @@ catch (e) {
 
 <h3 id="The_exception_identifier" name="The_exception_identifier">例外識別子</h3>
 
-<p>例外が <code>try</code> ブロックの中で投げられたときは、<em><code>exception_var</code></em> (たとえば、<code>catch (e)</code> における <code>e</code>) が例外の値を保持します。この識別子を使用して、発生した例外についての情報を取得することができます。この識別子は <code>catch</code> ブロックの{{Glossary("Scope", "スコープ")}}でのみ利用できます。</p>
+<p>例外が <code>try</code> ブロックの中で投げられたときは、<em><code>exception_var</code></em> (たとえば、<code>catch (e)</code> における <code>e</code>) が例外の値を保持します。この識別子を使用して、発生した例外についての情報を取得することができます。この識別子は <code>catch</code> ブロックの{{Glossary("Scope", "スコープ")}}でのみ利用できます。例外の値が必要ない場合にはこれは省略できます。</p>
 
 <pre class="brush: js notranslate">function isValidJSON(text) {
   try {
