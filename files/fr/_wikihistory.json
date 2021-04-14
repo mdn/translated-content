@@ -11700,16 +11700,6 @@
       "ayshiff"
     ]
   },
-  "Web/API/ParentNode/children": {
-    "modified": "2020-10-15T21:43:07.206Z",
-    "contributors": [
-      "Arzak656",
-      "jMoulis",
-      "loella16",
-      "NemoNobobyPersonne",
-      "xavierartot"
-    ]
-  },
   "Web/API/ParentNode/firstElementChild": {
     "modified": "2019-03-23T23:35:50.443Z",
     "contributors": [
@@ -45334,6 +45324,16 @@
       "loella16",
       "xavierartot",
       "vava"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/children": {
+    "modified": "2020-10-15T21:43:07.206Z",
+    "contributors": [
+      "Arzak656",
+      "jMoulis",
+      "loella16",
+      "NemoNobobyPersonne",
+      "xavierartot"
     ]
   }
 }

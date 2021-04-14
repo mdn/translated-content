@@ -268,7 +268,7 @@
 /zh-CN/docs/DOM/DOMString	/zh-CN/docs/Web/API/DOMString
 /zh-CN/docs/DOM/Document.querySelectorAll	/zh-CN/docs/Web/API/Document/querySelectorAll
 /zh-CN/docs/DOM/Document.scripts	/zh-CN/docs/Web/API/Document/scripts
-/zh-CN/docs/DOM/Element.children	/zh-CN/docs/Web/API/ParentNode/children
+/zh-CN/docs/DOM/Element.children	/zh-CN/docs/orphaned/Web/API/ParentNode/children
 /zh-CN/docs/DOM/Element.firstElementChild	/zh-CN/docs/Web/API/ParentNode/firstElementChild
 /zh-CN/docs/DOM/Element.lastElementChild	/zh-CN/docs/Web/API/ParentNode/lastElementChild
 /zh-CN/docs/DOM/Element.nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
@@ -1725,10 +1725,11 @@
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
 /zh-CN/docs/Web/API/OfflineAudioContext/complete	/zh-CN/docs/Web/API/OfflineAudioContext/complete_event
 /zh-CN/docs/Web/API/ParentNode.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
-/zh-CN/docs/Web/API/ParentNode.children	/zh-CN/docs/Web/API/ParentNode/children
+/zh-CN/docs/Web/API/ParentNode.children	/zh-CN/docs/orphaned/Web/API/ParentNode/children
 /zh-CN/docs/Web/API/ParentNode.firstElementChild	/zh-CN/docs/Web/API/ParentNode/firstElementChild
 /zh-CN/docs/Web/API/ParentNode.lastElementChild	/zh-CN/docs/Web/API/ParentNode/lastElementChild
 /zh-CN/docs/Web/API/ParentNode/childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
+/zh-CN/docs/Web/API/ParentNode/children	/zh-CN/docs/orphaned/Web/API/ParentNode/children
 /zh-CN/docs/Web/API/Performance.now()	/zh-CN/docs/Web/API/Performance/now
 /zh-CN/docs/Web/API/Performance/内存	/zh-CN/docs/Web/API/Performance/memory
 /zh-CN/docs/Web/API/Position	/zh-CN/docs/Web/API/GeolocationPosition

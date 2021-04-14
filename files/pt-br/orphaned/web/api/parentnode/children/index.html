@@ -1,68 +1,48 @@
 ---
 title: ParentNode.children
-slug: Web/API/ParentNode/children
+slug: orphaned/Web/API/ParentNode/children
 translation_of: Web/API/ParentNode/children
+original_slug: Web/API/ParentNode/children
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p><code><strong>Node.children</strong></code> 唯讀屬性會回傳一個 <code>Node</code> 之子{{domxref("Element","元素")}}的動態（live）{{domxref("HTMLCollection")}}。</p>
+<p><code><strong>Node.children</strong></code> é uma propriedade exclusivamente de leitura que retorna uma coleção {{domxref("HTMLCollection")}} dos elementos filhos do <code>nó</code>.</p>
 
-<h2 id="語法">語法</h2>
+<h2 id="Sintaxe">Sintaxe</h2>
 
-<pre class="syntaxbox">var <em>children</em> = <em>node</em>.children;</pre>
+<pre>var <em>elList</em> = elementNodeReference.children; </pre>
 
-<p><code><em>children</em></code> 是一個 {{ domxref("HTMLCollection") }}，為一個有順序性、由 <em><code>node</code></em> 中的 DOM 子元素所組成的集合。假如沒有子元素，則 <code><em>children</em></code> 內便不包含任何元素，且 <code>length</code> 為 <code>0</code>。</p>
+<p><code><var>elList</var></code> é uma {{ domxref("HTMLCollection") }}, que é uma lista ordenada de uma coleção de elementos do DOM que são filhos do <code>elementNodeReference</code>. Se não existir nenhum elemento filho, o <code>elList</code> não terá elemento algum sua propriedade <code>length</code> será 0.</p>
 
-<h2 id="範例">範例</h2>
+<h2 id="Exemplo">Exemplo</h2>
 
-<pre class="brush: js">var foo = document.getElementById('foo');
-for (var i = 0; i &lt; foo.children.length; i++) {
-    console.log(foo.children[i].tagName);
+<pre class="brush: js">// pEl é uma referência à um elemento &lt;p&gt;
+var elementChildren = pEl.children;
+for (var i = 0; i &lt; elementChildren.length; i++) {
+    console.log(elementChildren[i].tagName);
+    // NOTE: elementChildren é uma lista viva, adicionar ou remover filhos de pEl
+    // mudará instantaneamente o valor retornado por elementChildren
 }
 </pre>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<pre class="brush: js">// Overwrites native 'children' prototype.
-// Adds Document &amp; DocumentFragment support for IE9 &amp; Safari.
-// Returns array instead of HTMLCollection.
-;(function(constructor) {
-    if (constructor &amp;&amp;
-        constructor.prototype &amp;&amp;
-        constructor.prototype.children == null) {
-        Object.defineProperty(constructor.prototype, 'children', {
-            get: function() {
-                var i = 0, node, nodes = this.childNodes, children = [];
-                while (node = nodes[i++]) {
-                    if (node.nodeType === 1) {
-                        children.push(node);
-                    }
-                }
-                return children;
-            }
-        });
-    }
-})(window.Node || window.Element);
-</pre>
-
-<h2 id="規範">規範</h2>
+<h2 id="Especificação">Especificação</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col">Specification</th>
+   <th scope="col">Especificação</th>
    <th scope="col">Status</th>
    <th scope="col">Comment</th>
   </tr>
   <tr>
    <td>{{SpecName('DOM WHATWG', '#dom-parentnode-children', 'ParentNode.children')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Initial definition.</td>
+   <td>Definição inicial.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+<h2 id="Compatibilidade_de_navegadores">Compatibilidade de navegadores</h2>
 
 <p>{{ CompatibilityTable() }}</p>
 
@@ -140,13 +120,13 @@ for (var i = 0; i &lt; foo.children.length; i++) {
 </table>
 </div>
 
-<p>[1] Internet Explorer 6, 7 and 8 supported it, but erroneously includes {{domxref("Comment")}} nodes.</p>
+<p>[1] Internet Explorer 6, 7 e 8 suportaram esse método, mas erroneamente incluiam nós de {{domxref("Comment")}}.</p>
 
-<h2 id="參見">參見</h2>
+<h2 id="See_also">See also</h2>
 
 <ul>
- <li>The {{domxref("ParentNode")}} and {{domxref("ChildNode")}} interfaces.</li>
+ <li>As interfaces de {{domxref("ParentNode")}} e {{domxref("ChildNode")}}.</li>
  <li>
-  <div class="syntaxbox">Object types implementing this interface: {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("DocumentFragment")}}.</div>
+  <div class="syntaxbox">Tipos de objetos implementando esta interface: {{domxref("Document")}}, {{domxref("Element")}}, e {{domxref("DocumentFragment")}}.</div>
  </li>
 </ul>

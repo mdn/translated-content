@@ -19095,13 +19095,6 @@
       "isdh"
     ]
   },
-  "Web/API/ParentNode/children": {
-    "modified": "2020-11-23T04:45:58.549Z",
-    "contributors": [
-      "segayuu",
-      "sii"
-    ]
-  },
   "Web/API/ParentNode/prepend": {
     "modified": "2020-10-15T22:22:02.876Z",
     "contributors": [
@@ -53495,6 +53488,13 @@
     "contributors": [
       "yumetodo",
       "Marsf"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/children": {
+    "modified": "2020-11-23T04:45:58.549Z",
+    "contributors": [
+      "segayuu",
+      "sii"
     ]
   }
 }

@@ -1643,12 +1643,6 @@
       "ExE-Boss"
     ]
   },
-  "Web/API/ParentNode/children": {
-    "modified": "2020-10-15T22:13:17.341Z",
-    "contributors": [
-      "IsibisiDev"
-    ]
-  },
   "Web/API/ParentNode/firstElementChild": {
     "modified": "2020-10-15T22:17:20.523Z",
     "contributors": [
@@ -5993,6 +5987,12 @@
       "teoli",
       "jsx",
       "Federico"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/children": {
+    "modified": "2020-10-15T22:13:17.341Z",
+    "contributors": [
+      "IsibisiDev"
     ]
   }
 }

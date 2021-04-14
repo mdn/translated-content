@@ -3341,12 +3341,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/ParentNode/children": {
-    "modified": "2019-03-23T22:19:42.340Z",
-    "contributors": [
-      "rafaelcavalcante"
-    ]
-  },
   "Web/API/ParentNode/querySelector": {
     "modified": "2020-10-15T22:23:27.840Z",
     "contributors": [
@@ -17366,6 +17360,12 @@
     "modified": "2019-03-23T22:59:51.382Z",
     "contributors": [
       "diegolw"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/children": {
+    "modified": "2019-03-23T22:19:42.340Z",
+    "contributors": [
+      "rafaelcavalcante"
     ]
   }
 }

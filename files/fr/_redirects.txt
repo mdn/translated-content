@@ -3800,6 +3800,7 @@
 /fr/docs/Web/API/Node/prefix	/fr/docs/conflicting/Web/API/Element/prefix
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
 /fr/docs/Web/API/ParentNode/childElementCount	/fr/docs/Web/API/Element/childElementCount
+/fr/docs/Web/API/ParentNode/children	/fr/docs/orphaned/Web/API/ParentNode/children
 /fr/docs/Web/API/PasswordCredential/additionalData	/fr/docs/conflicting/Web/API/PasswordCredential
 /fr/docs/Web/API/PasswordCredential/idName	/fr/docs/conflicting/Web/API/PasswordCredential_cbf7b306e83a3f58ff06bccf89637c12
 /fr/docs/Web/API/PasswordCredential/passwordName	/fr/docs/conflicting/Web/API/PasswordCredential_bc57d5dfa87242b4fb83497887124f41
