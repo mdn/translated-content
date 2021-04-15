@@ -521,7 +521,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 <p>Т.к. <code>arguments</code> является псевдо-массивом, к нему применимы некоторые методы массивов, например, for .. in</p>
 
 <pre>function func() {
-  for (value in arguments){
+  for (value of arguments){
     console.log(value);
   }
 }
