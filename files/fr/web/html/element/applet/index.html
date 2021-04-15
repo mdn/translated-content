@@ -1,5 +1,5 @@
 ---
-title: "<applet> : l'élément d''applet Java embarqué"
+title: "<applet> : l'élément d'applet Java embarqué"
 slug: Web/HTML/Element/applet
 tags:
   - Element
@@ -23,17 +23,15 @@ translation_of: Web/HTML/Element/applet
   <p>Cet élément a été retiré à partir de <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1279218">Gecko 56</a>, de <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=470301">Chrome 47</a> et le retrait est à l'étude pour <a href="https://bugs.webkit.org/show_bug.cgi?id=157926">WebKit</a> et <a href="https://developer.microsoft.com/fr/microsoft-edge/platform/issues/11946645/">Edge</a>.</p>
 </div>
 
-<p class="summary">L'élément <strong><code>&lt;applet&gt;</code></strong>, pour les applets, définit l'intégration d'une applet Java. Cet élément est désormais déprécié en faveur de <a href="/fr/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a>.</p>
+<p class="summary">L'élément <strong><code>&lt;applet&gt;</code></strong>, pour les applets, définit l'intégration d'un applet Java. Cet élément est désormais déprécié en faveur de <a href="/fr/docs/Web/HTML/Element/object"><code>&lt;object&gt;</code></a>.</p>
 
 <p>L'utilisation d'applets Java sur le Web est dépréciée, la plupart des navigateurs ne prennent plus en charge les plugins Java.</p>
-
-<h2 id="properties">Propriétés</h2>
 
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row">Catégories de contenu</th>
-      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content">contenu intégré</a>, contenu interactif, contenu palpable.</td>
+      <th scope="row"><a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a></th>
+      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content">contenu intégré</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#interactive_content">contenu interactif</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content">contenu tangible</a>.</td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
@@ -60,7 +58,7 @@ translation_of: Web/HTML/Element/applet
 
 <dl>
   <dt><strong id="attr-align"><code>align</code></strong> {{deprecated_inline}}</dt>
-  <dd>Cet attribut est utilisé pour positionner l'applet sur la page en fonction du contenu qui l'entoure. La spécification HTML 4.01 définit l'utilisation des valeurs <code>bottom</code> (en bas), <code>left</code> (à gauche), <code>middle</code> (au milieu), <code>right</code> (à droite), et <code>top</code> (en haut), tandis que Microsoft et Netscape supporteraient également les valeurs <strong>absbottom</strong>, <strong>absmiddle</strong>, <strong>baseline</strong>, <strong>center</strong>, et <strong>texttop</strong>.</dd>
+  <dd>Cet attribut est utilisé pour positionner l'applet sur la page en fonction du contenu qui l'entoure. La spécification HTML 4.01 définit l'utilisation des valeurs <code>bottom</code> (en bas), <code>left</code> (à gauche), <code>middle</code> (au milieu), <code>right</code> (à droite), et <code>top</code> (en haut), tandis que Microsoft et Netscape supporteraient également les valeurs <code>absbottom</code>, <code>absmiddle</code>, <code>baseline</code>, <code>center</code>, et <code>texttop</code>.</dd>
   <dt><strong id="attr-alt"><code>alt</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut génère un texte alternatif à afficher pour les navigateurs ne supportant pas Java. Il est à noter que le contenu de l'élément <code>&lt;applet&gt;</code> peut être également restitué comme du texte alternatif dans certains cas.</dd>
   <dt><strong id="attr-archive"><code>archive</code></strong> {{deprecated_inline}}</dt>
@@ -72,7 +70,7 @@ translation_of: Web/HTML/Element/applet
   <dt><strong id="attr-datafld"><code>datafld</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut, supporté par Internet Explorer à partir de sa version 4, définit le nom de colonne attribué aux objets de données fournis par les données attachées. Cet attribut peut être utilisé pour définir les différents éléments <a href="/fr/docs/Web/HTML/Element/param"><code>&lt;param&gt;</code></a> envoyés à l'applet Java.</dd>
   <dt><strong id="attr-datasrc"><code>datasrc</code></strong> {{deprecated_inline}}</dt>
-  <dd>Comme l'attribut <code>datafld</code>, cet attribut est utilisé pour les données attachées sous Internet Explorer 4. Il indique un identifiant pour l'objet définissant la source des données qui seront attachées aux élément <a href="/fr/docs/Web/HTML/Element/param"><code>&lt;param&gt;</code></a> associés à l'applet.</dd>
+  <dd>Comme l'attribut <code>datafld</code>, cet attribut est utilisé pour les données attachées sous Internet Explorer 4. Il indique un identifiant pour l'objet définissant la source des données qui seront attachées aux éléments <a href="/fr/docs/Web/HTML/Element/param"><code>&lt;param&gt;</code></a> associés à l'applet.</dd>
   <dt><strong id="attr-height"><code>height</code></strong> {{deprecated_inline}}</dt>
   <dd>Cet attribut définit la hauteur dont l'applet à besoin, en pixels.</dd>
   <dt><strong id="attr-hspace"><code>hspace</code></strong> {{deprecated_inline}}</dt>
@@ -103,7 +101,7 @@ translation_of: Web/HTML/Element/applet
 
 <h3 id="result">Résultat</h3>
 
-<p>{{EmbedLiveSample("example","100%", 300)}}</p>
+<p>{{EmbedLiveSample("example","100%", 30)}}</p>
 
 <h2 id="specifications">Spécifications</h2>
 
