@@ -53,9 +53,9 @@ translation_of: Web/Progressive_web_apps/Offline_Service_workers
     console.log('[Service Worker] Install');
 });</pre>
 
-<p>在<code>install</code>的监听函数中, 我们可以初始化缓存并添加离线应用时所需的文件，js13kPWA 应用确实也是这么做的。</p>
+<p>在 <code>install</code> 的监听函数中, 我们可以初始化缓存并添加离线应用时所需的文件，js13kPWA 应用确实也是这么做的。</p>
 
-<p>首先，创建一个存储缓存名字的变量，app shell 所需的文件也被记录在一个数组上：</p>
+<p>首先，创建一个存储缓存名字的变量，App Shell 所需的文件也被记录在一个数组上：</p>
 
 <pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';
 var appShellFiles = [
@@ -101,7 +101,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <p>有两件事需要在这里解释一下：{{domxref("ExtendableEvent.waitUntil")}} 做了什么？{{domxref("Caches","caches")}} 对象又是什么东西？</p>
 
-<p>Service Worker 会等到 <code>waitUntil</code> 里面的代码执行完毕之后才开始安装。它返回的是一个 Promise——因为安装过程可能需要一些时间，而我们必须等待它完成，所以这是必须的。</p>
+<p>Service Worker 会等到 <code>waitUntil</code> 里面的代码执行完毕之后才开始安装。它返回的是一个 Promise——因为安装过程可能需要一些时间，而我们必须等待它完成。</p>
 
 <p><code>caches</code> 是一个特殊的 {{domxref("CacheStorage")}} 对象，它能在 Service Worker 指定的范围内提供数据存储的能力（Service Worker 在注册时，第二个参数是选填的，可以被用来指定你想让 Service Worker 控制的内容的子目录，译者注）。因为 Web Storage 的执行是同步的（此处理解为 Web Storage 并不返回一个 Promise，译者注），在 Service Worker 中使用 <a href="/zh-CN/docs/Web/API/Web_Storage_API">Web Storage</a> 将不会有效果，所以我们使用 Cache API 作为替代。</p>
 
@@ -146,7 +146,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <h2 id="更新">更新</h2>
 
-<p>还有一点需要考虑：当我们的应用有了一个新版本，并且它包含了一些可用的新资源时，我们应该如何去更新它的Service Worker？我们存放在缓存名称中的版本号是这个问题的关键：</p>
+<p>还有一点需要考虑：当我们的应用有了一个新版本，并且它包含了一些可用的新资源时，我们应该如何去更新它的 Service Worker？我们存放在缓存名称中的版本号是这个问题的关键：</p>
 
 <pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';</pre>
 
