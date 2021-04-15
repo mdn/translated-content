@@ -17,8 +17,6 @@ translation_of: Web/HTML/Element/article
 
 <p>Un document donné peut contenir plusieurs articles ; par exemple, sur un blog qui affiche le texte de chaque article l'un après l'autre au fur et à mesure que le lecteur fait défiler, chaque message sera contenu dans un élément <code>&lt;article&gt;</code>, avec éventuellement une ou plusieurs <code>&lt;section&gt;</code> à l'intérieur.</p>
 
-<h2 id="properties">Propriétés</h2>
-
 <table class="properties">
   <tbody>
     <tr>
@@ -43,7 +41,7 @@ translation_of: Web/HTML/Element/article
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td><a href="https://w3c.github.io/aria/#application">application</a>, <a href="https://w3c.github.io/aria/#document">document</a>, <a href="https://w3c.github.io/aria/#feed">feed</a>, <a href="https://w3c.github.io/aria/#main">main</a>, <a href="https://w3c.github.io/aria/#presentation">presentation</a>, <a href="https://w3c.github.io/aria/#region">region</a>.</td>
+      <td><a href="https://w3c.github.io/aria/#application">application</a>, <a href="https://w3c.github.io/aria/#document">document</a>, <a href="https://w3c.github.io/aria/#feed">feed</a>, <a href="https://w3c.github.io/aria/#main">main</a>, <a href="https://w3c.github.io/aria/#none">none</a>, <a href="https://w3c.github.io/aria/#presentation">presentation</a>, <a href="https://w3c.github.io/aria/#region">region</a>.</td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
@@ -59,7 +57,7 @@ translation_of: Web/HTML/Element/article
 <h2 id="usage_notes">Notes d'utilisation</h2>
 
 <ul>
-  <li>Chaque <code>&lt;article&gt;</code> autonome, qui n'est pas imbriqué dans un autre élément <code>&lt;article&gt;</code>, devrait être identifié typiquement, en incluant un élément d'en-tête <code>&lt;header&gt;</code> qui comprendrait lui-même un élément de titre <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code>.</li>
+  <li>Chaque <code>&lt;article&gt;</code> autonome, qui n'est pas imbriqué dans un autre élément <code>&lt;article&gt;</code>, devrait être identifié typiquement, en incluant un élément de titre <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code>.</li>
   <li>Quand un élément <code>&lt;article&gt;</code> est imbriqué dans un autre, l'élément contenu représente un article relatif à l'élément contenant. Par exemple, les commentaires d'une parution de blog peuvent être un élément <code>&lt;article&gt;</code> inclus dans l'<code>&lt;article&gt;</code> représentant la parution en elle-même.</li>
   <li>Des informations à propos de l'auteur d'un élément <code>&lt;article&gt;</code> peuvent être fournies au travers de l'élément <a href="/fr/docs/Web/HTML/Element/address"><code>&lt;address&gt;</code></a>, mais cela ne s'applique pas aux éléments <code>&lt;article&gt;</code> imbriqués.</li>
   <li>La date et l'heure de publication d'un élément <code>&lt;article&gt;</code> peuvent être donnés en utilisant l'attribut <a href="/fr/docs/Web/HTML/Element/time#attr-datetime"><code>datetime</code></a> d'un élément <a href="/fr/docs/Web/HTML/Element/time"><code>&lt;time&gt;</code></a>. <em>Notez que l'attribut <a href="/fr/docs/Web/HTML/Element/time#attr-pubdate"><code>pubdate</code></a> de <a href="/fr/docs/Web/HTML/Element/time"><code>&lt;time&gt;</code></a> ne fait plus partie de la norme W3C HTML 5.</em></li>
@@ -80,7 +78,7 @@ translation_of: Web/HTML/Element/article
       &lt;footer&gt;
         &lt;p&gt;
           Posté le
-          &lt;time datetime="2015-05-16 19:00"&gt;16 Mai&lt;/time&gt;
+          &lt;time datetime="2015-05-16 19:00"&gt;16 mai&lt;/time&gt;
           par Lisa.
         &lt;/p&gt;
       &lt;/footer&gt;
@@ -90,8 +88,8 @@ translation_of: Web/HTML/Element/article
       &lt;footer&gt;
         &lt;p&gt;
           Posté le
-          &lt;time datetime="2015-05-17 19:00"&gt;17 Mai&lt;/time&gt;
-          par Tom.
+          &lt;time datetime="2015-05-17 19:00"&gt;17 mai&lt;/time&gt;
+          par Gilles Stella.
         &lt;/p&gt;
       &lt;/footer&gt;
     &lt;/article&gt;
@@ -99,7 +97,7 @@ translation_of: Web/HTML/Element/article
   &lt;footer&gt;
     &lt;p&gt;
       Posté le
-      &lt;time datetime="2015-05-15 19:00"&gt;15 Mai&lt;/time&gt;
+      &lt;time datetime="2015-05-15 19:00"&gt;15 mai&lt;/time&gt;
       par Staff.
     &lt;/p&gt;
   &lt;/footer&gt;
