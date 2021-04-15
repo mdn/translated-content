@@ -19,48 +19,13 @@ translation_of: Web/HTML/Element/audio
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément HTML <strong><code>&lt;audio&gt;</code></strong> est utilisé afin d'intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l'attribut <code>src</code> ou l'élément <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a> : le navigateur choisira celui qui convient le mieux. Il peut également être la destination de médias diffusés en continu, en utilisant un <a href="/fr/docs/Web/API/MediaStream"><code>MediaStream</code></a>.</p>
+<p class="summary">L'élément HTML <strong><code>&lt;audio&gt;</code></strong> est utilisé afin d'intégrer un contenu sonore dans un document. Il peut contenir une ou plusieurs sources audio représentées avec l'attribut <code>src</code> ou l'élément <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a> : le navigateur choisira celle qui convient le mieux. Il peut également être la destination de médias diffusés en continu, en utilisant un <a href="/fr/docs/Web/API/MediaStream"><code>MediaStream</code></a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/audio.html","tabbed-standard")}}</div>
 
-<p>L'exemple qui précède illustre le fonctionnement simple d'un élément <code>&lt;audio&gt;</code>, à la façon de ce qui peut être fait pour une image avec l'élément <a href="/fr/docs/Web/HTML/Element/Img"><code>&lt;img&gt;</code></a> : on inclut un chemin vers la ressource grâce à l'attribut <code>src</code> et on peut ajouter d'autres attributs afin de fournir d'autres informations : lecture automatique, lecture en boucle, utilisation des contrôles par défaut du navigateur, etc</p>
+<p>L'exemple qui précède illustre le fonctionnement simple d'un élément <code>&lt;audio&gt;</code>, à la façon de ce qui peut être fait pour une image avec l'élément <a href="/fr/docs/Web/HTML/Element/Img"><code>&lt;img&gt;</code></a> : on inclut un chemin vers la ressource grâce à l'attribut <code>src</code> et on peut ajouter d'autres attributs afin de fournir d'autres informations : lecture automatique, lecture en boucle, utilisation des contrôles par défaut du navigateur, etc.</p>
 
 <p>Le contenu présent à l'intérieur des balises <code>&lt;audio&gt;&lt;/audio&gt;</code> est affiché comme contenu alternatif lorsque le navigateur ne prend pas en charge l'élément.</p>
-
-<h2 id="properties">Propriétés</h2>
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row"><dfn><a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a></dfn></th>
-      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content">contenu intégré</a>. Si l'attribut <a href="/fr/docs/Web/HTML/Element/audio#attr-controls"><code>controls</code></a> est utilisé : <a href="/fr/docs/Web/Guide/HTML/Content_categories#interactive_content">contenu interactif</a> et <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content">contenu tangible</a>.</td>
-    </tr>
-    <tr>
-      <th scope="row">Contenu autorisé</th>
-      <td>Si l'élément possède un attribut <a href="/fr/docs/Web/HTML/Element/audio#attr-src"><code>src</code></a> : zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a>, suivis par du contenu transparent ne contenant pas d'éléments média, c'est-à-dire des éléments qui ne soient pas <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>. Sinon : zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a> suivis par un élément <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a>, suivi par du contenu transparent ne contenant pas d'éléments média (ni <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> ni <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>).</td>
-    </tr>
-    <tr>
-      <th scope="row">Omission de balises</th>
-      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
-    </tr>
-    <tr>
-      <th scope="row">Parents autorisés</th>
-      <td>Tout élément acceptant du contenu intégré.</td>
-    </tr>
-    <tr>
-      <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Pas de rôle correspondant</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Rôles ARIA autorisés</th>
-      <td><a href="https://w3c.github.io/aria/#application">application</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Interface DOM</th>
-      <td><a href="/fr/docs/Web/API/HTMLAudioElement"><code>HTMLAudioElement</code></a></td>
-    </tr>
-  </tbody>
-</table>
 
 <h2 id="attributes">Attributs</h2>
 
@@ -72,13 +37,13 @@ translation_of: Web/HTML/Element/audio
 
     <div class="notecard note">
       <p><b>Note :</b></p>
-      <p>Les sites qui diffusent automatiquement de l'audio (ou des vidéos avec une piste audio) peuvent constituer une expérience désagréable pour les utilisateurs et doivent donc être évités dans la mesure du possible. Si vous devez offrir une fonctionnalité de lecture automatique, vous devez la rendre opt-in (en demandant à l'utilisateur de l'activer spécifiquement). Cependant, cela peut être utile lors de la création d'éléments médias dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur. Consultez notre <a href="/fr/docs/Web/Media/Autoplay_guide">guide autoplay</a> pour obtenir des informations supplémentaires sur la manière d'utiliser correctement la fonction autoplay.</p>
+      <p>Les sites qui diffusent automatiquement de l'audio (ou des vidéos avec une piste audio) peuvent s'avérer désagréables pour les utilisateurs et doivent donc être évités dans la mesure du possible. Si vous devez offrir une fonctionnalité de lecture automatique, vous devez la soumettre au choix de l'utilisateur. Cependant, cela peut être utile lors de la création d'éléments médias dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur. Consultez notre <a href="/fr/docs/Web/Media/Autoplay_guide">guide sur la lecture automatique</a> pour obtenir des informations supplémentaires sur la manière d'utiliser correctement la fonction <i>autoplay</i>.</p>
     </div>
   </dd>
   <dt><strong id="attr-controls"><code>controls</code></strong></dt>
   <dd>Si l'attribut est présent, le navigateur affichera des contrôles pour que l'utilisateur puisse gérer la lecture, le volume, et le déplacement du curseur de lecture.</dd>
   <dt><strong id="attr-crossorigin"><code>crossorigin</code></strong></dt>
-  <dd>Cet attribut à valeur contrainte indique comment le CORS doit être utilisé afin de récupérer la ressource. <a href="/fr/docs/CORS_Enabled_Image">Les ressources utilisant le CORS</a> peuvent être réutilisées dans un élément <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> sans corrompre celui-ci. Les valeurs autorisées pour cet attribut sont :
+  <dd>Cet attribut à valeur contrainte indique comment le CORS doit être utilisé afin de récupérer la ressource. <a href="/fr/docs/Web/HTML/CORS_enabled_image">Les ressources utilisant le CORS</a> peuvent être réutilisées dans un élément <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a> sans corrompre celui-ci. Les valeurs autorisées pour cet attribut sont :
   <dl>
     <dt><code>anonymous</code></dt>
     <dd>Une requête multi-origine est envoyée sans information d'authentification. Autrement dit, l'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Origin"><code>Origin</code></a> est envoyé sans cookie, certificat X.509 ou sans authentification HTTP. Si le serveur ne fournit pas d'information d'authentification au site d'origine (sans indiquer l'en-tête <a href="/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin"><code>Access-Control-Allow-Origin</code></a>), la ressource sera corrompue (<em>tainted</em>) et son utilisation sera restreinte.</dd>
@@ -102,9 +67,9 @@ translation_of: Web/HTML/Element/audio
   <dt><strong id="attr-duration"><code>duration</code></strong> <span title="Cette valeur ne peut pas être changée." class="badge inline readonly">Lecture seule </span></dt>
   <dd>Une valeur à virgule flottante de précision double qui indique la durée (longueur totale) de l'audio en secondes, sur la ligne de temps du média. Si aucun média n'est présent sur l'élément, ou si le média n'est pas valide, la valeur renvoyée est <code>NaN</code>. Si le média n'a pas de fin connue (comme pour les flux en direct de durée inconnue, les webradios, les médias entrants de <a href="/fr/docs/Web/API/WebRTC_API">WebRTC</a>, et ainsi de suite), cette valeur est <code>+Infinity</code>.</dd>
   <dt><strong id="attr-loop"><code>loop</code></strong></dt>
-  <dd>Attribut booléen. S'il est renseigné, la lecture du fichier se fera en boucle.</dd>
+  <dd>Un attribut booléen. S'il est renseigné, la lecture du fichier se fera en boucle.</dd>
   <dt><strong id="attr-muted"><code>muted</code></strong></dt>
-  <dd>Attribut booléen, indiquant si le son de l'élément audio est initialement coupé. Sa valeur par défaut est <code>false</code>.</dd>
+  <dd>Un attribut booléen, indiquant si le son de l'élément audio est initialement coupé. Sa valeur par défaut est <code>false</code>.</dd>
   <dt><strong id="attr-preload"><code>preload</code></strong></dt>
   <dd>Cet attribut indique au navigateur ce que l'auteur du code html pense de l'utilisation optimale de cet élément. Il accepte uniquement les valeurs suivantes :<br>
 
@@ -126,7 +91,7 @@ translation_of: Web/HTML/Element/audio
     </div>
   </dd>
   <dt><strong id="attr-src"><code>src</code></strong></dt>
-  <dd>L'URL du fichier audio à intégrer. Cet élément est soumis aux <a href="/fr/docs/Web/HTTP/CORS">contrôles d'accès HTTP</a>. Cet élément est facultatif ; vous pouvez utiliser l'élément <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a> dans le bloc audio pour spécifier l'audio à intégrer.</dd>
+  <dd>L'URL du fichier audio à intégrer. Cet élément est soumis aux <a href="/fr/docs/Web/HTTP/CORS">contrôles d'accès HTTP</a>. Cet attribut est facultatif ; vous pouvez utiliser l'élément <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a> dans le bloc audio pour spécifier l'audio à intégrer.</dd>
 </dl>
 
 <h2 id="events">Évènements</h2>
@@ -230,7 +195,8 @@ translation_of: Web/HTML/Element/audio
   &lt;source src="myAudio.mp3" type="audio/mpeg"&gt;
   &lt;source src="myAudio.ogg" type="audio/ogg"&gt;
   &lt;p&gt;Votre navigateur ne prend pas en charge l'audio HTML5.
-  Voici un &lt;a href="myAudio.mp4"&gt;lien vers le fichier l'audio&lt;/a&gt; à la place.&lt;/p&gt;
+  Voici un &lt;a href="myAudio.mp4"&gt;lien vers le fichier audio&lt;/a&gt;
+  à la place.&lt;/p&gt;
 &lt;/audio&gt;</pre>
 
 <p>Nous proposons un <a href="/fr/docs/Web/Media/Formats">guide substantiel et complet des types de fichiers médias</a> et des <a href="/fr/docs/Web/Media/Formats/Audio_codecs">codecs audio qui peuvent être utilisés en leur sein</a>. Est également disponible <a href="/fr/docs/Web/Media/Formats/Video_codecs">un guide des codecs supportés pour la vidéo</a>.</p>
@@ -260,7 +226,7 @@ translation_of: Web/HTML/Element/audio
 
 <h3 id="detecting_addition_and_removal_of_tracks">Détecter l'ajout et la suppression de pistes</h3>
 
-<p>Il est aussi possible de détecter lorsque des pistes sont ajoutées et supprimées sur un élément <code>&lt;audio&gt;</code> en écoutant les évènements <a href="/fr/docs/Web/Reference/Events/addtrack">addtrack</a> et <a href="/fr/docs/Web/Reference/Events/removetrack">removetrack</a>. Toutefois, ces évènements ne sont pas directement envoyés sur l'élément <code>&lt;audio&gt;</code> mais sur l'objet représentant la liste de pistes de l'élément <code>&lt;audio&gt;</code> et rattaché à l'élément <a href="/fr/docs/Web/API/HTMLMediaElement"><code>HTMLMediaElement</code></a>.</p>
+<p>Il est aussi possible de détecter lorsque des pistes sont ajoutées et supprimées sur un élément <code>&lt;audio&gt;</code> en écoutant les évènements <a href="/fr/docs/Web/API/AudioTrackList/addtrack_event"><code>addtrack</code></a> et <a href="/fr/docs/Web/API/AudioTrackList/removetrack_event"><code>removetrack</code></a>. Toutefois, ces évènements ne sont pas directement envoyés sur l'élément <code>&lt;audio&gt;</code> mais sur l'objet représentant la liste de pistes de l'élément <code>&lt;audio&gt;</code> et rattaché à l'élément <a href="/fr/docs/Web/API/HTMLMediaElement"><code>HTMLMediaElement</code></a>.</p>
 
 <dl>
   <dt><a href="/fr/docs/Web/API/HTMLMediaElement/audioTracks"><code>HTMLMediaElement.audioTracks</code></a></dt>
@@ -290,7 +256,7 @@ elem.audioTrackList.onremovetrack = function(event) {
 
 <p>Ce code permet de surveiller lorsque de nouvelles pistes audio sont ajoutées et supprimées. Lorsque c'est le cas, une fonction (non décrite ici) est invoquée afin de mettre à jour l'éditeur présenté à l'utilisateur avec la liste des pistes disponibles.</p>
 
-<p>Il est aussi possible d'utiliser <a href="/fr/docs/Web/API/EventTarget/addEventListener"><code>addEventListener()</code></a> afin d'écouter les évènements <a href="/fr/docs/Web/Reference/Events/addtrack">addtrack</a> et <a href="/fr/docs/Web/Reference/Events/removetrack">removetrack</a>.</p>
+<p>Il est aussi possible d'utiliser <a href="/fr/docs/Web/API/EventTarget/addEventListener"><code>addEventListener()</code></a> afin d'écouter les évènements <a href="/fr/docs/Web/API/AudioTrackList/addtrack_event"><code>addtrack</code></a> et <a href="/fr/docs/Web/API/AudioTrackList/removetrack_event"><code>removetrack</code></a>.</p>
 
 <h2 id="examples">Exemples</h2>
 
@@ -346,6 +312,19 @@ Elle est où la poulette ?
 00:00:52 --&gt; 00:01:02
 [sur un ton énervé] Vous rendez la poulette ou c'est plus vous qui donnez à manger aux lapins ?</pre>
 
+<p>Une autre bonne pratique consiste à fournir du contenu comme un lien de téléchargement comme méthode alternative pour les personnes qui utilisent un navigateur qui ne prend pas en charge <code>&lt;audio&gt;</code>&nbsp;:</p>
+
+<pre class="brush: html">&lt;audio controls&gt;
+  &lt;source src="monAudio.mp3" type="audio/mpeg"&gt;
+  &lt;source src="monAudio.ogg" type="audio/ogg"&gt;
+  &lt;p&gt;
+    Votre navigateur ne prend pas charge l'audio HTML.
+    Voici &lt;a href="monAudio.mp4"&gt;un lien de téléchargement&lt;/a&gt; à la place.
+  &lt;/p&gt;
+&lt;/audio&gt;
+
+</pre>
+
 <ul>
   <li><a href="/fr/docs/Plugins/Flash_to_HTML5/Video/Subtitles_captions">Sous-titrage sur le web</a></li>
   <li><a href="/fr/docs/Web/API/WebVTT_API">Web Video Text Tracks Format (WebVTT)</a></li>
@@ -354,6 +333,41 @@ Elle est où la poulette ?
   <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html">Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0</a> (en anglais)</li>
   <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html">Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0</a> (en anglais)</li>
 </ul>
+
+<h2 id="technical_summary">Résumé technique</h2>
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row"><dfn><a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a></dfn></th>
+      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content">contenu intégré</a>. Si l'attribut <a href="/fr/docs/Web/HTML/Element/audio#attr-controls"><code>controls</code></a> est utilisé : <a href="/fr/docs/Web/Guide/HTML/Content_categories#interactive_content">contenu interactif</a> et <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content">contenu tangible</a>.</td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>Si l'élément possède un attribut <a href="/fr/docs/Web/HTML/Element/audio#attr-src"><code>src</code></a> : zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a>, suivis par du contenu transparent ne contenant pas d'éléments média, c'est-à-dire des éléments qui ne soient pas <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>. Sinon : zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a> suivis par un élément <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a>, suivi par du contenu transparent ne contenant pas d'éléments média (ni <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> ni <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>).</td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>Tout élément acceptant du contenu intégré.</td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Pas de rôle correspondant</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td><a href="https://w3c.github.io/aria/#application"><code>application</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td><a href="/fr/docs/Web/API/HTMLAudioElement"><code>HTMLAudioElement</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 <h2 id="specifications">Spécifications</h2>
 
