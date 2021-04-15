@@ -20,9 +20,9 @@ translation_of: Web/Progressive_web_apps/App_structure
 
 <p>您可以按自己喜欢的方式构建 PWA，但有些方式更合适。最流行的是“App Shell”概念，它完全按照上述方式混用 SSR 和 CSR；此外还遵循“离线优先”方法，这个我们将在后续文章中详细解释，也会在示例应用程序中使用。我们还会简要提及另一种涉及<a href="/en-US/docs/Web/API/Streams_API">Streams API</a>的新方法</p>
 
-<h2 id="App_shell_概念">App shell 概念</h2>
+<h2 id="App_Shell_概念">App Shell 概念</h2>
 
-<p>App shell 概念试图尽快加载最小用户界面，然后缓存它，以便在后续访问时可以离线使用，然后再加载应用程序的所有内容。这样，下次有人从设备访问应用程序时，UI 立即从缓存加载；如果缓存数据不可用的话，就从服务器请求新内容。</p>
+<p>App Shell 概念试图尽快加载最小用户界面，然后缓存它，以便在后续访问时可以离线使用，然后再加载应用程序的所有内容。这样，下次有人从设备访问应用程序时，UI 立即从缓存加载；如果缓存数据不可用的话，就从服务器请求新内容。</p>
 
 <p>这种结构的页面很快，给用户的感觉也很快：用户会立即看到内容而不是加载动画或空白页。如果网络连接不可用，它还允许离线访问网站。</p>
 
@@ -30,7 +30,7 @@ translation_of: Web/Progressive_web_apps/App_structure
 
 <h3 id="我为什么要用它？">我为什么要用它？</h3>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">这种架构允许网站从 PWA 功能中获益最多：它可以缓存</span><span title=""> app shell</span><span class="alt-edited"> 并以提升大量性能的方式管理动态内容。除了基本外壳之外，您还可以添加其他功能，例如</span></span><a href="/en-US/docs/Web/Apps/Progressive/Add_to_home_screen">添加到主屏幕</a><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">或</span></span><a href="/en-US/docs/Web/API/Push_API">推送通知</a><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">。即使用户的浏览器不支持这些功能，你也可以放心应用可以正常运行，这就是渐进增强的美妙之处。</span></span></p>
+<p><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">这种架构允许网站从 PWA 功能中获益最多：它可以缓存</span> <span title="">App Shell</span> <span class="alt-edited">并以提升大量性能的方式管理动态内容。除了基本外壳之外，您还可以添加其他功能，例如</span></span><a href="/en-US/docs/Web/Apps/Progressive/Add_to_home_screen">添加到主屏幕</a><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">或</span></span><a href="/en-US/docs/Web/API/Push_API">推送通知</a><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">。即使用户的浏览器不支持这些功能，你也可以放心应用可以正常运行，这就是渐进增强的美妙之处。</span></span></p>
 
 <p><span class="tlid-translation translation" lang="zh-CN"><span title="">在不妥协 web 优势的前提下，网站感觉就像一个原生应用，交互及时、性能可靠。</span></span></p>
 
@@ -172,11 +172,11 @@ button.addEventListener('click', function(e) {
 
 <h3 id="service_worker">service worker</h3>
 
-<p>最后我们来快速浏览一下 service worker 相关的文件 sw.js。它首先引入 game.js 这个文件：</p>
+<p>最后我们来快速浏览一下 Service Worker 相关的文件 sw.js。它首先引入 game.js 这个文件：</p>
 
 <pre class="brush: js">self.importScripts('data/games.js');</pre>
 
-<p>接着，程序会对 app shell 和主体内容里面的数据创建一个缓存列表：</p>
+<p>接着，程序会对 App Shell 和主体内容里面的数据创建一个缓存列表：</p>
 
 <pre class="brush: js">var cacheName = 'js13kPWA-v1';
 var appShellFiles = [
@@ -205,7 +205,7 @@ for(var i=0; i&lt;games.length; i++) {
 }
 var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
-<p>下面的代码用来配置 service worker，缓存上述列表的工作就发生在这里：</p>
+<p>下面的代码用来配置 Service Worker，缓存上述列表的工作就发生在这里：</p>
 
 <pre class="brush: js">self.addEventListener('install', function(e) {
   console.log('[Service Worker] Install');
@@ -217,7 +217,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
   );
 });</pre>
 
-<p>最后，如果条件允许，service worker 将从缓存中请求 content 中所需的数据，从而提供离线应用功能：</p>
+<p>最后，如果条件允许，Service Worker 将从缓存中请求内容所需的数据，从而提供离线应用功能：</p>
 
 <pre class="brush: js">self.addEventListener('fetch', function(e) {
   e.respondWith(
@@ -236,7 +236,7 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <h3 id="JavaScript_数据">JavaScript 数据</h3>
 
-<p>项目中所用的游戏数据放置在 data 文件夹下面，以JavaScript对象的形式提供（<a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js">games.js</a>）：</p>
+<p>项目中所用的游戏数据放置在 data 文件夹下面，以 JavaScript 对象的形式提供（<a href="https://github.com/mdn/pwa-examples/blob/master/js13kpwa/data/games.js">games.js</a>）：</p>
 
 <pre class="brush: js">var games = [
     {
@@ -270,6 +270,6 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
 <h2 id="下一步">下一步</h2>
 
-<p>下一篇文章中，我们会探讨更多的细节：service worker 如何帮助我们缓存 app shell 和内容，从而让我们实现离线功能。</p>
+<p>下一篇文章中，我们会探讨更多的细节：Service Worker 如何帮助我们缓存 App Shell 和内容，从而让我们实现离线功能。</p>
 
 <p>{{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}</p>

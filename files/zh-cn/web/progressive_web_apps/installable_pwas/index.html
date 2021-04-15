@@ -14,7 +14,7 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 
 <p class="summary">在上一篇文章，我们了解了如何通过 <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker</a> 让 <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> 离线工作。我们还可以更进一步，让用户如同本地应用一样在支持的移动浏览器上安装 web 应用。这篇文章讲述如何通过网页清单和添加到主屏特性来做到这一点。</p>
 
-<p>这些技术允许应用从设备主屏直接启动，而不需启动浏览器键入 URL。你的 web 应用可以作为一等公民和本地应用肩并肩。这样更容易访问，你还可以指定应用全屏运行，没有浏览器界面，这样看起来更像一个本地应用。</p>
+<p>这些技术允许应用从设备主屏直接启动，而不需启动浏览器键入 URL。你的 Web 应用可以作为一等公民和原生应用肩并肩。这样可以使应用更易于访问，你还可以指定应用全屏运行，没有浏览器界面，这样看起来更像一个原生应用。</p>
 
 <h2 id="要求">要求</h2>
 
@@ -22,23 +22,23 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 
 <ul>
  <li>一份网页清单，填好<a href="/en-US/Apps/Progressive/Add_to_home_screen#Manifest">正确的字段</a></li>
- <li>网站的域必须是安全（HTTPS）的</li>
- <li>一个在本设备上代表应用的图标</li>
+ <li>网站的协议必须是安全的（即使用 HTTPS 协议）</li>
+ <li>一个在设备上代表应用的图标</li>
  <li>一个注册好的 Service Worker，可以让应用离线工作（这仅对于安卓设备上的 Chrome 浏览器是必需的）</li>
 </ul>
 
-<h3 id="清单文件">清单文件</h3>
+<h3 id="清单文件_(Manifest)">清单文件 (Manifest)</h3>
 
 <p>离线访问的关键在于一份网页清单，它通过 JSON 形式列举了网站的所有信息。</p>
 
 <p>它通常位于网页应用的根目录，包含一些有用的信息，比如应用的标题、在移动设备操作系统上显示的代表该应用的不同大小的图标（例如主屏图标）的路径，和用于加载页或启动画面的背景颜色。浏览器需要这些信息来安装 web 应用并使其在主屏上显示。</p>
 
-<p><a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> web 应用的 <code>js13kpwa.webmanifest</code> 文件包含在 <code>index.html</code> 文件的 {{htmlelement("head")}} 段，如下行所示：</p>
+<p><a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA</a> 的 <code>js13kpwa.webmanifest</code> 文件包含在 <code>index.html</code> 文件的 {{htmlelement("head")}} 段，如下行所示：</p>
 
 <pre class="brush: html notranslate">&lt;link rel="manifest" href="js13kpwa.webmanifest"&gt;</pre>
 
 <div class="note">
-<p><strong>注意：有一些常用的扩展名曾用于这类清单文件：</strong><code>manifest.webapp</code> 在 Firefox OS 应用清单中很流行，而许多人使用 <code>manifest.json</code> 作为网页清单（因为内容是 JSON 格式的）。但是，<code>.webmanifest</code> 扩展名是在<a href="https://w3c.github.io/manifest/">W3C 清单规范</a>中显式指定的，所以这里我们使用这个扩展名。</p>
+<p><strong>注意：这类清单文件有一些曾经常被使用的扩展名：</strong><code>manifest.webapp</code> 在 Firefox OS 应用清单中很流行，而许多人使用 <code>manifest.json</code> 作为网页清单（因为内容是 JSON 格式的）。但是，<code>.webmanifest</code> 扩展名是在<a href="https://w3c.github.io/manifest/">W3C 清单规范</a>中显式指定的，所以这里我们使用这个扩展名。</p>
 </div>
 
 <p>文件的内容是这个样子的：</p>
@@ -83,7 +83,7 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 
 <h2 id="添加到主屏">添加到主屏</h2>
 
-<p>"添加到主屏" (或者英语短语 a2hs) 是移动浏览器实现的一个特性，它利用网页清单中的信息来在设备主屏上显示应用图标和文字。只有应用满足上述必备条件，这个功能才可以正常运作。</p>
+<p>"添加到主屏" (或者英语短语 A2HS (Add to Home Screen)) 是移动浏览器实现的一个特性，它利用网页清单中的信息来在设备主屏上显示应用图标和文字。只有应用满足上述必备条件，这个功能才可以正常运作。</p>
 
 <p>当用户使用支持的移动浏览器访问 PWA 时，浏览器会显示一条横幅信息表示可以安装这个应用。</p>
 
