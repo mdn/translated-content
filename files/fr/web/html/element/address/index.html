@@ -25,9 +25,7 @@ translation_of: Web/HTML/Element/address
 
 <p>L'information de contact fournie via cet élément peut prendre n'importe quelle forme pertinente : ce peut être une adresse physique, une URL, une adresse électronique, un numéro de téléphone, des coordonnées géographiques, etc. Ces informations devraient contenir le nom de la personne, du groupe de personne ou de l'organisation à laquelle le contact fait référence.</p>
 
-<p>Cet élément peut être employé dans un élément <a href="/fr/docs/Web/HTML/Element/article"><code>&lt;article&gt;</code></a> ou faire référence à l'ancêtre <a href="/fr/docs/Web/HTML/Element/body"><code>&lt;body&gt;</code></a> ; dans ce dernier cas, cela s'applique au document entier.</p>
-
-<h2 id="properties">Propriétés</h2>
+<p>Cet élément peut être employé dans un élément <a href="/fr/docs/Web/HTML/Element/article"><code>&lt;article&gt;</code></a> pour indiquer la personne qui écrit l'article ou être utilisé dans l'en-tête de la page pour fournir une adresse d'entreprise.</p>
 
 <table class="properties">
   <tbody>
@@ -47,6 +45,10 @@ translation_of: Web/HTML/Element/address
       <th scope="row">Parents autorisés</th>
       <td>Tout élément qui accepte un <a href="/fr/docs/Web/Guide/HTML/Content_categories#contenu_de_flux">contenu de flux</a> mais pas d'éléments <code>&lt;address&gt;</code>.</td>
     </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Aucun rôle correspondant</a></td>
+     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
       <td>Aucun.</td>
@@ -73,8 +75,10 @@ translation_of: Web/HTML/Element/address
 <h2 id="example">Exemple</h2>
 
 <pre class="brush: html">&lt;address&gt;
-  Vous pouvez contacter l'auteur à l'adresse &lt;a href="http://www.undomaine.com/contact"&gt;www.undomaine.com&lt;/a&gt;.&lt;br&gt;
-  Si vous relevez quelques bogues que ce soient, merci de contacter &lt;a href="mailto:webmaster@somedomain.com"&gt;le webmaster&lt;/a&gt;.&lt;br&gt;
+  Vous pouvez contacter l'auteur à l'adresse
+  &lt;a href="http://www.undomaine.com/contact"&gt;www.undomaine.com&lt;/a&gt;.&lt;br&gt;
+  Si vous relevez quelques bogues que ce soient, merci de contacter
+  &lt;a href="mailto:webmaster@somedomain.com"&gt;le webmaster&lt;/a&gt;.&lt;br&gt;
   Vous pouvez aussi venir nous voir :&lt;br&gt;
   Mozilla Foundation&lt;br&gt;
   1981 Landings Drive&lt;br&gt;
@@ -86,7 +90,7 @@ translation_of: Web/HTML/Element/address
 
 <h3 id="result">Résultat</h3>
 
-<p>{{EmbedLiveSample("example", "100%", 180)}}</p>
+<p>{{EmbedLiveSample("example", "100%", 190)}}</p>
 
 <p>Bien que le rendu par défaut du texte de l'élément <code>&lt;address&gt;</code> utilise le même style par défaut que les éléments <a href="/fr/docs/Web/HTML/Element/i"><code>&lt;i&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/em"><code>&lt;em&gt;</code></a>, il est plus approprié d'utiliser cet élément lorsque l'on traite d'informations de contact, étant donné qu'il apporte des informations sémantiques supplémentaires.</p>
 
