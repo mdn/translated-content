@@ -34,7 +34,7 @@ translation_of: 'Web/Security/Referer_header:_privacy_and_security_concerns'
 <p>また、このようなリスクを軽減するには、次のような方法があります。</p>
 
 <ul>
- <li>サーバ上の {{httpheader("Referrerer-Policy")}} ヘッダで、<code>Referer</code> ヘッダを通してどのような情報を送るかを制御します。繰り返しになりますが、<code>no-referrer</code> ディレクティブは Referer ヘッダを完全に省略します</li>
+ <li>サーバ上の {{httpheader("Referrer-Policy")}} ヘッダで、<code>Referer</code> ヘッダを通してどのような情報を送るかを制御します。繰り返しになりますが、<code>no-referrer</code> ディレクティブは Referer ヘッダを完全に省略します</li>
  <li>そのような情報が漏れる危険性のある HTML 要素 ({{HTMLElement("img")}} や {{HTMLElement("a")}} など) 上の <code>referrerpolicy</code> 属性。これは、例えば、<code>Referer</code> ヘッダーが完全に送信されないようにするために、<code>no-referrer</code> に設定することができます</li>
  <li>そのような情報が漏れる危険性のある HTML 要素 ({{HTMLElement("img")}} や {{HTMLElement("a")}} など) で <code>no-referrer</code> に設定されている <code>rel</code> 属性。詳細については、<a href="/ja/docs/Web/HTML/Link_types">リンク種別</a>と <code>no-referrer</code> の検索を参照してください</li>
  <li>技術的な<a href="https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect">終了ページ</a></li>
@@ -44,7 +44,7 @@ translation_of: 'Web/Security/Referer_header:_privacy_and_security_concerns'
 
 <ul>
  <li><a href="https://docs.djangoproject.com/ja/3.1/topics/security/">Django におけるセキュリティ</a> (特に <a href="https://docs.djangoproject.com/ja/3.1/topics/security/#cross-site-request-forgery-csrf-protection">クロス・サイト・リクエスト・フォージェリ(CSRF)の防御</a> を参照してください)</li>
- <li><a href="https://github.com/helmetjs/helmet/tree/d75632db7dece10210e3a1db1a36d6dec686697d/middlewares/referrer-policy">helmetjs referrer-policy </a>— Node.js/Express アプリで Referrerer-Policy を設定するためのミドルウェアです (セキュリティ規定の詳細については <a href="https://github.com/helmetjs">helmetjs</a> も参照してください)</li>
+ <li><a href="https://github.com/helmetjs/helmet/tree/d75632db7dece10210e3a1db1a36d6dec686697d/middlewares/referrer-policy">helmetjs referrer-policy </a>— Node.js/Express アプリで Referrer-Policy を設定するためのミドルウェアです (セキュリティ規定の詳細については <a href="https://github.com/helmetjs">helmetjs</a> も参照してください)</li>
 </ul>
 
 <h2 id="ポリシーと要件">ポリシーと要件</h2>
