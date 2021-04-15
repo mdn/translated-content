@@ -52,7 +52,7 @@ Referrer-Policy: unsafe-url
  <dd>{{HTTPHeader("Referer")}} ヘッダー全体が省略されます。リクエストとともにリファラー情報が送られることはありません。</dd>
  <dt><code>no-referrer-when-downgrade</code> (既定値)</dt>
  <dd>これはポリシーが指定されていない場合や、与えられた値が無効であった場合の既定の動作です。プロトコルのセキュリティ水準が同一である場合 (HTTP→HTTP, HTTPS→HTTPS) または改善される場合 (HTTP→HTTPS) は、 URL の{{glossary("origin", "オリジン")}}、{{glossary("path", "パス")}}、{{glossary("querystring", "クエリ文字列")}}がリファラーとして送信されますが、低下する場合 (HTTPS→HTTP) は、リファラーは送信されません。
- <div class="note">ブラウザーはより厳格な既定値、すなわち <code>strict-origin-when-cross-origin</code> (<a href="https://github.com/whatwg/fetch/pull/952">https://github.com/whatwg/fetch/pull/952</a> を参照) に移行するよう取り組んでいますが、 Referrerer-Policy を変更する際には、可能であればこの値 (またはより厳格な値) を使用することを検討してください。</div>
+ <div class="note">ブラウザーはより厳格な既定値、すなわち <code>strict-origin-when-cross-origin</code> (<a href="https://github.com/whatwg/fetch/pull/952">https://github.com/whatwg/fetch/pull/952</a> を参照) に移行するよう取り組んでいますが、 Referrer-Policy を変更する際には、可能であればこの値 (またはより厳格な値) を使用することを検討してください。</div>
  </dd>
  <dt><code>origin</code></dt>
  <dd>文書の{{glossary("origin", "オリジン")}}のみがリファラーとして送信されます。<br>
