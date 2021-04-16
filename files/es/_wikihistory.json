@@ -5871,18 +5871,6 @@
       "Kyuoraku"
     ]
   },
-  "Web/API/ParentNode/firstElementChild": {
-    "modified": "2019-03-23T22:32:44.779Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
-  "Web/API/ParentNode/lastElementChild": {
-    "modified": "2019-03-23T22:32:39.974Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
   "Web/API/Payment_Request_API": {
     "modified": "2020-10-15T22:33:12.666Z",
     "contributors": [
@@ -23741,6 +23729,18 @@
     "contributors": [
       "AlePerez92",
       "aeroxmotion",
+      "Grijander81"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/firstElementChild": {
+    "modified": "2019-03-23T22:32:44.779Z",
+    "contributors": [
+      "Grijander81"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/lastElementChild": {
+    "modified": "2019-03-23T22:32:39.974Z",
+    "contributors": [
       "Grijander81"
     ]
   }

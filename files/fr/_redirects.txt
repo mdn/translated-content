@@ -898,7 +898,7 @@
 /fr/docs/DOM/DataTransfer	/fr/docs/Web/API/DataTransfer
 /fr/docs/DOM/Document.evaluate	/fr/docs/Web/API/Document/evaluate
 /fr/docs/DOM/Document.implementation	/fr/docs/Web/API/Document/implementation
-/fr/docs/DOM/Element.firstElementChild	/fr/docs/Web/API/ParentNode/firstElementChild
+/fr/docs/DOM/Element.firstElementChild	/fr/docs/orphaned/Web/API/ParentNode/firstElementChild
 /fr/docs/DOM/File	/fr/docs/Web/API/File
 /fr/docs/DOM/FileReader	/fr/docs/Web/API/FileReader
 /fr/docs/DOM/FileReader/FileList	/fr/docs/Web/API/FileList
@@ -3685,7 +3685,7 @@
 /fr/docs/Web/API/Element.clientWidth	/fr/docs/Web/API/Element/clientWidth
 /fr/docs/Web/API/Element.cloneNode	/fr/docs/Web/API/Node/cloneNode
 /fr/docs/Web/API/Element.dir	/fr/docs/Web/API/HTMLElement/dir
-/fr/docs/Web/API/Element.firstElementChild	/fr/docs/Web/API/ParentNode/firstElementChild
+/fr/docs/Web/API/Element.firstElementChild	/fr/docs/orphaned/Web/API/ParentNode/firstElementChild
 /fr/docs/Web/API/Element.focus	/fr/docs/Web/API/HTMLOrForeignElement/focus
 /fr/docs/Web/API/Element.getAttribute	/fr/docs/Web/API/Element/getAttribute
 /fr/docs/Web/API/Element.getAttributeNS	/fr/docs/Web/API/Element/getAttributeNS
@@ -3801,6 +3801,8 @@
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
 /fr/docs/Web/API/ParentNode/childElementCount	/fr/docs/Web/API/Element/childElementCount
 /fr/docs/Web/API/ParentNode/children	/fr/docs/orphaned/Web/API/ParentNode/children
+/fr/docs/Web/API/ParentNode/firstElementChild	/fr/docs/orphaned/Web/API/ParentNode/firstElementChild
+/fr/docs/Web/API/ParentNode/lastElementChild	/fr/docs/orphaned/Web/API/ParentNode/lastElementChild
 /fr/docs/Web/API/PasswordCredential/additionalData	/fr/docs/conflicting/Web/API/PasswordCredential
 /fr/docs/Web/API/PasswordCredential/idName	/fr/docs/conflicting/Web/API/PasswordCredential_cbf7b306e83a3f58ff06bccf89637c12
 /fr/docs/Web/API/PasswordCredential/passwordName	/fr/docs/conflicting/Web/API/PasswordCredential_bc57d5dfa87242b4fb83497887124f41

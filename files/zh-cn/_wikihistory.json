@@ -16794,29 +16794,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/ParentNode/firstElementChild": {
-    "modified": "2020-10-15T21:06:48.165Z",
-    "contributors": [
-      "igoryaodev",
-      "imwangpan",
-      "gwh1312",
-      "RainSlide",
-      "xgqfrms-GitHub",
-      "teoli",
-      "AlexChao",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/ParentNode/lastElementChild": {
-    "modified": "2020-10-15T21:05:51.837Z",
-    "contributors": [
-      "RainSlide",
-      "xgqfrms-GitHub",
-      "teoli",
-      "khalid32",
-      "ziyunfei"
-    ]
-  },
   "Web/API/ParentNode/prepend": {
     "modified": "2020-10-15T21:52:00.307Z",
     "contributors": [
@@ -50797,6 +50774,29 @@
       "khalid32",
       "ziyunfei",
       "AlexChao"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/firstElementChild": {
+    "modified": "2020-10-15T21:06:48.165Z",
+    "contributors": [
+      "igoryaodev",
+      "imwangpan",
+      "gwh1312",
+      "RainSlide",
+      "xgqfrms-GitHub",
+      "teoli",
+      "AlexChao",
+      "ziyunfei"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/lastElementChild": {
+    "modified": "2020-10-15T21:05:51.837Z",
+    "contributors": [
+      "RainSlide",
+      "xgqfrms-GitHub",
+      "teoli",
+      "khalid32",
+      "ziyunfei"
     ]
   }
 }

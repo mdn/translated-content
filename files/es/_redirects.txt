@@ -1833,6 +1833,8 @@
 /es/docs/Web/API/Notifications_API/Usando_la_API_de_Notificaciones	/es/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /es/docs/Web/API/ParentNode/childElementCount	/es/docs/Web/API/Element/childElementCount
 /es/docs/Web/API/ParentNode/children	/es/docs/orphaned/Web/API/ParentNode/children
+/es/docs/Web/API/ParentNode/firstElementChild	/es/docs/orphaned/Web/API/ParentNode/firstElementChild
+/es/docs/Web/API/ParentNode/lastElementChild	/es/docs/orphaned/Web/API/ParentNode/lastElementChild
 /es/docs/Web/API/Position	/es/docs/Web/API/GeolocationPosition
 /es/docs/Web/API/Push_API/Using_the_Push_API	/es/docs/conflicting/Web/API/Push_API
 /es/docs/Web/API/RandomSource	/es/docs/conflicting/Web/API/Crypto/getRandomValues

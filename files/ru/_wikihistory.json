@@ -6828,20 +6828,6 @@
       "madebydima"
     ]
   },
-  "Web/API/ParentNode/firstElementChild": {
-    "modified": "2019-08-28T05:08:54.083Z",
-    "contributors": [
-      "Yialo",
-      "besedin-art"
-    ]
-  },
-  "Web/API/ParentNode/lastElementChild": {
-    "modified": "2019-08-28T05:09:39.314Z",
-    "contributors": [
-      "Yialo",
-      "Waakym"
-    ]
-  },
   "Web/API/ParentNode/prepend": {
     "modified": "2020-10-15T22:20:07.127Z",
     "contributors": [
@@ -25987,6 +25973,20 @@
       "RblSb",
       "evgkit",
       "In4in"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/firstElementChild": {
+    "modified": "2019-08-28T05:08:54.083Z",
+    "contributors": [
+      "Yialo",
+      "besedin-art"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/lastElementChild": {
+    "modified": "2019-08-28T05:09:39.314Z",
+    "contributors": [
+      "Yialo",
+      "Waakym"
     ]
   }
 }

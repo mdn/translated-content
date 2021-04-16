@@ -1,24 +1,26 @@
 ---
-title: ParentNode.lastElementChild
-slug: Web/API/ParentNode/lastElementChild
+title: ParentNode.firstElementChild
+slug: orphaned/Web/API/ParentNode/firstElementChild
 tags:
   - API
   - DOM
   - ParentNode
   - Proprietà
-translation_of: Web/API/ParentNode/lastElementChild
+translation_of: Web/API/ParentNode/firstElementChild
+original_slug: Web/API/ParentNode/firstElementChild
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p>La proprietà <strong><code>ParentNode.LastElementChild</code></strong> di sola lettura restituisce l'ultimo figlio <a href="https://developer.mozilla.org/it/docs/Web/API/Element" title="Element è la classe base più generale da cui ereditano tutti gli oggetti in un Document. Ha solo metodi e proprietà comuni a tutti i tipi di elementi. Classi più specifiche ereditano da Element."><code>Element</code></a> dell'oggetto, oppure <code>null</code> se non ha elementi figli.</p>
+<p><span style="font-family: verdana,tahoma,sans-serif;">La proprietà </span><strong><code>ParentNode.firstElementChild</code></strong> <span style="font-family: verdana,tahoma,sans-serif;">di sola lettura </span>restituisce il primo figlio {{domxref("Element")}} dell'oggetto, oppure <code>null</code> se non ha elementi figli.</p>
 
 <div class="note">
-<p>Questa proprietà era inizialmente definita nell'interfaccia pura {{domxref("ElementTraversal")}} pure interface. Poiché questa interfaccia conteneva due distinti set di proprietà, una diretta al {{domxref("Node")}} che ha figli, una a quelli che sono figli, sono stati spostati in due interfacce pure separate, {{domxref("ParentNode")}} e {{domxref("ChildNode")}}. In questo caso, <code>lastElementChild</code> è stato spostato su {{domxref("ParentNode")}}. Questa è una modifica abbastanza tecnica che non dovrebbe influire sulla compatibilità.</p>
+<p>Questa proprietà era inizialmente definita nell'interfaccia pura {{domxref("ElementTraversal")}} pure interface. Poiché questa interfaccia conteneva due distinti set di proprietà, una diretta al {{domxref("Node")}} che ha figli, una a quelli che sono figli, sono stati spostati in due interfacce pure separate, {{domxref("ParentNode")}} e {{domxref("ChildNode")}}. In questo caso, <code>firstElementChild</code> è stato spostato su {{domxref("ParentNode")}}. Questa è una modifica abbastanza tecnica che non dovrebbe influire sulla compatibilità.</p>
 </div>
 
 <h2 id="Syntax_and_values" name="Syntax_and_values">Sintassi</h2>
 
-<pre class="syntaxbox">var <em>element</em> = node.lastElementChild; </pre>
+<pre class="syntaxbox">var <em>element</em> = node.firstElementChild;
+</pre>
 
 <h2 id="Example" name="Example">Esempio</h2>
 
@@ -30,24 +32,24 @@ translation_of: Web/API/ParentNode/lastElementChild
 
 &lt;script&gt;
 var foo = document.getElementById('foo');
-// yields: Third  (3)
-console.log(foo.lastElementChild.textContent);
+// yields: First  (1)
+console.log(foo.firstElementChild.textContent);
 &lt;/script&gt;
 </pre>
 
 <h2 id="Polyfill_per_IE8_IE9_e_Safari">Polyfill per IE8, IE9 e Safari</h2>
 
-<pre class="brush: js">// Overwrites native 'lastElementChild' prototype.
+<pre class="brush: js">// Overwrites native 'firstElementChild' prototype.
 // Adds Document &amp; DocumentFragment support for IE9 &amp; Safari.
 // Returns array instead of HTMLCollection.
 ;(function(constructor) {
     if (constructor &amp;&amp;
         constructor.prototype &amp;&amp;
-        constructor.prototype.lastElementChild == null) {
-        Object.defineProperty(constructor.prototype, 'lastElementChild', {
+        constructor.prototype.firstElementChild == null) {
+        Object.defineProperty(constructor.prototype, 'firstElementChild', {
             get: function() {
-                var node, nodes = this.childNodes, i = nodes.length - 1;
-                while (node = nodes[i--]) {
+                var node, nodes = this.childNodes, i = 0;
+                while (node = nodes[i++]) {
                     if (node.nodeType === 1) {
                         return node;
                     }

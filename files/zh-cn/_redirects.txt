@@ -269,8 +269,8 @@
 /zh-CN/docs/DOM/Document.querySelectorAll	/zh-CN/docs/Web/API/Document/querySelectorAll
 /zh-CN/docs/DOM/Document.scripts	/zh-CN/docs/Web/API/Document/scripts
 /zh-CN/docs/DOM/Element.children	/zh-CN/docs/orphaned/Web/API/ParentNode/children
-/zh-CN/docs/DOM/Element.firstElementChild	/zh-CN/docs/Web/API/ParentNode/firstElementChild
-/zh-CN/docs/DOM/Element.lastElementChild	/zh-CN/docs/Web/API/ParentNode/lastElementChild
+/zh-CN/docs/DOM/Element.firstElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/firstElementChild
+/zh-CN/docs/DOM/Element.lastElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/lastElementChild
 /zh-CN/docs/DOM/Element.nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
 /zh-CN/docs/DOM/Element.querySelectorAll	/zh-CN/docs/Web/API/Element/querySelectorAll
 /zh-CN/docs/DOM/EventTarget	/zh-CN/docs/Web/API/EventTarget
@@ -1726,10 +1726,12 @@
 /zh-CN/docs/Web/API/OfflineAudioContext/complete	/zh-CN/docs/Web/API/OfflineAudioContext/complete_event
 /zh-CN/docs/Web/API/ParentNode.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/ParentNode.children	/zh-CN/docs/orphaned/Web/API/ParentNode/children
-/zh-CN/docs/Web/API/ParentNode.firstElementChild	/zh-CN/docs/Web/API/ParentNode/firstElementChild
-/zh-CN/docs/Web/API/ParentNode.lastElementChild	/zh-CN/docs/Web/API/ParentNode/lastElementChild
+/zh-CN/docs/Web/API/ParentNode.firstElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/firstElementChild
+/zh-CN/docs/Web/API/ParentNode.lastElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/lastElementChild
 /zh-CN/docs/Web/API/ParentNode/childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/ParentNode/children	/zh-CN/docs/orphaned/Web/API/ParentNode/children
+/zh-CN/docs/Web/API/ParentNode/firstElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/firstElementChild
+/zh-CN/docs/Web/API/ParentNode/lastElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/lastElementChild
 /zh-CN/docs/Web/API/Performance.now()	/zh-CN/docs/Web/API/Performance/now
 /zh-CN/docs/Web/API/Performance/内存	/zh-CN/docs/Web/API/Performance/memory
 /zh-CN/docs/Web/API/Position	/zh-CN/docs/Web/API/GeolocationPosition

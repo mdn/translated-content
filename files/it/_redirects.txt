@@ -528,6 +528,8 @@
 /it/docs/Web/API/Node/namespaceURI	/it/docs/Web/API/Element/namespaceURI
 /it/docs/Web/API/Node/prefix	/it/docs/Web/API/Element/prefix
 /it/docs/Web/API/ParentNode/children	/it/docs/orphaned/Web/API/ParentNode/children
+/it/docs/Web/API/ParentNode/firstElementChild	/it/docs/orphaned/Web/API/ParentNode/firstElementChild
+/it/docs/Web/API/ParentNode/lastElementChild	/it/docs/orphaned/Web/API/ParentNode/lastElementChild
 /it/docs/Web/API/Position	/it/docs/Web/API/GeolocationPosition
 /it/docs/Web/API/URLUtils	/it/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /it/docs/Web/API/WindowTimers	/it/docs/conflicting/Web/API/WindowOrWorkerGlobalScope

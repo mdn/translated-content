@@ -577,6 +577,7 @@
 /zh-TW/docs/Web/API/Node/innerText	/zh-TW/docs/Web/API/HTMLElement/innerText
 /zh-TW/docs/Web/API/NonDocumentTypeChildNode	/zh-TW/docs/conflicting/Web/API/Element
 /zh-TW/docs/Web/API/ParentNode/children	/zh-TW/docs/orphaned/Web/API/ParentNode/children
+/zh-TW/docs/Web/API/ParentNode/firstElementChild	/zh-TW/docs/orphaned/Web/API/ParentNode/firstElementChild
 /zh-TW/docs/Web/API/Performance.timing	/zh-TW/docs/Web/API/Performance/timing
 /zh-TW/docs/Web/API/Position	/zh-TW/docs/Web/API/GeolocationPosition
 /zh-TW/docs/Web/API/Position/coords	/zh-TW/docs/Web/API/GeolocationPosition/coords

@@ -11700,23 +11700,6 @@
       "ayshiff"
     ]
   },
-  "Web/API/ParentNode/firstElementChild": {
-    "modified": "2019-03-23T23:35:50.443Z",
-    "contributors": [
-      "pdonias",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "Delapouite",
-      "Beaver"
-    ]
-  },
-  "Web/API/ParentNode/lastElementChild": {
-    "modified": "2019-03-18T21:39:15.409Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/ParentNode/prepend": {
     "modified": "2020-10-15T22:02:32.998Z",
     "contributors": [
@@ -45334,6 +45317,23 @@
       "loella16",
       "NemoNobobyPersonne",
       "xavierartot"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/firstElementChild": {
+    "modified": "2019-03-23T23:35:50.443Z",
+    "contributors": [
+      "pdonias",
+      "fscholz",
+      "teoli",
+      "khalid32",
+      "Delapouite",
+      "Beaver"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/lastElementChild": {
+    "modified": "2019-03-18T21:39:15.409Z",
+    "contributors": [
+      "loella16"
     ]
   }
 }
