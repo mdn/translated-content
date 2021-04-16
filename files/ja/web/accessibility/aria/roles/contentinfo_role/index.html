@@ -30,7 +30,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Contentinfo_role
 <p>各ページには、{{htmlelement("footer")}} 要素を使用するか、または <code>role="contentinfo"</code> を宣言することによって作成されたコンテンツ情報 (<code>contentinfo</code>) ランドマークが1つだけ含まれているべきです。 {{htmlelement("iframe")}} 要素を介して埋め込まれたコンテンツに存在するコンテンツ情報 (<code>contentinfo</code>) ランドマークは、この制限に含まれません。</p>
 
 <div class="note">
-<p>{{htmlelement("footer")}} 要素を使用すると、自動的にセクションがコンテンツ情報 (<code>contentinfo</code>) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきで、確実に VoiceOver の<a href="/ja/docs/Web/HTML/Element/footer#accessibility_concerns">既知の問題をテスト</a>してください。</p>
+<p>{{htmlelement("footer")}} 要素を使用すると、自動的にセクションがコンテンツ情報 (<code>contentinfo</code>) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきで、念のため VoiceOver の<a href="/ja/docs/Web/HTML/Element/footer#accessibility_concerns">既知の問題をテスト</a>してください。</p>
 </div>
 
 <h2 id="Examples" name="Examples">例</h2>
@@ -64,7 +64,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Contentinfo_role
 
 <p>{{htmlelement("body")}} 要素の直接の子孫として使用し、文書ごとに1つだけコンテンツ情報 (<code>contentinfo</code>) ランドマークが存在するべきです。</p>
 
-<h4 id="Mega-footers" name="Mega-footers">メガフッター</h4>
+<h4 id="Mega-footers" name="Mega-footers">巨大フッター</h4>
 
 <p>文書のフッターの中に追加の {{htmlelement("footer")}} 要素やコンテンツ情報 (<code>contentinfo</code>) ランドマークをネストしないでください。 代わりに、他の<a href="/ja/docs/Web/HTML/Element#content_sectioning">コンテンツセクショニング要素</a>を使用してください。</p>
 
