@@ -3923,8 +3923,10 @@
 /ja/docs/Web/API/Node/prefix	/ja/docs/conflicting/Web/API/Element/prefix
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e
+/ja/docs/Web/API/ParentNode/append	/ja/docs/orphaned/Web/API/ParentNode/append
 /ja/docs/Web/API/ParentNode/childElementCount	/ja/docs/Web/API/Element/childElementCount
 /ja/docs/Web/API/ParentNode/children	/ja/docs/orphaned/Web/API/ParentNode/children
+/ja/docs/Web/API/ParentNode/prepend	/ja/docs/orphaned/Web/API/ParentNode/prepend
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
@@ -4472,6 +4474,7 @@
 /ja/docs/Web/Compatibility_FAQ/Underline_Color_Diffrence.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html
 /ja/docs/Web/Events/Activate	/ja/docs/Web/API/Element/DOMActivate_event
 /ja/docs/Web/Events/DOMContentLoaded	/ja/docs/Web/API/Window/DOMContentLoaded_event
+/ja/docs/Web/Events/Index	/ja/docs/orphaned/Web/Events/Index
 /ja/docs/Web/Events/abort	/ja/docs/Web/API/HTMLMediaElement/abort_event
 /ja/docs/Web/Events/abort_(ProgressEvent)	/ja/docs/Web/API/XMLHttpRequest/abort_event
 /ja/docs/Web/Events/audiostart	/ja/docs/Web/API/SpeechRecognition/audiostart_event
@@ -4570,6 +4573,7 @@
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Working_with_the_History_API	/ja/docs/Web/API/History_API/Working_with_the_History_API
 /ja/docs/Web/Guide/DOM/Using_full_screen_mode	/ja/docs/Web/API/Fullscreen_API
 /ja/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
+/ja/docs/Web/Guide/Events/Creating_and_triggering_events	/ja/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /ja/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
 /ja/docs/Web/Guide/HTML	/ja/docs/Learn/HTML
 /ja/docs/Web/Guide/HTML/Canvas_tutorial	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial

@@ -660,8 +660,10 @@
 /ko/docs/Web/API/NetworkInformation/connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/Node/innerText	/ko/docs/Web/API/HTMLElement/innerText
 /ko/docs/Web/API/Notification.permission	/ko/docs/Web/API/Notification/permission
+/ko/docs/Web/API/ParentNode/append	/ko/docs/orphaned/Web/API/ParentNode/append
 /ko/docs/Web/API/ParentNode/childElementCount	/ko/docs/Web/API/Element/childElementCount
 /ko/docs/Web/API/ParentNode/children	/ko/docs/orphaned/Web/API/ParentNode/children
+/ko/docs/Web/API/ParentNode/prepend	/ko/docs/orphaned/Web/API/ParentNode/prepend
 /ko/docs/Web/API/Position	/ko/docs/Web/API/GeolocationPosition
 /ko/docs/Web/API/RandomSource	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/RandomSource/getRandomValues	/ko/docs/Web/API/Crypto/getRandomValues
@@ -801,6 +803,7 @@
 /ko/docs/Web/Guide/CSS/Visual_formatting_model	/ko/docs/Web/CSS/Visual_formatting_model
 /ko/docs/Web/Guide/DOM	/ko/docs/conflicting/Web/API/Document_Object_Model
 /ko/docs/Web/Guide/DOM/Using_full_screen_mode	/ko/docs/Web/API/Fullscreen_API
+/ko/docs/Web/Guide/Events/Creating_and_triggering_events	/ko/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /ko/docs/Web/Guide/HTML	/ko/docs/Learn/HTML
 /ko/docs/Web/Guide/HTML/Content_Editable	/ko/docs/Web/Guide/HTML/Editable_content
 /ko/docs/Web/Guide/HTML/컨텐트_카테고리	/ko/docs/Web/Guide/HTML/Content_categories

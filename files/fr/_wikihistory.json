@@ -11692,22 +11692,6 @@
       "fscholz"
     ]
   },
-  "Web/API/ParentNode/append": {
-    "modified": "2020-10-15T21:59:23.058Z",
-    "contributors": [
-      "Yukulele.",
-      "Watilin",
-      "ayshiff"
-    ]
-  },
-  "Web/API/ParentNode/prepend": {
-    "modified": "2020-10-15T22:02:32.998Z",
-    "contributors": [
-      "Yukulele.",
-      "Seblor",
-      "loella16"
-    ]
-  },
   "Web/API/ParentNode/querySelector": {
     "modified": "2020-10-15T22:30:52.578Z",
     "contributors": [
@@ -35231,16 +35215,6 @@
       "wordsbybird"
     ]
   },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2020-10-15T21:40:07.710Z",
-    "contributors": [
-      "tristantheb",
-      "loella16",
-      "csblo",
-      "yasakura_",
-      "jmh"
-    ]
-  },
   "Web/Guide/Events": {
     "modified": "2020-08-30T07:20:46.985Z",
     "contributors": [
@@ -45334,6 +45308,32 @@
     "modified": "2019-03-18T21:39:15.409Z",
     "contributors": [
       "loella16"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/append": {
+    "modified": "2020-10-15T21:59:23.058Z",
+    "contributors": [
+      "Yukulele.",
+      "Watilin",
+      "ayshiff"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/prepend": {
+    "modified": "2020-10-15T22:02:32.998Z",
+    "contributors": [
+      "Yukulele.",
+      "Seblor",
+      "loella16"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2020-10-15T21:40:07.710Z",
+    "contributors": [
+      "tristantheb",
+      "loella16",
+      "csblo",
+      "yasakura_",
+      "jmh"
     ]
   }
 }

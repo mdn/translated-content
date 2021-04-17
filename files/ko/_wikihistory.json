@@ -5177,18 +5177,6 @@
       "ExE-Boss"
     ]
   },
-  "Web/API/ParentNode/append": {
-    "modified": "2020-10-15T22:23:54.799Z",
-    "contributors": [
-      "ChanMyeong"
-    ]
-  },
-  "Web/API/ParentNode/prepend": {
-    "modified": "2020-10-15T22:19:18.906Z",
-    "contributors": [
-      "JungSWon"
-    ]
-  },
   "Web/API/Performance": {
     "modified": "2020-10-15T21:53:34.737Z",
     "contributors": [
@@ -8850,12 +8838,6 @@
     "modified": "2019-03-23T23:03:35.888Z",
     "contributors": [
       "moolow"
-    ]
-  },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-18T21:13:18.844Z",
-    "contributors": [
-      "cs09g"
     ]
   },
   "Web/Guide/Events/Overview_of_Events_and_Handlers": {
@@ -18703,6 +18685,24 @@
     "modified": "2020-10-15T22:08:09.823Z",
     "contributors": [
       "whdckszxxx"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/append": {
+    "modified": "2020-10-15T22:23:54.799Z",
+    "contributors": [
+      "ChanMyeong"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/prepend": {
+    "modified": "2020-10-15T22:19:18.906Z",
+    "contributors": [
+      "JungSWon"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2019-03-18T21:13:18.844Z",
+    "contributors": [
+      "cs09g"
     ]
   }
 }

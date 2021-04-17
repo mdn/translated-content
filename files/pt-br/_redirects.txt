@@ -730,9 +730,10 @@
 /pt-BR/docs/Web/Guide/CSS/CSS_media_queries_(consultas_de_mídia_em_CSS)	/pt-BR/docs/orphaned/Web/Guide/CSS/CSS_media_queries_(consultas_de_mídia_em_CSS)
 /pt-BR/docs/Web/Guide/CSS/Scaling_background_images	/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /pt-BR/docs/Web/Guide/CSS/Understanding_z_index	/pt-BR/docs/Web/CSS/CSS_Positioning/Understanding_z_index
+/pt-BR/docs/Web/Guide/Events/Creating_and_triggering_events	/pt-BR/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /pt-BR/docs/Web/Guide/Events/Mutation_events	/pt-BR/docs/orphaned/Web/Guide/Events/Mutation_events
 /pt-BR/docs/Web/Guide/Events/Touch_events	/pt-BR/docs/Web/API/Touch_events
-/pt-BR/docs/Web/Guide/Events/criando_e_disparando_eventos	/pt-BR/docs/Web/Guide/Events/Creating_and_triggering_events
+/pt-BR/docs/Web/Guide/Events/criando_e_disparando_eventos	/pt-BR/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /pt-BR/docs/Web/Guide/Gráficos	/pt-BR/docs/Web/Guide/Graphics
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial	/pt-BR/docs/Web/API/Canvas_API/Tutorial
 /pt-BR/docs/Web/Guide/HTML/Canvas_tutorial/Advanced_animations	/pt-BR/docs/Web/API/Canvas_API/Tutorial/Advanced_animations

@@ -5865,12 +5865,6 @@
       "Sebastianz"
     ]
   },
-  "Web/API/ParentNode/append": {
-    "modified": "2020-10-15T22:24:28.452Z",
-    "contributors": [
-      "Kyuoraku"
-    ]
-  },
   "Web/API/Payment_Request_API": {
     "modified": "2020-10-15T22:33:12.666Z",
     "contributors": [
@@ -16501,16 +16495,6 @@
       "TibicenasDesign"
     ]
   },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-23T22:58:27.867Z",
-    "contributors": [
-      "gAval997",
-      "juanpablocarrillo",
-      "BrunoViera",
-      "enreda",
-      "Soid"
-    ]
-  },
   "Web/Guide/Events/Event_handlers": {
     "modified": "2020-08-01T23:47:25.815Z",
     "contributors": [
@@ -23742,6 +23726,22 @@
     "modified": "2019-03-23T22:32:39.974Z",
     "contributors": [
       "Grijander81"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/append": {
+    "modified": "2020-10-15T22:24:28.452Z",
+    "contributors": [
+      "Kyuoraku"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2019-03-23T22:58:27.867Z",
+    "contributors": [
+      "gAval997",
+      "juanpablocarrillo",
+      "BrunoViera",
+      "enreda",
+      "Soid"
     ]
   }
 }

@@ -10655,15 +10655,6 @@
       "Akustyk"
     ]
   },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-23T23:50:28.341Z",
-    "contributors": [
-      "khalid32",
-      "Mgjbot",
-      "Ptak82",
-      "Jan Dudek"
-    ]
-  },
   "conflicting/Web/API/Document_Object_Model_7d961b8030c6099ee907f4f4b5fe6b3d": {
     "modified": "2019-03-23T23:54:33.828Z",
     "contributors": [
@@ -11744,6 +11735,15 @@
     "modified": "2020-10-29T07:01:42.075Z",
     "contributors": [
       "dk333"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2019-03-23T23:50:28.341Z",
+    "contributors": [
+      "khalid32",
+      "Mgjbot",
+      "Ptak82",
+      "Jan Dudek"
     ]
   }
 }

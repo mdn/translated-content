@@ -3799,10 +3799,12 @@
 /fr/docs/Web/API/Node/nodePrincipal	/fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
 /fr/docs/Web/API/Node/prefix	/fr/docs/conflicting/Web/API/Element/prefix
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
+/fr/docs/Web/API/ParentNode/append	/fr/docs/orphaned/Web/API/ParentNode/append
 /fr/docs/Web/API/ParentNode/childElementCount	/fr/docs/Web/API/Element/childElementCount
 /fr/docs/Web/API/ParentNode/children	/fr/docs/orphaned/Web/API/ParentNode/children
 /fr/docs/Web/API/ParentNode/firstElementChild	/fr/docs/orphaned/Web/API/ParentNode/firstElementChild
 /fr/docs/Web/API/ParentNode/lastElementChild	/fr/docs/orphaned/Web/API/ParentNode/lastElementChild
+/fr/docs/Web/API/ParentNode/prepend	/fr/docs/orphaned/Web/API/ParentNode/prepend
 /fr/docs/Web/API/PasswordCredential/additionalData	/fr/docs/conflicting/Web/API/PasswordCredential
 /fr/docs/Web/API/PasswordCredential/idName	/fr/docs/conflicting/Web/API/PasswordCredential_cbf7b306e83a3f58ff06bccf89637c12
 /fr/docs/Web/API/PasswordCredential/passwordName	/fr/docs/conflicting/Web/API/PasswordCredential_bc57d5dfa87242b4fb83497887124f41
@@ -4416,7 +4418,7 @@
 /fr/docs/Web/Guide/CSS/Flexible_boxes	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /fr/docs/Web/Guide/DOM	/fr/docs/conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10
 /fr/docs/Web/Guide/DOM/Events	/fr/docs/Web/Guide/Events
-/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/fr/docs/Web/Guide/Events/Creating_and_triggering_events
+/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/fr/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /fr/docs/Web/Guide/DOM/Events/Les_données_d_orientation_et_de_mouvement_expliquées	/fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained
 /fr/docs/Web/Guide/DOM/Events/Touch_events	/fr/docs/Web/API/Touch_events
 /fr/docs/Web/Guide/DOM/Events/Touch_events/Gérer_à_la_fois_événement_tactile_et_événement_de_la_souris	/fr/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
@@ -4425,6 +4427,7 @@
 /fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur	/fr/docs/Web/API/History_API
 /fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur/Example	/fr/docs/Web/API/History_API/Example
 /fr/docs/Web/Guide/DOM/Using_full_screen_mode	/fr/docs/Web/API/Fullscreen_API
+/fr/docs/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /fr/docs/Web/Guide/Graphics/Dessiner_avec_canvas	/fr/docs/conflicting/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/Guide/HTML	/fr/docs/Learn/HTML
 /fr/docs/Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide	/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages

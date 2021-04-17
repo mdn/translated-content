@@ -1831,6 +1831,7 @@
 /es/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/es/docs/Web/API/Element/nextElementSibling
 /es/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/es/docs/Web/API/Element/previousElementSibling
 /es/docs/Web/API/Notifications_API/Usando_la_API_de_Notificaciones	/es/docs/Web/API/Notifications_API/Using_the_Notifications_API
+/es/docs/Web/API/ParentNode/append	/es/docs/orphaned/Web/API/ParentNode/append
 /es/docs/Web/API/ParentNode/childElementCount	/es/docs/Web/API/Element/childElementCount
 /es/docs/Web/API/ParentNode/children	/es/docs/orphaned/Web/API/ParentNode/children
 /es/docs/Web/API/ParentNode/firstElementChild	/es/docs/orphaned/Web/API/ParentNode/firstElementChild
@@ -2045,9 +2046,10 @@
 /es/docs/Web/Guide/CSS/probando_media_queries	/es/docs/Web/CSS/Media_Queries/Testing_media_queries
 /es/docs/Web/Guide/DOM	/es/docs/conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10
 /es/docs/Web/Guide/DOM/Events	/es/docs/Web/Guide/Events
-/es/docs/Web/Guide/DOM/Events/Creacion_y_Activación_Eventos	/es/docs/Web/Guide/Events/Creating_and_triggering_events
+/es/docs/Web/Guide/DOM/Events/Creacion_y_Activación_Eventos	/es/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /es/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained	/es/docs/Web/Guide/Events/Orientation_and_motion_data_explained
 /es/docs/Web/Guide/DOM/Events/eventos_controlador	/es/docs/Web/Guide/Events/Event_handlers
+/es/docs/Web/Guide/Events/Creating_and_triggering_events	/es/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /es/docs/Web/Guide/HTML	/es/docs/Learn/HTML
 /es/docs/Web/Guide/HTML/Canvas_tutorial	/es/docs/Web/API/Canvas_API/Tutorial
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Advanced_animations	/es/docs/Web/API/Canvas_API/Tutorial/Advanced_animations

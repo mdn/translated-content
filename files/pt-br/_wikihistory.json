@@ -15829,12 +15829,6 @@
       "MaxWilliamJF"
     ]
   },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-23T22:11:33.073Z",
-    "contributors": [
-      "JefersonOliveira90"
-    ]
-  },
   "Web/API/Touch_events": {
     "modified": "2019-03-23T23:21:11.070Z",
     "contributors": [
@@ -17366,6 +17360,12 @@
     "modified": "2019-03-23T22:19:42.340Z",
     "contributors": [
       "rafaelcavalcante"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2019-03-23T22:11:33.073Z",
+    "contributors": [
+      "JefersonOliveira90"
     ]
   }
 }

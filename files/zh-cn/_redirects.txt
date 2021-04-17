@@ -1728,10 +1728,12 @@
 /zh-CN/docs/Web/API/ParentNode.children	/zh-CN/docs/orphaned/Web/API/ParentNode/children
 /zh-CN/docs/Web/API/ParentNode.firstElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/firstElementChild
 /zh-CN/docs/Web/API/ParentNode.lastElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/lastElementChild
+/zh-CN/docs/Web/API/ParentNode/append	/zh-CN/docs/orphaned/Web/API/ParentNode/append
 /zh-CN/docs/Web/API/ParentNode/childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/ParentNode/children	/zh-CN/docs/orphaned/Web/API/ParentNode/children
 /zh-CN/docs/Web/API/ParentNode/firstElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/firstElementChild
 /zh-CN/docs/Web/API/ParentNode/lastElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/lastElementChild
+/zh-CN/docs/Web/API/ParentNode/prepend	/zh-CN/docs/orphaned/Web/API/ParentNode/prepend
 /zh-CN/docs/Web/API/Performance.now()	/zh-CN/docs/Web/API/Performance/now
 /zh-CN/docs/Web/API/Performance/内存	/zh-CN/docs/Web/API/Performance/memory
 /zh-CN/docs/Web/API/Position	/zh-CN/docs/Web/API/GeolocationPosition
@@ -2262,6 +2264,7 @@
 /zh-CN/docs/Web/Guide/CSS/媒体查询	/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries
 /zh-CN/docs/Web/Guide/DOM	/zh-CN/docs/conflicting/Web/API/Document_Object_Model_dd00a71ceceac547ab464128db6bd8ef
 /zh-CN/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/API/Document_Object_Model/Whitespace
+/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events	/zh-CN/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /zh-CN/docs/Web/Guide/Events/Media_events	/zh-CN/docs/orphaned/Web/Guide/Events/Media_events
 /zh-CN/docs/Web/Guide/Events/Mutation_events	/zh-CN/docs/orphaned/Web/Guide/Events/Mutation_events
 /zh-CN/docs/Web/Guide/Events/Touch_events	/zh-CN/docs/Web/API/Touch_events

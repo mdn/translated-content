@@ -16785,23 +16785,6 @@
       "AlexChao"
     ]
   },
-  "Web/API/ParentNode/append": {
-    "modified": "2020-10-15T21:51:11.120Z",
-    "contributors": [
-      "Ende93",
-      "zhangchen",
-      "xgqfrms-GitHub",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/ParentNode/prepend": {
-    "modified": "2020-10-15T21:52:00.307Z",
-    "contributors": [
-      "Ende93",
-      "zhuangyin",
-      "maicss"
-    ]
-  },
   "Web/API/ParentNode/querySelector": {
     "modified": "2020-10-15T22:11:37.961Z",
     "contributors": [
@@ -28801,24 +28784,6 @@
       "NoDocCat",
       "Tankunpeng",
       "Jeremie"
-    ]
-  },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2020-05-27T10:29:01.846Z",
-    "contributors": [
-      "Carllllo",
-      "xingleizhao",
-      "but0n",
-      "zhangchen",
-      "LuSitong",
-      "Iamxiaozhu",
-      "ucev",
-      "xgqfrms-GitHub",
-      "ZhengYinBo",
-      "carllx",
-      "timwangdev",
-      "FredWe",
-      "ReyCG_sub"
     ]
   },
   "Web/Guide/Events/Event_handlers": {
@@ -50797,6 +50762,41 @@
       "teoli",
       "khalid32",
       "ziyunfei"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/append": {
+    "modified": "2020-10-15T21:51:11.120Z",
+    "contributors": [
+      "Ende93",
+      "zhangchen",
+      "xgqfrms-GitHub",
+      "ziyunfei"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/prepend": {
+    "modified": "2020-10-15T21:52:00.307Z",
+    "contributors": [
+      "Ende93",
+      "zhuangyin",
+      "maicss"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2020-05-27T10:29:01.846Z",
+    "contributors": [
+      "Carllllo",
+      "xingleizhao",
+      "but0n",
+      "zhangchen",
+      "LuSitong",
+      "Iamxiaozhu",
+      "ucev",
+      "xgqfrms-GitHub",
+      "ZhengYinBo",
+      "carllx",
+      "timwangdev",
+      "FredWe",
+      "ReyCG_sub"
     ]
   }
 }

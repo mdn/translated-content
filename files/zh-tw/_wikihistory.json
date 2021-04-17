@@ -5291,13 +5291,6 @@
       "gportioli"
     ]
   },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-23T22:48:01.128Z",
-    "contributors": [
-      "jackblackevo",
-      "Shiyou"
-    ]
-  },
   "Web/Guide/Events/Event_handlers": {
     "modified": "2020-05-13T00:05:39.122Z",
     "contributors": [
@@ -9151,6 +9144,13 @@
     "modified": "2020-10-15T22:25:38.862Z",
     "contributors": [
       "ianchen0119"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2019-03-23T22:48:01.128Z",
+    "contributors": [
+      "jackblackevo",
+      "Shiyou"
     ]
   }
 }

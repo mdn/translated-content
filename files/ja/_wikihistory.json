@@ -19087,21 +19087,6 @@
       "YuichiNukiyama"
     ]
   },
-  "Web/API/ParentNode/append": {
-    "modified": "2020-10-15T22:19:11.886Z",
-    "contributors": [
-      "mfuji09",
-      "dskymd",
-      "isdh"
-    ]
-  },
-  "Web/API/ParentNode/prepend": {
-    "modified": "2020-10-15T22:22:02.876Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
   "Web/API/ParentNode/querySelectorAll": {
     "modified": "2020-10-15T22:26:50.502Z",
     "contributors": [
@@ -32570,13 +32555,6 @@
       "Sheppy"
     ]
   },
-  "Web/Events/Index": {
-    "modified": "2019-01-17T03:54:54.751Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
   "Web/Guide": {
     "modified": "2020-01-12T11:59:05.782Z",
     "contributors": [
@@ -32722,18 +32700,6 @@
     "contributors": [
       "mfuji09",
       "gportioli"
-    ]
-  },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2019-10-27T15:17:19.485Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "unarist",
-      "dskmori",
-      "ShotaCoffee",
-      "y4m4to",
-      "lv7777"
     ]
   },
   "Web/Guide/Events/Event_handlers": {
@@ -53495,6 +53461,40 @@
     "contributors": [
       "segayuu",
       "sii"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/append": {
+    "modified": "2020-10-15T22:19:11.886Z",
+    "contributors": [
+      "mfuji09",
+      "dskymd",
+      "isdh"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/prepend": {
+    "modified": "2020-10-15T22:22:02.876Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto"
+    ]
+  },
+  "orphaned/Web/Events/Index": {
+    "modified": "2019-01-17T03:54:54.751Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2019-10-27T15:17:19.485Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "unarist",
+      "dskmori",
+      "ShotaCoffee",
+      "y4m4to",
+      "lv7777"
     ]
   }
 }

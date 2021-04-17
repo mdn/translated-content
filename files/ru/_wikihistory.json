@@ -6819,22 +6819,6 @@
       "fscholz"
     ]
   },
-  "Web/API/ParentNode/append": {
-    "modified": "2020-10-15T22:10:43.295Z",
-    "contributors": [
-      "7nik",
-      "chrisdavidmills",
-      "KonstantinBuza",
-      "madebydima"
-    ]
-  },
-  "Web/API/ParentNode/prepend": {
-    "modified": "2020-10-15T22:20:07.127Z",
-    "contributors": [
-      "RenJeka",
-      "pronskiy"
-    ]
-  },
   "Web/API/PaymentRequest": {
     "modified": "2020-10-15T22:32:45.030Z",
     "contributors": [
@@ -22409,18 +22393,6 @@
       "ViT09"
     ]
   },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2020-10-15T21:31:20.093Z",
-    "contributors": [
-      "YozhEzhi",
-      "leann-fraoigh",
-      "Solant",
-      "bagau",
-      "pk.prog",
-      "lazyexpert",
-      "YuryT"
-    ]
-  },
   "Web/API/HTML_Drag_and_Drop_API/Drag_operations": {
     "modified": "2020-02-05T06:07:31.464Z",
     "contributors": [
@@ -25987,6 +25959,34 @@
     "contributors": [
       "Yialo",
       "Waakym"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/append": {
+    "modified": "2020-10-15T22:10:43.295Z",
+    "contributors": [
+      "7nik",
+      "chrisdavidmills",
+      "KonstantinBuza",
+      "madebydima"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/prepend": {
+    "modified": "2020-10-15T22:20:07.127Z",
+    "contributors": [
+      "RenJeka",
+      "pronskiy"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2020-10-15T21:31:20.093Z",
+    "contributors": [
+      "YozhEzhi",
+      "leann-fraoigh",
+      "Solant",
+      "bagau",
+      "pk.prog",
+      "lazyexpert",
+      "YuryT"
     ]
   }
 }

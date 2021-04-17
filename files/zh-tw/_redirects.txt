@@ -644,6 +644,7 @@
 /zh-TW/docs/Web/Guide/DOM	/zh-TW/docs/conflicting/Web/API/Document_Object_Model
 /zh-TW/docs/Web/Guide/DOM/Manipulating_the_browser_history	/zh-TW/docs/Web/API/History_API
 /zh-TW/docs/Web/Guide/DOM/Using_full_screen_mode	/zh-TW/docs/Web/API/Fullscreen_API
+/zh-TW/docs/Web/Guide/Events/Creating_and_triggering_events	/zh-TW/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /zh-TW/docs/Web/Guide/HTML	/zh-TW/docs/Learn/HTML
 /zh-TW/docs/Web/Guide/HTML/Canvas_tutorial	/zh-TW/docs/Web/API/Canvas_API/Tutorial
 /zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors

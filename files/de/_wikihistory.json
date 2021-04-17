@@ -6763,12 +6763,6 @@
       "gportioli"
     ]
   },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-18T20:36:47.550Z",
-    "contributors": [
-      "td8"
-    ]
-  },
   "Web/Guide/Graphics": {
     "modified": "2019-03-23T23:05:58.536Z",
     "contributors": [
@@ -14836,6 +14830,12 @@
       "TornadoIDS",
       "fscholz",
       "Mrueegg"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2019-03-18T20:36:47.550Z",
+    "contributors": [
+      "td8"
     ]
   }
 }
