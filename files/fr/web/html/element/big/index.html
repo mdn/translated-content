@@ -16,7 +16,7 @@ translation_of: Web/HTML/Element/big
   <p>Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.</p>
 </div>
 
-<p class="summary">L'élément <strong><code>&lt;big&gt;</code></strong> (gros) augmente d'une taille la police du texte de l'élément (il permet par exemple de passer de <code>small</code> à <code>medium</code>, ou de <code>large</code> à <code>x-large</code>) jusqu'à atteindre la taille maximale autorisée du navigateur.</p>
+<p class="summary">L'élément <strong><code>&lt;big&gt;</code></strong> (gros) augmente d'une taille la police du texte de l'élément (il permet par exemple de passer de <code>small</code> à <code>medium</code>, ou de <code>large</code> à <code>x-large</code>) jusqu'à atteindre la taille maximale autorisée par le navigateur.</p>
 
 <div class="notecard note">
   <p><b>Note d'utilisation :</b></p>
@@ -31,19 +31,21 @@ translation_of: Web/HTML/Element/big
 
 <p>Nous voyons ici des exemples montrant l'utilisation de <code>&lt;big&gt;</code> suivis d'un exemple montrant comment obtenir les mêmes résultats en utilisant plutôt la syntaxe CSS moderne.</p>
 
-<h3 id="using_big">Utilisation de <code>&lt;big&gt;</code></h3>
+<h3 id="using_&lt;big&gt;">Utilisation de <code>&lt;big&gt;</code></h3>
 
-<p>This example uses the obsolete <code>&lt;big&gt;</code> element to increase the size of some text.</p>
+<div id="using_big">
+<p>Dans cet exemple, on utilise l'élément obsolète <code>&lt;big&gt;</code> afin d'augmenter la taille du texte.</p>
 
 <h4 id="html">HTML</h4>
 
 <pre class="brush: html">&lt;p&gt;
-  C'est la première phrase. &lt;big&gt;Cette phrase entière phrase est en plus gros caractères.&lt;/big&gt;
+  C'est la première phrase. &lt;big&gt;Cette phrase
+  entière phrase est en plus gros caractères.&lt;/big&gt;
 &lt;/p&gt;</pre>
-
+</div>
 <h4 id="result">Résultat</h4>
 
-{{EmbedLiveSample("using_big", "", 100)}}
+{{EmbedLiveSample("using_big", "", 110)}}
 
 <h3 id="using_css_font-size">Utilisation de la propriété CSS <code>font-size</code></h3>
 
@@ -58,7 +60,8 @@ translation_of: Web/HTML/Element/big
 <h4 id="html_2">HTML</h4>
 
 <pre class="brush: html">&lt;p&gt;
-  C'est la première phrase. &lt;span class="bigger"&gt;Cette phrase entière est en plus grosses lettres.&lt;/span&gt;
+  C'est la première phrase. &lt;span class="bigger"&gt;Cette phrase
+  entière est écrite en plus grosses lettres.&lt;/span&gt;
 &lt;/p&gt;</pre>
 
 <h4 id="result_2">Résultat</h4>
@@ -83,5 +86,5 @@ translation_of: Web/HTML/Element/big
 <ul>
   <li>CSS : <a href="/fr/docs/Web/CSS/font-size"><code>font-size</code></a>, <a href="/fr/docs/Web/CSS/font"><code>font</code></a></li>
   <li>HTML : <a href="/fr/docs/Web/HTML/Element/small"><code>&lt;small&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/font"><code>&lt;font&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a></li>
- <li>Spécification HTML 4.01 sur <a class="external" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.2">la mise en forme des polices</a></li>
+ <li>Spécification HTML 4.01 sur <a class="external" href="http://www.w3.org/TR/html4/present/graphics.html#h-15.2">la mise en forme utilisant les polices</a></li>
 </ul>
