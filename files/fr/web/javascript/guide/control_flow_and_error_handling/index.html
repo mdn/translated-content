@@ -97,7 +97,7 @@ console.log(x); // affichera 2
 }
 </pre>
 
-<div>Attention à ne pas utiliser des intructions d'affectation dans les expressions conditionnelles. On peut, en effet, très facilement confondre l'affectation et le test d'égalité en lisant le code. Voici un exemple de ce qu'il ne faut <strong>pas</strong> faire :</div>
+<div>Attention à ne pas utiliser des instructions d'affectation dans les expressions conditionnelles. On peut, en effet, très facilement confondre l'affectation et le test d'égalité en lisant le code. Voici un exemple de ce qu'il ne faut <strong>pas</strong> faire :</div>
 
 <pre class="example-bad brush: js">if (x = y) {
   /* exécuter des instructions */
@@ -111,7 +111,7 @@ console.log(x); // affichera 2
 }
 </pre>
 
-<h4 id="Valeurs_équivalents_à_false_dans_un_contexte_booléen_falsy_values">Valeurs équivalents à false dans un contexte booléen (<em>falsy</em> values)</h4>
+<h4 id="Valeurs_équivalents_à_false_dans_un_contexte_booléen_falsy_values">Valeurs équivalentes à false dans un contexte booléen (<em>falsy</em> values)</h4>
 
 <p>Lors d'un test, les valeurs suivantes seront considérées comme équivalentes à <code>false</code> :</p>
 
@@ -126,7 +126,7 @@ console.log(x); // affichera 2
 
 <p>Les autres valeurs, y compris les objets, seront équivalents à <code>true</code>.</p>
 
-<p>Attention à ne pas confondre les valeurs booléennes « primitives » <code>true</code> et <code>false</code> avec les valeurs crées grâce à un objet <a href="/fr/docs/JavaScript/Reference/Objets_globaux/Boolean"><code>Boolean</code></a>. Par exemple, on aura :</p>
+<p>Attention à ne pas confondre les valeurs booléennes « primitives » <code>true</code> et <code>false</code> avec les valeurs créées grâce à un objet <a href="/fr/docs/JavaScript/Reference/Objets_globaux/Boolean"><code>Boolean</code></a>. Par exemple, on aura :</p>
 
 <pre class="brush: js">var b = new Boolean(false);
 if (b) // cette condition est bien vérifiée !
@@ -176,7 +176,7 @@ if (b === true) // cette condition n'est pas vérifiée !
 <p>L'instruction optionnelle <code>break</code>, éventuellement contenue pour chaque clause <code>case</code>, permet de ne pas exécuter les instructions pour les cas suivants. Si <code>break</code> n'est pas utilisé, le programme continuera son exécution avec les autres instructions contenues dans l'instruction <code>switch</code>.</p>
 
 <p><strong>Exemple</strong><br>
- Dans l'exemple suivant, si <code>fruit</code> vaut "Banane", le programme exécutera les instructions associées. Quand <code>break</code> est rencontré, le programme passe aux instructions décrites après <code>switch</code>. Ici, si <code>break</code> n'était pas présent, les instructions pour le cas "Cerise" aurait également été exécutées.</p>
+ Dans l'exemple suivant, si <code>fruit</code> vaut "Banane", le programme exécutera les instructions associées. Quand <code>break</code> est rencontré, le programme passe aux instructions décrites après <code>switch</code>. Ici, si <code>break</code> n'était pas présent, les instructions pour le cas "Cerise" auraient également été exécutées.</p>
 
 <pre class="brush: js">switch (fruit) {
   case "Orange":
@@ -332,7 +332,7 @@ try {
 }
 </pre>
 
-<p>Si le bloc <code>finally</code> renvoie une valeur, cette valeur sera considérée comme la valeur de retour pour tout l'ensemble <code>try-catch-finally</code>, quel que soient les instructions <code>return</code> éventuellement utilisées dans les blocs <code>try</code> et <code>catch</code> :</p>
+<p>Si le bloc <code>finally</code> renvoie une valeur, cette valeur sera considérée comme la valeur de retour pour tout l'ensemble <code>try-catch-finally</code>, quelles que soient les instructions <code>return</code> éventuellement utilisées dans les blocs <code>try</code> et <code>catch</code> :</p>
 
 <pre class="brush: js">function f() {
   try {
