@@ -2,12 +2,13 @@
 title: <slot>
 slug: Web/HTML/Element/slot
 tags:
+  - Element
   - HTML
-  - HTML ウェブコンポーネント
+  - HTML Web Components
   - Reference
-  - ウェブコンポーネント
-  - シャドウ DOM
-  - 要素
+  - Web Components
+  - shadow dom
+  - slot
 translation_of: Web/HTML/Element/slot
 ---
 <div>{{HTMLRef}}</div>
@@ -17,12 +18,12 @@ translation_of: Web/HTML/Element/slot
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a></td>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a></td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Transparent_content_model">透過的コンテンツ</a></td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#transparent_content_model">透過的コンテンツ</a></td>
   </tr>
   <tr>
    <th scope="row">イベント</th>
@@ -34,11 +35,15 @@ translation_of: Web/HTML/Element/slot
   </tr>
   <tr>
    <th scope="row">許可されている親要素</th>
-   <td>Any element that accepts <a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a></td>
+   <td>Any element that accepts <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a></td>
+  </tr>
+  <tr>
+   <th scope="row">暗黙の ARIA ロール</th>
+   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
   </tr>
   <tr>
    <th scope="row">許可されている ARIA ロール</th>
-   <td>なし</td>
+   <td>許可されている <code>role</code> なし</td>
   </tr>
   <tr>
    <th scope="row">DOM インターフェイス</th>
@@ -47,7 +52,7 @@ translation_of: Web/HTML/Element/slot
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
 <p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
 
@@ -57,7 +62,7 @@ translation_of: Web/HTML/Element/slot
  <dd><strong><dfn>名前付きスロット</dfn></strong>は、 <code>&lt;slot&gt;</code> 要素に <code>name</code> 属性が付きます。</dd>
 </dl>
 
-<h2 id="例">例</h2>
+<h2 id="Examples">例</h2>
 
 <pre class="brush: html">&lt;template id="element-details-template"&gt;
   &lt;style&gt;
@@ -88,10 +93,10 @@ translation_of: Web/HTML/Element/slot
 &lt;/template&gt;</pre>
 
 <div class="note">
-<p><strong>メモ</strong>: この完全な例は、<a class="external external-icon" href="https://github.com/mdn/web-components-examples/tree/master/element-details" rel="noopener">要素の詳細</a>で実際に動作しています (<a class="external external-icon" href="https://mdn.github.io/web-components-examples/element-details/" rel="noopener">running live</a>ライブ実行もご覧ください)。また、<a href="/ja/docs/Web/Web_Components/Using_templates_and_slots">テンプレートとスロットの利用</a>にも説明があります。</p>
+<p><strong>メモ</strong>: この完全な例は、<a class="external external-icon" href="https://github.com/mdn/web-components-examples/tree/master/element-details" rel="noopener">要素の詳細</a>で実際に動作しています (<a class="external external-icon" href="https://mdn.github.io/web-components-examples/element-details/" rel="noopener">ライブ実行</a>もご覧ください)。また、<a href="/ja/docs/Web/Web_Components/Using_templates_and_slots">テンプレートとスロットの利用</a>にも説明があります。</p>
 </div>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -115,8 +120,6 @@ translation_of: Web/HTML/Element/slot
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性表は構造化データから作成されています。データに協力したい場合は、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送ってください。</div>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("html.elements.slot")}}</p>
