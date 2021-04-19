@@ -27,18 +27,18 @@ translation_of: Web/Guide/AJAX
  <ul>
   <li><a href="/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#handling_responses">サーバーのレスポンスの分析と操作</a></li>
   <li><a href="/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#monitoring_progress">リクエストの進捗のモニタリング</a></li>
-  <li><a href="/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files">フォームの送信とバイナリファイルのアップロード</a> – <em>純粋な</em> Ajax、もしくは {{domxref("FormData")}} オブジェクトを使用します</li>
+  <li><a href="/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#submitting_forms_and_uploading_files">フォームの送信とバイナリーファイルのアップロード</a> – <em>純粋な</em> Ajax、もしくは {{domxref("FormData")}} オブジェクトを使用します</li>
   <li><a href="/ja/docs/Web/API/Worker">ウェブワーカー</a>内部における Ajax の使用</li>
  </ul>
  </dd>
  <dt><a href="/ja/docs/Web/API/Fetch_API">Fetch API</a></dt>
  <dd>Fetch API はリソースをフェッチするためのインターフェイスを提供します。 {{domxref("XMLHTTPRequest")}} を使用した人なら誰にでも馴染みのあるように見えますが、この API はより強力で柔軟な機能セットを提供します。</dd>
  <dt><a href="/ja/docs/Web/API/Server-sent_events">Server-sent イベント</a></dt>
- <dd>伝統的に、ウェブページは新しいデータを受信するためにサーバにリクエストを送信しなければなりません。つまり、ページはサーバにデータを要求します。サーバが送信したイベントでは、サーバがメッセージをウェブページにプッシュすることで、いつでもウェブページに新しいデータを送信することができます。これらの着信メッセージは、ウェブページ内の<em><a href="/ja/docs/Web/API/Event">イベント</a>+データ</em>として扱うことができます。<a href="/ja/docs/Web/API/Server-sent_events/Using_server-sent_events">サーバー送信イベントの使用</a>を参照してください。</dd>
+ <dd>伝統的に、ウェブページは新しいデータを受信するためにサーバーにリクエストを送信しなければなりません。つまり、ページはサーバーにデータを要求します。サーバーが送信したイベントでは、サーバーがメッセージをウェブページにプッシュすることで、いつでもウェブページに新しいデータを送信することができます。これらの着信メッセージは、ウェブページ内の<em><a href="/ja/docs/Web/API/Event">イベント</a>+データ</em>として扱うことができます。<a href="/ja/docs/Web/API/Server-sent_events/Using_server-sent_events">サーバー送信イベントの使用</a>を参照してください。</dd>
  <dt><a href="/ja/docs/Web/API/History_API/Example"><em>純粋な Ajax</em> ナビゲーションサンプル</a></dt>
  <dd>この記事では、<em>純粋な Ajax</em> ウェブサイトの3つのページから構成された実用的な (最小限の) 例を提供します。</dd>
- <dt><a href="/ja/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data">バイナリデータの送信と受信</a></dt>
- <dd><code>XMLHttpRequest</code> オブジェクトの <code>responseType</code> プロパティを設定して、予想されるレスポンスタイプをサーバから変更することができます。可能な値は空文字列 (デフォルト), <code>arraybuffer</code>, <code>blob</code>, <code>document</code>, <code>json</code>, <code>text</code> です。<code>response</code> のプロパティには、 <code>responseType</code> に従って <code>ArrayBuffer</code>, <code>Blob</code>, <code>Document</code>, <code>JSON</code>、または string のようなエンティティ本文が含まれます。この記事では、Ajax の I/O 技術をいくつか紹介します。</dd>
+ <dt><a href="/ja/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data">バイナリーデータの送信と受信</a></dt>
+ <dd><code>XMLHttpRequest</code> オブジェクトの <code>responseType</code> プロパティを設定して、予想されるレスポンスタイプをサーバーから変更することができます。可能な値は空文字列 (デフォルト), <code>arraybuffer</code>, <code>blob</code>, <code>document</code>, <code>json</code>, <code>text</code> です。<code>response</code> のプロパティには、 <code>responseType</code> に従って <code>ArrayBuffer</code>, <code>Blob</code>, <code>Document</code>, <code>JSON</code>、または string のようなエンティティ本文が含まれます。この記事では、Ajax の I/O 技術をいくつか紹介します。</dd>
  <dt><a href="/ja/docs/Web/XML">XML</a></dt>
  <dd><strong>Extensible Markup Language (XML)</strong> は、特定の目的のマークアップ言語を作成する W3C 推奨の汎用マークアップ言語です。これは SGML の単純化されたサブセットであり、多くの異なる種類のデータを記述することができます。その主な目的は、異なるシステム、特にインターネットを介して接続されたシステム間でのデータの共有を容易にすることです。</dd>
  <dt><a href="/ja/docs/Web/Guide/Parsing_and_serializing_XML">XML の解釈とシリアライズ</a></dt>
