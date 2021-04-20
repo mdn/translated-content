@@ -64,13 +64,13 @@ translation_of: Web/HTML/Element/caption
   <dd>Cet attribut à valeur contrainte indique l'alignement de la légende du tableau par rapport au tableau lui-même. Il peut valoir :
   <dl>
     <dt><code>left</code></dt>
-    <dd>pour un affichage à gauche du tableau</dd>
+    <dd>La légende est affichée à gauche du tableau</dd>
     <dt><code>top</code></dt>
-    <dd>pour un affichage au dessus du tableau</dd>
+    <dd>La légende est affichée au-dessus du tableau</dd>
     <dt><code>right</code></dt>
-    <dd>pour un affichage à droite du tableau</dd>
+    <dd>La légende est affichée à droite du tableau</dd>
     <dt><code>bottom</code></dt>
-    <dd>pour un affichage en dessous du tableau</dd>
+    <dd>La légende est affichée en dessous du tableau</dd>
   </dl>
 
   <div class="notecard note">
@@ -82,7 +82,7 @@ translation_of: Web/HTML/Element/caption
 
 <h2 id="usage_notes">Notes d'utilisation</h2>
 
-<p>Quand l'élément <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a> (étant le parent de l'élément <a href="/fr/docs/Web/HTML/Element/caption"><code>&lt;caption&gt;</code></a>) n'est que l'unique descendant d'un élément <a href="/fr/docs/Web/HTML/Element/figure"><code>&lt;figure&gt;</code></a>,c'est l'élément <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&lt;figcaption&gt;</code></a> doit être utilisé.</p>
+<p>Quand l'élément <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a> (étant le parent de l'élément <a href="/fr/docs/Web/HTML/Element/caption"><code>&lt;caption&gt;</code></a>) n'est que l'unique descendant d'un élément <a href="/fr/docs/Web/HTML/Element/figure"><code>&lt;figure&gt;</code></a>, c'est l'élément <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&lt;figcaption&gt;</code></a> doit être utilisé.</p>
 
 <h2 id="example">Exemple</h2>
 
@@ -123,7 +123,7 @@ translation_of: Web/HTML/Element/caption
 
 <p>{{EmbedLiveSample('example', '', 120)}}</p>
 
-<p>L'utilisation de <code>table {background : red;}</code> ne modifie pas la légende. Pour cela il faut <code>display: block</code>.</p>
+<p>L'utilisation du CSS <code>table {background : red;}</code> ne modifiera pas la légende. Pour cela il faudra lui appliquer <code>display: block</code>.</p>
 
 <h2 id="specifications">Spécifications</h2>
 
@@ -161,9 +161,10 @@ translation_of: Web/HTML/Element/caption
 <h2 id="see_also">Voir aussi</h2>
 
 <ul>
-  <li>Les propriétés CSS qui peuvent être particulièrement utiles pour styliser l'élément <a href="/fr/docs/Web/HTML/Element/caption"><code>&lt;caption&gt;</code></a> :
+  <li>Les propriétés CSS particulièrement utiles pour styliser l'élément <a href="/fr/docs/Web/HTML/Element/caption"><code>&lt;caption&gt;</code></a> :
    <ul>
-    <li><a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a>, <a href="/fr/docs/Web/CSS/caption-side"><code>caption-side</code></a>.</li>
+    <li><a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a></li>
+    <li><a href="/fr/docs/Web/CSS/caption-side"><code>caption-side</code></a>.</li>
    </ul>
   </li>
  </ul>
