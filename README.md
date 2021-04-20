@@ -123,8 +123,8 @@ and common actions such as [adding](https://github.com/mdn/content#adding-a-new-
 It is the responsibility of the active community maintenance team for each
 active locale to keep up-to-date with reviews of pull requests and handling
 issues filed against that locale. You can filter the relevant pull requests and
-issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`, `l10n-ko`, `l10n-ru`,
-and `l10n-zh`.
+issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`, 
+`l10n-ko`, `l10n-ru`, and `l10n-zh`.
 
 The review teams for each locale are:
 
