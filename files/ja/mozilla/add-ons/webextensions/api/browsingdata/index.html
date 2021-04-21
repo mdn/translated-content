@@ -17,14 +17,14 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 <p> <code>browsingData</code> APIでは、ブラウズデータは下記の型に分けられます:</p>
 
 <ul>
- <li>{{原語併記("browser cache", "ブラウザーキャッシュ")}}</li>
+ <li>("browser cache") ブラウザーキャッシュ</li>
  <li>cookies</li>
- <li>{{原語併記("downloads", "ダウンロードデータ")}}</li>
- <li>{{原語併記("history", "履歴")}}</li>
- <li>{{原語併記("local storage", "ローカルストレージ")}}</li>
- <li>{{原語併記("plugin data", "プラグインのデータ")}}</li>
- <li>{{原語併記("saved form data", "保存したフォームデータ")}}</li>
- <li>{{原語併記("saved passwords", "保存したパスワード")}}</li>
+ <li>("downloads") ダウンロードデータ</li>
+ <li>("history") 履歴</li>
+ <li>("local storage") ローカルストレージ</li>
+ <li>("plugin data") プラグインのデータ</li>
+ <li>("saved form data") 保存したフォームデータ</li>
+ <li>("saved passwords") 保存したパスワード</li>
 </ul>
 
 <p>これらの型の組み合わせを削除するのに {{WebExtAPIRef("browsingData.remove()")}} 関数を使用できます。それぞれのデータ型を削除する専用関数もあり、例えば {{WebExtAPIRef("browsingData.removePasswords()", "removePasswords()")}}, {{WebExtAPIRef("browsingData.removeHistory()", "removeHistory()")}} などです。</p>

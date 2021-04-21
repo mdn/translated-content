@@ -26,13 +26,9 @@ original_slug: WebSockets
 <h3 id="Notas_para_Gecko"><span><span style="">Notas para Gecko</span></span></h3>
 <p><span><span style="">El soporte de WebSockets en Firefox sigue de cerca el desarrollo de la especificación WebSocket.</span></span> <span><span style="">Firefox 6 implementa la versión 7 del protocolo subyacente, mientras que Firefox 7 implementa la versión 8 (según lo especificado por el borrador 10 de IETF).</span></span> <span><span style="">Firefox Mobile recibió el soporte de WebSocket en Firefox móvil 7.0.</span></span></p>
 <div class="geckoVersionNote">
-<p><span><span style="">{{ gecko_callout_heading("6.0") }}</span></span></p>
 <p><span><span style="">Antes de Gecko 6.0 {{ geckoRelease ("6,0 ") }}, hubo, incorrectamente, un objeto <code>WebSocket</code> que algunos sitios creyeron que implicaba que los servicios <code>WebSocket</code> no estaban prefijados. Este objeto se ha cambiado a <code>MozWebSocket</code> .</span></span></p>
 </div>
 <div class="geckoVersionNote">
-<p><span><span style="">{{ gecko_callout_heading("7.0") }}</span></span></p>
 <p><span><span style="">A partir de Gecko 7.0 {{ geckoRelease ("7,0 ") }}, la preferencia <code>network.websocket.max-connections</code> se usa para determinar el número máximo de conexiones WebSocket que pueden estar abiertas a la vez.</span></span> <span><span style="">El valor predeterminado es 200.</span></span></p>
 </div>
 <div class="warning"><span><span style="">Advertencia: entre otras cosas, una razón clave por la que WebSockets está desactivado por defecto es el descubrimiento de un <a class=" external" href="http://www.ietf.org/mail-archive/web/hybi/current/msg04744.html" title="http://www.ietf.org/mail-archive/web/hybi/current/msg04744.html">problema de seguridad en el diseño del protocolo</a>.</span></span> <span><span style="">En este momento no se recomienda utilizar WebSockets en las versiones de Firefox en un entorno de producción.</span></span> <span><span style="">Si aun así deseas experimentar con WebSockets, puedes hacerlo abriendo about: config y estableciendo la preferencia network.websocket.enabled en true.</span></span> <span><span style="">También tendrás que establecer la preferencia network.websocket.override-security-block en true para permitir la inicialización de una conexión WebSocket.</span></span></div>
-<p><span><span style="">{{ HTML5ArticleTOC () }}</span></span></p>
-<p><span><span style="">{{ languages ( {"en": "en/WebSockets", "zh-tw": "zh_tw/WebSockets"} ) }}</span></span></p>

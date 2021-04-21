@@ -16,16 +16,16 @@ original_slug: Web/Guide/Events/Orientation_and_motion_data_explained
 <p>{{ Draft() }}</p>
 <p>方向や動きのイベントを使用するときは、ブラウザから与えられる値の意味を理解することが重要です。この記事では操作時の座標システムに関する詳細情報と、それらの使い方を説明します。</p>
 <h2 id="About_coordinate_frames" name="About_coordinate_frames">座標フレームについて</h2>
-<p><strong>{{原語併記("座標フレーム", "coordinate frame")}}</strong> は、オブジェクトに関する 3 軸 (X、Y、Z) の方向が定義されているシステムです。方向や動きのイベントを使用するときに考慮する座標フレームは 2 つあります:</p>
+<p><strong>座標フレーム ("coordinate frame")</strong> は、オブジェクトに関する 3 軸 (X、Y、Z) の方向が定義されているシステムです。方向や動きのイベントを使用するときに考慮する座標フレームは 2 つあります:</p>
 <h3 id="Earth_coordinate_frame" name="Earth_coordinate_frame">地球座標フレーム</h3>
-<p>{{原語併記("地球座標フレーム", "Earth coordinate frame")}} は、地球の中心に固定されている座標フレームです。すなわち、軸は重力によって引かれる力および標準的な磁北方向に基づいて揃えられます。私たちは大文字 ("X"、"Y"、"Z") を、地球座標フレームの軸を示すために使用します。</p>
+<p>地球座標フレーム ("Earth coordinate frame") は、地球の中心に固定されている座標フレームです。すなわち、軸は重力によって引かれる力および標準的な磁北方向に基づいて揃えられます。私たちは大文字 ("X"、"Y"、"Z") を、地球座標フレームの軸を示すために使用します。</p>
 <ul>
   <li><strong>X</strong> 軸は地面に沿ってたどり、Y 軸と直交します。また、軸の正の方向が東を指します (従って、負の方向は西を指します)。</li>
   <li><strong>Y</strong> 軸は地面に沿ってたどり、正の方向が真北 (すなわち北極であり、磁北ではありません) を、負の方向が真南を指します。</li>
   <li><strong>Z</strong> 軸は地面に直交します。これは、デバイスと地球の中心との間に引かれた線と考えてください。Z 座標の値は正の方向が上向き (地球の中心から遠ざかる)、負の方向が下向き (地球の中心に向かう) です。</li>
 </ul>
 <h3 id="Device_coordinate_frame" name="Device_coordinate_frame">デバイス座標フレーム</h3>
-<p>{{原語併記("デバイス座標フレーム", "Device coordinate frame")}} は、デバイスの中心に固定された座標フレームです。私たちは小文字 ("x"、"y"、"z") を、デバイス座標フレームの軸を示すために使用します。</p>
+<p>デバイス座標フレーム ("Device coordinate frame") は、デバイスの中心に固定された座標フレームです。私たちは小文字 ("x"、"y"、"z") を、デバイス座標フレームの軸を示すために使用します。</p>
 <p><img alt="axes.png" class="internal default" src="/@api/deki/files/5694/=axes.png" style=""></p>
 <ul>
   <li><strong>x</strong> 軸はスクリーンの水平面にあり、正の方向が右を、負の方向が左を指します。</li>

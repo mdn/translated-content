@@ -134,7 +134,7 @@ translation_of: Web/SVG/Tutorial/Gradients
 
 <p>焦点が先に定義した円の外側に移動した場合はグラデーションを正しく描画することができませんので、焦点は円の縁にあるものとみなされるでしょう。また焦点を定義しない場合は、円の中心と同じ場所であるとみなします。</p>
 
-<p>どちらのグラデーションも、{{ 原語併記("変換", "Transformations") }}などさまざまなことを定義する属性を持ちます。その中で、ここで説明したい属性は <code>spreadMethod</code> です。この属性は、グラデーションが終端に達したにもかかわらずオブジェクトがすべて塗りつぶされていない場合にどうするかを制御します。この属性は "pad"、"reflect"、または "repeat" の 3 種類の値をとることができます。"pad" はこれまで見てきたものです。グラデーションが終端に達すると最後の offset の色を、オブジェクトの残りの部分の塗りつぶしに用います。"reflect" はグラデーションを継続しますが、offset が 100% の色から始まり 0% の色へ戻るように逆向きのグラデーションを行い、その後さらに逆向きのグラデーションを行います。"repeat" もグラデーションを継続しますが、逆向きにグラデーションするのではなく最初の色から再びグラデーションを始めます。</p>
+<p>どちらのグラデーションも、 変換 ("Transformations") などさまざまなことを定義する属性を持ちます。その中で、ここで説明したい属性は <code>spreadMethod</code> です。この属性は、グラデーションが終端に達したにもかかわらずオブジェクトがすべて塗りつぶされていない場合にどうするかを制御します。この属性は "pad"、"reflect"、または "repeat" の 3 種類の値をとることができます。"pad" はこれまで見てきたものです。グラデーションが終端に達すると最後の offset の色を、オブジェクトの残りの部分の塗りつぶしに用います。"reflect" はグラデーションを継続しますが、offset が 100% の色から始まり 0% の色へ戻るように逆向きのグラデーションを行い、その後さらに逆向きのグラデーションを行います。"repeat" もグラデーションを継続しますが、逆向きにグラデーションするのではなく最初の色から再びグラデーションを始めます。</p>
 
 <p><img alt="" class="internal" src="/@api/deki/files/353/=SVG_SpreadMethod_Example.png" style="float: right;"></p>
 
@@ -159,10 +159,8 @@ translation_of: Web/SVG/Tutorial/Gradients
 <pre class="eval"> &lt;radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse"&gt;
 </pre>
 
-<p><code>gradientTransform</code> 属性を用いてグラデーションを変換させることもできますが、まだ<a href="/ja/SVG/Tutorial/Basic_Transformations" title="ja/SVG/Tutorial/Basic Transformations">{{ 原語併記("変換", "Transformations") }}の紹介</a> を行っていないため、後で説明します。</p>
+<p><code>gradientTransform</code> 属性を用いてグラデーションを変換させることもできますが、まだ<a href="/ja/SVG/Tutorial/Basic_Transformations" title="ja/SVG/Tutorial/Basic Transformations">変換 ("Transformations") の紹介</a> を行っていないため、後で説明します。</p>
 
 <p>以上の他に、オブジェクトを包み込むボックスが長方形ではない場合に <code>gradientUnits="objectBoundingBox"</code> で値を扱うときの注意事項がありますが、それらはやや複雑であり、またそれの説明に詳しい方が現れるのを待たなければなりません。</p>
 
 <p>{{ PreviousNext("SVG/Tutorial/Fills_and_Strokes", "SVG/Tutorial/Patterns") }}</p>
-
-<p>{{ languages( { "en": "en/SVG/Tutorial/Gradients"} ) }}</p>
