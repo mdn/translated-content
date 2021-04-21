@@ -30,8 +30,6 @@ original_slug: Usando_archivos_desde_aplicaciones_web
 
 <p>En este caso, la lista de archivos se pasa a la función <code>handleFiles()contiene </code><code>un objeto</code> <a href="/en/DOM/File" title="en/DOM/File"> <code>File</code></a> por cada archivo que el usuario ha seleccionado.</p>
 
-<p>{{ h2_gecko_minversion("Uso de elementos ocultos del archivo de entrada usando el método click() ", "2.0") }}</p>
-
 <p>Desde la versión 2.0 de Gecko {{ geckoRelease("2.0") }}, puedes esconder el elemento file {{ HTMLElement("input") }} y mostrar una interfaz propia para abrir el examinador de archivos y para mostrar que archivo o archivos ha seleccionado el usuario. Puedes hacerlo agregándole al estilo del elemento input la instrucción "display:none" y usando el método <code>click()</code> en el elemento {{ HTMLElement("input") }}.</p>
 
 <p>Considere este código HTML:</p>
@@ -70,10 +68,6 @@ function handleFiles() {
 </pre>
 
 <p> Nota que en este caso, la función <code class="western">handleFiles()</code> busca la lista de archivos en lugar de aceptar un parámetro, ya que los detectores de eventos añadidos de esta manera no pueden aceptar un parámetro de entrada.</p>
-
-<p> </p>
-
-<p>{{ h1_gecko_minversion("Usando Objetos URL", "2.0") }}</p>
 
 <p>Gecko 2.0 {{ geckoRelease("2.0") }} introduce asistencia para el DOM {{ domxref("window.URL.createObjectURL()") }} y los métodos {{ domxref("window.URL.revokeObjectURL()") }} Esto te permite crear URLs simples para ser usadas como referencia a cualquier dato que pueda ser referenciado usando un objeto DOM <a href="/en/DOM/File" title="en/DOM/File"><code>File</code></a>, incluyendo archivos locales en el computador del usuario.</p>
 
@@ -187,8 +181,6 @@ function dragover(e) {
 <p>Cada imagen tiene añadida la clase CSS "obj", para que sean fáciles de encontrar en el árbol DOM. También vamos a añadir un archivo atributo a cada imagen especificando el archivo de la imagen, o que nos permitirá buscar las imágenes para en realidad subirlas mas tarde. Por último se utilizamos {{ domxref("Node.appendChild()") }} para agregar la nueva miniatura para el área de previsualización de nuestro documento.</p>
 
 <p>A continuación, se establece  <a href="/en/DOM/FileReader" title="en/DOM/FileReader"><code>FileReader</code></a> para manejar de forma asincrónica la  carga de la  imagen y lo conecta con el elemento img.Después se crea  el  nuevo objeto <code>FileReader</code>, hemos creado la función <code>load</code>, a continuación llamamos <code>readAsDataURL()</code> para empezar la operación de lectura de fondo. cuando todo el contenido del archivo de imagen se carga, se convierten en una  <code>data:</code> URL, cada uno se pasa por  <code>onload</code> callback. Nuestra implementación de esta rutina se limita a establecer el atributo src del elemento img de la imagen cargada, lo que resulta en la imagen que aparece en la miniatura en la pantalla del usuario.</p>
-
-<p>{{ h1_gecko_minversion("Ejemplo: Usar URL objeto para mostrar imágenes", "2.0") }}</p>
 
 <p>En este ejemplo se utiliza el objeto URL para mostrar miniaturas de las imágenes. Además, se muestra la información de otro archivo con su nonbre y tamaño. Tu puedes <a href="/samples/domref/file-click-demo.html" title="https://developer.mozilla.org/samples/domref/file-click-demo.html">ver el ejemplo vivo </a>(nota se requiere  <a class="external" href="http://nightly.mozilla.org/" title="http://nightly.mozilla.org/">versión nocturna (nightly build</a>) de Firefox del 22 de noviembre o posterior, o Firefox 4.0 beta 8).</p>
 

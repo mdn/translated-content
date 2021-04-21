@@ -202,8 +202,6 @@ mediaElement.played.end();      // 返回浏览器播放的秒数
 
 <p>如果你没有给cortado object元素创建一个备用的子元素，像上面的 {{ HTMLElement("p") }} 元素，没有安装java的Firfox3.5设备就会错误的通知用户需要安装一个插件才能查看页面内容.</p>
 
-<p>{{ h1_gecko_minversion("错误处理", "2.0") }}</p>
-
 <p>Geocko2.0首发{{ geckoRelease("2.0") }}, 错误处理已经被修订符合HTML5的最新版规范。 取缔把错误事件发送给媒体元素自生的方式，现在把它交付给子代中的 {{ HTMLElement("source") }}元素对应导致错误的来源。</p>
 
 <p>这使你可以查到是哪个资源加载失败，哪个是可用的。</p>

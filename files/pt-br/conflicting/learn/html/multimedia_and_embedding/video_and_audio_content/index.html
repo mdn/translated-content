@@ -188,8 +188,6 @@ mediaElement.played.end();      // Retorna o numero de segundos que o navegador 
 
 <p>Se você não criar um elemento filho alternativo do elemento objeto cortado, como o elemento {{ HTMLElement("p") }} mostrado acima, o Firefox 3.5 que conseguem reproduzir o vídeo mas não tem Java instalado vao informar incorretamente ao usuário que ele precisa instalar um plugin para visualizar o conteúdo da página.</p>
 
-<p>{{ h1_gecko_minversion("Error handling", "2.0") }}</p>
-
 <p>A partir do Gecko 2.0 {{ geckoRelease("2.0") }}, o gerenciamento de erros é revisada para corresponder à última versão da especificação do HTML5. Ao invés do evento <code>error</code> ser enviado ao elemento media, ele é enviado ao elemento filho {{ HTMLElement("source") }} correspondente às fontes em que ocorreram o erro.</p>
 
 <p>Isso permite que você detecte que fonte falhou, o que pode ser útil. Considere esse código HTML:</p>
