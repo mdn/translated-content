@@ -33255,12 +33255,6 @@
       "Fredchat"
     ]
   },
-  "Web/API/Document_Object_Model/Events": {
-    "modified": "2019-03-18T21:39:20.100Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/Document_object_model/Locating_DOM_elements_using_selectors": {
     "modified": "2019-03-18T21:39:30.176Z",
     "contributors": [
@@ -35213,19 +35207,6 @@
     "contributors": [
       "Goofy",
       "wordsbybird"
-    ]
-  },
-  "Web/Guide/Events": {
-    "modified": "2020-08-30T07:20:46.985Z",
-    "contributors": [
-      "Voulto",
-      "Sheppy"
-    ]
-  },
-  "Web/Guide/Events/Orientation_and_motion_data_explained": {
-    "modified": "2019-03-18T21:41:00.371Z",
-    "contributors": [
-      "loella16"
     ]
   },
   "Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent": {
@@ -43462,18 +43443,6 @@
       "Fredchat"
     ]
   },
-  "Web/API/Detecting_device_orientation": {
-    "modified": "2019-03-23T23:28:22.437Z",
-    "contributors": [
-      "mgagnon555",
-      "a-mt",
-      "tregagnon",
-      "Fredchat",
-      "FredB",
-      "achraf",
-      "darnuria"
-    ]
-  },
   "Web/API/Network_Information_API": {
     "modified": "2020-10-15T21:24:14.258Z",
     "contributors": [
@@ -45334,6 +45303,37 @@
       "csblo",
       "yasakura_",
       "jmh"
+    ]
+  },
+  "orphaned/Web/API/Detecting_device_orientation": {
+    "modified": "2019-03-23T23:28:22.437Z",
+    "contributors": [
+      "mgagnon555",
+      "a-mt",
+      "tregagnon",
+      "Fredchat",
+      "FredB",
+      "achraf",
+      "darnuria"
+    ]
+  },
+  "orphaned/Web/API/Document_Object_Model/Events": {
+    "modified": "2019-03-18T21:39:20.100Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2020-08-30T07:20:46.985Z",
+    "contributors": [
+      "Voulto",
+      "Sheppy"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Orientation_and_motion_data_explained": {
+    "modified": "2019-03-18T21:41:00.371Z",
+    "contributors": [
+      "loella16"
     ]
   }
 }

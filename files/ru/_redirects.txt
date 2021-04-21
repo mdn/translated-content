@@ -47,7 +47,7 @@
 /ru/docs/Creating_Custom_Firefox_Extensions_with_the_Mozilla_Build_System	/ru/docs/orphaned/Создание_расширения_для_Firefox_с_использованием_Mozilla_Build_System
 /ru/docs/DOM	/ru/docs/conflicting/Web/API/Document_Object_Model
 /ru/docs/DOM/DOM_Reference	/ru/docs/Web/API/Document_Object_Model
-/ru/docs/DOM/DOM_Reference/Events	/ru/docs/Web/API/Document_Object_Model/Events
+/ru/docs/DOM/DOM_Reference/Events	/ru/docs/orphaned/Web/API/Document_Object_Model/Events
 /ru/docs/DOM/DOM_Reference/Examples	/ru/docs/Web/API/Document_Object_Model/Examples
 /ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors	/ru/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /ru/docs/DOM/DOM_Reference/Введение	/ru/docs/Web/API/Document_Object_Model/Introduction
@@ -405,6 +405,7 @@
 /ru/docs/Web/API/Document/domConfig	/ru/docs/Web/API/Document
 /ru/docs/Web/API/DocumentOrShadowRoot/activeElement	/ru/docs/Web/API/Document/activeElement
 /ru/docs/Web/API/DocumentOrShadowRoot/getSelection	/ru/docs/Web/API/Document/getSelection
+/ru/docs/Web/API/Document_Object_Model/Events	/ru/docs/orphaned/Web/API/Document_Object_Model/Events
 /ru/docs/Web/API/Element.getBoundingClientRect	/ru/docs/Web/API/Element/getBoundingClientRect
 /ru/docs/Web/API/Element.insertAdjacentHTML	/ru/docs/Web/API/Element/insertAdjacentHTML
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
@@ -600,8 +601,11 @@
 /ru/docs/Web/Guide/CSS/Using_multi-column_layouts	/ru/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /ru/docs/Web/Guide/CSS/Visual_formatting_model	/ru/docs/Web/CSS/Visual_formatting_model
 /ru/docs/Web/Guide/CSS/ispolzovanie_css_animatciy	/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+/ru/docs/Web/Guide/Events	/ru/docs/orphaned/Web/Guide/Events
 /ru/docs/Web/Guide/Events/Creating_and_triggering_events	/ru/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
+/ru/docs/Web/Guide/Events/Event_handlers	/ru/docs/orphaned/Web/Guide/Events/Event_handlers
 /ru/docs/Web/Guide/Events/Media_events	/ru/docs/orphaned/Web/Guide/Events/Media_events
+/ru/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/ru/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
 /ru/docs/Web/Guide/Events/Создание_и_вызов_событий	/ru/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /ru/docs/Web/Guide/HTML	/ru/docs/Learn/HTML
 /ru/docs/Web/Guide/HTML/Canvas_tutorial	/ru/docs/Web/API/Canvas_API/Tutorial

@@ -11424,15 +11424,6 @@
       "chikoski"
     ]
   },
-  "Web/API/Detecting_device_orientation": {
-    "modified": "2020-10-15T21:21:30.973Z",
-    "contributors": [
-      "YujiSoftware",
-      "hamasaki",
-      "yyss",
-      "Fajrovulpo"
-    ]
-  },
   "Web/API/DeviceLightEvent": {
     "modified": "2020-10-15T21:33:03.860Z",
     "contributors": [
@@ -12747,15 +12738,6 @@
       "Marsf",
       "Mgjbot",
       "Okome"
-    ]
-  },
-  "Web/API/Document_Object_Model/Events": {
-    "modified": "2020-09-27T12:30:54.835Z",
-    "contributors": [
-      "mfuji09",
-      "dskmori",
-      "keeponbeat",
-      "mikamikuh"
     ]
   },
   "Web/API/Document_Object_Model/Examples": {
@@ -32693,35 +32675,6 @@
     "contributors": [
       "teoli",
       "ethertank"
-    ]
-  },
-  "Web/Guide/Events": {
-    "modified": "2019-03-18T20:59:28.336Z",
-    "contributors": [
-      "mfuji09",
-      "gportioli"
-    ]
-  },
-  "Web/Guide/Events/Event_handlers": {
-    "modified": "2020-08-30T04:00:41.655Z",
-    "contributors": [
-      "mfuji09",
-      "k-kuwahara",
-      "silverskyvicto",
-      "momdo"
-    ]
-  },
-  "Web/Guide/Events/Orientation_and_motion_data_explained": {
-    "modified": "2020-07-25T12:40:06.161Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
-    ]
-  },
-  "Web/Guide/Events/Overview_of_Events_and_Handlers": {
-    "modified": "2019-03-18T21:46:16.505Z",
-    "contributors": [
-      "superyusuke"
     ]
   },
   "Web/Guide/Graphics": {
@@ -53495,6 +53448,53 @@
       "ShotaCoffee",
       "y4m4to",
       "lv7777"
+    ]
+  },
+  "orphaned/Web/API/Detecting_device_orientation": {
+    "modified": "2020-10-15T21:21:30.973Z",
+    "contributors": [
+      "YujiSoftware",
+      "hamasaki",
+      "yyss",
+      "Fajrovulpo"
+    ]
+  },
+  "orphaned/Web/API/Document_Object_Model/Events": {
+    "modified": "2020-09-27T12:30:54.835Z",
+    "contributors": [
+      "mfuji09",
+      "dskmori",
+      "keeponbeat",
+      "mikamikuh"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Event_handlers": {
+    "modified": "2020-08-30T04:00:41.655Z",
+    "contributors": [
+      "mfuji09",
+      "k-kuwahara",
+      "silverskyvicto",
+      "momdo"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2019-03-18T20:59:28.336Z",
+    "contributors": [
+      "mfuji09",
+      "gportioli"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Orientation_and_motion_data_explained": {
+    "modified": "2020-07-25T12:40:06.161Z",
+    "contributors": [
+      "mfuji09",
+      "yyss"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers": {
+    "modified": "2019-03-18T21:46:16.505Z",
+    "contributors": [
+      "superyusuke"
     ]
   }
 }

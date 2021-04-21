@@ -9163,17 +9163,6 @@
       "Lex.Huang"
     ]
   },
-  "Web/API/Detecting_device_orientation": {
-    "modified": "2020-10-15T21:21:28.912Z",
-    "contributors": [
-      "Carllllo",
-      "zwcloud",
-      "xgqfrms-GitHub",
-      "ziyunfei",
-      "fancy",
-      "princetoad@gmail.com"
-    ]
-  },
   "Web/API/DeviceLightEvent": {
     "modified": "2020-10-15T21:34:11.102Z",
     "contributors": [
@@ -10391,17 +10380,6 @@
       "ReyCG_sub",
       "Dewang",
       "Xagq123456"
-    ]
-  },
-  "Web/API/Document_Object_Model/Events": {
-    "modified": "2019-07-06T03:38:22.874Z",
-    "contributors": [
-      "ridiculousjam",
-      "v-killer",
-      "SmallBusy",
-      "Noly1990",
-      "dongyu063",
-      "gavinkwoe"
     ]
   },
   "Web/API/Document_Object_Model/Examples": {
@@ -28774,39 +28752,6 @@
       "xmlovecss",
       "teoli",
       "yan"
-    ]
-  },
-  "Web/Guide/Events": {
-    "modified": "2019-03-23T23:20:12.541Z",
-    "contributors": [
-      "Imagine-Tom",
-      "tcatche",
-      "NoDocCat",
-      "Tankunpeng",
-      "Jeremie"
-    ]
-  },
-  "Web/Guide/Events/Event_handlers": {
-    "modified": "2019-03-23T23:20:11.825Z",
-    "contributors": [
-      "tcatche",
-      "Le-Fu",
-      "xgqfrms-GitHub",
-      "ziyunfei",
-      "Darrel.Hsu"
-    ]
-  },
-  "Web/Guide/Events/Orientation_and_motion_data_explained": {
-    "modified": "2019-03-23T23:10:07.666Z",
-    "contributors": [
-      "fancy"
-    ]
-  },
-  "Web/Guide/Events/Overview_of_Events_and_Handlers": {
-    "modified": "2019-03-23T22:51:31.630Z",
-    "contributors": [
-      "Song2017",
-      "FredWe"
     ]
   },
   "Web/Guide/Graphics": {
@@ -50797,6 +50742,61 @@
       "timwangdev",
       "FredWe",
       "ReyCG_sub"
+    ]
+  },
+  "orphaned/Web/API/Detecting_device_orientation": {
+    "modified": "2020-10-15T21:21:28.912Z",
+    "contributors": [
+      "Carllllo",
+      "zwcloud",
+      "xgqfrms-GitHub",
+      "ziyunfei",
+      "fancy",
+      "princetoad@gmail.com"
+    ]
+  },
+  "orphaned/Web/API/Document_Object_Model/Events": {
+    "modified": "2019-07-06T03:38:22.874Z",
+    "contributors": [
+      "ridiculousjam",
+      "v-killer",
+      "SmallBusy",
+      "Noly1990",
+      "dongyu063",
+      "gavinkwoe"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Event_handlers": {
+    "modified": "2019-03-23T23:20:11.825Z",
+    "contributors": [
+      "tcatche",
+      "Le-Fu",
+      "xgqfrms-GitHub",
+      "ziyunfei",
+      "Darrel.Hsu"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2019-03-23T23:20:12.541Z",
+    "contributors": [
+      "Imagine-Tom",
+      "tcatche",
+      "NoDocCat",
+      "Tankunpeng",
+      "Jeremie"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Orientation_and_motion_data_explained": {
+    "modified": "2019-03-23T23:10:07.666Z",
+    "contributors": [
+      "fancy"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers": {
+    "modified": "2019-03-23T22:51:31.630Z",
+    "contributors": [
+      "Song2017",
+      "FredWe"
     ]
   }
 }

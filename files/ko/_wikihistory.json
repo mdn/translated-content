@@ -3637,12 +3637,6 @@
       "Channy"
     ]
   },
-  "Web/API/Document_Object_Model/Events": {
-    "modified": "2020-12-01T12:09:06.517Z",
-    "contributors": [
-      "dink95"
-    ]
-  },
   "Web/API/Document_Object_Model/Examples": {
     "modified": "2020-05-26T14:45:03.340Z",
     "contributors": [
@@ -8832,18 +8826,6 @@
       "alattalatta",
       "moolow",
       "corps99"
-    ]
-  },
-  "Web/Guide/Events": {
-    "modified": "2019-03-23T23:03:35.888Z",
-    "contributors": [
-      "moolow"
-    ]
-  },
-  "Web/Guide/Events/Overview_of_Events_and_Handlers": {
-    "modified": "2019-03-23T22:48:26.046Z",
-    "contributors": [
-      "PineMt"
     ]
   },
   "Web/Guide/HTML/Content_categories": {
@@ -17981,14 +17963,6 @@
       "oohii"
     ]
   },
-  "Web/API/Detecting_device_orientation": {
-    "modified": "2019-03-23T23:27:06.270Z",
-    "contributors": [
-      "ingpdw",
-      "PillarLee",
-      "junho85"
-    ]
-  },
   "Web/API/CSS_Object_Model/Managing_screen_orientation": {
     "modified": "2019-03-23T23:27:05.980Z",
     "contributors": [
@@ -18703,6 +18677,32 @@
     "modified": "2019-03-18T21:13:18.844Z",
     "contributors": [
       "cs09g"
+    ]
+  },
+  "orphaned/Web/API/Detecting_device_orientation": {
+    "modified": "2019-03-23T23:27:06.270Z",
+    "contributors": [
+      "ingpdw",
+      "PillarLee",
+      "junho85"
+    ]
+  },
+  "orphaned/Web/API/Document_Object_Model/Events": {
+    "modified": "2020-12-01T12:09:06.517Z",
+    "contributors": [
+      "dink95"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2019-03-23T23:03:35.888Z",
+    "contributors": [
+      "moolow"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers": {
+    "modified": "2019-03-23T22:48:26.046Z",
+    "contributors": [
+      "PineMt"
     ]
   }
 }

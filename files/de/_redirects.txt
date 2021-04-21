@@ -652,6 +652,7 @@
 /de/docs/Web/Guide/CSS/mehrere_Hintergründe_verwenden	/de/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /de/docs/Web/Guide/DOM	/de/docs/conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10
 /de/docs/Web/Guide/DOM/Manipulating_the_browser_history	/de/docs/Web/API/History_API
+/de/docs/Web/Guide/Events	/de/docs/orphaned/Web/Guide/Events
 /de/docs/Web/Guide/Events/Creating_and_triggering_events	/de/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /de/docs/Web/Guide/HTML	/de/docs/Learn/HTML
 /de/docs/Web/Guide/HTML/Canvas_Tutorial	/de/docs/Web/API/Canvas_API/Tutorial

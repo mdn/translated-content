@@ -933,7 +933,8 @@
 /pt-PT/docs/Web/Guide/AJAX/Como_começar	/pt-PT/docs/Web/Guide/AJAX/Getting_Started
 /pt-PT/docs/Web/Guide/AJAX/Comunidade	/pt-PT/docs/Web/Guide/AJAX/Community
 /pt-PT/docs/Web/Guide/CSS	/pt-PT/docs/Learn/CSS
-/pt-PT/docs/Web/Guide/Eventos	/pt-PT/docs/Web/Guide/Events
+/pt-PT/docs/Web/Guide/Eventos	/pt-PT/docs/orphaned/Web/Guide/Events
+/pt-PT/docs/Web/Guide/Events	/pt-PT/docs/orphaned/Web/Guide/Events
 /pt-PT/docs/Web/Guide/Gráficos	/pt-PT/docs/Web/Guide/Graphics
 /pt-PT/docs/Web/Guide/HTML	/pt-PT/docs/Learn/HTML
 /pt-PT/docs/Web/Guide/HTML/Categorias_de_conteudo	/pt-PT/docs/Web/Guide/HTML/Content_categories

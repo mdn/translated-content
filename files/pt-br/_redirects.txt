@@ -106,7 +106,7 @@
 /pt-BR/docs/DOM/Document.querySelector	/pt-BR/docs/Web/API/Document/querySelector
 /pt-BR/docs/DOM/Document.querySelectorAll	/pt-BR/docs/Web/API/Document/querySelectorAll
 /pt-BR/docs/DOM/Referencia_do_DOM	/pt-BR/docs/Web/API/Document_Object_Model
-/pt-BR/docs/DOM/Referencia_do_DOM/Events	/pt-BR/docs/Web/API/Document_Object_Model/Events
+/pt-BR/docs/DOM/Referencia_do_DOM/Events	/pt-BR/docs/orphaned/Web/API/Document_Object_Model/Events
 /pt-BR/docs/DOM/Referencia_do_DOM/Examples	/pt-BR/docs/Web/API/Document_Object_Model/Examples
 /pt-BR/docs/DOM/Referencia_do_DOM/How_to_create_a_DOM_tree	/pt-BR/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
 /pt-BR/docs/DOM/Referencia_do_DOM/Introdução	/pt-BR/docs/Web/API/Document_Object_Model/Introduction
@@ -561,6 +561,7 @@
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/activeElement	/pt-BR/docs/Web/API/Document/activeElement
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/pt-BR/docs/Web/API/Document/elementFromPoint
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/getSelection	/pt-BR/docs/Web/API/Document/getSelection
+/pt-BR/docs/Web/API/Document_Object_Model/Events	/pt-BR/docs/orphaned/Web/API/Document_Object_Model/Events
 /pt-BR/docs/Web/API/DocumentoXML	/pt-BR/docs/Web/API/XMLDocument
 /pt-BR/docs/Web/API/Element.addEventListener	/pt-BR/docs/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/Element.getAttribute	/pt-BR/docs/Web/API/Element/getAttribute
@@ -730,8 +731,11 @@
 /pt-BR/docs/Web/Guide/CSS/CSS_media_queries_(consultas_de_mídia_em_CSS)	/pt-BR/docs/orphaned/Web/Guide/CSS/CSS_media_queries_(consultas_de_mídia_em_CSS)
 /pt-BR/docs/Web/Guide/CSS/Scaling_background_images	/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /pt-BR/docs/Web/Guide/CSS/Understanding_z_index	/pt-BR/docs/Web/CSS/CSS_Positioning/Understanding_z_index
+/pt-BR/docs/Web/Guide/Events	/pt-BR/docs/orphaned/Web/Guide/Events
 /pt-BR/docs/Web/Guide/Events/Creating_and_triggering_events	/pt-BR/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
+/pt-BR/docs/Web/Guide/Events/Event_handlers	/pt-BR/docs/orphaned/Web/Guide/Events/Event_handlers
 /pt-BR/docs/Web/Guide/Events/Mutation_events	/pt-BR/docs/orphaned/Web/Guide/Events/Mutation_events
+/pt-BR/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/pt-BR/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
 /pt-BR/docs/Web/Guide/Events/Touch_events	/pt-BR/docs/Web/API/Touch_events
 /pt-BR/docs/Web/Guide/Events/criando_e_disparando_eventos	/pt-BR/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /pt-BR/docs/Web/Guide/Gráficos	/pt-BR/docs/Web/Guide/Graphics

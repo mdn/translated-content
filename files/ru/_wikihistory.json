@@ -11546,29 +11546,6 @@
       "akhabibullina"
     ]
   },
-  "Web/Guide/Events": {
-    "modified": "2020-08-20T10:40:53.452Z",
-    "contributors": [
-      "bogpok",
-      "Llorephie",
-      "Tihoem",
-      "Jeremie"
-    ]
-  },
-  "Web/Guide/Events/Event_handlers": {
-    "modified": "2020-03-26T12:45:30.049Z",
-    "contributors": [
-      "ellizii"
-    ]
-  },
-  "Web/Guide/Events/Overview_of_Events_and_Handlers": {
-    "modified": "2019-06-24T11:18:00.027Z",
-    "contributors": [
-      "kvandreev",
-      "MuradAz",
-      "curdwithraisins"
-    ]
-  },
   "Web/Guide/HTML/Content_categories": {
     "modified": "2019-09-23T08:37:02.214Z",
     "contributors": [
@@ -19836,12 +19813,6 @@
       "RAP1D"
     ]
   },
-  "Web/API/Document_Object_Model/Events": {
-    "modified": "2019-03-18T21:18:44.250Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/API/Document_Object_Model/Examples": {
     "modified": "2019-09-25T18:36:16.946Z",
     "contributors": [
@@ -25987,6 +25958,35 @@
       "pk.prog",
       "lazyexpert",
       "YuryT"
+    ]
+  },
+  "orphaned/Web/API/Document_Object_Model/Events": {
+    "modified": "2019-03-18T21:18:44.250Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Event_handlers": {
+    "modified": "2020-03-26T12:45:30.049Z",
+    "contributors": [
+      "ellizii"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2020-08-20T10:40:53.452Z",
+    "contributors": [
+      "bogpok",
+      "Llorephie",
+      "Tihoem",
+      "Jeremie"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers": {
+    "modified": "2019-06-24T11:18:00.027Z",
+    "contributors": [
+      "kvandreev",
+      "MuradAz",
+      "curdwithraisins"
     ]
   }
 }

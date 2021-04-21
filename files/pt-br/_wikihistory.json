@@ -5813,24 +5813,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/Events": {
-    "modified": "2019-03-23T23:21:12.584Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Web/Guide/Events/Event_handlers": {
-    "modified": "2020-08-06T11:00:19.146Z",
-    "contributors": [
-      "eziotristao"
-    ]
-  },
-  "Web/Guide/Events/Overview_of_Events_and_Handlers": {
-    "modified": "2020-09-28T23:35:22.348Z",
-    "contributors": [
-      "helton-mori-dev"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2020-04-05T18:24:36.523Z",
     "contributors": [
@@ -13208,12 +13190,6 @@
       "meldenne"
     ]
   },
-  "Web/API/Document_Object_Model/Events": {
-    "modified": "2020-08-30T22:44:17.906Z",
-    "contributors": [
-      "bermarques"
-    ]
-  },
   "Web/API/Document_Object_Model/Examples": {
     "modified": "2019-03-23T22:11:58.983Z",
     "contributors": [
@@ -17366,6 +17342,30 @@
     "modified": "2019-03-23T22:11:33.073Z",
     "contributors": [
       "JefersonOliveira90"
+    ]
+  },
+  "orphaned/Web/API/Document_Object_Model/Events": {
+    "modified": "2020-08-30T22:44:17.906Z",
+    "contributors": [
+      "bermarques"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Event_handlers": {
+    "modified": "2020-08-06T11:00:19.146Z",
+    "contributors": [
+      "eziotristao"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2019-03-23T23:21:12.584Z",
+    "contributors": [
+      "Sheppy"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers": {
+    "modified": "2020-09-28T23:35:22.348Z",
+    "contributors": [
+      "helton-mori-dev"
     ]
   }
 }

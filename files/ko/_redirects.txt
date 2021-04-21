@@ -627,6 +627,7 @@
 /ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
+/ko/docs/Web/API/Detecting_device_orientation	/ko/docs/orphaned/Web/API/Detecting_device_orientation
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/Document/defaultView/resize_event	/ko/docs/Web/API/Window/resize_event
 /ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/Document/drag_event
@@ -634,6 +635,7 @@
 /ko/docs/Web/API/DocumentOrShadowRoot/activeElement	/ko/docs/Web/API/Document/activeElement
 /ko/docs/Web/API/DocumentOrShadowRoot/getSelection	/ko/docs/Web/API/Document/getSelection
 /ko/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ko/docs/Web/API/Document/styleSheets
+/ko/docs/Web/API/Document_Object_Model/Events	/ko/docs/orphaned/Web/API/Document_Object_Model/Events
 /ko/docs/Web/API/Document_Object_Model/Preface	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/Web/API/Document_Object_Model/소개	/ko/docs/Web/API/Document_Object_Model/Introduction
 /ko/docs/Web/API/Document_Object_Model/예제	/ko/docs/Web/API/Document_Object_Model/Examples
@@ -803,7 +805,9 @@
 /ko/docs/Web/Guide/CSS/Visual_formatting_model	/ko/docs/Web/CSS/Visual_formatting_model
 /ko/docs/Web/Guide/DOM	/ko/docs/conflicting/Web/API/Document_Object_Model
 /ko/docs/Web/Guide/DOM/Using_full_screen_mode	/ko/docs/Web/API/Fullscreen_API
+/ko/docs/Web/Guide/Events	/ko/docs/orphaned/Web/Guide/Events
 /ko/docs/Web/Guide/Events/Creating_and_triggering_events	/ko/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
+/ko/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/ko/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
 /ko/docs/Web/Guide/HTML	/ko/docs/Learn/HTML
 /ko/docs/Web/Guide/HTML/Content_Editable	/ko/docs/Web/Guide/HTML/Editable_content
 /ko/docs/Web/Guide/HTML/컨텐트_카테고리	/ko/docs/Web/Guide/HTML/Content_categories
@@ -1038,7 +1042,7 @@
 /ko/docs/Web/참조/API	/ko/docs/Web/Reference/API
 /ko/docs/WebAPI	/ko/docs/conflicting/Web/API
 /ko/docs/WebAPI/Battery_Status	/ko/docs/Web/API/Battery_Status_API
-/ko/docs/WebAPI/Detecting_device_orientation	/ko/docs/Web/API/Detecting_device_orientation
+/ko/docs/WebAPI/Detecting_device_orientation	/ko/docs/orphaned/Web/API/Detecting_device_orientation
 /ko/docs/WebAPI/Managing_screen_orientation	/ko/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ko/docs/WebAPI/Network_Information	/ko/docs/Web/API/Network_Information_API
 /ko/docs/WebAPI/Proximity	/ko/docs/Web/API/Proximity_Events

@@ -1280,7 +1280,7 @@
 /ja/docs/DOM/DOMString	/ja/docs/Web/API/DOMString
 /ja/docs/DOM/DOMTimeStamp	/ja/docs/Web/API/DOMTimeStamp
 /ja/docs/DOM/DOM_Reference	/ja/docs/Web/API/Document_Object_Model
-/ja/docs/DOM/DOM_Reference/Events	/ja/docs/Web/API/Document_Object_Model/Events
+/ja/docs/DOM/DOM_Reference/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
 /ja/docs/DOM/DOM_Reference/Examples	/ja/docs/Web/API/Document_Object_Model/Examples
 /ja/docs/DOM/DOM_Reference/Introduction	/ja/docs/Web/API/Document_Object_Model/Introduction
 /ja/docs/DOM/DOM_Reference/Preface	/ja/docs/conflicting/Web/API/Document_Object_Model_8435a25d5137b436d5d7161e1b813c02
@@ -1385,7 +1385,7 @@
 /ja/docs/DOM/NodeIterator	/ja/docs/Web/API/NodeIterator
 /ja/docs/DOM/NodeList	/ja/docs/Web/API/NodeList
 /ja/docs/DOM/NodeList.item	/ja/docs/Web/API/NodeList/item
-/ja/docs/DOM/Orientation_and_motion_data_explained	/ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained
+/ja/docs/DOM/Orientation_and_motion_data_explained	/ja/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
 /ja/docs/DOM/Plugin	/ja/docs/Web/API/Plugin
 /ja/docs/DOM/PluginArray	/ja/docs/Web/API/PluginArray
 /ja/docs/DOM/SVGFontElement	/ja/docs/Web/API/SVGFontElement
@@ -1993,7 +1993,7 @@
 /ja/docs/DebNews	/ja/docs/orphaned/DebNews
 /ja/docs/DebNews/20081118	/ja/docs/orphaned/DevNews/20081118
 /ja/docs/Deer_Park	/ja/docs/Mozilla/Firefox/Releases/1.5
-/ja/docs/Detecting_device_orientation	/ja/docs/Web/API/Detecting_device_orientation
+/ja/docs/Detecting_device_orientation	/ja/docs/orphaned/Web/API/Detecting_device_orientation
 /ja/docs/Determining_the_dimensions_of_elements	/ja/docs/conflicting/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 /ja/docs/DevNews	/ja/docs/orphaned/DevNews
 /ja/docs/DevNews/20060705	/ja/docs/orphaned/DevNews/20060705
@@ -3742,6 +3742,7 @@
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
 /ja/docs/Web/API/DOMCursor.done	/ja/docs/Web/API/DOMCursor/done
 /ja/docs/Web/API/DOMRequest.error	/ja/docs/Web/API/DOMRequest/error
+/ja/docs/Web/API/Detecting_device_orientation	/ja/docs/orphaned/Web/API/Detecting_device_orientation
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
 /ja/docs/Web/API/DeviceLightEvent.value	/ja/docs/Web/API/DeviceLightEvent/value
 /ja/docs/Web/API/Document.domConfig	/ja/docs/Web/API/Document
@@ -3763,6 +3764,7 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/ja/docs/conflicting/Web/API/DocumentOrShadowRoot_20ea0e1d91453a020aad3a16dbce16f1
 /ja/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/ja/docs/Web/API/Document/pointerLockElement
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
+/ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/conflicting/Web/API/Document_Object_Model_8435a25d5137b436d5d7161e1b813c02
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
 /ja/docs/Web/API/Element.isContentEditable	/ja/docs/Web/API/HTMLElement/isContentEditable
@@ -3773,7 +3775,7 @@
 /ja/docs/Web/API/Element/name	/ja/docs/conflicting/Web/API
 /ja/docs/Web/API/Event/button	/ja/docs/conflicting/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/conflicting/Web/API/Document/createEvent
-/ja/docs/Web/API/EventHandler	/ja/docs/Web/Guide/Events/Event_handlers
+/ja/docs/Web/API/EventHandler	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
 /ja/docs/Web/API/EventTarget.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/EventTarget.dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
@@ -4573,7 +4575,11 @@
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Working_with_the_History_API	/ja/docs/Web/API/History_API/Working_with_the_History_API
 /ja/docs/Web/Guide/DOM/Using_full_screen_mode	/ja/docs/Web/API/Fullscreen_API
 /ja/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
+/ja/docs/Web/Guide/Events	/ja/docs/orphaned/Web/Guide/Events
 /ja/docs/Web/Guide/Events/Creating_and_triggering_events	/ja/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
+/ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
+/ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
+/ja/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/ja/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
 /ja/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
 /ja/docs/Web/Guide/HTML	/ja/docs/Learn/HTML
 /ja/docs/Web/Guide/HTML/Canvas_tutorial	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial

@@ -557,6 +557,7 @@
 /zh-TW/docs/Web/API/Coordinates/latitude	/zh-TW/docs/Web/API/GeolocationCoordinates/latitude
 /zh-TW/docs/Web/API/Coordinates/longitude	/zh-TW/docs/Web/API/GeolocationCoordinates/longitude
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
+/zh-TW/docs/Web/API/Detecting_device_orientation	/zh-TW/docs/orphaned/Web/API/Detecting_device_orientation
 /zh-TW/docs/Web/API/DocumentTemp	/zh-TW/docs/Web/API/Document
 /zh-TW/docs/Web/API/DocumentTemp/createElement	/zh-TW/docs/Web/API/Document/createElement
 /zh-TW/docs/Web/API/DocumentTemp/createRange	/zh-TW/docs/Web/API/Document/createRange
@@ -568,8 +569,9 @@
 /zh-TW/docs/Web/API/DocumentTemp/querySelector	/zh-TW/docs/Web/API/Document/querySelector
 /zh-TW/docs/Web/API/DocumentTemp/readyState	/zh-TW/docs/Web/API/Document/readyState
 /zh-TW/docs/Web/API/DocumentTemp/width	/zh-TW/docs/Web/API/Document/width
+/zh-TW/docs/Web/API/Document_Object_Model/Events	/zh-TW/docs/orphaned/Web/API/Document_Object_Model/Events
 /zh-TW/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/zh-TW/docs/Web/API/Document_Object_Model/Whitespace
-/zh-TW/docs/Web/API/Document_Object_Model/事件	/zh-TW/docs/Web/API/Document_Object_Model/Events
+/zh-TW/docs/Web/API/Document_Object_Model/事件	/zh-TW/docs/orphaned/Web/API/Document_Object_Model/Events
 /zh-TW/docs/Web/API/Event/createEvent	/zh-TW/docs/Web/API/Document/createEvent
 /zh-TW/docs/Web/API/Geolocation/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
 /zh-TW/docs/Web/API/HTMLElement/dataset	/zh-TW/docs/Web/API/HTMLOrForeignElement/dataset
@@ -644,7 +646,9 @@
 /zh-TW/docs/Web/Guide/DOM	/zh-TW/docs/conflicting/Web/API/Document_Object_Model
 /zh-TW/docs/Web/Guide/DOM/Manipulating_the_browser_history	/zh-TW/docs/Web/API/History_API
 /zh-TW/docs/Web/Guide/DOM/Using_full_screen_mode	/zh-TW/docs/Web/API/Fullscreen_API
+/zh-TW/docs/Web/Guide/Events	/zh-TW/docs/orphaned/Web/Guide/Events
 /zh-TW/docs/Web/Guide/Events/Creating_and_triggering_events	/zh-TW/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
+/zh-TW/docs/Web/Guide/Events/Event_handlers	/zh-TW/docs/orphaned/Web/Guide/Events/Event_handlers
 /zh-TW/docs/Web/Guide/HTML	/zh-TW/docs/Learn/HTML
 /zh-TW/docs/Web/Guide/HTML/Canvas_tutorial	/zh-TW/docs/Web/API/Canvas_API/Tutorial
 /zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
@@ -832,7 +836,7 @@
 /zh-TW/docs/Web/性能	/zh-TW/docs/Web/Performance
 /zh-TW/docs/WebAPI	/zh-TW/docs/conflicting/Web/API
 /zh-TW/docs/WebAPI/Battery_Status	/zh-TW/docs/Web/API/Battery_Status_API
-/zh-TW/docs/WebAPI/Detecting_device_orientation	/zh-TW/docs/Web/API/Detecting_device_orientation
+/zh-TW/docs/WebAPI/Detecting_device_orientation	/zh-TW/docs/orphaned/Web/API/Detecting_device_orientation
 /zh-TW/docs/WebAPI/FileHandle	/zh-TW/docs/Web/API/File_Handle_API
 /zh-TW/docs/WebAPI/Managing_screen_orientation	/zh-TW/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /zh-TW/docs/WebAPI/Network_Information	/zh-TW/docs/Web/API/Network_Information_API

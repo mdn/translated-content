@@ -3689,14 +3689,6 @@
       "yonatanalexis22"
     ]
   },
-  "Web/API/Detecting_device_orientation": {
-    "modified": "2020-08-11T08:30:00.189Z",
-    "contributors": [
-      "juancarlos.rmr",
-      "rayrojas",
-      "jairopezlo"
-    ]
-  },
   "Web/API/DeviceMotionEvent": {
     "modified": "2020-10-15T22:22:26.832Z",
     "contributors": [
@@ -15147,12 +15139,6 @@
       "Nathymig"
     ]
   },
-  "Web/API/Document_Object_Model/Events": {
-    "modified": "2019-03-18T21:45:13.362Z",
-    "contributors": [
-      "recortes"
-    ]
-  },
   "Web/API/Document_Object_Model": {
     "modified": "2019-01-16T16:01:11.054Z",
     "contributors": [
@@ -16476,13 +16462,6 @@
       "Seres"
     ]
   },
-  "Web/Guide/Events/Orientation_and_motion_data_explained": {
-    "modified": "2019-03-23T23:27:10.499Z",
-    "contributors": [
-      "Sheppy",
-      "rubencidlara"
-    ]
-  },
   "Web/API/Vibration_API": {
     "modified": "2019-03-23T23:03:32.169Z",
     "contributors": [
@@ -16493,19 +16472,6 @@
     "modified": "2019-03-23T23:07:40.812Z",
     "contributors": [
       "TibicenasDesign"
-    ]
-  },
-  "Web/Guide/Events/Event_handlers": {
-    "modified": "2020-08-01T23:47:25.815Z",
-    "contributors": [
-      "Enesimus",
-      "alesalva"
-    ]
-  },
-  "Web/Guide/Events": {
-    "modified": "2019-03-23T23:27:18.635Z",
-    "contributors": [
-      "Sheppy"
     ]
   },
   "Web/API/Canvas_API/Tutorial/Advanced_animations": {
@@ -23742,6 +23708,40 @@
       "BrunoViera",
       "enreda",
       "Soid"
+    ]
+  },
+  "orphaned/Web/API/Detecting_device_orientation": {
+    "modified": "2020-08-11T08:30:00.189Z",
+    "contributors": [
+      "juancarlos.rmr",
+      "rayrojas",
+      "jairopezlo"
+    ]
+  },
+  "orphaned/Web/API/Document_Object_Model/Events": {
+    "modified": "2019-03-18T21:45:13.362Z",
+    "contributors": [
+      "recortes"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Event_handlers": {
+    "modified": "2020-08-01T23:47:25.815Z",
+    "contributors": [
+      "Enesimus",
+      "alesalva"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2019-03-23T23:27:18.635Z",
+    "contributors": [
+      "Sheppy"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Orientation_and_motion_data_explained": {
+    "modified": "2019-03-23T23:27:10.499Z",
+    "contributors": [
+      "Sheppy",
+      "rubencidlara"
     ]
   }
 }
