@@ -46,7 +46,7 @@ translation_of: Web/HTML/Element/input
  <li><code>{{HTMLElement("input/submit", "submit")}}</code> : un bouton qui envoie le formulaire.</li>
  <li><code>{{HTMLElement("input/tel", "tel")}}</code> : {{HTMLVersionInline("5")}} un contrôle pour saisir un numéro de téléphone.</li>
  <li><code>{{HTMLElement("input/text", "text")}}</code> : un champ texte sur une seule ligne. Les sauts de ligne sont automatiquement retirés.</li>
- <li><code>{{HTMLElement("input/time", "time")}}</code> : {{HTMLVersionInline("5")}} A control for entering a time value with no time zone.</li>
+ <li><code>{{HTMLElement("input/time", "time")}}</code> : {{HTMLVersionInline("5")}} un contrôle permettant de saisir une valeur de temps sans fuseau horaire.</li>
  <li><code>{{HTMLElement("input/url", "url")}}</code> : {{HTMLVersionInline("5")}} un champ permettant de saisir une URL.</li>
  <li><code>{{HTMLElement("input/week", "week")}}</code> : {{HTMLVersionInline("5")}} un contrôle permettant de saisir une date représentée par un numéro de semaine et une année (sans indication de fuseau horaire).</li>
 </ul>
@@ -65,7 +65,7 @@ translation_of: Web/HTML/Element/input
 
 <h3 id="Attributs_communs_à_l'ensemble_des_types">Attributs communs à l'ensemble des types</h3>
 
-<p>This section lists the attributes which are used by all form <code>&lt;input&gt;</code> types. Attributes that are unique to particular input types—or attributes which are common to all input types but have special behaviors when used on a given input type—are instead documented on those types' pages.</p>
+<p>Cette section liste les attributs qui sont utilisés par tous les types d'<code>&lt;input&gt;</code> de formulaire. Les attributs qui sont spécifiques à des types particuliers de champ — ou des attributs qui sont communs à tous les types de champ mais qui ont des comportements particuliers lorsqu'ils sont utilisés sur un type de champ particulier — sont documentés à la place sur les pages de ces types.</p>
 
 <div class="note">
 <p><strong>Note :</strong> Les éléments <code>&lt;input&gt;</code> peuvent bien entendu utiliser les <a href="/fr/docs/Web/HTML/Attributs_universels">attributs universels</a>.</p>
@@ -155,7 +155,7 @@ translation_of: Web/HTML/Element/input
 <p>Les champs désactivés avec cet attribut ne reçoivent pas l'évènement {{event("click")}} et ne sont pas envoyés avec le formulaire.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Bien que ce ne soit pas indiqué dans la spécification, Firefox conserver l'état désactivé des champs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">y compris si cet état a été obtenu dynamiquement</a>, lors des rechargements de la page. L'attribut {{htmlattrxref("autocomplete","input")}} pourra être utilisé afin de contrôler cette fonctionnalité.</p>
+<p><strong>Note :</strong> Bien que ce ne soit pas indiqué dans la spécification, Firefox conservera l'état désactivé des champs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">y compris si cet état a été obtenu dynamiquement</a>, lors des rechargements de la page. L'attribut {{htmlattrxref("autocomplete","input")}} pourra être utilisé afin de contrôler cette fonctionnalité.</p>
 </div>
 
 <h4 id="htmlattrdef(form)">{{htmlattrdef("form")}}</h4>
