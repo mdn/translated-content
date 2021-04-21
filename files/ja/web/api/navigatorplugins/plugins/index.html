@@ -28,6 +28,8 @@ translation_of: Web/API/NavigatorPlugins/plugins
 
 <p>以下の例は、高位の文書のためにインストールされたプラグインについての情報を出力します。注意：Plugin オブジェクトに用意されているプロパティは <code>name</code> 、<code>filename</code> 、<code>description</code> です。</p>
 
+<div>{{gecko_minversion_note("1.9.2", "Gecko 1.9.2 で <code>version</code> プロパティが追加されました。")}}</div>
+
 <pre class="brush:js">var L = navigator.plugins.length;
 
 document.write(

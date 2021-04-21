@@ -40,7 +40,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
    <td>
     <p>直前の文字 <em>x</em> の 0 回か 1 回の出現にマッチします。例えば <code>/e?le?/</code> は "angel" の "el" や "angle" の "le"、あるいは "oslo" の "l" にマッチします。</p>
 
-    <p><code>*</code>、<code>+</code>、<code>?</code>、<code>{}</code> といった量指定子の直後に使用した場合、その量指定子をデフォルトとは逆の 非貪欲 ("non-greedy")（最短）マッチにします。デフォルトは 欲張り ("greedy")（最長）マッチです。</p>
+    <p><code>*</code>、<code>+</code>、<code>?</code>、<code>{}</code> といった量指定子の直後に使用した場合、その量指定子をデフォルトとは逆の{{原語併記("非貪欲", "non-greedy")}} （最短）マッチにします。デフォルトは{{原語併記("欲張り", "greedy")}}（最長）マッチです。</p>
    </td>
   </tr>
   <tr>
@@ -71,7 +71,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
      <code><em>x</em>{n,m}?</code></p>
    </td>
    <td>
-    <p>既定では <code>*</code> や <code>+</code> といった数量詞は 貪欲 ("greedy") です。つまり、できる限り多くの文字列とマッチしようとします。数量詞の後にある <code>?</code> 文字は 非貪欲 ("non-greedy") 数量詞をつくります: つまり、マッチが見つかるとすぐに停止します。例えば、"some &lt;foo&gt; &lt;bar&gt; new &lt;/bar&gt; &lt;/foo&gt; thing" といった文字列が与えられたなら:</p>
+    <p>既定では <code>*</code> や <code>+</code> といった数量詞は{{原語併記("貪欲", "greedy")}} です。つまり、できる限り多くの文字列とマッチしようとします。数量詞の後にある <code>?</code> 文字は{{原語併記("非貪欲", "non-greedy")}} 数量詞をつくります: つまり、マッチが見つかるとすぐに停止します。例えば、"some &lt;foo&gt; &lt;bar&gt; new &lt;/bar&gt; &lt;/foo&gt; thing" といった文字列が与えられたなら:</p>
 
     <ul>
      <li><code>/&lt;.*&gt;/</code> はおそらく "&lt;foo&gt; &lt;bar&gt; new &lt;/bar&gt; &lt;/foo&gt;" にマッチするでしょう</li>

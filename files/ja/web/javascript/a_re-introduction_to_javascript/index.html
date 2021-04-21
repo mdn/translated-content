@@ -13,9 +13,9 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 <div>{{jsSidebar}}</div>
 
-<p>なぜ 「再」入門 ("re-introduction") なのか? なぜなら {{Glossary("JavaScript")}} は<a href="http://javascript.crockford.com/javascript.html">世界で最も誤解されたプログラミング言語</a>としてよく知られているためです。しばしばおもちゃだと馬鹿にされながら、しかしその人を欺くような単純さの下に、強力な言語機能が隠されているのです。JavaScript は数々の高い注目を集めるアプリケーションで使用され、この技術の深い知識がどんなウェブやモバイルの開発者にとっても重要なスキルであることが示されました。</p>
+<p>なぜ {{原語併記("「再」入門", "re-introduction")}} なのか? なぜなら {{Glossary("JavaScript")}} は<a href="http://javascript.crockford.com/javascript.html">世界で最も誤解されたプログラミング言語</a>としてよく知られているためです。しばしばおもちゃだと馬鹿にされながら、しかしその人を欺くような単純さの下に、強力な言語機能が隠されているのです。JavaScript は数々の高い注目を集めるアプリケーションで使用され、この技術の深い知識がどんなウェブやモバイルの開発者にとっても重要なスキルであることが示されました。</p>
 
-<p>この言語の歴史について理解することから始めるのが役立つでしょう。JavaScript は 1995 年、Netscape の技術者 ブレンダン・アイク ("Brendan Eich") によって創られ、1996 年初頭に Netscape 2 で初めてリリースされました。当初は LiveScript と呼ばれる予定でしたが、Sun Microsystems の Java 言語の人気にあやかろうという不運なるマーケティング上の決定により改名されました ― 2 つの言語が共通点をほとんど持っていないにもかかわらず。それ以来、このことは未だに混同の元となっています。</p>
+<p>この言語の歴史について理解することから始めるのが役立つでしょう。JavaScript は 1995 年、Netscape の技術者{{原語併記("ブレンダン・アイク", "Brendan Eich")}} によって創られ、1996 年初頭に Netscape 2 で初めてリリースされました。当初は LiveScript と呼ばれる予定でしたが、Sun Microsystems の Java 言語の人気にあやかろうという不運なるマーケティング上の決定により改名されました ― 2 つの言語が共通点をほとんど持っていないにもかかわらず。それ以来、このことは未だに混同の元となっています。</p>
 
 <p>Microsoft はその数か月後、IE3 とともに JScript というほとんど互換性のある言語をリリースしました。さらに数か月後、Netscape はこの言語をヨーロッパの標準化団体 <a href="http://www.ecma-international.org/">Ecma International</a> に提出し、その結果 1997 年に {{Glossary("ECMAScript")}} という標準の第 1 版が生まれました。この標準は重要なアップデートを受けて 1999 年に <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 第 3 版</a>となり、その後しばらくほとんど安定してきました。言語の複雑化に関する政治的な隔たりから、第 4 版は放棄されたものの、その多くのパーツは 2009 年 12 月に発行された新しい ECMAScript 第 5 版の基礎となりました。そして、標準の第 6 版が 2015 年 6 月に発行されました。</p>
 
@@ -61,7 +61,7 @@ translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 
 <h2 id="Numbers" name="Numbers">数値</h2>
 
-<p>JavaScript における数値は、仕様によると「倍精度 64 ビットフォーマット IEEE 754 値 ("double-precision 64-bit format IEEE 754 values")」です。 JavaScript には整数に当たるものがない ( {{jsxref("BigInt")}} を除く) ので、少し気を付ける必要があります。以下の例を見てください。</p>
+<p>JavaScript における数値は、仕様によると「{{原語併記("倍精度 64 ビットフォーマット IEEE 754 値", "double-precision 64-bit format IEEE 754 values")}}」です。 JavaScript には整数に当たるものがない ( {{jsxref("BigInt")}} を除く) ので、少し気を付ける必要があります。以下の例を見てください。</p>
 
 <pre class="brush: js notranslate">console.log(3 / 2);             // 1.5, <em>not</em> 1
 console.log(Math.floor(3 / 2)); // 1</pre>
@@ -141,7 +141,7 @@ isFinite(NaN); // false
 
 <h2 id="Strings" name="Strings">文字列</h2>
 
-<p>JavaScript における文字列は、<a href="/ja/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode 文字</a> の 連なったもの ("sequences") です。これは 国際化 ("internationalization") に対処しなければならない誰もが歓迎するニュースでしょう。より正確に言えば UTF-16 コード単位の連なったものであり、つまりそれぞれのコード単位は 16 ビットの整数で表されます。また、それぞれの Unicode 文字は 1 または 2 個のコード単位で表します。</p>
+<p>JavaScript における文字列は、<a href="/ja/docs/Web/JavaScript/Guide/Values,_variables,_and_literals#Unicode">Unicode 文字</a> の{{原語併記("連なったもの", "sequences")}} です。これは{{原語併記("国際化", "internationalization")}} に対処しなければならない誰もが歓迎するニュースでしょう。より正確に言えば UTF-16 コード単位の連なったものであり、つまりそれぞれのコード単位は 16 ビットの整数で表されます。また、それぞれの Unicode 文字は 1 または 2 個のコード単位で表します。</p>
 
 <p>もし単一文字を表したいなら、単純に 1 文字で構成された文字列を使います。</p>
 
@@ -247,7 +247,7 @@ x = x + 5;
 
 <p>空文字列を足すのは、何かを文字列に変換する便利な方法です。</p>
 
-<p>JavaScript における <a href="/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="JavaScript/Reference/Operators/Comparison_Operators">比較</a> は、<code>&lt;</code> や <code>&gt;</code>、<code>&lt;=</code>、<code>&gt;=</code> を使ってすることができます。これらは文字列と数値のどちらでも機能します。等価性はちょっと明快ではありません。二重イコール演算子は、異なる型を与えると 型強制 ("type coercion") を行います。これは時に面白い結果を返します:</p>
+<p>JavaScript における <a href="/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" title="JavaScript/Reference/Operators/Comparison_Operators">比較</a> は、<code>&lt;</code> や <code>&gt;</code>、<code>&lt;=</code>、<code>&gt;=</code> を使ってすることができます。これらは文字列と数値のどちらでも機能します。等価性はちょっと明快ではありません。二重イコール演算子は、異なる型を与えると{{原語併記("型強制", "type coercion")}} を行います。これは時に面白い結果を返します:</p>
 
 <pre class="brush: js notranslate">123 == '123'; // true
 1 == true; // true
@@ -311,7 +311,7 @@ do {
 }
 </pre>
 
-<p><code>&amp;&amp;</code> と <code>||</code> 演算子は、1 つ目のオペランドによって 2 つ目のオペランドを評価するか否かが決まる 短絡論理 ("short-circuit logic") を用いています。これはあるオブジェクトの属性にアクセスする前に、それが null オブジェクトかをチェックするのに便利です:</p>
+<p><code>&amp;&amp;</code> と <code>||</code> 演算子は、1 つ目のオペランドによって 2 つ目のオペランドを評価するか否かが決まる{{原語併記("短絡論理", "short-circuit logic")}} を用いています。これはあるオブジェクトの属性にアクセスする前に、それが null オブジェクトかをチェックするのに便利です:</p>
 
 <pre class="brush: js notranslate">var name = o &amp;&amp; o.getName();
 </pre>
@@ -340,7 +340,7 @@ do {
 }
 </pre>
 
-<p>もし <code>break</code> 文を入れなければ、処理は次の段階へ フォールスルー ("fall through") します。この動作が望むものであることは非常にまれでしょう ― 事実、もしそれが本当に意図するものならば、デバッグの補助として故意のフォールスルーをコメントで明確にラベリングするだけの価値があるでしょう:</p>
+<p>もし <code>break</code> 文を入れなければ、処理は次の段階へ{{原語併記("フォールスルー", "fall through")}} します。この動作が望むものであることは非常にまれでしょう ― 事実、もしそれが本当に意図するものならば、デバッグの補助として故意のフォールスルーをコメントで明確にラベリングするだけの価値があるでしょう:</p>
 
 <pre class="brush: js notranslate">switch (a) {
   case 1: // フォールスルー
@@ -666,7 +666,7 @@ avgArray([2, 3, 4, 5]); // 3.5
 <p>例えば: <code>avg(...numbers)</code></p>
 </div>
 
-<p>JavaScript では 無名関数 ("anonymous functions") を作ることができます。</p>
+<p>JavaScript では{{原語併記("無名関数", "anonymous functions")}} を作ることができます。</p>
 
 <pre class="brush: js notranslate">var avg = function() {
   var sum = 0;

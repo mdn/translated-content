@@ -47,7 +47,7 @@ translation_of: Mozilla/Firefox/Releases/26
  <li>{{domxref("URL")}} インタフェースに {{domxref("URL.URL", "URL()")}} コンストラクタを実装しました ({{bug("887364")}})。</li>
  <li>{{domxref("URLUtils")}} を実装するすべてのインターフェイスで {{domxref("URLUtils.origin")}}、{{domxref("URLUtils.password")}}、{{domxref("URLUtils.username")}} の各プロパティが利用可能になりました: {{domxref("URL")}}、{{domxref("Location")}}、{{domxref("HTMLAnchorElement")}}、{{domxref("HTMLAreaElement")}} ({{bug("887364")}})。</li>
  <li>{{domxref("URL")}} インタフェースは、Web Workers からアクセス可能になりました ({{bug("887364")}})。</li>
- <li>一時的なストレージで、プロンプトを必要とせず LRU 方式でプールにデータを保存するように、IndexedDB を "楽観的な ("optimistic")" ストレージエリアとして使用できるようになりました ({{bug("785884")}})。</li>
+ <li>一時的なストレージで、プロンプトを必要とせず LRU 方式でプールにデータを保存するように、IndexedDB を "{{原語併記("楽観的な", "optimistic")}}" ストレージエリアとして使用できるようになりました ({{bug("785884")}})。</li>
  <li>永続的なストレージのパスを <code>&lt;profile&gt;/indexedDB</code> から <code>&lt;profile&gt;/storage/persistent</code> に変更しました (b2g では <code>/data/local/indexedDB</code> から <code>/data/local/storage/persistent</code> に変更)。</li>
  <li>{{domxref("Screen.orientation")}} プロパティおよび {{domxref("Screen.lockOrientation()")}} メソッドで値 <code>default</code> をサポートしました。デバイスに応じて <code>portrait-primary</code> または <code>landscape-primary</code> が対応づけられます ({{bug(908058)}})。</li>
  <li>{{domxref("Event")}} コンストラクタを Web workers で使用できます ({{bug(910910)}})。</li>
