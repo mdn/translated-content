@@ -524,7 +524,7 @@ onmessage = function(oEvent) {
 
 <h3 id="Passing_data_by_transferring_ownership_transferable_objects" name="Passing_data_by_transferring_ownership_(transferable_objects)">所有権の譲渡 (Transferable Objects) によるデータの引き渡し</h3>
 
-<p>Google Chrome 17 以降および Firefox 18 以降には、特定の種類のオブジェクト ({{domxref("Transferable")}} インターフェイスを実装するオブジェクトである Transferable Object) を高いパフォーマンスで Worker から、または Worker へ渡すための、追加の手段があります。Transferable Object はあるコンテキストから別のコンテキストへ、コピー操作なしに転送されます。これにより、大量のデータセットを送信する際のパフォーマンスが大きく向上します。C/C++ の経験者であれば、参照渡しと考えてください。しかし参照渡しとは異なり、転送されると元のコンテキストからその版が失われます。そしてその所有権は新しいコンテキストに譲渡されます。例えば {{domxref("ArrayBuffer")}} をメインアプリから Worker スクリプトへ転送するとき、元の {{domxref("ArrayBuffer")}} はクリアされて使用できなくなります。その内容物は (文字どおり) Worker コンテキストに{{原語併記("転送", "transfer")}}されます。</p>
+<p>Google Chrome 17 以降および Firefox 18 以降には、特定の種類のオブジェクト ({{domxref("Transferable")}} インターフェイスを実装するオブジェクトである Transferable Object) を高いパフォーマンスで Worker から、または Worker へ渡すための、追加の手段があります。Transferable Object はあるコンテキストから別のコンテキストへ、コピー操作なしに転送されます。これにより、大量のデータセットを送信する際のパフォーマンスが大きく向上します。C/C++ の経験者であれば、参照渡しと考えてください。しかし参照渡しとは異なり、転送されると元のコンテキストからその版が失われます。そしてその所有権は新しいコンテキストに譲渡されます。例えば {{domxref("ArrayBuffer")}} をメインアプリから Worker スクリプトへ転送するとき、元の {{domxref("ArrayBuffer")}} はクリアされて使用できなくなります。その内容物は (文字どおり) Worker コンテキストに 転送 ("transfer") されます。</p>
 
 <pre class="brush: js notranslate">// 32MB の "file" を作成して埋めます。
 var uInt8Array = new Uint8Array(1024*1024*32); // 32MB
