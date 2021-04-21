@@ -55,6 +55,7 @@ original_slug: Web/API/Node/localName
 &lt;/ecomm:business&gt;
 </pre>
 <p><span class="comment">Needs to be reworded; right now it's wrong. -Nickolay The prefix&amp;mdash;in this case, "ecomm"&amp;mdash;defines the namespace in which the local name can be used.</span></p>
+<p> {{ gecko_minversion_note("1.9.2", "Firefox 3.5 およびそれ以前では、このプロパティは HTML DOM 中の HTML 要素については大文字のローカル名を返します（XML DOM 中の XHTML 要素については小文字のローカル名を返します）。 Firefox 3.6 以降のバージョンでは、 HTML 5 との互換性のため、内部的な DOM ストレージにおける大文字/小文字で返します。つまり、 HTML DOM と XML DOM の両方において、 HTML 要素は小文字のローカル名となります。 tagName プロパティは、 HTML DOM 中の HTML 要素についても今まで通り大文字のローカル名を返します。") }}</p>
 <p><code>ELEMENT_NODE</code> と <code>ATTRIBUTE_NODE</code> 以外の<a href="/ja/DOM/element.nodeType" title="ja/DOM/element.nodeType">種類</a>全てに属すノードでは、常に <code>localName</code> は <code>null</code> です。</p>
 <h3 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h3>
 <p><a href="/ja/DOM/element.namespaceURI" title="ja/DOM/element.namespaceURI">element.namespaceURI</a></p>

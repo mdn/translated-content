@@ -46,6 +46,7 @@ original_slug: Erweiterung_erstellen
                 sample.xul
 </pre>
 <p>Bitte lesen Sie die zusätzlichen Informationen zum <a href="/de/Einrichten_einer_Entwicklungsumgebung_für_Erweiterungen" title="de/Einrichten_einer_Entwicklungsumgebung_für_Erweiterungen">Einrichten einer Entwicklungsumgebung für Erweiterungen</a>.</p>
+<p>{{ gecko_minversion_note("1.9.2", "Ab Gecko 1.9.2 (Firefox 3.6) können Sie auch einfach ein Icon, welches <code>icon.png</code> heißt, in Wurzelverzeichnis des Add-ons packen. Dies erlaubt Ihnen die Anzeige Ihres Add-on Icons sogar wenn das Add-on deaktiviert ist oder wenn im Manifest kein Eintrag zur <code>iconURL</code> vorhanden ist.") }}</p>
 <h4 id="Das_Installationsmanifest_erstellen">Das Installationsmanifest erstellen</h4>
 <p>Öffnen Sie die Datei <code><a href="/de/Installationsmanifest" title="de/Installationsmanifest">install.rdf</a></code>, welche Sie am Anfang erstellt haben und schreiben Sie folgendes hinein:</p>
 <pre class="eval">&lt;?xml version="1.0"?&gt;

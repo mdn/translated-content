@@ -319,7 +319,7 @@ console.log(student1 instanceof Student); // true
 </pre>
 
 <p><code>Student.prototype = Object.create(Person.prototype);</code> という行について :<br>
- {{jsxref("Global_Objects/Object/create","Object.create")}} が存在しない古い JavaScript エンジンでは、「ポリフィル」("polyfill") （"shim" とも呼ばれます。リンク先の記事をご覧ください）または同様の結果になる以下のような関数を使用できます。:</p>
+ {{jsxref("Global_Objects/Object/create","Object.create")}} が存在しない古い JavaScript エンジンでは、「{{原語併記("ポリフィル","polyfill")}}」 （"shim" とも呼ばれます。リンク先の記事をご覧ください）または同様の結果になる以下のような関数を使用できます。:</p>
 
 <pre class="brush: js">function createObject(proto) {
     function ctor() { }

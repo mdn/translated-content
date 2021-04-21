@@ -236,6 +236,7 @@ original_slug: Bản_Kê_Khai_Cài_Đặt
 <pre class="eval">&lt;em:iconURL&gt;<a class="external" rel="freelink">chrome://myext/skin/icon.png</a>&lt;/em:iconURL&gt;</pre>
 <div class="note">
   <strong>Note:</strong> For the above example to work you will also have to add a <code>skin package</code> line to your <code>chrome.manifest</code> file. See <a href="/en-US/docs/Chrome_Registration#skin" title="Chrome_Registration#skin">Chrome Registration#skin</a>. Alternatively you can place your icon in the directory specified in your <code>content package</code> line.</div>
+<p>{{ gecko_minversion_note("1.9.2", "Starting in Gecko 1.9.2 (Firefox 3.6), you can also simply include your icon, named <code>icon.png</code>, in the base directory of the add-on. This allows your add-on's icon to be displayed even when the add-on is disabled, or if the manifest is missing an <code>iconURL</code> entry.") }}</p>
 <h3 id="targetPlatform" name="targetPlatform">targetPlatform</h3>
 <p>A string specifying a platform that the addon supports. It contains either the value of <a href="/en-US/docs/OS_TARGET" title="OS_TARGET">OS_TARGET</a> alone or combined with <a href="/en-US/docs/XPCOM_ABI" title="XPCOM_ABI">TARGET_XPCOM_ABI</a>, separated by an underscore (_).</p>
 <p>You can specify multiple targetPlatform properties per manifest. If any value matches the application's build parameters, it will be installed; if not, the user will get an appropriate error message.</p>

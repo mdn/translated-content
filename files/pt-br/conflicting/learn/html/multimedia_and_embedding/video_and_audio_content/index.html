@@ -147,7 +147,9 @@ mediaElement.played.end();      // Retorna o numero de segundos que o navegador 
 </dl>
 
 <div class="geckoVersionNote" style="">
-<p>O intervalo de reprodução foi adicionado à especificação URI od elemeto media no Gecko 9.0. Atualmente, é a única parte da <a class="external" href="http://www.w3.org/TR/media-frags/" title="http://www.w3.org/TR/media-frags/">Media Fragments URI specification</a> implementada pelo Gecko, e somente pode ser utilizada para especificar a fonte dos elementos media, e não na barra de endereço.</p>
+<p>{{ gecko_callout_heading("9.0") }}</p>
+
+<p>O intervalo de reprodução foi adicionado à especificação URI od elemeto media no Gecko 9.0 {{ geckoRelease("9.0") }}. Atualmente, é a única parte da <a class="external" href="http://www.w3.org/TR/media-frags/" title="http://www.w3.org/TR/media-frags/">Media Fragments URI specification</a> implementada pelo Gecko, e somente pode ser utilizada para especificar a fonte dos elementos media, e não na barra de endereço.</p>
 </div>
 
 <h2 id="Opções_alternativas">Opções alternativas</h2>
@@ -185,6 +187,8 @@ mediaElement.played.end();      // Retorna o numero de segundos que o navegador 
 </pre>
 
 <p>Se você não criar um elemento filho alternativo do elemento objeto cortado, como o elemento {{ HTMLElement("p") }} mostrado acima, o Firefox 3.5 que conseguem reproduzir o vídeo mas não tem Java instalado vao informar incorretamente ao usuário que ele precisa instalar um plugin para visualizar o conteúdo da página.</p>
+
+<p>{{ h1_gecko_minversion("Error handling", "2.0") }}</p>
 
 <p>A partir do Gecko 2.0 {{ geckoRelease("2.0") }}, o gerenciamento de erros é revisada para corresponder à última versão da especificação do HTML5. Ao invés do evento <code>error</code> ser enviado ao elemento media, ele é enviado ao elemento filho {{ HTMLElement("source") }} correspondente às fontes em que ocorreram o erro.</p>
 
@@ -231,3 +235,7 @@ mediaElement.played.end();      // Retorna o numero de segundos que o navegador 
  <li><a class="external" href="http://mediaelementjs.com/" title="http://mediaelementjs.com/">MediaElement.js</a> - framework aberta para áudio e vídeo em HTML5 com uma biblioteca Flash customizada que imita a API de HTML5 para navegadores antigos</li>
  <li><a class="external" href="http://www.hdwebplayer.com" title="http://www.hdwebplayer.com">Flv Player</a> - uma player de vídeo alternativo para HTML5</li>
 </ul>
+
+<p>{{ HTML5ArticleTOC() }}</p>
+
+<div>{{ languages({ "fr": "fr/Utilisation_d'audio_et_video_dans_Firefox", "es": "es/Usando_audio_y_video_en_Firefox", "ja": "ja/Using_HTML5_audio_and_video","zh-cn":"zh-cn/Using_HTML5_audio_and_video" }) }}</div>

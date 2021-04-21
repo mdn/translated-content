@@ -49,6 +49,8 @@ original_slug: Control_de_la_corrección_ortográfica_en_formularios_HTML
 
 <p>En este fragmento de código HTML, los dos primeros campos de texto se comprueban mientras que el tercero no.</p>
 
+<p id="lang">{{ h1_gecko_minversion("Controlar el idioma del corrector ortográfico", "9.0") }}</p>
+
 <p>A partir de Gecko 9.0 {{ geckoRelease("9.0") }}, el corrector ortográfico utiliza un elemento {{ HTMLElement("input") }} con atributo {{ htmlattrxref("lang", "input") }} para determinar el idioma predeterminado del corrector ortográfico. Si {{ HTMLElement("input") }} no tiene atributo <code>lang</code>, el atributo se busca en cada elemento padre sucesivamente y hacia arriba, hacia el nodo raíz hasta encontrar uno.</p>
 
 <p>De esta manera, si un usuario tiene a la vez instalados los diccionarios Frances e Ingles, y un elemento editable tiene <code>lang="en"</code>, el diccionario Inglés se utilizará automáticamente para ese elemento.</p>

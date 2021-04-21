@@ -66,6 +66,8 @@ original_slug: Building_an_Extension
 
 <p><span class="comment">&lt;pre&gt; #!/bin/sh h=$HOME/moExt mkdir -p $h/my_extension/chrome/content touch $h/my_extension/chrome.manifest $h/my_extension/install.rdf &lt;/pre&gt;</span> Por favor lee la información adicional sobre configuración de un ambiente de desarrollo en el artículo <a href="/en-US/docs/Setting_up_extension_development_environment" title="/en-US/docs/Setting_up_extension_development_environment">Configurando un ambiente de desarrollo</a>.</p>
 
+<p>{{ gecko_minversion_note("1.9.2", "Starting in Gecko 1.9.2 (Firefox 3.6), you can also simply include an icon, named <code>icon.png</code>, in the base directory of the add-on. This allows your add-on's icon to be displayed even when the add-on is disabled, or if the manifest is missing an <code>iconURL</code> entry.") }}</p>
+
 <h2 id="Crear_el_Manifiesto_de_Instalación">Crear el Manifiesto de Instalación</h2>
 
 <p>Abre el archivo llamado <code><a href="/en-US/docs/Install_Manifests" title="/en-US/docs/Install_Manifests">install.rdf</a></code> que creaste en el tope de la jerarquía de carpetas de tu extensión y agrega dentro lo siguiente:</p>
