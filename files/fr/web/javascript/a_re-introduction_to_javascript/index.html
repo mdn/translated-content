@@ -26,7 +26,7 @@ original_slug: Web/JavaScript/Une_réintroduction_à_JavaScript
 
 <p>Contrairement à la plupart des langages de programmation, JavaScript n'a pas de concept d'entrée ou de sortie. Il est conçu pour s'exécuter comme un langage de script dans un environnement hôte, et c'est à cet environnement de fournir des mécanismes de communication avec le monde extérieur. L'environnement hôte le plus commun est un navigateur, mais des interpréteurs JavaScript existent également dans Adobe Acrobat, Photoshop, les images SVG, le moteur de widgets de Yahoo!, et même au sein d'environnements côté serveur tels que <a href="https://nodejs.org/">Node.js</a>. Cette liste ne se limite pas qu'à ces éléments et on retrouve également JavaScript dans les bases de données NoSQL telles que <a href="https://couchdb.apache.org/">Apache CouchDB</a>, les ordinateurs embarqués ou encore des environnements de bureaux comme <a href="https://www.gnome.org/">GNOME</a> (l'une des interfaces graphiques les plus populaires des systèmes d'exploitation GNU/Linux).</p>
 
-<h2 id="overview">Aperçu</h2>
+<h2 id="Overview">Aperçu</h2>
 
 <p>JavaScript est un langage dynamique multi-paradigme : il dispose de différents types, opérateurs, objets natifs et méthodes. Sa syntaxe s'inspire des langages Java et C, donc de nombreuses structures de ces langages s'appliquent également à JavaScript. À la différence de ces langages, JavaScript n'a pas de classes. Au lieu de cela, la fonctionnalité des classes est reprise par les prototypes d'objet (voir notamment <a href="/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">l'héritage et la chaîne de prototypes</a> ainsi que le sucre syntaxique pour les <a href="/fr/docs/Web/JavaScript/Reference/Classes"><code>Classes</code></a> apparues avec ES6/ES2015). L'autre grande différence tient dans le fait que les fonctions sont des objets, on peut donc stocker ces fonctions dans des variables et les transmettre comme n'importe quel objet.</p>
 
@@ -211,7 +211,7 @@ for ( let variableLet = 0; variableLet &lt; 5; variableLet++ ) {
 
 <pre class="brush: js">
 const Pi = 3.14; // la constante Pi est définie
-Pi = 1; // produira une erreur car vous ne pouvez pas modifier une variable constante.
+Pi = 1; // produira une erreur, car vous ne pouvez pas modifier une variable constante.
 </pre>
 
 <p><code>var</code> est le mot-clé le plus fréquemment utilisé pour déclarer des variables. Ce mot-clé était disponible avant <code>let</code> et <code>const</code> (c'était alors le seul qui permettait de déclarer des variables). Une variable qu'on déclare avec <code>var</code> est disponible dans le bloc de la fonction dans laquelle elle est déclarée.</p>
@@ -605,7 +605,7 @@ ajoute(2, 3, 4, 5); // 14</pre>
 }
 moyenne(2, 3, 4, 5); // 3.5</pre>
 
-<p>C'est assez utile, mais cela semble un peu verbeux. Pour réduire un peu plus ce code, nous pouvons envisager de substituer l'utilisation du tableau d'arguments par <a href="/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters">la syntaxe des paramètres du reste</a>. De cette façon, nous pouvons passer un nombre quelconque d'arguments dans la fonction tout en gardant notre code minimal. L'opérateur <strong>rest parameter</strong> est utilisé dans les listes de paramètres de fonctions avec le format : <strong>...variable</strong> et il inclura dans cette variable la liste entière des arguments non capturés avec lesquels la fonction a été appelée. Nous remplacerons également la boucle <strong>for</strong> par une boucle <strong>for...of</strong> pour retourner les valeurs dans notre variable.</p>
+<p>C'est assez utile, mais cela semble un peu verbeux. Pour réduire un peu plus ce code, nous pouvons envisager de substituer l'utilisation du tableau d'arguments par <a href="/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters">la syntaxe des paramètres du reste</a>. De cette façon, nous pouvons passer un nombre quelconque d'arguments dans la fonction tout en gardant notre code minimal. L'opérateur <strong><i>rest parameter</i></strong> pour cette syntaxe est utilisé dans les listes de paramètres de fonctions avec le format : <strong>...variable</strong> et il inclura dans cette variable la liste entière des arguments non capturés avec lesquels la fonction a été appelée. Nous remplacerons également la boucle <strong>for</strong> par une boucle <strong>for...of</strong> pour retourner les valeurs dans notre variable.</p>
 
 <pre class="brush: js">function moyenne(...args) {
   var somme = 0;
@@ -676,7 +676,7 @@ moyenneTableau([2, 3, 4, 5]); // 3.5</pre>
   // …
 })();</pre>
 
-<p>De plus amples détails sur les IIFE sont hors de portée de cet article d'introduction — mais un bon exemple de ce à quoi ils sont particulièrement utiles se trouve dans la section <a href="/fr/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures">Emulation de méthodes privées avec des fermetures</a> de l'article <a href="/fr/docs/Web/JavaScript/Closures">Fermetures</a>.</p>
+<p>De plus amples détails sur les IIFE sont hors de portée de cet article d'introduction — mais un bon exemple de ce à quoi ils sont particulièrement utiles se trouve dans la section <a href="/fr/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures">Émulation de méthodes privées avec des fermetures</a> de l'article <a href="/fr/docs/Web/JavaScript/Closures">Fermetures</a>.</p>
 
 <h3 id="recursive_functions">Fonctions récursives</h3>
 
@@ -693,7 +693,7 @@ moyenneTableau([2, 3, 4, 5]); // 3.5</pre>
   return count;
 }</pre>
 
-<p>Cela met en évidence un problème potentiel avec les fonctions anonymes : comment les appeler de manière récursive si elles n'ont pas de nom ? JavaScript vous permet de nommer les expressions de fonctions pour cela. Vous pouvez utiliser des <a href="/fr/docs/Glossary/IIFE">IIFE (« Immediately Invoked Function Expressions »)</a> nommées, comme indiqué ci-dessous :</p>
+<p>Cela met en évidence un problème potentiel avec les fonctions anonymes : comment les appeler de manière récursive si elles n'ont pas de nom ? JavaScript vous permet de nommer les expressions de fonctions pour cela. Vous pouvez utiliser des <a href="/fr/docs/Glossary/IIFE">IIFE (« Immediately Invoked Function Expressions » en anglais soit « Expressions de fonctions immédiatement invoquées » en français)</a> nommées, comme indiqué ci-dessous :</p>
 
 <pre class="brush: js">var charsInBody = (function counter(elm) {
   if (elm.nodeType == 3) { // TEXT_NODE
@@ -767,7 +767,7 @@ nomComplet(); // undefined undefined</pre>
 
 <p>Lorsqu'on appelle <code>nomComplet()</code>, <code>this</code> est lié à l'objet global. Comme il n'y a pas de variables globales appelées <code>prenom</code> ou <code>nom</code>, on se retrouve avec <code>undefined</code> pour chacune.</p>
 
-<p>On peut se servir du mot clé <code>this</code> pour améliorer notre fonction <code>créerPersonne</code> :</p>
+<p>On peut se servir du mot-clé <code>this</code> pour améliorer notre fonction <code>créerPersonne</code> :</p>
 
 <pre class="brush: js">function Personne(prenom, nom) {
   this.prenom = prenom;
