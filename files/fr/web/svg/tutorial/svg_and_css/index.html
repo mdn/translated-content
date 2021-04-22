@@ -13,24 +13,24 @@ tags:
 translation_of: Web/SVG/Tutorial/SVG_and_CSS
 original_slug: CSS/Premiers_pas/Graphiques_SVG
 ---
-<div>Cette page illustre le langage spécialisé dans la création d'éléments graphiques : <a href="/fr/docs/Web/SVG">SVG</a>.</div>
+<div>Cette page illustre l'application de CSS sur des documents <a href="/fr/docs/Web/SVG">SVG</a>, le langage spécialisé dans la création d'éléments graphiques vectoriels.</div>
 
-<p>Vous allez créer ci-dessous une démonstration simple qui s'exécute dans votre navigateur compatible SVG.</p>
+<p>Nous allons voir par la suite un exemple que vous pourrez copier pour l'exécuter dans votre navigateur (à la condition que celui-ci soit compatible avec SVG).</p>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
-  <p>Les éléments référencés par des éléments <a href="/fr/docs/Web/SVG/Element/use"><code>&lt;use&gt;</code></a> héritent des styles de cet élément. Pour leur appliquer des styles différents, il faut donc utiliser <a href="/fr/docs/Web/CSS/CSS_Variables">les propriétés personnalisées du CSS</a>.</p>
+  <p>Les éléments référencés par des éléments <a href="/fr/docs/Web/SVG/Element/use"><code>&lt;use&gt;</code></a> héritent des styles de cet élément. Pour leur appliquer des styles différents, il faut donc utiliser <a href="/fr/docs/Web/CSS/CSS_Variables">les propriétés CSS personnalisées (<i>custom properties</i>)</a>.</p>
 </div>
 
 <h2 id="example">Exemple</h2>
 
-<p>Créez un nouveau document SVG en tant que fichier texte brut, <code>doc8.svg</code>. Copiez et collez le contenu d'ici, en vous assurant que vous faites défiler le texte pour l'obtenir en entier :</p>
+<p>Créez un nouveau document SVG en tant que fichier texte brut, <code>doc.svg</code>. Copiez et collez le contenu qui suit, en vous assurant de faire défiler le texte pour obtenir l'intégralité de l'exemple :</p>
 
 <pre class="brush: html">&lt;svg width="600px" height="600px" viewBox="-300 -300 600 600"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
 
 &lt;title&gt;Démonstration SVG&lt;/title&gt;
-&lt;desc&gt;Démarrer avec Mozilla CSS - Démonstration SVG&lt;/desc&gt;
+&lt;desc&gt;Démarrer avec CSS et SVG&lt;/desc&gt;
 
 &lt;defs&gt;
   &lt;radialGradient id="fade" cx="0" cy="0" r="200"
@@ -41,7 +41,8 @@ original_slug: CSS/Premiers_pas/Graphiques_SVG
 &lt;/defs&gt;
 
 &lt;text id="heading" x="-280" y="-270"&gt;Démonstration SVG&lt;/text&gt;
-&lt;text  id="caption" x="-280" y="-250"&gt;Déplacez le pointeur de votre souris sur la fleur.&lt;/text&gt;
+&lt;text  id="caption" x="-280" y="-250"&gt;Déplacez le pointeur de
+ votre souris sur la fleur.&lt;/text&gt;
 
 &lt;g id="flower"&gt;
   &lt;circle id="overlay" cx="0" cy="0" r="200" stroke="none" fill="url(#fade)"/&gt;
@@ -236,9 +237,9 @@ original_slug: CSS/Premiers_pas/Graphiques_SVG
 &lt;/g&gt;
 &lt;/svg&gt;</pre>
 
-<p>Créez un nouveau fichier CSS, <code>style8.css</code>. Copiez et collez-y le contenu ci-dessous, en vous assurant de le faire défiler pour en obtenir la totalité :</p>
+<p>Créez un nouveau fichier CSS, <code>style.css</code>. Copiez et collez-y le contenu ci-dessous, en vous assurant de le faire défiler pour en obtenir la totalité :</p>
 
-<pre class="brush: css">/*** SVG demonstration ***/
+<pre class="brush: css">/*** Démonstration SVG ***/
 
 /* page */
 svg {
@@ -343,8 +344,8 @@ svg {
 }
 
 /*
-  Non-standard way of styling elements referenced via &lt;use&gt; elements,
-  supported by some older browsers
+  Façon non standard de styliser les éléments référencés via les éléments &lt;use&gt;,
+  supportée par certains anciens navigateurs
 */
 #inner-petals .segment-fill {
   fill: yellow;
@@ -380,28 +381,23 @@ svg {
   <li>Le SVG a ses propres propriétés et valeurs CSS. Certaines d'entre elles sont similaires aux propriétés CSS utilisées pour le HTML.</li>
 </ul>
 
-<table style="background-color: #fffff4; border: 1px solid #3366bb; margin-bottom: 1em; padding: 1em;">
-  <caption>Défi</caption>
-  <tbody>
-    <tr>
-      <td>Modifiez la feuille de style de sorte que les pétales intérieurs deviennent tous roses lorsque le pointeur de la souris passe sur l'un d'entre eux, sans modifier le fonctionnement des pétales extérieurs.</td>
-    </tr>
-  </tbody>
-</table>
-
+<div class="notecard note">
+  <p><b>Défi :</b></p>
+<p>Modifiez la feuille de style de sorte que les pétales intérieurs deviennent tous roses lorsque le pointeur de la souris passe sur l'un d'entre eux, sans modifier le fonctionnement des pétales extérieurs.</</p>
+</div>
 <p><a href="/fr/docs/Web/Guide/CSS/Getting_started/Challenge_solutions#svg_and_css">Voir une solution à ce défi.</a></p>
 
-<h2 id="simplified_structure">Simplified structure</h2>
+<h2 id="simplified_structure">Structure simplifiée</h2>
 
 <p>La structure SVG présentée ci-dessus pourrait être écrite de manière beaucoup plus concise en référençant les différentes parties de la fleur via des éléments <a href="/fr/docs/Web/SVG/Element/use"><code>&lt;use&gt;</code></a>. Ce <a href="https://www.w3.org/TR/SVG2/struct.html#UseStyleInheritance">comportement est normalisé</a>, bien que seuls quelques navigateurs prennent en charge la pseudo-classe <a href="/fr/docs/Web/CSS/:hover"><code>:hover</code></a> et d'autres sélecteurs CSS plus complexes sur les éléments référencés via les éléments <code>&lt;use&gt;</code>, pour le moment. Il existe <a href="https://github.com/w3c/svgwg/issues/504">un débat sur les règles applicables à ces éléments référencés</a>.</p>
 
-<p>See below how the structure then looks like.</p>
+<p>Voici comment se présente la structure du document SVG désormais.</p>
 
 <pre class="brush: html">&lt;svg width="600px" height="600px" viewBox="-300 -300 600 600"
     xmlns="http://www.w3.org/2000/svg"&gt;
 
   &lt;title&gt;Démonstration SVG&lt;/title&gt;
-  &lt;desc&gt;Démarrer avec Mozilla CSS - Démonstration SVG&lt;/desc&gt;
+  &lt;desc&gt;Démarrer avec CSS et SVG&lt;/desc&gt;
 
   &lt;defs&gt;
     &lt;g id="segment" class="segment"&gt;
@@ -443,4 +439,4 @@ svg {
 
 <h2 id="what_next">Et ensuite ?</h2>
 
-<p>Dans cette démonstration, votre navigateur compatible SVG sait déjà comment afficher les éléments SVG. La feuille de style ne fait que modifier l'affichage de certaines manières. Ceci est également vrai pour les documents HTML et XUL. Mais vous pouvez utiliser CSS pour des documents XML à usage général, où il n'y a pas de manière prédéfinie d'afficher les éléments. La page suivante en fait la démonstration : <a href="/fr/docs/Archive/Beginner_tutorials/XML_data">Données XML</a>.</p>
+<p>Dans cette démonstration, le navigateur, compatible SVG, sait déjà comment afficher les éléments SVG. La feuille de style ne fait que modifier l'affichage de certaines manières. Ceci est également vrai pour les documents HTML. Mais vous pouvez utiliser CSS pour des documents XML à usage général, où il n'y a pas de manière prédéfinie d'afficher les éléments. La page suivante en fait la démonstration : <a href="/fr/docs/Archive/Beginner_tutorials/XML_data">Données XML</a>.</p>
