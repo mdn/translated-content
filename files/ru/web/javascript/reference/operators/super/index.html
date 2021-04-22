@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Operators/super
 
 <p>Ключевое слово <strong>super</strong> используется для вызова функций, принадлежащих родителю объекта.</p>
 
-<p>Выражения: <code>super.prop</code> и <code>super[expr]</code> действительны в любом <a href="/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions">методе определения</a> и в <a href="/ru/docs/Web/JavaScript/Reference/Classes">классах</a>, и в <a href="/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer">литералах объекта</a>.</p>
+<p>Выражения: <code>super.prop</code> и <code>super[expr]</code> действительны в любом <a href="/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions">определении метода</a> в <a href="/ru/docs/Web/JavaScript/Reference/Classes">классах</a>, и в <a href="/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer">литералах объекта</a>.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -53,19 +53,19 @@ class Square extends Rectangle {
   constructor(length) {
     this.height; // ReferenceError, super должен быть вызван первым!
 
-    // Здесь вызывается метод конструктора родительского класса с длинами,
+    // Здесь вызывается конструктор родительского класса с длинами,
     // указанными для ширины и высоты класса Rectangle
     super(length, length);
 
     // Примечание: в производных классах super() необходимо вызывать, прежде чем
-    // использовать 'this'. Если этого не сделать, будет сообщение об ошибке ссылки.
+    // использовать 'this'. Если этого не сделать, произойдет ошибка ReferenceError.
     this.name = 'Square';
   }
 }</pre>
 
 <h3 id="Супер-вызовы_статических_методов">Супер-вызовы статических методов</h3>
 
-<p>Вы так же можете вызывать super на <a href="/ru/docs/Web/JavaScript/Reference/Classes/static">статических</a> методах.</p>
+<p>Вы так же можете вызывать super для <a href="/ru/docs/Web/JavaScript/Reference/Classes/static">статических</a> методов.</p>
 
 <pre class="brush: js">class Rectangle {
   static logNbSides() {
@@ -81,9 +81,9 @@ class Square extends Rectangle {
 Square.logDescription(); // 'У меня 4 стороны, равные между собой'
 </pre>
 
-<h3 id="Удаление_свойств_super_вызывает_ошибку">Удаление свойств super вызывает ошибку</h3>
+<h3 id="Удаление_свойств_через_super_вызывает_ошибку">Удаление свойств через super вызывает ошибку</h3>
 
-<p>Вы не можете использовать <a href="/ru/docs/Web/JavaScript/Reference/Operators/delete">оператор delete</a> и <code>super.prop</code> или <code>super[expr]</code> при удалении родительского класса, он выдаст: {{jsxref("ReferenceError")}}.</p>
+<p>Вы не можете использовать <a href="/ru/docs/Web/JavaScript/Reference/Operators/delete">оператор delete</a> и <code>super.prop</code> или <code>super[expr]</code> для удаления свойств родительского класса, он выдаст: {{jsxref("ReferenceError")}}.</p>
 
 <pre class="brush: js">class Base {
   constructor() {}
