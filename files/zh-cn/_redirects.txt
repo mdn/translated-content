@@ -1736,6 +1736,7 @@
 /zh-CN/docs/Web/API/ParentNode/firstElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/firstElementChild
 /zh-CN/docs/Web/API/ParentNode/lastElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/lastElementChild
 /zh-CN/docs/Web/API/ParentNode/prepend	/zh-CN/docs/orphaned/Web/API/ParentNode/prepend
+/zh-CN/docs/Web/API/ParentNode/replaceChildren	/zh-CN/docs/orphaned/Web/API/ParentNode/replaceChildren
 /zh-CN/docs/Web/API/Performance.now()	/zh-CN/docs/Web/API/Performance/now
 /zh-CN/docs/Web/API/Performance/内存	/zh-CN/docs/Web/API/Performance/memory
 /zh-CN/docs/Web/API/Position	/zh-CN/docs/Web/API/GeolocationPosition

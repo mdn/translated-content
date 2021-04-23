@@ -16781,12 +16781,6 @@
       "ZZES_REN"
     ]
   },
-  "Web/API/ParentNode/replaceChildren": {
-    "modified": "2020-10-15T22:33:59.306Z",
-    "contributors": [
-      "JoshOY"
-    ]
-  },
   "Web/API/Path2D": {
     "modified": "2019-03-23T22:53:11.857Z",
     "contributors": [
@@ -50797,6 +50791,12 @@
     "contributors": [
       "Song2017",
       "FredWe"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/replaceChildren": {
+    "modified": "2020-10-15T22:33:59.306Z",
+    "contributors": [
+      "JoshOY"
     ]
   }
 }
