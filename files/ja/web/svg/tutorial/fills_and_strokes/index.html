@@ -60,7 +60,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 <p>{{ 英語版章題("Using CSS") }}</p>
 <h2 id="CSS_の利用">CSS の利用</h2>
 <p>オブジェクトに属性を設定するのに加えて、CSS を用いて fill や stroke のスタイルをつけることもできます。この構文は <code>background-color</code> や <code>border</code> の代わりに <code>fill</code> や <code>stroke</code> に値を設定する点を除いて、通常の HTML で用いられる CSS と同じです。すべての属性を CSS で指定できるわけではないことは伝えておくべきでしょう。描画や塗りつぶしを扱う属性は利用可能ですので <code>fill</code>、<code>stroke</code>、<code>stroke-dasharray</code> などはこの方法で設定可能です。また、後ほど示すグラデーションやパターン向けの属性も同様です。<code>width</code>、<code>height</code>、あるいはパスのコマンド <code>d</code> は CSS を通して設定できません。何が可能あるいは不可能かをテストして調べるのは、とても簡単です。FF3 の DOM Inspector では、XUL や HTML に加え、SVG の CSS 属性の一覧も表示するようになりました。</p>
-<div class="note"><a class="external" href="http://www.w3.org/TR/SVG/propidx.html" title="http://www.w3.org/TR/SVG/propidx.html">SVG 仕様</a> は<em>{{ 原語併記("プロパティ", "Property") }}</em>である属性とその他の属性を厳密に定めています。前者は CSS で変更できますが、後者はできません。</div>
+<div class="note"><a class="external" href="http://www.w3.org/TR/SVG/propidx.html" title="http://www.w3.org/TR/SVG/propidx.html">SVG 仕様</a> は<em>プロパティ ("Property")</em>である属性とその他の属性を厳密に定めています。前者は CSS で変更できますが、後者はできません。</div>
 <p>style 属性を用いて、要素にインラインで CSS を挿入できます:</p>
 <pre class="eval"> &lt;rect x="10" height="180" y="10" width="180" style="stroke: black; fill: red;"/&gt;
 </pre>

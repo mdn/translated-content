@@ -19,7 +19,7 @@ translation_of: Web/JavaScript/Guide/Functions
 
 <h3 id="Function_declarations" name="Function_declarations">関数の宣言</h3>
 
-<p><strong>関数の定義</strong>（<strong>関数の宣言</strong>や{{原語併記("<strong>関数定義文</strong>","function statement")}} とも呼ばれます）は <code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/function" title="function">function</a></code> キーワードと、それに続く以下の内容で構成されます。</p>
+<p><strong>関数の定義</strong>（<strong>関数の宣言</strong>や <strong>関数定義文</strong> ("function statement") とも呼ばれます）は <code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/function" title="function">function</a></code> キーワードと、それに続く以下の内容で構成されます。</p>
 
 <ul>
  <li>関数の名前。</li>
@@ -59,7 +59,7 @@ y = mycar.make; // y は "Toyota" という値になる
 
 <h3 id="Function_expressions" name="Function_expressions">関数式</h3>
 
-<p>ここまでの関数宣言はすべて構文的な文でしたが、関数は<strong>関数式</strong>によって作成することもできます。このような関数は<strong>{{原語併記("無名","anonymous")}}</strong> にできます。名前をつけなくてもよいのです。例えば、関数 <code>square</code> は次のように定義できます :</p>
+<p>ここまでの関数宣言はすべて構文的な文でしたが、関数は<strong>関数式</strong>によって作成することもできます。このような関数は<strong>無名 ("anonymous")</strong> にできます。名前をつけなくてもよいのです。例えば、関数 <code>square</code> は次のように定義できます :</p>
 
 <pre class="brush: js notranslate">const square = function(number) { return number * number }
 var x = square(4) // x の値は 16 となる</pre>
@@ -370,7 +370,7 @@ A(1); // 6 がログに出力される (1 + 2 + 3)
 <ol>
  <li>関数 <code>B</code> は関数 <code>A</code> に含まれたクロージャとなっています、言い換えると <code>B</code> は <code>A</code> の引数と変数にアクセスできます。</li>
  <li>関数 <code>C</code> は関数 <code>B</code> に含まれたクロージャとなっています。</li>
- <li>クロージャ <code>B</code> は <code>A</code> の中にあり、クロージャ <code>C</code> も <code>A</code> の中にあるので、<code>C</code> は <code>B</code>、<strong>そしてさらに</strong> <code>A</code> の引数と変数にアクセスできます。言い換えれば、<code>C</code> は <code>B</code>、<code>A</code> の順でスコープが{{原語併記("つながっている","chain")}} のです。</li>
+ <li>クロージャ <code>B</code> は <code>A</code> の中にあり、クロージャ <code>C</code> も <code>A</code> の中にあるので、<code>C</code> は <code>B</code>、<strong>そしてさらに</strong> <code>A</code> の引数と変数にアクセスできます。言い換えれば、<code>C</code> は <code>B</code>、<code>A</code> の順でスコープが つながっている ("chain") のです。</li>
 </ol>
 
 <p>その一方で、逆は成り立ちません。<code>A</code> は <code>C</code> にアクセスできません、なぜなら <code>A</code> は、<code>C</code> を変数の一つとして持っている <code>B</code> の引数や変数にはアクセスできないからです。このように <code>C</code> は <code>B</code> からのみプライベートとなっています。</p>
@@ -477,7 +477,7 @@ getCode();    // シークレットコードを返す
 
 <h2 id="Using_the_arguments_object" name="Using_the_arguments_object">arguments オブジェクトの使用</h2>
 
-<p>関数の{{原語併記("引数", "argument")}}は、配列状オブジェクトで管理されます。関数内では、次のようにして渡された引数を指定することができます :</p>
+<p>関数の 引数 ("argument") は、配列状オブジェクトで管理されます。関数内では、次のようにして渡された引数を指定することができます :</p>
 
 <pre class="brush: js notranslate">arguments[i]
 </pre>
