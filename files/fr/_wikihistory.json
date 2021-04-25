@@ -11692,49 +11692,6 @@
       "fscholz"
     ]
   },
-  "Web/API/ParentNode/append": {
-    "modified": "2020-10-15T21:59:23.058Z",
-    "contributors": [
-      "Yukulele.",
-      "Watilin",
-      "ayshiff"
-    ]
-  },
-  "Web/API/ParentNode/children": {
-    "modified": "2020-10-15T21:43:07.206Z",
-    "contributors": [
-      "Arzak656",
-      "jMoulis",
-      "loella16",
-      "NemoNobobyPersonne",
-      "xavierartot"
-    ]
-  },
-  "Web/API/ParentNode/firstElementChild": {
-    "modified": "2019-03-23T23:35:50.443Z",
-    "contributors": [
-      "pdonias",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "Delapouite",
-      "Beaver"
-    ]
-  },
-  "Web/API/ParentNode/lastElementChild": {
-    "modified": "2019-03-18T21:39:15.409Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "Web/API/ParentNode/prepend": {
-    "modified": "2020-10-15T22:02:32.998Z",
-    "contributors": [
-      "Yukulele.",
-      "Seblor",
-      "loella16"
-    ]
-  },
   "Web/API/ParentNode/querySelector": {
     "modified": "2020-10-15T22:30:52.578Z",
     "contributors": [
@@ -33298,12 +33255,6 @@
       "Fredchat"
     ]
   },
-  "Web/API/Document_Object_Model/Events": {
-    "modified": "2019-03-18T21:39:20.100Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/Document_object_model/Locating_DOM_elements_using_selectors": {
     "modified": "2019-03-18T21:39:30.176Z",
     "contributors": [
@@ -35256,29 +35207,6 @@
     "contributors": [
       "Goofy",
       "wordsbybird"
-    ]
-  },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2020-10-15T21:40:07.710Z",
-    "contributors": [
-      "tristantheb",
-      "loella16",
-      "csblo",
-      "yasakura_",
-      "jmh"
-    ]
-  },
-  "Web/Guide/Events": {
-    "modified": "2020-08-30T07:20:46.985Z",
-    "contributors": [
-      "Voulto",
-      "Sheppy"
-    ]
-  },
-  "Web/Guide/Events/Orientation_and_motion_data_explained": {
-    "modified": "2019-03-18T21:41:00.371Z",
-    "contributors": [
-      "loella16"
     ]
   },
   "Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent": {
@@ -43515,18 +43443,6 @@
       "Fredchat"
     ]
   },
-  "Web/API/Detecting_device_orientation": {
-    "modified": "2019-03-23T23:28:22.437Z",
-    "contributors": [
-      "mgagnon555",
-      "a-mt",
-      "tregagnon",
-      "Fredchat",
-      "FredB",
-      "achraf",
-      "darnuria"
-    ]
-  },
   "Web/API/Network_Information_API": {
     "modified": "2020-10-15T21:24:14.258Z",
     "contributors": [
@@ -45334,6 +45250,90 @@
       "loella16",
       "xavierartot",
       "vava"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/children": {
+    "modified": "2020-10-15T21:43:07.206Z",
+    "contributors": [
+      "Arzak656",
+      "jMoulis",
+      "loella16",
+      "NemoNobobyPersonne",
+      "xavierartot"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/firstElementChild": {
+    "modified": "2019-03-23T23:35:50.443Z",
+    "contributors": [
+      "pdonias",
+      "fscholz",
+      "teoli",
+      "khalid32",
+      "Delapouite",
+      "Beaver"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/lastElementChild": {
+    "modified": "2019-03-18T21:39:15.409Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/append": {
+    "modified": "2020-10-15T21:59:23.058Z",
+    "contributors": [
+      "Yukulele.",
+      "Watilin",
+      "ayshiff"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/prepend": {
+    "modified": "2020-10-15T22:02:32.998Z",
+    "contributors": [
+      "Yukulele.",
+      "Seblor",
+      "loella16"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2020-10-15T21:40:07.710Z",
+    "contributors": [
+      "tristantheb",
+      "loella16",
+      "csblo",
+      "yasakura_",
+      "jmh"
+    ]
+  },
+  "orphaned/Web/API/Detecting_device_orientation": {
+    "modified": "2019-03-23T23:28:22.437Z",
+    "contributors": [
+      "mgagnon555",
+      "a-mt",
+      "tregagnon",
+      "Fredchat",
+      "FredB",
+      "achraf",
+      "darnuria"
+    ]
+  },
+  "orphaned/Web/API/Document_Object_Model/Events": {
+    "modified": "2019-03-18T21:39:20.100Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2020-08-30T07:20:46.985Z",
+    "contributors": [
+      "Voulto",
+      "Sheppy"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Orientation_and_motion_data_explained": {
+    "modified": "2019-03-18T21:41:00.371Z",
+    "contributors": [
+      "loella16"
     ]
   }
 }

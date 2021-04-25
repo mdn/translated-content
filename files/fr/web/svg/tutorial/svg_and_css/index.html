@@ -1,199 +1,442 @@
 ---
-title: Graphiques SVG
+title: SVG et CSS
 slug: Web/SVG/Tutorial/SVG_and_CSS
 tags:
   - CSS
-  - CSS:Premiers_pas
+  - CSS:Getting_Started
+  - Example
+  - Guide
+  - Intermediate
+  - NeedsUpdate
+  - SVG
+  - Web
 translation_of: Web/SVG/Tutorial/SVG_and_CSS
 original_slug: CSS/Premiers_pas/Graphiques_SVG
 ---
-<p> </p>
-<p>Cette page illustre le langage spécialisé dans la création d'éléments graphiques : SVG.</p>
-<p>Vous créerez une démonstration simple visible dans votre navigateur Mozilla avec SVG activé.</p>
-<h3 id="Information_:_SVG" name="Information_:_SVG">Information : SVG</h3>
-<p>
-  <i>
-    SVG</i>
-  (Scalable Vector Graphics) est un langage basé sur XML permettant de créer des éléments graphiques.</p>
-<p>Il peut être utilisé pour des images statiques, ainsi que pour des animations et des interfaces utilisateur.</p>
-<p>Comme d'autres langages basés sur XML, SVG permet d'utiliser des feuilles de style CSS afin de séparer le style d'un graphique de son contenu.</p>
-<p>De plus, les feuilles de style utilisées avec d'autres langages de balisages peuvent spécifier l'URL d'un graphique SVG lorsqu'une image est requise. Par exemple, une feuille de style utilisée avec un document HTML peut spécifier l'URL d'un graphique SVG dans la valeur d'une propriété <code>background</code>.</p>
-<table style="border: 1px solid #36b; padding: 1em; background-color: #f4f4f4; margin-bottom: 1em; width: 100%;">
-  <caption>
-    Plus de détails</caption>
-  <tbody>
-    <tr>
-      <td>Au moment de la rédaction de ce document (courant 2005), seules certains compilations récentes des navigateurs Mozilla ont leur gestion native de SVG activée.
-        <p>Vous pouvez ajouter un support SVG à d'autres versions en installant un plugin comme celui fourni par <a class="external" href="http://www.adobe.com/svg/viewer/install/main.html">Adobe</a>.</p>
-        <p>Pour plus d'informations à propos de SVG dans Mozilla, consultez la page <a href="fr/SVG">SVG</a> de ce wiki.</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<h3 id="Action_:_une_d.C3.A9monstration_de_SVG" name="Action_:_une_d.C3.A9monstration_de_SVG">Action : une démonstration de SVG</h3>
-<p>Créez un nouveau document SVG en tant que fichier texte simple, <code>doc8.svg</code>. Copiez et collez-y le contenu ci-dessous en vous assurant de le faire défiler afin d'en obtenir la totalité :</p>
-<div style="width: 48em; height: 12em; overflow: auto;">
-  <pre>&lt;?xml version="1.0" standalone="no"?&gt;
+<div>Cette page illustre l'application de CSS sur des documents <a href="/fr/docs/Web/SVG">SVG</a>, le langage spécialisé dans la création d'éléments graphiques vectoriels.</div>
 
-&lt;?xml-stylesheet type="text/css" href="style8.css"?&gt;
+<p>Nous allons voir par la suite un exemple que vous pourrez copier pour l'exécuter dans votre navigateur (à la condition que celui-ci soit compatible avec SVG).</p>
 
-&lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
-  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"&gt;
+<div class="notecard note">
+  <p><b>Note :</b></p>
+  <p>Les éléments référencés par des éléments <a href="/fr/docs/Web/SVG/Element/use"><code>&lt;use&gt;</code></a> héritent des styles de cet élément. Pour leur appliquer des styles différents, il faut donc utiliser <a href="/fr/docs/Web/CSS/CSS_Variables">les propriétés CSS personnalisées (<i>custom properties</i>)</a>.</p>
+</div>
 
-&lt;svg width="600px" height="600px" viewBox="-300 -300 600 600"
-  xmlns="http://www.w3.org/2000/svg" version="1.1"
-  xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+<h2 id="example">Exemple</h2>
 
-&lt;title&gt;SVG demonstration&lt;/title&gt;
-&lt;desc&gt;Premiers pas en CSS avec Mozilla - Démonstration de SVG&lt;/desc&gt;
+<p>Créez un nouveau document SVG en tant que fichier texte brut, <code>doc.svg</code>. Copiez et collez le contenu qui suit, en vous assurant de faire défiler le texte pour obtenir l'intégralité de l'exemple :</p>
+
+<pre class="brush: html">&lt;svg width="600px" height="600px" viewBox="-300 -300 600 600"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+
+&lt;title&gt;Démonstration SVG&lt;/title&gt;
+&lt;desc&gt;Démarrer avec CSS et SVG&lt;/desc&gt;
 
 &lt;defs&gt;
-  &lt;g id="segment" class="segment"&gt;
-    &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
-    &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
-    &lt;/g&gt;
-  &lt;g id="quadrant"&gt;
-    &lt;use xlink:href="#segment"/&gt;
-    &lt;use xlink:href="#segment" transform="rotate(18)"/&gt;
-    &lt;use xlink:href="#segment" transform="rotate(36)"/&gt;
-    &lt;use xlink:href="#segment" transform="rotate(54)"/&gt;
-    &lt;use xlink:href="#segment" transform="rotate(72)"/&gt;
-    &lt;/g&gt;
-  &lt;g id="petals"&gt;
-    &lt;use xlink:href="#quadrant"/&gt;
-    &lt;use xlink:href="#quadrant" transform="rotate(90)"/&gt;
-    &lt;use xlink:href="#quadrant" transform="rotate(180)"/&gt;
-    &lt;use xlink:href="#quadrant" transform="rotate(270)"/&gt;
-    &lt;/g&gt;
   &lt;radialGradient id="fade" cx="0" cy="0" r="200"
       gradientUnits="userSpaceOnUse"&gt;
     &lt;stop id="fade-stop-1" offset="33%"/&gt;
     &lt;stop id="fade-stop-2" offset="95%"/&gt;
-    &lt;/radialGradient&gt;
-  &lt;/defs&gt;
+  &lt;/radialGradient&gt;
+&lt;/defs&gt;
 
-&lt;text id="heading" x="-280" y="-270"&gt;
-  SVG demonstration&lt;/text&gt;
-&lt;text  id="caption" x="-280" y="-250"&gt;
-  Placez le pointeur de la souris au dessus de la fleur.&lt;/text&gt;
+&lt;text id="heading" x="-280" y="-270"&gt;Démonstration SVG&lt;/text&gt;
+&lt;text  id="caption" x="-280" y="-250"&gt;Déplacez le pointeur de
+ votre souris sur la fleur.&lt;/text&gt;
 
 &lt;g id="flower"&gt;
-  &lt;circle id="overlay" cx="0" cy="0" r="200"
-    stroke="none" fill="url(#fade)"/&gt;
-  &lt;use id="outer-petals" xlink:href="#petals"/&gt;
-  &lt;use id="inner-petals" xlink:href="#petals"
-    transform="rotate(9) scale(0.33)"/&gt;
+  &lt;circle id="overlay" cx="0" cy="0" r="200" stroke="none" fill="url(#fade)"/&gt;
+
+  &lt;g id="outer-petals"&gt;
+    &lt;g class="quadrant"&gt;
+      &lt;g class="segment"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(18)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(36)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(54)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(72)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+
+    &lt;g class="quadrant"&gt;
+      &lt;g class="segment" transform="rotate(90)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(108)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(126)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(144)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(162)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+
+    &lt;g class="quadrant"&gt;
+      &lt;g class="segment" transform="rotate(180)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(198)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(216)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(234)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(252)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+
+    &lt;g class="quadrant"&gt;
+      &lt;g class="segment" transform="rotate(270)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(288)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(306)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(324)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(342)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
   &lt;/g&gt;
 
-&lt;/svg&gt;
-</pre>
-</div>
-<p>Créez un nouveau fichier CSS, <code>style8.css</code>. Copiez et collez-y le contenu ci-dessous, en vous assurant de le faire défiler pour en obtenir la totalité :</p>
-<div style="width: 48em; height: 12em; overflow: auto;">
-  <pre>/*** Démonstration de SVG ***/
+  &lt;g id="inner-petals" transform="rotate(9) scale(0.33)"&gt;
+    &lt;g class="quadrant"&gt;
+      &lt;g class="segment"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(18)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(36)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(54)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(72)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+
+    &lt;g class="quadrant"&gt;
+      &lt;g class="segment" transform="rotate(90)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(108)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(126)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(144)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(162)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+
+    &lt;g class="quadrant"&gt;
+      &lt;g class="segment" transform="rotate(180)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(198)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(216)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(234)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(252)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+
+    &lt;g class="quadrant"&gt;
+      &lt;g class="segment" transform="rotate(270)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(288)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(306)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(324)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+      &lt;g class="segment" transform="rotate(342)"&gt;
+        &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+        &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+  &lt;/g&gt;
+&lt;/g&gt;
+&lt;/svg&gt;</pre>
+
+<p>Créez un nouveau fichier CSS, <code>style.css</code>. Copiez et collez-y le contenu ci-dessous, en vous assurant de le faire défiler pour en obtenir la totalité :</p>
+
+<pre class="brush: css">/*** Démonstration SVG ***/
 
 /* page */
 svg {
   background-color: beige;
-  }
+}
 
 #heading {
   font-size: 24px;
   font-weight: bold;
-  }
+}
 
 #caption {
   font-size: 12px;
-  }
+}
 
-/* flower */
+/* fleur */
 #flower:hover {
   cursor: crosshair;
-  }
+}
 
-/* gradient */
+/* dégradé */
 #fade-stop-1 {
   stop-color: blue;
-  }
+}
 
 #fade-stop-2 {
   stop-color: white;
-  }
+}
 
-/* outer petals */
+/* pétales */
+.segment-fill {
+  fill: var(--segment-fill-fill);
+  stroke: var(--segment-fill-stroke);
+  stroke-width: var(--segment-fill-stroke-width);
+}
+
+.segment-fill:hover {
+  fill: var(--segment-fill-fill-hover);
+  stroke: var(--segment-fill-stroke-hover);
+}
+
+.segment-edge {
+  fill: var(--segment-edge-fill);
+  stroke: var(--segment-edge-stroke);
+  stroke-width: var(--segment-edge-stroke-width);
+}
+
+.segment-edge:hover {
+  stroke: var(--segment-edge-stroke-hover);
+}
+
+/* extérieurs de pétales */
 #outer-petals {
   opacity: .75;
-  }
+  --segment-fill-fill: azure;
+  --segment-fill-stroke: lightsteelblue;
+  --segment-fill-stroke-width: 1;
+  --segment-edge-fill: none;
+  --segment-edge-stroke: deepskyblue;
+  --segment-edge-stroke-width: 3;
+  --segment-fill-fill-hover: plum;
+  --segment-fill-stroke-hover: none;
+  --segment-edge-stroke-hover: slateblue;
+}
 
+/*
+  Façon non standard de styliser les éléments référencés via les éléments &lt;use&gt;,
+  supportée par certains anciens navigateurs
+*/
 #outer-petals .segment-fill {
   fill: azure;
   stroke: lightsteelblue;
   stroke-width: 1;
-  }
+}
 
 #outer-petals .segment-edge {
   fill: none;
   stroke: deepskyblue;
   stroke-width: 3;
-  }
+}
 
 #outer-petals .segment:hover &gt; .segment-fill {
   fill: plum;
   stroke: none;
-  }
+}
 
 #outer-petals .segment:hover &gt; .segment-edge {
   stroke: slateblue;
-  }
+}
 
-/* inner petals */
+/* intérieurs de pétales */
+#inner-petals {
+  --segment-fill-fill: yellow;
+  --segment-fill-stroke: yellow;
+  --segment-fill-stroke-width: 1;
+  --segment-edge-fill: none;
+  --segment-edge-stroke: yellowgreen;
+  --segment-edge-stroke-width: 9;
+  --segment-fill-fill-hover: darkseagreen;
+  --segment-fill-stroke-hover: none;
+  --segment-edge-stroke-hover: green;
+}
+
+/*
+  Façon non standard de styliser les éléments référencés via les éléments &lt;use&gt;,
+  supportée par certains anciens navigateurs
+*/
 #inner-petals .segment-fill {
   fill: yellow;
-  stroke: yellowgreen;
+  stroke: yellow;
   stroke-width: 1;
-  }
+}
 
 #inner-petals .segment-edge {
   fill: none;
   stroke: yellowgreen;
   stroke-width: 9;
-  }
+}
 
 #inner-petals .segment:hover &gt; .segment-fill {
   fill: darkseagreen;
   stroke: none;
-  }
+}
 
 #inner-petals .segment:hover &gt; .segment-edge {
   stroke: green;
-  }
-</pre>
-</div>
-<p>Ouvrez le document dans votre navigateur avec SVG activé. Placez le pointeur de la souris au dessus de l'image.</p>
-<p>Ce wiki ne permet pas d'utiliser SVG dans ses pages, il n'est donc pas possible d'afficher la démonstration ici. L'image ressemble à ceci :</p>
-<table style="border: 2px outset #36b;">
-  <tbody>
-    <tr>
-      <td><img alt="Démonstration de SVG"></td>
-    </tr>
-  </tbody>
-</table>
-<p>Remarques à propos de cette démonstration :</p>
+}</pre>
+
+<p>Ouvrez le document dans votre navigateur compatible SVG. Déplacez le pointeur de votre souris sur le graphique pour voir ce qui se passe.</p>
+
+<h3 id="result">Résultat</h3>
+
+<p>{{EmbedLiveSample("example", "660", "660")}}</p>
+
+<p>Notes sur cette démonstration :</p>
+
 <ul>
-  <li>Le document SVG est lié à la feuille de style de la manière habituelle.</li>
-  <li>SVG possède ses propres propriétés CSS et valeurs. Certaines d'entre-elles sont similaires au propriétés CSS pour HTML.</li>
+  <li>Le document SVG lie la feuille de style de la façon habituelle.</li>
+  <li>Le SVG a ses propres propriétés et valeurs CSS. Certaines d'entre elles sont similaires aux propriétés CSS utilisées pour le HTML.</li>
 </ul>
-<p> </p>
-<table style="border: 1px solid #36b; padding: 1em; background-color: #fffff4; margin-bottom: 1em;">
-  <caption>
-    Challenge</caption>
-  <tbody>
-    <tr>
-      <td>Modifiez la feuille de style pour que les pétales intérieurs deviennent tous roses lorsque le pointeur de la souris survole n'importe lequel d'entre-eux, sans changer la manière dont les pétales extérieurs fonctionnent.</td>
-    </tr>
-  </tbody>
-</table>
-<p> </p>
-<h4 id="Pour_continuer" name="Pour_continuer">Pour continuer</h4>
-<p>Si vous avez eu des difficultés à comprendre cette page, ou si vous avez d'autres commentaires à son sujet, n'hésitez pas à contribuer à sa <a>page de discussion</a>.</p>
-<p>Dans cette démonstration, votre navigateur avec SVG activé sait déjà comment afficher les éléments SVG. La feuille de style modifie uniquement l'affichage dans une certaine mesure. C'est également le cas pour les documents HTML et XUL. Mais vous pouvez utiliser CSS pour des documents XML généralistes, où il n'y a aucune manière prédéfinie d'afficher les éléments. La page suivante en fait la démonstration : <b><a href="/fr/docs/CSS/Premiers_pas/Donn%c3%a9es_XML">Données XML</a></b>.</p>
+
+<div class="notecard note">
+  <p><b>Défi :</b></p>
+<p>Modifiez la feuille de style de sorte que les pétales intérieurs deviennent tous roses lorsque le pointeur de la souris passe sur l'un d'entre eux, sans modifier le fonctionnement des pétales extérieurs.</</p>
+</div>
+<p><a href="/fr/docs/Web/Guide/CSS/Getting_started/Challenge_solutions#svg_and_css">Voir une solution à ce défi.</a></p>
+
+<h2 id="simplified_structure">Structure simplifiée</h2>
+
+<p>La structure SVG présentée ci-dessus pourrait être écrite de manière beaucoup plus concise en référençant les différentes parties de la fleur via des éléments <a href="/fr/docs/Web/SVG/Element/use"><code>&lt;use&gt;</code></a>. Ce <a href="https://www.w3.org/TR/SVG2/struct.html#UseStyleInheritance">comportement est normalisé</a>, bien que seuls quelques navigateurs prennent en charge la pseudo-classe <a href="/fr/docs/Web/CSS/:hover"><code>:hover</code></a> et d'autres sélecteurs CSS plus complexes sur les éléments référencés via les éléments <code>&lt;use&gt;</code>, pour le moment. Il existe <a href="https://github.com/w3c/svgwg/issues/504">un débat sur les règles applicables à ces éléments référencés</a>.</p>
+
+<p>Voici comment se présente la structure du document SVG désormais.</p>
+
+<pre class="brush: html">&lt;svg width="600px" height="600px" viewBox="-300 -300 600 600"
+    xmlns="http://www.w3.org/2000/svg"&gt;
+
+  &lt;title&gt;Démonstration SVG&lt;/title&gt;
+  &lt;desc&gt;Démarrer avec CSS et SVG&lt;/desc&gt;
+
+  &lt;defs&gt;
+    &lt;g id="segment" class="segment"&gt;
+      &lt;path class="segment-fill" d="M0,0 v-200 a40,40 0 0,0 -62,10 z"/&gt;
+      &lt;path class="segment-edge" d="M0,-200 a40,40 0 0,0 -62,10"/&gt;
+    &lt;/g&gt;
+    &lt;g id="quadrant"&gt;
+      &lt;use xlink:href="#segment"/&gt;
+      &lt;use xlink:href="#segment" transform="rotate(18)"/&gt;
+      &lt;use xlink:href="#segment" transform="rotate(36)"/&gt;
+      &lt;use xlink:href="#segment" transform="rotate(54)"/&gt;
+      &lt;use xlink:href="#segment" transform="rotate(72)"/&gt;
+    &lt;/g&gt;
+    &lt;g id="petals"&gt;
+      &lt;use xlink:href="#quadrant"/&gt;
+      &lt;use xlink:href="#quadrant" transform="rotate(90)"/&gt;
+      &lt;use xlink:href="#quadrant" transform="rotate(180)"/&gt;
+      &lt;use xlink:href="#quadrant" transform="rotate(270)"/&gt;
+    &lt;/g&gt;
+    &lt;radialGradient id="fade" cx="0" cy="0" r="200"
+        gradientUnits="userSpaceOnUse"&gt;
+      &lt;stop id="fade-stop-1" offset="33%"/&gt;
+      &lt;stop id="fade-stop-2" offset="95%"/&gt;
+    &lt;/radialGradient&gt;
+  &lt;/defs&gt;
+
+  &lt;text id="heading" x="-280" y="-270"&gt;Démonstration SVG&lt;/text&gt;
+  &lt;text  id="caption" x="-280" y="-250"&gt;Déplacez le pointeur de votre souris sur la fleur.&lt;/text&gt;
+
+  &lt;g id="flower"&gt;
+    &lt;circle id="overlay" cx="0" cy="0" r="200" stroke="none" fill="url(#fade)"/&gt;
+    &lt;use id="outer-petals" xlink:href="#petals"/&gt;
+    &lt;use id="inner-petals" xlink:href="#petals"
+      transform="rotate(9) scale(0.33)"/&gt;
+  &lt;/g&gt;
+
+&lt;/svg&gt;
+</pre>
+
+<h2 id="what_next">Et ensuite ?</h2>
+
+<p>Dans cette démonstration, le navigateur, compatible SVG, sait déjà comment afficher les éléments SVG. La feuille de style ne fait que modifier l'affichage de certaines manières. Ceci est également vrai pour les documents HTML. Mais vous pouvez utiliser CSS pour des documents XML à usage général, où il n'y a pas de manière prédéfinie d'afficher les éléments. La page suivante en fait la démonstration : <a href="/fr/docs/Archive/Beginner_tutorials/XML_data">Données XML</a>.</p>

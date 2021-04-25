@@ -31,7 +31,6 @@ original_slug: WebSockets
      <dd>
       處理 WebSocket 協定的伺服器端代碼書寫指引。</dd>
     </dl>
-    <p><span class="alllinks"><a href="/Special:Tags?tag=WebSockets&amp;language=zh-tw" title="Special:Tags?tag=WebSockets&amp;language=zh-tw">所有文件...</a></span></p>
    </td>
    <td>
     <h4 id="Tools" name="Tools">工具</h4>
@@ -143,14 +142,10 @@ original_slug: WebSockets
 <h3 id="Gecko_附註">Gecko 附註</h3>
 <p>Firefox 的 WebSockets 支援正在持續追蹤發展中的 WebSocket 規範。Firefox 6 實作底層協定版號 7，Firefox 7 實作協定版號 8（IETF 草案 10 的內容）。Firefox mobile 在 7.0 版支援 WebSocket。</p>
 <div class="geckoVersionNote">
- <p>{{ gecko_callout_heading("6.0") }}</p>
- <p>Gecko 6.0 {{ geckoRelease("6.0") }} 之前，不該存在的 <code>WebSocket</code> 物件使得某些開發者認為 <code>WebSocket</code> 服務沒有前輟，此物件已被更名為 <code>MozWebSocket</code>。</p>
+ <p>Gecko 6.0 之前，不該存在的 <code>WebSocket</code> 物件使得某些開發者認為 <code>WebSocket</code> 服務沒有前輟，此物件已被更名為 <code>MozWebSocket</code>。</p>
 </div>
 <div class="geckoVersionNote">
- <p>{{ gecko_callout_heading("7.0") }}</p>
- <p>自從 Gecko 7.0 {{ geckoRelease("7.0") }}，偏好設定 <code>network.websocket.max-connections</code> 可以用來設定 WebSocket 連線同時開啟的最大個數。預設值為 200。</p>
+ <p>自從 Gecko 7.0，偏好設定 <code>network.websocket.max-connections</code> 可以用來設定 WebSocket 連線同時開啟的最大個數。預設值為 200。</p>
 </div>
 <div class="warning">
  <strong>警告：</strong>雖然不是唯一的理由，但是目前 WebSockets 被 Firefox 4 與 5 禁用的關鍵原因是一個<a class="external" href="http://www.ietf.org/mail-archive/web/hybi/current/msg04744.html" title="http://www.ietf.org/mail-archive/web/hybi/current/msg04744.html">協定設計上的安全問題</a>，因此不建議在生產環境下使用這些 Firefox 版本的 WebSockets。若仍想測試 WebSockets，你可以開啟 <code>about:config</code> 並設定 <code>network.websocket.enabled</code> 的取值至 <code>true</code>，並需要同時設定 <code>network.websocket.override-security-block</code> 的取值至 <code>true</code> 才能允許 WebSocket 連線的初始化。</div>
-<p>{{ HTML5ArticleTOC() }}</p>
-<p>{{ languages ( {"en": "en/WebSockets", "es": "es/WebSockets"} ) }}</p>

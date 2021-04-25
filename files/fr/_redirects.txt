@@ -898,7 +898,7 @@
 /fr/docs/DOM/DataTransfer	/fr/docs/Web/API/DataTransfer
 /fr/docs/DOM/Document.evaluate	/fr/docs/Web/API/Document/evaluate
 /fr/docs/DOM/Document.implementation	/fr/docs/Web/API/Document/implementation
-/fr/docs/DOM/Element.firstElementChild	/fr/docs/Web/API/ParentNode/firstElementChild
+/fr/docs/DOM/Element.firstElementChild	/fr/docs/orphaned/Web/API/ParentNode/firstElementChild
 /fr/docs/DOM/File	/fr/docs/Web/API/File
 /fr/docs/DOM/FileReader	/fr/docs/Web/API/FileReader
 /fr/docs/DOM/FileReader/FileList	/fr/docs/Web/API/FileList
@@ -3464,7 +3464,6 @@
 /fr/docs/Précis_CSS_2/Tout_en_un	/fr/docs/Web/CSS/Reference
 /fr/docs/Précis_CSS_2:Tout_en_un	/fr/docs/Web/CSS/Reference
 /fr/docs/Qualité	/fr/docs/QA
-/fr/docs/Ressources_hors_ligne_dans_Firefox	/fr/docs/Web/HTML/Using_the_application_cache
 /fr/docs/Référence_DOM_Gecko	/fr/docs/conflicting/Glossary/DOM
 /fr/docs/Référence_de_JavaScript_1.5_Core	/fr/docs/Web/JavaScript/Reference
 /fr/docs/Référence_de_JavaScript_1.5_Core/A_propos_de_cette_reference	/fr/docs/Web/JavaScript/Reference/About
@@ -3590,7 +3589,6 @@
 /fr/docs/Utilisation_du_DOM_Level_1_Core_du_W3C/Exemple	/fr/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
 /fr/docs/Utilisation_du_cache_dans_Firefox_1.5	/fr/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /fr/docs/Utilisation_du_cache_de_Firefox_1.5	/fr/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
-/fr/docs/Utiliser_Application_Cache	/fr/docs/Web/HTML/Using_the_application_cache
 /fr/docs/Web/API/API_HTML_Drag_and_Drop	/fr/docs/Web/API/HTML_Drag_and_Drop_API
 /fr/docs/Web/API/API_HTML_Drag_and_Drop/Opérations_de_glissement	/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /fr/docs/Web/API/API_IndexedDB	/fr/docs/Web/API/IndexedDB_API
@@ -3627,6 +3625,7 @@
 /fr/docs/Web/API/Console/erreur	/fr/docs/Web/API/Console/error
 /fr/docs/Web/API/Coordinates	/fr/docs/Web/API/GeolocationCoordinates
 /fr/docs/Web/API/DOMTokenList/DOMTokenList.add()	/fr/docs/Web/API/DOMTokenList/add
+/fr/docs/Web/API/Detecting_device_orientation	/fr/docs/orphaned/Web/API/Detecting_device_orientation
 /fr/docs/Web/API/DeviceOrientationEvent.absolute	/fr/docs/Web/API/DeviceOrientationEvent/absolute
 /fr/docs/Web/API/DeviceRotationRate	/fr/docs/Web/API/DeviceMotionEventRotationRate
 /fr/docs/Web/API/DeviceRotationRate/alpha	/fr/docs/Web/API/DeviceMotionEventRotationRate/alpha
@@ -3663,9 +3662,10 @@
 /fr/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/fr/docs/Web/API/Document/elementsFromPoint
 /fr/docs/Web/API/DocumentOrShadowRoot/getSelection	/fr/docs/Web/API/Document/getSelection
 /fr/docs/Web/API/DocumentOrShadowRoot/styleSheets	/fr/docs/Web/API/Document/styleSheets
+/fr/docs/Web/API/Document_Object_Model/Events	/fr/docs/orphaned/Web/API/Document_Object_Model/Events
 /fr/docs/Web/API/Document_Object_Model/Exemples	/fr/docs/Web/API/Document_Object_Model/Examples
 /fr/docs/Web/API/Document_Object_Model/Introduction_au_DOM	/fr/docs/Web/API/Document_Object_Model/Introduction
-/fr/docs/Web/API/Document_Object_Model/Les_évènements_et_le_DOM	/fr/docs/Web/API/Document_Object_Model/Events
+/fr/docs/Web/API/Document_Object_Model/Les_évènements_et_le_DOM	/fr/docs/orphaned/Web/API/Document_Object_Model/Events
 /fr/docs/Web/API/Document_Object_Model/Localisation_des_éléments_DOM_avec_les_sélecteurs	/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /fr/docs/Web/API/Document_Object_Model/Préface	/fr/docs/conflicting/Web/API/Document_Object_Model_03f6e13c52ad7c539d9b4c33c51ac4a3
 /fr/docs/Web/API/Document_Object_Model/document	/fr/docs/Web/API/Document
@@ -3687,7 +3687,7 @@
 /fr/docs/Web/API/Element.clientWidth	/fr/docs/Web/API/Element/clientWidth
 /fr/docs/Web/API/Element.cloneNode	/fr/docs/Web/API/Node/cloneNode
 /fr/docs/Web/API/Element.dir	/fr/docs/Web/API/HTMLElement/dir
-/fr/docs/Web/API/Element.firstElementChild	/fr/docs/Web/API/ParentNode/firstElementChild
+/fr/docs/Web/API/Element.firstElementChild	/fr/docs/orphaned/Web/API/ParentNode/firstElementChild
 /fr/docs/Web/API/Element.focus	/fr/docs/Web/API/HTMLOrForeignElement/focus
 /fr/docs/Web/API/Element.getAttribute	/fr/docs/Web/API/Element/getAttribute
 /fr/docs/Web/API/Element.getAttributeNS	/fr/docs/Web/API/Element/getAttributeNS
@@ -3801,7 +3801,12 @@
 /fr/docs/Web/API/Node/nodePrincipal	/fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
 /fr/docs/Web/API/Node/prefix	/fr/docs/conflicting/Web/API/Element/prefix
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
+/fr/docs/Web/API/ParentNode/append	/fr/docs/orphaned/Web/API/ParentNode/append
 /fr/docs/Web/API/ParentNode/childElementCount	/fr/docs/Web/API/Element/childElementCount
+/fr/docs/Web/API/ParentNode/children	/fr/docs/orphaned/Web/API/ParentNode/children
+/fr/docs/Web/API/ParentNode/firstElementChild	/fr/docs/orphaned/Web/API/ParentNode/firstElementChild
+/fr/docs/Web/API/ParentNode/lastElementChild	/fr/docs/orphaned/Web/API/ParentNode/lastElementChild
+/fr/docs/Web/API/ParentNode/prepend	/fr/docs/orphaned/Web/API/ParentNode/prepend
 /fr/docs/Web/API/PasswordCredential/additionalData	/fr/docs/conflicting/Web/API/PasswordCredential
 /fr/docs/Web/API/PasswordCredential/idName	/fr/docs/conflicting/Web/API/PasswordCredential_cbf7b306e83a3f58ff06bccf89637c12
 /fr/docs/Web/API/PasswordCredential/passwordName	/fr/docs/conflicting/Web/API/PasswordCredential_bc57d5dfa87242b4fb83497887124f41
@@ -4414,9 +4419,9 @@
 /fr/docs/Web/Guide/CSS	/fr/docs/Learn/CSS
 /fr/docs/Web/Guide/CSS/Flexible_boxes	/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /fr/docs/Web/Guide/DOM	/fr/docs/conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10
-/fr/docs/Web/Guide/DOM/Events	/fr/docs/Web/Guide/Events
-/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/fr/docs/Web/Guide/Events/Creating_and_triggering_events
-/fr/docs/Web/Guide/DOM/Events/Les_données_d_orientation_et_de_mouvement_expliquées	/fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained
+/fr/docs/Web/Guide/DOM/Events	/fr/docs/orphaned/Web/Guide/Events
+/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/fr/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
+/fr/docs/Web/Guide/DOM/Events/Les_données_d_orientation_et_de_mouvement_expliquées	/fr/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
 /fr/docs/Web/Guide/DOM/Events/Touch_events	/fr/docs/Web/API/Touch_events
 /fr/docs/Web/Guide/DOM/Events/Touch_events/Gérer_à_la_fois_événement_tactile_et_événement_de_la_souris	/fr/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
 /fr/docs/Web/Guide/DOM/Manipuler l'historique du navigateur	/fr/docs/Web/API/History_API
@@ -4424,6 +4429,9 @@
 /fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur	/fr/docs/Web/API/History_API
 /fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur/Example	/fr/docs/Web/API/History_API/Example
 /fr/docs/Web/Guide/DOM/Using_full_screen_mode	/fr/docs/Web/API/Fullscreen_API
+/fr/docs/Web/Guide/Events	/fr/docs/orphaned/Web/Guide/Events
+/fr/docs/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
+/fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/fr/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
 /fr/docs/Web/Guide/Graphics/Dessiner_avec_canvas	/fr/docs/conflicting/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/Guide/HTML	/fr/docs/Learn/HTML
 /fr/docs/Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide	/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
@@ -4546,7 +4554,6 @@
 /fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /fr/docs/Web/HTML/Types_de_lien	/fr/docs/Web/HTML/Link_types
 /fr/docs/Web/HTML/Utilisation_d'audio_et_video_en_HTML5	/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content_040b1c36f4218ba488ffb0284dfe52bf
-/fr/docs/Web/HTML/Utiliser_Application_Cache	/fr/docs/Web/HTML/Using_the_application_cache
 /fr/docs/Web/HTML/Utiliser_DASH_avec_les_vidéos_en_HTML	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /fr/docs/Web/HTML/formats_media_support	/fr/docs/Web/Media/Formats
 /fr/docs/Web/HTML/Éléments_en_bloc	/fr/docs/Web/HTML/Block-level_elements
@@ -5701,7 +5708,7 @@
 /fr/docs/Web/XSLT/Éléments/element	/fr/docs/Web/XSLT/Element/element
 /fr/docs/WebAPI	/fr/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3
 /fr/docs/WebAPI/Battery_Status	/fr/docs/Web/API/Battery_status_API
-/fr/docs/WebAPI/Detecting_device_orientation	/fr/docs/Web/API/Detecting_device_orientation
+/fr/docs/WebAPI/Detecting_device_orientation	/fr/docs/orphaned/Web/API/Detecting_device_orientation
 /fr/docs/WebAPI/Network_Information	/fr/docs/Web/API/Network_Information_API
 /fr/docs/WebAPI/Pointer_Lock	/fr/docs/Web/API/Pointer_Lock_API
 /fr/docs/WebAPI/Proximity	/fr/docs/Web/API/Proximity_Events

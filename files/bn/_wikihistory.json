@@ -406,12 +406,6 @@
       "Sheppy"
     ]
   },
-  "Web/Guide/Events": {
-    "modified": "2019-03-23T23:10:51.342Z",
-    "contributors": [
-      "Jeremie"
-    ]
-  },
   "Web/Guide/Performance": {
     "modified": "2019-03-23T23:20:59.790Z",
     "contributors": [
@@ -958,6 +952,12 @@
     "modified": "2019-03-23T22:41:57.848Z",
     "contributors": [
       "ToufiqAminRumi"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2019-03-23T23:10:51.342Z",
+    "contributors": [
+      "Jeremie"
     ]
   }
 }

@@ -16,7 +16,7 @@ translation_of: Web/HTTP/Headers/Location
 
 <ul>
  <li>{{HTTPStatus("303")}} (See Also) レスポンスは常に {{HTTPMethod("GET")}} メソッドを使用するように誘導され、 {{HTTPStatus("307")}} (Temporary Redirect) および {{HTTPStatus("308")}} (Permanent Redirect) は元のリクエストにおいて使用されたメソッドを変更しません。</li>
- <li>{{HTTPStatus("301")}} (Permanent Redirect) と {{HTTPStatus("302")}} (Found) は多くの場合はメソッドを変更しませんが、古いユーザーエージェントは変更することがあります (そのため、基本的に結果は不明です)。</li>
+ <li>{{HTTPStatus("301")}} (Moved Permanently) と {{HTTPStatus("302")}} (Found) は多くの場合はメソッドを変更しませんが、古いユーザーエージェントは変更することがあります (そのため、基本的に結果は不明です)。</li>
 </ul>
 
 <p>これらのステータスコードを持つすべてのレスポンスは、 <code>Location</code> ヘッダーを送信します。</p>

@@ -4423,12 +4423,6 @@
       "Anonymous"
     ]
   },
-  "Web/Guide/Events": {
-    "modified": "2019-03-23T22:01:48.833Z",
-    "contributors": [
-      "Anonymous"
-    ]
-  },
   "Web/Guide/Graphics": {
     "modified": "2019-03-18T21:46:51.581Z",
     "contributors": [
@@ -5187,6 +5181,12 @@
     "modified": "2020-10-15T22:32:27.553Z",
     "contributors": [
       "joaonunomota"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2019-03-23T22:01:48.833Z",
+    "contributors": [
+      "Anonymous"
     ]
   }
 }

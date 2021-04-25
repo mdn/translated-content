@@ -3118,13 +3118,6 @@
       "jackblackevo"
     ]
   },
-  "Web/API/Detecting_device_orientation": {
-    "modified": "2019-03-23T23:27:03.486Z",
-    "contributors": [
-      "jackblackevo",
-      "MashKao"
-    ]
-  },
   "Web/API/DeviceMotionEvent": {
     "modified": "2019-03-23T22:19:09.256Z",
     "contributors": [
@@ -4233,18 +4226,6 @@
       "jackblackevo"
     ]
   },
-  "Web/API/ParentNode/children": {
-    "modified": "2019-03-23T22:12:04.488Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
-  "Web/API/ParentNode/firstElementChild": {
-    "modified": "2020-10-15T22:25:38.862Z",
-    "contributors": [
-      "ianchen0119"
-    ]
-  },
   "Web/API/PaymentRequest": {
     "modified": "2020-10-15T22:13:15.817Z",
     "contributors": [
@@ -5294,27 +5275,6 @@
     "contributors": [
       "SphinxKnight",
       "shing0608"
-    ]
-  },
-  "Web/Guide/Events": {
-    "modified": "2019-03-23T22:48:03.662Z",
-    "contributors": [
-      "jackblackevo",
-      "gportioli"
-    ]
-  },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-23T22:48:01.128Z",
-    "contributors": [
-      "jackblackevo",
-      "Shiyou"
-    ]
-  },
-  "Web/Guide/Events/Event_handlers": {
-    "modified": "2020-05-13T00:05:39.122Z",
-    "contributors": [
-      "ginszme",
-      "jackblackevo"
     ]
   },
   "Web/Guide/Graphics": {
@@ -8101,12 +8061,6 @@
       "Sonrisa"
     ]
   },
-  "Web/API/Document_Object_Model/Events": {
-    "modified": "2019-03-23T22:27:33.501Z",
-    "contributors": [
-      "H-W-Chang"
-    ]
-  },
   "Web/API/Document/createTreeWalker": {
     "modified": "2019-03-23T23:14:12.386Z",
     "contributors": [
@@ -9151,6 +9105,52 @@
     "modified": "2019-03-23T22:30:38.352Z",
     "contributors": [
       "jackblackevo"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/children": {
+    "modified": "2019-03-23T22:12:04.488Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/firstElementChild": {
+    "modified": "2020-10-15T22:25:38.862Z",
+    "contributors": [
+      "ianchen0119"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2019-03-23T22:48:01.128Z",
+    "contributors": [
+      "jackblackevo",
+      "Shiyou"
+    ]
+  },
+  "orphaned/Web/API/Detecting_device_orientation": {
+    "modified": "2019-03-23T23:27:03.486Z",
+    "contributors": [
+      "jackblackevo",
+      "MashKao"
+    ]
+  },
+  "orphaned/Web/API/Document_Object_Model/Events": {
+    "modified": "2019-03-23T22:27:33.501Z",
+    "contributors": [
+      "H-W-Chang"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Event_handlers": {
+    "modified": "2020-05-13T00:05:39.122Z",
+    "contributors": [
+      "ginszme",
+      "jackblackevo"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2019-03-23T22:48:03.662Z",
+    "contributors": [
+      "jackblackevo",
+      "gportioli"
     ]
   }
 }

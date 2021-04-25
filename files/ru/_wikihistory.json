@@ -6819,46 +6819,6 @@
       "fscholz"
     ]
   },
-  "Web/API/ParentNode/append": {
-    "modified": "2020-10-15T22:10:43.295Z",
-    "contributors": [
-      "7nik",
-      "chrisdavidmills",
-      "KonstantinBuza",
-      "madebydima"
-    ]
-  },
-  "Web/API/ParentNode/children": {
-    "modified": "2019-09-25T14:03:42.278Z",
-    "contributors": [
-      "ellizii",
-      "Yialo",
-      "RblSb",
-      "evgkit",
-      "In4in"
-    ]
-  },
-  "Web/API/ParentNode/firstElementChild": {
-    "modified": "2019-08-28T05:08:54.083Z",
-    "contributors": [
-      "Yialo",
-      "besedin-art"
-    ]
-  },
-  "Web/API/ParentNode/lastElementChild": {
-    "modified": "2019-08-28T05:09:39.314Z",
-    "contributors": [
-      "Yialo",
-      "Waakym"
-    ]
-  },
-  "Web/API/ParentNode/prepend": {
-    "modified": "2020-10-15T22:20:07.127Z",
-    "contributors": [
-      "RenJeka",
-      "pronskiy"
-    ]
-  },
   "Web/API/PaymentRequest": {
     "modified": "2020-10-15T22:32:45.030Z",
     "contributors": [
@@ -11584,29 +11544,6 @@
       "I-O",
       "ViT09",
       "akhabibullina"
-    ]
-  },
-  "Web/Guide/Events": {
-    "modified": "2020-08-20T10:40:53.452Z",
-    "contributors": [
-      "bogpok",
-      "Llorephie",
-      "Tihoem",
-      "Jeremie"
-    ]
-  },
-  "Web/Guide/Events/Event_handlers": {
-    "modified": "2020-03-26T12:45:30.049Z",
-    "contributors": [
-      "ellizii"
-    ]
-  },
-  "Web/Guide/Events/Overview_of_Events_and_Handlers": {
-    "modified": "2019-06-24T11:18:00.027Z",
-    "contributors": [
-      "kvandreev",
-      "MuradAz",
-      "curdwithraisins"
     ]
   },
   "Web/Guide/HTML/Content_categories": {
@@ -19876,12 +19813,6 @@
       "RAP1D"
     ]
   },
-  "Web/API/Document_Object_Model/Events": {
-    "modified": "2019-03-18T21:18:44.250Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/API/Document_Object_Model/Examples": {
     "modified": "2019-09-25T18:36:16.946Z",
     "contributors": [
@@ -22431,18 +22362,6 @@
       "kapvik",
       "hhharm",
       "ViT09"
-    ]
-  },
-  "Web/Guide/Events/Creating_and_triggering_events": {
-    "modified": "2020-10-15T21:31:20.093Z",
-    "contributors": [
-      "YozhEzhi",
-      "leann-fraoigh",
-      "Solant",
-      "bagau",
-      "pk.prog",
-      "lazyexpert",
-      "YuryT"
     ]
   },
   "Web/API/HTML_Drag_and_Drop_API/Drag_operations": {
@@ -25987,6 +25906,87 @@
       "TaizoGem",
       "undgrnd",
       "nechehin"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/children": {
+    "modified": "2019-09-25T14:03:42.278Z",
+    "contributors": [
+      "ellizii",
+      "Yialo",
+      "RblSb",
+      "evgkit",
+      "In4in"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/firstElementChild": {
+    "modified": "2019-08-28T05:08:54.083Z",
+    "contributors": [
+      "Yialo",
+      "besedin-art"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/lastElementChild": {
+    "modified": "2019-08-28T05:09:39.314Z",
+    "contributors": [
+      "Yialo",
+      "Waakym"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/append": {
+    "modified": "2020-10-15T22:10:43.295Z",
+    "contributors": [
+      "7nik",
+      "chrisdavidmills",
+      "KonstantinBuza",
+      "madebydima"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/prepend": {
+    "modified": "2020-10-15T22:20:07.127Z",
+    "contributors": [
+      "RenJeka",
+      "pronskiy"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
+    "modified": "2020-10-15T21:31:20.093Z",
+    "contributors": [
+      "YozhEzhi",
+      "leann-fraoigh",
+      "Solant",
+      "bagau",
+      "pk.prog",
+      "lazyexpert",
+      "YuryT"
+    ]
+  },
+  "orphaned/Web/API/Document_Object_Model/Events": {
+    "modified": "2019-03-18T21:18:44.250Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Event_handlers": {
+    "modified": "2020-03-26T12:45:30.049Z",
+    "contributors": [
+      "ellizii"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2020-08-20T10:40:53.452Z",
+    "contributors": [
+      "bogpok",
+      "Llorephie",
+      "Tihoem",
+      "Jeremie"
+    ]
+  },
+  "orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers": {
+    "modified": "2019-06-24T11:18:00.027Z",
+    "contributors": [
+      "kvandreev",
+      "MuradAz",
+      "curdwithraisins"
     ]
   }
 }

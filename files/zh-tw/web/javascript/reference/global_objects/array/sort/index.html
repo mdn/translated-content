@@ -175,7 +175,7 @@ items.sort(function (a, b) {
 
 <p><code>compareFunction</code> 可以被陣列中的各個元素多次呼叫。依據 <code>compareFunction</code> 的特性，這將會產生大量運算。越多元素要排序 <code>compareFunction</code> 就越多工作要做，因此選擇使用 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a> 來排列也就是一個更明智的選擇。作法為先迭代陣列一次來取得排序時所需的值至暫時的陣列，並對此臨時陣列進行排序。然後再迭代臨時陣列來將正確順序之值放入原始陣列中。</p>
 
-<pre class="brush: js" dir="rtl">// the array to be sorted
+<pre class="brush: js">// the array to be sorted
 var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
 
 // temporary array holds objects with position and sort-value

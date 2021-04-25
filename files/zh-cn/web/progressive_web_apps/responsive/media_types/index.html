@@ -6,24 +6,24 @@ original_slug: Web/Guide/CSS/Getting_started/Media
 ---
 <p>{{CSSTutorialTOC}} {{previousPage("/zh-CN/docs/Web/Guide/CSS/Getting_Started/Tables", "表格")}}</p>
 
-<p>本章节是 <a href="/en-US/docs/Web/Guide/CSS/Getting_Started" title="en-US/docs/Web/Guide/CSS/Getting Started">CSS入门教程</a> <span style="line-height: 1.5;">指南的第14章也是最后一部分。 这本指南主要描述了用来展示文档的CSS的属性及其值，本章节依旧着眼于这个目标，同时也会介绍CSS样式表的结构。</span></p>
+<p>本章节是 <a href="/en-US/docs/Web/Guide/CSS/Getting_Started" title="en-US/docs/Web/Guide/CSS/Getting Started">CSS 入门教程</a><span style="line-height: 1.5;">指南的第 14 章也是最后一部分。本指南主要描述了用来展示文档的 CSS 的属性及其值，本章节依旧着眼于这个目标，同时也会介绍 CSS 样式表的结构。</span></p>
 
-<h2 class="clearLeft" id="信息_Media">信息: Media</h2>
+<h2 class="clearLeft" id="为不同媒介提供的样式信息">为不同媒介提供的样式信息</h2>
 
-<p>CSS的作用是将网页文档以更友好的展现方式呈现给用户。</p>
+<p>CSS 的作用是将网页文档以更友好的展现方式呈现给用户。</p>
 
-<p><span style="line-height: 1.5;">例如，假设你现在正用一台显示设备来阅读这篇文章，同时你也想把它投影到屏幕上，或者打印出来，而显示设备、屏幕投影和打印等这些媒介都有自己的特点，CSS就是为文档提供在不同媒介上展示的适配方法。</span></p>
+<p><span style="line-height: 1.5;">例如，假设你现在正用一台显示设备来阅读这篇文章，同时你也想把它投影到屏幕上，或者打印出来，而显示设备、屏幕投影和打印等这些媒介都有自己的特点，CSS 就能根据媒介种类控制展示文档的方法。</span></p>
 
-<p>CSS通过使用{{CSSXref("@media")}} 的格式来对特定的媒介指定适配规则。</p>
+<p>CSS通过使用 {{CSSXref("@media")}} 来对特定的媒介指定适配规则。</p>
 
 <div class="tuto_example">
 <div class="tuto_type">示例</div>
 
 <p>我们的站点上有一个导航区域允许用户浏览。</p>
 
-<p>在标签语言中，导航区域父元素的id是 <code>nav-area.</code>(在 {{HTMLVersionInline(5)}}中, 可以使用 {{HTMLElement("nav")}} 元素代替带有id属性的 {{HTMLElement("div")}}。)</p>
+<p>在标签语言中，导航区域父元素的 id 是 <code>nav-area</code>。（在 {{HTMLVersionInline(5)}}, 可以使用 {{HTMLElement("nav")}} 元素代替带有 id 属性的 {{HTMLElement("div")}}。）</p>
 
-<p>为了网页在被打印的时候去掉无用的信息，我们在样式表中加一条适配规则，使导航区域在打印时是被隐藏起来的:</p>
+<p>为了在打印网页的时候去掉无用的信息，我们在样式表中加一条适配规则，使导航区域在打印时是被隐藏起来的：</p>
 
 <pre class="brush:css">@media print {
   #nav-area {display: none;}
@@ -57,37 +57,37 @@ original_slug: Web/Guide/CSS/Getting_started/Media
 <div class="tuto_details">
 <div class="tuto_type">更多</div>
 
-<p>一些其他指定媒介类型的规则。</p>
+<p>还有其它一些对 CSS 规则指定适用媒介类型的方式。</p>
 
-<p><span style="line-height: 1.5;">类型可以在样式表通过link方式加到文档时被指定，这是文档的标签语言允许的 。例如，在HTML中，你可以通过在</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">LINK</code><span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">标签上添加media属性来指定媒介类型。</span></p>
+<p><span style="line-height: 1.5;">有些标签语言可能允许在链接引用样式表时指定媒介类型。例如，在 HTML 中，你可以通过在</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">link</code><span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">标签上添加 media 属性来指定媒介类型。</span></p>
 
-<p>在CSS中，你可以在样式表开头使用 {{CSSXref("@import")}} 一个url来引入另外的样式表，同时指定其媒介类型。</p>
+<p>在 CSS 中，你可以在样式表开头 {{CSSXref("@import")}} 一个 url 来引入另外的样式表，同时指定其媒介类型。</p>
 
 <p><span style="line-height: 1.5;">根据这些知识，你可以区分在不同的文件中定义不同媒介的样式规则。有时这也是结构化样式表的好方法。</span></p>
 
-<p><span style="line-height: 1.5;">想获取媒介类型更多细节，请参考CSS规范中的</span> <a href="http://www.w3.org/TR/CSS21/media.html">Media</a> <span style="line-height: 1.5;">部分。</span></p>
+<p><span style="line-height: 1.5;">想获取媒介类型更多细节，请参考 CSS 规范中的</span> <a href="http://www.w3.org/TR/CSS21/media.html">Media</a> <span style="line-height: 1.5;">部分。</span></p>
 
 <p>接下来将介绍更多 {{cssxref("display")}} <span style="line-height: 1.5;">属性的例子</span><span style="line-height: 1.5;">: </span><a href="/en-US/docs/Web/Guide/CSS/Getting_Started/XML_data" style="line-height: 1.5;" title="en-US/docs/Web/Guide/CSS/Getting_Started/XML_data">XML data</a><span style="line-height: 1.5;">.</span></p>
 </div>
 
 <h3 id="打印">打印</h3>
 
-<p>CSS有一些特性能够支持打印和分页媒体。</p>
+<p>CSS 有一些支持打印和分页媒体的特性。</p>
 
-<p> {{cssxref("@page")}} 规则能够设置页间距，对于双面打印，还可以分开设置 <code>@page:left</code> 和 <code>@page:right。</code></p>
+<p> {{cssxref("@page")}} 规则能够设置页间距。对于双面打印，还可以分开设置 <code>@page:left</code> 和 <code>@page:right。</code></p>
 
-<p>对于打印媒介，可以使用适当的长度单位，像是英寸(in)、点（1pt = 1/72 inch）、厘米（cm）还有毫米（mm）。这等同于使用em来配合字体大小和百分比。</p>
+<p>对于打印媒介，可以使用适当的长度单位，像是英寸（in）、点（1pt = 1/72 inch）、厘米（cm）还有毫米（mm）。这等同于使用 em 来配合字体大小和百分比。</p>
 
 <p>可以通过使用 {{cssxref("page-break-before")}}, {{cssxref("page-break-after")}} 和 {{cssxref("page-break-inside")}} 属性来控制文档内容的分页边界。</p>
 
 <div class="tuto_example">
 <div class="tuto_type">示例</div>
 
-<p>这个规则把四个方向的页边距都设置为1 inch:</p>
+<p>这个规则把四个方向的页边距都设置为 1 inch：</p>
 
 <pre class="brush:css">@page {margin: 1in;} </pre>
 
-<p><span style="line-height: 1.5;">这个规则确保每个H1元素都从新的一页开始</span>:</p>
+<p><span style="line-height: 1.5;">这个规则确保每个 H1 元素都从新的一页开始</span>：</p>
 
 <pre class="brush:css">h1 {page-break-before: always;}
 </pre>
@@ -96,18 +96,16 @@ original_slug: Web/Guide/CSS/Getting_started/Media
 <div class="tuto_details">
 <div class="tuto_type">更多细节</div>
 
-<p>想获取更多细节，请参考CSS规范中的 <a href="http://www.w3.org/TR/CSS21/page.html">Paged media</a> 部分。</p>
+<p>想获取更多细节，请参考 CSS 规范中的 <a href="http://www.w3.org/TR/CSS21/page.html">Paged media</a> 部分。</p>
 
-<p><span style="line-height: 1.5;">像CSS的其他特性一样，打印也依赖于你的浏览器及其设置。例如，在打印的时候Mozilla浏览器支持默认的间距，页眉和页脚。而当其他用户打印你的文档时，你无法预知他会使用的什么样的浏览器和设置，因此你也不能完全控制打印情况。</span></p>
+<p><span style="line-height: 1.5;">像 CSS 的其他特性一样，打印也依赖于你的浏览器及其设置。例如，在打印的时候 Mozilla 浏览器支持默认的间距，页眉和页脚。而当其他用户打印你的文档时，你无法预知他会使用的什么样的浏览器和设置，因此你也不能完全控制打印情况。</span></p>
 </div>
 
 <h3 id="用户界面">用户界面</h3>
 
-<p><span style="line-height: 1.5;">CSS有一些特殊的属性能够支持设备的用户界面，像电脑显示器。这使得文档的展示随着用户界面的情况而动态地变化。</span></p>
+<p><span style="line-height: 1.5;">CSS 有一些特殊的属性能够支持设备的用户界面，例如电脑显示器。这使得文档的展示随着用户界面的情况而动态地变化。</span></p>
 
-<p>并没有针对用户界面设备的特殊媒介类型。</p>
-
-<p>下面有五种特殊的选择器:</p>
+<p>下面有五种特殊的选择器：</p>
 
 <table class="standard-table">
  <tbody>
@@ -117,7 +115,7 @@ original_slug: Web/Guide/CSS/Getting_started/Media
   </tr>
   <tr>
    <td><code>E{{cssxref(":hover")}}</code></td>
-   <td>当鼠标悬浮任何E元素上</td>
+   <td>当鼠标悬浮在此元素上</td>
   </tr>
   <tr>
    <td><code>E{{cssxref(":focus")}}</code></td>
@@ -129,11 +127,11 @@ original_slug: Web/Guide/CSS/Getting_started/Media
   </tr>
   <tr>
    <td><code>E{{cssxref(":link")}}</code></td>
-   <td>当元素超链接到一个url但是用户还没有访问过</td>
+   <td>当元素超链接到一个 url 但是用户还没有访问过</td>
   </tr>
   <tr>
    <td><code>E{{cssxref(":visited")}}</code></td>
-   <td>当元素超链接到一个url但是用户已经访问过</td>
+   <td>当元素超链接到一个 url 但是用户已经访问过</td>
   </tr>
  </tbody>
 </table>
