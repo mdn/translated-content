@@ -95,12 +95,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Guide/Events": {
-    "modified": "2019-03-18T21:37:53.387Z",
-    "contributors": [
-      "gportioli"
-    ]
-  },
   "Web/HTML": {
     "modified": "2019-09-10T15:19:38.441Z",
     "contributors": [
@@ -355,6 +349,12 @@
     "modified": "2019-03-23T23:34:49.523Z",
     "contributors": [
       "Prasanth"
+    ]
+  },
+  "orphaned/Web/Guide/Events": {
+    "modified": "2019-03-18T21:37:53.387Z",
+    "contributors": [
+      "gportioli"
     ]
   }
 }

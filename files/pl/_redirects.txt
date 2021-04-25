@@ -322,7 +322,7 @@
 /pl/docs/DOM/Selection/toString	/pl/docs/Web/API/Selection/toString
 /pl/docs/DOM/Storage	/pl/docs/Web/API/Web_Storage_API
 /pl/docs/DOM/cssRule	/pl/docs/Web/API/CSSRule
-/pl/docs/DOM/dispatchEvent_-_przykład	/pl/docs/Web/Guide/Events/Creating_and_triggering_events
+/pl/docs/DOM/dispatchEvent_-_przykład	/pl/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /pl/docs/DOM/document	/pl/docs/Web/API/Document
 /pl/docs/DOM/document.URL	/pl/docs/Web/API/Document/URL
 /pl/docs/DOM/document.activeElement	/pl/docs/Web/API/Document/activeElement
@@ -570,7 +570,7 @@
 /pl/docs/DOM:Selection:toString	/pl/docs/Web/API/Selection/toString
 /pl/docs/DOM:Storage	/pl/docs/Web/API/Web_Storage_API
 /pl/docs/DOM:cssRule	/pl/docs/Web/API/CSSRule
-/pl/docs/DOM:dispatchEvent_-_przykład	/pl/docs/Web/Guide/Events/Creating_and_triggering_events
+/pl/docs/DOM:dispatchEvent_-_przykład	/pl/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /pl/docs/DOM:document	/pl/docs/Web/API/Document
 /pl/docs/DOM:document.URL	/pl/docs/Web/API/Document/URL
 /pl/docs/DOM:document.activeElement	/pl/docs/Web/API/Document/activeElement
@@ -2105,6 +2105,7 @@
 /pl/docs/Web/Guide/CSS	/pl/docs/Learn/CSS
 /pl/docs/Web/Guide/CSS/Kolumny_CSS3	/pl/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /pl/docs/Web/Guide/CSS/Sprawdzanie_media_queries	/pl/docs/Web/CSS/Media_Queries/Testing_media_queries
+/pl/docs/Web/Guide/Events/Creating_and_triggering_events	/pl/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /pl/docs/Web/Guide/HTML	/pl/docs/Learn/HTML
 /pl/docs/Web/Guide/HTML/Wprowadzenie	/pl/docs/Learn/HTML/Introduction_to_HTML
 /pl/docs/Web/Guide/Liczniki_CSS	/pl/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters

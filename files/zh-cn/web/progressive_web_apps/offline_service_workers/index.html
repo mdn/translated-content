@@ -5,57 +5,57 @@ translation_of: Web/Progressive_web_apps/Offline_Service_workers
 ---
 <div>{{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}</div>
 
-<p>我们已经看到了 js13kPWA 的结构，并且看到了基本的 shell 启动和运行，那么让我们看看如何使用 Service Worker 实现离线功能。 在本文中，我们将看看它是如何在 <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA example</a> 中使用的（<a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa">另请参阅源代码</a>）。 我们将研究如何添加脱机功能。</p>
+<p>我们已经看到了 js13kPWA 的结构，并且看到了 shell 启动和运行的基本方式，那么现在让我们把目光转向如何使用 Service Worker 实现离线功能。 在本文，我们将看到它在 <a href="https://mdn.github.io/pwa-examples/js13kpwa/">js13kPWA example</a> 中是如何使用的（<a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa">另请参阅源代码</a>）。 我们将研究如何添加脱机功能。</p>
 
-<h2 id="Service_workers_解释">Service workers 解释</h2>
+<h2 id="Service_Worker_解释">Service Worker 解释</h2>
 
-<p>Service Workers是浏览器和网络之间的虚拟代理。 他们最终解决了前端开发人员多年来一直在努力解决的问题 - 最值得注意的是解决了如何正确缓存网站资源并使其在用户设备离线时可用。</p>
+<p>Service Worker 是浏览器和网络之间的虚拟代理。 它们终于解决了前端开发人员多年来一直在努力解决的一些问题，其中最值得关注的是，解决了如何正确缓存网站资源并使其在离线时可用的问题。</p>
 
-<p>它们的运行在一个与我们页面的 JavaScript 主线程独立的线程上，并且没有对 DOM 结构的任何访问权限。 这引入了与传统 Web 编程不同的方法 - API 是非阻塞的，并且可以在不同的上下文之间发送和接收信息。 您可分配给 Service Worker 一些任务，并在使用基于 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> 的方法当任务完成时收到结果。</p>
+<p>Service Worker 运行在一个与页面 JavaScript 主线程独立的线程上，并且无权访问 DOM 结构。这引入了一种与传统 Web 编程不同的方式：它的 API 是非阻塞的，并且可以在不同的上下文之间发送和接收信息。您可分配给 Service Worker 一些任务，并通过基于 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> 的方法在任务完成时收到结果。</p>
 
-<p>他们不仅仅提供离线功能，还提供包括处理通知，在单独的线程上执行繁重的计算等。Service workers 非常强大，因为他们可以控制网络请求，修改网络请求，返回缓存的自定义响应，或合成响应。</p>
+<p>它不仅仅提供离线功能，还可以做包括处理通知、在单独的线程上执行繁重的计算等事务。Service workers 非常强大，因为他们可以控制网络请求、修改网络请求、返回缓存的自定义响应，或者合成响应。</p>
 
 <h3 id="安全">安全</h3>
 
-<p>因为它们非常强大，所以 Service Workers 只能在安全的上下文中执行（即 HTTPS ）。 如果您想在将代码推送到生产环境之前先进行实验，则可以始终在本地主机上进行测试或设置 GitHub 页面 - 两者都支持HTTPS。</p>
+<p>因为它们非常强大，所以 Service Worker 只能在安全的上下文中执行（即 HTTPS）。如果您想在将代码推送到生产环境之前先进行实验，则可以始终在本地主机上进行测试或设置 GitHub Pages，这两者都支持HTTPS。</p>
 
 <h2 id="离线优先">离线优先</h2>
 
-<p>“离线优先”或“缓存优先”模式是向用户提供内容的最流行策略。 如果资源已缓存且可脱机使用，请在尝试从服务器下载资源之前先将其返回。 如果它已经不在缓存中，请下载并缓存以备将来使用。</p>
+<p>“离线优先”或“缓存优先”模式是向用户提供内容的最流行策略。如果资源已缓存且可脱机使用，就在尝试从服务器下载资源之前先将其返回；如果它已经不在缓存中，就下载并缓存以备将来使用。</p>
 
-<h2 id="PWA_渐进增强">PWA 渐进增强</h2>
+<h2 id="PWA_中的_P（渐进，Progressive）">PWA 中的 P（渐进，Progressive）</h2>
 
-<p>当作为渐进增强功能正确实施时，service workers 可以通过提供离线支持使支持 Service​Worker API 的现代浏览器的用户受益，但不会为使用旧版浏览器的用户破坏任何内容。</p>
+<p>Service Worker 当正确地作为渐进功能实装时，可以为支持其 API 的现代浏览器用户提供离线支持使其受益，但也不会使用旧版浏览器的用户造成负面影响。</p>
 
-<h2 id="js13kPWA应用程序中的_Service_workers"><span class="tlid-translation translation" lang="zh-CN"><span title="">js13kPWA应用程序中的 </span></span>Service workers</h2>
+<h2 id="js13kPWA应用程序中的_Service_worker"><span class="tlid-translation translation" lang="zh-CN"><span title="">js13kPWA应用程序中的 </span></span>Service worker</h2>
 
-<p><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">理论足够了，让我们看一些源代码！</span></span></p>
+<p><span class="tlid-translation translation" lang="zh-CN"><span class="alt-edited">理论看够了，让我们看一些源代码！</span></span></p>
 
 <h3 class="highlight-spanned" id="注册_Service_Worker"><span class="highlight-span">注册 Service Worker</span></h3>
 
-<p>首先在 app.js 文件中查看注册新 Service Worker 的代码：</p>
+<p>首先让我们看看在 app.js 文件中注册新 Service Worker 的代码：</p>
 
 <pre class="brush: js notranslate">if('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/pwa-examples/js13kpwa/sw.js');
 };</pre>
 
-<p>如果浏览器支持 service worker API，则使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerContainer/register" title="ServiceWorkerContainer 接口的 register() 方法创建或更新一个给定scriptURL的ServiceWorkerRegistration 。"><code>ServiceWorkerContainer.register()</code></a> 方法对该站点进行注册。 其内容在 sw.js 文件中，可以在注册成功后执行。 它是 app.js 文件中唯一的Service Worker代码; 其他关于 Service Worker 的内容都写在 sw.js 文件中。</p>
+<p>如果浏览器支持 Service Workers API，则使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/ServiceWorkerContainer/register" title="ServiceWorkerContainer 接口的 register() 方法创建或更新一个给定scriptURL的ServiceWorkerRegistration 。"><code>ServiceWorkerContainer.register()</code></a> 方法在该站点注册。其内容在 sw.js 文件中，可以在注册成功后执行。它是 app.js 文件中唯一与 Service Worker 有关的代码; 其他关于 Service Worker 的内容都写在 sw.js 文件中。</p>
 
 <h3 class="highlight-spanned" id="Service_Worker_的生命周期"><span class="highlight-span">Service Worker 的生命周期</span></h3>
 
-<p>注册完成后，sw.js 文件会自动下载，然后安装，最后激活。</p>
+<p>注册完成后，sw.js 文件会自动下载、安装，然后激活。</p>
 
 <h4 id="安装">安装</h4>
 
-<p>API 允许我们为我们感兴趣的关键事件添加事件监听器 - 第一个是 <code>install</code> 事件：</p>
+<p>Serviice Workers API 允许我们为我们感兴趣的关键事件添加事件监听器 - 第一个是 <code>install</code> 事件：</p>
 
 <pre class="brush: js notranslate">self.addEventListener('install', function(e) {
     console.log('[Service Worker] Install');
 });</pre>
 
-<p>在<code>install</code> 的监听函数中, 我们可以初始化缓存以及添加离线应用时所需的文件，我们的 js13kPWA 应用确实也是这么做的。</p>
+<p>在 <code>install</code> 的监听函数中, 我们可以初始化缓存并添加离线应用时所需的文件，js13kPWA 应用确实也是这么做的。</p>
 
-<p>首先，创建一个作为缓存的名字的变量，app shell所需的文件被记录在一个数组上</p>
+<p>首先，创建一个存储缓存名字的变量，App Shell 所需的文件也被记录在一个数组上：</p>
 
 <pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';
 var appShellFiles = [
@@ -79,7 +79,7 @@ var appShellFiles = [
   '/pwa-examples/js13kpwa/icons/icon-512.png'
 ];</pre>
 
-<p>接下来，从data/games.js的内容中解析出来的图片链接被赋值到另一个数组上，之后，两个数组会用{{jsxref("Array.prototype.concat()")}}方法合并起来。</p>
+<p>接下来，从 data/games.js 的内容中解析出来的图片链接被赋值到另一个数组上，之后，两个数组会用 {{jsxref("Array.prototype.concat()")}} 方法合并起来。</p>
 
 <pre class="brush: js notranslate">var gamesImages = [];
 for(var i=0; i&lt;games.length; i++) {
@@ -87,7 +87,7 @@ for(var i=0; i&lt;games.length; i++) {
 }
 var contentToCache = appShellFiles.concat(gamesImages);</pre>
 
-<p>接着我们可以监听install事件：</p>
+<p>接着我们可以监听 install 事件：</p>
 
 <pre class="brush: js notranslate">self.addEventListener('install', function(e) {
   console.log('[Service Worker] Install');
@@ -99,29 +99,29 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
   );
 });</pre>
 
-<p>有两件事需要在这里解释一下：{{domxref("ExtendableEvent.waitUntil")}}做了什么 ？{{domxref("Caches","caches")}} 对象是什么东西？</p>
+<p>有两件事需要在这里解释一下：{{domxref("ExtendableEvent.waitUntil")}} 做了什么？{{domxref("Caches","caches")}} 对象又是什么东西？</p>
 
-<p>service worker会等到 <code>waitUntil</code> 里面的代码执行完毕之后才开始安装。它返回一个promise —— 这个过程时必须的，因为安装过程需要一些时间，我们必须等待它完成 。</p>
+<p>Service Worker 会等到 <code>waitUntil</code> 里面的代码执行完毕之后才开始安装。它返回的是一个 Promise——因为安装过程可能需要一些时间，而我们必须等待它完成。</p>
 
-<p><code>caches</code> 是一个特殊的 {{domxref("CacheStorage")}} 对象，它能在Service Worker指定的范围内提供数据存储的能力（service worker在注册时，第二个参数是选填的，可以被用来指定你想让 service worker 控制的内容的子目录，译者注），在service worker中使用<a href="/en-US/docs/Web/API/Web_Storage_API">web storage</a> 将不会有效果，因为web storage的执行是同步的（此处理解为web storage并不返回一个promise，译者注），所以我们使用Cache API作为替代。</p>
+<p><code>caches</code> 是一个特殊的 {{domxref("CacheStorage")}} 对象，它能在 Service Worker 指定的范围内提供数据存储的能力（Service Worker 在注册时，第二个参数是选填的，可以被用来指定你想让 Service Worker 控制的内容的子目录，译者注）。因为 Web Storage 的执行是同步的（此处理解为 Web Storage 并不返回一个 Promise，译者注），在 Service Worker 中使用 <a href="/zh-CN/docs/Web/API/Web_Storage_API">Web Storage</a> 将不会有效果，所以我们使用 Cache API 作为替代。</p>
 
-<p>这里，我们使用给定的名字开启了一个缓存，并且将我们的应用所需要缓存的文件全部添加进去，当我们再次加载这些资源时，对应的缓存就是可用的（通过请求的url确定缓存是否命中）。</p>
+<p>这里，我们使用给定的名字开启了一个缓存，并且将我们的应用所需要缓存的文件全部添加进去，当我们再次加载这些资源时，由请求 URL 确定的对应缓存就是可用的。</p>
 
-<h4 id="Activation">Activation</h4>
+<h4 id="激活">激活</h4>
 
-<p>还有一个<code>activate</code> 事件，它的用法跟<code>install </code>事件相同。这个事件通常用来删除那些我们已经不需要的文件或者做一些清理工作。因为在我们的app里面没有使用到，这里我们暂时跳过它。</p>
+<p>还有一个 <code>activate</code> 事件，它的用法跟 <code>install</code> 事件相同。这个事件通常用来删除那些我们已经不需要的文件或者做一些清理工作。因为在我们的 App 里面没有使用到，这里我们暂时跳过它。</p>
 
 <h3 id="响应请求">响应请求</h3>
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">每次当我们的应用发起一个http请求时，我们还有一个</span></font>fetch</code> 事件可以使用。这个事件对我们来说非常有用，它允许我们拦截请求并对请求作出自定义的响应，下面是一个简单的例子</p>
+<p><code>fetch</code> 事件对我们很有用，它在每次应用发起 HTTP 请求的时候被触发。这个事件对我们来说非常有用，它允许我们拦截请求并对请求作出自定义的响应，下面是一个简单的例子：</p>
 
 <pre class="brush: js notranslate">self.addEventListener('fetch', function(e) {
     console.log('[Service Worker] Fetched resource '+e.request.url);
 });</pre>
 
-<p>请求的响应可以是任何我们想要的东西：请求过的文件缓存下来的副本，或者一段做了具体操作的JavaScript代码，拥有无限的可能。</p>
+<p>请求的响应可以是任何我们想要的东西：请求过的文件缓存下来的副本，或者一段做了具体操作的 JavaScript 代码——这里有无限的可能。</p>
 
-<p>在我们的示例代码中，当缓存存在时，我们使用缓存来提供服务而不是重新请求数据。不管当前应用是在线还是离线，我们都这么做。当请求的文件不在缓存中时，我们会在响应之前将数据添加到缓存中。</p>
+<p>在我们的示例代码中，当缓存存在时，我们使用缓存来提供服务，而不重新请求数据。不管当前应用是在线还是离线，我们都这么做。当请求的文件不在缓存中时，我们会在响应之前将数据添加到缓存中。</p>
 
 <pre class="brush: js notranslate">self.addEventListener('fetch', function(e) {
   e.respondWith(
@@ -138,19 +138,19 @@ var contentToCache = appShellFiles.concat(gamesImages);</pre>
   );
 });</pre>
 
-<p>上述代码中，对于请求我们首先会在缓存中查找资源是否被缓存，如果有，将会返回缓存的资源，如果不存在，会转而从网络中请求数据，然后将它缓存起来，这样下次有相同的请求发生时，我们就可以直接使用缓存。</p>
+<p>上述代码中，对于请求我们首先会在缓存中查找资源是否被缓存：如果存在，将会返回缓存的资源；如果不存在，会转而从网络中请求数据，然后将它缓存起来，这样下次有相同的请求发生时，我们就可以直接使用缓存。</p>
 
-<p>{{domxref("FetchEvent.respondWith")}} 方法将会接管响应控制，它会作为服务器和应用之间的代理服务。它允许我们对每一个请求作出我们想要的任何响应：Service Worker会处理这一切，从缓存中获取这些数据，并在需要的情况下对它们进行修改。</p>
+<p>{{domxref("FetchEvent.respondWith")}} 方法将会接管响应控制，它会作为服务器和应用之间的代理服务。它允许我们对每一个请求作出我们想要的任何响应：Service Worker 会处理这一切，从缓存中获取这些数据，并在需要的情况下对它们进行修改。</p>
 
-<p>就是这样，我们的应用会在install触发时缓存资源，并且在fetch事件触发时返回缓存中的资源，这就是为什么它甚至在离线状态下也能使用的原因。当我们添加新的内容时，他也会随时被缓存下来。</p>
+<p>就是这样，我们的应用会在 install 触发时缓存资源，并且在 fetch 事件触发时返回缓存中的资源，这就是它甚至在离线状态下也能使用的原因。当我们添加新的内容时，它也会随时将其缓存下来。</p>
 
 <h2 id="更新">更新</h2>
 
-<p>还有一点需要考虑：当我们的应用有了一个新版本，并且它包含了一些可用的新资源 时，我们应该如何去更新它的Service Worker？我们存放在缓存名称中的版本号是这个问题的关键：</p>
+<p>还有一点需要考虑：当我们的应用有了一个新版本，并且它包含了一些可用的新资源时，我们应该如何去更新它的 Service Worker？我们存放在缓存名称中的版本号是这个问题的关键：</p>
 
 <pre class="brush: js notranslate">var cacheName = 'js13kPWA-v1';</pre>
 
-<p>当我们把版本号更新到v2，service worker会将我们所有的文件（包括那些新的文件）添加到一个新的缓存中。</p>
+<p>当我们把版本号更新到 v2，Service Worker 会将我们所有的文件（包括那些新的文件）添加到一个新的缓存中。</p>
 
 <pre class="brush: js notranslate">contentToCache.push('/pwa-examples/js13kpwa/icons/icon-32.png');
 
@@ -164,11 +164,11 @@ self.addEventListener('install', function(e) {
   );
 });</pre>
 
-<p>这个时候一个新的service worker会在后台被安装，而旧的service worker仍然会正确的运行，直到没有任何页面使用到它为止，这时候新的service worker将会被激活，然后接管所有的页面。</p>
+<p>这个时候一个新的 Service Worker 会在后台被安装，而旧的 Service Worker 仍然会正常运行，直到没有任何页面使用到它为止，这时候新的 Service Worker 将会被激活，然后接管所有的页面。</p>
 
 <h2 id="缓存的清理">缓存的清理</h2>
 
-<p>还记得我们前面跳过的那个<code>activate</code> 事件吗？它可以用来清理那些我们不再需要的缓存：</p>
+<p>还记得我们前面跳过的那个 <code>activate</code> 事件吗？它可以用来清理那些我们不再需要的缓存：</p>
 
 <pre class="brush: js notranslate">self.addEventListener('activate', function(e) {
   e.waitUntil(
@@ -182,17 +182,17 @@ self.addEventListener('install', function(e) {
   );
 });</pre>
 
-<p>这样能确保只有那些我们需要的文件会保留在缓存中，我们不需要留下任何的垃圾，毕竟<a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">浏览器的缓存空间是有限的</a>，手动清理掉这些不需要的缓存是一个不错的主意。</p>
+<p>这样能确保只有那些我们需要的文件会保留在缓存中，我们不需要留下任何的垃圾，毕竟<a href="/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria">浏览器的缓存空间是有限的</a>，手动清理掉这些不需要的缓存是不错的主意。</p>
 
 <h2 id="其他用途">其他用途</h2>
 
-<p>从缓存中加载资源并不是Service Worker的唯一能力，如果你有比较耗时的计算，你可以把它们从主线程中抽离出来，在Service Worker中进行计算，最后在它们计算完毕的时候从Service Worker中取得计算结果。性能方面，你可以在Service Worker中对即将使用到的资源进行预加载，这样当你使用到这些资源的时候，应用的加载速度会更快。</p>
+<p>从缓存中加载资源并不是 Service Worker 的唯一能力，如果你有比较耗时的计算，你可以把它们从主线程中抽离出来，在 Service Worker 中进行计算，最后在它们计算完毕的时候从 Service Worker 中取得计算结果。性能方面，你可以在 Service Worker 中对即将使用到的资源进行预加载，这样当你使用到这些资源的时候，应用的加载速度会更快。</p>
 
 <h2 id="总结">总结</h2>
 
-<p>在这篇文章中我们简单的了解了如何使用service workers让你的PWA实现离线功能。如果你想要学习更多关于<a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a>的概念以及使用service worker方面的相关细节，你可以进一步查阅我们的文档。</p>
+<p>在这篇文章中我们简单的了解了如何使用 Service Worker 让你的PWA实现离线功能。如果你想要学习更多关于 <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> 的概念，以及使用 Service Worker 方面的相关细节，你可以进一步查阅我们的文档。</p>
 
-<p>Service Workers在处理<a href="/en-US/docs/Web/API/Push_API">消息推送</a> 的时候也会经常被用到，这一部分我们将会在后面的章节进行讨论。</p>
+<p>Service Worker 在处理<a href="/en-US/docs/Web/API/Push_API">消息推送</a>的时候也会经常被用到，这一部分我们将会在后面的章节进行讨论。</p>
 
 <p>{{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}</p>
 

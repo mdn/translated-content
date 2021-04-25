@@ -16,11 +16,12 @@ of active locales is:
 
 - `fr`
 - `ja`
+- `ko`
 - `ru`
 - `zh` (`zh-CN` and `zh-TW`)
 
 If you want to just find a task and jump in, search by the labels `l10n-fr`,
-`l10n-ja`, `l10n-ru`, and `l10n-zh` in this repo’s [issues list](https://github.com/mdn/translated-content/issues),
+`l10n-ja`, `l10n-ko`, `l10n-ru`, and `l10n-zh` in this repo’s [issues list](https://github.com/mdn/translated-content/issues),
 or the main [content repo issues](https://github.com/mdn/content/issues)
 
 ## Code of Conduct
@@ -122,8 +123,8 @@ and common actions such as [adding](https://github.com/mdn/content#adding-a-new-
 It is the responsibility of the active community maintenance team for each
 active locale to keep up-to-date with reviews of pull requests and handling
 issues filed against that locale. You can filter the relevant pull requests and
-issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`, `l10n-ru`,
-and `l10n-zh`.
+issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`, `l10n-ko`
+, `l10n-ru`, and `l10n-zh`.
 
 The review teams for each locale are:
 
@@ -141,6 +142,15 @@ The review teams for each locale are:
   - [@dynamis](https://github.com/dynamis)
   - [@kenji-yamasaki](https://github.com/kenji-yamasaki)
   - [@mfuji09](https://github.com/mfuji09)
+- Korea (`ko`) content — the [@yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)
+  team, which consists of:
+  - [@hochan222](https://github.com/hochan222)
+  - [@yechoi42](https://github.com/yechoi42)
+  - [@cos18](https://github.com/cos18)
+  - [@GwangYeol-Im](https://github.com/GwangYeol-Im)
+  - [@pje1740](https://github.com/pje1740)
+  - [@nKiNk](https://github.com/nKiNk)
+  - [@yujo11](https://github.com/yujo11)
 - Russian (`ru`) content — the [@yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru)
   team, which consists of:
   - [@armanpwnz](https://github.com/armanpwnz)

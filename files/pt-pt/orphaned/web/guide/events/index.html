@@ -1,0 +1,134 @@
+---
+title: Guia do programador de eventos
+slug: orphaned/Web/Guide/Events
+tags:
+  - DOM
+  - Evento
+  - Guía
+  - Precisa de Atualização
+translation_of: Web/Guide/Events
+original_slug: Web/Guide/Events
+---
+<p>{{draft()}}</p>
+
+<p>Events refers both to a design pattern used for the asynchronous handling of various incidents which occur in the lifetime of a web page and to the naming, characterization, and use of a large number of incidents of different types.</p>
+
+<p>The <a href="/en-US/docs/Web/Guide/API/DOM/Events/Overview_of_Events_and_Handlers">overview page</a> provides an introduction to the design pattern and a summary of the types of incidents which are defined and reacted to by modern web browsers.</p>
+
+<p>The <a href="/en-US/docs/Web/Guide/API/DOM/Events/Creating_and_triggering_events">custom events page</a> describes how the event code design pattern can be used in custom code to define new event types emitted by user objects, register listener functions to handle those events, and trigger the events in user code.</p>
+
+<p>The remaining pages describe how to use events of different kinds defined by web browsers. Unfortunately, these events have been defined piece by piece as web browsers have evolved so that there is no satisfying systematic characterization of the events built-in or defined by modern web browsers.</p>
+
+<p>The <strong>device</strong> on which the web browser is running can trigger events, for example due to a change in its position and orientation in the real world, as discussed partially by the <a href="/en-US/docs/Web/Guide/API/DOM/Events/Orientation_and_motion_data_explained">page on orientation coordinate systems</a> and the <a href="/en-US/docs/Web/Guide/API/DOM/Events/Using_device_orientation_with_3D_transforms">page on the use of 3D transforms</a>. That is different, but similar, to the change in device vertical orientation. </p>
+
+<p>The <strong>window</strong> in which the browser is displayed can trigger events; for example, change size if the user maximizes the window or otherwise changes it.</p>
+
+<p>The <strong>process</strong> loading of a web page can trigger events in response to the completion of different steps in the downloading, parsing, and rendering of the web page for display to the user.</p>
+
+<p>The <strong>user interaction</strong> with the web page contents can trigger events. The events triggered by user interaction evolved during the early years of browser design and include a complicated system defining the sequence in which events will be called and the manner in which that sequence can be controlled. The different types of user interaction-driven events include:</p>
+
+<ul>
+ <li>the original 'click' event,</li>
+ <li>mouse events,</li>
+ <li><a href="/en-US/docs/Web/Guide/API/DOM/Events/Mouse_gesture_events">mouse gesture events</a>, and</li>
+ <li>both <a href="/en-US/docs/Web/Guide/API/DOM/Events/Touch_events">touch events</a> and the earlier <a href="/en-US/docs/Web/Guide/API/DOM/Events/Touch_events_(Mozilla_experimental)">mozilla experimental touch events</a>, now deprecated.</li>
+</ul>
+
+<p>The <strong>modification of the web page</strong> in structure or content might trigger some events, as explained in the <a href="/en-US/docs/Web/Guide/API/DOM/Events/Mutation_events">mutation events page</a>, but the use of these events has been deprecated in favour of the lighter <a href="/en-US/docs/Web/API/MutationObserver">Mutation Observer</a> approach.</p>
+
+<p>The <strong>media streams</strong> embedded in the HTML documents might trigger some events, as explained in the <a href="/en-US/docs/Web/Guide/API/DOM/Events/Media_events">media events</a> page.</p>
+
+<p>The <strong>network requests</strong> made by a web page might trigger some events.</p>
+
+<p>There are many other sources of events defined by web browsers for which pages are not yet available in this guide.</p>
+
+<div class="note">
+<p>Note: This Event Developer Guide needs substantial work. The structure needs to be reorganized and the pages rewritten. Our hope is that everything you need to know about events will go under here.</p>
+</div>
+
+<h2 id="Documentos">Documentos</h2>
+
+<p>{{LandingPageListSubpages}}</p>
+
+<div id="SL_balloon_obj" style="display: block;">
+<div class="SL_ImTranslatorLogo" id="SL_button" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%; display: none; opacity: 1;"> </div>
+
+<div id="SL_shadow_translation_result2" class="hidden"> </div>
+
+<div id="SL_shadow_translator" class="hidden">
+<div id="SL_planshet">
+<div id="SL_arrow_up" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_Bproviders">
+<div class="SL_BL_LABLE_ON" id="SL_P0" title="Google">G</div>
+
+<div class="SL_BL_LABLE_ON" id="SL_P1" title="Microsoft">M</div>
+
+<div class="SL_BL_LABLE_ON" id="SL_P2" title="Translator">T</div>
+</div>
+
+<div id="SL_alert_bbl">
+<div id="SLHKclose" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_alert_cont"> </div>
+</div>
+
+<div id="SL_TB">
+<table id="SL_tables">
+ <tbody>
+  <tr>
+   <td class="SL_td"><input></td>
+   <td class="SL_td"><select><option value="auto">Detectar idioma</option><option value="af">Africâner</option><option value="sq">Albanês</option><option value="de">Alemão</option><option value="ar">Arabe</option><option value="hy">Armênio</option><option value="az">Azerbaijano</option><option value="eu">Basco</option><option value="bn">Bengali</option><option value="be">Bielo-russo</option><option value="my">Birmanês</option><option value="bs">Bósnio</option><option value="bg">Búlgaro</option><option value="ca">Catalão</option><option value="kk">Cazaque</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinês (Simp)</option><option value="zh-TW">Chinês (Trad)</option><option value="si">Cingalês</option><option value="ko">Coreano</option><option value="ht">Crioulo haitiano</option><option value="hr">Croata</option><option value="da">Dinamarquês</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Espanhol</option><option value="eo">Esperanto</option><option value="et">Estoniano</option><option value="fi">Finlandês</option><option value="fr">Francês</option><option value="gl">Galego</option><option value="cy">Galês</option><option value="ka">Georgiano</option><option value="el">Grego</option><option value="gu">Gujarati</option><option value="ha">Hauça</option><option value="iw">Hebraico</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandês</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonésio</option><option value="en">Inglês</option><option value="yo">Ioruba</option><option value="ga">Irlandês</option><option value="is">Islandês</option><option value="it">Italiano</option><option value="ja">Japonês</option><option value="jw">Javanês</option><option value="kn">Kannada</option><option value="km">Khmer</option><option value="lo">Laosiano</option><option value="la">Latim</option><option value="lv">Letão</option><option value="lt">Lituano</option><option value="mk">Macedônico</option><option value="ml">Malaiala</option><option value="ms">Malaio</option><option value="mg">Malgaxe</option><option value="mt">Maltês</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="ne">Nepalês</option><option value="no">Norueguês</option><option value="fa">Persa</option><option value="pl">Polonês</option><option value="pt">Português</option><option value="pa">Punjabi</option><option value="ro">Romeno</option><option value="ru">Russo</option><option value="sr">Sérvio</option><option value="st">Sesotho</option><option value="so">Somália</option><option value="sw">Suaíli</option><option value="su">Sudanês</option><option value="sv">Sueco</option><option value="tg">Tadjique</option><option value="tl">Tagalo</option><option value="th">Tailandês</option><option value="ta">Tâmil</option><option value="cs">Tcheco</option><option value="te">Telugo</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeque</option><option value="vi">Vietnamita</option><option value="yi">Yiddish</option><option value="zu">Zulu</option></select></td>
+   <td class="SL_td">
+    <div id="SL_switch_b" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Alternar Idiomas"> </div>
+   </td>
+   <td class="SL_td"><select><option value="af">Africâner</option><option value="sq">Albanês</option><option value="de">Alemão</option><option value="ar">Arabe</option><option value="hy">Armênio</option><option value="az">Azerbaijano</option><option value="eu">Basco</option><option value="bn">Bengali</option><option value="be">Bielo-russo</option><option value="my">Birmanês</option><option value="bs">Bósnio</option><option value="bg">Búlgaro</option><option value="ca">Catalão</option><option value="kk">Cazaque</option><option value="ceb">Cebuano</option><option value="ny">Chichewa</option><option value="zh-CN">Chinês (Simp)</option><option value="zh-TW">Chinês (Trad)</option><option value="si">Cingalês</option><option value="ko">Coreano</option><option value="ht">Crioulo haitiano</option><option value="hr">Croata</option><option value="da">Dinamarquês</option><option value="sk">Eslovaco</option><option value="sl">Esloveno</option><option value="es">Espanhol</option><option value="eo">Esperanto</option><option value="et">Estoniano</option><option value="fi">Finlandês</option><option value="fr">Francês</option><option value="gl">Galego</option><option value="cy">Galês</option><option value="ka">Georgiano</option><option value="el">Grego</option><option value="gu">Gujarati</option><option value="ha">Hauça</option><option value="iw">Hebraico</option><option value="hi">Hindi</option><option value="hmn">Hmong</option><option value="nl">Holandês</option><option value="hu">Húngaro</option><option value="ig">Igbo</option><option value="id">Indonésio</option><option selected value="en">Inglês</option><option value="yo">Ioruba</option><option value="ga">Irlandês</option><option value="is">Islandês</option><option value="it">Italiano</option><option value="ja">Japonês</option><option value="jw">Javanês</option><option value="kn">Kannada</option><option value="km">Khmer</option><option value="lo">Laosiano</option><option value="la">Latim</option><option value="lv">Letão</option><option value="lt">Lituano</option><option value="mk">Macedônico</option><option value="ml">Malaiala</option><option value="ms">Malaio</option><option value="mg">Malgaxe</option><option value="mt">Maltês</option><option value="mi">Maori</option><option value="mr">Marathi</option><option value="mn">Mongol</option><option value="ne">Nepalês</option><option value="no">Norueguês</option><option value="fa">Persa</option><option value="pl">Polonês</option><option value="pt">Português</option><option value="pa">Punjabi</option><option value="ro">Romeno</option><option value="ru">Russo</option><option value="sr">Sérvio</option><option value="st">Sesotho</option><option value="so">Somália</option><option value="sw">Suaíli</option><option value="su">Sudanês</option><option value="sv">Sueco</option><option value="tg">Tadjique</option><option value="tl">Tagalo</option><option value="th">Tailandês</option><option value="ta">Tâmil</option><option value="cs">Tcheco</option><option value="te">Telugo</option><option value="tr">Turco</option><option value="uk">Ucraniano</option><option value="ur">Urdu</option><option value="uz">Uzbeque</option><option value="vi">Vietnamita</option><option value="yi">Yiddish</option><option value="zu">Zulu</option></select></td>
+   <td class="SL_td">
+    <div id="SL_TTS_voice" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Ouça"> </div>
+   </td>
+   <td class="SL_td">
+    <div class="SL_copy" id="SL_copy" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Copiar"> </div>
+   </td>
+   <td class="SL_td">
+    <div id="SL_bbl_font_patch"> </div>
+
+    <div class="SL_bbl_font" id="SL_bbl_font" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Tamanho da fonte"> </div>
+   </td>
+   <td class="SL_td">
+    <div id="SL_bbl_help" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Ajuda"> </div>
+   </td>
+   <td class="SL_td">
+    <div class="SL_pin_off" id="SL_pin" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Fixar a janela de pop-up"> </div>
+   </td>
+  </tr>
+ </tbody>
+</table>
+</div>
+</div>
+
+<div id="SL_shadow_translation_result" style=""> </div>
+
+<div class="SL_loading" id="SL_loading" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<div id="SL_player2"> </div>
+
+<div id="SL_alert100">A função de fala é limitada a 200 caracteres</div>
+
+<div id="SL_Balloon_options" style="background: rgb(255, 255, 255)  repeat scroll 0% 0%;">
+<div id="SL_arrow_down" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;"> </div>
+
+<table id="SL_tbl_opt" style="width: 100%;">
+ <tbody>
+  <tr>
+   <td><input></td>
+   <td>
+    <div id="SL_BBL_IMG" style="background: rgba(0, 0, 0, 0)  repeat scroll 0% 0%;" title="Mostrar o botão do ImTranslator 3 segundos"> </div>
+   </td>
+   <td><a class="SL_options" title="Mostrar opções">Opções</a> : <a class="SL_options" title="Histórico de tradução">Histórico</a> : <a class="SL_options" title="Comentários">Comentários</a> : <a class="SL_options" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=GD9D8CPW8HFA2" title="Faça sua contribuição">Donate</a></td>
+   <td><span id="SL_Balloon_Close" title="Encerrar">Encerrar</span></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+</div>
+</div>
