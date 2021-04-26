@@ -144,13 +144,13 @@ The review teams for each locale are:
   - [@mfuji09](https://github.com/mfuji09)
 - Korea (`ko`) content — the [@yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)
   team, which consists of:
-  - [@hochan222](https://github.com/hochan222)
   - [@yechoi42](https://github.com/yechoi42)
   - [@cos18](https://github.com/cos18)
   - [@GwangYeol-Im](https://github.com/GwangYeol-Im)
   - [@pje1740](https://github.com/pje1740)
   - [@nKiNk](https://github.com/nKiNk)
   - [@yujo11](https://github.com/yujo11)
+  - [@hochan222](https://github.com/hochan222)
 - Russian (`ru`) content — the [@yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru)
   team, which consists of:
   - [@armanpwnz](https://github.com/armanpwnz)
