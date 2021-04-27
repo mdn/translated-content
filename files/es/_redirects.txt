@@ -1898,6 +1898,7 @@
 /es/docs/Web/CSS/-webkit-mask-repeat	/es/docs/Web/CSS/mask-repeat
 /es/docs/Web/CSS/:-moz-placeholder	/es/docs/conflicting/Web/CSS/:placeholder-shown
 /es/docs/Web/CSS/:-moz-ui-invalid	/es/docs/Web/CSS/:user-invalid
+/es/docs/Web/CSS/:-moz-ui-valid	/es/docs/orphaned/Web/CSS/:-moz-ui-valid
 /es/docs/Web/CSS/:-ms-input-placeholder	/es/docs/conflicting/Web/CSS/:placeholder-shown_f20b6cc785f9fd133a0f9fb582f36891
 /es/docs/Web/CSS/:-webkit-autofill	/es/docs/Web/CSS/:autofill
 /es/docs/Web/CSS/::-moz-placeholder	/es/docs/conflicting/Web/CSS/::placeholder

@@ -15028,14 +15028,6 @@
       "louuis"
     ]
   },
-  "Web/CSS/:-moz-ui-valid": {
-    "modified": "2020-10-15T21:48:25.437Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "Aaaaaaa"
-    ]
-  },
   "Web/CSS/:-moz-user-disabled": {
     "modified": "2019-04-05T09:18:22.670Z",
     "contributors": [
@@ -45334,6 +45326,14 @@
     "modified": "2019-03-18T21:41:00.371Z",
     "contributors": [
       "loella16"
+    ]
+  },
+  "orphaned/Web/CSS/:-moz-ui-valid": {
+    "modified": "2020-10-15T21:48:25.437Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "Aaaaaaa"
     ]
   }
 }
