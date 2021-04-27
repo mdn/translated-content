@@ -26,7 +26,7 @@ translation_of: Web/HTTP/Headers/Accept-Encoding
  <li>
   <p>Un dépot IANA garde à jour <a href="http://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1">une liste complète des encodage de contenu</a>.</p>
  </li>
- <li>Deux autres encodages, <code>bzip</code> et<code>bzip2</code>, sont parfois utilisés, bien que non-standard. Ils implémentent l’algorithme utilisé par les deux programmes UNIX respectifs. À noter que le premier n’est plus maintenu suite à des problème de license.</li>
+ <li>Deux autres encodages, <code>bzip</code> et<code>bzip2</code>, sont parfois utilisés, bien que non-standards. Ils implémentent l’algorithme utilisé par les deux programmes UNIX respectifs. À noter que le premier n’est plus maintenu suite à des problème de license.</li>
 </ul>
 </div>
 
@@ -58,7 +58,7 @@ translation_of: Web/HTTP/Headers/Accept-Encoding
 </dl>
 
 <div class="note">
-<p>Il est possible de préciser plusieurs méthodes d'encodage, elles doivent être séparée par une virgule.</p>
+<p>Il est possible de préciser plusieurs méthodes d'encodage, elles doivent être séparées par une virgule.</p>
 </div>
 
 <div class="note">
@@ -82,7 +82,7 @@ translation_of: Web/HTTP/Headers/Accept-Encoding
  <dt><code>identity</code></dt>
  <dd>Indique la fonction identité (c'est-à-dire pas de compression ou de modification). Cette valeur est toujours considérée comme acceptable, même si l'en-tête ne le précise pas.</dd>
  <dt><code>*</code></dt>
- <dd>Correspond à tous les systèmes d'encodage de contenu qui n'ont pas été listés dans l'en-tête. C'est la valeur par défaut de l'ent-ête s'il n'est pas présent. Cela ne signifie pas que tous les algorithmes sont supportés; seulement qu'aucune préférence n'est exprimée.</dd>
+ <dd>Correspond à tous les systèmes d'encodage de contenu qui n'ont pas été listés dans l'en-tête. C'est la valeur par défaut de l'en-tête s'il n'est pas présent. Cela ne signifie pas que tous les algorithmes sont supportés; seulement qu'aucune préférence n'est exprimée.</dd>
  <dt><code>;q=</code> (qvalues weighting)</dt>
  <dd>La valeur indique l'ordre de préférence des méthodes de compression à utiliser. Ce champ utilise les <a href="/en-US/docs/Glossary/Quality_value">quality values</a> aussi appelée <em>weight </em>ou <em>poids</em>.</dd>
 </dl>
