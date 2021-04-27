@@ -3987,13 +3987,6 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/:-moz-ui-valid": {
-    "modified": "2019-03-23T22:42:34.212Z",
-    "contributors": [
-      "teoli",
-      "Sebastianz"
-    ]
-  },
   "Web/CSS/:-moz-user-disabled": {
     "modified": "2019-03-23T22:44:53.355Z",
     "contributors": [
@@ -14836,6 +14829,13 @@
     "contributors": [
       "stef4412",
       "gportioli"
+    ]
+  },
+  "orphaned/Web/CSS/:-moz-ui-valid": {
+    "modified": "2019-03-23T22:42:34.212Z",
+    "contributors": [
+      "teoli",
+      "Sebastianz"
     ]
   }
 }

@@ -3995,6 +3995,7 @@
 /fr/docs/Web/CSS/:-moz-system-metric(touch-enabled)	/fr/docs/Web/CSS/:-moz-system-metric/touch-enabled
 /fr/docs/Web/CSS/:-moz-system-metric(windows-default-theme)	/fr/docs/Web/CSS/:-moz-system-metric/windows-default-theme
 /fr/docs/Web/CSS/:-moz-ui-invalid	/fr/docs/Web/CSS/:user-invalid
+/fr/docs/Web/CSS/:-moz-ui-valid	/fr/docs/orphaned/Web/CSS/:-moz-ui-valid
 /fr/docs/Web/CSS/:-ms-input-placeholder	/fr/docs/conflicting/Web/CSS/:placeholder-shown
 /fr/docs/Web/CSS/:-webkit-autofill	/fr/docs/Web/CSS/:autofill
 /fr/docs/Web/CSS/::-moz-list-bullet	/fr/docs/Web/CSS/:-moz-list-bullet

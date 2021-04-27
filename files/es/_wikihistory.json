@@ -7603,13 +7603,6 @@
       "pekechis"
     ]
   },
-  "Web/CSS/:-moz-ui-valid": {
-    "modified": "2019-03-23T22:29:23.305Z",
-    "contributors": [
-      "teoli",
-      "pekechis"
-    ]
-  },
   "Web/CSS/:-moz-user-disabled": {
     "modified": "2019-03-23T22:30:53.713Z",
     "contributors": [
@@ -23742,6 +23735,13 @@
     "contributors": [
       "Sheppy",
       "rubencidlara"
+    ]
+  },
+  "orphaned/Web/CSS/:-moz-ui-valid": {
+    "modified": "2019-03-23T22:29:23.305Z",
+    "contributors": [
+      "teoli",
+      "pekechis"
     ]
   }
 }

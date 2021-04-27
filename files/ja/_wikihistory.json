@@ -11457,24 +11457,6 @@
       "YuichiNukiyama"
     ]
   },
-  "Web/API/DeviceProximityEvent/max": {
-    "modified": "2019-03-23T22:15:32.868Z",
-    "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
-  "Web/API/DeviceProximityEvent/min": {
-    "modified": "2019-03-23T22:15:40.764Z",
-    "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
-  "Web/API/DeviceProximityEvent/value": {
-    "modified": "2019-03-23T22:15:41.294Z",
-    "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
   "Web/API/Device_Memory_API": {
     "modified": "2020-10-15T22:28:37.534Z",
     "contributors": [
@@ -53495,6 +53477,24 @@
     "modified": "2019-03-18T21:46:16.505Z",
     "contributors": [
       "superyusuke"
+    ]
+  },
+  "orphaned/Web/API/DeviceProximityEvent/max": {
+    "modified": "2019-03-23T22:15:32.868Z",
+    "contributors": [
+      "YuichiNukiyama"
+    ]
+  },
+  "orphaned/Web/API/DeviceProximityEvent/min": {
+    "modified": "2019-03-23T22:15:40.764Z",
+    "contributors": [
+      "YuichiNukiyama"
+    ]
+  },
+  "orphaned/Web/API/DeviceProximityEvent/value": {
+    "modified": "2019-03-23T22:15:41.294Z",
+    "contributors": [
+      "YuichiNukiyama"
     ]
   }
 }
