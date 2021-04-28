@@ -1868,12 +1868,15 @@
 /zh-CN/docs/Web/API/Window/clearInterval	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
 /zh-CN/docs/Web/API/Window/getAttention	/zh-CN/docs/orphaned/Web/API/Window/getAttention
 /zh-CN/docs/Web/API/Window/onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
+/zh-CN/docs/Web/API/Window/ondevicelight	/zh-CN/docs/orphaned/Web/API/Window/ondevicelight
+/zh-CN/docs/Web/API/Window/ondeviceproximity	/zh-CN/docs/orphaned/Web/API/Window/ondeviceproximity
 /zh-CN/docs/Web/API/Window/onhashchange	/zh-CN/docs/Web/API/WindowEventHandlers/onhashchange
 /zh-CN/docs/Web/API/Window/onmouseup	/zh-CN/docs/conflicting/Web/API/GlobalEventHandlers/onmouseup
 /zh-CN/docs/Web/API/Window/onpopstate	/zh-CN/docs/Web/API/WindowEventHandlers/onpopstate
 /zh-CN/docs/Web/API/Window/onresize	/zh-CN/docs/Web/API/GlobalEventHandlers/onresize
 /zh-CN/docs/Web/API/Window/onscroll	/zh-CN/docs/conflicting/Web/API/GlobalEventHandlers/onscroll
 /zh-CN/docs/Web/API/Window/onunload	/zh-CN/docs/Web/API/WindowEventHandlers/onunload
+/zh-CN/docs/Web/API/Window/onuserproximity	/zh-CN/docs/orphaned/Web/API/Window/onuserproximity
 /zh-CN/docs/Web/API/Window/restore	/zh-CN/docs/conflicting/Web/API/Window/moveTo
 /zh-CN/docs/Web/API/Window/setInterval	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
 /zh-CN/docs/Web/API/Window/setTimeout	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout

@@ -532,6 +532,7 @@
 /it/docs/Web/API/ParentNode/lastElementChild	/it/docs/orphaned/Web/API/ParentNode/lastElementChild
 /it/docs/Web/API/Position	/it/docs/Web/API/GeolocationPosition
 /it/docs/Web/API/URLUtils	/it/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
+/it/docs/Web/API/Window/onuserproximity	/it/docs/orphaned/Web/API/Window/onuserproximity
 /it/docs/Web/API/WindowTimers	/it/docs/conflicting/Web/API/WindowOrWorkerGlobalScope
 /it/docs/Web/API/WindowTimers/clearInterval	/it/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
 /it/docs/Web/API/XMLHttpRequest/Usare_XMLHttpRequest	/it/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest

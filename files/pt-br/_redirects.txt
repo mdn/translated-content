@@ -613,6 +613,7 @@
 /pt-BR/docs/Web/API/Window.openDialog	/pt-BR/docs/Web/API/Window/openDialog
 /pt-BR/docs/Web/API/Window/URL	/pt-BR/docs/conflicting/Web/API/URL
 /pt-BR/docs/Web/API/Window/Window.localStorage	/pt-BR/docs/Web/API/Window/localStorage
+/pt-BR/docs/Web/API/Window/ondevicelight	/pt-BR/docs/orphaned/Web/API/Window/ondevicelight
 /pt-BR/docs/Web/API/Window/onscroll	/pt-BR/docs/conflicting/Web/API/GlobalEventHandlers/onscroll
 /pt-BR/docs/Web/API/WindowBase64	/pt-BR/docs/conflicting/Web/API/WindowOrWorkerGlobalScope
 /pt-BR/docs/Web/API/WindowBase64/atob	/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/atob
