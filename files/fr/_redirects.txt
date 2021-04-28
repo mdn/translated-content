@@ -3888,6 +3888,7 @@
 /fr/docs/Web/API/Window/URL	/fr/docs/conflicting/Web/API/URL
 /fr/docs/Web/API/Window/caches	/fr/docs/Web/API/WindowOrWorkerGlobalScope/caches
 /fr/docs/Web/API/Window/gamepaddisconnected	/fr/docs/Web/API/Window/gamepaddisconnected_event
+/fr/docs/Web/API/Window/ondevicelight	/fr/docs/orphaned/Web/API/Window/ondevicelight
 /fr/docs/Web/API/Window/onresize	/fr/docs/conflicting/Web/API/GlobalEventHandlers/onresize
 /fr/docs/Web/API/WindowBase64	/fr/docs/Web/API/WindowOrWorkerGlobalScope
 /fr/docs/Web/API/WindowBase64/Décoder_encoder_en_base64	/fr/docs/Glossary/Base64
