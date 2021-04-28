@@ -72,7 +72,7 @@ let fantome = element.attachShadow({mode: 'closed'});</pre>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
-  <p>Comme montre <a href="https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af">cet article de blog</a>, il est actuellement assez simple de pénétrer les DOM fantômes fermés, et les cacher complètement n'en vaut souvent pas la peine.</p>
+  <p>Comme montre <a href="https://blog.revillweb.com/open-vs-closed-shadow-dom-9f3d7427d1af">cet article de blog</a> <small>(en anglais)</small>, il est actuellement assez simple de pénétrer les DOM fantômes fermés, et les cacher complètement n'en vaut souvent pas la peine.</p>
 </div>
 
 <p>Si vous voulez associer un DOM fantôme à un élément personnalisé en tant que partie de son constructeur (de loin la plus utile application du DOM fantôme), vous devriez utiliser quelque instruction comme :</p>
@@ -122,11 +122,11 @@ icon.setAttribute('tabindex', 0);
 let info = document.createElement('span');
 info.setAttribute('class','info');
 
-// Take attribute content and put it inside the info span
+// Prendre le contenu de l'attribut et le placer à l'intérieur du span info
 let text = this.getAttribute('text');
 info.textContent = text;
 
-// Insert icon
+// Insérer l'icône
 let imgUrl;
 if(this.hasAttribute('img')) {
   imgUrl = this.getAttribute('img');
