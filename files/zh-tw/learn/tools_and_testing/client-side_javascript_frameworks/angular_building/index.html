@@ -22,37 +22,37 @@ tags:
 
 <div>{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p>這篇文章內容涵蓋，如何建立一個產品版本(production)的應用程式，以及提供後續的學習資源。</p>
+<p>這篇文章內容涵蓋，如何建立一個產品版本（production）的應用程式，以及提供後續的學習資源。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">預備知識：</th>
-   <td>熟悉 <a href="/zh-TW/docs/Learn/HTML">HTML</a>, <a href="/zh-TW/docs/Learn/CSS">CSS</a> 和 <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>的主要概念, <a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">終端機/命令列</a>的知識。
+   <td>熟悉<a href="/zh-TW/docs/Learn/HTML">HTML</a>、<a href="/zh-TW/docs/Learn/CSS">CSS</a>和<a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>的主要概念，以及<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">終端機／命令列</a>的知識。
    </td>
   </tr>
   <tr>
    <th scope="row">學習目標：</th>
-   <td>學會如何編譯你的Angular應用程式</td>
+   <td>學會如何編譯你的 Angular 應用程式</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="building_your_finished_application">建立你的應用程式完成版</h2>
 
-<p>現在你已經完成開發你的應用程式，接著執行  Angular CLI <code>build</code>的指令。
-當你在 <code>todo</code> 的目錄底下執行 <code>build</code> 的指令，應用程式會編譯並且輸出到 <code>dist/</code>的目錄下。</p>
+<p>現在你已經完成開發你的應用程式，接著執行 Angular CLI <code>build</code> 的指令。
+當你在 <code>todo</code> 的目錄底下執行 <code>build</code> 的指令，應用程式會編譯並且輸出到 <code>dist/</code> 的目錄下。</p>
 
-<p>在 <code>todo</code> 目錄底下，在命令列執行以下的命令:</p>
-<pre class="brush: bash">ng  build --prod</pre>
+<p>在 <code>todo</code> 目錄底下，在命令列執行以下的命令：</p>
+<pre class="brush: bash">ng build --prod</pre>
 
-<p>命令列介面 - CLI(Command Line Interface)，會將應用程式編譯並且輸出到新的目錄 <code>dist</code> 底下。
+<p>命令列介面－CLI（Command Line Interface），會將應用程式編譯並且輸出到新的目錄 <code>dist</code> 底下。
   這個 <code>--prod</code> 尾隨在 <code>ng build</code> 的參數，會移除在正式產品版本上不需要的東西。</p>
 
 <h2 id="deploying_your_application">部署你的應用程式</h2>
 
 <p>為了部署你的應用程式，你可以複製 <code>dist/my-project-name</code> 資料夾底下的內容到你的伺服器上。
-因為這些都是靜態檔案，你可以將這些檔案放到任何能夠提供檔案的伺服器上，像是:</p>
+因為這些都是靜態檔案，你可以將這些檔案放到任何能夠提供檔案的伺服器上，像是：</p>
 
 <ul>
   <li><a href="https://nodejs.org">Node.js</a></li>
@@ -60,20 +60,20 @@ tags:
   <li><a href="https://dotnet.microsoft.com">.NET</a></li>
 </ul>
 
-<p>你可以使用任何後端，像是 <a href="https://firebase.google.com/docs/hosting">Firebase</a>, <a href="https://cloud.google.com/solutions/web-hosting">Google Cloud</a> 或 <a href="https://cloud.google.com/appengine/docs/standard/python/getting-started/hosting-a-static-website">App Engine</a>.</p>
+<p>你可以使用任何後端，像是<a href="https://firebase.google.com/docs/hosting">Firebase</a>、<a href="https://cloud.google.com/solutions/web-hosting">Google Cloud</a>或<a href="https://cloud.google.com/appengine/docs/standard/python/getting-started/hosting-a-static-website">App Engine</a>。</p>
 <h2 id="whats_next">接著要做什麼</h2>
 
-<p>現在你已經建立了基本的應用程式，但是你的Angular學習旅程才剛開始，你可以探索Angular文件學習更多，像是:</p>
+<p>現在你已經建立了基本的應用程式，但是你的Angular學習旅程才剛開始，你可以探索Angular文件學習更多，像是：</p>
 
 <ul>
-  <li><a href="https://angular.io/tutorial">英雄之旅</a>: 一個深入的Angular重點課程，像是使用服務(service)、導覽(navigation)以及從伺服器取得資料。</li>
-  <li>Angular <a href="https://angular.io/guide/component-overview">元件</a> 指南:一系列的文章，主題包括生命週期、元件互動以及檢視封裝。</li>
-  <li><a href="https://angular.io/guide/forms-overview">表單</a> 指南: 文章內容包含建立Angular的響應式表單、輸入驗證以及建立動態表單.</li>
+  <li><a href="https://angular.io/tutorial">英雄之旅</a>：一個深入的 Angular 重點課程，像是使用服務（service）、導覽（navigation）以及從伺服器取得資料。</li>
+  <li>Angular <a href="https://angular.io/guide/component-overview">元件</a> 指南：一系列的文章，主題包括生命週期、元件互動以及檢視封裝。</li>
+  <li><a href="https://angular.io/guide/forms-overview">表單</a> 指南：文章內容包含建立Angular的響應式表單、輸入驗證以及建立動態表單。</li>
 </ul>
 
 <h2 id="summary">總結</h2>
 
-<p>以上。希望您喜歡Angular!</p>
+<p>以上。希望您喜歡Angular！</p>
 
 <div>{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
