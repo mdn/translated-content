@@ -112,19 +112,19 @@ tags:
 
 <ul>
  <li><code>.eslintrc.js</code>：這是 <a href="https://eslint.org/">eslint</a> 的組態檔案，你可以使用它來管理你的 linting 規則。</li>
- <li><code>babel.config.js</code>：這是 <a href="https://babeljs.io/">Babel</a> 的組態檔案，在開發階段我們可以使用一些 Javascript 的新功能，透過這個文件轉換成在產品環境可以跨瀏覽器運行的舊版語法。你也可以在這個文件裡註冊額外的 babel 套件。</li>
+ <li><code>babel.config.js</code>：這是 <a href="https://babeljs.io/">Babel</a> 的組態檔案，在開發階段我們可以使用一些 Javascript 的新功能，透過這個檔案轉換成在產品環境可以跨瀏覽器運行的舊版語法。你也可以在這個檔案裡註冊額外的 babel 套件。</li>
  <li><code>.browserslistrc</code>：這是 <a href="https://github.com/browserslist/browserslist">Browserslist</a>的組態檔案。你可以透過它來控制需要對哪些瀏覽器進行支持與優化</li>
  <li><code>public</code>：這個資料夾包含了所有發布的靜態檔案，這些檔案在建置過程不會經過 <a href="https://webpack.js.org/">Webpack</a> 加工。（但是有一個例外：<code>index.html</code> 會有一些處理）。
   <ul>
    <li><code>favicon.ico</code>：這是應用程式的 favicon。目前是 Vue 的標誌。</li>
    <li><code>index.html</code>：這是應用程式的模板。你的 Vue 應用程式會透過這個 HTML 頁面來運行，你也可以使用 lodash 樣板語言在這個頁面穿插一些值。
-    <div class="note"><strong>注意</strong>：這個模板不是用來管理你的應用程式的版面－而是用來管理應用程式以外的靜態 HTML 文件，只有在使用一些進階的功能才需要修改這個檔案。</div>
+    <div class="note"><strong>注意</strong>：這個模板不是用來管理你的應用程式的版面－而是用來管理應用程式以外的靜態 HTML 檔案，只有在使用一些進階的功能才需要修改這個檔案。</div>
    </li>
   </ul>
  </li>
  <li><code>src</code>：這個資料夾是 Vue 專案的核心。
   <ul>
-   <li><code>main.js</code>：這是應用程式的進入點。目前，這個檔案會初始化你的 Vue 應用程式並定義要將應用掛載到 <code>index.html</code> 文件中的哪個 HTML 元素。通常還會在這個文件註冊全域性元件或載入其他 Vue 函式庫。</li>
+   <li><code>main.js</code>：這是應用程式的進入點。目前，這個檔案會初始化你的 Vue 應用程式並定義要將應用掛載到 <code>index.html</code> 檔案中的哪個 HTML 元素。通常還會在這個檔案註冊全域性元件或載入其他 Vue 函式庫。</li>
    <li><code>App.vue</code>：這是 Vue 應用程式的根節點元件。往下看可以了解更多關於 Vue 元件的說明。</li>
    <li><code>components</code>：你可以把你的元件放在這個資料夾。目前它只有放一個範例元件。</li>
    <li><code>assets</code>：這個資料夾是用來放一些靜態檔案像是 CSS 和圖片。因為這些檔案在來源目錄下，它們可以透過 Webpack 加工處理。這表示你可以使用一些前處理器，像是 <a href="https://sass-lang.com/">Sass / SCSS</a> 或是 <a href="https://stylus-lang.com/">Stylus</a>。</li>
