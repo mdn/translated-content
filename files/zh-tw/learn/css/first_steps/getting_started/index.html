@@ -153,14 +153,14 @@ and also a &lt;a href="http://example.com"&gt;link&lt;/a&gt;.&lt;/p&gt;
 
 <p>您可以將 <code>special</code> 分類套用到任何您希望與這個清單項目相同方式呈現的元素。舉例來說，您可能想要在段落中的 <code>&lt;span&gt;</code> 元素一樣以橘色粗體呈現。嘗試添加 <code>class</code> 屬性並設定為 <code>special</code> 到它上頭，然後重新載入頁面看看發生了什麼。</p>
 
-<p>有些時候，您會看到選擇器規則中，將元素名稱與分類合在一起：</p>
+<p>有些時候，您會看到選擇器中，將元素名稱與分類合在一起：</p>
 
 <pre class="brush: css">li.special {
   color: orange;
   font-weight: bold;
 }</pre>
 
-<p>這個語法表示「選擇任何帶有 special 分類屬性的 <code>li</code> 元素」。如果您改用了這個規則，樣式將不會被套用到具有一樣分類的 <code>&lt;span&gt;</code> 及其它元素上。要維持原本的呈現結果，您應該再增加規則把元素包含進選擇器中：</p>
+<p>這個語法表示「選擇任何帶有 special 分類屬性的 <code>li</code> 元素」。如果您改用了這個選擇器，樣式將不會被套用到具有一樣分類的 <code>&lt;span&gt;</code> 及其它元素上。要維持原本的呈現結果，您應該再增加選擇器把元素包含進規則當中：</p>
 
 <pre class="brush: css">li.special,
 span.special {
@@ -168,34 +168,34 @@ span.special {
   font-weight: bold;
 }</pre>
 
-<p>您可以想像，有些分類的設定可能會被套用在多種元素上，而且您不希望當有新的元素要套用相同樣式的時候，得回頭修改選擇器規則。因此規則應該只指定分類（class）而不指定元素名稱，除非要為了這個分類下的特定元素設定樣式，確保不會套用到其它元素上。</p>
+<p>您可以想像，有些分類的設定可能會被套用在多種元素上，而且您不希望當有新的元素要套用相同樣式的時候，得回頭修改選擇器。因此選擇器應該只指定分類（class）而不指定元素名稱，除非要為了這個分類下的特定元素設定樣式，確保不會套用到其它元素上。</p>
 
 <h2 id="Styling_things_based_on_their_location_in_a_document">依所在位置指定樣式</h2>
 
-<p>There are times when you will want something to look different based on where it is in the document. There are a number of selectors that can help you here, but for now we will look at just a couple. In our document are two <code>&lt;em&gt;</code> elements — one inside a paragraph and the other inside a list item. To select only an <code>&lt;em&gt;</code> that is nested inside an <code>&lt;li&gt;</code> element I can use a selector called the <strong>descendant combinator</strong>, which takes the form of a space between two other selectors.</p>
+<p>有些時候，您會想要一些在不同位置的東西看起來有所差別。有許多選擇器可以作到，但現在我們只介紹其中兩種。在我們的文件中有兩個 <code>&lt;em&gt;</code> 元素，一個在段落中另一個在清單項目裡。要只選擇到被包含在 <code>&lt;li&gt;</code> 元素裡的 <code>&lt;em&gt;</code> 元素，我可以使用被稱<strong>後裔連結器（descendant combinator）</strong> 的語法，它是用空格（一到多個）連結兩個選擇器。</p>
 
-<p>Add the following rule to your stylesheet.</p>
+<p>在您的樣式表加入以下規則。</p>
 
 <pre class="brush: css">li em {
   color: rebeccapurple;
 }</pre>
 
-<p>This selector will select any <code>&lt;em&gt;</code> element that is inside (a descendant of) an <code>&lt;li&gt;</code>. So in your example document, you should find that the <code>&lt;em&gt;</code> in the third list item is now purple, but the one inside the paragraph is unchanged.</p>
+<p>這個選擇器將會指向任何在 <code>&lt;li&gt;</code> 內部的 <code>&lt;em&gt;</code> 元素（後裔）。所以在範例裡中，您應該會發現在第三個清單項目裡的 <code>&lt;em&gt;</code> 變成紫色，但是在段落裡的則沒有改變。</p>
 
-<p>Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so place a <code>+</code>  (an <strong>adjacent sibling combinator</strong>) between the selectors.</p>
+<p>另外有些時候，您可能會想嘗試對直接跟在標題後面的那個段落設定樣式。要作到就使用一個 <code>+</code> （<strong>相鄰連結器adjacent sibling combinator</strong>）放在選擇器的中間。</p>
 
-<p>Try adding this rule to your stylesheet as well:</p>
+<p>試著加入面這個規則到</p>
 
 <pre class="brush: css">h1 + p {
   font-size: 200%;
 }</pre>
 
-<p>The live example below includes the two rules above. Try adding a rule to make a span red, if it is inside a paragraph. You will know if you have it right as the span in the first paragraph will be red, but the one in the first list item will not change color.</p>
+<p>下面實際的例子中，包含了上面提到的兩個規則。試著將段落（p）裡的 span 改為紅色。藉由確認第一個段落裡的 span 變成紅色，但清單第一項裡的沒有改變，您將會知道所加入規則是否正確。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: As you can see, CSS gives us several ways to target elements, and we've only scratched the surface so far! We will be taking a proper look at all of these selectors and many more in our <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">Selectors</a> articles later on in the course.</p>
+<p><strong>注意</strong>：如您所見， CSS 提供我們一些方法來選擇元素，而目前為止我們只涉及到表面！我們將在課程後面的<a href="/zh-TW/docs/Learn/CSS/Building_blocks/Selectors">選擇器</a>章節裡有更深入的探討。</p>
 </div>
 
 <h2 id="Styling_things_based_on_state">依狀態指定樣式</h2>
