@@ -14,6 +14,12 @@
       "ojaswa1942"
     ]
   },
+  "Glossary/Data_structure": {
+    "modified": "2020-04-16T13:14:37.025Z",
+    "contributors": [
+      "Vipul1142"
+    ]
+  },
   "Glossary/Domain": {
     "modified": "2019-01-16T23:15:17.582Z",
     "contributors": [
@@ -26,10 +32,23 @@
       "ojaswa1942"
     ]
   },
+  "Glossary/Internet": {
+    "modified": "2019-03-23T22:56:56.620Z",
+    "contributors": [
+      "teoli",
+      "kavish"
+    ]
+  },
   "Glossary/JavaScript": {
     "modified": "2019-03-18T20:44:12.302Z",
     "contributors": [
       "ojaswa1942"
+    ]
+  },
+  "Glossary/Locale": {
+    "modified": "2019-03-23T22:26:49.872Z",
+    "contributors": [
+      "drashti4"
     ]
   },
   "MDN": {
@@ -81,12 +100,6 @@
     "contributors": [
       "teoli",
       "Sheppy"
-    ]
-  },
-  "Mozilla/Developer_guide": {
-    "modified": "2019-03-23T22:48:28.254Z",
-    "contributors": [
-      "emorley-old"
     ]
   },
   "Web": {
@@ -141,29 +154,22 @@
       "ExE-Boss"
     ]
   },
+  "Web/JavaScript/Reference/Operators/Operator_Precedence": {
+    "modified": "2020-03-12T19:48:28.073Z",
+    "contributors": [
+      "harshrathod50"
+    ]
+  },
+  "Web/JavaScript/Typed_arrays": {
+    "modified": "2020-10-15T22:25:45.883Z",
+    "contributors": [
+      "harshrathod50"
+    ]
+  },
   "Web/SVG": {
     "modified": "2019-03-18T20:44:13.086Z",
     "contributors": [
       "ojaswa1942"
-    ]
-  },
-  "Glossary/Internet": {
-    "modified": "2019-03-23T22:56:56.620Z",
-    "contributors": [
-      "teoli",
-      "kavish"
-    ]
-  },
-  "Glossary/Data_structure": {
-    "modified": "2020-04-16T13:14:37.025Z",
-    "contributors": [
-      "Vipul1142"
-    ]
-  },
-  "Glossary/Locale": {
-    "modified": "2019-03-23T22:26:49.872Z",
-    "contributors": [
-      "drashti4"
     ]
   },
   "orphaned/MDN/Community": {
@@ -178,18 +184,6 @@
     "contributors": [
       "wbamberg",
       "prafull_satasiya"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Operator_Precedence": {
-    "modified": "2020-03-12T19:48:28.073Z",
-    "contributors": [
-      "harshrathod50"
-    ]
-  },
-  "Web/JavaScript/Typed_arrays": {
-    "modified": "2020-10-15T22:25:45.883Z",
-    "contributors": [
-      "harshrathod50"
     ]
   },
   "orphaned/Web/Localization": {

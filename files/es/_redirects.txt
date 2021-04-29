@@ -220,7 +220,6 @@
 /es/docs/Code_snippets	/es/docs/orphaned/Code_snippets
 /es/docs/Code_snippets/Pestañas_del_navegador	/es/docs/orphaned/Code_snippets/Pestañas_del_navegador
 /es/docs/Columnas_con_CSS-3	/es/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
-/es/docs/Compilar_e_instalar	/es/docs/Mozilla/Developer_guide/Build_Instructions
 /es/docs/Complementos_de_Firefox._Guia_del_desarrollador	/es/docs/orphaned/Guía_para_el_desarrollador_de_agregados_para_Firefox
 /es/docs/Configurar_correctamente_los_tipos_MIME_del_servidor	/es/docs/Learn/Server-side/Configuring_server_MIME_types
 /es/docs/Control_de_la_corrección_ortográfica_en_formularios_HTML	/es/docs/conflicting/Web/HTML/Global_attributes/spellcheck
@@ -254,7 +253,6 @@
 /es/docs/Creando_una_extensión	/es/docs/orphaned/Creando_una_extensión
 /es/docs/Crear_una_barra_lateral_en_Firefox	/es/docs/Crear_un_panel_lateral_en_Firefox
 /es/docs/Crear_una_extensión_personalizada_de_Firefox_con_el_Mozilla_Build_System	/es/docs/orphaned/Crear_una_extensión_personalizada_de_Firefox_con_el_Mozilla_Build_System
-/es/docs/Código_fuente_de_Mozilla_(CVS)	/es/docs/Mozilla/Developer_guide/Source_Code/CVS
 /es/docs/DHTML	/es/docs/Glossary/DHTML
 /es/docs/DHTML_Demostraciones_del_uso_de_DOM_Style	/es/docs/orphaned/DHTML_Demostraciones_del_uso_de_DOM_Style
 /es/docs/DOM	/es/docs/conflicting/Web/API/Document_Object_Model_7d961b8030c6099ee907f4f4b5fe6b3d
@@ -446,8 +444,6 @@
 /es/docs/Desarrollo_Web	/es/docs/conflicting/Web/Guide
 /es/docs/Detección_del_navegador_y_soporte_entre_ellos	/es/docs/Detección_del_navegador_y_cobertura_a_múltiples_navegadores
 /es/docs/Detectar_la_orientación_del_dispositivo	/es/docs/orphaned/Detectar_la_orientación_del_dispositivo
-/es/docs/Developer_Guide	/es/docs/Mozilla/Developer_guide
-/es/docs/Developer_Guide/Source_Code	/es/docs/Mozilla/Developer_guide/Source_Code
 /es/docs/Dibujando_Gráficos_con_Canvas	/es/docs/orphaned/Dibujando_Gráficos_con_Canvas
 /es/docs/Dibujar_texto_usando_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /es/docs/DragDrop	/es/docs/conflicting/Web/API/HTML_Drag_and_Drop_API
@@ -1423,8 +1419,6 @@
 /es/docs/Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension	/es/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /es/docs/Mozilla/Add-ons/WebExtensions/Tutorial	/es/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 /es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Accion_navegador	/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
-/es/docs/Mozilla/Developer_guide/Preguntas_frecuentes_sobre_la_compilación_de_Mozilla	/es/docs/Mozilla/Developer_guide/Mozilla_build_FAQ
-/es/docs/Mozilla/Developer_guide/Source_Code/Código_fuente_de_Mozilla_(CVS)	/es/docs/Mozilla/Developer_guide/Source_Code/CVS
 /es/docs/Módulos_JavaScript	/es/docs/orphaned/Módulos_JavaScript
 /es/docs/Novedades_en_JavaScript_1.6	/es/docs/Web/JavaScript/Novedades_en_JavaScript/1.6
 /es/docs/Novedades_en_JavaScript_1.7	/es/docs/Web/JavaScript/Novedades_en_JavaScript/1.7
@@ -1439,7 +1433,6 @@
 /es/docs/Preguntas_frecuentes_sobre_incrustación_en_Mozilla	/es/docs/orphaned/Preguntas_frecuentes_sobre_incrustación_en_Mozilla
 /es/docs/Preguntas_frecuentes_sobre_incrustación_en_Mozilla/Introducción_a_Gecko_e_inscrustación	/es/docs/orphaned/Preguntas_frecuentes_sobre_incrustación_en_Mozilla/Introducción_a_Gecko_e_inscrustación
 /es/docs/Preguntas_frecuentes_sobre_incrustación_en_Mozilla:Introducción_a_Gecko_e_inscrustación	/es/docs/orphaned/Preguntas_frecuentes_sobre_incrustación_en_Mozilla/Introducción_a_Gecko_e_inscrustación
-/es/docs/Preguntas_frecuentes_sobre_la_compilación_de_Mozilla	/es/docs/Mozilla/Developer_guide/Mozilla_build_FAQ
 /es/docs/Principios_básicos_de_los_servicios_Web	/es/docs/orphaned/Principios_básicos_de_los_servicios_Web
 /es/docs/Quirks_Mode_and_Standards_Mode	/es/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /es/docs/Recursos_en_modo_desconectado_en_Firefox	/es/docs/orphaned/Recursos_en_modo_desconectado_en_Firefox
@@ -3064,7 +3057,6 @@
 /es/docs/en	/en-US/
 /es/docs/firefox_Web_Developer_(externo)	https://addons.mozilla.org/firefox/60/
 /es/docs/lugares	/es/docs/Catálogo
-/es/docs/mozilla-central	/es/docs/Mozilla/Developer_guide/mozilla-central
 /es/docs/nsDirectoryService	/es/docs/orphaned/nsDirectoryService
 /es/docs/nsISupports:AddRef	/es/docs/nsISupports/AddRef
 /es/docs/nsISupports:QueryInterface	/es/docs/nsISupports/QueryInterface

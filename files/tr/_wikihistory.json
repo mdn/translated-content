@@ -1,4 +1,13 @@
 {
+  "Games": {
+    "modified": "2020-09-14T16:54:45.005Z",
+    "contributors": [
+      "serdarates",
+      "Berkay-Cubuk",
+      "SphinxKnight",
+      "KayraG"
+    ]
+  },
   "Games/Tutorials": {
     "modified": "2020-04-21T07:39:09.746Z"
   },
@@ -28,6 +37,12 @@
     "modified": "2019-03-23T22:14:02.259Z",
     "contributors": [
       "scriptype"
+    ]
+  },
+  "Glossary/Browser": {
+    "modified": "2019-03-23T22:03:49.780Z",
+    "contributors": [
+      "ahmetkaba"
     ]
   },
   "Glossary/CSS": {
@@ -84,6 +99,24 @@
       "HuseyinTurkmenoglu"
     ]
   },
+  "Glossary/OOP": {
+    "modified": "2019-03-23T22:03:49.060Z",
+    "contributors": [
+      "ahmetkaba"
+    ]
+  },
+  "Glossary/Object": {
+    "modified": "2019-03-23T22:03:39.438Z",
+    "contributors": [
+      "ahmetkaba"
+    ]
+  },
+  "Glossary/Protocol": {
+    "modified": "2019-03-23T22:16:10.981Z",
+    "contributors": [
+      "erolkeskin"
+    ]
+  },
   "Glossary/Ruby": {
     "modified": "2019-03-23T22:13:08.594Z",
     "contributors": [
@@ -100,6 +133,86 @@
     "modified": "2019-03-18T21:18:21.865Z",
     "contributors": [
       "cortix"
+    ]
+  },
+  "Learn": {
+    "modified": "2020-12-12T02:35:21.255Z",
+    "contributors": [
+      "YasinCelebi",
+      "samrain",
+      "hakantr",
+      "zktosu",
+      "SphinxKnight",
+      "erhan35",
+      "kaan35",
+      "svarlamov",
+      "engineermetin",
+      "nahitheper",
+      "askn"
+    ]
+  },
+  "Learn/CSS": {
+    "modified": "2020-10-26T19:42:09.137Z",
+    "contributors": [
+      "hakantr",
+      "nihalokur",
+      "Berkay-Cubuk",
+      "raufsamestone",
+      "pasalog"
+    ]
+  },
+  "Learn/CSS/Building_blocks": {
+    "modified": "2020-10-26T20:12:35.187Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Backgrounds_and_borders": {
+    "modified": "2020-10-27T11:49:58.173Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Cascade_and_inheritance": {
+    "modified": "2020-10-26T19:35:27.880Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Debugging_CSS": {
+    "modified": "2020-11-03T17:03:37.975Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Handling_different_text_directions": {
+    "modified": "2020-10-28T17:43:47.416Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Images_media_form_elements": {
+    "modified": "2020-10-31T13:09:45.996Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Organizing": {
+    "modified": "2020-11-09T10:35:55.540Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Overflow_Tasks": {
+    "modified": "2020-10-19T10:29:26.404Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Overflowing_content": {
+    "modified": "2020-10-31T10:11:56.872Z",
+    "contributors": [
+      "hakantr"
     ]
   },
   "Learn/CSS/Building_blocks/Selectors": {
@@ -133,6 +246,146 @@
       "hakantr"
     ]
   },
+  "Learn/CSS/Building_blocks/Sizing_items_in_CSS": {
+    "modified": "2020-10-31T10:34:38.784Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Sizing_tasks": {
+    "modified": "2020-10-22T09:21:20.303Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Styling_tables": {
+    "modified": "2020-10-31T20:13:56.766Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders": {
+    "modified": "2020-10-17T21:28:55.599Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/The_box_model": {
+    "modified": "2020-10-26T19:26:58.833Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Values_and_units": {
+    "modified": "2020-10-28T18:44:28.360Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Values_tasks": {
+    "modified": "2020-10-20T12:06:48.608Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Building_blocks/Writing_Modes_Tasks": {
+    "modified": "2020-10-19T06:58:07.202Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/CSS_layout": {
+    "modified": "2020-12-09T18:21:04.587Z",
+    "contributors": [
+      "hakantr",
+      "asimcanuz",
+      "jwhitlock",
+      "chrisdavidmills"
+    ]
+  },
+  "Learn/CSS/CSS_layout/Introduction": {
+    "modified": "2020-12-09T18:22:37.810Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/First_steps": {
+    "modified": "2020-10-26T19:46:11.774Z",
+    "contributors": [
+      "hakantr",
+      "eraticoye",
+      "nihalokur",
+      "Berkay-Cubuk"
+    ]
+  },
+  "Learn/CSS/First_steps/Getting_started": {
+    "modified": "2020-10-26T19:58:54.757Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/First_steps/How_CSS_is_structured": {
+    "modified": "2020-10-26T20:05:43.727Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/First_steps/How_CSS_works": {
+    "modified": "2020-10-26T20:08:14.999Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/First_steps/Using_your_new_knowledge": {
+    "modified": "2020-10-26T20:11:11.186Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/First_steps/What_is_CSS": {
+    "modified": "2020-10-26T19:52:10.775Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Styling_text": {
+    "modified": "2020-11-09T11:28:43.066Z",
+    "contributors": [
+      "hakantr",
+      "burakbolek",
+      "nihalokur"
+    ]
+  },
+  "Learn/CSS/Styling_text/Fundamentals": {
+    "modified": "2020-11-13T11:56:27.954Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Styling_text/Styling_links": {
+    "modified": "2020-12-06T15:35:17.350Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Styling_text/Styling_lists": {
+    "modified": "2020-12-04T11:14:25.666Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Styling_text/Typesetting_a_homepage": {
+    "modified": "2020-12-06T22:45:30.011Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Learn/CSS/Styling_text/Web_fonts": {
+    "modified": "2020-12-06T22:12:35.170Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
   "Learn/Common_questions": {
     "modified": "2020-07-16T22:35:27.247Z"
   },
@@ -140,6 +393,169 @@
     "modified": "2020-07-16T22:35:38.613Z",
     "contributors": [
       "alikcan"
+    ]
+  },
+  "Learn/Common_questions/What_are_browser_developer_tools": {
+    "modified": "2020-07-16T22:35:48.238Z",
+    "contributors": [
+      "hasanunl"
+    ]
+  },
+  "Learn/Front-end_web_developer": {
+    "modified": "2020-10-06T04:07:52.094Z",
+    "contributors": [
+      "Ebu",
+      "selinwin7"
+    ]
+  },
+  "Learn/Getting_started_with_the_web": {
+    "modified": "2020-11-02T12:10:16.997Z",
+    "contributors": [
+      "GreXLin85",
+      "selinwin7",
+      "SphinxKnight",
+      "ozcanuner14",
+      "2.HALLAÇ",
+      "dotRaikkonen",
+      "kaan35",
+      "halimtekin",
+      "yilmazozisik",
+      "askn"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/How_the_Web_works": {
+    "modified": "2020-10-24T10:59:07.347Z",
+    "contributors": [
+      "NightCode-luna"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/Installing_basic_software": {
+    "modified": "2020-07-16T22:34:11.586Z",
+    "contributors": [
+      "erhan35",
+      "HuseyinTurkmenoglu",
+      "aykutkugu"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/JavaScript_basics": {
+    "modified": "2020-12-03T08:49:49.563Z",
+    "contributors": [
+      "murerkinn",
+      "miracyb",
+      "SphinxKnight",
+      "umutbozdag",
+      "alper.pekdemir",
+      "omrtrk",
+      "gkhno",
+      "maydemirx",
+      "yigitozdemir"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/What_will_your_website_look_like": {
+    "modified": "2020-10-14T06:26:48.114Z",
+    "contributors": [
+      "AinTisar",
+      "receponalan"
+    ]
+  },
+  "Learn/HTML": {
+    "modified": "2020-08-07T19:15:04.875Z",
+    "contributors": [
+      "bambinam",
+      "msyx",
+      "tufan2005",
+      "jwhitlock",
+      "chrisdavidmills"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML": {
+    "modified": "2020-11-19T16:35:06.616Z",
+    "contributors": [
+      "burakizmirli252",
+      "eraticoye",
+      "erhan35",
+      "kaan35",
+      "ebubekirtrkr",
+      "jwhitlock",
+      "irfanevrens"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML/Getting_started": {
+    "modified": "2020-07-16T22:23:08.179Z",
+    "contributors": [
+      "peterbe",
+      "tudecem"
+    ]
+  },
+  "Learn/JavaScript": {
+    "modified": "2020-12-13T14:50:04.266Z",
+    "contributors": [
+      "gullusadik",
+      "pasalog",
+      "enesanbar"
+    ]
+  },
+  "Learn/JavaScript/First_steps": {
+    "modified": "2020-07-16T22:29:55.523Z",
+    "contributors": [
+      "busines.plan.16"
+    ]
+  },
+  "Learn/JavaScript/First_steps/A_first_splash": {
+    "modified": "2020-08-31T10:02:41.505Z",
+    "contributors": [
+      "aydgn"
+    ]
+  },
+  "Learn/JavaScript/Objects": {
+    "modified": "2020-07-16T22:31:53.513Z",
+    "contributors": [
+      "berabulut",
+      "dotRaikkonen",
+      "truefalseman",
+      "volkansag",
+      "enginkartal"
+    ]
+  },
+  "Learn/JavaScript/Objects/Basics": {
+    "modified": "2020-07-16T22:32:02.139Z",
+    "contributors": [
+      "ArinSoftware",
+      "AtlasCan"
+    ]
+  },
+  "Learn/Server-side": {
+    "modified": "2020-07-16T22:36:02.262Z",
+    "contributors": [
+      "jwhitlock",
+      "chrisdavidmills"
+    ]
+  },
+  "Learn/Server-side/Django": {
+    "modified": "2020-07-16T22:36:35.695Z",
+    "contributors": [
+      "jwhitlock",
+      "chrisdavidmills"
+    ]
+  },
+  "Learn/Server-side/Django/Authentication": {
+    "modified": "2020-07-16T22:37:24.649Z",
+    "contributors": [
+      "safaariman",
+      "icanates"
+    ]
+  },
+  "Learn/Server-side/Django/Sessions": {
+    "modified": "2020-07-16T22:37:28.248Z",
+    "contributors": [
+      "ozgurturkiye",
+      "icanates"
+    ]
+  },
+  "Learn/Server-side/Django/skeleton_website": {
+    "modified": "2020-07-16T22:36:54.756Z",
+    "contributors": [
+      "hakanergul"
     ]
   },
   "MDN": {
@@ -154,6 +570,19 @@
       "ozkanoron",
       "Jeremie",
       "DavidWalsh"
+    ]
+  },
+  "MDN/About": {
+    "modified": "2020-05-30T08:22:38.074Z",
+    "contributors": [
+      "Berkay-Cubuk"
+    ]
+  },
+  "MDN/At_ten": {
+    "modified": "2019-03-23T22:48:44.324Z",
+    "contributors": [
+      "hunkarticaret",
+      "futuredayv"
     ]
   },
   "MDN/Contribute": {
@@ -199,11 +628,40 @@
       "jswisher"
     ]
   },
+  "MDN/Contribute/Howto/Create_and_edit_pages": {
+    "modified": "2020-10-12T07:44:14.475Z",
+    "contributors": [
+      "SphinxKnight",
+      "eminboynukara",
+      "alpegrup",
+      "pazzers.info",
+      "wbamberg",
+      "erhankilic"
+    ]
+  },
   "MDN/Tools": {
     "modified": "2020-09-30T16:54:34.254Z",
     "contributors": [
       "chrisdavidmills",
       "wbamberg"
+    ]
+  },
+  "MDN/Tools/KumaScript/Troubleshooting": {
+    "modified": "2020-04-14T08:39:36.193Z",
+    "contributors": [
+      "SphinxKnight",
+      "orhanfide1965",
+      "2.HALLAÇ",
+      "wbamberg",
+      "hrctelekom"
+    ]
+  },
+  "MDN/Yari": {
+    "modified": "2019-09-11T08:38:17.228Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "Sheppy"
     ]
   },
   "Mozilla": {
@@ -212,11 +670,49 @@
       "Sheppy"
     ]
   },
-  "Mozilla/Developer_guide": {
-    "modified": "2020-12-06T09:50:01.354Z",
+  "Mozilla/Add-ons": {
+    "modified": "2019-09-09T12:16:58.836Z",
     "contributors": [
-      "emrekayik",
-      "Gabriel-Liu"
+      "SphinxKnight",
+      "EfoliTR",
+      "akyakaapart",
+      "pasalog",
+      "Fatih."
+    ]
+  },
+  "Mozilla/Add-ons/WebExtensions": {
+    "modified": "2020-01-23T19:11:12.389Z",
+    "contributors": [
+      "2.HALLAÇ",
+      "CakirSualp",
+      "mesutgolcuk",
+      "tufan2005",
+      "mutouk"
+    ]
+  },
+  "Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools": {
+    "modified": "2020-04-18T10:07:00.995Z",
+    "contributors": [
+      "OnKoydenKovuldum",
+      "2.HALLAÇ"
+    ]
+  },
+  "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
+    "modified": "2019-03-30T13:49:03.756Z",
+    "contributors": [
+      "aceylan"
+    ]
+  },
+  "Mozilla/Add-ons/WebExtensions/Your_first_WebExtension": {
+    "modified": "2019-08-06T17:02:11.469Z",
+    "contributors": [
+      "mesutgolcuk"
+    ]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface": {
+    "modified": "2020-01-23T18:36:25.194Z",
+    "contributors": [
+      "2.HALLAÇ"
     ]
   },
   "Mozilla/Firefox": {
@@ -245,6 +741,87 @@
     "modified": "2020-09-23T12:11:08.193Z",
     "contributors": [
       "solmusgul17"
+    ]
+  },
+  "Tools": {
+    "modified": "2020-07-16T22:44:18.586Z",
+    "contributors": [
+      "OnKoydenKovuldum",
+      "2.HALLAÇ",
+      "SphinxKnight",
+      "trabjeb",
+      "fanatikhamsi",
+      "kizinteki",
+      "saidkocdemir",
+      "pasalog",
+      "eytanfb",
+      "teoli",
+      "ibrahimpatir",
+      "techexpert"
+    ]
+  },
+  "Tools/Browser_Console": {
+    "modified": "2020-07-16T22:35:43.041Z",
+    "contributors": [
+      "muhammet7661"
+    ]
+  },
+  "Tools/Debugger": {
+    "modified": "2020-07-16T22:35:06.533Z",
+    "contributors": [
+      "aslihana",
+      "olgakaragedik"
+    ]
+  },
+  "Tools/Page_Inspector": {
+    "modified": "2020-10-01T11:04:52.366Z",
+    "contributors": [
+      "SphinxKnight",
+      "saimairjet",
+      "ersengultepe"
+    ]
+  },
+  "Tools/Performance": {
+    "modified": "2020-07-16T22:36:13.964Z",
+    "contributors": [
+      "OnKoydenKovuldum"
+    ]
+  },
+  "Tools/Remote_Debugging": {
+    "modified": "2020-07-16T22:35:38.272Z",
+    "contributors": [
+      "volkan"
+    ]
+  },
+  "Tools/Web_Console": {
+    "modified": "2020-07-16T22:34:09.874Z",
+    "contributors": [
+      "OnKoydenKovuldum",
+      "aslihana"
+    ]
+  },
+  "Tools/Web_Console/Rich_output": {
+    "modified": "2020-07-16T22:34:20.562Z",
+    "contributors": [
+      "aslihana"
+    ]
+  },
+  "Tools/Web_Console/Split_console": {
+    "modified": "2020-07-16T22:34:21.412Z",
+    "contributors": [
+      "aslihana"
+    ]
+  },
+  "Tools/Web_Console/The_command_line_interpreter": {
+    "modified": "2020-07-16T22:34:19.826Z",
+    "contributors": [
+      "aslihana"
+    ]
+  },
+  "Tools/Web_Console/UI_Tour": {
+    "modified": "2020-07-16T22:34:17.660Z",
+    "contributors": [
+      "aslihana"
     ]
   },
   "Web": {
@@ -293,6 +870,12 @@
     "modified": "2019-03-18T21:09:36.484Z",
     "contributors": [
       "mesutgolcuk"
+    ]
+  },
+  "Web/API/Canvas_API": {
+    "modified": "2019-03-18T21:29:21.484Z",
+    "contributors": [
+      "alpr"
     ]
   },
   "Web/API/Comment": {
@@ -591,6 +1174,30 @@
       "raufsamestone"
     ]
   },
+  "Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model": {
+    "modified": "2019-03-23T22:52:01.740Z",
+    "contributors": [
+      "cenkingunlugu"
+    ]
+  },
+  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
+    "modified": "2019-03-23T23:10:52.329Z",
+    "contributors": [
+      "Criexe"
+    ]
+  },
+  "Web/CSS/CSS_Selectors": {
+    "modified": "2020-10-08T05:31:05.552Z",
+    "contributors": [
+      "hakantr"
+    ]
+  },
+  "Web/CSS/Class_selectors": {
+    "modified": "2019-03-23T22:27:43.298Z",
+    "contributors": [
+      "pasalog"
+    ]
+  },
   "Web/CSS/Reference": {
     "modified": "2019-03-23T23:16:58.752Z",
     "contributors": [
@@ -599,6 +1206,12 @@
       "pasalog",
       "MOSD",
       "emredemircan"
+    ]
+  },
+  "Web/CSS/Type_selectors": {
+    "modified": "2019-03-23T22:27:57.140Z",
+    "contributors": [
+      "pasalog"
     ]
   },
   "Web/CSS/background": {
@@ -627,6 +1240,12 @@
     "contributors": [
       "caglaromer",
       "Berkay-Cubuk"
+    ]
+  },
+  "Web/CSS/margin": {
+    "modified": "2019-03-23T22:21:17.959Z",
+    "contributors": [
+      "asanhix"
     ]
   },
   "Web/CSS/right": {
@@ -665,6 +1284,23 @@
       "Antivir"
     ]
   },
+  "Web/Guide/Graphics": {
+    "modified": "2019-03-18T21:29:11.131Z",
+    "contributors": [
+      "alpr"
+    ]
+  },
+  "Web/Guide/HTML/HTML5": {
+    "modified": "2020-02-13T03:31:34.810Z",
+    "contributors": [
+      "SphinxKnight",
+      "alvidaverona",
+      "beehappycorp",
+      "teoli",
+      "saidkocdemir",
+      "asliturk"
+    ]
+  },
   "Web/HTML": {
     "modified": "2020-11-19T16:28:37.122Z",
     "contributors": [
@@ -672,6 +1308,46 @@
       "karagozber",
       "kuleliajans",
       "SphinxKnight"
+    ]
+  },
+  "Web/HTML/Element": {
+    "modified": "2019-09-11T09:05:26.771Z",
+    "contributors": [
+      "SphinxKnight",
+      "SukruKaya",
+      "teoli"
+    ]
+  },
+  "Web/HTML/Element/aside": {
+    "modified": "2019-09-11T09:05:24.353Z",
+    "contributors": [
+      "SphinxKnight",
+      "Darkefel"
+    ]
+  },
+  "Web/HTML/Element/head": {
+    "modified": "2020-10-15T22:33:45.296Z",
+    "contributors": [
+      "Amidfl"
+    ]
+  },
+  "Web/HTML/Element/hgroup": {
+    "modified": "2020-10-15T22:24:41.950Z",
+    "contributors": [
+      "cansuari"
+    ]
+  },
+  "Web/HTML/Element/li": {
+    "modified": "2019-09-11T09:05:27.766Z",
+    "contributors": [
+      "SphinxKnight",
+      "pasalog"
+    ]
+  },
+  "Web/HTML/Element/link": {
+    "modified": "2020-10-15T22:25:51.442Z",
+    "contributors": [
+      "BaRaN6161_TURK"
     ]
   },
   "Web/HTTP": {
@@ -745,6 +1421,18 @@
     "modified": "2020-10-15T21:57:15.477Z",
     "contributors": [
       "ccsplit"
+    ]
+  },
+  "Web/HTTP/Methods": {
+    "modified": "2020-10-15T22:20:53.566Z",
+    "contributors": [
+      "gulan_gurman"
+    ]
+  },
+  "Web/HTTP/Session": {
+    "modified": "2019-07-09T17:13:29.470Z",
+    "contributors": [
+      "gulan_gurman"
     ]
   },
   "Web/HTTP/Status": {
@@ -861,6 +1549,13 @@
       "berkerpeksag"
     ]
   },
+  "Web/JavaScript/Data_structures": {
+    "modified": "2020-03-12T19:48:25.304Z",
+    "contributors": [
+      "ondrhn",
+      "BarisAyaz"
+    ]
+  },
   "Web/JavaScript/Guide": {
     "modified": "2020-03-12T19:39:15.666Z",
     "contributors": [
@@ -874,10 +1569,32 @@
       "SphinxKnight"
     ]
   },
+  "Web/JavaScript/Guide/Control_flow_and_error_handling": {
+    "modified": "2020-04-23T07:57:40.916Z",
+    "contributors": [
+      "ahmetcadirci25",
+      "kahilkubilay",
+      "ozcanzaferayan",
+      "pasalog",
+      "teoli",
+      "onderomega"
+    ]
+  },
   "Web/JavaScript/Guide/Details_of_the_Object_Model": {
     "modified": "2020-03-12T19:49:05.589Z",
     "contributors": [
       "volkansag"
+    ]
+  },
+  "Web/JavaScript/Guide/Functions": {
+    "modified": "2020-03-12T19:45:10.072Z",
+    "contributors": [
+      "rizikolik",
+      "meryem",
+      "mrtymy",
+      "HuseyinTurkmenoglu",
+      "abdullahoguk",
+      "ozcanzaferayan"
     ]
   },
   "Web/JavaScript/Guide/Grammar_and_types": {
@@ -906,6 +1623,12 @@
       "kahilkubilay",
       "ozcanzaferayan",
       "ozgrozer"
+    ]
+  },
+  "Web/JavaScript/Guide/Working_with_Objects": {
+    "modified": "2020-03-12T19:49:40.091Z",
+    "contributors": [
+      "burak-selvi"
     ]
   },
   "Web/JavaScript/Inheritance_and_the_prototype_chain": {
@@ -1335,6 +2058,43 @@
       "fexri.babasov97"
     ]
   },
+  "Web/JavaScript/Reference/Operators": {
+    "modified": "2020-03-12T19:41:24.526Z",
+    "contributors": [
+      "pasalog"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/function*": {
+    "modified": "2020-10-15T22:03:10.564Z",
+    "contributors": [
+      "mustafakucuk"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/instanceof": {
+    "modified": "2020-03-12T19:46:20.732Z",
+    "contributors": [
+      "cenkce"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/super": {
+    "modified": "2020-12-04T05:30:41.838Z",
+    "contributors": [
+      "murerkinn"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/this": {
+    "modified": "2020-03-12T19:42:15.605Z",
+    "contributors": [
+      "co3moz"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/typeof": {
+    "modified": "2020-10-15T22:03:10.125Z",
+    "contributors": [
+      "obzc",
+      "mustafakucuk"
+    ]
+  },
   "Web/JavaScript/Reference/Statements": {
     "modified": "2020-03-12T19:43:07.364Z",
     "contributors": [
@@ -1392,6 +2152,12 @@
       "OnKoydenKovuldum"
     ]
   },
+  "Web/Manifest": {
+    "modified": "2019-03-18T21:28:25.980Z",
+    "contributors": [
+      "alpr"
+    ]
+  },
   "Web/MathML": {
     "modified": "2020-10-15T22:07:35.147Z",
     "contributors": [
@@ -1416,6 +2182,31 @@
       "MR-AMIR"
     ]
   },
+  "Web/Security": {
+    "modified": "2019-09-10T16:49:32.135Z",
+    "contributors": [
+      "SphinxKnight",
+      "umutozdemir97"
+    ]
+  },
+  "Web/Security/Mixed_content": {
+    "modified": "2019-03-23T23:08:55.937Z",
+    "contributors": [
+      "bulutefe"
+    ]
+  },
+  "Web/Security/Transport_Layer_Security": {
+    "modified": "2020-02-24T22:08:14.293Z",
+    "contributors": [
+      "2.HALLAÇ"
+    ]
+  },
+  "Web/Security/Weak_Signature_Algorithm": {
+    "modified": "2019-03-23T22:55:15.192Z",
+    "contributors": [
+      "efeevren"
+    ]
+  },
   "Web/Tutorials": {
     "modified": "2019-03-23T23:09:03.763Z",
     "contributors": [
@@ -1436,913 +2227,8 @@
       "hakantr"
     ]
   },
-  "Tools/Browser_Console": {
-    "modified": "2020-07-16T22:35:43.041Z",
-    "contributors": [
-      "muhammet7661"
-    ]
-  },
-  "Tools/Debugger": {
-    "modified": "2020-07-16T22:35:06.533Z",
-    "contributors": [
-      "aslihana",
-      "olgakaragedik"
-    ]
-  },
-  "Tools": {
-    "modified": "2020-07-16T22:44:18.586Z",
-    "contributors": [
-      "OnKoydenKovuldum",
-      "2.HALLAÇ",
-      "SphinxKnight",
-      "trabjeb",
-      "fanatikhamsi",
-      "kizinteki",
-      "saidkocdemir",
-      "pasalog",
-      "eytanfb",
-      "teoli",
-      "ibrahimpatir",
-      "techexpert"
-    ]
-  },
-  "Tools/Page_Inspector": {
-    "modified": "2020-10-01T11:04:52.366Z",
-    "contributors": [
-      "SphinxKnight",
-      "saimairjet",
-      "ersengultepe"
-    ]
-  },
-  "Tools/Performance": {
-    "modified": "2020-07-16T22:36:13.964Z",
-    "contributors": [
-      "OnKoydenKovuldum"
-    ]
-  },
-  "Tools/Remote_Debugging": {
-    "modified": "2020-07-16T22:35:38.272Z",
-    "contributors": [
-      "volkan"
-    ]
-  },
-  "Tools/Web_Console/Split_console": {
-    "modified": "2020-07-16T22:34:21.412Z",
-    "contributors": [
-      "aslihana"
-    ]
-  },
-  "Tools/Web_Console": {
-    "modified": "2020-07-16T22:34:09.874Z",
-    "contributors": [
-      "OnKoydenKovuldum",
-      "aslihana"
-    ]
-  },
-  "Tools/Web_Console/The_command_line_interpreter": {
-    "modified": "2020-07-16T22:34:19.826Z",
-    "contributors": [
-      "aslihana"
-    ]
-  },
-  "Tools/Web_Console/UI_Tour": {
-    "modified": "2020-07-16T22:34:17.660Z",
-    "contributors": [
-      "aslihana"
-    ]
-  },
-  "Tools/Web_Console/Rich_output": {
-    "modified": "2020-07-16T22:34:20.562Z",
-    "contributors": [
-      "aslihana"
-    ]
-  },
-  "orphaned/Fennec_(Firefox_Mobile)": {
-    "modified": "2019-01-16T14:21:08.717Z",
-    "contributors": [
-      "techexpert"
-    ]
-  },
-  "Glossary/Object": {
-    "modified": "2019-03-23T22:03:39.438Z",
-    "contributors": [
-      "ahmetkaba"
-    ]
-  },
-  "Glossary/OOP": {
-    "modified": "2019-03-23T22:03:49.060Z",
-    "contributors": [
-      "ahmetkaba"
-    ]
-  },
-  "Glossary/Protocol": {
-    "modified": "2019-03-23T22:16:10.981Z",
-    "contributors": [
-      "erolkeskin"
-    ]
-  },
-  "Glossary/Browser": {
-    "modified": "2019-03-23T22:03:49.780Z",
-    "contributors": [
-      "ahmetkaba"
-    ]
-  },
-  "Web/HTML/Element/aside": {
-    "modified": "2019-09-11T09:05:24.353Z",
-    "contributors": [
-      "SphinxKnight",
-      "Darkefel"
-    ]
-  },
-  "Web/HTML/Element/head": {
-    "modified": "2020-10-15T22:33:45.296Z",
-    "contributors": [
-      "Amidfl"
-    ]
-  },
-  "Web/HTML/Element/hgroup": {
-    "modified": "2020-10-15T22:24:41.950Z",
-    "contributors": [
-      "cansuari"
-    ]
-  },
-  "Web/HTML/Element": {
-    "modified": "2019-09-11T09:05:26.771Z",
-    "contributors": [
-      "SphinxKnight",
-      "SukruKaya",
-      "teoli"
-    ]
-  },
-  "Web/HTML/Element/li": {
-    "modified": "2019-09-11T09:05:27.766Z",
-    "contributors": [
-      "SphinxKnight",
-      "pasalog"
-    ]
-  },
-  "Web/HTML/Element/link": {
-    "modified": "2020-10-15T22:25:51.442Z",
-    "contributors": [
-      "BaRaN6161_TURK"
-    ]
-  },
-  "Learn/Common_questions/What_are_browser_developer_tools": {
-    "modified": "2020-07-16T22:35:48.238Z",
-    "contributors": [
-      "hasanunl"
-    ]
-  },
-  "MDN/At_ten": {
-    "modified": "2019-03-23T22:48:44.324Z",
-    "contributors": [
-      "hunkarticaret",
-      "futuredayv"
-    ]
-  },
-  "orphaned/MDN/Community": {
-    "modified": "2019-09-11T08:00:49.740Z",
-    "contributors": [
-      "SphinxKnight",
-      "BarisAyaz",
-      "wbamberg",
-      "anilkay"
-    ]
-  },
-  "orphaned/MDN/Contribute/Howto/Do_an_editorial_review": {
-    "modified": "2019-03-23T22:21:04.194Z",
-    "contributors": [
-      "wbamberg",
-      "fanatikhamsi"
-    ]
-  },
-  "MDN/Contribute/Howto/Create_and_edit_pages": {
-    "modified": "2020-10-12T07:44:14.475Z",
-    "contributors": [
-      "SphinxKnight",
-      "eminboynukara",
-      "alpegrup",
-      "pazzers.info",
-      "wbamberg",
-      "erhankilic"
-    ]
-  },
-  "orphaned/MDN/Editor/Basics": {
-    "modified": "2020-09-30T15:43:53.305Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "balimcann"
-    ]
-  },
-  "orphaned/MDN/Editor": {
-    "modified": "2020-09-30T15:43:52.765Z",
-    "contributors": [
-      "chrisdavidmills",
-      "zktosu",
-      "sahinb",
-      "wbamberg",
-      "Setiawati940@gmail.com"
-    ]
-  },
-  "MDN/About": {
-    "modified": "2020-05-30T08:22:38.074Z",
-    "contributors": [
-      "Berkay-Cubuk"
-    ]
-  },
-  "MDN/Yari": {
-    "modified": "2019-09-11T08:38:17.228Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "Sheppy"
-    ]
-  },
-  "orphaned/MDN/Kuma/Server_charts": {
-    "modified": "2020-04-18T08:41:52.888Z",
-    "contributors": [
-      "OnKoydenKovuldum"
-    ]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-04-14T08:39:36.193Z",
-    "contributors": [
-      "SphinxKnight",
-      "orhanfide1965",
-      "2.HALLAÇ",
-      "wbamberg",
-      "hrctelekom"
-    ]
-  },
-  "orphaned/MDN/Tools/Page_watching": {
-    "modified": "2020-09-30T16:54:34.403Z",
-    "contributors": [
-      "chrisdavidmills",
-      "2.HALLAÇ"
-    ]
-  },
-  "Mozilla/Developer_guide/Source_Code": {
-    "modified": "2019-08-19T02:39:51.205Z",
-    "contributors": [
-      "SphinxKnight",
-      "TerabyteForever",
-      "fatihmeh"
-    ]
-  },
-  "Mozilla/Add-ons": {
-    "modified": "2019-09-09T12:16:58.836Z",
-    "contributors": [
-      "SphinxKnight",
-      "EfoliTR",
-      "akyakaapart",
-      "pasalog",
-      "Fatih."
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext": {
-    "modified": "2019-04-24T22:00:33.650Z",
-    "contributors": [
-      "Anatolianlion"
-    ]
-  },
-  "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
-    "modified": "2019-03-30T13:49:03.756Z",
-    "contributors": [
-      "aceylan"
-    ]
-  },
-  "Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools": {
-    "modified": "2020-04-18T10:07:00.995Z",
-    "contributors": [
-      "OnKoydenKovuldum",
-      "2.HALLAÇ"
-    ]
-  },
-  "Mozilla/Add-ons/WebExtensions/Your_first_WebExtension": {
-    "modified": "2019-08-06T17:02:11.469Z",
-    "contributors": [
-      "mesutgolcuk"
-    ]
-  },
-  "Mozilla/Add-ons/WebExtensions": {
-    "modified": "2020-01-23T19:11:12.389Z",
-    "contributors": [
-      "2.HALLAÇ",
-      "CakirSualp",
-      "mesutgolcuk",
-      "tufan2005",
-      "mutouk"
-    ]
-  },
-  "Mozilla/Add-ons/WebExtensions/user_interface": {
-    "modified": "2020-01-23T18:36:25.194Z",
-    "contributors": [
-      "2.HALLAÇ"
-    ]
-  },
-  "Learn/CSS/CSS_layout": {
-    "modified": "2020-12-09T18:21:04.587Z",
-    "contributors": [
-      "hakantr",
-      "asimcanuz",
-      "jwhitlock",
-      "chrisdavidmills"
-    ]
-  },
-  "Learn/CSS/CSS_layout/Introduction": {
-    "modified": "2020-12-09T18:22:37.810Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Backgrounds_and_borders": {
-    "modified": "2020-10-27T11:49:58.173Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Cascade_and_inheritance": {
-    "modified": "2020-10-26T19:35:27.880Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Debugging_CSS": {
-    "modified": "2020-11-03T17:03:37.975Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Handling_different_text_directions": {
-    "modified": "2020-10-28T17:43:47.416Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Images_media_form_elements": {
-    "modified": "2020-10-31T13:09:45.996Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks": {
-    "modified": "2020-10-26T20:12:35.187Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Organizing": {
-    "modified": "2020-11-09T10:35:55.540Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Overflow_Tasks": {
-    "modified": "2020-10-19T10:29:26.404Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Overflowing_content": {
-    "modified": "2020-10-31T10:11:56.872Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2020-10-08T05:31:05.552Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Sizing_items_in_CSS": {
-    "modified": "2020-10-31T10:34:38.784Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Sizing_tasks": {
-    "modified": "2020-10-22T09:21:20.303Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Styling_tables": {
-    "modified": "2020-10-31T20:13:56.766Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders": {
-    "modified": "2020-10-17T21:28:55.599Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/The_box_model": {
-    "modified": "2020-10-26T19:26:58.833Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Values_and_units": {
-    "modified": "2020-10-28T18:44:28.360Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Values_tasks": {
-    "modified": "2020-10-20T12:06:48.608Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Building_blocks/Writing_Modes_Tasks": {
-    "modified": "2020-10-19T06:58:07.202Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/First_steps/How_CSS_works": {
-    "modified": "2020-10-26T20:08:14.999Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/First_steps/What_is_CSS": {
-    "modified": "2020-10-26T19:52:10.775Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/First_steps/Getting_started": {
-    "modified": "2020-10-26T19:58:54.757Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/First_steps/How_CSS_is_structured": {
-    "modified": "2020-10-26T20:05:43.727Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/First_steps": {
-    "modified": "2020-10-26T19:46:11.774Z",
-    "contributors": [
-      "hakantr",
-      "eraticoye",
-      "nihalokur",
-      "Berkay-Cubuk"
-    ]
-  },
-  "Learn/CSS/First_steps/Using_your_new_knowledge": {
-    "modified": "2020-10-26T20:11:11.186Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS": {
-    "modified": "2020-10-26T19:42:09.137Z",
-    "contributors": [
-      "hakantr",
-      "nihalokur",
-      "Berkay-Cubuk",
-      "raufsamestone",
-      "pasalog"
-    ]
-  },
-  "Learn/CSS/Styling_text/Fundamentals": {
-    "modified": "2020-11-13T11:56:27.954Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Styling_text": {
-    "modified": "2020-11-09T11:28:43.066Z",
-    "contributors": [
-      "hakantr",
-      "burakbolek",
-      "nihalokur"
-    ]
-  },
-  "Learn/CSS/Styling_text/Styling_links": {
-    "modified": "2020-12-06T15:35:17.350Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Styling_text/Styling_lists": {
-    "modified": "2020-12-04T11:14:25.666Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Styling_text/Typesetting_a_homepage": {
-    "modified": "2020-12-06T22:45:30.011Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/CSS/Styling_text/Web_fonts": {
-    "modified": "2020-12-06T22:12:35.170Z",
-    "contributors": [
-      "hakantr"
-    ]
-  },
-  "Learn/Front-end_web_developer": {
-    "modified": "2020-10-06T04:07:52.094Z",
-    "contributors": [
-      "Ebu",
-      "selinwin7"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/How_the_Web_works": {
-    "modified": "2020-10-24T10:59:07.347Z",
-    "contributors": [
-      "NightCode-luna"
-    ]
-  },
-  "Learn/Getting_started_with_the_web": {
-    "modified": "2020-11-02T12:10:16.997Z",
-    "contributors": [
-      "GreXLin85",
-      "selinwin7",
-      "SphinxKnight",
-      "ozcanuner14",
-      "2.HALLAÇ",
-      "dotRaikkonen",
-      "kaan35",
-      "halimtekin",
-      "yilmazozisik",
-      "askn"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/Installing_basic_software": {
-    "modified": "2020-07-16T22:34:11.586Z",
-    "contributors": [
-      "erhan35",
-      "HuseyinTurkmenoglu",
-      "aykutkugu"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/JavaScript_basics": {
-    "modified": "2020-12-03T08:49:49.563Z",
-    "contributors": [
-      "murerkinn",
-      "miracyb",
-      "SphinxKnight",
-      "umutbozdag",
-      "alper.pekdemir",
-      "omrtrk",
-      "gkhno",
-      "maydemirx",
-      "yigitozdemir"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/What_will_your_website_look_like": {
-    "modified": "2020-10-14T06:26:48.114Z",
-    "contributors": [
-      "AinTisar",
-      "receponalan"
-    ]
-  },
-  "Learn/HTML": {
-    "modified": "2020-08-07T19:15:04.875Z",
-    "contributors": [
-      "bambinam",
-      "msyx",
-      "tufan2005",
-      "jwhitlock",
-      "chrisdavidmills"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Getting_started": {
-    "modified": "2020-07-16T22:23:08.179Z",
-    "contributors": [
-      "peterbe",
-      "tudecem"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML": {
-    "modified": "2020-11-19T16:35:06.616Z",
-    "contributors": [
-      "burakizmirli252",
-      "eraticoye",
-      "erhan35",
-      "kaan35",
-      "ebubekirtrkr",
-      "jwhitlock",
-      "irfanevrens"
-    ]
-  },
-  "Learn": {
-    "modified": "2020-12-12T02:35:21.255Z",
-    "contributors": [
-      "YasinCelebi",
-      "samrain",
-      "hakantr",
-      "zktosu",
-      "SphinxKnight",
-      "erhan35",
-      "kaan35",
-      "svarlamov",
-      "engineermetin",
-      "nahitheper",
-      "askn"
-    ]
-  },
-  "Learn/JavaScript/First_steps": {
-    "modified": "2020-07-16T22:29:55.523Z",
-    "contributors": [
-      "busines.plan.16"
-    ]
-  },
-  "Learn/JavaScript/First_steps/A_first_splash": {
-    "modified": "2020-08-31T10:02:41.505Z",
-    "contributors": [
-      "aydgn"
-    ]
-  },
-  "Learn/JavaScript": {
-    "modified": "2020-12-13T14:50:04.266Z",
-    "contributors": [
-      "gullusadik",
-      "pasalog",
-      "enesanbar"
-    ]
-  },
-  "Learn/JavaScript/Objects/Basics": {
-    "modified": "2020-07-16T22:32:02.139Z",
-    "contributors": [
-      "ArinSoftware",
-      "AtlasCan"
-    ]
-  },
-  "Learn/JavaScript/Objects": {
-    "modified": "2020-07-16T22:31:53.513Z",
-    "contributors": [
-      "berabulut",
-      "dotRaikkonen",
-      "truefalseman",
-      "volkansag",
-      "enginkartal"
-    ]
-  },
-  "Learn/Server-side/Django/Authentication": {
-    "modified": "2020-07-16T22:37:24.649Z",
-    "contributors": [
-      "safaariman",
-      "icanates"
-    ]
-  },
-  "Learn/Server-side/Django": {
-    "modified": "2020-07-16T22:36:35.695Z",
-    "contributors": [
-      "jwhitlock",
-      "chrisdavidmills"
-    ]
-  },
-  "Learn/Server-side/Django/Sessions": {
-    "modified": "2020-07-16T22:37:28.248Z",
-    "contributors": [
-      "ozgurturkiye",
-      "icanates"
-    ]
-  },
-  "Learn/Server-side/Django/skeleton_website": {
-    "modified": "2020-07-16T22:36:54.756Z",
-    "contributors": [
-      "hakanergul"
-    ]
-  },
-  "Learn/Server-side": {
-    "modified": "2020-07-16T22:36:02.262Z",
-    "contributors": [
-      "jwhitlock",
-      "chrisdavidmills"
-    ]
-  },
-  "Games": {
-    "modified": "2020-09-14T16:54:45.005Z",
-    "contributors": [
-      "serdarates",
-      "Berkay-Cubuk",
-      "SphinxKnight",
-      "KayraG"
-    ]
-  },
-  "Web/Security/Mixed_content": {
-    "modified": "2019-03-23T23:08:55.937Z",
-    "contributors": [
-      "bulutefe"
-    ]
-  },
-  "Web/Security/Weak_Signature_Algorithm": {
-    "modified": "2019-03-23T22:55:15.192Z",
-    "contributors": [
-      "efeevren"
-    ]
-  },
-  "orphaned/Tr": {
-    "modified": "2019-03-24T00:18:40.718Z",
-    "contributors": [
-      "Criexe",
-      "teoli",
-      "techexpert",
-      "syssgx",
-      "flodby",
-      "ACS",
-      "mepistol",
-      "huseyin.ozkilic"
-    ]
-  },
-  "Web/API/Canvas_API": {
-    "modified": "2019-03-18T21:29:21.484Z",
-    "contributors": [
-      "alpr"
-    ]
-  },
-  "Web/Manifest": {
-    "modified": "2019-03-18T21:28:25.980Z",
-    "contributors": [
-      "alpr"
-    ]
-  },
-  "Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model": {
-    "modified": "2019-03-23T22:52:01.740Z",
-    "contributors": [
-      "cenkingunlugu"
-    ]
-  },
-  "Web/CSS/Class_selectors": {
-    "modified": "2019-03-23T22:27:43.298Z",
-    "contributors": [
-      "pasalog"
-    ]
-  },
-  "Web/CSS/Type_selectors": {
-    "modified": "2019-03-23T22:27:57.140Z",
-    "contributors": [
-      "pasalog"
-    ]
-  },
-  "Web/Guide/Graphics": {
-    "modified": "2019-03-18T21:29:11.131Z",
-    "contributors": [
-      "alpr"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2019-03-23T23:10:52.329Z",
-    "contributors": [
-      "Criexe"
-    ]
-  },
-  "Web/Security": {
-    "modified": "2019-09-10T16:49:32.135Z",
-    "contributors": [
-      "SphinxKnight",
-      "umutozdemir97"
-    ]
-  },
-  "Web/Security/Transport_Layer_Security": {
-    "modified": "2020-02-24T22:08:14.293Z",
-    "contributors": [
-      "2.HALLAÇ"
-    ]
-  },
-  "orphaned/Web/HTML-Alani": {
-    "modified": "2019-09-11T09:11:52.447Z",
-    "contributors": [
-      "msyx"
-    ]
-  },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2020-02-13T03:31:34.810Z",
-    "contributors": [
-      "SphinxKnight",
-      "alvidaverona",
-      "beehappycorp",
-      "teoli",
-      "saidkocdemir",
-      "asliturk"
-    ]
-  },
-  "Web/HTTP/Methods": {
-    "modified": "2020-10-15T22:20:53.566Z",
-    "contributors": [
-      "gulan_gurman"
-    ]
-  },
-  "Web/HTTP/Session": {
-    "modified": "2019-07-09T17:13:29.470Z",
-    "contributors": [
-      "gulan_gurman"
-    ]
-  },
-  "Web/JavaScript/Guide/Functions": {
-    "modified": "2020-03-12T19:45:10.072Z",
-    "contributors": [
-      "rizikolik",
-      "meryem",
-      "mrtymy",
-      "HuseyinTurkmenoglu",
-      "abdullahoguk",
-      "ozcanzaferayan"
-    ]
-  },
-  "Web/JavaScript/Guide/Control_flow_and_error_handling": {
-    "modified": "2020-04-23T07:57:40.916Z",
-    "contributors": [
-      "ahmetcadirci25",
-      "kahilkubilay",
-      "ozcanzaferayan",
-      "pasalog",
-      "teoli",
-      "onderomega"
-    ]
-  },
-  "Web/JavaScript/Guide/Working_with_Objects": {
-    "modified": "2020-03-12T19:49:40.091Z",
-    "contributors": [
-      "burak-selvi"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {
-    "modified": "2019-03-23T23:24:51.018Z",
-    "contributors": [
-      "teoli",
-      "ramesaliyev"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/function*": {
-    "modified": "2020-10-15T22:03:10.564Z",
-    "contributors": [
-      "mustafakucuk"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators": {
-    "modified": "2020-03-12T19:41:24.526Z",
-    "contributors": [
-      "pasalog"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/instanceof": {
-    "modified": "2020-03-12T19:46:20.732Z",
-    "contributors": [
-      "cenkce"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/super": {
-    "modified": "2020-12-04T05:30:41.838Z",
-    "contributors": [
-      "murerkinn"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/this": {
-    "modified": "2020-03-12T19:42:15.605Z",
-    "contributors": [
-      "co3moz"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/typeof": {
-    "modified": "2020-10-15T22:03:10.125Z",
-    "contributors": [
-      "obzc",
-      "mustafakucuk"
-    ]
-  },
-  "Web/JavaScript/Data_structures": {
-    "modified": "2020-03-12T19:48:25.304Z",
-    "contributors": [
-      "ondrhn",
-      "BarisAyaz"
-    ]
-  },
-  "Web/CSS/margin": {
-    "modified": "2019-03-23T22:21:17.959Z",
-    "contributors": [
-      "asanhix"
-    ]
-  },
   "conflicting/Learn/CSS/Building_blocks/Cascade_and_inheritance": {
     "modified": "2019-03-23T22:37:30.876Z",
-    "contributors": [
-      "pasalog"
-    ]
-  },
-  "conflicting/Learn/CSS/First_steps/How_CSS_works": {
-    "modified": "2019-03-23T22:51:37.807Z",
-    "contributors": [
-      "alpr",
-      "koca",
-      "pasalog"
-    ]
-  },
-  "conflicting/Learn/CSS/First_steps/How_CSS_works_bb137d8ec11d5e9680f32049e9a3cb26": {
-    "modified": "2019-03-23T22:50:19.247Z",
     "contributors": [
       "pasalog"
     ]
@@ -2355,10 +2241,24 @@
       "wjinca"
     ]
   },
+  "conflicting/Learn/CSS/First_steps/How_CSS_works": {
+    "modified": "2019-03-23T22:51:37.807Z",
+    "contributors": [
+      "alpr",
+      "koca",
+      "pasalog"
+    ]
+  },
   "conflicting/Learn/CSS/First_steps/How_CSS_works_64ba4331a7a5f4319c6e06b06ccdd521": {
     "modified": "2019-03-23T22:50:18.048Z",
     "contributors": [
       "alpr",
+      "pasalog"
+    ]
+  },
+  "conflicting/Learn/CSS/First_steps/How_CSS_works_bb137d8ec11d5e9680f32049e9a3cb26": {
+    "modified": "2019-03-23T22:50:19.247Z",
+    "contributors": [
       "pasalog"
     ]
   },
@@ -2393,10 +2293,95 @@
       "umutozdemir97"
     ]
   },
+  "orphaned/Fennec_(Firefox_Mobile)": {
+    "modified": "2019-01-16T14:21:08.717Z",
+    "contributors": [
+      "techexpert"
+    ]
+  },
   "orphaned/Learn/CSS/Building_blocks/Selectors/Box_Model_Tasks": {
     "modified": "2020-10-15T21:52:54.629Z",
     "contributors": [
       "hakantr"
+    ]
+  },
+  "orphaned/MDN/Community": {
+    "modified": "2019-09-11T08:00:49.740Z",
+    "contributors": [
+      "SphinxKnight",
+      "BarisAyaz",
+      "wbamberg",
+      "anilkay"
+    ]
+  },
+  "orphaned/MDN/Contribute/Howto/Do_an_editorial_review": {
+    "modified": "2019-03-23T22:21:04.194Z",
+    "contributors": [
+      "wbamberg",
+      "fanatikhamsi"
+    ]
+  },
+  "orphaned/MDN/Editor": {
+    "modified": "2020-09-30T15:43:52.765Z",
+    "contributors": [
+      "chrisdavidmills",
+      "zktosu",
+      "sahinb",
+      "wbamberg",
+      "Setiawati940@gmail.com"
+    ]
+  },
+  "orphaned/MDN/Editor/Basics": {
+    "modified": "2020-09-30T15:43:53.305Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "balimcann"
+    ]
+  },
+  "orphaned/MDN/Kuma/Server_charts": {
+    "modified": "2020-04-18T08:41:52.888Z",
+    "contributors": [
+      "OnKoydenKovuldum"
+    ]
+  },
+  "orphaned/MDN/Tools/Page_watching": {
+    "modified": "2020-09-30T16:54:34.403Z",
+    "contributors": [
+      "chrisdavidmills",
+      "2.HALLAÇ"
+    ]
+  },
+  "orphaned/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext": {
+    "modified": "2019-04-24T22:00:33.650Z",
+    "contributors": [
+      "Anatolianlion"
+    ]
+  },
+  "orphaned/Tr": {
+    "modified": "2019-03-24T00:18:40.718Z",
+    "contributors": [
+      "Criexe",
+      "teoli",
+      "techexpert",
+      "syssgx",
+      "flodby",
+      "ACS",
+      "mepistol",
+      "huseyin.ozkilic"
+    ]
+  },
+  "orphaned/Web/HTML-Alani": {
+    "modified": "2019-09-11T09:11:52.447Z",
+    "contributors": [
+      "msyx"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {
+    "modified": "2019-03-23T23:24:51.018Z",
+    "contributors": [
+      "teoli",
+      "ramesaliyev"
     ]
   }
 }

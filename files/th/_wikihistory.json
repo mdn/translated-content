@@ -48,6 +48,12 @@
       "pong559"
     ]
   },
+  "Learn/Getting_started_with_the_web": {
+    "modified": "2020-08-22T12:21:31.189Z",
+    "contributors": [
+      "luciferz2130"
+    ]
+  },
   "Learn/HTML": {
     "modified": "2020-07-16T22:22:23.884Z",
     "contributors": [
@@ -60,6 +66,12 @@
       "SphinxKnight"
     ]
   },
+  "Learn/Server-side": {
+    "modified": "2020-08-22T12:32:08.079Z",
+    "contributors": [
+      "luciferz2130"
+    ]
+  },
   "MDN": {
     "modified": "2020-02-19T17:58:18.306Z",
     "contributors": [
@@ -69,6 +81,12 @@
       "Jeremie",
       "Panan",
       "Sheppy"
+    ]
+  },
+  "MDN/At_ten": {
+    "modified": "2019-03-23T22:48:09.302Z",
+    "contributors": [
+      "wkforever"
     ]
   },
   "MDN/Contribute": {
@@ -105,12 +123,6 @@
       "Sheppy"
     ]
   },
-  "Mozilla/Developer_guide": {
-    "modified": "2019-03-23T23:10:45.317Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
   "Mozilla/Firefox": {
     "modified": "2019-09-10T15:02:19.712Z",
     "contributors": [
@@ -121,6 +133,28 @@
       "rigelenrique",
       "Nampa",
       "satthawut"
+    ]
+  },
+  "Mozilla/Firefox/Releases": {
+    "modified": "2019-01-16T18:30:43.586Z",
+    "contributors": [
+      "wbamberg",
+      "Nampa"
+    ]
+  },
+  "Mozilla/Firefox/Releases/30": {
+    "modified": "2019-03-23T23:12:58.184Z",
+    "contributors": [
+      "wbamberg",
+      "Dexpaktho"
+    ]
+  },
+  "Mozilla/Firefox/Releases/47": {
+    "modified": "2019-03-23T22:22:47.058Z",
+    "contributors": [
+      "wbamberg",
+      "kdex",
+      "itclinic"
     ]
   },
   "Tools": {
@@ -135,6 +169,13 @@
     "modified": "2020-07-16T22:35:06.450Z",
     "contributors": [
       "Sheppy"
+    ]
+  },
+  "Tools/Debugger/UI_Tour": {
+    "modified": "2020-07-16T22:35:17.110Z",
+    "contributors": [
+      "SphinxKnight",
+      "abdulmana293"
     ]
   },
   "Tools/Eyedropper": {
@@ -395,24 +436,6 @@
       "Kritlnwzeed38"
     ]
   },
-  "Learn/Server-side": {
-    "modified": "2020-08-22T12:32:08.079Z",
-    "contributors": [
-      "luciferz2130"
-    ]
-  },
-  "Learn/Getting_started_with_the_web": {
-    "modified": "2020-08-22T12:21:31.189Z",
-    "contributors": [
-      "luciferz2130"
-    ]
-  },
-  "MDN/At_ten": {
-    "modified": "2019-03-23T22:48:09.302Z",
-    "contributors": [
-      "wkforever"
-    ]
-  },
   "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
     "modified": "2019-04-30T21:53:50.225Z",
     "contributors": [
@@ -427,35 +450,6 @@
       "wbamberg",
       "nhoobee",
       "daneeyan"
-    ]
-  },
-  "Mozilla/Firefox/Releases/30": {
-    "modified": "2019-03-23T23:12:58.184Z",
-    "contributors": [
-      "wbamberg",
-      "Dexpaktho"
-    ]
-  },
-  "Mozilla/Firefox/Releases/47": {
-    "modified": "2019-03-23T22:22:47.058Z",
-    "contributors": [
-      "wbamberg",
-      "kdex",
-      "itclinic"
-    ]
-  },
-  "Mozilla/Firefox/Releases": {
-    "modified": "2019-01-16T18:30:43.586Z",
-    "contributors": [
-      "wbamberg",
-      "Nampa"
-    ]
-  },
-  "Tools/Debugger/UI_Tour": {
-    "modified": "2020-07-16T22:35:17.110Z",
-    "contributors": [
-      "SphinxKnight",
-      "abdulmana293"
     ]
   }
 }
