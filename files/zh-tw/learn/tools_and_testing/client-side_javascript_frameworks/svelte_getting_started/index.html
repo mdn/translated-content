@@ -38,7 +38,7 @@ tags:
 
 <h2 id="Svelte_A_new_approach_to_building_rich_user_interfaces">Svelte：一種建構豐富使用者介面的新方式</h2>
 
-<p>於此模組中介紹的其它框架相比，Svelte 提供了一種不同的方式來建構網站應用程式。當應用程式運行時，像 React 和 Vue 等框架會在使用者的瀏覽器直接做它們想要做的事情，而 Svelte 則是將做的這些事移到編譯階段處理，因此那些做的事情只會發生在你建置應用程式的時候，進而能產生高度優化的純 JavaScript 程式碼。</p>
+<p>於此模組中介紹的其它框架相比，Svelte 提供了一種不同的方式來建構網站應用程式。當應用程式運行時，像 React 和 Vue 等框架會在使用者的瀏覽器直接做它們想要做的事情，而 Svelte 則是將做的這些事移到編譯階段處理，因此那些做的事情只會發生在你建置應用程式的時候，進而能產生高度優化的原生 JavaScript 程式碼。</p>
 
 <p>這種方式產生的結果並不是只有將應用程式的 Bundles 最小化和取得最佳效能，對於現代的生態環境而擁有較少技術經驗的人，可以更容易取得開發者經驗。</p>
 
@@ -52,31 +52,31 @@ tags:
 
 <p>我們鼓勵你走完 <a href="https://svelte.dev/tutorial/basics">Svelte 教學</a>來快速了解基本的概念，在你回來此教學系列學習如何建構一些更深入的東西之前。它應該會花費你約 30 分鐘去完成。</p>
 
-<h2 id="Use_cases">Use cases</h2>
+<h2 id="Use_cases">使用案例</h2>
 
-<p>Svelte can be used to develop small pieces of an interface or whole applications. You can either start from scratch letting Svelte drive your UI or you can incrementally integrate it into an existing application.</p>
+<p>Svelte 可以被用來開發一小塊介面或整個應用程式。你也可以從頭開始來讓 Svelte 驅動你的使用者介面或將它漸進地整合至已存在的應用程式。</p>
 
-<p>Nevertheless, Svelte is particularly appropriate to tackle the following situations:</p>
-
-<ul>
- <li>Web applications intended for low power devices: Applications built with Svelte have smaller bundle sizes, which is ideal for devices with slow network connections and limited processing power. Less code means less KB to download, parse, execute, and keep hanging around in memory.</li>
- <li>Highly interactive pages or complex visualizations: If you are building data-visualizations that need to display a large number of DOM elements, the performance gains that come from a framework with no runtime overhead will ensure that user interactions are snappy and responsive.</li>
- <li>Onboarding people with basic web development knowledge: Svelte has a shallow learning curve. Web developers with basic HTML, CSS, and JavaScript knowledge can easily grasp Svelte specifics in a short time and start building web applications.</li>
-</ul>
-
-<p>Moreover, with the help of <a href="https://sapper.svelte.dev/">Sapper</a> (a framework based on Svelte), you can also develop applications with advanced features like server-side rendering, code splitting, file-based routing and offline support. And then there's also <a href="https://svelte-native.technology/">Svelte Native</a>, which lets you build native mobile applications.</p>
-
-<h2 id="How_does_Svelte_work">How does Svelte work?</h2>
-
-<p>Being a compiler, Svelte can extend HTML, CSS, and JavaScript, generating optimal JavaScript code without any runtime overhead. To achieve this, Svelte extends vanilla web technologies in the following ways:</p>
+<p>不過 Svelte 特別適合處理下列幾種情況：</p>
 
 <ul>
- <li>It extends HTML by allowing JavaScript expressions in markup and providing directives to use conditions and loops, in a fashion similar to handlebars.</li>
- <li>It extends CSS by adding a scoping mechanism, allowing each component to define their own styles without the risk of clashing with other component's styles.</li>
- <li>It extends JavaScript by reinterpreting specific directives of the language to achieve true reactivity and ease component state management.</li>
+ <li>讓網站應用程式更適用於低功耗裝置：使用 Svelte 建構應用程式將擁有較小的 Bundle 大小，特別對於網路連線緩慢和有限處理能力的裝置是理想的。較少的程式碼意謂著較少的容量可供下載、解析、執行並保存於記憶體中。</li>
+ <li>可應付需頻繁互動的頁面或複雜的視覺化需求：比如你建構一個資料視覺化應用程式，你可能會需要顯示大量的 DOM 元素，從該框架就能獲得較好的性能增益，因為它不會有運行途中的消耗，將可以確保使用者的互動更快速與即時。</li>
+ <li>具備基本的網站開發知識即可：Svelte 學習曲線不高。網站開發人員具備基本的 HTML、CSS、JavaScript 知識就能在短時間簡單地抓住 Svelte 要點並開始建構網站應用程式。</li>
 </ul>
 
-<p>The compiler only intervenes in very specific situations and only in the context of Svelte components. Extensions to the JavaScript language are minimal and carefully picked in order to not break JavaScript syntax nor alienate developers. In fact, you will be mostly working with vanilla JavaScript.</p>
+<p>此外，有了 <a href="https://sapper.svelte.dev/">Sapper</a>（此框架基於 Svelte）的幫忙，你將能夠開發出帶有這些進階特徵的應用程式，像是伺服器端渲染（server-side rendering）、程式碼分離（code splitting）、以檔案為基礎的路由方式（file-based routing）、離線應用（offline）等支援。還有 <a href="https://svelte-native.technology/">Svelte Native</a> 讓你能夠建構原生行動應用程式。</p>
+
+<h2 id="How_does_Svelte_work">Svelte 如何工作？</h2>
+
+<p>做為一個編譯器，Svelte 能擴展 HTML、CSS、JavaScript，產生最佳的 JavaScript 程式碼而不會有任何運行途中的消耗。為了達成這件事，Svelte 透過下列方法來擴展其原生網站技術：</p>
+
+<ul>
+ <li>藉由對 HTML 擴展允許標記 JavaScript 表達式和提供一些指令來使用條件和迴圈，做法和 Handlebars 相似。</li>
+ <li>藉由對 CSS 擴展加上範圍機制，允許每個元件去定義它們自己的樣式，不會因為其它元件的樣式改變而被影響。</li>
+ <li>藉由對 JavaScript 擴展重新詮釋語言的一些特定指令來達到真實的反應性和減輕元件狀態管理。</li>
+</ul>
+
+<p>只有在非常特殊的情況和 Svelte 元件的上下文中編譯器才會介入。其中對 JavaScript 的擴展相對也比較少且謹慎，就是為了不破壞 JavaScript 一些語法，而使開發人員覺得困惑。事實上，你大部分時間還是會用到原生 JavaScript 來開發。</p>
 
 <h2 id="First_steps_with_Svelte">First steps with Svelte</h2>
 
