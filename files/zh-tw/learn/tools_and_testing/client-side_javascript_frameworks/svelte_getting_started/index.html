@@ -78,22 +78,22 @@ tags:
 
 <p>只有在非常特殊的情況和 Svelte 元件的上下文中編譯器才會介入。其中對 JavaScript 的擴展相對也比較少且謹慎，就是為了不破壞 JavaScript 一些語法，而使開發人員覺得困惑。事實上，你大部分時間還是會用到原生 JavaScript 來開發。</p>
 
-<h2 id="First_steps_with_Svelte">First steps with Svelte</h2>
+<h2 id="First_steps_with_Svelte">Svelte 第一步</h2>
 
-<p>Being a compiler, you can't just add a <code>&lt;script src="svelte.js"&gt;</code> tag to your page and import it into your app. You'll have to set up your development environment in order to let the compiler do its job.</p>
+<p>做為一個編譯器，你不能只是把 <code>&lt;script src="svelte.js"&gt;</code> 標籤加入到你的頁面並載入它到你的應用程式。你將必須設置你的開發環境，為的是能讓編譯器可以做它要做的事情。</p>
 
-<h3 id="Requirements">Requirements</h3>
+<h3 id="Requirements">需求</h3>
 
-<p>In order to work with Svelte you need to have <a href="https://nodejs.org/en/">Node.js</a> installed. It's recommended that you use the long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package runner). Note that you can also use the Yarn package manager in place of npm, but we'll assume you are using npm in this set of tutorials. See <a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics</a> for more information on npm and yarn.</p>
+<p>為了使用 Svelte，你會需要安裝 <a href="https://nodejs.org/en/">Node.js</a>。推薦你使用長期支援版本（LTS）。Node 包含 npm（the node package manager）和 npx（the node package runner）。另外你也可以使用 Yarn 套件管理工具來代替 npm，但我們先假定你會用 npm 來走完這個教學系列。若想知道更多 npm 和 yarn 的相關資訊可以至<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">基礎套件管理</a>了解。
 
-<p>If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. Gitbash (which comes as part of the <a href="https://gitforwindows.org/">git for Windows toolset</a>) or <a href="https://docs.microsoft.com/zh-TW/windows/wsl/about">Windows Subsystem for Linux (WSL)</a> are both suitable. <a href="https://cmder.net/">Cmder</a> is another very good and complete alternative. See <a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">Command line crash course</a> for more information on these, and on terminal commands in general.</p>
+<p>如果你是使用 Windows 的話，你將會需要安裝一些軟體來達到和 Unix/macOS 作業系統使用終端機一樣的行為，為的是接下來走教學系列時，可以使用到一些被提及的終端機指令。Gitbash（<a href="https://gitforwindows.org/">適用於 Windows 的 git 工具集</a>中的一部分功能）或使用<a href="https://docs.microsoft.com/zh-TW/windows/wsl/about">適用於 Linux 的 Windows 子系統（WSL）</a>，這些都是蠻合適的解決方案。<a href="https://cmder.net/">Cmder</a> 也是另一個不錯且較完善的解決方案。若想知道更多命令列的相關資訊可以至<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">命令列課程</a>了解。</p>
 
-<p>Also see the following for more information:</p>
+<p>若想知道更多相關資訊也可以至下列去閱讀：</p>
 
 <ul>
- <li><a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/">"What is npm"</a> on nodejs.org</li>
- <li><a href="https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner">"Introducing npx"</a> on the npm blog</li>
- <li><a href="https://svelte.dev/blog/the-easiest-way-to-get-started">"The easiest way to get started with Svelte"</a> on the svelte blog</li>
+ <li>可以至 nodejs.org 了解<a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/">＂什麼是 npm＂</a></li>
+ <li>可以至 npm 部落格了解<a href="https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner">＂介紹 npx＂</a></li>
+ <li>可以至 svelte 部落格了解<a href="https://svelte.dev/blog/the-easiest-way-to-get-started">＂以最簡單的方式來開始 Svelte＂</a></li>
 </ul>
 
 <h3 id="Creating_your_first_Svelte_app">Creating your first Svelte app</h3>
