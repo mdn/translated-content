@@ -1,5 +1,5 @@
 ---
-title: 古いブラウザでの HTML フォーム
+title: 古いブラウザーでの HTML フォーム
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
 tags:
   - Example
@@ -10,54 +10,45 @@ tags:
   - Web
 translation_of: Learn/Forms/HTML_forms_in_legacy_browsers
 ---
-<div>{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms/Styling_HTML_forms", "Learn/HTML/Forms")}}</div>
+<p>{{LearnSidebar}}</p>
 
-<p class="summary">すべての Web 開発者は、Web が非常につらい場所であることをいち早く (時に痛いほど) 学びます。もっともいまいましいのは古いブラウザです。まあそれは受け入れて、我々が「古いブラウザ」と言うとき、みんなが古いバージョンの Internet Explorer を念頭に置いています...しかしそれだけではありません。<a href="https://www.mozilla.org/en-US/firefox/organizations/">ESR バージョン</a>のような1年経過した Firefox もまた古いブラウザです。そしてモバイルの世界では？ ブラウザも OS もアップデートできないときは？そう、最新ではない標準的なブラウザを搭載している多くの古い Android 携帯電話または iPhone があります。これらも古いブラウザです。</p>
+<p>ウェブ開発者は誰でも、ウェブが自分たちにとって非常に厳しい場所であることを、すぐに (時には痛みを伴って) 学びます。最悪の災いは古いブラウザーです。「古いブラウザー」というと、 Safari や古いバージョンの Internet Explorer を思い浮かべますが、それだけではありません。モバイルの世界では、古い Android スマホや iPhone のように、ブラウザーも OS もアップデートできない場合、アップデートされない純正ブラウザーも古いブラウザーです。</p>
 
-<p>残念ながら、そのような困難に対処するのも仕事の一部です。幸い、古いブラウザによって起きる問題の 80% 程度を解決する助けになることがわかっている秘訣がいくつかあります。</p>
+<p>この荒れた環境に対応するのも仕事のうちです。幸いなことに、知っておくと古いブラウザーによる問題のほとんどを解決することができる秘訣があります。また、 HTML5 の {{htmlelement('input')}} 型は、対応していなくても失敗はしません。 <code>type=text</code> で代替されます。</p>
 
-<h2 id="Learn_about_the_issues" name="Learn_about_the_issues">問題について学ぶ</h2>
+<h2 id="Learn_about_the_issues">問題について知る</h2>
 
-<p>実のところもっとも重要なことは、一般的なパターンを理解するためにそれらのブラウザに関するドキュメントを読むことです。例えば、多くの場合 CSS のサポート状況が HTML フォームにおける最大の問題です。あなたはスタートとして適切な場所にいます。使用したい要素 (または DOM インターフェイス) のサポート状況を確認しましょう。MDN では Web ページで使用できる多くの要素、プロパティあるいは API について、実装状況の一覧表を入手できます。しかし、驚くほど役に立つであろうリソースが他にもあります:</p>
+<p>一般的なパターンを理解するには、ブラウザーのドキュメントを読むことが役立ちます。 <a href="/">MDN</a> でこの記事を読んでいるのであれば、始めるのにふさわしい場所にいます。使用したい要素 (または DOM インタフェース) の対応状況を確認するだけです。 MDN には、ウェブページで使用できるほとんどの要素、プロパティ、API の互換性一覧表が用意されています。他にも驚くほど役に立つリソースがあります。</p>
 
-<h3 id="Browser_vendor_documentation" name="Browser_vendor_documentation">ブラウザベンダーのドキュメント</h3>
+<h3 id="Browser_vendor_documentation">ブラウザベンダーのドキュメント</h3>
 
 <ul>
- <li>Mozilla: あなたは適切な場所にいます。MDN をご覧ください。</li>
- <li>Microsoft: <a href="https://docs.microsoft.com/ja-jp/openspecs/ie_standards/ms-iestandlp/8aea05e3-8c1e-4a9a-9614-31f71e679457" rel="external" title="http://msdn.microsoft.com/en-us/library/ff410218%28v=vs.85%29.aspx">Internet Explorer Standards Support Documentation</a></li>
- <li>WebKit: このエンジンはいくつかの異なるエディションが存在するため、やや複雑です。
+ <li>Mozilla: ここが適切な場所ですので、 MDN を参照してください。/li>
+ <li>Microsoft: <a href="https://msdn.microsoft.com/en-us/library/ff410218%28v=vs.85%29.aspx" rel="external">Internet Explorer Standards Support Documentation</a></li>
+ <li>WebKit: このエンジンにはいくつかの異なるエディションが存在するため、やや複雑です。
   <ul>
-   <li><a href="https://www.webkit.org/blog/" rel="external" title="https://www.webkit.org/blog/">The WebKit blog</a> や <a href="http://planet.webkit.org/" rel="external" title="http://planet.webkit.org/">Planet WebKit</a> は、WebKit のコア開発者による最良の記事を集約しています。</li>
-   <li><a href="https://www.chromestatus.com/features" title="http://www.chromium.org/developers/web-platform-status">Chrome platform status site</a> も重要です。</li>
-   <li><a href="https://developer.apple.com/technologies/safari/" rel="external" title="https://developer.apple.com/technologies/safari/">Apple の Web サイト</a>も同様です。</li>
+   <li><a href="https://www.webkit.org/blog/" rel="external">The WebKit blog</a> や <a href="https://planet.webkit.org/" rel="external">Planet WebKit</a> は、 WebKit のコア開発者による最良の記事を集約しています。</li>
+   <li><a href="https://www.chromestatus.com/features">Chrome platform status site</a> も重要です。</li>
+   <li><a href="https://developer.apple.com/technologies/safari/" rel="external">Apple のウェブサイト</a>も同様です。</li>
   </ul>
  </li>
 </ul>
 
-<h3 id="Independent_documentation" name="Independent_documentation">独自のドキュメント</h3>
+<h2 id="Make_things_simple">物事をシンプルにする</h2>
 
-<ul>
- <li><a href="http://caniuse.com" rel="external" title="http://caniuse.com">Can I Use</a> に、先端技術のサポート状況に関する情報があります。</li>
- <li><a href="http://www.quirksmode.org" rel="external" title="http://www.quirksmode.org">Quirks Mode</a> は、ブラウザの互換性に関するすばらしい資料です。<a href="http://www.quirksmode.org/mobile/" rel="external" title="http://www.quirksmode.org/mobile/">モバイルの部</a>は現時点で入手できる最高の情報源です。</li>
- <li><a href="http://positioniseverything.net/" rel="external" title="http://positioniseverything.net/">Position Is Everything</a> は、古いブラウザのレンダリングの不具合や (もしあれば) その回避策を入手できる最高の情報源です。</li>
- <li><a href="http://mobilehtml5.org" rel="external" title="http://mobilehtml5.org">Mobile HTML5</a> は、"top 5" に限らず (Nokia、Amazon、Blackberry も含む) さまざまなモバイルブラウザの互換性情報を掲載しています。</li>
-</ul>
+<p><a href="/ja/docs/Learn/Forms">HTML フォーム</a>では複雑なやり取りが行われるため、シンプルに保つという経験則があり、「<a href="https://ja.wikipedia.org/wiki/KISS%E3%81%AE%E5%8E%9F%E5%89%87">KISS の原則</a>」とも呼ばれています。フォームを「よりかっこよく」あるいは「高機能に」したい場合はたくさんありますが、効率的なフォームの作成はデザインや技術の問題ではありません。むしろ、シンプルさ、直感性、そしてユーザーとの対話のしやすさが重要なのです。 <a href="https://www.uxforthemasses.com/forms-usability/" rel="external">forms usability on UX For The Masses</a> のチュートリアルがこれをよく説明しています。</p>
 
-<h2 id="Make_things_simple" name="Make_things_simple">物事をシンプルに</h2>
+<h3 id="Graceful_degradation_is_web_developers_best_friend">グレイスフルデグラデーションはウェブ開発者の最大の味方</h3>
 
-<p><a href="/ja/docs/HTML/Forms" title="HTML/Forms">HTML フォーム</a>は複雑なやりとりを伴うことから、一つの経験則があります: <a href="http://en.wikipedia.org/wiki/KISS_principle" rel="external" title="http://en.wikipedia.org/wiki/KISS_principle">可能な限りシンプルにしてください</a> (<a href="http://ja.wikipedia.org/wiki/KISS%E3%81%AE%E5%8E%9F%E5%89%87" rel="external" title="http://ja.wikipedia.org/wiki/KISS%E3%81%AE%E5%8E%9F%E5%89%87">日本語版</a>)。フォームを "より立派に" あるいは "高機能に" したいケースはたくさんありますが、効率的なフォームの作成はデザインや技術の問題ではありません。それを忘れないように、<a href="http://www.uxforthemasses.com/forms-usability/" rel="external" title="http://www.uxforthemasses.com/forms-usability/">UX For The Masses にあるフォームのユーザビリティ</a>に関する記事を読む時間をとってください。</p>
-
-<h3 id="Graceful_degradation_is_web_developers_best_friend" name="Graceful_degradation_is_web_developer's_best_friend">Graceful Degradation は Web 開発者の最高の味方</h3>
-
-<p><a href="http://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/" rel="external" title="http://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/">Graceful Degradation と Progressive Enhancement</a> は、一度に幅広いブラウザをサポートすることにより、すばらしいものを構築可能にする開発パターンです。新しいブラウザで何かを構築するときにそれが動作すると確信したい場合は、あれやこれやで古いブラウザにおいて Graceful Degradation を行っています。</p>
+<p><a href="https://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/" rel="external">グレイスフルデグラデーションとプログレッシブエンハンスメント</a>は、様々なブラウザーに同時に対応することにより、優れたものを作ることができる開発パターンです。新しいブラウザーで何かを構築した場合、古いブラウザーでも同じ方法または別な方法で動作するのであれば、グレイスフルデグラデーションが実施できていることになります。</p>
 
 <p>HTML フォームに関する例をいくつか見ていきましょう。</p>
 
-<h4 id="HTML_input_types" name="HTML_input_types">HTML input のタイプ</h4>
+<h4 id="HTML_input_types">HTML の入力型</h4>
 
-<p>HTML5 でもたらされた新たな input のタイプは、退行手段がとてもわかりやすいことから、すばらしいものです。ブラウザが {{HTMLElement("input")}} 要素の {{htmlattrxref("type","input")}} 属性の値を知らない場合は、値が <code>text</code> であるかのようにフォールバックします。</p>
+<p>HTML5 で追加された入力型は、劣化の仕方が高度に予測可能であるため、古いブラウザーでもすべて使用可能です。ブラウザーにとって未知の {{htmlattrxref("type","input")}} 属性の値が {{HTMLElement("input")}} 要素にあった場合、その値が <code>text</code> であったかのように代替されます。</p>
 
-<pre class="brush: html notranslate">&lt;label for="myColor"&gt;
+<pre class="brush: html">&lt;label for="myColor"&gt;
   Pick a color
   &lt;input type="color" id="myColor" name="color"&gt;
 &lt;/label&gt;</pre>
@@ -65,114 +56,120 @@ translation_of: Learn/Forms/HTML_forms_in_legacy_browsers
 <table>
  <thead>
   <tr>
-   <th scope="col" style="text-align: center;">Chrome 24</th>
-   <th scope="col" style="text-align: center;">Firefox 18</th>
+   <th scope="col" style="text-align: center;">対応済み</th>
+   <th scope="col" style="text-align: center;">未対応</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <th style="text-align: center;"><img alt="Screen shot of the color input on Chrome for Mac OSX" src="/files/4575/color-fallback-chrome.png" style="height: 35px; width: 139px;"></th>
-   <th style="text-align: center;"><img alt="Screen shot of the color input on Firefox for Mac OSX" src="/files/4577/color-fallback-firefox.png" style="height: 30px; width: 245px;"></th>
+   <th style="text-align: center;"><img alt="Screen shot of the color input on Chrome for Mac OSX" src="color-fallback-chrome.png"></th>
+   <th style="text-align: center;"><img alt="Screen shot of the color input on Firefox for Mac OSX" src="color-fallback-firefox.png"></th>
   </tr>
  </tbody>
 </table>
 
-<h4 id="CSS_Attribute_Selectors" name="CSS_Attribute_Selectors">CSS 属性セレクタ</h4>
+<h4 id="Form_buttons">フォームのボタン</h4>
 
-<p><a href="/ja/docs/CSS/Attribute_selectors" title="CSS/Attribute_selectors">CSS の属性セレクタ</a>は <a href="/ja/docs/HTML/Forms" title="HTML/Forms">HTML フォーム</a> でとても有用ですが、一部の古いブラウザはサポートしていません。その場合、慣例では type と同等の class で二重化します:</p>
-
-<pre class="brush: html notranslate">&lt;input type="number" class="number"&gt;</pre>
-
-<pre class="brush: css notranslate">input[type=number] {
-  /* こちらは一部のブラウザで機能しません */
-}
-
-input.number {
-  /* こちらはどのブラウザでも動作するでしょう */
-}</pre>
-
-<p>以下の記述では役に立たず (冗長であるため)、一部のブラウザで機能しない可能性があります:</p>
-
-<pre class="brush: css notranslate">input[type=number],
-input.number {
-  /* セレクタのひとつが理解できない場合は規則全体が無視されるため、
-     これは一部のブラウザで動作しません */
-}</pre>
-
-<h4 id="Form_buttons" name="Form_buttons">フォームボタン</h4>
-
-<p>HTML フォームでボタンを定義する方法は 2 つあります:</p>
+<p>HTML フォームでボタンを定義する方法は 2 つあります。</p>
 
 <ul>
- <li>{{htmlattrxref("type","input")}} 属性の値を <code>button</code>、<code>submit</code>、<code>reset</code> あるいは <code>image</code> に設定した {{HTMLElement("input")}} 要素</li>
+ <li>{{HTMLElement("input")}} 要素の {{htmlattrxref("type","input")}} 属性に <code>button</code>、<code>submit</code>、<code>reset</code>、<code>image</code> のいずれかの値に設定したもの</li>
  <li>{{HTMLElement("button")}} 要素</li>
 </ul>
 
-<p>{{HTMLElement("input")}} は、要素セレクタを使用して CSS を適用したい場合に若干難しいことになります:</p>
+<h5 id="HTMLElementinput">{{HTMLElement("input")}}</h5>
 
-<pre class="brush: html notranslate">&lt;input type="button" class="button" value="click me"&gt;</pre>
+<p>{{HTMLElement("input")}} 要素は、要素セレクターを使用して CSS を適用したい場合に少し難しくなることがあります。</p>
 
-<pre class="brush: css notranslate">input {
-  /* この規則は、input 要素で定義するボタンのデフォルトのレンダリングを無効にします */
+<pre class="brush: html">&lt;input type="button" value="click me"&gt;</pre>
+
+<p>すべての input から境界線を削除する場合、ボタンについてのみ既定の外見に戻すことができるでしょうか？</p>
+
+<pre class="brush: css">input {
+  /* この規則は、input 要素で定義するボタンを含む、境界線を持つ入力型の
+  既定のレンダリングを無効にします */
   border: 1px solid #CCC;
 }
-
-input.button {
-  /* これはデフォルトのレンダリングを復元しません */
+input[type="button"] {
+  /* これでは既定のレンダリングを復元できません */
   border: none;
 }
-
-input.button {
-  /* こちらも同様です! 実際は、あらゆるブラウザでこれを行う標準的な方法はありません */
+input[type="button"] {
+  /* これでも復元できません。実際、どのブラウザーでもできる標準の方法はありませ */
   border: auto;
+  border: initial;
+}
+input[type="button"] {
+  /* 対応していれば、これが既定のレンダリングに戻す最も近い方法です。 */
+  border: revert;
 }</pre>
 
-<p>{{HTMLElement("button")}} 要素は、起こりうる 2 つの問題に悩まされます:</p>
+<p>詳しくは、CSS のグローバル値である {{cssxref('revert')}} を参照してください。</p>
+
+<h5 id="HTMLElementbutton">{{HTMLElement("button")}}</h5>
+
+<p>{{HTMLElement("button")}} 要は 2 つの問題に悩まされていましたが、すでに解決しました。</p>
 
 <ul>
- <li>古いバージョンの Internet Explorer に存在する不具合です。ユーザがボタンをクリックしたときに送信されるものは {{htmlattrxref("value","button")}} 属性の内容物ではなく、{{HTMLElement("button")}} 要素の開始タグと終了タグの間にある HTML コンテンツです。これはそのような値を送信する場合のみの問題であり、例えばユーザがクリックしたボタンに応じてデータを処理する場合です。</li>
- <li>一部のとても古いブラウザは {{htmlattrxref("type","button")}} 属性のデフォルト値として <code>submit</code> を使用しないため、{{HTMLElement("button")}} 要素では常に {{htmlattrxref("type","button")}} 属性を設定することを推奨します。</li>
+ <li>古いバージョンの Internet Explorer では、クリックされたときに、 {{HTMLElement("button")}} 要素の開始タグと終了タグの間にある HTML コンテンツが、 {{htmlattrxref("value","button")}} 属性の内容の代わりに送信されるというバグがありました。これは、ユーザーがどのボタンをクリックしたかによってデータ処理が決まる場合など、その値を送信する必要がある場合にのみ問題となっていました。</li>
+ <li>一部のとても古いブラウザーは <code>submit</code> を {{htmlattrxref("type","button")}} 属性の既定値として使用していませんでした。すべての現在のブラウザーでは解決していますが、 {{htmlattrxref("type","button")}} 属性を常に {{HTMLElement("button")}} 要素に設定することを推奨します。</li>
 </ul>
 
-<pre class="brush: html notranslate">&lt;!-- ボタンをクリックすると "A" ではなく "&lt;em&gt;Do A&lt;/em&gt;" を送信する場合があります --&gt;
+<pre class="brush: html">&lt;!-- ボタンをクリックすると "A" ではなく "&lt;em&gt;Do A&lt;/em&gt;" を送信する場合があります --&gt;
 &lt;button type="submit" name="IWantTo" value="A"&gt;
   &lt;em&gt;Do A&lt;/em&gt;
 &lt;/button&gt;</pre>
 
 <p>プロジェクトの制約に基づいて、どちらの解決策を選択するかはあなた次第です。</p>
 
-<h3 id="Let_go_of_CSS" name="Let_go_of_CSS">CSS を手放そう</h3>
+<h3 id="Let_go_of_CSS">CSS を手放そう</h3>
 
-<p>HTML フォームと古いブラウザにおける最大の問題は CSS のサポートです。<a href="/ja/docs/Property_compatibility_table_for_form_widgets" title="Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a> の記事の複雑さからおわかりいただけるとおり、これはとても難しい問題です。テキスト系の要素でいくらか調整が (サイズや文字色など) 可能であるとしても、それらには必ず副作用があります。残された最善の方法は、HTML フォームのウィジェットに一切スタイルを設定しないことです。ただし、それでも周囲のアイテムにはスタイルを設定してもかまいません。もしあなたがプロフェッショナルで、顧客が要求するようなことがあれば、<a href="/ja/docs/HTML/Forms/How_to_build_custom_form_widgets" title="HTML/Forms/How_to_build_custom_form_widgets">JavaScript によるウィジェットの再構築</a>といった難易度が高い技術について調査してみるとよいでしょう。しかしそのような場合でも、<a href="http://www.smashingmagazine.com/2011/11/03/“but-the-client-wants-ie-6-support”/" rel="external" title="http://www.smashingmagazine.com/2011/11/03/“but-the-client-wants-ie-6-support”/">顧客の愚かさを変える</a>ことをためらってはいけません。</p>
+<p>HTML フォームの大きな問題の一つは、 CSS によるフォームウィジェットのスタイル付けです。フォームコントロールの外観は、ブラウザーや OS に依存します。例えば、 color 型の入力は、 Safari、Chrome、Firefox のそれぞれのブラウザーによって外見が異なりますが、カラーピッカーのウィジェットは、OSのネイティブカラーピッカーを開くため、端末上のどのブラウザーでも同じになります。</p>
 
-<h2 id="Feature_detection_and_polyfills" name="Feature_detection_and_polyfills">機能検出とポリフィル</h2>
+<p>一般に、フォームコントロールの既定の外観は変更しない方が良いと考えられています。というのも、 1 つの CSS プロパティの値を変更すると、一部の入力型は変更されますが、他の入力型は変更されないからです。例えば、 <code>input { font-size: 2rem; }</code> と宣言した場合、 <code>number</code>、<code>date</code>、<code>text</code> には影響がありますが、 <code>color</code> や <code>range</code> には影響しません。プロパティを変更すると、予期せぬ形でウィジェットの外観に影響を与えることがあります。例えば、[value] { background-color: 例えば、 <code>[value] { background-color: #ccc; }</code> は、 <code>value</code> 属性を持つすべての {{HTMLElement("input")}} を対象としていますが、 {{HTMLElement("meter")}} の背景色や境界線の角の丸めを変更すると、ブラウザーによって異なる予期せぬ結果になる可能性があります。 {{cssxref('appearance', 'appearance: none;')}} と宣言してブラウザーのスタイルを削除することもできますが、一般的には目的を達成できません。すべてのスタイルが失われ、訪問者が慣れ親しんだ既定のルック＆フィールが削除されるからです。</p>
 
-<p>JavaScript は新しいブラウザにおいてすばらしい技術ですが、古いブラウザでは多くの問題を抱えています。</p>
+<p>まとめるとすると、フォームコントロールのウィジェットに CSS でスタイル付けすることで、予測できない副作用が発生することがあります。だからやめましょう。 <a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls">フォームウィジェット向けプロパティ実装状況一覧</a>の記事の複雑さからもわかるように、非常に難しいのです。テキスト要素に多少の調整 (サイズやフォントの色など) を行うことはまだ可能でも、必ず副作用が発生します。最良の方法は、 HTML フォームウィジェットにスタイルをまったく適用しないことです。しかし、周囲のアイテムになら、どれでも適用することはできます。また、どうしてもフォームウィジェットの既定のスタイルを変更しなければならない場合は、スタイルガイドを定義して、すべてのフォームコントロールの一貫性を確保し、ユーザーの使い勝手を損なわないようにしてください。また、 <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">JavaScript でのウィジェットの再構築</a>など、難しいテクニックを検討することもできます。しかし、その場合は、<a href="https://www.smashingmagazine.com/2011/11/03/but-the-client-wants-ie-6-support/" rel="external">そのような愚かな要求をするクライアントに請求すること</a>をためらってはいけません。</p>
 
-<h3 id="Unobtrusive_JavaScript" name="Unobtrusive_JavaScript">控えめな JavaScript</h3>
+<h2 id="Feature_detection_and_polyfills"">機能検出とポリフィル</h2>
 
-<p>最大の問題のひとつは、API を利用できるかです。そのため、"{{原語併記("控えめな", "unobtrusive")}}" JavaScript によって取り組むことベストプラクティスであると考えられています。これは、2 つの要件によって定義される開発パターンです:</p>
+<p>CSS や JavaScript は素晴らしい技術ですが、古いブラウザーで壊れないようにすることが重要です。ターゲットとしているブラウザーで完全に対応していない機能を使用する前には、機能検出を行う必要があります。</p>
+
+<h3 id="CSS_feature_detection">CSS の機能検出</h3>
+
+<p>置き換えられたフォームコントロールウィジェットをスタイル付けする前に、 {{cssxref('@supports')}} を使用してその機能にブラウザーが対応しているかどうかをチェックすることができます。</p>
+
+<pre class="brush: css">@supports (appearance: none) {
+ input[type="search"] {
+   appearance: none;
+   /* restyle the search input */
+ }</pre>
+
+<p>{{cssxref('appearance')}} プロパティは、要素をプラットフォームのネイティブのスタイルで表示したり、 <code>none</code> の値を指定することで、既定のプラットフォームのネイティブベースのスタイルを削除したりするために使用されます。</p>
+
+<h3 id="Unobtrusive_JavaScript">控えめな JavaScript</h3>
+
+<p>最大の問題のひとつは、API が利用できるかどうかです。そのため、「控えめな」 JavaScript によって取り組むことベストプラクティスであると考えられています。これは、2 つの要件によって定義される開発パターンです。</p>
 
 <ul>
- <li>構造と振る舞いの厳密な分割。</li>
- <li>コードが動作しない場合でも、コンテンツや基本的な機能性には依然としてアクセス可能かつ利用可能でなければならない。</li>
+ <li>構造と動作を厳密に分割する。</li>
+ <li>コードが動作しない場合でも、コンテンツや基本的な機能はアクセス可能かつ利用可能のままでなければならない。</li>
 </ul>
 
-<p><a href="http://docs.webplatform.org/wiki/concepts/programming/the_principles_of_unobtrusive_javascript" rel="external" title="http://docs.webplatform.org/wiki/concepts/programming/the_principles_of_unobtrusive_javascript">The principles of unobtrusive JavaScript</a> (原文は Peter-Paul Koch 氏によって Dev.Opera.com 向けに記述され、現在は Docs.WebPlatform.org に移動しました) で、これらのアイデアを明快に説明しています。</p>
+<p><a href="https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript" rel="external">The principles of unobtrusive JavaScript</a> (原文は Peter-Paul Koch 氏によって Dev.Opera.com 向けに記述され、現在は Docs.WebPlatform.org に移動しました) で、これらのアイデアを明快に説明しています。</p>
 
-<h3 id="The_Modernizr_library" name="The_Modernizr_library">Modernizr ライブラリ</h3>
+<h3 id="The_Modernizr_library">Modernizr ライブラリー</h3>
 
-<p>欠けている API を提供することで、すばらしい "ポリフィル" が大きな助けになるケースが多数あります。<a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/" rel="external" title="http://remysharp.com/2010/10/08/what-is-a-polyfill/">ポリフィル</a>は、古いブラウザにおける機能性の "穴を埋める" 小さな JavaScript コードです。ポリフィルは任意の機能のサポート状況を改善するために使用できますが、JavaScript 向けに使用するのは CSS や HTML 向けより低リスクです。JavaScript が動作しない可能性は多数あります(ネットワークの問題、スクリプトの競合 など)。しかし JavaScript については、控えめな JavaScript を念頭に置いて取り組む場合はポリフィルが欠けたとしても、重大な問題にはなりません。</p>
+<p>欠けている API を提供することで、すばらしい "ポリフィル" が大きな助けになるケースが多数あります。<a href="https://remysharp.com/2010/10/08/what-is-a-polyfill/" rel="external" title="http://remysharp.com/2010/10/08/what-is-a-polyfill/">ポリフィル</a>は、古いブラウザにおける機能性の "穴を埋める" 小さな JavaScript コードです。ポリフィルは任意の機能のサポート状況を改善するために使用できますが、JavaScript 向けに使用するのは CSS や HTML 向けより低リスクです。JavaScript が動作しない可能性は多数あります(ネットワークの問題、スクリプトの競合 など)。しかし JavaScript については、控えめな JavaScript を念頭に置いて取り組む場合はポリフィルが欠けたとしても、重大な問題にはなりません。</p>
 
-<p>欠けている API に対してポリフィルを適用する最善の方法は、<a href="http://modernizr.com" rel="external" title="http://modernizr.com">Modernizr</a> ライブラリおよびそこからスピンオフしたプロジェクトである <a href="http://yepnopejs.com" rel="external" title="http://yepnopejs.com">YepNope</a> を使用することです。Modernizr は、機能が利用できるかを確認して適宜対応を行えるようにするためのライブラリです。YepNope は、条件付きで読み込みを行うライブラリです。</p>
+<p>欠けている API に対してポリフィルを適用する最善の方法は、<a href="https://modernizr.com" rel="external">Modernizr</a> ライブラリー、およびそこからスピンオフしたプロジェクトである <a href="https://yepnopejs.com" rel="external">YepNope</a> を使用することです。Modernizr は、機能が利用できるかを確認して適宜対応を行えるようにするためのライブラリーです。YepNope は、条件付きで読み込みを行うライブラリーです。</p>
 
-<p>サンプルは以下のとおりです:</p>
+<p>例を示します。</p>
 
-<pre class="brush: js notranslate">Modernizr.load({
-  // ブラウザが HTML5 の form validation API をサポートしているかを確認します
+<pre class="brush: js">Modernizr.load({
+  // ブラウザーが HTML5 のフォーム検証 API に対応しているかを確認します
   test : Modernizr.formvalidation,
 
-  // ブラウザがサポートしない場合は、指定したポリフィルを読み込みます
+  // ブラウザーが対応していない場合は、以下のポリフィルを読み込みます
   nope : form-validation-API-polyfill.js,
 
   // どの場合でも、API に依存するコアアプリのファイルを読み込みます
@@ -184,36 +181,44 @@ input.button {
   }
 });</pre>
 
-<p>好都合なことに、Modernizr チームは<a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills" rel="external" title="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">すばらしいポリフィルのリスト</a>を管理しています。必要なポリフィルを選びましょう。</p>
+<p>Modernizr チームは<a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills" rel="external">すばらしいポリフィルのリスト</a>を管理しています。必要なポリフィルを選びましょう。</p>
 
 <div class="note">
-<p><strong>注記:</strong> Modernizr は、控えめな JavaScript や Graceful Degradation のテクニックに取り組むことを支援するためのすばらしい機能を搭載しています。<a href="http://modernizr.com/docs/" rel="external" title="http://modernizr.com/docs/">Modernizr のドキュメント</a>をご覧ください。</p>
+<p><strong>注:</strong> Modernizr は、控えめな JavaScript や グレイスフルでグラデーションのテクニックに取り組むことを支援するためのすばらしい機能を搭載しています。<a href="https://modernizr.com/docs/" rel="external">Modernizr のドキュメント</a>をご覧ください。</p>
 </div>
 
-<h3 id="Pay_attention_to_performance" name="Pay_attention_to_performance">パフォーマンスに注意を払う</h3>
+<h3 id="Pay_attention_to_performance">パフォーマンスに注意を払う</h3>
 
-<p>Modernizr のようなスクリプトはパフォーマンスを非常に意識していますが、200キロバイトのポリフィルをロードするとアプリケーションのパフォーマンスに影響を与えます。これは従来のブラウザでは特に重要です。多くは JavaScript エンジンが非常に遅く、すべての polyfill の実行はユーザにとって苦痛になります。パフォーマンスはそれ自体が課題ですが、従来のブラウザはそれに非常に敏感です。基本的にそれらは遅く、より多くのポリフィルが必要で、より多くの JavaScript を処理する必要があります。そのため現代のブラウザと比較して二重の負担をかけていることになります。従来のブラウザでコードをテストして、実際のパフォーマンスを確認しましょう。場合によっては、一部の機能を削除すると、すべてのブラウザでまったく同じ機能を使用するよりも優れたユーザーエクスペリエンスが得られます。最後に念のため、常にエンドユーザのことを考えるようにしてください。</p>
+<p>Modernizr のようなスクリプトはパフォーマンスを非常に意識していますが、200 キロバイトのポリフィルをロードすると、アプリケーションのパフォーマンスに影響を与えます。これは、古いブラウザーでは特に重要です。古いブラウザーの多くは JavaScript エンジンが非常に遅く、ポリフィルをすべて実行するとユーザーに負担がかかります。パフォーマンスはそれ自体が問題ですが、古いブラウザーはとても敏感です。基本的に古いブラウザーは遅く、ポリフィルが増えれば増えるほど、より多くの JavaScript を処理しなければなりません。つまり、新しいブラウザーに比べて二重に負担がかかるのです。古いブラウザーでコードをテストし、実際にどのように動作するかを確認してください。すべてのブラウザでまったく同じ機能を使うよりも、一部の機能を削除したほうがユーザーの使い勝手が向上することもあります。最後になりましたが、常にエンドユーザーのことを考えてください。</p>
 
-<h2 id="Conclusion" name="Conclusion">おわりに</h2>
+<h2 id="Conclusion">おわりに</h2>
 
-<p>お分かりのように、従来のブラウザを扱うことは単にフォームに関することだけではありません。テクニック一式です。 しかし、それらすべてをマスターすることは、この記事の範囲を超えています。</p>
+<p>このように、ブラウザーや OS における既定のフォームコントロールの外観を考慮することは重要です。これらの問題に対処するためのテクニックは数多くありますが、そのすべてをマスターすることは、この記事の範囲を超えています。大前提として、既定の実装を変更することに価値があるかどうかを検討してから挑戦してください。</p>
 
-<p>この <a href="/ja/docs/Learn/HTML/Forms">HTML フォームガイド</a>のすべての記事を読んでいれば、フォームの使用に慣れているはずです。新しいテクニックやヒントを見つけた場合は、<a href="/ja/docs/MDN/Getting_started">ガイドの改善</a>にご協力ください。</p>
+<p>この <a href="/ja/docs/Learn/Forms">HTML フォームガイド</a>のすべての記事を読んでいれば、フォームの使用に慣れているはずです。新しいテクニックやヒントを見つけた場合は、ガイドの改善にご協力ください。</p>
 
-<p>{{PreviousMenuNext("Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms/Styling_HTML_forms", "Learn/HTML/Forms")}}</p>
+<h2 id="See_also">関連情報</h2>
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+<h3 id="Learning_path">学習経路</h3>
 
 <ul>
- <li><a href="/ja/docs/Learn/HTML/Forms/Your_first_HTML_form">初めての HTML フォーム</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">HTML フォームの構築方法</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/The_native_form_widgets">ネイティブフォームウィジェット</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/Data_form_validation">フォームデータの検証</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">カスタムフォームウィジェットの作成方法</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript">JavaScript によるフォームの送信</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">古いブラウザでの HTML フォーム</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/Styling_HTML_forms">HTML フォームへのスタイル設定</a></li>
- <li><a href="/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">HTML フォームへの高度なスタイル設定</a></li>
- <li><a href="/ja/docs/Property_compatibility_table_for_form_widgets">フォームウィジェット向けプロパティ実装状況一覧</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Your_first_form">初めての HTML フォーム</a></li>
+ <li><a href="/ja/docs/Learn/Forms/How_to_structure_a_web_form">HTML フォームの構築方法</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Basic_native_form_controls">ネイティブのフォームウィジェット</a></li>
+ <li><a href="/ja/docs/Learn/Forms/HTML5_input_types">HTML5 の入力型</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Other_form_controls">高度なフォームコントロール</a></li>
+ <li><a href="/ja/docs/Learn/Forms/UI_pseudo-classes">UI 擬似クラス</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Styling_web_forms">HTML フォームへのスタイル設定</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Form_validation">フォームデータの検証</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
+</ul>
+
+<h3 id="Advanced_Topics">高度なトピック</h3>
+
+<ul>
+<li><a href="/ja/docs/Learn/Forms/Sending_forms_through_JavaScript">JavaScript によるフォームの送信</a></li>
+ <li><a href="/ja/docs/Learn/Forms/How_to_build_custom_form_controls">カスタムフォームウィジェットの作成方法</a></li>
+ <li><a href="/ja/docs/Learn/Forms/HTML_forms_in_legacy_browsers">古いブラウザーでの HTML フォーム</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Advanced_form_styling">HTML フォームへの高度なスタイル設定</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls">フォームウィジェット向けプロパティ実装状況一覧</a></li>
 </ul>
