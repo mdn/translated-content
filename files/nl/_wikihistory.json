@@ -48,6 +48,18 @@
       "evelijn"
     ]
   },
+  "Glossary/Abstraction": {
+    "modified": "2019-03-23T22:03:40.233Z",
+    "contributors": [
+      "evelijn"
+    ]
+  },
+  "Glossary/Accessibility": {
+    "modified": "2019-03-23T22:03:43.377Z",
+    "contributors": [
+      "evelijn"
+    ]
+  },
   "Glossary/Adobe_Flash": {
     "modified": "2019-03-23T22:03:41.199Z",
     "contributors": [
@@ -59,6 +71,12 @@
     "modified": "2019-03-23T22:32:37.159Z",
     "contributors": [
       "VincentDerk"
+    ]
+  },
+  "Glossary/Asynchronous": {
+    "modified": "2019-03-18T20:44:31.780Z",
+    "contributors": [
+      "peskybracket"
     ]
   },
   "Glossary/Bandwidth": {
@@ -165,6 +183,12 @@
       "ronkats"
     ]
   },
+  "Glossary/Empty_element": {
+    "modified": "2019-03-23T22:03:27.940Z",
+    "contributors": [
+      "evelijn"
+    ]
+  },
   "Glossary/FTP": {
     "modified": "2019-03-23T22:03:32.503Z",
     "contributors": [
@@ -216,6 +240,12 @@
       "VincentDerk"
     ]
   },
+  "Glossary/Keyword": {
+    "modified": "2019-03-23T22:03:25.471Z",
+    "contributors": [
+      "evelijn"
+    ]
+  },
   "Glossary/MitM": {
     "modified": "2019-10-01T12:49:20.352Z",
     "contributors": [
@@ -248,6 +278,12 @@
       "VincentDerk"
     ]
   },
+  "Glossary/SSL": {
+    "modified": "2019-03-18T20:44:44.065Z",
+    "contributors": [
+      "peskybracket"
+    ]
+  },
   "Glossary/TCP": {
     "modified": "2019-03-18T20:44:28.905Z",
     "contributors": [
@@ -258,6 +294,12 @@
     "modified": "2019-03-23T22:04:51.151Z",
     "contributors": [
       "tomudding"
+    ]
+  },
+  "Glossary/Truthy": {
+    "modified": "2019-03-23T22:29:56.688Z",
+    "contributors": [
+      "RdV"
     ]
   },
   "Glossary/Value": {
@@ -321,6 +363,81 @@
       "chrisdavidmills"
     ]
   },
+  "Learn/CSS/CSS_layout/Positioning": {
+    "modified": "2020-07-16T22:26:44.926Z",
+    "contributors": [
+      "Badlapje"
+    ]
+  },
+  "Learn/CSS/First_steps": {
+    "modified": "2019-01-16T16:11:54.635Z",
+    "contributors": [
+      "teoli",
+      "Verruckt",
+      "Scees",
+      "Valgor",
+      "Mcaruso"
+    ]
+  },
+  "Learn/Forms": {
+    "modified": "2020-07-16T22:21:00.688Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Porkepix"
+    ]
+  },
+  "Learn/Forms/Advanced_form_styling": {
+    "modified": "2020-07-16T22:21:35.825Z",
+    "contributors": [
+      "coenegrachts"
+    ]
+  },
+  "Learn/Forms/Basic_native_form_controls": {
+    "modified": "2020-07-16T22:21:22.297Z",
+    "contributors": [
+      "chrisdavidmills",
+      "coenegrachts"
+    ]
+  },
+  "Learn/Forms/How_to_structure_a_web_form": {
+    "modified": "2020-07-16T22:21:14.098Z",
+    "contributors": [
+      "sander-langendoen",
+      "Daniel-Koster",
+      "ShaneDeconinck",
+      "chrisdavidmills",
+      "coenegrachts"
+    ]
+  },
+  "Learn/Forms/Property_compatibility_table_for_form_controls": {
+    "modified": "2020-07-16T22:21:43.499Z",
+    "contributors": [
+      "coenegrachts"
+    ]
+  },
+  "Learn/Forms/Sending_and_retrieving_form_data": {
+    "modified": "2020-07-16T22:21:28.253Z",
+    "contributors": [
+      "hnsz",
+      "Tonnes",
+      "coenegrachts"
+    ]
+  },
+  "Learn/Forms/Styling_web_forms": {
+    "modified": "2020-07-16T22:21:31.685Z",
+    "contributors": [
+      "drostjoost",
+      "coenegrachts"
+    ]
+  },
+  "Learn/Forms/Your_first_form": {
+    "modified": "2020-07-16T22:21:06.164Z",
+    "contributors": [
+      "miaroelants",
+      "chrisdavidmills",
+      "coenegrachts"
+    ]
+  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-07-16T22:33:54.933Z",
     "contributors": [
@@ -331,6 +448,43 @@
       "hermansje"
     ]
   },
+  "Learn/Getting_started_with_the_web/CSS_basics": {
+    "modified": "2020-07-16T22:35:01.779Z",
+    "contributors": [
+      "evelijn",
+      "mientje"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/Dealing_with_files": {
+    "modified": "2020-07-16T22:34:36.385Z",
+    "contributors": [
+      "evelijn",
+      "mientje"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/HTML_basics": {
+    "modified": "2020-07-16T22:34:49.309Z",
+    "contributors": [
+      "escattone",
+      "evelijn",
+      "mientje"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/How_the_Web_works": {
+    "modified": "2020-07-16T22:34:01.811Z",
+    "contributors": [
+      "evelijn",
+      "mientje"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/Installing_basic_software": {
+    "modified": "2020-07-16T22:34:09.652Z",
+    "contributors": [
+      "evelijn",
+      "mientje",
+      "physicbits"
+    ]
+  },
   "Learn/Getting_started_with_the_web/JavaScript_basics": {
     "modified": "2020-07-16T22:35:13.435Z",
     "contributors": [
@@ -339,6 +493,21 @@
       "mientje",
       "psinke1974",
       "apreinders"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/Publishing_your_website": {
+    "modified": "2020-07-16T22:34:27.646Z",
+    "contributors": [
+      "mientje"
+    ]
+  },
+  "Learn/Getting_started_with_the_web/What_will_your_website_look_like": {
+    "modified": "2020-07-16T22:34:18.252Z",
+    "contributors": [
+      "R1C1B1",
+      "Tonnes",
+      "mientje",
+      "physicbits"
     ]
   },
   "Learn/HTML": {
@@ -354,6 +523,29 @@
       "fowbi",
       "ronkats",
       "wittgenstein2",
+      "mientje"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting": {
+    "modified": "2020-07-16T22:23:56.122Z",
+    "contributors": [
+      "wittgenstein2",
+      "Tonnes",
+      "mientje"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks": {
+    "modified": "2020-07-16T22:23:45.686Z",
+    "contributors": [
+      "wittgenstein2",
+      "Tonnes",
+      "mientje"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML/Debugging_HTML": {
+    "modified": "2020-07-16T22:24:14.030Z",
+    "contributors": [
+      "Tonnes",
       "mientje"
     ]
   },
@@ -381,6 +573,45 @@
       "mientje"
     ]
   },
+  "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter": {
+    "modified": "2020-07-16T22:23:13.606Z",
+    "contributors": [
+      "hetoord",
+      "mientje"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content": {
+    "modified": "2020-07-16T22:24:20.205Z",
+    "contributors": [
+      "mientje"
+    ]
+  },
+  "Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML": {
+    "modified": "2020-07-16T22:23:22.277Z",
+    "contributors": [
+      "mientje"
+    ]
+  },
+  "Learn/HTML/Multimedia_and_embedding": {
+    "modified": "2020-07-16T22:24:27.648Z",
+    "contributors": [
+      "Tonnes",
+      "mientje"
+    ]
+  },
+  "Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
+    "modified": "2020-07-16T22:24:46.826Z",
+    "contributors": [
+      "Tonnes",
+      "mientje"
+    ]
+  },
+  "Learn/HTML/Multimedia_and_embedding/Video_and_audio_content": {
+    "modified": "2019-03-23T23:02:13.892Z",
+    "contributors": [
+      "Angelino"
+    ]
+  },
   "Learn/HTML/Tables": {
     "modified": "2020-07-16T22:25:13.966Z",
     "contributors": [
@@ -401,6 +632,13 @@
     "modified": "2020-07-16T22:32:40.976Z",
     "contributors": [
       "chrisdavidmills"
+    ]
+  },
+  "Learn/JavaScript/Client-side_web_APIs/Manipulating_documents": {
+    "modified": "2020-07-16T22:32:49.127Z",
+    "contributors": [
+      "Tonnes",
+      "mientje"
     ]
   },
   "Learn/JavaScript/First_steps": {
@@ -425,6 +663,24 @@
       "Jeremie",
       "teoli",
       "ziyunfei"
+    ]
+  },
+  "MDN/About": {
+    "modified": "2019-09-12T20:01:48.009Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "evelijn",
+      "Tonnes",
+      "MickvdMeijde"
+    ]
+  },
+  "MDN/At_ten": {
+    "modified": "2019-03-23T22:42:06.274Z",
+    "contributors": [
+      "Tonnes",
+      "MickvdMeijde",
+      "gvanwaelvelde"
     ]
   },
   "MDN/Contribute": {
@@ -489,6 +745,15 @@
       "Sheppy"
     ]
   },
+  "MDN/Guidelines/Writing_style_guide": {
+    "modified": "2020-09-30T15:30:56.477Z",
+    "contributors": [
+      "chrisdavidmills",
+      "jswisher",
+      "wbamberg",
+      "Zzvdk"
+    ]
+  },
   "MDN/Structures": {
     "modified": "2020-09-30T12:56:47.075Z",
     "contributors": [
@@ -514,6 +779,23 @@
       "evelijn"
     ]
   },
+  "MDN/Tools/KumaScript/Troubleshooting": {
+    "modified": "2019-01-16T21:24:42.283Z",
+    "contributors": [
+      "wbamberg",
+      "Volluta"
+    ]
+  },
+  "MDN/Yari": {
+    "modified": "2019-09-09T15:53:17.375Z",
+    "contributors": [
+      "SphinxKnight",
+      "Tonnes",
+      "wbamberg",
+      "evelijn",
+      "Sheppy"
+    ]
+  },
   "Mozilla": {
     "modified": "2019-03-23T23:34:55.295Z",
     "contributors": [
@@ -537,11 +819,11 @@
       "Phuein"
     ]
   },
-  "Mozilla/Developer_guide": {
-    "modified": "2019-03-23T23:32:20.967Z",
+  "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
+    "modified": "2019-03-18T21:05:10.706Z",
     "contributors": [
-      "chrisdavidmills",
-      "BrianDiPalma"
+      "SphinxKnight",
+      "Tonnes"
     ]
   },
   "Mozilla/Firefox": {
@@ -566,6 +848,16 @@
       "ziyunfei"
     ]
   },
+  "Mozilla/Firefox/Releases/1.5": {
+    "modified": "2019-03-23T23:41:23.957Z",
+    "contributors": [
+      "wbamberg",
+      "FrederikVds",
+      "Worteltje",
+      "Takenbot",
+      "Mcaruso"
+    ]
+  },
   "Tools": {
     "modified": "2020-07-16T22:44:16.646Z",
     "contributors": [
@@ -583,6 +875,12 @@
       "wbamberg"
     ]
   },
+  "Tools/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:35:48.706Z",
+    "contributors": [
+      "Tonnes"
+    ]
+  },
   "Tools/Page_Inspector": {
     "modified": "2020-07-16T22:34:28.600Z",
     "contributors": [
@@ -594,6 +892,13 @@
     "modified": "2020-07-16T22:35:37.736Z",
     "contributors": [
       "Martien"
+    ]
+  },
+  "Tools/Responsive_Design_Mode": {
+    "modified": "2020-07-16T22:35:21.730Z",
+    "contributors": [
+      "bassam",
+      "JimiVerhaegen"
     ]
   },
   "Tools/Shader_Editor": {
@@ -608,6 +913,12 @@
       "Tonnes",
       "Volluta",
       "klebermaria"
+    ]
+  },
+  "Tools/Web_Console/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:23.500Z",
+    "contributors": [
+      "Tonnes"
     ]
   },
   "Web": {
@@ -679,6 +990,13 @@
       "AdepthShar"
     ]
   },
+  "Web/API/Crypto/getRandomValues": {
+    "modified": "2019-03-23T23:28:11.838Z",
+    "contributors": [
+      "jsx",
+      "DD0101"
+    ]
+  },
   "Web/API/Document": {
     "modified": "2019-03-23T22:29:45.752Z",
     "contributors": [
@@ -724,6 +1042,21 @@
       "chrisdavidmills"
     ]
   },
+  "Web/API/Element/mousedown_event": {
+    "modified": "2019-04-30T13:45:34.836Z",
+    "contributors": [
+      "wbamberg",
+      "jswisher",
+      "karel.braeckman"
+    ]
+  },
+  "Web/API/Element/mouseout_event": {
+    "modified": "2019-03-23T22:23:51.572Z",
+    "contributors": [
+      "fscholz",
+      "MicheleNL"
+    ]
+  },
   "Web/API/EventSource": {
     "modified": "2019-03-23T22:39:10.088Z",
     "contributors": [
@@ -763,6 +1096,20 @@
     "modified": "2019-03-18T21:15:06.829Z",
     "contributors": [
       "fscholz"
+    ]
+  },
+  "Web/API/Web_Storage_API": {
+    "modified": "2019-03-23T23:31:12.287Z",
+    "contributors": [
+      "Ugoku",
+      "Pirokiko"
+    ]
+  },
+  "Web/API/Web_Workers_API/Using_web_workers": {
+    "modified": "2019-03-23T23:59:02.317Z",
+    "contributors": [
+      "teoli",
+      "Renedx"
     ]
   },
   "Web/API/Window": {
@@ -868,6 +1215,12 @@
       "leroydev"
     ]
   },
+  "Web/CSS/CSS_Color": {
+    "modified": "2019-03-23T22:25:32.210Z",
+    "contributors": [
+      "Krenair"
+    ]
+  },
   "Web/CSS/CSS_Colors/Color_picker_tool": {
     "modified": "2019-03-23T22:25:31.799Z",
     "contributors": [
@@ -892,6 +1245,12 @@
   },
   "Web/CSS/CSS_Positioning/Understanding_z_index": {
     "modified": "2019-03-30T16:29:38.741Z"
+  },
+  "Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context": {
+    "modified": "2020-01-06T13:10:46.550Z",
+    "contributors": [
+      "MelvinIdema"
+    ]
   },
   "Web/CSS/animation-duration": {
     "modified": "2019-03-23T22:33:38.601Z",
@@ -1171,10 +1530,33 @@
       "maartentbm"
     ]
   },
+  "Web/JavaScript/Guide/Regular_Expressions": {
+    "modified": "2020-03-21T18:58:05.051Z",
+    "contributors": [
+      "gj_zwiers"
+    ]
+  },
+  "Web/JavaScript/Guide/Working_with_Objects": {
+    "modified": "2020-03-12T19:46:18.946Z",
+    "contributors": [
+      "SphinxKnight",
+      "pieterm",
+      "jjkaptein"
+    ]
+  },
   "Web/JavaScript/Reference": {
     "modified": "2020-03-12T19:41:26.007Z",
     "contributors": [
       "Minat"
+    ]
+  },
+  "Web/JavaScript/Reference/Classes": {
+    "modified": "2020-03-12T19:43:07.699Z",
+    "contributors": [
+      "StevenVB",
+      "reinvantveer",
+      "Jantje19",
+      "Samjayyy"
     ]
   },
   "Web/JavaScript/Reference/Errors": {
@@ -1418,6 +1800,12 @@
       "fvanwijk"
     ]
   },
+  "Web/JavaScript/Reference/Global_Objects/Symbol": {
+    "modified": "2020-10-15T22:29:35.803Z",
+    "contributors": [
+      "MelvinIdema"
+    ]
+  },
   "Web/JavaScript/Reference/Global_Objects/isFinite": {
     "modified": "2020-10-15T21:56:05.056Z",
     "contributors": [
@@ -1437,6 +1825,20 @@
     "modified": "2020-03-12T19:42:15.582Z",
     "contributors": [
       "jjpkoenraad"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators": {
+    "modified": "2020-03-12T19:42:34.064Z",
+    "contributors": [
+      "apreinders",
+      "UX5Technologies"
+    ]
+  },
+  "Web/JavaScript/Reference/Operators/typeof": {
+    "modified": "2020-10-15T21:49:35.139Z",
+    "contributors": [
+      "evelijn",
+      "lackodan"
     ]
   },
   "Web/JavaScript/Reference/Statements": {
@@ -1515,6 +1917,14 @@
       "chrisdavidmills"
     ]
   },
+  "Web/SVG/Tutorial/Basic_Transformations": {
+    "modified": "2019-03-18T21:40:54.924Z",
+    "contributors": [
+      "Tonnes",
+      "SphinxKnight",
+      "HennyBergsma"
+    ]
+  },
   "Web/Security": {
     "modified": "2019-09-10T16:37:51.912Z",
     "contributors": [
@@ -1529,259 +1939,28 @@
       "tibovanheule"
     ]
   },
-  "Learn/Forms/Property_compatibility_table_for_form_controls": {
-    "modified": "2020-07-16T22:21:43.499Z",
+  "conflicting/Learn/Getting_started_with_the_web/JavaScript_basics": {
+    "modified": "2019-03-23T23:15:19.193Z",
     "contributors": [
-      "coenegrachts"
+      "teoli",
+      "Lekensteyn"
     ]
   },
-  "Mozilla/Firefox/Releases/1.5": {
-    "modified": "2019-03-23T23:41:23.957Z",
+  "conflicting/Web/API/Document_Object_Model": {
+    "modified": "2019-03-24T00:02:20.325Z",
     "contributors": [
-      "wbamberg",
-      "FrederikVds",
-      "Worteltje",
+      "Volluta",
+      "teoli",
+      "fscholz",
       "Takenbot",
+      "Valgor",
       "Mcaruso"
     ]
   },
-  "Web/API/Web_Workers_API/Using_web_workers": {
-    "modified": "2019-03-23T23:59:02.317Z",
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Object": {
+    "modified": "2019-03-23T22:25:08.993Z",
     "contributors": [
-      "teoli",
-      "Renedx"
-    ]
-  },
-  "Glossary/Abstraction": {
-    "modified": "2019-03-23T22:03:40.233Z",
-    "contributors": [
-      "evelijn"
-    ]
-  },
-  "Glossary/Asynchronous": {
-    "modified": "2019-03-18T20:44:31.780Z",
-    "contributors": [
-      "peskybracket"
-    ]
-  },
-  "Glossary/Empty_element": {
-    "modified": "2019-03-23T22:03:27.940Z",
-    "contributors": [
-      "evelijn"
-    ]
-  },
-  "Glossary/Keyword": {
-    "modified": "2019-03-23T22:03:25.471Z",
-    "contributors": [
-      "evelijn"
-    ]
-  },
-  "Glossary/SSL": {
-    "modified": "2019-03-18T20:44:44.065Z",
-    "contributors": [
-      "peskybracket"
-    ]
-  },
-  "Glossary/Accessibility": {
-    "modified": "2019-03-23T22:03:43.377Z",
-    "contributors": [
-      "evelijn"
-    ]
-  },
-  "Glossary/Truthy": {
-    "modified": "2019-03-23T22:29:56.688Z",
-    "contributors": [
-      "RdV"
-    ]
-  },
-  "Learn/CSS/CSS_layout/Positioning": {
-    "modified": "2020-07-16T22:26:44.926Z",
-    "contributors": [
-      "Badlapje"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/Installing_basic_software": {
-    "modified": "2020-07-16T22:34:09.652Z",
-    "contributors": [
-      "evelijn",
-      "mientje",
-      "physicbits"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/Dealing_with_files": {
-    "modified": "2020-07-16T22:34:36.385Z",
-    "contributors": [
-      "evelijn",
-      "mientje"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/CSS_basics": {
-    "modified": "2020-07-16T22:35:01.779Z",
-    "contributors": [
-      "evelijn",
-      "mientje"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/What_will_your_website_look_like": {
-    "modified": "2020-07-16T22:34:18.252Z",
-    "contributors": [
-      "R1C1B1",
-      "Tonnes",
-      "mientje",
-      "physicbits"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/How_the_Web_works": {
-    "modified": "2020-07-16T22:34:01.811Z",
-    "contributors": [
-      "evelijn",
-      "mientje"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/HTML_basics": {
-    "modified": "2020-07-16T22:34:49.309Z",
-    "contributors": [
-      "escattone",
-      "evelijn",
-      "mientje"
-    ]
-  },
-  "Learn/Getting_started_with_the_web/Publishing_your_website": {
-    "modified": "2020-07-16T22:34:27.646Z",
-    "contributors": [
-      "mientje"
-    ]
-  },
-  "Learn/Forms/Advanced_form_styling": {
-    "modified": "2020-07-16T22:21:35.825Z",
-    "contributors": [
-      "coenegrachts"
-    ]
-  },
-  "Learn/Forms/How_to_structure_a_web_form": {
-    "modified": "2020-07-16T22:21:14.098Z",
-    "contributors": [
-      "sander-langendoen",
-      "Daniel-Koster",
-      "ShaneDeconinck",
-      "chrisdavidmills",
-      "coenegrachts"
-    ]
-  },
-  "Learn/Forms": {
-    "modified": "2020-07-16T22:21:00.688Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Porkepix"
-    ]
-  },
-  "Learn/Forms/Styling_web_forms": {
-    "modified": "2020-07-16T22:21:31.685Z",
-    "contributors": [
-      "drostjoost",
-      "coenegrachts"
-    ]
-  },
-  "Learn/Forms/Basic_native_form_controls": {
-    "modified": "2020-07-16T22:21:22.297Z",
-    "contributors": [
-      "chrisdavidmills",
-      "coenegrachts"
-    ]
-  },
-  "Learn/Forms/Sending_and_retrieving_form_data": {
-    "modified": "2020-07-16T22:21:28.253Z",
-    "contributors": [
-      "hnsz",
-      "Tonnes",
-      "coenegrachts"
-    ]
-  },
-  "Learn/Forms/Your_first_form": {
-    "modified": "2020-07-16T22:21:06.164Z",
-    "contributors": [
-      "miaroelants",
-      "chrisdavidmills",
-      "coenegrachts"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting": {
-    "modified": "2020-07-16T22:23:56.122Z",
-    "contributors": [
-      "wittgenstein2",
-      "Tonnes",
-      "mientje"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML": {
-    "modified": "2020-07-16T22:23:22.277Z",
-    "contributors": [
-      "mientje"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Debugging_HTML": {
-    "modified": "2020-07-16T22:24:14.030Z",
-    "contributors": [
-      "Tonnes",
-      "mientje"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks": {
-    "modified": "2020-07-16T22:23:45.686Z",
-    "contributors": [
-      "wittgenstein2",
-      "Tonnes",
-      "mientje"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter": {
-    "modified": "2020-07-16T22:23:13.606Z",
-    "contributors": [
-      "hetoord",
-      "mientje"
-    ]
-  },
-  "Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content": {
-    "modified": "2020-07-16T22:24:20.205Z",
-    "contributors": [
-      "mientje"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Images_in_HTML": {
-    "modified": "2020-07-16T22:24:46.826Z",
-    "contributors": [
-      "Tonnes",
-      "mientje"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding": {
-    "modified": "2020-07-16T22:24:27.648Z",
-    "contributors": [
-      "Tonnes",
-      "mientje"
-    ]
-  },
-  "Learn/JavaScript/Client-side_web_APIs/Manipulating_documents": {
-    "modified": "2020-07-16T22:32:49.127Z",
-    "contributors": [
-      "Tonnes",
-      "mientje"
-    ]
-  },
-  "MDN/At_ten": {
-    "modified": "2019-03-23T22:42:06.274Z",
-    "contributors": [
-      "Tonnes",
-      "MickvdMeijde",
-      "gvanwaelvelde"
-    ]
-  },
-  "orphaned/MDN/Community/Conversations": {
-    "modified": "2019-03-18T21:42:30.837Z",
-    "contributors": [
-      "wbamberg",
-      "Tonnes",
-      "evelijn"
+      "tdbruy"
     ]
   },
   "orphaned/MDN/Community": {
@@ -1797,13 +1976,12 @@
       "Dwoenykoers13"
     ]
   },
-  "orphaned/MDN/Community/Working_in_community": {
-    "modified": "2020-02-19T18:48:45.372Z",
+  "orphaned/MDN/Community/Conversations": {
+    "modified": "2019-03-18T21:42:30.837Z",
     "contributors": [
-      "jswisher",
       "wbamberg",
       "Tonnes",
-      "Volluta"
+      "evelijn"
     ]
   },
   "orphaned/MDN/Community/Whats_happening": {
@@ -1811,6 +1989,15 @@
     "contributors": [
       "wbamberg",
       "evelijn"
+    ]
+  },
+  "orphaned/MDN/Community/Working_in_community": {
+    "modified": "2020-02-19T18:48:45.372Z",
+    "contributors": [
+      "jswisher",
+      "wbamberg",
+      "Tonnes",
+      "Volluta"
     ]
   },
   "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
@@ -1821,6 +2008,14 @@
       "coenegrachts"
     ]
   },
+  "orphaned/MDN/Contribute/Howto/Do_a_technical_review": {
+    "modified": "2019-03-23T22:48:10.124Z",
+    "contributors": [
+      "wbamberg",
+      "evelijn",
+      "Volluta"
+    ]
+  },
   "orphaned/MDN/Contribute/Howto/Do_an_editorial_review": {
     "modified": "2019-09-21T10:38:25.551Z",
     "contributors": [
@@ -1829,14 +2024,6 @@
       "evelijn",
       "Tonnes",
       "fscholz",
-      "Volluta"
-    ]
-  },
-  "orphaned/MDN/Contribute/Howto/Do_a_technical_review": {
-    "modified": "2019-03-23T22:48:10.124Z",
-    "contributors": [
-      "wbamberg",
-      "evelijn",
       "Volluta"
     ]
   },
@@ -1856,42 +2043,6 @@
       "evelijn"
     ]
   },
-  "MDN/Guidelines/Writing_style_guide": {
-    "modified": "2020-09-30T15:30:56.477Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jswisher",
-      "wbamberg",
-      "Zzvdk"
-    ]
-  },
-  "MDN/Yari": {
-    "modified": "2019-09-09T15:53:17.375Z",
-    "contributors": [
-      "SphinxKnight",
-      "Tonnes",
-      "wbamberg",
-      "evelijn",
-      "Sheppy"
-    ]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2019-01-16T21:24:42.283Z",
-    "contributors": [
-      "wbamberg",
-      "Volluta"
-    ]
-  },
-  "MDN/About": {
-    "modified": "2019-09-12T20:01:48.009Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "evelijn",
-      "Tonnes",
-      "MickvdMeijde"
-    ]
-  },
   "orphaned/MDN/Tools/Template_editing": {
     "modified": "2020-09-30T16:51:39.425Z",
     "contributors": [
@@ -1900,181 +2051,16 @@
       "evelijn"
     ]
   },
-  "orphaned/Mozilla_Implementeren": {
-    "modified": "2019-01-16T16:13:16.469Z",
-    "contributors": [
-      "Messias"
-    ]
-  },
   "orphaned/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on": {
     "modified": "2019-03-18T21:06:01.229Z",
     "contributors": [
       "Tonnes"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
-    "modified": "2019-03-18T21:05:10.706Z",
+  "orphaned/Mozilla_Implementeren": {
+    "modified": "2019-01-16T16:13:16.469Z",
     "contributors": [
-      "SphinxKnight",
-      "Tonnes"
-    ]
-  },
-  "Mozilla/Developer_guide/So_you_just_built_Firefox": {
-    "modified": "2019-03-23T23:32:28.915Z",
-    "contributors": [
-      "chrisdavidmills",
-      "zedutchgandalf"
-    ]
-  },
-  "Tools/Responsive_Design_Mode": {
-    "modified": "2020-07-16T22:35:21.730Z",
-    "contributors": [
-      "bassam",
-      "JimiVerhaegen"
-    ]
-  },
-  "Tools/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:35:48.706Z",
-    "contributors": [
-      "Tonnes"
-    ]
-  },
-  "Tools/Web_Console/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:23.500Z",
-    "contributors": [
-      "Tonnes"
-    ]
-  },
-  "Web/API/Crypto/getRandomValues": {
-    "modified": "2019-03-23T23:28:11.838Z",
-    "contributors": [
-      "jsx",
-      "DD0101"
-    ]
-  },
-  "Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context": {
-    "modified": "2020-01-06T13:10:46.550Z",
-    "contributors": [
-      "MelvinIdema"
-    ]
-  },
-  "Web/API/Element/mousedown_event": {
-    "modified": "2019-04-30T13:45:34.836Z",
-    "contributors": [
-      "wbamberg",
-      "jswisher",
-      "karel.braeckman"
-    ]
-  },
-  "Web/API/Element/mouseout_event": {
-    "modified": "2019-03-23T22:23:51.572Z",
-    "contributors": [
-      "fscholz",
-      "MicheleNL"
-    ]
-  },
-  "Web/JavaScript/Guide/Regular_Expressions": {
-    "modified": "2020-03-21T18:58:05.051Z",
-    "contributors": [
-      "gj_zwiers"
-    ]
-  },
-  "Web/JavaScript/Guide/Working_with_Objects": {
-    "modified": "2020-03-12T19:46:18.946Z",
-    "contributors": [
-      "SphinxKnight",
-      "pieterm",
-      "jjkaptein"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Symbol": {
-    "modified": "2020-10-15T22:29:35.803Z",
-    "contributors": [
-      "MelvinIdema"
-    ]
-  },
-  "Web/JavaScript/Reference/Classes": {
-    "modified": "2020-03-12T19:43:07.699Z",
-    "contributors": [
-      "StevenVB",
-      "reinvantveer",
-      "Jantje19",
-      "Samjayyy"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators": {
-    "modified": "2020-03-12T19:42:34.064Z",
-    "contributors": [
-      "apreinders",
-      "UX5Technologies"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/typeof": {
-    "modified": "2020-10-15T21:49:35.139Z",
-    "contributors": [
-      "evelijn",
-      "lackodan"
-    ]
-  },
-  "Web/SVG/Tutorial/Basic_Transformations": {
-    "modified": "2019-03-18T21:40:54.924Z",
-    "contributors": [
-      "Tonnes",
-      "SphinxKnight",
-      "HennyBergsma"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model": {
-    "modified": "2019-03-24T00:02:20.325Z",
-    "contributors": [
-      "Volluta",
-      "teoli",
-      "fscholz",
-      "Takenbot",
-      "Valgor",
-      "Mcaruso"
-    ]
-  },
-  "Web/API/Web_Storage_API": {
-    "modified": "2019-03-23T23:31:12.287Z",
-    "contributors": [
-      "Ugoku",
-      "Pirokiko"
-    ]
-  },
-  "Web/CSS/CSS_Color": {
-    "modified": "2019-03-23T22:25:32.210Z",
-    "contributors": [
-      "Krenair"
-    ]
-  },
-  "Learn/CSS/First_steps": {
-    "modified": "2019-01-16T16:11:54.635Z",
-    "contributors": [
-      "teoli",
-      "Verruckt",
-      "Scees",
-      "Valgor",
-      "Mcaruso"
-    ]
-  },
-  "Learn/HTML/Multimedia_and_embedding/Video_and_audio_content": {
-    "modified": "2019-03-23T23:02:13.892Z",
-    "contributors": [
-      "Angelino"
-    ]
-  },
-  "conflicting/Learn/Getting_started_with_the_web/JavaScript_basics": {
-    "modified": "2019-03-23T23:15:19.193Z",
-    "contributors": [
-      "teoli",
-      "Lekensteyn"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Object": {
-    "modified": "2019-03-23T22:25:08.993Z",
-    "contributors": [
-      "tdbruy"
+      "Messias"
     ]
   }
 }

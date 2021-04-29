@@ -3137,29 +3137,6 @@
       "Sam-Marx"
     ]
   },
-  "Mozilla/Developer_guide": {
-    "modified": "2019-03-23T23:38:41.412Z",
-    "contributors": [
-      "chrisdavidmills",
-      "regisdiogo",
-      "josivansilva"
-    ]
-  },
-  "Mozilla/Developer_guide/Mozilla_build_FAQ": {
-    "modified": "2019-03-23T23:30:00.484Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "tfsthiago11121"
-    ]
-  },
-  "Mozilla/Developer_guide/Source_Code": {
-    "modified": "2019-03-23T23:36:39.907Z",
-    "contributors": [
-      "chrisdavidmills",
-      "jntesteves"
-    ]
-  },
   "Mozilla/Firefox": {
     "modified": "2020-01-18T14:01:54.191Z",
     "contributors": [

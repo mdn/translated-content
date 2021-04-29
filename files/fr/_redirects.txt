@@ -868,7 +868,6 @@
 /fr/docs/Colonnes_CSS3	/fr/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /fr/docs/Commencer_avec_le_WebGL	/fr/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /fr/docs/Comment_créer_un_arbre_DOM	/fr/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
-/fr/docs/Compilation_et_installation	/fr/docs/Mozilla/Developer_guide/Build_Instructions
 /fr/docs/Components	/fr/docs/L'objet_Components
 /fr/docs/Comprendre_le_z-index_en_CSS	/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index
 /fr/docs/Comprendre_le_z-index_en_CSS/Ajout_de_z-index	/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
@@ -1224,18 +1223,13 @@
 /fr/docs/Dessin_de_texte_avec_canvas	/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /fr/docs/Dessiner_avec_canvas	/fr/docs/conflicting/Web/API/Canvas_API/Tutorial
 /fr/docs/Detection_du_navigateur_en_utilisant_le_user_agent	/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent
-/fr/docs/Developer_Guide	/fr/docs/Mozilla/Developer_guide
-/fr/docs/Developer_Guide/How_to_Submit_a_Patch	/fr/docs/Mozilla/Developer_guide/How_to_Submit_a_Patch
-/fr/docs/Developer_Guide/Reviewer_Checklist	/fr/docs/Mozilla/Developer_guide/Reviewer_Checklist
 /fr/docs/Developer_Guide/Utilisation_de_la_Machine_Virtuelle_VM	/fr/docs/Mozilla/Developer_guide/Utilisation_de_la_Machine_Virtuelle_VM
-/fr/docs/Developer_Guide/Vous_venez_juste_de_compiler_Firefox	/fr/docs/Mozilla/Developer_guide/So_you_just_built_Firefox
 /fr/docs/DragDrop	/fr/docs/Web/API/HTML_Drag_and_Drop_API
 /fr/docs/Du_DHTML_accessible	/fr/docs/Web/Accessibility/ARIA
 /fr/docs/Décoder_encoder_en_base64	/fr/docs/Glossary/Base64
 /fr/docs/Développement_Web	/fr/docs/conflicting/Web/Guide
 /fr/docs/Développement_Web/Développer_des_sites_à_compatibilité_descendante	/fr/docs/Web/Guide/Writing_forward-compatible_websites
 /fr/docs/Développement_Web/Introduction_au_développement_web	/fr/docs/Web/Guide/Introduction_to_Web_development
-/fr/docs/Développement_de_Mozilla	/fr/docs/Mozilla/Developer_guide
 /fr/docs/ECMAScript	/fr/docs/Web/JavaScript/Language_Resources
 /fr/docs/EXSLT	/fr/docs/Web/EXSLT
 /fr/docs/EXSLT/exsl	/fr/docs/Web/EXSLT/exsl
@@ -1890,7 +1884,6 @@
 /fr/docs/Guide_JavaScript_1.5:Traitement_de_XML_avec_E4X	/fr/docs/JavaScript_Guide/Traitement_de_XML_avec_E4X
 /fr/docs/Guide_JavaScript_1.5:Travailler_avec_les_expressions_rationnelles:Exemples_d'expressions_rationnelles	/fr/docs/Web/JavaScript/Guide/Regular_Expressions
 /fr/docs/Guide_JavaScript_1.5:À_propos	/fr/docs/conflicting/Web/JavaScript/Guide/Introduction
-/fr/docs/Guide_de_développement	/fr/docs/Mozilla/Developer_guide
 /fr/docs/HTML	/fr/docs/Web/HTML
 /fr/docs/HTML/Attributes	/fr/docs/Web/HTML/Attributes
 /fr/docs/HTML/Attributs	/fr/docs/Web/HTML/Attributes
@@ -2138,7 +2131,6 @@
 /fr/docs/IndexedDB/Browser_storage_limits_and_eviction_criteria	/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 /fr/docs/IndexedDB/Concepts_basiques_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /fr/docs/IndexedDB/Using_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB
-/fr/docs/Introduction_(alternative)	/fr/docs/Mozilla/Developer_guide/Introduction
 /fr/docs/Introduction_à_SVG_dans_HTML	/fr/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /fr/docs/Introduction_à_XML	/fr/docs/Web/XML/XML_introduction
 /fr/docs/Introduction_à_XML/xml:base	/fr/docs/Web/XML/xml:base
@@ -3209,7 +3201,6 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/elements_menu_contextuel	/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/pages_web_incluses	/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
 /fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/panneaux_devtools	/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-/fr/docs/Mozilla/Developer_guide/Vous_venez_juste_de_compiler_Firefox	/fr/docs/Mozilla/Developer_guide/So_you_just_built_Firefox
 /fr/docs/Mozilla/Firefox/Versions	/fr/docs/Mozilla/Firefox/Releases
 /fr/docs/Mozilla/Firefox/Versions/1.5	/fr/docs/Mozilla/Firefox/Releases/1.5
 /fr/docs/Mozilla/Firefox/Versions/11	/fr/docs/Mozilla/Firefox/Releases/11
@@ -5946,7 +5937,6 @@
 /fr/docs/inset-block-start	/fr/docs/Web/CSS/inset-block-start
 /fr/docs/inset-inline-end	/fr/docs/Web/CSS/inset-inline-end
 /fr/docs/inset-inline-start	/fr/docs/Web/CSS/inset-inline-start
-/fr/docs/mozilla-central	/fr/docs/Mozilla/Developer_guide/mozilla-central
 /fr/docs/nsIAccessibleProvider	/fr/docs/XPCOM_Interface_Reference/nsIAccessibleProvider
 /fr/docs/nsIIdleService	/fr/docs/XPCOM_Interface_Reference/nsIIdleService
 /fr/docs/nsISupports	/fr/docs/XPCOM_Interface_Reference/nsISupports

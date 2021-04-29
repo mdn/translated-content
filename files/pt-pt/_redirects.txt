@@ -201,8 +201,6 @@
 /pt-PT/docs/DOM_Inspector	/pt-PT/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /pt-PT/docs/DOM_Inspector/Introduction_to_DOM_Inspector	/pt-PT/docs/orphaned/Tools/Add-ons/DOM_Inspector/Introduction_to_DOM_Inspector
 /pt-PT/docs/Desenhando_texto_usando_canvas	/pt-PT/docs/orphaned/Desenhando_texto_usando_canvas
-/pt-PT/docs/Desenvolver_Mozilla	/pt-PT/docs/Mozilla/Developer_guide
-/pt-PT/docs/Desenvolvimento_Mozilla	/pt-PT/docs/Mozilla/Developer_guide
 /pt-PT/docs/Desenvolvimento_Web	/pt-PT/docs/Web/Guide
 /pt-PT/docs/Eventos_online_e_offline	/pt-PT/docs/Web/API/NavigatorOnLine/Online_and_offline_events
 /pt-PT/docs/FAQ_Extensões	/pt-PT/docs/orphaned/FAQ_Extensões
@@ -274,7 +272,6 @@
 /pt-PT/docs/Glossário/Wrapper	/pt-PT/docs/Glossary/Wrapper
 /pt-PT/docs/Glossário/XML	/pt-PT/docs/Glossary/XML
 /pt-PT/docs/Glossário/booliano	/pt-PT/docs/Glossary/Boolean
-/pt-PT/docs/Guia_do_desenvolvedor	/pt-PT/docs/Mozilla/Developer_guide
 /pt-PT/docs/HTML	/pt-PT/docs/Web/HTML
 /pt-PT/docs/HTML/Aplicar_cor__elementos_HTML_utilizando_CSS	/pt-PT/docs/Web/HTML/Applying_color
 /pt-PT/docs/HTML/Atributos	/pt-PT/docs/Web/HTML/Attributes

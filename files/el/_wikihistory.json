@@ -21,6 +21,12 @@
       "Epameinondas-Soufleros"
     ]
   },
+  "Glossary/Accessibility": {
+    "modified": "2019-03-18T21:43:32.407Z",
+    "contributors": [
+      "ValentinHacker"
+    ]
+  },
   "Glossary/Computer_Programming": {
     "modified": "2019-03-23T22:30:01.059Z",
     "contributors": [
@@ -50,6 +56,12 @@
     "contributors": [
       "mathiou",
       "mplexus"
+    ]
+  },
+  "Glossary/Index": {
+    "modified": "2019-01-17T02:27:54.053Z",
+    "contributors": [
+      "ValentinHacker"
     ]
   },
   "Glossary/Java": {
@@ -85,6 +97,36 @@
       "stephaniehobson"
     ]
   },
+  "Learn/Common_questions/How_does_the_Internet_work": {
+    "modified": "2020-07-16T22:35:36.513Z",
+    "contributors": [
+      "Amalchen"
+    ]
+  },
+  "Learn/Common_questions/Pages_sites_servers_and_search_engines": {
+    "modified": "2020-07-16T22:35:39.520Z",
+    "contributors": [
+      "Amalchen"
+    ]
+  },
+  "Learn/Common_questions/What_are_hyperlinks": {
+    "modified": "2020-07-16T22:35:42.895Z",
+    "contributors": [
+      "Amalchen"
+    ]
+  },
+  "Learn/Forms": {
+    "modified": "2020-07-16T22:20:55.179Z",
+    "contributors": [
+      "Jeffrey_Yang"
+    ]
+  },
+  "Learn/Forms/Form_validation": {
+    "modified": "2020-07-16T22:21:48.424Z",
+    "contributors": [
+      "stratis-vip"
+    ]
+  },
   "Learn/Getting_started_with_the_web": {
     "modified": "2020-07-16T22:33:50.911Z",
     "contributors": [
@@ -103,6 +145,12 @@
       "k33theod"
     ]
   },
+  "Learn/JavaScript/First_steps": {
+    "modified": "2020-07-16T22:29:49.269Z",
+    "contributors": [
+      "kriminals"
+    ]
+  },
   "MDN": {
     "modified": "2019-03-24T00:08:44.846Z",
     "contributors": [
@@ -118,6 +166,12 @@
       "SphinxKnight",
       "wbamberg",
       "dspentzos"
+    ]
+  },
+  "MDN/At_ten": {
+    "modified": "2019-03-23T22:31:03.705Z",
+    "contributors": [
+      "andreaschoukas"
     ]
   },
   "MDN/Contribute": {
@@ -155,10 +209,28 @@
       "ethertank"
     ]
   },
-  "Mozilla/Developer_guide": {
-    "modified": "2019-03-23T22:03:06.576Z",
+  "Mozilla/Add-ons": {
+    "modified": "2019-09-09T11:54:45.286Z",
     "contributors": [
-      "glasserc"
+      "SphinxKnight",
+      "dspentzos"
+    ]
+  },
+  "Tools": {
+    "modified": "2020-07-16T22:44:14.171Z",
+    "contributors": [
+      "SphinxKnight",
+      "sotos",
+      "gremlin",
+      "sro",
+      "Simaioforos",
+      "dspentzos"
+    ]
+  },
+  "Tools/about:debugging": {
+    "modified": "2020-07-16T22:36:32.137Z",
+    "contributors": [
+      "minasloykas65"
     ]
   },
   "Web": {
@@ -244,6 +316,12 @@
       "utkarshbhatt12"
     ]
   },
+  "Web/JavaScript/Reference/Functions/Default_parameters": {
+    "modified": "2020-10-15T22:02:41.992Z",
+    "contributors": [
+      "mankal111"
+    ]
+  },
   "Web/JavaScript/Reference/Global_Objects": {
     "modified": "2020-03-12T19:46:50.495Z",
     "contributors": [
@@ -268,94 +346,10 @@
       "dspentzos"
     ]
   },
-  "Glossary/Index": {
-    "modified": "2019-01-17T02:27:54.053Z",
-    "contributors": [
-      "ValentinHacker"
-    ]
-  },
-  "Glossary/Accessibility": {
-    "modified": "2019-03-18T21:43:32.407Z",
-    "contributors": [
-      "ValentinHacker"
-    ]
-  },
-  "Learn/Common_questions/How_does_the_Internet_work": {
-    "modified": "2020-07-16T22:35:36.513Z",
-    "contributors": [
-      "Amalchen"
-    ]
-  },
-  "Learn/Common_questions/Pages_sites_servers_and_search_engines": {
-    "modified": "2020-07-16T22:35:39.520Z",
-    "contributors": [
-      "Amalchen"
-    ]
-  },
-  "Learn/Common_questions/What_are_hyperlinks": {
-    "modified": "2020-07-16T22:35:42.895Z",
-    "contributors": [
-      "Amalchen"
-    ]
-  },
-  "Learn/Forms": {
-    "modified": "2020-07-16T22:20:55.179Z",
-    "contributors": [
-      "Jeffrey_Yang"
-    ]
-  },
-  "Learn/Forms/Form_validation": {
-    "modified": "2020-07-16T22:21:48.424Z",
-    "contributors": [
-      "stratis-vip"
-    ]
-  },
-  "Learn/JavaScript/First_steps": {
-    "modified": "2020-07-16T22:29:49.269Z",
-    "contributors": [
-      "kriminals"
-    ]
-  },
-  "MDN/At_ten": {
-    "modified": "2019-03-23T22:31:03.705Z",
-    "contributors": [
-      "andreaschoukas"
-    ]
-  },
   "orphaned/MDN/Contribute/Howto/Create_an_MDN_account": {
     "modified": "2019-01-17T03:15:07.858Z",
     "contributors": [
       "wbamberg",
-      "dspentzos"
-    ]
-  },
-  "Mozilla/Add-ons": {
-    "modified": "2019-09-09T11:54:45.286Z",
-    "contributors": [
-      "SphinxKnight",
-      "dspentzos"
-    ]
-  },
-  "Web/JavaScript/Reference/Functions/Default_parameters": {
-    "modified": "2020-10-15T22:02:41.992Z",
-    "contributors": [
-      "mankal111"
-    ]
-  },
-  "Tools/about:debugging": {
-    "modified": "2020-07-16T22:36:32.137Z",
-    "contributors": [
-      "minasloykas65"
-    ]
-  },
-  "Tools": {
-    "modified": "2020-07-16T22:44:14.171Z",
-    "contributors": [
-      "SphinxKnight",
-      "sotos",
-      "gremlin",
-      "sro",
-      "Simaioforos",
       "dspentzos"
     ]
   }

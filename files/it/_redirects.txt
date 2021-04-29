@@ -360,7 +360,6 @@
 /it/docs/DOM:window.stop	/it/docs/Web/API/Window/stop
 /it/docs/DOM_Inspector	/it/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /it/docs/Dare_una_mano_al_puntatore	/it/docs/conflicting/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
-/it/docs/Developer_Guide	/it/docs/Mozilla/Developer_guide
 /it/docs/Estensioni:Comunità	/it/docs/Estensioni/Comunità
 /it/docs/Firefox_1.5	/it/docs/Mozilla/Firefox/Releases/1.5
 /it/docs/Firefox_1.5_per_Sviluppatori	/it/docs/Mozilla/Firefox/Releases/1.5

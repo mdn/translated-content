@@ -235,13 +235,9 @@
 /de/docs/DOM/window.openDialog	/de/docs/Web/API/Window/openDialog
 /de/docs/DOM/window.setTimeout	/de/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /de/docs/DOM_Inspector	/de/docs/orphaned/Tools/Add-ons/DOM_Inspector
-/de/docs/Developer_Guide	/de/docs/Mozilla/Developer_guide
-/de/docs/Developer_Guide/firefox_erfolgreich_erstellt	/de/docs/Mozilla/Developer_guide/So_you_just_built_Firefox
 /de/docs/DragDrop	/de/docs/Web/API/HTML_Drag_and_Drop_API
 /de/docs/Eine_erste_Erweiterung_erstellen	/de/docs/conflicting/Mozilla/Add-ons
 /de/docs/Einführung_in_den_Gebrauch_von_XPath_in_JavaScript	/de/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
-/de/docs/Entwicklerhandbuch	/de/docs/Mozilla/Developer_guide
-/de/docs/Entwicklerhandbuch/Quelltexte	/de/docs/Mozilla/Developer_guide/Source_Code
 /de/docs/Erweiterung_erstellen	/de/docs/conflicting/Mozilla/Add-ons
 /de/docs/Erweiterungen_für_Firefox_3_aktualisieren	/de/docs/Mozilla/Firefox/Releases/3/Updating_extensions
 /de/docs/Farbverläufe_in_CSS	/de/docs/Web/CSS/CSS_Images/Using_CSS_gradients
@@ -449,9 +445,6 @@
 /de/docs/Mozilla/Add-ons/WebExtensions/Beispiele	/de/docs/Mozilla/Add-ons/WebExtensions/Examples
 /de/docs/Mozilla/Add-ons/WebExtensions/Deine_erste_WebErweiterung	/de/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /de/docs/Mozilla/Add-ons/WebExtensions/Deine_zweite_Erweiterung	/de/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-/de/docs/Mozilla/Developer_guide/Quelltexte	/de/docs/Mozilla/Developer_guide/Source_Code
-/de/docs/Mozilla/Developer_guide/firefox_erfolgreich_erstellt	/de/docs/Mozilla/Developer_guide/So_you_just_built_Firefox
-/de/docs/Mozilla_entwickeln	/de/docs/Mozilla/Developer_guide
 /de/docs/Online_and_offline_events	/de/docs/Web/API/NavigatorOnLine/Online_and_offline_events
 /de/docs/OpenSearch_Plugin_für_Firefox_erstellen	/de/docs/Web/OpenSearch
 /de/docs/Plugins/Flash-Aktivierung:_Browser-Vergleich	/de/docs/orphaned/Plugins/Flash_Activation:_Browser_Comparison

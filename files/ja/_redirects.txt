@@ -218,10 +218,8 @@
 /ja/docs/Bugzilla-jp:Guide:Search:Simple	/ja/docs/orphaned/Bugzilla-jp/Guide/Search/Simple
 /ja/docs/Bugzilla-jp:Guide:Tracking	/ja/docs/orphaned/Bugzilla-jp/Guide/Tracking
 /ja/docs/Bugzilla_(external)	https://bugzilla.mozilla.org/enter_bug.cgi?format=guided
-/ja/docs/Build_and_Install	/ja/docs/Mozilla/Developer_guide/Build_Instructions
 /ja/docs/Building_a_Mozilla_Distribution	/ja/docs/orphaned/Building_a_Mozilla_Distribution
 /ja/docs/Building_an_Extension	/ja/docs/conflicting/Mozilla/Add-ons
-/ja/docs/Building_with_VC8_Express	/ja/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites
 /ja/docs/CORS_Enabled_Image	/ja/docs/Web/HTML/CORS_enabled_image
 /ja/docs/CSS	/ja/docs/Web/CSS
 /ja/docs/CSS-2_Quick_Reference	/ja/docs/conflicting/Web/CSS
@@ -665,7 +663,6 @@
 /ja/docs/Checky_Firefox_Extension_(external)	https://addons.mozilla.org/ja/firefox/addon/165
 /ja/docs/Chrome	/ja/docs/Glossary/Chrome
 /ja/docs/Chrome:_Command_Line	/ja/docs/Chrome/Command_Line
-/ja/docs/Code_Review_FAQ	/ja/docs/Mozilla/Developer_guide/Code_Review_FAQ
 /ja/docs/Code_snippets/Dialogs	/ja/docs/Code_snippets/Dialogs_and_Prompts
 /ja/docs/Code_snippets/Toolbar	/ja/docs/orphaned/Code_snippets/Toolbar
 /ja/docs/Code_snippets:Canvas	/ja/docs/Code_snippets/Canvas
@@ -2257,13 +2254,6 @@
 /ja/docs/DevNews:20080728	/ja/docs/orphaned/DevNews/20080728
 /ja/docs/DevNews:20080729	/ja/docs/orphaned/DevNews/20080729
 /ja/docs/DevNews:20080805	/ja/docs/orphaned/DevNews/20080805
-/ja/docs/Developer_Guide	/ja/docs/Mozilla/Developer_Guide
-/ja/docs/Developer_Guide/How_to_Submit_a_Patch	/ja/docs/Mozilla/Developer_Guide/How_to_Submit_a_Patch
-/ja/docs/Developer_Guide/SVG_Guidelines	/ja/docs/Mozilla/Developer_Guide/SVG_Guidelines
-/ja/docs/Developer_Guide/Source_Code	/ja/docs/Mozilla/Developer_Guide/Source_Code
-/ja/docs/Developer_Guide/Source_Code/CVS	/ja/docs/Mozilla/Developer_Guide/Source_Code/CVS
-/ja/docs/Developer_Guide/Source_Code/Getting_comm-central_Source_Code_Using_Mercurial	/ja/docs/Mozilla/Developer_guide/Source_Code/Getting_comm-central
-/ja/docs/Developer_Guide/Working_with_Mozilla_source_code	/ja/docs/Mozilla/Developer_Guide/Source_Code
 /ja/docs/Developing_Mozilla	/ja/docs/orphaned/Developing_Mozilla
 /ja/docs/Developing_add-ons	/ja/docs/orphaned/Developing_add-ons
 /ja/docs/DragDrop	/ja/docs/conflicting/Web/API/HTML_Drag_and_Drop_API
@@ -2375,7 +2365,6 @@
 /ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win	/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser/Physics	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics
-/ja/docs/Getting_your_patch_in_the_tree	/ja/docs/Mozilla/Developer_Guide/How_to_Submit_a_Patch
 /ja/docs/Glossary/AOM	/ja/docs/Glossary/Accessibility_tree
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
@@ -2602,7 +2591,6 @@
 /ja/docs/HTTP_access_control	/ja/docs/Web/HTTP/CORS
 /ja/docs/Hacking_Mozilla	/ja/docs/conflicting/Mozilla/Developer_guide/How_to_Submit_a_Patch
 /ja/docs/Help_Viewer:Creating_a_Help_Content_Pack	/ja/docs/Help_Viewer/Creating_a_Help_Content_Pack
-/ja/docs/How_Mozilla's_build_system_works	/ja/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works
 /ja/docs/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
 /ja/docs/IndexedDB	/ja/docs/Web/API/IndexedDB_API
 /ja/docs/Installing_Extensions_and_Themes_From_Web_Pages	/ja/docs/orphaned/Installing_Extensions_and_Themes_From_Web_Pages
@@ -3401,13 +3389,8 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 /ja/docs/Mozilla/Add-ons/WebExtensions/デバッグ	https://extensionworkshop.com/documentation/develop/debugging/
 /ja/docs/Mozilla/Add-ons/WebExtensions/前提条件	/ja/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
-/ja/docs/Mozilla/Developer_Guide/Getting_your_patch_in_the_tree	/ja/docs/Mozilla/Developer_Guide/How_to_Submit_a_Patch
-/ja/docs/Mozilla/Developer_Guide/Source_Code/Getting_comm-central_Source_Code_Using_Mercurial	/ja/docs/Mozilla/Developer_guide/Source_Code/Getting_comm-central
-/ja/docs/Mozilla/Developer_Guide/Source_Code/Mozilla_Source_Code_(CVS)	/ja/docs/Mozilla/Developer_Guide/Source_Code/CVS
-/ja/docs/Mozilla/Developer_Guide/Working_with_Mozilla_source_code	/ja/docs/Mozilla/Developer_Guide/Source_Code
 /ja/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/ja/docs/Mozilla/Firefox/Releases/47
 /ja/docs/Mozilla_Addons_FAQ_(external)	https://addons.mozilla.org/faq.php
-/ja/docs/Mozilla_Build_FAQ	/ja/docs/Mozilla/Developer_Guide/Mozilla_Build_FAQ
 /ja/docs/Mozilla_Embedding_FAQ:Common_Problems	/ja/docs/Mozilla_Embedding_FAQ/Common_Problems
 /ja/docs/Mozilla_Embedding_FAQ:Embedding_Gecko	/ja/docs/Mozilla_Embedding_FAQ/Embedding_Gecko
 /ja/docs/Mozilla_Embedding_FAQ:How_do_I...	/ja/docs/Mozilla_Embedding_FAQ/How_do_I...
@@ -3415,8 +3398,6 @@
 /ja/docs/Mozilla_Hacker's_Getting_Started_Guide	/ja/docs/conflicting/Mozilla/Developer_guide
 /ja/docs/Mozilla_Modules_and_Module_Ownership	/ja/docs/orphaned/Mozilla_Modules_and_Module_Ownership
 /ja/docs/Mozilla_SVG_Status	/ja/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/ja/docs/Mozilla_Source_Code_(CVS)	/ja/docs/Mozilla/Developer_Guide/Source_Code/CVS
-/ja/docs/Mozilla_Source_Code_Via_CVS	/ja/docs/Mozilla/Developer_Guide/Source_Code/CVS
 /ja/docs/Mozmill	/ja/docs/orphaned/Mozmill
 /ja/docs/My_Chrome_Oven	/ja/docs/orphaned/My_Chrome_Oven
 /ja/docs/NPAPI/Constants	/ja/docs/Plugins/Guide/Constants
@@ -5642,7 +5623,6 @@
 /ja/docs/lastIndexOf	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 /ja/docs/method	/ja/docs/Web/API/HTMLFormElement/method
 /ja/docs/mozIStorageService	/ja/docs/orphaned/mozIStorageService
-/ja/docs/mozilla-central	/ja/docs/Mozilla/Developer_guide/mozilla-central
 /ja/docs/mozillaのメール	/ja/docs/Web
 /ja/docs/nsIDynamicContainer	/ja/docs/orphaned/nsIDynamicContainer
 /ja/docs/reftest_opportunities_files	/ja/docs/orphaned/reftest_opportunities_files
