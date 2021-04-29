@@ -10,9 +10,9 @@ tags:
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>Cookie</code></strong> HTTP request header contains stored <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> associated with the server (i.e. previously sent by the server with the {{HTTPHeader("Set-Cookie")}} header or set in Javascript using {{domxref("Document.cookie")}}).</p>
+<p><strong><code>Cookie</code></strong> 是 HTTP 請求標頭，它的值包含由伺服器設定的 <a href="/en-US/docs/Web/HTTP/Cookies">HTTP cookies</a> （透過 {{HTTPHeader("Set-Cookie")}} 標頭設定，或者透過 Javascript 的 {{domxref("Document.cookie")}} 設定）。</p>
 
-<p>The <code>Cookie</code> header is optional and may be omitted if, for example, the browser's privacy settings block cookies.</p>
+<p><code>Cookie</code> 標頭不是必要的，比如瀏覽器可能會因為隱私設定而直接省略 Cookie 不傳。</p>
 
 <table class="properties">
  <tbody>
@@ -35,10 +35,10 @@ Cookie: name=value; name2=value2; name3=value3</pre>
 
 <dl>
  <dt>&lt;cookie-list&gt;</dt>
- <dd>A list of name-value pairs in the form of <code>&lt;cookie-name&gt;=&lt;cookie-value&gt;</code>. Pairs in the list are separated by a semicolon and a space (<code>'; '</code>).</dd>
+ <dd>一連串名值對（name-value pair），格式為： <code>&lt;cookie-name&gt;=&lt;cookie-value&gt;</code>。每對之間由一個分號與一個空白分隔（<code>'; '</code>）。</dd>
 </dl>
 
-<h2 id="Examples">Examples</h2>
+<h2 id="Examples">範例</h2>
 
 <pre>Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1</pre>
 
