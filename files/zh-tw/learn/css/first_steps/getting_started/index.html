@@ -190,7 +190,7 @@ span.special {
   font-size: 200%;
 }</pre>
 
-<p>下面實際的例子中，包含了上面提到的兩個規則。試著將段落（p）裡的 span 改為紅色。藉由確認第一個段落裡的 span 變成紅色，但清單第一項裡的沒有改變，您將會知道所加入規則是否正確。</p>
+<p>下面真實運作的例子中，包含了上面提到的兩個規則。試著將段落（p）裡的 span 改為紅色。藉由確認第一個段落裡的 span 變成紅色，但清單第一項裡的沒有改變，您將會知道所加入規則是否正確。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}</p>
 
@@ -200,7 +200,7 @@ span.special {
 
 <h2 id="Styling_things_based_on_state">依狀態指定樣式</h2>
 
-<p>The final type of styling we shall take a look at in this tutorial is the ability to style things based on their state. A straightforward example of this is when styling links. When we style a link we need to target the <code><a href="/en-US/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> (anchor) element. This has different states depending on whether it is unvisited, visited, being hovered over, focused via the keyboard, or in the process of being clicked (activated). You can use CSS to target these different states — the CSS below styles unvisited links pink and visited links green.</p>
+<p>在這篇教學中我們要看的最後一種類型，是依照元素的狀態來設定樣式的能力。最直接的例子就是設定連結的樣式。當我們設定連結的樣式，我們的目標是 <code><a href="/zh-TW/docs/Web/HTML/Element/a">&lt;a&gt;</a></code> （錨點 anchor）元素。它具有不同的狀態來表示其連結：還沒被訪問過、訪問過、滑鼠停留其上方、由鍵盤取得焦點或是正被點擊中。您可以使用 CSS 來指定不同的狀態，下面的 CSS 設定連結（錨點元素）在未訪問過時為粉紅色，訪問過為綠色。</p>
 
 <pre class="brush: css">a:link {
   color: pink;
@@ -210,29 +210,29 @@ a:visited {
   color: green;
 }</pre>
 
-<p>You can change the way the link looks when the user hovers over it, for example removing the underline, which is achieved by in the next rule:</p>
+<p>您可以改變連結當滑鼠停留在上頭（或稱為懸停）時的樣子，假如要把連結的底線移除，可以用接下來的規則作到：</p>
 
 <pre class="brush: css">a:hover {
   text-decoration: none;
 }</pre>
 
-<p>In the live example below, you can play with different values for the various states of a link. I have added the rules above to it, and now realize that the pink color is quite light and hard to read — why not change that to a better color? Can you make the links bold?</p>
+<p>在下面真實運作的例子裡，您可以為連結的不同狀態設定不同的樣式。我已經將上面例子中的規則加進去，而現在意識到粉紅色實在是太淺而且不好閱讀，何不換個更好的顏色？您能讓連結變成粗體嗎？</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}} </p>
 
-<p>We have removed the underline on our link on hover. You could remove the underline from all states of a link. It is worth remembering however that in a real site, you want to ensure that visitors know that a link is a link. Leaving the underline in place, can be an important clue for people to realize that some text inside a paragraph can be clicked on — this is the behavior they are used to. As with everything in CSS, there is the potential to make the document less accessible with your changes — we will aim to highlight potential pitfalls in appropriate places.</p>
+<p>我們已經將連結在懸停狀態下的底線移除。您也可以移除連結在所有狀態下的底線。但是在實際運作的網站上，值得注意的是您要確保使用網站的人能分判哪些元素是連結。留著底線會是一個讓人意識到段落中的某些文字以可點擊的重要線索，這是人們已經習慣的行為。就像所有 CSS　規則一樣，您所作的更改可能會使得內容難被閱讀或使用，我們將儘可能將這些可能的問題點突顯出來。</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: you will often see mention of <a href="/en-US/docs/Learn/Accessibility">accessibility</a> in these lessons and across MDN. When we talk about accessibility we are referring to the requirement for our webpages to be understandable and usable by everyone.</p>
+<p><strong>注意</strong>： 你將會在 MDN 網站以及這些課程中經常看到<a href="/zh-TW/docs/Learn/Accessibility">可用性</a>的觀點被提起。當我們討論可用性的時候，指的是為了讓我們網頁能被每個人了解及使用所必須的東西。</p>
 
-<p>Your visitor may well be on a computer with a mouse or trackpad, or a phone with a touchscreen. Or they might be using a screenreader, which reads out the content of the document, or they may need to use much larger text, or be navigating the site using the keyboard only.</p>
+<p>您的訪客可能使用帶滑鼠或觸控面板的電腦，或是有觸控螢幕的電話。又或著他們使用螢幕閱讀器，它會將網站的內容唸出來，或著他們需要更大的文體，或著只能使用鍵盤來瀏覽網站。</p>
 
-<p>A plain HTML document is generally accessible to everyone — as you start to style that document it is important that you don't make it less accessible.</p>
+<p>沒經過裝飾（瀏覽器預設樣式）的 HTML 內容，通常每個人都能使用（不見得最方便，但可以閱讀），當你開始設定樣式的時候，請不要讓讓它變得更難被使用，這一點很重要。</p>
 </div>
 
-<h2 id="Combining_selectors_and_combinators">Combining selectors and combinators</h2>
+<h2 id="Combining_selectors_and_combinators">組合選擇器和連結器</h2>
 
-<p>It is worth noting that you can combine multiple selectors and combinators together. For example:</p>
+<p>值得一提的是，您可以把多個選擇器和連結器組合在一起，例如：</p>
 
 <pre class="brush: css">/* selects any &lt;span&gt; that is inside a &lt;p&gt;, which is inside an &lt;article&gt;  */
 article p span { ... }
@@ -240,7 +240,7 @@ article p span { ... }
 /* selects any &lt;p&gt; that comes directly after a &lt;ul&gt;, which comes directly after an &lt;h1&gt;  */
 h1 + ul + p { ... }</pre>
 
-<p>You can combine multiple types together, too. Try adding the following into your code:</p>
+<p>您也可以使用不同種類的選擇器和連結器，試著把下面的規則加到您的 CSS 中：</p>
 
 <pre class="brush: css">body h1 + p .special {
   color: yellow;
@@ -248,26 +248,26 @@ h1 + ul + p { ... }</pre>
   padding: 5px;
 }</pre>
 
-<p>This will style any element with a class of <code>special</code>, which is inside a <code>&lt;p&gt;</code>, which comes just after an <code>&lt;h1&gt;</code>, which is inside a <code>&lt;body&gt;</code>. Phew!</p>
+<p>這個規則會對任何在 <code>&lt;body&gt;</code> 內，跟在 <code>&lt;h1&gt;</code> 後 <code>&lt;p&gt;</code> 裡的 <code>special</code> 分類元素設定樣式！</p>
 
-<p>In the original HTML we provided, the only element styled is <code>&lt;span class="special"&gt;</code>.</p>
+<p>在們提供的 HTML 文件中，樣式只會套用在 <code>&lt;span class="special"&gt;</code> 元素上。</p>
 
-<p>Don't worry if this seems complicated at the moment — you'll soon start to get the hang of it as you write more CSS.</p>
+<p>如果這現在看起來有很複雜，別擔心，隨著開始撰寫更多 CSS ，您很快就會掌握它了。</p>
 
-<h2 id="Wrapping_up">Wrapping up</h2>
+<h2 id="Wrapping_up">小結</h2>
 
-<p>In this tutorial, we have taken a look at a number of ways in which you can style a document using CSS. We will be developing this knowledge as we move through the rest of the lessons. However you now already know enough to style text, apply CSS based on different ways of targeting elements in the document, and look up properties and values in the MDN documentation.</p>
+<p>在這個課程中，我們探討了一些使用 CSS 來設定樣式的方法。我們將在後續的課程中學習這些知識。不過，您現在已經知識怎麼調整文字的樣式，以不同的方式指定文件中想套用樣式的元素，並且在 MDN 文件中查找可以使用的屬性及支援的值。</p>
 
-<p>In the next lesson we will be taking a look at how CSS is structured.</p>
+<p>在下一個課程中，我們將看看 CSS 的結構是如何。</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="In_this_module">在這個單元中</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/What_is_CSS">What is CSS?</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Getting_started">Getting started with CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured">How CSS is structured</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/How_CSS_works">How CSS works</a></li>
- <li><a href="/en-US/docs/Learn/CSS/First_steps/Using_your_new_knowledge">Using your new knowledge</a></li>
+ <li><a href="/zh-TW/docs/Learn/CSS/First_steps/What_is_CSS">CSS 是什麼？</a></li>
+ <li><a href="/zh-TW/docs/Learn/CSS/First_steps/Getting_started">開始使用 CSS</a></li>
+ <li><a href="/zh-TW/docs/Learn/CSS/First_steps/How_CSS_is_structured">CSS 的結構</a></li>
+ <li><a href="/zh-TW/docs/Learn/CSS/First_steps/How_CSS_works">CSS 的運作方式</a></li>
+ <li><a href="/zh-TW/docs/Learn/CSS/First_steps/Using_your_new_knowledge">使用您的新知識</a></li>
 </ol>
