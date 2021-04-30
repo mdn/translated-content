@@ -1,10 +1,10 @@
 ---
-title: '<hr>: 主題分割 (水平線) 要素'
+title: '<hr>: 主題区切り (水平線) 要素'
 slug: Web/HTML/Element/hr
 tags:
+  - Element
   - HTML
-  - HTML コンテンツグループ化
-  - 'HTML:フローコンテンツ'
+  - HTML grouping content
   - Reference
   - ウェブ
   - 要素
@@ -16,15 +16,13 @@ translation_of: Web/HTML/Element/hr
 
 <div>{{EmbedInteractiveExample("pages/tabbed/hr.html", "tabbed-shorter")}}</div>
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
-
 <p>以前はこれは水平の区切り線として定義されていました。現在でもブラウザーでは水平線として表示されますが、この要素は表示論的な用語ではなく意味論的な用語で定義されましたので、水平線を引きたいのであれば、適切な CSS を使用して行うようにしてください。</p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a></td>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a></td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
@@ -36,11 +34,15 @@ translation_of: Web/HTML/Element/hr
   </tr>
   <tr>
    <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れるすべての要素</td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>を受け入れるすべての要素</td>
+  </tr>
+  <tr>
+    <th scope="row">暗黙の ARIA ロール</th>
+    <td>{{ARIARole("separator")}}</td>
   </tr>
   <tr>
    <th scope="row">許可されている ARIA ロール</th>
-   <td>{{ARIARole("presentation")}}</td>
+   <td>{{ARIARole("presentation")}} または {{ARIARole("none")}}</td>
   </tr>
   <tr>
    <th scope="row">DOM インターフェイス</th>
@@ -49,7 +51,7 @@ translation_of: Web/HTML/Element/hr
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
 <p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
 
@@ -66,7 +68,7 @@ translation_of: Web/HTML/Element/hr
  <dd>区切り線の幅をピクセル数、あるいはパーセントで指定します。</dd>
 </dl>
 
-<h2 id="Example" name="Example">例</h2>
+<h2 id="Example">例</h2>
 
 <h3 id="HTML">HTML</h3>
 
@@ -86,11 +88,11 @@ translation_of: Web/HTML/Element/hr
   This is the second paragraph of text.
 &lt;/p&gt;</pre>
 
-<h3 id="Result" name="Result">結果</h3>
+<h3 id="Result">結果</h3>
 
 <p>{{EmbedLiveSample("Example")}}</p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -119,13 +121,11 @@ translation_of: Web/HTML/Element/hr
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("html.elements.hr")}}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>{{HTMLElement('p')}}</li>
