@@ -277,16 +277,10 @@
 /ko/docs/DOM_Inspector	/ko/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /ko/docs/DOM_improvements_in_Firefox_3	/ko/docs/Mozilla/Firefox/Releases/3/DOM_improvements
 /ko/docs/Determining_the_dimensions_of_elements	/ko/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
-/ko/docs/Developer_Guide	/ko/docs/Mozilla/Developer_guide
-/ko/docs/Developer_Guide/Source_Code	/ko/docs/Mozilla/Developer_guide/Source_Code
-/ko/docs/Developer_guide/Eclipse	/ko/docs/Mozilla/Developer_guide/Eclipse
-/ko/docs/Developer_guide/Eclipse/Eclipse_CDT	/ko/docs/Mozilla/Developer_guide/Eclipse/Eclipse_CDT
-/ko/docs/Developing_Mozilla	/ko/docs/Mozilla/Developer_guide
 /ko/docs/Drawing_Graphics_with_Canvas	/ko/docs/Web/API/Canvas_API/Tutorial
 /ko/docs/Drawing_text_using_a_canvas	/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /ko/docs/ECMAScript	/ko/docs/Web/JavaScript
 /ko/docs/EXSLT	/ko/docs/Web/EXSLT
-/ko/docs/Eclipse	/ko/docs/Mozilla/Developer_guide/Eclipse
 /ko/docs/Firefox_1.5	/ko/docs/Mozilla/Firefox/Releases/1.5
 /ko/docs/Firefox_1.5_for_developers	/ko/docs/Mozilla/Firefox/Releases/1.5
 /ko/docs/Firefox_2	/ko/docs/Mozilla/Firefox/Releases/2
@@ -570,9 +564,7 @@
 /ko/docs/Mozilla/애드온들/WebExtensions/manifest.json/page_action	/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action
 /ko/docs/Mozilla/애드온들/WebExtensions/user_interface	/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface
 /ko/docs/Mozilla/애드온들/WebExtensions/user_interface/Page_actions	/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-/ko/docs/Mozilla_Build_FAQ	/ko/docs/Mozilla/Developer_guide/Mozilla_Build_FAQ
 /ko/docs/Mozilla_Quirks_Mode_Behavior	/ko/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
-/ko/docs/Mozilla_Source_Code_Via_CVS	/ko/docs/Mozilla/Developer_guide/Source_Code/CVS
 /ko/docs/Navigation_timing	/ko/docs/Web/API/Navigation_timing_API
 /ko/docs/New_in_JavaScript_1.6	/ko/docs/Web/JavaScript/New_in_JavaScript/1.6
 /ko/docs/New_in_JavaScript_1.8	/ko/docs/Web/JavaScript/New_in_JavaScript/1.8
@@ -1276,7 +1268,6 @@
 /ko/docs/도구들/WebIDE	/ko/docs/Tools/WebIDE
 /ko/docs/도구들/WebIDE/문제해결	/ko/docs/Tools/WebIDE/문제해결
 /ko/docs/도구들/Web_Console	/ko/docs/Tools/Web_Console
-/ko/docs/모질라_프로젝트_참여하기_(Participating_in_the_Mozilla_project)	/ko/docs/Mozilla/Developer_guide
 /ko/docs/지역의_코드를_씁니다.	/ko/docs/orphaned/지역의_코드를_씁니다.
 /ko/docs/호환_모드와_표준_모드	/ko/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ko/docs/확장기능_개발_환경_구축	/ko/docs/orphaned/확장기능_개발_환경_구축

@@ -56,7 +56,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
   <li><code>&lt;cookie-name&gt;</code> は任意の US-ASCII 文字の集合で、制御文字、空白、タブを除いたものです。 <code>( ) &lt; &gt; @ , ; : \ " / [ ] ? = { }</code> のような区切り文字も含めることができません。</li>
   <li><code>&lt;cookie-value&gt;</code> は任意で二重引用符で囲むことができ、制御文字、{{glossary("Whitespace", "ホワイトスペース")}}、二重引用符、カンマ、セミコロン、バックスラッシュを除くすべての US-ASCII 文字が利用できます。 <strong>エンコーディング</strong>: 多くの実装ではクッキーの値に URL エンコーディングを施しますが、 RFC の仕様書では要求されていません。これは &lt;cookie-value&gt; に許可された文字についての要件を満足させるのに役立ちます。</li>
   <li><strong><code>__Secure-</code> の接頭辞</strong>{{non-standard_inline}}: <code>__Secure-</code> (接頭辞にダッシュを含む) で始まるクッキー名は、 <code>secure</code> フラグを設定することが必要で、安全なページ (HTTPS) でなければなりません。</li>
-  <li><strong><code>__Host-</code> の接頭辞</strong>{{non-standard_inline}}: <code>__Host-</code> で始まるクッキー名は、 <code>secure</code> フラグを設定し、安全なページ (HTTPS) から読み込む必要があり、ドメインを指定することができず (従ってサブドメインにも送られません)、パスが <code>/</code> で終わる必要があります。</li>
+  <li><strong><code>__Host-</code> の接頭辞</strong>{{non-standard_inline}}: <code>__Host-</code> で始まるクッキー名は、 <code>secure</code> フラグを設定し、安全なページ (HTTPS) から読み込む必要があり、ドメインを指定することができず (従ってサブドメインにも送られません)、パスが <code>/</code> である必要があります。</li>
  </ul>
  </dd>
  <dt><code>Expires=&lt;date&gt;</code> {{optional_inline}}</dt>

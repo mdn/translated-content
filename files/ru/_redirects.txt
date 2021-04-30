@@ -66,10 +66,6 @@
 /ru/docs/DOM/window.requestAnimationFrame	/ru/docs/Web/API/window/requestAnimationFrame
 /ru/docs/DOM:document.createElement	/ru/docs/Web/API/Document/createElement
 /ru/docs/DOM:table	/ru/docs/Web/API/HTMLTableElement
-/ru/docs/Developer_Guide	/ru/docs/Mozilla/Developer_guide
-/ru/docs/Developer_Guide/So_you_just_built_Firefox	/ru/docs/Mozilla/Developer_guide/So_you_just_built_Firefox
-/ru/docs/Developer_Guide/mozilla-central	/ru/docs/Mozilla/Developer_guide/mozilla-central
-/ru/docs/Developer_Guide/Исходный_код	/ru/docs/Mozilla/Developer_guide/Source_Code
 /ru/docs/Firefox_3.5_для_разработчика	/ru/docs/Mozilla/Firefox/Releases/3.5
 /ru/docs/Firefox_3_for_developers	/ru/docs/Mozilla/Firefox/Releases/3
 /ru/docs/Firefox_3_для_разработчика	/ru/docs/Mozilla/Firefox/Releases/3
@@ -118,7 +114,6 @@
 /ru/docs/IndexedDB	/ru/docs/Web/API/IndexedDB_API
 /ru/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ru/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ru/docs/IndexedDB/Using_IndexedDB	/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB
-/ru/docs/Introduction_(alternate)	/ru/docs/Mozilla/Developer_guide/Introduction
 /ru/docs/JavaScript	/ru/docs/Web/JavaScript
 /ru/docs/JavaScript/A_re-introduction_to_JavaScript	/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /ru/docs/JavaScript/Data_structures	/ru/docs/Web/JavaScript/Data_structures
@@ -357,7 +352,6 @@
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/Перевод	/ru/docs/orphaned/Mozilla/Add-ons/WebExtensions/Debugging
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-/ru/docs/Mozilla/Developer_guide/Исходный_код	/ru/docs/Mozilla/Developer_guide/Source_Code
 /ru/docs/Plugins/План	/ru/docs/Plugins/Roadmap
 /ru/docs/QA/Kak_pomoch_testirovat	/ru/docs/QA/Как_помочь_тестировать
 /ru/docs/Quirks_Mode_and_Standards_Mode	/ru/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
@@ -919,7 +913,6 @@
 /ru/docs/en	/en-US/
 /ru/docs/kak_soobschit_o_zavisshem_Firefox	/ru/docs/Как_сообщить_о_зависшем_Firefox
 /ru/docs/nsIOutputStream:writeFrom	/ru/docs/nsIOutputStream/writeFrom
-/ru/docs/Введение_(альтернативные_проекты)	/ru/docs/Mozilla/Developer_guide/Introduction
 /ru/docs/Веб-разработка	/ru/docs/conflicting/Web/Guide
 /ru/docs/Веб-стандарты	/ru/docs/orphaned/Веб-стандарты
 /ru/docs/Вопросы_без_ответов	/ru/docs/orphaned/Вопросы_без_ответов

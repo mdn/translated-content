@@ -795,8 +795,6 @@
 /pl/docs/DOM:window.setInterval	/pl/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
 /pl/docs/DOM:window.setTimeout	/pl/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /pl/docs/DOM_i_JavaScript	/pl/docs/orphaned/DOM_i_JavaScript
-/pl/docs/Developer_Guide	/pl/docs/Mozilla/Developer_guide
-/pl/docs/Developer_Guide/Source_Code	/pl/docs/Mozilla/Developer_guide/Source_Code
 /pl/docs/Dodatki_w_Mozilli_-_FAQ(link)	https://addons.mozilla.org/faq.php
 /pl/docs/Dodawanie_wyszukiwarek_z_poziomu_stron_WWW	/pl/docs/conflicting/Web/OpenSearch
 /pl/docs/Dodawanie_wyszukiwarek_ze_stron_WWW	/pl/docs/conflicting/Web/OpenSearch
@@ -3122,7 +3120,6 @@
 /pl/docs/focus	/pl/docs/Web/API/HTMLOrForeignElement/focus
 /pl/docs/getAttribute	/pl/docs/Web/API/Element/getAttribute
 /pl/docs/install.rdf	/pl/docs/Manifesty_Instalacji
-/pl/docs/mozilla-central	/pl/docs/Mozilla/Developer_guide/mozilla-central
 /pl/docs/nsIInputStream	/pl/docs/orphaned/nsIInputStream
 /pl/docs/nsIXULAppInfo	/pl/docs/orphaned/nsIXULAppInfo
 /pl/docs/setAttribute	/pl/docs/Web/API/Element/setAttribute
