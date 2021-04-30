@@ -22,7 +22,7 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p>此刻，我們已準備好使用 Angular 來創建我們的代辦事項應用程式。完成後的應用程式將具有顯示代辦項目列表，並包含編輯、刪除與新增項目等功能。在本篇中，您將學到應用程式的結構，以及建立一個可顯示代辦項目的基礎列表。</p>
+<p>此刻，我們已準備好使用 Angular 來創建我們的待辦事項應用程式。完成後的應用程式將具有顯示待辦項目列表，並包含編輯、刪除與新增項目等功能。在本篇中，您將學到應用程式的結構，以及建立一個可顯示待辦項目的基礎列表。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -33,47 +33,47 @@ tags:
   </tr>
   <tr>
    <th scope="row">學習目標：</th>
-   <td>藉由創建一個可顯示代辦事項列表的基本應用程式結構，協助了解 Angular 的基礎概念，例如元件結構、元件間的共享資料，以及持續不斷的內容創作。</td>
+   <td>藉由創建一個可顯示待辦事項列表的基本應用程式結構，協助了解 Angular 的基礎概念，例如元件結構、元件間的共享資料，以及持續不斷的內容創作。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="the_to_do_application_structure">The to-do application structure</h2>
+<h2 id="the_to_do_application_structure">待辦事項應用程式的結構組成</h2>
 
-<p>Just like a basic application that doesn't use a framework, an Angular application has an <code>index.html</code>.
-Within the <code>&lt;body&gt;</code> tag of the <code>index.html</code>, Angular uses a special element — <code>&lt;app-root&gt;</code> — to insert your main component, which in turn includes other components you create.
-Generally, you don't need to touch the <code>index.html</code>, instead focusing your work within specialized areas of your application called components.</p>
+<p>就如同一個不使用框架的簡易應用程式， Angular 應用程式同樣有個 <code>index.html</code> 檔案。
+在這個 <code>index.html</code> 的 <code>&lt;body&gt;</code> 標籤中， Angular 使用了一個特殊元素 — <code>&lt;app-root&gt;</code> — 來插入您的主要元件，該元件也包含著您所創建的其他元件。
+一般而言，您並不需要碰觸到 <code>index.html</code> 這個檔案，反而應該專注於那些應用程式中的特定區域內的事務，這些稱之為元件。</p>
 
-<h3 id="organize_your_application_with_components">Organize your application with components</h3>
+<h3 id="organize_your_application_with_components">使用元件來組織您的應用程式</h3>
 
-<p>Components are a central building block of Angular applications.
-This to-do application has two components — a component as a foundation for your application, and a component for handling to-do items.</p>
+<p>元件是 Angular 的核心組成部分
+這個待辦事項應用程式有兩個元件──一個元件作為您的應用程式基底，另一個元件用來處理待辦事項。</p>
 
-<p>Each component is made up of a TypeScript class, HTML, and CSS.
-Typescript transpiles, or converts, into JavaScript, which means that your application ultimately ends up in plain JavaScript but you have the convenience of using Typescript&#39;s extended features and streamlined syntax.</p>
+<p>每一個元件由一個 TypeScript 類別、 HTML 與 CSS 所組成。
+由於 Typescript 轉譯（transpile），又或者說轉換（convert）為 JavaScript ，這意味著您的應用程式最後為純粹的 JavaScript ，但儘管如此，您仍保有使用 Typescript 擴展功能與精簡語法的便利性。</p>
 
-<h3 id="dynamically_change_the_ui_with_ngif_and_ngfor">Dynamically change the UI with *ngIf and *ngFor</h3>
+<h3 id="dynamically_change_the_ui_with_ngif_and_ngfor">運用 *ngIf 與 *ngFor 來動態改變 UI</h3>
 
-<p>This tutorial also covers two important Angular directives for dynamically altering the structure of the DOM.
-A directive is like a command that you can use in your HTML to affect change in your application.</p>
+<p>這份教學也涵蓋兩個重要的 Angular 指令（directive）來動態變更 DOM 的結構。
+一個指令類似一個命令，讓您使用在您的 HTML 中，影響應用程式裡的變動。</p>
 
-<p>The first directive that this tutorial covers is Angular&#39;s iterator, <code>*ngFor</code>.
-<code>*ngFor</code> can dynamically create DOM elements based on items in an array.</p>
+<p>第一個指令為 Angular 的迭代器（iterator） <code>*ngFor</code> 。
+<code>*ngFor</code> 能根據一個陣列中項目動態建立 DOM 元素。</p>
 
-<p>The second directive that you learn in this tutorial is <code>*ngIf</code>.
-You can use <code>*ngIf</code> to add or remove elements from the DOM based on a condition.
-For example, if users want to edit an item in the to-do list, you can provide them with the means to edit the item.
-If they do not want to edit an item, you can remove the interface for editing.</p>
+<p>您會學到的第二個指令是 <code>*ngIf</code> 。
+您能使用 <code>*ngIf</code> 根據某個條件來對 DOM 進行添加或移除元素。
+例如，若使用者想要編輯在待辦列表中的某一個項目，您就需要提供他們編輯項目的各種方法。
+若他們不想要編輯這個項目時，您也要移除這個編輯中的介面。</p>
 
-<h3 id="share_data_between_components">Share data between components</h3>
+<h3 id="share_data_between_components">在元件之間共享資料</h3>
 
-<p>In this to-do application, you configure your components to share data.
-To add new items to the to do list, the main component has to send the new item to the second component.
-This second component manages the items and takes care of editing, marking as done, and deleting individual items.</p>
+<p>在這個待辦應用程式中，您需要配置元件來分享資料。
+為了添加新的項目至待辦列表，主要的元件必須發送這個新項目到第二個元件。
+第二個元件管理這些項目並且掌管編輯、標記已完成，以及刪除個別項目。</p>
 
-<p>You accomplish sharing data between Angular components with special decorators called <code>@Input()</code> and <code>@Output()</code>.
-You use these decorators to specify that certain properties allow data to go into or out of a component.
-To use <code>@Output()</code>, you raise an event in one component so that the other component knows that there is data available.</p>
+<p>您可以使用具有特殊裝飾子 <code>@Input()</code> 與 <code>@Output()</code> 在 Angular 元件之間達成資料共享。
+您使用這些裝飾子來指定哪些特定屬性允許資料輸入至一個元件或由一個元件輸出。
+欲使用 <code>@Output()</code> ，您要在一個元件中引發一個事件，如此一來，其他的元件就會知道有可使用的資料。</p>
 
 <h2 id="define_item-">Define Item</h2>
 
