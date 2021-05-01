@@ -75,22 +75,22 @@ tags:
 您使用這些裝飾子來指定哪些特定屬性允許資料輸入至一個元件或由一個元件輸出。
 欲使用 <code>@Output()</code> ，您要在一個元件中引發一個事件，如此一來，其他的元件就會知道有可使用的資料。</p>
 
-<h2 id="define_item-">Define Item</h2>
+<h2 id="define_item-">定義項目</h2>
 
-<p>In the <code>app</code> directory, create a new file named <code>item.ts</code> with the following contents:</p>
+<p>在 <code>app</code> 目錄中新建一個名為 <code>item.ts</code> 的檔案，包含以下內容：</p>
 
 <pre class="brush: js">export interface Item {
   description: string;
   done: boolean;
 }</pre>
 
-<p>The <code>Item</code> <code>interface</code> creates an <code>item</code> object model so that your application understands what an <code>item</code> is.
-For this to-do list, an <code>item</code> is an object that has a description and can be done.</p>
+<p>這個 <code>Item</code> <code>interface</code> 用來建立一個 <code>item</code> 物件模型，讓您的應用程式能理解 <code>item</code> 到底是什麼。
+對於這個待辦列表，一個 <code>item</code> 就代表一個擁有說明與是否已完成等兩個屬性的物件。</p>
 
-<h2 id="add_logic_to_appcomponent-">Add logic to AppComponent</h2>
+<h2 id="add_logic_to_appcomponent-">將邏輯加入至 AppComponent</h2>
 
-<p>Now that your application knows what an <code>item</code> is, you can give it some items by adding them to the TypeScript file, <code>app.component.ts</code>.
-In <code>app.component.ts</code>, replace the contents with the following:</p>
+<p>現在，您的應用程式知道了 <code>item</code> 為何物，您可以在 TypeScript 檔案 <code>app.component.ts</code> 中加入更多項目。
+在 <code>app.component.ts</code> 中置換內容如下：</p>
 
 <pre class="brush: js">
 import { Component } from '@angular/core';
@@ -122,29 +122,28 @@ export class AppComponent {
 
 }</pre>
 
-<p>The first line is a JavaScript import that imports Angular.
-The <code>@Component()</code> decorator specifies metadata about the <code>AppComponent</code>.
-The default metadata properties are as follows:</p>
+<p>第一行是以 JavaScript import 來匯入 Angular。
+這個 <code>@Component()</code> 裝飾子指定關於 <code>AppComponent</code> 的元資料（metadata）。
+預設元資料的屬性如下：</p>
 
 <ul>
-  <li><code>selector</code>: Tells you the name of the CSS selector that you use in a template to instantiate this component. Here it is <code>&#39;app-root&#39;</code>.
-In the <code>index.html</code>, within the <code>body</code> tag, the Angular CLI added <code>&lt;app-root&gt;&lt;/app-root&gt;</code> when generating your application.
-You use all component selectors in the same way by adding them to other component HTML templates.</li>
-  <li><code>templateUrl</code>: Specifies the HTML file to associate with this component.
-Here it is, &#39;./app.component.html&#39;,</li>
-  <li><code>styleUrls</code>: Provides the location and name of the file for your styles that apply specifically to this component. Here it is <code>&#39;./app.component.css&#39;</code>.</li>
+  <li><code>selector</code>: 代表您使用在範本內的 CSS 選擇器名稱，用以實例化這個元件。此處為 <code>&#39;app-root&#39;</code> 。
+當產生您的應用程式時，於 <code>index.html</code> 檔案中的 <code>body</code> 標籤內， Angular CLI 就已加入了 <code>&lt;app-root&gt;&lt;/app-root&gt;</code> 。
+您可以使用相同的方式來將元件選擇器加入至其他元件的 HTML 範本內。</li>
+  <li><code>templateUrl</code>: 指定與這個元件相關的 HTML 檔案。此處為 <code>&#39;./app.component.html&#39;</code> 。</li>
+  <li><code>styleUrls</code>: 提供要套用在這個元件的樣式表的檔案位址與名稱。此處為 <code>&#39;./app.component.css&#39;</code> 。</li>
 </ul>
 
-<p>The <code>filter</code> property is of type <code>union</code>, which means <code>filter</code> could have the value of <code>all</code>, <code>active</code>, or <code>done</code>.
-With the <code>union</code> type, if you make a typo in the value you assign to the <code>filter</code> property, TypeScript lets you know so that you can catch the bug early.
-This guide shows you how to add filtering in a later step, but you can also use a filter to show the default list of all the items.</p>
+<p>這個 <code>filter</code> 屬性為 <code>union</code> 型態，表示 <code>filter</code> 的值可能為 <code>all</code> 、 <code>active</code> ，或者 <code>done</code> 。
+有了 <code>union</code> 型態，若您賦予 <code>filter</code> 屬性錯誤的值， TypeScript 會馬上讓您知道來及早除錯。
+本指引接下來的步驟會展示如何為您的列表加入過濾功能，但您仍可以使用過濾器來顯示這個列表預設的所有項目。</p>
 
-<p>The <code>allItems</code> array contains the to-do items and whether they are <code>done</code>.
-The first item, <code>eat</code>, has a <code>done</code> value of true.</p>
+<p>這個 <code>allItems</code> 陣列包含所有待辦項目，其中也包含項目是否已完成的 <code>done</code> 屬性。
+例如，第一個項目 <code>eat</code> 擁有值為 true 的 <code>done</code> 屬性。</p>
 
-<p>The getter, <code>get items()</code>, retrieves the items from the <code>allItems</code> array if the <code>filter</code> is equal to <code>all</code>.
-Otherwise, <code>get items()</code> returns the <code>done</code> items or the outstanding items depending on how the user filters the view.
-The getter also establishes the name of the array as <code>items</code>, which you&#39;ll use in the next section.</p>
+<p>當 <code>filter</code> 等於 <code>all</code> 時，這個 getter <code>get items()</code> 會由 <code>allItems</code> 陣列中獲取所有的項目。
+否則， <code>get items()</code> 會回傳 <code>done</code> 的項目或是取決於使用者如何過濾的未完成項目。
+此 getter 也會建立名為 <code>items</code> 的陣列名稱，這部分您將會在下個章節使用到。</p>
 
 <h2 id="add_html_to_the_appcomponent_template">Add HTML to the AppComponent template</h2>
 
