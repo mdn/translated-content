@@ -133,10 +133,6 @@
 /zh-TW/docs/DOM/window.location	/zh-TW/docs/Web/API/Window/location
 /zh-TW/docs/DOM_中的空白字元	/zh-TW/docs/Web/API/Document_Object_Model/Whitespace
 /zh-TW/docs/DOM_觀察器	/zh-TW/docs/orphaned/DOM_觀察器
-/zh-TW/docs/Developer_Guide	/zh-TW/docs/Mozilla/Developer_guide
-/zh-TW/docs/Developer_Guide/原始碼	/zh-TW/docs/Mozilla/Developer_guide/Source_Code
-/zh-TW/docs/Developer_guide_temp	/zh-TW/docs/Mozilla/Developer_guide
-/zh-TW/docs/Developer_guide_temp/原始碼	/zh-TW/docs/Mozilla/Developer_guide/Source_Code
 /zh-TW/docs/DragDrop	/zh-TW/docs/conflicting/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/DragDrop/Drag_and_Drop	/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/Drawing_text_using_a_canvas	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_text
@@ -516,7 +512,6 @@
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/快捷選單項	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/開發工具面板	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶體驗最佳實踐	https://extensionworkshop.com/documentation/develop/user-experience-best-practices/
-/zh-TW/docs/Mozilla/Developer_guide/原始碼	/zh-TW/docs/Mozilla/Developer_guide/Source_Code
 /zh-TW/docs/Mozilla/Firefox/Releases/2/Firefox_2_的安全功能	/zh-TW/docs/Mozilla/Firefox/Releases/2/Security_changes
 /zh-TW/docs/Mozilla/Firefox/Releases/2/新增消息來源閱讀工具	/zh-TW/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /zh-TW/docs/Mozilla/Firefox/Releases/3/Firefox_3_Dom_Improvements	/zh-TW/docs/Mozilla/Firefox/Releases/3/DOM_improvements

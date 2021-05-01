@@ -1,56 +1,46 @@
 ---
-title: window.history
+title: Window.history
 slug: Web/API/Window/history
 tags:
-  - Gecko
+  - API
   - HTML DOM
   - History API
+  - Property
+  - Reference
   - Window
-  - 要更新
 translation_of: Web/API/Window/history
 ---
-<p>{{ ApiRef }}</p>
+<div>{{APIRef}}</div>
 
-<p>読み取り専用プロパティ<code><strong>Window</strong>.<strong>history</strong></code>は、{{domxref("History")}}オブジェクトへの参照を返します。{{domxref("History")}}はブラウザのセッション(今開いているタブやそのページが読み込まれているウィンドウで過去に訪れたページの履歴)を操作するインターフェースを提供します。</p>
+<p><code><strong>Window</strong>.<strong>history</strong></code> は読み取り専用プロパティで、 {{domxref("History")}} オブジェクトへの参照を返します。これはブラウザーの<em>セッション履歴</em> (現在のページが読み込まれているタブまたはフレームで訪れたことがあるページ群) を操作するためのインターフェイスを提供します。</p>
 
-<p>詳細や使用例については <a href="/en/DOM/Manipulating_the_browser_history" title="en/DOM/Manipulating the browser history">Manipulating the browser history </a>をご覧ください。このページでは特に<code>pushState()</code>メソッドや <code>replaceState()</code>メソッドについてセキュリティの観点から詳しく解説がなされています。これらのメソッドは注意して使う必要があります。</p>
+<p>詳細や使用例については、<a href="/ja/docs/Web/API/History_API">ブラウザーの履歴の操作</a>をご覧ください。特に、このページでは {{domxref("History.pushState", "pushState()")}} メソッドと {{domxref("History.replaceState", "replaceState()")}} メソッドについて、使用する前に気を付けなければならないセキュリティ上の特性を説明しています。</p>
 
-<p>{{ 英語版章題("Syntax") }}</p>
+<h2 id="Example">例</h2>
 
-<h3 id="構文">構文</h3>
-
-<pre class="syntaxbox"><em>var historyObj</em> = <em>window</em>.history;
+<pre class="brush: js">history.back();     // 戻るボタンを押すのと同等
+history.go(-1);     // history.back(); と同等
 </pre>
 
-<p>{{ 英語版章題("Example") }}</p>
+<h2 id="Notes">注</h2>
 
-<h3 id="例">例</h3>
+<p>最上位ページにおいて <code>History</code> オブジェクトを通してアクセスできるセッション履歴のページリストは、ブラウザーの「戻る」や「次へ」ボタンの隣にあるドロップダウンで確認することができます。</p>
 
-<pre class="brush: js">history.back();     // 戻るボタンを押したのと同じ効果
-history.go(-1);     // history.back();と同等の効果が得られます
-</pre>
+<p>セキュリティ上の理由から、 <code>History</code> オブジェクトでは権限のないコードがセッション履歴内の他のページの {{glossary("URL", "URL")}} にアクセスすることを禁止していますが、セッション履歴の中を移動することは許可しています。</p>
 
-<p>{{ 英語版章題("Notes") }}</p>
+<p>権限のないコードから、セッション履歴を消去したり、前後への移動を無効にしたりする方法はありません。実現可能な最も近い解決策は、 {{domxref("Location.replace", "location.replace()")}} メソッドでセッション履歴の現在の項目を指定された URL で置き換えることです。</p>
 
-<h3 id="注記">注記</h3>
-
-<p>For top-level pages you can see the list of pages in the session history, accessible via the <code>History</code> object, in the browser's dropdowns next to the back and forward buttons.</p>
-
-<p><code>History</code>オブジェクトはセッション履歴の他のページのURLへアクセスしようとする許可なきコードはセキュリティ上の理由から禁止しています。ただ、セッション履歴のあいだを行き来することは許可されています。</p>
-
-<p>権限のないコードでセッション履歴を消去したり、戻る/進む操作を無効にしたりする方法はありません。このような機能をどうしても実現したいのなら<code><a href="/ja/DOM/window.location#replace">location.replace()</a></code> メソッドを使うのがよいでしょう。このメソッドは現在のセッションを引数のURLに置き換えることができます。</p>
-
-<p>{{ 英語版章題("Specification") }}</p>
-
-<h3 id="仕様">仕様</h3>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">仕様</th>
    <th scope="col">状態</th>
-   <th scope="col">コメント</th>
+   <th scope="col">備考</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('HTML WHATWG', 'browsers.html#the-history-interface', 'The History interface')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
@@ -63,3 +53,7 @@ history.go(-1);     // history.back();と同等の効果が得られます
   </tr>
  </tbody>
 </table>
+
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("api.Window.history")}}</p>

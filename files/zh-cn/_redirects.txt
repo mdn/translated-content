@@ -593,10 +593,6 @@
 /zh-CN/docs/DOM:window.open	/zh-CN/docs/Web/API/Window/open
 /zh-CN/docs/DOM:window.openDialog	/zh-CN/docs/Web/API/Window/openDialog
 /zh-CN/docs/Detecting_device_orientation	/zh-CN/docs/orphaned/Web/API/Detecting_device_orientation
-/zh-CN/docs/Developer_Guide	/zh-CN/docs/Mozilla/Developer_guide
-/zh-CN/docs/Developer_Guide/Adding_APIs_to_the_navigator_object	/zh-CN/docs/Mozilla/Developer_guide/Adding_APIs_to_the_navigator_object
-/zh-CN/docs/Developer_Guide/Source_Code	/zh-CN/docs/Mozilla/Developer_guide/Source_Code
-/zh-CN/docs/Developer_Guide/Source_Code/通过Mercurial获取源码	/zh-CN/docs/Mozilla/Developer_guide/Source_Code/LatestPassingSource
 /zh-CN/docs/Document_Object_Model_(DOM)/window.onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
 /zh-CN/docs/Download_Mozilla_Source_Code	/en-US/docs/Mozilla/Developer_guide/Source_Code/Downloading_Source_Archives
 /zh-CN/docs/DragDrop/拖拽	/zh-CN/docs/Drag_and_Drop
@@ -1342,8 +1338,6 @@
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/实现一个设置页面	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展插件	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/用户界面元素	/zh-CN/docs/conflicting/Mozilla/Add-ons/WebExtensions/user_interface
-/zh-CN/docs/Mozilla/Developer_guide/Source_Code/通过CVS获取源码	/zh-CN/docs/Mozilla/Developer_guide/Source_Code/CVS
-/zh-CN/docs/Mozilla/Developer_guide/Source_Code/通过Mercurial获取源码	/zh-CN/docs/Mozilla/Developer_guide/Source_Code/LatestPassingSource
 /zh-CN/docs/Mozilla/Mozilla_Persona	/zh-CN/docs/orphaned/Mozilla/Mozilla_Persona
 /zh-CN/docs/Mozilla/附加组件	/zh-CN/docs/Mozilla/Add-ons
 /zh-CN/docs/Mozilla_Web开发人员_FAQ	/zh-CN/docs/Mozilla_Web_Developer_FAQ
@@ -2754,5 +2748,4 @@
 /zh-CN/docs/收集_In-Memory_数据源	/zh-CN/docs/Aggregating_the_In-Memory_Datasource
 /zh-CN/docs/理解下划线	/zh-CN/docs/conflicting/Learn/CSS/Styling_text/Fundamentals
 /zh-CN/docs/网页代码移植：从_IE_到_Mozilla	/zh-CN/docs/Migrate_apps_from_Internet_Explorer_to_Mozilla
-/zh-CN/docs/通过CVS获取源码	/zh-CN/docs/Mozilla/Developer_guide/Source_Code/CVS
 /zh-CN/docs/首页	/zh-CN/docs/Web

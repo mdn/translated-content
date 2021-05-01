@@ -6354,63 +6354,6 @@
       "Jane47Zeng"
     ]
   },
-  "Mozilla/Developer_guide": {
-    "modified": "2020-06-26T07:13:21.797Z",
-    "contributors": [
-      "SuiltaPico",
-      "ice-kylin",
-      "ziyunfei",
-      "jsm920",
-      "merrywoody",
-      "phenix"
-    ]
-  },
-  "Mozilla/Developer_guide/Adding_APIs_to_the_navigator_object": {
-    "modified": "2019-03-23T23:34:41.037Z",
-    "contributors": [
-      "ziyunfei",
-      "crazybullet"
-    ]
-  },
-  "Mozilla/Developer_guide/Customizing_Firefox": {
-    "modified": "2019-01-17T03:58:02.226Z",
-    "contributors": [
-      "RainSlide"
-    ]
-  },
-  "Mozilla/Developer_guide/Source_Code": {
-    "modified": "2019-03-24T00:05:40.186Z",
-    "contributors": [
-      "GuestRyan",
-      "wbamberg",
-      "124694738",
-      "moumoukings",
-      "ziyunfei",
-      "kingysu",
-      "merrywoody",
-      "phenix"
-    ]
-  },
-  "Mozilla/Developer_guide/Source_Code/CVS": {
-    "modified": "2019-03-24T00:00:53.283Z",
-    "contributors": [
-      "Peidong_Wang",
-      "miaoran2015",
-      "Pandaren",
-      "teoli",
-      "ziyunfei",
-      "phenix",
-      "Mgjbot",
-      "Klp99"
-    ]
-  },
-  "Mozilla/Developer_guide/Source_Code/LatestPassingSource": {
-    "modified": "2019-03-24T00:00:52.967Z",
-    "contributors": [
-      "ziyunfei",
-      "phenix"
-    ]
-  },
   "Mozilla/Firefox": {
     "modified": "2020-01-18T14:38:03.567Z",
     "contributors": [
