@@ -1,0 +1,283 @@
+---
+title: 開始開發我們的 Angular 待辦事項應用程式
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
+tags:
+  - 初學者
+  - 框架
+  - 安裝
+  - 學習
+  - 用戶端
+  - 元件
+  - 結構
+  - Beginner
+  - Frameworks
+  - JavaScript
+  - Learn
+  - client-side
+  - Angular
+  - Components
+  - Structure
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+
+<p>此刻，我們已準備好使用 Angular 來創建我們的待辦事項應用程式。完成後的應用程式將具有顯示待辦項目列表，並包含編輯、刪除與新增項目等功能。在本篇中，您將學到應用程式的結構，以及建立一個可顯示待辦項目的基礎列表。</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">預備知識：</th>
+   <td>熟悉網頁核心語言 <a href="/en-US/docs/Learn/HTML">HTML</a> 、 <a href="/en-US/docs/Learn/CSS">CSS</a> 與 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> ，並具備 <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a> 相關知識。
+   </td>
+  </tr>
+  <tr>
+   <th scope="row">學習目標：</th>
+   <td>藉由創建一個可顯示待辦事項列表的基本應用程式結構，協助了解 Angular 的基礎概念，例如元件結構、元件間的共享資料，以及持續不斷的內容創作。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="the_to_do_application_structure">待辦事項應用程式的結構組成</h2>
+
+<p>就如同一個不使用框架的簡易應用程式， Angular 應用程式同樣有個 <code>index.html</code> 檔案。
+在這個 <code>index.html</code> 的 <code>&lt;body&gt;</code> 標籤中， Angular 使用了一個特殊元素 — <code>&lt;app-root&gt;</code> — 來插入您的主要元件，該元件也包含著您所創建的其他元件。
+一般而言，您並不需要碰觸到 <code>index.html</code> 這個檔案，反而應該專注於那些應用程式中的特定區域內的事務，這些稱之為元件。</p>
+
+<h3 id="organize_your_application_with_components">使用元件來組織您的應用程式</h3>
+
+<p>元件是 Angular 的核心組成部分
+這個待辦事項應用程式有兩個元件──一個元件作為您的應用程式基底，另一個元件用來處理待辦事項。</p>
+
+<p>每一個元件由一個 TypeScript 類別、 HTML 與 CSS 所組成。
+由於 Typescript 轉譯（transpile），又或者說轉換（convert）為 JavaScript ，這意味著您的應用程式最後為純粹的 JavaScript ，但儘管如此，您仍保有使用 Typescript 擴展功能與精簡語法的便利性。</p>
+
+<h3 id="dynamically_change_the_ui_with_ngif_and_ngfor">運用 *ngIf 與 *ngFor 來動態改變 UI</h3>
+
+<p>這份教學也涵蓋兩個重要的 Angular 指令（directive）來動態變更 DOM 的結構。
+一個指令類似一個命令，讓您使用在您的 HTML 中，影響應用程式裡的變動。</p>
+
+<p>第一個指令為 Angular 的迭代器（iterator） <code>*ngFor</code> 。
+<code>*ngFor</code> 能根據一個陣列中項目動態建立 DOM 元素。</p>
+
+<p>您會學到的第二個指令是 <code>*ngIf</code> 。
+您能使用 <code>*ngIf</code> 根據某個條件來對 DOM 進行添加或移除元素。
+例如，若使用者想要編輯在待辦列表中的某一個項目，您就需要提供他們編輯項目的各種方法。
+若他們不想要編輯這個項目時，您也要移除這個編輯中的介面。</p>
+
+<h3 id="share_data_between_components">在元件之間共享資料</h3>
+
+<p>在這個待辦應用程式中，您需要配置元件來分享資料。
+為了添加新的項目至待辦列表，主要的元件必須發送這個新項目到第二個元件。
+第二個元件管理這些項目並且掌管編輯、標記已完成，以及刪除個別項目。</p>
+
+<p>您可以使用具有特殊裝飾子 <code>@Input()</code> 與 <code>@Output()</code> 在 Angular 元件之間達成資料共享。
+您使用這些裝飾子來指定哪些特定屬性允許資料輸入至一個元件或由一個元件輸出。
+欲使用 <code>@Output()</code> ，您要在一個元件中引發一個事件，如此一來，其他的元件就會知道有可使用的資料。</p>
+
+<h2 id="define_item-">Define Item</h2>
+
+<p>In the <code>app</code> directory, create a new file named <code>item.ts</code> with the following contents:</p>
+
+<pre class="brush: js">export interface Item {
+  description: string;
+  done: boolean;
+}</pre>
+
+<p>The <code>Item</code> <code>interface</code> creates an <code>item</code> object model so that your application understands what an <code>item</code> is.
+For this to-do list, an <code>item</code> is an object that has a description and can be done.</p>
+
+<h2 id="add_logic_to_appcomponent-">Add logic to AppComponent</h2>
+
+<p>Now that your application knows what an <code>item</code> is, you can give it some items by adding them to the TypeScript file, <code>app.component.ts</code>.
+In <code>app.component.ts</code>, replace the contents with the following:</p>
+
+<pre class="brush: js">
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
+export class AppComponent {
+  title = 'todo';
+
+  filter: 'all' | 'active' | 'done' = 'all';
+
+  allItems = [
+    { description: 'eat', done: true },
+    { description: 'sleep', done: false },
+    { description: 'play', done: false },
+    { description: 'laugh', done: false },
+  ];
+
+  get items() {
+    if (this.filter === 'all') {
+      return this.allItems;
+    }
+    return this.allItems.filter(item => this.filter === 'done' ? item.done : !item.done);
+  }
+
+}</pre>
+
+<p>The first line is a JavaScript import that imports Angular.
+The <code>@Component()</code> decorator specifies metadata about the <code>AppComponent</code>.
+The default metadata properties are as follows:</p>
+
+<ul>
+  <li><code>selector</code>: Tells you the name of the CSS selector that you use in a template to instantiate this component. Here it is <code>&#39;app-root&#39;</code>.
+In the <code>index.html</code>, within the <code>body</code> tag, the Angular CLI added <code>&lt;app-root&gt;&lt;/app-root&gt;</code> when generating your application.
+You use all component selectors in the same way by adding them to other component HTML templates.</li>
+  <li><code>templateUrl</code>: Specifies the HTML file to associate with this component.
+Here it is, &#39;./app.component.html&#39;,</li>
+  <li><code>styleUrls</code>: Provides the location and name of the file for your styles that apply specifically to this component. Here it is <code>&#39;./app.component.css&#39;</code>.</li>
+</ul>
+
+<p>The <code>filter</code> property is of type <code>union</code>, which means <code>filter</code> could have the value of <code>all</code>, <code>active</code>, or <code>done</code>.
+With the <code>union</code> type, if you make a typo in the value you assign to the <code>filter</code> property, TypeScript lets you know so that you can catch the bug early.
+This guide shows you how to add filtering in a later step, but you can also use a filter to show the default list of all the items.</p>
+
+<p>The <code>allItems</code> array contains the to-do items and whether they are <code>done</code>.
+The first item, <code>eat</code>, has a <code>done</code> value of true.</p>
+
+<p>The getter, <code>get items()</code>, retrieves the items from the <code>allItems</code> array if the <code>filter</code> is equal to <code>all</code>.
+Otherwise, <code>get items()</code> returns the <code>done</code> items or the outstanding items depending on how the user filters the view.
+The getter also establishes the name of the array as <code>items</code>, which you&#39;ll use in the next section.</p>
+
+<h2 id="add_html_to_the_appcomponent_template">Add HTML to the AppComponent template</h2>
+
+<p>To see the list of items in the browser, replace the contents of <code>app.component.html</code> with the following HTML:</p>
+
+<pre class="brush: html">&lt;div class="main"&gt;
+  &lt;h1&gt;My To Do List&lt;/h1&gt;
+  &lt;h2&gt;What would you like to do today?&lt;/h2&gt;
+
+  &lt;ul&gt;
+    &lt;li *ngFor="let item of items"&gt;\{{item.description}}&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</pre>
+
+<p>The <code>&lt;li&gt;</code> contains an <code>*ngFor</code>, a built-in Angular directive that iterates over the items in the <code>items</code> array.
+For each item, <code>*ngFor</code> creates a new <code>&lt;li&gt;</code>.
+The double curly braces that contain <code>item.description</code> instructs Angular to populate each <code>&lt;li&gt;</code> with the text of each item&#39;s description.</p>
+
+<p>In the browser, you should see the list of items as follows:</p>
+
+<pre>
+My To Do List
+What would you like to do today?
+
+* eat
+* sleep
+* play
+* laugh
+</pre>
+
+<h2 id="add_items_to_the_list">Add items to the list</h2>
+
+<p>A to-do list needs a way to add items.</p>
+
+<p>In <code>app.component.ts</code>, add the following method to the class:</p>
+
+<pre class="brush: js">addItem(description) {
+  this.allItems.unshift({
+    description,
+    done: false
+  });
+}</pre>
+
+<p>The <code>addItem()</code> method takes an item that the user provides and adds it to the array when the user clicks the <strong>Add</strong> button.
+The <code>addItem()</code> method uses the array method <code>unshift()</code> to add a new item to the beginning of the array and the top of the list.
+You could alternatively use <code>push()</code>, which would add the new item to the end of the array and the bottom of the list.</p>
+
+<p>To use the <code>addItem()</code> method, edit the HTML in the <code>AppComponent</code> template.</p>
+
+<p>In <code>app.component.html</code>, replace the <code>&lt;h2&gt;</code> with the following:</p>
+
+<pre class="brush: js">&lt;label for="addItemInput"&gt;What would you like to do today?&lt;/label&gt;
+
+&lt;input
+  #newItem
+  placeholder="add an item"
+  (keyup.enter)="addItem(newItem.value); newItem.value = ''"
+  class="lg-text-input"
+  id="addItemInput"
+/&gt;
+
+&lt;button class="btn-primary" (click)="addItem(newItem.value)"&gt;Add&lt;/button&gt;</pre>
+
+<p>When the user types a new item in the <code>&lt;input&gt;</code> and presses <strong>Enter</strong>, the <code>addItem()</code> method adds the value to the <code>items</code> array.
+Pressing the  <strong>Enter</strong> key also resets the value of <code>&lt;input&gt;</code> to an empty string.
+Alternatively, the user can click the <strong>Add</strong> button which calls the same<code>addItem()</code> method.</p>
+
+
+<h2 id="summary">Summary</h2>
+
+<p>By now you should have your basic list of to-dos displaying in your browser. That's great progress! Of course, we have a lot more to do. In the next article we will look at adding some styling to our application.</p>
+
+<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+
+<h2 id="In_this_module">In this module</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
+ <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+ <li>React
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+  </ul>
+ </li>
+ <li>Ember
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+  </ul>
+ </li>
+ <li>Vue
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+  </ul>
+ </li>
+ <li>Svelte
+  <ul>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
+   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+  </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+   </ul>
+ </li>
+</ul>
