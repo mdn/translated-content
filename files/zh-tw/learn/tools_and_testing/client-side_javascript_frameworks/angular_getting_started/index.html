@@ -76,7 +76,7 @@ tags:
 
 <p>
   你能使用 Angular
-  去開發多種不同規模的專案，小至個人的小型專案，大至大型企業級專案。Angular
+  去開發多種不同規模的專案，小至單頁應用式專案，大至大型企業級專案。Angular
   的設計宗旨是讓後續更新升級十分容易，因此你能輕鬆的使用最新版本進行開發。最棒的是，Angular
   的開發生態圈龐大，有超過一千七百萬的使用者、套件開發者以及內容創作者。
 </p>
@@ -122,7 +122,7 @@ tags:
 
 <p>你會發現 Angular CLI 是一個很實用的建造網站工具</p>
 
-<h2 id="what-you-ll-build">What you'll build</h2>
+<h2 id="what-you-ll-build">你會建立的專案</h2>
 
 <p>
   這一系列的教學會帶領你建立一個待辦事項程式。透過這個程式，你會學到如何使用
@@ -241,7 +241,7 @@ tags:
 </ol>
 
 <p>
-  一個 Angular 的元件由三部份構成，分別是：樣板、樣式、類別。舉例來說，
+  一個 Angular 的元件由三部份構成，分別是：模板、樣式、類別。舉例來說，
   <code>app.component.ts</code>，<code>app.component.html</code>，以及
   <code>app.component.css</code> 一同構成
   <code>AppComponent</code
@@ -259,17 +259,25 @@ tags:
 
 <h2 id="the_structure_of_an_angular_application">Angular的專案結構</h2>
 
-<p>Angular基本上是用TypeScript作為主要開發的語言。
+<p>
+  Angular基本上是用TypeScript作為主要開發的語言。
   簡單來說，TypeScript是JavaScript的超集合，也就是說在JavaScript中使用的語法也同樣適用於TypeScript。而TypeScript比純JavaScript更加強化型別的規範、寫法也更簡潔，因此使用TypeScript可以寫出更好維護的程式碼，並減少報錯的機率。
 </p>
 
-<p>在Angular框架裡，主要是由許多元件(Components)來組成。
-一個元件包含HTML頁面架構、樣式以及帶有元件裝飾器 <code>@Component()</code> 的TypeScript類別(class)。</p>
+<p>
+  在Angular框架裡，主要是由許多元件(Components)來組成。
+  一個元件包含HTML頁面架構、樣式以及帶有元件裝飾器
+  <code>@Component()</code> 的TypeScript類別(class)。
+</p>
 
 <h3 id="the_class">類別</h3>
 
-<p>類別(class)裡會放這個元件的邏輯、規則，舉例來說像是函式、事件監聽、屬性和參考等等。類別會放在一個像是「 <code>feature.component.ts</code>」的檔案裡，而feature就是你的元件名稱。所以你可以建立一些檔案，並且命名為像是「<code>header.component.ts</code>」、「<code>signup.component.ts</code>」、「<code>feed.component.ts</code>」。
-當你建立一個元件，它會帶有<code>@Component()</code>這樣的裝飾器，裡面會有檔案的路徑指向，告訴Angular要去哪裡找HTML和CSS檔案。一個基本的元件寫法如下：</p>
+<p>
+  類別(class)裡會放這個元件的邏輯、規則，舉例來說像是函式、事件監聽、屬性和參考等等。類別會放在一個像是「
+  <code>feature.component.ts</code
+  >」的檔案裡，而feature就是你的元件名稱。所以你可以建立一些檔案，並且命名為像是「<code>header.component.ts</code>」、「<code>signup.component.ts</code>」、「<code>feed.component.ts</code>」。
+  當你建立一個元件，它會帶有<code>@Component()</code>這樣的裝飾器，裡面會有檔案的路徑指向，告訴Angular要去哪裡找HTML和CSS檔案。一個基本的元件寫法如下：
+</p>
 
 <pre class="brush: js">
 import { Component } from '@angular/core';
@@ -283,7 +291,8 @@ import { Component } from '@angular/core';
 
 export class ItemComponent {
 // 程式碼寫在這裡
-}</pre>
+}</pre
+>
 
 <!-- <p>This component is called <code>ItemComponent</code>, and its selector is <code>app-item</code>.
 You use a selector just like regular HTML tags by placing it within other templates.
@@ -293,20 +302,30 @@ This tutorial guides you through creating two components and using one within th
 <p>Angular&#39;s component model offers strong encapsulation and an intuitive application structure.
 Components also make your application easier to unit test and can improve the overall readability of your code.</p> -->
 
-<p>這個元件會被稱為 <code>ItemComponent</code> ，它的選擇器是 <code>app-item</code>.
-  這個選擇器就像HTML的標籤，你可以把它放在其它的模版裡。當瀏覽器渲染到選擇器的時候，就會把這個元件的模版給渲染出來。這份教學文件會指引你建立兩個元件，並把其中一個放到另一個元件裡。.</p>
-  
-  <p>Angular的元件模組具備高度封裝性，讓專案結構看起來更直覺。而Angular的元件也讓專案更易於做單元測試、讓程式碼更易於解讀。</p>
+<p>
+  這個元件會被稱為 <code>ItemComponent</code> ，它的選擇器是
+  <code>app-item</code>.
+  這個選擇器就像HTML的標籤，你可以把它放在其它的模版裡。當瀏覽器渲染到選擇器的時候，就會把這個元件的模版給渲染出來。這份教學文件會指引你建立兩個元件，並把其中一個放到另一個元件裡。
+</p>
+
+<p>
+  Angular的元件模組具備高度封裝性，讓專案結構看起來更直覺。而Angular的元件也讓專案更易於做單元測試、讓程式碼更易於解讀。
+</p>
 
 <h3 id="the_html_template">HTML模版</h3>
 
 <!-- Every component has an HTML template that declares how that component renders.
 You can define this template either inline or by file path. -->
 
-<p>每個元件都會有HTML模版去告訴瀏覽器要如何渲染頁面。HTML可以直接內嵌寫在類別(class)的檔案內，或是用檔案路徑去指明其位置。</p>
+<p>
+  每個元件都會有HTML模版去告訴瀏覽器要如何渲染頁面。HTML可以直接內嵌寫在類別(class)的檔案內，或是用檔案路徑去指明其位置。
+</p>
 
 <!-- <p>To refer to an external HTML file, use the <code>templateUrl</code> property:</p> -->
-<p>而要去指明位在他處的HTML檔案，就要使用 <code>templateUrl</code> 這個屬性，範例如下:</p>
+<p>
+  而要去指明位在它處的HTML檔案，就要使用
+  <code>templateUrl</code> 這個屬性，範例如下:
+</p>
 
 <pre class="brush: js">
 @Component({
@@ -319,7 +338,10 @@ export class AppComponent {
 >
 
 <!-- <p>To write inline HTML, use the <code>template</code> property and write your HTML within backticks:</p> -->
-<p>當你把HTML內嵌寫在類別(class)的檔案內時，要使用 <code>template</code> 這個屬性，並用反引號把HTML包起來，範例如下：</p>
+<p>
+  當你把HTML內嵌寫在類別(class)的檔案內時，要使用
+  <code>template</code> 這個屬性，並用反引號把HTML包起來，範例如下：
+</p>
 
 <pre class="brush: js">
 @Component({
@@ -335,14 +357,19 @@ export class AppComponent {
 Angular automatically updates the rendered DOM when your component’s state changes.
 One use of this feature is inserting dynamic text, as shown in the following example.</p> -->
 
-<p>Angular還擴充了HTML的語法，讓你可以在元件中使用動態插值。當你的元件狀態改變時，Angular會自動重新渲染該節點。下面的例子中會使用插值去插入一段文字來示範這個功能。</p>
+<p>
+  Angular還擴充了HTML的語法，讓你可以在元件中使用動態插值。當你的元件狀態改變時，Angular會自動重新渲染該節點。下面的例子中會使用插值去插入一段文字來示範這個功能。
+</p>
 
 <pre class="brush: html">&lt;h1&gt;\{{ title }}&lt;/h1&gt;</pre>
 
 <!-- <p>The double curly braces instruct Angular to interpolate the contents within them.
 The value for <code>title</code> comes from the component class:</p> -->
 
-<p>雙花括號的地方就是告訴Angular插值顯示的地方。 <code>title</code> 的值就是從元件的類別來的：</p>
+<p>
+  雙花括號的地方就是告訴Angular插值顯示的地方。
+  <code>title</code> 的值就是從元件的類別來的：
+</p>
 
 <pre class="brush: js">
 import { Component } from '@angular/core';
@@ -370,11 +397,20 @@ export class AppComponent {
 <!-- <p>A component can inherit global styles from the application&#39;s <code>styles.css</code> file and augment or override them with its own styles.
 You can write component-specific styles directly in the <code>@Component()</code> decorator or specify the path to a CSS file.</p> -->
 
-<p>每個專案裡會有個全域性的樣式設定檔案 <code>styles.css</code> ，所有的元件都可以繼承它，並且再各自增加或覆寫它的樣式設定。你可以直接在裝飾器 <code>@Component()</code> 裡寫出這個元件特有的樣式，或是用路徑指明它的CSS檔案位置。</p>
+<p>
+  每個專案裡會有個全域性的樣式設定檔案
+  <code>styles.css</code>
+  ，所有的元件都可以繼承它，並且再各自增加或覆寫它的樣式設定。你可以直接在裝飾器
+  <code>@Component()</code>
+  裡寫出這個元件特有的樣式，或是用路徑指明它的CSS檔案位置。
+</p>
 
 <!-- <p>To include the styles directly in the component decorator, use the <code>styles</code> property:</p> -->
 
-<p>要直接在元件裝飾器內設定樣式，就要使用 <code>styles</code> 這個屬性，範例如下：</p>
+<p>
+  要直接在元件裝飾器內設定樣式，就要使用
+  <code>styles</code> 這個屬性，範例如下：
+</p>
 
 <pre class="brush: js">
 @Component({
@@ -386,7 +422,10 @@ You can write component-specific styles directly in the <code>@Component()</code
 
 <!-- <p>Typically, a component uses styles in a separate file using the <code>styleUrls</code> property:</p> -->
 
-<p>但基本上，元件通常會把樣式另外寫在一個檔案，並用 <code>styleUrls</code> 去指明它的檔案路徑，如下：</p>
+<p>
+  但基本上，元件通常會把樣式另外寫在一個檔案，並用
+  <code>styleUrls</code> 去指明它的檔案路徑，如下：
+</p>
 
 <pre class="brush: js">
 @Component({
@@ -404,7 +443,9 @@ You can write component-specific styles directly in the <code>@Component()</code
 
 <!-- <p>That's it for your first introduction to Angular. At this point you should be set up and ready to build an Angular app, and have a basic understanding of how Angular works. In the next article we'll deepen that knowledge and start to build up the structure of our to-do list application.</p> -->
 
-<p>以上這些就是關於Angular的簡介。這時候的你，應該已經對Angular的運作有基本的了解，並準備建立一個Angular的專案。在下一篇文章裡，我們會更深入的應用這些知識，並且試著用Angular去寫一個「待辦清單」。</p>
+<p>
+  以上這些就是關於Angular的簡介。這時候的你，應該已經對Angular的運作有基本的了解，並準備建立一個Angular的專案。在下一篇文章裡，我們會更深入的應用這些知識，並且試著用Angular去寫一個「待辦清單」。
+</p>
 
 <div>
   {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning",
