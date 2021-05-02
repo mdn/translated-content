@@ -85,7 +85,7 @@ tags:
 }</pre>
 
 <p>這個 <code>Item</code> <code>interface</code> 用來建立一個 <code>item</code> 物件模型，讓您的應用程式能理解 <code>item</code> 到底是什麼。
-對於這個待辦列表，一個 <code>item</code> 就代表一個擁有說明與是否已完成等兩個屬性的物件。</p>
+對於這個待辦列表來說，一個 <code>item</code> 物件擁有說明與是否已完成兩個屬性。</p>
 
 <h2 id="add_logic_to_appcomponent-">將邏輯加入至 AppComponent</h2>
 
@@ -188,7 +188,7 @@ What would you like to do today?
 }</pre>
 
 <p>這個 <code>addItem()</code> 方法接受一個使用者提供的項目，並在使用者點擊 <strong>Add</strong> 按鈕時將之加入至陣列中。
-這個 <code>addItem()</code> 方法使用陣列方法 <code>unshift()</code> 來添加一個新的項目到陣列的開頭位置與列表的頂端。
+這個 <code>addItem()</code> 方法使用了陣列方法的 <code>unshift()</code> 來添加一個新的項目到陣列的開頭位置與列表的頂端。
 又或者，您也可以使用 <code>push()</code> 來添加一個新的項目到陣列的最後位置與列表的尾端。</p>
 
 <p>為了能使用 <code>addItem()</code> 方法，編輯 <code>AppComponent</code> 範本中的 HTML 。</p>
@@ -208,7 +208,7 @@ What would you like to do today?
 &lt;button class="btn-primary" (click)="addItem(newItem.value)"&gt;Add&lt;/button&gt;</pre>
 
 <p>當使用者在 <code>&lt;input&gt;</code> 中輸入一個新的項目名稱並按下 <strong>Enter</strong> 鍵後， <code>addItem()</code> 方法隨即加入這筆資料至 <code>items</code> 陣列中。
-按下 <strong>Enter</strong> 鍵的同時也會重設 <code>&lt;input&gt;</code> 的值為一個空字串。
+按下 <strong>Enter</strong> 鍵的同時也會重設 <code>&lt;input&gt;</code> 的值為空字串。
 或者，使用者也能透過點擊 <strong>Add</strong> 按鈕來呼叫相同的 <code>addItem()</code> 方法。</p>
 
 
