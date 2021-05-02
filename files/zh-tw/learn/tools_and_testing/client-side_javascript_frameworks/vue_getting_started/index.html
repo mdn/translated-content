@@ -138,14 +138,13 @@ tags:
 
 <h2 id=".vue_files_single_file_components">.vue 檔案 (單一檔案元件)</h2>
 
-<p>Like in many front-end frameworks, components are a central part of building apps in Vue. These components let you break a large application into discrete building blocks that can be created and managed separately, and transfer data between each other as required. These small blocks can help you reason about and test your code.</p>
+<p>如同大部分的前端框架，元件是建構 Vue 的核心部分。元件可以將一個大的應用程式拆成數個獨立建立及管理的區塊，且依據需求，可將資料在之間進行傳遞，而這些區塊可以便於程式的理解與測試。</p>
 
-<p>While some frameworks encourage you to separate your template, logic, and styling code into separate files, Vue takes the opposite approach. Using <a href="https://vuejs.org/v2/guide/single-file-components.html">Single File Components</a>, Vue lets you group your templates, corresponding script, and CSS all together in a single file ending in <code>.vue</code>. These files are processed by a JS build tool (such as Webpack), which means you can take advantage of build-time tooling in your project. This allows you to use tools like Babel, TypeScript, SCSS and more to create more sophisticated components.</p>
+<p>當一些框架鼓勵將樣板、邏輯及樣式拆散至不同的檔案時，Vue 卻是反其道而行，其將template、script及CSS整合至以.vue 作為副檔名的<a href="https://vuejs.org/v2/guide/single-file-components.html">單一檔案元件</a>內。這些檔案最終會藉由 JS 的打包工具(如: Webpack)處理, 也意味著可以在專案中使用編譯工具(如:Babel、TypeScript、SCSS等等)來建立複雜元件。</p>
 
-<p>As a bonus, projects created with the Vue CLI are configured to use <code>.vue</code> files with Webpack out of the box. In fact, if you look inside the <code>src</code> folder in the project we created with the CLI, you'll see your first <code>.vue</code> file: <code>App.vue</code>.</p>
+<p>另外，使用 Vue CLI 建立專案，其被配置為在開箱即用 Webpack 的情況下使用的<code>.vue</code> 檔案。實際上，當你查看專案中的<code>src</code>資料夾時，你將會看到第一個<code>.vue</code>的檔案: <code>App.vue</code>。</p>
 
-<p>Let's explore this now.</p>
-
+<p>現在讓我們開始探索。</p>
 <h3 id="App.vue">App.vue</h3>
 
 <p>Open your <code>App.vue</code> file — you’ll see that it has three parts: <code>&lt;template&gt;</code>, <code>&lt;script&gt;</code>, and <code>&lt;style&gt;</code>, which contain the component’s template, scripting, and styling information. All Single File Components share this same basic structure.</p>
