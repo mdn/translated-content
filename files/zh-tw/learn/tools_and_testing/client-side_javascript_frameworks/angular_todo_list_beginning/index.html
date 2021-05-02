@@ -85,7 +85,7 @@ tags:
 }</pre>
 
 <p>這個 <code>Item</code> <code>interface</code> 用來建立一個 <code>item</code> 物件模型，讓您的應用程式能理解 <code>item</code> 到底是什麼。
-對於這個待辦列表，一個 <code>item</code> 就代表一個擁有說明與是否已完成等兩個屬性的物件。</p>
+對於這個待辦列表來說，一個 <code>item</code> 物件擁有說明與是否已完成兩個屬性。</p>
 
 <h2 id="add_logic_to_appcomponent-">將邏輯加入至 AppComponent</h2>
 
@@ -136,18 +136,18 @@ export class AppComponent {
 
 <p>這個 <code>filter</code> 屬性為 <code>union</code> 型態，表示 <code>filter</code> 的值可能為 <code>all</code> 、 <code>active</code> ，或者 <code>done</code> 。
 有了 <code>union</code> 型態，若您賦予 <code>filter</code> 屬性錯誤的值， TypeScript 會馬上讓您知道來及早除錯。
-本指引接下來的步驟會展示如何為您的列表加入過濾功能，但您仍可以使用過濾器來顯示這個列表預設的所有項目。</p>
+本指引接下來的步驟會展示如何為您的列表加入篩選功能，但您仍可以使用篩選器來顯示這個列表預設的所有項目。</p>
 
 <p>這個 <code>allItems</code> 陣列包含所有待辦項目，其中也包含項目是否已完成的 <code>done</code> 屬性。
 例如，第一個項目 <code>eat</code> 擁有值為 true 的 <code>done</code> 屬性。</p>
 
 <p>當 <code>filter</code> 等於 <code>all</code> 時，這個 getter <code>get items()</code> 會由 <code>allItems</code> 陣列中獲取所有的項目。
-否則， <code>get items()</code> 會回傳 <code>done</code> 的項目或是取決於使用者如何過濾的未完成項目。
+否則， <code>get items()</code> 會回傳 <code>done</code> 的項目或是取決於使用者如何篩選的未完成項目。
 此 getter 也會建立名為 <code>items</code> 的陣列名稱，這部分您將會在下個章節使用到。</p>
 
-<h2 id="add_html_to_the_appcomponent_template">Add HTML to the AppComponent template</h2>
+<h2 id="add_html_to_the_appcomponent_template">將 HTML 加入至 AppComponent 的範本</h2>
 
-<p>To see the list of items in the browser, replace the contents of <code>app.component.html</code> with the following HTML:</p>
+<p>為了在瀏覽器中看到列表中的項目，置換 <code>app.component.html</code> 內容為以下 HTML ：</p>
 
 <pre class="brush: html">&lt;div class="main"&gt;
   &lt;h1&gt;My To Do List&lt;/h1&gt;
@@ -158,11 +158,11 @@ export class AppComponent {
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
 
-<p>The <code>&lt;li&gt;</code> contains an <code>*ngFor</code>, a built-in Angular directive that iterates over the items in the <code>items</code> array.
-For each item, <code>*ngFor</code> creates a new <code>&lt;li&gt;</code>.
-The double curly braces that contain <code>item.description</code> instructs Angular to populate each <code>&lt;li&gt;</code> with the text of each item&#39;s description.</p>
+<p>這個 <code>&lt;li&gt;</code> 包含了一個 Angular 的內建指令 <code>*ngFor</code> ，它可以迭代 <code>items</code> 陣列中的所有項目。
+對於每一個項目， <code>*ngFor</code> 建立了一個新的 <code>&lt;li&gt;</code> 。
+此處包住 <code>item.description</code> 的雙花括號指示 Angular 以每個項目的說明文字來填充每個 <code>&lt;li&gt;</code> 。</p>
 
-<p>In the browser, you should see the list of items as follows:</p>
+<p>在瀏覽器中，您應該可以看到如下的項目列表：</p>
 
 <pre>
 My To Do List
@@ -174,11 +174,11 @@ What would you like to do today?
 * laugh
 </pre>
 
-<h2 id="add_items_to_the_list">Add items to the list</h2>
+<h2 id="add_items_to_the_list">將項目加入至列表</h2>
 
-<p>A to-do list needs a way to add items.</p>
+<p>一個待辦列表理所當然地需要有添加項目的方法。</p>
 
-<p>In <code>app.component.ts</code>, add the following method to the class:</p>
+<p>在 <code>app.component.ts</code> 中，加入以下方法至此類別中：</p>
 
 <pre class="brush: js">addItem(description) {
   this.allItems.unshift({
@@ -187,13 +187,13 @@ What would you like to do today?
   });
 }</pre>
 
-<p>The <code>addItem()</code> method takes an item that the user provides and adds it to the array when the user clicks the <strong>Add</strong> button.
-The <code>addItem()</code> method uses the array method <code>unshift()</code> to add a new item to the beginning of the array and the top of the list.
-You could alternatively use <code>push()</code>, which would add the new item to the end of the array and the bottom of the list.</p>
+<p>這個 <code>addItem()</code> 方法接受一個使用者提供的項目，並在使用者點擊 <strong>Add</strong> 按鈕時將之加入至陣列中。
+這個 <code>addItem()</code> 方法使用了陣列方法的 <code>unshift()</code> 來添加一個新的項目到陣列的開頭位置與列表的頂端。
+又或者，您也可以使用 <code>push()</code> 來添加一個新的項目到陣列的最後位置與列表的尾端。</p>
 
-<p>To use the <code>addItem()</code> method, edit the HTML in the <code>AppComponent</code> template.</p>
+<p>為了能使用 <code>addItem()</code> 方法，編輯 <code>AppComponent</code> 範本中的 HTML 。</p>
 
-<p>In <code>app.component.html</code>, replace the <code>&lt;h2&gt;</code> with the following:</p>
+<p>在 <code>app.component.html</code> 中置換 <code>&lt;h2&gt;</code> 為</p>
 
 <pre class="brush: js">&lt;label for="addItemInput"&gt;What would you like to do today?&lt;/label&gt;
 
@@ -207,14 +207,14 @@ You could alternatively use <code>push()</code>, which would add the new item to
 
 &lt;button class="btn-primary" (click)="addItem(newItem.value)"&gt;Add&lt;/button&gt;</pre>
 
-<p>When the user types a new item in the <code>&lt;input&gt;</code> and presses <strong>Enter</strong>, the <code>addItem()</code> method adds the value to the <code>items</code> array.
-Pressing the  <strong>Enter</strong> key also resets the value of <code>&lt;input&gt;</code> to an empty string.
-Alternatively, the user can click the <strong>Add</strong> button which calls the same<code>addItem()</code> method.</p>
+<p>當使用者在 <code>&lt;input&gt;</code> 中輸入一個新的項目名稱並按下 <strong>Enter</strong> 鍵後， <code>addItem()</code> 方法隨即加入這筆資料至 <code>items</code> 陣列中。
+按下 <strong>Enter</strong> 鍵的同時也會重設 <code>&lt;input&gt;</code> 的值為空字串。
+或者，使用者也能透過點擊 <strong>Add</strong> 按鈕來呼叫相同的 <code>addItem()</code> 方法。</p>
 
 
-<h2 id="summary">Summary</h2>
+<h2 id="summary">小結</h2>
 
-<p>By now you should have your basic list of to-dos displaying in your browser. That's great progress! Of course, we have a lot more to do. In the next article we will look at adding some styling to our application.</p>
+<p>目前為止，您應該已經在您的瀏覽器中顯示待辦事項列表。這是很大的進展！當然，我們仍有很多事要做。在下一篇文章，我們將研究在應用程式中加入一些樣式。</p>
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
@@ -271,12 +271,12 @@ Alternatively, the user can click the <strong>Add</strong> button which calls th
  </li>
  <li>Angular
    <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Angular 新手入門</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">開始開發我們的 Angular 待辦事項應用程式</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">使用樣式點綴我們的 Angular 應用程式</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">建立一個 item 元件</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">篩選我們的待辦事項項目</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">建構 Angular 應用程式與更多資源</a></li>
    </ul>
  </li>
 </ul>
