@@ -1,5 +1,5 @@
 ---
-title: 開始學 Vue
+title: Vue 入門
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 tags:
   - Beginner
@@ -138,53 +138,53 @@ tags:
 
 <h2 id=".vue_files_single_file_components">.vue 檔案 (單一檔案元件)</h2>
 
-<p>Like in many front-end frameworks, components are a central part of building apps in Vue. These components let you break a large application into discrete building blocks that can be created and managed separately, and transfer data between each other as required. These small blocks can help you reason about and test your code.</p>
+<p>就像很多其他的框架一樣，元件是建構應用程式中很重要的一部分。這些元件讓你可以把一個很大的應用程式拆分成獨立的區塊，這些區塊可以分別被創建和管理，而且彼此之間可以傳遞所需要的資料。這些小區塊程式碼讓人更容易理解及測試。</p>
 
-<p>While some frameworks encourage you to separate your template, logic, and styling code into separate files, Vue takes the opposite approach. Using <a href="https://vuejs.org/v2/guide/single-file-components.html">Single File Components</a>, Vue lets you group your templates, corresponding script, and CSS all together in a single file ending in <code>.vue</code>. These files are processed by a JS build tool (such as Webpack), which means you can take advantage of build-time tooling in your project. This allows you to use tools like Babel, TypeScript, SCSS and more to create more sophisticated components.</p>
+<p>雖然有些框架鼓勵你把模板、邏輯和樣式的程式碼放在不同的檔案，但是 Vue 卻採取相反的策略。使用<a href="https://vuejs.org/v2/guide/single-file-components.html">單一檔案元件</a>時，Vue 讓你把模板、相關指令碼和 CSS 整合在一起放在以 <code>.vue</code> 結尾的檔案裡。這些檔案會被 JS 的打包工具（像是 Webpack ）加以處理，這也代表你可以在你的專案裡使用一些建置工具，像是 Babel、TypeScript、SCSS 等工具來創造更複雜的元件。</p>
 
-<p>As a bonus, projects created with the Vue CLI are configured to use <code>.vue</code> files with Webpack out of the box. In fact, if you look inside the <code>src</code> folder in the project we created with the CLI, you'll see your first <code>.vue</code> file: <code>App.vue</code>.</p>
+<p>使用 Vue CLI 創建的專案會會產生現成的 <code>.vue</code> 檔案以及 Webpack。看一下我們使用 CLI 創建的專案，在 <code>src</code> 資料夾你會看到你的第一個 <code>.vue</code> 檔案：<code>App.vue</code>。</p>
 
-<p>Let's explore this now.</p>
+<p>現在讓我們來探索。</p>
 
 <h3 id="App.vue">App.vue</h3>
 
-<p>Open your <code>App.vue</code> file — you’ll see that it has three parts: <code>&lt;template&gt;</code>, <code>&lt;script&gt;</code>, and <code>&lt;style&gt;</code>, which contain the component’s template, scripting, and styling information. All Single File Components share this same basic structure.</p>
+<p>打開你的 <code>App.vue</code> 檔案 － 你將會看到它由三個部分組成：<code>&lt;template&gt;</code>、<code>&lt;script&gt;</code> 以及 <code>&lt;style&gt;</code>，分別包含了元件的模板、指令碼和樣式資訊。所有的單一檔案元件都是使用這種基本架構。</p>
 
-<p><code>&lt;template&gt;</code> contains all the markup structure and display logic of your component. Your template can contain any valid HTML, as well as some Vue-specific syntax that we'll cover later.</p>
+<p><code>&lt;template&gt;</code> 包含所有的標記結構以及元件的呈現邏輯。你的模板可以包含任何有效的 HTML，以及一些我們接下來要介紹的 Vue 特定的語法。</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: By setting the <code>lang</code> attribute on the <code>&lt;template&gt;</code> tag, you can use Pug template syntax instead of standard HTML — <code>&lt;template lang="pug"&gt;</code>. We'll stick to standard HTML through this tutorial, but it is worth knowing that this is possible.</p>
+<p><strong>注意</strong>：在 <code>&lt;template&gt;</code> 標籤上設定 <code>lang</code> 屬性。例如設置 <code>&lt;template lang="pug"&gt;</code>，你就可以使用 Pug 樣板語法來取代標準的 HTML。在本教學中我們會使用標準 HTML，但還是值得知道有這個方法。</p>
 </div>
 
-<p><code>&lt;script&gt;</code> contains all of the non-display logic of your component. Most importantly, your <code>&lt;script&gt;</code> tag needs to have a default exported JS object. This object is where you locally register components, define component inputs (props), handle local state, define methods, and more. Your build step will process this object and transform it (with your template) into a Vue component with a <code>render()</code> function.</p>
+<p><code>&lt;script&gt;</code> 包含元件中所有非顯示的邏輯。最重要的是，你的 <code>&lt;script&gt;</code> 標籤必須輸出一個 JS 物件。這個物件是你在本地端註冊的元件，包含定義屬性、處理本地狀態、定義方法等等。在建置步驟這個物件會被處理及轉換（包含 template 模板），變成一個有 <code>render()</code> 函數的 Vue 元件。</p>
 
-<p>In the case of <code>App.vue</code>, our default export sets the name of the component to <code>App</code> and registers the <code>HelloWorld</code> component by adding it into the <code>components</code> property. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This can be useful for bundle splitting/tree shaking since not every page in your app necessarily needs every component.</p>
+<p>以 <code>App.vue</code> 為例，我們設定元件的名稱為 <code>App</code>，並且在 <code>components</code> 屬性中加入 <code>HelloWorld</code> 來註冊這個元件。以這種方式來註冊元件是本地註冊。本地註冊的元件只能在註冊它們的元件裡面使用，所以你需要在每個使用它們的元件檔案裡匯入並且註冊它們。這對於 bundle splitting/tree shaking 很有用，因為在應用程式裡不是每一頁都需要所有的元件。</p>
 
 <pre class="brush: js">import HelloWorld from './components/HelloWorld.vue';
 
 export default {
   name: 'App',
   components: {
-    //You can register components locally here.
+    // 你可以在這裡註冊元件
     HelloWorld
   }
 };</pre>
 
 <div class="notecard note">
-<p><strong>注意</strong>: 如果你想要使用 <a href="https://www.typescriptlang.org/">TypeScript</a> 語法， you need to set the <code>lang</code> attribute on the <code>&lt;script&gt;</code> tag to signify to the compiler that you're using TypeScript — <code>&lt;script lang="ts"&gt;</code>.</p>
+<p><strong>注意</strong>：如果你想要使用 <a href="https://www.typescriptlang.org/">TypeScript</a> 語法，你必須把 <code>&lt;script&gt;</code> 標籤的 <code>lang</code> 屬性設定成 <code>&lt;script lang="ts"&gt;</code> 來告訴編譯器你要使用 TypeScript。</p>
 </div>
 
-<p><code>&lt;style&gt;</code> is where you write your CSS for the component. If you add a <code>scoped</code> attribute — <code>&lt;style scoped&gt;</code> — Vue will scope the styles to the contents of your SFC. This works similar to CSS-in-JS solutions, but allows you to just write plain CSS.</p>
+<p><code>&lt;style&gt;</code> 是你撰寫元件的 CSS 的地方。如果你加上 <code>scoped</code> 屬性，例如 <code>&lt;style scoped&gt;</code>，Vue 會把樣式的範圍限制在這個單一檔案元件裡。這類似 CSS-in-JS 的解決方案，但是它允許你寫單純的 CSS。</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you select a CSS pre-processor when creating the project via the CLI, you can add a <code>lang</code> attribute to the <code>&lt;style&gt;</code> tag so that the contents can be processed by Webpack at build time. For example, <code>&lt;style lang="scss"&gt;</code> will allow you to use SCSS syntax in your styling information.</p>
+<p><strong>注意</strong>：如果你在使用 CLI 創建專案時有選擇 CSS 前處理器，你可以在 <code>&lt;style&gt;</code> 標籤上添加 <code>lang</code> 屬性，這些內容在建置的時候將會被 Webpack 處理。舉例來說，<code>&lt;style lang="scss"&gt;</code> 允許你在樣式資訊中使用 SCSS 語法。</p>
 </div>
 
 <h2 id="Running_the_app_locally">在本地端運行應用程式</h2>
 
-<p>The Vue CLI comes with a built-in development server. This allows you to run your app locally so you can test it easily without needing to configure a server yourself. The CLI adds a <code>serve</code> command to the project’s <code>package.json</code> file as an npm script, so you can easily run it.</p>
+<p>Vue CLI 有內建的程式開發伺服器。這讓你可以在本地端運行你的應用程式，你不需要自己設置一個伺服器就可以很輕鬆地測試它。CLI 有添加一個 <code>serve</code> 命令在專案的 <code>package.json</code> 檔案中當成一個 npm script，所以你可以很輕易的運行它。</p>
 
-<p>In your terminal, try running <code>npm run serve</code> (or <code>yarn serve</code> if you prefer yarn). Your terminal should output something like the following:</p>
+<p>在你的終端機執行 <code>npm run serve</code>（或 <code>yarn serve</code> 如果你比較喜歡使用 yarn）。你的終端機會輸出類似以下的資訊：</p>
 
 <pre>INFO  Starting development server...
 98% after emitting CopyPlugin
@@ -198,25 +198,25 @@ export default {
   Note that the development build is not optimized.
   To create a production build, run npm run build.</pre>
 
-<p>If you navigate to the “local” address in a new browser tab (this should be something like <code>http://localhost:8080</code> as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.</p>
+<p>如果你在瀏覽器的新分頁開啟「本地」位址（如上所述，這串位址應該會類似 <code>http://localhost:8080</code>，但可能因設置而異），你應該會看到你的應用程式。現在，它應該包含一個歡迎訊息、一個導向 Vue 文件的連結、使用 CLI 初始化應用程式時所添加的套件的連結、以及一些導向 Vue 社群及生態圈的有用連結。</p>
 
 <p><img alt="default vue app render, with vue logo, welcome message, and some documentation links" src="vue-default-app.png" style="border-style: solid; border-width: 1px;"></p>
 
-<h2 id="Making_a_couple_of_changes">Making a couple of changes</h2>
+<h2 id="Making_a_couple_of_changes">做一些改變</h2>
 
-<p>Let's make our first change to the app — we’ll delete the Vue logo. Open the <code>App.vue</code> file, and delete the <code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> element from the template section:</p>
+<p>現在讓我們來對應用程式做一些改變 － 刪除 Vue logo。打開 <code>App.vue</code> 檔案，從 template 區塊刪除 <code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> 元素：</p>
 
 <pre class="brush: html"><span class="author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90z8h7gz67ziz76zcz77zz80zz71zncfz69zz69ziaz82zz71zz72zhz77zz122zz90z14mcyd">&lt;img alt="Vue logo" src="./assets/logo.png"&gt;</span></pre>
 
-<p>If your server is still running, you should see the logo removed from the rendered site almost instantly. Let’s also remove the <code>HelloWorld</code> component from our template.</p>
+<p>如果你的伺服器仍在正常運行，你應該可以看到 logo 幾乎即時地從渲染頁面裡移除。接下來，我們再把 <code>HelloWorld</code> 從模板裡移除。</p>
 
-<p>First of all delete this line:</p>
+<p>首先刪除以下這行：</p>
 
 <pre class="brush: html">&lt;HelloWorld msg="Welcome to Your Vue.js App"/&gt;</pre>
 
-<p>If you save your <code>App.vue</code> file now, the rendered app will throw an error because we’ve registered the component but are not using it. We also need to remove the lines from inside the <code>&lt;script&gt;</code> element that import and register the component:</p>
+<p>這時如果你儲存 <code>App.vue</code> 檔案，渲染的應用程式會拋出一個錯誤，因為我們註冊了元件但是沒有使用它。所以我們必須移除在 <code>&lt;script&gt;</code> 元素裡面用來匯入及註冊元件的程式碼：</p>
 
-<p>Delete these lines now:</p>
+<p>現在刪除以下這幾行：</p>
 
 <pre class="brush: js">import HelloWorld from './components/HelloWorld.vue'</pre>
 
@@ -224,9 +224,9 @@ export default {
   HelloWorld
 }</pre>
 
-<p>Your rendered app should no longer show an error, just a blank page, as we currently have no visible content inside <code>&lt;template&gt;</code>.</p>
+<p>渲染好的應用程式應該不再顯示錯誤了，只有一個空白的頁面，因為目前在 <code>&lt;template&gt;</code> 沒有可見的內容。</p>
 
-<p>Let’s add a new <code>&lt;h1&gt;</code> inside <code>&lt;div id="app"&gt;</code>. Since we’re going to be creating a todo list app below, let's set our header text to "To-Do List". Add it like so:</p>
+<p>我們接下來要製作一個待辦清單應用程式，在 <code>&lt;div id="app"&gt;</code> 裡面加一個新的 <code>&lt;h1&gt;</code>，並將標題文字設定為「 To-Do List 」。參考如下：</p>
 
 <pre class="brush: html">&lt;template&gt;
   &lt;div id="app"&gt;
@@ -234,77 +234,77 @@ export default {
   &lt;/div&gt;
 &lt;/template&gt;</pre>
 
-<p><code>App.vue</code> will now show our heading, as you'd expect.</p>
+<p><code>App.vue</code> 將會如預期地展示標題。</p>
 
 <h2 id="Summary">總結</h2>
 
-<p>Let's leave this here for now. We've learnt about some of the ideas behind Vue, created some scaffolding for our example app to live inside, inspected it, and made a few preliminary changes.</p>
+<p>讓我們現在暫時告一個段落。我們學習了 Vue 背後的一些想法，創建應用架構並使我們的範例應用可以在其運行，檢查它，並且對它做一些初步的改變。</p>
 
-<p>With a basic introduction out of the way, we'll now go further and build up our sample app, a basic Todo list application that allows us to store a list of items, check them off when done, and filter the list by all, complete, and incomplete todos.</p>
+<p>在進行基本介紹之前，我們將進一步建構我們的範例應用，一個基本的待辦應用程式，它讓我們儲存待辦事項，在已完成的事項上打勾，以及依事項完成/未完成狀態來過濾列表。</p>
 
-<p>In the next article we'll build our first custom component, and look at some important concepts such as passing props into it and saving its data state.</p>
+<p>在下一篇文章中，我們將會建立第一個客製元件，研究一些重要的概念，像是透過 props 傳遞資料及儲存它的資料狀態。</p>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
 
 <h2 id="In_this_module">在本模組</h2>
 
 <ul>
- <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">前端框架介紹</a></li>
- <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">框架的主要功能</a></li>
- <li>React
-  <ul>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">開始學 React</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">建立我們的 React 待辦清單</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">把 React app 元件化</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">響應性 React：事件與狀態</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">響應性 React：編輯、過濾、條件式過濾</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">React 無障礙</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React 的資源</a></li>
-  </ul>
- </li>
- <li>Ember
-  <ul>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">開始學 Ember</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app 架構與元件</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">響應性 Ember：事件、類別、狀態</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">響應性 Ember：Footer 功能、條件式渲染</a></li>
-   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Ember 的路由</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember 的資源與除錯</a></li>
-  </ul>
- </li>
- <li>Vue
-  <ul>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">開始學 Vue</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">建立第一個 Vue 元件</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">渲染 Vue 元件的列表</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">寫一個 todo 表單：Vue 的事件、方法、model</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">透過 CSS 樣式化 Vue 元件</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">使用 Vue 的計算屬性 (compueted)</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue 的條件式渲染：編輯已存在的待辦</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">重點管理 Vue ref</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue 的資源</a></li>
-  </ul>
- </li>
- <li>Svelte
-  <ul>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">開始學 Svelte</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">建立我們的 Svelte 待辦清單</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">把 Svelte app 元件化</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">部署與下一步</a></li>
-  </ul>
- </li>
- <li>Angular
+  <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">前端框架介紹</a></li>
+  <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">框架主要功能</a></li>
+  <li>React
    <ul>
-    <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">開始學 Angular</a></li>
-    <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">開始我們的 Angular 待辦清單</a></li>
-    <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">把我們的 Angular app 樣式話</a></li>
-    <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">建立一個項目組建</a></li>
-    <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">過濾我們的待辦項目</a></li>
-    <li><a href="/zn-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">React 入門</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">建立我們的 React 待辦清單</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">元件化我們的 React 應用程式</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React 互動性：事件與狀態</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React 互動性：編輯、過濾、條件式渲染</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">React 無障礙</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React 資源</a></li>
    </ul>
- </li>
-</ul>
+  </li>
+  <li>Ember
+   <ul>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Ember 入門</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember 應用程式結構及元件化</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember 互動性：事件、類別、狀態</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember 互動性：Footer 功能、條件式渲染</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Ember 路由</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember 資源及偵錯</a></li>
+   </ul>
+  </li>
+  <li>Vue
+   <ul>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Vue 入門</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">建立第一個 Vue 元件</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">渲染 Vue 清單</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">新增待辦表單：Vue 事件、方法、模型</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">透過 CSS 樣式化 Vue 元件</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">使用 Vue 計算屬性</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue 條件式渲染：編輯已存在的待辦表單</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">聚焦 Vue refs</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue 資源</a></li>
+   </ul>
+  </li>
+  <li>Svelte
+   <ul>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Svelte 入門</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">開始寫我們的 Svelte 待辦清單應用程式</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Svelte 中的動態行為：變數及屬性</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">元件化我們的 Svelte 應用程式</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">進階 Svelte：反應性、生命週期、可存取性</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">和 Svelte stores 共舞</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">Svelte 中的 TypeScript</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">部署和下一步</a></li>
+   </ul>
+  </li>
+  <li>Angular
+    <ul>
+     <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Angular 入門</a></li>
+     <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">開始我們的 Angular 待辦清單應用程式</a></li>
+     <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">樣式化我們的 Angular 應用程式</a></li>
+     <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component 建立（待辦清單）項目元件</a></li>
+     <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">過濾我們的待辦項目</a></li>
+     <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">建置 Angular 應用程式及更多資源</a></li>
+    </ul>
+  </li>
+ </ul>
