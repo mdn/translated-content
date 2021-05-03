@@ -99,12 +99,12 @@ tags:
 &lt;/div&gt;</pre>
 
 
-<p>第一個 input 是一個核取方塊，讓用戶可以在完成該項目後勾選以核對。核取方塊的 <code>&lt;input&gt;</code> 和 <code>&lt;label&gt;</code> 中的雙大括號<code>\{{}}</code>表示Angular的內嵌繫結。
+<p>第一個 input 是一個核取方塊，讓用戶可以在完成該項目後勾選以核對。核取方塊的 <code>&lt;input&gt;</code> 和 <code>&lt;label&gt;</code> 中的雙大括號 <code>\{{}}</code> 表示 Angular 的內嵌繫結。
 Angular使用 <code>\{{item.description}}</code> 從 <code>items</code> 陣列中獲取當前 <code>item</code> 的描述。下一節將詳細解釋元件如何共享數據。</p>
 
-<p>接下來的用於編輯和刪除當前項目的兩個按鈕位於 <code>&lt;div&gt;</code> 內。 <code>&lt;div&gt;</code> 內的 <code>*ngIf</code>，是內置的 Angular 結構型指令，可動態更改DOM的結構。</p>
+<p>接下來的用於編輯和刪除當前項目的兩個按鈕位於 <code>&lt;div&gt;</code> 內。 <code>&lt;div&gt;</code> 內的 <code>*ngIf</code>，是內置的 Angular 結構型指令，可動態更改 DOM 的結構。</p>
 
-<p> <code>*ngIf</code> 表示如果 <code>editable</code> 為 false，則此 <code>&lt;div&gt;</code> 會出現在DOM中。如果 <code>editable</code> 為true，則Angular將從DOM中移除該 <code>&lt;div&gt;</code>。</p>
+<p> <code>*ngIf</code> 表示如果 <code>editable</code> 為 false，則此 <code>&lt;div&gt;</code> 會出現在DOM中。如果 <code>editable</code> 為true，則 Angular 將從 DOM 中移除該 <code>&lt;div&gt;</code>。</p>
 
 
 <pre class="brush: html">&lt;div class="btn-wrapper" *ngIf="!editable"&gt;
@@ -118,7 +118,7 @@ Angular使用 <code>\{{item.description}}</code> 從 <code>items</code> 陣列�
 如果用戶點擊 <strong>Delete</strong> 而不是點擊 <strong>Edit</strong>，則 <code>ItemComponent</code> 將觸發一個刪除事件，用來通知 <code>AppComponent</code> 做刪除動作。</p>
 
 
-<p>在下一個 <code>&lt;div&gt;</code> 裡也放上了 <code>*ngIf</code>，不過它的判斷條件是當 <code>editable</code> 為 true 的情況下，Angular 會將該 <code>&lt;div&gt;</code> 和其子元素 <code>&lt;input&gt;</code> 和 <code>&lt;button&gt;</code>放入DOM中。</p>
+<p>在下一個 <code>&lt;div&gt;</code> 裡也放上了 <code>*ngIf</code>，不過它的判斷條件是當 <code>editable</code> 為 true 的情況下，Angular 會將該 <code>&lt;div&gt;</code> 和其子元素 <code>&lt;input&gt;</code> 和 <code>&lt;button&gt;</code>放入 DOM 中。</p>
   
 
 <pre class="brush: html">&lt;!-- This section shows only if user clicks Edit button --&gt;
@@ -132,7 +132,6 @@ Angular使用 <code>\{{item.description}}</code> 從 <code>items</code> 陣列�
 &lt;/div&gt;</pre>
 
 <p>設置 <code>[value]=&quot;item.description&quot;</code>，<code>&lt;input&gt;</code> 的值將綁定到當前項目的 <code>description</code> 屬性。此綁定使項目的 <code>description</code> 成為<code>&lt;input&gt;</code> 的值。因此如果將 <code>description</code> 設為 <code>eat</code>， 因為 <code>&lt;input&gt;</code> 已經和 <code>description</code> 綁定。所以，當用戶編輯項目時，<code>&lt;input&gt;</code> 的值已被設為 <code>eat</code>。</p>
-  如果將<code>description</code> 設為<code>eat</code>， 因為<code>&lt;input&gt;</code>已經和<code>description</code>綁定。所以，當用戶編輯項目時，<code>&lt;input&gt;</code>的值已被設為<code>eat</code>。</p>
 
 <p><code>&lt;input&gt;</code> 上的範本變數 <code>#editedItem</code> 表示 Angular 將用戶在此 <code>&lt;input&gt;</code> 中輸入的內容儲存在名為 <code>editedItem</code> 的變數中。如果用戶在輸入後選擇按 Enter 而不是點擊 <strong>Save</strong>，則 <code>keyup</code> 事件將調用 <code>saveItem()</code> 方法並傳遞 <code>editedItem</code> 變數的值。</p>
   
@@ -254,11 +253,11 @@ The <code>item</code> property in the square brackets, <code>[]</code>, binds th
 When you add or delete items, the count of the items should also change.
 To make the list more user-friendly, add some styles to the <code>ItemComponent</code>.</p>
 
-<h2 id="add_styles_to_itemcomponent-">為ItemComponent添加樣式</h2>
+<h2 id="add_styles_to_itemcomponent-">為 ItemComponent 添加樣式</h2>
 
-<p>你可以使用元件的styles sheet 去增加該元件的樣式。
-  下面的CSS增加基本的樣式對按鈕添加flexbox屬性和客製化了核取方塊</p>
-<p>將下面的樣式代碼貼至 <code>item.component.css</code>。</p>
+<p>你可以使用元件的 styles sheet 去增加該元件的樣式。
+  下面的CSS增加基本的樣式對按鈕添加 flexbox 屬性和客製化了核取方塊</p>
+<p>將下面的樣式程式碼貼至 <code>item.component.css</code>。</p>
 
 <pre class="brush: css">.item {
   padding: .5rem 0 .75rem 0;
