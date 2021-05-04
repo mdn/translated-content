@@ -91,16 +91,16 @@ tags:
 <p>若想知道更多相關資訊也可以至下列去閱讀：</p>
 
 <ul>
- <li>可以至 nodejs.org 了解<a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/">＂什麼是 npm＂</a></li>
- <li>可以至 npm 部落格了解<a href="https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner">＂介紹 npx＂</a></li>
- <li>可以至 svelte 部落格了解<a href="https://svelte.dev/blog/the-easiest-way-to-get-started">＂以最簡單的方式來開始 Svelte＂</a></li>
+ <li>可以至 nodejs.org 了解<a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/">「什麼是 npm？」</a></li>
+ <li>可以至 npm 部落格了解<a href="https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner">「介紹 npx」</a></li>
+ <li>可以至 svelte 部落格了解<a href="https://svelte.dev/blog/the-easiest-way-to-get-started">「以最簡單的方式來開始 Svelte」</a></li>
 </ul>
 
-<h3 id="Creating_your_first_Svelte_app">Creating your first Svelte app</h3>
+<h3 id="Creating_your_first_Svelte_app">建構你第一個 Svelte 應用程式</h3>
 
-<p>The easiest way to create a starter app template is to just download the starter template application. You can do that by visiting <a href="https://github.com/sveltejs/template">sveltejs/template</a> on GitHub or you can avoid having to download and unzip it and just use <a href="https://github.com/Rich-Harris/degit">degit</a>.</p>
+<p>最簡單的方式就是使用入門範本來建構初始應用程式。你可以至 <a href="https://github.com/sveltejs/template">sveltejs/template</a> 下載並解壓縮出入門範本或者使用 <a href="https://github.com/Rich-Harris/degit">degit</a> 來做這件事。</p>
 
-<p>To create your starter app template, run the following terminal commands:</p>
+<p>為了建構你第一個入門範本應用程式，請先執行下列終端機指令：</p>
 
 <pre class="brush: bash">npx degit sveltejs/template moz-todo-svelte
 cd moz-todo-svelte
@@ -108,16 +108,16 @@ npm install
 npm run dev</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using <code>git clone</code> because it will not download all the history of the repo, or create a complete local clone.</p>
+<p><strong>注意</strong>：不用太驚訝 degit 做了這麼多事情 — 它其實就只是讓你可以從 git 儲存庫下載和解壓縮最新版本的內容。使用它比起使用 <code>git clone</code> 更快能達到我們的目的，因為它並不會下載整個儲存庫的歷史以及不會複製一份放在本機端。</p>
 </div>
 
-<p>After running <code>npm run dev</code>, Svelte will compile and build your application. It will start a local server at <code>localhost:5000</code>. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:</p>
+<p>之後執行 <code>npm run dev</code>，Svelte 將會編譯和建構你的應用程式。它將會跑在本機 <code>localhost:5000</code> 位址。當你對來源檔案做了異動，Svelte 將會偵測到檔案更新並自動地重新編譯和刷新你的應用程式。你的瀏覽器將會顯示如下圖：</p>
 
 <p><img alt="A simple start page that says hello world, and gives a link to the official svelte tutorials" src="01-svelte-starter-app.png" style="border-style: solid; border-width: 1px;"></p>
 
-<h3 id="Application_structure">Application structure</h3>
+<h3 id="Application_structure">應用程式結構</h3>
 
-<p>The starter template comes with the following structure:</p>
+<p>入門範本有下列結構：</p>
 
 <pre>moz-todo-svelte
 ├── readme.md
@@ -139,29 +139,29 @@ npm run dev</pre>
     ├── App.svelte
     └── main.js</pre>
 
-<p>The contents are as follows:</p>
+<p>內容解釋如下：</p>
 
 <ul>
- <li><code>package.json</code> and <code>package-lock.json</code>: Contains information about the project that Node.js/npm uses to keep it organized. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read <a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/">What is the file <code>package.json</code></a>? on NodeJS.org; we also talk about it in our <a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics tutorial</a>.</li>
- <li><code>node_modules</code>: This is where node saves the project dependencies. These dependencies won't be sent to production, they are just used for development purposes.</li>
- <li><code>.gitignore</code>: Tells git which files or folder to ignore from the project — useful if you decide to include your app in a git repo.</li>
- <li><code>rollup.config.js</code>: Svelte uses <a href="https://rollupjs.org/">rollup.js</a> as a module bundler. This configuration file tells rollup how to compile and build your app. If you prefer <a href="https://webpack.js.org/">webpack</a> you can create your starter project with <code>npx degit sveltejs/template-webpack svelte-app</code> instead.</li>
- <li>scripts: Contains setup scripts as required. Currently should only contain <code>setupTypeScript.js</code>, a script that sets up TypeScript support in Svelte. We'll talk about this more in the last article.</li>
- <li><code>src</code>: This directory is where the source code for your application lives — where you'll be creating the code for your app.
+ <li><code>package.json</code> 和 <code>package-lock.json</code>：Node.js/npm 用它來組織化管理你的專案，相關資訊可以在這邊找到。在這個教學系列中，你不需要完全了解這個檔案，但如果你想要學習更多的話，你可以至 NodeJS.org 閱讀 <a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/">什麼是 <code>package.json</code> 檔案</a>？我們在<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">基礎套件管理教學系列</a>也有談到。</li>
+ <li><code>node_modules</code>：這裡是 node 存放專案相依套件的地方。這些相依套件在正式環境不會看到，只有開發時才會被使用到。</li>
+ <li><code>.gitignore</code>：告訴 git 有哪些檔案或資料夾不要納入專案版本控制 — 透過它可以決定哪些檔案要納入專案版本控制，還蠻實用的！</li>
+ <li><code>rollup.config.js</code>：Svelte 使用 <a href="https://rollupjs.org/">rollup.js</a> 做為模組包裝工具。這個組態檔案告訴 rollup 如何編譯和建構你的應用程式。假如你偏好使用 <a href="https://webpack.js.org/">webpack</a>，你可以改執行 <code>npx degit sveltejs/template-webpack svelte-app</code> 來建構你的初始應用程式。</li>
+ <li>scripts：包含所需的設置腳本。現在應該只有 <code>setupTypeScript.js</code>，此腳本用來支援 Svelte 可以使用 TypeScript。我們將在之後的文章談到更多。</li>
+ <li><code>src</code>：這個目錄主要放你應用程式的來源程式碼 — 你寫的程式碼基本都會放在這。
   <ul>
-   <li><code>App.svelte</code>: This is the top-level component of your app. So far it just renders the 'Hello World!' message.</li>
-   <li><code>main.js</code>: The entry point to our application. It just instantiates the <code>App</code> component and binds it to the body of our html page.</li>
+   <li><code>App.svelte</code>：在你的應用程式中它是最高層級的元件。不過它現在只會渲染出「Hello World!」的訊息給你看。</li>
+   <li><code>main.js</code>：我們應用程式的進入點。它會實例化 <code>App</code> 元件並將其綁定至我們 html 頁面的 body 上。</li>
   </ul>
  </li>
- <li><code>public</code>: This directory contains all the files that will be published in production.
+ <li><code>public</code>：這個目錄包含所有我們會釋出於正式環境的檔案。
   <ul>
-   <li><code>favicon.png</code>: This is the favicon for your app. Currently, it's the Svelte logo.</li>
-   <li><code>index.html</code>: This is the main page of your app. Initially it's just an empty HTML5 page that loads the css files and js bundles generated by Svelte.</li>
-   <li><code>global.css</code>: This file contains unscoped styles. It's a regular css file that will be applied to the whole application.</li>
-   <li><code>build</code>: This folder contains the generated CSS and JavaScript source code.
+   <li><code>favicon.png</code>：這個是你應用程式的 favicon。現在應該會是 Svelte 的標誌。</li>
+   <li><code>index.html</code>：這個是你應用程式的主要頁面。最初為一個空的 HTML5 頁面，接著會載入由 Svelte 產生的 css 檔案和 js bundles。</li>
+   <li><code>global.css</code>：這個檔案包含沒有範圍限制的樣式。這是一個正規的 css 檔案，將會套用至整個應用程式。</li>
+   <li><code>build</code>：這個資料夾會包含那些被產生的 CSS 和 JavaScript 來源程式碼。
     <ul>
-     <li><code>bundle.css</code>: The CSS file that Svelte generated from the styles defined for each component.</li>
-     <li><code>bundle.js</code>: The JavaScript file compiled from all your JavaScript source code.</li>
+     <li><code>bundle.css</code>：所有定義於你個別元件中的樣式，都會被 Svelte 產生至這個 CSS 檔案中。</li>
+     <li><code>bundle.js</code>：所有你的 JavaScript 來源程式碼都會被編譯至這個 JavaScript 檔案中。</li>
     </ul>
    </li>
   </ul>
