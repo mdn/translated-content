@@ -13,7 +13,7 @@ tags:
 ---
 <div>{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}</div>
 
-<p>在本篇文章我們會介紹一些關於非同步程式設計的重要觀念，以及在網頁瀏覽器和 JavaScript 中的行為。在閱讀其他文章之前您應該先具備這些觀念。</p>
+<p>在本篇文章我們會介紹一些關於非同步程式設計的重要觀念，以及在網頁瀏覽器和 JavaScript 中的行為。在閱讀其他文章之前你應該先具備這些觀念。</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -23,32 +23,32 @@ tags:
   </tr>
   <tr>
    <th scope="row">學習目標：</th>
-   <td>了解非同步程式設計背後的基本概念，以及他如何呈現在網頁瀏覽器及 JavaScript 。</td>
+   <td>了解非同步程式設計背後的基本概念，以及其如何在網頁瀏覽器及 JavaScript 作呈現。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Asynchronous">非同步的？</h2>
+<h2 id="Asynchronous">非同步？</h2>
 
-<p>一般來說，在程式碼的執行順序當下同一時間只會處理一件事。如果某個函式依賴於其它函式的執行結果，那麼它就需要等待其完成並回傳結果才能執行，直到那樣的情況發生，以使用者的角度而言整個程式才是真正的結束。</p>
+<p>一般來說，在程式碼的執行順序當下同一時間只會處理一件事。如果某個函式依賴於其他函式的執行結果，那麼它就需要等待其完成並回傳結果才能執行，直到那樣的情況發生，以使用者的角度而言整個程式才是真正的結束。</p>
 
-<p>Mac 的使用者有時候會發現游標變成彩虹色的旋轉圖案（或經常被稱作為「沙灘球」）。這個游標的出現代表作業系統像是正對著您說＂您在執行的程式目前正在等待其他程式的完成而被暫停，因為花了一點時間所以我擔心您會想知道發生了甚麼事。＂</p>
+<p>Mac 的使用者有時候會發現游標變成彩虹色的旋轉圖案（或經常被稱作為「沙灘球」）。這個游標的出現代表作業系統像是正對著你說：「你在執行的程式目前正在等待其他程式的完成而被暫停，因為花了一點時間所以我擔心你會想知道發生了甚麼事。」</p>
 
 <p><img alt="Multi-colored macOS beachball busy spinner" src="beachball.jpg" style="display: block; float: left; margin: 0px 30px 0px 0px;"></p>
 
 <br/>
 
-<p>這種經驗通常令人沮喪而且這也並未善加利用電腦處理器的能力——特別是在擁有多核處理器的世代。比起只能毫無意義的坐著乾等，如果能夠安排其他任務交由其他處理器來執行並讓您知道任務何時完成，這樣就有效率多了，像這樣我們能讓其他工作在同時間完成，這就是<strong>非同步程式設計</strong>的基礎。這取決於您目前正在使用的程式環境，如同網頁瀏覽器會提供某些 APIs 能讓您執行非同步的任務。</p>
+<p>這種經驗通常令人沮喪而且這也並未善加利用電腦處理器的能力——特別是在擁有多核處理器的世代。比起只能毫無意義的坐著乾等，如果能夠安排其他任務交由其他處理器來執行並讓你知道任務何時完成，這樣就有效率多了，像這樣能讓其他工作在同時間完成，這就是<strong>非同步程式設計</strong>的基礎。這取決於你目前正在使用的程式環境，如同網頁瀏覽器會提供一些 API 能讓你非同步的執行任務。</p>
 
 <br/><br/>
 
-<h2 id="Blocking_code">Blocking 程式碼</h2>
+<h2 id="Blocking_code">阻斷程式碼</h2>
 
-<p>非同步的技巧非常實用，特別是在網頁程式設計上。當一個網頁應用程式運行在瀏覽器且執行大量的程式碼的當下並未將控制權交還給瀏覽器時，瀏覽器可能會處於凍結狀況。我們稱這類的狀況為 <strong>blocking</strong>，瀏覽器正在持續處理使用者的輸入並執行其他任務就會被 blocking 住，直到應用程式將處理器的控制權歸還後才會解除。</p>
+<p>非同步的技巧非常實用，特別是在網頁程式設計上。當一個網頁應用程式運行在瀏覽器且執行大量的程式碼的當下並未將控制權交還給瀏覽器時，瀏覽器可能會處於凍結狀態。我們稱之為<strong>阻斷（blocking）</strong>，瀏覽器正在持續處理使用者的輸入並執行其他任務就會被阻斷住，直到應用程式將處理器的控制權歸還後才會解除。</p>
 
-<p>我們來看幾個程式範例來說明 blocking 是甚麼意思。</p>
+<p>我們來看幾個程式範例來說明阻斷是甚麼意思。</p>
 
-<p>在這個例子 <a href="https://github.com/mdn/learning-area/tree/master/javascript/asynchronous/introducing/simple-sync.html">simple-sync.html</a>（<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync.html">線上範例</a>），我們在按鈕增加一個點擊事件監聽器，在點擊時會執行一段相當耗時的操作（執行新增 Date 物件一千萬次並將最後一次的結果顯示在控制台上）然後再加入一則文字段落到 {{Glossary("DOM")}} 上：</p>
+<p>在這個例子 <a href="https://github.com/mdn/learning-area/tree/master/javascript/asynchronous/introducing/simple-sync.html">simple-sync.html</a>（<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync.html">線上範例</a>），我們在按鈕增加一個點擊事件監聽器，在點擊時會執行一段相當耗時的操作（執行新增日期物件一千萬次並將最後一次的結果顯示在控制台上）然後再加入一則文字段落到 {{Glossary("DOM")}} 上：</p>
 
 <pre class="brush: js">const btn = document.querySelector('button');
 btn.addEventListener('click', () =&gt; {
@@ -65,17 +65,17 @@ btn.addEventListener('click', () =&gt; {
   document.body.appendChild(pElem);
 });</pre>
 
-<p>當執行我們的範例時，打開您的 JavaScript 控制台並點擊按鈕——您會注意到文字並不會馬上就出現在畫面上，而是要等到跑完新增 Date 物件的迴圈並將結果顯示在控制台上後，新增的文字才會出現。原因在於程式碼根據順序執行，因此某一筆的操作必須等待上一筆執行完成後才會執行。</p>
+<p>當執行我們的範例時，打開你的 JavaScript 控制台並點擊按鈕——你會注意到文字並不會馬上就出現在畫面上，而是要等到跑完新增日期物件的迴圈並將結果顯示在控制台上後，新增的文字才會出現。原因在於程式碼依照順序執行，因此某一筆的操作必須等待上一筆執行完成後才會執行。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：上述的範例只是用來作為了解原理的基本範例，在現實生活中您不會真的執行一千萬次的新增日期物件。</p>
+<p><strong>注意</strong>：上述的範例只是用來作為了解原理的基本範例，在現實生活中你不會真的執行一千萬次的新增日期物件。</p>
 </div>
 
-<p>在我們第二個範例，<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">simple-sync-ui-blocking.html</a> （<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">線上範例</a>），我們模擬了一段比較貼近現實的範例，您或許會在現實的頁面上遇到。我們在渲染畫面的期間阻擋和使用者的互動行為。在本範例，我們有兩個按鈕：</p>
+<p>在我們第二個範例，<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">simple-sync-ui-blocking.html</a> （<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">線上範例</a>），我們模擬了一段比較貼近現實的範例，你或許會在現實的頁面上遇到。我們在渲染畫面的期間阻擋和使用者的互動行為。在本範例，我們有兩個按鈕：</p>
 
 <ul>
- <li>當＂Fill canvas＂按鈕被點擊時，我們會填滿一百萬個藍色圓圈到可用的 {{htmlelement("canvas")}} 標籤內。</li>
- <li>當點擊＂Click me for alert＂按鈕後會顯示警告訊息。</li>
+ <li>當「Fill canvas」按鈕被點擊時，我們會填滿一百萬個藍色圓圈到可用的 {{htmlelement("canvas")}} 標籤內。</li>
+ <li>當點擊「Click me for alert」按鈕後會顯示警告訊息。</li>
 </ul>
 
 <pre class="brush: js">function expensiveOperation() {
@@ -96,10 +96,10 @@ alertBtn.addEventListener('click', () =&gt;
 <p>當點擊第一個按鈕之後緊接著點擊第二個按鈕，您會發現警告訊息並不會馬上出現，而是要等到圓圈圖案被渲染完成後才會出現警告訊息視窗。第一個操作在完成之前都會阻擋第二個操作的執行。</p>
 
 <div class="notecard note">
-<p><strong>注意</strong>：我們是在偽造一個 blocking 且這個例子可能有點醜陋，但這卻是在現實中大多數的開發者試圖避免的常見問題。</p>
+<p><strong>注意</strong>：我們是在偽造一個阻斷且這個例子可能有點醜陋，但這卻是在現實中大多數的開發者試圖避免的常見問題。</p>
 </div>
 
-<p>為什麼會這樣？事實是因為 JavaScript 在執行上是使用 <strong>單一執行緒（single-threaded）</strong>。現在，我們需要說明一下 <strong>執行緒（threads）</strong>的概念。</p>
+<p>為什麼會這樣？事實是因為 JavaScript 在執行上是使用 <strong>單一執行緒（single-threaded）</strong>。現在，我們需要說明一下<strong>執行緒（Thread）</strong>的概念。</p>
 
 <h2 id="Threads">執行緒</h2>
 
@@ -116,11 +116,11 @@ alertBtn.addEventListener('click', () =&gt;
 
 <h3 id="JavaScript_is_single-threaded">JavaScript 是單執行緒的</h3>
 
-<p>JavaScript 在傳統意義上是跑在一條單執行緒。即便您的電腦有多顆核心，您也只能在 JavaScript 上面跑一條執行緒來完成任務，這一條執行緒我們稱為 <strong>主執行緒（main thread）</strong>。我們稍早的第二個例子執行流程就像是底下這樣：</p>
+<p>JavaScript 在傳統意義上是跑在一條單執行緒。即便你的電腦有多顆核心，也只能在 JavaScript 上面跑一條執行緒來完成任務，這一條執行緒我們稱為<strong>主執行緒（main thread）</strong>。我們稍早的第二個例子執行流程就像是底下這樣：</p>
 
 <pre>主執行緒：渲染圓圈圖形到 canvas --&gt; 顯示 alert()</pre>
 
-<p>在經過一段時間的發展後，JavaScript 取得某種工具來處理上述的問題。<a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> 允許傳送一些任務到不同的執行緒上，因此呼叫一個 worker 您可以在同一時間跑不同的任務區塊。透過使用 worker 就可以和主執行緒分工合作，因此不會 Blocking 和使用者的互動。</p>
+<p>在經過一段時間的發展後，JavaScript 取得某種工具來處理上述的問題。<a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> 允許傳送一些任務到不同的執行緒上，因此呼叫一個 worker 您可以在同一時間跑不同的任務區塊。透過使用 worker 就可以和主執行緒分工合作，因此不會阻斷和使用者的互動。</p>
 
 <pre>    主執行緒：任務 A --&gt; 任務 C
 Worker執行緒：Expensive 任務 B</pre>
@@ -129,9 +129,9 @@ Worker執行緒：Expensive 任務 B</pre>
 
 <h2 id="Asynchronous_code">非同步的程式碼</h2>
 
-<p>Web workers 相當有用，但還是有它的限制在。最主要的限制是在它不能直接存取 {{Glossary("DOM")}} ——您不能透過 worker 去直接更新您的 UI。我們不能透過 worker 去渲染一百萬個藍色圈圈，它基本上只能做一些數字運算的工作。</p>
+<p>Web workers 相當有用，但還是有它的限制在。最主要的限制是在它不能直接存取 {{Glossary("DOM")}} ——你不能透過 worker 去直接更新你的 UI。我們不能透過 worker 去渲染一百萬個藍色圈圈，它基本上只能做一些數字運算的工作。</p>
 
-<p>第二個問題是即使我們的程式跑在 worker 上不會 blocking 主執行緒的執行，但基本上我們還是處於同步的。當一個函式的執行依賴於多個函式的執行結果就會發生問題。看看底下的執行緒圖表：</p>
+<p>第二個問題是即使我們的程式跑在 worker 上不會阻斷主執行緒的執行，但基本上我們還是處於同步的。當一個函式的執行依賴於多個函式的執行結果就會發生問題。看看底下的執行緒圖表：</p>
 
 <pre>主執行緒：任務 A --&gt; 任務 B</pre>
 
@@ -147,13 +147,13 @@ Worker 執行緒：任務 C -------------&gt; |     |</pre>
 <pre>主執行緒：任務 A                   任務 B
 Promise：     |_____非同步操作_____|</pre>
 
-<p>因為操作發生在其他地方，因此主執行緒並不會在執行非同步的工作時被 blocking 住。</p>
+<p>因為操作發生在其他地方，因此主執行緒並不會在執行非同步的工作時被阻斷住。</p>
 
 <p>我們會在下一篇文章來看看我們如何寫出非同步的程式碼，真令人興奮，對吧？讓我們繼續看下去吧！</p>
 
 <h2 id="Conclusion">結論</h2>
 
-<p>現代軟體越來越多圍繞在使用非同步的程式技巧來設計，讓程式碼可以在同一時間做越多事。當您使用目前越新越強大的 APIs 時，您會發現更多情況之下他們處理工作唯一的方法就是使用非同步的處理方式。過去我們很難寫出可以執行非同步的程式碼，但現在簡單多了。在剩餘的單元中，我們將會進一步的探討為何非同步如此重要，以及如何設計出避免上述某些問題的程式碼。</p>
+<p>現代軟體越來越多圍繞在使用非同步的程式技巧來設計，讓程式碼可以在同一時間做越多事。當你使用目前越新越強大的 API 時，你會發現更多情況之下他們處理工作唯一的方法就是使用非同步的處理方式。過去我們很難寫出可以執行非同步的程式碼，但現在簡單多了。在剩餘的單元中，我們將會進一步的探討為何非同步如此重要，以及如何設計出避免上述某些問題的程式碼。</p>
 
 <div>{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}</div>
 
