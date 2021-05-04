@@ -46,8 +46,6 @@ original_slug: Web/HTML/Controlando_verificacao_ortografica_em_formularios_HTML
 
 <p>Neste exemplo HTML acima, os dois primeiros campos de texto terão a verificação ortográfica e o terceiro não terá.</p>
 
-<p id="lang">{{ h1_gecko_minversion("Controlando o idioma da verificação ortográfica", "9.0") }}</p>
-
 <p>Iniciando no Gecko 9.0 {{ geckoRelease("9.0") }}, a verificação ortográfica usa o atributo  {{ htmlattrxref("lang", "input") }} do elemento {{ HTMLElement("input") }}  para determinar o idioma padrão da verificação ortográfica. Se o {{ HTMLElement("input") }} não tiver o atributo <code>lang</code> setado, esse atributo é procurado em cada elemento pai superior até chegar ao elemento raiz do documento.</p>
 
 <p>Fazendo assim, se o usuário tem os dicionários de Português e Inglês instalados, e um elemento editável tiver o atributo <code>lang="en"</code>, o dicionário inglês será automaticamente usado para este elemento.</p>

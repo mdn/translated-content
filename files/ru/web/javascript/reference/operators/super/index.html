@@ -5,17 +5,20 @@ tags:
   - ECMAScript 2015
   - JavaScript
   - Классы
+  - Возможности языка
+  - Левая часть выражения
+  - Оператор
 translation_of: Web/JavaScript/Reference/Operators/super
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
 <p>Ключевое слово <strong>super</strong> используется для вызова функций, принадлежащих родителю объекта.</p>
 
-<p>Выражения: <code>super.prop</code> и <code>super[expr]</code> - действительны в любом методе определения в обоих классах и в литералах объекта.</p>
+<p>Выражения <code>super.prop</code> и <code>super[expr]</code> действительны в любом <a href="/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions">определении метода</a> в <a href="/ru/docs/Web/JavaScript/Reference/Classes">классах</a> и в <a href="/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer">литералах объекта</a>.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">super([arguments]); // вызов родительского конструктора.
+<pre class="brush: js">super([arguments]); // вызов родительского конструктора.
 super.functionOnParent([arguments]);
 </pre>
 
@@ -27,65 +30,62 @@ super.functionOnParent([arguments]);
 
 <h3 id="Использование_super_в_классах">Использование super в классах</h3>
 
-<p>Этот фрагмент кода взят из <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">live demo</a>). В этом примере <code>super()</code> вызывается , чтобы предотвратить использования одинакового для классов <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Rectangle</span></font> and <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">Square</span></font> определения тела конструктора.</p>
+<p>Этот фрагмент кода взят из <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">демонстрация</a>). В этом примере <code>super()</code> вызывается, чтобы не повторять части конструктора, одинаковые для классов <code>Rectangle</code> и <code>Square</code>.</p>
 
-<pre class="brush: js notranslate">class Polygon {
+<pre class="brush: js">class Rectangle {
   constructor(height, width) {
-    this.name = 'Polygon';
+    this.name = 'Rectangle';
     this.height = height;
     this.width = width;
   }
   sayName() {
     console.log('Hi, I am a ', this.name + '.');
   }
-}
-
-class Square extends Polygon {
-  constructor(length) {
-    this.height; // ReferenceError, super должен быть вызван первым!
-
-    // Здесь, вызывается метод конструктора родительского класса с длинами,
-    // указанными для ширины и высоты класса Polygon
-    super(length, length);
-
-    // Примечание: в производных классах, super() необходимо вызывать прежде чем
-    // использовать 'this'. Если этого не сделать будет сообщение об ошибке ссылки.
-    this.name = 'Square';
-  }
-
   get area() {
     return this.height * this.width;
   }
-
   set area(value) {
-    this.area = value;
-  }
-}</pre>
-
-<h3 id="Супер-вызовы_статических_методов">Супер-вызовы статических методов</h3>
-
-<p>Вы так же можете вызывать super на <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes/static">статических</a> методах.</p>
-
-<pre class="notranslate">class Rectangle {
-  constructor() {}
-  static logNbSides() {
-    return 'У меня 4 стороны,';
+    this._area = value;
   }
 }
 
 class Square extends Rectangle {
-  constructor() {}
-  static logDescription() {
-    return super.logNbSides() + ' которые все равны';
+  constructor(length) {
+    this.height; // ReferenceError, super должен быть вызван первым!
+
+    // Здесь вызывается конструктор родительского класса с длинами,
+    // указанными для ширины и высоты класса Rectangle
+    super(length, length);
+
+    // Примечание: в производных классах super() необходимо вызывать, прежде чем
+    // использовать 'this'. Если этого не сделать, произойдет ошибка ReferenceError.
+    this.name = 'Square';
+  }
+}</pre>
+
+<h3 id="Вызов_статических_методов_через_super">Вызов статических методов через super</h3>
+
+<p>Вы также можете вызывать super для <a href="/ru/docs/Web/JavaScript/Reference/Classes/static">статических</a> методов.</p>
+
+<pre class="brush: js">class Rectangle {
+  static logNbSides() {
+    return 'У меня 4 стороны';
   }
 }
-Square.logDescription(); // 'У меня 4 стороны, которые все равны'</pre>
 
-<h3 id="Удаление_свойств_super_вызывает_ошибку">Удаление свойств super вызывает ошибку</h3>
+class Square extends Rectangle {
+  static logDescription() {
+    return super.logNbSides() + ', равные между собой';
+  }
+}
+Square.logDescription(); // 'У меня 4 стороны, равные между собой'
+</pre>
 
-<p>Вы не можете использовать <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete operator</a> и <code>super.prop</code> или <code>super[expr]</code> при удалении родительского класса он выдаст:{{jsxref("ReferenceError")}}.</p>
+<h3 id="Удаление_свойств_через_super_вызывает_ошибку">Удаление свойств через super вызывает ошибку</h3>
 
-<pre class="brush: js notranslate">class Base {
+<p>Вы не можете использовать <a href="/ru/docs/Web/JavaScript/Reference/Operators/delete">оператор delete</a> и <code>super.prop</code> или <code>super[expr]</code> для удаления свойств родительского класса, он выдаст: {{jsxref("ReferenceError")}}.</p>
+
+<pre class="brush: js">class Base {
   constructor() {}
   foo() {}
 }
@@ -102,7 +102,7 @@ new Derived().delete(); // ReferenceError: invalid delete involving 'super'. </p
 
 <p>При определении незаписываемых свойств с помощью, например, {{jsxref("Object.defineProperty")}}, <code>super</code> не может перезаписать значение свойства.</p>
 
-<pre class="notranslate">class X {
+<pre class="brush: js">class X {
   constructor() {
     Object.defineProperty(this, 'prop', {
       configurable: true,
@@ -117,70 +117,56 @@ class Y extends X {
     super();
   }
   foo() {
-    super.prop = 2;   // Не возможно перезаписать значение.
+    super.prop = 2;   // Невозможно перезаписать значение.
   }
 }
 
 var y = new Y();
 y.foo(); // TypeError: "prop" доступен только для чтения
-console.log(y.prop); // 1</pre>
+console.log(y.prop); // 1
+</pre>
 
 <h3 id="Использование_super.prop_в_объектных_литералах">Использование <code>super.prop</code> в объектных литералах</h3>
 
-<p>Super также можно использовать в <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer">объекте инициализатора / литерала</a>. В этом примере, два объекта определяют метод. Во втором объекте, <code>super</code> вызывает первый метод объекта. Это работает с помощью {{jsxref("Object.setPrototypeOf()")}}, с которой мы можем установить прототип для <code>obj2</code> в <code>obj1</code>, так что <code>super</code> может найти <code>method1</code> в <code>obj1</code>.</p>
+<p>Super также можно использовать в <a href="/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer">объекте инициализатора / литерала</a>. В этом примере метод определяют два объекта. Во втором объекте <code>super</code> вызывает метод первого объекта. Это работает благодаря {{jsxref("Object.setPrototypeOf()")}}, с помощью которого мы можем установить прототип для <code>obj2</code> в <code>obj1</code>, так что <code>super</code> может найти <code>method1</code> в <code>obj1</code>.</p>
 
-<pre class="brush: js notranslate">var obj1 = {
+<pre class="brush: js">var obj1 = {
   method1() {
-    console.log("method 1");
+    console.log('method 1');
   }
 }
 
 var obj2 = {
   method2() {
-   super.method1();
+    super.method1();
   }
 }
 
 Object.setPrototypeOf(obj2, obj1);
-obj2.method2(); // logs "method 1"
+obj2.method2(); // выведет "method 1"
 </pre>
 
-<h2 id="Характеристики">Характеристики</h2>
+<h2 id="Спецификации">Спецификации</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Характеристики</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-super-keyword', 'super')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-super-keyword', 'super')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Спецификация</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('ESDraft', '#sec-super-keyword', 'super')}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Совместимость_в_браузерах">Совместимость в браузерах</h2>
+<h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 <p>{{Compat("javascript.operators.super")}}</p>
-
-<div id="compat-mobile"></div>
-
-<h2 id="Gecko_specific_notes">Gecko specific notes</h2>
-
-<ul>
- <li><code>super()</code> does not yet work as expected for built-in prototypes.</li>
-</ul>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Classes">Классы</a></li>
+ <li><a href="/ru/docs/Web/JavaScript/Reference/Classes">Классы</a></li>
 </ul>

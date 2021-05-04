@@ -106,7 +106,7 @@
 /pt-BR/docs/DOM/Document.querySelector	/pt-BR/docs/Web/API/Document/querySelector
 /pt-BR/docs/DOM/Document.querySelectorAll	/pt-BR/docs/Web/API/Document/querySelectorAll
 /pt-BR/docs/DOM/Referencia_do_DOM	/pt-BR/docs/Web/API/Document_Object_Model
-/pt-BR/docs/DOM/Referencia_do_DOM/Events	/pt-BR/docs/Web/API/Document_Object_Model/Events
+/pt-BR/docs/DOM/Referencia_do_DOM/Events	/pt-BR/docs/orphaned/Web/API/Document_Object_Model/Events
 /pt-BR/docs/DOM/Referencia_do_DOM/Examples	/pt-BR/docs/Web/API/Document_Object_Model/Examples
 /pt-BR/docs/DOM/Referencia_do_DOM/How_to_create_a_DOM_tree	/pt-BR/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree
 /pt-BR/docs/DOM/Referencia_do_DOM/Introdução	/pt-BR/docs/Web/API/Document_Object_Model/Introduction
@@ -117,9 +117,6 @@
 /pt-BR/docs/DOM/element.addEventListener-redirect-1	/pt-BR/docs/Web/API/EventTarget/addEventListener
 /pt-BR/docs/DOM/window.URL.createObjectURL	/pt-BR/docs/Web/API/URL/createObjectURl
 /pt-BR/docs/DOM/window.onscroll	/pt-BR/docs/conflicting/Web/API/GlobalEventHandlers/onscroll
-/pt-BR/docs/Developer_Guide	/pt-BR/docs/Mozilla/Developer_guide
-/pt-BR/docs/Developer_Guide/Codigo_Fonte	/pt-BR/docs/Mozilla/Developer_guide/Source_Code
-/pt-BR/docs/Developer_Guide/Mozilla_build_FAQ	/pt-BR/docs/Mozilla/Developer_guide/Mozilla_build_FAQ
 /pt-BR/docs/DragDrop	/pt-BR/docs/conflicting/Web/API/HTML_Drag_and_Drop_API
 /pt-BR/docs/DragDrop/Arrastar_e_Soltar	/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API
 /pt-BR/docs/DragDrop/Drag_and_Drop	/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API
@@ -288,7 +285,6 @@
 /pt-BR/docs/Glossario/topico_de_alinhamento	/pt-BR/docs/Glossary/Alignment_Subject
 /pt-BR/docs/Glossario/undefined	/pt-BR/docs/Glossary/undefined
 /pt-BR/docs/Glossario/webp	/pt-BR/docs/Glossary/webp
-/pt-BR/docs/Guia_do_Desenvolvedor	/pt-BR/docs/Mozilla/Developer_guide
 /pt-BR/docs/HTML	/pt-BR/docs/Web/HTML
 /pt-BR/docs/HTML/Attributes	/pt-BR/docs/Web/HTML/Attributes
 /pt-BR/docs/HTML/Canvas	/pt-BR/docs/Web/API/Canvas_API
@@ -486,7 +482,6 @@
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/pre-requisitos	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/sua_primeira_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Itens_do_menu_de_contexto	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-/pt-BR/docs/Mozilla/Developer_guide/Codigo_Fonte	/pt-BR/docs/Mozilla/Developer_guide/Source_Code
 /pt-BR/docs/Mozilla/Firefox/Novas_funcionalidades	/pt-BR/docs/Mozilla/Firefox/Experimental_features
 /pt-BR/docs/Mozilla/Firefox/Releases/3/Zoom_de_página_inteira	/pt-BR/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /pt-BR/docs/Online_and_offline_events	/pt-BR/docs/Web/API/NavigatorOnLine/Online_and_offline_events
@@ -561,6 +556,7 @@
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/activeElement	/pt-BR/docs/Web/API/Document/activeElement
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/pt-BR/docs/Web/API/Document/elementFromPoint
 /pt-BR/docs/Web/API/DocumentOrShadowRoot/getSelection	/pt-BR/docs/Web/API/Document/getSelection
+/pt-BR/docs/Web/API/Document_Object_Model/Events	/pt-BR/docs/orphaned/Web/API/Document_Object_Model/Events
 /pt-BR/docs/Web/API/DocumentoXML	/pt-BR/docs/Web/API/XMLDocument
 /pt-BR/docs/Web/API/Element.addEventListener	/pt-BR/docs/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/Element.getAttribute	/pt-BR/docs/Web/API/Element/getAttribute
@@ -612,6 +608,7 @@
 /pt-BR/docs/Web/API/Window.openDialog	/pt-BR/docs/Web/API/Window/openDialog
 /pt-BR/docs/Web/API/Window/URL	/pt-BR/docs/conflicting/Web/API/URL
 /pt-BR/docs/Web/API/Window/Window.localStorage	/pt-BR/docs/Web/API/Window/localStorage
+/pt-BR/docs/Web/API/Window/ondevicelight	/pt-BR/docs/orphaned/Web/API/Window/ondevicelight
 /pt-BR/docs/Web/API/Window/onscroll	/pt-BR/docs/conflicting/Web/API/GlobalEventHandlers/onscroll
 /pt-BR/docs/Web/API/WindowBase64	/pt-BR/docs/conflicting/Web/API/WindowOrWorkerGlobalScope
 /pt-BR/docs/Web/API/WindowBase64/atob	/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/atob
@@ -730,8 +727,11 @@
 /pt-BR/docs/Web/Guide/CSS/CSS_media_queries_(consultas_de_mídia_em_CSS)	/pt-BR/docs/orphaned/Web/Guide/CSS/CSS_media_queries_(consultas_de_mídia_em_CSS)
 /pt-BR/docs/Web/Guide/CSS/Scaling_background_images	/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /pt-BR/docs/Web/Guide/CSS/Understanding_z_index	/pt-BR/docs/Web/CSS/CSS_Positioning/Understanding_z_index
+/pt-BR/docs/Web/Guide/Events	/pt-BR/docs/orphaned/Web/Guide/Events
 /pt-BR/docs/Web/Guide/Events/Creating_and_triggering_events	/pt-BR/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
+/pt-BR/docs/Web/Guide/Events/Event_handlers	/pt-BR/docs/orphaned/Web/Guide/Events/Event_handlers
 /pt-BR/docs/Web/Guide/Events/Mutation_events	/pt-BR/docs/orphaned/Web/Guide/Events/Mutation_events
+/pt-BR/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/pt-BR/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
 /pt-BR/docs/Web/Guide/Events/Touch_events	/pt-BR/docs/Web/API/Touch_events
 /pt-BR/docs/Web/Guide/Events/criando_e_disparando_eventos	/pt-BR/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /pt-BR/docs/Web/Guide/Gráficos	/pt-BR/docs/Web/Guide/Graphics
