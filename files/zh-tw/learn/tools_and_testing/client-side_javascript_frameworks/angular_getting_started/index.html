@@ -96,39 +96,33 @@ If you are unsure what version of Node.js runs on your system, run <code>node -v
   </li>
 </ul>
 
-<h2 id="set_up_your_application">Set up your application</h2>
+<h2 id="set_up_your_application">設置你的應用程式</h2>
 
-<p>You can use the Angular CLI to run commands in your terminal for generating, building, testing, and deploying Angular applications.
-To install the Angular CLI, run the following command in your terminal:</p>
+<p>你可以在終端機裡透過使用 Angular 命令列介面（ CLI ）來產生、建置、測試和佈署 Angular 應用程式。請在終端機裡執行以下指令來安裝 Angular 命令列介面：</p>
 
 <pre class="brush: js">npm install -g @angular/cli</pre>
 
-<p>Angular CLI commands all start with <code>ng</code>, followed by what you'd like the CLI to do.
-In the Desktop directory, use the following <code>ng new</code> command to create a new application called <code>todo</code>:</p>
+<p>Angular 命令列介面的指令全都是以 <code>ng</code> 開頭，後面接著你想要執行的 CLI 指令。進入桌面資料夾裡，使用 <code>ng new</code> 指令來建立一個名為 <code>todo</code> 的新應用程式：</p>
 
 <pre class="brush: js">ng new todo --routing=false --style=css</pre>
 
-<p>The <code>ng new</code> command creates a minimal starter Angular application on your Desktop.
-The additional flags, <code>--routing</code> and <code>--style</code>, define how to handle navigation and styles in the application.
-This tutorial describes these features later in more detail.</p>
+<p>這個 <code>ng new</code> 指令在你的桌面建立了一個最簡單的初始 Angular 應用程式。指令後面接著的 <code>--routing</code> 和 <code>--style</code> 參數，用於定義應用程式如何處理導覽及樣式。這個教學描述了更多有關這個功能的細節。</p>
 
-<p>If you are prompted to enforce stricter type checking, you can respond with yes.</p>
+<p>如果出現是否啟用強制型別檢查的提示，你可以選擇「是」。</p>
 
-<p>Navigate into your new project with the following <code>cd</code> command:</p>
+<p>使用 <code>cd</code> 指令進入你新建的專案：</p>
 
 <pre class="brush: js">cd todo</pre>
 
-<p>To run your <code>todo</code> application, use <code>ng serve</code>:</p>
+<p>使用 <code>ng serve</code> 執行你的 <code>todo</code> 應用程式</p>
 
 <pre class="brush: js">ng serve</pre>
 
-<p>When the CLI prompts you about analytics, answer <code>no</code>.</p>
+<p>當命令列提示你是否共享用於分析的資料時，請回答 <code>no</code>。</p>
 
-<p>In the browser, navigate to <a href="http://localhost:4200/">http://localhost:4200/</a> to see your new starter application.
-If you change any of the source files, the application automatically reloads.</p>
+<p>在瀏覽器開啟 <a href="http://localhost:4200/">http://localhost:4200/</a> 來檢視你新建的應用程式。應用程式會即時重新整理以便反應你對原始碼的異動。</p>
 
-<p>While <code>ng serve</code> is running, you might want to open a second terminal tab or window in order to run commands.
-If at any point you would like to stop serving your application, press <code>Ctrl+c</code> while in the terminal.</p>
+<p>當 <code>ng serve</code> 正在執行時，你可能需要開啟第二個終端機分頁或視窗來執行指令。任何時間點想要停止應用程式，請在終端機輸入 <code>Ctrl+c</code>。</p>
 
 <h2 id="get_familiar_with_your_angular_application">Get familiar with your Angular application</h2>
 
