@@ -14,14 +14,14 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">現在來介紹我們的第三個框架 Vue。在這篇文章中，我們會介紹 Vue 的背景，如何安裝 Vue 及建立一個新專案，學習整個 Vue 專案的高階架構及一個獨立的元件，學習如何在本地端運行專案，以及開始建構我們的範例。</p>
+<p class="summary">現在來介紹我們的第三個框架 Vue 。在這篇文章中，我們會介紹 Vue 的背景，如何安裝 Vue 及建立一個新專案，學習整個 Vue 專案的高階架構及一個獨立的元件，學習如何在本地端運行專案，以及開始建構我們的範例。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">先備知識</th>
+   <th scope="row">預備知識</th>
    <td>
-    <p>熟悉 <a href="/en-US/docs/Learn/HTML">HTML</a> 、 <a href="/en-US/docs/Learn/CSS">CSS</a> 、以及 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 的核心知識，知道如何使用 <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">終端機/命令列工具（ terminal/command line ）</a>。</p>
+    <p>熟悉 <a href="/zh-TW/docs/Learn/HTML">HTML</a> 、 <a href="/zh-TW/docs/Learn/CSS">CSS</a> 、以及 <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a> 的核心知識，知道如何使用<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">終端機/命令列工具（ terminal/command line ）</a>。</p>
 
     <p>Vue 元件是由 Javascript 物件（用來管理應用的資料）及樣本語法（用來映射成 DOM 結構）所組成的。另外，你將需要使用終端機安裝 node 和 npm ，以便下載及使用一些 Vue 的進階功能（像是單一檔案的元件或是渲染函式）</p>
    </td>
@@ -35,7 +35,7 @@ tags:
 
 <h2 id="A_clearer_Vue">更了解 Vue</h2>
 
-<p>Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來達到漸進增強（ progressive enhancement ）的策略。與其他的框架不同的是，你可以把 Vue 和既有的 HTML 做整合，這讓你可以像使用插入性替換的函式庫一樣來使用 Vue ，就像使用 <a href="/en-US/docs/Glossary/jQuery">JQuery</a> 一樣。</p>
+<p>Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來達到漸進增強（ progressive enhancement ）的策略。與其他的框架不同的是，你可以把 Vue 和既有的 HTML 做整合，這讓你可以像使用插入性替換的函式庫一樣來使用 Vue ，就像使用 <a href="/zh-TW/docs/Glossary/jQuery">JQuery</a> 一樣。</p>
 
 <p>除此之外，你也可以使用 Vue 來寫一個單頁式應用程式。這讓你可以完全使用 Vue 來建構網頁，當處理較複雜的應用時有較好的開發效率及體驗。 Vue 也有提供函式庫來做客戶端路由及狀態管理。 Vue 對客戶端路由及狀態管理這些工具採取中間立場的態度，雖然 Vue 的核心團隊推薦使用這些函式庫，但是這些函式庫沒有直接打包進 Vue，而是讓你可以自由選擇使用其他更適合你的應用的路由庫或狀態管理庫。</p>
 
@@ -46,7 +46,7 @@ tags:
 
 <h2 id="Installation">安裝</h2>
 
-<p>如果要在既有的專案中使用 Vue ，你可以把以下任一個 <code><a href="/en-US/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> 標籤加到你的頁面中，這樣你就可以開始在專案中使用 Vue ，這也是為什麼 Vue 宣稱自己是一個漸進式的框架。它提供了一個很好的機會，你可以把一些使用函式庫（像是 JQuery ）的專案轉變成使用 Vue ，如此一來，你就可以使用很多 Vue 的核心功能，像是屬性、客製化元件以及資料管理。</p>
+<p>如果要在既有的專案中使用 Vue ，你可以把以下任一個 <code><a href="/zh-TW/docs/Web/HTML/Element/script">&lt;script&gt;</a></code> 標籤加到你的頁面中，這樣你就可以開始在專案中使用 Vue ，這也是為什麼 Vue 宣稱自己是一個漸進式的框架。它提供了一個很好的機會，你可以把一些使用函式庫（像是 JQuery ）的專案轉變成使用 Vue ，如此一來，你就可以使用很多 Vue 的核心功能，像是屬性、客製化元件以及資料管理。</p>
 
 <ul>
  <li>
@@ -69,7 +69,7 @@ tags:
 </ol>
 
 <div class="notecard note">
-<p><strong>注意</strong>：如果你沒有安裝以上工具，請參考<a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups">關於安裝 npm 及 Node.js</a> 。</p>
+<p><strong>注意</strong>：如果你沒有安裝以上工具，請參考<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups">關於安裝 npm 及 Node.js</a> 。</p>
 </div>
 
 <p>在你的終端機執行以下命令來安裝 CLI ：</p>
@@ -204,7 +204,7 @@ export default {
 
 <h2 id="Making_a_couple_of_changes">做一些改變</h2>
 
-<p>現在讓我們來對應用程式做一些改變——刪除 Vue logo 。打開 <code>App.vue</code> 檔案，從 template 區塊刪除 <code><a href="/en-US/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> 元素：</p>
+<p>現在讓我們來對應用程式做一些改變——刪除 Vue logo 。打開 <code>App.vue</code> 檔案，從 template 區塊刪除 <code><a href="/zh-TW/docs/Web/HTML/Element/img">&lt;img&gt;</a></code> 元素：</p>
 
 <pre class="brush: html"><span class="author-d-iz88z86z86za0dz67zz78zz78zz74zz68zjz80zz71z9iz90z8h7gz67ziz76zcz77zz80zz71zncfz69zz69ziaz82zz71zz72zhz77zz122zz90z14mcyd">&lt;img alt="Vue logo" src="./assets/logo.png"&gt;</span></pre>
 
