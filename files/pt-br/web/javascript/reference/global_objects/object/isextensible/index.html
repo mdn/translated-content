@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <strong><code>Object.isExtensible()</code></strong> verifica se um objeto pode ser extendido (se é ou não possível adicinar novas propriedades).</p>
+<p>O método <strong><code>Object.isExtensible()</code></strong> verifica se um objeto pode ser extendido (se é ou não possível adicionar novas propriedades).</p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-isextensible.html")}}</div>
 
@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 
 <h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-<p>Um valor booleano ({{jsxref("Boolean")}}) que indica se o objeto pode ser extendido.</p>
+<p>Um valor booleano ({{jsxref("Boolean")}}) que indica se o objeto pode ser estendido.</p>
 
 <h2 id="Descrição">Descrição</h2>
 
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 
 <h2 id="Exemplos">Exemplos</h2>
 
-<pre class="brush: js">// Novos objetos podem ser extendidos.
+<pre class="brush: js">// Novos objetos podem ser estendidos.
 var empty = {};
 Object.isExtensible(empty); // === true
 
@@ -40,11 +40,11 @@ Object.isExtensible(empty); // === true
 Object.preventExtensions(empty);
 Object.isExtensible(empty); // === false
 
-// Objetos selados, não podem ser extendidos.
+// Objetos selados, não podem ser estendidos.
 var sealed = Object.seal({});
 Object.isExtensible(sealed); // === false
 
-// Objetos congelados também não podem ser extendidos.
+// Objetos congelados também não podem ser estendidos.
 var frozen = Object.freeze({});
 Object.isExtensible(frozen); // === false
 </pre>
