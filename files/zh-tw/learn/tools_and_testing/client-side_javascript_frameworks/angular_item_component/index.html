@@ -24,15 +24,13 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p>元件可以用來幫助你組織你的應用程式。
-  這篇文章會引導你建立一個元件，用來管理清單列表中的個別項目，包含加入核取方塊、編輯和刪除功能。
-  這邊也會介紹Angular 事件模型。</p>
+<p>元件可以用來幫助你組織你的應用程式。這篇文章會引導你建立一個元件，用來管理清單列表中的個別項目，包含加入核取方塊、編輯和刪除功能。這邊也會介紹Angular 事件模型。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">預備知識：</th>
-    <td>熟悉主要的 <a href="/zh-TW/docs/Learn/HTML">HTML</a>，<a href="/zh-TW/docs/Learn/CSS">CSS</a>, and <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a> 語言和<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>知識。
+    <td>熟悉主要的 <a href="/zh-TW/docs/Learn/HTML">HTML</a>，<a href="/zh-TW/docs/Learn/CSS">CSS</a> 和 <a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a> 語言和<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>知識。
    </td>
   </tr>
   <tr>
@@ -44,24 +42,21 @@ tags:
 
 <h2 id="creating_the_new_component">建立一個新的元件</h2>
 
-<p>使用如下的 CLI 指令,在命令行建立一個名為<code>item</code>元件：</p>
+<p>使用如下的 CLI 指令,在命令行建立一個名為 <code>item</code> 元件：</p>
 
 <pre class="brush: bash">ng generate component item</pre>
 
-<p>指令 <code>ng generate component</code> 創建了以你指定名稱的元件及對應資料夾。
-  這邊的元件和資料夾名稱為<code>item</code>。
-你可以在 <code>app</code> 資料夾下找到 <code>item</code> 目錄。</p>
+<p>指令 <code>ng generate component</code> 創建了以你指定名稱的元件及對應資料夾。這邊的元件和資料夾名稱為 <code>item</code>。你可以在 <code>app</code> 資料夾下找到 <code>item</code> 目錄。</p>
   
-
 <p>與 <code>AppComponent</code> 一樣， <code>ItemComponent</code> 是由下列文件組成：</p>
 
 <ul>
-  <li><code>item.component.html</code> for HTML</li>
-  <li><code>item.component.ts</code> for logic</li>
-  <li><code>item.component.css</code> for styles</li>
+  <li>用於 HTML 的 <code>item.component.html</code></li>
+  <li>用於邏輯的 <code>item.component.ts</code></li>
+  <li>用於樣式的 <code>item.component.css</code></li>
 </ul>
 
-<p>你可以在 <code>item.component.ts</code> 的 <code>@Component()</code>的裝飾器中找到HTML和CSS文件的參照位置。</p>
+<p>你可以在 <code>item.component.ts</code> 的 <code>@Component()</code>的裝飾器中找到 HTML 和 CSS 文件的參照位置。</p>
 
 <pre class="brush: js">@Component({
   selector: 'app-item',
@@ -69,11 +64,10 @@ tags:
   styleUrls: ['./item.component.css'],
 })</pre>
 
-<h2 id="add_html_for_the_itemcomponent-">為ItemComponent添加HTML</h2>
+<h2 id="add_html_for_the_itemcomponent-">為 ItemComponent 添加 HTML</h2>
 
-<p>The <code>ItemComponent</code>  能讓使用者檢查已完成的項目，並對其進行編輯或刪除。</p>
+<p><code>ItemComponent</code> 元件能讓使用者檢查已完成的項目，並對其進行編輯或刪除。</p>
 
-<p>Add markup for managing items by replacing the placeholder content in <code>item.component.html</code> with the following:</p>
 <p>為了增加管理項目的標記，使用下面程式碼替換 <code>item.component.html</code> 中的佔位符內容。</p>
 
 <pre class="brush: html">&lt;div class="item"&gt;
@@ -104,7 +98,7 @@ Angular使用 <code>\{{item.description}}</code> 從 <code>items</code> 陣列�
 
 <p>接下來的用於編輯和刪除當前項目的兩個按鈕位於 <code>&lt;div&gt;</code> 內。 <code>&lt;div&gt;</code> 內的 <code>*ngIf</code>，是內置的 Angular 結構型指令，可動態更改 DOM 的結構。</p>
 
-<p> <code>*ngIf</code> 表示如果 <code>editable</code> 為 false，則此 <code>&lt;div&gt;</code> 會出現在DOM中。如果 <code>editable</code> 為true，則 Angular 將從 DOM 中移除該 <code>&lt;div&gt;</code>。</p>
+<p> <code>*ngIf</code> 表示如果 <code>editable</code> 的值為 false，則此 <code>&lt;div&gt;</code> 會出現在 DOM 中。如果 <code>editable</code> 的值為 true，則 Angular 將從 DOM 中移除該 <code>&lt;div&gt;</code>。</p>
 
 
 <pre class="brush: html">&lt;div class="btn-wrapper" *ngIf="!editable"&gt;
@@ -114,8 +108,7 @@ Angular使用 <code>\{{item.description}}</code> 從 <code>items</code> 陣列�
 
 
 
-<p>當用戶點擊 <strong>Edit</strong> 按鈕時，<code>editable</code> 的值變為 true，這將從 DOM 中移除此 <code>&lt;div&gt;</code> 和它的子元素。
-如果用戶點擊 <strong>Delete</strong> 而不是點擊 <strong>Edit</strong>，則 <code>ItemComponent</code> 將觸發一個刪除事件，用來通知 <code>AppComponent</code> 做刪除動作。</p>
+<p>當用戶點擊 <strong>Edit</strong> 按鈕時，<code>editable</code> 的值變為 true，這將從 DOM 中移除此 <code>&lt;div&gt;</code> 和它的子元素。如果用戶點擊 <strong>Delete</strong> 而不是點擊 <strong>Edit</strong>，則 <code>ItemComponent</code> 將觸發一個刪除事件，用來通知 <code>AppComponent</code> 做刪除動作。</p>
 
 
 <p>在下一個 <code>&lt;div&gt;</code> 裡也放上了 <code>*ngIf</code>，不過它的判斷條件是當 <code>editable</code> 為 true 的情況下，Angular 會將該 <code>&lt;div&gt;</code> 和其子元素 <code>&lt;input&gt;</code> 和 <code>&lt;button&gt;</code>放入 DOM 中。</p>
@@ -135,13 +128,13 @@ Angular使用 <code>\{{item.description}}</code> 從 <code>items</code> 陣列�
 
 <p><code>&lt;input&gt;</code> 上的範本變數 <code>#editedItem</code> 表示 Angular 將用戶在此 <code>&lt;input&gt;</code> 中輸入的內容儲存在名為 <code>editedItem</code> 的變數中。如果用戶在輸入後選擇按 Enter 而不是點擊 <strong>Save</strong>，則 <code>keyup</code> 事件將調用 <code>saveItem()</code> 方法並傳遞 <code>editedItem</code> 變數的值。</p>
   
-<p>當用戶點擊 <strong>Cancel</strong> 按鈕時，<code>editable</code> 將切換為<code>false</code>，連帶從DOM中移除編輯相關的輸入框和按鈕。當 <code>editable</code> 為 <code>false</code> 時，Angular 將含有   <strong>Edit</strong>和<strong>Delete</strong>按鈕的 <code>&lt;div&gt;</code> 放回 DOM 中。</p>
+<p>當用戶點擊 <strong>Cancel</strong> 按鈕時，<code>editable</code> 的值將切換為 <code>false</code>，連帶從 DOM 中移除編輯相關的輸入框和按鈕。當 <code>editable</code> 的值為 <code>false</code> 時，Angular 將含有 <strong>Edit</strong> 和 <strong>Delete</strong> 按鈕的 <code>&lt;div&gt;</code> 放回 DOM 中。</p>
   
 <p>點擊 <strong>Save</strong> 按鈕將調用 <code>saveItem()</code> 方法。 <code>saveItem()</code>方法從  <code>&lt;input&gt;</code> 中的範本變數 <code>#editedItem</code> 取得值，並將該項目的 <code>description</code> 更改為 <code>editedItem.value</code> 的值。</p>
 
 <h2 id="prepare_the_appcomponent">準備 AppComponent</h2>
 
-<p>在下一章節，您將添加用來溝通 <code>AppComponent</code> 和 <code>ItemComponent</code> 的程式碼。首先將以下內容添加到 <code>app.component.ts</code> 中來配置AppComponent：</p>
+<p>在下一章節，您將添加用來溝通 <code>AppComponent</code> 和 <code>ItemComponent</code> 的程式碼。首先將以下內容添加到 <code>app.component.ts</code> 中來配置 AppComponent：</p>
 
 <pre class="brush: js">remove(item) {
   this.allItems.splice(this.allItems.indexOf(item), 1);
@@ -149,7 +142,7 @@ Angular使用 <code>\{{item.description}}</code> 從 <code>items</code> 陣列�
 
 
 <p>上面 <code>remove()</code> 方法使用了 JavaScript <code>Array.splice()</code> 方法，並透過 <code>indexOf</code> 取得欲刪除項目的陣列索引中位置，以從陣列中刪除該項目。
-簡單來說，<code>splice()</code> 方法從陣列中刪除了該項目。 <code>splice()</code> 的更多訊息請參閱MDN Web 文章：<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.prototype.splice()</code></a>。</p>
+簡單來說，<code>splice()</code> 方法從陣列中刪除了該項目。 <code>splice()</code> 的更多訊息請參閱 MDN Web 文章：<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.prototype.splice()</code></a>。</p>
   
 
 <h2 id="add_logic_to_itemcomponent-">Add logic to ItemComponent</h2>
@@ -255,8 +248,7 @@ To make the list more user-friendly, add some styles to the <code>ItemComponent<
 
 <h2 id="add_styles_to_itemcomponent-">為 ItemComponent 添加樣式</h2>
 
-<p>你可以使用元件的 styles sheet 去增加該元件的樣式。
-  下面的CSS增加基本的樣式對按鈕添加 flexbox 屬性和客製化了核取方塊</p>
+<p>你可以使用元件的 styles sheet 去增加該元件的樣式。下面的 CSS 增加了基本的樣式，對按鈕添加 flexbox 屬性和客製化了核取方塊。</p>
 <p>將下面的樣式程式碼貼至 <code>item.component.css</code>。</p>
 
 <pre class="brush: css">.item {
