@@ -13,15 +13,15 @@ translation_of: Web/API/History/forward
 ---
 <div>{{APIRef("History API")}}</div>
 
-<p><span class="seoSummary"><strong><code>History.forward()</code></strong> メソッドにより、ブラウザーはセッション履歴の一つ次のページに移動します。</span>これは {{domxref("History.go", "history.go(1)")}} を呼び出すのと同じ効果があります。</p>
+<p><strong><code>History.forward()</code></strong> メソッドにより、ブラウザーはセッション履歴の一つ次のページに移動します。これは {{domxref("History.go", "history.go(1)")}} を呼び出すのと同じ効果があります。</p>
 
 <p>このメソッドは{{glossary("asynchronous", "非同期")}}です。移動が完了したことを検知したい場合は {{event("popstate")}} イベントのリスナーを追加してください。</p>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+<h2 id="Syntax">構文</h2>
 
-<pre class="syntaxbox notranslate">history.forward()</pre>
+<pre class="brush: js">history.forward()</pre>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
 <p>以下の例では、セッション履歴の一つ次のステップへ進めるボタンを作成します。</p>
 
@@ -35,7 +35,7 @@ translation_of: Web/API/History/forward
   window.history.forward();
 })</pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -59,13 +59,11 @@ translation_of: Web/API/History/forward
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("api.History.forward")}}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>{{domxref("History")}}</li>
