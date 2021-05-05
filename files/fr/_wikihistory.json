@@ -40167,12 +40167,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
-    "modified": "2020-10-15T21:30:59.712Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/WeakSet/delete": {
     "modified": "2020-10-15T21:31:01.743Z",
     "contributors": [
@@ -45268,6 +45262,12 @@
     "modified": "2019-03-18T21:41:00.371Z",
     "contributors": [
       "loella16"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
+    "modified": "2020-10-15T21:30:59.712Z",
+    "contributors": [
+      "SphinxKnight"
     ]
   }
 }

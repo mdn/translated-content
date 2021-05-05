@@ -44978,12 +44978,6 @@
       "shide55"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
-    "modified": "2019-03-23T22:54:31.675Z",
-    "contributors": [
-      "shide55"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/WeakSet/delete": {
     "modified": "2020-11-14T09:39:33.107Z",
     "contributors": [
@@ -53240,6 +53234,12 @@
     "modified": "2020-10-15T22:31:40.722Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
+    "modified": "2019-03-23T22:54:31.675Z",
+    "contributors": [
+      "shide55"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Operators/Special": {

@@ -43709,13 +43709,6 @@
       "Hushabyme"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
-    "modified": "2019-03-23T22:18:46.466Z",
-    "contributors": [
-      "teoli",
-      "Ende93"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/WeakSet/delete": {
     "modified": "2020-03-17T12:14:42.437Z",
     "contributors": [
@@ -50699,6 +50692,13 @@
     "modified": "2020-10-15T22:28:09.380Z",
     "contributors": [
       "lxuewu"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
+    "modified": "2019-03-23T22:18:46.466Z",
+    "contributors": [
+      "teoli",
+      "Ende93"
     ]
   },
   "orphaned/Web/JavaScript/javascript(起步)": {

@@ -4745,6 +4745,7 @@
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/arguments/length	/fr/docs/Web/JavaScript/Reference/Functions/arguments/length
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/paramètres_du_reste	/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères	/fr/docs/Web/JavaScript/Reference/Template_literals
+/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/clear	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 /fr/docs/Web/JavaScript/Reference/Grammaire_lexicale	/fr/docs/Web/JavaScript/Reference/Lexical_grammar
 /fr/docs/Web/JavaScript/Reference/Index_des_méthodes	/fr/docs/Web/JavaScript/Reference
@@ -5448,7 +5449,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakMap/set	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/set
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/add	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/add
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/clear	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/clear
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/clear	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/delete	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/has	/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/has
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WeakSet

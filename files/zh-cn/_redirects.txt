@@ -2553,6 +2553,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/TypedArray
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/URIError
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WeakMap
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/clear	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WeakSet
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数/prototype	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
