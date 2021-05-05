@@ -4,7 +4,7 @@ slug: Learn/JavaScript/Asynchronous/Concepts
 tags:
   - JavaScript
   - Learn
-  - Promises
+  - Promise
   - Threads
   - asynchronous
   - blocking
@@ -93,7 +93,7 @@ alertBtn.addEventListener('click', () =&gt;
   alert('You clicked me!')
 );</pre>
 
-<p>當點擊第一個按鈕之後緊接著點擊第二個按鈕，您會發現警告訊息並不會馬上出現，而是要等到圓圈圖案被渲染完成後才會出現警告訊息視窗。第一個操作在完成之前都會阻擋第二個操作的執行。</p>
+<p>當點擊第一個按鈕之後緊接著點擊第二個按鈕，你會發現警告訊息並不會馬上出現，而是要等到圓圈圖案被渲染完成後才會出現警告訊息視窗。第一個操作在完成之前都會阻擋第二個操作的執行。</p>
 
 <div class="notecard note">
 <p><strong>注意</strong>：我們是在偽造一個阻塞且這個例子可能有點醜陋，但這卻是在現實中大多數的開發者試圖避免的常見問題。</p>
@@ -111,8 +111,8 @@ alertBtn.addEventListener('click', () =&gt;
 
 <p>我們稍早所說，現今許多電腦擁有許多顆核心，所以可以在同一時間做許多事。可以支援多條執行緒的程式語言在同一時間可以利用多顆核心來完成數個任務：</p>
 
-<pre>執行緒 1：任務 A --&gt; 任務 B
-執行緒 2：任務 C --&gt; 任務 D</pre>
+<pre>執行緒１：任務 A --&gt; 任務 B
+執行緒２：任務 C --&gt; 任務 D</pre>
 
 <h3 id="JavaScript_is_single-threaded">JavaScript 是單執行緒的</h3>
 
@@ -120,32 +120,32 @@ alertBtn.addEventListener('click', () =&gt;
 
 <pre>主執行緒：渲染圓圈圖形到 canvas --&gt; 顯示 alert()</pre>
 
-<p>在經過一段時間的發展後， JavaScript 取得某種工具來處理上述的問題。 <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> 允許傳送一些任務到不同的執行緒上，因此呼叫一個 worker 您可以在同一時間跑不同的任務區塊。透過使用 worker 就可以和主執行緒分工合作，因此不會阻塞和使用者的互動。</p>
+<p>在經過一段時間的發展後， JavaScript 取得某種工具來處理上述的問題。 <a href="/zh-TW/docs/Web/API/Web_Workers_API">Web worker</a> 允許傳送一些任務到不同的執行緒上，因此呼叫一個 worker 你可以在同一時間跑不同的任務區塊。透過使用 worker 就可以和主執行緒分工合作，因此不會阻塞和使用者的互動。</p>
 
-<pre>    主執行緒：任務 A --&gt; 任務 C
-Worker執行緒：Expensive 任務 B</pre>
+<pre>      主執行緒：任務 A --&gt; 任務 C
+背景工作執行緒：耗時的任務 B</pre>
 
-<p>依照這個想法，我們來改寫之前的例子 <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html">simple-sync-worker.html</a> （<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html">線上範例</a>），一樣打開您的 JavaScript 控制台吧。我們利用 worker 執行緒來改寫執行一千萬次的呼叫新增日期物件的範例。現在您點擊一下按鈕，您會發現新增的文字段落馬上就會顯示在畫面上，而稍後日期才會顯示在 JavaScript 控制台。第一項操作不再阻塞第二項的執行了。</p>
+<p>依照這個想法，我們來改寫之前的例子 <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html">simple-sync-worker.html</a> （<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html">線上範例</a>），一樣打開你的 JavaScript 控制台吧。我們改寫利用 worker 產生額外的執行緒來執行一千萬次的呼叫新增日期物件的範例。現在你點擊一下按鈕，你會發現新增的文字段落馬上就會顯示在畫面上，而稍後日期才會顯示在 JavaScript 控制台。第一項操作不再阻塞第二項的執行了。</p>
 
 <h2 id="Asynchronous_code">非同步的程式碼</h2>
 
-<p>Web workers 相當有用，但還是有它的限制在。最主要的限制是在它不能直接存取 {{Glossary("DOM")}} ——你不能透過 worker 去直接更新你的 UI 。我們不能透過 worker 去渲染一百萬個藍色圈圈，它基本上只能做一些數字運算的工作。</p>
+<p><a href="/zh-TW/docs/Web/API/Web_Workers_API">Web worker</a> 相當有用，但還是有它的限制在。最主要的限制是在它不能直接存取 {{Glossary("DOM")}} ——你不能透過 worker 去直接更新你的 UI 。我們不能透過 worker 去渲染一百萬個藍色圈圈，它基本上只能做一些數字運算的工作。</p>
 
 <p>第二個問題是即使我們的程式跑在 worker 上不會阻塞主執行緒的執行，但基本上我們還是處於同步的。當一個函式的執行依賴於多個函式的執行結果就會發生問題。看看底下的執行緒圖表：</p>
 
 <pre>主執行緒：任務 A --&gt; 任務 B</pre>
 
-<p>在這個例子，任務 A 正在做一些像是從遠端伺服器抓取圖片的工作，任務 B 會將抓取下來的圖片套用一些濾鏡的特效。如果您執行任務 A 後立即執行任務 B，您會收到錯誤訊息，因為任務 B 當下並沒有圖片可以套用。</p>
+<p>在這個例子，任務 A 正在做一些像是從遠端伺服器抓取圖片的工作，任務 B 會將抓取下來的圖片套用一些濾鏡的特效。如果你執行任務 A 後立即執行任務 B ，你會收到錯誤訊息，因為任務 B 當下並沒有圖片可以套用。</p>
 
-<pre>     主執行緒：任務 A --&gt; 任務 B --&gt; |任務 D |
-Worker 執行緒：任務 C -------------&gt; |      |</pre>
+<pre>      主執行緒：任務 A --&gt; 任務 B --&gt; ｜任務 D ｜
+背景工作執行緒：任務 C -------------&gt; ｜      ｜</pre>
 
 <p>在這個例子，我們說任務 D 必須依賴任務 B 及任務 C 的執行結果。如果我們保證在執行任務 D 的當下都已經取得 B 和 C 的執行結果，這也許沒甚麼問題，但這不太可能。任務 D 執行的當下若有任一個依賴結果尚未完成，勢必會發生錯誤。</p>
 
-<p>為了修正此問題，瀏覽器允許我們非同步的運行某些操作。如 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> 功能允許您在一項正在執行的操作做設定（例如：從遠端伺服器抓取圖片），然後等待其執行結果回傳之後再進行之後的操作：</p>
+<p>為了修正此問題，瀏覽器允許我們非同步的運行某些操作。如 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> 功能允許你在一項正在執行的操作做設定（例如：從遠端伺服器抓取圖片），然後等待其執行結果回傳之後再進行之後的操作：</p>
 
 <pre>主執行緒：任務 A                   任務 B
-Promise：     |_____非同步操作_____|</pre>
+Promise ：   ｜_____非同步操作_____｜</pre>
 
 <p>因為操作發生在其他地方，因此主執行緒並不會在執行非同步的工作時被阻塞住。</p>
 
@@ -160,10 +160,10 @@ Promise：     |_____非同步操作_____|</pre>
 <h2 id="In_this_module">在本單元</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">非同步程式設計通用概念</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">非同步的 JavaScript 介紹</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">協同的非同步 JavaScript ： Timeout 和 interval</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">優雅的使用 Promises 來處理非同步操作</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">利用 async 及 await 讓非同步程式設計變得更容易</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">選擇正確的方法</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Concepts">非同步程式設計通用概念</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing">非同步的 JavaScript 介紹</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">協同的非同步 JavaScript ： Timeout 和 interval</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Promises">優雅的使用 Promise 來處理非同步操作</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Async_await">利用 async 及 await 讓非同步程式設計變得更容易</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">選擇正確的方法</a></li>
 </ul>
