@@ -120,21 +120,22 @@ npm run dev</pre>
 <p>入門範本有下列結構：</p>
 
 <pre>moz-todo-svelte
-├── readme.md
+├── README.md
 ├── package.json
 ├── package-lock.json
 ├── rollup.config.js
 ├── .gitignore
 ├── node_modules
 ├── public
-│   ├── favicon.ico
+│   ├── favicon.png
 │   ├── index.html
 │   ├── global.css
 │   └── build
 │       ├── bundle.css
-│       ├── bundle.css.map
 │       ├── bundle.js
 │       └── bundle.js.map
+├── scripts
+│   └── setupTypeScript.js
 └── src
     ├── App.svelte
     └── main.js</pre>
@@ -146,7 +147,11 @@ npm run dev</pre>
  <li><code>node_modules</code>：這裡是 node 存放專案相依套件的地方。這些相依套件在正式環境不會看到，只有開發時才會被使用到。</li>
  <li><code>.gitignore</code>：告訴 git 有哪些檔案或資料夾不要納入專案版本控制 — 透過它可以決定哪些檔案要納入專案版本控制，還蠻實用的！</li>
  <li><code>rollup.config.js</code>：Svelte 使用 <a href="https://rollupjs.org/">rollup.js</a> 做為模組包裝工具。這個組態檔案告訴 rollup 如何編譯和建構你的應用程式。假如你偏好使用 <a href="https://webpack.js.org/">webpack</a>，你可以改執行 <code>npx degit sveltejs/template-webpack svelte-app</code> 來建構你的初始應用程式。</li>
- <li>scripts：包含所需的設置腳本。現在應該只有 <code>setupTypeScript.js</code>，此腳本用來支援 Svelte 可以使用 TypeScript。我們將在之後的文章談到更多。</li>
+ <li><code>scripts</code>：包含所需的設置腳本。現在應該只有 <code>setupTypeScript.js</code>。
+  <ul>
+    <li><code>setupTypeScript.js</code>：此腳本用來支援 Svelte 可以使用 TypeScript。我們將在之後的文章談到更多。</li>
+  </ul>
+</li>
  <li><code>src</code>：這個目錄主要放你應用程式的來源程式碼 — 你寫的程式碼基本都會放在這。
   <ul>
    <li><code>App.svelte</code>：在你的應用程式中它是最高層級的元件。不過它現在只會渲染出「Hello World!」的訊息給你看。</li>
