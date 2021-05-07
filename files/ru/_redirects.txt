@@ -343,10 +343,6 @@
 /ru/docs/MDN/User_guide/Advanced_search	/ru/docs/orphaned/MDN/Tools/Search
 /ru/docs/MDN/User_guide/Deleting_pages	/ru/docs/orphaned/MDN/Tools/Page_deletion
 /ru/docs/MDN/User_guide/Feeds	/ru/docs/orphaned/MDN/Tools/Feeds
-/ru/docs/MDN/Сообщество	/ru/docs/orphaned/MDN/Community
-/ru/docs/MDN/Сообщество/Conversations	/ru/docs/orphaned/MDN/Community/Conversations
-/ru/docs/MDN/Сообщество/Whats_happening	/ru/docs/orphaned/MDN/Community/Whats_happening
-/ru/docs/MDN/Сообщество/Working_in_community	/ru/docs/orphaned/MDN/Community/Working_in_community
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
 /ru/docs/MDN_at_ten/Contributing_to_MDN	/ru/docs/conflicting/MDN/Contribute
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
