@@ -448,6 +448,7 @@
 /ru/docs/Web/API/NonDocumentTypeChildNode/NonDocumentTypeChildNode.nextElementSibling	/ru/docs/Web/API/Element/nextElementSibling
 /ru/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/ru/docs/Web/API/Element/nextElementSibling
 /ru/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/ru/docs/Web/API/Element/previousElementSibling
+/ru/docs/Web/API/Notation	/ru/docs/orphaned/Web/API/Notation
 /ru/docs/Web/API/ParentNode/append	/ru/docs/orphaned/Web/API/ParentNode/append
 /ru/docs/Web/API/ParentNode/childElementCount	/ru/docs/Web/API/Element/childElementCount
 /ru/docs/Web/API/ParentNode/children	/ru/docs/orphaned/Web/API/ParentNode/children
@@ -486,7 +487,7 @@
 /ru/docs/Web/API/navigator.id.request	/ru/docs/Web/API/IdentityManager/request
 /ru/docs/Web/API/range.getBoundingClientRect	/ru/docs/Web/API/Range/getBoundingClientRect
 /ru/docs/Web/API/Видимость_страницы_API	/ru/docs/Web/API/Page_Visibility_API
-/ru/docs/Web/API/Нотация	/ru/docs/Web/API/Notation
+/ru/docs/Web/API/Нотация	/ru/docs/orphaned/Web/API/Notation
 /ru/docs/Web/Accessibility/Веб-разработка	/ru/docs/conflicting/Web/Accessibility
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery	/ru/docs/Web/Guide/Audio_and_video_delivery
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video

@@ -3792,6 +3792,7 @@
 /fr/docs/Web/API/Node/nodePrincipal	/fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
 /fr/docs/Web/API/Node/prefix	/fr/docs/conflicting/Web/API/Element/prefix
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
+/fr/docs/Web/API/Notation	/fr/docs/orphaned/Web/API/Notation
 /fr/docs/Web/API/ParentNode/append	/fr/docs/orphaned/Web/API/ParentNode/append
 /fr/docs/Web/API/ParentNode/childElementCount	/fr/docs/Web/API/Element/childElementCount
 /fr/docs/Web/API/ParentNode/children	/fr/docs/orphaned/Web/API/ParentNode/children

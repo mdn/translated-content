@@ -19327,12 +19327,6 @@
       "loella16"
     ]
   },
-  "Web/API/Notation": {
-    "modified": "2019-03-18T21:40:13.820Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/NotificationEvent": {
     "modified": "2020-09-27T20:47:13.129Z",
     "contributors": [
@@ -45180,6 +45174,12 @@
   },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2019-03-18T21:39:20.100Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "orphaned/Web/API/Notation": {
+    "modified": "2019-03-18T21:40:13.820Z",
     "contributors": [
       "loella16"
     ]

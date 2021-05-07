@@ -10217,12 +10217,6 @@
       "dginzburg"
     ]
   },
-  "Web/API/Notation": {
-    "modified": "2020-10-15T22:17:39.773Z",
-    "contributors": [
-      "opereverzeva"
-    ]
-  },
   "Web/API/Notifications_API": {
     "modified": "2019-03-23T22:16:18.353Z",
     "contributors": [
@@ -25610,6 +25604,12 @@
     "modified": "2019-03-23T22:27:08.817Z",
     "contributors": [
       "teoli"
+    ]
+  },
+  "orphaned/Web/API/Notation": {
+    "modified": "2020-10-15T22:17:39.773Z",
+    "contributors": [
+      "opereverzeva"
     ]
   },
   "orphaned/Web/API/ParentNode/append": {

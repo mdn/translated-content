@@ -18689,12 +18689,6 @@
       "Oswald111"
     ]
   },
-  "Web/API/Notation": {
-    "modified": "2020-10-15T22:20:06.303Z",
-    "contributors": [
-      "xiaoxingchi"
-    ]
-  },
   "Web/API/NotificationEvent": {
     "modified": "2020-11-24T03:08:03.312Z",
     "contributors": [
@@ -50437,6 +50431,12 @@
     "modified": "2019-03-23T22:49:37.647Z",
     "contributors": [
       "ChenChenJoke"
+    ]
+  },
+  "orphaned/Web/API/Notation": {
+    "modified": "2020-10-15T22:20:06.303Z",
+    "contributors": [
+      "xiaoxingchi"
     ]
   },
   "orphaned/Web/API/ParentNode/append": {
