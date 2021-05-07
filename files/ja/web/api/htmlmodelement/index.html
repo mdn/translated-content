@@ -2,68 +2,67 @@
 title: HTMLModElement
 slug: Web/API/HTMLModElement
 tags:
-  - DOM
-  - DOM Reference
+  - API
+  - HTML DOM
+  - Interface
+  - Reference
 translation_of: Web/API/HTMLModElement
 ---
-<div>{{ApiRef}}</div>
+<div>{{ APIRef("HTML DOM") }}</div>
 
-<p>{{訳語("改変", "modification")}}要素は、改変要素 ({{HTMLElement("del")}}、{{HTMLElement("ins")}}) の持つ固有のプロパティを操作する為の <code>HTMLModElement</code> インタフェースを持っています。改変要素は <code>HTMLModElement</code> の継承元である {{domxref("HTMLElement")}} オブジェクトインタフェースから操作する事も出来ます。</p>
+<p><strong><code>HTMLModElement</code></strong> インターフェイスは、 (継承によって {{domxref("HTMLElement")}} を通じて利用できる通常のメソッドやプロパティに加えて) 改変 (modification) 要素、すなわち {{HTMLElement("del")}} と {{HTMLElement("ins")}} を操作するための特有のプロパティを提供します。</p>
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+<p>{{InheritanceDiagram(600, 120)}}</p>
 
-<p><em>Inherits properties from its parent, {{domxref("HTMLElement")}}.</em></p>
+<h2 id="Properties">プロパティ</h2>
+
+<p><em>親である {{domxref("HTMLElement")}} からプロパティを継承しています。</em></p>
 
 <dl>
  <dt>{{domxref("HTMLModElement.cite")}}</dt>
- <dd>HTML の {{htmlattrxref("cite", "del")}} 属性の値を反映した {{domxref("DOMString")}} 。変更点についての説明を含むリソースの URI。</dd>
+ <dd>{{domxref("DOMString")}} で、 HTML の {{htmlattrxref("cite", "del")}} 属性の値を反映します。変更点についての説明を含むリソースの URI が入ります。</dd>
  <dt>{{domxref("HTMLModElement.dateTime")}}</dt>
- <dd>HTML の {{htmlattrxref("datetime", "del")}} 属性の値を反映した {{domxref("DOMString")}}。変更日時を示すタイムスタンプ文字列。</dd>
+ <dd>{{domxref("DOMString")}} で、 HTML の {{htmlattrxref("datetime", "del")}} 属性の値を反映します。変更されたタイムスタンプを示す日時文字列が入ります。</dd>
 </dl>
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
    <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
   </tr>
   <tr>
    <td>{{SpecName('HTML WHATWG', "edits.html#htmlmodelement", "HTMLAnchorElement")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>{{SpecName("HTML5 W3C")}} より変更無し</td>
+   <td>{{SpecName("HTML5 W3C")}} から変更なし。</td>
   </tr>
   <tr>
    <td>{{SpecName('HTML5 W3C', "edits.html#htmlmodelement", "HTMLAnchorElement")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>{{SpecName("DOM2 HTML")}} より変更無し</td>
+   <td>{{SpecName("DOM2 HTML")}} から変更なし。</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM2 HTML', 'html.html#ID-79359609', 'HTMLModElement')}}</td>
    <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>{{SpecName("DOM1")}} より変更無し</td>
+   <td>{{SpecName("DOM1")}} から変更なし。</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM1', 'level-one-html.html#ID-79359609', 'HTMLModElement')}}</td>
    <td>{{Spec2('DOM1')}}</td>
-   <td>最初期の定義</td>
+   <td>初回定義</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
-
-<div>
-
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("api.HTMLModElement")}}</p>
-</div>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li>{{HTMLElement("del")}} 要素</li>
- <li>{{HTMLElement("ins")}} 要素</li>
+ <li>このインターフェイスを実装している HTML 要素: {{HTMLElement("ins")}}, {{HTMLElement("del")}}</li>
 </ul>
