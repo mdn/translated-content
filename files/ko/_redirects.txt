@@ -274,7 +274,6 @@
 /ko/docs/DOM:table.width	/ko/docs/Web/API/HTMLTableElement/width
 /ko/docs/DOM:window	/ko/docs/Web/API/Window
 /ko/docs/DOM:window.navigator.registerProtocolHandler	/ko/docs/Web/API/Navigator/registerProtocolHandler
-/ko/docs/DOM_Inspector	/ko/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /ko/docs/DOM_improvements_in_Firefox_3	/ko/docs/Mozilla/Firefox/Releases/3/DOM_improvements
 /ko/docs/Determining_the_dimensions_of_elements	/ko/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 /ko/docs/Drawing_Graphics_with_Canvas	/ko/docs/Web/API/Canvas_API/Tutorial
@@ -496,8 +495,6 @@
 /ko/docs/MDN/Contribute/Tools	/ko/docs/MDN/Tools
 /ko/docs/MDN/Contribute/Tools/KumaScript	/ko/docs/MDN/Tools/KumaScript
 /ko/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/ko/docs/MDN/Tools/KumaScript/Troubleshooting
-/ko/docs/MDN/Editor	/ko/docs/orphaned/MDN/Editor
-/ko/docs/MDN/Editor/Links	/ko/docs/orphaned/MDN/Editor/Links
 /ko/docs/MDN/Getting_started	/ko/docs/MDN/Contribute/Getting_started
 /ko/docs/MDN/Guidelines/Best_practices	/ko/docs/MDN/Guidelines/Conventions_definitions
 /ko/docs/MDN/Guidelines/Code_guidelines/Code_guidelines	/ko/docs/MDN/Guidelines/Code_guidelines/General
@@ -505,7 +502,6 @@
 /ko/docs/MDN/Kuma	/ko/docs/MDN/Yari
 /ko/docs/MDN/Structures/API_references	/ko/docs/orphaned/MDN/Structures/API_references
 /ko/docs/MDN/Structures/API_references/API_reference_sidebars	/ko/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars
-/ko/docs/MDN/Tools/페이지_재생성	/ko/docs/orphaned/MDN/Tools/Page_regeneration
 /ko/docs/MDN/User_guide	/ko/docs/conflicting/MDN/Tools
 /ko/docs/MDN/커뮤니티	/ko/docs/orphaned/MDN/Community
 /ko/docs/MDN/커뮤니티/Conversations	/ko/docs/orphaned/MDN/Community/Conversations
@@ -1227,11 +1223,8 @@
 /ko/docs/개발자를_위한_Firefox_3.6	/ko/docs/Mozilla/Firefox/Releases/3.6
 /ko/docs/대문	/ko/docs/Web
 /ko/docs/도구들	/ko/docs/Tools
-/ko/docs/도구들/Add-ons	/ko/docs/orphaned/Tools/Add-ons
-/ko/docs/도구들/Add-ons/DOM_Inspector	/ko/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /ko/docs/도구들/Debugger	/ko/docs/Tools/Debugger
 /ko/docs/도구들/Debugger/UI_Tour	/ko/docs/Tools/Debugger/UI_Tour
-/ko/docs/도구들/Debugger/단축키	/ko/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /ko/docs/도구들/How_to	/ko/docs/Tools/Debugger/How_to
 /ko/docs/도구들/How_to/Open_the_debugger	/ko/docs/Tools/Debugger/How_to/Open_the_debugger
 /ko/docs/도구들/How_to/Search	/ko/docs/Tools/Debugger/How_to/Search
