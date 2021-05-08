@@ -13,12 +13,8 @@ browser-compat: javascript.builtins.String.trim
 <div>{{JSRef}}</div>
 
 <p>
-  <strong><code>trim()</code></strong> 方法會移除字串起始或結尾處的空白格。
-  本文中的空白格泛指所有空格字元及換行字元。
-  <br>
-  空格字元如：空格字元 ( Space )，欄標字元 ( Tab )、不換行空格 ( No-break space ) …… 等等。
-  <br>
-  換行字元如：LF ( Line Feed )、CR ( Carriage Return ) …… 等等。
+  <strong><code>trim()</code></strong> 方法會移除字串起始及結尾處的空白字元。
+  本文中的空白字元指所有空格字元（如：空格、欄標、無間斷空格等等）及換行字元（如：換行、回車等等）。
 </p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-trim.html")}}</div>
@@ -29,23 +25,15 @@ browser-compat: javascript.builtins.String.trim
 
 <h3 id="Return_value">回傳值</h3>
 
-<p>
-  回傳一個新的字串，其為把 <code><var>str</var></code> 起始及結尾處的空白格移除後的值。
-</p>
+<p>回傳一個新的字串，其為把 <code><var>str</var></code> 起始及結尾處的空白字元移除後的值。</p>
 
-<p>
-  如果 <code><var>str</var></code> 的起始及結尾處沒有任何的空白格，此方法不會拋出任何異常，且仍然會回傳一個新的字串，但它的值與 <code><var>str</var></code> 相同。
-</p>
+<p>如果 <code><var>str</var></code> 的起始及結尾處沒有任何的空白字元，此方法不會拋出任何例外，且仍然會回傳一個新的字串（本質上為 <code><var>str</var></code> 的複製）。</p>
 
-<p>
-  如果只是想要去除字串起始處或結尾處其中之一的空白格，那麼可以選擇使用 {{jsxref("String.prototype.trimStart()", "trimStart()")}} 或者 {{jsxref("String.prototype.trimEnd()", "trimEnd()")}}。
-</p>
+<p>如果只是想要去除字串起始處或結尾處其中之一的空白字元，那麼可以選擇使用 {{jsxref("String.prototype.trimStart()", "trimStart()")}} 或者 {{jsxref("String.prototype.trimEnd()", "trimEnd()")}}。</p>
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<p>
-  在任何其他的程式碼被執行之前，先執行以下的程式碼，它將會在瀏覽器本身未支援 <code>trim()</code> 的方法時創造它。
-</p>
+<p>在任何其他的程式碼被執行之前，先執行以下的程式碼，它將會在瀏覽器本身未支援 <code>trim()</code> 的方法時創造它。</p>
 
 <pre class="brush: js">if (!String.prototype.trim) {
   String.prototype.trim = function () {
@@ -58,7 +46,7 @@ browser-compat: javascript.builtins.String.trim
 
 <h3 id="Using_trim">如何使用 <code>trim()</code></h3>
 
-<p>以下例子會將原先字串前後的空白格移除，最後印出 <code>'foo'</code>：</p>
+<p>以下例子會印出小寫的字串 <code>'foo'</code>：</p>
 
 <pre class="brush: js">var orig = '   foo  ';
 console.log(orig.trim()); // 'foo'
