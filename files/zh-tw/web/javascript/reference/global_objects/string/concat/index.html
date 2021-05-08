@@ -11,12 +11,7 @@ browser-compat: javascript.builtins.String.concat
 ---
 <div>{{JSRef}}</div>
 
-<p>
-  <span class="seoSummary">
-    <strong><code>concat()</code></strong> 會將呼叫此方法的字串以及作為參數傳遞進此方法的字串串接在一起，並將串接結果作為一個新的字串回傳。
-    若修改原先呼叫此方法的字串或回傳的字串，並不會讓他們的值互相影響。
-  </span>
-</p>
+<p><span class="seoSummary"><strong><code>concat()</code></strong> 會將呼叫此方法的字串以及作為參數傳遞進此方法的字串串接在一起，並將串接結果作為一個新的字串回傳。</span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/string-concat.html")}}</div>
 
@@ -47,13 +42,13 @@ concat(str1, str2, ... , strN)</pre>
 </p>
 
 <p>
-  如果傳入的參數不是字串型別，那會在串接前先將該參數轉換成字串。
+  如果傳入的參數不是字串型別，那在串接前會先將該參數轉換成字串。
 </p>
 
 <h2 id="Performance">效能</h2>
 
 <p>
-  對於字串的串接，非常推薦直接使用運算子 {{jsxref("Operators/Assignment_Operators", "assignment operators", "", 1)}} 來達成，
+  對於字串的串接，強烈建議直接使用運算子 {{jsxref("Operators/Assignment_Operators", "assignment operators", "", 1)}} 來達成，
   像是 <code>+</code> 及 <code>+=</code>，而不是使用 <code>concat()</code> 方法。
 </p>
 
