@@ -2152,13 +2152,6 @@
       "Wind1808"
     ]
   },
-  "Glossary/Modern_web_apps": {
-    "modified": "2019-02-17T08:08:49.645Z",
-    "contributors": [
-      "ksugimori",
-      "Wind1808"
-    ]
-  },
   "Glossary/Mozilla_Firefox": {
     "modified": "2020-11-12T08:10:37.943Z",
     "contributors": [
@@ -7998,126 +7991,6 @@
       "Uemmra3"
     ]
   },
-  "Mozilla/Developer_Guide": {
-    "modified": "2019-03-24T00:01:02.093Z",
-    "contributors": [
-      "mantaroh",
-      "teoli",
-      "ethertank",
-      "Marsf"
-    ]
-  },
-  "Mozilla/Developer_Guide/How_to_Submit_a_Patch": {
-    "modified": "2019-03-23T23:52:12.383Z",
-    "contributors": [
-      "teoli",
-      "mantaroh",
-      "ethertank",
-      "saneyuki_s",
-      "Shoot"
-    ]
-  },
-  "Mozilla/Developer_Guide/Mozilla_Build_FAQ": {
-    "modified": "2019-03-24T00:02:51.686Z",
-    "contributors": [
-      "fscholz",
-      "teoli",
-      "Mgjbot",
-      "Aminevsky",
-      "Kozawa"
-    ]
-  },
-  "Mozilla/Developer_Guide/SVG_Guidelines": {
-    "modified": "2019-03-23T22:42:16.358Z",
-    "contributors": [
-      "teoli",
-      "hashedhyphen"
-    ]
-  },
-  "Mozilla/Developer_Guide/Source_Code": {
-    "modified": "2019-03-24T00:00:17.231Z",
-    "contributors": [
-      "lv7777",
-      "teoli",
-      "hashedhyphen",
-      "Marsf"
-    ]
-  },
-  "Mozilla/Developer_Guide/Source_Code/CVS": {
-    "modified": "2019-03-24T00:00:15.873Z",
-    "contributors": [
-      "teoli",
-      "Marsf",
-      "kohei.yoshino",
-      "Mgjbot",
-      "electrolysis",
-      "Taken Bot",
-      "Yama"
-    ]
-  },
-  "Mozilla/Developer_guide/Build_Instructions": {
-    "modified": "2020-04-13T14:23:49.444Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "teoli",
-      "Knozaki",
-      "Mgjbot",
-      "electrolysis",
-      "Taken Bot"
-    ]
-  },
-  "Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works": {
-    "modified": "2019-03-23T23:45:20.433Z",
-    "contributors": [
-      "SphinxKnight",
-      "ethertank",
-      "Mgjbot",
-      "Taken",
-      "Yama"
-    ]
-  },
-  "Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites": {
-    "modified": "2019-01-16T15:48:53.644Z",
-    "contributors": [
-      "Marsf",
-      "Taken"
-    ]
-  },
-  "Mozilla/Developer_guide/Callgraph": {
-    "modified": "2019-01-17T03:44:25.296Z",
-    "contributors": [
-      "Sheppy"
-    ]
-  },
-  "Mozilla/Developer_guide/Callgraph/Schema_Reference": {
-    "modified": "2019-03-18T21:24:16.884Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
-  "Mozilla/Developer_guide/Code_Review_FAQ": {
-    "modified": "2019-01-16T15:50:48.703Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Kohei",
-      "Mgjbot"
-    ]
-  },
-  "Mozilla/Developer_guide/Source_Code/Getting_comm-central": {
-    "modified": "2019-01-16T14:42:24.291Z",
-    "contributors": [
-      "teoli",
-      "Taken",
-      "Marsf"
-    ]
-  },
-  "Mozilla/Developer_guide/mozilla-central": {
-    "modified": "2019-03-23T23:53:38.375Z",
-    "contributors": [
-      "Marsf"
-    ]
-  },
   "Mozilla/Firefox": {
     "modified": "2020-03-18T23:20:39.121Z",
     "contributors": [
@@ -9344,13 +9217,6 @@
       "SatoshiOhata"
     ]
   },
-  "Tools/Debugger/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:35:18.490Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
   "Tools/Debugger/Source_map_errors": {
     "modified": "2020-07-16T22:35:19.426Z",
     "contributors": [
@@ -9745,13 +9611,6 @@
       "yyss"
     ]
   },
-  "Tools/Page_Inspector/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:51.431Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
   "Tools/Page_Inspector/UI_Tour": {
     "modified": "2020-07-16T22:34:49.201Z",
     "contributors": [
@@ -10035,13 +9894,6 @@
       "teoli",
       "ethertank",
       "saneyuki_s"
-    ]
-  },
-  "Tools/Web_Console/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:23.040Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
     ]
   },
   "Tools/Web_Console/Rich_output": {
@@ -45098,12 +44950,6 @@
       "shide55"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
-    "modified": "2019-03-23T22:54:31.675Z",
-    "contributors": [
-      "shide55"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/WeakSet/delete": {
     "modified": "2020-11-14T09:39:33.107Z",
     "contributors": [
@@ -51648,6 +51494,13 @@
       "Taken"
     ]
   },
+  "orphaned/Glossary/Modern_web_apps": {
+    "modified": "2019-02-17T08:08:49.645Z",
+    "contributors": [
+      "ksugimori",
+      "Wind1808"
+    ]
+  },
   "orphaned/HTML_Element_Cross_Reference": {
     "modified": "2019-03-24T00:03:07.695Z",
     "contributors": [
@@ -52426,6 +52279,13 @@
       "silverskyvicto"
     ]
   },
+  "orphaned/Tools/Debugger/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:35:18.490Z",
+    "contributors": [
+      "wbamberg",
+      "yyss"
+    ]
+  },
   "orphaned/Tools/Debugger/Limitations_of_the_new_debugger": {
     "modified": "2019-03-23T22:22:22.770Z",
     "contributors": [
@@ -52568,6 +52428,20 @@
   },
   "orphaned/Tools/Debugger_(before_Firefox_52)/UI_Tour": {
     "modified": "2019-03-23T22:22:19.337Z",
+    "contributors": [
+      "wbamberg",
+      "yyss"
+    ]
+  },
+  "orphaned/Tools/Page_Inspector/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:51.431Z",
+    "contributors": [
+      "wbamberg",
+      "yyss"
+    ]
+  },
+  "orphaned/Tools/Web_Console/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:23.040Z",
     "contributors": [
       "wbamberg",
       "yyss"
@@ -53360,6 +53234,12 @@
     "modified": "2020-10-15T22:31:40.722Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
+    "modified": "2019-03-23T22:54:31.675Z",
+    "contributors": [
+      "shide55"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Operators/Special": {

@@ -6354,63 +6354,6 @@
       "Jane47Zeng"
     ]
   },
-  "Mozilla/Developer_guide": {
-    "modified": "2020-06-26T07:13:21.797Z",
-    "contributors": [
-      "SuiltaPico",
-      "ice-kylin",
-      "ziyunfei",
-      "jsm920",
-      "merrywoody",
-      "phenix"
-    ]
-  },
-  "Mozilla/Developer_guide/Adding_APIs_to_the_navigator_object": {
-    "modified": "2019-03-23T23:34:41.037Z",
-    "contributors": [
-      "ziyunfei",
-      "crazybullet"
-    ]
-  },
-  "Mozilla/Developer_guide/Customizing_Firefox": {
-    "modified": "2019-01-17T03:58:02.226Z",
-    "contributors": [
-      "RainSlide"
-    ]
-  },
-  "Mozilla/Developer_guide/Source_Code": {
-    "modified": "2019-03-24T00:05:40.186Z",
-    "contributors": [
-      "GuestRyan",
-      "wbamberg",
-      "124694738",
-      "moumoukings",
-      "ziyunfei",
-      "kingysu",
-      "merrywoody",
-      "phenix"
-    ]
-  },
-  "Mozilla/Developer_guide/Source_Code/CVS": {
-    "modified": "2019-03-24T00:00:53.283Z",
-    "contributors": [
-      "Peidong_Wang",
-      "miaoran2015",
-      "Pandaren",
-      "teoli",
-      "ziyunfei",
-      "phenix",
-      "Mgjbot",
-      "Klp99"
-    ]
-  },
-  "Mozilla/Developer_guide/Source_Code/LatestPassingSource": {
-    "modified": "2019-03-24T00:00:52.967Z",
-    "contributors": [
-      "ziyunfei",
-      "phenix"
-    ]
-  },
   "Mozilla/Firefox": {
     "modified": "2020-01-18T14:38:03.567Z",
     "contributors": [
@@ -7187,14 +7130,6 @@
     "modified": "2020-07-16T22:34:37.525Z",
     "contributors": [
       "alanzhchou"
-    ]
-  },
-  "Tools/Page_Inspector/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:53.384Z",
-    "contributors": [
-      "Markmax",
-      "wbamberg",
-      "c_king"
     ]
   },
   "Tools/Page_Inspector/UI_Tour": {
@@ -18744,12 +18679,6 @@
     "modified": "2020-10-15T22:20:51.077Z",
     "contributors": [
       "Oswald111"
-    ]
-  },
-  "Web/API/Notation": {
-    "modified": "2020-10-15T22:20:06.303Z",
-    "contributors": [
-      "xiaoxingchi"
     ]
   },
   "Web/API/NotificationEvent": {
@@ -43766,13 +43695,6 @@
       "Hushabyme"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
-    "modified": "2019-03-23T22:18:46.466Z",
-    "contributors": [
-      "teoli",
-      "Ende93"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/WeakSet/delete": {
     "modified": "2020-03-17T12:14:42.437Z",
     "contributors": [
@@ -50408,6 +50330,14 @@
       "maicss"
     ]
   },
+  "orphaned/Tools/Page_Inspector/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:53.384Z",
+    "contributors": [
+      "Markmax",
+      "wbamberg",
+      "c_king"
+    ]
+  },
   "orphaned/Web/API/AnalyserNode/fft": {
     "modified": "2019-03-18T20:44:28.140Z",
     "contributors": [
@@ -50501,6 +50431,12 @@
     "modified": "2019-03-23T22:49:37.647Z",
     "contributors": [
       "ChenChenJoke"
+    ]
+  },
+  "orphaned/Web/API/Notation": {
+    "modified": "2020-10-15T22:20:06.303Z",
+    "contributors": [
+      "xiaoxingchi"
     ]
   },
   "orphaned/Web/API/ParentNode/append": {
@@ -50756,6 +50692,13 @@
     "modified": "2020-10-15T22:28:09.380Z",
     "contributors": [
       "lxuewu"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
+    "modified": "2019-03-23T22:18:46.466Z",
+    "contributors": [
+      "teoli",
+      "Ende93"
     ]
   },
   "orphaned/Web/JavaScript/javascript(起步)": {

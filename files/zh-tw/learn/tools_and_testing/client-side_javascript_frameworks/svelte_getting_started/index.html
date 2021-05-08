@@ -38,7 +38,7 @@ tags:
 
 <h2 id="Svelte_A_new_approach_to_building_rich_user_interfaces">Svelte：一種建構豐富使用者介面的新方式</h2>
 
-<p>於此模組中介紹的其它框架相比，Svelte 提供了一種不同的方式來建構網站應用程式。當應用程式運行時，像 React 和 Vue 等框架會在使用者的瀏覽器直接做它們想要做的事情，而 Svelte 則是將做的這些事移到編譯階段處理，因此那些做的事情只會發生在你建置應用程式的時候，進而能產生高度優化的純 JavaScript 程式碼。</p>
+<p>於此模組中介紹的其它框架相比，Svelte 提供了一種不同的方式來建構網站應用程式。當應用程式運行時，像 React 和 Vue 等框架會在使用者的瀏覽器直接做它們想要做的事情，而 Svelte 則是將做的這些事移到編譯階段處理，因此那些做的事情只會發生在你建置應用程式的時候，進而能產生高度優化的原生 JavaScript 程式碼。</p>
 
 <p>這種方式產生的結果並不是只有將應用程式的 Bundles 最小化和取得最佳效能，對於現代的生態環境而擁有較少技術經驗的人，可以更容易取得開發者經驗。</p>
 
@@ -52,55 +52,55 @@ tags:
 
 <p>我們鼓勵你走完 <a href="https://svelte.dev/tutorial/basics">Svelte 教學</a>來快速了解基本的概念，在你回來此教學系列學習如何建構一些更深入的東西之前。它應該會花費你約 30 分鐘去完成。</p>
 
-<h2 id="Use_cases">Use cases</h2>
+<h2 id="Use_cases">使用案例</h2>
 
-<p>Svelte can be used to develop small pieces of an interface or whole applications. You can either start from scratch letting Svelte drive your UI or you can incrementally integrate it into an existing application.</p>
+<p>Svelte 可以被用來開發一小塊介面或整個應用程式。你也可以從頭開始來讓 Svelte 驅動你的使用者介面或將它漸進地整合至已存在的應用程式。</p>
 
-<p>Nevertheless, Svelte is particularly appropriate to tackle the following situations:</p>
-
-<ul>
- <li>Web applications intended for low power devices: Applications built with Svelte have smaller bundle sizes, which is ideal for devices with slow network connections and limited processing power. Less code means less KB to download, parse, execute, and keep hanging around in memory.</li>
- <li>Highly interactive pages or complex visualizations: If you are building data-visualizations that need to display a large number of DOM elements, the performance gains that come from a framework with no runtime overhead will ensure that user interactions are snappy and responsive.</li>
- <li>Onboarding people with basic web development knowledge: Svelte has a shallow learning curve. Web developers with basic HTML, CSS, and JavaScript knowledge can easily grasp Svelte specifics in a short time and start building web applications.</li>
-</ul>
-
-<p>Moreover, with the help of <a href="https://sapper.svelte.dev/">Sapper</a> (a framework based on Svelte), you can also develop applications with advanced features like server-side rendering, code splitting, file-based routing and offline support. And then there's also <a href="https://svelte-native.technology/">Svelte Native</a>, which lets you build native mobile applications.</p>
-
-<h2 id="How_does_Svelte_work">How does Svelte work?</h2>
-
-<p>Being a compiler, Svelte can extend HTML, CSS, and JavaScript, generating optimal JavaScript code without any runtime overhead. To achieve this, Svelte extends vanilla web technologies in the following ways:</p>
+<p>不過 Svelte 特別適合處理下列幾種情況：</p>
 
 <ul>
- <li>It extends HTML by allowing JavaScript expressions in markup and providing directives to use conditions and loops, in a fashion similar to handlebars.</li>
- <li>It extends CSS by adding a scoping mechanism, allowing each component to define their own styles without the risk of clashing with other component's styles.</li>
- <li>It extends JavaScript by reinterpreting specific directives of the language to achieve true reactivity and ease component state management.</li>
+ <li>讓網站應用程式更適用於低功耗裝置：使用 Svelte 建構應用程式將擁有較小的 Bundle 大小，特別對於網路連線緩慢和有限處理能力的裝置是理想的。較少的程式碼意謂著較少的容量可供下載、解析、執行並保存於記憶體中。</li>
+ <li>可應付需頻繁互動的頁面或複雜的視覺化需求：比如你建構一個資料視覺化應用程式，你可能會需要顯示大量的 DOM 元素，從該框架就能獲得較好的性能增益，因為它不會有運行途中的消耗，將可以確保使用者的互動更快速與即時。</li>
+ <li>具備基本的網站開發知識即可：Svelte 學習曲線不高。網站開發人員具備基本的 HTML、CSS、JavaScript 知識就能在短時間簡單地抓住 Svelte 要點並開始建構網站應用程式。</li>
 </ul>
 
-<p>The compiler only intervenes in very specific situations and only in the context of Svelte components. Extensions to the JavaScript language are minimal and carefully picked in order to not break JavaScript syntax nor alienate developers. In fact, you will be mostly working with vanilla JavaScript.</p>
+<p>此外，有了 <a href="https://sapper.svelte.dev/">Sapper</a>（此框架基於 Svelte）的幫忙，你將能夠開發出帶有這些進階特徵的應用程式，像是伺服器端渲染（server-side rendering）、程式碼分離（code splitting）、以檔案為基礎的路由方式（file-based routing）、離線應用（offline）等支援。還有 <a href="https://svelte-native.technology/">Svelte Native</a> 讓你能夠建構原生行動應用程式。</p>
 
-<h2 id="First_steps_with_Svelte">First steps with Svelte</h2>
+<h2 id="How_does_Svelte_work">Svelte 如何工作？</h2>
 
-<p>Being a compiler, you can't just add a <code>&lt;script src="svelte.js"&gt;</code> tag to your page and import it into your app. You'll have to set up your development environment in order to let the compiler do its job.</p>
-
-<h3 id="Requirements">Requirements</h3>
-
-<p>In order to work with Svelte you need to have <a href="https://nodejs.org/en/">Node.js</a> installed. It's recommended that you use the long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package runner). Note that you can also use the Yarn package manager in place of npm, but we'll assume you are using npm in this set of tutorials. See <a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics</a> for more information on npm and yarn.</p>
-
-<p>If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. Gitbash (which comes as part of the <a href="https://gitforwindows.org/">git for Windows toolset</a>) or <a href="https://docs.microsoft.com/zh-TW/windows/wsl/about">Windows Subsystem for Linux (WSL)</a> are both suitable. <a href="https://cmder.net/">Cmder</a> is another very good and complete alternative. See <a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">Command line crash course</a> for more information on these, and on terminal commands in general.</p>
-
-<p>Also see the following for more information:</p>
+<p>做為一個編譯器，Svelte 能擴展 HTML、CSS、JavaScript，產生最佳的 JavaScript 程式碼而不會有任何運行途中的消耗。為了達成這件事，Svelte 透過下列方法來擴展其原生網站技術：</p>
 
 <ul>
- <li><a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/">"What is npm"</a> on nodejs.org</li>
- <li><a href="https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner">"Introducing npx"</a> on the npm blog</li>
- <li><a href="https://svelte.dev/blog/the-easiest-way-to-get-started">"The easiest way to get started with Svelte"</a> on the svelte blog</li>
+ <li>藉由對 HTML 擴展允許標記 JavaScript 表達式和提供一些指令來使用條件和迴圈，做法和 Handlebars 相似。</li>
+ <li>藉由對 CSS 擴展加上範圍機制，允許每個元件去定義它們自己的樣式，不會因為其它元件的樣式改變而被影響。</li>
+ <li>藉由對 JavaScript 擴展重新詮釋語言的一些特定指令來達到真實的反應性和減輕元件狀態管理。</li>
 </ul>
 
-<h3 id="Creating_your_first_Svelte_app">Creating your first Svelte app</h3>
+<p>只有在非常特殊的情況和 Svelte 元件的上下文中編譯器才會介入。其中對 JavaScript 的擴展相對也比較少且謹慎，就是為了不破壞 JavaScript 一些語法，而使開發人員覺得困惑。事實上，你大部分時間還是會用到原生 JavaScript 來開發。</p>
 
-<p>The easiest way to create a starter app template is to just download the starter template application. You can do that by visiting <a href="https://github.com/sveltejs/template">sveltejs/template</a> on GitHub or you can avoid having to download and unzip it and just use <a href="https://github.com/Rich-Harris/degit">degit</a>.</p>
+<h2 id="First_steps_with_Svelte">Svelte 第一步</h2>
 
-<p>To create your starter app template, run the following terminal commands:</p>
+<p>做為一個編譯器，你不能只是把 <code>&lt;script src="svelte.js"&gt;</code> 標籤加入到你的頁面並載入它到你的應用程式。你將必須設置你的開發環境，為的是能讓編譯器可以做它要做的事情。</p>
+
+<h3 id="Requirements">需求</h3>
+
+<p>為了使用 Svelte，你會需要安裝 <a href="https://nodejs.org/en/">Node.js</a>。推薦你使用長期支援版本（LTS）。Node 包含 npm（the node package manager）和 npx（the node package runner）。另外你也可以使用 Yarn 套件管理工具來代替 npm，但我們先假定你會用 npm 來走完這個教學系列。若想知道更多 npm 和 yarn 的相關資訊可以至<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">基礎套件管理</a>了解。
+
+<p>如果你是使用 Windows 的話，你將會需要安裝一些軟體來達到和 Unix/macOS 作業系統使用終端機一樣的行為，為的是接下來走教學系列時，可以使用到一些被提及的終端機指令。Gitbash（<a href="https://gitforwindows.org/">適用於 Windows 的 git 工具集</a>中的一部分功能）或使用<a href="https://docs.microsoft.com/zh-TW/windows/wsl/about">適用於 Linux 的 Windows 子系統（WSL）</a>，這些都是蠻合適的解決方案。<a href="https://cmder.net/">Cmder</a> 也是另一個不錯且較完善的解決方案。若想知道更多命令列的相關資訊可以至<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">命令列課程</a>了解。</p>
+
+<p>若想知道更多相關資訊也可以至下列去閱讀：</p>
+
+<ul>
+ <li>可以至 nodejs.org 了解<a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/">「什麼是 npm？」</a></li>
+ <li>可以至 npm 部落格了解<a href="https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner">「介紹 npx」</a></li>
+ <li>可以至 svelte 部落格了解<a href="https://svelte.dev/blog/the-easiest-way-to-get-started">「以最簡單的方式來開始 Svelte」</a></li>
+</ul>
+
+<h3 id="Creating_your_first_Svelte_app">建構你第一個 Svelte 應用程式</h3>
+
+<p>最簡單的方式就是使用入門範本來建構初始應用程式。你可以至 <a href="https://github.com/sveltejs/template">sveltejs/template</a> 下載並解壓縮出入門範本或者使用 <a href="https://github.com/Rich-Harris/degit">degit</a> 來做這件事。</p>
+
+<p>為了建構你第一個入門範本應用程式，請先執行下列終端機指令：</p>
 
 <pre class="brush: bash">npx degit sveltejs/template moz-todo-svelte
 cd moz-todo-svelte
@@ -108,60 +108,65 @@ npm install
 npm run dev</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using <code>git clone</code> because it will not download all the history of the repo, or create a complete local clone.</p>
+<p><strong>注意</strong>：不用太驚訝 degit 做了這麼多事情 — 它其實就只是讓你可以從 git 儲存庫下載和解壓縮最新版本的內容。使用它比起使用 <code>git clone</code> 更快能達到我們的目的，因為它並不會下載整個儲存庫的歷史以及不會複製一份放在本機端。</p>
 </div>
 
-<p>After running <code>npm run dev</code>, Svelte will compile and build your application. It will start a local server at <code>localhost:5000</code>. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:</p>
+<p>之後執行 <code>npm run dev</code>，Svelte 將會編譯和建構你的應用程式。它將會跑在本機 <code>localhost:5000</code> 位址。當你對來源檔案做了異動，Svelte 將會偵測到檔案更新並自動地重新編譯和刷新你的應用程式。你的瀏覽器將會顯示如下圖：</p>
 
 <p><img alt="A simple start page that says hello world, and gives a link to the official svelte tutorials" src="01-svelte-starter-app.png" style="border-style: solid; border-width: 1px;"></p>
 
-<h3 id="Application_structure">Application structure</h3>
+<h3 id="Application_structure">應用程式結構</h3>
 
-<p>The starter template comes with the following structure:</p>
+<p>入門範本有下列結構：</p>
 
 <pre>moz-todo-svelte
-├── readme.md
+├── README.md
 ├── package.json
 ├── package-lock.json
 ├── rollup.config.js
 ├── .gitignore
 ├── node_modules
 ├── public
-│   ├── favicon.ico
+│   ├── favicon.png
 │   ├── index.html
 │   ├── global.css
 │   └── build
 │       ├── bundle.css
-│       ├── bundle.css.map
 │       ├── bundle.js
 │       └── bundle.js.map
+├── scripts
+│   └── setupTypeScript.js
 └── src
     ├── App.svelte
     └── main.js</pre>
 
-<p>The contents are as follows:</p>
+<p>內容解釋如下：</p>
 
 <ul>
- <li><code>package.json</code> and <code>package-lock.json</code>: Contains information about the project that Node.js/npm uses to keep it organized. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read <a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/">What is the file <code>package.json</code></a>? on NodeJS.org; we also talk about it in our <a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">Package management basics tutorial</a>.</li>
- <li><code>node_modules</code>: This is where node saves the project dependencies. These dependencies won't be sent to production, they are just used for development purposes.</li>
- <li><code>.gitignore</code>: Tells git which files or folder to ignore from the project — useful if you decide to include your app in a git repo.</li>
- <li><code>rollup.config.js</code>: Svelte uses <a href="https://rollupjs.org/">rollup.js</a> as a module bundler. This configuration file tells rollup how to compile and build your app. If you prefer <a href="https://webpack.js.org/">webpack</a> you can create your starter project with <code>npx degit sveltejs/template-webpack svelte-app</code> instead.</li>
- <li>scripts: Contains setup scripts as required. Currently should only contain <code>setupTypeScript.js</code>, a script that sets up TypeScript support in Svelte. We'll talk about this more in the last article.</li>
- <li><code>src</code>: This directory is where the source code for your application lives — where you'll be creating the code for your app.
+ <li><code>package.json</code> 和 <code>package-lock.json</code>：Node.js/npm 用它來組織化管理你的專案，相關資訊可以在這邊找到。在這個教學系列中，你不需要完全了解這個檔案，但如果你想要學習更多的話，你可以至 NodeJS.org 閱讀 <a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/">什麼是 <code>package.json</code> 檔案</a>？我們在<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">基礎套件管理教學系列</a>也有談到。</li>
+ <li><code>node_modules</code>：這裡是 node 存放專案相依套件的地方。這些相依套件在正式環境不會看到，只有開發時才會被使用到。</li>
+ <li><code>.gitignore</code>：告訴 git 有哪些檔案或資料夾不要納入專案版本控制 — 透過它可以決定哪些檔案要納入專案版本控制，還蠻實用的！</li>
+ <li><code>rollup.config.js</code>：Svelte 使用 <a href="https://rollupjs.org/">rollup.js</a> 做為模組包裝工具。這個組態檔案告訴 rollup 如何編譯和建構你的應用程式。假如你偏好使用 <a href="https://webpack.js.org/">webpack</a>，你可以改執行 <code>npx degit sveltejs/template-webpack svelte-app</code> 來建構你的初始應用程式。</li>
+ <li><code>scripts</code>：包含所需的設置腳本。現在應該只有 <code>setupTypeScript.js</code>。
   <ul>
-   <li><code>App.svelte</code>: This is the top-level component of your app. So far it just renders the 'Hello World!' message.</li>
-   <li><code>main.js</code>: The entry point to our application. It just instantiates the <code>App</code> component and binds it to the body of our html page.</li>
+    <li><code>setupTypeScript.js</code>：此腳本用來支援 Svelte 可以使用 TypeScript。我們將在之後的文章談到更多。</li>
+  </ul>
+</li>
+ <li><code>src</code>：這個目錄主要放你應用程式的來源程式碼 — 你寫的程式碼基本都會放在這。
+  <ul>
+   <li><code>App.svelte</code>：在你的應用程式中它是最高層級的元件。不過它現在只會渲染出「Hello World!」的訊息給你看。</li>
+   <li><code>main.js</code>：我們應用程式的進入點。它會實例化 <code>App</code> 元件並將其綁定至我們 html 頁面的 body 上。</li>
   </ul>
  </li>
- <li><code>public</code>: This directory contains all the files that will be published in production.
+ <li><code>public</code>：這個目錄包含所有我們會釋出於正式環境的檔案。
   <ul>
-   <li><code>favicon.png</code>: This is the favicon for your app. Currently, it's the Svelte logo.</li>
-   <li><code>index.html</code>: This is the main page of your app. Initially it's just an empty HTML5 page that loads the css files and js bundles generated by Svelte.</li>
-   <li><code>global.css</code>: This file contains unscoped styles. It's a regular css file that will be applied to the whole application.</li>
-   <li><code>build</code>: This folder contains the generated CSS and JavaScript source code.
+   <li><code>favicon.png</code>：這個是你應用程式的 favicon。現在應該會是 Svelte 的標誌。</li>
+   <li><code>index.html</code>：這個是你應用程式的主要頁面。最初為一個空的 HTML5 頁面，接著會載入由 Svelte 產生的 css 檔案和 js bundles。</li>
+   <li><code>global.css</code>：這個檔案包含沒有範圍限制的樣式。這是一個正規的 css 檔案，將會套用至整個應用程式。</li>
+   <li><code>build</code>：這個資料夾會包含那些被產生的 CSS 和 JavaScript 來源程式碼。
     <ul>
-     <li><code>bundle.css</code>: The CSS file that Svelte generated from the styles defined for each component.</li>
-     <li><code>bundle.js</code>: The JavaScript file compiled from all your JavaScript source code.</li>
+     <li><code>bundle.css</code>：所有定義於你個別元件中的樣式，都會被 Svelte 產生至這個 CSS 檔案中。</li>
+     <li><code>bundle.js</code>：所有你的 JavaScript 來源程式碼都會被編譯至這個 JavaScript 檔案中。</li>
     </ul>
    </li>
   </ul>

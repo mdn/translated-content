@@ -1985,12 +1985,6 @@
       "loella16"
     ]
   },
-  "Glossary/Modern_web_apps": {
-    "modified": "2019-01-17T02:12:55.112Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Glossary/Mozilla_Firefox": {
     "modified": "2019-03-23T22:42:01.387Z",
     "contributors": [
@@ -9928,72 +9922,6 @@
       "hellosct1"
     ]
   },
-  "Mozilla/Developer_guide": {
-    "modified": "2020-08-31T05:54:42.010Z",
-    "contributors": [
-      "Voulto",
-      "chrisdavidmills",
-      "jp.jeaphil",
-      "echaudron",
-      "Jonathanlempereur",
-      "wakka27",
-      "Delapouite",
-      "bskari"
-    ]
-  },
-  "Mozilla/Developer_guide/Build_Instructions": {
-    "modified": "2019-03-23T23:48:28.119Z",
-    "contributors": [
-      "fscholz",
-      "capgemini-ocs",
-      "teoli",
-      "The RedBurn",
-      "BenoitL",
-      "Mgjbot"
-    ]
-  },
-  "Mozilla/Developer_guide/How_to_Submit_a_Patch": {
-    "modified": "2019-03-23T22:06:44.874Z",
-    "contributors": [
-      "sylvestre",
-      "chrisdavidmills",
-      "loella16",
-      "KurtC0ba1n"
-    ]
-  },
-  "Mozilla/Developer_guide/Introduction": {
-    "modified": "2019-03-23T23:40:01.462Z",
-    "contributors": [
-      "m-r-r",
-      "FredB"
-    ]
-  },
-  "Mozilla/Developer_guide/Reviewer_Checklist": {
-    "modified": "2020-04-06T15:56:36.678Z",
-    "contributors": [
-      "olivierdupon",
-      "chrisdavidmills",
-      "loella16",
-      "CarlosAvim"
-    ]
-  },
-  "Mozilla/Developer_guide/So_you_just_built_Firefox": {
-    "modified": "2019-03-23T23:19:14.291Z",
-    "contributors": [
-      "chrisdavidmills",
-      "juleschz"
-    ]
-  },
-  "Mozilla/Developer_guide/mozilla-central": {
-    "modified": "2019-03-24T00:02:46.954Z",
-    "contributors": [
-      "chrisdavidmills",
-      "QuentinAmelot",
-      "tregagnon",
-      "fscholz",
-      "BenoitL"
-    ]
-  },
   "Mozilla/Firefox": {
     "modified": "2020-01-18T13:29:35.316Z",
     "contributors": [
@@ -11032,14 +10960,6 @@
       "franckuser16"
     ]
   },
-  "Tools/Debugger/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:35:18.146Z",
-    "contributors": [
-      "maximelore",
-      "wbamberg",
-      "teoli"
-    ]
-  },
   "Tools/Debugger/Set_an_XHR_breakpoint": {
     "modified": "2020-07-16T22:35:20.080Z",
     "contributors": [
@@ -11447,14 +11367,6 @@
       "maximelore"
     ]
   },
-  "Tools/Page_Inspector/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:50.971Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore",
-      "teoli"
-    ]
-  },
   "Tools/Page_Inspector/UI_Tour": {
     "modified": "2020-07-16T22:34:49.046Z",
     "contributors": [
@@ -11764,13 +11676,6 @@
       "maximelore",
       "teoli",
       "tregagnon"
-    ]
-  },
-  "Tools/Web_Console/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:22.621Z",
-    "contributors": [
-      "maximelore",
-      "wbamberg"
     ]
   },
   "Tools/Web_Console/Rich_output": {
@@ -19393,12 +19298,6 @@
       "loella16"
     ]
   },
-  "Web/API/Notation": {
-    "modified": "2019-03-18T21:40:13.820Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/NotificationEvent": {
     "modified": "2020-09-27T20:47:13.129Z",
     "contributors": [
@@ -20553,12 +20452,6 @@
     "modified": "2020-10-15T22:08:32.278Z",
     "contributors": [
       "moshir"
-    ]
-  },
-  "Web/API/URLUtilsReadOnly": {
-    "modified": "2020-10-15T22:17:11.893Z",
-    "contributors": [
-      "spike008t"
     ]
   },
   "Web/API/USVString": {
@@ -40233,12 +40126,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
-    "modified": "2020-10-15T21:30:59.712Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/WeakSet/delete": {
     "modified": "2020-10-15T21:31:01.743Z",
     "contributors": [
@@ -45238,6 +45125,35 @@
       "Fredchat"
     ]
   },
+  "orphaned/Glossary/Modern_web_apps": {
+    "modified": "2019-01-17T02:12:55.112Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "orphaned/Tools/Debugger/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:35:18.146Z",
+    "contributors": [
+      "maximelore",
+      "wbamberg",
+      "teoli"
+    ]
+  },
+  "orphaned/Tools/Page_Inspector/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:50.971Z",
+    "contributors": [
+      "wbamberg",
+      "maximelore",
+      "teoli"
+    ]
+  },
+  "orphaned/Tools/Web_Console/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:22.621Z",
+    "contributors": [
+      "maximelore",
+      "wbamberg"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2019-03-23T23:28:22.437Z",
     "contributors": [
@@ -45252,6 +45168,12 @@
   },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2019-03-18T21:39:20.100Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "orphaned/Web/API/Notation": {
+    "modified": "2019-03-18T21:40:13.820Z",
     "contributors": [
       "loella16"
     ]
@@ -45299,6 +45221,12 @@
       "loella16"
     ]
   },
+  "orphaned/Web/API/URLUtilsReadOnly": {
+    "modified": "2020-10-15T22:17:11.893Z",
+    "contributors": [
+      "spike008t"
+    ]
+  },
   "orphaned/Web/API/Window/ondevicelight": {
     "modified": "2020-10-15T22:33:47.080Z",
     "contributors": [
@@ -45334,6 +45262,12 @@
     "modified": "2019-03-18T21:41:00.371Z",
     "contributors": [
       "loella16"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
+    "modified": "2020-10-15T21:30:59.712Z",
+    "contributors": [
+      "SphinxKnight"
     ]
   }
 }
