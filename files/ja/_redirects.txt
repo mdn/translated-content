@@ -2371,6 +2371,7 @@
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
 /ja/docs/Glossary/Global_attribute	/ja/docs/conflicting/Web/HTML/Global_attributes
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
+/ja/docs/Glossary/Modern_web_apps	/ja/docs/orphaned/Glossary/Modern_web_apps
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
@@ -3575,6 +3576,7 @@
 /ja/docs/Tools/Debugger/How_to/Break_on_a_DOM_event	/ja/docs/Tools/Debugger/Break_on_DOM_mutation
 /ja/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables	/ja/docs/conflicting/Tools/Debugger/How_to/Set_Watch_Expressions
 /ja/docs/Tools/Debugger/How_to/Search_and_filter	/ja/docs/conflicting/Tools/Debugger/How_to/Search
+/ja/docs/Tools/Debugger/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /ja/docs/Tools/Debugger/Limitations_of_the_new_debugger	/ja/docs/orphaned/Tools/Debugger/Limitations_of_the_new_debugger
 /ja/docs/Tools/Debugger_(before_Firefox_52)	/ja/docs/orphaned/Tools/Debugger_(before_Firefox_52)
 /ja/docs/Tools/Debugger_(before_Firefox_52)/Disable_breakpoints	/ja/docs/orphaned/Tools/Debugger_(before_Firefox_52)/Disable_breakpoints
@@ -3604,6 +3606,7 @@
 /ja/docs/Tools/Page_Inspector/HTML_panel	/ja/docs/conflicting/Tools/Page_Inspector/UI_Tour
 /ja/docs/Tools/Page_Inspector/How_to/View_fonts	/ja/docs/Tools/Page_Inspector/How_to/Edit_fonts
 /ja/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animations_examples	/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_CSS_transitions
+/ja/docs/Tools/Page_Inspector/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /ja/docs/Tools/Page_Inspector/Style_panel	/ja/docs/conflicting/Tools/Page_Inspector
 /ja/docs/Tools/Performance/Profiler_walkthrough	/ja/docs/conflicting/Tools/Performance/Call_Tree
 /ja/docs/Tools/Profiler	/ja/docs/conflicting/Tools/Performance
@@ -3613,6 +3616,7 @@
 /ja/docs/Tools/Responsive_Design_View	/ja/docs/Tools/Responsive_Design_Mode
 /ja/docs/Tools/Using_the_Source_Editor	/ja/docs/conflicting/tools/Keyboard_shortcuts
 /ja/docs/Tools/Web_Console-redirect-1	/ja/docs/Tools/Web_Console
+/ja/docs/Tools/Web_Console/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts
 /ja/docs/Tools/Web_Console/Opening_the_Web_Console	/ja/docs/Tools/Web_Console/UI_Tour
 /ja/docs/Tools/Web_Console/WebConsoleHelp	/en-US/docs/Tools/Web_Console/Helpers
 /ja/docs/Transforming_XML_with_XSLT	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT

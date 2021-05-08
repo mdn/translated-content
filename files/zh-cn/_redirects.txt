@@ -1405,6 +1405,7 @@
 /zh-CN/docs/Tools/Firebug迁移	/zh-CN/docs/Tools/Migrating_from_Firebug
 /zh-CN/docs/Tools/Page_Inspector/3D_view	/zh-CN/docs/Tools/3D_View
 /zh-CN/docs/Tools/Page_Inspector/How_to/View_fonts	/zh-CN/docs/Tools/Page_Inspector/How_to/Edit_fonts
+/zh-CN/docs/Tools/Page_Inspector/Keyboard_shortcuts	/zh-CN/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /zh-CN/docs/Tools/Profiler	/zh-CN/docs/conflicting/Tools/Performance
 /zh-CN/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE_clone	/zh-CN/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE
 /zh-CN/docs/Tools/Responsive_Design_View	/zh-CN/docs/Tools/Responsive_Design_Mode

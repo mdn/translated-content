@@ -7132,14 +7132,6 @@
       "alanzhchou"
     ]
   },
-  "Tools/Page_Inspector/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:53.384Z",
-    "contributors": [
-      "Markmax",
-      "wbamberg",
-      "c_king"
-    ]
-  },
   "Tools/Page_Inspector/UI_Tour": {
     "modified": "2020-07-16T22:34:49.834Z",
     "contributors": [
@@ -50336,6 +50328,14 @@
     "contributors": [
       "wbamberg",
       "maicss"
+    ]
+  },
+  "orphaned/Tools/Page_Inspector/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:53.384Z",
+    "contributors": [
+      "Markmax",
+      "wbamberg",
+      "c_king"
     ]
   },
   "orphaned/Web/API/AnalyserNode/fft": {

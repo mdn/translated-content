@@ -2152,13 +2152,6 @@
       "Wind1808"
     ]
   },
-  "Glossary/Modern_web_apps": {
-    "modified": "2019-02-17T08:08:49.645Z",
-    "contributors": [
-      "ksugimori",
-      "Wind1808"
-    ]
-  },
   "Glossary/Mozilla_Firefox": {
     "modified": "2020-11-12T08:10:37.943Z",
     "contributors": [
@@ -9224,13 +9217,6 @@
       "SatoshiOhata"
     ]
   },
-  "Tools/Debugger/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:35:18.490Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
   "Tools/Debugger/Source_map_errors": {
     "modified": "2020-07-16T22:35:19.426Z",
     "contributors": [
@@ -9625,13 +9611,6 @@
       "yyss"
     ]
   },
-  "Tools/Page_Inspector/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:51.431Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
   "Tools/Page_Inspector/UI_Tour": {
     "modified": "2020-07-16T22:34:49.201Z",
     "contributors": [
@@ -9915,13 +9894,6 @@
       "teoli",
       "ethertank",
       "saneyuki_s"
-    ]
-  },
-  "Tools/Web_Console/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:23.040Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
     ]
   },
   "Tools/Web_Console/Rich_output": {
@@ -51522,6 +51494,13 @@
       "Taken"
     ]
   },
+  "orphaned/Glossary/Modern_web_apps": {
+    "modified": "2019-02-17T08:08:49.645Z",
+    "contributors": [
+      "ksugimori",
+      "Wind1808"
+    ]
+  },
   "orphaned/HTML_Element_Cross_Reference": {
     "modified": "2019-03-24T00:03:07.695Z",
     "contributors": [
@@ -52300,6 +52279,13 @@
       "silverskyvicto"
     ]
   },
+  "orphaned/Tools/Debugger/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:35:18.490Z",
+    "contributors": [
+      "wbamberg",
+      "yyss"
+    ]
+  },
   "orphaned/Tools/Debugger/Limitations_of_the_new_debugger": {
     "modified": "2019-03-23T22:22:22.770Z",
     "contributors": [
@@ -52442,6 +52428,20 @@
   },
   "orphaned/Tools/Debugger_(before_Firefox_52)/UI_Tour": {
     "modified": "2019-03-23T22:22:19.337Z",
+    "contributors": [
+      "wbamberg",
+      "yyss"
+    ]
+  },
+  "orphaned/Tools/Page_Inspector/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:51.431Z",
+    "contributors": [
+      "wbamberg",
+      "yyss"
+    ]
+  },
+  "orphaned/Tools/Web_Console/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:23.040Z",
     "contributors": [
       "wbamberg",
       "yyss"

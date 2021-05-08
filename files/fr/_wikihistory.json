@@ -1985,12 +1985,6 @@
       "loella16"
     ]
   },
-  "Glossary/Modern_web_apps": {
-    "modified": "2019-01-17T02:12:55.112Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Glossary/Mozilla_Firefox": {
     "modified": "2019-03-23T22:42:01.387Z",
     "contributors": [
@@ -10966,14 +10960,6 @@
       "franckuser16"
     ]
   },
-  "Tools/Debugger/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:35:18.146Z",
-    "contributors": [
-      "maximelore",
-      "wbamberg",
-      "teoli"
-    ]
-  },
   "Tools/Debugger/Set_an_XHR_breakpoint": {
     "modified": "2020-07-16T22:35:20.080Z",
     "contributors": [
@@ -11381,14 +11367,6 @@
       "maximelore"
     ]
   },
-  "Tools/Page_Inspector/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:50.971Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore",
-      "teoli"
-    ]
-  },
   "Tools/Page_Inspector/UI_Tour": {
     "modified": "2020-07-16T22:34:49.046Z",
     "contributors": [
@@ -11698,13 +11676,6 @@
       "maximelore",
       "teoli",
       "tregagnon"
-    ]
-  },
-  "Tools/Web_Console/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:22.621Z",
-    "contributors": [
-      "maximelore",
-      "wbamberg"
     ]
   },
   "Tools/Web_Console/Rich_output": {
@@ -20481,12 +20452,6 @@
     "modified": "2020-10-15T22:08:32.278Z",
     "contributors": [
       "moshir"
-    ]
-  },
-  "Web/API/URLUtilsReadOnly": {
-    "modified": "2020-10-15T22:17:11.893Z",
-    "contributors": [
-      "spike008t"
     ]
   },
   "Web/API/USVString": {
@@ -45160,6 +45125,35 @@
       "Fredchat"
     ]
   },
+  "orphaned/Glossary/Modern_web_apps": {
+    "modified": "2019-01-17T02:12:55.112Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "orphaned/Tools/Debugger/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:35:18.146Z",
+    "contributors": [
+      "maximelore",
+      "wbamberg",
+      "teoli"
+    ]
+  },
+  "orphaned/Tools/Page_Inspector/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:50.971Z",
+    "contributors": [
+      "wbamberg",
+      "maximelore",
+      "teoli"
+    ]
+  },
+  "orphaned/Tools/Web_Console/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:22.621Z",
+    "contributors": [
+      "maximelore",
+      "wbamberg"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2019-03-23T23:28:22.437Z",
     "contributors": [
@@ -45225,6 +45219,12 @@
       "Yukulele.",
       "Seblor",
       "loella16"
+    ]
+  },
+  "orphaned/Web/API/URLUtilsReadOnly": {
+    "modified": "2020-10-15T22:17:11.893Z",
+    "contributors": [
+      "spike008t"
     ]
   },
   "orphaned/Web/API/Window/ondevicelight": {

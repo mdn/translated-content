@@ -358,11 +358,13 @@
 /ru/docs/Tools/Add-ons/DOM_Inspector	/ru/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /ru/docs/Tools/Debugger/How_to/Отладка_кода_внутри_eval	/ru/docs/Tools/Debugger/How_to/Debug_eval_sources
 /ru/docs/Tools/Debugger/How_to/Работа_с_минифицированным_кодом	/ru/docs/Tools/Debugger/How_to/Pretty-print_a_minified_file
+/ru/docs/Tools/Debugger/Keyboard_shortcuts	/ru/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /ru/docs/Tools/Page_Inspector/How_to/Otkrytie_Inspektora	/ru/docs/Tools/Page_Inspector/How_to/Open_the_Inspector
 /ru/docs/Tools/Page_Inspector/How_to/Vybor_elementa	/ru/docs/Tools/Page_Inspector/How_to/Select_an_element
 /ru/docs/Tools/Page_Inspector/How_to/Исследовать_event_listeners	/ru/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
 /ru/docs/Tools/Page_Inspector/How_to/Просмотр_шрифтов	/ru/docs/Tools/Page_Inspector/How_to/Edit_fonts
-/ru/docs/Tools/Page_Inspector/Сочетания_клавиш	/ru/docs/Tools/Page_Inspector/Keyboard_shortcuts
+/ru/docs/Tools/Page_Inspector/Keyboard_shortcuts	/ru/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
+/ru/docs/Tools/Page_Inspector/Сочетания_клавиш	/ru/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /ru/docs/Tools/Profiler	/ru/docs/conflicting/Tools/Performance
 /ru/docs/Tools/Release_notes	/ru/docs/conflicting/Mozilla/Firefox/Releases
 /ru/docs/Tools/Responsive_Design_View	/ru/docs/Tools/Responsive_Design_Mode

@@ -600,7 +600,8 @@
 /ko/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/ko/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /ko/docs/Tools/Add-ons	/ko/docs/orphaned/Tools/Add-ons
 /ko/docs/Tools/Add-ons/DOM_Inspector	/ko/docs/orphaned/Tools/Add-ons/DOM_Inspector
-/ko/docs/Tools/Debugger/단축키	/ko/docs/Tools/Debugger/Keyboard_shortcuts
+/ko/docs/Tools/Debugger/Keyboard_shortcuts	/ko/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
+/ko/docs/Tools/Debugger/단축키	/ko/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /ko/docs/Tools/How_to	/ko/docs/Tools/Debugger/How_to
 /ko/docs/Tools/How_to/Open_the_debugger	/ko/docs/Tools/Debugger/How_to/Open_the_debugger
 /ko/docs/Tools/How_to/Search	/ko/docs/Tools/Debugger/How_to/Search
@@ -1252,7 +1253,7 @@
 /ko/docs/도구들/Add-ons/DOM_Inspector	/ko/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /ko/docs/도구들/Debugger	/ko/docs/Tools/Debugger
 /ko/docs/도구들/Debugger/UI_Tour	/ko/docs/Tools/Debugger/UI_Tour
-/ko/docs/도구들/Debugger/단축키	/ko/docs/Tools/Debugger/Keyboard_shortcuts
+/ko/docs/도구들/Debugger/단축키	/ko/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /ko/docs/도구들/How_to	/ko/docs/Tools/Debugger/How_to
 /ko/docs/도구들/How_to/Open_the_debugger	/ko/docs/Tools/Debugger/How_to/Open_the_debugger
 /ko/docs/도구들/How_to/Search	/ko/docs/Tools/Debugger/How_to/Search

@@ -470,9 +470,10 @@
 /de/docs/Tools/Page_Inspector/How_to/Event_Listener_untersuchen	/de/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
 /de/docs/Tools/Page_Inspector/How_to/Raster_Layout_untersuchen	/de/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts
 /de/docs/Tools/Page_Inspector/How_to/Schriftarten_Bearbeitung	/de/docs/Tools/Page_Inspector/How_to/Edit_fonts
+/de/docs/Tools/Page_Inspector/Keyboard_shortcuts	/de/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /de/docs/Tools/Seiten_Inspektor	/de/docs/Tools/Page_Inspector
 /de/docs/Tools/Seiten_Inspektor/Style_panel	/de/docs/Tools/Page_Inspector
-/de/docs/Tools/Seiten_Inspektor/Tastenkombinationen	/de/docs/Tools/Page_Inspector/Keyboard_shortcuts
+/de/docs/Tools/Seiten_Inspektor/Tastenkombinationen	/de/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /de/docs/Tools/Shader-Editor	/de/docs/Tools/Shader_Editor
 /de/docs/Tools/WebIDE_clone	/de/docs/orphaned/Tools/WebIDE_clone
 /de/docs/Tools/Web_Konsole	/de/docs/Tools/Web_Console

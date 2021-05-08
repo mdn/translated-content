@@ -1755,7 +1755,7 @@
 /fr/docs/Glossaire/XSLT	/fr/docs/Glossary/XSLT
 /fr/docs/Glossaire/Zones_de_grille	/fr/docs/Glossary/Grid_Areas
 /fr/docs/Glossaire/application_context	/fr/docs/Glossary/application_context
-/fr/docs/Glossaire/applications_web_modernes	/fr/docs/Glossary/Modern_web_apps
+/fr/docs/Glossaire/applications_web_modernes	/fr/docs/orphaned/Glossary/Modern_web_apps
 /fr/docs/Glossaire/array	/fr/docs/Glossary/array
 /fr/docs/Glossaire/beacon	/fr/docs/Glossary/beacon
 /fr/docs/Glossaire/brotli_compression	/fr/docs/Glossary/brotli_compression
@@ -1798,6 +1798,7 @@
 /fr/docs/Glossary/Accessibilité	/fr/docs/Glossary/Accessibility
 /fr/docs/Glossary/Attribut	/fr/docs/Glossary/Attribute
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
+/fr/docs/Glossary/Modern_web_apps	/fr/docs/orphaned/Glossary/Modern_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
 /fr/docs/Guide_JavaScript_1.5/Aperçu_de_JavaScript	/fr/docs/conflicting/Web/JavaScript/Guide/Introduction_6f341ba6db4b060ccbd8dce4a0d5214b
@@ -3266,7 +3267,7 @@
 /fr/docs/Outils/Console_Web/Console_messages	/fr/docs/Tools/Web_Console/Console_messages
 /fr/docs/Outils/Console_Web/Fonctions_d_aide	/fr/docs/Tools/Web_Console/Helpers
 /fr/docs/Outils/Console_Web/Helpers	/fr/docs/Tools/Web_Console/Helpers
-/fr/docs/Outils/Console_Web/Keyboard_shortcuts	/fr/docs/Tools/Web_Console/Keyboard_shortcuts
+/fr/docs/Outils/Console_Web/Keyboard_shortcuts	/fr/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts
 /fr/docs/Outils/Console_Web/Opening_the_Web_Console	/fr/docs/Tools/Web_Console/UI_Tour
 /fr/docs/Outils/Console_Web/Rich_output	/fr/docs/Tools/Web_Console/Rich_output
 /fr/docs/Outils/Console_Web/Split_console	/fr/docs/Tools/Web_Console/Split_console
@@ -3274,7 +3275,7 @@
 /fr/docs/Outils/Couleurs_des_DevTools	/fr/docs/Tools/DevToolsColors
 /fr/docs/Outils/DOM_Property_Viewer	/fr/docs/Tools/DOM_Property_Viewer
 /fr/docs/Outils/Debugger	/fr/docs/Tools/Debugger
-/fr/docs/Outils/Debugger/Keyboard_shortcuts	/fr/docs/Tools/Debugger/Keyboard_shortcuts
+/fr/docs/Outils/Debugger/Keyboard_shortcuts	/fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /fr/docs/Outils/Debugger/Settings	/fr/docs/Outils/Débogueur/Paramètres
 /fr/docs/Outils/Debugger/UI_Tour	/fr/docs/Tools/Debugger/UI_Tour
 /fr/docs/Outils/DevToolsAPI	/fr/docs/Tools/DevToolsAPI
@@ -3329,8 +3330,8 @@
 /fr/docs/Outils/Débogueur/How_to/Set_a_conditional_breakpoint	/fr/docs/Tools/Debugger/How_to/Set_a_conditional_breakpoint
 /fr/docs/Outils/Débogueur/How_to/Step_through_code	/fr/docs/Tools/Debugger/How_to/Step_through_code
 /fr/docs/Outils/Débogueur/How_to/Use_a_source_map	/fr/docs/Tools/Debugger/How_to/Use_a_source_map
-/fr/docs/Outils/Débogueur/Keyboard_shortcuts	/fr/docs/Tools/Debugger/Keyboard_shortcuts
-/fr/docs/Outils/Débogueur/Raccourcis_clavier	/fr/docs/Tools/Debugger/Keyboard_shortcuts
+/fr/docs/Outils/Débogueur/Keyboard_shortcuts	/fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
+/fr/docs/Outils/Débogueur/Raccourcis_clavier	/fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /fr/docs/Outils/Débogueur/Set_an_XHR_breakpoint	/fr/docs/Tools/Debugger/Set_an_XHR_breakpoint
 /fr/docs/Outils/Débogueur/Settings	/fr/docs/Outils/Débogueur/Paramètres
 /fr/docs/Outils/Débogueur/Source_map_errors	/fr/docs/Tools/Debugger/Source_map_errors
@@ -3441,8 +3442,8 @@
 /fr/docs/Outils/about:debugging	/fr/docs/Tools/about:debugging
 /fr/docs/Outils/about:debugging/about:debugging_before_Firefox_68	/fr/docs/Tools/about:debugging/about:debugging_before_Firefox_68
 /fr/docs/Outils/inspecteur/HTML_panel	/fr/docs/conflicting/Tools/Page_Inspector/UI_Tour
-/fr/docs/Outils/inspecteur/Keyboard_shortcuts	/fr/docs/Tools/Page_Inspector/Keyboard_shortcuts
-/fr/docs/Outils/inspecteur/Raccourcis_clavier	/fr/docs/Tools/Page_Inspector/Keyboard_shortcuts
+/fr/docs/Outils/inspecteur/Keyboard_shortcuts	/fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
+/fr/docs/Outils/inspecteur/Raccourcis_clavier	/fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /fr/docs/Outils/Éditeur_de_style	/fr/docs/Tools/Style_Editor
 /fr/docs/Outils:Validateurs	/fr/docs/Tools/Validators
 /fr/docs/Participating_in_the_Mozilla_project	/fr/docs/Mozilla/Participer_au_projet_Mozilla
@@ -3536,7 +3537,10 @@
 /fr/docs/Tools/Debugger/How_to/Black_box_a_source	/fr/docs/Tools/Debugger/How_to/Ignore_a_source
 /fr/docs/Tools/Debugger/How_to/Break_on_a_DOM_event	/fr/docs/Tools/Debugger/Break_on_DOM_mutation
 /fr/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables	/fr/docs/conflicting/Tools/Debugger/How_to/Set_Watch_Expressions
+/fr/docs/Tools/Debugger/Keyboard_shortcuts	/fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /fr/docs/Tools/Page_Inspector/How_to/Examiner_et_éditer_le_code_HTML	/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML
+/fr/docs/Tools/Page_Inspector/Keyboard_shortcuts	/fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
+/fr/docs/Tools/Web_Console/Keyboard_shortcuts	/fr/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts
 /fr/docs/Transformations_XML_avec_XSLT	/fr/docs/Web/XSLT/Transforming_XML_with_XSLT
 /fr/docs/Transformations_XML_avec_XSLT/Autres_ressources	/fr/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 /fr/docs/Transformations_XML_avec_XSLT/La_référence_XSLT_XPath_de_Netscape	/fr/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
@@ -3818,6 +3822,7 @@
 /fr/docs/Web/API/Selection_API	/fr/docs/conflicting/Web/API/Selection
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
+/fr/docs/Web/API/URLUtilsReadOnly	/fr/docs/orphaned/Web/API/URLUtilsReadOnly
 /fr/docs/Web/API/WebGLRenderingContext/activer	/fr/docs/Web/API/WebGLRenderingContext/enable
 /fr/docs/Web/API/WebGLRenderingContext/canevas	/fr/docs/Web/API/WebGLRenderingContext/canvas
 /fr/docs/Web/API/WebGL_API/By_example/Appliquer_des_couleurs	/fr/docs/Web/API/WebGL_API/By_example/Clearing_with_colors
