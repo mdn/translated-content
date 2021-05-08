@@ -218,10 +218,8 @@
 /ja/docs/Bugzilla-jp:Guide:Search:Simple	/ja/docs/orphaned/Bugzilla-jp/Guide/Search/Simple
 /ja/docs/Bugzilla-jp:Guide:Tracking	/ja/docs/orphaned/Bugzilla-jp/Guide/Tracking
 /ja/docs/Bugzilla_(external)	https://bugzilla.mozilla.org/enter_bug.cgi?format=guided
-/ja/docs/Build_and_Install	/ja/docs/Mozilla/Developer_guide/Build_Instructions
 /ja/docs/Building_a_Mozilla_Distribution	/ja/docs/orphaned/Building_a_Mozilla_Distribution
 /ja/docs/Building_an_Extension	/ja/docs/conflicting/Mozilla/Add-ons
-/ja/docs/Building_with_VC8_Express	/ja/docs/Mozilla/Developer_guide/Build_Instructions/Windows_Prerequisites
 /ja/docs/CORS_Enabled_Image	/ja/docs/Web/HTML/CORS_enabled_image
 /ja/docs/CSS	/ja/docs/Web/CSS
 /ja/docs/CSS-2_Quick_Reference	/ja/docs/conflicting/Web/CSS
@@ -665,7 +663,6 @@
 /ja/docs/Checky_Firefox_Extension_(external)	https://addons.mozilla.org/ja/firefox/addon/165
 /ja/docs/Chrome	/ja/docs/Glossary/Chrome
 /ja/docs/Chrome:_Command_Line	/ja/docs/Chrome/Command_Line
-/ja/docs/Code_Review_FAQ	/ja/docs/Mozilla/Developer_guide/Code_Review_FAQ
 /ja/docs/Code_snippets/Dialogs	/ja/docs/Code_snippets/Dialogs_and_Prompts
 /ja/docs/Code_snippets/Toolbar	/ja/docs/orphaned/Code_snippets/Toolbar
 /ja/docs/Code_snippets:Canvas	/ja/docs/Code_snippets/Canvas
@@ -1280,7 +1277,7 @@
 /ja/docs/DOM/DOMString	/ja/docs/Web/API/DOMString
 /ja/docs/DOM/DOMTimeStamp	/ja/docs/Web/API/DOMTimeStamp
 /ja/docs/DOM/DOM_Reference	/ja/docs/Web/API/Document_Object_Model
-/ja/docs/DOM/DOM_Reference/Events	/ja/docs/Web/API/Document_Object_Model/Events
+/ja/docs/DOM/DOM_Reference/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
 /ja/docs/DOM/DOM_Reference/Examples	/ja/docs/Web/API/Document_Object_Model/Examples
 /ja/docs/DOM/DOM_Reference/Introduction	/ja/docs/Web/API/Document_Object_Model/Introduction
 /ja/docs/DOM/DOM_Reference/Preface	/ja/docs/conflicting/Web/API/Document_Object_Model_8435a25d5137b436d5d7161e1b813c02
@@ -1288,7 +1285,7 @@
 /ja/docs/DOM/DOM_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
 /ja/docs/DOM/DOM_event_reference/compositionstart	/ja/docs/conflicting/Web/API/Element/compositionstart_event
 /ja/docs/DOM/DOM_event_reference/input	/ja/docs/Web/API/HTMLElement/input_event
-/ja/docs/DOM/DeviceLightEvent.value	/ja/docs/Web/API/DeviceLightEvent/value
+/ja/docs/DOM/DeviceLightEvent.value	/ja/docs/orphaned/Web/API/DeviceLightEvent/value
 /ja/docs/DOM/Document.querySelector	/ja/docs/Web/API/Document/querySelector
 /ja/docs/DOM/Document.scripts	/ja/docs/Web/API/Document/scripts
 /ja/docs/DOM/Element.hasAttributes	/ja/docs/Web/API/Element/hasAttributes
@@ -1385,7 +1382,7 @@
 /ja/docs/DOM/NodeIterator	/ja/docs/Web/API/NodeIterator
 /ja/docs/DOM/NodeList	/ja/docs/Web/API/NodeList
 /ja/docs/DOM/NodeList.item	/ja/docs/Web/API/NodeList/item
-/ja/docs/DOM/Orientation_and_motion_data_explained	/ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained
+/ja/docs/DOM/Orientation_and_motion_data_explained	/ja/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
 /ja/docs/DOM/Plugin	/ja/docs/Web/API/Plugin
 /ja/docs/DOM/PluginArray	/ja/docs/Web/API/PluginArray
 /ja/docs/DOM/SVGFontElement	/ja/docs/Web/API/SVGFontElement
@@ -1395,7 +1392,7 @@
 /ja/docs/DOM/TouchList	/ja/docs/Web/API/TouchList
 /ja/docs/DOM/Touch_events	/ja/docs/Web/API/Touch_events
 /ja/docs/DOM/UserProximityEvent	/ja/docs/Web/API/UserProximityEvent
-/ja/docs/DOM/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent/near
+/ja/docs/DOM/UserProximityEvent.near	/ja/docs/orphaned/Web/API/UserProximityEvent/near
 /ja/docs/DOM/Using_full-screen_mode	/ja/docs/Web/API/Fullscreen_API
 /ja/docs/DOM/Using_media_queries_from_code	/ja/docs/Web/CSS/Media_Queries/Testing_media_queries
 /ja/docs/DOM/Using_media_queries_from_code-redirect-1	/ja/docs/Web/CSS/Media_Queries/Testing_media_queries
@@ -1702,7 +1699,7 @@
 /ja/docs/DOM/window.onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/DOM/window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/DOM/window.onclick	/ja/docs/conflicting/Web/API/GlobalEventHandlers/onclick
-/ja/docs/DOM/window.ondevicelight	/ja/docs/Web/API/Window/ondevicelight
+/ja/docs/DOM/window.ondevicelight	/ja/docs/orphaned/Web/API/Window/ondevicelight
 /ja/docs/DOM/window.onhashchange	/ja/docs/Web/API/WindowEventHandlers/onhashchange
 /ja/docs/DOM/window.onmouseup	/ja/docs/conflicting/Web/API/GlobalEventHandlers/onmouseup
 /ja/docs/DOM/window.onresize	/ja/docs/Web/API/GlobalEventHandlers/onresize
@@ -1993,7 +1990,7 @@
 /ja/docs/DebNews	/ja/docs/orphaned/DebNews
 /ja/docs/DebNews/20081118	/ja/docs/orphaned/DevNews/20081118
 /ja/docs/Deer_Park	/ja/docs/Mozilla/Firefox/Releases/1.5
-/ja/docs/Detecting_device_orientation	/ja/docs/Web/API/Detecting_device_orientation
+/ja/docs/Detecting_device_orientation	/ja/docs/orphaned/Web/API/Detecting_device_orientation
 /ja/docs/Determining_the_dimensions_of_elements	/ja/docs/conflicting/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 /ja/docs/DevNews	/ja/docs/orphaned/DevNews
 /ja/docs/DevNews/20060705	/ja/docs/orphaned/DevNews/20060705
@@ -2257,13 +2254,6 @@
 /ja/docs/DevNews:20080728	/ja/docs/orphaned/DevNews/20080728
 /ja/docs/DevNews:20080729	/ja/docs/orphaned/DevNews/20080729
 /ja/docs/DevNews:20080805	/ja/docs/orphaned/DevNews/20080805
-/ja/docs/Developer_Guide	/ja/docs/Mozilla/Developer_Guide
-/ja/docs/Developer_Guide/How_to_Submit_a_Patch	/ja/docs/Mozilla/Developer_Guide/How_to_Submit_a_Patch
-/ja/docs/Developer_Guide/SVG_Guidelines	/ja/docs/Mozilla/Developer_Guide/SVG_Guidelines
-/ja/docs/Developer_Guide/Source_Code	/ja/docs/Mozilla/Developer_Guide/Source_Code
-/ja/docs/Developer_Guide/Source_Code/CVS	/ja/docs/Mozilla/Developer_Guide/Source_Code/CVS
-/ja/docs/Developer_Guide/Source_Code/Getting_comm-central_Source_Code_Using_Mercurial	/ja/docs/Mozilla/Developer_guide/Source_Code/Getting_comm-central
-/ja/docs/Developer_Guide/Working_with_Mozilla_source_code	/ja/docs/Mozilla/Developer_Guide/Source_Code
 /ja/docs/Developing_Mozilla	/ja/docs/orphaned/Developing_Mozilla
 /ja/docs/Developing_add-ons	/ja/docs/orphaned/Developing_add-ons
 /ja/docs/DragDrop	/ja/docs/conflicting/Web/API/HTML_Drag_and_Drop_API
@@ -2375,13 +2365,13 @@
 /ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win	/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser/Physics	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics
-/ja/docs/Getting_your_patch_in_the_tree	/ja/docs/Mozilla/Developer_Guide/How_to_Submit_a_Patch
 /ja/docs/Glossary/AOM	/ja/docs/Glossary/Accessibility_tree
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
 /ja/docs/Glossary/Global_attribute	/ja/docs/conflicting/Web/HTML/Global_attributes
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
+/ja/docs/Glossary/Modern_web_apps	/ja/docs/orphaned/Glossary/Modern_web_apps
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
@@ -2602,7 +2592,6 @@
 /ja/docs/HTTP_access_control	/ja/docs/Web/HTTP/CORS
 /ja/docs/Hacking_Mozilla	/ja/docs/conflicting/Mozilla/Developer_guide/How_to_Submit_a_Patch
 /ja/docs/Help_Viewer:Creating_a_Help_Content_Pack	/ja/docs/Help_Viewer/Creating_a_Help_Content_Pack
-/ja/docs/How_Mozilla's_build_system_works	/ja/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works
 /ja/docs/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree
 /ja/docs/IndexedDB	/ja/docs/Web/API/IndexedDB_API
 /ja/docs/Installing_Extensions_and_Themes_From_Web_Pages	/ja/docs/orphaned/Installing_Extensions_and_Themes_From_Web_Pages
@@ -3401,13 +3390,8 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 /ja/docs/Mozilla/Add-ons/WebExtensions/デバッグ	https://extensionworkshop.com/documentation/develop/debugging/
 /ja/docs/Mozilla/Add-ons/WebExtensions/前提条件	/ja/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
-/ja/docs/Mozilla/Developer_Guide/Getting_your_patch_in_the_tree	/ja/docs/Mozilla/Developer_Guide/How_to_Submit_a_Patch
-/ja/docs/Mozilla/Developer_Guide/Source_Code/Getting_comm-central_Source_Code_Using_Mercurial	/ja/docs/Mozilla/Developer_guide/Source_Code/Getting_comm-central
-/ja/docs/Mozilla/Developer_Guide/Source_Code/Mozilla_Source_Code_(CVS)	/ja/docs/Mozilla/Developer_Guide/Source_Code/CVS
-/ja/docs/Mozilla/Developer_Guide/Working_with_Mozilla_source_code	/ja/docs/Mozilla/Developer_Guide/Source_Code
 /ja/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/ja/docs/Mozilla/Firefox/Releases/47
 /ja/docs/Mozilla_Addons_FAQ_(external)	https://addons.mozilla.org/faq.php
-/ja/docs/Mozilla_Build_FAQ	/ja/docs/Mozilla/Developer_Guide/Mozilla_Build_FAQ
 /ja/docs/Mozilla_Embedding_FAQ:Common_Problems	/ja/docs/Mozilla_Embedding_FAQ/Common_Problems
 /ja/docs/Mozilla_Embedding_FAQ:Embedding_Gecko	/ja/docs/Mozilla_Embedding_FAQ/Embedding_Gecko
 /ja/docs/Mozilla_Embedding_FAQ:How_do_I...	/ja/docs/Mozilla_Embedding_FAQ/How_do_I...
@@ -3415,8 +3399,6 @@
 /ja/docs/Mozilla_Hacker's_Getting_Started_Guide	/ja/docs/conflicting/Mozilla/Developer_guide
 /ja/docs/Mozilla_Modules_and_Module_Ownership	/ja/docs/orphaned/Mozilla_Modules_and_Module_Ownership
 /ja/docs/Mozilla_SVG_Status	/ja/docs/Web/SVG/SVG_1.1_Support_in_Firefox
-/ja/docs/Mozilla_Source_Code_(CVS)	/ja/docs/Mozilla/Developer_Guide/Source_Code/CVS
-/ja/docs/Mozilla_Source_Code_Via_CVS	/ja/docs/Mozilla/Developer_Guide/Source_Code/CVS
 /ja/docs/Mozmill	/ja/docs/orphaned/Mozmill
 /ja/docs/My_Chrome_Oven	/ja/docs/orphaned/My_Chrome_Oven
 /ja/docs/NPAPI/Constants	/ja/docs/Plugins/Guide/Constants
@@ -3594,6 +3576,7 @@
 /ja/docs/Tools/Debugger/How_to/Break_on_a_DOM_event	/ja/docs/Tools/Debugger/Break_on_DOM_mutation
 /ja/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables	/ja/docs/conflicting/Tools/Debugger/How_to/Set_Watch_Expressions
 /ja/docs/Tools/Debugger/How_to/Search_and_filter	/ja/docs/conflicting/Tools/Debugger/How_to/Search
+/ja/docs/Tools/Debugger/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /ja/docs/Tools/Debugger/Limitations_of_the_new_debugger	/ja/docs/orphaned/Tools/Debugger/Limitations_of_the_new_debugger
 /ja/docs/Tools/Debugger_(before_Firefox_52)	/ja/docs/orphaned/Tools/Debugger_(before_Firefox_52)
 /ja/docs/Tools/Debugger_(before_Firefox_52)/Disable_breakpoints	/ja/docs/orphaned/Tools/Debugger_(before_Firefox_52)/Disable_breakpoints
@@ -3623,6 +3606,7 @@
 /ja/docs/Tools/Page_Inspector/HTML_panel	/ja/docs/conflicting/Tools/Page_Inspector/UI_Tour
 /ja/docs/Tools/Page_Inspector/How_to/View_fonts	/ja/docs/Tools/Page_Inspector/How_to/Edit_fonts
 /ja/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animations_examples	/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_CSS_transitions
+/ja/docs/Tools/Page_Inspector/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /ja/docs/Tools/Page_Inspector/Style_panel	/ja/docs/conflicting/Tools/Page_Inspector
 /ja/docs/Tools/Performance/Profiler_walkthrough	/ja/docs/conflicting/Tools/Performance/Call_Tree
 /ja/docs/Tools/Profiler	/ja/docs/conflicting/Tools/Performance
@@ -3632,6 +3616,7 @@
 /ja/docs/Tools/Responsive_Design_View	/ja/docs/Tools/Responsive_Design_Mode
 /ja/docs/Tools/Using_the_Source_Editor	/ja/docs/conflicting/tools/Keyboard_shortcuts
 /ja/docs/Tools/Web_Console-redirect-1	/ja/docs/Tools/Web_Console
+/ja/docs/Tools/Web_Console/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts
 /ja/docs/Tools/Web_Console/Opening_the_Web_Console	/ja/docs/Tools/Web_Console/UI_Tour
 /ja/docs/Tools/Web_Console/WebConsoleHelp	/en-US/docs/Tools/Web_Console/Helpers
 /ja/docs/Transforming_XML_with_XSLT	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT
@@ -3742,8 +3727,13 @@
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
 /ja/docs/Web/API/DOMCursor.done	/ja/docs/Web/API/DOMCursor/done
 /ja/docs/Web/API/DOMRequest.error	/ja/docs/Web/API/DOMRequest/error
+/ja/docs/Web/API/Detecting_device_orientation	/ja/docs/orphaned/Web/API/Detecting_device_orientation
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
-/ja/docs/Web/API/DeviceLightEvent.value	/ja/docs/Web/API/DeviceLightEvent/value
+/ja/docs/Web/API/DeviceLightEvent.value	/ja/docs/orphaned/Web/API/DeviceLightEvent/value
+/ja/docs/Web/API/DeviceLightEvent/value	/ja/docs/orphaned/Web/API/DeviceLightEvent/value
+/ja/docs/Web/API/DeviceProximityEvent/max	/ja/docs/orphaned/Web/API/DeviceProximityEvent/max
+/ja/docs/Web/API/DeviceProximityEvent/min	/ja/docs/orphaned/Web/API/DeviceProximityEvent/min
+/ja/docs/Web/API/DeviceProximityEvent/value	/ja/docs/orphaned/Web/API/DeviceProximityEvent/value
 /ja/docs/Web/API/Document.domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/async	/ja/docs/Web/API/XMLDocument/async
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
@@ -3763,6 +3753,7 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/nodesFromPoint	/ja/docs/conflicting/Web/API/DocumentOrShadowRoot_20ea0e1d91453a020aad3a16dbce16f1
 /ja/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/ja/docs/Web/API/Document/pointerLockElement
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
+/ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/conflicting/Web/API/Document_Object_Model_8435a25d5137b436d5d7161e1b813c02
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
 /ja/docs/Web/API/Element.isContentEditable	/ja/docs/Web/API/HTMLElement/isContentEditable
@@ -3773,7 +3764,7 @@
 /ja/docs/Web/API/Element/name	/ja/docs/conflicting/Web/API
 /ja/docs/Web/API/Event/button	/ja/docs/conflicting/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/conflicting/Web/API/Document/createEvent
-/ja/docs/Web/API/EventHandler	/ja/docs/Web/Guide/Events/Event_handlers
+/ja/docs/Web/API/EventHandler	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
 /ja/docs/Web/API/EventTarget.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/EventTarget.dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
@@ -3948,7 +3939,8 @@
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /ja/docs/Web/API/Slotable	/ja/docs/conflicting/Web/API/Element
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
-/ja/docs/Web/API/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent/near
+/ja/docs/Web/API/UserProximityEvent.near	/ja/docs/orphaned/Web/API/UserProximityEvent/near
+/ja/docs/Web/API/UserProximityEvent/near	/ja/docs/orphaned/Web/API/UserProximityEvent/near
 /ja/docs/Web/API/VRDevice	/ja/docs/Web/API/VRDisplay
 /ja/docs/Web/API/VRDevice/cancelAnimationFrame	/ja/docs/Web/API/VRDisplay/cancelAnimationFrame
 /ja/docs/Web/API/VRDevice/capabilities	/ja/docs/Web/API/VRDisplay/capabilities
@@ -3992,6 +3984,8 @@
 /ja/docs/Web/API/Window/onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/Web/API/Window/onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/Web/API/Window/onclick	/ja/docs/conflicting/Web/API/GlobalEventHandlers/onclick
+/ja/docs/Web/API/Window/ondevicelight	/ja/docs/orphaned/Web/API/Window/ondevicelight
+/ja/docs/Web/API/Window/ondeviceproximity	/ja/docs/orphaned/Web/API/Window/ondeviceproximity
 /ja/docs/Web/API/Window/onfocus	/ja/docs/Web/API/GlobalEventHandlers/onfocus
 /ja/docs/Web/API/Window/oninstall	/ja/docs/Web/API/Window/onappinstalled
 /ja/docs/Web/API/Window/onkeydown	/ja/docs/Web/API/GlobalEventHandlers/onkeydown
@@ -4194,7 +4188,7 @@
 /ja/docs/Web/API/window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/Web/API/window.onclick	/ja/docs/conflicting/Web/API/GlobalEventHandlers/onclick
 /ja/docs/Web/API/window.onclose	/ja/docs/Web/API/GlobalEventHandlers/onclose
-/ja/docs/Web/API/window.ondevicelight	/ja/docs/Web/API/Window/ondevicelight
+/ja/docs/Web/API/window.ondevicelight	/ja/docs/orphaned/Web/API/Window/ondevicelight
 /ja/docs/Web/API/window.onfocus	/ja/docs/Web/API/GlobalEventHandlers/onfocus
 /ja/docs/Web/API/window.onhashchange	/ja/docs/Web/API/WindowEventHandlers/onhashchange
 /ja/docs/Web/API/window.onkeydown	/ja/docs/Web/API/GlobalEventHandlers/onkeydown
@@ -4573,7 +4567,11 @@
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Working_with_the_History_API	/ja/docs/Web/API/History_API/Working_with_the_History_API
 /ja/docs/Web/Guide/DOM/Using_full_screen_mode	/ja/docs/Web/API/Fullscreen_API
 /ja/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
+/ja/docs/Web/Guide/Events	/ja/docs/orphaned/Web/Guide/Events
 /ja/docs/Web/Guide/Events/Creating_and_triggering_events	/ja/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
+/ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
+/ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
+/ja/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/ja/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
 /ja/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
 /ja/docs/Web/Guide/HTML	/ja/docs/Learn/HTML
 /ja/docs/Web/Guide/HTML/Canvas_tutorial	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial
@@ -4948,6 +4946,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
+/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/clear	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/prototype	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/prototype	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
@@ -5629,7 +5628,6 @@
 /ja/docs/lastIndexOf	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 /ja/docs/method	/ja/docs/Web/API/HTMLFormElement/method
 /ja/docs/mozIStorageService	/ja/docs/orphaned/mozIStorageService
-/ja/docs/mozilla-central	/ja/docs/Mozilla/Developer_guide/mozilla-central
 /ja/docs/mozillaのメール	/ja/docs/Web
 /ja/docs/nsIDynamicContainer	/ja/docs/orphaned/nsIDynamicContainer
 /ja/docs/reftest_opportunities_files	/ja/docs/orphaned/reftest_opportunities_files

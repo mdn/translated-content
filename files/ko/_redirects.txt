@@ -277,16 +277,10 @@
 /ko/docs/DOM_Inspector	/ko/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /ko/docs/DOM_improvements_in_Firefox_3	/ko/docs/Mozilla/Firefox/Releases/3/DOM_improvements
 /ko/docs/Determining_the_dimensions_of_elements	/ko/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
-/ko/docs/Developer_Guide	/ko/docs/Mozilla/Developer_guide
-/ko/docs/Developer_Guide/Source_Code	/ko/docs/Mozilla/Developer_guide/Source_Code
-/ko/docs/Developer_guide/Eclipse	/ko/docs/Mozilla/Developer_guide/Eclipse
-/ko/docs/Developer_guide/Eclipse/Eclipse_CDT	/ko/docs/Mozilla/Developer_guide/Eclipse/Eclipse_CDT
-/ko/docs/Developing_Mozilla	/ko/docs/Mozilla/Developer_guide
 /ko/docs/Drawing_Graphics_with_Canvas	/ko/docs/Web/API/Canvas_API/Tutorial
 /ko/docs/Drawing_text_using_a_canvas	/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /ko/docs/ECMAScript	/ko/docs/Web/JavaScript
 /ko/docs/EXSLT	/ko/docs/Web/EXSLT
-/ko/docs/Eclipse	/ko/docs/Mozilla/Developer_guide/Eclipse
 /ko/docs/Firefox_1.5	/ko/docs/Mozilla/Firefox/Releases/1.5
 /ko/docs/Firefox_1.5_for_developers	/ko/docs/Mozilla/Firefox/Releases/1.5
 /ko/docs/Firefox_2	/ko/docs/Mozilla/Firefox/Releases/2
@@ -570,9 +564,7 @@
 /ko/docs/Mozilla/애드온들/WebExtensions/manifest.json/page_action	/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action
 /ko/docs/Mozilla/애드온들/WebExtensions/user_interface	/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface
 /ko/docs/Mozilla/애드온들/WebExtensions/user_interface/Page_actions	/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-/ko/docs/Mozilla_Build_FAQ	/ko/docs/Mozilla/Developer_guide/Mozilla_Build_FAQ
 /ko/docs/Mozilla_Quirks_Mode_Behavior	/ko/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
-/ko/docs/Mozilla_Source_Code_Via_CVS	/ko/docs/Mozilla/Developer_guide/Source_Code/CVS
 /ko/docs/Navigation_timing	/ko/docs/Web/API/Navigation_timing_API
 /ko/docs/New_in_JavaScript_1.6	/ko/docs/Web/JavaScript/New_in_JavaScript/1.6
 /ko/docs/New_in_JavaScript_1.8	/ko/docs/Web/JavaScript/New_in_JavaScript/1.8
@@ -608,7 +600,8 @@
 /ko/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/ko/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /ko/docs/Tools/Add-ons	/ko/docs/orphaned/Tools/Add-ons
 /ko/docs/Tools/Add-ons/DOM_Inspector	/ko/docs/orphaned/Tools/Add-ons/DOM_Inspector
-/ko/docs/Tools/Debugger/단축키	/ko/docs/Tools/Debugger/Keyboard_shortcuts
+/ko/docs/Tools/Debugger/Keyboard_shortcuts	/ko/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
+/ko/docs/Tools/Debugger/단축키	/ko/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /ko/docs/Tools/How_to	/ko/docs/Tools/Debugger/How_to
 /ko/docs/Tools/How_to/Open_the_debugger	/ko/docs/Tools/Debugger/How_to/Open_the_debugger
 /ko/docs/Tools/How_to/Search	/ko/docs/Tools/Debugger/How_to/Search
@@ -627,6 +620,7 @@
 /ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
+/ko/docs/Web/API/Detecting_device_orientation	/ko/docs/orphaned/Web/API/Detecting_device_orientation
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/Document/defaultView/resize_event	/ko/docs/Web/API/Window/resize_event
 /ko/docs/Web/API/Document/drag_이벤트	/ko/docs/Web/API/Document/drag_event
@@ -634,6 +628,7 @@
 /ko/docs/Web/API/DocumentOrShadowRoot/activeElement	/ko/docs/Web/API/Document/activeElement
 /ko/docs/Web/API/DocumentOrShadowRoot/getSelection	/ko/docs/Web/API/Document/getSelection
 /ko/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ko/docs/Web/API/Document/styleSheets
+/ko/docs/Web/API/Document_Object_Model/Events	/ko/docs/orphaned/Web/API/Document_Object_Model/Events
 /ko/docs/Web/API/Document_Object_Model/Preface	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/Web/API/Document_Object_Model/소개	/ko/docs/Web/API/Document_Object_Model/Introduction
 /ko/docs/Web/API/Document_Object_Model/예제	/ko/docs/Web/API/Document_Object_Model/Examples
@@ -803,7 +798,9 @@
 /ko/docs/Web/Guide/CSS/Visual_formatting_model	/ko/docs/Web/CSS/Visual_formatting_model
 /ko/docs/Web/Guide/DOM	/ko/docs/conflicting/Web/API/Document_Object_Model
 /ko/docs/Web/Guide/DOM/Using_full_screen_mode	/ko/docs/Web/API/Fullscreen_API
+/ko/docs/Web/Guide/Events	/ko/docs/orphaned/Web/Guide/Events
 /ko/docs/Web/Guide/Events/Creating_and_triggering_events	/ko/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
+/ko/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/ko/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
 /ko/docs/Web/Guide/HTML	/ko/docs/Learn/HTML
 /ko/docs/Web/Guide/HTML/Content_Editable	/ko/docs/Web/Guide/HTML/Editable_content
 /ko/docs/Web/Guide/HTML/컨텐트_카테고리	/ko/docs/Web/Guide/HTML/Content_categories
@@ -1038,7 +1035,7 @@
 /ko/docs/Web/참조/API	/ko/docs/Web/Reference/API
 /ko/docs/WebAPI	/ko/docs/conflicting/Web/API
 /ko/docs/WebAPI/Battery_Status	/ko/docs/Web/API/Battery_Status_API
-/ko/docs/WebAPI/Detecting_device_orientation	/ko/docs/Web/API/Detecting_device_orientation
+/ko/docs/WebAPI/Detecting_device_orientation	/ko/docs/orphaned/Web/API/Detecting_device_orientation
 /ko/docs/WebAPI/Managing_screen_orientation	/ko/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ko/docs/WebAPI/Network_Information	/ko/docs/Web/API/Network_Information_API
 /ko/docs/WebAPI/Proximity	/ko/docs/Web/API/Proximity_Events
@@ -1256,7 +1253,7 @@
 /ko/docs/도구들/Add-ons/DOM_Inspector	/ko/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /ko/docs/도구들/Debugger	/ko/docs/Tools/Debugger
 /ko/docs/도구들/Debugger/UI_Tour	/ko/docs/Tools/Debugger/UI_Tour
-/ko/docs/도구들/Debugger/단축키	/ko/docs/Tools/Debugger/Keyboard_shortcuts
+/ko/docs/도구들/Debugger/단축키	/ko/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /ko/docs/도구들/How_to	/ko/docs/Tools/Debugger/How_to
 /ko/docs/도구들/How_to/Open_the_debugger	/ko/docs/Tools/Debugger/How_to/Open_the_debugger
 /ko/docs/도구들/How_to/Search	/ko/docs/Tools/Debugger/How_to/Search
@@ -1272,7 +1269,6 @@
 /ko/docs/도구들/WebIDE	/ko/docs/Tools/WebIDE
 /ko/docs/도구들/WebIDE/문제해결	/ko/docs/Tools/WebIDE/문제해결
 /ko/docs/도구들/Web_Console	/ko/docs/Tools/Web_Console
-/ko/docs/모질라_프로젝트_참여하기_(Participating_in_the_Mozilla_project)	/ko/docs/Mozilla/Developer_guide
 /ko/docs/지역의_코드를_씁니다.	/ko/docs/orphaned/지역의_코드를_씁니다.
 /ko/docs/호환_모드와_표준_모드	/ko/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ko/docs/확장기능_개발_환경_구축	/ko/docs/orphaned/확장기능_개발_환경_구축

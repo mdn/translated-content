@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 
 <p><strong>널 병합 연산자 (<code>??</code>)</strong> 는 왼쪽 피연산자가 {{jsxref("null")}} 또는 {{jsxref("undefined")}}일 때 오른쪽 피연산자를 반환하고, 그렇지 않으면 왼쪽 피연산자를 반환하는 논리 연산자이다.</p>
 
-<p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">논리 연산자 OR (<code>||</code>)</a>와 달리, 왼쪽 피연산자가 <code>null</code> 또는 <code>undefined</code>가 아닌 <em><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Description">falsy</a> </em>값이면 반환된다. 즉, 만약 다른 변수 foo에게 기본 값을 제공하기 위해 <code>||</code>을 사용 경우, <em><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Description">falsy</a> </em>값( <code>''</code> 또는 <code>0</code>)을 사용하는 것을 고려했다면 예기치 않는 동작이 발생할 수 있다. 더 많은 예제는 아래를 보자.</p>
+<p>이는 왼쪽 피연산자가 <code>null</code> 또는 <code>undefined</code> 뿐만 아니라 <em><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Description">falsy</a> </em>값에 해당할 경우 오른쪽 피연산자를 반환하는 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR_2">논리 연산자 OR (<code>||</code>)</a>와는 대조된다. 다시 말해 만약 어떤 변수 foo에게 <em><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Description">falsy</a> </em>값( <code>''</code> 또는 <code>0</code>)을 포함한 값을 제공하기 위해 <code>||</code>을 사용하는 것을 고려했다면 예기치 않는 동작이 발생할 수 있다. 하단에 더 많은 예제가 있다.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}</div>
 

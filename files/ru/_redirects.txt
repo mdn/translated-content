@@ -47,7 +47,7 @@
 /ru/docs/Creating_Custom_Firefox_Extensions_with_the_Mozilla_Build_System	/ru/docs/orphaned/Создание_расширения_для_Firefox_с_использованием_Mozilla_Build_System
 /ru/docs/DOM	/ru/docs/conflicting/Web/API/Document_Object_Model
 /ru/docs/DOM/DOM_Reference	/ru/docs/Web/API/Document_Object_Model
-/ru/docs/DOM/DOM_Reference/Events	/ru/docs/Web/API/Document_Object_Model/Events
+/ru/docs/DOM/DOM_Reference/Events	/ru/docs/orphaned/Web/API/Document_Object_Model/Events
 /ru/docs/DOM/DOM_Reference/Examples	/ru/docs/Web/API/Document_Object_Model/Examples
 /ru/docs/DOM/DOM_Reference/Locating_DOM_elements_using_selectors	/ru/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /ru/docs/DOM/DOM_Reference/Введение	/ru/docs/Web/API/Document_Object_Model/Introduction
@@ -66,10 +66,6 @@
 /ru/docs/DOM/window.requestAnimationFrame	/ru/docs/Web/API/window/requestAnimationFrame
 /ru/docs/DOM:document.createElement	/ru/docs/Web/API/Document/createElement
 /ru/docs/DOM:table	/ru/docs/Web/API/HTMLTableElement
-/ru/docs/Developer_Guide	/ru/docs/Mozilla/Developer_guide
-/ru/docs/Developer_Guide/So_you_just_built_Firefox	/ru/docs/Mozilla/Developer_guide/So_you_just_built_Firefox
-/ru/docs/Developer_Guide/mozilla-central	/ru/docs/Mozilla/Developer_guide/mozilla-central
-/ru/docs/Developer_Guide/Исходный_код	/ru/docs/Mozilla/Developer_guide/Source_Code
 /ru/docs/Firefox_3.5_для_разработчика	/ru/docs/Mozilla/Firefox/Releases/3.5
 /ru/docs/Firefox_3_for_developers	/ru/docs/Mozilla/Firefox/Releases/3
 /ru/docs/Firefox_3_для_разработчика	/ru/docs/Mozilla/Firefox/Releases/3
@@ -118,7 +114,6 @@
 /ru/docs/IndexedDB	/ru/docs/Web/API/IndexedDB_API
 /ru/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ru/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ru/docs/IndexedDB/Using_IndexedDB	/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB
-/ru/docs/Introduction_(alternate)	/ru/docs/Mozilla/Developer_guide/Introduction
 /ru/docs/JavaScript	/ru/docs/Web/JavaScript
 /ru/docs/JavaScript/A_re-introduction_to_JavaScript	/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /ru/docs/JavaScript/Data_structures	/ru/docs/Web/JavaScript/Data_structures
@@ -348,16 +343,11 @@
 /ru/docs/MDN/User_guide/Advanced_search	/ru/docs/orphaned/MDN/Tools/Search
 /ru/docs/MDN/User_guide/Deleting_pages	/ru/docs/orphaned/MDN/Tools/Page_deletion
 /ru/docs/MDN/User_guide/Feeds	/ru/docs/orphaned/MDN/Tools/Feeds
-/ru/docs/MDN/Сообщество	/ru/docs/orphaned/MDN/Community
-/ru/docs/MDN/Сообщество/Conversations	/ru/docs/orphaned/MDN/Community/Conversations
-/ru/docs/MDN/Сообщество/Whats_happening	/ru/docs/orphaned/MDN/Community/Whats_happening
-/ru/docs/MDN/Сообщество/Working_in_community	/ru/docs/orphaned/MDN/Community/Working_in_community
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
 /ru/docs/MDN_at_ten/Contributing_to_MDN	/ru/docs/conflicting/MDN/Contribute
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/Перевод	/ru/docs/orphaned/Mozilla/Add-ons/WebExtensions/Debugging
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
-/ru/docs/Mozilla/Developer_guide/Исходный_код	/ru/docs/Mozilla/Developer_guide/Source_Code
 /ru/docs/Plugins/План	/ru/docs/Plugins/Roadmap
 /ru/docs/QA/Kak_pomoch_testirovat	/ru/docs/QA/Как_помочь_тестировать
 /ru/docs/Quirks_Mode_and_Standards_Mode	/ru/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
@@ -368,11 +358,13 @@
 /ru/docs/Tools/Add-ons/DOM_Inspector	/ru/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /ru/docs/Tools/Debugger/How_to/Отладка_кода_внутри_eval	/ru/docs/Tools/Debugger/How_to/Debug_eval_sources
 /ru/docs/Tools/Debugger/How_to/Работа_с_минифицированным_кодом	/ru/docs/Tools/Debugger/How_to/Pretty-print_a_minified_file
+/ru/docs/Tools/Debugger/Keyboard_shortcuts	/ru/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /ru/docs/Tools/Page_Inspector/How_to/Otkrytie_Inspektora	/ru/docs/Tools/Page_Inspector/How_to/Open_the_Inspector
 /ru/docs/Tools/Page_Inspector/How_to/Vybor_elementa	/ru/docs/Tools/Page_Inspector/How_to/Select_an_element
 /ru/docs/Tools/Page_Inspector/How_to/Исследовать_event_listeners	/ru/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
 /ru/docs/Tools/Page_Inspector/How_to/Просмотр_шрифтов	/ru/docs/Tools/Page_Inspector/How_to/Edit_fonts
-/ru/docs/Tools/Page_Inspector/Сочетания_клавиш	/ru/docs/Tools/Page_Inspector/Keyboard_shortcuts
+/ru/docs/Tools/Page_Inspector/Keyboard_shortcuts	/ru/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
+/ru/docs/Tools/Page_Inspector/Сочетания_клавиш	/ru/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /ru/docs/Tools/Profiler	/ru/docs/conflicting/Tools/Performance
 /ru/docs/Tools/Release_notes	/ru/docs/conflicting/Mozilla/Firefox/Releases
 /ru/docs/Tools/Responsive_Design_View	/ru/docs/Tools/Responsive_Design_Mode
@@ -405,6 +397,7 @@
 /ru/docs/Web/API/Document/domConfig	/ru/docs/Web/API/Document
 /ru/docs/Web/API/DocumentOrShadowRoot/activeElement	/ru/docs/Web/API/Document/activeElement
 /ru/docs/Web/API/DocumentOrShadowRoot/getSelection	/ru/docs/Web/API/Document/getSelection
+/ru/docs/Web/API/Document_Object_Model/Events	/ru/docs/orphaned/Web/API/Document_Object_Model/Events
 /ru/docs/Web/API/Element.getBoundingClientRect	/ru/docs/Web/API/Element/getBoundingClientRect
 /ru/docs/Web/API/Element.insertAdjacentHTML	/ru/docs/Web/API/Element/insertAdjacentHTML
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
@@ -453,6 +446,7 @@
 /ru/docs/Web/API/NonDocumentTypeChildNode/NonDocumentTypeChildNode.nextElementSibling	/ru/docs/Web/API/Element/nextElementSibling
 /ru/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/ru/docs/Web/API/Element/nextElementSibling
 /ru/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/ru/docs/Web/API/Element/previousElementSibling
+/ru/docs/Web/API/Notation	/ru/docs/orphaned/Web/API/Notation
 /ru/docs/Web/API/ParentNode/append	/ru/docs/orphaned/Web/API/ParentNode/append
 /ru/docs/Web/API/ParentNode/childElementCount	/ru/docs/Web/API/Element/childElementCount
 /ru/docs/Web/API/ParentNode/children	/ru/docs/orphaned/Web/API/ParentNode/children
@@ -491,7 +485,7 @@
 /ru/docs/Web/API/navigator.id.request	/ru/docs/Web/API/IdentityManager/request
 /ru/docs/Web/API/range.getBoundingClientRect	/ru/docs/Web/API/Range/getBoundingClientRect
 /ru/docs/Web/API/Видимость_страницы_API	/ru/docs/Web/API/Page_Visibility_API
-/ru/docs/Web/API/Нотация	/ru/docs/Web/API/Notation
+/ru/docs/Web/API/Нотация	/ru/docs/orphaned/Web/API/Notation
 /ru/docs/Web/Accessibility/Веб-разработка	/ru/docs/conflicting/Web/Accessibility
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery	/ru/docs/Web/Guide/Audio_and_video_delivery
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
@@ -600,8 +594,11 @@
 /ru/docs/Web/Guide/CSS/Using_multi-column_layouts	/ru/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /ru/docs/Web/Guide/CSS/Visual_formatting_model	/ru/docs/Web/CSS/Visual_formatting_model
 /ru/docs/Web/Guide/CSS/ispolzovanie_css_animatciy	/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+/ru/docs/Web/Guide/Events	/ru/docs/orphaned/Web/Guide/Events
 /ru/docs/Web/Guide/Events/Creating_and_triggering_events	/ru/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
+/ru/docs/Web/Guide/Events/Event_handlers	/ru/docs/orphaned/Web/Guide/Events/Event_handlers
 /ru/docs/Web/Guide/Events/Media_events	/ru/docs/orphaned/Web/Guide/Events/Media_events
+/ru/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/ru/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
 /ru/docs/Web/Guide/Events/Создание_и_вызов_событий	/ru/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /ru/docs/Web/Guide/HTML	/ru/docs/Learn/HTML
 /ru/docs/Web/Guide/HTML/Canvas_tutorial	/ru/docs/Web/API/Canvas_API/Tutorial
@@ -915,7 +912,6 @@
 /ru/docs/en	/en-US/
 /ru/docs/kak_soobschit_o_zavisshem_Firefox	/ru/docs/Как_сообщить_о_зависшем_Firefox
 /ru/docs/nsIOutputStream:writeFrom	/ru/docs/nsIOutputStream/writeFrom
-/ru/docs/Введение_(альтернативные_проекты)	/ru/docs/Mozilla/Developer_guide/Introduction
 /ru/docs/Веб-разработка	/ru/docs/conflicting/Web/Guide
 /ru/docs/Веб-стандарты	/ru/docs/orphaned/Веб-стандарты
 /ru/docs/Вопросы_без_ответов	/ru/docs/orphaned/Вопросы_без_ответов

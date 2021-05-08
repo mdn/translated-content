@@ -220,7 +220,6 @@
 /es/docs/Code_snippets	/es/docs/orphaned/Code_snippets
 /es/docs/Code_snippets/Pestañas_del_navegador	/es/docs/orphaned/Code_snippets/Pestañas_del_navegador
 /es/docs/Columnas_con_CSS-3	/es/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
-/es/docs/Compilar_e_instalar	/es/docs/Mozilla/Developer_guide/Build_Instructions
 /es/docs/Complementos_de_Firefox._Guia_del_desarrollador	/es/docs/orphaned/Guía_para_el_desarrollador_de_agregados_para_Firefox
 /es/docs/Configurar_correctamente_los_tipos_MIME_del_servidor	/es/docs/Learn/Server-side/Configuring_server_MIME_types
 /es/docs/Control_de_la_corrección_ortográfica_en_formularios_HTML	/es/docs/conflicting/Web/HTML/Global_attributes/spellcheck
@@ -254,7 +253,6 @@
 /es/docs/Creando_una_extensión	/es/docs/orphaned/Creando_una_extensión
 /es/docs/Crear_una_barra_lateral_en_Firefox	/es/docs/Crear_un_panel_lateral_en_Firefox
 /es/docs/Crear_una_extensión_personalizada_de_Firefox_con_el_Mozilla_Build_System	/es/docs/orphaned/Crear_una_extensión_personalizada_de_Firefox_con_el_Mozilla_Build_System
-/es/docs/Código_fuente_de_Mozilla_(CVS)	/es/docs/Mozilla/Developer_guide/Source_Code/CVS
 /es/docs/DHTML	/es/docs/Glossary/DHTML
 /es/docs/DHTML_Demostraciones_del_uso_de_DOM_Style	/es/docs/orphaned/DHTML_Demostraciones_del_uso_de_DOM_Style
 /es/docs/DOM	/es/docs/conflicting/Web/API/Document_Object_Model_7d961b8030c6099ee907f4f4b5fe6b3d
@@ -446,8 +444,6 @@
 /es/docs/Desarrollo_Web	/es/docs/conflicting/Web/Guide
 /es/docs/Detección_del_navegador_y_soporte_entre_ellos	/es/docs/Detección_del_navegador_y_cobertura_a_múltiples_navegadores
 /es/docs/Detectar_la_orientación_del_dispositivo	/es/docs/orphaned/Detectar_la_orientación_del_dispositivo
-/es/docs/Developer_Guide	/es/docs/Mozilla/Developer_guide
-/es/docs/Developer_Guide/Source_Code	/es/docs/Mozilla/Developer_guide/Source_Code
 /es/docs/Dibujando_Gráficos_con_Canvas	/es/docs/orphaned/Dibujando_Gráficos_con_Canvas
 /es/docs/Dibujar_texto_usando_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /es/docs/DragDrop	/es/docs/conflicting/Web/API/HTML_Drag_and_Drop_API
@@ -1423,8 +1419,6 @@
 /es/docs/Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension	/es/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /es/docs/Mozilla/Add-ons/WebExtensions/Tutorial	/es/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 /es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Accion_navegador	/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
-/es/docs/Mozilla/Developer_guide/Preguntas_frecuentes_sobre_la_compilación_de_Mozilla	/es/docs/Mozilla/Developer_guide/Mozilla_build_FAQ
-/es/docs/Mozilla/Developer_guide/Source_Code/Código_fuente_de_Mozilla_(CVS)	/es/docs/Mozilla/Developer_guide/Source_Code/CVS
 /es/docs/Módulos_JavaScript	/es/docs/orphaned/Módulos_JavaScript
 /es/docs/Novedades_en_JavaScript_1.6	/es/docs/Web/JavaScript/Novedades_en_JavaScript/1.6
 /es/docs/Novedades_en_JavaScript_1.7	/es/docs/Web/JavaScript/Novedades_en_JavaScript/1.7
@@ -1439,7 +1433,6 @@
 /es/docs/Preguntas_frecuentes_sobre_incrustación_en_Mozilla	/es/docs/orphaned/Preguntas_frecuentes_sobre_incrustación_en_Mozilla
 /es/docs/Preguntas_frecuentes_sobre_incrustación_en_Mozilla/Introducción_a_Gecko_e_inscrustación	/es/docs/orphaned/Preguntas_frecuentes_sobre_incrustación_en_Mozilla/Introducción_a_Gecko_e_inscrustación
 /es/docs/Preguntas_frecuentes_sobre_incrustación_en_Mozilla:Introducción_a_Gecko_e_inscrustación	/es/docs/orphaned/Preguntas_frecuentes_sobre_incrustación_en_Mozilla/Introducción_a_Gecko_e_inscrustación
-/es/docs/Preguntas_frecuentes_sobre_la_compilación_de_Mozilla	/es/docs/Mozilla/Developer_guide/Mozilla_build_FAQ
 /es/docs/Principios_básicos_de_los_servicios_Web	/es/docs/orphaned/Principios_básicos_de_los_servicios_Web
 /es/docs/Quirks_Mode_and_Standards_Mode	/es/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /es/docs/Recursos_en_modo_desconectado_en_Firefox	/es/docs/orphaned/Recursos_en_modo_desconectado_en_Firefox
@@ -1450,7 +1443,7 @@
 /es/docs/Referencia_DOM_de_Gecko	/es/docs/Web/API/Document_Object_Model
 /es/docs/Referencia_DOM_de_Gecko/Cómo_espacioenblanco	/es/docs/Web/API/Document_Object_Model/Whitespace
 /es/docs/Referencia_DOM_de_Gecko/Ejemplos	/es/docs/Web/API/Document_Object_Model/Examples
-/es/docs/Referencia_DOM_de_Gecko/Eventos	/es/docs/Web/API/Document_Object_Model/Events
+/es/docs/Referencia_DOM_de_Gecko/Eventos	/es/docs/orphaned/Web/API/Document_Object_Model/Events
 /es/docs/Referencia_DOM_de_Gecko/Introducción	/es/docs/Web/API/Document_Object_Model/Introduction
 /es/docs/Referencia_DOM_de_Gecko/Localizando_elementos_DOM_usando_selectores	/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 /es/docs/Referencia_DOM_de_Gecko/Prefacio	/es/docs/conflicting/Web/API/Document_Object_Model_9f3a59543838705de7e9b080fde3cc14
@@ -1791,12 +1784,14 @@
 /es/docs/Web/API/Coordinates	/es/docs/Web/API/GeolocationCoordinates
 /es/docs/Web/API/Coordinates/latitude	/es/docs/Web/API/GeolocationCoordinates/latitude
 /es/docs/Web/API/DOMString/Cadenas_binarias	/es/docs/Web/API/DOMString/Binary
+/es/docs/Web/API/Detecting_device_orientation	/es/docs/orphaned/Web/API/Detecting_device_orientation
 /es/docs/Web/API/Document/abrir	/es/docs/Web/API/Document/open
 /es/docs/Web/API/Document/async	/es/docs/Web/API/XMLDocument/async
 /es/docs/Web/API/Document/crearAtributo	/es/docs/Web/API/Document/createAttribute
 /es/docs/Web/API/DocumentOrShadowRoot/getSelection	/es/docs/Web/API/Document/getSelection
 /es/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/es/docs/Web/API/Document/pointerLockElement
 /es/docs/Web/API/DocumentOrShadowRoot/styleSheets	/es/docs/Web/API/Document/styleSheets
+/es/docs/Web/API/Document_Object_Model/Events	/es/docs/orphaned/Web/API/Document_Object_Model/Events
 /es/docs/Web/API/Element/accessKey	/es/docs/Web/API/HTMLElement/accessKey
 /es/docs/Web/API/Element/name	/es/docs/conflicting/Web/API
 /es/docs/Web/API/Element/ongotpointercapture	/es/docs/Web/API/GlobalEventHandlers/ongotpointercapture
@@ -1896,6 +1891,7 @@
 /es/docs/Web/CSS/-webkit-mask-repeat	/es/docs/Web/CSS/mask-repeat
 /es/docs/Web/CSS/:-moz-placeholder	/es/docs/conflicting/Web/CSS/:placeholder-shown
 /es/docs/Web/CSS/:-moz-ui-invalid	/es/docs/Web/CSS/:user-invalid
+/es/docs/Web/CSS/:-moz-ui-valid	/es/docs/orphaned/Web/CSS/:-moz-ui-valid
 /es/docs/Web/CSS/:-ms-input-placeholder	/es/docs/conflicting/Web/CSS/:placeholder-shown_f20b6cc785f9fd133a0f9fb582f36891
 /es/docs/Web/CSS/:-webkit-autofill	/es/docs/Web/CSS/:autofill
 /es/docs/Web/CSS/::-moz-placeholder	/es/docs/conflicting/Web/CSS/::placeholder
@@ -2039,17 +2035,20 @@
 /es/docs/Web/Events/wheel	/es/docs/Web/API/Element/wheel_event
 /es/docs/Web/Guide/AJAX/Comunidad	/es/docs/Web/Guide/AJAX/Community
 /es/docs/Web/Guide/AJAX/Primeros_Pasos	/es/docs/Web/Guide/AJAX/Getting_Started
-/es/docs/Web/Guide/API/DOM/Events/Orientation_and_motion_data_explained/Orientation_and_motion_data_explained	/es/docs/Web/Guide/Events/Orientation_and_motion_data_explained
+/es/docs/Web/Guide/API/DOM/Events/Orientation_and_motion_data_explained/Orientation_and_motion_data_explained	/es/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
 /es/docs/Web/Guide/API/Vibration	/es/docs/Web/API/Vibration_API
 /es/docs/Web/Guide/CSS	/es/docs/Learn/CSS
 /es/docs/Web/Guide/CSS/Cajas_flexibles	/es/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /es/docs/Web/Guide/CSS/probando_media_queries	/es/docs/Web/CSS/Media_Queries/Testing_media_queries
 /es/docs/Web/Guide/DOM	/es/docs/conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10
-/es/docs/Web/Guide/DOM/Events	/es/docs/Web/Guide/Events
+/es/docs/Web/Guide/DOM/Events	/es/docs/orphaned/Web/Guide/Events
 /es/docs/Web/Guide/DOM/Events/Creacion_y_Activación_Eventos	/es/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
-/es/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained	/es/docs/Web/Guide/Events/Orientation_and_motion_data_explained
-/es/docs/Web/Guide/DOM/Events/eventos_controlador	/es/docs/Web/Guide/Events/Event_handlers
+/es/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained	/es/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
+/es/docs/Web/Guide/DOM/Events/eventos_controlador	/es/docs/orphaned/Web/Guide/Events/Event_handlers
+/es/docs/Web/Guide/Events	/es/docs/orphaned/Web/Guide/Events
 /es/docs/Web/Guide/Events/Creating_and_triggering_events	/es/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
+/es/docs/Web/Guide/Events/Event_handlers	/es/docs/orphaned/Web/Guide/Events/Event_handlers
+/es/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/es/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
 /es/docs/Web/Guide/HTML	/es/docs/Learn/HTML
 /es/docs/Web/Guide/HTML/Canvas_tutorial	/es/docs/Web/API/Canvas_API/Tutorial
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Advanced_animations	/es/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
@@ -3058,7 +3057,6 @@
 /es/docs/en	/en-US/
 /es/docs/firefox_Web_Developer_(externo)	https://addons.mozilla.org/firefox/60/
 /es/docs/lugares	/es/docs/Catálogo
-/es/docs/mozilla-central	/es/docs/Mozilla/Developer_guide/mozilla-central
 /es/docs/nsDirectoryService	/es/docs/orphaned/nsDirectoryService
 /es/docs/nsISupports:AddRef	/es/docs/nsISupports/AddRef
 /es/docs/nsISupports:QueryInterface	/es/docs/nsISupports/QueryInterface
