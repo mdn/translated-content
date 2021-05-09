@@ -16,36 +16,37 @@ original_slug: Web/JavaScript/Reference/Instructions/bloc
 
 <div>{{EmbedInteractiveExample("pages/js/statement-block.html", "taller")}}</div>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+<h2 id="syntax">Syntaxe</h2>
 
-<h3 id="Instruction_de_bloc">Instruction de bloc</h3>
+<h3 id="block_statement">Instruction de bloc</h3>
 
 <pre class="brush: js">{
-  <em><var>instruction_1</var></em>;
-  <em><var>instruction_2</var></em>;
+  <em>instruction_1</em>;
+  <em>instruction_2</em>;
   ...
-  <em><var>instruction_n</var></em>;
+  <em>instruction_n</em>;
 }
 </pre>
 
-<h3 id="Instruction_de_bloc_étiquetée">Instruction de bloc étiquetée</h3>
+<h3 id="labelled_block_statement">Instruction de bloc étiquetée</h3>
 
 <pre class="brush: js">// ou, avec une étiquette :
 label: {
-  instruction_1;
-  instruction_2;
-  instruction_n;
+  <em>instruction_1</em>;
+  <em>instruction_2</em>;
+  ...
+  <em>instruction_n</em>;
 }
 </pre>
 
 <dl>
- <dt><code>instruction_1</code>, <code>instruction_2</code>, <code>instruction_n</code></dt>
- <dd>Les instructions qu'on souhaite regrouper au sein du bloc.</dd>
- <dt><code>label</code> {{optional_inline}}</dt>
- <dd>Une <a href="/fr/docs/Web/JavaScript/Reference/Statements/label">étiquette</a> qui permet une identification visuelle de la cible d'une instruction <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/break">break</a></code>.</dd>
+  <dt><code>instruction_1</code>, <code>instruction_2</code>, <code>instruction_n</code></dt>
+  <dd>Les instructions qu'on souhaite regrouper au sein du bloc.</dd>
+  <dt><code>label</code> {{optional_inline}}</dt>
+  <dd>Une <a href="/fr/docs/Web/JavaScript/Reference/Statements/label">étiquette</a> qui permet une identification visuelle de la cible d'une instruction <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/break">break</a></code>.</dd>
 </dl>
 
-<h2 id="Description">Description</h2>
+<h2 id="description">Description</h2>
 
 <p>Cette instruction est le plus souvent utilisée avec les instructions de contrôle (ex. <a href="/fr/docs/Web/JavaScript/Reference/Statements/if...else"><code>if…else</code></a>, <a href="/fr/docs/Web/JavaScript/Reference/Statements/for"><code>for</code></a>, <a href="/fr/docs/Web/JavaScript/Reference/Statements/while"><code>while</code></a>). On verra ainsi :</p>
 
@@ -113,4 +114,4 @@ console.log(c); // affiche 1, ne déclenche pas de SyntaxError</pre>
   <li><a href="/fr/docs/Web/JavaScript/Reference/Statements/while" ><code>while</code></a></li>
   <li><a href="/fr/docs/Web/JavaScript/Reference/Statements/if...else" ><code>if...else</code></a></li>
   <li><a href="/fr/docs/Web/JavaScript/Reference/Statements/let" ><code>let</code></a></li>
- </ul>
+</ul>
