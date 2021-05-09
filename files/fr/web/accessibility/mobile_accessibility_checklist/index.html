@@ -3,88 +3,99 @@ title: Check-list pour l'accessibilité mobile
 slug: Web/Accessibility/Mobile_accessibility_checklist
 tags:
   - Accessibility
-  - B2G
   - Firefox OS
+  - Guidelines
   - Mobile
   - checklist
 translation_of: Web/Accessibility/Mobile_accessibility_checklist
 original_slug: Accessibilité/Checklist_accessibilite_mobile
 ---
-<div class="summary">
- <p><span class="seoSummary">Ce document fournit une liste concise des points à vérifier par les développeurs pour garantir l’accessibilité d’une application mobile. Ce document est amené à évoluer pour tenir compte de nouvelles bonnes pratiques.</span></p>
-</div>
-<h2 id="Couleur">Couleur</h2>
+<p>Ce document fournit une liste concise des points à vérifier par les développeuses et développeurs pour garantir l'accessibilité d'une application mobile. Ce document est amené à évoluer pour tenir compte de nouvelles bonnes pratiques.</p>
+
+<h2 id="colour">La couleur</h2>
+
 <ul>
- <li>Le contraste des couleurs <strong>DOIT</strong> respecter le niveau AA de <a href="http://www.w3.org/TR/WCAG/" hreflang="en">WCAG 2.0</a> :
-  <ul>
-   <li>Un contraste dont le ratio est de 4.5:1 pour les textes normaux (dont la fonte est inférieure à 18 points ou 14 points en gras) ;</li>
-   <li>Un contraste dont le ratio est de 3:1 pour les grands textes (18 points minimum ou 14 points en gras).</li>
-  </ul>
- </li>
- <li>L’information véhiculée par la couleur <strong>DOIT</strong> toujours être disponible via un autre moyen (ex : les liens peuvent être bleus mais aussi soulignés, etc.).</li>
+  <li>Le contraste des couleurs <strong>DOIT</strong> être conforme aux <a href="https://www.w3.org/TR/WCAG/#contrast-minimum">exigences du niveau AA du WCAG 2.1</a> :
+    <ul>
+      <li>Un contraste dont le ratio est de 4.5:1 pour les textes normaux (dont la fonte est inférieure à 18 points ou 14 points en gras) ;</li>
+      <li>Un contraste dont le ratio est de 3:1 pour les grands textes (18 points minimum ou 14 points en gras).</li>
+    </ul>
+  </li>
+  <li>L'information transmise par la couleur <strong>DOIT</strong> également être disponible par d'autres moyens (texte souligné pour les liens, etc.).</li>
 </ul>
-<div class="note">
- <p><strong>Note</strong> :</p>
- <ul>
-  <li>Sur <a href="www.yoyodesign.fr">Yoyo Design</a> vous trouverez l’outil <a href="http://www.yoyodesign.org/outils/ncolor/index.fr" title="Le sélecteur de couleurs nColor">nColor</a> de sélection des couleurs. Il vous permettra de simuler les différents types de visions daltoniennes ;</li>
-  <li>Jon Snook a écrit un outil intéressant permettant de vérifier le contraste des couleurs : <a href="http://snook.ca/technical/colour_contrast/colour.html" hreflang="en">Colour Contrast Checker (en)</a> ;</li>
-  <li>Alternativement, le <em>Tanaguru Contrast-Finder</em> fait un travail similaire, mais il propose en plus une palette de couleurs similaires mais offrant un meilleur contraste.</li>
- </ul>
-</div>
-<h2 id="La_visibilité">La visibilité</h2>
+
+<h2 id="visibility">La visibilité</h2>
+
 <ul>
- <li>Les techniques de masquage du contenu comme une opacité nulle, l’ordre des z-index et la position hors-écran <strong>NE DOIVENT PAS</strong> être utilisées aux seules fins de visibilité ;</li>
- <li>Tout ce qui n’apparaît pas dans la partie visible de l’écran <strong>DOIT </strong>réellement être invisible (en particulier pour les applications d’une page comportant plusieurs « cartes » ) :
-  <ul>
-   <li>Il <strong>FAUT </strong>utiliser l’attribut <code>hidden</code> ou les propriétés de style <code>visibility</code> ou <code>display</code> ;</li>
-   <li>À moins d’être absolument indispensable, l’attribut <code>aria-hidden</code> <strong>NE DOIT PAS </strong>être utilisé.</li>
-  </ul>
- </li>
+  <li>Les techniques de masquage du contenu, telles que l'opacité nulle, l'ordre d'indexation en « z » et le placement hors écran, <strong>NE DOIVENT PAS</strong> être utilisées exclusivement pour gérer la visibilité.</li>
+  <li>Tout ce qui est autre, que l'écran actuellement visible, <strong>DOIT</strong> être <em>vraiment</em> invisible (particulièrement pertinent pour les apps à page unique avec plusieurs « <em>cartes</em> ») :
+    <ul>
+      <li>Utilisez l'attribut <code>hidden</code> ou les propriétés de style <code>visibility</code> ou <code>display</code>.</li>
+      <li>Sauf si cela est absolument inévitable, l'attribut <code>aria-hidden</code> <strong>NE DOIT PAS</strong> être utilisé.</li>
+    </ul>
+  </li>
 </ul>
-<h2 id="Le_focus">Le focus</h2>
+
+<h2 id="focus">Le focus</h2>
+
 <ul>
- <li>Tous les éléments activables <strong>DOIVENT</strong> pouvoir porter le focus :
-  <ul>
-   <li>Les contrôles standards tels que les liens, les boutons et les champs de formulaire peuvent, par défaut, porter le focus ;</li>
-   <li>Les contrôles non standards <strong>DOIVENT</strong> être assignés à un <a href="http://www.w3.org/TR/wai-aria/roles" hreflang="en">rôle ARIA</a>, comme <code>button</code>, <code>link</code> ou <code>checkbox</code>.</li>
-  </ul>
- </li>
- <li>Le focus doit être géré de façon logique et cohérente.</li>
+  <li>Tous les éléments activables <strong>DOIVENT</strong> être focusables :
+    <ul>
+      <li>Les contrôles standard tels que les liens, les boutons et les champs de formulaire sont accessibles par défaut.</li>
+      <li>Les contrôles non standard <strong>DOIVENT</strong> avoir un <a href="/fr/docs/Web/Accessibility/ARIA/Roles">rôle ARIA</a> approprié qui leur est attribué, comme <code>button</code>, <code>link</code> ou <code>checkbox</code>.</li>
+    </ul>
+  </li>
+  <li>Le focus <strong>DOIT</strong> être traité dans un ordre logique et de manière cohérente.</li>
 </ul>
-<h2 id="Les_équivalents_textuels">Les équivalents textuels</h2>
+
+<h2 id="text_equivalents">Les équivalents textuels</h2>
+
 <ul>
- <li>Les équivalents textuels <strong>DOIVENT</strong> être fournis pour chacun des éléments de l’application qui n’est pas strictement lié à la mise en forme :
-  <ul>
-   <li>Les attributs <code>alt</code> et <code>title</code> doivent être utilisés aux endroits appropriés (<em>lire l’article de </em>Steve Faulkner sur <a href="http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/" hreflang="en">L’utilisation de l’attribut HTML <code>title</code> (en)</a>) ;</li>
-   <li>Si les attributs ci-dessus ne sont pas appliquables, on utilise les <a href="http://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header" hreflang="en">propriétés ARIA</a> appropriées comme <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code>.</li>
-  </ul>
- </li>
- <li>Les images avec du texte <strong>DOIVENT</strong> être évitées ;</li>
- <li>Tous les contrôles de formulaire <strong>DOIVENT</strong> posséder des éléments {{ htmlelement("label") }} pour permettre aux lecteurs d’écran de les utiliser.</li>
+  <li>Un équivalent textuel <strong>DOIT</strong> être fourni pour chaque élément non textuel non strictement présenté dans l'application.
+    <ul>
+      <li>Utilisez <em>alt</em> et <em>title</em> lorsque cela est approprié (voir l'article de Steve Faulkner sur l'<a href="https://www.tpgi.com/using-the-html-title-attribute-updated/">Utilisation de l'attribut HTML title</a>).</li>
+      <li>Si les attributs ci-dessus ne sont pas applicables, utilisez les <a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">États et propriétés ARIA</a> appropriés tels que <code>aria-label</code>, <code>aria-labelledby</code>, ou <code>aria-describedby</code>.</li>
+    </ul>
+  </li>
+  <li>Les images de texte <strong>DOIVENT</strong> être évitées.</li>
+  <li>Tous les composants de l'interface utilisateur ayant un texte visible (ou une image de texte) comme étiquette <strong>DOIVENT</strong> avoir le même texte disponible dans le <a href="https://www.w3.org/TR/WCAG21/#dfn-name">nom</a> programmatique du composant. <a href="https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html">WCAG 2.1 : Étiquette dans le nom.</a></li>
+  <li>Tous les contrôles de formulaire <strong>DOIVENT</strong> avoir des étiquettes (éléments <a href="/fr/docs/Web/HTML/Element/Label"><code>&lt;label&gt;</code></a>) pour le bénéfice des utilisateurs de lecteurs d'écran.</li>
 </ul>
-<h2 id="La_gestion_des_états">La gestion des états</h2>
+
+<h2 id="handling_state">La gestion des états</h2>
+
 <ul>
- <li>Les contrôles standards comme les boutons radio, les cases à cocher, sont gérés par le système d’exploitation. En revanche, pour les contrôles spécifiques, les changements d’états doivent être fournis via les <a href="http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets_header" hreflang="en">états ARIA</a> tels que <code>aria-checked</code>, <code>aria-disabled</code>, <code>aria-selected</code>, <code>aria-expanded</code> et <code>aria-pressed</code>.</li>
+  <li>Les contrôles standard tels que les boutons radio et les cases à cocher sont gérés par le système d'exploitation. Cependant, pour d'autres contrôles personnalisés, les changements d'état <strong>DOIVENT</strong> être fournis via <a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">les états ARIA</a> tels que <code>aria-checked</code>, <code>aria-disabled</code>, <code>aria-selected</code>, <code>aria-expanded</code> et <code>aria-pressed</code>.</li>
 </ul>
-<h2 id="Principales_recommandations">Principales recommandations</h2>
+
+<h2 id="orientation">L'orientation</h2>
+
 <ul>
- <li>Un titre <strong>DOIT </strong>être fourni pour désigner l’application ;</li>
- <li>Les titres <strong>DOIVENT</strong> respecter une structure hiérarchique :
+  <li>Le contenu <strong>NE DOIT PAS</strong> être limité à une seule orientation, comme le portrait ou le paysage, sauf si cela est essentiel. <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">WCAG 2.1 : Orientation</a>
+    <ul>
+      <li>Des exemples de cas où une orientation est essentielle sont une application pour un piano ou un chèque de banque.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="general_guidelines">Directives générales</h2>
+
+<ul>
+  <li>Un titre d'application <strong>DOIT</strong> être fourni.</li>
+  <li>Les titres <strong>NE DOIVENT PAS</strong> rompre la structure hiérarchique
   <pre class="brush: html">&lt;h1&gt;Titre de premier niveau&lt;/h1&gt;
-  &lt;h2&gt;Titre de deuxième niveau&lt;/h2&gt;
-  &lt;h2&gt;Un autre titre de niveau 2&lt;/h2&gt;
-    &lt;h3&gt;Un titre inférieur&lt;/h3&gt;</pre>
- </li>
- <li><a href="http://www.w3.org/TR/wai-aria/roles#landmark_roles_header" hreflang="en">Les points de repères ARIA</a> <strong>DOIVENT</strong> être utilisés pour décrire une application ou la structure d’un document comme <code>banner</code>, <code>complementary</code>, <code>contentinfo</code>, <code>main</code>, <code>navigation</code>, <code>search</code> ;</li>
- <li>Les gestionnaires d’événements tactiles <strong>NE DOIVENT PAS</strong> être déclenchés avant l’événement <code>touchend</code> ;</li>
- <li>Les points d’interaction tactiles <strong>DOIVENT </strong>être suffisamment grands pour garantir une bonne interaction (voir <a href="http://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size" hreflang="en">les recommandations de la BBC sur l’accessibilité mobile (en)</a> sur ce sujet).</li>
+  &lt;h2&gt;Titre secondaire&lt;/h2&gt;
+  &lt;h2&gt;Un autre titre secondaire&lt;/h2&gt;
+    &lt;h3&gt;Titre de bas niveau&lt;/h3&gt;</pre>
+  </li>
+  <li>L'<a href="https://www.washington.edu/accessibility/web/landmarks/">ARIA Landmark Roles</a> <strong>DOIT</strong> être utilisé pour décrire une structure d'application ou de document, telle que <code>banner</code>, <code>complementary</code>, <code>contentinfo</code>, <code>main</code>, <code>navigation</code>, <code>search</code>.</li>
+  <li>Pour les événements tactiles, au moins un des éléments suivants <strong>DOIT</strong> être vrai (<a href="https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html">WCAG 2.1 : Annulation du pointeur</a>) :
+    <ul>
+      <li>L'événement de descente <strong>NE DOIT PAS</strong> être utilisé pour déclencher une action.</li>
+      <li>L'action est déclenchée par l'événement « up » et une option permettant d'interrompre l'action avant son achèvement est disponible ou une option permettant d'annuler l'action après son achèvement.</li>
+      <li>L'événement de montée annulera toute action déclenchée par un événement de descente.</li>
+      <li>Il est essentiel de déclencher l'action sur l'événement de descente. Par exemple, pour jouer à un jeu ou à une application de piano.</li>
+    </ul>
+  </li>
+  <li>Les cibles tactiles <strong>DOIVENT</strong> être suffisamment grandes pour que l'utilisateur puisse interagir avec elles (voir <a href="https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size">BBC Mobile Accessibility Guidelines</a> pour des directives utiles sur la taille des cibles tactiles).</li>
 </ul>
-
-<div class="note">
- <p><strong>Note</strong> : <a href="http://www.tanaguru.com/">Le service de test automatique d'accessibilité de Tanaguru</a> fournit un moyen pratique de corriger les erreurs d'accessibilité pouvant se glisser dans une page Web, ou d'une application Web locale (par exemple Firefox OS). Vous trouverez plus d'informations concernant l'implémentation technique de Tanaguru, et comment contribuer au projet, sur <a href="http://tanaguru.org/">tanaguru.org</a>.</p>
-</div>
-
-<div class="note">
- <p><strong>Note</strong> : la <a href="http://yzen.github.io/2014/04/30/mobile-accessibility-checklist.html" hreflang="en">version originale, anglaise, de ce document</a> a été écrite par <a href="http://yzen.github.io/" hreflang="en">Yura Zenevich</a>.</p>
-</div>
-<p> </p>
