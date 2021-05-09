@@ -1,5 +1,5 @@
 ---
-title: GitHub pour les grands débutants
+title: GitHub pour les débutants
 slug: MDN/Contribute/GitHub_beginners
 tags:
   - Best practices
@@ -13,7 +13,7 @@ translation_of: MDN/Contribute/GitHub_beginners
 
 <p class="summary"><a href="https://git-scm.com/">Git</a> et <a href="https://github.com/">GitHub</a> sont des outils difficiles à apprendre et à maîtriser, mais avec quelques commandes simples et quelques bons conseils, vous devriez pouvoir en faire assez pour commencer à contribuer à MDN sans trop de difficultés. Le but de cet article n'est pas de vous aider à maîtriser Git ou GitHub, mais de vous donner juste assez d'éléments pour être productif à un niveau de base et contribuer à MDN.</p>
 
-<p>Si vous êtes déjà familiarisé avec les bases de Git/GitHub, vous n'apprendrez probablement rien de nouveau ici, mais cet article peut néanmoins vous être utile comme référence. Il existe également une <a href="/fr/docs/MDN/Contribute/GitHub_cheatsheet">cheatsheet GitHub</a> disponible, avec juste les commandes et aucune des longues explications.</p>
+<p>Si vous êtes déjà familiarisé avec les bases de Git/GitHub, vous n'apprendrez probablement rien de nouveau ici, mais cet article peut néanmoins vous être utile comme référence. Il existe également une <a href="/fr/docs/MDN/Contribute/GitHub_cheatsheet">antisèche GitHub</a> disponible, avec juste les commandes et aucune des longues explications.</p>
 
 <h2 id="essential_concepts">Concepts essentiels</h2>
 
@@ -37,8 +37,8 @@ translation_of: MDN/Contribute/GitHub_beginners
 <p>Cet article part du principe que :</p>
 
 <ul>
-  <li>Vous êtes déjà à l'aise avec l'utilisation de la ligne de commande/du terminal. Si la ligne de commande vous est inconnue, lisez notre <a href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">Cours accélérés sur les lignes de commande</a>.</li>
-  <li>Vous travaillez sur un système qui comprend les commandes de ligne de commande standard de style Unix. macOS/Linux disposent de cette fonctionnalité dès le départ ; <a href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#windows">Windows n'est pas tout à fait aussi simple</a> à cet égard, mais il existe des applications utiles qui émulent cette fonctionnalité sous Windows, comme Gitbash.</li>
+  <li>Vous êtes déjà à l'aise avec l'utilisation de la ligne de commande/du terminal. Si la ligne de commande vous est inconnue, lisez notre <a href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">Cours accéléré sur les lignes de commande</a>.</li>
+  <li>Vous travaillez sur un système qui comprend les commandes de ligne de commande standard de style Unix. macOS/Linux disposent de cette fonctionnalité dès le départ ; <a href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#windows">Windows n'est pas tout à fait aussi simple</a> à cet égard, mais il existe des applications utiles qui émulent cette fonctionnalité sous Windows, comme Git Bash.</li>
   <li>Vous utiliserez la ligne de commande pour interagir avec Git/GitHub. Il existe un certain nombre d'outils GUI pour Git et GitHub, mais ils ne fonctionneront pas avec ce guide.</li>
 </ul>
 
@@ -55,14 +55,14 @@ translation_of: MDN/Contribute/GitHub_beginners
     </ol>
   </li>
   <li>Créez un répertoire séparé quelque part sur votre ordinateur pour y stocker tous vos dépôts Git, qui soit facile à trouver et à atteindre en ligne de commande. Un répertoire appelé mdn-git à l'intérieur de votre répertoire home/user serait approprié.</li>
-  <li><a href="https://github.com/join">Sign up for a GitHub account</a> if you don't already have one. You'll need this to contribute to MDN's repos.</li>
+  <li><a href="https://github.com/join">Créez un compte GitHub</a> si vous n'en avez pas déjà un. Vous aurez besoin d'un compte pour contribuer aux dépôts de MDN.</li>
 </ol>
 
 <h3 id="setting_up_ssh_authentication_on_github">Configuration de l'authentification SSH sur GitHub</h3>
 
 <p>À ce stade, vous devez configurer une clé SSH sur votre compte GitHub. Il s'agit essentiellement d'un mécanisme de sécurité qui vous identifie auprès de GitHub et vous évite de devoir vous authentifier à chaque fois que vous utilisez les services GitHub.</p>
 
-<p>GitHub a créé un guide utile pour configurer cela - voir le point de départ sur <a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">Connexion à GitHub avec SSH</a>. Suivez chacune des étapes ici pour vous configurer avec SSH sur Github.</p>
+<p>GitHub a créé un guide utile pour configurer cela - voir le point de départ sur <a href="https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh">Connexion à GitHub avec SSH</a>. Suivez chacune des étapes ici pour vous configurer avec SSH sur GitHub.</p>
 
 <p>Si vous ne le faites pas, vous pourrez toujours contribuer au MDN, mais vous devrez saisir votre nom d'utilisateur et votre mot de passe à chaque fois que vous interagirez avec GitHub (par exemple, lorsque vous soumettez une demande de triage, comme indiqué ci-dessous).</p>
 
@@ -70,13 +70,13 @@ translation_of: MDN/Contribute/GitHub_beginners
 
 <!-- start:Note spéciale pour l'équpe de traduction l10n-fr -->
 <div class="notecard note">
-  <p><b>Note pour la traduction Française :</b></p>
-  <p>Ce qui a été expliqué par Chris Mills ici est identique pour le dépôt de traduction Français, vous devez remplacer <code>mdn/content</code> par <code>mdn/translated-content</code>, et <code>&lt;votre-nom-utilisateur&gt;/content</code> par <code>&lt;votre-nom-utilisateur&gt;/translated-content</code></p>
+  <p><b>Note pour la traduction française :</b></p>
+  <p>Ce qui a été expliqué par Chris Mills ici est identique pour le dépôt de traduction français, vous devez remplacer <code>mdn/content</code> par <code>mdn/translated-content</code>, et <code>&lt;votre-nom-utilisateur&gt;/content</code> par <code>&lt;votre-nom-utilisateur&gt;/translated-content</code></p>
   <p>Vous pouvez retrouver des explications de ceci sur notre article <a href="https://tech.mozfr.org/post/2021/03/16/MDN-sur-GitHub-comment-contribuer">Comment contribuer sur GitHub au MDN</a></p>
 </div>
 <!-- end:Note spéciale pour l'équpe de traduction l10n-fr -->
 
-<p>Il existe un certain nombre de dépôts différents que vous pouvez avoir à mettre à jour lorsque vous travaillez sur différentes tâches MDN (voir <a href="/fr/docs/MDN/Contribute/Where_is_everything">Où se trouve tout sur MDN ? Un guide de nos dépôts</a>), mais il y a un certain nombre d'étapes de configuration que vous devriez suivre sur chaque repo sur lequel vous travaillez, pour rendre les choses plus faciles et plus cohérentes.</p>
+<p>Il existe un certain nombre de dépôts différents que vous pouvez avoir à mettre à jour lorsque vous travaillez sur différentes tâches MDN (voir <a href="/fr/docs/MDN/Contribute/Where_is_everything">Où se trouve tout sur MDN ? Un guide de nos dépôts</a>), mais il y a un certain nombre d'étapes de configuration que vous devriez suivre sur chaque dépôt sur lequel vous travaillez, pour rendre les choses plus faciles et plus cohérentes.</p>
 
 <h3 id="forking_and_cloning">Bifurcation et clonage</h3>
 
@@ -110,7 +110,7 @@ translation_of: MDN/Contribute/GitHub_beginners
   </li>
   <li>
     <p>Appuyez sur le bouton vert « Code » en haut de la liste des fichiers. Quelque chose de similaire à la fenêtre contextuelle suivante devrait apparaître :</p>
-    <p><img src="code-popup.png" alt="Fenêtre contextuelle montrant une URL de clonage avec les options d'ouverture via le bureau Github et de téléchargement du zip."></p>
+    <p><img src="code-popup.png" alt="Fenêtre contextuelle montrant une URL de clonage avec les options d'ouverture via le bureau GitHub et de téléchargement du zip."></p>
   </li>
   <li>
     <p>Si vous avez configuré l'authentification SSH comme indiqué ci-dessus, cliquez sur l'onglet "SSH" et copiez l'URL <code>git@github.com:<em>&lt;votre-nom-utilisateur&gt;</em>/content.git</code> à partir du champ de texte de la fenêtre de dialogue. Si vous n'avez pas configuré l'authentification SSH, copiez plutôt l'URL depuis le champ de texte de l'onglet "HTTPS", qui devrait ressembler à ceci : <code>https://github.com/<em>&lt;votre-nom-utilisateur&gt;</em>/content.git</code>.</p>
@@ -138,7 +138,7 @@ translation_of: MDN/Contribute/GitHub_beginners
 <pre class="brush: bash">git remote add remote-name repo-you-want-to-point-to</pre>
 
 <ul>
-  <li><code><em>remote-name</em></code> est le nom que vous décidez, qui est utilisé pour se référer à suivi distant plus tard. Il est bon de s'en tenir à un nom cohérent pour les suivi à travers différents dépôts qui ont le même but, ainsi le même nom de suivi fera la même chose partout, et vous êtes moins susceptibles d'être confus. Ainsi, par exemple, la version principale du dépôt à partir duquel vous avez bifurqué votre version est souvent appelée « dépôt ascendant », c'est pourquoi les gens utilisent souvent « upstream » comme nom de l'emplacement ascendant distant. J'appelle généralement mes suivi ascendant "mozilla", pour signifier qu'ils pointent vers la copie principale du dépôt de Mozilla.</li>
+  <li><code><em>remote-name</em></code> est le nom que vous décidez, qui est utilisé pour se référer à suivi distant plus tard. Il est bon de s'en tenir à un nom cohérent pour bien distinguer les différents dépôts qui ont le même but, ainsi le même nom de suivi fera la même chose partout, et vous êtes moins susceptibles d'être confus. Ainsi, par exemple, la version principale du dépôt à partir duquel vous avez bifurqué votre version est souvent appelée « dépôt ascendant », c'est pourquoi les gens utilisent souvent « upstream » comme nom de l'emplacement ascendant distant. J'appelle généralement mes suivi ascendant "mozilla", pour signifier qu'ils pointent vers la copie principale du dépôt de Mozilla.</li>
   <li><code><em>repo-you-want-to-point-to</em></code> est l'URL SSH (ou HTTPS) du dépôt vers lequel vous voulez pointer, récupérée de la même manière que lorsque nous avons cloné notre bifurcation plus tôt.</li>
 </ul>
 
@@ -196,13 +196,13 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
   <li>
     <p>Tout d'abord, récupérez le contenu mis à jour de votre suivi distant avec la commande suivante :</p>
     <pre class="brush: bash">git fetch <em>remote-name</em></pre>
-    <p>Donc par exemple :</p>
+    <p>Par exemple :</p>
     <pre class="brush: bash">git fetch mozilla</pre>
   </li>
   <li>
     <p>Ensuite, remplacez le contenu de votre branche principale par la branche principale du dépôt distant. Il existe de nombreuses façons différentes de le faire, mais j'ai tendance à utiliser la commande <code>rebase</code>, comme ceci :</p>
     <pre class="brush: bash">git rebase <em>remote-name</em>/<em>main-branch-name</em></pre>
-    <p>Ainsi par exemple :<p>
+    <p>Par exemple :<p>
     <pre class="brush: bash">git rebase mozilla/main</pre>
   </li>
   <li>
@@ -225,7 +225,7 @@ origin    git@github.com:chrisdavidmills/content.git (push)</pre>
     <p><img src="branch-button.png" alt="Bouton intitulé main"></p>
   </li>
   <li>
-    <p>Cliquez dessus, et vous verrez apparaître une liste de branches et un champ de texte indiquant « Find or create a branch... » :</p>
+    <p>Cliquez dessus, et vous verrez apparaître une liste de branches et un champ de texte indiquant « Find or create a branch… » :</p>
     <p><img src="branch-menu.png" alt="menu montrant une liste de noms de branches avec une zone de texte étiquetée trouver ou créer une branche"></p>
   </li>
   <li>
@@ -376,7 +376,7 @@ To github.com:chrisdavidmills/content.git
 
 <h2 id="troubleshooting">Dépannage</h2>
 
-<p>Le tutoriel ci-dessus vise à vous fournir les bases de git et de GitHub dont vous aurez besoin pour contribuer aux dépôts GitHub à un niveau de base. Nous espérons qu'il vous a été utile ! Nous aimerions également aborder le fait que, bien qu'étant le système de contrôle de version standard de l'industrie du web, Git a une sorte de réputation mythique/légendaire d'outil péniblement difficile à apprendre et à utiliser.</p>
+<p>Le tutoriel ci-dessus vise à vous fournir les bases de Git et de GitHub dont vous aurez besoin pour contribuer aux dépôts GitHub à un niveau de base. Nous espérons qu'il vous a été utile ! Nous aimerions également aborder le fait que, bien qu'étant le système de contrôle de version standard de l'industrie du web, Git a une sorte de réputation mythique/légendaire d'outil péniblement difficile à apprendre et à utiliser.</p>
 
 <p>Nous ne sommes pas sûrs que ce soit tout à fait juste. Git comporte de nombreuses commandes qui sont parfois assez cryptiques dans leur utilisation, et il faut beaucoup de temps pour les maîtriser. Il est également juste de dire que si vous oubliez certaines commandes ou que vous faites les choses dans le mauvais ordre, vous pouvez vous retrouver dans un désordre intéressant dont il est difficile de se sortir. Toutefois, si vous prenez les bonnes habitudes décrites ci-dessus, vous ne devriez pas trop vous tromper. Il convient également de mentionner que Git est beaucoup plus facile à utiliser qu'il y a dix ans.</p>
 
@@ -384,7 +384,7 @@ To github.com:chrisdavidmills/content.git
 
 <h3 id="reverting_a_change_you_made_to_a_file_that_you_havent_yet_added_to_the_commit_list">Annulation d'une modification que vous avez apportée à un fichier que vous n'avez pas encore ajouté à la liste des commits.</h3>
 
-<p>Si vous avez modifié un fichier, mais que vous n'avez pas encore exécuté la commande <code>git add <em>file-path</em></code> pour l'ajouter à la liste des commit, vous pouvez revenir à l'état dans lequel il était lorsque vous avez extrait la branche pour la première fois en exécutant :</p>
+<p>Si vous avez modifié un fichier, mais que vous n'avez pas encore exécuté la commande <code>git add <em>file-path</em></code> pour l'ajouter à la liste des commits, vous pouvez revenir à l'état dans lequel il était lorsque vous avez extrait la branche pour la première fois en exécutant :</p>
 
 <pre class="brush: bash">git restore <em>file-path</em></pre>
 
@@ -400,7 +400,7 @@ To github.com:chrisdavidmills/content.git
 
 <pre class="brush: bash">git reset HEAD~1</pre>
 
-<p>Cela vous ramènera à l'état où les changements de ce commit ne sont pas encore ajoutés à la liste des commit (vous devrez les ajouter à nouveau dans git après avoir résolu le problème). Notez que cela vous ramène à l'état avant que vous ne commitiez quoi que ce soit dans cette session. Cela ne vous aidera pas si vous avez besoin de faire quelque chose de plus complexe, comme revenir sur le commit du milieu d'un ensemble de trois. Nous en resterons là pour cette leçon.</p>
+<p>Cela vous ramènera à l'état où les changements de ce commit ne sont pas encore ajoutés à la liste des commits (vous devrez les ajouter à nouveau dans git après avoir résolu le problème). Notez que cela vous ramène à l'état avant que vous ne commitiez quoi que ce soit dans cette session. Cela ne vous aidera pas si vous avez besoin de faire quelque chose de plus complexe, comme revenir sur le commit du milieu d'un ensemble de trois. Nous en resterons là pour cette leçon.</p>
 
 <h3 id="reversing_a_commit_that_has_been_pushed_to_the_remote_fork">Inverser un commit qui a été poussé vers la bifurcation distante</h3>
 
@@ -437,6 +437,6 @@ To github.com:chrisdavidmills/content.git
 <ul>
   <li><a href="/fr/docs/Learn/Tools_and_testing/GitHub">Apprendre le développement web > Git et GitHub</a></li>
   <li><a href="https://dangitgit.com/en">Dangit, Git</a> — autres techniques de dépannage utiles</li>
-  <li><a href="https://hackernoon.com/45-github-issues-dos-and-donts-dfec9ab4b612">45 Questions sur Github : à faire et à ne pas faire</a></li>
+  <li><a href="https://hackernoon.com/45-github-issues-dos-and-donts-dfec9ab4b612">45 Questions sur GitHub : à faire et à ne pas faire</a></li>
   <li><a href="https://cli.github.com/">Outils CLI GitHub</a> — une fois que vous avez l'habitude d'utiliser les commandes de l'interface CLI de GitHub pour contrôler vos dépôts, vous pouvez envisager d'installer l'outil CLI gh de GitHub, qui fournit des commandes pour accélérer un certain nombre des processus mentionnés ci-dessus.</li>
 </ul>
