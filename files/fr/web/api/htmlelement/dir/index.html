@@ -1,47 +1,63 @@
 ---
-title: element.dir
+title: HTMLElement.dir
 slug: Web/API/HTMLElement/dir
 tags:
-  - DOM
-  - Référence_du_DOM_Gecko
+  - API
+  - HTML DOM
+  - HTMLElement
+  - Property
+  - Reference
+browser-compat: api.HTMLElement.dir
 translation_of: Web/API/HTMLElement/dir
 ---
-<p>{{ ApiRef() }}</p>
-<h2 id="R.C3.A9sum.C3.A9" name="R.C3.A9sum.C3.A9">Résumé</h2>
+<div>{{ApiRef("HTML DOM")}}</div>
+
 <p>L'attribut <code><strong>dir</strong></code> obtient ou définit la direction d'écriture du texte pour le contenu de l'élément courant.</p>
-<h2 id="Syntaxe_et_valeurs" name="Syntaxe_et_valeurs">Syntaxe et valeurs</h2>
-<pre class="brush: js">var <var>DirectionActuelle</var> = referenceElement.dir;
-referenceElement.dir = <var>NouvelleDirection</var>;
-</pre>
-<p><var>DirectionActuelle</var> est une variable chaîne de caractères représentant la direction d'écriture du texte pour l'élément courant. <var>NouvelleDirection</var> est une variable chaîne de caractères représentant la nouvelle direction d'écriture du texte souhaitée pour l'élément.</p>
-<p>Les valeurs possibles pour <code><strong>dir</strong></code> sont <strong><code>ltr</code></strong>, pour de gauche à droite (<em>left-to-right</em>), et <strong><code>rtl</code></strong>, pour de droite à gauche (<em>right-to-left</em>).</p>
-<h2 id="Exemple" name="Exemple">Exemple</h2>
-<pre class="brush: js">var para = document.getElementById("para1");
-para.dir = "rtl";
-// change la direction du texte sur un paragraphe identifié par "para1"
-</pre>
-<h2 id="Notes" name="Notes">Notes</h2>
-<p>La direction d'écriture du texte sur un élément est celle dans laquelle le texte est disposé (pour permettre le support de systèmes multilingues). Les langues arabes et l'hébreu sont des exemples typiques de langues qui utiliseront la direction « rtl » (de droite à gauche).</p>
-<p>Une image peut avoir sont attribut <code>dir</code> positionné à « rtl », auquel cas les attributs <code>title</code> et <code>alt</code> seront formatés et définis comme allant de droite à gauche.</p>
-<p>Lorsqu'un tableau a sa direction définie comme « rtl », l'ordre des colonnes va de droite à gauche.</p>
-<div class="geckoVersionNote">
- <p>Avant Gecko 7.0, il était possible que la valeur renvoyée ne soit pas toujours en minuscule. A partir de Gecko 7.0, la valeur renvoyée est toujours en minuscule, comme défini dans la spécification.</p>
+
+<p>La directionnalité d'écriture d'un élément est la direction dans laquelle le texte va (pour la prise en charge de différents systèmes linguistiques). Les langues arabes et l'hébreu sont des langues typiques utilisant la directionnalité RTL.</p>
+
+<p>Une image peut avoir sa propriété <code>dir</code> définie sur « <code>rtl</code> », auquel cas les attributs HTML <code>title</code> et <code>alt</code> seront formatés et définis comme « <code>rtl</code> ».</p>
+
+<p>Lorsqu'un tableau a son <code>dir</code> défini sur « <code>rtl</code> », l'ordre des colonnes est disposé de droite à gauche.</p>
+
+<p>Lorsqu'un élément a sa direction définie sur « <code>auto</code> », la direction de l'élément est déterminée sur la base de son premier caractère de direction forte, ou par défaut sur la direction de son élément parent.</p>
+
+<div class="notecard note">
+  <p><b>Note :</b></p>
+  <p>Les navigateurs peuvent permettre aux utilisateurs de modifier la directionnalité des <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a> afin de faciliter la création de contenu. Chrome et Safari proposent une option de directionnalité dans le menu contextuel des champs de saisie, tandis qu'Internet Explorer et Edge utilisent les combinaisons de touches <kbd>Ctrl</kbd> + <kbd>Shift gauche</kbd> et <kbd>Ctrl</kbd> + <kbd>Shift droit</kbd>. Firefox utilise <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> mais ne met PAS à jour la valeur de l'attribut <code><strong>dir</strong></code>.</p>
 </div>
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécification</h2>
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-52460740', 'dir')}} <small>— <a class="external" href="http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-52460740">traduction</a> (non normative)</small></td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-<p> </p>
+
+<h2 id="syntax">Syntaxe</h2>
+
+<pre class="brush: js">let <var>currentWritingDirection</var> = <var>elementNodeReference</var>.dir;
+<var>elementNodeReference</var>.dir = <var>newWritingDirection</var>;</pre>
+
+<ul>
+  <li><code>currentWritingDirection</code> est une variable de type chaîne de caractères représentant le sens d'écriture du texte de l'élément courant.</li>
+  <li><code>newWritingDirection</code> est une variable de type chaîne de caractères représentant la valeur du sens d'écriture du texte.</li>
+</ul>
+
+<p>Les valeurs possibles pour <code>dir</code> sont <code>ltr</code>, pour de gauche à droite (<em>left-to-right</em>), et <code>rtl</code>, pour de droite à gauche (<em>right-to-left</em>).</p>
+
+<h2 id="example">Exemple</h2>
+
+<pre class="brush: js">let para = document.getElementById("para1");
+para.dir = "rtl";
+// change la direction du texte sur un paragraphe identifié par "para1"</pre>
+
+<h2 id="specifications">Spécifications</h2>
+
+{{Specifications}}
+
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+
+{{Compat}}
+
+<h2 id="see_also">Voir aussi</h2>
+
+<ul>
+  <li>La propriété <a href="/fr/docs/Web/API/Document/dir"><code>document.dir</code></a></li>
+  <li>L'attribut global <a href="/fr/docs/Web/HTML/Global_attributes/dir"><code>dir</code></a></li>
+  <li>La propriété <a href="/fr/docs/Web/CSS/direction"><code>direction</code></a></li>
+  <li>La pseudo-classe <a href="/fr/docs/Web/CSS/:dir"><code>:dir</code></a></li>
+</ul>
