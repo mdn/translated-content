@@ -307,12 +307,7 @@
 /ru/docs/MDN/Contribute/Editor/Перенаправление	/ru/docs/orphaned/MDN/Editor/Redirects
 /ru/docs/MDN/Contribute/Editor/Синтаксические_выделения	/ru/docs/orphaned/MDN/Editor/Syntax_highlighting
 /ru/docs/MDN/Contribute/Editor/Ссылки	/ru/docs/orphaned/MDN/Editor/Links
-/ru/docs/MDN/Contribute/Howto/Create_an_MDN_account	/ru/docs/orphaned/MDN/Contribute/Howto/Create_an_MDN_account
-/ru/docs/MDN/Contribute/Howto/Do_a_technical_review	/ru/docs/orphaned/MDN/Contribute/Howto/Do_a_technical_review
-/ru/docs/MDN/Contribute/Howto/Do_an_editorial_review	/ru/docs/orphaned/MDN/Contribute/Howto/Do_an_editorial_review
 /ru/docs/MDN/Contribute/Howto/Добавить_или_обновить_данные_о_браузерной_совместимости	/ru/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
-/ru/docs/MDN/Contribute/Howto/Как_оптимизировать_страницы	/ru/docs/orphaned/MDN/Contribute/Howto/Set_the_summary_for_a_page
-/ru/docs/MDN/Contribute/Howto/Метки_JavaScript_страниц	/ru/docs/orphaned/MDN/Contribute/Howto/Tag_JavaScript_pages
 /ru/docs/MDN/Contribute/Howto/Создай_интерактивное_упражнение_для_помощи_в_изучении_веба	/ru/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 /ru/docs/MDN/Contribute/Structures	/ru/docs/MDN/Structures
 /ru/docs/MDN/Contribute/Structures/Live_samples	/ru/docs/MDN/Structures/Live_samples
