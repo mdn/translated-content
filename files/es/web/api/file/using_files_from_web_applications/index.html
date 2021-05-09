@@ -34,8 +34,6 @@ translation_of: Web/API/File/Using_files_from_web_applications
 
 <p>En este caso, la lista de ficheros pasada a la función <code>handleFiles() </code>contiene un objeto <a href="/en/DOM/File" title="en/DOM/File"><code>File </code></a>por cada fichero seleccionado por el usuario. </p>
 
-<p>{{ h2_gecko_minversion("Using hidden file input elements using the click() method", "2.0") }}</p>
-
 <p>Comenzando en Gecko 2.0 {{ geckoRelease("2.0") }}, se puede ocultar el realmente feo {{ HTMLElement("input") }} y representar tu propio interfaz para abrir el picker de ficheros y pintar que fichero o ficheros ha seleccionado el usuario. Esto se puede hacer añadiendo al elemento input la característica "display:none" en su css, o estilo y llamando al método <code>click() </code>del elemento {{ HTMLElement("input") }}.</p>
 
 <p>Como aparece en este HTML:</p>
@@ -74,8 +72,6 @@ function handleFiles() {
 </pre>
 
 <p>Nota: en este caso, la función <code>handleFiles() </code>mira la lista de ficheros con la finalidad de aceptar un parametro, mientras los eventos listeners sean añadidos de esta manera no pueden aceptar un parametro del input.</p>
-
-<p>{{ h1_gecko_minversion("Using blob URLs", "2.0") }}</p>
 
 <p>Gecko 2.0 {{ geckoRelease("2.0") }} introduce soporte para los métodos de DOM {{ domxref("window.createBlobURL()") }} y {{ domxref("window.revokeBlobURL()") }}. El cual te permite crear un simple string con la URL que referenciar cualquier dato que pueda referenciar usando un objeto <a href="/en/DOM/File" title="en/DOM/File"><code>File</code></a> DOM, esto incluye los ficheros locales del usuario del dispositivo.</p>
 
@@ -191,8 +187,6 @@ function dragover(e) {
 <p>Cada imagen tiene la clase CSS "obj" añadida, para hacerla mas fácil buscarla en el árbol del DOM. Además añadimos un atributo<code> file</code> a cada imagen especificando el <a href="/en/DOM/File" title="en/DOM/File"><code>Fichero</code></a> para la imagen; esto nos permitira traer el hecho de subir las imágenes más tarde. Finalmente, usamos {{ domxref("Node.appendChild()") }} para añadir la nueva miniatura en el área de la previsualización de nuestro documento.</p>
 
 <p>A continuación establecemos el <a href="/en/DOM/FileReader" title="en/DOM/FileReader"><code>FileReader</code></a> para controlar la carga de la imagen de forma asíncrona y enlazarla con el elemento <code>img</code>. Después de crear el nuevo objeto <code>FileReader</code>, configuramos su función <code>onload</code>, luego llamamos a <code>readAsDataURL()</code> para comenzar la operación de lectura en segundo plano. Cuando el contenido completo de la imagen ha sido cargado, se convierte a  <code>data:</code> URL, el cuál es pasado al callback <code>onload</code>. Nuestra implementación de esta rutina simplemente establece el atributo <code>src</code> del elemento <code>img</code> cargado, cuyo resultado es la imagen apareciendo en la miniatura en la pantalla del usuario.</p>
-
-<p>{{ h1_gecko_minversion("Example: Using blob URLs to display images", "2.0") }}</p>
 
 <p>Este ejemplo el objeto blob URLs para mostrar las miniaturas de las imágenes. Además, se muestra otra información del archivo incluyendo sus nombres y tamaños. Tú puedes <a href="/samples/domref/file-click-demo.html" title="https://developer.mozilla.org/samples/domref/file-click-demo.html">ver el ejemplo</a> (tenga en cuenta que se requiere una versión <a class="external" href="http://nightly.mozilla.org/" title="http://nightly.mozilla.org/">Nghtly</a> de Firefox del 23 de september 23 o mas reciente, o Firefox 4.0 beta 7).</p>
 
@@ -368,5 +362,3 @@ function dragover(e) {
  <li><a href="/En/XMLHttpRequest/Using_XMLHttpRequest" title="En/Using XMLHttpRequest">Usando XMLHttpRequest</a></li>
  <li><a href="/en/XMLHttpRequest" title="en/XMLHttpRequest"><code>XMLHttpRequest</code></a></li>
 </ul>
-
-<p>{{ HTML5ArticleTOC() }}</p>

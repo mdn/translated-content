@@ -1,19 +1,19 @@
 ---
-title: '<figure>: 任意のキャプション付きの図要素'
+title: '<figure>: キャプションが付けられる図要素'
 slug: Web/HTML/Element/figure
 tags:
+  - Element
   - HTML
-  - HTML コンテンツグループ化
-  - 'HTML:フローコンテンツ'
-  - 'HTML:区分化ルート'
-  - 'HTML:知覚可能コンテンツ'
+  - HTML grouping content
+  - Information
+  - Presentation
   - Reference
-  - 要素
+  - figure
 translation_of: Web/HTML/Element/figure
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML の <code>&lt;figure&gt;</code> (任意のキャプション付きの図) 要素</strong>は、図表などの自己完結型のコンテンツを表し、任意で ({{HTMLElement("figcaption")}}) 要素を使用して表されるキャプションを伴います。</span>図、すなわちキャプションとその中身は一つの単位として参照されます。</p>
+<p><span class="seoSummary"><strong>HTML の <code>&lt;figure&gt;</code> (キャプションが付けられる図) 要素</strong>は、図表などの自己完結型のコンテンツを表し、任意で {{HTMLElement("figcaption")}} 要素を使用して表されるキャプションを付けることができます。</span>図、すなわちキャプションとその中身は一つの単位として参照されます。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}</div>
 
@@ -22,12 +22,12 @@ translation_of: Web/HTML/Element/figure
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_roots">区分化ルート</a>, 知覚可能コンテンツ</td>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots">区分化ルート</a>, 知覚可能コンテンツ</td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
-   <td>{{HTMLElement("figcaption")}} 要素とそれに続く<a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>、またはフローコンテンツとそれに続く{{HTMLElement("figcaption")}} 要素、またはフローコンテンツ</td>
+   <td>{{HTMLElement("figcaption")}} 要素とそれに続く<a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>、またはフローコンテンツとそれに続く {{HTMLElement("figcaption")}} 要素、またはフローコンテンツ</td>
   </tr>
   <tr>
    <th scope="row">タグの省略</th>
@@ -35,11 +35,15 @@ translation_of: Web/HTML/Element/figure
   </tr>
   <tr>
    <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れるすべての要素</td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>を受け入れるすべての要素</td>
   </tr>
   <tr>
+		<th scope="row">暗黙の ARIA ロール</th>
+		<td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Figure_Role">figure</a></td>
+	</tr>
+	 <tr>
    <th scope="row">許可されている ARIA ロール</th>
-   <td>{{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
+   <td>子孫に <a href="/ja/docs/Web/HTML/Element/figcaption">figcaption</a> がない場合: <a href="https://www.w3.org/TR/html-aria/#dfn-any-role">any</a>、それ以外の場合は許可されているロールなし</td>
   </tr>
   <tr>
    <th scope="row">DOM インターフェイス</th>
@@ -48,21 +52,21 @@ translation_of: Web/HTML/Element/figure
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
 <p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
 
-<h2 id="Usage_notes" name="Usage_notes">使用上のメモ</h2>
+<h2 id="Usage_notes">使用上のメモ</h2>
 
 <ul>
  <li>ふつう <code>&lt;figure&gt;</code> は画像、イラスト、グラフ、コードの断片など、文書の本文の流れから参照されるものの、本文の流れに影響を与えることなく、文書のほかの部分や付録に移動することが可能なものに用います。</li>
- <li><a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_roots">区分化ルート</a>となり、 <code>&lt;figure&gt;</code> 要素のコンテンツのアウトラインは、文書の本文のアウトラインから除外されます。</li>
+ <li><a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots">区分化ルート</a>となり、 <code>&lt;figure&gt;</code> 要素のコンテンツのアウトラインは、文書の本文のアウトラインから除外されます。</li>
  <li>キャプションは <code>&lt;figure&gt;</code> 要素の中に (最初または最後の子要素として) {{HTMLElement("figcaption")}} 要素を挿入することで表すことができます。図の中で最初に見つかった最初の <code>&lt;figcaption&gt;</code> 要素が図のキャプションとして表示されます。</li>
 </ul>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="Images" name="Images">画像</h3>
+<h3 id="Images">画像</h3>
 
 <pre class="brush: html">&lt;!-- 単なる画像 --&gt;
 &lt;figure&gt;
@@ -82,7 +86,7 @@ translation_of: Web/HTML/Element/figure
 
 <div>{{EmbedLiveSample("Images", "100%", 375)}}</div>
 
-<h3 id="Code_snippets" name="Code_snippets">コードスニペット</h3>
+<h3 id="Code_snippets">コードスニペット</h3>
 
 <pre class="brush: html">&lt;figure&gt;
   &lt;figcaption&gt;Get browser details using &lt;code&gt;navigator&lt;/code&gt;.&lt;/figcaption&gt;
@@ -102,7 +106,7 @@ function NavigatorExample() {
 
 <div>{{EmbedLiveSample("Code_snippets", "100%", 250)}}</div>
 
-<h3 id="Quotations" name="Quotations">引用</h3>
+<h3 id="Quotations">引用</h3>
 
 <pre class="brush: html">&lt;figure&gt;
   &lt;figcaption&gt;&lt;cite&gt;Edsger Dijkstra:&lt;/cite&gt;&lt;/figcaption&gt;
@@ -113,7 +117,7 @@ function NavigatorExample() {
 
 <div>{{EmbedLiveSample("Quotations")}}</div>
 
-<h3 id="Poems" name="Poems">詩</h3>
+<h3 id="Poems">詩</h3>
 
 <pre class="brush: html">&lt;figure&gt;
   &lt;p style="white-space:pre"&gt;
@@ -129,7 +133,7 @@ Love is a spirit all compact of fire,
 
 <div>{{EmbedLiveSample("Poems", "100%", 250)}}</div>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -158,13 +162,13 @@ Love is a spirit all compact of fire,
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<div class="hidden">このページの互換性一覧表は構造化データから生成されます。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<div class="hidden">このページの互換性一覧表は構造化データから生成されます。データに協力していただけるのであれば、 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("html.elements.figure")}}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>{{HTMLElement("figcaption")}} 要素</li>
