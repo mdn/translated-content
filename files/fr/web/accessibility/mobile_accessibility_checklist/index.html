@@ -10,7 +10,7 @@ tags:
 translation_of: Web/Accessibility/Mobile_accessibility_checklist
 original_slug: Accessibilité/Checklist_accessibilite_mobile
 ---
-<p>Ce document fournit une liste concise des points à vérifier par les développeurs pour garantir l'accessibilité d'une application mobile. Ce document est amené à évoluer pour tenir compte de nouvelles bonnes pratiques.</p>
+<p>Ce document fournit une liste concise des points à vérifier par les développeuses et développeurs pour garantir l'accessibilité d'une application mobile. Ce document est amené à évoluer pour tenir compte de nouvelles bonnes pratiques.</p>
 
 <h2 id="colour">La couleur</h2>
 
@@ -53,7 +53,7 @@ original_slug: Accessibilité/Checklist_accessibilite_mobile
 <ul>
   <li>Un équivalent textuel <strong>DOIT</strong> être fourni pour chaque élément non textuel non strictement présenté dans l'application.
     <ul>
-      <li>Utilisez <em>alt</em> et <em>title</em> lorsque cela est approprié (voir l'article de Steve Faulkner sur l'<a href="https://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/">Utilisation de l'attribut HTML title</a>).</li>
+      <li>Utilisez <em>alt</em> et <em>title</em> lorsque cela est approprié (voir l'article de Steve Faulkner sur l'<a href="https://www.tpgi.com/using-the-html-title-attribute-updated/">Utilisation de l'attribut HTML title</a>).</li>
       <li>Si les attributs ci-dessus ne sont pas applicables, utilisez les <a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">États et propriétés ARIA</a> appropriés tels que <code>aria-label</code>, <code>aria-labelledby</code>, ou <code>aria-describedby</code>.</li>
     </ul>
   </li>
@@ -65,7 +65,7 @@ original_slug: Accessibilité/Checklist_accessibilite_mobile
 <h2 id="handling_state">La gestion des états</h2>
 
 <ul>
-  <li>Les contrôles standard tels que les boutons radio et les cases à cocher sont gérés par le système d'exploitation. Cependant, pour d'autres contrôles personnalisés, les changements d'état <strong>DOIVENT</strong> être fournis via <a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">ARIA States</a> tels que <code>aria-checked</code>, <code>aria-disabled</code>, <code>aria-selected</code>, <code>aria-expanded</code> et <code>aria-pressed</code>.</li>
+  <li>Les contrôles standard tels que les boutons radio et les cases à cocher sont gérés par le système d'exploitation. Cependant, pour d'autres contrôles personnalisés, les changements d'état <strong>DOIVENT</strong> être fournis via <a href="https://www.w3.org/TR/wai-aria-1.1/#state_prop_def">les états ARIA</a> tels que <code>aria-checked</code>, <code>aria-disabled</code>, <code>aria-selected</code>, <code>aria-expanded</code> et <code>aria-pressed</code>.</li>
 </ul>
 
 <h2 id="orientation">L'orientation</h2>
@@ -97,10 +97,5 @@ original_slug: Accessibilité/Checklist_accessibilite_mobile
       <li>Il est essentiel de déclencher l'action sur l'événement de descente. Par exemple, pour jouer à un jeu ou à une application de piano.</li>
     </ul>
   </li>
-  <li>Les cibles tactiles <strong>DOIVENT</strong> être suffisamment grandes pour que l'utilisateur puisse interagir avec elles (voir le <a href="https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size">BBC Mobile Accessibility Guidelines</a> pour des directives utiles sur la taille des cibles tactiles).</li>
+  <li>Les cibles tactiles <strong>DOIVENT</strong> être suffisamment grandes pour que l'utilisateur puisse interagir avec elles (voir <a href="https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/design/touch-target-size">BBC Mobile Accessibility Guidelines</a> pour des directives utiles sur la taille des cibles tactiles).</li>
 </ul>
-
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>La <a href="https://yzen.github.io/2014/04/30/mobile-accessibility-checklist.html">version originale, anglaise, de ce document</a> a été écrite par <a href="https://yzen.github.io/">Yura Zenevich</a>.</p>
-</div>
