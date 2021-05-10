@@ -123,8 +123,6 @@ jobs:
           # Save the PR number into the build
           echo ${{ github.event.number }} > $BUILD_OUT_ROOT/NR
 
-          echo "AFTER"
-
           # Save the raw diff blob and store that inside the ./build/
           # directory.
           # The purpose of this is for the PR Review Companion to later
@@ -136,15 +134,15 @@ jobs:
           echo ${{ github.sha }}
           #git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > $BUILD_OUT_ROOT/DIFF
 
-          echo "AFTER 2"
-
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
         env:
           # This must match what we set in the "Build changed content" step above
           BUILD_OUT_ROOT: /tmp/build
         run: |
-          rsync -a node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT/
+          ls -l ${{ github.workspace }}/mdn/content
+          ls -l ${{ github.workspace }}/mdn/content/node_modules
+          rsync -a ${{ github.workspace }}/mdn/content/node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT/
 
           # Now that build/ directory contains everything you need to deploy
           # that as a site. HTML, static assets, images, etc.
