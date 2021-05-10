@@ -121,6 +121,8 @@ jobs:
           du -sh $BUILD_OUT_ROOT
 
           # Save the PR number into the build
+          echo "EVENT NUMBER???"
+          echo ${{ github.event.number }}
           echo ${{ github.event.number }} > $BUILD_OUT_ROOT/NR
 
           # Save the raw diff blob and store that inside the ./build/
