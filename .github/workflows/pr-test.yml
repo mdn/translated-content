@@ -118,21 +118,17 @@ jobs:
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
           echo "Disk usage size of build/"
-          du -sh /tmp/build
-          echo "DEBUGGING AAA"
           du -sh $BUILD_OUT_ROOT
-          echo "DEBUGGING BBB"
 
           # Save the PR number into the build
-          echo "EVENT NUMBER???"
-          echo ${{ github.event.number }}
           echo ${{ github.event.number }} > $BUILD_OUT_ROOT/NR
 
           # Save the raw diff blob and store that inside the ./build/
           # directory.
           # The purpose of this is for the PR Review Companion to later
           # be able to use this raw diff file for the benefit of analyzing.
-          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > $BUILD_OUT_ROOT/DIFF
+          #XXX This doesn't work in mdn/translated-content
+          #git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > $BUILD_OUT_ROOT/DIFF
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
@@ -150,12 +146,7 @@ jobs:
           # is 2.3MB but only 864KB without all the .map files.
           # Let's delete those this time because this isn't the right time
           # to debug JS or CSS.
-          echo "Before..."
-          du -sh $BUILD_OUT_ROOT
-          find $BUILD_OUT_ROOT/static -type f -name "*.map" | xargs ls -lh
           find $BUILD_OUT_ROOT/static -type f -name "*.map" | xargs rm
-          echo "After..."
-          du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v2
         if: ${{ env.GIT_DIFF_CONTENT }}
