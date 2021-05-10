@@ -8,47 +8,46 @@ tags:
   - Intl
   - JavaScript
   - ListFormat
-  - 国際化
+  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Intl.ListFormat</code></strong> オブジェクトは、言語特有のリストを利用可能にするコンストラクターです。</p>
+<p><strong><code>Intl.ListFormat</code></strong> オブジェクトは、言語特有のリストの整形を可能にします。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}</div>
+<!-- このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 https://github.com/mdn/interactive-examples をクローンしてプルリクエストを送信してください。 -->
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
-
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+<h2 id="Constructor">コンストラクター</h2>
 
 <dl>
  <dt>{{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}</dt>
- <dd>新しい <code>ListFormat</code> オブジェクトを作成します。</dd>
+ <dd>新しい <code>Intl.ListFormat</code> オブジェクトを作成します。</dd>
 </dl>
 
-<h2 id="Static_methods" name="Static_methods">静的メソッド</h2>
+<h2 id="Static_methods">静的メソッド</h2>
 
 <dl>
- <dt>{{jsxref("ListFormat.supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}</dt>
+ <dt>{{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}</dt>
  <dd>指定したロケールのうち、ランタイムの既定のロケールに代替されることなく対応しているものを含む配列を返します。</dd>
 </dl>
 
-<h2 id="Instance_methods" name="Instance_methods">インスタンスメソッド</h2>
+<h2 id="Instance_methods">インスタンスメソッド</h2>
 
 <dl>
- <dt>{{jsxref("ListFormat.prototype.format", "Intl.ListFormat.prototype.format()")}}</dt>
+ <dt>{{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}</dt>
  <dd>言語固有の形式の文字列を返して，列挙要素を表示します。</dd>
- <dt>{{jsxref("ListFormat.prototype.formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}</dt>
+ <dt>{{jsxref("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}</dt>
  <dd>ロケールを考慮した方法で値のリストを整形するために使用できる、さまざまな部分を表すオブジェクトの配列を返します。</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="format_の使用">format の使用</h3>
+<h3 id="Using_format">format の使用</h3>
 
 <p>次の例では、英語を使用するリストのフォーマッターを生成する方法を示します。</p>
 
-<pre class="brush: js notranslate">const list = ['Motorcycle', 'Bus', 'Car'];
+<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
 
  console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).format(list));
 // &gt; Motorcycle, Bus and Car
@@ -60,11 +59,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 // &gt; Motorcycle Bus Car
 </pre>
 
-<h3 id="Using_formatToParts" name="Using_formatToParts">formatToParts の使用</h3>
+<h3 id="Using_formatToParts">formatToParts の使用</h3>
 
 <p>次の例では、整形済みの部分を返すリストフォーマッターを生成する方法を示します。</p>
 
-<pre class="brush: js notranslate">const list = ['Motorcycle', 'Bus', 'Car'];
+<pre class="brush: js">const list = ['Motorcycle', 'Bus', 'Car'];
 console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' }).formatToParts(list));
 
 // [ { "type": "element", "value": "Motorcycle" },
@@ -74,11 +73,11 @@ console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' })
 //   { "type": "element", "value": "Car" } ];
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+<h2 id="Polyfill">ポリフィル</h2>
 
 <p><a href="https://formatjs.io/docs/polyfills/intl-listformat">formatjs Intl.ListFormat polyfill</a></p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -93,15 +92,11 @@ console.log(new Intl.ListFormat('en-GB', { style: 'long', type: 'conjunction' })
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<div>
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<div>{{Compat("javascript.builtins.Intl.ListFormat")}}</div>
 
-<p>{{Compat("javascript.builtins.Intl.ListFormat")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>{{jsxref("Intl")}}</li>
