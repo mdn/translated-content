@@ -599,7 +599,7 @@ console.log(a3); // logs [8, 6, 7, 9]
 
 <h3 id="No_separate_this">独自の <code>this</code> を持たない</h3>
 
-<p>アロー関数の導入以前は、すべての新しい関数には独自の <a href="/ja/docs/Web/JavaScript/Reference/Operators/this">this</a> 値が定義されていした (コンストラクターの場合は新しいオブジェクトに、 <a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a> の関数呼び出しの場合は undefined に、関数が「オブジェクトのメソッド」として呼び出された場合はその基底オブジェクトに、といったように) 。これはオブジェクト指向プログラミングにとっては厄介です。</p>
+<p>アロー関数の導入以前は、すべての新しい関数には独自の <a href="/ja/docs/Web/JavaScript/Reference/Operators/this">this</a> 値が定義されていました (コンストラクターの場合は新しいオブジェクトに、 <a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a> の関数呼び出しの場合は undefined に、関数が「オブジェクトのメソッド」として呼び出された場合はその基底オブジェクトに、といったように) 。これはオブジェクト指向プログラミングにとっては厄介です。</p>
 
 <pre class="brush: js">function Person() {
   // この Person() コンストラクターは自身を `this` と定義します。
