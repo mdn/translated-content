@@ -7,12 +7,12 @@ tags:
   - ExtendableEvent
   - Interface
   - Reference
-  - Services Workers
+  - Service Workers
 translation_of: Web/API/ExtendableEvent
 ---
 <div>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</div>
 
-<p>L'interface <strong><code>ExtendableEvent</code></strong> étend la durée de vie des évènemets {{event("install")}} et {{event("activate")}} envoyés dans la portée global dans le cycle de vie du service worker. Elle s'assure que les évènements fonctionnels (comme {{domxref("FetchEvent")}}) ne sont pas distribués avant de mettre à jour les shémas de la base de données et de vider l'ancien cache.</p>
+<p>L'interface <strong><code>ExtendableEvent</code></strong> étend la durée de vie des événemets {{event("install")}} et {{event("activate")}} envoyés dans la portée globale dans le cycle de vie du service worker. Elle s'assure que les événements fonctionnels (comme {{domxref("FetchEvent")}}) ne soient pas distribués avant de mettre à jour les schémas de la base de données et de vider l'ancien cache.</p>
 
 <p>Si {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} est appelé en dehors du gestionnaire <code>ExtendableEvent</code>, le navigateur doit lever <code>InvalidStateError</code>; notez que plusieurs appels vont s'empiler, et que les promesses de résultat seront ajoutées à la liste des <a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises">promesses à vie étendue</a>.</p>
 
@@ -25,19 +25,19 @@ translation_of: Web/API/ExtendableEvent
 <p>{{InheritanceDiagram(700, 60, 20)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: Cette interface est disponnible seulement quand la portée globale est {{domxref("ServiceWorkerGlobalScope")}}. Elle n'est pas disponible quand c'est une {{domxref("Window")}}, ou le scope d'un autre genre de worker.</p>
+<p><strong>Note</strong>: Cette interface est disponible seulement quand la portée globale est {{domxref("ServiceWorkerGlobalScope")}}. Elle n'est pas disponible quand c'est une {{domxref("Window")}}, ou le scope d'un autre genre de worker.</p>
 </div>
 
 <h2 id="Constructeur">Constructeur</h2>
 
 <dl>
  <dt>{{domxref("ExtendableEvent.ExtendableEvent()", "ExtendableEvent()")}}</dt>
- <dd>Crée un nouvel object <code>ExtendableEvent</code>.</dd>
+ <dd>Crée un nouvel objet <code>ExtendableEvent</code>.</dd>
 </dl>
 
 <h2 id="Propriétés">Propriétés</h2>
 
-<p>N'implémente pas de propriétés spécifiques, mais hérite celles de sont parent, <em>{{domxref("Event")}}.</em></p>
+<p>N'implémente pas de propriétés spécifiques, mais hérite de celles de son parent, <em>{{domxref("Event")}}.</em></p>
 
 <h2 id="Méthodes">Méthodes</h2>
 
