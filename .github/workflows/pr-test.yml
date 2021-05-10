@@ -118,7 +118,10 @@ jobs:
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
           echo "Disk usage size of build/"
+          du -sh /tmp/build
+          echo "DEBUGGING AAA"
           du -sh $BUILD_OUT_ROOT
+          echo "DEBUGGING BBB"
 
           # Save the PR number into the build
           echo "EVENT NUMBER???"
