@@ -154,12 +154,10 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         if: ${{ env.GIT_DIFF_CONTENT }}
-        env:
-          # This must match what we set in the "Build changed content" step above
-          BUILD_OUT_ROOT: /tmp/build
         with:
           name: build
-          path: ${{ env.BUILD_OUT_ROOT }}
+          # This must match what we set in the "Build changed content" step above
+          path: /tmp/build
 
       - uses: technote-space/get-diff-action@v4.1.1
         with:
