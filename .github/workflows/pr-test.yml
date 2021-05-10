@@ -147,17 +147,19 @@ jobs:
           # to debug JS or CSS.
           echo "Before..."
           du -sh $BUILD_OUT_ROOT
-          find build/static -type f -name "*.map" | xargs ls -lh
-          find build/static -type f -name "*.map" | xargs rm
+          find $BUILD_OUT_ROOT/static -type f -name "*.map" | xargs ls -lh
+          find $BUILD_OUT_ROOT/static -type f -name "*.map" | xargs rm
           echo "After..."
           du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v2
         if: ${{ env.GIT_DIFF_CONTENT }}
+        env:
+          # This must match what we set in the "Build changed content" step above
+          BUILD_OUT_ROOT: /tmp/build
         with:
           name: build
-          # This must match what we set in the "Build changed content" step above
-          path: /tmp/build
+          path: ${{ env.BUILD_OUT_ROOT }}
 
       - uses: technote-space/get-diff-action@v4.1.1
         with:
