@@ -187,7 +187,7 @@ npm run dev</pre>
   /* 樣式放這 */
 &lt;/style&gt;
 
-&lt;!-- 標記（markup）（零或多個 HTML 元素）放這 --&gt;</pre>
+&lt;!-- 標記（零或多個 HTML 元素）放這 --&gt;</pre>
 
 <div class="notecard note">
 <p><strong>注意</strong>：更多元件格式的資訊，可以至 <a href="https://svelte.dev/docs#Component_format">svelte 文件</a>閱讀。</p>
@@ -228,7 +228,7 @@ npm run dev</pre>
 
 <h3 id="The_&lt;script&gt;_section"><code>&lt;script&gt;</code> 區塊</h3>
 
-<p><code>&lt;script&gt;</code> 區塊包含元件實例被建構時運行的 JavaScript。元件標記（markup）區塊則可以使用頂層那些被宣告或載入的變數。頂層變數是 Svelte 預設用來處理元件狀態和互動使用。我們之後會解釋更多細節來說明這代表什麼意思。</p>
+<p><code>&lt;script&gt;</code> 區塊包含元件實例被建構時運行的 JavaScript。元件標記區塊則可以使用頂層那些被宣告或載入的變數。頂層變數是 Svelte 預設用來處理元件狀態和互動使用。我們之後會解釋更多細節來說明這代表什麼意思。</p>
 
 <pre class="brush: html">&lt;script&gt;
   export let name;
@@ -236,16 +236,16 @@ npm run dev</pre>
 
 <p>Svelte 使用 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/export">export</a></code> 關鍵字將變數宣告標記為屬性，代表這個屬性可以被外部其它元件存取。這是 Svelte 擴展 JavaScript 語法讓其更有用且使用上如同以往的其中一個例子。</p>
 
-<h3 id="The_markup_section">標記（markup）區塊</h3>
+<h3 id="The_markup_section">標記區塊</h3>
 
-<p>標記（markup）區塊中你可以插入任何你想要的 HTML，另外你也可以插入有效的 JavaScript 表達式在大括號（<code>{}</code>）中。此例中我們嵌入 <code>name</code> 屬性值在 <code>Hello</code> 文字的右邊。</p>
+<p>標記區塊中你可以插入任何你想要的 HTML，另外你也可以插入有效的 JavaScript 表達式在大括號（<code>{}</code>）中。此例中我們嵌入 <code>name</code> 屬性值在 <code>Hello</code> 文字的右邊。</p>
 
 <pre class="brush: html">&lt;main&gt;
   &lt;h1&gt;Hello {name}!&lt;/h1&gt;
   &lt;p&gt;Visit the &lt;a href="https://svelte.dev/tutorial"&gt;Svelte tutorial&lt;/a&gt; to learn how to build Svelte apps.&lt;/p&gt;
 &lt;/main&gt;</pre>
 
-<p>Svelte 也支援一些標籤，像是 <code>{#if...}</code>，<code>{#each...}</code> 和 <code>{#await...}</code> ——分別允許你可以條件式渲染部分標記（markup）區塊，迭代清單元素與處理非同步數值。</p>
+<p>Svelte 也支援一些標籤，像是 <code>{#if...}</code>，<code>{#each...}</code> 和 <code>{#await...}</code> ——分別允許你可以條件式渲染部分標記區塊，迭代清單元素與處理非同步數值。</p>
 
 <h3 id="The_&lt;style&gt;_section"><code>&lt;style&gt;</code> 區塊</h3>
 
