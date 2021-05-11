@@ -18,8 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Debug github.sha 1
-        run: echo ${{ github.sha }}
+      - name: Debug github.sha
+        run: |
+          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }}
 
       - uses: actions/checkout@v2
         with:
