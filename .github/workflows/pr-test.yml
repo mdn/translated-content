@@ -136,10 +136,6 @@ jobs:
           # The purpose of this is for the PR Review Companion to later
           # be able to use this raw diff file for the benefit of analyzing.
           #XXX This doesn't work in mdn/translated-content
-          echo "github.event.pull_request.base.sha"
-          echo ${{ github.event.pull_request.base.sha }}
-          echo "github.sha"
-          echo ${{ github.sha }}
           git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }}
           git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} > $BUILD_OUT_ROOT/DIFF
 
