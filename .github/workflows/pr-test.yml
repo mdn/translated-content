@@ -117,6 +117,9 @@ jobs:
 
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
+          echo "What just got built?"
+          tree $BUILD_OUT_ROOT
+
           echo "Disk usage size of build/"
           du -sh $BUILD_OUT_ROOT
 
@@ -141,7 +144,7 @@ jobs:
           BUILD_OUT_ROOT: /tmp/build
         run: |
           ls -l ${{ github.workspace }}/mdn/content
-          ls -l ${{ github.workspace }}/mdn/content/node_modules
+          # ls -l ${{ github.workspace }}/mdn/content/node_modules
           echo "In $BUILD_OUT_ROOT"
           ls -l $BUILD_OUT_ROOT
           echo "Tree $BUILD_OUT_ROOT"
