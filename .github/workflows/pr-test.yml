@@ -140,8 +140,8 @@ jobs:
           echo ${{ github.event.pull_request.base.sha }}
           echo "github.sha"
           echo ${{ github.sha }}
-          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }}
-          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > $BUILD_OUT_ROOT/DIFF
+          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }}
+          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} > $BUILD_OUT_ROOT/DIFF
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
