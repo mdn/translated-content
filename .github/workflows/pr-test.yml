@@ -136,8 +136,8 @@ jobs:
           # The purpose of this is for the PR Review Companion to later
           # be able to use this raw diff file for the benefit of analyzing.
           #XXX This doesn't work in mdn/translated-content
-          git diff --diff-filter=ACMRT 'HEAD~1'
-          git diff --diff-filter=ACMRT 'HEAD~1' > $BUILD_OUT_ROOT/DIFF
+          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}
+          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }} > $BUILD_OUT_ROOT/DIFF
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
