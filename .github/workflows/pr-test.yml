@@ -115,7 +115,7 @@ jobs:
         run: |
           mkdir -p $BUILD_OUT_ROOT
 
-          yarn build ${{ env.GIT_DIFF_CONTENT }}
+          node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF_CONTENT }}
 
           echo "What just got built?"
           tree $BUILD_OUT_ROOT
