@@ -18,10 +18,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Debug github.sha 1
+        run: echo ${{ github.sha }}
+
       - uses: actions/checkout@v2
         with:
           repository: mdn/content
           path: mdn/content
+
+      - name: Debug github.sha 2
+        run: echo ${{ github.sha }}
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
@@ -134,7 +140,8 @@ jobs:
           echo ${{ github.event.pull_request.base.sha }}
           echo "github.sha"
           echo ${{ github.sha }}
-          #git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > $BUILD_OUT_ROOT/DIFF
+          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }}
+          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > $BUILD_OUT_ROOT/DIFF
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
