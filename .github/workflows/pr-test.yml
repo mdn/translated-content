@@ -115,10 +115,9 @@ jobs:
         run: |
           mkdir -p $BUILD_OUT_ROOT
 
+          # Don't use `yarn build` (from mdn/content) because that one hardcodes
+          # the BUILD_OUT_ROOT and CONTENT_ROOT env vars.
           node node_modules/@mdn/yari/build/cli.js ${{ env.GIT_DIFF_CONTENT }}
-
-          echo "What just got built?"
-          tree $BUILD_OUT_ROOT
 
           echo "Disk usage size of build/"
           du -sh $BUILD_OUT_ROOT
@@ -143,12 +142,6 @@ jobs:
           # This must match what we set in the "Build changed content" step above
           BUILD_OUT_ROOT: /tmp/build
         run: |
-          ls -l ${{ github.workspace }}/mdn/content
-          # ls -l ${{ github.workspace }}/mdn/content/node_modules
-          echo "In $BUILD_OUT_ROOT"
-          ls -l $BUILD_OUT_ROOT
-          echo "Tree $BUILD_OUT_ROOT"
-          tree $BUILD_OUT_ROOT
           rsync -a ${{ github.workspace }}/mdn/content/node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT/
 
           # Now that build/ directory contains everything you need to deploy
