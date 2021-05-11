@@ -44,7 +44,7 @@ tags:
 
 <p>Svelte 更貼近傳統的網站開發模型（HTML、CSS、JS），它只有對 HTML 和 JavaScript 加上一些擴充，與其它框架相比，可以說只需要一點點概念和工具就能學習。</p>
 
-<p>現階段的缺點只因它目前仍在發展中 — 和其它成熟框架相比它的生態環境較受限於工具、支援、套件、使用模式等等限制，工作機會也比較少。但它的優點應該足夠讓你感興趣並去探索它。</p>
+<p>現階段的缺點只因它目前仍在發展中——和其它成熟框架相比它的生態環境較受限於工具、支援、套件、使用模式等等限制，工作機會也比較少。但它的優點應該足夠讓你感興趣並去探索它。</p>
 
 <div class="notecard note">
 <p><strong>注意</strong>：最近 Svelte 已經正式加入 <a href="https://svelte.dev/blog/svelte-and-typescript">TypeScript 支援</a>，這也是最受歡迎的功能之一，我們將在之後的教學系列中看到它。</p>
@@ -108,7 +108,7 @@ npm install
 npm run dev</pre>
 
 <div class="notecard note">
-<p><strong>注意</strong>：不用太驚訝 degit 做了這麼多事情 — 它其實就只是讓你可以從 git 儲存庫下載和解壓縮最新版本的內容。使用它比起使用 <code>git clone</code> 更快能達到我們的目的，因為它並不會下載整個儲存庫的歷史以及不會複製一份放在本機端。</p>
+<p><strong>注意</strong>：不用太驚訝 degit 做了這麼多事情——它其實就只是讓你可以從 git 儲存庫下載和解壓縮最新版本的內容。使用它比起使用 <code>git clone</code> 更快能達到我們的目的，因為它並不會下載整個儲存庫的歷史以及不會複製一份放在本機端。</p>
 </div>
 
 <p>之後執行 <code>npm run dev</code>，Svelte 將會編譯和建構你的應用程式。它將會跑在本機 <code>localhost:5000</code> 位址。當你對來源檔案做了異動，Svelte 將會偵測到檔案更新並自動地重新編譯和刷新你的應用程式。你的瀏覽器將會顯示如下圖：</p>
@@ -145,14 +145,14 @@ npm run dev</pre>
 <ul>
  <li><code>package.json</code> 和 <code>package-lock.json</code>：Node.js/npm 用它來組織化管理你的專案，相關資訊可以在這邊找到。在這個教學系列中，你不需要完全了解這個檔案，但如果你想要學習更多的話，你可以至 NodeJS.org 閱讀 <a href="https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/">什麼是 <code>package.json</code> 檔案</a>？我們在<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management">基礎套件管理教學系列</a>也有談到。</li>
  <li><code>node_modules</code>：這裡是 node 存放專案相依套件的地方。這些相依套件在正式環境不會看到，只有開發時才會被使用到。</li>
- <li><code>.gitignore</code>：告訴 git 有哪些檔案或資料夾不要納入專案版本控制 — 透過它可以決定哪些檔案要納入專案版本控制，還蠻實用的！</li>
+ <li><code>.gitignore</code>：告訴 git 有哪些檔案或資料夾不要納入專案版本控制——透過它可以決定哪些檔案要納入專案版本控制，還蠻實用的！</li>
  <li><code>rollup.config.js</code>：Svelte 使用 <a href="https://rollupjs.org/">rollup.js</a> 做為模組包裝工具。這個組態檔案告訴 rollup 如何編譯和建構你的應用程式。假如你偏好使用 <a href="https://webpack.js.org/">webpack</a>，你可以改執行 <code>npx degit sveltejs/template-webpack svelte-app</code> 來建構你的初始應用程式。</li>
  <li><code>scripts</code>：包含所需的設置腳本。現在應該只有 <code>setupTypeScript.js</code>。
   <ul>
     <li><code>setupTypeScript.js</code>：此腳本用來支援 Svelte 可以使用 TypeScript。我們將在之後的文章談到更多。</li>
   </ul>
 </li>
- <li><code>src</code>：這個目錄主要放你應用程式的來源程式碼 — 你寫的程式碼基本都會放在這。
+ <li><code>src</code>：這個目錄主要放你應用程式的來源程式碼——你寫的程式碼基本都會放在這。
   <ul>
    <li><code>App.svelte</code>：在你的應用程式中它是最高層級的元件。不過它現在只會渲染出「Hello World!」的訊息給你看。</li>
    <li><code>main.js</code>：我們應用程式的進入點。它會實例化 <code>App</code> 元件並將其綁定至我們 html 頁面的 body 上。</li>
@@ -173,27 +173,27 @@ npm run dev</pre>
  </li>
 </ul>
 
-<h2 id="Having_a_look_at_our_first_Svelte_component">Having a look at our first Svelte component</h2>
+<h2 id="Having_a_look_at_our_first_Svelte_component">讓我們來看看第一個 Svelte 元件</h2>
 
-<p>Components are the building blocks of Svelte applications. They are written into <code>.svelte</code> files using a superset of HTML.</p>
+<p>元件是 Svelte 應用程式建構的基礎。使用 HTML 的超集合將它們寫至 <code>.svelte</code> 檔案中。</p>
 
-<p>All three sections — <code>&lt;script&gt;</code>, <code>&lt;styles&gt;</code>, and markup — are optional, and can appear in any order you like.</p>
+<p>全部有三個區塊—— <code>&lt;script&gt;</code>，<code>&lt;styles&gt;</code> 和標記（markup）區塊——各區塊存在與否由你決定，也沒限制區塊存放的順序。</p>
 
 <pre class="brush: html">&lt;script&gt;
-  // logic goes here
+  // 邏輯放這
 &lt;/script&gt;
 
 &lt;style&gt;
-  /* styles go here */
+  /* 樣式放這 */
 &lt;/style&gt;
 
-&lt;!-- markup (zero or more HTML elements) goes here --&gt;</pre>
+&lt;!-- 標記（零或多個 HTML 元素）放這 --&gt;</pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: For more information on the component format, have a look at the <a href="https://svelte.dev/docs#Component_format">svelte documentation</a>.</p>
+<p><strong>注意</strong>：更多元件格式的資訊，可以至 <a href="https://svelte.dev/docs#Component_format">svelte 文件</a>閱讀。</p>
 </div>
 
-<p>With this in mind, let's have a look at the <code>src/App.svelte</code> file that came with the starter template. You should see something like the following:</p>
+<p>接著我們來看入門範本中的 <code>src/App.svelte</code> 檔案，你應該會看到以下內容：</p>
 
 <pre class="brush: html">&lt;script&gt;
   export let name;
@@ -226,30 +226,30 @@ npm run dev</pre>
   }
 &lt;/style&gt;</pre>
 
-<h3 id="The_&lt;script&gt;_section">The <code>&lt;script&gt;</code> section</h3>
+<h3 id="The_&lt;script&gt;_section"><code>&lt;script&gt;</code> 區塊</h3>
 
-<p>The <code>&lt;script&gt;</code> block contains JavaScript that runs when a component instance is created. Variables declared (or imported) at the top level are 'visible' from the component's markup. Top-level variables is the way Svelte handles the component state, and they are reactive by default. We will explain in detail what this means later on.</p>
+<p><code>&lt;script&gt;</code> 區塊包含元件實例被建構時運行的 JavaScript。元件標記區塊則可以使用頂層那些被宣告或載入的變數。頂層變數是 Svelte 預設用來處理元件狀態和互動使用。我們之後會解釋更多細節來說明這代表什麼意思。</p>
 
 <pre class="brush: html">&lt;script&gt;
   export let name;
 &lt;/script&gt;</pre>
 
-<p>Svelte uses the <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/export">export</a></code> keyword to mark a variable declaration as a property (or prop), which means it becomes accessible to consumers of the component (e.g. other components). This is one example of Svelte extending JavaScript syntax to make it more useful, while keeping it familiar.</p>
+<p>Svelte 使用 <code><a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/export">export</a></code> 關鍵字將變數宣告標記為屬性，代表這個屬性可以被外部其它元件存取。這是 Svelte 擴展 JavaScript 語法讓其更有用且使用上如同以往的其中一個例子。</p>
 
-<h3 id="The_markup_section">The markup section</h3>
+<h3 id="The_markup_section">標記區塊</h3>
 
-<p>In the markup section you can insert any HTML you like, and in addition you can insert valid JavaScript expression inside single curly brackets (<code>{}</code>). In this case we are embedding the value of the <code>name</code> prop right after the <code>Hello</code> text.</p>
+<p>標記區塊中你可以插入任何你想要的 HTML，另外你也可以插入有效的 JavaScript 表達式在大括號（<code>{}</code>）中。此例中我們嵌入 <code>name</code> 屬性值在 <code>Hello</code> 文字的右邊。</p>
 
 <pre class="brush: html">&lt;main&gt;
   &lt;h1&gt;Hello {name}!&lt;/h1&gt;
   &lt;p&gt;Visit the &lt;a href="https://svelte.dev/tutorial"&gt;Svelte tutorial&lt;/a&gt; to learn how to build Svelte apps.&lt;/p&gt;
 &lt;/main&gt;</pre>
 
-<p>Svelte also supports tags like <code>{#if...}</code>, <code>{#each...}</code>, and <code>{#await...}</code> — these examples allow you to conditionally render a portion of the markup, iterate through a list of elements, and work with async values, respectively.</p>
+<p>Svelte 也支援一些標籤，像是 <code>{#if...}</code>，<code>{#each...}</code> 和 <code>{#await...}</code> ——分別允許你可以條件式渲染部分標記區塊，迭代清單元素與處理非同步數值。</p>
 
-<h3 id="The_&lt;style&gt;_section">The <code>&lt;style&gt;</code> section</h3>
+<h3 id="The_&lt;style&gt;_section"><code>&lt;style&gt;</code> 區塊</h3>
 
-<p>If you have experience working with CSS, the following snippet should make sense:</p>
+<p>假如你有寫過一些 CSS，下面這段應該不會太陌生：</p>
 
 <pre class="brush: html">&lt;style&gt;
   main {
@@ -273,18 +273,18 @@ npm run dev</pre>
   }
 &lt;/style&gt;</pre>
 
-<p>We are applying a style to our <code><a href="/zh-TW/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> element. What will happen to other components with <code>&lt;h1&gt;</code> elements in them?</p>
+<p>我們現在對 <code><a href="/zh-TW/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> 元素套用了一些樣式。對於其它元件中的 <code>&lt;h1&gt;</code> 元素們將會有什麼影響呢？</p>
 
-<p>In Svelte, CSS inside a component's <code>&lt;style&gt;</code> block will be scoped only to that component. This works by adding a class to selected elements, which is based on a hash of the component styles.</p>
+<p>在 Svelte 中，CSS 在元件 <code>&lt;style&gt;</code> 區塊中且被侷限於該元件範圍之內。這是透過對所選的元素加上一個類別來實現，而這個類別則會是基於元件樣式的雜湊值。</p>
 
-<p>You can see this in action by opening <code>localhost:5000</code> in a new browser tab, right/<kbd>Ctrl</kbd>-clicking on the <em>HELLO WORLD!</em> label, and choosing <em>Inspect</em>:</p>
+<p>你可以觀察到這個現象，藉由在瀏覽器開一個新標籤至 <code>localhost:5000</code> 位址，對 <em>HELLO WORLD!</em> 標籤右鍵／<kbd>Ctrl</kbd>點選並選擇<em>檢查</em>：</p>
 
 <p><img alt="Svelte starter app with devtools open, showing classes for scoped styles" src="02-svelte-component-scoped-styles.png"></p>
 
-<p>When compiling the app, Svelte changes our <code>h1</code> styles definition to <code>h1.svelte-1tky8bj</code>, and then modifies every <code>&lt;h1&gt;</code> element in our component to <code>&lt;h1 class="svelte-1tky8bj"&gt;</code>, so that it picks up the styles as required.</p>
+<p>編譯應用程式時，Svelte 會改變我們 <code>h1</code> 的樣式定義為 <code>h1.svelte-1tky8bj</code> 並更改每一個在此元件中的 <code>&lt;h1&gt;</code> 元素為 <code>&lt;h1 class="svelte-1tky8bj"&gt;</code>，如此就能讓該元件取得所需的樣式。</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: You can override this behavior and apply styles to a selector globally using the <code>:global(...)</code> modifier (see the <a href="https://svelte.dev/docs#style">Svelte <code>&lt;style&gt;</code> docs</a> for more information).</p>
+<p><strong>注意</strong>：你也可以使用 <code>:global(...)</code> 修飾符覆寫此行為並且套用樣式至全域選擇器上（可以至 <a href="https://svelte.dev/docs#style">Svelte <code>&lt;style&gt;</code> 文件</a>閱讀更多資訊）。</p>
 </div>
 
 <h2 id="Making_a_couple_of_changes">Making a couple of changes</h2>
