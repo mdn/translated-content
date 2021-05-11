@@ -17,12 +17,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        # Needed otherswise it will check out a merge commit which means
+        # you can't get a `git diff` for this PR compared to its base.
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Debug github.sha
         run: |
-          echo "Gregor's idea"
-          git show -l 1 ${{ github.sha }}
-
           # WAITING for https://github.community/t/how-do-i-get-the-git-diff-compared-to-main/179296
           git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }}
 
@@ -30,9 +31,6 @@ jobs:
         with:
           repository: mdn/content
           path: mdn/content
-
-      - name: Debug github.sha 2
-        run: echo ${{ github.sha }}
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.4
