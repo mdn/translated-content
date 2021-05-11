@@ -20,6 +20,10 @@ jobs:
 
       - name: Debug github.sha
         run: |
+	  echo "Gregor's idea"
+	  git show ${{ github.sha }}
+
+          # WAITING for https://github.community/t/how-do-i-get-the-git-diff-compared-to-main/179296
           git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }}
 
       - uses: actions/checkout@v2
