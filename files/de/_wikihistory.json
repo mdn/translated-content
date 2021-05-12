@@ -2273,12 +2273,6 @@
       "Micky261"
     ]
   },
-  "Tools/Page_Inspector/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:50.445Z",
-    "contributors": [
-      "GiovanniHD201E"
-    ]
-  },
   "Tools/Paint_Flashing_Tool": {
     "modified": "2020-07-16T22:35:43.400Z",
     "contributors": [
@@ -14751,6 +14745,12 @@
     "contributors": [
       "wbamberg",
       "nw520"
+    ]
+  },
+  "orphaned/Tools/Page_Inspector/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:50.445Z",
+    "contributors": [
+      "GiovanniHD201E"
     ]
   },
   "orphaned/Tools/WebIDE_clone": {

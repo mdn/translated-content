@@ -5128,12 +5128,6 @@
       "pashutk"
     ]
   },
-  "Tools/Debugger/Keyboard_shortcuts": {
-    "modified": "2020-10-23T06:26:33.563Z",
-    "contributors": [
-      "ksam"
-    ]
-  },
   "Tools/Debugger/Source_map_errors": {
     "modified": "2020-07-16T22:35:19.721Z",
     "contributors": [
@@ -5314,13 +5308,6 @@
       "Tihoem",
       "teoli",
       "Vatheslav"
-    ]
-  },
-  "Tools/Page_Inspector/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:52.844Z",
-    "contributors": [
-      "wbamberg",
-      "Aleksej"
     ]
   },
   "Tools/Page_Inspector/UI_Tour": {
@@ -10215,12 +10202,6 @@
       "arhad",
       "surrsoft",
       "dginzburg"
-    ]
-  },
-  "Web/API/Notation": {
-    "modified": "2020-10-15T22:17:39.773Z",
-    "contributors": [
-      "opereverzeva"
     ]
   },
   "Web/API/Notifications_API": {
@@ -25600,6 +25581,19 @@
       "kvantor"
     ]
   },
+  "orphaned/Tools/Debugger/Keyboard_shortcuts": {
+    "modified": "2020-10-23T06:26:33.563Z",
+    "contributors": [
+      "ksam"
+    ]
+  },
+  "orphaned/Tools/Page_Inspector/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:52.844Z",
+    "contributors": [
+      "wbamberg",
+      "Aleksej"
+    ]
+  },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2019-03-18T21:18:44.250Z",
     "contributors": [
@@ -25610,6 +25604,12 @@
     "modified": "2019-03-23T22:27:08.817Z",
     "contributors": [
       "teoli"
+    ]
+  },
+  "orphaned/Web/API/Notation": {
+    "modified": "2020-10-15T22:17:39.773Z",
+    "contributors": [
+      "opereverzeva"
     ]
   },
   "orphaned/Web/API/ParentNode/append": {

@@ -37,7 +37,7 @@ translation_of: Web/API/CacheStorage/keys
 
 <p>このコードスニペットでは、{{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} イベントを待機してから、新しいサービスワーカーがアクティブ化される前に、古い未使用のキャッシュをクリアする {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} ブロックを実行します。 ここに、保持したいキャッシュの名前を含むホワイトリスト（<code>cacheWhitelist</code>）があります。 <code>keys()</code> を使用して {{domxref("CacheStorage")}} オブジェクトのキャッシュのキーを返し、各キーをチェックしてホワイトリストにあるかどうかを確認します。 ない場合は、{{domxref("CacheStorage.delete()")}} を使用して削除します。</p>
 
-<pre class="brush: js">then.addEventListener('activate', function(event) {
+<pre class="brush: js">this.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
 
   event.waitUntil(

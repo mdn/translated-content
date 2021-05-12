@@ -445,7 +445,7 @@
 /pl/docs/DOM/event.altKey	/pl/docs/Web/API/MouseEvent/altKey
 /pl/docs/DOM/event.bubbles	/pl/docs/Web/API/Event/bubbles
 /pl/docs/DOM/event.button	/pl/docs/Web/API/MouseEvent/button
-/pl/docs/DOM/event.cancelBubble	/pl/docs/Web/API/UIEvent/cancelBubble
+/pl/docs/DOM/event.cancelBubble	/pl/docs/orphaned/Web/API/UIEvent/cancelBubble
 /pl/docs/DOM/event.cancelable	/pl/docs/Web/API/Event/cancelable
 /pl/docs/DOM/event.charCode	/pl/docs/Web/API/KeyboardEvent/charCode
 /pl/docs/DOM/event.clientX	/pl/docs/Web/API/MouseEvent/clientX
@@ -693,7 +693,7 @@
 /pl/docs/DOM:event.altKey	/pl/docs/Web/API/MouseEvent/altKey
 /pl/docs/DOM:event.bubbles	/pl/docs/Web/API/Event/bubbles
 /pl/docs/DOM:event.button	/pl/docs/Web/API/MouseEvent/button
-/pl/docs/DOM:event.cancelBubble	/pl/docs/Web/API/UIEvent/cancelBubble
+/pl/docs/DOM:event.cancelBubble	/pl/docs/orphaned/Web/API/UIEvent/cancelBubble
 /pl/docs/DOM:event.cancelable	/pl/docs/Web/API/Event/cancelable
 /pl/docs/DOM:event.charCode	/pl/docs/Web/API/KeyboardEvent/charCode
 /pl/docs/DOM:event.clientX	/pl/docs/Web/API/MouseEvent/clientX
@@ -1974,7 +1974,7 @@
 /pl/docs/Web/API/Element/textContent	/pl/docs/Web/API/Node/textContent
 /pl/docs/Web/API/Event/altKey	/pl/docs/Web/API/MouseEvent/altKey
 /pl/docs/Web/API/Event/button	/pl/docs/Web/API/MouseEvent/button
-/pl/docs/Web/API/Event/cancelBubble	/pl/docs/Web/API/UIEvent/cancelBubble
+/pl/docs/Web/API/Event/cancelBubble	/pl/docs/orphaned/Web/API/UIEvent/cancelBubble
 /pl/docs/Web/API/Event/charCode	/pl/docs/Web/API/KeyboardEvent/charCode
 /pl/docs/Web/API/Event/clientX	/pl/docs/Web/API/MouseEvent/clientX
 /pl/docs/Web/API/Event/clientY	/pl/docs/Web/API/MouseEvent/clientY
@@ -2016,6 +2016,7 @@
 /pl/docs/Web/API/Stylesheet/deleteRule	/pl/docs/Web/API/CSSStyleSheet/deleteRule
 /pl/docs/Web/API/Stylesheet/insertRule	/pl/docs/Web/API/CSSStyleSheet/insertRule
 /pl/docs/Web/API/Stylesheet/ownerRule	/pl/docs/orphaned/Web/API/Stylesheet/ownerRule
+/pl/docs/Web/API/UIEvent/cancelBubble	/pl/docs/orphaned/Web/API/UIEvent/cancelBubble
 /pl/docs/Web/API/Uint16Array	/pl/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /pl/docs/Web/API/Window/clearInterval	/pl/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
 /pl/docs/Web/API/Window/clearTimeout	/pl/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout

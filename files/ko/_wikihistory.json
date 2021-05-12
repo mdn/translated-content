@@ -3227,14 +3227,6 @@
       "toyuq"
     ]
   },
-  "Tools/Debugger/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:35:18.793Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "toyuq"
-    ]
-  },
   "Tools/Debugger/UI_Tour": {
     "modified": "2020-07-16T22:35:16.703Z",
     "contributors": [
@@ -18398,6 +18390,14 @@
       "SphinxKnight",
       "wbamberg",
       "Sebuls"
+    ]
+  },
+  "orphaned/Tools/Debugger/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:35:18.793Z",
+    "contributors": [
+      "SphinxKnight",
+      "wbamberg",
+      "toyuq"
     ]
   },
   "orphaned/Using_Mozilla_in_Testing_and_Debugging_Web_Sites": {

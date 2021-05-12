@@ -307,12 +307,7 @@
 /ru/docs/MDN/Contribute/Editor/Перенаправление	/ru/docs/orphaned/MDN/Editor/Redirects
 /ru/docs/MDN/Contribute/Editor/Синтаксические_выделения	/ru/docs/orphaned/MDN/Editor/Syntax_highlighting
 /ru/docs/MDN/Contribute/Editor/Ссылки	/ru/docs/orphaned/MDN/Editor/Links
-/ru/docs/MDN/Contribute/Howto/Create_an_MDN_account	/ru/docs/orphaned/MDN/Contribute/Howto/Create_an_MDN_account
-/ru/docs/MDN/Contribute/Howto/Do_a_technical_review	/ru/docs/orphaned/MDN/Contribute/Howto/Do_a_technical_review
-/ru/docs/MDN/Contribute/Howto/Do_an_editorial_review	/ru/docs/orphaned/MDN/Contribute/Howto/Do_an_editorial_review
 /ru/docs/MDN/Contribute/Howto/Добавить_или_обновить_данные_о_браузерной_совместимости	/ru/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
-/ru/docs/MDN/Contribute/Howto/Как_оптимизировать_страницы	/ru/docs/orphaned/MDN/Contribute/Howto/Set_the_summary_for_a_page
-/ru/docs/MDN/Contribute/Howto/Метки_JavaScript_страниц	/ru/docs/orphaned/MDN/Contribute/Howto/Tag_JavaScript_pages
 /ru/docs/MDN/Contribute/Howto/Создай_интерактивное_упражнение_для_помощи_в_изучении_веба	/ru/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 /ru/docs/MDN/Contribute/Structures	/ru/docs/MDN/Structures
 /ru/docs/MDN/Contribute/Structures/Live_samples	/ru/docs/MDN/Structures/Live_samples
@@ -343,10 +338,6 @@
 /ru/docs/MDN/User_guide/Advanced_search	/ru/docs/orphaned/MDN/Tools/Search
 /ru/docs/MDN/User_guide/Deleting_pages	/ru/docs/orphaned/MDN/Tools/Page_deletion
 /ru/docs/MDN/User_guide/Feeds	/ru/docs/orphaned/MDN/Tools/Feeds
-/ru/docs/MDN/Сообщество	/ru/docs/orphaned/MDN/Community
-/ru/docs/MDN/Сообщество/Conversations	/ru/docs/orphaned/MDN/Community/Conversations
-/ru/docs/MDN/Сообщество/Whats_happening	/ru/docs/orphaned/MDN/Community/Whats_happening
-/ru/docs/MDN/Сообщество/Working_in_community	/ru/docs/orphaned/MDN/Community/Working_in_community
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
 /ru/docs/MDN_at_ten/Contributing_to_MDN	/ru/docs/conflicting/MDN/Contribute
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
@@ -362,11 +353,13 @@
 /ru/docs/Tools/Add-ons/DOM_Inspector	/ru/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /ru/docs/Tools/Debugger/How_to/Отладка_кода_внутри_eval	/ru/docs/Tools/Debugger/How_to/Debug_eval_sources
 /ru/docs/Tools/Debugger/How_to/Работа_с_минифицированным_кодом	/ru/docs/Tools/Debugger/How_to/Pretty-print_a_minified_file
+/ru/docs/Tools/Debugger/Keyboard_shortcuts	/ru/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /ru/docs/Tools/Page_Inspector/How_to/Otkrytie_Inspektora	/ru/docs/Tools/Page_Inspector/How_to/Open_the_Inspector
 /ru/docs/Tools/Page_Inspector/How_to/Vybor_elementa	/ru/docs/Tools/Page_Inspector/How_to/Select_an_element
 /ru/docs/Tools/Page_Inspector/How_to/Исследовать_event_listeners	/ru/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
 /ru/docs/Tools/Page_Inspector/How_to/Просмотр_шрифтов	/ru/docs/Tools/Page_Inspector/How_to/Edit_fonts
-/ru/docs/Tools/Page_Inspector/Сочетания_клавиш	/ru/docs/Tools/Page_Inspector/Keyboard_shortcuts
+/ru/docs/Tools/Page_Inspector/Keyboard_shortcuts	/ru/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
+/ru/docs/Tools/Page_Inspector/Сочетания_клавиш	/ru/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /ru/docs/Tools/Profiler	/ru/docs/conflicting/Tools/Performance
 /ru/docs/Tools/Release_notes	/ru/docs/conflicting/Mozilla/Firefox/Releases
 /ru/docs/Tools/Responsive_Design_View	/ru/docs/Tools/Responsive_Design_Mode
@@ -448,6 +441,7 @@
 /ru/docs/Web/API/NonDocumentTypeChildNode/NonDocumentTypeChildNode.nextElementSibling	/ru/docs/Web/API/Element/nextElementSibling
 /ru/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/ru/docs/Web/API/Element/nextElementSibling
 /ru/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/ru/docs/Web/API/Element/previousElementSibling
+/ru/docs/Web/API/Notation	/ru/docs/orphaned/Web/API/Notation
 /ru/docs/Web/API/ParentNode/append	/ru/docs/orphaned/Web/API/ParentNode/append
 /ru/docs/Web/API/ParentNode/childElementCount	/ru/docs/Web/API/Element/childElementCount
 /ru/docs/Web/API/ParentNode/children	/ru/docs/orphaned/Web/API/ParentNode/children
@@ -486,7 +480,7 @@
 /ru/docs/Web/API/navigator.id.request	/ru/docs/Web/API/IdentityManager/request
 /ru/docs/Web/API/range.getBoundingClientRect	/ru/docs/Web/API/Range/getBoundingClientRect
 /ru/docs/Web/API/Видимость_страницы_API	/ru/docs/Web/API/Page_Visibility_API
-/ru/docs/Web/API/Нотация	/ru/docs/Web/API/Notation
+/ru/docs/Web/API/Нотация	/ru/docs/orphaned/Web/API/Notation
 /ru/docs/Web/Accessibility/Веб-разработка	/ru/docs/conflicting/Web/Accessibility
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery	/ru/docs/Web/Guide/Audio_and_video_delivery
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
