@@ -21,7 +21,10 @@ translation_of: Web/HTTP/Authentication
 
 <h3 id="Accès_interdit">Accès interdit</h3>
 
-<p>Si un serveur de procuration reçoit des identifiants valides ne permettant pas d'avoir accès à une ressource donnée, le serveur doit répondre avec un code de réponse {{HTTPStatus("403")}} <code>Forbidden</code>. Dans ce cas, à l'inverse des codes {{HTTPStatus("401")}} <code>Unauthorized</code> ou {{HTTPStatus("407")}} <code>Proxy Authentication Required</code>, l'authentification n'est pas possible pour cet utilisateur.</p>
+<p>Si un serveur de procuration reçoit des identifiants valides ne permettant pas d'avoir accès à une ressource donnée, le serveur doit répondre avec un code de réponse {{HTTPStatus("403")}} <code>Forbidden</code>. Dans ce cas, à l'inverse des codes {{HTTPStatus("401")}} <code>Unauthorized</code> ou {{HTTPStatus("407")}} <code>Proxy Authentication Required</code>, l'authentification n'est pas possible pour cet 
+ 
+ 
+ .</p>
 
 <h3 id="Authentification_des_images_multi-origines">Authentification des images multi-origines</h3>
 
@@ -113,7 +116,7 @@ user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 
 <pre class="example-bad">https://utilisateur:password@www.example.com/</pre>
 
-<p><strong>L'utilisateur de ces URLs est déprécié.</strong> Dans Chrome, la partie <code>username:password@</code> dans les URLs est même <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7">retirée pour des raisons de sécurité</a>. Dans Firefox, le site est testé afin de savoir s'il requiert ou non l'authentification et si ce n'est pas le cas, Firefox va avertir l'utilisateur avec une fenêtre de dialogue "Vous êtes sur le point de vous connecter au site "www.example.com" avec le nom d'utilisateur "username", mais le site ne requiert pas d'authentification. Ceci pourrait être une tentative pour vous piéger."</p>
+<p><strong>L'utilisation de ces URLs est dépréciée.</strong> Dans Chrome, la partie <code>username:password@</code> dans les URLs est même <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7">retirée pour des raisons de sécurité</a>. Dans Firefox, le site est testé afin de savoir s'il requiert ou non l'authentification et si ce n'est pas le cas, Firefox va avertir l'utilisateur avec une fenêtre de dialogue "Vous êtes sur le point de vous connecter au site "www.example.com" avec le nom d'utilisateur "username", mais le site ne requiert pas d'authentification. Ceci pourrait être une tentative pour vous piéger."</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
