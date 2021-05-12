@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Notify content repo in git local config
+# Register content repo in git local config
 git submodule init
 # Cloning content repo into translated repo
 git submodule update
