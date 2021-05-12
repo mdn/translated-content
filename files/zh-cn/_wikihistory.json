@@ -21407,14 +21407,6 @@
       "csy19900206"
     ]
   },
-  "Web/API/UIEvent/cancelBubble": {
-    "modified": "2019-03-24T00:17:23.644Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "jsx"
-    ]
-  },
   "Web/API/UIEvent/detail": {
     "modified": "2019-03-23T22:27:15.436Z",
     "contributors": [
@@ -50500,6 +50492,14 @@
     "modified": "2020-02-26T01:25:35.461Z",
     "contributors": [
       "MCCF"
+    ]
+  },
+  "orphaned/Web/API/UIEvent/cancelBubble": {
+    "modified": "2019-03-24T00:17:23.644Z",
+    "contributors": [
+      "ziyunfei",
+      "teoli",
+      "jsx"
     ]
   },
   "orphaned/Web/API/WebSockets_API/WebSocket_Server_Vb.NET": {

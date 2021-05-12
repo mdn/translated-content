@@ -472,7 +472,7 @@
 /zh-CN/docs/DOM/event.altKey	/zh-CN/docs/conflicting/Web/API/MouseEvent/altKey
 /zh-CN/docs/DOM/event.bubbles	/zh-CN/docs/Web/API/Event/bubbles
 /zh-CN/docs/DOM/event.button	/zh-CN/docs/conflicting/Web/API/MouseEvent/button
-/zh-CN/docs/DOM/event.cancelBubble	/zh-CN/docs/Web/API/UIEvent/cancelBubble
+/zh-CN/docs/DOM/event.cancelBubble	/zh-CN/docs/orphaned/Web/API/UIEvent/cancelBubble
 /zh-CN/docs/DOM/event.cancelable	/zh-CN/docs/Web/API/Event/cancelable
 /zh-CN/docs/DOM/event.currentTarget	/zh-CN/docs/Web/API/Event/currentTarget
 /zh-CN/docs/DOM/event.defaultPrevented	/zh-CN/docs/Web/API/Event/defaultPrevented
@@ -1780,6 +1780,7 @@
 /zh-CN/docs/Web/API/Touch.screenX	/zh-CN/docs/Web/API/Touch/screenX
 /zh-CN/docs/Web/API/Touch.screenY	/zh-CN/docs/Web/API/Touch/screenY
 /zh-CN/docs/Web/API/TouchEvent.changedTouches	/zh-CN/docs/Web/API/TouchEvent/changedTouches
+/zh-CN/docs/Web/API/UIEvent/cancelBubble	/zh-CN/docs/orphaned/Web/API/UIEvent/cancelBubble
 /zh-CN/docs/Web/API/UIEvent/视图	/zh-CN/docs/Web/API/UIEvent/view
 /zh-CN/docs/Web/API/URL.URL	/zh-CN/docs/Web/API/URL/URL
 /zh-CN/docs/Web/API/URL.createObjectURL	/zh-CN/docs/Web/API/URL/createObjectURL
@@ -1949,7 +1950,7 @@
 /zh-CN/docs/Web/API/event.altKey	/zh-CN/docs/conflicting/Web/API/MouseEvent/altKey
 /zh-CN/docs/Web/API/event.bubbles	/zh-CN/docs/Web/API/Event/bubbles
 /zh-CN/docs/Web/API/event.button	/zh-CN/docs/conflicting/Web/API/MouseEvent/button
-/zh-CN/docs/Web/API/event.cancelBubble	/zh-CN/docs/Web/API/UIEvent/cancelBubble
+/zh-CN/docs/Web/API/event.cancelBubble	/zh-CN/docs/orphaned/Web/API/UIEvent/cancelBubble
 /zh-CN/docs/Web/API/event.cancelable	/zh-CN/docs/Web/API/Event/cancelable
 /zh-CN/docs/Web/API/event.currentTarget	/zh-CN/docs/Web/API/Event/currentTarget
 /zh-CN/docs/Web/API/event.defaultPrevented	/zh-CN/docs/Web/API/Event/defaultPrevented
