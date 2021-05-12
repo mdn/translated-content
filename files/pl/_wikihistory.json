@@ -3911,15 +3911,6 @@
       "jangromko"
     ]
   },
-  "Web/API/UIEvent/cancelBubble": {
-    "modified": "2019-03-23T23:41:11.564Z",
-    "contributors": [
-      "teoli",
-      "basemnassar11",
-      "Jan Dudek",
-      "Ptak82"
-    ]
-  },
   "Web/API/UIEvent/initUIEvent": {
     "modified": "2019-03-23T23:47:13.003Z",
     "contributors": [
@@ -11264,6 +11255,15 @@
       "xuancanh",
       "Ptak82",
       "Internauta1024A"
+    ]
+  },
+  "orphaned/Web/API/UIEvent/cancelBubble": {
+    "modified": "2019-03-23T23:41:11.564Z",
+    "contributors": [
+      "teoli",
+      "basemnassar11",
+      "Jan Dudek",
+      "Ptak82"
     ]
   },
   "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
