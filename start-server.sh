@@ -6,7 +6,9 @@ git submodule init
 git submodule update
 
 # Add .env file 
-echo 'CONTENT_TRANSLATED_ROOT=../files\nEDITOR=code' > ./content/.env
+# you can also add 'EDITOR=[editor]' option for editor
+# ex) vscode editor: 'EDITOR=code'
+echo 'CONTENT_ROOT=./files\nCONTENT_TRANSLATED_ROOT=../files' > ./content/.env
 
 # Run server
 cd content
