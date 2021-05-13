@@ -1,3 +1,6 @@
 [submodule "content"]
 	path = content
 	url = https://github.com/mdn/content
+[submodule "yari"]
+	path = yari
+	url = https://github.com/mdn/yari.git
