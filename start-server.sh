@@ -1,8 +1,8 @@
 #!/bin/sh
 
-# Register content repo in git local config
+# Register content, yari repo in git local config
 git submodule init
-# Cloning content repo into translated repo
+# Cloning content, yari repo into translated repo
 git submodule update
 
 # Add .env file 
