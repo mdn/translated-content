@@ -86,66 +86,15 @@ translation_of: Web/API/Web_Speech_API
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
+<h3 id="SpeechRecognition"><code>SpeechRecognition</code></h3>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(33)}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop(49)}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>{{Compat("api.SpeechRecognition", 0)}}</p>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>2.5</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h3 id="SpeechSynthesis"><code>SpeechSynthesis</code></h3>
 
-<ul>
- <li>[1] Speech recognition interfaces are currently prefixed in Chrome, so you'll need to prefix interface names appropriately, e.g. <code>webkitSpeechRecognition</code>; You'll also need to serve your code through a web server for recognition to work. Speech synthesis is fully supported without prefixes.</li>
- <li>[2] Recognition can be enabled via the <code>media.webspeech.recognition.enable</code> flag in <code>about:config</code>; synthesis is switched on by default. Note that currently only the speech synthesis part is available in Firefox Desktop — the speech recognition part will be available soon, once the required internal permissions are sorted out.</li>
-</ul>
+<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
+
+<p>{{Compat("api.SpeechSynthesis", 0)}}</p>
 
 <h2 id="Firefox_OS_permissions">Firefox OS permissions</h2>
 
