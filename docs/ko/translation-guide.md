@@ -94,5 +94,27 @@
 | Padding | 안쪽 여백 | 레이아웃 성질일 때에 한정 | [CSS 기본 박스 모델 입문](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) |
 | Shorthand property | 단축 속성 | | |
 
+### API/JavaScript
+
+**사전 순으로 용어집을 편집해주세요.**
+
+| 용어 | 번역 | 기타 | 참고 링크 |
+| --- | --- | --- | ------ |
+| Argument | 매개변수 | | | 
+| Callback | 콜백 | | | 
+| Fulfilled | 이행(함) | | | 
+| Handler | 처리기 | 이벤트 처리기 | | 
+| Interface | 인터페이스 | | | 
+| Iterate | 순회 | | | 
+| Listener | 수신기 | 이벤트 수신기 | | 
+| Mixin | 믹스인 | | | 
+| Parameter | 매개변수 | | | 
+| Pending | 대기 | | | 
+| Prototype | 프로토타입 | | | 
+| Reject | 거부 | | | 
+| Resolve | 이행 | | | 
+| Settled | 처리 | | | 
+| Scope | 스코프 | | | 
+
 ## 맺음말
 
