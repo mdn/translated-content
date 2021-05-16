@@ -42,33 +42,31 @@ tags:
 
 <p>Chercher à concurrencer les jeux pour ordinateur en direct est très difficile. Vous pouvez certes proposer votre jeu en HTML5 dans la même arène (voir {{anch("Native desktop")}} plus bas), et vous devriez d'ailleurs car c'est une bonne chose d'apporter de la diversité dans les plateformes que vous appréciez, mais souvenez-vous que les développeurs qui créent des jeux pour ordinateur ont des années d'expérience derrière eux, de supers outils et des canaux de distribution stables. Beaucoup de jeux HTML5 vont donc viser des segments de marché différents des jeux PC natifs: on proposera par exemple de petits jeux pour passer le temps dans les transports plutôt que des expériences hyper-immersives. De tels jeux sont souvent conçus pour être jouer à deux voire un seul doigt, de façon à pouvoir tenir votre appareil d'une main pour jouer et pouvoir garder votre seconde main libre peu importe ce dont vous avez besoin.</p>
 
-<p>Ceci étant dit, les plateformes pour ordinateurs peuvent être utilisées très simplement pour distribuer vos jeux, grâce à des packages ("wrappers") 
-    
-    Saying this, desktop platforms can be used for distribution quite easily with the availability of wrappers that can help you prepare native builds of your game see {{anch("Packaging games")}}. It's also nice to provide desktop controls for your games even if you're mostly targeting mobile. Players are enjoying your games on any platform available, and desktop is one of them. Plus, it is usually easier to build and test the game first on desktop, and then move on to debugging mobile.</p>
+<p>Ceci étant dit, les plateformes pour ordinateurs peuvent être utilisées très simplement pour distribuer vos jeux, grâce à des "wrappers", des fonctionnalités qui vous aident préparer des builds natifs de votre jeu (voir le paragraphe {{anch("Packaging games")}}). C'est également appréciable de prévoir des commandes pour ordinateurs dans vos jeux, même si vous visez principalement les mobiles. Les joueurs apprécient vos jeux sur n'importe quelle plateforme disponible, et les postes fixes en font partie. En outre, il est généralement plus facile de construire et de tester un jeu sur ordinateur d'abord, avant de se lancer dans le débugage de la version mobile.</p>
 
-<h2 id="Publishing_the_game">Publishing the game</h2>
+<h2 id="Publier_le_jeu">Publier le jeu</h2>
 
-<p>There are three main options when it comes to publishing a game:</p>
+<p>Il y trois grandes possibilités à considérer lorsqu'on souhaite publier un jeu :</p>
 
 <ul>
- <li>Self-hosting</li>
- <li>Publishers</li>
- <li>Stores</li>
+ <li>Auto-hébergement</li>
+ <li>Editeurs</li>
+ <li>Magasins</li>
 </ul>
 
-<p>Remember that the name of your game should be unique enough to be quickly <a href="/en-US/docs/Games/Publishing_games/Game_promotion">promoted</a> later on, but also catchy enough, so people don't forget it.</p>
+<p>Rappelez-vous que le nom de votre jeu doit être suffisamment distinctif pour être rapidement <a href="/en-US/docs/Games/Publishing_games/Game_promotion">promu</a> à l'avenir, mais également suffisamment accrocheur pour que les gens s'en rappellent.</p>
 
-<h3 id="Self-hosting">Self-hosting</h3>
+<h3 id="Auto-hébergement">Auto-hébergement</h3>
 
-<p>If you are a front-end developer, you may already know what to do. An HTML5 game is just another website. You can upload it to a remote server, grab a catchy domain name, and host it yourself.</p>
+<p>En tant que développeur.se front-end, vous savez sans doute déjà quoi faire : un jeu en HTML5 est simplement un autre site. Vous pouvez l'uploader sur un serveur distant, récupérer un nom de domaine accrocheur, et l'héberger vous-même.</p>
 
-<p>If you want to make money out of game dev, you should secure your source code one way or another against people who could easily take it and sell it as their own. You can concatenate and minify the code to make it smaller and uglify it so it's a lot harder to reverse engineer your game. Another good measure to take is to provide an online demo if you're planning on packaging it and selling it in a closed store like iTunes or Steam.</p>
+<p>Si vous voulez gagner un peu d'argent avec le développement de jeux, prenez soin de sécuriser votre code source d'une façon ou d'une autre afin d'éviter que d'autres personnes ne vous le piquent et ne le vendent comme si c'était le leur. Vous pouvez par exemple concaténer et le réduire pour le rendre plus petit, ou encore le rendre beaucoup plus moche afin qu'il soit beaucoup plus difficile de déconstruire votre jeu. Une autre bonne mesure à prendre est de mettre à disposition une démo en ligne si vous prévoyez de le packager et de le vendre sur une boutique fermée du type iTunes ou Steam.</p>
 
-<p>If you're working on a side project just for fun, then leaving the source open will benefit those who would like to learn from what you've created. You don't even have to worry about looking for a hosting provider as it's possible to <a href="https://dev.end3r.com/2014/02/host-your-html5-games-on-github-pages/">host games on GitHub Pages</a>. You'll get free hosting, version control and possible contributors if your project is interesting enough.</p>
+<p>Si vous travaillez sur un projet annexe juste pour le plaisir, garder le code source ouvert bénéficiera à celles et ceux qui voudraient apprendre à partir de vos créations. Dans ce cas vous n'avez même pas besoin de vous soucier de trouver un fournisseur d'hébergement, puisqu'il est possible d'<a href="https://dev.end3r.com/2014/02/host-your-html5-games-on-github-pages/">héberger vos jeux sur GitHub Pages</a>. Vous bénéficiez d'un hébergement gratuit, d'un contrôle de versions et de contributeurs potentiels si votre projet est suffisamment intéressant.</p>
 
-<h3 id="Publishers_and_portals">Publishers and portals</h3>
+<h3 id="Editeurs_et_portails">Editeurs et portails</h3>
 
-<p>As the name may suggest, publishers can handle the publishing of your game for you. Whether you should go that way or not depends on what your plan is for having your game distributed: Do you want to send it wherever possible, or do you want to restrict its presence to those who've bought an <a href="/en-US/docs/Games/Publishing_games/Game_monetization">exclusive license</a>? It's up to you. Consider various options, experiment and conclude. Publishers will be explained in more detail in the <a href="/en-US/docs/Games/Techniques/Publishing_games/Game_monetization/">monetization</a> article.</p>
+<p>Comme leur nom le suggère, les éditeurs peuvent gérer la publication de votre jeu pour vous. Que vous choisissiez cette option ou non dépend de vos attentes en matière de distribution de votre jeu : souhaitez-vous l'envoyer partout où c'est possible, ou préférez-vous limiter sa présence à ceux qui auront acheté une <a href="/en-US/docs/Games/Publishing_games/Game_monetization">licence exclusive</a> ? A vous de voir. Etudiez plusieurs options, expérimentez chacune et tirez-en vos propres conclusions. Les éditeurs vous seront expliqués plus en détail dans notre article dédié à la <a href="/en-US/docs/Games/Techniques/Publishing_games/Game_monetization/">monétisation</a>.</p>
 
 <p>There are also independent portals collecting interesting games like <a href="https://html5games.com/">HTML5Games.com</a>, <a href="https://www.gamearter.com/">GameArter.com</a>, <a href="https://www.marketjs.com/">MarketJS.com</a>, <a href="https://distribution.gameflare.com/">GameFlare</a>, <a href="https://gamedistribution.com/">GameDistribution.com</a> or <a href="https://developers.poki.com/">Poki</a> where you can send your game in and it will get some natural promotion because of the big traffic those sites attract. Some of these take your files and host them on their server, whereas others only link to your website or embed your game on their site. Such exposure may just provide <a href="/en-US/docs/Games/Techniques/Publishing_games/Game_promotion/">promotion</a> for your game, or if you have adverts shown beside your game (or other money making options) it may also provide monetization.</p>
 
