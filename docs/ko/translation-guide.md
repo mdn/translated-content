@@ -14,7 +14,7 @@
 
 ### 공통
 
-브랜드 이름은 번역하지 않았습니다.
+브랜드 이름은 번역하지 않습니다.
 
 ```diff
 - 자바스크립트
@@ -62,6 +62,37 @@
 | Syntax | 구문 | |
 | Tutorial | 자습서 | |
 | User agent | 사용자 에이전트 | |
+
+### CSS
+
+명세 이름은 번역하지 않습니다.
+
+```diff
+- CSS 글꼴 모듈 레벨 4
++ CSS Fonts Module Level 4
+```
+
+명세 이름이 본문에 나오더라도 번역하지 않습니다. (예: "`<number>` 구문은 CSS Fonts Level 4가 추가했습니다.")
+
+**사전 순으로 용어집을 편집해주세요.**
+
+| 용어 | 번역 | 기타 | 참고 링크 |
+| --- | --- | --- | ------ |
+| At-rule | @규칙 | | | 
+| Block | 블록 | | |
+| Border | 테두리 | | |
+| Box | 박스 | | |
+| Flexbox | 플렉스박스 | | |
+| Flow | 플로우 | 레이아웃 방식일 경우에 한정 | |
+| Flow | 플로 | | |
+| Formal syntax | 형식 구문 | | |
+| Grid | 그리드 | | |
+| Inline | 인라인 | | |
+| Layout | 레이아웃 | | |
+| Longhand property | 본디 속성 | | |
+| Margin | 바깥 여백 | | |
+| Padding | 안쪽 여백 | 레이아웃 성질일 때에 한정 | [CSS 기본 박스 모델 입문](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) |
+| Shorthand property | 단축 속성 | | |
 
 ## 맺음말
 
