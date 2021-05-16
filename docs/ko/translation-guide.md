@@ -116,5 +116,13 @@
 | Settled | 처리 | | | 
 | Scope | 스코프 | | | 
 
+### HTTP
+
+| 용어 | 번역 | 기타 | 참고 링크 |
+| --- | --- | --- | ------ |
+| Idempotent | 멱등성 | | | 
+| Request Body | 요청 본문 | | | 
+| Response Body | 응답 본문 | | | 
+
 ## 맺음말
 
