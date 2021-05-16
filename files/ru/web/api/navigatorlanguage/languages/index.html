@@ -43,71 +43,7 @@ navigator.languages  //["en-US", "zh-CN", "ja-JP"]
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Свойство</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>32</td>
-   <td>{{ CompatGeckoDesktop("32") }} [1]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>on Web workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("35")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Свойство</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoMobile("32") }}[1]</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>on Web workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("35")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]В Firefox, the <code>navigator.languages</code> значение свойства берётся из <code>intl.accept_languages</code> предписаний.</p>
+<p>{{Compat("api.NavigatorLanguage.languages")}}</p>
 
 <h2 id="See_also" name="See_also">Смотрите также</h2>
 
