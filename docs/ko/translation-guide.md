@@ -66,6 +66,7 @@
 | Statement | 명령문 또는 문 | |
 | Syntax | 구문 | |
 | Tutorial | 자습서 | |
+| Usage notes | 사용 일람 | Heading |
 | User agent | 사용자 에이전트 | |
 
 ### CSS
@@ -130,4 +131,3 @@
 | Response Body | 응답 본문 | | | 
 
 ## 맺음말
-
