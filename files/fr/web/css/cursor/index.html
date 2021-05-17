@@ -34,19 +34,19 @@ cursor: initial;
 cursor: unset;
 </pre>
 
-<p>La propriété <code>cursor</code> peut être définie grâce à zéro ou plusieurs valeurs <code><a href="#uri">&lt;uri&gt;</a></code> séparées par des virgules et suivi par un unique <a href="#mot-clé">mot-clé obligatoire</a>. Chaque <code>&lt;uri&gt;</code> doit pointer vers un fichier image. Le navigateur essaiera de télécharger la première image indiquée et passera à la suivante s'il ne peut pas. Si aucune image ne fonctionne, il utilisera le mot-clé final.</p>
+<p>La propriété <code>cursor</code> peut être définie grâce à zéro ou plusieurs valeurs <code><a href="#url">&lt;url&gt;</a></code> séparées par des virgules et suivi par un unique <a href="#mot-clé">mot-clé obligatoire</a>. Chaque <code>&lt;url&gt;</code> doit pointer vers un fichier image. Le navigateur essaiera de télécharger la première image indiquée et passera à la suivante s'il ne peut pas. Si aucune image ne fonctionne, il utilisera le mot-clé final.</p>
 
-<p>Chaque <code>&lt;uri&gt;</code> peut éventuellement être suivi par un couple de nombres séparés par un espace qui représente les coordonnées (abscisse puis ordonnée) <code><a href="#xy">&lt;x&gt;&lt;y&gt;</a></code> Ces coordonnées permettent de paramétrer le point d'action (<em>hotspot</em>) du curseur par rapport au coin en haut à gauche de l'image.</p>
+<p>Chaque <code>&lt;url&gt;</code> peut éventuellement être suivi par un couple de nombres séparés par un espace qui représente les coordonnées (abscisse puis ordonnée) <code><a href="#xy">&lt;x&gt;&lt;y&gt;</a></code> Ces coordonnées permettent de paramétrer le point d'action (<em>hotspot</em>) du curseur par rapport au coin en haut à gauche de l'image.</p>
 
-<p>Par exemple, on peut indiquer deux images grâce à deux valeurs <code>&lt;uri&gt;</code> et fournir des coordonnées <code>&lt;x&gt;&lt;y&gt;</code> pour la deuxième. Si aucune des images n'a pu être chargée, on recourt au mot-clé <code>progress</code> :</p>
+<p>Par exemple, on peut indiquer deux images grâce à deux valeurs <code>&lt;url&gt;</code> et fournir des coordonnées <code>&lt;x&gt;&lt;y&gt;</code> pour la deuxième. Si aucune des images n'a pu être chargée, on recourt au mot-clé <code>progress</code> :</p>
 
 <pre class="brush: css">cursor: url(one.svg), url(two.svg) 5 5, progress;</pre>
 
 <h3 id="Valeurs">Valeurs</h3>
 
 <dl>
- <dt><a id="uri"><code>&lt;uri&gt;</code></a></dt>
- <dd>Une <code>url(…)</code> ou une liste séparées de telles valeurs qui pointent vers un fichier image. On peut utiliser différentes {{cssxref("&lt;uri&gt;")}} en cas de recours si certains types d'images ne sont pas pris en charge. Il est obligatoire qu'une valeur non-URL soit présente à la fin de cette liste.</dd>
+ <dt><a id="uri"><code>&lt;url&gt;</code></a></dt>
+ <dd>Une <code>url(…)</code> ou une liste d'URL séparées par des virgules <code>url(…), url(…), …</code> pointant vers un fichier image. On peut utiliser plusieurs {{cssxref("url()")}}, au cas où certains types d'images ne sont pas pris en charge. Il est <em>obligatoire</em> qu'une valeur non-URL soit présente à la fin de cette liste.</dd>
  <dt><a id="xy"><code>&lt;x&gt;</code> <code>&lt;y&gt;</code></a> {{experimental_inline}}</dt>
  <dd>Des coordonnées en abscisses et en ordonnées sans unité, inférieures à 32.</dd>
  <dt><a id="mot-clé">Valeurs utilisant un mot-clé</a></dt>
