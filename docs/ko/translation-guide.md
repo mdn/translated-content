@@ -97,7 +97,7 @@
 | Layout | 레이아웃 | | |
 | Longhand property | 본디 속성 | | |
 | Margin | 바깥 여백 | | |
-| Padding | 안쪽 여백 | 레이아웃 성질일 때에 한정 | [CSS 기본 박스 모델 입문](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) |
+| Padding | 안쪽 여백(패딩) | | [CSS 기본 박스 모델 입문](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) |
 | Shorthand property | 단축 속성 | | |
 
 ### API/JavaScript
