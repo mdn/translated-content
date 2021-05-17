@@ -685,7 +685,7 @@
 /ja/docs/Code_snippets:XML	/ja/docs/Code_snippets/XML
 /ja/docs/Components	/ja/docs/orphaned/Components
 /ja/docs/Controlling_DNS_prefetching	/ja/docs/conflicting/Web/HTTP/Headers/X-DNS-Prefetch-Control
-/ja/docs/Controlling_spell_checking_in_HTML_forms	/ja/docs/conflicting/Web/HTML/Global_attributes/spellcheck
+/ja/docs/Controlling_spell_checking_in_HTML_forms	/ja/docs/Web/HTML/Global_attributes/spellcheck
 /ja/docs/Core_JavaScript_1.5_Guide	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/Core_JavaScript_1.5_Guide/About/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
