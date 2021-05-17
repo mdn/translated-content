@@ -19,7 +19,7 @@ translation_of: Web/Guide/HTML/Editable_content
   <p><a href="https://w3c.github.io/editing/docs/execCommand/"><code>execCommand()</code> 仕様書</a>で警告しているように、この機能は<q>すべてのユーザーエージェントで一貫した、または完全な実装が行われているわけではなく</q>、それに加えて、 <a href="/ja/docs/Web/API/Document/execCommand"><code>Document.execCommand()</code></a> リファレンスページでは非推奨とされています。したがって、このページの内容の多くは、本番コードで使用するには信頼できません。</p>
 </div>
 
-<p><span class="seoSummary">HTML では、すべての要素を{{原語併記("編集可能状態", "editable")}} にすることができます。JavaScript のいくつかのイベントハンドラーと併用することで、ウェブページを多機能でかつ高速に動作するリッチテキストエディターにしてしまうことも可能です。本記事では、この機能に関する情報を提供します。</span></p>
+<p><span class="seoSummary">HTML では、すべての要素を編集可能状態 (editable) にすることができます。 JavaScript のいくつかのイベントハンドラーと併用することで、ウェブページを多機能でかつ高速に動作するリッチテキストエディターにしてしまうことも可能です。本記事では、この機能に関する情報を提供します。</span></p>
 
 <div class="note">
 <p><strong>注</strong>: Firefox 63 Beta/Dev Edition では、ブラウザー間の互換性を高めるために、一部のリッチテキスト編集機能を既定で無効にしています。具体的には、 {{htmlelement("img")}}, {{htmlelement("table")}} および絶対位置指定要素のオブジェクトのサイズ変更、インラインテーブルを編集して行や列の追加や削除すること、および絶対位置指定要素の移動を可能にするグラバーです。詳しくは {{bug("1449564")}} を参照してください。</p>
@@ -41,7 +41,7 @@ translation_of: Web/Guide/HTML/Editable_content
 
 <h2 id="Executing_commands">コマンドを実行する</h2>
 
-<p>HTML 要素の <code>contenteditable</code> 属性を <code>true</code> に設定すると、{{domxref("document.execCommand()")}} メソッドが使用可能になります。これは、編集可能な部分の内容物を操作する <a href="/ja/docs/Web/API/document/execCommand#commands">コマンド</a> を実行できます。ほとんどのコマンドは文書の選択範囲に作用します (例えば、テキストに太字や斜体などのスタイルを適用する) が、新しい要素を挿入する (リンクを追加するなど) コマンドや行全体に作用する (インデント) コマンドもあります。<code>contentEditable</code> を使用しているときに <code>execCommand()</code> を呼び出すと、現在アクティブな編集可能要素に作用します。</p>
+<p>HTML 要素の <code>contenteditable</code> 属性を <code>true</code> に設定すると、{{domxref("document.execCommand()")}} メソッドが使用可能になります。これは、編集可能な部分の内容物を操作する <a href="/ja/docs/Web/API/Document/execCommand#commands">コマンド</a> を実行できます。ほとんどのコマンドは文書の選択範囲に作用します (例えば、テキストに太字や斜体などのスタイルを適用する) が、新しい要素を挿入する (リンクを追加するなど) コマンドや行全体に作用する (インデント) コマンドもあります。<code>contentEditable</code> を使用しているときに <code>execCommand()</code> を呼び出すと、現在アクティブな編集可能要素に作用します。</p>
 
 <h2 id="Differences_in_markup_generation">マークアップ生成の違い</h2>
 
