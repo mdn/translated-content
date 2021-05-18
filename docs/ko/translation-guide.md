@@ -40,6 +40,20 @@
 
 ### HTML 소스의 줄 바꿈
 
+일부 기사 소스 코드에서, 반드시 필요하지 않은 블록 수준 요소에서 줄 바꿈을 찾을 수 있습니다. 예를 들면 다음과 같습니다.
+
+```html
+<p>The
+  <code><strong>HTMLCanvasElement</strong></code><strong><code>.transferControlToOffscreen()</code></strong>
+  method transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main
+  thread or on a worker.</p>
+
+<pre
+  class="brush: js">OffscreenCanvas HTMLCanvasElement.transferControlToOffscreen()</pre>
+```
+
+일반적으로 소스 코드에서 이와 같은 줄 바꿈을 사용하지 않으므로 원하는 경우 자유롭게 제거 할 수 있으며 새 번역을 만들 때 추가하지 마십시오. 그러나 최종 렌더링 결과에 영향을 미치지 않으므로 이를 제거하는 데 너무 많은 시간을 소비하지 마십시오.
+
 ## 용어 지침
 
 ### 공통
