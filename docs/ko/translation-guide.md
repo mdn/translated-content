@@ -130,4 +130,12 @@
 | Request Body | 요청 본문 | | | 
 | Response Body | 응답 본문 | | | 
 
+## 자주 묻는 Q&A
+
+**1. `{{Compat}}` 하고 `{{Specifications}}` 이건 ko 에서는 보이지 않습니다.**
+
+문서 frontmatter에 browser-compat 키 추가해주세요. (참고: 퀵에디터로 수정하면 frontmatter가 보이지 않습니다.)
+
+<img src="https://user-images.githubusercontent.com/22424891/118590427-61b77300-b7dd-11eb-803e-daf51bb8edbe.png" height="300px" />
+
 ## 맺음말
