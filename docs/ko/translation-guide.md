@@ -2,6 +2,7 @@
 
 **1. [MDN 번역 콘텐츠에 대한 일반 지침](#MDN-번역-콘텐츠에-대한-일반-지침)**
 **2. [첫 기여자들을 위한 지침 안내](#첫-기여자들을-위한-지침-안내)**
+**2. [yari 빠른 사용법](#yari-빠른-사용법)**
 **3. [번역 가이드](#번역-가이드)**
 **4. [용어 지침](#용어-지침)**
 **5. [자주 묻는 질문](#자주-묻는-질문)**
@@ -19,6 +20,23 @@
 첫 기여자분들을 위해 다음 [issue 827](https://github.com/mdn/translated-content/issues/827)에 기여 방법을 작성했습니다. 참고해주세요.
 
 추가적으로 궁금하신점 있으시면 [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)에 이야기해주세요.
+
+## yari 빠른 사용법
+
+yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크](https://github.com/mdn/translated-content#making-contributions)를 참고해주세요.
+
+1. [content](https://github.com/mdn/content) 하고 [translated-content](https://github.com/mdn/translated-content) 다운 받습니다. (fork  한뒤)
+2. content 폴더에 들어가서 `yarn install`
+3. content 폴더 root에 .env 파일을 추가합니다. (translated-content/files 경로 추가, vscode editor의 경우 `EDITOR=code` 추가)
+
+```
+CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files
+EDITOR=code
+```
+4. `yarn start`
+
+다음과 같이 진행하면 아래와 같이 실시간으로 반영사항 확인할 수 있고 4가지 편집 버튼으로 편집할 수 있습니다.
+![image](https://user-images.githubusercontent.com/22424891/117309001-002e0500-aebd-11eb-9842-8f78a99e8873.png)
 
 ## 번역 가이드
 
