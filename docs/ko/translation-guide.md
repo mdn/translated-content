@@ -4,6 +4,12 @@
 
 마찬가지로 추가하려는 일반 지침에 대한 좋은 아이디어가 있는 경우 환영합니다. Issue를 열고 문제에대해 이야기해주세요. 다음은 한국어 번역 지침 원칙의 주요 내용입니다.
 
+## 첫 기여자들을 위한 지침 안내
+
+첫 기여자분들을 위해 다음 [issue 827](https://github.com/mdn/translated-content/issues/827)에 기여 방법을 작성했습니다. 참고해주세요.
+
+추가적으로 궁금하신점 있으시면 [Kakao Talk (#MDN Korea)](https://open.kakao.com/o/gdfG288c)에 이야기해주세요.
+
 ## heading ID 번역
 
 ## code block 번역
