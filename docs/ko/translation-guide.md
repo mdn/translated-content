@@ -148,4 +148,8 @@ https://developer.mozilla.org/en-US/docs/Web/HTML 와같이 영문 페이지라�
 
 특정기간 MDN 문서의 편집이 자유로워서 이상한 번역이 많습니다. 괜찮으시다면 PR을 보내주시거나 issue를 생성해서 해당 페이지가 조치 받게 해주실 수 있으신가요?
 
+**4. 제가 초보라서 번역에 어떻게 기여하는지, 또 따라야 할 공식 지침 같은 것이 있는지 몰라서 손을 못 대고 있는 상황입니다.**
+
+ 단순한 제보는 https://github.com/mdn/translated-content/issues 다음 페이지에서 New issue를 눌러서 이슈 작성을 해주시면 됩니다! 혹시 직접 수정해서 기여하고 싶으시면 https://github.com/mdn/translated-content/issues/827 이 절차대로 진행해주실 수 있으신가요? 기여해주셔서 감사합니다.
+ 
 ## 맺음말
