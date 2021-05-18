@@ -1722,6 +1722,7 @@
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
 /zh-CN/docs/Web/API/Notation	/zh-CN/docs/orphaned/Web/API/Notation
 /zh-CN/docs/Web/API/OfflineAudioContext/complete	/zh-CN/docs/Web/API/OfflineAudioContext/complete_event
+/zh-CN/docs/Web/API/ParentNode	/zh-CN/docs/orphaned/Web/API/ParentNode
 /zh-CN/docs/Web/API/ParentNode.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/ParentNode.children	/zh-CN/docs/orphaned/Web/API/ParentNode/children
 /zh-CN/docs/Web/API/ParentNode.firstElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/firstElementChild
@@ -1732,6 +1733,8 @@
 /zh-CN/docs/Web/API/ParentNode/firstElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/firstElementChild
 /zh-CN/docs/Web/API/ParentNode/lastElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/lastElementChild
 /zh-CN/docs/Web/API/ParentNode/prepend	/zh-CN/docs/orphaned/Web/API/ParentNode/prepend
+/zh-CN/docs/Web/API/ParentNode/querySelector	/zh-CN/docs/orphaned/Web/API/ParentNode/querySelector
+/zh-CN/docs/Web/API/ParentNode/querySelectorAll	/zh-CN/docs/orphaned/Web/API/ParentNode/querySelectorAll
 /zh-CN/docs/Web/API/ParentNode/replaceChildren	/zh-CN/docs/orphaned/Web/API/ParentNode/replaceChildren
 /zh-CN/docs/Web/API/Performance.now()	/zh-CN/docs/Web/API/Performance/now
 /zh-CN/docs/Web/API/Performance/内存	/zh-CN/docs/Web/API/Performance/memory

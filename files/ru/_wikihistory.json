@@ -10222,16 +10222,6 @@
       "customizer"
     ]
   },
-  "Web/API/ParentNode": {
-    "modified": "2020-10-15T21:37:34.695Z",
-    "contributors": [
-      "boxa6",
-      "arturparkhisenko",
-      "AlexeyVasilievE",
-      "YozhEzhi",
-      "fscholz"
-    ]
-  },
   "Web/API/PaymentRequest": {
     "modified": "2020-10-15T22:32:45.030Z",
     "contributors": [
@@ -25610,6 +25600,16 @@
     "modified": "2020-10-15T22:17:39.773Z",
     "contributors": [
       "opereverzeva"
+    ]
+  },
+  "orphaned/Web/API/ParentNode": {
+    "modified": "2020-10-15T21:37:34.695Z",
+    "contributors": [
+      "boxa6",
+      "arturparkhisenko",
+      "AlexeyVasilievE",
+      "YozhEzhi",
+      "fscholz"
     ]
   },
   "orphaned/Web/API/ParentNode/append": {

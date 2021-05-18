@@ -6187,13 +6187,6 @@
       "dragmove"
     ]
   },
-  "Web/API/ParentNode": {
-    "modified": "2020-10-15T22:08:08.618Z",
-    "contributors": [
-      "alattalatta",
-      "ExE-Boss"
-    ]
-  },
   "Web/API/Performance": {
     "modified": "2020-10-15T21:53:34.737Z",
     "contributors": [
@@ -18431,6 +18424,13 @@
     "modified": "2020-10-15T22:15:23.043Z",
     "contributors": [
       "connorshea"
+    ]
+  },
+  "orphaned/Web/API/ParentNode": {
+    "modified": "2020-10-15T22:08:08.618Z",
+    "contributors": [
+      "alattalatta",
+      "ExE-Boss"
     ]
   },
   "orphaned/Web/API/ParentNode/append": {

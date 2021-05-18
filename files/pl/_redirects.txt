@@ -2008,6 +2008,7 @@
 /pl/docs/Web/API/Node/localName	/pl/docs/Web/API/Element/localName
 /pl/docs/Web/API/Node/namespaceURI	/pl/docs/Web/API/Element/namespaceURI
 /pl/docs/Web/API/Node/prefix	/pl/docs/Web/API/Element/prefix
+/pl/docs/Web/API/ParentNode	/pl/docs/orphaned/Web/API/ParentNode
 /pl/docs/Web/API/ParentNode/childElementCount	/pl/docs/Web/API/Element/childElementCount
 /pl/docs/Web/API/ParentNode/children	/pl/docs/orphaned/Web/API/ParentNode/children
 /pl/docs/Web/API/Storage	/pl/docs/Web/API/Web_Storage_API

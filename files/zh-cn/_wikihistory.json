@@ -18842,35 +18842,6 @@
       "Wineki"
     ]
   },
-  "Web/API/ParentNode": {
-    "modified": "2020-10-15T21:30:05.597Z",
-    "contributors": [
-      "codingbylch",
-      "RainSlide",
-      "Aaron-Bird",
-      "_sollrei",
-      "xgqfrms-GitHub",
-      "AlexChao"
-    ]
-  },
-  "Web/API/ParentNode/querySelector": {
-    "modified": "2020-10-15T22:11:37.961Z",
-    "contributors": [
-      "czmecah",
-      "guoyi"
-    ]
-  },
-  "Web/API/ParentNode/querySelectorAll": {
-    "modified": "2020-12-10T23:19:17.539Z",
-    "contributors": [
-      "YawnS0",
-      "czmecah",
-      "RainSlide",
-      "hawtim",
-      "_sollrei",
-      "ZZES_REN"
-    ]
-  },
   "Web/API/Path2D": {
     "modified": "2019-03-23T22:53:11.857Z",
     "contributors": [
@@ -50431,6 +50402,17 @@
       "xiaoxingchi"
     ]
   },
+  "orphaned/Web/API/ParentNode": {
+    "modified": "2020-10-15T21:30:05.597Z",
+    "contributors": [
+      "codingbylch",
+      "RainSlide",
+      "Aaron-Bird",
+      "_sollrei",
+      "xgqfrms-GitHub",
+      "AlexChao"
+    ]
+  },
   "orphaned/Web/API/ParentNode/append": {
     "modified": "2020-10-15T21:51:11.120Z",
     "contributors": [
@@ -50480,6 +50462,24 @@
       "Ende93",
       "zhuangyin",
       "maicss"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/querySelector": {
+    "modified": "2020-10-15T22:11:37.961Z",
+    "contributors": [
+      "czmecah",
+      "guoyi"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/querySelectorAll": {
+    "modified": "2020-12-10T23:19:17.539Z",
+    "contributors": [
+      "YawnS0",
+      "czmecah",
+      "RainSlide",
+      "hawtim",
+      "_sollrei",
+      "ZZES_REN"
     ]
   },
   "orphaned/Web/API/ParentNode/replaceChildren": {

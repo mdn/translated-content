@@ -6188,18 +6188,6 @@
       "renatoluna"
     ]
   },
-  "Web/API/ParentNode": {
-    "modified": "2019-03-23T22:19:41.961Z",
-    "contributors": [
-      "jpmedley"
-    ]
-  },
-  "Web/API/ParentNode/querySelector": {
-    "modified": "2020-10-15T22:23:27.840Z",
-    "contributors": [
-      "VictorhMalheiro"
-    ]
-  },
   "Web/API/Path2D": {
     "modified": "2020-10-15T22:06:13.090Z",
     "contributors": [
@@ -17241,10 +17229,22 @@
       "Josue-Bastos"
     ]
   },
+  "orphaned/Web/API/ParentNode": {
+    "modified": "2019-03-23T22:19:41.961Z",
+    "contributors": [
+      "jpmedley"
+    ]
+  },
   "orphaned/Web/API/ParentNode/children": {
     "modified": "2019-03-23T22:19:42.340Z",
     "contributors": [
       "rafaelcavalcante"
+    ]
+  },
+  "orphaned/Web/API/ParentNode/querySelector": {
+    "modified": "2020-10-15T22:23:27.840Z",
+    "contributors": [
+      "VictorhMalheiro"
     ]
   },
   "orphaned/Web/API/Window/ondevicelight": {

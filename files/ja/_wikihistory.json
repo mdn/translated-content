@@ -20080,21 +20080,6 @@
       "toyakun"
     ]
   },
-  "Web/API/ParentNode": {
-    "modified": "2020-11-23T03:46:53.867Z",
-    "contributors": [
-      "segayuu",
-      "yyss",
-      "Marsf",
-      "YuichiNukiyama"
-    ]
-  },
-  "Web/API/ParentNode/querySelectorAll": {
-    "modified": "2020-10-15T22:26:50.502Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/Path2D": {
     "modified": "2019-03-23T22:54:51.617Z",
     "contributors": [
@@ -21458,12 +21443,6 @@
     "modified": "2019-03-23T23:31:11.061Z",
     "contributors": [
       "ethertank"
-    ]
-  },
-  "Web/API/SVGTransformable": {
-    "modified": "2020-10-15T22:33:03.508Z",
-    "contributors": [
-      "eltociear"
     ]
   },
   "Web/API/Screen": {
@@ -52522,6 +52501,15 @@
       "Wind1808"
     ]
   },
+  "orphaned/Web/API/ParentNode": {
+    "modified": "2020-11-23T03:46:53.867Z",
+    "contributors": [
+      "segayuu",
+      "yyss",
+      "Marsf",
+      "YuichiNukiyama"
+    ]
+  },
   "orphaned/Web/API/ParentNode/append": {
     "modified": "2020-10-15T22:19:11.886Z",
     "contributors": [
@@ -52544,6 +52532,12 @@
       "silverskyvicto"
     ]
   },
+  "orphaned/Web/API/ParentNode/querySelectorAll": {
+    "modified": "2020-10-15T22:26:50.502Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
   "orphaned/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController": {
     "modified": "2020-10-15T22:26:44.153Z",
     "contributors": [
@@ -52552,6 +52546,12 @@
   },
   "orphaned/Web/API/Response/useFinalURL": {
     "modified": "2020-10-15T22:32:38.418Z",
+    "contributors": [
+      "eltociear"
+    ]
+  },
+  "orphaned/Web/API/SVGTransformable": {
+    "modified": "2020-10-15T22:33:03.508Z",
     "contributors": [
       "eltociear"
     ]

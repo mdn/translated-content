@@ -1826,6 +1826,7 @@
 /es/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/es/docs/Web/API/Element/nextElementSibling
 /es/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/es/docs/Web/API/Element/previousElementSibling
 /es/docs/Web/API/Notifications_API/Usando_la_API_de_Notificaciones	/es/docs/Web/API/Notifications_API/Using_the_Notifications_API
+/es/docs/Web/API/ParentNode	/es/docs/orphaned/Web/API/ParentNode
 /es/docs/Web/API/ParentNode/append	/es/docs/orphaned/Web/API/ParentNode/append
 /es/docs/Web/API/ParentNode/childElementCount	/es/docs/Web/API/Element/childElementCount
 /es/docs/Web/API/ParentNode/children	/es/docs/orphaned/Web/API/ParentNode/children

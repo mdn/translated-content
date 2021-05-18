@@ -3914,10 +3914,12 @@
 /ja/docs/Web/API/Node/prefix	/ja/docs/conflicting/Web/API/Element/prefix
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e
+/ja/docs/Web/API/ParentNode	/ja/docs/orphaned/Web/API/ParentNode
 /ja/docs/Web/API/ParentNode/append	/ja/docs/orphaned/Web/API/ParentNode/append
 /ja/docs/Web/API/ParentNode/childElementCount	/ja/docs/Web/API/Element/childElementCount
 /ja/docs/Web/API/ParentNode/children	/ja/docs/orphaned/Web/API/ParentNode/children
 /ja/docs/Web/API/ParentNode/prepend	/ja/docs/orphaned/Web/API/ParentNode/prepend
+/ja/docs/Web/API/ParentNode/querySelectorAll	/ja/docs/orphaned/Web/API/ParentNode/querySelectorAll
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
@@ -3935,6 +3937,7 @@
 /ja/docs/Web/API/Range1/startOffset	/ja/docs/Web/API/Range/startOffset
 /ja/docs/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController	/ja/docs/orphaned/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
 /ja/docs/Web/API/Response/useFinalURL	/ja/docs/orphaned/Web/API/Response/useFinalURL
+/ja/docs/Web/API/SVGTransformable	/ja/docs/orphaned/Web/API/SVGTransformable
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /ja/docs/Web/API/Slotable	/ja/docs/conflicting/Web/API/Element

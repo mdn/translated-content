@@ -587,8 +587,10 @@
 /pt-BR/docs/Web/API/Node.replaceChild	/pt-BR/docs/Web/API/Node/replaceChild
 /pt-BR/docs/Web/API/Node/Entendendo_o_uso_do_método_AppendChild-javascript	/pt-BR/docs/orphaned/Web/API/Node/Entendendo_o_uso_do_método_AppendChild-javascript
 /pt-BR/docs/Web/API/Node/innerText	/pt-BR/docs/Web/API/HTMLElement/innerText
+/pt-BR/docs/Web/API/ParentNode	/pt-BR/docs/orphaned/Web/API/ParentNode
 /pt-BR/docs/Web/API/ParentNode/childElementCount	/pt-BR/docs/Web/API/Element/childElementCount
 /pt-BR/docs/Web/API/ParentNode/children	/pt-BR/docs/orphaned/Web/API/ParentNode/children
+/pt-BR/docs/Web/API/ParentNode/querySelector	/pt-BR/docs/orphaned/Web/API/ParentNode/querySelector
 /pt-BR/docs/Web/API/Position	/pt-BR/docs/Web/API/GeolocationPosition
 /pt-BR/docs/Web/API/Position/coords	/pt-BR/docs/Web/API/GeolocationPosition/coords
 /pt-BR/docs/Web/API/PositionError	/pt-BR/docs/Web/API/GeolocationPositionError

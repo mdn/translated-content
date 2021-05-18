@@ -4354,13 +4354,6 @@
       "MashKao"
     ]
   },
-  "Web/API/ParentNode": {
-    "modified": "2019-12-24T08:07:24.128Z",
-    "contributors": [
-      "ianchen0119",
-      "jackblackevo"
-    ]
-  },
   "Web/API/PaymentRequest": {
     "modified": "2020-10-15T22:13:15.817Z",
     "contributors": [
@@ -8730,6 +8723,13 @@
     "modified": "2019-03-23T22:27:33.501Z",
     "contributors": [
       "H-W-Chang"
+    ]
+  },
+  "orphaned/Web/API/ParentNode": {
+    "modified": "2019-12-24T08:07:24.128Z",
+    "contributors": [
+      "ianchen0119",
+      "jackblackevo"
     ]
   },
   "orphaned/Web/API/ParentNode/children": {

@@ -442,6 +442,7 @@
 /ru/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/ru/docs/Web/API/Element/nextElementSibling
 /ru/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/ru/docs/Web/API/Element/previousElementSibling
 /ru/docs/Web/API/Notation	/ru/docs/orphaned/Web/API/Notation
+/ru/docs/Web/API/ParentNode	/ru/docs/orphaned/Web/API/ParentNode
 /ru/docs/Web/API/ParentNode/append	/ru/docs/orphaned/Web/API/ParentNode/append
 /ru/docs/Web/API/ParentNode/childElementCount	/ru/docs/Web/API/Element/childElementCount
 /ru/docs/Web/API/ParentNode/children	/ru/docs/orphaned/Web/API/ParentNode/children
