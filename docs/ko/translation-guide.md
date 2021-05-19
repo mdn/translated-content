@@ -161,8 +161,7 @@ EDITOR=code
 | Border | 테두리 | | |
 | Box | 박스 | | |
 | Flexbox | 플렉스박스 | | |
-| Flow | 플로우 | 레이아웃 방식일 경우에 한정 | |
-| Flow | 플로 | | |
+| Flow | 플로 | 레이아웃 방식일 경우에 한정 | |
 | Formal syntax | 형식 구문 | | |
 | Grid | 그리드 | | |
 | Inline | 인라인 | | |
