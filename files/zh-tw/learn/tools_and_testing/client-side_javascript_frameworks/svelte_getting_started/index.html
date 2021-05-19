@@ -287,22 +287,22 @@ npm run dev</pre>
 <p><strong>注意</strong>：你也可以使用 <code>:global(...)</code> 修飾符覆寫此行為並且套用樣式至全域選擇器上（可以至 <a href="https://svelte.dev/docs#style">Svelte <code>&lt;style&gt;</code> 文件</a>閱讀更多資訊）。</p>
 </div>
 
-<h2 id="Making_a_couple_of_changes">Making a couple of changes</h2>
+<h2 id="Making_a_couple_of_changes">做一些小改變</h2>
 
-<p>Now that we have a general idea of how it all fits together, we can start making a few changes.<br>
- At this point you can try updating your <code>App.svelte</code> component — for example change the <code>&lt;h1&gt;</code> element on line 6 of <code>App.svelte</code> so that it reads like this:</p>
+<p>現在我們大致知道它是如何協同工作之後，接著可以來做一些小改變。<br>
+ 你可以嘗試更新你的 <code>App.svelte</code> 元件——例如將 <code>App.svelte</code> 第 6 行位置的 <code>&lt;h1&gt;</code> 元素內容變更如下：</p>
 
 <pre class="brush: html">&lt;h1&gt;Hello {name} from MDN!&lt;/h1&gt;</pre>
 
-<p>Just save your changes and the app running at <code>localhost:5000</code> will be automatically updated.</p>
+<p>只要儲存檔案之後，跑在 <code>localhost:5000</code> 位址的應用程式將會自動地被更新。</p>
 
-<h3 id="A_first_look_at_Svelte_reactivity">A first look at Svelte reactivity</h3>
+<h3 id="A_first_look_at_Svelte_reactivity">初見 Svelte 反應性</h3>
 
-<p>In the context of a UI framework, reactivity means that the framework can automatically update the DOM when the state of any component is changed.</p>
+<p>在使用者介面框架當中，反應性意謂著當任何元件的狀態被改變時，框架能夠自動地更新 DOM。</p>
 
-<p>In Svelte, reactivity is triggered by assigning a new value to any top level variable in a component. For example, we could include a <code>toggleName()</code> function in our <code>App</code> component, and a button to run it.</p>
+<p>在 Svelte 中，藉由在元件指定新數值給任何頂層變數來觸發反應性。舉個例子，我們可以在 <code>App</code> 元件中寫一個 <code>toggleName()</code> 方法並透過一個按鈕來觸發它。</p>
 
-<p>Try updating your <code>&lt;script&gt;</code> and markup sections like so:</p>
+<p>嘗試更新你的 <code>&lt;script&gt;</code> 和標記區塊如下：</p>
 
 <pre class="brush: html">&lt;script&gt;
   export let name;
@@ -322,15 +322,15 @@ npm run dev</pre>
   &lt;p&gt;Visit the &lt;a href="https://svelte.dev/tutorial"&gt;Svelte tutorial&lt;/a&gt; to learn how to build Svelte apps.&lt;/p&gt;
 &lt;/main&gt;</pre>
 
-<p>Whenever the button is clicked, Svelte executes the <code>toggleName()</code> function, which in turn updates the value of the <code>name</code> variable.</p>
+<p>每當按鈕被點擊，Svelte 會執行 <code>toggleName()</code> 方法並更新 <code>name</code> 變數數值。</p>
 
-<p>As you can see, the <code>&lt;h1&gt;</code> label is automatically updated. Behind the scenes, Svelte created the JavaScript code to update the DOM whenever the value of the name variable changes, without using any virtual DOM or other complex reconciliation mechanism.</p>
+<p>你可以看到 <code>&lt;h1&gt;</code> 標籤已經自動地被更新。每當 name 變數數值改變時，Svelte 就會在背後建立一些 JavaScript 程式碼來更新 DOM，而沒有使用到任何 virtual DOM 或複雜的協調機制。</p>
 
-<p>Note the use of <code>:</code> in <code>on:click</code>. That's Svelte's syntax for listening to DOM events.</p>
+<p>注意在 <code>on:click</code> 使用的 <code>:</code>。這是 Svelte 用於 DOM 事件監聽的語法。</p>
 
-<h2 id="Inspecting_main.js_the_entry_point_of_our_app">Inspecting main.js: the entry point of our app</h2>
+<h2 id="Inspecting_main.js_the_entry_point_of_our_app">檢視 main.js：我們應用程式的進入點</h2>
 
-<p>Let’s open <code>src/main.js</code>, which is where the <code>App</code> component is being imported and used. This file is the entry point for our app, and it initially looks like this:</p>
+<p>讓我們打開 <code>src/main.js</code>，它會告訴你 <code>App</code> 元件是從哪裡載入並使用。這個檔案是我們應用程式的進入點，一開始會看起來如下內容：</p>
 
 <pre class="brush: js">import App from './App.svelte';
 
@@ -343,11 +343,11 @@ const app = new App({
 
 export default app;</pre>
 
-<p><code>main.js</code> starts by importing the Svelte component that we are going to use. Then in line 3 it instantiates it, passing an option object with the following properties:</p>
+<p><code>main.js</code> 一開始就會把我們預計要使用的 Svelte 元件載入。然後於第 3 行位置會傳入選項物件並實例化它：</p>
 
 <ul>
- <li><code>target</code>: The DOM element inside which we want the component to be rendered, in this case the <code>&lt;body&gt;</code> element.</li>
- <li><code>props</code>: the values to assign to each prop of the <code>App</code> component.</li>
+ <li><code>target</code>：決定我們想要把元件渲染在哪一個 DOM 元素上，此例為 <code>&lt;body&gt;</code> 元素。</li>
+ <li><code>props</code>：指定數值給 <code>App</code> 元件中的每一個屬性。</li>
 </ul>
 
 <h2 id="A_look_under_the_hood">A look under the hood</h2>
