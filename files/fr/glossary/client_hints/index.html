@@ -1,0 +1,38 @@
+---
+title: Client hints
+slug: Glossary/Client_hints
+tags:
+  - Client hints
+  - Glossary
+  - Performance
+  - Reference
+  - Web Performance
+---
+<p><span class="seoSummary">Les <strong>Conseils de client</strong> (<em>Client Hints</em>) sont un ensemble de champs d'<a href="/fr/docs/Web/HTTP/Headers">en-têtes de requêtes HTTP</a> relatifs à une négotiation de contenu proactive; ils permettent aux clients d'indiquer une liste spécifique de préférences en matière d'appareil et d'agent.</span></p>
+
+<p>L'utilisation de conseils de client n'est pas automatique : les serveurs doivent en fait annoncer s'ils supportent les conseils de client. Pour ce faire, les serveurs utilisent l'en-tête <code><a href="https://datatracker.ietf.org/doc/html/draft-grigorik-http-client-hints-03#section-2.2.1">Accept-CH</a></code> ("Accept Client Hints") ou un méta-élément HTML équivalent avec l'attribut <code><a href="/fr/docs/Web/HTML/Element/meta#attributs">http-equiv</a></code>.</p>
+
+<p><code>Accept-CH: Width, Viewport-Width, Downlink</code></p>
+
+<p>et / ou</p>
+
+<p><code>&lt;meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink</code><code>"&gt;</code></p>
+
+<p>Lorsqu'un client reçoit l'en-tête <code>Accept-CH</code>, s'il le supporte, il attache les en-têtes de conseils de clients qui correspondent aux champs-valeurs annoncés. Par exemple, si l'on se base sur l'exemple Accept-CH ci-dessus : le client peut attacher les en-têtes de largeur, de largeur de vue et de liaison descendante à toutes les requêtes suivantes. Dans le second exemple, le serveur indique au navigateur les conseils en définissant l'élément méta Accept-CH.</p> 
+
+<p>De façon très basique, avec l'en-tête de conseils de client, le développeur ou l'application peut demander au navigateur de partager des informations à son sujet au serveur, comme par exemple le ratio de pixel de l'appareil, la largeur de vue, et la largeur d'affichage. Le client peut alors donner au serveur des informations à propos de son environnement, et le serveur peut dès lors déterminer quelques ressources envoyer à partir de ces informations.</p>
+
+<h2 id="varying_Client_Hints">Des conseils de client variables</h2>
+
+<p>Pour intégrer dans le cache que différents <a href="/fr/docs/Web/HTTP/Headers#astuces_client">Conseils de client</a> peuvent affecter la réponse, il faut utiliser l'en-tête HTTP <code><a href="/fr/docs/Web/HTTP/Headers/Vary">Vary</a></code>.</p>
+
+<p id="example_varying_response">Exemple de réponse variable :</p>
+
+<p><code>Vary: Accept, Width, Viewport-Width, Downlink</code></p>
+
+<h2 id="See_also">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/HTTP/Headers#astuces_client">En-têtes de Conseils de client</a></li>
+ <li><a href="/files/fr/Web/HTTP/Headers/Vary">En-tête HTTP <code>Vary</code></a></li>
+</ul>
