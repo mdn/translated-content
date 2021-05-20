@@ -1,5 +1,5 @@
 ---
-title: Lignes directrices de JavaScript
+title: Lignes directrices pour JavaScript
 slug: MDN/Guidelines/Code_guidelines/JavaScript
 tags:
   - Code
@@ -13,7 +13,7 @@ translation_of: MDN/Guidelines/Code_guidelines/JavaScript
 
 <p class="summary">Les directives suivantes couvrent la manière d'écrire le JavaScript pour les exemples de code MDN.</p>
 
-<p>Ce qui suit est un ensemble assez simple de directives JavaScript. Nous pourrions aller beaucoup plus en profondeur sur ce sujet, mais nous voulons essentiellement fournir des directives simples pour écrire des exemples concis qui seront compréhensibles par le plus grand nombre de personnes possible, plutôt que des directives détaillées pour écrire des applications web complexes. Si vous voulez quelque chose qui entre dans plus de détails, nous vous recommandons le <a href="https://github.com/airbnb/javascript">AirBnB JavaScript Style Guide</a>, qui est généralement compatible avec nos directives.</p>
+<p>Ce qui suit est un ensemble assez simple de directives JavaScript. Nous pourrions aller beaucoup plus en profondeur sur ce sujet, mais nous voulons essentiellement fournir des directives simples pour écrire des exemples concis qui seront compréhensibles par le plus grand nombre de personnes possible, plutôt que des directives détaillées pour écrire des applications web complexes. Si vous voulez quelque chose qui entre dans plus de détails, nous vous recommandons le <a href="https://github.com/airbnb/javascript">guide stylistique JavaScript d'AirBnB</a>, qui est généralement compatible avec nos directives.</p>
 
 <h2 id="In_this_article">Dans cet article</h2>
 
@@ -109,7 +109,7 @@ translation_of: MDN/Guidelines/Code_guidelines/JavaScript
   <li>Il doit y avoir un espace entre les parenthèses et l'accolade ouvrante dans les cas décrits au point précédent.</li>
 </ul>
 
-<h3 id="JavaScript_comments">Commentaires Javascript</h3>
+<h3 id="JavaScript_comments">Commentaires JavaScript</h3>
 
 <p>Utilisez des commentaires de style JS pour commenter le code qui n'est pas auto-documenté :</p>
 
@@ -130,7 +130,7 @@ translation_of: MDN/Guidelines/Code_guidelines/JavaScript
 
 <h3 id="Use_ES6_features">Utiliser les fonctions ES6</h3>
 
-<p>Pour un usage général*, vous pouvez utiliser les fonctionnalités ES6 courantes (telles que les <a href="/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions">fonctions flèches</a>, <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">promesses</a>, <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/let">let</a></code>/<code><a href="/fr/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, <a href="/fr/docs/Web/JavaScript/Reference/Template_literals">littéraux de gabarits</a>, et le <a href="/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax">syntaxe de décomposition</a>) dans les exemples MDN. Nous les incluons à de nombreux endroits dans ces directives, car nous pensons que l'industrie du Web a généralement atteint un point où ces fonctionnalités sont suffisamment familières pour être compréhensibles. Et pour ceux qui ne les utilisent pas encore, nous aimerions jouer notre rôle en aidant les gens à développer leurs compétences.</p>
+<p>Pour un usage général*, vous pouvez utiliser les fonctionnalités ES6 courantes (telles que les <a href="/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions">fonctions fléchées</a>, <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">promesses</a>, <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/let">let</a></code>/<code><a href="/fr/docs/Web/JavaScript/Reference/Statements/const">const</a></code>, <a href="/fr/docs/Web/JavaScript/Reference/Template_literals">littéraux de gabarits</a>, et le <a href="/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax">syntaxe de décomposition</a>) dans les exemples MDN. Nous les incluons à de nombreux endroits dans ces directives, car nous pensons que l'industrie du Web a généralement atteint un point où ces fonctionnalités sont suffisamment familières pour être compréhensibles. Et pour ceux qui ne les utilisent pas encore, nous aimerions jouer notre rôle en aidant les gens à développer leurs compétences.</p>
 
 <p>Cependant, nous ne recommandons pas encore l'utilisation générale des nouvelles fonctionnalités ES telles que <a href="/fr/docs/Web/JavaScript/Reference/Statements/async_function">async</a>/<a href="/fr/docs/Web/JavaScript/Reference/Operators/await">await</a>, les virgules de fin sur les listes d'arguments, etc. Nous préférerions que vous ne les utilisiez pas, sauf si cela est strictement nécessaire, et si vous les utilisez, incluez une explication dans votre exemple pour dire ce qu'ils font, avec un lien vers le matériel de référence approprié.</p>
 
@@ -464,7 +464,7 @@ let hanSolo = {
 
 <h3 id="Adding_to_an_array">Ajout à un tableau</h3>
 
-<p>Pour ajouter des éléments à un tableau, utilisez <code><a href="/fr/docs/Web/JavaScript/Référence/Global_Objects/Array/push">push()</a></code>, et non l'affectation directe. Étant donné le tableau suivant :</p>
+<p>Pour ajouter des éléments à un tableau, utilisez <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push()</a></code>, et non l'affectation directe. Étant donné le tableau suivant :</p>
 
 <pre class="brush: js">const pets = [];</pre>
 
@@ -478,7 +478,7 @@ let hanSolo = {
 
 <h2 id="Error_handling">Traitement des erreurs</h2>
 
-<p>Si certains états de votre programme lancent des erreurs non attrapées, ils interrompent l'exécution et réduisent potentiellement l'utilité de l'exemple. Vous devriez donc attraper les erreurs en utilisant un bloc <code><a href="/fr/docs/Web/JavaScript/Référence/Statements/try...catch">try...catch</a></code> :</p>
+<p>Si certains états de votre programme lancent des erreurs non attrapées, ils interrompent l'exécution et réduisent potentiellement l'utilité de l'exemple. Vous devriez donc attraper les erreurs en utilisant un bloc <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> :</p>
 
 <pre class="brush: js example-good">try {
   console.log(results);
@@ -489,7 +489,7 @@ catch(e) {
 
 <h2 id="Good_JavaScript_examples_on_MDN">De bons exemples de JavaScript sur MDN</h2>
 
-<p>Vous pouvez trouver de bons extraits de JavaScript, concis et significatifs, en haut de nos pages <a href="/fr/docs/Web/JavaScript/Référence">Référence du langage JavaScript</a> - parcourez-les pour en trouver.</p>
+<p>Vous pouvez trouver de bons extraits de JavaScript, concis et significatifs, en haut de nos pages <a href="/fr/docs/Web/JavaScript/Reference">Référence du langage JavaScript</a> - parcourez-les pour en trouver.</p>
 
 <p>Nos exemples interactifs (et autres) sont généralement rédigés de manière à suivre les directives ci-dessus, mais sachez qu'ils peuvent différer à certains endroits, car ils ont été rédigés pour la plupart avant que les directives ne soient nouvellement rédigées.</p>
 
