@@ -13,16 +13,16 @@ browser-compat: css.selectors.defined
 ---
 <div>{{CSSRef}}</div>
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:defined</code></strong> représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés (<em>custom elements</em>) ayant correctement été définis (c'est-à-dire grâce à la méthode <a href="/en-US/docs/Web/API/CustomElementRegistry/define">CustomElementRegistry.define()</a> (en anglais)).</p>
+<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:defined</code></strong> représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés (« <em>custom elements</em> ») ayant correctement été définis (c'est-à-dire grâce à la méthode <a href="/fr/docs/Web/API/CustomElementRegistry/define"><code>CustomElementRegistry.define()</code></a>).</p>
 
-<pre class="brush: css no-line-numbers">/* Cette règle cible tout élément défini */
+<pre class="brush: css">/* Cette règle cible tout élément défini */
 :defined {
-  font-style: italic;
+  font-style: italic;
 }
 
 /* Cette règle cible n'importe quelle instance d'un élément personnalisé donné */
 simple-custom:defined {
-  display: block;
+  display: block;
 }
 </pre>
 
@@ -49,7 +49,7 @@ simple-custom:defined {
   }
 })</pre>
 
-<p>On insère ensuite une copie de cet élément dans le document, à côté d'un paragraphe classique {<code>&lt;p&gt;</code>  :</p>
+<p>On insère ensuite une copie de cet élément dans le document, à côté d'un paragraphe classique {<code>&lt;p&gt;</code> :</p>
 
 <pre class="brush: html">&lt;simple-custom text="Le texte de l'élément personnalisé"&gt;&lt;/simple-custom&gt;
 
@@ -85,31 +85,14 @@ simple-custom:defined {
 
 <h2 id="specifications">Spécifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics-other.html#selector-defined', ':defined')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une<em>pull request</em>.</div>
 
 <p>{{Compat}}</p>
 
 <h2 id="see_also">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/Web_Components">Les composants web</a></li>
+  <li><a href="/fr/docs/Web/Web_Components">Les composants web</a></li>
 </ul>
