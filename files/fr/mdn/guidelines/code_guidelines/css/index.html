@@ -62,7 +62,7 @@ translation_of: MDN/Guidelines/Code_guidelines/CSS
 
 <h3 id="Use_flexiblerelative_units">Utiliser des unités flexibles/relatives</h3>
 
-<p>Pour une flexibilité maximale sur le plus grand nombre possible d'appareils, il est judicieux de dimensionner les conteneurs, le <code>padding</code>, etc. en utilisant des unités relatives comme les <code>em</code> et les <code>rem</code>, ou des pourcentages et des unités de « viewport » si vous souhaitez qu'ils varient en fonction de la largeur du « viewport ». Vous pouvez en savoir plus à ce sujet dans notre article <a href="/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks#fluid_grids">Eléments de construction d'un design adaptatif (Responsive Design)</a>.</p>
+<p>Pour une flexibilité maximale sur le plus grand nombre possible d'appareils, il est judicieux de dimensionner les conteneurs, le <code>padding</code>, etc. en utilisant des unités relatives comme les <code>em</code> et les <code>rem</code>, ou des pourcentages et des unités de « viewport » si vous souhaitez qu'ils varient en fonction de la largeur du « viewport ». Vous pouvez en savoir plus à ce sujet dans notre article <a href="/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks#fluid_grids">Éléments de construction d'un design adaptatif (Responsive Design)</a>.</p>
 
 <h3 id="Dont_use_resets">Ne pas utiliser de réinitialisation</h3>
 
@@ -106,7 +106,7 @@ translation_of: MDN/Guidelines/Code_guidelines/CSS
 
 <p>En général, lorsque vous enseignez les spécificités de la syntaxe CSS, il est plus clair et plus évident d'utiliser des propriétés longues plutôt que des raccourcies (à moins bien sûr que l'enseignement du raccourci ne soit le but de l'exemple). N'oubliez pas que les exemples du MDN ont pour but d'enseigner aux gens, et non d'être efficaces ou astucieuses.</p>
 
-<p>Tout d'abord, il est souvent plus difficile de comprendre ce que fait le raccourci. Il faut un certain temps pour comprendre exactement ce que fait la syntaxe {{cssxref("font")}}, par exemple :</p>
+<p>Tout d'abord, il est souvent plus difficile de comprendre ce que fait le raccourci. Il faut un certain temps pour comprendre exactement ce que fait la syntaxe <a href="/fr/docs/Web/CSS/font"><code>font</code></a>, par exemple :</p>
 
 <pre class="brush: css">font: small-caps bold 2rem/1.5 sans-serif;</pre>
 
@@ -118,19 +118,19 @@ font-size: 2rem;
 line-height: 1.5;
 font-family: sans-serif;</pre>
 
-<p>Deuxièmement, les raccourcis CSS comportent des pièges potentiels supplémentaires : des valeurs par défaut sont définies pour des parties de la syntaxe que vous n'avez pas explicitement définies, ce qui peut produire des réinitialisations inattendues des valeurs que vous avez définies plus tôt dans la cascade, ou d'autres effets attendus. Par exemple, la propriété {{cssxref("grid")}} définit toutes les valeurs par défaut suivantes pour les éléments qui ne sont pas spécifiés :</p>
+<p>Deuxièmement, les raccourcis CSS comportent des pièges potentiels supplémentaires : des valeurs par défaut sont définies pour des parties de la syntaxe que vous n'avez pas explicitement définies, ce qui peut produire des réinitialisations inattendues des valeurs que vous avez définies plus tôt dans la cascade, ou d'autres effets attendus. Par exemple, la propriété <a href="/fr/docs/Web/CSS/grid"><code>grid</code></a> définit toutes les valeurs par défaut suivantes pour les éléments qui ne sont pas spécifiés :</p>
 
 <ul>
-  <li>{{cssxref("grid-template-rows")}}: <code>none</code></li>
-  <li>{{cssxref("grid-template-columns")}}: <code>none</code></li>
-  <li>{{cssxref("grid-template-areas")}}: <code>none</code></li>
-  <li>{{cssxref("grid-auto-rows")}}: <code>auto</code></li>
-  <li>{{cssxref("grid-auto-columns")}}: <code>auto</code></li>
-  <li>{{cssxref("grid-auto-flow")}}: <code>row</code></li>
-  <li>{{cssxref("column-gap")}}: <code>0</code></li>
-  <li>{{cssxref("row-gap")}}: <code>0</code></li>
-  <li>{{cssxref("column-gap")}}: <code>normal</code></li>
-  <li>{{cssxref("row-gap")}}: <code>normal</code></li>
+  <li><a href="/fr/docs/Web/CSS/grid-template-rows"><code>grid-template-rows</code></a>: <code>none</code></li>
+  <li><a href="/fr/docs/Web/CSS/grid-template-columns"><code>grid-template-columns</code></a>: <code>none</code></li>
+  <li><a href="/fr/docs/Web/CSS/grid-template-areas"><code>grid-template-areas</code></a>: <code>none</code></li>
+  <li><a href="/fr/docs/Web/CSS/grid-auto-rows"><code>grid-auto-rows</code></a>: <code>auto</code></li>
+  <li><a href="/fr/docs/Web/CSS/grid-auto-columns"><code>grid-auto-columns</code></a>: <code>auto</code></li>
+  <li><a href="/fr/docs/Web/CSS/grid-auto-flow"><code>grid-auto-flow</code></a>: <code>row</code></li>
+  <li><a href="/fr/docs/Web/CSS/column-gap"><code>column-gap</code></a>: <code>0</code></li>
+  <li><a href="/fr/docs/Web/CSS/row-gap"><code>row-gap</code></a>: <code>0</code></li>
+  <li><a href="/fr/docs/Web/CSS/column-gap"><code>column-gap</code></a>: <code>normal</code></li>
+  <li><a href="/fr/docs/Web/CSS/row-gap"><code>row-gap</code></a>: <code>normal</code></li>
 </ul>
 
 <p>En outre, certains raccourcis ne fonctionnent comme prévu que si vous incluez les différents composants de la valeur dans un certain ordre. Dans les animations CSS, par exemple :</p>
