@@ -1,5 +1,5 @@
 ---
-title: Lignes directrices du HTML
+title: Lignes directrices pour le HTML
 slug: MDN/Guidelines/Code_guidelines/HTML
 tags:
   - Code
@@ -51,7 +51,7 @@ translation_of: MDN/Guidelines/Code_guidelines/HTML
 
 <h3 id="Document_language">Langue du document</h3>
 
-<p>Définissez la langue du document à l'aide de l'attribut {{htmlattrxref("lang")}} de votre élément {{htmlelement("html")}} :</p>
+<p>Définissez la langue du document à l'aide de l'attribut <a href="/fr/docs/Web/HTML/Global_attributes#lang"><code>lang</code></a> de votre élément <a href="/fr/docs/Web/HTML/Element/html"><code>&lt;html&gt;</code></a> :</p>
 
 <pre class="brush: html example-good">&lt;html lang="fr"&gt;</pre>
 
@@ -63,11 +63,11 @@ translation_of: MDN/Guidelines/Code_guidelines/HTML
 
 <pre class="brush: html example-good">&lt;meta charset="utf-8"&gt;</pre>
 
-<p>Utilisez UTF-8 à moins que vous n'ayez une très bonne raison de ne pas le faire ; il couvrira vos besoins en caractères à peu près indépendamment de la langue que vous utilisez dans votre document. En outre, vous devriez toujours spécifier le jeu de caractères le plus tôt possible dans le bloc {{HTMLElement("head")}} de votre HTML (dans le premier kilooctet), car cela vous protège contre une <a href="http://support.microsoft.com/kb/928847">vulnérabilité de sécurité d'Internet Explorer</a>.</p>
+<p>Utilisez UTF-8 à moins que vous n'ayez une très bonne raison de ne pas le faire ; il couvrira vos besoins en caractères à peu près indépendamment de la langue que vous utilisez dans votre document. En outre, vous devriez toujours spécifier le jeu de caractères le plus tôt possible dans le bloc <a href="/fr/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a> de votre HTML (dans le premier kilooctet), car cela vous protège contre une <a href="http://support.microsoft.com/kb/928847">vulnérabilité de sécurité d'Internet Explorer</a>.</p>
 
 <h3 id="Viewport_meta_tag">Méta-balise Viewport</h3>
 
-<p>Enfin, vous devez toujours ajouter la métabalise viewport dans votre HTML {{HTMLElement("head")}}, pour donner à l'exemple une meilleure chance de fonctionner sur les appareils mobiles. Vous devez inclure au moins les éléments suivants dans votre document, que vous pourrez modifier ultérieurement en fonction des besoins :</p>
+<p>Enfin, vous devez toujours ajouter la métabalise viewport dans votre HTML <a href="/fr/docs/Web/HTML/Element/head"><code>&lt;head&gt;</code></a>, pour donner à l'exemple une meilleure chance de fonctionner sur les appareils mobiles. Vous devez inclure au moins les éléments suivants dans votre document, que vous pourrez modifier ultérieurement en fonction des besoins :</p>
 
 <pre class="brush: html example-good">&lt;meta name="viewport" content="width=device-width"&gt;</pre>
 
@@ -157,6 +157,6 @@ translation_of: MDN/Guidelines/Code_guidelines/HTML
 
 <p>Cela ne pose aucun problème tant que vous déclarez un jeu de caractères UTF-8.</p>
 
-<h2 id="Good_HTML_examples_on_MDN">De bons exemples HTML sur le MDN</h2>
+<h2 id="Good_HTML_examples_on_MDN">De bons exemples HTML sur MDN</h2>
 
 <p>Vous pouvez trouver de bons extraits HTML, concis et significatifs, en haut des <a href="/fr/docs/Web/HTML/Reference">pages de référence HTML</a> - nos exemples interactifs sont généralement rédigés de manière à suivre ces directives, mais sachez qu'ils peuvent différer à certains endroits car ils ont pour la plupart été rédigés avant la nouvelle rédaction des directives.</p>
