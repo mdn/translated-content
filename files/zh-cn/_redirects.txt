@@ -2332,6 +2332,10 @@
 /zh-CN/docs/Web/HTML/Element/Video/loadeddata_event	/zh-CN/docs/Web/API/HTMLMediaElement/loadeddata_event
 /zh-CN/docs/Web/HTML/Element/command	/zh-CN/docs/orphaned/Web/HTML/Element/command
 /zh-CN/docs/Web/HTML/Element/element	/zh-CN/docs/orphaned/Web/HTML/Element/element
+/zh-CN/docs/Web/HTML/Element/isindex	/zh-CN/docs/orphaned/Web/HTML/Element/isindex
+/zh-CN/docs/Web/HTML/Element/listing	/zh-CN/docs/orphaned/Web/HTML/Element/listing
+/zh-CN/docs/Web/HTML/Element/multicol	/zh-CN/docs/orphaned/Web/HTML/Element/multicol
+/zh-CN/docs/Web/HTML/Element/nextid	/zh-CN/docs/orphaned/Web/HTML/Element/nextid
 /zh-CN/docs/Web/HTML/Element/video/play_event	/zh-CN/docs/Web/API/HTMLMediaElement/play_event
 /zh-CN/docs/Web/HTML/Element/video/timeupdate_event	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
 /zh-CN/docs/Web/HTML/Element/视频	/zh-CN/docs/Web/HTML/Element/video
@@ -2349,6 +2353,7 @@
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Web/HTML/Inline_elements
 /zh-CN/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/zh-CN/docs/Glossary/speculative_parsing
+/zh-CN/docs/Web/HTML/Preloading_content	/zh-CN/docs/orphaned/Web/HTML/Preloading_content
 /zh-CN/docs/Web/HTML/Supported_media_formats	/zh-CN/docs/conflicting/Web/Media/Formats
 /zh-CN/docs/Web/HTML/全局属性	/zh-CN/docs/Web/HTML/Global_attributes
 /zh-CN/docs/Web/HTML/内联元素	/zh-CN/docs/Web/HTML/Inline_elements
@@ -2632,6 +2637,7 @@
 /zh-CN/docs/Web/Progressive_web_apps/添加到主屏幕	/zh-CN/docs/Web/Progressive_web_apps/Add_to_home_screen
 /zh-CN/docs/Web/SVG/Attribute/文本锚点	/zh-CN/docs/Web/SVG/Attribute/text-anchor
 /zh-CN/docs/Web/SVG/Attribute/样式	/zh-CN/docs/Web/SVG/Attribute/Styling
+/zh-CN/docs/Web/SVG/Element/color-profile	/zh-CN/docs/orphaned/Web/SVG/Element/color-profile
 /zh-CN/docs/Web/SVG/Element/圆	/zh-CN/docs/Web/SVG/Element/circle
 /zh-CN/docs/Web/SVG/Element/多边形	/zh-CN/docs/Web/SVG/Element/polygon
 /zh-CN/docs/Web/SVG/Element/线性渐变	/zh-CN/docs/Web/SVG/Element/linearGradient

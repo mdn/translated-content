@@ -16562,17 +16562,6 @@
       "BychekRU"
     ]
   },
-  "Web/HTML/Preloading_content": {
-    "modified": "2020-10-15T22:11:40.984Z",
-    "contributors": [
-      "warsan",
-      "alexa.poruch",
-      "Ilya-Zhulin",
-      "akochemasov",
-      "Skolpov",
-      "isatalkin"
-    ]
-  },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
     "modified": "2019-03-23T22:44:29.253Z",
     "contributors": [
@@ -25721,6 +25710,17 @@
     "contributors": [
       "chrisdavidmills",
       "Akh-rman"
+    ]
+  },
+  "orphaned/Web/HTML/Preloading_content": {
+    "modified": "2020-10-15T22:11:40.984Z",
+    "contributors": [
+      "warsan",
+      "alexa.poruch",
+      "Ilya-Zhulin",
+      "akochemasov",
+      "Skolpov",
+      "isatalkin"
     ]
   },
   "orphaned/Web/JavaScript/Guide/Об_этом_руководстве": {

@@ -821,6 +821,7 @@
 /ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽	/ko/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn/Forms
 /ko/docs/Web/HTML/Introduction	/ko/docs/Learn/HTML/Introduction_to_HTML
+/ko/docs/Web/HTML/Preloading_content	/ko/docs/orphaned/Web/HTML/Preloading_content
 /ko/docs/Web/HTTP/Access_control_CORS	/ko/docs/Web/HTTP/CORS
 /ko/docs/Web/HTTP/Access_control_CORS/Errors	/ko/docs/Web/HTTP/CORS/Errors
 /ko/docs/Web/HTTP/Access_control_CORS/Errors/CORSDidNotSucceed	/ko/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed

@@ -28257,12 +28257,6 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/@media/scan": {
-    "modified": "2020-10-15T22:06:00.879Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/CSS/@media/scripting": {
     "modified": "2020-10-15T22:05:28.884Z",
     "contributors": [
@@ -28304,18 +28298,6 @@
       "fscholz",
       "ethertank",
       "sosleepy"
-    ]
-  },
-  "Web/CSS/@page/bleed": {
-    "modified": "2020-10-15T22:06:40.908Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/@page/marks": {
-    "modified": "2020-10-15T22:06:39.164Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/CSS/@page/size": {
@@ -35043,13 +35025,6 @@
       "ethertank"
     ]
   },
-  "Web/HTML/Element/isindex": {
-    "modified": "2020-12-02T06:54:17.873Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
-    ]
-  },
   "Web/HTML/Element/kbd": {
     "modified": "2020-10-15T21:18:52.497Z",
     "contributors": [
@@ -35104,13 +35079,6 @@
       "dlwe",
       "yyss",
       "takahashim"
-    ]
-  },
-  "Web/HTML/Element/listing": {
-    "modified": "2020-10-15T21:26:18.688Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
     ]
   },
   "Web/HTML/Element/main": {
@@ -35186,12 +35154,6 @@
       "SphinxKnight",
       "yyss",
       "ethertank"
-    ]
-  },
-  "Web/HTML/Element/multicol": {
-    "modified": "2020-10-15T22:02:51.939Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/HTML/Element/nav": {
@@ -35934,17 +35896,6 @@
     "contributors": [
       "mfuji09",
       "momdo"
-    ]
-  },
-  "Web/HTML/Preloading_content": {
-    "modified": "2020-12-13T02:32:11.039Z",
-    "contributors": [
-      "kobayashitomoya",
-      "maechabin",
-      "rigani",
-      "8tak4",
-      "mfuji09",
-      "turenar"
     ]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
@@ -47549,12 +47500,6 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/solidColor": {
-    "modified": "2020-12-06T03:41:32.485Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/SVG/Element/svg": {
     "modified": "2020-10-15T21:25:51.866Z",
     "contributors": [
@@ -52609,6 +52554,24 @@
       "mfuji09"
     ]
   },
+  "orphaned/Web/CSS/@media/scan": {
+    "modified": "2020-10-15T22:06:00.879Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "orphaned/Web/CSS/@page/bleed": {
+    "modified": "2020-10-15T22:06:40.908Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "orphaned/Web/CSS/@page/marks": {
+    "modified": "2020-10-15T22:06:39.164Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
   "orphaned/Web/CSS/Index": {
     "modified": "2019-01-16T21:57:06.536Z",
     "contributors": [
@@ -52804,6 +52767,26 @@
       "masa100"
     ]
   },
+  "orphaned/Web/HTML/Element/isindex": {
+    "modified": "2020-12-02T06:54:17.873Z",
+    "contributors": [
+      "mfuji09",
+      "yyss"
+    ]
+  },
+  "orphaned/Web/HTML/Element/listing": {
+    "modified": "2020-10-15T21:26:18.688Z",
+    "contributors": [
+      "mfuji09",
+      "yyss"
+    ]
+  },
+  "orphaned/Web/HTML/Element/multicol": {
+    "modified": "2020-10-15T22:02:51.939Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
   "orphaned/Web/HTML/Global_attributes/dropzone": {
     "modified": "2020-12-07T13:17:08.707Z",
     "contributors": [
@@ -52818,6 +52801,17 @@
     "contributors": [
       "ethertank",
       "Marsf"
+    ]
+  },
+  "orphaned/Web/HTML/Preloading_content": {
+    "modified": "2020-12-13T02:32:11.039Z",
+    "contributors": [
+      "kobayashitomoya",
+      "maechabin",
+      "rigani",
+      "8tak4",
+      "mfuji09",
+      "turenar"
     ]
   },
   "orphaned/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages": {
@@ -53258,6 +53252,12 @@
   },
   "orphaned/Web/Manifest/serviceworker": {
     "modified": "2020-10-15T22:29:06.759Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "orphaned/Web/SVG/Element/solidColor": {
+    "modified": "2020-12-06T03:41:32.485Z",
     "contributors": [
       "mfuji09"
     ]

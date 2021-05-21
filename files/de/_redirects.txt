@@ -549,6 +549,8 @@
 /de/docs/Web/CSS/:-moz-ui-valid	/de/docs/orphaned/Web/CSS/:-moz-ui-valid
 /de/docs/Web/CSS/:-webkit-autofill	/de/docs/Web/CSS/:autofill
 /de/docs/Web/CSS/::-moz-placeholder	/de/docs/conflicting/Web/CSS/::placeholder
+/de/docs/Web/CSS/@page/bleed	/de/docs/orphaned/Web/CSS/@page/bleed
+/de/docs/Web/CSS/@page/marks	/de/docs/orphaned/Web/CSS/@page/marks
 /de/docs/Web/CSS/Adjacent_sibling_selectors	/de/docs/Web/CSS/Adjacent_sibling_combinator
 /de/docs/Web/CSS/Alias	/de/docs/conflicting/Web/CSS/cursor_35a62ea3f10b688a3a87ccfe07779743
 /de/docs/Web/CSS/Angrenzende_Geschwisterselektoren	/de/docs/Web/CSS/Adjacent_sibling_combinator
@@ -613,7 +615,7 @@
 /de/docs/Web/CSS/grid-gap	/de/docs/Web/CSS/gap
 /de/docs/Web/CSS/hidden	/de/docs/Web/CSS/visibility
 /de/docs/Web/CSS/linear-gradient	/de/docs/Web/CSS/linear-gradient()
-/de/docs/Web/CSS/marks	/de/docs/Web/CSS/@page/marks
+/de/docs/Web/CSS/marks	/de/docs/orphaned/Web/CSS/@page/marks
 /de/docs/Web/CSS/mq-boolean	/de/docs/Web/CSS/Media_Queries/Using_media_queries
 /de/docs/Web/CSS/none	/de/docs/conflicting/Web/CSS/float
 /de/docs/Web/CSS/normal	/de/docs/conflicting/Web/CSS/font-variant

@@ -11383,12 +11383,6 @@
       "young-gratia"
     ]
   },
-  "Web/HTML/Preloading_content": {
-    "modified": "2020-10-15T22:35:17.448Z",
-    "contributors": [
-      "sukyology"
-    ]
-  },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
     "modified": "2019-03-18T20:35:03.733Z",
     "contributors": [
@@ -18494,6 +18488,12 @@
     "contributors": [
       "alattalatta",
       "dolmoon"
+    ]
+  },
+  "orphaned/Web/HTML/Preloading_content": {
+    "modified": "2020-10-15T22:35:17.448Z",
+    "contributors": [
+      "sukyology"
     ]
   },
   "orphaned/Web/JavaScript/Differential_inheritance_in_JavaScript": {

@@ -15214,12 +15214,6 @@
       "Jorolo"
     ]
   },
-  "Web/HTML/Element/isindex": {
-    "modified": "2019-03-23T22:36:13.994Z",
-    "contributors": [
-      "jcr4"
-    ]
-  },
   "Web/HTML/Element/kbd": {
     "modified": "2019-03-18T21:11:05.093Z",
     "contributors": [
@@ -15332,12 +15326,6 @@
       "jigs12",
       "teoli",
       "Jorolo"
-    ]
-  },
-  "Web/HTML/Element/multicol": {
-    "modified": "2019-03-23T22:36:14.458Z",
-    "contributors": [
-      "jcr4"
     ]
   },
   "Web/HTML/Element/nav": {
@@ -23633,6 +23621,18 @@
     "contributors": [
       "raecillacastellana",
       "kramery"
+    ]
+  },
+  "orphaned/Web/HTML/Element/isindex": {
+    "modified": "2019-03-23T22:36:13.994Z",
+    "contributors": [
+      "jcr4"
+    ]
+  },
+  "orphaned/Web/HTML/Element/multicol": {
+    "modified": "2019-03-23T22:36:14.458Z",
+    "contributors": [
+      "jcr4"
     ]
   },
   "orphaned/Web/HTML/Elemento/Etiqueta_Personalizada_HTML5": {

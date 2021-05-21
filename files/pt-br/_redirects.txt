@@ -776,6 +776,7 @@
 /pt-BR/docs/Web/HTML/HTML5/Introduction_to_HTML5	/pt-BR/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /pt-BR/docs/Web/HTML/Inline_elemente	/pt-BR/docs/Web/HTML/Inline_elements
 /pt-BR/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/pt-BR/docs/Glossary/speculative_parsing
+/pt-BR/docs/Web/HTML/Preloading_content	/pt-BR/docs/orphaned/Web/HTML/Preloading_content
 /pt-BR/docs/Web/HTML/ReferenciaHTML	/pt-BR/docs/Web/HTML/Reference
 /pt-BR/docs/Web/HTML/Using_HTML5_audio_and_video	/pt-BR/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /pt-BR/docs/Web/HTML/favicon	/pt-BR/docs/orphaned/Web/HTML/favicon
@@ -859,6 +860,7 @@
 /pt-BR/docs/Web/MathML/Exemplos	/pt-BR/docs/Web/MathML/Examples
 /pt-BR/docs/Web/Performance/caminho_de_renderizacao_critico	/pt-BR/docs/Web/Performance/Critical_rendering_path
 /pt-BR/docs/Web/Progressive_web_apps/Introdução	/pt-BR/docs/Web/Progressive_web_apps/Introduction
+/pt-BR/docs/Web/SVG/Element/color-profile	/pt-BR/docs/orphaned/Web/SVG/Element/color-profile
 /pt-BR/docs/Web/SVG/Element/texto	/pt-BR/docs/Web/SVG/Element/text
 /pt-BR/docs/Web/SVG/Intensivo_de_Namespaces	/pt-BR/docs/Web/SVG/Namespaces_Crash_Course
 /pt-BR/docs/Web/Security/Básico_de_Segurança_da_Informação	/pt-BR/docs/orphaned/Web/Security/Information_Security_Basics
