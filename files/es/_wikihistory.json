@@ -5547,15 +5547,6 @@
       "SoftwareRVG"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:50:43.901Z",
-    "contributors": [
-      "daniel.arango",
-      "teffcode",
-      "AlePerez92",
-      "SoftwareRVG"
-    ]
-  },
   "Web/API/ChildNode/replaceWith": {
     "modified": "2019-03-23T22:23:34.633Z",
     "contributors": [
@@ -23483,6 +23474,15 @@
     "modified": "2019-01-16T15:35:57.481Z",
     "contributors": [
       "HenryGR"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T21:50:43.901Z",
+    "contributors": [
+      "daniel.arango",
+      "teffcode",
+      "AlePerez92",
+      "SoftwareRVG"
     ]
   },
   "orphaned/Web/API/Detecting_device_orientation": {

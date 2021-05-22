@@ -4115,13 +4115,6 @@
       "pedroguilhermelima"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:55:19.824Z",
-    "contributors": [
-      "SphinxKnight",
-      "gutoribeiro"
-    ]
-  },
   "Web/API/ClipboardEvent": {
     "modified": "2020-10-15T22:15:35.028Z",
     "contributors": [
@@ -17197,6 +17190,13 @@
     "contributors": [
       "wbamberg",
       "mak213k"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T21:55:19.824Z",
+    "contributors": [
+      "SphinxKnight",
+      "gutoribeiro"
     ]
   },
   "orphaned/Web/API/Document_Object_Model/Events": {

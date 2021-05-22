@@ -2764,12 +2764,6 @@
       "stevenwdv"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T22:05:03.102Z",
-    "contributors": [
-      "sv3m0r"
-    ]
-  },
   "Web/API/Console": {
     "modified": "2020-10-15T21:47:34.377Z",
     "contributors": [
@@ -14745,6 +14739,12 @@
       "VJSchneid",
       "maybe",
       "AARADEANCA"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T22:05:03.102Z",
+    "contributors": [
+      "sv3m0r"
     ]
   },
   "orphaned/Web/CSS/:-moz-ui-valid": {

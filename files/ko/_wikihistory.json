@@ -3829,12 +3829,6 @@
       "cs09g"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T22:10:05.225Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
   "Web/API/Clients": {
     "modified": "2020-10-15T22:21:49.146Z"
   },
@@ -18391,6 +18385,12 @@
     "modified": "2019-03-23T23:13:10.960Z",
     "contributors": [
       "cap3618"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T22:10:05.225Z",
+    "contributors": [
+      "cs09g"
     ]
   },
   "orphaned/Web/API/Detecting_device_orientation": {

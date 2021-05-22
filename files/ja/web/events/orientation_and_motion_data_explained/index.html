@@ -1,0 +1,83 @@
+---
+title: 方向および動きとして示されるデータ
+slug: Web/Events/Orientation_and_motion_data_explained
+tags:
+  - Intermediate
+  - Mobile
+  - Motion
+  - NeedsContent
+  - Orientation
+  - rotation
+translation_of: Web/Events/Orientation_and_motion_data_explained
+original_slug: Web/Guide/Events/Orientation_and_motion_data_explained
+---
+<p>{{ Draft() }}</p>
+
+<h2 id="Summary">概要</h2>
+
+<p>方向や動きのイベントを使用するときは、ブラウザーから与えられる値の意味を理解することが重要です。この記事では操作時の座標システムに関する詳細情報と、それらの使い方を説明します。</p>
+
+<h2 id="About_coordinate_frames">座標フレームについて</h2>
+
+<p><strong>座標フレーム</strong> (coordinate frame) は、オブジェクトに関する 3 軸 (X, Y, Z) の方向が定義されているシステムです。方向や動きのイベントを使用するときに考慮する座標フレームは 2 つあります。</p>
+
+<h3 id="Earth_coordinate_frame">地球座標フレーム</h3>
+
+<p>地球座標フレーム (Earth coordinate frame) は、地球の中心に固定されている座標フレームです。すなわち、軸は重力によって引かれる力および標準的な磁北方向に基づいて揃えられます。私たちは大文字 ("X"、"Y"、"Z") を、地球座標フレームの軸を示すために使用します。</p>
+<ul>
+  <li><strong>X</strong> 軸は地面に沿ってたどり、Y 軸と直交します。また、軸の正の方向が東を指します (従って、負の方向は西を指します)。</li>
+  <li><strong>Y</strong> 軸は地面に沿ってたどり、正の方向が真北 (すなわち北極であり、磁北ではありません) を、負の方向が真南を指します。</li>
+  <li><strong>Z</strong> 軸は地面に直交します。これは、端末と地球の中心との間に引かれた線と考えてください。Z 座標の値は正の方向が上向き (地球の中心から遠ざかる)、負の方向が下向き (地球の中心に向かう) です。</li>
+</ul>
+
+<h3 id="Device_coordinate_frame">端末座標フレーム</h3>
+
+<p>端末座標フレーム (Device coordinate frame) は、端末の中心に固定された座標フレームです。私たちは小文字 ("x"、"y"、"z") を、端末座標フレームの軸を示すために使用します。</p>
+
+<p><img class="default internal" src="axes.png"></p>
+
+<ul>
+  <li><strong>x</strong> 軸は画面の水平面にあり、正の方向が右を、負の方向が左を指します。</li>
+  <li><strong>y</strong> 軸は画面の水平面にあり、正の方向が上端側を、負の方向が下端側を指します。</li>
+  <li><strong>z</strong> 軸は画面やキーボードに直交しており、正の方向が画面から外側へ伸びていきます。</li>
+</ul>
+
+<div class="note"><strong>注:</strong>携帯電話やタブレットでは、端末の方向が常に画面の標準的な方向に対して考慮され、これは、ほとんどの端末では「ポートレート」 (縦) の方向になります。ノートパソコンでは、方向はキーボードに対して考慮されます。補正するために端末の方向の変化を検知したい場合は、<code>orientationchange</code> イベントが使用できます。</div>
+
+<h2 id="About_rotation">回転について</h2>
+
+<p>回転は、端末座標フレームと地球座標フレームとの度合いの違いという点から各軸で表現され、またそれは度単位で測られます。</p>
+
+<h3 id="Alpha">Alpha</h3>
+
+<p>z 軸を中心にした回転、すなわち端末をひねるようにすると、 <strong>alpha</strong> 回転角が変化します。</p>
+
+<p><img class="default internal" src="alpha.png"></p>
+
+<p>alpha 角は端末の上端が地球の北極をまっすぐ向いているときが 0 度であり、端末が左へ回転するのに従って増加します。</p>
+
+<h3 id="Beta">Beta</h3>
+
+<p>x 軸を中心にした回転、すなわち端末を向こう側やユーザー側へ向けて傾けると、 <strong>beta</strong> 回転角が変化します。</p>
+
+<p><img alt="Positive beta pitches the device forward toward the user." src="beta2.png"></p>
+
+<p>beta 角は端末の上端および下端から地球の表面までの距離がどちらも同じであるときが 0 度であり、端末を前方へ傾けるに従って 180 度まで増加、後方へ傾けるに従って -180 度まで減少します。</p>
+
+<h3 id="Gamma">Gamma</h3>
+
+<p>y 軸を中心にした回転、すなわち端末を左右に傾けると、 <strong>gamma</strong> 回転角が変化します。</p>
+
+<p><img class="default internal" src="gamma.png"></p>
+
+<p>gamma 角は端末の左端および右端から地球の表面までの距離がどちらも同じであるときが 0 度であり、端末を右へ傾けるのに従って 90 度まで増加、左へ傾けるのに従って -90 度まで減少します。</p>
+
+<section id="Quick_links">
+  <ul>
+    <li><a href="/ja/docs/Web/Events/Detecting_device_orientation">端末の向きの検出</a></li>
+    <li>{{domxref("DeviceOrientationEvent")}}</li>
+    <li>{{domxref("DeviceMotionEvent")}}</li>
+    <li><a href="/ja/docs/Web/Events/Using_device_orientation_with_3D_transforms">3D 変換における deviceorientation の使用</a></li>
+    <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベントの紹介</a></li>
+  </ul>
+</section>

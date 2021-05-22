@@ -3614,6 +3614,7 @@
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Transformations	/fr/docs/Web/API/Canvas_API/Tutorial/Transformations
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Utilisation_d'images	/fr/docs/Web/API/Canvas_API/Tutorial/Using_images
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Utilisation_de_base	/fr/docs/Web/API/Canvas_API/Tutorial/Basic_usage
+/fr/docs/Web/API/ChildNode/remove	/fr/docs/orphaned/Web/API/ChildNode/remove
 /fr/docs/Web/API/Commentaire	/fr/docs/Web/API/Comment
 /fr/docs/Web/API/Commentaire/Comment	/fr/docs/Web/API/Comment/Comment
 /fr/docs/Web/API/Console.table	/fr/docs/Web/API/Console/table

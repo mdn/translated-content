@@ -6485,14 +6485,6 @@
       "pantherCZ"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2019-03-23T22:51:25.031Z",
-    "contributors": [
-      "neoxaker",
-      "NikitaCoder",
-      "In4in"
-    ]
-  },
   "Web/API/ChildNode/replaceWith": {
     "modified": "2020-12-02T15:53:32.691Z",
     "contributors": [
@@ -25571,6 +25563,14 @@
     "contributors": [
       "wbamberg",
       "Aleksej"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2019-03-23T22:51:25.031Z",
+    "contributors": [
+      "neoxaker",
+      "NikitaCoder",
+      "In4in"
     ]
   },
   "orphaned/Web/API/Document_Object_Model/Events": {

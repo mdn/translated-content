@@ -1466,7 +1466,8 @@
 /zh-CN/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/zh-CN/docs/conflicting/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/Web/API/Channel_Messaging_API/使用_channel_messaging	/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging
 /zh-CN/docs/Web/API/ChildNode.nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
-/zh-CN/docs/Web/API/ChildNode.remove	/zh-CN/docs/Web/API/ChildNode/remove
+/zh-CN/docs/Web/API/ChildNode.remove	/zh-CN/docs/orphaned/Web/API/ChildNode/remove
+/zh-CN/docs/Web/API/ChildNode/remove	/zh-CN/docs/orphaned/Web/API/ChildNode/remove
 /zh-CN/docs/Web/API/Childnode.previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
 /zh-CN/docs/Web/API/Coordinates	/zh-CN/docs/Web/API/GeolocationCoordinates
 /zh-CN/docs/Web/API/Coordinates/latitude	/zh-CN/docs/Web/API/GeolocationCoordinates/latitude

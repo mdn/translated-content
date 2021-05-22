@@ -383,6 +383,7 @@
 /ru/docs/Web/API/Canvas_API/Tutorial/Рисование_текста	/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /ru/docs/Web/API/Canvas_API/Tutorial/Рисование_фигур	/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /ru/docs/Web/API/Canvas_API/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
+/ru/docs/Web/API/ChildNode/remove	/ru/docs/orphaned/Web/API/ChildNode/remove
 /ru/docs/Web/API/Coordinates	/ru/docs/Web/API/GeolocationCoordinates
 /ru/docs/Web/API/Document.querySelectorAll	/ru/docs/Web/API/Document/querySelectorAll
 /ru/docs/Web/API/Document/async	/ru/docs/Web/API/XMLDocument/async
