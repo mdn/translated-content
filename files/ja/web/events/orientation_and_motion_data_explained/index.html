@@ -1,6 +1,6 @@
 ---
 title: 方向および動きとして示されるデータ
-slug: orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
+slug: Web/Events/Orientation_and_motion_data_explained
 tags:
   - DOM
   - Mobile
@@ -10,8 +10,8 @@ tags:
   - Responsive Design
   - páginas_a_traducir
   - rotation
-translation_of: Web/Guide/Events/Orientation_and_motion_data_explained
-original_slug: Web/Guide/Events/Orientation_and_motion_data_explained
+translation_of: Web/Events/Orientation_and_motion_data_explained
+original_slug: Web/Events/Orientation_and_motion_data_explained
 ---
 <p>{{ Draft() }}</p>
 <p>方向や動きのイベントを使用するときは、ブラウザから与えられる値の意味を理解することが重要です。この記事では操作時の座標システムに関する詳細情報と、それらの使い方を説明します。</p>
@@ -26,7 +26,7 @@ original_slug: Web/Guide/Events/Orientation_and_motion_data_explained
 </ul>
 <h3 id="Device_coordinate_frame" name="Device_coordinate_frame">デバイス座標フレーム</h3>
 <p>{{原語併記("デバイス座標フレーム", "Device coordinate frame")}} は、デバイスの中心に固定された座標フレームです。私たちは小文字 ("x"、"y"、"z") を、デバイス座標フレームの軸を示すために使用します。</p>
-<p><img alt="axes.png" class="internal default" src="/@api/deki/files/5694/=axes.png" style=""></p>
+<p><img alt="axes.png" class="internal default" src="axes.png" style=""></p>
 <ul>
   <li><strong>x</strong> 軸はスクリーンの水平面にあり、正の方向が右を、負の方向が左を指します。</li>
   <li><strong>y</strong> 軸はスクリーンの水平面にあり、正の方向が上端側を、負の方向が下端側を指します。</li>
@@ -38,13 +38,23 @@ original_slug: Web/Guide/Events/Orientation_and_motion_data_explained
 <p>回転は、デバイス座標フレームと地球座標フレームとの度合いの違いという点から各軸で表現され、またそれは度単位で測られます</p>
 <h3 id="Alpha">Alpha</h3>
 <p>z 軸を中心にした回転、すなわちデバイスをひねるようにすると、<strong>alpha</strong> 回転角が変化します:</p>
-<p><img alt="alpha.png" class="internal default" src="/@api/deki/files/5695/=alpha.png" style=""></p>
+<p><img alt="alpha.png" class="internal default" src="alpha.png" style=""></p>
 <p>alpha 角はデバイスの上端が地球の北極をまっすぐ向いているときが 0 度であり、デバイスが左へ回転するのに従って増加します。</p>
 <h3 id="Beta">Beta</h3>
 <p>x 軸を中心にした回転、すなわちデバイスを向こう側やユーザ側へ向かって傾けると、<strong>beta</strong> 回転角が変化します:</p>
-<p><img alt="beta.png" class="internal default" src="/@api/deki/files/5696/=beta.png"></p>
+<p><img alt="beta.png" class="internal default" src="beta2.png"></p>
 <p>beta 角はデバイスの上端および下端から地球の表面までの距離がどちらも同じであるときが 0 度であり、デバイスを前方へ傾けるのに従って 180 度まで増加、後方へ傾けるのに従って -180 度まで減少します。</p>
 <h3 id="Gamma">Gamma</h3>
 <p>y 軸を中心にした回転、すなわちデバイスを左右に傾けると、<strong>gamma</strong> 回転角が変化します:</p>
-<p><img alt="gamma.png" class="internal default" src="/@api/deki/files/5697/=gamma.png"></p>
+<p><img alt="gamma.png" class="internal default" src="gamma.png"></p>
 <p>gamma 角はデバイスの左端および右端から地球の表面までの距離がどちらも同じであるときが 0 度であり、デバイスを右へ傾けるのに従って 90 度まで増加、左へ傾けるのに従って -90 度まで減少します。</p>
+
+<section id="Quick_links">
+  <ul>
+    <li><a href="/en-US/docs/Web/Events/Detecting_device_orientation">Detecting device orientation (en-US)</a></li>
+    <li>{{domxref("DeviceOrientationEvent")}}</li>
+    <li>{{domxref("DeviceMotionEvent")}}</li>
+    <li><a href="/en-US/docs/Web/Events/Using_device_orientation_with_3D_transforms">Using deviceorientation in 3D Transforms (en-US)</a></li>
+    <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベントへの入門</a></li>
+  </ul>
+</section>
