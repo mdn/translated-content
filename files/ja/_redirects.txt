@@ -1382,7 +1382,7 @@
 /ja/docs/DOM/NodeIterator	/ja/docs/Web/API/NodeIterator
 /ja/docs/DOM/NodeList	/ja/docs/Web/API/NodeList
 /ja/docs/DOM/NodeList.item	/ja/docs/Web/API/NodeList/item
-/ja/docs/DOM/Orientation_and_motion_data_explained	/ja/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
+/ja/docs/DOM/Orientation_and_motion_data_explained	/ja/docs/Web/Events/Orientation_and_motion_data_explained
 /ja/docs/DOM/Plugin	/ja/docs/Web/API/Plugin
 /ja/docs/DOM/PluginArray	/ja/docs/Web/API/PluginArray
 /ja/docs/DOM/SVGFontElement	/ja/docs/Web/API/SVGFontElement
@@ -4577,7 +4577,7 @@
 /ja/docs/Web/Guide/Events	/ja/docs/orphaned/Web/Guide/Events
 /ja/docs/Web/Guide/Events/Creating_and_triggering_events	/ja/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
-/ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained
+/ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/Web/Events/Orientation_and_motion_data_explained
 /ja/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/ja/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
 /ja/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
 /ja/docs/Web/Guide/HTML	/ja/docs/Learn/HTML
