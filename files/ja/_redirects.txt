@@ -223,8 +223,8 @@
 /ja/docs/CORS_Enabled_Image	/ja/docs/Web/HTML/CORS_enabled_image
 /ja/docs/CSS	/ja/docs/Web/CSS
 /ja/docs/CSS-2_Quick_Reference	/ja/docs/conflicting/Web/CSS
-/ja/docs/CSS-2_Quick_Reference/All_in_a_page	/ja/docs/conflicting/Web/CSS/Reference
-/ja/docs/CSS-2_Quick_Reference:All_in_a_page	/ja/docs/conflicting/Web/CSS/Reference
+/ja/docs/CSS-2_Quick_Reference/All_in_a_page	/ja/docs/Web/CSS/Reference
+/ja/docs/CSS-2_Quick_Reference:All_in_a_page	/ja/docs/Web/CSS/Reference
 /ja/docs/CSS-redirect-1	/ja/docs/Web/CSS
 /ja/docs/CSS-redirect-2	/ja/docs/Web/CSS
 /ja/docs/CSS/-dummyPrefix-column-gap	/ja/docs/Web/CSS/column-gap
