@@ -3602,7 +3602,7 @@
 /ja/docs/Tools/Memory/Take_a_heap_snapshot	/ja/docs/Tools/Memory/Basic_operations
 /ja/docs/Tools/Page_Inspector-redirect-1	/ja/docs/Tools/Page_Inspector
 /ja/docs/Tools/Page_Inspector/3D_view	/ja/docs/Tools/3D_View
-/ja/docs/Tools/Page_Inspector/HTML_panel	/ja/docs/conflicting/Tools/Page_Inspector/UI_Tour
+/ja/docs/Tools/Page_Inspector/HTML_panel	/ja/docs/Tools/Page_Inspector/UI_Tour#html_pane
 /ja/docs/Tools/Page_Inspector/How_to/View_fonts	/ja/docs/Tools/Page_Inspector/How_to/Edit_fonts
 /ja/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animations_examples	/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_CSS_transitions
 /ja/docs/Tools/Page_Inspector/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
