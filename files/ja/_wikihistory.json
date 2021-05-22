@@ -11643,16 +11643,6 @@
       "Shirasu"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:51:39.796Z",
-    "contributors": [
-      "Potappo",
-      "kenji-yamasaki",
-      "mfuji09",
-      "isdh",
-      "chikoski"
-    ]
-  },
   "Web/API/ChildNode/replaceWith": {
     "modified": "2020-10-17T04:41:48.425Z",
     "contributors": [
@@ -52381,6 +52371,16 @@
     "modified": "2019-03-23T22:51:59.818Z",
     "contributors": [
       "maruhiro"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T21:51:39.796Z",
+    "contributors": [
+      "Potappo",
+      "kenji-yamasaki",
+      "mfuji09",
+      "isdh",
+      "chikoski"
     ]
   },
   "orphaned/Web/API/Detecting_device_orientation": {

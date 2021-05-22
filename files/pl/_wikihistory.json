@@ -1564,15 +1564,6 @@
       "arronei"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:53:18.455Z",
-    "contributors": [
-      "SphinxKnight",
-      "Fidosek",
-      "griter",
-      "krystian71115"
-    ]
-  },
   "Web/API/Console": {
     "modified": "2019-03-23T23:09:41.834Z",
     "contributors": [
@@ -11237,6 +11228,15 @@
       "Teo",
       "Coldpeer",
       "Ptak82"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T21:53:18.455Z",
+    "contributors": [
+      "SphinxKnight",
+      "Fidosek",
+      "griter",
+      "krystian71115"
     ]
   },
   "orphaned/Web/API/ParentNode": {

@@ -9761,22 +9761,6 @@
       "caoweiju"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:27:27.352Z",
-    "contributors": [
-      "RainSlide",
-      "iSmartSV",
-      "duola8789",
-      "pasturn",
-      "Ende93",
-      "xgqfrms-GitHub",
-      "ceverytime",
-      "teoli",
-      "khalid32",
-      "ziyunfei",
-      "Darrel.Hsu"
-    ]
-  },
   "Web/API/ChildNode/replaceWith": {
     "modified": "2020-10-15T21:56:06.625Z",
     "contributors": [
@@ -50275,6 +50259,22 @@
     "modified": "2019-03-23T22:18:48.818Z",
     "contributors": [
       "smilewalker"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T21:27:27.352Z",
+    "contributors": [
+      "RainSlide",
+      "iSmartSV",
+      "duola8789",
+      "pasturn",
+      "Ende93",
+      "xgqfrms-GitHub",
+      "ceverytime",
+      "teoli",
+      "khalid32",
+      "ziyunfei",
+      "Darrel.Hsu"
     ]
   },
   "orphaned/Web/API/Detecting_device_orientation": {
