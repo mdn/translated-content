@@ -13,404 +13,135 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}</div>
 
-<p class="summary">正規表現とは、文字列内で文字の組み合わせを照合するために用いられるパターンです。JavaScript では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxref("RegExp")}} の {{jsxref("RegExp.exec", "exec")}} および {{jsxref("RegExp.test", "test")}} メソッドや、{{jsxref("String")}} の {{jsxref("String.match", "match")}}、 {{jsxref("String.matchAll", "matchAll")}}、{{jsxref("String.replace", "replace")}}、{{jsxref("String.search", "search")}}、および {{jsxref("String.split", "split")}} メソッドで使用できます。本章では、JavaScript の正規表現について説明します。</p>
+<p class="summary">正規表現とは、文字列内で文字の組み合わせを照合するために用いられるパターンです。 JavaScript では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxref("RegExp")}} の {{jsxref("RegExp.exec", "exec()")}} および {{jsxref("RegExp.test", "test()")}} メソッドや、{{jsxref("String")}} の {{jsxref("String.match", "match()")}}、 {{jsxref("String.matchAll()", "matchAll")}}、{{jsxref("String.replace()", "replace")}}、{{jsxref("String.search()", "search")}}、{{jsxref("String.split()", "split")}} メソッドで使用できます。本章では、 JavaScript の正規表現について説明します。</p>
 
-<h2 id="Creating_a_Regular_Expression" name="Creating_a_Regular_Expression">正規表現の作成</h2>
+<h2 id="Creating_a_Regular_Expression">正規表現の作成</h2>
 
-<p>正規表現は 2 種類の方法で作成できます :</p>
+<p>正規表現は 2 通りの方法で作成することができます。</p>
 
-<p>次のように、スラッシュによって囲まれたパターンからなる正規表現リテラルを使用します :</p>
+<ul>
+ <li>
+  <p>次のように、スラッシュで囲まれたパターンからなる正規表現リテラルを使用します。</p>
 
-<pre class="brush: js notranslate">var re = /ab+c/;
+  <pre class="brush: js">let re = /ab+c/;
 </pre>
 
-<p>正規表現リテラルはスクリプトのロード時にその正規表現をコンパイルします。正規表現が一定のままの場合、この方法を使うとよいパフォーマンスが得られます。</p>
+  <p>正規表現リテラルはスクリプトの読み込み時にその正規表現をコンパイルします。正規表現が変化しない場合、この方法を使うとよいパフォーマンスが得られます。</p>
+ </li>
+ <li>
+  <p>また、次のように {{jsxref("RegExp")}} オブジェクトのコンストラクター関数を呼び出す方法があります。</p>
 
-<p>また、次のように {{jsxref("RegExp")}} オブジェクトのコンストラクタ関数を呼び出す方法があります :</p>
-
-<pre class="brush: js notranslate">var re = new RegExp('ab+c');
+  <pre class="brush: js">let re = new RegExp('ab+c');
 </pre>
 
-<p>コンストラクタ関数を使用すると、実行時にその正規表現をコンパイルします。正規表現パターンが変わることがわかっている場合や、パターンがわからない場合、ユーザーが入力するなど別のソースからパターンを取得する場合は、コンストラクタ関数を使用してください。</p>
+  <p>コンストラクター関数を使用すると、実行時にその正規表現をコンパイルします。正規表現パターンが変わることが分かっている場合や、パターンが分からない場合、ユーザー入力など別なところからパターンを取得する場合は、コンストラクター関数を使用してください。</p>
+ </li>
+</ul>
 
-<h2 id="Writing_a_Regular_Expression_Pattern" name="Writing_a_Regular_Expression_Pattern">正規表現パターンの記述</h2>
+<h2 id="Writing_a_Regular_Expression_Pattern">正規表現パターンの記述</h2>
 
-<p>正規表現パターンは、<code>/abc/</code> のような単純な文字、または <code>/ab*c/</code> や <code>/Chapter (\d+)\.\d*/</code> のような単純な文字と特殊文字との組み合わせからなります。最後の例には記憶装置として用いられる丸括弧があります。パターンのこの丸括弧で囲まれた部分でマッチした箇所は、後で使用できるように記憶されます。詳しくは{{anch("Using_Parenthesized_Substring_Matches", "括弧で囲まれた部分文字列のマッチの使用")}}を参照してください。</p>
+<p>正規表現パターンは、<code>/abc/</code> のような単純な文字、または <code>/ab*c/</code> や <code>/Chapter (\d+)\.\d*/</code> のような単純な文字と特殊文字との組み合わせからなります。最後の例には記憶装置として用いられる丸括弧があります。パターンのこの丸括弧で囲まれた部分に一致した箇所は、後で使用できるように記憶されます。詳しくは<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges#using_groups">グループの使用</a>を参照してください。</p>
 
-<h3 id="Using_Simple_Patterns" name="Using_Simple_Patterns">単純なパターンの使い方</h3>
+<div class="notecard note">
+<p><strong>注:</strong> すでに正規表現の形式に慣れている方は、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">早見表</a>を見て特定のパターンや構造を素早く検索することもできます。</p>
+</div>
 
-<p>単純なパターンとは、直接マッチしている部分を見つけたい文字から構成されたものです。例えば <code>/abc/</code> というパターンは、実際に 'abc' という文字が一緒にその順で存在しているときだけ、文字列中の文字の組み合わせにマッチします。"Hi, do you know your abc's?" や "The latest airplane designs evolved from slabcraft." といった文字列でのマッチは成功します。どちらの場合でも 'abc' という部分文字列にマッチします。"Grab crab" という文字列では、'abc' という部分文字列が含まれていないためマッチしません。</p>
+<h3 id="Using_simple_patterns">単純なパターンの使い方</h3>
 
-<h3 id="Using_Special_Characters" name="Using_Special_Characters">特殊文字の使い方</h3>
+<p>単純なパターンとは、直接一致するものを探したい文字で構成されたものです。例えば <code>/abc/</code> というパターンは、文字列の中で <code>"abc"</code> という並びが正確に現れる (すべての文字が連続しており、その順で並んでいる) 場合のみ、文字の組み合わせに一致します。 <code>"Hi, do you know your abc's?"</code> や <code>"The latest airplane designs evolved from slabcraft."</code> 等の文字列には一致します。どちらの場合でも、 <code>"abc"</code> という部分文字列に一致します。 <code>"Grab crab"</code> という文字列の場合、 <code>"ab c"</code> という部分文字列を含んでいますが、正確な <code>"abc"</code> という部分文字列を含んでいるわけではないので、一致しません。</p>
 
-<p>1 個以上の b を見つけたり、ホワイトスペースを見つけたりといった直接マッチより高度なマッチの検索では、パターンに特殊文字を使用します。例えば <code>/ab*c/</code> というパターンでは、1 個の 'a' とその後ろに続く 0 個以上の 'b' (<code>*</code> は直前のアイテムの 0 回以上の出現を意味します)、そしてそのすぐ後ろに続く 'c' で構成される文字の組み合わせにマッチします。"cbbabbbbcdebc," という文字列では、このパターンは 'abbbbc' という部分文字列にマッチします。</p>
+<h3 id="Using_Special_Characters">特殊文字の使い方</h3>
+
+<p>直接の一致よりも高度な何かに一致するものを検索する場合、例えば 1 個以上の b を探したり、ホワイトスペースを見つけたりする場合、パターンに特殊文字を含めることができます。例えば、 <em>1 個の <code>"a"</code> に 0 個以上の <code>"b"</code> が続き、さらに <code>"c"</code> が続く</em>ものに一致させる場合、 <code>/ab*c/</code> というパターンを使用するでしょう。 <code>"b"</code> の後の <code>*</code> は「直前のアイテムの 0 回以上の出現」を意味します。 <code>"cbbabbbbcdebc"</code> という文字列では、このパターンは <code>"abbbbc"</code> という部分文字列に一致します。</p>
 
 <p>以下のページで、正規表現で使用できる特殊文字の完全なリストとその意味を詳しく説明します。</p>
 
 <dl>
  <dt><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">言明</a></dt>
- <dd>言明には、 行や単語の始まり・終わりを示す、境界や、（先読み、後読み、条件式を含む）何らかの方法でマッチが可能なことを示す、その他のパターンが含まれます。</dd>
+ <dd>言明には、 行や単語の始まりや終わりを示す境界や、 (先読み、後読み、条件式を含む) 何らかの方法で一致できることを示す、その他のパターンが含まれます。</dd>
  <dt><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">文字クラス</a></dt>
  <dd>文字や数字の区別など、文字の種類を区別します。</dd>
  <dt><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">グループと範囲</a></dt>
  <dd>式にある文字のグループと範囲を示します。</dd>
  <dt><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">数量詞</a></dt>
- <dd>マッチする文字や式の数を示します。</dd>
+ <dd>一致させる文字や式の数を示します。</dd>
  <dt><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode プロパティエスケープ</a></dt>
- <dd>大文字と小文字、数学記号、句読点など、Unicode文字のプロパティに基づき区別します。</dd>
+ <dd>大文字と小文字、数学記号、句読点など、 Unicode 文字のプロパティに基づき区別します。</dd>
 </dl>
 
-<p>正規表現で利用可能なすべての特殊文字を単一の表で見たい場合は、以下を参照してください。</p>
+<p>正規表現で利用可能なすべての特殊文字を一つの表で見たい場合は、以下を参照してください。</p>
 
-<dl>
- <dd>
- <table class="standard-table">
-  <caption>正規表現における特殊文字</caption>
-  <thead>
-   <tr>
-    <th scope="col">文字</th>
-    <th scope="col">意味</th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><a href="#special-backslash" id="special-backslash" name="special-backslash"><code>\</code></a></td>
-    <td>
-     <p>以下のルールに基づいてマッチします :</p>
+<table class="standard-table">
+ <caption>正規表現における特殊文字</caption>
+ <thead>
+  <tr>
+   <th scope="col">文字 / 構造</th>
+   <th scope="col">対応する記事</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>\</code>, <code>.</code>, <code>\cX</code>, <code>\d</code>, <code>\D</code>, <code>\f</code>, <code>\n</code>, <code>\r</code>, <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\v</code>, <code>\w</code>, <code>\W</code>, <code>\0</code>, <code>\xhh</code>, <code>\uhhhh</code>, <code>\uhhhhh</code>, <code>[\b]</code></td>
+   <td>
+    <p><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">文字クラス</a></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>^</code>, <code>$</code>, <code>x(?=y)</code>, <code>x(?!y)</code>, <code>(?&lt;=y)x</code>, <code>(?&lt;!y)x</code>, <code>\b</code>, <code>\B</code></td>
+   <td>
+    <p><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">言明</a></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>(x)</code>, <code>(?:x)</code>, <code>(?&lt;Name&gt;x)</code>, <code>x|y</code>, <code>[xyz]</code>, <code>[^xyz]</code>, <code>\<em>Number</em></code></td>
+   <td>
+    <p><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">グループと範囲</a></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>*</code>, <code>+</code>, <code>?</code>, <code>x{<em>n</em>}</code>, <code>x{<em>n</em>,}</code>, <code>x{<em>n</em>,<em>m</em>}</code></td>
+   <td>
+    <p><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">数量詞</a></p>
+   </td>
+  </tr>
+  <tr>
+   <td><code>\p{<em>UnicodeProperty</em>}</code>, <code>\P{<em>UnicodeProperty</em>}</code></td>
+   <td><a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode プロパティエスケープ</a></td>
+  </tr>
+ </tbody>
+</table>
 
-     <p>特別な意味を持たない文字の前に付けられたバックスラッシュ文字は、次の文字が特別なもので、文字通りには評価されないことを表します。例えば、前に '\' がない '<code>b</code>' は文字列中のあらゆる箇所の小文字の 'b' にマッチします。つまり、その文字は文字通り評価されます。しかし '<code>\b</code>' という表現はどんな文字にもマッチしません。これは<a href="#special-word-boundary" title="#special-word-boundary">単語区切り</a>を意味します。<br>
-      <br>
-      特別な意味を持つ文字の前に付けられたバックスラッシュ文字は、次の文字が特別なものでなく、文字通りに評価されることを表します。詳しくは "Escaping" の章を見てください。</p>
+<div class="notecard note">
+<p><strong>注:</strong> <a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet">もっと大きな早見表もあります</a> (個別の記事の一部を集約しただけです)。</p>
+</div>
 
-     <p>RegExp コンストラクタの引数に文字列を指定して使う場合、文字列リテラル内でのバックスラッシュはエスケープ文字であることを忘れないでください。つまり、パターン内でバックスラッシュを使うためには、文字列リテラル内でそれをエスケープする必要があるのです。 <code>/[a-z]\s/i</code> と <code>new RegExp("[a-z]\\s", "i")</code> は同じ正規表現を作成します。この表現は、A から Z までの範囲の任意の文字とそれに続く 1 つの空白を探します（<code>\s</code> は次以降を見てください）。文字列を引数として指定した新しい RegExp インスタンスで<em>リテラルとしての</em> バックスラッシュを表現するには、文字列レベルと正規表現レベルの両方でバックスラッシュをエスケープする必要があります。つまり、 <code>/[a-z]:\\/i</code> と <code>new RegExp("[a-z]:\\\\","i")</code> は "C:\" にマッチする同じ表現を作成します。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-caret" id="special-caret" name="special-caret"><code>^</code></a></td>
-    <td>
-     <p>入力の先頭にマッチします。複数行フラグが true にセットされている場合は、改行文字の直後にもマッチします。<br>
-      <br>
-      例えば、<code>/^A/</code> は "an A" の 'A' にはマッチしませんが、"An E" の 'A' にはマッチします。</p>
+<h3 id="Escaping">エスケープ</h3>
 
-     <p>この文字は、文字集合パターンの先頭にある場合は異なる意味を持ちます。例と詳細については<a href="#special-negated-character-set">相補文字集合</a>をご覧ください。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-dollar" id="special-dollar" name="special-dollar"><code>$</code></a></td>
-    <td>
-     <p>入力の末尾にマッチします。複数行フラグが true にセットされている場合は、改行文字の直前にもマッチします。</p>
+<p>特殊文字を文字として使う必要がある場合 (例えば、実際に <code>"*"</code> を検索する場合)、その前にバックスラッシュを付けてエスケープする必要があります。例えば、 <code>"a"</code> に <code>"*"</code> が続き、さらに <code>"b"</code> が続くものを検索するには、 <code>/a\*b/</code> と使用します。バックスラッシュは <code>"*"</code> を「エスケープ」し、特殊文字ではなく文字として扱うようにします。</p>
 
-     <p>例えば、<code>/t$/</code> は "eater" の 't' にはマッチしませんが、"eat" の 't' にはマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-asterisk" id="special-asterisk" name="special-asterisk"><code>*</code></a></td>
-    <td>
-     <p>直前の文字の 0 回以上の繰り返しにマッチします。<code>{0,}</code>に相当します。</p>
+<p>同様に、もし正規表現リテラルを書いていてスラッシュ ('/') に一致させる必要がある場合は、スラッシュをエスケープする必要があります (そうしないとスラッシュでパターンが終了します)。例えば、 "/example/" という文字列とそれに続く 1 文字以上のアルファベットを探すには、 <code>/\/example\/[a-z]+/i</code> とします。それぞれのスラッシュ前のバックスラッシュが、スラッシュを文字として扱わせます。</p>
 
-     <p>例えば、 <code>/bo*/</code> は "A ghost booooed" の 'boooo' や "A bird warbled" の 'b' にマッチしますが、"A goat grunted" ではマッチしません。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-plus" id="special-plus" name="special-plus"><code>+</code></a></td>
-    <td>
-     <p>直前の文字の 1 回以上の繰り返しにマッチします。<code>{1,}</code>に相当します。</p>
+<p>バックスラッシュ文字に一致させるには、バックスラッシュをエスケープする必要があります。例えば、 "C:\" という文字列で "C" が任意の英字になる場合は、 <code>/[A-Z]:\\/</code> を使用します。最初のバックスラッシュがその次の文字をエスケープするので、この表現は単一のバックスラッシュを検索します。</p>
 
-     <p>例えば、<code>/a+/</code>  は "candy" の 'a' や "caaaaaaandy" のすべての a にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-questionmark" id="special-questionmark" name="special-questionmark"><code>?</code></a></td>
-    <td>直前の文字の 0 回か 1 回の出現にマッチします。<code>{0,1}</code>に相当します。<br>
-     <br>
-     例えば、 <code>/e?le?/</code>
-     <p>は "angel" の 'el' や "angle" の 'le'、あるいは "oslo" の 'l' にマッチします。</p>
-     *、+、?、{} といった量指定子の直後に使用した場合、その量指定子をデフォルトとは逆の{{原語併記("非貪欲","non-greedy")}} （最短）マッチにします。デフォルトは{{原語併記("欲張り","greedy")}}（最長）マッチです。例えば、<code>/\d+/</code> は "123abc" の "123" にマッチしますが、<code>/\d+?/</code> の場合は "1" にだけマッチします。<br>
-     <br>
-     この特殊文字は、この表の <code>x(?=y)</code> および <code>x(?!y)</code>
+<p><code>RegExp</code> コンストラクターに文字列リテラルを渡して使用する場合は、バックスラッシュは文字列リテラルでのエスケープ文字でもあることを思い出してください。つまり、バックスラッシュを正規表現で用いるには文字列リテラルレベルでエスケープする必要があります。 <code>/a\*b/</code> と <code>new RegExp("a\\*b")</code> は同じ表現を生成するものであり、 "a" の次に "*"、その次に "b" があるものを探します。</p>
 
-     <p>の項目で説明する先読みアサーションでも使用できます。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-dot" id="special-dot" name="special-dot"><code>.</code></a></td>
-    <td>
-     <p>(小数点) はデフォルトでは改行文字以外のどの 1 文字にもマッチします。</p>
+<p>エスケープ文字がパターンにまだ含まれていない場合は、 {{jsxref('String.replace')}} を使用して追加することができます。</p>
 
-     <p>例えば、 <code>/.n/</code> は "nay, an apple is on the tree" の 'an' や 'on' にはマッチしますが、'nay' にはマッチしません。</p>
-
-     <p><code>s</code> ("dotAll") フラグが true にセットされている場合は、改行文字にもマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-capturing-parentheses" id="special-capturing-parentheses" name="special-capturing-parentheses"><code>(x)</code></a></td>
-    <td>
-     <p>'x' にマッチし、マッチした内容を記憶します。この括弧は<em>キャプチャリング（格納）括弧</em>と呼ばれます。<br>
-      <br>
-      例えば、パターン<code>/(foo) (bar)\1 \2/</code>内の '<code>(foo)</code>' と '<code>(bar)</code>' は、文字列 "foo bar foo bar" の最初の 2 個の単語にマッチし、それを記憶します。パターン内の <code>\1</code> と<code>\2</code> の 1 個目と 2 個目の括弧内の文字、すなわち <code>foo</code> と <code>bar</code>を表し、文字列の最後の 2 個の単語にマッチします。<code>\1</code>, <code>\2</code>, ..., <code>\n</code> は正規表現のマッチ部分で使用することに注意してください。詳しくは下記の <a href="#special-backreference">\n</a> を参照してください。 置換部分で使用する際は <code>$1</code>, <code>$2</code>, ..., <code>$n</code> とする必要があります。例えば、 <code>'bar foo'.replace(/(...) (...)/, '$2 $1')</code>というように。<code>$&amp;</code> はマッチした文字列全体を意味します。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-non-capturing-parentheses" id="special-non-capturing-parentheses" name="special-non-capturing-parentheses"><code>(?:x)</code></a></td>
-    <td>
-     <p>'x' にマッチしますが、マッチした内容は記憶しません。この括弧は<em>非キャプチャリング（非格納）括弧</em>と呼ばれ、パターンをグルーピングして、正規表現演算子と一緒に使う際の部分正規表現式を定義することができます。 見本として式 <code>/(?:foo){1,2}/</code> を見てみましょう。式が <code>/foo{1,2}/</code>であれば、<code>{1,2}</code> の文字は 'foo' の最後の 'o' にのみ適用されます。非キャプチャリング括弧を使うと、<code>{1,2}</code> は'foo' という単語全体に適用されます。詳しい情報は、下記の<a href="#Using_Parentheses">括弧を使う</a>を見てください。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-lookahead" id="special-lookahead" name="special-lookahead"><code>x(?=y)</code></a></td>
-    <td>
-     <p>'x' に 'y' が続く場合のみ 'x' にマッチします。この特殊文字は先読みと呼ばれます。</p>
-
-     <p>例えば、<code>/Jack(?=Sprat)/</code> は 'Jack' の後に 'Sprat' が続く場合のみ 'Jack' にマッチします。 <code>/Jack(?=Sprat|Frost)/</code> は 'Jack' の後ろに 'Sprat' または 'Frost' が続く場合のみ 'Jack' にマッチします。しかしながら、'Sprat' も 'Frost' もマッチの結果には表れません。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-negated-look-ahead" id="special-negated-look-ahead" name="special-negated-look-ahead"><code>x(?!y)</code></a></td>
-    <td>
-     <p>'x' に 'y' が続かない場合のみ 'x' にマッチします。これは否定先読みと呼ばれます。</p>
-
-     <p>例えば、 <code>/\d+(?!\.)/</code> は後ろに小数点が続かない数値にマッチします。正規表現 <code>/\d+(?!\.)/.exec("3.141")</code> は'141' にマッチしますが '3.141' にはマッチしません。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-lookbehind" id="special-lookbehind" name="special-lookbehind"><code>(?&lt;=y)x</code></a></td>
-    <td>
-     <p><code><em>x</em></code> の前に <code>y</code> がある場合のみ<code><em>x</em></code>にマッチします。 これは後読みと呼ばれます。</p>
-
-     <p>例えば、 <code>/(?&lt;=Jack)Sprat/</code> は "Sprat" の前に "Jack" がある場合にのみマッチし、<br>
-      <code>/(?&lt;=Jack|Tom)Sprat/</code> は "Sprat" の前に "Jack" または "Tom" がある場合にのみマッチします。<br>
-      しかしながら、"Jack"も "Tom" もマッチの結果には表れません。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-negative-lookbehind" id="special-negative-lookbehind" name="special-negative-lookbehind"><code>(?&lt;!y)x</code></a></td>
-    <td>
-     <p><code><em>x</em></code> の前に <code><em>y</em></code>がない場合のみ <code><em>x</em></code> にマッチします。これは否定後読みと呼ばれます。</p>
-
-     <p>例えば、 <code>/(?&lt;!-)\d+/</code> は前にマイナス符号がない数値にのみマッチします。<br>
-      <code>/(?&lt;!-)\d+/.exec('3')</code> は "3"にマッチしていますが、<br>
-      <code>/(?&lt;!-)\d+/.exec('-3')</code> にマッチは見つかりません。なぜなら' -3' の前にはマイナス符号があるからです。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-or" id="special-or" name="special-or"><code>x|y</code></a></td>
-    <td>
-     <p>'x', または 'y' にマッチします。（'x' にマッチする必要はありません。）</p>
-
-     <p>例えば、<code>/green|red/</code> は "green apple" の 'green' や "red apple." の 'red' にマッチします。'x' と 'y' の順番は重要です。例えば <code>a*|b</code> は"b" の空文字列にマッチしますが、 <code>b|a*</code> は同じ文字列の "b" にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-quantifier" id="special-quantifier" name="special-quantifier"><code>{n}</code></a></td>
-    <td>直前の文字がちょうど n 回出現するものにマッチします。n には正の整数が入ります。<br>
-     <br>
-     例えば、 <code>/a{2}/</code> は "candy" の 'a' にはマッチしませんが、"caaandy" の最初の 2 個の a にはマッチします。</td>
-   </tr>
-   <tr>
-    <td><a href="#special-quantifier" id="special-quantifier" name="special-quantifier"><code>{n,}</code></a></td>
-    <td>
-     <p>直前の式の少なくとも n 回の出現にマッチします。n には正の整数が入ります。</p>
-
-     <p>例えば、 <code>/a{2,}/</code> は "aa", "aaaa", "aaaaa" にマッチしますが "a" にはマッチしません。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-quantifier-range" id="special-quantifier-range" name="special-quantifier-range"><code>{n,m}</code></a></td>
-    <td>
-     <p>直前の文字が少なくとも <code>n</code> 回、多くても <code>m</code> 回出現するものにマッチします。<code>n</code> および <code>m</code> には正の整数が入ります。<code>m</code> を省略した場合は ∞ とみなされます。</p>
-
-     <p>例えば、 <code>/a{1,3}/</code> は "cndy" ではマッチせず、"candy," の 'a'、"caandy," の 最初の 2 個の a、"caaaaaaandy" の最初の 3 個の a にマッチします。"caaaaaaandy" では元の文字列に a が 4 個以上ありますが、マッチするのは "aaa" であることに注意してください。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-character-set" id="special-character-set" name="special-character-set"><code>[xyz]</code></a></td>
-    <td>
-     <p>文字集合を表します。このパターンでは、角括弧で囲まれた文字のいずれか 1 個にマッチします。対象の文字は<a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings" title="JavaScript Guide: Grammar and types § Using special characters in strings">エスケープシーケンス</a>も含みます。 文字の集合内では、特殊文字 (例えばドット (<code>.</code>) やアスタリスク (<code>*</code>)) は特別な意味を持たないので、それらにエスケープは不要です。以下で例示するように、ハイフンを用いて文字の範囲を指定することも可能です。<br>
-      <br>
-      例えば <code>[abcd]</code> は <code>[a-d]</code> と同じです。これは "brisket" の 'b' や "city" の 'c' にマッチします。<code>/[a-z.]+/</code> および <code>/[\w.]+/</code> はどちらも、"test.i.ng" の全体にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-negated-character-set" id="special-negated-character-set" name="special-negated-character-set"><code>[^xyz]</code></a></td>
-    <td>
-     <p>文字集合の否定または補集合です。角括弧で囲まれた文字ではない文字にマッチします。ハイフンを用いて文字の範囲を指定することも可能です。文字集合パターンで動作するものすべてがこちらでも機能します。</p>
-
-     <p>例えば、 <code>[^abc]</code> は <code>[^a-c]</code>と同じです。これは "brisket" の 'r' や "chop" の 'h' といった一番最初の該当文字にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-backspace" id="special-backspace" name="special-backspace"><code>[\b]</code></a></td>
-    <td>後退文字（バックスペース、U+0008）にマッチします。 後退文字自体にマッチさせるには角括弧を使う必要があります。（<code>\b</code> と混同しないように。）</td>
-   </tr>
-   <tr>
-    <td><a href="#special-word-boundary" id="special-word-boundary" name="special-word-boundary"><code>\b</code></a></td>
-    <td>
-     <p>単語の区切りにマッチします。単語の区切りは、単語構成文字と後に続く非単語構成文字の間、または非単語構成文字と後に続く単語構成文字の間、または文字列の先頭、または文字列の最後とマッチします。単語の区切りはマッチする「文字」ではありません。アンカーのように、単語の区切りはマッチした部分に含まれません。言い換えると、マッチした単語の区切りの長さは 0 です。(<code>[\b]</code> と混同してはいけません。)</p>
-
-     <p>入力文字に "moon" を使用した例:<br>
-      <code>/\bm/</code> はマッチします。これは `\b` が文字列の先頭に存在するからです。<br>
-      <code>/oo\b/</code> の '\b' はマッチしません。これは '\b' の前後に単語構成文字があるためです。<br>
-      <code>/oon\b/</code> の '\b' はマッチします。これは、文字列の終端であるためです。<br>
-      <code>/\w\b\w/</code> の '\b' はどこにもマッチしないでしょう。これは、'\b' の前後に単語構成文字があるためです。</p>
-
-     <div class="note">
-     <p><strong>注記 :</strong> JavaScript の正規表現エンジンでは「{{原語併記("単語","word")}}」を構成する文字として <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.10.2.6">特定の文字集合</a>を定義しています。 この集合内にない文字は非単語構成文字と見なされます。この文字集合はかなり限定的なもので、ローマ字の大文字小文字のアルファベット、10 進数字とアンダースコアのみが含まれます。"é" や "ü" といった文字{{訳注("そして日本語を構成する文字たちも")}}、残念ながら、一般的な表意文字と同様に、単語の区切りのために非単語構成文字として扱われます。</p>
-     </div>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-non-word-boundary" id="special-non-word-boundary" name="special-non-word-boundary"><code>\B</code></a></td>
-    <td>
-     <p>単語の区切り以外にマッチします。マッチするのは以下の場合です：</p>
-
-     <ul>
-      <li>文字列の先頭の文字の前</li>
-      <li>文字列の終端の文字の後</li>
-      <li>単語内の 2 文字の間</li>
-      <li>2 つの単語ではない文字の間</li>
-      <li>空文字列</li>
-     </ul>
-
-     <p>例えば、<code>/\B../</code> は "noonday" の 'oo' に、<code>/y\B./</code> は "possibly yesterday" の 'ye' にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-control" id="special-control" name="special-control"><code>\c<em>X</em></code></a></td>
-    <td>
-     <p>文字列中の制御文字にマッチします。 <em>X</em> には A から Z のうち 1 文字が入ります。</p>
-
-     <p>例えば、 <code>/\cM/</code> は文字列中の control-M (U+000D) にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-digit" id="special-digit" name="special-digit"><code>\d</code></a></td>
-    <td>
-     <p>数字にマッチします。<code>[0-9]</code> に相当します。</p>
-
-     <p>例えば、 <code>/\d/</code> や <code>/[0-9]/</code> は "B2 is the suite number" の '2' にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-non-digit" id="special-non-digit" name="special-non-digit"><code>\D</code></a></td>
-    <td>
-     <p>数字以外の文字にマッチします。<code>[^0-9]</code> に相当します。</p>
-
-     <p>例えば、<code>/\D/</code> や<code>/[^0-9]/</code> は "B2 is the suite number" の 'B' にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-form-feed" id="special-form-feed" name="special-form-feed"><code>\f</code></a></td>
-    <td>改ページ (U+000C) にマッチします。</td>
-   </tr>
-   <tr>
-    <td><a href="#special-line-feed" id="special-line-feed" name="special-line-feed"><code>\n</code></a></td>
-    <td>改行文字 (U+000A) にマッチします。</td>
-   </tr>
-   <tr>
-    <td><a href="#special-carriage-return" id="special-carriage-return" name="special-carriage-return"><code>\r</code></a></td>
-    <td>復帰文字 (U+000D) にマッチします。</td>
-   </tr>
-   <tr>
-    <td><a href="#special-white-space" id="special-white-space" name="special-white-space"><code>\s</code></a></td>
-    <td>
-     <p>スペース、タブ、改ページ、改行を含むホワイトスペース文字にマッチします。<code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code> に相当します。</p>
-
-     <p>例えば <code>/\s\w*/</code> は "foo bar" の ' bar' にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-non-white-space" id="special-non-white-space" name="special-non-white-space"><code>\S</code></a></td>
-    <td>
-     <p>ホワイトスペース以外の文字にマッチします。 <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code> に相当します。</p>
-
-     <p>例えば、 <code>/\S*/</code> は "foo bar" の 'foo' にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-tab" id="special-tab" name="special-tab"><code>\t</code></a></td>
-    <td>タブ (U+0009) にマッチします。</td>
-   </tr>
-   <tr>
-    <td><a href="#special-vertical-tab" id="special-vertical-tab" name="special-vertical-tab"><code>\v</code></a></td>
-    <td>垂直タブ (U+000B) にマッチします。</td>
-   </tr>
-   <tr>
-    <td><a href="#special-word" id="special-word" name="special-word"><code>\w</code></a></td>
-    <td>
-     <p>アンダースコアを含むどの英数字にもマッチします。<code>[A-Za-z0-9_]</code> に相当します。</p>
-
-     <p>例えば <code>/\w/</code> は、"apple," の 'a' や "$5.28," の '5' や "3D" の '3' にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-non-word" id="special-non-word" name="special-non-word"><code>\W</code></a></td>
-    <td>
-     <p>前述以外の文字にマッチします。<code>[^A-Za-z0-9_]</code> に相当します。</p>
-
-     <p>例えば、<code>/\w/</code> や <code>/[^A-Za-z0-9_]/</code> は、"50%" の '%' にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-backreference" id="special-backreference" name="special-backreference"><code>\<em>n</em></code></a></td>
-    <td>
-     <p><em>n</em> に正の整数が入る場合、正規表現内において <em>n</em> 番目の括弧の部分にマッチした最新の部分文字列への後方参照となります（括弧の数は左からカウントします）。</p>
-
-     <p>例えば <code>/apple(,)\sorange\1/</code> は "apple, orange, cherry, peach" の 'apple, orange,' にマッチします。</p>
-    </td>
-   </tr>
-   <tr>
-    <td><a href="#special-null" id="special-null" name="special-null"><code>\0</code></a></td>
-    <td>NULL 文字 (U+0000) にマッチします。この後ろに他の数字を続けてはいけません。<code>\0</code> の後に（0 から 7 までの）数字が続くと 8 進数の <a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings" title="JavaScript Guide: Grammar and types § Using special characters in strings">エスケープシーケンス</a>となるからです。</td>
-   </tr>
-   <tr>
-    <td><a href="#special-hex-escape" id="special-hex-escape" name="special-hex-escape"><code>\xhh</code></a></td>
-    <td>hh（2 桁の 16 進数）コードからなる文字列にマッチします。</td>
-   </tr>
-   <tr>
-    <td><a href="#special-unicode-escape" id="special-unicode-escape" name="special-unicode-escape"><code>\uhhhh</code></a></td>
-    <td>hhhh（4 桁の 16 進数）コードからなる文字列にマッチします。</td>
-   </tr>
-   <tr>
-    <td><a href="#special-unicode-escape-es6" id="special-unicode-escape-es6" name="special-unicode-escape-es6"><code>\u{hhhh}</code></a></td>
-    <td>(u フラグがセットされた時のみ) Unicode 値 hhhh (16 進数) からなる文字列にマッチします。</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt></dt>
-</dl>
-
-<h3 id="Escaping" name="Escaping">エスケープする</h3>
-
-<p>もし特殊な文字を使う必要があるのなら（例えば実際に * を検索したい場合）、その文字の前にバックスラッシュを付けてエスケープする必要があります。例えば、a と * と b が続くのを検索する場合、<code>/a\*b/</code> とします。これはバックスラッシュが * を特殊な文字ではなく、リテラルとして扱うようにエスケープしています。</p>
-
-<p>同様に、もし正規表現リテラルを書いていてスラッシュ('/')とマッチさせる必要があるならば、スラッシュをエスケープする必要があります（そうしないとスラッシュがパターンを終了してしまいます）。例えば、"/example/"の文字列とそれに続く1つ以上のアルファベットを探すためには、<code>/\/example\/[a-z]+/i</code>　とします。各スラッシュ前のバックスラッシュが、スラッシュをリテラルにしています。</p>
-
-<p>リテラルのバックスラッシュにマッチするためには、バックスラッシュをエスケープする必要があります。例えば、'C' は任意の文字である "C:\" という文字列にマッチするためには、<code>/[A-Z]:\\/</code>とします。最初のバックスラッシュはその後のバックスラッシュをエスケープし、この表現は単一のリテラルバックスラッシュを探します。</p>
-
-<p>RegExp コンストラクタを文字列リテラルを引数に指定して利用する場合は、バックスラッシュは文字列リテラル内でのエスケープ文字であることを思い出してください。つまり、バックスラッシュを正規表現で用いるには文字列リテラルレベルでエスケープする必要があります。 <code>/a\*b/</code> と <code>new RegExp("a\\*b")</code> は、 'a' の次に '*'、その次に 'b' を探す同じ表現を作成します。</p>
-
-<p>エスケープ文字がパターンに追加されてないなら、{{jsxref("String.replace")}} を使用して追加することができます:</p>
-
-<pre class="brush: js notranslate">function escapeRegExp(string) {
+<pre class="brush: js">function escapeRegExp(string) {
   return string.replace(/[.*+?^=!:${}()|[\]\/\\]/g, '\\$&amp;'); // $&amp;はマッチした部分文字列全体を意味します
 }</pre>
 
-<p>正規表現の後の g はグローバルサーチを行うオプション/フラグで、全体の文字列を見てすべてのマッチを返します。下の{{anch("Advanced_Searching_With_Flags", "フラグを用いた高度な検索")}}に詳しく説明されています。</p>
+<p>正規表現の後の "g" はグローバルサーチを行うオプション/フラグで、文字列全体を見て一致したものをすべて返します。下の<a href="#advanced_searching_with_flags">フラグを用いた高度な検索</a>に詳しく説明されています。</p>
 
-<h3 id="Using_Parentheses" name="Using_Parentheses">括弧の使い方</h3>
+<p><em>なぜこれが JavaScript に組み込まれていないのかって？</em> RegExp に追加する提案がありますが、 <a href="https://github.com/benjamingr/RegExp.escape/issues/37">TC39 で拒絶されました</a>。</p>
 
-<p>正規表現パターンの一部を括弧で囲むことで、マッチした部分文字列を記憶しておくことができます。いったん記憶されれば、後からその部分文字列を呼び出すことができます。これに関しては{{anch("Using_Parenthesized_Substring_Matches", "括弧で囲まれた部分文字列のマッチの使用")}}で説明しています。</p>
+<h3 id="Using_Parentheses">括弧の使用</h3>
 
-<p>例として <code>/Chapter (\d+)\.\d*/</code> というパターンを使い、エスケープ文字と特殊文字についても説明した上で、どのようにパターンの一部が記憶されるかを示します。これは 'Chapter ' という文字列に正確にマッチし、それに続く 1 文字以上の数字 （<code>\d</code> はいずれかの数字を、<code>+</code> は 1 回以上の繰り返しを意味します）、それに続く小数点（それ自体は特殊文字であり、小数点の前の \ はパターンが '.' という文字そのものを探すようにすることを意味します）、それに続く 0 文字以上の数字 （<code>\d</code> は数字を、<code>*</code> は 0 回以上の繰り返しを意味します）にマッチします。さらに、最初にマッチした数字の記憶に括弧が使われています。</p>
-
-<p>このパターンは "Open Chapter 4.3, paragraph 6" という文字列で検索され、'4' が記憶されます。このパターンは "Chapter 3 and 4" では見つかりません。この文字列は '3' の後にピリオドがないからです。</p>
-
-<p>マッチした部分を記憶させることなく部分文字列にマッチさせたい場合は、その括弧においてパターンの前に <code>?:</code> をつけてください。例えば <code>(?:\d+)</code> は 1 文字以上の数字にマッチしますが、マッチした文字列は記憶しません。</p>
+<p>正規表現パターンの一部を括弧で囲むことで、マッチした部分文字列を記憶しておくことができます。いったん記憶されれば、後からその部分文字列を呼び出すことができます。これに関しては<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges#using_groups">グループと範囲</a>で説明しています。</p>
 
 <h2 id="Working_with_Regular_Expressions" name="Working_with_Regular_Expressions">JavaScriptでの正規表現の使い方</h2>
 
-<p>正規表現は、<code>RegExp</code> の <code>test</code> および <code>exec</code> メソッド、<code>String</code> の <code>match</code>、<code>replace</code>、<code>search</code>、<code>split</code> メソッドとともに使用します。これらのメソッドの詳細は <a href="/ja/docs/JavaScript/Reference">JavaScript リファレンス</a>で説明しています。</p>
+<p>正規表現は、<code>RegExp</code> の <code>test()</code> と <code>exec()</code> メソッド、<code>String</code> の <code>match()</code>、<code>replace()</code>、<code>search()</code>、<code>split()</code> メソッドとともに使用します。これらのメソッドの詳細は <a href="/ja/docs/Web/JavaScript/Reference">JavaScript リファレンス</a>で説明しています。</p>
 
 <table class="standard-table">
  <caption>正規表現を使用するメソッド</caption>
@@ -422,59 +153,65 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
  </thead>
  <tbody>
   <tr>
-   <td>{{jsxref("RegExp.exec", "exec")}}</td>
-   <td>文字列中で一致するものを検索する <code>RegExp</code> のメソッドです。結果情報の配列を返します。</td>
+   <td>{{jsxref("RegExp.exec", "exec()")}}</td>
+   <td>文字列内で一致するものの検索を実行します。結果情報の配列を返します。一致するものがなければ <code>null</code> を返します。</td>
   </tr>
   <tr>
-   <td>{{jsxref("RegExp.test", "test")}}</td>
-   <td>文字列中で一致するものがあるかをテストする <code>RegExp</code> のメソッドです。true または false を返します。</td>
+   <td>{{jsxref("RegExp.test", "test()")}}</td>
+   <td>文字列内で一致するものがあるか検査します。 <code>true</code> または <code>false</code> を返します。</td>
   </tr>
   <tr>
-   <td>{{jsxref("String.match", "match")}}</td>
-   <td>文字列中で一致するものを検索する <code>String</code> のメソッドです。結果情報の配列を返します。マッチしない場合は null を返します。</td>
+   <td>{{jsxref("String.match", "match()")}}</td>
+   <td>キャプチャグループを含む、すべての一致するものを含む配列を返します。一致するものがない場合は <code>null</code> を返します。</td>
   </tr>
   <tr>
-   <td>{{jsxref("String.matchAll", "matchAll")}}</td>
-   <td>キャプチャグループを含んだ、すべてのマッチをもつ iterator を返す <code>String</code> のメソッドです。 </td>
+   <td>{{jsxref("String.matchAll", "matchAll()")}}</td>
+   <td>キャプチャグループを含む、すべての一致するものを含む反復子を返します。</td>
   </tr>
   <tr>
-   <td>{{jsxref("String.search", "search")}}</td>
-   <td>文字列中で一致するものがあるかをテストする <code>String</code> のメソッドです。マッチした場所のインデックスを返します。検索に失敗した場合は -1 を返します。</td>
+   <td>{{jsxref("String.search", "search()")}}</td>
+   <td>文字列内で一致するものがあるか検査します。一致した位置を返します。検索に失敗した場合は <code>-1</code> を返します。</td>
   </tr>
   <tr>
-   <td>{{jsxref("String.replace", "replace")}}</td>
-   <td>文字列中で一致するものを検索し、マッチした部分文字列を別の部分文字列に置換する <code>String</code> のメソッドです。</td>
+   <td>{{jsxref("String.replace", "replace()")}}</td>
+   <td>文字列内で一致するものを一つ検索し、一致した部分文字列を置換する部分文字列で置換します。</td>
   </tr>
   <tr>
-   <td>{{jsxref("String.split", "split")}}</td>
-   <td>正規表現または固定文字列を用いて文字列を分割し、部分文字列の配列に入れる <code>String</code> のメソッドです。</td>
+   <td>{{jsxref("String.replaceAll", "replaceAll()")}}</td>
+   <td>文字列内で一致するものすべてを一つ検索し、一致した部分文字列を置換する部分文字列で置換します。</td>
+  </tr>
+  <tr>
+   <td>{{jsxref("String.split", "split()")}}</td>
+   <td>正規表現または固定文字列を用いて文字列を分割し、部分文字列の配列に入れます。</td>
   </tr>
  </tbody>
 </table>
 
-<p>あるパターンが文字列に存在するかを知りたいときは、<code>test</code> または <code>search</code> メソッドを使用してください。詳細な情報が知りたいときは（実行時間が長くなりますが）<code>exec</code> または <code>match</code> メソッドを使用してください。<code>exec</code> や <code>match</code> を使用してマッチが成功した場合、これらのメソッドは配列を返し、また結びつけられた正規表現オブジェクトと定義済みオブジェクトである <code>RegExp</code> オブジェクトのプロパティを更新します。マッチが失敗すると、<code>exec</code> メソッドは <code>null</code>（<code>false</code> に変換します）を返します。</p>
+<p>あるパターンが文字列に存在するかを知りたいときは、<code>test()</code> または <code>search()</code> メソッドを使用してください。詳細な情報が知りたいときは (実行時間が長くなりますが) <code>exec()</code> または <code>match()</code> メソッドを使用してください。<code>exec()</code> や <code>match()</code> を使用して一致した場合、これらのメソッドは配列を返し、関連する正規表現オブジェクトと定義済みオブジェクトである <code>RegExp</code> オブジェクトのプロパティを更新します。一致しなかった場合、 <code>exec</code> メソッドは <code>null</code> (<code>false</code> に変換される値) を返します。</p>
 
-<p>次の例では、<code>exec</code> メソッドを使用して文字列を検索します。</p>
+<p>次の例では、<code>exec()</code> メソッドを使用して文字列を検索します。</p>
 
-<pre class="brush: js notranslate">var myRe = /d(b+)d/g;
-var myArray = myRe.exec("cdbbdbsbz");
-</pre>
-
-<p>正規表現のプロパティにアクセスする必要がない場合は、次のスクリプトが <code>myArray</code> を作成する別の方法になります:</p>
-
-<pre class="brush: js line-numbers notranslate">var myArray = /d(b+)d/g.exec('cdbbdbsbz'); // similar to "cdbbdbsbz".match(/d(b+)d/g); however,
-    // the latter outputs Array [ "dbbd" ], while
-    // /d(b+)d/g.exec('cdbbdbsbz') outputs Array [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ].</pre>
-
-<p>(異なるふるまいの詳しい情報は {{anch("g-different-behaviors", "g フラグによる振る舞いの違い")}}を参照してください。)</p>
-
-<p>ある文字列から正規表現を組み立てたい場合は、次のスクリプトのような方法があります:</p>
-
-<pre class="brush: js notranslate">var myRe = new RegExp('d(b+)d', 'g');
+<pre class="brush: js">var myRe = /d(b+)d/g;
 var myArray = myRe.exec('cdbbdbsbz');
 </pre>
 
-<p>これらのスクリプトではマッチが成功すると、配列を返すとともに次表で示されるプロパティを更新します。</p>
+<p>正規表現のプロパティにアクセスする必要がない場合、 <code>myArray</code> を作成するもう一つの方法はこのスクリプトの通りです。</p>
+
+<pre class="brush: js">var myArray = /d(b+)d/g.exec('cdbbdbsbz');
+    // "cdbbdbsbz".match(/d(b+)d/g) と同様。ただし、
+    // "cdbbdbsbz".match(/d(b+)d/g) は配列 [ "dbbd" ] を出力するのに対し、
+    // /d(b+)d/g.exec('cdbbdbsbz') は配列 [ 'dbbd', 'bb', index: 1, input: 'cdbbdbsbz' ] を出力する。
+</pre>
+
+<p>(異なる動作についての詳しい情報は<a href="#using_the_global_search_flag_with_exec"><code>exec()</code> のグローバル検索フラグの使用</a>を参照してください。)</p>
+
+<p>ある文字列から正規表現を組み立てたい場合は、次のスクリプトのような方法があります。</p>
+
+<pre class="brush: js">var myRe = new RegExp('d(b+)d', 'g');
+var myArray = myRe.exec('cdbbdbsbz');
+</pre>
+
+<p>これらのスクリプトでは一致したものがあると、配列を返すとともに次表で示されるプロパティを更新します。</p>
 
 <table class="standard-table">
  <caption>正規表現の実行結果</caption>
@@ -490,75 +227,60 @@ var myArray = myRe.exec('cdbbdbsbz');
   <tr>
    <td rowspan="4"><code>myArray</code></td>
    <td></td>
-   <td>マッチした文字列と、すべての記憶された部分文字列です。</td>
+   <td>一致した文字列と、すべての記憶された部分文字列です。</td>
    <td><code>['dbbd', 'bb', index: 1, input: 'cdbbdbsbz']</code></td>
   </tr>
   <tr>
    <td><code>index</code></td>
-   <td>入力文字列でマッチした位置を示す、0 から始まるインデックスです。</td>
+   <td>入力文字列で一致した位置を示す、0 から始まるインデックスです。</td>
    <td><code>1</code></td>
   </tr>
   <tr>
    <td><code>input</code></td>
    <td>元の文字列です。</td>
-   <td><code>"cdbbdbsbz"</code></td>
+   <td><code>'cdbbdbsbz'</code></td>
   </tr>
   <tr>
    <td><code>[0]</code></td>
-   <td>最後にマッチした文字列です。</td>
-   <td><code>"dbbd"</code></td>
+   <td>最後に一致した文字列です。</td>
+   <td><code>'dbbd'</code></td>
   </tr>
   <tr>
    <td rowspan="2"><code>myRe</code></td>
    <td><code>lastIndex</code></td>
-   <td>次のマッチが始まるインデックスです。（このプロパティは、g オプションを用いる正規表現でのみセットされます。これについては{{anch("Advanced_Searching_With_Flags", "フラグを用いた高度な検索")}}で説明します。）</td>
+   <td>次の検索が始まるインデックスです。 (このプロパティは、g オプションを用いる正規表現でのみセットされます。これについては<a href="#advanced_searching_with_flags">フラグを用いた高度な検索</a>で説明します。)</td>
    <td><code>5</code></td>
   </tr>
   <tr>
    <td><code>source</code></td>
    <td>パターンのテキストです。正規表現の実行時ではなく作成時に更新されます。</td>
-   <td><code>"d(b+)d"</code></td>
+   <td><code>'d(b+)d'</code></td>
   </tr>
  </tbody>
 </table>
 
-<p>この例の 2 つ目の形式で示したように、オブジェクト初期化子を使用して、変数に代入せずに正規表現を使うことができます。しかしながら、この方法では生成される正規表現はすべて、別の正規表現として作成されます。このため、変数に代入しないこの形式を使用する場合は、その正規表現のプロパティに後からアクセスすることができません。例えば、次のようなスクリプトを使用するとしましょう :</p>
+<p>この例の 2 つ目の形式で示したように、オブジェクト初期化子で作成した正規表現は、変数に代入せずに使用することができます。しかし、そうすると出現するたびに新しい正規表現になります。このため、変数に代入せずにこの形式を使用すると、その後、その正規表現のプロパティにアクセスできません。例えば、次のようなスクリプトがあるとします。</p>
 
-<pre class="brush: js notranslate">var myRe = /d(b+)d/g;
+<pre class="brush: js">var myRe = /d(b+)d/g;
 var myArray = myRe.exec('cdbbdbsbz');
 console.log('The value of lastIndex is ' + myRe.lastIndex);
 
 // "The value of lastIndex is 5"
 </pre>
 
-<p>しかし、このスクリプトの場合は次のようになります:</p>
+<p>しかし、このスクリプトの場合は次のようになります。</p>
 
-<pre class="brush: js line-numbers notranslate">var myArray = /d(b+)d/g.exec('cdbbdbsbz');
+<pre class="brush: js">var myArray = /d(b+)d/g.exec('cdbbdbsbz');
 console.log('The value of lastIndex is ' + /d(b+)d/g.lastIndex);
 
-// "The value of lastIndex is 0"</pre>
-
-<p>この 2 つの文中の <code>/d(b+)d/g</code> は別の正規表現オブジェクトであり、そのためにそれぞれの <code>lastIndex</code> プロパティの値も異なるのです。オブジェクト初期化子で作成する正規表現のプロパティにアクセスする必要がある場合は、まずそれを変数に代入するようにしてください。</p>
-
-<h3 id="Using_Parenthesized_Substring_Matches" name="Using_Parenthesized_Substring_Matches">括弧で囲まれた部分文字列のマッチの使用</h3>
-
-<p>正規表現パターンに括弧を含めることで、対応するサブマッチが記憶されます。例えば <code>/a(b)c/</code> は 'abc' という文字列にマッチし、'b' が記憶されます。この括弧で囲まれた部分文字列のマッチは、<code>Array</code> の要素 <code>[1]</code>, ..., <code>[n]</code> を使用して呼び出すことができます。</p>
-
-<p>括弧で囲まれた部分文字列は何個でも使用できます。返された配列には、見つかったものすべてが存在します。以下の例では、括弧で囲まれた部分文字列の使用法を説明します。</p>
-
-<p>次のスクリプトは {{jsxref("String.replace", "replace()")}} メソッドを使用して文字列中の単語を入れ替えます。テキスト置き換えのために、スクリプトで <code>$1</code> と <code>$2</code> を使用して、最初とその次の括弧で囲まれた部分文字列のマッチを示しています。</p>
-
-<pre class="brush: js notranslate">var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-var newstr = str.replace(re, '$2, $1');
-console.log(newstr);
-
-// "Smith, John"
+// "The value of lastIndex is 0"
 </pre>
 
-<h3 id="Advanced_Searching_With_Flags" name="Advanced_Searching_With_Flags">フラグを用いた高度な検索</h3>
+<p>この 2 つの文中の <code>/d(b+)d/g</code> は異なる正規表現オブジェクトであるため、 <code>lastIndex</code> プロパティの値も異なります。オブジェクト初期化子で作成した正規表現のプロパティにアクセスする必要がある場合は、まずその正規表現を変数に代入する必要があります。</p>
 
-<p>正規表現には、グローバルな検索や大文字／小文字を区別しない検索を可能にする 4 種類のオプションフラグがあります。これらのフラグは、単独で使用することもまとめて使用することもできます。順番は問いません。フラグは正規表現の一部として含まれます。</p>
+<h3 id="advanced_searching_with_flags">フラグを用いた高度な検索</h3>
+
+<p>正規表現には、グローバル検索や大文字小文字を区別しない検索などの機能を実現する 6 種類のオプションフラグがあります。これらのフラグは、個別に使用することも一緒に使用することもでき、順序は問いません。正規表現の一部に含まれます。</p>
 
 <table class="standard-table">
  <caption>正規表現フラグ</caption>
@@ -566,51 +288,63 @@ console.log(newstr);
   <tr>
    <th scope="col">フラグ</th>
    <th scope="col">説明</th>
+   <th scope="col">対応するプロパティ</th>
   </tr>
  </thead>
  <tbody>
   <tr>
+   <td><code>d</code></td>
+   <td>一致した部分文字列の位置を生成します。</td>
+   <td><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices">RegExp.prototype.hasIndices</a></code></td>
+  </tr>
+  <tr>
    <td><code>g</code></td>
-   <td>グローバルサーチ。</td>
+   <td>グローバル検索を行います。</td>
+   <td><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global">RegExp.prototype.global</a></code></td>
   </tr>
   <tr>
    <td><code>i</code></td>
-   <td>大文字・小文字を区別しない検索。</td>
+   <td>大文字・小文字を区別しない検索です。</td>
+   <td><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase">RegExp.prototype.ignoreCase</a></code></td>
   </tr>
   <tr>
    <td><code>m</code></td>
-   <td>複数行検索。</td>
+   <td>複数行の検索です。</td>
+   <td><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline">RegExp.prototype.multiline</a></code></td>
   </tr>
   <tr>
    <td><code>s</code></td>
    <td><code>.</code> を改行文字と一致するようにします。</td>
+   <td><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll">RegExp.prototype.dotAll</a></code></td>
   </tr>
   <tr>
    <td><code>u</code></td>
-   <td>"unicode"; パターンをユニコードのコードポイントの連続として扱う</td>
+   <td>"unicode" です。パターンを一連の Unicode コードポイントとして扱います。</td>
+   <td><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode">RegExp.prototype.unicode</a></code></td>
   </tr>
   <tr>
    <td><code>y</code></td>
-   <td>対象文字列で最後に見つかったマッチの位置から検索を開始する{{原語併記("先頭固定","sticky")}} 検索を行います。{{jsxref("RegExp.sticky", "sticky")}} のページをご覧ください。</td>
+   <td>対象文字列の現在の位置から始まる部分に一致するものを探す「先頭固定」 (sticky) 検索を行います。 {{jsxref("RegExp.sticky", "sticky")}} のページを参照してください。</td>
+   <td><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky">RegExp.prototype.sticky</a></code></td>
   </tr>
  </tbody>
 </table>
 
-<p>フラグを正規表現に含めるには、次のようにしてください :</p>
+<p>フラグを正規表現に含めるには、次のようにしてください。</p>
 
-<pre class="brush: js notranslate">var re = /pattern/flags;
+<pre class="brush: js">var re = /pattern/flags;
 </pre>
 
 <p>または</p>
 
-<pre class="brush: js notranslate">var re = new RegExp('pattern', 'flags');
+<pre class="brush: js">var re = new RegExp('pattern', 'flags');
 </pre>
 
 <p>フラグは正規表現を作る際になくてはならないものであることに注意してください。後から加えたり取り除いたりすることはできません。</p>
 
 <p>例えば <code>re = /\w+\s/g</code> は、1 個以上の文字とそれに続くスペースを探す正規表現を作成します。また、正規表現は文字列全体を通してこの組み合わせを探します。</p>
 
-<pre class="brush: js notranslate">var re = /\w+\s/g;
+<pre class="brush: js">var re = /\w+\s/g;
 var str = 'fee fi fo fum';
 var myArray = str.match(re);
 console.log(myArray);
@@ -618,137 +352,63 @@ console.log(myArray);
 // ["fee ", "fi ", "fo "]
 </pre>
 
-<p>この例では次の行 :</p>
+<p>この例ではこの行、</p>
 
-<pre class="brush: js notranslate">var re = /\w+\s/g;
+<pre class="brush: js">var re = /\w+\s/g;
 </pre>
 
-<p>を次の行 :</p>
+<p>をこの行、</p>
 
-<pre class="brush: js notranslate">var re = new RegExp('\\w+\\s', 'g');
+<pre class="brush: js">var re = new RegExp('\\w+\\s', 'g');
 </pre>
 
 <p>に置き換えることができます。得られる結果は同じです。</p>
 
-<p id="g-different-behaviors"><code>.exec()</code> メソッドが使われた時には '<strong><code>g</code></strong>' に関連したふるまいは異なります。("class" と "argument" の役割が反対になります: <code>.match()</code> の場合、文字クラス(やデータ型) がメソッドを持ち、正規表現は単なる引数で、<code>.exec()</code> の場合、正規表現がメソッドを持ち、文字は引数です。<em><code>str.match(re)</code></em> と <em><code>re.exec(str)</code></em> を比較します) '<code><strong>g</strong></code>' フラグが <strong><code>.exec()</code></strong> メソッドで使われる時は繰り返して進むためです。</p>
+<p><code>m</code> フラグは、複数行の入力文字列を複数行として扱うことを指定するために使用します。 <code>m</code> フラグを使用すると、 <code>^</code> と <code>$</code> は、文字列全体ではなく、入力文字列内の任意の行の先頭または末尾に一致します。</p>
 
-<pre class="brush: js line-numbers notranslate">var xArray; while(xArray = re.exec(str)) console.log(xArray);
+<h4 id="using_the_global_search_flag_with_exec">exec() におけるグローバル検索の使用</h4>
+
+<p><code>.exec()</code> メソッドが使われた時には <code>g</code> フラグに関連する動作が異なります。。 "class" と "argument" の役割が反対になります。 <code>.match()</code> の場合、文字クラス(やデータ型) がメソッドを持ち、正規表現は単なる引数で、 <code>.exec()</code> の場合、正規表現がメソッドを持ち、文字列は引数になります。この <em><code>str.match(re)</code></em> と <em><code>re.exec(str)</code></em> を比較してみましょう。 <code>g</code> フラグが <strong><code>.exec()</code></strong> メソッドで使用されると、反復的な進行を行うことができます。</p>
+
+<pre class="brush: js">var xArray; while(xArray = re.exec(str)) console.log(xArray);
 // produces:
 // ["fee ", index: 0, input: "fee fi fo fum"]
 // ["fi ", index: 4, input: "fee fi fo fum"]
 // ["fo ", index: 7, input: "fee fi fo fum"]</pre>
 
-<p><code>m</code> フラグは複数行の入力文字列が複数行として扱われるように使われます。<code>m</code> が使われた場合、<code>^</code> と <code>$</code> は文字列全体の最初と最後の代わりに、入力文字列内のあらゆる行の開始と終了にマッチします。</p>
+<h2 id="Examples">例</h2>
 
-<h2 id="Examples" name="Examples">例</h2>
+<div class="notecard note">
+<p><strong>注:</strong> 複数の例が次の場所にあります。</p>
 
-<p>以下では、正規表現の使用法をいくつか例示します。</p>
+<ul>
+ <li>{{jsxref("RegExp.exec", "exec()")}}、{{jsxref("RegExp.test", "test()")}}、{{jsxref("String.match", "match()")}}、{{jsxref("String.matchAll", "matchAll()")}}、{{jsxref("String.search", "search()")}}、{{jsxref("String.replace", "replace()")}}、{{jsxref("String.split", "split()")}} のリファレンスページ</li>
+ <li>ガイド記事の<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">文字クラス</a>、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions">言明</a>、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">グループと範囲</a>、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers">数量詞</a>、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes">Unicode プロパティエスケープ</a></li>
+</ul>
+</div>
 
-<h3 id="Changing_the_Order_in_an_Input_String" name="Changing_the_Order_in_an_Input_String">入力文字列の順序変更</h3>
+<h3 id="Using_special_characters_to_verify_input">特殊文字を用いた入力の確認</h3>
 
-<p>次の例では、正規表現の構造と <code>string.split()</code> および <code>string.replace()</code> の使用法を示します。空白、タブ、1 個のセミコロンで分割された名前（ファーストネームが先頭）からなる、大まかに整形された入力文字列をきれいにフォーマットします。最終的に名前の順序を逆転し（ラストネームが先頭）、リストをソートします。</p>
+<p>次の例では、ユーザーが電話番号を入力することを想定しています。ユーザーが [チェック] ボタンを押すと、スクリプトはその番号の有効性をチェックします。番号が有効な場合 (正規表現で指定された文字列に一致した場合)、スクリプトはユーザーへの感謝と番号の確認を示すメッセージを表示します。番号が無効な場合、スクリプトはユーザーに電話番号が無効であることを通知します。</p>
 
-<pre class="brush: js line-numbers language-js notranslate">// 名前の文字列は複数の空白やタブを含む。
-// また、ファーストネームとラストネームの間に複数の空白があることもある
-var names = 'Orange Trump ;Fred Barney; Helen Rigby ; Bill Abel ; Chris Hand ';
+<p>この正規表現は次のものを探します。</p>
 
-var output = ['---------- Original String\n', names + '\n'];
+<ol>
+ <li>3 桁の数字 <code>\d{3}</code> または <code>|</code> 左括弧 <code>\(</code> の次に 3 桁の数字 <code>\d{3}</code> の次に閉じ括弧 <code>\)</code> で、これはキャプチャグループでないもの <code>(?:)</code> に入っています。</li>
+ <li>続いてダッシュ 1 つ、スラッシュ、小数点のうちの何れかがキャプチャグループ <code>()</code> に入っているもの</li>
+ <li>続いて 3 桁の数字 <code>\d{3}</code></li>
+ <li>続いて (最初の) キャプチャグループ内で記憶されているものに一致するもの <code>\1</code></li>
+ <li>続いて 4 桁の数字 <code>\d{4}</code></li>
+</ol>
 
-// 2 種類の正規表現パターンと、格納用の配列を用意する。
-// 文字列を分割して配列の要素に収める。
-
-// パターン: ホワイトスペースの 0 回以上の繰り返しのあとにセミコロン、そのあとにホワイトスペースの 0 回以上の繰り返し
-var pattern = /\s*;\s*/;
-
-// 上記のパターンで文字列を断片に分割し、
-// nameList という配列に断片を格納する。
-var nameList = names.split(pattern);
-
-// 新たなパターン: 1 個以上の文字、1 個以上のホワイトスペース、1 個以上の文字
-// 括弧を用いてパターンの断片を記憶する。
-// 記憶した断片は後から参照される。
-pattern = /(\w+)\s+(\w+)/;
-
-// 処理された名前を格納する新しい配列。
-var bySurnameList = [];
-
-// 名前の配列を表示し、新しい配列にカンマ区切りで名前を
-// ラストネーム、ファーストネームの順で格納する。
-//
-// replace メソッドはパターンにマッチしたものを除去し、
-// 「2 番目の記憶文字列のあとにカンマとスペース、
-// さらにその後に続く 1 番目の記憶文字列」に置き換える。
-//
-// 変数 $1 および $2 は、パターンにマッチさせた際に
-// 記憶しておいた部分文字列を参照する
-
-output.push('---------- After Split by Regular Expression');
-
-var i, len;
-for (i = 0, len = nameList.length; i &lt; len; i++){
-  output.push(nameList[i]);
-  bySurnameList[i] = nameList[i].replace(pattern, '$2, $1');
-}
-
-// 新しい配列を表示する。
-output.push("---------- Names Reversed");
-for (i = 0, len = bySurnameList.length; i &lt; len; i++){
-  output.push(bySurnameList[i]);
-}
-
-// ラストネームについてソートし、ソートした配列を表示する。
-bySurnameList.sort();
-output.push('---------- Sorted');
-for (i = 0, len = bySurnameList.length; i &lt; len; i++){
-  output.push(bySurnameList[i]);
-}
-
-output.push('---------- End');
-
-console.log(output.join('\n'));
-
-// produces:
-//
-// ---------- Original String
-//
-// Orange Carrot ;Fred Barney; Helen Rigby ; Bill Abel ; Chris Hand
-//
-// ---------- After Split by Regular Expression
-// Orange Carrot
-// Fred Barney
-// Helen Rigby
-// Bill Abel
-// Chris Hand
-// ---------- Names Reversed
-// Carrot, Orange
-// Barney, Fred
-// Rigby, Helen
-// Abel, Bill
-// Hand, Chris
-// ---------- Sorted
-// Abel, Bill
-// Barney, Fred
-// Carrot, Orange
-// Hand, Chris
-// Rigby, Helen
-// ---------- End
-
-</pre>
-
-<h3 id="Using_Special_Characters_to_Verify_Input" name="Using_Special_Characters_to_Verify_Input">特殊文字を用いた入力の確認</h3>
-
-<p>次の例では、ユーザーは電話番号を入力します。ユーザーが "Check" ボタンを押すと、スクリプトがその番号の妥当性を確認します。その番号が正当である（正規表現で指定した文字の連続にマッチする）場合、スクリプトはユーザーへの感謝のメッセージを表示し、その番号を承認します。番号が正当でない場合は、その番号が妥当でないことをユーザーに通知します。</p>
-
-<p>正規表現は、0 または 1 個の左括弧 <code>\(?</code>、その後に 3 個の数字 <code>\d{3}</code>、その後に 0 または 1 個の右括弧 <code>\)?</code>、その後、見つかった際に記憶される 1 個のダッシュ、スラッシュ、または小数点 <code>([-\/\.])</code>、その後に 3 個の数字 <code>\d{3}</code>、その後、記憶された 1 個のダッシュ、スラッシュ、または小数点のマッチ <code>\1</code>、その後に 4 個の数字 <code>\d{4}</code> を探します。</p>
-
-<p>ユーザーが <code>Enter</code> ボタンを押した際に発動する <code>Change</code> イベントにより <code>RegExp.input</code> の値が設定されます。</p>
+<p>ユーザーが <kbd>Enter</kbd> ボタンを押した際に起動する <code>click</code> イベントにより <code>phoneInput.value</code> の値が設定されます。</p>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p&gt;
+<pre class="brush: html">&lt;p&gt;
   電話番号（市外局番含む）を入力して "チェック" をクリックしてください。
   &lt;br&gt;
-  適切な形式は ###-###-#### のようなものです。
+  適切な形式は ###-###-#### などです。
 &lt;/p&gt;
 &lt;form action="#"&gt;
   &lt;input id="phone"&gt;
@@ -757,44 +417,29 @@ console.log(output.join('\n'));
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
+<pre class="brush: js">var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
 function testInfo(phoneInput) {
   var OK = re.exec(phoneInput.value);
   if (!OK) {
-    console.error(phoneInput.value + ' は市外局番付電話番号ではありません！');
+    console.error(phoneInput.value + ' は市外局番付き電話番号ではありません！');
   } else {
-    console.log('ありがとう、あなたの電話番号は ' + OK[0]);}
+    console.log('ありがとう、あなたの電話番号は ' + OK[0]);
+  }
 } </pre>
 
-<h4 id="結果">結果</h4>
+<h4 id="Result">結果</h4>
 
-<div>
-<p>{{ EmbedLiveSample('Using_Special_Characters_to_Verify_Input', '', '', '', 'Web/JavaScript/Guide/Regular_Expressions') }}</p>
+<p>{{ EmbedLiveSample('Using_special_characters_to_verify_input', '', '', '', 'Web/JavaScript/Guide/Regular_Expressions') }}</p>
 
-<h2 id="仕様">仕様</h2>
+<h2 id="Tools">ツール</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-regexp-regular-expression-objects', 'RegExp')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="ブラウザサポート">ブラウザサポート</h2>
-
-<div>
-
-
-<p>{{Compat("javascript.builtins.RegExp")}}</p>
-</div>
-</div>
+<dl>
+ <dt><a href="https://regexr.com/" rel="noopener">RegExr</a></dt>
+ <dd>An online tool to learn, build, &amp; test Regular Expressions.</dd>
+ <dt><a href="https://regex101.com/" rel="noopener">Regex tester</a></dt>
+ <dd>An online regex builder/debugger</dd>
+ <dt><a href="https://extendsclass.com/regex-tester.html" rel="noopener">Regex visualizer</a></dt>
+ <dd>An online visual regex tester.</dd>
+</dl>
 
 <div>{{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}</div>
