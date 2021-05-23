@@ -130,7 +130,7 @@
 /ja/docs/Adapting_XUL_Applications_for_Firefox_1.5	/ja/docs/Mozilla/Firefox/Releases/1.5/Adapting_XUL_Applications_for_Firefox_1.5
 /ja/docs/Adding_feed_readers_to_Firefox	/ja/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /ja/docs/Adding_feed_readers_to_Firefox-redirect-1	/ja/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
-/ja/docs/Adding_search_engines_from_web_pages	/ja/docs/conflicting/Web/OpenSearch
+/ja/docs/Adding_search_engines_from_web_pages	/ja/docs/Web/OpenSearch
 /ja/docs/Addons	/ja/docs/Mozilla/Add-ons
 /ja/docs/Advanced_styling_for_HTML_forms	/ja/docs/Learn/Forms/Advanced_form_styling
 /ja/docs/Alternative_style_sheets	/ja/docs/Web/CSS/Alternative_style_sheets
