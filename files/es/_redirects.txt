@@ -1779,6 +1779,7 @@
 /es/docs/Web/API/CameraCapabilities.maxExposureCompensation	/es/docs/Web/API/CameraCapabilities/maxExposureCompensation
 /es/docs/Web/API/CameraCapabilities.maxFocusAreas	/es/docs/Web/API/CameraCapabilities/maxFocusAreas
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Ejemplo	/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/es/docs/Web/API/ChildNode/remove	/es/docs/orphaned/Web/API/ChildNode/remove
 /es/docs/Web/API/Console/tabla	/es/docs/Web/API/Console/table
 /es/docs/Web/API/Constraint_validation/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/Coordinates	/es/docs/Web/API/GeolocationCoordinates

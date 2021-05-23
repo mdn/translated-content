@@ -1930,6 +1930,7 @@
 /pl/docs/Web/API/AudioContext/createDynamicsCompressor	/pl/docs/Web/API/BaseAudioContext/createDynamicsCompressor
 /pl/docs/Web/API/Canvas_API/Tutorial/Optymalizacja_canvas	/pl/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /pl/docs/Web/API/Canvas_API/Tutorial/rysowanie_ksztaltow	/pl/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
+/pl/docs/Web/API/ChildNode/remove	/pl/docs/orphaned/Web/API/ChildNode/remove
 /pl/docs/Web/API/Document/firstChild	/pl/docs/conflicting/Web/API/Node/firstChild
 /pl/docs/Web/API/Document/namespaceURI	/pl/docs/conflicting/Web/API/Node/namespaceURI
 /pl/docs/Web/API/DocumentOrShadowRoot/activeElement	/pl/docs/Web/API/Document/activeElement

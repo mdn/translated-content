@@ -538,6 +538,7 @@
 /pt-BR/docs/Web/API/BatteryManager.ondischargingtimechange	/pt-BR/docs/Web/API/BatteryManager/ondischargingtimechange
 /pt-BR/docs/Web/API/BatteryManager.onlevelchange	/pt-BR/docs/Web/API/BatteryManager/onlevelchange
 /pt-BR/docs/Web/API/BatteryManager/ondischargintimechange	/pt-BR/docs/Web/API/BatteryManager/ondischargingtimechange
+/pt-BR/docs/Web/API/ChildNode/remove	/pt-BR/docs/orphaned/Web/API/ChildNode/remove
 /pt-BR/docs/Web/API/Console.timeEnd	/pt-BR/docs/Web/API/Console/timeEnd
 /pt-BR/docs/Web/API/Coordinates	/pt-BR/docs/Web/API/GeolocationCoordinates
 /pt-BR/docs/Web/API/Coordinates/altitude	/pt-BR/docs/Web/API/GeolocationCoordinates/altitude
