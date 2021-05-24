@@ -10,8 +10,8 @@ browser-compat: javascript.statements.label
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><strong>Метки</strong> используются вместе с оператором {{jsxref("Statements/break",
-  "break")}} или {{jsxref("Statements/continue", "continue")}}. И выступают
+<p><strong>Метки</strong> используются вместе с операторами {{jsxref("Statements/break",
+  "break")}} и {{jsxref("Statements/continue", "continue")}}. Они выступают
   в роли идентификатора выражения, на который можно сослаться.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-label.html")}}</div>
@@ -40,8 +40,8 @@ browser-compat: javascript.statements.label
   вы можете использовать метки только с <code>break</code> или <code>continue</code>.</p>
 
 <p>В <a href="/ru/docs/Web/JavaScript/Reference/Strict_mode">строгом режиме</a>
-  при попытке использовать слово "<code>let</code>" как имя метки, вы получите ошибку {{jsxref("SyntaxError")}}
-  (что <code>let</code> ключевое слово).</p>
+  использование слова "<code>let</code>" в качестве имени метки запрещено — вы получите ошибку {{jsxref("SyntaxError")}}
+  (потому что <code>let</code> является ключевым словом в новых стандартах JavaScript).</p>
 
 <h2 id="Examples">Примеры</h2>
 
@@ -135,15 +135,15 @@ for (i = 0; i &lt; items.length; i++) {
 <p>Метки можно использовать для обычных блоков кода, но только с оператором <code>break</code>.</p>
 
 <pre class="brush: js">foo: {
-  console.log('face');
+  console.log('привет');
   break foo;
-  console.log('this will not be executed');
+  console.log('эта строка не будет исполнена');
 }
-console.log('swap');
+console.log('мир');
 
 // Вывод:
-//   "face"
-//   "swap"</pre>
+//   "привет"
+//   "мир"</pre>
 
 <h3 id="Labeled_function_declarations">Объявление функций с меткой</h3>
 
