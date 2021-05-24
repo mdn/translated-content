@@ -9761,22 +9761,6 @@
       "caoweiju"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:27:27.352Z",
-    "contributors": [
-      "RainSlide",
-      "iSmartSV",
-      "duola8789",
-      "pasturn",
-      "Ende93",
-      "xgqfrms-GitHub",
-      "ceverytime",
-      "teoli",
-      "khalid32",
-      "ziyunfei",
-      "Darrel.Hsu"
-    ]
-  },
   "Web/API/ChildNode/replaceWith": {
     "modified": "2020-10-15T21:56:06.625Z",
     "contributors": [
@@ -32851,12 +32835,6 @@
       "pantao"
     ]
   },
-  "Web/HTML/Element/isindex": {
-    "modified": "2019-03-23T22:43:17.045Z",
-    "contributors": [
-      "Martin.Chow"
-    ]
-  },
   "Web/HTML/Element/kbd": {
     "modified": "2019-08-13T06:01:57.840Z",
     "contributors": [
@@ -32929,12 +32907,6 @@
       "jesse0x90",
       "gqqnbig",
       "041008725"
-    ]
-  },
-  "Web/HTML/Element/listing": {
-    "modified": "2019-03-23T22:10:12.488Z",
-    "contributors": [
-      "wizardforcel"
     ]
   },
   "Web/HTML/Element/main": {
@@ -33054,13 +33026,6 @@
       "hoyt"
     ]
   },
-  "Web/HTML/Element/multicol": {
-    "modified": "2019-03-23T22:18:36.663Z",
-    "contributors": [
-      "wizardforcel",
-      "xgqfrms-GitHub"
-    ]
-  },
   "Web/HTML/Element/nav": {
     "modified": "2020-10-15T21:26:27.913Z",
     "contributors": [
@@ -33070,12 +33035,6 @@
       "ziyunfei",
       "TimZhao",
       "bowen-shi"
-    ]
-  },
-  "Web/HTML/Element/nextid": {
-    "modified": "2020-10-15T22:25:21.460Z",
-    "contributors": [
-      "pans9"
     ]
   },
   "Web/HTML/Element/nobr": {
@@ -33879,17 +33838,6 @@
     "modified": "2019-07-13T06:56:53.858Z",
     "contributors": [
       "wangfangping"
-    ]
-  },
-  "Web/HTML/Preloading_content": {
-    "modified": "2020-06-09T23:26:32.370Z",
-    "contributors": [
-      "huyue",
-      "chanvin",
-      "sutaojie",
-      "haoliangwu",
-      "Axue",
-      "ldwformat"
     ]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
@@ -46495,13 +46443,6 @@
       "huyue"
     ]
   },
-  "Web/SVG/Element/color-profile": {
-    "modified": "2019-03-23T22:46:33.322Z",
-    "contributors": [
-      "Sebastianz",
-      "fanxiaojie"
-    ]
-  },
   "Web/SVG/Element/cursor": {
     "modified": "2020-10-15T21:39:22.908Z",
     "contributors": [
@@ -50320,6 +50261,22 @@
       "smilewalker"
     ]
   },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T21:27:27.352Z",
+    "contributors": [
+      "RainSlide",
+      "iSmartSV",
+      "duola8789",
+      "pasturn",
+      "Ende93",
+      "xgqfrms-GitHub",
+      "ceverytime",
+      "teoli",
+      "khalid32",
+      "ziyunfei",
+      "Darrel.Hsu"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2020-10-15T21:21:28.912Z",
     "contributors": [
@@ -50649,10 +50606,46 @@
       "angelllls"
     ]
   },
+  "orphaned/Web/HTML/Element/isindex": {
+    "modified": "2019-03-23T22:43:17.045Z",
+    "contributors": [
+      "Martin.Chow"
+    ]
+  },
+  "orphaned/Web/HTML/Element/listing": {
+    "modified": "2019-03-23T22:10:12.488Z",
+    "contributors": [
+      "wizardforcel"
+    ]
+  },
+  "orphaned/Web/HTML/Element/multicol": {
+    "modified": "2019-03-23T22:18:36.663Z",
+    "contributors": [
+      "wizardforcel",
+      "xgqfrms-GitHub"
+    ]
+  },
+  "orphaned/Web/HTML/Element/nextid": {
+    "modified": "2020-10-15T22:25:21.460Z",
+    "contributors": [
+      "pans9"
+    ]
+  },
   "orphaned/Web/HTML/Global_attributes/dropzone": {
     "modified": "2019-03-23T22:10:15.156Z",
     "contributors": [
       "wizardforcel"
+    ]
+  },
+  "orphaned/Web/HTML/Preloading_content": {
+    "modified": "2020-06-09T23:26:32.370Z",
+    "contributors": [
+      "huyue",
+      "chanvin",
+      "sutaojie",
+      "haoliangwu",
+      "Axue",
+      "ldwformat"
     ]
   },
   "orphaned/Web/HTTP/跨域资源共享(CORS)_": {
@@ -50712,6 +50705,13 @@
     "contributors": [
       "RoyZ",
       "faliye"
+    ]
+  },
+  "orphaned/Web/SVG/Element/color-profile": {
+    "modified": "2019-03-23T22:46:33.322Z",
+    "contributors": [
+      "Sebastianz",
+      "fanxiaojie"
     ]
   },
   "orphaned/Web/Security/Information_Security_Basics": {

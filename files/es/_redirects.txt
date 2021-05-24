@@ -1779,6 +1779,7 @@
 /es/docs/Web/API/CameraCapabilities.maxExposureCompensation	/es/docs/Web/API/CameraCapabilities/maxExposureCompensation
 /es/docs/Web/API/CameraCapabilities.maxFocusAreas	/es/docs/Web/API/CameraCapabilities/maxFocusAreas
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Ejemplo	/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
+/es/docs/Web/API/ChildNode/remove	/es/docs/orphaned/Web/API/ChildNode/remove
 /es/docs/Web/API/Console/tabla	/es/docs/Web/API/Console/table
 /es/docs/Web/API/Constraint_validation/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/Coordinates	/es/docs/Web/API/GeolocationCoordinates
@@ -2107,6 +2108,8 @@
 /es/docs/Web/HTML/Canvas/A_basic_ray-caster	/es/docs/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/HTML/Canvas/Drawing_graphics_with_canvas	/es/docs/conflicting/Web/API/Canvas_API/Tutorial
 /es/docs/Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida	/es/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
+/es/docs/Web/HTML/Element/isindex	/es/docs/orphaned/Web/HTML/Element/isindex
+/es/docs/Web/HTML/Element/multicol	/es/docs/orphaned/Web/HTML/Element/multicol
 /es/docs/Web/HTML/Elemento	/es/docs/Web/HTML/Element
 /es/docs/Web/HTML/Elemento/Audio2	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Elemento/Elementos_títulos	/es/docs/Web/HTML/Element/Heading_Elements
@@ -2194,7 +2197,7 @@
 /es/docs/Web/HTML/Elemento/input/range	/es/docs/Web/HTML/Element/input/range
 /es/docs/Web/HTML/Elemento/input/text	/es/docs/Web/HTML/Element/input/text
 /es/docs/Web/HTML/Elemento/ins	/es/docs/Web/HTML/Element/ins
-/es/docs/Web/HTML/Elemento/isindex	/es/docs/Web/HTML/Element/isindex
+/es/docs/Web/HTML/Elemento/isindex	/es/docs/orphaned/Web/HTML/Element/isindex
 /es/docs/Web/HTML/Elemento/kbd	/es/docs/Web/HTML/Element/kbd
 /es/docs/Web/HTML/Elemento/keygen	/es/docs/Web/HTML/Element/keygen
 /es/docs/Web/HTML/Elemento/label	/es/docs/Web/HTML/Element/label
@@ -2207,7 +2210,7 @@
 /es/docs/Web/HTML/Elemento/marquee	/es/docs/Web/HTML/Element/marquee
 /es/docs/Web/HTML/Elemento/menu	/es/docs/Web/HTML/Element/menu
 /es/docs/Web/HTML/Elemento/meta	/es/docs/Web/HTML/Element/meta
-/es/docs/Web/HTML/Elemento/multicol	/es/docs/Web/HTML/Element/multicol
+/es/docs/Web/HTML/Elemento/multicol	/es/docs/orphaned/Web/HTML/Element/multicol
 /es/docs/Web/HTML/Elemento/nav	/es/docs/Web/HTML/Element/nav
 /es/docs/Web/HTML/Elemento/nobr	/es/docs/Web/HTML/Element/nobr
 /es/docs/Web/HTML/Elemento/noframes	/es/docs/Web/HTML/Element/noframes

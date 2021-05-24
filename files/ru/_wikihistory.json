@@ -6485,14 +6485,6 @@
       "pantherCZ"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2019-03-23T22:51:25.031Z",
-    "contributors": [
-      "neoxaker",
-      "NikitaCoder",
-      "In4in"
-    ]
-  },
   "Web/API/ChildNode/replaceWith": {
     "modified": "2020-12-02T15:53:32.691Z",
     "contributors": [
@@ -16562,17 +16554,6 @@
       "BychekRU"
     ]
   },
-  "Web/HTML/Preloading_content": {
-    "modified": "2020-10-15T22:11:40.984Z",
-    "contributors": [
-      "warsan",
-      "alexa.poruch",
-      "Ilya-Zhulin",
-      "akochemasov",
-      "Skolpov",
-      "isatalkin"
-    ]
-  },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
     "modified": "2019-03-23T22:44:29.253Z",
     "contributors": [
@@ -25584,6 +25565,14 @@
       "Aleksej"
     ]
   },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2019-03-23T22:51:25.031Z",
+    "contributors": [
+      "neoxaker",
+      "NikitaCoder",
+      "In4in"
+    ]
+  },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2019-03-18T21:18:44.250Z",
     "contributors": [
@@ -25721,6 +25710,17 @@
     "contributors": [
       "chrisdavidmills",
       "Akh-rman"
+    ]
+  },
+  "orphaned/Web/HTML/Preloading_content": {
+    "modified": "2020-10-15T22:11:40.984Z",
+    "contributors": [
+      "warsan",
+      "alexa.poruch",
+      "Ilya-Zhulin",
+      "akochemasov",
+      "Skolpov",
+      "isatalkin"
     ]
   },
   "orphaned/Web/JavaScript/Guide/Об_этом_руководстве": {
