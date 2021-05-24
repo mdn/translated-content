@@ -10,6 +10,7 @@ tags:
   - 반복자
   - 생성기
 translation_of: Web/JavaScript/Reference/Operators/yield
+browser-compat: javascript.operators.yield
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
@@ -71,106 +72,13 @@ console.log(iterator.next()); // { value: 1, done: false }
 console.log(iterator.next()); // { value: 2, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }</pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES6', '#', 'Yield')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#', 'Yield')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="browser_compatibility">브라우저 호환성</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>39</td>
-   <td>{{CompatGeckoDesktop("26.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>IteratorResult</code> object instead of throwing</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("29.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("26.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>IteratorResult</code> object instead of throwing</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("29.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="Firefox-specific_notes">Firefox-specific notes</h2>
-
-<ul>
- <li>Starting with Gecko 29 {{geckoRelease(29)}}, the completed generator function no longer throws a {{jsxref("TypeError")}} "generator has already finished". Instead, it returns an <code>IteratorResult</code> object like <code>{ value: undefined, done: true }</code> ({{bug(958951)}}).</li>
- <li>Starting with Gecko 33 {{geckoRelease(33)}}, the parsing of the <code>yield</code> expression has been updated to conform with the latest ES6 specification ({{bug(981599)}}):
-  <ul>
-   <li>The expression after the <code>yield</code> keyword is optional and omitting it no longer throws a {{jsxref("SyntaxError")}}: <code>function* foo() { yield; }</code></li>
-  </ul>
- </li>
-</ul>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -3829,12 +3829,6 @@
       "cs09g"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T22:10:05.225Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
   "Web/API/Clients": {
     "modified": "2020-10-15T22:21:49.146Z"
   },
@@ -11383,12 +11377,6 @@
       "young-gratia"
     ]
   },
-  "Web/HTML/Preloading_content": {
-    "modified": "2020-10-15T22:35:17.448Z",
-    "contributors": [
-      "sukyology"
-    ]
-  },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
     "modified": "2019-03-18T20:35:03.733Z",
     "contributors": [
@@ -18399,6 +18387,12 @@
       "cap3618"
     ]
   },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T22:10:05.225Z",
+    "contributors": [
+      "cs09g"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2019-03-23T23:27:06.270Z",
     "contributors": [
@@ -18494,6 +18488,12 @@
     "contributors": [
       "alattalatta",
       "dolmoon"
+    ]
+  },
+  "orphaned/Web/HTML/Preloading_content": {
+    "modified": "2020-10-15T22:35:17.448Z",
+    "contributors": [
+      "sukyology"
     ]
   },
   "orphaned/Web/JavaScript/Differential_inheritance_in_JavaScript": {
