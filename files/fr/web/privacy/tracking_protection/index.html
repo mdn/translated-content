@@ -70,10 +70,10 @@ function trackLink(url,event) {
 }
 &lt;/script&gt;</pre>
 
-<p>Instead, you should account for the case when Google Analytics is missing by checking to see if the ga object has initialized:</p>
+<p>Au lieu de cela, prenez en compte le cas où Google Analytics est absent, en vérifiant si l'objet <code>ga</code> a été initialisé :</p>
 
-<pre class="brush:html example-good">&lt;a href="http://www.example.com" onclick="trackLink('http://www.example.com', event);"&gt;
-  Visit example.com
+<pre class="brush:html example-good">&lt;a href="http://www.exemple.com" onclick="trackLink('http://www.exemple.com', event);"&gt;
+  Visiter exemple.com
 &lt;/a&gt;
 
 &lt;script&gt;
@@ -91,8 +91,8 @@ function trackLink(url,event) {
 &lt;/script&gt;
 </pre>
 
-<p>More information about this technique is available at <a href="https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/">Google Analytics, Privacy, and Event Tracking</a>.</p>
+<p>Pour plus d'information sur cette technique, regardez l'article sur <a href="https://hacks.mozilla.org/2016/01/google-analytics-privacy-and-event-tracking/">Google Analytics, Vie privée et Suivi d'événements</a> (en anglais).</p>
 
 <div class="blockIndicator note">
-<p><strong>Note:</strong> Depending on a third party in this way is not a good practice anyway, because then your site can be broken if the third party is slow or unavailable, or if the tracker has been blocked by an add-on.</p>
+<p><strong>Note :</strong> Dépendre d'un élément tiers de cette façon n'est dans tous les cas pas une bonne pratique, car votre site peut se retrouver hors d'usage si la partie tierce est lente ou indisponible, ou si le traqueur a été bloqué par une extension.</p>
 </div>
