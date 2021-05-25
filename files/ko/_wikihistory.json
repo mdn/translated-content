@@ -10145,27 +10145,6 @@
       "gblue1223"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-03-24T00:11:07.419Z",
-    "contributors": [
-      "teoli",
-      "Channy",
-      "Dwchiang",
-      "vigia122",
-      "jisung",
-      "Joone"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-23T23:38:47.847Z",
-    "contributors": [
-      "kybin",
-      "kuil09",
-      "juyoungbang",
-      "teoli",
-      "Channy"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2020-01-10T12:08:26.959Z",
     "contributors": [
@@ -18467,6 +18446,27 @@
     "modified": "2019-03-23T22:48:26.046Z",
     "contributors": [
       "PineMt"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-03-24T00:11:07.419Z",
+    "contributors": [
+      "teoli",
+      "Channy",
+      "Dwchiang",
+      "vigia122",
+      "jisung",
+      "Joone"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-23T23:38:47.847Z",
+    "contributors": [
+      "kybin",
+      "kuil09",
+      "juyoungbang",
+      "teoli",
+      "Channy"
     ]
   },
   "orphaned/Web/HTML/Element/command": {

@@ -9220,34 +9220,6 @@
       "fellyph"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-11-20T18:24:04.168Z",
-    "contributors": [
-      "sambrmg",
-      "Fernandolrs",
-      "matheussilvasantos",
-      "netoguimaraes",
-      "jaimemaretoli",
-      "macalha",
-      "teoli",
-      "lfelipev",
-      "leandro2103",
-      "rodrigopadula",
-      "mauricio.araldi",
-      "PedroFelipe",
-      "phenriqueleao",
-      "apereira2001",
-      "RodrigoAlmeidaSp"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-23T23:38:50.368Z",
-    "contributors": [
-      "flmidia",
-      "teoli",
-      "eduardodx"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2020-10-07T01:45:20.737Z",
     "contributors": [
@@ -17275,6 +17247,34 @@
     "modified": "2020-09-28T23:35:22.348Z",
     "contributors": [
       "helton-mori-dev"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-11-20T18:24:04.168Z",
+    "contributors": [
+      "sambrmg",
+      "Fernandolrs",
+      "matheussilvasantos",
+      "netoguimaraes",
+      "jaimemaretoli",
+      "macalha",
+      "teoli",
+      "lfelipev",
+      "leandro2103",
+      "rodrigopadula",
+      "mauricio.araldi",
+      "PedroFelipe",
+      "phenriqueleao",
+      "apereira2001",
+      "RodrigoAlmeidaSp"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-23T23:38:50.368Z",
+    "contributors": [
+      "flmidia",
+      "teoli",
+      "eduardodx"
     ]
   },
   "orphaned/Web/HTML/Element/command": {

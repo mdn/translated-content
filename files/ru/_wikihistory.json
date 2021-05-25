@@ -15387,43 +15387,6 @@
       "warsan"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2020-11-05T05:54:38.208Z",
-    "contributors": [
-      "ksam",
-      "nikolay94",
-      "SphinxKnight",
-      "duhas1993",
-      "CrawlOverYou",
-      "Hamelion-gm",
-      "MuradAz",
-      "teoli",
-      "BychekRU",
-      "syam1123",
-      "M57",
-      "Jmunb",
-      "repby",
-      "uleming",
-      "askhat",
-      "andygol",
-      "Grakov",
-      "AxDaim"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Constraint_validation": {
-    "modified": "2019-03-23T22:20:23.601Z",
-    "contributors": [
-      "lautsevich",
-      "Pescao"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-23T23:32:08.971Z",
-    "contributors": [
-      "Jmunb",
-      "Grakov"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2020-10-09T08:16:53.318Z",
     "contributors": [
@@ -25697,6 +25660,43 @@
       "kvandreev",
       "MuradAz",
       "curdwithraisins"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2020-11-05T05:54:38.208Z",
+    "contributors": [
+      "ksam",
+      "nikolay94",
+      "SphinxKnight",
+      "duhas1993",
+      "CrawlOverYou",
+      "Hamelion-gm",
+      "MuradAz",
+      "teoli",
+      "BychekRU",
+      "syam1123",
+      "M57",
+      "Jmunb",
+      "repby",
+      "uleming",
+      "askhat",
+      "andygol",
+      "Grakov",
+      "AxDaim"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Constraint_validation": {
+    "modified": "2019-03-23T22:20:23.601Z",
+    "contributors": [
+      "lautsevich",
+      "Pescao"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-23T23:32:08.971Z",
+    "contributors": [
+      "Jmunb",
+      "Grakov"
     ]
   },
   "orphaned/Web/HTML/Element/element": {

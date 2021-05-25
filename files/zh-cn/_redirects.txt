@@ -693,11 +693,11 @@
 /zh-CN/docs/HTML/Forms	/zh-CN/docs/Learn/Forms
 /zh-CN/docs/HTML/Forms/Sending_forms_through_JavaScript	/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript
 /zh-CN/docs/HTML/Forms_in_HTML	/zh-CN/docs/orphaned/Learn/HTML/Forms/HTML5_updates
-/zh-CN/docs/HTML/HTML5	/zh-CN/docs/Web/Guide/HTML/HTML5
-/zh-CN/docs/HTML/HTML5-and-his-friends	/zh-CN/docs/Web/Guide/HTML/HTML5
+/zh-CN/docs/HTML/HTML5	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5
+/zh-CN/docs/HTML/HTML5-and-his-friends	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5
 /zh-CN/docs/HTML/HTML5/HTML5_Tags_List	/zh-CN/docs/conflicting/Web/HTML/Element
 /zh-CN/docs/HTML/HTML5/HTML5_Thematic_Classification	/zh-CN/docs/conflicting/Web/Guide/HTML/HTML5
-/zh-CN/docs/HTML/HTML5/HTML5_入门	/zh-CN/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/zh-CN/docs/HTML/HTML5/HTML5_入门	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /zh-CN/docs/HTML/HTML_Elements	/zh-CN/docs/Web/HTML/Element/Heading_Elements
 /zh-CN/docs/HTML/HTML_Elements/time	/zh-CN/docs/Web/HTML/Element/time
 /zh-CN/docs/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
@@ -2307,8 +2307,11 @@
 /zh-CN/docs/Web/Guide/HTML/Forms/表单入门	/zh-CN/docs/Learn/Forms/Your_first_form
 /zh-CN/docs/Web/Guide/HTML/Forms_in_HTML	/zh-CN/docs/orphaned/Learn/HTML/Forms/HTML5_updates
 /zh-CN/docs/Web/Guide/HTML/HTML	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML
+/zh-CN/docs/Web/Guide/HTML/HTML5	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5
+/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5/Constraint_validation
 /zh-CN/docs/Web/Guide/HTML/HTML5/HTML5_Thematic_Classification	/zh-CN/docs/conflicting/Web/Guide/HTML/HTML5
 /zh-CN/docs/Web/Guide/HTML/HTML5/HTML5_element_list	/zh-CN/docs/conflicting/Web/HTML/Element
+/zh-CN/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /zh-CN/docs/Web/Guide/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages

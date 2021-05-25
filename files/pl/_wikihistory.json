@@ -5788,16 +5788,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-06-28T04:18:42.824Z",
-    "contributors": [
-      "Moniaesz",
-      "teoli",
-      "Jacob99",
-      "Ptak82",
-      "Teo"
-    ]
-  },
   "Web/Guide/Performance": {
     "modified": "2019-03-23T23:11:21.113Z",
     "contributors": [
@@ -11273,6 +11263,16 @@
       "Mgjbot",
       "Ptak82",
       "Jan Dudek"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-06-28T04:18:42.824Z",
+    "contributors": [
+      "Moniaesz",
+      "teoli",
+      "Jacob99",
+      "Ptak82",
+      "Teo"
     ]
   },
   "orphaned/Web/HTML/Element/comment": {
