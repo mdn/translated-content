@@ -53156,23 +53156,6 @@
       "electrolysis"
     ]
   },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Array/index": {
-    "modified": "2019-03-23T23:47:50.798Z",
-    "contributors": [
-      "teoli",
-      "ethertank",
-      "Yuichirou",
-      "Mgjbot"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Array/input": {
-    "modified": "2019-01-16T15:57:03.488Z",
-    "contributors": [
-      "ethertank",
-      "Yuichirou",
-      "Mgjbot"
-    ]
-  },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {
     "modified": "2020-10-15T21:13:35.051Z",
     "contributors": [
