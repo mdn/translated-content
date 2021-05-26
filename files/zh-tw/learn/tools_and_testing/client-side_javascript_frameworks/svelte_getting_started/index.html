@@ -383,34 +383,34 @@ export default app;</pre>
 
 <p>比起其它框架編譯後的bundles要小的多。考慮到程式碼bundles這件事，不僅僅是你需下載檔案的大小。包含那些需要被解析、執行並保存於記憶體中的可執行程式碼。所以確實有蠻大的不同，特別是低功耗裝置或CPU密集型應用程式。</p>
 
-<h2 id="Following_this_tutorial">Following this tutorial</h2>
+<h2 id="Following_this_tutorial">跟著這個教學系列</h2>
 
-<p>In this tutorial series you will be building a complete web application. We'll learn all the basics about Svelte and also quite a few advanced topics.</p>
+<p>在這個教學系列你將建構一個完整的網站應用程式。我們將學習有關Svelte的所有基礎，以及一些進階課題。</p>
 
-<p>You can just read the content to get a good understanding of Svelte features, but you'll get the most out of this tutorial if you follow along coding the app with us as you go. To make it easier for you to follow each article, we provide a GitHub repository with a folder containing the source for the app as it is at the start of each tutorial.</p>
+<p>你可以只閱讀內容來充分了解Svelte的一些功能，但如果你跟著我們一起撰寫應用程式，將可以從本教學系列獲得最大收益。為了讓你可以更簡單跟著每一篇文章做，我們提供了一個GitHub儲存庫並以資料夾分隔出每一個教學系列開頭需要的應用程式來源程式碼。</p>
 
-<p>Svelte also provides an online repl, which is a playground for live-coding Svelte apps on the web without having to install anything on your machine. We provide a repl for each article so you can start coding along right away. Let's talk a bit more about how to use these tools.</p>
+<p>Svelte也提供了一個線上repl，它是在網站上用於即時撰寫Svelte應用程式的一個遊樂場，而不用安裝任何東西在你的機器上。我們在每一篇文章都有提供repl，所以你可以立即撰寫程式碼。接著談一談如何使用這些工具。</p>
 
-<h3 id="Using_Git">Using Git</h3>
+<h3 id="Using_Git">使用Git</h3>
 
-<p>The most popular version control system is Git, along with GitHub, a site that provides hosting for your repositories and several tools for working with them.</p>
+<p>最受歡迎的版本控制系統是Git以及GitHub，網站提供了你的儲存庫託管和多種與它協作的工具。</p>
 
-<p>We'll be using GitHub so that you can easily download the source code for each article. You will also be able to get the code as it should be after completing the article, just in case you get lost.</p>
+<p>我們將會使用GitHub，所以你可以在每一篇文章輕易地下載到來源程式碼。不用擔心你錯過了什麼，因為你將能夠取得這些於每一篇文章欲完成的程式碼內容。</p>
 
-<p>After <a href="https://git-scm.com/downloads">installing git</a>, to clone the repository you should execute:</p>
+<p><a href="https://git-scm.com/downloads">安裝git</a>之後，為了複製儲存庫你應該執行下列指令：</p>
 
 <pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
 
-<p>Then at the beginning of each article, you can just <code>cd</code> into the corresponding folder and start the app in dev mode to see what its current state should be, like this:</p>
+<p>接著在開始閱讀每一篇文章前，你可以<code>cd</code>至對應資料夾並將應用程式以開發模式運行確認其當前狀態為何，像是如下列指令：</p>
 
 <pre class="brush: bash">cd 02-starting-our-todo-app
 npm install
 npm run dev</pre>
 
-<p>If you want lo learn more about git and GitHub, we've compiled a list of links to useful guides — see <a href="/zh-TW/docs/Learn/Tools_and_testing/GitHub">Git and GitHub</a>.</p>
+<p>假如你想要學習更多關於git和GitHub，我們已經有整理一些有幫助的連結清單至指南——看看<a href="/zh-TW/docs/Learn/Tools_and_testing/GitHub">Git和GitHub</a>。</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: If you just want to download the files without cloning the git repo, you can use the degit tool like this — <code>npx degit opensas/mdn-svelte-tutorial</code>. You can also download a specific folder with <code>npx degit opensas/mdn-svelte-tutorial/01-getting-started</code>. Degit won't create a local git repo, it will just download the files of the specified folder.</p>
+<p><strong>注意</strong>：假如你只是想要下載檔案而不是複製git儲存庫，你可以使用degit工具像是這樣——<code>npx degit opensas/mdn-svelte-tutorial</code>。你也可以用<code>npx degit opensas/mdn-svelte-tutorial/01-getting-started</code>來下載特定資料夾。Degit將不會建立本地git儲存庫，它將只下載特定資料夾下的檔案們。</p>
 </div>
 
 <h3 id="Using_the_Svelte_REPL">Using the Svelte REPL</h3>
