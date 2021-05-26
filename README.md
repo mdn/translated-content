@@ -22,7 +22,8 @@ of active locales is:
 - `zh` (`zh-CN` and `zh-TW`)
 
 If you want to just find a task and jump in, search by the labels `l10n-fr`,
-`l10n-ja`, `l10n-ko`, `l10n-pt-br`, `l10n-ru`, and `l10n-zh` in this repo’s [issues list](https://github.com/mdn/translated-content/issues),
+`l10n-ja`, `l10n-ko`, `l10n-pt-br`, `l10n-ru`, and `l10n-zh` in this repo’s
+[issues list](https://github.com/mdn/translated-content/issues),
 or the main [content repo issues](https://github.com/mdn/content/issues)
 
 ## Code of Conduct
