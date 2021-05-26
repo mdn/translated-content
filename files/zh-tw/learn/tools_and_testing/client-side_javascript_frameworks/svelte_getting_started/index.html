@@ -350,15 +350,15 @@ export default app;</pre>
  <li><code>props</code>：指定數值給<code>App</code>元件中的每一個屬性。</li>
 </ul>
 
-<h2 id="A_look_under_the_hood">A look under the hood</h2>
+<h2 id="A_look_under_the_hood">葫蘆裡賣什麼藥？</h2>
 
-<p>How does Svelte manage to make all these files work together nicely?</p>
+<p>Svelte是如何很好地讓所有檔案協同工作？</p>
 
-<p>The Svelte compiler processes the <code>&lt;style&gt;</code> section of every component and compiles them into the <code>public/build/bundle.css</code> file.</p>
+<p>Svelte編譯器處理每一個元件的<code>&lt;style&gt;</code>區塊並編譯它們至<code>public/build/bundle.css</code>檔案中。</p>
 
-<p>It also compiles the markup and <code>&lt;script&gt;</code> section of every component and stores the result in <code>public/build/bundle.js</code>. It also adds the code in <code>src/main.js</code> to reference the features of each component.</p>
+<p>它也編譯每一個元件的標記和<code>&lt;script&gt;</code>區塊並把結果儲存至<code>public/build/bundle.js</code>。它也會加上一些程式碼到<code>src/main.js</code>以參考每一個元件的功能。</p>
 
-<p>Finally the file <code>public/index.html</code> includes the generated <code>bundle.css</code> and <code>bundle.js</code> files:</p>
+<p>最後<code>public/index.html</code>檔案會引入那些被產生的<code>bundle.css</code>和<code>bundle.js</code>檔案：</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -379,9 +379,9 @@ export default app;</pre>
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>The minified version of <code>bundle.js</code> weighs a little more than 3KB, which includes the "Svelte runtime" (just 300 lines of JavaScript code) and the <code>App.svelte</code> compiled component. As you can see, <code>bundle.js</code> is the only JavaScript file referenced by <code>index.html</code>. There are no other libraries loaded into the web page.</p>
+<p><code>bundle.js</code>的壓縮版本容量大概3KB多一點，其中包含「Svelte執行環境」（約300行JavaScript程式碼）和被編譯後的<code>App.svelte</code>元件。你可以看到，<code>bundle.js</code>是唯一一個被<code>index.html</code>參考的JavaScript檔案。沒有其它函式庫被載入至網頁中。</p>
 
-<p>This is a much smaller footprint than compiled bundles from other frameworks. Take into account that, in the case of code bundles, it's not just the size of the files you have to download that matter. This is executable code that needs to be parsed, executed, and kept in memory. So this really makes a difference, especially in low-powered devices or CPU-intensive applications.</p>
+<p>比起其它框架編譯後的bundles要小的多。考慮到程式碼bundles這件事，不僅僅是你需下載檔案的大小。包含那些需要被解析、執行並保存於記憶體中的可執行程式碼。所以確實有蠻大的不同，特別是低功耗裝置或CPU密集型應用程式。</p>
 
 <h2 id="Following_this_tutorial">Following this tutorial</h2>
 
