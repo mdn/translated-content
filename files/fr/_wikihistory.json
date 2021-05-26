@@ -31131,31 +31131,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-11-06T04:21:55.272Z",
-    "contributors": [
-      "Awebsome",
-      "teoli",
-      "tregagnon",
-      "leoetlino",
-      "Flaburgan",
-      "DavidWalsh",
-      "vigia122",
-      "MatthieuMaler",
-      "rd6137",
-      "Dwchiang",
-      "BenoitL"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-24T00:07:20.983Z",
-    "contributors": [
-      "Goofy",
-      "Bringdal",
-      "tregagnon",
-      "xaky"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2020-04-07T04:00:20.055Z",
     "contributors": [
@@ -45227,6 +45202,31 @@
     "modified": "2019-03-18T21:41:00.371Z",
     "contributors": [
       "loella16"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-11-06T04:21:55.272Z",
+    "contributors": [
+      "Awebsome",
+      "teoli",
+      "tregagnon",
+      "leoetlino",
+      "Flaburgan",
+      "DavidWalsh",
+      "vigia122",
+      "MatthieuMaler",
+      "rd6137",
+      "Dwchiang",
+      "BenoitL"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-24T00:07:20.983Z",
+    "contributors": [
+      "Goofy",
+      "Bringdal",
+      "tregagnon",
+      "xaky"
     ]
   },
   "orphaned/Web/HTML/Element/isindex": {

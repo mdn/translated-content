@@ -8166,17 +8166,6 @@
       "lxdiamond"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-03-23T23:33:45.828Z",
-    "contributors": [
-      "suriyaa",
-      "teoli",
-      "timausk",
-      "thorsten.rinne",
-      "matze",
-      "nothine"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2019-03-18T20:37:20.242Z",
     "contributors": [
@@ -14786,6 +14775,17 @@
     "modified": "2019-03-18T20:36:47.550Z",
     "contributors": [
       "td8"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-03-23T23:33:45.828Z",
+    "contributors": [
+      "suriyaa",
+      "teoli",
+      "timausk",
+      "thorsten.rinne",
+      "matze",
+      "nothine"
     ]
   },
   "orphaned/Web/HTML/Global_attributes/dropzone": {

@@ -14312,60 +14312,6 @@
       "V.Morantes"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2020-05-16T09:08:08.720Z",
-    "contributors": [
-      "jonasdamher",
-      "SphinxKnight",
-      "anibalymariacantantes60",
-      "AzulMartin",
-      "264531666",
-      "fracp",
-      "damianed",
-      "alfredotemiquel",
-      "rossettistone",
-      "carlossuarez",
-      "teoli",
-      "JosueMolina",
-      "Pablo_Ivan",
-      "welm",
-      "bicentenario",
-      "jesusruiz",
-      "pierre_alfonso",
-      "pitufo_cabron",
-      "cesar_ortiz_elPatox",
-      "inma_610",
-      "vigia122",
-      "StripTM",
-      "deimidis",
-      "Izel"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Constraint_validation": {
-    "modified": "2020-08-11T08:06:04.309Z",
-    "contributors": [
-      "gerardo750711",
-      "israel-munoz"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/HTML5_Parser": {
-    "modified": "2019-03-24T00:07:09.448Z",
-    "contributors": [
-      "teoli",
-      "RickieesES",
-      "inma_610",
-      "StripTM",
-      "juanb",
-      "Izel"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-24T00:05:36.058Z",
-    "contributors": [
-      "teoli",
-      "inma_610"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2019-03-23T23:38:22.567Z",
     "contributors": [
@@ -23600,6 +23546,60 @@
     "contributors": [
       "Sheppy",
       "rubencidlara"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2020-05-16T09:08:08.720Z",
+    "contributors": [
+      "jonasdamher",
+      "SphinxKnight",
+      "anibalymariacantantes60",
+      "AzulMartin",
+      "264531666",
+      "fracp",
+      "damianed",
+      "alfredotemiquel",
+      "rossettistone",
+      "carlossuarez",
+      "teoli",
+      "JosueMolina",
+      "Pablo_Ivan",
+      "welm",
+      "bicentenario",
+      "jesusruiz",
+      "pierre_alfonso",
+      "pitufo_cabron",
+      "cesar_ortiz_elPatox",
+      "inma_610",
+      "vigia122",
+      "StripTM",
+      "deimidis",
+      "Izel"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Constraint_validation": {
+    "modified": "2020-08-11T08:06:04.309Z",
+    "contributors": [
+      "gerardo750711",
+      "israel-munoz"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/HTML5_Parser": {
+    "modified": "2019-03-24T00:07:09.448Z",
+    "contributors": [
+      "teoli",
+      "RickieesES",
+      "inma_610",
+      "StripTM",
+      "juanb",
+      "Izel"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-24T00:05:36.058Z",
+    "contributors": [
+      "teoli",
+      "inma_610"
     ]
   },
   "orphaned/Web/Guide/HTML/Introduction_alhtml_clone": {

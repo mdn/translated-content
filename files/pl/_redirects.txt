@@ -1444,7 +1444,7 @@
 /pl/docs/HTML/Elementy/strong	/pl/docs/Web/HTML/Element/strong
 /pl/docs/HTML/Elementy_blokowe	/pl/docs/Web/HTML/Block-level_elements
 /pl/docs/HTML/Elementy_liniowe	/pl/docs/Web/HTML/Inline_elements
-/pl/docs/HTML/HTML5	/pl/docs/Web/Guide/HTML/HTML5
+/pl/docs/HTML/HTML5	/pl/docs/orphaned/Web/Guide/HTML/HTML5
 /pl/docs/HTML/Kontrola_sprawdzania_pisowni_w_formularzach_HTML	/pl/docs/conflicting/Web/HTML/Global_attributes/spellcheck
 /pl/docs/HTML/The_Importance_of_Correct_Commenting	/pl/docs/conflicting/Learn/HTML/Introduction_to_HTML/Getting_started
 /pl/docs/HTML/Znaczenie_poprawnego_komentowania	/pl/docs/conflicting/Learn/HTML/Introduction_to_HTML/Getting_started
@@ -2108,6 +2108,7 @@
 /pl/docs/Web/Guide/CSS/Sprawdzanie_media_queries	/pl/docs/Web/CSS/Media_Queries/Testing_media_queries
 /pl/docs/Web/Guide/Events/Creating_and_triggering_events	/pl/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /pl/docs/Web/Guide/HTML	/pl/docs/Learn/HTML
+/pl/docs/Web/Guide/HTML/HTML5	/pl/docs/orphaned/Web/Guide/HTML/HTML5
 /pl/docs/Web/Guide/HTML/Wprowadzenie	/pl/docs/Learn/HTML/Introduction_to_HTML
 /pl/docs/Web/Guide/Liczniki_CSS	/pl/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 /pl/docs/Web/HTML(PL)	/pl/docs/conflicting/Web/HTML

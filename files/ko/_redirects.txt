@@ -317,9 +317,9 @@
 /ko/docs/HTML/Element/Video	/ko/docs/Web/HTML/Element/Video
 /ko/docs/HTML/Element/a	/ko/docs/Web/HTML/Element/a
 /ko/docs/HTML/Focus_management_in_HTML	/ko/docs/Web/API/Document/hasFocus
-/ko/docs/HTML/HTML5	/ko/docs/Web/Guide/HTML/HTML5
+/ko/docs/HTML/HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5
 /ko/docs/HTML/HTML5/HTML5_element_list	/ko/docs/Web/HTML/Element
-/ko/docs/HTML/HTML5/Introduction_to_HTML5	/ko/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/ko/docs/HTML/HTML5/Introduction_to_HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ko/docs/HTML/HTML에서_폼	/ko/docs/Learn/Forms
 /ko/docs/HTML/Inline_elements	/ko/docs/Web/HTML/Inline_elements
 /ko/docs/HTML/Introduction	/ko/docs/Learn/HTML/Introduction_to_HTML
@@ -780,6 +780,8 @@
 /ko/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/ko/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
 /ko/docs/Web/Guide/HTML	/ko/docs/Learn/HTML
 /ko/docs/Web/Guide/HTML/Content_Editable	/ko/docs/Web/Guide/HTML/Editable_content
+/ko/docs/Web/Guide/HTML/HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5
+/ko/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ko/docs/Web/Guide/HTML/컨텐트_카테고리	/ko/docs/Web/Guide/HTML/Content_categories
 /ko/docs/Web/Guide/HTML/폼	/ko/docs/Learn/Forms
 /ko/docs/Web/Guide/HTML/폼/HTML_폼_구성_방법	/ko/docs/Learn/Forms/How_to_structure_a_web_form
@@ -816,9 +818,9 @@
 /ko/docs/Web/HTML/Focus_management_in_HTML	/ko/docs/Web/API/Document/hasFocus
 /ko/docs/Web/HTML/Global_attributes/dropzone	/ko/docs/orphaned/Web/HTML/Global_attributes/dropzone
 /ko/docs/Web/HTML/Global_attributes/클래스	/ko/docs/Web/HTML/Global_attributes/class
-/ko/docs/Web/HTML/HTML5	/ko/docs/Web/Guide/HTML/HTML5
+/ko/docs/Web/HTML/HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5
 /ko/docs/Web/HTML/HTML5/HTML5_element_list	/ko/docs/Web/HTML/Element
-/ko/docs/Web/HTML/HTML5/Introduction_to_HTML5	/ko/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/ko/docs/Web/HTML/HTML5/Introduction_to_HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽	/ko/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn/Forms
 /ko/docs/Web/HTML/Introduction	/ko/docs/Learn/HTML/Introduction_to_HTML
