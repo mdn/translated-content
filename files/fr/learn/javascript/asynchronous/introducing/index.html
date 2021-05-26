@@ -64,7 +64,7 @@ btn.addEventListener('click', () =&gt; {
   </li>
 </ol>
 
-<p>Pendant que chaque opération est en cours de traitement, rien d'autre ne peut se produire - le rendu est mis en pause. Cela est dû au fait que, comme nous l'avons dit dans l'<a href="/fr/docs/Learn/JavaScript/Asynchronous/Introducing">article précédent</a>, <a href="/fr/docs/Learn/JavaScript/Asynchronous/Concepts#javascript_is_single_threaded">JavaScript est à processus unique</a>. Une seule chose peut se produire à la fois, sur le processus principal, et tout le reste est bloqué jusqu'à la fin d'une opération.</p>
+<p>Pendant que chaque opération est en cours de traitement, rien d'autre ne peut se produire - le rendu est mis en pause. Cela est dû au fait que, comme nous l'avons dit dans l'<a href="/fr/docs/Learn/JavaScript/Asynchronous/Concepts">article précédent</a>, <a href="/fr/docs/Learn/JavaScript/Asynchronous/Concepts#javascript_is_single_threaded">JavaScript est ne dispose que d'un seul <i>thread</i></a>. Une seule chose peut se produire à la fois, sur le <i>thread</i> principal, et tout le reste est bloqué jusqu'à la fin d'une opération.</p>
 
 <p>Ainsi, dans l'exemple ci-dessus, après avoir cliqué sur le bouton, le paragraphe n'apparaîtra qu'après avoir appuyé sur le bouton OK dans la boîte d'alerte. Vous pouvez l'essayer vous-même :</p>
 
@@ -72,7 +72,7 @@ btn.addEventListener('click', () =&gt; {
   <pre class="brush: html">&lt;<span class="pl-ent">button</span>&gt;Cliquez sur moi&lt;/<span class="pl-ent">button</span>&gt;</pre>
 </div>
 
-<p>{{EmbedLiveSample('Synchronous_JavaScript', '100%', '100px')}}</p>
+<p>{{EmbedLiveSample('synchronous_javascript', '100%', '110px')}}</p>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
@@ -81,21 +81,21 @@ btn.addEventListener('click', () =&gt; {
 
 <h2 id="asynchronous_javascript">JavaScript asynchrone</h2>
 
-<p>Pour des raisons illustrées précédemment (par exemple, en rapport avec le blocage), de nombreuses fonctionnalités de l'API Web utilisent désormais du code asynchrone pour s'exécuter, en particulier celles qui accèdent à un type de ressource ou le récupèrent à partir d'un périphérique externe, par exemple en récupérant un fichier sur le réseau, en accédant à une base de données et en renvoyant des données, en accédant à un flux vidéo à partir d'une webcam ou en diffusant l'affichage vers un casque VR.</p>
+<p>Pour des raisons illustrées précédemment (par exemple, en rapport avec le blocage), de nombreuses fonctionnalités des API Web utilisent désormais du code asynchrone pour s'exécuter, en particulier celles qui accèdent à un type de ressource ou le récupèrent à partir d'un périphérique externe, par exemple en récupérant un fichier sur le réseau, en accédant à une base de données et en renvoyant des données, en accédant à un flux vidéo à partir d'une webcam ou en diffusant l'affichage vers un casque VR.</p>
 
 <p>Pourquoi est-il difficile de faire fonctionner un code synchrone ? Prenons un exemple rapide. Lorsque vous récupérez une image sur un serveur, vous ne pouvez pas renvoyer le résultat immédiatement. Cela signifie que l'exemple suivant (pseudocode) ne fonctionnerait pas :</p>
 
 <pre class="brush: js">let response = fetch('myImage.png'); // la récupération est asynchrone
 let blob = response.blob();
-// afficher votre blob d'image dans l'IU d'une manière ou d'une autre</pre>
+// afficher votre blob d'image à l'écran d'une manière ou d'une autre</pre>
 
 <p>C'est parce que vous ne savez pas combien de temps l'image prendra pour être téléchargée, donc lorsque vous viendrez à exécuter la deuxième ligne, elle lancera une erreur (éventuellement par intermittence, éventuellement à chaque fois) parce que la réponse <code>response</code> n'est pas encore disponible. Au lieu de cela, vous avez besoin que votre code attende que la réponse <code>response</code> soit retournée avant d'essayer de lui faire quoi que ce soit d'autre.</p>
 
 <p>Il existe deux principaux types de code asynchrone que vous rencontrerez dans le code JavaScript : les anciens rappels et le code plus récent de type promesse. Dans les sections suivantes, nous allons examiner chacun d'eux à tour de rôle.</p>
 
-<h2 id="async_callbacks">Rappels asynchrones</h2>
+<h2 id="async_callbacks">Fonctions de rappel asynchrones</h2>
 
-<p>Les rappels asynchrones sont des fonctions qui sont spécifiées comme arguments lors de l'appel d'une fonction qui commencera à exécuter du code en arrière-plan. Lorsque le code d'arrière-plan a fini de s'exécuter, il appelle la fonction de rappel pour vous faire savoir que le travail est terminé, ou pour vous faire savoir que quelque chose d'intéressant s'est produit. L'utilisation des callbacks est un peu démodée aujourd'hui, mais vous les verrez encore dans un certain nombre d'API plus anciennes, mais encore couramment utilisées.</p>
+<p>Les <i>callbacks</i> asynchrones ou fonctions de rappels asynchrones sont des fonctions qui sont passées comme arguments lors de l'appel d'une fonction qui commencera à exécuter du code en arrière-plan. Lorsque le code d'arrière-plan a fini de s'exécuter, il appelle la fonction de rappel pour vous faire savoir que le travail est terminé, ou pour vous faire savoir que quelque chose d'intéressant s'est produit. L'utilisation des <i>callbacks</i> est un peu démodée aujourd'hui, mais vous les verrez encore dans un certain nombre d'API plus anciennes encore couramment utilisées.</p>
 
 <p>Un exemple de rappel asynchrone est le deuxième paramètre de la méthode <a href="/fr/docs/Web/API/EventTarget/addEventListener"><code>addEventListener()</code></a> (comme nous pouvons le voir en action ci-dessous) :</p>
 
@@ -111,7 +111,7 @@ let blob = response.blob();
 
 <p>Lorsque nous passons une fonction de rappel comme argument à une autre fonction, nous ne passons que la référence de la fonction comme argument, c'est-à-dire que la fonction de rappel n'est <strong>pas</strong> exécutée immédiatement. Elle est « rappelée » (d'où son nom) de manière asynchrone quelque part dans le corps de la fonction contenante. La fonction contenante est responsable de l'exécution de la fonction de rappel le moment venu.</p>
 
-<p>Vous pouvez écrire votre propre fonction contenant un callback assez facilement. Examinons un autre exemple qui charge une ressource via l'API <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">exécutez-le code en direct</a>, et <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">voir sa source</a>) :</p>
+<p>Vous pouvez écrire votre propre fonction contenant un <i>callback</i> assez facilement. Examinons un autre exemple qui charge une ressource via l'API <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">exécutez-le code en direct</a>, et <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">voir sa source</a>) :</p>
 
 <pre class="brush: js">function loadAsset(url, type, callback) {
   let xhr = new XMLHttpRequest();
@@ -135,11 +135,11 @@ function displayImage(blob) {
 
 loadAsset('coffee.jpg', 'blob', displayImage);</pre>
 
-<p>Ici, nous créons une fonction <code>displayImage()</code> qui représente un blob qui lui est passé sous forme d'URL d'objet, puis crée une image dans laquelle afficher l'URL, en l'annexant au <code>&lt;body&gt;</code> du document. Cependant, nous créons ensuite une fonction <code>loadAsset()</code> qui prend un rappel en paramètre, ainsi qu'une URL à récupérer et un type de contenu. Elle utilise <code>XMLHttpRequest</code> (souvent abrégé en "XHR") pour récupérer la ressource à l'URL donnée, puis passe la réponse à la callback pour qu'elle fasse quelque chose avec. Dans ce cas, le callback attend que l'appel XHR termine le téléchargement de la ressource (en utilisant l'écouteur d'événement <code><a href="/fr/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code>) avant de la transmettre au rappel.</p>
+<p>Ici, nous créons une fonction <code>displayImage()</code> qui représente un blob qui lui est passé sous forme d'URL d'objet, puis crée une image dans laquelle afficher l'URL, en l'annexant au <code>&lt;body&gt;</code> du document. Cependant, nous créons ensuite une fonction <code>loadAsset()</code> qui prend une fonction de rappel en paramètre, ainsi qu'une URL à récupérer et un type de contenu. Elle utilise <code>XMLHttpRequest</code> (souvent abrégé en "XHR") pour récupérer la ressource à l'URL donnée, puis passe la réponse à la fonction de rappel pour qu'elle fasse quelque chose avec. Dans ce cas, le callback attend que l'appel XHR termine le téléchargement de la ressource (en utilisant l'écouteur d'événement <code><a href="/fr/docs/Web/API/XMLHttpRequestEventTarget/onload">onload</a></code>) avant de la transmettre au <i>callback</i>.</p>
 
-<p>Les rappels sont polyvalents - non seulement ils vous permettent de contrôler l'ordre dans lequel les fonctions sont exécutées et quelles données sont transmises entre elles, mais ils vous permettent également de transmettre des données à différentes fonctions en fonction des circonstances. Ainsi, vous pourriez avoir différentes actions à exécuter sur la réponse téléchargée, comme <code>processingJSON()</code>, <code>displayText()</code>, etc.</p>
+<p>Les fonctions de rappel sont polyvalentes - non seulement elles permettent de contrôler l'ordre dans lequel les fonctions sont exécutées et quelles données sont transmises entre elles, mais elles permettent également de transmettre des données à différentes fonctions en fonction des circonstances. Ainsi, vous pourriez avoir différentes actions à exécuter sur la réponse téléchargée, comme <code>processingJSON()</code>, <code>displayText()</code>, etc.</p>
 
-<p>Notez que tous les callbacks ne sont pas asynchrones - certains s'exécutent de manière synchrone. Par exemple, lorsque nous utilisons <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"><code>Array.prototype.forEach()</code></a> pour parcourir en boucle les éléments d'un tableau (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/foreach.html">voir en direct</a>, et <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/foreach.html">la source</a>) :</p>
+<p>Notez que tous les <i>callbacks</i> ne sont pas asynchrones - certains s'exécutent de manière synchrone. Par exemple, lorsque nous utilisons <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"><code>Array.prototype.forEach()</code></a> pour parcourir en boucle les éléments d'un tableau (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/foreach.html">voir en direct</a>, et <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/foreach.html">la source</a>) :</p>
 
 <pre class="brush: js">const gods = ['Apollon', 'Artémis', 'Arès', 'Zeus'];
 
@@ -156,8 +156,8 @@ gods.forEach(function (eachName, index){
 <pre class="brush: js">fetch('products.json').then(function(response) {
   return response.json();
 }).then(function(json) {
-  products = json;
-  initialize();
+  let products = json;
+  initialize(products);
 }).catch(function(err) {
   console.log('Problème de récupération : ' + err.message);
 });</pre>
@@ -172,7 +172,7 @@ gods.forEach(function (eachName, index){
 <p>Il faut parfois s'habituer à ce concept, qui ressemble un peu au <a href="https://fr.wikipedia.org/wiki/Chat_de_Schrödinger">Chat de Schrödinger</a> en action. Aucun des résultats possibles ne s'est encore produit, donc l'opération de récupération est actuellement en attente du résultat du navigateur qui tente de terminer l'opération à un moment donné dans le futur. Nous avons ensuite trois autres blocs de code enchaînés à la fin de <code>fetch()</code> :</p>
 
 <ul>
-  <li>Deux blocs <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code>. Ils contiennent tous deux une fonction de rappel qui s'exécutera si l'opération précédente est réussie, et chaque rappel reçoit en entrée le résultat de l'opération précédente réussie, afin que vous puissiez poursuivre et y faire autre chose. Chaque bloc <code>.then()</code> renvoie une autre promesse, ce qui signifie que vous pouvez enchaîner plusieurs blocs <code>.then()</code> les uns sur les autres, de sorte que plusieurs opérations asynchrones peuvent être exécutées dans l'ordre, les unes après les autres.</li>
+  <li>Deux blocs <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code>. Ils contiennent tous deux une fonction de rappel qui s'exécutera si l'opération précédente est réussie, et chaque fonction de rappel reçoit en entrée le résultat de l'opération précédente réussie, afin que vous puissiez poursuivre et y faire autre chose. Chaque bloc <code>.then()</code> renvoie une autre promesse, ce qui signifie que vous pouvez enchaîner plusieurs blocs <code>.then()</code> les uns sur les autres, de sorte que plusieurs opérations asynchrones peuvent être exécutées dans l'ordre, les unes après les autres.</li>
   <li>Le bloc <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch">catch()</a></code> à la fin s'exécute si l'un des blocs <code>.then()</code> échoue - de manière similaire aux blocs synchrones <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/try...catch" >try...catch</a></code>, un objet d'erreur est mis à disposition à l'intérieur du <code>catch()</code>, qui peut être utilisé pour signaler le type d'erreur qui s'est produit. Notez cependant que le <code>try...catch</code> synchrone ne fonctionnera pas avec les promesses, bien qu'il fonctionne avec <a href="/fr/docs/Learn/JavaScript/Asynchronous/Async_await">async/await</a>, comme vous l'apprendrez plus tard.</li>
 </ul>
 
@@ -185,15 +185,15 @@ gods.forEach(function (eachName, index){
 
 <p>Les opérations asynchrones comme les promesses sont placées dans une <strong>file d'attente d'événements</strong>, qui s'exécute après que le processus principal a terminé son traitement afin qu'elles <em>ne bloquent pas</em> l'exécution du code JavaScript suivant. Les opérations mises en file d'attente se terminent dès que possible puis renvoient leurs résultats à l'environnement JavaScript.</p>
 
-<h3 id="promises_versus_callbacks">Promesses contre rappels (callbacks)</h3>
+<h3 id="promises_versus_callbacks">Promesses contre callbacks</h3>
 
-<p>Les promesses présentent certaines similitudes avec les anciens rappels. Il s'agit essentiellement d'un objet retourné auquel vous attachez des fonctions de rappel, plutôt que de devoir passer des rappels dans une fonction.</p>
+<p>Les promesses présentent certaines similitudes avec les anciennes fonctions de rappel. Il s'agit essentiellement d'un objet retourné auquel vous attachez des fonctions de rappel, plutôt que de devoir passer des <i>callbacks</i> dans une fonction.</p>
 
-<p>Cependant, les promesses sont spécifiquement conçues pour gérer les opérations asynchrones et présentent de nombreux avantages par rapport aux rappels classiques :</p>
+<p>Cependant, les promesses sont spécifiquement conçues pour gérer les opérations asynchrones et présentent de nombreux avantages par rapport aux fonctions de rappel classiques :</p>
 
 <ul>
-  <li>Vous pouvez enchaîner plusieurs opérations asynchrones en utilisant plusieurs opérations <code>.then()</code>, en passant le résultat de l'une dans la suivante comme entrée. Ceci est beaucoup plus difficile à faire avec les rappels, ce qui aboutit souvent à une « pyramide de malheur » désordonnée (également connue sous le nom de <a href="http://callbackhell.com/">callback hell</a>).</li>
-  <li>Les rappels de promesse sont toujours appelés dans l'ordre strict où ils sont placés dans la file d'attente des événements.</li>
+  <li>Vous pouvez enchaîner plusieurs opérations asynchrones en utilisant plusieurs opérations <code>.then()</code>, en passant le résultat de l'une dans la suivante comme entrée. Ceci est beaucoup plus difficile à faire avec les fonctions de rappel, ce qui aboutit souvent à une « pyramide de malheur » désordonnée (également connue sous le nom de <a href="http://callbackhell.com/">callback hell</a>).</li>
+  <li>Les fonctions de rappel passées aux promesses sont toujours appelées dans l'ordre strict où ils sont placés dans la file d'attente des événements.</li>
   <li>La gestion des erreurs est bien meilleure - toutes les erreurs sont traitées par un seul bloc <code>.catch()</code> à la fin du bloc, plutôt que d'être traitées individuellement à chaque niveau de la « pyramide ».</li>
   <li>Les promesses évitent l'inversion de contrôle, contrairement aux callbacks à l'ancienne, qui perdent le contrôle total de la façon dont la fonction sera exécutée lorsqu'ils sont transmis à une bibliothèque tierce.</li>
 </ul>
@@ -271,11 +271,11 @@ console.log(`Tout est bon !`);</pre>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>Dans sa forme la plus élémentaire, JavaScript est un langage synchrone, bloquant et à un seul processus, dans lequel une seule opération peut être en cours à la fois. Mais les navigateurs Web définissent des fonctions et des API qui nous permettent d'enregistrer des fonctions qui ne doivent pas être exécutées de manière synchrone, mais qui doivent être invoquées de manière asynchrone lorsqu'un événement quelconque se produit (le passage du temps, l'interaction de l'utilisateur avec la souris ou l'arrivée de données sur le réseau, par exemple). Cela signifie que vous pouvez laisser votre code faire plusieurs choses en même temps sans arrêter ou bloquer votre processus principal.</p>
+<p>Dans sa forme la plus élémentaire, JavaScript est un langage synchrone, bloquant et à un seul processus, dans lequel une seule opération peut être en cours à la fois. Mais les navigateurs web définissent des fonctions et des API qui nous permettent d'enregistrer des fonctions qui ne doivent pas être exécutées de manière synchrone, mais qui doivent être invoquées de manière asynchrone lorsqu'un événement quelconque se produit (le passage du temps, l'interaction de l'utilisateur avec la souris ou l'arrivée de données sur le réseau, par exemple). Cela signifie que vous pouvez laisser votre code faire plusieurs choses en même temps sans arrêter ou bloquer votre processus principal.</p>
 
 <p>Le fait de vouloir exécuter du code de manière synchrone ou asynchrone dépend de ce que l'on essaie de faire.</p>
 
-<p>Il y a des moments où nous voulons que les choses se chargent et se produisent immédiatement. Par exemple, lorsque vous appliquez des styles définis par l'utilisateur à une page Web, vous voulez que les styles soient appliqués dès que possible.</p>
+<p>Il y a des moments où nous voulons que les choses se chargent et se produisent immédiatement. Par exemple, lorsque vous appliquez des styles définis par l'utilisateur à une page web, vous voulez que les styles soient appliqués dès que possible.</p>
 
 <p>Cependant, si nous exécutons une opération qui prend du temps, comme l'interrogation d'une base de données et l'utilisation des résultats pour remplir des modèles, il est préférable d'écarter cette opération du thread principal et de réaliser la tâche de manière asynchrone. Avec le temps, vous apprendrez quand il est plus judicieux de choisir une technique asynchrone plutôt qu'une technique synchrone.</p>
 
