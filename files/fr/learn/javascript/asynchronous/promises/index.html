@@ -1,5 +1,5 @@
 ---
-title: Gérer les opérations asynchrones avec élégance grâce aux Promesses
+title: Gérer les opérations asynchrones avec élégance grâce aux promesses
 slug: Learn/JavaScript/Asynchronous/Promises
 tags:
   - Beginner
@@ -36,7 +36,7 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
 
 <h2 id="what_are_promises">Que sont les promesses ?</h2>
 
-<p>Nous avons examiné les <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesses</a> brièvement dans le premier article du cours, mais ici nous allons les examiner de manière beaucoup plus approfondie.</p>
+<p>Nous avons examiné les <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">promesses (<code>Promise</code>)</a> brièvement dans le premier article du cours, mais ici nous allons les examiner de manière beaucoup plus approfondie.</p>
 
 <p>Essentiellement, une promesse est un objet qui représente un état intermédiaire d'une opération - en fait, c'est une <em>promesse</em> qu'un résultat d'une certaine nature sera retourné à un moment donné dans le futur. Il n'y a aucune garantie du moment exact où l'opération se terminera et où le résultat sera renvoyé, mais il <em>est</em> une garantie que lorsque le résultat est disponible, ou que la promesse échoue, le code que vous fournissez sera exécuté afin de faire autre chose avec un résultat réussi, ou de gérer gracieusement un cas d'échec.</p>
 
@@ -63,7 +63,7 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
 }
 </pre>
 
-<p>Cette fonction commence par utiliser une fonction appelée <code>setStatusMessage()</code> pour mettre à jour un affichage d'état avec le message "Appel...", indiquant qu'un appel est tenté.Il appelle ensuite <code>getUserMedia()</code>, demandant un flux qui a à la fois des pistes vidéo et audio, puis une fois que cela a été obtenu, configure un élément vidéo pour montrer le flux provenant de la caméra comme une "vue de soi", puis prend chacune des pistes du flux et les ajoute à la <a href="/fr/docs/Web/API/WebRTC_API">WebRTC</a> <a href="/fr/docs/Web/API/RTCPeerConnection"><code>RTCPeerConnection</code></a> représentant une connexion à un autre utilisateur.  Après cela, l'affichage de l'état est mis à jour pour indiquer "Connecté".</p>
+<p>Cette fonction commence par utiliser une fonction appelée <code>setStatusMessage()</code> pour mettre à jour un affichage d'état avec le message "Appel...", indiquant qu'un appel est tenté.Il appelle ensuite <code>getUserMedia()</code>, demandant un flux qui a à la fois des pistes vidéo et audio, puis une fois que cela a été obtenu, configure un élément vidéo pour montrer le flux provenant de la caméra comme une "vue de soi", puis prend chacune des pistes du flux et les ajoute à la <a href="/fr/docs/Web/API/RTCPeerConnection"><code>RTCPeerConnection</code></a> <a href="/fr/docs/Web/API/WebRTC_API">WebRTC</a> représentant une connexion à un autre utilisateur.  Après cela, l'affichage de l'état est mis à jour pour indiquer "Connecté".</p>
 
 <p>Si <code>getUserMedia()</code> échoue, le bloc <code>catch</code> s'exécute. Celui-ci utilise <code>setStatusMessage()</code> pour mettre à jour la case d'état afin d'indiquer qu'une erreur s'est produite.</p>
 
@@ -74,9 +74,9 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
   <p>Vous pouvez en apprendre davantage sur ce sujet quelque peu avancé, si cela vous intéresse, dans l'article <a href="/fr/docs/Web/API/WebRTC_API/Signaling_and_video_calling">L'essentiel du WebRTC</a>. Un code similaire à celui-ci, mais beaucoup plus complet, est utilisé dans cet exemple.</p>
 </div>
 
-<h2 id="the_trouble_with_callbacks">Le problème des rappels</h2>
+<h2 id="the_trouble_with_callbacks">Le problème des fonctions de rappel</h2>
 
-<p>Pour bien comprendre pourquoi les promesses sont une bonne chose, il est utile de repenser aux anciens rappels et de comprendre pourquoi ils sont problématiques.</p>
+<p>Pour bien comprendre pourquoi les promesses sont une bonne chose, il est utile de repenser aux anciennes fonctions de rappel (<i>callback</i>) et de comprendre pourquoi elles sont problématiques.</p>
 
 <p>Prenons l'exemple de la commande d'une pizza. Il y a certaines étapes que vous devez franchir pour que votre commande soit réussie, et cela n'a pas vraiment de sens d'essayer de les exécuter dans le désordre, ou dans l'ordre mais avant que chaque étape précédente ne soit tout à fait terminée :</p>
 
@@ -96,7 +96,7 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
   }, failureCallback);
 }, failureCallback);</pre>
 
-<p>Cela est désordonné et difficile à lire (souvent appelé « <a href="http://callbackhell.com/">callback hell</a> »), nécessite que le <code>failureCallback()</code> soit appelé plusieurs fois (une fois pour chaque fonction imbriquée), avec d'autres problèmes en plus.</p>
+<p>Cela est désordonné et difficile à lire (souvent appelé « <a href="http://callbackhell.com/"><i>callback hell</i></a> »), nécessite que le <code>failureCallback()</code> soit appelé plusieurs fois (une fois pour chaque fonction imbriquée), avec d'autres problèmes en plus.</p>
 
 <h3 id="improvements_with_promises">Améliorations avec des promesses</h3>
 
@@ -155,18 +155,18 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
 
 <ul>
   <li>Une promesse ne peut réussir ou échouer qu'une seule fois. Elle ne peut pas réussir ou échouer deux fois et elle ne peut pas passer du succès à l'échec ou vice versa une fois l'opération terminée.</li>
-  <li>Si une promesse a réussi ou échoué et que vous ajoutez plus tard un rappel de réussite/échec, le bon rappel sera appelé, même si l'événement a eu lieu plus tôt.</li>
+  <li>Si une promesse a réussi ou échoué et que vous ajoutez plus tard une de rappel de réussite/échec, la bonne fonction de rappel sera appelée, même si l'événement a eu lieu plus tôt.</li>
 </ul>
 
-<h2 id="explaining_basic_promise_syntax_a_real_example">Explication de la syntaxe de base des promesses : Exemple concret</h2>
+<h2 id="explaining_basic_promise_syntax_a_real_example">Explication de la syntaxe de base des promesses : exemple concret</h2>
 
-<p>Il est important de comprendre les promesses car la plupart des API Web modernes les utilisent pour les fonctions qui exécutent des tâches potentiellement longues. Pour utiliser les technologies Web modernes, vous devrez utiliser des promesses. Plus loin dans ce chapitre, nous verrons comment écrire votre propre promesse, mais pour l'instant, nous allons nous pencher sur quelques exemples simples que vous rencontrerez dans les API Web.</p>
+<p>Il est important de comprendre les promesses, car la plupart des API Web modernes les utilisent pour les fonctions qui exécutent des tâches potentiellement longues. Pour utiliser les technologies Web modernes, vous devrez utiliser des promesses. Plus loin dans ce chapitre, nous verrons comment écrire votre propre promesse, mais pour l'instant, nous allons nous pencher sur quelques exemples simples que vous rencontrerez dans les API Web.</p>
 
 <p>Dans le premier exemple, nous allons utiliser la méthode <a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch"><code>fetch()</code></a> pour récupérer une image sur le web, la méthode <a href="/fr/docs/Web/API/Body/blob"><code>blob()</code></a> pour transformer le contenu brut du corps de la réponse fetch en un objet <a href="/fr/docs/Web/API/Blob"><code>Blob</code></a>, puis afficher ce blob à l'intérieur d'un élément <a href="/fr/docs/Web/HTML/Element/Img"><code>&lt;img&gt;</code></a>. Cet exemple est très similaire à celui que nous avons examiné dans le <a href="/fr/docs/Learn/JavaScript/Asynchronous/Introducing#asynchronous_javascript">premier article</a>, mais nous le ferons un peu différemment au fur et à mesure que nous vous ferons construire votre propre code basé sur des promesses.</p>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
-  <p>L'exemple suivant ne fonctionnera pas si vous l'exécutez directement à partir du fichier (c'est-à-dire via une URL <code>file://</code>). Vous devez l'exécuter via un <a href="/fr/docs/Learn/Common_questions/set_up_a_local_testing_server">serveur de test local</a>, ou utiliser une solution en ligne telle que <a href="https://glitch.com/">Glitch</a> ou <a href="/fr/docs/Learn/Common_questions/Using_Github_pages">GitHub pages</a>.</p>
+  <p>L'exemple suivant ne fonctionnera pas si vous l'exécutez directement à partir du fichier (c'est-à-dire via une URL <code>file://</code>). Vous devez l'exécuter via un <a href="/fr/docs/Learn/Common_questions/set_up_a_local_testing_server">serveur de test local</a>, ou utiliser une solution en ligne telle que <a href="https://glitch.com/">Glitch</a> ou <a href="/fr/docs/Learn/Common_questions/Using_Github_pages">les pages GitHub</a>.</p>
 </div>
 
 <ol>
@@ -179,10 +179,10 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
   <li>
     <p>À l'intérieur de votre élément <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a>, ajoutez la ligne suivante :</p>
     <pre class="brush: js">let promise = fetch('coffee.jpg');</pre>
-    <p>Cela appelle la méthode <code>fetch()</code>, en lui passant en paramètre l'URL de l'image à récupérer sur le réseau. Cette méthode peut également prendre un objet d'options comme second paramètre facultatif, mais nous n'utilisons que la version la plus simple pour le moment. Nous stockons l'objet promesse retourné par <code>fetch()</code> à l'intérieur d'une variable appelée <code>promise</code>. Comme nous l'avons dit précédemment, cet objet représente un état intermédiaire qui n'est initialement ni un succès ni un échec - le terme officiel pour une promesse dans cet état est <strong>pending</strong> « en attente ».</p>
+    <p>Cela appelle la méthode <code>fetch()</code>, en lui passant en paramètre l'URL de l'image à récupérer sur le réseau. Cette méthode peut également prendre un objet d'options comme second paramètre facultatif, mais nous n'utilisons que la version la plus simple pour le moment. Nous stockons l'objet promesse retourné par <code>fetch()</code> à l'intérieur d'une variable appelée <code>promise</code>. Comme nous l'avons dit précédemment, cet objet représente un état intermédiaire qui n'est initialement ni un succès ni un échec - le terme officiel pour une promesse dans cet état est <strong>en attente</strong> (<i>pending</i> en anglais).</p>
   </li>
   <li>
-    <p>Pour répondre à l'achèvement réussi de l'opération lorsque cela se produit (dans ce cas, lorsqu'une <a href="/fr/docs/Web/API/Response"><code>Response</code></a> « Réponse » est retournée), nous invoquons la méthode <a href="/fr/docs/Web/JavaScript/Référence/Global_Objects/Promise/then"><code>.then()</code></a> de l'objet promesse. Le rappel à l'intérieur du bloc <code>.then()</code> s'exécute uniquement lorsque l'appel de la promesse se termine avec succès et retourne l'objet <a href="/fr/docs/Web/API/Response"><code>Response</code></a> — en langage de promesse, lorsqu'elle a été <strong>fulfilled</strong> « remplie ». On lui passe l'objet <a href="/fr/docs/Web/API/Response"><code>Response</code></a> retourné en tant que paramètre.</p>
+    <p>Pour répondre à l'achèvement réussi de l'opération lorsque cela se produit (dans ce cas, lorsqu'une <a href="/fr/docs/Web/API/Response">réponse</a> est retournée), nous invoquons la méthode <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/then"><code>.then()</code></a> de l'objet promesse. La fonction de rappel à l'intérieur du bloc <code>.then()</code> s'exécute uniquement lorsque l'appel de la promesse se termine avec succès et retourne l'objet <a href="/fr/docs/Web/API/Response"><code>Response</code></a> — en langage de promesse, lorsqu'elle a été <strong>remplie</strong> (<i>fullfilled</i> en anglais). On lui passe l'objet <a href="/fr/docs/Web/API/Response"><code>Response</code></a> retourné en tant que paramètre.</p>
     <div class="notecard note">
       <p><b>Note :</b></p>
       <p>Le fonctionnement d'un bloc <code>.then()</code> est similaire à celui de l'ajout d'un écouteur d'événements à un objet à l'aide de <code>AddEventListener()</code>. Il ne s'exécute pas avant qu'un événement ne se produise (lorsque la promesse se réalise). La différence la plus notable est qu'un <code>.then()</code> ne s'exécutera qu'une fois à chaque fois qu'il sera utilisé, alors qu'un écouteur d'événements pourrait être invoqué plusieurs fois.</p>
@@ -209,7 +209,7 @@ translation_of: Learn/JavaScript/Asynchronous/Promises
 })</pre>
   </li>
   <li>
-    <p>Maintenant, remplissons le corps du rappel <code>.then()</code>. Ajoutez les lignes suivantes à l'intérieur des accolades :</p>
+    <p>Maintenant, remplissons le corps de la fonction de rappel <code>.then()</code>. Ajoutez les lignes suivantes à l'intérieur des accolades :</p>
     <pre class="brush: js">let objectURL = URL.createObjectURL(myBlob);
 let image = document.createElement('img');
 image.src = objectURL;
@@ -225,9 +225,9 @@ document.body.appendChild(image);</pre>
   <p>Vous remarquerez probablement que ces exemples sont quelque peu artificiels. Vous pourriez tout simplement vous passer de toute la chaîne <code>fetch()</code> et <code>blob()</code>, et simplement créer un élément <code>&lt;img&gt;</code> et définir la valeur de son attribut <code>src</code> à l'URL du fichier image, <code>coffee.jpg</code>. Nous avons toutefois choisi cet exemple parce qu'il démontre les promesses d'une manière simple et agréable, plutôt que pour sa pertinence dans le monde réel.</p>
 </div>
 
-<h3 id="responding_to_failure">Répondre à un échec</h3>
+<h3 id="responding_to_failure">Réagir à un échec</h3>
 
-<p>Il manque quelque chose — actuellement, il n'y a rien pour gérer explicitement les erreurs si l'une des promesses échoue (<strong>rejects</strong>, en langage de promesse). Nous pouvons ajouter la gestion des erreurs en exécutant la méthode <a href="/fr/docs/Web/JavaScript/Référence/Global_Objects/Promise/catch"><code>.catch()</code></a> de la promesse précédente. Ajoutez ceci maintenant :</p>
+<p>Il manque quelque chose — actuellement, il n'y a rien pour gérer explicitement les erreurs si l'une des promesses <strong>échoue</strong> (<i>rejects</i>, en anglais). Nous pouvons ajouter la gestion des erreurs en exécutant la méthode <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch"><code>.catch()</code></a> de la promesse précédente. Ajoutez ceci maintenant :</p>
 
 <pre class="brush: js">let errorCase = promise3.catch(e =&gt; {
   console.log('Il y a eu un problème avec votre opération de récupération : ' + e.message);
@@ -268,7 +268,7 @@ document.body.appendChild(image);</pre>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
-  <p>Les blocs <code>.then()</code>/<code>.catch()</code> dans les promesses sont essentiellement l'équivalent asynchrone d'un bloc <code><a href="/fr/docs/Web/JavaScript/Référence/Statements/try...catch">try...catch</a></code> dans du code synchrone. Gardez à l'esprit que le <code>try...catch</code> synchrone ne fonctionnera pas dans du code asynchrone.</p>
+  <p>Les blocs <code>.then()</code>/<code>.catch()</code> dans les promesses sont essentiellement l'équivalent asynchrone d'un bloc <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> dans du code synchrone. Gardez à l'esprit que le <code>try...catch</code> synchrone ne fonctionnera pas dans du code asynchrone.</p>
 </div>
 
 <h2 id="promise_terminology_recap">Récapitulatif de la terminologie des promesses</h2>
@@ -289,7 +289,7 @@ document.body.appendChild(image);</pre>
 
 <p>L'exemple ci-dessus nous a montré certaines des bases réelles de l'utilisation des promesses. Voyons maintenant quelques fonctionnalités plus avancées. Pour commencer, enchaîner des processus pour qu'ils se réalisent l'un après l'autre, c'est très bien, mais que faire si vous voulez exécuter du code seulement après que tout un tas de promesses aient <em>toutes</em> été remplies ?</p>
 
-<p>Vous pouvez le faire avec la méthode statique ingénieusement nommée <a href="/fr/docs/Web/JavaScript/Référence/Global_Objects/Promise/all"><code>Promise.all()</code></a>. Celle-ci prend un tableau de promesses comme paramètre d'entrée et retourne un nouvel objet <code>Promise</code> qui ne se réalisera que si et quand <em>toutes</em> les promesses du tableau se réaliseront. Cela ressemble à quelque chose comme ceci :</p>
+<p>Vous pouvez le faire avec la méthode statique ingénieusement nommée <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/all"><code>Promise.all()</code></a>. Celle-ci prend un tableau de promesses comme paramètre d'entrée et retourne un nouvel objet <code>Promise</code> qui ne se réalisera que si et quand <em>toutes</em> les promesses du tableau se réaliseront. Cela ressemble à quelque chose comme ceci :</p>
 
 <pre class="brush: js">Promise.all([a, b, c]).then(values =&gt; {
   ...
@@ -366,7 +366,7 @@ let description = fetchAndDecode('description.txt', 'text');</pre>
     <p>Vous pouvez voir qu'elle prend un tableau contenant les promesses comme paramètre. La fonction de rappel <code>.then()</code> ne sera exécutée que lorsque les trois promesses seront résolues ; lorsque cela se produira, on lui transmettra un tableau contenant les résultats des promesses individuelles (c'est-à-dire les corps de réponse décodés), un peu comme suit [coffee-results, tea-results, description-results].</p>
   </li>
   <li>
-    <p>Enfin, ajoutez ce qui suit à l'intérieur du rappel. Nous utilisons ici un code de synchronisation assez simple pour stocker les résultats dans des variables séparées (en créant des URL d'objets à partir des blobs), puis nous affichons les images et le texte sur la page.</p>
+    <p>Enfin, ajoutez ce qui suit à l'intérieur de la fonction de rappel. Nous utilisons ici un code de synchronisation assez simple pour stocker les résultats dans des variables séparées (en créant des URL d'objets à partir des blobs), puis nous affichons les images et le texte sur la page.</p>
     <pre class="brush: js">console.log(values);
 // Stocke chaque valeur renvoyée par les promesses dans
 // des variables distinctes ; crée des URL d'objets à partir des blobs.
@@ -407,7 +407,7 @@ document.body.appendChild(para);</pre>
 
 <h2 id="running_some_final_code_after_a_promise_fulfillsrejects">Exécution d'un code final après l'accomplissement/le rejet d'une promesse.</h2>
 
-<p>Il y aura des cas où vous voudrez exécuter un bloc de code final après la fin d'une promesse, qu'elle se soit réalisée ou rejetée. Auparavant, vous deviez inclure le même code dans les deux rappels <code>.then()</code> et <code>.catch()</code>, par exemple :</p>
+<p>Il y aura des cas où vous voudrez exécuter un bloc de code final après la fin d'une promesse, qu'elle se soit réalisée ou rejetée. Auparavant, vous deviez inclure le même code dans les deux fonctions de rappel <code>.then()</code> et <code>.catch()</code>, par exemple :</p>
 
 <pre class="brush: js">myPromise
 .then(response =&gt; {
@@ -419,7 +419,7 @@ document.body.appendChild(para);</pre>
   runFinalCode();
 });</pre>
 
-<p>Dans les navigateurs modernes plus récents, la méthode <a href="/fr/docs/Web/JavaScript/Référence/Global_Objects/Promise/finally"><code>.finally()</code></a> est disponible, et peut être enchaînée à la fin de votre chaîne de promesses régulière, ce qui vous permet de réduire les répétitions de code et de faire les choses de manière plus élégante. Le code ci-dessus peut maintenant être écrit comme suit :</p>
+<p>Dans les navigateurs modernes plus récents, la méthode <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally"><code>.finally()</code></a> est disponible, et peut être enchaînée à la fin de votre chaîne de promesses régulière, ce qui vous permet de réduire les répétitions de code et de faire les choses de manière plus élégante. Le code ci-dessus peut maintenant être écrit comme suit :</p>
 
 <pre class="brush: js">myPromise
 .then(response =&gt; {
@@ -469,12 +469,12 @@ document.body.appendChild(para);</pre>
 
 <h3 id="using_the_promise_constructor">Utilisation du constructeur Promise()</h3>
 
-<p>Il est possible de construire vos propres promesses en utilisant le constructeur <a href="/fr/docs/Web/JavaScript/Référence/Global_Objects/Promise"><code>Promise()</code></a>. La principale situation dans laquelle vous voudrez faire cela est lorsque vous avez du code basé sur une API asynchrone de la vieille école qui n'est pas basée sur les promesses, et que vous voulez promettre. Cela s'avère pratique lorsque vous avez besoin d'utiliser du code, des bibliothèques ou des frameworks existants, plus anciens, avec du code moderne basé sur les promesses.</p>
+<p>Il est possible de construire vos propres promesses en utilisant le constructeur <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise()</code></a>. La principale situation dans laquelle vous voudrez faire cela est lorsque vous avez du code basé sur une API asynchrone de la vieille école qui n'est pas basée sur les promesses, et que vous voulez promettre. Cela s'avère pratique lorsque vous avez besoin d'utiliser du code, des bibliothèques ou des frameworks existants, plus anciens, avec du code moderne basé sur les promesses.</p>
 
-<p>Examinons un exemple simple pour vous aider à démarrer — ici, nous enveloppons un appel <a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>setTimeout()</code></a> avec une promesse — cela exécute une fonction après deux secondes qui résout la promesse (en passant l'appel <a href="/fr/docs/Web/JavaScript/Référence/Global_Objects/Promise/resolve"><code>resolve()</code></a>) avec une chaîne de caractères de "Succès ! ".</p>
+<p>Examinons un exemple simple pour vous aider à démarrer — ici, nous enveloppons un appel <a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>setTimeout()</code></a> avec une promesse — cela exécute une fonction après deux secondes qui résout la promesse (en passant l'appel <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve"><code>resolve()</code></a>) avec une chaîne de caractères de "Succès ! ".</p>
 
 <pre class="brush: js">let timeoutPromise = new Promise((resolve, reject) =&gt; {
-  setTimeout(function(){
+  setTimeout(() =&gt; {
     resolve('Succès !');
   }, 2000);
 });</pre>
@@ -494,7 +494,7 @@ document.body.appendChild(para);</pre>
 
 <p>Essayez <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise.html">de l'exécuter en direct</a> pour voir le résultat (voir aussi le <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise.html">code source</a>).</p>
 
-<p>L'exemple ci-dessus n'est pas très flexible - la promesse ne peut jamais s'accomplir qu'avec une seule chaîne de caractères, et elle n'a aucune sorte de condition <a href="/fr/docs/Web/JavaScript/Référence/Global_Objects/Promise/reject"><code>reject()</code></a> spécifiée (il est vrai que <code>setTimeout()</code> n'a pas vraiment de condition d'échec, donc cela n'a pas d'importance pour cet exemple).</p>
+<p>L'exemple ci-dessus n'est pas très flexible - la promesse ne peut jamais s'accomplir qu'avec une seule chaîne de caractères, et elle n'a aucune sorte de condition <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject"><code>reject()</code></a> spécifiée (il est vrai que <code>setTimeout()</code> n'a pas vraiment de condition d'échec, donc cela n'a pas d'importance pour cet exemple).</p>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
@@ -503,7 +503,7 @@ document.body.appendChild(para);</pre>
 
 <h3 id="rejecting_a_custom_promise">Rejeter une promesse personnalisée</h3>
 
-<p>Nous pouvons créer une promesse rejetée à l'aide de la méthode <a href="/fr/docs/Web/JavaScript/Référence/Global_Objects/Promise/reject"><code>reject()</code></a> — tout comme <code>resolve()</code>, celle-ci prend une seule valeur, mais dans ce cas, c'est la raison du rejet, c'est-à-dire l'erreur qui sera transmise dans le bloc <code>.catch()</code>.</p>
+<p>Nous pouvons créer une promesse rejetée à l'aide de la méthode <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject"><code>reject()</code></a> — tout comme <code>resolve()</code>, celle-ci prend une seule valeur, mais dans ce cas, c'est la raison du rejet, c'est-à-dire l'erreur qui sera transmise dans le bloc <code>.catch()</code>.</p>
 
 <p>Étendons l'exemple précédent pour avoir quelques conditions <code>reject()</code> ainsi que pour permettre de transmettre différents messages en cas de succès.</p>
 
@@ -516,7 +516,7 @@ document.body.appendChild(para);</pre>
     } else if (interval &lt; 0 || typeof interval !== 'number') {
       reject(`L'intervalle est négatif ou n'est pas un nombre`);
     } else {
-      setTimeout(function(){
+      setTimeout(() =&gt; {
         resolve(message);
       }, interval);
     }
