@@ -1,5 +1,5 @@
 ---
-title: 'JavaScript asynchrone coopératif : Délais et intervalles'
+title: 'JavaScript asynchrone coopératif : délais et intervalles'
 slug: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 tags:
   - Animation
@@ -46,7 +46,7 @@ translation_of: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
   <dd>Exécuter un bloc de code spécifié une fois, après qu'un temps spécifié se soit écoulé.</dd>
   <dt><a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/setInterval"><code>setInterval()</code></a></dt>
   <dd>Exécuter un bloc de code spécifique de manière répétée, avec un délai fixe entre chaque appel.</dd>
-  <dt><a href="/fr/docs/Web/API/window/requestAnimationFrame"><code>requestAnimationFrame()</a></code></dt>
+  <dt><a href="/fr/docs/Web/API/Window/requestAnimationFrame"><code>requestAnimationFrame()</a></code></dt>
   <dd>La version moderne de <code>setInterval()</code>. Exécute un bloc de code spécifié avant que le navigateur ne repeigne ensuite l'affichage, ce qui permet à une animation d'être exécutée à une fréquence d'images appropriée, quel que soit l'environnement dans lequel elle est exécutée.</dd>
 </dl>
 
@@ -74,23 +74,23 @@ translation_of: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 
 <p>Dans l'exemple suivant, le navigateur attendra deux secondes avant d'exécuter la fonction anonyme, puis affichera le message d'alerte (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">voir son exécution en direct</a>, et <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">voir le code source</a>) :</p>
 
-<pre class="brush: js">let myGreeting = setTimeout(function() {
+<pre class="brush: js">let maSalutation = setTimeout(() =&gt; {
   console.log('Bonjour, M. Univers !');
-}, 2000)</pre>
+}, 2000);</pre>
 
 <p>Les fonctions que vous spécifiez n'ont pas besoin d'être anonymes. Vous pouvez donner un nom à votre fonction, et même la définir ailleurs et passer une référence de fonction à <code>setTimeout()</code>. Les deux versions suivantes de l'extrait de code sont équivalentes à la première :</p>
 
 <pre class="brush: js">// Avec une fonction nommée
-let myGreeting = setTimeout(function sayHi() {
+let maSalutation = setTimeout(function direBonjour() {
   console.log('Bonjour, M. Univers !');
-}, 2000)
+}, 2000);
 
 // Avec une fonction définie séparément
-function sayHi() {
+function direBonjour() {
   console.log('Bonjour, M. Univers !');
 }
 
-let myGreeting = setTimeout(sayHi, 2000);</pre>
+let maSalutation = setTimeout(direBonjour, 2000);</pre>
 
 <p>Cela peut être utile si vous avez une fonction qui doit être appelée à la fois à partir d'un délai d'attente et en réponse à un événement, par exemple. Mais cela peut aussi vous aider à garder votre code en ordre, surtout si le rappel du délai d'attente représente plus de quelques lignes de code.</p>
 
@@ -102,19 +102,19 @@ let myGreeting = setTimeout(sayHi, 2000);</pre>
 
 <p>Par exemple, vous pouvez remanier la fonction précédente pour qu'elle dise bonjour à la personne dont le nom lui est transmis :</p>
 
-<pre class="brush: js">function sayHi(who) {
+<pre class="brush: js">function direBonjour(who) {
   console.log(`Bonjour ${who} !`);
 }</pre>
 
 <p>Maintenant, vous pouvez passer le nom de la personne dans l'appel <code>setTimeout()</code> comme troisième paramètre :</p>
 
-<pre class="brush: js">let myGreeting = setTimeout(sayHi, 2000, 'M. Univers');</pre>
+<pre class="brush: js">let maSalutation = setTimeout(direBonjour, 2000, 'M. Univers');</pre>
 
 <h3 id="clearing_timeouts">Effacement des délais d'attente</h3>
 
 <p>Enfin, si un timeout a été créé, vous pouvez l'annuler avant que le temps spécifié ne se soit écoulé en appelant <a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout"><code>clearTimeout()</code></a>, en lui passant en paramètre l'identifiant de l'appel <code>setTimeout()</code>. Donc pour annuler notre timeout ci-dessus, vous feriez ceci :</p>
 
-<pre class="brush: js">clearTimeout(myGreeting);</pre>
+<pre class="brush: js">clearTimeout(maSalutation);</pre>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
@@ -127,7 +127,7 @@ let myGreeting = setTimeout(sayHi, 2000);</pre>
 
 <p>C'est là qu'intervient le <a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/setInterval"><code>setInterval()</code></a>. Cela fonctionne de manière très similaire à <code>setTimeout()</code>, sauf que la fonction que vous passez comme premier paramètre est exécutée de manière répétée à une fréquence égale au nombre de millisecondes donné par le deuxième paramètre distinct, plutôt qu'une seule fois. Vous pouvez également passer tous les paramètres requis par la fonction en cours d'exécution comme paramètres ultérieurs de l'appel <code>setInterval()</code>.</p>
 
-<p>Prenons un exemple. La fonction suivante crée un nouvel objet <a href="/fr/docs/Web/JavaScript/Référence/Global_Objects/Date"><code>Date()</code></a>, en extrait une chaîne de temps en utilisant <a href="/fr/docs/Web/JavaScript/Référence/Global_Objects/Date/toLocaleTimeString"><code>toLocaleTimeString()</code></a>, puis l'affiche dans l'interface utilisateur. Elle exécute ensuite la fonction une fois par seconde à l'aide de <code>setInterval()</code>, créant l'effet d'une horloge numérique qui se met à jour une fois par seconde (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">voir cela en direct</a>, et aussi <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">voir la source</a>) :</p>
+<p>Prenons un exemple. La fonction suivante crée un nouvel objet <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Date"><code>Date()</code></a>, en extrait une chaîne de temps en utilisant <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString"><code>toLocaleTimeString()</code></a>, puis l'affiche dans l'interface utilisateur. Elle exécute ensuite la fonction une fois par seconde à l'aide de <code>setInterval()</code>, créant l'effet d'une horloge numérique qui se met à jour une fois par seconde (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">voir cela en direct</a>, et aussi <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">voir la source</a>) :</p>
 
 <pre class="brush: js">function displayTime() {
    let date = new Date();
@@ -216,8 +216,8 @@ setInterval(function run() {
 <p>La différence entre les deux versions du code ci-dessus est subtile.</p>
 
 <ul>
-  <li>Le <code>setTimeout()</code> récursif garantit le même délai entre les exécutions. (Par exemple, <code>100</code>ms dans le cas ci-dessus.) Le code s'exécutera, puis attendra <code>100</code> millisecondes avant de s'exécuter à nouveau - l'intervalle sera donc le même, quelle que soit la durée d'exécution du code.</li>
-  <li>L'exemple utilisant <code>setInterval()</code> fait les choses un peu différemment. L'intervalle que vous avez choisi <em>inclut</em> le temps d'exécution du code que vous voulez exécuter dans. Disons que le code prend <code>40</code> millisecondes pour s'exécuter - l'intervalle finit alors par être seulement de <code>60</code> millisecondes.</li>
+  <li>Le <code>setTimeout()</code> récursif garantit le délai indiqué entre les exécutions. L'attente de la prochaine exécution commencera uniquement après que le code ait fini de s'exécuter. Dans cet exemple, le code s'exécutera, puis attendra <code>100</code> millisecondes avant de s'exécuter à nouveau - l'intervalle sera donc le même, quelle que soit la durée d'exécution du code.</li>
+  <li>L'exemple utilisant <code>setInterval()</code> fait les choses un peu différemment. L'intervalle que vous avez choisi <em>inclut</em> le temps d'exécution du code que vous voulez exécuter. Disons que le code prend <code>40</code> millisecondes pour s'exécuter - l'intervalle finit alors par être seulement de <code>60</code> millisecondes.</li>
   <li>Lorsque vous utilisez <code>setTimeout()</code> de manière récursive, chaque itération peut calculer un délai différent avant d'exécuter l'itération suivante. En d'autres termes, la valeur du deuxième paramètre peut spécifier un temps différent en millisecondes à attendre avant d'exécuter à nouveau le code.</li>
 </ul>
 
@@ -229,7 +229,7 @@ setInterval(function run() {
 
 <p>Par exemple, le code ci-dessous (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/zero-settimeout.html">voir en direct</a>) produit une alerte contenant <code>"Hello"</code>, puis une alerte contenant <code>"World"</code> dès que vous cliquez sur OK sur la première alerte.</p>
 
-<pre class="brush: js">setTimeout(function() {
+<pre class="brush: js">setTimeout(() =&gt; {
   alert('World');
 }, 0);
 
@@ -245,9 +245,9 @@ alert('Hello');</pre>
 
 <h2 id="requestanimationframe">requestAnimationFrame()</h2>
 
-<p><a href="/fr/docs/Web/API/window/requestAnimationFrame"><code>requestAnimationFrame()</code></a> est une fonction de bouclage spécialisée, créée pour exécuter des animations de manière efficace dans le navigateur. Il s'agit essentiellement de la version moderne de <code>setInterval()</code> - elle exécute un bloc de code spécifié avant que le navigateur ne repeigne ensuite l'affichage, ce qui permet d'exécuter une animation à une fréquence d'images appropriée, quel que soit l'environnement dans lequel elle est exécutée.</p>
+<p><a href="/fr/docs/Web/API/Window/requestAnimationFrame"><code>requestAnimationFrame()</code></a> est une fonction de bouclage spécialisée, créée pour exécuter des animations de manière efficace dans le navigateur. Elle exécute un bloc de code spécifié avant que le navigateur ne repeigne ensuite l'affichage, ce qui permet d'exécuter une animation à une fréquence de rafraîchissement appropriée, quel que soit l'environnement dans lequel elle est exécutée.</p>
 
-<p>Elle a été créée en réponse aux problèmes perçus avec <code>setInterval()</code>, qui, par exemple, ne s'exécute pas à une fréquence d'images optimisée pour le matériel, et perd parfois des images, alors qu'elle continue à s'exécuter même si l'onglet n'est pas l'onglet actif ou si l'animation est déroulée hors de la page, etc.</p>
+<p>Elle a été créée en réponse aux problèmes perçus avec les fonctions asynchrones antérieures comme <code>setInterval()</code>, qui, par exemple, ne s'exécute pas à une fréquence d'images optimisée pour le matériel et continue à s'exécuter alors qu'elle pourrait s'arrêter lorsque l'onglet n'est plus actif ou si l'animation se déroule hors de la page, etc.</p>
 
 <p>(<a href="http://creativejs.com/resources/requestanimationframe/index.html">Plus d'informations à ce sujet sur CreativeJS</a> <small>(en)</small>.)</p>
 
@@ -388,10 +388,8 @@ let rAF;
   rotateCount = (timestamp - startTime) / 3;
 </pre>
   </li>
-  <li><p>Sous la ligne précédente à l'intérieur de <code>draw()</code>, ajoutez le bloc suivant - il vérifie si la valeur de <code>rotateCount</code> est supérieure à <code>359</code> (par exemple <code>360</code>, un cercle complet). Si c'est le cas, il fixe la valeur à son modulo de 360 (c'est-à-dire le reste restant lorsque la valeur est divisée par <code>360</code>) afin que l'animation du cercle puisse continuer sans interruption, à une valeur basse et raisonnable. Notez que ce n'est pas strictement nécessaire, mais il est plus facile de travailler avec des valeurs de 0-359 degrés que des valeurs comme <code>"128000 degrés"</code>.</p>
-    <pre class="brush: js">if (rotateCount &gt; 359) {
-  rotateCount %= 360;
-}</pre>
+  <li><p>Sous la ligne précédente à l'intérieur de <code>draw()</code>, ajoutez le bloc suivant - il s'assure que la valeur de <code>rotateCount</code> est comprise entre <code>0</code> et <code>360</code> en utilisant le modulo à 360 (c'est-à-dire le reste restant lorsque la valeur est divisée par <code>360</code>) afin que l'animation du cercle puisse continuer sans interruption, à une valeur basse et raisonnable. Notez que ce n'est pas strictement nécessaire, mais il est plus facile de travailler avec des valeurs de 0-359 degrés que des valeurs comme <code>"128000 degrés"</code>.</p>
+    <pre class="brush: js">rotateCount %= 360;</pre>
   </li>
   <li>Ensuite, sous le bloc précédent, ajoutez la ligne suivante pour faire tourner le spinner :
     <pre class="brush: js">spinner.style.transform = `rotate(${rotateCount}deg)`;</pre>
@@ -512,9 +510,7 @@ const result = document.querySelector('.result');</pre>
 
   rotateCount = (timestamp - startTime) / 3;
 
-  if(rotateCount &gt; 359) {
-    rotateCount %= 360;
-  }
+  rotateCount %= 360;
 
   spinner.style.transform = 'rotate(' + rotateCount + 'deg)';
   rAF = requestAnimationFrame(draw);
@@ -524,7 +520,7 @@ const result = document.querySelector('.result');</pre>
     <pre class="brush: js">result.style.display = 'none';
 spinnerContainer.style.display = 'none';</pre>
   </li>
-  <li><p>Ensuite, définissez une fonction <code>reset()</code>, qui remet l'application dans l'état initial nécessaire pour relancer le jeu après qu'il ait été joué. Ajoutez ce qui suit au bas de votre code :</p>
+  <li><p>Ensuite, définissez une fonction <code>reset()</code>, qui remet l'application dans l'état initial nécessaire pour relancer le jeu après qu'il a été joué. Ajoutez ce qui suit au bas de votre code :</p>
     <pre class="brush: js">function reset() {
   btn.style.display = 'block';
   result.textContent = '';
@@ -576,7 +572,7 @@ function start() {
 }</pre>
     <p>Son fonctionnement :</p>
     <ol>
-      <li>Tout d'abord, annule l'animation de la toupie avec <a href="/fr/docs/Web/API/window/cancelAnimationFrame"><code>cancelAnimationFrame()</code></a> (il est toujours bon de nettoyer les processus inutiles), et cache le conteneur de la toupie.</li>
+      <li>Tout d'abord, annule l'animation de la toupie avec <a href="/fr/docs/Web/API/Window/cancelAnimationFrame"><code>cancelAnimationFrame()</code></a> (il est toujours bon de nettoyer les processus inutiles), et cache le conteneur de la toupie.</li>
       <li>Ensuite, affiche le paragraphe des résultats et définissez son contenu textuel sur "JOUEURS : ALLEZ-Y !!" pour signaler aux joueurs qu'ils peuvent maintenant appuyer sur leur bouton pour gagner.</li>
       <li>Attache un écouteur d'événements <a href="/fr/docs/Web/API/Document/keydown_event"><code>keydown</code></a> au document. Lorsqu'un bouton quelconque est enfoncé, la fonction <code>keyHandler()</code> est exécutée.</li>
       <li>À l'intérieur de <code>keyHandler()</code>, le code inclut l'objet événement en tant que paramètre (représenté par <code>e</code>) - sa propriété <a href="/fr/docs/Web/API/KeyboardEvent/key"><code>key</code></a> contient la touche qui vient d'être pressée, et vous pouvez l'utiliser pour répondre à des pressions de touche spécifiques par des actions spécifiques.</li>
