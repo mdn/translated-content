@@ -28,7 +28,7 @@ browser-compat: javascript.statements.break
 
 <h2 id="Description">Описание</h2>
 
-<p>Оператор <code>break</code> допускает использование метки для выхода из {{jsxref("Statements/block", "блочного выражения", "", 1)}}.
+<p>С помощью оператора <code>break</code> можно прервать выполнение {{jsxref("Statements/block", "блочного выражения", "", 1)}} с меткой.
   В таком случае <code>break</code> должен находиться внутри блока кода с указанной меткой. Само блочное выражение может быть любым, а не только циклом.</p>
 
 <p>Использование <code>break</code>, с меткой или без, невозможно внутри функции,
@@ -58,7 +58,7 @@ browser-compat: javascript.statements.break
 
 <h3 id="break_in_switch_statements">break в конструкции switch</h3>
 
-<p>В примере оператор <code>break</code> прервет выполнение {{jsxref("Statements/switch", "switch")}}
+<p>В примере оператор <code>break</code> прервёт выполнение {{jsxref("Statements/switch", "switch")}}
   сразу после выполнения кода в совпавшем <code>case</code>.</p>
 
 <pre class="brush: js highlight:[6];">const food = "sushi";
@@ -79,7 +79,7 @@ switch (food) {
 <h3 id="break_in_labeled_blocks">break в блочном выражении с указанной меткой</h3>
 
 <p>В примере используется оператор <code>break</code> с меткой. В таком случае <code>break</code>
-  обязательно должен быть вложен в отмеченный блок кода. Обратите внимание,
+  обязательно должен быть вложен в блок кода с той же меткой. Обратите внимание,
   что <code>inner_block</code> вложен в <code>outer_block</code>.</p>
 
 <pre class="brush: js highlight:[1,2,4];">outer_block: {
@@ -97,8 +97,8 @@ switch (food) {
 <p>В примере также используется <code>break</code> с меткой,
   но код будет выполнен с ошибкой <code>SyntaxError</code>,
   потому что <code>break</code> находится в блоке с меткой <code>block_1</code>,
-  а должен прервать выполнение блока кода с меткой <code>block_2</code>.
-  Еще раз, в таком случае <code>break</code> обязательно должен быть вложен в блок кода с меткой,
+  а прерывается выполнение блока кода с меткой <code>block_2</code>.
+  Ещё раз, в таком случае <code>break</code> обязательно должен быть вложен в блок кода с меткой,
   выполнение которого требуется прервать.</p>
 
 <pre class="brush: js highlight:[1,3,6];">block_1: {
@@ -114,8 +114,8 @@ block_2: {
 <h3 id="break_within_functions">break внутри функций</h3>
 
 <p>Код в примерах также будет выполнен с ошибкой <code>SyntaxError</code>,
-  потому что <code>break</code> находится в теле функций, вложенных в прерываемые цикл
-  и блочное выражение с меткой.</p>
+  потому что в обоих случаях <code>break</code> находится в теле функции, вложенной в прерываемый цикл
+  или прерываемое блочное выражение с меткой.</p>
 
 <pre class="brush: js highlight:[1,3,6];">function testBreak(x) {
   var i = 0;
