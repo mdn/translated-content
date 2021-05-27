@@ -6485,12 +6485,6 @@
       "pantherCZ"
     ]
   },
-  "Web/API/ChildNode/replaceWith": {
-    "modified": "2020-12-02T15:53:32.691Z",
-    "contributors": [
-      "kosarev_va"
-    ]
-  },
   "Web/API/Clients": {
     "modified": "2019-03-23T22:15:29.932Z",
     "contributors": [
@@ -25534,6 +25528,12 @@
       "neoxaker",
       "NikitaCoder",
       "In4in"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/replaceWith": {
+    "modified": "2020-12-02T15:53:32.691Z",
+    "contributors": [
+      "kosarev_va"
     ]
   },
   "orphaned/Web/API/Document_Object_Model/Events": {

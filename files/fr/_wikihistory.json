@@ -13087,15 +13087,6 @@
       "loella16"
     ]
   },
-  "Web/API/ChildNode/replaceWith": {
-    "modified": "2020-10-15T21:55:03.476Z",
-    "contributors": [
-      "tristantheb",
-      "loella16",
-      "Spictheweb",
-      "v-Stein"
-    ]
-  },
   "Web/API/Client": {
     "modified": "2020-11-16T08:56:05.543Z",
     "contributors": [
@@ -45032,6 +45023,15 @@
       "loella16",
       "Goofy",
       "Copen"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/replaceWith": {
+    "modified": "2020-10-15T21:55:03.476Z",
+    "contributors": [
+      "tristantheb",
+      "loella16",
+      "Spictheweb",
+      "v-Stein"
     ]
   },
   "orphaned/Web/API/Detecting_device_orientation": {

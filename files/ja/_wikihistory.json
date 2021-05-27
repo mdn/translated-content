@@ -11643,13 +11643,6 @@
       "Shirasu"
     ]
   },
-  "Web/API/ChildNode/replaceWith": {
-    "modified": "2020-10-17T04:41:48.425Z",
-    "contributors": [
-      "Potappo",
-      "Shirasu"
-    ]
-  },
   "Web/API/Client": {
     "modified": "2020-10-15T22:28:43.389Z",
     "contributors": [
@@ -52337,6 +52330,13 @@
       "mfuji09",
       "isdh",
       "chikoski"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/replaceWith": {
+    "modified": "2020-10-17T04:41:48.425Z",
+    "contributors": [
+      "Potappo",
+      "Shirasu"
     ]
   },
   "orphaned/Web/API/Detecting_device_orientation": {

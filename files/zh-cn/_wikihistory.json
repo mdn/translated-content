@@ -9761,15 +9761,6 @@
       "caoweiju"
     ]
   },
-  "Web/API/ChildNode/replaceWith": {
-    "modified": "2020-10-15T21:56:06.625Z",
-    "contributors": [
-      "ecnelises",
-      "SphinxKnight",
-      "wzx",
-      "VictorDu"
-    ]
-  },
   "Web/API/Client": {
     "modified": "2019-03-23T22:16:43.346Z",
     "contributors": [
@@ -50225,6 +50216,15 @@
       "khalid32",
       "ziyunfei",
       "Darrel.Hsu"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/replaceWith": {
+    "modified": "2020-10-15T21:56:06.625Z",
+    "contributors": [
+      "ecnelises",
+      "SphinxKnight",
+      "wzx",
+      "VictorDu"
     ]
   },
   "orphaned/Web/API/Detecting_device_orientation": {

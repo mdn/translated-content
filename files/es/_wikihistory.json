@@ -5547,12 +5547,6 @@
       "SoftwareRVG"
     ]
   },
-  "Web/API/ChildNode/replaceWith": {
-    "modified": "2019-03-23T22:23:34.633Z",
-    "contributors": [
-      "SoftwareRVG"
-    ]
-  },
   "Web/API/ClipboardEvent": {
     "modified": "2020-10-15T22:14:15.464Z",
     "contributors": [
@@ -23428,6 +23422,12 @@
       "daniel.arango",
       "teffcode",
       "AlePerez92",
+      "SoftwareRVG"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/replaceWith": {
+    "modified": "2019-03-23T22:23:34.633Z",
+    "contributors": [
       "SoftwareRVG"
     ]
   },
