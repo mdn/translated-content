@@ -453,44 +453,44 @@ npm run dev</pre>
 <p><strong>注意</strong>：不知何時REPL變得沒辦法適當地處理資料夾名稱。假如你是使用REPL來跟著教學系列，只需要將所有你的元件建立在根目錄即可。接著當你看到程式碼中的路徑時，舉例來說如果是<code>import Todos from './components/Todos.svelte'</code>，只需要將它換成類似如<code>import Todos from './Todos.svelte'</code>即可。</p>
 </div>
 
-<h2 id="The_code_so_far">The code so far</h2>
+<h2 id="The_code_so_far">到目前為止的程式碼</h2>
 
 <h3 id="Git">Git</h3>
 
-<p>Clone the github repo (if you haven't already done it) with:</p>
+<p>複製github儲存庫（假如你還沒完成）如下：</p>
 
 <pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
 
-<p>Then to get to the current app state, run</p>
+<p>接著取得當前應用程式狀態，執行如下：</p>
 
 <pre class="brush: bash">cd mdn-svelte-tutorial/01-getting-started</pre>
 
-<p>Or directly download the folder's content:</p>
+<p>或直接下載資料夾內容如下：</p>
 
 <pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/01-getting-started</pre>
 
-<p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
+<p>記得執行<code>npm install &amp;&amp; npm run dev</code>以開發模式來運行你的應用程式。</p>
 
 <h3 id="REPL">REPL</h3>
 
-<p>To code along with us using the REPL, start at</p>
+<p>為了使用REPL和我們一起撰寫程式碼，點擊如下連結：</p>
 
 <p><a href="https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2">https://svelte.dev/repl/fc68b4f059d34b9c84fa042d1cce586c?version=3.23.2</a></p>
 
-<h2 id="Summary">Summary</h2>
+<h2 id="Summary">總結</h2>
 
-<p>This brings us to the end of our initial look at Svelte, including how to install it locally, create a starter app, and how the basics work. In the next article we'll start building our first proper application — a todo list. Before we do that, however, let's recap some of the things we’ve learned.</p>
+<p>這篇文章初步帶我們了解了Svelte的來龍去脈，包含如何安裝本地環境，建構起始應用程式以及它是如何協同工作。下一篇文章將開始建構我們第一個應用程式——一個待辦清單。在我們開始做之前，讓我們先回顧一下已經學到的那些東西。</p>
 
-<p>In Svelte:</p>
+<p>在Svelte當中：</p>
 
 <ul>
- <li>We define the script, style and markup of each component in a single <code>.svelte</code> file.</li>
- <li>Component props are declared with the <code>export</code> keyword.</li>
- <li>Svelte components can be used just by importing the corresponding <code>.svelte</code> file.</li>
- <li>Components styles are scoped, keeping them from clashing with each other.</li>
- <li>In the markup section you can include any JavaScript expression by putting it between curly braces.</li>
- <li>The top-level variables of a component constitute its state.</li>
- <li>Reactivity is fired just by assigning a new value to a top level variable.</li>
+ <li>我們在每個元件中定義腳本、樣式、標記區塊於單一的<code>.svelte</code>檔案中。</li>
+ <li>透過<code>export</code>關鍵字來宣告元件屬性。</li>
+ <li>可以藉由載入對應的<code>.svelte</code>檔案來使用這些Svelte元件。</li>
+ <li>元件樣式有範圍限制，防止它們之間有衝突。</li>
+ <li>標記區塊中你可以包含任何JavaScript表達式，將它以大括號包起來。</li>
+ <li>元件中的頂層變數會構成其元件狀態。</li>
+ <li>當指定新數值給頂層變數時，將會觸發其反應性。</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
