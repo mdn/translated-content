@@ -54,15 +54,15 @@ translation_of: Web/API/MediaRecorder
  <dt>{{domxref("MediaRecorder.ondataavailable")}}</dt>
  <dd>Вызывает обработчик {{event("dataavailable")}} события, которое запускается раз в <code>timeslice</code> миллисекунд (или, если <code>timeslice</code> не был задан - по окончанию записи). Событие типа {{domxref("BlobEvent")}}, сдержит записанное медиа в {{domxref("BlobEvent.data", "data")}}.  Вы можете использовать обработчик для сбора и других действий в зависимости от полученных данных.</dd>
  <dt>{{domxref("MediaRecorder.onerror")}}</dt>
- <dd>{{event("Event_handlers")}} вызывается для обработки события {{event("recordingerror")}}, включающего отчёт об ошибках во время записи. Это фатальные ошибки, приводящие к остановке записи. Полученное событие основано на интерфейсе {{domxref("MediaRecorderErrorEvent")}}, свойство которого {{domxref("MediaRecorderErrorEvent.error", "error")}} содержит {{domxref("DOMException")}} описывающие произошедшие ошибки.</dd>
+ <dd>{{domxref("EventHandler")}} вызывается для обработки события {{event("recordingerror")}}, включающего отчёт об ошибках во время записи. Это фатальные ошибки, приводящие к остановке записи. Полученное событие основано на интерфейсе {{domxref("MediaRecorderErrorEvent")}}, свойство которого {{domxref("MediaRecorderErrorEvent.error", "error")}} содержит {{domxref("DOMException")}} описывающие произошедшие ошибки.</dd>
  <dt>{{domxref("MediaRecorder.onpause")}}</dt>
- <dd>{{event("Event_handlers")}} вызывается для обработки события {{event("pause")}}, случившегося во время приостановки медиа.</dd>
+ <dd>{{domxref("EventHandler")}} вызывается для обработки события {{event("pause")}}, случившегося во время приостановки медиа.</dd>
  <dt>{{domxref("MediaRecorder.onresume")}}</dt>
- <dd>{{event("Event_handlers")}} вызывается для обработки события {{event("resume")}}, случившегося во время возобновления записи.</dd>
+ <dd>{{domxref("EventHandler")}} вызывается для обработки события {{event("resume")}}, случившегося во время возобновления записи.</dd>
  <dt>{{domxref("MediaRecorder.onstart")}}</dt>
- <dd>{{event("Event_handlers")}}вызывается для обработки события {{event("start")}}, случившегося во время начала записи.</dd>
+ <dd>{{domxref("EventHandler")}}вызывается для обработки события {{event("start")}}, случившегося во время начала записи.</dd>
  <dt>{{domxref("MediaRecorder.onstop")}}</dt>
- <dd>{{event("Event_handlers")}} вызывается для обработки события {{event("stop")}}, случившегося во время завершения записи, а так же при окончании {{domxref("MediaStream")}} — или после вызова {{domxref("MediaRecorder.stop()")}}</dd>
+ <dd>{{domxref("EventHandler")}} вызывается для обработки события {{event("stop")}}, случившегося во время завершения записи, а так же при окончании {{domxref("MediaStream")}} — или после вызова {{domxref("MediaRecorder.stop()")}}</dd>
 </dl>
 
 <h2 id="Пример">Пример</h2>
