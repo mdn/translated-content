@@ -5,7 +5,7 @@ translation_of: Web/API/WindowEventHandlers/onpopstate
 ---
 <div>{{APIRef}}</div>
 
-<p>Свойство <code>onpopstate</code> миксина {{domxref("WindowEventHandlers")}} является {{event("Event_handlers")}} для обработки событий <code>popstate</code> для "window".</p>
+<p>Свойство <code>onpopstate</code> миксина {{domxref("WindowEventHandlers")}} является {{domxref("EventHandler")}} для обработки событий <code>popstate</code> для "window".</p>
 
 <p>Событие <code style="font-style: normal;">popstate</code> отсылается объекту window каждый раз, когда активная запись истории меняется с одной на другую для одного и того же документа. Если запись истории, ставшая активной, была создана вызовом <span style="font-family: Consolas,Monaco,'Andale Mono',monospace;"><code>history.pushState()</code> </span>или изменена с помощью <code style="font-style: normal;">history.replaceState()</code>, свойство <code style="font-style: normal;">state</code> события <code style="font-style: normal;">popstate</code> содержит копию объекта состояния этой записи истории.</p>
 
