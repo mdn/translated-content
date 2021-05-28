@@ -9,7 +9,7 @@ translation_of: Web/API/Worker/onmessage
 ---
 <p>{{ APIRef("Web Workers API") }}</p>
 
-<p>La propriété <strong><code>onmessage</code></strong> de l'interface {{domxref("Worker")}} représente un {{domxref("EventHandler")}}, à savoir une fonction qui est appelée lorsque l'événement {{event("message")}} survient. Ces événements sont du type {{domxref("MessageEvent")}} et sont appelés quand le parent du worker reçoit un message (c’est-à-dire à partir de la méthode {{domxref("DedicatedWorkerGlobalScope.postMessage")}}).</p>
+<p>La propriété <strong><code>onmessage</code></strong> de l'interface {{domxref("Worker")}} représente un {{event("Event_handlers", "event handler")}}, à savoir une fonction qui est appelée lorsque l'événement {{event("message")}} survient. Ces événements sont du type {{domxref("MessageEvent")}} et sont appelés quand le parent du worker reçoit un message (c’est-à-dire à partir de la méthode {{domxref("DedicatedWorkerGlobalScope.postMessage")}}).</p>
 
 <div class="note">
 <p><strong>Remarque </strong>: le contenu du message est fourni par la propriété <code>data</code> de l'événement {{event("message")}}.</p>
