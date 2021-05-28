@@ -4812,7 +4812,7 @@
 /ja/docs/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Inheriting_Properties
 /ja/docs/Web/JavaScript/Guide/Using_the_arguments_object	/ja/docs/orphaned/Web/JavaScript/Guide/Using_the_arguments_object
 /ja/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/ja/docs/Web/JavaScript/Guide/Grammar_and_types
-/ja/docs/Web/JavaScript/Guide/Variables	/ja/docs/orphaned/Web/JavaScript/Guide/Variables
+/ja/docs/Web/JavaScript/Guide/Variables	/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declarations
 /ja/docs/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern	/ja/docs/orphaned/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
 /ja/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript	/ja/docs/Learn/JavaScript/Objects
 /ja/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/ja/docs/conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript
