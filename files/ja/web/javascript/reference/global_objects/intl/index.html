@@ -73,7 +73,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 
 <h3 id="Locale_negotiation" name="Locale_negotiation">ロケールネゴシエーション</h3>
 
-<p><code>locales</code> 引数は、すべての Unicode 拡張を除去した後、アプリケーションからの優先順位付き要求として解釈されます。ランタイムは、利用可能なローケルと比較し、利用可能なロケールのうち最適なものを選びます。マッチングアルゴリズムは二種類あります。 "<code>lookup</code>" マッチャーは、<a href="http://tools.ietf.org/html/rfc4647#section-3.4">BCP 47</a> で指定された Lookup アルゴリズムに従います。 "<code>best fit</code>" マッチャーでは、ランタイムが少なくとも、あるいは場合によっては、 Lookup アルゴリズムの結果よりもリクエストに適合したロケールを提供します。アプリケーションが <code>locales</code> 引数を提供しなかった場合や、リクエストに一致するロケールをランタイムが持っていなかった場合は、ランタイムの既定のロケールが使用されます。マッチャーは、 <code>options</code> 引数のプロパティを使って選択することができます (後述)。</p>
+<p><code>locales</code> 引数は、すべての Unicode 拡張を除去した後、アプリケーションからの優先順位付き要求として解釈されます。ランタイムは、利用可能なロケールと比較し、利用可能なロケールのうち最適なものを選びます。マッチングアルゴリズムは二種類あります。 "<code>lookup</code>" マッチャーは、<a href="http://tools.ietf.org/html/rfc4647#section-3.4">BCP 47</a> で指定された Lookup アルゴリズムに従います。 "<code>best fit</code>" マッチャーでは、ランタイムが少なくとも、あるいは場合によっては、 Lookup アルゴリズムの結果よりもリクエストに適合したロケールを提供します。アプリケーションが <code>locales</code> 引数を提供しなかった場合や、リクエストに一致するロケールをランタイムが持っていなかった場合は、ランタイムの既定のロケールが使用されます。マッチャーは、 <code>options</code> 引数のプロパティを使って選択することができます (後述)。</p>
 
 <p>ネゴシエーションにより選択された言語タグが Unicode 拡張の部分文字列を持っているとき、その拡張はここで、構築されたオブジェクトや関数の振る舞いをカスタマイズするために使われます。それぞれのコンストラクターや関数は、 Unicode 拡張用のキーのごく一部分のみ対応しており、また、対応する値は、多くの場合言語タグに依存します。例えば、 "<code>co</code>" キー (コレクション)は、 {{jsxref("Collator")}} だけが対応しており、そのキーに対する "<code>phonebk</code>" の値はドイツ語だけが対応しています。</p>
 
@@ -81,7 +81,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 
 <p><code>options</code> 引数は、コンストラクターや関数ごとに異なるプロパティをもつオブジェクトである必要があります。 <code>options</code> 引数が与えられなかった場合、または、未定義の場合、すべてのプロパティに対して既定値が使用されます。</p>
 
-<p>言語を意識するすべてのコンストラクターや関数が対応しているプロパティが一つあります。 <code>localeMatcher</code> プロパティで、この値は "<code>lookup</code>" または "<code>best fit</code>" の文字列である必要があり、上記のとけーるマッチングアルゴリズムのうちから一つを選択します。</p>
+<p>言語を意識するすべてのコンストラクターや関数が対応しているプロパティが一つあります。 <code>localeMatcher</code> プロパティで、この値は "<code>lookup</code>" または "<code>best fit</code>" の文字列である必要があり、上記のロケールマッチングアルゴリズムのうちから一つを選択します。</p>
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 

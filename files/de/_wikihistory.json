@@ -2273,12 +2273,6 @@
       "Micky261"
     ]
   },
-  "Tools/Page_Inspector/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:50.445Z",
-    "contributors": [
-      "GiovanniHD201E"
-    ]
-  },
   "Tools/Paint_Flashing_Tool": {
     "modified": "2020-07-16T22:35:43.400Z",
     "contributors": [
@@ -2768,12 +2762,6 @@
     "modified": "2019-03-23T22:06:18.037Z",
     "contributors": [
       "stevenwdv"
-    ]
-  },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T22:05:03.102Z",
-    "contributors": [
-      "sv3m0r"
     ]
   },
   "Web/API/Console": {
@@ -5418,21 +5406,6 @@
       "SJW",
       "Prinz_Rana",
       "fscholz",
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/@page/bleed": {
-    "modified": "2020-10-15T21:39:36.423Z",
-    "contributors": [
-      "SJW",
-      "Prinz_Rana",
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/@page/marks": {
-    "modified": "2020-10-15T21:29:09.846Z",
-    "contributors": [
-      "SJW",
       "Sebastianz"
     ]
   },
@@ -8191,17 +8164,6 @@
     "contributors": [
       "blackjack4494",
       "lxdiamond"
-    ]
-  },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-03-23T23:33:45.828Z",
-    "contributors": [
-      "suriyaa",
-      "teoli",
-      "timausk",
-      "thorsten.rinne",
-      "matze",
-      "nothine"
     ]
   },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
@@ -13285,12 +13247,6 @@
       "TorbenKoehn"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:05:45.089Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:55:35.876Z",
     "contributors": [
@@ -14753,6 +14709,12 @@
       "nw520"
     ]
   },
+  "orphaned/Tools/Page_Inspector/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:50.445Z",
+    "contributors": [
+      "GiovanniHD201E"
+    ]
+  },
   "orphaned/Tools/WebIDE_clone": {
     "modified": "2019-03-23T23:03:21.499Z",
     "contributors": [
@@ -14762,10 +14724,31 @@
       "AARADEANCA"
     ]
   },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T22:05:03.102Z",
+    "contributors": [
+      "sv3m0r"
+    ]
+  },
   "orphaned/Web/CSS/:-moz-ui-valid": {
     "modified": "2019-03-23T22:42:34.212Z",
     "contributors": [
       "teoli",
+      "Sebastianz"
+    ]
+  },
+  "orphaned/Web/CSS/@page/bleed": {
+    "modified": "2020-10-15T21:39:36.423Z",
+    "contributors": [
+      "SJW",
+      "Prinz_Rana",
+      "Sebastianz"
+    ]
+  },
+  "orphaned/Web/CSS/@page/marks": {
+    "modified": "2020-10-15T21:29:09.846Z",
+    "contributors": [
+      "SJW",
       "Sebastianz"
     ]
   },
@@ -14788,6 +14771,17 @@
       "td8"
     ]
   },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-03-23T23:33:45.828Z",
+    "contributors": [
+      "suriyaa",
+      "teoli",
+      "timausk",
+      "thorsten.rinne",
+      "matze",
+      "nothine"
+    ]
+  },
   "orphaned/Web/HTML/Global_attributes/dropzone": {
     "modified": "2020-10-15T21:40:11.332Z",
     "contributors": [
@@ -14805,6 +14799,12 @@
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype": {
     "modified": "2020-10-15T22:01:09.829Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:05:45.089Z",
     "contributors": [
       "schlagi123"
     ]

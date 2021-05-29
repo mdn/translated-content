@@ -18,13 +18,13 @@ original_slug: Web/API/Fetch_API/Fetch의_사용법
 
 <p>기본적인 fetch는 누구라도 알기쉽고 간단하게 작성할 수 있습니다. 아래의 코드를 봐주시기 바랍니다.</p>
 
-<pre class="brush: js notranslate"><code>fetch('http://example.com/movies.json')
+<pre class="brush: js notranslate">fetch('http://example.com/movies.json')
   .then(function(response) {
     return response.json();
   })
   .then(function(myJson) {
     console.log(JSON.stringify(myJson));
-  });</code></pre>
+  });</pre>
 
 <p>네트워크에서 JSON 파일을 가져 와서 콘솔에 인쇄합니다. 간단한 <code>fetch()</code> 사용 흐름은 인수 한개(가져올 자원의 경로)를 가져오고 응답을 포함하는 약속 ({{domxref ( "Response")}} 개체)을 반환하는 것입니다.</p>
 
@@ -411,7 +411,7 @@ fetch("/login", {
 
 <ul>
  <li><a href="/ko/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/ko/docs/Web/HTTP/Access_control_CORS">HTTP 액세스 제어 (CORS)</a></li>
+ <li><a href="/ko/docs/Web/HTTP/CORS">HTTP 액세스 제어 (CORS)</a></li>
  <li><a href="/ko/docs/Web/HTTP">HTTP</a></li>
  <li><a href="https://github.com/github/fetch">Fetch polyfill</a></li>
  <li><a href="https://github.com/mdn/fetch-examples/">Fetch examples on Github</a></li>

@@ -1,0 +1,109 @@
+---
+title: HTML5
+slug: orphaned/Web/Guide/HTML/HTML5
+translation_of: Web/Guide/HTML/HTML5
+original_slug: Web/Guide/HTML/HTML5
+---
+<p>HTML5 是 <a href="/docs/HTML">HTML </a>標準中的最新版。在 <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/">HTML5 規格</a>還未拍板定案之前，Mozilla 以及其他瀏覽器開發商已經著手實現其中的部分功能。本文所列的連結網址與相關內容，是 Mozilla  <a href="/en/Gecko" title="en/Gecko">Gecko</a> 解析引擎已經支援的部份，<a class="external" href="http://www.mozilla.com/en-US/firefox/" title="http://www.mozilla.com/en-US/firefox/">Firefox</a> 和<a href="/En/List_of_Mozilla-Based_Applications" title="En/List of Mozilla-Based Applications">許多其他產品</a>都使用 Gecko 解析引擎。</p>
+
+<p>(這裡是 <a href="/en/HTML/HTML5/HTML5_Thematic_Classification" title="en/HTML/HTML5/HTML5 Thematic Classification">另一篇 HTML5 分類整理文章</a>。)</p>
+
+<h2 id="HTML5_簡介">HTML5 簡介</h2>
+
+<dl>
+ <dt><a href="/en/HTML/HTML5/Introduction_to_HTML5" title="en/HTML/Introduction to HTML5"><strong>HTML5 簡介</strong></a></dt>
+ <dd>這篇文章介紹如何在你的網頁設計或 Web 應用程式中使用 HTML5。</dd>
+</dl>
+
+<h2 id="HTML5_元素">HTML5 元素</h2>
+
+<dl>
+ <dt><a href="/en/Using_HTML5_audio_and_video" title="En/Using_audio_and_video_in_Firefox">使用 audio 和 video</a> {{ gecko_minversion_inline("1.9.2") }}</dt>
+ <dd>Firefox 3.5 開始支援 HTML5 {{ HTMLElement("audio") }} 和 {{ HTMLElement("video") }} 兩個元素。</dd>
+ <dt><a href="/zh_tw/HTML/HTML5_表單" title="zh_tw/HTML/HTML5_表單">HTML5 表單</a> {{ gecko_minversion_inline("2.0") }}</dt>
+ <dd>簡單介紹 HTML5 對於 Web 表單的改進項目：限制條件與驗證 API、多個新增的屬性、新增多個值供 {{ HTMLElement("input") }} 的 {{ htmlattrxref("type", "input") }} 屬性使用，並且新增 {{ HTMLElement("output") }} 元素。</dd>
+ <dt><a href="/en/Sections_and_Outlines_of_an_HTML5_document" title="en/Sections and Outlines of an HTML5 document">Sections 和 outlines</a> {{ gecko_minversion_inline("2.0") }}</dt>
+ <dd>HTML5 對於大綱與分段的支援元素包含有： {{ HTMLElement("section") }}、{{ HTMLElement("article") }}、{{ HTMLElement("nav") }}、{{ HTMLElement("header") }}、{{ HTMLElement("footer") }}、{{ HTMLElement("aside") }} 以及 {{ HTMLElement("hgroup") }}。</dd>
+ <dt>元素 {{ HTMLElement("mark") }} {{ gecko_minversion_inline("2.0") }}</dt>
+ <dd>元素 mark 被用在標註特別相關的重點文字。</dd>
+ <dt>元素 {{ HTMLElement("figure") }} 和 {{ HTMLElement("figcaption") }} {{ gecko_minversion_inline("2.0") }}</dt>
+ <dd>These elements lets you add figures and illustration, with an eventual caption, loosely coupled to the main text.</dd>
+</dl>
+
+<h3 id="支援_Canvas">支援 Canvas</h3>
+
+<dl>
+ <dt><a href="/zh_tw/Canvas_tutorial" title="zh_tw/Canvas_tutorial">Canvas 導覽 </a>{{ gecko_minversion_inline("1.8.1") }}</dt>
+ <dd> 學習如何使用新的 <code>{{ HTMLElement("canvas") }}</code> 元素，以及如何在 Firefox 中繪製圖表與其他物件。</dd>
+ <dt style="text-align: justify;"><a href="/en/Drawing_text_using_a_canvas" title="en/Drawing_text_using_a_canvas">給 <code>&lt;canvas&gt;</code> 元素的 HTML5 文字(text) API</a> {{ gecko_minversion_inline("1.9.1") }}</dt>
+ <dd style="text-align: justify;">{{ HTMLElement("canvas") }} 元素現在已經支援 HTML5 文字(text) API。</dd>
+</dl>
+
+<h2 id="給_Web_應用程式的新功能">給 Web 應用程式的新功能</h2>
+
+<dl>
+ <dt><a href="/zh_tw/Firefox_中的離線資源" title="zh_tw/Firefox_中的離線資源">Firefox 中的離線資源(含 HTML5 Application Cache 介紹)</a>  {{ gecko_minversion_inline("1.9.1") }}</dt>
+ <dd>Firefox 完整支援 HTML5 離線資源規格。</dd>
+ <dt><a href="/en/Online_and_offline_events" title="en/Online_and_offline_events">上線與離線事件 (Online and offline events)</a> {{ gecko_minversion_inline("1.9") }}</dt>
+ <dd>Firefox 3 支援 WHATWG 的上線與離線事件，這讓應用程式與擴充套件可以偵測目前是否有可用的 Internet 連線，也可以偵測何時建立或結束這個網路連線。</dd>
+ <dt><a href="/en/DOM/Storage" title="en/DOM/Storage">WHATWG 用戶端 session 與持續性儲存 (persistent storage) (亦稱 DOM 儲存)</a> {{ gecko_minversion_inline("1.8.1") }}</dt>
+ <dd>用戶端 session 與持續性儲存功能，讓 web 應用程式可以在用戶端儲存結構性資料。</dd>
+ <dt><a href="/en/HTML/Content_Editable" title="en/HTML/Content Editable">屬性 contentEditable ，將你的網站變成 wiki !</a> {{ gecko_minversion_inline("1.9.1") }}</dt>
+ <dd>HTML5 已經將 contentEditable 屬性標準化。學習更多這個新功能。</dd>
+ <dt><a href="/en/Using_files_from_web_applications" title="en/Using_files_from_web_applications">在 web 應用程式中存取檔案</a> {{ gecko_minversion_inline("1.9.2") }}</dt>
+ <dd>Gecko 已經支援新的 HTML5 檔案 API，讓 web 應用程式可以存取使用者所選的本地端檔案。這個功能也包含使用檔案類型的輸入元素 <span style="font-family: monospace;">{{ HTMLElement("input") }}</span>  <a href="/en/HTML/Element/Input#attr-type" title="en/HTML/Element/input#attr-type"><strong>type</strong></a> <span style="font-family: courier new;">file</span> 的新屬性 <a href="/en/HTML/Element/Input#attr-multiple" title="en/HTML/Element/input#attr-multiple"><strong>multiple</strong></a> 來選取多個檔案。</dd>
+</dl>
+
+<h2 id="DOM_新功能">DOM 新功能</h2>
+
+<dl>
+ <dt><a href="/en/DOM/document.getElementsByClassName" title="en/DOM/document.getElementsByClassName">getElementsByClassName</a></dt>
+ <dd>支援 Document 與 Element 節點的 getElementsByClassName 方法。這個方法允許藉由指定的一個或多個 class 尋找頁面中的元素。</dd>
+ <dt><a href="/zh_tw/DragDrop/Drag_and_Drop" title="zh_tw/DragDrop/Drag_and_Drop">拖曳功能 (Drag and drop)</a></dt>
+ <dd>HTML5 拖曳 API 支援在一個或多個網站之間拖曳物件。也提供了一個更簡化的 API 供擴充套件與 Mozilla-based 應用程式使用。</dd>
+ <dt><a href="/en/Focus_management_in_HTML" title="en/Focus_management_in_HTML">HTML Focus 管理</a></dt>
+ <dd>支援新的 HTML5 屬性：<code>activeElement</code> 與 <code>hasFocus</code> 。</dd>
+ <dt><a href="/en/Web-based_protocol_handlers" title="en/Web-based_protocol_handlers">Web-based 協定處理器</a></dt>
+ <dd>你現在可以使用 <code>navigator.registerProtocolHandler() 方法</code>將 web 應用程式註冊成協定處理器 (protocol handlers)。</dd>
+</dl>
+
+<h2 id="HTML_解析器">HTML 解析器</h2>
+
+<p>Gecko 的 <a href="/en/HTML/HTML5/HTML5_Parser" title="en/HTML/HTML5/HTML5 parser">HTML5相容解析器 </a>— 負責將一份 HTML 文件字元們轉化為 DOM — 已經於 2010 年五月預設為啟用。（備忘：該 HTML5 解析器版本搭載於 Gecko 1.9.2 / Firefox 3.6 當中，是個不穩定的版本，並且不建議用於正式使用環境。）</p>
+
+<h2 id="其他">其他</h2>
+
+<ul>
+ <li>HTML 文件中的 <code>localName</code> 與 <code>namespaceURI</code> ，現在可以實作類似在 XML 文件中的行為：<code>localName</code> 傳回小寫字元，而 <code>namespaceURI</code> 對於 HTML 元素是 <code>"<a class="external" href="http://www.w3.org/1999/xhtml" rel="external nofollow" title="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>" </code></li>
+ <li>當頁面 URI 的片段標示 （在 "#" (hash) 字元之後的部份）有變更時，新的 <code>hashchange</code> 事件會被送至該頁面。 請參考 <a href="/en/DOM/window.onhashchange" title="en/DOM/window.onhashchange">window.onhashchange</a>。</li>
+ <li>支援 <code><a href="/en/DOM/element.classList" title="en/DOM/element.classList">element.classList</a></code> ，可以更方便處理 class 屬性。</li>
+ <li>文件就緒事件 <a href="/en/DOM/document.onreadystatechange" title="en/DOM/document.onreadystatechange">document.onreadystatechange</a> 以及 <a href="/en/DOM/document.readyState" title="en/DOM/document.readyState">document.readyState</a> 也被支援了。</li>
+ <li>Colors in presentation attributes are interpreted according to HTML5.</li>
+</ul>
+
+<h2 id="有些人自以為它是_HTML5_的一部分……XD">有些人自以為它是 HTML5 的一部分……XD</h2>
+
+<ul>
+ <li><a href="/en/WebGL" title="en/WebGL">WebGL</a></li>
+ <li><a href="/en/DOM/FileReader" title="en/DOM/FileReader"><code>FileReader</code></a></li>
+ <li><code><a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest">XMLHttpRequest</a></code></li>
+ <li><code><a href="/en/DOM/Locating_DOM_elements_using_selectors" title="en/DOM/Locating DOM elements using selectors">querySelector(All)</a></code></li>
+ <li><a href="/En/Using_geolocation" title="En/Using geolocation">Geolocation</a></li>
+ <li><a href="/en/JavaScript/ECMAScript_5_support_in_Mozilla" title="en/JavaScript/ECMAScript 5 support in Mozilla">ECMAScript5</a></li>
+ <li>CSS3</li>
+ <li><a href="/en/XBL2_specification_(external)" title="en/XBL2 specification (external)">XBL2</a></li>
+ <li><a href="/En/DOM/Using_web_workers" title="En/Using web workers">Web Workers</a></li>
+ <li><a href="/zh_tw/WebSockets" title="zh tw/WebSockets">Web Sockets</a></li>
+ <li>Faster JavaScript</li>
+</ul>
+
+<h2 id="參考">參考</h2>
+
+<ul>
+ <li><a href="/Firefox/Releases/4" rel="internal">Firefox 4 技術文件</a></li>
+ <li><a href="/Firefox/Releases/3.6" title="en/Firefox 3.6 for developers">Firefox 3.6 技術文件</a></li>
+ <li><a href="/Firefox/Releases/3.5" title="En/Firefox 3.5 for developers">Firefox 3.5 技術文件</a></li>
+ <li><a href="/Firefox/Releases/3" title="en/Firefox 3 for developers">Firefox 3 技術文件</a></li>
+ <li><a href="/Firefox/Releases/2" title="en/Firefox 2 for developers">Firefox 2 技術文件</a></li>
+ <li><a href="/Firefox/Releases/1.5" title="en/Firefox 1.5 for developers">Firefox 1.5 技術文件</a></li>
+</ul>

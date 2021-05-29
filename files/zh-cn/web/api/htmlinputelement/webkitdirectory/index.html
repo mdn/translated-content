@@ -1,0 +1,142 @@
+---
+title: HTMLInputElement.webkitdirectory
+slug: Web/API/HTMLInputElement/webkitdirectory
+tags:
+- API
+- File System API
+- File and Directory Entries API
+- Files
+- HTML DOM
+- HTMLInputElement
+- Non-standard
+- Property
+- Reference
+- Web
+- webkitdirectory
+translation_of: Web/API/HTMLInputElement/webkitdirectory
+---
+<p>{{APIRef("HTML DOM")}}{{non-standard_header}}</p>
+
+<p><span class="seoSummary">
+    <code><strong>HTMLInputElement.webkitdirectory</strong></code>是属于{{HTMLElement("input")}}元素的一个HTML属性{{htmlattrxref("webkitdirectory", "input")}}，它指示<code>&lt;input&gt;</code>元素应该允许用户选择文件目录，而不是文件。当一个文件目录被选中，该目录及其整个内容层次结构将包含在所选项目集里面。可以使用{{domxref("HTMLInputElement.webkitEntries",
+    "webkitEntries")}}属性获取选定的文件系统条目。</span></p>
+
+<h2 id="Syntax">语法</h2>
+
+<pre
+  class="brush: js"> <em>HTMLInputElement</em>.webkitdirectory = <em>boolValue</em></pre>
+
+<h3 id="Value">值</h3>
+
+<p>一个布尔值; 如果设置为<code>true</code>，则{{HTMLElement("input")}}元素只允许选择目录；如果设置为<code>false</code>，则只允许选择文件。</p>
+
+<h2 id="Understanding_the_results">了解结果</h2>
+
+<p>在用户进行选择后，<code>files</code>里的每个{{domxref("File")}}对象都会将其拥有的{{domxref("File.webkitRelativePath")}}属性设置为所选目录内文件所在的相对路径。例如，考虑以下文件系统：</p>
+
+<ul>
+  <li>PhotoAlbums
+    <ul>
+      <li>Birthdays
+        <ul>
+          <li>Jamie's 1st birthday
+            <ul>
+              <li>PIC1000.jpg</li>
+              <li>PIC1004.jpg</li>
+              <li>PIC1044.jpg</li>
+            </ul>
+          </li>
+          <li>Don's 40th birthday
+            <ul>
+              <li>PIC2343.jpg</li>
+              <li>PIC2344.jpg</li>
+              <li>PIC2355.jpg</li>
+              <li>PIC2356.jpg</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Vacations
+        <ul>
+          <li>Mars
+            <ul>
+              <li>PIC5533.jpg</li>
+              <li>PIC5534.jpg</li>
+              <li>PIC5556.jpg</li>
+              <li>PIC5684.jpg</li>
+              <li>PIC5712.jpg</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>如果用户选择了<code>PhotoAlbums</code>，则文件列表上将会包含上面列出的每个文件的{{domxref("File")}}对象，而不是文件目录。条目<code>PIC2343.jpg</code>的<code>webkitRelativePath</code>属性将会得到<code>PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg</code>的值。即使{{domxref("FileList")}}是扁平的，这也使得知道层次结构成为可能。</p>
+
+<div class="note">
+  <p><strong>注意：</strong>在<em>Chromium &lt; 72</em>里，<code>webkitRelativePath</code>的行为表现有所不同。有关更多详细信息，请参见<a
+      href="https://bugs.chromium.org/p/chromium/issues/detail?id=124187">此bug</a>。</p>
+</div>
+
+<h2 id="Example">示例</h2>
+
+<p>在这个例子中，提供了一个目录选择器，它使用户可以选择一个或多个目录。当{{event("change")}}事件被触发的时候，将生成并显示所选目录层次结构中包含的所有文件的列表。</p>
+
+<h3 id="HTML_content">HTML内容</h3>
+
+<pre class="brush: html">&lt;input type="file" id="filepicker" name="fileList" webkitdirectory multiple /&gt;
+&lt;ul id="listing"&gt;&lt;/ul&gt;</pre>
+
+<h3 id="JavaScript_content">JavaScript内容</h3>
+
+<pre class="brush: js">document.getElementById("filepicker").addEventListener("change", function(event) {
+  let output = document.getElementById("listing");
+  let files = event.target.files;
+
+  for (let i=0; i&lt;files.length; i++) {
+    let item = document.createElement("li");
+    item.innerHTML = files[i].webkitRelativePath;
+    output.appendChild(item);
+  };
+}, false);
+</pre>
+
+<h3 id="Result">结果</h3>
+
+<p>{{ EmbedLiveSample('Example') }}</p>
+
+<h2 id="Specifications">规范</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ SpecName('File System API', '#dom-htmlinputelement-webkitdirectory',
+        'webkitdirectory') }}</td>
+      <td>{{ Spec2('File System API') }}</td>
+      <td>Initial specification.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>这个API没有官方的W3C或者WHATWG规范。</p>
+
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
+
+<p>{{Compat("api.HTMLInputElement.webkitdirectory")}}</p>
+
+<h2 id="See_also">参见</h2>
+
+<ul>
+  <li><a href="/zh-CN/docs/Web/API/File_and_Directory_Entries_API">文件和目录条目API</a></li>
+  <li>{{domxref("HTMLInputElement.webkitEntries")}}</li>
+  <li>{{domxref("File.webkitRelativePath")}}</li>
+</ul>

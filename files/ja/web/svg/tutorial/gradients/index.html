@@ -1,26 +1,25 @@
 ---
-title: SVGにおける階調度
+title: SVG におけるグラデーション
 slug: Web/SVG/Tutorial/Gradients
 tags:
+  - Intermediate
   - SVG
   - 'SVG:Tutorial'
 translation_of: Web/SVG/Tutorial/Gradients
 ---
-<p>{{ PreviousNext("SVG/Tutorial/Fills_and_Strokes", "SVG/Tutorial/Patterns") }}</p>
+<p>{{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}</p>
 
-<p>恐らく，単なる塗り潰しや枠線より刺激的であるのは，塗り潰しや枠線と同様に<ruby>階調度<rp> (</rp><rt>gradients</rt><rp>)</rp></ruby>もまた作成・適用できるという事実でしょう。</p>
+<p>単なる塗り潰しや線だけではなく、グラデーション (gradients) も塗り潰しや線として作成・適用できるのが魅力です。</p>
 
-<p>階調度の種別には線状・放射状の二つがあります。当該階調度には<code>id</code>属性を与え<strong>なければならず</strong>，さもなくばファイル内部の他要素が参照できません。階調度は，再利用性を高める為に，〔オブジェクトの〕形状それ自身とは対照的に，<code>defs</code>セクションにおいて定義します。</p>
+<p>グラデーションには、線形と放射状の 2 種類があります。グラデーションには <code>id</code> 属性を与え<strong>なければならず</strong>、そうしないとファイル内の他の要素から参照できません。グラデーションは、再利用性を高めるために、シェイプそのものではなく、 defs セクションで定義されます。</p>
 
-<h2 id="線状階調度">線状階調度</h2>
+<h2 id="SVGLinearGradient">線形グラデーション</h2>
 
-<p><ruby>線状階調度<rp> (</rp><rt>linear gradients</rt><rp>)</rp></ruby>は真っ直ぐな線に沿って〔色が〕変化します。挿入するには，{{SVGElement('linearGradient')}}ノードをSVGファイルの定義セクションの内部に作成します。</p>
+<p>線形グラデーション (linear gradients) は直線に沿って色が変化します。挿入するには、 {{SVGElement('linearGradient')}} ノードを SVG ファイルの定義セクションの内部に作成します。</p>
 
-<h3 id="基本例">基本例</h3>
+<h3 id="Basic_example">基本的な例</h3>
 
-<pre class="brush: xml">&lt;?xml version="1.0" standalone="no"?&gt;
-
-&lt;svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;defs&gt;
       &lt;linearGradient id="Gradient1"&gt;
         &lt;stop class="stop1" offset="0%"/&gt;
@@ -43,72 +42,67 @@ translation_of: Web/SVG/Tutorial/Gradients
   &lt;rect id="rect1" x="10" y="10" rx="15" ry="15" width="100" height="100"/&gt;
   &lt;rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#Gradient2)"/&gt;
 
-&lt;/svg&gt;
-</pre>
+&lt;/svg&gt;</pre>
 
 <p>{{ EmbedLiveSample('SVGLinearGradient','120','240','/files/722/SVG_Linear_Gradient_Example.png') }}</p>
 
-<p>上記は<code>&lt;rect&gt;</code>要素に線状階調度を適用する例です。線状階調度の内部には複数の{{SVGElement('stop')}}ノードがあります。これらのノードは，階調度の或る位置における色を，位置については<code>offset</code>属性，〔色については〕<code>stop-color</code>属性を指定することで定めます。直接又はCSSを通して割り当てられます。本例示用に，二つの手法を混合しています。具体的には，これは階調度に対して赤色から開始し，中間で透過黒色に変化し，そして青色で終了するよう指示しています。必要なだけの美醜たる混合〔色〕を作成する為に，好きなだけ<ruby>停止色<rp> (</rp><rt>stop color</rt><rp>)</rp></ruby>を挿入できますが，<ruby>相対位置<rp> (</rp><rt>offset</rt><rp>)</rp></ruby>は常に0%（又はパーセント記号を省きたいなら0）から100%（又は1）に増加するべきです。値が重複した場合，当該XML木の最遠下で割り当てられた<code>&lt;stop&gt;</code>要素が用いられます。又，塗り潰し及び枠線と同様に，その場所の透明度を設定するのに<code>stop-opacity</code>属性を指定できます（この場合でも，FF3においてはRGBA値をこの目的に用いることができます）。</p>
+<p>上記の例では、 <code>&lt;rect&gt;</code> 要素に線形グラデーションを適用します。線形グラデーションの内部には複数の {{SVGElement('stop')}} ノードがあります。これらのノードは、グラデーションのある位置における色を、位置については <code>offset</code> 属性、色については <code>stop-color</code> 属性で指定します。この属性は、直接指定することも、 CSS で指定することもできます。この例では、二つの方法を混在させています。具体的には、グラデーションに対して赤色から開始し、中間で透明な黒に変化し、そして青色で終了するよう指示しています。必要に応じて美しくも醜くもある混色を作ることができますが、オフセットは常に 0% (または % 記号を削除したい場合は 0) から 100% (または 1) まで増加させる必要があります。重複した値は、 XML ツリーの一番下に割り当てられている経由点を使用します。また、 fill や stroke と同様に、 <code>stop-opacity</code> 属性を指定することで、その位置での不透明度を設定することができます (FF3 では、 rgba 値を使って行うこともできます)。</p>
 
-<pre class="brush: xml"> &lt;stop offset="100%" stop-color="yellow" stop-opacity="0.5"/&gt;
+<pre class="eval"> &lt;stop offset="100%" stop-color="yellow" stop-opacity="0.5"/&gt;
 </pre>
 
-<p>階調度を用いるには，対象の<code>fill</code>又は<code>stroke</code>属性からそれを参照せねばなりません。これは，<code>url</code>を用いてCSS中の要素を参照する遣り方と同じことをしています。この場合，当URLは，独特な識別子である「Gradient」を与えた階調度への単なる参照です。適用するには，<code>fill</code>を<code>url(#Gradient)</code>に設定して，ジャジャーン！ <code>stroke</code>についても同じことができます。</p>
+<p>グラデーションを使用するには、オブジェクトの <code>fill</code> または <code>stroke</code> 属性から参照する必要があります。これは、 CSS で要素を参照するのと同様に、 <code>url</code> を使って行います。今回の場合は、 url はグラデーションへの参照であり、クリエイティブ ID として "Gradient" を与えました。これをアタッチするには、 <code>fill</code> を <code>url(#Gradient)</code> に設定してください。これでオブジェクトが多色になりました。 <code>stroke</code> でも同じことができます。</p>
 
-<p><code>&lt;linearGradient&gt;</code>要素はまた，階調度の大きさ及び見栄えを指定するような他の属性を幾つか持っています。<code>x1</code>，<code>x2</code>，<code>y1</code>，及び<code>y2</code>属性で指定された二点で階調度の方向を制御します。これらの属性は階調度が進み沿う直線を定めます。階調度は水平方向に既定されていますが，これらの属性を変えることで回転させられます。上例におけるGradient2は垂直の階調度を作成するよう設計されています。</p>
+<p><code>&lt;linearGradient&gt;</code> 要素は、他にもいくつかの属性を持ち、グラデーションの大きさや外観を指定します。グラデーションの方向は、 <code>x1</code>, <code>x2</code>, <code>y1</code>, <code>y2</code> という属性で指定された 2 つの点によって制御されます。これらの属性は、グラデーションが移動する線を定義します。グラデーションのデフォルトは水平方向ですが、これらを変更することで回転させることができます。上の例の Gradient2 は、垂直方向のグラデーションを作成するように設計されています。</p>
 
-<pre class="brush: xml"> &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"&gt;
+<pre class="eval"> &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"&gt;
 </pre>
 
-<div class="note">
-<p><strong>注意:</strong> 階調度に<code>xlink:href</code>属性を用いることもできます。これを用いた際は，一つの階調度からの〔<code>&lt;linearGradient&gt;</code>要素の〕属性及び<ruby>色停<rp> (</rp><rt>stop</rt><rp>)</rp></ruby>を別の階調度に組み入れられます。上例においては，Gradient2において全ての色停を再作成しなくてもよくなります。</p>
+<div class="note"><strong>注:</strong> グラデーションに <code>xlink:href</code> 属性を用いることもできます。これを使用すると、あるグラデーションの属性や経由点を別のグラデーションに含めることができます。上記の例では、 Gradient2 のすべての経由点を再作成する必要はありません。
 
-<pre class="brush: xml"> &lt;linearGradient id="Gradient1"&gt;
+<pre class="eval"> &lt;linearGradient id="Gradient1"&gt;
    &lt;stop id="stop1" offset="0%"/&gt;
    &lt;stop id="stop2" offset="50%"/&gt;
    &lt;stop id="stop3" offset="100%"/&gt;
  &lt;/linearGradient&gt;
  &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"
-    xmlns:xlink="<a class="external" href="http://www.w3.org/1999/xlink" rel="freelink">http://www.w3.org/1999/xlink</a>" xlink:href="#Gradient1"/&gt;
+    xmlns:xlink="<a href="https://www.w3.org/1999/xlink">http://www.w3.org/1999/xlink</a>" xlink:href="#Gradient1"/&gt;
 </pre>
+ここでは xlink 名前空間を、通常は文書の先頭にて定義するものですが、このノードで直接定義しました。詳細は<a href="/ja/docs/Web/SVG/Tutorial/Other_content_in_SVG">画像について説明する際</a>に述べます。</div>
 
-<p>ここではxlink名前空間を，通常は文書の先頭にて定義するにも拘らず，当該ノード上で直接定義しました。詳細は<a href="/ja/docs/Web/SVG/Tutorial/Other_content_in_SVG">画像について説明する際</a>に述べます。</p>
-</div>
+<h2 id="Radial_Gradient">放射状グラデーション</h2>
 
-<h2 id="放射状階調度">放射状階調度</h2>
+<p>放射状グラデーションは線形グラデーションに似ていますが、ある点から放射状にグラデーションを描画します。これを作成するには {{SVGElement('radialGradient')}} 要素を文書の定義セクションに追加します。</p>
 
-<p>放射状のグラデーションは直線上のグラデーションに似ていますが、ある点から放射状にグラデーションを描画します。これを作成するには <a href="/ja/SVG/Element/radialGradient" title="ja/SVG/Element/radialGradient"><code>&lt;radialGradient&gt;</code></a> 要素をドキュメントの定義セクションに追加します。</p>
+<h3 id="Basic_example_2">基本的な例</h3>
 
-<p><img alt="" class="internal" src="/@api/deki/files/351/=SVG_Radial_Gradient_Example.png" style="float: right;"></p>
-
-<pre>&lt;?xml version="1.0" standalone="no"?&gt;
-
-&lt;svg width="120" height="240" version="1.1"
-  xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;?xml version="1.0" standalone="no"?&gt;
+&lt;svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;defs&gt;
-      &lt;radialGradient id="Gradient1"&gt;
+      &lt;radialGradient id="RadialGradient1"&gt;
         &lt;stop offset="0%" stop-color="red"/&gt;
         &lt;stop offset="100%" stop-color="blue"/&gt;
       &lt;/radialGradient&gt;
-      &lt;radialGradient id="Gradient2" cx="0.25" cy="0.25" r="0.25"&gt;
+      &lt;radialGradient id="RadialGradient2" cx="0.25" cy="0.25" r="0.25"&gt;
         &lt;stop offset="0%" stop-color="red"/&gt;
         &lt;stop offset="100%" stop-color="blue"/&gt;
       &lt;/radialGradient&gt;
   &lt;/defs&gt;
 
-  &lt;rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#Gradient1)"/&gt;
-  &lt;rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#Gradient2)"/&gt;
+  &lt;rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#RadialGradient1)"/&gt;
+  &lt;rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#RadialGradient2)"/&gt;
 
-&lt;/svg&gt;
-</pre>
+&lt;/svg&gt;</pre>
 
-<p>ここで用いている stop は前出のものと同じですが、ここではオブジェクトの中心が赤色になり、そこから縁の青色に向けて全方向の色が変化します。直線上のグラデーションと同様に、<code>&lt;radialGradient&gt;</code> ノードも位置や方向を指定する属性を持つことができます。しかし直線上のグラデーションと異なり、これらはやや複雑です。放射状のグラデーションでも 2 つの点が定義され、それらはグラデーションの端がどこかを定義します。1 点目はグラデーションが終わる場所を囲む円を定義します。これは <code>cx</code> および <code>cy</code> 属性で定義する中心と、<code>r</code> 属性で定義する半径が必要です。これら 3 つの属性を設定することで、前出の例の 2 番目の長方形で表したように、グラデーションの中心の移動やサイズの変更ができます。</p>
+<p>{{ EmbedLiveSample('Basic_example_2','120','240','/files/726/SVG_Radial_Gradient_Example.png') }}</p>
 
-<p>2 点目は焦点と呼ばれ、 <code>fx</code> および <code>fy</code> 属性で定義します。1 点目がグラデーションの端がどこかを示すのに対して、焦点はグラデーションの中心がどこかを示します。これは例を見るとわかりやすくなります。</p>
+<p>ここで使われている経由点は先ほどと同じですが、今度はオブジェクトの中央が赤になり、すべての方向の端が青になるように徐々に変化します。線形グラデーションと同様に、 <code>&lt;radialGradient&gt;</code> ノードは、その位置と方向を表すいくつかの属性を取ることができます。しかし、線形グラデーションとは異なり、もう少し複雑です。放射状グラデーションも 2 つの点によって定義され、その端がどこにあるかを決定します。 1 つ目の点は、グラデーションが終わる円を定義します。この円には、 <code>cx</code> および <code>cy</code> 属性で指定される中心点と、半径 <code>r</code> が必要です。これら 3 つの属性を設定することで、上の 2 つ目の <code>rect</code> に示すように、グラデーションを移動したり、大きさを変更したりすることができます。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/352/=SVG_Radial_Grandient_Focus_Example.png" style="float: right;"></p>
+<p>2 つ目の点は焦点と呼ばれ、 <code>fx</code> および <code>fy</code> 属性で定義します。 1 点目がグラデーションの端がどこかを示すのに対して、焦点はグラデーションの中心がどこかを示します。これは例を見るとわかりやすくなります。</p>
 
-<pre>&lt;?xml version="1.0" standalone="no"?&gt;
+<h3 id="Center_and_focal_point">中心と焦点</h3>
+
+<pre class="brush: html">&lt;?xml version="1.0" standalone="no"?&gt;
 
 &lt;svg width="120" height="120" version="1.1"
   xmlns="http://www.w3.org/2000/svg"&gt;
@@ -129,40 +123,59 @@ translation_of: Web/SVG/Tutorial/Gradients
   &lt;text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt"&gt;(fx,fy)&lt;/text&gt;
   &lt;text x="63" y="63" fill="white" font-family="sans-serif" font-size="10pt"&gt;(cx,cy)&lt;/text&gt;
 
-&lt;/svg&gt;
-</pre>
+&lt;/svg&gt;</pre>
 
-<p>焦点が先に定義した円の外側に移動した場合はグラデーションを正しく描画することができませんので、焦点は円の縁にあるものとみなされるでしょう。また焦点を定義しない場合は、円の中心と同じ場所であるとみなします。</p>
+<p>{{ EmbedLiveSample('Center_and_focal_point','120','120','/files/727/SVG_Radial_Grandient_Focus_Example.png') }}</p>
 
-<p>どちらのグラデーションも、{{ 原語併記("変換", "Transformations") }}などさまざまなことを定義する属性を持ちます。その中で、ここで説明したい属性は <code>spreadMethod</code> です。この属性は、グラデーションが終端に達したにもかかわらずオブジェクトがすべて塗りつぶされていない場合にどうするかを制御します。この属性は "pad"、"reflect"、または "repeat" の 3 種類の値をとることができます。"pad" はこれまで見てきたものです。グラデーションが終端に達すると最後の offset の色を、オブジェクトの残りの部分の塗りつぶしに用います。"reflect" はグラデーションを継続しますが、offset が 100% の色から始まり 0% の色へ戻るように逆向きのグラデーションを行い、その後さらに逆向きのグラデーションを行います。"repeat" もグラデーションを継続しますが、逆向きにグラデーションするのではなく最初の色から再びグラデーションを始めます。</p>
+<p>焦点が先ほどの円の外側に移動してしまうと、グラデーションが正しく描画されないため、スポットは円の縁の中にあるとみなされます。焦点がまったく与えられていない場合は、中心点と同じ場所にあると仮定されます。</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/353/=SVG_SpreadMethod_Example.png" style="float: right;"></p>
+<p>線形グラデーションと放射状グラデーションには、他にもいくつかの属性があり、それらが受けるであろう変換を記述します。ここで言及したい唯一の属性は <code>spreadMethod</code> 属性です。この属性は、グラデーションが終了しても、オブジェクトがまだ塗りつぶされていない場合にどうするかを制御します。この属性は、 "pad", "reflect", "repeat" の 3 つの値のいずれかを取ることができます。 "pad" は、これまで見てきたものです。グラデーションが終了すると、最終的なオフセットカラーがオブジェクトの残りの部分を埋めるために使用されます。 "reflect" は、グラデーションを継続させますが、逆に反射させます。 100% のオフセットカラーから始まり、 0% のオフセットに戻り、また上に戻ります。 "Repeat" もグラデーションを継続させますが、逆に進むのではなく、最初にジャンプして再度実行します。</p>
 
-<pre>&lt;?xml version="1.0" standalone="no"?&gt;
+<h3 id="spreadMethod">spreadMethod</h3>
+
+<pre class="brush: html">&lt;?xml version="1.0" standalone="no"?&gt;
 
 &lt;svg width="220" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
-  &lt;defs&gt;
-      &lt;radialGradient id="Gradient"
-            cx="0.5" cy="0.5" r="0.25" fx=".25" fy=".25"
-            spreadMethod="repeat"&gt;
-        &lt;stop offset="0%" stop-color="red"/&gt;
-        &lt;stop offset="100%" stop-color="blue"/&gt;
-      &lt;/radialGradient&gt;
-  &lt;/defs&gt;
-  &lt;rect x="50" y="50" rx="15" ry="15" width="100" height="100"
-       fill="url(#Gradient)"/&gt;
-&lt;/svg&gt;
-</pre>
+  &lt;defs&gt;
+      &lt;radialGradient id="GradientPad"
+            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+            spreadMethod="pad"&gt;
+        &lt;stop offset="0%" stop-color="red"/&gt;
+        &lt;stop offset="100%" stop-color="blue"/&gt;
+      &lt;/radialGradient&gt;
+      &lt;radialGradient id="GradientRepeat"
+            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+            spreadMethod="repeat"&gt;
+        &lt;stop offset="0%" stop-color="red"/&gt;
+        &lt;stop offset="100%" stop-color="blue"/&gt;
+      &lt;/radialGradient&gt;
+      &lt;radialGradient id="GradientReflect"
+            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+            spreadMethod="reflect"&gt;
+        &lt;stop offset="0%" stop-color="red"/&gt;
+        &lt;stop offset="100%" stop-color="blue"/&gt;
+      &lt;/radialGradient&gt;
+  &lt;/defs&gt;
+
+  &lt;rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#GradientPad)"/&gt;
+  &lt;rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientRepeat)"/&gt;
+  &lt;rect x="120" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientReflect)"/&gt;
+
+  &lt;text x="15" y="30" fill="white" font-family="sans-serif" font-size="12pt"&gt;Pad&lt;/text&gt;
+  &lt;text x="15" y="140" fill="white" font-family="sans-serif" font-size="12pt"&gt;Repeat&lt;/text&gt;
+  &lt;text x="125" y="140" fill="white" font-family="sans-serif" font-size="12pt"&gt;Reflect&lt;/text&gt;
+
+&lt;/svg&gt;</pre>
+
+<p>{{ EmbedLiveSample('spreadMethod','220','220','/files/728/SVG_SpreadMethod_Example.png') }}</p>
 
 <p>余談ですがどちらのグラデーションも、グラデーションのサイズや方向を示すときに用いる単位系を定義する <code>gradientUnits</code> 属性を持ちます。この属性は <code>userSpaceOnUse</code> または <code>objectBoundingBox</code> という値を用いることができます。<code>objectBoundingBox</code> は既定値であり、これまで見てきたものです。この値はグラデーションをオブジェクトのサイズに調整するものであるため座標を 0 から 1 の間の値で指定する必要があり、その値は自動的に対象のオブジェクトの大きさに合わせて調整されます。<code>userSpaceOnUse</code> は絶対的な単位をとります。従ってオブジェクトがどこにあるかを知る必要があり、またグラデーションを同じ場所に置かなければなりません。前出の radialGradient は以下のように書き換えることができます:</p>
 
 <pre class="eval"> &lt;radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse"&gt;
 </pre>
 
-<p><code>gradientTransform</code> 属性を用いてグラデーションを変換させることもできますが、まだ<a href="/ja/SVG/Tutorial/Basic_Transformations" title="ja/SVG/Tutorial/Basic Transformations">{{ 原語併記("変換", "Transformations") }}の紹介</a> を行っていないため、後で説明します。</p>
+<p><code>gradientTransform</code> 属性を用いてグラデーションを変換させることもできますが、まだ<a href="/ja/docs/Web/SVG/Tutorial/Basic_Transformations">変換の紹介</a>を行っていないため、後で説明します。</p>
 
 <p>以上の他に、オブジェクトを包み込むボックスが長方形ではない場合に <code>gradientUnits="objectBoundingBox"</code> で値を扱うときの注意事項がありますが、それらはやや複雑であり、またそれの説明に詳しい方が現れるのを待たなければなりません。</p>
 
-<p>{{ PreviousNext("SVG/Tutorial/Fills_and_Strokes", "SVG/Tutorial/Patterns") }}</p>
-
-<p>{{ languages( { "en": "en/SVG/Tutorial/Gradients"} ) }}</p>
+<p>{{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}</p>
