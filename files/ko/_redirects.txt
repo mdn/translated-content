@@ -453,7 +453,7 @@
 /ko/docs/Learn/JavaScript/Objects/얼마나_이해했는지_확인해보자:_JSON	/ko/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON
 /ko/docs/Learn/Server-side/Express_Nodejs/개발_환경	/ko/docs/Learn/Server-side/Express_Nodejs/development_environment
 /ko/docs/Learn/Server-side/Express_Nodejs/스켈레톤_웹사이트	/ko/docs/Learn/Server-side/Express_Nodejs/skeleton_website
-/ko/docs/Learn/Skills	/ko/docs/conflicting/Learn
+/ko/docs/Learn/Skills	/ko/docs/Learn
 /ko/docs/Learn/WebGL/By_example	/ko/docs/Web/API/WebGL_API/By_example
 /ko/docs/Learn/WebGL/By_example/Clearing_by_clicking	/ko/docs/Web/API/WebGL_API/By_example/Clearing_by_clicking
 /ko/docs/Learn/WebGL/By_example/Detect_WebGL	/ko/docs/Web/API/WebGL_API/By_example/Detect_WebGL
