@@ -20530,12 +20530,6 @@
       "glrodasz"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:24:00.271Z",
-    "contributors": [
-      "nachofelpete"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-03-12T19:37:28.144Z",
     "contributors": [
@@ -23664,6 +23658,12 @@
     "contributors": [
       "lajaso",
       "humbertaco"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:24:00.271Z",
+    "contributors": [
+      "nachofelpete"
     ]
   },
   "orphaned/Web/SVG/SVG_en_Firefox_1.5": {

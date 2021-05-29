@@ -2401,6 +2401,7 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /es/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RangeError
+/es/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/es/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Referencia/Acerca_de	/es/docs/Web/JavaScript/Reference/About
 /es/docs/Web/JavaScript/Referencia/Características_Desaprobadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -2797,7 +2798,7 @@
 /es/docs/Web/JavaScript/Referencia/Operadores/Operadores_especiales/Operador_this	/es/docs/Web/JavaScript/Reference/Operators/this
 /es/docs/Web/JavaScript/Referencia/Operadores/Operadores_lógicos	/es/docs/conflicting/Web/JavaScript/Reference/Operators_e72d8790e25513408a18a5826660f704
 /es/docs/Web/JavaScript/Referencia/Operadores/Operator_Precedence	/es/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
-/es/docs/Web/JavaScript/Referencia/Operadores/Pipeline_operator	/es/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
+/es/docs/Web/JavaScript/Referencia/Operadores/Pipeline_operator	/es/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /es/docs/Web/JavaScript/Referencia/Operadores/Resto	/es/docs/Web/JavaScript/Reference/Operators/Remainder
 /es/docs/Web/JavaScript/Referencia/Operadores/Sintaxis_Spread	/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /es/docs/Web/JavaScript/Referencia/Operadores/Spread_operator	/es/docs/conflicting/Web/JavaScript/Reference/Operators/Spread_syntax

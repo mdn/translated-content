@@ -40432,12 +40432,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T21:59:06.221Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:16:58.418Z",
     "contributors": [
@@ -45266,6 +45260,12 @@
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
     "modified": "2020-10-15T21:30:59.712Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T21:59:06.221Z",
     "contributors": [
       "SphinxKnight"
     ]

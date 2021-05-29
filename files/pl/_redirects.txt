@@ -2504,6 +2504,7 @@
 /pl/docs/Web/JavaScript/Reference/Errors/Brakujący_średnik_po_własności_id	/pl/docs/Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 /pl/docs/Web/JavaScript/Reference/Functions/Funkcje_strzalkowe	/pl/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /pl/docs/Web/JavaScript/Reference/Functions/Parametry_domyślne	/pl/docs/Web/JavaScript/Reference/Functions/Default_parameters
+/pl/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/pl/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /pl/docs/Web/JavaScript/Referencje	/pl/docs/Web/JavaScript/Reference
 /pl/docs/Web/JavaScript/Referencje/Funkcje	/pl/docs/Web/JavaScript/Reference/Global_Objects
 /pl/docs/Web/JavaScript/Referencje/Funkcje/Boolean	/pl/docs/Web/JavaScript/Reference/Global_Objects/Boolean
@@ -2799,7 +2800,7 @@
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_in	/pl/docs/Web/JavaScript/Reference/Operators/in
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_instanceof	/pl/docs/Web/JavaScript/Reference/Operators/instanceof
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_new	/pl/docs/Web/JavaScript/Reference/Operators/new
-/pl/docs/Web/JavaScript/Referencje/Operatory/Operator_potoku	/pl/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
+/pl/docs/Web/JavaScript/Referencje/Operatory/Operator_potoku	/pl/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_przecinkowy	/pl/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_typeof	/pl/docs/Web/JavaScript/Reference/Operators/typeof
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_void	/pl/docs/Web/JavaScript/Reference/Operators/void

@@ -872,6 +872,7 @@
 /de/docs/Web/JavaScript/Reference/Operators/Modulo	/de/docs/Web/JavaScript/Reference/Operators/Remainder
 /de/docs/Web/JavaScript/Reference/Operators/Objekt_Initialisierer	/de/docs/Web/JavaScript/Reference/Operators/Object_initializer
 /de/docs/Web/JavaScript/Reference/Operators/Optionale_Verkettung	/de/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+/de/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/de/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /de/docs/Web/JavaScript/Reference/Operators/Spread_operator	/de/docs/conflicting/Web/JavaScript/Reference/Operators/Spread_syntax
 /de/docs/Web/JavaScript/Reference/Operators/Vergleichsoperatoren	/de/docs/conflicting/Web/JavaScript/Reference/Operators_5b3986b830cf68059c03079ef10ff039
 /de/docs/Web/JavaScript/Reference/Operators/Zuweisungsoperator	/de/docs/conflicting/Web/JavaScript/Reference/Operators_bf514126b51a6e9b7591809ecc554076

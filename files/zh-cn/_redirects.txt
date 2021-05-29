@@ -2580,6 +2580,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Operators_7c8eb9475d97a4a734c5991857698560
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Operators_310dc67549939233c3d18a8fa2cdbb23
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Operators_f71733c8e7001a29c3ec40d8522a4aca
+/zh-CN/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /zh-CN/docs/Web/JavaScript/Reference/Operators/async允许声明一个函数为一个包含异步操作的函数	/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function
 /zh-CN/docs/Web/JavaScript/Reference/Operators/取余	/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder
@@ -2588,7 +2589,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Operators/按位与	/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_AND
 /zh-CN/docs/Web/JavaScript/Reference/Operators/相加	/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition
 /zh-CN/docs/Web/JavaScript/Reference/Operators/相等	/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality
-/zh-CN/docs/Web/JavaScript/Reference/Operators/管道操作符	/zh-CN/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
+/zh-CN/docs/Web/JavaScript/Reference/Operators/管道操作符	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /zh-CN/docs/Web/JavaScript/Reference/Operators/类	/zh-CN/docs/Web/JavaScript/Reference/Operators/class
 /zh-CN/docs/Web/JavaScript/Reference/Operators/自减	/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement
 /zh-CN/docs/Web/JavaScript/Reference/Operators/逻辑和	/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_AND

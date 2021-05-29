@@ -15928,12 +15928,6 @@
       "Jung.Kyu-Hyun"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:15:31.566Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:46:18.602Z",
     "contributors": [
@@ -18631,6 +18625,12 @@
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/BigInt/prototype": {
     "modified": "2020-10-15T22:12:31.982Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:15:31.566Z",
     "contributors": [
       "alattalatta"
     ]

@@ -780,9 +780,10 @@
 /ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators	/ru/docs/conflicting/Web/JavaScript/Reference/Operators
 /ru/docs/Web/JavaScript/Reference/Operators/Assignment_Operators	/ru/docs/conflicting/Web/JavaScript/Reference/Operators_8d54701de06af40a7c984517cbe87b3e
 /ru/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators	/ru/docs/conflicting/Web/JavaScript/Reference/Operators_7c8eb9475d97a4a734c5991857698560
+/ru/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/ru/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /ru/docs/Web/JavaScript/Reference/Operators/Spread_operator	/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /ru/docs/Web/JavaScript/Reference/Operators/Группировка	/ru/docs/Web/JavaScript/Reference/Operators/Grouping
-/ru/docs/Web/JavaScript/Reference/Operators/Конвейерный_оператор	/ru/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
+/ru/docs/Web/JavaScript/Reference/Operators/Конвейерный_оператор	/ru/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /ru/docs/Web/JavaScript/Reference/Operators/Логические_операторы	/ru/docs/conflicting/Web/JavaScript/Reference/Operators_843c998343f0cdaa5699874c806d4cea
 /ru/docs/Web/JavaScript/Reference/Operators/Оператор_Запятая	/ru/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /ru/docs/Web/JavaScript/Reference/Operators/Операторы_сравнения	/ru/docs/conflicting/Web/JavaScript/Reference/Operators_69135a8d5772f8b6e45265523df05d89

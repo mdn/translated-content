@@ -44276,16 +44276,6 @@
       "wsv587"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T21:59:15.552Z",
-    "contributors": [
-      "RainSlide",
-      "fsy0718",
-      "zhangchen",
-      "qdlaoyao",
-      "fphonor"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:37:38.990Z",
     "contributors": [
@@ -50692,6 +50682,16 @@
     "contributors": [
       "teoli",
       "Ende93"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T21:59:15.552Z",
+    "contributors": [
+      "RainSlide",
+      "fsy0718",
+      "zhangchen",
+      "qdlaoyao",
+      "fphonor"
     ]
   },
   "orphaned/Web/JavaScript/javascript(起步)": {

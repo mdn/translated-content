@@ -5522,6 +5522,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/undefined	/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/unescape	/fr/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/uneval	/fr/docs/Web/JavaScript/Reference/Global_Objects/uneval
+/fr/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/fr/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /fr/docs/Web/JavaScript/Reference/Opérateurs	/fr/docs/Web/JavaScript/Reference/Operators
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Addition	/fr/docs/Web/JavaScript/Reference/Operators/Addition
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Addition_avec_assignement	/fr/docs/Web/JavaScript/Reference/Operators/Addition_assignment
@@ -5552,7 +5553,7 @@
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_logiques	/fr/docs/conflicting/Web/JavaScript/Reference/Operators_d0fb75b0fac950a91a017a1f497c6a1f
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Précédence_des_opérateurs	/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 /fr/docs/Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition	/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-/fr/docs/Web/JavaScript/Reference/Opérateurs/Tube	/fr/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
+/fr/docs/Web/JavaScript/Reference/Opérateurs/Tube	/fr/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /fr/docs/Web/JavaScript/Reference/Opérateurs/async_function	/fr/docs/Web/JavaScript/Reference/Operators/async_function
 /fr/docs/Web/JavaScript/Reference/Opérateurs/await	/fr/docs/Web/JavaScript/Reference/Operators/await
 /fr/docs/Web/JavaScript/Reference/Opérateurs/class	/fr/docs/Web/JavaScript/Reference/Operators/class

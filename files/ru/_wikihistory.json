@@ -22591,13 +22591,6 @@
       "Dimon24021993"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:07:33.663Z",
-    "contributors": [
-      "nakhodkiin",
-      "ALegostaeva"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-11-28T14:23:33.816Z",
     "contributors": [
@@ -25749,6 +25742,13 @@
     "modified": "2019-03-23T22:37:24.165Z",
     "contributors": [
       "srvoland"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:07:33.663Z",
+    "contributors": [
+      "nakhodkiin",
+      "ALegostaeva"
     ]
   },
   "orphaned/Web/Manifest/serviceworker": {
