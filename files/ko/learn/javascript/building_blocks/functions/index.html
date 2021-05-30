@@ -291,7 +291,7 @@ function b() {
   <pre class="brush: js notranslate">a();
 b();</pre>
  </li>
- <li>왜냐하면 비록 <code>output()</code> 호출이 <code>x</code>가 정의되어 있는 같은 스코프에 있지 않더라도, <code>x</code>는 전역 변수이므로 모든 코드 어디서든 이용 가능하기 때문에 이것들은 잘 작동합니다.</li>
+ <li>브라우저 뷰포트에 <code>a()</code> 와 <code>b()</code> 모두 x 값을 출력해야 합니다. 왜냐하면 비록 <code>output()</code> 호출이 <code>x</code>가 정의되어 있는 같은 스코프에 있지 않더라도, <code>x</code>는 전역 변수이므로 모든 코드 어디서든 이용 가능하기 때문에 이것들은 잘 작동합니다.</li>
  <li>마지막으로, 당신의 코드를 다음과 같이 갱신해 보세요.
   <pre class="brush: js notranslate">function a() {
   var y = 2;
