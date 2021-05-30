@@ -3803,6 +3803,7 @@
 /ja/docs/Web/API/HTMLElement/blur	/ja/docs/Web/API/HTMLOrForeignElement/blur
 /ja/docs/Web/API/HTMLElement/dataset	/ja/docs/Web/API/HTMLOrForeignElement/dataset
 /ja/docs/Web/API/HTMLElement/focus	/ja/docs/Web/API/HTMLOrForeignElement/focus
+/ja/docs/Web/API/HTMLElement/forceSpellCheck	/ja/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
 /ja/docs/Web/API/HTMLElement/nonce	/ja/docs/Web/API/HTMLOrForeignElement/nonce
 /ja/docs/Web/API/HTMLElement/style	/ja/docs/Web/API/ElementCSSInlineStyle/style
 /ja/docs/Web/API/HTMLElement/tabIndex	/ja/docs/Web/API/HTMLOrForeignElement/tabIndex

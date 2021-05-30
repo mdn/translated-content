@@ -3760,6 +3760,7 @@
 /fr/docs/Web/API/Element/ongotpointercapture	/fr/docs/Web/API/GlobalEventHandlers/ongotpointercapture
 /fr/docs/Web/API/Element/onwheel	/fr/docs/Web/API/GlobalEventHandlers/onwheel
 /fr/docs/Web/API/Element/removeChild	/fr/docs/Web/API/Node/removeChild
+/fr/docs/Web/API/Element/tabStop	/fr/docs/orphaned/Web/API/Element/tabStop
 /fr/docs/Web/API/ElementTraversal	/fr/docs/orphaned/Web/API/ElementTraversal
 /fr/docs/Web/API/Event.initEvent	/fr/docs/Web/API/Event/initEvent
 /fr/docs/Web/API/Event.stopPropagation	/fr/docs/Web/API/Event/stopPropagation
