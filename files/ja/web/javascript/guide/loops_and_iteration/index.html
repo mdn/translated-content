@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Guide/Loops_and_iteration
 
 <p class="summary">ループは繰り返し何かを実行するための簡便な方法を提供します。本章では JavaScript で利用可能な反復処理を行う数々の文を紹介します。</p>
 
-<p>誰かに話しかけようと、ある方向に <em>X</em> 歩進み、別の方向に <em>Y</em> 進むといった場面を、コンピューター化されたゲームととらえた上で、ループについて考えてみましょう。例えば、「西に 5 歩進む」という概念はループとして、下記のように表現できます :</p>
+<p>ループは、ある方向に <em>X</em> 歩進み、次に別の方向に <em>Y</em> 歩進むように誰かに指示するゲームをコンピュータ化した版と考えることができます。例えば、「西に 5 歩進む」という概念はループとして、下記のように表現できます :</p>
 
 <pre class="brush: js notranslate">for (let step = 0; step &lt; 5; step++) {
   // 値が 0 から 4 まで計 5 回実行される
@@ -52,9 +52,9 @@ translation_of: Web/JavaScript/Guide/Loops_and_iteration
 
 <ol>
  <li>もしあれば、<code>初期化式</code>が実行されます。この式は通常、1 個またはそれ以上のループカウンターを初期化しますが、この構文ではいかなるレベルの複雑な式を入れることが可能です。初期化式で変数を宣言することもできます。</li>
- <li>条件式 条件式が評価されます。<code>条件式</code>の値が <code>true</code> の場合、ループ文が実行されます。<code>条件式</code>の値が <code>false</code> の場合、<code>for</code> ループは終了します。<code>条件式</code>がすべて省略されている場合、条件式は真であると仮定されます。</li>
+ <li><code>条件式</code>が評価されます。<code>条件式</code>の値が <code>true</code> の場合、ループ文が実行されます。<code>条件式</code>の値が <code>false</code> の場合、<code>for</code> ループは終了します。<code>条件式</code>がすべて省略されている場合、条件式は真であると仮定されます。</li>
  <li><code>文</code>が実行されます。複数の文を実行するには、それらの文をグループ化するためにブロック文 (<code>{ ... }</code>) を使用します。</li>
- <li>もしあれば、更新式 <code>加算式</code>が実行されます。</li>
+ <li>もしあれば、<code>加算式</code>が実行されます。</li>
  <li>ステップ 2 に制御が戻ります。</li>
 </ol>
 
@@ -113,7 +113,7 @@ while (条件式);
 
 <h3 id="Example_2" name="Example_2"><strong>例</strong></h3>
 
-<p>次の例では、<code>do</code> ループは少なくとも一度繰り返されます。そして <code>i</code> が 5 未満でなくなる直前まで繰り返しされます。</p>
+<p>次の例では、<code>do</code> ループは少なくとも一度繰り返されます。そして <code>i</code> が 5 未満でなくなる直前まで繰り返されます。</p>
 
 <pre class="brush: js notranslate">let i = 0;
 do {

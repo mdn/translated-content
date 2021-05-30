@@ -106,55 +106,7 @@ ID активного элемента: &lt;span id="output-element"&gt;&lt;/spa
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2</td>
-   <td>3.0</td>
-   <td>4 [1]</td>
-   <td>9.6</td>
-   <td>4.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]: В IE9 наблюдается баг: при попытке получения доступа к <code>activeElement в </code>{{domxref("window.parent")}} {{domxref("Document")}} из {{HTMLElement("iframe")}} (т.е. <code>parent.document.activeElement</code>) выбрасывается ошибка.</p>
+<p>{{Compat("api.Document.activeElement")}}</p>
 
 <h2 id="Связанные_события">Связанные события</h2>
 

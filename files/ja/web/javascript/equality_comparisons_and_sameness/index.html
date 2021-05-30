@@ -70,7 +70,7 @@ console.log(obj === undefined); // false
 
 <h2 id="Loose_equality_using" name="Loose_equality_using"><code>==</code> による緩い等価性</h2>
 
-<p>緩い等価性は、両方の値を共通の型に変換した<em>後で</em>、2 つの値が等しいか比較します。(片方あるいは両方の変換が行われた) 変換処理後に、最終的な等価性の比較は <code>=</code><code>== </code> と全く同じ振る舞いです。緩い等価性は<em>対称的</em>であり、任意の値 <code>A</code> および <code>B</code> において、<code>A == B</code> と <code>B == A</code> の意味は常に同じ意味です (変換処理を適用する順序を除く)。</p>
+<p>緩い等価性は、両方の値を共通の型に変換した<em>後で</em>、2 つの値が等しいか比較します。(片方あるいは両方の変換が行われた) 変換処理後の、最終的な等価性の比較は <code>===</code> と全く同じ振る舞いです。緩い等価性は<em>対称的</em>であり、任意の値 <code>A</code> および <code>B</code> において、<code>A == B</code> と <code>B == A</code> の意味は常に同じです (変換処理を適用する順序を除く)。</p>
 
 <p>等価性比較でさまざまな型のオペランドに対して以下のように振る舞います。</p>
 
@@ -150,7 +150,7 @@ console.log(obj === undefined); // false
  </tbody>
 </table>
 
-<p>上の表で、<code>ToNumber(A)</code> は、比較前に引数を数値に変換しようとします。この振る舞いは <code>+A</code> (正の単項演算子) と同じです。<code>ToPrimitive(A)</code> は、<code>A の持つ</code> <code>A.toString メソッド、そして</code> <code>A.valueOf メソッドの変換シーケンスを実施することで、</code>オブジェクトの引数をプリミティブ値へ変換しようとを試みます。</p>
+<p>上の表で、<code>ToNumber(A)</code> は、比較前に引数を数値に変換しようとします。この振る舞いは <code>+A</code> (正の単項演算子) と同じです。<code>ToPrimitive(A)</code> は、<code>A</code> の持つ <code>A.toString</code> メソッド、そして <code>A.valueOf</code> メソッドの変換シーケンスを実施することで、オブジェクトの引数をプリミティブ値へ変換しようとを試みます。</p>
 
 <p>伝統的にも、また ECMAScript によれば、すべてのオブジェクトは <code>undefined</code> や <code>null</code> に対して大雑把には等価でないとしています。しかし、ほとんどのブラウザーは、ごく一部のオブジェクト (特に、あらゆるページの <code>document.all</code> オブジェクト) が、いくつかの状況においては値 <code>undefined</code> のように振る舞う<em>こと</em>を認めています。緩い等価性もそのようなものの一つです、A が <code>undefined</code> に<em>相当する</em>オブジェクトである場合に限り、<code>null == A</code> および <code>undefined == A</code> は true になります。それ以外のどのオブジェクトも <code>undefined</code> および <code>null</code> と大雑把には等価とはなりません。</p>
 

@@ -4,8 +4,8 @@ slug: Web/HTML/Element/body
 tags:
   - Element
   - HTML
-  - 'HTML:区分化ルート'
   - Reference
+  - Sectioning Root Element
   - Sections
   - Web
 translation_of: Web/HTML/Element/body
@@ -17,12 +17,12 @@ translation_of: Web/HTML/Element/body
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a></th>
-   <td><a href="/ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots">区分化ルート</a></td>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_roots">区分化ルート</a></td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a></td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a></td>
   </tr>
   <tr>
    <th scope="row">タグの省略</th>
@@ -33,8 +33,12 @@ translation_of: Web/HTML/Element/body
    <td>{{HTMLElement("html")}} 要素の子要素でなければなりません。</td>
   </tr>
   <tr>
+   <th scope="row">暗黙の ARIA ロール</th>
+   <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Document_Role">document</a></td>
+  </tr>
+  <tr>
    <th scope="row">許可されている ARIA ロール</th>
-   <td>なし</td>
+   <td>許可されている <code>role</code> なし</td>
   </tr>
   <tr>
    <th scope="row">DOM インターフェイス</th>
@@ -48,7 +52,7 @@ translation_of: Web/HTML/Element/body
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
 <p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
 
@@ -111,9 +115,9 @@ translation_of: Web/HTML/Element/body
  <dd>訪問済みのハイパーリンクの文字色です。<em>この方法は不適合であり、代わりに CSS の {{cssxref(":visited")}} 疑似クラスで {{cssxref("color")}} プロパティを使用してください。</em></dd>
 </dl>
 
-<h2 id="Example" name="Example">例</h2>
+<h2 id="Example"">例</h2>
 
-<pre class="brush: html notranslate">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;Document title&lt;/title&gt;
   &lt;/head&gt;
@@ -123,7 +127,7 @@ translation_of: Web/HTML/Element/body
 &lt;/html&gt;
 </pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -142,7 +146,7 @@ translation_of: Web/HTML/Element/body
   <tr>
    <td>{{SpecName('HTML5 W3C', 'sections.html#the-body-element', '&lt;body&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>以前非推奨とされた属性を廃止。不適合であり標準化しない <code>c</code>, <code>leftmargin</code>, <code>rightmargin</code>, <code>bottommargin</code> の動作を定義。<code>on*</code> 属性を追加。</td>
+   <td>以前非推奨とされた属性を廃止。不適合であり標準化しない <code>topmargin</code>, <code>leftmargin</code>, <code>rightmargin</code>, <code>bottommargin</code> の動作を定義。<code>on*</code> 属性を追加。</td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.5.1', '&lt;body&gt;')}}</td>
@@ -152,13 +156,11 @@ translation_of: Web/HTML/Element/body
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("html.elements.body")}}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>{{HTMLElement("html")}}</li>
