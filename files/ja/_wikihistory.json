@@ -16278,12 +16278,6 @@
       "dextra"
     ]
   },
-  "Web/API/HTMLElement/forceSpellCheck": {
-    "modified": "2020-10-15T22:22:28.662Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/HTMLElement/gotpointercapture_event": {
     "modified": "2020-10-15T22:20:35.188Z",
     "contributors": [
@@ -52386,6 +52380,12 @@
       "dskmori",
       "keeponbeat",
       "mikamikuh"
+    ]
+  },
+  "orphaned/Web/API/HTMLElement/forceSpellCheck": {
+    "modified": "2020-10-15T22:22:28.662Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {

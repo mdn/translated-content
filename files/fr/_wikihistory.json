@@ -15804,12 +15804,6 @@
       "loella16"
     ]
   },
-  "Web/API/Element/tabStop": {
-    "modified": "2019-03-18T21:38:50.214Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/Element/tagName": {
     "modified": "2019-03-23T23:53:29.906Z",
     "contributors": [
@@ -45042,6 +45036,12 @@
   },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2019-03-18T21:39:20.100Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "orphaned/Web/API/Element/tabStop": {
+    "modified": "2019-03-18T21:38:50.214Z",
     "contributors": [
       "loella16"
     ]

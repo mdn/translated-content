@@ -15121,12 +15121,6 @@
       "Dewang"
     ]
   },
-  "Web/API/HTMLElement/forceSpellCheck": {
-    "modified": "2019-03-18T21:38:32.415Z",
-    "contributors": [
-      "varcat"
-    ]
-  },
   "Web/API/HTMLElement/hidden": {
     "modified": "2019-03-23T22:07:13.819Z",
     "contributors": [
@@ -50265,6 +50259,12 @@
     "modified": "2019-03-23T22:06:02.004Z",
     "contributors": [
       "wuCrio"
+    ]
+  },
+  "orphaned/Web/API/HTMLElement/forceSpellCheck": {
+    "modified": "2019-03-18T21:38:32.415Z",
+    "contributors": [
+      "varcat"
     ]
   },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {
