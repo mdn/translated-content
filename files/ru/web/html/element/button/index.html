@@ -127,6 +127,72 @@ original_slug: Web/HTML/Element/кнопка
 
 <p>{{ EmbedLiveSample('Example', 200, 64) }}</p>
 
+
+<h3 id="Clicking_and_focus">Clicking and focus</h3>
+
+<p>Whether clicking on a {{HTMLElement("button")}} causes it to (by default) become focused varies by browser and OS. The results for {{HTMLElement("input")}} of <code>type="button"</code> and <code>type="submit"</code> are the same.</p>
+
+<table>
+ <caption>Does clicking on a {{HTMLElement("button")}} give it focus?</caption>
+ <thead>
+  <tr>
+   <th>Desktop Browsers</th>
+   <th>Windows 8.1</th>
+   <th>OS X 10.X</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Firefox</th>
+   <td class="bc-supports-yes">Yes - Firefox 30.0</td>
+   <td class="bc-supports-no">No (even with a <code>tabindex</code>) Firefox 63</td>
+  </tr>
+  <tr>
+   <th>Chrome</th>
+   <td class="bc-supports-yes">Yes - Chrome 35</td>
+   <td class="bc-supports-yes">Yes - Chrome 65</td>
+  </tr>
+  <tr>
+   <th>Safari</th>
+   <td style="background: #eee;">N/A</td>
+   <td class="bc-supports-no">No (even with a <code>tabindex</code>) Safari 12 (<a href="https://bugs.webkit.org/show_bug.cgi?id=22261">bug 22261</a>)</td>
+  </tr>
+  <tr>
+   <th>Internet Explorer</th>
+   <td class="bc-supports-yes">Yes - Internet Explorer 11</td>
+   <td style="background: #eee;">N/A</td>
+  </tr>
+  <tr>
+   <th>Presto</th>
+   <td class="bc-supports-yes">Yes - Opera 12</td>
+   <td class="bc-supports-yes">Yes - Opera 12</td>
+  </tr>
+ </tbody>
+</table>
+
+<table>
+ <caption>Does tapping on a {{HTMLElement("button")}} give it focus?</caption>
+ <thead>
+  <tr>
+   <th>Mobile Browsers</th>
+   <th>iOS 7.1.2</th>
+   <th>Android 4.4.4</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>Safari Mobile</th>
+   <td class="bc-supports-no">No (even with a <code>tabindex</code>)</td>
+   <td style="background-color: #eeeeee;">N/A</td>
+  </tr>
+  <tr>
+   <th>Chrome 35</th>
+   <td class="bc-supports-no">No (even with a <code>tabindex</code>)</td>
+   <td class="bc-supports-yes">Yes</td>
+  </tr>
+ </tbody>
+</table>
+
 <h2 id="Specifications" name="Specifications">Спецификации</h2>
 
 <table class="standard-table">
@@ -158,207 +224,4 @@ original_slug: Web/HTML/Element/кнопка
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>formaction</code> attribute</td>
-   <td>9.0</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>10</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>formenctype</code> attribute</td>
-   <td>9.0</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>10</td>
-   <td>10.6</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>formmethod</code> attribute</td>
-   <td>9.0</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>10</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>autofocus</code> attribute</td>
-   <td>5.0</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>10</td>
-   <td>9.6</td>
-   <td>5.0</td>
-  </tr>
-  <tr>
-   <td><code>menu</code> value for <code>type</code> attribute</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>formaction</code> attribute</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>formenctype</code> attribute</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>formmethod</code> attribute</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("2.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>menu</code> value for <code>type</code> attribute</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko does not implement this feature yet. See {{bug("1241353")}}.</p>
-
-<h3 id="Clicking_and_focus">Clicking and focus</h3>
-
-<p>Whether clicking on a {{HTMLElement("button")}} causes it to (by default) become focused varies by browser and OS. The results for {{HTMLElement("input")}} of <code>type="button"</code> and <code>type="submit"</code> were the same.</p>
-
-<table>
- <caption>Does clicking on a {{HTMLElement("button")}} give it the focus?</caption>
- <tbody>
-  <tr>
-   <td>Desktop Browsers</td>
-   <th>Windows 8.1</th>
-   <th>OS X 10.9</th>
-  </tr>
-  <tr>
-   <th>Firefox 30.0</th>
-   <td style="background-color: LawnGreen;">Yes</td>
-   <td style="background-color: red;">No (even with a <code>tabindex</code>)</td>
-  </tr>
-  <tr>
-   <th>Chrome 35</th>
-   <td style="background-color: LawnGreen;">Yes</td>
-   <td style="background-color: LawnGreen;">Yes</td>
-  </tr>
-  <tr>
-   <th>Safari 7.0.5</th>
-   <td style="background-color: silver;">N/A</td>
-   <td style="background-color: red;">No (even with a <code>tabindex</code>)</td>
-  </tr>
-  <tr>
-   <th>Internet Explorer 11</th>
-   <td style="background-color: LawnGreen;">Yes</td>
-   <td style="background-color: silver;">N/A</td>
-  </tr>
-  <tr>
-   <th>Presto (Opera 12)</th>
-   <td style="background-color: LawnGreen;">Yes</td>
-   <td style="background-color: LawnGreen;">Yes</td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <caption>Does tapping on a {{HTMLElement("button")}} give it the focus?</caption>
- <tbody>
-  <tr>
-   <td>Mobile Browsers</td>
-   <th>iOS 7.1.2</th>
-   <th>Android 4.4.4</th>
-  </tr>
-  <tr>
-   <th>Safari Mobile</th>
-   <td style="background-color: red;">No (even with a <code>tabindex</code>)</td>
-   <td style="background-color: silver;">N/A</td>
-  </tr>
-  <tr>
-   <th>Chrome 35</th>
-   <td style="background-color: red;">No (even with a <code>tabindex</code>)</td>
-   <td style="background-color: LawnGreen;">Yes</td>
-  </tr>
-  <tr>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Notes">Notes</h2>
-
-<p><code>&lt;button&gt;</code> elements are much easier to style than {{HTMLElement("input")}} elements. You can add inner HTML content (think <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code> or even <code>&lt;img&gt;</code>), and make use of {{Cssxref(":after")}} and {{Cssxref(":before")}} pseudo-element to achieve complex rendering while {{HTMLElement("input")}} only accepts a text value attribute.</p>
-
-<p>IE7 has a bug where when submitting a form with <code>&lt;button type="submit" name="myButton" value="foo"&gt;Click me&lt;/button&gt;</code>, the <code>POST</code> data sent will result in <code>myButton=Click me</code> instead of <code>myButton=foo</code>.<br>
- IE6 has an even worse bug where submitting a form through a button will submit ALL buttons of the form, with the same bug as IE7.<br>
- This bug has been fixed in IE8.</p>
-
-<p>Firefox will add, for accessibility purposes, a small dotted border on a focused button. This border is declared through CSS, in the browser stylesheet, but you can override it if necessary to add your own focused style using <code>button{{cssxref("::-moz-focus-inner")}} { }</code></p>
-
-<p>Firefox will, unlike other browsers, by default, <a href="http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of a {{HTMLElement("button")}} across page loads. Setting the value of the {{htmlattrxref("autocomplete","button")}} attribute to <code>off</code> disables this feature. See {{bug(654072)}}.</p>
-
-<p>Firefox &lt;35 for Android sets a default {{ cssxref("background-image") }} gradient on all buttons (see {{bug(763671)}}). This can be disabled using <code>background-image: none</code>.</p>
-
-<h2 id="See_also">See also</h2>
-
-<p>Other elements that are used for creating forms: {{HTMLElement("form")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.</p>
-
-<div>{{HTMLRef}}</div>
+<p>{{Compat("html.elements.button")}}</p>

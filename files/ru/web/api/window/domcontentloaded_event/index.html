@@ -88,53 +88,7 @@ for(var i=0; i&lt;1000000000; i++)
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>1.0<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("1")}}<sup>[1]</sup></td>
-   <td>9.0<sup>[2]</sup></td>
-   <td>9.0</td>
-   <td>3.1<sup>[1]</sup></td>
-  </tr>
- </tbody>
-</table>
-
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoMobile("1")}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-  </tr>
- </tbody>
-</table>
-
-<p>[1] Всплытие для этого события поддерживается как минимум с версий Gecko 1.9.2, Chrome 6, и Safari 4.</p>
-
-<p>[2] Internet Explorer 8 поддерживает событие <code>readystatechange</code>, которое можно использовать для определения готовности DOM. В более ранних версиях Internet Explorer,это событие можно определить циклическим выполнением <code>document.documentElement.doScroll("left");</code>, это событие будет выбрасывать ошибку если DOM не готов.</p>
+<p>{{Compat("api.Window.DOMContentLoaded_event")}}</p>
 
 <h2 id="Связанные_события">Связанные события</h2>
 

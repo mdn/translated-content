@@ -1,0 +1,69 @@
+---
+title: String.prototype.trim()
+slug: Web/JavaScript/Reference/Global_Objects/String/Trim
+tags:
+  - ECMAScript 5
+  - JavaScript
+  - Method
+  - Prototype
+  - Reference
+  - String
+browser-compat: javascript.builtins.String.trim
+---
+<div>{{JSRef}}</div>
+
+<p>
+  <strong><code>trim()</code></strong> 方法會移除字串起始及結尾處的空白字元。
+  本文中的空白字元指所有空格字元（如：空格、欄標、無間斷空格等等）及換行字元（如：換行、回車等等）。
+</p>
+
+<div>{{EmbedInteractiveExample("pages/js/string-trim.html")}}</div>
+
+<h2 id="Syntax">語法</h2>
+
+<pre class="brush: js">trim()</pre>
+
+<h3 id="Return_value">回傳值</h3>
+
+<p>回傳一個新的字串，其為把 <code><var>str</var></code> 起始及結尾處的空白字元移除後的值。</p>
+
+<p>如果 <code><var>str</var></code> 的起始及結尾處沒有任何的空白字元，此方法不會拋出任何例外，且仍然會回傳一個新的字串（本質上為 <code><var>str</var></code> 的複製）。</p>
+
+<p>如果只是想要去除字串起始處或結尾處其中之一的空白字元，那麼可以選擇使用 {{jsxref("String.prototype.trimStart()", "trimStart()")}} 或者 {{jsxref("String.prototype.trimEnd()", "trimEnd()")}}。</p>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p>在任何其他的程式碼被執行之前，先執行以下的程式碼，它將會在瀏覽器本身未支援 <code>trim()</code> 的方法時創造它。</p>
+
+<pre class="brush: js">if (!String.prototype.trim) {
+  String.prototype.trim = function () {
+    return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+  };
+}
+</pre>
+
+<h2 id="Examples">範例</h2>
+
+<h3 id="Using_trim">如何使用 <code>trim()</code></h3>
+
+<p>以下例子會印出小寫的字串 <code>'foo'</code>：</p>
+
+<pre class="brush: js">var orig = '   foo  ';
+console.log(orig.trim()); // 'foo'
+</pre>
+
+<h2 id="Specifications">規格</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">瀏覽器相容性</h2>
+
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">參見</h2>
+
+<ul>
+  <li>{{jsxref("String.prototype.trimStart()")}}</li>
+  <li>{{jsxref("String.prototype.trimEnd()")}}</li>
+</ul>

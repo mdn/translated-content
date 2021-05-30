@@ -8,41 +8,47 @@ tags:
   - Threads
   - asynchronous
   - blocking
+  - 非同步
+  - 執行緒
 ---
 <div>{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}</div>
 
-<p>在本篇文章我們會介紹一些關於非同步程式設計的重要觀念，以及在網頁瀏覽器和 JavaScript 中的行為。在閱讀其他文章之前您應該先具備這些觀念。</p>
+<p>在本篇文章我們會介紹一些關於非同步程式設計的重要觀念，以及在網頁瀏覽器和 JavaScript 中的行為。在閱讀其他文章之前你應該先具備這些觀念。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, a reasonable understanding of JavaScript fundamentals.</td>
+   <th scope="row">先備知識：</th>
+   <td>基本的電腦概念，理解 JavaScript 的基本原理。</td>
   </tr>
   <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand the basic concepts behind asynchronous programming, and how they manifest in web browsers and JavaScript.</td>
+   <th scope="row">學習目標：</th>
+   <td>了解非同步程式設計背後的基本概念，以及其如何在網頁瀏覽器及 JavaScript 作呈現。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Asynchronous">Asynchronous?</h2>
+<h2 id="Asynchronous">非同步？</h2>
 
-<p>Normally, a given program's code runs straight along, with only one thing happening at once. If a function relies on the result of another function, it has to wait for the other function to finish and return, and until that happens, the entire program is essentially stopped from the perspective of the user.</p>
+<p>一般來說，在程式碼的執行順序當下同一時間只會處理一件事。如果某個函式依賴於其他函式的執行結果，那麼它就需要等待其完成並回傳結果才能執行，直到那樣的情況發生，以使用者的角度而言整個程式才是真正的結束。</p>
 
-<p>Mac users, for example, sometimes experience this as the spinning rainbow-colored cursor (or "beachball" as it is often called). This cursor is how the operating system says "the current program you're using has had to stop and wait for something to finish up, and it's taking so long that I was worried you'd wonder what was going on."</p>
+<p>Mac 的使用者有時候會發現游標變成彩虹色的旋轉圖案（或經常被稱作為「沙灘球」）。這個游標的出現代表作業系統像是正對著你說：「你在執行的程式目前正在等待其他程式的完成而被暫停，因為花了一點時間所以我擔心你會想知道發生了甚麼事。」</p>
 
 <p><img alt="Multi-colored macOS beachball busy spinner" src="beachball.jpg" style="display: block; float: left; margin: 0px 30px 0px 0px;"></p>
 
-<p>This is a frustrating experience and isn't a good use of computer processing power — especially in an era in which computers have multiple processor cores available. There's no sense sitting there waiting for something when you could let the other task chug along on another processor core and let you know when it's done. This lets you get other work done in the meantime, which is the basis of <strong>asynchronous programming</strong>. It is up to the programming environment you are using (web browsers, in the case of web development) to provide you with APIs that allow you to run such tasks asynchronously.</p>
+<br/>
 
-<h2 id="Blocking_code">Blocking code</h2>
+<p>這種經驗通常令人沮喪而且這也並未善加利用電腦處理器的能力——特別是在擁有多核處理器的世代。比起只能毫無意義的坐著乾等，如果能夠安排其他任務交由其他處理器來執行並讓你知道任務何時完成，這樣就有效率多了，像這樣能讓其他工作在同時間完成，這就是<strong>非同步程式設計</strong>的基礎。這取決於你目前正在使用的程式環境，如同網頁瀏覽器會提供一些 API 能讓你非同步的執行任務。</p>
 
-<p>Asynchronous techniques are very useful, particularly in web programming. When a web app runs in a browser and it executes an intensive chunk of code without returning control to the browser, the browser can appear to be frozen. This is called <strong>blocking</strong>; the browser is blocked from continuing to handle user input and perform other tasks until the web app returns control of the processor.</p>
+<br/><br/>
 
-<p>Let's look at a couple of examples that show what we mean by blocking.</p>
+<h2 id="Blocking_code">阻塞程式碼</h2>
 
-<p>In our <a href="https://github.com/mdn/learning-area/tree/master/javascript/asynchronous/introducing/simple-sync.html">simple-sync.html</a> example (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync.html">see it running live</a>), we add a click event listener to a button so that when clicked, it runs a time-consuming operation (calculates 10 million dates then logs the final one to the console) and then adds a paragraph to the DOM:</p>
+<p>非同步的技巧非常實用，特別是在網頁程式設計上。當一個網頁應用程式運行在瀏覽器且執行大量的程式碼的當下並未將控制權交還給瀏覽器時，瀏覽器可能會處於凍結狀態。我們稱之為<strong>阻塞（ blocking ）</strong>，瀏覽器正在持續處理使用者的輸入並執行其他任務就會被阻塞住，直到應用程式將處理器的控制權歸還後才會解除。</p>
+
+<p>我們來看幾個程式範例來說明阻塞是甚麼意思。</p>
+
+<p>在這個例子 <a href="https://github.com/mdn/learning-area/tree/master/javascript/asynchronous/introducing/simple-sync.html">simple-sync.html</a> （<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync.html">線上範例</a>），我們在按鈕增加一個點擊事件監聽器，在點擊時會執行一段相當耗時的操作（執行新增日期物件一千萬次並將最後一次的結果顯示在控制台上）然後再加入一則文字段落到 {{Glossary("DOM")}} 上：</p>
 
 <pre class="brush: js">const btn = document.querySelector('button');
 btn.addEventListener('click', () =&gt; {
@@ -59,17 +65,17 @@ btn.addEventListener('click', () =&gt; {
   document.body.appendChild(pElem);
 });</pre>
 
-<p>When running the example, open your JavaScript console then click the button — you'll notice that the paragraph does not appear until after the dates have finished being calculated and the console message has been logged. The code runs in the order it appears in the source, and the later operation doesn't run till the earlier operation has finished running.</p>
+<p>當執行我們的範例時，打開你的 JavaScript 控制台並點擊按鈕——你會注意到文字並不會馬上就出現在畫面上，而是要等到跑完新增日期物件的迴圈並將結果顯示在控制台上後，新增的文字才會出現。原因在於程式碼依照順序執行，因此某一筆的操作必須等待上一筆執行完成後才會執行。</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: The previous example is very unrealistic. You would never calculate 10 million dates on a real web app! It does, however, serve to give you the basic idea.</p>
+<p><strong>注意</strong>：上述的範例只是用來作為了解原理的基本範例，在現實生活中你不會真的執行一千萬次的新增日期物件。</p>
 </div>
 
-<p>In our second example, <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">simple-sync-ui-blocking.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">see it live</a>), we simulate something slightly more realistic that you might come across on a real page. We block user interactivity with the rendering of the UI. In this example, we have two buttons:</p>
+<p>在我們第二個範例， <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">simple-sync-ui-blocking.html</a> （<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-ui-blocking.html">線上範例</a>），我們模擬了一段比較貼近現實的範例，你或許會在現實的頁面上遇到。我們在渲染畫面的期間阻擋和使用者的互動行為。在本範例，我們有兩個按鈕：</p>
 
 <ul>
- <li>A "Fill canvas" button that when clicked fills the available {{htmlelement("canvas")}} with 1 million blue circles.</li>
- <li>A "Click me for alert" button that when clicked shows an alert message.</li>
+ <li>當「 Fill canvas 」按鈕被點擊時，我們會填滿一百萬個藍色圓圈到可用的 {{htmlelement("canvas")}} 標籤內。</li>
+ <li>當點擊「 Click me for alert 」按鈕後會顯示警告訊息。</li>
 </ul>
 
 <pre class="brush: js">function expensiveOperation() {
@@ -87,77 +93,77 @@ alertBtn.addEventListener('click', () =&gt;
   alert('You clicked me!')
 );</pre>
 
-<p>If you click the first button and then quickly click the second one, you'll see that the alert does not appear until the circles have finished being rendered. The first operation blocks the second one until it has finished running.</p>
+<p>當點擊第一個按鈕之後緊接著點擊第二個按鈕，你會發現警告訊息並不會馬上出現，而是要等到圓圈圖案被渲染完成後才會出現警告訊息視窗。第一個操作在完成之前都會阻擋第二個操作的執行。</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: OK, in our case, it is ugly and we are faking the blocking effect, but this is a common problem that developers of real apps fight to mitigate all the time.</p>
+<p><strong>注意</strong>：我們是在偽造一個阻塞且這個例子可能有點醜陋，但這卻是在現實中大多數的開發者試圖避免的常見問題。</p>
 </div>
 
-<p>Why is this? The answer is because JavaScript, generally speaking, is <strong>single-threaded</strong>. At this point, we need to introduce the concept of <strong>threads</strong>.</p>
+<p>為什麼會這樣？事實是因為 JavaScript 在執行上是使用 <strong>單一執行緒（ single-threaded ）</strong>。現在，我們需要說明一下<strong>執行緒（ thread ）</strong>的概念。</p>
 
-<h2 id="Threads">Threads</h2>
+<h2 id="Threads">執行緒</h2>
 
-<p>A <strong>thread</strong> is basically a single process that a program can use to complete tasks. Each thread can only do a single task at once:</p>
+<p><strong>執行緒（ thread ）</strong>基本上是可以用來完成程式碼任務的單一行程（ process ）。每一條執行緒在同一時間只會執行一項任務：</p>
 
-<pre>Task A --&gt; Task B --&gt; Task C</pre>
+<pre>任務 A --&gt; 任務 B --&gt; 任務 C</pre>
 
-<p>Each task will be run sequentially; a task has to complete before the next one can be started.</p>
+<p>每一項任務必須依照順序來執行，下一項任務必須要等到前一項任務完成後才能開始執行。</p>
 
-<p>As we said earlier, many computers now have multiple cores, so can do multiple things at once. Programming languages that can support multiple threads can use multiple cores to complete multiple tasks simultaneously:</p>
+<p>我們稍早所說，現今許多電腦擁有許多顆核心，所以可以在同一時間做許多事。可以支援多條執行緒的程式語言在同一時間可以利用多顆核心來完成數個任務：</p>
 
-<pre>Thread 1: Task A --&gt; Task B
-Thread 2: Task C --&gt; Task D</pre>
+<pre>執行緒１：任務 A --&gt; 任務 B
+執行緒２：任務 C --&gt; 任務 D</pre>
 
-<h3 id="JavaScript_is_single-threaded">JavaScript is single-threaded</h3>
+<h3 id="JavaScript_is_single-threaded">JavaScript 是單執行緒的</h3>
 
-<p>JavaScript is traditionally single-threaded. Even with multiple cores, you could only get it to run tasks on a single thread, called the <strong>main thread</strong>. Our example from above is run like this:</p>
+<p>JavaScript 在傳統意義上是跑在一條單執行緒。即便你的電腦有多顆核心，也只能在 JavaScript 上面跑一條執行緒來完成任務，這一條執行緒我們稱為<strong>主執行緒（ main thread ）</strong>。我們稍早的第二個例子執行流程就像是底下這樣：</p>
 
-<pre>Main thread: Render circles to canvas --&gt; Display alert()</pre>
+<pre>主執行緒：渲染圓圈圖形到 canvas --&gt; 顯示 alert()</pre>
 
-<p>After some time, JavaScript gained some tools to help with such problems. <a href="/en-US/docs/Web/API/Web_Workers_API">Web workers</a> allow you to send some of the JavaScript processing off to a separate thread, called a worker so that you can run multiple JavaScript chunks simultaneously. You'd generally use a worker to run expensive processes off the main thread so that user interaction is not blocked.</p>
+<p>在經過一段時間的發展後， JavaScript 取得某種工具來處理上述的問題。 <a href="/zh-TW/docs/Web/API/Web_Workers_API">Web worker</a> 允許傳送一些任務到不同的執行緒上，因此呼叫一個 worker 你可以在同一時間跑不同的任務區塊。透過使用 worker 就可以和主執行緒分工合作，因此不會阻塞和使用者的互動。</p>
 
-<pre>  Main thread: Task A --&gt; Task C
-Worker thread: Expensive task B</pre>
+<pre>      主執行緒：任務 A --&gt; 任務 C
+背景工作執行緒：耗時的任務 B</pre>
 
-<p>With this in mind, have a look at <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html">simple-sync-worker.html</a> (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html">see it running live</a>), again with your browser's JavaScript console open. This is a rewrite of our previous example that calculates the 10 million dates in a separate worker thread. Now when you click the button, the browser is able to display the paragraph before the dates have finished calculating. The first operation no longer blocks the second.</p>
+<p>依照這個想法，我們來改寫之前的例子 <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html">simple-sync-worker.html</a> （<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html">線上範例</a>），一樣打開你的 JavaScript 控制台吧。我們改寫利用 worker 產生額外的執行緒來執行一千萬次的呼叫新增日期物件的範例。現在你點擊一下按鈕，你會發現新增的文字段落馬上就會顯示在畫面上，而稍後日期才會顯示在 JavaScript 控制台。第一項操作不再阻塞第二項的執行了。</p>
 
-<h2 id="Asynchronous_code">Asynchronous code</h2>
+<h2 id="Asynchronous_code">非同步的程式碼</h2>
 
-<p>Web workers are pretty useful, but they do have their limitations. A major one is they are not able to access the {{Glossary("DOM")}} — you can't get a worker to directly do anything to update the UI. We couldn't render our 1 million blue circles inside our worker; it can basically just do the number crunching.</p>
+<p><a href="/zh-TW/docs/Web/API/Web_Workers_API">Web worker</a> 相當有用，但還是有它的限制在。最主要的限制是在它不能直接存取 {{Glossary("DOM")}} ——你不能透過 worker 去直接更新你的 UI 。我們不能透過 worker 去渲染一百萬個藍色圈圈，它基本上只能做一些數字運算的工作。</p>
 
-<p>The second problem is that although code run in a worker is not blocking, it is still basically synchronous. This becomes a problem when a function relies on the results of multiple previous processes to function. Consider the following thread diagrams:</p>
+<p>第二個問題是即使我們的程式跑在 worker 上不會阻塞主執行緒的執行，但基本上我們還是處於同步的。當一個函式的執行依賴於多個函式的執行結果就會發生問題。看看底下的執行緒圖表：</p>
 
-<pre>Main thread: Task A --&gt; Task B</pre>
+<pre>主執行緒：任務 A --&gt; 任務 B</pre>
 
-<p>In this case, let's say Task A is doing something like fetching an image from the server and Task B then does something to the image like applying a filter to it. If you start Task A running and then immediately try to run Task B, you'll get an error, because the image won't be available yet.</p>
+<p>在這個例子，任務 A 正在做一些像是從遠端伺服器抓取圖片的工作，任務 B 會將抓取下來的圖片套用一些濾鏡的特效。如果你執行任務 A 後立即執行任務 B ，你會收到錯誤訊息，因為任務 B 當下並沒有圖片可以套用。</p>
 
-<pre>  Main thread: Task A --&gt; Task B --&gt; |Task D|
-Worker thread: Task C -----------&gt; |      |</pre>
+<pre>      主執行緒：任務 A --&gt; 任務 B --&gt; ｜任務 D ｜
+背景工作執行緒：任務 C -------------&gt; ｜      ｜</pre>
 
-<p>In this case, let's say Task D makes use of the results of both Task B and Task C. If we can guarantee that these results will both be available at the same time, then we might be OK, but this is unlikely. If Task D tries to run when one of its inputs is not yet available, it will throw an error.</p>
+<p>在這個例子，我們說任務 D 必須依賴任務 B 及任務 C 的執行結果。如果我們保證在執行任務 D 的當下都已經取得 B 和 C 的執行結果，這也許沒甚麼問題，但這不太可能。任務 D 執行的當下若有任一個依賴結果尚未完成，勢必會發生錯誤。</p>
 
-<p>To fix such problems, browsers allow us to run certain operations asynchronously. Features like <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> allow you to set an operation running (e.g. the fetching of an image from the server), and then wait until the result has returned before running another operation:</p>
+<p>為了修正此問題，瀏覽器允許我們非同步的運行某些操作。如 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a> 功能允許你在一項正在執行的操作做設定（例如：從遠端伺服器抓取圖片），然後等待其執行結果回傳之後再進行之後的操作：</p>
 
-<pre>Main thread: Task A                   Task B
-    Promise:      |__async operation__|</pre>
+<pre>主執行緒：任務 A                   任務 B
+Promise ：   ｜_____非同步操作_____｜</pre>
 
-<p>Since the operation is happening somewhere else, the main thread is not blocked while the async operation is being processed.</p>
+<p>因為操作發生在其他地方，因此主執行緒並不會在執行非同步的工作時被阻塞住。</p>
 
-<p>We'll start to look at how we can write asynchronous code in the next article. Exciting stuff, huh? Keep reading!</p>
+<p>我們會在下一篇文章來看看我們如何寫出非同步的程式碼，真令人興奮，對吧？讓我們繼續看下去吧！</p>
 
-<h2 id="Conclusion">Conclusion</h2>
+<h2 id="Conclusion">結論</h2>
 
-<p>Modern software design increasingly revolves around using asynchronous programming, to allow programs to do more than one thing at a time. As you use newer and more powerful APIs, you'll find more cases where the only way to do things is asynchronously. It used to be hard to write asynchronous code. It still takes getting used to, but it's gotten a lot easier. In the rest of this module, we'll explore further why asynchronous code matters and how to design code that avoids some of the problems described above.</p>
+<p>現代軟體越來越多圍繞在使用非同步的程式技巧來設計，讓程式碼可以在同一時間做越多事。當你使用目前越新越強大的 API 時，你會發現更多情況之下他們處理工作唯一的方法就是使用非同步的處理方式。過去我們很難寫出可以執行非同步的程式碼，但現在簡單多了。在剩餘的單元中，我們將會進一步的探討為何非同步如此重要，以及如何設計出避免上述某些問題的程式碼。</p>
 
 <div>{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}</div>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="In_this_module">在本單元</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></li>
- <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choosing the right approach</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Concepts">非同步程式設計通用概念</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Introducing">非同步的 JavaScript 介紹</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">協同的非同步 JavaScript ： Timeout 和 interval</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Promises">優雅的使用 Promise 來處理非同步操作</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Async_await">利用 async 及 await 讓非同步程式設計變得更容易</a></li>
+ <li><a href="/zh-TW/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">選擇正確的方法</a></li>
 </ul>

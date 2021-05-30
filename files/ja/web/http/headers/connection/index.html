@@ -14,9 +14,9 @@ translation_of: Web/HTTP/Headers/Connection
 
 <p><strong><code>Connection</code></strong> 一般ヘッダーは、現在のトランザクションが完了したあとも、ネットワーク接続を開いたままにするかどうかを制御します。もし送信された値が <code>keep-alive</code> であった場合は、接続が維持されて閉じられなくなり、同一のサーバーに送るべき後続のリクエストで再利用されます。</p>
 
-<div class="note"><a href="https://tools.ietf.org/html/rfc7540#section-8.1.2.2"><code>Connection</code> などの接続固有のヘッダーフィールドは HTTP/2 で使用しないでください。</a></div>
+<div class="notecard warning"><p>{{HTTPHeader("Connection")}} や {{HTTPHeader("Keep-Alive")}} などの接続固有のヘッダーフィールドは、<a href="https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.2">HTTP/2 では使用しないでください</a>。Chrome と Firefox は HTTP/2 レスポンスでそれらを無視しますが、Safari は HTTP/2 仕様の要件に準拠しているため、それらを含むレスポンスをロードしません。</p></div>
 
-<p>標準のホップバイホップヘッダー ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}}, {{HTTPHeader("Proxy-Authenticate")}}) に対しては別の用途でこのヘッダーが利用されます。この <code>Connection</code> ヘッダーにはカンマ区切りで、これらのホップバイホップヘッダーの名前が設定されます。このヘッダーに列挙されたヘッダーは最初のプロキシーで消費されるべきもの、という指示になり、後続のサーバーには転送されなくなります。標準のホップバイホップヘッダーの名前をカンマ区切りのリストに入れることができます (ほとんどの場合では {{HTTPHeader("Keep-Alive")}} が設定されますが、これは必須ではありません)。</p>
+<p>標準のホップバイホップヘッダー ({{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}}, {{HTTPHeader("Proxy-Authenticate")}}) に対しては別の用途でこのヘッダーが利用されます。この <code>Connection</code> ヘッダーにはカンマ区切りで、これらのホップバイホップヘッダーの名前が設定されます。このヘッダーに列挙されたヘッダーは最初のプロキシーで消費されるべきもの、という指示になり、後続のサーバーには転送されなくなります。標準のホップバイホップヘッダーの名前をカンマ区切りのリストに入れることができます。</p>
 
 <table class="properties">
  <tbody>
