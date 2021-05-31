@@ -54,61 +54,7 @@ anchor.host == "developer.mozilla.org:4097"
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Возможность</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("22")}} [3]</td>
-   <td>{{CompatNo}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Возможность</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("22")}} [3]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Хотя оно и не включено в один абстрактный интерфейс, это свойство напрямую доступно в интерфейсах, которые его реализуют.</p>
-
-<p>[2] В Internet Explorer 9 свойство host элемента {{HTMLElement("a")}} всегда включает порт (т.е. <code>developer.mozilla.org:443</code>), даже если порт в <code>href</code> не указан явно.</p>
-
-<p>[3] С Gecko 22 по Gecko 44, это свойство находилось в <code>URLUtils</code>. Оно было перемещено или в <code>HTMLHyperlinkElementUtils</code>, или напрямую в интерфейс.</p>
+<p>{{Compat("api.HTMLAnchorElement.host")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

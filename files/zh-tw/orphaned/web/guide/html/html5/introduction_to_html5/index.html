@@ -1,0 +1,41 @@
+---
+title: Introduction to HTML5
+slug: orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+tags:
+  - HTML
+  - HTML5
+translation_of: Web/Guide/HTML/HTML5/Introduction_to_HTML5
+original_slug: Web/Guide/HTML/HTML5/Introduction_to_HTML5
+---
+<p><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/" title="http://www.whatwg.org/specs/web-apps/current-work/">HTML5</a> 是目前最新的HTML標準。它提供一些新特性，不只是支援多媒體，還讓網頁應用程式可以更容易、更有效地與使用者、伺服器互動。</p>
+
+<p>目前，仍有一些瀏覽器未完全支援HTML5所有特性。但是使用Gecko解析引擎的Firefox已經對HTML5十分支持，現時還繼續開發去支援更多特性。Gecko已經在1.8.1版本開始支持一些HTML5 了。你可以在<a href="/en/HTML/HTML5" title="en/HTML/HTML5">main HTML5 page</a>找到Gecko解析引擎最近支援的HTML5特性列表。若要更仔細知道多種瀏覽器支援的情況，可瀏覽<a class="external" href="http://caniuse.com/#cats=HTML5" title="http://caniuse.com/#cats=HTML5">CanIUse</a>。</p>
+
+<h2 id="建立HTML5文件並宣告HTML5_doctype">建立HTML5文件並宣告HTML5 doctype</h2>
+
+<p>要建立HTML5文件很簡單，只需要在文件開首宣告：</p>
+
+<pre class="brush:html;">&lt;!DOCTYPE html&gt;
+</pre>
+
+<p>對於未支援HTML5標準的瀏覽器，瀏覽器會繼續解析，但要注意一些HTML5的新特性則會忽略、不會支援。</p>
+
+<p>然而這個宣告方法比以前HTML版本更簡單、更短，更容易記憶，亦減少文件容量。</p>
+
+<h2 id="利用&lt;meta_charset>來宣告字符集"><code>利用&lt;meta charset&gt;來宣告字符集</code></h2>
+
+<p>你需要首先指示瀏覽器要使用哪一種字符集。在以前版本，這需要複雜的<code>&lt;meta&gt;完素；來到</code>HTML5，這變得非常簡單：</p>
+
+<pre class="brush:html;">&lt;meta charset="UTF-8"&gt;</pre>
+
+<p>將它放置在<code>&lt;head&gt;&lt;/head&gt;之間。若果你使用的字符集與瀏覽器預先設定的不一樣，</code><span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">瀏覽器會重新解析文件。另外，若你目前並非</span>UTF-8<span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">字符集，建議你在網頁中自行設定。</span></p>
+
+<p>為了加強安全，HTML5文件限制<span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">字符集需要兼容</span>ASCII和最少8位元。</p>
+
+<h2 id="Using_the_new_HTML5_parser">Using the new HTML5 parser</h2>
+
+<p>The parsing rule of HTML5, which analyzes the meaning of mark-up, has been more precisely defined in HTML5. Until the introduction of HTML5, only the meaning of <em>valid</em> mark-up was defined, meaning that as soon as one small error was made in the mark-up (most Web sites have at least one), the behavior was undefined. Essentially, it meant that all browsers behaved differently, which is no longer the case. Now, faced with errors in the mark-up, all compliant browsers must behave exactly in the same way.</p>
+
+<p>This requirement helps Web developers quite a bit. While it is true that all modern browsers now use these HTML5 parsing rules, non-HTML5-compliant browsers are still used by some. Keep in mind that it's still highly recommended that one write valid mark-up, as such code is easier to read and maintain, and it greatly decreases the prominence of incompatibilities that exists in various older browsers.</p>
+
+<p>Don't worry — you don't have to change anything on your Web site — the Web browsers' developers have done everything for you!</p>

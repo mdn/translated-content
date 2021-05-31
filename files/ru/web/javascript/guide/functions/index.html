@@ -518,20 +518,6 @@ myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
 myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 </pre>
 
-<p>Т.к. <code>arguments</code> является псевдо-массивом, к нему применимы некоторые методы массивов, например, for .. in</p>
-
-<pre>function func() {
-  for (value in arguments){
-    console.log(value);
-  }
-}
-
-func(1, 2, 3);
-// 1
-// 2
-// 3
-</pre>
-
 <div class="note">
 <p><strong>Примечание:</strong> <code>arguments</code> является псевдо-массивом, но не массивом. Это псевдо-массив, в котором есть пронумерованные индексы и свойство <code>length</code>. Однако он не обладает всеми методами массивов.</p>
 </div>

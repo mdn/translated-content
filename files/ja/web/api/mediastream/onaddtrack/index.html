@@ -5,7 +5,7 @@ translation_of: Web/API/MediaStream/onaddtrack
 ---
 <p>{{APIRef("Media Streams API")}}</p>
 
-<p><span class="seoSummary"><strong><code>MediaStream.onaddtrack</code></strong> プロパティは、{{domxref("EventHandler")}}であり、{{domxref("MediaStream")}}インスタンスで{{event("addtrack")}}イベントが発生した時に呼び出される関数です。このイベントは、メディアストリームへ新しいトラックが追加された時に発生します。</span>このイベントはブラウザがストリームへ新しいトラックを追加した時に発生します。たとえば、{{domxref("RTCPeerConnection")}}が再交渉された時や、{{domxref("HTMLMediaElement.captureStream()")}}を用いてキャプチャーが開始されたストリームが、新しいトラックを取得した時です。</p>
+<p><span class="seoSummary"><strong><code>MediaStream.onaddtrack</code></strong> プロパティは、{{event("Event_handlers", "event handler")}}であり、{{domxref("MediaStream")}}インスタンスで{{event("addtrack")}}イベントが発生した時に呼び出される関数です。このイベントは、メディアストリームへ新しいトラックが追加された時に発生します。</span>このイベントはブラウザがストリームへ新しいトラックを追加した時に発生します。たとえば、{{domxref("RTCPeerConnection")}}が再交渉された時や、{{domxref("HTMLMediaElement.captureStream()")}}を用いてキャプチャーが開始されたストリームが、新しいトラックを取得した時です。</p>
 
 <p>JavaScriptのコードによって明示的にストリームへトラックを追加した場合({{domxref("MediaStream.addTrack", "addTrack()")}}の呼び出しによるもの)は、<code>addtrack</code>イベントは発生しません。</p>
 
