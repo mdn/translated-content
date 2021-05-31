@@ -25,7 +25,7 @@ ServiceWorkerGlobalScope.addEventListener('activate', function(event) { ... });<
 
 <p>次のスニペットは、<a href="/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers#Updating_your_service_worker">Using Service Workers</a> のものです; 詳細はそちらを見てください。</p>
 
-<pre class="brush: js">then.addEventListener('activate', function(event) {
+<pre class="brush: js">this.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
 
   event.waitUntil(

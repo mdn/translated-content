@@ -156,9 +156,7 @@ background-size: 50% 25%;</code></pre>
 <p>位图一定有固有尺寸与固有比例，矢量图可能两者都有，也可能只有一个。渐变视为只有固有尺寸或者只有固有比例的图片。</p>
 
 <div class="geckoVersionNote">
-<p>{{gecko_callout_heading("8.0")}}</p>
-
-<p>This behavior changed in Gecko 8.0 {{geckoRelease("8.0")}}. Before this, gradients were treated as images with no intrinsic dimensions, with an intrinsic proportion identical to that of the background positioning area.</p>
+<p>This behavior changed in Gecko 8.0. Before this, gradients were treated as images with no intrinsic dimensions, with an intrinsic proportion identical to that of the background positioning area.</p>
 </div>
 
 <p>由 {{cssxref("-moz-element")}} 生成的背景图片，(which actually match an element) are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion.</p>

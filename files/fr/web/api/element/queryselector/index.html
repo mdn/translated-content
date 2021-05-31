@@ -4,127 +4,131 @@ slug: Web/API/Element/querySelector
 tags:
   - API
   - CSS
+  - CSS Selectors
   - DOM
   - Element
-  - Méthode
+  - Elements
+  - Finding Elements
+  - Locating Elements
+  - Method
   - Reference
-  - Sélecteurs
+  - Searching Elements
+  - Selecting Elements
+  - Selectors
+  - querySelector
 translation_of: Web/API/Element/querySelector
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p>Retourne le premier élement parmi les descendant de l'élement sur lequel on l'invoque qui correspond au groupe de sélecteurs spécifiés.</p>
+<p>La méthode <strong><code>querySelector()</code></strong> de l'interface <a href="/fr/docs/Web/API/Element"><code>Element</code></a> renvoie le premier élément descendant de l'élément sur lequel elle est invoquée qui correspond au groupe de sélecteurs spécifié.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="syntax">Syntaxe</h2>
 
-<pre class="syntaxbox"><var>element</var> = baseElement.querySelector(<em>selector</em>s);
-</pre>
+<pre class="syntaxbox"><var>element</var> = baseElement.querySelector(<var>selector</var>s);</pre>
 
-<h3 id="Paramètres">Paramètres</h3>
-
-<dl>
- <dt><code>selectors</code></dt>
- <dd>est un groupe de <a href="https://developer.mozilla.org/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Les_s%C3%A9lecteurs">sélecteurs</a> à <span id="result_box" lang="fr"><span>faire correspondre aux éléments descendants du {{domxref("Element")}} <code>baseElement</code> ;</span> <span>cette syntaxe CSS doit être valide ou une exception SyntaxError se produit.</span> <span>Le premier élément trouvé correspondant à ce groupe de sélecteurs est renvoyé.</span></span></dd>
-</dl>
-
-<h3 id="Valeur_retournée">Valeur retournée</h3>
-
-<p><span id="result_box" lang="fr"><span>Le premier élément descendant de <code>baseElement</code> qui correspond au groupe de <code>sélectors</code> spécifié.</span> <span>La hiérarchie entière des éléments est considérée lors de la mise en correspondance, y compris ceux qui sont en dehors de l'ensemble des éléments, y compris <code>baseElement</code> et ses descendants;</span> <span>En d'autres termes, les sélecteurs sont d'abord appliqués au document entier, et non à l'élément de base, pour générer une liste initiale d'éléments potentiels.</span> <span>Les éléments résultants sont ensuite examinés pour voir s'ils sont des descendants de <code>baseElement</code>.</span> <span>La première correspondance de ces éléments restants est renvoyée par la méthode <code>querySelector()</code>.</span></span></p>
-
-<p><span lang="fr"><span>Si aucune correspondance n'est trouvée, la valeur retournée est <code>null</code>.</span></span></p>
-
-<h3 id="Exceptions"><span lang="fr"><span>Exceptions</span></span></h3>
+<h3 id="parameters">Paramètres</h3>
 
 <dl>
- <dt>SyntaxError</dt>
- <dd>Les <code>selectors</code> spécifiés sont invalides.</dd>
+  <dt><code>selectors</code></dt>
+  <dd>est un groupe de <a href="/fr/docs/Learn/CSS/Building_blocks/Selectors">sélecteurs</a> à faire correspondre aux éléments descendants du <a href="/fr/docs/Web/API/Element"><code>Element</code></a> <code>baseElement</code> ; cette syntaxe CSS doit être valide ou une exception SyntaxError se produit. Le premier élément trouvé correspondant à ce groupe de sélecteurs est renvoyé.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Exemples</h2>
+<h3 id="return_value">Valeur retournée</h3>
 
-<p>Dans ce premier exemple, est retourné le premier élement {{HTMLElement("style")}} dans le corps du document HTML qui, soit n'a pas de type, soit a le type <code>text/css</code>:</p>
+<p>Le premier élément descendant de <code>baseElement</code> qui correspond au groupe de <code>selectors</code> « sélecteurs » spécifié. La hiérarchie entière des éléments est considérée lors de la mise en correspondance, y compris ceux qui sont en dehors de l'ensemble des éléments, y compris <code>baseElement</code> et ses descendants ; En d'autres termes, les sélecteurs sont d'abord appliqués au document entier, et non à l'élément de base, pour générer une liste initiale d'éléments potentiels. Les éléments résultants sont ensuite examinés pour voir s'ils sont des descendants de <code>baseElement</code>. La première correspondance de ces éléments restants est renvoyée par la méthode <code>querySelector()</code>.</p>
 
-<pre class="brush:js">var el = document.body.querySelector("style[type='text/css'], style:not([type])");
-</pre>
+<p>Si aucune correspondance n'est trouvée, la valeur retournée est <code>null</code>.</p>
 
-<h3 id="Notes" name="Notes">La hiérarchie entière compte</h3>
+<h3 id="exceptions">Exceptions</h3>
 
-<p><span id="result_box" lang="fr"><span>Cet exemple montre que la hiérarchie du document entier est prise en compte lors de l'application des <code>selectors</code>, de sorte que les niveaux en dehors du </span></span> <code>baseElement</code> <span lang="fr"><span> spécifié sont toujours pris en compte lors de la recherche des correspondances.</span></span></p>
+<dl>
+  <dt>SyntaxError</dt>
+  <dd>Les <code>selectors</code> spécifiés sont invalides.</dd>
+</dl>
 
-<h4 id="HTML">HTML</h4>
+<h2 id="example">Exemple</h2>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h5</span><span class="punctuation token">&gt;</span></span>Original content<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h5</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
+<p>Dans ce premier exemple, est retourné le premier élément <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a> dans le corps du document HTML qui, soit n'a pas de type, soit a le type <code>text/css</code>:</p>
+
+<pre class="brush:js">var el = document.body.querySelector("style[type='text/css'], style:not([type])");</pre>
+
+<h3 id="the_entire_hierarchy_counts">La hiérarchie entière compte</h3>
+
+<p>Cet exemple montre que la hiérarchie du document entier est prise en compte lors de l'application des <code>selectors</code>, de sorte que les niveaux en dehors du <code>baseElement</code> spécifié sont toujours pris en compte lors de la recherche des correspondances.</p>
+
+<h4 id="html">HTML</h4>
+
+<pre class="brush: html">&lt;div&gt;
+  &lt;h5&gt;Original content&lt;/h5&gt;
+  &lt;p&gt;
     inside paragraph
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>span</span><span class="punctuation token">&gt;</span></span>inside span<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>span</span><span class="punctuation token">&gt;</span></span>
+    &lt;span&gt;inside span&lt;/span&gt;
     inside paragraph
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h5</span><span class="punctuation token">&gt;</span></span>Output<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h5</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>output<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;h5&gt;Output&lt;/h5&gt;
+  &lt;div id="output"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
 
-<h4 id="JavaScript">JavaScript</h4>
+<h4 id="javascript">JavaScript</h4>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> baseElement <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">"p"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"output"</span><span class="punctuation token">)</span><span class="punctuation token">.</span>innerHTML <span class="operator token">=</span>
-         <span class="punctuation token">(</span>baseElement<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">"div span"</span><span class="punctuation token">)</span><span class="punctuation token">.</span>innerHTML<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">var baseElement = document.querySelector("p");
+document.getElementById("output").innerHTML = (baseElement.querySelector("div span").innerHTML);</pre>
 
-<h4 id="Résultat">Résultat</h4>
+<h4 id="result">Résultat</h4>
 
 <p>Le résultat ressemble à ceci :</p>
 
-<p>{{EmbedLiveSample('The_entire_hierarchy_counts', 600, 160)}}</p>
+<div>{{EmbedLiveSample('the_entire_hierarchy_counts', '', 200)}}</div>
 
-<h3 id="Notes" name="Notes">Plus d'exemples</h3>
+<h3 id="more_examples">Plus d'exemples</h3>
 
-<p>Voir {{domxref("Document.querySelector()")}} pour des exemples supplémentaires du format approprié pour les sélecteurs.</p>
+<p>Voir <a href="/fr/docs/Web/API/Document/querySelector"><code>Document.querySelector()</code></a> pour des exemples supplémentaires du format approprié pour les sélecteurs.</p>
 
-<h2 id="Notes" name="Notes">Spécifications</h2>
+<h2 id="specifications">Spécifications</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-parentnode-queryselectorall','querySelector()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 2','#queryselectorall','querySelectorAll()')}}</td>
-   <td>{{Spec2('Selectors API Level 2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 1','#queryselectorall','querySelectorAll()')}}</td>
-   <td>{{Spec2('Selectors API Level 1')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('DOM WHATWG','#dom-parentnode-queryselectorall','querySelector()')}}</td>
+      <td>{{Spec2('DOM WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Selectors API Level 2','#queryselectorall','querySelectorAll()')}}</td>
+      <td>{{Spec2('Selectors API Level 2')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Selectors API Level 1','#queryselectorall','querySelectorAll()')}}</td>
+      <td>{{Spec2('Selectors API Level 1')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("api.Element.querySelector")}}</p>
 
-<h2 id="See_also">Voir aussi</h2>
+<h2 id="see_also">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Localisation des éléments DOM avec les sélecteurs</a></li>
- <li><a href="/fr/docs/Web/CSS/Attribute_selectors">Sélecteurs d'attribut</a> dans le guide CSS</li>
- <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Sélecteurs d'attribut</a> dans la zone d'apprentissage MDN</li>
- <li>{{domxref("element.querySelectorAll()")}}</li>
- <li>{{domxref("document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}</li>
- <li>{{domxref("DocumentFragment.querySelector()")}} et {{domxref("DocumentFragment.querySelectorAll()")}}</li>
- <li>{{domxref("ParentNode.querySelector()")}} et {{domxref("ParentNode.querySelectorAll()")}}</li>
- <li><a href="/fr/docs/Code_snippets/QuerySelector">Exemples de code pour querySelector</a></li>
- <li>autres méthodes qui prennent des sélecteurs : {{domxref("element.closest()")}} et {{domxref("element.matches()")}}.</li>
+  <li><a href="/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">Localisation des éléments DOM avec les sélecteurs</a></li>
+  <li><a href="/fr/docs/Web/CSS/Attribute_selectors">Sélecteurs d'attribut</a> dans le guide CSS</li>
+  <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Sélecteurs d'attribut</a> dans la zone d'apprentissage MDN</li>
+  <li><a href="/fr/docs/Web/API/Element/querySelectorAll"><code>element.querySelectorAll()</code></a></li>
+  <li><a href="/fr/docs/Web/API/Document/querySelector"><code>document.querySelector()</code></a> et <a href="/fr/docs/Web/API/Document/querySelectorAll"><code>Document.querySelectorAll()</code></a></li>
+  <li><a href="/fr/docs/Web/API/DocumentFragment/querySelector"><code>DocumentFragment.querySelector()</code></a> et <a href="/fr/docs/Web/API/DocumentFragment/querySelectorAll"><code>DocumentFragment.querySelectorAll()</code></a></li>
+  <li><a href="/fr/docs/Web/API/ParentNode/querySelector"><code>ParentNode.querySelector()</code></a> et <a href="/fr/docs/Web/API/ParentNode/querySelectorAll"><code>ParentNode.querySelectorAll()</code></a></li>
+  <li><a href="/en-US/docs/Archive/Add-ons/Code_snippets/QuerySelector">Exemples de code pour querySelector</a> <small>Archive en anglais</small></li>
+  <li>Autres méthodes qui prennent des sélecteurs : <a href="/fr/docs/Web/API/Element/closest"><code>element.closest()</code></a> et <a href="/fr/docs/Web/API/Element/matches"><code>element.matches()</code></a>.</li>
 </ul>

@@ -26,7 +26,7 @@ translation_of: Web/API/CacheStorage/keys
 
 <p>在此代码片段中，我们监听{{domxref("ServiceWorkerGlobalScope.onactivate", "activate")}} 事件，然后运行一个 {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} 方法，该方法在新的 service worker 被激活之前清除老的、无用的cache。 这里我们设置一个包含缓存名称的白名单。 通过使用 <code>keys()方法</code> 来返回{{domxref("CacheStorage")}} 对象中的keys集合，然后检查缓存key是否在白名单中，如果不存在，则使用 {{domxref("CacheStorage.delete")}} 方法来删除该缓存。</p>
 
-<pre class="brush: js">then.addEventListener('activate', function(event) {
+<pre class="brush: js">this.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
 
   event.waitUntil(

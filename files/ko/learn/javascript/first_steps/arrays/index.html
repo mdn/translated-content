@@ -1,5 +1,5 @@
 ---
-title: Arrays
+title: 배열(Arrays)
 slug: Learn/JavaScript/First_steps/Arrays
 translation_of: Learn/JavaScript/First_steps/Arrays
 ---
@@ -7,7 +7,7 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary">배열은 하나의 변수에 다수의 데이터를 저장하는 좋은 방법이며, 이 글에서 배열의 생성, 검색, 추가, 삭제 등과 같은 내용을 통해 배열에 대해 알아볼 것입니다.</p>
+<p class="summary">이 모듈의 이 마지막 문서에서, 우리는 배열을 살펴볼 것입니다. 배열이란 하나의 변수명 아래에 데이터 아이템의 리스트를 저장하는 간편한 방법입니다. 여기서 우리는 왜 배열이 유용한지 보고, 어떻게 배열을 만들고, 검색하고(retrieve), 추가하고, 그리고 배열에 저장된 원소들(items)을 삭제하는지, 그리고 그 외의 많은 것을 탐구합니다.</p>
 
 <table class="learn-box standard-table">
  <tbody>
@@ -17,18 +17,18 @@ translation_of: Learn/JavaScript/First_steps/Arrays
   </tr>
   <tr>
    <th scope="row">목적:</th>
-   <td>배열이 무엇인지 이해를 하고 JavaScript에서 어떻게 활용하는지 배운다.</td>
+   <td>배열이 무엇인지 이해하고 JavaScript에서 어떻게 활용하는지 배운다.</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="배열이란">배열이란?</h2>
 
-<p>배열은 다수의 변수들을 가지고 있는 하나의 객체이다("list-like objects"). 배열 객체는 변수에 저장 해서 사용 할 수 있고, 변수에 저장된 다른 값들과 거의 동일한 방식으로 쓸 수 있다. 일반적인 값들과 배열의 다른점은 내부의 값에 각각 접근할 수 있으며, 루프를 통해 매우 효율적으로 작업이 가능하다는 것이다. 예를 들어 우리가 흔히 보는 영수증의 제품목록, 가격 등이 배열이라고 볼 수 있으며 그 가격들의 총합을 루프를 통하여 구할 수 있다.</p>
+<p>배열이란 일반적으로 "리스트같은 객체(list-like objects)"라고 기술됩니다. 배열은 보통 리스트에 저장된 다수의 값들을 포함하고 있는 하나의 객체입니다. 배열 객체는 변수에 저장될 수 있고 다른 종류의 값들처럼 훨씬 같은 방법으로 다뤄질 수 있는데, 차이는 우리는 배열 안의 각 값들에 개별적으로 접근할 수 있고, 리스트를 통해 반복(loop)하고 모든 값에 동일한 것을 할 수 있는 것과 같이, 리스트와 함께 엄청 유용하고 효율적인 것들을 할 수 있다는 것입니다. 아마도 우리는 배열에 저장된 상품명과 가격을 가지고 있고, 그 값들을 통해 반복하고, 모든 가격을 하나로 합하고 총액을 청구서의 하단에 출력하고 싶을지도 모릅니다.</p>
 
-<p>만약 배열이 없다면 다수의 값이 있을 때 각 값의 하나의 변수에 일일이 저장해야 하는 문제가 생길 것이며, 해당 값들을 출력하거나 연산할 때 한땀한땀 개고생 해야한다. 이때문에 코드를 작성하는데 오래걸리며, 비효율적이고 실수를 할 가능성이 높아진다. 오늘 산 물건이 10개 정도라면 값을 더하는데 얼마 걸리지 않겠지만, 100개나 1000개 쯤 구입을 했다면? 잠은 다잔거다.</p>
+<p>만약 배열이 없다면 모든 원소를 별도의 변수에 저장해야 할 것이고, 각 원소에 대해 별도로 출력하고 더하는 코드를 불러야 할 것입니다. 이런 방식은 작성하기에 훨씬 오래 걸리고, 덜 효율적이며, 오류가 나기 쉽습니다. 만약 우리가 청구서에 더할 10개의 물품을 가지고 있다면 이것만으로도 이미 짜증나는데, 100개의 물품, 혹은 1000개의 물품이라면 어떨까요? 우리는 이 문서에서 나중에 이 예시로 돌아올 것입니다.</p>
 
-<p>이전에 배웠던 것처럼, JavaScript 콘솔에서 몇가지 예제를 통해 배열의 쌩기초 부터 알아보자. 아래에 우리가 제공하는 콘솔이 하나 있다.(<a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">이 콘솔</a>을 새 탭이나 창을 열어서 사용 하거나, 당신이 선호하는 <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">개발자 콘솔</a>을 사용하면된다.)</p>
+<p>지난 문서에서처럼, 브라우저 개발자 콘솔에 몇몇 예제를 입력함으로써 배열의 진짜 기초에 대해 배워 봅시다. (아래의 콘솔 창을 사용하거나, 당신이 선호하는 <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">개발자 콘솔</a>을 사용하면 됩니다.)</p>
 
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
@@ -147,108 +147,105 @@ translation_of: Learn/JavaScript/First_steps/Arrays
 <p>배열은 대괄호로 구성되며 쉼표로 구분 된 항목들을 포함합니다.</p>
 
 <ol>
- <li>쇼핑 목록을 배열에 저장하고 싶다면 다음과 같이하면됩니다. 콘솔에 다음 행을 입력하십시오.
+ <li>쇼핑 목록을 배열에 저장하고 싶다면 다음과 같이 하면 됩니다. 콘솔에 다음 행을 입력하십시오.
   <pre class="brush: js">var shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
 shopping;</pre>
  </li>
- <li>아래 배열의 각 항목은 문자열이지만 배열의 모든 항목 (문자열, 숫자, 개체, 다른 변수, 심지어 다른 배열)을 저장할 수 있습니다. 동일한 형태의 항목만 넣거나(아래 sequence처럼)  다양한 형태의 항목을 함께 넣을수(아래 random 처럼) 있습니다. 모두 숫자, 문자열 등일 필요는 없습니다. 다음을 입력해보세요.
+ <li>위의 예제에서, 각 원소는 문자열이지만, 우리는 다양한 데이터 유형을 배열에 저장할 수 있습니다 (문자열, 숫자, 개체, 다른 변수, 심지어 다른 배열). 동일한 형태의 항목만 넣거나 (아래 sequence 처럼) 다양한 형태의 항목을 함께 넣을 수 (아래 random 처럼) 있습니다. 모두 숫자, 문자열 등일 필요는 없습니다. 다음을 입력해보세요.
   <pre class="brush: js">var sequence = [1, 1, 2, 3, 5, 8, 13];
 var random = ['tree', 795, [0, 1, 2]];</pre>
  </li>
- <li>다음으로 넘어가기 전 여러분 마음대로 배열을 만들어 보세요</li>
+ <li>다음으로 넘어가기 전 여러분 마음대로 배열을 만들어 보세요.</li>
 </ol>
 
 <h3 id="배열_항목의_접근과_수정">배열 항목의 접근과 수정 </h3>
 
-<p>그런 다음 <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character">문자열의 문자에 접근했던 것</a>과 같은 방법으로 괄호 표기법을 사용하여 배열의 개별 항목을 접근 할 수 있습니다.</p>
+<p>그런 다음 <a href="https://developer.mozilla.org/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character">문자열의 문자에 접근했던 것</a>과 같은 방법으로 괄호 표기법을 사용하여 배열의 개별 항목에 접근 할 수 있습니다.</p>
 
 <ol>
  <li>콘솔에 다음을 입력하세요:
   <pre class="brush: js">shopping[0];
 // returns "bread"</pre>
  </li>
- <li>단일 배열 항목에 새 값을 제공하여, 배열의 항목을 수정할 수도 있습니다.<br>
-  한번 해보세요 :
+ <li>단일 배열 항목에 새 값을 제공하여, 배열의 항목을 수정할 수도 있습니다. 한번 해보세요:
   <pre class="brush: js">shopping[0] = 'tahini';
 shopping;
 // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]</pre>
 
-  <div class="note"><strong>참고</strong>: 전에도 말했지만, 컴퓨터는 숫자를 셀때 0 부터 시작한다!</div>
+  <div class="note"><strong>참고</strong>: 전에도 말했지만, 컴퓨터는 숫자를 셀 때 0부터 시작합니다!</div>
  </li>
- <li>배열 내부의 배열을 다중배열이라고 합니다.대괄호 두개를 함께 연결하여 다른 배열 안에있는 배열 내부의 항목에 접근 할 수 있습니다.예를 들어 <code>무작위</code> 배열(<code>random</code> array) 안의 세 번째 항목 인 배열 내부 항목 중 하나에 접근하려면(앞 섹션 참조) 다음과 같이 할 수 있습니다.:
+ <li>배열 내부의 배열을 다중배열(multidimensional array)이라고 합니다. 대괄호 두개를 함께 연결하여 다른 배열 안에있는 배열 내부의 항목에 접근 할 수 있습니다.예를 들어 <code>random</code> 배열 내부의 세 번째 원소에 접근하려면(앞 섹션 참조) 다음과 같이 할 수 있습니다:
   <pre class="brush: js">random[2][2];</pre>
  </li>
- <li>다음 단계로 넘어가기 전에 충분히 배열 예제를 연습해보세요.</li>
+ <li>다음 단계로 넘어가기 전에 충분히 배열 예제를 연습해 보세요.</li>
 </ol>
 
 <h3 id="배열의_갯수_알아내기">배열의 갯수 알아내기</h3>
-
-<p>{{jsxref("Array.prototype.length","length")}} 속성을 사용해서 배열에 들어 있는 문자열의 갯수를 알아낼 수 있다.(갯수가 얼마나 많이 있던지) 다음을 보자.:</p>
+<p>{{jsxref("Array.prototype.length","length")}} 속성을 사용해서, 문자열의 (문자의) 길이를 알아낸 것과 정확히 같은 방식으로 (얼마나 많은 원소가 배열에 들어 있는지) 배열의 길이를 알아낼 수 있습니다. 다음을 봅시다.:</p>
 
 <pre class="brush: js">sequence.length;
 // should return 7</pre>
 
-<p>다른 용도로 사용되기도 하는데, loop문으로 배열의 모든 항목을 반복적으로 값을 대입하는데 일반적으로 사용한다. 예를 들면:</p>
+<p>이것은 다른 사용법을 가지고 있지만, 이것은 가장 흔히 반복문이 배열의 모든 원소를 거치기 전까지 계속하라고 말하는 데 쓰입니다. 다음이 예시입니다.</p>
 
 <pre class="brush: js">var sequence = [1, 1, 2, 3, 5, 8, 13];
 for (var i = 0; i &lt; sequence.length; i++) {
   console.log(sequence[i]);
 }</pre>
 
-<p>다음 article에서 반복문에 대해서 자세히 다루겠지만 다음과 같이 요약할 수 있다.</p>
+<p>다음 문서에서 반복문에 대해서 자세히 다루겠지만, 간단히 말하자면, 이 코드는 다음을 말하고 있습니다.</p>
 
 <ol>
- <li>배열을 반복문으로 돌릴때 item의 시작번호는 0 입니다.</li>
- <li>배열의 갯수와 같은 번호일때 반복문을 중단하세요. 어떤 길이의 배열에서도 반복문이 돌지만, 이 경우에선 반복문이 7번 돌고 멈춥니다.(반복문을 끝내기를 원하는 마지막 item의 숫자는 6입니다.)</li>
- <li>각각의 item에 대해 <code>console.log()</code>을 사용해 브라우저 콘솔창으로 확인해보세요.</li>
+ <li>배열의 원소 번호 0에서 반복을 시작합니다.</li>
+ <li>배열의 길이와 같은 원소 번호에서 반복을 멈춥니다. 이것은 어떠한 길이의 배열에서도 작동하지만, 이 경우에서는 원소 번호 7에서 반복을 멈춥니다 (마지막 원소(우리가 반복문이 포함하기를 원하는)는 번호 6이므로, 이것은 좋습니다.)</li>
+ <li>각 원소에 대해, <code>console.log()</code>로 브라우저 콘솔에 출력합니다.</li>
 </ol>
 
-<h2 id="유용한_배열_method">유용한 배열 method</h2>
-
-<p>이번 섹션에서는 문자열을 배열 항목으로 분할하고, 다시 배열 항목을 문자열로 변환하며 새로운 항목을 배열에 추가할 수 있는 배열 관련 method를 알아봅니다.</p>
+<h2 id="유용한_배열_method">유용한 배열 메서드</h2>
+<p>이번 섹션에서는 문자열을 배열 원소로 나누고 그 역으로도 할 수 있게 하는, 그리고 새로운 원소들을 배열에 추가할 수 있게 하는 몇몇 꽤 유용한 배열에 관련된 메서드들을 살펴볼 것입니다.</p>
 
 <h3 id="문자열을_배열로_배열을_문자열로_변환하기">문자열을 배열로, 배열을 문자열로 변환하기</h3>
 
-<p>프로그램을 만들다보면 종종 긴 문자열로 이루어진 원시 데이터를 제공받게 될 것이고, 원시 데이터를 정제하여 더 유용한 데이터를 추출해 테이블 형태로 표시하는 등 작업을 수행해야 합니다. 이러한 작업을 위해 {{jsxref("String.prototype.split()","split()")}} method를 사용할 수 있습니다.  {{jsxref("String.prototype.split()","split()")}} method는 사용자가 원하는 매개변수로 문자열을 분리하여 배열로 표현해줍니다.</p>
+<p>프로그램을 만들다보면 종종 긴 문자열로 이루어진 원시 데이터를 제공받게 될 것이고, 원시 데이터를 정제하여 더 유용한 데이터를 추출해 테이블 형태로 표시하는 등 작업을 수행해야 합니다. 이러한 작업을 위해 {{jsxref("String.prototype.split()","split()")}} 메서드를 사용할 수 있습니다. {{jsxref("String.prototype.split()","split()")}} 메서드는 사용자가 원하는 매개변수로 문자열을 분리하여 배열로 표현해줍니다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: 사실 String method이지만, 배열과 함께 사용하기 때문에 여기에 넣었습니다.</p>
+<p><strong>Note</strong>: 사실 엄밀히 따지면 문자열 메서드지만, 배열과 함께 사용하기 때문에 여기에 넣었습니다.</p>
 </div>
 
 <ol>
- <li>{{jsxref("String.prototype.split()","split()")}} method가 어떻게 작동하는지 살펴봅시다. 우선 콘솔에서 아래와 같은 문자열을 만듭니다:
+ <li>{{jsxref("String.prototype.split()","split()")}} 메서드가 어떻게 작동하는지 살펴봅시다. 우선 콘솔에서 아래와 같은 문자열을 만듭니다:
   <pre class="brush: js">var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';</pre>
  </li>
- <li>콤마로 분리하기 위해 단일 매개변수를 집어넣습니다.:
+ <li>콤마로 분리해 봅시다:
   <pre class="brush: js">var myArray = myData.split(',');
 myArray;</pre>
  </li>
- <li>마지막으로 새로운 배열의 길이를 찾고 이 배열에서 몇 가지 항목을 검색해 봅니다.:
+ <li>마지막으로 새로운 배열의 길이를 찾고 이 배열에서 몇 가지 항목을 검색해 봅시다:
   <pre class="brush: js">myArray.length;
 myArray[0]; // the first item in the array
 myArray[1]; // the second item in the array
 myArray[myArray.length-1]; // the last item in the array</pre>
  </li>
- <li>또한 아래 방법처럼 {{jsxref("Array.prototype.join()","join()")}} method를 사용하여 배열을 다시 문자열로 만들 수 있습니다. :
+ <li>또한 아래 방법처럼 {{jsxref("Array.prototype.join()","join()")}} 메서드를 사용하여 배열을 다시 문자열로 만들 수 있습니다:
   <pre class="brush: js">var myNewString = myArray.join(',');
 myNewString;</pre>
  </li>
- <li>배열을 문자열로 변환하는 또 다른 방법은 {{jsxref("Array.prototype.toString()","toString()")}} method를 사용하는 것 입니다. <code>toString()</code> 은 <code>join()</code> 과 달리 매개변수가 필요 없어서 더 간단하지만, 제한이 더 많습니다. <code>join()</code> 을 사용하면 다른 구분자를 지정할 수 있습니다. (콤마 말고 다른 매개변수를 사용하여 4단계를 실행 해보세요.)
+ <li>배열을 문자열로 변환하는 또 다른 방법은 {{jsxref("Array.prototype.toString()","toString()")}} 메서드를 사용하는 것입니다. <code>toString()</code> 은 <code>join()</code> 과 달리 매개변수가 필요없어서 더 간단하지만, 더 많은 제한이 있습니다. <code>join()</code> 을 사용하면 다른 구분자를 지정할 수 있지만, <code>toString()</code> 은 항상 콤마를 사용합니다. (콤마 말고 다른 매개변수를 사용하여 4단계를 실행해 보세요.)
   <pre class="brush: js">var dogNames = ['Rocket','Flash','Bella','Slugger'];
 dogNames.toString(); //Rocket,Flash,Bella,Slugger</pre>
  </li>
 </ol>
 
-<h3 id="배열에_item을_추가하고_제거하기">배열에 item을 추가하고 제거하기</h3>
+<h3 id="배열에_item을_추가하고_제거하기">배열에 원소를 추가하고 제거하기</h3>
 
-<p>이번엔 배열에 item을 추가하고 제거하는 방법을 알아볼 차례 입니다. 위에서 만든 <code>myArray</code> 를 다시 사용하겠습니다. 섹션을 순서대로 진행하지 않았다면 아래와 같은 배열을 만들어주세요.:</p>
+<p>이번엔 배열에 원소를 추가하고 제거하는 방법을 알아볼 차례입니다. 위에서 만든 <code>myArray</code> 를 다시 사용하겠습니다. 섹션을 순서대로 진행하지 않았다면 아래와 같은 배열을 만들어주세요:</p>
 
 <pre class="brush: js">var myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];</pre>
 
-<p>먼저, 배열의 맨 끝에 item을 추가하거나 제거하기 위해 각각{{jsxref("Array.prototype.push()","push()")}} and {{jsxref("Array.prototype.pop()","pop()")}} 를 사용할 수 있습니다.</p>
+<p>먼저, 배열의 맨 끝에 원소를 추가하거나 제거하기 위해 각각 {{jsxref("Array.prototype.push()","push()")}} and {{jsxref("Array.prototype.pop()","pop()")}} 를 사용할 수 있습니다.</p>
 
 <ol>
- <li>먼저 <code>push()</code> 를 사용합니다. — 배열의 끝에 추가할 item을 반드시 하나 이상 포함해야 한다는 점을 기억하고 아래와 같이 따라해보세요:
+ <li>먼저 <code>push()</code> 를 사용합니다. — 배열의 끝에 추가할 원소를 반드시 하나 이상 포함해야 한다는 점을 기억하고 아래와 같이 따라해보세요:
 
   <pre class="brush: js">myArray.push('Cardiff');
 myArray;
@@ -256,47 +253,47 @@ myArray.push('Bradford', 'Brighton');
 myArray;
 </pre>
  </li>
- <li>method 호출이 완료되면 배열의 item이 변한것을 확인할 수 있습니다. 새로운 변수에 배열을 저장하려면 아래와 같이 사용합니다.:
+ <li>메서드 호출이 완료되면 배열의 새 길이가 리턴됩니다. 만약 새 배열의 길이를 변수에 저장하고 싶다면, 다음과 같이 할 수 있습니다:
   <pre class="brush: js">var newLength = myArray.push('Bristol');
 myArray;
 newLength;</pre>
  </li>
- <li>배열의 마지막 item을 제거하는 방법은 <code>pop()</code>으로 매우 간단합니다. 아래와 같이 따라해보세요:
+ <li>배열의 마지막 원소를 제거하는 방법은 <code>pop()</code>으로 매우 간단합니다. 아래와 같이 따라해 보세요:
   <pre class="brush: js">myArray.pop();</pre>
  </li>
- <li>method호출이 완료되면 배열에서 item이 제거된 것을 확인할 수 있습니다. 아래 방법을 사용하여 제거될 item을 변수에 저장할 수 있습니다.:
+ <li>메서드 호출이 완료되면 제거된 원소가 리턴됩니다. 이 원소를 새 변수에 저장하기 위해서, 다음과 같이 할 수 있습니다:
   <pre class="brush: js">var removedItem = myArray.pop();
 myArray;
 removedItem;</pre>
  </li>
 </ol>
 
-<p>{{jsxref("Array.prototype.unshift()","unshift()")}} 와{{jsxref("Array.prototype.shift()","shift()")}}는 <code>push()</code> 와 <code>pop()</code>과 유사하게 동작합니다. 다만, 배열의 맨 끝이 아닌 제일 처음 부분의 item을 추가하거나 제거합니다..</p>
+<p>{{jsxref("Array.prototype.unshift()","unshift()")}} 와{{jsxref("Array.prototype.shift()","shift()")}}는 <code>push()</code> 와 <code>pop()</code>과 완전히 동일하게 동작합니다. 다만, 배열의 맨 끝이 아닌 제일 처음 부분의 원소를 추가하거나 제거합니다.</p>
 
 <ol>
- <li>먼저 <code>unshift()</code> 를 사용해봅니다.:
+ <li>먼저 <code>unshift()</code> 를 사용해봅시다:
 
   <pre class="brush: js">myArray.unshift('Edinburgh');
 myArray;</pre>
  </li>
- <li>이제 <code>shift()</code>를 사용해봅니다.!
+ <li>이제 <code>shift()</code>를 사용해봅시다!
   <pre class="brush: js">var removedItem = myArray.shift();
 myArray;
 removedItem;</pre>
  </li>
 </ol>
 
-<h2 id="Active_learning_Printing_those_products!">Active learning: Printing those products!</h2>
+<h2 id="Active_learning_Printing_those_products!">활동적 학습: 상품들 출력하기!</h2>
 
-<p>Let's return to the example we described earlier — printing out product names and prices on an invoice, then totaling the prices and printing them at the bottom. In the editable example below there are comments containing numbers — each of these marks a place where you have to add something to the code. They are as follows:</p>
+<p>앞에서 설명했던 예제로 돌아가 봅시다. 상품의 이름과 가격을 청구서에 출력하고, 가격의 합계를 내서 그것을 밑에 출력합니다. 아래의 수정 가능한 예제에, 숫자를 포함하고 있는 주석이 있습니다. 각 줄은 코드에 추가할 장소를 표시하고 있습니다. 그것들은 다음과 같습니다.</p>
 
 <ol>
- <li>Below the <code>// number 1</code> comment are a number of strings, each one containing a product name and price separated by a colon. We'd like you to turn this into an array and store it in an array called <code>products</code>.</li>
- <li>On the same line as the <code>// number 2</code> comment is the beginning of a for loop. In this line we currently have <code>i &lt;= 0</code>, which is a conditional test that causes the <a href="/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops">for loop</a> to stop immediately, because it is saying "stop when <code>i</code> is no longer less than or equal to 0", and <code>i</code> starts at 0. We'd like you to replace this with a conditional test that stops the loop when <code>i</code> is no longer less than the <code>products</code> array's length.</li>
- <li>Just below the <code>// number 3</code> comment we want you to write a line of code that splits the current array item (<code>name:price</code>) into two separate items, one containing just the name and one containing just the price. If you are not sure how to do this, consult the <a href="/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a> article for some help, or even better, look at the {{anch("Converting between strings and arrays")}} section of this article.</li>
- <li>As part of the above line of code, you'll also want to convert the price from a string to a number. If you can't remember how to do this, check out the <a href="/en-US/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings">first strings article</a>.</li>
- <li>There is a variable called <code>total</code> that is created and given a value of 0 at the top of the code. Inside the loop (below <code>// number 4</code>) we want you to add a line that adds the current item price to that total in each iteration of the loop, so that at the end of the code the correct total is printed onto the invoice. You might need an <a href="/en-US/Learn/JavaScript/First_steps/Math#Assignment_operators">assignment operator</a> to do this.</li>
- <li>We want you to change the line just below <code>// number 5</code> so that the <code>itemText</code> variable is made equal to "current item name — $current item price", for example "Shoes — $23.99" in each case, so the correct information for each item is printed on the invoice. This is just simple string concatenation, which should be familiar to you.</li>
+ <li>아래의 <code>// number 1</code> 주석은 몇 개의 문자열인데, 각 문자열은 상품의 이름과 가격을 포함하고 있고 콜론에 의해 분리되어 있습니다. 우리는 당신이 이것을 <code>products</code>라는 배열으로 바꾸고 이곳에 이것을 저장하기를 원합니다.</li>
+ <li><code>// number 2</code> 주석이 있는 같은 라인에서는 for 반복문이 시작됩니다. 이 라인에서 우리는 현재 <code>i &lt;= 0</code>를 가지고 있는데, 이 조건 테스트(conditional test)는 "<code>i</code>가 더 이상 0보다 작거나 같지 않을 때 멈추시오"라고 말하고 있고, <code>i</code>는 0에서 시작하기 때문에, 이는 <a href="/ko/docs/Learn/JavaScript/First_steps/A_first_splash#Loops">for 반복문</a>이 즉시 멈추는 것을 유발하는 조건 테스트입니다. 우리는 당신이 이것을 <code>i</code>가 <code>products</code>배열의 길이(length)보다 더 이상 작지 않을 때 반복을 멈추게 하는 조건 테스트로 바꾸기를 원합니다.</li>
+ <li><code>// number 3</code> 주석 바로 아래에서 우리는 당신이 현재 배열의 원소를, 한 개는 단순히 이름을 포함하고 한 개는 단순히 가격을 포함하는 두 개의 원소로 분리하는 한 줄의 코드를 작성하기를 원합니다. 만약 당신이 이것을 어떻게 하는지 확실히 알지 못한다면, <a href="/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods">유용한 문자열 메서드(Useful string methods)</a>를 도움을 위해 참고하거나, 더 나은 정보를 원한다면, 이 글의 {{anch("문자열과 배열 전환하기(Converting between strings and arrays")}} 부분을 참고하세요.</li>
+<li>상기 코드 라인의 부분으로써, 당신은 또한 가격을 문자열에서 숫자로 전환하기를 원할 것입니다. 만약 당신이 어떻게 이것을 하는지 기억하지 못한다면, <a href="/ko/docs/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings">첫번째 문자열 문서</a>를 살펴보세요.</li>
+ <li>만들어지고 0의 값이 주어진 <code>total</code>이라는 변수가 코드의 위쪽에 있습니다. 이 반복문 안에서 (<code>// number 4</code> 아래) 우리는 당신이 현재 상품의 가격을 반복문의 각 반복마다 총액(total)에 합하는 코드 한 줄을 추가해서, 코드의 끝에서 올바른 총액이 청구서에 인쇄되도록 하기를 원합니다. 당신은 이것을 하기 위해 <a href="/ko/docs/Learn/JavaScript/First_steps/Math#Assignment_operators">대입 연산자(assignment operator)</a>가 필요할지도 모릅니다.</li>
+ <li><code>itemText</code> 변수가 "current item name — $current item price"와 같이 만들어지도록, 예를 들자면 각각의 경우에 "Shoes — $23.99" 처럼 만들어지도록 우리는 당신이 <code>// number 5</code> 바로 아래의 줄을 변경해서, 각각의 물품에 대한 올바른 정보가 청구서에 출력되도록 하기를 원합니다. 이것은, 당신에게 친숙할지도 모르는, 단지 단순한 문자열 연결(concatenation)입니다.</li>
 </ol>
 
 <div class="hidden">
@@ -454,21 +451,21 @@ body {
 
 <p>{{ EmbedLiveSample('Playable_code', '100%', 730, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<h2 id="실습_Top_5_searches">실습: Top 5 searches</h2>
+<h2 id="실습_Top_5_searches">실습: 상위 5개의 검색어</h2>
 
-<p>A good use for array methods like {{jsxref("Array.prototype.push()","push()")}} and {{jsxref("Array.prototype.pop()","pop()")}} is when you are maintaining a record of currently active items in a web app. In an animated scene for example, you might have an array of objects representing the background graphics currently displayed, and you might only want 50 displayed at once, for performance or clutter reasons. As new objects are created and added to the array, older ones can be deleted from the array to maintain the desired number.</p>
+<p>{{jsxref("Array.prototype.push()","push()")}} 와 {{jsxref("Array.prototype.pop()","pop()")}}같은 배열 메서드의 좋은 사용은 웹 앱(web app)에서 현재 활동적인 원소(item)의 기록을 유지할 때입니다. 예를 들자면 동영상으로 된 장면에서, 당신은 현재 보이는 배경을 나타내는 객체들의 배열을 가지고 있고 성능이나 어수선함의 이유로 오직 한번에 50개만이 보여지기를 원할지도 모릅니다. 새로운 객체가 생성되고 배열에 추가되며, 원하는 수를 유지하기 위해, 오래된 것들은 배열에서 삭제될 수 있습니다.</p>
 
-<p>In this example we're going to show a much simpler use — here we're giving you a fake search site, with a search box. The idea is that when terms are entered in the search box, the top 5 previous search terms are displayed in the list. When the number of terms goes over 5, the last term starts being deleted each time a new term is added to the top, so the 5 previous terms are always displayed.</p>
+<p>이 예제에서 우리는 더욱 단순한 사용을 보일 것입니다. 여기서 우리는 당신에게 검색 상자가 있는 가짜 검색 사이트를 제공합니다. 개념은 용어가 검색 상자에 입력되었을 때, 상위 5개의 이전 검색 용어들이 목록에 보이는 것입니다. 용어의 수가 5를 넘어갈 때, 마지막 용어는 새로운 용어가 위에 추가될 때마다 지워지기 시작해서, 5개의 이전 용어가 계속 보입니다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.</p>
+<p><strong>Note</strong>: 실제 검색 앱에서는, 당신은 아마도 이전 검색으로 돌아가기 위해 이전 검색 용어를 클릭할 수 있고, 이것은 실제 검색 결과를 보여줄 것입니다! 우리는 단지 우선은 단순하게 하고 있습니다.</p>
 </div>
 
-<p>To complete the app, we need you to:</p>
+<p>앱을 완성하기 위해, 우리는 당신이 다음을 하기를 필요로 합니다.</p>
 
 <ol>
- <li>Add a line below the <code>// number 1</code> comment that adds the current value entered into the search input to the start of the array. This can be retrieved using <code>searchInput.value</code>.</li>
- <li>Add a line below the <code>// number 2</code> comment that removes the value currently at the end of the array.</li>
+ <li><code>// number 1</code> 주석 밑에 배열의 시작에 검색 입력(input)에 입력된 현재 값을 추가하는 코드를 추가하세요. 이것은 <code>searchInput.value</code>를 사용하여 탐색될 수 있습니다.</li>
+ <li><code>// number 2</code> 주석 밑에 현재 배열의 끝에 있는 값을 제거하는 코드를 추가하세요.</li>
 </ol>
 
 <div class="hidden">
@@ -634,22 +631,26 @@ textarea.onkeyup = function(){
 
 <p>{{ EmbedLiveSample('Playable_code_2', '100%', 700, "", "", "hide-codepen-jsfiddle") }}</p>
 
+<h2 id="Test_your_skills!">당신의 기량을 시험해 보세요!</h2>
+
+<p>당신은 이 문서의 끝에 도달했지만, 가장 중요한 정보들을 기억할 수 있으신가요? 당신은 나아가기 전에 이 정보들을 보유하고 있다는 것을 확인하는 추가적인 테스트들을 찾을 수 있습니다 — 다음을 보세요: <a href="/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays">Test your skills: Arrays</a></p>
+
 <h2 id="결론">결론</h2>
 
-<p>위에 글 읽어보니, 배열이 꽤 유용해 보인다는거 알꺼임; JavaScript에서 배열은 겁나 많이 쓰인다. 배열의 모든 항목 마다 똑같은 작업을 수행하려고 루프(loop)를 돌리니까 같이 알아놓으면 개꿀. 다음 모듈(챕터)에서 루프(loop)에 관한 기초부터 알려줄꺼니까 쫄지 말고 달려. 갈 길이 멀다. 이 모듈은 이제 다 봤어!</p>
+<p>이 문서를 쭉 읽으셨다면 배열이 꽤 유용해 보인다는 것에 동의할 겁니다. 배열은 종종 모든 원소에 동일한 것을 하기 위해 반복문과 함께 자바스크립트의 모든 곳에서 찾아볼 수 있습니다. 다음 모듈에서 반복문에 대해 알기 위해 있는 모든 유용한 기본을 가르칠 것이지만, 우선 스스로에게 박수를 보내고 휴식을 취하세요. 이 모듈의 모든 문서를 독파하셨으니 잠깐 쉬어가도 좋습니다!</p>
 
-<p>이제 여기서 남은건 이 모듈의 평가뿐이야. 앞에 보여준 글(articles)을 얼마나 이해 했는지 테스트 할꺼임.</p>
+<p>유일한 남은 것은 이 모듈의 평가인데, 이는 이 평가 이전에 오는 문서들에 대한 당신의 이해를 테스트할 것입니다.</p>
 
 <h2 id="참고">참고</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections">Indexed collections</a> — an advanced level guide to arrays and their cousins, typed arrays.</li>
- <li>{{jsxref("Array")}} — the <code>Array</code> object reference page — for a detailed reference guide to the features discussed in this page, and many more.</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections">Indexed collections</a> — 배열과 배열의 친척인 typed arrays에 대한 고급 단계 가이드</li>
+ <li>{{jsxref("Array")}} — <code>Array</code> 객체 참조 페이지 — 이 페이지에서 다뤄진 기능들과 더 많은 것들에 대한 자세한 참조 가이드</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}</p>
 
-<h2 id="이번_모듈에서_배울것들">이번 모듈에서 배울것들</h2>
+<h2 id="이번_모듈에서_배울것들">이번 모듈에서 배울 것들</h2>
 
 <ul>
  <li><a href="/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">JavaScript란 무엇인가?</a></li>

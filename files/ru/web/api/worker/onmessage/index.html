@@ -5,7 +5,7 @@ translation_of: Web/API/Worker/onmessage
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>Свойство <strong><code>onmessage</code></strong>  интерфейса {{domxref("Worker")}} представляет собой обработчик {{domxref("EventHandler")}}, который будет вызван когда произойдёт событие {{event("message")}}. Тип этого события {{domxref("MessageEvent")}} и оно будет вызвано когда worker-объект получит сообщение из выполняемого им кода (т.е из метода {{domxref("DedicatedWorkerGlobalScope.postMessage")}} .</p>
+<p>Свойство <strong><code>onmessage</code></strong>  интерфейса {{domxref("Worker")}} представляет собой обработчик {{event("Event_handlers", "event handler")}}, который будет вызван когда произойдёт событие {{event("message")}}. Тип этого события {{domxref("MessageEvent")}} и оно будет вызвано когда worker-объект получит сообщение из выполняемого им кода (т.е из метода {{domxref("DedicatedWorkerGlobalScope.postMessage")}} .</p>
 
 <div class="note">
 <p><span style="font-size: 14px; line-height: 21px;"><strong>Примечание</strong></span>: Данные события доступны в свойстве data события {{event("message")}}.</p>
@@ -69,55 +69,7 @@ myWorker.onmessage = function(e) {
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Функциональность</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>4</td>
-   <td>3.5</td>
-   <td>10.0</td>
-   <td>10.6</td>
-   <td>4</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Функциональность</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>4.4</td>
-   <td>3.5</td>
-   <td>1.0.1</td>
-   <td>10.0</td>
-   <td>11.5</td>
-   <td>5.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>{{Compat("api.Worker.onmessage")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

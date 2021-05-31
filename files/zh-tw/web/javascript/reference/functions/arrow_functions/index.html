@@ -207,7 +207,7 @@ var obj = {
     console.log(this.i, this);
   }
 }
-obj.b(); // 印出 undefined, Object {...}
+obj.b(); // 印出 undefined, Window {...} (or the global object)
 obj.c(); // 印出 10, Object {...}</code></pre>
 
 <p>箭頭函式並沒有自己的 <code>this</code>。另一個例子與 {{jsxref("Object.defineProperty()")}} 有關：</p>
@@ -220,7 +220,7 @@ var obj = {
 
 Object.defineProperty(obj, 'b', {
   get: () =&gt; {
-    console.log(this.a, typeof this.a, this); // undefined 'undefined' Window {...} (or the global object)
+    console.log(this.a, typeof this.a, this); // undefined, 'undefined', Window {...} (or the global object)
     return this.a + 10; // represents global object 'Window', therefore 'this.a' returns 'undefined'
   }
 });

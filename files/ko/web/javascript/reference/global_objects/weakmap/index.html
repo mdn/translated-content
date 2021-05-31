@@ -6,6 +6,7 @@ tags:
   - JavaScript
   - WeakMap
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
+browser-compat: javascript.builtins.WeakMap
 ---
 <div>{{JSRef}}</div>
 
@@ -116,161 +117,13 @@ wm1.has(o1); // false
 }
 </pre>
 
-<h2 id="스펙">스펙</h2>
+<h2 id="specifications">명세</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">스펙</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-weakmap-objects', 'WeakMap')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>초기 정의.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakmap-objects', 'WeakMap')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<h2 id="browser_compatibility">브라우저 호환성</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>36</td>
-   <td>{{CompatGeckoDesktop("6.0")}}</td>
-   <td>11</td>
-   <td>{{ CompatOpera(23) }}</td>
-   <td>7.1</td>
-  </tr>
-  <tr>
-   <td><code>new WeakMap(iterable)</code></td>
-   <td>38</td>
-   <td>{{CompatGeckoDesktop("36")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatOpera(25) }}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>clear()</code></td>
-   <td>36</td>
-   <td>{{CompatNo}} [1]</td>
-   <td>11</td>
-   <td>{{ CompatOpera(23) }}</td>
-   <td>7.1</td>
-  </tr>
-  <tr>
-   <td>Constructor argument: <code>new WeakMap(null)</code></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("37")}}</td>
-   <td>11</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Monkey-patched <code>set()</code> in constructor</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("37")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>WeakMap()</code> without <code>new</code> throws</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("42")}}</td>
-   <td>11</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>35</td>
-   <td>{{CompatGeckoMobile("6.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>8</td>
-  </tr>
-  <tr>
-   <td><code>new WeakMap(iterable)</code></td>
-   <td>38</td>
-   <td>{{CompatGeckoMobile("36")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td><code>clear()</code></td>
-   <td>35</td>
-   <td>{{CompatNo}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>8</td>
-  </tr>
-  <tr>
-   <td>Constructor argument: <code>new WeakMap(null)</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("37")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Monkey-patched <code>set()</code> in constructor</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("37")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>WeakMap()</code> without <code>new</code> throws</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("42")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] clear() 메서드는 버전 20부터 45(포함)까지 지원됐습니다.</p>
+<p>{{Compat}}</p>
 
 <h2 id="참조">참조</h2>
 
