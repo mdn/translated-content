@@ -54,69 +54,7 @@ translation_of: Web/API/MouseEvent/buttons
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(43)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>9</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko supports the <code>buttons</code> attribute on Windows, Linux (GTK), and Mac OS with the following restrictions:</p>
-
-<ul>
- <li>Utilities allow customization of button actions so that primary may not the the left button on the device, secondary may not be the right button, and so on. The middle (wheel) button, 4th button and 5th button might not be assigned a value, even when they are pressed.</li>
- <li>Single button devices may emulate additional buttons with combinations of button and keyboard presses</li>
- <li>Touch devices may emulate buttons with configurable gestures (e.g. single touch for primary, two-finger touch for secondary, etc.)</li>
- <li>On Linux (GTK), the 4th button and the 5th button are not supported. In addition, a mouseup event always has the releasing button information in this attribute value.</li>
- <li>On Mac OS X 10.5, the buttons attribute always returns 0 because there is no platform API for implementing this feature.</li>
-</ul>
+<p>{{Compat("api.MouseEvent.buttons")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

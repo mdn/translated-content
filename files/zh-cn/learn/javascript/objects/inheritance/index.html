@@ -127,30 +127,23 @@ translation_of: Learn/JavaScript/Objects/Inheritance
 
 <p>请注意，我们仅传入了<code>this</code>到<code>call()</code>中 - 不需要其他参数，因为我们不会继承通过参数设置的父级的任何属性。</p>
 
-<h2 id="设置_Teacher_的原型和构造器引用">设置 Teacher() 的原型和构造器引用</h2>
+<h2 id="Setting_Teachers_prototype_and_constructor_reference">设置 Teacher() 的原型和构造器引用</h2>
 
-<p>到目前为止一切看起来都还行，但是我们遇到问题了。我们已经定义了一个新的构造器，这个构造器默认有一个空的原型属性。我们需要让<code>Teacher()</code>从<code>Person()</code>的原型对象里继承方法。我们要怎么做呢？</p>
+<p>All is good so far, but we have a problem. We have defined a new constructor, and it has a <code>prototype</code> property, which by default just contains an object with a reference to the constructor function itself. It does not contain the methods of the Person constructor's <code>prototype</code> property. To see this, enter <code>Object.getOwnPropertyNames(Teacher.prototype)</code> into either the text input field or your JavaScript console. Then enter it again, replacing <code>Teacher</code> with <code>Person</code>. Nor does the new constructor <em>inherit</em> those methods. To see this, compare the outputs of <code>Person.prototype.greeting</code> and <code>Teacher.prototype.greeting</code>. We need to get <code>Teacher()</code> to inherit the methods defined on <code>Person()</code>'s prototype. So how do we do that?</p>
 
 <ol>
- <li>在您先前添加的代码的下面增加以下这一行：
-  <pre class="brush: js notranslate">Teacher.prototype = Object.create(Person.prototype);</pre>
-  这里我们的老朋友<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code>又来帮忙了——在这个例子里我们用这个函数来创建一个和<code>Person.prototype</code>一样的新的原型属性值（这个属性指向一个包括属性和方法的对象），然后将其作为<code>Teacher.prototype</code>的属性值。这意味着<code>Teacher.prototype</code>现在会继承<code>Person.prototype</code>的所有属性和方法。</li>
- <li>接下来，在我们动工之前，还需要完成一件事 — 现在<code>Teacher()</code>的<code>prototype</code>的<code>constructor</code>属性指向的是<code>Person()</code>, 这是由我们生成<code>Teacher()</code>的方式决定的。(这篇 <a href="https://stackoverflow.com/questions/8453887/why-is-it-necessary-to-set-the-prototype-constructor">Stack Overflow post</a> 文章会告诉您详细的原理) — 将您写的页面在浏览器中打开，进入JavaScript控制台，输入以下代码来确认：
-  <pre class="brush: js notranslate">Teacher.prototype.constructor</pre>
- </li>
- <li>这或许会成为很大的问题，所以我们需要将其正确设置——您可以回到源代码，在底下加上这一行代码来解决：
-  <pre class="brush: js notranslate">Teacher.prototype.constructor = Teacher;</pre>
- </li>
- <li>当您保存并刷新页面以后，输入<code>Teacher.prototype.constructor</code>就会得到<code>Teacher()</code>。</li>
+	<li>Add the following line below your previous addition:
+	<pre class="brush: js">Teacher.prototype = Object.create(Person.prototype);</pre>
+	Here our friend <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">create()</a></code> comes to the rescue again. In this case we are using it to create a new object and make it the value of <code>Teacher.prototype</code>. The new object has <code>Person.prototype</code> as its prototype and will therefore inherit, if and when needed, all the methods available on <code>Person.prototype</code>.</li>
+	<li>We need to do one more thing before we move on. After adding the last line, <code>Teacher.</code><code>prototype</code>'s <code>constructor</code> property is now equal to <code>Person()</code>, because we just set <code>Teacher.prototype</code> to reference an object that inherits its properties from <code>Person.prototype</code>! Try saving your code, loading the page in a browser, and entering <code>Teacher.prototype.constructor</code> into the console to verify.</li>
+	<li>This can become a problem, so we need to set this right. You can do so by going back to your source code and adding the following line at the bottom:
+	<pre class="brush: js">Object.defineProperty(Teacher.prototype, 'constructor', {
+    value: Teacher,
+    enumerable: false, // so that it does not appear in 'for in' loop
+    writable: true });</pre>
+	</li>
+	<li>Now if you save and refresh, entering <code>Teacher.prototype.constructor</code> should return <code>Teacher()</code>, as desired, plus we are now inheriting from <code>Person()</code>!</li>
 </ol>
-
-<div class="note">
-<p><strong>注：</strong>每一个函数对象（<code>Function</code>）都有一个<code>prototype</code>属性，并且<em>只有</em>函数对象有<code>prototype</code>属性，因为<code>prototype</code>本身就是定义在<code>Function</code>对象下的属性。当我们输入类似<code>var person1=new Person(...)</code>来构造对象时，JavaScript实际上参考的是<code>Person.prototype</code>指向的对象来生成<code>person1</code>。另一方面，<code>Person()</code>函数是<code>Person.prototype</code>的构造函数，也就是说<code>Person===Person.prototype.constructor</code>（不信的话可以试试）。</p>
-
-<p>在定义新的构造函数<code>Teacher</code>时，我们通过<code>function.call</code>来调用父类的构造函数，但是这样无法自动指定<code>Teacher.prototype</code>的值，这样<code>Teacher.prototype</code>就只能包含在构造函数里构造的属性，而没有方法。因此我们利用<code>Object.create()</code>方法将<code>Person.prototype</code>作为<code>Teacher.prototype</code>的原型对象，并改变其构造器指向，使之与<code>Teacher</code>关联。</p>
-
-<p><em>任何</em>您想要被继承的方法都应该定义在构造函数的<code>prototype</code>对象里，并且<em>永远</em>使用父类的<code>prototype</code>来创造子类的<code>prototype</code>，这样才不会打乱类继承结构。</p>
-</div>
 
 <h2 id="向_Teacher_添加一个新的greeting函数">向 Teacher() 添加一个新的greeting()函数</h2>
 
@@ -206,17 +199,207 @@ teacher1.greeting();</pre>
 <p><strong>注：</strong>如果你编写时遇到困难，代码无法运行，那么可以查看我们的<a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html">完成版本</a>（也可查看 <a href="http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html">可运行的在线示例</a>）。</p>
 </div>
 
-<h2 id="对象成员总结">对象成员总结</h2>
+<h2 id="Object_member_summary">对象成员总结</h2>
 
-<p>总结一下，您应该基本了解了以下三种属性或者方法：</p>
+<p>总结一下，你需要在实践中考虑到下面四类属性或方法</p>
 
 <ol>
- <li>那些定义在构造器函数中的、用于给予对象实例的。这些都很容易发现 - 在您自己的代码中，它们是构造函数中使用<code>this.x = x</code>类型的行；在内置的浏览器代码中，它们是可用于对象实例的成员（通常通过使用<code>new</code>关键字调用构造函数来创建，例如<code>var myInstance = new myConstructor()</code>）。</li>
- <li>那些直接在构造函数上定义、仅在构造函数上可用的。这些通常仅在内置的浏览器对象中可用，并通过被直接链接到构造函数而不是实例来识别。 例如<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>。</li>
- <li>那些在构造函数原型上定义、由所有实例和对象类继承的。这些包括在构造函数的原型属性上定义的任何成员，如<code>myConstructor.prototype.x()</code>。</li>
+ <li>那些定义在构造器函数中，用于给予对象实例的属性或方法。它们都很容易发现——在您自己的代码中，它们是构造函数中使用<code>this.x = x</code>类型的行；在浏览器内已经构建好的代码中，它们是可用于对象实例的成员（这些对象实例通常使用<code>new</code>关键字调用构造函数来创建，例如<code>var myInstance = new myConstructor()</code>）。</li>
+ <li>那些直接在构造函数上定义，仅在构造函数上可用的属性或方法。它们通常仅在浏览器的内置对象中可用，并通过被直接链接到构造函数来识别，而不是实例。例如<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys">Object.keys()</a></code>。<strong>它们一般被称作静态属性或静态方法</strong>。</li>
+ <li>那些在构造函数原型上定义，由所有实例和对象类继承的属性或方法。它们包括在构造函数的原型属性上定义的任何成员，如<code>myConstructor.prototype.x()</code>。</li>
+ <li>Those available on an object instance, which can either be an object created when a constructor is instantiated like we saw above (so for example <code>let teacher1 = new Teacher( 'Chris' );</code> and then <code>teacher1.name</code>), or an object literal (<code>let teacher1 = { name : 'Chris' }</code> and then <code>teacher1.name</code>).</li>
 </ol>
 
 <p>如果您现在觉得一团浆糊，别担心——您现在还处于学习阶段，不断练习才会慢慢熟悉这些知识。</p>
+
+<h2 id="ECMAScript_2015_Classes">ECMAScript 2015 Classes</h2>
+
+<p>ECMAScript 2015 introduces <a href="/en-US/docs/Web/JavaScript/Reference/Classes">class syntax</a> to JavaScript as a way to write reusable classes using easier, cleaner syntax, which is more similar to classes in C++ or Java. In this section we'll convert the Person and Teacher examples from prototypal inheritance to classes, to show you how it's done.</p>
+
+<div class="note">
+<p><strong>Note</strong>: This modern way of writing classes is supported in all modern browsers, but it is still worth knowing about the underlying prototypal inheritance in case you work on a project that requires supporting a browser that doesn't support this syntax (most notably Internet Explorer).</p>
+</div>
+
+<p>Let's look at a rewritten version of the Person example, class-style:</p>
+
+<pre class="brush: js">class Person {
+  constructor(first, last, age, gender, interests) {
+    this.name = {
+      first,
+      last
+    };
+    this.age = age;
+    this.gender = gender;
+    this.interests = interests;
+  }
+
+  greeting() {
+    console.log(`Hi! I'm ${this.name.first}`);
+  };
+
+  farewell() {
+    console.log(`${this.name.first} has left the building. Bye for now!`);
+  };
+}
+</pre>
+
+<p>The <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">class</a> statement indicates that we are creating a new class. Inside this block, we define all the features of the class:</p>
+
+<ul>
+	<li>The <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor()</a></code> method defines the constructor function that represents our <code>Person</code> class.</li>
+	<li><code>greeting()</code> and <code>farewell()</code> are class methods. Any methods you want associated with the class are defined inside it, after the constructor. In this example, we've used <a href="/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a> rather than string concatenation to make the code easier to read.</li>
+</ul>
+
+<p>We can now instantiate object instances using the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a>, in just the same way as we did before:</p>
+
+<pre class="brush: js">let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
+han.greeting();
+// Hi! I'm Han
+
+let leia = new Person('Leia', 'Organa', 19, 'female', ['Government']);
+leia.farewell();
+// Leia has left the building. Bye for now
+</pre>
+
+<div class="note">
+<p><strong>Note</strong>: Under the hood, your classes are being converted into Prototypal Inheritance models — this is just syntactic sugar. But I'm sure you'll agree that it's easier to write.</p>
+</div>
+
+<h3 id="Inheritance_with_class_syntax">Inheritance with class syntax</h3>
+
+<p>Above we created a class to represent a person. They have a series of attributes that are common to all people; in this section we'll create our specialized <code>Teacher</code> class, making it inherit from <code>Person</code> using modern class syntax. This is called creating a subclass or subclassing.</p>
+
+<p>To create a subclass we use the <a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends keyword</a> to tell JavaScript the class we want to base our class on,</p>
+
+<pre class="brush: js">class Teacher extends Person {
+  constructor(subject, grade) {
+    this.subject = subject;
+    this.grade = grade;
+  }
+}</pre>
+
+<p>but there's a little catch.</p>
+
+<p>Unlike old-school constructor functions where the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> operator</a> does the initialization of <code>this</code> to a newly-allocated object, this isn't automatically initialized for a class defined by the <a href="/en-US/docs/Web/JavaScript/Reference/Classes/extends">extends</a> keyword, i.e the sub-classes.</p>
+
+<p>Therefore running the above code will give an error:</p>
+
+<pre class="brush: js">Uncaught ReferenceError: Must call super constructor in derived class before
+accessing 'this' or returning from derived constructor</pre>
+
+<p>For sub-classes, the <code>this</code> initialization to a newly allocated object is always dependant on the parent class constructor, i.e the constructor function of the class from which you're extending.</p>
+
+<p>Here we are extending the <code>Person</code> class — the <code>Teacher</code> sub-class is an extension of the <code>Person</code> class. So for <code>Teacher</code>, the <code>this</code> initialization is done by the <code>Person</code> constructor.</p>
+
+<p>To call the parent constructor we have to use the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super"><code>super()</code> operator</a>, like so:</p>
+
+<pre class="brush: js">class Teacher extends Person {
+  constructor(subject, grade) {
+    super(); // Now 'this' is initialized by calling the parent constructor.
+    this.subject = subject;
+    this.grade = grade;
+  }
+}</pre>
+
+<p>There is no point having a sub-class if it doesn't inherit properties from the parent class.<br>
+It is good then, that the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/super"><code>super()</code> operator</a> also accepts arguments for the parent constructor.</p>
+
+<p>Looking back to our <code>Person</code> constructor, we can see it has the following block of code in its constructor method:</p>
+
+<pre class="brush: js"> constructor(first, last, age, gender, interests) {
+   this.name = {
+     first,
+     last
+   };
+   this.age = age;
+   this.gender = gender;
+   this.interests = interests;
+} </pre>
+
+<p>Since the <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></code> operator is actually the parent class constructor, passing it the necessary arguments of the <code>Parent</code> class constructor will also initialize the parent class properties in our sub-class, thereby inheriting it:</p>
+
+<pre class="brush: js">class Teacher extends Person {
+  constructor(first, last, age, gender, interests, subject, grade) {
+    super(first, last, age, gender, interests);
+
+    // subject and grade are specific to Teacher
+    this.subject = subject;
+    this.grade = grade;
+  }
+}
+</pre>
+
+<p>Now when we instantiate <code>Teacher</code> object instances, we can call methods and properties defined on both <code>Teacher</code>and <code>Person</code> as we'd expect:</p>
+
+<pre class="brush: js">let snape = new Teacher('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark arts', 5);
+snape.greeting(); // Hi! I'm Severus.
+snape.farewell(); // Severus has left the building. Bye for now.
+snape.age // 58
+snape.subject; // Dark arts
+</pre>
+
+<p>Like we did with Teachers, we could create other subclasses of <code>Person</code> to make them more specialized without modifying the base class.</p>
+
+<div class="note">
+<p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html">es2015-class-inheritance.html</a> (<a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-class-inheritance.html">see it live also</a>).</p>
+</div>
+
+<h2 id="Getters_and_Setters">Getters and Setters</h2>
+
+<p>There may be times when we want to change the values of an attribute in the classes we create or we don't know what the final value of an attribute will be. Using the <code>Teacher</code> example, we may not know what subject the teacher will teach before we create them, or their subject may change between terms.</p>
+
+<p>We can handle such situations with getters and setters.</p>
+
+<p>Let's enhance the Teacher class with getters and setters. The class starts the same as it was the last time we looked at it.</p>
+
+<p>Getters and setters work in pairs. A getter returns the current value of the variable and its corresponding setter changes the value of the variable to the one it defines.</p>
+
+<p>The modified <code>Teacher</code> class looks like this:</p>
+
+<pre class="brush: js">class Teacher extends Person {
+  constructor(first, last, age, gender, interests, subject, grade) {
+    super(first, last, age, gender, interests);
+    // subject and grade are specific to Teacher
+    this._subject = subject;
+    this.grade = grade;
+  }
+
+  get subject() {
+    return this._subject;
+  }
+
+  set subject(newSubject) {
+    this._subject = newSubject;
+  }
+}
+</pre>
+
+<p>In our class above we have a getter and setter for the <code>subject</code> property. We use <strong><code>_</code></strong> to create a separate value in which to store our name property. Without using this convention, we would get errors every time we called get or set. At this point:</p>
+
+<ul>
+	<li>To show the current value of the <code>_subject</code> property of the <code>snape</code> object we can use the <code>snape.subject</code> getter method.</li>
+	<li>To assign a new value to the <code>_subject</code> property we can use the <code>snape.subject="new value"</code> setter method.</li>
+</ul>
+
+<p>The example below shows the two features in action:</p>
+
+<pre class="brush: js">// Check the default value
+console.log(snape.subject) // Returns "Dark arts"
+
+// Change the value
+snape.subject = "Balloon animals" // Sets _subject to "Balloon animals"
+
+// Check it again and see if it matches the new value
+console.log(snape.subject) // Returns "Balloon animals"
+</pre>
+
+<div class="note">
+<p><strong>Note</strong>: You can find this example on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html">es2015-getters-setters.html</a> (<a href="https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-getters-setters.html">see it live also</a>).</p>
+</div>
+
+<div class="notecard note">
+<p><strong>Note:</strong> Getters and setters can be very useful at times, for example when you want to run some code every time a property is requested or set. For simple cases, however, plain property access without a getter or setter will do just fine.</p>
+</div>
 
 <h2 id="何时在_JavaScript_中使用继承？">何时在 JavaScript 中使用继承？</h2>
 

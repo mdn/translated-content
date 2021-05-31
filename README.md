@@ -17,11 +17,13 @@ of active locales is:
 - `fr`
 - `ja`
 - `ko`
+- `pt-BR`
 - `ru`
 - `zh` (`zh-CN` and `zh-TW`)
 
 If you want to just find a task and jump in, search by the labels `l10n-fr`,
-`l10n-ja`, `l10n-ko`, `l10n-ru`, and `l10n-zh` in this repo’s [issues list](https://github.com/mdn/translated-content/issues),
+`l10n-ja`, `l10n-ko`, `l10n-pt-br`, `l10n-ru`, and `l10n-zh` in this repo’s
+[issues list](https://github.com/mdn/translated-content/issues),
 or the main [content repo issues](https://github.com/mdn/content/issues)
 
 ## Code of Conduct
@@ -124,10 +126,16 @@ It is the responsibility of the active community maintenance team for each
 active locale to keep up-to-date with reviews of pull requests and handling
 issues filed against that locale. You can filter the relevant pull requests and
 issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`, `l10n-ko`
-, `l10n-ru`, and `l10n-zh`.
+, `l10n-pt-br`, `l10n-ru`, and `l10n-zh`.
 
 The review teams for each locale are:
 
+- Brazilian Portuguese (`pt-BR`) content — the [@yari-content-pt-br](https://github.com/orgs/mdn/teams/yari-content-pt-br)
+  team, which consists of:
+  - [@lumigueres](https://github.com/lumigueres)
+  - [@josielrocha](https://github.com/josielrocha)
+  - [@juliosampaio](https://github.com/juliosampaio)
+  - [@clovislima](https://github.com/clovislima)
 - French (`fr`) content — the [@yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr)
   team, which consists of:
   - [@nicolas-goudry](https://github.com/nicolas-goudry)

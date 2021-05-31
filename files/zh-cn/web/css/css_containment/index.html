@@ -28,7 +28,7 @@ translation_of: Web/CSS/CSS_Containment
 
 <p>在这个页面中，每个 article 都独立于其他的 article，所以，他们都被设置了 <code>contain: content</code> 属性，为了告诉浏览器他们相互独立。浏览器就可以通过这个信息来确定，如何渲染这些内容。比如，他可能不会渲染超出视图范围外的内容。</p>
 
-<p>如果我们给每个 <code>&lt;article&gt;</code> 节点都设置其 <code>contain</code> 属性为 <code>content</code>， 当新的内容被加入到该节点中时，浏览器就知道不用重拍和重绘节点以外的页面内容，但如果 <code>&lt;article&gt;</code>  设置了其 CSS 属性能让其大小根据其内容改变（比如 <code>height: auto</code>）， 浏览器依旧会进行其大小的计算。</p>
+<p>如果我们给每个 <code>&lt;article&gt;</code> 节点都设置其 <code>contain</code> 属性为 <code>content</code>， 当新的内容被加入到该节点中时，浏览器就知道不用重排和重绘节点以外的页面内容，但如果 <code>&lt;article&gt;</code>  设置了其 CSS 属性能让其大小根据其内容改变（比如 <code>height: auto</code>）， 浏览器依旧会进行其大小的计算。</p>
 
 <p>我们通过 <code>contain</code> 属性告诉浏览器，这些节点是独立的。</p>
 

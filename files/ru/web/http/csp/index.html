@@ -174,9 +174,6 @@ translation_of: Web/HTTP/CSP
 <p>Как видите, отчёт включает полный путь к ресурсу нарушающему политику в <code>blocked-uri</code>. Правда, это не всегда так. К примеру, когда <code>signup.html</code> попытается загрузить CSS с <a href="http://anothercdn.example.com/stylesheet.css"><code>http://anothercdn.example.com/stylesheet.css</code></a>, браузер <em>не </em>будет включать полный путь, а ограничится лишь доменом (<code>http://anothercdn.example.com</code>). Спецификация CSP <a href="http://www.w3.org/TR/CSP/#security-violation-reports">поясняет</a> это странное поведение. В целом, это делается для предотвращения утечек чувствительной информации о перекрёстных ресурсах</p>
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-
 <p>{{Compat("http.headers.csp")}}</p>
 
 <p>Для некоторых версий Safari существует специфическая несовместимость реализации CSP. Если установить заголовок Content Security Policy без заголовка Same Origin, то браузер начнёт блокировать и создавать ложно-положительные отчёты о нарушении политики для всего контента, как с запрашиваемого источника, так и из внешних источников.</p>
