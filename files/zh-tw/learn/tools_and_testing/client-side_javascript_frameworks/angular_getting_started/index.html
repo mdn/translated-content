@@ -45,7 +45,7 @@ tags:
   <li>一組完善的開發工具，幫助你開發、建置、測試、更新你的程式碼。</li>
 </ul>
 
-<p>你能使用Angular去開發多種不同規模的專案，小至單頁應用式專案，大至大型企業級專案。Angular的設計宗旨是讓後續更新升級十分容易，因此你能輕鬆的使用最新版本進行開發。最棒的是，Angular的開發生態圈龐大，有超過一百七十萬的使用者、套件開發者以及內容創作者。</p>
+<p>你能使用Angular去開發多種不同規模的專案，小至單人應用式專案，大至大型企業級專案。Angular的設計宗旨是讓後續更新升級十分容易，因此你能輕鬆的使用最新版本進行開發。最棒的是，Angular的開發生態圈龐大，有超過一百七十萬的使用者、套件開發者以及內容創作者。</p>
 
 <p>在開始探索Angular之前，你要先瞭解Angular CLI。Angular CLI是一種快速、簡單、備受推崇的Angular程式開發方式。Angular CLI能讓許多任務變得更容易，以下是一些範例：</p>
 
@@ -84,7 +84,7 @@ tags:
 
 <ul>
   <li><p><strong>Node.js</strong></p>
-    <p>Angular需要使用Node.js的<a href="https://nodejs.org/about/releases">當前版、活躍 LTS版或是長期維護LTS版</a>若需特定版本的資訊，可以參閱<code>engines</code>關鍵字，在<a href="https://unpkg.com/@angular/cli/package.json">package.json</a>檔案之中。</p>
+    <p>Angular需要使用Node.js的<a href="https://nodejs.org/about/releases">當前版、活躍LTS版或是長期維護LTS版</a>若需特定版本的資訊，可以參閱在<a href="https://unpkg.com/@angular/cli/package.json">package.json</a>檔案之中的<code>engines</code>關鍵字。</p>
     <p>若想更了解如何安裝 Node.js，可參閱<a href="https://nodejs.org" title="Nodejs.org">nodejs.org</a>。若你不確定你目前使用的Node.js版本號，請在終端機輸入<code>node -v</code>查閱。</p>
   </li>
   <li><p><strong>npm套件管理器</strong></p>
@@ -102,9 +102,7 @@ tags:
 
 <pre class="brush: js">ng new todo --routing=false --style=css</pre>
 
-<p>使用<code>ng new</code>指令會在桌面創建一個小型入門Angular的專案。
-其他的標籤，<code>--routing</code>和<code>--style</code>，則是定義專案中的導航與樣式。
-本教學導覽會在後續篇章詳細解釋這些特性。</p>
+<p>使用<code>ng new</code>指令會在桌面創建一個小型入門Angular的專案。其他的標籤，<code>--routing</code>和<code>--style</code>，則是定義專案中的導航與樣式。本教學導覽會在後續篇章詳細解釋這些特性。</p>
 
 <p>如果被詢問是否使用嚴格型別檢查模式，可以回覆「同意」。</p>
 
@@ -226,7 +224,7 @@ export class AppComponent {
     title = 'To do application';
 }</pre>
 
-<p>當渲染完元件和它的模版時，會在瀏覽器看到如下的呈現：</p>
+<p>當載入完元件和它的模版時，會在瀏覽器看到如下的呈現：</p>
 
 <pre class="brush: html">&lt;h1&gt;To do application&lt;/h1&gt;
 </pre>
