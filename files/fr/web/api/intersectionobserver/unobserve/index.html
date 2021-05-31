@@ -4,71 +4,69 @@ slug: Web/API/IntersectionObserver/unobserve
 tags:
   - API
   - Intersection Observer
-  - IntersectionObserver API
-  - IntersectioonObserver
-  - Méthode
+  - Intersection Observer API
+  - IntersectionObserver
+  - Method
   - Reference
+  - unobserve
 translation_of: Web/API/IntersectionObserver/unobserve
 ---
-<div>{{APIRef("Intersection Observer API")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("Intersection Observer API")}}</div>
 
-<p><span class="seoSummary">La méthode <code><strong>unobserve()</strong></code> de l'interface {{domxref("IntersectionObserver")}} indique à l'<code>IntersectionObserver</code> de cesser d'observer l'élément cible spécifié.</span></p>
+<p class="summary">La méthode <code><strong>unobserve()</strong></code> de l'interface <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> indique à l'objet <code>IntersectionObserver</code> courant de cesser d'observer l'élément cible spécifié.</p>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+<h2 id="syntax">Syntaxe</h2>
 
-<pre class="syntaxbox"><em>IntersectionObserver</em>.unobserve(cible);</pre>
+<pre class="syntaxbox"><var>IntersectionObserver</var>.unobserve(<var>target</var>);</pre>
 
-<h3 id="Paramètress">Paramètress</h3>
+<h3 id="parameters">Paramètres</h3>
 
 <dl>
- <dt><code>cible</code></dt>
- <dd>L'{{domxref("Element")}} à cesser d'observer. Si l'élément spécifié n'est pas en cours d'observation, cette méthode ne fait rien et ne jette pas d'erreur.</dd>
+  <dt><code>target</code></dt>
+  <dd>L'<a href="/fr/docs/Web/API/Element"><code>élément</code></a> à cesser d'observer. Si l'élément spécifié n'est pas en cours d'observation, cette méthode ne fait rien et ne lève pas d'exception.</dd>
 </dl>
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+<h3 id="return_value">Valeur de retour</h3>
 
 <p><code>undefined</code>.</p>
 
-<dl>
-</dl>
+<h2 id="example">Exemple</h2>
 
-<h2 id="Exemples">Exemples</h2>
+<p>Ce fragment de code illustre la création d'un observateur, l'ajout d'un élément sous observation puis l'arrêt de cette d'observation.</p>
 
-<p>Ce bout de code montre simplement la création d'un observateur, l'ajout d'un élément sous observation puis sa fin d'observation.</p>
-
-<pre class="brush: js">let observer = new IntersectionObserver(fonctionRappel);
-observateur.observe(document.getElementById("élémentÀObserver"));
+<pre class="brush: js">let observer = new IntersectionObserver(callback);
+observer.observe(document.getElementById("elementAObserver"));
 
 /* ... */
 
-observateur.unobserve(document.getElementById("élémentÀObserver"));</pre>
+observer.unobserve(document.getElementById("elementAObserver"));</pre>
 
-<h2 id="Spécifications">Spécifications</h2>
+<h2 id="specifications">Spécifications</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IntersectionObserver','#dom-intersectionobserver-unobserve','IntersectionObserver.unobserve()')}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+      <th scope="col">Commentaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('IntersectionObserver','#dom-intersectionobserver-unobserve','IntersectionObserver.unobserve()')}}</td>
+      <td>{{Spec2('IntersectionObserver')}}</td>
+      <td>Définition initiale.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("api.IntersectionObserver.unobserve")}}</p>
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+<h2 id="see_also">Voir aussi</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Intersection_Observer_API">Intersection Observer API</a></li>
- <li>{{domxref("IntersectionObserver.observe()")}}</li>
+  <li><a href="/fr/docs/Web/API/Intersection_Observer_API">L'API <i>Intersection Observer</i></a></li>
+  <li><a href="/fr/docs/Web/API/IntersectionObserver/observe"><code>IntersectionObserver.observe()</code></a></li>
 </ul>

@@ -38,7 +38,7 @@ translation_of: Web/Performance/dns-prefetch
 
 <p>首先，<code>dns-prefetch</code> 仅对<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS">跨域</a>域上的 DNS查找有效，因此请避免使用它来指向您的站点或域。这是因为，到浏览器看到提示时，您站点域背后的IP已经被解析。</p>
 
-<p>其次，还可以通过使用 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Link">HTTP链接字段</a>将 <code>dns-prefetch</code>（以及其他资源提示）指定为 H<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers">TTP标头</a>：</p>
+<p>其次，还可以通过使用 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Link">HTTP链接字段</a>将 <code>dns-prefetch</code>（以及其他资源提示）指定为 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers">HTTP标头</a>：</p>
 
 <pre class="notranslate">Link: &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</pre>
 

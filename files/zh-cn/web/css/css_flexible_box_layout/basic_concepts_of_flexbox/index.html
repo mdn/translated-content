@@ -66,15 +66,15 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 <h2 id="Flex_容器">Flex 容器</h2>
 
-<p>文档中采用了 flexbox 的区域就叫做 flex 容器。为了创建 flex 容器， 我们把一个容器的 {{cssxref("display")}} 属性值改为 <code>flex</code> 或者 <code>inline-flex。</code> 完成这一步之后，容器中的直系子元素就会变为 <strong>flex 元素</strong>。所有CSS属性都会有一个初始值，所以 flex 容器中的所有 flex 元素都会有下列行为：</p>
+<p>文档中采用了 flexbox 的区域就叫做 flex 容器。为了创建 flex 容器， 我们把一个容器的 {{cssxref("display")}} 属性值改为 <code>flex</code> 或者 <code>inline-flex</code>。 完成这一步之后，容器中的直系子元素就会变为 <strong>flex 元素</strong>。所有CSS属性都会有一个初始值，所以 flex 容器中的所有 flex 元素都会有下列行为：</p>
 
 <ul>
  <li>元素排列为一行 (<code>flex-direction</code> 属性的初始值是 <code>row</code>)。</li>
  <li>元素从主轴的起始线开始。</li>
  <li>元素不会在主维度方向拉伸，但是可以缩小。</li>
  <li>元素被拉伸来填充交叉轴大小。</li>
- <li>{{cssxref("flex-basis")}} 属性为 <code>auto。</code></li>
- <li>{{cssxref("flex-wrap")}} 属性为 <code>nowrap。</code></li>
+ <li>{{cssxref("flex-basis")}} 属性为 <code>auto</code>。</li>
+ <li>{{cssxref("flex-wrap")}} 属性为 <code>nowrap</code>。</li>
 </ul>
 
 <p>这会让你的元素呈线形排列，并且把自己的大小作为主轴上的大小。如果有太多元素超出容器，它们会溢出而不会换行。如果一些元素比其他元素高，那么元素会沿交叉轴被拉伸来填满它的大小。</p>

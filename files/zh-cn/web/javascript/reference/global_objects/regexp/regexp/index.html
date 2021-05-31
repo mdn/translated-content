@@ -26,27 +26,27 @@ RegExp(<var>pattern</var>[, <var>flags</var>])
 
 <dl>
  <dt><code><var>pattern</var></code></dt>
- <dd>The text of the regular expression.</dd>
- <dd>As of ES5, this can also be another <code>RegExp</code> object or literal (for the two RegExp constructor notations only). Patterns may include <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters">special characters</a> to match a wider range of values than would a literal string. </dd>
+ <dd>正则表达式的文本。</dd>
+ <dd>从ES5开始，这也可以是另一个<code>RegExp</code>对象或文字(仅用于两个RegExp构造函数符号)。模式可以包含特殊字符<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters">special characters</a>来匹配比字面值字符串更广泛的值范围 。 </dd>
  <dt><code><var>flags</var></code></dt>
  <dd>
- <p>If specified, <code><var>flags</var></code> is a string that contains the flags to add.</p>
+ <p>如果指定, <code><var>flags</var></code> 是包含要添加的标志的字符串。</p>
 
- <p>Alternatively, if an object is supplied for the pattern, the <code><var>flags</var></code> string will replace any of that object's flags (and <code>lastIndex</code> will be reset to <code>0</code>) (as of ES2015).</p>
+ <p>或者，如果为模式提供了一个对象，flags字符串将替换该对象的任何标志(并且<code>lastIndex</code>将重置为0)(从ES2015开始)。</p>
+ 
+ <p>如果没有指定<code><var>flags</var></code>并且提供了一个正则表达式对象，则该对象的flags(和lastIndex值)将被复制。</p>
 
- <p>If <code><var>flags</var></code> is not specified and a regular expressions object is supplied, that object's flags (and <code>lastIndex</code> value) will be copied over.</p>
-
- <p><code>flags</code> may contain any combination of the following characters:</p>
+ <p><code>flags</code> 可包含下列任何字符的组合:</p>
 
  <dl>
   <dt><code>g</code> （全局匹配）</dt>
-  <dd>Find all matches rather than stopping after the first match.</dd>
+  <dd>找到所有的匹配，而不是在第一个匹配之后停止。</dd>
   <dt><code>i</code> （忽略大小写）</dt>
-  <dd>If <code>u</code> flag is also enabled, use Unicode case folding.</dd>
+  <dd>如果<code>u</code>标志也被启用，使用Unicode大小写折叠。</dd>
   <dt><code>m</code> （多行匹配）</dt>
-  <dd>Treat beginning and end characters (<code>^</code> and <code>$</code>) as working over multiple lines. In other words, match the beginning or end of <em>each</em> line (delimited by <code>\n</code> or <code>\r</code>), not only the very beginning or end of the whole input string.</dd>
+  <dd>将开始和结束字符(<code>^</code> and <code>$</code>)视为在多行上工作。换句话说，匹配每一行的开头或结尾<em>each</em> line (由<code>\n</code>或者<code>\r</code> 分隔)，而不仅仅是整个输入字符串的开头或结尾。</dd>
   <dt><code>s</code> （点号匹配所有字符）</dt>
-  <dd>Allows <code>.</code> to match newlines.</dd>
+  <dd>允许<code>.</code> 去匹配新的行</dd>
   <dt><code>u</code> （unicode）</dt>
   <dd>Treat <code><var>pattern</var></code> as a sequence of Unicode code points. (See also <a href="/en-US/docs/Web/API/DOMString/Binary">Binary strings</a>).</dd>
   <dt><code>y</code> （sticky，粘性匹配）</dt>
@@ -59,30 +59,30 @@ RegExp(<var>pattern</var>[, <var>flags</var>])
 
 <h3 id="字面量和构造函数">字面量和构造函数</h3>
 
-<p>There are two ways to create a <code>RegExp</code> object: a <em>literal notation</em> and a <em>constructor</em>.</p>
+<p>这里有两种方法创建<code>RegExp</code> 对象: <em>字面量</em> 和 <em>构造函数</em>.</p>
 
 <ul>
- <li><strong>The literal notation's</strong> parameters are enclosed between slashes and do not use quotation marks.</li>
- <li><strong>The constructor function's</strong> parameters are not enclosed between slashes but do use quotation marks.</li>
+ <li><strong>文字符号的</strong> 参数用斜杠括起来，不使用引号。</li>
+ <li><strong>构造函数的</strong> 参数不包含在斜杠之间，但使用引号。</li>
 </ul>
 
-<p>The following three expressions create the same regular expression:</p>
+<p>以下三个表达式创建相同的正则表达式:</p>
 
 <pre class="brush: js notranslate">/ab+c/i
-new RegExp(/ab+c/, 'i') // literal notation
-new RegExp('ab+c', 'i') // constructor
+new RegExp(/ab+c/, 'i') // 字面量
+new RegExp('ab+c', 'i') // 构造函数
 </pre>
 
-<p>The literal notation results in compilation of the regular expression when the expression is evaluated. Use literal notation when the regular expression will remain constant. For example, if you use literal notation to construct a regular expression used in a loop, the regular expression won't be recompiled on each iteration.</p>
+<p>当表达式被求值时，文字表示法会导致对正则表达式的编译。当正则表达式保持不变时，请使用字面量表示法。例如，如果使用字面量表示法来构造循环中使用的正则表达式，则不会在每次迭代时重新编译正则表达式。</p>
 
-<p>The constructor of the regular expression object—for example, <code>new RegExp('ab+c')</code>—results in runtime compilation of the regular expression. Use the constructor function when you know the regular expression pattern will be changing, or you don't know the pattern and are getting it from another source, such as user input.</p>
+<p>正则表达式对象的构造函数—例如，new RegExp('ab+c')—会导致正则表达式的运行时编译。当您知道正则表达式模式将发生变化时，或者您不知道该模式，但正在从其他来源(如用户输入)获取它时，请使用构造函数。</p>
 
 <h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col">Specification</th>
+   <th scope="col">技术规范</th>
   </tr>
  </thead>
  <tbody>

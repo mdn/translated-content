@@ -1,177 +1,84 @@
 ---
-title: deviceorientation
+title: 'Window : l''événement deviceorientation'
 slug: Web/API/Window/deviceorientation_event
+tags:
+  - Device Orientation API
+  - Sensors
+  - Window Event
+  - events
 translation_of: Web/API/Window/deviceorientation_event
 original_slug: FUEL/Window/deviceorientation
 ---
-<p>L'événement <strong><code>deviceorientation</code></strong> est déclenché lorsque de nouvelles données sont disponibles à partir d'un capteur d'orientation à propos de l'orientation actuelle du dispositif par rapport à la trame de coordonnées terrestres. Ces données sont recueillies à partir d'un magnétomètre à l'intérieur de l'appareil. Voir <a href="/fr/docs/DOM/Orientation_and_motion_data_explained">explications sur les données de mouvements et d'orientations</a> pour plus de détails.</p>
+<div>{{APIRef}}</div>
 
-<h2 id="Informations_générales">Informations générales</h2>
+<p>L'événement <code>deviceorientation</code> est déclenché lorsque des données  sont disponibles, à partir d'un capteur d'orientation, sur l'orientation actuelle de l'appareil par rapport au cadre de coordonnées de la Terre. Ces données sont recueillies à partir d'un magnétomètre à l'intérieur de l'appareil. Voir <a href="/fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained">Données d'orientation et de mouvement expliquées</a> pour plus de détails.</p>
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Spécification</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/orientation-event/#deviceorientation">DeviceOrientation Event</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">DeviceOrientationEvent</dd>
- <dt style="float: left; text-align: right; width: 120px;">Propagation</dt>
- <dd style="margin: 0 0 0 120px;">Non</dd>
- <dt style="float: left; text-align: right; width: 120px;">Annulable</dt>
- <dd style="margin: 0 0 0 120px;">Non</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cible</dt>
- <dd style="margin: 0 0 0 120px;">DefaultView (<code>window</code>)</dd>
- <dt style="float: left; text-align: right; width: 120px;">Action par défaut</dt>
- <dd style="margin: 0 0 0 120px;">Aucune</dd>
-</dl>
-
-<h2 id="Propriétés">Propriétés</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>target</code> <span class="inlineIndicator readOnly readOnlyInline" title="Cette valeur ne peut pas être changée.">Lecture seule </span></td>
-   <td><a href="/fr/docs/Web/API/EventTarget" title="EventTarget est une interface implémentée par des objets qui peuvent recevoir des évènements et avoir des auditeurs."><code>EventTarget</code></a></td>
-   <td>The event target (the topmost target in the DOM tree).</td>
-  </tr>
-  <tr>
-   <td><code>type</code> <span class="inlineIndicator readOnly readOnlyInline" title="Cette valeur ne peut pas être changée.">Lecture seule </span></td>
-   <td><a href="/fr/docs/Web/API/DOMString" title="Une chaîne de caractères UTF-16. Comme JavaScript utilise déjà ce type de chaîne de caractères, DOMString est directement associé à String."><code>DOMString</code></a></td>
-   <td>The type of event.</td>
-  </tr>
-  <tr>
-   <td><code>bubbles</code> <span class="inlineIndicator readOnly readOnlyInline" title="Cette valeur ne peut pas être changée.">Lecture seule </span></td>
-   <td><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Boolean" title="L'objet Boolean est un objet permettant de représenter une valeur booléenne."><code>Boolean</code></a></td>
-   <td>Whether the event normally bubbles or not</td>
-  </tr>
-  <tr>
-   <td><code>cancelable</code> <span class="inlineIndicator readOnly readOnlyInline" title="Cette valeur ne peut pas être changée.">Lecture seule </span></td>
-   <td><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Boolean" title="L'objet Boolean est un objet permettant de représenter une valeur booléenne."><code>Boolean</code></a></td>
-   <td>Whether the event is cancellable or not?</td>
-  </tr>
-  <tr>
-   <td><code>alpha</code> <span class="inlineIndicator readOnly readOnlyInline" title="Cette valeur ne peut pas être changée.">Lecture seule </span></td>
-   <td>double (float)</td>
-   <td>The current orientation of the device around the Z axis; that is, how far the device is rotated around a line perpendicular to the device.</td>
-  </tr>
-  <tr>
-   <td><code>beta</code> <span class="inlineIndicator readOnly readOnlyInline" title="Cette valeur ne peut pas être changée.">Lecture seule </span></td>
-   <td>double (float)</td>
-   <td>The current orientation of the device around the X axis; that is, how far the device is tipped forward or backward.</td>
-  </tr>
-  <tr>
-   <td><code>gamma</code> <span class="inlineIndicator readOnly readOnlyInline" title="Cette valeur ne peut pas être changée.">Lecture seule </span></td>
-   <td>double (float)</td>
-   <td>The current orientation of the device around the Y axis; that is, how far the device is turned left or right.</td>
-  </tr>
-  <tr>
-   <td><code>absolute</code> <span class="inlineIndicator readOnly readOnlyInline" title="Cette valeur ne peut pas être changée.">Lecture seule </span></td>
-   <td><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/boolean" title="L'objet Boolean est un objet permettant de représenter une valeur booléenne."><code>boolean</code></a></td>
-   <td>This value is <code>true</code> if the orientation is provided as a difference between the device coordinate frame and the Earth coordinate frame; if the device can't detect the Earth coordinate frame, this value is <code>false</code>.</td>
-  </tr>
- </tbody>
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Propagation</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Annulable</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface</th>
+      <td><a href="/fr/docs/Web/API/DeviceOrientationEvent"><code>DeviceOrientationEvent</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">Propriété du gestionnaire d'événements</th>
+      <td><a href="/fr/docs/Web/API/Window/ondeviceorientation"><code>window.ondeviceorientation</code></a></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Example">Example</h2>
+<h2 id="example">Exemple</h2>
 
-<pre class="pass: js">if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function(event) {
-        // alpha: rotation around z-axis
-        var rotateDegrees = event.alpha;
-        // gamma: left to right
-        var leftToRight = event.gamma;
-        // beta: front back motion
-        var frontToBack = event.beta;
+<pre class="brush: js">if (window.DeviceOrientationEvent) {
+  window.addEventListener("deviceorientation", function(event) {
+    // alpha : rotation autour de l'axe z
+    var rotateDegrees = event.alpha;
+    // gamma : de gauche à droite
+    var leftToRight = event.gamma;
+    // bêta : mouvement avant-arrière
+    var frontToBack = event.beta;
 
-        handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
-    }, true);
+    handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
+  }, true);
 }
 
 var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
-    // Faire quelque chose d'étonnant
-};
-</pre>
+  // faire quelque chose d'étonnant
+};</pre>
 
-<h2 id="Compatibilités_navigateur">Compatibilités navigateur</h2>
+<h2 id="specifications">Spécifications</h2>
 
-<p></p><div class="blockIndicator warning"><strong><a href="https://github.com/mdn/browser-compat-data">Nous convertissons les données de compatibilité dans un format JSON</a></strong>.
-            Ce tableau de compatibilité utilise encore l'ancien format
-            car nous n'avons pas encore converti les données qu'il contient.
-            <strong><a href="/fr/docs/MDN/Contribute/Structures/Compatibility_tables">Vous pouvez nous aider en contribuant !</a></strong></div>
-
-<div class="htab">
-    <a id="AutoCompatibilityTable" name="AutoCompatibilityTable"></a>
-    <ul>
-        <li class="selected"><a>Ordinateur</a></li>
-        <li><a>Mobile</a></li>
-    </ul>
-</div><p></p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Navigateur</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Support basique</td>
-   <td>7.0</td>
-   <td>3.6<sup>[1]</sup></td>
-   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
-   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
-   <td><span style="color: rgb(255, 153, 0);" title="Compatibility unknown; please update this.">?</span></td>
-  </tr>
- </tbody>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">Statut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("Device Orientation", "#deviceorientation", "l'événement DeviceOrientation")}}</td>
+      <td>{{Spec2("Device Orientation")}}</td>
+    </tr>
+  </tbody>
 </table>
-</div>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Navigateur</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Support basique</td>
-   <td>3.0</td>
-   <td>3.6<sup>[1]</sup></td>
-   <td><span style="color: #f00;">Pas de support</span></td>
-   <td>12</td>
-   <td>4.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-<p>[1] Firefox 3.6, 4, et 5 a supporté <a href="/frdocs/Web/Events/MozOrientation">mozOrientation</a> contre l'événement standard <strong><code>DeviceOrientation</code></strong>.</p>
+<p>{{Compat("api.Window.deviceorientation_event")}}</p>
 
-<h2 id="Evénements_lilés">Evénements lilés</h2>
+<h2 id="see_also">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/Events/devicemotion"><code>devicemotion</code></a></li>
-</ul>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/API/DeviceMotionEvent" title="The DeviceMotionEvent provides web developers with information about the speed of changes for the device's position and orientation."><code>DeviceMotionEvent</code></a></li>
- <li><a href="/fr/docs/Web/API/Window/ondeviceorientation" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>window.ondeviceorientation</code></a></li>
- <li><a href="/fr/docs/Web/API/Detecting_device_orientation">Détection de l'orientation du dispositif</a></li>
- <li><a href="/fr/docs/DOM/Orientation_and_motion_data_explained">Explications sur les données de mouvements et d'orientations</a></li>
- <li>Simulation d'événements d'orientation sur navigateur de bureau avec  <a href="http://louisremi.github.com/orientation-devtool/">orientation-devtool</a></li>
+  <li>L'événement <a href="/fr/docs/Web/API/Window/devicemotion_event"><code>devicemotion</code></a></li>
+  <li><a href="/fr/docs/Web/API/Detecting_device_orientation">Détection de l'orientation des appareils.</a></li>
+  <li><a href="/fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained">Explication des données d'orientation et de mouvement</a></li>
+  <li>Simulation d'événements d'orientation sur les navigateurs de bureau avec <a href="https://louisremi.github.com/orientation-devtool/">orientation-devtool</a>.</li>
 </ul>

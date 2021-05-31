@@ -71,7 +71,7 @@ f2() === undefined; //true</pre>
 
 <p>要從某個語境訪問另一個 <code>this</code> 語境的值，請使用 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/call">call</a> 或 <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply</a>:</p>
 
-<pre dir="rtl">// 物件可以被當作call或apply的第一個參數，而this會綁定該物件
+<pre>// 物件可以被當作call或apply的第一個參數，而this會綁定該物件
 var obj = {a: 'Custom'};
 
 // 此屬性a為全域物件

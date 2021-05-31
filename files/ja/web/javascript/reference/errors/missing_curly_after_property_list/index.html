@@ -2,31 +2,35 @@
 title: 'SyntaxError: missing } after property list'
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 tags:
-  - Errors
-  - JavaScript
-  - SyntaxError
+- Error
+- Errors
+- JavaScript
+- SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<h2 id="メッセージ">メッセージ</h2>
+<p>JavaScript の例外 "missing } after property list" は、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer">オブジェクト初期化子</a>の構文のどこかに間違いがあった場合に発生します。実際に中括弧がない可能性もありますが、カンマを忘れている可能性もあります。</p>
 
-<pre class="syntaxbox">SyntaxError: missing } after property list
+<h2 id="Message">メッセージ</h2>
+
+<pre class="brush: js">SyntaxError: Expected '}' (Edge)
+SyntaxError: missing } after property list (Firefox)
 </pre>
 
-<h2 id="Error_type">Error type</h2>
+<h2 id="Error_type">エラー種別</h2>
 
 <p>{{jsxref("SyntaxError")}}</p>
 
-<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+<h2 id="What_went_wrong">原因</h2>
 
-<p>どこかに <a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer">object initializer</a> 構文の誤りがあります。実際に波括弧を忘れているかもしれませんが、セミコロンが不足ている可能性もあります。また、閉じ波括弧や括弧が正しい順序になっているかも確認してください。コードをインデントやフォーマットすると、多少見通しが良くなります。</p>
+<p><a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer">オブジェクト初期化子</a>の構文のどこかに誤りがあります。実際に中括弧を忘れているかもしれませんが、例えばコンマが不足している可能性もあります。また、閉じ中括弧や閉じ括弧が正しい順序になっているかも確認してください。インデントを付けたりコードを整形したりすると、多少見通しが良くなります。</p>
 
-<h2 id="例">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="カンマ忘れ">カンマ忘れ</h3>
+<h3 id="Forgotten_comma">カンマ忘れ</h3>
 
-<p>多くの場合、object initializer コードにカンマ忘れがあります：</p>
+<p>多くの場合は、オブジェクト初期化子のコードでカンマを忘れています。</p>
 
 <pre class="brush: js example-bad">var obj = {
   a: 1,
@@ -35,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_lis
 };
 </pre>
 
-<p>次のように修正できます：</p>
+<p>修正すると次のようになります。</p>
 
 <pre class="brush: js example-good">var obj = {
   a: 1,
@@ -44,8 +48,8 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_lis
 };
 </pre>
 
-<h2 id="関連項目">関連項目</h2>
+<h2 id="See_also">関連項目</h2>
 
 <ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer">Object initializer</a></li>
+  <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer">オブジェクト初期化子</a></li>
 </ul>
