@@ -4115,13 +4115,6 @@
       "pedroguilhermelima"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:55:19.824Z",
-    "contributors": [
-      "SphinxKnight",
-      "gutoribeiro"
-    ]
-  },
   "Web/API/ClipboardEvent": {
     "modified": "2020-10-15T22:15:35.028Z",
     "contributors": [
@@ -9227,34 +9220,6 @@
       "fellyph"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-11-20T18:24:04.168Z",
-    "contributors": [
-      "sambrmg",
-      "Fernandolrs",
-      "matheussilvasantos",
-      "netoguimaraes",
-      "jaimemaretoli",
-      "macalha",
-      "teoli",
-      "lfelipev",
-      "leandro2103",
-      "rodrigopadula",
-      "mauricio.araldi",
-      "PedroFelipe",
-      "phenriqueleao",
-      "apereira2001",
-      "RodrigoAlmeidaSp"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-23T23:38:50.368Z",
-    "contributors": [
-      "flmidia",
-      "teoli",
-      "eduardodx"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2020-10-07T01:45:20.737Z",
     "contributors": [
@@ -10395,17 +10360,6 @@
     "modified": "2019-03-23T23:13:50.417Z",
     "contributors": [
       "rennan.martini"
-    ]
-  },
-  "Web/HTML/Preloading_content": {
-    "modified": "2020-10-15T22:14:26.980Z",
-    "contributors": [
-      "BeatrizCavallieri",
-      "w4rlooc",
-      "duduindo",
-      "philgruneich",
-      "tuliocribeiro",
-      "Expablo"
     ]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
@@ -15443,12 +15397,6 @@
       "agusmao720919"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:12:37.977Z",
-    "contributors": [
-      "murillodmiranda"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-03-12T19:44:40.050Z",
     "contributors": [
@@ -16156,13 +16104,6 @@
     "modified": "2019-03-23T22:57:10.633Z",
     "contributors": [
       "wbamberg",
-      "Sebastianz",
-      "caio"
-    ]
-  },
-  "Web/SVG/Element/color-profile": {
-    "modified": "2019-03-23T22:57:13.667Z",
-    "contributors": [
       "Sebastianz",
       "caio"
     ]
@@ -17217,6 +17158,13 @@
       "mak213k"
     ]
   },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T21:55:19.824Z",
+    "contributors": [
+      "SphinxKnight",
+      "gutoribeiro"
+    ]
+  },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2020-08-30T22:44:17.906Z",
     "contributors": [
@@ -17295,12 +17243,51 @@
       "helton-mori-dev"
     ]
   },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-11-20T18:24:04.168Z",
+    "contributors": [
+      "sambrmg",
+      "Fernandolrs",
+      "matheussilvasantos",
+      "netoguimaraes",
+      "jaimemaretoli",
+      "macalha",
+      "teoli",
+      "lfelipev",
+      "leandro2103",
+      "rodrigopadula",
+      "mauricio.araldi",
+      "PedroFelipe",
+      "phenriqueleao",
+      "apereira2001",
+      "RodrigoAlmeidaSp"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-23T23:38:50.368Z",
+    "contributors": [
+      "flmidia",
+      "teoli",
+      "eduardodx"
+    ]
+  },
   "orphaned/Web/HTML/Element/command": {
     "modified": "2019-03-23T23:38:57.259Z",
     "contributors": [
       "wbamberg",
       "teoli",
       "LeonardoPacheco"
+    ]
+  },
+  "orphaned/Web/HTML/Preloading_content": {
+    "modified": "2020-10-15T22:14:26.980Z",
+    "contributors": [
+      "BeatrizCavallieri",
+      "w4rlooc",
+      "duduindo",
+      "philgruneich",
+      "tuliocribeiro",
+      "Expablo"
     ]
   },
   "orphaned/Web/HTML/favicon": {
@@ -17335,6 +17322,19 @@
     "modified": "2020-10-15T22:29:51.823Z",
     "contributors": [
       "LuisAraujo"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:12:37.977Z",
+    "contributors": [
+      "murillodmiranda"
+    ]
+  },
+  "orphaned/Web/SVG/Element/color-profile": {
+    "modified": "2019-03-23T22:57:13.667Z",
+    "contributors": [
+      "Sebastianz",
+      "caio"
     ]
   },
   "orphaned/Web/Security/Information_Security_Basics": {

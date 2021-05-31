@@ -5,7 +5,7 @@ translation_of: Web/API/WindowEventHandlers/onpopstate
 ---
 <div>{{APIRef}}</div>
 
-<p>Свойство <code>onpopstate</code> миксина {{domxref("WindowEventHandlers")}} является {{domxref("EventHandler")}} для обработки событий <code>popstate</code> для "window".</p>
+<p>Свойство <code>onpopstate</code> миксина {{domxref("WindowEventHandlers")}} является {{event("Event_handlers", "event handler")}} для обработки событий <code>popstate</code> для "window".</p>
 
 <p>Событие <code style="font-style: normal;">popstate</code> отсылается объекту window каждый раз, когда активная запись истории меняется с одной на другую для одного и того же документа. Если запись истории, ставшая активной, была создана вызовом <span style="font-family: Consolas,Monaco,'Andale Mono',monospace;"><code>history.pushState()</code> </span>или изменена с помощью <code style="font-style: normal;">history.replaceState()</code>, свойство <code style="font-style: normal;">state</code> события <code style="font-style: normal;">popstate</code> содержит копию объекта состояния этой записи истории.</p>
 
@@ -47,10 +47,6 @@ history.go(2);  // alerts "location: http://example.com/example.html?page=3, sta
 </ul>
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
-
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p>{{Compat("api.WindowEventHandlers.onpopstate")}}</p>
 

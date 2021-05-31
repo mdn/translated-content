@@ -5,7 +5,7 @@ translation_of: Web/API/Worker/onmessage
 ---
 <p>{{APIRef("Web Workers API")}}</p>
 
-<p>{{domxref("Worker")}} 接口的<strong><code>onmessage</code></strong>属性表示一个{{domxref("EventHandler")}}事件处理函数，当{{event("message")}} 事件发生时，该函数被调用。这些事件所属{{domxref("MessageEvent")}}类型，且当Worker子线程返回一条消息时被调用（比如：从{{domxref("DedicatedWorkerGlobalScope.postMessage")}}函数发出的信息）</p>
+<p>{{domxref("Worker")}} 接口的<strong><code>onmessage</code></strong>属性表示一个{{event("Event_handlers", "event handler")}}事件处理函数，当{{event("message")}} 事件发生时，该函数被调用。这些事件所属{{domxref("MessageEvent")}}类型，且当Worker子线程返回一条消息时被调用（比如：从{{domxref("DedicatedWorkerGlobalScope.postMessage")}}函数发出的信息）</p>
 
 <div class="note">
 <p><strong>注意</strong>: 消息被装载到 {{event("message")}}事件对象的<code>data</code>属性。（译者：即传递的消息参数将被赋值给<code>onmessage</code>处理函数的事件参数<code>e</code>中的<code>data</code>属性）</p>
