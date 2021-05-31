@@ -1,14 +1,14 @@
-# 針對 MDN 翻譯內容的一般指導原則
+# 針對MDN翻譯內容的一般指導原則
 
 本文是針對正體中文（zh-TW）地區的翻譯指南。如果你所在的地區尚未有文件指南，而你又想新建的話，歡迎你開始建立或聯絡[我們負責該地區的翻譯團隊](https://github.com/mdn/translated-content/blob/docs-readme/README.md)。
 
-同樣的，如果你對一般指導原則有一些不錯的想法想要補充，不用客氣，去發起問題（ issue ）來跟我們談談吧。以下進入正體中文翻譯指導原則的主要內容。
+同樣的，如果你對一般指導原則有一些不錯的想法想要補充，不用客氣，去發起問題（issue）來跟我們談談吧。以下進入正體中文翻譯指導原則的主要內容。
 
-## 翻譯標題 ID
+## 翻譯標題ID
 
-基於自動產生文章內的導覽、識別程式碼區塊用於建立實際範例、以及其他的原因，我們的文章通常都會為標題配上 ID 。
+基於自動產生文章內的導覽、識別程式碼區塊用於建立實際範例、以及其他的原因，我們的文章通常都會為標題配上ID 。
 
-在翻譯標題時，你不需要翻譯它的 ID 。路徑的其他部分也沒有翻譯，所以讓它維持一致吧。
+在翻譯標題時，你不需要翻譯它的ID。路徑的其他部分也沒有翻譯，所以讓它維持一致吧。
 
 例如：
 
@@ -16,13 +16,13 @@
 <h2 id="tutorials">Tutorials</h2>
 ```
 
-在 `zh-TW` 地區的翻譯應該是
+在`zh-TW`地區的翻譯應該是
 
 ```html
 <h2 id="tutorials">教學</h2>
 ```
 
-一般上我們建議你用小寫的方式書寫所有 ID 。雖然平台會在呈現時自動轉換，但減少手動建立錨點就表示在轉換的過程減少出錯的機率。
+一般上我們建議你用小寫的方式書寫所有ID 。雖然平台會在呈現時自動轉換，但減少手動建立錨點，就表示在轉換的過程減少出錯的機率。
 
 ## 翻譯程式碼區塊
 
@@ -32,7 +32,7 @@
 
 當試圖翻譯範例時，請記得有些範例會連向實際的版本或獨立的原始碼倉庫。你可以考慮建立對應的翻譯版本，然後在翻譯頁面中連向這些經翻譯的外部程式碼。
 
-## HTML 原始碼的換行
+## HTML原始碼的換行
 
 在某些文章的原始碼中，你可能會發現區塊等級元素中有無關緊要的換行，例如：
 
@@ -50,7 +50,7 @@
 
 ## 站內連結翻譯
 
-在翻譯文章時記得把 MDN 內部頁面連結中的語系轉換成 `zh-TW` 以便讀者在點選連結時能夠正確的跳轉到該主題的中文翻譯頁面。
+在翻譯文章時，記得把MDN內部頁面連結中的語系轉換成`/zh-TW`，以便讀者在點選連結時，能夠正確的跳轉到該主題的中文翻譯頁面。
 
 例如：
 
@@ -58,15 +58,15 @@
 <p>For example, consider the <a href="/en-US/docs/Web/JavaScript">JavaScript</a> guide, which is structured as follows:</p>
 ```
 
-在翻譯時應該是（請注意 `/zh-TW` 替換了原本的 `/en-US`）
+在翻譯時應該是（請注意`/zh-TW`替換了原本的`/en-US`）
 
 ```html
-<p>以 <a href="/zh-TW/docs/Web/JavaScript">JavaScript</a> 指南為例，它的結構如下：</p>
+<p>以<a href="/zh-TW/docs/Web/JavaScript">JavaScript</a>指南為例，它的結構如下：</p>
 ```
 
 ## 中文翻譯的常見問題
 
-基於台灣的島國文化，受到外來文化的影響頗深，對中文掌握的程度也因人而異，中文輸入法又無統一規範等種種原因，在翻譯文章時難免發生不少錯誤。以下針對不同主題整理相關常見的錯誤。
+基於台灣的島國文化受到外來文化的影響頗深，對中文掌握的程度也因人而異，中文輸入法又無統一規範等種種原因，在翻譯文章時難免發生不少錯誤。以下針對不同主題，整理相關常見的錯誤。
 
 ### 標點符號
 
@@ -76,15 +76,15 @@
 
 在翻譯文章時，應使用全形中文標點符號（除非在引述外文的文字中），例如：
 
-- 正確：雖然「Java」和「JavaScript」都是 Oracle 公司
-- 不正確：雖然 "Java" 和 "JavaScript" 都是 Oracle 公司
-- 正確：請前往 JavaScrip ——動態的用戶端指令。
-- 不正確：請前往 JavaScrip-動態的用戶端指令。
+- 正確：雖然「Java」和「JavaScript」都是Oracle公司
+- 不正確：雖然"Java"和"JavaScript"都是Oracle公司
+- 正確：請前往JavaScript——動態的用戶端指令。
+- 不正確：請前往JavaScript-動態的用戶端指令。
 
 當引述的內容為外文時，應保留其原有的標點符號：
 
-- 正確：我們將變數 myHeading 中 innerHTML 特性的值設為「Hello world!」。
-- 不正確：我們將變數 myHeading 中 innerHTML 特性的值設為「Hello world！」。
+- 正確：我們將變數myHeading中innerHTML特性的值設為「Hello, world!」。
+- 不正確：我們將變數myHeading中innerHTML特性的值設為「Hello，world！」。
 
 
 #### 常見錯誤
@@ -100,29 +100,28 @@
 
 #### 如何輸入全形標點符號
 
-在「微軟新注音」輸入法中，透過前導字元 <kbd>\`</kbd> （數字 1 左邊的按鍵）或使用 <kbd>shift</kbd> + <kbd>space</kbd> 切換全形模式，這樣可以快速輸入全形中文。其他輸入法也應有相應的機制，請自行探索。
+在「微軟新注音」輸入法中，透過前導字元<kbd>\`</kbd>（數字1左邊的按鍵），或使用<kbd>shift</kbd> + <kbd>space</kbd>切換全形模式，這樣可以快速輸入全形中文。其他輸入法也應有相應的機制，請自行探索。
 
 #### 中文標點符號參考資源
 
 - [教育部《重訂標點符號手冊》修訂版](https://language.moe.gov.tw/001/upload/files/site_content/m0001/hau/haushou.htm)。
 - [維基百科標點符號](https://zh.wikipedia.org/zh-tw/%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7)。
 
-### 中文及拉丁語系文字交界之修飾
+### 中文及拉丁語系文字間不加修飾空白
 
-基於閱讀及選取操作（連點游標可選取該詞組 —— word）上的便利，在翻譯時，中文字、標點符號與半形英數、符號字元間，需用半形空格隔開。
+中文網路界，有一派習慣是在中文字與半形英數、符號字元間，手動加入半形空格，以便視覺上美觀（如[盤古之白](https://github.com/vinta/pangu.js/blob/master/README.md)倡議）；但也有人主張中英文間不應手動加入空白，而應以系統來調整顯示樣式（如[W3C中文排版需求草案](https://www.w3.org/TR/clreq/#mixed_text_composition_in_horizontal_writing_mode)、[Fred Jame](https://fredjame.wordpress.com/2014/09/14/%e4%b8%ad%e8%8b%b1%e6%96%87%e4%b9%8b%e9%96%93%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e6%9c%89%e7%a9%ba%e6%a0%bc%e6%88%91%e5%95%8f/)、及[中文維基百科](https://zh.wikipedia.org/wiki/Wikipedia_talk:%E6%A0%BC%E5%BC%8F%E6%89%8B%E5%86%8C/%E5%AD%98%E6%A1%A35#%E6%8F%90%E8%AD%B0%E4%BF%AE%E6%94%B9%E6%A0%BC%E5%BC%8F%E6%89%8B%E5%86%8A%E4%B8%AD%E7%9A%84%E7%A9%BA%E6%A0%BC%E7%AB%A0%E7%AF%80)之討論）。
 
-- 正確：使用 Git 作為版本控制。
-- 不正確：使用Git作為版本控制。
+經MDN在地化團隊[討論](https://t.me/c/1099275693/2056)，著眼於簡化格式規範，並考量作業系統與瀏覽器層級中英文混排的kerning實作將越來越良好（如iOS 13、macOS 10.15），MDN上「不」在中英文間手動插入空白字元。
 
-風格不一致。部分有修飾但部分沒有。
+- 正確：使用Git作為版本控制。
+- 不正確：使用 Git 作為版本控制。
 
-- 正確：JavaScript 是一個成熟的動態程式語言，應用於 HTML 文件（document）上時，
-- 不正確：JavaScript是一個成熟的動態程式語言，應用於 HTML 文件（document）上時，
+全形標點符號與拉丁字符間也不加空白
 
-英數字與全形符號（如 `「」（），`）間不需空格
+- 正確：JavaScript是一個成熟的動態程式語言，應用於HTML文件（document）上時
+- 不正確：JavaScript是一個成熟的動態程式語言，應用於HTML文件（ document ）上時
 
-- 正確：「JavaScript」之文件（document）應用，HTML
-- 不正確：「 JavaScript 」之文件（ document ）應用， HTML
+我們也展望MDN未來能透過技術上的處理（如[漢字標準格式](https://hanzi.pro/manual/)或[pangu.js](https://github.com/vinta/pangu.js)），讓中英文混排的文件，在尚未最佳化的系統上也能美觀顯示。
 
 ### 慣用語及術語
 
@@ -148,7 +147,7 @@
 | array | 陣列 | 數組 |
 | object | 物件 | 對象 |
 
-當台灣譯者在翻譯時，應盡可能地使用台灣的慣用翻譯或詞彙。若碰到不確定的情況，可以參考下列的資源，請不要參考線上翻譯服務（譬如， Google 翻譯）。
+當台灣譯者在翻譯時，應盡可能地使用台灣的慣用翻譯或詞彙。若碰到不確定的情況，可以參考下列的資源。由於機器翻譯多未考慮在地語彙，請不要仰賴線上翻譯服務（譬如Google翻譯）。
 
 ### 台灣慣用詞彙參考資源
 
@@ -159,9 +158,9 @@
 
 特定領域術語可參考當地該領域專家的相關著作，例如：
 
-- JavaScript 可參考林信良。
-- CSS 可參考李建杭。
-- Git 可參考高見龍。
+- JavaScript可參考林信良。
+- CSS可參考李建杭。
+- Git可參考高見龍。
 
 其他日常用語
 
@@ -185,36 +184,37 @@
 
 #### 敬語
 
-英文的代名詞並無敬語的觀念，然而某些中文譯者，往往習慣性地在翻譯時把代名詞譯為敬語，這是不需要的。文件敘述的語氣毋須刻意展現謙卑的態度，使用貼近口語的說法即可，不需要太過正式（嚴肅）。
+英文的代名詞並無敬語的觀念，然而某些中文譯者，往往習慣性地在翻譯時把代名詞譯為敬語，這是不需要的。文件敘述的語氣，毋須刻意展現謙卑的態度，使用貼近口語的說法即可，不需要太過正式（嚴肅）。
 
-- 原文： FTP  programs vary widely, but generally, you have to connect to your web server using details provided by your hosting company
-- 宜：FTP 程式很廣泛，但一般來說，你可以用你公司提供的資訊登入你的網頁伺服器。
-- 不宜：FTP 程式很廣泛，但一般來說，您可以用您公司提供的資訊登入您的網頁伺服器。
+- 原文：generally, you have to connect to your web server using details provided by your hosting company
+- 宜：一般來說，你可以用你的公司提供的資訊登入網頁伺服器。
+- 不宜：一般來說，您可以用您的公司提供的資訊登入網頁伺服器。
 
 #### 代名詞
 
-在英文文章中，通常會在敘述中充斥大量的第二或第三人代名詞。但在翻譯為中文時，這種過度出現的代名詞，實際上會使得閱讀變得不通順。適度地減少代名詞的出現並不為過，甚至能夠讓中文的閱讀更加順暢。
+英文文章的敘述中，常會充斥大量的第二或第三人代名詞。但在翻譯為中文時，這種過度出現的代名詞，實際上會使得閱讀變得不通順。適度地減少代名詞的使用，能讓中文的閱讀更加順暢。
 
-- 原文： After you have finished your instructions, follow the numbered list with a brief closing summary or explanation about the expected outcome upon completion.
-- 宜：在完成操作指南後，接續著有序清單給予結語或說明有哪些在完成操作指南後應期待出現的結果。
-- 不宜：在你完成你的操作指南之後，接續著有序清單給予結語或說明有哪些在完成操作指南後應期待出現的結果。
+- 原文：After you have finished your instructions, follow the numbered list with a brief closing summary.
+- 宜：在完成操作指南後，接續著有序清單給予簡略結語。
+- 不宜：在你完成你的操作指南之後，接續著有序清單給予簡略結語。
 
 #### 複數形式
 
-相對英文而言，中文並沒有複數（名詞）的概念，因此在翻譯文章時也請放心地去除原文中複數的形式。
+相對英文而言，中文並沒有複數（名詞）的概念，因此在翻譯文章時也請去除原文中複數的形式。
 
-- 原文： Browser Application Programming Interfaces (APIs)
-- 宜：內建在瀏覽器內的應用程式介面（ Application Programming Interface ， API ）
-- 不宜：內建在瀏覽器內的應用程式介面（Application Programming Interfaces，APIs）
+- 原文：Browser Application Programming Interfaces (APIs)
+- 宜：瀏覽器應用程式介面（API）
+- 不宜：瀏覽器應用程式介面（APIs）
+- 不宜：瀏覽器應用程式介面們（APIs）
 
-## Mozilla 正體中文在地化規範
+## Mozilla正體中文在地化規範
 
-Mozilla 各專案一致性的在地化規範與翻譯原則，請參閱 [Mozilla L10n Style Guide](https://mozilla-l10n.github.io/styleguides/zh-TW/)
+Mozilla各專案一致性的在地化規範與翻譯原則，請參閱[Mozilla L10n Style Guide](https://mozilla-l10n.github.io/styleguides/zh-TW/)。
 
 ## 結語
 
-我們很難對翻譯這項工作訂定絕對的準則，語言的正確使用與否也難有絕對的標準。因此，在面對上述的指導原則及問題時，希望你不會感到太大的壓力，如果你有任何疑問，請隨時與負責你所關注地區的翻譯團隊進行聯絡，向他們提出你的問題。
+我們很難對翻譯這項工作訂定絕對的準則，語言的正確使用與否也難有絕對的標準。因此，在面對上述的指導原則及問題時，希望你不會感到太大的壓力，如果你有任何疑問，請隨時聯絡在地化翻譯團隊，向我們提出你的問題。
 
 儘管嘗試送出你的翻譯吧，審核人員會協助你進行除錯，找出你可能大意的地方。一旦問題都解決了，他們就會合併你的翻譯內容。
 
-如果你還沒有做好直接貢獻翻譯的準備也沒有關係，你可以嘗試協助我們找出 MDN 上有瑕疵的翻譯，並透過問題（ issue ）回報給我們。又或是找到那些不太難且尚未解決的問題，並嘗試修正這些問題。這是相對簡單的方式邁出翻譯貢獻的第一步。我們衷心期待你的貢獻。
+如果你還沒有做好直接貢獻翻譯的準備也沒有關係，你可以嘗試協助我們找出MDN上有瑕疵的翻譯，並透過問題（issue）回報給我們。又或是找到那些不太難且尚未解決的問題，並嘗試修正這些問題。這是相對簡單的方式邁出翻譯貢獻的第一步。我們衷心期待你的貢獻。

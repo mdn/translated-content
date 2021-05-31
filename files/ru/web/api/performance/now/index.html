@@ -61,75 +61,7 @@ console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome("20.0") }} {{ property_prefix("webkit") }}<br>
-    {{ CompatChrome("24.0") }} [1]</td>
-   <td>{{ CompatGeckoDesktop("15.0") }}</td>
-   <td>10.0</td>
-   <td>{{ CompatOpera("15.0") }}</td>
-   <td>{{ CompatSafari("8.0") }}</td>
-  </tr>
-  <tr>
-   <td>on Web workers</td>
-   <td>{{CompatChrome("33")}}</td>
-   <td>{{ CompatGeckoDesktop("34.0") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatAndroid("4.0") }}</td>
-   <td>{{ CompatChrome("25.0") }}</td>
-   <td>{{ CompatGeckoMobile("15.0") }}</td>
-   <td>10.0</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
-  <tr>
-   <td>on Web workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("34.0") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Версии Chrome от 20 до 33 под Windows, на момент написания этого документа, возвращает <code>performance.now()</code> с точностью только до миллисекунд.</p>
+<p>{{Compat("api.Performance.now")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

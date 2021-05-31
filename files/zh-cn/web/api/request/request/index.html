@@ -38,7 +38,7 @@ translation_of: Web/API/Request/Request
  <ul>
   <li><code>method</code>: 请求的方法，例如：<code>GET</code>, <code>POST。</code></li>
   <li><code>headers</code>: 任何你想加到请求中的头，其被放在{{domxref("Headers")}}对象或内部值为{{domxref("ByteString")}} 的对象字面量中。</li>
-  <li><code>body</code>: 任何你想加到请求中的body，可以是{{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 或 {{domxref("USVString")}}对象。注意<code>GET</code> 和 <code>HEAD请求没有body。</code></li>
+  <li><code>body</code>: 任何你想加到请求中的body，可以是{{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}，或{{domxref("ReadableStream")}}对象。注意<code>GET</code> 和 <code>HEAD</code> 请求没有body。</li>
   <li><code>mode</code>: 请求的模式, 比如 <code>cors</code>, <code>no-cors</code>, <code>same-origin</code>, 或 <code>navigate</code>。默认值为 <code>cors</code>。</li>
   <li><code>credentials</code>: 想要在请求中使用的credentials：: <code>omit</code>, <code>same-origin</code>, 或 <code>include</code>。默认值应该为<code>omit</code>。但在Chrome中，Chrome 47 之前的版本默认值为 <code>same-origin</code> ，自Chrome 47起，默认值为<code>include。</code></li>
   <li><code>cache</code>: 请求中想要使用的 <a href="/en-US/docs/Web/API/Request/cache">cache mode</a> </li>
