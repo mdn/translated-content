@@ -15,34 +15,33 @@ translation_of: Web/API/Window/alert
 
 <p><strong><code>Window.alert()</code></strong> メソッドは、オプションの指定されたコンテンツと OK ボタンを持つ警告ダイアログを表示します。</p>
 
+<p>一部の条件下（ユーザーがタブを切り替えた場合など）では、ブラウザーが実際にダイアログを表示しない場合や、ユーザーがダイアログを閉じるのを待たない場合があります。</p>
+
 <h2 id="Syntax" name="Syntax">構文</h2>
 
 <pre class="syntaxbox"><code>window.alert(<em>message</em>);</code></pre>
 
-<ul>
- <li><strong><code>message</code></strong> は、警告ダイアログに表示したいオプションの文字列または、文字列に変換されて表示されるオブジェクトです。</li>
-</ul>
+<h3 id="Parameters" name="Parameters">パラメーター</h3>
+
+<dl>
+  <dt><code>message</code> {{optional_inline}}</dt>
+  <dd>警告ダイアログに表示したいオプションの文字列または、文字列に変換されて表示されるオブジェクトです。</dd>
+</dl>
 
 <h2 id="Example" name="Example">例</h2>
 
 <pre class="brush: js">window.alert("Hello world!");
-</pre>
+alert("Hello world!");</pre>
 
-<p>以下のように表示されます。</p>
+<p>いずれも、以下のように表示されます。</p>
 
 <p><img alt="Image:AlertHelloWorld.png" src="/files/130/AlertHelloWorld.png"></p>
 
 <h2 id="Notes" name="Notes">注記</h2>
 
-<p>警告ダイアログは、メッセージの確認応答以外の、ユーザ側で応答を必要としないメッセージのために使われるべきです。</p>
+<p>警告ダイアログは、メッセージの確認応答以外に、ユーザ側で応答を必要としないメッセージのために使われるべきです。</p>
 
-<p>ダイアログボックスはモーダルウィンドウです。つまりユーザーは、これを閉じないとプログラムの他のインターフェイス部分にアクセスする事ができません。ですから、ダイアログボックス (もしくは、モーダルウィンドウ) を生成する関数を過度に使用すべきではありません。</p>
-
-<p>Mozilla Chrome ユーザー (Firefox 拡張など) は、<a href="/ja/docs/NsIPromptService">nsIPromptService</a> メソッドを代わりに使うべきです。</p>
-
-<p>{{CompatChrome(46.0)}} 以降、このメソッドは、sandbox 属性の値が <code>allow-modal</code> でない限り、{{htmlelement("iframe")}} 内でブロックされます。</p>
-
-<p>{{gecko_minversion_inline("23.0")}} この引数は、仕様により必要に応じてオプションになりました。</p>
+<p>この記事では、 DOM:window.prompt と DOM：window.confirm のテキストが共有されています。ダイアログボックスはモーダルウィンドウです。つまり、ユーザーはこれを閉じないとプログラムの他のインターフェイス部分にアクセスする事ができません。ですから、ダイアログボックス (もしくは、モーダルウィンドウ) を生成する関数を過度に使用すべきではありません。</p>
 
 <h2 id="Specification" name="Specification">仕様</h2>
 

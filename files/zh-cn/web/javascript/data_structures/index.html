@@ -23,7 +23,7 @@ foo = true;  // foo is a Boolean now
 
 <h2 id="数据类型">数据类型</h2>
 
-<p>最新的 ECMAScript 标准定义了 9 种数据类型:</p>
+<p>最新的 ECMAScript 标准定义了 8 种数据类型:</p>
 
 <ul>
  <li>6 种{{Glossary("Primitive", "原始类型")}}，使用 {{Glossary("typeof")}} 运算符检查:
@@ -38,7 +38,6 @@ foo = true;  // foo is a Boolean now
  </li>
  <li>{{Glossary("null")}}：<code>typeof instance === "object"</code>。</li>
  <li>{{Glossary("Object")}}：<code>typeof instance === "object"</code>。任何 {{Glossary("constructed")}} 对象实例的特殊非数据结构类型，也用做数据结构：new {{Glossary("Object")}}，new {{Glossary("Array")}}，new {{Glossary("Map")}}，new {{Glossary("Set")}}，new {{Glossary("WeakMap")}}，new {{Glossary("WeakSet")}}，new {{Glossary("Date")}}，和几乎所有通过 {{Glossary("new keyword")}} 创建的东西。</li>
- <li>{{Glossary("Function")}}：非数据结构，尽管 typeof 操作的结果是：<code>typeof instance === "function"</code>。这个结果是为 Function 的一个特殊缩写，尽管每个 Function 构造器都由 Object 构造器派生。</li>
 </ul>
 
 <p>记住 <code>typeof</code> 操作符的唯一目的就是检查数据类型，如果我们希望检查任何从 Object 派生出来的结构类型，使用 <code>typeof</code> 是不起作用的，因为总是会得到 <code>"object"</code>。检查 Object 种类的合适方式是使用 {{Glossary("instanceof")}} 关键字。但即使这样也存在误差。</p>

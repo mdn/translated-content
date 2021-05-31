@@ -134,65 +134,7 @@ flex.addEventListener("click", function() {
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>{{CompatibilityTable()}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Особенность</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatGeckoDesktop("18.0")}} (behind a pref) <sup><a href="#bc1">[1]</a> <a href="#bc2">[2]</a></sup><br>
-    {{CompatGeckoDesktop("20.0")}} <sup><a href="#bc2">[2]</a><a href="#bc3">[3]</a></sup></td>
-   <td>21.0{{property_prefix("-webkit")}}<br>
-    29.0</td>
-   <td>10.0{{property_prefix("-ms")}} <sup><a href="#flexbug8">[3]</a></sup><sup><a href="#flexbug4">[4]</a></sup><br>
-    11.0 <sup><a href="#flexbug8">[3]</a></sup><sup><a href="#flexbug4">[4]</a></sup></td>
-   <td>12.10</td>
-   <td>6.1{{property_prefix("-webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Особенность</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown()}}</td>
-   <td>4.4</td>
-   <td>11</td>
-   <td>12.10</td>
-   <td>7.1{{property_prefix("-webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p><sup><a name="bc1">[1]</a></sup>  Для активации flexbox для Firefox 18 и 19 пользователю необходимо внести следующее изменение:<br>
- свойство конфигурации "layout.css.flexbox.enabled" в<code>true</code>.</p>
-
-<p><sup><a name="bc2">[2]</a></sup> Multi-line flexbox поддерживается Firefox 28.</p>
-
-<p><sup><a name="flexbug8">[3]</a></sup> Internet Explorer 10-11 (кроме 12+) игнорируют использование <a href="/en-US/docs/Web/CSS/calc"><code>calc()</code></a> во flex-basis части <code>flex</code> синтаксиса. Это можно обойти, используя свойства longhand вместо сокращения. Дополнительную информацию см. В <a href="https://github.com/philipwalton/flexbugs#8-flex-shorthand-doesnt-support-calc">Flexbug # 8</a>.</p>
-
-<p><sup><a name="flexbug4">[4]</a></sup> В Internet Explorer 10-11 (кроме 12+),  объявление <code>flex</code> без единичного значения в его <em>flex-basis</em> части считается синтаксически недействительным и поэтому игнорируется. Обходной путь состоит в том, чтобы всегда включать единицу в <em>flex-basis </em>часть <code>flex</code> . Дополнительную информацию см. В <a href="https://github.com/philipwalton/flexbugs#4-flex-shorthand-declarations-with-unitless-flex-basis-values-are-ignored">Flexbug #4</a>.</p>
+<p>{{Compat("css.properties.flex")}}</p>
 
 <h2 id="See_also" name="See_also">Смотрите также</h2>
 

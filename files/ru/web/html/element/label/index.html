@@ -110,63 +110,7 @@ translation_of: Web/HTML/Element/label
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Starting with Gecko 8.0 {{geckoRelease("8.0")}}, a bubbling click event triggers at most one <code>&lt;label&gt;</code>, and the synthetic click event cannot trigger additional <code>&lt;label&gt;</code>s. In Gecko, a click event will still bubble up past a <code>&lt;label&gt;</code>, while in WebKit or Internet Explorer the click event will stop at the <code>&lt;label&gt;</code>. The behavior prior to Gecko 8.0 (triggering multiple <code>&lt;label&gt;</code>s) caused Firefox to stop responding (see {{bug(646157)}}).</p>
-
-<p>[2] The HTML specification was updated in April 2016 to deprecate the {{htmlattrxref("form")}} attribute. It's still available from script, but its definition has changed: it now returns the associated control's form, or <code>null</code> if there is no associated control (that is, if {{domxref("HTMLLabelElement.control")}} is <code>null</code>). See {{domxref("HTMLLabelElement.form")}}.</p>
-
-<p>This change is implemented in Firefox 49.</p>
+<p>{{Compat("html.elements.label")}}</p>
 
 <h2 id="See_also">See also</h2>
 

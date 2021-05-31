@@ -93,77 +93,7 @@ function SelectText () {
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Возможность</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>9</td>
-   <td>8.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>selectionDirection</code></td>
-   <td>15<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop("8.0")}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Возможность</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>selectionDirection</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("8.0")}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Поддержка <code>selectionDirection</code> была добавлена Blink в {{WebkitBug("60403")}}.</p>
-
-<p>Требуется отметить, что согласно спецификации <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG forms</a> свойства <code>selectionStart</code>, <code>selectionEnd</code> и метод <code>setSelectionRange</code> применяются только к элементам <em>input</em> c типами <em>text</em>, <em>search</em>, <em>URL</em>, <em>tel</em> и <em>password</em>. Начиная с версии 33, Chrome, выдаёт исключение во время попытки доступа к этим свойствам и методу на других типах элемента <em>input</em>. Например, для элемента <em>input</em> типа <em>number</em> появится исключение с сообщением: "Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection." Ссылки по теме: <a href="http://stackoverflow.com/questions/21177489/selectionstart-selectionend-on-input-type-number-no-longer-allowed-in-chrome">вопрос на StackOverflow</a>, <a href="https://www.w3.org/Bugs/Public/show_bug.cgi?id=24796">whatwg баг</a>, <a href="https://code.google.com/p/chromium/issues/detail?id=324360">Chromium баг</a>.</p>
-
-<p>[2] Поддержка <code>selectionDirection</code> была добавлена в Gecko в {{bug("674558")}}.</p>
-
-<p>[3] Поддержка <code>selectionDirection</code> была добавлена в Webkit в {{WebKitBug("60403")}}.</p>
+<p>{{Compat("api.HTMLInputElement.setSelectionRange")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
