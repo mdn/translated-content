@@ -9761,31 +9761,6 @@
       "caoweiju"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:27:27.352Z",
-    "contributors": [
-      "RainSlide",
-      "iSmartSV",
-      "duola8789",
-      "pasturn",
-      "Ende93",
-      "xgqfrms-GitHub",
-      "ceverytime",
-      "teoli",
-      "khalid32",
-      "ziyunfei",
-      "Darrel.Hsu"
-    ]
-  },
-  "Web/API/ChildNode/replaceWith": {
-    "modified": "2020-10-15T21:56:06.625Z",
-    "contributors": [
-      "ecnelises",
-      "SphinxKnight",
-      "wzx",
-      "VictorDu"
-    ]
-  },
   "Web/API/Client": {
     "modified": "2019-03-23T22:16:43.346Z",
     "contributors": [
@@ -15144,12 +15119,6 @@
       "dextra",
       "Mgjbot",
       "Dewang"
-    ]
-  },
-  "Web/API/HTMLElement/forceSpellCheck": {
-    "modified": "2019-03-18T21:38:32.415Z",
-    "contributors": [
-      "varcat"
     ]
   },
   "Web/API/HTMLElement/hidden": {
@@ -31731,56 +31700,6 @@
       "Teago"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-04-29T21:49:51.078Z",
-    "contributors": [
-      "vanpipy",
-      "mike-j",
-      "GameWang",
-      "fanerge",
-      "mfoonirlee",
-      "Summer1026",
-      "xgqfrms-GitHub",
-      "Go7hic",
-      "panhe-xue",
-      "ObooChin",
-      "kevinfszu",
-      "teoli",
-      "xgqfrms",
-      "fghycode",
-      "jasonworg",
-      "mengzyou",
-      "Breezewish",
-      "Jianming",
-      "ziyunfei",
-      "xuxun",
-      "TimZhao",
-      "sunnylost",
-      "xcffl",
-      "princetoad@gmail.com"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Constraint_validation": {
-    "modified": "2020-08-07T06:53:08.941Z",
-    "contributors": [
-      "Nierifeng",
-      "shiyi25928988",
-      "yongchen"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-24T00:12:23.341Z",
-    "contributors": [
-      "eeeeeeeason",
-      "YueBiYang",
-      "008",
-      "guotingchaopr",
-      "ziyunfei",
-      "ibeen",
-      "gaoyanqi",
-      "leegorous"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2019-03-21T10:38:08.111Z",
     "contributors": [
@@ -32851,12 +32770,6 @@
       "pantao"
     ]
   },
-  "Web/HTML/Element/isindex": {
-    "modified": "2019-03-23T22:43:17.045Z",
-    "contributors": [
-      "Martin.Chow"
-    ]
-  },
   "Web/HTML/Element/kbd": {
     "modified": "2019-08-13T06:01:57.840Z",
     "contributors": [
@@ -32929,12 +32842,6 @@
       "jesse0x90",
       "gqqnbig",
       "041008725"
-    ]
-  },
-  "Web/HTML/Element/listing": {
-    "modified": "2019-03-23T22:10:12.488Z",
-    "contributors": [
-      "wizardforcel"
     ]
   },
   "Web/HTML/Element/main": {
@@ -33054,13 +32961,6 @@
       "hoyt"
     ]
   },
-  "Web/HTML/Element/multicol": {
-    "modified": "2019-03-23T22:18:36.663Z",
-    "contributors": [
-      "wizardforcel",
-      "xgqfrms-GitHub"
-    ]
-  },
   "Web/HTML/Element/nav": {
     "modified": "2020-10-15T21:26:27.913Z",
     "contributors": [
@@ -33070,12 +32970,6 @@
       "ziyunfei",
       "TimZhao",
       "bowen-shi"
-    ]
-  },
-  "Web/HTML/Element/nextid": {
-    "modified": "2020-10-15T22:25:21.460Z",
-    "contributors": [
-      "pans9"
     ]
   },
   "Web/HTML/Element/nobr": {
@@ -33879,17 +33773,6 @@
     "modified": "2019-07-13T06:56:53.858Z",
     "contributors": [
       "wangfangping"
-    ]
-  },
-  "Web/HTML/Preloading_content": {
-    "modified": "2020-06-09T23:26:32.370Z",
-    "contributors": [
-      "huyue",
-      "chanvin",
-      "sutaojie",
-      "haoliangwu",
-      "Axue",
-      "ldwformat"
     ]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
@@ -44387,16 +44270,6 @@
       "wsv587"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T21:59:15.552Z",
-    "contributors": [
-      "RainSlide",
-      "fsy0718",
-      "zhangchen",
-      "qdlaoyao",
-      "fphonor"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:37:38.990Z",
     "contributors": [
@@ -46493,13 +46366,6 @@
       "Sebastianz",
       "fanxiaojie",
       "huyue"
-    ]
-  },
-  "Web/SVG/Element/color-profile": {
-    "modified": "2019-03-23T22:46:33.322Z",
-    "contributors": [
-      "Sebastianz",
-      "fanxiaojie"
     ]
   },
   "Web/SVG/Element/cursor": {
@@ -50320,6 +50186,31 @@
       "smilewalker"
     ]
   },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T21:27:27.352Z",
+    "contributors": [
+      "RainSlide",
+      "iSmartSV",
+      "duola8789",
+      "pasturn",
+      "Ende93",
+      "xgqfrms-GitHub",
+      "ceverytime",
+      "teoli",
+      "khalid32",
+      "ziyunfei",
+      "Darrel.Hsu"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/replaceWith": {
+    "modified": "2020-10-15T21:56:06.625Z",
+    "contributors": [
+      "ecnelises",
+      "SphinxKnight",
+      "wzx",
+      "VictorDu"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2020-10-15T21:21:28.912Z",
     "contributors": [
@@ -50368,6 +50259,12 @@
     "modified": "2019-03-23T22:06:02.004Z",
     "contributors": [
       "wuCrio"
+    ]
+  },
+  "orphaned/Web/API/HTMLElement/forceSpellCheck": {
+    "modified": "2019-03-18T21:38:32.415Z",
+    "contributors": [
+      "varcat"
     ]
   },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {
@@ -50635,6 +50532,56 @@
       "zzangxu"
     ]
   },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-04-29T21:49:51.078Z",
+    "contributors": [
+      "vanpipy",
+      "mike-j",
+      "GameWang",
+      "fanerge",
+      "mfoonirlee",
+      "Summer1026",
+      "xgqfrms-GitHub",
+      "Go7hic",
+      "panhe-xue",
+      "ObooChin",
+      "kevinfszu",
+      "teoli",
+      "xgqfrms",
+      "fghycode",
+      "jasonworg",
+      "mengzyou",
+      "Breezewish",
+      "Jianming",
+      "ziyunfei",
+      "xuxun",
+      "TimZhao",
+      "sunnylost",
+      "xcffl",
+      "princetoad@gmail.com"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Constraint_validation": {
+    "modified": "2020-08-07T06:53:08.941Z",
+    "contributors": [
+      "Nierifeng",
+      "shiyi25928988",
+      "yongchen"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-24T00:12:23.341Z",
+    "contributors": [
+      "eeeeeeeason",
+      "YueBiYang",
+      "008",
+      "guotingchaopr",
+      "ziyunfei",
+      "ibeen",
+      "gaoyanqi",
+      "leegorous"
+    ]
+  },
   "orphaned/Web/HTML/Element/command": {
     "modified": "2019-03-18T20:43:33.481Z",
     "contributors": [
@@ -50649,10 +50596,46 @@
       "angelllls"
     ]
   },
+  "orphaned/Web/HTML/Element/isindex": {
+    "modified": "2019-03-23T22:43:17.045Z",
+    "contributors": [
+      "Martin.Chow"
+    ]
+  },
+  "orphaned/Web/HTML/Element/listing": {
+    "modified": "2019-03-23T22:10:12.488Z",
+    "contributors": [
+      "wizardforcel"
+    ]
+  },
+  "orphaned/Web/HTML/Element/multicol": {
+    "modified": "2019-03-23T22:18:36.663Z",
+    "contributors": [
+      "wizardforcel",
+      "xgqfrms-GitHub"
+    ]
+  },
+  "orphaned/Web/HTML/Element/nextid": {
+    "modified": "2020-10-15T22:25:21.460Z",
+    "contributors": [
+      "pans9"
+    ]
+  },
   "orphaned/Web/HTML/Global_attributes/dropzone": {
     "modified": "2019-03-23T22:10:15.156Z",
     "contributors": [
       "wizardforcel"
+    ]
+  },
+  "orphaned/Web/HTML/Preloading_content": {
+    "modified": "2020-06-09T23:26:32.370Z",
+    "contributors": [
+      "huyue",
+      "chanvin",
+      "sutaojie",
+      "haoliangwu",
+      "Axue",
+      "ldwformat"
     ]
   },
   "orphaned/Web/HTTP/跨域资源共享(CORS)_": {
@@ -50701,6 +50684,16 @@
       "Ende93"
     ]
   },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T21:59:15.552Z",
+    "contributors": [
+      "RainSlide",
+      "fsy0718",
+      "zhangchen",
+      "qdlaoyao",
+      "fphonor"
+    ]
+  },
   "orphaned/Web/JavaScript/javascript(起步)": {
     "modified": "2019-03-23T22:54:49.824Z",
     "contributors": [
@@ -50712,6 +50705,13 @@
     "contributors": [
       "RoyZ",
       "faliye"
+    ]
+  },
+  "orphaned/Web/SVG/Element/color-profile": {
+    "modified": "2019-03-23T22:46:33.322Z",
+    "contributors": [
+      "Sebastianz",
+      "fanxiaojie"
     ]
   },
   "orphaned/Web/Security/Information_Security_Basics": {
