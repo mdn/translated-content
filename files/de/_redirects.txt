@@ -294,7 +294,7 @@
 /de/docs/HTML/Element/time	/de/docs/Web/HTML/Element/time
 /de/docs/HTML/Element/ul	/de/docs/Web/HTML/Element/ul
 /de/docs/HTML/Element/var	/de/docs/Web/HTML/Element/var
-/de/docs/HTML/HTML5	/de/docs/Web/Guide/HTML/HTML5
+/de/docs/HTML/HTML5	/de/docs/orphaned/Web/Guide/HTML/HTML5
 /de/docs/HTML/HTML5/HTML5_element_list	/de/docs/conflicting/Web/HTML/Element
 /de/docs/HTML/HTML5/liste_der_HTML5_elemente	/de/docs/conflicting/Web/HTML/Element
 /de/docs/HTML/Inline_elemente	/de/docs/Web/HTML/Inline_elements
@@ -484,6 +484,7 @@
 /de/docs/Verwenden_des_Cache_beim_Firefox_1.5	/de/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /de/docs/Web/API/AudioContext/decodeAudioData	/de/docs/Web/API/BaseAudioContext/decodeAudioData
 /de/docs/Web/API/CSSRule.cssText	/de/docs/Web/API/CSSRule/cssText
+/de/docs/Web/API/ChildNode/remove	/de/docs/orphaned/Web/API/ChildNode/remove
 /de/docs/Web/API/Element.querySelector	/de/docs/Web/API/Element/querySelector
 /de/docs/Web/API/File/Typ	/de/docs/Web/API/File/type
 /de/docs/Web/API/File/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File/Using_files_from_web_applications
@@ -549,6 +550,8 @@
 /de/docs/Web/CSS/:-moz-ui-valid	/de/docs/orphaned/Web/CSS/:-moz-ui-valid
 /de/docs/Web/CSS/:-webkit-autofill	/de/docs/Web/CSS/:autofill
 /de/docs/Web/CSS/::-moz-placeholder	/de/docs/conflicting/Web/CSS/::placeholder
+/de/docs/Web/CSS/@page/bleed	/de/docs/orphaned/Web/CSS/@page/bleed
+/de/docs/Web/CSS/@page/marks	/de/docs/orphaned/Web/CSS/@page/marks
 /de/docs/Web/CSS/Adjacent_sibling_selectors	/de/docs/Web/CSS/Adjacent_sibling_combinator
 /de/docs/Web/CSS/Alias	/de/docs/conflicting/Web/CSS/cursor_35a62ea3f10b688a3a87ccfe07779743
 /de/docs/Web/CSS/Angrenzende_Geschwisterselektoren	/de/docs/Web/CSS/Adjacent_sibling_combinator
@@ -613,7 +616,7 @@
 /de/docs/Web/CSS/grid-gap	/de/docs/Web/CSS/gap
 /de/docs/Web/CSS/hidden	/de/docs/Web/CSS/visibility
 /de/docs/Web/CSS/linear-gradient	/de/docs/Web/CSS/linear-gradient()
-/de/docs/Web/CSS/marks	/de/docs/Web/CSS/@page/marks
+/de/docs/Web/CSS/marks	/de/docs/orphaned/Web/CSS/@page/marks
 /de/docs/Web/CSS/mq-boolean	/de/docs/Web/CSS/Media_Queries/Using_media_queries
 /de/docs/Web/CSS/none	/de/docs/conflicting/Web/CSS/float
 /de/docs/Web/CSS/normal	/de/docs/conflicting/Web/CSS/font-variant
@@ -661,6 +664,7 @@
 /de/docs/Web/Guide/HTML/Canvas_Tutorial/Grundlagen	/de/docs/Web/API/Canvas_API/Tutorial/Basic_usage
 /de/docs/Web/Guide/HTML/Content_Editable	/de/docs/Web/Guide/HTML/Editable_content
 /de/docs/Web/Guide/HTML/Einführung	/de/docs/Learn/HTML/Introduction_to_HTML
+/de/docs/Web/Guide/HTML/HTML5	/de/docs/orphaned/Web/Guide/HTML/HTML5
 /de/docs/Web/Guide/HTML/Inhaltskategorien	/de/docs/Web/Guide/HTML/Content_categories
 /de/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/de/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /de/docs/Web/HTML/Block-level_elemente	/de/docs/Web/HTML/Block-level_elements
@@ -691,7 +695,7 @@
 /de/docs/Web/HTML/Globale_Attribute/tabindex	/de/docs/Web/HTML/Global_attributes/tabindex
 /de/docs/Web/HTML/Globale_Attribute/title	/de/docs/Web/HTML/Global_attributes/title
 /de/docs/Web/HTML/Globale_Attribute/translate	/de/docs/Web/HTML/Global_attributes/translate
-/de/docs/Web/HTML/HTML5	/de/docs/Web/Guide/HTML/HTML5
+/de/docs/Web/HTML/HTML5	/de/docs/orphaned/Web/Guide/HTML/HTML5
 /de/docs/Web/HTML/HTML5/HTML5_element_list	/de/docs/conflicting/Web/HTML/Element
 /de/docs/Web/HTML/Inline_elemente	/de/docs/Web/HTML/Inline_elements
 /de/docs/Web/HTML/Referenz	/de/docs/Web/HTML/Reference
@@ -868,6 +872,7 @@
 /de/docs/Web/JavaScript/Reference/Operators/Modulo	/de/docs/Web/JavaScript/Reference/Operators/Remainder
 /de/docs/Web/JavaScript/Reference/Operators/Objekt_Initialisierer	/de/docs/Web/JavaScript/Reference/Operators/Object_initializer
 /de/docs/Web/JavaScript/Reference/Operators/Optionale_Verkettung	/de/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+/de/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/de/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /de/docs/Web/JavaScript/Reference/Operators/Spread_operator	/de/docs/conflicting/Web/JavaScript/Reference/Operators/Spread_syntax
 /de/docs/Web/JavaScript/Reference/Operators/Vergleichsoperatoren	/de/docs/conflicting/Web/JavaScript/Reference/Operators_5b3986b830cf68059c03079ef10ff039
 /de/docs/Web/JavaScript/Reference/Operators/Zuweisungsoperator	/de/docs/conflicting/Web/JavaScript/Reference/Operators_bf514126b51a6e9b7591809ecc554076

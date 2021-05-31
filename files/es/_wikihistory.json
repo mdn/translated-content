@@ -5547,21 +5547,6 @@
       "SoftwareRVG"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:50:43.901Z",
-    "contributors": [
-      "daniel.arango",
-      "teffcode",
-      "AlePerez92",
-      "SoftwareRVG"
-    ]
-  },
-  "Web/API/ChildNode/replaceWith": {
-    "modified": "2019-03-23T22:23:34.633Z",
-    "contributors": [
-      "SoftwareRVG"
-    ]
-  },
   "Web/API/ClipboardEvent": {
     "modified": "2020-10-15T22:14:15.464Z",
     "contributors": [
@@ -14321,60 +14306,6 @@
       "V.Morantes"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2020-05-16T09:08:08.720Z",
-    "contributors": [
-      "jonasdamher",
-      "SphinxKnight",
-      "anibalymariacantantes60",
-      "AzulMartin",
-      "264531666",
-      "fracp",
-      "damianed",
-      "alfredotemiquel",
-      "rossettistone",
-      "carlossuarez",
-      "teoli",
-      "JosueMolina",
-      "Pablo_Ivan",
-      "welm",
-      "bicentenario",
-      "jesusruiz",
-      "pierre_alfonso",
-      "pitufo_cabron",
-      "cesar_ortiz_elPatox",
-      "inma_610",
-      "vigia122",
-      "StripTM",
-      "deimidis",
-      "Izel"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Constraint_validation": {
-    "modified": "2020-08-11T08:06:04.309Z",
-    "contributors": [
-      "gerardo750711",
-      "israel-munoz"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/HTML5_Parser": {
-    "modified": "2019-03-24T00:07:09.448Z",
-    "contributors": [
-      "teoli",
-      "RickieesES",
-      "inma_610",
-      "StripTM",
-      "juanb",
-      "Izel"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-24T00:05:36.058Z",
-    "contributors": [
-      "teoli",
-      "inma_610"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2019-03-23T23:38:22.567Z",
     "contributors": [
@@ -15214,12 +15145,6 @@
       "Jorolo"
     ]
   },
-  "Web/HTML/Element/isindex": {
-    "modified": "2019-03-23T22:36:13.994Z",
-    "contributors": [
-      "jcr4"
-    ]
-  },
   "Web/HTML/Element/kbd": {
     "modified": "2019-03-18T21:11:05.093Z",
     "contributors": [
@@ -15332,12 +15257,6 @@
       "jigs12",
       "teoli",
       "Jorolo"
-    ]
-  },
-  "Web/HTML/Element/multicol": {
-    "modified": "2019-03-23T22:36:14.458Z",
-    "contributors": [
-      "jcr4"
     ]
   },
   "Web/HTML/Element/nav": {
@@ -20611,12 +20530,6 @@
       "glrodasz"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:24:00.271Z",
-    "contributors": [
-      "nachofelpete"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-03-12T19:37:28.144Z",
     "contributors": [
@@ -23497,6 +23410,21 @@
       "HenryGR"
     ]
   },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T21:50:43.901Z",
+    "contributors": [
+      "daniel.arango",
+      "teffcode",
+      "AlePerez92",
+      "SoftwareRVG"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/replaceWith": {
+    "modified": "2019-03-23T22:23:34.633Z",
+    "contributors": [
+      "SoftwareRVG"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2020-08-11T08:30:00.189Z",
     "contributors": [
@@ -23614,6 +23542,60 @@
       "rubencidlara"
     ]
   },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2020-05-16T09:08:08.720Z",
+    "contributors": [
+      "jonasdamher",
+      "SphinxKnight",
+      "anibalymariacantantes60",
+      "AzulMartin",
+      "264531666",
+      "fracp",
+      "damianed",
+      "alfredotemiquel",
+      "rossettistone",
+      "carlossuarez",
+      "teoli",
+      "JosueMolina",
+      "Pablo_Ivan",
+      "welm",
+      "bicentenario",
+      "jesusruiz",
+      "pierre_alfonso",
+      "pitufo_cabron",
+      "cesar_ortiz_elPatox",
+      "inma_610",
+      "vigia122",
+      "StripTM",
+      "deimidis",
+      "Izel"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Constraint_validation": {
+    "modified": "2020-08-11T08:06:04.309Z",
+    "contributors": [
+      "gerardo750711",
+      "israel-munoz"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/HTML5_Parser": {
+    "modified": "2019-03-24T00:07:09.448Z",
+    "contributors": [
+      "teoli",
+      "RickieesES",
+      "inma_610",
+      "StripTM",
+      "juanb",
+      "Izel"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-24T00:05:36.058Z",
+    "contributors": [
+      "teoli",
+      "inma_610"
+    ]
+  },
   "orphaned/Web/Guide/HTML/Introduction_alhtml_clone": {
     "modified": "2019-03-23T23:11:36.473Z",
     "contributors": [
@@ -23633,6 +23615,18 @@
     "contributors": [
       "raecillacastellana",
       "kramery"
+    ]
+  },
+  "orphaned/Web/HTML/Element/isindex": {
+    "modified": "2019-03-23T22:36:13.994Z",
+    "contributors": [
+      "jcr4"
+    ]
+  },
+  "orphaned/Web/HTML/Element/multicol": {
+    "modified": "2019-03-23T22:36:14.458Z",
+    "contributors": [
+      "jcr4"
     ]
   },
   "orphaned/Web/HTML/Elemento/Etiqueta_Personalizada_HTML5": {
@@ -23664,6 +23658,12 @@
     "contributors": [
       "lajaso",
       "humbertaco"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:24:00.271Z",
+    "contributors": [
+      "nachofelpete"
     ]
   },
   "orphaned/Web/SVG/SVG_en_Firefox_1.5": {
