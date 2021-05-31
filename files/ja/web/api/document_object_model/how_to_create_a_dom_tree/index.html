@@ -1,22 +1,23 @@
 ---
 title: DOM ツリーの作成方法
-slug: Web/API/Document_Object_Model/How_to_create_a_DOM_tree
+slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
 tags:
   - AJAX
   - Add-ons
   - DOM
   - Extensions
   - JXON
+  - NeedsUpdate
   - XML
 translation_of: Web/API/Document_object_model/How_to_create_a_DOM_tree
 ---
 <p>{{draft}}</p>
 
-<p>このページでは JavaScript において <a class="external" href="http://www.w3.org/TR/DOM-Level-3-Core/core.html">DOM Core</a> API を用いて DOM オブジェクトを作成したり変更したりする方法を解説します。これはすべての Gecko ベースアプリケーション（Firefox など）で特権付きコード（拡張機能）でも特権なしコード（ウェブページ）でも利用できます。</p>
+<p>このページでは JavaScript において <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html">DOM Core</a> API を用いて DOM オブジェクトを作成したり変更したりする方法を解説します。これはすべての Gecko ベースのアプリケーション (Firefox など) で特権付きコード (拡張機能) でも特権なしコード (ウェブページ) でも利用できます。</p>
 
-<h2 id="英語版章題('Dynamically_creating_a_DOM_tree')_DOM_ツリーの動的作成">{{ 英語版章題('Dynamically creating a DOM tree') }}DOM ツリーの動的作成</h2>
+<h3 id="Dynamically_creating_a_DOM_tree">DOM ツリーの動的作成</h3>
 
-<p>次の XML 文書を考えます。</p>
+<p>次の XML 文書を見てください。</p>
 
 <pre class="brush: xml">&lt;?xml version="1.0"?&gt;
 &lt;people&gt;
@@ -33,7 +34,7 @@ translation_of: Web/API/Document_object_model/How_to_create_a_DOM_tree
 &lt;/people&gt;
 </pre>
 
-<p>次のように W3C DOM API を使うことでこの文書のインメモリ表現を作成することができます。Mozilla はこの API をサポートしています。</p>
+<p>次のように W3C DOM API を使うことでこの文書のメモリー内の表現を作成することができます。Mozilla はこの API に対応しています。</p>
 
 <pre class="brush: js">var doc = document.implementation.createDocument("", "", null);
 var peopleElem = doc.createElement("people");
@@ -87,9 +88,9 @@ peopleElem.appendChild(personElem2);
 doc.appendChild(peopleElem);
 </pre>
 
-<p><a href="/ja/XUL_Tutorial/Document_Object_Model" title="ja/XUL_Tutorial/Document_Object_Model">XUL チュートリアルの DOM の章</a> も参照してください。</p>
+<p><a href="/ja/docs/XUL_Tutorial/Document_Object_Model">XUL チュートリアルの DOM の章</a> も参照してください。</p>
 
-<p>You can automate the creation of a DOM tree using a <a href="/en/JXON#JXON_reverse_algorithms" title="en/JXON#JXON_reverse_algorithms">JXON reverse algorithm</a> in association with the following JSON representation:</p>
+<p>DOM ツリーの生成は、 <a href="/ja/docs/JXON#JXON_reverse_algorithms">JXON 逆引きアリゴリズム</a>に次の JSON 表現を関連付けることで自動化できます。</p>
 
 <pre class="brush: js">{
   "people": {
@@ -132,21 +133,19 @@ doc.appendChild(peopleElem);
 }
 </pre>
 
-<h3 id="英語版章題('So_what')_つまり">{{ 英語版章題('So what?') }}つまり ?</h3>
+<h3 id="So_what.3F">つまり ?</h3>
 
-<p>DOM ツリーを <a href="/ja/Using_XPath" title="ja/Using_XPath"> XPath 式を用いてクエリすること</a> や、文字列に変換すること、<a href="/ja/Parsing_and_serializing_XML" title="ja/Parsing_and_serializing_XML"> XMLSerializer</a> を用いてローカルあるいはリモートのファイルに書き出すこと（あらかじめ文字列に変換する必要はない）、<a href="/ja/DOM/XMLHttpRequest" title="ja/DOM/XMLHttpRequest">ウェブサーバに POST すること</a>（<code>XMLHttpRequest</code> 経由）、<a href="/ja/XSLT" title="ja/XSLT">XSLT</a> を用いて変換すること、<a href="/ja/XLink" title="ja/XLink">XLink</a> されることなど、さまざまな利用法があります。</p>
+<p>DOM ツリーは <a href="/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript">XPath 式を用いて検索</a>したり、文字列に変換したり、 <a href="/ja/docs/Web/Guide/Parsing_and_serializing_XML"> XMLSerializer</a> を用いてローカルあるいはリモートのファイルに書き出したり (あらかじめ文字列に変換しておく必要はない)、<a href="/ja/docs/Web/API/XMLHttpRequest">ウェブサーバーに POST したり</a> (<code>XMLHttpRequest</code> 経由で)、 <a href="/ja/docs/Web/XSLT">XSLT</a> で変換したり、<a href="/ja/docs/Glossary/XLink">XLink</a> したり、 <a href="/ja/docs/JXON">JXON アルゴリズム</a>で JavaScript オブジェクトに変換したりと、さまざまな利用法があります。</p>
 
-<p>RDF は適さない（あるいは RDF が嫌いなだけという場合でも）データを DOM ツリーを用いて作ることができます。別の応用例として、XUL は XML であるため、アプリケーションの UI を動的に操作したり、ダウンロードやアップロードをしたり、保存や読み込みをしたり、変換したりといったことがかなり簡単にできます。</p>
+<p>RDF には適さないデータを (あるいは RDF が嫌いなだけという場合でも) DOM ツリーを用いて作ることができます。別の応用例として、XUL は XML であるため、アプリケーションの UI を動的に操作したり、ダウンロードやアップロードをしたり、保存や読み込みをしたり、変換したりといったことがかなり簡単にできます。</p>
 
-<h2 id="英語版章題('See_also')_参照">{{ 英語版章題('See also') }}参照</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li><a class="internal" href="/ja/XML" title="ja/XML">XML</a></li>
- <li><a class="internal" href="/ja/JXON" title="ja/JXON">JXON</a></li>
- <li><a class="internal" href="/ja/XPath" title="ja/XPath">XPath</a></li>
- <li><a class="internal" href="/ja/E4X" title="ja/E4X">E4X (ECMAScript for XML)</a></li>
- <li><a class="internal" href="/ja/Parsing_and_serializing_XML" title="ja/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
- <li><a class="internal" href="/ja/DOM/XMLHttpRequest" title="ja/XMLHttpRequest">XMLHttpRequest</a></li>
+ <li><a class="internal" href="/ja/docs/Web/XML">XML</a></li>
+ <li><a class="internal" href="/ja/docs/JXON">JXON</a></li>
+ <li><a class="internal" href="/ja/docs/Web/XPath">XPath</a></li>
+ <li><a class="internal" href="/ja/docs/E4X">E4X (ECMAScript for XML)</a></li>
+ <li><a class="internal" href="/ja/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
+ <li><a class="internal" href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></li>
 </ul>
-
-<div>{{ languages( { "en": "en/How_to_create_a_DOM_tree", "fr": "fr/Comment_cr\u00e9er_un_arbre_DOM", "zh-cn": "cn/How_to_create_a_DOM_tree"}) }}</div>
