@@ -15,11 +15,11 @@ translation_of: Web/JavaScript/Reference/Operators
 
 <p class="summary">この節では、JavaScript 言語のすべての演算子、式、キーワードについて記述しています。</p>
 
-<h2 id="Expressions_and_operators_by_category" name="Expressions_and_operators_by_category">式と演算子 (カテゴリ別)</h2>
+<h2 id="Expressions_and_operators_by_category">式と演算子 (カテゴリー別)</h2>
 
-<p>アルファベット順リストは左側のサイドバーをご覧ください。</p>
+<p>アルファベット順の一覧は左側のサイドバーをご覧ください。</p>
 
-<h3 id="Primary_expressions" name="Primary_expressions">基本式</h3>
+<h3 id="Primary_expressions">基本式</h3>
 
 <p>JavaScript の基本的なキーワードと一般的な式です。</p>
 
@@ -50,7 +50,7 @@ translation_of: Web/JavaScript/Reference/Operators
  <dd>グループ化演算子です。</dd>
 </dl>
 
-<h3 id="Left-hand-side_expressions" name="Left-hand-side_expressions">左辺式</h3>
+<h3 id="Left-hand-side_expressions">左辺式</h3>
 
 <p>左辺値は、代入の対象になります。</p>
 
@@ -59,16 +59,18 @@ translation_of: Web/JavaScript/Reference/Operators
  <dd>プロパティアクセス演算子はオブジェクトのプロパティやメソッドへのアクセスを提供します<br>
  (<code>object.property</code> や <code>object["property"]</code>)。</dd>
  <dt>{{JSxRef("Operators/new", "new")}}</dt>
- <dd><code>new</code> 演算子はコンストラクタのインスタンスを作成します。</dd>
+ <dd><code>new</code> 演算子はコンストラクターのインスタンスを作成します。</dd>
  <dt>{{JSxRef("Operators/new%2Etarget", "new.target")}}</dt>
- <dd>コンストラクタ内で <code>new.target</code> を使うことで、{{jsxref("Operators/new", "new")}} によって呼び出されるコンストラクタを参照できます。</dd>
+ <dd>コンストラクター内で <code>new.target</code> を使うことで、{{jsxref("Operators/new", "new")}} によって呼び出されるコンストラクターを参照できます。</dd>
+ <dt>{{JSxRef("Statements/import%2Emeta", "import.meta")}}</dt>
+ <dd>コンテキストに依存したメタデータを JavaScript モジュールへ公開するオブジェクトです。</dd>
  <dt>{{JSxRef("Operators/super", "super")}}</dt>
- <dd><code>super</code> キーワードは親コンストラクタを呼び出します。</dd>
+ <dd><code>super</code> キーワードは親コンストラクターを呼び出します。</dd>
  <dt>{{JSxRef("Operators/Spread_syntax", "...obj")}}</dt>
  <dd>展開記法 (スプレッド記法) は、式を複数の引数または複数の要素に展開して、それぞれ関数呼び出しまたは配列リテラルに渡します。</dd>
 </dl>
 
-<h3 id="Increment_and_decrement" name="Increment_and_decrement">インクリメントとデクリメント</h3>
+<h3 id="Increment_and_decrement">インクリメントとデクリメント</h3>
 
 <p>接尾/接頭辞のインクリメント演算子と接尾/接頭辞のデクリメント演算子です。</p>
 
@@ -83,7 +85,7 @@ translation_of: Web/JavaScript/Reference/Operators
  <dd>前置型デクリメント演算子。</dd>
 </dl>
 
-<h3 id="Unary_operators" name="Unary_operators">単項演算子</h3>
+<h3 id="Unary_operators">単項演算子</h3>
 
 <p>単項演算は、1 個のオペランドによる演算です。</p>
 
@@ -104,7 +106,7 @@ translation_of: Web/JavaScript/Reference/Operators
  <dd>論理否定演算子です。</dd>
 </dl>
 
-<h3 id="Arithmetic_operators" name="Arithmetic_operators">算術演算子</h3>
+<h3 id="Arithmetic_operators">算術演算子</h3>
 
 <p>算術演算子は、数値 (リテラルまたは値) をオペランドとして取り、1 個の数値を返します。</p>
 
@@ -123,7 +125,7 @@ translation_of: Web/JavaScript/Reference/Operators
  <dd>べき乗演算子です。</dd>
 </dl>
 
-<h3 id="Relational_operators" name="Relational_operators">関係演算子</h3>
+<h3 id="Relational_operators">関係演算子</h3>
 
 <p>比較演算子は、そのオペランドを比較し、その比較が真かどうかに基づいて <code>Boolean</code> 値を返します。</p>
 
@@ -142,11 +144,11 @@ translation_of: Web/JavaScript/Reference/Operators
  <dd>大なりイコール演算子です。</dd>
 </dl>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>注: =&gt;</strong> は演算子ではなく、<a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー関数</a> のための記法です。</p>
 </div>
 
-<h3 id="Equality_operators" name="Equality_operators">等値演算子</h3>
+<h3 id="Equality_operators">等値演算子</h3>
 
 <p>等値演算子の評価結果は常に、比較が真かどうかに基づいて <code>Boolean</code> 型の値になります。</p>
 
@@ -161,7 +163,7 @@ translation_of: Web/JavaScript/Reference/Operators
  <dd>非同値演算子です。</dd>
 </dl>
 
-<h3 id="Bitwise_shift_operators" name="Bitwise_shift_operators">ビットシフト演算子</h3>
+<h3 id="Bitwise_shift_operators">ビットシフト演算子</h3>
 
 <p>オペランドのすべてのビットをシフト演算します。</p>
 
@@ -174,7 +176,7 @@ translation_of: Web/JavaScript/Reference/Operators
  <dd>ビット符号なし右シフト演算子です。</dd>
 </dl>
 
-<h3 id="Binary_bitwise_operators" name="Binary_bitwise_operators">バイナリービット演算子</h3>
+<h3 id="Binary_bitwise_operators">バイナリービット演算子</h3>
 
 <p>ビット演算子は、そのオペランドを 32 ビット (0 と 1) の並びとして扱い、標準の JavaScript 数値を返します。</p>
 
@@ -187,7 +189,7 @@ translation_of: Web/JavaScript/Reference/Operators
  <dd>ビット排他的論理和 (XOR) です。</dd>
 </dl>
 
-<h3 id="Binary_logical_operators" name="Binary_logical_operators">バイナリー論理演算子</h3>
+<h3 id="Binary_logical_operators">バイナリー論理演算子</h3>
 
 <p>論理演算には、一般的に (論理) 真偽値が使用され、それが置かれた時に真偽値を返します。</p>
 
@@ -197,12 +199,10 @@ translation_of: Web/JavaScript/Reference/Operators
  <dt>{{JSxRef("Operators/Logical_OR", "||")}}</dt>
  <dd>論理和 (OR) です。</dd>
  <dt>{{JSxRef("Operators/Nullish_coalescing_operator", "??")}}</dt>
- <dd>Null 合体 です。</dd>
+ <dd>Null 合体演算子です。</dd>
 </dl>
 
-
-
-<h3 id="Conditional_ternary_operator" name="Conditional_ternary_operator">条件 (三項) 演算子</h3>
+<h3 id="Conditional_ternary_operator">条件 (三項) 演算子</h3>
 
 <dl>
  <dt>{{JSxRef("Operators/Conditional_Operator", "(condition ? ifTrue : ifFalse)")}}</dt>
@@ -211,16 +211,16 @@ translation_of: Web/JavaScript/Reference/Operators
  </dd>
 </dl>
 
-<h3 id="Optional_Chaining_operator" name="Optional_Chaining_operator">オプショナルチェイニング演算子</h3>
+<h3 id="Optional_Chaining_operator">オプショナルチェイニング演算子</h3>
 
 <dl>
-	<dt>{{JSxRef("Operators/Optional_chaining", "?.")}}</dt>
-	<dd>
-	<p>オプショナルチェイニング演算子は、参照が <a href="/ja/docs/Glossary/nullish">nullish</a>（<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> または <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>）の場合にエラーを発生させるのではなく、<code>undefined</code> を返します。</p>
-	</dd>
+ <dt>{{JSxRef("Operators/Optional_chaining", "?.")}}</dt>
+ <dd>
+ <p>オプショナルチェイニング演算子は、参照が <a href="/ja/docs/Glossary/Nullish">nullish</a>（<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> または <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>）の場合にエラーを発生させるのではなく、<code>undefined</code> を返します。</p>
+ </dd>
 </dl>
 
-<h3 id="Assignment_operators" name="Assignment_operators">代入演算子</h3>
+<h3 id="Assignment_operators">代入演算子</h3>
 
 <p>代入演算子は、右辺のオペランドに基づいて、値を左辺のオペランドに代入します。</p>
 
@@ -264,14 +264,14 @@ translation_of: Web/JavaScript/Reference/Operators
  </dd>
 </dl>
 
-<h3 id="Comma_operator" name="Comma_operator">カンマ演算子</h3>
+<h3 id="Comma_operator">カンマ演算子</h3>
 
 <dl>
  <dt>{{JSxRef("Operators/Comma_Operator", ",")}}</dt>
  <dd>カンマ演算子は、複数の式を単一の文で評価し、その最後の式の結果を返します。</dd>
 </dl>
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -286,13 +286,11 @@ translation_of: Web/JavaScript/Reference/Operators
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、<a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("javascript.operators")}}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">演算子の優先順位</a></li>

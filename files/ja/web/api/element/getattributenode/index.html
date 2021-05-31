@@ -1,5 +1,5 @@
 ---
-title: element.getAttributeNode
+title: Element.getAttributeNode()
 slug: Web/API/Element/getAttributeNode
 tags:
   - API
@@ -9,17 +9,11 @@ tags:
   - Reference
 translation_of: Web/API/Element/getAttributeNode
 ---
-<p>{{ APIRef("DOM") }}</p>
+<div>{{ APIRef("DOM") }}</div>
 
-<p>{{ 英語版章題("Summary") }}</p>
+<p>指定された要素の指定された属性を、 <code>Attr</code> ノードとして返します。</p>
 
-<h2 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h2>
-
-<p>指定の要素の指定の属性を <code>Attr</code> ノードとして返します。</p>
-
-<p>{{ 英語版章題("Syntax") }}</p>
-
-<h2 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h2>
+<h2 id="Syntax">構文</h2>
 
 <pre class="eval"><em>var attrNode</em> = <em>element</em>.getAttributeNode(<em>attrName</em>);
 </pre>
@@ -29,34 +23,41 @@ translation_of: Web/API/Element/getAttributeNode
  <li><code>attrName</code> は属性の名前を表す文字列です。</li>
 </ul>
 
-<p>{{ 英語版章題("Example") }}</p>
+<h2 id="Example">Example</h2>
 
-<h2 id=".E4.BE.8B" name=".E4.BE.8B">例</h2>
-
-<pre>// html: &lt;div id="top" /&gt;
-var t = document.getElementById("top");
-var idAttr = t.getAttributeNode("id");
+<pre class="brush: js">// html: &lt;div id="top" /&gt;
+let t = document.getElementById("top");
+let idAttr = t.getAttributeNode("id");
 alert(idAttr.value == "top")
-
 </pre>
 
-<p>{{ 英語版章題("Notes") }}</p>
+<h2 id="Notes">注</h2>
 
-<h2 id=".E6.B3.A8.E8.A8.98" name=".E6.B3.A8.E8.A8.98">注記</h2>
+<p>HTML 文書としてフラグが立てられた DOM 内の HTML 要素に対して呼び出された場合、<code>getAttributeNode</code> は処理前に引数を小文字にします。</p>
 
-<p>HTML ドキュメントとしてフラグが立てられた DOM 内の HTML 要素で呼び出された場合、<code>getAttributeNode</code> は処理を進める前に引数を小文字にします。</p>
+<p><code>Attr</code> ノードは <code>Node</code> を継承していますが、文書ツリーの一部と考えることはできません。一般の <code>Node</code> 属性、例えば <a href="/ja/docs/Web/API/Node/parentNode">parentNode</a>、 <a href="/ja/docs/Web/API/Node/previousSibling">previousSibling</a>、<a href="/ja/docs/Web/API/Node/nextSibling">nextSibling</a> などは <code>Attr</code> ノードでは <code>null</code> になります。しかしながら、 <code>ownerElement</code> プロパティではこの属性が属している要素を取得することができます。</p>
 
-<p><code>Attr</code> ノードは <code>Node</code> から継承されますが、ドキュメント・ツリーの一部と考えることはできません。<a href="/ja/docs/Web/API/Node/parentNode">parentNode</a> や <a href="/ja/docs/Web/API/Node/previousSibling">previousSibling</a>、<a href="/ja/docs/Web/API/Node/nextSibling">nextSibling</a> のような一般の <code>Node</code> 属性は <code>Attr</code> ノードについては <code>null</code> です。しかしながら、<code>ownerElement</code> プロパティでは属性が属している要素を取得することができます。</p>
-
-<p>要素の属性の値を取得するためには通常 <code>getAttributeNode</code> の代わりに <a href="/ja/docs/Web/API/Element/getAttribute">getAttribute</a> を使用します。</p>
+<p>要素の属性の値を取得するためには、通常 <code>getAttributeNode</code> の代わりに <a href="/ja/docs/Web/API/Element/getAttribute">getAttribute</a> を使用してください。</p>
 
 <p>{{ DOMAttributeMethods() }}</p>
 
-<p>{{ 英語版章題("Specification") }}</p>
+<h2 id="Specifications">仕様書</h2>
 
-<h2 id=".E4.BB.95.E6.A7.98" name=".E4.BB.95.E6.A7.98">仕様</h2>
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG','#dom-element-getattributenode','getAttributeNode()')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-217A91B8">DOM Level 2 Core: getAttributeNode</a> (introduced in <a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-getAttributeNode">DOM Level 1 Core</a>)</li>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
-</ul>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("api.Element.getAttributeNode")}}</p>

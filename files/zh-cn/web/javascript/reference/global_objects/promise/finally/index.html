@@ -45,7 +45,7 @@ p.finally(function() {
  <li>调用内联函数时，不需要多次声明该函数或为该函数创建一个变量保存它。</li>
  <li>由于无法知道<code>promise</code>的最终状态，所以<code>finally</code>的回调函数中不接收任何参数，它仅用于无论最终结果如何都要执行的情况。</li>
  <li>与<code>Promise.resolve(2).then(() =&gt; {}, () =&gt; {})</code> （resolved的结果为<code>undefined</code>）不同，<code>Promise.resolve(2).finally(() =&gt; {})</code> resolved的结果为 <code>2</code>。</li>
- <li>同样，<code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (resolved 的结果为<code>undefined</code>), <code>Promise.reject(3).finally(() =&gt; {})</code> rejected 的结果为 <code>3</code>。</li>
+ <li>同样，<code>Promise.reject(3).then(() =&gt; {}, () =&gt; {})</code> (fulfilled的结果为<code>undefined</code>), <code>Promise.reject(3).finally(() =&gt; {})</code> rejected 的结果为 <code>3</code>。</li>
 </ul>
 
 <div class="note">
@@ -87,8 +87,6 @@ fetch(myRequest).then(function(response) {
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<p class="hidden">To contribute to this compatibility data, please write a pull request against this repository: <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</p>
 
 <p>{{Compat("javascript.builtins.Promise.finally")}}</p>
 

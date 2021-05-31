@@ -15,7 +15,7 @@ translation_of: Web/API/WindowEventHandlers/onunhandledrejection
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">{{domxref("WindowEventHandlers")}} ミックスインの <strong><code>onunhandledrejection</code></strong> プロパティは、{{event("unhandledrejection")}} イベントを処理するための {{domxref("EventHandler")}} です。 このイベントは、処理されなかった {{jsxref("Promise")}} 拒否に対して発生します。</span></p>
+<p><span class="seoSummary">{{domxref("WindowEventHandlers")}} ミックスインの <strong><code>onunhandledrejection</code></strong> プロパティは、{{event("unhandledrejection")}} イベントを処理するための {{event("Event_handlers", "event handler")}} です。 このイベントは、処理されなかった {{jsxref("Promise")}} 拒否に対して発生します。</span></p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -23,7 +23,7 @@ translation_of: Web/API/WindowEventHandlers/onunhandledrejection
 
 <h3 id="Value" name="Value">値</h3>
 
-<p><code>function</code> は、ウィンドウが <code>unhandledrejection</code> イベントを受け取ったときに呼び出す {{domxref("EventHandler")}} または関数です。 イベントハンドラは、{{domxref("PromiseRejectionEvent")}} を入力パラメーターとして受け取ります。</p>
+<p><code>function</code> は、ウィンドウが <code>unhandledrejection</code> イベントを受け取ったときに呼び出す {{event("Event_handlers", "event handler")}} または関数です。 イベントハンドラは、{{domxref("PromiseRejectionEvent")}} を入力パラメーターとして受け取ります。</p>
 
 <h2 id="Examples" name="Examples">例</h2>
 

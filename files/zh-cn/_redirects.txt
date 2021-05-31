@@ -472,7 +472,7 @@
 /zh-CN/docs/DOM/event.altKey	/zh-CN/docs/conflicting/Web/API/MouseEvent/altKey
 /zh-CN/docs/DOM/event.bubbles	/zh-CN/docs/Web/API/Event/bubbles
 /zh-CN/docs/DOM/event.button	/zh-CN/docs/conflicting/Web/API/MouseEvent/button
-/zh-CN/docs/DOM/event.cancelBubble	/zh-CN/docs/Web/API/UIEvent/cancelBubble
+/zh-CN/docs/DOM/event.cancelBubble	/zh-CN/docs/orphaned/Web/API/UIEvent/cancelBubble
 /zh-CN/docs/DOM/event.cancelable	/zh-CN/docs/Web/API/Event/cancelable
 /zh-CN/docs/DOM/event.currentTarget	/zh-CN/docs/Web/API/Event/currentTarget
 /zh-CN/docs/DOM/event.defaultPrevented	/zh-CN/docs/Web/API/Event/defaultPrevented
@@ -593,10 +593,6 @@
 /zh-CN/docs/DOM:window.open	/zh-CN/docs/Web/API/Window/open
 /zh-CN/docs/DOM:window.openDialog	/zh-CN/docs/Web/API/Window/openDialog
 /zh-CN/docs/Detecting_device_orientation	/zh-CN/docs/orphaned/Web/API/Detecting_device_orientation
-/zh-CN/docs/Developer_Guide	/zh-CN/docs/Mozilla/Developer_guide
-/zh-CN/docs/Developer_Guide/Adding_APIs_to_the_navigator_object	/zh-CN/docs/Mozilla/Developer_guide/Adding_APIs_to_the_navigator_object
-/zh-CN/docs/Developer_Guide/Source_Code	/zh-CN/docs/Mozilla/Developer_guide/Source_Code
-/zh-CN/docs/Developer_Guide/Source_Code/通过Mercurial获取源码	/zh-CN/docs/Mozilla/Developer_guide/Source_Code/LatestPassingSource
 /zh-CN/docs/Document_Object_Model_(DOM)/window.onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
 /zh-CN/docs/Download_Mozilla_Source_Code	/en-US/docs/Mozilla/Developer_guide/Source_Code/Downloading_Source_Archives
 /zh-CN/docs/DragDrop/拖拽	/zh-CN/docs/Drag_and_Drop
@@ -697,11 +693,11 @@
 /zh-CN/docs/HTML/Forms	/zh-CN/docs/Learn/Forms
 /zh-CN/docs/HTML/Forms/Sending_forms_through_JavaScript	/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript
 /zh-CN/docs/HTML/Forms_in_HTML	/zh-CN/docs/orphaned/Learn/HTML/Forms/HTML5_updates
-/zh-CN/docs/HTML/HTML5	/zh-CN/docs/Web/Guide/HTML/HTML5
-/zh-CN/docs/HTML/HTML5-and-his-friends	/zh-CN/docs/Web/Guide/HTML/HTML5
+/zh-CN/docs/HTML/HTML5	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5
+/zh-CN/docs/HTML/HTML5-and-his-friends	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5
 /zh-CN/docs/HTML/HTML5/HTML5_Tags_List	/zh-CN/docs/conflicting/Web/HTML/Element
 /zh-CN/docs/HTML/HTML5/HTML5_Thematic_Classification	/zh-CN/docs/conflicting/Web/Guide/HTML/HTML5
-/zh-CN/docs/HTML/HTML5/HTML5_入门	/zh-CN/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/zh-CN/docs/HTML/HTML5/HTML5_入门	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /zh-CN/docs/HTML/HTML_Elements	/zh-CN/docs/Web/HTML/Element/Heading_Elements
 /zh-CN/docs/HTML/HTML_Elements/time	/zh-CN/docs/Web/HTML/Element/time
 /zh-CN/docs/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
@@ -1342,8 +1338,6 @@
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/实现一个设置页面	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展插件	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/用户界面元素	/zh-CN/docs/conflicting/Mozilla/Add-ons/WebExtensions/user_interface
-/zh-CN/docs/Mozilla/Developer_guide/Source_Code/通过CVS获取源码	/zh-CN/docs/Mozilla/Developer_guide/Source_Code/CVS
-/zh-CN/docs/Mozilla/Developer_guide/Source_Code/通过Mercurial获取源码	/zh-CN/docs/Mozilla/Developer_guide/Source_Code/LatestPassingSource
 /zh-CN/docs/Mozilla/Mozilla_Persona	/zh-CN/docs/orphaned/Mozilla/Mozilla_Persona
 /zh-CN/docs/Mozilla/附加组件	/zh-CN/docs/Mozilla/Add-ons
 /zh-CN/docs/Mozilla_Web开发人员_FAQ	/zh-CN/docs/Mozilla_Web_Developer_FAQ
@@ -1411,6 +1405,7 @@
 /zh-CN/docs/Tools/Firebug迁移	/zh-CN/docs/Tools/Migrating_from_Firebug
 /zh-CN/docs/Tools/Page_Inspector/3D_view	/zh-CN/docs/Tools/3D_View
 /zh-CN/docs/Tools/Page_Inspector/How_to/View_fonts	/zh-CN/docs/Tools/Page_Inspector/How_to/Edit_fonts
+/zh-CN/docs/Tools/Page_Inspector/Keyboard_shortcuts	/zh-CN/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /zh-CN/docs/Tools/Profiler	/zh-CN/docs/conflicting/Tools/Performance
 /zh-CN/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE_clone	/zh-CN/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE
 /zh-CN/docs/Tools/Responsive_Design_View	/zh-CN/docs/Tools/Responsive_Design_Mode
@@ -1471,7 +1466,9 @@
 /zh-CN/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/zh-CN/docs/conflicting/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/Web/API/Channel_Messaging_API/使用_channel_messaging	/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging
 /zh-CN/docs/Web/API/ChildNode.nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
-/zh-CN/docs/Web/API/ChildNode.remove	/zh-CN/docs/Web/API/ChildNode/remove
+/zh-CN/docs/Web/API/ChildNode.remove	/zh-CN/docs/orphaned/Web/API/ChildNode/remove
+/zh-CN/docs/Web/API/ChildNode/remove	/zh-CN/docs/orphaned/Web/API/ChildNode/remove
+/zh-CN/docs/Web/API/ChildNode/replaceWith	/zh-CN/docs/orphaned/Web/API/ChildNode/replaceWith
 /zh-CN/docs/Web/API/Childnode.previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
 /zh-CN/docs/Web/API/Coordinates	/zh-CN/docs/Web/API/GeolocationCoordinates
 /zh-CN/docs/Web/API/Coordinates/latitude	/zh-CN/docs/Web/API/GeolocationCoordinates/latitude
@@ -1621,6 +1618,7 @@
 /zh-CN/docs/Web/API/HTMLElement/blur	/zh-CN/docs/Web/API/HTMLOrForeignElement/blur
 /zh-CN/docs/Web/API/HTMLElement/dataset	/zh-CN/docs/Web/API/HTMLOrForeignElement/dataset
 /zh-CN/docs/Web/API/HTMLElement/focus	/zh-CN/docs/Web/API/HTMLOrForeignElement/focus
+/zh-CN/docs/Web/API/HTMLElement/forceSpellCheck	/zh-CN/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
 /zh-CN/docs/Web/API/HTMLElement/nonce	/zh-CN/docs/Web/API/HTMLOrForeignElement/nonce
 /zh-CN/docs/Web/API/HTMLElement/style	/zh-CN/docs/Web/API/ElementCSSInlineStyle/style
 /zh-CN/docs/Web/API/HTMLElement/tabIndex	/zh-CN/docs/Web/API/HTMLOrForeignElement/tabIndex
@@ -1725,7 +1723,9 @@
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode.previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
+/zh-CN/docs/Web/API/Notation	/zh-CN/docs/orphaned/Web/API/Notation
 /zh-CN/docs/Web/API/OfflineAudioContext/complete	/zh-CN/docs/Web/API/OfflineAudioContext/complete_event
+/zh-CN/docs/Web/API/ParentNode	/zh-CN/docs/orphaned/Web/API/ParentNode
 /zh-CN/docs/Web/API/ParentNode.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/ParentNode.children	/zh-CN/docs/orphaned/Web/API/ParentNode/children
 /zh-CN/docs/Web/API/ParentNode.firstElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/firstElementChild
@@ -1736,6 +1736,8 @@
 /zh-CN/docs/Web/API/ParentNode/firstElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/firstElementChild
 /zh-CN/docs/Web/API/ParentNode/lastElementChild	/zh-CN/docs/orphaned/Web/API/ParentNode/lastElementChild
 /zh-CN/docs/Web/API/ParentNode/prepend	/zh-CN/docs/orphaned/Web/API/ParentNode/prepend
+/zh-CN/docs/Web/API/ParentNode/querySelector	/zh-CN/docs/orphaned/Web/API/ParentNode/querySelector
+/zh-CN/docs/Web/API/ParentNode/querySelectorAll	/zh-CN/docs/orphaned/Web/API/ParentNode/querySelectorAll
 /zh-CN/docs/Web/API/ParentNode/replaceChildren	/zh-CN/docs/orphaned/Web/API/ParentNode/replaceChildren
 /zh-CN/docs/Web/API/Performance.now()	/zh-CN/docs/Web/API/Performance/now
 /zh-CN/docs/Web/API/Performance/内存	/zh-CN/docs/Web/API/Performance/memory
@@ -1784,6 +1786,7 @@
 /zh-CN/docs/Web/API/Touch.screenX	/zh-CN/docs/Web/API/Touch/screenX
 /zh-CN/docs/Web/API/Touch.screenY	/zh-CN/docs/Web/API/Touch/screenY
 /zh-CN/docs/Web/API/TouchEvent.changedTouches	/zh-CN/docs/Web/API/TouchEvent/changedTouches
+/zh-CN/docs/Web/API/UIEvent/cancelBubble	/zh-CN/docs/orphaned/Web/API/UIEvent/cancelBubble
 /zh-CN/docs/Web/API/UIEvent/视图	/zh-CN/docs/Web/API/UIEvent/view
 /zh-CN/docs/Web/API/URL.URL	/zh-CN/docs/Web/API/URL/URL
 /zh-CN/docs/Web/API/URL.createObjectURL	/zh-CN/docs/Web/API/URL/createObjectURL
@@ -1868,12 +1871,15 @@
 /zh-CN/docs/Web/API/Window/clearInterval	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
 /zh-CN/docs/Web/API/Window/getAttention	/zh-CN/docs/orphaned/Web/API/Window/getAttention
 /zh-CN/docs/Web/API/Window/onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
+/zh-CN/docs/Web/API/Window/ondevicelight	/zh-CN/docs/orphaned/Web/API/Window/ondevicelight
+/zh-CN/docs/Web/API/Window/ondeviceproximity	/zh-CN/docs/orphaned/Web/API/Window/ondeviceproximity
 /zh-CN/docs/Web/API/Window/onhashchange	/zh-CN/docs/Web/API/WindowEventHandlers/onhashchange
 /zh-CN/docs/Web/API/Window/onmouseup	/zh-CN/docs/conflicting/Web/API/GlobalEventHandlers/onmouseup
 /zh-CN/docs/Web/API/Window/onpopstate	/zh-CN/docs/Web/API/WindowEventHandlers/onpopstate
 /zh-CN/docs/Web/API/Window/onresize	/zh-CN/docs/Web/API/GlobalEventHandlers/onresize
 /zh-CN/docs/Web/API/Window/onscroll	/zh-CN/docs/conflicting/Web/API/GlobalEventHandlers/onscroll
 /zh-CN/docs/Web/API/Window/onunload	/zh-CN/docs/Web/API/WindowEventHandlers/onunload
+/zh-CN/docs/Web/API/Window/onuserproximity	/zh-CN/docs/orphaned/Web/API/Window/onuserproximity
 /zh-CN/docs/Web/API/Window/restore	/zh-CN/docs/conflicting/Web/API/Window/moveTo
 /zh-CN/docs/Web/API/Window/setInterval	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
 /zh-CN/docs/Web/API/Window/setTimeout	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
@@ -1950,7 +1956,7 @@
 /zh-CN/docs/Web/API/event.altKey	/zh-CN/docs/conflicting/Web/API/MouseEvent/altKey
 /zh-CN/docs/Web/API/event.bubbles	/zh-CN/docs/Web/API/Event/bubbles
 /zh-CN/docs/Web/API/event.button	/zh-CN/docs/conflicting/Web/API/MouseEvent/button
-/zh-CN/docs/Web/API/event.cancelBubble	/zh-CN/docs/Web/API/UIEvent/cancelBubble
+/zh-CN/docs/Web/API/event.cancelBubble	/zh-CN/docs/orphaned/Web/API/UIEvent/cancelBubble
 /zh-CN/docs/Web/API/event.cancelable	/zh-CN/docs/Web/API/Event/cancelable
 /zh-CN/docs/Web/API/event.currentTarget	/zh-CN/docs/Web/API/Event/currentTarget
 /zh-CN/docs/Web/API/event.defaultPrevented	/zh-CN/docs/Web/API/Event/defaultPrevented
@@ -2303,8 +2309,11 @@
 /zh-CN/docs/Web/Guide/HTML/Forms/表单入门	/zh-CN/docs/Learn/Forms/Your_first_form
 /zh-CN/docs/Web/Guide/HTML/Forms_in_HTML	/zh-CN/docs/orphaned/Learn/HTML/Forms/HTML5_updates
 /zh-CN/docs/Web/Guide/HTML/HTML	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML
+/zh-CN/docs/Web/Guide/HTML/HTML5	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5
+/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5/Constraint_validation
 /zh-CN/docs/Web/Guide/HTML/HTML5/HTML5_Thematic_Classification	/zh-CN/docs/conflicting/Web/Guide/HTML/HTML5
 /zh-CN/docs/Web/Guide/HTML/HTML5/HTML5_element_list	/zh-CN/docs/conflicting/Web/HTML/Element
+/zh-CN/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /zh-CN/docs/Web/Guide/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
@@ -2329,6 +2338,10 @@
 /zh-CN/docs/Web/HTML/Element/Video/loadeddata_event	/zh-CN/docs/Web/API/HTMLMediaElement/loadeddata_event
 /zh-CN/docs/Web/HTML/Element/command	/zh-CN/docs/orphaned/Web/HTML/Element/command
 /zh-CN/docs/Web/HTML/Element/element	/zh-CN/docs/orphaned/Web/HTML/Element/element
+/zh-CN/docs/Web/HTML/Element/isindex	/zh-CN/docs/orphaned/Web/HTML/Element/isindex
+/zh-CN/docs/Web/HTML/Element/listing	/zh-CN/docs/orphaned/Web/HTML/Element/listing
+/zh-CN/docs/Web/HTML/Element/multicol	/zh-CN/docs/orphaned/Web/HTML/Element/multicol
+/zh-CN/docs/Web/HTML/Element/nextid	/zh-CN/docs/orphaned/Web/HTML/Element/nextid
 /zh-CN/docs/Web/HTML/Element/video/play_event	/zh-CN/docs/Web/API/HTMLMediaElement/play_event
 /zh-CN/docs/Web/HTML/Element/video/timeupdate_event	/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event
 /zh-CN/docs/Web/HTML/Element/视频	/zh-CN/docs/Web/HTML/Element/video
@@ -2346,6 +2359,7 @@
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Web/HTML/Inline_elements
 /zh-CN/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/zh-CN/docs/Glossary/speculative_parsing
+/zh-CN/docs/Web/HTML/Preloading_content	/zh-CN/docs/orphaned/Web/HTML/Preloading_content
 /zh-CN/docs/Web/HTML/Supported_media_formats	/zh-CN/docs/conflicting/Web/Media/Formats
 /zh-CN/docs/Web/HTML/全局属性	/zh-CN/docs/Web/HTML/Global_attributes
 /zh-CN/docs/Web/HTML/内联元素	/zh-CN/docs/Web/HTML/Inline_elements
@@ -2556,6 +2570,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/TypedArray
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/URIError
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WeakMap
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/clear	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WeakSet
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/生成器函数/prototype	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/GeneratorFunction
@@ -2566,6 +2581,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Operators_7c8eb9475d97a4a734c5991857698560
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Operators_310dc67549939233c3d18a8fa2cdbb23
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Operators_f71733c8e7001a29c3ec40d8522a4aca
+/zh-CN/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator	/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /zh-CN/docs/Web/JavaScript/Reference/Operators/async允许声明一个函数为一个包含异步操作的函数	/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function
 /zh-CN/docs/Web/JavaScript/Reference/Operators/取余	/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder
@@ -2574,7 +2590,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Operators/按位与	/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_AND
 /zh-CN/docs/Web/JavaScript/Reference/Operators/相加	/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition
 /zh-CN/docs/Web/JavaScript/Reference/Operators/相等	/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality
-/zh-CN/docs/Web/JavaScript/Reference/Operators/管道操作符	/zh-CN/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
+/zh-CN/docs/Web/JavaScript/Reference/Operators/管道操作符	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /zh-CN/docs/Web/JavaScript/Reference/Operators/类	/zh-CN/docs/Web/JavaScript/Reference/Operators/class
 /zh-CN/docs/Web/JavaScript/Reference/Operators/自减	/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement
 /zh-CN/docs/Web/JavaScript/Reference/Operators/逻辑和	/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_AND
@@ -2628,6 +2644,7 @@
 /zh-CN/docs/Web/Progressive_web_apps/添加到主屏幕	/zh-CN/docs/Web/Progressive_web_apps/Add_to_home_screen
 /zh-CN/docs/Web/SVG/Attribute/文本锚点	/zh-CN/docs/Web/SVG/Attribute/text-anchor
 /zh-CN/docs/Web/SVG/Attribute/样式	/zh-CN/docs/Web/SVG/Attribute/Styling
+/zh-CN/docs/Web/SVG/Element/color-profile	/zh-CN/docs/orphaned/Web/SVG/Element/color-profile
 /zh-CN/docs/Web/SVG/Element/圆	/zh-CN/docs/Web/SVG/Element/circle
 /zh-CN/docs/Web/SVG/Element/多边形	/zh-CN/docs/Web/SVG/Element/polygon
 /zh-CN/docs/Web/SVG/Element/线性渐变	/zh-CN/docs/Web/SVG/Element/linearGradient
@@ -2751,5 +2768,4 @@
 /zh-CN/docs/收集_In-Memory_数据源	/zh-CN/docs/Aggregating_the_In-Memory_Datasource
 /zh-CN/docs/理解下划线	/zh-CN/docs/conflicting/Learn/CSS/Styling_text/Fundamentals
 /zh-CN/docs/网页代码移植：从_IE_到_Mozilla	/zh-CN/docs/Migrate_apps_from_Internet_Explorer_to_Mozilla
-/zh-CN/docs/通过CVS获取源码	/zh-CN/docs/Mozilla/Developer_guide/Source_Code/CVS
 /zh-CN/docs/首页	/zh-CN/docs/Web

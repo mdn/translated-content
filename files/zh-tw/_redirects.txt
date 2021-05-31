@@ -133,10 +133,6 @@
 /zh-TW/docs/DOM/window.location	/zh-TW/docs/Web/API/Window/location
 /zh-TW/docs/DOM_中的空白字元	/zh-TW/docs/Web/API/Document_Object_Model/Whitespace
 /zh-TW/docs/DOM_觀察器	/zh-TW/docs/orphaned/DOM_觀察器
-/zh-TW/docs/Developer_Guide	/zh-TW/docs/Mozilla/Developer_guide
-/zh-TW/docs/Developer_Guide/原始碼	/zh-TW/docs/Mozilla/Developer_guide/Source_Code
-/zh-TW/docs/Developer_guide_temp	/zh-TW/docs/Mozilla/Developer_guide
-/zh-TW/docs/Developer_guide_temp/原始碼	/zh-TW/docs/Mozilla/Developer_guide/Source_Code
 /zh-TW/docs/DragDrop	/zh-TW/docs/conflicting/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/DragDrop/Drag_and_Drop	/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/Drawing_text_using_a_canvas	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Drawing_text
@@ -176,7 +172,7 @@
 /zh-TW/docs/HTML/Element	/zh-TW/docs/Web/HTML/Element
 /zh-TW/docs/HTML/Element/HTML_元素	/zh-TW/docs/Web/HTML/Element
 /zh-TW/docs/HTML/Element/a	/zh-TW/docs/Web/HTML/Element/a
-/zh-TW/docs/HTML/HTML5	/zh-TW/docs/Web/Guide/HTML/HTML5
+/zh-TW/docs/HTML/HTML5	/zh-TW/docs/orphaned/Web/Guide/HTML/HTML5
 /zh-TW/docs/HTML/HTML5_表單	/zh-TW/docs/Learn/Forms
 /zh-TW/docs/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-TW/docs/HTML5_Cross_Browser_Polyfills	/zh-TW/docs/orphaned/HTML5_Cross_Browser_Polyfills
@@ -516,7 +512,6 @@
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/快捷選單項	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/開發工具面板	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶體驗最佳實踐	https://extensionworkshop.com/documentation/develop/user-experience-best-practices/
-/zh-TW/docs/Mozilla/Developer_guide/原始碼	/zh-TW/docs/Mozilla/Developer_guide/Source_Code
 /zh-TW/docs/Mozilla/Firefox/Releases/2/Firefox_2_的安全功能	/zh-TW/docs/Mozilla/Firefox/Releases/2/Security_changes
 /zh-TW/docs/Mozilla/Firefox/Releases/2/新增消息來源閱讀工具	/zh-TW/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /zh-TW/docs/Mozilla/Firefox/Releases/3/Firefox_3_Dom_Improvements	/zh-TW/docs/Mozilla/Firefox/Releases/3/DOM_improvements
@@ -543,6 +538,7 @@
 /zh-TW/docs/Security/MixedContent/How_to_fix_website_with_mixed_content	/zh-TW/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 /zh-TW/docs/Security/弱簽章演算法	/zh-TW/docs/Web/Security/Weak_Signature_Algorithm
 /zh-TW/docs/Security/缺少安全性的密碼	/zh-TW/docs/Web/Security/Insecure_passwords
+/zh-TW/docs/Tools/Web_Console/Keyboard_shortcuts	/zh-TW/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts
 /zh-TW/docs/Tools/Web_Console/Opening_the_Web_Console	/zh-TW/docs/Tools/Web_Console/UI_Tour
 /zh-TW/docs/Using_files_from_web_applications	/zh-TW/docs/Web/API/File/Using_files_from_web_applications
 /zh-TW/docs/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
@@ -578,6 +574,7 @@
 /zh-TW/docs/Web/API/HTMLElement/style	/zh-TW/docs/Web/API/ElementCSSInlineStyle/style
 /zh-TW/docs/Web/API/Node/innerText	/zh-TW/docs/Web/API/HTMLElement/innerText
 /zh-TW/docs/Web/API/NonDocumentTypeChildNode	/zh-TW/docs/conflicting/Web/API/Element
+/zh-TW/docs/Web/API/ParentNode	/zh-TW/docs/orphaned/Web/API/ParentNode
 /zh-TW/docs/Web/API/ParentNode/children	/zh-TW/docs/orphaned/Web/API/ParentNode/children
 /zh-TW/docs/Web/API/ParentNode/firstElementChild	/zh-TW/docs/orphaned/Web/API/ParentNode/firstElementChild
 /zh-TW/docs/Web/API/Performance.timing	/zh-TW/docs/Web/API/Performance/timing
@@ -664,6 +661,8 @@
 /zh-TW/docs/Web/Guide/HTML/Event_attributes	/zh-TW/docs/Learn/JavaScript/Building_blocks/Events
 /zh-TW/docs/Web/Guide/HTML/Forms	/zh-TW/docs/Learn/Forms
 /zh-TW/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form	/zh-TW/docs/Learn/Forms/How_to_structure_a_web_form
+/zh-TW/docs/Web/Guide/HTML/HTML5	/zh-TW/docs/orphaned/Web/Guide/HTML/HTML5
+/zh-TW/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/zh-TW/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /zh-TW/docs/Web/Guide/Performance/Using_web_workers	/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers
 /zh-TW/docs/Web/Guide/圖像	/zh-TW/docs/Web/Guide/Graphics
 /zh-TW/docs/Web/HTML/Canvas	/zh-TW/docs/Web/API/Canvas_API
@@ -671,8 +670,8 @@
 /zh-TW/docs/Web/HTML/Element/HTML_元素	/zh-TW/docs/Web/HTML/Element
 /zh-TW/docs/Web/HTML/Element/導航欄	/zh-TW/docs/Web/HTML/Element/nav
 /zh-TW/docs/Web/HTML/Forms_in_HTML	/zh-TW/docs/orphaned/Learn/HTML/Forms/HTML5_updates
-/zh-TW/docs/Web/HTML/HTML5	/zh-TW/docs/Web/Guide/HTML/HTML5
-/zh-TW/docs/Web/HTML/HTML5/Introduction_to_HTML5	/zh-TW/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/zh-TW/docs/Web/HTML/HTML5	/zh-TW/docs/orphaned/Web/Guide/HTML/HTML5
+/zh-TW/docs/Web/HTML/HTML5/Introduction_to_HTML5	/zh-TW/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /zh-TW/docs/Web/HTML/HTML5_表單	/zh-TW/docs/Learn/Forms
 /zh-TW/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-TW/docs/Web/HTML/Supported_media_formats	/zh-TW/docs/conflicting/Web/Media/Formats

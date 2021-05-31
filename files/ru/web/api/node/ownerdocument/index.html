@@ -33,59 +33,7 @@ var html = d.documentElement;
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Свойство</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>6.0 [1]</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Свойство</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] <a href="http://msdn.microsoft.com/en-us/library/ie/ms534315(v=vs.85).aspx">http://msdn.microsoft.com/en-us/library/ie/ms534315(v=vs.85).aspx</a></p>
-
-<h3 id="Gecko_примечание">Gecko примечание</h3>
-
-<p>Начиная с Gecko 9.0 {{geckoRelease("9.0")}}, <code>ownerDocument</code> узлы doctype (т.е. для которых {{domxref("Node.nodeType")}} это <code>Node.DOCUMENT_TYPE_NODE</code> или 10) больше не null. Вместо этого,  <code>ownerDocument</code> это документ по которому <a href="/en-US/docs/DOM/DOMImplementation.createDocumentType" title="DOM/DOMImplementation.createDocumentType"><code>document.implementation.createDocumentType()</code></a> будет вызван.</p>
+<p>{{Compat("api.Node.ownerDocument")}}</p>
 
 <h2 id="Specification" name="Specification">Спецификация</h2>
 
