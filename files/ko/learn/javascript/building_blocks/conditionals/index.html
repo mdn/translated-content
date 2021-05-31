@@ -164,7 +164,7 @@ function setWeather() {
 <p><strong>Note</strong>: 이것들에 대한 기억을 되살리기를 원하신다면 저 링크에 있는 것들을 다시 보세요.</p>
 </div>
 
-<p>몇 번이고 다시 만날 boolean(<code>true</code>/<code>false</code>)값을 테스트하는 것과 일반적인 패턴에 대한 특별한 언급을 하고 싶었습니다. 어떠한 값들이든<code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>이나 빈 문자열(<code>''</code>)이 아닌 값은 조건문으로 테스트되었을 때, 실제로는 <code>true</code>를 리턴하므로, 변수가 참인지 혹은 값이 존재하는지를 테스트하기 위해 변수 이름 그 자체를 사용할 수 있습니다. 예를 들어:</p>
+<p>몇 번이고 다시 만날 boolean(<code>true</code>/<code>false</code>)값을 테스트하는 것과 일반적인 패턴에 대한 특별한 언급을 하고 싶었습니다. 어떠한 값들이든 <code>false</code>, <code>undefined</code>, <code>null</code>, <code>0</code>, <code>NaN</code>이나 빈 문자열(<code>''</code>)이 아닌 값은 조건문으로 테스트되었을 때, 실제로는 <code>true</code>를 리턴하므로, 변수가 참인지 혹은 값이 존재하는지를 테스트하기 위해 변수 이름 그 자체를 사용할 수 있습니다. 예를 들어:</p>
 
 <pre class="brush: js notranslate">let cheese = 'Cheddar';
 
@@ -448,7 +448,7 @@ const list = document.querySelector('ul');
 const h1 = document.querySelector('h1');
 
 select.onchange = function() {
-  var choice = select.value;
+  const choice = select.value;
 
   // ADD CONDITIONAL HERE
 
@@ -458,7 +458,7 @@ select.onchange = function() {
 function createCalendar(days, choice) {
   list.innerHTML = '';
   h1.textContent = choice;
-  for (var i = 1; i &lt;= days; i++) {
+  for (let i = 1; i &lt;= days; i++) {
     const listItem = document.createElement('li');
     listItem.textContent = i;
     list.appendChild(listItem);
@@ -513,7 +513,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js notranslate">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -542,8 +542,8 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var select = document.querySelector(\'select\');\nvar list = document.querySelector(\'ul\');\nvar h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n var choice = select.value;\n var days = 31;\n if(choice === \'February\') {\n days = 28;\n } else if(choice === \'April\' || choice === \'June\' || choice === \'September\'|| choice === \'November\') {\n days = 30;\n }\n\n createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(var i = 1; i &lt;= days; i++) {\n var listItem = document.createElement(\'li\');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,\'January\');';
-var solutionEntry = jsSolution;
+const jsSolution = 'const select = document.querySelector(\'select\');\nconst list = document.querySelector(\'ul\');\nconst h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n const choice = select.value;\n let days = 31;\n if(choice === \'February\') {\n days = 28;\n } else if(choice === \'April\' || choice === \'June\' || choice === \'September\'|| choice === \'November\') {\n days = 30;\n }\n\n createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(let i = 1; i &lt;= days; i++) {\n const listItem = document.createElement(\'li\');\n listItem.textContent = i;\n list.appendChild(listItem);\n }\n }\n\ncreateCalendar(31,\'January\');';
+let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
@@ -563,11 +563,11 @@ textarea.onkeydown = function(e){
 };
 
 function insertAtCaret(text) {
-  var scrollPos = textarea.scrollTop;
-  var caretPos = textarea.selectionStart;
+  const scrollPos = textarea.scrollTop;
+  let caretPos = textarea.selectionStart;
+  const front = (textarea.value).substring(0, caretPos);
+  const back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -666,7 +666,7 @@ body {
   background: #f5f9fa;
 }</pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js notranslate">const textarea = document.getElementById('code');
 const reset = document.getElementById('reset');
 const solution = document.getElementById('solution');
 let code = textarea.value;
@@ -695,8 +695,8 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var select = document.querySelector(\'select\');\nvar html = document.querySelector(\'.output\');\n\nselect.onchange = function() {\n var choice = select.value;\n\n switch(choice) {\n case \'black\':\n update(\'black\',\'white\');\n break;\n case \'white\':\n update(\'white\',\'black\');\n break;\n case \'purple\':\n update(\'purple\',\'white\');\n break;\n case \'yellow\':\n update(\'yellow\',\'darkgray\');\n break;\n case \'psychedelic\':\n update(\'lime\',\'purple\');\n break;\n }\n}\n\nfunction update(bgColor, textColor) {\n html.style.backgroundColor = bgColor;\n html.style.color = textColor;\n}';
-var solutionEntry = jsSolution;
+const jsSolution = 'const select = document.querySelector(\'select\');\nconst html = document.querySelector(\'.output\');\n\nselect.onchange = function() {\n const choice = select.value;\n\n switch(choice) {\n case \'black\':\n update(\'black\',\'white\');\n break;\n case \'white\':\n update(\'white\',\'black\');\n break;\n case \'purple\':\n update(\'purple\',\'white\');\n break;\n case \'yellow\':\n update(\'yellow\',\'darkgray\');\n break;\n case \'psychedelic\':\n update(\'lime\',\'purple\');\n break;\n }\n}\n\nfunction update(bgColor, textColor) {\n html.style.backgroundColor = bgColor;\n html.style.color = textColor;\n}';
+let solutionEntry = jsSolution;
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
