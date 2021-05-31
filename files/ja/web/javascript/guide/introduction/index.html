@@ -6,59 +6,59 @@ tags:
   - Guide
   - Introduction
   - JavaScript
-  - 'l10n:priority'
+  - l10n:priority
 translation_of: Web/JavaScript/Guide/Introduction
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}</div>
 
-<p class="summary">本章では JavaScript について紹介し、その基本的なコンセプトについて説明します。</p>
+<p class="summary">本章では JavaScript について紹介し、その基本的な概念について説明します。</p>
 
-<h2 id="What_you_should_already_know" name="What_you_should_already_know">事前に知っておくべきこと</h2>
+<h2 id="What_you_should_already_know">事前に知っておくべきこと</h2>
 
-<p>このガイドは、以下の基礎的な予備知識を持っていることを前提としています：</p>
-
-<ul>
- <li>インターネットと World Wide Web ({{Glossary("World_Wide_Web", "WWW")}}) についての一般的な理解。</li>
- <li>HyperText Markup Language ({{Glossary("HTML")}}) についての実用的な知識。</li>
- <li>プログラミングの経験。プログラミングが初めての方は、<a href="/docs/Web/JavaScript">JavaScript</a> についてのメインページにあるチュートリアルをお試しください。</li>
-</ul>
-
-<h2 id="Where_to_find_JavaScript_information" name="Where_to_find_JavaScript_information">JavaScript の情報源</h2>
-
-<p>MDN には以下の JavaScript 関連ドキュメントがあります:</p>
+<p>このガイドは、以下の基礎的な予備知識を持っていることを前提としています。</p>
 
 <ul>
- <li>「<a href="/ja/docs/Learn">Web 開発を学ぶ</a>」では初心者に向けた情報を提供し、プログラミングとインターネットの基本的なコンセプトを提供しています。</li>
- <li>「<a href="/docs/Web/JavaScript/Guide">JavaScript ガイド</a>」(このガイド) では、JavaScript 言語とその対象に関する概要を提供しています。</li>
- <li>「<a href="/docs/Web/JavaScript/Reference">JavaScript リファレンス</a>」は、JavaScript の詳細なリファレンスマニュアルを提供しています。</li>
+ <li>インターネットと World Wide Web (<a href="/ja/docs/Glossary/World_Wide_Web">WWW</a>) についての一般的な理解。</li>
+ <li>HyperText Markup Language (<a href="/ja/docs/Glossary/HTML">HTML</a>) についての実用的な知識。</li>
+ <li>プログラミングの経験。プログラミングが初めての方は、 <a href="/ja/docs/Web/JavaScript">JavaScript</a> についてのメインページにあるチュートリアルをお試しください。</li>
 </ul>
 
-<p>JavaScript を初めて学ぶ方は、<a href="/Learn">学習エリア</a>、および <a href="/docs/Web/JavaScript/Guide">JavaScript ガイド</a>の記事から始めてください。基礎をしっかり学んだら、<a href="/docs/Web/JavaScript/Reference">JavaScript リファレンス</a>を利用して、個別のオブジェクトや文についての詳細を得てください。</p>
+<h2 id="Where_to_find_JavaScript_information">JavaScript の情報はどこにあるか</h2>
 
-<h2 id="What_is_JavaScript" name="What_is_JavaScript">JavaScript とは？</h2>
+<p>MDN には以下の JavaScript 関連ドキュメントがあります。</p>
 
-<p>JavaScript は、クロスプラットフォームで動作するオブジェクト指向のスクリプト言語で、ウェブページをインタラクティブにするために使用されます (例えば、複雑なアニメーション、押下可能なボタン、ポップアップメニューなどを設けることです) 。Node.js のような より高度なサーバー側のバージョンの JavaScript もあり、ファイルをダウンロードするだけでなく (複数のコンピューター間でのリアルタイムコラボレーションなど) 、ウェブサイトに多くの機能を追加することができます。ホスト環境 (例えばウェブブラウザー) 内では、JavaScript とその環境のオブジェクトが結びつけられ、プログラム制御が可能になっています。</p>
+<ul>
+ <li>「<a href="/ja/docs/Learn">ウェブ開発を学ぶ</a>」では初心者に向けた情報を提供し、プログラミングとインターネットの基本的なコンセプトを提供しています。</li>
+ <li>「<a href="/ja/docs/Web/JavaScript/Guide">JavaScript ガイド</a>」(このガイド) では、JavaScript 言語とその対象に関する概要を提供しています。</li>
+ <li>「<a href="/ja/docs/Web/JavaScript/Reference">JavaScript リファレンス</a>」は、JavaScript の詳細なリファレンスマニュアルを提供しています。</li>
+</ul>
 
-<p>JavaScript には、<code>Array</code>、<code>Date</code>、そして <code>Math</code> といったオブジェクトからなる基本的なライブラリ、そして演算子、制御構造、文といったプログラミング言語の要素からなる主要な機能が含まれています。JavaScript のコア機能は、追加のオブジェクトを補うことで、様々な目的に拡張することができます。例えば以下のようなものです:</p>
+<p>JavaScript を初めて学ぶ方は、<a href="/ja/docs/Learn">学習エリア</a>、および <a href="/ja/docs/Web/JavaScript/Guide">JavaScript ガイド</a>の記事から始めてください。基礎をしっかり学んだら、<a href="/ja/docs/Web/JavaScript/Reference">JavaScript リファレンス</a>を利用して、個々のオブジェクトや文についての詳細を得てください。</p>
+
+<h2 id="What_is_JavaScript">JavaScript とは何か</h2>
+
+<p>JavaScript は、クロスプラットフォームで動作するオブジェクト指向のスクリプト言語で、ウェブページをインタラクティブにするために使用されます (例えば、複雑なアニメーション、押下可能なボタン、ポップアップメニューなどを設けることです) 。Node.js のような、より高度なサーバー側のバージョンの JavaScript もあり、ファイルをダウンロードするだけでなく (複数のコンピューター間でのリアルタイムの連携など) 、ウェブサイトに多くの機能を追加することができます。ホスト環境 (例えばウェブブラウザー) 内では、JavaScript とその環境のオブジェクトが結びつけられ、プログラム制御が可能になっています。</p>
+
+<p>JavaScript には、<code>Array</code>、<code>Date</code>、 <code>Math</code> といったオブジェクトからなる基本的なライブラリ、そして演算子、制御構造、文といったプログラミング言語の要素からなる主要な機能が含まれています。JavaScript のコア機能は、追加のオブジェクトを補うことで、様々な目的に拡張することができます。例えば以下のようなものです。</p>
 
 <ul>
  <li><em>クライアントサイド JavaScript</em> は、ブラウザーとその<em>ドキュメントオブジェクトモデル</em> (DOM) を制御するオブジェクトを提供することにより、コア言語を拡張します。例えば、クライアントサイドでの拡張により、アプリケーションが HTML フォーム上に要素を配置したり、マウスクリック、フォームへの入力、ページ移動といったユーザーイベントに応答できるようにします。</li>
  <li><em>サーバーサイド JavaScript</em> は、JavaScript を使ったサーバーの稼働に関連するオブジェクトを提供することにより、コア言語を拡張します。例えば、サーバーサイドでの拡張により、アプリケーションがデータベースとデータをやり取りしたり、アプリケーション内のある呼び出しから別の呼び出しまでの間を情報が連続性を保ったまま受け取られるようにしたり、あるいはサーバー上のファイルを操作できるようにします。</li>
 </ul>
 
-<p>これはつまり、ブラウザー内で JavaScript がウェブページ (DOM) の見た目を変更できるということです。同様に、サーバー上の Node.js の JavaScript は、ブラウザー内に記述されたコードからのカスタム要求に応答できます。</p>
+<p>これはつまり、ブラウザー内で JavaScript がウェブページ (DOM) の見た目を変更できるということです。同様に、サーバー上の Node.js の JavaScript は、ブラウザー内に記述されたコードからの独自の要求に応答できます。</p>
 
-<h2 id="JavaScript_and_Java" name="JavaScript_and_Java">JavaScript と Java</h2>
+<h2 id="JavaScript_and_Java">JavaScript と Java</h2>
 
-<p>JavaScript と Java はいくつかの点では似ていますが、その他の点では全くの別物です。JavaScript 言語は Java と共通点がありますが、Java のような静的型付けと強い型検査を持っていません。LiveScript から JavaScript へ改名する理由ともなった、Java が持つ多くの式構文、命名規則と基本的な制御フローを JavaScript は踏襲しています。</p>
+<p>JavaScript と Java はいくつかの点では似ていますが、その他の点では全くの別物です。 JavaScript 言語は Java と共通点がありますが、Java のような静的型付けと強い型検査を持っていません。LiveScript から JavaScript へ改名する理由ともなった、Java が持つ多くの式構文、命名規則と基本的な制御フローを JavaScript は踏襲しています。</p>
 
 <p>宣言によって作られたクラスから構成される Java のコンパイル時システムとは対照的に、JavaScript は、数値や真偽値、文字列を表す少数のデータ型をベースにしたランタイムシステムをサポートしています。JavaScript は、より一般的であるクラスベースのオブジェクトモデルの代わりに、プロトタイプベースのオブジェクトモデルを持っています。プロトタイプベースモデルは動的な継承をもたらします、それはつまり、様々なオブジェクトから継承できるということです。また JavaScript は、特殊な宣言型を必要としない関数をサポートしています。関数はオブジェクトのプロパティに設定することができ、弱い型付けのメソッドとして実行することができます。</p>
 
 <p>JavaScript は Java に比べて非常に自由な形式を持つ言語です。変数、クラス、メソッドをあまねく宣言する必要はありません。メソッドが public か private か、あるいは protected かどうかを気に掛けることも、インターフェイスを実装する必要もありません。変数、引数、そして型を返す関数は厳密に型付けされていません。</p>
 
-<p>Java は高速実行と型安全のために設計されたクラスベースのプログラミング言語です。型安全というのは、例えば Java の整数値はオブジェクトの参照値として型変換することはできず {{訳注("Java のデータ型は、数値や文字列などのデータのみを表すプリミティブ型とクラス定義されたオブジェクト型 (参照型とも呼ばれる) の 2 つに分かれており、プリミティブ型のデータをオブジェクトから参照する場合はラッパークラスを使い、そのデータを適切なオブジェクト型に明示的に変換する必要がある")}}、またメモリー環境を破壊しようとする Java バイトコードからはプライベートメモリーにアクセスできないようになっているということです。Java のクラス継承と強い型付けは一般的に密結合されたオブジェクト階層を必要とします。こうした前提条件によって Java プログラミングは JavaScript プログラミングに比べ複雑なものとなります。</p>
+<p>Java は高速実行と型安全のために設計されたクラスベースのプログラミング言語です。型安全というのは、例えば、 Java の整数値をオブジェクトの参照に型変換したり、有害な Java のバイトコードがプライベートなメモリーにアクセスしたりすることができないということです。 Java のクラス継承と強い型付けは、一般的に密結合されたオブジェクト階層を必要とします。こうした前提条件によって Java のプログラミングは JavaScript のプログラミングに比べて複雑なものとなります。</p>
 
-<p>それとは対照的に、JavaScript は HyperTalk や dBASE といった一連の小規模で動的型付けを持つ言語の精神を受け継いでいます。これらのスクリプト言語が持っている、より簡素な構文、専門化されたビルトイン関数、そして最低限の条件のみを必要とするオブジェクト作成のおかげで、より広い人々にプログラミングという道具をもたらしてくれます。</p>
+<p>それに対して、 JavaScript は HyperTalk や dBASE といった一連の小規模で動的型付けを持つ言語の精神を受け継いでいます。これらのスクリプト言語は、より簡素な構文、専門化された組み込み関数、最小限の要件でオブジェクトを生成できることなどで、より多くの人々にプログラミングツールを提供しています。</p>
 
 <table class="standard-table">
  <caption>JavaScript と Java との比較</caption>
@@ -70,12 +70,12 @@ translation_of: Web/JavaScript/Guide/Introduction
  </thead>
  <tbody>
   <tr>
-   <td>オブジェクト指向言語。オブジェクトのデータ型に区別はない。継承はプロトタイプベースの機構を通して行われ、プロパティとメソッドはどんなオブジェクトにも動的に追加できる。</td>
-   <td>クラスベース言語。オブジェクトはクラスとそのクラス階層によって継承されたインスタンスとに分かれている。クラスとインスタンスは動的にプロパティやメソッドを追加することができない。</td>
+   <td>オブジェクト指向。オブジェクトのデータ型に区別はない。継承はプロトタイプベースの機構を通して行われ、プロパティとメソッドはどんなオブジェクトにも動的に追加できる。</td>
+   <td>クラスベース。オブジェクトはクラスとそのクラス階層によって継承されたインスタンスとに分かれている。クラスとインスタンスは動的にプロパティやメソッドを追加することができない。</td>
   </tr>
   <tr>
-   <td>変数のデータ型は宣言が不要（動的型付け、弱い型付け）。</td>
-   <td>変数のデータ型は宣言が必須（静的型付け、強い型付け）。</td>
+   <td>変数のデータ型は宣言が不要 (動的型付け、弱い型付け)。</td>
+   <td>変数のデータ型は宣言が必須 (静的型付け、強い型付け)。</td>
   </tr>
   <tr>
    <td>ハードディスクには自動的に書き込みできない。</td>
@@ -84,57 +84,57 @@ translation_of: Web/JavaScript/Guide/Introduction
  </tbody>
 </table>
 
-<p>JavaScript と Java との違いについてのさらに詳しい情報は、<a href="/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">オブジェクトモデルの詳細</a>の章をご覧ください。</p>
+<p>JavaScript と Java との違いについてのさらに詳しい情報は、<a href="/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model">オブジェクトモデルの詳細</a>の章をご覧ください。</p>
 
-<h2 id="JavaScript_and_the_ECMAScript_Specification" name="JavaScript_and_the_ECMAScript_Specification">JavaScript と ECMAScript 仕様</h2>
+<h2 name="JavaScript_and_the_ECMAScript_Specification">JavaScript と ECMAScript 仕様書</h2>
 
-<p>JavaScript は国際的なプログラミング言語を提供できるように <a class="external" href="https://www.ecma-international.org/">Ecma International</a> によって標準化されています (ECMA は、以前は European Computer Manufacturers Association の頭文字をとったものでした)。この標準化された JavaScript のバージョンは ECMAScript と呼ばれ、この標準をサポートするアプリケーションはすべて同じ動作になります。企業は、JavaScript の実装開発にこのオープンな標準言語を利用できます。ECMAScript 標準は、ECMA-262 仕様に文書化されています。JavaScript バージョンと ECMAScript 標準化の各版との違いについて知りたい場合は <a href="/docs/Web/JavaScript/New_in_JavaScript">JavaScript の新機能</a>をご覧ください。</p>
+<p>JavaScript は、ヨーロッパの情報通信システム標準化団体である Ecma International (ECMAは、かつての European Computer Manufacturers Association の頭文字) で標準化されており、 JavaScript をベースとした国際的なプログラミング言語の標準化を実現しています。この標準化された JavaScript は ECMAScript と呼ばれ、この規格に対応するすべてのアプリケーションで同じように動作します。企業は、このオープンスタンダードな言語を使って、 JavaScript の実装を開発することができます。 ECMAScript 標準は、 ECMA-262 仕様書に記載されています。様々なバージョンの JavaScript や ECMAScript の仕様書については、 <a href="/ja/docs/Web/JavaScript/New_in_JavaScript">JavaScript の新機能</a>をご覧ください。</p>
 
-<p>ECMA-262 標準は、<a class="external" href="https://www.iso.org/home.html">ISO</a>（International Organization for Standardization、国際標準化機構）により ISO-16262 としても承認されています。また仕様書は、<a class="external" href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">Ecma International のウェブサイト</a>でも確認できます。ECMAScript 仕様には、<a class="external" href="https://www.w3.org/">World Wide Web Consortium (W3C)</a> によって標準化されているドキュメントオブジェクトモデル (DOM) が記載されていません。DOM はスクリプトから利用できる HTML ドキュメントのオブジェクトを定義しています。JavaScript でプログラミングする際に使われる様々な技術のさらに詳しい情報は、<a href="/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript 技術概説</a>の記事を参考にしてください。</p>
+<p>ECMA-262 標準は、<a href="https://www.iso.org/home.html">ISO</a>（International Organization for Standardization、国際標準化機構）により ISO-16262 としても承認されています。また仕様書は、<a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm">Ecma International のウェブサイト</a>でも確認できます。ECMAScript 仕様書には、<a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a> によって標準化されているドキュメントオブジェクトモデル (DOM) が記載されていません。DOM はスクリプトから利用できる HTML 文書のオブジェクトを定義しています。JavaScript でプログラミングする際に使われる様々な技術のさらに詳しい情報は、<a href="/ja/docs/Web/JavaScript/JavaScript_technologies_overview">JavaScript 技術概説</a>の記事を参考にしてください。</p>
 
-<h3 id="JavaScript_Documentation_versus_the_ECMAScript_Specification" name="JavaScript_Documentation_versus_the_ECMAScript_Specification">JavaScript ドキュメント vs ECMAScript 仕様書</h3>
+<h3 id="JavaScript_Documentation_versus_the_ECMAScript_Specification">JavaScript ドキュメント vs ECMAScript 仕様書</h3>
 
-<p>ECMAScript 仕様は ECMAScript の実装要件の集合体です。これは ECMAScript 実装やブラウザー描画エンジン (Firefox の SpiderMonkey、あるいは Chrome の V8 など) に対し、標準に準拠した言語機能を実装したい場合には便利です。</p>
+<p>ECMAScript 仕様書は ECMAScript の実装要件の集合体です。これは ECMAScript 実装やブラウザー描画エンジン (Firefox の SpiderMonkey、あるいは Chrome の V8 など) に対し、標準に準拠した言語機能を実装したい場合には便利です。</p>
 
-<p>ECMAScript の文書はスクリプトプログラマを支援するためのものではありません。スクリプトの記述についての情報を知りたければ JavaScript のドキュメントを使いましょう。</p>
+<p>ECMAScript の文書はスクリプトのプログラマーを支援するためのものでは<em>ありません</em>。スクリプトの記述についての情報を知りたければ JavaScript のドキュメントを使いましょう。</p>
 
 <p>ECMAScript 仕様書は、JavaScript プログラマにあまり馴染みのない専門用語と文法で書かれています。この言語を解説したものと ECMAScript とは異なるところがあるかもしれませんが、この言語自体は同じものです。JavaScript は、ECMAScript 仕様書で描かれた機能をすべてサポートしています。</p>
 
 <p>JavaScript のドキュメントは、JavaScript プログラマに適した形で言語の特徴について記述しています。</p>
 
-<h2 id="Getting_started_with_JavaScript" name="Getting_started_with_JavaScript">JavaScript を始めよう</h2>
+<h2 id="Getting_started_with_JavaScript">JavaScript を始めよう</h2>
 
 <p>JavaScript を始めるのは簡単です。必要なものは、最新のウェブブラウザーだけです。このガイドでは最新の Firefox でのみ利用できる JavaScript の機能をいくつか使用するので、最新の Firefox を使用することをお勧めします。</p>
 
 <p>Firefox に組み込まれている<em>ウェブコンソール</em>ツールは、JavaScript を試すのに役立ちます。シングルライン入力モードとマルチライン入力モードの 2 つのモードで使用できます。</p>
 
-<h3 id="Single-line_input_in_the_Web_Console" name="Single-line_input_in_the_Web_Console">ウェブコンソールでの単一行入力</h3>
+<h3 id="Single-line_input_in_the_Web_Console">ウェブコンソールでの単一行入力</h3>
 
 <p><a href="/ja/docs/Tools/Web_Console">ウェブコンソール</a>には、現在読み込まれているウェブページの情報が表示されるほか、現在のページで JavaScript 式を実行するために使用できる JavaScript インタープリターも含まれています。</p>
 
-<p>ウェブコンソールを開くには（Windows および Linux では <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>、Mac では <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd>）、Firefox の<strong>ツール</strong>メニューを開き、<strong>ウェブ開発 ▶ ウェブコンソール</strong>を選択します。</p>
+<p>ウェブコンソールを開くには (Windows と Linux では <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>、Mac では <kbd>Cmd</kbd>-<kbd>Option</kbd>-<kbd>K</kbd>)、Firefox の<strong>ツール</strong>メニューを開き、<strong>ウェブ開発 ▶ ウェブコンソール</strong>を選択します。</p>
 
-<p>ブラウザーウィンドウの下部にウェブコンソールが表示されます。コンソールの下部に沿って、JavaScript を入力するための入力行があり、出力は上のパネルに表示されます。</p>
+<p>ブラウザーウィンドウの下部にウェブコンソールが表示されます。コンソールの下部に沿って、 JavaScript を入力するための入力行があり、出力は上のパネルに表示されます。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16569/2019-04-04_00-15-29.png" style="display: block; height: 1824px; margin-left: auto; margin-right: auto; width: 2784px;"></p>
+<p><img alt="" src="2019-04-04_00-15-29.png"></p>
 
-<p>コンソールは <code>eval</code> と全く同じように動作し、最後に入力された式が返されます。これはコンソールに何かが入力されるたびに、<code>console.log</code> で囲まれた <code>eval</code> で評価されていると想像できます。</p>
+<p>コンソールは <code>eval</code> と全く同じように動作し、最後に入力された式が返されます。これはコンソールに何かが入力されるたびに、 <code>console.log</code> で囲まれた <code>eval</code> で評価されていると想像できます。</p>
 
-<pre class="brush: js notranslate">function greetMe(yourName) {
-  alert('Hello ' + yourName);
+<pre class="brush: js">function greetMe(yourName) {
+  alert(&quot;Hello &quot; + yourName)
 }
-<code>console.log(eval('3 + 5'));</code>
+console.log(eval('3 + 5'))
 </pre>
 
-<h3 id="Multi-line_input_in_the_Web_Console" name="Multi-line_input_in_the_Web_Console">ウェブコンソールでの複数行入力</h3>
+<h3 id="Multi-line_input_in_the_Web_Console">ウェブコンソールでの複数行入力</h3>
 
-<p>ウェブコンソールの単一行入力モードは、JavaScript の式を素早くテストするのには最適ですが、複数行を実行するには向いていません。より複雑な JavaScript の場合は、<a href="/ja/docs/Tools/Web_Console/The_command_line_interpreter#Multi-line_mode">複数行の入力モード</a>を使用できます。</p>
+<p>ウェブコンソールの単一行入力モードは、JavaScript の式を素早くテストするのには最適ですが、複数行を実行するには向いていません。より複雑な JavaScript の場合は、<a href="/ja/docs/Tools/Web_Console/The_command_line_interpreter#multi-line_mode">複数行の入力モード</a>を使用できます。</p>
 
-<h3 id="Hello_world" name="Hello_world">Hello world</h3>
+<h3 id="Hello_world">Hello world</h3>
 
 <p>JavaScript を書き始めるあたり、ウェブコンソールを複数行モードで開いて、初めての JavaScript コード "Hello world" を書いてみましょう。</p>
 
-<pre class="brush: js notranslate">(function(){
+<pre class="brush: js">(function(){
   "use strict";
   /* コードの開始 */
   function greetMe(yourName) {
@@ -145,16 +145,15 @@ translation_of: Web/JavaScript/Guide/Introduction
   /* コードの終了 */
 })();</pre>
 
-<p><kbd>Cmd</kbd>+<kbd>Enter</kbd> または <kbd>Ctrl</kbd>+<kbd>Enter</kbd> を押して（または<strong>実行ボタン</strong>をクリック）、結果を見てみましょう!</p>
+<p><kbd>Cmd</kbd>+<kbd>Enter</kbd> または <kbd>Ctrl</kbd>+<kbd>Enter</kbd> を押して (または<strong>実行ボタン</strong>をクリック)、結果を見てみましょう!</p>
 
-<p>このガイドの以降のページでは、より複雑なアプリケーションを作成できるように、JavaScript の構文と言語の特徴を紹介します。</p>
+<p>このガイドの以降のページでは、より複雑なアプリケーションを作成できるように、 JavaScript の構文と言語の特徴を紹介します。</p>
 
-<p>ですが、しばらくの間、常にあなたのコードの先頭に <code>(function(){"use strict";</code> を、コードの最後に <code>})();</code> を記述することを忘れないでください。あとで<a href="/ja/docs/Glossary/IIFE">これらの意味</a>を学びますが、今のところは次のように捉えておいてください。</p>
+<p>ですが、しばらくの間、常にあなたのコードの先頭に <code>(function(){"use strict";</code> を、コードの最後に <code>})();</code> を記述することを忘れないでください。 <a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>と<a href="/ja/docs/Glossary/IIFE">IIFE</a>の記事でこれらが何であるかを説明していますが、今のところは次のように捉えておいてください。</p>
 
 <ol>
- <li>パフォーマンスを大幅に向上させる。</li>
- <li>初心者をつまづかせる、JavaScript の愚かなセマンティクスを避ける。</li>
- <li>コンソールで実行されたコードスニペットが相互に影響することを防止する。(たとえば、あるコンソールの実行で作成されたものを別のコンソールの実行に使用するなど) </li>
+ <li>初心者をつまずかせる、JavaScript のセマンティクスを避ける。</li>
+ <li>コンソールで実行されたコードスニペットが相互に影響することを防止する (たとえば、あるコンソールの実行で作成されたものを別のコンソールの実行に使用するなど)。</li>
 </ol>
 
 <p>{{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}</p>
