@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 ---
 <div>{{jsSidebar("Functions")}}</div>
 
-<p> 기본값 함수 매개변수 (<strong>default function parameter</strong>)를 사용하면 값이 없거나 <code>undefined</code>가 전달될 경우 이름붙은 매개변수를 기본값으로 초기화할 수 있습니다.</p>
+<p>기본값 함수 매개변수 (<strong>default function parameter</strong>)를 사용하면 값이 없거나 <code>undefined</code>가 전달될 경우 이름붙은 매개변수를 기본값으로 초기화할 수 있습니다.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/functions-default.html")}}</p>
 
@@ -21,25 +21,25 @@ translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 
 <h2 id="구문">구문</h2>
 
-<pre class="syntaxbox notranslate">function [<em>name</em>]([<em>param1</em>[ = <em>defaultValue1</em> ][, ..., <em>paramN</em>[ = defaultValueN ]]]) {
-   <em>statements</em>
-}
+<pre class="brush: js notranslate">
+function fnName(param1 = defaultValue1, ..., paramN = defaultValueN) { ... }
 </pre>
 
 <h2 id="설명">설명</h2>
 
-<p>JavaScript에서, 함수의 매개변수는 <code>{{jsxref("undefined")}}</code>가 기본입니다. 그러나, 일부 상황에서는 다른 기본 값을 설정하는 것이 유용할 수 있습니다. 이때가 바로 기본값 매개변수 가 필요할 때 입니다.</p>
+<p>JavaScript에서, 함수의 매개변수는 <code>{{jsxref("undefined")}}</code>가 기본입니다. 그러나, 일부 상황에서는 다른 기본 값을 설정하는 것이 유용할 수 있습니다. 이때가 바로 기본값 매개변수가 필요할 때 입니다.</p>
 
 <p>과거에 기본값 설정을 위한 일반적인 방법은 함수 내부(body)에서 매개변수 값을 검사해 <code>undefined</code>인 경우 값을 할당하는 것이었습니다.</p>
 
 <p>다음 예제에서, <code>multiply</code>호출시 <code>b</code>에 할당된  값이 없다면, <code>b</code> 값은 <code>a*b</code>를 평가할 때 <code>undefined</code>일 거고 <code>multiply</code> 호출은 <code>NaN</code>이 반환됩니다. </p>
 
-<pre class="notranslate"><code>function multiply(a, b) {
+<pre class="brush: js notranslate">function multiply(a, b) {
   return a * b
 }
 
 multiply(5, 2)  // 10
-multiply(5)     // NaN !</code></pre>
+multiply(5)     // NaN !
+</pre>
 
 <p>이를 방지하기 위해서, 아래 두번째 줄과 같이  <code>multiply</code> 함수가 오직 한 개의 인수만 있다면  <code>b</code>를  <code>1</code>로 설정하는 방식을 사용하곤 했습니다.</p>
 

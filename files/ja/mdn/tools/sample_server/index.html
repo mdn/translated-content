@@ -1,5 +1,5 @@
 ---
-title: MDN サンプルサーバ
+title: MDN のサンプルサーバー
 slug: MDN/Tools/Sample_server
 tags:
   - Advanced
@@ -10,13 +10,13 @@ tags:
   - Tools
 translation_of: MDN/Tools/Sample_server
 ---
-<div>{{MDNSidebar}}</div><div>{{IncludeSubnav("/ja/docs/MDN")}}</div>
+<div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">MDN の <a href="/ja/docs/MDN/Kuma">Kuma</a> プラットフォームは内蔵の<a href="/ja/docs/MDN/Contribute/Editor/Live_samples">ライブサンプルシステム</a>を提供して単純な（時にはそう単純でない）コードのサンプルをその出力と共にページの中で表示する機能を提供していますが、この機能では許可されていないことがあり、またサーバへの通信を必要とするサンプルもあります。私たちは MDN サンプルサーバを用意し、このような、またその他の問題も合わせて、解決することにしました。</span> この記事は、そのサンプルサーバを利用するためのガイドです。</p>
+<p><span class="seoSummary">MDN は内蔵の<a href="/en-US/docs/MDN/Structures/Live_samples">ライブサンプルシステム</a>を提供しており、単純な (時にはそう単純でない) コードのサンプルをその出力と共にページの中で表示する機能を提供していますが、サーバーへの通信を必要とするサンプルもあります。私たちは MDN サンプルサーバーを用意し、このような、またその他の問題も合わせて、解決することにしました。</span> この記事は、そのサンプルサーバーを利用するためのガイドです。</p>
 
-<h2 id="Possible_use_cases" name="Possible_use_cases">想定するユースケース</h2>
+<h2 id="Possible_use_cases">想定するユースケース</h2>
 
-<p>たいていのサンプルは組み込みの <a href="https://developer.mozilla.org/ja/docs/MDN/Contribute/Editor/Live_samples">live sample system</a> で表現できますが、例外もあります。サンプルサーバーの利用が必要となる理由は下記の通りです:</p>
+<p>たいていのサンプルは組み込みの<a href="/ja/docs/MDN/Structures/Live_samples">ライブサンプルシステム</a>で表現できますが、例外もあります。サンプルサーバーの利用が必要となる理由は下記の通りです。</p>
 
 <ul>
  <li>サンプルにサーバー上で永続的に実行されるコードが必要、例えば WebSocket サーバーにはサーバーコンポーネントと、サンプルサーバー上のクライアントコンポーネントもあるなど。</li>
@@ -24,43 +24,33 @@ translation_of: MDN/Tools/Sample_server
  <li>MDN でホストできないようなリソースにアクセスする必要があるサンプルはサンプルサーバーに置かれます。</li>
 </ul>
 
-<h2 id="Referencing_samples" name="Referencing_samples">サンプルへの参照を追加する</h2>
+<h2 id="Referencing_samples">サンプルへの参照を追加する</h2>
 
-<p>各サンプルのコードは <a href="https://github.com/mdn/samples-server">GitHub で管理されて</a>おり、そのすべてのサンプルの実行可能/使用可能なインストールアクセスを提供するサーバーを持っています。各サンプルには固有の名前があり、リンクされる際には常にその名前のみで参照されます。以下のマクロの1つを使います。</p>
+<p>各サンプルのコードは <a href="https://github.com/mdn/samples-server">GitHub で管理されて</a>おり、そのすべてのサンプルの実行可能/使用可能なインストールアクセスを提供するサーバーを持っています。</p>
 
-<h3 id="GithubSampleLink" name="GithubSampleLink">GithubSampleLink</h3>
+<h2 id="Contributing_advanced_samples">高度なサンプルに貢献する</h2>
 
-<p>{{TemplateLink("GithubSampleLink")}} は Github にある与えられた名前を持つサンプルのサンプルコードへのリンクを作成します。リンクのテキストとして使用する文字列をオプションで変更することもできます。</p>
-
-<h3 id="GithubSampleFileLink" name="GithubSampleFileLink">GithubSampleFileLink</h3>
-
-<p>{{TemplateLink("GithubSampleFileLink")}} は Github にあるサンプルコードの中の指定された名前のファイルへのリンクを作成します。引数として、サンプルの名前、 リンクしたいファイルへのサンプルコード内での相対パスがあり、オプションでリンクのテキストを指定することもできます。</p>
-
-<h3 id="SampleServerLink" name="SampleServerLink">SampleServerLink</h3>
-
-<p>{{TemplateLink("SampleServerLink")}} はサンプルサーバー上のユーザーインタラクティブなサンプルへのリンクを挿入します。これはユーザーにサンプルへ移動してブラウザー内で遊ぶことができるように使います; これはサンプルがサーバーのみで作られてクライアント側のコードから別の場所から参照する場合には使いません。サンプルの名前と、オプションでリンクの代替テキストを入力として受けます。</p>
-
-<h2 id="高度なサンプルに貢献する">高度なサンプルに貢献する</h2>
-
-<p><a href="https://mdn-samples.mozilla.org/">サンプルサーバー</a>に置かれたサンプルに貢献するには、GitHub の <a href="https://github.com/mdn/samples-server">MDN サンプルサーバーリポジトリ</a>をフォークする必要があります。現在、すべてのサンプルは GitHub の同じリポジトリにあります。</p>
+<p><a href="https://mdn-samples.mozilla.org/">サンプルサーバー</a>に置かれたサンプルに貢献するには、GitHub の <a href="https://github.com/mdn/samples-server">MDN サンプルサーバーリポジトリー
+</a>をフォークする必要があります。現在、すべてのサンプルは GitHub の同じリポジトリーにあります。</p>
 
 <p>それぞれのサンプルは <a href="https://github.com/mdn/samples-server/tree/master/s"><code>s/</code> ディレクトリー</a>の下に自身のディレクトリーを持っています。新しいサンプルを作るには、そこに適切な名前のディレクトリーを追加します。例えば、ちょっとしたゲームを実装するための Fetch API の使い方を示す例であれぱ、<code>s/fetch-trivia</code> にサンプルを置いても良いでしょう。</p>
 
-<h3 id="Structure_of_an_advanced_sample" name="Structure_of_an_advanced_sample">高度なサンプルの構造</h3>
+<h3 id="Structure_of_an_advanced_sample">高度なサンプルの構造</h3>
 
-<p>それぞれのサンプルに一つの必須ファイルがあります (これは皮肉にもまだ使われていませんが、すぐ使われるため入れておいてください): <code>manifest.json</code> というマニフェストファイルで、これはサンプルを説明し、サンプルサーバー自体からと、これをメンテ・使用するツールから使われるメタデータを提供します。その他のすべてはオプションです。もっと詳しく見ていきましょう。</p>
+<p>それぞれのサンプルに一つの必須ファイルがあります (これは皮肉にもまだ使われていませんが、すぐ使われるため入れておいてください)。 <code>manifest.json</code> というマニフェストファイルで、これはサンプルを説明し、サンプルサーバー自体からと、これをメンテ・使用するツールから使われるメタデータを提供します。その他のすべてはオプションです。もっと詳しく見ていきましょう。</p>
 
-<h4 id="マニフェストファイル_manifest.json">マニフェストファイル: manifest.json</h4>
+<h4 id="The_manifest_file_manifest.json">マニフェストファイル: manifest.json</h4>
 
-<p>マニフェストファイルは第一に、サンプルのリストをビルドするのに使われますが、最終的には各サンプルのスタートアップとシャットダウンプロセスを改良することに使われるでしょう。これは次のような JSON オブジェクトです:</p>
+<p>マニフェストファイルは第一に、サンプルのリストをビルドするのに使われますが、最終的には各サンプルのスタートアップとシャットダウンプロセスを改良することに使われるでしょう。これは次のような JSON オブジェクトです。</p>
 
-<pre class="brush: json line-numbers  language-json notranslate"><code class="language-json"><span class="punctuation token">{</span>
-  <span class="key token">"name":</span> <span class="string token">"WebSocket based chat server with WebRTC video chat support"</span><span class="punctuation token">,</span>
-  <span class="key token">"docsUrl":</span> <span class="string token">"https://developer.mozilla.org/ja/docs/Web/API/WebRTC_API/Signaling_and_video_calling"</span><span class="punctuation token">,</span>
-  <span class="key token">"description":</span> <span class="string token">"Uses Node.js to set up a WebSocket-based chat server, and provides a web page you can use to join the chat. Adds a feature to start a video call with another chat participant."</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: json">{
+  "name": "WebSocket based chat server with WebRTC video chat support",
+  "docsUrl": "https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling",
+  "description": "Uses Node.js to set up a WebSocket-based chat server, and provides a web page you can use to join the chat. Adds a feature to start a video call with another chat participant."
+}
+</pre>
 
-<p>現在オブジェクトには3つの項目があり、<em>すべてが必須です </em>(まだ使用してないですが、すぐ使います):</p>
+<p>現在オブジェクトには 3 つの項目があり、<em>すべてが必須です </em> (まだ使用してないですが、すぐ使います)。</p>
 
 <dl>
  <dt><code>name</code></dt>
@@ -71,37 +61,37 @@ translation_of: MDN/Tools/Sample_server
  <dd>実例を説明する長めの文で、これがデモする技術についての情報を含みます。</dd>
 </dl>
 
-<h4 id="スタートアップ時にサンプルを動かす_startup.sh">スタートアップ時にサンプルを動かす: startup.sh</h4>
+<h4 id="Running_your_sample_at_startup_startup.sh">起動時にサンプルを動かす: startup.sh</h4>
 
-<p>When the sample server starts up or samples are restarted, each sample's base directory is scanned to see if there's a shell script file named <code>startup.sh</code>. If the file exists, it is executed, so that the sample has the opportunity to install support files, run any scripts, and start up any server processes that are needed to support the sample. For example, the <a href="https://developer.mozilla.org/ja/docs/Web/API/WebRTC_API/Signaling_and_video_calling">WebSocket chat sample's</a> startup.sh script looks like this:</p>
+<p>サンプルサーバーの起動時やサンプルの再起動時には、各サンプルのベースディレクトリーがスキャンされ、 <code>startup.sh</code> という名前のシェルスクリプトファイルが存在するかどうかが確認されます。このファイルが存在すると、そのファイルが実行され、サンプルがサポートファイルをインストールしたり、スクリプトを実行したり、サンプルをサポートするために必要なサーバープロセスを起動したりする機会が与えられます。例えば、 <a href="/ja/docs/Web/API/WebRTC_API/Signaling_and_video_calling">WebSocket chat サンプル</a>の startup.sh スクリプトは次のようになります。</p>
 
-<pre class="brush: bash line-numbers  language-bash notranslate"><code class="language-bash">npm install websocket
-node chatserver.js</code></pre>
+<pre class="brush: bash">npm install websocket
+node chatserver.js</pre>
 
-<p>The first line uses the Node package manager, <code>npm</code>, to install the module named <code>websocket</code>, which provides support for creating and/or talking to <a href="https://developer.mozilla.org/ja/docs/Web/API/WebSocket_API">WebSocket</a> servers.</p>
+<p>1 行目は Node のパッケージマネージャーである <code>npm</code> を使用して、 <code>websocket</code> というモジュールをインストールし、これが <a href="/ja/docs/Web/API/WebSockets_API">WebSocket</a> サーバーを生成したり対話したりすることのサポートを提供します。</p>
 
-<p>The second line actually starts up the server process, which is implemented as a JavaScript script which is started up and run in the background.</p>
+<p>2 行目は、実際にサーバープロセスを起動します。これは、バックグラウンドで起動し実行される JavaScript スクリプトとして実装されています。</p>
 
-<h4 id="Node.js_モジュールを使う_package.json">Node.js モジュールを使う: package.json</h4>
+<h4 id="Using_Node.js_modules_package.json">Node.js モジュールを使う: package.json</h4>
 
-<p>To use Node modules in your project, you'll need to add a <code>package.json</code> file, which lists information about your sample but also includes a list of dependencies, so that those dependencies can be installed for you by the Node package manager (<code>npm</code>).</p>
+<p>Node モジュールをプロジェクトで使用するには、 <code>package.json</code> ファイルを追加する必要があります。ここにはサンプルに関する情報だけでなく、依存関係のリストも含まれており、 Node パッケージマネージャー (<code>npm</code>) によって依存関係がインストールされるようになっています。</p>
 
-<h4 id="Optional_files" name="Optional_files">オプションのファイル</h4>
+<h4 id="Optional_files">オプションのファイル</h4>
 
-<p>You may of course have other files. Obvious candidates are an <code>index.html</code> file so that users that browse to your sample see some content, style sheets, support HTML and JavaScript files, images and other media, and so forth.</p>
+<p>もちろん、他のファイルがあっても構いません。明らかな候補としては、サンプルを閲覧したユーザーに何らかのコンテンツを見せるための <code>index.html</code> ファイル、スタイルシート、サポート用の HTML や JavaScript ファイル、画像やその他のメディアなどがあります。</p>
 
-<h3 id="Submitting_your_sample" name="Submitting_your_sample">サンプルを投稿する</h3>
+<h3 id="Submitting_your_sample">サンプルの投稿</h3>
 
-<p>Once you've finished and tested your sample, you will want to submit it so that it can be tested and eventually installed onto the production sample server. This is done using the standard Github <a href="https://help.github.com/articles/using-pull-requests/">pull request</a> process.</p>
+<p>サンプルを完成させてテストしたら、それを提出してテストを受け、最終的に本番のサンプルサーバーにインストールできるようにしましょう。この作業は、 Github の標準的な<a href="https://help.github.com/articles/using-pull-requests/">プルリクエスト</a>プロセスを用いて行います。</p>
 
-<h2 id="Tips_and_errata" name="Tips_and_errata">Tips とエラッタ</h2>
+<h2 id="Tips_and_errata">ヒントとエラッタ</h2>
 
-<p>Because the sample server itself is still a work in progress, there are quirks and issues with how samples work. Here are some tips that will help you avoid some of the worst potential problems.</p>
+<p>サンプルサーバー自体がまだ完成していないため、サンプルの動作には癖や問題があります。ここでは、潜在的な最悪の問題を回避するためのヒントをいくつかご紹介します。</p>
 
-<h3 id="Port_numbers" name="Port_numbers">Port numbers</h3>
+<h3 id="Port_numbers">ポート番号</h3>
 
-<p>If your sample needs to use a network port, you will have to take care not to inadvertently use one that's already being used by another sample (or by a system service on the server).  At some point in the future, there will be an entry in the sample manifest for requesting a port number, so that the system will allocate them and keep track of which are used and which are not. But until then, be careful not to step on any toes!</p>
+<p>サンプルがネットワークポートを使用する必要がある場合、他のサンプル (またはサーバー上のシステムサービス) が既に使用しているポートを不用意に使用しないように注意する必要があります。将来的には、サンプルのマニフェストにポート番号を要求する項目が設けられ、システムがポート番号を割り当てて、どれが使われていてどれが使われていないかを記録するようになる予定です。それまでは、つま先を踏まないように気をつけてください。</p>
 
-<h2 id="進行中の作業">進行中の作業</h2>
+<h2 id="Work_in_progress">進行中の作業</h2>
 
-<p>このページそのもの、そしてここに記述されているサーバについては、作業が継続中です。</p>
+<p>このページそのもの、そしてここに記述されているサーバーについては、現在作業中です。</p>

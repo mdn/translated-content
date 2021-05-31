@@ -319,81 +319,10 @@ Log: &lt;pre id="log" style="border: 1px solid #ccc;"&gt;&lt;/pre&gt;
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
+<p>Touch events are typically available on devices with a touch screen, but many browsers make the touch events API unavailable on all desktop devices, even those with touch screens.</p>
 
-<p>Note that unfortunately touch events may not fire at all on laptops with touch functionality (<a href="/en-US/docs/">test page</a>).</p>
+<p>The reason for this is that some websites use the availability of parts of the touch events API as an indicator that the browser is running on a mobile device. If the touch events API is available, these websites will assume a mobile device and serve mobile-optimized content. This may then provide a poor experience for users of desktop devices that have touch screens.</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("22.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("18.0")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("52.0")}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>To support both touch and mouse across all types of devices, use <a href="/en-US/docs/Web/API/Pointer_events">pointer events</a> instead.</p>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("6.0")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>11</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] The <code>dom.w3c_touch_events.enabled</code> tri-state preference can be used to disable (0), enable (1), and auto-detect (2) support for standard touch events; by default, they're on auto-detect (2).</p>
-
-<p>As of Gecko 24.0 {{geckoRelease("24.0")}}, the touch events support introduced with Gecko 18.0 {{geckoRelease("18.0")}} has been disabled on the desktop version of Firefox ({{bug(888304)}}), as some popular sites including Google and Twitter were not working properly. Once the bug is fixed, the API will be enabled again. To enable it anyway, open <code>about:config</code> and set the <code>dom.w3c_touch_events.enabled</code> preference to <code>2</code>. The mobile versions including <a href="/en-US/docs/Mozilla/Firefox_for_Android">Firefox for Android</a> and <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> are not affected by this change.</p>
-
-<p>[2] As of Gecko 52.0, touch events support has been fixed and reenabled in Windows desktop platforms.</p>
-
-<div class="note">
-<p><strong>Note</strong>: Prior to Gecko 6.0 {{geckoRelease("6.0")}}, Gecko offered a <a href="/en-US/docs/Web/Guide/Events/Touch_events_(Mozilla_experimental)">proprietary touch event API</a>. That API is now deprecated; you should switch to this one.</p>
-</div>
-
-<h3 id="Firefox_touch_events_and_multiprocess_(e10s)">Firefox, touch events, and multiprocess (e10s)</h3>
-
-<p>In Firefox, touch events are disabled when e10s (electrolysis; <a href="/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox">multiprocess Firefox</a>) is disabled. e10s is on by default in Firefox, but can end up becoming disabled in certain situations, for example when certain accessibility tools or Firefox add-ons are installed that require e10s to be disabled to work. This means that even on a touchscreen-enabled desktop/laptop, touch events won't be enabled.</p>
-
-<p>You can test whether e10s is disabled by going to <code>about:support</code> and looking at the "Multiprocess Windows" entry in the "Application Basics" section. 1/1 means it is enabled, 0/1 means disabled.</p>
-
-<p>If you want to force e10s to be on — to explicitly reenable touch events support — you need to go to <code>about:config</code> and create a new boolean preference <code>browser.tabs.remote.force-enable</code>. Set it to <code>true</code>, restart the browser, and e10s will be enabled regardless of any other settings.</p>
+<p>{{Compat("api.Touch")}}</p>

@@ -7,6 +7,8 @@ tags:
   - Internationalization
   - Intl
   - JavaScript
+  - Localization
+  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 ---
 <div>{{JSRef}}</div>
@@ -14,35 +16,34 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 <p><strong><code>Intl.Collator</code></strong> オブジェクトは、言語を考慮した文字列の比較を可能にします。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-collator.html")}}</div>
+<!--このデモのソースファイルは GitHub リポジトリーに格納されています。デモプロジェクトに協力していただける場合は、 https://github.com/mdn/interactive-examples をクローンしてプルリクエストを送信してください。 -->
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
-
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
-
-<dl>
- <dt>{{jsxref("Intl/Collator/Collator", "Intl.Collator()")}}</dt>
- <dd>新しい <code>Collator</code> オブジェクトを生成します。</dd>
-</dl>
-
-<h2 id="Static_methods" name="Static_methods">静的メソッド</h2>
+<h2 id="Constructor">コンストラクター</h2>
 
 <dl>
- <dt>{{jsxref("Collator.supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}</dt>
- <dd>指定したロケールのうち、ランタイムの既定のロケールに代替されることなく対応されているものを含む配列を返します。</dd>
+	<dt>{{jsxref("Intl/Collator/Collator", "Intl.Collator()")}}</dt>
+	<dd>新しい <code>Collator</code> オブジェクトを生成します。</dd>
 </dl>
 
-<h2 id="Instance_methods" name="Instance_methods">インスタンスメソッド</h2>
+<h2 id="Static_methods">静的メソッド</h2>
 
 <dl>
- <dt>{{jsxref("Collator.compare", "Intl.Collator.prototype.compare")}}</dt>
- <dd>この {{jsxref("Global_Objects/Collator", "Intl.Collator")}} オブジェクトのソート順に応じて２つの文字列を比較する関数を返します。</dd>
- <dt>{{jsxref("Collator.resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}</dt>
- <dd>ローケルを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。</dd>
+	<dt>{{jsxref("Intl/Collator/supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}</dt>
+	<dd>指定したロケールのうち、ランタイムの既定のロケールに代替されることなく対応されているものを含む配列を返します。</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Instance_methods">インスタンスメソッド</h2>
 
-<h3 id="Using_Collator" name="Using_Collator">Collator の使用</h3>
+<dl>
+	<dt>{{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare")}}</dt>
+	<dd>この {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}} オブジェクトのソート順に応じて 2 つの文字列を比較する関数を返します。</dd>
+	<dt>{{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}</dt>
+	<dd>ローケルを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。</dd>
+</dl>
+
+<h2 id="Examples">例</h2>
+
+<h3 id="Using_Collator">Collator の使用</h3>
 
 <p>次の例では、一方の文字列が他方の文字列の前である場合、後である場合、および同じレベルである場合の比較結果を表示します。</p>
 
@@ -53,11 +54,11 @@ console.log(new Intl.Collator().compare('a', 'a')); // → 0
 
 <p>上記コードの結果は、ブラウザーやブラウザーのバージョンによって異なる可能性がある点に注意してください。というのも前および後を表す数値については、それぞれ負の数および正の数であることだけが仕様によって定めています。具体的な数値は定められていないため、実装ごとに異なる数値になるかもしれません。</p>
 
-<h3 id="locales_の使用">locales の使用</h3>
+<h3 id="Using_locales">locales の使用</h3>
 
-<p>{{jsxref("Collator.prototype.compare()")}} の結果は言語によって異なります。アプリケーションのユーザインターフェイスで使用される言語のソート順を取得するには、 <code><var>locales</var></code> 引数にその言語 (およびフォールバック用の言語も) を指定してください。</p>
+<p>{{jsxref("Intl/Collator/compare")}} の結果は言語によって異なります。アプリケーションのユーザーインターフェイスで使用される言語のソート順を取得するには、 <code><var>locales</var></code> 引数にその言語を (およびフォールバック用の言語も) 指定してください。</p>
 
-<pre class="brush: js notranslate">// in German, ä sorts with a
+<pre class="brush: js">// in German, ä sorts with a
 console.log(new Intl.Collator('de').compare('ä', 'z'));
 // → 負の値
 
@@ -66,11 +67,11 @@ console.log(new Intl.Collator('sv').compare('ä', 'z'));
 // → 正の値
 </pre>
 
-<h3 id="Using_options" name="Using_options">options の使用</h3>
+<h3 id="Using_options">options の使用</h3>
 
-<p>T{{jsxref("Collator.prototype.compare()")}} の結果は <code><var>options</var></code> 引数でカスタマイズできます。</p>
+<p>T{{jsxref("Intl/Collator/compare")}} の結果は <code><var>options</var></code> 引数でカスタマイズできます。</p>
 
-<pre class="brush: js notranslate">// in German, ä has a as the base letter
+<pre class="brush: js">// in German, ä has a as the base letter
 console.log(new Intl.Collator('de', { sensitivity: 'base' }).compare('ä', 'a'));
 // → 0
 
@@ -79,31 +80,27 @@ console.log(new Intl.Collator('sv', { sensitivity: 'base' }).compare('ä', 'a'))
 // → 正の値
 </pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#collator-objects', 'Intl.Collator')}}</td>
-  </tr>
- </tbody>
+	<thead>
+		<tr>
+			<th scope="col">仕様書</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>{{SpecName('ES Int Draft', '#collator-objects', 'Intl.Collator')}}</td>
+		</tr>
+	</tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<div>
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<div>{{Compat("javascript.builtins.Intl.Collator")}}</div>
 
-<p>{{Compat("javascript.builtins.Intl.Collator")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl">Intl</a></code></li>
+	<li>{{jsxref("Intl")}}</li>
 </ul>

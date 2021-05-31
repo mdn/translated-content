@@ -17,11 +17,11 @@ translation_of: Web/HTTP/Headers/X-Frame-Options
 
 <dl>
  <dt><code>DENY</code></dt>
- <dd>表示文件無論如何都不能被嵌入到 frame 中，即使是自家網站也不行。</dd>
+ <dd>表示網頁無論如何都無法被嵌入到 frame 中，即使於相同網域內嵌入也不允許。</dd>
  <dt><code>SAMEORIGIN</code></dt>
  <dd>唯有當符合<a href="/zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript">同源政策</a>下，才能<span style="line-height: 19.0909080505371px;">被嵌入到 frame 中。</span></dd>
  <dt><code>ALLOW-FROM <em>uri</em></code></dt>
- <dd>唯有列表許可的 URI 才能<span style="line-height: 19.0909080505371px;">嵌入到 frame 中。</span></dd>
+ <dd>［已廢止］唯有列表許可的 URI 才能<span style="line-height: 19.0909080505371px;">嵌入到 frame 中。新版瀏覽器已不再支援此指令。</span></dd>
 </dl>
 
 <h3 id="設定_Apache">設定 Apache</h3>

@@ -129,19 +129,20 @@ new Bad(); // ReferenceError</pre>
 
 <h3 id="函数上下文中的_this">函数上下文中的 this</h3>
 
-<pre dir="rtl">// An object can be passed as the first argument to call or apply and this will be bound to it.
+<pre class="brush:js">
+// 对象可以作为 bind 或 apply 的第一个参数传递，并且该参数将绑定到该对象。
 var obj = {a: 'Custom'};
 
-// We declare a variable and the variable is assigned to the global window as its property.
+// 声明一个变量，并将该变量作为全局对象 window 的属性。
 var a = 'Global';
 
 function whatsThis() {
-  return this.a;  // The value of this is dependent on how the function is called
+  return this.a;  // this 的值取决于函数被调用的方式
 }
 
-whatsThis();          // 'Global' as this in the function isn't set, so it defaults to the global/window object
-whatsThis.call(obj);  // 'Custom' as this in the function is set to obj
-whatsThis.apply(obj); // 'Custom' as this in the function is set to obj
+whatsThis();          // 'Global' 因为在这个函数中 this 没有被设定，所以它默认为 全局/ window 对象
+whatsThis.call(obj);  // 'Custom' 因为函数中的 this 被设置为obj
+whatsThis.apply(obj); // 'Custom' 因为函数中的 this 被设置为obj
 </pre>
 
 <h3 id="this_和对象转换">this 和对象转换</h3>

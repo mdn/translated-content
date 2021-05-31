@@ -2,6 +2,7 @@
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
+browser-compat: javascript.builtins.Date.parse
 ---
 <div>{{JSRef}}</div>
 
@@ -117,112 +118,13 @@ Date.parse('foo-bar 2014');
 
 <p>현지 시간대와 관계없이 14400000을 반환합니다. GMT (UTC)가 제공됩니다.</p>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.4.2', 'Date.parse')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>ISO 8601 format added.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.parse', 'Date.parse')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.parse', 'Date.parse')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="browser_compatibility">브라우저 호환성</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>ISO 8601 format</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckodesktop("2.0")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>ISO 8601 format</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="Compatibility_notes">Compatibility notes</h2>
-
-<ul>
- <li>Firefox 49 {{geckoRelease(49)}} changed the parsing of 2-digit years to be aligned with the Google Chrome browser instead of Internet Explorer. Now, 2-digit years that are less than or equal to <code>50</code> are parsed as 21st century years. For example, <code>04/16/17</code>, previously parsed as April 16, 1917, will be April 16, 2017 now. To avoid any interoperability issues or ambiguous years, it is recommended to use the ISO 8601 format like "2017-04-16" ({{bug(1265136)}}).</li>
-</ul>
+<p>{{Compat}}</p>
 
 <h2 id="See_also">See also</h2>
 

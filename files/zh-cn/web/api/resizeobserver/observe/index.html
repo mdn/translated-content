@@ -17,6 +17,15 @@ translation_of: Web/API/ResizeObserver/observe
 <dl>
  <dt>target</dt>
  <dd>被观察的 {{domxref('Element')}} 或 {{domxref('SVGElement')}} 引用。</dd>
+ <dt>options {{optional_inline}}</dt>
+ <dd>一个指定观察设置的可选参数对象。目前只有一个可设置的选项：
+    <dl>
+      <dt><code>box</code></dt>
+      <dd>设置观察者将以哪种盒子模型来观察变动。可以设置的值为
+        <code>content-box</code> (默认值)，<code>border-box</code>，和
+        <code>device-pixel-content-box</code>。</dd>
+    </dl>
+  </dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
