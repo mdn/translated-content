@@ -5,7 +5,7 @@ tags:
   - Callback
   - Колбэк-функция
 translation_of: Glossary/Callback_function
-original_slug: Словарь/функция_обратного_вызова
+original_slug: Глоссарий/функция_обратного_вызова
 ---
 <p>Колбэк-функция (или обратный вызов) - это функция, переданная в другую функцию в качестве аргумента, которая затем вызывается по завершению какого-либо действия.</p>
 
@@ -24,10 +24,10 @@ processUserInput(greeting);</pre>
 
 <p>Выше приведён пример <a href="/en-US/docs/Glossary/Synchronous">синхронного</a> колбэка, поскольку функция <code>processUserInput</code> выполняется синхронно.</p>
 
-<p>Колбэки часто используются для продолжения выполнения кода после завершения <a href="/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/Asynchronous">асинхронной</a> операции - они называются асинхронными колбэками.</p>
+<p>Колбэки часто используются для продолжения выполнения кода после завершения <a href="/ru/docs/Glossary/Asynchronous">асинхронной</a> операции - они называются асинхронными колбэками.</p>
 
 <pre class="brush: js">async function pageLoader(callback) {
-  const data = await fetch('/ru/docs/Словарь/функция_обратного_вызова')
+  const data = await fetch('/ru/docs/Glossary/Callback_function')
   callback(data)
 }
 
