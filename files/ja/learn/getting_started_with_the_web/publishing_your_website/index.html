@@ -1,7 +1,9 @@
 ---
-title: Web サイトの公開
+title: ウェブサイトの公開
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
 tags:
+  - Beginner
+  - CodingScripting
   - FTP
   - GitHub
   - Google App Engine
@@ -10,7 +12,6 @@ tags:
   - l10n:priority
   - publishing
   - web server
-  - コードスクリプティング
   - 初心者
   - 学習
 translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
@@ -21,114 +22,110 @@ original_slug: Learn/Getting_started_with_the_web/ウェブサイトを公開す
 <div>{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}</div>
 
 <div class="summary">
-<p>サイトのコードやファイルの準備ができたら、そのサイトをほかの人が見つけられるように、ファイルやコードをすべてオンラインに置く必要があります。この記事では、シンプルなサンプルコードを少しの手間でネット上に公開する方法を説明します。</p>
+<p>ウェブサイトを構成するコードやファイルの整理が終わったら、それをオンラインで公開して、人々が見つけられるようにする必要があります。この記事では、簡単なサンプルコードを手軽にオンラインに公開する方法を説明します。</p>
 </div>
 
-<h2 id="What_are_the_options" name="What_are_the_options">どんな選択肢があるのか?</h2>
+<h2 id="What_are_the_options">どんな選択肢があるのか</h2>
 
-<p>Web サイトを公開するというのは簡単に語れることではありません。なぜなら、 Web サイトの公開の仕方には、さまざまな方法があるからです。この記事での私たちの目標は、そのすべての方法を記述することではありません。むしろ、我々は初心者の視点から、大まかに 3 つの手法の長所と短所をお話しし、その次に、今のところはこれでうまくいくという方法で一通りやってみます。</p>
+<p>ウェブサイトの公開には、さまざまな方法があるため、複雑なテーマです。この記事では、すべての可能な方法を説明するつもりはありません。その代わりに、初心者にとって実用的な 3 つのアプローチのメリットとデメリットを説明します。そして、多くの読者がすぐに使える方法を紹介します。</p>
 
-<h3 id="Getting_hosting_and_a_domain_name" name="Getting_hosting_and_a_domain_name">ホストとドメイン名を手に入れる</h3>
+<h3 id="Getting_hosting_and_a_domain_name">ホストとドメイン名を手に入れる</h3>
 
-<p>もし、あなたが公開した Web サイトのすべてをコントロールしたいと思うなら、次の 2 つに関してお金を払う必要があるでしょう。</p>
-
-<ul>
- <li>ホスト — つまり、ホスティング会社の <a href="https://developer.mozilla.org/ja/Learn/What_is_a_web_server"> Web サーバー</a>上のファイルを置く場所のこと。あなたが、 Web サイトをその場所に置けば、 Web サーバーが、ユーザーのリクエストに応えて、コンテンツを扱ってくれます。</li>
- <li>ドメイン名 — ほかの人があなたの Web サイトを見つけるための、他と同じもののないアドレスのことです。たとえば、<code>http://www.mozilla.org</code> や <code>http://www.bbc.co.uk</code> などがそれにあたります。あなたは<strong>ドメインレジストラー </strong>(ドメイン名を扱う管理者) から、何年の間ドメイン名を借りることになります。</li>
-</ul>
-
-<p>多くのプロの手による Web サイトはこんな風にして、公開されているわけです。</p>
-
-<p>加えて、あなたは、実際に Web サイトに関するファイルをサーバーに送るために、{{Glossary("FTP", "File Transfer Protocol (FTP)")}} プログラムが必要です (詳しくは、<a href="/ja/Learn/How_much_does_it_cost#Software">どれくらいお金がかかるか: ソフトウェア</a>のページにて)。FTP プログラムは、プログラムごとに様々ですが、一般的に Web サーバーのホスティング会社が提供する詳細情報 (例えば、ユーザーネーム、パスワード、ホスト名) を使用してログインする必要があります。ログインすると、FTP プログラムは、あなたの pc のローカルファイルと、サーバー上のファイルを二つのウィンドウで表示します。その画面において、あなたはファイルを送ったり戻したりできます。</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/9469/ftp.jpg" style="display: block; height: 487px; margin: 0px auto; width: 800px;"></p>
-
-<h4 id="Tips_for_finding_hosting_and_domains" name="Tips_for_finding_hosting_and_domains">ホスティングとドメインを見つけるための TIPS(ヒント)</h4>
+<p>コンテンツやウェブサイトの外観をより自由にコントロールするために、多くの人はウェブホスティングとドメイン名の購入を選択します。</p>
 
 <ul>
- <li>MDN は特定の商用ホスティング会社やドメイン名レジストラを宣伝していません。ホスティング会社やレジストラを探すには、「 Web ホスティング」と「ドメイン名」で検索してください。すべてのレジストラは、希望するドメイン名が利用可能かどうかを確認できる機能を持っています</li>
- <li>あなたの家やオフィスの {{Glossary("ISP", "インターネットサービスプロバイダー")}} では、小さな Web サイトのための限定的なホスティングを提供しているかもしれません。利用できる機能は限られていますが、最初の実験には最適かもしれません</li>
- <li><a href="https://neocities.org/">Neocities</a>、Google Sites、<a href="https://www.blogger.com">Blogger</a>、<a href="https://wordpress.com/">WordPress</a> のような無料のサービスもあります。お金を払った分だけ得をすることもありますが、初期の実験にはこれらのリソースで十分な場合もあります</li>
- <li>ホスティングやドメインを提供している会社も多いです</li>
+ <li>ウェブホスティングとは、ホスティング会社の<a href="/ja/docs/Learn/Common_questions/What_is_a_web_server">ウェブサーバー</a>上のファイルスペースを借りることです。ウェブサイトのファイルはウェブサーバー上に置きます。ウェブサーバーは、ウェブサイトのコンテンツをウェブサイトの訪問者に提供します。</li>
+ <li>ドメイン名は、 <code>http://www.mozilla.org</code> や <code>http://www.bbc.co.uk</code> のように、お客様のウェブサイトを見つけるための固有のアドレスです。ドメイン名は、<strong>ドメインレジストラー</strong>から何年でも借りることができます。</li>
 </ul>
 
-<h3 id="Using_an_online_tool_like_GitHub_or_Google_App_Engine" name="Using_an_online_tool_like_GitHub_or_Google_App_Engine">GitHub や Google App Engine のようなオンラインツールを利用する</h3>
+<p>多くのプロの手によるウェブサイトはこんな風にして、公開されているわけです。</p>
 
-<p>特定のツールを使って、あなたの Web サイトをオンラインに公開することもできます。</p>
+<p>さらに、ウェブサイトのファイルを実際にサーバーに転送するには、{{Glossary("FTP", "File Transfer Protocol (FTP、ファイル転送プロトコル)")}} のプログラム  (詳しくは、<a href="/ja/docs/Learn/Common_questions/How_much_does_it_cost#software">どのくらいコストがかかりますか: ソフトウェア</a>を参照) が必要です。 FTP プログラムの種類は様々ですが、一般的には、ホスティング会社から提供された詳細情報 (通常、ユーザー名、パスワード、ホスト名) を使ってウェブサーバーに接続する必要があります。その後、プログラムはローカルファイルとウェブサーバーのファイルを 2 つのウィンドウに表示し、ファイルのやり取りを行うことができます。</p>
+
+<p><img alt="" src="ftp.jpg" style="display: block; margin: 0px auto;"></p>
+
+<h4 id="Tips_for_finding_hosting_and_domains">ホスティングとドメインを見つけるためのヒント</h4>
 
 <ul>
- <li><a href="https://github.com/">GitHub</a> は、「ソーシャルコーディング」サイトです。そこでは、あなたは<strong> Git バージョン管理システム</strong>の中のストレージで、コードリポジトリをアップロードできます。そうすることで、あなたはコードプロジェクトに協力することができて、このシステムは既定でオープンソースです。つまりは、世界のだれでも、あなたのコードを利用したり、そこから学んだり、改善したりすることができるのです。GitHub には <a href="https://pages.github.com/">GitHub Pages</a> と呼ばれる、とても便利な機能があります。それはあなたに Web 上に、 Web サイトのコードを公開するのを助けてくれます。</li>
- <li><a href="https://cloud.google.com/appengine/" title="App Engine - Build Scalable Web &amp; Mobile Backends in Any Language  |  Google Cloud Platform">Google App Engine</a> は、アプリケーションを Google のインフラ上で、ビルドや実行させることができる強力なプラットフォームです。マルチレイヤ― Web アプリケーションをゼロから作ったり、静的な Web サイトをホストしたり、いずれの場合でもそうです。<a href="/ja/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine"> Web サイトを Google App Engine でホストするには?</a> を見てみましょう。</li>
+ <li>MDN は、特定の商用ホスティング会社やドメイン名レジストラーを推奨してはいません。ホスティング会社やレジストラーを見つけるには、「ウェブホスティング」や「ドメイン名」で検索してください。どのレジストラーにも、希望するドメイン名が利用可能かどうかを確認する機能があります。</li>
+ <li>自宅やオフィスの{{Glossary("ISP", "インターネットサービスプロバイダー")}}が、小規模なウェブサイトのための限定的なホスティングを提供している場合もあります。利用できる機能は限られていますが、初めての試みには最適かもしれません。</li>
+ <li><a href="https://neocities.org/">Neocities</a>、Google Sites、<a href="https://www.blogger.com">Blogger</a>、<a href="https://wordpress.com/">WordPress</a> のような無料のサービスもあります。有料のものもありますが、最初の実験にはこれらのリソースで十分な場合もあります。</li>
+ <li>ホスティングをドメインの両方を提供している会社もたくさんあります。</li>
 </ul>
 
-<p>これらのツールは、多くのホスティングと違って、利用するのは無料です。しかし、使える機能はやはり限られています。</p>
+<h3 id="Using_an_online_tool_like_GitHub_or_Google_App_Engine">GitHub や Google App Engine のようなオンラインツールの利用</h3>
 
-<h3 id="Using_a_web-based_IDE_such_as_CodePen" name="Using_a_web-based_IDE_such_as_CodePen">CodePen のような、 Web ベースの IDE を用いる方法。</h3>
+<p>ウェブサイトをオンラインで公開できるツールもあります。</p>
 
-<p>Web 開発環境を真似た Web アプリはたくさんあります。それらで HTML や CSS、JavaScript を入力し、それらのコードを Web ページとしてレンダリングした結果を表示できます — すべてが 1 つのブラウザータブの中で。一般的に言って、これらのツールはとても簡単で、とても勉強になり、コードの共有に向いていて(例えば、テクニックを共有したり、別のオフィスの同僚にデバッグの助けを求める)、(基本的な機能は) 無料です。</p>
+<ul>
+ <li><a href="https://github.com/">GitHub</a> は、「ソーシャルコーディング」サイトです。コードリポジトリーをアップロードして <a href="https://git-scm.com/">Git</a> <strong>バージョン管理システム</strong>に保存することができます。このシステムは既定でオープンソースになっており、世界中の誰もが GitHub のコードを見つけ、それを使い、そこから学び、改良することができます。また、 GitHub には <a href="https://pages.github.com/">GitHub Pages</a> という便利な機能があり、ウェブサイトのコードをウェブ上で公開することができます。</li>
+ <li><a href="https://cloud.google.com/appengine/" title="App Engine - Build Scalable Web &amp; Mobile Backends in Any Language  |  Google Cloud Platform">Google App Engine</a> Google のインフラ上でアプリケーションを構築・実行できる強力なプラットフォームです。複数階層のウェブアプリケーションをゼロから構築する場合も、静的なウェブサイトをホスティングする場合も同様です。詳細は、<a href="/ja/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine">Google App Engine でウェブサイトをホスティングするには</a>を参照してください。</li>
+</ul>
 
-<p>生成したページを固有のアドレスでホストします。しかしながら、基本的な機能はかなり限られたものであり、そのアプリは大抵において、アセット (画像など) のためのホスティングスペースを提供していません。</p>
+<p>これらのオプションは通常無料ですが、限定された機能セットでしか成長させることができません。</p>
 
-<p>これらを試してみて、一番あなたに合ったものを見つけてみましょう。</p>
+<h3 id="Using_a_web-based_IDE_such_as_CodePen">CodePen のようなウェブベースの IDE の利用</h3>
+
+<p>ウェブサイトの開発環境をエミュレートするウェブアプリは数多くあり、HTML、CSS、JavaScript を入力すると、そのコードの結果をウェブサイトとして表示することができます。一般的に、これらのツールは比較的簡単で、学習にも適しており、コードを共有するのにも適しています (例えば、別のオフィスにいる同僚とテクニックを共有したり、デバッグの助けを求めたりする場合など)。また、 (基本的な機能については) 無料です。レンダリングされたページを、固有のウェブアドレスでホスティングしてくれます。ただし、機能は限られており、通常はアセット (画像など) のホスティングスペースは提供されていません。</p>
+
+<p>これらを試してみて、一番合ったものを見つけてみましょう。</p>
 
 <ul>
  <li><a href="https://jsfiddle.net/">JSFiddle</a></li>
  <li><a href="https://glitch.com/">Glitch</a></li>
- <li><a href="http://jsbin.com/">JS Bin</a></li>
+ <li><a href="https://jsbin.com/">JS Bin</a></li>
  <li><a href="https://codepen.io/">CodePen</a></li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/9471/jsbin-screen.png" style="display: block; height: 849px; margin: 0px auto; width: 1392px;"></p>
+<p><img alt="" src="jsbin-screen.png" style="display: block; margin: 0px auto;"></p>
 
-<h2 id="Publishing_via_GitHub" name="Publishing_via_GitHub">GitHub 経由での公開</h2>
+<h2 id="Publishing_via_GitHub">GitHub 経由での公開</h2>
 
 <p>では、GitHub Pages 経由でどれくらい簡単にサイトを公開できるかを実際にやってみましょう。</p>
 
 <ol>
- <li>まず、 <a href="https://github.com/">GitHub にサインアップして</a>、あなたのメールアドレスを確認しましょう。</li>
- <li>次に ファイルを入れるための<a href="https://github.com/new">リポジトリを作りましょう。</a></li>
- <li>このページ上の、Repository name ボックスに username.github.io の形で、ユーザー名を入力しましょう。username のところに、あなたの名前が入ります。<br>
-  例えば、私たちの友人である bob smith ならば、<br>
-  bobsmith.github.io と入力することになります。<br>
-  さらに、<span style="color: #000000; font-family: 'Arial'; font-size: 13px; font-style: normal; font-weight: 400; text-decoration: none;">{{原語併記("</span>README つきでこのリポジトリを初期化", "Initialize this repository with a README")}}をチェックして、<span style="color: #000000; font-family: 'Arial'; font-size: 13px; font-style: normal; font-weight: 400; text-decoration: none;">{{原語併記("</span>リポジトリの作成", "Create repository")}}をクリックします。<img alt="" src="https://mdn.mozillademos.org/files/9479/github-create-repo.png" style="display: block; height: 849px; margin: 0px auto; width: 1392px;"></li>
- <li>Web サイトのフォルダをリポジトリの中にドラッグアンドドロップしたら、Commit changes をクリックしましょう。<br>
+ <li>まず、 <a href="https://github.com/">GitHub にサインアップして</a>、メールアドレスの認証を受けましょう。</li>
+ <li>次に ファイルを入れるための<a href="https://github.com/new">リポジトリーを作成</a>しましょう。</li>
+ <li>このページ上の、 <em>Repository name</em> ボックスに <em>ユーザー名</em>.github.io と入力してください。 <em>ユーザー名</em> はあなたのユーザー名です。例えば、私の友達の Bob Smith であれば <em>bobsmith.github.io</em> と入力します。<br>
+  さらに、 "Initialize this repository with a README" ボックスをチェックし、 "Create repository" をクリックしてください。<img alt="" src="github-create-repo.png" style="display: block; margin: 0px auto;"></li>
+ <li>ウェブサイトのフォルダーをリポジトリーの中にドラッグアンドドロップしたら、 <em>Commit changes</em> をクリックしましょう。<br>
 
   <div class="note">
-  <p><strong>注</strong>: フォルダの中に <code>index.html</code> の名前のファイルがあるかを確認しましょう。</p>
+  <p><strong>注</strong>: フォルダーの中に <code>index.html</code> ファイルがあるかを確認しましょう。</p>
   </div>
  </li>
  <li>
-  <p>では、あなたの Web サイトをオンライン上で見るために、ブラウザーから username.github.io に移動しましょう。例えば、ユーザーネームが chrisdavidmills なら、<a href="http://chrisdavidmills.github.io/">chrisdavidmills.github.io</a> に移動しましょう。</p>
+  <p>では、ウェブサイトをオンライン上で見るために、ブラウザーから username.github.io に移動しましょう。例えば、ユーザーネームが chrisdavidmills なら、<a href="https://chrisdavidmills.github.io/">chrisdavidmills.github.io</a> に移動しましょう。</p>
 
   <div class="note">
-  <p><strong>注</strong>: あなたの Web サイトに行けるようになるには少し時間がかかるかもしれません。すぐに行ってもダメなようなら、少し待ってからもう一度試してみましょう。</p>
+  <p><strong>注</strong>: ウェブサイトに使えるようになるには少し時間がかかるかもしれません。ウェブサイトがすぐに表示されない場合は、少し待ってみてください。そしてもう一度試してみましょう。</p>
   </div>
  </li>
 </ol>
 
 <p>もっと詳しく知りたい人は <a href="https://help.github.com/categories/github-pages-basics/">GitHub Pages Help</a> を見てください。</p>
 
-<h2 id="Further_reading" name="Further_reading">参考文献</h2>
+<h2 id="Further_reading">参考文献</h2>
 
 <ul>
- <li><a href="/ja/Learn/What_is_a_web_server">Web サーバーとは何か</a></li>
- <li><a href="/ja/Learn/Understanding_domain_names">ドメイン名を理解する</a></li>
- <li><a href="/ja/Learn/How_much_does_it_cost">Web サイトで何かするのにいくらかかるか?</a></li>
+ <li><a href="/ja/docs/Learn/Common_questions/What_is_a_web_server">ウェブサーバーとは何か</a></li>
+ <li><a href="/ja/docs/Learn/Common_questions/What_is_a_domain_name">ドメイン名を理解する</a></li>
+ <li><a href="/ja/docs/Learn/Common_questions/How_much_does_it_cost">ウェブサイトで何かするのにいくらかかるか?</a></li>
  <li><a href="https://www.codecademy.com/learn/deploy-a-website">Deploy a Website</a>: Codecademy の良いチュートリアルで、もう少し詳しく追加のテクニック含めて示しています。</li>
- <li><a href="http://alignedleft.com/resources/cheap-web-hosting">Cheap or Free Static Website Hosting</a> Scott Murray による利用できるサービスについての使えるアイデアがあります。</li>
+ <li><a href="https://alignedleft.com/resources/cheap-web-hosting">Cheap or Free Static Website Hosting</a> Scott Murray による利用できるサービスについての使えるアイデアがあります。</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}</p>
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+<h2 id="In_this_module">このモジュール</h2>
 
 <ul>
- <li id="Installing_basic_software"><a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアのインストール</a></li>
- <li id="What_will_your_website_look_like"><a href="/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">Web サイトをどんな外見にするか</a></li>
+ <li id="Installing_basic_software"><a href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアのインストール</a></li>
+ <li id="What_will_your_website_look_like"><a href="/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">ウェブサイトをどんな外見にするか</a></li>
  <li id="Dealing_with_files"><a href="/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a></li>
  <li id="HTML_basics"><a href="/ja/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML の基本</a></li>
  <li id="CSS_basics"><a href="/ja/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS の基本</a></li>
  <li id="JavaScript_basics"><a href="/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript の基本</a></li>
- <li id="Publishing_your_website"><a href="/ja/docs/Learn/Getting_started_with_the_web/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E5%85%AC%E9%96%8B%E3%81%99%E3%82%8B">Web サイトの公開</a></li>
- <li id="How_the_web_works"><a href="/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works">Web のしくみ</a></li>
+ <li id="Publishing_your_website"><a href="/ja/docs/Learn/Getting_started_with_the_web/Publishing_your_website">ウェブサイトの公開</a></li>
+ <li id="How_the_web_works"><a href="/ja/docs/Learn/Getting_started_with_the_web/How_the_Web_works">ウェブのしくみ</a></li>
 </ul>

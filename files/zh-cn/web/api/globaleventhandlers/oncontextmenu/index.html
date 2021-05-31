@@ -1,28 +1,146 @@
 ---
 title: GlobalEventHandlers.oncontextmenu
 slug: Web/API/GlobalEventHandlers/oncontextmenu
-translation_of: Web/API/GlobalEventHandlers/oncontextmenu
+tags:
+- API
+- Event Handler
+- GlobalEventHandlers
+- HTML DOM
+- Property
+- Reference
 ---
 <div>{{ ApiRef("HTML DOM") }}</div>
 
-<h3 id="Summary" name="Summary">概述</h3>
+<p><strong><code>oncontextmenu</code></strong> 是用来设置或获取全局事件({{domxref("GlobalEventHandlers")}})中 上下文菜单事件({{event("contextmenu")}}) 的处理函数({{event("Event_handlers", "event handler")}})。</p>
 
-<p>获取或设置当前窗口contextmenu事件的事件处理函数。除非默认行为已经阻止了(看下面的例子是如何阻止的)，否则右键菜单会被激活。注意此事件会发生在没有阻止右键事件的情况下而且这不取决于此元素是否拥有了<a href="http://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/" title="http://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/">"contextmenu"属性</a>.</p>
+<p>当在窗口上单击鼠标右键时，通常会触发 <code>contextmenu</code> 事件。 除非阻止默认行为，否则浏览器上下文菜单将被激活。</p>
 
-<h3 id="Syntax" name="Syntax">语法</h3>
+<h2 id="Syntax">语法</h2>
 
-<pre class="eval">window.oncontextmenu = funcRef;
-//funcRef是个函数引用
+<pre class="brush: js"><em>target</em>.oncontextmenu = <em>functionRef</em>;
 </pre>
 
-<h3 id="Example" name="Example">例子</h3>
+<h3 id="Value">属性值</h3>
 
-<p>这个例子会取消页面右键的功能：</p>
+<p><code>functionRef</code> 是一个函数名 或者是一个 <a
+    href="/en-US/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>。 该函数接收 {{domxref("Event")}} 作为唯一参数。</p>
 
-<pre class="eval">window.oncontextmenu = function () {
-   return false;
+<p>一次只能将一个 <code>oncontextmenu</code> 处理函数分配给一个对象。 你可能更喜欢使用 {{domxref("EventTarget.addEventListener()")}} 作为替代,
+  因为这种方式更加灵活。</p>
+
+<h2 id="Examples">示例</h2>
+
+<h3 id="Disabling_context_menus">禁用上下文菜单</h3>
+
+<p>右键单击通常会显示上下文菜单，但以下片段中将演示如何阻止在浏览器窗口(window)中显示上下文菜单。</p>
+
+<h4 id="HTML">HTML</h4>
+
+<pre
+  class="brush: html">&lt;p&gt;Try opening the context menu. Is it disabled?&lt;p&gt;</pre>
+
+<h4 id="JavaScript">JavaScript</h4>
+
+<pre class="brush:js;">window.oncontextmenu = (e) =&gt; {
+  e.preventDefault();
 }
-//该窗口禁止使用右键
 </pre>
 
-<p>{{ languages( {"en": "en/DOM/window.oncontextmenu" } ) }}</p>
+<h4 id="Result">运行结果</h4>
+
+<p>{{EmbedLiveSample("Disabling_context_menus")}}</p>
+
+<h3 id="Pausing_an_animation">一个右键暂停动画的示例</h3>
+
+<p>此示例中，单击右键打开上下文菜单时将会暂停旋转动画。</p>
+
+<h4 id="HTML_2">HTML</h4>
+
+<pre class="brush: html">&lt;div class="shape"&gt;Spinning&lt;/div&gt;
+&lt;p class="note" hidden&gt;Click to unpause.&lt;/p&gt;</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.shape {
+  width: 8em;
+  height: 8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: spin 18s linear infinite;
+  background: lightsalmon;
+  border-radius: 42%;
+  margin: 1em;
+}
+
+.paused {
+  background-color: #ddd;
+}
+
+.paused .shape {
+  animation-play-state: paused;
+}</pre>
+
+<h4 id="JavaScript_2">JavaScript</h4>
+
+<pre class="brush: js">
+const body = document.querySelector('body');
+const note = document.querySelector('.note');
+
+function pause(e) {
+  body.classList.add('paused');
+  note.removeAttribute('hidden');
+}
+
+function play(e) {
+  body.classList.remove('paused');
+  note.setAttribute('hidden', '');
+}
+
+window.oncontextmenu = pause;
+window.onpointerdown = play;</pre>
+
+<h4 id="Result_2">运行结果</h4>
+
+<p>{{EmbedLiveSample("Pausing_an_animation", 700, 200)}}</p>
+
+<h2 id="Specifications">规范</h2>
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="col">规范</th>
+      <th scope="col">状态</th>
+      <th scope="col">备注</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG','webappapis.html#handler-oncontextmenu','oncontextmenu')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
+
+<div>
+
+  <p>{{Compat("api.GlobalEventHandlers.oncontextmenu")}}</p>
+
+  <p>除非阻止默认行为，否则右键单击将激活浏览器上下文菜单。但是, IE8 有一个 bug，如果定义了 <code>contextmenu</code> 处理函数，不会激活上下文菜单。</p>
+</div>
+
+<h2 id="See_also">另请参见</h2>
+
+<ul>
+  <li>{{event("contextmenu")}} 事件</li>
+</ul>

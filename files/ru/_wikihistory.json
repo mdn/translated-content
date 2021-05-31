@@ -5128,12 +5128,6 @@
       "pashutk"
     ]
   },
-  "Tools/Debugger/Keyboard_shortcuts": {
-    "modified": "2020-10-23T06:26:33.563Z",
-    "contributors": [
-      "ksam"
-    ]
-  },
   "Tools/Debugger/Source_map_errors": {
     "modified": "2020-07-16T22:35:19.721Z",
     "contributors": [
@@ -5314,13 +5308,6 @@
       "Tihoem",
       "teoli",
       "Vatheslav"
-    ]
-  },
-  "Tools/Page_Inspector/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:52.844Z",
-    "contributors": [
-      "wbamberg",
-      "Aleksej"
     ]
   },
   "Tools/Page_Inspector/UI_Tour": {
@@ -6496,20 +6483,6 @@
     "contributors": [
       "untritt",
       "pantherCZ"
-    ]
-  },
-  "Web/API/ChildNode/remove": {
-    "modified": "2019-03-23T22:51:25.031Z",
-    "contributors": [
-      "neoxaker",
-      "NikitaCoder",
-      "In4in"
-    ]
-  },
-  "Web/API/ChildNode/replaceWith": {
-    "modified": "2020-12-02T15:53:32.691Z",
-    "contributors": [
-      "kosarev_va"
     ]
   },
   "Web/API/Clients": {
@@ -10217,12 +10190,6 @@
       "dginzburg"
     ]
   },
-  "Web/API/Notation": {
-    "modified": "2020-10-15T22:17:39.773Z",
-    "contributors": [
-      "opereverzeva"
-    ]
-  },
   "Web/API/Notifications_API": {
     "modified": "2019-03-23T22:16:18.353Z",
     "contributors": [
@@ -10239,16 +10206,6 @@
     "modified": "2019-03-23T22:07:21.654Z",
     "contributors": [
       "customizer"
-    ]
-  },
-  "Web/API/ParentNode": {
-    "modified": "2020-10-15T21:37:34.695Z",
-    "contributors": [
-      "boxa6",
-      "arturparkhisenko",
-      "AlexeyVasilievE",
-      "YozhEzhi",
-      "fscholz"
     ]
   },
   "Web/API/PaymentRequest": {
@@ -15424,43 +15381,6 @@
       "warsan"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2020-11-05T05:54:38.208Z",
-    "contributors": [
-      "ksam",
-      "nikolay94",
-      "SphinxKnight",
-      "duhas1993",
-      "CrawlOverYou",
-      "Hamelion-gm",
-      "MuradAz",
-      "teoli",
-      "BychekRU",
-      "syam1123",
-      "M57",
-      "Jmunb",
-      "repby",
-      "uleming",
-      "askhat",
-      "andygol",
-      "Grakov",
-      "AxDaim"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Constraint_validation": {
-    "modified": "2019-03-23T22:20:23.601Z",
-    "contributors": [
-      "lautsevich",
-      "Pescao"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-23T23:32:08.971Z",
-    "contributors": [
-      "Jmunb",
-      "Grakov"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2020-10-09T08:16:53.318Z",
     "contributors": [
@@ -16589,17 +16509,6 @@
     "modified": "2019-03-23T22:35:07.110Z",
     "contributors": [
       "BychekRU"
-    ]
-  },
-  "Web/HTML/Preloading_content": {
-    "modified": "2020-10-15T22:11:40.984Z",
-    "contributors": [
-      "warsan",
-      "alexa.poruch",
-      "Ilya-Zhulin",
-      "akochemasov",
-      "Skolpov",
-      "isatalkin"
     ]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
@@ -22682,13 +22591,6 @@
       "Dimon24021993"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:07:33.663Z",
-    "contributors": [
-      "nakhodkiin",
-      "ALegostaeva"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-11-28T14:23:33.816Z",
     "contributors": [
@@ -25600,6 +25502,33 @@
       "kvantor"
     ]
   },
+  "orphaned/Tools/Debugger/Keyboard_shortcuts": {
+    "modified": "2020-10-23T06:26:33.563Z",
+    "contributors": [
+      "ksam"
+    ]
+  },
+  "orphaned/Tools/Page_Inspector/Keyboard_shortcuts": {
+    "modified": "2020-07-16T22:34:52.844Z",
+    "contributors": [
+      "wbamberg",
+      "Aleksej"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2019-03-23T22:51:25.031Z",
+    "contributors": [
+      "neoxaker",
+      "NikitaCoder",
+      "In4in"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/replaceWith": {
+    "modified": "2020-12-02T15:53:32.691Z",
+    "contributors": [
+      "kosarev_va"
+    ]
+  },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2019-03-18T21:18:44.250Z",
     "contributors": [
@@ -25610,6 +25539,22 @@
     "modified": "2019-03-23T22:27:08.817Z",
     "contributors": [
       "teoli"
+    ]
+  },
+  "orphaned/Web/API/Notation": {
+    "modified": "2020-10-15T22:17:39.773Z",
+    "contributors": [
+      "opereverzeva"
+    ]
+  },
+  "orphaned/Web/API/ParentNode": {
+    "modified": "2020-10-15T21:37:34.695Z",
+    "contributors": [
+      "boxa6",
+      "arturparkhisenko",
+      "AlexeyVasilievE",
+      "YozhEzhi",
+      "fscholz"
     ]
   },
   "orphaned/Web/API/ParentNode/append": {
@@ -25710,6 +25655,43 @@
       "curdwithraisins"
     ]
   },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2020-11-05T05:54:38.208Z",
+    "contributors": [
+      "ksam",
+      "nikolay94",
+      "SphinxKnight",
+      "duhas1993",
+      "CrawlOverYou",
+      "Hamelion-gm",
+      "MuradAz",
+      "teoli",
+      "BychekRU",
+      "syam1123",
+      "M57",
+      "Jmunb",
+      "repby",
+      "uleming",
+      "askhat",
+      "andygol",
+      "Grakov",
+      "AxDaim"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Constraint_validation": {
+    "modified": "2019-03-23T22:20:23.601Z",
+    "contributors": [
+      "lautsevich",
+      "Pescao"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-23T23:32:08.971Z",
+    "contributors": [
+      "Jmunb",
+      "Grakov"
+    ]
+  },
   "orphaned/Web/HTML/Element/element": {
     "modified": "2019-03-23T22:16:19.667Z",
     "contributors": [
@@ -25721,6 +25703,17 @@
     "contributors": [
       "chrisdavidmills",
       "Akh-rman"
+    ]
+  },
+  "orphaned/Web/HTML/Preloading_content": {
+    "modified": "2020-10-15T22:11:40.984Z",
+    "contributors": [
+      "warsan",
+      "alexa.poruch",
+      "Ilya-Zhulin",
+      "akochemasov",
+      "Skolpov",
+      "isatalkin"
     ]
   },
   "orphaned/Web/JavaScript/Guide/Об_этом_руководстве": {
@@ -25749,6 +25742,13 @@
     "modified": "2019-03-23T22:37:24.165Z",
     "contributors": [
       "srvoland"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:07:33.663Z",
+    "contributors": [
+      "nakhodkiin",
+      "ALegostaeva"
     ]
   },
   "orphaned/Web/Manifest/serviceworker": {

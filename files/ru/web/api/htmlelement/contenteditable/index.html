@@ -44,68 +44,15 @@ element.contentEditable = "true"
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>{{CompatibilityTable}}</div>
+<p>{{Compat("api.HTMLElement.contentEditable")}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>11</td>
-   <td>{{CompatGeckoDesktop(1.9)}}</td>
-   <td>6</td>
-   <td>10.6</td>
-   <td>3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>3</td>
-   <td>{{CompatGeckoMobile(1.9)}}</td>
-   <td>6</td>
-   <td>{{CompatNo}}</td>
-   <td>5</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Bugs" name="Bugs">Bugs</h3>
-
-<ul>
- <li><a href="https://connect.microsoft.com/IE/feedback/details/796187/internet-explorer-10-crash-with-contenteditable-list">IE bug 796187</a>: IE10 crashes in some cases when editing lists</li>
- <li><a href="https://connect.microsoft.com/IE/feedback/details/858749">IE bug 858749</a>: IE11+ uses invalid positioning for caret when an element is floated</li>
- <li><a href="https://connect.microsoft.com/IE/feedbackdetail/view/809254">IE bug 809254</a>: IE9-10 window freezes when using mousewheel while dragging</li>
- <li><a href="https://connect.microsoft.com/IE/feedbackdetail/view/794285">IE bug 794285</a>: IE10-11 does not fire the <a href="/en-US/docs/Web/Events/input"><code>input</code></a> event</li>
- <li><a href="https://connect.microsoft.com/IE/feedbackdetail/view/801770">IE bug 801770</a>: IE10 crashes after selecting "Cut" from the context menu</li>
- <li><a href="https://connect.microsoft.com/IE/feedbackdetail/view/807199">IE bug 807199</a>: IE11+ does not allow placing the caret in an empty table cell</li>
- <li><a href="https://connect.microsoft.com/IE/feedbackdetail/view/774350">IE bug 774350</a>: IE10 does not fire <a href="/en-US/docs/Web/Events/contextmenu"><code>contextmenu</code></a> event when right-clicking on misspelled words</li>
- <li><a href="https://connect.microsoft.com/IE/feedbackdetail/view/864804">IE bug 864804</a>: IE11 appends {{HTMLElement("br")}} elements to {{HTMLElement("body")}} when showing/hiding an {{HTMLElement("iframe")}} with contenteditable document inside</li>
- <li><a href="https://connect.microsoft.com/IE/feedbackdetail/view/907422">IE bug 907422</a>: IE11 does not allow disabling resize handles for images/inputs</li>
-</ul>
-
+<p>In Internet Explorer, <code>contenteditable</code> cannot be applied to the
+    {{htmlelement("table")}}, {{htmlelement("col")}}, {{htmlelement("colgroup")}},
+    {{htmlelement("tbody")}}, {{htmlelement("td")}}, {{htmlelement("tfoot")}},
+    {{htmlelement("th")}}, {{htmlelement("thead")}}, and {{htmlelement("tr")}} elements
+    directly. A content editable {{htmlelement("span")}} or {{htmlelement("div")}} element
+    can be placed inside the individual table cells.</p>
+  
 <h2 id="See_also">See also</h2>
 
 <ul>
