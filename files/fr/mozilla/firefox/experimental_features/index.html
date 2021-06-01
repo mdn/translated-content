@@ -12,7 +12,9 @@ translation_of: Mozilla/Firefox/Experimental_features
 
 <p class="summary">Afin de tester les nouvelles fonctionnalités, Mozilla publie chaque jour une version test du navigateur Firefox , <a href="https://nightly.mozilla.org/">Firefox Nightly</a>. Les fonctionnalités expérimentales, par exemple l'implantation de standards de plateforme Web, sont disponibles. Cette page liste les procédures qui sont données par les versions Nightly de Firefox avec les informations pour les activer si nécessaire. Vous pouvez tester vos sites Web et les applications avant que ces procédures soient mises en mise à jour en ligne et vous assurer ainsi que tout fonctionnera avec le potentiel de la dernière technologie Web.</p>
 
-<p>Pour tester les nouveautés, téléchargez <a href="https://nightly.mozilla.org/">Firefox Nightly</a> ou <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Edition</a>.</p>
+<p>Les nouvelles fonctionnalités apparaissent d'abord dans la version <a href="https://nightly.mozilla.org/">Nightly</a> de Firefox, où elles sont souvent activées par défaut. Elles arrivent ensuite dans <a href="https://www.mozilla.org/fr/firefox/developer/">Firefox Developer Edition</a> et finalement dans la version finale. Une fois qu'une fonctionnalité est activée par défaut dans une version publiée, elle n'est plus expérimentale et doit être retirée de la liste.</p>
+
+<p>Les fonctionnalités expérimentales peuvent être activées ou désactivées à l'aide de <a href="https://support.mozilla.org/fr/kb/editeur-configuration-firefox">l'éditeur de configuration de Firefox</a> (entrez <code>about:config</code> dans la barre d'adresse de Firefox) en modifiant les <em>préférences</em> associées énumérées ci-dessous.</p>
 
 <h2 id="HTML">HTML</h2>
 
@@ -64,30 +66,6 @@ translation_of: Mozilla/Firefox/Experimental_features
      <sub>(disponible depuis 75)</sub></p>
    </td>
    <td><code>dom.forms.inputmode</code></td>
-  </tr>
-  <tr>
-   <td>
-    <p><strong>&lt;link rel="preload"&gt;</strong></p>
-
-    <p>L'attribut {{htmlattrxref ("rel", "link")}} de l'élément {{HTMLElement ("link")}} est destiné à améliorer les performances en vous permettant de télécharger des ressources plus tôt dans le cycle de vie de la page, en vous assurant qu'elles sont disponibles plus tôt et sont moins susceptibles de bloquer le rendu de la page. Lisez le contenu de <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content">préchargement avec rel = "preload"</a> pour plus de détails. Plus de détails sur l'état de cette fonctionnalité : {{bug (1639607)}}.</p>
-   </td>
-   <td>
-    <p>Activé<br>
-     <sub>(disponible depuis 78)</sub></p>
-   </td>
-   <td>
-    <p>Activé<br>
-     <sub>(disponible depuis 78)</sub></p>
-   </td>
-   <td>
-    <p>Activé<br>
-     <sub>(disponible depuis 78)</sub></p>
-   </td>
-   <td>
-    <p>Désactivé<br>
-     <sub>(disponible depuis 78)</sub></p>
-   </td>
-   <td><code>network.preload</code></td>
   </tr>
  </thead>
 </table>
