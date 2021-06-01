@@ -15392,13 +15392,6 @@
       "lerniri"
     ]
   },
-  "Web/Guide/Localizations_and_character_encodings": {
-    "modified": "2020-12-14T08:44:06.511Z",
-    "contributors": [
-      "azahw935",
-      "bogpok"
-    ]
-  },
   "Web/Guide/Parsing_and_serializing_XML": {
     "modified": "2020-10-11T12:29:17.772Z",
     "contributors": [
@@ -25690,6 +25683,13 @@
     "contributors": [
       "Jmunb",
       "Grakov"
+    ]
+  },
+  "orphaned/Web/Guide/Localizations_and_character_encodings": {
+    "modified": "2020-12-14T08:44:06.511Z",
+    "contributors": [
+      "azahw935",
+      "bogpok"
     ]
   },
   "orphaned/Web/HTML/Element/element": {

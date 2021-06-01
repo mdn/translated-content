@@ -31719,14 +31719,6 @@
       "fantasticfears"
     ]
   },
-  "Web/Guide/Localizations_and_character_encodings": {
-    "modified": "2020-05-07T10:52:56.537Z",
-    "contributors": [
-      "Ende93",
-      "91JOJO",
-      "xdsnet"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-03-23T23:20:37.061Z",
     "contributors": [
@@ -50580,6 +50572,14 @@
       "ibeen",
       "gaoyanqi",
       "leegorous"
+    ]
+  },
+  "orphaned/Web/Guide/Localizations_and_character_encodings": {
+    "modified": "2020-05-07T10:52:56.537Z",
+    "contributors": [
+      "Ende93",
+      "91JOJO",
+      "xdsnet"
     ]
   },
   "orphaned/Web/HTML/Element/command": {

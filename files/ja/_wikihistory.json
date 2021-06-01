@@ -33960,13 +33960,6 @@
       "silverskyvicto"
     ]
   },
-  "Web/Guide/Localizations_and_character_encodings": {
-    "modified": "2020-09-18T02:40:01.125Z",
-    "contributors": [
-      "morinokami",
-      "silverskyvicto"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2020-03-07T14:24:28.388Z",
     "contributors": [
@@ -52716,6 +52709,13 @@
       "teoli",
       "ethertank",
       "Potappo"
+    ]
+  },
+  "orphaned/Web/Guide/Localizations_and_character_encodings": {
+    "modified": "2020-09-18T02:40:01.125Z",
+    "contributors": [
+      "morinokami",
+      "silverskyvicto"
     ]
   },
   "orphaned/Web/HTML/Element/command": {
