@@ -9761,15 +9761,6 @@
       "caoweiju"
     ]
   },
-  "Web/API/ChildNode/replaceWith": {
-    "modified": "2020-10-15T21:56:06.625Z",
-    "contributors": [
-      "ecnelises",
-      "SphinxKnight",
-      "wzx",
-      "VictorDu"
-    ]
-  },
   "Web/API/Client": {
     "modified": "2019-03-23T22:16:43.346Z",
     "contributors": [
@@ -15128,12 +15119,6 @@
       "dextra",
       "Mgjbot",
       "Dewang"
-    ]
-  },
-  "Web/API/HTMLElement/forceSpellCheck": {
-    "modified": "2019-03-18T21:38:32.415Z",
-    "contributors": [
-      "varcat"
     ]
   },
   "Web/API/HTMLElement/hidden": {
@@ -31715,56 +31700,6 @@
       "Teago"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-04-29T21:49:51.078Z",
-    "contributors": [
-      "vanpipy",
-      "mike-j",
-      "GameWang",
-      "fanerge",
-      "mfoonirlee",
-      "Summer1026",
-      "xgqfrms-GitHub",
-      "Go7hic",
-      "panhe-xue",
-      "ObooChin",
-      "kevinfszu",
-      "teoli",
-      "xgqfrms",
-      "fghycode",
-      "jasonworg",
-      "mengzyou",
-      "Breezewish",
-      "Jianming",
-      "ziyunfei",
-      "xuxun",
-      "TimZhao",
-      "sunnylost",
-      "xcffl",
-      "princetoad@gmail.com"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Constraint_validation": {
-    "modified": "2020-08-07T06:53:08.941Z",
-    "contributors": [
-      "Nierifeng",
-      "shiyi25928988",
-      "yongchen"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-24T00:12:23.341Z",
-    "contributors": [
-      "eeeeeeeason",
-      "YueBiYang",
-      "008",
-      "guotingchaopr",
-      "ziyunfei",
-      "ibeen",
-      "gaoyanqi",
-      "leegorous"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2019-03-21T10:38:08.111Z",
     "contributors": [
@@ -31782,14 +31717,6 @@
     "contributors": [
       "ziyunfei",
       "fantasticfears"
-    ]
-  },
-  "Web/Guide/Localizations_and_character_encodings": {
-    "modified": "2020-05-07T10:52:56.537Z",
-    "contributors": [
-      "Ende93",
-      "91JOJO",
-      "xdsnet"
     ]
   },
   "Web/Guide/Mobile": {
@@ -44335,16 +44262,6 @@
       "wsv587"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T21:59:15.552Z",
-    "contributors": [
-      "RainSlide",
-      "fsy0718",
-      "zhangchen",
-      "qdlaoyao",
-      "fphonor"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:37:38.990Z",
     "contributors": [
@@ -50277,6 +50194,15 @@
       "Darrel.Hsu"
     ]
   },
+  "orphaned/Web/API/ChildNode/replaceWith": {
+    "modified": "2020-10-15T21:56:06.625Z",
+    "contributors": [
+      "ecnelises",
+      "SphinxKnight",
+      "wzx",
+      "VictorDu"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2020-10-15T21:21:28.912Z",
     "contributors": [
@@ -50325,6 +50251,12 @@
     "modified": "2019-03-23T22:06:02.004Z",
     "contributors": [
       "wuCrio"
+    ]
+  },
+  "orphaned/Web/API/HTMLElement/forceSpellCheck": {
+    "modified": "2019-03-18T21:38:32.415Z",
+    "contributors": [
+      "varcat"
     ]
   },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {
@@ -50592,6 +50524,64 @@
       "zzangxu"
     ]
   },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-04-29T21:49:51.078Z",
+    "contributors": [
+      "vanpipy",
+      "mike-j",
+      "GameWang",
+      "fanerge",
+      "mfoonirlee",
+      "Summer1026",
+      "xgqfrms-GitHub",
+      "Go7hic",
+      "panhe-xue",
+      "ObooChin",
+      "kevinfszu",
+      "teoli",
+      "xgqfrms",
+      "fghycode",
+      "jasonworg",
+      "mengzyou",
+      "Breezewish",
+      "Jianming",
+      "ziyunfei",
+      "xuxun",
+      "TimZhao",
+      "sunnylost",
+      "xcffl",
+      "princetoad@gmail.com"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Constraint_validation": {
+    "modified": "2020-08-07T06:53:08.941Z",
+    "contributors": [
+      "Nierifeng",
+      "shiyi25928988",
+      "yongchen"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-24T00:12:23.341Z",
+    "contributors": [
+      "eeeeeeeason",
+      "YueBiYang",
+      "008",
+      "guotingchaopr",
+      "ziyunfei",
+      "ibeen",
+      "gaoyanqi",
+      "leegorous"
+    ]
+  },
+  "orphaned/Web/Guide/Localizations_and_character_encodings": {
+    "modified": "2020-05-07T10:52:56.537Z",
+    "contributors": [
+      "Ende93",
+      "91JOJO",
+      "xdsnet"
+    ]
+  },
   "orphaned/Web/HTML/Element/command": {
     "modified": "2019-03-18T20:43:33.481Z",
     "contributors": [
@@ -50692,6 +50682,16 @@
     "contributors": [
       "teoli",
       "Ende93"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T21:59:15.552Z",
+    "contributors": [
+      "RainSlide",
+      "fsy0718",
+      "zhangchen",
+      "qdlaoyao",
+      "fphonor"
     ]
   },
   "orphaned/Web/JavaScript/javascript(起步)": {

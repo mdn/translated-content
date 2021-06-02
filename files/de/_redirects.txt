@@ -294,7 +294,7 @@
 /de/docs/HTML/Element/time	/de/docs/Web/HTML/Element/time
 /de/docs/HTML/Element/ul	/de/docs/Web/HTML/Element/ul
 /de/docs/HTML/Element/var	/de/docs/Web/HTML/Element/var
-/de/docs/HTML/HTML5	/de/docs/Web/Guide/HTML/HTML5
+/de/docs/HTML/HTML5	/de/docs/orphaned/Web/Guide/HTML/HTML5
 /de/docs/HTML/HTML5/HTML5_element_list	/de/docs/conflicting/Web/HTML/Element
 /de/docs/HTML/HTML5/liste_der_HTML5_elemente	/de/docs/conflicting/Web/HTML/Element
 /de/docs/HTML/Inline_elemente	/de/docs/Web/HTML/Inline_elements
@@ -664,6 +664,7 @@
 /de/docs/Web/Guide/HTML/Canvas_Tutorial/Grundlagen	/de/docs/Web/API/Canvas_API/Tutorial/Basic_usage
 /de/docs/Web/Guide/HTML/Content_Editable	/de/docs/Web/Guide/HTML/Editable_content
 /de/docs/Web/Guide/HTML/Einführung	/de/docs/Learn/HTML/Introduction_to_HTML
+/de/docs/Web/Guide/HTML/HTML5	/de/docs/orphaned/Web/Guide/HTML/HTML5
 /de/docs/Web/Guide/HTML/Inhaltskategorien	/de/docs/Web/Guide/HTML/Content_categories
 /de/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/de/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /de/docs/Web/HTML/Block-level_elemente	/de/docs/Web/HTML/Block-level_elements
@@ -694,7 +695,7 @@
 /de/docs/Web/HTML/Globale_Attribute/tabindex	/de/docs/Web/HTML/Global_attributes/tabindex
 /de/docs/Web/HTML/Globale_Attribute/title	/de/docs/Web/HTML/Global_attributes/title
 /de/docs/Web/HTML/Globale_Attribute/translate	/de/docs/Web/HTML/Global_attributes/translate
-/de/docs/Web/HTML/HTML5	/de/docs/Web/Guide/HTML/HTML5
+/de/docs/Web/HTML/HTML5	/de/docs/orphaned/Web/Guide/HTML/HTML5
 /de/docs/Web/HTML/HTML5/HTML5_element_list	/de/docs/conflicting/Web/HTML/Element
 /de/docs/Web/HTML/Inline_elemente	/de/docs/Web/HTML/Inline_elements
 /de/docs/Web/HTML/Referenz	/de/docs/Web/HTML/Reference
@@ -871,6 +872,7 @@
 /de/docs/Web/JavaScript/Reference/Operators/Modulo	/de/docs/Web/JavaScript/Reference/Operators/Remainder
 /de/docs/Web/JavaScript/Reference/Operators/Objekt_Initialisierer	/de/docs/Web/JavaScript/Reference/Operators/Object_initializer
 /de/docs/Web/JavaScript/Reference/Operators/Optionale_Verkettung	/de/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+/de/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/de/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /de/docs/Web/JavaScript/Reference/Operators/Spread_operator	/de/docs/conflicting/Web/JavaScript/Reference/Operators/Spread_syntax
 /de/docs/Web/JavaScript/Reference/Operators/Vergleichsoperatoren	/de/docs/conflicting/Web/JavaScript/Reference/Operators_5b3986b830cf68059c03079ef10ff039
 /de/docs/Web/JavaScript/Reference/Operators/Zuweisungsoperator	/de/docs/conflicting/Web/JavaScript/Reference/Operators_bf514126b51a6e9b7591809ecc554076

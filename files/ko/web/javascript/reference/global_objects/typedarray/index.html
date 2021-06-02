@@ -6,6 +6,7 @@ tags:
   - TypedArray
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
+browser-compat: javascript.builtins.TypedArray
 ---
 <div>{{JSRef}}</div>
 
@@ -186,152 +187,13 @@ Int8Array.prototype.foo = "bar";
 
 <p>{{page('ko/Web/JavaScript/Reference/Global_Objects/TypedArray/prototype','메서드')}}</p>
 
-<h2 id="스펙">스펙</h2>
+<h2 id="specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">스펙</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>형식화 배열 뷰 유형이 있는 <code>TypedArray</code> 및 <code>ArrayBufferView</code> 인터페이스로 정의됨. ECMAScript 6로 대체됨.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>ECMA 표준에서 초기 정의. 인덱스 있고 유명 속성에 대한 행동이 지정됨. <code>new</code>가 필요함이 지정됨.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<h2 id="browser_compatibility">브라우저 호환성</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(7.0)}}</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td>Indexed properties not consulting prototype</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatGeckoDesktop("25")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Named properties</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("30")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>new</code> is required</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("44")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("2") }}</td>
-   <td>10</td>
-   <td>11.6</td>
-   <td>4.2</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Indexed properties not consulting prototype</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{ CompatGeckoMobile("25") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-  </tr>
-  <tr>
-   <td>Named properties</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{ CompatGeckoMobile("30") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>new</code> is required</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("44") }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] <code>-1</code>과 비슷한 값은 인덱스 있는 속성으로 여겨지지 않기에 그 프로토타입 속성값을 반환합니다.</p>
-
-<h2 id="호환성_주의사항">호환성 주의사항</h2>
-
-<p>ECMAScript 2015 (ES6)를 시작으로, <code>TypedArray</code> 생성자는 {{jsxref("Operators/new", "new")}} 연산자로 생성되어야 합니다. <code>new</code> 없는 함수로서 <code>TypedArray</code> 생성자를 호출하면, 이제부터 {{jsxref("TypeError")}}가 발생합니다.</p>
-
-<pre class="brush: js example-bad">var dv = Int8Array([1, 2, 3]);
-// TypeError: new 없은 내장 Int8Array 생성자
-// 호출은 금지됩니다</pre>
-
-<pre class="brush: js example-good">var dv = new Int8Array([1, 2, 3]);</pre>
+<p>{{Compat}}</p>
 
 <h2 id="참조">참조</h2>
 

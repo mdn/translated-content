@@ -13087,15 +13087,6 @@
       "loella16"
     ]
   },
-  "Web/API/ChildNode/replaceWith": {
-    "modified": "2020-10-15T21:55:03.476Z",
-    "contributors": [
-      "tristantheb",
-      "loella16",
-      "Spictheweb",
-      "v-Stein"
-    ]
-  },
   "Web/API/Client": {
     "modified": "2020-11-16T08:56:05.543Z",
     "contributors": [
@@ -15809,12 +15800,6 @@
   },
   "Web/API/Element/setPointerCapture": {
     "modified": "2019-03-18T21:38:49.004Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "Web/API/Element/tabStop": {
-    "modified": "2019-03-18T21:38:50.214Z",
     "contributors": [
       "loella16"
     ]
@@ -31131,31 +31116,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-11-06T04:21:55.272Z",
-    "contributors": [
-      "Awebsome",
-      "teoli",
-      "tregagnon",
-      "leoetlino",
-      "Flaburgan",
-      "DavidWalsh",
-      "vigia122",
-      "MatthieuMaler",
-      "rd6137",
-      "Dwchiang",
-      "BenoitL"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-24T00:07:20.983Z",
-    "contributors": [
-      "Goofy",
-      "Bringdal",
-      "tregagnon",
-      "xaky"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2020-04-07T04:00:20.055Z",
     "contributors": [
@@ -40466,12 +40426,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T21:59:06.221Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:16:58.418Z",
     "contributors": [
@@ -45059,6 +45013,15 @@
       "Copen"
     ]
   },
+  "orphaned/Web/API/ChildNode/replaceWith": {
+    "modified": "2020-10-15T21:55:03.476Z",
+    "contributors": [
+      "tristantheb",
+      "loella16",
+      "Spictheweb",
+      "v-Stein"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2019-03-23T23:28:22.437Z",
     "contributors": [
@@ -45073,6 +45036,12 @@
   },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2019-03-18T21:39:20.100Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "orphaned/Web/API/Element/tabStop": {
+    "modified": "2019-03-18T21:38:50.214Z",
     "contributors": [
       "loella16"
     ]
@@ -45229,6 +45198,31 @@
       "loella16"
     ]
   },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-11-06T04:21:55.272Z",
+    "contributors": [
+      "Awebsome",
+      "teoli",
+      "tregagnon",
+      "leoetlino",
+      "Flaburgan",
+      "DavidWalsh",
+      "vigia122",
+      "MatthieuMaler",
+      "rd6137",
+      "Dwchiang",
+      "BenoitL"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-24T00:07:20.983Z",
+    "contributors": [
+      "Goofy",
+      "Bringdal",
+      "tregagnon",
+      "xaky"
+    ]
+  },
   "orphaned/Web/HTML/Element/isindex": {
     "modified": "2020-10-15T21:24:06.247Z",
     "contributors": [
@@ -45266,6 +45260,12 @@
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
     "modified": "2020-10-15T21:30:59.712Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T21:59:06.221Z",
     "contributors": [
       "SphinxKnight"
     ]

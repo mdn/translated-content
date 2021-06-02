@@ -8166,17 +8166,6 @@
       "lxdiamond"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-03-23T23:33:45.828Z",
-    "contributors": [
-      "suriyaa",
-      "teoli",
-      "timausk",
-      "thorsten.rinne",
-      "matze",
-      "nothine"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2019-03-18T20:37:20.242Z",
     "contributors": [
@@ -13258,12 +13247,6 @@
       "TorbenKoehn"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:05:45.089Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:55:35.876Z",
     "contributors": [
@@ -14788,6 +14771,17 @@
       "td8"
     ]
   },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-03-23T23:33:45.828Z",
+    "contributors": [
+      "suriyaa",
+      "teoli",
+      "timausk",
+      "thorsten.rinne",
+      "matze",
+      "nothine"
+    ]
+  },
   "orphaned/Web/HTML/Global_attributes/dropzone": {
     "modified": "2020-10-15T21:40:11.332Z",
     "contributors": [
@@ -14805,6 +14799,12 @@
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype": {
     "modified": "2020-10-15T22:01:09.829Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:05:45.089Z",
     "contributors": [
       "schlagi123"
     ]
