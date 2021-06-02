@@ -1,6 +1,0 @@
-# FROM-URL	TO-URL
-/my/docs/Learn/CSS/CSS-မိတ်ဆက်	/en-US/docs/Learn/CSS/First_steps
-/my/docs/Learn/HTML/Forms	/my/docs/Learn/Forms
-/my/docs/Learn/HTML/Forms/HTML5_input_types	/my/docs/Learn/Forms/HTML5_input_types
-/my/docs/Learn/HTML/Forms/Your_first_form	/my/docs/Learn/Forms/Your_first_form
-/my/docs/Web/Guide/HTML	/my/docs/Learn/HTML

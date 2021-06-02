@@ -140,11 +140,9 @@ Angular使用 <code>\{{item.description}}</code> 從 <code>items</code> 陣列�
   this.allItems.splice(this.allItems.indexOf(item), 1);
 }</pre>
 
-
 <p>上面 <code>remove()</code> 方法使用了 JavaScript <code>Array.splice()</code> 方法，並透過 <code>indexOf</code> 取得欲刪除項目的陣列索引中位置，以從陣列中刪除該項目。
 簡單來說，<code>splice()</code> 方法從陣列中刪除了該項目。 <code>splice()</code> 的更多訊息請參閱 MDN Web 文章：<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.prototype.splice()</code></a>。</p>
   
-
 <h2 id="add_logic_to_itemcomponent-">在 ItemComponent 添加邏輯</h2>
 
 <p>使用 <code>ItemComponent</code> UI， 你必須在元件中添加邏輯，就跟在 function 中寫輸入與輸出的方式一樣。</p>

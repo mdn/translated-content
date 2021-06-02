@@ -48,71 +48,7 @@ var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // the blob</pre>
 
 <h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>20</td>
-   <td>{{CompatGeckoDesktop("13.0")}} [1]</td>
-   <td>10</td>
-   <td>12.10</td>
-   <td>8</td>
-  </tr>
-  <tr>
-   <td>in Workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("14.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("13.0")}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>in Workers</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("14.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Before Firefox 16, the second parameter, when set to <code>null</code> or <code>undefined</code>, leads to an error instead of being handled as an empty dictionary.</p>
+<p>{{Compat("api.Blob.Blob")}}</p>
 
 <h2 id="See_also">See also</h2>
 

@@ -2,6 +2,7 @@
 title: ライブサンプル
 slug: MDN/Structures/Live_samples
 tags:
+  - Guide
   - Intermediate
   - MDN Meta
   - Structures
@@ -10,186 +11,101 @@ translation_of: MDN/Structures/Live_samples
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">MDN は、記事に表示されているサンプルコードを、実際に見ている実行可能なサンプルに変換することをサポートしています。これらのライブサンプルには、HTML、CSS、およびJavaScriptを任意の組み合わせで含めることができます。</span>「ライブ」サンプルはインタラクティブではありません。ただし、実際にコードサンプルによって生成されるため、サンプルの表示出力はサンプルのコードと正確に一致します。</p>
+<p><span class="seoSummary">MDN は、記事に表示されているサンプルコードを、実際に見ている実行可能なサンプルに変換することをサポートしています。これらのライブサンプルには、HTML、CSS、JavaScript を任意の組み合わせで含めることができます。</span>「ライブ」サンプルは<em>インタラクティブではありません</em>。ただし、実際にコードサンプルによって生成されるため、サンプルの表示出力はサンプルのコードと正確に一致します。</p>
 
-<h2 id="How_does_the_live_sample_system_work" name="How_does_the_live_sample_system_work">ライブサンプルシステムの仕組み</h2>
+<h2 id="How_does_the_live_sample_system_work">ライブサンプルシステムの仕組み</h2>
 
-<p>ライブサンプルシステムは、グループ内のすべてのコードを集め、1 つの HTML ファイルにマージし、その HTML を {{HTMLElement("iframe")}} にレンダリングします。このためライブサンプルは2つの部分で構成されています。</p>
+<p>ライブサンプルシステムは、グループ内のすべてのコードを集め、1 つの HTML ファイルにマージし、その HTML を {{HTMLElement("iframe")}} にレンダリングします。このためライブサンプルは 2 つの部分で構成されています。</p>
 
 <ul>
  <li>コードブロックのグループ</li>
  <li>コードブロックの結果を表示する (フレームまたはリンクを作成する) マクロ</li>
 </ul>
 
-<p>このコンテキストでは、コードブロックの「グループ」は、見出しまたはブロック要素 ( {{HTMLElement("div")}} など) の ID によって識別されます。</p>
+<p>このコンテキストでは、コードブロックの「グループ」は、見出しまたはブロック要素 ({{HTMLElement("div")}} など) の ID によって識別されます。</p>
 
 <ul>
  <li>ID がブロック要素に属する場合、そのグループは、その ID が使用される囲むブロック要素内のすべてのコードブロックを含む。</li>
- <li>ID が見出しに属する場合、その見出しの後ろで同じ見出しレベルの次の見出しの前にあるすべてのコードブロックがグループに含まれます。指定された見出しの小見出しのコードブロックはすべて使用されていることに注意してください。これがあなたが望む効果でない場合は、代わりにブロック要素に ID を使用してください。</li>
+ <li>ID が見出しに属する場合、その見出しの後ろで同じ見出しレベルの次の見出しの前にあるすべてのコードブロックがグループに含まれます。指定された見出しの小見出しのコードブロックはすべて使用されていることに注意してください。これが望ましい効果でない場合は、代わりにブロック要素に ID を使用してください。</li>
 </ul>
 
-<p>このマクロでは、特別な URL を使用して、<code>http://<em>url-of-page</em>$samples/<em>group-id</em></code> (<code>group-id</code> はコードが配置されている見出しまたはブロックの ID) という特定のグループのサンプルコードを取得します。</p>
+<p>このマクロは特別な URL を使用して、指定されたグループのサンプルコード、例えば <code>https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/animation/_samples_/Cylon_Eye</code> を取得します。一般的な構造は <code>https://<em>url-of-page</em>_samples/<em>group-id</em></code> で、 <code>group-id</code> はコードが配置されている見出しまたはブロックの ID です。</p>
 
-<p>結果として得られるフレーム (またはページ) はサンドボックスで保護されており、技術的にはウェブ上で動作するものすべてを行う可能性があります。もちろん、実際の問題として、コードはそのページの要点に貢献しなければなりません。MDN 上で実行されているランダムなものは、エディターコミュニティによって削除されます。</p>
+<p>結果として得られるフレーム (またはページ) はサンドボックスで保護されており、技術的にはウェブ上で動作するものすべてを行う可能性があります。もちろん、実際の問題として、そのコードがそのページの要点に貢献していなければなりません。無関係なものが MDN 上で実行されている場合は、編集者コミュニティが削除します。</p>
 
-<div class="note">
-<p><strong>注意:</strong> ライブサンプルの出力を表示するには、マクロを使用する<strong>必要があります。</strong>MDN のエディターは、セキュリティを確保するために <code>&lt;iframe&gt;</code> 要素の直接使用を取り除きます。</p>
+<div class="note notecard">
+<p><strong>注:</strong> ライブサンプルの出力を表示するには、マクロを使用する<strong>必要があります</strong>。</p>
 </div>
 
-<p>サンプルのコードを含む各 {{HTMLElement("pre")}} ブロックには、HTML、CSS、または JavaScript コードのいずれかを示すクラスがあり、それぞれ「brush:html」、「brush:css」、「brush:js」です。これらのクラスは、wiki が正しく使うために、対応するコードブロック上になければなりません。幸いにも、各クラスはエディターのツールバーで構文ハイライト機能を使用すると自動的に追加されます。</p>
+<p>サンプルのコードを含む各 {{HTMLElement("pre")}} ブロックには、HTML、CSS、または JavaScript コードのいずれかを示すクラスがあり、それぞれ "brush: html"、"brush: css"、"brush: js" です。これらのクラスは、対応するコードブロック上になければなりません。</p>
 
-<p>ライブサンプルシステムには多数のオプションが用意されており、少しずつ見ていきます。</p>
+<p>ライブサンプルシステムにはたくさんのオプションが用意されていますが、それらを少しずつ分解して見ていきたいと思います。</p>
 
-<h3 id="Live_sample_macros" name="Live_sample_macros">ライブサンプルのマクロ</h3>
+<h3 id="Live_sample_macros">ライブサンプルのマクロ</h3>
 
 <p>ライブサンプルを表示するために使用できるマクロは 2 つあります。</p>
 
 <ul>
- <li><span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> はライブサンプルをページに埋め込みます。</li>
- <li><span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/LiveSampleLink.ejs">LiveSampleLink</a></code></span> はライブサンプルを新しいページに開くリンクを作成します。</li>
+ <li><code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> はライブサンプルをページに埋め込みます。</li>
+ <li><code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/LiveSampleLink.ejs">LiveSampleLink</a></code> はライブサンプルを新しいページに開くリンクを作成します。</li>
 </ul>
 
-<p>多くの場合、<span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> や <span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/LiveSampleLink.ejs">LiveSampleLink</a></code></span> マクロは、追加の作業をほぼ全くすることなくページに追加することができます。サンプルが見出しの ID で識別されるか、ID を持つブロックに含まれていれば、マクロを追加するだけでその作業が行われるはずです。</p>
+<p>多くの場合、<code>EmbedLiveSample</code> マクロや <code>LiveSampleLink</code> マクロは、追加の作業をほぼ全くすることなくページに追加することができます。サンプルが見出しの ID で識別されるか、ID を持つブロックに含まれていれば、マクロを追加するだけでその作業が行われるはずです。</p>
 
-<h4 id="EmbedLiveSample_macro" name="EmbedLiveSample_macro">EmbedLiveSample マクロ</h4>
+<h4 id="EmbedLiveSample_macro">EmbedLiveSample マクロ</h4>
 
-<pre class="syntaxbox notranslate"> \{{EmbedLiveSample(<em>block_ID</em>, <em>width</em>, <em>height</em>, <em>screenshot_URL</em>, <em>page_slug</em>)}}</pre>
-
-<div class="Note">
-<dl>
- <dd>見出しが翻訳されている場合、その ID 属性が自動的に翻訳されたテキストに合わせてアップデートされます。そのため、マクロ内で呼び出される <em>block_ID</em> の値を変更しなくていけません。{{訳注("日本語では見出し要素には <code>name</code> 属性を追加して英語版と同じ ID となるようにしています。")}}</dd>
-</dl>
-</div>
+<pre class="brush: js"> \{{EmbedLiveSample(<em>block_ID</em>, <em>width</em>, <em>height</em>, <em>screenshot_URL</em>, <em>page_slug</em>)}}</pre>
 
 <dl>
  <dt>block_ID</dt>
- <dd>必須: コードを描画する見出しまたは囲みブロックの ID。適切な ID であるかどうかを確認する最善の方法は、ページの目次のセクションの URL を見ることです。<strong>注記:</strong> 見出しが翻訳されている場合、その ID 属性が自動的に翻訳されたテキストに合わせてアップデートされます。そのため、マクロ内で呼び出される <em>block_ID</em> の値を変更しなくていけません。 {{訳注("日本語では見出し要素には <code>name</code> 属性を追加して英語版と同じ ID となるようにしています。")}}</dd>
+ <dd>必須: コードを描画する見出しまたは囲みブロックの ID。適切な ID であるかどうかを確認する最善の方法は、ページの目次でそのセクションの URL を見ることです。ページのソースを見ることで確認することもできます。</dd>
  <dt>width</dt>
- <dd>作成する {{HTMLElement("iframe")}} の幅で、<code>px</code> で指定します。これはオプションで、省略すると合理的なデフォルト幅が使用されます。特定の幅を使用する場合は、height パラメーターも指定する<em>必要があります。</em></dd>
+ <dd>作成する {{HTMLElement("iframe")}} の幅で、<code>px</code> で指定します。これは省略可能で、省略すると合理的な既定の幅が使用されます。特定の幅を使用する場合は、height 引数も指定する<em>必要があります</em>。</dd>
  <dt>height</dt>
- <dd>作成する {{HTMLElement("iframe")}} の高さで、<code>px</code> で指定します。これはオプションで、省略すると合理的なデフォルトの高さが使用されます。特定の高さを使用する場合は、width パラメーターも指定する<em>必要があります。</em>どちらか一方しか使用しない場合は、デフォルトのフレームサイズが使用されます。</dd>
+ <dd>作成する {{HTMLElement("iframe")}} の高さで、<code>px</code> で指定します。これは省略可能で、省略すると合理的な既定の高さが使用されます。特定の高さを使用する場合は、width 引数も指定する<em>必要があります</em>。どちらか一方しか使用しない場合は、既定のフレームサイズが使用されます。</dd>
  <dt>screenshot_URL</dt>
- <dd>ライブサンプルの外観を示すスクリーンショットの URL。これはオプションですが、新しいテクノロジが動作しないユーザのブラウザに対して役立つ可能性があるため、サンプルがブラウザーでサポートされている場合の様子を確認できます。このパラメータを含めると、ライブサンプルの横に、適切な見出し付きのスクリーンショットが表示されます。</dd>
+ <dd>ライブサンプルの外観を示すスクリーンショットの URL。これは省略可能ですが、新しい技術が動作しないユーザーのブラウザーではサンプルがブラウザーでサポートされている場合の様子を確認できるので有用です。この引数を含めると、ライブサンプルの横に、適切な見出し付きのスクリーンショットが表示されます。</dd>
  <dt>page_slug</dt>
- <dd>サンプルが入っているページのスラグ。これはオプションで、指定されていない場合はマクロが使用されている同じページからサンプルが引き出されます。</dd>
+ <dd>
+   <p>サンプルが入っているページのスラッグです。これは省略可能で、指定されていない場合、サンプルはマクロが使用されたのと同じページから取得されます。</p>
+   <div class="notecard warning">
+   <strong>警告:</strong> あるコードを含むページのライブサンプルを別のターゲットページに表示するには、コードを含むページ自身が <span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> マクロを使用して、そのページにライブサンプルを埋め込まなければなりません。そうしないと、コードを含むページが自身のページで <span class="templateLink"><code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> マクロを使用していない場合、ライブサンプルはターゲットページに全く表示されません。 (<a href="https://github.com/mdn/yari/issues/2243">Yari issue #2243</a>を参照してください。)
+   </div>
+ </dd>
 </dl>
 
-<ol>
-</ol>
+<h4 id="LiveSampleLink_macro">LiveSampleLink マクロ</h4>
 
-<h4 id="LiveSampleLink_macro" name="LiveSampleLink_macro">LiveSampleLink マクロ</h4>
-
-<pre class="syntaxbox notranslate"> \{{LiveSampleLink(<em>block_ID</em>, <em>link_text</em>)}}</pre>
+<pre class="brush: js"> \{{LiveSampleLink(<em>block_ID</em>, <em>link_text</em>)}}</pre>
 
 <dl>
  <dt>block_ID</dt>
- <dd>コードを引っ張ってくる見出しまたは囲みブロックの ID。正しいIDであるかどうかを確認する最善の方法は、ページの目次のセクションの URL を見ることです。<strong>注記:</strong> 見出しが翻訳されている場合、その ID 属性が自動的に翻訳されたテキストに合わせてアップデートされます。そのため、マクロ内で呼び出される <em>block_ID</em> の値を変更しなくていけません。{{訳注("日本語では見出し要素には <code>name</code> 属性を追加して英語版と同じ ID となるようにしています。")}}</dd>
+ <dd>コードの引用元となる見出しまたは囲みブロックの ID。正しい ID であるかどうかを確認する最善の方法は、ページの目次でそのセクションの URL を見ることです。ページのソースを見ることで確認することもできます。</dd>
  <dt>link_text</dt>
  <dd>リンクテキストとして使用する文字列。</dd>
 </dl>
 
-<h2 id="Using_the_live_sample_system" name="Using_the_live_sample_system">ライブサンプルシステムを使用する</h2>
+<h2 id="Using_the_live_sample_system">ライブサンプルシステムを使用する</h2>
 
 <p>以下のセクションでは、ライブサンプルシステムの一般的な使用例をいくつか説明します。</p>
 
-<p>これらのすべてのケースでライブサンプルの結果を表示するには、エディターで<strong>公開</strong>をクリックする必要があります (編集モードから離れます)。ライブサンプルには<a href="https://ja.wikipedia.org/wiki/%E3%82%A4%E3%83%B3%E3%82%BB%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3">インセプション</a>のように再帰的な性質があるため、<strong>プレビュー</strong>機能でライブサンプルを表示することは<em>できません。</em></p>
-
-<h3 id="Turning_snippets_into_live_samples" name="Turning_snippets_into_live_samples">スニペットをライブサンプルにする</h3>
+<h3 id="Turning_snippets_into_live_samples">スニペットをライブサンプルにする</h3>
 
 <p>よく使用されるケースの 1 つは、既に MDN に表示されている既存のコードスニペットを実際のサンプルに変換することです。</p>
 
-<h4 id="Prepare_the_code_samples" name="Prepare_the_code_samples">コードサンプルを準備する</h4>
+<h4 id="Prepare_the_code_samples">コードサンプルを準備する</h4>
 
-<p>最初のステップでは、コードスニペットを追加するか、既存のサンプルをコンテンツやマークアップの観点からライブサンプルとして使用できるようにします。コードスニペットは、まとめて実行可能な完全な例を構成する必要があります。たとえば、既存のスニペットに CSS のみが表示されている場合は、CSS が操作する HTML のスニペットを追加する必要があります。<br>
- <br>
- それぞれのコードは {{HTMLElement("pre")}} ブロックにあり、各ブロックはブロックごとに言語ごとに適切にマークされていなければなりません。ほとんどの場合、これは既に行われていますが、コードの各部分が正しい構文で構成されていることを確認することは、常に二重チェックしておく価値があります。ツールバーの <strong>PRE</strong> アイコンの隣には、MDN が構文強調表示を行うさまざまな言語のドロップダウンメニューアイコン (ツールヒント: 構文ハイライター) があります。構文の強調表示のためにブロックの言語を設定することで、ライブサンプルシステムの目的のための言語と関連付けられます。</p>
+<p>最初のステップでは、コードスニペットを追加するか、既存のサンプルをコンテンツやマークアップの観点からライブサンプルとして使用できるようにします。コードスニペットは、まとめて実行可能な完全な例を構成する必要があります。たとえば、既存のスニペットに CSS のみが表示されている場合は、CSS が操作する HTML のスニペットを追加する必要があります。</p>
 
-<div class="note">
-<p><strong>注意:</strong> 複数の言語のブロックが独立していて、すべて一緒に連結する場合があるかもしれません。コードの塊りに続いて、動作原理の説明があって、また次の塊り、…という構成ができます。これにより、説明テキストを交えたライブサンプルを利用するチュートリアルなどを作成することがより容易になります。</p>
+<p>それぞれのコードは {{HTMLElement("pre")}} ブロックにあり、各ブロックはブロックごとに言語ごとに適切にマークされていなければなりません。ほとんどの場合、これは既に行われていますが、コードの各部分が正しい構文で構成されていることを確認することは、常に二重チェックしておく価値があります。これは、 <code>&lt;pre&gt;</code> 要素の <code>brush:<em>language-type</em></code> というクラスで行います。 <em>language-type</em> は、ブロックに含まれる言語の種類で、 <code>html</code>、<code>css</code>、<code>js</code> などがあります。</p>
+
+<div class="note notecard">
+<p><strong>注</strong>: 言語ごとに複数のブロックを設置することができます。その場合はすべて連結されます。これによって、コードの塊を置き、その後でその動作の説明を置き、さらに別な塊を置くというようなことができます。これにより、ライブサンプルと説明文を組み合わせたチュートリアルなどを簡単に作成することができます。</p>
 </div>
 
 <p>HTML、CSS、JavaScript コードの {{HTMLElement("pre")}} ブロックがそれぞれの言語の構文強調表示に対して正しく設定されていることを確認してください。</p>
 
-<div class="note">
-<p><strong>注意:</strong> MDN にコンテンツを貼り付ける際には、意図せず不要なスタイルやクラスを取り込む可能性のあるスタイル付きコンテンツ (たとえば、別のサイトからコピーされたコードの構文強調を含む) を貼り付けることを意識してください。こうならないように注意してください。必要に応じて、ソースモードで編集内容を確認し、不要なスタイルやクラスを削除してください (貼り付ける前に確認するか、代わりに「プレーンテキストとして貼り付け」オプションを使用してください)。</p>
-</div>
-
-<h4 id="Insert_the_live_sample_macro" name="Insert_the_live_sample_macro">ライブサンプルマクロを挿入する</h4>
-
-<p>コードが配置され、各ブロックの言語を識別するように適切に構成されたら、iframeを作成するマクロを挿入する必要があります。</p>
-
-<ol>
- <li>ツールバーの<strong>コードサンプルの iFrame を挿入</strong>ボタン (<img alt="" src="https://mdn.mozillademos.org/files/5383/insert-live-sample-btn.png" style="height: 18px; width: 19px;">) をクリックします。<br>
-  ライブサンプルフレームを設定するためのダイアログボックスが開きます<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/5385/sample-finder.png" style="height: 358px; width: 405px;"></li>
- <li><strong>ドキュメント</strong>に埋め込みたいサンプルが含まれている記事のタイトルを入力します。<br>
-  デフォルトでは現在編集中の記事ですが、MDN の別の場所で記事を選択することもできます。これにより、必要に応じて複数ページのサンプルを再利用することができます。(このフィールドに新しいテキストを入力すると、部分的に一致するページのメニューが表示され、必要なページのタイトルを選択します)</li>
- <li><strong>ドキュメント内のセクション</strong>メニューで、埋め込みたいサンプルのコードブロックを含む記事のセクションを選択します</li>
- <li><strong>OK</strong>ボタンをクリックして、サンプルフレームを作成するマクロ呼び出しを生成して挿入します。マクロ呼び出しは次のようになります<br>
-  <strong>\{{ EmbedLiveSample('Live_sample_demo') }}</strong></li>
-</ol>
-
-<h3 id="Adding_a_new_live_sample" name="Adding_a_new_live_sample">新規ライブサンプルを追加する</h3>
-
-<p>新しいページを作成していて、ライブサンプルとして提示したいコードを挿入したい場合は、さらに多くの作業をエディターで行うことができます！</p>
-
-<ol>
- <li>ツールバーの<strong>コードサンプルテンプレートを挿入</strong>ボタン (<img alt="" src="/files/4265/live-sample-button.png" style="height: 19px; width: 21px;">) をクリックします。<br>
-  ライブサンプルに名前を付けるよう求める簡単なダイアログが表示されます。<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/5387/insert-live-sample-template.png" style="height: 155px; width: 251px;"></li>
- <li>サンプルのタイトルを入力します。これはサンプルの見出しとして使用されます。このタイトルがページの文脈の中で意味が通ることを確認してください。</li>
- <li>入力したタイトルの新しい見出しが、HTML、CSS、およびJavaScript用のサブ見出しと空のコードブロックとともに作成されます。</li>
- <li>必要のない見出しやコードブロックを削除してください。</li>
- <li>適切なコードブロックでサンプルを構成するコードを入力します。</li>
- <li><a href="#conventions">取り決めを確認します。</a></li>
-</ol>
-
-<h3 id="Using_the_Sample_Finder" name="Using_the_Sample_Finder">サンプルファインダーを使う</h3>
-
-<p>前述のように、サンプルファインダーは、<strong>コードサンプルの iFrame を挿入</strong>アイコンをクリックするとアクティブになります。残念なことに、サンプルファインダーは編集しないと<strong>使用できない</strong>マクロを生成することがあります。必要に応じて慎重にチェックして編集すべき 2 つの問題エリアがあります。</p>
-
-<ol>
- <li><strong>ドキュメント</strong>フィールド。このフィールドは入力時に検索され、入力した文字列にマッチするドキュメントのリストが表示されます。しかし、提示されたリストにはサブページは<strong>含まれません</strong>。たとえば、メインページの <a href="https://developer.mozilla.org/ja/docs/Web/CSS/@counter-style">@counter-style</a> の下にある <a href="https://developer.mozilla.org/ja/docs/Web/CSS/@counter-style/negative">Negative </a>のサブページで作業しているとします。サンプルファインダーでの検索では Negative は見つかりませんが、メインページの @counter-style が検索されます。@counter-style を選択すると、フィールドの背景が緑色に変わります。このことによる問題については以下を参照してください。</li>
- <li><strong>ドキュメントのセクション</strong>。ドキュメント内のプルダウンメニューのセクションに、必要なセクションが表示されないことがあります。例のように、ただ一つ選択して簡単な編集をすることで修正することができます。</li>
-</ol>
-
-<p>サンプルファインダーは次のようになりました。</p>
-
-<pre class="notranslate"><code>\{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/@counter-style') }}</code></pre>
-
-<p>このマクロは動作しません。block_ID が Examples となっていますが、この場合は Example でなければなりません。(このセクションのソース ID を調べて、使用する必要のある block_ID を確認してください。) 同様に page_slug が @counter-style になっていますが、@counter-style/negative となるべきです。これらの修正は、編集ページで直接行うことができます。</p>
-
-<p>編集すると、マクロは次のようになります。</p>
-
-<pre class="notranslate"><code>\{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/@counter-style/negative') }}</code></pre>
-
-<p>この編集されたマクロは動作します。マクロが正常に動作している場合は、<strong>Open in CodePen </strong>ボタンが表示されます。この例のサムネイルは、<strong>Open in CodePen</strong> ボタンの上に表示されます。ボタンがあるがサムネイルがない場合は、少し待ってください。サーバーがこれを生成するには時間がかかることがあります。</p>
-
-<h2 id="Live_sample_demo" name="Live_sample_demo">更新が必要なサンプルを検索する</h2>
-
-<p>既存のサンプルを探して更新する場合は、更新の主な 3 つの種類があります:</p>
-
-<ul>
- <li>既存の非ライブサンプルスニペットをライブサンプルに変換。</li>
- <li>既存のライブサンプルのバグを修正。</li>
- <li>既存のライブサンプルを改善、または、技術の変化に基づいてサンプルを更新。</li>
-</ul>
-
-<div class="note">
-<p><strong>注意:</strong> ライブサンプルシステムを使用するために更新が必要なサンプルがある記事を見つけた場合は、タグ「NeedsLiveSample」をページに追加してください。</p>
-</div>
-
-<h3 id="Finding_samples_to_turn_into_live_samples" name="Finding_samples_to_turn_into_live_samples">ライブサンプルに変換するサンプルを検索する</h3>
-
-<p>MDN にはライブサンプルシステムをまだ使用していない古いサンプルがたくさんあります。私たちの目標は、これらのほとんどまたはすべてをライブサンプルに更新することです。これにより、一貫性とユーザビリティが向上します。MDN を日常的に使用するときには、これらの多くがほぼ確実に見つかるでしょう。しかし、あなたが特にそれらを更新しようと探している場合、それらを見つけることができますか？残念ながら簡単な方法はありません。ですが、それらを追跡するのに役立つガイドラインがいくつかあります：</p>
-
-<ul>
- <li>まず、<a href="/ja/docs/tag/NeedsLiveSample">「NeedsLiveSample」というタグが付けられたこのページのリスト</a>を見てみましょう。これらは、ユーザーが更新が必要とマークしたページです。ライブサンプルを使用するように更新する必要のあるページが表示されてもすぐに修正する時間がない場合は、このタグを自分で追加する必要があります。</li>
- <li><a href="/ja/docs/Web/JavaScript/Guide">JavaScript ガイド</a>、<a href="/ja/docs/Web/HTML">HTML ドキュメント</a>、<a href="/ja/docs/Web/CSS/Reference">CSS リファレンス</a>などのサンプルが含まれている可能性のあるドキュメントツリーを参照してください。</li>
- <li>「<a href="/search?q=example">example</a>」や 「<a href="/search?q=sample">sample</a>」のような用語を検索し、更新するページがないか、検索結果を調べます。</li>
-</ul>
-
-<h2 id="Live_sample_demo" name="Live_sample_demo">ライブサンプルのデモ</h2>
+<h2 id="Live_sample_demo">ライブサンプルのデモ</h2>
 
 <p>このセクションは、ライブサンプルテンプレートボタンを使用してメイン見出し (「ライブサンプルデモ」) だけでなく、HTML、CSS、および JavaScript コンテンツのサブ見出しも作成した結果です。それぞれのブロックに限定されませんし、さらに、特定の順序である必要はありません。</p>
 
@@ -197,40 +113,40 @@ translation_of: MDN/Structures/Live_samples
 
 <p>テンプレートが挿入されたので、いくつかのコード、さらには説明テキストを挿入することができます。</p>
 
-<h3 id="HTML" name="HTML">HTML</h3>
+<h3 id="HTML">HTML</h3>
 
 <p>この HTML は、メッセージの配置とスタイルに役立つ段落とブロックを作成します。</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;A simple example of the live sample system in action.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;A simple example of the live sample system in action.&lt;/p&gt;
 &lt;div class="box"&gt;
   &lt;div id="item"&gt;Hello world! Welcome to MDN&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
-<h3 id="CSS" name="CSS">CSS</h3>
+<h3 id="CSS">CSS</h3>
 
 <p>CSS コードは、ボックスとその内部のテキストのスタイルを設定します。</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 200px;
-  height: 100 px;
   border-radius: 6px;
+  padding: 20px;
   background-color: #ffaabb;
 }
 
 #item {
-  width: 100%;
   font-weight: bold;
   text-align: center;
-  font-size: 2em;
+  font-family: sans-serif;
+  font-size: 1.5em;
 }
 </pre>
 
-<h3 id="JavaScript" name="JavaScript">JavaScript</h3>
+<h3 id="JavaScript">JavaScript</h3>
 
-<p>このコードは非常に簡単です。クリックすると警告が表示されるテキスト「Hello world!」にイベントハンドラーをアタッチするだけです。</p>
+<p>このコードはとても簡単です。クリックすると警告が表示されるテキスト「Hello world!」にイベントハンドラーをアタッチするだけです。</p>
 
-<pre class="brush: js notranslate">var el = document.getElementById('item');
+<pre class="brush: js">var el = document.getElementById('item');
 el.onclick = function() {
   alert('Owww, stop poking me!');
 }
@@ -238,21 +154,21 @@ el.onclick = function() {
 
 <h3 id="結果">結果</h3>
 
-<p>下記は <code>\{{EmbedLiveSample('Live_sample_demo')}}</code> を通じて、上のコードブロックを実行した結果です。<br>
- <br>
- {{EmbedLiveSample('Live_sample_demo')}}</p>
+<p>下記は <code>\{{EmbedLiveSample('Live_sample_demo')}}</code> を通じて、上のコードブロックを実行した結果です。</p>
 
-<p>下記は <code>\{{LiveSampleLink('Live_sample_demo', 'Live sample demo link')}}</code> を通じて、これらのコードブロックを経由して呼び出される結果のリンクです。</p>
+<p>{{EmbedLiveSample('Live_sample_demo')}}</p>
 
-<p>{{LiveSampleLink('Live_sample_demo', 'Live sample demo link')}}</p>
+<p>下記は <code>\{{LiveSampleLink('Live_sample_demo', 'ライブサンプルデモへのリンク')}}</code> を通じて、これらのコードブロックを経由して呼び出される結果のリンクです。</p>
 
-<h2 id="Conventions_regarding_live_samples" name="Conventions_regarding_live_samples"><a id="conventions" name="conventions">ライブサンプルに関する取り決め</a></h2>
+<p>{{LiveSampleLink('Live_sample_demo', 'ライブサンプルデモへのリンク')}}</p>
+
+<h2 id="Conventions_regarding_live_samples">ライブサンプルに関する取り決め</h2>
 
 <dl>
  <dt>コードブロックの順序</dt>
  <dd>ライブサンプルを追加する場合、コードブロックは最初のものがこのサンプルのメイン言語に対応するようにソートする必要があります。たとえば、HTML リファレンスのライブサンプルを追加する場合、最初のブロックは HTML でなければならず、CSS リファレンスのライブサンプルを追加するときは CSS でなければなりません。</dd>
  <dt>見出しの名前付け</dt>
  <dd>曖昧さがない場合 (例: サンプルが「Examples」セクションの下にある場合)、見出しは対応する言語の唯一の名前である HTML、CSS、JavaScript、SVG など (上記参照) で直接的に表します。「HTML コンテンツ」や「JavaScript コンテンツ」のような見出しは使用しないでください。しかし、そのような短い見出しがコンテンツを不明瞭にする場合、より思慮深いタイトルを使用することができます。</dd>
- <dt>「Result」ブロックを使用する</dt>
- <dd>異なるコードブロックの後、<code>EmbedLiveSample</code> マクロを使用する直前に、「Result」ブロックを使用してください (上記参照)。このようにして、この例の意味は、読者とページを解析するツール (スクリーンリーダー、ウェブクローラーなど) の両方にとってより明確になります。</dd>
+ <dt>「結果」ブロックを使用する</dt>
+ <dd>異なるコードブロックの後、<code>EmbedLiveSample</code> マクロを使用する直前に、「結果」ブロックを使用してください (上記参照)。このようにすると、この例の意味は、読者とページを解析するツール (画面リーダー、ウェブクローラーなど) の両方にとってより明確になります。</dd>
 </dl>

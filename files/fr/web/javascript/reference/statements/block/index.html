@@ -2,52 +2,53 @@
 title: bloc
 slug: Web/JavaScript/Reference/Statements/block
 tags:
-  - Instruction
   - JavaScript
+  - Language feature
   - Reference
+  - Statement
+browser-compat: javascript.statements.block
 translation_of: Web/JavaScript/Reference/Statements/block
 original_slug: Web/JavaScript/Reference/Instructions/bloc
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p>Une <strong>instruction de bloc</strong> est utilisée afin de grouper zéro ou plusieurs instructions. Le bloc est délimité par une paire d'accolades. On peut éventuellement « étiqueter » un bloc avec un label.</p>
+<p>Une <strong>instruction de bloc</strong> est utilisée afin de grouper zéro ou plusieurs instructions. Le bloc est délimité par une paire d'accolades. On peut éventuellement « étiqueter » un bloc avec un <a href="/fr/docs/Web/JavaScript/Reference/Statements/label">label</a>.</p>
 
-<div>{{EmbedInteractiveExample("pages/js/statement-block.html")}}</div>
+<div>{{EmbedInteractiveExample("pages/js/statement-block.html", "taller")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
+<h2 id="syntax">Syntaxe</h2>
 
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<h3 id="Instruction_de_bloc">Instruction de bloc</h3>
+<h3 id="block_statement">Instruction de bloc</h3>
 
 <pre class="brush: js">{
-  <em><var>instruction_1</var></em>;
-  <em><var>instruction_2</var></em>;
+  <em>instruction_1</em>;
+  <em>instruction_2</em>;
   ...
-  <em><var>instruction_n</var></em>;
+  <em>instruction_n</em>;
 }
 </pre>
 
-<h3 id="Instruction_de_bloc_étiquetée">Instruction de bloc étiquetée</h3>
+<h3 id="labelled_block_statement">Instruction de bloc étiquetée</h3>
 
 <pre class="brush: js">// ou, avec une étiquette :
-label {
-  instruction_1;
-  instruction_2;
-  instruction_n;
+label: {
+  <em>instruction_1</em>;
+  <em>instruction_2</em>;
+  ...
+  <em>instruction_n</em>;
 }
 </pre>
 
 <dl>
- <dt><code>instruction_1</code>, <code>instruction_2</code>, <code>instruction_n</code></dt>
- <dd>Les instructions qu'on souhaite regrouper au sein du bloc.</dd>
- <dt><code>label</code> {{optional_inline}}</dt>
- <dd>Une <a href="/fr/docs/Web/JavaScript/Reference/Instructions/label">étiquette</a> qui permet une identification visuelle de la cible d'une instruction <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/break">break</a></code>.</dd>
+  <dt><code>instruction_1</code>, <code>instruction_2</code>, <code>instruction_n</code></dt>
+  <dd>Les instructions qu'on souhaite regrouper au sein du bloc.</dd>
+  <dt><code>label</code> {{optional_inline}}</dt>
+  <dd>Une <a href="/fr/docs/Web/JavaScript/Reference/Statements/label">étiquette</a> qui permet une identification visuelle de la cible d'une instruction <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/break">break</a></code>.</dd>
 </dl>
 
-<h2 id="Description">Description</h2>
+<h2 id="description">Description</h2>
 
-<p>Cette instruction est le plus souvent utilisée avec les instructions de contrôle (ex. {{jsxref("Instructions/if...else")}}, {{jsxref("Instructions/for")}}, {{jsxref("Instructions/while")}}). On verra ainsi :</p>
+<p>Cette instruction est le plus souvent utilisée avec les instructions de contrôle (ex. <a href="/fr/docs/Web/JavaScript/Reference/Statements/if...else"><code>if…else</code></a>, <a href="/fr/docs/Web/JavaScript/Reference/Statements/for"><code>for</code></a>, <a href="/fr/docs/Web/JavaScript/Reference/Statements/while"><code>while</code></a>). On verra ainsi :</p>
 
 <pre class="brush: js">while (x &lt; 10) {
   x++;
@@ -56,94 +57,61 @@ label {
 
 <p>On peut voir dans cet exemple que cette instruction se termine sans point-virgule.</p>
 
-<p>L'instruction de bloc est souvent appelée <strong>instruction composée (<em>compound statement</em>)</strong> dans d'autres langages. En effet, elle permet d'utiliser plusieurs instructions là où JavaScript n'attend qu'une instruction. C'est une pratique courante que de combiner plusieurs instructions grâce aux blocs. À l'opposé, on peut utiliser une {{jsxref("Instructions/vide","instruction vide","",1)}} pour ne rien faire là où JavaScript attend une instruction.</p>
+<p>L'instruction de bloc est souvent appelée <strong>instruction composée (<em>compound statement</em>)</strong> dans d'autres langages. En effet, elle permet d'utiliser plusieurs instructions là où JavaScript n'attend qu'une instruction. C'est une pratique courante que de combiner plusieurs instructions grâce aux blocs. À l'opposé, on peut utiliser une <a href="/fr/docs/Web/JavaScript/Reference/Statements/Empty">instruction vide</a> pour ne rien faire là où JavaScript attend une instruction.</p>
 
-<h3 id="Gestion_des_portées">Gestion des portées</h3>
+<h2 id="examples">Exemples</h2>
 
-<h4 id="Avec_var">Avec <code>var</code></h4>
+<h3 id="block_scoping_rules_with_var_or_function_declaration_in_non-strict_mode">Règles de portée pour var ou les déclarations de fonction en mode non-strict</h3>
 
-<p><strong>Important </strong>: Le bloc n'introduit <strong>aucune portée pour les variables déclarées avec <code>var</code></strong> ou pour <a href="/fr/docs/Web/JavaScript/Reference/Instructions/function">les déclarations de fonction</a>. Les variables introduites dans un bloc font partie de la portée de la fonction ou du script, elles persisteront donc en dehors du bloc. Autrement dit, aucune portée n'est introduite par les blocs. Bien qu'il soit tout à fait possible d'utiliser des blocs hors de tout contexte, il est fortement déconseillé de coder de cette façon. En effet, les blocs ne se comportent pas comme d'autres langages tels que C ou Java et il pourrait être surprenant de lire un tel code. Par exemple :</p>
+<p>Les variables déclarées avec <code>var</code> ou créées avec <a href="/fr/docs/Web/JavaScript/Reference/Statements/function">une déclaration de fonction</a> en mode non-strict <strong>n'ont pas une portée limitée au bloc</strong>. Les variables introduites dans un bloc auront la portée de la fonction ou du script englobant ce bloc. Les variables pourront alors être utilisées en dehors du bloc. Autrement dit, une instruction de bloc n'introduit pas une portée :</p>
 
 <pre class="brush: js example-bad">var x = 1;
 {
   var x = 2;
 }
-console.log(x); // affiche 2
+console.log(x); // affiche 2 dans la console
 </pre>
 
-<p>Cela affiche 2 dans la console car l'instruction <code>var x</code> au sein du bloc partage la même portée que l'instruction <code>var x</code> précédente en dehors du bloc. Un code C ou Java équivalent aurait produit 1.</p>
+<p>On voit 2 dans la console, car l'instruction <code>var x</code> contenue dans le bloc appartient à la même portée que l'instruction <code>var x</code> située avant le bloc.</p>
 
-<h4 id="Avec_let_et_const">Avec <code>let</code> et <code>const</code></h4>
+<p>En mode non-strict, les déclarations de fonction à l'intérieur des blocs peuvent se comporter étrangement, il est déconseillé de les utiliser.</p>
 
-<p>En revanche, les identifiants déclarés avec <code>let</code> et <code>const</code> appartiennent à la portée du bloc : </p>
+<h3 id="block_scoping_rules_with_let_const_or_function_declaration_in_strict_mode">Règles de portée pour let, const ou les déclarations de fonction en mode strict</h3>
+
+<p>En revanche, les identifiants déclarés avec <a href="/fr/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> et <a href="/fr/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> <strong>possèdent une portée limitée au bloc</strong> :</p>
 
 <pre class="brush: js">let x = 1;
 {
   let x = 2;
 }
-console.log(x); // affiche 1
-</pre>
+console.log(x); // affiche 1 dans la console</pre>
 
-<p>On voit ici que l'instruction <code>x = 2</code> est limitée à la portée du bloc dans laquelle elle est présente.</p>
+<p>L'instruction <code>x = 2</code> est limitée à la portée du bloc dans laquelle elle est présente.</p>
 
-<p>On a le même résultat avec <code>const</code>.</p>
+<p>Il en va de même pour <code>const</code>:</p>
 
 <pre class="brush: js">const c = 1;
 {
   const c = 2;
 }
-console.log(c); // affiche 1, il n'y a pas de SyntaxError
-</pre>
+console.log(c); // affiche 1, ne déclenche pas de SyntaxError</pre>
 
-<p>On notera que l'instruction <code>const c = 2</code> ne lève pas d'exception <code>SyntaxError</code> car on a une seule déclaration de <code>c</code> pour ce bloc.</p>
+<p>L'instruction <code>const c = 2</code> <em>ne déclenche pas</em> <code>SyntaxError: Identifier 'c' has already been declared</code>, car cet identifiant est bien unique pour ce bloc.</p>
 
-<h2 id="Spécifications">Spécifications</h2>
+<p>En <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">mode strict</a>, à partir de ES2015, les fonctions à l'intérieur des blocs ont une portée qui correspond à ce bloc. Avant ES2015, les fonctions de bloc étaient interdites.</p>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-block', 'instruction de bloc')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-block', 'instruction de bloc')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.1', 'instruction de bloc')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-12.1', 'instruction de bloc')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-12.1', 'instruction de bloc')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+<h2 id="specifications">Spécifications</h2>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<p>{{Specifications}}</p>
 
-<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-<p>{{Compat("javascript.statements.block")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+<h2 id="see_also">Voir aussi</h2>
 
 <ul>
- <li>{{jsxref("Instructions/while", "while")}}</li>
- <li>{{jsxref("Instructions/if...else", "if...else")}}</li>
- <li>{{jsxref("Instructions/let", "let")}}</li>
+  <li><a href="/fr/docs/Web/JavaScript/Reference/Statements/while" ><code>while</code></a></li>
+  <li><a href="/fr/docs/Web/JavaScript/Reference/Statements/if...else" ><code>if...else</code></a></li>
+  <li><a href="/fr/docs/Web/JavaScript/Reference/Statements/let" ><code>let</code></a></li>
 </ul>

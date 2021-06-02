@@ -1,0 +1,195 @@
+---
+title: Server-Sent Events 사용하기
+slug: Web/API/Server-sent_events/Using_server-sent_events
+tags:
+- Advanced
+- Communication
+- DOM
+- Guide
+- SSE
+- Server Sent Events
+- Server-sent events
+- messaging
+---
+<p>{{DefaultAPISidebar("Server Sent Events")}}</p>
+
+<div class="summary">
+    <p><a href="/ko/docs/Web/API/Server-sent_events">Server-Sent Events</a>를 사용하는 웹 애플리케이션 개발은 매우 간단하다. 웹 애플리케이션으로 스트림 이벤트를 보내는 약간의 코드가 서버 상에 필요하지만, 웹 애플리케이션 측은 <a href="/en-US/docs/Web/API/WebSockets_API">웹 소켓</a>에서 이벤트를 다루는 방식과 거의 차이가 없다.</p>
+</div>
+
+<h2 id="Receiving_events_from_the_server" name="Receiving_events_from_the_server">서버에서 이벤트 받기</h2>
+
+<p>Server-Sent Event API는 <a href="/en-US/docs/Server-sent_events/EventSource" title="Server-sent events/EventSource"><code>EventSource</code></a> 인터페이스에 포함돼 있다. 이벤트를 전달 받기 위해서 서버로 접속을 시작하려면 우선, 이벤트를 생성하는 서버측 스크립트를 URI로 지정하여 새로운 <a href="/en-US/docs/Server-sent_events/EventSource" title="Server-sent events/EventSource"><code>EventSource</code></a> 객체를 생성한다. 예를 들어:</p>
+
+<pre class="brush: js">var evtSource = new EventSource("ssedemo.php");
+</pre>
+
+<p>이벤트를 생성하는 스크립트가 다른 도메인에 존재할 경우엔 URI와 옵션 딕셔너리를 모두 지정하여 새로운 <a href="/en-US/docs/Server-sent_events/EventSource" title="Server-sent events/EventSource"><code>EventSource</code></a> 객체를 생성한다. 클라이언트 스크립트가 example.com에 있는 경우라면:</p>
+
+<pre class="brush: js"><code>var evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } ); </code></pre>
+
+<p>이벤트 소스를 생성 했다면 <code>message</code> 이벤트에 대한 핸들러를 등록하여 서버로부터의 메시지 수신을 시작할 수 있다.</p>
+
+<pre class="brush: js">evtSource.onmessage = function(e) {
+  var newElement = document.createElement("li");
+  var eventList = document.getElementById('list');
+
+  newElement.innerHTML = "message: " + e.data;
+  eventList.appendChild(newElement);
+}</pre>
+
+<p>위 코드는 입력 메시지(즉, <code>event</code> 필드를 갖고 있지 않은 서버로부터의 알림)를 수신하여 그 메시지의 텍스트를 document의 HTML에 있는 목록에 추가한다.</p>
+
+<p>또는 <code>addEventListener()</code>를 사용하여 이벤트를 기다릴 수도 있다.</p>
+
+<pre class="brush: js">evtSource.addEventListener("ping", function(event) {
+  const newElement = document.createElement("li");
+  const time = JSON.parse(event.data).time;
+  newElement.textContent = "ping at " + time;
+  eventList.appendChild(newElement);
+});
+</pre>
+
+<p>앞서 소개한 코드와 비슷하지만 <code>event</code> 필드에 "ping"이 설정된 메시지가 서버로부터 보내졌을 때만 자동으로 호출된다는 점이 다르다.</p>
+
+<div class="notecard warning">
+<p>When <strong>not used over HTTP/2</strong>, SSE suffers from a limitation to the maximum number of open connections, which can be especially painful when opening multiple tabs, as the limit is <em>per browser</em> and is set to a very low number (6). The issue has been marked as "Won't fix" in <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955" rel="noreferrer">Chrome</a> and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896" rel="noreferrer">Firefox</a>. This limit is per browser + domain, which means that you can open 6 SSE connections across all of the tabs to <code>www.example1.com</code> and another 6 SSE connections to <code>www.example2.com</code> (per <a href="https://stackoverflow.com/a/5326159/1905229">Stackoverflow</a>). When using HTTP/2, the maximum number of simultaneous <em>HTTP streams</em> is negotiated between the server and the client (defaults to 100).</p>
+</div>
+
+<h2 id="Sending_events_from_the_server" name="Sending_events_from_the_server">서버에서의 이벤트 송신</h2>
+
+<p>이벤트를 송신하는 서버 사이드의 스크립트는 MIME 타입 <code>text/event-stream</code>을 사용해 응답할 필요가 있다. 각 알림은 두 개의 줄 바꿈으로 끝나는 텍스트 블럭으로 전송된다. 이벤트 스트림의 형식에 관한 자세한 내용은 {{ anch("Event stream format") }}을 참고한다.</p>
+
+<p>다음은 우리가 사용하고 있는 PHP 코드 예다.</p>
+
+<pre class="brush: php">date_default_timezone_set("America/New_York");
+header("Content-Type: text/event-stream\n\n");
+
+$counter = rand(1, 10);
+while (1) {
+  // "ping" 이벤트를 초당 송신
+
+  echo "event: ping\n";
+  $curDate = date(DATE_ISO8601);
+  echo 'data: {"time": "' . $curDate . '"}';
+  echo "\n\n";
+
+  // 간단한 메시지를 랜덤 간격으로 송신
+
+  $counter--;
+
+  if (!$counter) {
+    echo 'data: This is a message at time ' . $curDate . "\n\n";
+    $counter = rand(1, 10);
+  }
+
+  ob_end_flush();
+  flush();
+  sleep(1);
+}
+</pre>
+
+<p>위 코드는 이벤트 타입이 "ping"인 이벤트를 초당 생성한다. 각 이벤트 데이터는 이벤트가 생성된 시각의 ISO 8601 형식의 타입스탬프를 포함하는 JSON 객체다. 또, 랜덤한 간격으로 간단한 메시지(이벤트타입 없는)를 송신한다.<br>
+ The loop will keep running independent of the connection status, so a check is included<br>
+ to break the loop if the connection has been closed (e.g. client closes the page).</p>
+
+
+<h2 id="Error_handling" name="Error_handling">에러 핸들링</h2>
+
+<p>문제가 발생한 경우(네크워크 타임아웃이나 <a href="/en-US/docs/HTTP/Access_control_CORS" title="HTTP/Access_control_CORS">접근 제약</a>과 관련한 문제)에는 오류 이벤트를 생성한다. <code>EventSource</code> 갹채에 <code>onerror</code> 콜백을 등록하면 에러를 프로그램으로 대처할 수 있다.</p>
+
+<pre class="brush: js">evtSource.onerror = function(e) {
+  alert("EventSource failed.");
+};
+</pre>
+
+<h2 id="Closing_event_streams" name="Closing_event_streams">이벤트 스트림 닫기</h2>
+
+<p>기본적으로는 클라이언트와 서버 사이의 연결이 닫히면 연결이 재시작된다. 연결은 <code>.close()</code> 메서드로 종료한다.</p>
+
+<pre class="brush: js">evtSource.close();</pre>
+
+<h2 id="Event_stream_format" name="Event_stream_format">이벤트 스트림 형식</h2>
+
+<p>이벤트 스트림은 텍스트 데이터의 단순한 스트림으로 <a href="/ko/docs/Glossary/UTF-8">UTF-8</a>을 사용하여 인코딩 해야만 한다. 이벤트 스트림 내부 메시지는 두 개의 줄바꿈 문자로 구분된다. 행 선두에 있는 콜론은 본질적으로 주석으로 나타내며 무시된다.</p>
+
+<div class="note"><strong>노트:</strong> 주석 행은 연결이 타임아웃 되는 것을 방지하기 위해 사용할 수 있다. 서버는 연결을 유지하기 위해 정기적으로 주석을 송신할 수 있다.</div>
+
+<p>각 메시지는 필드를 나열한 하나 이상의 텍스트 행으로 구성된다. 각 필드는 "필드명, 그 다음 콜론, 이어서 필드의 값에 해당하는 텍스트 데이터"로 나타낸다.</p>
+
+<h3 id="Fields" name="Fields">필드</h3>
+
+<p>다음과 같은 필드명이 사양에 정리돼 있다.</p>
+
+<dl>
+    <dt><code>event</code></dt>
+    <dd>이벤트 타입이다. 이 필드가 지정돼 있는 경우, 이벤트는 브라우저 내에서 이벤트명에 해당하는 이벤트 리스너로 전달된다. 웹 사이트의 소스 코드에서는 이름이 붙여진 이벤트를 받기 위해서 <code>addEventListener()</code>를 사용한다. 메시지에서 이벤트 명이 지정되 있지 않은 경우는 <code>onmessage</code> 핸들러가 호출된다.</dd>
+    <dt><code>data</code></dt>
+<!--    <dd>メッセージのデータフィールドです。EventSource が <code>data:</code> で始まる、複数の連続した行を受け取ったときは、<a href="http://www.w3.org/TR/eventsource/#dispatchMessage">それらを連結して</a>各項目の間に改行文字を挿入します。終端の改行は取り除かれます。</dd>-->
+    <dd>메시지의 데이터 필드다. <code>EventSource</code>가 <code>data:</code>로 시작된다. 복수의 연속된 행을 전달 받은 경우에는 <a href="http://www.w3.org/TR/eventsource/#dispatchMessage">그것을 연결해</a> 각 항목의 사이에 개행 문자를 삽입한다. 이때, 마지막의 줄바꿈은 제외된다.</dd>
+    <dt><code>id</code></dt>
+    <dd>메시지의 데이터 필드다. <code>EventSource</code>가 data:로 시작된다. 복수의 연속된 행을 전달 받은 경우에는 그것을 연결해 각 항목의 사이에 개행 문자를 삽입한다. 이때, 마지막의 줄바꿈은 제외된다.</dd>
+    <dt><code>retry</code></dt>
+    <dd>이벤트 송신을 시도할 때에 사용하는 재연결 시간(reconnection time)이다. 이 값은 정수여야 하며 재연결 시간을 밀리초 단위로 지정한다. 정수가 아닌 값이 지정되면 이 필드는 무시된다.</dd>
+</dl>
+
+<p>이 필드명 외의 다른 필드는 모두 무시된다.</p>
+
+<div class="note"><strong>노트:</strong> 행에 콜론이 포함되지 않으면 행 전체가 필드명으로 인식되며 값은 빈문자열로 취급한다.</div>
+
+<h3 id="Examples" name="Examples">예</h3>
+
+<h4 id="Data-only_messages" name="Data-only_messages">데이터만 있는 메시지</h4>
+
+<p>아래 예에서는 세 개의 메시지가 송신되고 있다. 최초의 메시지는 콜론 문자로 시작되고 있다. 주석이다. 앞서 설명한 바와 같이 코멘트는 메시지가 정기적으로 송신되지 않을 가능성이 있을 경우 킵얼라이브 용으로 사용할 수 있다.</p>
+
+<p>두 번째 메시지는 값이 "some text"인 data 필드를 갖고있다. 세 번째 메시지는 값이 "another message\nwith two lines"인 data 필드를 갖고 있다. 값에 줄 바꿈 문자가 있음을 주의하라.</p>
+
+<pre>: this is a test stream
+
+data: some text
+
+data: another message
+data: with two lines
+</pre>
+
+<h4 id="Named_events" name="Named_events">이름이 있는 이벤트</h4>
+
+<p>아래 예에서는 이름이 있는 이벤트를 몇개 송신하고 있다. 각각의 이벤트는 <code>event</code> 필드로 지정된 이벤트 명을 갖고 있고 또, 클라이언트에서 필요한 데이터를 포함하는 적절한 JSON 문자열을 값으로 갖는 <code>data</code> 필드도 있다. 물론 <code>data</code> 필드는 임의의 문자열 데이터를 가질 수 있다. 꼭 JSON 일 필요는 없다.</p>
+
+<pre>event: userconnect
+data: {"username": "bobby", "time": "02:33:48"}
+
+event: usermessage
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
+
+event: userdisconnect
+data: {"username": "bobby", "time": "02:34:23"}
+
+event: usermessage
+data: {"username": "sean", "time": "02:34:36", "text": "Bye, bobby."}
+</pre>
+
+<h4 id="Mixing_and_matching" name="Mixing_and_matching">조합형</h4>
+
+<p>이름 없는 메시지 또는, 이름이 있는 이벤트만 사용해야 하는 경우는 없다. 그리고 이것을 하나의 이벤트 스트림 내에서 혼합해 표현할 수 있다.</p>
+
+<pre>event: userconnect
+data: {"username": "bobby", "time": "02:33:48"}
+
+data: Here's a system message of some kind that will get used
+data: to accomplish some task.
+
+event: usermessage
+data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}</pre>
+
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
+
+<div>
+<h3 id="EventSource"><code>EventSource</code></h3>
+
+<div>
+
+<p>{{Compat("api.EventSource")}}</p>
+</div>
+</div>
