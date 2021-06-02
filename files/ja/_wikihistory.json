@@ -27011,9 +27011,9 @@
     ]
   },
   "Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-01-17T03:02:23.841Z",
+    "modified": "2019-03-18T21:35:01.506Z",
     "contributors": [
-      "julianosilvaa"
+      "Uemmra3"
     ]
   },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
@@ -49387,12 +49387,6 @@
     "contributors": [
       "teoli",
       "Marsf"
-    ]
-  },
-  "conflicting/Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-03-18T21:35:01.506Z",
-    "contributors": [
-      "Uemmra3"
     ]
   },
   "conflicting/Web/CSS": {

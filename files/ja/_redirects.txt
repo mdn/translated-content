@@ -4256,7 +4256,7 @@
 /ja/docs/Web/API/window.window	/ja/docs/Web/API/Window/window
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/ja/docs/Web/Accessibility/ARIA/Roles/button_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role	/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role
-/ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/conflicting/Web/Accessibility/ARIA/widgets
+/ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/Web/Accessibility/ARIA/widgets
 /ja/docs/Web/Accessibility/Accessibility_FAQ	/ja/docs/Web/Accessibility/FAQ
 /ja/docs/Web/Apps/Build/Manipulating_media	/ja/docs/Web/Guide/Audio_and_video_delivery
 /ja/docs/Web/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video	/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
