@@ -6485,20 +6485,6 @@
       "pantherCZ"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2019-03-23T22:51:25.031Z",
-    "contributors": [
-      "neoxaker",
-      "NikitaCoder",
-      "In4in"
-    ]
-  },
-  "Web/API/ChildNode/replaceWith": {
-    "modified": "2020-12-02T15:53:32.691Z",
-    "contributors": [
-      "kosarev_va"
-    ]
-  },
   "Web/API/Clients": {
     "modified": "2019-03-23T22:15:29.932Z",
     "contributors": [
@@ -15395,43 +15381,6 @@
       "warsan"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2020-11-05T05:54:38.208Z",
-    "contributors": [
-      "ksam",
-      "nikolay94",
-      "SphinxKnight",
-      "duhas1993",
-      "CrawlOverYou",
-      "Hamelion-gm",
-      "MuradAz",
-      "teoli",
-      "BychekRU",
-      "syam1123",
-      "M57",
-      "Jmunb",
-      "repby",
-      "uleming",
-      "askhat",
-      "andygol",
-      "Grakov",
-      "AxDaim"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Constraint_validation": {
-    "modified": "2019-03-23T22:20:23.601Z",
-    "contributors": [
-      "lautsevich",
-      "Pescao"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-23T23:32:08.971Z",
-    "contributors": [
-      "Jmunb",
-      "Grakov"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2020-10-09T08:16:53.318Z",
     "contributors": [
@@ -15441,13 +15390,6 @@
       "Wingear",
       "evgor80",
       "lerniri"
-    ]
-  },
-  "Web/Guide/Localizations_and_character_encodings": {
-    "modified": "2020-12-14T08:44:06.511Z",
-    "contributors": [
-      "azahw935",
-      "bogpok"
     ]
   },
   "Web/Guide/Parsing_and_serializing_XML": {
@@ -16560,17 +16502,6 @@
     "modified": "2019-03-23T22:35:07.110Z",
     "contributors": [
       "BychekRU"
-    ]
-  },
-  "Web/HTML/Preloading_content": {
-    "modified": "2020-10-15T22:11:40.984Z",
-    "contributors": [
-      "warsan",
-      "alexa.poruch",
-      "Ilya-Zhulin",
-      "akochemasov",
-      "Skolpov",
-      "isatalkin"
     ]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
@@ -22653,13 +22584,6 @@
       "Dimon24021993"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:07:33.663Z",
-    "contributors": [
-      "nakhodkiin",
-      "ALegostaeva"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-11-28T14:23:33.816Z",
     "contributors": [
@@ -25584,6 +25508,20 @@
       "Aleksej"
     ]
   },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2019-03-23T22:51:25.031Z",
+    "contributors": [
+      "neoxaker",
+      "NikitaCoder",
+      "In4in"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/replaceWith": {
+    "modified": "2020-12-02T15:53:32.691Z",
+    "contributors": [
+      "kosarev_va"
+    ]
+  },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2019-03-18T21:18:44.250Z",
     "contributors": [
@@ -25710,6 +25648,50 @@
       "curdwithraisins"
     ]
   },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2020-11-05T05:54:38.208Z",
+    "contributors": [
+      "ksam",
+      "nikolay94",
+      "SphinxKnight",
+      "duhas1993",
+      "CrawlOverYou",
+      "Hamelion-gm",
+      "MuradAz",
+      "teoli",
+      "BychekRU",
+      "syam1123",
+      "M57",
+      "Jmunb",
+      "repby",
+      "uleming",
+      "askhat",
+      "andygol",
+      "Grakov",
+      "AxDaim"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Constraint_validation": {
+    "modified": "2019-03-23T22:20:23.601Z",
+    "contributors": [
+      "lautsevich",
+      "Pescao"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-23T23:32:08.971Z",
+    "contributors": [
+      "Jmunb",
+      "Grakov"
+    ]
+  },
+  "orphaned/Web/Guide/Localizations_and_character_encodings": {
+    "modified": "2020-12-14T08:44:06.511Z",
+    "contributors": [
+      "azahw935",
+      "bogpok"
+    ]
+  },
   "orphaned/Web/HTML/Element/element": {
     "modified": "2019-03-23T22:16:19.667Z",
     "contributors": [
@@ -25721,6 +25703,17 @@
     "contributors": [
       "chrisdavidmills",
       "Akh-rman"
+    ]
+  },
+  "orphaned/Web/HTML/Preloading_content": {
+    "modified": "2020-10-15T22:11:40.984Z",
+    "contributors": [
+      "warsan",
+      "alexa.poruch",
+      "Ilya-Zhulin",
+      "akochemasov",
+      "Skolpov",
+      "isatalkin"
     ]
   },
   "orphaned/Web/JavaScript/Guide/Об_этом_руководстве": {
@@ -25749,6 +25742,13 @@
     "modified": "2019-03-23T22:37:24.165Z",
     "contributors": [
       "srvoland"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:07:33.663Z",
+    "contributors": [
+      "nakhodkiin",
+      "ALegostaeva"
     ]
   },
   "orphaned/Web/Manifest/serviceworker": {

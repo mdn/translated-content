@@ -1564,15 +1564,6 @@
       "arronei"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:53:18.455Z",
-    "contributors": [
-      "SphinxKnight",
-      "Fidosek",
-      "griter",
-      "krystian71115"
-    ]
-  },
   "Web/API/Console": {
     "modified": "2019-03-23T23:09:41.834Z",
     "contributors": [
@@ -5797,16 +5788,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-06-28T04:18:42.824Z",
-    "contributors": [
-      "Moniaesz",
-      "teoli",
-      "Jacob99",
-      "Ptak82",
-      "Teo"
-    ]
-  },
   "Web/Guide/Performance": {
     "modified": "2019-03-23T23:11:21.113Z",
     "contributors": [
@@ -9090,12 +9071,6 @@
       "Internauta1024A"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:08:04.976Z",
-    "contributors": [
-      "jangromko"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-03-12T19:36:58.666Z",
     "contributors": [
@@ -11239,6 +11214,15 @@
       "Ptak82"
     ]
   },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T21:53:18.455Z",
+    "contributors": [
+      "SphinxKnight",
+      "Fidosek",
+      "griter",
+      "krystian71115"
+    ]
+  },
   "orphaned/Web/API/ParentNode": {
     "modified": "2020-10-15T22:19:13.921Z"
   },
@@ -11273,6 +11257,16 @@
       "Mgjbot",
       "Ptak82",
       "Jan Dudek"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-06-28T04:18:42.824Z",
+    "contributors": [
+      "Moniaesz",
+      "teoli",
+      "Jacob99",
+      "Ptak82",
+      "Teo"
     ]
   },
   "orphaned/Web/HTML/Element/comment": {
@@ -11670,6 +11664,12 @@
       "Diablownik",
       "Mgjbot",
       "Ptak82"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:08:04.976Z",
+    "contributors": [
+      "jangromko"
     ]
   },
   "orphaned/Web/JavaScript/Referencje/O_tym_dokumencie/Konwencje_formatowania_tekstu": {
