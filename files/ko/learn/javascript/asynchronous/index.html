@@ -26,7 +26,7 @@ translation_of: Learn/JavaScript/Asynchronous
 
 <p>비동기 JavaScript는 상당히 고급 주제이며, 이 모듈을 보기에 앞서 <a href="/ko/docs/Learn/JavaScript/First_steps">JavaScript first steps</a>와 <a href="/ko/docs/Learn/JavaScript/Building_blocks">JavaScript building blocks</a> 모듈을 먼저 보고 오시기를 권장합니다.</p>
 
-<p>비동기 프로그래밍의 개념에 익숙하지 않으시다면, 이 모듈의 <a href="/ko/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a> 부터 시작해보세요. 익숙하시다면, <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a> 모듈로 건너뛰어도 괜찮습니다.</p>
+<p>비동기 프로그래밍의 개념에 익숙하지 않으시다면, 이 모듈의 <a href="/ko/docs/Learn/JavaScript/Asynchronous/Concepts">일반 비동기 프로그래밍 개념</a> 부터 시작해보세요. 익숙하시다면, <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a> 모듈로 건너뛰어도 괜찮습니다.</p>
 
 <div class="note">
 <p><strong>Note</strong>: 만약 여러분의 파일을 직접 만들 수 없는 컴퓨터/태블릿/기타 기기 환경에서 작업하신다면, (대부분의) 코드 예제들을 <a href="http://jsbin.com/">JSBin</a> 혹은 <a href="https://thimble.mozilla.org/">Thimble</a>과 같은 온라인 코딩 프로그램에서 사용해 볼 수 있습니다.</p>
@@ -35,19 +35,19 @@ translation_of: Learn/JavaScript/Asynchronous
 <h2 id="Guides">가이드</h2>
 
 <dl>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Concepts">General asynchronous programming concepts</a></dt>
+ <dt><a href="/ko/docs/Learn/JavaScript/Asynchronous/Concepts">일반 비동기 프로그래밍 개념</a></dt>
  <dd>
  <p>이 문서에서 우리는 비동기 JavaScript와 관련된 여러 중요한 개념들을 배우고, 웹 브라우저와 JavaScript에서 어떻게 보이는지 알아봅니다. 이 모듈의 다른 문서를 보기 전에 이 문서에 나와있는 개념을 꼭 이해하고 넘어가야 합니다.</p>
  </dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a></dt>
+ <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">비동기 JavaScript 소개</a></dt>
  <dd>이 문서에서 우리는 동기 JavaScript와 관련된 여러 문제점들을 간단히 돌아보고, 이를 해결할 수 있게 도와주는 여러 비동기 JavaScript 기술을 만나봅니다.</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a></dt>
+ <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">협력하는 비동기 JavaScript: 타임아웃과 인터벌</a></dt>
  <dd>여기에서 우리는 JavaScript에서 코드를 일정 시간이 지난 다음에 실행하거나, 일정한 간격(예: 초당 몇 회)으로 실행할 수 있는 기존 방법을 살펴보고, 이 방법이 어디에 유용한지, 내재된 문제는 무엇이 있는지 살펴봅니다.</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Handling async operations gracefully with Promises</a></dt>
+ <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">프로미스와 함께하는 우아한 비동기 프로그래밍</a></dt>
  <dd>프로미스는 JavaScript 언어의 비교적 최신 기능으로써 어떤 동작이 끝날 때까지 기다렸다가 다음 동작을 실행하거나, 이전 동작이 실패했을 때 대응할 수 있는 방법을 제공합니다. 이는 일련의 작업을 올바르게 작동하도록 설정하는 데 굉장히 유용합니다. 이 문서에서는 프로미스가 어떻게 동작하는지, WebAPI에서 어디에 사용하고 있는지, 여러분의 프로미스를 어떻게 만들 수 있는지 보여줍니다.</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></dt>
+ <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">비동기 프로그래밍을 쉽게 만드는 async와 await</a></dt>
  <dd>프로미스는 설정하고 이해하는 데 복잡할 수 있어, 현대 브라우저들은 <code>async</code> 함수와 <code>await</code> 연산자를 구현했습니다 — 전자는 일반적인 함수를 암시적으로 프로미스와 함께 비동기적으로 동작하도록 만들고, 후자는 <code>async</code> 함수 안에서 함수가 진행되기 전에 프로미스를 기다리도록 하여, 쉽게 여러 프로미스를 체이닝할 수 있도록 합니다. 이 문서는 <code>async</code>/<code>await</code>을 설명합니다.</dd>
- <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Choosing the right approach</a></dt>
+ <dt><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">올바른 접근 방식 선택하기</a></dt>
  <dd>이 모듈을 마무리하기 위해, 우리는 지금까지 얘기한 여러 코딩 기법과 기능들을 살펴보고, 어떤 기능을 어떨 때 사용해야 하는지 권장 사항과 사용할 때의 주의 사항을 살펴봅니다.</dd>
 </dl>
 
