@@ -21410,12 +21410,6 @@
       "Uemmra3"
     ]
   },
-  "Web/API/SVGTests": {
-    "modified": "2020-10-15T21:50:41.779Z",
-    "contributors": [
-      "Uemmra3"
-    ]
-  },
   "Web/API/SVGTextElement": {
     "modified": "2019-03-23T23:31:11.061Z",
     "contributors": [
@@ -52416,6 +52410,12 @@
     "modified": "2020-10-15T22:32:38.418Z",
     "contributors": [
       "eltociear"
+    ]
+  },
+  "orphaned/Web/API/SVGTests": {
+    "modified": "2020-10-15T21:50:41.779Z",
+    "contributors": [
+      "Uemmra3"
     ]
   },
   "orphaned/Web/API/SVGTransformable": {

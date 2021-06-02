@@ -3938,6 +3938,7 @@
 /ja/docs/Web/API/Range1/startOffset	/ja/docs/Web/API/Range/startOffset
 /ja/docs/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController	/ja/docs/orphaned/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController
 /ja/docs/Web/API/Response/useFinalURL	/ja/docs/orphaned/Web/API/Response/useFinalURL
+/ja/docs/Web/API/SVGTests	/ja/docs/orphaned/Web/API/SVGTests
 /ja/docs/Web/API/SVGTransformable	/ja/docs/orphaned/Web/API/SVGTransformable
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
