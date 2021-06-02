@@ -8,6 +8,7 @@ tags:
   - Prototype
   - TypedArray
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
+browser-compat: javascript.builtins.TypedArray.@@iterator
 ---
 <div>{{JSRef}}</div>
 
@@ -40,81 +41,13 @@ console.log(eArr.next().value); // 40
 console.log(eArr.next().value); // 50
 </pre>
 
-<h2 id="스펙">스펙</h2>
+<h2 id="specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">스펙</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-%typedarray%.prototype-@@iterator', '%TypedArray%.prototype[@@iterator]()')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>초기 정의.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype-@@iterator', '%TypedArray%.prototype[@@iterator]()')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<h2 id="browser_compatibility">브라우저 호환성</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatGeckoDesktop("36") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatGeckoMobile("36") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko 17 (Firefox 17 / Thunderbird 17 / SeaMonkey 2.14)에서 Gecko 26 (Firefox 26 / Thunderbird 26 / SeaMonkey 2.23 / Firefox OS 1.2)까지는 <code>iterator</code> 속성이 쓰였고(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=907077">bug 907077</a>), Gecko 27에서 Gecko 35까지는 <code>"@@iterator"</code> placeholder가 사용됐습니다. Gecko 36 (Firefox 36 / Thunderbird 36 / SeaMonkey 2.33)에서는, <code>@@iterator</code> <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol">symbol</a>이 구현됐습니다 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=918828">bug 918828</a>).</p>
+<p>{{Compat}}</p>
 
 <h2 id="참조">참조</h2>
 

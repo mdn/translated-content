@@ -1444,7 +1444,7 @@
 /pl/docs/HTML/Elementy/strong	/pl/docs/Web/HTML/Element/strong
 /pl/docs/HTML/Elementy_blokowe	/pl/docs/Web/HTML/Block-level_elements
 /pl/docs/HTML/Elementy_liniowe	/pl/docs/Web/HTML/Inline_elements
-/pl/docs/HTML/HTML5	/pl/docs/Web/Guide/HTML/HTML5
+/pl/docs/HTML/HTML5	/pl/docs/orphaned/Web/Guide/HTML/HTML5
 /pl/docs/HTML/Kontrola_sprawdzania_pisowni_w_formularzach_HTML	/pl/docs/conflicting/Web/HTML/Global_attributes/spellcheck
 /pl/docs/HTML/The_Importance_of_Correct_Commenting	/pl/docs/conflicting/Learn/HTML/Introduction_to_HTML/Getting_started
 /pl/docs/HTML/Znaczenie_poprawnego_komentowania	/pl/docs/conflicting/Learn/HTML/Introduction_to_HTML/Getting_started
@@ -2108,6 +2108,7 @@
 /pl/docs/Web/Guide/CSS/Sprawdzanie_media_queries	/pl/docs/Web/CSS/Media_Queries/Testing_media_queries
 /pl/docs/Web/Guide/Events/Creating_and_triggering_events	/pl/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events
 /pl/docs/Web/Guide/HTML	/pl/docs/Learn/HTML
+/pl/docs/Web/Guide/HTML/HTML5	/pl/docs/orphaned/Web/Guide/HTML/HTML5
 /pl/docs/Web/Guide/HTML/Wprowadzenie	/pl/docs/Learn/HTML/Introduction_to_HTML
 /pl/docs/Web/Guide/Liczniki_CSS	/pl/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 /pl/docs/Web/HTML(PL)	/pl/docs/conflicting/Web/HTML
@@ -2503,6 +2504,7 @@
 /pl/docs/Web/JavaScript/Reference/Errors/Brakujący_średnik_po_własności_id	/pl/docs/Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
 /pl/docs/Web/JavaScript/Reference/Functions/Funkcje_strzalkowe	/pl/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /pl/docs/Web/JavaScript/Reference/Functions/Parametry_domyślne	/pl/docs/Web/JavaScript/Reference/Functions/Default_parameters
+/pl/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/pl/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /pl/docs/Web/JavaScript/Referencje	/pl/docs/Web/JavaScript/Reference
 /pl/docs/Web/JavaScript/Referencje/Funkcje	/pl/docs/Web/JavaScript/Reference/Global_Objects
 /pl/docs/Web/JavaScript/Referencje/Funkcje/Boolean	/pl/docs/Web/JavaScript/Reference/Global_Objects/Boolean
@@ -2798,7 +2800,7 @@
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_in	/pl/docs/Web/JavaScript/Reference/Operators/in
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_instanceof	/pl/docs/Web/JavaScript/Reference/Operators/instanceof
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_new	/pl/docs/Web/JavaScript/Reference/Operators/new
-/pl/docs/Web/JavaScript/Referencje/Operatory/Operator_potoku	/pl/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
+/pl/docs/Web/JavaScript/Referencje/Operatory/Operator_potoku	/pl/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_przecinkowy	/pl/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_typeof	/pl/docs/Web/JavaScript/Reference/Operators/typeof
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_void	/pl/docs/Web/JavaScript/Reference/Operators/void

@@ -11,7 +11,7 @@ translation_of: Web/API/GlobalEventHandlers/oninvalid
 ---
 <div>{{ ApiRef("HTML DOM") }}</div>
 
-<p>{{domxref("GlobalEventHandlers")}} 混合的<code><strong>oninvalid</strong></code>属性 是 {{domxref("EventHandler")}} 处理{{event("invalid")}} 事件。</p>
+<p>{{domxref("GlobalEventHandlers")}} 混合的<code><strong>oninvalid</strong></code>属性 是 {{event("Event_handlers", "event handler")}} 处理{{event("invalid")}} 事件。</p>
 
 <p><code>invalid</code> 事件被触发当一个从属元素被勾选checked 并且与之前的选中方式不同。 有效的从属元素在表单之前被选中, 或者在 <code><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">checkValidity()</a></code> 方法之后它自己的表单被调用。</p>
 
@@ -85,8 +85,6 @@ function submit(event) {
 </table>
 
 <h2 id="支持的浏览器">支持的浏览器</h2>
-
-<div class="hidden">这个兼容性表格是通过一组结构化数据生成的。如果你想贡献自己的数据，请下载并提交<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>。</div>
 
 <p>{{Compat("api.GlobalEventHandlers.oninvalid")}}</p>
 
