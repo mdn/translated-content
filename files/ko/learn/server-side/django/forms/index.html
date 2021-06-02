@@ -341,8 +341,8 @@ def renew_book_librarian(request, pk):
         # 폼이 유효한지 체크한다:
         if book_renewal_form.is_valid():
             # book_renewal_form.cleaned_data 데이타를 요청받은대로 처리한다(여기선 그냥 모델 due_back 필드에 써넣는다)
-            book_inst.due_back = book_renewal_form.cleaned_data['renewal_date']
-            book_inst.save()
+            book_instance.due_back = book_renewal_form.cleaned_data['renewal_date']
+            book_instance.save()
 
             # 새로운 URL로 보낸다:
             return HttpResponseRedirect(reverse('all-borrowed') )

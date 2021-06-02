@@ -65,15 +65,15 @@ translation_of: Web/API/MediaRecorder
  <dt>{{domxref("MediaRecorder.ondataavailable")}}</dt>
  <dd><code>timeslice</code> のミリ秒単位のメディアが記録されるたびに（または <code>timeslice</code> が指定されていない場合はメディア全体が記録されると）定期的にトリガされる {{event("dataavailable")}} イベントを処理するために呼び出されます。 {{domxref("BlobEvent")}} 型のイベントには、{{domxref("BlobEvent.data", "data")}} プロパティに記録済みメディアが含まれています。 その後、このイベントハンドラを使用して、その記録済みメディアのデータを収集して操作することができます。</dd>
  <dt>{{domxref("MediaRecorder.onerror")}}</dt>
- <dd>メディアの記録で発生したエラーの報告など、{{event("error")}} イベントを処理するために呼び出される {{domxref("EventHandler")}} です。 これらは記録を停止する致命的なエラーです。 受信したイベントは {{domxref("MediaRecorderErrorEvent")}} インターフェイスに基づいていて、その {{domxref("MediaRecorderErrorEvent.error", "error")}} プロパティには、発生した実際のエラーを説明する {{domxref("DOMException")}} が含まれています。</dd>
+ <dd>メディアの記録で発生したエラーの報告など、{{event("error")}} イベントを処理するために呼び出される {{event("Event_handlers", "event handler")}} です。 これらは記録を停止する致命的なエラーです。 受信したイベントは {{domxref("MediaRecorderErrorEvent")}} インターフェイスに基づいていて、その {{domxref("MediaRecorderErrorEvent.error", "error")}} プロパティには、発生した実際のエラーを説明する {{domxref("DOMException")}} が含まれています。</dd>
  <dt>{{domxref("MediaRecorder.onpause")}}</dt>
- <dd>メディアの記録が一時停止したときに発生する {{event("pause")}} イベントを処理するために呼び出される {{domxref("EventHandler")}} です。</dd>
+ <dd>メディアの記録が一時停止したときに発生する {{event("pause")}} イベントを処理するために呼び出される {{event("Event_handlers", "event handler")}} です。</dd>
  <dt>{{domxref("MediaRecorder.onresume")}}</dt>
- <dd>メディアの記録が一時停止後に再開したときに発生する {{event("resume")}} イベントを処理するために呼び出される {{domxref("EventHandler")}} です。</dd>
+ <dd>メディアの記録が一時停止後に再開したときに発生する {{event("resume")}} イベントを処理するために呼び出される {{event("Event_handlers", "event handler")}} です。</dd>
  <dt>{{domxref("MediaRecorder.onstart")}}</dt>
- <dd>メディアの記録を開始したときに発生する {{event("start")}} イベントを処理するために呼び出される {{domxref("EventHandler")}} です。</dd>
+ <dd>メディアの記録を開始したときに発生する {{event("start")}} イベントを処理するために呼び出される {{event("Event_handlers", "event handler")}} です。</dd>
  <dt>{{domxref("MediaRecorder.onstop")}}</dt>
- <dd>{{domxref("MediaStream")}} の終了時、または {{domxref("MediaRecorder.stop()")}} メソッドの呼び出し後のいずれかに、メディアの記録が終了したときに発生する {{event("stop")}} イベントを処理するために呼び出される {{domxref("EventHandler")}} です。</dd>
+ <dd>{{domxref("MediaStream")}} の終了時、または {{domxref("MediaRecorder.stop()")}} メソッドの呼び出し後のいずれかに、メディアの記録が終了したときに発生する {{event("stop")}} イベントを処理するために呼び出される {{event("Event_handlers", "event handler")}} です。</dd>
 </dl>
 
 <h2 id="Events" name="Events">イベント</h2>

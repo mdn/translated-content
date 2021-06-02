@@ -1,5 +1,5 @@
 ---
-title: Guide des lignes directrices
+title: Lignes  directrices pour les fragments de code
 slug: MDN/Guidelines/Code_guidelines
 tags:
   - CSS
@@ -14,39 +14,35 @@ original_slug: MDN/Guidelines/Code_lignesdirectrices
 ---
 <div>{{MDNSidebar}}</div>
 
-<div>{{IncludeSubnav("/fr/docs/MDN")}}</div>
-
-<div>
-<p class="summary"><span class="seoSummary">Cette série de documents décrit les directives de codage et les meilleures pratiques que nous utilisons pour écrire des démonstrations, des extraits de code, des exemples interactifs, etc. à utiliser sur MDN.</span></p>
+<p class="summary">Cette série de documents décrit les directives de codage et les meilleures pratiques que nous utilisons pour écrire des démonstrations, des extraits de code, des exemples interactifs, etc. à utiliser sur MDN.</p>
 
 <p>Si vous cherchez des lignes directrices à suivre pour rédiger vos exemples de codes, vous êtes au bon endroit. Le plus grand avantage de respecter ces directives est qu'elles favoriseront la cohérence entre nos échantillons et nos démos sur MDN, ce qui augmente la lisibilité et la compréhension en général.</p>
+
+<div class="notecard note">
+  <p><strong>Note</strong>: Si vous souhaitez obtenir des conseils sur le style du code tel qu'il apparaît sur un article de MDN, plutôt que sur le contenu du code, consultez notre <a href="/fr/docs/MDN/Guidelines/Writing_style_guide#code_sample_style_and_formatting">Guide stylistique</a>.</p>
 </div>
 
-<div class="note">
-<p><strong>Note</strong>: Si vous souhaitez obtenir des conseils sur le style du code tel qu'il apparaît sur un article de MDN, plutôt que sur le contenu du code, consultez notre <a href="/fr-FR/docs/MDN/Contribute/Guidelines/Writing_style_guide#Code_sample_style_and_formatting">Guide de formatage</a>.</p>
-</div>
-
-<h2 id="Structure_de_larticle">Structure de l'article</h2>
+<h2 id="Article_structure">Structure d'article</h2>
 
 <p>Cet article contient les meilleures pratiques générales de haut niveau pour la rédaction d'exemples de codes MDN. Ses sous-articles sont les suivants :</p>
 
 <ul>
- <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/General">Lignes directrices générales pour tous les codes</a> — à la fois syntaxique et pour des exemples de stylisme/affichage</li>
- <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/HTML">Lignes directrices du HTML</a></li>
- <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS">Lignes directrices du CSS</a></li>
- <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/JavaScript">Lignes directrices du JavaScript</a></li>
- <li><a href="/en-US/docs/MDN/Contribute/Guidelines/Code_guidelines/Shell">Lignes directrices des commandes Shell</a></li>
+  <li><a href="/fr/docs/MDN/Guidelines/Code_guidelines/General">Lignes directrices générales pour tous les codes</a> — à la fois syntaxique et pour des exemples de stylisme/affichage</li>
+  <li><a href="/fr/docs/MDN/Guidelines/Code_guidelines/HTML">Lignes directrices du HTML</a></li>
+  <li><a href="/fr/docs/MDN/Guidelines/Code_guidelines/CSS">Lignes directrices du CSS</a></li>
+  <li><a href="/fr/docs/MDN/Guidelines/Code_guidelines/JavaScript">Lignes directrices du JavaScript</a></li>
+  <li><a href="/fr/docs/MDN/Guidelines/Code_guidelines/Shell">Lignes directrices des commandes Shell</a></li>
 </ul>
 
-<h2 id="Meilleures_pratiques_générales">Meilleures pratiques générales</h2>
+<h2 id="General_best_practices">Bonnes pratiques générales</h2>
 
 <p>Cette section fournit rapidement les meilleures pratiques générales pour créer un échantillon de code minimal compréhensible afin de démontrer l'utilisation d'une caractéristique ou d'une fonction spécifique.</p>
 
 <p>Les échantillons de code doivent l'être :</p>
 
 <ul>
- <li>assez simple pour être compréhensible, mais</li>
- <li>suffisamment complexe pour faire quelque chose d'intéressant, et de préférence utile.</li>
+  <li>assez simple pour être compréhensible, mais</li>
+  <li>suffisamment complexe pour faire quelque chose d'intéressant, et de préférence utile.</li>
 </ul>
 
 <p>Il y a une considération primordiale que vous devez garder à l'esprit : <strong>Les lecteurs copieront et colleront l'échantillon de code dans leur propre code, et pourront le mettre en production.</strong></p>
@@ -55,24 +51,14 @@ original_slug: MDN/Guidelines/Code_lignesdirectrices
 
 <p>Les échantillons de code doivent être aussi autonomes et faciles à comprendre que possible. L'objectif n'est pas nécessairement de produire un code efficace et intelligent qui impressionne les experts et possède une grande fonctionnalité, mais plutôt de produire des exemples de travail réduits qui peuvent être compris le plus rapidement possible.</p>
 
-<ul>
-</ul>
-
-<div id="magicdomid13"><span class="author-g-frc9o9ihh5c9qyd0">Lignes directrices :</span></div>
-
-<div id="magicdomid14"></div>
-
-<div id="magicdomid15">
-<ul>
- <li>L'échantillon doit être court et, dans l'idéal, ne montrer que l'élément qui vous intéresse immédiatement.</li>
- <li><strong>N'incluez</strong> que le code qui est essentiel pour l'exemple. Une grande quantité de code non pertinent peut facilement distraire ou embrouiller le public. Si vous souhaitez fournir un exemple complet et plus long, placez-le dans l'un de nos <span class="author-g-frc9o9ihh5c9qyd0"><a href="https://github.com/mdn/">dépôts Github</a></span> (ou un JSBin, Codepen ou similaire) et fournissez ensuite le lien vers la version complète au-dessus ou au-dessous de l'exemple.</li>
- <li>N'incluez pas de code inutile côté serveur, de bibliothèques, de cadres, de préprocesseurs et d'autres dépendances de ce type <span class="author-g-frc9o9ihh5c9qyd0">—</span> ils rendent le code moins portable et plus difficile à exécuter et à comprendre. Utilisez du code "vanilla" lorsque c'est possible.</li>
- <li>Ne supposez pas que vous connaissez des bibliothèques, des cadres, des préprocesseurs ou d'autres caractéristiques non natives. Par exemple, utilisez des noms de classe qui ont un sens dans l'exemple plutôt que des noms de classe qui ont un sens pour les utilisateurs de BEM ou de Bootstrap.</li>
- <li>Écrivez votre code de la façon la plus propre et la plus compréhensible possible, même si ce n'est pas la façon la plus efficace de le faire.</li>
- <li>N'utilisez pas de mauvaises pratiques par souci de brièveté (comme les éléments de présentation tels que<span class="author-g-frc9o9ihh5c9qyd0"> {{HTMLElement("big")}} ou {{domxref("Document.write", "document.write()")}}); </span>faites-le correctement.</li>
- <li>Dans le cas de démonstrations d'API, si vous utilisez plusieurs API ensemble, indiquez quelles API sont incluses et quelles fonctionnalités proviennent d'où.</li>
-</ul>
-</div>
+<p>Les autres meilleures pratiques générales sont les suivantes :</p>
 
 <ul>
+  <li>L'échantillon doit être court et, idéalement, ne montrer que la caractéristique qui vous intéresse immédiatement.</li>
+  <li><strong>Seulement</strong> inclure le code qui est essentiel pour l'exemple. Une grande quantité de code non pertinent peut facilement distraire ou embrouiller le public. Si vous souhaitez fournir un exemple complet, plus long, mettez-le dans l'un de nos <a href="https://github.com/mdn/">Dépôts GitHub</a> (ou un JSBin, CodePen, ou similaire) et fournissez ensuite le lien vers la version complète au-dessus ou au-dessous de l'échantillon.</li>
+  <li>N'incluez pas de code côté serveur, de bibliothèques, de frameworks, de préprocesseurs et autres dépendances inutiles - ils rendent le code moins portable et plus difficile à exécuter et à comprendre. Utilisez du code "vanilla" lorsque cela est possible.</li>
+  <li>Ne présumez pas de la connaissance des bibliothèques, des frameworks, des préprocesseurs ou d'autres fonctionnalités non natives. Par exemple, utilisez des noms de classe qui ont un sens dans l'exemple plutôt que des noms de classe qui ont un sens pour les utilisateurs de BEM ou Bootstrap.</li>
+  <li>Écrivez votre code de manière aussi propre et compréhensible que possible, même si ce n'est pas la manière la plus efficace de le faire.</li>
+  <li>N'utilisez pas de mauvaises pratiques pour faire court (comme des éléments de présentation tels que <a href="/fr/docs/Web/HTML/Element/big"><code>&lt;big&gt;</code></a> ou <a href="/fr/docs/Web/API/Document/write"><code>document.write()</code></a>) ; faites-le correctement.</li>
+  <li>Dans le cas des démonstrations d'API, si vous utilisez plusieurs API ensemble, indiquez quelles API sont incluses ainsi que l'origine des fonctionnalités.</li>
 </ul>
