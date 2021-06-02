@@ -362,8 +362,8 @@
 /ja/docs/CSS/ID_selectors-redirect-1	/ja/docs/Web/CSS/ID_selectors
 /ja/docs/CSS/Layout_mode	/ja/docs/Web/CSS/Layout_mode
 /ja/docs/CSS/Length	/ja/docs/Web/CSS/Length
-/ja/docs/CSS/Media	/ja/docs/conflicting/Web/CSS/@media
-/ja/docs/CSS/Media/Visual	/ja/docs/conflicting/Web/CSS/@media_dcb6ae28d731b140b24729ff941686e7
+/ja/docs/CSS/Media	/ja/docs/Web/CSS/@media
+/ja/docs/CSS/Media/Visual	/ja/docs/Web/CSS/@media
 /ja/docs/CSS/Media_queries	/ja/docs/Web/CSS/Media_queries
 /ja/docs/CSS/Multiple_backgrounds	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/CSS/Other_Resources	/ja/docs/conflicting/Web/CSS_eb0c7d23f84df658710ebb6b4bdec8ea
@@ -641,7 +641,7 @@
 /ja/docs/CSS:Getting_Started:Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/CSS:Getting_Started:What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/CSS:Getting_Started:Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/ja/docs/CSS:Media:Visual	/ja/docs/conflicting/Web/CSS/@media_dcb6ae28d731b140b24729ff941686e7
+/ja/docs/CSS:Media:Visual	/ja/docs/Web/CSS/@media
 /ja/docs/CSS:Other_Resources	/ja/docs/conflicting/Web/CSS_eb0c7d23f84df658710ebb6b4bdec8ea
 /ja/docs/CSS:color	/ja/docs/Web/CSS/color
 /ja/docs/CSS:computed_value	/ja/docs/Web/CSS/computed_value
@@ -4358,8 +4358,8 @@
 /ja/docs/Web/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web/CSS/Index	/ja/docs/orphaned/Web/CSS/Index
-/ja/docs/Web/CSS/Media	/ja/docs/conflicting/Web/CSS/@media
-/ja/docs/Web/CSS/Media/Visual	/ja/docs/conflicting/Web/CSS/@media_dcb6ae28d731b140b24729ff941686e7
+/ja/docs/Web/CSS/Media	/ja/docs/Web/CSS/@media
+/ja/docs/Web/CSS/Media/Visual	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_Motion_Path
 /ja/docs/Web/CSS/Other_Resources	/ja/docs/conflicting/Web/CSS_eb0c7d23f84df658710ebb6b4bdec8ea
 /ja/docs/Web/CSS/Reference/@viewport	/ja/docs/Web/CSS/@viewport

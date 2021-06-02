@@ -49397,20 +49397,6 @@
       "Marsf"
     ]
   },
-  "conflicting/Web/CSS/@media": {
-    "modified": "2019-01-16T15:23:43.629Z",
-    "contributors": [
-      "ethertank",
-      "Anonymous"
-    ]
-  },
-  "conflicting/Web/CSS/@media_dcb6ae28d731b140b24729ff941686e7": {
-    "modified": "2019-03-24T00:17:11.661Z",
-    "contributors": [
-      "ethertank",
-      "Marsf"
-    ]
-  },
   "conflicting/Web/CSS/@viewport": {
     "modified": "2020-10-15T22:35:00.773Z",
     "contributors": [
