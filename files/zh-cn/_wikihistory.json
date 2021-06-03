@@ -19487,12 +19487,6 @@
       "SDUTWSL"
     ]
   },
-  "Web/API/RTCPeerConnection/getDefaultIceServers": {
-    "modified": "2020-10-15T22:29:03.476Z",
-    "contributors": [
-      "lauhua"
-    ]
-  },
   "Web/API/RTCPeerConnection/getReceivers": {
     "modified": "2020-10-15T22:34:32.923Z",
     "contributors": [
@@ -50375,6 +50369,12 @@
     "modified": "2020-10-15T22:33:59.306Z",
     "contributors": [
       "JoshOY"
+    ]
+  },
+  "orphaned/Web/API/RTCPeerConnection/getDefaultIceServers": {
+    "modified": "2020-10-15T22:29:03.476Z",
+    "contributors": [
+      "lauhua"
     ]
   },
   "orphaned/Web/API/TextRange/text": {
