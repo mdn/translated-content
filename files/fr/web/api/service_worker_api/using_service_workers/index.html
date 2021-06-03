@@ -314,7 +314,7 @@ event.request.body</pre>
 
 <p>On vient de voir que <code>caches.match(event.request)</code> est important lorsqu'il y a correspondance avec le cache du service worker, mais qu'en est-il des cas où rien ne correspond ? Si aucune sorte de gestionnaire d'erreur n'est fourni, la promesse est rejetée et une erreur réseau est retournée lorsqu'aucune correspondance n'est trouvée.</p>
 
-<p>Heureusement, la structure des service workers qui repose sur les promesses rend trivial la gestion des alternatives à une situation de succès. On pourrait faire ceci :</p>
+<p>Heureusement, la structure des service workers qui repose sur les promesses rend triviale la gestion des alternatives à une situation de succès. On pourrait faire ceci :</p>
 
 <pre class="brush: js notranslate">this.addEventListener('fetch', function(event) {
   event.respondWith(
