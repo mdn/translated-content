@@ -27011,9 +27011,9 @@
     ]
   },
   "Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-01-17T03:02:23.841Z",
+    "modified": "2019-03-18T21:35:01.506Z",
     "contributors": [
-      "julianosilvaa"
+      "Uemmra3"
     ]
   },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
@@ -49382,19 +49382,6 @@
       "Jeremie"
     ]
   },
-  "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2019-03-23T23:52:43.560Z",
-    "contributors": [
-      "teoli",
-      "Marsf"
-    ]
-  },
-  "conflicting/Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-03-18T21:35:01.506Z",
-    "contributors": [
-      "Uemmra3"
-    ]
-  },
   "conflicting/Web/CSS": {
     "modified": "2019-03-23T23:49:43.648Z",
     "contributors": [
@@ -49407,20 +49394,6 @@
       "teoli",
       "ethertank",
       "myakura",
-      "Marsf"
-    ]
-  },
-  "conflicting/Web/CSS/@media": {
-    "modified": "2019-01-16T15:23:43.629Z",
-    "contributors": [
-      "ethertank",
-      "Anonymous"
-    ]
-  },
-  "conflicting/Web/CSS/@media_dcb6ae28d731b140b24729ff941686e7": {
-    "modified": "2019-03-24T00:17:11.661Z",
-    "contributors": [
-      "ethertank",
       "Marsf"
     ]
   },
@@ -49827,20 +49800,6 @@
       "Okome",
       "Takenbot",
       "Kozawa"
-    ]
-  },
-  "conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript": {
-    "modified": "2020-10-24T09:08:37.731Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
-  "conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript_caa7dfd0899fa1d0dfa5b1eb32e49ac7": {
-    "modified": "2019-01-16T14:19:02.199Z",
-    "contributors": [
-      "kmaglione",
-      "Mgjbot",
-      "Shoot"
     ]
   },
   "conflicting/tools/Keyboard_shortcuts": {

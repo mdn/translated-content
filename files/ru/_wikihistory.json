@@ -10334,12 +10334,6 @@
       "mechtool"
     ]
   },
-  "Web/API/RTCPeerConnection/getDefaultIceServers": {
-    "modified": "2020-10-15T22:33:11.540Z",
-    "contributors": [
-      "mechtool"
-    ]
-  },
   "Web/API/RTCPeerConnection/icecandidate_event": {
     "modified": "2020-11-25T18:23:55.148Z",
     "contributors": [
@@ -10560,12 +10554,6 @@
     "modified": "2020-10-15T22:12:53.829Z",
     "contributors": [
       "fdor"
-    ]
-  },
-  "Web/API/ServiceWorkerState": {
-    "modified": "2019-12-29T10:30:40.493Z",
-    "contributors": [
-      "sh7dm"
     ]
   },
   "Web/API/Service_Worker_API": {
@@ -25588,6 +25576,18 @@
     "contributors": [
       "RenJeka",
       "pronskiy"
+    ]
+  },
+  "orphaned/Web/API/RTCPeerConnection/getDefaultIceServers": {
+    "modified": "2020-10-15T22:33:11.540Z",
+    "contributors": [
+      "mechtool"
+    ]
+  },
+  "orphaned/Web/API/ServiceWorkerState": {
+    "modified": "2019-12-29T10:30:40.493Z",
+    "contributors": [
+      "sh7dm"
     ]
   },
   "orphaned/Web/API/Web_Crypto_API/Checking_authenticity_with_password": {
