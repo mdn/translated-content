@@ -3829,12 +3829,6 @@
       "cs09g"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T22:10:05.225Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
   "Web/API/Clients": {
     "modified": "2020-10-15T22:21:49.146Z"
   },
@@ -6168,12 +6162,6 @@
       "moonformeli"
     ]
   },
-  "Web/API/OffscreenCanvas/toBlob": {
-    "modified": "2020-10-15T22:14:42.795Z",
-    "contributors": [
-      "moonformeli"
-    ]
-  },
   "Web/API/OffscreenCanvas/width": {
     "modified": "2020-10-15T22:14:42.247Z",
     "contributors": [
@@ -6185,13 +6173,6 @@
     "contributors": [
       "alattalatta",
       "dragmove"
-    ]
-  },
-  "Web/API/ParentNode": {
-    "modified": "2020-10-15T22:08:08.618Z",
-    "contributors": [
-      "alattalatta",
-      "ExE-Boss"
     ]
   },
   "Web/API/Performance": {
@@ -10158,27 +10139,6 @@
       "gblue1223"
     ]
   },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-03-24T00:11:07.419Z",
-    "contributors": [
-      "teoli",
-      "Channy",
-      "Dwchiang",
-      "vigia122",
-      "jisung",
-      "Joone"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-23T23:38:47.847Z",
-    "contributors": [
-      "kybin",
-      "kuil09",
-      "juyoungbang",
-      "teoli",
-      "Channy"
-    ]
-  },
   "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
     "modified": "2020-01-10T12:08:26.959Z",
     "contributors": [
@@ -11388,12 +11348,6 @@
       "alattalatta",
       "limjungmok",
       "young-gratia"
-    ]
-  },
-  "Web/HTML/Preloading_content": {
-    "modified": "2020-10-15T22:35:17.448Z",
-    "contributors": [
-      "sukyology"
     ]
   },
   "Web/HTML/Quirks_Mode_and_Standards_Mode": {
@@ -15968,12 +15922,6 @@
       "Jung.Kyu-Hyun"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:15:31.566Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:46:18.602Z",
     "contributors": [
@@ -18406,6 +18354,12 @@
       "cap3618"
     ]
   },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T22:10:05.225Z",
+    "contributors": [
+      "cs09g"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2019-03-23T23:27:06.270Z",
     "contributors": [
@@ -18431,6 +18385,19 @@
     "modified": "2020-10-15T22:15:23.043Z",
     "contributors": [
       "connorshea"
+    ]
+  },
+  "orphaned/Web/API/OffscreenCanvas/toBlob": {
+    "modified": "2020-10-15T22:14:42.795Z",
+    "contributors": [
+      "moonformeli"
+    ]
+  },
+  "orphaned/Web/API/ParentNode": {
+    "modified": "2020-10-15T22:08:08.618Z",
+    "contributors": [
+      "alattalatta",
+      "ExE-Boss"
     ]
   },
   "orphaned/Web/API/ParentNode/append": {
@@ -18475,6 +18442,27 @@
       "PineMt"
     ]
   },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-03-24T00:11:07.419Z",
+    "contributors": [
+      "teoli",
+      "Channy",
+      "Dwchiang",
+      "vigia122",
+      "jisung",
+      "Joone"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-23T23:38:47.847Z",
+    "contributors": [
+      "kybin",
+      "kuil09",
+      "juyoungbang",
+      "teoli",
+      "Channy"
+    ]
+  },
   "orphaned/Web/HTML/Element/command": {
     "modified": "2020-10-15T21:44:01.823Z",
     "contributors": [
@@ -18494,6 +18482,12 @@
     "contributors": [
       "alattalatta",
       "dolmoon"
+    ]
+  },
+  "orphaned/Web/HTML/Preloading_content": {
+    "modified": "2020-10-15T22:35:17.448Z",
+    "contributors": [
+      "sukyology"
     ]
   },
   "orphaned/Web/JavaScript/Differential_inheritance_in_JavaScript": {
@@ -18631,6 +18625,12 @@
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/BigInt/prototype": {
     "modified": "2020-10-15T22:12:31.982Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:15:31.566Z",
     "contributors": [
       "alattalatta"
     ]

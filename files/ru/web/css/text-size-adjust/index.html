@@ -87,74 +87,7 @@ text-size-adjust: unset;
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Особенности</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatNo}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}<sup>[1]</sup></td>
-  </tr>
-  <tr>
-   <td>Проценты</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Особенности</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("11.0")}} {{property_prefix("-moz")}}</td>
-   <td>{{CompatVersionUnknown}} {{property_prefix("-ms")}}<sup>[2]</sup><br>
-    11{{property_prefix("-webkit")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}</td>
-  </tr>
-  <tr>
-   <td>Процент</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] There is a bug in old Webkit-based desktop browsers. If <code>-webkit-text-size-adjust</code> is explicitly set to <code>none</code>, Webkit-based desktop browsers, like Chrome or Safari, instead of ignoring the property, will prevent the user to zoom in or out the Web page. See <a href="https://bugs.webkit.org/show_bug.cgi?id=56543">Bug 56543</a> (affected Safari≤5 &amp; Chrome≤26), <a href="https://code.google.com/p/chromium/issues/detail?id=163359">Bug 163359</a>, and <a href="https://bugs.webkit.org/show_bug.cgi?id=84186">Bug 84186</a>.</p>
-
-<p>[2] If the viewport is set using {{HTMLElement("meta")}} element, the value of the CSS <code>text-size-adjust</code> property is ignored. See <a href="https://msdn.microsoft.com/en-us/library/ie/dn793579(v=vs.85).aspx">detailed implementation hints on MSDN</a>.</p>
+<p>{{Compat("css.properties.text-size-adjust")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
