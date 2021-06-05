@@ -212,7 +212,7 @@ import { Item } from "../item";</pre>
   &lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<p>雙括號 <code>{{}}</code>，在 <code>&lt;h2&gt;</code> 內顯示 <code>items</code> 的長度與數目。</p>
+<p>雙括號 <code>\{{}}</code>，在 <code>&lt;h2&gt;</code> 內顯示 <code>items</code> 的長度與數目。</p>
 
 <p>在 <code>&lt;h2&gt;</code> 中 <code>&lt;span&gt;</code> 使用 <code>*ngIf</code> 與 <code>else</code> 決定 <code>&lt;h2&gt;</code> 是否要呈現 &quot;item&quot; 或 &quot;items&quot;。如果在列表中只有一個項目， 則 <code> 會顯示包含 <code>&lt;span&gt;</code> 的內容。當<code>items</code> 陣列不等於 <code>1</code> 時，被我們命名為 <code>elseBlock</code> 的 <code>&lt;ng-template&gt;</code>，將顯示 <code>#elseBlock</code>，而不是 <code>&lt;span&gt;</code>。當您不想內容在預設渲染的時候，可以使用 Angular 的 <code>&lt;ng-template&gt;</code> ，因 #elseBlock 不是 <code>&lt;span&gt;</code>，是使用 <code>&lt;ng-template&gt;</code>。在此範例中，若 <code>item</code> 陣列長度不是 <code>1</code> ，則 <code>*ngIf</code> 會顯示 <code>elseBlock</code> 而不顯示 <code>&lt;span&gt;</code>。</code> 
 
