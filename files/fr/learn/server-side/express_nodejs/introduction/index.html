@@ -15,45 +15,45 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
 
 <div>{{NextMenu("Learn/Server-side/Express_Nodejs/development_environment", "Learn/Server-side/Express_Nodejs")}}</div>
 
-<p class="summary">Dans ce tout premier article consacré à Express, nous répondons aux questions « Qu'est-ce que Node ? » (réponse : une bibliothèque) et « Qu'est-ce que Express? », et vous donnons un aperçu de ce qui fait d'Express un framework web si spécial. Nous décrirons les principales fonctionnalités et vous montrerons quelques-uns des principaux composants d'une application Express (bien que vous ne disposiez pas encore d'un environnement de développement pour le tester).</p>
+<p class="summary">Dans ce tout premier article consacré à Express, nous répondons aux questions «&nbsp;Qu'est-ce que Node&nbsp;?&nbsp;» et «&nbsp;Qu'est-ce que Express ?&nbsp;», et vous donnons un aperçu de ce qui fait d'Express un framework web si spécial. Nous décrivons les principales fonctionnalités et montrons quelques-uns des principaux composants d'une application Express (bien que vous ne disposiez pas encore d'un environnement de développement pour le tester).</p>
 
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
-      <td>Une culture de base en informatique, une compréhension globale de la <a href="/fr/docs/Learn/Server-side/First_steps">programmation côté serveur </a>et, en particulier, les mécanismes d'<a href="/fr/docs/Learn/Server-side/First_steps/Client-Server_overview">interactions client-serveur dans un site web.</a></td>
+      <th scope="row">Prérequis&nbsp;:</th>
+      <td>Une culture de base en informatique, une compréhension globale de la <a href="/fr/docs/Learn/Server-side/First_steps">programmation côté serveur</a> et, en particulier, les mécanismes d'<a href="/fr/docs/Learn/Server-side/First_steps/Client-Server_overview">interactions client-serveur dans un site web.</a></td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Devenir familier avec ce qu'est Express et comment il s'intègre dans Node, les fonctionnalités qu'il apporte, et les principales étapes pour construire une application Express.</td>
     </tr>
   </tbody>
 </table>
 
-<h2 id="introducing_node">Présentation de Node</h2>
+<h2 id="introducing_node">Introduction à Node</h2>
 
-<p><a href="https://nodejs.org/">Node</a> (ou plus formellement <em>Node.js</em>) est un environnement d'exécution open-source, multi-plateforme, qui permet aux développeurs de créer toutes sortes d'applications et d'outils côté serveur en <a href="/fr/docs/Glossary/JavaScript">JavaScript</a>. Cet environnement est destiné à être utilisé en dehors du navigateur (il s'exécute directement sur son ordinateur ou dans le système d'exploitation du serveur). Il ignore les API JavaScript liées au navigateur et ajoute du support pour des API plus traditionnelles, comprenant HTTP et des librairies de fichiers système.</p>
+<p><a href="https://nodejs.org/">Node</a> (ou plus formellement <em>Node.js</em>) est un environnement d'exécution open-source, multi-plateforme, qui permet aux développeuses et développeurs de créer toutes sortes d'applications et d'outils côté serveur en <a href="/fr/docs/Glossary/JavaScript">JavaScript</a>. Cet environnement est destiné à être utilisé en dehors du navigateur (il s'exécute directement sur son ordinateur ou dans le système d'exploitation du serveur). Aussi, Node ne permet pas d'utiliser les API JavaScript liées au navigateur mais des API plus traditionnellement utilisées sur un serveur dont notamment celles pour HTTP ou la manipulation de systèmes de fichier.</p>
 
-<p>Dans une perspective de développement de serveur web, Node présente un certain nombre d'avantages :</p>
+<p>Dans une perspective de développement de serveur web, Node présente un certain nombre d'avantages&nbsp;:</p>
 
 <ul>
-  <li>D'excellentes performances ! Node a été créé pour optimiser le rendement et l'évolution des applications web et est une très bonne solution à de nombreux problèmes de développement web (applications en temps réel).</li>
+  <li>D'excellentes performances ! Node a été créé pour optimiser le rendement et l'évolution des applications web. Il s'agit d'une bonne solution à de nombreux problèmes de développement web (par exemple, les applications en temps réel).</li>
   <li>Le code est intégralement écrit en JavaScript ce qui signifie que l'on dépense moins d'énergie à basculer d'un langage à l'autre quand on code côté client et côté serveur.</li>
-  <li>Le JavaScript est un langage de programmation plutôt récent et bénéficie encore d'améliorations dans sa conception en comparaison à d'autres langages web côté serveur (Python, PHP, etc.). Beaucoup d'autres langages nouveaux et populaires compilent/convertissent en JavaScript pour pouvoir utiliser CoffeeScript, ClojureScript, Scala, LiveScript, etc.</li>
-  <li>Le gestionnaire de paquets (NPM) offre l'accès à des milliers de librairies réutilisables. Il a aussi la meilleure résolution de dépendances du marché et peut être utilisé pour automatiser la plupart des chaines de compilation.</li>
-  <li>Node.js est portable. Il est disponible sous Microsoft Windows, OS X, Linux, Solaris, FreeBSD, OpenBSD, WebOS, et NonStop OS. De plus, il est bien supporté par beaucoup d'hébergeurs web qui fournissent souvent une infrastructure spécifique et une documentation pour héberger des sites Node.</li>
-  <li>Node possède une communauté de développeurs et un écosystème très dynamique avec beaucoup de gens désireux d'aider.</li>
+  <li>Le JavaScript est un langage de programmation plutôt récent et bénéficie encore d'améliorations dans sa conception en comparaison à d'autres langages web côté serveur (Python, PHP, etc.). Beaucoup d'autres langages nouveaux et populaires compilent/convertissent en JavaScript pour pouvoir utiliser TypeScript, CoffeeScript, ClojureScript, Scala, LiveScript, etc.</li>
+  <li>Le gestionnaire de paquets (NPM) offre l'accès à des milliers de bibliothèques réutilisables. Il dispose d'une excellente résolution de dépendances et peut être utilisé pour automatiser la plupart des chaines de compilation.</li>
+  <li>Node.js est portable. Il est disponible sous Microsoft Windows, macOS, Linux, etc. De plus, il est bien supporté par beaucoup d'hébergeurs web qui fournissent souvent une infrastructure spécifique et une documentation pour héberger des sites Node.</li>
+  <li>Node possède une communauté et un écosystème très dynamiques eavec beaucoup de gens désireux d'aider.</li>
 </ul>
 
-<p>Vous pouvez utiliser Node.js pour créer un simple serveur web en utilisant le paquet Node HTTP.</p>
+<p>Vous pouvez utiliser Node.js pour créer un simple serveur web en utilisant l'API Node HTTP.</p>
 
 <h3 id="hello_node.js">Hello Node.js</h3>
 
-<p>L'exemple qui suit crée un serveur web qui écoute toutes sortes de requêtes HTTP sur l'URL <code>http://127.0.0.1:8000/</code>. Quand une requête est reçue, le script répond avec la chaine « Salut tout le monde ». Si vous avez déjà installé Node, suivez les étapes de l'exemple suivant :</p>
+<p>L'exemple qui suit crée un serveur web qui écoute toutes sortes de requêtes HTTP sur l'URL <code>https://127.0.0.1:8000/</code>. Quand une requête est reçue, le script répond avec la chaine « Salut tout le monde ». Si vous avez déjà installé Node, suivez les étapes de l'exemple suivant :</p>
 
 <ol>
-  <li>Ouvrez un terminal de commande (sur Windows, ouvrez CMD),</li>
-  <li>Créez le dossier où vous voulez sauvegarder le programme, appelez-le par exemple <code>"test-node"</code> et placez-vous dedans en utilisant la commande suivante dans votre console :
+  <li>Ouvrez un terminal (sur Windows, ouvrez l'invite de commande (cmd)),</li>
+  <li>Créez le dossier où vous voulez sauvegarder le programme, appelez-le par exemple <code>test-node</code> et placez-vous dedans en utilisant la commande suivante dans votre console :
     <pre>cd test-node</pre></li>
   <li>Dans votre éditeur de texte favori, créez un fichier nommé <code>"hello.js"</code> et collez ce qui suit dedans :
     <pre class="brush: js">// Charge le module HTTP
@@ -76,7 +76,7 @@ const server = http.createServer((req, res) => {
 // Démarre le serveur à l'adresse 127.0.0.1 sur le port 8000
 // Affiche un message dès que le serveur commence à écouter les requêtes
 server.listen(port, hostname, () =&gt; {
-  console.log(`Le serveur tourne à l'adresse http://${hostname}:${port}/`);
+  console.log(`Le serveur tourne à l'adresse https://${hostname}:${port}/`);
 })</pre></li>
   <li>Sauvegardez le fichier dans le dossier créé plus haut.</li>
   <li>Retournez au terminal et tapez :
@@ -84,95 +84,99 @@ server.listen(port, hostname, () =&gt; {
   </li>
 </ol>
 
-<p>Puis saisissez l'URL <code>"http://localhost:8000"</code> dans votre navigateur. Vous devriez alors voir "<strong>Salut tout le monde</strong>" en haut à gauche d'une page web ne contenant rien d'autre que ce texte.</p>
+<p>Puis saisissez l'URL <code>"https://localhost:8000"</code> dans votre navigateur. Vous devriez alors voir "<strong>Salut tout le monde</strong>" en haut à gauche d'une page web ne contenant rien d'autre que ce texte.</p>
 
-<h2 id="web_frameworks">Les cadres applicatifs Web</h2>
+<h2 id="web_frameworks">Les frameworks web</h2>
 
-<p>D'autres tâches de développement web ne sont pas directement supportées par Node lui-même. Si vous voulez ajouter différentes manipulations pour divers requêtes HTTP (<code>GET</code>, <code>POST</code>, <code>DELETE</code>, etc.), gérer différemment des requêtes vers plusieurs chemins URL ("routes"), servir des pages statiques ou utiliser des modèles pour créer dynamiquement la réponse,  alors vous devrez écrire tout le code vous-même ou, pour éviter de réinventer la roue, vous servir des cadres applicatifs web (frameworks).</p>
+<p>D'autres tâches de développement web ne sont pas directement prises en charge par Node de façon native. Si vous voulez ajouter différentes manipulations pour divers requêtes HTTP (<code>GET</code>, <code>POST</code>, <code>DELETE</code>, etc.), gérer différemment des requêtes vers plusieurs chemins URL ("routes"), servir des pages statiques ou utiliser des modèles pour créer dynamiquement la réponse,  alors vous devrez écrire tout le code vous-même ou, pour éviter de réinventer la roue, vous servir des cadres applicatifs web (frameworks).</p>
 
 <h2 id="introducing_express">Introduction à Express</h2>
 
-<p><a href="https://expressjs.com/">Express</a> est le cadre applicatif actuellement le plus populaire dans Node et est la bibliothèque sous-jacente pour un grand nombre d'autres <a href="https://expressjs.com/fr/resources/frameworks.html">cadres applicatifs web pour Node</a>. Il fournit des mécanismes pour :</p>
+<p><a href="https://expressjs.com/">Express</a> est le <i>framework</i> actuellement le plus populaire dans Node et est la bibliothèque sous-jacente pour un grand nombre d'autres <a href="https://expressjs.com/fr/resources/frameworks.html">cadres applicatifs web pour Node</a>. Il fournit des mécanismes pour :</p>
 
 <ul>
   <li>Écrire des fonctions de traitement pour différentes requêtes HTTP répondant à différentes URI (par le biais des <em>routes</em>).</li>
-  <li>Intégrer avec les moteurs de rendu « view » dans le but de générer des réponses en insérant des données dans des modèles (« templates »). Configurer certains paramètres d'applications comme le port à utiliser à la connexion et la localisation des modèles nécessaires pour la mise en forme de la réponse.</li>
-  <li>Ajouter des requêtes de traitement « middleware » (intergiciel) où vous le voulez dans le tunnel gestionnaire de la requête.</li>
+  <li>Intégrer avec les moteurs de rendu de « vues » dans le but de générer des réponses en insérant des données dans des modèles (« <i>templates</i> »). Configurer certains paramètres d'applications comme le port à utiliser à la connexion et l'emplacement des modèles nécessaires pour la mise en forme de la réponse.</li>
+  <li>Ajouter des requêtes de traitement « <i>middleware</i> » (intergiciel) où vous le voulez dans le tunnel gestionnaire de la requête.</li>
 </ul>
 
-<p>Bien qu'Express soit assez minimaliste, les développeurs ont créé des <em>middlewares</em> (fonctions intermédiaires) compatibles pour résoudre quasiment tous les problèmes de développement web. Il existe des librairies pour se servir des cookies, gérer les sessions, la connexion de l'utilisateur, les paramètres de l'URL, les données <code>POST</code>, les entêtes de sécurité et d'autres encore. Vous trouverez une liste des paquets maintenus par l'équipe Express ici : <a href="http://expressjs.com/fr/resources/middleware.html">Express Middleware</a> (ainsi que la liste de paquets de tierce-parties populaires).</p>
+<p>Bien qu'Express soit assez minimaliste, des <em>middlewares</em> (fonctions intermédiaires) compatibles ont été créés pour résoudre quasiment tous les problèmes de développement web. Il existe des bibliothèques pour se servir des cookies, gérer les sessions, la connexion de l'utilisateur, les paramètres de l'URL, les données <code>POST</code>, les entêtes de sécurité et d'autres encore. Vous trouverez une liste des paquets maintenus par l'équipe Express ici : <a href="https://expressjs.com/fr/resources/middleware.html">Express Middleware</a> (ainsi que la liste de paquets tiers populaires).</p>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
-  <p>Cette flexibilité est à double tranchant. Il y a une multitude de paquets pour résoudre chaque problème mais trouver le bon paquet à utiliser peut vite devenir un challenge. Il n'y a pas non plus de "bonne manière" pour structurer une application et beaucoup d'exemples que vous trouverez sur le net ne sont pas optimisés ou montrent seulement une infime partie de ce que vous devez faire pour développer une application web.</p>
+  <p>Cette flexibilité est à double tranchant. Il y a une multitude de paquets pour résoudre chaque problème mais trouver le bon paquet à utiliser peut vite devenir un défi. Il n'y a pas non plus de « bonne manière » pour structurer une application et beaucoup d'exemples que vous trouverez sur le net ne sont pas optimisés ou montrent seulement une infime partie de ce que vous devez faire pour développer une application web.</p>
 </div>
 
-<h2 id="where_did_node_and_express_come_from">D'où viennent Node et Express ?</h2>
+<h2 id="where_did_node_and_express_come_from">D'où viennent Node et Express&nbsp;?</h2>
 
-<p>À ses débuts en 2009, Node a été publié pour Linux uniquement. Le gestionnaire de paquets NPM est sorti en 2010, et le support natif de Windows fut ajouté en 2012. Aujourd'hui (juin 2020), la version courante ("current release") de Node est la 14.4.0 et la dernière version publiée est la 12.18.1. Ceci est un très court aperçu d'une aventure riche en rebondissements. Allez creuser ça sur <a href="https://en.wikipedia.org/wiki/Node.js#History">Wikipedia</a> si vous voulez en savoir plus.</p>
+<p>À ses débuts en 2009, Node a été publié pour Linux uniquement. Le gestionnaire de paquets NPM est sorti en 2010, et le support natif de Windows fut ajouté en 2012. Ceci est un très court aperçu d'une aventure riche en rebondissements. Allez creuser ça sur <a href="https://fr.wikipedia.org/wiki/Node.js#Historique">Wikipédia</a> si vous voulez en savoir plus.</p>
 
-<p>Express est sorti pour la première fois en Novembre 2010 et est aujourd'hui (juin 2020) à sa version 4.17.1 de l'API. Vous pouvez consulter la <a href="https://expressjs.com/fr/changelog/4x.html">liste des modifications</a> pour plus d'informations sur la version courante et <a href="https://github.com/expressjs/express/blob/master/History.md">GitHub</a> pour plus de détails sur l'historique des publications.</p>
+<p>Express est sorti pour la première fois en novembre 2010. Vous pouvez consulter la <a href="https://expressjs.com/en/changelog/4x.html">liste des modifications</a> pour plus d'informations sur la version courante et <a href="https://github.com/expressjs/express/blob/master/History.md">GitHub</a> pour plus de détails sur l'historique des publications.</p>
 
-<h2 id="how_popular_are_node_and_express">Quelle popularité pour Node et Express?</h2>
+<h2 id="how_popular_are_node_and_express">Quelle popularité pour Node et Express&nbsp;?</h2>
 
-<p>La popularité d'un "framework" web est importante car elle conditionne la maintenance dans le temps et les ressources qu'il est raisonnable de mettre à disposition dans la documentation, les librairies d'extensions et le support technique.</p>
+<p>La popularité d'un <i>framework</i> web est importante car elle conditionne la maintenance dans le temps et les ressources qu'il est raisonnable de mettre à disposition dans la documentation, les bibliothèques d'extensions et le support technique.</p>
 
-<p>Il n'existe pas d'échelle de mesures définitive et fiable pour l'estimation de la popularité des "frameworks" côté serveur, bien que des sites comme <a href="http://hotframeworks.com/">Hot Frameworks</a> essaient d'estimer la popularité par le comptage du nombre de projets Github ou StackOverflow.  La question est : " Est-ce que Node et Express sont suffisamment populaires pour pouvoir s'affranchir des plateformes non-populaires ? Continuent-ils à évoluer ? Pouvez-vous avoir de l'aide si besoin ? Existe-til une opportunité pour vous de gagner de l'argent si vous apprenez Express ?".</p>
+<p>Il n'existe pas d'échelle de mesures définitive et fiable pour l'estimation de la popularité des <i>frameworks</i> côté serveur, bien que des sites comme <a href="https://hotframeworks.com/">Hot Frameworks</a> essaient d'estimer la popularité par le comptage du nombre de projets GitHub ou StackOverflow.  La question est : « Est-ce que Node et Express sont suffisamment populaires pour pouvoir s'affranchir des plateformes non-populaires ? Continuent-ils à évoluer ? Pouvez-vous avoir de l'aide si besoin ? Existe-t-il une opportunité pour vous de gagner de l'argent si vous apprenez Express ? ».</p>
 
-<p>Si on se réfère à la<a href="https://expressjs.com/fr/resources/companies-using-express.html"> liste de compagnies utilisant Express</a>, la quantité de gens contribuant au code et le nombre de gens fournissant un support payant ou bien gratuit, alors oui, <em>Express</em> est un framework populaire !</p>
+<p>Si on se réfère à la <a href="https://expressjs.com/fr/resources/companies-using-express.html"> liste des entreprises utilisant Express</a>, la quantité de gens contribuant au code et le nombre de gens fournissant un support payant ou bien gratuit, alors oui, <em>Express</em> est un framework populaire !</p>
 
-<h2 id="is_express_opinionated">Express est-il "dogmatique" ?</h2>
+<h2 id="is_express_opinionated">Express est-il « dogmatique » ?</h2>
 
-<p>Les cadres logiciels web se décrivent souvent comme étant "opiniâtres" ou non (<em>opinionated</em> en anglais).</p>
+<p>Les cadres logiciels web se décrivent souvent comme ayant ou non des opinions données sur tel ou tel sujet au sens où ils sont orientés dans leur usage selon ces choix/opinions. En anglais, on dit d'un <i>framework</i> qu'il est <i>opinionated</i> ou non.</p>
 
-<p>Les cadres logiciels opiniâtres sont ceux qui ont un avis arrêté sur la "bonne manière" de gérer certaines tâches. Ils fournissent souvent un cadre permettant de développer rapidement <em>dans un domaine particulier </em>(résolvant des problèmes d'un type particulier) parce que la bonne manière de faire quoi que ce soit est généralement bien comprise et bien documentée. Toutefois, ils peuvent manquer de flexibilité pour la résolution de problèmes hors de leur portée et tendent à offrir peu de choix concernant les composants et approches qu'ils peuvent utiliser.</p>
+<p>Les <i>frameworks</i> avec une opinion sont ceux qui ont un avis arrêté sur la « bonne manière » de gérer certaines tâches. Ils fournissent souvent un cadre permettant de développer rapidement <em>dans un domaine particulier</em> (résolvant des problèmes d'un type particulier) parce que la bonne manière de faire quoi que ce soit est généralement bien comprise et bien documentée. Toutefois, ils peuvent manquer de flexibilité pour la résolution de problèmes hors de leur portée et tendent à offrir peu de choix concernant les composants et approches qu'ils peuvent utiliser.</p>
 
-<p>Les cadres logiciels non opiniâtres, par contraste, ont beaucoup moins de restrictions sur la meilleure manière d'assembler des composants ensemble pour atteindre un objectif, ou encore sur les composants que vous devriez utiliser. Ils laissent aux développeurs la possibilité d'utiliser les outils les plus adaptés pour achever une tâche particulière, bien que cela nécessite que vous cherchiez et trouviez ces composants par vous-même.<br><br>
-Express n'est pas opiniâtre. Vous pouvez intégrer quasiment n'importe quelle fonction intermédiaire compatible que vous le désirez dans la pile de gestion de requête, dans quasiment n'importe quel ordre. Vous pouvez structurer l'application en un fichier comme en plusieurs, et utiliser n'importe quelle structure de dossiers. Vous pourrez même quelquefois vous sentir perdu par la liberté que vous avez de vous organiser comme vous le souhaitez !</p>
+<p>Les <i>frameworks</i> sans opinion, par contraste, ont beaucoup moins de restrictions sur la meilleure manière d'assembler des composants ensemble pour atteindre un objectif, ou encore sur les composants que vous devriez utiliser. Ils laissent aux développeurs la possibilité d'utiliser les outils les plus adaptés pour achever une tâche particulière, bien que cela nécessite que vous cherchiez et trouviez ces composants par vous-même.</p>
+
+<p>Express n'est pas particulièrement dogmatique. Vous pouvez intégrer quasiment n'importe quelle fonction intermédiaire compatible voulue dans la pile de gestion des requêtes, dans quasiment n'importe quel ordre. Vous pouvez structurer l'application en un fichier comme en plusieurs, et utiliser n'importe quelle structure de dossiers. Vous pourrez même quelques fois vous sentir perdu⋅e par la liberté que vous avez de vous organiser comme vous le souhaitez !</p>
 
 <h2 id="what_does_express_code_look_like">À quoi ressemble du code Express ?</h2>
 
-<p>Dans un site web traditionnellement orienté données, une application web attend des requêtes HTTP du navigateur web (ou d'un autre client). Quand une requête est reçue, l'application cherche quelle action est requise en fonction du modèle de l'URL et des possibles informations associés contenues dans les données <code>POST</code> ou <code>GET</code>. Selon ce qui est requis, il pourra alors lire ou écrire des informations dans une base de données ou effectuer d'autre tâches requises pour satisfaire la requête. L'application va alors retourner une réponse au navigateur web, souvent une page HTML créée dynamiquement pour le navigateur, en intégrant les données récupérées dans un modèle HTML.</p>
+<p>Dans un site web utilisé pour traiter des données, une application web attend des requêtes HTTP du navigateur web (ou d'un autre client). Quand une requête est reçue, l'application cherche quelle action est requise en fonction du modèle de l'URL et des possibles informations associés contenues dans les données <code>POST</code> ou <code>GET</code>. Selon ce qui est requis, il pourra alors lire ou écrire des informations dans une base de données ou effectuer d'autre tâches pour satisfaire la requête. L'application va alors retourner une réponse au navigateur web, souvent une page HTML créée dynamiquement pour le navigateur, en intégrant les données récupérées dans un modèle HTML.</p>
 
-<p>Express fournit des méthodes pour spécifier quelle fonction est appelée pour une méthode HTTP particulière (<code>GET</code>, <code>POST</code>, <code>SET</code>, etc.) et un modèle d'URL ("Route"), ainsi que des méthodes pour spécifier quel moteur de rendu de vues ("view") est utilisé, où sont les modèles de vues et quel modèle utiliser pour générer une réponse. Vous pouvez utiliser les fonctions intermédiaires d'Express pour ajouter un support pour les cookies, les sessions, les utilisateurs, obtenir les paramètres <code>POST</code>/<code>GET</code>, etc. Vous pouvez utiliser n'importe que système de base données supporté par Node (Express ne définit aucun comportement relatif aux bases de données).</p>
+<p>Express fournit des méthodes pour spécifier quelle fonction est appelée pour une méthode HTTP particulière (<code>GET</code>, <code>POST</code>, <code>SET</code>, etc.) et un modèle d'URL ("Route"), ainsi que des méthodes pour spécifier quel moteur de rendu de vues ("view") est utilisé, où sont les modèles de vues et quel modèle utiliser pour générer une réponse. Vous pouvez utiliser les fonctions intermédiaires d'Express pour prendre en charge les cookies, les sessions, les utilisateurs, obtenir les paramètres <code>POST</code>/<code>GET</code>, etc. Vous pouvez utiliser n'importe que système de base données supporté par Node (Express ne définit aucun comportement relatif aux bases de données).</p>
 
 <p>Les sections suivantes expliquent quelques choses communes que vous verrez en travaillant avec du code <em>Express</em> et <em>Node</em>.</p>
 
-<h3 id="helloworld_express">Helloworld Express</h3>
+<h3 id="helloworld_express">Hello World Express</h3>
 
 <p>Tout d'abord intéressons-nous à l'exemple <a href="https://expressjs.com/fr/starter/hello-world.html">Hello World</a> standard d'Express (nous expliquons chaque partie de cet exemple ci-dessous, et dans les sections suivantes).</p>
 
 <div class="notecard note">
   <p><b>Astuce :</b></p>
   <p>Si vous avez déjà installé Node et Express (ou si vous les installez comme montré dans <a href="/fr/docs/Learn/Server-side/Express_Nodejs/development_environment">l'article suivant</a>), vous pouvez enregistrer ce code dans un fichier texte appelé <strong>app.js</strong> et l'exécuter via un terminal en tapant :</p>
-  <p><strong><code>node ./app.js</code></strong></p>
+  <p><strong><code>node app.js</code></strong></p>
 </div>
 
-<pre class="brush: js">var express = require('express');
-var app = express();
+<pre class="brush: js">const express = require('express');
+const app = express();
+const port = 3000;
 
 <strong>app.get('/', (req, res) =&gt; {
-  res.send('Hello World!');
+  res.send('Hello World!')
 });</strong>
 
 app.listen(port, () =&gt; {
-  console.log(`Example app listening on port ${port}!`);
-});</pre>
+  console.log(`Application exemple à l'écoute sur le port ${port}!`)
+});
+</pre>
 
-<p>Les deux premières lignes <code>require()</code> (importation) du module express permettent de créer une <a href="https://expressjs.com/fr/4x/api.html#app">application express</a>. Cet objet, qui est traditionnellement nommé <code>app</code>, possède des méthodes pour acheminer les requêtes HTTP, configurer les intergiciels, rendre les vues HTML, enregistrer un moteur de modèles et modifier les <a href="https://expressjs.com/fr/4x/api.html#app.settings.table">paramètres de l'application</a> qui contrôlent le comportement de l'application (par exemple, le mode d'environnement, si les définitions de route sont sensibles à la casse, etc.)</p>
+<p>Les deux premières lignes importent (avec <code>require()</code>) le module express et créent une <a href="https://expressjs.com/en/4x/api.html#app">application express</a>. Cet objet, qui est traditionnellement nommé <code>app</code>, possède des méthodes pour acheminer les requêtes HTTP, configurer les intergiciels, rendre les vues HTML, enregistrer un moteur de modèles et modifier les <a href="https://expressjs.com/en/4x/api.html#app.settings.table">paramètres de l'application</a> qui contrôlent le comportement de l'application (par exemple, le mode d'environnement, si les définitions de route sont sensibles à la casse, etc.).</p>
 
-<p>La partie centrale du code (les trois lignes commençant par <code>app.get</code>) montre une <em>définition de route</em>. La méthode <code>app.get()</code> spécifie une fonction de rappel qui sera invoquée chaque fois qu'il y aura une requête HTTP <code>GET</code> avec un chemin (<code>'/'</code>) relatif à la racine du site. La fonction de rappel prend une requête et un objet réponse comme arguments, et appelle simplement <a href="https://expressjs.com/fr/4x/api.html#res.send"><code>send()</code></a> sur la réponse pour renvoyer la chaîne de caractères « Hello World ! ».</p>
+<p>La partie centrale du code (les trois lignes commençant par <code>app.get</code>) montre une <em>définition de route</em>. La méthode <code>app.get()</code> spécifie une fonction de rappel qui sera invoquée chaque fois qu'il y aura une requête HTTP <code>GET</code> avec un chemin (<code>'/'</code>) relatif à la racine du site. La fonction de rappel prend une requête et un objet réponse comme arguments, et appelle simplement <a href="https://expressjs.com/en/4x/api.html#res.send"><code>send()</code></a> sur la réponse pour renvoyer la chaîne de caractères <code>"Hello World!"</code>.</p>
 
-<p>Le dernier bloc démarre le serveur sur le port '3000' et imprime un commentaire de journal sur la console. Avec le serveur en cours d'exécution, vous pouvez aller sur <code>localhost:3000</code> dans votre navigateur pour voir l'exemple de réponse renvoyé.</p>
+<p>Le dernier bloc démarre le serveur sur le port 3000 et affiche un commentaire de journal dans la console. Avec le serveur en cours d'exécution, vous pouvez aller sur <code>localhost:3000</code> dans votre navigateur pour voir l'exemple de réponse renvoyé.</p>
 
 <h3 id="importing_and_creating_modules">Créer et importer des modules</h3>
 
-<p>Un module est une bibliothèque/fichier JavaScript que vous pouvez importer dans un autre code en utilisant la fonction <code>require()</code> de Node. <em>Express</em> lui-même est un module, tout comme les bibliothèques de middleware et de base de données que nous utilisons dans nos applications <em>Express</em>.</p>
+<p>Un module est une bibliothèque/fichier JavaScript que vous pouvez importer dans un autre code en utilisant la fonction <code>require()</code> de Node. <em>Express</em> lui-même est un module, tout comme les bibliothèques de <i>middleware</i> et de base de données que nous utilisons dans nos applications <em>Express</em>.</p>
 
-<p>Le code ci-dessous montre comment nous importons un module par son nom, en utilisant le framework <em>Express</em> comme exemple. Tout d'abord, nous invoquons la fonction <code style="font-style : normal ; font-weight : normal ;">require()</code>, en spécifiant le nom du module sous forme de chaîne (<code>'express'</code>), et en appelant l'objet retourné pour créer une <a href="https://expressjs.com/fr/4x/api.html#app">applicationExpress</a>. Nous pouvons alors accéder aux propriétés et fonctions de l'objet application.</p>
+<p>Le code ci-dessous montre comment nous importons un module par son nom, en utilisant le framework <em>Express</em> comme exemple. Tout d'abord, nous invoquons la fonction <code style="font-style : normal ; font-weight : normal ;">require()</code>, en spécifiant le nom du module sous forme de chaîne (<code>'express'</code>), et en appelant l'objet retourné pour créer une <a href="https://expressjs.com/en/4x/api.html#app">applicationExpress</a>. Nous pouvons alors accéder aux propriétés et fonctions de l'objet application.</p>
 
-<pre class="brush: js">var express = require('express');
-var app = express();</pre>
+<pre class="brush: js">const express = require('express');
+const app = express();
+</pre>
 
 <p>Vous pouvez également créer vos propres modules qui peuvent être importés de la même manière.</p>
 
@@ -208,7 +212,12 @@ console.log("L'aire d'un carré dont la largeur est de 4 est la suivante " + squ
   }
 };</pre>
 
-<p>Pour de plus amples informations sur les modules, voir <a href="https://nodejs.org/api/modules.html#modules_modules">Modules</a> (Node API docs).</p>
+<div class="note">
+  <p><strong>Note&nbsp;:</strong> L'objet <code>exports</code> peut être vu comme un <a href="https://nodejs.org/api/modules.html#modules_exports_shortcut">raccourci</a> vers <code>module.exports</code> au sein d'un module donné. En fait, <code>exports</code> est simplement une variable qui est initialisée avec la valeur de <code>module.exports</code> avant que le module soit évalué. Cette valeur est une référence vers un objet. Cela signifie que <code>exports</code> référence le même objet que celui référencé par <code>module.exports</code>. Cela signifie également qu'affecter une autre valeur à <code>exports</code> le détachera complètement de <code>module.exports</code>.</p>
+  </div>
+  
+
+<p>Pour de plus amples informations sur les modules, voir <a href="https://nodejs.org/api/modules.html#modules_modules">Modules</a> (documentation Node).</p>
 
 <h3 id="using_asynchronous_apis">Utilisation des API asynchrones</h3>
 
@@ -224,38 +233,39 @@ console.log('Second');</pre>
 }, 3000);
 console.log('Second');</pre>
 
-<p>L'utilisation d'API asynchrones non bloquantes est encore plus importante sur Node que dans le navigateur, car <em>Node</em> est un environnement d'exécution événementiel à processus unique. « Single threaded » signifie que toutes les requêtes adressées au serveur sont exécutées sur le même processus (plutôt que d'être fractionnées en processus distincts). Ce modèle est extrêmement efficace en termes de vitesse et de ressources du serveur, mais il signifie que si l'une de vos fonctions appelle des méthodes synchrones qui prennent beaucoup de temps pour se terminer, elle bloquera non seulement la demande actuelle, mais aussi toutes les autres demandes traitées par votre application Web.</p>
+<p>L'utilisation d'API asynchrones non bloquantes est encore plus importante sur Node que dans le navigateur, car <em>Node</em> est un environnement d'exécution événementiel avec un seul <i>thread</i>. Cela signifie que toutes les requêtes adressées au serveur sont exécutées sur le même <i>thread</i> (plutôt que d'être fractionnées en <i>threads</i> distincts). Ce modèle est extrêmement efficace en termes de vitesse et de ressources du serveur, mais il signifie que si l'une de vos fonctions appelle des méthodes synchrones qui prennent beaucoup de temps pour se terminer, elle bloquera non seulement la demande actuelle, mais aussi toutes les autres demandes traitées par votre application Web.</p>
 
 <p>Il existe plusieurs façons pour une API asynchrone d'informer votre application de la fin d'une opération. La méthode la plus courante consiste à enregistrer une fonction de rappel lorsque vous invoquez l'API asynchrone, qui sera rappelée lorsque l'opération sera terminée. C'est l'approche utilisée ci-dessus.</p>
 
 <div class="notecard note">
   <p><b>Astuce :</b></p>
-  <p>L'utilisation des rappels (« <em>callbacks</em> ») peut être assez « désordonnée » si vous avez une séquence d'opérations asynchrones dépendantes qui doivent être exécutées dans l'ordre, car cela entraîne de multiples niveaux de rappels imbriqués. Ce problème est communément appelé « l'enfer des callbacks ». Ce problème peut être réduit par de bonnes pratiques de codage (voir <a href="http://callbackhell.com/">http://callbackhell.com/</a>), l'utilisation d'un module comme <a href="https://www.npmjs.com/package/async">async</a>, ou même le passage à des fonctionnalités ES6 comme <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a>.</p>
+  <p>L'utilisation des rappels (« <em>callbacks</em> ») peut être assez « désordonnée » si vous avez une séquence d'opérations asynchrones dépendantes qui doivent être exécutées dans l'ordre, car cela entraîne de multiples niveaux de rappels imbriqués. Ce problème est communément appelé « l'enfer des callbacks ». Ce problème peut être réduit par de bonnes pratiques de codage dont l'utilisation des <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">promesses</a> ou de <a href="/fr/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code></a>/<a href="/fr/docs/Web/JavaScript/Reference/Operators/await"><code>await</code></a>.</p>
 </div>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
-  <p>Une convention courante pour Node et Express est d'utiliser des callbacks de type error-first. Dans cette convention, la première valeur de vos <em>fonctions de rappel</em> est une valeur d'erreur, tandis que les arguments suivants contiennent des données de succès. Il y a une bonne explication de l'utilité de cette approche dans ce blog : <a href="http://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js">The Node.js Way - Comprendre les callbacks de type « Error First ».</a> (fredkschott.com).</p>
+  <p>Une convention courante pour Node et Express est d'utiliser des callbacks de type error-first. Dans cette convention, la première valeur de vos <em>fonctions de rappel</em> est une valeur d'erreur, tandis que les arguments suivants contiennent des données de succès. Il y a une bonne explication de l'utilité de cette approche dans ce blog : <a href="https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js">The Node.js Way - Comprendre les callbacks de type « Error First ».</a> (fredkschott.com).</p>
 </div>
 
 <h3 id="creating_route_handlers">Créer des gestionnaires de route</h3>
 
-<p>Dans notre exemple <em>Hello World</em> d'Express (voir ci-dessus), nous avons défini une fonction de gestion de route (callback) pour les requêtes HTTP <code>GET</code> vers la racine du site (<code>'/'</code>).</p>
+<p>Dans notre exemple <em>Hello World</em> d'Express (voir ci-dessus), nous avons défini une fonction de gestion de route (un <i>callback</i>) pour les requêtes HTTP <code>GET</code> vers la racine du site (<code>'/'</code>).</p>
 
 <pre class="brush: js">app.get('/', (req, res) =&gt; {
   res.send('Hello World!');
 });</pre>
 
-<p>La fonction de rappel prend une requête et un objet réponse comme arguments. Dans ce cas, la méthode appelle simplement <a href="https://expressjs.com/fr/4x/api.html#res.send"><code>send()</code></a> sur la réponse pour renvoyer la chaîne de caractères « Hello World ! ». Il existe un <a href="https://expressjs.com/fr/guide/routing.html#response-methods">nombre d'autres méthodes de réponse</a> pour terminer le cycle requête/réponse, par exemple vous pourriez appeler <code><a href="https://expressjs.com/fr/4x/api.html#res.json">res.json()</a></code> pour envoyer une réponse JSON ou <code><a href="https://expressjs.com/fr/4x/api.html#res.sendFile">res.sendFile()</a></code> pour envoyer un fichier.</p>
+<p>La fonction de rappel prend une requête et un objet réponse comme arguments. Dans ce cas, la méthode appelle simplement <a href="https://expressjs.com/en/4x/api.html#res.send"><code>send()</code></a> sur la réponse pour renvoyer la chaîne de caractères « Hello World ! ». Il existe un <a href="https://expressjs.com/fr/guide/routing.html#response-methods">nombre d'autres méthodes de réponse</a> pour terminer le cycle requête/réponse, par exemple vous pourriez appeler <code><a href="https://expressjs.com/en/4x/api.html#res.json">res.json()</a></code> pour envoyer une réponse JSON ou <code><a href="https://expressjs.com/en/4x/api.html#res.sendFile">res.sendFile()</a></code> pour envoyer un fichier.</p>
 
 <div class="notecard note">
   <p><b>Astuce JavaScript :</b></p>
-  <p>Vous pouvez utiliser les noms d'arguments de votre choix dans les fonctions de rappel ; lorsque le rappel est invoqué, le premier argument sera toujours la demande et le second sera toujours la réponse. Il est judicieux de les nommer de telle sorte que vous puissiez identifier l'objet avec lequel vous travaillez dans le corps du callback.</p>
+  <p>Vous pouvez utiliser les noms d'arguments de votre choix dans les fonctions de rappel ; lorsque le rappel est invoqué, le premier argument sera toujours la requête et le second sera toujours la réponse. Il est judicieux de les nommer de telle sorte que vous puissiez identifier l'objet avec lequel vous travaillez dans le corps du <i>callback</i>.</p>
 </div>
 
-<p>L'objet <em>Express application</em> fournit également des méthodes permettant de définir des gestionnaires de route pour tous les autres verbes HTTP, qui sont pour la plupart utilisés exactement de la même manière : <code>post()</code>, <code>put()</code>, <code>delete()</code>, <code>options()</code>, <code>trace()</code>, <code>copy()</code>, <code>lock()</code>, <code>mkcol()</code>, <code>move()</code>, <code>purge()</code>, <code>propfind()</code>, <code>proppatch()</code>, <code>unlock()</code>, <code>report()</code>, <code>mkactivity()</code>, <code>checkout()</code>, <code>merge()</code>, <code>m-</code><code>search()</code>, <code>notify()</code>, <code>subscribe()</code>, <code>unsubscribe()</code>, <code>patch()</code>, <code>search()</code>, et <code>connect()</code>.</p>
+<p>L'objet <em>Express</em> <code>application</code> fournit également des méthodes permettant de définir des gestionnaires de route pour tous les autres verbes HTTP, qui sont pour la plupart utilisés exactement de la même manière : </p>
+<p><code>checkout()</code>, <code>copy()</code>, <strong><code>delete()</code></strong>, <strong><code>get()</code></strong>, <code>head()</code>, <code>lock()</code>, <code>merge()</code>, <code>mkactivity()</code>, <code>mkcol()</code>, <code>move()</code>, <code>m-search()</code>, <code>notify()</code>, <code>options()</code>, <code>patch()</code>, <strong><code>post()</code></strong>, <code>purge()</code>, <strong><code>put()</code></strong>, <code>report()</code>, <code>search()</code>, <code>subscribe()</code>, <code>trace()</code>, <code>unlock()</code>, <code>unsubscribe()</code>.</p>
 
-<p>Il existe une méthode de routage spéciale, <code>app.all()</code>, qui sera appelée en réponse à toute méthode HTTP. Ceci est utilisé pour charger les fonctions middleware à un chemin particulier pour toutes les méthodes de requête. L'exemple suivant (tiré de la documentation d'Express) montre un gestionnaire qui sera exécuté pour les requêtes vers <code>/secret</code> indépendamment du verbe HTTP utilisé (à condition qu'il soit supporté par le <a href="https://nodejs.org/api/http.html#http_http_methods">module http</a>).</p>
+<p>Il existe une méthode de routage spéciale, <code>app.all()</code>, qui sera appelée en réponse à toute méthode HTTP. Ceci est utilisé pour charger les fonctions <i>middleware</i> à un chemin particulier pour toutes les méthodes de requête. L'exemple suivant (tiré de la documentation d'Express) montre un gestionnaire qui sera exécuté pour les requêtes vers <code>/secret</code> indépendamment du verbe HTTP utilisé (à condition qu'il soit supporté par le <a href="https://nodejs.org/api/http.html#http_http_methods">module http</a>).</p>
 
 <pre class="brush: js">app.all('/secret', (req, res, next) =&gt; {
   console.log('Accès à la section secrète ...');
@@ -264,7 +274,7 @@ console.log('Second');</pre>
 
 <p>Les routes vous permettent de faire correspondre des modèles particuliers de caractères dans une URL, d'extraire certaines valeurs de l'URL et de les transmettre comme paramètres au gestionnaire de la route (en tant qu'attributs de l'objet de la demande transmis comme paramètre).</p>
 
-<p>Il est souvent utile de regrouper les gestionnaires de route pour une partie particulière d'un site et d'y accéder en utilisant un préfixe de route commun (par exemple, un site avec un Wiki pourrait avoir toutes les routes liées au wiki dans un seul fichier et les faire accéder avec un préfixe de route de <em>/wiki/</em>). Dans <em>Express</em>, ceci est réalisé en utilisant l'objet <code><a href="http://expressjs.com/fr/guide/routing.html#express-router">express.Router</a></code>. Par exemple, nous pouvons créer notre route wiki dans un module nommé <strong>wiki.js</strong>, puis exporter l'objet <code>Router</code>, comme indiqué ci-dessous :</p>
+<p>Il est souvent utile de regrouper les gestionnaires de route pour une partie particulière d'un site et d'y accéder en utilisant un préfixe de route commun (par exemple, un site avec un Wiki pourrait avoir toutes les routes liées au wiki dans un seul fichier et les faire accéder avec un préfixe de route de <em>/wiki/</em>). Dans <em>Express</em>, ceci est réalisé en utilisant l'objet <code><a href="https://expressjs.com/fr/guide/routing.html#express-router">express.Router</a></code>. Par exemple, nous pouvons créer notre route wiki dans un module nommé <strong>wiki.js</strong>, puis exporter l'objet <code>Router</code>, comme indiqué ci-dessous :</p>
 
 <pre class="brush: js notranslate">// wiki.js - Module route du wiki
 
@@ -279,7 +289,7 @@ router.get('/', (req, res) =&gt; {
 
 // Route vers la page à propos
 router.get('/about', (req, res) =&gt; {
-  res.send('A propos de ce wiki');
+  res.send('À propos de ce wiki');
 });
 
 module.exports = router;</pre>
@@ -295,22 +305,22 @@ module.exports = router;</pre>
 // ...
 app.use('/wiki', wiki);</pre>
 
-<p>Nous vous montrerons beaucoup plus en détail comment travailler avec les routes, et en particulier comment utiliser le <code>Router</code>, plus tard dans la section liée <a href="/fr/docs/Learn/Server-side/Express_Nodejs/routes">Routes et contrôleurs</a>.</p>
+<p>Nous vous montrerons beaucoup plus en détails comment travailler avec les routes, et en particulier comment utiliser le <code>Router</code>, plus tard dans la section liée <a href="/fr/docs/Learn/Server-side/Express_Nodejs/routes">Routes et contrôleurs</a>.</p>
 
-<h3 id="using_middleware">Utilisation d'un intergiciel</h3>
+<h3 id="using_middleware">Utilisation d'un middleware/intergiciel</h3>
 
-<p>L'intergiciel (aussi appelé « <em>middleware</em> ») est largement utilisé dans les applications d'Express, pour des tâches allant du service de fichiers statiques à la gestion des erreurs, en passant par la compression des réponses HTTP. Alors que les fonctions de route terminent le cycle requête-réponse HTTP en renvoyant une réponse au client HTTP, les fonctions d'intergiciel effectuent <em>typiquement</em> une opération sur la demande ou la réponse, puis appellent la fonction suivante dans la « pile », qui peut être un autre intergiciel ou un gestionnaire de route. L'ordre dans lequel les intergiciels sont appelés dépend du développeur de l'application.</p>
+<p>L'intergiciel (aussi appelé « <em>middleware</em> ») est largement utilisé dans les applications d'Express, pour des tâches allant du service de fichiers statiques à la gestion des erreurs, en passant par la compression des réponses HTTP. Alors que les fonctions de route terminent le cycle requête-réponse HTTP en renvoyant une réponse au client HTTP, les fonctions d'intergiciel effectuent <em>typiquement</em> une opération sur la demande ou la réponse, puis appellent la fonction suivante dans la « pile », qui peut être un autre intergiciel ou un gestionnaire de route. L'ordre dans lequel les intergiciels sont appelés dépend du code de l'application.</p>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
   <p>L'intergiciel peut effectuer n'importe quelle opération, exécuter n'importe quel code, apporter des modifications à l'objet requête et réponse, et il peut <em>aussi mettre fin au cycle requête-réponse</em>. S'il ne met pas fin au cycle, alors il doit appeler <code>next()</code> pour passer le contrôle à la fonction suivante de l'intergiciel (ou la requête sera laissée en suspens).</p>
 </div>
 
-<p>La plupart des apps utiliseront des <em>programmes intermédiaires tiers</em> afin de simplifier les tâches courantes de développement web comme le travail avec les cookies, les sessions, l'authentification des utilisateurs, l'accès aux données <code>POST</code> et JSON des requêtes, la journalisation, etc. Vous pouvez trouver une <a href="http://expressjs.com/fr/resources/middleware.html">liste des paquets middleware maintenus par l'équipe Express</a> (qui inclut également d'autres paquets populaires de tiers). D'autres paquets Express sont disponibles sur le gestionnaire de paquets NPM.</p>
+<p>La plupart des apps utiliseront des <em>programmes intermédiaires tiers</em> afin de simplifier les tâches courantes de développement web comme le travail avec les cookies, les sessions, l'authentification des utilisateurs, l'accès aux données <code>POST</code> et JSON des requêtes, la journalisation, etc. Vous pouvez trouver une <a href="https://expressjs.com/fr/resources/middleware.html">liste des paquets <i>middleware</i> maintenus par l'équipe Express</a> (qui inclut également d'autres paquets populaires de tiers). D'autres paquets Express sont disponibles sur le gestionnaire de paquets NPM.</p>
 
-<p>Pour utiliser un middleware tiers, vous devez d'abord l'installer dans votre application à l'aide de NPM. Par exemple, pour installer l'intergiciel de journalisation des requêtes HTTP <a href="http://expressjs.com/fr/resources/middleware/morgan.html">morgan</a>, vous devez procéder comme suit :</p>
+<p>Pour utiliser un <i>middleware</i> tiers, vous devez d'abord l'installer dans votre application à l'aide de NPM. Par exemple, pour installer l'intergiciel de journalisation des requêtes HTTP <a href="https://expressjs.com/fr/resources/middleware/morgan.html">morgan</a>, vous devez procéder comme suit :</p>
 
-<pre class="brush: bash">$ npm install morgan</pre>
+<pre class="brush: bash">npm install morgan</pre>
 
 <p>Vous pourriez alors appeler <code>use()</code> sur l'objet <em>Express application</em> pour ajouter l'intergiciel à la pile :</p>
 
@@ -325,11 +335,11 @@ app.use(logger('dev'));
   <p>Les fonctions d'intergiciel et de routage sont appelées dans l'ordre où elles sont déclarées. Pour certains intergiciels, l'ordre est important (par exemple, si l'intergiciel de session dépend de l'intergiciel de cookie, alors le gestionnaire de cookie doit être ajouté en premier). Il est presque toujours nécessaire d'appeler l'intergiciel avant de définir les routes, sinon vos gestionnaires de routes n'auront pas accès aux fonctionnalités ajoutées par votre intergiciel.</p>
 </div>
 
-<p>Vous pouvez écrire vos propres fonctions intergiciels, et vous serez probablement amené à le faire (ne serait-ce que pour créer un code de gestion des erreurs). La <strong>seule</strong> différence entre une fonction middleware et un callback de gestionnaire de route est que les fonctions middleware ont un troisième argument <code>next</code>, que les fonctions middleware sont censées appeler si elles ne sont pas celle qui termine le cycle de requête (lorsque la fonction middleware est appelée, cela contient la fonction <em>next</em> qui doit être appelée).</p>
+<p>Vous pouvez écrire vos propres fonctions intergiciels, et vous serez probablement amené à le faire (ne serait-ce que pour créer un code de gestion des erreurs). La <strong>seule</strong> différence entre une fonction <i>middleware</i> et un <i>callback</i> de gestionnaire de route est que les fonctions <i>middleware</i> ont un troisième argument <code>next</code>, que les fonctions <i>middleware</i> sont censées appeler si elles ne sont pas celle qui termine le cycle de requête (lorsque la fonction <i>middleware</i> est appelée, cela contient la fonction <em>next</em> qui doit être appelée).</p>
 
-<p>Vous pouvez ajouter une fonction d'intergiciel à la chaîne de traitement avec <code>app.use()</code> ou <code>app.add()</code>, selon que vous voulez appliquer l'intergiciel à toutes les réponses ou aux réponses avec un verbe HTTP particulier (<code>GET</code>, <code>POST</code>, etc). Vous spécifiez les routes de la même manière dans les deux cas, bien que la route soit facultative lors de l'appel à <strong>app.use()</strong>.</p>
+<p>Vous pouvez ajouter une fonction d'intergiciel à la chaîne de traitement avec <code>app.use()</code> ou <code>app.add()</code>, selon que vous voulez appliquer l'intergiciel à toutes les réponses ou aux réponses avec un verbe HTTP particulier (<code>GET</code>, <code>POST</code>, etc). Vous spécifiez les routes de la même manière dans les deux cas, bien que la route soit facultative lors de l'appel à <code>app.use()</code>.</p>
 
-<p>L'exemple ci-dessous montre comment vous pouvez ajouter la fonction middleware en utilisant les deux méthodes, et avec/sans route.</p>
+<p>L'exemple ci-dessous montre comment vous pouvez ajouter la fonction <i>middleware</i> en utilisant les deux méthodes, et avec/sans route.</p>
 
 <pre class="brush: js">const express = require('express');
 const app = express();
@@ -337,54 +347,54 @@ const app = express();
 // Un exemple de fonction middleware
 let a_middleware_function = function(req, res, <em>next</em>) {
   // ... effectuer certaines opérations
-  next(); // Appelez next() pour qu'Express appelle la fonction middleware suivante dans la chaîne.
+  next(); // Appelez next() pour qu'Express appelle la fonction <i>middleware</i> suivante dans la chaîne.
 }
 
 // Fonction ajoutée avec use() pour toutes les routes et verbes
 app.use(a_middleware_function);
 
 // Fonction ajoutée avec use() pour une route spécifique
-app.use('/someroute', a_middleware_function);
+app.use('/uneroute', a_middleware_function);
 
-// Une fonction middleware ajoutée pour un verbe et une route HTTP spécifiques
+// Une fonction <i>middleware</i> ajoutée pour un verbe et une route HTTP spécifiques
 app.get('/', a_middleware_function);
 
 app.listen(3000);</pre>
 
 <div class="notecard note">
   <p><b>Astuce JavaScript :</b></p>
-  <p>Ci-dessus, nous déclarons la fonction middleware séparément, puis nous la définissons comme fonction de rappel. Dans notre précédente fonction de gestion de route, nous avons déclaré la fonction de rappel lorsqu'elle a été utilisée. En JavaScript, les deux approches sont valables.</p>
+  <p>Ci-dessus, nous déclarons la fonction <i>middleware</i> séparément, puis nous la définissons comme fonction de rappel. Dans notre précédente fonction de gestion de route, nous avons déclaré la fonction de rappel lorsqu'elle a été utilisée. En JavaScript, les deux approches sont valables.</p>
 </div>
 
-<p>La documentation d'Express contient beaucoup d'autres excellents documents sur <a href="https://expressjs.com/fr/guide/using-middleware.html">l'utilisation</a> et <a href="http://expressjs.com/fr/guide/writing-middleware.html">l'écriture</a> d'intergiciels Express.</p>
+<p>La documentation d'Express contient beaucoup d'autres excellents documents sur <a href="https://expressjs.com/fr/guide/using-middleware.html">l'utilisation</a> et <a href="https://expressjs.com/fr/guide/writing-middleware.html">l'écriture</a> d'intergiciels Express.</p>
 
 <h3 id="serving_static_files">Servir les fichiers statiques</h3>
 
-<p>Vous pouvez utiliser l'intergiciel <a href="http://expressjs.com/fr/4x/api.html#express.static">express.static</a> pour servir des fichiers statiques, notamment vos images, CSS et JavaScript (<code>static()</code> est la seule fonction de l'intergiciel qui fait réellement <strong>partie</strong> d'<em>Express</em>). Par exemple, vous utiliserez la ligne ci-dessous pour servir des images, des fichiers CSS et des fichiers JavaScript à partir d'un répertoire nommé <strong>'public'</strong> au même niveau que celui où vous appelez node :</p>
+<p>Vous pouvez utiliser l'intergiciel <a href="https://expressjs.com/en/4x/api.html#express.static">express.static</a> pour servir des fichiers statiques, notamment vos images, CSS et JavaScript (<code>static()</code> est la seule fonction de l'intergiciel qui fait réellement <strong>partie</strong> d'<em>Express</em>). Par exemple, vous utiliserez la ligne ci-dessous pour servir des images, des fichiers CSS et des fichiers JavaScript à partir d'un répertoire nommé <strong>'public'</strong> au même niveau que celui où vous appelez node :</p>
 
 <pre class="brush: js">app.use(express.static('public'));</pre>
 
 <p>Tous les fichiers du répertoire public sont servis en ajoutant leur nom de fichier (<em>relatif</em> au répertoire "public" de base) à l'URL de base. Ainsi, par exemple :</p>
 
-<pre>http://localhost:3000/images/dog.jpg
-http://localhost:3000/css/style.css
-http://localhost:3000/js/app.js
-http://localhost:3000/about.html</pre>
+<pre>https://localhost:3000/images/dog.jpg
+https://localhost:3000/css/style.css
+https://localhost:3000/js/app.js
+https://localhost:3000/about.html</pre>
 
-<p>Vous pouvez appeler <code>static()</code> plusieurs fois pour servir plusieurs répertoires. Si un fichier ne peut pas être trouvé par une fonction middleware, alors il sera simplement transmis au middleware suivant (l'ordre dans lequel le middleware est appelé est basé sur votre ordre de déclaration).</p>
+<p>Vous pouvez appeler <code>static()</code> plusieurs fois pour servir plusieurs répertoires. Si un fichier ne peut pas être trouvé par une fonction middleware, alors il sera simplement transmis au <i>middleware</i> suivant (l'ordre dans lequel le <i>middleware</i> est appelé est basé sur votre ordre de déclaration).</p>
 
 <pre class="brush: js">app.use(express.static('public'));
 app.use(express.static('media'));</pre>
 
-<p>Vous pouvez également créer un préfixe virtuel pour vos URL statiques, plutôt que de voir les fichiers ajoutés à l'URL de base. Par exemple, ici nous <a href="http://expressjs.com/fr/4x/api.html#app.use">spécifions un chemin de montage</a> pour que les fichiers soient chargés avec le préfixe « /media » :</p>
+<p>Vous pouvez également créer un préfixe virtuel pour vos URL statiques, plutôt que de voir les fichiers ajoutés à l'URL de base. Par exemple, ici nous <a href="https://expressjs.com/en/4x/api.html#app.use">spécifions un chemin de montage</a> pour que les fichiers soient chargés avec le préfixe « /media » :</p>
 
 <pre class="brush: js">app.use('/media', express.static('public'));</pre>
 
 <p>Maintenant, vous pouvez charger les fichiers qui se trouvent dans le répertoire <code>public</code> à partir du préfixe du chemin <code>/media</code>.</p>
 
-<pre>http://localhost:3000/media/images/dog.jpg
-http://localhost:3000/media/video/cat.mp4
-http://localhost:3000/media/cry.mp3</pre>
+<pre>https://localhost:3000/media/images/dog.jpg
+https://localhost:3000/media/video/cat.mp4
+https://localhost:3000/media/cry.mp3</pre>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
@@ -393,38 +403,38 @@ http://localhost:3000/media/cry.mp3</pre>
 
 <h3 id="handling_errors">Traitement des erreurs</h3>
 
-<p>Les erreurs sont traitées par une ou plusieurs fonctions spéciales du middleware qui ont quatre arguments, au lieu des trois habituels : <code>(err, req, res, next)</code>. Par exemple :</p>
+<p>Les erreurs sont traitées par une ou plusieurs fonctions spéciales du <i>middleware</i> qui ont quatre arguments, au lieu des trois habituels : <code>(err, req, res, next)</code>. Par exemple :</p>
 
 <pre class="brush: js">app.use(function(err, req, res, next) {
   console.error(err.stack);
-  res.status(500).send("Quelque chose s'est cassé !"");
+  res.status(500).send("Quelque chose s'est cassé !");
 });</pre>
 
-<p>Ceux-ci peuvent retourner tout contenu nécessaire, mais doivent être appelés après tous les autres <code>app.use()</code> et les appels de routes afin qu'ils soient le dernier middleware dans le processus de traitement des requêtes !</p>
+<p>Ceux-ci peuvent retourner tout contenu nécessaire, mais doivent être appelés après tous les autres <code>app.use()</code> et les appels de routes afin qu'ils soient le dernier <i>middleware</i> dans le processus de traitement des requêtes !</p>
 
-<p>Express est livré avec un gestionnaire d'erreurs intégré, qui prend en charge toutes les erreurs restantes qui pourraient être rencontrées dans l'application. Cette fonction middleware de gestion des erreurs par défaut est ajoutée à la fin de la pile de fonctions middleware. Si vous passez une erreur à <code>next()</code> et que vous ne la gérez pas dans un gestionnaire d'erreurs, elle sera traitée par le gestionnaire d'erreurs intégré ; l'erreur sera écrite au client avec la trace de la pile.</p>
+<p>Express est livré avec un gestionnaire d'erreurs intégré, qui prend en charge toutes les erreurs restantes qui pourraient être rencontrées dans l'application. Cette fonction <i>middleware</i> de gestion des erreurs par défaut est ajoutée à la fin de la pile de fonctions middleware. Si vous passez une erreur à <code>next()</code> et que vous ne la gérez pas dans un gestionnaire d'erreurs, elle sera traitée par le gestionnaire d'erreurs intégré ; l'erreur sera écrite au client avec la trace de la pile.</p>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
-  <p>La trace de la pile n'est pas incluse dans l'environnement de production. Pour l'exécuter en mode production, vous devez définir la variable d'environnement <code>NODE_ENV</code> à <code>'production'</code>.</p>
+  <p>La trace de la pile n'est pas incluse dans l'environnement de production. Pour exécuter une application serveur Express, la variable d'environnement <code>NODE_ENV</code> doit être définie avec la valeur <code>production</code>.</p>
 </div>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
-  <p>Les codes d'état HTTP404 et autres « erreurs » ne sont pas traités comme des erreurs. Si vous voulez les gérer, vous pouvez ajouter une fonction middleware pour le faire. Pour plus d'informations, consultez la <a href="https://expressjs.com/fr/starter/faq.html#how-do-i-handle-404-responses">FAQ</a>.</p>
+  <p>Les codes d'état HTTP 404 et autres « erreurs » ne sont pas traités comme des erreurs. Si vous voulez les gérer, vous pouvez ajouter une fonction <i>middleware</i> pour le faire. Pour plus d'informations, consultez la <a href="https://expressjs.com/fr/starter/faq.html#how-do-i-handle-404-responses">FAQ</a>.</p>
 </div>
 
 <p>Pour plus d'informations, voir <a href="https://expressjs.com/fr/guide/error-handling.html">Gestion des erreurs</a> (docs Express).</p>
 
 <h3 id="using_databases">Utilisation des bases de données</h3>
 
-<p>Les apps <em>Express</em> peuvent utiliser tout mécanisme de base de données pris en charge par <em>Node</em> (<em>Express</em> lui-même ne définit aucun comportements/exigences supplémentaires spécifiques pour la gestion des bases de données). Il existe de nombreuses options, notamment PostgreSQL, MySQL, Redis, SQLite, MongoDB, etc.</p>
+<p>Les apps <em>Express</em> peuvent utiliser tout mécanisme de base de données pris en charge par <em>Node</em> (<em>Express</em> lui-même ne définit aucun comportements/exigences supplémentaire spécifique pour la gestion des bases de données). Il existe de nombreuses options, notamment PostgreSQL, MySQL, Redis, SQLite, MongoDB, etc.</p>
 
 <p>Pour les utiliser, vous devez d'abord installer le pilote de base de données à l'aide de NPM. Par exemple, pour installer le pilote de la populaire base de données NoSQL MongoDB, vous devez utiliser la commande suivante :</p>
 
 <pre class="brush: bash">$ npm install mongodb</pre>
 
-<p>La base de données elle-même peut être installée localement ou sur un serveur en nuage. Dans votre code Express, vous avez besoin du pilote, vous vous connectez à la base de données, puis vous effectuez des opérations de création, lecture, mise à jour et suppression (CRUD). L'exemple ci-dessous (tiré de la documentation d'Express) montre comment vous pouvez trouver des enregistrements "mammifères" en utilisant MongoDB.</p>
+<p>La base de données elle-même peut être installée localement ou sur un serveur en nuage. Dans votre code Express, vous avez besoin du pilote, vous vous connectez à la base de données, puis vous effectuez des opérations de création, lecture, mise à jour et suppression (en anglais, on utilise l'acronyme CRUD qui signifie <i>Create, Read, Update, Delete</i>). L'exemple ci-dessous (tiré de la documentation d'Express) montre comment vous pouvez trouver des enregistrements « mammifères » en utilisant MongoDB.</p>
 
 <pre class="brush: js">// cela fonctionne avec les anciennes versions de mongodb version ~ 2.2.33
 const MongoClient = require('mongodb').MongoClient;
@@ -452,7 +462,7 @@ MongoClient.connect('mongodb://localhost:27017/animals', function(err, client){
    });
 });</pre>
 
-<p>Une autre approche populaire consiste à accéder à votre base de données de manière indirecte, via un mappeur objet-relationnel (« ORM »). Dans cette approche, vous définissez vos données en tant qu'« objets » ou « modèles » et l'ORM les met en correspondance avec le format de base de données sous-jacent. L'avantage de cette approche est qu'en tant que développeur, vous pouvez continuer à penser en termes d'objets JavaScript plutôt qu'en termes de sémantique de base de données, et qu'il existe un endroit évident pour effectuer la validation et la vérification des données entrantes. Nous parlerons davantage des bases de données dans un article ultérieur.</p>
+<p>Une autre approche populaire consiste à accéder à votre base de données de manière indirecte, via un mappeur objet-relationnel (« ORM »). Dans cette approche, vous définissez vos données en tant qu'objets ou modèles et l'ORM les met en correspondance avec le format de base de données sous-jacent. L'avantage de cette approche est qu'en tant que développeur, vous pouvez continuer à penser en termes d'objets JavaScript plutôt qu'en termes de sémantique de base de données, et qu'il existe un endroit évident pour effectuer la validation et la vérification des données entrantes. Nous parlerons davantage des bases de données dans un article ultérieur.</p>
 
 <p>Pour plus d'informations, voir <a href="https://expressjs.com/fr/guide/database-integration.html">Intégration de base de données</a> (docs Express).</p>
 
@@ -472,10 +482,10 @@ app.set('views', path.join(__dirname, 'views'));
 // Définir le moteur d'affichage à utiliser, dans ce cas 'some_template_engine_name'.
 app.set('view engine', 'some_template_engine_name');</pre>
 
-<p>L'apparence du modèle dépendra du moteur que vous utilisez. En supposant que vous ayez un fichier de modèle nommé « index.&lt;template_extension&gt; » qui contient des espaces réservés pour des variables de données nommées « title » et « message », vous appelleriez <code><a href="https://expressjs.com/fr/4x/api.html#res.render">Response.render()</a></code> dans une fonction de gestionnaire de route pour créer et envoyer la réponse HTML :</p>
+<p>L'apparence du modèle dépendra du moteur que vous utilisez. En supposant que vous ayez un fichier de modèle nommé « index.&lt;template_extension&gt; » qui contient des espaces réservés pour des variables de données nommées « title » et « message », vous appelleriez <code><a href="https://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> dans une fonction de gestionnaire de route pour créer et envoyer la réponse HTML :</p>
 
 <pre class="brush: js">app.get('/', function(req, res) {
-  res.render('index', { title: 'À propos des chiens', message: 'Les chiens déchirent !' });
+  res.render('index', { title: 'À propos des poules', message: 'Elles sont où ?' });
 });</pre>
 
 <p>Pour plus d'informations, voir <a href="https://expressjs.com/fr/guide/using-template-engines.html">Utilisation des moteurs de modèles avec Express</a> (docs Express).</p>
@@ -496,7 +506,7 @@ app.set('view engine', 'some_template_engine_name');</pre>
 
 <ul>
   <li><a href="https://medium.com/@ramsunvtech/manage-multiple-node-versions-e3245d5ede44">Venkat.R - Gestion de plusieurs versions de Node</a></li>
-  <li><a href="https://nodejs.org/api/modules.html#modules_modules">Modules</a> (Node API docs)</li>
+  <li><a href="https://nodejs.org/api/modules.html#modules_modules">Modules</a> (docs Node)</li>
   <li><a href="https://expressjs.com/">Express</a> (page d'accueil)</li>
   <li><a href="https://expressjs.com/fr/starter/basic-routing.html">Routage de base</a> (docs Express)</li>
   <li><a href="https://expressjs.com/fr/guide/routing.html">Guide de routage</a> (docs Express)</li>
