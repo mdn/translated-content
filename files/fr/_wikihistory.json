@@ -19829,12 +19829,6 @@
       "tomderudder"
     ]
   },
-  "Web/API/ServiceWorkerState": {
-    "modified": "2019-03-18T21:18:01.317Z",
-    "contributors": [
-      "AurelieBayre"
-    ]
-  },
   "Web/API/Service_Worker_API": {
     "modified": "2019-03-23T22:40:14.713Z",
     "contributors": [
@@ -45127,6 +45121,12 @@
     "contributors": [
       "SphinxKnight",
       "B_M"
+    ]
+  },
+  "orphaned/Web/API/ServiceWorkerState": {
+    "modified": "2019-03-18T21:18:01.317Z",
+    "contributors": [
+      "AurelieBayre"
     ]
   },
   "orphaned/Web/API/URLUtilsReadOnly": {

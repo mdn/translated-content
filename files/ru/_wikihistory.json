@@ -10556,12 +10556,6 @@
       "fdor"
     ]
   },
-  "Web/API/ServiceWorkerState": {
-    "modified": "2019-12-29T10:30:40.493Z",
-    "contributors": [
-      "sh7dm"
-    ]
-  },
   "Web/API/Service_Worker_API": {
     "modified": "2019-12-30T15:14:52.084Z",
     "contributors": [
@@ -25588,6 +25582,12 @@
     "modified": "2020-10-15T22:33:11.540Z",
     "contributors": [
       "mechtool"
+    ]
+  },
+  "orphaned/Web/API/ServiceWorkerState": {
+    "modified": "2019-12-29T10:30:40.493Z",
+    "contributors": [
+      "sh7dm"
     ]
   },
   "orphaned/Web/API/Web_Crypto_API/Checking_authenticity_with_password": {

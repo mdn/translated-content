@@ -457,6 +457,7 @@
 /ru/docs/Web/API/RandomSource	/ru/docs/conflicting/Web/API/Crypto/getRandomValues
 /ru/docs/Web/API/RandomSource/getRandomValues	/ru/docs/Web/API/Crypto/getRandomValues
 /ru/docs/Web/API/SVGAElement/SVGAlement.target	/ru/docs/conflicting/Web/API/SVGAElement/target
+/ru/docs/Web/API/ServiceWorkerState	/ru/docs/orphaned/Web/API/ServiceWorkerState
 /ru/docs/Web/API/Slotable	/ru/docs/conflicting/Web/API/Element
 /ru/docs/Web/API/Storage/LocalStorage	/ru/docs/conflicting/Web/API/Window/localStorage
 /ru/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
