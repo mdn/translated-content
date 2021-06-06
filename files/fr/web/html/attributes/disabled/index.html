@@ -1,5 +1,5 @@
 ---
-title: 'L''attribut HTML : disabled'
+title: 'Attribut HTML : disabled'
 slug: Web/HTML/Attributes/disabled
 tags:
   - Attribute
@@ -15,7 +15,7 @@ translation_of: Web/HTML/Attributes/disabled
 
 <p>L'attribut <code>disabled</code> est utilisé par <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Fieldset"><code>&lt;fieldset&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Keygen"><code>&lt;keygen&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Optgroup"><code>&lt;optgroup&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Option"><code>&lt;option&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a>.</p>
 
-<p>Cet attribut booléen disabled indique que l'utilisateur ne peut pas interagir avec le contrôle ou ses contrôles descendants. Si cet attribut n'est pas spécifié, le contrôle hérite de son paramètre, de l'élément contenant, par exemple <code>fieldset</code> ; s'il n'y a pas d'élément contenant avec l'attribut <code>disabled</code> défini, et que le contrôle lui-même ne possède pas cet attribut, alors le contrôle est activé. S'il est déclaré sur un <a href="/fr/docs/Web/HTML/Element/Optgroup"><code>&lt;optgroup&gt;</code></a>, le sélecteur est toujours interactif (sauf s'il est désactivé autrement), mais aucun des éléments du groupe d'options n'est sélectionnable.</p>
+<p>Cet attribut booléen indique que l'utilisateur ne peut pas interagir avec le contrôle ou ses contrôles descendants. Si cet attribut n'est pas spécifié, le contrôle hérite ce paramètre de l'élément contenant, par exemple <code>fieldset</code> ; s'il n'y a pas d'élément contenant avec l'attribut <code>disabled</code> défini, et que le contrôle lui-même ne possède pas cet attribut, alors le contrôle est activé. S'il est déclaré sur un <a href="/fr/docs/Web/HTML/Element/Optgroup"><code>&lt;optgroup&gt;</code></a>, le sélecteur est toujours interactif (sauf s'il est désactivé autrement), mais aucun des éléments du groupe d'options n'est sélectionnable.</p>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
@@ -26,7 +26,7 @@ translation_of: Web/HTML/Attributes/disabled
 
 <p>Cet attribut booléen empêche l'utilisateur d'interagir avec le bouton. Si cet attribut n'est pas défini, le bouton peut toujours être désactivé à partir d'un élément contenant, par exemple <code><a href="/fr/docs/Web/HTML/Element/Fieldset"><code>&lt;fieldset&gt;</code></a></code> ; s'il n'y a pas d'élément contenant avec l'attribut <code>disabled</code> défini, alors le bouton est activé.</p>
 
-<p>Firefox va, contrairement aux autres navigateurs, persister l'état désactivé dynamique d'un <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a> à travers les chargements de pages. Utilisez l'attribut <a href="/fr/docs/Web/HTML/Attributes/autocomplete"><code>autocomplete</code></a> pour contrôler cette fonctionnalité.</p>
+<p>Firefox va, contrairement aux autres navigateurs, faire persister l'état désactivé dynamique d'un <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a> à travers les chargements de pages. Utilisez l'attribut <a href="/fr/docs/Web/HTML/Attributes/autocomplete"><code>autocomplete</code></a> pour contrôler cette fonctionnalité.</p>
 
 <h3 id="attribute_interactions">Interactions entre attributs</h3>
 
@@ -43,15 +43,15 @@ translation_of: Web/HTML/Attributes/disabled
 
 <p>Les navigateurs affichent les contrôles de formulaire désactivés en grisé, car les contrôles de formulaire désactivés sont immuables, ne reçoivent pas de focus ou d'événements de navigation, comme les clics de souris ou les événements liés au focus, et ne sont pas soumis avec le formulaire.</p>
 
-<p>S'il est présent sur un élément de support, la pseudo classe <a href="/fr/docs/Web/CSS/:disabled"><code>:disabled</code></a> correspondra. Si l'attribut n'est pas inclus, la pseudo-classe <code><a href="/fr/docs/Web/CSS/:enabled"><code>:enabled</code></a></code> correspondra. Si l'élément ne prend pas en charge l'attribut disabled, l'attribut n'aura aucun effet, y compris celui de ne pas être apparié par les pseudo-classes <code>:disabled</code> et <code>:enabled</code>.</p>
+<p>S'il est présent sur un élément de support, la pseudo-classe <a href="/fr/docs/Web/CSS/:disabled"><code>:disabled</code></a> correspondra. Si l'attribut n'est pas inclus, la pseudo-classe <code><a href="/fr/docs/Web/CSS/:enabled"><code>:enabled</code></a></code> correspondra. Si l'élément ne prend pas en charge l'attribut disabled, l'attribut n'aura aucun effet, y compris celui de ne pas être apparié par les pseudo-classes <code>:disabled</code> et <code>:enabled</code>.</p>
 
 <h3 id="constraint_validation">Validation des contraintes</h3>
 
 <p>Si l'élément est <code>disabled</code>, alors la valeur de l'élément ne peut pas recevoir de focus et ne peut pas être mis à jour par l'utilisateur, et ne participe pas à la validation des contraintes.</p>
 
-<h2 id="example">Exemple</h2>
+<h2 id="examples">Exemples</h2>
 
-<p>Lorsque les contrôles de formulaire sont désactivés, de nombreux navigateurs les affichent par défaut dans une couleur plus claire et grisée. Voici des exemples de case à cocher, bouton radio, <a href="/fr/docs/Web/HTML/Element/Option"><code>&lt;option&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/Optgroup"><code>&lt;optgroup&gt;</code></a>, ainsi que certains contrôles de formulaire qui sont désactivés via l'attribut disabled défini sur l'élément ancêtre <a href="/fr/docs/Web/HTML/Element/Fieldset"><code>&lt;fieldset&gt;</code></a>. Les <a href="/fr/docs/Web/HTML/Element/Option"><code>&lt;option&gt;</code></a> sont désactivés, mais le <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> lui-même ne l'est pas. Nous aurions pu désactiver l'ensemble de <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> en ajoutant l'attribut à cet élément plutôt qu'à ses descendants.</p>
+<p>Lorsque les contrôles de formulaire sont désactivés, de nombreux navigateurs les affichent par défaut dans une couleur plus claire et grisée. Voici des exemples de case à cocher, bouton radio, <a href="/fr/docs/Web/HTML/Element/Option"><code>&lt;option&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/Optgroup"><code>&lt;optgroup&gt;</code></a>, ainsi que certains contrôles de formulaire qui sont désactivés via l'attribut <code>disabled</code> défini sur l'élément ancêtre <a href="/fr/docs/Web/HTML/Element/Fieldset"><code>&lt;fieldset&gt;</code></a>. Les <a href="/fr/docs/Web/HTML/Element/Option"><code>&lt;option&gt;</code></a> sont désactivés, mais le <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> lui-même ne l'est pas. Nous aurions pu désactiver l'ensemble de <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> en ajoutant l'attribut à cet élément plutôt qu'à ses descendants.</p>
 
 <pre class="brush: html">&lt;fieldset&gt;
   &lt;legend&gt;Cases à cocher&lt;/legend&gt;
@@ -103,7 +103,7 @@ translation_of: Web/HTML/Attributes/disabled
   &lt;/p&gt;
 &lt;/fieldset&gt;</pre>
 
-<div>{{EmbedLiveSample('example', '', 460)}}</div>
+<div>{{EmbedLiveSample('examples', '', 460)}}</div>
 
 <h2 id="specifications">Spécifications</h2>
 
