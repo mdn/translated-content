@@ -1,5 +1,5 @@
 ---
-title: 'L''attribut HTML : accept'
+title: 'Attribut HTML : accept'
 slug: Web/HTML/Attributes/accept
 tags:
   - Accept
@@ -12,16 +12,16 @@ translation_of: Web/HTML/Attributes/accept
 ---
 <p>{{HTMLSidebar}}</p>
 
-<p class="summary">L'attribut <strong><code>accept</code></strong> prend comme valeur une liste séparée par des virgules d'un ou plusieurs types de fichiers, ou d'une <a href="#unique_file_type_specifiers">spécification de type de fichier unique</a>, décrivant les types de fichiers à autoriser. La propriété accept est un attribut pour les éléments <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> de type <a href="/fr/docs/Web/HTML/Element/Input/file"><code>file</code></a>. Elle était prise en charge par l'élément <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a>, mais a été supprimée au profit de <a href="/fr/docs/Web/HTML/Element/Input/file"><code>file</code></a> dans HTML5.</p>
+<p class="summary">L'attribut <strong><code>accept</code></strong> prend comme valeur une liste séparée par des virgules d'un ou plusieurs types de fichiers, ou d'une <a href="#unique_file_type_specifiers">spécification de type de fichier unique</a>, décrivant les types de fichiers à autoriser. La propriété <code>accept</code> est un attribut pour les éléments <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> de type <a href="/fr/docs/Web/HTML/Element/Input/file"><code>file</code></a>. Elle était prise en charge par l'élément <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a>, mais a été supprimée au profit de <a href="/fr/docs/Web/HTML/Element/Input/file"><code>file</code></a> dans HTML5.</p>
 
 <p>Comme un type de fichier donné peut être identifié de plusieurs manières, il est utile de fournir un ensemble complet de spécificateurs de type lorsque vous avez besoin de fichiers d'un type spécifique, ou d'utiliser le joker pour indiquer qu'un type de n'importe quel format est accepté.</p>
 
-<p>Par exemple, il existe un certain nombre de façons d'identifier les fichiers Microsoft Word, de sorte qu'un site qui accepte les fichiers Word pourrait utiliser un <code>&lt;input&gt;</code> comme celui-ci :</p>
+<p>Par exemple, il existe un certain nombre de façons d'identifier les fichiers Microsoft Word, de sorte qu'un site qui accepte les fichiers Word pourrait utiliser un <code>&lt;input&gt;</code> comme celui-ci&nbsp;:</p>
 
 <pre class="brush: html">&lt;input type="file" id="docpicker"
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"&gt;</pre>
 
-<p>En revanche, si vous acceptez un fichier multimédia, vous pouvez inclure tout format de ce type de média :</p>
+<p>En revanche, si vous acceptez un fichier multimédia, vous pouvez inclure tout format de ce type de média&nbsp;:</p>
 
 <pre class="brush: html">&lt;input type="file" id="soundFile" accept="audio/*"&gt;
 &lt;input type="file" id="videoFile" accept="video/*"&gt;
@@ -31,9 +31,9 @@ translation_of: Web/HTML/Attributes/accept
 
 <p>Pour cette raison, vous devez vous assurer que les exigences attendues sont validées côté serveur.</p>
 
-<h2 id="example">Exemple</h2>
+<h2 id="examples">Exemples</h2>
 
-<p>When set on a file input type, the native file picker that opens up should only enable selecting files of the correct file type. Most operating systems lighten the files that don't match the criteria and aren't selectable.</p>
+<p>Lorsque cet attribut est utilisé sur un champ permettant de sélectionner un fichier, le sélecteur de fichier natif qui s'ouvre devrait filtrer sur les seuls fichiers qui correspondent au(x) type(s) indiqués. La plupart des systèmes d'exploitation masquent ou grisent alors les fichiers qui ne correspondent pas et ne peuvent pas être sélectionnés.</p>
 
 <pre class="brush: html">&lt;p&gt;
   &lt;label for="soundFile"&gt;Sélectionnez un fichier audio :&lt;/label&gt;
@@ -68,7 +68,7 @@ translation_of: Web/HTML/Attributes/accept
 
 <pre class="brush: html">&lt;input type="file" accept="image/*,.pdf"&gt;</pre>
 
-<h2 id="using_file_inputs">Utilisation des entrées de fichiers</h2>
+<h2 id="using_file_inputs">Utilisation des champs pour saisir des fichiers</h2>
 
 <h3 id="a_basic_example">Un exemple de base</h3>
 
@@ -101,7 +101,7 @@ translation_of: Web/HTML/Attributes/accept
 
 <p>L'inclusion de l'attribut <a href="multiple"><code>multiple</code></a>, comme indiqué ci-dessus, spécifie que plusieurs fichiers peuvent être choisis en même temps. L'utilisateur peut choisir plusieurs fichiers dans le sélecteur de fichiers de n'importe quelle manière permise par la plateforme qu'il a choisie (par exemple, en maintenant la touche <kbd>Maj</kbd> ou <kbd>Ctrl</kbd>, puis en cliquant). Si vous souhaitez que l'utilisateur ne choisisse qu'un seul fichier par <code>&lt;input&gt;</code>, omettez l'attribut <code>multiple</code>.</p>
 
-<h3 id="limiting_accepted_file_types">Limiting accepted file types</h3>
+<h3 id="limiting_accepted_file_types">Restreindre les types de fichier acceptés</h3>
 
 <p>Souvent, vous ne voudrez pas que l'utilisateur puisse choisir n'importe quel type de fichier arbitraire ; au contraire, vous voudrez souvent qu'il sélectionne des fichiers d'un ou plusieurs types spécifiques. Par exemple, si votre entrée de fichier permet aux utilisateurs de télécharger une photo de profil, vous voulez probablement qu'ils sélectionnent des formats d'image compatibles avec le Web, tels que <a href="/fr/docs/Glossary/jpeg">JPEG</a> ou <a href="/fr/docs/Glossary/PNG">PNG</a>.</p>
 
@@ -164,5 +164,5 @@ translation_of: Web/HTML/Attributes/accept
 
 <ul>
   <li><a href="/fr/docs/Web/API/File/Using_files_from_web_applications">Utiliser des fichiers à partir d'applications web</a></li>
-  <li>L'API <a href="/fr/docs/Web/API/File">File</a></li>
+  <li><a href="/fr/docs/Web/API/File">L'API File</a></li>
 </ul>
