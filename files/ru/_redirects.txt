@@ -453,9 +453,11 @@
 /ru/docs/Web/API/ParentNode/prepend	/ru/docs/orphaned/Web/API/ParentNode/prepend
 /ru/docs/Web/API/PositionError	/ru/docs/Web/API/GeolocationPositionError
 /ru/docs/Web/API/Push_API/Using_the_Push_API	/ru/docs/conflicting/Web/API/Push_API
+/ru/docs/Web/API/RTCPeerConnection/getDefaultIceServers	/ru/docs/orphaned/Web/API/RTCPeerConnection/getDefaultIceServers
 /ru/docs/Web/API/RandomSource	/ru/docs/conflicting/Web/API/Crypto/getRandomValues
 /ru/docs/Web/API/RandomSource/getRandomValues	/ru/docs/Web/API/Crypto/getRandomValues
 /ru/docs/Web/API/SVGAElement/SVGAlement.target	/ru/docs/conflicting/Web/API/SVGAElement/target
+/ru/docs/Web/API/ServiceWorkerState	/ru/docs/orphaned/Web/API/ServiceWorkerState
 /ru/docs/Web/API/Slotable	/ru/docs/conflicting/Web/API/Element
 /ru/docs/Web/API/Storage/LocalStorage	/ru/docs/conflicting/Web/API/Window/localStorage
 /ru/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ru/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
@@ -614,6 +616,7 @@
 /ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/ru/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ru/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/ru/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /ru/docs/Web/Guide/HTML/Using_data_attributes	/ru/docs/Learn/HTML/Howto/Use_data_attributes
+/ru/docs/Web/Guide/Localizations_and_character_encodings	/ru/docs/orphaned/Web/Guide/Localizations_and_character_encodings
 /ru/docs/Web/Guide/Графика	/ru/docs/Web/Guide/Graphics
 /ru/docs/Web/Guide/Производительность	/ru/docs/Web/Guide/Performance
 /ru/docs/Web/HTML/CORS_settings_attributes	/ru/docs/Web/HTML/Attributes/crossorigin

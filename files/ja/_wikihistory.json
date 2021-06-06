@@ -1433,12 +1433,6 @@
       "araigumaG"
     ]
   },
-  "Glossary/Gaia": {
-    "modified": "2019-03-18T21:26:29.596Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Glossary/Garbage_collection": {
     "modified": "2019-03-18T20:53:18.903Z",
     "contributors": [
@@ -21410,12 +21404,6 @@
       "Uemmra3"
     ]
   },
-  "Web/API/SVGTests": {
-    "modified": "2020-10-15T21:50:41.779Z",
-    "contributors": [
-      "Uemmra3"
-    ]
-  },
   "Web/API/SVGTextElement": {
     "modified": "2019-03-23T23:31:11.061Z",
     "contributors": [
@@ -27017,9 +27005,9 @@
     ]
   },
   "Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-01-17T03:02:23.841Z",
+    "modified": "2019-03-18T21:35:01.506Z",
     "contributors": [
-      "julianosilvaa"
+      "Uemmra3"
     ]
   },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
@@ -33957,13 +33945,6 @@
     "modified": "2020-05-04T12:39:54.645Z",
     "contributors": [
       "Uemmra3",
-      "silverskyvicto"
-    ]
-  },
-  "Web/Guide/Localizations_and_character_encodings": {
-    "modified": "2020-09-18T02:40:01.125Z",
-    "contributors": [
-      "morinokami",
       "silverskyvicto"
     ]
   },
@@ -48907,14 +48888,6 @@
       "ethertank"
     ]
   },
-  "conflicting/Learn/CSS/Building_blocks/Values_and_units": {
-    "modified": "2019-03-23T23:30:42.859Z",
-    "contributors": [
-      "nehuyu",
-      "teoli",
-      "ethertank"
-    ]
-  },
   "conflicting/Learn/CSS/CSS_layout": {
     "modified": "2019-03-23T23:30:42.231Z",
     "contributors": [
@@ -49403,19 +49376,6 @@
       "Jeremie"
     ]
   },
-  "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2019-03-23T23:52:43.560Z",
-    "contributors": [
-      "teoli",
-      "Marsf"
-    ]
-  },
-  "conflicting/Web/Accessibility/ARIA/widgets": {
-    "modified": "2019-03-18T21:35:01.506Z",
-    "contributors": [
-      "Uemmra3"
-    ]
-  },
   "conflicting/Web/CSS": {
     "modified": "2019-03-23T23:49:43.648Z",
     "contributors": [
@@ -49428,20 +49388,6 @@
       "teoli",
       "ethertank",
       "myakura",
-      "Marsf"
-    ]
-  },
-  "conflicting/Web/CSS/@media": {
-    "modified": "2019-01-16T15:23:43.629Z",
-    "contributors": [
-      "ethertank",
-      "Anonymous"
-    ]
-  },
-  "conflicting/Web/CSS/@media_dcb6ae28d731b140b24729ff941686e7": {
-    "modified": "2019-03-24T00:17:11.661Z",
-    "contributors": [
-      "ethertank",
       "Marsf"
     ]
   },
@@ -49821,16 +49767,6 @@
       "Potappo"
     ]
   },
-  "conflicting/Web/OpenSearch": {
-    "modified": "2019-03-23T23:54:28.693Z",
-    "contributors": [
-      "yyss",
-      "Mgjbot",
-      "Potappo",
-      "Shoot",
-      "Taken"
-    ]
-  },
   "conflicting/Web/Progressive_web_apps": {
     "modified": "2019-04-10T11:40:04.877Z",
     "contributors": [
@@ -49858,20 +49794,6 @@
       "Okome",
       "Takenbot",
       "Kozawa"
-    ]
-  },
-  "conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript": {
-    "modified": "2020-10-24T09:08:37.731Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
-  "conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript_caa7dfd0899fa1d0dfa5b1eb32e49ac7": {
-    "modified": "2019-01-16T14:19:02.199Z",
-    "contributors": [
-      "kmaglione",
-      "Mgjbot",
-      "Shoot"
     ]
   },
   "conflicting/tools/Keyboard_shortcuts": {
@@ -51343,6 +51265,12 @@
       "Taken"
     ]
   },
+  "orphaned/Glossary/Gaia": {
+    "modified": "2019-03-18T21:26:29.596Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "orphaned/Glossary/Modern_web_apps": {
     "modified": "2019-02-17T08:08:49.645Z",
     "contributors": [
@@ -52443,6 +52371,12 @@
       "eltociear"
     ]
   },
+  "orphaned/Web/API/SVGTests": {
+    "modified": "2020-10-15T21:50:41.779Z",
+    "contributors": [
+      "Uemmra3"
+    ]
+  },
   "orphaned/Web/API/SVGTransformable": {
     "modified": "2020-10-15T22:33:03.508Z",
     "contributors": [
@@ -52736,6 +52670,13 @@
       "Potappo"
     ]
   },
+  "orphaned/Web/Guide/Localizations_and_character_encodings": {
+    "modified": "2020-09-18T02:40:01.125Z",
+    "contributors": [
+      "morinokami",
+      "silverskyvicto"
+    ]
+  },
   "orphaned/Web/HTML/Element/command": {
     "modified": "2020-10-15T21:25:54.776Z",
     "contributors": [
@@ -52811,93 +52752,6 @@
     "modified": "2019-03-23T23:42:43.617Z",
     "contributors": [
       "ethertank",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Creating_New_Objects": {
-    "modified": "2019-03-24T00:01:07.948Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Creating_New_Objects/Defining_Getters_and_Setters": {
-    "modified": "2019-03-24T00:03:35.023Z",
-    "contributors": [
-      "ryuta-watanabe",
-      "chrisdavidmills",
-      "chikoski",
-      "lv7777",
-      "jigs12",
-      "ethertank",
-      "Yuki Konno",
-      "happysadman",
-      "electrolysis",
-      "Mgjbot"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Creating_New_Objects/Defining_Methods": {
-    "modified": "2019-03-24T00:01:06.190Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Creating_New_Objects/Defining_Properties_for_an_Object_Type": {
-    "modified": "2019-03-24T00:01:04.530Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Creating_New_Objects/Deleting_Properties": {
-    "modified": "2019-03-24T00:01:03.545Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Creating_New_Objects/Indexing_Object_Properties": {
-    "modified": "2019-03-24T00:01:08.282Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Creating_New_Objects/Using_Object_Initializers": {
-    "modified": "2019-03-24T00:01:08.175Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "electrolysis",
-      "Mgjbot"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Creating_New_Objects/Using_a_Constructor_Function": {
-    "modified": "2019-03-24T00:01:07.681Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Creating_New_Objects/Using_this_for_Object_References": {
-    "modified": "2019-03-24T00:01:04.138Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
       "electrolysis"
     ]
   },
@@ -52993,61 +52847,6 @@
       "happysadman",
       "electrolysis",
       "Mgjbot"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Operators/Arithmetic_Operators": {
-    "modified": "2019-03-24T00:01:11.085Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "electrolysis",
-      "Potappo",
-      "Mgjbot"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Operators/Assignment_Operators": {
-    "modified": "2019-03-24T00:01:12.759Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Operators/Comparison_Operators": {
-    "modified": "2019-03-24T00:01:11.983Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "electrolysis",
-      "Mgjbot"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Operators/Logical_Operators": {
-    "modified": "2019-03-24T00:01:10.024Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Operators/Special_Operators": {
-    "modified": "2019-03-24T00:01:11.583Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "electrolysis",
-      "Mgjbot"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Operators/String_Operators": {
-    "modified": "2019-03-24T00:01:13.634Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
     ]
   },
   "orphaned/Web/JavaScript/Guide/Predefined_Functions": {
@@ -53162,23 +52961,6 @@
       "Harpy",
       "Mgjbot",
       "electrolysis"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Array/index": {
-    "modified": "2019-03-23T23:47:50.798Z",
-    "contributors": [
-      "teoli",
-      "ethertank",
-      "Yuichirou",
-      "Mgjbot"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Array/input": {
-    "modified": "2019-01-16T15:57:03.488Z",
-    "contributors": [
-      "ethertank",
-      "Yuichirou",
-      "Mgjbot"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {

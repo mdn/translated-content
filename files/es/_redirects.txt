@@ -1799,6 +1799,7 @@
 /es/docs/Web/API/Element/ongotpointercapture	/es/docs/Web/API/GlobalEventHandlers/ongotpointercapture
 /es/docs/Web/API/Element/onlostpointercapture	/es/docs/Web/API/GlobalEventHandlers/onlostpointercapture
 /es/docs/Web/API/Element/onwheel	/es/docs/Web/API/GlobalEventHandlers/onwheel
+/es/docs/Web/API/Element/runtimeStyle	/es/docs/orphaned/Web/API/Element/runtimeStyle
 /es/docs/Web/API/ElementosHTMLparaVideo	/es/docs/Web/API/HTMLVideoElement
 /es/docs/Web/API/Event/createEvent	/es/docs/Web/API/Document/createEvent
 /es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/Web/API/Fetch_API/Basic_concepts
@@ -1947,7 +1948,7 @@
 /es/docs/Web/CSS/Getting_Started	/es/docs/orphaned/Web/CSS/Comenzando_(tutorial_CSS)
 /es/docs/Web/CSS/Gradiente	/es/docs/Web/CSS/gradient
 /es/docs/Web/CSS/Herramientas	/es/docs/Web/CSS/Tools
-/es/docs/Web/CSS/Herramientas/Cubic_Bezier_Generator	/es/docs/Web/CSS/Tools/Cubic_Bezier_Generator
+/es/docs/Web/CSS/Herramientas/Cubic_Bezier_Generator	/es/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
 /es/docs/Web/CSS/Introducción	/es/docs/conflicting/Learn/CSS/First_steps
 /es/docs/Web/CSS/Introducción/Boxes	/es/docs/conflicting/Learn/CSS/Building_blocks
 /es/docs/Web/CSS/Introducción/Cascading_and_inheritance	/es/docs/conflicting/Learn/CSS/Building_blocks/Cascade_and_inheritance
@@ -1973,6 +1974,7 @@
 /es/docs/Web/CSS/Selectores_hermanos_generales	/es/docs/Web/CSS/General_sibling_combinator
 /es/docs/Web/CSS/Sintaxis_definición_de_valor	/es/docs/Web/CSS/Value_definition_syntax
 /es/docs/Web/CSS/Texto_CSS	/es/docs/Web/CSS/CSS_Text
+/es/docs/Web/CSS/Tools/Cubic_Bezier_Generator	/es/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
 /es/docs/Web/CSS/Transiciones_de_CSS	/es/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
 /es/docs/Web/CSS/Usando_animaciones_CSS	/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /es/docs/Web/CSS/Using_CSS_transforms	/es/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
