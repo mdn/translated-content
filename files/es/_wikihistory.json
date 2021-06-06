@@ -6580,12 +6580,6 @@
       "joseamn1"
     ]
   },
-  "Web/API/Element/runtimeStyle": {
-    "modified": "2019-03-23T22:25:35.378Z",
-    "contributors": [
-      "SoftwareRVG"
-    ]
-  },
   "Web/API/Element/scrollHeight": {
     "modified": "2020-09-19T11:38:52.843Z",
     "contributors": [
@@ -11813,12 +11807,6 @@
     "modified": "2019-03-23T22:28:04.142Z",
     "contributors": [
       "arturoblack"
-    ]
-  },
-  "Web/CSS/Tools/Cubic_Bezier_Generator": {
-    "modified": "2019-03-18T21:20:03.429Z",
-    "contributors": [
-      "gsalinase"
     ]
   },
   "Web/CSS/Tutorials": {
@@ -23439,6 +23427,12 @@
       "recortes"
     ]
   },
+  "orphaned/Web/API/Element/runtimeStyle": {
+    "modified": "2019-03-23T22:25:35.378Z",
+    "contributors": [
+      "SoftwareRVG"
+    ]
+  },
   "orphaned/Web/API/ParentNode": {
     "modified": "2019-03-23T22:43:20.773Z",
     "contributors": [
@@ -23503,6 +23497,12 @@
     "contributors": [
       "teoli",
       "deimidis"
+    ]
+  },
+  "orphaned/Web/CSS/Tools/Cubic_Bezier_Generator": {
+    "modified": "2019-03-18T21:20:03.429Z",
+    "contributors": [
+      "gsalinase"
     ]
   },
   "orphaned/Web/CSS/rtl": {

@@ -6062,12 +6062,6 @@
       "creativenitish"
     ]
   },
-  "Web/CSS/Tools/Cubic_Bezier_Generator": {
-    "modified": "2019-03-23T22:43:38.857Z",
-    "contributors": [
-      "Sebastianz"
-    ]
-  },
   "Web/CSS/Tools/Linear-gradient_Generator": {
     "modified": "2019-03-23T22:43:38.482Z",
     "contributors": [
@@ -14754,6 +14748,12 @@
   },
   "orphaned/Web/CSS/Index": {
     "modified": "2019-01-16T19:56:04.663Z",
+    "contributors": [
+      "Sebastianz"
+    ]
+  },
+  "orphaned/Web/CSS/Tools/Cubic_Bezier_Generator": {
+    "modified": "2019-03-23T22:43:38.857Z",
     "contributors": [
       "Sebastianz"
     ]

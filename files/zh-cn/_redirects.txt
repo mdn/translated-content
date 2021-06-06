@@ -1543,6 +1543,7 @@
 /zh-CN/docs/Web/API/Element/ongotpointercapture	/zh-CN/docs/conflicting/Web/API/GlobalEventHandlers/ongotpointercapture
 /zh-CN/docs/Web/API/Element/onpaste	/zh-CN/docs/Web/API/HTMLElement/onpaste
 /zh-CN/docs/Web/API/Element/removeAttributre	/zh-CN/docs/Web/API/Element/removeAttribute
+/zh-CN/docs/Web/API/Element/runtimeStyle	/zh-CN/docs/orphaned/Web/API/Element/runtimeStyle
 /zh-CN/docs/Web/API/Entity	/zh-CN/docs/orphaned/Web/API/Entity
 /zh-CN/docs/Web/API/Event/CustomEvent	/zh-CN/docs/Web/API/CustomEvent
 /zh-CN/docs/Web/API/Event/altKey	/zh-CN/docs/conflicting/Web/API/MouseEvent/altKey
