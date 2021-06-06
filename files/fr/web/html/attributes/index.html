@@ -1,5 +1,5 @@
 ---
-title: Liste des attributs HTML
+title: Référence des attributs HTML
 slug: Web/HTML/Attributes
 tags:
   - Attribute
@@ -17,7 +17,7 @@ original_slug: Web/HTML/Attributs
 ---
 <div>{{HTMLSidebar}}</div>
 
-<p class="summary">Les éléments en HTML ont des <strong>attributs</strong> ; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateurs.</p>
+<p class="summary">Les éléments HTML ont des <strong>attributs</strong> ; ce sont des valeurs supplémentaires qui configurent les éléments ou ajustent leur comportement de différentes manières pour répondre aux critères souhaités par les utilisateurs.</p>
 
 <h2 id="attribute_list">Liste des attributs</h2>
 
@@ -25,7 +25,7 @@ original_slug: Web/HTML/Attributs
   <thead>
     <tr>
       <th scope="col">Nom de l'attribut</th>
-      <th scope="col">Éléments auxquels il s'applique</th>
+      <th scope="col">Éléments concernés</th>
       <th scope="col">Description</th>
     </tr>
   </thead>
@@ -100,7 +100,7 @@ original_slug: Web/HTML/Attributs
 
       <div class="notecard note">
         <p><b>Note :</b></p>
-        <p>Bien que les navigateurs et les clients <em>emails</em> prennent en charge cet attribut, cet attribut est obsolète. On utilisera plutôt la propriété <a href="/fr/docs/Web/CSS/background-image"><code>background-image</code></a>.</p>
+        <p>Bien que les navigateurs et les clients <em>e-mails</em> prennent en charge cet attribut, cet attribut est obsolète. On utilisera plutôt la propriété <a href="/fr/docs/Web/CSS/background-image"><code>background-image</code></a>.</p>
       </div>
     </td>
     </tr>
@@ -293,7 +293,7 @@ original_slug: Web/HTML/Attributs
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/HTML/Attributes/enterkeyhint"><code>enterkeyhint</code></a> {{experimental_inline}}</td>
-      <td><a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a>, <code>contenteditable</code></td>
+      <td><a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a>, <a href="/fr/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a></td>
       <td>Cet attribut indique le libellé ou l'icône à afficher sur la touche entrée des claviers virtuels. Cet attribut peut être utilisé sur les contrôles de formulaires ou sur les éléments qui sont éditables (par exemple avec l'attribut <code>contenteditable</code>).</td>
     </tr>
     <tr>
@@ -606,7 +606,7 @@ original_slug: Web/HTML/Attributs
       <td>Définit les cellules sur lesquelles porte la cellule d'en-tête.</td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/style#attr-scoped"><code>scoped</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/style#attr-scoped"><code>scoped</code></a>{{non-standard_inline}} {{deprecated_inline}}</td>
       <td><a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a></td>
       <td></td>
     </tr>
@@ -662,7 +662,7 @@ original_slug: Web/HTML/Attributs
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/HTML/Attributes/srcset"><code>srcset</code></a></td>
-      <td><a href="/fr/docs/Web/HTML/Element/Img"><code>&lt;img&gt;</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/Img"><code>&lt;img&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/source"><code>&lt;source&gt;</code></a></td>
       <td>Une ou plusieurs images candidates adaptatives.</td>
     </tr>
     <tr>
@@ -678,10 +678,10 @@ original_slug: Web/HTML/Attributs
     <tr>
       <td><a href="/fr/docs/Web/HTML/Global_attributes/style"><code>style</code></a></td>
       <td><a href="/fr/docs/Web/HTML/Global_attributes">Attribut universel</a></td>
-      <td>Cet attribut définit des styles CSS qui auront la priorité sur ceux définis précédemment. Il ne devrait être utilisé qu'à des fins de tests car il est conseillé d'utiliser un/des fichier(s) à part pour gérer la mise en forme.</td>
+      <td>Cet attribut définit des styles CSS qui auront la priorité sur ceux définis précédemment. Il ne devrait être utilisé qu'à des fins de tests, car il est conseillé d'utiliser un/des fichier(s) à part pour gérer la mise en forme.</td>
     </tr>
     <tr>
-      <td><a href="/fr/docs/Web/HTML/Element/table#attr-summary"><code>summary</code></a></td>
+      <td><a href="/fr/docs/Web/HTML/Element/table#attr-summary"><code>summary</code></a>{{deprecated_inline}}</td>
       <td><a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a></td>
       <td></td>
     </tr>
@@ -744,7 +744,7 @@ original_slug: Web/HTML/Attributs
 
 <p>L'attribut de contenu est l'attribut qu'on définit via le contenu (le code HTML) et qu'on obtient et/ou définit via les méthodes <a href="/fr/docs/Web/API/Element/setAttribute"><code>element.setAttribute()</code></a> et <a href="/fr/docs/Web/API/Element/getAttribute"><code>element.getAttribute()</code></a>. L'attribut de contenu sera toujours une chaîne de caractères, y compris lorsque la valeur attendue est un entier. Ainsi, pour indiquer une <code>maxlength</code> d'un élément <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> à 42, on utilisera <code>setAttribute("maxlength", "42")</code> sur cet élément.</p>
 
-<p>L'attribut IDL est également connu sous la forme d'une propriété JavaScript. Ce sont les attributs qu'on peut obtenir ou modifier via JavaScript sous la forme <code>élément.toto</code>. L'attribut IDL utilisera toujours la valeur de l'attribut de contenu sous-jacent, éventuellement en la modifiant pour renvoyer une valeur ou pour la modifier. Autrement dit, les attributs IDL, reflètent les attributs de contenu.</p>€
+<p>L'attribut IDL est également connu sous la forme d'une propriété JavaScript. Ce sont les attributs qu'on peut obtenir ou modifier via JavaScript sous la forme <code>élément.toto</code>. L'attribut IDL utilisera toujours la valeur de l'attribut de contenu sous-jacent, éventuellement en la modifiant pour renvoyer une valeur ou pour la modifier. Autrement dit, les attributs IDL, reflètent les attributs de contenu.</p>
 
 <p>La plupart du temps, les attributs IDL renverront leurs valeurs, telles qu'elles sont utilisées. Par exemple, le type (l'attribut <code>type</code>) par défaut des éléments <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> vaut <code>"text"</code>, et si on définit <code>input.type="tototruc"</code>, l'élément <code>&lt;input&gt;</code> se comportera comme un élément de type <code>text</code> (en termes d'apparence et de comportement) mais le contenu de l'attribut <code>type</code> sera "tototruc". Cependant, l'attribut de type IDL renverra la chaîne <code>"text"</code>.</p>
 
