@@ -25,7 +25,7 @@ browser-compat: html.elements.datalist
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td>Soit <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content">du contenu phrasé</a> ou zéro ou plus d'éléments <a href="/fr/docs/Web/HTML/Element/Option"><code>&lt;option&gt;</code></a>.</td>
+      <td>Soit <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content">du contenu phrasé</a> ou zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/Option"><code>&lt;option&gt;</code></a>.</td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
@@ -37,7 +37,7 @@ browser-compat: html.elements.datalist
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></td>
+      <td><a href="/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a></td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
@@ -56,7 +56,7 @@ browser-compat: html.elements.datalist
 
 <h2 id="examples">Exemples</h2>
 
-<h3 id="basic_datalist">Liste de données de base</h3>
+<h3 id="basic_datalist">HTML</h3>
 
 <pre class="brush: html">&lt;label for="monNavigateur"&gt;Veuillez choisir un navigateur parmi ceux-ci :&lt;/label&gt;
 &lt;input list="navigateurs" id="monNavigateur" name="monNavigateur"/&gt;
@@ -71,80 +71,15 @@ browser-compat: html.elements.datalist
 
 <h4 id="result">Résultat</h4>
 
-<p>{{EmbedLiveSample("basic_datalist", "", 100)}}</p>
-
-<h3 id="customizing_datalist_styles">Personnaliser les styles des listes de données</h3>
-
-<p>Le style de la liste produite par un élément <code>&lt;datalist&gt;</code> dépend de la plate-forme, donc si vous voulez personnaliser l'affichage des options, vous devez mettre en œuvre votre propre solution personnalisée qui remplace le comportement par défaut. L'exemple ci-dessous fournit une solution simple pour cela. Notez comment nous n'avons pas spécifié le <code>&lt;datalist&gt;</code> <code>id</code> à l'intérieur de l'attribut <code><a href="/fr/docs/Web/HTML/Element/Input">&lt;input&gt;</a></code> <code>list</code> dans ce cas, car cela empêche l'affichage spécifique au navigateur des éléments de la liste de données de se mettre en place. Au lieu de cela, nous définissons la valeur <code>&lt;datalist&gt;</code> sélectionnée dans le <code>&lt;input&gt;</code> via JavaScript.</p>
-
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Puisque <code><a href="/fr/docs/Web/CSS/::after">::after</a></code> n'est pas autorisé sur les éléments <code>&lt;input&gt;</code>, si vous voulez reproduire l'icône de la flèche vers le bas, vous devrez envelopper l'élément <code>&lt;input&gt;</code> dans un autre élément sur lequel vous pourrez accrocher le style (ou une autre solution appropriée).</p>
-</div>
-
-<h4 id="html">HTML</h4>
-
-<pre class="brush: html">&lt;input
-  list=""
-  name="option"
-  id="input"
-  autocomplete="off"
-&gt;
-
-&lt;datalist id="datalist"&gt;
-  &lt;option&gt;Carottes&lt;/option&gt;
-  &lt;option&gt;Pois&lt;/option&gt;
-  &lt;option&gt;Haricots&lt;/option&gt;
-&lt;/datalist&gt;</pre>
-
-<h4 id="css">CSS</h4>
-
-<pre class="brush: css">datalist {
-  position: absolute;
-  background-color: lightgrey;
-  font-family: sans-serif;
-  font-size: 0.8rem;
-}
-
-option {
-  background-color: #bbb;
-  padding: 4px;
-  margin-bottom: 1px;
-  cursor: pointer;
-}</pre>
-
-<h4 id="javascript">JavaScript</h4>
-
-<pre class="brush: js">input.onfocus = function () {
-  datalist.style.display = 'block';
-}
-
-for (let option of datalist.options) {
-  option.onclick = function () {
-    input.value = this.value;
-    datalist.style.display = 'none';
-  }
-}
-
-datalist.style.width = input.offsetWidth + 'px';
-datalist.style.left = input.offsetLeft + 'px';
-datalist.style.top = input.offsetTop + input.offsetHeight + 'px';</pre>
-
-<h4 id="result_2">Result</h4>
-
-<p>{{EmbedLiveSample('customizing_datalist_styles', '', 150)}}</p>
+<p>{{EmbedLiveSample("examples", "", 100)}}</p>
 
 <h2 id="specifications">Spécifications</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-{{Compat}}
-
-<h2 id="polyfill">Prothèse d'émulation (<em>polyfill</em>)</h2>
-
-<p>Il est possible d'utiliser <a href="https://github.com/mfranzke/datalist-polyfill">cette bibliothèque</a> pour émuler la fonctionnalité dans les anciens navigateurs.</p>
+<p>{{Compat}}</p>
 
 <h2 id="see_also">Voir aussi</h2>
 
