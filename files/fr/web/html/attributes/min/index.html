@@ -1,5 +1,5 @@
 ---
-title: 'L''attribut HTML : min'
+title: 'Attribut HTML : min'
 slug: Web/HTML/Attributes/min
 tags:
   - Attribute
@@ -16,13 +16,13 @@ translation_of: Web/HTML/Attributes/min
 
 <p>Valable pour les types de saisie numérique, y compris les types <a href="/fr/docs/Web/HTML/Element/Input/date"><code>date</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/month"><code>month</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/week"><code>week</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/time"><code>time</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/datetime-local"><code>datetime-local</code></a>, <a href="/fr/docs/Web/HTML/Element/Input/number"><code>number</code></a> et <a href="/fr/docs/Web/HTML/Element/Input/range"><code>range</code></a>, et l'élément <a href="/fr/docs/Web/HTML/Element/Meter"><code>&lt;meter&gt;</code></a>, l'attribut <code>min</code> est un nombre qui spécifie la valeur la plus négative qu'un contrôle de formulaire doit considérer comme valide.</p>
 
-<h3 id="syntax">Syntaxe</h3>
+<h2 id="syntax">Syntaxe</h3>
 
 <table class="standard-table">
-  <caption>Syntaxe pour les valeurs <code>min</code> par <code>type</code> d'entrée.</caption>
+  <caption>Syntaxe pour les valeurs <code>min</code> par <code>type</code> de saisie.</caption>
   <thead>
     <tr>
-      <th scope="col">Type d'entrée</th>
+      <th scope="col">Type de saisie</th>
       <th scope="col">Syntaxe</th>
       <th scope="col">Exemple</th>
     </tr>
@@ -76,10 +76,10 @@ translation_of: Web/HTML/Attributes/min
 <p>Pour l'élément <a href="/fr/docs/Web/HTML/Element/Meter"><code>&lt;meter&gt;</code></a>, l'attribut <code>min</code> définit la limite numérique inférieure de la plage mesurée. Celle-ci doit être inférieure à la valeur minimale (attribut <a href="/fr/docs/Web/HTML/Attributes/max"><code>max</code></a>), si elle est spécifiée. Dans les deux cas, si elle est omise, la valeur est égale à 1 par défaut.</p>
 
 <table class="standard-table">
-  <caption>Syntax for <code>min</code> values for other elements</caption>
+  <caption>Syntaxe de <code>min</code> pour les autres éléments</caption>
   <thead>
     <tr>
-      <th scope="col">Type d'entrée</th>
+      <th scope="col">Élément</th>
       <th scope="col">Syntaxe</th>
       <th scope="col">Exemple</th>
     </tr>
@@ -103,7 +103,7 @@ translation_of: Web/HTML/Attributes/min
   border: solid red 3px;
 }</pre>
 
-<p>Définissez ensuite une entrée avec une valeur minimale de 7,2, en omettant l'attribut « step », qui a la valeur 1 par défaut.</p>
+<p>Nous définissons ensuite une entrée avec une valeur minimale de 7,2, en omettant l'attribut « step », qui a la valeur 1 par défaut.</p>
 
 <pre class="brush: html">&lt;input id="myNumber" name="myNumber" type="number" min="7.2" value="8"&gt;</pre>
 
@@ -113,7 +113,7 @@ translation_of: Web/HTML/Attributes/min
 
 <p>S'il n'est pas explicitement inclus, <code>step</code> prend par défaut la valeur 1 pour <code>number</code> et <code>range</code>, et 1 type d'unité (seconde, semaine, mois, jour) pour les types d'entrée date/heure.</p>
 
-<h2 id="accessibility_concerns">Problèmes d'accessibilité</h2>
+<h2 id="accessibility_concerns">Accessibilité</h2>
 
 <p>Fournissez des instructions pour aider les utilisateurs à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut <code>min</code>, assurez-vous que cette exigence minimale est comprise par l'utilisateur. Fournir des instructions à l'intérieur des <a href="/fr/docs/Web/HTML/Element/label"><code>&lt;label&gt;</code></a> peut être suffisant. Si vous fournissez des instructions en dehors des étiquettes, ce qui permet un positionnement et une conception plus souples, envisagez d'utiliser <a href="/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute"><code>aria-labelledby</code></a> ou <a href="/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute"><code>aria-describedby</code></a>.</p>
 
