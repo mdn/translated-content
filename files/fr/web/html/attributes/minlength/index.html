@@ -1,5 +1,5 @@
 ---
-title: 'L''attribut HTML : minlength'
+title: 'Attribut HTML : minlength'
 slug: Web/HTML/Attributes/minlength
 tags:
   - Attribute
@@ -14,11 +14,11 @@ translation_of: Web/HTML/Attributes/minlength
 ---
 <p>{{HTMLSidebar}}</p>
 
-<p class="summary">L'attribut <strong><code>minlength</code></strong> définit le nombre minimal de caractères (sous forme d'unités de code UTF-16) que l'utilisateur peut saisir dans un élément <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a>. Il doit s'agir d'une valeur entière égale ou supérieure à 0. Si aucune longueur minimale n'est spécifiée, ou si une valeur invalide est spécifiée, l'entrée n'a pas de longueur minimale. Cette valeur doit être inférieure ou égale à la valeur de <a href="/fr/docs/Web/HTML/Attributes/maxlength">maxlength</a>, sinon la valeur ne sera jamais valide, car il est impossible de satisfaire aux deux critères.</p>
+<p class="summary">L'attribut <strong><code>minlength</code></strong> définit le nombre minimal de caractères (sous forme d'unités de code UTF-16) que l'utilisateur peut saisir dans un élément <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a>. Il doit s'agir d'une valeur entière égale ou supérieure à 0. Si aucune longueur minimale n'est spécifiée, ou si une valeur invalide est spécifiée, l'entrée n'a pas de longueur minimale. Cette valeur doit être inférieure ou égale à la valeur de <a href="/fr/docs/Web/HTML/Attributes/maxlength"><code>maxlength</code></a>, sinon la valeur ne sera jamais valide, car il est impossible de satisfaire aux deux critères.</p>
 
-<p>L'entrée échouera à la validation des contraintes si la longueur de la valeur textuelle du champ est inférieure à minlength UTF-16 code units long, avec <a href="/fr/docs/Web/API/validityState/tooShort"><code>validityState.tooShort</code></a> retournant <code>true</code>. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur. En cas d'échec de la soumission, certains navigateurs affichent un message d'erreur indiquant la longueur minimale requise et la longueur actuelle.</p>
+<p>L'entrée échouera à la validation des contraintes si la longueur de la valeur textuelle du champ est inférieure à <code>minlength</code> unités de code UTF-16, avec <a href="/fr/docs/Web/API/validityState/tooShort"><code>validityState.tooShort</code></a> retournant <code>true</code>. La validation des contraintes n'est appliquée que lorsque la valeur est modifiée par l'utilisateur. En cas d'échec de la soumission, certains navigateurs affichent un message d'erreur indiquant la longueur minimale requise et la longueur actuelle.</p>
 
-<h2 id="example">Exemple</h2>
+<h2 id="examples">Exemples</h2>
 
 <p>En ajoutant <code>minlength="5"</code>, la valeur doit soit être vide, soit comporter cinq caractères ou plus pour être valide.</p>
 
@@ -37,7 +37,7 @@ input:invalid:focus {
   background-image: linear-gradient(pink, lightgreen);
 }</pre>
 
-<div>{{EmbedLiveSample('example', '', 40)}}</div>
+<div>{{EmbedLiveSample('examples', '', 40)}}</div>
 
 <h2 id="specifications">Spécifications</h2>
 
