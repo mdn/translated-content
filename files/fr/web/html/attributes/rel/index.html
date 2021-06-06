@@ -1,5 +1,5 @@
 ---
-title: 'L''attribut HTML : rel'
+title: 'Attribut HTML : rel'
 slug: Web/HTML/Attributes/rel
 tags:
   - Attribute
@@ -14,7 +14,7 @@ translation_of: Web/HTML/Attributes/rel
 
 <p class="summary">L'attribut <strong><code>rel</code></strong> définit la relation entre une ressource liée et le document actuel. Valable sur <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a>, et <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a>, les valeurs supportées dépendent de l'élément sur lequel se trouve l'attribut.</p>
 
-<p>Le type de relations est donné par la valeur de l'attribut <code>rel</code>, qui, s'il est présent, doit avoir une valeur qui est un ensemble non ordonné de mots-clés uniques séparés par des espaces. A la différence d'un nom de <code>class</code>, qui n'exprime pas de sémantique, l'attribut <code>rel</code> doit exprimer des tokens qui sont sémantiquement valides pour les machines et les humains. Les registres actuels des valeurs possibles de l'attribut <code>rel</code> sont le <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">registre de relations de liens de l'IANA</a>, le <a href="https://html.spec.whatwg.org/multipage/links.html#linkTypes">HTML Living Standard</a>, et la page <a href="https://microformats.org/wiki/existing-rel-values">existing-rel-values</a> librement modifiable dans le wiki microformats, <a href="https://html.spec.whatwg.org/multipage/links.html#other-link-types">comme suggéré</a> par le Living Standard. Si un attribut <code>rel</code> non présent dans l'une des trois sources ci-dessus est utilisé, certains validateurs HTML (tels que le <a href="https://validator.w3.org/">W3C Markup Validation Service</a>) généreront un avertissement.</p>
+<p>Le type de relations est donné par la valeur de l'attribut <code>rel</code>, qui, s'il est présent, doit avoir une valeur qui est un ensemble non ordonné de mots-clés uniques séparés par des espaces. À la différence d'un nom de <code>class</code>, qui n'exprime pas de sémantique, l'attribut <code>rel</code> doit exprimer des mots-clés qui sont sémantiquement valides pour les machines et les humains. Les registres actuels des valeurs possibles de l'attribut <code>rel</code> sont le <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">registre de relations de liens de l'IANA</a>, le <a href="https://html.spec.whatwg.org/multipage/links.html#linkTypes">HTML Living Standard</a>, et la page <a href="https://microformats.org/wiki/existing-rel-values">existing-rel-values</a> librement modifiable dans le wiki microformats, <a href="https://html.spec.whatwg.org/multipage/links.html#other-link-types">comme suggéré</a> par le Living Standard. Si un attribut <code>rel</code> non présent dans l'une des trois sources ci-dessus est utilisé, certains validateurs HTML (tels que le <a href="https://validator.w3.org/">W3C Markup Validation Service</a>) généreront un avertissement.</p>
 
 <p>Le tableau suivant énumère quelques-uns des principaux mots-clés existants. Chaque mot-clé dans une valeur séparée par un espace doit être unique dans cette valeur.</p>
 
@@ -212,8 +212,6 @@ translation_of: Web/HTML/Attributes/rel
 
 <p>L'attribut <code>rel</code> n'a pas de valeur par défaut. Si l'attribut est omis ou si aucune des valeurs de l'attribut n'est prise en charge, alors le document n'a pas de relation particulière avec la ressource de destination autre que l'existence d'un lien hypertexte entre les deux. Dans ce cas, sur <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a>, si l'attribut <code>rel</code> est absent, n'a pas de mots-clés, ou s'il ne s'agit pas d'un ou plusieurs des mots-clés séparés par des espaces ci-dessus, alors l'élément ne crée aucun lien. <a href="/fr/docs/Web/HTML/Element/a"><code>&lt;a&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/area"><code>&lt;area&gt;</code></a> créeront quand même des liens, mais sans relation définie.</p>
 
-<p>Comme toutes les valeurs d'attributs de mots-clés HTML, ces valeurs sont insensibles à la casse.</p>
-
 <h2 id="values">Valeurs</h2>
 
 <p>S'il existe plusieurs <code>&lt;link rel="icon"&gt;</code>, le navigateur utilise leur attribut <a href="media"><code>media</code></a>, <a href="type"><code>type</code></a> et <a href="sizes"><code>sizes</code></a> pour sélectionner l'icône la plus appropriée. Si plusieurs icônes sont également appropriées, la dernière est utilisée. Si l'icône la plus appropriée s'avère ultérieurement inappropriée, par exemple parce qu'elle utilise un format non pris en charge, le navigateur passe à l'icône suivante la plus appropriée, et ainsi de suite.</p>
@@ -235,11 +233,11 @@ translation_of: Web/HTML/Attributes/rel
 &lt;!-- feuilles de style alternativement --&gt;
 &lt;link rel="alternate stylesheet" href="highcontrast.css" title="Contraste élevé"&gt;</pre>
       </li>
-      <li>Avec un attribut <a href="hreflang">hreflang</a> qui diffère de la langue du document, cela indique une traduction.</li>
-      <li>Avec l'attribut <a href="type">type</a>, il indique que le document référencé est le même contenu dans un format différent. Par exemple, avec <code>type="application/rss+xml"</code>, il crée un lien hypertexte référençant un flux de syndication.
+      <li>Avec un attribut <a href="hreflang"><code>hreflang</code></a> qui diffère de la langue du document, cela indique une traduction.</li>
+      <li>Avec l'attribut <a href="type"><code>type</code></a>, il indique que le document référencé est le même contenu dans un format différent. Par exemple, avec <code>type="application/rss+xml"</code>, il crée un lien hypertexte référençant un flux de syndication.
       <pre class="brush:html">&lt;link rel="alternate" type="application/atom+xml" href="posts.xml" title="Blog"&gt;</pre>
       </li>
-      <li>Les attributs <a href="hreflang">hreflang</a> et <a href="type">type</a> spécifient des liens vers des versions du document dans un format et une langue alternatifs, destinés à d'autres médias :
+      <li>Les attributs <a href="hreflang"><code>hreflang</code></a> et <a href="type"><code>type</code></a> spécifient des liens vers des versions du document dans un format et une langue alternatifs, destinés à d'autres médias :
       <pre class="brush:html">&lt;link rel="alternate" href="/fr/html/print" hreflang="fr" type="text/html" media="print" title="HTML français (pour l'impression)"&gt;
 &lt;link rel="alternate" href="/fr/pdf" hreflang="fr" type=application/pdf title="PDF Français"&gt;</pre>
       </li>
@@ -334,7 +332,7 @@ translation_of: Web/HTML/Attributes/rel
   </dd>
   <dt><code id="stylesheet">stylesheet</code></dt>
   <dd>
-    <p>Valable pour l'élément <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>, il importe une ressource externe à utiliser comme feuille de style. L'attribut <a href="type"><code>type</code></a> n'est pas nécessaire car il s'agit d'une feuille de style <code>text/css</code>, puisque c'est la valeur par défaut. S'il ne s'agit pas d'une feuille de style de type <code>text/css</code>, il est préférable de déclarer le type.</p>
+    <p>Valable pour l'élément <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>, il importe une ressource externe à utiliser comme feuille de style. L'attribut <a href="type"><code>type</code></a> n'est pas nécessaire, car il s'agit d'une feuille de style <code>text/css</code>, puisque c'est la valeur par défaut. S'il ne s'agit pas d'une feuille de style de type <code>text/css</code>, il est préférable de déclarer le type.</p>
 
     <p>Bien que cet attribut définisse le lien comme étant une feuille de style, l'interaction avec d'autres attributs et d'autres termes clés dans la valeur rel ont un impact sur le téléchargement et/ou l'utilisation de la feuille de style.</p>
 
@@ -365,10 +363,6 @@ translation_of: Web/HTML/Attributes/rel
   &lt;link rel="shortcut icon" href="/static/img/favicon32.7f3da72dcea1.png"&gt;</pre>
   </dd>
 </dl>
-
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("html.elements.attributes.rel")}}</p>
 
 <h2 id="specifications">Spécifications</h2>
 
@@ -425,7 +419,7 @@ translation_of: Web/HTML/Attributes/rel
   </tbody>
 </table>
 
-<h2 id="browser_compatibility_2">Compatibilité des navigateurs</h2>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("html.elements.link.rel")}}</p>
 
