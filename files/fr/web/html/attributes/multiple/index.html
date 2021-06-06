@@ -1,5 +1,5 @@
 ---
-title: 'L''attribut HTML : multiple'
+title: 'Attribut HTML : multiple'
 slug: Web/HTML/Attributes/multiple
 tags:
   - Attribute
@@ -28,7 +28,7 @@ translation_of: Web/HTML/Attributes/multiple
 
 <p>L'attribut <code>multiple</code> de l'élément <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> représente un contrôle permettant de sélectionner zéro ou plusieurs options dans la liste d'options. Sinon, l'élément <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> représente un contrôle permettant de sélectionner une seule <a href="/fr/docs/Web/HTML/Element/Option"><code>&lt;option&gt;</code></a> dans la liste d'options.</p>
 
-<pre class="brush: html">&lt;select multiple name="drawfs" id="drawfs"&gt;
+<pre class="brush: html">&lt;select multiple name="dwarfs" id="dwarfs"&gt;
   &lt;option&gt;Grincheux&lt;/option&gt;
   &lt;option&gt;Joyeux&lt;/option&gt;
   &lt;option&gt;Dormeur&lt;/option&gt;
@@ -40,20 +40,14 @@ translation_of: Web/HTML/Attributes/multiple
 
 <p>Lorsque <code>multiple</code> est spécifié, la plupart des navigateurs affichent une boîte de liste défilante au lieu d'une liste déroulante à ligne unique.</p>
 
-<h2 id="accessibility_concerns">Problèmes d'accessibilité</h2>
-
-<p>Fournissez des instructions pour aider les utilisateurs à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut <code>multiple</code>, informez l'utilisateur que plusieurs valeurs sont autorisées et donnez des indications sur la manière de fournir plusieurs valeurs, par exemple « séparez les adresses électroniques par une virgule ».</p>
-
-<p>Définir <code><a href="/fr/docs/Web/HTML/Attributes/size">size</a>="1"</code> sur une sélection multiple peut la faire apparaître comme une sélection unique dans certains navigateurs, mais elle ne s'étend alors pas au focus, ce qui nuit à la convivialité. Ne faites pas cela. Si vous modifiez l'apparence d'une sélection, et même si vous ne le faites pas, veillez à informer l'utilisateur que plusieurs options peuvent être sélectionnées par une autre méthode.</p>
-
 <h2 id="examples">Exemples</h2>
 
-<h3 id="email_input">saisie d'adresse électronique</h3>
+<h3 id="email_input">Saisie d'adresses électroniques</h3>
 
 <pre class="brush: html">&lt;label for="emails"&gt;A qui voulez-vous adresser un courriel ?&lt;/label&gt;
-&lt;input type="email" multiple name="emails" id="emails" list="drawfemails" required size="64"&gt;
+&lt;input type="email" multiple name="emails" id="emails" list="dwarfemails" required size="64"&gt;
 
-&lt;datalist id="drawfemails"&gt;
+&lt;datalist id="dwarfemails"&gt;
   &lt;option value="grincheux@menuisiers.fr"&gt;Grincheux&lt;/option&gt;
   &lt;option value="joyeux@menuisiers.fr"&gt;Joyeux&lt;/option&gt;
   &lt;option value="dormeur@menuisiers.fr"&gt;Dormeur&lt;/option&gt;
@@ -69,11 +63,11 @@ translation_of: Web/HTML/Attributes/multiple
 
 <p>Si et seulement si l'attribut <code>multiple</code> est spécifié, la valeur peut être une liste d'adresses électroniques correctement formées et séparées par des virgules. Tout espace blanc de queue et de tête est supprimé de chaque adresse de la liste. Si l'attribut <a href="/fr/docs/Web/HTML/Attributs/required"><code>required</code></a> est présent, au moins une adresse électronique est requise.</p>
 
-<p>Certains navigateurs prennent en charge l'apparition de la <a href="/fr/docs/Web/HTML/Attributes/list"><code>list</code></a> d'options de la <a href="/fr/docs/Web/HTML/Element/datalist"><code>&lt;datalist&gt;</code></a> pour les adresses électroniques ultérieures lorsque <code>multiple</code> est présent. D'autres ne le font pas.</p>
+<p>Certains navigateurs prennent en charge l'apparition de la <a href="/fr/docs/Web/HTML/Attributes/list">liste</a> d'options de la <a href="/fr/docs/Web/HTML/Element/datalist"><code>&lt;datalist&gt;</code></a> pour les adresses électroniques ultérieures lorsque <code>multiple</code> est présent. D'autres ne le font pas.</p>
 
 <div>{{EmbedLiveSample("email_input", '', 80)}}</div>
 
-<h3 id="file_input">saisie de fichier</h3>
+<h3 id="file_input">Saisie de fichiers</h3>
 
 <p>Lorsque <code>multiple</code> est défini sur le type de saisie <a href="/fr/docs/Web/HTML/Element/Input/file"><code>file</code></a>, l'utilisateur peut sélectionner un ou plusieurs fichiers :</p>
 
@@ -99,14 +93,14 @@ translation_of: Web/HTML/Attributes/multiple
 
 <p>Lorsque le formulaire est soumis, si nous avions utilisé <a href="/fr/docs/Web/HTML/Element/Form"><code>method="get"</code></a> le nom de chaque fichier sélectionné aurait été ajouté aux paramètres de l'URL sous la forme <code>?uploads=img1.jpg&amp;uploads=img2.svg</code>. Cependant, étant donné que nous sommes en train d'additionner les données du formulaire <a href="/fr/docs/Web/API/XMLHttpRequest/multipart">multipart</a>, nous devons utiliser POST. Voir l'élément <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a> et <a href="/fr/docs/Learn/Forms/Sending_and_retrieving_form_data#the_method_attribute">l'envoi de données de formulaire</a> pour plus d'informations.</p>
 
-<h3 id="select">la sélection</h3>
+<h3 id="select">Saisir plusieurs options</h3>
 
 <p>L'attribut <code>multiple</code> de l'élément <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> représente un contrôle permettant de sélectionner zéro ou plusieurs options dans la liste d'options. Sinon, l'élément <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a> représente un contrôle permettant de sélectionner une seule <a href="/fr/docs/Web/HTML/Element/Option"><code>&lt;option&gt;</code></a> dans la liste des options. L'apparence du contrôle varie généralement en fonction de la présence de l'attribut multiple, la plupart des navigateurs affichant une liste déroulante à défilement au lieu d'une liste déroulante à ligne unique lorsque l'attribut est présent.</p>
 
 <pre class="brush: html">&lt;form method="get" action="#"&gt;
 &lt;p&gt;
  &lt;label for="dwarfs"&gt;Sélectionnez les menuisiers que vous aimez :&lt;/label&gt;
-  &lt;select multiple name="drawfs" id="drawfs"&gt;
+  &lt;select multiple name="dwarfs" id="dwarfs"&gt;
     &lt;option&gt;grincheux@menuisiers.fr&lt;/option&gt;
     &lt;option&gt;joyeux@menuisiers.fr&lt;/option&gt;
     &lt;option&gt;dormeur@menuisiers.fr&lt;/option&gt;
@@ -151,6 +145,12 @@ select[multiple]:active {
 */</pre>
 
 <p>Il existe plusieurs façons de sélectionner plusieurs options dans un élément <code>&lt;select&gt;</code> avec un attribut <code>multiple</code>. Selon le système d'exploitation, les utilisateurs de souris peuvent maintenir les touches <kbd>Ctrl</kbd>, <kbd>Commande</kbd> ou <kbd>Maj</kbd> enfoncées, puis cliquer sur plusieurs options pour les sélectionner/désélectionner. Les utilisateurs du clavier peuvent sélectionner plusieurs éléments contigus en ciblant l'élément <code>&lt;select&gt;</code>, en sélectionnant un élément en haut ou en bas de la plage qu'ils souhaitent sélectionner à l'aide des touches de curseur <kbd>Haut</kbd> et <kbd>Bas</kbd> pour monter et descendre dans les options. La sélection de non-contigus n'est pas aussi bien supportée : les éléments devraient pouvoir être sélectionnés et désélectionnés en appuyant sur <kbd>Espace</kbd> , mais le support varie selon les navigateurs.</p>
+
+<h2 id="accessibility_concerns">Accessibilité</h2>
+
+<p>Fournissez des instructions pour aider les utilisateurs à comprendre comment remplir le formulaire et utiliser les contrôles individuels du formulaire. Indiquez toute entrée obligatoire et facultative, les formats de données et toute autre information pertinente. Lorsque vous utilisez l'attribut <code>multiple</code>, informez l'utilisateur que plusieurs valeurs sont autorisées et donnez des indications sur la manière de fournir plusieurs valeurs, par exemple « séparez les adresses électroniques par une virgule ».</p>
+
+<p>Définir <code><a href="/fr/docs/Web/HTML/Attributes/size">size</a>="1"</code> sur une sélection multiple peut la faire apparaître comme une sélection unique dans certains navigateurs, mais elle ne s'étend alors pas au focus, ce qui nuit à la convivialité. Ne faites pas cela. Si vous modifiez l'apparence d'une sélection, et même si vous ne le faites pas, veillez à informer l'utilisateur que plusieurs options peuvent être sélectionnées par une autre méthode.</p>
 
 <h2 id="specifications">Spécifications</h2>
 
