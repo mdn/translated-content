@@ -23,16 +23,16 @@ browser-compat: html.elements.details
 
 <div class="notecard note">
   <p><b>Note :</b></p>
-  <p>L'utilisation courante d'un triangle qui tourne ou s'enroule pour représenter l'ouverture ou la fermeture du widget explique pourquoi on les appelle parfois « twisties ».</p>
+  <p>L'utilisation courante d'un triangle qui tourne ou s'enroule pour représenter l'ouverture ou la fermeture du widget explique pourquoi on les appelle parfois « twisties » en anglais.</p>
 </div>
-  
+
 <p>Un widget <code>&lt;details&gt;</code> peut être dans l'un des deux états suivants. L'état par défaut <em>fermé</em> affiche uniquement le triangle et l'étiquette à l'intérieur du <code>&lt;summary&gt;</code> (ou une chaîne par défaut définie par <a href="/fr/docs/Glossary/User_agent">l'agent utilisateur</a> si aucun <code>&lt;summary&gt;</code>). Cela peut ressembler à ce qui suit :</p>
 
-<figure style="margin: 1em 0; padding: 1em; border: 1px solid black; box-shadow: 0 0 4px 1px black; width: 640px;"><img alt="Capture d'écran du widget fermé &lt;details&gt;. Un triangle noir pointant vers la gauche se trouve à droite du texte « Configuration requise »." src="details-closed.png"></figure>
+<figure style="margin: 1em 0; padding: 1em; border: 1px solid black; box-shadow: 0 0 4px 1px black; width: 640px;"><img alt="Capture d'écran du widget fermé &lt;details&gt;. Un triangle noir pointant vers la gauche se trouve à droite du texte « System Requirements »." src="details-closed.png"></figure>
 
-<p>Nous voyons ici un widget de divulgation standard avec l'étiquette "Configuration requise", dans son état fermé par défaut. Lorsque l'utilisateur clique sur le widget ou le met au point, puis appuie sur la barre d'espacement, il s'ouvre par "torsion", révélant son contenu :</p>
+<p>Nous voyons ici un widget de divulgation standard avec l'étiquette "System Requirements", dans son état fermé par défaut. Lorsque l'utilisateur clique sur le widget ou le met au point, puis appuie sur la barre d'espacement, il s'ouvre par "torsion", révélant son contenu :</p>
 
-<figure style="margin: 1em 0; padding: 1em; border: 1px solid black; box-shadow: 0 0 4px 1px black; width: 640px;"><img alt="Capture d'écran du widget &lt;details&gt; ouvert. Le triangle pointe maintenant vers le bas, et une description détaillée de ce que signifie « Configuration requise » est affichée." src="details-open.png"></figure>
+<figure style="margin: 1em 0; padding: 1em; border: 1px solid black; box-shadow: 0 0 4px 1px black; width: 640px;"><img alt="Capture d'écran du widget &lt;details&gt; ouvert. Le triangle pointe maintenant vers le bas, et une description détaillée de ce que signifie « System Requirements » est affichée." src="details-open.png"></figure>
 
 <p>À partir de là, vous pouvez utiliser les feuilles de style en cascade pour donner un style au widget de divulgation, et vous pouvez ouvrir et fermer le widget de façon programmatique en définissant ou en supprimant son attribut <a href="/fr/docs/Web/HTML/Element/details#attr-open"><code>open</code></a>.</p>
 
@@ -44,7 +44,7 @@ browser-compat: html.elements.details
 </div>
 
 <p>Les implémentations entièrement conformes aux normes appliquent automatiquement le code CSS <code><a href="/fr/docs/Web/CSS/display">display</a>: list-item</code> à l'élément <a href="/fr/docs/Web/HTML/Element/summary"><code>&lt;summary&gt;</code></a>. Vous pouvez l'utiliser pour personnaliser davantage son apparence. Voir <a href="#customizing_the_disclosure_widget">personnaliser le marqueur de révélation</a> pour plus de détails.</p>
-  
+
 <table class="properties">
   <tbody>
     <tr>
@@ -86,17 +86,17 @@ browser-compat: html.elements.details
   <dt><code id="attr-open">open</code></dt>
   <dd>
     <p>Cet attribut booléen indique si les détails — c'est-à-dire le contenu de l'élément <code>&lt;details&gt;</code> — sont actuellement visibles ou non. Les détails sont affichés lorsque cet attribut existe, ou cachés lorsque cet attribut est absent. Par défaut, cet attribut est absent, ce qui signifie que les détails ne sont pas visibles.</p>
-   
+
     <div class="note">
       <p><b>Note :</b></p>
-      <p>Vous devez supprimer entièrement cet attribut pour que les détails soient cachés. <code>open="false"</code> rend les détails visibles car cet attribut est booléen.</p>
+      <p>Vous devez supprimer entièrement cet attribut pour que les détails soient cachés. Attention, <code>open="false"</code> rend les détails visibles, car cet attribut est booléen.</p>
     </div>
   </dd>
 </dl>
 
 <h2 id="Events">Évènements</h2>
 
-<p>En plus des évènements classiques pris en charge par les éléments HTML, l'élément <code>&lt;details&gt;</code> prend en charge l'évènement <a href="/fr/docs/Web/API/HTMLDetailsElement/toggle_event">toggle</a> qui est envoyé sur l'élément lorsque son état change entre ouvert et fermé (que ce soit dans un sens ou dans l'autre). L'évènement est envoyé après que l'état ait été changé et si plusieurs changement d'état ont eu lieu avant que le navigateur envoie l'évènement, le navigateur fusionnera ces évènements en un seul.</p>
+<p>En plus des évènements classiques pris en charge par les éléments HTML, l'élément <code>&lt;details&gt;</code> prend en charge l'évènement <a href="/fr/docs/Web/API/HTMLDetailsElement/toggle_event">toggle</a> qui est envoyé sur l'élément lorsque son état change entre ouvert et fermé (que ce soit dans un sens ou dans l'autre). L'évènement est envoyé après que l'état ait été changé et si plusieurs changements d'état ont eu lieu avant que le navigateur envoie l'évènement, le navigateur fusionnera ces évènements en un seul.</p>
 
 <p>On peut alors écouter cet évènement en JavaScript afin de détecter le changement d'état du contrôle :</p>
 
@@ -125,7 +125,7 @@ browser-compat: html.elements.details
 
 <p>{{EmbedLiveSample("a_simple_disclosure_example", "", 100)}}</p>
 
-<h3 id="creating_an_open_disclosure_box">Créer un contrôle déja ouvert</h3>
+<h3 id="creating_an_open_disclosure_box">Créer un contrôle déjà ouvert</h3>
 
 <p>Pour obtenir une boîte <code>&lt;details&gt;</code> dans un état ouvert, il suffit d'ajouter l'attribut booléen <code>open</code> :</p>
 
@@ -245,11 +245,11 @@ details &gt; p {
 
 <h2 id="specifications">Spécifications</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
 <h2 id="see_also">Voir aussi</h2>
 
