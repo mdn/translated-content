@@ -48,7 +48,7 @@ browser-compat: html.elements.dl
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td><a href="https://w3c.github.io/aria/#group">group</a>, <a href="https://w3c.github.io/aria/#presentation">presentation</a></td>
+      <td><a href="https://w3c.github.io/aria/#group">group</a>, <code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code>, <code><a href="https://w3c.github.io/aria/#none">none</a></code>, <a href="https://w3c.github.io/aria/#presentation">presentation</a></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
@@ -91,7 +91,7 @@ browser-compat: html.elements.dl
   &lt;!-- D'autres termes et leurs définitions --&gt;
 &lt;/dl&gt;</pre>
 
-<p>{{EmbedLiveSample("multiple_terms_single_description", "", 150)}}</p>
+<p>{{EmbedLiveSample("multiple_terms_single_description", "", 180)}}</p>
 
 <h3 id="single_term_multiple_descriptions">Un seul terme avec plusieurs définitions</h3>
 
@@ -110,7 +110,7 @@ browser-compat: html.elements.dl
   &lt;!-- D'autres termes et leurs définitions --&gt;
 &lt;/dl&gt;</pre>
 
-<p>{{EmbedLiveSample("single_term_multiple_descriptions", "", 150)}}</p>
+<p>{{EmbedLiveSample("single_term_multiple_descriptions", "", 180)}}</p>
 
 <h3 id="multiple_terms_and_descriptions">Termes et descriptions multiples</h3>
 
@@ -139,7 +139,7 @@ browser-compat: html.elements.dl
 
 <h3 id="wrapping_name-value_groups_in_htmlelementdiv_elements">Intégration de groupes nom-valeur dans les éléments <code>&lt;div&gt;</code>.</h3>
 
-<p><a href="/fr/docs/Glossary/WHATWG">WHATWG</a> HTML permet d'envelopper chaque groupe nom-valeur d'un élément <a href="/fr/docs/Web/HTML/Element/dl"><code>&lt;dl&gt;</code></a> dans un élément <a href="/fr/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a>. Cela peut être utile lors de l'utilisation de <a href="/fr/docs/Web/HTML/Microdata">microdata</a>, ou lorsque les <a href="/fr/docs/Web/HTML/Global_attributes">attributs globaux</a> s'appliquent à un groupe entier, ou encore à des fins de style.</p>
+<p><a href="/fr/docs/Glossary/WHATWG">WHATWG</a> HTML permet d'envelopper chaque groupe nom-valeur d'un élément <a href="/fr/docs/Web/HTML/Element/dl"><code>&lt;dl&gt;</code></a> dans un élément <a href="/fr/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a>. Cela peut être utile lors de l'utilisation de <a href="/fr/docs/Web/HTML/Microdata">microdonnées</a>, ou lorsque les <a href="/fr/docs/Web/HTML/Global_attributes">attributs universels</a> s'appliquent à un groupe entier, ou encore à des fins de style.</p>
 
 <pre class="brush: html">&lt;dl&gt;
   &lt;div&gt;
@@ -166,9 +166,9 @@ browser-compat: html.elements.dl
 
 <p>Pour changer l'indentation de la définition d'un terme, il faut utiliser la propriété <a href="/fr/docs/Web/CSS">CSS</a> {{cssxref("margin")}}.</p>
 
-<h2 id="accessibility_concerns">Problèmes d'accessibilité</h2>
+<h2 id="accessibility_concerns">Accessibilité</h2>
 
-<p>Les lecteurs d'écran annoncent <code>&lt;dl&gt;</code> de façon différente. Certains lecteurs d'écran tels que VoiceOver sur iOS n'annonceront pas le fait que le contenu de <code>&lt;dl&gt;</code> est une liste. Il faut donc s'assurer que la relation entre les éléments de la liste est bien communiquée grâce aux contenus des éléments.</p>
+<p>Les lecteurs d'écran annoncent <code>&lt;dl&gt;</code> de façon différente. À partir d'iOS 14, VoiceOver annoncera que le contenu de <code>&lt;dl&gt;</code> est une liste lors de la navigation au curseur (mais pas via la lecture générale). Il faut donc s'assurer que la relation entre les éléments de la liste est bien communiquée grâce aux contenus des éléments.</p>
 
 <ul>
   <li><a href="https://codepen.io/aardrian/debug/NzGaKP">CodePen - Les camarades HTML : dt &amp; dd</a> <small>(en)</small></li>
@@ -177,11 +177,11 @@ browser-compat: html.elements.dl
 
 <h2 id="specifications">Spécifications</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
 <h2 id="see_also">Voir aussi</h2>
 
