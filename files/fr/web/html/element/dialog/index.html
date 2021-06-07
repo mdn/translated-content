@@ -35,8 +35,12 @@ browser-compat: html.elements.dialog
     <td>Tout élément qui accepte du <a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">contenu de flux</a>.</td>
    </tr>
    <tr>
+    <th scope="row">Rôle ARIA implicite</th>
+    <td><a href="/fr/docs/Web/Accessibility/ARIA/Roles/dialog_role"><code>dialog</code></a></td>
+   </tr>
+   <tr>
     <th scope="row">Rôles ARIA autorisés</th>
-    <td><a href="https://w3c.github.io/aria/#alertdialog">alertdialog</a></td>
+    <td><a href="https://w3c.github.io/aria/#alertdialog"><code>alertdialog</code></a></td>
    </tr>
    <tr>
     <th scope="row">Interface DOM</th>
@@ -47,7 +51,7 @@ browser-compat: html.elements.dialog
 
 <h2 id="attributes">Attributs</h2>
 
-<p>Cet élément inclut <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a>. L'attribut <code>tabindex</code> ne doit pas être utilisé sur l'élément <code>&lt;dialog&gt;</code>.</p>
+<p>Cet élément inclut <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a>.</p>
 
 <div class="notecard warning">
   <p>L'attribut <code>tabindex</code> ne doit pas être utilisé sur l'élément <code>&lt;dialog&gt;</code>.</p>
@@ -61,7 +65,7 @@ browser-compat: html.elements.dialog
 <h2 id="usage_notes">Notes d'utilisation</h2>
 
 <ul>
-  <li>Les éléments <a href="/fr/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code></a> peuvent fermer un dialogue s'ils possèdent l'attribut <code>method="dialog"</code>. Lorsqu'un tel formulaire est soumis, le dialogue se ferme avec sa propriété <a href="/fr/docs/Web/API/HTMLDialogElement/returnValue"><code>returnValue</code></a> définie sur la <code>value</code> (valeur) du bouton qui a été utilisé pour soumettre le formulaire.</li>
+  <li>Les éléments <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a> peuvent fermer un dialogue s'ils possèdent l'attribut <code>method="dialog"</code>. Lorsqu'un tel formulaire est soumis, le dialogue se ferme avec sa propriété <a href="/fr/docs/Web/API/HTMLDialogElement/returnValue"><code>returnValue</code></a> définie sur la <code>value</code> (valeur) du bouton qui a été utilisé pour soumettre le formulaire.</li>
   <li>Le pseudo-élément CSS <a href="/fr/docs/Web/CSS/::backdrop"><code>::backdrop</code></a> peut être utilisé pour créer un style derrière un élément <code>&lt;dialog&gt;</code> lorsque le dialogue est affiché avec <a href="/fr/docs/Web/API/HTMLDialogElement/showModal"><code>HTMLDialogElement.showModal()</code></a>. Par exemple, pour atténuer le contenu inaccessible derrière la boîte de dialogue modale.</li>
 </ul>
 
@@ -74,6 +78,8 @@ browser-compat: html.elements.dialog
 &lt;/dialog&gt;</pre>
 
 <h3 id="advanced_example">Exemple avancé</h3>
+
+<h4 id="html">HTML</h4>
 
 <pre class="brush: html">&lt;!-- Boîte de dialogue contextuelle simple contenant un formulaire --&gt;
 &lt;dialog id="favDialog"&gt;
@@ -131,17 +137,15 @@ favDialog.addEventListener('close', function onClose() {
 
 <h2 id="specifications">Spécifications</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
-<h2 id="Polyfill">Prothèse d'émulation (Polyfill)</h2>
+<h2 id="Polyfill">Prothèse d'émulation (polyfill)</h2>
 
-<p>Incluez ce polyfill pour fournir un support aux navigateurs sans élément <code>&lt;dialog&gt;</code>.</p>
-
-<p><a href="https://github.com/GoogleChrome/dialog-polyfill">dialog-polyfill</a></p>
+<p>Incluez ce polyfill pour fournir un support aux navigateurs sans élément <code>&lt;dialog&gt;</code> : <a href="https://github.com/GoogleChrome/dialog-polyfill">dialog-polyfill</a>.</p>
 
 <h2 id="See_also">Voir aussi</h2>
 
