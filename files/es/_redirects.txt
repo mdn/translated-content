@@ -1799,6 +1799,7 @@
 /es/docs/Web/API/Element/ongotpointercapture	/es/docs/Web/API/GlobalEventHandlers/ongotpointercapture
 /es/docs/Web/API/Element/onlostpointercapture	/es/docs/Web/API/GlobalEventHandlers/onlostpointercapture
 /es/docs/Web/API/Element/onwheel	/es/docs/Web/API/GlobalEventHandlers/onwheel
+/es/docs/Web/API/Element/runtimeStyle	/es/docs/orphaned/Web/API/Element/runtimeStyle
 /es/docs/Web/API/ElementosHTMLparaVideo	/es/docs/Web/API/HTMLVideoElement
 /es/docs/Web/API/Event/createEvent	/es/docs/Web/API/Document/createEvent
 /es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/Web/API/Fetch_API/Basic_concepts
@@ -1947,7 +1948,7 @@
 /es/docs/Web/CSS/Getting_Started	/es/docs/orphaned/Web/CSS/Comenzando_(tutorial_CSS)
 /es/docs/Web/CSS/Gradiente	/es/docs/Web/CSS/gradient
 /es/docs/Web/CSS/Herramientas	/es/docs/Web/CSS/Tools
-/es/docs/Web/CSS/Herramientas/Cubic_Bezier_Generator	/es/docs/Web/CSS/Tools/Cubic_Bezier_Generator
+/es/docs/Web/CSS/Herramientas/Cubic_Bezier_Generator	/es/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
 /es/docs/Web/CSS/Introducción	/es/docs/conflicting/Learn/CSS/First_steps
 /es/docs/Web/CSS/Introducción/Boxes	/es/docs/conflicting/Learn/CSS/Building_blocks
 /es/docs/Web/CSS/Introducción/Cascading_and_inheritance	/es/docs/conflicting/Learn/CSS/Building_blocks/Cascade_and_inheritance
@@ -1973,6 +1974,7 @@
 /es/docs/Web/CSS/Selectores_hermanos_generales	/es/docs/Web/CSS/General_sibling_combinator
 /es/docs/Web/CSS/Sintaxis_definición_de_valor	/es/docs/Web/CSS/Value_definition_syntax
 /es/docs/Web/CSS/Texto_CSS	/es/docs/Web/CSS/CSS_Text
+/es/docs/Web/CSS/Tools/Cubic_Bezier_Generator	/es/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
 /es/docs/Web/CSS/Transiciones_de_CSS	/es/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
 /es/docs/Web/CSS/Usando_animaciones_CSS	/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /es/docs/Web/CSS/Using_CSS_transforms	/es/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
@@ -2401,6 +2403,7 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/getOwnPropertyDescriptor	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 /es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler/set	/es/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 /es/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype	/es/docs/conflicting/Web/JavaScript/Reference/Global_Objects/RangeError
+/es/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/es/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Referencia/Acerca_de	/es/docs/Web/JavaScript/Reference/About
 /es/docs/Web/JavaScript/Referencia/Características_Desaprobadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -2797,7 +2800,7 @@
 /es/docs/Web/JavaScript/Referencia/Operadores/Operadores_especiales/Operador_this	/es/docs/Web/JavaScript/Reference/Operators/this
 /es/docs/Web/JavaScript/Referencia/Operadores/Operadores_lógicos	/es/docs/conflicting/Web/JavaScript/Reference/Operators_e72d8790e25513408a18a5826660f704
 /es/docs/Web/JavaScript/Referencia/Operadores/Operator_Precedence	/es/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
-/es/docs/Web/JavaScript/Referencia/Operadores/Pipeline_operator	/es/docs/Web/JavaScript/Reference/Operators/Pipeline_operator
+/es/docs/Web/JavaScript/Referencia/Operadores/Pipeline_operator	/es/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /es/docs/Web/JavaScript/Referencia/Operadores/Resto	/es/docs/Web/JavaScript/Reference/Operators/Remainder
 /es/docs/Web/JavaScript/Referencia/Operadores/Sintaxis_Spread	/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /es/docs/Web/JavaScript/Referencia/Operadores/Spread_operator	/es/docs/conflicting/Web/JavaScript/Reference/Operators/Spread_syntax

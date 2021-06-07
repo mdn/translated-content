@@ -10334,12 +10334,6 @@
       "mechtool"
     ]
   },
-  "Web/API/RTCPeerConnection/getDefaultIceServers": {
-    "modified": "2020-10-15T22:33:11.540Z",
-    "contributors": [
-      "mechtool"
-    ]
-  },
   "Web/API/RTCPeerConnection/icecandidate_event": {
     "modified": "2020-11-25T18:23:55.148Z",
     "contributors": [
@@ -10560,12 +10554,6 @@
     "modified": "2020-10-15T22:12:53.829Z",
     "contributors": [
       "fdor"
-    ]
-  },
-  "Web/API/ServiceWorkerState": {
-    "modified": "2019-12-29T10:30:40.493Z",
-    "contributors": [
-      "sh7dm"
     ]
   },
   "Web/API/Service_Worker_API": {
@@ -15390,13 +15378,6 @@
       "Wingear",
       "evgor80",
       "lerniri"
-    ]
-  },
-  "Web/Guide/Localizations_and_character_encodings": {
-    "modified": "2020-12-14T08:44:06.511Z",
-    "contributors": [
-      "azahw935",
-      "bogpok"
     ]
   },
   "Web/Guide/Parsing_and_serializing_XML": {
@@ -22591,13 +22572,6 @@
       "Dimon24021993"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:07:33.663Z",
-    "contributors": [
-      "nakhodkiin",
-      "ALegostaeva"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-11-28T14:23:33.816Z",
     "contributors": [
@@ -25604,6 +25578,18 @@
       "pronskiy"
     ]
   },
+  "orphaned/Web/API/RTCPeerConnection/getDefaultIceServers": {
+    "modified": "2020-10-15T22:33:11.540Z",
+    "contributors": [
+      "mechtool"
+    ]
+  },
+  "orphaned/Web/API/ServiceWorkerState": {
+    "modified": "2019-12-29T10:30:40.493Z",
+    "contributors": [
+      "sh7dm"
+    ]
+  },
   "orphaned/Web/API/Web_Crypto_API/Checking_authenticity_with_password": {
     "modified": "2019-04-10T04:25:54.752Z",
     "contributors": [
@@ -25699,6 +25685,13 @@
       "Grakov"
     ]
   },
+  "orphaned/Web/Guide/Localizations_and_character_encodings": {
+    "modified": "2020-12-14T08:44:06.511Z",
+    "contributors": [
+      "azahw935",
+      "bogpok"
+    ]
+  },
   "orphaned/Web/HTML/Element/element": {
     "modified": "2019-03-23T22:16:19.667Z",
     "contributors": [
@@ -25749,6 +25742,13 @@
     "modified": "2019-03-23T22:37:24.165Z",
     "contributors": [
       "srvoland"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:07:33.663Z",
+    "contributors": [
+      "nakhodkiin",
+      "ALegostaeva"
     ]
   },
   "orphaned/Web/Manifest/serviceworker": {

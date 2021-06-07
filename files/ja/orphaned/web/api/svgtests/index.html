@@ -1,0 +1,61 @@
+---
+title: SVGTest
+slug: orphaned/Web/API/SVGTests
+tags:
+  - API
+  - NeedsExample
+  - Reference
+  - SVG
+  - SVG DOM
+translation_of: Web/API/SVGTests
+original_slug: Web/API/SVGTests
+---
+<div>{{APIRef("SVG")}}</div>
+
+<p><strong><code>SVGTests</code></strong> インターフェイスは条件的な属性処理の反映に使われて、その属性をサポートする要素のための他のインターフェイスと混ざります。</p>
+
+<h2 id="Properties" name="Properties">プロパティ</h2>
+
+<dl>
+ <dt>{{domxref("SVGTests.requiredFeatures")}} {{ReadOnlyInline}} {{obsolete_inline()}}</dt>
+ <dd>{{domxref("SVGStringList")}} で、所与の要素の {{SVGAttr("requiredFeatures")}} 属性に対応する。</dd>
+ <dt>{{domxref("SVGTests.requiredExtensions")}} {{ReadOnlyInline}}</dt>
+ <dd>{{domxref("SVGStringList")}} で、所与の要素の {{SVGAttr("requiredExtensions")}} 属性に対応する。</dd>
+ <dt>{{domxref("SVGTests.systemLanguage")}} {{ReadOnlyInline}}</dt>
+ <dd>{{domxref("SVGStringList")}} で、所与の属性の {{SVGAttr("systemLanguage")}} 属性に対応する。</dd>
+</dl>
+
+<h2 id="Methods" name="Methods">メソッド</h2>
+
+<dl>
+ <dt>{{domxref("SVGTests.hasExtension()")}} {{ReadOnlyInline}} {{obsolete_inline()}}</dt>
+ <dd>ブラウザーが、URIで指定される拡張子をサポートする場合 <code>true</code>。</dd>
+</dl>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG2", "types.html#InterfaceSVGTests", "SVGTests")}}</td>
+   <td>{{Spec2("SVG2")}}</td>
+   <td><code>requiredFeatures</code> プロパティと <code>hasExtension()</code> メソッドが削除された。</td>
+  </tr>
+  <tr>
+   <td>{{SpecName("SVG1.1", "types.html#InterfaceSVGTests", "SVGTests")}}</td>
+   <td>{{Spec2("SVG1.1")}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+
+
+
+<p>{{Compat("api.SVGTests")}}</p>

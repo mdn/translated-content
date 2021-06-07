@@ -13,7 +13,7 @@ translation_of: Web/API/GlobalEventHandlers/oncancel
 ---
 <div>{{ApiRef("HTML DOM")}}</div>
 
-<p>{{domxref("GlobalEventHandlers")}} 的<code><strong>oncancel</strong></code> 属性是一个{{domxref("EventHandler")}}，它是用来处理发送给{{HTMLElement("dialog")}}元素的{{event("cancel")}} 事件的。</p>
+<p>{{domxref("GlobalEventHandlers")}} 的<code><strong>oncancel</strong></code> 属性是一个{{event("Event_handlers", "event handler")}}，它是用来处理发送给{{HTMLElement("dialog")}}元素的{{event("cancel")}} 事件的。</p>
 
 <p>当用户需要离开一个&lt;dialog&gt;元素的时候就会触发 <code>cancel</code> 事件. 这个事件处理器会防止事件向上传递,因此任何父处理器都不会接受到该事件。</p>
 
@@ -46,8 +46,6 @@ translation_of: Web/API/GlobalEventHandlers/oncancel
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<div class="hidden">本页的兼容性表格由结构化的数据生成，如果你想贡献这些数据你可以检出<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 并且发送一个 pull request给我们。</div>
 
 <p>{{Compat("api.GlobalEventHandlers.oncancel")}}</p>
 

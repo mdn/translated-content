@@ -12830,13 +12830,6 @@
       "JoshOY"
     ]
   },
-  "Web/API/Element/runtimeStyle": {
-    "modified": "2019-03-23T22:06:58.487Z",
-    "contributors": [
-      "shockw4ver",
-      "jiangyuzhen"
-    ]
-  },
   "Web/API/Element/scroll": {
     "modified": "2020-10-15T22:24:05.993Z",
     "contributors": [
@@ -15119,12 +15112,6 @@
       "dextra",
       "Mgjbot",
       "Dewang"
-    ]
-  },
-  "Web/API/HTMLElement/forceSpellCheck": {
-    "modified": "2019-03-18T21:38:32.415Z",
-    "contributors": [
-      "varcat"
     ]
   },
   "Web/API/HTMLElement/hidden": {
@@ -19491,12 +19478,6 @@
     "modified": "2020-10-15T22:34:32.333Z",
     "contributors": [
       "SDUTWSL"
-    ]
-  },
-  "Web/API/RTCPeerConnection/getDefaultIceServers": {
-    "modified": "2020-10-15T22:29:03.476Z",
-    "contributors": [
-      "lauhua"
     ]
   },
   "Web/API/RTCPeerConnection/getReceivers": {
@@ -31723,14 +31704,6 @@
     "contributors": [
       "ziyunfei",
       "fantasticfears"
-    ]
-  },
-  "Web/Guide/Localizations_and_character_encodings": {
-    "modified": "2020-05-07T10:52:56.537Z",
-    "contributors": [
-      "Ende93",
-      "91JOJO",
-      "xdsnet"
     ]
   },
   "Web/Guide/Mobile": {
@@ -44276,16 +44249,6 @@
       "wsv587"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T21:59:15.552Z",
-    "contributors": [
-      "RainSlide",
-      "fsy0718",
-      "zhangchen",
-      "qdlaoyao",
-      "fphonor"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:37:38.990Z",
     "contributors": [
@@ -50264,6 +50227,13 @@
       "gavinkwoe"
     ]
   },
+  "orphaned/Web/API/Element/runtimeStyle": {
+    "modified": "2019-03-23T22:06:58.487Z",
+    "contributors": [
+      "shockw4ver",
+      "jiangyuzhen"
+    ]
+  },
   "orphaned/Web/API/Entity": {
     "modified": "2020-06-03T01:07:43.853Z",
     "contributors": [
@@ -50275,6 +50245,12 @@
     "modified": "2019-03-23T22:06:02.004Z",
     "contributors": [
       "wuCrio"
+    ]
+  },
+  "orphaned/Web/API/HTMLElement/forceSpellCheck": {
+    "modified": "2019-03-18T21:38:32.415Z",
+    "contributors": [
+      "varcat"
     ]
   },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {
@@ -50393,6 +50369,12 @@
     "modified": "2020-10-15T22:33:59.306Z",
     "contributors": [
       "JoshOY"
+    ]
+  },
+  "orphaned/Web/API/RTCPeerConnection/getDefaultIceServers": {
+    "modified": "2020-10-15T22:29:03.476Z",
+    "contributors": [
+      "lauhua"
     ]
   },
   "orphaned/Web/API/TextRange/text": {
@@ -50592,6 +50574,14 @@
       "leegorous"
     ]
   },
+  "orphaned/Web/Guide/Localizations_and_character_encodings": {
+    "modified": "2020-05-07T10:52:56.537Z",
+    "contributors": [
+      "Ende93",
+      "91JOJO",
+      "xdsnet"
+    ]
+  },
   "orphaned/Web/HTML/Element/command": {
     "modified": "2019-03-18T20:43:33.481Z",
     "contributors": [
@@ -50692,6 +50682,16 @@
     "contributors": [
       "teoli",
       "Ende93"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T21:59:15.552Z",
+    "contributors": [
+      "RainSlide",
+      "fsy0718",
+      "zhangchen",
+      "qdlaoyao",
+      "fphonor"
     ]
   },
   "orphaned/Web/JavaScript/javascript(起步)": {
