@@ -105,8 +105,7 @@ every(function callbackFn(element, index, array) { ... }, thisArg)
 <p>
   <code>every</code>가 처리하는 요소의 범위는 <code>callbackFn</code>의 첫 호출 전에 설정됩니다.
   <code>every</code> 호출 이후로 배열에 추가하는 요소는 <code>callbackFn</code>이 방문하지 않습니다.
-  배열에 원래 있었지만 아직 방문하지 않은 요소가 <code>callbackFn</code>에 의해 변경된 경우, 그
-  인덱스를 방문하는 시점의 값을 사용합니다. 삭제한 요소는 방문하지 않습니다.
+  배열에 존재하는 요소가 변경된 경우, <code>callbackFn</code>에 <code>every</code>가 방문하는 시점의 값을 전달합니다. 삭제한 요소는 방문하지 않습니다.
 </p>
 
 <p>
