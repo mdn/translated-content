@@ -854,6 +854,7 @@
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Operador_Virgula	/pt-BR/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Operators_8fa8b34b0547a749514637a15d386886
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_de_comparação	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Operators_0d2e4b8154642b5a9dbd76a2a48cf96a
+/pt-BR/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Operators/Spread_syntax
 /pt-BR/docs/Web/JavaScript/Reference/Operators/operador_de_coalescencia_nula	/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 /pt-BR/docs/Web/JavaScript/Reference/Properties_Index	/pt-BR/docs/Web/JavaScript/Reference

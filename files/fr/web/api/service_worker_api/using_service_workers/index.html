@@ -114,7 +114,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
   });
 }</pre>
 
-<p>On retourne une nouvelle promesse en utilisant le constructeur <code>Promise()</code>, qui prend en argument une fonction de rappel avec les paramètres <code>resolve</code> et <code>reject</code>. Quelque part dans la fonction, on a besoin de définir à quoi correspond pour la promesse d'être résolue avec succès ou bien d'être rejetée — dans ce cas, retourner un statut 200 OK status ou pas — et donc appleler <code>resolve</code> en cas de succès, ou <code>reject</code> en cas d'échec. Le reste du contenu de cette fonction correspond à une utilisation plutôt classique d'XHR, et n'appelle pas de commentaires particuliers pour le moment.</p>
+<p>On retourne une nouvelle promesse en utilisant le constructeur <code>Promise()</code>, qui prend en argument une fonction de rappel avec les paramètres <code>resolve</code> et <code>reject</code>. Quelque part dans la fonction, on a besoin de définir à quoi correspond pour la promesse d'être résolue avec succès ou bien d'être rejetée — dans ce cas, retourner un statut 200 OK status ou pas — et donc appeler <code>resolve</code> en cas de succès, ou <code>reject</code> en cas d'échec. Le reste du contenu de cette fonction correspond à une utilisation plutôt classique d'XHR, et n'appelle pas de commentaires particuliers pour le moment.</p>
 
 <p>Lorsqu'on appelle la fonction <code>imgLoad()</code>, on l'appelle avec l'url de l'image à charger, comme on pourrait s'en douter, mais le reste du code est un peu différent :</p>
 
@@ -144,7 +144,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <h2 id="Démo_de_service_workers">Démo de service workers</h2>
 
-<p>Pour illustrer quelques principes de base de l'enregistrement et de l'installation d'un service worker, voici une simple démo appelée <a href="https://github.com/mdn/sw-test">sw-test</a>, qui présente juste une galerie d'images Star wars Lego. Elle utilise une fonction pilotée par une promesse pour lire les données d'une image à partir d'un objet JSON et charger les images en utilisant Ajax, avant d'afficher les images en bas de page. Les choses restent statiques et simples pour le moment. Elle enregistre aussi, installe et active un service worker, et lorsque la specification est davantage supportée par les navigateurs, elle met en cache tous les fichiers requis pour un fonctionnement déconnecté !</p>
+<p>Pour illustrer quelques principes de base de l'enregistrement et de l'installation d'un service worker, voici une simple démo appelée <a href="https://github.com/mdn/sw-test">sw-test</a>, qui présente juste une galerie d'images Star wars Lego. Elle utilise une fonction pilotée par une promesse pour lire les données d'une image à partir d'un objet JSON et charger les images en utilisant Ajax, avant d'afficher les images en bas de page. Les choses restent statiques et simples pour le moment. Elle enregistre aussi, installe et active un service worker, et lorsque la spécification est davantage supportée par les navigateurs, elle met en cache tous les fichiers requis pour un fonctionnement déconnecté !</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/8243/demo-screenshot.png" style="display: block; height: 410px; margin: 0px auto; width: 480px;"><br>
  <br>
@@ -152,7 +152,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
  Vous pouvez consulter le <a href="https://github.com/mdn/sw-test/">code source sur GitHub</a>, et <a href="https://mdn.github.io/sw-test/">voir l'exemple en direct</a>. Le bout de code qui sera appelé est la promesse (voir <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L17-L42">app.js lines 17-42</a>), qui est une version modifiée du code présenté ci-dessus, dans la <a href="https://github.com/mdn/promises-test">démo du test de promesses</a>. Il en diffère de la façon suivante :</p>
 
 <ol>
- <li>Dans l'original, on considère l'URL d'une image à charger. Dans cette version, on passe un fragment JSON contenant toutes les données d'une seule image (voir à quoi il ressemble dans <a href="https://github.com/mdn/sw-test/blob/gh-pages/image-list.js">image-list.js</a>). C'est parce que toutes les données pour que chaque promesse soit résolue doivent être passé avec la promesse, que c'est asynchrone. Si l'on passe juste l'url, et si l'on essaie alors d'accéder aux autres éléments dans le JSON séparément lorsqu'on itère plus tard avec la boucle <code>for()</code>, cela ne marchera pas, puisque la promesse ne se résolvera pas en même temps que les itérations sont faites (c'est un mécanisme synchrone.)</li>
+ <li>Dans l'original, on considère l'URL d'une image à charger. Dans cette version, on passe un fragment JSON contenant toutes les données d'une seule image (voir à quoi il ressemble dans <a href="https://github.com/mdn/sw-test/blob/gh-pages/image-list.js">image-list.js</a>). C'est parce que toutes les données pour que chaque promesse soit résolue doivent être passées avec la promesse, que c'est asynchrone. Si l'on passe juste l'url, et si l'on essaie alors d'accéder aux autres éléments dans le JSON séparément lorsqu'on itère plus tard avec la boucle <code>for()</code>, cela ne marchera pas, puisque la promesse ne se résolvera pas en même temps que les itérations sont faites (c'est un mécanisme synchrone.)</li>
  <li>La promesse est résolue en réalité avec un tableau, puisqu'on veut rendre le blob de l'image chargée disponible à la fonction de résolution plus tard dans le code, mais aussi le nom de l'image, les crédits et le texte alternatif (voir <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L26-L29">app.js lines 26-29</a>). Les promesses se résolvent seulement avec un seul argument, aussi si l'on souhaite la résoudre avec des valeurs multiples, on a besoin d'utiliser un tableau ou un objet.</li>
  <li>Pour accéder aux valeurs de la promesse résolue, on accède alors à cette fonction comme on peut s'y attendre (voir <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L55-L59">app.js lines 55-59</a>.) Cela peut sembler un peu étrange au premier abord, mais c'est la manière dont les promesses fonctionnent.</li>
 </ol>
@@ -209,7 +209,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <p>Après l'enregistrement du service worker, le navigateur tente d'installer puis d'activer le service worker sur la page ou le site.<br>
  <br>
- L'événement install est déclenché lorsqu'une installation se termine avec succès. L'événement install est généralement utilisé pour remplir le cache local du navigateur avec les ressources nécessitées pour faire fonctionner l'application en mode déconnecté. A cet effet, la toute nouvelle API de stockage est utilisée — {{domxref("cache")}} — un espace global au niveau du service worker qui permet de stocker les ressources fournies par les réponses, et indexées par leurs requêtes. Cette API fonctionne d'une manière similaire au cache standard du navigateur, mais le cache demeure spécifique au domaine. Il persiste jusqu'à ce qu'il en soit décidé autrement — de nouveau, le contrôle reste total.</p>
+ L'événement install est déclenché lorsqu'une installation se termine avec succès. L'événement install est généralement utilisé pour remplir le cache local du navigateur avec les ressources nécessaires pour faire fonctionner l'application en mode déconnecté. A cet effet, la toute nouvelle API de stockage est utilisée — {{domxref("cache")}} — un espace global au niveau du service worker qui permet de stocker les ressources fournies par les réponses, et indexées par leurs requêtes. Cette API fonctionne d'une manière similaire au cache standard du navigateur, mais le cache demeure spécifique au domaine. Il persiste jusqu'à ce qu'il en soit décidé autrement — de nouveau, le contrôle reste total.</p>
 
 <div class="note">
 <p><strong>Remarque </strong>: L'API Cache n'est pas supportée par tous les navigateurs. (Voir la section {{anch("Compatibilité des navigateurs")}} pour plus d'informations.) Pour l'utiliser à l'heure actuelle, on peut envisager un polyfill comme celui fournit par la <a href="https://github.com/Polymer/topeka/blob/master/sw.js">démo Topeka de Google</a>, ou peut-être stocker les ressources dans <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
@@ -253,7 +253,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <h3 id="Réponses_personnalisées_aux_requêtes">Réponses personnalisées aux requêtes</h3>
 
-<p>Une fois que les ressources du site sont mise en cache, les service workers doivent savoir quoi faire de ce contenu en cache. L'événement <code>fetch</code> permet de gérer cela facilement.</p>
+<p>Une fois que les ressources du site sont mises en cache, les service workers doivent savoir quoi faire de ce contenu en cache. L'événement <code>fetch</code> permet de gérer cela facilement.</p>
 
 <p>Un événement <code>fetch</code> se déclenche à chaque fois qu'une ressource contrôlée par un service worker est retournée, ce qui inclut les documents à l'intérieur du contour spécifié, et toute ressource référencée dans ces documents (par exemple <code>si index.html</code> effectue une requête vers un autre domaine pour l'insertion d'une image, cela se fait encore au travers de son service worker.)</p>
 
@@ -314,7 +314,7 @@ event.request.body</pre>
 
 <p>On vient de voir que <code>caches.match(event.request)</code> est important lorsqu'il y a correspondance avec le cache du service worker, mais qu'en est-il des cas où rien ne correspond ? Si aucune sorte de gestionnaire d'erreur n'est fourni, la promesse est rejetée et une erreur réseau est retournée lorsqu'aucune correspondance n'est trouvée.</p>
 
-<p>Heureusement, la structure des service workers qui repose sur les promesses rend trivial la gestion des alternatives à une situation de succès. On pourrait faire ceci :</p>
+<p>Heureusement, la structure des service workers qui repose sur les promesses rend triviale la gestion des alternatives à une situation de succès. On pourrait faire ceci :</p>
 
 <pre class="brush: js notranslate">this.addEventListener('fetch', function(event) {
   event.respondWith(
@@ -385,7 +385,7 @@ event.request.body</pre>
 
 <h2 id="Mettre_à_jour_le_service_worker"><a id="Updating your service worker" name="Updating your service worker">Mettre à jour le service worker</a></h2>
 
-<p>Si le service worker a été précédemment installé, et qu'une nouvelle version du worker est disponible au chargement ou au rafraîchissement de la page, la nouvelle version est installée en arrière-plan, mais pas encore activée. Elle ne sera activé que lorsqu'il n'y aura plus aucune page chargée qui utilise encore l'ancien service worker. Dès lors qu'il n'y a plus de telles pages encore chargées, le nouveau service worker est activé.</p>
+<p>Si le service worker a été précédemment installé, et qu'une nouvelle version du worker est disponible au chargement ou au rafraîchissement de la page, la nouvelle version est installée en arrière-plan, mais pas encore activée. Elle ne sera activée que lorsqu'il n'y aura plus aucune page chargée qui utilise encore l'ancien service worker. Dès lors qu'il n'y a plus de telles pages encore chargées, le nouveau service worker est activé.</p>
 
 <p>On souhaite mettre à jour l'écouteur d'événement <code>install</code> dans le nouveau service worker de la façon suivante (à noter le nouveau numéro de version) :</p>
 

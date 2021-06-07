@@ -1313,12 +1313,6 @@
       "loella16"
     ]
   },
-  "Glossary/Gaia": {
-    "modified": "2019-03-23T22:42:05.161Z",
-    "contributors": [
-      "xdelatour"
-    ]
-  },
   "Glossary/Garbage_collection": {
     "modified": "2019-03-23T22:37:46.005Z",
     "contributors": [
@@ -1378,13 +1372,6 @@
     "modified": "2019-08-25T18:38:32.909Z",
     "contributors": [
       "Pols12"
-    ]
-  },
-  "Glossary/Gonk": {
-    "modified": "2019-03-23T22:41:40.903Z",
-    "contributors": [
-      "loella16",
-      "xdelatour"
     ]
   },
   "Glossary/Google_Chrome": {
@@ -15804,12 +15791,6 @@
       "loella16"
     ]
   },
-  "Web/API/Element/tabStop": {
-    "modified": "2019-03-18T21:38:50.214Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/Element/tagName": {
     "modified": "2019-03-23T23:53:29.906Z",
     "contributors": [
@@ -19833,12 +19814,6 @@
     "modified": "2020-10-15T22:34:57.967Z",
     "contributors": [
       "tomderudder"
-    ]
-  },
-  "Web/API/ServiceWorkerState": {
-    "modified": "2019-03-18T21:18:01.317Z",
-    "contributors": [
-      "AurelieBayre"
     ]
   },
   "Web/API/Service_Worker_API": {
@@ -26254,12 +26229,6 @@
     "contributors": [
       "SphinxKnight",
       "velvel53"
-    ]
-  },
-  "Web/CSS/Tools/Cubic_Bezier_Generator": {
-    "modified": "2019-04-06T13:46:55.571Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "Web/CSS/Tools/Linear-gradient_Generator": {
@@ -40432,12 +40401,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T21:59:06.221Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:16:58.418Z",
     "contributors": [
@@ -44987,6 +44950,19 @@
       "Fredchat"
     ]
   },
+  "orphaned/Glossary/Gaia": {
+    "modified": "2019-03-23T22:42:05.161Z",
+    "contributors": [
+      "xdelatour"
+    ]
+  },
+  "orphaned/Glossary/Gonk": {
+    "modified": "2019-03-23T22:41:40.903Z",
+    "contributors": [
+      "loella16",
+      "xdelatour"
+    ]
+  },
   "orphaned/Glossary/Modern_web_apps": {
     "modified": "2019-01-17T02:12:55.112Z",
     "contributors": [
@@ -45048,6 +45024,12 @@
   },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2019-03-18T21:39:20.100Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "orphaned/Web/API/Element/tabStop": {
+    "modified": "2019-03-18T21:38:50.214Z",
     "contributors": [
       "loella16"
     ]
@@ -45135,6 +45117,12 @@
       "B_M"
     ]
   },
+  "orphaned/Web/API/ServiceWorkerState": {
+    "modified": "2019-03-18T21:18:01.317Z",
+    "contributors": [
+      "AurelieBayre"
+    ]
+  },
   "orphaned/Web/API/URLUtilsReadOnly": {
     "modified": "2020-10-15T22:17:11.893Z",
     "contributors": [
@@ -45179,6 +45167,12 @@
       "SphinxKnight",
       "teoli",
       "FredB"
+    ]
+  },
+  "orphaned/Web/CSS/Tools/Cubic_Bezier_Generator": {
+    "modified": "2019-04-06T13:46:55.571Z",
+    "contributors": [
+      "SphinxKnight"
     ]
   },
   "orphaned/Web/Guide/Events": {
@@ -45266,6 +45260,12 @@
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
     "modified": "2020-10-15T21:30:59.712Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T21:59:06.221Z",
     "contributors": [
       "SphinxKnight"
     ]

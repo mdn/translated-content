@@ -9071,12 +9071,6 @@
       "Internauta1024A"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:08:04.976Z",
-    "contributors": [
-      "jangromko"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-03-12T19:36:58.666Z",
     "contributors": [
@@ -11670,6 +11664,12 @@
       "Diablownik",
       "Mgjbot",
       "Ptak82"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:08:04.976Z",
+    "contributors": [
+      "jangromko"
     ]
   },
   "orphaned/Web/JavaScript/Referencje/O_tym_dokumencie/Konwencje_formatowania_tekstu": {

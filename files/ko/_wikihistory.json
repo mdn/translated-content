@@ -6162,12 +6162,6 @@
       "moonformeli"
     ]
   },
-  "Web/API/OffscreenCanvas/toBlob": {
-    "modified": "2020-10-15T22:14:42.795Z",
-    "contributors": [
-      "moonformeli"
-    ]
-  },
   "Web/API/OffscreenCanvas/width": {
     "modified": "2020-10-15T22:14:42.247Z",
     "contributors": [
@@ -15928,12 +15922,6 @@
       "Jung.Kyu-Hyun"
     ]
   },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:15:31.566Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
     "modified": "2020-10-15T21:46:18.602Z",
     "contributors": [
@@ -18399,6 +18387,12 @@
       "connorshea"
     ]
   },
+  "orphaned/Web/API/OffscreenCanvas/toBlob": {
+    "modified": "2020-10-15T22:14:42.795Z",
+    "contributors": [
+      "moonformeli"
+    ]
+  },
   "orphaned/Web/API/ParentNode": {
     "modified": "2020-10-15T22:08:08.618Z",
     "contributors": [
@@ -18631,6 +18625,12 @@
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/BigInt/prototype": {
     "modified": "2020-10-15T22:12:31.982Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:15:31.566Z",
     "contributors": [
       "alattalatta"
     ]
