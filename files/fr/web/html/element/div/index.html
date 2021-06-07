@@ -16,7 +16,7 @@ browser-compat: html.elements.div
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément <strong><code>&lt;div&gt;</code></strong> (ou division) est le conteneur générique du contenu du flux. Elle n'a aucun effet sur le contenu ou la mise en page tant qu'elle n'est pas stylisée d'une manière quelconque à l'aide de <a href="/fr/docs/Glossary/CSS">CSS</a>. (par exemple, un style lui est directement appliqué ou un modèle de mise en page tel que <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexbox</a> est appliqué à son élément parent).</p>
+<p class="summary">L'élément <strong><code>&lt;div&gt;</code></strong> (ou division) est le conteneur générique du contenu du flux. Il n'a aucun effet sur le contenu ou la mise en page tant qu'il n'est pas mis en forme d'une manière quelconque à l'aide de <a href="/fr/docs/Web/CSS">CSS</a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}</div>
 
@@ -30,7 +30,7 @@ browser-compat: html.elements.div
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>. Selon le WHATWG, si l'élément parent est un élément <a href="/fr/docs/Web/HTML/Element/dl"><code>&lt;dl&gt;</code></a>, un ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/dt"><code>&lt;dt&gt;</code></a> suivis par un ou plusieurs élément <a href="/fr/docs/Web/HTML/Element/dd"><code>&lt;dd&gt;</code></a> éventuellement entrecoupés par des éléments <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>.</td>
+      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>. Selon le WHATWG, si l'élément parent est un élément <a href="/fr/docs/Web/HTML/Element/dl"><code>&lt;dl&gt;</code></a>, un ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/dt"><code>&lt;dt&gt;</code></a> suivis par un ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/dd"><code>&lt;dd&gt;</code></a> éventuellement entrecoupés par des éléments <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>.</td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
@@ -42,7 +42,7 @@ browser-compat: html.elements.div
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Pas de rôle correspondant</a></td>
+      <td><a href="https://www.w3.org/TR/wai-aria-1.2/#generic">generic</a></td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
@@ -75,7 +75,8 @@ browser-compat: html.elements.div
 <h3 id="a_simple_example">Un exemple simple</h3>
 
 <pre class="brush: html">&lt;div&gt;
-  &lt;p&gt;Tout type de contenu. Par exemple &amp;lt;p&amp;gt;, &amp;lt;table&amp;gt;. À vous de voir&amp;nbsp;!&lt;/p&gt;
+  &lt;p&gt;Tout type de contenu. Par exemple &amp;lt;p&amp;gt;,
+  &amp;lt;table&amp;gt;. À vous de voir&amp;nbsp;!&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <p>Le résultat ressemble à ceci :</p>
@@ -89,7 +90,8 @@ browser-compat: html.elements.div
 <h4 id="html">HTML</h4>
 
 <pre class="brush: html">&lt;div class="shadowbox"&gt;
-  &lt;p&gt;Voici un paragraphe très intéressant inscrit dans une boîte avec une ombre.&lt;/p&gt;
+  &lt;p&gt;Voici un paragraphe très intéressant inscrit dans une boîte
+  avec une ombre.&lt;/p&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="css">CSS</h4>
@@ -106,13 +108,17 @@ browser-compat: html.elements.div
 
 <p>{{EmbedLiveSample("a_styled_example", "", 150)}}</p>
 
+<h2 id="accessibility_concerns">Accessibilité</h2>
+
+<p>L'élément <code>&lt;div&gt;</code> possède un rôle ARIA implicite <a href="https://www.w3.org/TR/wai-aria-1.2/#generic"><code>generic</code></a> (plutôt qu'aucun rôle). Cela peut avoir un impact sur certaines combinaisons de déclarations ARIA qui nécessitent un élément descendant direct avec un rôle donné pour fonctionner correctement.</p>
+
 <h2 id="specifications">Spécifications</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
 <h2 id="see_also">Voir aussi</h2>
 
