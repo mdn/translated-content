@@ -16,7 +16,7 @@ browser-compat: html.elements.dfn
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément <strong><code>&lt;dfn&gt;</code></strong> (aussi nommé « définition ») est utilisé pour indiquer le terme défini dans le contexte d'une expression ou d'une phrase de définition. L'élément <a href="/fr/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a>, le couple <a href="/fr/docs/Web/HTML/Element/dt"><code>&lt;dt&gt;</code></a>/{HTMLElement("dd")}} ou l'élément <a href="/fr/docs/Web/HTML/Element/section"><code>&lt;section&gt;</code></a> qui est le plus proche ancêtre de <code>&lt;dfn&gt;</code> est considéré comme la définition du terme.</p>
+<p class="summary">L'élément <strong><code>&lt;dfn&gt;</code></strong> (aussi nommé « définition ») est utilisé pour indiquer le terme défini dans le contexte d'une expression ou d'une phrase de définition. L'élément <a href="/fr/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a>, le couple <a href="/fr/docs/Web/HTML/Element/dt"><code>&lt;dt&gt;</code></a>/<a href="/fr/docs/Web/HTML/Element/dd"><code>&lt;dd&gt;</code></a> ou l'élément <a href="/fr/docs/Web/HTML/Element/section"><code>&lt;section&gt;</code></a> qui est le plus proche ancêtre de <code>&lt;dfn&gt;</code> est considéré comme la définition du terme.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}</div>
 
@@ -40,7 +40,7 @@ browser-compat: html.elements.dfn
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="https://w3c.github.io/aria/#term">term</a></td>
+      <td><a href="https://w3c.github.io/aria/#term"><code>term</code></a></td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
@@ -138,24 +138,25 @@ ce projet.&lt;/p&gt;</pre>
 
 <h4 id="result_2">Résultat</h4>
 
-<p>{{EmbedLiveSample("links_to_definitions", "", 300)}}</p>
+<p>{{EmbedLiveSample("links_to_definitions", "", 350)}}</p>
 
-<h3 id="using_abbreviations_and_definitions_together">Utiliser les abbréviations et les définitions</h3>
+<h3 id="using_abbreviations_and_definitions_together">Utiliser les abréviations et les définitions</h3>
 
-<p>Dans certains cas, on souhaite utiliser l'abbréviation d'un terme lorsqu'on le définit. Pour cela, on peut utiliser <code>&lt;dfn&gt;</code> et <a href="/fr/docs/Web/HTML/Element/abbr"><code>&lt;abbr&gt;</code></a> de la façon suivante :</p>
+<p>Dans certains cas, on souhaite utiliser l'abréviation d'un terme lorsqu'on le définit. Pour cela, on peut utiliser <code>&lt;dfn&gt;</code> et <a href="/fr/docs/Web/HTML/Element/abbr"><code>&lt;abbr&gt;</code></a> de la façon suivante :</p>
 
 <h4 id="html_3">HTML</h4>
 
 <pre class="brush: html">&lt;p&gt;Le &lt;dfn&gt;&lt;abbr title="Télescope Spatial Hubble"&gt;TSH&lt;/abbr&gt;&lt;/dfn&gt;
-est l'un des instruments scientifiques les plus productifs jamais construits.
-Il est en orbite depuis plus de 20 ans, scrutant le ciel et renvoyant des
-données et des photographies d'une qualité et d'un niveau de détail sans
-précédent.&lt;/p&gt;
+est l'un des instruments scientifiques les plus productifs jamais
+construits. Il est en orbite depuis plus de 20 ans, scrutant le ciel
+et renvoyant des données et des photographies d'une qualité et d'un
+niveau de détail sans précédent.&lt;/p&gt;
 
-&lt;p&gt;En effet, le &lt;abbr title="Télescope Spatial Hubble"&gt;TSH&lt;/abbr&gt; a sans doute
-fait plus pour faire avancer la science que tout autre appareil jamais construit.&lt;/p&gt;</pre>
+&lt;p&gt;En effet, le &lt;abbr title="Télescope Spatial Hubble"&gt;TSH&lt;/abbr&gt; a sans 
+doute fait plus pour faire avancer la science que tout autre appareil
+jamais construit.&lt;/p&gt;</pre>
 
-<p>On notera que l'élément <code>&lt;abbr&gt;</code> est imbriqué dans l'élément <code>&lt;dfn&gt;</code>. L'élément <code>&lt;abbr&gt;</code> indique que le terme est une abbréviation ("HST") et indique le détail de cette abbrévation ("Hubble Space Telescope") grâce à son attribut <code>title</code>. L'élément <code>&lt;dfn&gt;</code> indique quant à lui que c'est bien ce terme abrégé qu'on est en train de définir.</p>
+<p>On notera que l'élément <code>&lt;abbr&gt;</code> est imbriqué dans l'élément <code>&lt;dfn&gt;</code>. L'élément <code>&lt;abbr&gt;</code> indique que le terme est une abréviation ("HST") et indique le détail de cette abrévation ("Hubble Space Telescope") grâce à son attribut <code>title</code>. L'élément <code>&lt;dfn&gt;</code> indique quant à lui que c'est bien ce terme abrégé qu'on est en train de définir.</p>
 
 <h4 id="result_3">Résultat</h4>
 
@@ -163,11 +164,11 @@ fait plus pour faire avancer la science que tout autre appareil jamais construit
 
 <h2 id="specifications">Spécifications</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
 <h2 id="see_also">Voir aussi</h2>
 
