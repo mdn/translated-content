@@ -15,11 +15,11 @@ browser-compat: html.elements.form
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément HTML <strong><code>&lt;form&gt;</code> </strong>représente une section d'un document qui contient des contrôles interactifs permettant à un utilisateur d'envoyer des données à un serveur web.</p>
+<p class="summary">L'élément HTML <strong><code>&lt;form&gt;</code> </strong>représente un formulaire, c'est-à-dire une section d'un document qui contient des contrôles interactifs permettant à un utilisateur de fournir des informations.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/form.html", "tabbed-standard")}}</div>
 
-<p>Il est possible d'utiliser les pseudo-classes CSS {{cssxref(':valid')}} et {{cssxref(':invalid')}} pour mettre en forme un élément <code>&lt;form&gt;</code>.</p>
+<p>Il est possible d'utiliser les pseudo-classes CSS <a href="/fr/docs/Web/CSS/:valid"><code>:valid</code></a> et <a href="/fr/docs/Web/CSS/:invalid"><code>:invalid</code></a> pour mettre en forme un élément <code>&lt;form&gt;</code> selon que le contenu des éléments du formulaire est valide ou non.</p>
 
 <table class="properties">
   <tbody>
@@ -45,7 +45,7 @@ browser-compat: html.elements.form
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td><a href="https://w3c.github.io/aria/#group">group</a>, <a href="https://w3c.github.io/aria/#presentation">presentation</a></td>
+      <td><a href="https://w3c.github.io/aria/#search"><code>search</code></a>, <a href="https://w3c.github.io/aria/#none"><code>none</code></a>, <a href="https://w3c.github.io/aria/#presentation"><code>presentation</code></a></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
@@ -67,7 +67,7 @@ browser-compat: html.elements.form
     </div>
   </dd>
   <dt><code id="attr-accept-charset">accept-charset</code></dt>
-  <dd><a href="/fr/docs/Web/Guide/Localizations_and_character_encodings">Encodages de caractères</a> séparés par des espaces que le serveur accepte. Le navigateur les utilise dans l'ordre dans lequel ils sont listés. La valeur par défaut signifie <a href="/fr/docs/Web/HTTP/Headers/Content-Encoding">le même encodage que celui de la page</a>.<br>
+  <dd>Encodages de caractères séparés par des espaces que le serveur accepte. Le navigateur les utilise dans l'ordre dans lequel ils sont listés. La valeur par défaut signifie <a href="/fr/docs/Web/HTTP/Headers/Content-Encoding">le même encodage que celui de la page</a>.<br>
   (Dans les versions précédentes de HTML, les codages de caractères pouvaient également être délimités par des virgules).</dd>
   <dt><code id="attr-autocapitalize">autocapitalize</code> {{non-standard_inline}}</dt>
   <dd>Cet attribut est un attribut non-standard utilisé sur iOS par Safari Mobile qui contrôle la façon dont la valeur du texte est automatiquement transcrite en majuscules lors de la saisie par l'utilisateur. Si l'attribut <code>autocapitalize</code> est défini sur un des descendants du formulaire, il surchargera la valeur de <code>autocapitalize</code> utilisée pour le formulaire. Les valeurs non-dépréciées sont disponibles pour iOS 5 et supérieurs. La valeur par défaut est <code>sentences</code>. Les valeurs possibles sont:
@@ -86,24 +86,24 @@ browser-compat: html.elements.form
     </ul>
   </dd>
   <dt><code id="attr-name">name</code></dt>
-  <dd>Le nom du formulaire. Dans HTML 4, cet attribut est déprécié. (<code>id</code> doit être utilisé à la place). Il doit être unique parmi tous les formulaires d'un document, et ne doit pas être une chaîne de caractères vide en HTML5.</dd>
+  <dd>Le nom du formulaire. Il doit être unique parmi tous les formulaires d'un document, et ne doit pas être une chaîne de caractères vide.</dd>
   <dt><code id="attr-rel">rel</code></dt>
   <dd>Crée un hyperlien ou une annotation en fonction de la valeur, voir l'attribut <a href="/fr/docs/Web/HTML/Attributes/rel"><code id="attr-rel">rel</code></a> pour plus de détails.</dd>
 </dl>
 
-<h3 id="attributes_for_form_submission">Attributs pour la soumission de formulaires</h3>
+<h3 id="attributes_for_form_submission">Attributs pour l'envoi de formulaires</h3>
 
-<p>Les attributs suivants contrôlent le comportement pendant la soumission du formulaire.</p>
+<p>Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire.</p>
 
 <dl>
   <dt><code id="attr-action">action</code></dt>
-  <dd>L'URL qui traite la soumission du formulaire. Cette valeur peut être remplacée par un attribut <a href="/fr/docs/Web/HTML/Element/Button#attr-formaction"><code>formaction</code></a> sur un <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a>, <code><a href="/fr/docs/Web/HTML/Element/Input/submit">&lt;input type="submit"&gt;</a></code>, ou <code><a href="/fr/docs/Web/HTML/Element/Input/image">&lt;input type="image"&gt;</a></code>.</dd>
+  <dd>L'URL qui traite l'envoi du formulaire. Cette valeur peut être remplacée par un attribut <a href="/fr/docs/Web/HTML/Element/Button#attr-formaction"><code>formaction</code></a> sur un <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a>, <code><a href="/fr/docs/Web/HTML/Element/Input/submit">&lt;input type="submit"&gt;</a></code>, ou <code><a href="/fr/docs/Web/HTML/Element/Input/image">&lt;input type="image"&gt;</a></code>.</dd>
   <dt><code id="attr-enctype">enctype</code></dt>
   <dd>Lorsque la valeur de l'attribut <code>method</code> est <code>post</code>, cet attribut définit le <a href="https://fr.wikipedia.org/wiki/Type_MIME">type MIME</a> qui sera utilisé pour encoder les données envoyées au serveur. C'est un attribut énuméré qui peut prendre les valeurs suivantes :
     <ul>
       <li><code>application/x-www-form-urlencoded</code> : la valeur par défaut si l'attribut n'est pas défini</li>
-      <li><code>multipart/form-data</code> : la valeur utilisée par un élément <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> dont l'attribut <code>type</code> vaut "file".</li>
-      <li><code>text/plain</code>, correspondant au <a href="https://fr.wikipedia.org/wiki/Type_MIME">type MIME</a> éponyme.</li>
+      <li><code>multipart/form-data</code> : la valeur utilisée par un élément <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a> avec l'attribut <code>type="file"</code>.</li>
+      <li><code>text/plain</code>, correspondant au <a href="https://fr.wikipedia.org/wiki/Type_MIME">type MIME</a> éponyme et utilisé à des fins de débogage.</li>
     </ul>
     
     <p>Cette valeur peut être remplacée par un attribut <a href="/fr/docs/Web/HTML/Element/Button#attr-formenctype"><code>formenctype</code></a> sur un <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a>, <code><a href="/fr/docs/Web/HTML/Element/Input/submit">&lt;input type="submit"&gt;</a></code>, ou <code><a href="/fr/docs/Web/HTML/Element/Input/image">&lt;input type="image"&gt;</a></code>.</p>
@@ -161,19 +161,21 @@ browser-compat: html.elements.form
 &lt;form method="post"&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Titre&lt;/legend&gt;
-    &lt;label&gt;&lt;input type="radio" name="radio"&gt;Sélectionnez moi&lt;/label&gt;
+    &lt;label&gt;&lt;input type="radio" name="radio"&gt;Sélectionnez-moi&lt;/label&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
+
+<h3 id="result">Résultat</h3>
 
 <div>{{EmbedLiveSample("examples", "100%", 130)}}</div>
 
 <h2 id="specifications">Spécifications</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
 <h2 id="see_also">Voir aussi</h2>
 
@@ -181,6 +183,6 @@ browser-compat: html.elements.form
   <li><a href="/fr/docs/Learn/Forms">Guide des formulaires HTML</a></li>
   <li>D'autres éléments qui sont utilisés lors de la création de formulaires : <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/datalist"><code>&lt;datalist&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Fieldset"><code>&lt;fieldset&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Input"><code>&lt;input&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Label"><code>&lt;label&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Legend"><code>&lt;legend&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Meter"><code>&lt;meter&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Optgroup"><code>&lt;optgroup&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Option"><code>&lt;option&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/output"><code>&lt;output&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Progress"><code>&lt;progress&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Textarea"><code>&lt;textarea&gt;</code></a>.</li>
   <li>Obtenir une liste des éléments du formulaire : <a href="/fr/docs/Web/API/HTMLFormElement/elements"><code>HTMLFormElement.elements</code></a></li>
-  <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Form_Role">ARIA : rôle du formulaire</a></li>
-  <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Search_role">ARIA : rôle de recherche</a></li>
+  <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Form_Role">ARIA : rôle <code>form</code></a></li>
+  <li><a href="/fr/docs/Web/Accessibility/ARIA/Roles/Search_role">ARIA : rôle <code>search</code></a></li>
  </ul>
