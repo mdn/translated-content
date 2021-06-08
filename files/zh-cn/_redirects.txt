@@ -1428,6 +1428,8 @@
 /zh-CN/docs/WOFF	/zh-CN/docs/Web/Guide/WOFF
 /zh-CN/docs/Web-based_protocol_handlers	/zh-CN/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /zh-CN/docs/Web/API/APIWwindow.sidebar	/zh-CN/docs/Web/API/Window/sidebar
+/zh-CN/docs/Web/API/AbstractWorker	/zh-CN/docs/orphaned/Web/API/AbstractWorker
+/zh-CN/docs/Web/API/AbstractWorker/onerror	/zh-CN/docs/orphaned/Web/API/AbstractWorker/onerror
 /zh-CN/docs/Web/API/AmbientLightSensor/reading	/zh-CN/docs/Web/API/AmbientLightSensor/illuminance
 /zh-CN/docs/Web/API/AnalyserNode/fft	/zh-CN/docs/orphaned/Web/API/AnalyserNode/fft
 /zh-CN/docs/Web/API/ArrayBuffer	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
@@ -1535,6 +1537,7 @@
 /zh-CN/docs/Web/API/Element/Activate_event	/zh-CN/docs/Web/API/Element/DOMActivate_event
 /zh-CN/docs/Web/API/Element/accessKey	/zh-CN/docs/Web/API/HTMLElement/accessKey
 /zh-CN/docs/Web/API/Element/addEventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
+/zh-CN/docs/Web/API/Element/currentStyle	/zh-CN/docs/orphaned/Web/API/Element/currentStyle
 /zh-CN/docs/Web/API/Element/name	/zh-CN/docs/conflicting/Web/API
 /zh-CN/docs/Web/API/Element/onafterscriptexecute	/zh-CN/docs/Web/API/Document/onafterscriptexecute
 /zh-CN/docs/Web/API/Element/onbeforescriptexecute	/zh-CN/docs/Web/API/Document/onbeforescriptexecute
@@ -1894,6 +1897,7 @@
 /zh-CN/docs/Web/API/XMLDocument.load	/zh-CN/docs/Web/API/XMLDocument/load
 /zh-CN/docs/Web/API/XMLHttpRequest/FormData	/zh-CN/docs/Web/API/FormData
 /zh-CN/docs/Web/API/XMLHttpRequest/openRequest	/zh-CN/docs/orphaned/Web/API/XMLHttpRequest/openRequest
+/zh-CN/docs/Web/API/XMLHttpRequestResponseType	/zh-CN/docs/orphaned/Web/API/XMLHttpRequestResponseType
 /zh-CN/docs/Web/API/console.dir	/zh-CN/docs/Web/API/Console/dir
 /zh-CN/docs/Web/API/console.group	/zh-CN/docs/Web/API/Console/group
 /zh-CN/docs/Web/API/console.groupCollapsed	/zh-CN/docs/Web/API/Console/groupCollapsed

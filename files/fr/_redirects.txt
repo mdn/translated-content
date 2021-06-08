@@ -3593,7 +3593,9 @@
 /fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria	/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 /fr/docs/Web/API/API_IndexedDB/Using_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /fr/docs/Web/API/API_fichier_systeme	/fr/docs/Web/API/File_and_Directory_Entries_API
-/fr/docs/Web/API/AbstractWorker.onerror	/fr/docs/Web/API/AbstractWorker/onerror
+/fr/docs/Web/API/AbstractWorker	/fr/docs/orphaned/Web/API/AbstractWorker
+/fr/docs/Web/API/AbstractWorker.onerror	/fr/docs/orphaned/Web/API/AbstractWorker/onerror
+/fr/docs/Web/API/AbstractWorker/onerror	/fr/docs/orphaned/Web/API/AbstractWorker/onerror
 /fr/docs/Web/API/AnimationEffectTimingProperties	/fr/docs/Web/API/EffectTiming
 /fr/docs/Web/API/AnimationEffectTimingProperties/delay	/fr/docs/Web/API/EffectTiming/delay
 /fr/docs/Web/API/AnimationEvent.animationName	/fr/docs/Web/API/AnimationEvent/animationName
@@ -3757,6 +3759,7 @@
 /fr/docs/Web/API/Element.tagName	/fr/docs/Web/API/Element/tagName
 /fr/docs/Web/API/Element.textContent	/fr/docs/Web/API/Node/textContent
 /fr/docs/Web/API/Element/accessKey	/fr/docs/Web/API/HTMLElement/accessKey
+/fr/docs/Web/API/Element/currentStyle	/fr/docs/orphaned/Web/API/Element/currentStyle
 /fr/docs/Web/API/Element/innertHTML	/fr/docs/Web/API/Element/innerHTML
 /fr/docs/Web/API/Element/name	/fr/docs/conflicting/Web/API
 /fr/docs/Web/API/Element/ongotpointercapture	/fr/docs/Web/API/GlobalEventHandlers/ongotpointercapture

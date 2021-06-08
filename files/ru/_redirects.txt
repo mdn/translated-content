@@ -371,6 +371,7 @@
 /ru/docs/Tools/Производительность/Waterfall	/ru/docs/Tools/Performance/Waterfall
 /ru/docs/Using_Firefox_1.5_caching	/ru/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /ru/docs/Using_files_from_web_applications	/ru/docs/Web/API/File/Using_files_from_web_applications
+/ru/docs/Web/API/AbstractWorker	/ru/docs/orphaned/Web/API/AbstractWorker
 /ru/docs/Web/API/AudioContext.currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
 /ru/docs/Web/API/AudioContext/createPanner	/ru/docs/Web/API/BaseAudioContext/createPanner
 /ru/docs/Web/API/AudioContext/currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
@@ -398,6 +399,7 @@
 /ru/docs/Web/API/Element.getBoundingClientRect	/ru/docs/Web/API/Element/getBoundingClientRect
 /ru/docs/Web/API/Element.insertAdjacentHTML	/ru/docs/Web/API/Element/insertAdjacentHTML
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
+/ru/docs/Web/API/Element/currentStyle	/ru/docs/orphaned/Web/API/Element/currentStyle
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/EventTarget/attachEvent	/ru/docs/conflicting/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/EventTarget/detachEvent	/ru/docs/conflicting/Web/API/EventTarget/removeEventListener

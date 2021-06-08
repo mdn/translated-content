@@ -3678,6 +3678,8 @@
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/Stacking_context_example_3	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/Stacking_without_z-index	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/The_stacking_context	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+/ja/docs/Web/API/AbstractWorker	/ja/docs/orphaned/Web/API/AbstractWorker
+/ja/docs/Web/API/AbstractWorker/onerror	/ja/docs/orphaned/Web/API/AbstractWorker/onerror
 /ja/docs/Web/API/Apps	/ja/docs/Web/API/DOMApplicationsRegistry
 /ja/docs/Web/API/Apps.checkInstalled	/ja/docs/Web/API/DOMApplicationsRegistry/checkInstalled
 /ja/docs/Web/API/Apps.getInstalled	/ja/docs/Web/API/DOMApplicationsRegistry/getInstalled
@@ -3762,6 +3764,7 @@
 /ja/docs/Web/API/Element.querySelectorAll	/ja/docs/Web/API/Element/querySelectorAll
 /ja/docs/Web/API/Element/Activate_event	/ja/docs/Web/API/Element/DOMActivate_event
 /ja/docs/Web/API/Element/accessKey	/ja/docs/Web/API/HTMLElement/accessKey
+/ja/docs/Web/API/Element/currentStyle	/ja/docs/orphaned/Web/API/Element/currentStyle
 /ja/docs/Web/API/Element/name	/ja/docs/conflicting/Web/API
 /ja/docs/Web/API/Event/button	/ja/docs/conflicting/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/conflicting/Web/API/Document/createEvent

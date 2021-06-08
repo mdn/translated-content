@@ -11766,24 +11766,6 @@
       "loella16"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2020-10-15T21:26:01.488Z",
-    "contributors": [
-      "Arzak656",
-      "wakka27",
-      "tregagnon",
-      "dexterneo"
-    ]
-  },
-  "Web/API/AbstractWorker/onerror": {
-    "modified": "2020-10-15T21:32:33.262Z",
-    "contributors": [
-      "Arzak656",
-      "wakka27",
-      "jean-pierre.gay",
-      "fscholz"
-    ]
-  },
   "Web/API/Ambient_Light_Events": {
     "modified": "2019-03-23T23:28:29.463Z",
     "contributors": [
@@ -15216,12 +15198,6 @@
     "contributors": [
       "fscholz",
       "Kalwyn"
-    ]
-  },
-  "Web/API/Element/currentStyle": {
-    "modified": "2019-03-18T21:32:08.768Z",
-    "contributors": [
-      "z1057"
     ]
   },
   "Web/API/Element/dblclick_event": {
@@ -44992,6 +44968,24 @@
       "wbamberg"
     ]
   },
+  "orphaned/Web/API/AbstractWorker": {
+    "modified": "2020-10-15T21:26:01.488Z",
+    "contributors": [
+      "Arzak656",
+      "wakka27",
+      "tregagnon",
+      "dexterneo"
+    ]
+  },
+  "orphaned/Web/API/AbstractWorker/onerror": {
+    "modified": "2020-10-15T21:32:33.262Z",
+    "contributors": [
+      "Arzak656",
+      "wakka27",
+      "jean-pierre.gay",
+      "fscholz"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T21:49:32.341Z",
     "contributors": [
@@ -45026,6 +45020,12 @@
     "modified": "2019-03-18T21:39:20.100Z",
     "contributors": [
       "loella16"
+    ]
+  },
+  "orphaned/Web/API/Element/currentStyle": {
+    "modified": "2019-03-18T21:32:08.768Z",
+    "contributors": [
+      "z1057"
     ]
   },
   "orphaned/Web/API/Element/tabStop": {

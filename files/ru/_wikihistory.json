@@ -5607,12 +5607,6 @@
       "VerZsuT"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2020-10-15T22:21:08.647Z",
-    "contributors": [
-      "bennaver"
-    ]
-  },
   "Web/API/Ambient_Light_Events": {
     "modified": "2019-03-23T22:28:03.691Z",
     "contributors": [
@@ -7480,12 +7474,6 @@
     "modified": "2019-03-18T21:17:10.452Z",
     "contributors": [
       "Sparks"
-    ]
-  },
-  "Web/API/Element/currentStyle": {
-    "modified": "2020-10-15T22:29:46.179Z",
-    "contributors": [
-      "RenatTOP"
     ]
   },
   "Web/API/Element/error_event": {
@@ -25496,6 +25484,12 @@
       "Aleksej"
     ]
   },
+  "orphaned/Web/API/AbstractWorker": {
+    "modified": "2020-10-15T22:21:08.647Z",
+    "contributors": [
+      "bennaver"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2019-03-23T22:51:25.031Z",
     "contributors": [
@@ -25514,6 +25508,12 @@
     "modified": "2019-03-18T21:18:44.250Z",
     "contributors": [
       "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/API/Element/currentStyle": {
+    "modified": "2020-10-15T22:29:46.179Z",
+    "contributors": [
+      "RenatTOP"
     ]
   },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {
