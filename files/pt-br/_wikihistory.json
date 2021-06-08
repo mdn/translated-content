@@ -3584,19 +3584,6 @@
       "marcelorobson001"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2019-03-23T23:11:23.809Z",
-    "contributors": [
-      "teoli",
-      "mklauck"
-    ]
-  },
-  "Web/API/AbstractWorker/onerror": {
-    "modified": "2019-03-23T22:50:42.630Z",
-    "contributors": [
-      "daltonmenezes"
-    ]
-  },
   "Web/API/Ambient_Light_Events": {
     "modified": "2019-03-23T22:10:24.978Z",
     "contributors": [
@@ -17156,6 +17143,19 @@
     "contributors": [
       "wbamberg",
       "mak213k"
+    ]
+  },
+  "orphaned/Web/API/AbstractWorker": {
+    "modified": "2019-03-23T23:11:23.809Z",
+    "contributors": [
+      "teoli",
+      "mklauck"
+    ]
+  },
+  "orphaned/Web/API/AbstractWorker/onerror": {
+    "modified": "2019-03-23T22:50:42.630Z",
+    "contributors": [
+      "daltonmenezes"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {

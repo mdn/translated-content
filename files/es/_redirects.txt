@@ -1761,6 +1761,7 @@
 /es/docs/Web/API/API_de_almacenamiento_web	/es/docs/Web/API/Web_Storage_API
 /es/docs/Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web	/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
 /es/docs/Web/API/API_del_portapapeles	/es/docs/Web/API/Clipboard_API
+/es/docs/Web/API/AbstractWorker	/es/docs/orphaned/Web/API/AbstractWorker
 /es/docs/Web/API/Animation/Animación	/es/docs/Web/API/Animation/Animation
 /es/docs/Web/API/Animation/terminado	/es/docs/Web/API/Animation/finished
 /es/docs/Web/API/Animation/tiempoActual	/es/docs/Web/API/Animation/currentTime
@@ -1795,6 +1796,7 @@
 /es/docs/Web/API/DocumentOrShadowRoot/styleSheets	/es/docs/Web/API/Document/styleSheets
 /es/docs/Web/API/Document_Object_Model/Events	/es/docs/orphaned/Web/API/Document_Object_Model/Events
 /es/docs/Web/API/Element/accessKey	/es/docs/Web/API/HTMLElement/accessKey
+/es/docs/Web/API/Element/currentStyle	/es/docs/orphaned/Web/API/Element/currentStyle
 /es/docs/Web/API/Element/name	/es/docs/conflicting/Web/API
 /es/docs/Web/API/Element/ongotpointercapture	/es/docs/Web/API/GlobalEventHandlers/ongotpointercapture
 /es/docs/Web/API/Element/onlostpointercapture	/es/docs/Web/API/GlobalEventHandlers/onlostpointercapture

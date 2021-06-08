@@ -7499,21 +7499,6 @@
       "syhxczy"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2020-11-08T08:49:33.020Z",
-    "contributors": [
-      "plusmultiply0",
-      "Alphmega",
-      "Darrel.Hsu"
-    ]
-  },
-  "Web/API/AbstractWorker/onerror": {
-    "modified": "2020-10-15T21:49:22.728Z",
-    "contributors": [
-      "Jack.Works",
-      "liuzeyafzy"
-    ]
-  },
   "Web/API/Accelerometer": {
     "modified": "2020-10-15T22:21:10.384Z",
     "contributors": [
@@ -12368,12 +12353,6 @@
     "contributors": [
       "SphinxKnight",
       "CrazyMushroom"
-    ]
-  },
-  "Web/API/Element/currentStyle": {
-    "modified": "2019-03-23T22:21:18.875Z",
-    "contributors": [
-      "wuyou"
     ]
   },
   "Web/API/Element/cut_event": {
@@ -25221,13 +25200,6 @@
     "contributors": [
       "liushuyu",
       "holynewbie"
-    ]
-  },
-  "Web/API/XMLHttpRequestResponseType": {
-    "modified": "2020-10-15T22:12:33.990Z",
-    "contributors": [
-      "RainSlide",
-      "scottxu"
     ]
   },
   "Web/API/XMLSerializer": {
@@ -50146,6 +50118,21 @@
       "c_king"
     ]
   },
+  "orphaned/Web/API/AbstractWorker": {
+    "modified": "2020-11-08T08:49:33.020Z",
+    "contributors": [
+      "plusmultiply0",
+      "Alphmega",
+      "Darrel.Hsu"
+    ]
+  },
+  "orphaned/Web/API/AbstractWorker/onerror": {
+    "modified": "2020-10-15T21:49:22.728Z",
+    "contributors": [
+      "Jack.Works",
+      "liuzeyafzy"
+    ]
+  },
   "orphaned/Web/API/AnalyserNode/fft": {
     "modified": "2019-03-18T20:44:28.140Z",
     "contributors": [
@@ -50225,6 +50212,12 @@
       "Noly1990",
       "dongyu063",
       "gavinkwoe"
+    ]
+  },
+  "orphaned/Web/API/Element/currentStyle": {
+    "modified": "2019-03-23T22:21:18.875Z",
+    "contributors": [
+      "wuyou"
     ]
   },
   "orphaned/Web/API/Element/runtimeStyle": {
@@ -50425,6 +50418,13 @@
     "modified": "2019-03-18T21:28:11.436Z",
     "contributors": [
       "Arktische"
+    ]
+  },
+  "orphaned/Web/API/XMLHttpRequestResponseType": {
+    "modified": "2020-10-15T22:12:33.990Z",
+    "contributors": [
+      "RainSlide",
+      "scottxu"
     ]
   },
   "orphaned/Web/API/notification/sound": {
