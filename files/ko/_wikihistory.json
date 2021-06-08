@@ -3389,13 +3389,6 @@
       "chzhclq17"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2020-10-15T21:25:37.012Z",
-    "contributors": [
-      "alattalatta",
-      "Cho.Eun"
-    ]
-  },
   "Web/API/Ambient_Light_Events": {
     "modified": "2020-10-15T21:24:18.175Z",
     "contributors": [
@@ -4614,12 +4607,6 @@
     "modified": "2020-10-15T22:27:29.394Z",
     "contributors": [
       "composite"
-    ]
-  },
-  "Web/API/Element/currentStyle": {
-    "modified": "2019-03-23T22:28:24.891Z",
-    "contributors": [
-      "nugurejeil"
     ]
   },
   "Web/API/Element/getAttribute": {
@@ -18354,6 +18341,13 @@
       "cap3618"
     ]
   },
+  "orphaned/Web/API/AbstractWorker": {
+    "modified": "2020-10-15T21:25:37.012Z",
+    "contributors": [
+      "alattalatta",
+      "Cho.Eun"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T22:10:05.225Z",
     "contributors": [
@@ -18379,6 +18373,12 @@
     "modified": "2020-12-01T12:09:06.517Z",
     "contributors": [
       "dink95"
+    ]
+  },
+  "orphaned/Web/API/Element/currentStyle": {
+    "modified": "2019-03-23T22:28:24.891Z",
+    "contributors": [
+      "nugurejeil"
     ]
   },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {

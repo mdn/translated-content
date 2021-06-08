@@ -4920,14 +4920,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2019-12-20T01:50:52.328Z",
-    "contributors": [
-      "Kaliu",
-      "Gustavo_Armoa",
-      "AshWilliams"
-    ]
-  },
   "Web/API/Ambient_Light_Events": {
     "modified": "2019-03-23T22:33:31.225Z",
     "contributors": [
@@ -6396,12 +6388,6 @@
     "modified": "2020-11-20T23:32:12.573Z",
     "contributors": [
       "mrkadium"
-    ]
-  },
-  "Web/API/Element/currentStyle": {
-    "modified": "2019-03-23T22:26:01.738Z",
-    "contributors": [
-      "SoftwareRVG"
     ]
   },
   "Web/API/Element/getAttribute": {
@@ -23398,6 +23384,14 @@
       "HenryGR"
     ]
   },
+  "orphaned/Web/API/AbstractWorker": {
+    "modified": "2019-12-20T01:50:52.328Z",
+    "contributors": [
+      "Kaliu",
+      "Gustavo_Armoa",
+      "AshWilliams"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T21:50:43.901Z",
     "contributors": [
@@ -23425,6 +23419,12 @@
     "modified": "2019-03-18T21:45:13.362Z",
     "contributors": [
       "recortes"
+    ]
+  },
+  "orphaned/Web/API/Element/currentStyle": {
+    "modified": "2019-03-23T22:26:01.738Z",
+    "contributors": [
+      "SoftwareRVG"
     ]
   },
   "orphaned/Web/API/Element/runtimeStyle": {
