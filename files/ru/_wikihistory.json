@@ -5607,12 +5607,6 @@
       "VerZsuT"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2020-10-15T22:21:08.647Z",
-    "contributors": [
-      "bennaver"
-    ]
-  },
   "Web/API/Ambient_Light_Events": {
     "modified": "2019-03-23T22:28:03.691Z",
     "contributors": [
@@ -7480,12 +7474,6 @@
     "modified": "2019-03-18T21:17:10.452Z",
     "contributors": [
       "Sparks"
-    ]
-  },
-  "Web/API/Element/currentStyle": {
-    "modified": "2020-10-15T22:29:46.179Z",
-    "contributors": [
-      "RenatTOP"
     ]
   },
   "Web/API/Element/error_event": {
@@ -10334,12 +10322,6 @@
       "mechtool"
     ]
   },
-  "Web/API/RTCPeerConnection/getDefaultIceServers": {
-    "modified": "2020-10-15T22:33:11.540Z",
-    "contributors": [
-      "mechtool"
-    ]
-  },
   "Web/API/RTCPeerConnection/icecandidate_event": {
     "modified": "2020-11-25T18:23:55.148Z",
     "contributors": [
@@ -10560,12 +10542,6 @@
     "modified": "2020-10-15T22:12:53.829Z",
     "contributors": [
       "fdor"
-    ]
-  },
-  "Web/API/ServiceWorkerState": {
-    "modified": "2019-12-29T10:30:40.493Z",
-    "contributors": [
-      "sh7dm"
     ]
   },
   "Web/API/Service_Worker_API": {
@@ -15390,13 +15366,6 @@
       "Wingear",
       "evgor80",
       "lerniri"
-    ]
-  },
-  "Web/Guide/Localizations_and_character_encodings": {
-    "modified": "2020-12-14T08:44:06.511Z",
-    "contributors": [
-      "azahw935",
-      "bogpok"
     ]
   },
   "Web/Guide/Parsing_and_serializing_XML": {
@@ -24507,18 +24476,6 @@
       "sviter"
     ]
   },
-  "conflicting/Learn/CSS/Building_blocks/Selectors_918fb6c37a4d06789bc062c48d591992": {
-    "modified": "2020-02-28T21:44:59.981Z",
-    "contributors": [
-      "nkaskov",
-      "SergeyNikolaev70",
-      "1cprog",
-      "Tankerxyz",
-      "BigBond",
-      "mztrp",
-      "tnt4brain"
-    ]
-  },
   "conflicting/Learn/CSS/Building_blocks/Styling_tables": {
     "modified": "2019-03-23T23:09:44.945Z",
     "contributors": [
@@ -25515,6 +25472,12 @@
       "Aleksej"
     ]
   },
+  "orphaned/Web/API/AbstractWorker": {
+    "modified": "2020-10-15T22:21:08.647Z",
+    "contributors": [
+      "bennaver"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2019-03-23T22:51:25.031Z",
     "contributors": [
@@ -25533,6 +25496,12 @@
     "modified": "2019-03-18T21:18:44.250Z",
     "contributors": [
       "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/API/Element/currentStyle": {
+    "modified": "2020-10-15T22:29:46.179Z",
+    "contributors": [
+      "RenatTOP"
     ]
   },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {
@@ -25595,6 +25564,18 @@
     "contributors": [
       "RenJeka",
       "pronskiy"
+    ]
+  },
+  "orphaned/Web/API/RTCPeerConnection/getDefaultIceServers": {
+    "modified": "2020-10-15T22:33:11.540Z",
+    "contributors": [
+      "mechtool"
+    ]
+  },
+  "orphaned/Web/API/ServiceWorkerState": {
+    "modified": "2019-12-29T10:30:40.493Z",
+    "contributors": [
+      "sh7dm"
     ]
   },
   "orphaned/Web/API/Web_Crypto_API/Checking_authenticity_with_password": {
@@ -25690,6 +25671,13 @@
     "contributors": [
       "Jmunb",
       "Grakov"
+    ]
+  },
+  "orphaned/Web/Guide/Localizations_and_character_encodings": {
+    "modified": "2020-12-14T08:44:06.511Z",
+    "contributors": [
+      "azahw935",
+      "bogpok"
     ]
   },
   "orphaned/Web/HTML/Element/element": {

@@ -7499,21 +7499,6 @@
       "syhxczy"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2020-11-08T08:49:33.020Z",
-    "contributors": [
-      "plusmultiply0",
-      "Alphmega",
-      "Darrel.Hsu"
-    ]
-  },
-  "Web/API/AbstractWorker/onerror": {
-    "modified": "2020-10-15T21:49:22.728Z",
-    "contributors": [
-      "Jack.Works",
-      "liuzeyafzy"
-    ]
-  },
   "Web/API/Accelerometer": {
     "modified": "2020-10-15T22:21:10.384Z",
     "contributors": [
@@ -12370,12 +12355,6 @@
       "CrazyMushroom"
     ]
   },
-  "Web/API/Element/currentStyle": {
-    "modified": "2019-03-23T22:21:18.875Z",
-    "contributors": [
-      "wuyou"
-    ]
-  },
   "Web/API/Element/cut_event": {
     "modified": "2019-04-30T14:14:11.414Z",
     "contributors": [
@@ -12828,13 +12807,6 @@
     "modified": "2020-10-15T22:33:58.432Z",
     "contributors": [
       "JoshOY"
-    ]
-  },
-  "Web/API/Element/runtimeStyle": {
-    "modified": "2019-03-23T22:06:58.487Z",
-    "contributors": [
-      "shockw4ver",
-      "jiangyuzhen"
     ]
   },
   "Web/API/Element/scroll": {
@@ -15119,12 +15091,6 @@
       "dextra",
       "Mgjbot",
       "Dewang"
-    ]
-  },
-  "Web/API/HTMLElement/forceSpellCheck": {
-    "modified": "2019-03-18T21:38:32.415Z",
-    "contributors": [
-      "varcat"
     ]
   },
   "Web/API/HTMLElement/hidden": {
@@ -19491,12 +19457,6 @@
     "modified": "2020-10-15T22:34:32.333Z",
     "contributors": [
       "SDUTWSL"
-    ]
-  },
-  "Web/API/RTCPeerConnection/getDefaultIceServers": {
-    "modified": "2020-10-15T22:29:03.476Z",
-    "contributors": [
-      "lauhua"
     ]
   },
   "Web/API/RTCPeerConnection/getReceivers": {
@@ -25240,13 +25200,6 @@
     "contributors": [
       "liushuyu",
       "holynewbie"
-    ]
-  },
-  "Web/API/XMLHttpRequestResponseType": {
-    "modified": "2020-10-15T22:12:33.990Z",
-    "contributors": [
-      "RainSlide",
-      "scottxu"
     ]
   },
   "Web/API/XMLSerializer": {
@@ -31723,14 +31676,6 @@
     "contributors": [
       "ziyunfei",
       "fantasticfears"
-    ]
-  },
-  "Web/Guide/Localizations_and_character_encodings": {
-    "modified": "2020-05-07T10:52:56.537Z",
-    "contributors": [
-      "Ende93",
-      "91JOJO",
-      "xdsnet"
     ]
   },
   "Web/Guide/Mobile": {
@@ -50173,6 +50118,21 @@
       "c_king"
     ]
   },
+  "orphaned/Web/API/AbstractWorker": {
+    "modified": "2020-11-08T08:49:33.020Z",
+    "contributors": [
+      "plusmultiply0",
+      "Alphmega",
+      "Darrel.Hsu"
+    ]
+  },
+  "orphaned/Web/API/AbstractWorker/onerror": {
+    "modified": "2020-10-15T21:49:22.728Z",
+    "contributors": [
+      "Jack.Works",
+      "liuzeyafzy"
+    ]
+  },
   "orphaned/Web/API/AnalyserNode/fft": {
     "modified": "2019-03-18T20:44:28.140Z",
     "contributors": [
@@ -50254,6 +50214,19 @@
       "gavinkwoe"
     ]
   },
+  "orphaned/Web/API/Element/currentStyle": {
+    "modified": "2019-03-23T22:21:18.875Z",
+    "contributors": [
+      "wuyou"
+    ]
+  },
+  "orphaned/Web/API/Element/runtimeStyle": {
+    "modified": "2019-03-23T22:06:58.487Z",
+    "contributors": [
+      "shockw4ver",
+      "jiangyuzhen"
+    ]
+  },
   "orphaned/Web/API/Entity": {
     "modified": "2020-06-03T01:07:43.853Z",
     "contributors": [
@@ -50265,6 +50238,12 @@
     "modified": "2019-03-23T22:06:02.004Z",
     "contributors": [
       "wuCrio"
+    ]
+  },
+  "orphaned/Web/API/HTMLElement/forceSpellCheck": {
+    "modified": "2019-03-18T21:38:32.415Z",
+    "contributors": [
+      "varcat"
     ]
   },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {
@@ -50385,6 +50364,12 @@
       "JoshOY"
     ]
   },
+  "orphaned/Web/API/RTCPeerConnection/getDefaultIceServers": {
+    "modified": "2020-10-15T22:29:03.476Z",
+    "contributors": [
+      "lauhua"
+    ]
+  },
   "orphaned/Web/API/TextRange/text": {
     "modified": "2020-02-26T01:25:35.461Z",
     "contributors": [
@@ -50433,6 +50418,13 @@
     "modified": "2019-03-18T21:28:11.436Z",
     "contributors": [
       "Arktische"
+    ]
+  },
+  "orphaned/Web/API/XMLHttpRequestResponseType": {
+    "modified": "2020-10-15T22:12:33.990Z",
+    "contributors": [
+      "RainSlide",
+      "scottxu"
     ]
   },
   "orphaned/Web/API/notification/sound": {
@@ -50580,6 +50572,14 @@
       "ibeen",
       "gaoyanqi",
       "leegorous"
+    ]
+  },
+  "orphaned/Web/Guide/Localizations_and_character_encodings": {
+    "modified": "2020-05-07T10:52:56.537Z",
+    "contributors": [
+      "Ende93",
+      "91JOJO",
+      "xdsnet"
     ]
   },
   "orphaned/Web/HTML/Element/command": {

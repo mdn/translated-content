@@ -3389,13 +3389,6 @@
       "chzhclq17"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2020-10-15T21:25:37.012Z",
-    "contributors": [
-      "alattalatta",
-      "Cho.Eun"
-    ]
-  },
   "Web/API/Ambient_Light_Events": {
     "modified": "2020-10-15T21:24:18.175Z",
     "contributors": [
@@ -4614,12 +4607,6 @@
     "modified": "2020-10-15T22:27:29.394Z",
     "contributors": [
       "composite"
-    ]
-  },
-  "Web/API/Element/currentStyle": {
-    "modified": "2019-03-23T22:28:24.891Z",
-    "contributors": [
-      "nugurejeil"
     ]
   },
   "Web/API/Element/getAttribute": {
@@ -6158,12 +6145,6 @@
   },
   "Web/API/OffscreenCanvas/height": {
     "modified": "2020-10-15T22:14:43.501Z",
-    "contributors": [
-      "moonformeli"
-    ]
-  },
-  "Web/API/OffscreenCanvas/toBlob": {
-    "modified": "2020-10-15T22:14:42.795Z",
     "contributors": [
       "moonformeli"
     ]
@@ -18360,6 +18341,13 @@
       "cap3618"
     ]
   },
+  "orphaned/Web/API/AbstractWorker": {
+    "modified": "2020-10-15T21:25:37.012Z",
+    "contributors": [
+      "alattalatta",
+      "Cho.Eun"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T22:10:05.225Z",
     "contributors": [
@@ -18387,10 +18375,22 @@
       "dink95"
     ]
   },
+  "orphaned/Web/API/Element/currentStyle": {
+    "modified": "2019-03-23T22:28:24.891Z",
+    "contributors": [
+      "nugurejeil"
+    ]
+  },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {
     "modified": "2020-10-15T22:15:23.043Z",
     "contributors": [
       "connorshea"
+    ]
+  },
+  "orphaned/Web/API/OffscreenCanvas/toBlob": {
+    "modified": "2020-10-15T22:14:42.795Z",
+    "contributors": [
+      "moonformeli"
     ]
   },
   "orphaned/Web/API/ParentNode": {

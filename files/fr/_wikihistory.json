@@ -1313,12 +1313,6 @@
       "loella16"
     ]
   },
-  "Glossary/Gaia": {
-    "modified": "2019-03-23T22:42:05.161Z",
-    "contributors": [
-      "xdelatour"
-    ]
-  },
   "Glossary/Garbage_collection": {
     "modified": "2019-03-23T22:37:46.005Z",
     "contributors": [
@@ -1378,13 +1372,6 @@
     "modified": "2019-08-25T18:38:32.909Z",
     "contributors": [
       "Pols12"
-    ]
-  },
-  "Glossary/Gonk": {
-    "modified": "2019-03-23T22:41:40.903Z",
-    "contributors": [
-      "loella16",
-      "xdelatour"
     ]
   },
   "Glossary/Google_Chrome": {
@@ -11779,24 +11766,6 @@
       "loella16"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2020-10-15T21:26:01.488Z",
-    "contributors": [
-      "Arzak656",
-      "wakka27",
-      "tregagnon",
-      "dexterneo"
-    ]
-  },
-  "Web/API/AbstractWorker/onerror": {
-    "modified": "2020-10-15T21:32:33.262Z",
-    "contributors": [
-      "Arzak656",
-      "wakka27",
-      "jean-pierre.gay",
-      "fscholz"
-    ]
-  },
   "Web/API/Ambient_Light_Events": {
     "modified": "2019-03-23T23:28:29.463Z",
     "contributors": [
@@ -15231,12 +15200,6 @@
       "Kalwyn"
     ]
   },
-  "Web/API/Element/currentStyle": {
-    "modified": "2019-03-18T21:32:08.768Z",
-    "contributors": [
-      "z1057"
-    ]
-  },
   "Web/API/Element/dblclick_event": {
     "modified": "2020-10-15T21:49:52.144Z",
     "contributors": [
@@ -15800,12 +15763,6 @@
   },
   "Web/API/Element/setPointerCapture": {
     "modified": "2019-03-18T21:38:49.004Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "Web/API/Element/tabStop": {
-    "modified": "2019-03-18T21:38:50.214Z",
     "contributors": [
       "loella16"
     ]
@@ -19833,12 +19790,6 @@
     "modified": "2020-10-15T22:34:57.967Z",
     "contributors": [
       "tomderudder"
-    ]
-  },
-  "Web/API/ServiceWorkerState": {
-    "modified": "2019-03-18T21:18:01.317Z",
-    "contributors": [
-      "AurelieBayre"
     ]
   },
   "Web/API/Service_Worker_API": {
@@ -26254,12 +26205,6 @@
     "contributors": [
       "SphinxKnight",
       "velvel53"
-    ]
-  },
-  "Web/CSS/Tools/Cubic_Bezier_Generator": {
-    "modified": "2019-04-06T13:46:55.571Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "Web/CSS/Tools/Linear-gradient_Generator": {
@@ -44981,6 +44926,19 @@
       "Fredchat"
     ]
   },
+  "orphaned/Glossary/Gaia": {
+    "modified": "2019-03-23T22:42:05.161Z",
+    "contributors": [
+      "xdelatour"
+    ]
+  },
+  "orphaned/Glossary/Gonk": {
+    "modified": "2019-03-23T22:41:40.903Z",
+    "contributors": [
+      "loella16",
+      "xdelatour"
+    ]
+  },
   "orphaned/Glossary/Modern_web_apps": {
     "modified": "2019-01-17T02:12:55.112Z",
     "contributors": [
@@ -45008,6 +44966,24 @@
     "contributors": [
       "maximelore",
       "wbamberg"
+    ]
+  },
+  "orphaned/Web/API/AbstractWorker": {
+    "modified": "2020-10-15T21:26:01.488Z",
+    "contributors": [
+      "Arzak656",
+      "wakka27",
+      "tregagnon",
+      "dexterneo"
+    ]
+  },
+  "orphaned/Web/API/AbstractWorker/onerror": {
+    "modified": "2020-10-15T21:32:33.262Z",
+    "contributors": [
+      "Arzak656",
+      "wakka27",
+      "jean-pierre.gay",
+      "fscholz"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {
@@ -45042,6 +45018,18 @@
   },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2019-03-18T21:39:20.100Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "orphaned/Web/API/Element/currentStyle": {
+    "modified": "2019-03-18T21:32:08.768Z",
+    "contributors": [
+      "z1057"
+    ]
+  },
+  "orphaned/Web/API/Element/tabStop": {
+    "modified": "2019-03-18T21:38:50.214Z",
     "contributors": [
       "loella16"
     ]
@@ -45129,6 +45117,12 @@
       "B_M"
     ]
   },
+  "orphaned/Web/API/ServiceWorkerState": {
+    "modified": "2019-03-18T21:18:01.317Z",
+    "contributors": [
+      "AurelieBayre"
+    ]
+  },
   "orphaned/Web/API/URLUtilsReadOnly": {
     "modified": "2020-10-15T22:17:11.893Z",
     "contributors": [
@@ -45173,6 +45167,12 @@
       "SphinxKnight",
       "teoli",
       "FredB"
+    ]
+  },
+  "orphaned/Web/CSS/Tools/Cubic_Bezier_Generator": {
+    "modified": "2019-04-06T13:46:55.571Z",
+    "contributors": [
+      "SphinxKnight"
     ]
   },
   "orphaned/Web/Guide/Events": {

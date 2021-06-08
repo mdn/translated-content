@@ -1,31 +1,776 @@
 ---
-title: Mozilla SVG Status
+title: Firefox の SVG 1.1 対応状況
 slug: Web/SVG/SVG_1.1_Support_in_Firefox
 tags:
+  - Firefox
   - SVG
 original_slug: Mozilla_SVG_Status
+translation_of: Web/SVG/SVG_1.1_Support_in_Firefox
 ---
+<p>SVG の構文と使い方の基本的な例は、 <a href="https://www.w3.org/Graphics/SVG/Test/20061213/">W3C SVG test suite</a> にあります。</p>
+
 <div class="note">
-<p>この文書は現在の開発バージョン ("trunk") の Mozilla <a href="ja/SVG">SVG</a> の現状を取り扱っています。もし Firefox 2 の SVG 機能に関する情報をお探しの場合、<a href="ja/SVG_in_Firefox">別のページ</a> に情報があります。
-</p>
+ <p><strong>注:</strong> Gecko 2.0 より、Gecko は SMIL を用いた SVG アニメーションに対応しています。簡単な概要については<a href="/ja/docs/Web/SVG/SVG_animation_with_SMIL">SMIL を用いた SVG アニメーション</a>を参照してください。 SVG の完全なドキュメントは近日公開予定です。いつの日か。</p>
 </div>
-<h3 id=".E8.A6.81.E7.B4.A0.E3.81.AE.E5.AE.9F.E8.A3.85.E7.8A.B6.E6.B3.81" name=".E8.A6.81.E7.B4.A0.E3.81.AE.E5.AE.9F.E8.A3.85.E7.8A.B6.E6.B3.81"> 要素の実装状況 </h3>
-<p><a class="external" href="http://www.w3.org/TR/SVG11/">SVG 1.1</a> の要素とネイティブサポートの状況の概略です。章は現在の状態 (<span style="color: black; background-color: lightgreen;">サポート済み</span>、<span style="color: black; background-color: gold;">サポート中</span>、<span style="color: black; background-color: salmon;">現在未サポート</span>) によってマークされています。未実装部分のほとんどは 3 つの大きなモジュール (フォントとフィルタ、アニメーション) に該当します。
-</p>
-<table style="margin: 5px;"> <tbody><tr> <th>要素</th> <th>備考</th> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/struct.html#basic-structure-mod">Structure モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/struct.html#basic-structure-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;">
-<td><a class="external" href="http://www.w3.org/TR/SVG11/struct.html#SVGElement">svg</a> {{ 訳注() }}</td> <td> <ul> <li>実装済み。</li> <li>DOM 属性 <code>currentScale</code> と <code>currentTranslate</code> は実装されていますが、パンとズームのユーザーインターフェースはありません。</li> <li>SVGSVGElement <ul> <li>未実装の属性: contentScriptType, contentStyleType, viewport, useCurrentView, currentView</li> <li>未実装のバインディング: pauseAnimations, unpauseAnimations, animationsPaused, getCurrentTime, setCurrentTime, getIntersectionList, getEnclosureList, checkIntersection, checkEnclosure, deselectAll, getElementById</li> </ul> </li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/struct.html#GElement">g</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/struct.html#GElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/struct.html#DefsElement">defs</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/struct.html#DefsElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/struct.html#DescElement">desc</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/struct.html#DescElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> <li>DOM に保存されるのみでユーザインタフェースなし。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/struct.html#TitleElement">title</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/struct.html#TitleElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/metadata.html#MetadataElement">metadata</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/metadata.html#MetadataElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> <li>DOM に保存されるのみでユーザインタフェースなし。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/struct.html#SymbolElement">symbol</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/struct.html#SymbolElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/struct.html#UseElement">use</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/struct.html#UseElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> <li>ドキュメント内の参照のみ動作 ({{ Bug(269482) }}).</li> <li>&lt;svg:use&gt; カスケーディング規則に完全に従っていない ({{ Bug(265894) }}).</li> <li>SVGElementInstance ツリーにイベントを伝えない ({{ Bug(265895) }}).</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/struct.html#conditional-mod">Conditional Processing モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/struct.html#conditional-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/struct.html#SwitchElement">switch</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/struct.html#SwitchElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/struct.html#image-mod">Image モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/struct.html#image-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/struct.html#ImageElement">image</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/struct.html#ImageElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> <li>ラスタ画像のみ動作 ({{ Bug(272288) }})。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/styling.html#style-mod">Style モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/styling.html#style-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/styling.html#StyleElement">style</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/styling.html#StyleElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/shapes.html#shape-mod">Shape モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/shapes.html#shape-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/paths.html#PathElement">path</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/paths.html#PathElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> <li>SVGPathElement <ul> <li>未実装の属性: normalizedPathSegList, animatedPathSegList, animatedNormalizedPathSegList</li> </ul> </li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/shapes.html#RectElement">rect</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/shapes.html#RectElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/shapes.html#CircleElement">circle</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/shapes.html#CircleElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/shapes.html#LineElement">line</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/shapes.html#LineElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/shapes.html#EllipseElement">ellipse</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/shapes.html#EllipseElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/shapes.html#PolylineElement">polyline</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/shapes.html#PolylineElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/shapes.html#PolygonElement">polygon</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/shapes.html#PolygonElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/text.html#text-mod">Text モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/text.html#text-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/text.html#TextElement">text</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/text.html#TextElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> <li>フォントフェイスの選択はフェイスの候補リストの最初の項目しか試しません。</li> <li>SVGTextElement <ul> <li>未実装の属性: rotate, textLength, lengthAdjust</li> <li>未実装のバインディング: selectSubString</li> </ul> </li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/text.html#TSpanElement">tspan</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/text.html#TSpanElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> <li>SVGTSpanElement <ul> <li>未実装の属性: rotate, textLength, lengthAdjust</li> <li>未実装のバインディング: selectSubString</li> </ul> </li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/text.html#TRefElement">tref</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/text.html#TRefElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/text.html#TextPathElement">textPath</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/text.html#TextPathElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> <li>未実装のバインディング: selectSubString</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/text.html#AltGlyphElement">altGlyph</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/text.html#AltGlyphElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/text.html#AltGlyphDefElement">altGlyphDef</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/text.html#AltGlyphDefElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/text.html#AltGlyphItemElement">altGlyphItem</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/text.html#AltGlyphItemElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/text.html#GlyphRefElement">glyphRef</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/text.html#GlyphRefElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/painting.html#marker-mod">Marker モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/painting.html#marker-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/painting.html#MarkerElement">marker</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/painting.html#MarkerElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/color.html#color-profile-mod">Color Profile モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/color.html#color-profile-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/color.html#ColorProfileElement">color-profile</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/color.html#ColorProfileElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/pservers.html#gradient-mod">Gradient モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/pservers.html#gradient-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/pservers.html#LinearGradientElement">linearGradient</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/pservers.html#LinearGradientElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/pservers.html#RadialGradientElement">radialGradient</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/pservers.html#RadialGradientElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/pservers.html#StopElement">stop</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/pservers.html#StopElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/pservers.html#pattern-mod">Pattern モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/pservers.html#pattern-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/pservers.html#PatternElement">pattern</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/pservers.html#PatternElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/masking.html#clip-mod">Clip モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/masking.html#clip-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/masking.html#ClipPathElement">clipPath</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/masking.html#ClipPathElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/masking.html#mask-mod">Mask モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/masking.html#mask-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/masking.html#MaskElement">mask</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/masking.html#MaskElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#filter-mod">Filter モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#filter-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#FilterElement">filter</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#FilterElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> <li>擬似画像入力は <code>SourceGraphic</code> and <code>SourceAlpha</code> のみ実装。</li> <li>未実装の擬似画像入力かフィルタ要素を使うとそのフィルタは無視され、参照された画像はフィルタ無しで表示されます。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feBlendElement">feBlend</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feBlendElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feColorMatrixElement">feColorMatrix</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feColorMatrixElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feComponentTransferElement">feComponentTransfer</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feComponentTransferElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feCompositeElement">feComposite</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feCompositeElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElement">feConvolveMatrix</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feConvolveMatrixElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feDiffuseLightingElement">feDiffuseLighting</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feDiffuseLightingElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: gold;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feDisplacementMapElement">feDisplacementMap</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feDisplacementMapElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>{{ Bug(389746) }}</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feFloodElement">feFlood</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feFloodElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feGaussianBlurElement">feGaussianBlur</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feGaussianBlurElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: gold;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feImageElement">feImage</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feImageElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>{{ Bug(390379) }}</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feMergeElement">feMerge</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feMergeElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feMergeNodeElement">feMergeNode</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feMergeNodeElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feMorphologyElement">feMorphology</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feMorphologyElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feOffsetElement">feOffset</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feOffsetElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feSpecularLightingElement">feSpecularLighting</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feSpecularLightingElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feTileElement">feTile</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feTileElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feTurbulenceElement">feTurbulence</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feTurbulenceElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feDistantLightElement">feDistantLight</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feDistantLightElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#fePointLightElement">fePointLight</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#fePointLightElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feSpotLightElement">feSpotLight</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feSpotLightElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feFuncRElement">feFuncR</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feFuncRElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feFuncGElement">feFuncG</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feFuncGElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feFuncBElement">feFuncB</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feFuncBElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/filters.html#feFuncAElement">feFuncA</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/filters.html#feFuncAElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/interact.html#cursor-mod">Cursor モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/interact.html#cursor-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/interact.html#CursorElement">cursor</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/interact.html#CursorElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/linking.html#hyperlinking-mod">Hyperlinking モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/linking.html#hyperlinking-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/linking.html#AElement">a</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/linking.html#AElement\"'>日本語訳</a>") }}</td> <td> <ul> <li><code>xlink:href</code> と <code>xlink:show</code> 属性のみ実装済み。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/linking.html#view-mod">View モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/linking.html#view-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/linking.html#ViewElement">view</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/linking.html#ViewElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/script.html#scripting-mod">Scripting モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/script.html#scripting-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/script.html#ScriptElement">script</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/script.html#ScriptElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/animate.html#animation-mod">Animation モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/animate.html#animation-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: gold;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/animate.html#AnimateElement">animate</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/animate.html#AnimateElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>{{ Bug(216462) }}</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/animate.html#SetElement">set</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/animate.html#SetElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/animate.html#AnimateMotionElement">animateMotion</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/animate.html#AnimateMotionElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: gold;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/animate.html#AnimateTransformElement">animateTransform</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/animate.html#AnimateTransformElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>{{ Bug(216462) }}</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/animate.html#AnimateColorElement">animateColor</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/animate.html#AnimateColorElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/animate.html#mpathElement">mpath</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/animate.html#mpathElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/fonts.html#font-mod">Font モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/fonts.html#font-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: gold;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/fonts.html#FontFaceElement">font</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/fonts.html#FontElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>{{ Bug(119490) }}</li> </ul> </td> </tr> <tr style="color: black; background-color: gold;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/fonts.html#FontFaceNameElement">font-face</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/fonts.html#FontFaceElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>{{ Bug(119490) }}</li> </ul> </td> </tr> <tr style="color: black; background-color: gold;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/fonts.html#GlyphElement">glyph</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/fonts.html#GlyphElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>{{ Bug(119490) }}</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/fonts.html#MissingGlyphElement">missing-glyph</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/fonts.html#MissingGlyphElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/fonts.html#HKernElement">hkern</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/fonts.html#HKernElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/fonts.html#VKernElement">vkern</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/fonts.html#VKernElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/fonts.html#FontFaceSrcElement">font-face-src</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/fonts.html#FontFaceSrcElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/fonts.html#FontFaceNameElement">font-face-uri</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/fonts.html#FontFaceNameElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/fonts.html#FontFaceNameElement">font-face-format</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/fonts.html#FontFaceNameElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/fonts.html#FontFaceNameElement">font-face-name</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/fonts.html#FontFaceNameElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr style="color: black; background-color: salmon;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/fonts.html#DefinitionSrcElement">definition-src</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/fonts.html#DefinitionSrcElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>未実装。</li> </ul> </td> </tr> <tr> <th colspan="2"><a class="external" href="http://www.w3.org/TR/SVG11/extend.html#extensibility-mod">Extensibility モジュール</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/extend.html#extensibility-mod\"'>日本語訳</a>") }}</th> </tr> <tr style="color: black; background-color: lightgreen;"> <td><a class="external" href="http://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement">foreignObject</a> {{ 訳注("<a class='\"external\"' href='\"http://www.hcn.zaq.ne.jp/___/REC-SVG11-20030114/extend.html#ForeignObjectElement\"'>日本語訳</a>") }}</td> <td> <ul> <li>実装済み。</li> </ul> </td> </tr>
-</tbody></table>
-<h3 id=".E5.AE.9F.E8.A3.85.E3.81.AE.E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E6.B3.A8.E6.84.8F" name=".E5.AE.9F.E8.A3.85.E3.81.AE.E3.81.9D.E3.81.AE.E4.BB.96.E3.81.AE.E6.B3.A8.E6.84.8F"> 実装のその他の注意 </h3>
-<p><code>onload</code> イベントは <code>externalResourcesRequired</code> 属性を考慮しません ({{ Bug(277955) }})。
-</p>
-<div class="originaldocinfo">
-<h2 id=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1" name=".E5.8E.9F.E6.96.87.E6.9B.B8.E3.81.AE.E6.83.85.E5.A0.B1"> 原文書の情報 </h2>
-<ul><li> 著者: Tim Rowley
-</li><li> 貢献者: Jonathan Watt, Steffen Wilberg
-</li><li> 最終更新日: July 31, 2007
-</li><li> 著作権: Portions of this content are © 1998–2007 by individual mozilla.org contributors; content available under a Creative Commons license | <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">詳細</a>
-</li></ul>
-</div>
-<div class="noinclude">
-</div>
-{{ languages( { "en": "en/Mozilla_SVG_Status" } ) }}
+
+<p><a href="/ja/docs/Web/SVG/SVG_2_support_in_Mozilla">SVG 2 の変更についての Mozilla の対応</a>の解説もあります。</p>
+
+<h2 id="Element_implementation_status">要素の実装状況</h2>
+
+<p><a href="https://www.w3.org/TR/SVG11/">SVG 1.1</a> の要素とネイティブサポートの状況の概略です。</p>
+
+<table class="standard-table" style="border-collapse: separate;">
+ <tbody>
+  <tr>
+   <th>要素</th>
+   <th>備考</th>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/struct.html#basic-structure-mod">Structure モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/struct.html#SVGElement">svg</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+     <li>DOM 属性 <code>currentScale</code> と <code>currentTranslate</code> は実装されていますが、パンとズームのユーザーインターフェイスはありません。
+     </li>
+     <li>SVGSVGElement
+      <ul>
+       <li>未実装の属性: contentScriptType, contentStyleType, viewport, currentView</li>
+       <li>未実装のバインディング:  getIntersectionList, getEnclosureList, checkIntersection, checkEnclosure</li>
+      </ul>
+     </li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/struct.html#GElement">g</a> </td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/struct.html#DefsElement">defs</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/struct.html#DescElement">desc</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+     <li>DOM に保存されるのみでユーザーインターフェイスなし。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/struct.html#TitleElement">title</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+     <li><code>title</code> は SVG オブジェクト上でマウスを静止させるとツールチップとして表示されます。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/metadata.html#MetadataElement">metadata</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+     <li>DOM に保存されるのみでユーザーインターフェイスなし。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/struct.html#SymbolElement">symbol</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/struct.html#UseElement">use</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+     <li>&lt;svg:use&gt; カスケーディング規則に完全に従っていない ({{Bug(265894)}})。</li>
+     <li>SVGElementInstance ツリーにイベントを伝えない ({{Bug(265895)}})。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/struct.html#conditional-mod">Conditional
+     Processing モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/struct.html#SwitchElement">switch</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/struct.html#image-mod">Image モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/struct.html#ImageElement">image</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/styling.html#style-mod">Style モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/styling.html#StyleElement">style</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/shapes.html#shape-mod">Shape モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/paths.html#PathElement">path</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+     <li>SVGPathElement インターフェイス
+      <ul>
+       <li>未実装の属性: normalizedPathSegList, animatedNormalizedPathSegList</li>
+      </ul>
+     </li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/shapes.html#RectElement">rect</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/shapes.html#CircleElement">circle</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/shapes.html#LineElement">line</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/shapes.html#EllipseElement">ellipse</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/shapes.html#PolylineElement">polyline</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/shapes.html#PolygonElement">polygon</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/text.html#text-mod">Text モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/text.html#TextElement">text</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+     <li>さまざまなプレゼンテーション属性が機能しません (alignment-baseline, baseline-shift, dominant-baseline, kerning, letter-spacing, word-spacing, writing-mode, glyph-orientation-horizontal, glyph-orientation-vertical)</li>
+     <li>最近実装されたプレゼンテーション属性: direction, unicode-bidi, font-variant, text-decoration</li>
+     <li>SVGTextElement
+      <ul>
+       <li>最近実装されたバインディング: selectSubString</li>
+       <li>最近実装された属性: textLength, lengthAdjust</li>
+      </ul>
+     </li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/text.html#TSpanElement">tspan</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+     <li>さまざまなプレゼンテーション属性が機能しません (alignment-baseline, baseline-shift, dominant-baseline, kerning, letter-spacing, word-spacing, writing-mode, glyph-orientation-horizontal, glyph-orientation-vertical)</li>
+     <li>最近実装されたプレゼンテーション属性: direction, unicode-bidi, font-variant, text-decoration</li>
+     <li>SVGTSpanElement
+      <ul>
+       <li>最近実装されたバインディング: selectSubString</li>
+       <li>最近実装された属性: textLength, lengthAdjust</li>
+      </ul>
+     </li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td style="background-color: rgb(204, 204, 204);"><a href="https://www.w3.org/TR/SVG11/text.html#TRefElement">tref</a></td>
+   <td style="background-color: rgb(204, 204, 204);">
+    <ul>
+     <li>この機能は、仕様書の早期の草稿にありましたが、のちに削除されたので実装されていません ({{Bug(273171)}})。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/text.html#TextPathElement">textPath</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+     <li>未実装のバインディング: selectSubString</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: khaki;">
+   <td><a href="https://www.w3.org/TR/SVG11/text.html#AltGlyphElement">altGlyph</a></td>
+   <td>
+    <ul>
+     <li>tspan として実装。 Gecko 2.0 ではフォント機能なし ({{Bug(456286)}}, {{Bug(571808)}})。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/text.html#AltGlyphDefElement">altGlyphDef</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/text.html#AltGlyphItemElement">altGlyphItem</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/text.html#GlyphRefElement">glyphRef</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/painting.html#marker-mod">Marker モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/painting.html#MarkerElement">marker</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/color.html#color-profile-mod">Color Profile モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/color.html#ColorProfileElement">color-profile</a></td>
+   <td>
+    <ul>
+     <li>未実装 ({{Bug(427713)}})。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/pservers.html#gradient-mod">Gradient モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/pservers.html#LinearGradientElement">linearGradient</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/pservers.html#RadialGradientElement">radialGradient</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/pservers.html#StopElement">stop</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/pservers.html#pattern-mod">Pattern モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/pservers.html#PatternElement">pattern</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/masking.html#clip-mod">Clip モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/masking.html#ClipPathElement">clipPath</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/masking.html#mask-mod">Mask モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/masking.html#MaskElement">mask</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/filters.html#filter-mod">Filter モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#FilterElement">filter</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+     <li>擬似画像入力は <code>SourceGraphic</code> と <code>SourceAlpha</code> のみ実装。</li>
+     <li>未実装の擬似画像入力かフィルター要素を使うとそのフィルターは無視され、参照された画像はフィルター無しで表示されます。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feBlendElement">feBlend</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feColorMatrixElement">feColorMatrix</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feComponentTransferElement">feComponentTransfer</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feCompositeElement">feComposite</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElement">feConvolveMatrix</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feDiffuseLightingElement">feDiffuseLighting</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feDisplacementMapElement">feDisplacementMap</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feFloodElement">feFlood</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feGaussianBlurElement">feGaussianBlur</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feImageElement">feImage</a></td>
+   <td>
+    <ul>
+     <li>実装済み</li>
+     <li>文書フラグメント ({{bug(455986)}}) は &lt;svg:feImage&gt; では対応していません。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feMergeElement">feMerge</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feMergeNodeElement">feMergeNode</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feMorphologyElement">feMorphology</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feOffsetElement">feOffset</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feSpecularLightingElement">feSpecularLighting</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feTileElement">feTile</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feTurbulenceElement">feTurbulence</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feDistantLightElement">feDistantLight</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#fePointLightElement">fePointLight</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feSpotLightElement">feSpotLight</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feFuncRElement">feFuncR</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feFuncGElement">feFuncG</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feFuncBElement">feFuncB</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/filters.html#feFuncAElement">feFuncA</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/interact.html#cursor-mod">Cursor モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/interact.html#CursorElement">cursor</a></td>
+   <td>
+    <ul>
+     <li>未実装 ({{Bug(177193)}})。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/linking.html#hyperlinking-mod">Hyperlinking モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/linking.html#AElement">a</a></td>
+   <td>
+    <ul>
+     <li><code>xlink:href</code>, <code>xlink:show</code>, <code>xlink:target</code>, <code>xlink:title</code> 属性のみ実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/linking.html#view-mod">View モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/linking.html#ViewElement">view</a></td>
+   <td>
+    <ul>
+     <li>Gecko 15.0 で実装済み ({{Bug(512525)}})。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/script.html#scripting-mod">Scripting モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/script.html#ScriptElement">script</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/animate.html#animation-mod">Animation モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/animate.html#AnimateElement">animate</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/animate.html#SetElement">set</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/animate.html#AnimateMotionElement">animateMotion</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/animate.html#AnimateTransformElement">animateTransform</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/animate.html#AnimateColorElement">animateColor</a></td>
+   <td>
+    <ul>
+     <li>未実装 ({{Bug(436296)}})。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/animate.html#mpathElement">mpath</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/fonts.html#font-mod">Font Module</a></th>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/fonts.html#FontElement">font</a></td>
+   <td>
+    <ul>
+     <li>未実装 {{Bug(119490)}}。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/fonts.html#FontFaceNameElement">font-face</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/fonts.html#GlyphElement">glyph</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/fonts.html#MissingGlyphElement">missing-glyph</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/fonts.html#HKernElement">hkern</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/fonts.html#VKernElement">vkern</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/fonts.html#FontFaceSrcElement">font-face-src</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/fonts.html#FontFaceNameElement">font-face-uri</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/fonts.html#FontFaceNameElement">font-face-format</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/fonts.html#FontFaceNameElement">font-face-name</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr style="color: black; background-color: salmon;">
+   <td><a href="https://www.w3.org/TR/SVG11/fonts.html#DefinitionSrcElement">definition-src</a></td>
+   <td>
+    <ul>
+     <li>未実装。</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <th colspan="2" style="text-align: center;"><a href="https://www.w3.org/TR/SVG11/extend.html#extensibility-mod">Extensibility モジュール</a></th>
+  </tr>
+  <tr style="color: black; background-color: lightgreen;">
+   <td><a href="https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement">foreignObject</a></td>
+   <td>
+    <ul>
+     <li>実装済み。</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
