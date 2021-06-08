@@ -52,12 +52,6 @@ browser-compat: html.elements.audio
     <dd>Une requête multi-origine est envoyée avec une information d'authentification (c'est-à-dire avec un en-tête HTTP <code>Origin:</code> qui contient un cookie, un certificat ou effectuant une authentification HTTP).</dd>
   </dl>
   Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS et empêche ainsi d'utiliser la ressource dans un <a href="/fr/docs/Web/HTML/Element/canvas"><code>&lt;canvas&gt;</code></a>. Si la valeur fournie est invalide, elle sera considérée comme <code>anonymous</code>. Voir <a href="/fr/docs/Web/HTML/Attributes/crossorigin">Paramétrage des attributs relatifs au CORS</a> pour plus d'informations.</dd>
-  <dt><strong id="attr-currentTime"><code>currentTime</code></strong></dt>
-  <dd>
-    <p>La lecture de <code>currentTime</code> renvoie une valeur à virgule flottante à précision double indiquant la position de lecture actuelle, en secondes, de l'audio. Si les métadonnées de l'audio ne sont pas encore disponibles — ce qui vous empêche de connaître l'heure de début ou la durée du média — <code>currentTime</code> indique plutôt, et peut être utilisé pour modifier, l'heure à laquelle la lecture commencera. Sinon, la définition de <code>currentTime</code> définit la position de lecture actuelle à l'heure donnée et recherche le média à cette position si le média est actuellement chargé.</p>
-  
-    <p>Si l'audio est diffusé en continu, il est possible que l'<a href="/fr/docs/Glossary/user_gent">agent utilisateur</a> ne puisse pas obtenir certaines parties de la ressource si ces données ont expiré de la mémoire tampon du média. D'autres fichiers audio peuvent avoir une ligne temporelle de média qui ne commence pas à 0 seconde, donc définir <code>currentTime</code> à un moment avant cela échouerait. Par exemple, si la timeline du média de l'audio commence à 12 heures, définir <code>currentTime</code> à 3600 serait une tentative de définir la position de lecture actuelle bien avant le début du média, et échouerait. La méthode <a href="/fr/docs/Web/API/HTMLMediaElement/getStartDate"><code>getStartDate()</code></a> peut être utilisée pour déterminer le point de départ du cadre de référence de la timeline du média.</p>
-  </dd>
   <dt><strong id="attr-disableRemotePlayback"><code>disableRemotePlayback</code></strong> {{experimental_inline}}</dt>
   <dd>Un attribut booléen utilisé pour désactiver la capacité de lecture à distance dans les appareils qui sont connectés à l'aide de câbles (HDMI, DVI, etc.) et sans fil (Miracast, Chromecast, DLNA, AirPlay, etc.). Voir <a href="https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute">cette proposition de spécification</a> pour plus d'informations.
     <div class="notecard note">
@@ -65,8 +59,6 @@ browser-compat: html.elements.audio
       <p>Dans Safari, vous pouvez utiliser <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html"><code>x-webkit-airplay="deny"</code></a> comme solution de repli.</p>
     </div>
   </dd>
-  <dt><strong id="attr-duration"><code>duration</code></strong> <span title="Cette valeur ne peut pas être changée." class="badge inline readonly">Lecture seule </span></dt>
-  <dd>Une valeur à virgule flottante de précision double qui indique la durée (longueur totale) de l'audio en secondes, sur la ligne de temps du média. Si aucun média n'est présent sur l'élément, ou si le média n'est pas valide, la valeur renvoyée est <code>NaN</code>. Si le média n'a pas de fin connue (comme pour les flux en direct de durée inconnue, les webradios, les médias entrants de <a href="/fr/docs/Web/API/WebRTC_API">WebRTC</a>, et ainsi de suite), cette valeur est <code>+Infinity</code>.</dd>
   <dt><strong id="attr-loop"><code>loop</code></strong></dt>
   <dd>Un attribut booléen. S'il est renseigné, la lecture du fichier se fera en boucle.</dd>
   <dt><strong id="attr-muted"><code>muted</code></strong></dt>
@@ -196,7 +188,7 @@ browser-compat: html.elements.audio
   &lt;source src="myAudio.mp3" type="audio/mpeg"&gt;
   &lt;source src="myAudio.ogg" type="audio/ogg"&gt;
   &lt;p&gt;Votre navigateur ne prend pas en charge l'audio HTML5.
-  Voici un &lt;a href="myAudio.mp4"&gt;lien vers le fichier audio&lt;/a&gt;
+  Voici un &lt;a href="myAudio.mp3"&gt;lien vers le fichier audio&lt;/a&gt;
   à la place.&lt;/p&gt;
 &lt;/audio&gt;</pre>
 
@@ -234,7 +226,7 @@ browser-compat: html.elements.audio
   <dd>Un objet <a href="/fr/docs/Web/API/AudioTrackList"><code>AudioTrackList</code></a> contenant l'ensemble des pistes audio associées à l'élément. Un écouteur <code>addtrack</code> peut être associé à l'objet afin d'alerter lorsque de nouvelles pistes audio sont ajoutées à l'élément.</dd>
   <dt><a href="/fr/docs/Web/API/HTMLMediaElement/videoTracks"><code>HTMLMediaElement.videoTracks</code></a></dt>
   <dd>Un écouteur <code>addtrack</code> peut être ajouté à cet objet <a href="/fr/docs/Web/API/VideoTrackList"><code>VideoTrackList</code></a> afin d'alerter lorsque de nouvelles pistes vidéo sont ajoutées à l'élément.</dd>
-  <dt><a href="/fr/docs/Web/API/HTMLElement/textTracks"><code>HTMLElement.textTracks</code></a></dt>
+  <dt><a href="/fr/docs/Web/API/HTMLMediaElement/textTracks"><code>HTMLMediaElement.textTracks</code></a></dt>
   <dd>Un écouteur <code>addtrack</code> peut être ajouté à cet objet <a href="/fr/docs/Web/API/TextTrackList"><code>TextTrackList</code></a> afin d'alerter lorsque de nouvelles pistes de texte sont ajoutées à l'élément.</dd>
 </dl>
 
@@ -320,7 +312,7 @@ Elle est où la poulette ?
   &lt;source src="monAudio.ogg" type="audio/ogg"&gt;
   &lt;p&gt;
     Votre navigateur ne prend pas charge l'audio HTML.
-    Voici &lt;a href="monAudio.mp4"&gt;un lien de téléchargement&lt;/a&gt; à la place.
+    Voici &lt;a href="monAudio.mp3"&gt;un lien de téléchargement&lt;/a&gt; à la place.
   &lt;/p&gt;
 &lt;/audio&gt;
 
@@ -341,11 +333,11 @@ Elle est où la poulette ?
   <tbody>
     <tr>
       <th scope="row"><dfn><a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a></dfn></th>
-      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content">contenu intégré</a>. Si l'attribut <a href="/fr/docs/Web/HTML/Element/audio#attr-controls"><code>controls</code></a> est utilisé : <a href="/fr/docs/Web/Guide/HTML/Content_categories#interactive_content">contenu interactif</a> et <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content">contenu tangible</a>.</td>
+      <td><a href="/fr/docs/Web/Guide/HTML/Content_categories#flow_content">Contenu de flux</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#phrasing_content">contenu phrasé</a>, <a href="/fr/docs/Web/Guide/HTML/Content_categories#embedded_content">contenu intégré</a>. Si l'attribut <a href="#attr-controls"><code>controls</code></a> est utilisé : <a href="/fr/docs/Web/Guide/HTML/Content_categories#interactive_content">contenu interactif</a> et <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content">contenu tangible</a>.</td>
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td>Si l'élément possède un attribut <a href="/fr/docs/Web/HTML/Element/audio#attr-src"><code>src</code></a> : zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a>, suivis par du contenu transparent ne contenant pas d'éléments média, c'est-à-dire des éléments qui ne soient pas <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>. Sinon : zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a> suivis par un élément <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a>, suivi par du contenu transparent ne contenant pas d'éléments média (ni <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> ni <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>).</td>
+      <td>Si l'élément possède un attribut <a href="#attr-src"><code>src</code></a> : zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a>, suivis par du contenu transparent ne contenant pas d'éléments média, c'est-à-dire des éléments qui ne soient pas <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> ou <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>. Sinon : zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a> suivis par un élément <a href="/fr/docs/Web/HTML/Element/track"><code>&lt;track&gt;</code></a>, suivi par du contenu transparent ne contenant pas d'éléments média (ni <a href="/fr/docs/Web/HTML/Element/audio"><code>&lt;audio&gt;</code></a> ni <a href="/fr/docs/Web/HTML/Element/video"><code>&lt;video&gt;</code></a>).</td>
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
@@ -372,11 +364,11 @@ Elle est où la poulette ?
 
 <h2 id="specifications">Spécifications</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
 <h2 id="see_also">Voir aussi</h2>
 

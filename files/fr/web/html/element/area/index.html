@@ -15,7 +15,7 @@ browser-compat: html.elements.area
 ---
 <div>{{HTMLRef}}</div>
 
-<p class="summary">L'élément HTML <strong><code>&lt;area&gt;</code></strong> définit une zone particulière d'une image et peut lui associer un {{Glossary("Hyperlink", "lien hypertexte")}}. Cet élément n'est utilisé qu'au sein d'un élément <a href="/fr/docs/Web/HTML/Element/map"><code>&lt;map&gt;</code></a>.</p>
+<p class="summary">L'élément HTML <strong><code>&lt;area&gt;</code></strong> définit une zone particulière d'une image et peut lui associer un <a href="/fr/docs/Glossary/Hyperlink">lien hypertexte</a>. Cet élément n'est utilisé qu'au sein d'un élément <a href="/fr/docs/Web/HTML/Element/map"><code>&lt;map&gt;</code></a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}</div>
 
@@ -39,7 +39,7 @@ browser-compat: html.elements.area
     </tr>
     <tr>
       <th scope="row">Rôle ARIA implicite</th>
-      <td><a href="https://w3c.github.io/aria/#link"><code>link</code></a> lorsque l'attribut <a href="/fr/docs/Web/HTML/Element/area#attr-href"><code>href</code></a> est présent, sinon <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">aucun rôle correspondant</a>.</td>
+      <td><a href="https://w3c.github.io/aria/#link"><code>link</code></a> lorsque l'attribut <a href="#attr-href"><code>href</code></a> est présent, sinon <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">aucun rôle correspondant</a>.</td>
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
@@ -58,7 +58,7 @@ browser-compat: html.elements.area
 
 <dl>
   <dt><strong id="attr-alt"><code>alt</code></strong></dt>
-  <dd>Une chaîne de texte alternative à afficher sur les navigateurs qui n'affichent pas les images. Le texte doit être formulé de manière à offrir à l'utilisateur le même type de choix que l'image lorsqu'elle est affichée sans le texte alternatif. Cet attribut est requis uniquement si l'attribut <a href="/fr/docs/Web/HTML/Element/area#attr-href"><code>href</code></a> est utilisé.</dd>
+  <dd>Une chaîne de texte alternative à afficher sur les navigateurs qui n'affichent pas les images. Le texte doit être formulé de manière à offrir à l'utilisateur le même type de choix que l'image lorsqu'elle est affichée sans le texte alternatif. Cet attribut est requis uniquement si l'attribut <a href="#attr-href"><code>href</code></a> est utilisé.</dd>
   <dt><strong id="attr-coords"><code>coords</code></strong></dt>
   <dd>L'attribut <code>coords</code> détaille les coordonnées de l'attribut <code><a href="#attr-shape">shape</a></code> en taille, forme et placement d'un élément <code>&lt;area&gt;</code>.
     <ul>
@@ -91,7 +91,7 @@ browser-compat: html.elements.area
     </ul>
   </dd>
   <dt><strong id="attr-rel"><code>rel</code></strong></dt>
-  <dd>Pour les ancres contenant l'attribut <code><strong>href</strong></code>, cet attribut définit la relation entre l'objet ciblé et l'objet lié. La valeur est une liste des <a href="/fr/docs/Web/HTML/Link_types">différentes relations</a> dont les valeurs sont séparées par des espaces. Les valeurs et leurs significations peuvent être enregistrées par une autorité jugée utile par l'auteur du document. La valeur par défaut est la relation vide. Cet attribut doit uniquement être utilisé si l'attribut <a href="/fr/docs/Web/HTML/Element/area#attr-href"><code>href</code></a> est présent.</dd>
+  <dd>Pour les ancres contenant l'attribut <code><strong>href</strong></code>, cet attribut définit la relation entre l'objet ciblé et l'objet lié. La valeur est une liste des <a href="/fr/docs/Web/HTML/Link_types">différentes relations</a> dont les valeurs sont séparées par des espaces. Les valeurs et leurs significations peuvent être enregistrées par une autorité jugée utile par l'auteur du document. La valeur par défaut est la relation vide. Cet attribut doit uniquement être utilisé si l'attribut <a href="#attr-href"><code>href</code></a> est présent.</dd>
   <dt><strong id="attr-shape"><code>shape</code></strong></dt>
   <dd>La forme de la zone d'intérêt. Les spécifications HTML5 et HTML4 définissent les valeurs <code>rect</code> (zone rectangulaire), <code>circle</code> (zone circulaire), <code>poly</code> (zone polygonale) et <code>default</code> (indiquant toute la zone). Beacuoup de navigateurs, comme Internet Explorer 4 et ultérieur, supportent les valeurs <code>circ</code>, <code>polygon</code> et <code>rectangle</code> pour l'attribut <code>shape</code>, mais ces valeurs ne sont pas standard.</dd>
   <dt><strong id="attr-target"><code>target</code></strong></dt>
@@ -103,7 +103,7 @@ browser-compat: html.elements.area
       <li><code>_top</code> : Charge la réponse dans le contexte de navigation avec le plus haut niveau (autrement dit l'ancêtre du contexte actuel qui n'a pas de parent). Si le contexte actuel n'a pas de parent alors cette valeur aura le même effet que la valeur <code>_self</code>.</li>
     </ul>
 
-    <p>Cet attribut doit uniquement être utilisé si l'attribut <a href="/fr/docs/Web/HTML/Element/area#attr-href"><code>href</code></a> est présent.</p>
+    <p>Cet attribut doit uniquement être utilisé si l'attribut <a href="#attr-href"><code>href</code></a> est présent.</p>
     <div class="notecard note">
       <p><b>Note :</b></p>
       <p>La définition de <code>target="_blank"</code> sur les éléments <code>&lt;area&gt;</code> fournit implicitement le même comportement <code>rel</code> que la définition de <code><a href="/fr/docs/Web/HTML/Link_types/noopener">rel="noopener"</a></code> qui ne définit pas <code>window.opener</code>. Voir la <a href="#browser_compatibility">compatibilité des navigateurs</a> pour les informations sur son support.</p>
@@ -146,8 +146,8 @@ browser-compat: html.elements.area
 
 <h2 id="specifications">Spécifications</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
