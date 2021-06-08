@@ -585,7 +585,6 @@
 /ru/docs/Web/Guide/CSS/Getting_started/How_CSS_works	/ru/docs/conflicting/Learn/CSS/First_steps/How_CSS_works
 /ru/docs/Web/Guide/CSS/Getting_started/Readable_CSS	/ru/docs/conflicting/Learn/CSS/First_steps/How_CSS_is_structured
 /ru/docs/Web/Guide/CSS/Getting_started/SVG_и_CSS	/ru/docs/Web/SVG/Tutorial/SVG_and_CSS
-/ru/docs/Web/Guide/CSS/Getting_started/Selectors	/ru/docs/conflicting/Learn/CSS/Building_blocks/Selectors_918fb6c37a4d06789bc062c48d591992
 /ru/docs/Web/Guide/CSS/Getting_started/Text_styles	/ru/docs/conflicting/Learn/CSS/Styling_text/Fundamentals
 /ru/docs/Web/Guide/CSS/Getting_started/What_is_CSS	/ru/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_b66915031fb62b5fee1201086144e209
 /ru/docs/Web/Guide/CSS/Getting_started/Why_use_CSS	/ru/docs/conflicting/Learn/CSS/First_steps/How_CSS_works_64ba4331a7a5f4319c6e06b06ccdd521
