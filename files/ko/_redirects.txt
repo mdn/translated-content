@@ -890,7 +890,7 @@
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean/constructor	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Date/constructor	/ko/docs/Web/JavaScript/Reference/Global_Objects/Date
-/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype	/ko/docs/Web/JavaScript/Reference/Global_Objects/Date
 /ko/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /ko/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/ko/docs/Web/JavaScript/Reference/Global_Objects/Function
