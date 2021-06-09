@@ -58,12 +58,12 @@ browser-compat: html.elements.button
   <dt><strong id="attr-autofocus"><code>autofocus</code></strong></dt>
   <dd>Cet attribut booléen, <strong>qui ne doit être défini qu'une fois par document</strong>, indique au navigateur que cet élément doit automatiquement avoir le <a href="/fr/docs/Web/API/HTMLOrForeignElement/focus">focus</a> lorsque la page est chargée. Cela permet d'utiliser immédiatement ce bouton, via un raccourci clavier par exemple, sans avoir à cliquer au préalable dans le contrôle adéquat.</dd>
   <dt><strong id="attr-autocomplete"><code>autocomplete</code></strong> {{non-standard_inline}}</dt>
-  <dd>Pour l'élément <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a>, cet attribut, propre à Firefox, n'est pas standard. Par défaut et à la différence des autres navigateurs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox conserve l'état de désactivation d'un bouton</a> d'un élément <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;button&gt;</code></a> au fur et à mesure des chargements d'une page. Utiliser cet attribut avec la valeur <code>off</code> (i.e. <code>autocomplete="off"</code>) désactive cette fonctionnalité (cf. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">bug 654072</a> pour plus d'informations).</dd>
+  <dd>Pour l'élément <code>&lt;button&gt;</code>, cet attribut, propre à Firefox, n'est pas standard. Par défaut et à la différence des autres navigateurs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">Firefox conserve l'état de désactivation d'un bouton</a> d'un élément <code>&lt;button&gt;</code> au fur et à mesure des chargements d'une page. Utiliser cet attribut avec la valeur <code>off</code> (i.e. <code>autocomplete="off"</code>) désactive cette fonctionnalité (cf. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=654072">bug 654072</a> pour plus d'informations).</dd>
   <dt><strong id="attr-disabled"><code>disabled</code></strong></dt>
   <dd>
     <p>Cet attribut booléen empêche l'utilisateur d'interagir avec le bouton : il ne peut pas être pressé ou ciblé.</p>
 
-    <p>Firefox, contrairement aux autres navigateurs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persiste l'état désactivé dynamique</a> d'un <a href="/fr/docs/Web/HTML/Element/Button"><code>&lt;bouton&gt;</code></a> à travers les chargements de page. Utilisez l'attribut <a href="#attr-autocomplete"><code>autocomplete</code></a> pour contrôler cette fonctionnalité.</p>
+    <p>Firefox, contrairement aux autres navigateurs, <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persiste l'état désactivé dynamique</a> d'un <code>&lt;bouton&gt;</code> à travers les chargements de page. Utilisez l'attribut <a href="#attr-autocomplete"><code>autocomplete</code></a> pour contrôler cette fonctionnalité.</p>
   </dd>
   <dt><strong id="attr-form"><code>form</code></strong></dt>
   <dd>L'élément <a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a> auquel associer le bouton (son <em>formulaire rattaché</em>). Cet attribut contient l'attribut <code><strong>id</strong></code> de l'élément <code>&lt;form&gt;</code> auquel celui-ci est rattaché. Par défaut, le bouton est rattaché à l'élément <code>&lt;form&gt;</code> qui est son plus proche ancêtre. Cet attribut permet à un bouton d'être placé n'importe où dans le document et pas seulement comme un descendant d'éléments <code>&lt;form&gt;</code>. Il permet également de rattacher le bouton à un autre formulaire que son élément parent.</dd>
@@ -165,7 +165,7 @@ browser-compat: html.elements.button
 
 <ul>
   <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/target-size.html">Comprendre le critère d'accessibilité 2.5.5 sur la taille des cibles - Comprendre WCAG 2.1 (en anglais)</a></li>
-  <li><a href="http://adrianroselli.com/2019/06/target-size-and-2-5-5.html">Taille des cibles et critère 2.5.5, billet en anglais d'Adrian Roselli</a></li>
+  <li><a href="https://adrianroselli.com/2019/06/target-size-and-2-5-5.html">Taille des cibles et critère 2.5.5, billet en anglais d'Adrian Roselli</a></li>
   <li><a href="https://a11yproject.com/posts/large-touch-targets/">Test rapide : cibles tactiles suffisamment grande — Projet A11Y (billet en anglais)</a></li>
 </ul>
 
@@ -199,8 +199,8 @@ browser-compat: html.elements.button
 
 <h2 id="specifications">Spécifications</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
