@@ -268,7 +268,7 @@
 /es/docs/DOM/CssRule.selectorText	/es/docs/Web/API/CSSStyleRule/selectorText
 /es/docs/DOM/Document.styleSheets	/es/docs/Web/API/Document/styleSheets
 /es/docs/DOM/Element.setAttribute	/es/docs/Web/API/Element/setAttribute
-/es/docs/DOM/Element.style	/es/docs/Web/API/ElementCSSInlineStyle/style
+/es/docs/DOM/Element.style	/es/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /es/docs/DOM/HTMLAudioElement	/es/docs/Web/API/HTMLAudioElement
 /es/docs/DOM/HTMLTableElement	/es/docs/Web/API/HTMLTableElement
 /es/docs/DOM/Manipulando_el_historial_del_navegador	/es/docs/Web/API/History_API
@@ -1802,6 +1802,7 @@
 /es/docs/Web/API/Element/onlostpointercapture	/es/docs/Web/API/GlobalEventHandlers/onlostpointercapture
 /es/docs/Web/API/Element/onwheel	/es/docs/Web/API/GlobalEventHandlers/onwheel
 /es/docs/Web/API/Element/runtimeStyle	/es/docs/orphaned/Web/API/Element/runtimeStyle
+/es/docs/Web/API/ElementCSSInlineStyle/style	/es/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /es/docs/Web/API/ElementosHTMLparaVideo	/es/docs/Web/API/HTMLVideoElement
 /es/docs/Web/API/Event/createEvent	/es/docs/Web/API/Document/createEvent
 /es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/Web/API/Fetch_API/Basic_concepts
@@ -1814,7 +1815,7 @@
 /es/docs/Web/API/HTMLElement/dataset	/es/docs/Web/API/HTMLOrForeignElement/dataset
 /es/docs/Web/API/HTMLElement/focus	/es/docs/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/HTMLElement/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
-/es/docs/Web/API/HTMLElement/style	/es/docs/Web/API/ElementCSSInlineStyle/style
+/es/docs/Web/API/HTMLElement/style	/es/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /es/docs/Web/API/IDBObjectStore.add	/es/docs/Web/API/IDBObjectStore/add
 /es/docs/Web/API/IndexedDB_API/Conceptos_Basicos_Detras_De_IndexedDB	/es/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /es/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/es/docs/Web/API/IndexedDB_API/Using_IndexedDB

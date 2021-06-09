@@ -400,6 +400,7 @@
 /ru/docs/Web/API/Element.insertAdjacentHTML	/ru/docs/Web/API/Element/insertAdjacentHTML
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
 /ru/docs/Web/API/Element/currentStyle	/ru/docs/orphaned/Web/API/Element/currentStyle
+/ru/docs/Web/API/ElementCSSInlineStyle/style	/ru/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/EventTarget/attachEvent	/ru/docs/conflicting/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/EventTarget/detachEvent	/ru/docs/conflicting/Web/API/EventTarget/removeEventListener
@@ -410,7 +411,7 @@
 /ru/docs/Web/API/HTMLElement/dataset	/ru/docs/Web/API/HTMLOrForeignElement/dataset
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/API/HTMLElement/nonce	/ru/docs/Web/API/HTMLOrForeignElement/nonce
-/ru/docs/Web/API/HTMLElement/style	/ru/docs/Web/API/ElementCSSInlineStyle/style
+/ru/docs/Web/API/HTMLElement/style	/ru/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ru/docs/Web/API/HTMLElement/tabIndex	/ru/docs/Web/API/HTMLOrForeignElement/tabIndex
 /ru/docs/Web/API/HTMLHyperlinkElementUtils	/ru/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/hash	/ru/docs/Web/API/HTMLAnchorElement/hash

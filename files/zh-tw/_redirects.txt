@@ -568,10 +568,11 @@
 /zh-TW/docs/Web/API/Document_Object_Model/Events	/zh-TW/docs/orphaned/Web/API/Document_Object_Model/Events
 /zh-TW/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/zh-TW/docs/Web/API/Document_Object_Model/Whitespace
 /zh-TW/docs/Web/API/Document_Object_Model/事件	/zh-TW/docs/orphaned/Web/API/Document_Object_Model/Events
+/zh-TW/docs/Web/API/ElementCSSInlineStyle/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-TW/docs/Web/API/Event/createEvent	/zh-TW/docs/Web/API/Document/createEvent
 /zh-TW/docs/Web/API/Geolocation/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
 /zh-TW/docs/Web/API/HTMLElement/dataset	/zh-TW/docs/Web/API/HTMLOrForeignElement/dataset
-/zh-TW/docs/Web/API/HTMLElement/style	/zh-TW/docs/Web/API/ElementCSSInlineStyle/style
+/zh-TW/docs/Web/API/HTMLElement/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-TW/docs/Web/API/Node/innerText	/zh-TW/docs/Web/API/HTMLElement/innerText
 /zh-TW/docs/Web/API/NonDocumentTypeChildNode	/zh-TW/docs/conflicting/Web/API/Element
 /zh-TW/docs/Web/API/ParentNode	/zh-TW/docs/orphaned/Web/API/ParentNode

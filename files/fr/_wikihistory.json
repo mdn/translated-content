@@ -15778,22 +15778,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2020-10-15T21:09:58.052Z",
-    "contributors": [
-      "tristantheb",
-      "dominiquevilain",
-      "edspeedy",
-      "ebear",
-      "fscholz",
-      "teoli",
-      "xuancanh",
-      "Julien.stuby",
-      "BenoitL",
-      "Mgjbot",
-      "Takenbot"
-    ]
-  },
   "Web/API/Encoding_API": {
     "modified": "2020-10-15T22:21:39.244Z",
     "contributors": [
@@ -45032,6 +45016,22 @@
     "modified": "2019-03-18T21:38:50.214Z",
     "contributors": [
       "loella16"
+    ]
+  },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2020-10-15T21:09:58.052Z",
+    "contributors": [
+      "tristantheb",
+      "dominiquevilain",
+      "edspeedy",
+      "ebear",
+      "fscholz",
+      "teoli",
+      "xuancanh",
+      "Julien.stuby",
+      "BenoitL",
+      "Mgjbot",
+      "Takenbot"
     ]
   },
   "orphaned/Web/API/ElementTraversal": {
