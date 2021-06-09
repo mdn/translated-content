@@ -2468,19 +2468,6 @@
       "Ptak82"
     ]
   },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2019-03-23T23:56:38.082Z",
-    "contributors": [
-      "lotny",
-      "SphinxKnight",
-      "teoli",
-      "jsx",
-      "obelyx",
-      "Ptak82",
-      "Mgjbot",
-      "Jan Dudek"
-    ]
-  },
   "Web/API/Event": {
     "modified": "2020-03-06T04:03:57.947Z",
     "contributors": [
@@ -11221,6 +11208,19 @@
       "Fidosek",
       "griter",
       "krystian71115"
+    ]
+  },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2019-03-23T23:56:38.082Z",
+    "contributors": [
+      "lotny",
+      "SphinxKnight",
+      "teoli",
+      "jsx",
+      "obelyx",
+      "Ptak82",
+      "Mgjbot",
+      "Jan Dudek"
     ]
   },
   "orphaned/Web/API/ParentNode": {

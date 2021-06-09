@@ -14437,26 +14437,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/ElementCSSInlineStyle": {
-    "modified": "2020-10-15T22:32:46.972Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2020-10-15T21:16:29.287Z",
-    "contributors": [
-      "mfuji09",
-      "mikimhk",
-      "Uemmra3",
-      "momdo",
-      "fscholz",
-      "jsx",
-      "Shoot",
-      "Marsf",
-      "Okome"
-    ]
-  },
   "Web/API/Encoding_API": {
     "modified": "2020-10-15T22:22:31.468Z",
     "contributors": [
@@ -52308,6 +52288,26 @@
       "dskmori",
       "keeponbeat",
       "mikamikuh"
+    ]
+  },
+  "orphaned/Web/API/ElementCSSInlineStyle": {
+    "modified": "2020-10-15T22:32:46.972Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2020-10-15T21:16:29.287Z",
+    "contributors": [
+      "mfuji09",
+      "mikimhk",
+      "Uemmra3",
+      "momdo",
+      "fscholz",
+      "jsx",
+      "Shoot",
+      "Marsf",
+      "Okome"
     ]
   },
   "orphaned/Web/API/HTMLElement/forceSpellCheck": {

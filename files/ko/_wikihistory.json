@@ -4703,16 +4703,6 @@
       "Kim.Hyunjung"
     ]
   },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2020-10-15T21:18:22.703Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz",
-      "AshfaqHossain",
-      "teoli",
-      "Netaras"
-    ]
-  },
   "Web/API/Encoding_API": {
     "modified": "2020-10-15T22:26:02.845Z",
     "contributors": [
@@ -18379,6 +18369,16 @@
     "modified": "2019-03-23T22:28:24.891Z",
     "contributors": [
       "nugurejeil"
+    ]
+  },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2020-10-15T21:18:22.703Z",
+    "contributors": [
+      "alattalatta",
+      "fscholz",
+      "AshfaqHossain",
+      "teoli",
+      "Netaras"
     ]
   },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {

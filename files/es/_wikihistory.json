@@ -6659,16 +6659,6 @@
       "PRDeving"
     ]
   },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2019-03-23T23:58:09.934Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "khalid32",
-      "teoli",
-      "HenryGR"
-    ]
-  },
   "Web/API/Event": {
     "modified": "2019-03-24T00:00:03.889Z",
     "contributors": [
@@ -23431,6 +23421,16 @@
     "modified": "2019-03-23T22:25:35.378Z",
     "contributors": [
       "SoftwareRVG"
+    ]
+  },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2019-03-23T23:58:09.934Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "khalid32",
+      "teoli",
+      "HenryGR"
     ]
   },
   "orphaned/Web/API/ParentNode": {

@@ -7778,16 +7778,6 @@
       "In4in"
     ]
   },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2020-10-15T21:35:49.277Z",
-    "contributors": [
-      "Fantomhaiv",
-      "elidare",
-      "maxpolski",
-      "nkoptsov",
-      "surrsoft"
-    ]
-  },
   "Web/API/Event": {
     "modified": "2019-08-14T12:21:25.951Z",
     "contributors": [
@@ -25502,6 +25492,16 @@
     "modified": "2020-10-15T22:29:46.179Z",
     "contributors": [
       "RenatTOP"
+    ]
+  },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2020-10-15T21:35:49.277Z",
+    "contributors": [
+      "Fantomhaiv",
+      "elidare",
+      "maxpolski",
+      "nkoptsov",
+      "surrsoft"
     ]
   },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {

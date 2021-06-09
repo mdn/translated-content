@@ -1020,7 +1020,7 @@
 /fr/docs/DOM/element.setAttributeNS	/fr/docs/Web/API/Element/setAttributeNS
 /fr/docs/DOM/element.setAttributeNode	/fr/docs/Web/API/Element/setAttributeNode
 /fr/docs/DOM/element.setAttributeNodeNS	/fr/docs/Web/API/Element/setAttributeNodeNS
-/fr/docs/DOM/element.style	/fr/docs/Web/API/ElementCSSInlineStyle/style
+/fr/docs/DOM/element.style	/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /fr/docs/DOM/element.tabIndex	/fr/docs/Web/API/HTMLOrForeignElement/tabIndex
 /fr/docs/DOM/element.tagName	/fr/docs/Web/API/Element/tagName
 /fr/docs/DOM/element.textContent	/fr/docs/Web/API/Node/textContent
@@ -1179,7 +1179,7 @@
 /fr/docs/DOM:element.setAttributeNS	/fr/docs/Web/API/Element/setAttributeNS
 /fr/docs/DOM:element.setAttributeNode	/fr/docs/Web/API/Element/setAttributeNode
 /fr/docs/DOM:element.setAttributeNodeNS	/fr/docs/Web/API/Element/setAttributeNodeNS
-/fr/docs/DOM:element.style	/fr/docs/Web/API/ElementCSSInlineStyle/style
+/fr/docs/DOM:element.style	/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /fr/docs/DOM:element.tabIndex	/fr/docs/Web/API/HTMLOrForeignElement/tabIndex
 /fr/docs/DOM:element.tagName	/fr/docs/Web/API/Element/tagName
 /fr/docs/DOM:element.textContent	/fr/docs/Web/API/Node/textContent
@@ -3755,7 +3755,7 @@
 /fr/docs/Web/API/Element.setAttributeNS	/fr/docs/Web/API/Element/setAttributeNS
 /fr/docs/Web/API/Element.setAttributeNode	/fr/docs/Web/API/Element/setAttributeNode
 /fr/docs/Web/API/Element.setAttributeNodeNS	/fr/docs/Web/API/Element/setAttributeNodeNS
-/fr/docs/Web/API/Element.style	/fr/docs/Web/API/ElementCSSInlineStyle/style
+/fr/docs/Web/API/Element.style	/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /fr/docs/Web/API/Element.tagName	/fr/docs/Web/API/Element/tagName
 /fr/docs/Web/API/Element.textContent	/fr/docs/Web/API/Node/textContent
 /fr/docs/Web/API/Element/accessKey	/fr/docs/Web/API/HTMLElement/accessKey
@@ -3766,6 +3766,7 @@
 /fr/docs/Web/API/Element/onwheel	/fr/docs/Web/API/GlobalEventHandlers/onwheel
 /fr/docs/Web/API/Element/removeChild	/fr/docs/Web/API/Node/removeChild
 /fr/docs/Web/API/Element/tabStop	/fr/docs/orphaned/Web/API/Element/tabStop
+/fr/docs/Web/API/ElementCSSInlineStyle/style	/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /fr/docs/Web/API/ElementTraversal	/fr/docs/orphaned/Web/API/ElementTraversal
 /fr/docs/Web/API/Event.initEvent	/fr/docs/Web/API/Event/initEvent
 /fr/docs/Web/API/Event.stopPropagation	/fr/docs/Web/API/Event/stopPropagation
@@ -3781,7 +3782,7 @@
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 /fr/docs/Web/API/HTMLElement/dataset	/fr/docs/Web/API/HTMLOrForeignElement/dataset
 /fr/docs/Web/API/HTMLElement/focus	/fr/docs/Web/API/HTMLOrForeignElement/focus
-/fr/docs/Web/API/HTMLElement/style	/fr/docs/Web/API/ElementCSSInlineStyle/style
+/fr/docs/Web/API/HTMLElement/style	/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /fr/docs/Web/API/HTMLElement/tabIndex	/fr/docs/Web/API/HTMLOrForeignElement/tabIndex
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
 /fr/docs/Web/API/HTMLTableElement.caption	/fr/docs/Web/API/HTMLTableElement/caption

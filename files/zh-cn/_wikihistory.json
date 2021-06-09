@@ -13039,16 +13039,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2020-10-15T21:30:08.559Z",
-    "contributors": [
-      "zhuangyin",
-      "xgqfrms-GitHub",
-      "distums",
-      "teoli",
-      "AlexChao"
-    ]
-  },
   "Web/API/ErrorEvent": {
     "modified": "2020-10-15T21:38:19.894Z",
     "contributors": [
@@ -19834,12 +19824,6 @@
     "modified": "2020-10-15T22:20:36.379Z",
     "contributors": [
       "sixpencecl"
-    ]
-  },
-  "Web/API/Request/context": {
-    "modified": "2020-10-15T22:30:43.048Z",
-    "contributors": [
-      "Aliom252181"
     ]
   },
   "Web/API/Request/credentials": {
@@ -50227,6 +50211,16 @@
       "jiangyuzhen"
     ]
   },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2020-10-15T21:30:08.559Z",
+    "contributors": [
+      "zhuangyin",
+      "xgqfrms-GitHub",
+      "distums",
+      "teoli",
+      "AlexChao"
+    ]
+  },
   "orphaned/Web/API/Entity": {
     "modified": "2020-06-03T01:07:43.853Z",
     "contributors": [
@@ -50368,6 +50362,12 @@
     "modified": "2020-10-15T22:29:03.476Z",
     "contributors": [
       "lauhua"
+    ]
+  },
+  "orphaned/Web/API/Request/context": {
+    "modified": "2020-10-15T22:30:43.048Z",
+    "contributors": [
+      "Aliom252181"
     ]
   },
   "orphaned/Web/API/TextRange/text": {
