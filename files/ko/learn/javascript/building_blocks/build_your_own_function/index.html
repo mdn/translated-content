@@ -41,7 +41,7 @@ translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 <p>기본적인 함수를 만들면서 시작해 봅시다.</p>
 
 <div class="note">
-<p><strong>Note</strong>: 함수에 이름을 붙일 때 <a href="/ko/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules">변수 명명 규칙</a>과 같은 규칙을 따라야 합니다. 함수와 변수를 떼어놓고 이야기할 수 있으므로, 이것은 괜찮습니다 — 함수명은 뒤에 괄호가 나타나지만 변수는 그렇지 않습니다.</p>
+<p><strong>Note</strong>: 함수에 이름을 붙일 때 <a href="/ko/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules">변수 명명 규칙</a>과 같은 규칙을 따라야 합니다. 함수와 변수를 떼어놓고 이야기할 수 있으므로, 이렇게 하는 것은 괜찮습니다 — 함수명은 뒤에 괄호가 나타나지만 변수는 그렇지 않습니다.</p>
 </div>
 
 <ol>
@@ -117,7 +117,7 @@ panel.appendChild(closeBtn);</pre>
 
 <h2 id="Calling_the_function">함수 호출하기</h2>
 
-<p>이제 우리는 <code>&lt;script&gt;</code> 요소에 아주 잘 작성된 함수 정의를 가지고 있지만, 이것은 현재 상태 그대로는 아무것도 하지 않을 것입니다.</p>
+<p>이제 여러분은 <code>&lt;script&gt;</code> 요소에 아주 잘 작성된 함수 정의를 가지고 있지만, 이것은 현재 상태 그대로는 아무것도 하지 않을 것입니다.</p>
 
 <ol>
  <li>함수를 호출하기 위해, 다음의 코드를 함수 아래에 포함시켜 보세요.
@@ -137,14 +137,14 @@ panel.appendChild(closeBtn);</pre>
  <li>마지막으로, 다음을 지난 코드 아래에 추가해 보세요:
   <pre class="brush: js notranslate">btn.onclick = displayMessage;</pre>
   함수 내부의 <code>closeBtn.onclick...</code> 코드와 비슷한 방식으로, 여기서 우리는 클릭된 버튼에 응답하여 몇몇 코드를 호출하고 있습니다. 하지만 이 경우, 코드를 포함하는 익명 함수를 호출하는 대신, 우리는 함수명을 직접 호출하고 있습니다.</li>
- <li>저장하고 페이지를 새로고침해 보세요 — 이제 당신이 버튼을 클릭했을 때 메시지 박스가 나타나는 것을 볼 수 있을 것입니다.</li>
+ <li>저장하고 페이지를 새로고침해 보세요 — 이제 여러분이 버튼을 클릭했을 때 메시지 박스가 나타나는 것을 볼 수 있을 것입니다.</li>
 </ol>
 
 <p>왜 함수명 뒤에 괄호를 포함하지 않았는지 궁금할지도 모릅니다. 그 이유는 함수를 즉시 호출하고 싶지 않았기 때문입니다 — 오직 버튼이 클릭된 이후에만 호출되기를 원했습니다. 만약 이 줄을 다음으로 변경하고</p>
 
 <pre class="brush: js notranslate">btn.onclick = displayMessage();</pre>
 
-<p>저장한 후 새로고침한다면, 당신은 메시지 박스가 버튼이 클릭되지도 않았는데 나타나는 것을 보게 될 것입니다. 이 맥락에서의 괄호는 때때로 "함수 호출 연산자(function invocation operator)"라고 불립니다. 이것은 함수를 현재 스코프에서 즉시 실행하고 싶을 때만 사용됩니다. 같은 측면에서, 익명 함수 내부의 코드는 즉시 실행되지 않는데, 이는 그것이 함수 스코프 내에 있기 때문입니다.</p>
+<p>저장한 후 새로고침한다면, 여러분은 메시지 박스가 버튼이 클릭되지도 않았는데 나타나는 것을 보게 될 것입니다. 이 맥락에서의 괄호는 때때로 "함수 호출 연산자(function invocation operator)"라고 불립니다. 이것은 함수를 현재 스코프에서 즉시 실행하고 싶을 때만 사용됩니다. 같은 측면에서, 익명 함수 내부의 코드는 즉시 실행되지 않는데, 이는 그것이 함수 스코프 내에 있기 때문입니다.</p>
 
 <p>만약 마지막 실험을 시도해 봤다면, 앞으로 가기 전에 반드시 이전으로 되돌리세요.</p>
 
@@ -222,16 +222,16 @@ displayMessage('Brian: Hi there, how are you today?','chat');</pre>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 만약 예제를 작동하는 데 어려움이 있다면, 자유롭게 당신의 코드를 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html">GitHub에 있는 완성된 버전</a>에 대해 검사해 보거나 (<a href="https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html">실제로 작동하는 모습</a>도 보세요), 우리에게 도움을 요청해 보세요.</p>
+<p><strong>Note</strong>: 만약 이 예제를 작업하는 데 어려움이 있다면, 자유롭게 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html">GitHub에 있는 완성된 버전</a>과 비교해 보거나 (<a href="https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html">실제로 작동하는 모습</a>도 보세요), 우리에게 도움을 요청해 보세요.</p>
 </div>
 
-<h2 id="Test_your_skills!">당신의 실력을 평가해 보세요!</h2>
+<h2 id="Test_your_skills!">실력을 평가해 보세요!</h2>
 
 <p>이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — <a href="/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">실력을 평가해 보세요: 함수</a>. 이 평가들은 다음 문서에서 다뤄지는 기술들을 요구하므로, 평가를 시도해보기 전에 다음 문서를 먼저 읽을 수도 있습니다.</p>
 
 <h2 id="Conclusion">결론</h2>
 
-<p>끝에 도달하신 것을 축하드립니다! 이 문서는 당신이 실용적인 사용자 정의 함수를 만드는 전체 과정을 익히도록 했는데, 이는 조금의 추가적인 작업과 함께 실제 프로젝트로 이식될 수도 있습니다. 다음 문서에서 우리는 또 다른 관련된 필수적인 개념 — 반환 값을 설명함으로써 함수를 마무리지을 것입니다.</p>
+<p>끝에 도달하신 것을 축하드립니다! 이 문서는 여러분이 실용적인 사용자 정의 함수를 만들어보는 전체 과정을 익히도록 했는데, 이는 조금의 추가적인 작업과 함께 실제 프로젝트로 이식될 수도 있습니다. 다음 문서에서 우리는 또 다른 관련된 필수적인 개념 — 반환 값을 설명함으로써 함수를 마무리지을 것입니다.</p>
 
 <ul>
 </ul>
