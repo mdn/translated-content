@@ -5,8 +5,9 @@
 3. **[yari 빠른 사용법](#yari-빠른-사용법)**
 4. **[번역 가이드](#번역-가이드)**
 5. **[용어 지침](#용어-지침)**
-6. **[자주 묻는 질문](#자주-묻는-질문)**
-7. **[맺음말](#맺음말)**
+6. **[code formatter](#code-formatter)**
+7. **[자주 묻는 질문](#자주-묻는-질문)**
+8. **[맺음말](#맺음말)**
 
 ---
 ## MDN 번역 콘텐츠에 대한 일반 지침
@@ -200,6 +201,12 @@ EDITOR=code
 | Idempotent | 멱등성 | | | 
 | Request Body | 요청 본문 | | | 
 | Response Body | 응답 본문 | | | 
+
+## code formatter
+
+번역 기여자의 편의성을 위해 code formatter를 사용할 수 있습니다. 강제 사항은 아니지만 통일성을 위해 기준을 아래와 같이 정했습니다.
+
+code formatter의 한 종류인 Prettier의 기본 설정을 따르며, 추가적으로 `printWidth: 120`, `semi: false`, `singleQuote: true`옵션이 추가됩니다. [참고 PR](https://github.com/mdn/translated-content/pull/1065)
 
 ## 자주 묻는 질문
 
