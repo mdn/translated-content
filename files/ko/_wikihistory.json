@@ -16475,26 +16475,6 @@
       "SpikeYou"
     ]
   },
-  "Web/Reference": {
-    "modified": "2019-03-23T23:28:22.951Z",
-    "contributors": [
-      "DeadIntegral",
-      "jarangseo",
-      "eyekorea",
-      "LimeClover",
-      "Channy",
-      "hyeonseok",
-      "narae_lee"
-    ]
-  },
-  "Web/Reference/API": {
-    "modified": "2019-03-23T23:23:26.342Z",
-    "contributors": [
-      "Netaras",
-      "tamnajio",
-      "Channy"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-11-05T05:19:15.768Z",
     "contributors": [
@@ -18633,6 +18613,26 @@
     "modified": "2020-10-15T22:15:31.566Z",
     "contributors": [
       "alattalatta"
+    ]
+  },
+  "orphaned/Web/Reference": {
+    "modified": "2019-03-23T23:28:22.951Z",
+    "contributors": [
+      "DeadIntegral",
+      "jarangseo",
+      "eyekorea",
+      "LimeClover",
+      "Channy",
+      "hyeonseok",
+      "narae_lee"
+    ]
+  },
+  "orphaned/Web/Reference/API": {
+    "modified": "2019-03-23T23:23:26.342Z",
+    "contributors": [
+      "Netaras",
+      "tamnajio",
+      "Channy"
     ]
   },
   "orphaned/Web/Security/Information_Security_Basics": {

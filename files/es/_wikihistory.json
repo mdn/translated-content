@@ -21250,32 +21250,6 @@
       "luismj"
     ]
   },
-  "Web/Reference": {
-    "modified": "2019-03-23T23:21:27.898Z",
-    "contributors": [
-      "raecillacastellana",
-      "vltamara",
-      "asero82",
-      "atlas7jean",
-      "Nickolay"
-    ]
-  },
-  "Web/Reference/API": {
-    "modified": "2019-03-23T23:20:25.941Z",
-    "contributors": [
-      "AlePerez92",
-      "jhia",
-      "welm",
-      "vggallego",
-      "DeiberChacon",
-      "angmauricio",
-      "vitoco",
-      "CristianMar25",
-      "gesifred",
-      "cmeraz",
-      "davy.martinez"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-03-23T23:44:20.243Z",
     "contributors": [
@@ -23664,6 +23638,32 @@
     "modified": "2020-10-15T22:24:00.271Z",
     "contributors": [
       "nachofelpete"
+    ]
+  },
+  "orphaned/Web/Reference": {
+    "modified": "2019-03-23T23:21:27.898Z",
+    "contributors": [
+      "raecillacastellana",
+      "vltamara",
+      "asero82",
+      "atlas7jean",
+      "Nickolay"
+    ]
+  },
+  "orphaned/Web/Reference/API": {
+    "modified": "2019-03-23T23:20:25.941Z",
+    "contributors": [
+      "AlePerez92",
+      "jhia",
+      "welm",
+      "vggallego",
+      "DeiberChacon",
+      "angmauricio",
+      "vitoco",
+      "CristianMar25",
+      "gesifred",
+      "cmeraz",
+      "davy.martinez"
     ]
   },
   "orphaned/Web/SVG/SVG_en_Firefox_1.5": {

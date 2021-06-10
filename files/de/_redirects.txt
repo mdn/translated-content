@@ -490,6 +490,7 @@
 /de/docs/Web/API/File/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File/Using_files_from_web_applications
 /de/docs/Web/API/IndexedDB_API/Grundkonzepte_hinter_IndexedDB	/de/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /de/docs/Web/API/IndexedDB_API/IndexedDB_verwenden	/de/docs/Web/API/IndexedDB_API/Using_IndexedDB
+/de/docs/Web/API/LinkStyle	/de/docs/orphaned/Web/API/LinkStyle
 /de/docs/Web/API/MozMobileConnection.selectNetworkAutomatically	/de/docs/Web/API/MozMobileConnection/selectNetworkAutomatically
 /de/docs/Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-handler	/de/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /de/docs/Web/API/Node.cloneNode	/de/docs/Web/API/Node/cloneNode
@@ -903,6 +904,8 @@
 /de/docs/Web/MathML/Beispiele	/de/docs/Web/MathML/Examples
 /de/docs/Web/MathML/Beispiele/MathML_Satz_des_Pythagoras	/de/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem
 /de/docs/Web/MathML/Beispiele/Quadratische_Gleichung	/de/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula
+/de/docs/Web/Reference	/de/docs/orphaned/Web/Reference
+/de/docs/Web/Reference/API	/de/docs/orphaned/Web/Reference/API
 /de/docs/Web/SVG/Tutorial/Einführung	/de/docs/Web/SVG/Tutorial/Introduction
 /de/docs/Web/SVG/Tutorial/Pfade	/de/docs/Web/SVG/Tutorial/Paths
 /de/docs/Web/SVG/Tutorial/SVG_Schriftarten	/de/docs/Web/SVG/Tutorial/SVG_fonts

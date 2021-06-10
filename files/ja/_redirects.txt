@@ -3871,6 +3871,7 @@
 /ja/docs/Web/API/IDBFactory.cmp	/ja/docs/Web/API/IDBFactory/cmp
 /ja/docs/Web/API/IDBFactory.deleteDatabase	/ja/docs/Web/API/IDBFactory/deleteDatabase
 /ja/docs/Web/API/IDBFactory.open	/ja/docs/Web/API/IDBFactory/open
+/ja/docs/Web/API/LinkStyle	/ja/docs/orphaned/Web/API/LinkStyle
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/conflicting/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/MozSocial.closePanel	/ja/docs/Web/API/MozSocial/closePanel
 /ja/docs/Web/API/MozSocial.isVisible	/ja/docs/Web/API/MozSocial/isVisible
@@ -3949,6 +3950,7 @@
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /ja/docs/Web/API/Slotable	/ja/docs/conflicting/Web/API/Element
+/ja/docs/Web/API/SourceBufferList/SourceBuffer	/ja/docs/orphaned/Web/API/SourceBufferList/SourceBuffer
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
 /ja/docs/Web/API/UserProximityEvent.near	/ja/docs/orphaned/Web/API/UserProximityEvent/near
 /ja/docs/Web/API/UserProximityEvent/near	/ja/docs/orphaned/Web/API/UserProximityEvent/near
@@ -5024,6 +5026,8 @@
 /ja/docs/Web/Manifest/serviceworker	/ja/docs/orphaned/Web/Manifest/serviceworker
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/conflicting/Web/Progressive_web_apps/Introduction
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps
+/ja/docs/Web/Reference	/ja/docs/orphaned/Web/Reference
+/ja/docs/Web/Reference/API	/ja/docs/orphaned/Web/Reference/API
 /ja/docs/Web/Reference/Events	/ja/docs/Web/Events
 /ja/docs/Web/Reference/Events/DOMContentLoaded	/ja/docs/Web/API/Window/DOMContentLoaded_event
 /ja/docs/Web/Reference/Events/MozOrientation	/ja/docs/Web/Events/MozOrientation

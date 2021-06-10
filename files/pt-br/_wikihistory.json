@@ -15891,30 +15891,6 @@
       "rodolfo.ghiggi"
     ]
   },
-  "Web/Reference": {
-    "modified": "2020-09-10T17:40:01.881Z",
-    "contributors": [
-      "Luscas",
-      "jose.elias.0703",
-      "julio-elipse",
-      "Schieck",
-      "leonardocoelho",
-      "luizmassa",
-      "eliveltoncristiano"
-    ]
-  },
-  "Web/Reference/API": {
-    "modified": "2019-03-23T22:46:47.941Z",
-    "contributors": [
-      "julio-elipse",
-      "Anderson-Vasques",
-      "devmessias",
-      "angelorubin",
-      "amoedoamorim",
-      "takahan",
-      "pcf-pcf"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-06-09T13:24:36.730Z",
     "contributors": [
@@ -17328,6 +17304,30 @@
     "modified": "2020-10-15T22:12:37.977Z",
     "contributors": [
       "murillodmiranda"
+    ]
+  },
+  "orphaned/Web/Reference": {
+    "modified": "2020-09-10T17:40:01.881Z",
+    "contributors": [
+      "Luscas",
+      "jose.elias.0703",
+      "julio-elipse",
+      "Schieck",
+      "leonardocoelho",
+      "luizmassa",
+      "eliveltoncristiano"
+    ]
+  },
+  "orphaned/Web/Reference/API": {
+    "modified": "2019-03-23T22:46:47.941Z",
+    "contributors": [
+      "julio-elipse",
+      "Anderson-Vasques",
+      "devmessias",
+      "angelorubin",
+      "amoedoamorim",
+      "takahan",
+      "pcf-pcf"
     ]
   },
   "orphaned/Web/SVG/Element/color-profile": {

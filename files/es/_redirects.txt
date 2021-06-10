@@ -2874,6 +2874,8 @@
 /es/docs/Web/Performance/mejorando_rendimienot_inicial	/es/docs/Web/Performance/Optimizing_startup_performance
 /es/docs/Web/Progressive_web_apps/Developer_guide/Instalar	/es/docs/Web/Progressive_web_apps/Developer_guide/Installing
 /es/docs/Web/Progressive_web_apps/Ventajas	/es/docs/conflicting/Web/Progressive_web_apps/Introduction
+/es/docs/Web/Reference	/es/docs/orphaned/Web/Reference
+/es/docs/Web/Reference/API	/es/docs/orphaned/Web/Reference/API
 /es/docs/Web/Reference/Events	/es/docs/Web/Events
 /es/docs/Web/Reference/Events/DOMContentLoaded	/es/docs/Web/API/Window/DOMContentLoaded_event
 /es/docs/Web/Reference/Events/DOMSubtreeModified	/es/docs/Web/Events/DOMSubtreeModified

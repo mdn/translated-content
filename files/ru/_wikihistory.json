@@ -23544,35 +23544,6 @@
       "WhiteApfel"
     ]
   },
-  "Web/Reference": {
-    "modified": "2019-03-18T20:37:11.659Z",
-    "contributors": [
-      "mmbl",
-      "Shychara",
-      "vostvesh",
-      "AlexLog",
-      "uri-uri222",
-      "slaykovsky",
-      "Nuzland"
-    ]
-  },
-  "Web/Reference/API": {
-    "modified": "2019-03-23T23:10:40.925Z",
-    "contributors": [
-      "olyaknyaz",
-      "filutkie",
-      "dimFora",
-      "BychekRU",
-      "varstt",
-      "uleming",
-      "AlexLog",
-      "eb-gh-cr",
-      "ARleKino",
-      "Tihoem",
-      "takto",
-      "bariys18"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-11-01T15:48:17.103Z",
     "contributors": [
@@ -25750,6 +25721,35 @@
     "modified": "2020-10-30T16:27:27.508Z",
     "contributors": [
       "d0rj"
+    ]
+  },
+  "orphaned/Web/Reference": {
+    "modified": "2019-03-18T20:37:11.659Z",
+    "contributors": [
+      "mmbl",
+      "Shychara",
+      "vostvesh",
+      "AlexLog",
+      "uri-uri222",
+      "slaykovsky",
+      "Nuzland"
+    ]
+  },
+  "orphaned/Web/Reference/API": {
+    "modified": "2019-03-23T23:10:40.925Z",
+    "contributors": [
+      "olyaknyaz",
+      "filutkie",
+      "dimFora",
+      "BychekRU",
+      "varstt",
+      "uleming",
+      "AlexLog",
+      "eb-gh-cr",
+      "ARleKino",
+      "Tihoem",
+      "takto",
+      "bariys18"
     ]
   },
   "orphaned/Web/SVG/Attribute/onload": {

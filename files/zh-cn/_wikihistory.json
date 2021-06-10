@@ -45535,38 +45535,6 @@
       "DingGuangbo"
     ]
   },
-  "Web/Reference": {
-    "modified": "2019-03-18T21:10:51.690Z",
-    "contributors": [
-      "SphinxKnight",
-      "acuptea",
-      "rguanghui",
-      "huasheng",
-      "yangchengjian",
-      "liuwentianwtu",
-      "jack7758",
-      "ValkyrieLawliet",
-      "ZhangKaiqiang",
-      "colin-zhou",
-      "ziyunfei",
-      "Sheppy"
-    ]
-  },
-  "Web/Reference/API": {
-    "modified": "2020-02-06T00:29:14.463Z",
-    "contributors": [
-      "RainSlide",
-      "yongxiaodu",
-      "micblo",
-      "kevinfszu",
-      "yfdyh000",
-      "zmh_w",
-      "tangxiaobaobao",
-      "ziyunfei",
-      "noscripter",
-      "hutuxu"
-    ]
-  },
   "Web/SVG": {
     "modified": "2020-05-25T07:08:22.112Z",
     "contributors": [
@@ -50705,6 +50673,38 @@
     "contributors": [
       "RoyZ",
       "faliye"
+    ]
+  },
+  "orphaned/Web/Reference": {
+    "modified": "2019-03-18T21:10:51.690Z",
+    "contributors": [
+      "SphinxKnight",
+      "acuptea",
+      "rguanghui",
+      "huasheng",
+      "yangchengjian",
+      "liuwentianwtu",
+      "jack7758",
+      "ValkyrieLawliet",
+      "ZhangKaiqiang",
+      "colin-zhou",
+      "ziyunfei",
+      "Sheppy"
+    ]
+  },
+  "orphaned/Web/Reference/API": {
+    "modified": "2020-02-06T00:29:14.463Z",
+    "contributors": [
+      "RainSlide",
+      "yongxiaodu",
+      "micblo",
+      "kevinfszu",
+      "yfdyh000",
+      "zmh_w",
+      "tangxiaobaobao",
+      "ziyunfei",
+      "noscripter",
+      "hutuxu"
     ]
   },
   "orphaned/Web/SVG/Element/color-profile": {

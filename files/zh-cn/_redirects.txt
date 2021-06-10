@@ -2651,6 +2651,8 @@
 /zh-CN/docs/Web/Progressive_web_apps/优势	/zh-CN/docs/conflicting/Web/Progressive_web_apps/Introduction
 /zh-CN/docs/Web/Progressive_web_apps/加载	/zh-CN/docs/Web/Progressive_web_apps/Loading
 /zh-CN/docs/Web/Progressive_web_apps/添加到主屏幕	/zh-CN/docs/Web/Progressive_web_apps/Add_to_home_screen
+/zh-CN/docs/Web/Reference	/zh-CN/docs/orphaned/Web/Reference
+/zh-CN/docs/Web/Reference/API	/zh-CN/docs/orphaned/Web/Reference/API
 /zh-CN/docs/Web/SVG/Attribute/文本锚点	/zh-CN/docs/Web/SVG/Attribute/text-anchor
 /zh-CN/docs/Web/SVG/Attribute/样式	/zh-CN/docs/Web/SVG/Attribute/Styling
 /zh-CN/docs/Web/SVG/Element/color-profile	/zh-CN/docs/orphaned/Web/SVG/Element/color-profile

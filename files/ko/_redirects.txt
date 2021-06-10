@@ -943,6 +943,8 @@
 /ko/docs/Web/Performance/브라우저는_어떻게_동작하는가	/ko/docs/Web/Performance/How_browsers_work
 /ko/docs/Web/Performance/중요_렌더링_경로	/ko/docs/Web/Performance/Critical_rendering_path
 /ko/docs/Web/Progressive_web_apps/소개	/ko/docs/Web/Progressive_web_apps/Introduction
+/ko/docs/Web/Reference	/ko/docs/orphaned/Web/Reference
+/ko/docs/Web/Reference/API	/ko/docs/orphaned/Web/Reference/API
 /ko/docs/Web/Reference/Events	/ko/docs/Web/Events
 /ko/docs/Web/Reference/Events/DOMContentLoaded	/ko/docs/Web/API/Window/DOMContentLoaded_event
 /ko/docs/Web/Reference/Events/DOMSubtreeModified	/ko/docs/Web/Events/DOMSubtreeModified
@@ -1016,8 +1018,8 @@
 /ko/docs/Web/XSLT/variable	/ko/docs/Web/XSLT/Element/variable
 /ko/docs/Web/XSLT/when	/ko/docs/Web/XSLT/Element/when
 /ko/docs/Web/XSLT/with-param	/ko/docs/Web/XSLT/Element/with-param
-/ko/docs/Web/참조	/ko/docs/Web/Reference
-/ko/docs/Web/참조/API	/ko/docs/Web/Reference/API
+/ko/docs/Web/참조	/ko/docs/orphaned/Web/Reference
+/ko/docs/Web/참조/API	/ko/docs/orphaned/Web/Reference/API
 /ko/docs/WebAPI	/ko/docs/conflicting/Web/API
 /ko/docs/WebAPI/Battery_Status	/ko/docs/Web/API/Battery_Status_API
 /ko/docs/WebAPI/Detecting_device_orientation	/ko/docs/orphaned/Web/API/Detecting_device_orientation
