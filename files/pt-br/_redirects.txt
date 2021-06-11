@@ -527,6 +527,8 @@
 /pt-BR/docs/Web/API/API_Web_Audio	/pt-BR/docs/Web/API/Web_Audio_API
 /pt-BR/docs/Web/API/API_Web_Audio/Sintetizador_simples	/pt-BR/docs/Web/API/Web_Audio_API/Simple_synth
 /pt-BR/docs/Web/API/API_de_Desempenho	/pt-BR/docs/Web/API/Performance_API
+/pt-BR/docs/Web/API/AbstractWorker	/pt-BR/docs/orphaned/Web/API/AbstractWorker
+/pt-BR/docs/Web/API/AbstractWorker/onerror	/pt-BR/docs/orphaned/Web/API/AbstractWorker/onerror
 /pt-BR/docs/Web/API/ArrayBuffer	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /pt-BR/docs/Web/API/AudioContext/currentTime	/pt-BR/docs/Web/API/BaseAudioContext/currentTime
 /pt-BR/docs/Web/API/BatteryManager.charging	/pt-BR/docs/Web/API/BatteryManager/charging
@@ -864,6 +866,8 @@
 /pt-BR/docs/Web/MathML/Exemplos	/pt-BR/docs/Web/MathML/Examples
 /pt-BR/docs/Web/Performance/caminho_de_renderizacao_critico	/pt-BR/docs/Web/Performance/Critical_rendering_path
 /pt-BR/docs/Web/Progressive_web_apps/Introdução	/pt-BR/docs/Web/Progressive_web_apps/Introduction
+/pt-BR/docs/Web/Reference	/pt-BR/docs/orphaned/Web/Reference
+/pt-BR/docs/Web/Reference/API	/pt-BR/docs/orphaned/Web/Reference/API
 /pt-BR/docs/Web/SVG/Element/color-profile	/pt-BR/docs/orphaned/Web/SVG/Element/color-profile
 /pt-BR/docs/Web/SVG/Element/texto	/pt-BR/docs/Web/SVG/Element/text
 /pt-BR/docs/Web/SVG/Intensivo_de_Namespaces	/pt-BR/docs/Web/SVG/Namespaces_Crash_Course

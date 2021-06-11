@@ -7,39 +7,35 @@ tags:
 original_slug: Setting_up_extension_development_environment
 ---
 <p>この記事では、あなたの Mozilla アプリケーションにおいて拡張機能の開発を容易にするためのノウハウを提案します。</p>
-<p>{{ 英語版章題("Development preferences") }}</p>
-<h3 id=".E9.96.8B.E7.99.BA.E7.94.A8.E3.81.AE.E8.A8.AD.E5.AE.9A" name=".E9.96.8B.E7.99.BA.E7.94.A8.E3.81.AE.E8.A8.AD.E5.AE.9A">開発用の設定</h3>
+<h3 id="Development_preferences">開発用の設定</h3>
 <p>これらの設定はパフォーマンスの低下と引き換えにデバッグを簡単にします。</p>
-<p>設定を変更するための情報は <a class="external" href="http://www.mozilla.org/support/firefox/edit">設定ファイルの編集</a> を参照して下さい。これらの設定の中にはデフォルトで <code>about:config</code> にリストアップされていないものもあり、新しい (真偽値) エントリを作成しなければならない場合があるので注意して下さい。</p>
+<p>設定を変更するための情報は <a class="external" href="https://www.mozilla.org/support/firefox/edit">設定ファイルの編集</a> を参照して下さい。これらの設定の中にはデフォルトで <code>about:config</code> にリストアップされていないものもあり、新しい (真偽値) エントリを作成しなければならない場合があるので注意して下さい。</p>
 <p>これらの変更を行う前に、下記の「開発用のプロファイル」を参考にして別個の開発用プロファイルを作成してください。</p>
 <ul>
  <li><b>javascript.options.showInConsole</b> = <b>true</b>。chrome ファイルでのエラーを <a href="ja/Error_Console">エラーコンソール</a> に出力します。</li>
- <li><b>nglayout.debug.disable_xul_cache</b> = <b>true</b>。XUL キャッシュを無効にして、再起動しなくてもウィンドウとダイアログの変更が反映されるようにします。これは <a href="#Using_directories_rather_than_JARs">JAR ファイルの代わりにディレクトリを使用</a> している事が前提です。この設定が有効であっても、XUL オーバーレイに対する変更を反映させるにはオーバーレイされているドキュメントを再読み込みする必要があります。</li>
+ <li><b>nglayout.debug.disable_xul_cache</b> = <b>true</b>。XUL キャッシュを無効にして、再起動しなくてもウィンドウとダイアログの変更が反映されるようにします。これは <a href="#using_directories_rather_than_jars">JAR ファイルの代わりにディレクトリを使用</a> している事が前提です。この設定が有効であっても、XUL オーバーレイに対する変更を反映させるにはオーバーレイされているドキュメントを再読み込みする必要があります。</li>
  <li><b>browser.dom.window.dump.enabled</b> = <b>true</b>。標準コンソールへの出力をする為の dump() 文の使用を可能にします。詳しくは {{ Domxref("window.dump") }} を参照してください。特権スクリプトからならば {{ Interface("nsIConsoleService") }} を使用することも出来ます。</li>
  <li><b>javascript.options.strict</b> = <b>true</b>。エラーコンソールでの厳密な警告を有効にします。開発の際にこの設定を無効にしている人は多いので、あなた自身の拡張機能の警告に加えて彼らのコードによる警告が大量に表示されるようになるでしょうから注意が必要です。<a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/1815">Console<sup>2</sup></a> を使えばそれらをフィルタリングできます。</li>
 </ul>
-<p>{{ 英語版章題("Development extensions") }}</p>
-<h3 id=".E9.96.8B.E7.99.BA.E3.81.AE.E3.81.9F.E3.82.81.E3.81.AE.E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD" name=".E9.96.8B.E7.99.BA.E3.81.AE.E3.81.9F.E3.82.81.E3.81.AE.E6.8B.A1.E5.BC.B5.E6.A9.9F.E8.83.BD">開発のための拡張機能</h3>
+<h3 id="Development_extensions">開発のための拡張機能</h3>
 <p>これらの拡張機能はあなたの開発の手助けとなるでしょう。</p>
 <ul>
  <li>カスタムインストールで追加できる DOM Inspector</li>
  <li>JavaScript デバッガ <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/216">Venkman</a></li>
- <li><a class="external" href="http://ted.mielczarek.org/code/mozilla/extensiondev/">Extension Developer's Extension</a></li>
+ <li><a class="external" href="https://ted.mielczarek.org/code/mozilla/extensiondev/">Extension Developer's Extension</a></li>
  <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/1815">Console<sup>2</sup></a></li>
  <li><a class="link-https" href="https://addons.mozilla.org/firefox/4453">Chrome List</a></li>
  <li><a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/1843">Firebug</a></li>
  <li><a class="link-https" href="https://addons.mozilla.org/de/firefox/addon/1729">Execute JS</a></li>
  <li><a class="external" href="http://xpcomviewer.mozdev.org">XPCOMViewer</a>, XPCOM インスペクタ</li>
 </ul>
-<p>{{ 英語版章題("Development profile") }}</p>
-<h3 id=".E9.96.8B.E7.99.BA.E7.94.A8.E3.81.AE.E3.83.97.E3.83.AD.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB" name=".E9.96.8B.E7.99.BA.E7.94.A8.E3.81.AE.E3.83.97.E3.83.AD.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB">開発用のプロファイル</h3>
+<h3 id="Development_profile">開発用のプロファイル</h3>
 <p>開発用の設定や開発用の拡張機能によるパフォーマンスの低下や、個人データの漏洩を防ぐためには、開発作業のための別個のプロファイルを作成するのがいいでしょう。</p>
 <p><code>-no-remote</code> パラメータを付けて Firefox を起動すると、別々のプロファイルを使った二つの Firefox インスタンスを起動させることが出来ます。例えば、次のコマンドを使うことで、「通常の」 Firefox がすでに起動しているかどうかに関わらず、開発用のプロファイルで Firefox を起動させることが出来ます。 (あなたの開発用プロファイルの名前が "dev" であると仮定しています)</p>
 <pre class="eval">start "" "%ProgramFiles%\Mozilla Firefox\firefox.exe" -no-remote -P dev
 </pre>
 <p>既定のプロファイルで Firefox を起動させるには、通常どおり "firefox" または "firefox -P default" を実行します。</p>
-<p>{{ 英語版章題("Custom code location") }}</p>
-<h3 id=".E3.82.B3.E3.83.BC.E3.83.89.E7.BD.AE.E3.81.8D.E5.A0.B4.E3.81.AE.E5.A4.89.E6.9B.B4" name=".E3.82.B3.E3.83.BC.E3.83.89.E7.BD.AE.E3.81.8D.E5.A0.B4.E3.81.AE.E5.A4.89.E6.9B.B4">コード置き場の変更</h3>
+<h3 id="Custom_code_location">コード置き場の変更</h3>
 <p>変更を加えるたびに拡張機能を何度も再インストールしたり、アンインストールの際に誤ってソースファイルを削除してしまうのを防ぐために、ソースファイルをプロファイルの外の任意の場所に置く事が出来ます。</p>
 <ol>
  <li>拡張機能に含まれる install.rdf から拡張機能の ID を見つける</li>
@@ -47,8 +43,7 @@ original_slug: Setting_up_extension_development_environment
  <li>そのファイルの内容に install.rdf ファイルを格納するフォルダへのパスを書き込む (例: `/full/path/to/yourExtension` Windows ユーザはスラッシュではなくバックスラッシュを使ってください。 例: `\full\path\to\yourExtension`)</li>
  <li>ファイルをプロファイルの extensions フォルダに置いて、アプリケーションを再起動する</li>
 </ol>
-<p>{{ 英語版章題("Using directories rather than JARs") }}</p>
-<h3 id="JAR_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E4.BB.A3.E3.82.8F.E3.82.8A.E3.81.AB.E3.83.87.E3.82.A3.E3.83.AC.E3.82.AF.E3.83.88.E3.83.AA.E3.82.92.E4.BD.BF.E7.94.A8" name="JAR_.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.81.AE.E4.BB.A3.E3.82.8F.E3.82.8A.E3.81.AB.E3.83.87.E3.82.A3.E3.83.AC.E3.82.AF.E3.83.88.E3.83.AA.E3.82.92.E4.BD.BF.E7.94.A8">JAR ファイルの代わりにディレクトリを使用</h3>
+<h3 id="Using_directories_rather_than_JARs">JAR ファイルの代わりにディレクトリを使用</h3>
 <p>拡張機能の chrome を JAR ファイルとディレクトリのどちらにパッケージングするかは自由ですが、ディレクトリを使った方が開発は簡単です。リリースする時のために JAR 構造を選んだとしても、chrome.manifest ファイルを編集すればディレクトリ構造で開発することが出来ます。例えばこうなっているのを</p>
 <pre class="eval">content	myExtension	jar:chrome/myExtension.jar!/content/
 </pre>
