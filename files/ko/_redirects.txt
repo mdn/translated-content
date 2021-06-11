@@ -234,7 +234,7 @@
 /ko/docs/DOM/element.lastChild	/ko/docs/Web/API/Node/lastChild
 /ko/docs/DOM/element.length	/ko/docs/Web/API/NodeList/length
 /ko/docs/DOM/element.scrollIntoView	/ko/docs/Web/API/Element/scrollIntoView
-/ko/docs/DOM/element.style	/ko/docs/Web/API/ElementCSSInlineStyle/style
+/ko/docs/DOM/element.style	/ko/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ko/docs/DOM/element.tabIndex	/ko/docs/Web/API/HTMLOrForeignElement/tabIndex
 /ko/docs/DOM/event	/ko/docs/Web/API/Event
 /ko/docs/DOM/event.cancelable	/ko/docs/Web/API/Event/cancelable
@@ -264,7 +264,7 @@
 /ko/docs/DOM:element.firstChild	/ko/docs/Web/API/Node/firstChild
 /ko/docs/DOM:element.lastChild	/ko/docs/Web/API/Node/lastChild
 /ko/docs/DOM:element.length	/ko/docs/Web/API/NodeList/length
-/ko/docs/DOM:element.style	/ko/docs/Web/API/ElementCSSInlineStyle/style
+/ko/docs/DOM:element.style	/ko/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ko/docs/DOM:element.tabIndex	/ko/docs/Web/API/HTMLOrForeignElement/tabIndex
 /ko/docs/DOM:event	/ko/docs/Web/API/Event
 /ko/docs/DOM:form	/ko/docs/Web/API/HTMLFormElement
@@ -453,7 +453,7 @@
 /ko/docs/Learn/JavaScript/Objects/얼마나_이해했는지_확인해보자:_JSON	/ko/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON
 /ko/docs/Learn/Server-side/Express_Nodejs/개발_환경	/ko/docs/Learn/Server-side/Express_Nodejs/development_environment
 /ko/docs/Learn/Server-side/Express_Nodejs/스켈레톤_웹사이트	/ko/docs/Learn/Server-side/Express_Nodejs/skeleton_website
-/ko/docs/Learn/Skills	/ko/docs/conflicting/Learn
+/ko/docs/Learn/Skills	/ko/docs/Learn
 /ko/docs/Learn/WebGL/By_example	/ko/docs/Web/API/WebGL_API/By_example
 /ko/docs/Learn/WebGL/By_example/Clearing_by_clicking	/ko/docs/Web/API/WebGL_API/By_example/Clearing_by_clicking
 /ko/docs/Learn/WebGL/By_example/Detect_WebGL	/ko/docs/Web/API/WebGL_API/By_example/Detect_WebGL
@@ -593,6 +593,7 @@
 /ko/docs/Using_URL_values_for_the_cursor_property-redirect-1	/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 /ko/docs/Using_XPath	/ko/docs/conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
+/ko/docs/Web/API/AbstractWorker	/ko/docs/orphaned/Web/API/AbstractWorker
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
 /ko/docs/Web/API/ChildNode/remove	/ko/docs/orphaned/Web/API/ChildNode/remove
@@ -612,12 +613,14 @@
 /ko/docs/Web/API/Element.getAttribute	/ko/docs/Web/API/Element/getAttribute
 /ko/docs/Web/API/Element/accessKey	/ko/docs/Web/API/HTMLElement/accessKey
 /ko/docs/Web/API/Element/childNodes	/ko/docs/Web/API/Node/childNodes
+/ko/docs/Web/API/Element/currentStyle	/ko/docs/orphaned/Web/API/Element/currentStyle
 /ko/docs/Web/API/Element/firstChild	/ko/docs/Web/API/Node/firstChild
+/ko/docs/Web/API/ElementCSSInlineStyle/style	/ko/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ko/docs/Web/API/Event/createEvent	/ko/docs/Web/API/Document/createEvent
 /ko/docs/Web/API/Fetch_API/Fetch의_사용법	/ko/docs/Web/API/Fetch_API/Using_Fetch
 /ko/docs/Web/API/FileReader.result	/ko/docs/Web/API/FileReader/result
 /ko/docs/Web/API/HTMLElement/dataset	/ko/docs/Web/API/HTMLOrForeignElement/dataset
-/ko/docs/Web/API/HTMLElement/style	/ko/docs/Web/API/ElementCSSInlineStyle/style
+/ko/docs/Web/API/HTMLElement/style	/ko/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ko/docs/Web/API/HTMLElement/tabIndex	/ko/docs/Web/API/HTMLOrForeignElement/tabIndex
 /ko/docs/Web/API/HTMLHyperlinkElementUtils	/ko/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
@@ -631,6 +634,7 @@
 /ko/docs/Web/API/NetworkInformation/connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/Node/innerText	/ko/docs/Web/API/HTMLElement/innerText
 /ko/docs/Web/API/Notification.permission	/ko/docs/Web/API/Notification/permission
+/ko/docs/Web/API/OffscreenCanvas/toBlob	/ko/docs/orphaned/Web/API/OffscreenCanvas/toBlob
 /ko/docs/Web/API/ParentNode	/ko/docs/orphaned/Web/API/ParentNode
 /ko/docs/Web/API/ParentNode/append	/ko/docs/orphaned/Web/API/ParentNode/append
 /ko/docs/Web/API/ParentNode/childElementCount	/ko/docs/Web/API/Element/childElementCount
@@ -887,7 +891,7 @@
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean/constructor	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Date/constructor	/ko/docs/Web/JavaScript/Reference/Global_Objects/Date
-/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype	/ko/docs/Web/JavaScript/Reference/Global_Objects/Date
 /ko/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /ko/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/ko/docs/Web/JavaScript/Reference/Global_Objects/Function
@@ -939,6 +943,8 @@
 /ko/docs/Web/Performance/브라우저는_어떻게_동작하는가	/ko/docs/Web/Performance/How_browsers_work
 /ko/docs/Web/Performance/중요_렌더링_경로	/ko/docs/Web/Performance/Critical_rendering_path
 /ko/docs/Web/Progressive_web_apps/소개	/ko/docs/Web/Progressive_web_apps/Introduction
+/ko/docs/Web/Reference	/ko/docs/orphaned/Web/Reference
+/ko/docs/Web/Reference/API	/ko/docs/orphaned/Web/Reference/API
 /ko/docs/Web/Reference/Events	/ko/docs/Web/Events
 /ko/docs/Web/Reference/Events/DOMContentLoaded	/ko/docs/Web/API/Window/DOMContentLoaded_event
 /ko/docs/Web/Reference/Events/DOMSubtreeModified	/ko/docs/Web/Events/DOMSubtreeModified
@@ -1012,8 +1018,8 @@
 /ko/docs/Web/XSLT/variable	/ko/docs/Web/XSLT/Element/variable
 /ko/docs/Web/XSLT/when	/ko/docs/Web/XSLT/Element/when
 /ko/docs/Web/XSLT/with-param	/ko/docs/Web/XSLT/Element/with-param
-/ko/docs/Web/참조	/ko/docs/Web/Reference
-/ko/docs/Web/참조/API	/ko/docs/Web/Reference/API
+/ko/docs/Web/참조	/ko/docs/orphaned/Web/Reference
+/ko/docs/Web/참조/API	/ko/docs/orphaned/Web/Reference/API
 /ko/docs/WebAPI	/ko/docs/conflicting/Web/API
 /ko/docs/WebAPI/Battery_Status	/ko/docs/Web/API/Battery_Status_API
 /ko/docs/WebAPI/Detecting_device_orientation	/ko/docs/orphaned/Web/API/Detecting_device_orientation

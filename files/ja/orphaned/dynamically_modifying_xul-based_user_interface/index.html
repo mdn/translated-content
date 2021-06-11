@@ -16,9 +16,7 @@ original_slug: Dynamically_modifying_XUL-based_user_interface
   匿名 <a href="ja/XBL">XBL</a> コンテント</i>
  を操作する方法を実演します。</p>
 <p>この記事は XUL 開発の初心者から中級者を対象にしており、読者が XUL と JavaScript の基本的な知識を持っていることを想定しています。<a href="ja/About_the_Document_Object_Model">Document Object Model について</a> の記事や <a href="ja/Gecko_DOM_Reference">Gecko DOM リファレンス</a> の <a href="ja/Gecko_DOM_Reference/Introduction">導入ページ</a> といった DOM に関する入門記事も必要があればお読み下さい。</p>
-<p><br>
- {{ 英語版章題("Introduction") }}</p>
-<h3 id=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB" name=".E3.81.AF.E3.81.98.E3.82.81.E3.81.AB">はじめに</h3>
+<h3 id="Introduction">はじめに</h3>
 <p>ご存知の通り、<a href="ja/XUL">XUL</a> は Firefox や Thunderbird のような様々な Mozilla ベースのアプリケーションでユーザーインターフェイスを記述するのに使われている <a href="ja/XML">XML</a> 言語です。XUL アプリケーションでは動作を定義するのに <a href="ja/JavaScript">JavaScript</a> が使われており、その中では XUL ドキュメントにアクセスするのに <a href="ja/Gecko_DOM_Reference">DOM API</a> を使っています。</p>
 <p>では <b>D</b>ocument <b>O</b>bject <b>M</b>odel API とは何なのでしょうか？</p>
 <p>DOM API はスクリプトとドキュメント間で行われるやり取りのあらゆる所で使われるインターフェイスです。一度でも XUL (または HTML) ドキュメントとやり取りするスクリプトを書いた事があるなら、あなたは既に DOM 呼び出しを使っています。最も有名な DOM メソッドはおそらく <code><a href="ja/DOM/document.getElementById">document.getElementById()</a></code> で、これは与えられた <code>id</code> に対応する要素を返します。あなたはそれ以外にも <code><a href="ja/DOM/element.setAttribute">element.setAttribute()</a></code> や、拡張機能を書いた事があるなら <code><a href="ja/DOM/element.addEventListener">addEventListener()</a></code> といった呼び出しを使った事があるかもしれません。これらは全て DOM で定義されているものです。</p>
@@ -26,16 +24,13 @@ original_slug: Dynamically_modifying_XUL-based_user_interface
  <i>
   ドキュメント</i>
  とは何なのかについて学びましょう。</p>
-<p>{{ 英語版章題("What is a document?") }}</p>
-<h3 id=".E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.A8.E3.81.AF.E4.BD.95.E3.81.8B.EF.BC.9F" name=".E3.83.89.E3.82.AD.E3.83.A5.E3.83.A1.E3.83.B3.E3.83.88.E3.81.A8.E3.81.AF.E4.BD.95.E3.81.8B.EF.BC.9F">ドキュメントとは何か？</h3>
+<h3 id="What_is_a_document">ドキュメントとは何か？</h3>
 <p>ドキュメントは DOM API を使って操作できるデータ構造です。あらゆるドキュメントの論理的な構造はツリー状になっており、ノードとしての要素、属性、処理命令、コメントなどで出来ています。ドキュメントのツリー表現を見るには <a href="ja/DOM_Inspector">DOM Inspector</a> を使ってください。<span class="comment">Todo: XUL ドキュメントとツリーの簡単な例</span></p>
 <p>ドキュメントは、妥当な HTML や整形式の (XHTML や XUL 等の) XML の、メモリ内部の表現とみなす事が出来ます。</p>
 <p>異なるウェブページは (同じウェブページの異なるインスタンスであっても) 異なるドキュメントに対応しているということを覚えておく事が重要です。それぞれの XUL ウィンドウはそれ自身の独自のドキュメントを持っており、<code><a href="ja/XUL/iframe">&lt;iframe&gt;</a></code> や <code><a href="ja/XUL/browser">&lt;browser&gt;</a></code> 、<code><a href="ja/XUL/tabbrowser">&lt;tabbrowser&gt;</a></code> 要素を持っている場合には一つのウィンドウにさらに幾つかの異なるドキュメントがあるということになります。このため、扱っているのが適切なドキュメントなのかを常に確認する必要があります。 (詳しくは <a href="ja/Working_with_windows_in_chrome_code">chrome コードでウィンドウを扱う</a> を参照。) スクリプトが <code><a href="ja/XUL/script">&lt;script&gt;</a></code> タグを使って読み込まれているなら、<code>document</code> プロパティはそのスクリプトが含まれる DOM ドキュメントを参照します。</p>
-<p>{{ 英語版章題("Examples: Using DOM methods") }}</p>
-<h3 id="DOM_.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E4.BD.BF.E7.94.A8.E4.BE.8B" name="DOM_.E3.83.A1.E3.82.BD.E3.83.83.E3.83.89.E3.81.AE.E4.BD.BF.E7.94.A8.E4.BE.8B">DOM メソッドの使用例</h3>
+<h3 id="Examples:_Using_DOM_methods">DOM メソッドの使用例</h3>
 <p>このセクションでは DOM メソッドの <code><a href="ja/DOM/element.appendChild">appendChild()</a></code> 、<code><a href="ja/DOM/document.createElement">createElement()</a></code> 、<code><a href="ja/DOM/element.insertBefore">insertBefore()</a></code> 、<code><a href="ja/DOM/element.removeChild">removeChild()</a></code> の使い方を実演します。</p>
-<p>{{ 英語版章題("= Removing all children of an element =") }}</p>
-<h4 id=".E3.81.82.E3.82.8B.E8.A6.81.E7.B4.A0.E3.81.AE.E5.AD.90.E8.A6.81.E7.B4.A0.E3.82.92.E5.85.A8.E3.81.A6.E5.89.8A.E9.99.A4.E3.81.99.E3.82.8B" name=".E3.81.82.E3.82.8B.E8.A6.81.E7.B4.A0.E3.81.AE.E5.AD.90.E8.A6.81.E7.B4.A0.E3.82.92.E5.85.A8.E3.81.A6.E5.89.8A.E9.99.A4.E3.81.99.E3.82.8B">ある要素の子要素を全て削除する</h4>
+<h4 id="Removing_all_children_of_an_element">ある要素の子要素を全て削除する</h4>
 <p>この例では、id=<code>someElement</code> である要素の全ての子要素を現在のドキュメントから削除するために、<code><a href="ja/DOM/element.removeChild">removeChild()</a></code> メソッドを呼び出して子要素が全てなくなるまで最初の子要素を削除しています。</p>
 <p><code><a href="ja/DOM/element.hasChildNodes">hasChildNodes()</a></code> と <code><a href="ja/DOM/element.firstChild">firstChild</a></code> も DOM API の一部です。</p>
 <pre class="eval">var element = document.getElementById("someElement");
@@ -43,8 +38,7 @@ original_slug: Dynamically_modifying_XUL-based_user_interface
     element.removeChild(element.firstChild);
   }
 </pre>
-<p>{{ 英語版章題("= Inserting menu items to a menu =") }}</p>
-<h4 id=".E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.81.AB.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.82.A2.E3.82.A4.E3.83.86.E3.83.A0.E3.82.92.E6.8C.BF.E5.85.A5.E3.81.99.E3.82.8B" name=".E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.81.AB.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC.E3.82.A2.E3.82.A4.E3.83.86.E3.83.A0.E3.82.92.E6.8C.BF.E5.85.A5.E3.81.99.E3.82.8B">メニューにメニューアイテムを挿入する</h4>
+<h4 id="Inserting_menu_items_to_a_menu">メニューにメニューアイテムを挿入する</h4>
 <p>この例では <code><a href="ja/XUL/menupopup">&lt;menupopup&gt;</a></code> の最初と最後に二つの新しいメニューアイテムを追加します。アイテムを作成するのには <code><a href="ja/DOM/document.createElementNS">document.createElementNS()</a></code> メソッドを使用しており、作成された xml 要素を <code><a href="ja/DOM/element.insertBefore">insertBefore()</a></code> と <code><a href="ja/DOM/element.appendChild">appendChild()</a></code> を使ってドキュメントに挿入しています。</p>
 <p>注:</p>
 <ul>
@@ -67,8 +61,7 @@ popup.appendChild(last);
 <pre class="eval">popup.appendChild(first);
 </pre>
 <p>この文はノードをドキュメントの現在の位置から削除して、ポップアップの最後に再び挿入します。</p>
-<p>{{ 英語版章題("Anonymous content (XBL)") }}</p>
-<h3 id=".E5.8C.BF.E5.90.8D.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88_.28XBL.29" name=".E5.8C.BF.E5.90.8D.E3.82.B3.E3.83.B3.E3.83.86.E3.83.B3.E3.83.88_.28XBL.29">匿名コンテント (XBL)</h3>
+<h3 id="Anonymous_content_XBL">匿名コンテント (XBL)</h3>
 <p><a href="ja/XBL">XBL</a> は Mozilla で新しいウィジェットを定義するのに使用される言語です。XBL で定義されたウィジェットは、バインディングが設定される時に、バインドされた要素に挿入するコンテントを定義する事ができます。このコンテントは、
  <i>
   匿名コンテント</i>
@@ -82,8 +75,7 @@ document.getAnonymousElementByAttribute(node, "anonid", "el1");
 </pre>
 <p>より多くの情報を得るには XBL リファレンスの <a href="ja/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousNodes">getAnonymousNodes</a> と <a href="ja/XBL/XBL_1.0_Reference/DOM_Interfaces#getAnonymousElementByAttribute">getAnonymousElementByAttribute</a> を参照して下さい。</p>
 <p>匿名ノードを得さえすえば、通常の DOM メソッドを使ってバインディングの残りのノードを操作したり処理する事が出来ます。</p>
-<p>{{ 英語版章題("See also") }}</p>
-<h3 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h3>
+<h3 id="See_also">参照</h3>
 <ul>
  <li><a href="ja/XUL_Tutorial/Document_Object_Model">DOM についての関連する章</a></li>
  <li><a href="ja/XUL_Tutorial/Modifying_a_XUL_Interface">XUL チュートリアル: XUL インターフェイスを変更する</a></li>

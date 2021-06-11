@@ -6,57 +6,57 @@ tags:
   - Experimental
   - ExtendableEvent
   - Interface
+  - Offline
   - Reference
-  - Services Workers
+  - Service Workers
+  - ServiceWorker
+  - Workers
 translation_of: Web/API/ExtendableEvent
+browser-compat: api.ExtendableEvent
 ---
-<div>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("Service Workers API")}}</div>
 
-<p>L'interface <strong><code>ExtendableEvent</code></strong> étend la durée de vie des évènemets {{event("install")}} et {{event("activate")}} envoyés dans la portée global dans le cycle de vie du service worker. Elle s'assure que les évènements fonctionnels (comme {{domxref("FetchEvent")}}) ne sont pas distribués avant de mettre à jour les shémas de la base de données et de vider l'ancien cache.</p>
+<p>L'interface <strong><code>ExtendableEvent</code></strong> étend la durée de vie des événements <code><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event">install</a></code> et <code><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate</a></code> envoyés dans la portée globale dans le cycle de vie du service worker. Elle s'assure que les événements fonctionnels (comme <a href="/fr/docs/Web/API/FetchEvent"><code>FetchEvent</code></a>) ne soient pas distribués avant de mettre à jour les schémas de la base de données et de vider l'ancien cache.</p>
 
-<p>Si {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} est appelé en dehors du gestionnaire <code>ExtendableEvent</code>, le navigateur doit lever <code>InvalidStateError</code>; notez que plusieurs appels vont s'empiler, et que les promesses de résultat seront ajoutées à la liste des <a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises">promesses à vie étendue</a>.</p>
+<p>Si <a href="/fr/docs/Web/API/ExtendableEvent/waitUntil"><code>waitUntil()</code></a> est appelé en dehors du gestionnaire <code>ExtendableEvent</code>, le navigateur doit lever une exception <code>InvalidStateError</code> ; notez que plusieurs appels vont s'empiler, et que les promesses de résultat seront ajoutées à la liste des <a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises">promesses à vie étendue</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Le comportement décrit dans le paragraphe précédent a été corrigé dans Firefox 43 (voir {{bug(1180274)}}).</p>
+<p><strong>Note</strong>: Le comportement décrit dans le paragraphe précédent a été corrigé dans Firefox 43 (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180274">le bug 1180274</a>).</p>
 </div>
 
-<p>Cette interface hérite de l'interface {{domxref("Event")}}.</p>
+<p>Cette interface hérite de l'interface <a href="/fr/docs/Web/API/Event"><code>Event</code></a>.</p>
 
 <p>{{InheritanceDiagram(700, 60, 20)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: Cette interface est disponnible seulement quand la portée globale est {{domxref("ServiceWorkerGlobalScope")}}. Elle n'est pas disponible quand c'est une {{domxref("Window")}}, ou le scope d'un autre genre de worker.</p>
+<p><strong>Note</strong>: Cette interface est disponible seulement quand la portée globale est <a href="/fr/docs/Web/API/ServiceWorkerGlobalScope"><code>ServiceWorkerGlobalScope</code></a>. Elle n'est pas disponible quand c'est un objet <a href="/fr/docs/Web/API/Window"><code>Window</code></a> ou un autre type de worker.</p>
 </div>
 
-<h2 id="Constructeur">Constructeur</h2>
+<h2 id="constructor">Constructeur</h2>
 
 <dl>
- <dt>{{domxref("ExtendableEvent.ExtendableEvent()", "ExtendableEvent()")}}</dt>
- <dd>Crée un nouvel object <code>ExtendableEvent</code>.</dd>
+ <dt><a href="/fr/docs/Web/API/ExtendableEvent/ExtendableEvent"><code>ExtendableEvent()</code></a></dt>
+ <dd>Crée un nouvel objet <code>ExtendableEvent</code>.</dd>
 </dl>
 
-<h2 id="Propriétés">Propriétés</h2>
+<h2 id="properties">Propriétés</h2>
 
-<p>N'implémente pas de propriétés spécifiques, mais hérite celles de sont parent, <em>{{domxref("Event")}}.</em></p>
+<p>N'implémente pas de propriétés spécifiques, mais hérite de celles de son parent, <em><a href="/fr/docs/Web/API/Event"><code>Event</code></a>.</em></p>
 
-<h2 id="Méthodes">Méthodes</h2>
+<h2 id="methods">Méthodes</h2>
 
-<p>Hérite des méthodes de son parent <em>{{domxref("Event")}}.</em></p>
+<p>Hérite des méthodes de son parent <em><a href="/fr/docs/Web/API/Event"><code>Event</code></a>.</em></p>
 
 <dl>
- <dt>{{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}</dt>
- <dd>Étend la durée de vie de l'évènement. Cette méthode doit être appelée dans {{event("install")}}{{event("Event_handlers", "event handler")}} pour le worker {{domxref("ServiceWorkerRegistration.installing", "installing")}} et dans {{event("active")}} {{event("Event_handlers", "event handler")}} pour le worker {{domxref("ServiceWorkerRegistration.active", "active")}}. </dd>
+ <dt><a href="/fr/docs/Web/API/ExtendableEvent/waitUntil"><code>ExtendableEvent.waitUntil()</code></a></dt>
+ <dd>Étend la durée de vie de l'évènement. Cette méthode doit être appelée dans le gestionnaire d'évènement <code><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event">install</a></code> pour le worker en cours d'installation (voir <a href="/fr/docs/Web/API/ServiceWorkerRegistration/installing"><code>installing</code></a>) et dans le gestionnaire d'évènement <code><a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event">activate</a></code> pour le worker actif (voir <a href="/fr/docs/Web/API/ServiceWorkerRegistration/active"><code>active</code></a>).</dd>
 </dl>
 
-<h2 id="Exemples">Exemples</h2>
+<h2 id="examples">Exemples</h2>
 
-<p>Ce fragment de code est tiré de <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">l'exemple de lecture du service worker</a> (voir <a href="https://googlechrome.github.io/samples/service-worker/prefetch/">l'exemple en live</a>). Ce code appelle {{domxref("ExtendableEvent.waitUntil()")}} dans {{domxref("ServiceWorkerGlobalScope.oninstall")}}, retartant le traitement du worker {{domxref("ServiceWorkerRegistration.installing")}} après l'installation jusqu'à ce que la promesse se résolve. La promesse se résoud quand toutes les ressources ont été récupérés et mises en cache, ou quand une exception est lévée.</p>
+<p>Ce fragment de code est tiré de <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js">l'exemple du service worker utilisant prefetch</a> (voir <a href="https://googlechrome.github.io/samples/service-worker/prefetch/">l'exemple en live</a>). Ce code appelle <a href="/fr/docs/Web/API/ExtendableEvent/waitUntil"><code>ExtendableEvent.waitUntil()</code></a> dans le gestionnaire d'évènement <a href="/fr/docs/Web/API/ServiceWorkerGlobalScope/oninstall"><code>ServiceWorkerGlobalScope.oninstall</code></a>, retardant le traitement du worker <a href="/fr/docs/Web/API/ServiceWorkerRegistration/installing"><code>ServiceWorkerRegistration.installing</code></a> après l'installation jusqu'à ce que la promesse se résolve. La promesse se résout quand toutes les ressources ont été récupérées et mises en cache, ou quand une exception est levée.</p>
 
-<p>Ce fragent de code montre aussi une bonne pratique pour construire des versions de cache utilisé par le service worker. Même s'il n'y a qu'un cache dans cet exemple, la même approche peut être utilisée pour plusieurs caches. Il lie un identifiant court pour un cache avec un nom de cache spécifique et versionné. </p>
-
-<div class="note">
-<p><strong>Note</strong>: Dans Chrome, les messages de logging sont visible dans l'interface "Inspect" pour le service worker concerné, accessible via chrome://serviceworker-internals.</p>
-</div>
+<p>Ce fragment de code montre aussi une bonne pratique pour construire des versions de cache utilisées par le service worker. Même s'il n'y a qu'un cache dans cet exemple, la même approche peut être utilisée pour plusieurs caches. Il lie un identifiant court pour un cache avec un nom de cache spécifique et versionné.</p>
 
 <pre class="brush: js">var CACHE_VERSION = 1;
 var CURRENT_CACHES = {
@@ -85,17 +85,19 @@ self.addEventListener('install', function(event) {
   );
 });</pre>
 
-<div class="note"><strong>Important</strong>: Au moment du chargement des ressources, il est très important d'utiliser <code>{mode: 'no-cors'}</code> s'il y a une chance que la ressource soit servie depuis un serveur qui ne supporte pas le <a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">CORS</a>. Dans cet exemple, <a href="http://www.chromium.org">www.chromium.org</a> ne support pas le CORS.</div>
+<div class="note"><strong>Important</strong> : Au moment du chargement des ressources, il est très important d'utiliser <code>{mode: 'no-cors'}</code> s'il y a une chance que la ressource soit servie depuis un serveur qui ne supporte pas le <a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">CORS</a>. Dans cet exemple, <a href="https://www.chromium.org">www.chromium.org</a> ne prend pas en charge le CORS.</div>
 
-<h2 id="Spécifications">Spécifications</h2>
+<h2 id="specifications">Spécifications</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Spécification</th>
    <th scope="col">Statut</th>
    <th scope="col">Commentaire</th>
   </tr>
+ </thead>
+ <tbody>
   <tr>
    <td>{{SpecName('Service Workers', '#extendable-event', 'ExtendableEvent')}}</td>
    <td>{{Spec2('Service Workers')}}</td>
@@ -104,16 +106,16 @@ self.addEventListener('install', function(event) {
  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-<p>{{Compat("api.ExtendableEvent")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="see_also">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
- <li><a class="external external-icon" href="https://github.com/mdn/sw-test">Code de base d'un service workers</a></li>
- <li><a class="external external-icon" href="https://jakearchibald.github.io/isserviceworkerready/">Est-ce que les ServiceWorker sont prêt ?</a></li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Performance/Using_web_workers">Utilisation performate des web workers</a></li>
+ <li><a href="/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
+ <li><a href="https://github.com/mdn/sw-test">Un exemple de base pour un service worker</a></li>
+ <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Peut-on utiliser les service workers ?</a></li>
+ <li><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a></li>
+ <li><a href="/fr/docs/Web/Guide/Performance/Using_web_workers">Utiliser les web workers</a></li>
 </ul>
