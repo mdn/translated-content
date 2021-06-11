@@ -93,11 +93,15 @@ translation_of: Web/HTML/Element/a
  </ul>
 
  <div class="note">
- <p><strong>Uwaga:</strong> Podczas używania <code>target</code>, rozważ dodanie <code>rel="noreferrer"</code>, aby uniknąć wykorzystania API <code>window.opener</code>.</p>
+ <p><strong>Uwaga:</strong> Podczas linkowania do innej strony, rozważ dodanie <code>rel="noreferrer"</code>, aby strona, na którą kieruje cię dany link nie wiedziała, że 'przyszedłeś' ze strony gdzie kliknąłeś link.</p>
  </div>
 
  <div class="note">
- <p><strong>Uwaga:</strong> Linkowanie do innej strony przy użyciu <code>target="_blank"</code> uruchomi nową stronę na tym samym procesie co Twoja strona. Jeśli nowa strona wykonuje duże skrypty JS, wydajność Twojej strony może ucierpieć. Aby tego uniknąć, użyj <code>rel="noopener"</code>.</p>
+ <p><strong>Uwaga:</strong> Podczas linkowania do innej strony, z atrybutem <code>target="_blank"</code>, rozważ dodanie atrybutu <code>rel="noopener"</code>, dzięki temu strona na którą kieruje cie dany link, nie będzię mogła zmienić url strony, z której kliknąłeś ten link!</p>
+ </div>
+   
+ <div class="note">
+   <p><strong>Ciekawostka:</strong> Możesz też użyć atrybutu <code>rel="nofollow"</code>, który zapobiega śledzeniu tego linku podczas np. indeksowania/sprawdzania strony przez Googla czy inne boty sprawdzające treść na danej stronie <br/> Więcej znajdziesz <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types">TUTAJ</a></p>
  </div>
  </dd>
  <dt>{{HTMLAttrDef("type")}}</dt>
