@@ -2,34 +2,32 @@
 title: '<dfn>: 定義要素'
 slug: Web/HTML/Element/dfn
 tags:
+  - Definition
+  - Definitions
+  - Element
   - HTML
-  - HTML 文字レベルの意味付け
-  - 'HTML:フローコンテンツ'
-  - 'HTML:知覚可能コンテンツ'
-  - 'HTML:記述コンテンツ'
+  - HTML text-level semantics
   - Reference
-  - ウェブ
-  - リファレンス
-  - 要素
+  - Semantic Markup
+  - Web
+  - dfn
 translation_of: Web/HTML/Element/dfn
 ---
 <div>{{HTMLRef}}</div>
 
 <p><span class="seoSummary"><strong>HTML の定義要素</strong> (<strong><dfn>&lt;dfn&gt;</dfn></strong>) は、定義句や文の文脈の中で定義している用語を示すために用いられます。</span> <code>&lt;dfn&gt;</code> の直近の祖先である {{HTMLElement("p")}} 要素、 {{HTMLElement("dt")}}/{{HTMLElement("dd")}} の組み合わせ、 {{HTMLElement("section")}} 要素が用語の定義とみなされます。</p>
 
-<div>{{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-standard")}}</div>
-
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+<div>{{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}</div>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>, 知覚可能コンテンツ</td>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>, <a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>, 知覚可能コンテンツ</td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>、ただし {{HTMLElement("dfn")}} 要素を子孫にしてはいけません。</td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>、ただし {{HTMLElement("dfn")}} 要素を子孫にしてはいけません。</td>
   </tr>
   <tr>
    <th scope="row">タグの省略</th>
@@ -37,7 +35,11 @@ translation_of: Web/HTML/Element/dfn
   </tr>
   <tr>
    <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>を受け入れるすべての要素</td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素</td>
+  </tr>
+  <tr>
+   <th scope="row">暗黙の ARIA ロール</th>
+   <td>{{ARIARole("term")}}</td>
   </tr>
   <tr>
    <th scope="row">許可されている ARIA ロール</th>
@@ -50,17 +52,17 @@ translation_of: Web/HTML/Element/dfn
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
 <p>この要素の属性は<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>を含みます。</p>
 
 <p>HTML5 においては、この要素の {{htmlattrxref("title")}} 属性は後述のとおり、通常と異なる特別な意味合いを持ちます。</p>
 
-<h2 id="Usage_notes" name="Usage_notes">使用上のメモ</h2>
+<h2 id="Usage_notes">使用上のメモ</h2>
 
 <p><code>&lt;dfn&gt;</code> 要素の使用については、完全に明らかになっていない側面がいくつかあります。ここでそれらを説明します。</p>
 
-<h3 id="Specifying_the_term_being_defined" name="Specifying_the_term_being_defined">定義される用語の指定</h3>
+<h3 id="Specifying_the_term_being_defined">定義される用語の指定</h3>
 
 <p>定義される用語は、以下の規則に従います。</p>
 
@@ -74,32 +76,19 @@ translation_of: Web/HTML/Element/dfn
 <p>もし <code>&lt;dfn&gt;</code> 要素に <code>title</code> 属性があれば、それが定義する用語であり、それ以外の文字列ではありません。</p>
 </div>
 
-<h3 id="&lt;dfn>_要素へのリンク"><code>&lt;dfn&gt;</code> 要素へのリンク</h3>
+<h3 id="Links_to_&lt;dfn&gt;_elements"><code>&lt;dfn&gt;</code> 要素へのリンク</h3>
 
 <p><code>&lt;dfn&gt;</code> 要素に {{htmlattrxref("id")}} 属性をつけた場合は、 {{HTMLElement("a")}} 要素を使用してそこにリンクすることができます。用語の使用時にはそのようなリンクを使用して、用語のリンクをクリックすることで読者が用語の定義にすばやく移動できるようにしてください。</p>
 
 <p>これは以下の{{anch("Links to definitions", "定義へのリンク")}}の例で示します。</p>
 
-<h2 id="Usage_notes_2" name="Usage_notes_2">使用上の注意</h2>
-
-<ul>
- <li><code>&lt;dfn&gt;</code> 要素は定義される用語を示すものです。用語の定義はその要素を含んでいる {{HTMLElement("p")}}, {{HTMLElement("section")}}, または定義リスト関連要素 (ふつうは {{HTMLElement("dt")}} と {{HTMLElement("dd")}} の組) の中で行ってください。</li>
- <li>定義される用語の値は、次の規則で決定されます。
-  <ol>
-   <li><code>&lt;dfn&gt;</code> 要素に {{htmlattrxref("title")}} 属性がある場合は、その属性値が用語です。</li>
-   <li>そうではなく、 {{htmlattrxref("title")}} 属性を持つ {{HTMLElement("abbr")}} 要素のみを含む場合は、そちらの title 属性の値が用語です。これは後述の {{anch("Using abbreviations and definitions together", "略語と定義の両方の使用")}}で示します。</li>
-   <li>それ以外の場合、<code>&lt;dfn&gt;</code> 要素が含む文字列コンテンツが用語です。</li>
-  </ol>
- </li>
-</ul>
-
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
 <p>様々な利用シナリオの例をいくつか見てみましょう。</p>
 
-<h3 id="Basic_identification_of_a_term" name="Basic_identification_of_a_term">基本的な用語の識別</h3>
+<h3 id="Basic_identification_of_a_term">基本的な用語の識別</h3>
 
-<p>この例は単に、定義の中の用語の位置を識別するために素の <code>&lt;dfn&gt;</code> 要素を使用しています。</p>
+<p>この例は、定義の中の用語の位置を識別するために素の <code>&lt;dfn&gt;</code> 要素を使用しています。</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -110,13 +99,13 @@ sentence.&lt;/p&gt;</pre>
 
 <p><code>&lt;dfn&gt;</code> 要素に <code>title</code> がないので、 <code>&lt;dfn&gt;</code> 要素自身の文字列コンテンツが定義される用語として使用されます。</p>
 
-<h4 id="Result" name="Result">結果</h4>
+<h4 id="Result">結果</h4>
 
 <p>このブラウザーでは、このように描画されます。</p>
 
 <p>{{EmbedLiveSample("Basic_identification_of_a_term", 650, 120)}}</p>
 
-<h3 id="Links_to_definitions" name="Links_to_definitions">定義へのリンク</h3>
+<h3 id="Links_to_definitions">定義へのリンク</h3>
 
 <p>定義へのリンクを追加するには、いつも通りの方法で {{HTMLElement("a")}} 要素を使ってリンクを作成します。</p>
 
@@ -145,13 +134,13 @@ this project.&lt;/p&gt;</pre>
 
 <p>ここで {{htmlattrxref("id")}} 属性の <code>"definition-dfn"</code> の値をリンク先として使用して、定義を見ることができます。その後で、 <code>&lt;a&gt;</code> の {{htmlattrxref("href", "a")}} 属性を <code>"#definition-dfn"</code> に設定して、定義に戻るリンクを設定します。</p>
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+<h4 id="Result_2">結果</h4>
 
 <p>結果のコンテンツはこのようになります。</p>
 
 <p>{{EmbedLiveSample("Links_to_definitions", 650, 300)}}</p>
 
-<h3 id="Using_abbreviations_and_definitions_together" name="Using_abbreviations_and_definitions_together">略語と定義の両方の使用</h3>
+<h3 id="Using_abbreviations_and_definitions_together">略語と定義の両方の使用</h3>
 
 <p>場合によっては、用語を定義する際に略語を使用したくなる場合もあるでしょう。これは <code>&lt;dfn&gt;</code> と {{HTMLElement("abbr")}} 要素を組み合わせて、このように実現できます。</p>
 
@@ -168,13 +157,13 @@ arguably done more to advance science than any device ever built.&lt;/p&gt;</pre
 
 <p><code>&lt;abbr&gt;</code> 要素が <code>&lt;dfn&gt;</code> の中で入れ子になっています。前者は用語が略語 ("HST") であることを示し、完全な用語 ("Hubble Space Telescope") を <code>title</code> 属性で定義します。後者は略語が定義される用語であることを表します。</p>
 
-<h4 id="Result_3" name="Result_3">結果</h4>
+<h4 id="Result_3">結果</h4>
 
 <p>上記のコードの出力はこのようになります。</p>
 
 <p>{{EmbedLiveSample("Using_abbreviations_and_definitions_together", 650, 200)}}</p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -188,30 +177,26 @@ arguably done more to advance science than any device ever built.&lt;/p&gt;</pre
   <tr>
    <td>{{SpecName('HTML WHATWG', 'semantics.html#the-dfn-element', '&lt;dfn&gt;')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
-   <td>{{SpecName('HTML5 W3C', 'text-level-semantics.html#the-dfn-element', '&lt;dfn&gt;')}}</td>
+   <td>{{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-dfn-element', '&lt;dfn&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;dfn&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
-
-<div>
-<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("html.elements.dfn")}}</p>
-</div>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>定義リスト関連要素: {{HTMLElement("dl")}}, {{HTMLElement("dt")}}, {{HTMLElement("dd")}}</li>
