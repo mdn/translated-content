@@ -20,15 +20,15 @@ TypeError: setting getter-only property "x" (Firefox)
 TypeError: Cannot set property "prop" of #&lt;Object&gt; which has only a getter (Chrome)
 </pre>
 
-<h2 id="エラータイプ">エラータイプ</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p><a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>でのみ、{{jsxref("TypeError")}}。</p>
 
-<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p><a href="/ja/docs/Web/JavaScript/Reference/Functions/get">ゲッター</a>のみが定義されているプロパティに、新しい値を設定しようとしています。非 strict モードでは暗黙裡に無視されるだけですが、 <a href="/ja/docs/Web/JavaScript/Reference/Strict_mode">strict モード</a>では {{jsxref("TypeError")}} が発生します。</p>
 
-<h2 id="例">例</h2>
+<h2 id="Examples">例</h2>
 
 <h3 id="Property_with_no_setter">セッターのないプロパティ</h3>
 
@@ -80,7 +80,7 @@ arc.temperature = 11;
 arc.temperature = 13;
 arc.getArchive(); // [{ val: 11 }, { val: 13 }]</pre>
 
-<h2 id="関連項目">関連項目</h2>
+<h2 id="See_also">関連項目</h2>
 
 <ul>
   <li>{{jsxref("Object.defineProperty()")}}</li>
