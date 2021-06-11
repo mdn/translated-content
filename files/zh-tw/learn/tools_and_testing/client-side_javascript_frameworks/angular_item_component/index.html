@@ -145,18 +145,19 @@ Angular使用 <code>\{{item.description}}</code> 從 <code>items</code> 陣列�
 簡單來說，<code>splice()</code> 方法從陣列中刪除了該項目。 <code>splice()</code> 的更多訊息請參閱 MDN Web 文章：<a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.prototype.splice()</code></a>。</p>
   
 
-<h2 id="add_logic_to_itemcomponent-">Add logic to ItemComponent</h2>
+<h2 id="add_logic_to_itemcomponent-">在 ItemComponent 添加邏輯</h2>
 
-<p>To use the <code>ItemComponent</code> UI, you must add logic to the component such as functions, and ways for data to go in and out.</p>
+<p>使用 <code>ItemComponent</code> UI， 你必須在元件中添加邏輯，就跟在 function 中寫輸入與輸出的方式一樣。</p>
 
-<p>In <code>item.component.ts</code>, edit the JavaScript imports as follows:</p>
+<p>在 <code>item.component.ts</code>，引入 JavaScript，如下所示：</p>
 
 <pre class="brush: js">import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Item } from "../item";</pre>
 
-<p>The addition of <code>Input</code>, <code>Output</code>, and <code>EventEmitter</code> allows <code>ItemComponent</code> to share data with <code>AppComponent</code>.
-By importing <code>Item</code>, <code>ItemComponent</code> can understand what an <code>item</code> is.</p>
-<p>Further down <code>item.component.ts</code>, replace the generated <code>ItemComponent</code> class with the following:</p>
+<p>加入 <code>Input</code> ， <code>Output</code>,和 <code>EventEmitter</code> 使 <code>ItemComponent</code> 可以與 <code>AppComponent</code> 共享數據，
+透過匯入 <code>Item</code> ， 就可以知道在 <code>ItemComponent</code> 的 <code>item</code> 為何。</p>
+
+<p>繼續看 <code>item.component.ts</code> ，把生成的 <code>ItemComponent</code> 替換成以下內容：</p>
 
 <pre class="brush: js">export class ItemComponent {
 
@@ -173,37 +174,28 @@ By importing <code>Item</code>, <code>ItemComponent</code> can understand what a
   }
 }</pre>
 
-<p>The <code>editable</code> property helps toggle a section of the template where a user can edit an item.
-<code>editable</code> is the same property in the HTML as in the <code>*ngIf</code> statement, <code>*ngIf=&quot;editable&quot;</code>.
-When you use a property in the template, you must also declare it in the class.</p>
+<p><code>editable</code> 屬性有助於切換模板，讓使用者可以編輯其項目。HTML中的 <code>editable</code> 屬性與 <code>*ngIf</code> 語句中的屬性相同， <code>*ngIf=&quot;editable&quot;</code>。當你在模板使用此屬性時，你也必須在class中宣告它。</p>
 
-<p><code>@Input()</code>, <code>@Output()</code>, and <code>EventEmitter</code> facilitate communication between your two components.
-An <code>@Input()</code> serves as a doorway for data to come into the component, and an <code>@Output()</code> acts as a doorway for data to go out of the component.
-An <code>@Output()</code> has to be of type <code>EventEmitter</code>, so that a component can raise an event when there&#39;s data ready to share with another component.</p>
+<p><code>@Input()</code> ， <code>@Output()</code> 和 <code>EventEmitter</code> 促進兩個元件中的溝通，一個 <code>@Output()</code> 服務元件做為資料傳進的入口，然後一個 <code>@Output()</code> 是將元件資料傳到外層。<code>@Output()</code> 必須是 <code>EventEmitter</code> 的類型，資料可以透過事件分享至其他組件。</p>
 
-<p>Use <code>@Input()</code> to specify that the value of a property can come from outside of the component.
-Use <code>@Output()</code> in conjunction with <code>EventEmitter</code> to specify that the value of a property can leave the component so that another component can receive that data.</p>
+<p>使用 <code>@Input()</code>指定外部元件要傳進之屬性的值，將 <code>@Output()</code> 與 <code>EventEmitter</code> 結合使用可將該元件指定屬性的值傳出，使得另一個元件可以接收其資料。</p>
 
-<p>The <code>saveItem()</code> method takes as an argument a <code>description</code>.
-The <code>description</code> is the text that the user enters into the HTML <code>&lt;input&gt;</code> when editing an item in the list.
-This <code>description</code> is the same string from the <code>&lt;input&gt;</code> with the <code>#editedItem</code> template variable.</p>
+<p><code>saveItem()</code> 方法是在 <code>description</code> 取得一個引數，此<code>description</code> 為使用者輸入 HTML 的 <code>&lt;input&gt;</code> 標籤編輯清單的項目時的文字，
+此 <code>description</code> 與 <code>&lt;input&gt;</code> 中帶有 <code>#editedItem</code> 範本變數的字符串相同。</p>
 
-<p>If the user doesn&#39;t enter a value but clicks <strong>Save</strong>, <code>saveItem()</code> returns nothing and does not update the <code>description</code>.
-If you didn&#39;t have this <code>if</code> statement, the user could click <strong>Save</strong> with nothing in the HTML <code>&lt;input&gt;</code>, and the <code>description</code> would become an empty string.</p>
+<p>如果使用者沒有輸入任何的值但點擊 <strong>Save</strong> 時，<code>saveItem()</code> 不會回傳任何東西與更新 <code>description</code>。如果你沒有用 <code>if</code> ，使用者就可以在 HTML 的 <code>&lt;input&gt;</code> 沒有值的時候點擊 <strong>Save</strong>，並且 <code>description</code> 會是空字串。</p>
 
-<p>If a user enters text and clicks save, <code>saveItem()</code> sets <code>editable</code> to false, which causes the <code>*ngIf</code> in the template to remove the edit feature and render the <strong>Edit</strong> and <strong>Delete</strong> buttons again.</p>
+<p>如果使用者輸入文字並點擊儲存， <code>saveItem()</code> 會設定 <code>editable</code> 是 false，這會導致模板中的<code>*ngIf</code> 移除編輯功能並重新渲染 <strong>Edit</strong> 跟 <strong>Delete</strong> 的按鈕</p>
 
-<p>Though the application should compile at this point, you need to use the <code>ItemComponent</code> in <code>AppComponent</code> so you can see the new features in the browser.</p>
+<p>儘管程式現在可以編譯，你必須在 <code>AppComponent</code> 中使用 <code>ItemComponent</code> 才能在瀏覽器看到新功能。</p>
 
-<h2 id="use_the_itemcomponent_in_the_appcomponent">Use the ItemComponent in the AppComponent</h2>
+<h2 id="use_the_itemcomponent_in_the_appcomponent">在 AppComponent 中使用 ItemComponent</h2>
 
-<p>Including one component within another in the context of a parent-child relationship gives you the flexibility of using components wherever you need them.</p>
+<p>在父子關係的情境下，可將一個組件包含在另一個組件中，讓您靈活地使用它們。</p>
 
-<p>The <code>AppComponent</code> serves as a shell for the application where you can include other components.</p>
+<p><code>AppComponent</code> 就像個應用程式的外殼，可在內部加入其他元件</p>
 
-<p>To use the <code>ItemComponent</code> in <code>AppComponent</code>, put the <code>ItemComponent</code> selector in the <code>AppComponent</code> template.
-Angular specifies the selector of a component in the metadata of the <code>@Component()</code> decorator.
-In this example, the selector is <code>app-item</code>:</p>
+<p>要在 <code>AppComponent</code> 中使用 <code>ItemComponent</code>，需將 <code>ItemComponent</code> 選擇器放到 <code>AppComponent</code> 中。Angular 在元件共享數據的元件中使用 <code>@Component()</code> 裝飾器，此選擇器為 <code>app-item</code>:</p>
 
 <pre class="brush: js">@Component({
   selector: 'app-item',
@@ -211,8 +203,7 @@ In this example, the selector is <code>app-item</code>:</p>
   styleUrls: ['./item.component.css']
 })</pre>
 
-<p>To use the <code>ItemComponent</code> selector within the <code>AppComponent</code>, you add the element, <code>&lt;app-item&gt;</code>, which corresponds to the selector you defined for the component class to <code>app.component.html</code>.
-Replace the current unordered list in <code>app.component.html</code> with the following updated version:</p>
+<p>要在 <code>AppComponent</code> 中使用 <code>ItemComponent</code> 選擇器時，你要增加元素 <code>&lt;app-item&gt;</code>，它對應你在 <code>app.component.html</code> 中對元件類別定義的選擇器。用以下更新的版本替換在 <code>app.component.html</code> 中未排序清單:</p>
 
 <pre class="brush: html">&lt;h2&gt;\{{items.length}} &lt;span *ngIf="items.length === 1; else elseBlock"&gt;item&lt;/span&gt;
 &lt;ng-template #elseBlock&gt;items&lt;/ng-template&gt;&lt;/h2&gt;
@@ -223,28 +214,17 @@ Replace the current unordered list in <code>app.component.html</code> with the f
   &lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<p>The double curly brace syntax, <code>\{{}}</code>, in the <code>&lt;h2&gt;</code> interpolates the length of the <code>items</code> array and displays the number.</p>
+<p>雙括號 <code>\{{}}</code>，在 <code>&lt;h2&gt;</code> 內顯示 <code>items</code> 的長度與數目。</p>
 
-<p>The <code>&lt;span&gt;</code> in the <code>&lt;h2&gt;</code> uses an <code>*ngIf</code> and <code>else</code> to determine whether the <code>&lt;h2&gt;</code> should say &quot;item&quot; or &quot;items&quot;.
-If there is only a single item in the list, the <code>&lt;span&gt;</code> containing &quot;item&quot; displays.
-Otherwise, if the length of the <code>items</code> array is anything other than <code>1</code>, the <code>&lt;ng-template&gt;</code>, which we&#39;ve named <code>elseBlock</code>, with the syntax <code>#elseBlock</code>, shows instead of the <code>&lt;span&gt;</code>.
-You can use Angular&#39;s <code>&lt;ng-template&gt;</code> when you don&#39;t want content to render by default.
-In this case, when the length of the <code>items</code> array is not <code>1</code>, the <code>*ngIf</code> shows the <code>elseBlock</code> and not the <code>&lt;span&gt;</code>.</p>
+<p>在 <code>&lt;h2&gt;</code> 中 <code>&lt;span&gt;</code> 使用 <code>*ngIf</code> 與 <code>else</code> 決定 <code>&lt;h2&gt;</code> 是否要呈現 &quot;item&quot; 或 &quot;items&quot;。如果在列表中只有一個項目， 則 <code> 會顯示包含 <code>&lt;span&gt;</code> 的內容。當<code>items</code> 陣列不等於 <code>1</code> 時，被我們命名為 <code>elseBlock</code> 的 <code>&lt;ng-template&gt;</code>，將顯示 <code>#elseBlock</code>，而不是 <code>&lt;span&gt;</code>。當您不想內容在預設渲染的時候，可以使用 Angular 的 <code>&lt;ng-template&gt;</code> ，因 #elseBlock 不是 <code>&lt;span&gt;</code>，是使用 <code>&lt;ng-template&gt;</code>。在此範例中，若 <code>item</code> 陣列長度不是 <code>1</code> ，則 <code>*ngIf</code> 會顯示 <code>elseBlock</code> 而不顯示 <code>&lt;span&gt;</code>。</code> 
 
-<p>The <code>&lt;li&gt;</code> uses Angular&#39;s repeater directive, <code>*ngFor</code>, to iterate over all of the items in the <code>items</code> array.
-Angular&#39;s <code>*ngFor</code> like <code>*ngIf</code>, is another directive that helps you change the structure of the DOM while writing less code.
-For each <code>item</code>, Angular repeats the <code>&lt;li&gt;</code> and everything within it, which includes <code>&lt;app-item&gt;</code>.
-This means that for each item in the array, Angular creates another instance of <code>&lt;app-item&gt;</code>.
-For any number of items in the array, Angular would create that many <code>&lt;li&gt;</code> elements.</p>
+<p>在 <code>&lt;li&gt;</code> 使用 Angular 的結構型指令 <code>*ngFor</code> 會在 <code>items</code>陣列迭代所有的項目，Angular 的 <code>*ngFor</code> 與 <code>*ngIf</code> 指令相似，是另一個可以協助你用更少的程式碼改變 DOM 元素架構，每一個 <code>item</code>，Angular 會重複 <code>&lt;li&gt;</code> 與其所有的內容，其中包含  <code>&lt;app-item&gt;</code>。這代表 Angular 為陣列中的每一個項目建立另一個 <code>&lt;app-item&gt;</code> 實體。Angular 會建立與 <code>items</code> 陣列中的數量相同的項目的 <code>&lt;li&gt;</code> 元素。</p>
 
-<p>You can use an <code>*ngFor</code> on other elements, too, such as <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, or <code>&lt;p&gt;</code>, to name a few.</p>
+<p>您可使用 <code>*ngFor</code> 在其他的元素上，像是在 <code>&lt;div&gt;</code>、<code>&lt;span&gt;</code> 或是 <code>&lt;p&gt;</code>，以此類推。</p>
 
-<p>The <code>AppComponent</code> has a <code>remove()</code> method for removing the item, which is bound to the <code>remove</code> property in the <code>ItemComponent</code>.
-The <code>item</code> property in the square brackets, <code>[]</code>, binds the value of <code>item</code> between the <code>AppComponent</code> and the <code>ItemComponent</code>.</p>
+<p>在 <code>AppComponent</code> 有一個移除項目的 <code>remove()</code> 的方法，是綁定 <code>ItemComponent</code> 中 remove 的屬性，此 <code>item</code> 屬性是在中括號內 <code>[]</code>,用來綁定 <code>item</code> 在 <code>AppComponent</code> 與 <code>ItemComponent</code> 之間的值。</p>
 
-<p>Now you should be able to edit and delete items from the list.
-When you add or delete items, the count of the items should also change.
-To make the list more user-friendly, add some styles to the <code>ItemComponent</code>.</p>
+<p>現在你應該知道如何編輯和刪除在列表中的項目。當你新增或刪除項目時，項目的數量也會更動，為了使列表更易於使用，請在 <code>ItemComponent</code> 中新增些樣式。</p>
 
 <h2 id="add_styles_to_itemcomponent-">為 ItemComponent 添加樣式</h2>
 

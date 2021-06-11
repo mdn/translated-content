@@ -1020,7 +1020,7 @@
 /fr/docs/DOM/element.setAttributeNS	/fr/docs/Web/API/Element/setAttributeNS
 /fr/docs/DOM/element.setAttributeNode	/fr/docs/Web/API/Element/setAttributeNode
 /fr/docs/DOM/element.setAttributeNodeNS	/fr/docs/Web/API/Element/setAttributeNodeNS
-/fr/docs/DOM/element.style	/fr/docs/Web/API/ElementCSSInlineStyle/style
+/fr/docs/DOM/element.style	/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /fr/docs/DOM/element.tabIndex	/fr/docs/Web/API/HTMLOrForeignElement/tabIndex
 /fr/docs/DOM/element.tagName	/fr/docs/Web/API/Element/tagName
 /fr/docs/DOM/element.textContent	/fr/docs/Web/API/Node/textContent
@@ -1179,7 +1179,7 @@
 /fr/docs/DOM:element.setAttributeNS	/fr/docs/Web/API/Element/setAttributeNS
 /fr/docs/DOM:element.setAttributeNode	/fr/docs/Web/API/Element/setAttributeNode
 /fr/docs/DOM:element.setAttributeNodeNS	/fr/docs/Web/API/Element/setAttributeNodeNS
-/fr/docs/DOM:element.style	/fr/docs/Web/API/ElementCSSInlineStyle/style
+/fr/docs/DOM:element.style	/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /fr/docs/DOM:element.tabIndex	/fr/docs/Web/API/HTMLOrForeignElement/tabIndex
 /fr/docs/DOM:element.tagName	/fr/docs/Web/API/Element/tagName
 /fr/docs/DOM:element.textContent	/fr/docs/Web/API/Node/textContent
@@ -1481,11 +1481,11 @@
 /fr/docs/Glossaire/GPL	/fr/docs/Glossary/GPL
 /fr/docs/Glossaire/GPU	/fr/docs/Glossary/GPU
 /fr/docs/Glossaire/GZip_compression	/fr/docs/Glossary/GZip_compression
-/fr/docs/Glossaire/Gaia	/fr/docs/Glossary/Gaia
+/fr/docs/Glossaire/Gaia	/fr/docs/orphaned/Glossary/Gaia
 /fr/docs/Glossaire/Gecko	/fr/docs/Glossary/Gecko
 /fr/docs/Glossaire/General_header	/fr/docs/Glossary/General_header
 /fr/docs/Glossaire/Glyphe	/fr/docs/Glossary/Glyph
-/fr/docs/Glossaire/Gonk	/fr/docs/Glossary/Gonk
+/fr/docs/Glossaire/Gonk	/fr/docs/orphaned/Glossary/Gonk
 /fr/docs/Glossaire/Google_Chrome	/fr/docs/Glossary/Google_Chrome
 /fr/docs/Glossaire/Graceful_degradation	/fr/docs/Glossary/Graceful_degradation
 /fr/docs/Glossaire/Grid	/fr/docs/Glossary/Grid
@@ -1798,6 +1798,8 @@
 /fr/docs/Glossary/Accessibilité	/fr/docs/Glossary/Accessibility
 /fr/docs/Glossary/Attribut	/fr/docs/Glossary/Attribute
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
+/fr/docs/Glossary/Gaia	/fr/docs/orphaned/Glossary/Gaia
+/fr/docs/Glossary/Gonk	/fr/docs/orphaned/Glossary/Gonk
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/orphaned/Glossary/Modern_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
@@ -3591,7 +3593,9 @@
 /fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria	/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 /fr/docs/Web/API/API_IndexedDB/Using_IndexedDB	/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /fr/docs/Web/API/API_fichier_systeme	/fr/docs/Web/API/File_and_Directory_Entries_API
-/fr/docs/Web/API/AbstractWorker.onerror	/fr/docs/Web/API/AbstractWorker/onerror
+/fr/docs/Web/API/AbstractWorker	/fr/docs/orphaned/Web/API/AbstractWorker
+/fr/docs/Web/API/AbstractWorker.onerror	/fr/docs/orphaned/Web/API/AbstractWorker/onerror
+/fr/docs/Web/API/AbstractWorker/onerror	/fr/docs/orphaned/Web/API/AbstractWorker/onerror
 /fr/docs/Web/API/AnimationEffectTimingProperties	/fr/docs/Web/API/EffectTiming
 /fr/docs/Web/API/AnimationEffectTimingProperties/delay	/fr/docs/Web/API/EffectTiming/delay
 /fr/docs/Web/API/AnimationEvent.animationName	/fr/docs/Web/API/AnimationEvent/animationName
@@ -3751,16 +3755,18 @@
 /fr/docs/Web/API/Element.setAttributeNS	/fr/docs/Web/API/Element/setAttributeNS
 /fr/docs/Web/API/Element.setAttributeNode	/fr/docs/Web/API/Element/setAttributeNode
 /fr/docs/Web/API/Element.setAttributeNodeNS	/fr/docs/Web/API/Element/setAttributeNodeNS
-/fr/docs/Web/API/Element.style	/fr/docs/Web/API/ElementCSSInlineStyle/style
+/fr/docs/Web/API/Element.style	/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /fr/docs/Web/API/Element.tagName	/fr/docs/Web/API/Element/tagName
 /fr/docs/Web/API/Element.textContent	/fr/docs/Web/API/Node/textContent
 /fr/docs/Web/API/Element/accessKey	/fr/docs/Web/API/HTMLElement/accessKey
+/fr/docs/Web/API/Element/currentStyle	/fr/docs/orphaned/Web/API/Element/currentStyle
 /fr/docs/Web/API/Element/innertHTML	/fr/docs/Web/API/Element/innerHTML
 /fr/docs/Web/API/Element/name	/fr/docs/conflicting/Web/API
 /fr/docs/Web/API/Element/ongotpointercapture	/fr/docs/Web/API/GlobalEventHandlers/ongotpointercapture
 /fr/docs/Web/API/Element/onwheel	/fr/docs/Web/API/GlobalEventHandlers/onwheel
 /fr/docs/Web/API/Element/removeChild	/fr/docs/Web/API/Node/removeChild
 /fr/docs/Web/API/Element/tabStop	/fr/docs/orphaned/Web/API/Element/tabStop
+/fr/docs/Web/API/ElementCSSInlineStyle/style	/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /fr/docs/Web/API/ElementTraversal	/fr/docs/orphaned/Web/API/ElementTraversal
 /fr/docs/Web/API/Event.initEvent	/fr/docs/Web/API/Event/initEvent
 /fr/docs/Web/API/Event.stopPropagation	/fr/docs/Web/API/Event/stopPropagation
@@ -3776,7 +3782,7 @@
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 /fr/docs/Web/API/HTMLElement/dataset	/fr/docs/Web/API/HTMLOrForeignElement/dataset
 /fr/docs/Web/API/HTMLElement/focus	/fr/docs/Web/API/HTMLOrForeignElement/focus
-/fr/docs/Web/API/HTMLElement/style	/fr/docs/Web/API/ElementCSSInlineStyle/style
+/fr/docs/Web/API/HTMLElement/style	/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /fr/docs/Web/API/HTMLElement/tabIndex	/fr/docs/Web/API/HTMLOrForeignElement/tabIndex
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
 /fr/docs/Web/API/HTMLTableElement.caption	/fr/docs/Web/API/HTMLTableElement/caption
@@ -3828,6 +3834,7 @@
 /fr/docs/Web/API/SVGStylable	/fr/docs/orphaned/Web/API/SVGStylable
 /fr/docs/Web/API/Selection.toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/Web/API/Selection_API	/fr/docs/conflicting/Web/API/Selection
+/fr/docs/Web/API/ServiceWorkerState	/fr/docs/orphaned/Web/API/ServiceWorkerState
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
 /fr/docs/Web/API/URLUtilsReadOnly	/fr/docs/orphaned/Web/API/URLUtilsReadOnly
@@ -4216,7 +4223,7 @@
 /fr/docs/Web/CSS/Média_Paginé	/fr/docs/Web/CSS/Paged_Media
 /fr/docs/Web/CSS/Média_paginés	/fr/docs/Web/CSS/Paged_Media
 /fr/docs/Web/CSS/Outils	/fr/docs/Web/CSS/Tools
-/fr/docs/Web/CSS/Outils/Générateur_de_courbe_de_Bézier	/fr/docs/Web/CSS/Tools/Cubic_Bezier_Generator
+/fr/docs/Web/CSS/Outils/Générateur_de_courbe_de_Bézier	/fr/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
 /fr/docs/Web/CSS/Outils/Générateur_de_dégradés_linéaires	/fr/docs/Web/CSS/Tools/Linear-gradient_Generator
 /fr/docs/Web/CSS/Propriétés_raccourcies	/fr/docs/Web/CSS/Shorthand_properties
 /fr/docs/Web/CSS/Pseudo-éléments	/fr/docs/Web/CSS/Pseudo-elements
@@ -4251,7 +4258,8 @@
 /fr/docs/Web/CSS/Sélecteurs_descendant	/fr/docs/Web/CSS/Descendant_combinator
 /fr/docs/Web/CSS/Sélecteurs_enfant	/fr/docs/Web/CSS/Child_combinator
 /fr/docs/Web/CSS/Sélecteurs_universels	/fr/docs/Web/CSS/Universal_selectors
-/fr/docs/Web/CSS/Tools/Générateur_de_courbe_de_Bézier	/fr/docs/Web/CSS/Tools/Cubic_Bezier_Generator
+/fr/docs/Web/CSS/Tools/Cubic_Bezier_Generator	/fr/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
+/fr/docs/Web/CSS/Tools/Générateur_de_courbe_de_Bézier	/fr/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
 /fr/docs/Web/CSS/Tools/Générateur_de_dégradés_linéaires	/fr/docs/Web/CSS/Tools/Linear-gradient_Generator
 /fr/docs/Web/CSS/Tools/Outil_Selecteur_Couleurs_CSS	/fr/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /fr/docs/Web/CSS/Type_color	/fr/docs/Web/CSS/color_value
@@ -5594,6 +5602,8 @@
 /fr/docs/Web/Progressive_web_apps/Relancer_Via_Notifications_Push	/fr/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push
 /fr/docs/Web/Progressive_web_apps/Securisee	/fr/docs/conflicting/Web/Progressive_web_apps_0d5c38b9aa908cbb52e4c39037b4f28b
 /fr/docs/Web/Progressive_web_apps/ajouter_a_lecran_daccueil_a2hs	/fr/docs/Web/Progressive_web_apps/Add_to_home_screen
+/fr/docs/Web/Reference	/fr/docs/orphaned/Web/Reference
+/fr/docs/Web/Reference/API	/fr/docs/orphaned/Web/Reference/API
 /fr/docs/Web/SVG/Application_d_effets_SVG_a_du_contenu_HTML	/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content
 /fr/docs/Web/SVG/Element/cercle	/fr/docs/Web/SVG/Element/circle
 /fr/docs/Web/SVG/SVG_en_tant_qu_image	/fr/docs/Web/SVG/SVG_as_an_Image

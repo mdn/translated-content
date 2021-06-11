@@ -1,38 +1,74 @@
 ---
 title: SVG のツール
 slug: Web/SVG/Tutorial/Tools_for_SVG
+tags:
+  - Intermediate
+  - NeedsUpdate
+  - SVG
+  - Tools
 translation_of: Web/SVG/Tutorial/Tools_for_SVG
 ---
+<p>{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}</p>
+
 <p>SVG の内部の基礎を説明しましたので、ここでは SVG ファイルで作業を行うためのツールをいくつか見ていきましょう。</p>
-<p>{{ 英語版章題("Browser support") }}</p>
-<h3 id="ブラウザのサポート">ブラウザのサポート</h3>
-<p>IE9 の登場により、ようやくすべての主要なブラウザが SVG をサポートします: Internet Explorer 9、Mozilla Firefox、Safari、Google Chrome、そして Opera です。WebKit ベースのブラウザをもつモバイルデバイス (たいてい iOS や Android) も SVG をサポートします。古いあるいはより小さなデバイスでは、SVG Tiny をサポートしているかもしれません。</p>
+
+<h3 id="Browser_support">ブラウザーの対応</h3>
+
+<p>Internet Explorer 9 により、 IE　9、Mozilla Firefox、Safari、Google Chrome、 Opera といったすべての主要なブラウザーが SVG に対応しています。 WebKit ベースのブラウザーをもつモバイル端末も SVG に対応しています。 古い端末やより小さな端末では、SVG Tiny に対応しているかもしれません。</p>
+
 <h2 id="Inkscape">Inkscape</h2>
-<p>URL: <a class="external" href="http://www.inkscape.org" title="http://www.inkscape.org/">www.inkscape.org</a></p>
-<p>グラフィックス形式について最も重要なツールの一つが、適切な描画プログラムです。Inkscape は最先端のベクタ描画機能を提供し、またオープンソースです。</p>
-<p>さらに、このソフトは SVG をネイティブフォーマットとしています。Inkscape 固有のデータを保存するときは、カスタムネームスペースによる要素や属性で SVG ファイルを拡張しますが、通常の SVG としてエクスポートすることも選択できます。</p>
+
+<p>URL: <a href="https://www.inkscape.org">www.inkscape.org</a></p>
+
+<p>グラフィック形式について最も重要なツールの一つが、適切な描画プログラムです。 Inkscape は最先端のベクタ描画機能を提供し、またオープンソースです。</p>
+<p>さらに、このソフトは SVG をネイティブフォーマットとしています。 Inkscape 固有のデータを保存するときは、カスタムネームスペースによる要素や属性で SVG ファイルを拡張しますが、通常の SVG としてエクスポートすることも選択できます。</p>
+
 <h2 id="Adobe_Illustrator">Adobe Illustrator</h2>
-<p>URL: <a class="external" href="http://www.adobe.com/products/illustrator/">www.adobe.com/products/illustrator/</a> (<a class="external" href="http://www.adobe.com/jp/products/illustrator.html">日本語サイト</a>)</p>
-<p>Adobe は Macromedia を買収するまで、もっとも有名な SVG のプロモーターでした。このときから、Illustrator が SVG を良好にサポートし始めました。しかし、出力された SVG はしばしば癖がみられ、一般に適用するための後処理が必要になります。</p>
+
+<p>URL: <a href="https://www.adobe.com/products/illustrator/">www.adobe.com/products/illustrator/</a> (<a href="https://www.adobe.com/jp/products/illustrator.html">日本語サイト</a>)</p>
+
+<p>Adobe は Macromedia を買収するまで、もっとも有名な SVG の推進者でした。このときから、 Illustrator は SVG を良好に対応し始めました。しかし、出力された SVG にはしばしば癖がみられ、一般に適用するための後処理が必要になります。</p>
+
 <h2 id="Apache_Batik">Apache Batik</h2>
-<p>URL: <a class="external" href="http://xmlgraphics.apache.org/batik/">xmlgraphics.apache.org/batik/</a></p>
-<p>Batik は Apache Software Foundation 傘下の、オープンソースツールのセットです。このツールキットは Java で記述され、ほぼ完全な SVG 1.1 のサポートを提供します。また、本来は SVG 1.2 で計画されている機能のいくつかもサポートします。</p>
-<p>Batik はビューア (Squiggle) や PNG 出力のラスタライザの他に、SVG ファイルを整形するためのプリティプリンタや TrueType フォントから SVG フォントへのコンバータも提供します。</p>
-<p>Batik は <a class="external" href="http://xmlgraphics.apache.org/fop/">Apache FOP</a> と連携して、SVG を PDF に変換することもできます。</p>
-<p>{{ 英語版章題("Other renderers") }}</p>
-<h3 id="他のレンダラー">他のレンダラー</h3>
-<p>SVG からラスタイメージを作成するためのプロジェクトがいくつかあります。<a class="external" href="http://ImageMagick.org" title="http://imagemagick.org/">ImageMagick</a> は、もっとも有名なコマンドライン画像処理ツールのひとつです。Gnome ライブラリの <a class="external" href="http://library.gnome.org/devel/rsvg/" title="http://library.gnome.org/devel/rsvg/">rsvg</a> は、Wikipedia が SVG をラスター化するために用いています。</p>
+
+<p>URL: <a href="https://xmlgraphics.apache.org/batik/">xmlgraphics.apache.org/batik/</a></p>
+
+<p>Batik は Apache Software Foundation 傘下の、オープンソースツールのセットです。このツールキットは Java で記述され、ほぼ完全な SVG 1.1 の対応を提供します。また、本来は SVG 1.2 で計画されている機能のいくつかにも対応しています。</p>
+
+<p>Batik はビューアー (Squiggle) や PNG 出力のラスタライザーの他に、SVG ファイルを整形するためのプリティプリンターや TrueType フォントから SVG フォントへのコンバーターも提供します。</p>
+
+<p>Batik は <a href="https://xmlgraphics.apache.org/fop/">Apache FOP</a> と連携して、SVG を PDF に変換することもできます。</p>
+
+<h3 id="Other_renderers">他のレンダラー</h3>
+
+<p>SVG からラスター画像を作成するためのプロジェクトがいくつかあります。<a href="http://ImageMagick.org">ImageMagick</a> は、もっとも有名なコマンドライン画像処理ツールのひとつです。Gnome ライブラリの <a href="https://library.gnome.org/devel/rsvg/">rsvg</a> は、 Wikipedia が SVG をラスター化するために用いています。また、 SlimerJS や PhantomJS などのヘッドレスブラウザーを使用すると、ブラウザー上での SVG の表示に近い画像が得られるため、人気があります。</p>
+
 <h2 id="Raphael_JS">Raphael JS</h2>
-<p>URL: <a class="external" href="http://raphaeljs.com/">raphaeljs.com</a></p>
-<p>これは、ブラウザ実装の抽象レイヤーとして働く JavaScript ライブラリです。特に古いバージョンの Internet Explorer は Vector Markup Language (VML) の生成によりサポートされています。なお VML は 2 つある SVG の前身のひとつであり、IE 5.5 から使用できます。</p>
+
+<p>URL: <a href="https://raphaeljs.com/">raphaeljs.com</a></p>
+
+<p>これは、ブラウザー実装の抽象レイヤーとして働く JavaScript ライブラリです。特に古いバージョンの Internet Explorer は Vector Markup Language (VML) の生成により対応されています。なお VML は 2 つある SVG の前身のひとつであり、 IE 5.5 から使用できます。</p>
+
+<h2 id="Snap.svg">Snap.svg</h2>
+
+<p>URL: <a href="http://snapsvg.io/">snapsvg.io</a></p>
+
+<p>Raphael JS の作者が開発した、より新しい JavaScript の抽象化レイヤーです。 Snap.svg は最近のブラウザー向けに設計されているため、マスキング、クリッピング、パターン、フルグラデーション、グループなどの最新の SVG 機能をサポートしています。 Raphael のような古いブラウザーには対応していません。</p>
+
 <h2 id="Google_Docs">Google Docs</h2>
-<p>URL: <a class="external" href="http://www.google.com/google-d-s/drawings/">www.google.com/google-d-s/drawings/</a></p>
+
+<p>URL: <a href="https://www.google.com/google-d-s/drawings/">www.google.com/google-d-s/drawings/</a></p>
+
 <p>Google Docs の図形描画機能は、SVG でエクスポートすることができます。</p>
-<p>{{ 英語版章題("Science") }}</p>
-<h2 id="科学">科学</h2>
-<p>よく知られているプロッティングツールである xfig や gnuplot は、SVG でのエクスポートをサポートしています。Web でグラフを描画するための <a class="external" href="http://jsxgraph.uni-bayreuth.de/wp/" title="http://jsxgraph.uni-bayreuth.de/wp/">JSXGraph</a> は VML、SVG、および canvas をサポートし、どの技術を用いるかはブラウザの能力に応じて自動的に決定します。</p>
-<p>GIS (Geographic Information System) アプリケーションで、SVG は保存および描画の形式としてよく用いられます。詳しくは <a class="external" href="http://carto.net">carto.net</a> をご覧ください。</p>
-<p>{{ 英語版章題("More tools!") }}</p>
-<h2 id="他のツール">他のツール</h2>
-<p>W3C は、SVG をサポートする<a class="external" href="http://www.w3.org/Graphics/SVG/WG/wiki/Implementations">プログラムの一覧</a>を提供しています。</p>
-<p>{{ languages( { "en": "en/SVG/Tutorial/Tools_for_SVG"} ) }}</p>
+
+<h2 id="Science">科学</h2>
+
+<p>よく知られているプロッティングツールである xfig や gnuplot は、SVG でのエクスポートを対応しています。ウェブでグラフを描画するための <a href="https://jsxgraph.uni-bayreuth.de/wp/">JSXGraph</a> は VML、SVG、および canvas を対応し、どの技術を用いるかはブラウザーの能力に応じて自動的に決定します。</p>
+
+<p>GIS (Geographic Information System) アプリケーションで、SVG は保存および描画の形式としてよく用いられます。詳しくは <a href="https://carto.net">carto.net</a> をご覧ください。</p>
+
+<h2 id="More_tools!">他のツール</h2>
+
+<p>W3C は、SVG を対応する<a href="https://www.w3.org/Graphics/SVG/WG/wiki/Implementations">プログラムの一覧</a>を提供しています。</p>
+
+<p>{{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}</p>
