@@ -437,7 +437,7 @@
 /pl/docs/DOM/element.setAttributeNS	/pl/docs/Web/API/Element/setAttributeNS
 /pl/docs/DOM/element.setAttributeNode	/pl/docs/Web/API/Element/setAttributeNode
 /pl/docs/DOM/element.setAttributeNodeNS	/pl/docs/Web/API/Element/setAttributeNodeNS
-/pl/docs/DOM/element.style	/pl/docs/Web/API/ElementCSSInlineStyle/style
+/pl/docs/DOM/element.style	/pl/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /pl/docs/DOM/element.tabIndex	/pl/docs/Web/API/HTMLOrForeignElement/tabIndex
 /pl/docs/DOM/element.tagName	/pl/docs/Web/API/Element/tagName
 /pl/docs/DOM/element.textContent	/pl/docs/Web/API/Node/textContent
@@ -685,7 +685,7 @@
 /pl/docs/DOM:element.setAttributeNS	/pl/docs/Web/API/Element/setAttributeNS
 /pl/docs/DOM:element.setAttributeNode	/pl/docs/Web/API/Element/setAttributeNode
 /pl/docs/DOM:element.setAttributeNodeNS	/pl/docs/Web/API/Element/setAttributeNodeNS
-/pl/docs/DOM:element.style	/pl/docs/Web/API/ElementCSSInlineStyle/style
+/pl/docs/DOM:element.style	/pl/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /pl/docs/DOM:element.tabIndex	/pl/docs/Web/API/HTMLOrForeignElement/tabIndex
 /pl/docs/DOM:element.tagName	/pl/docs/Web/API/Element/tagName
 /pl/docs/DOM:element.textContent	/pl/docs/Web/API/Node/textContent
@@ -1970,9 +1970,10 @@
 /pl/docs/Web/API/Element/previousSibling	/pl/docs/Web/API/Node/previousSibling
 /pl/docs/Web/API/Element/removeChild	/pl/docs/Web/API/Node/removeChild
 /pl/docs/Web/API/Element/replaceChild	/pl/docs/Web/API/Node/replaceChild
-/pl/docs/Web/API/Element/style	/pl/docs/Web/API/ElementCSSInlineStyle/style
+/pl/docs/Web/API/Element/style	/pl/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /pl/docs/Web/API/Element/tabIndex	/pl/docs/Web/API/HTMLOrForeignElement/tabIndex
 /pl/docs/Web/API/Element/textContent	/pl/docs/Web/API/Node/textContent
+/pl/docs/Web/API/ElementCSSInlineStyle/style	/pl/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /pl/docs/Web/API/Event/altKey	/pl/docs/Web/API/MouseEvent/altKey
 /pl/docs/Web/API/Event/button	/pl/docs/Web/API/MouseEvent/button
 /pl/docs/Web/API/Event/cancelBubble	/pl/docs/orphaned/Web/API/UIEvent/cancelBubble
