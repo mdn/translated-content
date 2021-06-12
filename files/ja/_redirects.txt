@@ -5024,7 +5024,7 @@
 /ja/docs/Web/JavaScript/Typed_arrays/Uint32Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/Web/JavaScript/Typed_arrays/Uint8Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
 /ja/docs/Web/Manifest/serviceworker	/ja/docs/orphaned/Web/Manifest/serviceworker
-/ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/conflicting/Web/Progressive_web_apps/Introduction
+/ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Introduction
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Reference	/ja/docs/orphaned/Web/Reference
 /ja/docs/Web/Reference/API	/ja/docs/orphaned/Web/Reference/API
