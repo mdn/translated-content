@@ -4,26 +4,25 @@ slug: Web/HTML/Element/head
 tags:
   - Element
   - HTML
-  - HTML 文書メタデータ
-  - 'HTML:メタデータコンテンツ'
+  - HTML document metadata
+  - 'HTML:Metadata content'
   - Reference
   - Web
-  - ウェブ
-  - 要素
+browser-compat: html.elements.head
 translation_of: Web/HTML/Element/head
 ---
 <div>{{HTMLRef}}</div>
 
 <p><span class="seoSummary"><strong>HTML の <code>&lt;head&gt;</code> 要素</strong>は、文書に関する機械可読な情報 ({{glossary("metadata", "メタデータ")}})、たとえば<a href="/ja/docs/Web/HTML/Element/title">題名</a>、<a href="/ja/docs/Web/HTML/Element/script">スクリプト</a>、<a href="/ja/docs/Web/HTML/Element/style">スタイルシート</a>などを含みます。</span></p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>メモ:</strong> <code>&lt;head&gt;</code> は機械処理のための情報を保持するためのものであり、人間が読むためのものではありません。人間が読むための情報、例えば最上位のヘッダーや著者のリストのためのものは、 {{HTMLElement("header")}} 要素を参照してください。</p>
 </div>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
    <td>なし</td>
   </tr>
   <tr>
@@ -44,6 +43,10 @@ translation_of: Web/HTML/Element/head
    <td>{{HTMLElement("html")}} 要素の最初の子要素として配置可能。</td>
   </tr>
   <tr>
+   <th scope="row">暗黙の ARIA ロール</th>
+   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
+  </tr>
+  <tr>
    <th scope="row">許可されている ARIA ロール</th>
    <td>なし</td>
   </tr>
@@ -54,16 +57,16 @@ translation_of: Web/HTML/Element/head
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
-<p>この要素には<a href="/ja/docs/HTML/Global_attributes">グローバル属性</a>があります。</p>
+<p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>があります。</p>
 
 <dl>
- <dt>{{htmlattrdef("profile")}} {{obsolete_inline}}</dt>
- <dd>1つ以上のメタデータプロファイルの {{glossary("URI")}} で、{{Glossary("whitespace", "ホワイトスペース")}}区切りです。</dd>
+ <dt>{{htmlattrdef("profile")}} {{deprecated_inline}}</dt>
+ <dd>1 つ以上のメタデータプロファイルの {{glossary("URI")}} で、{{Glossary("whitespace", "ホワイトスペース")}}区切りです。</dd>
 </dl>
 
-<h2 id="Example" name="Example">例</h2>
+<h2 id="Example">例</h2>
 
 <pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
@@ -73,11 +76,11 @@ translation_of: Web/HTML/Element/head
 &lt;/html&gt;
 </pre>
 
-<h2 id="Notes" name="Notes">メモ</h2>
+<h2 id="Notes">メモ</h2>
 
 <p>HTML5 互換のブラウザーでは、タグが省略されていても <code>&lt;head&gt;</code> 要素を自動的に生成します。<a href="https://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/">この自動生成は、過去のブラウザーでは保証されていません</a>。</p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -101,18 +104,16 @@ translation_of: Web/HTML/Element/head
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.4.1', '&lt;head&gt;')}}</td>
    <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
+   <td></td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
+<p>{{Compat}}</p>
 
-<p>{{Compat("html.elements.head")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li><code>&lt;head&gt;</code> の中で使用することができる要素:
