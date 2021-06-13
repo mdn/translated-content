@@ -8,9 +8,7 @@ class Stop(Exception):
 
 
 NEEDLE = """
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
+<p class="hidden">이 페이지의 호환성표는 구조화된 데이터로부터 생성되었습니다. 만약 그 데이터에 기여하고 싶으시면 <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 를 참고하시고 요청을 보내주시기 바랍니다.</p>
 """
 
 
