@@ -8,7 +8,9 @@ class Stop(Exception):
 
 
 NEEDLE = """
-<div class="hidden">이 설명자는 아직 <a href="https://github.com/mdn/data/blob/master/css/at-rules.json">https://github.com/mdn/data/blob/master/css/at-rules.json</a>에 등재되지 않았습니다.</div>
+<div class="hidden">
+<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+</div>
 """
 
 
