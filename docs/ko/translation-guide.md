@@ -217,7 +217,7 @@ issue: https://github.com/mdn/translated-content/issues/1008
 
 다음은 `en-us locale`에 대한 기본 compatibility 항목입니다. 현재 `ko locale`에는 여러 번역 문구들이 있습니다. 이 문구들은 모두 삭제돼야합니다. 
 
-1차적으로 https://gist.github.com/hochan222/ad801f7a6325e2b2e391ab634d6d18ce 로 30가지 경우에 대해 https://github.com/mdn/translated-content/pull/1176 에서 처리했으며, 나머지 경우에 대해 정규표현식을 작성해 삭제하거나 발견시 삭제 바랍니다.
+1차적으로 https://gist.github.com/hochan222/ad801f7a6325e2b2e391ab634d6d18ce 로 30가지 경우에 대해 [PR 1176](https://github.com/mdn/translated-content/pull/1176) 에서 처리했으며, 나머지 경우에 대해 정규표현식을 작성해 삭제하거나 발견시 삭제 바랍니다.
 
 #### 기본 항목
 
