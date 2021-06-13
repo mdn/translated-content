@@ -8,7 +8,7 @@ class Stop(Exception):
     """exit early"""
 
 
-NEEDLE = """<.*? class="hidden">.*?<a href="https:\/\/github.com\/mdn\/browser-compat-data">https:\/\/github.com\/mdn\/browser-compat-data<\/a>.*?<\/.*?>"""
+NEEDLE = """<.*? class="hidden">.*?<a href="https:\/\/github.com\/mdn\/browser-compat-data">.*?<\/a>.*?<\/.*?>"""
 
 
 def fix(path):
