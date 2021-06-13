@@ -213,7 +213,7 @@ code formatter의 한 종류인 Prettier의 기본 설정을 따르며, 추가�
 
 ### 1. All hidden paragraphs about Browser Compatibility can be deleted
 
-issue: https://github.com/mdn/translated-content/issues/1008 
+issue: [#1008](https://github.com/mdn/translated-content/issues/1008)
 
 다음은 `en-us locale`에 대한 기본 compatibility 항목입니다. 현재 `ko locale`에는 여러 번역 문구들이 있습니다. 이 문구들은 모두 삭제돼야합니다. 
 
