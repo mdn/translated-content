@@ -18,11 +18,11 @@ translation_of: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 TypeError: Cannot delete property '2' of [object Array] (Chrome)
 </pre>
 
-<h2 id="エラータイプ">エラータイプ</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("TypeError")}}</p>
 
-<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p>配列を<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array">短縮</a>しようとしていますが、配列の要素が<a href="/ja/docs/Web/JavaScript/Data_structures#properties">変更不可</a>です。配列の短縮をするとき、新しい配列の長さを超える要素は削除されますが、このシチュエーションでは失敗します。</p>
 
