@@ -29,10 +29,10 @@ console.log((3 + 10) * 2); // 输出 26 因为括号改变了优先级
 
 <p>左结合（左到右）相当于把左边的子表达式加上小括号 <code>(a OP b) OP c</code>，右结合（右到左）相当于 <code>a OP (b OP c)</code>。赋值运算符是右结合的，所以你可以这么写：</p>
 
-<pre class="notranslate">a = b = 5; // 相当于 a = (b = 5);
+<pre class="brush: js">a = b = 5; // 相当于 a = (b = 5);
 </pre>
 
-<p>预期结果是 <code>a</code> 和 <code>b</code> 的值都会成为 5。这是因为赋值运算符的返回结果就是赋值运算符右边的那个值，具体过程是：首先 <code>b</code> 被赋值为5，然后 <code>a</code> 也被赋值为 <code>b = 5</code> 的返回值，也就是 5。</p>
+<p>预期结果是 <code>a</code> 和 <code>b</code> 的值都会成为 5。这是因为赋值运算符的返回结果就是赋值运算符右边的那个值，具体过程是：首先 <code>b</code> 被赋值为 5，然后 <code>a</code> 也被赋值为 <code>b = 5</code> 的返回值，也就是 5。</p>
 
 <p>另一个例子是，只有幂运算符是右结合的，而其他算术运算符都是左结合的。有趣的是，无论结合性和优先级如何，求值顺序总是从左到右。</p>
 
@@ -81,7 +81,7 @@ Evaluating the right side
     </tbody>
 </table>
 
-<p>当有多个具有相同优先级的运算符时，结合性的差异就会发挥作用。仅使用一个或多个不同优先级的运算符时，结合性不会影响输出，如上面的例子所示。在下面的示例中，观察当使用多个相同运算符时关联性如何影响输出。</p>
+<p>当有多个具有相同优先级的运算符时，结合性的差异就会发挥作用。仅使用一个或多个不同优先级的运算符时，结合性不会影响输出，如上面的例子所示。在下面的示例中，观察使用多个相同运算符时结合性会如何影响输出。</p>
 
 <table class="standard-table">
     <tbody>
@@ -136,7 +136,7 @@ function echo(name, num) {
     console.log("Evaluating the " + name + " side");
     return num;
 }
-// 注意这里左边和中间的被包围的求幂表达式
+// 注意这里左边和中间的被圆括号包围的求幂表达式
 console.log((echo("left", 2) ** echo("middle", 3)) ** echo("right", 2));</pre>
             </td>
             <td>
@@ -154,8 +154,8 @@ Evaluating the right side
     <code>(6 / 3) / 2</code> 是相同的，因为除法是左结合的。而幂运算符是右结合的，所以 <code>2 ** 3 ** 2</code> 与
     <code>2 ** (3 ** 2)</code> 是相同的。因此，<code>(2 ** 3) ** 2</code> 会更改执行顺序，并导致输出上表中的 64。</p>
 
-<p>请记住，判断执行顺序，优先级在结合性之前。所以，混合求除法和幂，求幂会先于除法。例如，
-    <code>2 ** 3 / 3 ** 2</code> 结果是 0.8888888888888888 因为它相当于
+<p>请记住，判断执行顺序的时候，优先级在结合性之前。所以，混合求除法和幂时，求幂会先于除法。例如，
+    <code>2 ** 3 / 3 ** 2</code> 的结果是 0.8888888888888888，因为它相当于
     <code>(2 ** 3) / (3 ** 2)</code>。</p>
 
 <h3 id="Note_on_grouping_and_short-circuiting">分组和短路的注意事项</h3>
@@ -163,7 +163,7 @@ Evaluating the right side
 <p>在下表中，<strong>分组（Grouping）</strong>具有最高优先级。然而，这并不意味着总是优先对分组符号 <code>( … )</code> 内的表达式进行求值，尤其是涉及短路时。</p>
 
 <p>短路是条件求值的术语。例如，在表达式
-    <code>a &amp;&amp; (b + c)</code> 中，如果 <code>a</code> 为 {{Glossary("falsy")}}，那么即使 <code>(b + c)</code> 在圆括号中，也不会被求值。我们可以说逻辑或运算符（“OR”）是“短路的”。除了逻辑或运算符外，其他短路运算符还包括逻辑与（“AND”）、空值合并、可选链和条件（三元）运算符。下面有更多例子：</p>
+    <code>a &amp;&amp; (b + c)</code> 中，如果 <code>a</code> 为虚值（{{Glossary("falsy")}}），那么即使 <code>(b + c)</code> 在圆括号中，也不会被求值。我们可以说逻辑或运算符（“OR”）是“短路的”。除了逻辑或运算符外，其他短路运算符还包括逻辑与（“AND”）、空值合并、可选链和条件（三元）运算符。下面有更多例子：</p>
 
 <pre class="brush: js">a || (b * c);  // 首先对 `a` 求值，如果 `a` 为真值则直接返回 `a`
 a &amp;&amp; (b &lt; c);  // 首先对 `a` 求值，如果 `a` 为虚值则直接返回 `a`
@@ -171,7 +171,7 @@ a ?? (b || c); // 首先对 `a` 求值，如果 `a` 不是 `null` 或 `undefined
 a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` 则直接返回 `undefined`
 </pre>
 
-<h2 id="示例">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <pre class="brush: js">3 &gt; 2 &amp;&amp; 2 &gt; 1
 // 返回 true
