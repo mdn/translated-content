@@ -706,7 +706,7 @@
 /zh-CN/docs/HTTP	/zh-CN/docs/Web/HTTP
 /zh-CN/docs/HTTP/HTTP_response_codes	/zh-CN/docs/conflicting/Web/HTTP/Status
 /zh-CN/docs/IndexedDB	/zh-CN/docs/Web/API/IndexedDB_API
-/zh-CN/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/zh-CN/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/zh-CN/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /zh-CN/docs/IndexedDB/IDBObjectStore	/zh-CN/docs/Web/API/IDBObjectStore
 /zh-CN/docs/IndexedDB/Using_IndexedDB	/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /zh-CN/docs/Introducing_the_Audio_API_Extension	/zh-CN/docs/Introducing_Audio_API_Extension
@@ -1645,6 +1645,7 @@
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
 /zh-CN/docs/Web/API/IDBObjectStore.openCursor	/zh-CN/docs/Web/API/IDBObjectStore/openCursor
+/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/zh-CN/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /zh-CN/docs/Web/API/IndexedDB_API/IDBObjectStore	/zh-CN/docs/Web/API/IDBObjectStore
 /zh-CN/docs/Web/API/Intersection_Observer_API/点观察者API的时序元素可见性	/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace
@@ -2472,6 +2473,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Date/setTime	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setTime
 /zh-CN/docs/Web/JavaScript/Reference/Date/toJSON	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON
 /zh-CN/docs/Web/JavaScript/Reference/Date/valueOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
+/zh-CN/docs/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 /zh-CN/docs/Web/JavaScript/Reference/Errors/不能添加属性	/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_assign_to_property
 /zh-CN/docs/Web/JavaScript/Reference/Function	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function
 /zh-CN/docs/Web/JavaScript/Reference/Function/apply	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply

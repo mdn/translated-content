@@ -5594,21 +5594,6 @@
       "claudepache"
     ]
   },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2020-12-08T00:45:03.205Z",
-    "contributors": [
-      "dsma73",
-      "chrisdavidmills",
-      "alattalatta",
-      "LostCatLee",
-      "daesD",
-      "naduhy2",
-      "bingl2",
-      "nacyot",
-      "fscholz",
-      "JoonghunPark"
-    ]
-  },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
     "modified": "2020-07-21T23:16:52.351Z",
     "contributors": [
@@ -18365,6 +18350,21 @@
     "modified": "2020-10-15T22:15:23.043Z",
     "contributors": [
       "connorshea"
+    ]
+  },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2020-12-08T00:45:03.205Z",
+    "contributors": [
+      "dsma73",
+      "chrisdavidmills",
+      "alattalatta",
+      "LostCatLee",
+      "daesD",
+      "naduhy2",
+      "bingl2",
+      "nacyot",
+      "fscholz",
+      "JoonghunPark"
     ]
   },
   "orphaned/Web/API/OffscreenCanvas/toBlob": {

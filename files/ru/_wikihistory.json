@@ -9297,15 +9297,6 @@
       "madarche"
     ]
   },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2020-08-02T03:41:34.455Z",
-    "contributors": [
-      "ijetsoft",
-      "S-le",
-      "chrisdavidmills",
-      "curdwithraisins"
-    ]
-  },
   "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
     "modified": "2020-12-13T06:01:46.717Z",
     "contributors": [
@@ -18651,13 +18642,6 @@
       "thepocp"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
-    "modified": "2020-03-12T19:48:42.436Z",
-    "contributors": [
-      "fuggy",
-      "MakarovDs777"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
     "modified": "2020-03-12T19:47:38.776Z",
     "contributors": [
@@ -25481,6 +25465,15 @@
       "teoli"
     ]
   },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2020-08-02T03:41:34.455Z",
+    "contributors": [
+      "ijetsoft",
+      "S-le",
+      "chrisdavidmills",
+      "curdwithraisins"
+    ]
+  },
   "orphaned/Web/API/Notation": {
     "modified": "2020-10-15T22:17:39.773Z",
     "contributors": [
@@ -25680,6 +25673,13 @@
     "contributors": [
       "teoli",
       "danielgn96"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
+    "modified": "2020-03-12T19:48:42.436Z",
+    "contributors": [
+      "fuggy",
+      "MakarovDs777"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {

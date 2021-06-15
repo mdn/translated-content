@@ -328,7 +328,7 @@
 /ko/docs/HTML:Element:a	/ko/docs/Web/HTML/Element/a
 /ko/docs/HTML:Inline_elements	/ko/docs/Web/HTML/Inline_elements
 /ko/docs/IndexedDB	/ko/docs/Web/API/IndexedDB_API
-/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ko/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ko/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ko/docs/IndexedDB/Using_IndexedDB	/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /ko/docs/Introduction_to_using_XPath_in_JavaScript	/ko/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /ko/docs/JSAPI_Reference/Alphabetical_List	/ko/docs/JSAPI_Reference
@@ -626,6 +626,7 @@
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API/Drag_operations	/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
+/ko/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ko/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ko/docs/Web/API/Navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/Navigator.battery/window.navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/Navigator.connection/window.navigator.connection	/ko/docs/Web/API/Navigator/connection

@@ -3650,14 +3650,6 @@
       "Huan"
     ]
   },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2020-01-13T04:47:55.526Z",
-    "contributors": [
-      "chrisdavidmills",
-      "gmagholder",
-      "Julini"
-    ]
-  },
   "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
     "modified": "2020-01-13T04:47:56.415Z",
     "contributors": [
@@ -10331,12 +10323,6 @@
       "akumagamo"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
-    "modified": "2020-03-12T19:47:33.971Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
     "modified": "2020-03-12T19:47:43.541Z",
     "contributors": [
@@ -14700,6 +14686,14 @@
       "sv3m0r"
     ]
   },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2020-01-13T04:47:55.526Z",
+    "contributors": [
+      "chrisdavidmills",
+      "gmagholder",
+      "Julini"
+    ]
+  },
   "orphaned/Web/API/LinkStyle": {
     "modified": "2019-03-23T23:11:18.020Z",
     "contributors": [
@@ -14770,6 +14764,12 @@
     "contributors": [
       "kaljak",
       "RmnWtnkmp"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
+    "modified": "2020-03-12T19:47:33.971Z",
+    "contributors": [
+      "schlagi123"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {

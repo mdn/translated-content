@@ -4121,16 +4121,6 @@
       "princetoad@gmail.com"
     ]
   },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2019-03-18T20:39:41.131Z",
-    "contributors": [
-      "choznerol",
-      "jackblackevo",
-      "birdca",
-      "foxbrush",
-      "thomaschen"
-    ]
-  },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
     "modified": "2019-06-26T04:56:24.502Z",
     "contributors": [
@@ -8687,6 +8677,16 @@
     "modified": "2019-03-23T22:20:07.015Z",
     "contributors": [
       "jackblackevo"
+    ]
+  },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2019-03-18T20:39:41.131Z",
+    "contributors": [
+      "choznerol",
+      "jackblackevo",
+      "birdca",
+      "foxbrush",
+      "thomaschen"
     ]
   },
   "orphaned/Web/API/ParentNode": {

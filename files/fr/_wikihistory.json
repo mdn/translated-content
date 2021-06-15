@@ -18245,17 +18245,6 @@
       "moins52"
     ]
   },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2020-03-19T07:25:26.127Z",
-    "contributors": [
-      "ChristopheBoucaut",
-      "loella16",
-      "Alpha",
-      "SphinxKnight",
-      "teoli",
-      "julienw"
-    ]
-  },
   "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
     "modified": "2019-07-09T03:14:33.430Z",
     "contributors": [
@@ -35289,12 +35278,6 @@
       "jcletousey"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
-    "modified": "2020-03-12T19:45:50.257Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
     "modified": "2020-03-12T19:43:41.533Z",
     "contributors": [
@@ -45016,6 +44999,17 @@
       "loella16"
     ]
   },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2020-03-19T07:25:26.127Z",
+    "contributors": [
+      "ChristopheBoucaut",
+      "loella16",
+      "Alpha",
+      "SphinxKnight",
+      "teoli",
+      "julienw"
+    ]
+  },
   "orphaned/Web/API/Notation": {
     "modified": "2019-03-18T21:40:13.820Z",
     "contributors": [
@@ -45232,6 +45226,12 @@
       "nhoizey",
       "SphinxKnight",
       "Goofy"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
+    "modified": "2020-03-12T19:45:50.257Z",
+    "contributors": [
+      "SphinxKnight"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {

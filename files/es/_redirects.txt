@@ -986,7 +986,7 @@
 /es/docs/Incrustando_Mozilla/Comunidad	/es/docs/orphaned/Incrustando_Mozilla/Comunidad
 /es/docs/IndexedDB	/es/docs/conflicting/Web/API/IndexedDB_API
 /es/docs/IndexedDB-840092-dup	/es/docs/Web/API/IndexedDB_API
-/es/docs/IndexedDB-840092-dup/Conceptos_Basicos_Detras_De_IndexedDB	/es/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/es/docs/IndexedDB-840092-dup/Conceptos_Basicos_Detras_De_IndexedDB	/es/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /es/docs/IndexedDB-840092-dup/Usando_IndexedDB	/es/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /es/docs/Instalación_de_motores_de_búsqueda_desde_páginas_web	/es/docs/orphaned/Instalación_de_motores_de_búsqueda_desde_páginas_web
 /es/docs/Instalar_el_manifest	/es/docs/Manifiesto_de_instalación
@@ -1817,7 +1817,8 @@
 /es/docs/Web/API/HTMLElement/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/HTMLElement/style	/es/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /es/docs/Web/API/IDBObjectStore.add	/es/docs/Web/API/IDBObjectStore/add
-/es/docs/Web/API/IndexedDB_API/Conceptos_Basicos_Detras_De_IndexedDB	/es/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/es/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/es/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/es/docs/Web/API/IndexedDB_API/Conceptos_Basicos_Detras_De_IndexedDB	/es/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /es/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/es/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /es/docs/Web/API/Navigator.getUserMedia	/es/docs/Web/API/Navigator/getUserMedia
 /es/docs/Web/API/NavigatorGeolocation	/es/docs/conflicting/Web/API/Geolocation

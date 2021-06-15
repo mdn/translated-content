@@ -112,7 +112,7 @@
 /ru/docs/HTML/HTML5/Введение_в_HTML5	/ru/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ru/docs/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/ru/docs/Glossary/speculative_parsing
 /ru/docs/IndexedDB	/ru/docs/Web/API/IndexedDB_API
-/ru/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ru/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/ru/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ru/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ru/docs/IndexedDB/Using_IndexedDB	/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /ru/docs/JavaScript	/ru/docs/Web/JavaScript
 /ru/docs/JavaScript/A_re-introduction_to_JavaScript	/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript
@@ -427,6 +427,7 @@
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ru/docs/Web/API/HTMLAnchorElement/toString
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/username	/ru/docs/Web/API/HTMLAnchorElement/username
 /ru/docs/Web/API/HTMLImageElement.Image	/ru/docs/Web/API/HTMLImageElement/Image
+/ru/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ru/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ru/docs/Web/API/MediaTrackConstraints/Эхоподавление	/ru/docs/Web/API/MediaTrackConstraints/echoCancellation
 /ru/docs/Web/API/NavigatorGeolocation	/ru/docs/conflicting/Web/API/Geolocation
 /ru/docs/Web/API/NetworkInformation/connection	/ru/docs/Web/API/Navigator/connection
@@ -726,6 +727,7 @@
 /ru/docs/Web/JavaScript/New_in_JavaScript/Новое_в_JavaScript_1.6	/ru/docs/Web/JavaScript/New_in_JavaScript/1.6
 /ru/docs/Web/JavaScript/Reference/Classes/Class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields
+/ru/docs/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 /ru/docs/Web/JavaScript/Reference/Errors/Переменные_скрывают_аргумент	/ru/docs/Web/JavaScript/Reference/Errors/Var_hides_argument
 /ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов	/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Array/contains	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes

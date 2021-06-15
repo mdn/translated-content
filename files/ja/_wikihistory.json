@@ -17894,17 +17894,6 @@
       "Potappo"
     ]
   },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2020-03-25T11:26:36.526Z",
-    "contributors": [
-      "Uemmra3",
-      "Wind1808",
-      "wbamberg",
-      "SphinxKnight",
-      "mandel59",
-      "yyss"
-    ]
-  },
   "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
     "modified": "2019-05-23T13:25:35.305Z",
     "contributors": [
@@ -38739,12 +38728,6 @@
       "YuichiNukiyama"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
-    "modified": "2020-03-12T19:46:14.001Z",
-    "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
     "modified": "2020-03-12T19:44:07.574Z",
     "contributors": [
@@ -52285,6 +52268,17 @@
       "Wind1808"
     ]
   },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2020-03-25T11:26:36.526Z",
+    "contributors": [
+      "Uemmra3",
+      "Wind1808",
+      "wbamberg",
+      "SphinxKnight",
+      "mandel59",
+      "yyss"
+    ]
+  },
   "orphaned/Web/API/LinkStyle": {
     "modified": "2019-03-23T23:29:59.357Z",
     "contributors": [
@@ -52937,6 +52931,12 @@
       "Harpy",
       "Mgjbot",
       "electrolysis"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
+    "modified": "2020-03-12T19:46:14.001Z",
+    "contributors": [
+      "YuichiNukiyama"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {

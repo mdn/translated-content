@@ -320,7 +320,7 @@
 /de/docs/Hauptseite	/de/docs/Web
 /de/docs/IndexedDB	/de/docs/Web/API/IndexedDB_API
 /de/docs/IndexedDB/Browser_storage_limits_and_eviction_criteria	/de/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
-/de/docs/IndexedDB/Grundkonzepte_hinter_IndexedDB	/de/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/de/docs/IndexedDB/Grundkonzepte_hinter_IndexedDB	/de/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /de/docs/IndexedDB/IndexedDB_verwenden	/de/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /de/docs/JavaScript	/de/docs/Web/JavaScript
 /de/docs/JavaScript/Eine_Wiedereinfuehrung_in_JavaScript	/de/docs/Web/JavaScript/A_re-introduction_to_JavaScript
@@ -488,7 +488,8 @@
 /de/docs/Web/API/Element.querySelector	/de/docs/Web/API/Element/querySelector
 /de/docs/Web/API/File/Typ	/de/docs/Web/API/File/type
 /de/docs/Web/API/File/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File/Using_files_from_web_applications
-/de/docs/Web/API/IndexedDB_API/Grundkonzepte_hinter_IndexedDB	/de/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/de/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/de/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/de/docs/Web/API/IndexedDB_API/Grundkonzepte_hinter_IndexedDB	/de/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /de/docs/Web/API/IndexedDB_API/IndexedDB_verwenden	/de/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /de/docs/Web/API/LinkStyle	/de/docs/orphaned/Web/API/LinkStyle
 /de/docs/Web/API/MozMobileConnection.selectNetworkAutomatically	/de/docs/Web/API/MozMobileConnection/selectNetworkAutomatically
@@ -736,6 +737,7 @@
 /de/docs/Web/JavaScript/Reference/Anweisungen/for...in	/de/docs/Web/JavaScript/Reference/Statements/for...in
 /de/docs/Web/JavaScript/Reference/Anweisungen/let	/de/docs/Web/JavaScript/Reference/Statements/let
 /de/docs/Web/JavaScript/Reference/Anweisungen/var	/de/docs/Web/JavaScript/Reference/Statements/var
+/de/docs/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments	/de/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 /de/docs/Web/JavaScript/Reference/Fehler	/de/docs/Web/JavaScript/Reference/Errors
 /de/docs/Web/JavaScript/Reference/Fehler/Already_has_pragma	/de/docs/Web/JavaScript/Reference/Errors/Already_has_pragma
 /de/docs/Web/JavaScript/Reference/Fehler/Array_sort_argument	/de/docs/Web/JavaScript/Reference/Errors/Array_sort_argument
@@ -802,7 +804,7 @@
 /de/docs/Web/JavaScript/Reference/Fehler/Stmt_after_return	/de/docs/Web/JavaScript/Reference/Errors/Stmt_after_return
 /de/docs/Web/JavaScript/Reference/Fehler/Strict_Non_Simple_Params	/de/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
 /de/docs/Web/JavaScript/Reference/Fehler/Too_much_recursion	/de/docs/Web/JavaScript/Reference/Errors/Too_much_recursion
-/de/docs/Web/JavaScript/Reference/Fehler/Typed_array_invalid_arguments	/de/docs/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
+/de/docs/Web/JavaScript/Reference/Fehler/Typed_array_invalid_arguments	/de/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 /de/docs/Web/JavaScript/Reference/Fehler/Undeclared_var	/de/docs/Web/JavaScript/Reference/Errors/Undeclared_var
 /de/docs/Web/JavaScript/Reference/Fehler/Undefined_prop	/de/docs/Web/JavaScript/Reference/Errors/Undefined_prop
 /de/docs/Web/JavaScript/Reference/Fehler/Unexpected_token	/de/docs/Web/JavaScript/Reference/Errors/Unexpected_token

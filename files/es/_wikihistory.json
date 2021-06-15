@@ -7784,15 +7784,6 @@
       "MPoli"
     ]
   },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2020-01-13T04:48:11.759Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "elin3t",
-      "sebasmagri"
-    ]
-  },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
     "modified": "2020-01-13T04:48:12.209Z",
     "contributors": [
@@ -23405,6 +23396,15 @@
       "khalid32",
       "teoli",
       "HenryGR"
+    ]
+  },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2020-01-13T04:48:11.759Z",
+    "contributors": [
+      "chrisdavidmills",
+      "fscholz",
+      "elin3t",
+      "sebasmagri"
     ]
   },
   "orphaned/Web/API/ParentNode": {
