@@ -3510,12 +3510,6 @@
       "james_yang"
     ]
   },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2019-03-23T22:20:07.015Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/API/ErrorEvent": {
     "modified": "2019-03-23T22:48:04.106Z",
     "contributors": [
@@ -4125,16 +4119,6 @@
       "MashKao",
       "ethertank",
       "princetoad@gmail.com"
-    ]
-  },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2019-03-18T20:39:41.131Z",
-    "contributors": [
-      "choznerol",
-      "jackblackevo",
-      "birdca",
-      "foxbrush",
-      "thomaschen"
     ]
   },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
@@ -7899,21 +7883,6 @@
       "iigmir"
     ]
   },
-  "Web/Reference": {
-    "modified": "2019-03-23T23:29:16.937Z",
-    "contributors": [
-      "jackblackevo",
-      "Somnlent",
-      "Sheppy"
-    ]
-  },
-  "Web/Reference/API": {
-    "modified": "2019-03-23T23:05:52.036Z",
-    "contributors": [
-      "jackblackevo",
-      "wildsky"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-01-16T17:22:30.480Z",
     "contributors": [
@@ -8704,6 +8673,22 @@
       "H-W-Chang"
     ]
   },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2019-03-23T22:20:07.015Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2019-03-18T20:39:41.131Z",
+    "contributors": [
+      "choznerol",
+      "jackblackevo",
+      "birdca",
+      "foxbrush",
+      "thomaschen"
+    ]
+  },
   "orphaned/Web/API/ParentNode": {
     "modified": "2019-12-24T08:07:24.128Z",
     "contributors": [
@@ -9096,6 +9081,21 @@
     "contributors": [
       "teoli",
       "happysadman"
+    ]
+  },
+  "orphaned/Web/Reference": {
+    "modified": "2019-03-23T23:29:16.937Z",
+    "contributors": [
+      "jackblackevo",
+      "Somnlent",
+      "Sheppy"
+    ]
+  },
+  "orphaned/Web/Reference/API": {
+    "modified": "2019-03-23T23:05:52.036Z",
+    "contributors": [
+      "jackblackevo",
+      "wildsky"
     ]
   },
   "orphaned/Web/SVG/教學": {
