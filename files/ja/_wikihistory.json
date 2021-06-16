@@ -35739,6 +35739,17 @@
       "marmot1123"
     ]
   },
+  "Web/HTML/Link_types/preload": {
+    "modified": "2020-12-13T02:32:11.039Z",
+    "contributors": [
+      "kobayashitomoya",
+      "maechabin",
+      "rigani",
+      "8tak4",
+      "mfuji09",
+      "turenar"
+    ]
+  },
   "Web/HTML/Microdata": {
     "modified": "2020-09-06T05:56:41.358Z",
     "contributors": [
@@ -52695,17 +52706,6 @@
     "contributors": [
       "ethertank",
       "Marsf"
-    ]
-  },
-  "orphaned/Web/HTML/Preloading_content": {
-    "modified": "2020-12-13T02:32:11.039Z",
-    "contributors": [
-      "kobayashitomoya",
-      "maechabin",
-      "rigani",
-      "8tak4",
-      "mfuji09",
-      "turenar"
     ]
   },
   "orphaned/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages": {
