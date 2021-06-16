@@ -5,7 +5,7 @@ tags:
   - Element
   - HTML
   - HTML document metadata
-  - 'HTML:Metadata content'
+  - HTML:Metadata content
   - Page Name
   - Page Title
   - Reference
@@ -15,19 +15,20 @@ tags:
   - Web
   - Window Name
   - Window Title
+browser-compat: html.elements.title
 translation_of: Web/HTML/Element/title
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML 題名要素</strong> (<strong><code>&lt;title&gt;</code></strong>) は、{{glossary("Browser", "ブラウザー")}}のタイトルバーやページのタブに表示される文書の題名を定義します。</span>テキストのみを含めることができ、要素内のタグはすべて無視されます。</p>
+<p><strong><code>&lt;title&gt;</code></strong> は <a href="/ja/docs/Web/HTML">HTML</a> の要素で、{{glossary("Browser", "ブラウザー")}}のタイトルバーやページのタブに表示される文書の題名を定義します。テキストのみを含めることができます。要素内のタグはすべて無視されます。</p>
 
-<pre class="brush: html notranslate">&lt;title&gt;Grandma's Heavy Metal Festival Journal&lt;/title&gt;</pre>
+<pre class="brush: html">&lt;title&gt;Grandma's Heavy Metal Festival Journal&lt;/title&gt;</pre>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Metadata_content">メタデータコンテンツ</a></td>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#metadata_content">メタデータコンテンツ</a></td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
@@ -56,88 +57,61 @@ translation_of: Web/HTML/Element/title
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
 <p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
 
-<h2 id="Usage_notes" name="Usage_notes">使用上のメモ</h2>
+<h2 id="Usage_notes">使用上のメモ</h2>
 
 <p><code>&lt;title&gt;</code> 要素は常にページの {{HTMLElement("head")}} ブロックの中で使われます。</p>
 
-<h3 id="Page_titles_and_SEO" name="Page_titles_and_SEO">ページの題名と SEO</h3>
+<h3 id="Page_titles_and_SEO">ページの題名と SEO</h3>
 
 <p>ページの題名の内容は、検索エンジン最適化 ({{glossary("SEO")}}) に著しい影響を与えることがあります。一般的に、長く、説明的な題名は、短く、一般的な題名よりも効果があります。題名の内容は、検索エンジンのアルゴリズムが検索結果にページを列挙する順序を決定するために使用する材料の一つです。また、題名は検索結果ページを眺めている読者の注意を引く最初の「フック」となります。</p>
 
 <p>良い題名を作成するためのガイドラインやコツを示します。</p>
 
 <ul>
- <li>1～2語の題名は避けましょう。説明的な文言を使用したり、用語集や参照スタイルのページでは用語と定義の組を使用したりしましょう。</li>
+ <li>1 ～ 2 語の題名は避けましょう。説明的な文言を使用したり、用語集や参照スタイルのページでは用語と定義の組を使用したりしましょう。</li>
  <li>検索エンジンは通常、ページの題名は最初のおよそ55–60文字を表示します。それを超えるテキストは失われることがあるので、それよりも長くはしないようにしてください。もっと長い題名を使う必要があるのであれば、重要な部分を前にもってくると、題名の中の重要な部分が落とされにくくなります。</li>
  <li>「キーワード BLOB」を使用しないでください。タイトルが単なるキーワードの羅列であると、アルゴリズムはそのページの検索結果内の順位を落とすことがあります。</li>
  <li>題名はできるだけサイト内で固有のものにするようにしてください。複写や複写に近いものは検索結果を不正確にすることがあります。</li>
 </ul>
 
-<h2 id="Example" name="Example">例</h2>
+<h2 id="Example">例</h2>
 
-<pre class="brush: html notranslate">&lt;title&gt;素敵で面白いこと&lt;/title&gt;
+<pre class="brush: html">&lt;title&gt;素敵で面白いこと&lt;/title&gt;
 </pre>
 
 <p>この例ではページの題名全体 (ウィンドウの最上部またはウィンドウのタブに表示されるもの) を「素敵で面白いこと」にします。</p>
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮</h2>
+<h2 id="Accessibility_concerns">アクセシビリティの考慮</h2>
 
 <p>重要なことは、ページの目的を記述した <code>title</code> の値を設定することです。</p>
 
 <p>支援技術を使用するユーザーのためのナビゲーション技術として、ページの題名を読んで、どのようなコンテンツが含まれるかを知るというものが良く使われます。これはコンテンツを特定するためにページ間を移動すると、時間を消費したり手順を間違える可能性があったりするからです。</p>
 
-<h3 id="Example_2" name="Example_2">例</h3>
+<h3 id="Example_2">例</h3>
 
-<pre class="notranslate">&lt;title&gt;Menu - Blue House Chinese Food - FoodYum: Online takeout today!&lt;/title&gt;
+<pre>&lt;title&gt;Menu - Blue House Chinese Food - FoodYum: Online takeout today!&lt;/title&gt;
 </pre>
 
 <p>ページの状態が大きく変わったことを示すために (フォーム検証の問題など)、ユーザーを支援するために、ページの <code>title</code> の値を更新してください。</p>
 
-<h3 id="Example_3" name="Example_3">例</h3>
+<h3 id="Example_3">例</h3>
 
-<pre class="notranslate">&lt;title&gt;2 errors - Your order - Blue House Chinese Food - FoodYum: Online takeout today!&lt;/title&gt;
+<pre>&lt;title&gt;2 errors - Your order - Blue House Chinese Food - FoodYum: Online takeout today!&lt;/title&gt;
 </pre>
 
 <ul>
- <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN WCAG を理解する ― ガイドライン 2.4 の解説</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN WCAG を理解する ― ガイドライン 2.4 の解説</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html">Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'semantics.html#the-title-element', '&lt;title&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'document-metadata.html#the-title-element', '&lt;title&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.4.2', '&lt;title&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
-
-<p>{{Compat("html.elements.title")}}</p>
+<p>{{Compat}}</p>
