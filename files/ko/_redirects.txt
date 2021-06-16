@@ -787,6 +787,7 @@
 /ko/docs/Web/Guide/HTML/Content_Editable	/ko/docs/Web/Guide/HTML/Editable_content
 /ko/docs/Web/Guide/HTML/HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5
 /ko/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/ko/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ko/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ko/docs/Web/Guide/HTML/컨텐트_카테고리	/ko/docs/Web/Guide/HTML/Content_categories
 /ko/docs/Web/Guide/HTML/폼	/ko/docs/Learn/Forms
 /ko/docs/Web/Guide/HTML/폼/HTML_폼_구성_방법	/ko/docs/Learn/Forms/How_to_structure_a_web_form
@@ -826,7 +827,7 @@
 /ko/docs/Web/HTML/HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5
 /ko/docs/Web/HTML/HTML5/HTML5_element_list	/ko/docs/Web/HTML/Element
 /ko/docs/Web/HTML/HTML5/Introduction_to_HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
-/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽	/ko/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽	/ko/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn/Forms
 /ko/docs/Web/HTML/Introduction	/ko/docs/Learn/HTML/Introduction_to_HTML
 /ko/docs/Web/HTML/Preloading_content	/ko/docs/orphaned/Web/HTML/Preloading_content

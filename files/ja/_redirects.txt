@@ -2570,7 +2570,7 @@
 /ja/docs/HTML/Inline_elements	/ja/docs/Web/HTML/Inline_elements
 /ja/docs/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/HTML/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
-/ja/docs/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/ja/docs/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ja/docs/HTML/Supported_media_formats	/ja/docs/Web/Media/Formats
 /ja/docs/HTML/Using_HTML5_audio_and_video	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/HTML/属性	/ja/docs/Web/HTML/Attributes
@@ -3517,7 +3517,7 @@
 /ja/docs/SVG_in_Firefox_1.5	/ja/docs/conflicting/Web/SVG/SVG_1.1_Support_in_Firefox
 /ja/docs/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
 /ja/docs/Scripting_Java	/ja/docs/Rhino/Scripting_Java
-/ja/docs/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/ja/docs/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ja/docs/Security/CSP	/ja/docs/Web/HTTP/CSP
 /ja/docs/Security/CSP/CSP_policy_directives	/ja/docs/Web/HTTP/Headers/Content-Security-Policy
 /ja/docs/Security/CSP/Default_CSP_restrictions	/ja/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -4623,6 +4623,7 @@
 /ja/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ja/docs/Web/Guide/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web/Guide/HTML/Obsolete_things_to_avoid	/ja/docs/conflicting/Learn/HTML/Introduction_to_HTML
+/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
 /ja/docs/Web/Guide/Performance/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/ja/docs/Web/API/Page_Visibility_API
@@ -4737,7 +4738,7 @@
 /ja/docs/Web/HTML/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ja/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/ja/docs/Glossary/speculative_parsing
 /ja/docs/Web/HTML/Preloading_content	/ja/docs/orphaned/Web/HTML/Preloading_content
-/ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ja/docs/Web/HTML/Supported_media_formats	/ja/docs/Web/Media/Formats
 /ja/docs/Web/HTML/Using_HTML5_audio_and_video	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/Web/HTML/属性	/ja/docs/Web/HTML/Attributes

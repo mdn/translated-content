@@ -9196,23 +9196,6 @@
       "fellyph"
     ]
   },
-  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2020-10-07T01:45:20.737Z",
-    "contributors": [
-      "leandroembu",
-      "Lucas_Inacio",
-      "davimdantas",
-      "SaggitariusA",
-      "webennes",
-      "edercampelo",
-      "IgorGoncalves",
-      "dann",
-      "netoguimaraes",
-      "Stutz.D",
-      "eduardodx",
-      "AluisioASG"
-    ]
-  },
   "Web/Guide/Introduction_to_Web_development": {
     "modified": "2019-07-28T16:57:13.368Z",
     "contributors": [
@@ -17245,6 +17228,23 @@
       "flmidia",
       "teoli",
       "eduardodx"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2020-10-07T01:45:20.737Z",
+    "contributors": [
+      "leandroembu",
+      "Lucas_Inacio",
+      "davimdantas",
+      "SaggitariusA",
+      "webennes",
+      "edercampelo",
+      "IgorGoncalves",
+      "dann",
+      "netoguimaraes",
+      "Stutz.D",
+      "eduardodx",
+      "AluisioASG"
     ]
   },
   "orphaned/Web/HTML/Element/command": {

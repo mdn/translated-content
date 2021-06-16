@@ -14261,18 +14261,6 @@
       "V.Morantes"
     ]
   },
-  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2019-03-23T23:38:22.567Z",
-    "contributors": [
-      "blanchart",
-      "eljonims",
-      "welm",
-      "javigaar",
-      "learnercys",
-      "pierre_alfonso",
-      "jesanchez"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-03-23T22:48:50.706Z",
     "contributors": [
@@ -23575,6 +23563,18 @@
     "contributors": [
       "emanuelvega",
       "Cristhoper"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2019-03-23T23:38:22.567Z",
+    "contributors": [
+      "blanchart",
+      "eljonims",
+      "welm",
+      "javigaar",
+      "learnercys",
+      "pierre_alfonso",
+      "jesanchez"
     ]
   },
   "orphaned/Web/HTML/Element/command": {

@@ -31040,29 +31040,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2020-04-07T04:00:20.055Z",
-    "contributors": [
-      "n3wborn",
-      "mathildebuenerd",
-      "ledenis",
-      "JNa0",
-      "edspeedy",
-      "Pols12",
-      "efazenda",
-      "Phklrz",
-      "Mathieu_deLauniere",
-      "Havano",
-      "Fredchat",
-      "wakka27",
-      "jessmania",
-      "ferncoder",
-      "SphinxKnight",
-      "tregagnon",
-      "Blancdememoire",
-      "FredB"
-    ]
-  },
   "Web/Guide/Introduction_to_Web_development": {
     "modified": "2019-03-24T00:03:04.501Z",
     "contributors": [
@@ -45191,6 +45168,29 @@
       "Bringdal",
       "tregagnon",
       "xaky"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2020-04-07T04:00:20.055Z",
+    "contributors": [
+      "n3wborn",
+      "mathildebuenerd",
+      "ledenis",
+      "JNa0",
+      "edspeedy",
+      "Pols12",
+      "efazenda",
+      "Phklrz",
+      "Mathieu_deLauniere",
+      "Havano",
+      "Fredchat",
+      "wakka27",
+      "jessmania",
+      "ferncoder",
+      "SphinxKnight",
+      "tregagnon",
+      "Blancdememoire",
+      "FredB"
     ]
   },
   "orphaned/Web/HTML/Element/isindex": {

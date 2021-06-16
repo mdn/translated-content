@@ -10101,17 +10101,6 @@
       "gblue1223"
     ]
   },
-  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2020-01-10T12:08:26.959Z",
-    "contributors": [
-      "alattalatta",
-      "sudo0272",
-      "Kaben",
-      "bombinari",
-      "naduhy2",
-      "miname"
-    ]
-  },
   "Web/Guide/Index": {
     "modified": "2020-12-07T13:40:57.143Z",
     "contributors": [
@@ -18441,6 +18430,17 @@
       "juyoungbang",
       "teoli",
       "Channy"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2020-01-10T12:08:26.959Z",
+    "contributors": [
+      "alattalatta",
+      "sudo0272",
+      "Kaben",
+      "bombinari",
+      "naduhy2",
+      "miname"
     ]
   },
   "orphaned/Web/HTML/Element/command": {

@@ -15338,17 +15338,6 @@
       "warsan"
     ]
   },
-  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2020-10-09T08:16:53.318Z",
-    "contributors": [
-      "matiasrustagte",
-      "arka_triymfalnaya",
-      "outdever",
-      "Wingear",
-      "evgor80",
-      "lerniri"
-    ]
-  },
   "Web/Guide/Parsing_and_serializing_XML": {
     "modified": "2020-10-11T12:29:17.772Z",
     "contributors": [
@@ -25635,6 +25624,17 @@
     "contributors": [
       "Jmunb",
       "Grakov"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2020-10-09T08:16:53.318Z",
+    "contributors": [
+      "matiasrustagte",
+      "arka_triymfalnaya",
+      "outdever",
+      "Wingear",
+      "evgor80",
+      "lerniri"
     ]
   },
   "orphaned/Web/Guide/Localizations_and_character_encodings": {

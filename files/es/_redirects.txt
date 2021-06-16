@@ -1700,9 +1700,9 @@
 /es/docs/SVG_In_HTML_Introduction	/es/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /es/docs/SVG_en_Firefox	/es/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /es/docs/Screening_duplicate_bugs	/es/docs/QA/Screening_duplicate_bugs
-/es/docs/Secciones_y_contornos_de_un_documento_HTML5	/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
-/es/docs/Secciones_y_esquema_de_un_documento_HTML_5	/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
-/es/docs/Sections_and_Outlines_of_an_HTML5_document	/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/es/docs/Secciones_y_contornos_de_un_documento_HTML5	/es/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/es/docs/Secciones_y_esquema_de_un_documento_HTML_5	/es/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/es/docs/Sections_and_Outlines_of_an_HTML5_document	/es/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /es/docs/Seguridad_en_Firefox_2	/es/docs/Mozilla/Firefox/Releases/2/Security_changes
 /es/docs/Selección_de_modo_en_Mozilla	/es/docs/orphaned/Selección_de_modo_en_Mozilla
 /es/docs/Server-sent_events	/es/docs/Web/API/Server-sent_events
@@ -2079,6 +2079,7 @@
 /es/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/es/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /es/docs/Web/Guide/HTML/Introduction_alhtml	/es/docs/Learn/HTML/Introduction_to_HTML
 /es/docs/Web/Guide/HTML/Introduction_alhtml_clone	/es/docs/orphaned/Web/Guide/HTML/Introduction_alhtml_clone
+/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/es/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /es/docs/Web/Guide/HTML/categorias_de_contenido	/es/docs/Web/Guide/HTML/Content_categories
 /es/docs/Web/Guide/Movil	/es/docs/Web/Guide/Mobile
 /es/docs/Web/Guide/Performance/Usando_web_workers	/es/docs/Web/API/Web_Workers_API/Using_web_workers

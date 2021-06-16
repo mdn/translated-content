@@ -33852,25 +33852,6 @@
       "maripo"
     ]
   },
-  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2020-08-09T13:53:14.893Z",
-    "contributors": [
-      "mfuji09",
-      "taku-furuta",
-      "miyah-kun",
-      "8845musign",
-      "michi-h0623",
-      "SphinxKnight",
-      "webooker",
-      "yyss",
-      "ethertank",
-      "teoli",
-      "DavidWalsh",
-      "Potappo",
-      "saneyuki_s",
-      "kj"
-    ]
-  },
   "Web/Guide/HTML/XHTML": {
     "modified": "2020-05-04T01:56:10.076Z",
     "contributors": [
@@ -52638,6 +52619,25 @@
       "teoli",
       "ethertank",
       "Potappo"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2020-08-09T13:53:14.893Z",
+    "contributors": [
+      "mfuji09",
+      "taku-furuta",
+      "miyah-kun",
+      "8845musign",
+      "michi-h0623",
+      "SphinxKnight",
+      "webooker",
+      "yyss",
+      "ethertank",
+      "teoli",
+      "DavidWalsh",
+      "Potappo",
+      "saneyuki_s",
+      "kj"
     ]
   },
   "orphaned/Web/Guide/Localizations_and_character_encodings": {

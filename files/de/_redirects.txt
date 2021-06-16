@@ -669,7 +669,8 @@
 /de/docs/Web/Guide/HTML/Einführung	/de/docs/Learn/HTML/Introduction_to_HTML
 /de/docs/Web/Guide/HTML/HTML5	/de/docs/orphaned/Web/Guide/HTML/HTML5
 /de/docs/Web/Guide/HTML/Inhaltskategorien	/de/docs/Web/Guide/HTML/Content_categories
-/de/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/de/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/de/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/de/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/de/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/de/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /de/docs/Web/HTML/Block-level_elemente	/de/docs/Web/HTML/Block-level_elements
 /de/docs/Web/HTML/Canvas	/de/docs/Web/API/Canvas_API
 /de/docs/Web/HTML/Element/h1	/de/docs/Web/HTML/Element/Heading_Elements

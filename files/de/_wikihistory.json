@@ -8145,13 +8145,6 @@
       "lxdiamond"
     ]
   },
-  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2019-03-18T20:37:20.242Z",
-    "contributors": [
-      "SebinNyshkim",
-      "BlackRebell89"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-03-23T23:29:04.325Z",
     "contributors": [
@@ -14757,6 +14750,13 @@
       "thorsten.rinne",
       "matze",
       "nothine"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2019-03-18T20:37:20.242Z",
+    "contributors": [
+      "SebinNyshkim",
+      "BlackRebell89"
     ]
   },
   "orphaned/Web/HTML/Global_attributes/dropzone": {
