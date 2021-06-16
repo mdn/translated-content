@@ -1,74 +1,71 @@
 ---
-title: window.toolbar
+title: Window.toolbar
 slug: Web/API/Window/toolbar
 tags:
-  - Gecko
-  - HTML DOM
-  - Window
-  - 要更新
+- API
+- HTML DOM
+- NeedsExample
+- NeedsMarkupWork
+- Property
+- Reference
+- Window
 translation_of: Web/API/Window/toolbar
 ---
-<p>{{ ApiRef() }} {{ 英語版章題("Summary") }}</p>
+<div>{{APIRef}}</div>
 
-<h2 id="概要">概要</h2>
+<p><code><strong>Window.toolbar</strong></code> プロパティはツールバーオブジェクトを返します。これを用いて、ツールバーの表示状態を確認することができます。</p>
 
-<p>toolbar オブジェクトを返します。このバーの表示は、ウィンドウ内でトグル（表示/非表示の状態を切り替える）ことができます。 {{ 英語版章題("Syntax") }}</p>
+<h2 id="Syntax">構文</h2>
 
-<h2 id="構文">構文</h2>
+<pre class="brush: js"><em>objRef</em> = <em>window</em>.toolbar</pre>
 
-<pre class="syntaxbox"><em>objRef</em> = window.toolbar</pre>
+<h2 id="Example">例</h2>
 
-<p>{{ 英語版章題("Example") }}</p>
+<p>次の完全な HTML は、 <code>toolbar</code> オブジェクトの <code>visible</code> プロパティの使い方を示しています。</p>
 
-<h3 id="例">例</h3>
-
-<p>以下の完全な HTML の例は、様々な "bar" オブジェクトの visible プロパティで利用可能な方法を示しています。存在するウィンドウのあらゆるバーの visible プロパティ を書き換えるには、特権が必要です。</p>
-
-<pre> &lt;html&gt;
-  &lt;head&gt;
-   &lt;title&gt;様々な DOM テスト&lt;/title&gt;
-   &lt;script&gt;
-    // 存在するウィンドウのバーの状態を変更します
-    netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
-    window.toolbar.visible=!window.toolbar.visible;
-   &lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-   &lt;p&gt;様々な DOM テスト&lt;/p&gt;
-  &lt;/body&gt;
- &lt;/html&gt;
+<pre class="brush:html">&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;様々な DOM テスト&lt;/title&gt;
+  &lt;script&gt;
+    var visible = window.toolbar.visible;
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;様々な DOM テスト&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </pre>
 
-<p>{{ 英語版章題("Notes") }}</p>
+<div class="note notebox">
+  <p>とても古いバージョンの Firefox では、ツールバーの表示状態を<em>設定</em>することもできましたが、これに対応していた仕組みは<a href="/ja/docs/Archive/Misc_top_level/Bypassing_Security_Restrictions_and_Signing_Code" title="Archived:Bypassing_Security_Restrictions_and_Signing_Code">削除されました</a>。</p>
 
-<h3 id="注記">注記</h3>
+</div>
 
-<p>あなたが上記の例のページを読み込んだとき、ブラウザは、以下のダイアログを表示するでしょう。: <img alt="Image:Modify_any_open_window_dialog.png"></p>
 
-<p>バーの表示を表示をトグルには、上記の例のように、スクリプトの実行と特権要求を許可しなければなりません。また、様々なツールバーの表示の動的な変更は、ウィンドウのサイズをかなり劇的に変化させることがあり、ページのレイアウトに影響する可能性があることに注意してください。</p>
-
-<p>参照: <a href="ja/DOM/window.locationbar">window.locationbar</a>, <a href="ja/DOM/window.menubar">window.menubar</a>, <a href="ja/DOM/window.personalbar">window.personalbar</a>, <a href="ja/DOM/window.scrollbars">window.scrollbars</a>, <a href="ja/DOM/window.statusbar">window.statusbar</a></p>
-
-<p>{{ 英語版章題("Specification") }}</p>
-
-<h3 id="仕様">仕様</h3>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'browsers.html#dom-window-toolbar', 'Window.toolbar')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-window-toolbar', 'Window.toolbar')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">仕様書</th>
+      <th scope="col">状態</th>
+      <th scope="col">備考</th>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', 'browsers.html#dom-window-toolbar',
+        'Window.toolbar')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('HTML5 W3C', 'browsers.html#dom-window-toolbar', 'Window.toolbar')}}
+      </td>
+      <td>{{Spec2('HTML5 W3C')}}</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
+
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("api.Window.toolbar")}}</p>

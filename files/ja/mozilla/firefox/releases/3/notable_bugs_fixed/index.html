@@ -1,33 +1,35 @@
 ---
-title: Notable bugs fixed in Firefox 3
+title: Firefox 3 で修正された重要なバグ
 slug: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 tags:
   - Firefox 3
 translation_of: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 original_slug: Notable_bugs_fixed_in_Firefox_3
 ---
-<p>この記事は、ドキュメントで必ずしも明白に説明されていない、Firefox 3 で修正された重要なバグの修正の一覧を提供します。
-</p>
-<ul><li>オーバーレイをパース中にエラーが発生した場合、オーバーレイは適用されません。パースエラーがエラーコンソールへ記録されます。 ({{ Bug(335755) }})
-</li><li>バグが修正され、メニューやメニューに似た要素に対して適用された場合でもバインディングの内部に <code>&lt;menupopup&gt;</code> 要素を設置できるようになりました。({{ Bug(345896) }})
-</li><li>ボタンの <code>dlgType</code> プロパティが正しく動作するようになりました。 ({{ Bug(308591) }})
-</li><li>{{ Domxref("event.initEvent") }} の引数 <code>canBubble</code> が正しく動作するようになり、浮上しないイベントを発生させられるようになりました。 ({{ Bug(330190) }})
-</li><li><code>DOMAttrModified</code> イベントが名前空間付きの属性を適切に処理するようになりました。 ({{ Bug(362391) }})
-</li><li><code>&lt;?xml-stylesheet ?&gt;</code> のようなXML処理命令が、 XUL 文書の DOM へと追加されるようになりました。したがって、 {{ Domxref("document.firstChild") }} が必ずしもルート要素であることを保証しないことになります。代わりに {{ Domxref("document.documentElement") }} を使用してください。また、 <code>&lt;?xml-stylesheet ?&gt;</code> や <code>&lt;?xul-overlay ?&gt;</code> 処理命令は、文書の前置き以外の場所では効果を発揮しないようになりました。 ({{ Bug(319654) }})
-</li><li>XUL 要素や文書に対する <code>getElementsByAttributeNS</code> 関数が追加されました。 ({{ Bug(239976) }})
-</li><li>XUL 文書から要素を移動したり削除したりしても、イベントリスナが保持されます。 ({{ Bug(286619) }})
-</li><li>変異イベントが非表示ドキュメントでも発生するようになりました。 ({{ Bug(201236) }})
-</li><li>要素が間違った順番で描画されることによるさまざまな問題が修正されました。 ({{ Bug(317375) }})
-</li><li><code><a href="ja/DOM/element.getElementsByTagName">getElementsByTagName()</a></code> が、タグ名に名前空間接頭辞を含む要素を持つサブツリーにおいて正しく動作するように修正されました。 ({{ Bug(206053) }}).
-</li><li><code>DOMNodeInserted</code> および <code>DOMNodeRemoved</code> イベントが正しいノードに適用されるようになりました。 ({{ Bug(367164) }}).
-</li><li> 正規表現の特殊文字である <code>\d</code> が Basic Latin アルファベット の数字（<code>{{ mediawiki.external('0-9') }}</code> と同じ）だけにマッチするように修正されました。 ({{ Bug(378738) }})
-</li><li>image-sniffing-services カテゴリにより、拡張機能として実装された画像デコーダが正しくない MIME タイプで送られた画像を正しくデコードできるようになります（{{ Bug(391667) }}）。
-</li></ul>
-<p>{{ 英語版章題("See also") }}
-</p>
-<h3 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">参照</h3>
-<ul><li> <a href="ja/Firefox_3_for_developers">Firefox 3 for developers</a>
-</li></ul>
-<div class="noinclude">
-</div>
-{{ languages( { "en": "en/Notable_bugs_fixed_in_Firefox_3", "es": "es/Bugs_importantes_solucionados_en_Firefox_3", "fr": "fr/Bugs_importants_corrig\u00e9s_dans_Firefox_3", "pl": "pl/Istotne_b\u0142\u0119dy_poprawione_w_Firefoksie_3" } ) }}
+<div>{{FirefoxSidebar}}</div>
+
+<p>この記事は、ドキュメントで必ずしも明白に説明されていない、Firefox 3 で修正された重要なバグの修正の一覧を提供します。</p>
+
+<ul>
+ <li>オーバーレイをパース中にエラーが発生した場合、オーバーレイは適用されません。パースエラーがエラーコンソールへ記録されます。 ({{ Bug(335755) }})</li>
+ <li>バグが修正され、メニューやメニューに似た要素に対して適用された場合でもバインディングの内部に <code>&lt;menupopup&gt;</code> 要素を設置できるようになりました。({{ Bug(345896) }})</li>
+ <li>ボタンの <code>dlgType</code> プロパティが正しく動作するようになりました。 ({{ Bug(308591) }})</li>
+ <li>{{ Domxref("event.initEvent") }} の引数 <code>canBubble</code> が正しく動作するようになり、浮上しないイベントを発生させられるようになりました。 ({{ Bug(330190) }})</li>
+ <li><code>DOMAttrModified</code> イベントが名前空間付きの属性を適切に処理するようになりました。 ({{ Bug(362391) }})</li>
+ <li><code>&lt;?xml-stylesheet ?&gt;</code> のようなXML処理命令が、 XUL 文書の DOM へと追加されるようになりました。したがって、 {{ Domxref("document.firstChild") }} が必ずしもルート要素であることを保証しないことになります。代わりに {{ Domxref("document.documentElement") }} を使用してください。また、 <code>&lt;?xml-stylesheet ?&gt;</code> や <code>&lt;?xul-overlay ?&gt;</code> 処理命令は、文書の前置き以外の場所では効果を発揮しないようになりました。 ({{ Bug(319654) }})</li>
+ <li>XUL 要素や文書に対する <span id="m-getElementsByAttributeNS"><code><a href="/ja/docs/Mozilla/Tech/XUL/Method/getElementsByAttributeNS">getElementsByAttributeNS()</a></code></span> 関数が追加されました。 ({{ Bug(239976) }})</li>
+ <li>XUL 文書から要素を移動したり削除したりしても、イベントリスナが保持されます。 ({{ Bug(286619) }})</li>
+ <li>変異イベントが非表示ドキュメントでも発生するようになりました。 ({{ Bug(201236) }})</li>
+ <li>要素が間違った順番で描画されることによるさまざまな問題が修正されました。 ({{ Bug(317375) }})</li>
+ <li><code><a href="/ja/docs/Web/API/Element/getElementsByTagName">getElementsByTagName()</a></code> が、タグ名に名前空間接頭辞を含む要素を持つサブツリーにおいて正しく動作するように修正されました。 ({{ Bug(206053) }}).</li>
+ <li><code>DOMNodeInserted</code> および <code>DOMNodeRemoved</code> イベントが正しいノードに適用されるようになりました。 ({{ Bug(367164) }}).</li>
+ <li>正規表現の特殊文字である <code>\d</code> が Basic Latin アルファベット の数字（<code>{{ mediawiki.external('0-9') }}</code> と同じ）だけにマッチするように修正されました。 ({{ Bug(378738) }})</li>
+ <li>image-sniffing-services カテゴリにより、拡張機能として実装された画像デコーダが正しくない MIME タイプで送られた画像を正しくデコードできるようになります（{{ Bug(391667) }}）。</li>
+ <li>フォームコントロール上で右クリックしても、既定ではコンテキストメニューを表示しないようになりました ({{ Bug(404536) }}。この機能を個別に有効にする方法については、<a class="internal" href="/ja/docs/Offering%20a%20context%20menu%20for%20form%20controls">フォームコントロールにコンテキストメニューを提供する</a>を参照してください。</li>
+</ul>
+
+<h3 id="See_also">関連情報</h3>
+
+<ul>
+ <li> <a href="/ja/docs/Mozilla/Firefox/Releases/3">Firefox 3 for developers</a></li>
+</ul>

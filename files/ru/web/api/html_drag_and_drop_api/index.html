@@ -1,73 +1,324 @@
 ---
-title: Drag and drop
+title: HTML Drag and Drop API
 slug: Web/API/HTML_Drag_and_Drop_API
-translation_of: Web/API/HTML_Drag_and_Drop_API
-original_slug: Web/Guide/HTML/Drag_and_drop
+tags:
+  - Продвинутое
+  - Руководство
+  - HTML5
+  - Overview
+  - XUL
+  - drag and drop
+  - events
 ---
-<p>Firefox и прочие приложения компании Mozilla имеют ряд возможностей для управления drag и drop. Это позволяет пользователю нажать и удерживая зажатой кнопку мыши над элементом, переместить его на другую позицию, отпустив кнопку мыши пользователь может оставить элемент на новой позиции. На протяжении всей операции перемещения полупрозрачное представление элемента следует за курсором мыши. Новая позиция элемента может располагаться в совершенно другом приложении. Веб сайты, и XUL приложения могут использовать эту функциональность для того, чтобы определить какие элементы страницы могут быть перемещены, а также определить элементы куда первые могут быть перемещены.</p>
+<div>{{DefaultAPISidebar("HTML Drag and Drop API")}}</div>
 
-<div class="note">Эта часть покрывает функциональность drag и drop в Firefox 3.5 (Gecko 1.9.1) а также последующие версии. Для старого API для Firefox 3.0 и ранее, в котором нет соответствующей поддержки данной функциональности, смотрите <a href="/en-US/docs/Drag_and_Drop" title="Older Drag and Drop API">older API documentation</a>.</div>
+<p><span class="seoSummary">Интерфейс<strong>HTML Drag and Drop</strong> позволяет приложениям использовать функционал перетаскивания в браузерах.</span> Пользователь может выбрать <em>перетаскиваемые</em> элементы мышью, перетащить к элементу <em>сброса</em> и бросить их, отпустив кнопку мыши. Во время переноса за указателем следует полупрозрачный образ <em>перетаскиваемого</em> элемента</p>
 
-<h2 id="Основы_Drag_и_Drop">Основы Drag и Drop</h2>
+<p>При создании веб-сайтов, расширений и XUL-приложений можно настраивать, какие именно элементы можно <em>перетаскивать</em>, какую обратную связь они при этом будут создавать, и какие элементы будут создавать область <em>сброса</em>.</p>
 
-<p>Использование функциональности drag и drop подразумевает выполнения следующих шагов:</p>
+<p>Данный обзор HTML Drag and Drop включает описание интерфейса, основные шаги по добавлению поддержки данного функционала в приложение, а также краткие данные о поддержке.</p>
+
+<h2 id="Drag_Events">События перетаскивания</h2>
+
+<p>HTML drag-and-drop использует {{domxref("Event","модель событий DOM")}} и <em>{{domxref("DragEvent","события перетаскивания")}}</em> унаследованные от {{domxref("MouseEvent","событий мыши")}}. Обычно <em>операция перетаскивания</em> начинается, когда пользователь выбирает <em>перетаскиваемый</em> элемент, перемещает его в зону элемента <em>сброса</em>, после чего отпускает.</p>
+
+<p>В ходе операции перетаскивания происходит несколько типов событий, а события {{domxref('Document/drag_event', 'drag')}} и {{domxref('Document/dragover_event', 'dragover')}} могут вызываться множество раз.</p>
+
+<p>У каждого <a href="/en-US/docs/Web/API/DragEvent#event_types">события перетаскивания</a> есть связанный <a href="/en-US/docs/Web/API/DragEvent#globaleventhandlers">глобальный обработчик события</a>:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Событие</th>
+   <th scope="col">Обработчик события</th>
+   <th scope="col">Запускается, когда…</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{domxref('Document/drag_event', 'drag')}}</td>
+   <td>{{domxref('GlobalEventHandlers.ondrag','ondrag')}}</td>
+   <td>…длится перетаскивание элемента или выделения текста.</td>
+  </tr>
+  <tr>
+   <td>{{domxref('Document/dragend_event', 'dragend')}}</td>
+   <td>{{domxref('GlobalEventHandlers.ondragend','ondragend')}}</td>
+   <td>…завершается перетаскивание (например, отпускается кнопка мыши или нажимается Escape; подробнее в <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend" title="Завершение перетаскивания">Завершение перетаскивания</a>.)</td>
+  </tr>
+  <tr>
+   <td>{{domxref('Document/dragenter_event', 'dragenter')}}</td>
+   <td>{{domxref('GlobalEventHandlers.ondragenter','ondragenter')}}</td>
+   <td>…перетаскиваемый элемент попадает в допустимую цель сброса (Подробнее в <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets" title="Указание целей сброса">Указание целей сброса</a>.)</td>
+  </tr>
+  <tr>
+   <td>{{domxref('Document/dragexit_event', 'dragexit')}}</td>
+   <td>{{domxref('GlobalEventHandlers.ondragleave','ondragexit')}}</td>
+   <td>…элемент больше не является целью операции перетаскивания.</td>
+  </tr>
+  <tr>
+   <td>{{domxref('Document/dragleave_event', 'dragleave')}}</td>
+   <td>{{domxref('GlobalEventHandlers.ondragleave','ondragleave')}}</td>
+   <td>…перетаскиваемый элемент покидает допустимую цель сброса.</td>
+  </tr>
+  <tr>
+   <td>{{domxref('Document/dragover_event', 'dragover')}}</td>
+   <td>{{domxref('GlobalEventHandlers.ondragover','ondragover')}}</td>
+   <td>…элемент перетаскивается над допустимой целью сброса каждые несколько сотен миллисекунд</td>
+  </tr>
+  <tr>
+   <td>{{domxref('Document/dragstart_event', 'dragstart')}}</td>
+   <td>{{domxref('GlobalEventHandlers.ondragstart','ondragstart')}}</td>
+   <td>…пользователь начал перетаскивать элемент. (Подробнее в <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragstart" title="Начало операции перетаскивания">Начало операции перетаскивания</a>.)</td>
+  </tr>
+  <tr>
+   <td>{{domxref('Document/drop_event', 'drop')}}</td>
+   <td>{{domxref('GlobalEventHandlers.ondrop','ondrop')}}</td>
+   <td>…элемент сброшен в допустимую зону сброса. (Подробнее в <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop" title="Выполнение сброса">Выполнение сброса</a>.)</td>
+  </tr>
+ </tbody>
+</table>
+
+<p class="note"><strong>Примечание:</strong> При перемещении файла из операционной системы в браузер ни событие <code>dragstart</code>, ни <code>dragend</code> не вызывается.</p>
+
+<h2 id="Interfaces">Интерфейсы</h2>
+
+<p>К HTML Drag and Drop интерфейсам относятся {{domxref("DragEvent")}}, {{domxref("DataTransfer")}}, {{domxref("DataTransferItem")}} и {{domxref("DataTransferItemList")}}.</p>
+
+<p>Интерфейс {{domxref("DragEvent")}} имеет конструктор и одно свойство {{domxref("DragEvent.dataTransfer","dataTransfer")}}, которое является объектом {{domxref("DataTransfer")}}.</p>
+
+<p>Объекты {{domxref("DataTransfer")}} включают состояние события, такое как тип выполненного перетаскивания (вроде <code>copy</code> или <code>move</code>), данные перетаскивания (один или более элементов) и MIME-тип каждого <em>элемента перетаскивания</em>. Объекты {{domxref("DataTransfer")}} также имеют методы добавления или удаления элементов из данных о перетасивании.</p>
+
+<p>Для добавления в приложение поддержки HTML Drag and Drop, следует использовать только интерфейсы {{domxref("DragEvent")}} и {{domxref("DataTransfer")}}. (Firefox поддерживает некоторые {{anch("Gecko specific interfaces","Специфичные для Gecko расширения")}} объекта {{domxref("DataTransfer")}}, но они будут работать только в Firefox.)</p>
+
+<p>Каждый объект {{domxref("DataTransfer")}} содержит свойство {{domxref("DataTransfer.items","items")}}, являющееся {{domxref("DataTransferItemList","списком")}} объектов {{domxref("DataTransferItem")}}. Объект {{domxref("DataTransferItem")}} представляет собой отдельный <em>перетаскиваемый элемент</em>, каждый со свойством {{domxref("DataTransferItem.kind","kind")}} (либо <code>string</code> либо <code>file</code>) и свойство {{domxref("DataTransferItem.type","type")}} для MIME-типа данных элемента. Объект {{domxref("DataTransferItem")}} также имеет методы для получения данных о перемещаемых элементах.</p>
+
+<p>Объект {{domxref("DataTransferItemList")}} содержит список объектов {{domxref("DataTransferItem")}}. Он имеет методы для добавления перетаскиваемых объектов в список, их удаления, и очистки списка.</p>
+
+<p>Ключевое отличие интерфейсов {{domxref("DataTransfer")}} и {{domxref("DataTransferItem")}} заключается в том, что первый использует синхронный метод доступа к данным о перетаскиваемых объектах {{domxref("DataTransfer.getData","getData()")}}, а второй – асинхронный метод {{domxref("DataTransferItem.getAsString","getAsString()")}}.</p>
+
+<p class="note"><strong>Примечание:</strong> {{domxref("DragEvent")}} и {{domxref("DataTransfer")}} широко поддерживаются десктопными браузерами. Однако, поддержка интерфейсов {{domxref("DataTransferItem")}} и {{domxref("DataTransferItemList")}} достаточно ограниченная. Более подробно можно узнать в разделе {{anch("Interoperability", "Поддержка")}} .</p>
+
+<h3 id="Gecko-specific_interfaces">Специфичные для Gecko интерфейсы</h3>
+
+<p>Mozilla и Firefox поддерживают некоторые функции, которых нет в стандартной drag-and-drop модели. Это <em>удобные функции</em>, помогающие перетаскивать несколько элементов или нестроковых данных (например, файлов). Для получения дополнительной информации смотрите <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Перетаскивание и Сброс нескольких элементов</a>. Дополнительно посмотрите {{domxref("DataTransfer")}} страницу справочника со всеми специфичными для Gecko <a href="/en-US/docs/Web/API/DataTransfer#gecko_properties">свойствами</a> и <a href="/en-US/docs/Web/API/DataTransfer#gecko_methods">методами</a>.</p>
+
+<h2 id="The_basics">Основы</h2>
+
+<p>В данном разделе кратко описаны основные шаги добавления в приложение функционала drag-and-drop.</p>
+
+<h3 id="Identify_what_is_draggable">Обозначьте, что можно <em>перетаскивать</em></h3>
+
+<p>Чтобы сделать элемент <em>перетаскиваемым</em>, к нему нужно добавить атрибут {{htmlattrxref("draggable")}} и глобальный обработчик события {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}. Пример показан в коде ниже:</p>
+
+<pre class="brush: html">&lt;script&gt;
+  function dragstart_handler(ev) {
+    // Добавить id целевого элемента в объект передачи данных
+    ev.dataTransfer.setData("text/plain", ev.target.id);
+  }
+
+  window.addEventListener('DOMContentLoaded', () =&gt; {
+    // Найти элемент по id
+    const element = document.getElementById("p1");
+    // Добавить обработчик события `dragstart`
+    element.addEventListener("dragstart", dragstart_handler);
+  });
+&lt;/script&gt;
+
+&lt;p id="p1" draggable="true"&gt;Данный элемент является перетаскиваемым.&lt;/p&gt;</pre>
+
+<p>Для получения дополнительной информации смотрите:</p>
 
 <ul>
- <li>Определить переносимый элемент. Присвоить true атрибуту draggable элемента, который мы хотим перенести. Для детальной информации смотрите <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_operations#draggableattribute">The Draggable Attribute</a>.</li>
- <li>Определить данные, которые могут быть перемещены, они могут быть разного формата. К примеру, текстовые данные, содержащие строку текста который может быть перемещён. Для детальной информации смотрите <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#dragdata" title="Drag Data">Drag Data</a>.</li>
- <li>(Необязательно) Определить изображение которое будет рядом с указателем мыши на протяжении всей операции перетаскивания.  Если пользовательское изображение не будет определено, будет сгенерирована картинка по умолчанию, в зависимости от элемента, на котором была зажата кнопка мыши (что будет означать, что элемент переносят). Ознакомиться детально с установкой изображения перетаскивания можно по ссылке <a href="/en-US/docs/DragDrop/Drag_Operations#dragfeedback" title="Setting the Drag Feedback Image">Setting the Drag Feedback Image</a>.</li>
- <li>Определить возможные эффекты переноса. Возможны три таких эффекта: <code>copy</code> показывает, что перемещаемые данные копируются из прежнего места расположения в новое, <code>move</code> показывает, что перемещаемые данные полностью переносятся на новое место, и <code>link</code> показывает, что создаётся некая форма взаимодействия или связи между исходной точкой и точкой назначения. На протяжении операции перемещения, картинка которая следует за курсором мыши может меняться в зависимости от того, может ли элемент быть перемещён в область под курсором. Если перенос разрешён, перемещение может быть произведено. Смотрите <a href="/en-US/docs/Web/Guide/HTML/Drag_operations#drageffects" title="Drag Effects">Drag Effects</a> для детальной информации.</li>
- <li>Определить область назначения. По умолчанию браузер не позволяет перемещать что-либо на HTML элемент. Однако, чтобы сделать элемент активным для перемещения других элементов на него, просто отмените действие по умолчанию. То есть, подпишитесь на события "ondragenter" или "ondragover". Для детальной информации смотрите <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_operations#droptargets">Specifying Drop Targets</a>.</li>
- <li>Обработать завершение переноса. Вы можете получить данные из переносимого элемента и произвести над ними необходимые операции. Для детальной информации, пожалуйста, смотрите <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Drag_operations#drop">Performing a Drop</a>.</li>
+ <li><a href="/en-US/docs/Web/HTML/Global_attributes/draggable" title="Справочник атрибута `draggable`">Справочник атрибута `draggable`</a></li>
+ <li><a href="/ru/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute">Руководство по операциям перетаскивания</a></li>
 </ul>
 
-<p>Mozilla и Firefox поддерживают ряд возможностей, которые выходят за рамку стандартной модели спецификации. Они позволяют пользователю перемещать несколько элементов и перемещать нестроковые данные. Для детальной информации смотрите <a href="/en-US/docs/DragDrop/Dragging_and_Dropping_Multiple_Items" title="Dragging and Dropping Multiple Items">Dragging and Dropping Multiple Items</a>.</p>
+<h3 id="Define_the_drags_data">Определите данные перетаскивания</h3>
 
-<p>Для того, чтобы ознакомиться с общим списком данных поддерживаемых операцией drag and drop смотрите <a href="/en-US/docs/DragDrop/Recommended_Drag_Types" title="Recommended Drag Types">Recommended Drag Types</a>.</p>
+<p>Приложение может добавлять в операцию перетаскивания любое количество элементов данных. Каждый элемент данных — это {{domxref("DOMString","строка")}} определённого <code>типа</code>. Обычно MIME-тип равен <code>text/html</code>.</p>
 
-<p>Также доступны примеры с лучшей практикой использования операции drag and drop для перемещения данных разных типов:</p>
+<p>У каждого {{domxref("DragEvent","события перетаскивания")}} есть свойство {{domxref("DragEvent.dataTransfer","dataTransfer")}}, которое <em>содержит</em> данные о событии. Это свойство (являющееся объектом {{domxref("DataTransfer")}}), также имеет методы <em>управления</em> данными перетаскивания. Метод {{domxref("DataTransfer.setData","setData()")}} используется для добавления элемента в данные перетаскивания, как показано в следующем примере.</p>
+
+<pre class="brush: js">function dragstart_handler(ev) {
+  // Добавление различных типов данных перетаскивания
+  ev.dataTransfer.setData("text/plain", ev.target.innerText);
+  ev.dataTransfer.setData("text/html", ev.target.outerHTML);
+  ev.dataTransfer.setData("text/uri-list", ev.target.ownerDocument.location.href);
+}
+</pre>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Recommended_Drag_Types#text" title="Text">Text</a></li>
- <li><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#link" title="Links">Links</a></li>
- <li><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#html" title="HTML and XML">HTML and XML</a></li>
- <li><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#file" title="Files">Files</a></li>
- <li><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#image" title="Images">Images</a></li>
- <li><a href="/en-US/docs/DragDrop/Recommended_Drag_Types#node" title="Document Nodes">Document Nodes</a></li>
+ <li>Список общих типов данных, используемых при перетаскивании (например, текст, HTML, ссылки и файлы), смотрите в разделе <a href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Рекомендуемые типы перетаскивания</a>.</li>
+ <li>Для получения дополнительной информации, смотрите раздел <a href="/ru/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragdata">Данные перетаскивания</a>.</li>
 </ul>
 
-<p>Смотри <a href="/en-US/docs/DragDrop/DataTransfer" title="DataTransfer">DataTransfer</a> для ссылки на объект DataTransfer.</p>
+<h3 id="Define_the_drag_image">Определите изображение перетаскивания</h3>
 
-<h2 id="events" name="events">События Drag</h2>
+<p>По умолчанию браузер предоставляет изображение, которое в процессе перетаскивания отображается рядом с указателем. Тем не менее, приложение может использовать сторонее изображение с помощью метода {{domxref("DataTransfer.setDragImage","setDragImage()")}}, как показано в следующем примере.</p>
 
-<p>Ряд событий срабатывают на протяжении всей процедуры drag and drop. Запомните, что только drag-события срабатывают на протяжении операции перемещения; события мыши, такие как <code>mousemove</code> - нет. Также запомните, что события <code>dragstart и</code> <code>dragend</code> не срабатывают при попытке перенести файл из операционной системы в браузер.</p>
+<pre class="brush: js">function dragstart_handler(ev) {
+  // Создайте изображение, чтобы использовать как изображение перетаскивания
+  // Примечание: замените "example.gif" на URL-адрес реального изоражения,
+  // иначе оно не будет создано и будет использоваться изображение по умолчанию
+  let img = new Image();
+  img.src = 'example.gif';
+  ev.dataTransfer.setDragImage(img, 10, 10);
+}
+</pre>
 
-<p>Свойство <a href="/en-US/docs/DragDrop/DataTransfer" title="dataTransfer">dataTransfer</a> всех событий перемещения содержит данные про все drag и drop операции.</p>
-
-<dl>
- <dt><code>dragstart</code></dt>
- <dd>Срабатывает когда элемент начал перемещаться. В момент срабатывания события <code>dragstart</code> пользователь начинает перетаскивание элемента. Обработчик данного события может быть использован для сохранения информации о перемещаемом объекте, а также для изменения изображения, которое будет ассоциировано с перемещением. Данное событие не срабатывает, когда некоторый файл будет переноситься из операционной системы в браузер. Для детальной информации <a href="/en-US/docs/DragDrop/Drag_Operations#dragstart" title="Starting a Drag Operation">Starting a Drag Operation</a>.</dd>
- <dt><code>dragenter</code></dt>
- <dd>Срабатывает, когда перемещаемый элемент попадает на элемент-назначение. Обработчик этого события показывает, что элемент находится над объектом на который он может быть перенесён. Если же обработчика нет, либо он не совершает никаких действий перемещение по умолчанию запрещено. Это событие также используется для того, чтобы подсветить либо промаркировать объект над которым происходит перемещения в случае, если перемещение на данный элемент разрешено. Для детальной информации смотрите <a href="/en-US/docs/DragDrop/Drag_Operations#droptargets" title="Specifying Drop Targets">Specifying Drop Targets</a>.</dd>
- <dt><code>dragover</code></dt>
- <dd>Данное событие срабатывает каждые несколько сотен миллисекунд, когда перемещаемый элемент оказывается над зоной, принимающей перетаскиваемые элементы. Для детальной информации смотрите <a href="/en-US/docs/DragDrop/Drag_Operations#droptargets" title="Specifying Drop Targets">Specifying Drop Targets</a>.</dd>
- <dt><code>dragleave</code></dt>
- <dd>Это событие запускается в момент перетаскивания, когда курсор мыши выходит за пределы элемента. Обработчикам следует убрать любую подсветку или иные индикаторы, указывавшие на присутствие курсора, чтобы тем самым обозначить реакцию на прекращение перетаскивания.</dd>
- <dt><code>drag</code></dt>
- <dd>Запускается при перемещении элемента или выделенного текста.</dd>
- <dt><code>drop</code></dt>
- <dd>Событие <code>drop</code> вызывается для элемента, над которым произошло "сбрасывание" перемещаемого элемента. Событие отвечает за извлечение "сброшенных" данных и их вставку. Событие будет срабатывать только при завершении операции перетаскивания, например, событие не сработает, если пользователь отменит перетаскивание нажатием Esc, или не донесёт элемент, до цели. Для детальной информации смотрите <a href="https://developer.mozilla.org/en-US/docs/DragDrop/Drag_Operations#drop" title="Performing a Drop">Performing a Drop</a>.</dd>
- <dt><code>dragend</code></dt>
- <dd>Источник перетаскивания получит событие dragend, когда перетаскивание завершится, было оно удачным или нет. Это событие не вызывается при перетаскивании файла в браузер из ОС.   Для детальной информации смотрите <a href="/en-US/docs/DragDrop/Drag_Operations#dragend" title="Finishing a Drag">Finishing a Drag</a>.</dd>
-</dl>
-
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<p>Узнать больше об изображении перетаскивания можно в:</p>
 
 <ul>
- <li><a class="internal" href="/En/DragDrop/Drag_Operations" title="Drag and Drop">Drag Operations</a></li>
- <li><a href="/en-US/docs/DragDrop/Dragging_and_Dropping_Multiple_Items">Dragging and Dropping Multiple Items</a></li>
- <li><a href="/en-US/docs/DragDrop/Recommended_Drag_Types">Recommended Drag Types</a></li>
- <li><a class="internal" href="http://www.whatwg.org/specs/web-apps/current-work/#dnd" title="Drag and Drop">HTML5 Living Standard: Drag and Drop</a></li>
- <li><a class="internal" href="/en-US/demos/tag/tech:dragndrop" title="Drag and Drop">DemoStudio: Drag and Drop</a></li>
- <li><a href="/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDragService">nsIDragService</a></li>
+ <li><a href="/ru/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragfeedback" title="Настройка изображения перетаскивания">Настройка изображения перетаскивания</a></li>
 </ul>
+
+<h3 id="Define_the_drag_effect">Определите <em>эффект</em> перетаскивания</h3>
+
+<p>Свойство {{domxref("DataTransfer.dropEffect","dropEffect")}} используется для управления обратной связью, которую пользователь получает во время операции перетаскивания. Обычно это влияет на то, какой курсор будет отображаться во время перетаскивания. Например, когда пользователь наводит указатель на цель сброса, курсор браузера может отражать тип операции, которая будет произведена.</p>
+
+<p>Можно определить три эффекта:</p>
+
+<ol>
+ <li><strong><code>copy</code></strong> обозначает, что перетаскиваемые данные будут скопированы из предыдущего места в место сброса.</li>
+ <li><strong><code>move</code></strong> обозначает, что перетаскиваемые данные будут перемещены из предыдущего места в место сброса.</li>
+ <li><strong><code>link</code></strong> обозначает, что между исходным местоположением и местом сброса будет создана некоторая форма свази.</li>
+</ol>
+
+<p>В течение операции перетаскивания, эффекты перетаскивания могут быть изменены, чтобы обозначить, что в разных местах доступны разные эффекты.</p>
+
+<p>Следующий пример демонстрирует, как использовать это свойство.</p>
+
+<pre class="brush: js">function dragstart_handler(ev) {
+  ev.dataTransfer.dropEffect = "copy";
+}
+</pre>
+
+<p>Для получения дополнительной информации смотрите:</p>
+
+<ul>
+ <li><a href="/ru/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drageffects" title="Эффекты перетаскивания">Эффекты перетаскивания</a></li>
+</ul>
+
+<h3 id="Define_a_drop_zone">Определите <em>зону сброса</em></h3>
+
+<p>По умолчанию, при сбросе на большинство элементов, браузер не производит никаких действий. Чтобы изменить это поведение и сделать элемент <em>зоной сброса</em> или <em>сбрасываемым</em>, он должен иметь атрибуты для обработчиков событий {{domxref("GlobalEventHandlers.ondragover","ondragover")}} и {{domxref("GlobalEventHandlers.ondrop","ondrop")}}.</p>
+
+<p>Следующий пример демонстрирует, как использовать эти атрибуты, а также включает основные обработчики событий для каждого атрибута.</p>
+
+<pre class="brush: html">&lt;script&gt;
+function dragover_handler(ev) {
+ ev.preventDefault();
+ ev.dataTransfer.dropEffect = "move";
+}
+function drop_handler(ev) {
+ ev.preventDefault();
+ // Получить id цели и добавить перемещённый элемент в его DOM
+ const data = ev.dataTransfer.getData("text/plain");
+ ev.target.appendChild(document.getElementById(data));
+}
+&lt;/script&gt;
+
+&lt;p id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)"&gt;Drop Zone&lt;/p&gt;
+</pre>
+
+<p>Обратите внимание, что каждый обработчик вызывает {{domxref("Event.preventDefault","preventDefault()")}}, чтобы предотвратить дополнительную обработку данного события (например, <a href="/ru/docs/Web/API/Touch_events">события касания</a> или <a href="/ru/docs/Web/API/Pointer_events">события указателя</a>).</p>
+
+<p>Для получения дополнительной информации смотрите:</p>
+
+<ul>
+ <li><a href="/ru/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#droptargets">Указание целей сброса</a></li>
+</ul>
+
+<h3 id="Handle_the_drop_effect">Обработайте <em>эффекты</em> сброса</h3>
+
+<p>Обработчик события {{domxref("Document/drop_event", "drop")}} может по-разному обрабатывать данные перетаскивания, в зависимости от конкретного приложения.</p>
+
+<p>Как правило, для извлечения и последующей обработки элементов перетаскивания, приложение использует метод {{domxref("DataTransfer.getData","getData()")}}. Кроме того, семантика приложения может отличаться в зависимости от значения {{domxref("DataTransfer.dropEffect","dropEffect")}} и состояния кнопок-модификаторов.</p>
+
+<p>Следующий пример демонстрирует обработчик сброса, получающий <code>id</code> исходного элемента из данных перетаскивания и затем использует <code>id</code> для перемещения исходного элемента к элементу сброса.
+
+<pre class="brush: html">&lt;script&gt;
+function dragstart_handler(ev) {
+ // Добавить id целевого элемента в объект передачи данных
+ ev.dataTransfer.setData("application/my-app", ev.target.id);
+ ev.dataTransfer.effectAllowed = "move";
+}
+function dragover_handler(ev) {
+ ev.preventDefault();
+ ev.dataTransfer.dropEffect = "move"
+}
+function drop_handler(ev) {
+ ev.preventDefault();
+ // Получить id целевого элемента и добавить перемещаемый элемент в его DOM
+ const data = ev.dataTransfer.getData("application/my-app");
+ ev.target.appendChild(document.getElementById(data));
+}
+&lt;/script&gt;
+
+&lt;p id="p1" draggable="true" ondragstart="dragstart_handler(event)"&gt;This element is draggable.&lt;/p&gt;
+&lt;div id="target" ondrop="drop_handler(event)" ondragover="dragover_handler(event)"&gt;Drop Zone&lt;/div&gt;
+</pre>
+
+<p>Для получения дополнительной информации смотрите:</p>
+
+<ul>
+ <li><a href="/ru/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drop">Выполнение сброса</a></li>
+</ul>
+
+<h3 id="Drag_end">Завершение перетаскивания</h3>
+
+<p>В конце операции перетаскивания событие {{domxref("Document/dragend_event", "dragend")}} происходит у <em>исходного</em> элемента, который был целью начала перетаскивания.</p>
+
+<p>Это событие происходит независимо от того, было перетаскивание выполнено или прервано. Обработчик события {{domxref("Document/dragent_event", "dragend")}} может проверить значение свойства {{domxref("DataTransfer.dropEffect","dropEffect")}} чтобы определить, успешно ли выполнена операция перетаскивания.</p>
+
+<p>Для получения дополнительной информации об обработке завершения операции перетаскивания, смотрите:</p>
+
+<ul>
+ <li><a href="/ru/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#dragend" title="Завершение перетаскивания">Завершение перетаскивания</a></li>
+</ul>
+
+<h2 id="Interoperability">Поддержка</h2>
+
+<p>Из <a href="/en-US/docs/Web/API/DataTransferItem#browser_compatibility">таблицы поддержки браузерами интерфейса DataTransferItem</a> видно, что поддержка drag-and-drop достаточно обширная среди десктопных браузеров (за исключением интерфейсов {{domxref("DataTransferItem")}} и {{domxref("DataTransferItemList")}}, у которых поддержка ниже). Эти данные также указывают, что среди мобильных устройств поддержка очень низкая.</p>
+
+<h2 id="Examples_and_demos">Примеры и демо</h2>
+
+<ul>
+ <li><a href="https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html">Копирование и перемещение элементов с помощью интерфейса <code>DataTransfer</code></a></li>
+ <li><a href="https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html">Копирование и перемещение элементов с помощью интерфейса <code>DataTransferListItem</code></a></li>
+ <li>Перетаскивание и сброс файлов (только Firefox): <a href="https://jsfiddle.net/9C2EF/">https://jsfiddle.net/9C2EF/</a></li>
+ <li>Перетаскивание и сброс файлов (все браузеры): <a href="https://jsbin.com/hiqasek/edit?html,js,output">https://jsbin.com/hiqasek/</a></li>
+ <li>
+  <p>Использование Drag and Drop API в проекте парковки: <a href="https://park.glitch.me/">https://park.glitch.me/</a> (Отредактировать можно <a href="https://glitch.com/edit/#!/park">здесь</a>)</p>
+ </li>
+</ul>
+
+<h2 id="Specifications">Спецификация</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th><strong>Спецификация</strong></th>
+   <th><strong>Статус</strong></th>
+   <th><strong>Комментарий</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', "#dnd")}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also">Смотрите также</h2>
+
+<ul>
+ <li><a class="internal" href="/ru/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">Операции перетаскивания</a></li>
+ <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">Перетаскивание и сброс нескольких файлов</a></li>
+ <li><a class="internal" href="/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types">Рекомендуемые типы перетаскивания</a></li>
+ <li><a href="https://html.spec.whatwg.org/multipage/interaction.html#dnd">HTML5 Living Standard: Drag and Drop</a></li>
+ <li><a href="https://caniuse.com/#search=draganddrop" title="Drag and Drop interoperability data from CanIUse">Информация о поддержке Drag and Drop из CanIUse</a></li>
+</ul>
+
