@@ -13,7 +13,7 @@ original_slug: Web/HTTP/Méthode/PUT
 
 <p>La <strong>méthode HTTP PUT</strong> crée une nouvelle ressource ou remplace une représentation de la ressource ciblée par le contenu de la requête.</p>
 
-<p>La différence entre <code>PUT</code> et <a class="new" href="https://developer.mozilla.org/fr/docs/Web/HTTP/Methods/POST" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>POST</code></a> tient au fait que <code>PUT</code> est une méthode idempotente. Une requête PUT, envoyée une ou plusieurs fois avec succès, aura toujours le même effet (il n'y a pas d'effet <em>de bord</em>). À l'inverse, des requêtes POST successives et identiques peuvent avoir des effets additionnels, ce qui peut revenir par exemple à passer plusieurs fois une commande.</p>
+<p>La différence entre <code>PUT</code> et {{HTTPMethod("POST")}} tient au fait que <code>PUT</code> est une méthode idempotente. Une requête PUT, envoyée une ou plusieurs fois avec succès, aura toujours le même effet (il n'y a pas d'effet <em>de bord</em>). À l'inverse, des requêtes POST successives et identiques peuvent avoir des effets additionnels, ce qui peut revenir par exemple à passer plusieurs fois une commande.</p>
 
 <table class="properties">
  <tbody>
@@ -26,15 +26,15 @@ original_slug: Web/HTTP/Méthode/PUT
    <td>Non</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("Sûre")}}</th>
+   <th scope="row">{{Glossary("Safe","Sûre")}}</th>
    <td>Non</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("Idempotente")}}</th>
+   <th scope="row">{{Glossary("Idempotent","Idempotente")}}</th>
    <td>Oui</td>
   </tr>
   <tr>
-   <th scope="row">{{Glossary("Peut être mise en cache")}}</th>
+   <th scope="row">{{Glossary("Cacheable","Peut être mise en cache")}}</th>
    <td>Non</td>
   </tr>
   <tr>
