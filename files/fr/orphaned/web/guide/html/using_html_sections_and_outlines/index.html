@@ -1,0 +1,376 @@
+---
+title: Structures et sections d'un document HTML5
+slug: orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
+tags:
+  - Avancé
+  - Exemple
+  - Guide
+  - HTML
+  - HTML5
+  - Section
+  - Structure
+  - Web
+translation_of: Web/Guide/HTML/Using_HTML_sections_and_outlines
+original_slug: Web/Guide/HTML/Using_HTML_sections_and_outlines
+---
+<p>Cette page présente la manière dont les navigateurs définissent la structure d'un document à partir de son fichier HTML.</p>
+
+<h2 id="Structure_et_document_outline">Structure et document outline</h2>
+
+<p>Le terme anglais "document outline" ou "document outlines" désigne la structure d'un document générée à partir de ses titres. Cette structure permet de fournir aux usagers une vision simplifiée du document, tel un sommaire ou une table des matières.</p>
+
+<p>Les technologies d'assistances telles que les lecteurs d'écran peuvent proposer à leurs usagers de parcourir le document par ce moyen. Cela leur permet d'avoir rapidement une idée du contenu de la page ou d'aller directement à la section qui les intéresse.</p>
+
+<p>Depuis HTML4, cette structure est générée à partir de la valeur absolue des différents titres. Un <code>&lt;h2&gt;</code> sera considéré comme un niveau hiérarchique plus bas qu'un <code>&lt;h1&gt;</code> et un niveau plus haut qu'un <code>&lt;h3&gt;</code>.</p>
+
+<p>L'algorithme Outline HTML5, proposait quand à lui de générer cette même structure non pas à partir des titres, mais à partir de l'imbrication des <code>&lt;section&gt;</code> entre elles. Cet algorithme n'est à l'heure actuelle implémenté par aucun navigateur ou technologie d'assistance. La partie du document le concernant est donc purement indicative.</p>
+
+<h2 id="Structure_dun_document_depuis_HTML4">Structure d'un document depuis HTML4</h2>
+
+<p>La structure d'un document, à savoir la structure sémantique de ce qui est entre <code>&lt;body&gt;</code> et <code>&lt;/body&gt;</code>, est fondamentale pour la présentation de la page à l'utilisateur. HTML4 utilise la notion de sections et sous-sections d'un document pour décrire sa structure. Une section est définie par un élément de division HTML ({{HTMLElement ("div")}}) contenant des éléments de titre ({{HTMLElement ("h1")}}, {{HTMLElement ("h2")}}, {{ HTMLElement ("h3")}}, {{HTMLElement ("h4")}}, {{HTMLElement ("h5")}} ou {{HTMLElement ("h6")}}), définissant son titre. Les relations entre ces éléments HTML et la division HTML conduit à la structure du document et son schéma.</p>
+
+<p>Ainsi, le code suivant :</p>
+
+<pre class="brush: html"><code class="brush: html">
+&lt;div class="section" id="foret-elephants"&gt;
+  &lt;h1&gt;Les éléphants de forêt&lt;/h1&gt;
+  &lt;p&gt;Dans cet article, nous discutons des éléphants de forêt moins connus.
+     … cette section continue…
+  &lt;div class="subsection" id="foret-habitat"&gt;
+    &lt;h2&gt;Habitat&lt;/h2&gt;
+    &lt;p&gt;Les éléphants de forêt ne vivent pas dans les arbres mais parmi eux.
+       … ce paragraphe continue…
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>conduit au schéma suivant :</p>
+
+<pre>1. Les éléphants de forêt
+  1.1 Habitat
+</pre>
+
+<p>Les éléments {{HTMLElement ("div")}} ne sont pas obligatoires pour définir une nouvelle section. La simple présence d'un élément de titre est suffisante pour impliquer une nouvelle section. Par conséquent :</p>
+
+<pre class="brush: html">&lt;h1&gt;Les éléphants de forêt&lt;/h1&gt;
+  &lt;p&gt;Dans cette section, nous discutons des éléphants de forêt moins connus.
+    … cette section continue…
+
+  &lt;h2&gt;Habitat&lt;/h2&gt;
+  &lt;p&gt;Les éléphants de forêt ne vivent pas dans les arbres mais parmi eux.
+    … ce paragraphe continue…
+
+  &lt;h2&gt;Régime&lt;/h2&gt;
+
+&lt;h1&gt;Gerbilles de Mongolie&lt;/h1&gt;
+</pre>
+
+<p>conduit au schéma suivant :</p>
+
+<pre>1. Les éléphants de forêt
+  1.1 Habitat
+  1.2 Régime
+2. Gerbilles de Mongolie</pre>
+
+<h2 id="Problèmes_résolus_par_HTML5">Problèmes résolus par HTML5</h2>
+
+<p>Le code HTML4 définit la structure d'un document, cependant son algorithme schématique implicite est très strict et conduit à de nombreux problèmes :</p>
+
+<ol>
+ <li>L'utilisation de {{HTMLElement ("div")}} pour définir les sections sémantiques, sans définir de valeurs spécifiques pour l'attribut <code>class</code>, rend impossible l'automatisation de l'algorithme (« {{HTMLElement ("div")}} fait-il partie de l'aperçu de la page ? Définit-il une section ou un paragraphe ? » ou « Ce {{HTMLElement ("div")}} est-il là uniquement pour le style ? »). En d'autres termes, la spécification HTML4 est très imprécise sur ce qui est une section et quel est son champ d'application. La génération automatique du schéma est importante, surtout pour les <a class="external" href="http://en.wikipedia.org/wiki/Assistive_technology">technologies d'assistance (en)</a> qui sont susceptibles d'adapter leur façon de présenter l'information aux utilisateurs en fonction de la structure du document. HTML5 supprime la nécessité d'éléments {{HTMLElement ("div")}} dans l'algorithme par l'introduction d'un nouvel élément, {{HTMLElement ("section")}}, l'élément HTML Section.</li>
+ <li>La fusion de plusieurs documents est compliquée : l'inclusion d'un sous-document dans un document principal conduit à modifier le niveau des éléments de titres HTML afin de conserver le plan du document. Ce problème est résolu dans HTML5, les éléments de section nouvellement introduits ({{HTMLElement ("article")}}, {{HTMLElement ("section")}}, {{HTMLElement ("nav")}} et {{HTMLElement ("aside")}}) sont toujours sous-sections de la plus proche section ascendante, indépendamment des sections créées par les en-têtes internes.</li>
+ <li>En HTML4, chaque section fait partie de la structure du document. Mais les documents ne sont pas souvent linéaires. Un document peut avoir des sections spéciales contenant des informations qui n'en font pas partie, même si elles sont liées au flux principal, comme un bloc de publicité ou une boîte explication. HTML5 introduit l'élément {{HTMLElement ("aside")}} permettant à ces sections de ne pas faire partie du plan principal.</li>
+ <li>Encore une fois, en HTML4, parce que chaque section fait partie de la structure du document, il n'est pas possible d'avoir des sections contenant des informations relatives non pas au document mais au site tout entier, comme des logos, des menus, une table des matières, ou des mentions légales. À cet effet, HTML5 introduit trois éléments de section spécifiques : {{HTMLElement ("nav")}} pour des collections de liens, comme une table des matières, {{HTMLElement ("footer")}} et {{HTMLElement ("header")}} pour les informations relatives au site.</li>
+</ol>
+
+<p>Plus généralement HTML5 apporte la précision des caractéristiques de sectionnement et de position, permettant aux contours de documents à être prévisibles et utilisés par le navigateur afin d'améliorer l'expérience utilisateur.</p>
+
+<h2 id="Lalgorithme_Outline_HTML5">L'algorithme Outline HTML5</h2>
+
+<div class="warning">
+<p><strong>Important </strong>: Aucune implémentation de cet algorithme Outline HTML5 n'existe ni dans les navigateurs web ni dans les technologies d'assistance. Elle n'a jamais fait partie de la spécification finale W3C. L'algorithme <a href="https://www.w3.org/TR/html5/sections.html#outline">Outline</a> <em>ne devrait donc pas être utilisé</em> pour transmettre la structure d'un document aux utilisateurs. Il est recommandé aux auteurs d'utiliser le <a href="https://www.w3.org/TR/html5/sections.html#rank">rang</a> des titres (<code><a href="https://www.w3.org/TR/html5/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements">h1</a></code>-<code><a href="https://www.w3.org/TR/html5/sections.html#the-h1-h2-h3-h4-h5-and-h6-elements">h6</a></code>) pour transmettre la structure d'un document.</p>
+</div>
+
+<p>Cet algorithme propose de générer la structure du document à partir de l'imbrication des sections entre elles.</p>
+
+<h3 id="Définir_des_sections_en_HTML5">Définir des sections en HTML5</h3>
+
+<p>Tout le contenu se trouvant à l'intérieur de l'élément {{HTMLElement ("body")}} est une partie d'une section. Les articles en HTML5 peuvent être imbriqués. À côté de la section principale, définie par l'élément {{HTMLElement ("body")}}, les limites de la section sont définies explicitement ou implicitement. Sections explicitement définies sont le contenu dans {{HTMLElement ("body")}}, {{HTMLElement ("section")}}, {{HTMLElement ("article")}}, {{HTMLElement ("aside")}}, {{HTMLElement ("footer")}}, {{HTMLElement ("header")}} et {{HTMLElement ("nav")}} balises.</p>
+
+<div class="note">
+<p>Remarque : Chaque section peut avoir sa propre hiérarchie rubrique. Par conséquent, même une section imbriquée peut avoir un {{HTMLElement ("h1")}}. Voir <a href="#D.C3.A9finir_les_ent.C3.AAte_en_HTML5" title="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document#Defining_Headings_in_HTML5">Définition des sections en HTML5</a></p>
+</div>
+
+<p>Prenons un exemple - ici nous avons un document avec une section de haut niveau et un pied de page défini. Dans la section de haut niveau, nous avons trois sous-sections, définies par deux éléments {{htmlelement ('section')}} et un élément {{htmlelement ('aside')}} :</p>
+
+<pre class="brush: html">&lt;section&gt;
+
+  &lt;h1&gt;éléphants de forêt&lt;/h1&gt;
+
+  &lt;section&gt;
+    &lt;h1&gt;Introduction&lt;/h1&gt;
+    &lt;p&gt;Dans cette section, nous discutons des éléphants de forêt moins connus.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;section&gt;
+    &lt;h1&gt;Habitat&lt;/h1&gt;
+    &lt;p&gt;Les éléphants de forêt ne vivent pas dans les arbres mais parmi eux.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;aside&gt;
+    &lt;p&gt;bloc publicitaire&lt;/p&gt;
+  &lt;/aside&gt;
+
+&lt;/section&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;(c) 2010 La société Exemple&lt;/p&gt;
+&lt;/footer&gt;
+</pre>
+
+<p>Cela conduit à la structure suivante :</p>
+
+<pre>1. Les éléphants de forêt
+  1.1 Introduction
+  1.2 Habitat
+  1.3 Section (aside)</pre>
+
+<h3 id="Définition_des_en-têtes_en_HTML5">Définition des en-têtes en HTML5</h3>
+
+<p>Bien que les éléments de sectionnement HTML définissent la structure du document, un plan a également besoin de titres pour être utile. La règle de base est simple : le premier élément de titre HTML (l'un des {{HTMLElement ("h1")}}, {{HTMLElement ("h2")}}, {{HTMLElement ("h3")}}, {{HTMLElement ("h4")}}, {{HTMLElement ("h5")}}, {{HTMLElement ("h6")}}) définit le titre de la section courante.</p>
+
+<p>Les éléments de titre ont un <em>rang</em> donné par le nombre dans le nom de l'élément, où {{HTMLElement ("h1")}} a le rang <em> le plus élevé</em> et {{HTMLElement ("h6")}} a le rang <em>le plus bas</em>. Le classement relatif ne compte que dans une section ; la structure des sections détermine le plan, et non pas le rang des titres de sections. Par exemple, ce code :</p>
+
+<pre class="brush: html">&lt;section&gt;
+  &lt;h1&gt;éléphants de forêt&lt;/h1&gt;
+
+  &lt;p&gt;Dans cette section, nous discutons des éléphants de forêt moins connus.
+     Cette section continue…&lt;/p&gt;
+
+  &lt;section&gt;
+    &lt;h2&gt;Habitat&lt;/h2&gt;
+
+    &lt;p&gt;Les éléphants de forêt ne vivent pas dans les arbres mais parmi eux.
+       Ce paragraphe continue…&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h3&gt;Gerbilles de Mongolie&lt;/h3&gt;
+
+  &lt;p&gt;Dans cet article, nous discutons des célèbres gerbilles mongoles.
+     Cette section continue…
+&lt;/section&gt;</pre>
+
+<p>conduit à la structure suivante :</p>
+
+<pre>1. Les éléphants de forêt
+  1.1 Habitat
+2. Gerbilles de Mongolie</pre>
+
+<p>Notez que le rang de l'élément titre (dans l'exemple {{HTMLElement ("h1")}} pour la première section de niveau supérieur, {{HTMLElement ("h2")}} pour la sous-section et {{HTMLElement ("h3")}} pour la seconde section de haut niveau) n'est pas important. Tout rang peut être utilisé comme en-tête d'une section explicitement définie, bien que cette pratique ne soit pas recommandée.</p>
+
+<h3 id="Découpage_implicite">Découpage implicite</h3>
+
+<p>Parce que les éléments de sectionnement HTML5 ne sont pas obligatoires pour définir la structure, pour conserver la compatibilité avec le Web existant dominé par HTML4, il existe un moyen de définir des sections sans eux. C'est ce qu'on appelle le <em>découpage implicite</em>.</p>
+
+<p>Les éléments de titre HTML ({{HTMLElement ("h1")}} à {{HTMLElement ("h6")}}) définissent une nouvelle section, implicite, quand ils ne sont pas le premier en-tête de leurs sections ascendantes, explicites. La façon dont cette section implicite est positionnée dans la structure est définie par son rang par rapport au titre précédent dans leur section ascendante. Si elle est d'un rang inférieur à l'en-tête précédent, il ouvre une sous-section implicite de la section. Ce code :</p>
+
+<pre class="brush: html">&lt;section&gt;
+  &lt;h1&gt;éléphants de forêt&lt;/h1&gt;
+
+  &lt;p&gt;Dans cette section, nous discutons des éléphants de forêt moins connus.
+     Cette section continue…
+
+  &lt;h3 class="implicit subsection"&gt;Habitat&lt;/h3&gt;
+
+  &lt;p&gt;Les éléphants de forêt &lt;p&gt; ne vivent pas dans les arbres mais parmi eux.
+     Ce paragraphe continue…
+&lt;/section&gt;</pre>
+
+<p>conduit à la structure suivante :</p>
+
+<pre>1. Les éléphants de forêt
+  1.1 Habitat <em>(implicitement défini par l'élément h3)</em></pre>
+
+<p>Si elle est de même rang que le titre précédent, elle ferme la section précédente (qui peut avoir été explicite !) et en ouvre une nouvelle implicite de même niveau :</p>
+
+<pre class="brush: html">&lt;section&gt;
+  &lt;h1&gt;Éléphants de forêt&lt;/h1&gt;
+
+  &lt;p&gt;Dans cette section, nous discutons des éléphants de forêt moins connus.
+     Cette section continue…
+
+  &lt;h1 class="implicit section"&gt;Gerbilles de Mongolie&lt;/h1&gt;
+
+  &lt;p&gt;Les gerbilles de Mongolie sont mignons petits mammifères.
+     Cette section continue…
+&lt;/section&gt;</pre>
+
+<p>conduit à la structure suivante :</p>
+
+<pre>1. Les éléphants de forêt
+2. Gerbilles de Mongolie <em>(implicitement défini par l'élément h1, qui a fermé la section précédente dans le même temps)</em></pre>
+
+<p>Si elle est d'un rang supérieur au titre précédent, elle ferme la section précédente et en ouvre une nouvelle implicite de niveau supérieur :</p>
+
+<pre class="brush: html">&lt;body&gt;
+  &lt;h1&gt;Mammifères&lt;/h1&gt;
+
+  &lt;h2&gt;Baleines&lt;/h2&gt;
+
+  &lt;p&gt;Dans cette section, nous discutons de baleines géantes.
+     Cette section continue…
+
+  &lt;section&gt;
+    &lt;h3&gt;Éléphants de forêt&lt;/h3&gt;
+
+    &lt;p&gt;Dans cet article, nous discutons des éléphants de forêt moins connus.
+       Cette section continue…
+
+    &lt;h3&gt;Gerbilles de Mongolie&lt;/h3&gt;
+
+    &lt;p&gt;Hordes de gerbilles ont étalé leur gamme bien au-delà Mongolie.
+       Ce paragraphe continue…
+
+    &lt;h2&gt;Reptiles&lt;/h2&gt;
+
+    &lt;p&gt;Reptiles sont des animaux à sang froid.
+       Ce paragraphe continue…
+  &lt;/section&gt;
+&lt;/body&gt;</pre>
+
+<p>conduit à la structure suivante :</p>
+
+<pre>1. Mammifères
+  1.1 Baleines (défini implicitement par l'élément h2)
+  1.2 éléphants de forêt (défini explicitement par l'élément section)
+  1.3 Gerbilles de Mongolie (défini implicitement par l'élément h3 qui ferme la section précédente en même temps)
+2. Reptiles (défini implicitement par l'élément h2 qui ferme la section précédente en même temps)
+</pre>
+
+<p>Ce n'est pas la structure à laquelle on pourrait s'attendre en jetant un coup d'œil rapide sur le balisage. Pour rendre votre balisage humainement compréhensible, il est bon d'utiliser des balises explicites pour ouvrir et fermer les sections, et de faire correspondre les niveaux des titres avec le niveau d'imbrication désiré de la section. Toutefois, cela n'est pas exigé par la spécification HTML5. Si vous trouvez que les navigateurs rendent de façon inattendue le plan de votre document, vérifiez que vos sections sont implicitement fermées par des éléments d'en-tête.</p>
+
+<p>Une exception à cette règle générale – qui veut que rang du titre devrait correspondre au niveau d'imbrication de la section – concerne les sections qui peuvent être réutilisées dans d'autres documents. Par exemple, une section peut être stockée dans un système de gestion de contenu et assemblée dans des documents au moment de l'exécution. Dans ce cas, une bonne pratique consiste à commencer par {{HTMLElement ("h1")}} pour le titre de niveau supérieur de la section réutilisable. Le niveau d'imbrication de la section réutilisable sera déterminé par la hiérarchie des sections du document dans lequel elle apparaît. Les balises de section explicites sont toujours utiles dans ce cas.</p>
+
+<h3 id="Racines_de_sectionnement">Racines de sectionnement</h3>
+
+<p>Une racine de sectionnement est un élément HTML qui peut avoir son propre plan, mais les sections et les titres qu'elle contient ne contribuent pas à la structure de son ascendant. À côté de {{HTMLElement ("body")}}, qui est la racine logique de sectionnement d'un document, il y a souvent des éléments qui introduisent du contenu externe à la page : {{HTMLElement ("blockquote")}}, {{HTMLElement ("details")}}, {{HTMLElement ("fieldset")}}, {{HTMLElement ("figure")}} et {{HTMLElement ("td")}}.</p>
+
+<h4 id="Exemple">Exemple</h4>
+
+<pre class="brush: html">&lt;section&gt;
+  &lt;h1&gt;Éléphants de forêt&lt;/h1&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Introduction&lt;/h2&gt;
+    &lt;p&gt;Dans cette section, nous discutons des éléphants de forêt moins connus.&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Habitat&lt;/h2&gt;
+    &lt;p&gt;Les éléphants de forêt ne vivent pas dans les arbres mais parmi eux. Regardons ce que les scientifiques disent dans «&amp;nbsp;&lt;cite&gt; l'éléphant de forêt à Bornéo &lt;/cite&gt;&amp;nbsp;»&amp;nbsp;:
+    &lt;blockquote&gt;
+      &lt;h1&gt;Bornéo&lt;/h1&gt;
+      &lt;p&gt;L'éléphant de la forêt vie à Bornéo…&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/section&gt;
+&lt;/section&gt;
+</pre>
+
+<p>Cet exemple se traduit par la structure suivante :</p>
+
+<pre>1. Les éléphants de forêt
+  1.1 Introduction
+  1.2 Habitat</pre>
+
+<p>Cette structure ne contient pas le plan interne à l'élément {{HTMLElement ("blockquote")}}, qui, étant une citation externe, est une racine de sectionnement et isole sa structure interne.</p>
+
+<h3 id="Les_sections_externes_à_la_structure">Les sections externes à la structure</h3>
+
+<p>HTML5 introduit deux nouveaux éléments qui permettent de définir des sections ne faisant pas partie de la structure principale d'un document Web :</p>
+
+<ol>
+ <li>L'élément HTML de section ({{HTMLElement ("aside")}}) définit une section qui, bien que liée à l'élément principal, ne fait pas partie du flux principal, comme une boîte d'information ou une publicité. Il dispose de son propre plan, mais il n'appartient pas au plan principal.</li>
+ <li>L'élément HTML de section ({{HTMLElement ("nav")}}) définit une section qui contient les liens de navigation. Il peut y en avoir plusieurs dans un document, par exemple, un avec des liens internes à la page, comme une table des matières, et un autre avec des liens de navigations dans le site. Ces liens ne font pas partie du flux principal et du plan, et généralement peut ne pas être initialement rendu par le lecteur d'écran et les technologies d'assistance similaires.</li>
+</ol>
+
+<h3 id="Headers_and_Footers">Headers and Footers</h3>
+
+<p>HTML5 présente également deux nouveaux éléments qui peuvent être utilisés pour marquer l'en-tête et le pied de page d'une section :</p>
+
+<ol>
+ <li>L'élément HTML de titre de section ({{HTMLElement ("header")}}) définit l'en-tête d'une page, contenant généralement le logo et le nom du site et, éventuellement, un menu horizontal. Malgré son nom, il n'est pas nécessairement placé au début de la page.</li>
+ <li>L'élément HTML de pied de section ({{HTMLElement ("footer")}}) définit un pied-de-page, contenant généralement les mentions légales et parfois quelques liens. Malgré son nom, il n'est pas nécessairement placé dans le bas de la page.</li>
+</ol>
+
+<p>Ceux-ci ne créent pas de nouvelles sections dans la structure, mais ils marquent le contenu dans les sections de la page.</p>
+
+<h2 id="Adresses_dans_les_éléments_de_sectionnement">Adresses dans les éléments de sectionnement</h2>
+
+<p>L'auteur d'un document veut souvent publier des informations de contact, le nom de l'auteur tel et son adresse. HTML4 le permet grâce à cet l'élément {{HTMLElement ("address")}}, qui a été prolongé en HTML5.</p>
+
+<p>Un document peut être fait de différentes sections de différents auteurs. Une section d'un autre auteur que celui de la page principale est définie en utilisant l'élément {{HTMLElement ("article")}}. Par conséquent, l'élément {{HTMLElement ("address")}} est désormais lié à son {{HTMLElement ("body")}} ou à l'ancêtre {{HTMLElement ("article")}} le plus proche.</p>
+
+<h2 id="Utilisation_des_éléments_HTML5_dans_les_navigateurs_Non-HTML5">Utilisation des éléments HTML5 dans les navigateurs Non-HTML5</h2>
+
+<p>Les articles et les éléments en-têtes devraient fonctionner dans la plupart des navigateurs non HTML5. Bien que non pris en charge, ils n'ont pas besoin d'une interface spéciale DOM et ils n'ont besoin que d'un style CSS spécifique comme des éléments inconnus sont aménagés comme display: inline par défaut:</p>
+
+<pre class="brush: css"><code class="brush: css">section, article, aside, footer, header, nav, hgroup {
+  display: block;
+}</code></pre>
+
+<p>Bien sûr, le développeur web peut styliser différemment, mais gardez à l'esprit que dans un navigateur non HTML5, le style par défaut est différent de ce qui est attendu de ces éléments. Notez également que le {{HTMLElement ("time")}} élément n'a pas été inclus, car le style par défaut pour elle dans un navigateur non HTML5 est le même que celui de l'une HTML5 compatible.</p>
+
+<p>Cette méthode a ses limites si, comme certains navigateurs ne permettent pas de style des éléments non pris en charge. C'est le cas d'Internet Explorer (version 8 et versions antérieures), qui ont besoin d'un script spécifique pour permettre à celle-ci :</p>
+
+<pre class="brush: html">&lt;!--[if lt IE 9]&gt;;
+  &lt;script&gt;
+    document.createElement("header");
+    document.createElement("footer");
+    document.createElement("section");
+    document.createElement("aside");
+    document.createElement("nav");
+    document.createElement("article");
+    document.createElement("hgroup");
+    document.createElement("time");
+  &lt;/script&gt;
+&lt;![endif]--&gt;</pre>
+
+<p>Ce script signifie que, dans le cas d'Internet Explorer (8 et antérieures), les scripts doivent être activés pour pouvoir afficher HTML5 et les éléments de sectionnement titres correctement. Sinon, ils ne seront pas affichés, ce qui peut être problématique, car ces éléments sont susceptibles de définir la structure de la page entière. C'est pourquoi un élément {{HTMLElement ("NoScript")}} explicite devrait être ajouté pour ce cas :</p>
+
+<pre class="brush: html">&lt;noscript&gt;
+  &lt;p&gt;&lt;strong&gt;Attention, cette page Web nécessite que JavaScript soit activé !&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;JavaScript est un langage de programmation couramment utilisé pour créer des effets intéractifs dans les navigateurs Web.&lt;/p&gt;
+  &lt;p&gt;Malheureusement, il est désactivé dans votre navigateur. Veuillez l'activer pour afficher cette page.&lt;/p&gt;
+  &lt;p&gt;&lt;a href="https://goo.gl/koeeaJ"&gt;Comment activer JavaScript ?&lt;/a&gt;&lt;/p&gt;
+&lt;/noscript&gt;</pre>
+
+<p>Cela conduit au code ci-dessous pour permettre la prise en charge des éléments de sections et d'en-têtes HTML5 dans les navigateurs non HTML5, même pour Internet Explorer (8 et antérieur), avec un retour correct pour le cas où ce dernier est configuré pour ne pas autoriser les scripts :</p>
+
+<pre class="brush: html">&lt;!--[if lt IE 9]&gt;
+  &lt;script&gt;
+    document.createElement("header");
+    document.createElement("footer");
+    document.createElement("section");
+    document.createElement("aside");
+    document.createElement("nav");
+    document.createElement("article");
+    document.createElement("hgroup");
+    document.createElement ("time");
+  &lt;/script&gt;
+&lt;![endif]--&gt;
+  &lt;noscript&gt;
+    &lt;p&gt;&lt;strong&gt;Attention, cette page Web nécessite que JavaScript soit activé !&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;JavaScript est un langage de programmation couramment utilisé pour créer des effets interactifs dans les navigateurs Web.&lt;/p&gt;
+    &lt;p&gt;Malheureusement, il est désactivé dans votre navigateur. Veuillez l'activer pour afficher cette page.&lt;/p&gt;
+    &lt;p&gt;&lt;a href="https://goo.gl/koeeaJ"&gt;Comment activer JavaScript ?&lt;/a&gt;&lt;/p&gt;
+  &lt;/noscript&gt;
+</pre>
+
+<div class="blockIndicator note">
+<p>Cependant, pour des raisons d’accessibilité, un site devrait toujours pouvoir être consultable en l’absence de Javascript.</p>
+</div>
+
+<h2 id="Conclusion">Conclusion</h2>
+
+<p>Les nouveaux éléments sémantiques introduits en HTML5 apportent la capacité de décrire la structure et le plan d'un document web d'une manière standard. Ils apportent un grand avantage pour les utilisateurs de navigateurs HTML5 et qui ont besoin de la structure pour les aider à comprendre la page, par exemple, les utilisateurs de technologies d'assistance. Ces nouveaux éléments sémantiques sont simples à utiliser et, avec très peu d'efforts, ils peuvent également être mis en œuvre dans les navigateurs ne prenant pas en charge HTML5. Par conséquent, ils devraient être utilisés sans restriction.</p>
+
+<div>{{HTML5ArticleTOC()}}</div>

@@ -1,15 +1,14 @@
 ---
-title: '<del>: 削除文字列要素'
+title: '<del>: 削除済み文字列要素'
 slug: Web/HTML/Element/del
 tags:
+  - Deleted Text
+  - Element
   - HTML
-  - HTML 編集
-  - 'HTML:フローコンテンツ'
-  - 'HTML:記述コンテンツ'
+  - HTML edits
   - Reference
   - Web
-  - 削除文字列
-  - 要素
+  - del
 translation_of: Web/HTML/Element/del
 ---
 <div>{{HTMLRef}}</div>
@@ -18,19 +17,17 @@ translation_of: Web/HTML/Element/del
 
 <div>{{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}</div>
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
-
 <p>一般的にこの要素は (必ずではありませんが) 打ち消し線のスタイルを伴って描画されます。</p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a> または <a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a></td>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>、<a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a></td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Transparent_content_model">透過的コンテンツ</a></td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#transparent_content_model">透過的コンテンツ</a></td>
   </tr>
   <tr>
    <th scope="row">タグの省略</th>
@@ -38,7 +35,11 @@ translation_of: Web/HTML/Element/del
   </tr>
   <tr>
    <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Phrasing_content">記述コンテンツ</a>を受け入れるすべての要素</td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#phrasing_content">記述コンテンツ</a>を受け入れるすべての要素</td>
+  </tr>
+  <tr>
+   <th scope="row">暗黙の ARIA ロール</th>
+   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
   </tr>
   <tr>
    <th scope="row">許可されている ARIA ロール</th>
@@ -51,28 +52,28 @@ translation_of: Web/HTML/Element/del
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
-<p>この要素は<a href="/ja/docs/Web/HTML/Global_attributes" title="HTML/Global attributes">グローバル属性</a>を持ちます。</p>
+<p>この要素は<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>を持ちます。</p>
 
 <dl>
  <dt>{{htmlattrdef("cite")}}</dt>
  <dd>変更についての説明を記したリソース（例えば、議事録など）への URI を示す。</dd>
  <dt>{{htmlattrdef("datetime")}}</dt>
- <dd>この属性は変更日時を示し、有効な日付文字列と任意の時刻文字列でなくてはなりません。値を時刻および日付の文字列として解釈できない場合は、要素に関連付けられたタイムスタンプはないものと解釈されます。日付のない文字列の書式については、<a href="/ja/docs/Web/HTML/Date_and_time_formats#Date_strings">日付の文字列</a>を参照してください。日付と時刻の両方を含んだ文字列の書式は、<a href="/ja/docs/Web/HTML/Date_and_time_formats#Local_date_and_time_strings">地方時の日付と時刻の文字列</a>にあります。</dd>
+ <dd>この属性は変更日時を示し、有効な日付文字列と任意の時刻文字列でなくてはなりません。値を時刻および日付の文字列として解釈できない場合は、要素に関連付けられたタイムスタンプはないものと解釈されます。日付のない文字列の書式については、<a href="/ja/docs/Web/HTML/Date_and_time_formats#date_strings">日付の文字列</a>を参照してください。日付と時刻の両方を含んだ文字列の書式は、<a href="/ja/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings">地方時の日付と時刻の文字列</a>にあります。</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
 <pre class="brush: html">&lt;p&gt;&lt;del&gt;This text has been deleted&lt;/del&gt;,
 here is the rest of the paragraph.&lt;/p&gt;
 &lt;del&gt;&lt;p&gt;This paragraph has been deleted.&lt;/p&gt;&lt;/del&gt;</pre>
 
-<h3 id="Result" name="Result">結果</h3>
+<h3 id="Result">結果</h3>
 
 <p>{{EmbedLiveSample("Examples")}}</p>
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
+<h2 id="Accessibility_concerns">アクセシビリティの考慮</h2>
 
 <p><code>del</code> 要素が存在することは、多くの読み上げ技術の既定の設定ではアナウンスされません。 CSS の {{cssxref("::before")}} 及び {{cssxref("::after")}} 疑似要素と共に {{cssxref("content")}} プロパティを使うことでアナウンスさせることができます。</p>
 
@@ -100,10 +101,10 @@ del::after {
 
 <ul>
  <li><a href="https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible/">Short note on making your mark (more accessible) | The Paciello Group</a></li>
- <li><a href="http://adrianroselli.com/2017/12/tweaking-text-level-styles.html">Tweaking Text Level Styles | Adrian Roselli</a></li>
+ <li><a href="https://adrianroselli.com/2017/12/tweaking-text-level-styles.html">Tweaking Text Level Styles | Adrian Roselli</a></li>
 </ul>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -132,13 +133,11 @@ del::after {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("html.elements.del")}}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>テキストへの挿入を示す {{HTMLElement("ins")}} 要素</li>

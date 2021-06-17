@@ -344,7 +344,7 @@
 /pt-BR/docs/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/pt-BR/docs/Glossary/speculative_parsing
 /pt-BR/docs/Hello_World_Rust	/pt-BR/docs/orphaned/Hello_World_Rust
 /pt-BR/docs/IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API
-/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/pt-BR/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /pt-BR/docs/IndexedDB/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /pt-BR/docs/Instalando_Rust	/pt-BR/docs/orphaned/Instalando_Rust
 /pt-BR/docs/JSON	/pt-BR/docs/Glossary/JSON
@@ -494,9 +494,9 @@
 /pt-BR/docs/SVG/Element/desc	/pt-BR/docs/Web/SVG/Element/desc
 /pt-BR/docs/SVG/Element/svg	/pt-BR/docs/Web/SVG/Element/svg
 /pt-BR/docs/SVG/Element/texto	/pt-BR/docs/Web/SVG/Element/text
-/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document	/pt-BR/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document	/pt-BR/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /pt-BR/docs/Security/CSP/Utilizando_Politicas_De_Seguranca_De_Conteudo	/pt-BR/docs/Web/HTTP/CSP
-/pt-BR/docs/Seções_e_estrutura_HTML5	/pt-BR/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/pt-BR/docs/Seções_e_estrutura_HTML5	/pt-BR/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /pt-BR/docs/The_XSLT_JavaScript_Interface_in_Gecko	/pt-BR/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /pt-BR/docs/The_XSLT_JavaScript_Interface_in_Gecko/Advanced_Example	/pt-BR/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 /pt-BR/docs/Tools/Add-ons	/pt-BR/docs/orphaned/Tools/Add-ons
@@ -527,6 +527,8 @@
 /pt-BR/docs/Web/API/API_Web_Audio	/pt-BR/docs/Web/API/Web_Audio_API
 /pt-BR/docs/Web/API/API_Web_Audio/Sintetizador_simples	/pt-BR/docs/Web/API/Web_Audio_API/Simple_synth
 /pt-BR/docs/Web/API/API_de_Desempenho	/pt-BR/docs/Web/API/Performance_API
+/pt-BR/docs/Web/API/AbstractWorker	/pt-BR/docs/orphaned/Web/API/AbstractWorker
+/pt-BR/docs/Web/API/AbstractWorker/onerror	/pt-BR/docs/orphaned/Web/API/AbstractWorker/onerror
 /pt-BR/docs/Web/API/ArrayBuffer	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /pt-BR/docs/Web/API/AudioContext/currentTime	/pt-BR/docs/Web/API/BaseAudioContext/currentTime
 /pt-BR/docs/Web/API/BatteryManager.charging	/pt-BR/docs/Web/API/BatteryManager/charging
@@ -575,6 +577,7 @@
 /pt-BR/docs/Web/API/HTMLElement/dataset	/pt-BR/docs/Web/API/HTMLOrForeignElement/dataset
 /pt-BR/docs/Web/API/HTMLElement/focus	/pt-BR/docs/Web/API/HTMLOrForeignElement/focus
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
+/pt-BR/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/pt-BR/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /pt-BR/docs/Web/API/Navigator.battery	/pt-BR/docs/Web/API/Navigator/battery
 /pt-BR/docs/Web/API/NavigatorID.platform	/pt-BR/docs/Web/API/NavigatorID/platform
@@ -761,6 +764,7 @@
 /pt-BR/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data
 /pt-BR/docs/Web/Guide/HTML/HTML5	/pt-BR/docs/orphaned/Web/Guide/HTML/HTML5
 /pt-BR/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/pt-BR/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/pt-BR/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/pt-BR/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /pt-BR/docs/Web/Guide/HTML/Using_data_attributes	/pt-BR/docs/Learn/HTML/Howto/Use_data_attributes
 /pt-BR/docs/Web/Guide/Introducao_ao_Desenvolvimento_Web	/pt-BR/docs/Web/Guide/Introduction_to_Web_development
 /pt-BR/docs/Web/HTML/CORS_imagens_habilitadas	/pt-BR/docs/Web/HTML/CORS_enabled_image
@@ -864,6 +868,8 @@
 /pt-BR/docs/Web/MathML/Exemplos	/pt-BR/docs/Web/MathML/Examples
 /pt-BR/docs/Web/Performance/caminho_de_renderizacao_critico	/pt-BR/docs/Web/Performance/Critical_rendering_path
 /pt-BR/docs/Web/Progressive_web_apps/Introdução	/pt-BR/docs/Web/Progressive_web_apps/Introduction
+/pt-BR/docs/Web/Reference	/pt-BR/docs/orphaned/Web/Reference
+/pt-BR/docs/Web/Reference/API	/pt-BR/docs/orphaned/Web/Reference/API
 /pt-BR/docs/Web/SVG/Element/color-profile	/pt-BR/docs/orphaned/Web/SVG/Element/color-profile
 /pt-BR/docs/Web/SVG/Element/texto	/pt-BR/docs/Web/SVG/Element/text
 /pt-BR/docs/Web/SVG/Intensivo_de_Namespaces	/pt-BR/docs/Web/SVG/Namespaces_Crash_Course

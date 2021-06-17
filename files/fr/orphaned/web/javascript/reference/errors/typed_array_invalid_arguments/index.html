@@ -1,0 +1,77 @@
+---
+title: 'TypeError: invalid arguments'
+slug: orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
+tags:
+  - Erreurs
+  - JavaScript
+  - TypeError
+translation_of: Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
+original_slug: Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
+---
+<div>{{jsSidebar("Errors")}}</div>
+
+<h2 id="Message">Message</h2>
+
+<pre class="syntaxbox">TypeError: invalid arguments (Firefox)</pre>
+
+<h2 id="Type_d'erreur">Type d'erreur</h2>
+
+<p>{{jsxref("TypeError")}}</p>
+
+<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+
+<p><a href="/fr/docs/Web/JavaScript/Tableaux_typés">Les constructeurs de tableaux typés</a> ont besoin :</p>
+
+<ul>
+ <li>d'une longueur,</li>
+ <li>d'un autre tableau typé,</li>
+ <li>d'un objet semblable à un tableau,</li>
+ <li>d'un objet itérable</li>
+ <li>ou d'un objet {{jsxref("ArrayBuffer")}}</li>
+</ul>
+
+<p>afin de créer un nouveau tableau typé. Si on utilise un autre argument, on ne pourra pas créer de tableau typé valide.</p>
+
+<h2 id="Exemples">Exemples</h2>
+
+<p>Il est par exemple impossible de construire un tableau typé {{jsxref("Uint8Array")}} à partir d'une chaîne de caractères :</p>
+
+<pre class="brush: js example-bad">var ta = new Uint8Array("nope");
+// TypeError: invalid arguments
+</pre>
+
+<p>Voici différentes façons de créer un tableau typué {{jsxref("Uint8Array")}} :</p>
+
+<pre class="brush: js example-good">// À partir d'une longueur
+var uint8 = new Uint8Array(2);
+uint8[0] = 42;
+console.log(uint8[0]); // 42
+console.log(uint8.length); // 2
+console.log(uint8.BYTES_PER_ELEMENT); // 1
+
+// À partir d'un tableau
+var arr = new Uint8Array([21,31]);
+console.log(arr[1]); // 31
+
+// À partir d'un autre tableau typé
+var x = new Uint8Array([21, 31]);
+var y = new Uint8Array(x);
+console.log(y[0]); // 21
+
+// À partir d'un ArrayBuffer
+var buffer = new ArrayBuffer(8);
+var z = new Uint8Array(buffer, 1, 4);
+
+// À partir d'un itérable
+var iterable = function*(){ yield* [1,2,3]; }();
+var uint8 = new Uint8Array(iterable);
+// Uint8Array[1, 2, 3]
+</pre>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/JavaScript/Tableaux_typés">Les tableaux typés</a></li>
+ <li>{{jsxref("ArrayBuffer")}}</li>
+ <li>{{jsxref("Uint8Array")}}</li>
+</ul>
