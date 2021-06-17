@@ -309,9 +309,6 @@
 /ru/docs/MDN/Contribute/Editor/Ссылки	/ru/docs/orphaned/MDN/Editor/Links
 /ru/docs/MDN/Contribute/Howto/Добавить_или_обновить_данные_о_браузерной_совместимости	/ru/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 /ru/docs/MDN/Contribute/Howto/Создай_интерактивное_упражнение_для_помощи_в_изучении_веба	/ru/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
-/ru/docs/MDN/Contribute/Structures	/ru/docs/MDN/Structures
-/ru/docs/MDN/Contribute/Structures/Live_samples	/ru/docs/MDN/Structures/Live_samples
-/ru/docs/MDN/Contribute/Structures/Live_samples/Simple_live_sample_demo	/ru/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
 /ru/docs/MDN/Contribute/Tools	/ru/docs/MDN/Tools
 /ru/docs/MDN/Contribute/Tools/Page_watching	/ru/docs/orphaned/MDN/Tools/Page_watching
 /ru/docs/MDN/Contribute/Процессы	/ru/docs/MDN/Contribute/Processes
@@ -330,7 +327,6 @@
 /ru/docs/MDN/Getting_started	/ru/docs/MDN/Contribute/Getting_started
 /ru/docs/MDN/Kuma	/ru/docs/MDN/Yari
 /ru/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/ru/docs/MDN/Tools/KumaScript/Troubleshooting
-/ru/docs/MDN/Structures/Live_samples/Simple_live_sample_demo	/ru/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
 /ru/docs/MDN/Tools/Page_watching	/ru/docs/orphaned/MDN/Tools/Page_watching
 /ru/docs/MDN/Tools/Search	/ru/docs/orphaned/MDN/Tools/Search
 /ru/docs/MDN/Tools/URL-suffix	/ru/docs/MDN/Tools/Unsupported_GET_API
