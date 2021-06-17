@@ -49,7 +49,7 @@ super.functionOnParent([arguments]);</pre>
   }
 }
 
-class Carré extends Rectangle {
+class Carre extends Rectangle {
   constructor(longueur) {
 
     // Ici, on appelle le constructeur de Rectangle
@@ -92,14 +92,14 @@ Carre.logDescription(); // "J'ai 4 côtés qui sont tous égaux"
   toto() {}
 }
 
-class Dérivée extends Base {
+class Derivee extends Base {
   constructor() {}
   delete() {
     delete super.toto;
   }
 }
 
-new Dérivée().delete();
+new Derivee().delete();
 // ReferenceError : suppression invalide avec 'super'</pre>
 
 <h3 id="Super.prop_ne_peut_pas_surcharger_les_propriétés_non_modifiables"><code>Super.prop</code> ne peut pas surcharger les propriétés non modifiables</h3>
@@ -123,7 +123,7 @@ class Y extends X {
     super.prop = 2; // Impossible de surcharger
   }
 }
-var y = new Y();
+const y = new Y();
 y.toto(); // TypeError "prop" is read-only
 console.log(y.prop); // 1
 </pre>
@@ -132,15 +132,15 @@ console.log(y.prop); // 1
 
 <p><code>super</code> peut également être utilisé avec la notation littérale. Dans l'exemple qui suit, deux objets définissent chacun une méthode. Le deuxième objet utilise <code>super</code> pour appeler la méthode du premier objet. Cela fonctionne grâce à {{jsxref("Object.setPrototypeOf()")}} avec lequel on définit que le prototype de <code>obj2</code> est <code>obj1</code>. De cette façon, super peut parcourir la chaîne de prototypes et trouver <code>méthode1</code> dans <code>obj1</code>.</p>
 
-<pre class="brush: js">var obj1 = {
-  méthode1() {
+<pre class="brush: js">const obj1 = {
+  methode1() {
     console.log("méthode 1");
   }
 }
 
-var obj2 = {
-  méthode2() {
-    super.méthode1();
+const obj2 = {
+  methode2() {
+    super.methode1();
   }
 }
 
