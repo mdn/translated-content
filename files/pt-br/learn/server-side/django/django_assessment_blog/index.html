@@ -49,7 +49,7 @@ tags:
    <td>Uma página inicial descrevendo o site.</td>
   </tr>
   <tr>
-   <td>Lista de todos os artigos do blog.</td>
+   <td>Lista de todos os artigos do blog</td>
    <td><code>/blog/blogs/</code></td>
    <td>
     <p>Lista de todos os artigos do blog:</p>
@@ -65,7 +65,7 @@ tags:
    </td>
   </tr>
   <tr>
-   <td>Página de detalhes do autor do blog (o blogger).</td>
+   <td>Página de detalhes do autor do blog (o blogger)</td>
    <td><code>/blog/blogger/<em>&lt;author-id&gt;</em></code></td>
    <td>
     <p>Informação de um autor específico (pelo id) e a lista dos artigos do seu blog:</p> 
@@ -91,60 +91,60 @@ tags:
      <li>Contém na página do artigo: nome, autor, data e conteúdo.</li>
      <li>Comentários do artigo devem ser mostrados no final da página.</li>
      <li>Comentários devem ser ordenados de forma crescente (do mais antigo para o mais novo).</li>
-     <li>Contém link para adicionar comentários no final da página para usuários logados (veja a página de formulário de comentário)</li>
+     <li>Contém link para adicionar comentários no final da página para usuários logados (veja a página do formulário de comentário)</li>
      <li>Artigos e comentários precisam exibir somente texto simples. Não é necessário suporte de nenhum tipo de marcação HTML (como links, imagens, negrito/itálico, etc).</li>
     </ul>
    </td>
   </tr>
   <tr>
-   <td>List of all bloggers</td>
+   <td>Lista de todos os bloggers</td>
    <td><code>/blog/bloggers/</code></td>
    <td>
-    <p>List of bloggers on system:</p>
+    <p>Lista dos bloggers no sistema:</p>
 
     <ul>
-     <li>Accessible to all users from site sidebar</li>
-     <li>Blogger names are linked to Blog author detail pages.</li>
+     <li>Acessível para todos os usuários pela barra lateral do site.</li>
+     <li>O nome dos bloggers são linkados com as página de detalhes do autor do blog.</li>
     </ul>
    </td>
   </tr>
   <tr>
-   <td>Comment form page</td>
+   <td>Página do formulário de comentário</td>
    <td><code>/blog/<em>&lt;blog-id&gt;</em>/create</code></td>
    <td>
-    <p>Create comment for blog post:</p>
+    <p>Cria comentário para o artigo do blog:</p>
 
     <ul>
-     <li>Accessible to logged-in users (only) from link at bottom of blog post detail pages.</li>
-     <li>Displays form with description for entering comments (post date and blog is not editable).</li>
-     <li>After a comment has been posted, the page will redirect back to the associated blog post page.</li>
-     <li>Users cannot edit or delete their posts.</li>
-     <li>Logged out users will be directed to the login page to log in, before they can add comments. After logging in, they will be redirected back to the blog page they wanted to comment on.</li>
-     <li>Comment pages should include the name/link to the blogpost being commented on.</li>
+     <li>Acessível somente por usuários logados, através do link no final da página de detalhes do artigo.</li>
+     <li>Mostra formulário com descrição para novos comentários (a data do artigo e do blog não são editáveis).</li>
+     <li>Depois de um comentário ter sido postado, a página será redirecionada de volta para a respectiva página do artigo.</li>
+     <li>Usuários não podem editar ou deletar seus comentários.</li>
+     <li>Usuários não logados serão direcionados para a página de login para logar, antes de adicionarem o comentário. Depois de logados, eles serão redirecionados de volta para a página do artigo que tentaram criar o comentário.</li>
+     <li>Página de comentários deve incluir o nome/link do artigo que está recebendo o comentário.</li>
     </ul>
    </td>
   </tr>
   <tr>
-   <td>User authentication pages</td>
+   <td>Páginas de autenticação do usuário</td>
    <td><code>/accounts/<em>&lt;standard urls&gt;</em></code></td>
    <td>
-    <p>Standard Django authentication pages for logging in, out and setting the password:</p>
+    <p>Páginas de autenticação padrão do Django para fazer login, logout e configurar senhas:</p>
 
     <ul>
-     <li>Login/out should be accessible via sidebar links.</li>
+     <li>Login/logout deve ser acessível pelos links da barra lateral.</li>
     </ul>
    </td>
   </tr>
   <tr>
-   <td>Admin site</td>
+   <td>Site do admin</td>
    <td><code>/admin/<em>&lt;standard urls&gt;</em></code></td>
    <td>
-    <p>Admin site should be enabled to allow create/edit/delete of blog posts, blog authors and blog comments (this is the mechanism for bloggers to create new blog posts):</p>
+    <p>A página de Admin deve estar ativada para permitir criar/editar/deletar os artigos, autores e comentários do blog (esse é o mecanismo para os bloggers criarem novos artigos para o blog):</p>
 
     <ul>
-     <li>Admin site blog posts records should display the list of associated comments inline (below each blog post).</li>
-     <li>Comment names in the Admin site are created by truncating the comment description to 75 characters.</li>
-     <li>Other types of records can use basic registration.</li>
+     <li>Os registros do site do Admin devem mostrar a lista de comentários associados (abaixo de cada artigo do blog).</li>
+     <li>Nomes do comentário no site do Admin são criados de forma que a descrição do comentário seja truncada em até 75 caracteres.</li>
+     <li>Outros tipos de registro podem usar uma configuração mais básica.</li>
     </ul>
    </td>
   </tr>
