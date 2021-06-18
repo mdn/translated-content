@@ -616,7 +616,7 @@ try {
 window.addEventListener('scroll', function(event) {
   /* do something */
   // can't use event.preventDefault();
-  // 不能使用event.prevebt.
+  // 不能使用 event.preventDefault()
 }, passiveIfSupported );</code></pre>
 
 <p>在不支持<code>addEventListener()</code>的<code>options</code>参数的旧浏览器上，尝试使用它会阻止使用<code>useCapture</code>参数而不正确使用特征检测。</p>
