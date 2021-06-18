@@ -20881,12 +20881,6 @@
       "dreissig.jahrhundert"
     ]
   },
-  "Web/API/RTCSessionDescriptionCallback": {
-    "modified": "2019-03-23T22:51:28.888Z",
-    "contributors": [
-      "dreissig.jahrhundert"
-    ]
-  },
   "Web/API/Range": {
     "modified": "2020-10-15T21:17:11.080Z",
     "contributors": [
@@ -52313,6 +52307,12 @@
     "modified": "2020-10-15T22:26:50.502Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "orphaned/Web/API/RTCSessionDescriptionCallback": {
+    "modified": "2019-03-23T22:51:28.888Z",
+    "contributors": [
+      "dreissig.jahrhundert"
     ]
   },
   "orphaned/Web/API/ReadableStreamDefaultController/ReadableStreamDefaultController": {

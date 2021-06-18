@@ -3932,6 +3932,7 @@
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
+/ja/docs/Web/API/RTCSessionDescriptionCallback	/ja/docs/orphaned/Web/API/RTCSessionDescriptionCallback
 /ja/docs/Web/API/RandomSource	/ja/docs/conflicting/Web/API/Crypto/getRandomValues
 /ja/docs/Web/API/RandomSource/getRandomValues	/ja/docs/Web/API/Crypto/getRandomValues
 /ja/docs/Web/API/Range1	/ja/docs/Web/API/Range
