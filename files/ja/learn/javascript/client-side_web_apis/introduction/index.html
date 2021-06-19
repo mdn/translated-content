@@ -126,15 +126,15 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 <p><strong>注記</strong>: もしまだオブジェクトがどのように動作するかについて理解があやふやなら、先に進む前に <a href="/docs/Learn/JavaScript/Objects">JavaScript オブジェクト</a> モジュールを読みなおし、練習するのをおすすめします。</p>
 </div>
 
-<p>Let's return to the example of the Web Audio API — this is a fairly complex API, which consists of a number of objects. The most obvious ones are:</p>
+<p>Web Audio API の例に戻ってみましょう。Web Audio API はとても複雑な API で、たくさんのオブジェクトから成り立っています。わかりやすいものでいうと下記が挙げられます：</p>
 
 <ul>
- <li>{{domxref("AudioContext")}}, which represents an <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_graphs">audio graph</a> that can be used to manipulate audio playing inside the browser, and has a number of methods and properties available to manipulate that audio.</li>
- <li>{{domxref("MediaElementAudioSourceNode")}}, which represents an {{htmlelement("audio")}} element containing sound you want to play and manipulate inside the audio context.</li>
- <li>{{domxref("AudioDestinationNode")}}, which represents the destination of the audio, i.e. the device on your computer that will actually output it — usually your speakers or headphones.</li>
+  <li>{{domxref("AudioContext")}} は、ブラウザ内で再生する音声を操作するのに使われる<a href="/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Audio_graphs">オーディオグラフ</a>を表し、その音声を操作するためのたくさんのメソッドとプロパティを持ちます。</li>
+ <li>{{domxref("MediaElementAudioSourceNode")}} は、音声コンテキストの中で再生または操作したい音声を含む {{htmlelement("audio")}} 要素を表します。</li>
+ <li>{{domxref("AudioDestinationNode")}} は、音声の最終目的地、つまりはコンピュータで実際に出力するデバイス（通常スピーカーやヘッドホン）を表します。</li>
 </ul>
 
-<p>So how do these objects interact? If you look at our <a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/web-audio/index.html">simple web audio example</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/">see it live also</a>), you'll first see the following HTML:</p>
+<p>では、どのようにこれらのオブジェクトは互いに作用するのでしょうか？ こちらの<a href="https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/web-audio/index.html">シンプルな web audio の例</a> (<a href="https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/">デモページ</a>)を見ると、最初に以下のようなHTMLが書かれています。</p>
 
 <pre class="brush: html notranslate">&lt;audio src="outfoxing.mp3"&gt;&lt;/audio&gt;
 
@@ -142,16 +142,16 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 &lt;br&gt;
 &lt;input type="range" min="0" max="1" step="0.01" value="1" class="volume"&gt;</pre>
 
-<p>We, first of all, include an <code>&lt;audio&gt;</code> element with which we embed an MP3 into the page. We don't include any default browser controls. Next, we include a {{htmlelement("button")}} that we'll use to play and stop the music, and an {{htmlelement("input")}} element of type range, which we'll use to adjust the volume of the track while it's playing.</p>
+<p>最初に、 <code>&lt;audio&gt;</code> 要素を記述してページに MP3 を埋め込みます。デフォルトのブラウザのコントロールは記しません。次に音楽を再生・停止させるのに使う {{htmlelement("button")}} 、再生中の音楽の音量を調整するのに使う range タイプの {{htmlelement("input")}} 要素を記述します。</p>
 
-<p>Next, let's look at the JavaScript for this example.</p>
+<p>次にこの例の JavaScript を見てみましょう。</p>
 
-<p>We start by creating an <code>AudioContext</code> instance inside which to manipulate our track:</p>
+<p>まず、トラックを操作するための <code>AudioContext</code> インスタンスを作成します。</p>
 
 <pre class="brush: js notranslate">const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();</pre>
 
-<p>Next, we create constants that store references to our <code>&lt;audio&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;input&gt;</code> elements, and use the {{domxref("AudioContext.createMediaElementSource()")}} method to create a <code>MediaElementAudioSourceNode</code> representing the source of our audio — the <code>&lt;audio&gt;</code> element will be played from:</p>
+<p>次に、 <code>&lt;audio&gt;</code> 、 <code>&lt;button&gt;</code> 、および <code>&lt;input&gt;</code> 要素への参照を格納する定数を作成し、 {{domxref("AudioContext.createMediaElementSource()")}} メソッドを使用して、音声のソースを表す <code>MediaElementAudioSourceNode</code> を作成します。<code>&lt;audio&gt;</code> 要素はここから再生されます。</p>
 
 <pre class="brush: js notranslate">const audioElement = document.querySelector('audio');
 const playBtn = document.querySelector('button');
@@ -159,7 +159,7 @@ const volumeSlider = document.querySelector('.volume');
 
 const audioSource = audioCtx.createMediaElementSource(audioElement);</pre>
 
-<p>Next up we include a couple of event handlers that serve to toggle between play and pause when the button is pressed and reset the display back to the beginning when the song has finished playing:</p>
+<p>次に、ボタンが押されたら再生と停止を切り替えるイベントハンドラーと、曲が再生し終わったら最初に戻るイベントハンドラーを記述します。</p>
 
 <pre class="brush: js notranslate">// play/pause audio
 playBtn.addEventListener('click', function() {
@@ -188,10 +188,10 @@ audioElement.addEventListener('ended', function() {
 });</pre>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Some of you may notice that the <code>play()</code> and <code>pause()</code> methods being used to play and pause the track are not part of the Web Audio API; they are part of the {{domxref("HTMLMediaElement")}} API, which is different but closely-related.</p>
+<p><strong>Note</strong>: 気づいた方もいるかも知れませんが、音声を再生・停止する<code>play()</code> と <code>pause()</code> メソッドは Web Audio API の一部ではなく、 {{domxref("HTMLMediaElement")}} API の一部です。これらは異なりますが密接に関連しています。</p>
 </div>
 
-<p>Next, we create a {{domxref("GainNode")}} object using the {{domxref("AudioContext.createGain()")}} method, which can be used to adjust the volume of audio fed through it, and create another event handler that changes the value of the audio graph's gain (volume) whenever the slider value is changed:</p>
+<p>次に、 {{domxref("AudioContext.createGain()")}} を使用して {{domxref("GainNode")}} オブジェクトを作成します。このオブジェクトを使用して音声全体の音量を調整し、スライダーの値が変更される度にオーディオグラフのゲイン（音量）の値を変更する別のイベントハンドラーを作成します。</p>
 
 <pre class="brush: js notranslate">const gainNode = audioCtx.createGain();
 
@@ -199,11 +199,11 @@ volumeSlider.addEventListener('input', function() {
     gainNode.gain.value = this.value;
 });</pre>
 
-<p>The final thing to do to get this to work is to connect the different nodes in the audio graph up, which is done using the {{domxref("AudioNode.connect()")}} method available on every node type:</p>
+<p>これを機能させるために最後に行うことは、オーディオグラフ内のさまざまなノードを接続することです。これは、すべてのノードタイプで使用可能な {{domxref("AudioNode.connect()")}} メソッドを使用して行われます。</p>
 
 <pre class="brush: js notranslate">audioSource.connect(gainNode).connect(audioCtx.destination);</pre>
 
-<p>The audio starts in the source, which is then connected to the gain node so the audio's volume can be adjusted. The gain node is then connected to the destination node so the sound can be played on your computer (the {{domxref("AudioContext.destination")}} property represents whatever is the default {{domxref("AudioDestinationNode")}} available on your computer's hardware, e.g. your speakers).</p>
+<p>音声はソースから始まり、ソースはゲインノードに接続されるため、音声の音量を調整できます。次に、ゲインノードが宛先ノードに接続され、コンピューターでサウンドを再生できるようになります。（{{domxref("AudioContext.destination")}} は、スピーカなど、コンピュータのハードウエアで使用可能なデフォルトの {{domxref("AudioDestinationNode")}} を表します。)</p>
 
 <h3 id="認識できる入口があります">認識できる入口があります</h3>
 
