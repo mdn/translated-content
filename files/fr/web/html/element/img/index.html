@@ -39,8 +39,8 @@ browser-compat: html.elements.img
 
 <ul>
 	<li><a href="/fr/docs/Web/HTTP/Headers/Referrer-Policy">Referrer</a>/<a href="/fr/docs/Glossary/CORS">CORS</a> contrôle pour la sécurité et la confidentialité : voir <a href="#attr-crossorigin"><code>crossorigin</code></a> et <a href="#attr-referrerpolicy"><code>referrerpolicy</code></a>.</li>
-	<li>Utilisez à la fois <a href="#attr-width"><code>width</code></a> et <a href="#attr-height"><code>height</code></a> pour définir la taille intrinsèque de l'image, ce qui lui permet d'occuper de l'espace avant son chargement, afin d'atténuer les décalages de présentation du contenu.</li>
-	<li>Allusions à des images responsives avec <a href="#attr-sizes"><code>sizes</code></a> et <a href="#attr-srcset"><code>srcset</code></a>. (voir aussi l'élément <a href="/fr/docs/Web/HTML/Element/picture"><code>&lt;picture&gt;</code></a> et notre <a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Tutoriel sur les images responsives</a>).</li>
+	<li><a href="#attr-width"><code>width</code></a> et <a href="#attr-height"><code>height</code></a> pour définir la taille intrinsèque de l'image, ce qui lui permet d'occuper de l'espace avant son chargement, afin d'atténuer les décalages de présentation du contenu.</li>
+	<li>Des indications d'images adaptatives avec <a href="#attr-sizes"><code>sizes</code></a> et <a href="#attr-srcset"><code>srcset</code></a>. (voir aussi l'élément <a href="/fr/docs/Web/HTML/Element/picture"><code>&lt;picture&gt;</code></a> et notre <a href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Tutoriel sur les images adaptatives</a>).</li>
 </ul>
 
 <h2 id="supported_image_formats">Formats d'image pris en charge</h2>
@@ -148,7 +148,7 @@ browser-compat: html.elements.img
       <li><code>no-referrer-when-downgrade</code> : aucun en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Referer"><code>Referer</code></a> n'est envoyé lorsqu'on navigue vers une origine sans <a href="/fr/docs/Glossary/https">HTTPS</a>. Cette valeur est le comportement par défaut de l'agent utilisateur si aucune valeur n'est fournie.</li>
       <li><code>origin</code> : l'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Referer"><code>Referer</code></a> contiendra le schéma, l'<a href="/fr/docs/Glossary/Host">hôte</a> et le <a href="/fr/docs/Glossary/Port">port</a> de la page d'origine.</li>
       <li><code>origin-when-cross-origin</code> : lorsque la navigation se fait vers d'autres origines, les données du référent se limiteront au schéma, à l'hôte et au part. Si on navigue sur la même origine, le chemin complet de la ressource sera indiqué.</li>
-      <li><code>unsafe-url</code> : l'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Referer"><code>Referer</code></a> incluera l'origine et le chemin mais aucun fragment, mot de passe ou nom d'utilisateur. Ce cas de figure n'est pas sécurisé car il peut laisser fuire des origines et des chemins de ressources protégées par TLS vers des origines non-sécurisées.</li>
+      <li><code>unsafe-url</code> : l'en-tête HTTP <a href="/fr/docs/Web/HTTP/Headers/Referer"><code>Referer</code></a> incluera l'origine et le chemin mais aucun fragment, mot de passe ou nom d'utilisateur. Ce cas de figure n'est pas sécurisé, car il peut laisser fuire des origines et des chemins de ressources protégées par TLS vers des origines non-sécurisées.</li>
     </ul>
   </dd>
   <dt><code id="attr-sizes">sizes</code></dt>
@@ -197,7 +197,7 @@ browser-compat: html.elements.img
 
 <dl>
   <dt><code id="attr-align">align</code> {{deprecated_inline}}</dt>
-  <dd>L'alignement de l'image selon le contexte qui l'entoure. En HTML5, on privilégiera les propriétés CSS <a href="/fr/docs/Web/CSS/float"><code>float</code></a> et/ou <a href="/fr/docs/Web/CSS/vertical-align"><code>vertical-align</code></a> voire la propriété  <a href="/fr/docs/Web/CSS/object-position"><code>object-position</code></a> qui permet de positionner l'image au sein de la boîte de l'élément. Les valeurs autorisées sont :</dd>
+  <dd>L'alignement de l'image selon le contexte qui l'entoure. En HTML5, on privilégiera les propriétés CSS <a href="/fr/docs/Web/CSS/float"><code>float</code></a> et/ou <a href="/fr/docs/Web/CSS/vertical-align"><code>vertical-align</code></a> voire la propriété <a href="/fr/docs/Web/CSS/object-position"><code>object-position</code></a> qui permet de positionner l'image au sein de la boîte de l'élément. Les valeurs autorisées sont :</dd>
   <dd>
     <dl>
       <dt><code>top</code></dt>
@@ -226,10 +226,10 @@ browser-compat: html.elements.img
   <dt><code id="attr-name">name</code> {{deprecated_inline}}</dt>
   <dd>Un nom pour l'élément. Utilisez plutôt l'attribut <a href="/fr/docs/Web/HTML/Global_attributes#attr-id"><code>id</code></a>.</dd>
   <dt><code id="attr-vspace">vspace</code> {{deprecated_inline}}</dt>
-  <dd>Le nombre de pixels blancs à insérer en dessous et au dessus de l'image. En HTML5, on privilégiera la propriété CSS <a href="/fr/docs/Web/CSS/margin"><code>margin</code></a>.</dd>
+  <dd>Le nombre de pixels blancs à insérer en dessous et au-dessus de l'image. En HTML5, on privilégiera la propriété CSS <a href="/fr/docs/Web/CSS/margin"><code>margin</code></a>.</dd>
 </dl>
 
-<h2 id="styling_with_css">Styliser avec CSS</h2>
+<h2 id="styling_with_css">Mettre en forme avec CSS</h2>
 
 <p><code>&lt;img&gt;</code> est un <a href="/fr/docs/Web/CSS/Replaced_element">élément remplacé</a> ; il a une valeur <a href="/fr/docs/Web/CSS/display"><code>display</code></a> de <code>inline</code> par défaut, mais ses dimensions par défaut sont définies par les valeurs intrinsèques de l'image intégrée, comme s'il s'agissait de <code>inline-block</code>. Vous pouvez définir des propriétés comme <a href="/fr/docs/Web/CSS/border"><code>border</code></a>/<a href="/fr/docs/Web/CSS/border-radius"><code>border-radius</code></a>, <a href="/fr/docs/Web/CSS/padding"><code>padding</code></a>/<a href="/fr/docs/Web/CSS/margin"><code>margin</code></a>, <a href="/fr/docs/Web/CSS/width"><code>width</code></a>, <a href="/fr/docs/Web/CSS/height"><code>height</code></a>, etc. sur une image.</p>
 
@@ -241,14 +241,14 @@ browser-compat: html.elements.img
 
 <h2 id="examples">Exemples</h2>
 
-<h3 id="alternative_text">Texte alternatif</h3>
+<h3 id="Alternative_text">Texte alternatif</h3>
 
 <p>L'exemple suivant intègre une image dans la page et inclut un texte alternatif pour l'accessibilité.</p>
 
 <pre class="brush: html">&lt;img src="favicon144.png"
   alt="MDN logo"&gt;</pre>
 
-<p>{{EmbedLiveSample('alternative_text', '100%', '160')}}</p>
+<p>{{EmbedLiveSample('Alternative_text', '100%', '160')}}</p>
 
 <h3 id="image_link">Lien image</h3>
 
@@ -280,7 +280,7 @@ browser-compat: html.elements.img
           clock-demo-400px.png 400w"
   sizes="(min-width: 600px) 200px, 50vw"&gt;</pre>
 
-<p>{{EmbedLiveSample("using_the_srcset_and_sizes_attributes", "100%", 350)}}</p>
+<p>{{EmbedLiveSample("using_the_srcset_and_sizes_attributes", "100%", 450)}}</p>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
@@ -295,7 +295,7 @@ browser-compat: html.elements.img
 
 <h3 id="authoring_meaningful_alternate_descriptions">Création de descriptions alternatives significatives</h3>
 
-<p>L'attribut <code>alt</code> doit décrire le contenu de l'image de façon claire et concise. L'attribut ne doit pas décrire la présence même de l'image ou le nom du fichier. Si l'attribut <code>alt</code> n'est pas utilisé car l'image ne possède pas d'équivalent textuel, il faudra utiliser d'autres méthodes alternative pour présenter le contenu que l'image doit véhiculer.</p>
+<p>L'attribut <code>alt</code> doit décrire le contenu de l'image de façon claire et concise. L'attribut ne doit pas décrire la présence même de l'image ou le nom du fichier. Si l'attribut <code>alt</code> n'est pas utilisé, car l'image ne possède pas d'équivalent textuel, il faudra utiliser d'autres méthodes alternatives pour présenter le contenu que l'image doit véhiculer.</p>
 
 <h4 id="dont">Ce qu'il ne faut pas faire</h4>
 
@@ -305,7 +305,7 @@ browser-compat: html.elements.img
 
 <pre class="brush: html example-good">&lt;img alt="Un manchot Rockhopper se tenant sur une plage." src="manchot.jpg"&gt;</pre>
 
-<p>Lorsque l'attribut <code>alt</code> n'est pas présent, certains lecteurs d'écran peuvent énoncer le nom du fichier. Cela peut être source de confusion car le nom du fichier n'est pas représentatif du contenu de l'image.</p>
+<p>Lorsque l'attribut <code>alt</code> n'est pas présent, certains lecteurs d'écran peuvent énoncer le nom du fichier. Cela peut être source de confusion, car le nom du fichier n'est pas représentatif du contenu de l'image.</p>
 
 <ul>
   <li><em><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">An alt Decision Tree • Images • WAI Web Accessibility Tutorials</a></em><a href="https://www.w3.org/WAI/tutorials/images/decision-tree/"> (en anglais)</a></li>
@@ -317,7 +317,7 @@ browser-compat: html.elements.img
 
 <h3 id="the_title_attribute">L'attribut <code>title</code></h3>
 
-<p>L'attribut <a href="/fr/docs/Web/HTML/Global_attributes#attr-title"><code>title</code></a> n'a pas vocation à remplacer l'attribut <code>alt</code>. De plus, on évitera d'utiliser la même valeur pour <code>alt</code> et <code>title</code> car certains lecteurs d'écran répèteraient deux fois la description, entraînant une certaine confusion.</p>
+<p>L'attribut <a href="/fr/docs/Web/HTML/Global_attributes#attr-title"><code>title</code></a> n'a pas vocation à remplacer l'attribut <code>alt</code>. De plus, on évitera d'utiliser la même valeur pour <code>alt</code> et <code>title</code>, car certains lecteurs d'écran répèteraient deux fois la description, entraînant une certaine confusion.</p>
 
 <p>L'attribut <code>title</code> ne doit pas non plus être utilisé comme une source d'information complémentaire à la description fournie par <code>alt</code>. Si l'image nécessite une légende, on utilisera plutôt les éléments <a href="/fr/docs/Web/HTML/Element/figure"><code>&lt;figure&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&lt;figcaption&gt;</code></a>.</p>
 
