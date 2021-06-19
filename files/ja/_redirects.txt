@@ -3932,6 +3932,7 @@
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
+/ja/docs/Web/API/RTCSessionDescriptionCallback	/ja/docs/orphaned/Web/API/RTCSessionDescriptionCallback
 /ja/docs/Web/API/RandomSource	/ja/docs/conflicting/Web/API/Crypto/getRandomValues
 /ja/docs/Web/API/RandomSource/getRandomValues	/ja/docs/Web/API/Crypto/getRandomValues
 /ja/docs/Web/API/Range1	/ja/docs/Web/API/Range
@@ -4737,7 +4738,7 @@
 /ja/docs/Web/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web/HTML/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ja/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/ja/docs/Glossary/speculative_parsing
-/ja/docs/Web/HTML/Preloading_content	/ja/docs/orphaned/Web/HTML/Preloading_content
+/ja/docs/Web/HTML/Preloading_content	/ja/docs/Web/HTML/Link_types/preload
 /ja/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ja/docs/Web/HTML/Supported_media_formats	/ja/docs/Web/Media/Formats
 /ja/docs/Web/HTML/Using_HTML5_audio_and_video	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
