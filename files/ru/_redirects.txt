@@ -112,7 +112,7 @@
 /ru/docs/HTML/HTML5/Введение_в_HTML5	/ru/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ru/docs/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/ru/docs/Glossary/speculative_parsing
 /ru/docs/IndexedDB	/ru/docs/Web/API/IndexedDB_API
-/ru/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ru/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/ru/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ru/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ru/docs/IndexedDB/Using_IndexedDB	/ru/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /ru/docs/JavaScript	/ru/docs/Web/JavaScript
 /ru/docs/JavaScript/A_re-introduction_to_JavaScript	/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript
@@ -309,9 +309,6 @@
 /ru/docs/MDN/Contribute/Editor/Ссылки	/ru/docs/orphaned/MDN/Editor/Links
 /ru/docs/MDN/Contribute/Howto/Добавить_или_обновить_данные_о_браузерной_совместимости	/ru/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 /ru/docs/MDN/Contribute/Howto/Создай_интерактивное_упражнение_для_помощи_в_изучении_веба	/ru/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
-/ru/docs/MDN/Contribute/Structures	/ru/docs/MDN/Structures
-/ru/docs/MDN/Contribute/Structures/Live_samples	/ru/docs/MDN/Structures/Live_samples
-/ru/docs/MDN/Contribute/Structures/Live_samples/Simple_live_sample_demo	/ru/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
 /ru/docs/MDN/Contribute/Tools	/ru/docs/MDN/Tools
 /ru/docs/MDN/Contribute/Tools/Page_watching	/ru/docs/orphaned/MDN/Tools/Page_watching
 /ru/docs/MDN/Contribute/Процессы	/ru/docs/MDN/Contribute/Processes
@@ -330,7 +327,6 @@
 /ru/docs/MDN/Getting_started	/ru/docs/MDN/Contribute/Getting_started
 /ru/docs/MDN/Kuma	/ru/docs/MDN/Yari
 /ru/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/ru/docs/MDN/Tools/KumaScript/Troubleshooting
-/ru/docs/MDN/Structures/Live_samples/Simple_live_sample_demo	/ru/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
 /ru/docs/MDN/Tools/Page_watching	/ru/docs/orphaned/MDN/Tools/Page_watching
 /ru/docs/MDN/Tools/Search	/ru/docs/orphaned/MDN/Tools/Search
 /ru/docs/MDN/Tools/URL-suffix	/ru/docs/MDN/Tools/Unsupported_GET_API
@@ -400,6 +396,7 @@
 /ru/docs/Web/API/Element.insertAdjacentHTML	/ru/docs/Web/API/Element/insertAdjacentHTML
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
 /ru/docs/Web/API/Element/currentStyle	/ru/docs/orphaned/Web/API/Element/currentStyle
+/ru/docs/Web/API/ElementCSSInlineStyle/style	/ru/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/EventTarget/attachEvent	/ru/docs/conflicting/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/EventTarget/detachEvent	/ru/docs/conflicting/Web/API/EventTarget/removeEventListener
@@ -410,7 +407,7 @@
 /ru/docs/Web/API/HTMLElement/dataset	/ru/docs/Web/API/HTMLOrForeignElement/dataset
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/API/HTMLElement/nonce	/ru/docs/Web/API/HTMLOrForeignElement/nonce
-/ru/docs/Web/API/HTMLElement/style	/ru/docs/Web/API/ElementCSSInlineStyle/style
+/ru/docs/Web/API/HTMLElement/style	/ru/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ru/docs/Web/API/HTMLElement/tabIndex	/ru/docs/Web/API/HTMLOrForeignElement/tabIndex
 /ru/docs/Web/API/HTMLHyperlinkElementUtils	/ru/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/hash	/ru/docs/Web/API/HTMLAnchorElement/hash
@@ -426,6 +423,7 @@
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ru/docs/Web/API/HTMLAnchorElement/toString
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/username	/ru/docs/Web/API/HTMLAnchorElement/username
 /ru/docs/Web/API/HTMLImageElement.Image	/ru/docs/Web/API/HTMLImageElement/Image
+/ru/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ru/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ru/docs/Web/API/MediaTrackConstraints/Эхоподавление	/ru/docs/Web/API/MediaTrackConstraints/echoCancellation
 /ru/docs/Web/API/NavigatorGeolocation	/ru/docs/conflicting/Web/API/Geolocation
 /ru/docs/Web/API/NetworkInformation/connection	/ru/docs/Web/API/Navigator/connection
@@ -530,11 +528,15 @@
 /ru/docs/Web/CSS/filter-function/blur	/ru/docs/Web/CSS/filter-function/blur()
 /ru/docs/Web/CSS/filter-function/url	/ru/docs/conflicting/Web/CSS/url()
 /ru/docs/Web/CSS/grid-gap	/ru/docs/conflicting/Web/CSS/gap
-/ru/docs/Web/CSS/image-set	/ru/docs/Web/CSS/image-set()
-/ru/docs/Web/CSS/linear-gradient	/ru/docs/Web/CSS/linear-gradient()
+/ru/docs/Web/CSS/image-set	/ru/docs/orphaned/Web/CSS/image-set()
+/ru/docs/Web/CSS/image-set()	/ru/docs/orphaned/Web/CSS/image-set()
+/ru/docs/Web/CSS/linear-gradient	/ru/docs/orphaned/Web/CSS/linear-gradient()
+/ru/docs/Web/CSS/linear-gradient()	/ru/docs/orphaned/Web/CSS/linear-gradient()
 /ru/docs/Web/CSS/minmax	/ru/docs/Web/CSS/minmax()
-/ru/docs/Web/CSS/radial-gradient	/ru/docs/Web/CSS/radial-gradient()
-/ru/docs/Web/CSS/repeating-linear-gradient	/ru/docs/Web/CSS/repeating-linear-gradient()
+/ru/docs/Web/CSS/radial-gradient	/ru/docs/orphaned/Web/CSS/radial-gradient()
+/ru/docs/Web/CSS/radial-gradient()	/ru/docs/orphaned/Web/CSS/radial-gradient()
+/ru/docs/Web/CSS/repeating-linear-gradient	/ru/docs/orphaned/Web/CSS/repeating-linear-gradient()
+/ru/docs/Web/CSS/repeating-linear-gradient()	/ru/docs/orphaned/Web/CSS/repeating-linear-gradient()
 /ru/docs/Web/CSS/transform-function/rotate	/ru/docs/Web/CSS/transform-function/rotate()
 /ru/docs/Web/CSS/transform-function/rotate3d	/ru/docs/Web/CSS/transform-function/rotate3d()
 /ru/docs/Web/CSS/transform-function/scale3d	/ru/docs/Web/CSS/transform-function/scale3d()
@@ -614,8 +616,9 @@
 /ru/docs/Web/Guide/HTML/HTML5/Constraint_validation	/ru/docs/orphaned/Web/Guide/HTML/HTML5/Constraint_validation
 /ru/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/ru/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ru/docs/Web/Guide/HTML/Introduction	/ru/docs/Learn/HTML/Introduction_to_HTML
-/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/ru/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/ru/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ru/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/ru/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
+/ru/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ru/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ru/docs/Web/Guide/HTML/Using_data_attributes	/ru/docs/Learn/HTML/Howto/Use_data_attributes
 /ru/docs/Web/Guide/Localizations_and_character_encodings	/ru/docs/orphaned/Web/Guide/Localizations_and_character_encodings
 /ru/docs/Web/Guide/Графика	/ru/docs/Web/Guide/Graphics
@@ -725,6 +728,7 @@
 /ru/docs/Web/JavaScript/New_in_JavaScript/Новое_в_JavaScript_1.6	/ru/docs/Web/JavaScript/New_in_JavaScript/1.6
 /ru/docs/Web/JavaScript/Reference/Classes/Class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields
+/ru/docs/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments	/ru/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 /ru/docs/Web/JavaScript/Reference/Errors/Переменные_скрывают_аргумент	/ru/docs/Web/JavaScript/Reference/Errors/Var_hides_argument
 /ru/docs/Web/JavaScript/Reference/Functions/Определиние_методов	/ru/docs/Web/JavaScript/Reference/Functions/Method_definitions
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Array/contains	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
@@ -845,6 +849,8 @@
 /ru/docs/Web/Performance/Основы	/ru/docs/Web/Performance/Fundamentals
 /ru/docs/Web/Performance/Производительность_анимации	/ru/docs/Web/Performance/Animation_performance_and_frame_rate
 /ru/docs/Web/Progressive_web_apps/Заметный	/ru/docs/conflicting/Web/Progressive_web_apps_628955cdadd77b10ec99de034fc76374
+/ru/docs/Web/Reference	/ru/docs/orphaned/Web/Reference
+/ru/docs/Web/Reference/API	/ru/docs/orphaned/Web/Reference/API
 /ru/docs/Web/SVG/Attribute/onload	/ru/docs/orphaned/Web/SVG/Attribute/onload
 /ru/docs/Web/SVG/Tutorial/Базовые_Преобразования	/ru/docs/Web/SVG/Tutorial/Basic_Transformations
 /ru/docs/Web/SVG/Tutorial/Введение	/ru/docs/Web/SVG/Tutorial/Introduction

@@ -1,276 +1,149 @@
 ---
-title: <colgroup>
+title: '<colgroup> : l''élément regroupant des colonnes'
 slug: Web/HTML/Element/colgroup
 tags:
   - Element
   - HTML
+  - HTML tabular data
   - Reference
-  - Tableau
+  - Tables
   - Web
 translation_of: Web/HTML/Element/colgroup
+browser-compat: html.elements.colgroup
 ---
 <div>{{HTMLRef}}</div>
 
-<p>L'élément HTML <strong><code>&lt;colgroup&gt;</code></strong> définit un groupe de colonnes au sein d'un tableau.</p>
+<p class="summary">L'élément HTML <strong><code>&lt;colgroup&gt;</code></strong> définit un groupe de colonnes au sein d'un tableau.</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/colgroup.html","tabbed-taller")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
-<h2 id="Attributs">Attributs</h2>
-
-<p>Comme pour tous les éléments, on peut utiliser <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a> sur cet élément.</p>
-
-<dl>
- <dt>{{htmlattrdef("align")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Cet attribut à valeur contrainte définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont :
- <ul>
-  <li><code>left</code> : le contenu de la cellule est alligné à gauche de la cellule</li>
-  <li><code>center</code> : le contenu de la cellule est centré horizontalement</li>
-  <li><code>right</code> : le contenu de la cellule est aligné à droite de la cellule</li>
-  <li><code>justify</code> : insère des espaces dans le contenu textuel afin que le contenu de la cellule soit justifié</li>
-  <li><code>char</code> : aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs  {{htmlattrxref("char", "col")}} et {{htmlattrxref("charoff", "col")}} {{unimplemented_inline(2212)}}.</li>
- </ul>
-
- <p>Si cet attribut n'est pas renseigné, la valeur <code>left</code> sera prise comme valeur par défaut. Les éléments {{HTMLElement("col")}} descendants peuvent surcharger cette valeur en utilisant leur attribut {{htmlattrxref("align", "col")}}.</p>
-
- <div class="note"><strong>Notes : </strong>Cet attribut est devenu obsolète et n'est plus supporté dans le dernier standard
-
- <ul>
-  <li>Pour réaliser les mêmes effets que les valeurs <code>left</code>, <code>center</code>, <code>right</code> ou <code>justify</code> :
-
-   <ul>
-    <li>Ne pas utiliser la propriété {{cssxref("text-align")}} sur un sélecteur renvoyant un élement {{HTMLElement("colgroup")}}. Les éléments {{HTMLElement("td")}} ne sont pas des descendants de l'élément {{HTMLElement("colgroup")}} il n'hériteront pas de cette propriété.</li>
-    <li>Si le tableau n'utilise pas l'attribut {{htmlattrxref("colspan", "td")}}, il est possible d'utiliser le sélecteur CSS <code>tr:nth-child(an+b)</code> avec a le nombre total de colonnes du tableau et b la position ordinale de la colonne. Une fois que ce selecteur a été utilisé, la propriété {{cssxref("text-align")}} peut être utilisée.</li>
-    <li>Si le tableau utilise l'attribut {{htmlattrxref("colspan", "td")}}, l'effet peut être réalisé en combinant différents sélecteurs CSS comme <code>[colspan=n]</code>. Cependant cela n'est pas trivial à réaliser.</li>
-   </ul>
-  </li>
-  <li>Pour réaliser le même effet qu'avec la valeur <code>char</code>. Il est possible, en CSS3, d'utiliser la valeur de l'attribut {{htmlattrxref("char", "colgroup")}} comme valeur de la propriété {{cssxref("text-align")}}. {{unimplemented_inline}}.</li>
- </ul>
- </div>
- </dd>
-</dl>
-
-<dl>
- <dt>{{htmlattrdef("bgcolor")}} {{Non-standard_inline}}</dt>
- <dd>Cet attribut définit la couleur d'arrière-plan de toutes les cellules des colonnes appartenant au groupe de colonnes. C'est un code à 6 chiffres hexadécimaux tel que défini par le <a class="external" href="https://www.w3.org/Graphics/Color/sRGB">sRGB</a>, précédé d'un '#'. Un de ces seize mots-clés, comme présentés ci-dessous, peut être utilisé.
- <table>
+<table class="properties">
   <tbody>
-   <tr>
-    <td style="background-color: black; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>black</code> = "#000000"</td>
-    <td style="background-color: green; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>green</code> = "#008000"</td>
-   </tr>
-   <tr>
-    <td style="background-color: silver; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>silver</code> = "#C0C0C0"</td>
-    <td style="background-color: lime; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>lime</code> = "#00FF00"</td>
-   </tr>
-   <tr>
-    <td style="background-color: gray; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>gray</code> = "#808080"</td>
-    <td style="background-color: olive; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>olive</code> = "#808000"</td>
-   </tr>
-   <tr>
-    <td style="background-color: white; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>white</code> = "#FFFFFF"</td>
-    <td style="background-color: yellow; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>yellow</code> = "#FFFF00"</td>
-   </tr>
-   <tr>
-    <td style="background-color: maroon; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>maroon</code> = "#800000"</td>
-    <td style="background-color: navy; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>navy</code> = "#000080"</td>
-   </tr>
-   <tr>
-    <td style="background-color: red; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>red</code> = "#FF0000"</td>
-    <td style="background-color: blue; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>blue</code> = "#0000FF"</td>
-   </tr>
-   <tr>
-    <td style="background-color: purple; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>purple</code> = "#800080"</td>
-    <td style="background-color: teal; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>teal</code> = "#008080"</td>
-   </tr>
-   <tr>
-    <td style="background-color: fuchsia; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>fuchsia</code> = "#FF00FF"</td>
-    <td style="background-color: aqua; width: 24px; height: 24px; border-width: 1px; border-color: black; border-style: solid;"> </td>
-    <td><code>aqua</code> = "#00FFFF"</td>
-   </tr>
+    <tr>
+      <th scope="row"><a href="/fr/docs/Web/Guide/HTML/Content_categories">Catégories de contenu</a></th>
+      <td>Aucune.</td>
+    </tr>
+    <tr>
+      <th scope="row">Contenu autorisé</th>
+      <td>Si l'attribut <a href="#attr-span"><code>span</code></a> est présent : aucun car c'est un élément vide.<br>
+      Si l'attribut n'est pas présent, zéro ou plusieurs éléments <a href="/fr/docs/Web/HTML/Element/col"><code>&lt;col&gt;</code></a>.</td>
+    </tr>
+    <tr>
+      <th scope="row">Omission de balises</th>
+      <td>La balise de début peut être absente si le premier élément fils est <a href="/fr/docs/Web/HTML/Element/col"><code>&lt;col&gt;</code></a> et que celui-ci n'est pas précédé par un élément <a href="/fr/docs/Web/HTML/Element/colgroup"><code>&lt;colgroup&gt;</code></a> dont la balise de fin est absente. La balise de fin peut être absente s'il n'est pas suivi par un blanc ou par un commentaire.</td>
+    </tr>
+    <tr>
+      <th scope="row">Parents autorisés</th>
+      <td>Un élément <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a>. <a href="/fr/docs/Web/HTML/Element/colgroup"><code>&lt;colgroup&gt;</code></a> doit apparaître après tout élément <a href="/fr/docs/Web/HTML/Element/caption"><code>&lt;caption&gt;</code></a> optionnel et avant tout élément <a href="/fr/docs/Web/HTML/Element/thead"><code>&lt;thead&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/th"><code>&lt;th&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/tbody"><code>&lt;tbody&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/tfoot"><code>&lt;tfoot&gt;</code></a> et <a href="/fr/docs/Web/HTML/Element/tr"><code>&lt;tr&gt;</code></a>.</td>
+    </tr>
+    <tr>
+      <th scope="row">Rôle ARIA implicite</th>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">Pas de rôle correspondant</a></td>
+    </tr>
+    <tr>
+      <th scope="row">Rôles ARIA autorisés</th>
+      <td>Aucun rôle autorisé.</td>
+    </tr>
+    <tr>
+      <th scope="row">Interface DOM</th>
+      <td><a href="/fr/docs/Web/API/HTMLTableColElement"><code>HTMLTableColElement</code></a></td>
+    </tr>
   </tbody>
  </table>
 
- <div class="note"><strong>Note d'utilisation : </strong>Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci n'est pas un attribut standard et n'a été implémenté que sous certaines versions d'Internet Explorer. L'élément {{HTMLElement("colgroup")}} doit être mis en forme grâce au <a href="/fr/docs/Web/CSS">CSS</a>. Pour fournir un effet semblable à celui réalisé par l'attribut <code><strong>bgcolor</strong></code>, il est possible d'utiliser la propriété CSS {{cssxref("background-color")}} sur les éléments  {{HTMLElement("td")}} souhaités.</div>
- </dd>
- <dt>{{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Cet attribut spécifie l'alignement du contenu d'un groupe de colonnes en fonction d'un caractère.<br>
-  Les valeurs généralement utilisées pour cet attribut contiennent généralement un point (.) pour aligner des nombres ou des valeurs monétaires. Si l'attribut {{htmlattrxref("align", "col")}} ne vaut pas <code>char</code>, l'attribut est ignoré. Cet attribut peut être surchargé avec l'attribut {{htmlattrxref("align", "col")}} de chacun des éléments {{HTMLElement("col")}} appartenant au groupe de colonnes.</dd>
- <dd>
- <div class="note"><strong>Note d'utilisation : </strong>Cet attribut est obsolète et il est donc fortement déconseillé de l'utiliser. De fait, il n'est pas supporté par le dernier standard. Pour réaliser le même effet qu'avec {{htmlattrxref("char", "colgroup")}}, on pourra utiliser CSS3 en attribuant la même valeur à la propriété {{cssxref("text-align")}}.{{unimplemented_inline}}.</div>
- </dd>
- <dt>{{htmlattrdef("charoff")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut<strong> char</strong> à appliquer au contenu des cellules.
- <div class="note"><strong>Note d'utilisation: </strong>Cet attribut ne doit plus être utilisé car il est maintenant obsolète et n'est plus supporté dans le dernier standard.</div>
- </dd>
-</dl>
+<h2 id="attributes">Attributs</h2>
+
+<p>Comme pour tous les éléments, on peut utiliser <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a> sur cet élément.</p>
 
 <dl>
- <dt>{{htmlattrdef("span")}}</dt>
- <dd>La valeur de cet attribut est un entier positif indiquant le nombre de colonnes consécutives sur lesquelles appliquer les attributs de l'élément. S'il est absent, sa valeur par défaut est 1.
- <div class="note"><strong>Note : </strong>Cet attribut s'applique aux attributs des colonnes du groupe. Il n'a pas d'effet sur les différentes règles CSS associées au groupe ou aux cellules des colonnes de ce groupe.. L'attribut <code>span</code>n'est pas autorisé s'il y a un ou plusieurs éléments <code>&lt;col&gt;</code> au sein de <code>&lt;colgroup&gt;</code>.</div>
- </dd>
-</dl>
+  <dt><strong id="attr-span"><code>span</code></strong></dt>
+  <dd>Cet attribut contient un nombre entier positif indiquant le nombre de colonnes consécutives que l'élément <code>&lt;colgroup&gt;</code> couvre. S'il n'est pas présent, sa valeur par défaut est <code>1</code>.
+    <div class="notecard note">
+      <p><strong>Note:</strong></p>
+      <p>Cet attribut est appliqué sur les attributs du groupe de colonnes, il n'a aucun effet sur les règles de style CSS qui lui sont associées ni, a fortiori, sur les cellules des membres du groupe de la colonne.</p>
+      <ul>
+        <li>L'attribut <code>span</code> n'est pas autorisé s'il y a un ou plusieurs éléments <code>&lt;col&gt;</code> dans le <code>&lt;colgroup&gt;</code>.</li>
+      </ul>
+    </div>
+  </dd>
+ </dl>
+
+<h3 id="deprecated_attributes">Attributs dépréciés</h3>
+
+<p>Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils sont documentés ci-dessous à titre de référence lors de la mise à jour du code existant et uniquement pour des raisons historiques.</p>
 
 <dl>
- <dt>{{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}</dt>
- <dd>Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont :
- <ul>
-  <li><code>baseline</code> : qui alignera le texte à la ligne la plus basse possible en utilisant la <a class="external" href="https://fr.wikipedia.org/wiki/Ligne_de_base_%28typographie%29">ligne de base</a> des caractères. Si les caractères ont tous la même taille, cela aura le même effet que la valeur <code>bottom</code>.</li>
-  <li><code>bottom</code> : qui placera le texte au plus bas de la cellule</li>
-  <li><code>middle</code> : qui centrera verticalement le texte dans la cellule</li>
-  <li><code>top</code> : qui placera le texte au plus haut de la cellule.</li>
- </ul>
+  <dt><strong id="attr-align"><code>align</code></strong> {{deprecated_inline}}</dt>
+  <dd>Cet attribut de type énumératif indique comment l'alignement horizontal du contenu des cellules de chaque colonne sera traité. Les valeurs possibles sont :
+    <ul>
+      <li><code>left</code>, aligner le contenu à gauche de la cellule</li>
+      <li><code>center</code>, centrer le contenu dans la cellule</li>
+      <li><code>right</code>, aligner le contenu à droite de la cellule</li>
+      <li><code>justify</code>, insérer des espaces dans le contenu textuel afin que le contenu soit justifié dans la cellule</li>
+      <li><code>char</code>, aligner le contenu textuel sur un caractère spécial avec un décalage minimal, défini par les attributs <a href="/fr/docs/Web/HTML/Element/col#attr-char"><code>char</code></a> et <a href="/fr/docs/Web/HTML/Element/col#attr-charoff"><code>charoff</code></a>.</li>
+    </ul>
 
- <div class="note"><strong>Notes d'utilisation : </strong>Cet attribut étant maintenant obsolète (et n'étant plus supporté), il est fortement déconseillé de l'utiliser.
+    <p>Si cet attribut n'est pas défini, la valeur <code>left</code> est adoptée. Les éléments <a href="/fr/docs/Web/HTML/Element/col"><code>&lt;col&gt;</code></a> descendants peuvent remplacer cette valeur en utilisant leur propre attribut <a href="/fr/docs/Web/HTML/Element/col#attr-align"><code>align</code></a>.</p>
 
- <ul>
-  <li>Il ne faut pas essayer de régler la propriété {{cssxref("vertical-align")}} sur un sélecteur retournant un élément {{HTMLElement("colgroup")}}. En effet les éléments {{HTMLElement("td")}} n'étant pas des descendants de l'élément {{HTMLElement("colgroup")}} ils n'hériteront pas de la propriété.</li>
-  <li>Si le tableau n'utilise pas d'attribut {{htmlattrxref("colspan", "td")}} il est possible d'utiliser le sélecteur CSS <code>tr:nth-child(an+b)</code> avec a le nombre de colonne du tableau et b la position ordinale de la colonne dans le tableau puis d'utiliser la propriété {{cssxref("vertical-align")}} sur le sélecteur.</li>
-  <li>Si le tableau n'utilise pas l'attribut {{htmlattrxref("colspan", "td")}} l'effet peut être obtenu avec une combinaison de différents sélecteurs CSS comme <code>[colspan=n]</code>. Cependant cela n'est pas trivial à réaliser.</li>
- </ul>
- </div>
- </dd>
+    <div class="notecard note">
+      <p><b>Note :</b></p>
+      <ul>
+        <li>N'essayez pas de définir la propriété <a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a> sur un sélecteur donnant un élément <a href="/fr/docs/Web/HTML/Element/colgroup"><code>&lt;colgroup&gt;</code></a>. Comme les éléments <a href="/fr/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a> ne sont pas des descendants de l'élément <a href="/fr/docs/Web/HTML/Element/colgroup"><code>&lt;colgroup&gt;</code></a>, ils n'en hériteront pas.</li>
+        <li>Si le tableau n'utilise pas d'attribut <a href="/fr/docs/Web/HTML/Element/td#attr-colspan">code>colspan</code></a>, utilisez un <code>td:nth-child(an+b)</code> sélecteur CSS par colonne, où a est le nombre total de colonnes du tableau et b est la position ordinale de cette colonne dans le tableau. Ce n'est qu'après ce sélecteur que la propriété <code>text-align</code> peut être utilisée.</li>
+        <li>Si le tableau utilise bien un attribut <a href="/fr/docs/Web/HTML/Element/td#attr-colspan"><code>colspan</code></a>, l'effet peut être obtenu en combinant des sélecteurs d'attributs CSS adéquats comme <code>[colspan=n]</code>, bien que cela ne soit pas trivial.</li>
+      </ul>
+    </div>
+  </dd>
+  <dt><strong id="attr-bgcolor"><code>bgcolor</code></strong> {{deprecated_inline}}</dt>
+  <dd>
+    <p>La couleur de fond du tableau. Il s'agit d'un <a href="/fr/docs/Web/CSS/color_value#rgb_colors">code RVB hexadécimal à 6 chiffres</a>, préfixé par un «&nbsp;<code>#</code>&nbsp;». L'un des <a href="/fr/docs/Web/CSS/color_value#color_keywords">mots-clés de couleur</a> prédéfinis peut également être utilisé.</p>
+
+    <p>Pour obtenir un effet similaire, utilisez la propriété CSS <a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a>.</p>
+  </dd>
+  <dt><strong id="attr-char"><code>char</code></strong> {{deprecated_inline}}</dt>
+  <dd>Cet attribut spécifie l'alignement du contenu d'un groupe de colonnes sur un caractère. Les valeurs typiques de cet attribut comprennent un point (.) lorsqu'on tente d'aligner des chiffres ou des valeurs monétaires. Si <a href="#attr-align"><code>align</code></a> n'est pas défini sur <code>char</code>, cet attribut est ignoré, bien qu'il sera toujours utilisé comme valeur par défaut pour le <a href="/fr/docs/Web/HTML/Element/col#attr-align"><code>align</code></a> du <a href="/fr/docs/Web/HTML/Element/col"><code>&lt;col&gt;</code></a> qui sont membres de ce groupe de colonnes.</dd>
+  <dt><strong id="attr-charoff"><code>charoff</code></strong> {{deprecated_inline}}</dt>
+  <dd>Cet attribut est utilisé pour indiquer le nombre de caractères pour décaler les données de la colonne par rapport au caractère d'alignement spécifié par l'attribut <code>char</code>.</dd>
+  <dt><strong id="attr-valign"><code>valign</code></strong> {{deprecated_inline}}</dt>
+  <dd>Cet attribut spécifie l'alignement vertical du texte dans chaque cellule de la colonne. Les valeurs possibles de cet attribut sont les suivantes :
+    <ul>
+      <li><code>baseline</code>, mettra le texte aussi près du bas de la cellule que possible, mais l'alignera sur la <a href="https://fr.wikipedia.org/wiki/Ligne_de_base_(typographie)">ligne de base</a> des caractères au lieu du bas de ceux-ci. Si les caractères sont tous de la même taille, cela a le même effet que <code>bottom</code> ;</li>
+      <li><code>bottom</code>, placera le texte aussi près du bas de la cellule que possible ;</li>
+      <li><code>middle</code>, permet de centrer le texte dans la cellule ;</li>
+      <li>and <code>top</code>, placera le texte aussi près du haut de la cellule que possible.</li>
+    </ul>
+
+    <div class="notecard note">
+      <p><b>Note :</b></p>
+      <ul>
+        <li>N'essayez pas de définir la propriété <a href="/fr/docs/Web/CSS/vertical-align"><code>vertical-align</code></a> sur un sélecteur donnant un élément <code>&lt;col&gt;</code>. Comme les éléments <a href="/fr/docs/Web/HTML/Element/td"><code>&lt;td&gt;</code></a> ne sont pas des descendants de l'élément <code>&lt;col&gt;</code>, ils n'en hériteront pas.</li>
+        <li>Si le tableau n'utilise pas d'attribut <a href="/fr/docs/Web/HTML/Element/td#attr-colspan"><code>colspan</code></a>, utilisez le sélecteur CSS <code>td:nth-child(an+b)</code> où a est le nombre total de colonnes du tableau et b la position ordinale de la colonne dans le tableau. Ce n'est qu'après ce sélecteur que la propriété <code>vertical-align</code> peut être utilisée.</li>
+        <li>Si le tableau utilise bien un attribut <a href="/fr/docs/Web/HTML/Element/td#attr-colspan"><code>colspan</code></a>, l'effet peut être obtenu en combinant des sélecteurs d'attributs CSS adéquats comme <code>[colspan=n]</code>, bien que cela ne soit pas trivial.</li>
+      </ul>
+    </div>
+  </dd>
 </dl>
 
-<dl>
- <dt>{{htmlattrdef("width")}} {{obsolete_inline("html5")}}</dt>
- <dd>Cet attribut définit la largeur par défaut pour chaque colonne dans le groupe de colonnes. En plus de la notation standard en pixels et en pourcents, cet attribut peut prendre la valeur spéciale<code> 0*</code>, indiquant ainsi que la largeur de chaque colonne doit être suffisante pour contenir les contenus des cellules. On peut également utiliser cette notation de manière relative (par exemple <code>0.5*</code>).</dd>
-</dl>
+<h2 id="examples">Exemples</h2>
 
-<h2 id="Exemples">Exemples</h2>
+<p>Veuillez consulter la page <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a> pour des exemples sur <code>&lt;colgroup&gt;</code>.</p>
 
-<h3 id="HTML">HTML</h3>
+<h2 id="specifications">Spécifications</h2>
 
-<pre class="brush: html">&lt;table&gt;
- &lt;colgroup&gt;
-  &lt;col class="premiereColonne"&gt;
-  &lt;col class="deuxDernieresColonnes" span="2"&gt;
- &lt;/colgroup&gt;
- &lt;tr&gt;
-  &lt;th&gt;Citron vert&lt;/th&gt;
-  &lt;th&gt;Citron&lt;/th&gt;
-  &lt;th&gt;Orange&lt;/th&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
-  &lt;td&gt;Vert&lt;/td&gt;
-  &lt;td&gt;Jaune&lt;/td&gt;
-  &lt;td&gt;Orange&lt;/td&gt;
- &lt;/tr&gt;
-&lt;/table&gt;</pre>
+<p>{{Specifications}}</p>
 
-<h3 id="Résultat">Résultat</h3>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-<p>{{EmbedLiveSample("Exemples","200","100")}}</p>
+<p>{{Compat}}</p>
 
-<div class="note">
-<p><strong>Note :</strong> On pourra consulter la page {{HTMLElement("table")}} pour d'autres exemples sur les tableaux.</p>
-</div>
-<h2 id="Résumé_technique">Résumé technique</h2>
-
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/fr/docs/Web/HTML/Catégorie_de_contenu">Catégories de contenu</a></th>
-   <td>Aucune.</td>
-  </tr>
-  <tr>
-   <th scope="row">Contenu autorisé</th>
-   <td>Si l'attribut {{htmlattrxref("span", "colgroup")}} est présent : aucun car c'est un élément vide.<br>
-    Si l'attribut n'est pas présent, zéro ou plusieurs éléments {{HTMLElement("col")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Omission de balises</th>
-   <td>La balise de début peut être absente si le premier élément fils {{HTMLElement("col")}} et que celui-ci n'est pas précédé par un élément {{HTMLElement("colgroup")}} dont la balise de fin est absente. La balise de fin peut être absente s'il n'est pas suivi par un blanc ou par un commentaire.</td>
-  </tr>
-  <tr>
-   <th scope="row">Éléments parents autorisés</th>
-   <td>Un élément {{HTMLElement("table")}}. {{HTMLElement("colgroup")}} doit apparaître après tout élément  {{HTMLElement("caption")}} optionnel et avant tout élément {{HTMLElement("thead")}}, {{HTMLElement("th")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}} et {{HTMLElement("tr")}}.</td>
-  </tr>
-  <tr>
-   <th scope="row">Rôles ARIA autorisés</th>
-   <td>Aucun.</td>
-  </tr>
-  <tr>
-   <th scope="row">Interface DOM</th>
-   <td>{{domxref("HTMLTableColElement")}}</td>
-  </tr>
- </tbody>
-</table>
-
-
-<h2 id="Spécifications">Spécifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'tables.html#the-colgroup-element', '&lt;colgroup&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'tabular-data.html#the-colgroup-element', '&lt;colgroup&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'tables.html#edef-COLGROUP', '&lt;colgroup&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une<em>pull request</em>.</div>
-
-<p>{{Compat("html.elements.colgroup")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
+<h2 id="see_also">Voir aussi</h2>
 
 <ul>
- <li>Les autres éléments HTML liés aux tableaux :
-  <ul>
-   <li>{{HTMLElement("caption")}}</li>
-   <li>{{HTMLElement("col")}}</li>
-   <li>{{HTMLElement("table")}}</li>
-   <li>{{HTMLElement("tbody")}}</li>
-   <li>{{HTMLElement("td")}}</li>
-   <li>{{HTMLElement("tfoot")}}</li>
-   <li>{{HTMLElement("th")}}</li>
-   <li>{{HTMLElement("thead")}}</li>
-   <li>{{HTMLElement("tr")}}</li>
-  </ul>
- </li>
- <li>Les propriétés et pseudo-classes CSS qui peuvent s'avérer utiles pour mettre en forme l'élément <code>&lt;col&gt;</code> :
-  <ul>
-   <li>la propriété {{cssxref("width")}} pour contrôler la largeur de la colonne</li>
-   <li>la pseudo-classe {{cssxref(":nth-child")}} pour définir l'alignement des cellules d'une colonne</li>
-   <li>la propriété {{cssxref("text-align")}} pour aligner le contenu de cellules sur le même caractère (par exemple un point « . »).</li>
-  </ul>
- </li>
+  <li>Les propriétés et pseudo-classes CSS notamment utiles pour mettre en forme l'élément <code>&lt;col&gt;</code> :
+   <ul>
+     <li>la propriété <a href="/fr/docs/Web/CSS/width"><code>width</code></a> pour contrôler la largeur de la colonne ;</li>
+     <li>la pseudo-classe <a href="/fr/docs/Web/CSS/:nth-child"><code>:nth-child</code></a> pour définir l'alignement des cellules de la colonne ;</li>
+     <li>la propriété <a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a> pour aligner le contenu de toutes les cellules sur le même caractère, comme « . ».</li>
+   </ul>
+  </li>
 </ul>

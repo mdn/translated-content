@@ -70,7 +70,7 @@
 /ko/docs/CSS/cursor	/ko/docs/Web/CSS/cursor
 /ko/docs/CSS/cursor/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 /ko/docs/CSS/initial_value	/ko/docs/Web/CSS/initial_value
-/ko/docs/CSS/linear-gradient	/ko/docs/Web/CSS/linear-gradient()
+/ko/docs/CSS/linear-gradient	/ko/docs/orphaned/Web/CSS/linear-gradient()
 /ko/docs/CSS/text-shadow	/ko/docs/Web/CSS/text-shadow
 /ko/docs/CSS/transform	/ko/docs/Web/CSS/transform
 /ko/docs/CSS/z-index	/ko/docs/Web/CSS/z-index
@@ -234,7 +234,7 @@
 /ko/docs/DOM/element.lastChild	/ko/docs/Web/API/Node/lastChild
 /ko/docs/DOM/element.length	/ko/docs/Web/API/NodeList/length
 /ko/docs/DOM/element.scrollIntoView	/ko/docs/Web/API/Element/scrollIntoView
-/ko/docs/DOM/element.style	/ko/docs/Web/API/ElementCSSInlineStyle/style
+/ko/docs/DOM/element.style	/ko/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ko/docs/DOM/element.tabIndex	/ko/docs/Web/API/HTMLOrForeignElement/tabIndex
 /ko/docs/DOM/event	/ko/docs/Web/API/Event
 /ko/docs/DOM/event.cancelable	/ko/docs/Web/API/Event/cancelable
@@ -264,7 +264,7 @@
 /ko/docs/DOM:element.firstChild	/ko/docs/Web/API/Node/firstChild
 /ko/docs/DOM:element.lastChild	/ko/docs/Web/API/Node/lastChild
 /ko/docs/DOM:element.length	/ko/docs/Web/API/NodeList/length
-/ko/docs/DOM:element.style	/ko/docs/Web/API/ElementCSSInlineStyle/style
+/ko/docs/DOM:element.style	/ko/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ko/docs/DOM:element.tabIndex	/ko/docs/Web/API/HTMLOrForeignElement/tabIndex
 /ko/docs/DOM:event	/ko/docs/Web/API/Event
 /ko/docs/DOM:form	/ko/docs/Web/API/HTMLFormElement
@@ -328,7 +328,7 @@
 /ko/docs/HTML:Element:a	/ko/docs/Web/HTML/Element/a
 /ko/docs/HTML:Inline_elements	/ko/docs/Web/HTML/Inline_elements
 /ko/docs/IndexedDB	/ko/docs/Web/API/IndexedDB_API
-/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ko/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ko/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ko/docs/IndexedDB/Using_IndexedDB	/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /ko/docs/Introduction_to_using_XPath_in_JavaScript	/ko/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /ko/docs/JSAPI_Reference/Alphabetical_List	/ko/docs/JSAPI_Reference
@@ -615,16 +615,18 @@
 /ko/docs/Web/API/Element/childNodes	/ko/docs/Web/API/Node/childNodes
 /ko/docs/Web/API/Element/currentStyle	/ko/docs/orphaned/Web/API/Element/currentStyle
 /ko/docs/Web/API/Element/firstChild	/ko/docs/Web/API/Node/firstChild
+/ko/docs/Web/API/ElementCSSInlineStyle/style	/ko/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ko/docs/Web/API/Event/createEvent	/ko/docs/Web/API/Document/createEvent
 /ko/docs/Web/API/Fetch_API/Fetch의_사용법	/ko/docs/Web/API/Fetch_API/Using_Fetch
 /ko/docs/Web/API/FileReader.result	/ko/docs/Web/API/FileReader/result
 /ko/docs/Web/API/HTMLElement/dataset	/ko/docs/Web/API/HTMLOrForeignElement/dataset
-/ko/docs/Web/API/HTMLElement/style	/ko/docs/Web/API/ElementCSSInlineStyle/style
+/ko/docs/Web/API/HTMLElement/style	/ko/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ko/docs/Web/API/HTMLElement/tabIndex	/ko/docs/Web/API/HTMLOrForeignElement/tabIndex
 /ko/docs/Web/API/HTMLHyperlinkElementUtils	/ko/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API/Drag_operations	/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
+/ko/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ko/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ko/docs/Web/API/Navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/Navigator.battery/window.navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/Navigator.connection/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
@@ -640,6 +642,7 @@
 /ko/docs/Web/API/ParentNode/children	/ko/docs/orphaned/Web/API/ParentNode/children
 /ko/docs/Web/API/ParentNode/prepend	/ko/docs/orphaned/Web/API/ParentNode/prepend
 /ko/docs/Web/API/Position	/ko/docs/Web/API/GeolocationPosition
+/ko/docs/Web/API/RTCPeerConnection/onidentityresult	/ko/docs/orphaned/Web/API/RTCPeerConnection/onidentityresult
 /ko/docs/Web/API/RandomSource	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/RandomSource/getRandomValues	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/Screen.lockOrientation	/ko/docs/Web/API/Screen/lockOrientation
@@ -734,7 +737,8 @@
 /ko/docs/Web/CSS/filter-function/blur	/ko/docs/Web/CSS/filter-function/blur()
 /ko/docs/Web/CSS/filter-function/brightness	/ko/docs/Web/CSS/filter-function/brightness()
 /ko/docs/Web/CSS/filter-function/contrast	/ko/docs/Web/CSS/filter-function/contrast()
-/ko/docs/Web/CSS/linear-gradient	/ko/docs/Web/CSS/linear-gradient()
+/ko/docs/Web/CSS/linear-gradient	/ko/docs/orphaned/Web/CSS/linear-gradient()
+/ko/docs/Web/CSS/linear-gradient()	/ko/docs/orphaned/Web/CSS/linear-gradient()
 /ko/docs/Web/CSS/transform-function/matrix	/ko/docs/Web/CSS/transform-function/matrix()
 /ko/docs/Web/CSS/transform-function/scaleX	/ko/docs/Web/CSS/transform-function/scaleX()
 /ko/docs/Web/CSS/url	/ko/docs/Web/CSS/url()
@@ -785,6 +789,7 @@
 /ko/docs/Web/Guide/HTML/Content_Editable	/ko/docs/Web/Guide/HTML/Editable_content
 /ko/docs/Web/Guide/HTML/HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5
 /ko/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/ko/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ko/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ko/docs/Web/Guide/HTML/컨텐트_카테고리	/ko/docs/Web/Guide/HTML/Content_categories
 /ko/docs/Web/Guide/HTML/폼	/ko/docs/Learn/Forms
 /ko/docs/Web/Guide/HTML/폼/HTML_폼_구성_방법	/ko/docs/Learn/Forms/How_to_structure_a_web_form
@@ -824,7 +829,7 @@
 /ko/docs/Web/HTML/HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5
 /ko/docs/Web/HTML/HTML5/HTML5_element_list	/ko/docs/Web/HTML/Element
 /ko/docs/Web/HTML/HTML5/Introduction_to_HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
-/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽	/ko/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽	/ko/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn/Forms
 /ko/docs/Web/HTML/Introduction	/ko/docs/Learn/HTML/Introduction_to_HTML
 /ko/docs/Web/HTML/Preloading_content	/ko/docs/orphaned/Web/HTML/Preloading_content
@@ -942,6 +947,8 @@
 /ko/docs/Web/Performance/브라우저는_어떻게_동작하는가	/ko/docs/Web/Performance/How_browsers_work
 /ko/docs/Web/Performance/중요_렌더링_경로	/ko/docs/Web/Performance/Critical_rendering_path
 /ko/docs/Web/Progressive_web_apps/소개	/ko/docs/Web/Progressive_web_apps/Introduction
+/ko/docs/Web/Reference	/ko/docs/orphaned/Web/Reference
+/ko/docs/Web/Reference/API	/ko/docs/orphaned/Web/Reference/API
 /ko/docs/Web/Reference/Events	/ko/docs/Web/Events
 /ko/docs/Web/Reference/Events/DOMContentLoaded	/ko/docs/Web/API/Window/DOMContentLoaded_event
 /ko/docs/Web/Reference/Events/DOMSubtreeModified	/ko/docs/Web/Events/DOMSubtreeModified
@@ -1015,8 +1022,8 @@
 /ko/docs/Web/XSLT/variable	/ko/docs/Web/XSLT/Element/variable
 /ko/docs/Web/XSLT/when	/ko/docs/Web/XSLT/Element/when
 /ko/docs/Web/XSLT/with-param	/ko/docs/Web/XSLT/Element/with-param
-/ko/docs/Web/참조	/ko/docs/Web/Reference
-/ko/docs/Web/참조/API	/ko/docs/Web/Reference/API
+/ko/docs/Web/참조	/ko/docs/orphaned/Web/Reference
+/ko/docs/Web/참조/API	/ko/docs/orphaned/Web/Reference/API
 /ko/docs/WebAPI	/ko/docs/conflicting/Web/API
 /ko/docs/WebAPI/Battery_Status	/ko/docs/Web/API/Battery_Status_API
 /ko/docs/WebAPI/Detecting_device_orientation	/ko/docs/orphaned/Web/API/Detecting_device_orientation

@@ -13039,16 +13039,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2020-10-15T21:30:08.559Z",
-    "contributors": [
-      "zhuangyin",
-      "xgqfrms-GitHub",
-      "distums",
-      "teoli",
-      "AlexChao"
-    ]
-  },
   "Web/API/ErrorEvent": {
     "modified": "2020-10-15T21:38:19.894Z",
     "contributors": [
@@ -16590,28 +16580,6 @@
       "princetoad@gmail.com"
     ]
   },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2019-09-29T21:07:32.199Z",
-    "contributors": [
-      "Nonym",
-      "Zaynex",
-      "nztraveler",
-      "hooozen",
-      "SphinxKnight",
-      "gaoryrt",
-      "WenWu92",
-      "Yongest",
-      "RyanBeauclerc",
-      "em2046",
-      "ywwzwb",
-      "ziyunfei",
-      "mountainmoon",
-      "Fify",
-      "teoli",
-      "goldWind",
-      "karsa.si"
-    ]
-  },
   "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
     "modified": "2019-06-14T00:02:23.198Z",
     "contributors": [
@@ -19834,12 +19802,6 @@
     "modified": "2020-10-15T22:20:36.379Z",
     "contributors": [
       "sixpencecl"
-    ]
-  },
-  "Web/API/Request/context": {
-    "modified": "2020-10-15T22:30:43.048Z",
-    "contributors": [
-      "Aliom252181"
     ]
   },
   "Web/API/Request/credentials": {
@@ -29872,37 +29834,6 @@
       "NicoleBear"
     ]
   },
-  "Web/CSS/linear-gradient()": {
-    "modified": "2020-11-16T08:58:15.083Z",
-    "contributors": [
-      "chrisdavidmills",
-      "PaddyWang",
-      "dxc111",
-      "KadirTopal",
-      "Dandelion-drq",
-      "forever_youyou",
-      "getatny",
-      "victorsonger",
-      "xianshenglu",
-      "offcos",
-      "ScaredKitty",
-      "kmokidd",
-      "DaiZhiTao",
-      "xgqfrms-GitHub",
-      "zhengxinxin",
-      "dongsuo",
-      "Sebastianz",
-      "hkfn123",
-      "jiahui",
-      "huangcheng",
-      "prayash",
-      "JohnnyYang",
-      "concefly",
-      "XiaoYi",
-      "kuangfan",
-      "wileam"
-    ]
-  },
   "Web/CSS/list-style": {
     "modified": "2019-03-18T20:46:34.398Z",
     "contributors": [
@@ -30516,23 +30447,6 @@
       "silkwromzf"
     ]
   },
-  "Web/CSS/radial-gradient()": {
-    "modified": "2020-12-13T08:05:13.362Z",
-    "contributors": [
-      "BuluGuy",
-      "KaiserZh",
-      "chrisdavidmills",
-      "Ende93",
-      "HeyRaingirl",
-      "xgqfrms-GitHub",
-      "zhengxinxin",
-      "Sebastianz",
-      "mrstork",
-      "concefly",
-      "lyxuncle",
-      "jiereal"
-    ]
-  },
   "Web/CSS/ratio": {
     "modified": "2020-10-15T22:08:11.112Z",
     "contributors": [
@@ -30548,26 +30462,6 @@
       "chrisdavidmills",
       "JC-Ge",
       "xgqfrms"
-    ]
-  },
-  "Web/CSS/repeating-linear-gradient()": {
-    "modified": "2020-11-18T14:46:37.002Z",
-    "contributors": [
-      "chrisdavidmills",
-      "royIdoodle",
-      "zway",
-      "zhuangyin",
-      "Sebastianz",
-      "prayash",
-      "littleXiaosi"
-    ]
-  },
-  "Web/CSS/repeating-radial-gradient()": {
-    "modified": "2020-11-18T14:47:47.109Z",
-    "contributors": [
-      "chrisdavidmills",
-      "royIdoodle",
-      "zway"
     ]
   },
   "Web/CSS/resize": {
@@ -31657,18 +31551,6 @@
       "zezhou",
       "Cbgrape",
       "Teago"
-    ]
-  },
-  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2019-03-21T10:38:08.111Z",
-    "contributors": [
-      "RainSlide",
-      "jimmy-sum",
-      "VdoG",
-      "StarXY",
-      "kevinfszu",
-      "mengzyou",
-      "xuexiaocai"
     ]
   },
   "Web/Guide/Introduction_to_Web_development": {
@@ -37480,12 +37362,6 @@
     "modified": "2020-03-12T19:43:57.558Z",
     "contributors": [
       "Jack-Q"
-    ]
-  },
-  "Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
-    "modified": "2020-03-12T19:46:27.376Z",
-    "contributors": [
-      "WayneCui"
     ]
   },
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
@@ -45551,38 +45427,6 @@
       "DingGuangbo"
     ]
   },
-  "Web/Reference": {
-    "modified": "2019-03-18T21:10:51.690Z",
-    "contributors": [
-      "SphinxKnight",
-      "acuptea",
-      "rguanghui",
-      "huasheng",
-      "yangchengjian",
-      "liuwentianwtu",
-      "jack7758",
-      "ValkyrieLawliet",
-      "ZhangKaiqiang",
-      "colin-zhou",
-      "ziyunfei",
-      "Sheppy"
-    ]
-  },
-  "Web/Reference/API": {
-    "modified": "2020-02-06T00:29:14.463Z",
-    "contributors": [
-      "RainSlide",
-      "yongxiaodu",
-      "micblo",
-      "kevinfszu",
-      "yfdyh000",
-      "zmh_w",
-      "tangxiaobaobao",
-      "ziyunfei",
-      "noscripter",
-      "hutuxu"
-    ]
-  },
   "Web/SVG": {
     "modified": "2020-05-25T07:08:22.112Z",
     "contributors": [
@@ -50227,6 +50071,16 @@
       "jiangyuzhen"
     ]
   },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2020-10-15T21:30:08.559Z",
+    "contributors": [
+      "zhuangyin",
+      "xgqfrms-GitHub",
+      "distums",
+      "teoli",
+      "AlexChao"
+    ]
+  },
   "orphaned/Web/API/Entity": {
     "modified": "2020-06-03T01:07:43.853Z",
     "contributors": [
@@ -50252,6 +50106,28 @@
       "RainSlide",
       "AyAmeng",
       "teoli"
+    ]
+  },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2019-09-29T21:07:32.199Z",
+    "contributors": [
+      "Nonym",
+      "Zaynex",
+      "nztraveler",
+      "hooozen",
+      "SphinxKnight",
+      "gaoryrt",
+      "WenWu92",
+      "Yongest",
+      "RyanBeauclerc",
+      "em2046",
+      "ywwzwb",
+      "ziyunfei",
+      "mountainmoon",
+      "Fify",
+      "teoli",
+      "goldWind",
+      "karsa.si"
     ]
   },
   "orphaned/Web/API/MSSelection": {
@@ -50370,6 +50246,12 @@
       "lauhua"
     ]
   },
+  "orphaned/Web/API/Request/context": {
+    "modified": "2020-10-15T22:30:43.048Z",
+    "contributors": [
+      "Aliom252181"
+    ]
+  },
   "orphaned/Web/API/TextRange/text": {
     "modified": "2020-02-26T01:25:35.461Z",
     "contributors": [
@@ -50431,6 +50313,74 @@
     "modified": "2019-03-18T21:17:44.470Z",
     "contributors": [
       "ZZES_REN"
+    ]
+  },
+  "orphaned/Web/CSS/linear-gradient()": {
+    "modified": "2020-11-16T08:58:15.083Z",
+    "contributors": [
+      "chrisdavidmills",
+      "PaddyWang",
+      "dxc111",
+      "KadirTopal",
+      "Dandelion-drq",
+      "forever_youyou",
+      "getatny",
+      "victorsonger",
+      "xianshenglu",
+      "offcos",
+      "ScaredKitty",
+      "kmokidd",
+      "DaiZhiTao",
+      "xgqfrms-GitHub",
+      "zhengxinxin",
+      "dongsuo",
+      "Sebastianz",
+      "hkfn123",
+      "jiahui",
+      "huangcheng",
+      "prayash",
+      "JohnnyYang",
+      "concefly",
+      "XiaoYi",
+      "kuangfan",
+      "wileam"
+    ]
+  },
+  "orphaned/Web/CSS/radial-gradient()": {
+    "modified": "2020-12-13T08:05:13.362Z",
+    "contributors": [
+      "BuluGuy",
+      "KaiserZh",
+      "chrisdavidmills",
+      "Ende93",
+      "HeyRaingirl",
+      "xgqfrms-GitHub",
+      "zhengxinxin",
+      "Sebastianz",
+      "mrstork",
+      "concefly",
+      "lyxuncle",
+      "jiereal"
+    ]
+  },
+  "orphaned/Web/CSS/repeating-linear-gradient()": {
+    "modified": "2020-11-18T14:46:37.002Z",
+    "contributors": [
+      "chrisdavidmills",
+      "royIdoodle",
+      "zway",
+      "zhuangyin",
+      "Sebastianz",
+      "prayash",
+      "littleXiaosi"
+    ]
+  },
+  "orphaned/Web/CSS/repeating-radial-gradient()": {
+    "modified": "2020-11-18T14:47:47.109Z",
+    "contributors": [
+      "chrisdavidmills",
+      "royIdoodle",
+      "zway"
     ]
   },
   "orphaned/Web/Guide/CSS/CSS基础": {
@@ -50574,6 +50524,18 @@
       "leegorous"
     ]
   },
+  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2019-03-21T10:38:08.111Z",
+    "contributors": [
+      "RainSlide",
+      "jimmy-sum",
+      "VdoG",
+      "StarXY",
+      "kevinfszu",
+      "mengzyou",
+      "xuexiaocai"
+    ]
+  },
   "orphaned/Web/Guide/Localizations_and_character_encodings": {
     "modified": "2020-05-07T10:52:56.537Z",
     "contributors": [
@@ -50644,6 +50606,12 @@
       "huangjihua"
     ]
   },
+  "orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
+    "modified": "2020-03-12T19:46:27.376Z",
+    "contributors": [
+      "WayneCui"
+    ]
+  },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {
     "modified": "2020-10-15T21:25:06.780Z",
     "contributors": [
@@ -50705,6 +50673,38 @@
     "contributors": [
       "RoyZ",
       "faliye"
+    ]
+  },
+  "orphaned/Web/Reference": {
+    "modified": "2019-03-18T21:10:51.690Z",
+    "contributors": [
+      "SphinxKnight",
+      "acuptea",
+      "rguanghui",
+      "huasheng",
+      "yangchengjian",
+      "liuwentianwtu",
+      "jack7758",
+      "ValkyrieLawliet",
+      "ZhangKaiqiang",
+      "colin-zhou",
+      "ziyunfei",
+      "Sheppy"
+    ]
+  },
+  "orphaned/Web/Reference/API": {
+    "modified": "2020-02-06T00:29:14.463Z",
+    "contributors": [
+      "RainSlide",
+      "yongxiaodu",
+      "micblo",
+      "kevinfszu",
+      "yfdyh000",
+      "zmh_w",
+      "tangxiaobaobao",
+      "ziyunfei",
+      "noscripter",
+      "hutuxu"
     ]
   },
   "orphaned/Web/SVG/Element/color-profile": {

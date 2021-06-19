@@ -184,7 +184,7 @@
 /zh-TW/docs/HTTP/X-Frame-Options	/zh-TW/docs/Web/HTTP/Headers/X-Frame-Options
 /zh-TW/docs/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 /zh-TW/docs/IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API
-/zh-TW/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/zh-TW/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/zh-TW/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /zh-TW/docs/IndexedDB/Using_IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /zh-TW/docs/JavaScript	/zh-TW/docs/Web/JavaScript
 /zh-TW/docs/JavaScript/About_JavaScript	/zh-TW/docs/Web/JavaScript/About_JavaScript
@@ -568,10 +568,12 @@
 /zh-TW/docs/Web/API/Document_Object_Model/Events	/zh-TW/docs/orphaned/Web/API/Document_Object_Model/Events
 /zh-TW/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/zh-TW/docs/Web/API/Document_Object_Model/Whitespace
 /zh-TW/docs/Web/API/Document_Object_Model/事件	/zh-TW/docs/orphaned/Web/API/Document_Object_Model/Events
+/zh-TW/docs/Web/API/ElementCSSInlineStyle/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-TW/docs/Web/API/Event/createEvent	/zh-TW/docs/Web/API/Document/createEvent
 /zh-TW/docs/Web/API/Geolocation/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
 /zh-TW/docs/Web/API/HTMLElement/dataset	/zh-TW/docs/Web/API/HTMLOrForeignElement/dataset
-/zh-TW/docs/Web/API/HTMLElement/style	/zh-TW/docs/Web/API/ElementCSSInlineStyle/style
+/zh-TW/docs/Web/API/HTMLElement/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
+/zh-TW/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/zh-TW/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /zh-TW/docs/Web/API/Node/innerText	/zh-TW/docs/Web/API/HTMLElement/innerText
 /zh-TW/docs/Web/API/NonDocumentTypeChildNode	/zh-TW/docs/conflicting/Web/API/Element
 /zh-TW/docs/Web/API/ParentNode	/zh-TW/docs/orphaned/Web/API/ParentNode
@@ -609,7 +611,8 @@
 /zh-TW/docs/Web/CSS/Descendant_selectors	/zh-TW/docs/Web/CSS/Descendant_combinator
 /zh-TW/docs/Web/CSS/attr	/zh-TW/docs/Web/CSS/attr()
 /zh-TW/docs/Web/CSS/border-image/border-image	/zh-TW/docs/orphaned/Web/CSS/border-image/border-image
-/zh-TW/docs/Web/CSS/radial-gradient	/zh-TW/docs/Web/CSS/radial-gradient()
+/zh-TW/docs/Web/CSS/radial-gradient	/zh-TW/docs/orphaned/Web/CSS/radial-gradient()
+/zh-TW/docs/Web/CSS/radial-gradient()	/zh-TW/docs/orphaned/Web/CSS/radial-gradient()
 /zh-TW/docs/Web/CSS/transform-function/translate3d	/zh-TW/docs/Web/CSS/transform-function/translate3d()
 /zh-TW/docs/Web/CSS/參考	/zh-TW/docs/Web/CSS/Reference
 /zh-TW/docs/Web/CSS/彈頭	/zh-TW/docs/Web/CSS/box-sizing
@@ -818,6 +821,8 @@
 /zh-TW/docs/Web/JavaScript/Typed_arrays/ArrayBuffer/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/資料結構	/zh-TW/docs/Web/JavaScript/Data_structures
 /zh-TW/docs/Web/JavaScript/重新介紹_JavaScript	/zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+/zh-TW/docs/Web/Reference	/zh-TW/docs/orphaned/Web/Reference
+/zh-TW/docs/Web/Reference/API	/zh-TW/docs/orphaned/Web/Reference/API
 /zh-TW/docs/Web/Reference/Events	/zh-TW/docs/Web/Events
 /zh-TW/docs/Web/Reference/Events/DOMContentLoaded	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
 /zh-TW/docs/Web/Reference/Events/DOMContentLoaded_(event)	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event

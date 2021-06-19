@@ -7,12 +7,10 @@ tags:
   - Accessibility
 translation_of: Web/Accessibility/ARIA/Roles/Grid_Role
 ---
-<p>\{{ariaref}}</p>
+<p><span class="seoSummary">グリッド (<code>grid</code>) ロールは、1つ以上のセルの行を含むウィジェット用です。 各セルの位置は重要であり、キーボード入力を使用してフォーカスすることができます。</span></p>
 
-<p><span class="seoSummary"><code>grid</code> ロールは、1つ以上のセルの行を含むウィジェット用です。 各セルの位置は重要であり、キーボード入力を使用してフォーカスすることができます。</span></p>
-
-<pre class="brush: html">&lt;table role="grid" aria-labelledby="select-your-seat"&gt;
-  &lt;caption&gt;座席を選んでください&lt;/caption&gt;
+<pre class="brush: html">&lt;table role="grid" aria-labelledby="id-select-your-seat"&gt;
+  &lt;caption id="id-select-your-seat"&gt;座席を選んでください&lt;/caption&gt;
   &lt;tbody role="presentation"&gt;
     &lt;tr role="presentation"&gt;
       &lt;td&gt;&lt;/td&gt;
@@ -20,36 +18,34 @@ translation_of: Web/Accessibility/ARIA/Roles/Grid_Role
       &lt;th&gt;列 B&lt;/th&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;th scope="row"&gt;島 1&lt;/th&gt;
+      &lt;th scope="row"&gt;通路 1&lt;/th&gt;
       &lt;td tabindex="0"&gt;
         &lt;button id="1a" tabindex="-1"&gt;1A&lt;/button&gt;
       &lt;/td&gt;
       &lt;td tabindex="-1"&gt;
         &lt;button id="1b" tabindex="-1"&gt;1B&lt;/button&gt;
       &lt;/td&gt;
-      &lt;!-- More Columns --&gt;
+      &lt;!-- その他の列 --&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;th scope="row"&gt;島 2&lt;/th&gt;
+      &lt;th scope="row"&gt;通路 2&lt;/th&gt;
       &lt;td tabindex="-1"&gt;
         &lt;button id="2a" tabindex="-1"&gt;2A&lt;/button&gt;
       &lt;/td&gt;
       &lt;td tabindex="-1"&gt;
         &lt;button id="2b" tabindex="-1"&gt;2B&lt;/button&gt;
       &lt;/td&gt;
-      &lt;!-- More Columns --&gt;
+      &lt;!-- その他の列 --&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
 
-<p>（オプション）上記の例の簡単な説明を含めます。</p>
-
 <h2 id="Description" name="Description">説明</h2>
 
-<p>グリッドウィジェットには、テーマに関連するインタラクティブなコンテンツの1つ以上のセルを持つ1つ以上の行が含まれています。 それは特定の視覚的プレゼンテーションを意味するわけではありませんが、要素間の関係を意味します。 これは、チェックボックスやナビゲーションリンクなどのような単純なグループ化に使用します。 複雑なスプレッドシートアプリケーションにも使用できます。</p>
+<p>グリッドウィジェットは、テーマに沿ったインタラクティブなコンテンツの1つ以上のセルを持つ1つ以上の行を含みます。 それは特定の視覚的表現を暗示するものではありませんが、要素間の関連性を暗示します。 用途は、表形式の情報の表示 (データグリッド) と他のウィジェットのグループ化 (レイアウトグリッド) の2つのカテゴリーに分類されます。 データグリッドとレイアウトグリッドの両方が同じ ARIA のロール、ステート、およびプロパティを採用している場合でも、そのコンテンツと目的の違いは、キーボードインタラクションのデザインにおいて考慮すべき重要な要因を表面化させます。 詳細については、<a href="https://www.w3.org/TR/wai-aria-practices-1.2/#grid">WAI-ARIA Authoring Practices</a> を参照してください。</p>
 
-<p>セル要素には、行ヘッダーや列ヘッダーでない限り、<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">gridcell</a></code> ロールがあります。 ヘッダー要素ではそれぞれ <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role">rowheader</a></code> ロールと <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a></code> ロールです。 セル要素は、<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></code> ロールを持つ要素によって所有される必要があります。 行は <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code> を使用してグループ化できます。</p>
+<p>セル要素には、行ヘッダーや列ヘッダーでない限り、グリッドセル (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role">gridcell</a></code>) ロールがあります。 ヘッダー要素には、それぞれ行ヘッダー (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role">rowheader</a></code>) ロールと列ヘッダー (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">columnheader</a></code>) ロールがあります。 セル要素は、行 (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></code>) ロールを持つ要素によって所有される必要があります。 行は行グループ (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></code>) を使用してグループ化できます。</p>
 
 <p>グリッドをインタラクティブなウィジェットとして使用する場合は、{{anch("Keyboard interactions","キーボードインタラクション")}}を実装する必要があります。</p>
 
@@ -57,42 +53,41 @@ translation_of: Web/Accessibility/ARIA/Roles/Grid_Role
 
 <h3 id="Associated_ARIA_roles_states_and_properties" name="Associated_ARIA_roles_states_and_properties">関連する ARIA のロール、ステート、プロパティ</h3>
 
+<h4 id="Roles" name="Roles">ロール</h4>
+
 <dl>
- <dt>
- <h4 id="Roles" name="Roles">ロール</h4>
- </dt>
- <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a>（サブクラス）</dt>
- <dd>展開や折りたたみができる列を持つグリッドには、ツリーグリッドを使用できます。</dd>
+ <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role">treegrid</a> (サブクラス)</dt>
+ <dd>グリッドに展開や折りたたみができる列がある場合は、ツリーグリッドを使用できます。</dd>
  <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></dt>
  <dd>グリッド内の行。</dd>
  <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">rowgroup</a></dt>
- <dd>1つ以上の <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a></code> を含むグループ。</dd>
+ <dd>1つ以上の行 (<a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">row</a>) を含むグループ。</dd>
 </dl>
 
 <h4 id="States_and_Properties" name="States_and_Properties">ステートとプロパティ</h4>
 
 <dl>
- <dt>aria-level</dt>
- <dd>他の構造内のグリッドの階層レベルを示します。</dd>
- <dt>aria-multiselectable</dt>
+ <dt><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-level_attribute">aria-level</a></dt>
+ <dd>他の構造内でのグリッドの階層レベルを示します。 (訳注: この属性は、グリッドロールでは、ARIA 1.2 で、サポートされなくなる予定です。 行ロールでは、引き続きサポートされています。)</dd>
+ <dt><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-multiselectable_attribute">aria-multiselectable</a></dt>
  <dd><code>aria-multiselectable</code> が <code>true</code> に設定されている場合、グリッド内の複数の項目を選択できます。 デフォルト値は <code>false</code> です。</dd>
- <dt>aria-readonly</dt>
+ <dt><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-readonly_attribute">aria-readonly</a></dt>
  <dd>ユーザーがグリッドをナビゲートできるが、グリッドの値を変更できない場合は、<code>aria-readonly</code> を <code>true</code> に設定するべきです。 デフォルト値は <code>false</code> です。</dd>
 </dl>
 
 <div class="note">
-<p>多くのユースケースでは、HTML の <code><a href="/ja/docs/Web/HTML/Element/table">table</a></code> 要素で十分であり、その要素にはすでに多くの ARIA ロールが含まれています。</p>
+<p>多くのユースケースでは、HTML の表 (<code><a href="/ja/docs/Web/HTML/Element/table">table</a></code>) 要素で十分であり、その要素にはすでに多くの ARIA ロールが含まれています。</p>
 </div>
 
 <h3 id="Keyboard_interactions" name="Keyboard_interactions">キーボードインタラクション</h3>
 
-<p>キーボードユーザーはグリッドに出会うと、<kbd>左</kbd>、<kbd>右</kbd>、<kbd>上</kbd>、<kbd>下</kbd>のキーを使用して行と列をナビゲートします。 インタラクティブなコンポーネントをアクティブにするには、<kbd>リターン</kbd>キーと<kbd>スペース</kbd>キーを使用します。</p>
+<p>キーボードユーザーはグリッドに出会うと、<kbd>左</kbd>、<kbd>右</kbd>、<kbd>上</kbd>、<kbd>下</kbd>のキーを使用して行と列をナビゲートします。 インタラクティブなコンポーネントをアクティブ化するには、<kbd>リターン</kbd>キーと<kbd>スペース</kbd>キーを使用します。</p>
 
 <table class="standard-table">
  <thead>
   <tr>
    <th scope="col">キー</th>
-   <th scope="col">動作</th>
+   <th scope="col">アクション</th>
   </tr>
  </thead>
  <tbody>
@@ -145,7 +140,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Grid_Role
  <thead>
   <tr>
    <th scope="col">キーの組み合わせ</th>
-   <th scope="col">動作</th>
+   <th scope="col">アクション</th>
   </tr>
  </thead>
  <tbody>
@@ -198,7 +193,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Grid_Role
       &lt;th role="columnheader" aria-label="Wednesday"&gt;W&lt;/th&gt;
       &lt;th role="columnheader" aria-label="Thursday"&gt;T&lt;/th&gt;
       &lt;th role="columnheader" aria-label="Friday"&gt;F&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Saturday"&gt;T&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Saturday"&gt;S&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody role="rowgroup"&gt;
@@ -467,11 +462,9 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 
 <p>{{EmbedLiveSample("Calendar_example", "100%", "300")}}</p>
 
-<p> </p>
-
 <h4 id="HTML_2" name="HTML_2">HTML</h4>
 
-<pre>&lt;table role="grid" aria-labelledby="calendarheader"&gt;
+<pre class="brush: html">&lt;table role="grid" aria-labelledby="calendarheader"&gt;
   &lt;caption id="calendarheader"&gt;September 2018&lt;/caption&gt;
   &lt;thead role="rowgroup"&gt;
     &lt;tr role="row"&gt;
@@ -482,7 +475,7 @@ document.querySelector('table').addEventListener("keydown", function(event) {
       &lt;th role="columnheader" aria-label="Wednesday"&gt;W&lt;/th&gt;
       &lt;th role="columnheader" aria-label="Thursday"&gt;T&lt;/th&gt;
       &lt;th role="columnheader" aria-label="Friday"&gt;F&lt;/th&gt;
-      &lt;th role="columnheader" aria-label="Saturday"&gt;T&lt;/th&gt;
+      &lt;th role="columnheader" aria-label="Saturday"&gt;S&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody role="rowgroup"&gt;
@@ -553,7 +546,7 @@ tbody td[role="gridcell"]:hover, tbody td[role="gridcell"]:focus {
 
 <h4 id="JavaScript_2" name="JavaScript_2">JavaScript</h4>
 
-<pre>var selectables = document.querySelectorAll('table td[role="gridcell"]');
+<pre class="brush: js">var selectables = document.querySelectorAll('table td[role="gridcell"]');
 
 selectables[0].setAttribute('tabindex', 0);
 
@@ -658,21 +651,17 @@ document.querySelector('table').addEventListener("keydown", function(event) {
   event.preventDefault();
 });</pre>
 
-<p> </p>
-
 <h3 id="More_examples" name="More_examples">より多くの例</h3>
 
-<p>他の例を以下で見つけることができます。</p>
-
 <ul>
- <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/dataGrids.html">データグリッドの例</a>（英語）</li>
- <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/grid/LayoutGrids.html">レイアウトグリッドの例</a>（英語）</li>
- <li><a href="https://www.w3.org/WAI/tutorials/tables/">W3C/WAI チュートリアル: テーブル</a>（英語）</li>
+ <li><a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/grid/dataGrids.html">データグリッドの例</a> (英語)</li>
+ <li><a href="https://www.w3.org/TR/wai-aria-practices/examples/grid/LayoutGrids.html">レイアウトグリッドの例</a> (英語)</li>
+ <li><a href="https://www.w3.org/WAI/tutorials/tables/">W3C/WAI チュートリアル: 表</a> (英語)</li>
 </ul>
 
 <h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティに関する懸念</h2>
 
-<p>{{anch("Keyboard interactions","キーボードインタラクション")}}が適切に実装されていても、矢印キーを使用する必要があることに気づかないユーザーもいます。 <code>grid</code> ロールを使用して、必要な機能とインタラクションが最善にアーカイブできることを確認してください。</p>
+<p>{{anch("Keyboard interactions","キーボードインタラクション")}}が適切に実装されていても、矢印キーを使用しなければならないことに気づかないユーザーもいます。 グリッド (<code>grid</code>) ロールを使用して、必要な機能性とインタラクションが最もよく達成できることを確認してください。</p>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
 
@@ -701,15 +690,21 @@ document.querySelector('table').addEventListener("keydown", function(event) {
 
 <ul>
  <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/composite_Role">ARIA composite ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/table_Role">ARIA table ロール</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Table_Role">ARIA table ロール</a></li>
  <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_Role">ARIA treegrid ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/row_Role">ARIA row ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/rowgroup_Role">ARIA rowgroup ロール</a></li>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_Role">ARIA: gridcell ロール</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role">ARIA row ロール</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role">ARIA rowgroup ロール</a></li>
+ <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Gridcell_role">ARIA: gridcell ロール</a></li>
  <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role">ARIA: rowheader ロール</a></li>
  <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role">ARIA: columnheader ロール</a></li>
- <li><a href="/ja/docs/Web/HTML/Element/table">HTML table 要素</a></li>
+ <li><a href="/ja/docs/Web/HTML/Element/table">HTML の表要素</a></li>
  <li>aria-level</li>
  <li>aria-multiselectable</li>
  <li>aria-readonly</li>
 </ul>
+
+<section id="Quick_links">
+    <ol>
+        <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA ロール</strong></a>{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}</li>
+    </ol>
+</section>
