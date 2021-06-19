@@ -20,7 +20,7 @@ translation_of: Web/CSS/transform-function/scale()
 
 <p>Lorsque les coordonnées du vecteur sont en dehors de l'intervalle [<code>-1, 1]</code>, la transformation agrandit la taille de l'élément. Dans cet intervalle, l'élément est réduit.</p>
 
-<div class="note">La fonction <code>scale</code><code>()</code> applique une transformation dans le plan (2D). S'il faut que la transformation soit appliquée dans l'espace (3D), on pourra utiliser la fonction <code>scale3D()</code> .</div>
+<div class="notecard note">La fonction <code>scale()</code> applique une transformation dans le plan (2D). S'il faut que la transformation soit appliquée dans l'espace (3D), on pourra utiliser la fonction <code>scale3D()</code>.</div>
 
 <h2 id="syntax">Syntaxe</h2>
 
@@ -31,190 +31,190 @@ scale(<var>sx</var>, <var>sy</var>)
 <h3 id="values">Valeurs</h3>
 
 <dl>
- <dt><code>sx</code></dt>
- <dd>Une valeur de type <a href="/fr/docs/Web/CSS/number"><code>&lt;number&gt;</code></a> qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe horizontal).</dd>
- <dt><code>sy</code></dt>
- <dd>Une valeur de type <a href="/fr/docs/Web/CSS/number"><code>&lt;number&gt;</code></a> qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe vertical). Si ce paramètre est absent, la valeur par défaut qui sera prise sera <em><strong>sx</strong></em> (on aura ainsi une transformation homogène).</dd>
+  <dt><code>sx</code></dt>
+  <dd>Une valeur de type <a href="/fr/docs/Web/CSS/number"><code>&lt;number&gt;</code></a> qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe horizontal).</dd>
+  <dt><code>sy</code></dt>
+  <dd>Une valeur de type <a href="/fr/docs/Web/CSS/number"><code>&lt;number&gt;</code></a> qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe vertical). Si ce paramètre est absent, la valeur par défaut qui sera prise sera <em><strong>sx</strong></em> (on aura ainsi une transformation homogène).</dd>
 </dl>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-    <td rowspan="2"><math>
-        <mfenced>
-          <mtable>
-            <mtr>
-              <mtd>
-                <mi>sx</mi>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-            </mtr>
-            <mtr>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mi>sy</mi>
-              </mtd>
-            </mtr>
-          </mtable>
-        </mfenced>
-      </math></td>
-    <td><math>
-        <mfenced>
-          <mtable>
-            <mtr>
-              <mtd>
-                <mi>sx</mi>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-            </mtr>
-            <mtr>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mi>sy</mi>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-            </mtr>
-            <mtr>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>1</mn>
-              </mtd>
-            </mtr>
-          </mtable>
-        </mfenced>
-      </math></td>
-    <td rowspan="2"><math>
-        <mfenced>
-          <mtable>
-            <mtr>
-              <mtd>
-                <mi>sx</mi>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-            </mtr>
-            <mtr>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mi>sy</mi>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-            </mtr>
-            <mtr>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>1</mn>
-              </mtd>
-            </mtr>
-          </mtable>
-        </mfenced>
-      </math></td>
-    <td rowspan="2"><math>
-        <mfenced>
-          <mtable>
-            <mtr>
-              <mtd>
-                <mi>sx</mi>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-            </mtr>
-            <mtr>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mi>sy</mi>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-            </mtr>
-            <mtr>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>1</mn>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-            </mtr>
-            <mtr>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>0</mn>
-              </mtd>
-              <mtd>
-                <mn>1</mn>
-              </mtd>
-            </mtr>
-          </mtable>
-        </mfenced>
-      </math></td>
-  </tr>
-  <tr>
-    <td><code>[sx 0 0 sy 0 0]</code></td>
-  </tr>
-</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2"><math>
+          <mfenced>
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mi>sx</mi>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mi>sy</mi>
+                </mtd>
+              </mtr>
+            </mtable>
+          </mfenced>
+        </math></td>
+      <td><math>
+          <mfenced>
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mi>sx</mi>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mi>sy</mi>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+          </mfenced>
+        </math></td>
+      <td rowspan="2"><math>
+          <mfenced>
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mi>sx</mi>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mi>sy</mi>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+          </mfenced>
+        </math></td>
+      <td rowspan="2"><math>
+          <mfenced>
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mi>sx</mi>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mi>sy</mi>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+              </mtr>
+              <mtr>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>0</mn>
+                </mtd>
+                <mtd>
+                  <mn>1</mn>
+                </mtd>
+              </mtr>
+            </mtable>
+          </mfenced>
+        </math></td>
+    </tr>
+    <tr>
+      <td><code>[sx 0 0 sy 0 0]</code></td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="accessibility_concerns">Accessibilité</h2>
@@ -226,10 +226,9 @@ scale(<var>sx</var>, <var>sy</var>)
 <p>Pour en savoir plus :</p>
 
 <ul>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions">Comprendres les règles WCAG 2.3</a></li>
- <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions">Comprendre les critères de succès WCAG 2.1 / 2.3.3 (W3C)</a></li>
+  <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions">Comprendres les règles WCAG 2.3</a></li>
+  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions">Comprendre les critères de succès WCAG 2.1 / 2.3.3 (W3C)</a></li>
 </ul>
-
 
 <h2 id="examples">Exemples</h2>
 
@@ -284,25 +283,9 @@ scale(<var>sx</var>, <var>sy</var>)
 
 <p>{{EmbedLiveSample("scaling_x_and_y_dimensions_separately_and_translating_the_origin", "200", "200")}}</p>
 
-
 <h2 id="specifications">Spécifications</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Transforms", "#funcdef-transform-scale", "scale()")}}</td>
-   <td>{{Spec2("CSS3 Transforms")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
@@ -311,7 +294,7 @@ scale(<var>sx</var>, <var>sy</var>)
 <h2 id="see_also">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/CSS/transform"><code>transform</code></a></li>
- <li><a href="/fr/docs/Web/CSS/transform-function"><code>&lt;transform-function&gt;</code></a></li>
- <li><a href="/fr/docs/Web/CSS/transform-function/scale3d()"><code>scale3d()</code></a></li>
+  <li><a href="/fr/docs/Web/CSS/transform"><code>transform</code></a></li>
+  <li><a href="/fr/docs/Web/CSS/transform-function"><code>&lt;transform-function&gt;</code></a></li>
+  <li><a href="/fr/docs/Web/CSS/transform-function/scale3d()"><code>scale3d()</code></a></li>
 </ul>
