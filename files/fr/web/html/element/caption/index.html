@@ -76,18 +76,24 @@ browser-compat: html.elements.caption
 
   <div class="notecard note">
     <p><b>Note d'utilisation :</b></p>
-    <p>Ne pas utiliser cet attribut. Il a été déprécié. L'élément <a href="/fr/docs/Web/HTML/Element/caption"><code>&lt;caption&gt;</code></a> devrait être mis en forme grâce au <a href="/fr/docs/Web/CSS">CSS</a>. Afin d'obtenir des effets similaires à cet attribut, on utilisera les propriétés CSS <a href="/fr/docs/Web/CSS/caption-side"><code>caption-side</code></a> et <a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a>.</p>
+    <p>Ne pas utiliser cet attribut. Il a été déprécié. L'élément <code>&lt;caption&gt;</code> devrait être mis en forme grâce au <a href="/fr/docs/Web/CSS">CSS</a>. Afin d'obtenir des effets similaires à cet attribut, on utilisera les propriétés CSS <a href="/fr/docs/Web/CSS/caption-side"><code>caption-side</code></a> et <a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a>.</p>
   </div>
   </dd>
 </dl>
 
 <h2 id="usage_notes">Notes d'utilisation</h2>
 
-<p>Quand l'élément <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a> (étant le parent de l'élément <a href="/fr/docs/Web/HTML/Element/caption"><code>&lt;caption&gt;</code></a>) n'est que l'unique descendant d'un élément <a href="/fr/docs/Web/HTML/Element/figure"><code>&lt;figure&gt;</code></a>, c'est l'élément <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&lt;figcaption&gt;</code></a> doit être utilisé.</p>
+<p>L'élément <code>&lt;caption&gt;</code> devrait être le premier élément enfant de l'élément parent <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a>.</p>
+
+<p>Quand l'élément <a href="/fr/docs/Web/HTML/Element/table"><code>&lt;table&gt;</code></a> (étant le parent de l'élément <code>&lt;caption&gt;</code>) n'est que l'unique descendant d'un élément <a href="/fr/docs/Web/HTML/Element/figure"><code>&lt;figure&gt;</code></a>, c'est l'élément <a href="/fr/docs/Web/HTML/Element/figcaption"><code>&lt;figcaption&gt;</code></a> doit être utilisé.</p>
+
+<p>Utiliser la propriété <a href="/fr/docs/Web/CSS/background-color"><code>background-color</code></a> sur le tableau ne modifiera pas l'apparence de la légende. Il est également nécessaire d'ajouter une déclaration CSS avec <code>background-color</code> sur l'élément <code>&lt;caption&gt;</code> pour que celui-ci ait la même couleur.</p>
 
 <h2 id="example">Exemple</h2>
 
 <p>Cet exemple simple présente un tableau qui comprend une légende.</p>
+
+<h3 id="html">HTML</h3>
 
 <pre class="brush: html">&lt;table&gt;
   &lt;caption&gt;Légende de l'exemple&lt;/caption&gt;
@@ -108,7 +114,6 @@ browser-compat: html.elements.caption
 <div class="hidden">
   <pre class="brush: css">caption {
     caption-side: top;
-    align: right;
   }
   table {
     border-collapse: collapse;
@@ -120,24 +125,22 @@ browser-compat: html.elements.caption
   </pre>
   </div>
 
-<h3 id="Résultat">Résultat</h3>
+<h3 id="result">Résultat</h3>
 
 <p>{{EmbedLiveSample('example', '', 120)}}</p>
 
-<p>L'utilisation du CSS <code>table {background : red;}</code> ne modifiera pas la légende. Pour cela il faudra lui appliquer <code>display: block</code>.</p>
-
 <h2 id="specifications">Spécifications</h2>
 
-{{Specifications}}
+<p>{{Specifications}}</p>
 
 <h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-{{Compat}}
+<p>{{Compat}}</p>
 
 <h2 id="see_also">Voir aussi</h2>
 
 <ul>
-  <li>Les propriétés CSS particulièrement utiles pour styliser l'élément <a href="/fr/docs/Web/HTML/Element/caption"><code>&lt;caption&gt;</code></a> :
+  <li>Les propriétés CSS particulièrement utiles pour styliser l'élément <code>&lt;caption&gt;</code> :
    <ul>
     <li><a href="/fr/docs/Web/CSS/text-align"><code>text-align</code></a></li>
     <li><a href="/fr/docs/Web/CSS/caption-side"><code>caption-side</code></a>.</li>
