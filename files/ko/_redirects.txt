@@ -70,7 +70,7 @@
 /ko/docs/CSS/cursor	/ko/docs/Web/CSS/cursor
 /ko/docs/CSS/cursor/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 /ko/docs/CSS/initial_value	/ko/docs/Web/CSS/initial_value
-/ko/docs/CSS/linear-gradient	/ko/docs/Web/CSS/linear-gradient()
+/ko/docs/CSS/linear-gradient	/ko/docs/orphaned/Web/CSS/linear-gradient()
 /ko/docs/CSS/text-shadow	/ko/docs/Web/CSS/text-shadow
 /ko/docs/CSS/transform	/ko/docs/Web/CSS/transform
 /ko/docs/CSS/z-index	/ko/docs/Web/CSS/z-index
@@ -642,6 +642,7 @@
 /ko/docs/Web/API/ParentNode/children	/ko/docs/orphaned/Web/API/ParentNode/children
 /ko/docs/Web/API/ParentNode/prepend	/ko/docs/orphaned/Web/API/ParentNode/prepend
 /ko/docs/Web/API/Position	/ko/docs/Web/API/GeolocationPosition
+/ko/docs/Web/API/RTCPeerConnection/onidentityresult	/ko/docs/orphaned/Web/API/RTCPeerConnection/onidentityresult
 /ko/docs/Web/API/RandomSource	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/RandomSource/getRandomValues	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/Screen.lockOrientation	/ko/docs/Web/API/Screen/lockOrientation
@@ -736,7 +737,8 @@
 /ko/docs/Web/CSS/filter-function/blur	/ko/docs/Web/CSS/filter-function/blur()
 /ko/docs/Web/CSS/filter-function/brightness	/ko/docs/Web/CSS/filter-function/brightness()
 /ko/docs/Web/CSS/filter-function/contrast	/ko/docs/Web/CSS/filter-function/contrast()
-/ko/docs/Web/CSS/linear-gradient	/ko/docs/Web/CSS/linear-gradient()
+/ko/docs/Web/CSS/linear-gradient	/ko/docs/orphaned/Web/CSS/linear-gradient()
+/ko/docs/Web/CSS/linear-gradient()	/ko/docs/orphaned/Web/CSS/linear-gradient()
 /ko/docs/Web/CSS/transform-function/matrix	/ko/docs/Web/CSS/transform-function/matrix()
 /ko/docs/Web/CSS/transform-function/scaleX	/ko/docs/Web/CSS/transform-function/scaleX()
 /ko/docs/Web/CSS/url	/ko/docs/Web/CSS/url()

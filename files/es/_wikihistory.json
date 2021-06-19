@@ -13130,18 +13130,6 @@
       "HenryGR"
     ]
   },
-  "Web/CSS/linear-gradient()": {
-    "modified": "2020-11-16T08:56:55.739Z",
-    "contributors": [
-      "chrisdavidmills",
-      "efrenmartinez",
-      "rgomez",
-      "Miguelslo27",
-      "Sebastianz",
-      "prayash",
-      "scarnagot"
-    ]
-  },
   "Web/CSS/list-style": {
     "modified": "2019-03-23T23:52:08.020Z",
     "contributors": [
@@ -13559,14 +13547,6 @@
     "contributors": [
       "SJW",
       "arroutado"
-    ]
-  },
-  "Web/CSS/radial-gradient()": {
-    "modified": "2020-11-18T14:42:09.252Z",
-    "contributors": [
-      "chrisdavidmills",
-      "hectorcano",
-      "israel-munoz"
     ]
   },
   "Web/CSS/repeat()": {
@@ -23465,6 +23445,26 @@
     "modified": "2019-03-18T21:20:03.429Z",
     "contributors": [
       "gsalinase"
+    ]
+  },
+  "orphaned/Web/CSS/linear-gradient()": {
+    "modified": "2020-11-16T08:56:55.739Z",
+    "contributors": [
+      "chrisdavidmills",
+      "efrenmartinez",
+      "rgomez",
+      "Miguelslo27",
+      "Sebastianz",
+      "prayash",
+      "scarnagot"
+    ]
+  },
+  "orphaned/Web/CSS/radial-gradient()": {
+    "modified": "2020-11-18T14:42:09.252Z",
+    "contributors": [
+      "chrisdavidmills",
+      "hectorcano",
+      "israel-munoz"
     ]
   },
   "orphaned/Web/CSS/rtl": {

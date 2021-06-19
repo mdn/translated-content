@@ -618,7 +618,8 @@
 /de/docs/Web/CSS/ersetztes_Element	/de/docs/Web/CSS/Replaced_element
 /de/docs/Web/CSS/grid-gap	/de/docs/Web/CSS/gap
 /de/docs/Web/CSS/hidden	/de/docs/Web/CSS/visibility
-/de/docs/Web/CSS/linear-gradient	/de/docs/Web/CSS/linear-gradient()
+/de/docs/Web/CSS/linear-gradient	/de/docs/orphaned/Web/CSS/linear-gradient()
+/de/docs/Web/CSS/linear-gradient()	/de/docs/orphaned/Web/CSS/linear-gradient()
 /de/docs/Web/CSS/marks	/de/docs/orphaned/Web/CSS/@page/marks
 /de/docs/Web/CSS/mq-boolean	/de/docs/Web/CSS/Media_Queries/Using_media_queries
 /de/docs/Web/CSS/none	/de/docs/conflicting/Web/CSS/float
