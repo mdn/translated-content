@@ -36,7 +36,7 @@ TypeError: cannot use 'in' operator to search for 'x' in 'y' (Firefox, Chrome)
 <pre class="brush: js example-bad">"Hello" in "Hello World";
 // TypeError: cannot use 'in' operator to search for 'Hello' in 'Hello World'</pre>
 
-<p>Instead you will need to use {{jsxref("String.prototype.indexOf()")}}, for example.</p>
+<p>ここでは代わりに {{jsxref("String.prototype.indexOf()")}} を使う必要があります。 </p>
 
 <pre class="brush: js example-good">"Hello World".indexOf("Hello") !== -1;
 // true</pre>
