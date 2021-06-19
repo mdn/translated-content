@@ -14496,13 +14496,6 @@
       "Ruslan_Zlygostev"
     ]
   },
-  "Web/CSS/image-set()": {
-    "modified": "2020-11-16T08:54:13.901Z",
-    "contributors": [
-      "chrisdavidmills",
-      "justredpaul"
-    ]
-  },
   "Web/CSS/inherit": {
     "modified": "2020-10-15T22:09:42.824Z",
     "contributors": [
@@ -14608,13 +14601,6 @@
       "sashakrauzer",
       "arto-777",
       "Lyod1"
-    ]
-  },
-  "Web/CSS/linear-gradient()": {
-    "modified": "2020-11-16T08:57:46.008Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Virss"
     ]
   },
   "Web/CSS/list-style-image": {
@@ -14867,27 +14853,10 @@
       "bilazik"
     ]
   },
-  "Web/CSS/radial-gradient()": {
-    "modified": "2020-11-18T14:42:49.208Z",
-    "contributors": [
-      "chrisdavidmills",
-      "shade0602",
-      "the_ghost",
-      "SerzN1"
-    ]
-  },
   "Web/CSS/ratio": {
     "modified": "2020-10-15T22:19:17.156Z",
     "contributors": [
       "opereverzeva"
-    ]
-  },
-  "Web/CSS/repeating-linear-gradient()": {
-    "modified": "2020-11-18T14:46:25.201Z",
-    "contributors": [
-      "chrisdavidmills",
-      "YozhEzhi",
-      "arcady-zherdev"
     ]
   },
   "Web/CSS/resolved_value": {
@@ -25535,6 +25504,37 @@
     "modified": "2019-04-10T04:25:54.752Z",
     "contributors": [
       "qkudev"
+    ]
+  },
+  "orphaned/Web/CSS/image-set()": {
+    "modified": "2020-11-16T08:54:13.901Z",
+    "contributors": [
+      "chrisdavidmills",
+      "justredpaul"
+    ]
+  },
+  "orphaned/Web/CSS/linear-gradient()": {
+    "modified": "2020-11-16T08:57:46.008Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Virss"
+    ]
+  },
+  "orphaned/Web/CSS/radial-gradient()": {
+    "modified": "2020-11-18T14:42:49.208Z",
+    "contributors": [
+      "chrisdavidmills",
+      "shade0602",
+      "the_ghost",
+      "SerzN1"
+    ]
+  },
+  "orphaned/Web/CSS/repeating-linear-gradient()": {
+    "modified": "2020-11-18T14:46:25.201Z",
+    "contributors": [
+      "chrisdavidmills",
+      "YozhEzhi",
+      "arcady-zherdev"
     ]
   },
   "orphaned/Web/Guide/AJAX/С_чего_начать?": {

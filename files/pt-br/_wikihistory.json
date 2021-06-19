@@ -8641,13 +8641,6 @@
       "brunoeduardo"
     ]
   },
-  "Web/CSS/image-set()": {
-    "modified": "2020-11-16T08:53:55.560Z",
-    "contributors": [
-      "chrisdavidmills",
-      "leandroruel"
-    ]
-  },
   "Web/CSS/inheritance": {
     "modified": "2019-03-23T22:30:06.400Z",
     "contributors": [
@@ -8832,25 +8825,6 @@
     "contributors": [
       "joao-alberto",
       "talles.makoto"
-    ]
-  },
-  "Web/CSS/radial-gradient()": {
-    "modified": "2020-11-18T14:42:38.700Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Sebastianz",
-      "mrstork",
-      "srsaude"
-    ]
-  },
-  "Web/CSS/repeating-linear-gradient()": {
-    "modified": "2020-11-18T14:46:15.881Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Sebastianz",
-      "prayash",
-      "teoli",
-      "Erick_Ribeiro"
     ]
   },
   "Web/CSS/resolved_value": {
@@ -17164,6 +17138,32 @@
     "modified": "2019-03-23T22:45:26.552Z",
     "contributors": [
       "takahan"
+    ]
+  },
+  "orphaned/Web/CSS/image-set()": {
+    "modified": "2020-11-16T08:53:55.560Z",
+    "contributors": [
+      "chrisdavidmills",
+      "leandroruel"
+    ]
+  },
+  "orphaned/Web/CSS/radial-gradient()": {
+    "modified": "2020-11-18T14:42:38.700Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Sebastianz",
+      "mrstork",
+      "srsaude"
+    ]
+  },
+  "orphaned/Web/CSS/repeating-linear-gradient()": {
+    "modified": "2020-11-18T14:46:15.881Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Sebastianz",
+      "prayash",
+      "teoli",
+      "Erick_Ribeiro"
     ]
   },
   "orphaned/Web/Guide/CSS/CSS_media_queries_(consultas_de_mídia_em_CSS)": {

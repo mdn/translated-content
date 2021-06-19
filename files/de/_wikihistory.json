@@ -7275,18 +7275,6 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/linear-gradient()": {
-    "modified": "2020-11-16T08:56:43.415Z",
-    "contributors": [
-      "chrisdavidmills",
-      "marcus-at-localhost",
-      "JuSchu",
-      "sahin",
-      "Sebastianz",
-      "prayash",
-      "auranvesdranor"
-    ]
-  },
   "Web/CSS/list-style": {
     "modified": "2019-03-24T00:03:48.208Z",
     "contributors": [
@@ -14726,6 +14714,18 @@
     "modified": "2019-03-23T22:43:38.857Z",
     "contributors": [
       "Sebastianz"
+    ]
+  },
+  "orphaned/Web/CSS/linear-gradient()": {
+    "modified": "2020-11-16T08:56:43.415Z",
+    "contributors": [
+      "chrisdavidmills",
+      "marcus-at-localhost",
+      "JuSchu",
+      "sahin",
+      "Sebastianz",
+      "prayash",
+      "auranvesdranor"
     ]
   },
   "orphaned/Web/Guide/Events": {
