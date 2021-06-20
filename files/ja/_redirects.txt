@@ -1991,7 +1991,7 @@
 /ja/docs/DebNews/20081118	/ja/docs/orphaned/DevNews/20081118
 /ja/docs/Deer_Park	/ja/docs/Mozilla/Firefox/Releases/1.5
 /ja/docs/Detecting_device_orientation	/ja/docs/Web/Events/Detecting_device_orientation
-/ja/docs/Determining_the_dimensions_of_elements	/ja/docs/conflicting/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
+/ja/docs/Determining_the_dimensions_of_elements	/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 /ja/docs/DevNews	/ja/docs/orphaned/DevNews
 /ja/docs/DevNews/20060705	/ja/docs/orphaned/DevNews/20060705
 /ja/docs/DevNews/20060706	/ja/docs/orphaned/DevNews/20060706

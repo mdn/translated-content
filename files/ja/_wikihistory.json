@@ -11031,7 +11031,9 @@
   "Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements": {
     "modified": "2020-07-24T22:56:12.511Z",
     "contributors": [
-      "Wind1808"
+      "Wind1808",
+      "SphinxKnight",
+      "yuki_nichiyama"
     ]
   },
   "Web/API/CSS_Object_Model/Managing_screen_orientation": {
@@ -48872,42 +48874,6 @@
       "fscholz",
       "Hasilt",
       "dextra"
-    ]
-  },
-  "conflicting/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements": {
-    "modified": "2019-03-18T20:59:05.112Z",
-    "contributors": [
-      "SphinxKnight",
-      "yuki_nichiyama"
-    ]
-  },
-  "conflicting/Web/API/Canvas_API/Tutorial": {
-    "modified": "2019-03-23T23:28:30.956Z",
-    "contributors": [
-      "Uemmra3",
-      "yyss",
-      "ethertank"
-    ]
-  },
-  "conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d": {
-    "modified": "2019-03-23T23:54:18.694Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "teoli",
-      "ethertank",
-      "Marsf",
-      "Mgjbot",
-      "Okome",
-      "Taken",
-      "Shimono",
-      "Victory"
-    ]
-  },
-  "conflicting/Web/API/Crypto/getRandomValues": {
-    "modified": "2019-03-23T22:01:08.359Z",
-    "contributors": [
-      "Marsf"
     ]
   },
   "conflicting/Web/API/Document/characterSet": {
