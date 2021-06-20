@@ -3593,6 +3593,7 @@
 /fr/docs/Web/API/AbstractWorker	/fr/docs/orphaned/Web/API/AbstractWorker
 /fr/docs/Web/API/AbstractWorker.onerror	/fr/docs/orphaned/Web/API/AbstractWorker/onerror
 /fr/docs/Web/API/AbstractWorker/onerror	/fr/docs/orphaned/Web/API/AbstractWorker/onerror
+/fr/docs/Web/API/Ambient_Light_Events	/fr/docs/orphaned/Web/API/Ambient_Light_Events
 /fr/docs/Web/API/AnimationEffectTimingProperties	/fr/docs/Web/API/EffectTiming
 /fr/docs/Web/API/AnimationEffectTimingProperties/delay	/fr/docs/Web/API/EffectTiming/delay
 /fr/docs/Web/API/AnimationEvent.animationName	/fr/docs/Web/API/AnimationEvent/animationName
@@ -5750,7 +5751,7 @@
 /fr/docs/WebAPI/Network_Information	/fr/docs/Web/API/Network_Information_API
 /fr/docs/WebAPI/Pointer_Lock	/fr/docs/Web/API/Pointer_Lock_API
 /fr/docs/WebAPI/Proximity	/fr/docs/Web/API/Proximity_Events
-/fr/docs/WebAPI/Utiliser_les_événéments_de_luminosité	/fr/docs/Web/API/Ambient_Light_Events
+/fr/docs/WebAPI/Utiliser_les_événéments_de_luminosité	/fr/docs/orphaned/Web/API/Ambient_Light_Events
 /fr/docs/WebGL	/fr/docs/Web/API/WebGL_API
 /fr/docs/WebGL/Adding_2D_content_to_a_WebGL_context	/fr/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /fr/docs/WebGL/Ajouter_des_couleurs_avec_les_shaders	/fr/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL

@@ -4920,14 +4920,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2019-03-23T22:33:31.225Z",
-    "contributors": [
-      "BubuAnabelas",
-      "RockoDev",
-      "guiller1998"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2019-03-23T22:51:59.371Z",
     "contributors": [
@@ -23313,6 +23305,14 @@
       "Kaliu",
       "Gustavo_Armoa",
       "AshWilliams"
+    ]
+  },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2019-03-23T22:33:31.225Z",
+    "contributors": [
+      "BubuAnabelas",
+      "RockoDev",
+      "guiller1998"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {

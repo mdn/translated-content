@@ -9990,13 +9990,6 @@
       "silverskyvicto"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2020-10-15T21:25:12.532Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2019-03-23T22:40:29.945Z",
     "contributors": [
@@ -12192,16 +12185,6 @@
     "contributors": [
       "fscholz",
       "chikoski"
-    ]
-  },
-  "Web/API/DeviceLightEvent": {
-    "modified": "2020-10-15T21:33:03.860Z",
-    "contributors": [
-      "mfuji09",
-      "yyss",
-      "dskmori",
-      "YuichiNukiyama",
-      "fscholz"
     ]
   },
   "Web/API/DeviceMotionEvent": {
@@ -52058,6 +52041,13 @@
       "chikoski"
     ]
   },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2020-10-15T21:25:12.532Z",
+    "contributors": [
+      "mfuji09",
+      "yyss"
+    ]
+  },
   "orphaned/Web/API/AudioContext/mozAudioChannelType": {
     "modified": "2019-03-23T22:51:59.818Z",
     "contributors": [
@@ -52088,6 +52078,16 @@
       "hamasaki",
       "yyss",
       "Fajrovulpo"
+    ]
+  },
+  "orphaned/Web/API/DeviceLightEvent": {
+    "modified": "2020-10-15T21:33:03.860Z",
+    "contributors": [
+      "mfuji09",
+      "yyss",
+      "dskmori",
+      "YuichiNukiyama",
+      "fscholz"
     ]
   },
   "orphaned/Web/API/DeviceLightEvent/value": {

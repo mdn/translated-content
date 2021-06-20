@@ -2859,14 +2859,6 @@
       "lixingnan200"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2019-03-23T23:27:04.119Z",
-    "contributors": [
-      "jackblackevo",
-      "teoli",
-      "MashKao"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2019-03-23T22:40:29.435Z",
     "contributors": [
@@ -8651,6 +8643,14 @@
     "modified": "2020-07-16T22:34:24.444Z",
     "contributors": [
       "iigmir"
+    ]
+  },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2019-03-23T23:27:04.119Z",
+    "contributors": [
+      "jackblackevo",
+      "teoli",
+      "MashKao"
     ]
   },
   "orphaned/Web/API/Detecting_device_orientation": {
