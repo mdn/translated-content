@@ -3389,13 +3389,6 @@
       "chzhclq17"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2020-10-15T21:24:18.175Z",
-    "contributors": [
-      "alattalatta",
-      "hyeonseok"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2020-10-15T21:31:33.070Z",
     "contributors": [
@@ -18267,6 +18260,13 @@
     "contributors": [
       "alattalatta",
       "Cho.Eun"
+    ]
+  },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2020-10-15T21:24:18.175Z",
+    "contributors": [
+      "alattalatta",
+      "hyeonseok"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {

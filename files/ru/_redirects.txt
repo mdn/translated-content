@@ -368,6 +368,7 @@
 /ru/docs/Using_Firefox_1.5_caching	/ru/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /ru/docs/Using_files_from_web_applications	/ru/docs/Web/API/File/Using_files_from_web_applications
 /ru/docs/Web/API/AbstractWorker	/ru/docs/orphaned/Web/API/AbstractWorker
+/ru/docs/Web/API/Ambient_Light_Events	/ru/docs/orphaned/Web/API/Ambient_Light_Events
 /ru/docs/Web/API/AudioContext.currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
 /ru/docs/Web/API/AudioContext/createPanner	/ru/docs/Web/API/BaseAudioContext/createPanner
 /ru/docs/Web/API/AudioContext/currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime

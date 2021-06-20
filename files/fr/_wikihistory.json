@@ -11759,13 +11759,6 @@
       "loella16"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2019-03-23T23:28:29.463Z",
-    "contributors": [
-      "Goofy",
-      "SphinxKnight"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2020-10-15T21:24:02.190Z",
     "contributors": [
@@ -44809,6 +44802,13 @@
       "wakka27",
       "jean-pierre.gay",
       "fscholz"
+    ]
+  },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2019-03-23T23:28:29.463Z",
+    "contributors": [
+      "Goofy",
+      "SphinxKnight"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {

@@ -3680,6 +3680,7 @@
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/The_stacking_context	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 /ja/docs/Web/API/AbstractWorker	/ja/docs/orphaned/Web/API/AbstractWorker
 /ja/docs/Web/API/AbstractWorker/onerror	/ja/docs/orphaned/Web/API/AbstractWorker/onerror
+/ja/docs/Web/API/Ambient_Light_Events	/ja/docs/orphaned/Web/API/Ambient_Light_Events
 /ja/docs/Web/API/Apps	/ja/docs/Web/API/DOMApplicationsRegistry
 /ja/docs/Web/API/Apps.checkInstalled	/ja/docs/Web/API/DOMApplicationsRegistry/checkInstalled
 /ja/docs/Web/API/Apps.getInstalled	/ja/docs/Web/API/DOMApplicationsRegistry/getInstalled
@@ -3732,6 +3733,7 @@
 /ja/docs/Web/API/DOMCursor.done	/ja/docs/Web/API/DOMCursor/done
 /ja/docs/Web/API/DOMRequest.error	/ja/docs/Web/API/DOMRequest/error
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
+/ja/docs/Web/API/DeviceLightEvent	/ja/docs/orphaned/Web/API/DeviceLightEvent
 /ja/docs/Web/API/DeviceLightEvent.value	/ja/docs/orphaned/Web/API/DeviceLightEvent/value
 /ja/docs/Web/API/DeviceLightEvent/value	/ja/docs/orphaned/Web/API/DeviceLightEvent/value
 /ja/docs/Web/API/DeviceProximityEvent/max	/ja/docs/orphaned/Web/API/DeviceProximityEvent/max
@@ -5158,7 +5160,7 @@
 /ja/docs/WebAPI/Managing_screen_orientation	/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ja/docs/WebAPI/Network_Information	/ja/docs/Web/API/Network_Information_API
 /ja/docs/WebAPI/Proximity	/ja/docs/Web/API/Proximity_Events
-/ja/docs/WebAPI/Using_Light_Events	/ja/docs/Web/API/Ambient_Light_Events
+/ja/docs/WebAPI/Using_Light_Events	/ja/docs/orphaned/Web/API/Ambient_Light_Events
 /ja/docs/WebAPI/Using_Web_Notifications	/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ja/docs/WebAPI/Using_geolocation	/ja/docs/Web/API/Geolocation_API
 /ja/docs/WebGL	/ja/docs/Web/API/WebGL_API

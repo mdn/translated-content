@@ -1762,6 +1762,7 @@
 /es/docs/Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web	/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
 /es/docs/Web/API/API_del_portapapeles	/es/docs/Web/API/Clipboard_API
 /es/docs/Web/API/AbstractWorker	/es/docs/orphaned/Web/API/AbstractWorker
+/es/docs/Web/API/Ambient_Light_Events	/es/docs/orphaned/Web/API/Ambient_Light_Events
 /es/docs/Web/API/Animation/Animación	/es/docs/Web/API/Animation/Animation
 /es/docs/Web/API/Animation/terminado	/es/docs/Web/API/Animation/finished
 /es/docs/Web/API/Animation/tiempoActual	/es/docs/Web/API/Animation/currentTime

@@ -3584,12 +3584,6 @@
       "marcelorobson001"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2019-03-23T22:10:24.978Z",
-    "contributors": [
-      "andre-mendes"
-    ]
-  },
   "Web/API/Animation": {
     "modified": "2019-03-23T22:27:19.257Z",
     "contributors": [
@@ -17078,6 +17072,12 @@
     "modified": "2019-03-23T22:50:42.630Z",
     "contributors": [
       "daltonmenezes"
+    ]
+  },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2019-03-23T22:10:24.978Z",
+    "contributors": [
+      "andre-mendes"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {

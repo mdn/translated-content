@@ -7523,13 +7523,6 @@
       "shockw4ver"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2020-10-15T21:34:12.225Z",
-    "contributors": [
-      "RainSlide",
-      "fskuok"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2020-10-15T21:30:26.024Z",
     "contributors": [
@@ -10629,14 +10622,6 @@
       "RainSlide",
       "ts0307",
       "Lex.Huang"
-    ]
-  },
-  "Web/API/DeviceLightEvent": {
-    "modified": "2020-10-15T21:34:11.102Z",
-    "contributors": [
-      "RainSlide",
-      "Fantastic-Chen",
-      "fscholz"
     ]
   },
   "Web/API/DeviceMotionEvent": {
@@ -49977,6 +49962,13 @@
       "liuzeyafzy"
     ]
   },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2020-10-15T21:34:12.225Z",
+    "contributors": [
+      "RainSlide",
+      "fskuok"
+    ]
+  },
   "orphaned/Web/API/AnalyserNode/fft": {
     "modified": "2019-03-18T20:44:28.140Z",
     "contributors": [
@@ -50030,6 +50022,14 @@
       "ziyunfei",
       "fancy",
       "princetoad@gmail.com"
+    ]
+  },
+  "orphaned/Web/API/DeviceLightEvent": {
+    "modified": "2020-10-15T21:34:11.102Z",
+    "contributors": [
+      "RainSlide",
+      "Fantastic-Chen",
+      "fscholz"
     ]
   },
   "orphaned/Web/API/Document/cookie/Simple_document.cookie_framework": {

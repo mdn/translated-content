@@ -5607,12 +5607,6 @@
       "VerZsuT"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2019-03-23T22:28:03.691Z",
-    "contributors": [
-      "a-chepugov"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2020-10-15T22:18:41.838Z",
     "contributors": [
@@ -25379,6 +25373,12 @@
     "modified": "2020-10-15T22:21:08.647Z",
     "contributors": [
       "bennaver"
+    ]
+  },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2019-03-23T22:28:03.691Z",
+    "contributors": [
+      "a-chepugov"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {

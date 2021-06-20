@@ -594,6 +594,7 @@
 /ko/docs/Using_XPath	/ko/docs/conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 /ko/docs/Web/API/AbstractWorker	/ko/docs/orphaned/Web/API/AbstractWorker
+/ko/docs/Web/API/Ambient_Light_Events	/ko/docs/orphaned/Web/API/Ambient_Light_Events
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
 /ko/docs/Web/API/ChildNode/remove	/ko/docs/orphaned/Web/API/ChildNode/remove
@@ -1030,7 +1031,7 @@
 /ko/docs/WebAPI/Managing_screen_orientation	/ko/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ko/docs/WebAPI/Network_Information	/ko/docs/Web/API/Network_Information_API
 /ko/docs/WebAPI/Proximity	/ko/docs/Web/API/Proximity_Events
-/ko/docs/WebAPI/Using_Light_Events	/ko/docs/Web/API/Ambient_Light_Events
+/ko/docs/WebAPI/Using_Light_Events	/ko/docs/orphaned/Web/API/Ambient_Light_Events
 /ko/docs/WebAPI/Using_Web_Notifications	/ko/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ko/docs/WebAPI/Using_geolocation	/ko/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
 /ko/docs/WebAPI/Vibration	/ko/docs/Web/API/Vibration_API
