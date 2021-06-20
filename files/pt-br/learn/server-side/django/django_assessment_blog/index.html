@@ -1,0 +1,153 @@
+---
+title: 'Avaliação: Faça você mesmo um mini blog em Django'
+slug: Learn/Server-side/Django/django_assessment_blog
+tags:
+  - Avaliação
+  - Iniciante
+  - Codificação de Scripts
+  - aprenda
+  - Programação do lado do servidor
+  - blog
+  - django
+  - server-side
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenu("Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}</div>
+
+<p class="summary">Nessa avaliação você vai usar o conhecimento de Django que adquiriu até agora no módulo <a href="/pt-BR/docs/Learn/Server-side/Django">Django Web Framework (Python)</a> para criar um blog bem simples.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Pré-Requisitos:</th>
+   <td>Antes de tentar fazer esta avaliação você deve ter passado por todos os outros artigos deste módulo.</td>
+  </tr>
+  <tr>
+   <th scope="row">Objetivo:</th>
+   <td>Testar a compreensão dos fundamentos do Django, incluindo configurações de URL, modelos, <i>views</i>, formulários e <i>templates</i>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Project_brief">Resumo do projeto</h2>
+
+<p>As páginas que precisam ser mostradas, suas URLs e outros requisitos estão abaixo:</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Página</th>
+   <th scope="col">URL</th>
+   <th scope="col">Requisitos</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Página inicial</td>
+   <td><code>/</code> e <code>/blog/</code></td>
+   <td>Uma página inicial descrevendo o site.</td>
+  </tr>
+  <tr>
+   <td>Lista de todos os artigos do blog</td>
+   <td><code>/blog/blogs/</code></td>
+   <td>
+    <p>Lista de todos os artigos do blog:</p>
+
+    <ul>
+     <li>Acessível para todos os usuários através de um link na barra lateral.</li>
+     <li>Lista artigo pela data (de forma decrescente).</li>
+     <li>Lista paginada em grupos de 5 artigos.</li>
+     <li>Os itens da lista mostram o título do blog, a data do artigo e o autor.</li>
+     <li>O nome dos artigos são linkados com a página de detalhes do blog.</li>
+     <li>Os bloggers (nome dos autores) são linkados com a página de detalhes dos autores do blog.</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Página de detalhes do autor do blog (o blogger)</td>
+   <td><code>/blog/blogger/<em>&lt;author-id&gt;</em></code></td>
+   <td>
+    <p>Informação de um autor específico (pelo id) e a lista dos artigos do seu blog:</p> 
+
+    <ul>
+     <li>Acessível para todos os usuários pelos links do autor nos artigos do blog etc.</li>
+     <li>Contém algumas informações biográficas do blogger/autor.</li>
+     <li>Lista artigo pela data (de forma decrescente).</li>
+     <li>Não paginado.</li>
+     <li>Os itens da lista mostram somente o nome do artigo do blog e a data.</li>
+     <li>O nome dos artigos do blog são linkados com a página de detalhes do blog.</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Página de detalhes do artigo do blog</td>
+   <td><code>/blog/<em>&lt;blog-id&gt;</em></code></td>
+   <td>
+    <p>Detalhes do artigo.</p>
+
+    <ul>
+     <li>Acessível para todos os usuários pela lista de artigos do blog.</li>
+     <li>Contém na página do artigo: nome, autor, data e conteúdo.</li>
+     <li>Comentários do artigo devem ser mostrados no final da página.</li>
+     <li>Comentários devem ser ordenados de forma crescente (do mais antigo para o mais novo).</li>
+     <li>Contém link para adicionar comentários no final da página para usuários logados (veja a página do formulário de comentário)</li>
+     <li>Artigos e comentários precisam exibir somente texto simples. Não é necessário suporte de nenhum tipo de marcação HTML (como links, imagens, negrito/itálico, etc).</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Lista de todos os bloggers</td>
+   <td><code>/blog/bloggers/</code></td>
+   <td>
+    <p>Lista dos bloggers no sistema:</p>
+
+    <ul>
+     <li>Acessível para todos os usuários pela barra lateral do site.</li>
+     <li>O nome dos bloggers são linkados com as página de detalhes do autor do blog.</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Página do formulário de comentário</td>
+   <td><code>/blog/<em>&lt;blog-id&gt;</em>/create</code></td>
+   <td>
+    <p>Cria comentário para o artigo do blog:</p>
+
+    <ul>
+     <li>Acessível somente por usuários logados, através do link no final da página de detalhes do artigo.</li>
+     <li>Mostra formulário com descrição para novos comentários (a data do artigo e do blog não são editáveis).</li>
+     <li>Depois de um comentário ter sido postado, a página será redirecionada de volta para a respectiva página do artigo.</li>
+     <li>Usuários não podem editar ou deletar seus comentários.</li>
+     <li>Usuários não logados serão direcionados para a página de login para logar, antes de adicionarem o comentário. Depois de logados, eles serão redirecionados de volta para a página do artigo que tentaram criar o comentário.</li>
+     <li>Página de comentários deve incluir o nome/link do artigo que está recebendo o comentário.</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Páginas de autenticação do usuário</td>
+   <td><code>/accounts/<em>&lt;standard urls&gt;</em></code></td>
+   <td>
+    <p>Páginas de autenticação padrão do Django para fazer login, logout e configurar senhas:</p>
+
+    <ul>
+     <li>Login/logout deve ser acessível pelos links da barra lateral.</li>
+    </ul>
+   </td>
+  </tr>
+  <tr>
+   <td>Site do admin</td>
+   <td><code>/admin/<em>&lt;standard urls&gt;</em></code></td>
+   <td>
+    <p>A página de Admin deve estar ativada para permitir criar/editar/deletar os artigos, autores e comentários do blog (esse é o mecanismo para os bloggers criarem novos artigos para o blog):</p>
+
+    <ul>
+     <li>Os registros do site do Admin devem mostrar a lista de comentários associados (abaixo de cada artigo do blog).</li>
+     <li>Nomes do comentário no site do Admin são criados de forma que a descrição do comentário seja truncada em até 75 caracteres.</li>
+     <li>Outros tipos de registro podem usar uma configuração mais básica.</li>
+    </ul>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
