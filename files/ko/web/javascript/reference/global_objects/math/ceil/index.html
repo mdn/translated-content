@@ -2,36 +2,43 @@
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
+tags:
+  - JavaScript
+  - Math
+  - Method
+  - Reference
 browser-compat: javascript.builtins.Math.ceil
 ---
 <div>{{JSRef}}</div>
 
-<div>Math.ceil() 함수는 주어진 숫자보다 크거나 같은 숫자 중 가장 작은 숫자를 integer 로 반환합니다.</div>
+<p></code></strong>Math.ceil()</code></strong> 함수는 주어진 숫자보다 크거나 같은 숫자 중 가장 작은 숫자를 integer 로 반환합니다.</p>
 
-<div> </div>
+<p><strong>Note: </strong><code>Math.ceil({{jsxref("null")}})</code> 은 0을 반환하고 {{jsxref("NaN")}} 에러를 반환하지 않습니다.</p>
 
-<h2 id="Syntax_(문법)">Syntax (문법)</h2>
+<div>{{EmbedInteractiveExample("pages/js/math-ceil.html")}}</div>
 
-<pre class="syntaxbox"><code>Math.ceil(<var>x</var>)</code></pre>
+<h2 id="Syntax">문법</h2>
 
-<h3 id="Parameters_(매개변수)">Parameters (매개변수)</h3>
+<pre class="brush: js">Math.ceil(x)</pre>
+
+<h3 id="Parameters">매개변수</h3>
 
 <dl>
  <dt><code>x</code></dt>
  <dd>숫자</dd>
 </dl>
 
-<h3 id="Return_value_(반환값)">Return value (반환값)</h3>
+<h3 id="Return_value">반환값</h3>
 
 <p>주어진 숫자보다 크거나 같은 숫자 중 가장 작은 숫자</p>
 
-<h2 id="Description_(설명)">Description (설명)</h2>
+<h2 id="Description">설명</h2>
 
 <p>ceil() 은 Math 의 정적 메소드이므로, 사용자가 생성하는 Math 객체의 메소드처럼 사용하지 않고, 언제나 Math.ceil() 의 형태로 사용 합니다. (Math 는 생성자가 아님)</p>
 
-<h2 id="Examples_(예제)">Examples (예제)</h2>
+<h2 id="Examples">예제</h2>
 
-<h3 id="Math.ceil()_사용_예">Math.ceil() 사용 예</h3>
+<h3 id="Using_Math.ceil">Math.ceil() 사용 예</h3>
 
 <p>다음은 Math.ceil() 의 사용 예입니다.</p>
 
@@ -43,26 +50,26 @@ Math.ceil(-4);     // -4
 Math.ceil(-7.004); // -7
 </pre>
 
-<h3 id="소수점_처리">소수점 처리</h3>
+<h3 id="Decimal_adjustment">소수점 처리</h3>
 
 <pre class="brush: js">// Closure
 (function() {
   /**
-   * Decimal adjustment of a number.
+   * 숫자의 소수 조정.
    *
-   * @param {String}  type  The type of adjustment.
-   * @param {Number}  value The number.
-   * @param {Integer} exp   The exponent (the 10 logarithm of the adjustment base).
-   * @returns {Number} The adjusted value.
+   * @param {String}  type  조정 타입.
+   * @param {Number}  value 입력 숫자.
+   * @param {Integer} exp   지수 (10 로그의 조정값).
+   * @returns {Number} 조정값.
    */
   function decimalAdjust(type, value, exp) {
-    // If the exp is undefined or zero...
+    // 지수가 정의되지 않았거나 0 인 경우...
     if (typeof exp === 'undefined' || +exp === 0) {
       return Math[type](value);
     }
     value = +value;
     exp = +exp;
-    // If the value is not a number or the exp is not an integer...
+    // 입력이 숫자가 아니거나 지수가 정수가 아닌 경우...
     if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
       return NaN;
     }
@@ -74,19 +81,19 @@ Math.ceil(-7.004); // -7
     return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
   }
 
-  // Decimal round
+  // 십진수 round
   if (!Math.round10) {
     Math.round10 = function(value, exp) {
       return decimalAdjust('round', value, exp);
     };
   }
-  // Decimal floor
+  // 십진수 floor
   if (!Math.floor10) {
     Math.floor10 = function(value, exp) {
       return decimalAdjust('floor', value, exp);
     };
   }
-  // Decimal ceil
+  // 십진수 ceil
   if (!Math.ceil10) {
     Math.ceil10 = function(value, exp) {
       return decimalAdjust('ceil', value, exp);
@@ -123,7 +130,7 @@ Math.ceil10(-59, 1);       // -50
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also_(추가_참조)">See also (추가 참조)</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
  <li>{{jsxref("Math.abs()")}}</li>
