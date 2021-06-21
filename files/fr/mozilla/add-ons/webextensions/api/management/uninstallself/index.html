@@ -38,24 +38,24 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
   <dt><code>dialogMessage{{optional_inline}}</code></dt>
   <dd>String. Un message supplémentaire qui sera affiché dans la boite de dialogue de confirmation.</dd>
  </dl>
+ </dd>
+</dl>
 
- <h3 id="Valeur_retournée">Valeur retournée</h3>
+<h3 id="Valeur_retournée">Valeur retournée</h3>
 
- <p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désinstallation.</p>
+<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désinstallation.</p>
 
- <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
 
- <p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<p>{{Compat("webextensions.api.management.uninstallSelf")}}</p>
 
- <p>{{Compat("webextensions.api.management.uninstallSelf")}}</p>
+<h2 id="Exemples">Exemples</h2>
 
- <h2 id="Exemples">Exemples</h2>
+<p>Désinsallez l'extension, en demandant à l'utilisateur de confirmer. Dans le rappel, vérifiez si l'utilisateur a annulé la désinstallation.</p>
 
- <p>Désinsallez l'extension, en demandant à l'utilisateur de confirmer. Dans le rappel, vérifiez si l'utilisateur a annulé la désinstallation.</p>
+<p>Notez que n'avons pas passé un gestionnaire d'éxécution, car si la desinstallation  réussit, l'extension n'est plus disponible pour le gérer.</p>
 
- <p>Notez que n'avons pas passé un gestionnaire d'éxécution, car si la desinstallation  réussit, l'extension n'est plus disponible pour le gérer.</p>
-
- <pre class="brush: js">function onCanceled(error) {
+<pre class="brush: js">function onCanceled(error) {
   console.log(`Canceled: ${error}`);
 }
 
@@ -65,9 +65,9 @@ var uninstalling = browser.management.uninstallSelf({
 
 uninstalling.then(null, onCanceled);</pre>
 
- <p>Le même, mais aussi l'ajout d'un message personnalisé à la boite de dialogue :</p>
+<p>Le même, mais aussi l'ajout d'un message personnalisé à la boite de dialogue :</p>
 
- <pre class="brush: js">function onCanceled(error) {
+<pre class="brush: js">function onCanceled(error) {
   console.log(`Canceled: ${error}`);
 }
 
@@ -77,17 +77,16 @@ var uninstalling = browser.management.uninstallSelf({
 });
 
 uninstalling.then(null, onCanceled);</pre>
+<p>{{WebExtExamples}}</p>
 
- <p>{{WebExtExamples}}</p>
+<div class="note"><strong>Remerciements :</strong>
 
- <div class="note"><strong>Remerciements :</strong>
+<p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> dans le code de Chromium code.</p>
 
- <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/management"><code>chrome.management</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json"><code>management.json</code></a> dans le code de Chromium code.</p>
+<p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
+</div>
 
- <p>Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.</p>
- </div>
-
- <div class="hidden">
+<div class="hidden">
  <pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -116,6 +115,4 @@ uninstalling.then(null, onCanceled);</pre>
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 </pre>
- </div>
- </dd>
-</dl>
+</div>

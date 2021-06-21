@@ -3389,20 +3389,6 @@
       "chzhclq17"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2020-10-15T21:25:37.012Z",
-    "contributors": [
-      "alattalatta",
-      "Cho.Eun"
-    ]
-  },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2020-10-15T21:24:18.175Z",
-    "contributors": [
-      "alattalatta",
-      "hyeonseok"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2020-10-15T21:31:33.070Z",
     "contributors": [
@@ -4616,12 +4602,6 @@
       "composite"
     ]
   },
-  "Web/API/Element/currentStyle": {
-    "modified": "2019-03-23T22:28:24.891Z",
-    "contributors": [
-      "nugurejeil"
-    ]
-  },
   "Web/API/Element/getAttribute": {
     "modified": "2020-10-15T21:30:04.251Z",
     "contributors": [
@@ -4714,16 +4694,6 @@
       "ExE-Boss",
       "fscholz",
       "Kim.Hyunjung"
-    ]
-  },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2020-10-15T21:18:22.703Z",
-    "contributors": [
-      "alattalatta",
-      "fscholz",
-      "AshfaqHossain",
-      "teoli",
-      "Netaras"
     ]
   },
   "Web/API/Encoding_API": {
@@ -5617,21 +5587,6 @@
       "claudepache"
     ]
   },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2020-12-08T00:45:03.205Z",
-    "contributors": [
-      "dsma73",
-      "chrisdavidmills",
-      "alattalatta",
-      "LostCatLee",
-      "daesD",
-      "naduhy2",
-      "bingl2",
-      "nacyot",
-      "fscholz",
-      "JoonghunPark"
-    ]
-  },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
     "modified": "2020-07-21T23:16:52.351Z",
     "contributors": [
@@ -6162,12 +6117,6 @@
       "moonformeli"
     ]
   },
-  "Web/API/OffscreenCanvas/toBlob": {
-    "modified": "2020-10-15T22:14:42.795Z",
-    "contributors": [
-      "moonformeli"
-    ]
-  },
   "Web/API/OffscreenCanvas/width": {
     "modified": "2020-10-15T22:14:42.247Z",
     "contributors": [
@@ -6441,12 +6390,6 @@
   },
   "Web/API/RTCPeerConnection/onicegatheringstatechange": {
     "modified": "2020-10-15T22:21:36.115Z",
-    "contributors": [
-      "chansbro"
-    ]
-  },
-  "Web/API/RTCPeerConnection/onidentityresult": {
-    "modified": "2020-10-15T22:22:07.358Z",
     "contributors": [
       "chansbro"
     ]
@@ -9622,23 +9565,6 @@
       "alattalatta"
     ]
   },
-  "Web/CSS/linear-gradient()": {
-    "modified": "2020-11-16T08:57:34.736Z",
-    "contributors": [
-      "chrisdavidmills",
-      "alattalatta",
-      "KadirTopal",
-      "jh.Park",
-      "Sebastianz",
-      "Simplexible",
-      "wizAmit",
-      "slayslot",
-      "prayash",
-      "tamnajio",
-      "teoli",
-      "mirinae312"
-    ]
-  },
   "Web/CSS/margin": {
     "modified": "2020-10-15T21:55:14.551Z",
     "contributors": [
@@ -10143,17 +10069,6 @@
     "modified": "2019-03-23T22:40:12.545Z",
     "contributors": [
       "gblue1223"
-    ]
-  },
-  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2020-01-10T12:08:26.959Z",
-    "contributors": [
-      "alattalatta",
-      "sudo0272",
-      "Kaben",
-      "bombinari",
-      "naduhy2",
-      "miname"
     ]
   },
   "Web/Guide/Index": {
@@ -16504,26 +16419,6 @@
       "SpikeYou"
     ]
   },
-  "Web/Reference": {
-    "modified": "2019-03-23T23:28:22.951Z",
-    "contributors": [
-      "DeadIntegral",
-      "jarangseo",
-      "eyekorea",
-      "LimeClover",
-      "Channy",
-      "hyeonseok",
-      "narae_lee"
-    ]
-  },
-  "Web/Reference/API": {
-    "modified": "2019-03-23T23:23:26.342Z",
-    "contributors": [
-      "Netaras",
-      "tamnajio",
-      "Channy"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-11-05T05:19:15.768Z",
     "contributors": [
@@ -18360,6 +18255,20 @@
       "cap3618"
     ]
   },
+  "orphaned/Web/API/AbstractWorker": {
+    "modified": "2020-10-15T21:25:37.012Z",
+    "contributors": [
+      "alattalatta",
+      "Cho.Eun"
+    ]
+  },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2020-10-15T21:24:18.175Z",
+    "contributors": [
+      "alattalatta",
+      "hyeonseok"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T22:10:05.225Z",
     "contributors": [
@@ -18387,10 +18296,47 @@
       "dink95"
     ]
   },
+  "orphaned/Web/API/Element/currentStyle": {
+    "modified": "2019-03-23T22:28:24.891Z",
+    "contributors": [
+      "nugurejeil"
+    ]
+  },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2020-10-15T21:18:22.703Z",
+    "contributors": [
+      "alattalatta",
+      "fscholz",
+      "AshfaqHossain",
+      "teoli",
+      "Netaras"
+    ]
+  },
   "orphaned/Web/API/HTMLHyperlinkElementUtils": {
     "modified": "2020-10-15T22:15:23.043Z",
     "contributors": [
       "connorshea"
+    ]
+  },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2020-12-08T00:45:03.205Z",
+    "contributors": [
+      "dsma73",
+      "chrisdavidmills",
+      "alattalatta",
+      "LostCatLee",
+      "daesD",
+      "naduhy2",
+      "bingl2",
+      "nacyot",
+      "fscholz",
+      "JoonghunPark"
+    ]
+  },
+  "orphaned/Web/API/OffscreenCanvas/toBlob": {
+    "modified": "2020-10-15T22:14:42.795Z",
+    "contributors": [
+      "moonformeli"
     ]
   },
   "orphaned/Web/API/ParentNode": {
@@ -18418,10 +18364,33 @@
       "JungSWon"
     ]
   },
+  "orphaned/Web/API/RTCPeerConnection/onidentityresult": {
+    "modified": "2020-10-15T22:22:07.358Z",
+    "contributors": [
+      "chansbro"
+    ]
+  },
   "orphaned/Web/CSS/Index": {
     "modified": "2019-05-26T05:51:14.395Z",
     "contributors": [
       "alattalatta"
+    ]
+  },
+  "orphaned/Web/CSS/linear-gradient()": {
+    "modified": "2020-11-16T08:57:34.736Z",
+    "contributors": [
+      "chrisdavidmills",
+      "alattalatta",
+      "KadirTopal",
+      "jh.Park",
+      "Sebastianz",
+      "Simplexible",
+      "wizAmit",
+      "slayslot",
+      "prayash",
+      "tamnajio",
+      "teoli",
+      "mirinae312"
     ]
   },
   "orphaned/Web/Guide/Events": {
@@ -18461,6 +18430,17 @@
       "juyoungbang",
       "teoli",
       "Channy"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2020-01-10T12:08:26.959Z",
+    "contributors": [
+      "alattalatta",
+      "sudo0272",
+      "Kaben",
+      "bombinari",
+      "naduhy2",
+      "miname"
     ]
   },
   "orphaned/Web/HTML/Element/command": {
@@ -18633,6 +18613,26 @@
     "modified": "2020-10-15T22:15:31.566Z",
     "contributors": [
       "alattalatta"
+    ]
+  },
+  "orphaned/Web/Reference": {
+    "modified": "2019-03-23T23:28:22.951Z",
+    "contributors": [
+      "DeadIntegral",
+      "jarangseo",
+      "eyekorea",
+      "LimeClover",
+      "Channy",
+      "hyeonseok",
+      "narae_lee"
+    ]
+  },
+  "orphaned/Web/Reference/API": {
+    "modified": "2019-03-23T23:23:26.342Z",
+    "contributors": [
+      "Netaras",
+      "tamnajio",
+      "Channy"
     ]
   },
   "orphaned/Web/Security/Information_Security_Basics": {

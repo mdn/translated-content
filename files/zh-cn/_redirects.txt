@@ -706,7 +706,7 @@
 /zh-CN/docs/HTTP	/zh-CN/docs/Web/HTTP
 /zh-CN/docs/HTTP/HTTP_response_codes	/zh-CN/docs/conflicting/Web/HTTP/Status
 /zh-CN/docs/IndexedDB	/zh-CN/docs/Web/API/IndexedDB_API
-/zh-CN/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/zh-CN/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/zh-CN/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /zh-CN/docs/IndexedDB/IDBObjectStore	/zh-CN/docs/Web/API/IDBObjectStore
 /zh-CN/docs/IndexedDB/Using_IndexedDB	/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /zh-CN/docs/Introducing_the_Audio_API_Extension	/zh-CN/docs/Introducing_Audio_API_Extension
@@ -1428,7 +1428,10 @@
 /zh-CN/docs/WOFF	/zh-CN/docs/Web/Guide/WOFF
 /zh-CN/docs/Web-based_protocol_handlers	/zh-CN/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /zh-CN/docs/Web/API/APIWwindow.sidebar	/zh-CN/docs/Web/API/Window/sidebar
+/zh-CN/docs/Web/API/AbstractWorker	/zh-CN/docs/orphaned/Web/API/AbstractWorker
+/zh-CN/docs/Web/API/AbstractWorker/onerror	/zh-CN/docs/orphaned/Web/API/AbstractWorker/onerror
 /zh-CN/docs/Web/API/AmbientLightSensor/reading	/zh-CN/docs/Web/API/AmbientLightSensor/illuminance
+/zh-CN/docs/Web/API/Ambient_Light_Events	/zh-CN/docs/orphaned/Web/API/Ambient_Light_Events
 /zh-CN/docs/Web/API/AnalyserNode/fft	/zh-CN/docs/orphaned/Web/API/AnalyserNode/fft
 /zh-CN/docs/Web/API/ArrayBuffer	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-CN/docs/Web/API/ArrayBufferView	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
@@ -1476,7 +1479,8 @@
 /zh-CN/docs/Web/API/DOMImplementation.hasFeature	/zh-CN/docs/Web/API/DOMImplementation/hasFeature
 /zh-CN/docs/Web/API/Detecting_device_orientation	/zh-CN/docs/orphaned/Web/API/Detecting_device_orientation
 /zh-CN/docs/Web/API/DeviceAcceleration	/zh-CN/docs/Web/API/DeviceMotionEventAcceleration
-/zh-CN/docs/Web/API/DeviceLightEvent/Using_light_events	/zh-CN/docs/Web/API/Ambient_Light_Events
+/zh-CN/docs/Web/API/DeviceLightEvent	/zh-CN/docs/orphaned/Web/API/DeviceLightEvent
+/zh-CN/docs/Web/API/DeviceLightEvent/Using_light_events	/zh-CN/docs/orphaned/Web/API/Ambient_Light_Events
 /zh-CN/docs/Web/API/Document.querySelectorAll	/zh-CN/docs/Web/API/Document/querySelectorAll
 /zh-CN/docs/Web/API/Document.releaseCapture	/zh-CN/docs/Web/API/Document/releaseCapture
 /zh-CN/docs/Web/API/Document/async	/zh-CN/docs/Web/API/XMLDocument/async
@@ -1535,6 +1539,7 @@
 /zh-CN/docs/Web/API/Element/Activate_event	/zh-CN/docs/Web/API/Element/DOMActivate_event
 /zh-CN/docs/Web/API/Element/accessKey	/zh-CN/docs/Web/API/HTMLElement/accessKey
 /zh-CN/docs/Web/API/Element/addEventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
+/zh-CN/docs/Web/API/Element/currentStyle	/zh-CN/docs/orphaned/Web/API/Element/currentStyle
 /zh-CN/docs/Web/API/Element/name	/zh-CN/docs/conflicting/Web/API
 /zh-CN/docs/Web/API/Element/onafterscriptexecute	/zh-CN/docs/Web/API/Document/onafterscriptexecute
 /zh-CN/docs/Web/API/Element/onbeforescriptexecute	/zh-CN/docs/Web/API/Document/onbeforescriptexecute
@@ -1543,6 +1548,8 @@
 /zh-CN/docs/Web/API/Element/ongotpointercapture	/zh-CN/docs/conflicting/Web/API/GlobalEventHandlers/ongotpointercapture
 /zh-CN/docs/Web/API/Element/onpaste	/zh-CN/docs/Web/API/HTMLElement/onpaste
 /zh-CN/docs/Web/API/Element/removeAttributre	/zh-CN/docs/Web/API/Element/removeAttribute
+/zh-CN/docs/Web/API/Element/runtimeStyle	/zh-CN/docs/orphaned/Web/API/Element/runtimeStyle
+/zh-CN/docs/Web/API/ElementCSSInlineStyle/style	/zh-CN/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-CN/docs/Web/API/Entity	/zh-CN/docs/orphaned/Web/API/Entity
 /zh-CN/docs/Web/API/Event/CustomEvent	/zh-CN/docs/Web/API/CustomEvent
 /zh-CN/docs/Web/API/Event/altKey	/zh-CN/docs/conflicting/Web/API/MouseEvent/altKey
@@ -1612,7 +1619,7 @@
 /zh-CN/docs/Web/API/HTMLElement.offsetParent	/zh-CN/docs/Web/API/HTMLElement/offsetParent
 /zh-CN/docs/Web/API/HTMLElement.offsetTop	/zh-CN/docs/Web/API/HTMLElement/offsetTop
 /zh-CN/docs/Web/API/HTMLElement.offsetWidth	/zh-CN/docs/Web/API/HTMLElement/offsetWidth
-/zh-CN/docs/Web/API/HTMLElement.style	/zh-CN/docs/Web/API/ElementCSSInlineStyle/style
+/zh-CN/docs/Web/API/HTMLElement.style	/zh-CN/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-CN/docs/Web/API/HTMLElement.tabIndex	/zh-CN/docs/Web/API/HTMLOrForeignElement/tabIndex
 /zh-CN/docs/Web/API/HTMLElement.title	/zh-CN/docs/Web/API/HTMLElement/title
 /zh-CN/docs/Web/API/HTMLElement/blur	/zh-CN/docs/Web/API/HTMLOrForeignElement/blur
@@ -1620,7 +1627,7 @@
 /zh-CN/docs/Web/API/HTMLElement/focus	/zh-CN/docs/Web/API/HTMLOrForeignElement/focus
 /zh-CN/docs/Web/API/HTMLElement/forceSpellCheck	/zh-CN/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
 /zh-CN/docs/Web/API/HTMLElement/nonce	/zh-CN/docs/Web/API/HTMLOrForeignElement/nonce
-/zh-CN/docs/Web/API/HTMLElement/style	/zh-CN/docs/Web/API/ElementCSSInlineStyle/style
+/zh-CN/docs/Web/API/HTMLElement/style	/zh-CN/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-CN/docs/Web/API/HTMLElement/tabIndex	/zh-CN/docs/Web/API/HTMLOrForeignElement/tabIndex
 /zh-CN/docs/Web/API/HTMLFormElement.elements	/zh-CN/docs/Web/API/HTMLFormElement/elements
 /zh-CN/docs/Web/API/HTMLFormElement.reset	/zh-CN/docs/Web/API/HTMLFormElement/reset
@@ -1640,6 +1647,7 @@
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
 /zh-CN/docs/Web/API/IDBObjectStore.openCursor	/zh-CN/docs/Web/API/IDBObjectStore/openCursor
+/zh-CN/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/zh-CN/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /zh-CN/docs/Web/API/IndexedDB_API/IDBObjectStore	/zh-CN/docs/Web/API/IDBObjectStore
 /zh-CN/docs/Web/API/Intersection_Observer_API/点观察者API的时序元素可见性	/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace
@@ -1745,8 +1753,10 @@
 /zh-CN/docs/Web/API/Position/coords	/zh-CN/docs/Web/API/GeolocationPosition/coords
 /zh-CN/docs/Web/API/PositionError	/zh-CN/docs/Web/API/GeolocationPositionError
 /zh-CN/docs/Web/API/Push_API/Using_the_Push_API	/zh-CN/docs/conflicting/Web/API/Push_API
+/zh-CN/docs/Web/API/RTCPeerConnection/getDefaultIceServers	/zh-CN/docs/orphaned/Web/API/RTCPeerConnection/getDefaultIceServers
 /zh-CN/docs/Web/API/RandomSource	/zh-CN/docs/conflicting/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
+/zh-CN/docs/Web/API/Request/context	/zh-CN/docs/orphaned/Web/API/Request/context
 /zh-CN/docs/Web/API/Response/克隆	/zh-CN/docs/Web/API/Response/clone
 /zh-CN/docs/Web/API/SVGPathElement/getTotalLength	/zh-CN/docs/Web/API/SVGGeometryElement/getTotalLength
 /zh-CN/docs/Web/API/Screen.availHeight	/zh-CN/docs/Web/API/Screen/availHeight
@@ -1892,6 +1902,7 @@
 /zh-CN/docs/Web/API/XMLDocument.load	/zh-CN/docs/Web/API/XMLDocument/load
 /zh-CN/docs/Web/API/XMLHttpRequest/FormData	/zh-CN/docs/Web/API/FormData
 /zh-CN/docs/Web/API/XMLHttpRequest/openRequest	/zh-CN/docs/orphaned/Web/API/XMLHttpRequest/openRequest
+/zh-CN/docs/Web/API/XMLHttpRequestResponseType	/zh-CN/docs/orphaned/Web/API/XMLHttpRequestResponseType
 /zh-CN/docs/Web/API/console.dir	/zh-CN/docs/Web/API/Console/dir
 /zh-CN/docs/Web/API/console.group	/zh-CN/docs/Web/API/Console/group
 /zh-CN/docs/Web/API/console.groupCollapsed	/zh-CN/docs/Web/API/Console/groupCollapsed
@@ -2075,15 +2086,19 @@
 /zh-CN/docs/Web/CSS/filter-function/grayscale	/zh-CN/docs/Web/CSS/filter-function/grayscale()
 /zh-CN/docs/Web/CSS/filter-function/opacity	/zh-CN/docs/Web/CSS/filter-function/opacity()
 /zh-CN/docs/Web/CSS/filter滤镜	/zh-CN/docs/Web/CSS/filter
-/zh-CN/docs/Web/CSS/linear-gradient	/zh-CN/docs/Web/CSS/linear-gradient()
+/zh-CN/docs/Web/CSS/linear-gradient	/zh-CN/docs/orphaned/Web/CSS/linear-gradient()
+/zh-CN/docs/Web/CSS/linear-gradient()	/zh-CN/docs/orphaned/Web/CSS/linear-gradient()
 /zh-CN/docs/Web/CSS/margin_collapsing	/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 /zh-CN/docs/Web/CSS/max	/zh-CN/docs/Web/CSS/max()
 /zh-CN/docs/Web/CSS/min	/zh-CN/docs/Web/CSS/min()
 /zh-CN/docs/Web/CSS/minmax	/zh-CN/docs/Web/CSS/minmax()
-/zh-CN/docs/Web/CSS/radial-gradient	/zh-CN/docs/Web/CSS/radial-gradient()
+/zh-CN/docs/Web/CSS/radial-gradient	/zh-CN/docs/orphaned/Web/CSS/radial-gradient()
+/zh-CN/docs/Web/CSS/radial-gradient()	/zh-CN/docs/orphaned/Web/CSS/radial-gradient()
 /zh-CN/docs/Web/CSS/repeat	/zh-CN/docs/Web/CSS/repeat()
-/zh-CN/docs/Web/CSS/repeating-linear-gradient	/zh-CN/docs/Web/CSS/repeating-linear-gradient()
-/zh-CN/docs/Web/CSS/repeating-radial-gradient	/zh-CN/docs/Web/CSS/repeating-radial-gradient()
+/zh-CN/docs/Web/CSS/repeating-linear-gradient	/zh-CN/docs/orphaned/Web/CSS/repeating-linear-gradient()
+/zh-CN/docs/Web/CSS/repeating-linear-gradient()	/zh-CN/docs/orphaned/Web/CSS/repeating-linear-gradient()
+/zh-CN/docs/Web/CSS/repeating-radial-gradient	/zh-CN/docs/orphaned/Web/CSS/repeating-radial-gradient()
+/zh-CN/docs/Web/CSS/repeating-radial-gradient()	/zh-CN/docs/orphaned/Web/CSS/repeating-radial-gradient()
 /zh-CN/docs/Web/CSS/timing-function	/zh-CN/docs/conflicting/Web/CSS/easing-function
 /zh-CN/docs/Web/CSS/transform-function/matrix	/zh-CN/docs/Web/CSS/transform-function/matrix()
 /zh-CN/docs/Web/CSS/transform-function/matrix3d	/zh-CN/docs/Web/CSS/transform-function/matrix3d()
@@ -2315,9 +2330,10 @@
 /zh-CN/docs/Web/Guide/HTML/HTML5/HTML5_element_list	/zh-CN/docs/conflicting/Web/HTML/Element
 /zh-CN/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/zh-CN/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /zh-CN/docs/Web/Guide/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
-/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document	/zh-CN/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/zh-CN/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+/zh-CN/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/zh-CN/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes
 /zh-CN/docs/Web/Guide/Localizations_and_character_encodings	/zh-CN/docs/orphaned/Web/Guide/Localizations_and_character_encodings
 /zh-CN/docs/Web/Guide/Performance/Using_web_workers	/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers
@@ -2464,6 +2480,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Date/setTime	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setTime
 /zh-CN/docs/Web/JavaScript/Reference/Date/toJSON	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON
 /zh-CN/docs/Web/JavaScript/Reference/Date/valueOf	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
+/zh-CN/docs/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments
 /zh-CN/docs/Web/JavaScript/Reference/Errors/不能添加属性	/zh-CN/docs/Web/JavaScript/Reference/Errors/Cant_assign_to_property
 /zh-CN/docs/Web/JavaScript/Reference/Function	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function
 /zh-CN/docs/Web/JavaScript/Reference/Function/apply	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply
@@ -2643,6 +2660,8 @@
 /zh-CN/docs/Web/Progressive_web_apps/优势	/zh-CN/docs/conflicting/Web/Progressive_web_apps/Introduction
 /zh-CN/docs/Web/Progressive_web_apps/加载	/zh-CN/docs/Web/Progressive_web_apps/Loading
 /zh-CN/docs/Web/Progressive_web_apps/添加到主屏幕	/zh-CN/docs/Web/Progressive_web_apps/Add_to_home_screen
+/zh-CN/docs/Web/Reference	/zh-CN/docs/orphaned/Web/Reference
+/zh-CN/docs/Web/Reference/API	/zh-CN/docs/orphaned/Web/Reference/API
 /zh-CN/docs/Web/SVG/Attribute/文本锚点	/zh-CN/docs/Web/SVG/Attribute/text-anchor
 /zh-CN/docs/Web/SVG/Attribute/样式	/zh-CN/docs/Web/SVG/Attribute/Styling
 /zh-CN/docs/Web/SVG/Element/color-profile	/zh-CN/docs/orphaned/Web/SVG/Element/color-profile

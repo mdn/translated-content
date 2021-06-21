@@ -3584,25 +3584,6 @@
       "marcelorobson001"
     ]
   },
-  "Web/API/AbstractWorker": {
-    "modified": "2019-03-23T23:11:23.809Z",
-    "contributors": [
-      "teoli",
-      "mklauck"
-    ]
-  },
-  "Web/API/AbstractWorker/onerror": {
-    "modified": "2019-03-23T22:50:42.630Z",
-    "contributors": [
-      "daltonmenezes"
-    ]
-  },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2019-03-23T22:10:24.978Z",
-    "contributors": [
-      "andre-mendes"
-    ]
-  },
   "Web/API/Animation": {
     "modified": "2019-03-23T22:27:19.257Z",
     "contributors": [
@@ -5769,17 +5750,6 @@
       "guilhermemar",
       "IgorGoncalves",
       "cirocosta"
-    ]
-  },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2020-01-13T04:48:43.968Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jppaschoal",
-      "camilaavilarinho",
-      "guilhermemar",
-      "IgorGoncalves"
     ]
   },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
@@ -8665,13 +8635,6 @@
       "brunoeduardo"
     ]
   },
-  "Web/CSS/image-set()": {
-    "modified": "2020-11-16T08:53:55.560Z",
-    "contributors": [
-      "chrisdavidmills",
-      "leandroruel"
-    ]
-  },
   "Web/CSS/inheritance": {
     "modified": "2019-03-23T22:30:06.400Z",
     "contributors": [
@@ -8856,25 +8819,6 @@
     "contributors": [
       "joao-alberto",
       "talles.makoto"
-    ]
-  },
-  "Web/CSS/radial-gradient()": {
-    "modified": "2020-11-18T14:42:38.700Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Sebastianz",
-      "mrstork",
-      "srsaude"
-    ]
-  },
-  "Web/CSS/repeating-linear-gradient()": {
-    "modified": "2020-11-18T14:46:15.881Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Sebastianz",
-      "prayash",
-      "teoli",
-      "Erick_Ribeiro"
     ]
   },
   "Web/CSS/resolved_value": {
@@ -9218,23 +9162,6 @@
     "contributors": [
       "expalmer",
       "fellyph"
-    ]
-  },
-  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2020-10-07T01:45:20.737Z",
-    "contributors": [
-      "leandroembu",
-      "Lucas_Inacio",
-      "davimdantas",
-      "SaggitariusA",
-      "webennes",
-      "edercampelo",
-      "IgorGoncalves",
-      "dann",
-      "netoguimaraes",
-      "Stutz.D",
-      "eduardodx",
-      "AluisioASG"
     ]
   },
   "Web/Guide/Introduction_to_Web_development": {
@@ -15904,30 +15831,6 @@
       "rodolfo.ghiggi"
     ]
   },
-  "Web/Reference": {
-    "modified": "2020-09-10T17:40:01.881Z",
-    "contributors": [
-      "Luscas",
-      "jose.elias.0703",
-      "julio-elipse",
-      "Schieck",
-      "leonardocoelho",
-      "luizmassa",
-      "eliveltoncristiano"
-    ]
-  },
-  "Web/Reference/API": {
-    "modified": "2019-03-23T22:46:47.941Z",
-    "contributors": [
-      "julio-elipse",
-      "Anderson-Vasques",
-      "devmessias",
-      "angelorubin",
-      "amoedoamorim",
-      "takahan",
-      "pcf-pcf"
-    ]
-  },
   "Web/SVG": {
     "modified": "2019-06-09T13:24:36.730Z",
     "contributors": [
@@ -17158,6 +17061,25 @@
       "mak213k"
     ]
   },
+  "orphaned/Web/API/AbstractWorker": {
+    "modified": "2019-03-23T23:11:23.809Z",
+    "contributors": [
+      "teoli",
+      "mklauck"
+    ]
+  },
+  "orphaned/Web/API/AbstractWorker/onerror": {
+    "modified": "2019-03-23T22:50:42.630Z",
+    "contributors": [
+      "daltonmenezes"
+    ]
+  },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2019-03-23T22:10:24.978Z",
+    "contributors": [
+      "andre-mendes"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T21:55:19.824Z",
     "contributors": [
@@ -17169,6 +17091,17 @@
     "modified": "2020-08-30T22:44:17.906Z",
     "contributors": [
       "bermarques"
+    ]
+  },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2020-01-13T04:48:43.968Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "jppaschoal",
+      "camilaavilarinho",
+      "guilhermemar",
+      "IgorGoncalves"
     ]
   },
   "orphaned/Web/API/Node/Entendendo_o_uso_do_método_AppendChild-javascript": {
@@ -17205,6 +17138,32 @@
     "modified": "2019-03-23T22:45:26.552Z",
     "contributors": [
       "takahan"
+    ]
+  },
+  "orphaned/Web/CSS/image-set()": {
+    "modified": "2020-11-16T08:53:55.560Z",
+    "contributors": [
+      "chrisdavidmills",
+      "leandroruel"
+    ]
+  },
+  "orphaned/Web/CSS/radial-gradient()": {
+    "modified": "2020-11-18T14:42:38.700Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Sebastianz",
+      "mrstork",
+      "srsaude"
+    ]
+  },
+  "orphaned/Web/CSS/repeating-linear-gradient()": {
+    "modified": "2020-11-18T14:46:15.881Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Sebastianz",
+      "prayash",
+      "teoli",
+      "Erick_Ribeiro"
     ]
   },
   "orphaned/Web/Guide/CSS/CSS_media_queries_(consultas_de_mídia_em_CSS)": {
@@ -17271,6 +17230,23 @@
       "eduardodx"
     ]
   },
+  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2020-10-07T01:45:20.737Z",
+    "contributors": [
+      "leandroembu",
+      "Lucas_Inacio",
+      "davimdantas",
+      "SaggitariusA",
+      "webennes",
+      "edercampelo",
+      "IgorGoncalves",
+      "dann",
+      "netoguimaraes",
+      "Stutz.D",
+      "eduardodx",
+      "AluisioASG"
+    ]
+  },
   "orphaned/Web/HTML/Element/command": {
     "modified": "2019-03-23T23:38:57.259Z",
     "contributors": [
@@ -17328,6 +17304,30 @@
     "modified": "2020-10-15T22:12:37.977Z",
     "contributors": [
       "murillodmiranda"
+    ]
+  },
+  "orphaned/Web/Reference": {
+    "modified": "2020-09-10T17:40:01.881Z",
+    "contributors": [
+      "Luscas",
+      "jose.elias.0703",
+      "julio-elipse",
+      "Schieck",
+      "leonardocoelho",
+      "luizmassa",
+      "eliveltoncristiano"
+    ]
+  },
+  "orphaned/Web/Reference/API": {
+    "modified": "2019-03-23T22:46:47.941Z",
+    "contributors": [
+      "julio-elipse",
+      "Anderson-Vasques",
+      "devmessias",
+      "angelorubin",
+      "amoedoamorim",
+      "takahan",
+      "pcf-pcf"
     ]
   },
   "orphaned/Web/SVG/Element/color-profile": {

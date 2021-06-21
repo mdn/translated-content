@@ -1,0 +1,768 @@
+---
+title: 開始寫我們的Svelte待辦清單應用程式
+slug: >-
+  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
+tags:
+  - Beginner
+  - Components
+  - Frameworks
+  - JavaScript
+  - Learn
+  - Svelte
+  - client-side
+  - state
+  - 初學者
+  - 元件
+  - 框架
+  - 學習
+  - 客戶端
+  - 狀態
+---
+<div>{{LearnSidebar}}<br>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+
+<p class="summary">現在我們已經對Svelte運作機制有初步的了解後，就能開始建構我們的範例應用程式：一個待辦清單。此篇文章中，我們會先確認應用程式所需的功能有哪些，接著我們會建立<code>Todos.svelte</code>元件並寫一些靜態標記（markup）和樣式，待一切準備就緒後，就能開始開發我們待辦清單應用程式的相關功能，隨著後續文章會逐漸充實它。</p>
+
+<p class="summary">我們想要讓使用者們能夠瀏覽、新增和刪除任務，也能標記它們以視為完成。這將是我們在走這個教學系列時會開發到的基本功能，此外，在開發過程中我們將會看到一些更進階的概念。</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">預備知識：</th>
+   <td>
+    <p>學習它，推薦你至少需熟悉基本的<a href="/zh-TW/docs/Learn/HTML">HTML</a>、<a href="/zh-TW/docs/Learn/CSS">CSS</a>與<a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>等程式語言且具備<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">終端機/命令列環境</a>基本知識。</p>
+
+    <p>你將會需要node和npm來安裝此編譯器來建置你的應用程式。</p>
+   </td>
+  </tr>
+  <tr>
+   <th scope="row">學習目標：</th>
+   <td>為了學習如何建立一個Svelte元件，於另一個元件內渲染它，透過props傳遞資料並保存它的狀態。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Code_along_with_us">和我們一起撰寫程式碼</h2>
+
+<h3 id="Git">Git</h3>
+
+<p>複製github儲存庫（假如你還沒完成）如下：</p>
+
+<pre class="brush: bash">git clone https://github.com/opensas/mdn-svelte-tutorial.git</pre>
+
+<p>接著取得當前應用程式狀態，執行如下：</p>
+
+<pre class="brush: bash">cd mdn-svelte-tutorial/02-starting-our-todo-app</pre>
+
+<p>或直接下載資料夾內容如下：</p>
+
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/02-starting-our-todo-app</pre>
+
+<p>記得執行<code>npm install &amp;&amp; npm run dev</code>以開發模式來運行你的應用程式。</p>
+
+<h3 id="REPL">REPL</h3>
+
+<p>為了使用REPL和我們一起撰寫程式碼，點擊如下連結：</p>
+
+<p><a href="https://svelte.dev/repl/b7b831ea3a354d3789cefbc31e2ca495?version=3.23.2">https://svelte.dev/repl/b7b831ea3a354d3789cefbc31e2ca495?version=3.23.2</a></p>
+
+<h2 id="Todo_list_app_features">待辦清單應用程式特徵</h2>
+
+<p>這是我們預計完成待辦清單應用程式的樣子：</p>
+
+<p><img alt="typical todo list app, with a title of 'what needs to be done', an input to enter more todos, and a list of todos with checkboxes" src="01-todo-list-app.png"></p>
+
+<p>使用這個使用者介面，我們的使用者將能夠做到以下事情：</p>
+
+<ul>
+ <li>瀏覽他們的任務。</li>
+ <li>標記那些任務視為已完成或待辦理，而不是刪除它們。</li>
+ <li>刪除那些任務。</li>
+ <li>新增那些新任務。</li>
+ <li>藉由狀態來過濾那些任務：全部、現行或已完成任務。</li>
+ <li>編輯那些任務。</li>
+ <li>標記全部任務視為現行或已完成狀態。</li>
+ <li>刪除全部已完成任務。</li>
+</ul>
+
+<h2 id="Building_our_first_component">Building our first component</h2>
+
+<p>Let's create a <code>Todos.svelte</code> component — this will contain our list of todos.</p>
+
+<ol>
+ <li>
+  <p>Create a new folder — <code>src/components</code>.</p>
+
+  <div class="notecard note">
+  <p><strong>Note</strong>: you can put your components anywhere inside the <code>src</code> folder, but the <code>components</code> folder is a recognized convention to follow, allowing you to find your components easily.</p>
+  </div>
+ </li>
+ <li>
+  <p>Create a file named <code>src/components/Todos.svelte</code> with the following content:</p>
+
+  <pre class="brush: html">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;</pre>
+ </li>
+ <li>
+  <p>Change the <code>title</code> element in <code>public/index.html</code> to contain the text <em>Svelte To-do list</em>:</p>
+
+  <pre class="brush: html">&lt;title&gt;Svelte To-Do list&lt;/title&gt;</pre>
+ </li>
+ <li>
+  <p>Open <code>src/App.svelte</code> and replace its contents with the following:</p>
+
+  <pre class="brush: html">&lt;script&gt;
+  import Todos from './components/Todos.svelte'
+&lt;/script&gt;
+
+&lt;Todos /&gt;</pre>
+ </li>
+ <li>
+  <p>In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a <code>name</code> prop being specified when we instantiate the <code>App</code> component inside <code>src/main.js</code>, which isn't used inside <code>App</code>. The console should currently give you a message along the lines of "&lt;App&gt; was created with unknown prop 'name'". To get rid of this, remove the <code>name</code> prop from <code>src/main.js</code>; it should now look like so:</p>
+
+  <pre class="brush: js">import App from './App.svelte'
+
+const app = new App({
+  target: document.body
+})
+
+export default app</pre>
+ </li>
+</ol>
+
+<p>Now if you check your testing server URL you'll see our <code>Todos.svelte</code> component being rendered:</p>
+
+<p><img alt="basic component rendering which a title that says 'Svelte to-do list'" src="02-todos-component-rendered.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
+
+<h2 id="Adding_static_markup">Adding static markup</h2>
+
+<p>For the moment we will start with a static markup representation of our app, so you can see what it will look like. Copy and paste the following into our <code>Todos.svelte</code> component file, replacing the existing content:</p>
+
+<pre class="brush: html">&lt;!-- Todos.svelte --&gt;
+&lt;div class="todoapp stack-large"&gt;
+
+  &lt;!-- NewTodo --&gt;
+  &lt;form&gt;
+    &lt;h2 class="label-wrapper"&gt;
+      &lt;label for="todo-0" class="label__lg"&gt;
+        What needs to be done?
+      &lt;/label&gt;
+    &lt;/h2&gt;
+    &lt;input type="text" id="todo-0" autocomplete="off"
+      class="input input__lg" /&gt;
+    &lt;button type="submit" disabled="" class="btn btn__primary btn__lg"&gt;
+      Add
+    &lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;!-- Filter --&gt;
+  &lt;div class="filters btn-group stack-exception"&gt;
+    &lt;button class="btn toggle-btn" aria-pressed="true"&gt;
+      &lt;span class="visually-hidden"&gt;Show&lt;/span&gt;
+      &lt;span&gt;All&lt;/span&gt;
+      &lt;span class="visually-hidden"&gt;tasks&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="btn toggle-btn" aria-pressed="false"&gt;
+      &lt;span class="visually-hidden"&gt;Show&lt;/span&gt;
+      &lt;span&gt;Active&lt;/span&gt;
+      &lt;span class="visually-hidden"&gt;tasks&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;button class="btn toggle-btn" aria-pressed="false"&gt;
+      &lt;span class="visually-hidden"&gt;Show&lt;/span&gt;
+      &lt;span&gt;Completed&lt;/span&gt;
+      &lt;span class="visually-hidden"&gt;tasks&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;!-- TodosStatus --&gt;
+  &lt;h2 id="list-heading"&gt;2 out of 3 items completed&lt;/h2&gt;
+
+  &lt;!-- Todos --&gt;
+  &lt;ul role="list" class="todo-list stack-large" aria-labelledby="list-heading"&gt;
+
+    &lt;!-- todo-1 (editing mode) --&gt;
+    &lt;li class="todo"&gt;
+      &lt;div class="stack-small"&gt;
+        &lt;form class="stack-small"&gt;
+          &lt;div class="form-group"&gt;
+            &lt;label for="todo-1" class="todo-label"&gt;
+              New name for 'Create a Svelte starter app'
+            &lt;/label&gt;
+            &lt;input type="text" id="todo-1" autocomplete="off" class="todo-text" /&gt;
+          &lt;/div&gt;
+          &lt;div class="btn-group"&gt;
+            &lt;button class="btn todo-cancel" type="button"&gt;
+              Cancel
+              &lt;span class="visually-hidden"&gt;renaming Create a Svelte starter app&lt;/span&gt;
+            &lt;/button&gt;
+            &lt;button class="btn btn__primary todo-edit" type="submit"&gt;
+              Save
+              &lt;span class="visually-hidden"&gt;new name for Create a Svelte starter app&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+
+    &lt;!-- todo-2 --&gt;
+    &lt;li class="todo"&gt;
+      &lt;div class="stack-small"&gt;
+        &lt;div class="c-cb"&gt;
+          &lt;input type="checkbox" id="todo-2" checked/&gt;
+          &lt;label for="todo-2" class="todo-label"&gt;
+            Create your first component
+          &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+          &lt;button type="button" class="btn"&gt;
+            Edit
+            &lt;span class="visually-hidden"&gt;Create your first component&lt;/span&gt;
+          &lt;/button&gt;
+          &lt;button type="button" class="btn btn__danger"&gt;
+            Delete
+            &lt;span class="visually-hidden"&gt;Create your first component&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+
+    &lt;!-- todo-3 --&gt;
+    &lt;li class="todo"&gt;
+      &lt;div class="stack-small"&gt;
+        &lt;div class="c-cb"&gt;
+          &lt;input type="checkbox" id="todo-3" /&gt;
+          &lt;label for="todo-3" class="todo-label"&gt;
+            Complete the rest of the tutorial
+          &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="btn-group"&gt;
+          &lt;button type="button" class="btn"&gt;
+            Edit
+            &lt;span class="visually-hidden"&gt;Complete the rest of the tutorial&lt;/span&gt;
+          &lt;/button&gt;
+          &lt;button type="button" class="btn btn__danger"&gt;
+            Delete
+            &lt;span class="visually-hidden"&gt;Complete the rest of the tutorial&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;hr /&gt;
+
+  &lt;!-- MoreActions --&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button type="button" class="btn btn__primary"&gt;Check all&lt;/button&gt;
+    &lt;button type="button" class="btn btn__primary"&gt;Remove completed&lt;/button&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;</pre>
+
+<p>Check the rendered out again, and you'll see something like this:</p>
+
+<p><img alt="A todo list app, but unstyled, with a title of `what needs to be done`, inputs, checkboxes, etc." src="03-unstyled-todo-app.png" style="border-style: solid; border-width: 1px;"></p>
+
+<p>The HTML markup above is not very nicely styled and it's also functionally useless. Nevertheless, let's have a look at the markup and see how it relates to our desired features:</p>
+
+<ul>
+ <li>A label and a text box for entering new tasks.</li>
+ <li>Three buttons to filter by task status.</li>
+ <li>A label showing the total number of tasks and the completed tasks.</li>
+ <li>An unordered list, which holds a list item for each task.</li>
+ <li>When the task is being edited, the list item has an input and two button to cancel or save modifications.</li>
+ <li>If the task is not being edited, there's a checkbox to set the completed status, and two buttons to edit or delete the task.</li>
+ <li>Finally there are two buttons to check/uncheck all task and to remove completed tasks.</li>
+</ul>
+
+<p>In subsequent articles we'll get all these features working, and more besides.</p>
+
+<h3 id="Accessibility_features_of_the_todo_list">Accessibility features of the todo list</h3>
+
+<p>You may notice some unusual attributes here. For example:</p>
+
+<pre class="brush: html">&lt;button class="btn toggle-btn" aria-pressed="true"&gt;
+  &lt;span class="visually-hidden"&gt;Show&lt;/span&gt;
+  &lt;span&gt;All&lt;/span&gt;
+  &lt;span class="visually-hidden"&gt;tasks&lt;/span&gt;
+&lt;/button&gt;</pre>
+
+<p>Here, <code>aria-pressed</code> tells assistive technology (like screen readers) that the button can be in one of two states: <code>pressed</code> or <code>unpressed</code>. Think of these as analogs for on and off. Setting a value of <code>true</code> means that the button is pressed by default.</p>
+
+<p>The class <code>visually-hidden</code> has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to screen reader users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for screenreader users that do not have the extra visual context to help them.</p>
+
+<p>Further down, you can find the following <code>&lt;ul&gt;</code> element:</p>
+
+<pre class="brush: html">&lt;ul role="list" className="todo-list stack-large" aria-labelledby="list-heading"&gt;</pre>
+
+<p>The <code>role</code> attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A <code>&lt;ul&gt;</code> is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the <code>&lt;ul&gt;</code>  element. If you want to learn more about why this is necessary, you can check out Scott O'Hara’s article, “Fixing Lists”.</p>
+
+<p>The <code>aria-labelledby</code> attribute tells assistive technologies that we're treating our <code>&lt;h2&gt;</code> with an <code>id</code> of <code>list-heading</code> as the label that describes the purpose of the list beneath it. Making this association gives the list a more informative context, which could help screen reader users better understand the purpose of it.</p>
+
+<p>This seems like a good time to talk about how Svelte deals with accessibility; let's do that now.</p>
+
+<h2 id="Svelte_accessibility_support">Svelte accessibility support</h2>
+
+<p>Svelte has a special emphasis on accessibility. The intention is to encourage developers to write more accessible code "by default". Being a compiler, Svelte can statically analyze our HTML templates to provide accessibility warnings when components are being compiled.</p>
+
+<p>Accessibility (shortened to a11y) isn't always easy to get right, but Svelte will help by warning you if you write inaccessible markup.</p>
+
+<p>For example, if we add an <code>&lt;img&gt;</code> element to our <code>todos.svelte</code> component without its corresponding <code>alt</code> prop:</p>
+
+<pre class="brush: html">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;
+
+&lt;img height="32" width="88" src="https://www.w3.org/WAI/wcag2A"&gt;
+</pre>
+
+<p>The compiler will issue the following warning:</p>
+
+<pre class="brush: bash">(!) Plugin svelte: A11y: &lt;img&gt; element should have an alt attribute
+src/components/Todos.svelte
+1: &lt;h1&gt;Svelte To-Do list&lt;/h1&gt;
+2:
+3: &lt;img height="32" width="88" src="https://www.w3.org/WAI/wcag2A"&gt;
+   ^
+created public/build/bundle.js in 220ms
+
+[2020-07-15 04:07:43] waiting for changes...</pre>
+
+<p>Moreover, our editor can display this warning even before calling the compiler:</p>
+
+<p><img alt="A code editor window showing an image tag, with a popup error message saying that the element should have an alt attribute" src="04-svelte-accessibility-support.png"></p>
+
+<p>You can tell Svelte to ignore this warning for the next block of markup with a <a href="https://svelte.dev/docs#Comments">comment</a> beginning with <code>svelte-ignore</code>, like this:</p>
+
+<pre class="brush: html">&lt;!-- svelte-ignore a11y-missing-attribute --&gt;
+&lt;img height="32" width="88" src="https://www.w3.org/WAI/wcag2A"&gt;
+</pre>
+
+<div class="notecard note">
+<p><strong>Note</strong>: With VSCode you can automatically add this ignore comment by clicking on the <em>Quick fix...</em> link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.</p>
+</div>
+
+<p>If you want to globally disable this warning you can add this <code>onwarn</code> handler to your <code>rollup.config.js</code> file inside the configuration for the <code>Svelte</code> plugin, like this:</p>
+
+<pre class="brush: js">plugins: [
+  svelte({
+    dev: !production,
+    css: css =&gt; {
+      css.write('public/build/bundle.css');
+    },
+    // Warnings are normally passed straight to Rollup. You can
+    // optionally handle them here, for example to squelch
+    // warnings with a particular code
+    onwarn: (warning, handler) =&gt; {
+      // e.g. I don't care about screen readers -&gt; please DON'T DO THIS!!!
+      if (warning.code === 'a11y-missing-attribute') return;
+
+      // let Rollup handle all other warnings normally
+      handler(warning);
+    }
+  }),
+
+  ...
+]
+</pre>
+
+<p>By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt-out of specific warnings.</p>
+
+<div class="notecard note">
+<p><strong>Note</strong>: you should only disable these warnings if you have good reasons to do so, for example while building a quick prototype. It's important to be a good web citizen and make your pages accessible to the broadest possible userbase.</p>
+</div>
+
+<p>The accessibility rules checked by Svelte are taken from <a href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules">eslint-plugin-jsx-a11y</a>, a plugin for eslint that provides static checks for many accessibility rules on JSX elements. Svelte aims to implement all of them in its compiler, and most of them have already been ported to Svelte. On GitHub you can see <a href="https://github.com/sveltejs/svelte/issues/820">which accessibility checks are still missing</a>. You can check the meaning of each rule by clicking on its link.</p>
+
+<h2 id="Styling_our_markup">Styling our markup</h2>
+
+<p>Let's make the todo list look a little better. Replace the contents of the file <code>public/global.css</code> with the following:</p>
+
+<pre class="brush: css">/* RESETS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 3px dashed #228bec;
+  outline-offset: 0;
+}
+html {
+  font: 62.5% / 1.15 sans-serif;
+}
+h1,
+h2 {
+  margin-bottom: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+input[type="text"] {
+  border-radius: 0;
+}
+body {
+  width: 100%;
+  max-width: 68rem;
+  margin: 0 auto;
+  font: 1.6rem/1.25 Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #4d4d4d;
+}
+@media screen and (min-width: 620px) {
+  body {
+    font-size: 1.9rem;
+    line-height: 1.31579;
+  }
+}
+/*END RESETS*/
+
+/* GLOBAL STYLES */
+.form-group &gt; input[type="text"] {
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+.btn {
+  padding: 0.8rem 1rem 0.7rem;
+  border: 0.2rem solid #4d4d4d;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.btn.toggle-btn {
+  border-width: 1px;
+  border-color: #d3d3d3;
+}
+.btn.toggle-btn[aria-pressed="true"] {
+  text-decoration: underline;
+  border-color: #4d4d4d;
+}
+.btn__danger {
+  color: #fff;
+  background-color: #ca3c3c;
+  border-color: #bd2130;
+}
+.btn__filter {
+  border-color: lightgrey;
+}
+.btn__primary {
+  color: #fff;
+  background-color: #000;
+}
+.btn__primary:disabled {
+  color: darkgrey;
+  background-color:#565656;
+}
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-group &gt; * {
+  flex: 1 1 49%;
+}
+.btn-group &gt; * + * {
+  margin-left: 0.8rem;
+}
+.label-wrapper {
+  margin: 0;
+  flex: 0 0 100%;
+  text-align: center;
+}
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+[class*="stack"] &gt; * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.stack-small &gt; * + * {
+  margin-top: 1.25rem;
+}
+.stack-large &gt; * + * {
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 550px) {
+  .stack-small &gt; * + * {
+    margin-top: 1.4rem;
+  }
+  .stack-large &gt; * + * {
+    margin-top: 2.8rem;
+  }
+}
+.stack-exception {
+  margin-top: 1.2rem;
+}
+/* END GLOBAL STYLES */
+
+.todoapp {
+  background: #fff;
+  margin: 2rem 0 4rem 0;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 550px) {
+  .todoapp {
+    padding: 4rem;
+  }
+}
+.todoapp &gt; * {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.todoapp &gt; form {
+  max-width: 100%;
+}
+.todoapp &gt; h1 {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.label__lg {
+  line-height: 1.01567;
+  font-weight: 300;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.input__lg {
+  padding: 2rem;
+  border: 2px solid #000;
+}
+.input__lg:focus {
+  border-color: #4d4d4d;
+  box-shadow: inset 0 0 0 2px;
+}
+[class*="__lg"] {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.9rem;
+}
+[class*="__lg"]:not(:last-child) {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 620px) {
+  [class*="__lg"] {
+    font-size: 2.4rem;
+  }
+}
+.filters {
+  width: 100%;
+  margin: unset auto;
+}
+/* Todo item styles */
+.todo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.todo &gt; * {
+  flex: 0 0 100%;
+}
+.todo-text {
+  width: 100%;
+  min-height: 4.4rem;
+  padding: 0.4rem 0.8rem;
+  border: 2px solid #565656;
+}
+.todo-text:focus {
+  box-shadow: inset 0 0 0 2px;
+}
+/* CHECKBOX STYLES */
+.c-cb {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.25;
+  display: block;
+  position: relative;
+  min-height: 44px;
+  padding-left: 40px;
+  clear: left;
+}
+.c-cb &gt; label::before,
+.c-cb &gt; input[type="checkbox"] {
+  box-sizing: border-box;
+  top: -2px;
+  left: -2px;
+  width: 44px;
+  height: 44px;
+}
+.c-cb &gt; input[type="checkbox"] {
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  opacity: 0;
+}
+.c-cb &gt; label {
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 8px 15px 5px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.c-cb &gt; label::before {
+  content: "";
+  position: absolute;
+  border: 2px solid currentColor;
+  background: transparent;
+}
+.c-cb &gt; input[type="checkbox"]:focus + label::before {
+  border-width: 4px;
+  outline: 3px dashed #228bec;
+}
+.c-cb &gt; label::after {
+  box-sizing: content-box;
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 9px;
+  width: 18px;
+  height: 7px;
+  transform: rotate(-45deg);
+  border: solid;
+  border-width: 0 0 5px 5px;
+  border-top-color: transparent;
+  opacity: 0;
+  background: transparent;
+}
+.c-cb &gt; input[type="checkbox"]:checked + label::after {
+  opacity: 1;
+}</pre>
+
+<p>With our markup styled, everything now looks better:</p>
+
+<p><img alt="Our todo list app, styled, with a title of 'what needs to be done', an input to enter more todos, and a list of todos with checkboxes" src="05-styled-todo-app.png"></p>
+
+<h2 id="The_code_so_far">The code so far</h2>
+
+<h3 id="Git_2">Git</h3>
+
+<p>To see the state of the code as it should be at the end of this article, access your copy of our repo like this:</p>
+
+<pre class="brush: bash">cd mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
+
+<p>Or directly download the folder's content:</p>
+
+<pre class="brush: bash">npx degit opensas/mdn-svelte-tutorial/03-adding-dynamic-behavior</pre>
+
+<p>Remember to run <code>npm install &amp;&amp; npm run dev</code> to start your app in development mode.</p>
+
+<h3 id="REPL_2">REPL</h3>
+
+<p>To see the current state of the code in a REPL, visit:</p>
+
+<p><a href="https://svelte.dev/repl/c862d964d48d473ca63ab91709a0a5a0?version=3.23.2">https://svelte.dev/repl/c862d964d48d473ca63ab91709a0a5a0?version=3.23.2</a></p>
+
+<h2 id="Summary">Summary</h2>
+
+<p>With our markup and styling in place our Todo list app is starting to take shape, and we have everything ready so that we can start to focus on the features we have to implement.</p>
+
+<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+
+<h2 id="In_this_module">於此模組中</h2>
+
+<ul>
+ <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">前端框架介紹</a></li>
+ <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">框架主要功能</a></li>
+ <li>React
+  <ul>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">React入門</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">建立我們的React待辦清單</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">元件化我們的React應用程式</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React互動性：事件與狀態</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React互動性：編輯、過濾、條件式渲染</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">React無障礙</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React資源</a></li>
+  </ul>
+ </li>
+ <li>Ember
+  <ul>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Ember入門</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember應用程式結構及元件化</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember互動性：事件、類別、狀態</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember互動性：Footer功能、條件式渲染</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Ember路由</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember資源及偵錯</a></li>
+  </ul>
+ </li>
+ <li>Vue
+  <ul>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Vue入門</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">建立第一個Vue元件</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">渲染Vue清單</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">新增待辦表單：Vue事件、方法、模型</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">透過CSS樣式化Vue元件</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">使用Vue計算屬性</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue條件式渲染：編輯已存在的待辦表單</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">聚焦Vue refs</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue資源</a></li>
+  </ul>
+ </li>
+ <li>Svelte
+  <ul>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Svelte入門</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">開始寫我們的Svelte待辦清單應用程式</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Svelte中的動態行為：變數及屬性</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">元件化我們的Svelte應用程式</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">進階Svelte：反應性、生命週期、無障礙</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">和Svelte stores共舞</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">Svelte中的TypeScript</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">部署和下一步</a></li>
+  </ul>
+ </li>
+ <li>Angular
+   <ul>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Angular入門</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">開始我們的Angular待辦清單應用程式</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">樣式化我們的Angular應用程式</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">建立（待辦清單）項目元件</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">過濾我們的待辦項目</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">建置Angular應用程式及更多資源</a></li>
+   </ul>
+ </li>
+</ul>
