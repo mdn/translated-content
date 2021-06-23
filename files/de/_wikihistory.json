@@ -3650,14 +3650,6 @@
       "Huan"
     ]
   },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2020-01-13T04:47:55.526Z",
-    "contributors": [
-      "chrisdavidmills",
-      "gmagholder",
-      "Julini"
-    ]
-  },
   "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
     "modified": "2020-01-13T04:47:56.415Z",
     "contributors": [
@@ -3886,12 +3878,6 @@
       "fscholz",
       "jsx",
       "Jonas"
-    ]
-  },
-  "Web/API/Node/setUserData": {
-    "modified": "2019-03-23T22:05:46.565Z",
-    "contributors": [
-      "Nonononoki"
     ]
   },
   "Web/API/Node/textContent": {
@@ -7283,18 +7269,6 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/linear-gradient()": {
-    "modified": "2020-11-16T08:56:43.415Z",
-    "contributors": [
-      "chrisdavidmills",
-      "marcus-at-localhost",
-      "JuSchu",
-      "sahin",
-      "Sebastianz",
-      "prayash",
-      "auranvesdranor"
-    ]
-  },
   "Web/CSS/list-style": {
     "modified": "2019-03-24T00:03:48.208Z",
     "contributors": [
@@ -8151,13 +8125,6 @@
     "contributors": [
       "blackjack4494",
       "lxdiamond"
-    ]
-  },
-  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2019-03-18T20:37:20.242Z",
-    "contributors": [
-      "SebinNyshkim",
-      "BlackRebell89"
     ]
   },
   "Web/Guide/Mobile": {
@@ -10331,12 +10298,6 @@
       "akumagamo"
     ]
   },
-  "Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
-    "modified": "2020-03-12T19:47:33.971Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
     "modified": "2020-03-12T19:47:43.541Z",
     "contributors": [
@@ -11920,101 +11881,6 @@
       "HighTower79",
       "m3t4lukas",
       "blub0hr"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:39:41.133Z",
-    "contributors": [
-      "verij51",
-      "Streamities",
-      "kdex",
-      "Flonk",
-      "schlagi123",
-      "the-bluesnik",
-      "GinoHereIam",
-      "Chris-CR",
-      "Fearodin"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@iterator": {
-    "modified": "2020-10-15T22:01:27.148Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@species": {
-    "modified": "2020-10-15T22:01:26.820Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T22:01:26.636Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2020-10-15T22:01:24.339Z",
-    "contributors": [
-      "shaedrich",
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2020-10-15T22:01:25.242Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2020-10-15T22:01:26.606Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T21:53:59.055Z",
-    "contributors": [
-      "schlagi123",
-      "Techworker"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T22:01:25.184Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2020-10-15T22:01:25.655Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2020-10-15T21:57:34.550Z",
-    "contributors": [
-      "schlagi123",
-      "patpir"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2020-10-15T22:01:24.339Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2020-10-15T22:01:24.292Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2020-10-15T22:01:25.714Z",
-    "contributors": [
-      "schlagi123"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Math": {
@@ -14700,11 +14566,25 @@
       "sv3m0r"
     ]
   },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2020-01-13T04:47:55.526Z",
+    "contributors": [
+      "chrisdavidmills",
+      "gmagholder",
+      "Julini"
+    ]
+  },
   "orphaned/Web/API/LinkStyle": {
     "modified": "2019-03-23T23:11:18.020Z",
     "contributors": [
       "fscholz",
       "Sebastianz"
+    ]
+  },
+  "orphaned/Web/API/Node/setUserData": {
+    "modified": "2019-03-23T22:05:46.565Z",
+    "contributors": [
+      "Nonononoki"
     ]
   },
   "orphaned/Web/CSS/:-moz-ui-valid": {
@@ -14741,6 +14621,18 @@
       "Sebastianz"
     ]
   },
+  "orphaned/Web/CSS/linear-gradient()": {
+    "modified": "2020-11-16T08:56:43.415Z",
+    "contributors": [
+      "chrisdavidmills",
+      "marcus-at-localhost",
+      "JuSchu",
+      "sahin",
+      "Sebastianz",
+      "prayash",
+      "auranvesdranor"
+    ]
+  },
   "orphaned/Web/Guide/Events": {
     "modified": "2019-03-18T21:10:49.464Z",
     "contributors": [
@@ -14765,11 +14657,24 @@
       "nothine"
     ]
   },
+  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2019-03-18T20:37:20.242Z",
+    "contributors": [
+      "SebinNyshkim",
+      "BlackRebell89"
+    ]
+  },
   "orphaned/Web/HTML/Global_attributes/dropzone": {
     "modified": "2020-10-15T21:40:11.332Z",
     "contributors": [
       "kaljak",
       "RmnWtnkmp"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Errors/Typed_array_invalid_arguments": {
+    "modified": "2020-03-12T19:47:33.971Z",
+    "contributors": [
+      "schlagi123"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype": {
@@ -14782,6 +14687,101 @@
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype": {
     "modified": "2020-10-15T22:01:09.829Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:39:41.133Z",
+    "contributors": [
+      "verij51",
+      "Streamities",
+      "kdex",
+      "Flonk",
+      "schlagi123",
+      "the-bluesnik",
+      "GinoHereIam",
+      "Chris-CR",
+      "Fearodin"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@iterator": {
+    "modified": "2020-10-15T22:01:27.148Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species": {
+    "modified": "2020-10-15T22:01:26.820Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
+    "modified": "2020-10-15T22:01:26.636Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2020-10-15T22:01:24.339Z",
+    "contributors": [
+      "shaedrich",
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2020-10-15T22:01:25.242Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2020-10-15T22:01:26.606Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2020-10-15T21:53:59.055Z",
+    "contributors": [
+      "schlagi123",
+      "Techworker"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-15T22:01:25.184Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2020-10-15T22:01:25.655Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
+    "modified": "2020-10-15T21:57:34.550Z",
+    "contributors": [
+      "schlagi123",
+      "patpir"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2020-10-15T22:01:24.339Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2020-10-15T22:01:24.292Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
+    "modified": "2020-10-15T22:01:25.714Z",
     "contributors": [
       "schlagi123"
     ]
