@@ -18255,13 +18255,6 @@
       "xuetengfei"
     ]
   },
-  "Web/API/Node/getUserData": {
-    "modified": "2019-03-23T23:09:37.543Z",
-    "contributors": [
-      "teoli",
-      "AlexChao"
-    ]
-  },
   "Web/API/Node/hasChildNodes": {
     "modified": "2019-03-24T00:16:18.421Z",
     "contributors": [
@@ -18469,13 +18462,6 @@
       "teoli",
       "khalid32",
       "ziyunfei"
-    ]
-  },
-  "Web/API/Node/setUserData": {
-    "modified": "2019-03-23T23:09:32.465Z",
-    "contributors": [
-      "teoli",
-      "AlexChao"
     ]
   },
   "Web/API/Node/textContent": {
@@ -39960,152 +39946,6 @@
       "Lovesueee"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:06:49.701Z",
-    "contributors": [
-      "laampui",
-      "wallena3",
-      "KaySama",
-      "Turner",
-      "YaoZeyuan",
-      "Mr_Big",
-      "maoyumaoxun",
-      "hong007",
-      "zhangchen",
-      "Amio",
-      "tsejx",
-      "thegatheringstorm",
-      "buckarooch",
-      "xgqfrms-GitHub",
-      "kameii",
-      "Cattla",
-      "huguangju",
-      "YangyuhaoBit",
-      "luneice",
-      "git123hub",
-      "Ende93",
-      "sqqihao",
-      "fskuok",
-      "teoli",
-      "ziyunfei",
-      "zhangyaochun1987"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@iterator": {
-    "modified": "2020-10-15T21:56:27.573Z",
-    "contributors": [
-      "Ende93",
-      "DuLinRain"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@species": {
-    "modified": "2020-10-15T21:57:35.566Z",
-    "contributors": [
-      "vanishcode"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2019-04-05T14:04:42.613Z",
-    "contributors": [
-      "DuLinRain"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/Map": {
-    "modified": "2020-10-15T22:29:02.199Z",
-    "contributors": [
-      "laampui"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2020-10-15T21:41:32.043Z",
-    "contributors": [
-      "zhangchen",
-      "SphinxKnight",
-      "HsuanLee",
-      "youth7"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2020-10-15T21:46:05.144Z",
-    "contributors": [
-      "zhangchen",
-      "royl8",
-      "Hushabyme",
-      "webery"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2020-10-15T21:39:28.129Z",
-    "contributors": [
-      "Louis-7",
-      "SphinxKnight",
-      "ngtmuzi",
-      "HsuanLee",
-      "Zhiyu_Wang"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T21:39:26.824Z",
-    "contributors": [
-      "Mr_kaze",
-      "niices",
-      "liu7654",
-      "SimonYang",
-      "SphinxKnight",
-      "ziyunfei",
-      "Zhiyu_Wang"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T21:39:27.794Z",
-    "contributors": [
-      "RainSlide",
-      "SphinxKnight",
-      "ziyunfei",
-      "Zhiyu_Wang"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2019-10-04T10:03:31.075Z",
-    "contributors": [
-      "Cyberhan123",
-      "SphinxKnight",
-      "DirtyPP"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2020-10-15T21:48:38.432Z",
-    "contributors": [
-      "Davidyanlong",
-      "RainSlide",
-      "zachary05"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2020-10-15T21:48:37.587Z",
-    "contributors": [
-      "CascEco",
-      "ts0307",
-      "RainSlide",
-      "MaZheng",
-      "Hushabyme",
-      "zachary05"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2019-09-06T04:35:48.843Z",
-    "contributors": [
-      "boyue",
-      "wenshin"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2019-10-04T09:57:38.527Z",
-    "contributors": [
-      "killsos",
-      "mingzhaov"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2020-10-15T21:21:09.889Z",
     "contributors": [
@@ -50148,6 +49988,20 @@
       "ChenChenJoke"
     ]
   },
+  "orphaned/Web/API/Node/getUserData": {
+    "modified": "2019-03-23T23:09:37.543Z",
+    "contributors": [
+      "teoli",
+      "AlexChao"
+    ]
+  },
+  "orphaned/Web/API/Node/setUserData": {
+    "modified": "2019-03-23T23:09:32.465Z",
+    "contributors": [
+      "teoli",
+      "AlexChao"
+    ]
+  },
   "orphaned/Web/API/Notation": {
     "modified": "2020-10-15T22:20:06.303Z",
     "contributors": [
@@ -50643,6 +50497,152 @@
     "modified": "2020-10-15T22:28:09.380Z",
     "contributors": [
       "lxuewu"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:06:49.701Z",
+    "contributors": [
+      "laampui",
+      "wallena3",
+      "KaySama",
+      "Turner",
+      "YaoZeyuan",
+      "Mr_Big",
+      "maoyumaoxun",
+      "hong007",
+      "zhangchen",
+      "Amio",
+      "tsejx",
+      "thegatheringstorm",
+      "buckarooch",
+      "xgqfrms-GitHub",
+      "kameii",
+      "Cattla",
+      "huguangju",
+      "YangyuhaoBit",
+      "luneice",
+      "git123hub",
+      "Ende93",
+      "sqqihao",
+      "fskuok",
+      "teoli",
+      "ziyunfei",
+      "zhangyaochun1987"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@iterator": {
+    "modified": "2020-10-15T21:56:27.573Z",
+    "contributors": [
+      "Ende93",
+      "DuLinRain"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species": {
+    "modified": "2020-10-15T21:57:35.566Z",
+    "contributors": [
+      "vanishcode"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
+    "modified": "2019-04-05T14:04:42.613Z",
+    "contributors": [
+      "DuLinRain"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/Map": {
+    "modified": "2020-10-15T22:29:02.199Z",
+    "contributors": [
+      "laampui"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2020-10-15T21:41:32.043Z",
+    "contributors": [
+      "zhangchen",
+      "SphinxKnight",
+      "HsuanLee",
+      "youth7"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2020-10-15T21:46:05.144Z",
+    "contributors": [
+      "zhangchen",
+      "royl8",
+      "Hushabyme",
+      "webery"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2020-10-15T21:39:28.129Z",
+    "contributors": [
+      "Louis-7",
+      "SphinxKnight",
+      "ngtmuzi",
+      "HsuanLee",
+      "Zhiyu_Wang"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2020-10-15T21:39:26.824Z",
+    "contributors": [
+      "Mr_kaze",
+      "niices",
+      "liu7654",
+      "SimonYang",
+      "SphinxKnight",
+      "ziyunfei",
+      "Zhiyu_Wang"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-15T21:39:27.794Z",
+    "contributors": [
+      "RainSlide",
+      "SphinxKnight",
+      "ziyunfei",
+      "Zhiyu_Wang"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2019-10-04T10:03:31.075Z",
+    "contributors": [
+      "Cyberhan123",
+      "SphinxKnight",
+      "DirtyPP"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
+    "modified": "2020-10-15T21:48:38.432Z",
+    "contributors": [
+      "Davidyanlong",
+      "RainSlide",
+      "zachary05"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2020-10-15T21:48:37.587Z",
+    "contributors": [
+      "CascEco",
+      "ts0307",
+      "RainSlide",
+      "MaZheng",
+      "Hushabyme",
+      "zachary05"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2019-09-06T04:35:48.843Z",
+    "contributors": [
+      "boyue",
+      "wenshin"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
+    "modified": "2019-10-04T09:57:38.527Z",
+    "contributors": [
+      "killsos",
+      "mingzhaov"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {

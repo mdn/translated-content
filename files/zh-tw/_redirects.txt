@@ -809,6 +809,7 @@
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function
+/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Map	/zh-TW/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object
 /zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/prototype	/zh-TW/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Promise
