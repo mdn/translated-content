@@ -2859,14 +2859,6 @@
       "lixingnan200"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2019-03-23T23:27:04.119Z",
-    "contributors": [
-      "jackblackevo",
-      "teoli",
-      "MashKao"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2019-03-23T22:40:29.435Z",
     "contributors": [
@@ -4121,16 +4113,6 @@
       "princetoad@gmail.com"
     ]
   },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2019-03-18T20:39:41.131Z",
-    "contributors": [
-      "choznerol",
-      "jackblackevo",
-      "birdca",
-      "foxbrush",
-      "thomaschen"
-    ]
-  },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
     "modified": "2019-06-26T04:56:24.502Z",
     "contributors": [
@@ -5373,13 +5355,6 @@
     "modified": "2019-03-23T22:27:58.659Z",
     "contributors": [
       "gn00979905"
-    ]
-  },
-  "Web/CSS/radial-gradient()": {
-    "modified": "2020-11-18T14:43:15.827Z",
-    "contributors": [
-      "chrisdavidmills",
-      "linzging"
     ]
   },
   "Web/CSS/ruby-position": {
@@ -7142,15 +7117,6 @@
       "SolomonKang"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:51:34.887Z",
-    "contributors": [
-      "othree",
-      "tainenko",
-      "jackblackevo",
-      "jsgao0"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2020-10-15T21:38:29.906Z",
     "contributors": [
@@ -8670,6 +8636,14 @@
       "iigmir"
     ]
   },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2019-03-23T23:27:04.119Z",
+    "contributors": [
+      "jackblackevo",
+      "teoli",
+      "MashKao"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2019-03-23T23:27:03.486Z",
     "contributors": [
@@ -8687,6 +8661,16 @@
     "modified": "2019-03-23T22:20:07.015Z",
     "contributors": [
       "jackblackevo"
+    ]
+  },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2019-03-18T20:39:41.131Z",
+    "contributors": [
+      "choznerol",
+      "jackblackevo",
+      "birdca",
+      "foxbrush",
+      "thomaschen"
     ]
   },
   "orphaned/Web/API/ParentNode": {
@@ -8714,6 +8698,13 @@
       "mrstork",
       "teoli",
       "Kennyluck"
+    ]
+  },
+  "orphaned/Web/CSS/radial-gradient()": {
+    "modified": "2020-11-18T14:43:15.827Z",
+    "contributors": [
+      "chrisdavidmills",
+      "linzging"
     ]
   },
   "orphaned/Web/Guide/Events": {
@@ -9081,6 +9072,15 @@
     "contributors": [
       "teoli",
       "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:51:34.887Z",
+    "contributors": [
+      "othree",
+      "tainenko",
+      "jackblackevo",
+      "jsgao0"
     ]
   },
   "orphaned/Web/Reference": {
