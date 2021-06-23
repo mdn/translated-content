@@ -3880,12 +3880,6 @@
       "Jonas"
     ]
   },
-  "Web/API/Node/setUserData": {
-    "modified": "2019-03-23T22:05:46.565Z",
-    "contributors": [
-      "Nonononoki"
-    ]
-  },
   "Web/API/Node/textContent": {
     "modified": "2020-10-15T21:19:51.146Z",
     "contributors": [
@@ -11889,101 +11883,6 @@
       "blub0hr"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:39:41.133Z",
-    "contributors": [
-      "verij51",
-      "Streamities",
-      "kdex",
-      "Flonk",
-      "schlagi123",
-      "the-bluesnik",
-      "GinoHereIam",
-      "Chris-CR",
-      "Fearodin"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@iterator": {
-    "modified": "2020-10-15T22:01:27.148Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@species": {
-    "modified": "2020-10-15T22:01:26.820Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T22:01:26.636Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2020-10-15T22:01:24.339Z",
-    "contributors": [
-      "shaedrich",
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2020-10-15T22:01:25.242Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2020-10-15T22:01:26.606Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T21:53:59.055Z",
-    "contributors": [
-      "schlagi123",
-      "Techworker"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T22:01:25.184Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2020-10-15T22:01:25.655Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2020-10-15T21:57:34.550Z",
-    "contributors": [
-      "schlagi123",
-      "patpir"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2020-10-15T22:01:24.339Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2020-10-15T22:01:24.292Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2020-10-15T22:01:25.714Z",
-    "contributors": [
-      "schlagi123"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2020-10-15T21:32:16.402Z",
     "contributors": [
@@ -14682,6 +14581,12 @@
       "Sebastianz"
     ]
   },
+  "orphaned/Web/API/Node/setUserData": {
+    "modified": "2019-03-23T22:05:46.565Z",
+    "contributors": [
+      "Nonononoki"
+    ]
+  },
   "orphaned/Web/CSS/:-moz-ui-valid": {
     "modified": "2019-03-23T22:42:34.212Z",
     "contributors": [
@@ -14782,6 +14687,101 @@
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/AsyncFunction/prototype": {
     "modified": "2020-10-15T22:01:09.829Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:39:41.133Z",
+    "contributors": [
+      "verij51",
+      "Streamities",
+      "kdex",
+      "Flonk",
+      "schlagi123",
+      "the-bluesnik",
+      "GinoHereIam",
+      "Chris-CR",
+      "Fearodin"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@iterator": {
+    "modified": "2020-10-15T22:01:27.148Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species": {
+    "modified": "2020-10-15T22:01:26.820Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
+    "modified": "2020-10-15T22:01:26.636Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2020-10-15T22:01:24.339Z",
+    "contributors": [
+      "shaedrich",
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2020-10-15T22:01:25.242Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2020-10-15T22:01:26.606Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2020-10-15T21:53:59.055Z",
+    "contributors": [
+      "schlagi123",
+      "Techworker"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-15T22:01:25.184Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2020-10-15T22:01:25.655Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
+    "modified": "2020-10-15T21:57:34.550Z",
+    "contributors": [
+      "schlagi123",
+      "patpir"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2020-10-15T22:01:24.339Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2020-10-15T22:01:24.292Z",
+    "contributors": [
+      "schlagi123"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
+    "modified": "2020-10-15T22:01:25.714Z",
     "contributors": [
       "schlagi123"
     ]

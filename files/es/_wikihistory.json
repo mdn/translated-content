@@ -18559,90 +18559,6 @@
       "carlosgctes"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:30:28.950Z",
-    "contributors": [
-      "Almiqui",
-      "AntonioSalazar",
-      "SphinxKnight",
-      "Sebastiancbvz",
-      "vaavJSdev",
-      "timgivois",
-      "aeroxmotion",
-      "PepeAleu",
-      "xavier.gallofre",
-      "rn3w",
-      "Grijander81",
-      "GustavoFernandez",
-      "rec",
-      "Kouen",
-      "facundoj"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2019-03-23T22:33:57.332Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2019-06-22T21:43:58.894Z",
-    "contributors": [
-      "gerardonavart",
-      "Grijander81"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2019-03-23T22:33:46.712Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T21:59:58.539Z",
-    "contributors": [
-      "gerardonavart",
-      "PabloContreras",
-      "katuno1981"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T22:01:57.424Z",
-    "contributors": [
-      "Marte",
-      "Sebastiancbvz"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2020-10-15T22:32:18.735Z",
-    "contributors": [
-      "fredydeltoro"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2019-03-23T22:31:40.425Z",
-    "contributors": [
-      "jesusfchavarro"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2019-03-23T22:28:28.999Z",
-    "contributors": [
-      "guillermojmc"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2019-03-23T22:34:02.057Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2020-10-15T22:12:33.830Z",
-    "contributors": [
-      "AlePerez92"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2020-10-15T21:17:08.782Z",
     "contributors": [
@@ -23632,6 +23548,90 @@
     "contributors": [
       "lajaso",
       "humbertaco"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:30:28.950Z",
+    "contributors": [
+      "Almiqui",
+      "AntonioSalazar",
+      "SphinxKnight",
+      "Sebastiancbvz",
+      "vaavJSdev",
+      "timgivois",
+      "aeroxmotion",
+      "PepeAleu",
+      "xavier.gallofre",
+      "rn3w",
+      "Grijander81",
+      "GustavoFernandez",
+      "rec",
+      "Kouen",
+      "facundoj"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2019-03-23T22:33:57.332Z",
+    "contributors": [
+      "Grijander81"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2019-06-22T21:43:58.894Z",
+    "contributors": [
+      "gerardonavart",
+      "Grijander81"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2019-03-23T22:33:46.712Z",
+    "contributors": [
+      "Grijander81"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2020-10-15T21:59:58.539Z",
+    "contributors": [
+      "gerardonavart",
+      "PabloContreras",
+      "katuno1981"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-15T22:01:57.424Z",
+    "contributors": [
+      "Marte",
+      "Sebastiancbvz"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2020-10-15T22:32:18.735Z",
+    "contributors": [
+      "fredydeltoro"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
+    "modified": "2019-03-23T22:31:40.425Z",
+    "contributors": [
+      "jesusfchavarro"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2019-03-23T22:28:28.999Z",
+    "contributors": [
+      "guillermojmc"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2019-03-23T22:34:02.057Z",
+    "contributors": [
+      "Grijander81"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
+    "modified": "2020-10-15T22:12:33.830Z",
+    "contributors": [
+      "AlePerez92"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
