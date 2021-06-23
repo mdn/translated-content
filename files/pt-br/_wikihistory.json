@@ -13517,85 +13517,6 @@
       "lucasmaiaesilva"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:43:23.476Z",
-    "contributors": [
-      "mathvalenza",
-      "mateusvelleda",
-      "chapeupreto",
-      "mauricio.araldi",
-      "Klauswk",
-      "renatoluna",
-      "BernardoMariano",
-      "raduq",
-      "raphaelpor"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2019-03-23T22:13:54.269Z",
-    "contributors": [
-      "renatoluna"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2019-05-29T19:41:42.276Z",
-    "contributors": [
-      "renatoluna"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2019-03-23T22:13:54.600Z",
-    "contributors": [
-      "renatoluna"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2019-09-16T15:32:37.374Z",
-    "contributors": [
-      "cezinha",
-      "rodrigocnascimento",
-      "renatoluna"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T21:58:34.923Z",
-    "contributors": [
-      "haskellcamargo"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2020-10-15T22:01:02.517Z",
-    "contributors": [
-      "clovislima",
-      "MarcVFX"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2019-03-23T22:20:29.616Z",
-    "contributors": [
-      "shuminyang"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2019-03-23T22:10:32.061Z",
-    "contributors": [
-      "haskellcamargo",
-      "nanquim"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2019-03-18T20:56:12.542Z",
-    "contributors": [
-      "mauricio.araldi",
-      "raduq"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2020-10-15T22:16:52.931Z",
-    "contributors": [
-      "liddack"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2019-03-23T23:21:27.763Z",
     "contributors": [
@@ -17298,6 +17219,85 @@
     "modified": "2020-10-15T22:29:51.823Z",
     "contributors": [
       "LuisAraujo"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:43:23.476Z",
+    "contributors": [
+      "mathvalenza",
+      "mateusvelleda",
+      "chapeupreto",
+      "mauricio.araldi",
+      "Klauswk",
+      "renatoluna",
+      "BernardoMariano",
+      "raduq",
+      "raphaelpor"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2019-03-23T22:13:54.269Z",
+    "contributors": [
+      "renatoluna"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2019-05-29T19:41:42.276Z",
+    "contributors": [
+      "renatoluna"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2019-03-23T22:13:54.600Z",
+    "contributors": [
+      "renatoluna"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2019-09-16T15:32:37.374Z",
+    "contributors": [
+      "cezinha",
+      "rodrigocnascimento",
+      "renatoluna"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-15T21:58:34.923Z",
+    "contributors": [
+      "haskellcamargo"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2020-10-15T22:01:02.517Z",
+    "contributors": [
+      "clovislima",
+      "MarcVFX"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
+    "modified": "2019-03-23T22:20:29.616Z",
+    "contributors": [
+      "shuminyang"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2019-03-23T22:10:32.061Z",
+    "contributors": [
+      "haskellcamargo",
+      "nanquim"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2019-03-18T20:56:12.542Z",
+    "contributors": [
+      "mauricio.araldi",
+      "raduq"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
+    "modified": "2020-10-15T22:16:52.931Z",
+    "contributors": [
+      "liddack"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {

@@ -9970,12 +9970,6 @@
       "AlexAlex"
     ]
   },
-  "Web/API/Node/getUserData": {
-    "modified": "2019-03-23T22:53:29.815Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
   "Web/API/Node/hasChildNodes": {
     "modified": "2019-03-23T22:53:39.791Z",
     "contributors": [
@@ -20065,100 +20059,6 @@
       "fullfs"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:31:18.471Z",
-    "contributors": [
-      "altpoint",
-      "AndreyGlyan",
-      "fanich37",
-      "Dzvonek",
-      "teryaew",
-      "xobotyi",
-      "akmil",
-      "SphinxKnight",
-      "WispProxy",
-      "dtretyakov"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@species": {
-    "modified": "2019-03-23T22:09:16.930Z",
-    "contributors": [
-      "WispProxy",
-      "ahtohbi4"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2019-03-23T22:11:36.456Z",
-    "contributors": [
-      "thepocp"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2020-10-15T21:50:15.883Z",
-    "contributors": [
-      "xobotyi",
-      "ahtohbi4",
-      "vesai"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2019-09-29T09:44:45.397Z",
-    "contributors": [
-      "evvs",
-      "rsarov",
-      "ahtohbi4"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T21:49:44.007Z",
-    "contributors": [
-      "swa1ps",
-      "trueanqu",
-      "SomeoneDeployMe"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T21:55:36.338Z",
-    "contributors": [
-      "dimon4ezzz",
-      "AndreyLipin",
-      "ahtohbi4"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2019-03-23T22:18:58.841Z",
-    "contributors": [
-      "Ignat86"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2019-03-23T22:09:06.332Z",
-    "contributors": [
-      "ahtohbi4"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2019-07-08T16:59:23.175Z",
-    "contributors": [
-      "elrostov",
-      "InoY",
-      "ahtohbi4"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2020-11-28T13:51:01.575Z",
-    "contributors": [
-      "ialexi-bl",
-      "Yumeiro",
-      "reilag"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2019-03-23T22:09:12.314Z",
-    "contributors": [
-      "ahtohbi4"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2020-10-15T21:26:14.248Z",
     "contributors": [
@@ -25432,6 +25332,12 @@
       "curdwithraisins"
     ]
   },
+  "orphaned/Web/API/Node/getUserData": {
+    "modified": "2019-03-23T22:53:29.815Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
   "orphaned/Web/API/Notation": {
     "modified": "2020-10-15T22:17:39.773Z",
     "contributors": [
@@ -25695,6 +25601,100 @@
     "modified": "2020-10-15T22:21:51.709Z",
     "contributors": [
       "AliaksandrZahorski"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:31:18.471Z",
+    "contributors": [
+      "altpoint",
+      "AndreyGlyan",
+      "fanich37",
+      "Dzvonek",
+      "teryaew",
+      "xobotyi",
+      "akmil",
+      "SphinxKnight",
+      "WispProxy",
+      "dtretyakov"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species": {
+    "modified": "2019-03-23T22:09:16.930Z",
+    "contributors": [
+      "WispProxy",
+      "ahtohbi4"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2019-03-23T22:11:36.456Z",
+    "contributors": [
+      "thepocp"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2020-10-15T21:50:15.883Z",
+    "contributors": [
+      "xobotyi",
+      "ahtohbi4",
+      "vesai"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2019-09-29T09:44:45.397Z",
+    "contributors": [
+      "evvs",
+      "rsarov",
+      "ahtohbi4"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2020-10-15T21:49:44.007Z",
+    "contributors": [
+      "swa1ps",
+      "trueanqu",
+      "SomeoneDeployMe"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-15T21:55:36.338Z",
+    "contributors": [
+      "dimon4ezzz",
+      "AndreyLipin",
+      "ahtohbi4"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2019-03-23T22:18:58.841Z",
+    "contributors": [
+      "Ignat86"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
+    "modified": "2019-03-23T22:09:06.332Z",
+    "contributors": [
+      "ahtohbi4"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2019-07-08T16:59:23.175Z",
+    "contributors": [
+      "elrostov",
+      "InoY",
+      "ahtohbi4"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2020-11-28T13:51:01.575Z",
+    "contributors": [
+      "ialexi-bl",
+      "Yumeiro",
+      "reilag"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
+    "modified": "2019-03-23T22:09:12.314Z",
+    "contributors": [
+      "ahtohbi4"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Math/Метод_Math.max()_": {

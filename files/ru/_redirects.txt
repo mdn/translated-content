@@ -435,6 +435,7 @@
 /ru/docs/Web/API/Node.replaceChild	/ru/docs/Web/API/Node/replaceChild
 /ru/docs/Web/API/Node.textContent	/ru/docs/Web/API/Node/textContent
 /ru/docs/Web/API/Node/baseURIObject	/ru/docs/conflicting/Web/API/Node
+/ru/docs/Web/API/Node/getUserData	/ru/docs/orphaned/Web/API/Node/getUserData
 /ru/docs/Web/API/Node/innerText	/ru/docs/Web/API/HTMLElement/innerText
 /ru/docs/Web/API/Node/localName	/ru/docs/Web/API/Element/localName
 /ru/docs/Web/API/Node/namespaceURI	/ru/docs/Web/API/Element/namespaceURI
@@ -757,7 +758,19 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/prototype	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/prototype	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /ru/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/@@species	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/clear	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/delete	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/entries	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/get	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/get
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/has	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/has
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/keys	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Map/prototype	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Map
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/set	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/set
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/size	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/size
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/values	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/values
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Math/Метод_Math.max()_	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Math/Метод_Math.max()_
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number
 /ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
