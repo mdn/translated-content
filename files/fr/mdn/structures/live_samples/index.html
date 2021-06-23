@@ -2,250 +2,172 @@
 title: Exemples live
 slug: MDN/Structures/Live_samples
 tags:
-  - Débutant
   - Guide
-  - MDN
+  - Intermediate
   - MDN Meta
+  - Structures
 translation_of: MDN/Structures/Live_samples
 original_slug: MDN/Structures/Exemples_live
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">MDN permet de transformer les exemples présentés dans les articles en exemples dit "live" qui permettent aux lecteurs de les voir en action. Les exemples live peuvent inclure du HTML, CSS et JavaScript. A noter, les exemples lives <em>ne sont pas intéractifs</em>; néanmoins, ils assurent que le code de sortie affiché pour un exemple est bien le même que défini par l'exemple, parce que la sortie est générée par le code d'exemple.</span></p>
+<p>MDN permet de transformer les exemples présentés dans les articles en exemples dit « live » qui permettent aux lecteurs de les voir en action. Les exemples live peuvent inclure du HTML, CSS et JavaScript. A noter, les exemples lives <em>ne sont pas interactifs</em> ; néanmoins, ils assurent que le code de sortie affiché pour un exemple est bien le même que défini par l'exemple, parce que la sortie est générée par le code d'exemple.</p>
 
-<h2 id="Comment_le_système_dexemples_lives_fonctionne-t-il">Comment le système d'exemples lives fonctionne-t-il ?</h2>
+<h2 id="how_does_the_live_sample_system_work">Comment le système d'exemples lives fonctionne-t-il ?</h2>
 
-<p>Le système d'exemple live rassemble tout le code existant et le fusionne dans un fichier HTML, puis affiche ce fichier dans une {{HTMLElement("iframe")}}. Un exemple live est composé de deux parties : </p>
-
-<ul>
- <li>Un groupe qui comporte tout le code de l'exemple</li>
- <li>La macro (crée l'<em>iframe</em> ou le lien qui) affiche le résultat du bloque de code</li>
-</ul>
-
-<p>A "group" of code blocks, in this context, is identified by the ID of a heading or a block element (such as a {{HTMLElement("div")}}).</p>
+<p>Le système d'exemple live rassemble tout le code existant et le fusionne dans un fichier HTML, puis affiche ce fichier dans une <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>. Un exemple live est composé de deux parties :</p>
 
 <ul>
- <li>If the ID belongs to a block element, the group includes all the code blocks within the enclosing block element whose ID is used. </li>
- <li>If the ID belongs to a heading, the group includes all the code blocks that are after that heading and before the next heading of the same heading level. Note that code blocks under subheadings of the specified heading are all used; if this is not the effect you want, use an ID on a block element instead.</li>
+  <li>Un groupe qui comporte tout le code de l'exemple</li>
+  <li>La macro (crée l'<em>iframe</em> ou le lien qui) affiche le résultat du bloc de code</li>
 </ul>
 
-<p>The macro uses a special URL to fetch the sample code for a given group: <code>http://<em>url-of-page</em>$samples/<em>group-id</em></code>, where <code>group-id</code> is the ID of the heading or block where the code is located. The resulting frame (or page) is sandboxed, secure, and technically may do anything that works on the Web. Of course, as a practical matter, the code must contribute to the point of the page that contains it; random stuff running on MDN will be removed by the editor community.</p>
+<p>Dans ce contexte, un « groupe » de blocs de code est identifié par l'ID d'un titre ou d'un élément de bloc (tel qu'un <a href="/fr/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a>).</p>
 
-<div class="note">
-<p><strong>Note:</strong> You <strong>must</strong> use the macro for presenting the live sample's output. MDN's editor will strip out any direct use of the <code>&lt;iframe&gt;</code> element in order to ensure security.</p>
+<ul>
+ <li>Si l'ID appartient à un élément de bloc, le groupe comprend tous les blocs de code de l'élément de bloc englobant dont l'ID est utilisé.</li>
+ <li>Si l'ID appartient à une rubrique, le groupe inclut tous les blocs de code qui se trouvent après cette rubrique et avant la rubrique suivante du même niveau de rubrique. Notez que les blocs de code sous les sous-titres de la rubrique spécifiée sont tous utilisés ; si ce n'est pas l'effet que vous souhaitez, utilisez plutôt un ID sur un élément de bloc.</li>
+</ul>
+
+<p>La macro utilise une URL spéciale pour récupérer l'échantillon de code pour un groupe donné, par exemple <code>https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/animation/_samples_/Cylon_Eye</code>. La structure générale est <code>https://<em>url-of-page</em>_samples_/<em>group-id</em></code>, où <code>group-id</code> est l'ID de la rubrique ou du bloc où se trouve le code.</p>
+
+<p>Le cadre (ou la page) qui en résulte est protégé par un bac à sable, sécurisé, et peut techniquement faire tout ce qui fonctionne sur le Web. Bien sûr, d'un point de vue pratique, le code doit contribuer à l'intérêt de la page qui le contient ; les trucs aléatoires qui tournent sur MDN seront supprimés par la communauté des éditeurs.</p>
+
+<div class="note notecard">
+  <p><b>Note :</b></p>
+  <p>Vous <strong>devez</strong> utiliser la macro pour présenter la sortie de l'échantillon en direct.</p>
 </div>
 
-<p>Each {{HTMLElement("pre")}} block containing code for the sample has a class on it that indicates whether it's HTML, CSS, or JavaScript code; these are "brush: html", "brush: css", and "brush: js". These classes must be on the corresponding blocks of code so that the wiki can use them correctly; fortunately, these are added for you automatically when you use the syntax highlighter features in the editor's toolbar.</p>
+<p>Chaque bloc <a href="/fr/docs/Web/HTML/Element/pre"><code>&lt;pre&gt;</code></a> contenant du code pour l'échantillon est doté d'une classe qui indique s'il s'agit de code HTML, CSS ou JavaScript ; ces classes sont « brush : html », « brush : css » et « brush : js ». Ces classes doivent se trouver sur les blocs de code correspondants.</p>
 
-<p>The live sample system has lots of options available, and we'll try to break things down to look at them a bit at a time.</p>
+<p>Le système d'échantillonnage en direct offre de nombreuses options, et nous allons essayer de les décomposer pour les examiner un par un.</p>
 
-<h3 id="Live_sample_macros">Live sample macros</h3>
+<h3 id="live_sample_macros">Exemples de macros en direct</h3>
 
-<p>There are two macros that you can use to display live samples:</p>
+<p>Il existe deux macros que vous pouvez utiliser pour afficher des échantillons en direct :</p>
 
 <ul>
- <li><span class="templateLink"><code><a href="/en-US/docs/Template:EmbedLiveSample">EmbedLiveSample</a> </code></span>embeds a live sample into a page</li>
- <li><span class="templateLink"><code><a href="/en-US/docs/Template:LiveSampleLink">LiveSampleLink</a></code></span> creates a link that opens the live sample in a new page</li>
+  <li><code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> embarque un échantillon vivant dans une page</li>
+  <li><code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/LiveSampleLink.ejs">LiveSampleLink</a></code> crée un lien qui ouvre l'échantillon en direct dans une nouvelle page.</li>
 </ul>
 
-<p>In many cases, you may be able to add the <span class="templateLink"><code><a href="/en-US/docs/Template:EmbedLiveSample">EmbedLiveSample</a></code></span> or <span class="templateLink"><code><a href="/en-US/docs/Template:LiveSampleLink">LiveSampleLink</a></code></span> macro to pages with little or no additional work! As long as the sample can be identified by a heading's ID or is in a block with an ID you can use, simply adding the macro should do the job.</p>
+<p>Dans de nombreux cas, vous pouvez être en mesure d'ajouter la macro <code>EmbedLiveSample</code> ou <code>LiveSampleLink</code> aux pages avec peu ou pas de travail supplémentaire ! Tant que l'échantillon peut être identifié par l'ID d'un titre ou se trouve dans un bloc avec un ID que vous pouvez utiliser, l'ajout de la macro devrait faire l'affaire.</p>
 
-<h4 id="EmbedLiveSample_macro">EmbedLiveSample macro</h4>
+<h4 id="embedlivesample_macro">La macro EmbedLiveSample</h4>
 
-<pre class="syntaxbox notranslate"> \{{EmbedLiveSample(<em>block_ID</em>, <em>width</em>, <em>height</em>, <em>screenshot_URL</em>, <em>page_slug</em>)}}</pre>
+<pre class="brush: js">\{{EmbedLiveSample(<em>block_ID</em>, <em>width</em>, <em>height</em>, <em>screenshot_URL</em>, <em>page_slug</em>)}}</pre>
 
 <dl>
- <dt>block_ID</dt>
- <dd>Required: The ID of the heading or enclosing block to draw the code from. The best way to be sure you have the ID right is to look at the URL of the section in the page's table of contents.</dd>
- <dt>width</dt>
- <dd>The width of the {{HTMLElement("iframe")}} to create, specified in <code>px</code>. This is optional; a reasonable default width will be used if you omit this. Note that if you want to use a specific width, you <em>must</em> also specify the height parameter.</dd>
- <dt>height</dt>
- <dd>The height of the {{HTMLElement("iframe")}} to create, specified in <code>px</code>. This is optional; a reasonable default height will be used if you omit this. Note that if you want to use a specific height, you <em>must</em> also specify the width parameter. If you use only one of them, the default frame size is used.</dd>
- <dt>screenshot_URL</dt>
- <dd>The URL of a screenshot that shows what the live sample should look like. This is optional, but can be useful for new technologies that may not work in the user's browser, so they can see what the sample would look like if it were supported by their browser. If you include this parameter, the screenshot is shown next to the live sample, with appropriate headings.</dd>
- <dt>page_slug</dt>
- <dd>The slug of the page containing the sample; this is optional, and if it's not provided, the sample is pulled from the same page on which the macro is used.</dd>
+  <dt>block_ID</dt>
+  <dd>Requis : L'ID de l'en-tête ou du bloc qui l'entoure d'où le code doit être tiré. La meilleure façon de s'assurer que l'ID est correct est de regarder l'URL de la section dans la table des matières de la page ; vous pouvez également le vérifier en consultant le source de la page.</dd>
+  <dt>width</dt>
+  <dd>La largeur de l'<a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> à créer, spécifiée en <code>px</code>. Ce paramètre est facultatif ; une largeur par défaut raisonnable sera utilisée si vous l'omettez. Notez que si vous voulez utiliser une largeur spécifique, vous <em>devez</em> également spécifier le paramètre height.</dd>
+  <dt>height</dt>
+  <dd>La hauteur de l'<a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a> à créer, spécifiée en <code>px</code>. Ce paramètre est facultatif ; une hauteur par défaut raisonnable sera utilisée si vous l'omettez. Notez que si vous voulez utiliser une hauteur spécifique, vous <em>devez</em> également spécifier le paramètre width. Si vous n'utilisez qu'un seul d'entre eux, la taille de cadre par défaut est utilisée.</dd>
+  <dt>screenshot_URL</dt>
+  <dd>L'URL d'une capture d'écran qui montre à quoi devrait ressembler l'échantillon en direct. Ce paramètre est facultatif, mais il peut être utile pour les nouvelles technologies qui ne fonctionnent peut-être pas dans le navigateur de l'utilisateur, afin qu'il puisse voir à quoi ressemblerait l'échantillon s'il était pris en charge par son navigateur. Si vous incluez ce paramètre, la capture d'écran est affichée à côté de l'échantillon en direct, avec les titres appropriés.</dd>
+  <dt>page_slug</dt>
+  <dd>
+    <p>Le slug de la page contenant l'échantillon ; ceci est facultatif, et s'il n'est pas fourni, l'échantillon est tiré de la même page sur laquelle la macro est utilisée.</p>
+    <div class="notecard warning">
+      <b>Attention :</b> Pour afficher un échantillon en direct d'une page contenant du code dans une page cible différente, la page contenant du code doit elle-même utiliser la macro <code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> pour intégrer un échantillon en direct dans sa propre page. Sinon, si la page contenant le code n'utilise pas elle-même la macro <code><a href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> sa propre page, l'échantillon vivant ne s'affichera pas du tout sur la page cible. (Voir <a href="https://github.com/mdn/yari/issues/2243">Le ticket Yari #2243</a>.)
+    </div>
+  </dd>
 </dl>
 
-<ol>
-</ol>
+<h4 id="livesamplelink_macro">La macro LiveSampleLink</h4>
 
-<h4 id="LiveSampleLink_macro">LiveSampleLink macro</h4>
-
-<pre class="syntaxbox notranslate"> \{{LiveSampleLink(<em>block_ID</em>, <em>link_text</em>)}}</pre>
+<pre class="brush: js">\{{LiveSampleLink(<em>block_ID</em>, <em>link_text</em>)}}</pre>
 
 <dl>
- <dt>block_ID</dt>
- <dd>The ID of the heading or enclosing block to draw the code from. The best way to be sure you have the ID right is to look at the URL of the section in the page's table of contents.</dd>
- <dt>link_text</dt>
- <dd>A string to use as the link text.</dd>
+  <dt>block_ID</dt>
+  <dd>L'ID de l'en-tête ou du bloc qui l'entoure, d'où le code doit être tiré. La meilleure façon de s'assurer que l'ID est correct est de regarder l'URL de la section dans la table des matières de la page ; vous pouvez également le vérifier en consultant le source de la page.</dd>
+  <dt>link_text</dt>
+  <dd>Une chaîne de caractères à utiliser comme texte du lien.</dd>
 </dl>
 
-<h2 id="Using_the_live_sample_system">Using the live sample system</h2>
+<h2 id="using_the_live_sample_system">Utilisation du système d'échantillonnage en direct</h2>
 
-<p>The sections below describe a few common use cases for the live sample system.</p>
+<p>Les sections ci-dessous décrivent quelques cas d'utilisation courants du système d'échantillons en direct.</p>
 
-<p>In all of these cases, to see the results of the live sample, you must click <strong>Save Changes</strong> in the editor (which takes you out of edit mode). Because of the reflexive, <a href="http://www.imdb.com/title/tt1375666/?ref_=nv_sr_1"><em>Inception</em></a>-like nature of live samples, the <strong>Preview Changes</strong> functionality is <em>not</em> able to display live samples.</p>
+<h3 id="turning_snippets_into_live_samples">Transformer des extraits en échantillons vivants</h3>
 
-<h3 id="Turning_snippets_into_live_samples">Turning snippets into live samples</h3>
+<p>Un cas d'utilisation courant consiste à prendre des extraits de code existants déjà présentés sur MDN et à les transformer en échantillons vivants.</p>
 
-<p>One common use case is to take existing code snippets already shown on MDN and turn them into live samples.</p>
+<h4 id="prepare_the_code_samples">Préparer les échantillons de code</h4>
 
-<h4 id="Prepare_the_code_samples">Prepare the code samples</h4>
+<p>La première étape consiste à ajouter des extraits de code ou à s'assurer que les extraits existants sont prêts à être utilisés comme échantillons en direct, tant au niveau du contenu que du balisage. Les extraits de code, pris dans leur ensemble, doivent constituer un exemple complet et exécutable. Par exemple, si l'extrait existant ne présente que du CSS, vous devrez peut-être ajouter un extrait de HTML sur lequel le CSS pourra opérer.</p>
 
-<p>The first step is to either add code snippets or ensure that existing ones are ready to be used as live samples, in terms of the content and in terms of their mark-up. The code snippets, taken together, must comprise a complete, runnable example. For example, if the existing snippet shows only CSS, you might need to add a snippet of HTML for the CSS to operate on.</p>
+<p>Chaque morceau de code doit se trouver dans un bloc <a href="/fr/docs/Web/HTML/Element/pre"><code>&lt;pre&gt;</code></a>, avec un bloc distinct pour chaque langue, correctement marqué quant à sa langue. La plupart du temps, cela a déjà été fait, mais il est toujours utile de revérifier pour s'assurer que chaque morceau de code est configuré avec la bonne syntaxe. Ceci est fait avec une classe sur l'élément <code>&lt;pre&gt;</code> de <code>brush:<em>language-type</em></code>, où <em>language-type</em> est le type de langage que le bloc contient, par exemple <code>html</code>, <code>css</code>, ou <code>js</code>.</p>
 
-<p>Each piece of code must be in a {{HTMLElement("pre")}} block, with a separate block for each language, properly marked as to which language it is. Most of the time, this has already been done, but it's always worth double-checking to be sure each piece of code is configured with the correct syntax. Next to the <strong>PRE</strong> icon in the toolbar is a drop-down menu icon (tooltip: Syntax Highlighter) with the various languages that MDN does syntax highlighting for. Setting the language for the block for syntax highlighting also correlates it with a language for the purposes of the live sample system.</p>
-
-<div class="note">
-<p><strong>Note:</strong> You may have more than one block for each language; they are all concatenated together. This lets you have a chunk of code, followed by an explanation of how it works, then another chunk, and so forth. This makes it even easier to produce tutorials and the like that utilize live samples interspersed with explanatory text.</p>
+<div class="note notecard">
+  <p><b>Note :</b></p>
+  <p>Vous pouvez avoir plus d'un bloc pour chaque langue ; ils sont tous concaténés ensemble. Vous pouvez ainsi avoir un morceau de code, suivi d'une explication de son fonctionnement, puis un autre morceau, et ainsi de suite. Il est ainsi encore plus facile de produire des didacticiels et autres qui utilisent des échantillons en direct entrecoupés de texte explicatif.</p>
 </div>
 
-<p>So make sure the {{HTMLElement("pre")}} blocks for your HTML, CSS, and/or JavaScript code are each configured correctly for that language's syntax highlighting, and you're good to go.</p>
+<p>Assurez-vous donc que les blocs <a href="/fr/docs/Web/HTML/Element/pre"><code>&lt;pre&gt;</code></a> de votre code HTML, CSS et/ou JavaScript sont chacun configurés correctement pour la coloration syntaxique de ce langage, et vous êtes prêt à partir.</p>
 
-<div class="note">
-<p><strong>Note:</strong> When pasting content into MDN, please be aware that if pasting styled content (including, for example, syntax highlighting in code being copied from another site) that you may be bringing along unwanted and unneeded additional styles or classes. Please be careful not to do this; if necessary, review your edit in source mode to remove these unnecessary styles and classes (or check it before pasting, or use the "Paste as plain text" option instead).</p>
-</div>
+<h2 id="live_sample_demo">Démonstration en direct</h2>
 
-<h4 id="Insert_the_live_sample_macro">Insert the live sample macro</h4>
+<p>Cette section est le résultat de l'utilisation du bouton du modèle d'échantillon en direct pour créer non seulement le titre principal (« Démonstration d'échantillon en direct »), mais aussi des sous-titres pour notre contenu HTML, CSS et JavaScript. Vous n'êtes pas limité à un bloc de chacun d'entre eux ; en outre, ils ne doivent pas nécessairement être dans un ordre particulier. Mélangez et associez !</p>
 
-<p>Once the code is in place and properly configured to identify each block's language, you need to insert the macro that creates the iframe.</p>
+<p>Vous pouvez choisir de supprimer tous ceux que vous souhaitez ; si vous n'avez pas besoin de script, supprimez simplement cette rubrique et son bloc <a href="/fr/docs/Web/HTML/Element/pre"><code>&lt;pre&gt;</code></a>. Vous pouvez également supprimer l'intitulé d'un bloc de code (« HTML », « CSS » ou « JavaScript »), puisqu'il n'est pas utilisé par la macro d'échantillonnage en direct.</p>
 
-<ol>
- <li>Click the <strong>Insert Live Code Sample iFrame</strong> button in the toolbar; it looks like this: <img alt="" src="https://mdn.mozillademos.org/files/5383/insert-live-sample-btn.png" style="height: 18px; width: 19px;">. This opens a dialog box for configuring your live sample frame:<img alt="" src="https://mdn.mozillademos.org/files/5385/sample-finder.png" style="height: 358px; width: 405px;"></li>
- <li>Under <strong>Document</strong>, enter the title of the article that contains the sample you wish to embed. By default, it's the article you're currently editing, but you can choose an article elsewhere on MDN, too. This makes it possible to reuse samples on multiple pages if needed. (If you type new text in this field, a menu of partially matching pages appears; select the title of the page you want.)</li>
- <li>In the <strong>Sections in Document</strong> menu, select the section in the article that contains the code blocks of the sample you want to embed.</li>
- <li>Click the <strong>OK</strong> button to generate and insert the macro call that creates the sample frame for you. The macro call looks something like this:<br>
-  <strong>\{{ EmbedLiveSample('Live_sample_demo') }}</strong></li>
-</ol>
+<p>Maintenant que le modèle a été inséré, nous pouvons insérer du code, voire du texte explicatif.</p>
 
-<h3 id="Adding_a_new_live_sample">Adding a new live sample</h3>
+<h3 id="html">HTML</h3>
 
-<p>If you're writing a new page, and want to insert code that you want to present as a live sample, even more of the work can be done for you by the editor! </p>
+<p>Ce HTML crée un paragraphe et quelques blocs pour nous aider à positionner et à styliser un message.</p>
 
-<ol>
- <li>Click the <strong>Insert Code Sample Template</strong> button in the toolbar, which looks like this: <img alt="" src="/files/4265/live-sample-button.png" style="height: 19px; width: 21px;">. This presents a simple dialog asking you to name your live sample:<br>
-  <img alt="" src="https://mdn.mozillademos.org/files/5387/insert-live-sample-template.png" style="height: 155px; width: 251px;"></li>
- <li>Enter the title of the sample; this is used as the heading for the sample. Make sure that your title makes sense within the context of the page you're on.</li>
- <li>Click <strong>OK</strong>. A new heading with the title you entered is created, with sub-headings and empty code blocks for HTML, CSS, and JavaScript.</li>
- <li>Delete any headings and code blocks you don't need.</li>
- <li>Enter the code that makes up your sample in the appropriate code blocks</li>
- <li><a href="#conventions">Check conventions</a></li>
-</ol>
-
-<h3 id="Using_the_Sample_Finder">Using the Sample Finder</h3>
-
-<p>As mentioned above, the Sample Finder is activated by clicking the<strong> Insert Live Code Sample iFrame</strong> icon. Unfortunately the the Sample Finder may produce a macro that is NOT usable without editing. There are two problem areas that should be carefully checked and edited if necessary.</p>
-
-<ol>
- <li><strong>Document </strong>field. This field will search as you type and present a list of documents that match your string. But the list presented will NOT include the sub-page. For example, say you are working on the subpage for <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style/negative">Negative </a>under the main page <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style">@counter-style</a>. The Sample Finder search will not find Negative but will find the main page @counter-style. When @counter-style is selected the field background turns green. See below for the issue this creates.</li>
- <li><strong>Sections in Document</strong>. The pull-down menu Sections in Document may not show the section that you need. Just pick one, say Examples, and it can be fixed with a simple edit.</li>
-</ol>
-
-<p>Here is what the Sample Finder produced:</p>
-
-<pre class="notranslate"><code>\{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/@counter-style') }}</code></pre>
-
-<p>This macro will not work. The block_ID is Examples and it should be Example in this case (check the source ID for this section to verify which block_ID you need to use. Similarly the page_slug is @counter-style and it should be @counter-style/negative. These corrections can be done directly in the page with Edit active.</p>
-
-<p>After editing the macro now looks like this:</p>
-
-<pre class="notranslate"><code>\{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/@counter-style/negative') }}</code></pre>
-
-<p>This edited macro will work correctly. If the macro is working correctly you will see the <strong>Open in CodePen</strong> button. A thumbnail of the example should appear above the Open in CodePen button. If the button is there but there isn't a thumbnail, just wait a few minutes. It may take some time for the server to generate it.</p>
-
-<h2 id="Live_sample_demo" name="Live_sample_demo">Finding samples that need updating</h2>
-
-<p>When looking for existing samples to update, there are three main kinds of updating you may wish to do:</p>
-
-<ul>
- <li>Turn an existing non-live example snippet into a live sample.</li>
- <li>Correct bugs in an existing live sample.</li>
- <li>Improve an existing live sample, or update a sample based on technology changes.</li>
-</ul>
-
-<div class="note">
-<p><strong>Note</strong><strong>:</strong> If you find an article that has samples in need of being updated to use the live sample system, please add the tag "NeedsLiveSample" to the page.</p>
-</div>
-
-<h3 id="Finding_samples_to_turn_into_live_samples">Finding samples to turn into live samples</h3>
-
-<p>MDN has lots of older examples that don't yet use the live sample system. Our goal is to update most or all of these to be live samples. This will improve consistency and usability. You will almost certainly find many of these as you use MDN on a daily basis; however, how can you find them if you're specifically looking for them to update? Unfortunately, there's not an easy way to do that. But there are some guidelines you can follow to help track them down:</p>
-
-<ul>
- <li>Start by looking at this <a href="/en-US/docs/tag/NeedsLiveSample" title="/en-US/docs/tag/NeedsLiveSamples">list of pages tagged with "NeedsLiveSample"</a>. These are pages that users have marked as needing updating. You should add this tag yourself, if you see a page that needs to be updated to use live samples but don't have time to fix right away.</li>
- <li>Browse through documentation trees that are likely to include examples, such as the <a href="/en-US/docs/Web/JavaScript/Guide" title="/en-US/docs/Web/JavaScript/Guide">JavaScript Guide</a>, <a href="/en-US/docs/Web/HTML" title="/en-US/docs/Web/HTML">HTML documentation</a>, and <a href="/en-US/docs/Web/CSS/Reference" title="/en-US/docs/Web/CSS/Reference">CSS reference</a>.</li>
- <li>Search for terms like "<a href="/en-US/search?q=example" title="/en-US/search?q=example">example</a>" or "<a href="/en-US/search?q=sample" title="/en-US/search?q=sample">sample</a>" and look through the results for pages to update.</li>
-</ul>
-
-<h2 id="Live_sample_demo" name="Live_sample_demo">Live sample demo</h2>
-
-<p>This section is the result of using the live sample template button to create not only the main heading ("Live sample demo"), but also subheadings for our HTML, CSS, and JavaScript content. You're not limited to one block of each; in addition, they don't even need to be in any particular order. Mix and match!</p>
-
-<p>You may choose to delete any of these you wish; if you don't need any script, just delete that heading and its {{HTMLElement("pre")}} block. You can also delete the heading for a code block ("HTML", "CSS", or "JavaScript"), since these are not used by the live sample macro.</p>
-
-<p>Now that the template has been inserted, we can put in some code, and even some explanatory text.</p>
-
-<h3 id="HTML">HTML</h3>
-
-<p>This HTML creates a paragraph and some blocks to help us position and style a message.</p>
-
-<pre class="brush: html notranslate">&lt;p&gt;A simple example of the live sample system in action.&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;Un exemple simple du système d'échantillonnage en direct en action.&lt;/p&gt;
 &lt;div class="box"&gt;
-  &lt;div id="item"&gt;Hello world!&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  &lt;div id="item"&gt;Bonjour à tous ! Bienvenue sur MDN&lt;/div&gt;
+&lt;/div&gt;</pre>
 
-<h3 id="CSS">CSS</h3>
+<h3 id="css">CSS</h3>
 
-<p>The CSS code styles the box as well as the text inside it.</p>
+<p>Le code CSS donne un style à la boîte ainsi qu'au texte qu'elle contient.</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 200px;
-  height: 100 px;
   border-radius: 6px;
+  padding: 20px;
   background-color: #ffaabb;
 }
 
 #item {
-  width: 100%;
   font-weight: bold;
   text-align: center;
-  font-size: 2em;
-}
-</pre>
+  font-family: sans-serif;
+  font-size: 1.5em;
+}</pre>
 
-<h3 id="JavaScript">JavaScript</h3>
+<h3 id="javascript">JavaScript</h3>
 
-<p>This code is very simple. All it does is attach an event handler to the "Hello world!" text that makes an alert appear when it is clicked.</p>
+<p>Ce code est très simple. Tout ce qu'il fait est d'attacher un gestionnaire d'événement au texte « Bonjour à tous ! » qui fait apparaître une alerte lorsqu'il est cliqué.</p>
 
-<pre class="brush: js notranslate">var el = document.getElementById('item');
+<pre class="brush: js">const el = document.getElementById('item');
 el.onclick = function() {
-  alert('Owww, stop poking me!');
-}
-</pre>
+  alert('Ohhh, arrête de m\'embêter !');
+}</pre>
 
-<h3 id="Result">Result</h3>
+<h3 id="result">Résultat</h3>
 
-<p>Here is the result of running the code blocks above via<code> \{{EmbedLiveSample('Live_sample_demo')}}</code>:</p>
+<p>Voici le résultat de l'exécution des blocs de code ci-dessus via <code>\{{EmbedLiveSample('live_sample_demo')}}</code> :</p>
 
-<p>{{EmbedLiveSample('Live_sample_demo')}}</p>
+<p>{{EmbedLiveSample('live_sample_demo')}}</p>
 
-<p>Here is a link that results from calling these code blocks via <code>\{{LiveSampleLink('Live_sample_demo', 'Live sample demo link')}}</code>:</p>
+<p>Voici un lien qui résulte de l'appel de ces blocs de code via <code>\{{LiveSampleLink('live_sample_demo', 'Lien vers un échantillon de démonstration en direct')}}</code>:</p>
 
-<p>{{LiveSampleLink('Live_sample_demo', 'Live sample demo link')}}</p>
+<p>{{LiveSampleLink('live_sample_demo', 'Lien vers un échantillon de démonstration en direct')}}</p>
 
-<h2 id="Conventions_regarding_live_samples"><a id="conventions" name="conventions">Conventions regarding live samples</a></h2>
-
-<div class="note">
-<p><strong>Note:</strong> This is currently (Feb. 2016) under discussion on the dev-mdc mailing list (see <a href="https://groups.google.com/forum/#!topic/mozilla.dev.mdc/49oqJAHFnWQ">this thread</a>). Any input is welcome. If this note persists after some month (Apr. 2016), please reach the author of the first email in this thread for updating this page.</p>
-</div>
+<h2 id="conventions_regarding_live_samples">Conventions relatives aux échantillons vivants</h2>
 
 <dl>
- <dt>Orders of code blocks</dt>
- <dd>When adding a live sample, the code blocks should be sorted so that the first one corresponds to the main language for this sample (if there is one). For example, when adding a live sample for the HTML Reference, the first block should be HTML, when adding a live sample for the CSS Reference, it should be CSS and so on.</dd>
- <dt>Naming of headings</dt>
- <dd>When there is no ambiguity (e.g. the sample is under a "Examples" section), headings should be straightforward with the sole name of the corresponding language: HTML, CSS, JavaScript, SVG, etc. (see above). Headings like "HTML Content" or "JavaScript Content" should not be used. However if such a short heading makes content unclear, one can use a more thoughtful title.</dd>
- <dt>Using a "Result" block</dt>
- <dd>After the different code blocks, please use a last "Result" block before using the <code>EmbedLiveSample</code> macro (see above). This way, the semantic of the example is made clearer for both the reader and any tools that would parse the page (e.g. screen reader, web crawler).</dd>
+  <dt>Ordres des blocs de code</dt>
+  <dd>Lors de l'ajout d'un échantillon vivant, les blocs de code doivent être triés de manière à ce que le premier corresponde à la langue principale de cet échantillon (s'il y en a une). Par exemple, lors de l'ajout d'un échantillon réel pour la référence HTML, le premier bloc doit être HTML, lors de l'ajout d'un échantillon réel pour la référence CSS, il doit être CSS et ainsi de suite.</dd>
+  <dt>Nomenclature des rubriques</dt>
+  <dd>Lorsqu'il n'y a pas d'ambiguïté (par exemple, l'échantillon se trouve dans une section « Exemples »), les titres doivent être simples avec le seul nom du langage correspondant : HTML, CSS, JavaScript, SVG, etc. (voir ci-dessus). Les titres tels que « Contenu HTML » ou « Contenu JavaScript » ne doivent pas être utilisés. Toutefois, si un titre aussi court rend le contenu peu clair, on peut utiliser un titre plus réfléchi.</dd>
+  <dt>Utilisation d'un bloc « Résultat »</dt>
+  <dd>Après les différents blocs de code, veuillez utiliser un dernier bloc « Résultat » avant d'utiliser la macro <code>EmbedLiveSample</code> (voir ci-dessus). De cette façon, la sémantique de l'exemple est rendue plus claire à la fois pour le lecteur et pour tout outil qui analyserait la page (par exemple, un lecteur d'écran, un crawler web).</dd>
 </dl>

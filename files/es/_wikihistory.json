@@ -4920,14 +4920,6 @@
       "Sheppy"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2019-03-23T22:33:31.225Z",
-    "contributors": [
-      "BubuAnabelas",
-      "RockoDev",
-      "guiller1998"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2019-03-23T22:51:59.371Z",
     "contributors": [
@@ -7782,15 +7774,6 @@
       "semptrion",
       "Fjaguero",
       "MPoli"
-    ]
-  },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2020-01-13T04:48:11.759Z",
-    "contributors": [
-      "chrisdavidmills",
-      "fscholz",
-      "elin3t",
-      "sebasmagri"
     ]
   },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
@@ -13139,18 +13122,6 @@
       "HenryGR"
     ]
   },
-  "Web/CSS/linear-gradient()": {
-    "modified": "2020-11-16T08:56:55.739Z",
-    "contributors": [
-      "chrisdavidmills",
-      "efrenmartinez",
-      "rgomez",
-      "Miguelslo27",
-      "Sebastianz",
-      "prayash",
-      "scarnagot"
-    ]
-  },
   "Web/CSS/list-style": {
     "modified": "2019-03-23T23:52:08.020Z",
     "contributors": [
@@ -13568,14 +13539,6 @@
     "contributors": [
       "SJW",
       "arroutado"
-    ]
-  },
-  "Web/CSS/radial-gradient()": {
-    "modified": "2020-11-18T14:42:09.252Z",
-    "contributors": [
-      "chrisdavidmills",
-      "hectorcano",
-      "israel-munoz"
     ]
   },
   "Web/CSS/repeat()": {
@@ -14268,18 +14231,6 @@
       "vinyetcg",
       "JoaquinGiordano",
       "V.Morantes"
-    ]
-  },
-  "Web/Guide/HTML/Using_HTML_sections_and_outlines": {
-    "modified": "2019-03-23T23:38:22.567Z",
-    "contributors": [
-      "blanchart",
-      "eljonims",
-      "welm",
-      "javigaar",
-      "learnercys",
-      "pierre_alfonso",
-      "jesanchez"
     ]
   },
   "Web/Guide/Mobile": {
@@ -18606,90 +18557,6 @@
       "teland",
       "teoli",
       "carlosgctes"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:30:28.950Z",
-    "contributors": [
-      "Almiqui",
-      "AntonioSalazar",
-      "SphinxKnight",
-      "Sebastiancbvz",
-      "vaavJSdev",
-      "timgivois",
-      "aeroxmotion",
-      "PepeAleu",
-      "xavier.gallofre",
-      "rn3w",
-      "Grijander81",
-      "GustavoFernandez",
-      "rec",
-      "Kouen",
-      "facundoj"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2019-03-23T22:33:57.332Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2019-06-22T21:43:58.894Z",
-    "contributors": [
-      "gerardonavart",
-      "Grijander81"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2019-03-23T22:33:46.712Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T21:59:58.539Z",
-    "contributors": [
-      "gerardonavart",
-      "PabloContreras",
-      "katuno1981"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T22:01:57.424Z",
-    "contributors": [
-      "Marte",
-      "Sebastiancbvz"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2020-10-15T22:32:18.735Z",
-    "contributors": [
-      "fredydeltoro"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2019-03-23T22:31:40.425Z",
-    "contributors": [
-      "jesusfchavarro"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2019-03-23T22:28:28.999Z",
-    "contributors": [
-      "guillermojmc"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2019-03-23T22:34:02.057Z",
-    "contributors": [
-      "Grijander81"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2020-10-15T22:12:33.830Z",
-    "contributors": [
-      "AlePerez92"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Math": {
@@ -23356,6 +23223,14 @@
       "AshWilliams"
     ]
   },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2019-03-23T22:33:31.225Z",
+    "contributors": [
+      "BubuAnabelas",
+      "RockoDev",
+      "guiller1998"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T21:50:43.901Z",
     "contributors": [
@@ -23405,6 +23280,15 @@
       "khalid32",
       "teoli",
       "HenryGR"
+    ]
+  },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2020-01-13T04:48:11.759Z",
+    "contributors": [
+      "chrisdavidmills",
+      "fscholz",
+      "elin3t",
+      "sebasmagri"
     ]
   },
   "orphaned/Web/API/ParentNode": {
@@ -23477,6 +23361,26 @@
     "modified": "2019-03-18T21:20:03.429Z",
     "contributors": [
       "gsalinase"
+    ]
+  },
+  "orphaned/Web/CSS/linear-gradient()": {
+    "modified": "2020-11-16T08:56:55.739Z",
+    "contributors": [
+      "chrisdavidmills",
+      "efrenmartinez",
+      "rgomez",
+      "Miguelslo27",
+      "Sebastianz",
+      "prayash",
+      "scarnagot"
+    ]
+  },
+  "orphaned/Web/CSS/radial-gradient()": {
+    "modified": "2020-11-18T14:42:09.252Z",
+    "contributors": [
+      "chrisdavidmills",
+      "hectorcano",
+      "israel-munoz"
     ]
   },
   "orphaned/Web/CSS/rtl": {
@@ -23577,6 +23481,18 @@
       "Cristhoper"
     ]
   },
+  "orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines": {
+    "modified": "2019-03-23T23:38:22.567Z",
+    "contributors": [
+      "blanchart",
+      "eljonims",
+      "welm",
+      "javigaar",
+      "learnercys",
+      "pierre_alfonso",
+      "jesanchez"
+    ]
+  },
   "orphaned/Web/HTML/Element/command": {
     "modified": "2019-10-05T04:48:52.506Z",
     "contributors": [
@@ -23632,6 +23548,90 @@
     "contributors": [
       "lajaso",
       "humbertaco"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:30:28.950Z",
+    "contributors": [
+      "Almiqui",
+      "AntonioSalazar",
+      "SphinxKnight",
+      "Sebastiancbvz",
+      "vaavJSdev",
+      "timgivois",
+      "aeroxmotion",
+      "PepeAleu",
+      "xavier.gallofre",
+      "rn3w",
+      "Grijander81",
+      "GustavoFernandez",
+      "rec",
+      "Kouen",
+      "facundoj"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2019-03-23T22:33:57.332Z",
+    "contributors": [
+      "Grijander81"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2019-06-22T21:43:58.894Z",
+    "contributors": [
+      "gerardonavart",
+      "Grijander81"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2019-03-23T22:33:46.712Z",
+    "contributors": [
+      "Grijander81"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2020-10-15T21:59:58.539Z",
+    "contributors": [
+      "gerardonavart",
+      "PabloContreras",
+      "katuno1981"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-15T22:01:57.424Z",
+    "contributors": [
+      "Marte",
+      "Sebastiancbvz"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2020-10-15T22:32:18.735Z",
+    "contributors": [
+      "fredydeltoro"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
+    "modified": "2019-03-23T22:31:40.425Z",
+    "contributors": [
+      "jesusfchavarro"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2019-03-23T22:28:28.999Z",
+    "contributors": [
+      "guillermojmc"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2019-03-23T22:34:02.057Z",
+    "contributors": [
+      "Grijander81"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
+    "modified": "2020-10-15T22:12:33.830Z",
+    "contributors": [
+      "AlePerez92"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
