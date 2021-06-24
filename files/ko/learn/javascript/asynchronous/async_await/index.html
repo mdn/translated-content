@@ -92,7 +92,7 @@ hello().then(alert);</pre>
 
 <p>물론 위의 예시는 그다지 쓸모있진 않습니다. 다만 어떻게 구문을 작성해야 하는지는 잘 나타내줍니다. 이제 실제 사례를 살펴봅시다.</p>
 
-<h2 id="Rewriting_promise_code_with_asyncawait">다시 쓰는 promise code 그리고 async/await</h2>
+<h2 id="Rewriting_promise_code_with_asyncawait">async/await와 함께 다시 쓰는 promise code</h2>
 
 <p>이전 문서에서 봤던 간단한 fetch() 예제를 살펴봅시다. :</p>
 
@@ -295,7 +295,7 @@ displayContent()
 
 <p>이 문제를 완화할 수 있는 패턴이 있습니다. — 모든 <code>Promise</code> 오브젝트를 변수에 저장하여 미리 실행되게 하고 변수가 사용 가능할 때 꺼내서 쓰는 것 입니다. 어떻게 작동하는지 한번 살펴봅시다.</p>
 
-<p>두 가지 예시를 보여주겠습니다. — 느린 비동기 작업 <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html">소스 코드</a>) 그리고 빠른 비동기 작업 <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html">소스 코드</a>)입니다. 두 예제에서  마치 비동기 작업인 것 처럼 보이기 위해 <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> 을 사용했습니다. :</p>
+<p>두 가지 예시를 보여 드리겠습니다. — 느린 비동기 작업 <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html">소스 코드</a>) 그리고 빠른 비동기 작업 <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a> (<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html">소스 코드</a>)입니다. 두 예제에서  마치 비동기 작업인 것 처럼 보이기 위해 <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> 을 사용했습니다. :</p>
 
 <pre class="brush: js notranslate">async function makeResult(items) {
    let newArr = [];
@@ -398,7 +398,7 @@ let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);</pre>
 
 <h2 id="Conclusion">결론</h2>
 
-<p>async/await를 사용하면 읽고 유지보수가 편리한 비동기 코드를 쉽고 간단하게 작성할 수 있습니다. 작성할 대 브라우저 지원이 다른 비동기 코드에 비해 제한적이기는 하지만 현재는 물론 미래에도 사용을 위해 배울 가치는 충분합니다.</p>
+<p>async/await를 사용하면 읽기 쉽고 유지보수가 편리한 비동기 코드를 간단하게 작성할 수 있습니다. 브라우저 지원이 다른 비동기 코드에 비해 제한적이기는 하지만 현재는 물론 미래에도 사용을 위해 배울 가치는 충분합니다.</p>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</p>
 
