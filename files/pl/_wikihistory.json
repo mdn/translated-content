@@ -7867,77 +7867,6 @@
       "krupinskij"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-09-01T10:21:27.914Z",
-    "contributors": [
-      "struginskij",
-      "KonradLinkowski",
-      "108adams",
-      "Asek90",
-      "xgarrett",
-      "broslukasz"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2020-10-15T22:01:01.515Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2020-10-15T22:01:01.152Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2019-03-18T21:42:37.088Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T22:01:04.417Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T22:01:06.016Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2020-10-15T22:01:05.981Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2020-10-15T22:01:06.126Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2020-10-15T22:01:06.173Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2020-10-15T22:17:26.741Z",
-    "contributors": [
-      "tipakA"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2020-10-15T22:01:06.933Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2019-11-16T16:52:10.805Z",
     "contributors": [
@@ -11664,6 +11593,77 @@
       "Diablownik",
       "Mgjbot",
       "Ptak82"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-09-01T10:21:27.914Z",
+    "contributors": [
+      "struginskij",
+      "KonradLinkowski",
+      "108adams",
+      "Asek90",
+      "xgarrett",
+      "broslukasz"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2020-10-15T22:01:01.515Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2020-10-15T22:01:01.152Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2019-03-18T21:42:37.088Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2020-10-15T22:01:04.417Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-15T22:01:06.016Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2020-10-15T22:01:05.981Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
+    "modified": "2020-10-15T22:01:06.126Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2020-10-15T22:01:06.173Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2020-10-15T22:17:26.741Z",
+    "contributors": [
+      "tipakA"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
+    "modified": "2020-10-15T22:01:06.933Z",
+    "contributors": [
+      "MarekHuckmann"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {

@@ -1,53 +1,58 @@
 ---
-title: <frameset>
+title: '<frameset> : l''élément contenant des frames'
 slug: Web/HTML/Element/frameset
 tags:
-  - Déprécié
+  - Deprecated
   - Element
   - HTML
   - Reference
   - Web
 translation_of: Web/HTML/Element/frameset
+browser-compat: html.elements.frameset
 ---
-<div>{{Deprecated_header}}{{HTMLRef}}</div>
+<div>{{HTMLRef}}</div>
 
-<p><strong><code>&lt;frameset&gt;</code></strong> est un élément HTML utilisé pour contenir les éléments {{HTMLElement("frame")}}.</p>
+<div class="notecard deprecated">
+  <p><b>Obsolète</b></p>
+  <p>Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la prendre en charge, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.</p>
+</div>
 
-<div class="note"><strong>Note :</strong> Les frames est maintenant découragé en faveur de {{HTMLElement("iframe")}}.</div>
+<p>L'élément HTML <strong><code>&lt;frameset&gt;</code></strong> est utilisé pour contenir les éléments <a href="/fr/docs/Web/HTML/Element/frame"><code>&lt;frame&gt;</code></a>.</p>
 
-<h2 id="Attributs">Attributs</h2>
+<div class="notecard note">
+  <p><b>Note :</b></p>
+  <p>L'utilisation de cadres étant désormais déconseillée au profit de l'utilisation de <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a>, cet élément n'est généralement pas utilisé par les sites web modernes.</p>
+</div>
 
-<p>Comme tous les autres éléments HTML, cet élément prend en charge <a href="/fr/docs/Web/HTML/Attributs_universels">les attributs universels</a>.</p>
+<h2 id="attributes">Attributs</h2>
+
+<p>Comme tous les autres éléments HTML, cet élément prend en charge <a href="/fr/docs/Web/HTML/Global_attributes">les attributs universels</a>.</p>
 
 <dl>
- <dt>{{htmlattrdef("cols")}}</dt>
- <dd>Cet attribut définit le nombre et la taille des espaces horizontaux dans un <code>&lt;frameset&gt;</code>.</dd>
- <dt>{{htmlattrdef("rows")}}</dt>
- <dd>Cet attribut définit le nombre et la taille des espaces verticaux dans un <code>&lt;frameset&gt;</code>.</dd>
+  <dt><code id="attr-cols">cols</code></dt>
+  <dd>Cet attribut définit le nombre et la taille des espaces horizontaux dans un <code>&lt;frameset&gt;</code>.</dd>
+  <dt><code id="attr-rows">rows</code></dt>
+  <dd>Cet attribut définit le nombre et la taille des espaces verticaux dans un <code>&lt;frameset&gt;</code>.</dd>
 </dl>
 
-<h2 id="Exemples">Exemples</h2>
-
-<h3 id="HTML">HTML</h3>
+<h2 id="example">Exemple</h2>
 
 <pre class="brush:html">&lt;frameset cols="50%,50%"&gt;
   &lt;frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset" /&gt;
   &lt;frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame" /&gt;
 &lt;/frameset&gt;</pre>
 
-<h3 id="Résultat">Résultat</h3>
+<h2 id="specifications">Spécifications</h2>
 
-<p>{{EmbedLiveSample("Exemples","100%",200)}}</p>
+<p>{{Specifications}}</p>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
+<p>{{Compat}}</p>
 
-<p>{{Compat("html.elements.frameset")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
+<h2 id="see_also">Voir aussi</h2>
 
 <ul>
- <li>{{HTMLElement("frame")}}</li>
- <li>{{HTMLElement("iframe")}}</li>
+  <li>L'élément <a href="/fr/docs/Web/HTML/Element/frame"><code>&lt;frame&gt;</code></a></li>
+  <li>L'élément <a href="/fr/docs/Web/HTML/Element/iframe"><code>&lt;iframe&gt;</code></a></li>
 </ul>
