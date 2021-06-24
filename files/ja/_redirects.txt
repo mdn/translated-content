@@ -354,7 +354,7 @@
 /ja/docs/CSS/Getting_Started/Lists	/ja/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/CSS/Getting_Started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
 /ja/docs/CSS/Getting_Started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/ja/docs/CSS/Getting_Started/Tables	/ja/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
+/ja/docs/CSS/Getting_Started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/CSS/Getting_Started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/CSS/Getting_Started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/CSS/Getting_Started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -3666,7 +3666,7 @@
 /ja/docs/Web-d/Guide/CSS/Getting_started/Lists	/ja/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/Web-d/Guide/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
 /ja/docs/Web-d/Guide/CSS/Getting_started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/ja/docs/Web-d/Guide/CSS/Getting_started/Tables	/ja/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
+/ja/docs/Web-d/Guide/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web-d/Guide/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web-d/Guide/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web-dd/Guide/CSS/Getting_started/Cascading_and_inheritance	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
@@ -4369,7 +4369,7 @@
 /ja/docs/Web/CSS/Getting_started/Lists	/ja/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/Web/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
 /ja/docs/Web/CSS/Getting_started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/ja/docs/Web/CSS/Getting_started/Tables	/ja/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
+/ja/docs/Web/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web/CSS/Index	/ja/docs/orphaned/Web/CSS/Index
@@ -4566,7 +4566,7 @@
 /ja/docs/Web/Guide/CSS/Getting_started/Lists	/ja/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/Web/Guide/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
 /ja/docs/Web/Guide/CSS/Getting_started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/ja/docs/Web/Guide/CSS/Getting_started/Tables	/ja/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
+/ja/docs/Web/Guide/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web/Guide/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web/Guide/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web/Guide/CSS/Getting_started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
