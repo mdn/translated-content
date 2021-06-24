@@ -70,7 +70,7 @@
 /ko/docs/CSS/cursor	/ko/docs/Web/CSS/cursor
 /ko/docs/CSS/cursor/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
 /ko/docs/CSS/initial_value	/ko/docs/Web/CSS/initial_value
-/ko/docs/CSS/linear-gradient	/ko/docs/Web/CSS/linear-gradient()
+/ko/docs/CSS/linear-gradient	/ko/docs/orphaned/Web/CSS/linear-gradient()
 /ko/docs/CSS/text-shadow	/ko/docs/Web/CSS/text-shadow
 /ko/docs/CSS/transform	/ko/docs/Web/CSS/transform
 /ko/docs/CSS/z-index	/ko/docs/Web/CSS/z-index
@@ -328,7 +328,7 @@
 /ko/docs/HTML:Element:a	/ko/docs/Web/HTML/Element/a
 /ko/docs/HTML:Inline_elements	/ko/docs/Web/HTML/Inline_elements
 /ko/docs/IndexedDB	/ko/docs/Web/API/IndexedDB_API
-/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ko/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/ko/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/ko/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ko/docs/IndexedDB/Using_IndexedDB	/ko/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /ko/docs/Introduction_to_using_XPath_in_JavaScript	/ko/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /ko/docs/JSAPI_Reference/Alphabetical_List	/ko/docs/JSAPI_Reference
@@ -594,6 +594,7 @@
 /ko/docs/Using_XPath	/ko/docs/conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 /ko/docs/Web/API/AbstractWorker	/ko/docs/orphaned/Web/API/AbstractWorker
+/ko/docs/Web/API/Ambient_Light_Events	/ko/docs/orphaned/Web/API/Ambient_Light_Events
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
 /ko/docs/Web/API/ChildNode/remove	/ko/docs/orphaned/Web/API/ChildNode/remove
@@ -626,6 +627,7 @@
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API/Drag_operations	/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
+/ko/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ko/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ko/docs/Web/API/Navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/Navigator.battery/window.navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/Navigator.connection/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
@@ -641,6 +643,7 @@
 /ko/docs/Web/API/ParentNode/children	/ko/docs/orphaned/Web/API/ParentNode/children
 /ko/docs/Web/API/ParentNode/prepend	/ko/docs/orphaned/Web/API/ParentNode/prepend
 /ko/docs/Web/API/Position	/ko/docs/Web/API/GeolocationPosition
+/ko/docs/Web/API/RTCPeerConnection/onidentityresult	/ko/docs/orphaned/Web/API/RTCPeerConnection/onidentityresult
 /ko/docs/Web/API/RandomSource	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/RandomSource/getRandomValues	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/Screen.lockOrientation	/ko/docs/Web/API/Screen/lockOrientation
@@ -735,7 +738,8 @@
 /ko/docs/Web/CSS/filter-function/blur	/ko/docs/Web/CSS/filter-function/blur()
 /ko/docs/Web/CSS/filter-function/brightness	/ko/docs/Web/CSS/filter-function/brightness()
 /ko/docs/Web/CSS/filter-function/contrast	/ko/docs/Web/CSS/filter-function/contrast()
-/ko/docs/Web/CSS/linear-gradient	/ko/docs/Web/CSS/linear-gradient()
+/ko/docs/Web/CSS/linear-gradient	/ko/docs/orphaned/Web/CSS/linear-gradient()
+/ko/docs/Web/CSS/linear-gradient()	/ko/docs/orphaned/Web/CSS/linear-gradient()
 /ko/docs/Web/CSS/transform-function/matrix	/ko/docs/Web/CSS/transform-function/matrix()
 /ko/docs/Web/CSS/transform-function/scaleX	/ko/docs/Web/CSS/transform-function/scaleX()
 /ko/docs/Web/CSS/url	/ko/docs/Web/CSS/url()
@@ -786,6 +790,7 @@
 /ko/docs/Web/Guide/HTML/Content_Editable	/ko/docs/Web/Guide/HTML/Editable_content
 /ko/docs/Web/Guide/HTML/HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5
 /ko/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/ko/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ko/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ko/docs/Web/Guide/HTML/컨텐트_카테고리	/ko/docs/Web/Guide/HTML/Content_categories
 /ko/docs/Web/Guide/HTML/폼	/ko/docs/Learn/Forms
 /ko/docs/Web/Guide/HTML/폼/HTML_폼_구성_방법	/ko/docs/Learn/Forms/How_to_structure_a_web_form
@@ -825,7 +830,7 @@
 /ko/docs/Web/HTML/HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5
 /ko/docs/Web/HTML/HTML5/HTML5_element_list	/ko/docs/Web/HTML/Element
 /ko/docs/Web/HTML/HTML5/Introduction_to_HTML5	/ko/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
-/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽	/ko/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽	/ko/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn/Forms
 /ko/docs/Web/HTML/Introduction	/ko/docs/Learn/HTML/Introduction_to_HTML
 /ko/docs/Web/HTML/Preloading_content	/ko/docs/orphaned/Web/HTML/Preloading_content
@@ -900,7 +905,18 @@
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/prototype	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Locale	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Locale/language	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Map	/ko/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag	/ko/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Map/Map	/ko/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/Map
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Map/clear	/ko/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Map/delete	/ko/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Map/entries	/ko/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach	/ko/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Map/get	/ko/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/get
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Map/has	/ko/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/has
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Map/prototype	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Map
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Map/set	/ko/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/set
+/ko/docs/Web/JavaScript/Reference/Global_Objects/Map/size	/ko/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/size
 /ko/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number
 /ko/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /ko/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype	/ko/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
@@ -1026,7 +1042,7 @@
 /ko/docs/WebAPI/Managing_screen_orientation	/ko/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ko/docs/WebAPI/Network_Information	/ko/docs/Web/API/Network_Information_API
 /ko/docs/WebAPI/Proximity	/ko/docs/Web/API/Proximity_Events
-/ko/docs/WebAPI/Using_Light_Events	/ko/docs/Web/API/Ambient_Light_Events
+/ko/docs/WebAPI/Using_Light_Events	/ko/docs/orphaned/Web/API/Ambient_Light_Events
 /ko/docs/WebAPI/Using_Web_Notifications	/ko/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ko/docs/WebAPI/Using_geolocation	/ko/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
 /ko/docs/WebAPI/Vibration	/ko/docs/Web/API/Vibration_API
