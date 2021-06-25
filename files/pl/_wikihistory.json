@@ -3212,17 +3212,6 @@
       "Diablownik"
     ]
   },
-  "Web/API/Navigator/registerContentHandler": {
-    "modified": "2019-03-23T23:51:33.038Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Diablownik",
-      "Mgjbot",
-      "Marcoos",
-      "Ptak82"
-    ]
-  },
   "Web/API/Navigator/registerProtocolHandler": {
     "modified": "2019-03-23T23:52:37.570Z",
     "contributors": [
@@ -11150,6 +11139,17 @@
       "Ptak82",
       "Mgjbot",
       "Jan Dudek"
+    ]
+  },
+  "orphaned/Web/API/Navigator/registerContentHandler": {
+    "modified": "2019-03-23T23:51:33.038Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Diablownik",
+      "Mgjbot",
+      "Marcoos",
+      "Ptak82"
     ]
   },
   "orphaned/Web/API/ParentNode": {

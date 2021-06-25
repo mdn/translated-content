@@ -532,7 +532,7 @@
 /pl/docs/DOM/window.navigator.plugins	/pl/docs/Web/API/NavigatorPlugins/plugins
 /pl/docs/DOM/window.navigator.product	/pl/docs/Web/API/NavigatorID/product
 /pl/docs/DOM/window.navigator.productSub	/pl/docs/Web/API/Navigator/productSub
-/pl/docs/DOM/window.navigator.registerContentHandler	/pl/docs/Web/API/Navigator/registerContentHandler
+/pl/docs/DOM/window.navigator.registerContentHandler	/pl/docs/orphaned/Web/API/Navigator/registerContentHandler
 /pl/docs/DOM/window.navigator.registerProtocolHandler	/pl/docs/Web/API/Navigator/registerProtocolHandler
 /pl/docs/DOM/window.onload	/pl/docs/Web/API/GlobalEventHandlers/onload
 /pl/docs/DOM/window.open	/pl/docs/Web/API/Window/open
@@ -778,7 +778,7 @@
 /pl/docs/DOM:window.navigator.plugins	/pl/docs/Web/API/NavigatorPlugins/plugins
 /pl/docs/DOM:window.navigator.product	/pl/docs/Web/API/NavigatorID/product
 /pl/docs/DOM:window.navigator.productSub	/pl/docs/Web/API/Navigator/productSub
-/pl/docs/DOM:window.navigator.registerContentHandler	/pl/docs/Web/API/Navigator/registerContentHandler
+/pl/docs/DOM:window.navigator.registerContentHandler	/pl/docs/orphaned/Web/API/Navigator/registerContentHandler
 /pl/docs/DOM:window.navigator.registerProtocolHandler	/pl/docs/Web/API/Navigator/registerProtocolHandler
 /pl/docs/DOM:window.onload	/pl/docs/Web/API/GlobalEventHandlers/onload
 /pl/docs/DOM:window.open	/pl/docs/Web/API/Window/open
@@ -2006,6 +2006,7 @@
 /pl/docs/Web/API/Navigator/platform	/pl/docs/Web/API/NavigatorID/platform
 /pl/docs/Web/API/Navigator/plugins	/pl/docs/Web/API/NavigatorPlugins/plugins
 /pl/docs/Web/API/Navigator/product	/pl/docs/Web/API/NavigatorID/product
+/pl/docs/Web/API/Navigator/registerContentHandler	/pl/docs/orphaned/Web/API/Navigator/registerContentHandler
 /pl/docs/Web/API/NavigatorOnLine/Zdarzenia_online_i_offline	/pl/docs/Web/API/NavigatorOnLine/Online_and_offline_events
 /pl/docs/Web/API/Node/localName	/pl/docs/Web/API/Element/localName
 /pl/docs/Web/API/Node/namespaceURI	/pl/docs/Web/API/Element/namespaceURI

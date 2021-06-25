@@ -1689,7 +1689,7 @@
 /ja/docs/DOM/window.navigator.plugins	/ja/docs/Web/API/NavigatorPlugins/plugins
 /ja/docs/DOM/window.navigator.product	/ja/docs/Web/API/NavigatorID/product
 /ja/docs/DOM/window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/DOM/window.navigator.registerContentHandler	/ja/docs/Web/API/Navigator/registerContentHandler
+/ja/docs/DOM/window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/DOM/window.navigator.registerProtocolHandler	/ja/docs/Web/API/Navigator/registerProtocolHandler
 /ja/docs/DOM/window.navigator.userAgent	/ja/docs/Web/API/NavigatorID/userAgent
 /ja/docs/DOM/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
@@ -1915,7 +1915,7 @@
 /ja/docs/DOM:window.navigator.plugins	/ja/docs/Web/API/NavigatorPlugins/plugins
 /ja/docs/DOM:window.navigator.product	/ja/docs/Web/API/NavigatorID/product
 /ja/docs/DOM:window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/DOM:window.navigator.registerContentHandler	/ja/docs/Web/API/Navigator/registerContentHandler
+/ja/docs/DOM:window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/DOM:window.navigator.registerProtocolHandler	/ja/docs/Web/API/Navigator/registerProtocolHandler
 /ja/docs/DOM:window.navigator.userAgent	/ja/docs/Web/API/NavigatorID/userAgent
 /ja/docs/DOM:window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
@@ -3881,6 +3881,7 @@
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator.mozFMRadio	/ja/docs/Web/API/Navigator/mozFMRadio
 /ja/docs/Web/API/Navigator/javaEnabled	/ja/docs/Web/API/NavigatorPlugins/javaEnabled
+/ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/Navigator/userAgent	/ja/docs/Web/API/NavigatorID/userAgent
 /ja/docs/Web/API/NavigatorLanguage.languages	/ja/docs/Web/API/NavigatorLanguage/languages
 /ja/docs/Web/API/Node.appendChild	/ja/docs/Web/API/Node/appendChild
@@ -4198,7 +4199,7 @@
 /ja/docs/Web/API/window.navigator.plugins	/ja/docs/Web/API/NavigatorPlugins/plugins
 /ja/docs/Web/API/window.navigator.product	/ja/docs/Web/API/NavigatorID/product
 /ja/docs/Web/API/window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/Web/API/window.navigator.registerContentHandler	/ja/docs/Web/API/Navigator/registerContentHandler
+/ja/docs/Web/API/window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/window.navigator.userAgent	/ja/docs/Web/API/NavigatorID/userAgent
 /ja/docs/Web/API/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
 /ja/docs/Web/API/window.navigator.vendorSub	/ja/docs/Web/API/Navigator/vendorSub
