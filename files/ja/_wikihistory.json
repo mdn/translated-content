@@ -19062,16 +19062,6 @@
       "Potappo"
     ]
   },
-  "Web/API/Navigator/registerContentHandler": {
-    "modified": "2020-10-15T21:15:53.115Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "jsx",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "Web/API/Navigator/registerProtocolHandler": {
     "modified": "2020-10-15T21:15:46.655Z",
     "contributors": [
@@ -52003,6 +51993,16 @@
     "contributors": [
       "yyss",
       "ethertank"
+    ]
+  },
+  "orphaned/Web/API/Navigator/registerContentHandler": {
+    "modified": "2020-10-15T21:15:53.115Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "jsx",
+      "ethertank",
+      "Potappo"
     ]
   },
   "orphaned/Web/API/Node/getUserData": {

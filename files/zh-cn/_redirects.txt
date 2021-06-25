@@ -531,7 +531,7 @@
 /zh-CN/docs/DOM/window.navigator.oscpu	/zh-CN/docs/Web/API/Navigator/oscpu
 /zh-CN/docs/DOM/window.navigator.platform	/zh-CN/docs/Web/API/NavigatorID/platform
 /zh-CN/docs/DOM/window.navigator.plugins	/zh-CN/docs/Web/API/NavigatorPlugins/plugins
-/zh-CN/docs/DOM/window.navigator.registerContentHandler	/zh-CN/docs/Web/API/Navigator/registerContentHandler
+/zh-CN/docs/DOM/window.navigator.registerContentHandler	/zh-CN/docs/orphaned/Web/API/Navigator/registerContentHandler
 /zh-CN/docs/DOM/window.navigator.userAgent	/zh-CN/docs/Web/API/NavigatorID/userAgent
 /zh-CN/docs/DOM/window.navigator.vendor	/zh-CN/docs/Web/API/Navigator/vendor
 /zh-CN/docs/DOM/window.navigator.vendorSub	/zh-CN/docs/Web/API/Navigator/vendorSub
@@ -1660,9 +1660,10 @@
 /zh-CN/docs/Web/API/Navigator.mozIsLocallyAvailable	/zh-CN/docs/Web/API/Navigator/mozIsLocallyAvailable
 /zh-CN/docs/Web/API/Navigator.mozSettings	/zh-CN/docs/Web/API/Navigator/mozSettings
 /zh-CN/docs/Web/API/Navigator.oscpu	/zh-CN/docs/Web/API/Navigator/oscpu
-/zh-CN/docs/Web/API/Navigator.registerContentHandler	/zh-CN/docs/Web/API/Navigator/registerContentHandler
+/zh-CN/docs/Web/API/Navigator.registerContentHandler	/zh-CN/docs/orphaned/Web/API/Navigator/registerContentHandler
 /zh-CN/docs/Web/API/Navigator.vendor	/zh-CN/docs/Web/API/Navigator/vendor
 /zh-CN/docs/Web/API/Navigator.vendorSub	/zh-CN/docs/Web/API/Navigator/vendorSub
+/zh-CN/docs/Web/API/Navigator/registerContentHandler	/zh-CN/docs/orphaned/Web/API/Navigator/registerContentHandler
 /zh-CN/docs/Web/API/NavigatorGeolocation	/zh-CN/docs/conflicting/Web/API/Geolocation
 /zh-CN/docs/Web/API/NavigatorGeolocation.geolocation	/zh-CN/docs/Web/API/Navigator/geolocation
 /zh-CN/docs/Web/API/NavigatorGeolocation/geolocation	/zh-CN/docs/Web/API/Navigator/geolocation
