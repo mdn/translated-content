@@ -19,8 +19,8 @@ original_slug: Web/HTTP/Requêtes_conditionnelles
 <p>Les comportements différents sont définis par la méthode qu'utilise la requête et par un ensemble d'en-têtes propres aux préconditions :</p>
 
 <ul>
- <li>Pour une méthode <a href="/fr/docs/Glossary/safe">safe</a> comme <a href="/fr/docs/Web/HTTP/Methods/GET"><code>GET</code></a>, qui est généralement utilisée pour récupérer un document, la requête conditionnelle peut être utilisée afin de renvoyer le document uniquement si c'est pertinent. Cela économise de la bande passante.</li>
- <li>Pour les méthodes <a href="/fr/docs/Glossary/safe">unsafe</a> comme <a href="/fr/docs/Web/HTTP/Methods/PUT"><code>PUT</code></a>, qui permet généralement d'uploader un document, la requête conditionnelle peut servir à charger le document, uniquement si l'original sur lequel la requête est basée est le même que celui stocké sur le serveur.</li>
+  <li>Pour une méthode <a href="/fr/docs/Glossary/safe">safe</a> comme <a href="/fr/docs/Web/HTTP/Methods/GET"><code>GET</code></a>, qui est généralement utilisée pour récupérer un document, la requête conditionnelle peut être utilisée afin de renvoyer le document uniquement si c'est pertinent. Cela économise de la bande passante.</li>
+  <li>Pour les méthodes <a href="/fr/docs/Glossary/safe">unsafe</a> comme <a href="/fr/docs/Web/HTTP/Methods/PUT"><code>PUT</code></a>, qui permet généralement d'uploader un document, la requête conditionnelle peut servir à charger le document, uniquement si l'original sur lequel la requête est basée est le même que celui stocké sur le serveur.</li>
 </ul>
 
 <h2 id="validators">Validateurs</h2>
@@ -28,15 +28,15 @@ original_slug: Web/HTTP/Requêtes_conditionnelles
 <p>Tous les en-têtes conditionnels vérifient si la ressource stockée sur le serveur correspond à une version spécifique. Pour accomplir ceci, la requête conditionnelle doit préciser la version de la ressource. En effet, comparer l'ensemble octet par octet n'est pas faisable en pratique et ce n'est pas toujours le comportement désiré non plus. La requête transmet une valeur qui caractérise la version. Ces valeurs sont appelées validateurs et il en existe deux sortes :</p>
 
 <ul>
- <li>La date de dernière modification du document fournie par <em><code>Last-Modified</code></em>.</li>
- <li>Une chaîne de caractères sans signification particulière identifiant uniquement chaque version. On l'appelle "étiquette d'entité" ou "etag", fournie par <em><code>ETag</code></em>.</li>
+  <li>La date de dernière modification du document fournie par <em><code>Last-Modified</code></em>.</li>
+  <li>Une chaîne de caractères sans signification particulière identifiant uniquement chaque version. On l'appelle "étiquette d'entité" ou "etag", fournie par <em><code>ETag</code></em>.</li>
 </ul>
 
 <p>Comparer les versions d'une même ressource est un peu délicat : en fonction du contexte, il existe deux sortes de vérification d'équivalence :</p>
 
 <ul>
- <li><em>Une validation forte</em>, utilisée quand une vérification à l'octet près est demandée, par exemple pour reprendre un téléchargement.</li>
- <li><em>Une validation faible</em>, utilisée quand l'agent-utilisateur doit seulement déterminer si deux ressources ont le même contenu. Ils sont égaux même s'ils ont des différences minimes comme des publicités différentes ou un pied de page avec une date différente.</li>
+  <li><em>Une validation forte</em>, utilisée quand une vérification à l'octet près est demandée, par exemple pour reprendre un téléchargement.</li>
+  <li><em>Une validation faible</em>, utilisée quand l'agent-utilisateur doit seulement déterminer si deux ressources ont le même contenu. Ils sont égaux même s'ils ont des différences minimes comme des publicités différentes ou un pied de page avec une date différente.</li>
 </ul>
 
 <p>La sorte de la vérification est indépendante du validateur utilisé. <a href="/fr/docs/Web/HTTP/Headers/Last-Modified"><code>Last-Modified</code></a> et <a href="/fr/docs/Web/HTTP/Headers/ETag"><code>ETag</code></a> permettent les deux types de validation bien que la complexité d'implémentation côté serveur soit variable. HTTP se sert de la validation forte par défaut et spécifie quand la validation faible peut être employée.</p>
@@ -51,22 +51,22 @@ original_slug: Web/HTTP/Requêtes_conditionnelles
 
 <p>La validation faible diffère de la validation forte, car elle considère que deux versions du document sont identiques si le contenu est équivalent. Par exemple, une page qui différerait d'une autre seulement par sa date dans le pied de page ou une publicité, sera considérée identique à l'autre avec la validation faible. Ces mêmes deux versions pourraient être considérées comme différentes avec la validation forte. Construire un système d'ETags pour la validation faible peut être complexe car cela induit de connaître l'importance des différents éléments de la page mais est très utile dans le but d'optimiser les performances du cache.</p>
 
-<h2 id="En-têtes_conditionnelles">En-têtes conditionnels</h2>
+<h2 id="conditional_headers">En-têtes conditionnels</h2>
 
 <p>Plusieurs en-têtes HTTP, appelées en-têtes conditionels, permettent de conditionner les requêtes :</p>
 
 <dl>
- <dt><a href="/fr/docs/Web/HTTP/Headers/If-Match"><code>If-Match</code></a></dt>
- <dd>Réussit si la <a href="/fr/docs/Web/HTTP/Headers/ETag"><code>ETag</code></a> de la ressource distante est égal à un de ceux listés dans cet en-tête. Par défaut, à moins que l'ETag soit préfixé par <code>'W/'</code>, c'est une validation forte.</dd>
- <dt><a href="/fr/docs/Web/HTTP/Headers/If-None-Match"><code>If-None-Match</code></a></dt>
- <dd>Réussit si la <a href="/fr/docs/Web/HTTP/Headers/ETag"><code>ETag</code></a> de la ressource distante est différent de tout ceux listés dans l'en-tête. Par défaut, à moins que l'ETag soit préfixé par <code>'W/'</code>, c'est une validation forte.</dd>
- <dt><a href="/fr/docs/Web/HTTP/Headers/If-Modified-Since"><code>If-Modified-Since</code></a></dt>
- <dd>Réussit si la date <a href="/fr/docs/Web/HTTP/Headers/Last-Modified"><code>Last-Modified</code></a> de la ressource distante est plus récente que celle donnée dans l'en-tête.</dd>
- <dd></dd>
- <dt><a href="/fr/docs/Web/HTTP/Headers/If-Unmodified-Since"><code>If-Unmodified-Since</code></a></dt>
- <dd>Réussit si la date <a href="/fr/docs/Web/HTTP/Headers/Last-Modified"><code>Last-Modified</code></a> de la ressource distante est plus ancienne ou égale à celle donnée dans l'en-tête.</dd>
- <dt><a href="/fr/docs/Web/HTTP/Headers/If-Range"><code>If-Range</code></a></dt>
- <dd>Similaire à <a href="/fr/docs/Web/HTTP/Headers/If-Match"><code>If-Match</code></a>, ou <a href="/fr/docs/Web/HTTP/Headers/If-Unmodified-Since"><code>If-Unmodified-Since</code></a>, mais peut n'avoir qu'un seul ETag, ou une date. Si ça ne correspond pas, la requête est rejetée et à la place d'un statut de réponse <a href="/fr/docs/Web/HTTP/Status/206"><code>206</code></a> <code>Partial Content</code>, un <a href="/fr/docs/Web/HTTP/Status/200"><code>200</code></a> <code>OK</code> est envoyé avec la totalité de la ressource.</dd>
+  <dt><a href="/fr/docs/Web/HTTP/Headers/If-Match"><code>If-Match</code></a></dt>
+  <dd>Réussit si la <a href="/fr/docs/Web/HTTP/Headers/ETag"><code>ETag</code></a> de la ressource distante est égal à un de ceux listés dans cet en-tête. Par défaut, à moins que l'ETag soit préfixé par <code>'W/'</code>, c'est une validation forte.</dd>
+  <dt><a href="/fr/docs/Web/HTTP/Headers/If-None-Match"><code>If-None-Match</code></a></dt>
+  <dd>Réussit si la <a href="/fr/docs/Web/HTTP/Headers/ETag"><code>ETag</code></a> de la ressource distante est différent de tout ceux listés dans l'en-tête. Par défaut, à moins que l'ETag soit préfixé par <code>'W/'</code>, c'est une validation forte.</dd>
+  <dt><a href="/fr/docs/Web/HTTP/Headers/If-Modified-Since"><code>If-Modified-Since</code></a></dt>
+  <dd>Réussit si la date <a href="/fr/docs/Web/HTTP/Headers/Last-Modified"><code>Last-Modified</code></a> de la ressource distante est plus récente que celle donnée dans l'en-tête.</dd>
+  <dd></dd>
+  <dt><a href="/fr/docs/Web/HTTP/Headers/If-Unmodified-Since"><code>If-Unmodified-Since</code></a></dt>
+  <dd>Réussit si la date <a href="/fr/docs/Web/HTTP/Headers/Last-Modified"><code>Last-Modified</code></a> de la ressource distante est plus ancienne ou égale à celle donnée dans l'en-tête.</dd>
+  <dt><a href="/fr/docs/Web/HTTP/Headers/If-Range"><code>If-Range</code></a></dt>
+  <dd>Similaire à <a href="/fr/docs/Web/HTTP/Headers/If-Match"><code>If-Match</code></a>, ou <a href="/fr/docs/Web/HTTP/Headers/If-Unmodified-Since"><code>If-Unmodified-Since</code></a>, mais peut n'avoir qu'un seul ETag, ou une date. Si ça ne correspond pas, la requête est rejetée et à la place d'un statut de réponse <a href="/fr/docs/Web/HTTP/Status/206"><code>206</code></a> <code>Partial Content</code>, un <a href="/fr/docs/Web/HTTP/Status/200"><code>200</code></a> <code>OK</code> est envoyé avec la totalité de la ressource.</dd>
 </dl>
 
 <h2 id="use_cases">Cas d'utilisation</h2>
@@ -91,7 +91,7 @@ original_slug: Web/HTTP/Requêtes_conditionnelles
 
 <p>De plus, la configuration des validateurs côté serveur est totalement transparente : tous les navigateurs gèrent un cache et envoient de telles requêtes conditionnelles sans que cela ne nécessite de travail supplémentaire de la part du développeur.</p>
 
-<h3 id="Intégrité_d'un_téléchargement_partiel">Intégrité d'un téléchargement partiel</h3>
+<h3 id="integrity_of_a_partial_download">Intégrité d'un téléchargement partiel</h3>
 
 <p>Un téléchargement partiel de fichiers est une fonctionnalité de HTTP qui permet de reprendre des opérations en cours en économisant de la bande passante et du temps en conservant les données déjà reçues :</p>
 
@@ -111,7 +111,7 @@ original_slug: Web/HTTP/Requêtes_conditionnelles
 
 <p>Cette solution est plus efficace mais légèrement moins flexible puisqu'un seul ETag peut être utilisé dans la condition. On a rarement besoin d'une telle flexibilité additionnelle.</p>
 
-<h3 id="Èviter_les_problèmes_de_perte_de_mise_à_jour_avec_le_verrouillage_optimiste">Èviter les problèmes de perte de mise à jour avec le "verrouillage optimiste"</h3>
+<h3 id="avoiding_the_lost_update_problem_with_optimistic_locking">Èviter les problèmes de perte de mise à jour avec le "verrouillage optimiste"</h3>
 
 <p>Une opération commune des applications web est la mise à jour de documents distants. Cela arrive fréquemment dans tout système de fichiers ou dans les applications de contrôle de source. Toute application qui permet de stocker des ressources distantes a besoin de ce mécanisme. Les sites comme les wikis et autres CMS s'en servent habituellement.</p>
 
@@ -123,7 +123,7 @@ original_slug: Web/HTTP/Requêtes_conditionnelles
 
 <p><img alt="Lorsque plusieurs clients mettent à jour la même ressource en parallèle, on a une situation de compétition (race condition) : c'est le plus lent qui gagne et les autres ne savent pas qu'ils ont perdu…" src="httplock2.png"></p>
 
-<p>Il n'existe aucune manière de gérer ce problème sans ennuyer l'un ou l'autre des deux clients. Toutefois, cela permet d'éviter les mises à jour perdues ou les situations de compétition. On souhaite avoir des résultats prévisibles et s'assurer que les clients soient prévenus lorsque leurs modifications sont rejetés.</p>
+<p>Il n'existe aucune manière de gérer ce problème sans ennuyer l'un ou l'autre des deux clients. Toutefois, cela permet d'éviter les mises à jour perdues ou les situations de compétition. On souhaite avoir des résultats prévisibles et s'assurer que les clients soient prévenus lorsque leurs modifications sont rejetées.</p>
 
 <p>Les requêtes conditionnelles permettent d'implémenter l'algorithme de contrôle de concurrence (<em>ptimistic locking algorithm</em>) utilisé par la plupart des wikis ou systèmes de contrôle des sources. Le concept est de permettre au client d'avoir des copies de la ressource, les laisser se modifier localement puis de contrôler la mise en concurrence en autorisant celles du premier client soumettant une mise à jour. Toutes les mises à jour ultérieures basées sur la version maintenant obsolète sont rejetées :</p>
 
@@ -131,7 +131,7 @@ original_slug: Web/HTTP/Requêtes_conditionnelles
 
 <p>Ce ci est implémenté par les en-têtes <a href="/fr/docs/Web/HTTP/Headers/If-Match"><code>If-Match</code></a> ou <a href="/fr/docs/Web/HTTP/Headers/If-Unmodified-Since"><code>If-Unmodified-Since</code></a>. Si l'ETag ne correspond pas au fichier original ou si le fichier a été modifié depuis son obtention, le changement est alors simplement rejeté avec une erreur <a href="/fr/docs/Web/HTTP/Status/412"><code>412</code></a> <code>Precondition Failed</code>. C'est maintenant à l'initiative du client que se réglera l'erreur : soit en prévenant le client de redémarrer avec la nouvelle version, soit en présentant au client les différences entre les deux versions pour l'aider à choisir les modifications à conserver.</p>
 
-<h3 id="Gérer_le_premier_téléchargement_d'une_ressource">Gérer le premier téléchargement d'une ressource</h3>
+<h3 id="dealing_with_the_first_upload_of_a_resource">Gérer le premier téléchargement d'une ressource</h3>
 
 <p>Le premier téléchargement d'une ressource est un des cas résultant du comportement précédent. Comme toute mise à jour d'une ressource, le téléchargement va faire l'objet d'une situation de compétition si deux clients essaient un enregistrement au même instant. Pour éviter cela, les en-têtes conditionnels peuvent être employés : on ajoute <a href="/fr/docs/Web/HTTP/Headers/If-None-Match"><code>If-None-Match</code></a> avec la valeur particulière <code>'*'</code>, représentant n'importe quel etag. La requête aboutira seulement si la ressource n'existait pas avant :</p>
 
@@ -139,7 +139,7 @@ original_slug: Web/HTTP/Requêtes_conditionnelles
 
 <p><code>If-None-Match</code> fonctionnera seulement avec les serveurs compatibles HTTP/1.1 (et postérieurs). Si vous n'avez pas la certitude que le serveur soit compatible, vous devez d'abord envoyer une requête <a href="/fr/docs/Web/HTTP/Methods/HEAD"><code>HEAD</code></a> à la ressource pour vérifier.</p>
 
-<h2 id="Conclusion">Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>Les requêtes conditionnelles sont une fonctionnalité essentielle d'HTTP et permettent la construction d'applications efficaces et complexes. Pour le cache et la reprise des téléchargements, la seule tâche du webmaster consiste à configurer le serveur correctement. Dans certains environnements, paramétrer correctement les ETags peut s'avérer un véritable défi. Une fois que c'est fait, le navigateur pourra exploiter les requêtes conditionnelles.</p>
 
