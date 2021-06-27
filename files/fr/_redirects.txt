@@ -4790,6 +4790,9 @@
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/arguments/length	/fr/docs/Web/JavaScript/Reference/Functions/arguments/length
 /fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/paramètres_du_reste	/fr/docs/Web/JavaScript/Reference/Functions/rest_parameters
 /fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères	/fr/docs/Web/JavaScript/Reference/Template_literals
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Collator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
+/fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+/fr/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Map	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Map/@@species	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species
@@ -4804,6 +4807,9 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Map/set	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/set
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Map/size	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/size
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Map/values	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/values
+/fr/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+/fr/docs/Web/JavaScript/Reference/Global_Objects/PluralRules	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
+/fr/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/clear	/fr/docs/orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear
 /fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 /fr/docs/Web/JavaScript/Reference/Grammaire_lexicale	/fr/docs/Web/JavaScript/Reference/Lexical_grammar
