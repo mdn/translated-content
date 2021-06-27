@@ -22,15 +22,15 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Debug github.sha
-        run: |
-          # WAITING for https://github.community/t/how-do-i-get-the-git-diff-compared-to-main/179296
-          echo "github.event.pull_request.base.sha:"
-          echo ${{ github.event.pull_request.base.sha }}
-          echo "github.event.pull_request.head.sha:"
-          echo ${{ github.event.pull_request.head.sha }}
-          git fetch -n origin ${{ github.event.pull_request.base.sha }}
-          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
+      # - name: Debug github.sha
+      #   run: |
+      #     # WAITING for https://github.community/t/how-do-i-get-the-git-diff-compared-to-main/179296
+      #     echo "github.event.pull_request.base.sha:"
+      #     echo ${{ github.event.pull_request.base.sha }}
+      #     echo "github.event.pull_request.head.sha:"
+      #     echo ${{ github.event.pull_request.head.sha }}
+      #     git fetch -n origin ${{ github.event.pull_request.base.sha }}
+      #     git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
 
       - uses: actions/checkout@v2
         with:
@@ -145,11 +145,29 @@ jobs:
           # be able to use this raw diff file for the benefit of analyzing.
           #XXX This doesn't work in mdn/translated-content
 
-          git fetch -n origin ${{ github.event.pull_request.base.sha }}
+      - name: Generate the diff file
+        if: ${{ env.GIT_DIFF_CONTENT }}
+        env:
+          # This must match what we set in the "Build changed content" step above
+          BUILD_OUT_ROOT: /tmp/build
+        run: |
+          # Save the raw diff blob and store that inside the ./build/
+          # directory.
+          # The purpose of this is for the PR Review Companion to later
+          # be able to use this raw diff file for the benefit of analyzing.
           git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > $BUILD_OUT_ROOT/DIFF
+
+          # temp
           cat $BUILD_OUT_ROOT/DIFF
-          # git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}
-          # git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }} > $BUILD_OUT_ROOT/DIFF
+
+
+          # echo "FETCHING ORIGIN..."
+          # # git fetch -n origin ${{ github.event.pull_request.base.sha }}
+          # git fetch -n origin
+          # git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > $BUILD_OUT_ROOT/DIFF
+          # cat $BUILD_OUT_ROOT/DIFF
+          # # git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}
+          # # git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }} > $BUILD_OUT_ROOT/DIFF
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
