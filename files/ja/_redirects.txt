@@ -5375,7 +5375,7 @@
 /ja/docs/XSLT/value-of	/ja/docs/Web/XSLT/Element/value-of
 /ja/docs/XSLT:Elements	/ja/docs/Web/XSLT/Element
 /ja/docs/XSLT:value-of	/ja/docs/Web/XSLT/Element/value-of
-/ja/docs/XSLTProcessor	/ja/docs/conflicting/Web/API/XSLTProcessor
+/ja/docs/XSLTProcessor	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/XSLT_in_Gecko	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/XSLT_in_Gecko/Basic_Example	/ja/docs/Web/API/XSLTProcessor/Basic_Example
 /ja/docs/XSLT_in_Gecko/Browser_Differences	/ja/docs/Web/API/XSLTProcessor/Browser_Differences

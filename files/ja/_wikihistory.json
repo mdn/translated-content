@@ -48939,12 +48939,6 @@
       "fscholz"
     ]
   },
-  "conflicting/Web/API/XSLTProcessor": {
-    "modified": "2019-03-23T23:31:15.481Z",
-    "contributors": [
-      "ethertank"
-    ]
-  },
   "conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3": {
     "modified": "2019-03-23T23:32:13.721Z",
     "contributors": [
