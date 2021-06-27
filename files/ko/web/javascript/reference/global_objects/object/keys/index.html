@@ -49,7 +49,7 @@ browser-compat: javascript.builtins.Object.keys
 const arr = ['a', 'b', 'c'];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
 
-// 배열 형 객체
+// 배열형 객체
 const obj = { 0: 'a', 1: 'b', 2: 'c' };
 console.log(Object.keys(obj)); // console: ['0', '1', '2']
 
@@ -87,7 +87,7 @@ Object.keys('foo');  // ["0", "1", "2"]
 
 <p><code>Object.keys</code>를 지원하지 않는 환경에서 사용하시려면 다음 스니펫을 복사하십시오.</p>
 
-<pre class="brush: js">// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+<pre class="brush: js">// From https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
   Object.keys = (function() {
     'use strict';
@@ -130,9 +130,9 @@ if (!Object.keys) {
 }
 </pre>
 
-<p>위의 코드에는 다른 창에서 객체를 전달했을 때 IE7 (및 IE8)에서는 열거 할 수 없는 키가 포함되어 있습니다.</p>
+<p>위의 코드에는 다른 창에서 객체를 전달했을 때 IE7 (그리고 아마 IE8)에서는 열거 할 수 없는 키가 포함되어 있습니다.</p>
 
-<p>간단한 브라우저 폴리필은 다음을 참고하세요.<a href="https://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Object.keys Browser Compatibility</a>.</p>
+<p>간단한 브라우저 폴리필은 다음을 참고하세요. <a href="https://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Object.keys Browser Compatibility</a>.</p>
 
 <h2 id="Specifications">명세</h2>
 
@@ -146,7 +146,7 @@ if (!Object.keys) {
 <h2 id="See_also">같이 보기</h2>
 
 <ul>
-  <li>A polyfill of <code>Object.keys</code> is available in <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
+  <li><code>Object.keys</code> 의 폴리필 코드는 아래에서 확인할 수 있습니다. <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
   <li><a
       href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability
       and ownership of properties</a></li>
