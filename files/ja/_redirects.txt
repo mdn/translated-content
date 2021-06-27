@@ -5689,7 +5689,7 @@
 /ja/docs/reftest_opportunities_files	/ja/docs/orphaned/reftest_opportunities_files
 /ja/docs/slice	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice
 /ja/docs/theme	/ja/docs/Themes
-/ja/docs/title	/ja/docs/conflicting/Web/HTML/Element/title
+/ja/docs/title	/ja/docs/Web/HTML/Element/title
 /ja/docs/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
 /ja/docs/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/width	/ja/docs/conflicting/Web/CSS/width_eaae26a6fb20ed3ef54fb23bfa0b1fcc
