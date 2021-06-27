@@ -1,5 +1,5 @@
 ---
-title: Track the score and win
+title: 점수 추가와 승패 판정 방법
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 tags:
   - Canvas
@@ -10,23 +10,23 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
 ---
 <div>{{GamesSidebar}}</div>
 
-<div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{IncludeSubnav("/ko/docs/Games")}}</div>
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}</p>
+<p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}</p>
 
 <div class="summary">
-<p>이번 단계는  <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a> 의 8번째 단계입니다.  <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html">Gamedev-Canvas-workshop/lesson8.html</a> 에서 이번 단계의 소스 코드를 확인할 수 있습니다.</p>
+<p>이번 단계는 <a href="/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Gamedev Canvas tutorial</a>의 8번째 단계입니다. <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html">Gamedev-Canvas-workshop/lesson8.html</a>에서 이번 단계의 소스 코드를 확인할 수 있습니다.</p>
 </div>
 
-<p><span class="seoSummary">벽돌 깨기 기능은 잘 작동한다. 하지만 더 나은 게임이 되기 위해서, 유저가 벽돌을 깰 때마다 점수를 얻고, 그 점수를 기록하는 Score 기능을 만든다.</span></p>
+<p><span class="seoSummary">벽돌 깨기 기능은 잘 작동합니다. 하지만 더 나은 게임이 되기 위해서, 유저가 벽돌을 깰 때마다 점수를 얻고, 그 점수를 기록하는 점수 기능을 만들 수 있습니다.</span></p>
 
 <h2 id="점수_계산하기">점수 계산하기</h2>
 
-<p>게임 안에 점수 기능이 있다면, 친구들이 더 좋아할 것이다. 그러기 위해서는 점수를 기록할 변수가 필요합니다. 작성중인 JS파일의 변수 영역의 하단에, 아래 코드를 추가하자.</p>
+<p>게임 플레이 도중 점수를 볼 수 있다면, 친구들에게 자랑할 수 있을 것입니다. 그러기 위해서는 점수를 기록할 변수가 필요합니다. 작성중인 JS파일의 변수 영역의 하단에, 아래 코드를 추가합시다.</p>
 
 <pre class="brush: js">var score = 0;</pre>
 
-<p>점수 화면을 만들고, 업데이트를 하기 위해서 <code>drawScore()</code> 함수가 필요하다. 아래 코드를 <code>collisionDetection()</code> 함수 아래에 추가하자.</p>
+<p>점수 화면을 만들고, 업데이트를 하기 위해서 <code>drawScore()</code> 함수가 필요합니다. 아래 코드를 <code>collisionDetection()</code> 함수 아래에 추가합시다.</p>
 
 <pre class="brush: js">function drawScore() {
     ctx.font = "16px Arial";
@@ -34,9 +34,9 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
     ctx.fillText("Score: "+score, 8, 20);
 }</pre>
 
-<p>텍스트를 캔버스 안에 그리는 것은 도형을 그리는 작업과 비슷하다. 폰트를 정의하는 것은 CSS에서의 작업과 같다. — {{domxref("CanvasRenderingContext2D.font","font()")}} 함수에서 크기와 타입을 설정할 수 있다. <font><font>그런 다음 </font></font>{{domxref("CanvasRenderingContext2D.fillStyle()","fillStyle()")}} 함수를 사용하여 <font><font>글꼴의 색상을 설정하고 </font></font>{{domxref("CanvasRenderingContext2D.fillText","fillText()")}} 함수를 이용해서 <font><font>캔버스에 배치 될 실제 텍스트와 배치 위치를 설정하는 데 사용한다. </font><font>첫 번째 매개 변수는 텍스트 자체다. 위의 코드는 현재 점의 수를 나타내며 마지막 두 매개 변수는 텍스트가 캔버스에 배치 될 좌표이다.</font></font></p>
+<p>텍스트를 캔버스 안에 그리는 것은 도형을 그리는 작업과 비슷합니다. 폰트를 정의하는 것은 CSS에서의 작업과 같습니다. — {{domxref("CanvasRenderingContext2D.font","font()")}} 함수에서 크기와 타입을 설정할 수 있습니다. <font><font>그런 다음 </font></font>{{domxref("CanvasRenderingContext2D.fillStyle()","fillStyle()")}} 함수를 사용하여 <font><font>글꼴의 색상을 설정하고 </font></font>{{domxref("CanvasRenderingContext2D.fillText","fillText()")}} 함수를 이용해서 <font><font>캔버스에 배치될 실제 텍스트와 배치 위치를 설정하는 데 사용합니다. </font><font>첫 번째 매개 변수는 텍스트 자체입니다. 위의 코드는 현재 점수를 나타내며 마지막 두 매개 변수는 텍스트가 캔버스에 배치될 좌표입니다.</font></font></p>
 
-<p>벽돌이 깨질 때마다 점수 변수의 값을 증가 시키기 위해서 <code>collisionDetection()</code> 함수에 강조 표시된 코드를 입력하여 수정한다.</p>
+<p>벽돌이 깨질 때마다 점수 변수의 값을 증가시키기 위해서 <code>collisionDetection()</code> 함수에 강조 표시된 코드를 입력하여 수정합시다.</p>
 
 <pre class="brush: js; highlight:[9]">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {
@@ -53,13 +53,13 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
     }
 }</pre>
 
-<p><code>draw()</code> 함수 안에서 위 함수를 호출하면 호출 될 때마다 다시 그리기 때문에 점수 변동을 확인할 수 있다. <code>draw()</code> 아래 코드를  <code>drawPaddle()</code> 아래에서 호출한다.</p>
+<p><code>draw()</code> 함수 안에서 위 함수를 호출하면 호출 될 때마다 다시 그리기 때문에 점수 변동을 확인할 수 있습니다. <code>draw()</code> 아래 코드를 <code>drawPaddle()</code> 아래에서 호출합니다.</p>
 
 <pre class="brush: js">drawScore();</pre>
 
 <h2 id="모든_벽돌이_파괴되었을_때_승리_메시지_표시"><font><font>모든 벽돌이 파괴되었을 때 승리 메시지 표시</font></font></h2>
 
-<p><font><font>점수가 오르는 것은 좋지만, 평생 점수가 올라가진 않을 것이다. 모든 벽돌의 파괴가 </font><font>결국 게임의 주된 목적이기 때문에 모든 점수를 얻는다면  승리 메시지를 표시해야한다.  </font></font><code>collisionDetection()</code><font><font>함수에 강조된 코드를 붙여넣는다.</font></font></p>
+<p><font><font>점수가 오르는 것은 좋지만, 평생 점수가 올라가진 않을 것입니다. 모든 벽돌의 파괴가 </font><font>결국 게임의 주된 목적이기 때문에 모든 점수를 얻는다면 승리 메시지를 표시해야 합니다. </font></font><code>collisionDetection()</code><font><font>함수에 강조된 코드를 붙여넣읍시다.</font></font></p>
 
 <pre class="brush: js; highlight:[10,11,12,13]">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {
@@ -80,22 +80,22 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
     }
 }</pre>
 
-<p><font><font>결국 사용자는 모든 벽돌을 파괴 한 순간, 실제로 게임에서 승리 할 수 ​​있다. 이는 게임과 관련하여 굉장히 중요하다.</font><font> </font></font><code>document.location.reload()</code><font><font>기능은 페이지를 다시로드하고 경고를 클릭하면 게임을 다시 시작한다.</font></font></p>
+<p><font><font>결국 사용자는 모든 벽돌을 파괴한 순간, 실제로 게임에서 승리할 수 ​​있습니다. 이는 게임과 관련하여 굉장히 중요합니다.</font><font> </font></font><code>document.location.reload()</code><font><font>기능은 페이지를 다시 로드하고 경고 버튼이 클릭되면 게임을 다시 시작합니다.</font></font></p>
 
 <h2 id="코드_비교"><font><font>코드 비교</font></font></h2>
 
-<p><font><font>최종 코드는 아래와 같다. 지금까지 작성한 코드와 비교해보자.</font></font></p>
+<p><font><font>최종 코드는 아래와 같습니다. 지금까지 작성한 코드와 비교해 봅시다.</font></font></p>
 
 <p> </p>
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/2m74vr9r/1/","","395")}}</p>
 
 <div class="note">
-<p><strong>추가학습</strong>: 벽돌을 깰 때마다 얻는 점수를 늘리고,  게임 클리어 시 최종 점수를 경고창에 표시해보자.</p>
+<p><strong>추가 학습</strong>: 벽돌을 깰 때마다 얻는 점수를 늘리고, 게임 클리어 시 최종 점수를 경고창에 표시해 봅시다.</p>
 </div>
 
 <h2 id="다음_단계">다음 단계</h2>
 
-<p>게임은 현재 꽤 멋지게 보인다. 다음 단계에서는,  <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Mouse_controls">Mouse controls (마우스로 패들 조종하는 방법)</a> 을 통해서 게임을 즐길 수 있습니다.</p>
+<p>게임은 현재 꽤 멋지게 보입니다. 다음 단계에서는, <a href="/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls">Mouse controls (마우스로 패들 조종하는 방법)</a>을 통해서 게임을 즐길 수 있습니다.</p>
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}</p>
+<p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}</p>

@@ -47,10 +47,10 @@ translation_of: Web/Web_Components/Using_shadow_DOM
 <p>Il y a quelques termes de la terminologie du DOM fantôme que vous devez connaitre :</p>
 
 <ul>
-  <li><strong>Hôte fantôme </strong>: le nœud du DOM principal auquel le DOM fantôme est associé.</li>
-  <li><strong>Arbre fantôme</strong>: l'arbre DOM au sein du DOM fantôme.</li>
-  <li><strong>Frontière fantôme</strong>: la limite où le DOM fantôme se termine et où le DOM principal commence.</li>
-  <li><strong>Racine fantôme</strong>: le nœud racine de l'arbre fantôme.</li>
+  <li><strong>Hôte fantôme</strong> : le nœud du DOM principal auquel le DOM fantôme est associé.</li>
+  <li><strong>Arbre fantôme</strong> : l'arbre DOM au sein du DOM fantôme.</li>
+  <li><strong>Frontière fantôme</strong> : la limite où le DOM fantôme se termine et où le DOM principal commence.</li>
+  <li><strong>Racine fantôme</strong> : le nœud racine de l'arbre fantôme.</li>
 </ul>
 
 <p>Vous pouvez affecter les nœuds du DOM fantôme exactement de la même manière que pour les nœuds du DOM principal — par exemple en leur ajoutant des éléments enfants ou en leur définissant des attributs, en stylisant des nœuds individuels au moyen de <code>element.style.propriete</code>, ou en ajoutant du style à l'arbre DOM fantôme entier via une balise <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a>. La différence est que le code au sein du DOM fantôme ne peut affecter aucun élément en dehors de son arbre, permettant de mettre en œuvre une encapsulation très commode.</p>
@@ -68,7 +68,7 @@ let fantome = element.attachShadow({mode: 'closed'});</pre>
 
 <pre class="brush: js">let monDomFantome = monElementPerso.shadowRoot;</pre>
 
-<p>Si vous associez une racine fantôme à un élément personnalisé avec la propriété <code>mode</code> définie à <code>closed</code>, vous ne serez pas autorisé à accéder au DOM fantôme depuis l'extérieur — <code>monElementPerso.shadowRoot</code> retournera <code>null</code>. C'est le casavec les éléments natifs contenant des DOM fantômes tels que <code>&lt;video&gt;</code>.</p>
+<p>Si vous associez une racine fantôme à un élément personnalisé avec la propriété <code>mode</code> définie à <code>closed</code>, vous ne serez pas autorisé à accéder au DOM fantôme depuis l'extérieur — <code>monElementPerso.shadowRoot</code> retournera <code>null</code>. C'est le cas avec les éléments natifs contenant des DOM fantômes tels que <code>&lt;video&gt;</code>.</p>
 
 <div class="notecard note">
   <p><b>Note :</b></p>
@@ -87,7 +87,7 @@ shadow.appendChild(paragraph);
 
 <h2 id="working_through_a_simple_example">Démonstration au travers d'un exemple simple</h2>
 
-<p>Maintenant, visitons un exemple simple pour faire une démonstration du DOM fantôme en action au sein d'un élément personnalisé — <code><a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">&lt;popup-info-box&gt;</a></code> (en voir aussi un <a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">exemple dynamique</a>). Il prend une icône et une chaîne de caractères et intègre l'image dans la page. Quand l'icône obtient l'attention (<code>:focus</code>), le texte s'affiche dans une fenêtre indépendante pour fournir plus d'informations contextuelles. Pour commencer, nous définissons dans notre fichier JavaScript une classe appelée <code>PopUpInfo</code>, qui étend <code>HTMLElement</code>:</p>
+<p>Maintenant, visitons un exemple simple pour faire une démonstration du DOM fantôme en action au sein d'un élément personnalisé — <code><a href="https://github.com/mdn/web-components-examples/tree/master/popup-info-box-web-component">&lt;popup-info-box&gt;</a></code> (en voir aussi un <a href="https://mdn.github.io/web-components-examples/popup-info-box-web-component/">exemple dynamique</a>). Il prend une icône et une chaîne de caractères et intègre l'image dans la page. Quand l'icône obtient l'attention (<code>:focus</code>), le texte s'affiche dans une fenêtre indépendante pour fournir plus d'informations contextuelles. Pour commencer, nous définissons dans notre fichier JavaScript une classe appelée <code>PopUpInfo</code>, qui étend <code>HTMLElement</code> :</p>
 
 <pre class="brush: js">class PopUpInfo extends HTMLElement {
   constructor() {
@@ -106,12 +106,12 @@ shadow.appendChild(paragraph);
 
 <p>Nous associons d'abord une racine fantôme à l'élément personnalisé :</p>
 
-<pre class="brush: js">// Créer une racine fantome
-var fantome = this.attachShadow({mode: 'open'});</pre>
+<pre class="brush: js">// Créer une racine fantôme
+let fantome = this.attachShadow({mode: 'open'});</pre>
 
 <h3 id="creating_the_shadow_dom_structure">Créer la structure du DOM fantôme</h3>
 
-<p class="brush: js">Ensuite, nous utilisons des outils de manipulation du DOM pour créer la structure interne du DOM fantôme de notre élément:</p>
+<p class="brush: js">Ensuite, nous utilisons des outils de manipulation du DOM pour créer la structure interne du DOM fantôme de notre élément :</p>
 
 <pre class="brush: js">// Créer les &lt;span&gt;
 let wrapper = document.createElement('span');
@@ -197,7 +197,7 @@ customElements.define('popup-info', PopUpInfo);</pre>
 
 <p>Dans l'exemple précédent, nous appliquons du style au DOM fantôme en utilisant l'élément <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a>, mais il est parfaitement possible de le faire en référençant une feuille de style externe avec un élément <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> si vous le préférez.</p>
 
-<p>Par exemple, regardez ce code tiré de l'exemple <a href="https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/">popup-info-box-external-stylesheet</a> (voir le <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js">code source</a>):</p>
+<p>Par exemple, regardez ce code tiré de l'exemple <a href="https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/">popup-info-box-external-stylesheet</a> (voir le <a href="https://github.com/mdn/web-components-examples/blob/master/popup-info-box-external-stylesheet/main.js">code source</a>) :</p>
 
 <pre class="brush: js">// Appliquer les styles externes au dom fantôme
 const linkElem = document.createElement('link');

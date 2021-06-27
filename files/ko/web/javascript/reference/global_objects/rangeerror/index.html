@@ -2,162 +2,131 @@
 title: RangeError
 slug: Web/JavaScript/Reference/Global_Objects/RangeError
 translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
+tags:
+  - Error
+  - JavaScript
+  - Reference
+  - RangeError
+browser-compat: javascript.builtins.RangeError
 ---
+
 <div>{{JSRef}}</div>
 
-<p><code><strong>RangeError</strong></code> 객체는 값이 집합에 없거나 허용되지 않은 값의 범위일 때 에러를 나타냅니다.</p>
-
-<h2 id="구문">구문 </h2>
-
-<pre class="syntaxbox"><code>new RangeError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
-
-<h3 id="파라메터">파라메터</h3>
-
-<dl>
- <dt><code>message</code></dt>
- <dd>선택적 파라메터. 에러에 대한 설명.</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>선택적 파라메터. 예외(exception)가 발생한 코드를 포함하고 있는 파일의 이름.</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>선택적 파라메터. 예외(exception)가 발생한 코드의 라인 넘버.</dd>
-</dl>
+<p>
+    <code><strong>RangeError</strong></code> 객체는 어떤 값이 집합에 없거나 허용되는 범위가 아닐 때
+  오류를 나타냅니다.
+</p>
 
 <h2 id="설명">설명</h2>
 
-<p><code>RangeError</code> 는 허용되지 않은 범위의 수를 포함한 아규먼트를 함수에 넘기려고 할 때 던져집니다. {{jsxref("Array")}} 생성자로 허용범위를 초과한 길이의 배열 생성을 시도하려 하거나,  적절하지 않은 값을 numeric method({{jsxref("Number.toExponential()")}}, {{jsxref("Number.toFixed()")}} 또는 {{jsxref("Number.toPrecision()")}})에 넘기려 할 때, 이 에러를 만날 수 있을 것입니다.  </p>
+<p>
+    어떤 값을 그 값이 포함되는 범위를 허용하지 않는 함수에 인수로 전달하려 할 때  
+  <code>RangeError</code>가 발생합니다.
+</p>
 
-<h2 id="속성">속성</h2>
+<p>이 문제는 다음과 같은 경우에 발생할 수 있습니다.</p>
+
+<ul>
+  <li>허용되는 문자열이 아닌 값을 {{jsxref("String.prototype.normalize()")}}에 전달하거나,</li>
+  <li>{{jsxref("Array")}} 생성자를 통해 잘못된 길이의 배열을 만드려고 시도하거나,  </li>
+  <li>
+        숫자 메서드 {{jsxref("Number.prototype.toExponential()")}},    
+    {{jsxref("Number.prototype.toFixed()")}} 혹은 {{jsxref("Number.prototype.toPrecision()")}}에
+    나쁜 값을 전달하는 경우.  
+  </li>
+</ul>
+
+<h2 id="생성자">생성자</h2>
 
 <dl>
- <dt>{{jsxref("RangeError.prototype")}}</dt>
- <dd><code>RangeError</code> 객체에 속성을 추가하도록 해준다. </dd>
+  <dt>{{jsxref("RangeError/RangeError", "RangeError()")}}</dt>
+  <dd>새로운 <code>RangeError</code> 객체를 만듭니다.</dd>
 </dl>
 
-<h2 id="메소드">메소드</h2>
+<h2 id="인스턴스_속성">인스턴스_속성</h2>
 
-<p>전역(global)의 <code>RangeError</code>는 자신의 메소드를 가지고 있지 않습니다. 하지만, 몇 가지의 메소드를 프로토타입 체인을 통해 상속받습니다.</p>
-
-<h2 id="RangeError_인스턴스"><code>RangeError</code> 인스턴스</h2>
-
-<h3 id="속성_2">속성</h3>
-
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Properties')}}</div>
-
-<h3 id="메소드_2">메소드</h3>
-
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError/prototype', 'Methods')}}</div>
+<dl>
+  <dt>{{jsxref("Error.prototype.message", "RangeError.prototype.message")}}</dt>
+  <dd>
+    오류 메시지. 비록 ECMA-262에서 {{jsxref("RangeError")}}는 반드시 자체    
+    <code>message</code> 속성을 제공해야한다고 명시했지만, <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>는 {{jsxref("Error.prototype.message")}}를 상속합니다.  
+  </dd>
+  <dt>{{jsxref("Error.prototype.name", "RangeError.prototype.name")}}</dt>
+  <dd>오류 이름. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>{{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}}  </dt>
+  <dd>오류가 발생한 파일 경로. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>{{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}}  </dt>
+  <dd>오류가 발생한 곳의 줄 위치. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>{{jsxref("Error.prototype.columnNumber", "RangeError.prototype.columnNumber")}}</dt>
+  <dd>오류가 발생한 곳의 열 위치. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>{{jsxref("Error.prototype.stack", "RangeError.prototype.stack")}}</dt>
+  <dd>스택 추적. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+</dl>
 
 <h2 id="예">예</h2>
 
-<h3 id="RangeError_사용하기"><code>RangeError </code>사용하기</h3>
+<h3 id="RangeError_사용하기_숫자값">RangeError 사용하기(숫자 값일 경우)</h3>
 
-<pre class="brush: js">var check = function(num) {
-  if (num &lt; MIN || num &gt; MAX) {
-    throw new RangeError('Parameter must be between ' + MIN + ' and ' + MAX);
+<pre class="brush: js">
+function check(n)
+{
+  if( !(n &gt;= -500 &amp;&amp; n &lt;= 500) )
+  {
+    throw new RangeError("The argument must be between -500 and 500.")
   }
-};
-
-try {
-  check(500);
 }
-catch (e) {
-  if (e instanceof RangeError) {
-    // Handle range error
+
+try
+{
+  check(2000)
+}
+catch(error)
+{
+  if (error instanceof RangeError)
+  {
+    // Handle the error
+  }
+}
+</pre>
+<h3 id="RangeError_사용하기_숫자값이_아닐_경우">RangeError 사용하기 (숫자값이 아닐 경우)</h3>
+
+<pre class="brush: js">
+function check(value)
+{
+  if(["apple", "banana", "carrot"].includes(value) === false)
+  {
+      throw new RangeError('The argument must be an "apple", "banana", or "carrot".')
+  }
+}
+
+try
+{
+  check("cabbage")
+}
+catch(error)
+{
+  if(error instanceof RangeError)
+  {
+    // Handle the error
   }
 }
 </pre>
 
-<h2 id="스펙">스펙</h2>
+<h2 id="specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>초기 정의.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.6.2', 'RangeError')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<h2 id="browser_compatibility">브라우저 호환성</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>{{Compat}}</p>
 
 <h2 id="참조">참조</h2>
 
 <ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("RangeError.prototype")}}</li>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Number.toExponential()")}}</li>
- <li>{{jsxref("Number.toFixed()")}}</li>
- <li>{{jsxref("Number.toPrecision()")}}</li>
+  <li>{{jsxref("Error")}}</li>
+  <li>{{jsxref("RangeError.prototype")}}</li>
+  <li>{{jsxref("Array")}}</li>
+  <li>{{jsxref("Number.toExponential()")}}</li>
+  <li>{{jsxref("Number.toFixed()")}}</li>
+  <li>{{jsxref("Number.toPrecision()")}}</li>
 </ul>

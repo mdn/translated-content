@@ -87,59 +87,13 @@ align-items: unset;
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{CompatibilityTable}}</p>
+<h3 id="Support_in_Flex_layout">Support in Flex layout</h3>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>21.0{{ property_prefix("-webkit") }}</td>
-   <td>{{ CompatGeckoDesktop("20.0") }}[1]</td>
-   <td>11.0 [2]</td>
-   <td>12.10</td>
-   <td>7.0{{ property_prefix("-webkit") }} </td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>{{Compat("css.properties.align-items.flex_context")}}</p>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile("20.0") }}[1]</td>
-   <td>{{CompatNo}}</td>
-   <td>12.10</td>
-   <td>7.0{{ property_prefix("-webkit") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h3 id="Support_in_Grid_layout">Support in Grid layout</h3>
 
-<p>[1] Чтобы активировать поддержку flexbox в Firefox 18 и 19, пользователь должен посетить about:config  и изменить значение предпочтения<code> layout.css.flexbox.enabled</code> на <code>true</code>. Многострочный flexbox поддерживается с Firefox 28.</p>
-
-<p>[2] В Internet Explorer 10-11 (но не 12+), если в элементах flex столбца есть <code>align-items: center;</code> установите на них, и если их содержание слишком велико, они будут выходить за границы своего контейнера. Смотрите <a href="https://github.com/philipwalton/flexbugs#2-column-flex-items-set-to-align-itemscenter-overflow-their-container">Flexbug #2</a> для получения дополнительной информации..</p>
+<p>{{Compat("css.properties.align-items.grid_context")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

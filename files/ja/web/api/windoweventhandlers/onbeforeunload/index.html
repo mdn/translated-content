@@ -14,7 +14,7 @@ translation_of: Web/API/WindowEventHandlers/onbeforeunload
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><code><strong>onbeforeunload</strong></code> は {{domxref("WindowEventHandlers")}} ミックスインのプロパティで、 {{event("beforeunload")}} イベントを処理する {{domxref("EventHandler")}} です。このイベントはウィンドウでリソースを {{event("unload")}} しようとするときに発生します。この時点では文書はまだ表示されており、イベントはキャンセル可能な状態です。</p>
+<p><code><strong>onbeforeunload</strong></code> は {{domxref("WindowEventHandlers")}} ミックスインのプロパティで、 {{event("beforeunload")}} イベントを処理する {{event("Event_handlers", "event handler")}} です。このイベントはウィンドウでリソースを {{event("unload")}} しようとするときに発生します。この時点では文書はまだ表示されており、イベントはキャンセル可能な状態です。</p>
 
 <div class="note">
 <p><strong>メモ:</strong> ブラウザーによっては不要なポップアップを防ぐために、ページで操作が行われない限り、 <code>beforeunload</code> イベントハンドラーの中で作られたプロンプトを表示しないことがあります。さらに、ブラウザーによっては全く表示しないかもしれません。</p>
@@ -77,8 +77,6 @@ window.onbeforeunload = function(event) { ... };</pre>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("api.WindowEventHandlers.onbeforeunload")}}</p>
 

@@ -1,120 +1,92 @@
 ---
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
+tags:
+  - Class
+  - InternalError
+  - JavaScript
+  - Object
 translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
+browser-compat: javascript.builtins.InternalError
 ---
 <div>{{JSRef}} {{non-standard_header}}</div>
 
-<p><strong><code>InternalError </code></strong>객체는 JavaScript 엔진 내부에서 발생한 에러를 나타냅니다. 예를 들면, <strong>"InternalError</strong>: too much recursion"라는 에러가 있으며, 이것은 "내부 에러: 너무 많은 재귀 호출" 상황이 발생했을 때 나타납니다. </p>
+<p><strong><code>InternalError</code></strong> 객체는 JavaScript 엔진 내부에서 발생한 오류를 나타냅니다. </p>
 
-<h2 id="구문">구문</h2>
-
-<pre class="syntaxbox">new InternalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
-
-<h3 id="파라메터">파라메터</h3>
-
-<dl>
- <dt><code>message</code></dt>
- <dd>선택적 파라메터. 에러에 대한 설명.</dd>
- <dt><code>fileName</code> {{non-standard_inline}}</dt>
- <dd>선택적 파라메터. 예외(Exception)가 발생한 코드를 포함하고 있는 파일 명.</dd>
- <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd>선택적 파라메터. 예외(Exception)이 발생한 코드의 라인 넘버.</dd>
-</dl>
-
-<h2 id="설명">설명</h2>
-
-<p><code>InternalError</code> 는 JavaScript 엔진에서 내부 에러가 발생할 때마다 던져집니다.</p>
-
-<p>다음의 에러 예시 들의 경우는 일반적으로 어떤 값이 너무 큰 경우 입니다.</p>
+<p>다음의 오류 예시의 경우는 일반적으로 어떤 값이 너무 큰 경우입니다.</p>
 
 <ul>
- <li>"too many switch cases", (swich case의 수가 너무 많음.)</li>
- <li>"too many parentheses in regular expression", (정규표현식에 너무 많은 괄호가 있음.)</li>
- <li>"array initializer too large", (배열 초기화 값이 너무 큼.)</li>
- <li>"too much recursion". (너무 많은 재귀 호출.)</li>
+ <li>"too many switch cases", (swich case의 수가 너무 많음)</li>
+ <li>"too many parentheses in regular expression", (정규표현식에 너무 많은 괄호가 있음)</li>
+ <li>"array initializer too large", (배열 초기화 값이 너무 큼)</li>
+ <li>"too much recursion". (너무 많은 재귀 호출)</li>
 </ul>
 
-<h2 id="속성">속성</h2>
+<h2 id="Constructor">생성자</h2>
 
 <dl>
- <dt>{{jsxref("InternalError.prototype")}}</dt>
- <dd><code>InternalError</code> 객체에 속성을 추가하도록 해줍니다.</dd>
+ <dt>{{jsxref("InternalError/InternalError", "InternalError()")}}</dt>
+ <dd>새로운 <code>InternalError</code> 객체를 만듭니다.</dd>
 </dl>
 
-<h2 id="메소드">메소드</h2>
+<h2 id="Instance_properties">인스턴스 속성</h2>
 
-<p>전역(global)의 <code>InternalError</code> 는 고유의 함수를 가지고 있지 않지만, 몇 가지의 메소드를 프로토타입 체인으로부터 상속받습니다.</p>
+<dl>
+  <dt>{{jsxref("Error.prototype.message", "InternalError.prototype.message")}}</dt>
+  <dd>오류 메시지. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>{{jsxref("Error.prototype.name", "InternalError.prototype.name")}}</dt>
+  <dd>오류 이름. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>{{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}}</dt>
+  <dd>오류가 발생한 파일 경로. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>{{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}}</dt>
+  <dd>오류가 발생한 곳의 줄 번호. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>{{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}}</dt>
+  <dd>오류가 발생한 행의 열 번호. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+  <dt>{{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}}</dt>
+  <dd>스택 추적. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
+</dl>
 
-<h2 id="InternalError_인스턴스"><code>InternalError</code> 인스턴스</h2>
+<h2 id="Examples">예제</h2>
 
-<h3 id="속성_2">속성</h3>
+<h3 id="Too_much_recursion">너무 많은 재귀 호출</h3>
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError/prototype', 'Properties')}}</div>
+<p>이 재귀 함수는 종료 조건에 따라 10번 수행됩니다.</p>
 
-<h3 id="메소드_2">메소드</h3>
+<pre class="brush: js">function loop(x) {
+  if (x &gt;= 10) // "x &gt;= 10" 는 종료 조건입니다.
+    return;
+  // 어떤 코드
+  loop(x + 1); // 재귀 호출
+}
+loop(0);</pre>
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError/prototype', 'Methods')}}</div>
+<p>이 조건을 매우 높은 값으로 설정하면 작동하지 않습니다:</p>
 
-<h2 id="스펙">스펙</h2>
+<pre class="brush: js example-bad">function loop(x) {
+  if (x &gt;= 1000000000000)
+    return;
+  // 어떤 코드
+  loop(x + 1);
+}
+loop(0);
 
-<p>Not part of any specifications.</p>
+// InternalError: too much recursion(너무 많은 재귀 호출)</pre>
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<p>더 많은 정보를 보려면 <a href="/ko/docs/Web/JavaScript/Reference/Errors/Too_much_recursion">InternalError: too much recursion(너무 많은 재귀 호출)</a>를 보시길 바랍니다.</p>
 
-<div>{{CompatibilityTable}}</div>
+<h2 id="Specifications">명세</h2>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<p>어떤 표준에도 속하지 않습니다.</p>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
-<h2 id="참조">참조</h2>
+<p>{{Compat}}</p>
+
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("InternalError.prototype")}}</li>
+  <li>{{jsxref("Error")}}</li>
+  <li>
+   <p><a href="/ko/docs/Web/JavaScript/Reference/Errors/Too_much_recursion">InternalError: too much recursion(너무 많은 재귀 호출)</a></p>
+  </li>
 </ul>

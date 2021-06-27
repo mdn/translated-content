@@ -36,7 +36,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <dl>
  <dt id="xmlhttprequest-onreadystatechange">{{domxref("XMLHttpRequest.onreadystatechange")}}</dt>
- <dd>{{domxref("EventHandler")}} で、これは <code>readyState</code> 属性が変化する度に呼び出されます。</dd>
+ <dd>{{event("Event_handlers", "event handler")}} で、これは <code>readyState</code> 属性が変化する度に呼び出されます。</dd>
  <dt id="xmlhttprequest-readystate">{{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}</dt>
  <dd>リクエストの状態を <code>unsigned short</code> で返します。</dd>
  <dt>{{domxref("XMLHttpRequest.response")}} {{readonlyinline}}</dt>
@@ -60,7 +60,7 @@ translation_of: Web/API/XMLHttpRequest
  <dt id="xmlhttprequest-timeout">{{domxref("XMLHttpRequest.timeout")}}</dt>
  <dd>リクエストを自動的に終了できるようになるまでの時間をミリ秒単位で表す、 <code>unsigned long</code> 型の値です。</dd>
  <dt id="xmlhttprequesteventtarget-ontimeout">{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</dt>
- <dd>リクエストがタイムアウトする都度呼び出される {{domxref("EventHandler")}}。{{gecko_minversion_inline("12.0")}}</dd>
+ <dd>リクエストがタイムアウトする都度呼び出される {{event("Event_handlers", "event handler")}}。{{gecko_minversion_inline("12.0")}}</dd>
  <dt id="xmlhttprequest-upload">{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
  <dd>アップロードプロセスを表す {{domxref("XMLHttpRequestUpload")}} です。</dd>
  <dt id="xmlhttprequest-withcredentials">{{domxref("XMLHttpRequest.withCredentials")}}</dt>
@@ -170,8 +170,6 @@ translation_of: Web/API/XMLHttpRequest
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <div>{{Compat("api.XMLHttpRequest")}}</div>
 

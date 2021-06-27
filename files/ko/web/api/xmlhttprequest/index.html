@@ -35,7 +35,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <dl>
  <dt id="xmlhttprequest-onreadystatechange">{{domxref("XMLHttpRequest.onreadystatechange")}}</dt>
- <dd><code>readyState</code> 어트리뷰트가 변경될때마다 호출되는 {{domxref("EventHandler")}} 입니다.</dd>
+ <dd><code>readyState</code> 어트리뷰트가 변경될때마다 호출되는 {{event("Event_handlers", "event handler")}} 입니다.</dd>
  <dt id="xmlhttprequest-readystate">{{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}</dt>
  <dd>요청의 상태를 <code>unsigned short</code> 로 반환합니다.</dd>
  <dt>{{domxref("XMLHttpRequest.response")}} {{readonlyinline}}</dt>
@@ -62,7 +62,7 @@ translation_of: Web/API/XMLHttpRequest
  <dt id="xmlhttprequest-timeout">{{domxref("XMLHttpRequest.timeout")}}</dt>
  <dd>요청이 자동으로 종료될때까지 걸린 시간을 밀리초 단위로 나타내는 <code>unsigned long</code> 입니다.</dd>
  <dt>{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</dt>
- <dd>요청 시간 초과때마다 호출되는 {{domxref("EventHandler")}} 입니다. {{gecko_minversion_inline("12.0")}}</dd>
+ <dd>요청 시간 초과때마다 호출되는 {{event("Event_handlers", "event handler")}} 입니다. {{gecko_minversion_inline("12.0")}}</dd>
  <dt id="xmlhttprequest-upload">{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
  <dd>업로드 과정을 나타내는 {{domxref("XMLHttpRequestUpload")}} 입니다.</dd>
  <dt id="xmlhttprequest-withcredentials">{{domxref("XMLHttpRequest.withCredentials")}}</dt>
@@ -172,10 +172,6 @@ translation_of: Web/API/XMLHttpRequest
 </table>
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
-
-<div class="hidden">
-<p>The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p>{{Compat("api.XMLHttpRequest")}}</p>
 

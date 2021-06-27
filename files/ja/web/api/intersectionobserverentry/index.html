@@ -11,19 +11,19 @@ translation_of: Web/API/IntersectionObserverEntry
 
 <dl>
  <dt>{{domxref("IntersectionObserverEntry.boundingClientRect")}} {{readonlyinline}}</dt>
- <dd>Returns the bounds rectangle of the target element as a {{domxref("DOMRectReadOnly")}}. The bounds are computed as described in the documentation for {{domxref("Element.getBoundingClientRect()")}}.</dd>
+ <dd>ターゲット要素の矩形の境界を {{domxref("DOMRectReadOnly")}} として返します。境界は {{domxref("Element.getBoundingClientRect()")}} のドキュメントで説明されているのと同様に計算されます。</dd>
  <dt>{{domxref("IntersectionObserverEntry.intersectionRatio")}} {{readonlyinline}}</dt>
- <dd>Returns the ratio of the <code>intersectionRect</code> to the <code>boundingClientRect</code>.</dd>
+ <dd><code>intersectionRect</code> と <code>boundingClientRect</code> の比率を返します。</dd>
  <dt>{{domxref("IntersectionObserverEntry.intersectionRect")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("DOMRectReadOnly")}} representing the target's visible area.</dd>
+ <dd>ターゲットの表示領域を表す {{domxref("DOMRectReadOnly")}} を返します。</dd>
  <dt>{{domxref("IntersectionObserverEntry.isIntersecting")}} {{ReadOnlyInline}}</dt>
- <dd>A Boolean value which is <code>true</code> if the target element intersects with the intersection observer's root. If this is <code>true</code>, then, the <code>IntersectionObserverEntry</code> describes a transition into a state of intersection; if it's <code>false</code>, then you know the transition is from intersecting to not-intersecting.</dd>
+ <dd>ターゲットの要素が、交差を監視しているルートを超えたら  <code>true</code> を返す真偽値です。 <code>true</code> の場合、 <code>IntersectionObserverEntry</code> は交差状態の変わり目にあります。  <code>false</code> の場合、交差から非交差への変わり目であることがわかります。</dd>
  <dt>{{domxref("IntersectionObserverEntry.rootBounds")}} {{readonlyinline}}</dt>
- <dd>Returns a {{domxref("DOMRectReadOnly")}} for the intersection observer's root.</dd>
+ <dd>交差を監視しているルートの {{domxref("DOMRectReadOnly")}} を返します。</dd>
  <dt>{{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}</dt>
- <dd>The {{domxref("Element")}} whose intersection with the root changed.</dd>
+ <dd>ルートとの交差が変化する {{domxref("Element")}} 。</dd>
  <dt>{{domxref("IntersectionObserverEntry.time")}} {{readonlyinline}}</dt>
- <dd>A {{domxref("DOMHighResTimeStamp")}} indicating the time at which the intersection was recorded, relative to the <code>IntersectionObserver</code>'s <a href="/en-US/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a>.</dd>
+ <dd><code>IntersectionObserver</code> の<a href="/ja/docs/Web/API/DOMHighResTimeStamp#The_time_origin">時刻の起点</a>を基準にして、交差が記録された時刻を示す {{domxref("DOMHighResTimeStamp")}} 。</dd>  
 </dl>
 
 <h2 id="メソッド">メソッド</h2>
@@ -48,7 +48,5 @@ translation_of: Web/API/IntersectionObserverEntry
 </table>
 
 <h2 id="ブラウザの互換性">ブラウザの互換性</h2>
-
-<p class="hidden">このページの互換性テーブルは構造化データから生成されます。データに貢献したい場合は <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックして、プルリクエストを送信してください。</p>
 
 <p>{{Compat("api.IntersectionObserverEntry")}}</p>

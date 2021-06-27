@@ -79,59 +79,7 @@ xhr.send(null);</pre>
 
 <h2 id="Браузерная_совместимость">Браузерная совместимость</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)<sup>[1]</sup></th>
-   <th>Microsoft Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Базовая поддержка</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]  До Firefox 51, обработка ошибок полученных данных добавляла узел <code>&lt;parsererror&gt;</code> в верх {{domxref("Document")}} и затем возвращала <code>Document</code> в каком бы состоянии он ни оказывался. Это было расхождение со спецификацией. Начиная с Firefox 51 сейчас в этом случае возвращается <code>null,</code> как и указано в спецификации.</p>
+<p>{{Compat("api.XMLHttpRequest.responseXML")}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

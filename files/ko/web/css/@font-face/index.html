@@ -2,14 +2,13 @@
 title: '@font-face'
 slug: Web/CSS/@font-face
 translation_of: Web/CSS/@font-face
+browser-compat: css.at-rules.font-face
 ---
 <p>{{CSSRef}}</p>
 
 <h2 id="요약(Summary)">요약(Summary)</h2>
 
 <p><a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/At-rule" title="At-rule">at-rule</a> 인 <code>@font-face</code> 를 사용하여 웹페이지의 텍스트에 온라인폰트(online fonts)를 적용할 수 있다. <code style="font-size: 14px;">@font-face</code> 를 사용하여 웹페이지 제작자가 원하는 폰트를 사용할 수 있게함으로써, 컴퓨터에 설치된 폰트만을 사용해야했던 제약이 없어지게되었다. <code>@font-face</code> at-rule 은 CSS의 top-level에서 뿐 아니라, <a href="/en/CSS/At-rule#Conditional_Group_Rules" title="en/CSS/At-rule#Conditional_Group_Rules">CSS conditional-group at-rule</a> 안에서도 사용될 수도 있다. </p>
-
-<p>{{ seeCompatTable() }}</p>
 
 <h2 id="문법(Syntax)">문법(Syntax)</h2>
 
@@ -81,129 +80,50 @@ translation_of: Web/CSS/@font-face
  <li>Gecko에서는 웹폰트(web font)가 사용된 페이지를 표시할 때는 웹폰트가 다운로드 되는 동안 사용자의 컴퓨터에 이미 설치되어 있어 즉시 사용가능한 폰트(CSS fallback font)를 사용하여 텍스트를 표시한다. 각각의 웹폰트의 다운로드가 완료되면 Gecko는 해당 텍스트의 폰트를 교체한다. 이러한 과정은 사용자가 웹페이지 내의 텍스트를 좀 더 빨리 읽게끔 도와준다.</li>
 </ul>
 
-<h2 id="Notes" name="Notes">명세(Specifications)</h2>
+<h2 id="specifications">명세</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WOFF1.0', '', 'WOFF font format') }}</td>
-   <td>{{ Spec2('WOFF1.0') }}</td>
-   <td>Font format specification</td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('CSS3 Fonts', '#font-face-rule', '@font-face') }}</td>
-   <td>{{ Spec2('CSS3 Fonts') }}</td>
-   <td> </td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('CSS5 Fonts', '#font-face-rule', '@font-face')}}</td>
+      <td>{{Spec2('CSS5 Fonts')}}</td>
+      <td>Adds the <code>size-adjust</code> descriptor.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS4 Fonts', '#font-face-rule', '@font-face')}}</td>
+      <td>{{Spec2('CSS4 Fonts')}}</td>
+      <td>Definition in this version of the specification.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('WOFF2.0', '', 'WOFF2 font format')}}</td>
+      <td>{{Spec2('WOFF2.0')}}</td>
+      <td>Font format specification with new compression algorithm</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('WOFF1.0', '', 'WOFF font format')}}</td>
+      <td>{{Spec2('WOFF1.0')}}</td>
+      <td>Font format specification</td>
+    </tr>
+    <tr>
+      <td>{{SpecName('CSS3 Fonts', '#font-face-rule', '@font-face')}}</td>
+      <td>{{Spec2('CSS3 Fonts')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="브라우저_호환성(Browser_compatibility)">브라우저 호환성(Browser compatibility)</h2>
+<h2 id="browser_compatibility">브라우저 호환성</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>4.0</td>
-   <td>4.0</td>
-   <td>10.0</td>
-   <td>3.1</td>
-  </tr>
-  <tr>
-   <td><a href="/en/WOFF" title="en/About_WOFF">WOFF</a></td>
-   <td>{{ CompatGeckoDesktop("1.9.1") }}</td>
-   <td>6.0</td>
-   <td>9.0</td>
-   <td>11.10</td>
-   <td>5.1</td>
-  </tr>
-  <tr>
-   <td>SVG Font</td>
-   <td>{{ CompatNo() }}<br>
-    {{ unimplemented_inline(119490) }}</td>
-   <td>yes</td>
-   <td>{{ CompatNo() }}</td>
-   <td>yes</td>
-   <td>yes</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mini</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.9.1") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>10.0</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>WOFF</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoMobile("5.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>11.0</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
-  <tr>
-   <td>SVG fonts</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}<br>
-    {{ unimplemented_inline(119490) }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>10.0</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="주의사항(Notes)_2">주의사항(Notes)</h3>
-
-<ul>
- <li>Embedded OpenType 폰트는 특허가 적용되기 때문에, 호환성 테이블(compatibility table)에 포함되어 있지 않다. IE 9.0 이전의 브라우저에서, IE는 이 포맷(format)만을 지원했었다.</li>
- <li>TrueType 과 OpenType 는 WOFF로 교체되어 포함되지 않았다.</li>
-</ul>
+<p>{{Compat}}</p>
 
 <h2 id="참고자료(See_also)">참고자료(See also)</h2>
-
-<dl>
-</dl>
 
 <ul>
  <li><a href="/en/WOFF" title="en/About WOFF">About WOFF</a></li>

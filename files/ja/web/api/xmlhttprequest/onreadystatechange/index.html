@@ -16,7 +16,7 @@ translation_of: Web/API/XMLHttpRequest/onreadystatechange
 ---
 <div>{{APIRef}}</div>
 
-<p>{{domxref("EventHandler")}} で、 <code>readyState</code> 属性が変化するたびに呼び出されます。コールバックはユーザーインターフェイスのスレッドから呼び出されます。 <strong><code>XMLHttpRequest.onreadystatechange</code></strong> プロパティは、 {{domxref("Document/readystatechange_event", "readystatechange")}} イベントが発生するたびに、つまり {{domxref("XMLHttpRequest")}} の {{domxref("XMLHttpRequest.readyState", "readyState")}} が変化するたびに呼び出されるイベントハンドラーを保持します。</p>
+<p>{{event("Event_handlers", "event handler")}} で、 <code>readyState</code> 属性が変化するたびに呼び出されます。コールバックはユーザーインターフェイスのスレッドから呼び出されます。 <strong><code>XMLHttpRequest.onreadystatechange</code></strong> プロパティは、 {{domxref("Document/readystatechange_event", "readystatechange")}} イベントが発生するたびに、つまり {{domxref("XMLHttpRequest")}} の {{domxref("XMLHttpRequest.readyState", "readyState")}} が変化するたびに呼び出されるイベントハンドラーを保持します。</p>
 
 <div class="warning">
 <p><strong>警告:</strong> これは同期要求で使用してはいけません。また、ネイティブコードから使用してはいけません。</p>
@@ -73,7 +73,5 @@ xhr.send();</pre>
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
 
 <p>{{Compat("api.XMLHttpRequest.onreadystatechange")}}</p>

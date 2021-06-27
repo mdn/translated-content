@@ -2859,14 +2859,6 @@
       "lixingnan200"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2019-03-23T23:27:04.119Z",
-    "contributors": [
-      "jackblackevo",
-      "teoli",
-      "MashKao"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2019-03-23T22:40:29.435Z",
     "contributors": [
@@ -3510,12 +3502,6 @@
       "james_yang"
     ]
   },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2019-03-23T22:20:07.015Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/API/ErrorEvent": {
     "modified": "2019-03-23T22:48:04.106Z",
     "contributors": [
@@ -4127,16 +4113,6 @@
       "princetoad@gmail.com"
     ]
   },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2019-03-18T20:39:41.131Z",
-    "contributors": [
-      "choznerol",
-      "jackblackevo",
-      "birdca",
-      "foxbrush",
-      "thomaschen"
-    ]
-  },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
     "modified": "2019-06-26T04:56:24.502Z",
     "contributors": [
@@ -4352,13 +4328,6 @@
       "SiderealArt",
       "jackblackevo",
       "MashKao"
-    ]
-  },
-  "Web/API/ParentNode": {
-    "modified": "2019-12-24T08:07:24.128Z",
-    "contributors": [
-      "ianchen0119",
-      "jackblackevo"
     ]
   },
   "Web/API/PaymentRequest": {
@@ -5388,13 +5357,6 @@
       "gn00979905"
     ]
   },
-  "Web/CSS/radial-gradient()": {
-    "modified": "2020-11-18T14:43:15.827Z",
-    "contributors": [
-      "chrisdavidmills",
-      "linzging"
-    ]
-  },
   "Web/CSS/ruby-position": {
     "modified": "2020-10-15T21:51:03.131Z",
     "contributors": [
@@ -5542,27 +5504,6 @@
     "modified": "2019-03-23T22:28:17.896Z",
     "contributors": [
       "iigmir"
-    ]
-  },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-03-24T00:15:00.017Z",
-    "contributors": [
-      "jackblackevo",
-      "Shiyou",
-      "teoli",
-      "alk03073135",
-      "wildsky",
-      "sailplaneTW",
-      "vigia122",
-      "Kennyluck",
-      "Dwchiang"
-    ]
-  },
-  "Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
-    "modified": "2019-03-23T22:57:07.502Z",
-    "contributors": [
-      "jackblackevo",
-      "kwanjaiOP"
     ]
   },
   "Web/Guide/Introduction_to_Web_development": {
@@ -7176,15 +7117,6 @@
       "SolomonKang"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:51:34.887Z",
-    "contributors": [
-      "othree",
-      "tainenko",
-      "jackblackevo",
-      "jsgao0"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2020-10-15T21:38:29.906Z",
     "contributors": [
@@ -7925,21 +7857,6 @@
     "contributors": [
       "chrisdavidmills",
       "iigmir"
-    ]
-  },
-  "Web/Reference": {
-    "modified": "2019-03-23T23:29:16.937Z",
-    "contributors": [
-      "jackblackevo",
-      "Somnlent",
-      "Sheppy"
-    ]
-  },
-  "Web/Reference/API": {
-    "modified": "2019-03-23T23:05:52.036Z",
-    "contributors": [
-      "jackblackevo",
-      "wildsky"
     ]
   },
   "Web/SVG": {
@@ -8719,6 +8636,14 @@
       "iigmir"
     ]
   },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2019-03-23T23:27:04.119Z",
+    "contributors": [
+      "jackblackevo",
+      "teoli",
+      "MashKao"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2019-03-23T23:27:03.486Z",
     "contributors": [
@@ -8730,6 +8655,29 @@
     "modified": "2019-03-23T22:27:33.501Z",
     "contributors": [
       "H-W-Chang"
+    ]
+  },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2019-03-23T22:20:07.015Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2019-03-18T20:39:41.131Z",
+    "contributors": [
+      "choznerol",
+      "jackblackevo",
+      "birdca",
+      "foxbrush",
+      "thomaschen"
+    ]
+  },
+  "orphaned/Web/API/ParentNode": {
+    "modified": "2019-12-24T08:07:24.128Z",
+    "contributors": [
+      "ianchen0119",
+      "jackblackevo"
     ]
   },
   "orphaned/Web/API/ParentNode/children": {
@@ -8752,6 +8700,13 @@
       "Kennyluck"
     ]
   },
+  "orphaned/Web/CSS/radial-gradient()": {
+    "modified": "2020-11-18T14:43:15.827Z",
+    "contributors": [
+      "chrisdavidmills",
+      "linzging"
+    ]
+  },
   "orphaned/Web/Guide/Events": {
     "modified": "2019-03-23T22:48:03.662Z",
     "contributors": [
@@ -8771,6 +8726,27 @@
     "contributors": [
       "ginszme",
       "jackblackevo"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-03-24T00:15:00.017Z",
+    "contributors": [
+      "jackblackevo",
+      "Shiyou",
+      "teoli",
+      "alk03073135",
+      "wildsky",
+      "sailplaneTW",
+      "vigia122",
+      "Kennyluck",
+      "Dwchiang"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
+    "modified": "2019-03-23T22:57:07.502Z",
+    "contributors": [
+      "jackblackevo",
+      "kwanjaiOP"
     ]
   },
   "orphaned/Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/JavaScript_概要": {
@@ -9096,6 +9072,30 @@
     "contributors": [
       "teoli",
       "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:51:34.887Z",
+    "contributors": [
+      "othree",
+      "tainenko",
+      "jackblackevo",
+      "jsgao0"
+    ]
+  },
+  "orphaned/Web/Reference": {
+    "modified": "2019-03-23T23:29:16.937Z",
+    "contributors": [
+      "jackblackevo",
+      "Somnlent",
+      "Sheppy"
+    ]
+  },
+  "orphaned/Web/Reference/API": {
+    "modified": "2019-03-23T23:05:52.036Z",
+    "contributors": [
+      "jackblackevo",
+      "wildsky"
     ]
   },
   "orphaned/Web/SVG/教學": {

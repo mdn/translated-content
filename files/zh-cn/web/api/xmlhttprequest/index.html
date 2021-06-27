@@ -34,7 +34,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <dl>
  <dt>{{domxref("XMLHttpRequest.onreadystatechange")}}</dt>
- <dd>当 <code>readyState</code> 属性发生变化时，调用的 {{domxref("EventHandler")}}。</dd>
+ <dd>当 <code>readyState</code> 属性发生变化时，调用的 {{event("Event_handlers", "event handler")}}。</dd>
  <dt>{{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}</dt>
  <dd>返回 一个无符号短整型（<code>unsigned short</code>）数字，代表请求的状态码。</dd>
  <dt>{{domxref("XMLHttpRequest.response")}} {{readonlyinline}}</dt>
@@ -61,7 +61,7 @@ translation_of: Web/API/XMLHttpRequest
  <dt>{{domxref("XMLHttpRequest.timeout")}}</dt>
  <dd>一个无符号长整型（<code>unsigned long</code>）数字，表示该请求的最大请求时间（毫秒），若超出该时间，请求会自动终止。</dd>
  <dt>{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</dt>
- <dd>当请求超时调用的 {{domxref("EventHandler")}}。{{ gecko_minversion_inline(" 12.0 ")}}</dd>
+ <dd>当请求超时调用的 {{event("Event_handlers", "event handler")}}。{{ gecko_minversion_inline(" 12.0 ")}}</dd>
  <dt>{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
  <dd>{{domxref("XMLHttpRequestUpload")}}，代表上传进度。</dd>
  <dt>{{domxref("XMLHttpRequest.withCredentials")}}</dt>
@@ -172,7 +172,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div class="hidden">此页面中的兼容性表是由结构化数据生成的。如果您想贡献数据，请前往 https://github.com/mdn/browser-compat-data 。</div>
+
 
 <div>{{Compat("api.XMLHttpRequest")}}</div>
 

@@ -1,40 +1,44 @@
 ---
-title: Full page zoom
+title: フルページズーム
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
 tags:
+  - Extensions
   - Firefox 3
+  - XUL
 translation_of: Mozilla/Firefox/Releases/3/Full_page_zoom
 original_slug: Full_page_zoom
 ---
-<p>フルページズーム (あるいは単にフルズーム) は <a href="ja/Firefox_3_for_developers">Firefox 3</a> の新機能です。
-</p><p>{{ 英語版章題("Example (XUL:browser)") }}
-</p>
-<h3 id=".E4.BE.8B_.28XUL:browser.29" name=".E4.BE.8B_.28XUL:browser.29"> 例 (XUL:browser) </h3>
-<p>以下の例は、現在フォーカスがあたっているブラウザウィンドウでの利用をデモしています。これは Firefox 拡張機能での典型的な利用方法です。
-</p>
-<pre>var zoom = 1.5;
-var docViewer = getBrowser().selectedBrowser.markupDocumentViewer;
-docViewer.fullZoom = zoom;
+<div>{{FirefoxSidebar}}</div>
+
+<p>フルページズーム (あるいは単にフルズーム) は <a href="/ja/docs/Mozilla/Firefox/Releases/3">Firefox 3</a> の新機能です。</p>
+
+<h3 id="Example_.28XUL:browser.29">例 (XUL:browser)</h3>
+
+<p>以下の例は、現在フォーカスがあたっているブラウザーウィンドウでの利用をデモしています。これは Firefox 拡張機能での典型的な利用方法です。</p>
+
+<pre>var zoom = ZoomManager.getZoomForBrowser(gBrowser.selectedBrowser);
+ZoomManager.enlarge();
+ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
 </pre>
-<p>{{ 英語版章題("Example (XUL:iframe)") }}
-</p>
-<h3 id=".E4.BE.8B_.28XUL:iframe.29" name=".E4.BE.8B_.28XUL:iframe.29"> 例 (XUL:iframe) </h3>
-<p>フルズーム機能を <a href="ja/XUL/iframe">XUL:iframe</a> でも同様に使用することができます。しかし、iframe には markupDocumentViewer プロパティがないため、最初に以下のようにする必要があります:
-</p>
+
+<h3 id="Example_.28XUL:iframe.29">例 (XUL:iframe)</h3>
+
+<p>注: これはおそらく古いものです。</p>
+
+<p>フルズーム機能を <a href="/ja/docs/XUL/iframe">XUL:iframe</a> でも同様に使用することができます。しかし、iframe には markupDocumentViewer プロパティがないため、最初に以下のようにする必要があります。</p>
+
 <pre>var zoom = 1.5;
 var iframe = document.getElementById("authorFrame");
 var contViewer = iframe.docShell.contentViewer;
 var docViewer = contViewer.QueryInterface(Components.interfaces.nsIMarkupDocumentViewer);
 docViewer.fullZoom = zoom;
 </pre>
-<p>{{ 英語版章題("References") }}
-</p>
-<h3 id=".E5.8F.82.E8.80.83.E8.B3.87.E6.96.99" name=".E5.8F.82.E8.80.83.E8.B3.87.E6.96.99"> 参考資料 </h3>
-<ul><li>Ted Mielczarek による Page zoom extension <a class="external" href="http://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi">fullpagezoom.xpi</a> 最新の Firefox 3.0 ナイトリー用
-</li><li>Daniel Glazman による <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/6489">Glazoom extension</a> Firefox 3.0 用
-</li><li>フルズームに関する <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=4821">bugzilla のバグ</a>
-</li><li><a class="external" href="http://www.xulplanet.com/references/xpcomref/ifaces/nsIMarkupDocumentViewer.html">nsIMarkupDocumentViewer</a> インタフェースのドキュメンテーション (現在 fullZoom についての言及はありません)。
-</li></ul>
-<div class="noinclude">
-</div>
-{{ languages( { "en": "en/Full_page_zoom", "es": "es/Zoom_a_p\u00e1gina_completa", "fr": "fr/Zoom_pleine_page" } ) }}
+
+<h3 id="References">参考資料</h3>
+
+<ul>
+ <li>Ted Mielczarek による Page zoom extension <a class="external" href="https://ted.mielczarek.org/code/mozilla/fullpagezoom.xpi">fullpagezoom.xpi</a> 最新の Firefox 3.0 ナイトリー用</li>
+ <li>Daniel Glazman による <a class="link-https" href="https://addons.mozilla.org/en-US/firefox/addon/6489">Glazoom extension</a> Firefox 3.0 用</li>
+ <li>フルズームに関する <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=4821">bugzilla のバグ</a></li>
+ <li>{{ Interface("nsIMarkupDocumentViewer") }} Interface documentation.</li>
+</ul>

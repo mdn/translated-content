@@ -1564,15 +1564,6 @@
       "arronei"
     ]
   },
-  "Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:53:18.455Z",
-    "contributors": [
-      "SphinxKnight",
-      "Fidosek",
-      "griter",
-      "krystian71115"
-    ]
-  },
   "Web/API/Console": {
     "modified": "2019-03-23T23:09:41.834Z",
     "contributors": [
@@ -2477,19 +2468,6 @@
       "Ptak82"
     ]
   },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2019-03-23T23:56:38.082Z",
-    "contributors": [
-      "lotny",
-      "SphinxKnight",
-      "teoli",
-      "jsx",
-      "obelyx",
-      "Ptak82",
-      "Mgjbot",
-      "Jan Dudek"
-    ]
-  },
   "Web/API/Event": {
     "modified": "2020-03-06T04:03:57.947Z",
     "contributors": [
@@ -3234,17 +3212,6 @@
       "Diablownik"
     ]
   },
-  "Web/API/Navigator/registerContentHandler": {
-    "modified": "2019-03-23T23:51:33.038Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Diablownik",
-      "Mgjbot",
-      "Marcoos",
-      "Ptak82"
-    ]
-  },
   "Web/API/Navigator/registerProtocolHandler": {
     "modified": "2019-03-23T23:52:37.570Z",
     "contributors": [
@@ -3598,9 +3565,6 @@
       "Arfphis"
     ]
   },
-  "Web/API/ParentNode": {
-    "modified": "2020-10-15T22:19:13.921Z"
-  },
   "Web/API/Push_API": {
     "modified": "2019-03-23T22:08:29.784Z",
     "contributors": [
@@ -3909,15 +3873,6 @@
     "modified": "2020-10-15T22:21:40.615Z",
     "contributors": [
       "jangromko"
-    ]
-  },
-  "Web/API/UIEvent/cancelBubble": {
-    "modified": "2019-03-23T23:41:11.564Z",
-    "contributors": [
-      "teoli",
-      "basemnassar11",
-      "Jan Dudek",
-      "Ptak82"
     ]
   },
   "Web/API/UIEvent/initUIEvent": {
@@ -5807,16 +5762,6 @@
     "modified": "2019-03-23T22:02:03.451Z",
     "contributors": [
       "chrisdavidmills"
-    ]
-  },
-  "Web/Guide/HTML/HTML5": {
-    "modified": "2019-06-28T04:18:42.824Z",
-    "contributors": [
-      "Moniaesz",
-      "teoli",
-      "Jacob99",
-      "Ptak82",
-      "Teo"
     ]
   },
   "Web/Guide/Performance": {
@@ -7911,77 +7856,6 @@
       "krupinskij"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-09-01T10:21:27.914Z",
-    "contributors": [
-      "struginskij",
-      "KonradLinkowski",
-      "108adams",
-      "Asek90",
-      "xgarrett",
-      "broslukasz"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2020-10-15T22:01:01.515Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2020-10-15T22:01:01.152Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2019-03-18T21:42:37.088Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T22:01:04.417Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T22:01:06.016Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2020-10-15T22:01:05.981Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2020-10-15T22:01:06.126Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2020-10-15T22:01:06.173Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2020-10-15T22:17:26.741Z",
-    "contributors": [
-      "tipakA"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2020-10-15T22:01:06.933Z",
-    "contributors": [
-      "MarekHuckmann"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2019-11-16T16:52:10.805Z",
     "contributors": [
@@ -9100,12 +8974,6 @@
       "Mgjbot",
       "Ptak82",
       "Internauta1024A"
-    ]
-  },
-  "Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-15T22:08:04.976Z",
-    "contributors": [
-      "jangromko"
     ]
   },
   "Web/JavaScript/Reference/Operators/Property_Accessors": {
@@ -11251,6 +11119,42 @@
       "Ptak82"
     ]
   },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T21:53:18.455Z",
+    "contributors": [
+      "SphinxKnight",
+      "Fidosek",
+      "griter",
+      "krystian71115"
+    ]
+  },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2019-03-23T23:56:38.082Z",
+    "contributors": [
+      "lotny",
+      "SphinxKnight",
+      "teoli",
+      "jsx",
+      "obelyx",
+      "Ptak82",
+      "Mgjbot",
+      "Jan Dudek"
+    ]
+  },
+  "orphaned/Web/API/Navigator/registerContentHandler": {
+    "modified": "2019-03-23T23:51:33.038Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Diablownik",
+      "Mgjbot",
+      "Marcoos",
+      "Ptak82"
+    ]
+  },
+  "orphaned/Web/API/ParentNode": {
+    "modified": "2020-10-15T22:19:13.921Z"
+  },
   "orphaned/Web/API/ParentNode/children": {
     "modified": "2020-10-29T07:01:42.075Z",
     "contributors": [
@@ -11266,6 +11170,15 @@
       "Internauta1024A"
     ]
   },
+  "orphaned/Web/API/UIEvent/cancelBubble": {
+    "modified": "2019-03-23T23:41:11.564Z",
+    "contributors": [
+      "teoli",
+      "basemnassar11",
+      "Jan Dudek",
+      "Ptak82"
+    ]
+  },
   "orphaned/Web/Guide/Events/Creating_and_triggering_events": {
     "modified": "2019-03-23T23:50:28.341Z",
     "contributors": [
@@ -11273,6 +11186,16 @@
       "Mgjbot",
       "Ptak82",
       "Jan Dudek"
+    ]
+  },
+  "orphaned/Web/Guide/HTML/HTML5": {
+    "modified": "2019-06-28T04:18:42.824Z",
+    "contributors": [
+      "Moniaesz",
+      "teoli",
+      "Jacob99",
+      "Ptak82",
+      "Teo"
     ]
   },
   "orphaned/Web/HTML/Element/comment": {
@@ -11670,6 +11593,83 @@
       "Diablownik",
       "Mgjbot",
       "Ptak82"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-09-01T10:21:27.914Z",
+    "contributors": [
+      "struginskij",
+      "KonradLinkowski",
+      "108adams",
+      "Asek90",
+      "xgarrett",
+      "broslukasz"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2020-10-15T22:01:01.515Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2020-10-15T22:01:01.152Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2019-03-18T21:42:37.088Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2020-10-15T22:01:04.417Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-15T22:01:06.016Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2020-10-15T22:01:05.981Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
+    "modified": "2020-10-15T22:01:06.126Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2020-10-15T22:01:06.173Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2020-10-15T22:17:26.741Z",
+    "contributors": [
+      "tipakA"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
+    "modified": "2020-10-15T22:01:06.933Z",
+    "contributors": [
+      "MarekHuckmann"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-15T22:08:04.976Z",
+    "contributors": [
+      "jangromko"
     ]
   },
   "orphaned/Web/JavaScript/Referencje/O_tym_dokumencie/Konwencje_formatowania_tekstu": {

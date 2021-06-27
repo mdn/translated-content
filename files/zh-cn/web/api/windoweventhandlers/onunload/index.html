@@ -8,7 +8,7 @@ original_slug: Web/API/Window/onunload
 
 <h3 id="Summary" name="Summary">概述</h3>
 
-<p>{{domxref("WindowEventHandlers")}} 的混入特性 <strong><code>onunload</code></strong> 是 {{domxref("EventHandler")}}  处理 {{Event("unload")}} 事件的方法。该事件在关闭窗口资源和内容的时候触发。页面资源的清除工作会在 <code>unload</code>  事件之后进行。</p>
+<p>{{domxref("WindowEventHandlers")}} 的混入特性 <strong><code>onunload</code></strong> 是 {{event("Event_handlers", "event handler")}}  处理 {{Event("unload")}} 事件的方法。该事件在关闭窗口资源和内容的时候触发。页面资源的清除工作会在 <code>unload</code>  事件之后进行。</p>
 
 <div class="blockIndicator note">
 <p><strong>注意事项：</strong> 具备弹窗阻止功能的浏览器会忽略 <code>onunload</code>  事件回调中调用的 {{domxref("Window.open()")}} 方法。</p>
@@ -60,10 +60,6 @@ function unloadPage()
 <p>{{ languages( {"en": "en/DOM/window.onunload" } ) }}</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p>{{Compat("api.WindowEventHandlers.onunload")}}</p>
 

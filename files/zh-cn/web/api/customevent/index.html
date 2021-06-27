@@ -17,9 +17,9 @@ translation_of: Web/API/CustomEvent
 
 <p><strong style="font-weight: bold;">{{domxref("CustomEvent.detail")}} {{readonlyinline}} 任何时间初始化时传入的数据</strong></p>
 
-<p><em>此接口从父接口继承属性, </em>{{domxref("Event")}}:</p>
+<p><em>此接口从父接口继承属性， </em>{{domxref("Event")}}：</p>
 
-<p>{{Page("/en-US/docs/Web/API/Event", "Properties")}}</p>
+<p>{{Page("/zh-CN/docs/Web/API/Event", "Properties")}}</p>
 
 <h2 id="方法">方法</h2>
 
@@ -28,13 +28,13 @@ translation_of: Web/API/CustomEvent
 <dl>
  <dt>{{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}</dt>
  <dd>
- <p>初始化一个<code>CustomEvent 对象.如果事件已经被触发,这个方法不起任何作用.</code></p>
+ <p>初始化一个 <code>CustomEvent 对象。如果事件已经被触发，这个方法将不会起任何作用。</code></p>
  </dd>
 </dl>
 
-<p><em>此接口从父接口继承方法, </em>{{domxref("Event")}}:</p>
+<p><em>此接口从父接口继承方法, </em>{{domxref("Event")}}：</p>
 
-<p>{{Page("/en-US/docs/Web/API/Event", "Methods")}}</p>
+<p>{{Page("/zh-CN/docs/Web/API/Event", "Methods")}}</p>
 
 <p> </p>
 
@@ -53,14 +53,14 @@ translation_of: Web/API/CustomEvent
 <table class="standard-table">
  <tbody>
   <tr>
-   <th>Attribute</th>
-   <th>Type</th>
-   <th>Description</th>
+   <th>属性</th>
+   <th>类型</th>
+   <th>描述</th>
   </tr>
   <tr>
    <td><code>detail</code></td>
    <td><code>any</code></td>
-   <td>当事件初始化时传递的数据</td>
+   <td>当事件初始化时传递的数据。</td>
   </tr>
  </tbody>
 </table>
@@ -69,7 +69,7 @@ translation_of: Web/API/CustomEvent
 
 <h3 id="initCustomEvent()" name="initCustomEvent()">initCustomEvent()</h3>
 
-<p>初始化一个自定义事件的方式和初始化一个标准DOM事件的方式非常相似.</p>
+<p>初始化一个自定义事件的方式和初始化一个标准DOM事件的方式非常相似。</p>
 
 <pre class="eval">void initCustomEvent(
   in DOMString type,
@@ -83,18 +83,18 @@ translation_of: Web/API/CustomEvent
 
 <dl>
  <dt><code>type</code></dt>
- <dd>事件的类型名称.</dd>
+ <dd>事件的类型名称。</dd>
  <dt><code>canBubble</code></dt>
- <dd>一个布尔值,表明该事件是否会冒泡.</dd>
+ <dd>一个布尔值,表明该事件是否会冒泡。</dd>
  <dt><code>cancelable</code></dt>
- <dd>一个布尔值,表明该事件是否可以被取消.</dd>
+ <dd>一个布尔值,表明该事件是否可以被取消。</dd>
  <dt><code>detail</code></dt>
- <dd>当事件初始化时传递的数据.</dd>
+ <dd>当事件初始化时传递的数据。</dd>
 </dl>
 
 <h2 id="构造函数_2">构造函数</h2>
 
-<p><a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM4 规范</a> 添加了对 <code>CustomEvent</code> 构造函数的支持.</p>
+<p><a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM4 规范</a> 添加了对 <code>CustomEvent</code> 构造函数的支持。</p>
 
 <pre>CustomEvent(
   DOMString type,
@@ -106,25 +106,23 @@ translation_of: Web/API/CustomEvent
 
 <dl>
  <dt><code>type</code></dt>
- <dd>事件的类型名称.</dd>
+ <dd>事件的类型名称。</dd>
  <dt><code>eventInitDict</code></dt>
- <dd>一个对象,提供了事件的配置信息.查看<a href="#CustomEventInit">CustomEventInit</a>了解更多详情.</dd>
+ <dd>一个提供事件的配置信息对象。查看<a href="#CustomEventInit">CustomEventInit</a>了解更多详情。</dd>
 </dl>
 
 <h4 id="CustomEventInit" name="CustomEventInit">CustomEventInit</h4>
 
 <dl>
  <dt><code>bubbles</code></dt>
- <dd>一个布尔值,表明该事件是否会冒泡.</dd>
+ <dd>一个布尔值,表明该事件是否会冒泡。</dd>
  <dt><code>cancelable</code></dt>
- <dd>一个布尔值,表明该事件是否可以被取消.</dd>
+ <dd>一个布尔值,表明该事件是否可以被取消。</dd>
  <dt><code>detail</code></dt>
- <dd>当事件初始化时传递的数据.</dd>
+ <dd>当事件初始化时传递的数据。</dd>
 </dl>
 
-<h3 id="CustomEvent_example_usage" name="CustomEvent_example_usage">CustomEvent用法示例</h3>
-
-<p></p>
+<h3 id="CustomEvent_example_usage" name="CustomEvent_example_usage">CustomEvent 用法示例</h3>
 
 <pre class="brush: js">// 添加一个适当的事件监听器
 obj.addEventListener("cat", function(e) { process(e.detail) })

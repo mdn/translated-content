@@ -1,25 +1,51 @@
 ---
-title: Поля классов
+title: Публичные поля классов
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
 tags:
-  - JavaScript
   - Классы
+  - JavaScript
+  - Возможности языка
 translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
 original_slug: Web/JavaScript/Reference/Classes/Class_fields
 ---
 <div>{{JsSidebar("Classes")}}</div>
 
-<div class="note">Объявление публичных и приватных полей является <a href="https://github.com/tc39/proposal-class-fields">экспериментальной разработкой</a>, предложенной в коммитете стандартов JavaScript <a href="https://tc39.github.io/beta/">TC39</a>. Поддержка браузерами ограничена, но данное нововведение можно использовать посредством транспиляторов (например, <a href="https://babeljs.io/">Babel</a>). Смотрите информацию о совместимости ниже.</div>
+<div class="note">
+  <p><strong>Примечание:</strong> Эта страница описывает экспериментальные возможности.</p>
 
-<h2 id="Публичные_поля">Публичные поля</h2>
+  <p>Публичные и приватные поля — это <a
+      href="https://github.com/tc39/proposal-class-fields">экспериментальная функция (stage
+      3)</a>, предложенная комитетом по стандарту JavaScript <a href="https://tc39.es/">TC39</a>.</p>
+
+  <p>Поддержка этой возможности в браузерах ограничена, но ее можно использовать посредством транспилирования с такими системами как <a href="https://babeljs.io/">Babel</a>. Смотрите <a href="#browser_compatibility">информацию о совместимости</a> ниже.</p>
+</div>
 
 <p>И статические, и публичные поля являются изменяемыми, перечисляемыми, настраиваемыми свойствами. Таким образом, в отличие от приватных полей, они участвуют в прототипном наследовании.</p>
+
+<h2 id="Syntax">Синтаксис</h2>
+
+<pre class="brush: js">class ClassWithInstanceField {
+  instanceField = 'instance field'
+}
+
+class ClassWithStaticField {
+  static staticField = 'static field'
+}
+
+class ClassWithPublicInstanceMethod {
+  publicMethod() {
+    return 'hello world'
+  }
+}
+</pre>
+
+<h2 id="Examples">Примеры</h2>
 
 <h3 id="Публичные_статические_поля">Публичные статические поля</h3>
 
 <p>Публичные статические поля полезны тогда, когда необходимо существование одного единственного поля для всего класса, а не для каждого созданного экземпляра по отдельности. Это полезно для кеша, конфигураций или любых прочих данных, которые одинаковы для всех экземпляров.</p>
 
-<p>Публичные статические поля объявляются при помощи ключевого слова <code>static</code>. Они добавляются в конструктор класса во время его создания с помощью <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a>. Доступ также осуществляется через конструктор класса.</p>
+<p>Публичные статические поля объявляются при помощи ключевого слова <code>static</code>. Они добавляются в конструктор класса во время его создания с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Доступ также осуществляется через конструктор класса.</p>
 
 <pre class="brush: js notranslate">class ClassWithStaticField {
   static staticField = 'static field';
@@ -77,9 +103,10 @@ console.log(SubClassWithStaticField.subStaticField);
 
 <h3 id="Публичные_поля_экземпляра">Публичные поля экземпляра</h3>
 
-<p>Такие публичные поля имеются у каждого экземпляра данного класса. Объявляя публичные поля, мы можем гарантировать, что поле всегда актуально, а объявление класса является более самодокументированным.</p>
+<p>Такие публичные поля имеются у каждого экземпляра данного класса. Объявляя публичные поля, мы можем гарантировать, что поле всегда присутствует, а объявление класса является более самодокументированным.</p>
 
-<p>Публичные поля экземпляра добавляются через <a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty </a>либо перед тем, как будет исполнено тело конструктора в базовом классе, либо после того, как завершится <code>super()</code> в классе наследнике.</p>
+<p>Публичные поля экземпляра добавляются через {{jsxref("Global_Objects/Object/defineProperty",
+  "Object.defineProperty()")}} либо перед тем, как будет исполнено тело конструктора в базовом классе, либо после того, как завершится <code>super()</code> в классе наследнике.</p>
 
 <pre class="brush: js notranslate">class ClassWithInstanceField {
   instanceField = 'instance field';
@@ -139,13 +166,17 @@ console.log(sub.subInstanceField);
 
 <p>Ключевое слово <code><strong>static</strong></code> объявляет статический метод класса. Статические методы не вызываются из экземпляра, вместо этого они вызывается из самого класса. Чаще всего это какие-либо служебные функции, такие как функции создания или копирования объектов.</p>
 
-<p>{{EmbedInteractiveExample("pages/js/classes-static.html")}}</p>
+<pre class="brush: js notranslate">class ClassWithStaticMethod {
+  static staticMethod() {
+    return 'static method has been called.';
+  }
+}
 
-<div class="hidden">
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-</div>
+console.log(ClassWithStaticMethod.staticMethod());
+// expected output: "static method has been called."
+</pre>
 
-<p>Статические методы добавляются в конструктор класса с помощью <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a> во время его создания. Эти методы - изменяемые, неперечисляемые и настраиваемые свойства объекта.</p>
+<p>Статические методы добавляются в конструктор класса с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} во время его создания. Эти методы - изменяемые, неперечисляемые и настраиваемые свойства объекта.</p>
 
 <h3 id="Публичные_методы_экземпляра">Публичные методы экземпляра</h3>
 
@@ -161,7 +192,7 @@ const instance = new ClassWithPublicInstanceMethod();
 console.log(instance.publicMethod());
 // Ожидаемый вывод: "hello worl​d"</pre>
 
-<p>Публичные методы добавляются в прототип класса во время его создания с помощью <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a>. Они изменяемы, неперечисляемы и настраиваемы.</p>
+<p>Публичные методы добавляются в прототип класса во время его создания с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Они изменяемы, неперечисляемы и настраиваемы.</p>
 
 <p>Вы можете использовать генераторы, асинхронные функции и асинхронные генераторы.</p>
 
@@ -213,139 +244,18 @@ console.log(instance.msg);
 // Ожидаемый вывод: "hello cake"
 </pre>
 
-<h2 id="Приватные_поля">Приватные поля</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<h3 id="Приватные_статические_поля">Приватные статические поля</h3>
+{{Specifications}}
 
-<p>Приватные поля доступны через конструктор внутри объявления самого класса.</p>
+<h2 id="Browser_compatibility">Браузерная совместимость</h2>
 
-<p>Также сохраняется ограничение на вызов статических полей только внутри статических методов.</p>
+<p>{{Compat}}</p>
 
-<pre class="brush: js notranslate">class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
-
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42;
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD;
-  }
-}
-
-assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);</pre>
-
-<p>Приватные статические поля добавляются в конструктор на этапе оценки класса.</p>
-
-<p>Существует ограничение происхождения приватных статических полей. Только класс, который объявляет приватное статическое поле, может обращаться к нему. Это может привести к неожиданному поведению при использовании <strong><code>this</code></strong>.</p>
-
-<pre class="brush: js notranslate">class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD;
-
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42;
-    return this.#PRIVATE_STATIC_FIELD;
-  }
-}
-
-class SubClass extends BaseClassWithPrivateStaticField { }
-
-assertThrows(() =&gt; SubClass.basePublicStaticMethod(), TypeError);
-</pre>
-
-<h3 id="Приватные_поля_экземпляра_объекта">Приватные поля экземпляра объекта</h3>
-
-<p>Приватные поля объекта объявляются как <strong># names </strong>( произносятся как "hash names"), <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>которые являются идентификаторами с префиксом</span></span></span> #.  # <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>является частью самого имени и также используется для объявления и доступа</span></span></span>.</p>
-
-<p><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Инкапсуляция обеспечивается языком.</span></span> <span class="ChMk0b JLqJ4b"><span>Ссылка на # names вне области видимости является синтаксической ошибкой</span></span></span>.</p>
-
-<pre class="brush: js notranslate">class ClassWithPrivateField {
-  #privateField;
-
-  constructor() {
-    this.#privateField = 42;
-    this.#randomField = 666; # Syntax error
-  }
-}
-
-const instance = new ClassWithPrivateField();
-instance.#privateField === 42; // Syntax error
-</pre>
-
-<h2 id="Приватные_методы">Приватные методы</h2>
-
-<h3 id="Приватные_статические_методы">Приватные статические методы</h3>
-
-<p><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Как и публичные методы, приватные статические методы вызываются в классе, а не в экземплярах класса.</span></span> <span class="ChMk0b JLqJ4b"><span>Как и приватные статические поля, они доступны только из объявления класса.</span></span></span></p>
-
-<p>Приватные статические методы могут быть генераторами, асинхронными функциями и асинхронными генераторами.</p>
-
-<pre class="brush: js notranslate">class ClassWithPrivateStaticMethod {
-    static #privateStaticMethod() {
-        return 42;
-    }
-
-    static publicStaticMethod() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
-    }
-}
-
-assert(ClassWithPrivateStaticField.publicStaticMethod() === 42);
-</pre>
-
-<h3 id="Приватные_методы_экземпляра_объекта">Приватные методы экземпляра объекта</h3>
-
-<p>Приватные методы экземпляра объекта являются методами, доступными в экземплярах класса <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>чей доступ ограничен так же, как и</span></span></span> приватные поля экземпляра объекта.</p>
-
-<pre class="brush: js notranslate">class ClassWithPrivateMethod {
-  #privateMethod() {
-    return 'hello world';
-  }
-
-  getPrivateMessage() {
-      return #privateMethod();
-  }
-}
-
-const instance = new ClassWithPrivateMethod();
-console.log(instance.getPrivateMessage());
-// expected output: "hello worl​d"</pre>
-
-<p>Приватные методы экземпляра объекта могут быть генераторами, асинхронными функциями и асинхронными генераторами. <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Также возможны приватные геттеры и сеттеры</span></span></span>:</p>
-
-<pre class="brush: js notranslate">class ClassWithPrivateAccessor {
-  #message;
-
-  get #decoratedMessage() {
-    return `✨${this.#message}✨`;
-  }
-  set #decoratedMessage(msg) {
-    this.#message = msg;
-  }
-
-  constructor() {
-    this.#decoratedMessage = 'hello world';
-    console.log(this.#decoratedMessage);
-  }
-}
-
-new ClassWithPrivateAccessor();
-// expected output: "✨hello worl​d✨"
-</pre>
-
-<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
-
-<h3 id="Публичные_поля_класса">Публичные поля класса</h3>
-
-
-
-<p>{{Compat("javascript.classes.public_class_fields")}}</p>
-
-<h3 id="Приватные_поля_класса">Приватные поля класса</h3>
-
-<div class="hidden">The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</div>
-
-<p>{{Compat("javascript.classes.private_class_fields")}}</p>
-
-<h2 id="Смотрите_также">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
- <li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">Семантика всех элементов JS класса</a></li>
+  <li><a href="https://v8.dev/features/class-fields">Публичные и приватные поля классов</a> статья на сайте v8.dev.</li>
+  <li><a href="https://github.com/tc39/proposal-class-fields#class-field-declarations-for-javascript">Объявление полей класса в JavaScript</a>, от авторов <a href="https://github.com/tc39/proposal-class-fields">Публичных и приватных полей экземпляра</a></li>
+  <li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">Семантика всех элементов JS класса</a></li>
 </ul>

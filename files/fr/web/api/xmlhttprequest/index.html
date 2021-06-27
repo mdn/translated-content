@@ -34,7 +34,7 @@ translation_of: Web/API/XMLHttpRequest
 
 <dl>
  <dt id="xmlhttprequest-onreadystatechange">{{domxref("XMLHttpRequest.onreadystatechange")}}</dt>
- <dd>Un gestionnaire d'évènement ({{domxref("EventHandler")}}) invoqué à chaque fois que l'attribut <code>readyState</code> change.</dd>
+ <dd>Un gestionnaire d'évènement ({{event("Event_handlers", "event handler")}}) invoqué à chaque fois que l'attribut <code>readyState</code> change.</dd>
  <dt id="xmlhttprequest-readystate">{{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}</dt>
  <dd>L'état de la requête sous la forme d'un <code>unsigned short</code>.</dd>
  <dt>{{domxref("XMLHttpRequest.response")}} {{readonlyinline}}</dt>
@@ -61,7 +61,7 @@ translation_of: Web/API/XMLHttpRequest
  <dt id="xmlhttprequest-timeout">{{domxref("XMLHttpRequest.timeout")}}</dt>
  <dd>Un entier <code>unsigned long</code> qui représente le nombre de millisecondes qu'une requête peut prendre avant d'être terminée automatiquement.</dd>
  <dt id="xmlhttprequesteventtarget-ontimeout">{{domxref("XMLHttpRequestEventTarget.ontimeout")}}</dt>
- <dd>Un gestionnaire d'évènement ({{domxref("EventHandler")}}) appelé lorsque la requête a expiré. {{gecko_minversion_inline("12.0")}}</dd>
+ <dd>Un gestionnaire d'évènement ({{event("Event_handlers", "event handler")}}) appelé lorsque la requête a expiré. {{gecko_minversion_inline("12.0")}}</dd>
  <dt id="xmlhttprequest-upload">{{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}</dt>
  <dd>Un objet {{domxref("XMLHttpRequestUpload")}} qui représente le processus d'<em>upload</em>.</dd>
  <dt id="xmlhttprequest-withcredentials">{{domxref("XMLHttpRequest.withCredentials")}}</dt>
@@ -171,8 +171,6 @@ translation_of: Web/API/XMLHttpRequest
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
 
 <div>{{Compat("api.XMLHttpRequest")}}</div>
 

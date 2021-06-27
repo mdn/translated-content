@@ -94,7 +94,7 @@
 /pt-BR/docs/CSS/display	/pt-BR/docs/Web/CSS/display
 /pt-BR/docs/CSS/overflow	/pt-BR/docs/Web/CSS/overflow
 /pt-BR/docs/CSS/regra at	/pt-BR/docs/Web/CSS/At-rule
-/pt-BR/docs/CSS/repeating-linear-gradient	/pt-BR/docs/Web/CSS/repeating-linear-gradient()
+/pt-BR/docs/CSS/repeating-linear-gradient	/pt-BR/docs/orphaned/Web/CSS/repeating-linear-gradient()
 /pt-BR/docs/CSS/sintaxe	/pt-BR/docs/Web/CSS/Syntax
 /pt-BR/docs/CSS/text-overflow	/pt-BR/docs/Web/CSS/text-overflow
 /pt-BR/docs/CSS/text-rendering	/pt-BR/docs/Web/CSS/text-rendering
@@ -333,10 +333,10 @@
 /pt-BR/docs/HTML/Elementos HTML	/pt-BR/docs/Web/HTML/Element
 /pt-BR/docs/HTML/Forms_in_HTML	/pt-BR/docs/orphaned/Learn/HTML/Forms/HTML5_updates
 /pt-BR/docs/HTML/Formularios_em_HTML	/pt-BR/docs/orphaned/Learn/HTML/Forms/HTML5_updates
-/pt-BR/docs/HTML/HTML5	/pt-BR/docs/Web/Guide/HTML/HTML5
+/pt-BR/docs/HTML/HTML5	/pt-BR/docs/orphaned/Web/Guide/HTML/HTML5
 /pt-BR/docs/HTML/HTML5/HTML5_element_list	/pt-BR/docs/Web/HTML/Element
-/pt-BR/docs/HTML/HTML5/Introduction_to_HTML5	/pt-BR/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
-/pt-BR/docs/HTML/HTML5/Introdução_ao_HTML5	/pt-BR/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/pt-BR/docs/HTML/HTML5/Introduction_to_HTML5	/pt-BR/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/pt-BR/docs/HTML/HTML5/Introdução_ao_HTML5	/pt-BR/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /pt-BR/docs/HTML/HTML_Elements	/pt-BR/docs/Web/HTML/Element
 /pt-BR/docs/HTML/HTML_Elements/time	/pt-BR/docs/Web/HTML/Element/time
 /pt-BR/docs/HTML/Introducao	/pt-BR/docs/Learn/HTML/Introduction_to_HTML
@@ -344,7 +344,7 @@
 /pt-BR/docs/HTML/Optimizing_Your_Pages_for_Speculative_Parsing	/pt-BR/docs/Glossary/speculative_parsing
 /pt-BR/docs/Hello_World_Rust	/pt-BR/docs/orphaned/Hello_World_Rust
 /pt-BR/docs/IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API
-/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/pt-BR/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /pt-BR/docs/IndexedDB/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /pt-BR/docs/Instalando_Rust	/pt-BR/docs/orphaned/Instalando_Rust
 /pt-BR/docs/JSON	/pt-BR/docs/Glossary/JSON
@@ -494,9 +494,9 @@
 /pt-BR/docs/SVG/Element/desc	/pt-BR/docs/Web/SVG/Element/desc
 /pt-BR/docs/SVG/Element/svg	/pt-BR/docs/Web/SVG/Element/svg
 /pt-BR/docs/SVG/Element/texto	/pt-BR/docs/Web/SVG/Element/text
-/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document	/pt-BR/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document	/pt-BR/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /pt-BR/docs/Security/CSP/Utilizando_Politicas_De_Seguranca_De_Conteudo	/pt-BR/docs/Web/HTTP/CSP
-/pt-BR/docs/Seções_e_estrutura_HTML5	/pt-BR/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/pt-BR/docs/Seções_e_estrutura_HTML5	/pt-BR/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /pt-BR/docs/The_XSLT_JavaScript_Interface_in_Gecko	/pt-BR/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /pt-BR/docs/The_XSLT_JavaScript_Interface_in_Gecko/Advanced_Example	/pt-BR/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 /pt-BR/docs/Tools/Add-ons	/pt-BR/docs/orphaned/Tools/Add-ons
@@ -527,6 +527,9 @@
 /pt-BR/docs/Web/API/API_Web_Audio	/pt-BR/docs/Web/API/Web_Audio_API
 /pt-BR/docs/Web/API/API_Web_Audio/Sintetizador_simples	/pt-BR/docs/Web/API/Web_Audio_API/Simple_synth
 /pt-BR/docs/Web/API/API_de_Desempenho	/pt-BR/docs/Web/API/Performance_API
+/pt-BR/docs/Web/API/AbstractWorker	/pt-BR/docs/orphaned/Web/API/AbstractWorker
+/pt-BR/docs/Web/API/AbstractWorker/onerror	/pt-BR/docs/orphaned/Web/API/AbstractWorker/onerror
+/pt-BR/docs/Web/API/Ambient_Light_Events	/pt-BR/docs/orphaned/Web/API/Ambient_Light_Events
 /pt-BR/docs/Web/API/ArrayBuffer	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /pt-BR/docs/Web/API/AudioContext/currentTime	/pt-BR/docs/Web/API/BaseAudioContext/currentTime
 /pt-BR/docs/Web/API/BatteryManager.charging	/pt-BR/docs/Web/API/BatteryManager/charging
@@ -538,6 +541,7 @@
 /pt-BR/docs/Web/API/BatteryManager.ondischargingtimechange	/pt-BR/docs/Web/API/BatteryManager/ondischargingtimechange
 /pt-BR/docs/Web/API/BatteryManager.onlevelchange	/pt-BR/docs/Web/API/BatteryManager/onlevelchange
 /pt-BR/docs/Web/API/BatteryManager/ondischargintimechange	/pt-BR/docs/Web/API/BatteryManager/ondischargingtimechange
+/pt-BR/docs/Web/API/ChildNode/remove	/pt-BR/docs/orphaned/Web/API/ChildNode/remove
 /pt-BR/docs/Web/API/Console.timeEnd	/pt-BR/docs/Web/API/Console/timeEnd
 /pt-BR/docs/Web/API/Coordinates	/pt-BR/docs/Web/API/GeolocationCoordinates
 /pt-BR/docs/Web/API/Coordinates/altitude	/pt-BR/docs/Web/API/GeolocationCoordinates/altitude
@@ -574,6 +578,7 @@
 /pt-BR/docs/Web/API/HTMLElement/dataset	/pt-BR/docs/Web/API/HTMLOrForeignElement/dataset
 /pt-BR/docs/Web/API/HTMLElement/focus	/pt-BR/docs/Web/API/HTMLOrForeignElement/focus
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
+/pt-BR/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/pt-BR/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /pt-BR/docs/Web/API/Navigator.battery	/pt-BR/docs/Web/API/Navigator/battery
 /pt-BR/docs/Web/API/NavigatorID.platform	/pt-BR/docs/Web/API/NavigatorID/platform
@@ -587,8 +592,10 @@
 /pt-BR/docs/Web/API/Node.replaceChild	/pt-BR/docs/Web/API/Node/replaceChild
 /pt-BR/docs/Web/API/Node/Entendendo_o_uso_do_método_AppendChild-javascript	/pt-BR/docs/orphaned/Web/API/Node/Entendendo_o_uso_do_método_AppendChild-javascript
 /pt-BR/docs/Web/API/Node/innerText	/pt-BR/docs/Web/API/HTMLElement/innerText
+/pt-BR/docs/Web/API/ParentNode	/pt-BR/docs/orphaned/Web/API/ParentNode
 /pt-BR/docs/Web/API/ParentNode/childElementCount	/pt-BR/docs/Web/API/Element/childElementCount
 /pt-BR/docs/Web/API/ParentNode/children	/pt-BR/docs/orphaned/Web/API/ParentNode/children
+/pt-BR/docs/Web/API/ParentNode/querySelector	/pt-BR/docs/orphaned/Web/API/ParentNode/querySelector
 /pt-BR/docs/Web/API/Position	/pt-BR/docs/Web/API/GeolocationPosition
 /pt-BR/docs/Web/API/Position/coords	/pt-BR/docs/Web/API/GeolocationPosition/coords
 /pt-BR/docs/Web/API/PositionError	/pt-BR/docs/Web/API/GeolocationPositionError
@@ -686,11 +693,14 @@
 /pt-BR/docs/Web/CSS/filter-function/opacity	/pt-BR/docs/Web/CSS/filter-function/opacity()
 /pt-BR/docs/Web/CSS/filter-function/sepia	/pt-BR/docs/Web/CSS/filter-function/sepia()
 /pt-BR/docs/Web/CSS/hifens	/pt-BR/docs/Web/CSS/hyphens
-/pt-BR/docs/Web/CSS/image-set	/pt-BR/docs/Web/CSS/image-set()
+/pt-BR/docs/Web/CSS/image-set	/pt-BR/docs/orphaned/Web/CSS/image-set()
+/pt-BR/docs/Web/CSS/image-set()	/pt-BR/docs/orphaned/Web/CSS/image-set()
 /pt-BR/docs/Web/CSS/imagem	/pt-BR/docs/Web/CSS/image
 /pt-BR/docs/Web/CSS/máscara	/pt-BR/docs/Web/CSS/mask
-/pt-BR/docs/Web/CSS/radial-gradient	/pt-BR/docs/Web/CSS/radial-gradient()
-/pt-BR/docs/Web/CSS/repeating-linear-gradient	/pt-BR/docs/Web/CSS/repeating-linear-gradient()
+/pt-BR/docs/Web/CSS/radial-gradient	/pt-BR/docs/orphaned/Web/CSS/radial-gradient()
+/pt-BR/docs/Web/CSS/radial-gradient()	/pt-BR/docs/orphaned/Web/CSS/radial-gradient()
+/pt-BR/docs/Web/CSS/repeating-linear-gradient	/pt-BR/docs/orphaned/Web/CSS/repeating-linear-gradient()
+/pt-BR/docs/Web/CSS/repeating-linear-gradient()	/pt-BR/docs/orphaned/Web/CSS/repeating-linear-gradient()
 /pt-BR/docs/Web/CSS/sintaxe	/pt-BR/docs/Web/CSS/Syntax
 /pt-BR/docs/Web/CSS/transform-function/matrix	/pt-BR/docs/Web/CSS/transform-function/matrix()
 /pt-BR/docs/Web/CSS/transform-function/perspective	/pt-BR/docs/Web/CSS/transform-function/perspective()
@@ -756,6 +766,9 @@
 /pt-BR/docs/Web/Guide/HTML/Forms/Meu_primeiro_formulario_HTML	/pt-BR/docs/Learn/Forms/Your_first_form
 /pt-BR/docs/Web/Guide/HTML/Forms/Os_widgets_nativos	/pt-BR/docs/Learn/Forms/Basic_native_form_controls
 /pt-BR/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data
+/pt-BR/docs/Web/Guide/HTML/HTML5	/pt-BR/docs/orphaned/Web/Guide/HTML/HTML5
+/pt-BR/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/pt-BR/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/pt-BR/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/pt-BR/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /pt-BR/docs/Web/Guide/HTML/Using_data_attributes	/pt-BR/docs/Learn/HTML/Howto/Use_data_attributes
 /pt-BR/docs/Web/Guide/Introducao_ao_Desenvolvimento_Web	/pt-BR/docs/Web/Guide/Introduction_to_Web_development
 /pt-BR/docs/Web/HTML/CORS_imagens_habilitadas	/pt-BR/docs/Web/HTML/CORS_enabled_image
@@ -769,11 +782,12 @@
 /pt-BR/docs/Web/HTML/Element/figura	/pt-BR/docs/Web/HTML/Element/figure
 /pt-BR/docs/Web/HTML/Elementos_block-level	/pt-BR/docs/Web/HTML/Block-level_elements
 /pt-BR/docs/Web/HTML/Elementos_nlock-level	/pt-BR/docs/Web/HTML/Block-level_elements
-/pt-BR/docs/Web/HTML/HTML5	/pt-BR/docs/Web/Guide/HTML/HTML5
+/pt-BR/docs/Web/HTML/HTML5	/pt-BR/docs/orphaned/Web/Guide/HTML/HTML5
 /pt-BR/docs/Web/HTML/HTML5/HTML5_element_list	/pt-BR/docs/Web/HTML/Element
-/pt-BR/docs/Web/HTML/HTML5/Introduction_to_HTML5	/pt-BR/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5
+/pt-BR/docs/Web/HTML/HTML5/Introduction_to_HTML5	/pt-BR/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /pt-BR/docs/Web/HTML/Inline_elemente	/pt-BR/docs/Web/HTML/Inline_elements
 /pt-BR/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/pt-BR/docs/Glossary/speculative_parsing
+/pt-BR/docs/Web/HTML/Preloading_content	/pt-BR/docs/orphaned/Web/HTML/Preloading_content
 /pt-BR/docs/Web/HTML/ReferenciaHTML	/pt-BR/docs/Web/HTML/Reference
 /pt-BR/docs/Web/HTML/Using_HTML5_audio_and_video	/pt-BR/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /pt-BR/docs/Web/HTML/favicon	/pt-BR/docs/orphaned/Web/HTML/favicon
@@ -829,7 +843,18 @@
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/clear	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/delete	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/entries	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/get	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/get
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/has	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/has
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/keys	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Map
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/set	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/set
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/size	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/size
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/values	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/values
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
@@ -848,6 +873,7 @@
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Operador_Virgula	/pt-BR/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_Logicos	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Operators_8fa8b34b0547a749514637a15d386886
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Operadores_de_comparação	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Operators_0d2e4b8154642b5a9dbd76a2a48cf96a
+/pt-BR/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Operators/Spread_syntax
 /pt-BR/docs/Web/JavaScript/Reference/Operators/operador_de_coalescencia_nula	/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 /pt-BR/docs/Web/JavaScript/Reference/Properties_Index	/pt-BR/docs/Web/JavaScript/Reference
@@ -857,6 +883,9 @@
 /pt-BR/docs/Web/MathML/Exemplos	/pt-BR/docs/Web/MathML/Examples
 /pt-BR/docs/Web/Performance/caminho_de_renderizacao_critico	/pt-BR/docs/Web/Performance/Critical_rendering_path
 /pt-BR/docs/Web/Progressive_web_apps/Introdução	/pt-BR/docs/Web/Progressive_web_apps/Introduction
+/pt-BR/docs/Web/Reference	/pt-BR/docs/orphaned/Web/Reference
+/pt-BR/docs/Web/Reference/API	/pt-BR/docs/orphaned/Web/Reference/API
+/pt-BR/docs/Web/SVG/Element/color-profile	/pt-BR/docs/orphaned/Web/SVG/Element/color-profile
 /pt-BR/docs/Web/SVG/Element/texto	/pt-BR/docs/Web/SVG/Element/text
 /pt-BR/docs/Web/SVG/Intensivo_de_Namespaces	/pt-BR/docs/Web/SVG/Namespaces_Crash_Course
 /pt-BR/docs/Web/Security/Básico_de_Segurança_da_Informação	/pt-BR/docs/orphaned/Web/Security/Information_Security_Basics
