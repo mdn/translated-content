@@ -48794,25 +48794,6 @@
       "gurezo"
     ]
   },
-  "conflicting/Web/API/Element/compositionstart_event": {
-    "modified": "2019-03-24T00:14:09.377Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank",
-      "Masayuki"
-    ]
-  },
-  "conflicting/Web/API/Element/localName": {
-    "modified": "2019-03-24T00:02:06.649Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Gomita",
-      "Mgjbot",
-      "Taken"
-    ]
-  },
   "conflicting/Web/API/Element/prefix": {
     "modified": "2020-10-15T21:16:27.942Z",
     "contributors": [
