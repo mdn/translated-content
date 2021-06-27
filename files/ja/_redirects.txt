@@ -3966,7 +3966,7 @@
 /ja/docs/Web/API/Node/nodePrincipal	/ja/docs/Web/API/Node
 /ja/docs/Web/API/Node/prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
-/ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e
+/ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/Web/API/Element
 /ja/docs/Web/API/ParentNode	/ja/docs/orphaned/Web/API/ParentNode
 /ja/docs/Web/API/ParentNode/append	/ja/docs/orphaned/Web/API/ParentNode/append
 /ja/docs/Web/API/ParentNode/childElementCount	/ja/docs/Web/API/Element/childElementCount
@@ -3997,7 +3997,7 @@
 /ja/docs/Web/API/SVGTransformable	/ja/docs/orphaned/Web/API/SVGTransformable
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
-/ja/docs/Web/API/Slotable	/ja/docs/conflicting/Web/API/Element
+/ja/docs/Web/API/Slotable	/ja/docs/Web/API/Element
 /ja/docs/Web/API/SourceBufferList/SourceBuffer	/ja/docs/orphaned/Web/API/SourceBufferList/SourceBuffer
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
 /ja/docs/Web/API/TypeInfo	/ja/docs/orphaned/Web/API/TypeInfo
