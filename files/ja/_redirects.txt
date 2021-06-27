@@ -1374,7 +1374,7 @@
 /ja/docs/DOM/Node.normalize	/ja/docs/Web/API/Node/normalize
 /ja/docs/DOM/Node.ownerDocument	/ja/docs/Web/API/Node/ownerDocument
 /ja/docs/DOM/Node.parentNode	/ja/docs/Web/API/Node/parentNode
-/ja/docs/DOM/Node.prefix	/ja/docs/conflicting/Web/API/Element/prefix
+/ja/docs/DOM/Node.prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/DOM/Node.previousSibling	/ja/docs/Web/API/Node/previousSibling
 /ja/docs/DOM/Node.removeChild	/ja/docs/Web/API/Node/removeChild
 /ja/docs/DOM/Node.replaceChild	/ja/docs/Web/API/Node/replaceChild
@@ -1527,7 +1527,7 @@
 /ja/docs/DOM/element.onpaste	/ja/docs/Web/API/HTMLElement/onpaste
 /ja/docs/DOM/element.ownerDocument	/ja/docs/Web/API/Node/ownerDocument
 /ja/docs/DOM/element.parentNode	/ja/docs/Web/API/Node/parentNode
-/ja/docs/DOM/element.prefix	/ja/docs/conflicting/Web/API/Element/prefix
+/ja/docs/DOM/element.prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/DOM/element.previousSibling	/ja/docs/Web/API/Node/previousSibling
 /ja/docs/DOM/element.querySelectorAll	/ja/docs/Web/API/Element/querySelectorAll
 /ja/docs/DOM/element.removeAttribute	/ja/docs/Web/API/Element/removeAttribute
@@ -1825,7 +1825,7 @@
 /ja/docs/DOM:element.onpaste	/ja/docs/Web/API/HTMLElement/onpaste
 /ja/docs/DOM:element.ownerDocument	/ja/docs/Web/API/Node/ownerDocument
 /ja/docs/DOM:element.parentNode	/ja/docs/Web/API/Node/parentNode
-/ja/docs/DOM:element.prefix	/ja/docs/conflicting/Web/API/Element/prefix
+/ja/docs/DOM:element.prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/DOM:element.previousSibling	/ja/docs/Web/API/Node/previousSibling
 /ja/docs/DOM:element.removeAttribute	/ja/docs/Web/API/Element/removeAttribute
 /ja/docs/DOM:element.removeAttributeNS	/ja/docs/Web/API/Element/removeAttributeNS
@@ -3911,7 +3911,7 @@
 /ja/docs/Web/API/Node.ownerDocument	/ja/docs/Web/API/Node/ownerDocument
 /ja/docs/Web/API/Node.parentElement	/ja/docs/Web/API/Node/parentElement
 /ja/docs/Web/API/Node.parentNode	/ja/docs/Web/API/Node/parentNode
-/ja/docs/Web/API/Node.prefix	/ja/docs/conflicting/Web/API/Element/prefix
+/ja/docs/Web/API/Node.prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/Web/API/Node.previousSibling	/ja/docs/Web/API/Node/previousSibling
 /ja/docs/Web/API/Node.removeChild	/ja/docs/Web/API/Node/removeChild
 /ja/docs/Web/API/Node.replaceChild	/ja/docs/Web/API/Node/replaceChild
@@ -3924,7 +3924,7 @@
 /ja/docs/Web/API/Node/localName	/ja/docs/Web/API/Element/localName
 /ja/docs/Web/API/Node/namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/Web/API/Node/nodePrincipal	/ja/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
-/ja/docs/Web/API/Node/prefix	/ja/docs/conflicting/Web/API/Element/prefix
+/ja/docs/Web/API/Node/prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e
 /ja/docs/Web/API/ParentNode	/ja/docs/orphaned/Web/API/ParentNode
