@@ -1,59 +1,66 @@
 ---
-title: Addition avec assignement (+=)
+title: Affectation après addition (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 tags:
-  - Fonctionnalité du language
-  - JavaScript
-  - Opérateur
-  - Opérateur d'assignement
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Addition_assignment
-original_slug: Web/JavaScript/Reference/Opérateurs/Addition_avec_assignement
+- Assignment operator
+- JavaScript
+- Language feature
+- Operator
+- Reference
+translation-of: Web/JavaScript/Reference/Operators/Addition_assignment
+browser-compat: javascript.operators.addition_assignment
 ---
-<p>{{jsSidebar("Operators")}}</p>
+<div>{{jsSidebar("Operators")}}</div>
 
-<p>L'opérateur d'addition avec assignement (<code>+=</code>) permet d'ajouter une valeur à une variable. Le type des deux valeurs permet de définir si l'utilisation de cet opérateur les concatènera ou les additionnera.</p>
+<p>L'opérateur d'addition et d'affectation (<code>+=</code>) calcule la somme ou la concaténation de ses deux opérandes puis affecte le résultat à la variable représentée par l'opérande gauche. C'est le type des opérandes qui détermine s'il y a somme ou concaténation.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}</div>
 
-<div></div>
+<h2 id="syntax">Syntax</h2>
 
-<p class="hidden">La source de cet exemple interactif est stocké sur GitHub. Si vous voulez contribuer au projet de l'exemple interactif, merci de cloner ceci : <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et nous envoyer une "pull-request".</p>
+<pre class="brush: js">
+<strong>Opérateur :</strong> x += y
+<strong>Signification :</strong>  x  = x + y
+</pre>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+<h2 id="examples">Exemples</h2>
 
-<pre class="notranslate"><strong>Opérateur :</strong> x += y
-<strong>Signifie :</strong>  x = x + y</pre>
+<h3 id="using_addition_assignment">Utiliser l'opérateur d'addition et d'affectation</h3>
 
-<h2 id="Examples">Examples</h2>
+<pre class="brush: js">
+let toto = "toto";
+let truc = 5;
+let machin = true;
 
-<h3 id="Utilisation_de_lopérateur">Utilisation de l'opérateur</h3>
+// nombre + nombre -&gt; addition
+truc += 2; // 7
 
-<pre class="brush: js notranslate">// On considère les variables suivantes :
-var chaine = "Hello";
-var nombre = 5;
-var booleen = true;
+// booléen + nombre -&gt; addition
+machin += 1; // 2
 
-// Nombre + Nombre
-nombre += 2;
-// 7
+// booléen + booléen -&gt; addition
+machin += false; // 1
 
-// Booléen + Nombre
-booleen += 1;
-// 2
+// nombre + chaîne de caractères -&gt; concaténation
+truc += 'toto'; // "5toto"
 
-// Booléen + Booléen
-booleen += false;
-// 1
+// chaîne de caractères + booléen -&gt; concaténation
+toto += false // "totofalse"
 
-// Nombre + Chaîne
-nombre += "World";
-// "5World"
+// chaîne de caractères + chaîne de caractères -&gt; concaténation
+toto += 'truc' // "tototruc"</pre>
 
-// Chaîne + Booléen
-chaine += false;
-// "Hellofalse"
+<h2 id="specifications">Spécifications</h2>
 
-// Chaîne + Chaîne
-chaine += "World"
-// "HelloWorld"</pre>
+<p>{{Specifications}}</p>
+
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="see_also">Voir aussi</h2>
+
+<ul>
+  <li><a href="/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment">Les opérateurs d'affectation dans le guide JavaScript</a></li>
+  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Addition">L'opérateur d'addition/concaténation</a></li>
+</ul>
