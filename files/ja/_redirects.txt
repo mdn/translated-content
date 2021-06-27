@@ -3112,7 +3112,7 @@
 /ja/docs/JavaScript/Reference/Statements/var	/ja/docs/Web/JavaScript/Reference/Statements/var
 /ja/docs/JavaScript/Reference/Statements/while	/ja/docs/Web/JavaScript/Reference/Statements/while
 /ja/docs/JavaScript/Reference/Statements/with	/ja/docs/Web/JavaScript/Reference/Statements/with
-/ja/docs/JavaScript/Reference/Statements/yield	/ja/docs/conflicting/Web/JavaScript/Reference/Operators/yield
+/ja/docs/JavaScript/Reference/Statements/yield	/ja/docs/Web/JavaScript/Reference/Operators/yield
 /ja/docs/JavaScript/Reference/文	/ja/docs/Web/JavaScript/Reference/Statements
 /ja/docs/JavaScript/Reference/文/for...of	/ja/docs/Web/JavaScript/Reference/Statements/for...of
 /ja/docs/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
@@ -5035,7 +5035,7 @@
 /ja/docs/Web/JavaScript/Reference/Properties_Index	/ja/docs/Web/JavaScript/Reference
 /ja/docs/Web/JavaScript/Reference/Reserved_Words	/ja/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
 /ja/docs/Web/JavaScript/Reference/Statements/default	/ja/docs/Web/JavaScript/Reference/Statements/switch
-/ja/docs/Web/JavaScript/Reference/Statements/yield	/ja/docs/conflicting/Web/JavaScript/Reference/Operators/yield
+/ja/docs/Web/JavaScript/Reference/Statements/yield	/ja/docs/Web/JavaScript/Reference/Operators/yield
 /ja/docs/Web/JavaScript/Reference/arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ja/docs/Web/JavaScript/Reference/template_strings	/ja/docs/Web/JavaScript/Reference/Template_literals
 /ja/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
