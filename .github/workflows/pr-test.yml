@@ -145,6 +145,7 @@ jobs:
           # be able to use this raw diff file for the benefit of analyzing.
           #XXX This doesn't work in mdn/translated-content
 
+          git fetch -n origin ${{ github.event.pull_request.base.sha }}
           git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > $BUILD_OUT_ROOT/DIFF
           cat $BUILD_OUT_ROOT/DIFF
           # git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}
