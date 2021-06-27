@@ -11441,6 +11441,8 @@
   "Web/API/Canvas_API/Tutorial": {
     "modified": "2020-09-06T11:19:42.533Z",
     "contributors": [
+      "Uemmra3",
+      "yyss",
       "ryokohbato",
       "Hakuyoka",
       "mfuji09",
@@ -19052,16 +19054,6 @@
   },
   "Web/API/Navigator/productSub": {
     "modified": "2020-10-15T21:16:44.835Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "jsx",
-      "ethertank",
-      "Potappo"
-    ]
-  },
-  "Web/API/Navigator/registerContentHandler": {
-    "modified": "2020-10-15T21:15:53.115Z",
     "contributors": [
       "mfuji09",
       "fscholz",
@@ -48531,13 +48523,6 @@
       "ethertank"
     ]
   },
-  "conflicting/Learn/CSS/Building_blocks/Styling_tables": {
-    "modified": "2019-03-23T23:30:40.564Z",
-    "contributors": [
-      "teoli",
-      "ethertank"
-    ]
-  },
   "conflicting/Learn/CSS/CSS_layout": {
     "modified": "2019-03-23T23:30:42.231Z",
     "contributors": [
@@ -48724,29 +48709,6 @@
     "contributors": [
       "SphinxKnight",
       "yuki_nichiyama"
-    ]
-  },
-  "conflicting/Web/API/Canvas_API/Tutorial": {
-    "modified": "2019-03-23T23:28:30.956Z",
-    "contributors": [
-      "Uemmra3",
-      "yyss",
-      "ethertank"
-    ]
-  },
-  "conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d": {
-    "modified": "2019-03-23T23:54:18.694Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "teoli",
-      "ethertank",
-      "Marsf",
-      "Mgjbot",
-      "Okome",
-      "Taken",
-      "Shimono",
-      "Victory"
     ]
   },
   "conflicting/Web/API/Crypto/getRandomValues": {
@@ -52031,6 +51993,16 @@
     "contributors": [
       "yyss",
       "ethertank"
+    ]
+  },
+  "orphaned/Web/API/Navigator/registerContentHandler": {
+    "modified": "2020-10-15T21:15:53.115Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "jsx",
+      "ethertank",
+      "Potappo"
     ]
   },
   "orphaned/Web/API/Node/getUserData": {

@@ -17866,14 +17866,6 @@
       "chenqingyue"
     ]
   },
-  "Web/API/Navigator/registerContentHandler": {
-    "modified": "2019-03-24T00:16:02.965Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "ziyunfei"
-    ]
-  },
   "Web/API/Navigator/registerProtocolHandler": {
     "modified": "2020-11-12T06:22:45.529Z",
     "contributors": [
@@ -49980,6 +49972,14 @@
     "modified": "2019-03-23T22:46:53.836Z",
     "contributors": [
       "MeCKodo"
+    ]
+  },
+  "orphaned/Web/API/Navigator/registerContentHandler": {
+    "modified": "2019-03-24T00:16:02.965Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "ziyunfei"
     ]
   },
   "orphaned/Web/API/NavigatorPlugins/测试滕盖": {

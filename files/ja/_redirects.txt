@@ -354,7 +354,7 @@
 /ja/docs/CSS/Getting_Started/Lists	/ja/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/CSS/Getting_Started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
 /ja/docs/CSS/Getting_Started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/ja/docs/CSS/Getting_Started/Tables	/ja/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
+/ja/docs/CSS/Getting_Started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/CSS/Getting_Started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/CSS/Getting_Started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/CSS/Getting_Started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -1689,7 +1689,7 @@
 /ja/docs/DOM/window.navigator.plugins	/ja/docs/Web/API/NavigatorPlugins/plugins
 /ja/docs/DOM/window.navigator.product	/ja/docs/Web/API/NavigatorID/product
 /ja/docs/DOM/window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/DOM/window.navigator.registerContentHandler	/ja/docs/Web/API/Navigator/registerContentHandler
+/ja/docs/DOM/window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/DOM/window.navigator.registerProtocolHandler	/ja/docs/Web/API/Navigator/registerProtocolHandler
 /ja/docs/DOM/window.navigator.userAgent	/ja/docs/Web/API/NavigatorID/userAgent
 /ja/docs/DOM/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
@@ -1915,7 +1915,7 @@
 /ja/docs/DOM:window.navigator.plugins	/ja/docs/Web/API/NavigatorPlugins/plugins
 /ja/docs/DOM:window.navigator.product	/ja/docs/Web/API/NavigatorID/product
 /ja/docs/DOM:window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/DOM:window.navigator.registerContentHandler	/ja/docs/Web/API/Navigator/registerContentHandler
+/ja/docs/DOM:window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/DOM:window.navigator.registerProtocolHandler	/ja/docs/Web/API/Navigator/registerProtocolHandler
 /ja/docs/DOM:window.navigator.userAgent	/ja/docs/Web/API/NavigatorID/userAgent
 /ja/docs/DOM:window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
@@ -2265,7 +2265,7 @@
 /ja/docs/DragDrop/Dragging_and_Dropping_Multiple_Items	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 /ja/docs/DragDrop/Recommended_Drag_Types	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 /ja/docs/DragDrop/ドラッグ＆ドロップ	/ja/docs/Web/API/HTML_Drag_and_Drop_API
-/ja/docs/Drawing_Graphics_with_Canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
+/ja/docs/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Drawing_text_using_a_canvas	/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /ja/docs/Dynamically_modifying_XUL-based_user_interface	/ja/docs/orphaned/Dynamically_modifying_XUL-based_user_interface
 /ja/docs/E4X/Processing_XML_with_E4X	/ja/docs/orphaned/E4X/Processing_XML_with_E4X
@@ -2389,7 +2389,7 @@
 /ja/docs/HTML/Block-level_elements	/ja/docs/Web/HTML/Block-level_elements
 /ja/docs/HTML/CORS_settings_attributes	/ja/docs/Web/HTML/Attributes/crossorigin
 /ja/docs/HTML/Canvas	/ja/docs/Web/API/Canvas_API
-/ja/docs/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
+/ja/docs/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/HTML/Canvas/Tutorial	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/HTML/Content_Editable	/ja/docs/Web/Guide/HTML/Editable_content
 /ja/docs/HTML/Content_categories	/ja/docs/Web/Guide/HTML/Content_categories
@@ -3666,7 +3666,7 @@
 /ja/docs/Web-d/Guide/CSS/Getting_started/Lists	/ja/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/Web-d/Guide/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
 /ja/docs/Web-d/Guide/CSS/Getting_started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/ja/docs/Web-d/Guide/CSS/Getting_started/Tables	/ja/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
+/ja/docs/Web-d/Guide/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web-d/Guide/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web-d/Guide/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web-dd/Guide/CSS/Getting_started/Cascading_and_inheritance	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
@@ -3725,7 +3725,7 @@
 /ja/docs/Web/API/CanvasRenderingContext2D.clearHitRegions	/ja/docs/Web/API/CanvasRenderingContext2D/clearHitRegions
 /ja/docs/Web/API/CanvasRenderingContext2D.drawFocusIfNeeded	/ja/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 /ja/docs/Web/API/CanvasRenderingContext2D.removeHitRegion	/ja/docs/Web/API/CanvasRenderingContext2D/removeHitRegion
-/ja/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
+/ja/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/API/ChildNode/remove	/ja/docs/orphaned/Web/API/ChildNode/remove
 /ja/docs/Web/API/ChildNode/replaceWith	/ja/docs/orphaned/Web/API/ChildNode/replaceWith
 /ja/docs/Web/API/Console.error	/ja/docs/Web/API/Console/error
@@ -3881,6 +3881,7 @@
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator.mozFMRadio	/ja/docs/Web/API/Navigator/mozFMRadio
 /ja/docs/Web/API/Navigator/javaEnabled	/ja/docs/Web/API/NavigatorPlugins/javaEnabled
+/ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/Navigator/userAgent	/ja/docs/Web/API/NavigatorID/userAgent
 /ja/docs/Web/API/NavigatorLanguage.languages	/ja/docs/Web/API/NavigatorLanguage/languages
 /ja/docs/Web/API/Node.appendChild	/ja/docs/Web/API/Node/appendChild
@@ -4198,7 +4199,7 @@
 /ja/docs/Web/API/window.navigator.plugins	/ja/docs/Web/API/NavigatorPlugins/plugins
 /ja/docs/Web/API/window.navigator.product	/ja/docs/Web/API/NavigatorID/product
 /ja/docs/Web/API/window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/Web/API/window.navigator.registerContentHandler	/ja/docs/Web/API/Navigator/registerContentHandler
+/ja/docs/Web/API/window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/window.navigator.userAgent	/ja/docs/Web/API/NavigatorID/userAgent
 /ja/docs/Web/API/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
 /ja/docs/Web/API/window.navigator.vendorSub	/ja/docs/Web/API/Navigator/vendorSub
@@ -4369,7 +4370,7 @@
 /ja/docs/Web/CSS/Getting_started/Lists	/ja/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/Web/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
 /ja/docs/Web/CSS/Getting_started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/ja/docs/Web/CSS/Getting_started/Tables	/ja/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
+/ja/docs/Web/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web/CSS/Index	/ja/docs/orphaned/Web/CSS/Index
@@ -4566,7 +4567,7 @@
 /ja/docs/Web/Guide/CSS/Getting_started/Lists	/ja/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/Web/Guide/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
 /ja/docs/Web/Guide/CSS/Getting_started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/ja/docs/Web/Guide/CSS/Getting_started/Tables	/ja/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
+/ja/docs/Web/Guide/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web/Guide/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web/Guide/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web/Guide/CSS/Getting_started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -4600,9 +4601,9 @@
 /ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
 /ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/Web/Events/Orientation_and_motion_data_explained
 /ja/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/ja/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
-/ja/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
+/ja/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/Guide/HTML	/ja/docs/Learn/HTML
-/ja/docs/Web/Guide/HTML/Canvas_tutorial	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial
+/ja/docs/Web/Guide/HTML/Canvas_tutorial	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Advanced_animations	/ja/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors	/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations	/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations
@@ -4642,7 +4643,7 @@
 /ja/docs/Web/Guide/Using_FormData_Objects	/ja/docs/conflicting/Web/API/FormData/Using_FormData_Objects
 /ja/docs/Web/HTML/CORS_settings_attributes	/ja/docs/Web/HTML/Attributes/crossorigin
 /ja/docs/Web/HTML/Canvas	/ja/docs/Web/API/Canvas_API
-/ja/docs/Web/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
+/ja/docs/Web/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/HTML/Canvas/Tutorial	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/HTML/Content_Editable	/ja/docs/Web/Guide/HTML/Editable_content
 /ja/docs/Web/HTML/Content_Editable/Rich-Text_Editing_in_Mozilla	/ja/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
