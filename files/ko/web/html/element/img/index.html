@@ -10,6 +10,7 @@ tags:
   - Web
   - 사진
   - 이미지
+browser-compat: html.elements.img
 translation_of: Web/HTML/Element/img
 ---
 <div>{{HTMLRef}}</div>
@@ -220,52 +221,52 @@ translation_of: Web/HTML/Element/img
 
 <p>이미지는 고유 너비와 높이를 가질 수 있지만, 일부 유형의 이미지는 그렇지 않습니다. 예를 들어, {{glossary("SVG")}} 요소는 루트 {{svgelement("svg")}} 요소에 <code>width</code>와 <code>height</code>가 없는 경우 고유 크기를 가지지 않습니다.</p>
 
-<h2 id="예제">예제</h2>
+<h2 id="Examples">예제</h2>
 
-<h3 id="보조_텍스트">보조 텍스트</h3>
+<h3 id="Alternative_text">보조 텍스트</h3>
 
 <p>페이지에 이미지를 삽입하고, 접근성을 높이기 위해 대체 텍스트를 제공하는 간단한 예제입니다.</p>
 
-<pre class="brush: html">&lt;img src="https://developer.mozilla.org/static/img/favicon144.png"
-     alt="MDN logo"&gt;</pre>
+<pre class="brush: html">&lt;img src="favicon144.png"
+     alt="MDN logo"&gt;
+</pre>
 
-<p>{{ EmbedLiveSample('보조_텍스트', '100%', '70') }}</p>
+<p>{{ EmbedLiveSample('Alternative_text', '100%', '160') }}</p>
 
-<h3 id="이미지_링크">이미지 링크</h3>
+<h3 id="Image_link">이미지 링크</h3>
 
 <p>이 예제는 이전 코드에 더해 이미지를 링크로 바꾸는 법을 보입니다. 단순히 <code>&lt;img&gt;</code> 태그를 {{htmlelement("a")}} 안에 넣기만 하면 됩니다. 다만 고려할 점 하나는, 해당 링크가 가리키는 곳을 설명하는 대체 텍스트를 포함해야 한다는 것입니다.</p>
 
 <pre class="brush: html">&lt;a href="https://developer.mozilla.org"&gt;
-  &lt;img src="https://developer.mozilla.org/static/img/favicon144.png"
-       alt="Visit the MDN site"&gt;
-&lt;/a&gt;</pre>
+     &lt;img src="favicon144.png" alt="Visit the MDN site"&gt;
+   &lt;/a&gt;</pre>
 
-<p>{{ EmbedLiveSample('이미지_링크', '100%', '70') }}</p>
+<p>{{ EmbedLiveSample('Image_link', '100%', '160') }}</p>
 
-<h3 id="srcset_특성_사용하기"><code>srcset</code> 특성 사용하기</h3>
+<h3 id="Using_the_srcset_attribute"><code>srcset</code> 특성 사용하기</h3>
 
 <p>이번 예제에서는 {{htmlattrxref("srcset", "img")}} 특성에 고해상도 버전 로고를 추가했습니다. 그러면 고해상도 장치에서는 일반 <code>src</code> 이미지 대신 고해상도 이미지를 사용합니다. <code>srcset</code> 특성을 지원하는 {{glossary("user agent", "사용자 에이전트")}}는 <code>src</code> 특성을 <code>srcset</code> <code>1x</code> 로 간주합니다.</p>
 
-<pre class="brush: html">&lt;img src="https://developer.mozilla.org/static/img/favicon72.png"
+<pre class="brush: html">&lt;img src="favicon72.png"
      alt="MDN logo"
-     srcset="https://developer.mozilla.org/static/img/favicon144.png 2x"&gt;</pre>
+     srcset="favicon144.png 2x"&gt;</pre>
 
-<p>{{EmbedLiveSample("srcset_특성_사용하기", "100%", "160")}}</p>
+<p>{{EmbedLiveSample("Using_the_srcset_attribute", "100%", "160")}}</p>
 
-<h3 id="srcset과_sizes_특성_사용하기"><code>srcset</code>과 <code>sizes</code> 특성 사용하기</h3>
+<h3 id="Using_the_srcset_and_sizes_attributes"><code>srcset</code>과 <code>sizes</code> 특성 사용하기</h3>
 
 <p>{{htmlattrxref("srcset", "img")}}를 지원하는 {{glossary("user agent", "사용자 에이전트")}}는, <code>srcset</code>에 <code>w</code> 서술자를 사용한 경우 <code>src</code> 특성을 무시합니다. 다음 코드는 미디어 조건 <code>(max-width: 600px)</code>을 만족할 때 200px 너비의 이미지를 불러오고, 그 외의 경우엔 다른 이미지(400px)를 불러옵니다.</p>
 
-<pre class="brush: html">&lt;img src="/files/16864/clock-demo-200px.png"
+<pre class="brush: html">&lt;img src="clock-demo-200px.png"
      alt="Clock"
-     srcset="/files/16864/clock-demo-200px.png 200w,
-             /files/16797/clock-demo-400px.png 400w"
-     sizes="(max-width: 600px) 200px, 50vw"&gt;</pre>
+     srcset="clock-demo-200px.png 200w,
+             clock-demo-400px.png 400w"
+     sizes="(min-width: 600px) 200px, 50vw"&gt;</pre>
 
-<p>{{EmbedLiveSample("srcset과_sizes_특성_사용하기", "100%", 350)}}</p>
+<p>{{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}</p>
 
-<div class="blockIndicator note">
-<p>직접 창 크기를 조절하면서 이미지의 변화를 관측하려면 <a href="https://mdn.mozillademos.org/ko/docs/Web/HTML/Element/img$samples/srcset%EA%B3%BC_sizes_%ED%8A%B9%EC%84%B1_%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0">별도 페이지</a>를 방문하세요.</p>
+<div class="notecard note">
+<p>직접 창 크기를 조절하면서 이미지의 변화를 관측하려면 {{LiveSampleLink('Using_the_srcset_and_sizes_attributes', '별도 페이지')}}를 방문하세요.</p>
 </div>
 
 <h2 id="보안_및_개인정보_고려사항">보안 및 개인정보 고려사항</h2>

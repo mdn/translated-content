@@ -35,11 +35,11 @@ translation_of: Web/API/HTMLInputElement/invalid_event
  </tbody>
 </table>
 
-<p>这个事件可用于展示提交表单时所出现的问题的概览。当表单提交时，若任一表单控件无效，则会触发 <code>invalid</code> 事件。对可提交元素有效性的检查是在提交父元素 {{HtmlElement("form")}} 之前或调用父元素 <code>&lt;form&gt;</code> 或元素自己的 <a href="/en-US/docs/HTML/Forms_in_HTML#Constraint_Validation_API" title="/en-US/docs/HTML/Forms_in_HTML#Constraint_Validation_API"><code>checkValidity()</code></a> 方法之后。</p>
+<p>这个事件可用于展示提交表单时所出现的问题的概览。当表单提交时，若任一表单控件无效，则会触发 <code>invalid</code> 事件。对可提交元素有效性的检查是在提交父元素 {{HtmlElement("form")}} 之前或调用父元素 <code>&lt;form&gt;</code> 或元素自己的 <a href="/en-US/docs/Learn/Forms#constraint_validation_api" title="/en-US/docs/HTML/Forms_in_HTML#Constraint_Validation_API"><code>checkValidity()</code></a> 方法之后。</p>
 
 <p>这个事件不会在 {{Event("blur")}} 事件中触发。</p>
 
-<h2 id="示例">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <p>如果表单提交时有无效值，检查可提交元素时发现了错误，则 <code>invalid</code> 事件会在那个无效元素上触发。在这个例子中，当输入无效值触发 <code>invalid</code> 事件时，这个无效值被记录下来。</p>
 
@@ -65,40 +65,15 @@ function logValue(e) {
 
 <h3 id="结果">结果</h3>
 
-<p><iframe class="live-sample-frame sample-code-frame" frameborder="0" id="frame_Examples" src="https://mdn.mozillademos.org/en-US/docs/Web/API/HTMLInputElement/invalid_event$samples/Examples?revision=1602988"></iframe></p>
+<p>{{EmbedLiveSample("Examples")}}</p>
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML WHATWG', 'forms.html#the-constraint-validation-api', 'Invalid event') }}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5.1', 'sec-forms.html#the-constraint-validation-api', 'Invalid event') }}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{ SpecName('HTML5 W3C', 'forms.html#the-constraint-validation-api', 'Invalid event') }}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-
-
-<p>{{Compat("api.HTMLInputElement.invalid_event")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="参见">参见</h2>
 

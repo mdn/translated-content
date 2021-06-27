@@ -12,20 +12,20 @@ translation_of: Web/JavaScript/Reference/Errors/Bad_radix
 
 <p>JavaScript の例外 "radix must be an integer at least 2 and no greater than 36" は、 {{jsxref("Number.prototype.toString()")}} メソッドまたは {{jsxref("BigInt.prototype.toString()")}} メソッドのオプションの <code>radix</code> 引数が指定されたものの、 2 から 36 までの範囲になかったときに発生します。</p>
 
-  <h2 id="Message">メッセージ</h2>
+<h2 id="Message">エラーメッセージ</h2>
 
 <pre class="brush: js">RangeError: invalid argument (Edge)
 RangeError: radix must be an integer at least 2 and no greater than 36 (Firefox)
 RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 </pre>
 
-<h2 id="Error_type">エラー種別</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("RangeError")}}</p>
 
-<h2 id="What_went_wrong">原因</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-<p>{{jsxref("Number.prototype.toString()")}} メソッドまたは {{jsxref("BigInt.prototype.toString()")}} メソッドのオプションの <code>radix</code> 引数が指定されています。この引数は、数値を表すために使用する基数を指定する 2 から 36 の整数 (数) でなければなりません。</p>
+<p>{{jsxref("Number.prototype.toString()")}} メソッドまたは {{jsxref("BigInt.prototype.toString()")}} メソッドのオプションの <code>radix</code> 引数が指定されています。この引数は、数値を表すために使用する基数を指定する 2 から 36 の整数 (数) でなければなりません。例えば、 10 進数の数値 169 は 16 進数では A9 と表現されます。</p>
 
 <p>なぜ上限が 36 なのでしょうか？ 10 よりも大きい基数の場合は、アルファベットが数値として用いられます。したがって、 (英語およびほかの多くの言語で用いられる) ラテン文字のアルファベットは 26 文字しかないため、基数は 36 以上にすることができません。</p>
 
@@ -40,7 +40,7 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 
 <h2 id="Examples">例</h2>
 
-<h3 id="Invalid_cases">無効なケース</h3>
+<h3 id="Invalid_cases">無効な場合</h3>
 
 <pre class="brush: js example-bad">(42).toString(0);
 (42).toString(1);
@@ -50,7 +50,7 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 (12071989).toString('MM-dd-yyyy');
 </pre>
 
-<h3 id="Valid_cases">有効なケース</h3>
+<h3 id="Valid_cases">有効な場合</h3>
 
 <pre class="brush: js example-good">(42).toString(2);     // "101010" (二進法)
 (13).toString(8);     // "15"     (八進法)
@@ -61,6 +61,6 @@ RangeError: toString() radix argument must be between 2 and 36 (Chrome)
 <h2 id="See_also">関連情報</h2>
 
 <ul>
-	<li>{{jsxref("Number.prototype.toString()")}}</li>
-	<li>{{jsxref("BigInt.prototype.toString()")}}</li>
+  <li>{{jsxref("Number.prototype.toString()")}}</li>
+  <li>{{jsxref("BigInt.prototype.toString()")}}</li>
 </ul>

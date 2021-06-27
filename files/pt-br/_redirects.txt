@@ -94,7 +94,7 @@
 /pt-BR/docs/CSS/display	/pt-BR/docs/Web/CSS/display
 /pt-BR/docs/CSS/overflow	/pt-BR/docs/Web/CSS/overflow
 /pt-BR/docs/CSS/regra at	/pt-BR/docs/Web/CSS/At-rule
-/pt-BR/docs/CSS/repeating-linear-gradient	/pt-BR/docs/Web/CSS/repeating-linear-gradient()
+/pt-BR/docs/CSS/repeating-linear-gradient	/pt-BR/docs/orphaned/Web/CSS/repeating-linear-gradient()
 /pt-BR/docs/CSS/sintaxe	/pt-BR/docs/Web/CSS/Syntax
 /pt-BR/docs/CSS/text-overflow	/pt-BR/docs/Web/CSS/text-overflow
 /pt-BR/docs/CSS/text-rendering	/pt-BR/docs/Web/CSS/text-rendering
@@ -529,6 +529,7 @@
 /pt-BR/docs/Web/API/API_de_Desempenho	/pt-BR/docs/Web/API/Performance_API
 /pt-BR/docs/Web/API/AbstractWorker	/pt-BR/docs/orphaned/Web/API/AbstractWorker
 /pt-BR/docs/Web/API/AbstractWorker/onerror	/pt-BR/docs/orphaned/Web/API/AbstractWorker/onerror
+/pt-BR/docs/Web/API/Ambient_Light_Events	/pt-BR/docs/orphaned/Web/API/Ambient_Light_Events
 /pt-BR/docs/Web/API/ArrayBuffer	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /pt-BR/docs/Web/API/AudioContext/currentTime	/pt-BR/docs/Web/API/BaseAudioContext/currentTime
 /pt-BR/docs/Web/API/BatteryManager.charging	/pt-BR/docs/Web/API/BatteryManager/charging
@@ -692,11 +693,14 @@
 /pt-BR/docs/Web/CSS/filter-function/opacity	/pt-BR/docs/Web/CSS/filter-function/opacity()
 /pt-BR/docs/Web/CSS/filter-function/sepia	/pt-BR/docs/Web/CSS/filter-function/sepia()
 /pt-BR/docs/Web/CSS/hifens	/pt-BR/docs/Web/CSS/hyphens
-/pt-BR/docs/Web/CSS/image-set	/pt-BR/docs/Web/CSS/image-set()
+/pt-BR/docs/Web/CSS/image-set	/pt-BR/docs/orphaned/Web/CSS/image-set()
+/pt-BR/docs/Web/CSS/image-set()	/pt-BR/docs/orphaned/Web/CSS/image-set()
 /pt-BR/docs/Web/CSS/imagem	/pt-BR/docs/Web/CSS/image
 /pt-BR/docs/Web/CSS/máscara	/pt-BR/docs/Web/CSS/mask
-/pt-BR/docs/Web/CSS/radial-gradient	/pt-BR/docs/Web/CSS/radial-gradient()
-/pt-BR/docs/Web/CSS/repeating-linear-gradient	/pt-BR/docs/Web/CSS/repeating-linear-gradient()
+/pt-BR/docs/Web/CSS/radial-gradient	/pt-BR/docs/orphaned/Web/CSS/radial-gradient()
+/pt-BR/docs/Web/CSS/radial-gradient()	/pt-BR/docs/orphaned/Web/CSS/radial-gradient()
+/pt-BR/docs/Web/CSS/repeating-linear-gradient	/pt-BR/docs/orphaned/Web/CSS/repeating-linear-gradient()
+/pt-BR/docs/Web/CSS/repeating-linear-gradient()	/pt-BR/docs/orphaned/Web/CSS/repeating-linear-gradient()
 /pt-BR/docs/Web/CSS/sintaxe	/pt-BR/docs/Web/CSS/Syntax
 /pt-BR/docs/Web/CSS/transform-function/matrix	/pt-BR/docs/Web/CSS/transform-function/matrix()
 /pt-BR/docs/Web/CSS/transform-function/perspective	/pt-BR/docs/Web/CSS/transform-function/perspective()
@@ -839,7 +843,18 @@
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/clear	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/delete	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/entries	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/get	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/get
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/has	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/has
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/keys	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Map
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/set	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/set
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/size	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/size
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/values	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/values
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
