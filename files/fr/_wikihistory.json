@@ -7580,13 +7580,6 @@
       "hellosct1"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/API/pageAction/setIcon": {
-    "modified": "2020-10-15T22:00:14.155Z",
-    "contributors": [
-      "hellosct1",
-      "wbamberg"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup": {
     "modified": "2020-10-15T22:00:16.798Z",
     "contributors": [
@@ -11766,13 +11759,6 @@
       "loella16"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2019-03-23T23:28:29.463Z",
-    "contributors": [
-      "Goofy",
-      "SphinxKnight"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2020-10-15T21:24:02.190Z",
     "contributors": [
@@ -13788,12 +13774,6 @@
   },
   "Web/API/DOMTokenList/values": {
     "modified": "2020-10-15T22:01:52.240Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "Web/API/DOMUserData": {
-    "modified": "2019-03-18T21:41:11.030Z",
     "contributors": [
       "loella16"
     ]
@@ -18835,12 +18815,6 @@
       "loella16"
     ]
   },
-  "Web/API/Node/getUserData": {
-    "modified": "2019-03-18T21:40:10.400Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/Node/hasChildNodes": {
     "modified": "2019-03-23T23:54:17.372Z",
     "contributors": [
@@ -19065,12 +19039,6 @@
       "BenoitL",
       "Fredchat",
       "Celelibi"
-    ]
-  },
-  "Web/API/Node/setUserData": {
-    "modified": "2019-03-18T21:39:40.470Z",
-    "contributors": [
-      "loella16"
     ]
   },
   "Web/API/Node/textContent": {
@@ -27587,14 +27555,6 @@
       "Fredchat"
     ]
   },
-  "Web/CSS/conic-gradient()": {
-    "modified": "2020-11-05T10:00:17.716Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight",
-      "AlainGourves"
-    ]
-  },
   "Web/CSS/contain": {
     "modified": "2020-10-15T21:47:58.553Z",
     "contributors": [
@@ -28369,16 +28329,6 @@
       "Goofy"
     ]
   },
-  "Web/CSS/image()": {
-    "modified": "2020-11-16T08:52:05.684Z",
-    "contributors": [
-      "chrisdavidmills",
-      "escattone",
-      "SphinxKnight",
-      "estelle",
-      "ExE-Boss"
-    ]
-  },
   "Web/CSS/image-orientation": {
     "modified": "2020-10-15T21:19:41.469Z",
     "contributors": [
@@ -28387,13 +28337,6 @@
       "Sebastianz",
       "teoli",
       "FredB"
-    ]
-  },
-  "Web/CSS/image-set()": {
-    "modified": "2020-11-16T08:53:24.499Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight"
     ]
   },
   "Web/CSS/ime-mode": {
@@ -28634,28 +28577,6 @@
     "contributors": [
       "SphinxKnight",
       "kodliber"
-    ]
-  },
-  "Web/CSS/linear-gradient()": {
-    "modified": "2020-11-16T08:57:11.795Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight",
-      "edspeedy",
-      "Javarome",
-      "lhapaipai",
-      "Guillaume.Wulpes",
-      "Simplexible",
-      "wizAmit",
-      "slayslot",
-      "prayash",
-      "Nazcange",
-      "nicofrand",
-      "teoli",
-      "Golmote",
-      "tregagnon",
-      "FredB",
-      "thenew"
     ]
   },
   "Web/CSS/list-style": {
@@ -29536,18 +29457,6 @@
       "FredB"
     ]
   },
-  "Web/CSS/radial-gradient()": {
-    "modified": "2020-11-18T14:42:17.846Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight",
-      "PetiPandaRou",
-      "teoli",
-      "philippe97",
-      "FredB",
-      "Jeansebastien.ney"
-    ]
-  },
   "Web/CSS/ratio": {
     "modified": "2020-10-15T21:21:46.974Z",
     "contributors": [
@@ -29562,35 +29471,6 @@
     "contributors": [
       "chrisdavidmills",
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/repeating-conic-gradient()": {
-    "modified": "2020-11-18T14:49:14.177Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight"
-    ]
-  },
-  "Web/CSS/repeating-linear-gradient()": {
-    "modified": "2020-11-18T14:45:56.794Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight",
-      "Sebastianz",
-      "Prinz_Rana",
-      "wizAmit",
-      "prayash",
-      "bfn",
-      "teoli",
-      "FredB"
-    ]
-  },
-  "Web/CSS/repeating-radial-gradient()": {
-    "modified": "2020-11-18T14:47:29.838Z",
-    "contributors": [
-      "chrisdavidmills",
-      "SphinxKnight",
-      "a-mt"
     ]
   },
   "Web/CSS/resize": {
@@ -37425,112 +37305,6 @@
       "teoli"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:27:51.341Z",
-    "contributors": [
-      "innocenzi",
-      "SphinxKnight",
-      "ariasuni",
-      "HelloEdit",
-      "GodefroyClair",
-      "kdex",
-      "Pragmateek",
-      "lionel",
-      "Goofy",
-      "Ltrlg",
-      "Youle",
-      "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@iterator": {
-    "modified": "2020-10-15T21:32:15.453Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@species": {
-    "modified": "2020-10-15T21:36:32.002Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T21:37:58.832Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2020-10-15T21:27:50.323Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2020-10-15T21:27:49.784Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2020-10-15T21:27:49.172Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T21:27:50.745Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T21:27:49.108Z",
-    "contributors": [
-      "tomderudder",
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2020-10-15T21:27:49.912Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2020-10-15T21:27:50.316Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2020-10-15T21:27:50.400Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2020-10-15T21:27:52.803Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2020-10-15T21:27:55.939Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2020-10-15T21:20:01.725Z",
     "contributors": [
@@ -44697,83 +44471,6 @@
       "matteodelabre"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Operators": {
-    "modified": "2020-10-15T21:17:24.593Z",
-    "contributors": [
-      "Valentin",
-      "SphinxKnight",
-      "PhilippePerret",
-      "alexisdelee",
-      "teoli",
-      "Jeremie",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators_03cb648b1d07bbaa8b57526b509d6d55": {
-    "modified": "2020-10-15T21:18:03.910Z",
-    "contributors": [
-      "Watilin",
-      "SphinxKnight",
-      "pierreferry",
-      "lionel-kahan",
-      "teoli",
-      "Jeremie",
-      "Kyodev",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators_201bc9aef1615ff38f215c35d4cde8c9": {
-    "modified": "2019-03-23T23:48:45.315Z",
-    "contributors": [
-      "teoli",
-      "Jeremie",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators_2be16fc74d75a7c9dca0abca1dc5883b": {
-    "modified": "2020-10-15T21:18:11.144Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "Anquez",
-      "Behrouze",
-      "Goofy",
-      "teoli",
-      "Jeremie",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators_688eef608213025193cd6b8e1e75b5c3": {
-    "modified": "2020-10-15T21:18:05.662Z",
-    "contributors": [
-      "SphinxKnight",
-      "pastr",
-      "mizhac",
-      "id-ismail",
-      "Sroucheray",
-      "bsitruk",
-      "thePivottt",
-      "titouandk",
-      "teoli",
-      "Jeremie",
-      "Kyodev",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators_d0fb75b0fac950a91a017a1f497c6a1f": {
-    "modified": "2020-10-15T21:17:22.011Z",
-    "contributors": [
-      "SphinxKnight",
-      "Darkilen",
-      "teoli",
-      "Jeremie",
-      "Mgjbot",
-      "Kyodev",
-      "BenoitL"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Statements/switch": {
     "modified": "2020-10-15T21:39:25.638Z",
     "contributors": [
@@ -44906,6 +44603,13 @@
       "fscholz"
     ]
   },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2019-03-23T23:28:29.463Z",
+    "contributors": [
+      "Goofy",
+      "SphinxKnight"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T21:49:32.341Z",
     "contributors": [
@@ -44922,6 +44626,12 @@
       "loella16",
       "Spictheweb",
       "v-Stein"
+    ]
+  },
+  "orphaned/Web/API/DOMUserData": {
+    "modified": "2019-03-18T21:41:11.030Z",
+    "contributors": [
+      "loella16"
     ]
   },
   "orphaned/Web/API/Detecting_device_orientation": {
@@ -44985,6 +44695,18 @@
       "SphinxKnight",
       "teoli",
       "julienw"
+    ]
+  },
+  "orphaned/Web/API/Node/getUserData": {
+    "modified": "2019-03-18T21:40:10.400Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "orphaned/Web/API/Node/setUserData": {
+    "modified": "2019-03-18T21:39:40.470Z",
+    "contributors": [
+      "loella16"
     ]
   },
   "orphaned/Web/API/Notation": {
@@ -45122,6 +44844,94 @@
       "SphinxKnight"
     ]
   },
+  "orphaned/Web/CSS/conic-gradient()": {
+    "modified": "2020-11-05T10:00:17.716Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SphinxKnight",
+      "AlainGourves"
+    ]
+  },
+  "orphaned/Web/CSS/image()": {
+    "modified": "2020-11-16T08:52:05.684Z",
+    "contributors": [
+      "chrisdavidmills",
+      "escattone",
+      "SphinxKnight",
+      "estelle",
+      "ExE-Boss"
+    ]
+  },
+  "orphaned/Web/CSS/image-set()": {
+    "modified": "2020-11-16T08:53:24.499Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/CSS/linear-gradient()": {
+    "modified": "2020-11-16T08:57:11.795Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SphinxKnight",
+      "edspeedy",
+      "Javarome",
+      "lhapaipai",
+      "Guillaume.Wulpes",
+      "Simplexible",
+      "wizAmit",
+      "slayslot",
+      "prayash",
+      "Nazcange",
+      "nicofrand",
+      "teoli",
+      "Golmote",
+      "tregagnon",
+      "FredB",
+      "thenew"
+    ]
+  },
+  "orphaned/Web/CSS/radial-gradient()": {
+    "modified": "2020-11-18T14:42:17.846Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SphinxKnight",
+      "PetiPandaRou",
+      "teoli",
+      "philippe97",
+      "FredB",
+      "Jeansebastien.ney"
+    ]
+  },
+  "orphaned/Web/CSS/repeating-conic-gradient()": {
+    "modified": "2020-11-18T14:49:14.177Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/CSS/repeating-linear-gradient()": {
+    "modified": "2020-11-18T14:45:56.794Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SphinxKnight",
+      "Sebastianz",
+      "Prinz_Rana",
+      "wizAmit",
+      "prayash",
+      "bfn",
+      "teoli",
+      "FredB"
+    ]
+  },
+  "orphaned/Web/CSS/repeating-radial-gradient()": {
+    "modified": "2020-11-18T14:47:29.838Z",
+    "contributors": [
+      "chrisdavidmills",
+      "SphinxKnight",
+      "a-mt"
+    ]
+  },
   "orphaned/Web/Guide/Events": {
     "modified": "2020-08-30T07:20:46.985Z",
     "contributors": [
@@ -45232,6 +45042,112 @@
     "modified": "2020-03-12T19:45:50.257Z",
     "contributors": [
       "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:27:51.341Z",
+    "contributors": [
+      "innocenzi",
+      "SphinxKnight",
+      "ariasuni",
+      "HelloEdit",
+      "GodefroyClair",
+      "kdex",
+      "Pragmateek",
+      "lionel",
+      "Goofy",
+      "Ltrlg",
+      "Youle",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@iterator": {
+    "modified": "2020-10-15T21:32:15.453Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species": {
+    "modified": "2020-10-15T21:36:32.002Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
+    "modified": "2020-10-15T21:37:58.832Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2020-10-15T21:27:50.323Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2020-10-15T21:27:49.784Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2020-10-15T21:27:49.172Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2020-10-15T21:27:50.745Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-15T21:27:49.108Z",
+    "contributors": [
+      "tomderudder",
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2020-10-15T21:27:49.912Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
+    "modified": "2020-10-15T21:27:50.316Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2020-10-15T21:27:50.400Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2020-10-15T21:27:52.803Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
+    "modified": "2020-10-15T21:27:55.939Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {

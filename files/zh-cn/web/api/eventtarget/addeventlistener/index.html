@@ -616,7 +616,7 @@ try {
 window.addEventListener('scroll', function(event) {
   /* do something */
   // can't use event.preventDefault();
-  // 不能使用event.prevebt.
+  // 不能使用 event.preventDefault()
 }, passiveIfSupported );</code></pre>
 
 <p>在不支持<code>addEventListener()</code>的<code>options</code>参数的旧浏览器上，尝试使用它会阻止使用<code>useCapture</code>参数而不正确使用特征检测。</p>
@@ -651,10 +651,6 @@ window.addEventListener('scroll', function(event) {
 </table>
 
 <h2 id="Browser_Compatibility" name="Browser_Compatibility">浏览器兼容性</h2>
-
-<div class="hidden">
-<p>该页面上的浏览器兼容性数据是来自已收集的数据。可以通过给<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>提PR的方式贡献新的数据。</p>
-</div>
 
 <div id="compat-desktop">
 <p>{{Compat("api.EventTarget.addEventListener", 3)}}</p>
