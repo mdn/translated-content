@@ -63,7 +63,7 @@ jobs:
           # Now, this gets used by the `git diff ...` inside get-diff-action.
           git config --global core.quotePath false
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v4.1.2
         id: git_diff_content
         with:
           PATTERNS: files/**/*.html
@@ -123,7 +123,7 @@ jobs:
 
           yarn build ${{ env.GIT_DIFF_CONTENT }}
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v4.1.2
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true
