@@ -11904,12 +11904,6 @@
       "eventao"
     ]
   },
-  "Web/API/DocumentTouch": {
-    "modified": "2019-03-23T22:57:10.414Z",
-    "contributors": [
-      "yangkui"
-    ]
-  },
   "Web/API/DocumentType": {
     "modified": "2020-10-15T21:51:21.460Z",
     "contributors": [
@@ -49877,6 +49871,12 @@
       "RainSlide",
       "bei6",
       "iainreid629"
+    ]
+  },
+  "orphaned/Web/API/DocumentTouch": {
+    "modified": "2019-03-23T22:57:10.414Z",
+    "contributors": [
+      "yangkui"
     ]
   },
   "orphaned/Web/API/Document_Object_Model/Events": {

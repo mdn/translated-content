@@ -1503,6 +1503,7 @@
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/getSelection	/zh-CN/docs/Web/API/Document/getSelection
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/zh-CN/docs/Web/API/Document/pointerLockElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/styleSheets	/zh-CN/docs/Web/API/Document/styleSheets
+/zh-CN/docs/Web/API/DocumentTouch	/zh-CN/docs/orphaned/Web/API/DocumentTouch
 /zh-CN/docs/Web/API/Document_Object_Model/Events	/zh-CN/docs/orphaned/Web/API/Document_Object_Model/Events
 /zh-CN/docs/Web/API/Document_Object_Model/Preface	/zh-CN/docs/conflicting/Web/API/Document_Object_Model
 /zh-CN/docs/Web/API/Element.classList	/zh-CN/docs/Web/API/Element/classList

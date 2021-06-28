@@ -14852,14 +14852,6 @@
       "loella16"
     ]
   },
-  "Web/API/DocumentTouch": {
-    "modified": "2019-03-23T22:50:40.193Z",
-    "contributors": [
-      "loella16",
-      "Hell_Carlito",
-      "enayfuos"
-    ]
-  },
   "Web/API/DocumentType": {
     "modified": "2020-04-26T15:13:01.231Z",
     "contributors": [
@@ -44644,6 +44636,14 @@
       "FredB",
       "achraf",
       "darnuria"
+    ]
+  },
+  "orphaned/Web/API/DocumentTouch": {
+    "modified": "2019-03-23T22:50:40.193Z",
+    "contributors": [
+      "loella16",
+      "Hell_Carlito",
+      "enayfuos"
     ]
   },
   "orphaned/Web/API/Document_Object_Model/Events": {

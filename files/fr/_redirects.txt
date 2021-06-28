@@ -3662,6 +3662,7 @@
 /fr/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/fr/docs/Web/API/Document/elementsFromPoint
 /fr/docs/Web/API/DocumentOrShadowRoot/getSelection	/fr/docs/Web/API/Document/getSelection
 /fr/docs/Web/API/DocumentOrShadowRoot/styleSheets	/fr/docs/Web/API/Document/styleSheets
+/fr/docs/Web/API/DocumentTouch	/fr/docs/orphaned/Web/API/DocumentTouch
 /fr/docs/Web/API/Document_Object_Model/Events	/fr/docs/orphaned/Web/API/Document_Object_Model/Events
 /fr/docs/Web/API/Document_Object_Model/Exemples	/fr/docs/Web/API/Document_Object_Model/Examples
 /fr/docs/Web/API/Document_Object_Model/Introduction_au_DOM	/fr/docs/Web/API/Document_Object_Model/Introduction
