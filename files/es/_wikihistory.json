@@ -5518,13 +5518,6 @@
       "jpmedley"
     ]
   },
-  "Web/API/ChildNode/after": {
-    "modified": "2020-10-15T21:50:39.528Z",
-    "contributors": [
-      "AlePerez92",
-      "SoftwareRVG"
-    ]
-  },
   "Web/API/ChildNode/before": {
     "modified": "2019-03-23T22:23:28.772Z",
     "contributors": [
@@ -23229,6 +23222,13 @@
       "BubuAnabelas",
       "RockoDev",
       "guiller1998"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/after": {
+    "modified": "2020-10-15T21:50:39.528Z",
+    "contributors": [
+      "AlePerez92",
+      "SoftwareRVG"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {

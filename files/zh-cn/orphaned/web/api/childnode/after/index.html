@@ -1,40 +1,35 @@
 ---
 title: ChildNode.after()
-slug: Web/API/ChildNode/after
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
+slug: orphaned/Web/API/ChildNode/after
 translation_of: Web/API/ChildNode/after
+original_slug: Web/API/ChildNode/after
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><code><strong>ChildNode.after()</strong></code> は、<code>ChildNode</code> の親の子リストの、<code>ChildNode</code> の直後に、 {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトのセットを挿入します。 {{domxref("DOMString")}} オブジェクトは {{domxref("Text")}} ノードと等価なノードとして挿入されます。</p>
+<p><strong><code>ChildNode.after()</code> </strong>方法会在其父节点的子节点列表中插入一些<font face="Consolas, Liberation Mono, Courier, monospace"> </font>{{domxref("Node")}} 或<font face="Consolas, Liberation Mono, Courier, monospace"> </font>{{domxref("DOMString")}} 对象。插入位置为该节点之后。{{domxref("DOMString")}} 对象会被以<font face="Consolas, Liberation Mono, Courier, monospace"> </font>{{domxref("Text")}} 的形式插入。</p>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+<h2 id="语法">语法</h2>
 
 <pre class="syntaxbox notranslate">[Throws, Unscopable]
 void ChildNode.after((Node or DOMString)... nodes);
 </pre>
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+<h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>nodes</code></dt>
- <dd>{{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトのセットを挿入します。</dd>
+ <dd>一组准备插入的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 。</dd>
 </dl>
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+<h3 id="错误">错误</h3>
 
 <ul>
- <li>{{domxref("HierarchyRequestError")}}: ノードは階層の指定の位置には挿入できません。</li>
+ <li>{{domxref("HierarchyRequestError")}}: 在某些不正确的层级结构进行了插入操作。</li>
 </ul>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="示例">示例</h2>
 
-<h3 id="Inserting_an_element" name="Inserting_an_element">要素の挿入</h3>
+<h3 id="插入元素">插入元素</h3>
 
 <pre class="brush: js notranslate">var parent = document.createElement("div");
 var child = document.createElement("p");
@@ -47,7 +42,7 @@ console.log(parent.outerHTML);
 // "&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;"
 </pre>
 
-<h3 id="Inserting_text" name="Inserting_text">テキストの挿入</h3>
+<h3 id="插入文本">插入文本</h3>
 
 <pre class="brush: js notranslate">var parent = document.createElement("div");
 var child = document.createElement("p");
@@ -58,7 +53,7 @@ child.after("Text");
 console.log(parent.outerHTML);
 // "&lt;div&gt;&lt;p&gt;&lt;/p&gt;Text&lt;/div&gt;"</pre>
 
-<h3 id="Inserting_an_element_and_text" name="Inserting_an_element_and_text">要素とテキストの挿入</h3>
+<h3 id="同时插入元素和文本">同时插入元素和文本</h3>
 
 <pre class="brush: js notranslate">var parent = document.createElement("div");
 var child = document.createElement("p");
@@ -70,18 +65,18 @@ child.after(span, "Text");
 console.log(parent.outerHTML);
 // "&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;span&gt;&lt;/span&gt;Text&lt;/div&gt;"</pre>
 
-<h3 id="ChildNode.after_is_unscopable" name="ChildNode.after_is_unscopable"><code>ChildNode.after()</code> はスコーピングに非対応</h3>
+<h3 id="ChildNode.after_会被_with_环境排除"><code>ChildNode.after()</code> 会被 with 环境排除</h3>
 
-<p><code>after()</code> メソッドは <code>with</code> 文でのスコーピングに対応していません。詳細は {{jsxref("Symbol.unscopables")}} をご覧ください。</p>
+<p><code>after()</code> 方法不在 <code>with 环境的范围内，可以查看</code> {{jsxref("Symbol.unscopables")}} 来了解更多信息。</p>
 
 <pre class="brush: js notranslate">with(node) {
   after("foo");
 }
 // ReferenceError: after is not defined </pre>
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+<h2 id="Polyfill">Polyfill</h2>
 
-<p>以下のポリフィルで、Internet Explorer 9 以降でも <code>after()</code> メソッドが利用できます。</p>
+<p>You can polyfill the <code>after()</code> method in Internet Explorer 9 and higher with the following code:</p>
 
 <pre class="brush: js notranslate">// from: https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/after()/after().md
 (function (arr) {
@@ -108,33 +103,33 @@ console.log(parent.outerHTML);
   });
 })([Element.prototype, CharacterData.prototype, DocumentType.prototype]);</pre>
 
-<h3 id="Another_polyfill" name="Another_polyfill">別のポリフィル</h3>
+<h3 id="Another_polyfill">Another polyfill</h3>
 
 <pre class="brush: js notranslate">// from: https://github.com/FabioVergani/js-Polyfill_Element.prototype.after/blob/master/after.js
 
 (function(x){
- var o=x.prototype,p='after';
- if(!o[p]){
-    o[p]=function(){
-     var e, m=arguments, l=m.length, i=0, t=this, p=t.parentNode, n=Node, s=String, d=document;
-     if(p!==null){
-        while(i&lt;l){
-         e=m[i];
-         if(e instanceof n){
-            t=t.nextSibling;
-            if(t!==null){
-                p.insertBefore(e,t);
-            }else{
-                p.appendChild(e);
-            };
-         }else{
-            p.appendChild(d.createTextNode(s(e)));
-         };
-         ++i;
-        };
-     };
-    };
- };
+ var o=x.prototype,p='after';
+ if(!o[p]){
+    o[p]=function(){
+     var e, m=arguments, l=m.length, i=0, t=this, p=t.parentNode, n=Node, s=String, d=document;
+     if(p!==null){
+        while(i&lt;l){
+         e=m[i];
+         if(e instanceof n){
+            t=t.nextSibling;
+            if(t!==null){
+                p.insertBefore(e,t);
+            }else{
+                p.appendChild(e);
+            };
+         }else{
+            p.appendChild(d.createTextNode(s(e)));
+         };
+         ++i;
+        };
+     };
+    };
+ };
 })(Element);
 
 
@@ -146,36 +141,33 @@ minified:
  var o=x.prototype;
  o.after||(o.after=function(){var e,m=arguments,l=m.length,i=0,t=this,p=t.parentNode,n=Node,s=String,d=document;if(p!==null){while(i&lt;l){((e=m[i]) instanceof n)?(((t=t.nextSibling )!==null)?p.insertBefore(e,t):p.appendChild(e)):p.appendChild(d.createTextNode(s(e)));++i;}}});
 }(Element));
-*/
-</pre>
+*/</pre>
 
-<h2 id="Specification" name="Specification">仕様</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
   </tr>
   <tr>
    <td>{{SpecName('DOM WHATWG', '#dom-childnode-after', 'ChildNode.after()')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>初期定義</td>
+   <td>Initial definition.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
-
-
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("api.ChildNode.after")}}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>{{domxref("ChildNode")}} と {{domxref("ParentNode")}}</li>
+ <li>{{domxref("ChildNode")}} 和 {{domxref("ParentNode")}}</li>
  <li>{{domxref("ChildNode.before()")}}</li>
  <li>{{domxref("ParentNode.append()")}}</li>
  <li>{{domxref("Node.appendChild()")}}</li>

@@ -11605,14 +11605,6 @@
       "momoi"
     ]
   },
-  "Web/API/ChildNode/after": {
-    "modified": "2020-10-17T21:33:51.563Z",
-    "contributors": [
-      "dskmori",
-      "Potappo",
-      "Shirasu"
-    ]
-  },
   "Web/API/ChildNode/before": {
     "modified": "2020-10-17T03:58:22.731Z",
     "contributors": [
@@ -51808,6 +51800,14 @@
     "modified": "2019-03-23T22:51:59.818Z",
     "contributors": [
       "maruhiro"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/after": {
+    "modified": "2020-10-17T21:33:51.563Z",
+    "contributors": [
+      "dskmori",
+      "Potappo",
+      "Shirasu"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {

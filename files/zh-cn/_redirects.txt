@@ -1470,6 +1470,7 @@
 /zh-CN/docs/Web/API/Channel_Messaging_API/使用_channel_messaging	/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging
 /zh-CN/docs/Web/API/ChildNode.nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
 /zh-CN/docs/Web/API/ChildNode.remove	/zh-CN/docs/orphaned/Web/API/ChildNode/remove
+/zh-CN/docs/Web/API/ChildNode/after	/zh-CN/docs/orphaned/Web/API/ChildNode/after
 /zh-CN/docs/Web/API/ChildNode/remove	/zh-CN/docs/orphaned/Web/API/ChildNode/remove
 /zh-CN/docs/Web/API/ChildNode/replaceWith	/zh-CN/docs/orphaned/Web/API/ChildNode/replaceWith
 /zh-CN/docs/Web/API/Childnode.previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
@@ -1737,6 +1738,7 @@
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
 /zh-CN/docs/Web/API/Notation	/zh-CN/docs/orphaned/Web/API/Notation
 /zh-CN/docs/Web/API/OfflineAudioContext/complete	/zh-CN/docs/Web/API/OfflineAudioContext/complete_event
+/zh-CN/docs/Web/API/OscillatorNode/stop	/zh-CN/docs/orphaned/Web/API/OscillatorNode/stop
 /zh-CN/docs/Web/API/ParentNode	/zh-CN/docs/orphaned/Web/API/ParentNode
 /zh-CN/docs/Web/API/ParentNode.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/ParentNode.children	/zh-CN/docs/orphaned/Web/API/ParentNode/children
