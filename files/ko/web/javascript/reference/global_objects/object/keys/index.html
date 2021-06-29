@@ -14,7 +14,7 @@ browser-compat: javascript.builtins.Object.keys
 <div>{{JSRef}}</div>
 
 <p><span class="seoSummary"><code><strong>Object.keys()</strong></code> 메소드는 주어진 객체의 속성 이름들을 일반적인 반복문과
-     동일한 순서로 반복되는 열거 가능한 배열로 반환합니다.
+     동일한 순서로 반복되는 열거할 수 있는 배열로 반환합니다.
     </span></p>
 
 <div>{{EmbedInteractiveExample("pages/js/object-keys.html")}}</div>
@@ -28,17 +28,17 @@ browser-compat: javascript.builtins.Object.keys
 
 <dl>
   <dt><code><var>obj</var></code></dt>
-  <dd>열거 가능한 속성 이름들을 반환 받을 객체</dd>
+  <dd>열거할 수 있는 속성 이름들을 반환 받을 객체</dd>
 </dl>
 
 <h3 id="Return_value">반환 값</h3>
 
-<p>전달된 객체의 열거 가능한 모든 속성 이름들을 나타내는 문자열 배열
+<p>전달된 객체의 열거할 수 있는 모든 속성 이름들을 나타내는 문자열 배열
 </p>
 
 <h2 id="Description">설명</h2>
 
-<p><code>Object.keys()</code> 는 전달된 객체에서 직접 찾은 열거 가능한 속성 이름에 해당하는 문자열 배열을 반환합니다.
+<p><code>Object.keys()</code> 는 전달된 객체에서 직접 찾은 열거할 수 있는 속성 이름에 해당하는 문자열 배열을 반환합니다.
      속성 이름의 순서는 객체의 속성을 수동으로 반복하여 지정하는 것과 동일합니다.</p>
 
 <h2 id="Examples">예시</h2>
@@ -57,7 +57,7 @@ console.log(Object.keys(obj)); // console: ['0', '1', '2']
 const anObj = { 100: 'a', 2: 'b', 7: 'c' };
 console.log(Object.keys(anObj)); // console: ['2', '7', '100']
 
-// getFoo 는 열거 가능하지 않은 속성입니다.
+// getFoo 는 열거할 수 없는 속성입니다.
 const myObj = Object.create({}, {
   getFoo: {
     value: function () { return this.foo; }
@@ -67,7 +67,7 @@ myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']
 </pre>
 
-<p>만약 열거 가능하지 않은 속성도 포함한 속성 이름들을 원한다면, 다음을 참고할 수 있습니다.
+<p>만약 열거할 수 없는 속성도 포함한 속성 이름들을 원한다면, 다음을 참고할 수 있습니다.
     {{jsxref("Object.getOwnPropertyNames()")}}.</p>
  
 <h3 id="Non-object_coercion">비객체 강제 형변환</h3>
@@ -130,7 +130,7 @@ if (!Object.keys) {
 }
 </pre>
 
-<p>위의 코드에는 다른 창에서 객체를 전달했을 때 IE7 (그리고 아마 IE8)에서는 열거 할 수 없는 키가 포함되어 있습니다.</p>
+<p>위의 코드에는 다른 창에서 객체를 전달했을 때 IE7 (그리고 아마 IE8)에서는 열거할 수 없는 키가 포함되어 있습니다.</p>
 
 <p>간단한 브라우저 폴리필은 다음을 참고하세요. <a href="https://tokenposts.blogspot.com.au/2012/04/javascript-objectkeys-browser.html">Javascript - Object.keys Browser Compatibility</a>.</p>
 
