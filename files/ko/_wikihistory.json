@@ -3803,18 +3803,6 @@
       "cs09g"
     ]
   },
-  "Web/API/ChildNode": {
-    "modified": "2020-10-15T22:04:53.961Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
-  "Web/API/ChildNode/before": {
-    "modified": "2020-10-15T22:10:12.463Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
   "Web/API/Clients": {
     "modified": "2020-10-15T22:21:49.146Z"
   },
@@ -18195,6 +18183,18 @@
     "contributors": [
       "alattalatta",
       "hyeonseok"
+    ]
+  },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2020-10-15T22:04:53.961Z",
+    "contributors": [
+      "cs09g"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/before": {
+    "modified": "2020-10-15T22:10:12.463Z",
+    "contributors": [
+      "cs09g"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {

@@ -3120,12 +3120,6 @@
       "jackblackevo"
     ]
   },
-  "Web/API/ChildNode": {
-    "modified": "2019-03-23T22:30:29.724Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/API/Clients": {
     "modified": "2019-03-23T22:41:01.027Z",
     "contributors": [
@@ -8642,6 +8636,12 @@
       "jackblackevo",
       "teoli",
       "MashKao"
+    ]
+  },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2019-03-23T22:30:29.724Z",
+    "contributors": [
+      "jackblackevo"
     ]
   },
   "orphaned/Web/API/Detecting_device_orientation": {

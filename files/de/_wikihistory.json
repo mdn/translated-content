@@ -2758,12 +2758,6 @@
       "pixunil"
     ]
   },
-  "Web/API/ChildNode": {
-    "modified": "2019-03-23T22:06:18.037Z",
-    "contributors": [
-      "stevenwdv"
-    ]
-  },
   "Web/API/Console": {
     "modified": "2020-10-15T21:47:34.377Z",
     "contributors": [
@@ -7882,12 +7876,6 @@
   },
   "Web/CSS/transform-function/translate3d()": {
     "modified": "2020-12-11T16:32:16.509Z",
-    "contributors": [
-      "Johuspect"
-    ]
-  },
-  "Web/CSS/transform-function/translateX": {
-    "modified": "2020-12-11T18:08:20.315Z",
     "contributors": [
       "Johuspect"
     ]
@@ -14560,6 +14548,12 @@
       "AARADEANCA"
     ]
   },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2019-03-23T22:06:18.037Z",
+    "contributors": [
+      "stevenwdv"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T22:05:03.102Z",
     "contributors": [
@@ -14631,6 +14625,12 @@
       "Sebastianz",
       "prayash",
       "auranvesdranor"
+    ]
+  },
+  "orphaned/Web/CSS/transform-function/translateX": {
+    "modified": "2020-12-11T18:08:20.315Z",
+    "contributors": [
+      "Johuspect"
     ]
   },
   "orphaned/Web/Guide/Events": {

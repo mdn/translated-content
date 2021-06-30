@@ -5512,18 +5512,6 @@
       "anfuca"
     ]
   },
-  "Web/API/ChildNode": {
-    "modified": "2019-03-29T14:12:39.589Z",
-    "contributors": [
-      "jpmedley"
-    ]
-  },
-  "Web/API/ChildNode/before": {
-    "modified": "2019-03-23T22:23:28.772Z",
-    "contributors": [
-      "SoftwareRVG"
-    ]
-  },
   "Web/API/ClipboardEvent": {
     "modified": "2020-10-15T22:14:15.464Z",
     "contributors": [
@@ -23224,10 +23212,22 @@
       "guiller1998"
     ]
   },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2019-03-29T14:12:39.589Z",
+    "contributors": [
+      "jpmedley"
+    ]
+  },
   "orphaned/Web/API/ChildNode/after": {
     "modified": "2020-10-15T21:50:39.528Z",
     "contributors": [
       "AlePerez92",
+      "SoftwareRVG"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/before": {
+    "modified": "2019-03-23T22:23:28.772Z",
+    "contributors": [
       "SoftwareRVG"
     ]
   },

@@ -4082,14 +4082,6 @@
       "marcos180212"
     ]
   },
-  "Web/API/ChildNode": {
-    "modified": "2020-10-15T21:55:14.252Z",
-    "contributors": [
-      "mateusvelleda",
-      "AlanSantos11",
-      "stevenwdv"
-    ]
-  },
   "Web/API/ClipboardEvent": {
     "modified": "2020-10-15T22:15:35.028Z",
     "contributors": [
@@ -16993,6 +16985,14 @@
     "modified": "2019-03-23T22:10:24.978Z",
     "contributors": [
       "andre-mendes"
+    ]
+  },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2020-10-15T21:55:14.252Z",
+    "contributors": [
+      "mateusvelleda",
+      "AlanSantos11",
+      "stevenwdv"
     ]
   },
   "orphaned/Web/API/ChildNode/after": {

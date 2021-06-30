@@ -546,6 +546,7 @@
 /zh-TW/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/zh-TW/docs/conflicting/Web/API/Canvas_API/Tutorial
 /zh-TW/docs/Web/API/Canvas_API/Tutorial/基礎動畫	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /zh-TW/docs/Web/API/Canvas_API/Tutorial/最佳化_canvas	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
+/zh-TW/docs/Web/API/ChildNode	/zh-TW/docs/orphaned/Web/API/ChildNode
 /zh-TW/docs/Web/API/Coordinates	/zh-TW/docs/Web/API/GeolocationCoordinates
 /zh-TW/docs/Web/API/Coordinates/accuracy	/zh-TW/docs/Web/API/GeolocationCoordinates/accuracy
 /zh-TW/docs/Web/API/Coordinates/altitude	/zh-TW/docs/Web/API/GeolocationCoordinates/altitude

@@ -13019,22 +13019,6 @@
       "loella16"
     ]
   },
-  "Web/API/ChildNode": {
-    "modified": "2020-10-15T21:28:06.168Z",
-    "contributors": [
-      "loella16",
-      "alexandreL",
-      "thbil",
-      "khalid32",
-      "bchaplet"
-    ]
-  },
-  "Web/API/ChildNode/before": {
-    "modified": "2020-10-15T22:01:12.319Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/Client": {
     "modified": "2020-11-16T08:56:05.543Z",
     "contributors": [
@@ -29332,14 +29316,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/CSS/paint()": {
-    "modified": "2020-11-16T12:34:32.285Z",
-    "contributors": [
-      "JNa0",
-      "chrisdavidmills",
-      "SphinxKnight"
-    ]
-  },
   "Web/CSS/paint-order": {
     "modified": "2020-10-15T22:02:33.903Z",
     "contributors": [
@@ -30252,13 +30228,6 @@
       "chrisdavidmills",
       "SphinxKnight",
       "ThreadElric",
-      "mrstork"
-    ]
-  },
-  "Web/CSS/transform-function/translateX": {
-    "modified": "2019-04-06T11:48:19.824Z",
-    "contributors": [
-      "SphinxKnight",
       "mrstork"
     ]
   },
@@ -44595,11 +44564,27 @@
       "SphinxKnight"
     ]
   },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2020-10-15T21:28:06.168Z",
+    "contributors": [
+      "loella16",
+      "alexandreL",
+      "thbil",
+      "khalid32",
+      "bchaplet"
+    ]
+  },
   "orphaned/Web/API/ChildNode/after": {
     "modified": "2020-10-15T21:56:14.439Z",
     "contributors": [
       "loella16",
       "BEHOUBA"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/before": {
+    "modified": "2020-10-15T22:01:12.319Z",
+    "contributors": [
+      "loella16"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {
@@ -44891,6 +44876,14 @@
       "thenew"
     ]
   },
+  "orphaned/Web/CSS/paint()": {
+    "modified": "2020-11-16T12:34:32.285Z",
+    "contributors": [
+      "JNa0",
+      "chrisdavidmills",
+      "SphinxKnight"
+    ]
+  },
   "orphaned/Web/CSS/radial-gradient()": {
     "modified": "2020-11-18T14:42:17.846Z",
     "contributors": [
@@ -44930,6 +44923,13 @@
       "chrisdavidmills",
       "SphinxKnight",
       "a-mt"
+    ]
+  },
+  "orphaned/Web/CSS/transform-function/translateX": {
+    "modified": "2019-04-06T11:48:19.824Z",
+    "contributors": [
+      "SphinxKnight",
+      "mrstork"
     ]
   },
   "orphaned/Web/Guide/Events": {

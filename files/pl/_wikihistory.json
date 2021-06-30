@@ -1557,13 +1557,6 @@
       "Ovkorz"
     ]
   },
-  "Web/API/ChildNode": {
-    "modified": "2020-01-17T16:06:19.710Z",
-    "contributors": [
-      "pefbrute",
-      "arronei"
-    ]
-  },
   "Web/API/Console": {
     "modified": "2019-03-23T23:09:41.834Z",
     "contributors": [
@@ -11117,6 +11110,13 @@
       "Teo",
       "Coldpeer",
       "Ptak82"
+    ]
+  },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2020-01-17T16:06:19.710Z",
+    "contributors": [
+      "pefbrute",
+      "arronei"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {

@@ -3726,7 +3726,9 @@
 /ja/docs/Web/API/CanvasRenderingContext2D.drawFocusIfNeeded	/ja/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 /ja/docs/Web/API/CanvasRenderingContext2D.removeHitRegion	/ja/docs/Web/API/CanvasRenderingContext2D/removeHitRegion
 /ja/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial
+/ja/docs/Web/API/ChildNode	/ja/docs/orphaned/Web/API/ChildNode
 /ja/docs/Web/API/ChildNode/after	/ja/docs/orphaned/Web/API/ChildNode/after
+/ja/docs/Web/API/ChildNode/before	/ja/docs/orphaned/Web/API/ChildNode/before
 /ja/docs/Web/API/ChildNode/remove	/ja/docs/orphaned/Web/API/ChildNode/remove
 /ja/docs/Web/API/ChildNode/replaceWith	/ja/docs/orphaned/Web/API/ChildNode/replaceWith
 /ja/docs/Web/API/Console.error	/ja/docs/Web/API/Console/error
@@ -4443,7 +4445,8 @@
 /ja/docs/Web/CSS/minmax	/ja/docs/Web/CSS/minmax()
 /ja/docs/Web/CSS/none	/ja/docs/conflicting/Web/CSS/float
 /ja/docs/Web/CSS/normal	/ja/docs/conflicting/Web/CSS/font-variant
-/ja/docs/Web/CSS/paint	/ja/docs/Web/CSS/paint()
+/ja/docs/Web/CSS/paint	/ja/docs/orphaned/Web/CSS/paint()
+/ja/docs/Web/CSS/paint()	/ja/docs/orphaned/Web/CSS/paint()
 /ja/docs/Web/CSS/radial-gradient	/ja/docs/orphaned/Web/CSS/radial-gradient()
 /ja/docs/Web/CSS/radial-gradient()	/ja/docs/orphaned/Web/CSS/radial-gradient()
 /ja/docs/Web/CSS/repeat	/ja/docs/Web/CSS/repeat()
@@ -4469,6 +4472,7 @@
 /ja/docs/Web/CSS/transform-function/skewY	/ja/docs/Web/CSS/transform-function/skewY()
 /ja/docs/Web/CSS/transform-function/translate	/ja/docs/Web/CSS/transform-function/translate()
 /ja/docs/Web/CSS/transform-function/translate3d	/ja/docs/Web/CSS/transform-function/translate3d()
+/ja/docs/Web/CSS/transform-function/translateX	/ja/docs/orphaned/Web/CSS/transform-function/translateX
 /ja/docs/Web/CSS/transform-function/translateY	/ja/docs/Web/CSS/transform-function/translateY()
 /ja/docs/Web/CSS/transform-function/translateZ	/ja/docs/Web/CSS/transform-function/translateZ()
 /ja/docs/Web/CSS/uri	/ja/docs/conflicting/Web/CSS/url()

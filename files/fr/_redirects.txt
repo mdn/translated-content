@@ -3616,7 +3616,9 @@
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Transformations	/fr/docs/Web/API/Canvas_API/Tutorial/Transformations
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Utilisation_d'images	/fr/docs/Web/API/Canvas_API/Tutorial/Using_images
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Utilisation_de_base	/fr/docs/Web/API/Canvas_API/Tutorial/Basic_usage
+/fr/docs/Web/API/ChildNode	/fr/docs/orphaned/Web/API/ChildNode
 /fr/docs/Web/API/ChildNode/after	/fr/docs/orphaned/Web/API/ChildNode/after
+/fr/docs/Web/API/ChildNode/before	/fr/docs/orphaned/Web/API/ChildNode/before
 /fr/docs/Web/API/ChildNode/remove	/fr/docs/orphaned/Web/API/ChildNode/remove
 /fr/docs/Web/API/ChildNode/replaceWith	/fr/docs/orphaned/Web/API/ChildNode/replaceWith
 /fr/docs/Web/API/Commentaire	/fr/docs/Web/API/Comment
@@ -4330,7 +4332,8 @@
 /fr/docs/Web/CSS/offset-inline-end	/fr/docs/Web/CSS/inset-inline-end
 /fr/docs/Web/CSS/offset-inline-start	/fr/docs/Web/CSS/inset-inline-start
 /fr/docs/Web/CSS/overflow-anchor/Guide_ancrage_défilement	/fr/docs/Web/CSS/overflow-anchor/Guide_to_scroll_anchoring
-/fr/docs/Web/CSS/paint	/fr/docs/Web/CSS/paint()
+/fr/docs/Web/CSS/paint	/fr/docs/orphaned/Web/CSS/paint()
+/fr/docs/Web/CSS/paint()	/fr/docs/orphaned/Web/CSS/paint()
 /fr/docs/Web/CSS/proprietes_css_animees	/fr/docs/Web/CSS/CSS_animated_properties
 /fr/docs/Web/CSS/radial-gradient	/fr/docs/orphaned/Web/CSS/radial-gradient()
 /fr/docs/Web/CSS/radial-gradient()	/fr/docs/orphaned/Web/CSS/radial-gradient()
@@ -4364,6 +4367,7 @@
 /fr/docs/Web/CSS/transform-function/skewY	/fr/docs/Web/CSS/transform-function/skewY()
 /fr/docs/Web/CSS/transform-function/translate	/fr/docs/Web/CSS/transform-function/translate()
 /fr/docs/Web/CSS/transform-function/translate3d	/fr/docs/Web/CSS/transform-function/translate3d()
+/fr/docs/Web/CSS/transform-function/translateX	/fr/docs/orphaned/Web/CSS/transform-function/translateX
 /fr/docs/Web/CSS/transform-function/translateY	/fr/docs/Web/CSS/transform-function/translateY()
 /fr/docs/Web/CSS/transform-function/translateZ	/fr/docs/Web/CSS/transform-function/translateZ()
 /fr/docs/Web/CSS/uri	/fr/docs/conflicting/Web/CSS/url()_168028c4e5edd9e19c061adb4b604d4f

@@ -6466,13 +6466,6 @@
       "ivanson"
     ]
   },
-  "Web/API/ChildNode": {
-    "modified": "2019-03-23T22:51:21.900Z",
-    "contributors": [
-      "untritt",
-      "pantherCZ"
-    ]
-  },
   "Web/API/Clients": {
     "modified": "2019-03-23T22:15:29.932Z",
     "contributors": [
@@ -25279,6 +25272,13 @@
     "modified": "2019-03-23T22:28:03.691Z",
     "contributors": [
       "a-chepugov"
+    ]
+  },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2019-03-23T22:51:21.900Z",
+    "contributors": [
+      "untritt",
+      "pantherCZ"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {

@@ -11597,21 +11597,6 @@
       "ethertank"
     ]
   },
-  "Web/API/ChildNode": {
-    "modified": "2020-11-23T03:36:42.854Z",
-    "contributors": [
-      "segayuu",
-      "Marsf",
-      "momoi"
-    ]
-  },
-  "Web/API/ChildNode/before": {
-    "modified": "2020-10-17T03:58:22.731Z",
-    "contributors": [
-      "Potappo",
-      "Shirasu"
-    ]
-  },
   "Web/API/Client": {
     "modified": "2020-10-15T22:28:43.389Z",
     "contributors": [
@@ -32321,13 +32306,6 @@
       "hashedhyphen"
     ]
   },
-  "Web/CSS/paint()": {
-    "modified": "2020-11-16T09:09:19.836Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
-    ]
-  },
   "Web/CSS/paint-order": {
     "modified": "2020-10-15T22:12:33.956Z",
     "contributors": [
@@ -33155,13 +33133,6 @@
     "contributors": [
       "chrisdavidmills",
       "mfuji09"
-    ]
-  },
-  "Web/CSS/transform-function/translateX": {
-    "modified": "2020-11-11T04:53:52.662Z",
-    "contributors": [
-      "mfuji09",
-      "dskmori"
     ]
   },
   "Web/CSS/transform-function/translateY()": {
@@ -51802,10 +51773,25 @@
       "maruhiro"
     ]
   },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2020-11-23T03:36:42.854Z",
+    "contributors": [
+      "segayuu",
+      "Marsf",
+      "momoi"
+    ]
+  },
   "orphaned/Web/API/ChildNode/after": {
     "modified": "2020-10-17T21:33:51.563Z",
     "contributors": [
       "dskmori",
+      "Potappo",
+      "Shirasu"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/before": {
+    "modified": "2020-10-17T03:58:22.731Z",
+    "contributors": [
       "Potappo",
       "Shirasu"
     ]
@@ -52161,6 +52147,13 @@
       "FredB"
     ]
   },
+  "orphaned/Web/CSS/paint()": {
+    "modified": "2020-11-16T09:09:19.836Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09"
+    ]
+  },
   "orphaned/Web/CSS/radial-gradient()": {
     "modified": "2020-11-18T14:42:27.892Z",
     "contributors": [
@@ -52200,6 +52193,13 @@
       "mrstork",
       "ethertank",
       "sosleepy"
+    ]
+  },
+  "orphaned/Web/CSS/transform-function/translateX": {
+    "modified": "2020-11-11T04:53:52.662Z",
+    "contributors": [
+      "mfuji09",
+      "dskmori"
     ]
   },
   "orphaned/Web/Compatibility_FAQ": {
