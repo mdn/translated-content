@@ -110,7 +110,7 @@ console.log(
 
 <h3 id="Get_non-enumerable_properties_only">열거할 수 없는 속성만 가져오기</h3>
 
-<p>이 방법은 열거 가능한 키를 없애기 위해서 {{jsxref("Array.prototype.filter()")}} 함수를 사용합니다. {{jsxref("Object.keys()")}} 을 통해 얻은 키 배열을 <code>Object.getOwnPropertyNames()</code> 을 통해 얻은 키 배열에 필터링하여 열거할 수 없는 키 배열들만 출력합니다.</p>
+<p>이 방법은 {{jsxref("Array.prototype.filter()")}} 함수를 사용해 (<code>Object.getOwnPropertyNames()</code> 을 통해 얻은) 모든 키 중 ({{jsxref("Object.keys()")}} 을 통해 얻은) 열거 가능한 키들을 제거하여 열거할 수 없는 키들만 출력합니다.</p>
 
 <pre class="brush: js">var target = myObject;
 var enum_and_nonenum = Object.getOwnPropertyNames(target);
