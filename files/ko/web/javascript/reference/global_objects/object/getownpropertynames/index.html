@@ -86,7 +86,7 @@ console.log(Object.getOwnPropertyNames(my_obj).sort());
 </pre>
 
 <p>만약 열거 가능한 속성만 사용한다면, {{jsxref("Object.keys()")}} 또는 {{jsxref("Statements/for...in", "for...in")}} 반복문을 사용하는걸 권장합니다.
-    (이는 객체의 프로토타입 체인을 먼저 사용하여 열거 가능 한 속성을 반환합니다. 단, {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}에 필터 됩니다.)
+    (이는 객체의 프로토타입 체인을 먼저 사용하여 열거 가능한 속성을 반환합니다. 단, 후자는{{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}에 필터 됩니다.)
 </p>
 
 <p>프로토타입 체인에 있는 요소들은 나열되지 않음:</p>
