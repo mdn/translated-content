@@ -3540,19 +3540,6 @@
       "limkukhyun"
     ]
   },
-  "Web/API/Body": {
-    "modified": "2020-10-15T22:07:57.321Z",
-    "contributors": [
-      "alattalatta",
-      "RickBrown"
-    ]
-  },
-  "Web/API/Body/json": {
-    "modified": "2020-10-15T22:07:55.949Z",
-    "contributors": [
-      "ldss3sang"
-    ]
-  },
   "Web/API/BroadcastChannel": {
     "modified": "2020-10-15T22:17:58.054Z",
     "contributors": [
@@ -18183,6 +18170,19 @@
     "contributors": [
       "alattalatta",
       "hyeonseok"
+    ]
+  },
+  "orphaned/Web/API/Body": {
+    "modified": "2020-10-15T22:07:57.321Z",
+    "contributors": [
+      "alattalatta",
+      "RickBrown"
+    ]
+  },
+  "orphaned/Web/API/Body/json": {
+    "modified": "2020-10-15T22:07:55.949Z",
+    "contributors": [
+      "ldss3sang"
     ]
   },
   "orphaned/Web/API/ChildNode": {

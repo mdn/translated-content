@@ -1777,6 +1777,9 @@
 /es/docs/Web/API/BatteryManager.onchargingchange	/es/docs/Web/API/BatteryManager/onchargingchange
 /es/docs/Web/API/BatteryManager.onlevelchange	/es/docs/Web/API/BatteryManager/onlevelchange
 /es/docs/Web/API/Blob.Blob	/es/docs/Web/API/Blob/Blob
+/es/docs/Web/API/Body	/es/docs/orphaned/Web/API/Body
+/es/docs/Web/API/Body/formData	/es/docs/orphaned/Web/API/Body/formData
+/es/docs/Web/API/Body/json	/es/docs/orphaned/Web/API/Body/json
 /es/docs/Web/API/CSSStyleSheet.insertRule	/es/docs/Web/API/CSSStyleSheet/insertRule
 /es/docs/Web/API/CameraCapabilities.maxExposureCompensation	/es/docs/Web/API/CameraCapabilities/maxExposureCompensation
 /es/docs/Web/API/CameraCapabilities.maxFocusAreas	/es/docs/Web/API/CameraCapabilities/maxFocusAreas

@@ -3813,18 +3813,6 @@
       "thiagosaife"
     ]
   },
-  "Web/API/Body": {
-    "modified": "2020-10-15T22:30:31.056Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/Body/json": {
-    "modified": "2020-10-15T22:30:29.688Z",
-    "contributors": [
-      "tohdi1"
-    ]
-  },
   "Web/API/BroadcastChannel": {
     "modified": "2020-10-15T22:14:45.422Z",
     "contributors": [
@@ -16985,6 +16973,18 @@
     "modified": "2019-03-23T22:10:24.978Z",
     "contributors": [
       "andre-mendes"
+    ]
+  },
+  "orphaned/Web/API/Body": {
+    "modified": "2020-10-15T22:30:31.056Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "orphaned/Web/API/Body/json": {
+    "modified": "2020-10-15T22:30:29.688Z",
+    "contributors": [
+      "tohdi1"
     ]
   },
   "orphaned/Web/API/ChildNode": {

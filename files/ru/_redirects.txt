@@ -373,6 +373,10 @@
 /ru/docs/Web/API/AudioContext/createPanner	/ru/docs/Web/API/BaseAudioContext/createPanner
 /ru/docs/Web/API/AudioContext/currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
 /ru/docs/Web/API/AudioContext/decodeAudioData	/ru/docs/Web/API/BaseAudioContext/decodeAudioData
+/ru/docs/Web/API/Body	/ru/docs/orphaned/Web/API/Body
+/ru/docs/Web/API/Body/arrayBuffer	/ru/docs/orphaned/Web/API/Body/arrayBuffer
+/ru/docs/Web/API/Body/formData	/ru/docs/orphaned/Web/API/Body/formData
+/ru/docs/Web/API/Body/json	/ru/docs/orphaned/Web/API/Body/json
 /ru/docs/Web/API/CSS_Object_Model/ориентация_экрана	/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ru/docs/Web/API/Canvas_API/Tutorial/Использование_изображений	/ru/docs/Web/API/Canvas_API/Tutorial/Using_images
 /ru/docs/Web/API/Canvas_API/Tutorial/Композиции	/ru/docs/Web/API/Canvas_API/Tutorial/Compositing

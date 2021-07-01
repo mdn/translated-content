@@ -541,6 +541,8 @@
 /pt-BR/docs/Web/API/BatteryManager.ondischargingtimechange	/pt-BR/docs/Web/API/BatteryManager/ondischargingtimechange
 /pt-BR/docs/Web/API/BatteryManager.onlevelchange	/pt-BR/docs/Web/API/BatteryManager/onlevelchange
 /pt-BR/docs/Web/API/BatteryManager/ondischargintimechange	/pt-BR/docs/Web/API/BatteryManager/ondischargingtimechange
+/pt-BR/docs/Web/API/Body	/pt-BR/docs/orphaned/Web/API/Body
+/pt-BR/docs/Web/API/Body/json	/pt-BR/docs/orphaned/Web/API/Body/json
 /pt-BR/docs/Web/API/ChildNode	/pt-BR/docs/orphaned/Web/API/ChildNode
 /pt-BR/docs/Web/API/ChildNode/after	/pt-BR/docs/orphaned/Web/API/ChildNode/after
 /pt-BR/docs/Web/API/ChildNode/remove	/pt-BR/docs/orphaned/Web/API/ChildNode/remove

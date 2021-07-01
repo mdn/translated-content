@@ -1458,6 +1458,14 @@
 /zh-CN/docs/Web/API/Blob.size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/Blob.slice	/zh-CN/docs/Web/API/Blob/slice
 /zh-CN/docs/Web/API/Blob.type	/zh-CN/docs/Web/API/Blob/type
+/zh-CN/docs/Web/API/Body	/zh-CN/docs/orphaned/Web/API/Body
+/zh-CN/docs/Web/API/Body/arrayBuffer	/zh-CN/docs/orphaned/Web/API/Body/arrayBuffer
+/zh-CN/docs/Web/API/Body/blob	/zh-CN/docs/orphaned/Web/API/Body/blob
+/zh-CN/docs/Web/API/Body/body	/zh-CN/docs/orphaned/Web/API/Body/body
+/zh-CN/docs/Web/API/Body/bodyUsed	/zh-CN/docs/orphaned/Web/API/Body/bodyUsed
+/zh-CN/docs/Web/API/Body/formData	/zh-CN/docs/orphaned/Web/API/Body/formData
+/zh-CN/docs/Web/API/Body/json	/zh-CN/docs/orphaned/Web/API/Body/json
+/zh-CN/docs/Web/API/Body/text	/zh-CN/docs/orphaned/Web/API/Body/text
 /zh-CN/docs/Web/API/CSSMatrix	/zh-CN/docs/conflicting/Web/API/DOMMatrix
 /zh-CN/docs/Web/API/CSSStyleSheet.insertRule	/zh-CN/docs/Web/API/CSSStyleSheet/insertRule
 /zh-CN/docs/Web/API/CSS分页规则	/zh-CN/docs/Web/API/CSSPageRule

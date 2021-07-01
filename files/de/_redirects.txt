@@ -483,6 +483,14 @@
 /de/docs/Updating_web_applications_for_Firefox_3	/de/docs/Mozilla/Firefox/Releases/3/Updating_web_applications
 /de/docs/Verwenden_des_Cache_beim_Firefox_1.5	/de/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /de/docs/Web/API/AudioContext/decodeAudioData	/de/docs/Web/API/BaseAudioContext/decodeAudioData
+/de/docs/Web/API/Body	/de/docs/orphaned/Web/API/Body
+/de/docs/Web/API/Body/arrayBuffer	/de/docs/orphaned/Web/API/Body/arrayBuffer
+/de/docs/Web/API/Body/blob	/de/docs/orphaned/Web/API/Body/blob
+/de/docs/Web/API/Body/body	/de/docs/orphaned/Web/API/Body/body
+/de/docs/Web/API/Body/bodyUsed	/de/docs/orphaned/Web/API/Body/bodyUsed
+/de/docs/Web/API/Body/formData	/de/docs/orphaned/Web/API/Body/formData
+/de/docs/Web/API/Body/json	/de/docs/orphaned/Web/API/Body/json
+/de/docs/Web/API/Body/text	/de/docs/orphaned/Web/API/Body/text
 /de/docs/Web/API/CSSRule.cssText	/de/docs/Web/API/CSSRule/cssText
 /de/docs/Web/API/ChildNode	/de/docs/orphaned/Web/API/ChildNode
 /de/docs/Web/API/ChildNode/remove	/de/docs/orphaned/Web/API/ChildNode/remove
