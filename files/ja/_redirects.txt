@@ -718,7 +718,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide/Objects_and_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/Objects_and_Properties
 /ja/docs/Core_JavaScript_1.5_Guide/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators
 /ja/docs/Core_JavaScript_1.5_Guide/Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
-/ja/docs/Core_JavaScript_1.5_Guide/Predefined_Core_Objects/Function_Object	/ja/docs/conflicting/Web/JavaScript/Guide
+/ja/docs/Core_JavaScript_1.5_Guide/Predefined_Core_Objects/Function_Object	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide/Predefined_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions
 /ja/docs/Core_JavaScript_1.5_Guide/Predefined_Functions/escape_and_unescape_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions/escape_and_unescape_Functions
 /ja/docs/Core_JavaScript_1.5_Guide/Predefined_Functions/eval_Function	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions/eval_Function
@@ -764,7 +764,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide:Objects_and_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/Objects_and_Properties
 /ja/docs/Core_JavaScript_1.5_Guide:Operators:Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators
 /ja/docs/Core_JavaScript_1.5_Guide:Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
-/ja/docs/Core_JavaScript_1.5_Guide:Predefined_Core_Objects:Function_Object	/ja/docs/conflicting/Web/JavaScript/Guide
+/ja/docs/Core_JavaScript_1.5_Guide:Predefined_Core_Objects:Function_Object	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide:Predefined_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions
 /ja/docs/Core_JavaScript_1.5_Guide:Predefined_Functions:escape_and_unescape_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions/escape_and_unescape_Functions
 /ja/docs/Core_JavaScript_1.5_Guide:Predefined_Functions:eval_Function	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions/eval_Function
@@ -2671,7 +2671,7 @@
 /ja/docs/JavaScript/Guide/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators
 /ja/docs/JavaScript/Guide/Operators/Assignment_Operators-redirect-1	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators
 /ja/docs/JavaScript/Guide/Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
-/ja/docs/JavaScript/Guide/Predefined_Core_Objects/Function_Object	/ja/docs/conflicting/Web/JavaScript/Guide
+/ja/docs/JavaScript/Guide/Predefined_Core_Objects/Function_Object	/ja/docs/Web/JavaScript/Guide
 /ja/docs/JavaScript/Guide/Predefined_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions
 /ja/docs/JavaScript/Guide/Predefined_Functions-redirect-1	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions
 /ja/docs/JavaScript/Guide/Predefined_Functions/escape_and_unescape_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions/escape_and_unescape_Functions
@@ -4822,12 +4822,12 @@
 /ja/docs/Web/JavaScript/Guide/Loop_Statements/while_Statement	/ja/docs/orphaned/Web/JavaScript/Guide/Loop_Statements/while_Statement
 /ja/docs/Web/JavaScript/Guide/Object_Manipulation_Statements	/ja/docs/orphaned/Web/JavaScript/Guide/Object_Manipulation_Statements
 /ja/docs/Web/JavaScript/Guide/Objects_and_Properties	/ja/docs/orphaned/Web/JavaScript/Guide/Objects_and_Properties
-/ja/docs/Web/JavaScript/Guide/Obsolete_Pages	/ja/docs/conflicting/Web/JavaScript/Guide_552be6201ec831852573aad295c96538
+/ja/docs/Web/JavaScript/Guide/Obsolete_Pages	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Obsolete_Pages/Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
-/ja/docs/Web/JavaScript/Guide/Obsolete_Pages/Predefined_Core_Objects/Function_Object	/ja/docs/conflicting/Web/JavaScript/Guide
-/ja/docs/Web/JavaScript/Guide/Obsolete_Pages2	/ja/docs/conflicting/Web/JavaScript/Guide_552be6201ec831852573aad295c96538
+/ja/docs/Web/JavaScript/Guide/Obsolete_Pages/Predefined_Core_Objects/Function_Object	/ja/docs/Web/JavaScript/Guide
+/ja/docs/Web/JavaScript/Guide/Obsolete_Pages2	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Obsolete_Pages2/Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
-/ja/docs/Web/JavaScript/Guide/Obsolete_Pages2/Predefined_Core_Objects/Function_Object	/ja/docs/conflicting/Web/JavaScript/Guide
+/ja/docs/Web/JavaScript/Guide/Obsolete_Pages2/Predefined_Core_Objects/Function_Object	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /ja/docs/Web/JavaScript/Guide/Operators/Arithmetic_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#arithmetic_operators
 /ja/docs/Web/JavaScript/Guide/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators
@@ -4836,7 +4836,7 @@
 /ja/docs/Web/JavaScript/Guide/Operators/Special_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#conditional_ternary_operator
 /ja/docs/Web/JavaScript/Guide/Operators/String_Operators	/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#string_operators
 /ja/docs/Web/JavaScript/Guide/Predefined_Core_Objects	/ja/docs/Web/JavaScript/Guide
-/ja/docs/Web/JavaScript/Guide/Predefined_Core_Objects/Function_Object	/ja/docs/conflicting/Web/JavaScript/Guide
+/ja/docs/Web/JavaScript/Guide/Predefined_Core_Objects/Function_Object	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Web/JavaScript/Guide/Predefined_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions
 /ja/docs/Web/JavaScript/Guide/Predefined_Functions/escape_and_unescape_Functions	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions/escape_and_unescape_Functions
 /ja/docs/Web/JavaScript/Guide/Predefined_Functions/eval_Function	/ja/docs/orphaned/Web/JavaScript/Guide/Predefined_Functions/eval_Function

@@ -49070,22 +49070,6 @@
       "RobinEgg"
     ]
   },
-  "conflicting/Web/JavaScript/Guide": {
-    "modified": "2019-03-24T00:01:12.633Z",
-    "contributors": [
-      "teoli",
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis"
-    ]
-  },
-  "conflicting/Web/JavaScript/Guide_552be6201ec831852573aad295c96538": {
-    "modified": "2019-03-23T23:28:49.183Z",
-    "contributors": [
-      "ethertank"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat": {
     "modified": "2020-10-15T21:36:10.939Z",
     "contributors": [
