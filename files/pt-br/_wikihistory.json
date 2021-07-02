@@ -3813,18 +3813,6 @@
       "thiagosaife"
     ]
   },
-  "Web/API/Body": {
-    "modified": "2020-10-15T22:30:31.056Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/Body/json": {
-    "modified": "2020-10-15T22:30:29.688Z",
-    "contributors": [
-      "tohdi1"
-    ]
-  },
   "Web/API/BroadcastChannel": {
     "modified": "2020-10-15T22:14:45.422Z",
     "contributors": [
@@ -4080,20 +4068,6 @@
     "modified": "2020-10-15T22:12:28.607Z",
     "contributors": [
       "marcos180212"
-    ]
-  },
-  "Web/API/ChildNode": {
-    "modified": "2020-10-15T21:55:14.252Z",
-    "contributors": [
-      "mateusvelleda",
-      "AlanSantos11",
-      "stevenwdv"
-    ]
-  },
-  "Web/API/ChildNode/after": {
-    "modified": "2020-10-15T22:17:31.621Z",
-    "contributors": [
-      "pedroguilhermelima"
     ]
   },
   "Web/API/ClipboardEvent": {
@@ -16999,6 +16973,32 @@
     "modified": "2019-03-23T22:10:24.978Z",
     "contributors": [
       "andre-mendes"
+    ]
+  },
+  "orphaned/Web/API/Body": {
+    "modified": "2020-10-15T22:30:31.056Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "orphaned/Web/API/Body/json": {
+    "modified": "2020-10-15T22:30:29.688Z",
+    "contributors": [
+      "tohdi1"
+    ]
+  },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2020-10-15T21:55:14.252Z",
+    "contributors": [
+      "mateusvelleda",
+      "AlanSantos11",
+      "stevenwdv"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/after": {
+    "modified": "2020-10-15T22:17:31.621Z",
+    "contributors": [
+      "pedroguilhermelima"
     ]
   },
   "orphaned/Web/API/ChildNode/remove": {

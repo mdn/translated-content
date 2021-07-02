@@ -2499,54 +2499,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Body": {
-    "modified": "2020-10-15T22:15:22.404Z",
-    "contributors": [
-      "fmeyertoens"
-    ]
-  },
-  "Web/API/Body/arrayBuffer": {
-    "modified": "2020-10-15T22:15:22.326Z",
-    "contributors": [
-      "SebinNyshkim"
-    ]
-  },
-  "Web/API/Body/blob": {
-    "modified": "2020-10-15T22:15:22.311Z",
-    "contributors": [
-      "SebinNyshkim"
-    ]
-  },
-  "Web/API/Body/body": {
-    "modified": "2020-10-15T22:15:22.169Z",
-    "contributors": [
-      "SebinNyshkim"
-    ]
-  },
-  "Web/API/Body/bodyUsed": {
-    "modified": "2020-10-15T22:15:22.317Z",
-    "contributors": [
-      "SebinNyshkim"
-    ]
-  },
-  "Web/API/Body/formData": {
-    "modified": "2020-10-15T22:15:22.274Z",
-    "contributors": [
-      "SebinNyshkim"
-    ]
-  },
-  "Web/API/Body/json": {
-    "modified": "2020-10-15T22:15:23.782Z",
-    "contributors": [
-      "SebinNyshkim"
-    ]
-  },
-  "Web/API/Body/text": {
-    "modified": "2020-10-15T22:15:23.627Z",
-    "contributors": [
-      "SebinNyshkim"
-    ]
-  },
   "Web/API/CSS": {
     "modified": "2020-10-15T22:34:59.314Z",
     "contributors": [
@@ -2756,12 +2708,6 @@
       "Leun4m",
       "thedaft",
       "pixunil"
-    ]
-  },
-  "Web/API/ChildNode": {
-    "modified": "2019-03-23T22:06:18.037Z",
-    "contributors": [
-      "stevenwdv"
     ]
   },
   "Web/API/Console": {
@@ -7882,12 +7828,6 @@
   },
   "Web/CSS/transform-function/translate3d()": {
     "modified": "2020-12-11T16:32:16.509Z",
-    "contributors": [
-      "Johuspect"
-    ]
-  },
-  "Web/CSS/transform-function/translateX": {
-    "modified": "2020-12-11T18:08:20.315Z",
     "contributors": [
       "Johuspect"
     ]
@@ -14560,6 +14500,60 @@
       "AARADEANCA"
     ]
   },
+  "orphaned/Web/API/Body": {
+    "modified": "2020-10-15T22:15:22.404Z",
+    "contributors": [
+      "fmeyertoens"
+    ]
+  },
+  "orphaned/Web/API/Body/arrayBuffer": {
+    "modified": "2020-10-15T22:15:22.326Z",
+    "contributors": [
+      "SebinNyshkim"
+    ]
+  },
+  "orphaned/Web/API/Body/blob": {
+    "modified": "2020-10-15T22:15:22.311Z",
+    "contributors": [
+      "SebinNyshkim"
+    ]
+  },
+  "orphaned/Web/API/Body/body": {
+    "modified": "2020-10-15T22:15:22.169Z",
+    "contributors": [
+      "SebinNyshkim"
+    ]
+  },
+  "orphaned/Web/API/Body/bodyUsed": {
+    "modified": "2020-10-15T22:15:22.317Z",
+    "contributors": [
+      "SebinNyshkim"
+    ]
+  },
+  "orphaned/Web/API/Body/formData": {
+    "modified": "2020-10-15T22:15:22.274Z",
+    "contributors": [
+      "SebinNyshkim"
+    ]
+  },
+  "orphaned/Web/API/Body/json": {
+    "modified": "2020-10-15T22:15:23.782Z",
+    "contributors": [
+      "SebinNyshkim"
+    ]
+  },
+  "orphaned/Web/API/Body/text": {
+    "modified": "2020-10-15T22:15:23.627Z",
+    "contributors": [
+      "SebinNyshkim"
+    ]
+  },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2019-03-23T22:06:18.037Z",
+    "contributors": [
+      "stevenwdv"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T22:05:03.102Z",
     "contributors": [
@@ -14631,6 +14625,12 @@
       "Sebastianz",
       "prayash",
       "auranvesdranor"
+    ]
+  },
+  "orphaned/Web/CSS/transform-function/translateX": {
+    "modified": "2020-12-11T18:08:20.315Z",
+    "contributors": [
+      "Johuspect"
     ]
   },
   "orphaned/Web/Guide/Events": {

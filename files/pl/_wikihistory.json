@@ -1557,13 +1557,6 @@
       "Ovkorz"
     ]
   },
-  "Web/API/ChildNode": {
-    "modified": "2020-01-17T16:06:19.710Z",
-    "contributors": [
-      "pefbrute",
-      "arronei"
-    ]
-  },
   "Web/API/Console": {
     "modified": "2019-03-23T23:09:41.834Z",
     "contributors": [
@@ -3210,17 +3203,6 @@
       "khalid32",
       "Mgjbot",
       "Diablownik"
-    ]
-  },
-  "Web/API/Navigator/registerContentHandler": {
-    "modified": "2019-03-23T23:51:33.038Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Diablownik",
-      "Mgjbot",
-      "Marcoos",
-      "Ptak82"
     ]
   },
   "Web/API/Navigator/registerProtocolHandler": {
@@ -11130,6 +11112,13 @@
       "Ptak82"
     ]
   },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2020-01-17T16:06:19.710Z",
+    "contributors": [
+      "pefbrute",
+      "arronei"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T21:53:18.455Z",
     "contributors": [
@@ -11150,6 +11139,17 @@
       "Ptak82",
       "Mgjbot",
       "Jan Dudek"
+    ]
+  },
+  "orphaned/Web/API/Navigator/registerContentHandler": {
+    "modified": "2019-03-23T23:51:33.038Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Diablownik",
+      "Mgjbot",
+      "Marcoos",
+      "Ptak82"
     ]
   },
   "orphaned/Web/API/ParentNode": {

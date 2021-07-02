@@ -531,7 +531,7 @@
 /zh-CN/docs/DOM/window.navigator.oscpu	/zh-CN/docs/Web/API/Navigator/oscpu
 /zh-CN/docs/DOM/window.navigator.platform	/zh-CN/docs/Web/API/NavigatorID/platform
 /zh-CN/docs/DOM/window.navigator.plugins	/zh-CN/docs/Web/API/NavigatorPlugins/plugins
-/zh-CN/docs/DOM/window.navigator.registerContentHandler	/zh-CN/docs/Web/API/Navigator/registerContentHandler
+/zh-CN/docs/DOM/window.navigator.registerContentHandler	/zh-CN/docs/orphaned/Web/API/Navigator/registerContentHandler
 /zh-CN/docs/DOM/window.navigator.userAgent	/zh-CN/docs/Web/API/NavigatorID/userAgent
 /zh-CN/docs/DOM/window.navigator.vendor	/zh-CN/docs/Web/API/Navigator/vendor
 /zh-CN/docs/DOM/window.navigator.vendorSub	/zh-CN/docs/Web/API/Navigator/vendorSub
@@ -1458,6 +1458,14 @@
 /zh-CN/docs/Web/API/Blob.size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/Blob.slice	/zh-CN/docs/Web/API/Blob/slice
 /zh-CN/docs/Web/API/Blob.type	/zh-CN/docs/Web/API/Blob/type
+/zh-CN/docs/Web/API/Body	/zh-CN/docs/orphaned/Web/API/Body
+/zh-CN/docs/Web/API/Body/arrayBuffer	/zh-CN/docs/orphaned/Web/API/Body/arrayBuffer
+/zh-CN/docs/Web/API/Body/blob	/zh-CN/docs/orphaned/Web/API/Body/blob
+/zh-CN/docs/Web/API/Body/body	/zh-CN/docs/orphaned/Web/API/Body/body
+/zh-CN/docs/Web/API/Body/bodyUsed	/zh-CN/docs/orphaned/Web/API/Body/bodyUsed
+/zh-CN/docs/Web/API/Body/formData	/zh-CN/docs/orphaned/Web/API/Body/formData
+/zh-CN/docs/Web/API/Body/json	/zh-CN/docs/orphaned/Web/API/Body/json
+/zh-CN/docs/Web/API/Body/text	/zh-CN/docs/orphaned/Web/API/Body/text
 /zh-CN/docs/Web/API/CSSMatrix	/zh-CN/docs/conflicting/Web/API/DOMMatrix
 /zh-CN/docs/Web/API/CSSStyleSheet.insertRule	/zh-CN/docs/Web/API/CSSStyleSheet/insertRule
 /zh-CN/docs/Web/API/CSS分页规则	/zh-CN/docs/Web/API/CSSPageRule
@@ -1468,8 +1476,11 @@
 /zh-CN/docs/Web/API/CanvasRenderingContext2D.createPattern	/zh-CN/docs/Web/API/CanvasRenderingContext2D/createPattern
 /zh-CN/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/zh-CN/docs/conflicting/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/Web/API/Channel_Messaging_API/使用_channel_messaging	/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging
+/zh-CN/docs/Web/API/ChildNode	/zh-CN/docs/orphaned/Web/API/ChildNode
 /zh-CN/docs/Web/API/ChildNode.nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
 /zh-CN/docs/Web/API/ChildNode.remove	/zh-CN/docs/orphaned/Web/API/ChildNode/remove
+/zh-CN/docs/Web/API/ChildNode/after	/zh-CN/docs/orphaned/Web/API/ChildNode/after
+/zh-CN/docs/Web/API/ChildNode/before	/zh-CN/docs/orphaned/Web/API/ChildNode/before
 /zh-CN/docs/Web/API/ChildNode/remove	/zh-CN/docs/orphaned/Web/API/ChildNode/remove
 /zh-CN/docs/Web/API/ChildNode/replaceWith	/zh-CN/docs/orphaned/Web/API/ChildNode/replaceWith
 /zh-CN/docs/Web/API/Childnode.previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
@@ -1503,6 +1514,7 @@
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/getSelection	/zh-CN/docs/Web/API/Document/getSelection
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/zh-CN/docs/Web/API/Document/pointerLockElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/styleSheets	/zh-CN/docs/Web/API/Document/styleSheets
+/zh-CN/docs/Web/API/DocumentTouch	/zh-CN/docs/orphaned/Web/API/DocumentTouch
 /zh-CN/docs/Web/API/Document_Object_Model/Events	/zh-CN/docs/orphaned/Web/API/Document_Object_Model/Events
 /zh-CN/docs/Web/API/Document_Object_Model/Preface	/zh-CN/docs/conflicting/Web/API/Document_Object_Model
 /zh-CN/docs/Web/API/Element.classList	/zh-CN/docs/Web/API/Element/classList
@@ -1660,9 +1672,10 @@
 /zh-CN/docs/Web/API/Navigator.mozIsLocallyAvailable	/zh-CN/docs/Web/API/Navigator/mozIsLocallyAvailable
 /zh-CN/docs/Web/API/Navigator.mozSettings	/zh-CN/docs/Web/API/Navigator/mozSettings
 /zh-CN/docs/Web/API/Navigator.oscpu	/zh-CN/docs/Web/API/Navigator/oscpu
-/zh-CN/docs/Web/API/Navigator.registerContentHandler	/zh-CN/docs/Web/API/Navigator/registerContentHandler
+/zh-CN/docs/Web/API/Navigator.registerContentHandler	/zh-CN/docs/orphaned/Web/API/Navigator/registerContentHandler
 /zh-CN/docs/Web/API/Navigator.vendor	/zh-CN/docs/Web/API/Navigator/vendor
 /zh-CN/docs/Web/API/Navigator.vendorSub	/zh-CN/docs/Web/API/Navigator/vendorSub
+/zh-CN/docs/Web/API/Navigator/registerContentHandler	/zh-CN/docs/orphaned/Web/API/Navigator/registerContentHandler
 /zh-CN/docs/Web/API/NavigatorGeolocation	/zh-CN/docs/conflicting/Web/API/Geolocation
 /zh-CN/docs/Web/API/NavigatorGeolocation.geolocation	/zh-CN/docs/Web/API/Navigator/geolocation
 /zh-CN/docs/Web/API/NavigatorGeolocation/geolocation	/zh-CN/docs/Web/API/Navigator/geolocation
@@ -1735,6 +1748,7 @@
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
 /zh-CN/docs/Web/API/Notation	/zh-CN/docs/orphaned/Web/API/Notation
 /zh-CN/docs/Web/API/OfflineAudioContext/complete	/zh-CN/docs/Web/API/OfflineAudioContext/complete_event
+/zh-CN/docs/Web/API/OscillatorNode/stop	/zh-CN/docs/orphaned/Web/API/OscillatorNode/stop
 /zh-CN/docs/Web/API/ParentNode	/zh-CN/docs/orphaned/Web/API/ParentNode
 /zh-CN/docs/Web/API/ParentNode.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/ParentNode.children	/zh-CN/docs/orphaned/Web/API/ParentNode/children
@@ -2118,6 +2132,7 @@
 /zh-CN/docs/Web/CSS/transform-function/skewY	/zh-CN/docs/Web/CSS/transform-function/skewY()
 /zh-CN/docs/Web/CSS/transform-function/translate	/zh-CN/docs/Web/CSS/transform-function/translate()
 /zh-CN/docs/Web/CSS/transform-function/translate3d	/zh-CN/docs/Web/CSS/transform-function/translate3d()
+/zh-CN/docs/Web/CSS/transform-function/translateX	/zh-CN/docs/orphaned/Web/CSS/transform-function/translateX
 /zh-CN/docs/Web/CSS/transform-function/translateY	/zh-CN/docs/Web/CSS/transform-function/translateY()
 /zh-CN/docs/Web/CSS/url	/zh-CN/docs/Web/CSS/url()
 /zh-CN/docs/Web/CSS/var	/zh-CN/docs/Web/CSS/var()
