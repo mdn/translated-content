@@ -13451,7 +13451,14 @@
       "Potappo",
       "Marsf",
       "Mgjbot",
-      "Okome"
+      "Okome",
+      "Hfjapancom",
+      "lv7777",
+      "stingray",
+      "Sheppy",
+      "jsx",
+      "Kaorine",
+      "Yama"
     ]
   },
   "Web/API/Document_Object_Model/Examples": {
@@ -48636,41 +48643,6 @@
     "modified": "2020-10-15T22:15:54.517Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model": {
-    "modified": "2019-01-16T15:09:37.281Z",
-    "contributors": [
-      "Anonymous"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model_226486dcf4878082093d6899a9e478cc": {
-    "modified": "2019-03-23T23:53:21.942Z",
-    "contributors": [
-      "ethertank",
-      "Mgjbot",
-      "Hfjapancom"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10": {
-    "modified": "2019-03-23T23:29:56.334Z",
-    "contributors": [
-      "lv7777",
-      "stingray",
-      "Sheppy"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model_8435a25d5137b436d5d7161e1b813c02": {
-    "modified": "2019-03-24T00:00:45.073Z",
-    "contributors": [
-      "mfuji09",
-      "jsx",
-      "ethertank",
-      "Taken",
-      "Kaorine",
-      "Mgjbot",
-      "Yama",
-      "Okome"
     ]
   },
   "conflicting/Web/API/Element": {

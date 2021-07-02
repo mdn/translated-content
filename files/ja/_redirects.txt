@@ -114,7 +114,7 @@
 /ja/docs/About	/ja/docs/orphaned/About
 /ja/docs/About_JavaScript	/ja/docs/Web/JavaScript/About_JavaScript
 /ja/docs/About_WOFF	/ja/docs/Web/Guide/WOFF
-/ja/docs/About_the_Document_Object_Model	/ja/docs/conflicting/Web/API/Document_Object_Model_226486dcf4878082093d6899a9e478cc
+/ja/docs/About_the_Document_Object_Model	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Accessibility	/ja/docs/Web/Accessibility
 /ja/docs/Accessibility/ARIA	/ja/docs/Web/Accessibility/ARIA
 /ja/docs/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/ja/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ
@@ -1249,7 +1249,7 @@
 /ja/docs/Creating_toolbar_buttons	/ja/docs/orphaned/Creating_toolbar_buttons
 /ja/docs/DHTML	/ja/docs/Glossary/DHTML
 /ja/docs/DOM	/ja/docs/Web/API/Document_Object_Model
-/ja/docs/DOM/About_the_Document_Object_Model	/ja/docs/conflicting/Web/API/Document_Object_Model_226486dcf4878082093d6899a9e478cc
+/ja/docs/DOM/About_the_Document_Object_Model	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/Apps	/ja/docs/Web/API/DOMApplicationsRegistry
 /ja/docs/DOM/Apps.getInstalled	/ja/docs/Web/API/DOMApplicationsRegistry/getInstalled
 /ja/docs/DOM/Apps.getSelf	/ja/docs/Web/API/DOMApplicationsRegistry/getSelf
@@ -1280,7 +1280,7 @@
 /ja/docs/DOM/DOM_Reference/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
 /ja/docs/DOM/DOM_Reference/Examples	/ja/docs/Web/API/Document_Object_Model/Examples
 /ja/docs/DOM/DOM_Reference/Introduction	/ja/docs/Web/API/Document_Object_Model/Introduction
-/ja/docs/DOM/DOM_Reference/Preface	/ja/docs/conflicting/Web/API/Document_Object_Model_8435a25d5137b436d5d7161e1b813c02
+/ja/docs/DOM/DOM_Reference/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/DOM_Storage	/ja/docs/conflicting/Web/API/Web_Storage_API
 /ja/docs/DOM/DOM_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
 /ja/docs/DOM/DOM_event_reference/compositionstart	/ja/docs/conflicting/Web/API/Element/compositionstart_event
@@ -1977,7 +1977,7 @@
 /ja/docs/DOM:window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/DOM:window.window	/ja/docs/Web/API/Window/window
 /ja/docs/DOMParser	/ja/docs/Web/API/DOMParser
-/ja/docs/DOM_Client_Object_Cross-Reference	/ja/docs/conflicting/Web/API/Document_Object_Model
+/ja/docs/DOM_Client_Object_Cross-Reference	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM_Client_Object_Cross-Reference/navigator	/ja/docs/conflicting/Web/API/Navigator
 /ja/docs/DOM_Client_Object_Cross-Reference:navigator	/ja/docs/conflicting/Web/API/Navigator
 /ja/docs/DOM_Implementation_and_Scriptability	/ja/docs/Web/API/Document_Object_Model
@@ -3770,7 +3770,7 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/ja/docs/Web/API/Document/pointerLockElement
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
-/ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/conflicting/Web/API/Document_Object_Model_8435a25d5137b436d5d7161e1b813c02
+/ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Element.contentEditable	/ja/docs/Web/API/HTMLElement/contentEditable
 /ja/docs/Web/API/Element.isContentEditable	/ja/docs/Web/API/HTMLElement/isContentEditable
 /ja/docs/Web/API/Element.querySelector	/ja/docs/Web/API/Element/querySelector
@@ -4602,7 +4602,7 @@
 /ja/docs/Web/Guide/CSS/Using_CSS_transitions	/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
 /ja/docs/Web/Guide/CSS/Using_multi-column_layouts	/ja/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /ja/docs/Web/Guide/CSS/Using_multiple_backgrounds	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-/ja/docs/Web/Guide/DOM	/ja/docs/conflicting/Web/API/Document_Object_Model_656f0e51418b39c498011268be9b3a10
+/ja/docs/Web/Guide/DOM	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/Guide/DOM/Events/Touch_events	/ja/docs/Web/API/Touch_events
 /ja/docs/Web/Guide/DOM/Events/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ja/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history	/ja/docs/Web/API/History_API
