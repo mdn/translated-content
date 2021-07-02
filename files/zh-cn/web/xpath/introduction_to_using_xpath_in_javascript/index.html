@@ -66,7 +66,7 @@ original_slug: Web/JavaScript/Introduction_to_using_XPath_in_JavaScript
 <pre class="brush: js">var nsResolver = document.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement );
 </pre>
 
-<p><span class="comment">Or alternatively by using the &lt;code&gt;createNSResolver&lt;/code&gt; method of a &lt;code&gt;XPathEvaluator&lt;/code&gt; object. &lt;pre&gt; var xpEvaluator = new XPathEvaluator(); var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement ); &lt;/pre&gt;</span></p>
+<p><span class="comment">或者，也可以使用 <code>XPathEvaluator</code> 对象的 <code>createNSResolver</code> 方法。<pre> var xpEvaluator = new XPathEvaluator(); var nsResolver = xpEvaluator.createNSResolver( contextNode.ownerDocument == null ? contextNode.documentElement : contextNode.ownerDocument.documentElement ); </pre></span></p>
 
 <p>然后传递 <code>document.evaluate</code>，将 <code>nsResolver</code> 变量作为 <code>namespaceResolver</code> 参数。</p>
 

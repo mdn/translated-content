@@ -529,6 +529,7 @@
 /pt-BR/docs/Web/API/API_de_Desempenho	/pt-BR/docs/Web/API/Performance_API
 /pt-BR/docs/Web/API/AbstractWorker	/pt-BR/docs/orphaned/Web/API/AbstractWorker
 /pt-BR/docs/Web/API/AbstractWorker/onerror	/pt-BR/docs/orphaned/Web/API/AbstractWorker/onerror
+/pt-BR/docs/Web/API/Ambient_Light_Events	/pt-BR/docs/orphaned/Web/API/Ambient_Light_Events
 /pt-BR/docs/Web/API/ArrayBuffer	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /pt-BR/docs/Web/API/AudioContext/currentTime	/pt-BR/docs/Web/API/BaseAudioContext/currentTime
 /pt-BR/docs/Web/API/BatteryManager.charging	/pt-BR/docs/Web/API/BatteryManager/charging
@@ -540,6 +541,10 @@
 /pt-BR/docs/Web/API/BatteryManager.ondischargingtimechange	/pt-BR/docs/Web/API/BatteryManager/ondischargingtimechange
 /pt-BR/docs/Web/API/BatteryManager.onlevelchange	/pt-BR/docs/Web/API/BatteryManager/onlevelchange
 /pt-BR/docs/Web/API/BatteryManager/ondischargintimechange	/pt-BR/docs/Web/API/BatteryManager/ondischargingtimechange
+/pt-BR/docs/Web/API/Body	/pt-BR/docs/orphaned/Web/API/Body
+/pt-BR/docs/Web/API/Body/json	/pt-BR/docs/orphaned/Web/API/Body/json
+/pt-BR/docs/Web/API/ChildNode	/pt-BR/docs/orphaned/Web/API/ChildNode
+/pt-BR/docs/Web/API/ChildNode/after	/pt-BR/docs/orphaned/Web/API/ChildNode/after
 /pt-BR/docs/Web/API/ChildNode/remove	/pt-BR/docs/orphaned/Web/API/ChildNode/remove
 /pt-BR/docs/Web/API/Console.timeEnd	/pt-BR/docs/Web/API/Console/timeEnd
 /pt-BR/docs/Web/API/Coordinates	/pt-BR/docs/Web/API/GeolocationCoordinates
@@ -842,7 +847,18 @@
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Boolean
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/clear	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/delete	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/entries	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/get	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/get
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/has	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/has
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/keys	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Map
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/set	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/set
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/size	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/size
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/values	/pt-BR/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/values
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/prototype	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat

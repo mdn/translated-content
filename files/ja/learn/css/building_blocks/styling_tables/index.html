@@ -11,32 +11,32 @@ tags:
   - Tables
 translation_of: Learn/CSS/Building_blocks/Styling_tables
 ---
-<p>{{LearnSidebar}}</p>
+<div>{{LearnSidebar}}</div>
 
-<p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}</p>
+<div>{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}</div>
 
-<div></div>
+<p class="summary"></p>
 
-<p class="summary"><span class="seoSummary">HTML 表を装飾することは、世界で最も魅力的な仕事ではありませんが、時にはそれをしなければならないこともあります。 この記事では、これまでに説明した機能のいくつかとともに、HTML 表を見栄え良くするためのガイドを提供します。</span></p>
+<p class="summary">HTML の表を装飾することは、世界で最も魅力的な仕事ではありませんが、時にはそれをしなければならないこともあります。 この記事では、これまでに説明した機能のいくつかとともに、HTML の表を見栄え良くするためのガイドを提供します。</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">前提条件:</th>
-   <td>HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）と <a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 表</a> および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ている。</td>
+   <td>HTML の基本 (<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>) と <a href="/ja/docs/Learn/HTML/Tables">HTML の表</a>に関する知識、 CSS の動作に関する理解 (CSS の第一歩)。</td>
   </tr>
   <tr>
    <th scope="row">目的:</th>
-   <td>HTML 表を効果的に装飾する方法を学ぶ。</td>
+   <td>HTML の表を効果的に装飾する方法を学ぶ。</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="A_typical_HTML_table" name="A_typical_HTML_table">典型的な HTML 表</h2>
+<h2 id="A_typical_HTML_table">典型的な HTML の表</h2>
 
-<p>典型的な HTML 表を見ることから始めましょう。 まあ、典型的な言い方ですが、ほとんどの HTML 表の例は、靴、天気、あるいは従業員に関するものです。 私達はイギリスの有名なパンクバンドについてそれを作ることで、もっと面白くすることにしました。 マークアップはこんな感じです。</p>
+<p>典型的な HTML の表を見ることから始めましょう。 まあ、私もよく言いますが、ほとんどの HTML の表の例は、靴、天気、あるいは従業員に関するものです。 私たちはイギリスの有名なパンクバンドについてそれを作ることで、もっと面白くすることにしました。 マークアップはこのような感じです。</p>
 
-<pre class="brush: html notranslate">&lt;table&gt;
+<pre class="brush: html">&lt;table&gt;
   &lt;caption&gt;A summary of the UK's most famous punk bands&lt;/caption&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -77,29 +77,29 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
   &lt;/tfoot&gt;
 &lt;/table&gt;</pre>
 
-<p>{{htmlattrxref("scope","th")}}、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}} などの機能のおかげで、表はうまくマークアップされ、簡単に装飾を整えられ、アクセスしやすくなりました。 残念なことに、画面に表示したときは見栄えがよくありません（<a href="http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html">punk-bands-unstyled.html</a> でライブを見る）。</p>
+<p>{{htmlattrxref("scope","th")}}、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}} などの機能のおかげで、表はうまくマークアップされ、簡単に装飾を整えられ、アクセスしやすくなりました。 残念なことに、画面に表示したときは見栄えがよくありません (<a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html">punk-bands-unstyled.html</a> でライブを見る)。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13064/table-unstyled.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-unstyled.png" style="display: block; margin: 0 auto;"></p>
 
-<p>それは窮屈に見え、読みにくく、そして退屈です。 これを修正するために CSS を使用する必要があります。</p>
+<p>ブラウザーの既定のスタイリングでは、窮屈で、読みにくく、つまらなく見えます。これを修正するためには CSS を使用する必要があります。</p>
 
-<h2 id="Active_learning_Styling_our_table" name="Active_learning_Styling_our_table">テーブルのスタイリング</h2>
+<h2 id="Styling_our_table">表のスタイリング</h2>
 
-<p>テーブルの例を一緒にスタイリングしてみましょう。</p>
+<p>表の例を一緒にスタイリングしてみましょう。</p>
 
 <ol>
  <li>まず始めに、<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html">サンプルマークアップ</a>のローカルコピーを作成し、<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png">noise</a> と <a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg">leopardskin</a> の両方の画像をダウンロードして、3つのファイルをローカルコンピュータのどこかの作業ディレクトリに配置します。</li>
  <li>次に、<code>style.css</code> という名前の新しいファイルを作成し、他のファイルと同じディレクトリに保存します。</li>
  <li>{{htmlelement("head")}} の内側に次の HTML 行を配置して、CSS を HTML にリンクします。
-  <pre class="brush: html notranslate">&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;</pre>
+  <pre class="brush: html">&lt;link href="style.css" rel="stylesheet" type="text/css"&gt;</pre>
  </li>
 </ol>
 
-<h3 id="Spacing_and_layout" name="Spacing_and_layout">スペーシングとレイアウト</h3>
+<h3 id="Spacing_and_layout">スペーシングとレイアウト</h3>
 
-<p>最初にすべきことは、スペーシングやレイアウトを整理することです — デフォルトの表の装飾はとても窮屈です！ これを行うには、<code>style.css</code> ファイルに次の CSS を追加します。</p>
+<p>最初にすべきことは、スペーシングやレイアウトを整理することです — 既定のの表の装飾はとても窮屈です！ これを行うには、<code>style.css</code> ファイルに次の CSS を追加します。</p>
 
-<pre class="brush: css notranslate">/* spacing */
+<pre class="brush: css">/* spacing */
 
 table {
   table-layout: fixed;
@@ -131,19 +131,19 @@ th, td {
 <p>注意すべき最も重要な部分は次のとおりです。</p>
 
 <ul>
- <li>{{cssxref("table-layout")}} の値を <code>fixed</code> に設定すると、デフォルトで表の動作が多少予測しやすくなるため、通常は表に設定することをお勧めします。 通常、表の列は、含まれるコンテンツの量に応じてサイズが変更される傾向があり、これは奇妙な結果を生むことがあります。 <code>table-layout: fixed</code> を使うと、見出しの幅に応じてカラムのサイズを調整し、その内容を適切に処理することができます。そのために、<code>thead th:nth-child(<em>n</em>)</code> ({{cssxref(":nth-child")}}) セレクタ（<code>&lt;thead&gt;</code> 要素の中の <code>&lt;th&gt;</code> 要素で、シーケンス中の <em>n</em> 番目の子を選択する）で4つの異なる見出しを選択し、それらに設定されたパーセンテージの幅を与えています。列全体の幅はその見出しの幅に従うので、表の列のサイズを変更するのに適した方法です。 Chris Coyier は、このテクニックを <a href="https://css-tricks.com/fixing-tables-long-strings/">Fixed Table Layouts</a> でさらに詳しく説明しています。<br>
+ <li>{{cssxref("table-layout")}} の値を <code>fixed</code> に設定すると、既定で表の動作が多少予測しやすくなるため、通常は表に設定することをお勧めします。 通常、表の列は、含まれるコンテンツの量に応じてサイズが変更される傾向があり、これは奇妙な結果を生むことがあります。 <code>table-layout: fixed</code> を使うと、見出しの幅に応じてカラムのサイズを調整し、その内容を適切に処理することができます。そのために、<code>thead th:nth-child(<em>n</em>)</code> ({{cssxref(":nth-child")}}) セレクター ({{htmlelement("thead")}} 要素の中の {{htmlelement("th")}} 要素で、シーケンス中の <em>n</em> 番目の子を選択する) で 4 つの異なる見出しを選択し、それらに設定されたパーセント値の幅を与えています。列全体の幅はその見出しの幅に従うので、表の列のサイズを変更するのに適した方法です。 Chris Coyier は、このテクニックを <a href="https://css-tricks.com/fixing-tables-long-strings/">Fixed Table Layouts</a> でさらに詳しく説明しています。<br>
   <br>
-  これは 100% の {{cssxref("width")}} と結合されています。 つまり、表は入れられているコンテナをすべて満たし、とてもレスポンシブになります（しかし、狭い画面幅で見栄えを良くするにはまだ作業が必要です）。</li>
- <li>{{cssxref("border-collapse")}} の <code>collapse</code> の値は、あらゆる表の装飾の取り組みにおける標準的なベストプラクティスです。 デフォルトでは、下の画像に示すように、表要素に境界線を設定すると、境界線の間に間隔が空くことになります。<img alt="" src="https://mdn.mozillademos.org/files/13068/no-border-collapse.png" style="display: block; margin: 0 auto;"> これはあまり見栄えがよくありません（それはあなたが望む外観かもしれませんが、誰が知っていますか？）。 <code>border-collapse: collapse;</code> を設定すると、境界線は1つに折りたたまれ、次のようにずっと良く見えます。<img alt="" src="https://mdn.mozillademos.org/files/13066/border-collapse.png" style="display: block; margin: 0 auto;"></li>
+  これは 100% の {{cssxref("width")}} と結合されています。 つまり、表は入れられているコンテナーをすべて満たし、とてもレスポンシブになります (しかし、狭い画面幅で見栄えを良くするにはまだ作業が必要です)。</li>
+ <li>{{cssxref("border-collapse")}} の <code>collapse</code> の値は、あらゆる表の装飾の取り組みにおける標準的なベストプラクティスです。 既定では、下の画像に示すように、表要素に境界線を設定すると、境界線の間に間隔が空くことになります。<img alt="" src="no-border-collapse.png" style="display: block; margin: 0 auto;"> これはあまり見栄えがよくありません (あなたが望む外観かもしれませんが、誰にも分かりません)。 <code>border-collapse: collapse;</code> を設定すると、境界線は 1 つに折りたたまれ、次のようにずっと良く見えます。<img alt="" src="border-collapse.png" style="display: block; margin: 0 auto;"></li>
  <li>表全体を囲むように {{cssxref("border")}} を付けています。 これは、後で表のヘッダーとフッターに境界線を付けるために必要です — 表の外側全体に境界線がなく、ギャップで終わる場合、それは本当に奇妙でまとまりのないものに見えます。</li>
  <li>{{htmlelement("th")}} 要素と {{htmlelement("td")}} 要素に {{cssxref("padding")}} を設定しました。 これにより、データ項目に余裕を持たせることができ、表がもっと見やすくなります。</li>
 </ul>
 
 <p>この時点で、表はすでにずっと良く見えています。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13070/table-with-spacing.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-with-spacing.png" style="display: block; margin: 0 auto;"></p>
 
-<h3 id="Some_simple_typography" name="Some_simple_typography">簡単なタイポグラフィ</h3>
+<h3 id="Some_simple_typography">簡単なタイポグラフィ</h3>
 
 <p>それでは、テキストを少し整理しましょう。</p>
 
@@ -151,11 +151,11 @@ th, td {
 
 <p>まず、HTML <code>head</code> の既存の {{htmlelement("link")}} 要素のすぐ上に、次の <code>&lt;link&gt;</code> 要素を追加します。</p>
 
-<pre class="brush: html notranslate">&lt;link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'&gt;</pre>
+<pre class="brush: html">&lt;link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'&gt;</pre>
 
 <p>そして、<code>style.css</code> ファイルの以前の追加の下に、次の CSS を追加します。</p>
 
-<pre class="brush: css notranslate">/* typography */
+<pre class="brush: css">/* typography */
 
 html {
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
@@ -186,21 +186,23 @@ tfoot th {
 <ul>
  <li>グローバルなサンセリフのフォントスタックを設定しました。 これは純粋に装飾的な選択です。 また、素敵に汚れた、パンクな外観のために {{htmlelement("thead")}} 要素内の見出しと {{htmlelement("tfoot")}} 要素内の見出しにもカスタムフォントを設定しました。</li>
  <li>読みやすくするために、見出しとセルに {{cssxref("letter-spacing")}} を設定しています。 繰り返しますが、主に装飾的な選択です。</li>
- <li>{{htmlelement("tbody")}} 内の表セル内のテキストを見出しと揃えるように中央揃えにしました。 デフォルトでは、セルは {{cssxref("text-align")}} に <code>left</code> の値が与えられ、見出しは <code>center</code> の値が与えられますが、一般的には、両方の揃えを同じに設定する方が見栄えがよくなります。 見出しフォントのデフォルトの太字は、見た目を区別するのに十分です。</li>
+ <li>{{htmlelement("tbody")}} 内の表セル内のテキストを見出しと揃えるように中央揃えにしました。 既定では、セルは {{cssxref("text-align")}} に <code>left</code> の値が与えられ、見出しは <code>center</code> の値が与えられますが、一般的には、両方の揃えを同じに設定する方が見栄えがよくなります。 見出しフォントの既定の太字は、見た目を区別するのに十分です。</li>
  <li>{{htmlelement("tfoot")}} 内の見出しは、データと視覚的に関連付けやすくなるように右揃えしています。</li>
 </ul>
 
 <p>結果は少しきれいに見えます。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13072/table-with-typography.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-with-typography.png" style="display: block; margin: 0 auto;"></p>
 
-<h3 id="Graphics_and_colors" name="Graphics_and_colors">グラフィックスと色</h3>
+<h3 id="Graphics_and_colors">グラフィックスと色</h3>
 
-<p>今度はグラフィックと色です！ 表はパンクとその態度でいっぱいですので、それに合わせていくつかの明るい印象的な装飾を与える必要があります。 心配しないで、表をそんなに騒々しくする必要はありません — もっと微妙で上品な何かを選ぶことができます。</p>
+<p>今度はグラフィックと色です。表はパンクとその態度でいっぱいですので、それに合わせていくつかの明るい印象的な装飾を与える必要があります。 心配しないで、表をそんなに騒々しくする必要はありません — もっと微妙で上品な何かを選ぶことができます。</p>
 
 <p>次の CSS を <code>style.css</code> ファイルの一番下に再び追加してください。</p>
 
-<pre class="brush: css notranslate">thead, tfoot {
+<pre class="brush: css">/* グラフィックと色 */
+
+thead, tfoot {
   background: url(leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
@@ -212,17 +214,19 @@ thead th, tfoot th, tfoot td {
 }
 </pre>
 
-<p>繰り返しますが、ここでは表に固有のものは何もありませんが、いくつか注意することは価値があります。</p>
+<p>繰り返しますが、ここでは表に何も特徴がありませんが、いくつか注意することは価値があります。</p>
 
 <p>{{htmlelement("thead")}} と {{htmlelement("tfoot")}} に {{cssxref("background-image")}} を追加し、ヘッダー内とフッター内のすべてのテキストの {{cssxref("color")}} を白に変更して（そして {{cssxref("text-shadow")}} を指定して）読みやすくしています。 読みやすいように、テキストが背景と比べてコントラストがあるようにしてください。</p>
 
 <p>また、ヘッダー内とフッター内の {{htmlelement("th")}} 要素と {{htmlelement("td")}} 要素に線形グラデーションを追加して、テクスチャをきれいにし、それらの要素に明るい紫色の境界線を付けました。 複数のネストした要素を使用できるようにしておくと、スタイルを重ね合わせることができます。 はい、複数の背景画像を使用して {{htmlelement("thead")}} 要素と {{htmlelement("tfoot")}} 要素に背景画像と線形グラデーションの両方を配置することもできましたが、複数の背景画像や線形グラデーションをサポートしない古いブラウザーの利点のために別々に行うことにしました。</p>
 
-<h4 id="Zebra_striping" name="Zebra_striping">ゼブラストライピング</h4>
+<h4 id="Zebra_striping">ゼブラストライピング</h4>
 
-<p><strong>ゼブラストライプ</strong>（zebra stripes）を実装する方法を示すために別のセクションを捧げたいと思います — 表のさまざまなデータ行を解析して読みやすくするために、行の色を交互に並べます。 <code>style.css</code> ファイルの一番下に次の CSS を追加します。</p>
+<p><strong>ゼブラストライプ</strong> (zebra stripes) を実装する方法を示すために別のセクションを捧げたいと思います — 表のさまざまなデータ行を解析して読みやすくするために、行の色を交互に並べます。 <code>style.css</code> ファイルの一番下に次の CSS を追加します。</p>
 
-<pre class="brush: css notranslate">tbody tr:nth-child(odd) {
+<pre class="brush: css">/* 縞模様 */
+
+tbody tr:nth-child(odd) {
   background-color: #ff33cc;
 }
 
@@ -239,22 +243,24 @@ table {
 }</pre>
 
 <ul>
- <li>先ほど、{{cssxref(":nth-child")}} セレクタが特定の子要素を選択するために使われていたのを見ました。 式をパラメータとして指定することもできるので、一連の要素を選択します。 式 <code>2n-1</code> はすべての奇数番号の子（1、3、5 など）を選択し、式 <code>2n</code> はすべての偶数番号の子（2、4、6 など）を選択します。 上のコードでは <code>odd</code> と <code>even</code> のキーワードを使っていますが、それは前述の式とまったく同じです。 この場合、奇数行と偶数行に異なる（けばけばしい）色を付けます。</li>
+ <li>先ほど、{{cssxref(":nth-child")}} セレクターが特定の子要素を選択するために使われていたのを見ました。 式をパラメータとして指定することもできるので、一連の要素を選択します。 式 <code>2n-1</code> はすべての奇数番号の子（1、3、5 など）を選択し、式 <code>2n</code> はすべての偶数番号の子（2、4、6 など）を選択します。 上のコードでは <code>odd</code> と <code>even</code> のキーワードを使っていますが、それは前述の式とまったく同じです。 この場合、奇数行と偶数行に異なる（けばけばしい）色を付けます。</li>
  <li>また、すべての本体行に繰り返しの背景タイルを追加しました。 これは、テクスチャを提供するためのわずかなノイズです（視覚的な歪みが少しある半透明の <code>.png</code>）。</li>
- <li>最後に、<code>:nth-child</code> セレクタをサポートしていないブラウザーでも本体行に背景があるように、表全体の背景色を単色にしました。</li>
+ <li>最後に、<code>:nth-child</code> セレクターをサポートしていないブラウザーでも本体行に背景があるように、表全体の背景色を単色にしました。</li>
 </ul>
 
 <p>この色の爆発により、以下のような見た目になります。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13074/table-with-color.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="" src="table-with-color.png" style="display: block; margin: 0 auto;"></p>
 
 <p>さて、これはあなたの好みではなく、少々限度を超えているかもしれませんが、ここで主張しようとしているのは、表が退屈で学術的である必要はないということです。</p>
 
-<h3 id="Styling_the_caption" name="Styling_the_caption">キャプションの装飾</h3>
+<h3 id="Styling_the_caption">キャプションの装飾</h3>
 
 <p>表でやるべきことがもう一つあります — キャプションの装飾です。 これを行うには、<code>style.css</code> ファイルの一番下に次のコードを追加します。</p>
 
-<pre class="brush: css notranslate">caption {
+<pre class="brush: css">/* caption */
+
+caption {
   font-family: 'Rock Salt', cursive;
   padding: 20px;
   font-style: italic;
@@ -264,11 +270,11 @@ table {
   letter-spacing: 1px;
 }</pre>
 
-<p>{{cssxref("caption-side")}} プロパティに、<code>bottom</code> の値が与えられている以外に、ここで注目に値するものは何もありません。 これにより、キャプションは表の下に配置され、他の宣言と共にこの最終的な外観が得られます（<a href="http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a> でライブで見る）。</p>
+<p>{{cssxref("caption-side")}} プロパティに、<code>bottom</code> の値が与えられている以外に、ここで注目に値するものは何もありません。 これにより、キャプションは表の下に配置され、他の宣言と共にこの最終的な外観が得られます（<a href="https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html">punk-bands-complete.html</a> でライブで見る）。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13076/table-with-caption.png" style="display: block; height: 357px; margin: 0px auto; width: 723px;"></p>
+<p><img alt="" src="table-with-caption.png" style="display: block; margin: 0px auto;"></p>
 
-<h2 id="Table_styling_quick_tips" name="Table_styling_quick_tips">表の装飾のちょっとした助言</h2>
+<h2 id="Table_styling_quick_tips">表の装飾のちょっとした助言</h2>
 
 <p>先に進む前に、上に示した最も有用なポイントの簡単なリストをお送りします。</p>
 
@@ -281,17 +287,17 @@ table {
  <li>{{cssxref("text-align")}} を使用して、{{htmlelement("th")}} と {{htmlelement("td")}} のテキストを揃えることで、きれいにして見やすくします。</li>
 </ul>
 
-<h2 id="あなたのスキルをテストしてください！">あなたのスキルをテストしてください！</h2>
+<h2 id="Test_your_skills!">スキルをテストしましょう</h2>
 
-<p>この記事では多くの情報を取り上げましたが、最も重要な情報を覚えていますか？先に進む前に、この情報を保持しているかどうかを確認するためのテストをいくつか見つけることができます。<a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Tables_tasks">Test your skills: tables</a> を参照してください。</p>
+<p>この記事では多くの情報を取り上げましたが、最も重要な情報を覚えていますか？先に進む前に、この情報を保持しているかどうかを確認するためのテストをいくつか見つけることができます。<a href="/ja/docs/Learn/CSS/Building_blocks/Tables_tasks">Test your skills: tables</a> を参照してください。</p>
 
-<h2 id="Summary" name="Summary">まとめ</h2>
+<h2 id="Summary">まとめ</h2>
 
-<p>テーブルのスタイリングも終わりに近づいてきたので、他にも何か時間を割くものが必要になってきました。次の記事では、CSS をデバッグする方法を探ります。レイアウトが思うように見えない、プロパティが適用されないなどの問題を解決する方法です。これには、ブラウザの DevTools を使用して問題を解決する方法についての情報も含まれています。</p>
+<p>表のスタイリングも終わりに近づいてきたので、他にも何か時間を割くものが必要になってきました。次の記事では、CSS をデバッグする方法を探ります。レイアウトが思うように見えない、プロパティが適用されないなどの問題を解決する方法です。これには、ブラウザの DevTools を使用して問題を解決する方法についての情報も含まれています。</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}</p>
 
-<h2 id="In_this_module" name="In_this_module">このモジュール</h2>
+<h2 id="In_this_module">このモジュール</h2>
 
 <ol>
  <li><a href="/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">カスケードと継承</a></li>

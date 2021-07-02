@@ -2,6 +2,7 @@
 title: 'SyntaxError: unterminated string literal'
 slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 tags:
+  - Error
   - Errors
   - JavaScript
   - SyntaxError
@@ -9,59 +10,62 @@ translation_of: Web/JavaScript/Reference/Errors/Unterminated_string_literal
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<h2 id="Message" name="Message">メッセージ</h2>
+<p>JavaScript のエラー "unterminated string literal" は、どこかに終了していない<a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals">文字列リテラル</a>があった場合に発生します。文字列リテラルは単一引用符 (<code>'</code>) または二重引用符 (<code>"</code>) で囲む必要があります。</p>
 
-<pre class="syntaxbox">SyntaxError: unterminated string literal
+<h2 id="Message">エラーメッセージ</h2>
+
+<pre class="brush: js">SyntaxError: Unterminated string constant (Edge)
+SyntaxError: unterminated string literal (Firefox)
 </pre>
 
-<h2 id="Error_type" name="Error_type">エラータイプ</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("SyntaxError")}}</p>
 
-<h2 id="What_went_wrong" name="What_went_wrong">何がうまくいかなかったのか？</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-<p>どこかに終端されていない {{jsxref("String")}} があります。文字列リテラルは、シングル（<code>'</code>）かダブル（<code>"</code>）のクオートで囲む必要があります。JavaScript は、シングルクオート文字列とダブルクオート文字列を区別しません。<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String#エスケープシーケンス">エスケープシーケンス</a> はシングルクオートとダブルクオート、どちらの文字列でも動作します。このエラーを修正するためには、次の点をチェックしてください：</p>
+<p>どこかに終端されていない<a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals">文字列リテラル</a>があります。文字列リテラルは単一引用符 (<code>'</code>) または二重引用符 (<code>"</code>) で囲む必要があります。JavaScript は、単一引用符の文字列と二重引用符の文字列を区別しません。<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String#escape_notation">エスケープシーケンス</a> は単一引用符と二重引用符、どちらの文字列でも動作します。このエラーを修正するためには、次の点をチェックしてください。</p>
 
 <ul>
- <li>文字列リテラルのために、クオート（シングルかダブル）の開始と終了を行っている。</li>
+ <li>文字列リテラルのために、単一引用符または二重引用符の開始と終了を行っている。</li>
  <li>文字列リテラルを正しくエスケープしている。</li>
  <li>文字列リテラルが複数行に分けられていない。</li>
 </ul>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="Multiple_lines" name="Multiple_lines">複数行</h3>
+<h3 id="Multiple_lines">複数行</h3>
 
-<p>JavaScript では、次のように複数行にまたがる文字列を分割できません：</p>
+<p>JavaScript では、次のように複数行にまたがる文字列を分割できません。</p>
 
 <pre class="brush: js example-bad">var longString = 'This is a very long string which needs
                   to wrap across multiple lines because
                   otherwise my code is unreadable.';
 // SyntaxError: unterminated string literal</pre>
 
-<p>替わりに、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition">+ 演算子</a> かバックスラッシュ、<a href="/ja/docs/Web/JavaScript/Reference/Template_literals">template literal</a> を使用します。<code>+</code> 演算子だと、次のようになります：</p>
+<p>代わりに、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Addition">+ 演算子</a> かバックスラッシュ、<a href="/ja/docs/Web/JavaScript/Reference/Template_literals">テンプレートリテラル</a> を使用します。<code>+</code> 演算子の場合、次のようになります。</p>
 
 <pre class="brush: js example-good">var longString = 'This is a very long string which needs ' +
                  'to wrap across multiple lines because ' +
                  'otherwise my code is unreadable.';
 </pre>
 
-<p>または、文字列が次のように続くことを示すために、各行の終わりにバックスラッシュ文字（"\"）を使用することもできます。バックスラッシュの後に、（改行を除いて）スペースや文字、インデントを入れないようにしてください。そうしないと動作しません。バックスラッシュの場合、次のようになります：</p>
+<p>または、文字列が次のように続くことを示すために、各行の終わりにバックスラッシュ文字（"\"）を使用することもできます。バックスラッシュの後に、 (改行を除いて) スペースや文字、インデントを入れないようにしてください。そうしないと動作しません。バックスラッシュの場合、次のようになります。</p>
 
 <pre class="brush: js example-good">var longString = 'This is a very long string which needs \
 to wrap across multiple lines because \
 otherwise my code is unreadable.';
 </pre>
 
-<p>ECMAScript 2015 環境でサポートされている <a href="/ja/docs/Web/JavaScript/Reference/Template_literals">template literal</a> を使っても改行可能です。</p>
+<p>ECMAScript 2015 環境でサポートされている<a href="/ja/docs/Web/JavaScript/Reference/Template_literals">テンプレートリテラル</a>を使っても改行可能です。</p>
 
 <pre class="brush: js example-good">var longString = `This is a very long string which needs
                   to wrap across multiple lines because
                   otherwise my code is unreadable.`;</pre>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li>{{jsxref("String")}}</li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Template_literals">Template literal</a></li>
+  <li><a href="/ja/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals">文字列リテラル</a></li>
+  <li><a href="/ja/docs/Web/JavaScript/Reference/Template_literals">テンプレートリテラル</a></li>
 </ul>

@@ -354,7 +354,7 @@
 /ja/docs/CSS/Getting_Started/Lists	/ja/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/CSS/Getting_Started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
 /ja/docs/CSS/Getting_Started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/ja/docs/CSS/Getting_Started/Tables	/ja/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
+/ja/docs/CSS/Getting_Started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/CSS/Getting_Started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/CSS/Getting_Started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/CSS/Getting_Started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -1364,7 +1364,7 @@
 /ja/docs/DOM/Node.isSameNode	/ja/docs/Web/API/Node/isSameNode
 /ja/docs/DOM/Node.isSupported	/ja/docs/Web/API/Node/isSupported
 /ja/docs/DOM/Node.lastChild	/ja/docs/Web/API/Node/lastChild
-/ja/docs/DOM/Node.localName	/ja/docs/conflicting/Web/API/Element/localName
+/ja/docs/DOM/Node.localName	/ja/docs/Web/API/Element/localName
 /ja/docs/DOM/Node.namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/DOM/Node.nextSibling	/ja/docs/Web/API/Node/nextSibling
 /ja/docs/DOM/Node.nodeName	/ja/docs/Web/API/Node/nodeName
@@ -1374,7 +1374,7 @@
 /ja/docs/DOM/Node.normalize	/ja/docs/Web/API/Node/normalize
 /ja/docs/DOM/Node.ownerDocument	/ja/docs/Web/API/Node/ownerDocument
 /ja/docs/DOM/Node.parentNode	/ja/docs/Web/API/Node/parentNode
-/ja/docs/DOM/Node.prefix	/ja/docs/conflicting/Web/API/Element/prefix
+/ja/docs/DOM/Node.prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/DOM/Node.previousSibling	/ja/docs/Web/API/Node/previousSibling
 /ja/docs/DOM/Node.removeChild	/ja/docs/Web/API/Node/removeChild
 /ja/docs/DOM/Node.replaceChild	/ja/docs/Web/API/Node/replaceChild
@@ -1510,7 +1510,7 @@
 /ja/docs/DOM/element.lang	/ja/docs/Web/API/HTMLElement/lang
 /ja/docs/DOM/element.lastChild	/ja/docs/Web/API/Node/lastChild
 /ja/docs/DOM/element.length	/ja/docs/Web/API/NodeList/length
-/ja/docs/DOM/element.localName	/ja/docs/conflicting/Web/API/Element/localName
+/ja/docs/DOM/element.localName	/ja/docs/Web/API/Element/localName
 /ja/docs/DOM/element.name	/ja/docs/conflicting/Web/API
 /ja/docs/DOM/element.namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/DOM/element.nextSibling	/ja/docs/Web/API/Node/nextSibling
@@ -1527,7 +1527,7 @@
 /ja/docs/DOM/element.onpaste	/ja/docs/Web/API/HTMLElement/onpaste
 /ja/docs/DOM/element.ownerDocument	/ja/docs/Web/API/Node/ownerDocument
 /ja/docs/DOM/element.parentNode	/ja/docs/Web/API/Node/parentNode
-/ja/docs/DOM/element.prefix	/ja/docs/conflicting/Web/API/Element/prefix
+/ja/docs/DOM/element.prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/DOM/element.previousSibling	/ja/docs/Web/API/Node/previousSibling
 /ja/docs/DOM/element.querySelectorAll	/ja/docs/Web/API/Element/querySelectorAll
 /ja/docs/DOM/element.removeAttribute	/ja/docs/Web/API/Element/removeAttribute
@@ -1689,7 +1689,7 @@
 /ja/docs/DOM/window.navigator.plugins	/ja/docs/Web/API/NavigatorPlugins/plugins
 /ja/docs/DOM/window.navigator.product	/ja/docs/Web/API/NavigatorID/product
 /ja/docs/DOM/window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/DOM/window.navigator.registerContentHandler	/ja/docs/Web/API/Navigator/registerContentHandler
+/ja/docs/DOM/window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/DOM/window.navigator.registerProtocolHandler	/ja/docs/Web/API/Navigator/registerProtocolHandler
 /ja/docs/DOM/window.navigator.userAgent	/ja/docs/Web/API/NavigatorID/userAgent
 /ja/docs/DOM/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
@@ -1814,7 +1814,7 @@
 /ja/docs/DOM:element.lang	/ja/docs/Web/API/HTMLElement/lang
 /ja/docs/DOM:element.lastChild	/ja/docs/Web/API/Node/lastChild
 /ja/docs/DOM:element.length	/ja/docs/Web/API/NodeList/length
-/ja/docs/DOM:element.localName	/ja/docs/conflicting/Web/API/Element/localName
+/ja/docs/DOM:element.localName	/ja/docs/Web/API/Element/localName
 /ja/docs/DOM:element.namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/DOM:element.nextSibling	/ja/docs/Web/API/Node/nextSibling
 /ja/docs/DOM:element.nodeName	/ja/docs/Web/API/Node/nodeName
@@ -1825,7 +1825,7 @@
 /ja/docs/DOM:element.onpaste	/ja/docs/Web/API/HTMLElement/onpaste
 /ja/docs/DOM:element.ownerDocument	/ja/docs/Web/API/Node/ownerDocument
 /ja/docs/DOM:element.parentNode	/ja/docs/Web/API/Node/parentNode
-/ja/docs/DOM:element.prefix	/ja/docs/conflicting/Web/API/Element/prefix
+/ja/docs/DOM:element.prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/DOM:element.previousSibling	/ja/docs/Web/API/Node/previousSibling
 /ja/docs/DOM:element.removeAttribute	/ja/docs/Web/API/Element/removeAttribute
 /ja/docs/DOM:element.removeAttributeNS	/ja/docs/Web/API/Element/removeAttributeNS
@@ -1915,7 +1915,7 @@
 /ja/docs/DOM:window.navigator.plugins	/ja/docs/Web/API/NavigatorPlugins/plugins
 /ja/docs/DOM:window.navigator.product	/ja/docs/Web/API/NavigatorID/product
 /ja/docs/DOM:window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/DOM:window.navigator.registerContentHandler	/ja/docs/Web/API/Navigator/registerContentHandler
+/ja/docs/DOM:window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/DOM:window.navigator.registerProtocolHandler	/ja/docs/Web/API/Navigator/registerProtocolHandler
 /ja/docs/DOM:window.navigator.userAgent	/ja/docs/Web/API/NavigatorID/userAgent
 /ja/docs/DOM:window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
@@ -2265,7 +2265,7 @@
 /ja/docs/DragDrop/Dragging_and_Dropping_Multiple_Items	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items
 /ja/docs/DragDrop/Recommended_Drag_Types	/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 /ja/docs/DragDrop/ドラッグ＆ドロップ	/ja/docs/Web/API/HTML_Drag_and_Drop_API
-/ja/docs/Drawing_Graphics_with_Canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
+/ja/docs/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Drawing_text_using_a_canvas	/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /ja/docs/Dynamically_modifying_XUL-based_user_interface	/ja/docs/orphaned/Dynamically_modifying_XUL-based_user_interface
 /ja/docs/E4X/Processing_XML_with_E4X	/ja/docs/orphaned/E4X/Processing_XML_with_E4X
@@ -2389,7 +2389,7 @@
 /ja/docs/HTML/Block-level_elements	/ja/docs/Web/HTML/Block-level_elements
 /ja/docs/HTML/CORS_settings_attributes	/ja/docs/Web/HTML/Attributes/crossorigin
 /ja/docs/HTML/Canvas	/ja/docs/Web/API/Canvas_API
-/ja/docs/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
+/ja/docs/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/HTML/Canvas/Tutorial	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/HTML/Content_Editable	/ja/docs/Web/Guide/HTML/Editable_content
 /ja/docs/HTML/Content_categories	/ja/docs/Web/Guide/HTML/Content_categories
@@ -3112,7 +3112,7 @@
 /ja/docs/JavaScript/Reference/Statements/var	/ja/docs/Web/JavaScript/Reference/Statements/var
 /ja/docs/JavaScript/Reference/Statements/while	/ja/docs/Web/JavaScript/Reference/Statements/while
 /ja/docs/JavaScript/Reference/Statements/with	/ja/docs/Web/JavaScript/Reference/Statements/with
-/ja/docs/JavaScript/Reference/Statements/yield	/ja/docs/conflicting/Web/JavaScript/Reference/Operators/yield
+/ja/docs/JavaScript/Reference/Statements/yield	/ja/docs/Web/JavaScript/Reference/Operators/yield
 /ja/docs/JavaScript/Reference/文	/ja/docs/Web/JavaScript/Reference/Statements
 /ja/docs/JavaScript/Reference/文/for...of	/ja/docs/Web/JavaScript/Reference/Statements/for...of
 /ja/docs/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
@@ -3666,7 +3666,7 @@
 /ja/docs/Web-d/Guide/CSS/Getting_started/Lists	/ja/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/Web-d/Guide/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
 /ja/docs/Web-d/Guide/CSS/Getting_started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/ja/docs/Web-d/Guide/CSS/Getting_started/Tables	/ja/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
+/ja/docs/Web-d/Guide/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web-d/Guide/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web-d/Guide/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web-dd/Guide/CSS/Getting_started/Cascading_and_inheritance	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
@@ -3680,6 +3680,7 @@
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/The_stacking_context	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 /ja/docs/Web/API/AbstractWorker	/ja/docs/orphaned/Web/API/AbstractWorker
 /ja/docs/Web/API/AbstractWorker/onerror	/ja/docs/orphaned/Web/API/AbstractWorker/onerror
+/ja/docs/Web/API/Ambient_Light_Events	/ja/docs/orphaned/Web/API/Ambient_Light_Events
 /ja/docs/Web/API/Apps	/ja/docs/Web/API/DOMApplicationsRegistry
 /ja/docs/Web/API/Apps.checkInstalled	/ja/docs/Web/API/DOMApplicationsRegistry/checkInstalled
 /ja/docs/Web/API/Apps.getInstalled	/ja/docs/Web/API/DOMApplicationsRegistry/getInstalled
@@ -3716,6 +3717,14 @@
 /ja/docs/Web/API/AudioContext/onstatechange	/ja/docs/Web/API/BaseAudioContext/onstatechange
 /ja/docs/Web/API/AudioContext/sampleRate	/ja/docs/Web/API/BaseAudioContext/sampleRate
 /ja/docs/Web/API/AudioContext/state	/ja/docs/Web/API/BaseAudioContext/state
+/ja/docs/Web/API/Body	/ja/docs/orphaned/Web/API/Body
+/ja/docs/Web/API/Body/arrayBuffer	/ja/docs/orphaned/Web/API/Body/arrayBuffer
+/ja/docs/Web/API/Body/blob	/ja/docs/orphaned/Web/API/Body/blob
+/ja/docs/Web/API/Body/body	/ja/docs/orphaned/Web/API/Body/body
+/ja/docs/Web/API/Body/bodyUsed	/ja/docs/orphaned/Web/API/Body/bodyUsed
+/ja/docs/Web/API/Body/formData	/ja/docs/orphaned/Web/API/Body/formData
+/ja/docs/Web/API/Body/json	/ja/docs/orphaned/Web/API/Body/json
+/ja/docs/Web/API/Body/text	/ja/docs/orphaned/Web/API/Body/text
 /ja/docs/Web/API/Boolean	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/Web/API/CSSMatrix	/ja/docs/Web/API/DOMMatrix
 /ja/docs/Web/API/CSSStyleSheet.insertRule	/ja/docs/Web/API/CSSStyleSheet/insertRule
@@ -3724,7 +3733,10 @@
 /ja/docs/Web/API/CanvasRenderingContext2D.clearHitRegions	/ja/docs/Web/API/CanvasRenderingContext2D/clearHitRegions
 /ja/docs/Web/API/CanvasRenderingContext2D.drawFocusIfNeeded	/ja/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 /ja/docs/Web/API/CanvasRenderingContext2D.removeHitRegion	/ja/docs/Web/API/CanvasRenderingContext2D/removeHitRegion
-/ja/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
+/ja/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial
+/ja/docs/Web/API/ChildNode	/ja/docs/orphaned/Web/API/ChildNode
+/ja/docs/Web/API/ChildNode/after	/ja/docs/orphaned/Web/API/ChildNode/after
+/ja/docs/Web/API/ChildNode/before	/ja/docs/orphaned/Web/API/ChildNode/before
 /ja/docs/Web/API/ChildNode/remove	/ja/docs/orphaned/Web/API/ChildNode/remove
 /ja/docs/Web/API/ChildNode/replaceWith	/ja/docs/orphaned/Web/API/ChildNode/replaceWith
 /ja/docs/Web/API/Console.error	/ja/docs/Web/API/Console/error
@@ -3732,6 +3744,7 @@
 /ja/docs/Web/API/DOMCursor.done	/ja/docs/Web/API/DOMCursor/done
 /ja/docs/Web/API/DOMRequest.error	/ja/docs/Web/API/DOMRequest/error
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
+/ja/docs/Web/API/DeviceLightEvent	/ja/docs/orphaned/Web/API/DeviceLightEvent
 /ja/docs/Web/API/DeviceLightEvent.value	/ja/docs/orphaned/Web/API/DeviceLightEvent/value
 /ja/docs/Web/API/DeviceLightEvent/value	/ja/docs/orphaned/Web/API/DeviceLightEvent/value
 /ja/docs/Web/API/DeviceProximityEvent/max	/ja/docs/orphaned/Web/API/DeviceProximityEvent/max
@@ -3879,6 +3892,7 @@
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator.mozFMRadio	/ja/docs/Web/API/Navigator/mozFMRadio
 /ja/docs/Web/API/Navigator/javaEnabled	/ja/docs/Web/API/NavigatorPlugins/javaEnabled
+/ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/Navigator/userAgent	/ja/docs/Web/API/NavigatorID/userAgent
 /ja/docs/Web/API/NavigatorLanguage.languages	/ja/docs/Web/API/NavigatorLanguage/languages
 /ja/docs/Web/API/Node.appendChild	/ja/docs/Web/API/Node/appendChild
@@ -3897,7 +3911,7 @@
 /ja/docs/Web/API/Node.isSameNode	/ja/docs/Web/API/Node/isSameNode
 /ja/docs/Web/API/Node.isSupported	/ja/docs/Web/API/Node/isSupported
 /ja/docs/Web/API/Node.lastChild	/ja/docs/Web/API/Node/lastChild
-/ja/docs/Web/API/Node.localName	/ja/docs/conflicting/Web/API/Element/localName
+/ja/docs/Web/API/Node.localName	/ja/docs/Web/API/Element/localName
 /ja/docs/Web/API/Node.namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/Web/API/Node.nextSibling	/ja/docs/Web/API/Node/nextSibling
 /ja/docs/Web/API/Node.nodeName	/ja/docs/Web/API/Node/nodeName
@@ -3908,19 +3922,20 @@
 /ja/docs/Web/API/Node.ownerDocument	/ja/docs/Web/API/Node/ownerDocument
 /ja/docs/Web/API/Node.parentElement	/ja/docs/Web/API/Node/parentElement
 /ja/docs/Web/API/Node.parentNode	/ja/docs/Web/API/Node/parentNode
-/ja/docs/Web/API/Node.prefix	/ja/docs/conflicting/Web/API/Element/prefix
+/ja/docs/Web/API/Node.prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/Web/API/Node.previousSibling	/ja/docs/Web/API/Node/previousSibling
 /ja/docs/Web/API/Node.removeChild	/ja/docs/Web/API/Node/removeChild
 /ja/docs/Web/API/Node.replaceChild	/ja/docs/Web/API/Node/replaceChild
 /ja/docs/Web/API/Node.textContent	/ja/docs/Web/API/Node/textContent
 /ja/docs/Web/API/Node/baseURIObject	/ja/docs/conflicting/Web/API/Node
-/ja/docs/Web/API/Node/cloneNode-old	/ja/docs/Web/API/Node/getUserData
+/ja/docs/Web/API/Node/cloneNode-old	/ja/docs/orphaned/Web/API/Node/getUserData
 /ja/docs/Web/API/Node/firstChild-temp	/ja/docs/Web/API/Node/firstChild
+/ja/docs/Web/API/Node/getUserData	/ja/docs/orphaned/Web/API/Node/getUserData
 /ja/docs/Web/API/Node/innerText	/ja/docs/Web/API/HTMLElement/innerText
-/ja/docs/Web/API/Node/localName	/ja/docs/conflicting/Web/API/Element/localName
+/ja/docs/Web/API/Node/localName	/ja/docs/Web/API/Element/localName
 /ja/docs/Web/API/Node/namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/Web/API/Node/nodePrincipal	/ja/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
-/ja/docs/Web/API/Node/prefix	/ja/docs/conflicting/Web/API/Element/prefix
+/ja/docs/Web/API/Node/prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e
 /ja/docs/Web/API/ParentNode	/ja/docs/orphaned/Web/API/ParentNode
@@ -4195,7 +4210,7 @@
 /ja/docs/Web/API/window.navigator.plugins	/ja/docs/Web/API/NavigatorPlugins/plugins
 /ja/docs/Web/API/window.navigator.product	/ja/docs/Web/API/NavigatorID/product
 /ja/docs/Web/API/window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/Web/API/window.navigator.registerContentHandler	/ja/docs/Web/API/Navigator/registerContentHandler
+/ja/docs/Web/API/window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/window.navigator.userAgent	/ja/docs/Web/API/NavigatorID/userAgent
 /ja/docs/Web/API/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
 /ja/docs/Web/API/window.navigator.vendorSub	/ja/docs/Web/API/Navigator/vendorSub
@@ -4366,7 +4381,7 @@
 /ja/docs/Web/CSS/Getting_started/Lists	/ja/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/Web/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
 /ja/docs/Web/CSS/Getting_started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/ja/docs/Web/CSS/Getting_started/Tables	/ja/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
+/ja/docs/Web/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web/CSS/Index	/ja/docs/orphaned/Web/CSS/Index
@@ -4438,7 +4453,8 @@
 /ja/docs/Web/CSS/minmax	/ja/docs/Web/CSS/minmax()
 /ja/docs/Web/CSS/none	/ja/docs/conflicting/Web/CSS/float
 /ja/docs/Web/CSS/normal	/ja/docs/conflicting/Web/CSS/font-variant
-/ja/docs/Web/CSS/paint	/ja/docs/Web/CSS/paint()
+/ja/docs/Web/CSS/paint	/ja/docs/orphaned/Web/CSS/paint()
+/ja/docs/Web/CSS/paint()	/ja/docs/orphaned/Web/CSS/paint()
 /ja/docs/Web/CSS/radial-gradient	/ja/docs/orphaned/Web/CSS/radial-gradient()
 /ja/docs/Web/CSS/radial-gradient()	/ja/docs/orphaned/Web/CSS/radial-gradient()
 /ja/docs/Web/CSS/repeat	/ja/docs/Web/CSS/repeat()
@@ -4464,6 +4480,7 @@
 /ja/docs/Web/CSS/transform-function/skewY	/ja/docs/Web/CSS/transform-function/skewY()
 /ja/docs/Web/CSS/transform-function/translate	/ja/docs/Web/CSS/transform-function/translate()
 /ja/docs/Web/CSS/transform-function/translate3d	/ja/docs/Web/CSS/transform-function/translate3d()
+/ja/docs/Web/CSS/transform-function/translateX	/ja/docs/orphaned/Web/CSS/transform-function/translateX
 /ja/docs/Web/CSS/transform-function/translateY	/ja/docs/Web/CSS/transform-function/translateY()
 /ja/docs/Web/CSS/transform-function/translateZ	/ja/docs/Web/CSS/transform-function/translateZ()
 /ja/docs/Web/CSS/uri	/ja/docs/conflicting/Web/CSS/url()
@@ -4563,7 +4580,7 @@
 /ja/docs/Web/Guide/CSS/Getting_started/Lists	/ja/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/Web/Guide/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
 /ja/docs/Web/Guide/CSS/Getting_started/Selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors
-/ja/docs/Web/Guide/CSS/Getting_started/Tables	/ja/docs/conflicting/Learn/CSS/Building_blocks/Styling_tables
+/ja/docs/Web/Guide/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web/Guide/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web/Guide/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web/Guide/CSS/Getting_started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -4597,9 +4614,9 @@
 /ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
 /ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/Web/Events/Orientation_and_motion_data_explained
 /ja/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/ja/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
-/ja/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
+/ja/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/Guide/HTML	/ja/docs/Learn/HTML
-/ja/docs/Web/Guide/HTML/Canvas_tutorial	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial
+/ja/docs/Web/Guide/HTML/Canvas_tutorial	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Advanced_animations	/ja/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors	/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations	/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations
@@ -4639,7 +4656,7 @@
 /ja/docs/Web/Guide/Using_FormData_Objects	/ja/docs/conflicting/Web/API/FormData/Using_FormData_Objects
 /ja/docs/Web/HTML/CORS_settings_attributes	/ja/docs/Web/HTML/Attributes/crossorigin
 /ja/docs/Web/HTML/Canvas	/ja/docs/Web/API/Canvas_API
-/ja/docs/Web/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/conflicting/Web/API/Canvas_API/Tutorial_3cd5468edc15a1ef1ddc0d2b17e1fa5d
+/ja/docs/Web/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/HTML/Canvas/Tutorial	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/HTML/Content_Editable	/ja/docs/Web/Guide/HTML/Editable_content
 /ja/docs/Web/HTML/Content_Editable/Rich-Text_Editing_in_Mozilla	/ja/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
@@ -4931,7 +4948,22 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Locale/region	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Locale/script	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Locale/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
-/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Map
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@iterator
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/@@species	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/Map	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/Map
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/clear	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/delete	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/entries	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/get	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/get
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/has	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/has
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/keys	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/prototype	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/set	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/set
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/size	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/size
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Map/values	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/values
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Number/constructor	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Number
 /ja/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
@@ -5016,7 +5048,7 @@
 /ja/docs/Web/JavaScript/Reference/Properties_Index	/ja/docs/Web/JavaScript/Reference
 /ja/docs/Web/JavaScript/Reference/Reserved_Words	/ja/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
 /ja/docs/Web/JavaScript/Reference/Statements/default	/ja/docs/Web/JavaScript/Reference/Statements/switch
-/ja/docs/Web/JavaScript/Reference/Statements/yield	/ja/docs/conflicting/Web/JavaScript/Reference/Operators/yield
+/ja/docs/Web/JavaScript/Reference/Statements/yield	/ja/docs/Web/JavaScript/Reference/Operators/yield
 /ja/docs/Web/JavaScript/Reference/arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ja/docs/Web/JavaScript/Reference/template_strings	/ja/docs/Web/JavaScript/Reference/Template_literals
 /ja/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/ja/docs/Web/Security/Same-origin_policy
@@ -5158,7 +5190,7 @@
 /ja/docs/WebAPI/Managing_screen_orientation	/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ja/docs/WebAPI/Network_Information	/ja/docs/Web/API/Network_Information_API
 /ja/docs/WebAPI/Proximity	/ja/docs/Web/API/Proximity_Events
-/ja/docs/WebAPI/Using_Light_Events	/ja/docs/Web/API/Ambient_Light_Events
+/ja/docs/WebAPI/Using_Light_Events	/ja/docs/orphaned/Web/API/Ambient_Light_Events
 /ja/docs/WebAPI/Using_Web_Notifications	/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ja/docs/WebAPI/Using_geolocation	/ja/docs/Web/API/Geolocation_API
 /ja/docs/WebGL	/ja/docs/Web/API/WebGL_API
@@ -5356,7 +5388,7 @@
 /ja/docs/XSLT/value-of	/ja/docs/Web/XSLT/Element/value-of
 /ja/docs/XSLT:Elements	/ja/docs/Web/XSLT/Element
 /ja/docs/XSLT:value-of	/ja/docs/Web/XSLT/Element/value-of
-/ja/docs/XSLTProcessor	/ja/docs/conflicting/Web/API/XSLTProcessor
+/ja/docs/XSLTProcessor	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/XSLT_in_Gecko	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/XSLT_in_Gecko/Basic_Example	/ja/docs/Web/API/XSLTProcessor/Basic_Example
 /ja/docs/XSLT_in_Gecko/Browser_Differences	/ja/docs/Web/API/XSLTProcessor/Browser_Differences
@@ -5670,7 +5702,7 @@
 /ja/docs/reftest_opportunities_files	/ja/docs/orphaned/reftest_opportunities_files
 /ja/docs/slice	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice
 /ja/docs/theme	/ja/docs/Themes
-/ja/docs/title	/ja/docs/conflicting/Web/HTML/Element/title
+/ja/docs/title	/ja/docs/Web/HTML/Element/title
 /ja/docs/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
 /ja/docs/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
 /ja/docs/width	/ja/docs/conflicting/Web/CSS/width_eaae26a6fb20ed3ef54fb23bfa0b1fcc

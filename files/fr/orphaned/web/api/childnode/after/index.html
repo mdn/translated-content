@@ -1,0 +1,185 @@
+---
+title: ChildNode.after()
+slug: orphaned/Web/API/ChildNode/after
+tags:
+  - API
+  - DOM
+  - Méthode
+  - Noeud
+  - Reference
+translation_of: Web/API/ChildNode/after
+original_slug: Web/API/ChildNode/after
+---
+<div>{{APIRef ("DOM")}} {{SeeCompatTable}}</div>
+
+<div>La méthode <code><strong>ChildNode.after ()</strong></code> insère un ensemble d'objets {{domxref ("Node")}} ou {{domxref ("DOMString")}} dans la liste des enfants de ce parent de ChildNode, juste après ce ChildNode. Les objets {{domxref ("DOMString")}} sont insérés comme des noeuds {{domxref ("Text")}} équivalents.</div>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="syntaxbox">[Throws, Unscopable]
+void ChildNode.after((Node or DOMString)... nodes);
+</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code>nodes</code></dt>
+ <dd>Un ensemble d'objets {{domxref ("Node")}} ou {{domxref ("DOMString")}} à insérer.</dd>
+</dl>
+
+<h3 id="Exceptions">Exceptions</h3>
+
+<ul>
+ <li>{{Domxref ("HierarchyRequestError")}} : Le noeud ne peut pas être inséré au point spécifié dans la hiérarchie.</li>
+</ul>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Insertion_d'un_élément">Insertion d'un élément</h3>
+
+<pre class="brush: js">var parent = document.createElement("div");
+var child = document.createElement("p");
+parent.appendChild(child);
+var span = document.createElement("span");
+
+child.after(span);
+
+console.log(parent.outerHTML);
+// "&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;"
+</pre>
+
+<h3 id="Insertion_d'un_texte">Insertion d'un texte</h3>
+
+<pre class="brush: js">var parent = document.createElement("div");
+var child = document.createElement("p");
+parent.appendChild(child);
+
+child.after("Text");
+
+console.log(parent.outerHTML);
+// "&lt;div&gt;&lt;p&gt;&lt;/p&gt;Text&lt;/div&gt;"</pre>
+
+<h3 id="Insertion_d'un_élément_et_de_texte">Insertion d'un élément et de  texte</h3>
+
+<pre class="brush: js">var parent = document.createElement("div");
+var child = document.createElement("p");
+parent.appendChild(child);
+var span = document.createElement("span");
+
+child.after(span, "Text");
+
+console.log(parent.outerHTML);
+// "&lt;div&gt;&lt;p&gt;&lt;/p&gt;&lt;span&gt;&lt;/span&gt;Text&lt;/div&gt;"</pre>
+
+<h3 id="ChildNode.after()_n'est_pas_accessible"><code>ChildNode.after()</code> n'est pas accessible</h3>
+
+<p>La méthode <code>after()</code> <span class="short_text" id="result_box" lang="fr"><span>n'est pas compris dans l'instruction </span></span><code>with</code> . Voir {{jsxref("Symbol.unscopables")}} pour plus d'informations.</p>
+
+<pre class="brush: js">with(node) {
+  after("foo");
+}
+// ReferenceError: after n'est pas défini </pre>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p>Vous pouvez appliquer la méthode <code>after()</code> dans Internet Explorer 9 et plus haut avec le code suivant :</p>
+
+<pre class="brush: js">//de : https://github.com/jserz/js_piece/blob/master/DOM/ChildNode/after()/after().md
+(function (arr) {
+  arr.forEach(function (item) {
+    if (item.hasOwnProperty('after')) {
+      return;
+    }
+    Object.defineProperty(item, 'after', {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: function after() {
+        var argArr = Array.prototype.slice.call(arguments),
+          docFrag = document.createDocumentFragment();
+
+        argArr.forEach(function (argItem) {
+          var isNode = argItem instanceof Node;
+          docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+        });
+
+        this.parentNode.insertBefore(docFrag, this.nextSibling);
+      }
+    });
+  });
+})([Element.prototype, CharacterData.prototype, DocumentType.prototype]);</pre>
+
+<h2 id="_Polyfill_Element.prototype.after" name="_Polyfill_Element.prototype.after"> </h2>
+
+<pre class="brush: js">//https://github.com/FabioVergani/js-Polyfill_Element.prototype.after/blob/master/after.js
+
+(function(x){
+ var o=x.prototype,p='after';
+ if(!o[p]){
+    o[p]=function(){
+     var e, m=arguments, l=m.length, i=0, t=this, p=t.parentNode, n=Node, s=String, d=document;
+     if(p!==null){
+        while(i&lt;l){
+         e=m[i];
+         if(e instanceof n){
+            t=t.nextSibling;
+            if(t!==null){
+                p.insertBefore(e,t);
+            }else{
+                p.appendChild(e);
+            };
+         }else{
+            p.appendChild(d.createTextNode(s(e)));
+         };
+         ++i;
+        };
+     };
+    };
+ };
+})(Element);
+
+
+
+/*
+min:
+
+(function(x){
+ var o=x.prototype;
+ o.after||(o.after=function(){var e,m=arguments,l=m.length,i=0,t=this,p=t.parentNode,n=Node,s=String,d=document;if(p!==null){while(i&lt;l){((e=m[i]) instanceof n)?(((t=t.nextSibling )!==null)?p.insertBefore(e,t):p.appendChild(e)):p.appendChild(d.createTextNode(s(e)));++i;}}});
+}(Element));
+
+*/
+</pre>
+
+<h3 id="sect1"> </h3>
+
+<h2 id="Spécification">Spécification</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">Statut</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-childnode-after', 'ChildNode.after()')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("api.ChildNode.after")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>{{domxref("ChildNode")}} et {{domxref("ParentNode")}}</li>
+ <li>{{domxref("ChildNode.before()")}}</li>
+ <li>{{domxref("ParentNode.append()")}}</li>
+ <li>{{domxref("Node.appendChild()")}}</li>
+ <li>{{domxref("NodeList")}}</li>
+</ul>
