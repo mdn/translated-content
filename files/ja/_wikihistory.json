@@ -48823,51 +48823,6 @@
       "Marsf"
     ]
   },
-  "conflicting/Web/CSS/@viewport": {
-    "modified": "2020-10-15T22:35:00.773Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "conflicting/Web/CSS/@viewport_516ab4b0283b5b2231fb657505e22440": {
-    "modified": "2020-10-15T22:19:56.603Z",
-    "contributors": [
-      "Uemmra3",
-      "mzmjp"
-    ]
-  },
-  "conflicting/Web/CSS/@viewport_6e9c91ec34cdb0393d301240d0d50d84": {
-    "modified": "2020-10-15T22:04:16.205Z",
-    "contributors": [
-      "ExE-Boss",
-      "mfuji09"
-    ]
-  },
-  "conflicting/Web/CSS/@viewport_a33ee59ffd8336ffb3336900dea02e9f": {
-    "modified": "2020-10-15T22:13:25.298Z",
-    "contributors": [
-      "mfuji09",
-      "acid-chicken",
-      "silverskyvicto"
-    ]
-  },
-  "conflicting/Web/CSS/@viewport_d03ebc763769680c55d1a4258592d3ed": {
-    "modified": "2020-10-15T22:04:17.200Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss"
-    ]
-  },
-  "conflicting/Web/CSS/@viewport_e065ce90bde08c9679692adbe64f6518": {
-    "modified": "2020-10-15T21:44:32.570Z",
-    "contributors": [
-      "mfuji09",
-      "ExE-Boss",
-      "takahashim",
-      "dskmori",
-      ".Hiroya"
-    ]
-  },
   "conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
     "modified": "2019-03-23T23:37:28.021Z",
     "contributors": [
