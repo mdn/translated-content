@@ -373,6 +373,10 @@
 /ru/docs/Web/API/AudioContext/createPanner	/ru/docs/Web/API/BaseAudioContext/createPanner
 /ru/docs/Web/API/AudioContext/currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
 /ru/docs/Web/API/AudioContext/decodeAudioData	/ru/docs/Web/API/BaseAudioContext/decodeAudioData
+/ru/docs/Web/API/Body	/ru/docs/orphaned/Web/API/Body
+/ru/docs/Web/API/Body/arrayBuffer	/ru/docs/orphaned/Web/API/Body/arrayBuffer
+/ru/docs/Web/API/Body/formData	/ru/docs/orphaned/Web/API/Body/formData
+/ru/docs/Web/API/Body/json	/ru/docs/orphaned/Web/API/Body/json
 /ru/docs/Web/API/CSS_Object_Model/ориентация_экрана	/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ru/docs/Web/API/Canvas_API/Tutorial/Использование_изображений	/ru/docs/Web/API/Canvas_API/Tutorial/Using_images
 /ru/docs/Web/API/Canvas_API/Tutorial/Композиции	/ru/docs/Web/API/Canvas_API/Tutorial/Compositing
@@ -381,6 +385,7 @@
 /ru/docs/Web/API/Canvas_API/Tutorial/Рисование_текста	/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /ru/docs/Web/API/Canvas_API/Tutorial/Рисование_фигур	/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /ru/docs/Web/API/Canvas_API/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
+/ru/docs/Web/API/ChildNode	/ru/docs/orphaned/Web/API/ChildNode
 /ru/docs/Web/API/ChildNode/remove	/ru/docs/orphaned/Web/API/ChildNode/remove
 /ru/docs/Web/API/ChildNode/replaceWith	/ru/docs/orphaned/Web/API/ChildNode/replaceWith
 /ru/docs/Web/API/Coordinates	/ru/docs/Web/API/GeolocationCoordinates
@@ -435,6 +440,7 @@
 /ru/docs/Web/API/Node.replaceChild	/ru/docs/Web/API/Node/replaceChild
 /ru/docs/Web/API/Node.textContent	/ru/docs/Web/API/Node/textContent
 /ru/docs/Web/API/Node/baseURIObject	/ru/docs/conflicting/Web/API/Node
+/ru/docs/Web/API/Node/getUserData	/ru/docs/orphaned/Web/API/Node/getUserData
 /ru/docs/Web/API/Node/innerText	/ru/docs/Web/API/HTMLElement/innerText
 /ru/docs/Web/API/Node/localName	/ru/docs/Web/API/Element/localName
 /ru/docs/Web/API/Node/namespaceURI	/ru/docs/Web/API/Element/namespaceURI
@@ -757,7 +763,19 @@
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/prototype	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/prototype	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /ru/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/@@species	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/clear	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/delete	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/entries	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/get	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/get
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/has	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/has
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/keys	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Map/prototype	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Map
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/set	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/set
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/size	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/size
+/ru/docs/Web/JavaScript/Reference/Global_Objects/Map/values	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/values
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Math/Метод_Math.max()_	/ru/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Math/Метод_Math.max()_
 /ru/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number
 /ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/ru/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
