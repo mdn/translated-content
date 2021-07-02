@@ -61,7 +61,13 @@ String.raw`templateString`
     <dt>{{jsxref("TypeError")}}</dt>
     <dd>첫번째 인자의 객체의 포맷이 올바르지 않은 경우 {{jsxref("TypeError")}}예외가 발생(throw)한다.</dd>
 </dl>
+<h2 id="설명">설명</h2>
 
+<p><code>String.raw()</code>의 경우 보통 템플릿 리터럴과 많이 사용하고, 첫번째 구문의 경우 잘 사용되지 않습니다.
+왜냐하면 자바스크립트 엔진이  당신을 위해서 자동으로 적절한 인수로 호출해주기 때문입니다. ( 다른 태그 메서드들과 마찬가지로<a
+    href="/ko/docs/Web/JavaScript/Reference/Template_literals#tagged_template_literals">태그 메서드</a>).</p>
+
+<p><code>String.raw()</code>은 템플릿 리터럴의 유일한 내장 함수입니다. 기본 템플릿 기능과 동일하게 작동하며 연결을 수행합니다.  JavaScript 코드를 사용하여 다시 구현할 수도 있습니다.</p>
 <h2 id="예시">예시</h2>
 
 <h3 id="String.raw_사용">String.raw() 사용</h3>
