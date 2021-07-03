@@ -48332,26 +48332,6 @@
       "tanakanakanaka"
     ]
   },
-  "conflicting/Web/API/DocumentOrShadowRoot": {
-    "modified": "2020-10-15T22:15:52.863Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "conflicting/Web/API/DocumentOrShadowRoot/getSelection": {
-    "modified": "2019-03-23T23:38:33.748Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "ethertank"
-    ]
-  },
-  "conflicting/Web/API/DocumentOrShadowRoot_20ea0e1d91453a020aad3a16dbce16f1": {
-    "modified": "2020-10-15T22:15:54.517Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "conflicting/Web/API/FormData/Using_FormData_Objects": {
     "modified": "2019-03-23T23:31:20.923Z",
     "contributors": [
