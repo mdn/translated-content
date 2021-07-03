@@ -4611,7 +4611,7 @@
 /ja/docs/Web/Guide/DOM/Using_full_screen_mode	/ja/docs/Web/API/Fullscreen_API
 /ja/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
 /ja/docs/Web/Guide/Events	/ja/docs/orphaned/Web/Guide/Events
-/ja/docs/Web/Guide/Events/Creating_and_triggering_events /ja/docs/Web/Events/Creating_and_triggering_events
+/ja/docs/Web/Guide/Events/Creating_and_triggering_events	/ja/docs/Web/Events/Creating_and_triggering_events
 /ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
 /ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/Web/Events/Orientation_and_motion_data_explained
 /ja/docs/Web/Guide/Events/Overview_of_Events_and_Handlers	/ja/docs/orphaned/Web/Guide/Events/Overview_of_Events_and_Handlers
