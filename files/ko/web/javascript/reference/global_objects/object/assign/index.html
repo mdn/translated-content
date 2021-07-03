@@ -16,7 +16,7 @@ browser-compat: javascript.builtins.Object.assign
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Object.assign()</code> </strong>메소드는 원본 객체로부터 모든 열거할 수 있는({{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}) 하나 이상의 속성({{jsxref("Object/hasOwnProperty", "own properties", "", 1)}})들을 목표 객체로 복사합니다. 이는 수정된 목표 객체를 반환합니다.</p>
+<p><strong><code>Object.assign()</code> </strong>메소드는 출처 객체로부터 모든 열거할 수 있는({{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}) 하나 이상의 속성({{jsxref("Object/hasOwnProperty", "own properties", "", 1)}})들을 목표 객체로 복사합니다. 이는 수정된 목표 객체를 반환합니다.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/object-assign.html")}}</p>
 
@@ -28,9 +28,9 @@ browser-compat: javascript.builtins.Object.assign
 
 <dl>
  <dt><code><var>target</var></code></dt>
- <dd>목표 객체 - 원본 객체의 속성을 받아 반영된 목표 객체를 반환합니다.</dd>
+ <dd>목표 객체 - 출처 객체의 속성을 받아 반영된 목표 객체를 반환합니다.</dd>
  <dt><code><var>sources</var></code></dt>
- <dd>원본 객체(들) - 목표 객체에 반영하고자 하는 속성들을 갖고 있는 객체입니다.</dd>
+ <dd>출처 객체(들) - 목표 객체에 반영하고자 하는 속성들을 갖고 있는 객체입니다.</dd>
 </dl>
 
 <h3 id="Return_value">반환 값</h3>
@@ -39,10 +39,10 @@ browser-compat: javascript.builtins.Object.assign
 
 <h2 id="Description">설명</h2>
 
-<p>목표 객체에 동일한 {{jsxref("Object/keys", "키", "", 1)}}를 갖는 속성이 존재할 경우 그 속성 값은 원본 객체의 속성 값으로 덮어쓰여집니다. 동일하게, 앞의 원본 속성들은 뒤의 원본 속성들에게 덮어쓰여집니다.</p>
+<p>목표 객체에 동일한 {{jsxref("Object/keys", "키", "", 1)}}를 갖는 속성이 존재할 경우 그 속성 값은 출처 객체의 속성 값으로 덮어쓰여집니다. 동일하게, 앞의 출처 속성들은 뒤의 출처 속성들에게 덮어쓰여집니다.</p>
 
-<p><code>Object.assign()</code> 메소드는 원본 객체의 열거할 수 있는 속성만 목표 객체로 복사합니다. 이 메소드는 원본 객체의 <code>[[Get]]</code>, 목표 객체의 <code>[[Set]]</code> 을 사용하여 getter 와 setter 를 호출합니다. 그러므로 이는 속성을 단순히 복사하거나 새롭게 정의하는 것이 아니라 할당하는 것입니다.
-  병합될 원본 객체들이 getter 를 포함하는 경우 프로토타입에 새로운 속성들을 병합하기에는 적절하지 않을 수 있습니다.
+<p><code>Object.assign()</code> 메소드는 출처 객체의 열거할 수 있는 속성만 목표 객체로 복사합니다. 이 메소드는 출처 객체의 <code>[[Get]]</code>, 목표 객체의 <code>[[Set]]</code> 을 사용하여 getter 와 setter 를 호출합니다. 그러므로 이는 속성을 단순히 복사하거나 새롭게 정의하는 것이 아니라 할당하는 것입니다.
+  병합될 출처 객체들이 getter 를 포함하는 경우 프로토타입에 새로운 속성들을 병합하기에는 적절하지 않을 수 있습니다.
 </p>
 
 <p>속성의 열거성을 포함한 속성의 정의를 프로토타입으로 복사하려면 대신 {{jsxref("Object.getOwnPropertyDescriptor()")}} 와 {{jsxref("Object.defineProperty()")}} 를 사용해야합니다.</p>
@@ -53,7 +53,7 @@ browser-compat: javascript.builtins.Object.assign
 
 <div class="notecard note">
   <p><strong>Note:</strong> <code>Object.assign()</code> 메소드는 
-    {{jsxref("null")}} 또는 {{jsxref("undefined")}} 원본 값에 대해서 예외를 던지지 않음을 유의하세요.</p>
+    {{jsxref("null")}} 또는 {{jsxref("undefined")}} 출처 값에 대해서 예외를 던지지 않음을 유의하세요.</p>
 </div>
 
 <h2 id="Polyfill">폴리필</h2>
@@ -103,7 +103,7 @@ console.log(copy); // { a: 1 }
 
 <p>깊은 복사를 위해서는, 다른 방법을 사용해야 합니다. 왜냐하면 <code>Object.assign()</code> 은 속성 값을 복사하기 때문입니다.</p>
 
-<p>만약 원본 값이 객체를 참조하고 있다면, 참조 값만 복사합니다.</p>
+<p>만약 출처 값이 객체를 참조하고 있다면, 참조 값만 복사합니다.</p>
 
 <pre class="brush: js">function test() {
   'use strict';
@@ -205,11 +205,11 @@ Object.assign(target, { bar: 2 }, { foo2: 3, foo: 3, foo3: 3 }, { baz: 4 });
 // TypeError: "foo" is read-only
 // target.foo 에 할당할 때 예외 발생
 
-console.log(target.bar);  // 2, 첫 번째 원본 객체는 성공적으로 복사되었음.
-console.log(target.foo2); // 3, 두 번째 원본 객체의 첫 번째 프로퍼티도 성공적으로 복사되었음.
+console.log(target.bar);  // 2, 첫 번째 출처 객체는 성공적으로 복사되었음.
+console.log(target.foo2); // 3, 두 번째 출처 객체의 첫 번째 프로퍼티도 성공적으로 복사되었음.
 console.log(target.foo);  // 1, 여기에서 예외가 발생.
 console.log(target.foo3); // undefined, assign 메소드가 종료되었음, foo3 은 복사되지 않음.
-console.log(target.baz);  // undefined, 세 번째 원본 객체도 복사되지 않음.
+console.log(target.baz);  // undefined, 세 번째 출처 객체도 복사되지 않음.
 </pre>
 
 <h3 id="Copying_accessors">접근자 복사</h3>
