@@ -421,7 +421,7 @@
 /ja/docs/CSS/animation-timing-function	/ja/docs/Web/CSS/animation-timing-function
 /ja/docs/CSS/attr	/ja/docs/Web/CSS/attr()
 /ja/docs/CSS/aural	/ja/docs/Web/CSS/@media/aural
-/ja/docs/CSS/auto	/ja/docs/conflicting/Web/CSS/width
+/ja/docs/CSS/auto	/ja/docs/Web/CSS/width
 /ja/docs/CSS/backface-visibility	/ja/docs/Web/CSS/backface-visibility
 /ja/docs/CSS/background-attachment	/ja/docs/Web/CSS/background-attachment
 /ja/docs/CSS/background-clip	/ja/docs/Web/CSS/background-clip
@@ -4415,7 +4415,7 @@
 /ja/docs/Web/CSS/Using_multiple_backgrounds	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/Web/CSS/attr	/ja/docs/Web/CSS/attr()
 /ja/docs/Web/CSS/aural	/ja/docs/Web/CSS/@media/aural
-/ja/docs/Web/CSS/auto	/ja/docs/conflicting/Web/CSS/width
+/ja/docs/Web/CSS/auto	/ja/docs/Web/CSS/width
 /ja/docs/Web/CSS/border-radius/border-radius	/ja/docs/Web/CSS/border-radius
 /ja/docs/Web/CSS/border-top-left-radius_|_-moz-border-radius-topleft	/ja/docs/Web/CSS/border-top-left-radius
 /ja/docs/Web/CSS/box_model	/ja/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
@@ -5705,7 +5705,7 @@
 /ja/docs/title	/ja/docs/Web/HTML/Element/title
 /ja/docs/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource
 /ja/docs/toString	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
-/ja/docs/width	/ja/docs/conflicting/Web/CSS/width_eaae26a6fb20ed3ef54fb23bfa0b1fcc
+/ja/docs/width	/ja/docs/Web/CSS/width
 /ja/docs/window.clearInterval	/ja/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
 /ja/docs/window.screenY	/ja/docs/Web/API/Window/screenY
 /ja/docs/window.scrollMaxY	/ja/docs/Web/API/Window/scrollMaxY

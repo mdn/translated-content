@@ -48917,20 +48917,6 @@
       "sosleepy"
     ]
   },
-  "conflicting/Web/CSS/width": {
-    "modified": "2019-03-24T00:00:43.619Z",
-    "contributors": [
-      "ethertank",
-      "Taken"
-    ]
-  },
-  "conflicting/Web/CSS/width_eaae26a6fb20ed3ef54fb23bfa0b1fcc": {
-    "modified": "2019-03-23T23:31:06.728Z",
-    "contributors": [
-      "wbamberg",
-      "ethertank"
-    ]
-  },
   "conflicting/Web/CSS_eb0c7d23f84df658710ebb6b4bdec8ea": {
     "modified": "2019-03-23T23:44:01.923Z",
     "contributors": [
