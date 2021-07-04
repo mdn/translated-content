@@ -1,27 +1,39 @@
 ---
 title: 문자열 제대로 다루기
 slug: Learn/JavaScript/First_steps/Useful_string_methods
+tags:
+  - Article
+  - Beginner
+  - CodingScripting
+  - JavaScript
+  - Learn
+  - case
+  - indexof
+  - l10n:priority
+  - length
+  - lower
+  - replace
+  - split
+  - upper
 translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 <div>{{LearnSidebar}}</div>
 
 <div>{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}</div>
 
-<p class="summary"><span style="background-color: #fefefe; color: #000000; display: inline !important; float: none; font-family: Arial,Tahoma,Helvetica,sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: left; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">이제까지 문자열의 기초를 살펴보았습니다. 이제부터 - 텍스트 문자열의 길이 찾기, 문자열 합치기 및 쪼개기 등과 같은- 내장된 메서드를 사용하여 문자열에서 수행할 수 있는 유용한 작업에 대해 생각해 봅시다. 문자열의 한 문자를 다른 문자로 대체하는 등의 작업을 수행합니다.</span></p>
+<p class="summary">이제까지 문자열의 기초를 살펴보았습니다. 이제부터 속도를 높여 내장된 메서드를 사용하여 텍스트 문자열의 길이 찾기, 문자열 합치기 및 쪼개기, 문자열의 한 문자를 다른 문자로 대체하는 등과 같은 문자열을 다를 수 있는 유용한 작업에 대해 생각해 봅시다.</p>
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row"><span style="color: #252525; display: inline !important; float: none; font-family: Roboto,arial,sans-serif; font-size: 18px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">선수 과목 :</span></th>
-   <td>
-    <p><span style="color: #252525; display: inline !important; float: none; font-family: Roboto,arial,sans-serif; font-size: 18px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">기본 컴퓨터 활용 능력, HTML 및 CSS에 대한 기본적인 이해, JavaScript가 무엇인지 이해합니다.</span></p>
-   </td>
-  </tr>
-  <tr>
-   <th scope="row"><span style="color: #252525; display: inline !important; float: none; font-family: Roboto,arial,sans-serif; font-size: 18px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">목표:</span></th>
-   <td><span style="background-color: #fefefe; color: #000000; display: inline !important; float: none; font-family: Arial,Tahoma,Helvetica,sans-serif; font-size: 14px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: left; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">문자열이 객체임을 이해하고, 해당 객체에서 사용할 수있는 몇 가지 기본 메서드를 사용하여 문자열을 조작하는 방법을 배웁니다.</span></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Prerequisites:</th>
+      <td>기본 컴퓨터 활용 능력, HTML 및 CSS에 대한 기본적인 이해, JavaScript가 무엇인지에 대한 이해.</td>
+    </tr>
+    <tr>
+      <th scope="row">목표:</th>
+      <td>문자열이 객체임을 이해하고, 해당 객체에서 사용할 수있는 몇 가지 기본 메서드를 사용하여 문자열을 조작하는 방법을 배웁니다.</td>
+    </tr>
+  </tbody>
 </table>
 
 <h2 id="Strings_as_objects">Strings as objects</h2>
@@ -30,7 +42,7 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 
 <pre class="brush: js notranslate">var string = 'This is my string';</pre>
 
-<p><span style="color: #252525; display: inline !important; float: none; font-family: Roboto,arial,sans-serif; font-size: 18px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">변수가 문자열 객체 인스턴스되면, 결과적으로 수많은 속성과 메서드가 사용 가능하게 됩니다. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> 객체 페이지로 이동하여 페이지 측면의 목록을 내려다 보면 이것을 볼 수 있습니다!</span></p>
+<p><span style="color: #252525; display: inline !important; float: none; font-family: Roboto,arial,sans-serif; font-size: 18px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">변수가 문자열 객체 인스턴스되면, 결과적으로 수많은 속성과 메서드가 사용 가능하게 됩니다. <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> 객체 페이지로 이동하여 페이지 측면의 목록을 내려다 보면 이것을 볼 수 있습니다!</span></p>
 
 <p><span style="color: #252525; display: inline !important; float: none; font-family: Roboto,arial,sans-serif; font-size: 18px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: normal;">이제 뇌가 녹기 시작하기 전에, 걱정하지 마십시오! 학습 여행 중에 초기에 대부분을 알 필요가 없습니다. 그러나 여기에서 살펴볼 몇 가지 사항을 자주 사용하게 될 것입니다.</span></p>
 
