@@ -48611,12 +48611,10 @@
       "Kohei"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat": {
-    "modified": "2020-10-15T21:36:10.939Z",
+  "conflicting/Web/HTTP/Headers/X-DNS-Prefetch-Control": {
+    "modified": "2019-03-24T00:00:27.042Z",
     "contributors": [
-      "fscholz",
-      "mfuji09",
-      "shide55"
+      "RobinEgg"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/JSON": {
