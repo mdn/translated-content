@@ -49002,14 +49002,6 @@
       "RobinEgg"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat": {
-    "modified": "2020-10-15T21:36:10.939Z",
-    "contributors": [
-      "fscholz",
-      "mfuji09",
-      "shide55"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/JSON": {
     "modified": "2019-03-24T00:17:38.651Z",
     "contributors": [
