@@ -624,11 +624,12 @@
 /ko/docs/Web/API/Event/createEvent	/ko/docs/Web/API/Document/createEvent
 /ko/docs/Web/API/Fetch_API/Fetch의_사용법	/ko/docs/Web/API/Fetch_API/Using_Fetch
 /ko/docs/Web/API/FileReader.result	/ko/docs/Web/API/FileReader/result
-/ko/docs/Web/API/HTMLElement/dataset	/ko/docs/Web/API/HTMLOrForeignElement/dataset
+/ko/docs/Web/API/HTMLElement/dataset	/ko/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /ko/docs/Web/API/HTMLElement/style	/ko/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ko/docs/Web/API/HTMLElement/tabIndex	/ko/docs/Web/API/HTMLOrForeignElement/tabIndex
 /ko/docs/Web/API/HTMLHyperlinkElementUtils	/ko/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
+/ko/docs/Web/API/HTMLOrForeignElement/dataset	/ko/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API/Drag_operations	/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /ko/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ko/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
