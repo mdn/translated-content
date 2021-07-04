@@ -1349,7 +1349,7 @@
 /ja/docs/DOM/Node	/ja/docs/Web/API/Node
 /ja/docs/DOM/Node.appendChild	/ja/docs/Web/API/Node/appendChild
 /ja/docs/DOM/Node.attributes	/ja/docs/Web/API/Element/attributes
-/ja/docs/DOM/Node.baseURIObject	/ja/docs/conflicting/Web/API/Node
+/ja/docs/DOM/Node.baseURIObject	/ja/docs/Web/API/Node
 /ja/docs/DOM/Node.childNodes	/ja/docs/Web/API/Node/childNodes
 /ja/docs/DOM/Node.cloneNode	/ja/docs/Web/API/Node/cloneNode
 /ja/docs/DOM/Node.compareDocumentPosition	/ja/docs/Web/API/Node/compareDocumentPosition
@@ -1368,7 +1368,7 @@
 /ja/docs/DOM/Node.namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/DOM/Node.nextSibling	/ja/docs/Web/API/Node/nextSibling
 /ja/docs/DOM/Node.nodeName	/ja/docs/Web/API/Node/nodeName
-/ja/docs/DOM/Node.nodePrincipal	/ja/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
+/ja/docs/DOM/Node.nodePrincipal	/ja/docs/Web/API/Node
 /ja/docs/DOM/Node.nodeType	/ja/docs/Web/API/Node/nodeType
 /ja/docs/DOM/Node.nodeValue	/ja/docs/Web/API/Node/nodeValue
 /ja/docs/DOM/Node.normalize	/ja/docs/Web/API/Node/normalize
@@ -1416,7 +1416,7 @@
 /ja/docs/DOM/document.anchors	/ja/docs/Web/API/Document/anchors
 /ja/docs/DOM/document.applets	/ja/docs/Web/API/Document/applets
 /ja/docs/DOM/document.async	/ja/docs/Web/API/XMLDocument/async
-/ja/docs/DOM/document.baseURIObject	/ja/docs/conflicting/Web/API/Node
+/ja/docs/DOM/document.baseURIObject	/ja/docs/Web/API/Node
 /ja/docs/DOM/document.bgColor	/ja/docs/Web/API/Document/bgColor
 /ja/docs/DOM/document.body	/ja/docs/Web/API/Document/body
 /ja/docs/DOM/document.characterSet	/ja/docs/Web/API/Document/characterSet
@@ -1476,7 +1476,7 @@
 /ja/docs/DOM/element.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/DOM/element.appendChild	/ja/docs/Web/API/Node/appendChild
 /ja/docs/DOM/element.attributes	/ja/docs/Web/API/Element/attributes
-/ja/docs/DOM/element.baseURIObject	/ja/docs/conflicting/Web/API/Node
+/ja/docs/DOM/element.baseURIObject	/ja/docs/Web/API/Node
 /ja/docs/DOM/element.blur	/ja/docs/Web/API/HTMLOrForeignElement/blur
 /ja/docs/DOM/element.childNodes	/ja/docs/Web/API/Node/childNodes
 /ja/docs/DOM/element.classList	/ja/docs/Web/API/Element/classList
@@ -3898,7 +3898,7 @@
 /ja/docs/Web/API/NavigatorLanguage.languages	/ja/docs/Web/API/NavigatorLanguage/languages
 /ja/docs/Web/API/Node.appendChild	/ja/docs/Web/API/Node/appendChild
 /ja/docs/Web/API/Node.attributes	/ja/docs/Web/API/Element/attributes
-/ja/docs/Web/API/Node.baseURIObject	/ja/docs/conflicting/Web/API/Node
+/ja/docs/Web/API/Node.baseURIObject	/ja/docs/Web/API/Node
 /ja/docs/Web/API/Node.childNodes	/ja/docs/Web/API/Node/childNodes
 /ja/docs/Web/API/Node.cloneNode	/ja/docs/Web/API/Node/cloneNode
 /ja/docs/Web/API/Node.compareDocumentPosition	/ja/docs/Web/API/Node/compareDocumentPosition
@@ -3916,7 +3916,7 @@
 /ja/docs/Web/API/Node.namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/Web/API/Node.nextSibling	/ja/docs/Web/API/Node/nextSibling
 /ja/docs/Web/API/Node.nodeName	/ja/docs/Web/API/Node/nodeName
-/ja/docs/Web/API/Node.nodePrincipal	/ja/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
+/ja/docs/Web/API/Node.nodePrincipal	/ja/docs/Web/API/Node
 /ja/docs/Web/API/Node.nodeType	/ja/docs/Web/API/Node/nodeType
 /ja/docs/Web/API/Node.nodeValue	/ja/docs/Web/API/Node/nodeValue
 /ja/docs/Web/API/Node.normalize	/ja/docs/Web/API/Node/normalize
@@ -3928,14 +3928,14 @@
 /ja/docs/Web/API/Node.removeChild	/ja/docs/Web/API/Node/removeChild
 /ja/docs/Web/API/Node.replaceChild	/ja/docs/Web/API/Node/replaceChild
 /ja/docs/Web/API/Node.textContent	/ja/docs/Web/API/Node/textContent
-/ja/docs/Web/API/Node/baseURIObject	/ja/docs/conflicting/Web/API/Node
+/ja/docs/Web/API/Node/baseURIObject	/ja/docs/Web/API/Node
 /ja/docs/Web/API/Node/cloneNode-old	/ja/docs/orphaned/Web/API/Node/getUserData
 /ja/docs/Web/API/Node/firstChild-temp	/ja/docs/Web/API/Node/firstChild
 /ja/docs/Web/API/Node/getUserData	/ja/docs/orphaned/Web/API/Node/getUserData
 /ja/docs/Web/API/Node/innerText	/ja/docs/Web/API/HTMLElement/innerText
 /ja/docs/Web/API/Node/localName	/ja/docs/Web/API/Element/localName
 /ja/docs/Web/API/Node/namespaceURI	/ja/docs/Web/API/Element/namespaceURI
-/ja/docs/Web/API/Node/nodePrincipal	/ja/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
+/ja/docs/Web/API/Node/nodePrincipal	/ja/docs/Web/API/Node
 /ja/docs/Web/API/Node/prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/conflicting/Web/API/Element_861159909c20acebf8e506c3bb0e2f7e
