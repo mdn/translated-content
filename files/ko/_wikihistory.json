@@ -3540,19 +3540,6 @@
       "limkukhyun"
     ]
   },
-  "Web/API/Body": {
-    "modified": "2020-10-15T22:07:57.321Z",
-    "contributors": [
-      "alattalatta",
-      "RickBrown"
-    ]
-  },
-  "Web/API/Body/json": {
-    "modified": "2020-10-15T22:07:55.949Z",
-    "contributors": [
-      "ldss3sang"
-    ]
-  },
   "Web/API/BroadcastChannel": {
     "modified": "2020-10-15T22:17:58.054Z",
     "contributors": [
@@ -3799,18 +3786,6 @@
   },
   "Web/API/CharacterData": {
     "modified": "2020-10-15T22:10:05.669Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
-  "Web/API/ChildNode": {
-    "modified": "2020-10-15T22:04:53.961Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
-  "Web/API/ChildNode/before": {
-    "modified": "2020-10-15T22:10:12.463Z",
     "contributors": [
       "cs09g"
     ]
@@ -5345,15 +5320,6 @@
     "modified": "2020-10-15T22:30:21.466Z",
     "contributors": [
       "chlgusrb14747"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/dataset": {
-    "modified": "2020-10-15T21:56:46.705Z",
-    "contributors": [
-      "Kaben",
-      "alattalatta",
-      "jyhwng",
-      "KimSejune"
     ]
   },
   "Web/API/HTMLOrForeignElement/tabIndex": {
@@ -18197,6 +18163,31 @@
       "hyeonseok"
     ]
   },
+  "orphaned/Web/API/Body": {
+    "modified": "2020-10-15T22:07:57.321Z",
+    "contributors": [
+      "alattalatta",
+      "RickBrown"
+    ]
+  },
+  "orphaned/Web/API/Body/json": {
+    "modified": "2020-10-15T22:07:55.949Z",
+    "contributors": [
+      "ldss3sang"
+    ]
+  },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2020-10-15T22:04:53.961Z",
+    "contributors": [
+      "cs09g"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/before": {
+    "modified": "2020-10-15T22:10:12.463Z",
+    "contributors": [
+      "cs09g"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T22:10:05.225Z",
     "contributors": [
@@ -18244,6 +18235,15 @@
     "modified": "2020-10-15T22:15:23.043Z",
     "contributors": [
       "connorshea"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/dataset": {
+    "modified": "2020-10-15T21:56:46.705Z",
+    "contributors": [
+      "Kaben",
+      "alattalatta",
+      "jyhwng",
+      "KimSejune"
     ]
   },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {

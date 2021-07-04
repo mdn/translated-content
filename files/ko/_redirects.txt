@@ -595,8 +595,12 @@
 /ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 /ko/docs/Web/API/AbstractWorker	/ko/docs/orphaned/Web/API/AbstractWorker
 /ko/docs/Web/API/Ambient_Light_Events	/ko/docs/orphaned/Web/API/Ambient_Light_Events
+/ko/docs/Web/API/Body	/ko/docs/orphaned/Web/API/Body
+/ko/docs/Web/API/Body/json	/ko/docs/orphaned/Web/API/Body/json
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
+/ko/docs/Web/API/ChildNode	/ko/docs/orphaned/Web/API/ChildNode
+/ko/docs/Web/API/ChildNode/before	/ko/docs/orphaned/Web/API/ChildNode/before
 /ko/docs/Web/API/ChildNode/remove	/ko/docs/orphaned/Web/API/ChildNode/remove
 /ko/docs/Web/API/Detecting_device_orientation	/ko/docs/orphaned/Web/API/Detecting_device_orientation
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
@@ -620,11 +624,12 @@
 /ko/docs/Web/API/Event/createEvent	/ko/docs/Web/API/Document/createEvent
 /ko/docs/Web/API/Fetch_API/Fetch의_사용법	/ko/docs/Web/API/Fetch_API/Using_Fetch
 /ko/docs/Web/API/FileReader.result	/ko/docs/Web/API/FileReader/result
-/ko/docs/Web/API/HTMLElement/dataset	/ko/docs/Web/API/HTMLOrForeignElement/dataset
+/ko/docs/Web/API/HTMLElement/dataset	/ko/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /ko/docs/Web/API/HTMLElement/style	/ko/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ko/docs/Web/API/HTMLElement/tabIndex	/ko/docs/Web/API/HTMLOrForeignElement/tabIndex
 /ko/docs/Web/API/HTMLHyperlinkElementUtils	/ko/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
+/ko/docs/Web/API/HTMLOrForeignElement/dataset	/ko/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API/Drag_operations	/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /ko/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ko/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB

@@ -1557,13 +1557,6 @@
       "Ovkorz"
     ]
   },
-  "Web/API/ChildNode": {
-    "modified": "2020-01-17T16:06:19.710Z",
-    "contributors": [
-      "pefbrute",
-      "arronei"
-    ]
-  },
   "Web/API/Console": {
     "modified": "2019-03-23T23:09:41.834Z",
     "contributors": [
@@ -2941,13 +2934,6 @@
       "Mgjbot",
       "Ptak82",
       "Jan Dudek"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/dataset": {
-    "modified": "2020-10-15T22:07:00.382Z",
-    "contributors": [
-      "flakboy",
-      "lotny"
     ]
   },
   "Web/API/HTMLOrForeignElement/focus": {
@@ -11119,6 +11105,13 @@
       "Ptak82"
     ]
   },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2020-01-17T16:06:19.710Z",
+    "contributors": [
+      "pefbrute",
+      "arronei"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T21:53:18.455Z",
     "contributors": [
@@ -11139,6 +11132,13 @@
       "Ptak82",
       "Mgjbot",
       "Jan Dudek"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/dataset": {
+    "modified": "2020-10-15T22:07:00.382Z",
+    "contributors": [
+      "flakboy",
+      "lotny"
     ]
   },
   "orphaned/Web/API/Navigator/registerContentHandler": {
