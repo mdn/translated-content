@@ -3820,7 +3820,7 @@
 /ja/docs/Web/API/GlobalFetch	/en-US/docs/Web/API/WindowOrWorkerGlobalScope
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 /ja/docs/Web/API/HTMLElement/blur	/ja/docs/Web/API/HTMLOrForeignElement/blur
-/ja/docs/Web/API/HTMLElement/dataset	/ja/docs/Web/API/HTMLOrForeignElement/dataset
+/ja/docs/Web/API/HTMLElement/dataset	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /ja/docs/Web/API/HTMLElement/focus	/ja/docs/Web/API/HTMLOrForeignElement/focus
 /ja/docs/Web/API/HTMLElement/forceSpellCheck	/ja/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
 /ja/docs/Web/API/HTMLElement/nonce	/ja/docs/Web/API/HTMLOrForeignElement/nonce
@@ -3852,6 +3852,7 @@
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/username	/ja/docs/Web/API/HTMLAnchorElement/username
 /ja/docs/Web/API/HTMLIFrameElement.getVisible	/ja/docs/Web/API/HTMLIFrameElement/getVisible
 /ja/docs/Web/API/HTMLIFrameElement.stop	/ja/docs/Web/API/HTMLIFrameElement/stop
+/ja/docs/Web/API/HTMLOrForeignElement/dataset	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /ja/docs/Web/API/HTMLTableElement.align	/ja/docs/Web/API/HTMLTableElement/align
 /ja/docs/Web/API/HTMLTableElement.bgColor	/ja/docs/Web/API/HTMLTableElement/bgColor
 /ja/docs/Web/API/HTMLTableElement.border	/ja/docs/Web/API/HTMLTableElement/border

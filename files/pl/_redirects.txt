@@ -1996,7 +1996,8 @@
 /pl/docs/Web/API/Event/screenY	/pl/docs/Web/API/MouseEvent/screenY
 /pl/docs/Web/API/Event/shiftKey	/pl/docs/Web/API/MouseEvent/shiftKey
 /pl/docs/Web/API/Event/view	/pl/docs/Web/API/UIEvent/view
-/pl/docs/Web/API/HTMLElement/dataset	/pl/docs/Web/API/HTMLOrForeignElement/dataset
+/pl/docs/Web/API/HTMLElement/dataset	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
+/pl/docs/Web/API/HTMLOrForeignElement/dataset	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /pl/docs/Web/API/Navigator/appCodeName	/pl/docs/Web/API/NavigatorID/appCodeName
 /pl/docs/Web/API/Navigator/appName	/pl/docs/Web/API/NavigatorID/appName
 /pl/docs/Web/API/Navigator/appVersion	/pl/docs/Web/API/NavigatorID/appVersion

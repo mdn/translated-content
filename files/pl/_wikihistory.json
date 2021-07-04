@@ -2936,13 +2936,6 @@
       "Jan Dudek"
     ]
   },
-  "Web/API/HTMLOrForeignElement/dataset": {
-    "modified": "2020-10-15T22:07:00.382Z",
-    "contributors": [
-      "flakboy",
-      "lotny"
-    ]
-  },
   "Web/API/HTMLOrForeignElement/focus": {
     "modified": "2019-03-23T23:47:17.621Z",
     "contributors": [
@@ -11139,6 +11132,13 @@
       "Ptak82",
       "Mgjbot",
       "Jan Dudek"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/dataset": {
+    "modified": "2020-10-15T22:07:00.382Z",
+    "contributors": [
+      "flakboy",
+      "lotny"
     ]
   },
   "orphaned/Web/API/Navigator/registerContentHandler": {

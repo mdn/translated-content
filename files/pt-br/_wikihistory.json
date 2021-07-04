@@ -5616,15 +5616,6 @@
       "salgueiroso"
     ]
   },
-  "Web/API/HTMLOrForeignElement/dataset": {
-    "modified": "2020-10-15T21:46:41.594Z",
-    "contributors": [
-      "lago.aaron",
-      "Fernandolrs",
-      "Sipmann",
-      "emanueloliveira"
-    ]
-  },
   "Web/API/HTMLOrForeignElement/focus": {
     "modified": "2019-03-23T22:24:13.859Z",
     "contributors": [
@@ -17012,6 +17003,15 @@
     "modified": "2020-08-30T22:44:17.906Z",
     "contributors": [
       "bermarques"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/dataset": {
+    "modified": "2020-10-15T21:46:41.594Z",
+    "contributors": [
+      "lago.aaron",
+      "Fernandolrs",
+      "Sipmann",
+      "emanueloliveira"
     ]
   },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {

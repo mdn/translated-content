@@ -410,7 +410,7 @@
 /ru/docs/Web/API/Geolocation/Using_geolocation	/ru/docs/Web/API/Geolocation_API
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
 /ru/docs/Web/API/HTMLAudioElement/Audio()	/ru/docs/Web/API/HTMLAudioElement/Audio
-/ru/docs/Web/API/HTMLElement/dataset	/ru/docs/Web/API/HTMLOrForeignElement/dataset
+/ru/docs/Web/API/HTMLElement/dataset	/ru/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
 /ru/docs/Web/API/HTMLElement/nonce	/ru/docs/Web/API/HTMLOrForeignElement/nonce
 /ru/docs/Web/API/HTMLElement/style	/ru/docs/orphaned/Web/API/ElementCSSInlineStyle/style
@@ -429,6 +429,7 @@
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ru/docs/Web/API/HTMLAnchorElement/toString
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/username	/ru/docs/Web/API/HTMLAnchorElement/username
 /ru/docs/Web/API/HTMLImageElement.Image	/ru/docs/Web/API/HTMLImageElement/Image
+/ru/docs/Web/API/HTMLOrForeignElement/dataset	/ru/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /ru/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ru/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ru/docs/Web/API/MediaTrackConstraints/Эхоподавление	/ru/docs/Web/API/MediaTrackConstraints/echoCancellation
 /ru/docs/Web/API/NavigatorGeolocation	/ru/docs/conflicting/Web/API/Geolocation

@@ -1819,10 +1819,11 @@
 /es/docs/Web/API/Geolocation.getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition
 /es/docs/Web/API/Geolocation.watchPosition	/es/docs/Web/API/Geolocation/watchPosition
 /es/docs/Web/API/GlobalEventHandlers/onunload	/es/docs/Web/API/WindowEventHandlers/onunload
-/es/docs/Web/API/HTMLElement/dataset	/es/docs/Web/API/HTMLOrForeignElement/dataset
+/es/docs/Web/API/HTMLElement/dataset	/es/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /es/docs/Web/API/HTMLElement/focus	/es/docs/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/HTMLElement/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/HTMLElement/style	/es/docs/orphaned/Web/API/ElementCSSInlineStyle/style
+/es/docs/Web/API/HTMLOrForeignElement/dataset	/es/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /es/docs/Web/API/IDBObjectStore.add	/es/docs/Web/API/IDBObjectStore/add
 /es/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/es/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /es/docs/Web/API/IndexedDB_API/Conceptos_Basicos_Detras_De_IndexedDB	/es/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB

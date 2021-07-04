@@ -1622,7 +1622,7 @@
 /zh-CN/docs/Web/API/HTMLElement.blur	/zh-CN/docs/Web/API/HTMLOrForeignElement/blur
 /zh-CN/docs/Web/API/HTMLElement.click	/zh-CN/docs/Web/API/HTMLElement/click
 /zh-CN/docs/Web/API/HTMLElement.contentEditable	/zh-CN/docs/Web/API/HTMLElement/contentEditable
-/zh-CN/docs/Web/API/HTMLElement.dataset	/zh-CN/docs/Web/API/HTMLOrForeignElement/dataset
+/zh-CN/docs/Web/API/HTMLElement.dataset	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /zh-CN/docs/Web/API/HTMLElement.dir	/zh-CN/docs/Web/API/HTMLElement/dir
 /zh-CN/docs/Web/API/HTMLElement.focus	/zh-CN/docs/Web/API/HTMLOrForeignElement/focus
 /zh-CN/docs/Web/API/HTMLElement.isContentEditable	/zh-CN/docs/Web/API/HTMLElement/isContentEditable
@@ -1635,7 +1635,7 @@
 /zh-CN/docs/Web/API/HTMLElement.tabIndex	/zh-CN/docs/Web/API/HTMLOrForeignElement/tabIndex
 /zh-CN/docs/Web/API/HTMLElement.title	/zh-CN/docs/Web/API/HTMLElement/title
 /zh-CN/docs/Web/API/HTMLElement/blur	/zh-CN/docs/Web/API/HTMLOrForeignElement/blur
-/zh-CN/docs/Web/API/HTMLElement/dataset	/zh-CN/docs/Web/API/HTMLOrForeignElement/dataset
+/zh-CN/docs/Web/API/HTMLElement/dataset	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /zh-CN/docs/Web/API/HTMLElement/focus	/zh-CN/docs/Web/API/HTMLOrForeignElement/focus
 /zh-CN/docs/Web/API/HTMLElement/forceSpellCheck	/zh-CN/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
 /zh-CN/docs/Web/API/HTMLElement/nonce	/zh-CN/docs/Web/API/HTMLOrForeignElement/nonce
@@ -1655,6 +1655,7 @@
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
 /zh-CN/docs/Web/API/HTMLInputElement.mozSetFileNameArray	/zh-CN/docs/conflicting/Web/API/HTMLInputElement
 /zh-CN/docs/Web/API/HTMLInputElement/mozSetFileNameArray	/zh-CN/docs/conflicting/Web/API/HTMLInputElement
+/zh-CN/docs/Web/API/HTMLOrForeignElement/dataset	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open

@@ -3785,11 +3785,12 @@
 /fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/FormData/Using_FormData_Objects
 /fr/docs/Web/API/GlobalFetch	/fr/docs/Web/API/WindowOrWorkerGlobalScope
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch
-/fr/docs/Web/API/HTMLElement/dataset	/fr/docs/Web/API/HTMLOrForeignElement/dataset
+/fr/docs/Web/API/HTMLElement/dataset	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /fr/docs/Web/API/HTMLElement/focus	/fr/docs/Web/API/HTMLOrForeignElement/focus
 /fr/docs/Web/API/HTMLElement/style	/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /fr/docs/Web/API/HTMLElement/tabIndex	/fr/docs/Web/API/HTMLOrForeignElement/tabIndex
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
+/fr/docs/Web/API/HTMLOrForeignElement/dataset	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /fr/docs/Web/API/HTMLTableElement.caption	/fr/docs/Web/API/HTMLTableElement/caption
 /fr/docs/Web/API/HTMLTableElement.insertRow	/fr/docs/Web/API/HTMLTableElement/insertRow
 /fr/docs/Web/API/IDBEnvironment/indexedDB	/fr/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB
