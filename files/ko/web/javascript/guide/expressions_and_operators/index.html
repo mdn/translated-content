@@ -345,8 +345,7 @@ var var2 = 4
 <div class="note">
   <p>
     <strong>참고:</strong> <code>=&gt;</code>는 연산자가 아니라
-    <a href="/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions">화살표 함수</a
-    >의 표기법입니다.
+    <a href="/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions">화살표 함수</a>의 표기법입니다.
   </p>
 </div>
 
@@ -665,9 +664,10 @@ var var2 = 4
 <h3 id="logical_operators">논리 연산자</h3>
 
 <p>
-  논리 연산자는 보통 불리언(논리) 값과 함께 사용하며, 불리언 값과 사용했을 땐 불리언 값을 반환합니다. 그러나
-  <code>&amp;&amp;</code>와 <code>||</code> 연산자는 사실 두 피연산자 중 하나를 반환하므로, 만약 둘 중 하나가 불리언
-  값이 아니라면 논리 연산자의 반환 값도 불리언 값이 아니게 됩니다. 아래의 표에서 논리 연산자의 설명을 볼 수 있습니다.
+  논리 연산자는 보통 불리언(논리) 값과 함께 사용해서 불리언 값을 반환합니다. 그러나
+  <code>&amp;&amp;</code>와 <code>||</code> 연산자는 사실 두 피연산자 중 하나를 반환하는 것으로, 만약 둘 중 하나가
+  불리언 값이 아니라면 논리 연산자의 반환 값도 불리언 값이 아닐 수 있습니다. 아래의 표에서 논리 연산자의 설명을 볼 수
+  있습니다.
 </p>
 
 <table class="standard-table">
@@ -686,7 +686,7 @@ var var2 = 4
         (<code>&amp;&amp;</code>)
       </td>
       <td>
-        <code><em>expr1</em> &amp;&amp; <em>expr2</em></code>
+        <code>expr1 &amp;&amp; expr2</code>
       </td>
       <td>
         <code>expr1</code>을 <code>false</code>로 변환할 수 있으면 <code>expr1</code>을 반환합니다. 그 외의 경우에는
@@ -757,7 +757,7 @@ var n3 = !"Cat"; // !t returns false
 <h4 id="short-circuit_evaluation">단락 평가</h4>
 
 <p>
-  논리 연산자는 왼쪽에서 오른쪽의 순서로 평가하므로, "단락"(short-circuit) 평가가 가능한지 다음 규칙을 사용해서
+  논리 연산자는 왼쪽에서 오른쪽의 순서로 평가하므로, 다음 규칙을 사용해서 "단락"(short-circuit) 평가가 가능한지
   판별합니다.
 </p>
 
@@ -778,7 +778,7 @@ var n3 = !"Cat"; // !t returns false
 </p>
 
 <p>
-  참고로 OR을 사용한 두 번째 단락 평가의 경우, 최근 코드에서는 새로운
+  참고로 <code>||</code>을 사용한 두 번째 단락 평가의 경우, 최근 코드에서는 새로운
   <a href="/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">널 병합 연산자</a>
   (<code>??</code>)를 사용할 수도 있습니다. 널 병합 연산자는 첫 번째 연산자가 "<a href="/en-US/docs/Glossary/Nullish"
     >널과 유사</a
@@ -1237,8 +1237,8 @@ function validate(obj, lowval, hival) {
 </pre>
 
 <p>
-  다음과 같이, 각 양식 요소의 <code>change</code> 이벤트 처리기에서 <code>validate</code>를 호출할 때,
-  <code>this</code>를 사용해서 양식 요소의 참조를 제공할 수 있습니다.
+  다음과 같이, 각 양식 요소의 {{domxref("GlobalEventHandlers/onchange", "onchange")}} 이벤트 처리기에서
+  <code>validate</code>를 호출할 때 <code>this</code>를 사용해서 양식 요소의 참조를 제공할 수 있습니다.
 </p>
 
 <pre class="brush: html">
@@ -1249,7 +1249,7 @@ function validate(obj, lowval, hival) {
 <h4 id="grouping_operator">그룹 연산자</h4>
 
 <p>
-  그룹연산자 ()는 표현식 평가의 우선순위를 조절합니다. 예를 들어, 곱하기와 나누기보다 더하기와 빼기 연산을 먼저 수행할
+  그룹연산자 <code>()</code>는 표현식 평가의 우선순위를 조절합니다. 예를 들어, 곱하기와 나누기보다 더하기와 빼기 연산을 먼저 수행할
   수 있습니다.
 </p>
 
