@@ -14,7 +14,7 @@ browser-compat: http.headers.Referer
 
 <p><code><strong>Referer</strong></code> 요청 헤더는 현재 요청을 보낸 페이지의 절대 혹은 부분 주소를 포함합니다. 만약 링크를 타고 들어왔다면 해당 링크를 포함하고 있는 페이지의 주소가, 다른 도메인에 리소스 요청을 보내는 경우라면 해당 리소스를 사용하는 페이지의 주소가 이 헤더에 포함됩니다.<code>Referer</code> 헤더는 사람들이 어디로부터 와서 방문 중인지를 인식할 수 있도록 해주며 해당 데이터는 예를 들어, 분석, 로깅, 혹은 캐싱 최적화에 사용될 수도 있습니다.</p>
 
-<p><code>Referer</code> 헤더는 URL 프래그먼트 (예 : "#section") 또는 "username : password" 정보를 포함 할 수 없습니다. 잠재적으로 <em>원본</em>, <em>경로</em>, 및 <em>쿼리 문자열</em>을 포함 할 수 있습니다. 전송되는 내용은 요청에 대한 referer 정책에 따라 다릅니다. 정보 및 예제는 Referrer-Policy를 참조하십시오. <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives">정보</a> 와 <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#examples">예시</a>는 이곳 {{HTTPHeader("Referrer-Policy")}}을 참고하세요.
+<p><code>Referer</code> 헤더는 URL 프래그먼트 (예 : "#section") 또는 "username : password" 정보를 포함 할 수 없습니다. <em>origin</em>, <em>경로</em>, 및 <em>쿼리 문자열</em>을 포함 할 수는 있습니다. 전송되는 내용은 요청에 대한 referrer 정책에 따라 다릅니다. 정보 및 예제는 Referrer-Policy를 참조하십시오. <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives">정보</a> 와 <a href="/en-US/docs/Web/HTTP/Headers/Referrer-Policy#examples">예시</a>는 이곳 {{HTTPHeader("Referrer-Policy")}}을 참고하세요.
 
 <div class="notecard note">
     <h4>Note</h4>
