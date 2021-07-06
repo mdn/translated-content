@@ -65,7 +65,7 @@ original_slug: Learn/HTML/Forms/Валидация_формы
 <ul>
  <li><strong>Мы хотим получить нужные данные в нужном формате</strong> — наши приложения не будут работать должным образом, если данные нашего пользователя хранятся в неправильном формате, если они вводят неправильную информацию или вообще не передают информацию.</li>
  <li><strong>Мы хотим защитить учётные записи наших пользователей</strong> — заставляя наших пользователей вводить защищённые пароли, это упрощает защиту информации об их учётной записи.</li>
- <li><strong>Мы хотим обезопасить себя</strong> — существует множество способов, которыми злоумышленники могут злоупотреблять незащищёнными формами, чтобы повредить приложение, в которое они входят (см. <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security">Безопасность веб-сайта</a>).</li>
+ <li><strong>Мы хотим обезопасить себя</strong> — существует множество способов, которыми злоумышленники могут злоупотреблять незащищёнными формами, чтобы повредить приложение, в которое они входят (см. <a href="/en-US/docs/Learn/Server-side/First_steps/Website_security">Безопасность веб-сайта</a>).</li>
 </ul>
 
 <h3 id="Различные_типы_валидации_формы">Различные типы валидации формы</h3>
@@ -87,7 +87,7 @@ original_slug: Learn/HTML/Forms/Валидация_формы
 
 <h2 id="Использование_встроенной_проверки_формы">Использование встроенной проверки формы</h2>
 
-<p>Одной из особенностей HTML5 является возможность проверки большинства пользовательских данных без использования скриптов. Это делается с помощью <a href="https://developer.mozilla.org/en-US/docs/HTML/HTML5/Constraint_validation">атрибутов проверки элементов формы</a>, которые позволяют вам указывать правила ввода формы, например, нужно ли заполнять значение, минимальная и максимальная длина данных, должно ли это быть число, адрес электронной почты, адрес или что-то ещё, и шаблон, которому это должно соответствовать. Если введённые данные соответствуют всем этим правилам, данные считаются валидными; если нет -  невалидными.</p>
+<p>Одной из особенностей HTML5 является возможность проверки большинства пользовательских данных без использования скриптов. Это делается с помощью <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation">атрибутов проверки элементов формы</a>, которые позволяют вам указывать правила ввода формы, например, нужно ли заполнять значение, минимальная и максимальная длина данных, должно ли это быть число, адрес электронной почты, адрес или что-то ещё, и шаблон, которому это должно соответствовать. Если введённые данные соответствуют всем этим правилам, данные считаются валидными; если нет -  невалидными.</p>
 
 <p>Когда элемент валидный, следующие утверждения верны:</p>
 
@@ -172,7 +172,7 @@ input:valid {
 
 <h3 id="Проверка_с_регулярными_выражениями">Проверка с регулярными выражениями</h3>
 
-<p>Другая полезная функция проверки - это <kbd><a href="/ru/docs/Web/SVG/%D0%AD%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82/pattern">pattern</a> </kbd>атрибут , который ожидает <a href="/en-US/docs/JavaScript/Guide/Regular_Expressions">Regular Expression</a> в качестве значения. Регулярное выражение (regex) - это шаблон который используется для проверки соответствия символов в текстовых строках, поэтому он идеально подходит для проверки формы, а также для многих других целей в JavaScript.</p>
+<p>Другая полезная функция проверки - это <kbd><a href="/ru/docs/Web/SVG/%D0%AD%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82/pattern">pattern</a> </kbd>атрибут , который ожидает <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions">Regular Expression</a> в качестве значения. Регулярное выражение (regex) - это шаблон который используется для проверки соответствия символов в текстовых строках, поэтому он идеально подходит для проверки формы, а также для многих других целей в JavaScript.</p>
 
 <p>Регулярные выражения довольно сложны, и мы не будем подробно разбирать их в этой статье. Ниже приведены некоторые примеры, чтобы вы представляли себе, как они работают:</p>
 
@@ -404,15 +404,15 @@ input:focus:invalid {
  <tbody>
   <tr>
    <td>Firefox 17 (Windows 7)</td>
-   <td><img alt="Example of an error message with Firefox in French on an English page" src="/files/4329/error-firefox-win7.png" style="height: 97px; width: 228px;"></td>
+   <td><img alt="Example of an error message with Firefox in French on an English page" src="error-firefox-win7.png"></td>
   </tr>
   <tr>
    <td>Chrome 22 (Windows 7)</td>
-   <td><img alt="Example of an error message with Chrome in French on an English page" src="/files/4327/error-chrome-win7.png" style="height: 96px; width: 261px;"></td>
+   <td><img alt="Example of an error message with Chrome in French on an English page" src="error-chrome-win7.png"></td>
   </tr>
   <tr>
    <td>Opera 12.10 (Mac OSX)</td>
-   <td><img alt="Example of an error message with Opera in French on an English page" src="/files/4331/error-opera-macos.png" style="height: 83px; width: 218px;"></td>
+   <td><img alt="Example of an error message with Opera in French on an English page" src="error-opera-macos.png"></td>
   </tr>
  </tbody>
 </table>
@@ -427,7 +427,7 @@ input:focus:invalid {
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<p>В JavaScript вы вызываете метод <a href="/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a>:</p>
+<p>В JavaScript вы вызываете метод <a href="/en-US/docs/Web/Guide/HTML/Constraint_validation#constraint_api's_element.setcustomvalidity()"><code>setCustomValidity()</code></a>:</p>
 
 <pre class="brush: js notranslate">var email = document.getElementById("mail");
 
@@ -567,7 +567,7 @@ email.addEventListener("input", function (event) {
 
 <p>Эта простая форма использует атрибут {{htmlattrxref("novalidate","form")}} для отключения автоматической валидации браузера, что позволяет нашему скрипту контролировать валидацию. Однако это не отключает поддержку API ограничений валидации или применения псевдоклассов CSS {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}} и {{cssxref(":out-of-range")}}. Это означает, что, хотя браузер не проверяет правильность формы перед отправкой своих данных, вы всё равно можете сделать это самостоятельно и соответствующим образом сформировать форму.</p>
 
-<p>Атрибут <a href="/en-US/docs/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code></a> гарантирует, что наше индивидуальное сообщение об ошибке будет доступно всем, включая тех, кто использует вспомогательные технологии, такие как скрин-ридеры.</p>
+<p>Атрибут <a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions"><code>aria-live</code></a> гарантирует, что наше индивидуальное сообщение об ошибке будет доступно всем, включая тех, кто использует вспомогательные технологии, такие как скрин-ридеры.</p>
 
 <h5 id="CSS">CSS</h5>
 
@@ -672,7 +672,7 @@ form.addEventListener("submit", function (event) {
 
 <h3 id="Проверка_форм_без_встроенного_API">Проверка форм без встроенного API</h3>
 
-<p>Иногда, например, с устаревшими браузерами или <a href="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">пользовательскими виджетами</a>, вы не сможете (или не захотите) использовать API проверки ограничений. В этом случае вы все ещё можете использовать JavaScript для проверки вашей формы. Проверка формы - это скорее вопрос пользовательского интерфейса, чем проверка валидности данных.</p>
+<p>Иногда, например, с устаревшими браузерами или <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">пользовательскими виджетами</a>, вы не сможете (или не захотите) использовать API проверки ограничений. В этом случае вы все ещё можете использовать JavaScript для проверки вашей формы. Проверка формы - это скорее вопрос пользовательского интерфейса, чем проверка валидности данных.</p>
 
 <p>Чтобы проверить форму, вы должны задать себе несколько вопросов:</p>
 
@@ -687,7 +687,7 @@ form.addEventListener("submit", function (event) {
   <li>SmashingMagazine: <a href="http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/" rel="external">Подтверждение формы поля: подход, основанный на ошибках</a></li>
   <li>SmashingMagazine: <a href="http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/" rel="external">Проверка веб-формы: лучшие практики и учебные пособия</a></li>
   <li>Six Revision: <a href="http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/" rel="external">Рекомендации по подсказкам и валидации в веб-формах</a></li>
-  <li>A List Apart: <a href="http://www.alistapart.com/articles/inline-validation-in-web-forms/" rel="external">Встроенная проверка в веб-формах</a></li>
+  <li>A List Apart: <a href="https://www.alistapart.com/articles/inline-validation-in-web-forms/" rel="external">Встроенная проверка в веб-формах</a></li>
  </ul>
  </dd>
 </dl>
@@ -709,7 +709,7 @@ form.addEventListener("submit", function (event) {
   &lt;button type="submit"&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<p>Как вы можете видеть, HTML почти такой же; мы просто удалили функции проверки HTML. Обратите внимание, что <a href="/en-US/docs/Accessibility/ARIA">ARIA</a> является независимой спецификацией, которая специально не связана с HTML5.</p>
+<p>Как вы можете видеть, HTML почти такой же; мы просто удалили функции проверки HTML. Обратите внимание, что <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> является независимой спецификацией, которая специально не связана с HTML5.</p>
 
 <h5 id="CSS_2">CSS</h5>
 
@@ -893,15 +893,15 @@ addEvent(form, "submit", function () {
 <h2 id="В_этом_модуле">В этом модуле</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form">Ваша первая HTML-форма</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">Как структурировать форму HTML</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">Нативная форма виджетов</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Отправка данных формы</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Проверка данных формы</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">Как создать пользовательские виджеты формы</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript">Отправка форм через JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML-формы в старых браузерах</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Стилизация HTML-форм</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Расширенный стиль для HTML-форм</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Таблица совместимости свойств виджета формы</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Ваша первая HTML-форма</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">Как структурировать форму HTML</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">Нативная форма виджетов</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Отправка данных формы</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Form_validation">Проверка данных формы</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">Как создать пользовательские виджеты формы</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Отправка форм через JavaScript</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers">HTML-формы в старых браузерах</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Стилизация HTML-форм</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Расширенный стиль для HTML-форм</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Таблица совместимости свойств виджета формы</a></li>
 </ul>
