@@ -17067,18 +17067,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2020-10-15T21:09:43.599Z",
-    "contributors": [
-      "mfuji09",
-      "Wind1808",
-      "momdo",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "dextra"
-    ]
-  },
   "Web/API/HTMLOutputElement": {
     "modified": "2020-10-15T21:18:44.480Z",
     "contributors": [
@@ -17935,14 +17923,6 @@
     "modified": "2020-10-15T22:19:51.434Z",
     "contributors": [
       "silverskyvicto"
-    ]
-  },
-  "Web/API/LocalMediaStream": {
-    "modified": "2020-10-15T21:46:16.531Z",
-    "contributors": [
-      "teoli",
-      "Uemmra3",
-      "S_F__"
     ]
   },
   "Web/API/Location": {
@@ -22644,12 +22624,6 @@
   },
   "Web/API/TransitionEvent/pseudoElement": {
     "modified": "2020-10-15T22:33:03.664Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
-  "Web/API/TypeInfo": {
-    "modified": "2020-08-15T13:22:42.886Z",
     "contributors": [
       "eltociear"
     ]
@@ -51781,6 +51755,18 @@
       "Kenju"
     ]
   },
+  "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
+    "modified": "2020-10-15T21:09:43.599Z",
+    "contributors": [
+      "mfuji09",
+      "Wind1808",
+      "momdo",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "dextra"
+    ]
+  },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
     "modified": "2020-03-25T11:26:36.526Z",
     "contributors": [
@@ -51797,6 +51783,14 @@
     "contributors": [
       "yyss",
       "ethertank"
+    ]
+  },
+  "orphaned/Web/API/LocalMediaStream": {
+    "modified": "2020-10-15T21:46:16.531Z",
+    "contributors": [
+      "teoli",
+      "Uemmra3",
+      "S_F__"
     ]
   },
   "orphaned/Web/API/Navigator/registerContentHandler": {
@@ -51905,6 +51899,12 @@
     "modified": "2020-10-15T22:25:15.443Z",
     "contributors": [
       "Wind1808"
+    ]
+  },
+  "orphaned/Web/API/TypeInfo": {
+    "modified": "2020-08-15T13:22:42.886Z",
+    "contributors": [
+      "eltociear"
     ]
   },
   "orphaned/Web/API/UserProximityEvent/near": {

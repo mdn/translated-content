@@ -1544,7 +1544,7 @@
 /ja/docs/DOM/element.setAttributeNode	/ja/docs/Web/API/Element/setAttributeNode
 /ja/docs/DOM/element.setAttributeNodeNS	/ja/docs/Web/API/Element/setAttributeNodeNS
 /ja/docs/DOM/element.style	/ja/docs/orphaned/Web/API/ElementCSSInlineStyle/style
-/ja/docs/DOM/element.tabIndex	/ja/docs/Web/API/HTMLOrForeignElement/tabIndex
+/ja/docs/DOM/element.tabIndex	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /ja/docs/DOM/element.tagName	/ja/docs/Web/API/Element/tagName
 /ja/docs/DOM/element.title	/ja/docs/Web/API/HTMLElement/title
 /ja/docs/DOM/event	/ja/docs/Web/API/Event
@@ -3825,7 +3825,7 @@
 /ja/docs/Web/API/HTMLElement/forceSpellCheck	/ja/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
 /ja/docs/Web/API/HTMLElement/nonce	/ja/docs/Web/API/HTMLOrForeignElement/nonce
 /ja/docs/Web/API/HTMLElement/style	/ja/docs/orphaned/Web/API/ElementCSSInlineStyle/style
-/ja/docs/Web/API/HTMLElement/tabIndex	/ja/docs/Web/API/HTMLOrForeignElement/tabIndex
+/ja/docs/Web/API/HTMLElement/tabIndex	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /ja/docs/Web/API/HTMLFormElement.acceptCharset	/ja/docs/Web/API/HTMLFormElement/acceptCharset
 /ja/docs/Web/API/HTMLFormElement.action	/ja/docs/Web/API/HTMLFormElement/action
 /ja/docs/Web/API/HTMLFormElement.elements	/ja/docs/Web/API/HTMLFormElement/elements
@@ -3853,6 +3853,7 @@
 /ja/docs/Web/API/HTMLIFrameElement.getVisible	/ja/docs/Web/API/HTMLIFrameElement/getVisible
 /ja/docs/Web/API/HTMLIFrameElement.stop	/ja/docs/Web/API/HTMLIFrameElement/stop
 /ja/docs/Web/API/HTMLOrForeignElement/dataset	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
+/ja/docs/Web/API/HTMLOrForeignElement/tabIndex	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /ja/docs/Web/API/HTMLTableElement.align	/ja/docs/Web/API/HTMLTableElement/align
 /ja/docs/Web/API/HTMLTableElement.bgColor	/ja/docs/Web/API/HTMLTableElement/bgColor
 /ja/docs/Web/API/HTMLTableElement.border	/ja/docs/Web/API/HTMLTableElement/border
@@ -3887,6 +3888,7 @@
 /ja/docs/Web/API/IDBFactory.open	/ja/docs/Web/API/IDBFactory/open
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ja/docs/Web/API/LinkStyle	/ja/docs/orphaned/Web/API/LinkStyle
+/ja/docs/Web/API/LocalMediaStream	/ja/docs/orphaned/Web/API/LocalMediaStream
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/conflicting/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/MozSocial.closePanel	/ja/docs/Web/API/MozSocial/closePanel
 /ja/docs/Web/API/MozSocial.isVisible	/ja/docs/Web/API/MozSocial/isVisible
@@ -3972,6 +3974,7 @@
 /ja/docs/Web/API/Slotable	/ja/docs/conflicting/Web/API/Element
 /ja/docs/Web/API/SourceBufferList/SourceBuffer	/ja/docs/orphaned/Web/API/SourceBufferList/SourceBuffer
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
+/ja/docs/Web/API/TypeInfo	/ja/docs/orphaned/Web/API/TypeInfo
 /ja/docs/Web/API/UserProximityEvent.near	/ja/docs/orphaned/Web/API/UserProximityEvent/near
 /ja/docs/Web/API/UserProximityEvent/near	/ja/docs/orphaned/Web/API/UserProximityEvent/near
 /ja/docs/Web/API/VRDevice	/ja/docs/Web/API/VRDisplay

@@ -466,7 +466,7 @@
 /zh-CN/docs/DOM/element.previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling
 /zh-CN/docs/DOM/element.removeAttribute	/zh-CN/docs/Web/API/Element/removeAttribute
 /zh-CN/docs/DOM/element.setCapture	/zh-CN/docs/Web/API/Element/setCapture
-/zh-CN/docs/DOM/element.tabIndex	/zh-CN/docs/Web/API/HTMLOrForeignElement/tabIndex
+/zh-CN/docs/DOM/element.tabIndex	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /zh-CN/docs/DOM/element.tagName	/zh-CN/docs/Web/API/Element/tagName
 /zh-CN/docs/DOM/event	/zh-CN/docs/Web/API/Event
 /zh-CN/docs/DOM/event.altKey	/zh-CN/docs/conflicting/Web/API/MouseEvent/altKey
@@ -1632,7 +1632,7 @@
 /zh-CN/docs/Web/API/HTMLElement.offsetTop	/zh-CN/docs/Web/API/HTMLElement/offsetTop
 /zh-CN/docs/Web/API/HTMLElement.offsetWidth	/zh-CN/docs/Web/API/HTMLElement/offsetWidth
 /zh-CN/docs/Web/API/HTMLElement.style	/zh-CN/docs/orphaned/Web/API/ElementCSSInlineStyle/style
-/zh-CN/docs/Web/API/HTMLElement.tabIndex	/zh-CN/docs/Web/API/HTMLOrForeignElement/tabIndex
+/zh-CN/docs/Web/API/HTMLElement.tabIndex	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /zh-CN/docs/Web/API/HTMLElement.title	/zh-CN/docs/Web/API/HTMLElement/title
 /zh-CN/docs/Web/API/HTMLElement/blur	/zh-CN/docs/Web/API/HTMLOrForeignElement/blur
 /zh-CN/docs/Web/API/HTMLElement/dataset	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
@@ -1640,7 +1640,7 @@
 /zh-CN/docs/Web/API/HTMLElement/forceSpellCheck	/zh-CN/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
 /zh-CN/docs/Web/API/HTMLElement/nonce	/zh-CN/docs/Web/API/HTMLOrForeignElement/nonce
 /zh-CN/docs/Web/API/HTMLElement/style	/zh-CN/docs/orphaned/Web/API/ElementCSSInlineStyle/style
-/zh-CN/docs/Web/API/HTMLElement/tabIndex	/zh-CN/docs/Web/API/HTMLOrForeignElement/tabIndex
+/zh-CN/docs/Web/API/HTMLElement/tabIndex	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /zh-CN/docs/Web/API/HTMLFormElement.elements	/zh-CN/docs/Web/API/HTMLFormElement/elements
 /zh-CN/docs/Web/API/HTMLFormElement.reset	/zh-CN/docs/Web/API/HTMLFormElement/reset
 /zh-CN/docs/Web/API/HTMLFormElement.submit	/zh-CN/docs/Web/API/HTMLFormElement/submit
@@ -1656,6 +1656,7 @@
 /zh-CN/docs/Web/API/HTMLInputElement.mozSetFileNameArray	/zh-CN/docs/conflicting/Web/API/HTMLInputElement
 /zh-CN/docs/Web/API/HTMLInputElement/mozSetFileNameArray	/zh-CN/docs/conflicting/Web/API/HTMLInputElement
 /zh-CN/docs/Web/API/HTMLOrForeignElement/dataset	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
+/zh-CN/docs/Web/API/HTMLOrForeignElement/tabIndex	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
@@ -1813,6 +1814,7 @@
 /zh-CN/docs/Web/API/Touch.screenX	/zh-CN/docs/Web/API/Touch/screenX
 /zh-CN/docs/Web/API/Touch.screenY	/zh-CN/docs/Web/API/Touch/screenY
 /zh-CN/docs/Web/API/TouchEvent.changedTouches	/zh-CN/docs/Web/API/TouchEvent/changedTouches
+/zh-CN/docs/Web/API/TypeInfo	/zh-CN/docs/orphaned/Web/API/TypeInfo
 /zh-CN/docs/Web/API/UIEvent/cancelBubble	/zh-CN/docs/orphaned/Web/API/UIEvent/cancelBubble
 /zh-CN/docs/Web/API/UIEvent/视图	/zh-CN/docs/Web/API/UIEvent/view
 /zh-CN/docs/Web/API/URL.URL	/zh-CN/docs/Web/API/URL/URL

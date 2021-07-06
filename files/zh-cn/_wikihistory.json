@@ -15707,15 +15707,6 @@
       "chenqingyue"
     ]
   },
-  "Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2019-03-24T00:16:26.046Z",
-    "contributors": [
-      "teoli",
-      "Hasilt",
-      "sleepholic",
-      "ziyunfei"
-    ]
-  },
   "Web/API/HTMLParagraphElement": {
     "modified": "2020-11-03T10:28:13.003Z",
     "contributors": [
@@ -21102,12 +21093,6 @@
     "contributors": [
       "lastVigo",
       "Carllllo"
-    ]
-  },
-  "Web/API/TypeInfo": {
-    "modified": "2019-03-23T22:15:17.331Z",
-    "contributors": [
-      "xgqfrms-GitHub"
     ]
   },
   "Web/API/UIEvent": {
@@ -49926,6 +49911,15 @@
       "ReyCG"
     ]
   },
+  "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
+    "modified": "2019-03-24T00:16:26.046Z",
+    "contributors": [
+      "teoli",
+      "Hasilt",
+      "sleepholic",
+      "ziyunfei"
+    ]
+  },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
     "modified": "2019-09-29T21:07:32.199Z",
     "contributors": [
@@ -50102,6 +50096,12 @@
     "modified": "2020-02-26T01:25:35.461Z",
     "contributors": [
       "MCCF"
+    ]
+  },
+  "orphaned/Web/API/TypeInfo": {
+    "modified": "2019-03-23T22:15:17.331Z",
+    "contributors": [
+      "xgqfrms-GitHub"
     ]
   },
   "orphaned/Web/API/UIEvent/cancelBubble": {
