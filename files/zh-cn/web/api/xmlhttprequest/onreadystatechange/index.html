@@ -42,7 +42,7 @@ translation_of: Web/API/XMLHttpRequest/onreadystatechange
 
 xhr.open(<em>method</em>, <em>url</em>, true);
 xhr.onreadystatechange = function () {
-  if(xhr.readyState === XMLHttpRequest.DONE &amp;&amp; xhr.status === 200) {
+  if(xhr.readyState === xhr.DONE &amp;&amp; xhr.status === 200) {
     console.log(xhr.responseText)
   }
 }
