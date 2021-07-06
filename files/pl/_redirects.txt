@@ -438,7 +438,7 @@
 /pl/docs/DOM/element.setAttributeNode	/pl/docs/Web/API/Element/setAttributeNode
 /pl/docs/DOM/element.setAttributeNodeNS	/pl/docs/Web/API/Element/setAttributeNodeNS
 /pl/docs/DOM/element.style	/pl/docs/orphaned/Web/API/ElementCSSInlineStyle/style
-/pl/docs/DOM/element.tabIndex	/pl/docs/Web/API/HTMLOrForeignElement/tabIndex
+/pl/docs/DOM/element.tabIndex	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /pl/docs/DOM/element.tagName	/pl/docs/Web/API/Element/tagName
 /pl/docs/DOM/element.textContent	/pl/docs/Web/API/Node/textContent
 /pl/docs/DOM/event	/pl/docs/Web/API/Event
@@ -686,7 +686,7 @@
 /pl/docs/DOM:element.setAttributeNode	/pl/docs/Web/API/Element/setAttributeNode
 /pl/docs/DOM:element.setAttributeNodeNS	/pl/docs/Web/API/Element/setAttributeNodeNS
 /pl/docs/DOM:element.style	/pl/docs/orphaned/Web/API/ElementCSSInlineStyle/style
-/pl/docs/DOM:element.tabIndex	/pl/docs/Web/API/HTMLOrForeignElement/tabIndex
+/pl/docs/DOM:element.tabIndex	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /pl/docs/DOM:element.tagName	/pl/docs/Web/API/Element/tagName
 /pl/docs/DOM:element.textContent	/pl/docs/Web/API/Node/textContent
 /pl/docs/DOM:event	/pl/docs/Web/API/Event
@@ -1972,7 +1972,7 @@
 /pl/docs/Web/API/Element/removeChild	/pl/docs/Web/API/Node/removeChild
 /pl/docs/Web/API/Element/replaceChild	/pl/docs/Web/API/Node/replaceChild
 /pl/docs/Web/API/Element/style	/pl/docs/orphaned/Web/API/ElementCSSInlineStyle/style
-/pl/docs/Web/API/Element/tabIndex	/pl/docs/Web/API/HTMLOrForeignElement/tabIndex
+/pl/docs/Web/API/Element/tabIndex	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /pl/docs/Web/API/Element/textContent	/pl/docs/Web/API/Node/textContent
 /pl/docs/Web/API/ElementCSSInlineStyle/style	/pl/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /pl/docs/Web/API/Event/altKey	/pl/docs/Web/API/MouseEvent/altKey
@@ -1998,6 +1998,7 @@
 /pl/docs/Web/API/Event/view	/pl/docs/Web/API/UIEvent/view
 /pl/docs/Web/API/HTMLElement/dataset	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /pl/docs/Web/API/HTMLOrForeignElement/dataset	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
+/pl/docs/Web/API/HTMLOrForeignElement/tabIndex	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /pl/docs/Web/API/Navigator/appCodeName	/pl/docs/Web/API/NavigatorID/appCodeName
 /pl/docs/Web/API/Navigator/appName	/pl/docs/Web/API/NavigatorID/appName
 /pl/docs/Web/API/Navigator/appVersion	/pl/docs/Web/API/NavigatorID/appVersion

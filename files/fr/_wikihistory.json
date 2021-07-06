@@ -17306,16 +17306,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2019-03-24T00:13:15.014Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "teoli",
-      "dextra",
-      "BenoitL"
-    ]
-  },
   "Web/API/HTMLQuoteElement": {
     "modified": "2019-03-23T23:30:25.216Z",
     "contributors": [
@@ -44669,6 +44659,16 @@
       "tburette",
       "Hell_Carlito",
       "Laurent_Lyaudet"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
+    "modified": "2019-03-24T00:13:15.014Z",
+    "contributors": [
+      "fscholz",
+      "khalid32",
+      "teoli",
+      "dextra",
+      "BenoitL"
     ]
   },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {

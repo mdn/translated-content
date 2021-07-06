@@ -9029,13 +9029,6 @@
       "ellizii"
     ]
   },
-  "Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2019-03-18T21:11:41.012Z",
-    "contributors": [
-      "DianaGalter",
-      "Tanya_Agisheva"
-    ]
-  },
   "Web/API/HTMLScriptElement": {
     "modified": "2020-10-15T22:20:14.865Z",
     "contributors": [
@@ -9339,12 +9332,6 @@
     "modified": "2020-10-15T22:21:03.336Z",
     "contributors": [
       "Dzvonek"
-    ]
-  },
-  "Web/API/LocalMediaStream": {
-    "modified": "2019-03-23T22:18:51.568Z",
-    "contributors": [
-      "sosnovskyas"
     ]
   },
   "Web/API/Location": {
@@ -25323,6 +25310,13 @@
       "FlowerDeLuce"
     ]
   },
+  "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
+    "modified": "2019-03-18T21:11:41.012Z",
+    "contributors": [
+      "DianaGalter",
+      "Tanya_Agisheva"
+    ]
+  },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
     "modified": "2020-08-02T03:41:34.455Z",
     "contributors": [
@@ -25330,6 +25324,12 @@
       "S-le",
       "chrisdavidmills",
       "curdwithraisins"
+    ]
+  },
+  "orphaned/Web/API/LocalMediaStream": {
+    "modified": "2019-03-23T22:18:51.568Z",
+    "contributors": [
+      "sosnovskyas"
     ]
   },
   "orphaned/Web/API/Node/getUserData": {
