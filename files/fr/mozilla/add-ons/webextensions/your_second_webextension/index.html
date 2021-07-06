@@ -14,15 +14,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 <p>Pour implémenter ce module, il nous faut :</p>
 
 <ul>
- <li><strong>Définir une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">action du navigateur (<i>browser action</i>)</a>, matérialisée par un bouton dans la barre d'outils de Firefox</strong>. Pour ce bouton, nous avons besoin :
-  <ul>
-   <li>d'une icône, nommée "beasts-32.png"</li>
-   <li>d'une popup qui s'ouvrira lorsqu'on cliquera sur le bouton. La popup sera constituée d'HTML, de CSS et de JavaScript.</li>
-  </ul>
- </li>
- <li><strong>Définir l'icône de l'extension,</strong> nommée "beasts-48.png". Elle apparaîtra dans le gestionnaire de module.</li>
- <li><strong>Écrire un script de contenu (<i>content script</i>), "beastify.js" qui sera injecté dans les pages web</strong>. C'est le code qui va effectivement transformer les pages.</li>
- <li><strong>Packager les images d'animaux, afin de remplacer les images de la page web</strong>. Nous définirons les images comme étant des ressources accessibles par le Web de sorte que la page web puisse y accéder.</li>
+  <li><strong>Définir une <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">action du navigateur (<i>browser action</i>)</a>, matérialisée par un bouton dans la barre d'outils de Firefox</strong>. Pour ce bouton, nous avons besoin :
+    <ul>
+      <li>d'une icône, nommée "beasts-32.png"</li>
+      <li>d'une popup qui s'ouvrira lorsqu'on cliquera sur le bouton. La popup sera constituée d'HTML, de CSS et de JavaScript.</li>
+    </ul>
+  </li>
+  <li><strong>Définir l'icône de l'extension,</strong> nommée "beasts-48.png". Elle apparaîtra dans le gestionnaire de module.</li>
+  <li><strong>Écrire un script de contenu (<i>content script</i>), "beastify.js" qui sera injecté dans les pages web</strong>. C'est le code qui va effectivement transformer les pages.</li>
+  <li><strong>Packager les images d'animaux, afin de remplacer les images de la page web</strong>. Nous définirons les images comme étant des ressources accessibles par le Web de sorte que la page web puisse y accéder.</li>
 </ul>
 
 <p>Voici une visualisation globale possible de la structure du module :</p>
@@ -32,11 +32,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 <p>Il s'agit d'une extension simple mais qui démontre plusieurs concepts élémentaires de l'API des WebExtensions :</p>
 
 <ul>
- <li>Ajout d'un bouton à la barre d'outils</li>
- <li>Définition d'une popup à l'aide de HTML, CSS et JavaScript</li>
- <li>Injection des scripts de contenu dans les pages web</li>
- <li>Communication entre les scripts de contenu et le reste de l'extension</li>
- <li>Empaquetage de ressources comme les images dans le module afin que celles-ci puissent ensuite être utilisées par les pages web</li>
+  <li>Ajout d'un bouton à la barre d'outils</li>
+  <li>Définition d'une popup à l'aide de HTML, CSS et JavaScript</li>
+  <li>Injection des scripts de contenu dans les pages web</li>
+  <li>Communication entre les scripts de contenu et le reste de l'extension</li>
+  <li>Empaquetage de ressources comme les images dans le module afin que celles-ci puissent ensuite être utilisées par les pages web</li>
 </ul>
 
 <p>Le <a href="https://github.com/mdn/webextensions-examples/tree/master/beastify">code source complet du module est disponible sur GitHub</a>.</p>
@@ -45,7 +45,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 <h2 id="writing_the_extension">Écrire l'extension</h2>
 
-<p>Créez un nouveau répertoire et positionnez vous dedans :</p>
+<p>Créez un nouveau répertoire et positionnez-vous dedans :</p>
 
 <pre class="brush: bash">
 mkdir beastify
@@ -84,7 +84,6 @@ cd beastify
     "beasts/turtle.jpg",
     "beasts/snake.jpg"
   ]
-
 }
 </pre>
 
@@ -323,7 +322,6 @@ function reportExecuteScriptError(error) {
 browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 .then(listenForClicks)
 .catch(reportExecuteScriptError);
-
 </pre>
 
 <p>Pour commencer, le script de la popup exécute un script de contenu dans l'onglet actif dès que la popup est chargée grâce à la méthode <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript">browser.tabs.executeScript()</a></code>. Si l'exécution du script est réussie, le script de contenu sera chargé dans la page jusqu'à ce que l'onglet soit fermé ou que l'utilisateur navigue sur une autre page.</p>
@@ -396,7 +394,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
   /**
    * On écoute les messages du script d'arrière-plan pour
    * déclencher "insertBeast()" ou "removeExistingBeasts()".
-  */
+   */
   browser.runtime.onMessage.addListener((message) =&gt; {
     if (message.command === "beastify") {
       insertBeast(message.beastURL);
@@ -404,7 +402,6 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
       removeExistingBeasts();
     }
   });
-
 })();
 </pre>
 
@@ -476,8 +473,8 @@ web-ext run
 <p>Maitenant que vous avez créé une WebExtension avancée pour Firefox, vous pouvez :</p>
 
 <ul>
- <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Explorer l'anatomie d'une extension</a></li>
- <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Examples">Explorer les exemples d'extension</a></li>
- <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_">Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension</a></li>
- <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_#continuez_votre_exp%c3%a9rience_d'apprentissage">Approfondir votre apprentissage</a>.</li>
+  <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">Explorer l'anatomie d'une extension</a></li>
+  <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Examples">Explorer les exemples d'extension</a></li>
+  <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_">Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension</a></li>
+  <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_#continuez_votre_exp%c3%a9rience_d'apprentissage">Approfondir votre apprentissage</a>.</li>
 </ul>
