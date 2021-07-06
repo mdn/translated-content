@@ -62,7 +62,7 @@ console.log(encodeURI('\uD800'));
 // einzelnes low surrogate erzeugt ein "URIError: malformed URI sequence"
 console.log(encodeURI('\uDFFF')); </pre>
 
-<p>Wenn Sie den neueren <a href="http://tools.ietf.org/html/rfc3986">RFC3986</a> Standart für URLs benutzen möchten, der eckige Klammern beachtet (für IPv6) und Teile die zur URL gehören könnten (wie der Host) nicht kodiert, könnte der kleine Code-Auszug helfen:</p>
+<p>Wenn Sie den neueren <a href="http://tools.ietf.org/html/rfc3986">RFC3986</a> Standard für URLs benutzen möchten, der eckige Klammern beachtet (für IPv6) und Teile die zur URL gehören könnten (wie der Host) nicht kodiert, könnte der kleine Code-Auszug helfen:</p>
 
 <pre class="brush: js">function fixedEncodeURI(str) {
     return encodeURI(str).replace(/%5B/g, '[').replace(/%5D/g, ']');
