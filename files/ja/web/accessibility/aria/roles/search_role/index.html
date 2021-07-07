@@ -14,11 +14,11 @@ translation_of: Web/Accessibility/ARIA/Roles/Search_role
 &lt;/form&gt;
 </pre>
 
-<h2 id="Description" name="Description">説明</h2>
+<h2 id="Description">説明</h2>
 
 <p>検索 (<code>search</code>) ロールは、<a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles">ランドマーク</a>です。 ランドマークは、支援技術によって使用され、文書の大きなセクションを素早く識別してナビゲートすることができます。 検索 (<code>search</code>) ロールは、全体として組み合わせて検索機能を作成する項目およびオブジェクトを含むコンテナー要素に追加します。 <code>&lt;form&gt;</code> が検索フォームの場合、フォーム (<code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Form_Role">form</a></code>) ロールの代わりに検索 (<code>search</code>) ロールを使用します。 文書に複数の検索が含まれている場合、それぞれに固有のラベルを持つべきです。 <a href="/ja/docs/Web/HTML/Element/input/search"><code>search</code> 型の <code>&lt;input&gt;</code> 要素</a>はありますが、検索ランドマークを定義する HTML 要素はありません。</p>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
 <pre class="brush: html">&lt;form id="search" role="search"&gt;
   &lt;label for="search-input"&gt;このサイトを検索&lt;/label&gt;
@@ -27,19 +27,19 @@ translation_of: Web/Accessibility/ARIA/Roles/Search_role
 &lt;/form&gt;
 </pre>
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティに関する懸念</h2>
+<h2 id="Accessibility_concerns">アクセシビリティに関する懸念</h2>
 
 <p><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles">ランドマークロール</a>は、文書のより大きな全体的なセクションを識別するために、控えめに使用することを意図しています。 あまりにも多くのランドマークロールを使用すると、スクリーンリーダーで「ノイズ」が発生し、ページ全体のレイアウトを理解することが難しくなります。</p>
 
-<h2 id="Best_practices" name="Best_practices">ベストプラクティス</h2>
+<h2 id="Best_practices">ベストプラクティス</h2>
 
-<h3 id="Prefer_HTML" name="Prefer_HTML">好ましい HTML</h3>
+<h3 id="Prefer_HTML">好ましい HTML</h3>
 
 <p><a href="/ja/docs/Web/HTML/Element/form"><code>&lt;form&gt;</code> 要素</a>を検索ロール (<code>role="search"</code>) の宣言と共に使用することで、最大限のサポートが提供されます。</p>
 
-<h3 id="Labeling_landmarks" name="Labeling_landmarks">ランドマークのラベル付け</h3>
+<h3 id="Labeling_landmarks">ランドマークのラベル付け</h3>
 
-<h4 id="Multiple_landmarks" name="Multiple_landmarks">複数のランドマーク</h4>
+<h4 id="Multiple_landmarks">複数のランドマーク</h4>
 
 <p>文書内に複数の検索 (<code>search</code>) ランドマークロールがある場合は、各ランドマークにラベルを付けます。 このラベルで、支援技術のユーザーがそれぞれのランドマークの目的を素早く理解することができます。</p>
 
@@ -54,7 +54,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Search_role
 &lt;/form&gt;
 </pre>
 
-<h4 id="Repeated_landmarks" name="Repeated_landmarks">繰り返されるランドマーク</h4>
+<h4 id="Repeated_landmarks">繰り返されるランドマーク</h4>
 
 <p>文書内で検索 (<code>search</code>) ランドマークロールが繰り返され、両方のランドマークのコンテンツが同じ場合は、各ランドマークに同じラベルを使用します。 この例では、ページの上部と下部でサイト全体の検索が繰り返されています。</p>
 
@@ -73,11 +73,11 @@ translation_of: Web/Accessibility/ARIA/Roles/Search_role
 &lt;/footer&gt;
 </pre>
 
-<h4 id="Redundant_descriptions" name="Redundant_descriptions">冗長な説明</h4>
+<h4 id="Redundant_descriptions">冗長な説明</h4>
 
 <p>スクリーンリーダーは、ランドマークロールの種類をアナウンスします。 このため、ラベルでランドマークが何であるかを説明する必要はありません。 例えば、<code>aria-label="サイト全体の検索"</code> を使用した検索ロール (<code>role="search"</code>) の宣言は、「サイト全体の検索検索」として重複してアナウンスされることがあります。</p>
 
-<h3 id="Added_benefits" name="Added_benefits">追加された利点</h3>
+<h3 id="Added_benefits">追加された利点</h3>
 
 <p>ブラウザー拡張などの特定の技術は、ページ上に存在する全てのランドマークロールのリストを生成することができ、スクリーンリーダーを使用していないユーザーでも文書の大きなセクションを素早く識別してナビゲートできます。</p>
 
@@ -85,7 +85,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Search_role
  <li><a href="https://matatk.agrip.org.uk/landmarks/">ランドマークブラウザー拡張</a>（英語）</li>
 </ul>
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+<h2 id="Specifications">仕様</h2>
 
 <table class="standard-table">
  <tbody>
@@ -104,11 +104,11 @@ translation_of: Web/Accessibility/ARIA/Roles/Search_role
  </tbody>
 </table>
 
-<h2 id="Screen_reader_support" name="Screen_reader_support">スクリーンリーダーのサポート</h2>
+<h2 id="Screen_reader_support">スクリーンリーダーのサポート</h2>
 
 <p>TBD</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li><a href="/ja/docs/Web/HTML/Element/form">&lt;form&gt;: フォーム要素</a></li>
