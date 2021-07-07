@@ -10,11 +10,11 @@ tags:
 translation_of: Glossary/Preflight_request
 original_slug: Glossario/Preflight_request
 ---
-<p>Uma requisição <em>preflight</em> de <a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/CORS">CORS</a> é uma requisição de {{Glossary ("CORS")}} que verifica se o protocolo {{Glossary ("CORS")}} é entendido e se o servidor aguarda o método e cabeçalhos('headers') especificados.</p>
+<p>Uma requisição <em>preflight</em> de <a href="/en-US/docs/Glossary/CORS">CORS</a> é uma requisição de {{Glossary ("CORS")}} que verifica se o protocolo {{Glossary ("CORS")}} é entendido e se o servidor aguarda o método e cabeçalhos('headers') especificados.</p>
 
 <p>É uma requisição {{HTTPMethod("OPTIONS")}}, que usa três cabeçalhos de solicitação HTTP: {{HTTPHeader("Access-Control-Request-Method")}}, {{HTTPHeader("Access-Control-Request-Headers")}}, e o cabeçalho {{HTTPHeader("Origin")}}.</p>
 
-<p>Uma requisição <em>preflight</em> é emitida automaticamente por um navegador, quando necessário. Geralmente, os desenvolvedores front-end não precisam criar essas solicitações. Ela acontece quando a requisição é qualificada <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Preflighted_requests">"para ser preflighted"</a>  e omitida para <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Simple_requests">requisições simples</a>.</p>
+<p>Uma requisição <em>preflight</em> é emitida automaticamente por um navegador, quando necessário. Geralmente, os desenvolvedores front-end não precisam criar essas solicitações. Ela acontece quando a requisição é qualificada <a href="/en-US/docs/Web/HTTP/CORS#Preflighted_requests">"para ser preflighted"</a>  e omitida para <a href="/en-US/docs/Web/HTTP/CORS#Simple_requests">requisições simples</a>.</p>
 
 <p>Por exemplo, o cliente pode perguntar ao servidor se este permitiria uma requisição {{HTTPMethod ("DELETE")}}, antes de enviá-la, usando uma requisição <em>preflight</em>:</p>
 
@@ -31,7 +31,7 @@ Access-Control-Allow-Origin: https://foo.bar.org
 Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
 Access-Control-Max-Age: 86400</pre>
 
-<p>A resposta da requisição <em>preflight </em>pode ser opcionalmente cacheada para requisições realizadas na mesma url usando o cabeçalho <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age">Access-Control-Max-Age</a> como no exemplo acima.</p>
+<p>A resposta da requisição <em>preflight </em>pode ser opcionalmente cacheada para requisições realizadas na mesma url usando o cabeçalho <a href="/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age">Access-Control-Max-Age</a> como no exemplo acima.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 
