@@ -10205,12 +10205,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/DOMLocator": {
-    "modified": "2019-03-23T22:08:16.598Z",
-    "contributors": [
-      "ResJay"
-    ]
-  },
   "Web/API/DOMMatrix": {
     "modified": "2019-03-23T22:20:29.136Z",
     "contributors": [
@@ -15700,22 +15694,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/HTMLOrForeignElement/nonce": {
-    "modified": "2020-12-05T03:41:17.381Z",
-    "contributors": [
-      "hufeicom",
-      "chenqingyue"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2019-03-24T00:16:26.046Z",
-    "contributors": [
-      "teoli",
-      "Hasilt",
-      "sleepholic",
-      "ziyunfei"
-    ]
-  },
   "Web/API/HTMLParagraphElement": {
     "modified": "2020-11-03T10:28:13.003Z",
     "contributors": [
@@ -19611,12 +19589,6 @@
       "zhiyuanzmj"
     ]
   },
-  "Web/API/RenderingContext": {
-    "modified": "2019-03-23T22:53:04.731Z",
-    "contributors": [
-      "ice-i-snow"
-    ]
-  },
   "Web/API/Request": {
     "modified": "2020-10-15T21:43:47.794Z",
     "contributors": [
@@ -21102,12 +21074,6 @@
     "contributors": [
       "lastVigo",
       "Carllllo"
-    ]
-  },
-  "Web/API/TypeInfo": {
-    "modified": "2019-03-23T22:15:17.331Z",
-    "contributors": [
-      "xgqfrms-GitHub"
     ]
   },
   "Web/API/UIEvent": {
@@ -49814,6 +49780,12 @@
       "VictorDu"
     ]
   },
+  "orphaned/Web/API/DOMLocator": {
+    "modified": "2019-03-23T22:08:16.598Z",
+    "contributors": [
+      "ResJay"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2020-10-15T21:21:28.912Z",
     "contributors": [
@@ -49924,6 +49896,22 @@
       "ziyunfei",
       "ReyCG_sub",
       "ReyCG"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/nonce": {
+    "modified": "2020-12-05T03:41:17.381Z",
+    "contributors": [
+      "hufeicom",
+      "chenqingyue"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
+    "modified": "2019-03-24T00:16:26.046Z",
+    "contributors": [
+      "teoli",
+      "Hasilt",
+      "sleepholic",
+      "ziyunfei"
     ]
   },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
@@ -50092,6 +50080,12 @@
       "lauhua"
     ]
   },
+  "orphaned/Web/API/RenderingContext": {
+    "modified": "2019-03-23T22:53:04.731Z",
+    "contributors": [
+      "ice-i-snow"
+    ]
+  },
   "orphaned/Web/API/Request/context": {
     "modified": "2020-10-15T22:30:43.048Z",
     "contributors": [
@@ -50102,6 +50096,12 @@
     "modified": "2020-02-26T01:25:35.461Z",
     "contributors": [
       "MCCF"
+    ]
+  },
+  "orphaned/Web/API/TypeInfo": {
+    "modified": "2019-03-23T22:15:17.331Z",
+    "contributors": [
+      "xgqfrms-GitHub"
     ]
   },
   "orphaned/Web/API/UIEvent/cancelBubble": {

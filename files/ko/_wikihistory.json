@@ -5322,15 +5322,6 @@
       "chlgusrb14747"
     ]
   },
-  "Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2019-03-23T23:42:52.929Z",
-    "contributors": [
-      "fscholz",
-      "jsx",
-      "teoli",
-      "Netaras"
-    ]
-  },
   "Web/API/HTMLSelectElement": {
     "modified": "2020-10-15T22:30:22.387Z",
     "contributors": [
@@ -18244,6 +18235,15 @@
       "alattalatta",
       "jyhwng",
       "KimSejune"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
+    "modified": "2019-03-23T23:42:52.929Z",
+    "contributors": [
+      "fscholz",
+      "jsx",
+      "teoli",
+      "Netaras"
     ]
   },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {

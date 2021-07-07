@@ -506,6 +506,7 @@
 /de/docs/Web/API/Node.cloneNode	/de/docs/Web/API/Node/cloneNode
 /de/docs/Web/API/Node/innerText	/de/docs/Web/API/HTMLElement/innerText
 /de/docs/Web/API/Node/setUserData	/de/docs/orphaned/Web/API/Node/setUserData
+/de/docs/Web/API/RenderingContext	/de/docs/orphaned/Web/API/RenderingContext
 /de/docs/Web/API/Vollbild_API	/de/docs/Web/API/Fullscreen_API
 /de/docs/Web/API/WebGL_API/3D-Objekte_mit_WebGL_erstellen	/de/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /de/docs/Web/API/WebGL_API/Animierte_Texturen_in_WebGL	/de/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL

@@ -156,11 +156,11 @@ translation_of: 'Tools/about:debugging'
 <p>Si instala una extensión de esta manera, ¿qué sucede cuando actualiza la extensión?</p>
 
 <ul>
- <li>Si cambia los archivos que se cargan a pedido, como las <a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">secuencias de comandos</a> de contenido o <a href="https://wiki.developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">ventanas emergentes</a>, los cambios que realice se recogen automáticamente y los verá la próxima vez que se cargue la secuencia de comandos de contenido o se muestre la ventana emergente.</li>
+ <li>Si cambia los archivos que se cargan a pedido, como las <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">secuencias de comandos</a> de contenido o <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">ventanas emergentes</a>, los cambios que realice se recogen automáticamente y los verá la próxima vez que se cargue la secuencia de comandos de contenido o se muestre la ventana emergente.</li>
  <li>Para otros cambios, haga clic en el botón <strong>Recargar</strong>. Esto hace lo que dice:
   <ul>
-   <li>Recarga las secuencias de comandos persistentes, como los <a href="https://wiki.developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a></li>
-   <li>Analiza el archivo manifest.json nuevamente, por lo que los cambios a los permisos, <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> o cualquier otra llave surtirán efecto</li>
+   <li>Recarga las secuencias de comandos persistentes, como los <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a></li>
+   <li>Analiza el archivo manifest.json nuevamente, por lo que los cambios a los permisos, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> o cualquier otra llave surtirán efecto</li>
   </ul>
  </li>
 </ul>
@@ -176,7 +176,7 @@ translation_of: 'Tools/about:debugging'
 <p>Al igual que sucede con las extensiones cargadas temporalmente, el enlace junto a la URL del manifiesto abre el manifiesto cargado en una nueva pestaña.</p>
 
 <div class="note">
-<p><strong>Nota: </strong>Se recomienda que use la caja de herramientas del navegador, no el depurador de complementos, para depurar extensiones web. Vea <a href="https://wiki.developer.mozilla.org/en-US/Add-ons/WebExtensions/Debugging">Depuración de WebExtensions</a> para todos los detalles.</p>
+<p><strong>Nota: </strong>Se recomienda que use la caja de herramientas del navegador, no el depurador de complementos, para depurar extensiones web. Vea <a href="/en-US/Add-ons/WebExtensions/Debugging">Depuración de WebExtensions</a> para todos los detalles.</p>
 </div>
 
 <p>La sección Complementos en about:debugging enumera todas las extensiones web que están instaladas actualmente. Al lado de cada entrada hay un botón etiquetado <strong>Inspeccionar</strong>.</p>
@@ -187,16 +187,16 @@ translation_of: 'Tools/about:debugging'
 
 <p>Si hace clic en Inspeccionar, el depurador de complementos comenzará en una nueva pestaña.</p>
 
-<p>Consulte la página del <a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">depurador de complementos</a> para ver todas las cosas que puede hacer con esta herramienta.</p>
+<p>Consulte la página del <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">depurador de complementos</a> para ver todas las cosas que puede hacer con esta herramienta.</p>
 
 <h2 id="Workers">Workers</h2>
 
 <p>Esta sección muestra todos los Workers que tienes registrados en tu Firefox, clasificados de la siguiente manera:</p>
 
 <ul>
- <li>Todos los <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API">Service workers</a> registrados</li>
- <li>Todos los <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/SharedWorker">Shared workers</a> registrados</li>
- <li>Otros workers, incluidos <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/ChromeWorker">Chrome Workers</a> y Dedicated Workers</li>
+ <li>Todos los <a href="/en-US/docs/Web/API/Service_Worker_API">Service workers</a> registrados</li>
+ <li>Todos los <a href="/en-US/docs/Web/API/SharedWorker">Shared workers</a> registrados</li>
+ <li>Otros workers, incluidos <a href="/en-US/docs/Web/API/ChromeWorker">Chrome Workers</a> y Dedicated Workers</li>
 </ul>
 
 <p>Puede conectar las herramientas de desarrollador a cada trabajador y enviar notificaciones push a los trabajadores del servicio.</p>
@@ -227,7 +227,7 @@ translation_of: 'Tools/about:debugging'
 
 <h3 id="Envío_de_eventos_push_a_service_workers">Envío de eventos push a service workers</h3>
 
-<p>Para depurar notificaciones push, puede establecer un punto de interrupción en el detector de <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/PushEvent">eventos push</a>. Sin embargo, también puede depurar notificaciones push localmente, sin necesidad del servidor. Haga clic en el botón Push para enviar un evento push al trabajador del servicio.</p>
+<p>Para depurar notificaciones push, puede establecer un punto de interrupción en el detector de <a href="/en-US/docs/Web/API/PushEvent">eventos push</a>. Sin embargo, también puede depurar notificaciones push localmente, sin necesidad del servidor. Haga clic en el botón Push para enviar un evento push al trabajador del servicio.</p>
 
 <h3 id="Trabajadores_de_servicio_no_compatibles">Trabajadores de servicio no compatibles</h3>
 

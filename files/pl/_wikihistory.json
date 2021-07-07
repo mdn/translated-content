@@ -2946,18 +2946,6 @@
       "Jan Dudek"
     ]
   },
-  "Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2019-03-24T00:13:11.171Z",
-    "contributors": [
-      "teoli",
-      "arunpandianp",
-      "ethertank",
-      "dextra",
-      "Mgjbot",
-      "Jan Dudek",
-      "Ptak82"
-    ]
-  },
   "Web/API/HTMLSelectElement": {
     "modified": "2020-10-15T22:29:38.928Z",
     "contributors": [
@@ -11139,6 +11127,18 @@
     "contributors": [
       "flakboy",
       "lotny"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
+    "modified": "2019-03-24T00:13:11.171Z",
+    "contributors": [
+      "teoli",
+      "arunpandianp",
+      "ethertank",
+      "dextra",
+      "Mgjbot",
+      "Jan Dudek",
+      "Ptak82"
     ]
   },
   "orphaned/Web/API/Navigator/registerContentHandler": {
