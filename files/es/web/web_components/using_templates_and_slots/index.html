@@ -171,7 +171,7 @@ document.body.appendChild(templateContent);</pre>
    <li><code>&lt;slot name="attributes"&gt;</code></li>
   </ul>
  </li>
- <li>El elemento {{HTMLElement("template")}} envuelve los <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/slot#named-slot">slots con atributo name</a> dentro de un elemento {{HTMLElement("details")}}.</li>
+ <li>El elemento {{HTMLElement("template")}} envuelve los <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">slots con atributo name</a> dentro de un elemento {{HTMLElement("details")}}.</li>
 </ul>
 
 <h3 id="Crear_un_nuevo_elemento_&lt;element-details>_desde_el_elemento_&lt;template>">Crear un nuevo elemento &lt;element-details&gt; desde el elemento &lt;template&gt;</h3>
@@ -219,7 +219,7 @@ document.body.appendChild(templateContent);</pre>
 <p><span class="tlid-translation translation" lang="es"><span title="">Observa estos puntos sobre el fragmento anterior</span></span>:</p>
 
 <ul>
- <li>El fragento tiene dos instancias de elementos <strong><code>&lt;element-details&gt;</code></strong> que usan el atributo {{htmlattrxref("slot")}} para referenciar los <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/slot#named-slot">slots con atributo name</a> <code>"element-name"</code> y <code>"description"</code> que colocamos en el <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> del <code>&lt;element-details&gt;</code></li>
+ <li>El fragento tiene dos instancias de elementos <strong><code>&lt;element-details&gt;</code></strong> que usan el atributo {{htmlattrxref("slot")}} para referenciar los <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">slots con atributo name</a> <code>"element-name"</code> y <code>"description"</code> que colocamos en el <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> del <code>&lt;element-details&gt;</code></li>
  <li>Solo el primero de esos dos elementos <strong><code>&lt;element-details&gt;</code></strong> hace referencia a los <code>"attributes"</code> de <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">slot con atributo name. </a>El segundo elemento <code><strong>&lt;element-details</strong>&gt;</code> carece de cualquier referencia a <code>"attributes"</code> de <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">slot con atributo name</a>.</li>
  <li>El primer elemento <code>&lt;<strong>element-details&gt;</strong></code> está referenciando los <code>"attributes"</code>  de <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">slot con atributo name</a> usando un elemento {{HTMLElement("dl")}} con {{HTMLElement("dt")}} y {{HTMLElement("dd")}} como hijos.</li>
 </ul>
