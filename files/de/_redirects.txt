@@ -837,4 +837,3 @@
 /de/docs/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File/Using_files_from_web_applications
 /de/docs/en	/en-US/
 /de/docs/install.rdf	/de/docs/Installationsmanifest
-

@@ -13466,12 +13466,6 @@
       "loella16"
     ]
   },
-  "Web/API/DOMLocator": {
-    "modified": "2019-03-18T21:41:56.748Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/DOMMatrix": {
     "modified": "2019-03-23T22:45:55.560Z",
     "contributors": [
@@ -44583,6 +44577,12 @@
       "loella16",
       "Spictheweb",
       "v-Stein"
+    ]
+  },
+  "orphaned/Web/API/DOMLocator": {
+    "modified": "2019-03-18T21:41:56.748Z",
+    "contributors": [
+      "loella16"
     ]
   },
   "orphaned/Web/API/DOMUserData": {

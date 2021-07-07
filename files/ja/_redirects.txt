@@ -3742,6 +3742,7 @@
 /ja/docs/Web/API/Console.error	/ja/docs/Web/API/Console/error
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
 /ja/docs/Web/API/DOMCursor.done	/ja/docs/Web/API/DOMCursor/done
+/ja/docs/Web/API/DOMLocator	/ja/docs/orphaned/Web/API/DOMLocator
 /ja/docs/Web/API/DOMRequest.error	/ja/docs/Web/API/DOMRequest/error
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
 /ja/docs/Web/API/DeviceLightEvent	/ja/docs/orphaned/Web/API/DeviceLightEvent
@@ -3823,7 +3824,7 @@
 /ja/docs/Web/API/HTMLElement/dataset	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /ja/docs/Web/API/HTMLElement/focus	/ja/docs/Web/API/HTMLOrForeignElement/focus
 /ja/docs/Web/API/HTMLElement/forceSpellCheck	/ja/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
-/ja/docs/Web/API/HTMLElement/nonce	/ja/docs/Web/API/HTMLOrForeignElement/nonce
+/ja/docs/Web/API/HTMLElement/nonce	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/nonce
 /ja/docs/Web/API/HTMLElement/style	/ja/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ja/docs/Web/API/HTMLElement/tabIndex	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /ja/docs/Web/API/HTMLFormElement.acceptCharset	/ja/docs/Web/API/HTMLFormElement/acceptCharset
@@ -3853,6 +3854,7 @@
 /ja/docs/Web/API/HTMLIFrameElement.getVisible	/ja/docs/Web/API/HTMLIFrameElement/getVisible
 /ja/docs/Web/API/HTMLIFrameElement.stop	/ja/docs/Web/API/HTMLIFrameElement/stop
 /ja/docs/Web/API/HTMLOrForeignElement/dataset	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
+/ja/docs/Web/API/HTMLOrForeignElement/nonce	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/nonce
 /ja/docs/Web/API/HTMLOrForeignElement/tabIndex	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /ja/docs/Web/API/HTMLTableElement.align	/ja/docs/Web/API/HTMLTableElement/align
 /ja/docs/Web/API/HTMLTableElement.bgColor	/ja/docs/Web/API/HTMLTableElement/bgColor

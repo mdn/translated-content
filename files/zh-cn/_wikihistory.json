@@ -10205,12 +10205,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/DOMLocator": {
-    "modified": "2019-03-23T22:08:16.598Z",
-    "contributors": [
-      "ResJay"
-    ]
-  },
   "Web/API/DOMMatrix": {
     "modified": "2019-03-23T22:20:29.136Z",
     "contributors": [
@@ -15700,13 +15694,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/HTMLOrForeignElement/nonce": {
-    "modified": "2020-12-05T03:41:17.381Z",
-    "contributors": [
-      "hufeicom",
-      "chenqingyue"
-    ]
-  },
   "Web/API/HTMLParagraphElement": {
     "modified": "2020-11-03T10:28:13.003Z",
     "contributors": [
@@ -19600,12 +19587,6 @@
     "modified": "2019-03-18T21:36:09.836Z",
     "contributors": [
       "zhiyuanzmj"
-    ]
-  },
-  "Web/API/RenderingContext": {
-    "modified": "2019-03-23T22:53:04.731Z",
-    "contributors": [
-      "ice-i-snow"
     ]
   },
   "Web/API/Request": {
@@ -49799,6 +49780,12 @@
       "VictorDu"
     ]
   },
+  "orphaned/Web/API/DOMLocator": {
+    "modified": "2019-03-23T22:08:16.598Z",
+    "contributors": [
+      "ResJay"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2020-10-15T21:21:28.912Z",
     "contributors": [
@@ -49909,6 +49896,13 @@
       "ziyunfei",
       "ReyCG_sub",
       "ReyCG"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/nonce": {
+    "modified": "2020-12-05T03:41:17.381Z",
+    "contributors": [
+      "hufeicom",
+      "chenqingyue"
     ]
   },
   "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
@@ -50084,6 +50078,12 @@
     "modified": "2020-10-15T22:29:03.476Z",
     "contributors": [
       "lauhua"
+    ]
+  },
+  "orphaned/Web/API/RenderingContext": {
+    "modified": "2019-03-23T22:53:04.731Z",
+    "contributors": [
+      "ice-i-snow"
     ]
   },
   "orphaned/Web/API/Request/context": {

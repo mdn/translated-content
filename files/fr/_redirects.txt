@@ -3628,6 +3628,7 @@
 /fr/docs/Web/API/Console.table	/fr/docs/Web/API/Console/table
 /fr/docs/Web/API/Console/erreur	/fr/docs/Web/API/Console/error
 /fr/docs/Web/API/Coordinates	/fr/docs/Web/API/GeolocationCoordinates
+/fr/docs/Web/API/DOMLocator	/fr/docs/orphaned/Web/API/DOMLocator
 /fr/docs/Web/API/DOMTokenList/DOMTokenList.add()	/fr/docs/Web/API/DOMTokenList/add
 /fr/docs/Web/API/DOMUserData	/fr/docs/orphaned/Web/API/DOMUserData
 /fr/docs/Web/API/Detecting_device_orientation	/fr/docs/orphaned/Web/API/Detecting_device_orientation
