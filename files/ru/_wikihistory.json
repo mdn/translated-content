@@ -9023,12 +9023,6 @@
       "alexs_havelev"
     ]
   },
-  "Web/API/HTMLOrForeignElement/nonce": {
-    "modified": "2020-10-15T22:22:30.878Z",
-    "contributors": [
-      "ellizii"
-    ]
-  },
   "Web/API/HTMLScriptElement": {
     "modified": "2020-10-15T22:20:14.865Z",
     "contributors": [
@@ -10267,12 +10261,6 @@
     "modified": "2019-03-23T22:51:16.207Z",
     "contributors": [
       "Xnoyer"
-    ]
-  },
-  "Web/API/RenderingContext": {
-    "modified": "2020-01-03T11:02:10.593Z",
-    "contributors": [
-      "5GameMaker"
     ]
   },
   "Web/API/Request": {
@@ -25310,6 +25298,12 @@
       "FlowerDeLuce"
     ]
   },
+  "orphaned/Web/API/HTMLOrForeignElement/nonce": {
+    "modified": "2020-10-15T22:22:30.878Z",
+    "contributors": [
+      "ellizii"
+    ]
+  },
   "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
     "modified": "2019-03-18T21:11:41.012Z",
     "contributors": [
@@ -25398,6 +25392,12 @@
     "modified": "2020-10-15T22:33:11.540Z",
     "contributors": [
       "mechtool"
+    ]
+  },
+  "orphaned/Web/API/RenderingContext": {
+    "modified": "2020-01-03T11:02:10.593Z",
+    "contributors": [
+      "5GameMaker"
     ]
   },
   "orphaned/Web/API/ServiceWorkerState": {

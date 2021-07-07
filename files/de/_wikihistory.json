@@ -3921,12 +3921,6 @@
       "ksm2"
     ]
   },
-  "Web/API/RenderingContext": {
-    "modified": "2020-11-02T01:51:10.279Z",
-    "contributors": [
-      "sgadola"
-    ]
-  },
   "Web/API/Response": {
     "modified": "2020-10-15T22:15:25.221Z",
     "contributors": [
@@ -14579,6 +14573,12 @@
     "modified": "2019-03-23T22:05:46.565Z",
     "contributors": [
       "Nonononoki"
+    ]
+  },
+  "orphaned/Web/API/RenderingContext": {
+    "modified": "2020-11-02T01:51:10.279Z",
+    "contributors": [
+      "sgadola"
     ]
   },
   "orphaned/Web/CSS/:-moz-ui-valid": {
