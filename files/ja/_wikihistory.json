@@ -11890,12 +11890,6 @@
       "Uemmra3"
     ]
   },
-  "Web/API/DOMLocator": {
-    "modified": "2020-08-13T09:34:48.574Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
   "Web/API/DOMMatrix": {
     "modified": "2019-03-23T22:26:24.870Z",
     "contributors": [
@@ -17058,13 +17052,6 @@
       "fscholz",
       "Hasilt",
       "ethertank"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/nonce": {
-    "modified": "2020-10-15T22:22:13.107Z",
-    "contributors": [
-      "mfuji09",
-      "Wind1808"
     ]
   },
   "Web/API/HTMLOutputElement": {
@@ -51647,6 +51634,12 @@
       "Shirasu"
     ]
   },
+  "orphaned/Web/API/DOMLocator": {
+    "modified": "2020-08-13T09:34:48.574Z",
+    "contributors": [
+      "eltociear"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2020-10-15T21:21:30.973Z",
     "contributors": [
@@ -51753,6 +51746,13 @@
       "Wind1808",
       "Marco3jp",
       "Kenju"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/nonce": {
+    "modified": "2020-10-15T22:22:13.107Z",
+    "contributors": [
+      "mfuji09",
+      "Wind1808"
     ]
   },
   "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {

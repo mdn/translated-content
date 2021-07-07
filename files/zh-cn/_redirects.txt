@@ -1488,6 +1488,7 @@
 /zh-CN/docs/Web/API/Coordinates/latitude	/zh-CN/docs/Web/API/GeolocationCoordinates/latitude
 /zh-CN/docs/Web/API/DOMImplementation.createHTMLDocument	/zh-CN/docs/Web/API/DOMImplementation/createHTMLDocument
 /zh-CN/docs/Web/API/DOMImplementation.hasFeature	/zh-CN/docs/Web/API/DOMImplementation/hasFeature
+/zh-CN/docs/Web/API/DOMLocator	/zh-CN/docs/orphaned/Web/API/DOMLocator
 /zh-CN/docs/Web/API/Detecting_device_orientation	/zh-CN/docs/orphaned/Web/API/Detecting_device_orientation
 /zh-CN/docs/Web/API/DeviceAcceleration	/zh-CN/docs/Web/API/DeviceMotionEventAcceleration
 /zh-CN/docs/Web/API/DeviceLightEvent	/zh-CN/docs/orphaned/Web/API/DeviceLightEvent
@@ -1638,7 +1639,7 @@
 /zh-CN/docs/Web/API/HTMLElement/dataset	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /zh-CN/docs/Web/API/HTMLElement/focus	/zh-CN/docs/Web/API/HTMLOrForeignElement/focus
 /zh-CN/docs/Web/API/HTMLElement/forceSpellCheck	/zh-CN/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
-/zh-CN/docs/Web/API/HTMLElement/nonce	/zh-CN/docs/Web/API/HTMLOrForeignElement/nonce
+/zh-CN/docs/Web/API/HTMLElement/nonce	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/nonce
 /zh-CN/docs/Web/API/HTMLElement/style	/zh-CN/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-CN/docs/Web/API/HTMLElement/tabIndex	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /zh-CN/docs/Web/API/HTMLFormElement.elements	/zh-CN/docs/Web/API/HTMLFormElement/elements
@@ -1656,6 +1657,7 @@
 /zh-CN/docs/Web/API/HTMLInputElement.mozSetFileNameArray	/zh-CN/docs/conflicting/Web/API/HTMLInputElement
 /zh-CN/docs/Web/API/HTMLInputElement/mozSetFileNameArray	/zh-CN/docs/conflicting/Web/API/HTMLInputElement
 /zh-CN/docs/Web/API/HTMLOrForeignElement/dataset	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
+/zh-CN/docs/Web/API/HTMLOrForeignElement/nonce	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/nonce
 /zh-CN/docs/Web/API/HTMLOrForeignElement/tabIndex	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
@@ -1774,6 +1776,7 @@
 /zh-CN/docs/Web/API/RTCPeerConnection/getDefaultIceServers	/zh-CN/docs/orphaned/Web/API/RTCPeerConnection/getDefaultIceServers
 /zh-CN/docs/Web/API/RandomSource	/zh-CN/docs/conflicting/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
+/zh-CN/docs/Web/API/RenderingContext	/zh-CN/docs/orphaned/Web/API/RenderingContext
 /zh-CN/docs/Web/API/Request/context	/zh-CN/docs/orphaned/Web/API/Request/context
 /zh-CN/docs/Web/API/Response/克隆	/zh-CN/docs/Web/API/Response/clone
 /zh-CN/docs/Web/API/SVGPathElement/getTotalLength	/zh-CN/docs/Web/API/SVGGeometryElement/getTotalLength

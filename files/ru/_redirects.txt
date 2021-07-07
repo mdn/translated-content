@@ -412,7 +412,7 @@
 /ru/docs/Web/API/HTMLAudioElement/Audio()	/ru/docs/Web/API/HTMLAudioElement/Audio
 /ru/docs/Web/API/HTMLElement/dataset	/ru/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
-/ru/docs/Web/API/HTMLElement/nonce	/ru/docs/Web/API/HTMLOrForeignElement/nonce
+/ru/docs/Web/API/HTMLElement/nonce	/ru/docs/orphaned/Web/API/HTMLOrForeignElement/nonce
 /ru/docs/Web/API/HTMLElement/style	/ru/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ru/docs/Web/API/HTMLElement/tabIndex	/ru/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /ru/docs/Web/API/HTMLHyperlinkElementUtils	/ru/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
@@ -430,6 +430,7 @@
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/username	/ru/docs/Web/API/HTMLAnchorElement/username
 /ru/docs/Web/API/HTMLImageElement.Image	/ru/docs/Web/API/HTMLImageElement/Image
 /ru/docs/Web/API/HTMLOrForeignElement/dataset	/ru/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
+/ru/docs/Web/API/HTMLOrForeignElement/nonce	/ru/docs/orphaned/Web/API/HTMLOrForeignElement/nonce
 /ru/docs/Web/API/HTMLOrForeignElement/tabIndex	/ru/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /ru/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ru/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ru/docs/Web/API/LocalMediaStream	/ru/docs/orphaned/Web/API/LocalMediaStream
@@ -466,6 +467,7 @@
 /ru/docs/Web/API/RTCPeerConnection/getDefaultIceServers	/ru/docs/orphaned/Web/API/RTCPeerConnection/getDefaultIceServers
 /ru/docs/Web/API/RandomSource	/ru/docs/conflicting/Web/API/Crypto/getRandomValues
 /ru/docs/Web/API/RandomSource/getRandomValues	/ru/docs/Web/API/Crypto/getRandomValues
+/ru/docs/Web/API/RenderingContext	/ru/docs/orphaned/Web/API/RenderingContext
 /ru/docs/Web/API/SVGAElement/SVGAlement.target	/ru/docs/conflicting/Web/API/SVGAElement/target
 /ru/docs/Web/API/ServiceWorkerState	/ru/docs/orphaned/Web/API/ServiceWorkerState
 /ru/docs/Web/API/Slotable	/ru/docs/conflicting/Web/API/Element
