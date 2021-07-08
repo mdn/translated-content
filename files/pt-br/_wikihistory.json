@@ -5610,19 +5610,6 @@
       "Rogerio-Viana"
     ]
   },
-  "Web/API/HTMLOrForeignElement/blur": {
-    "modified": "2020-10-15T22:12:54.970Z",
-    "contributors": [
-      "salgueiroso"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/focus": {
-    "modified": "2019-03-23T22:24:13.859Z",
-    "contributors": [
-      "erikseyti",
-      "brunopulis"
-    ]
-  },
   "Web/API/HTMLSelectElement": {
     "modified": "2019-03-18T21:38:12.809Z",
     "contributors": [
@@ -17005,6 +16992,12 @@
       "bermarques"
     ]
   },
+  "orphaned/Web/API/HTMLOrForeignElement/blur": {
+    "modified": "2020-10-15T22:12:54.970Z",
+    "contributors": [
+      "salgueiroso"
+    ]
+  },
   "orphaned/Web/API/HTMLOrForeignElement/dataset": {
     "modified": "2020-10-15T21:46:41.594Z",
     "contributors": [
@@ -17012,6 +17005,13 @@
       "Fernandolrs",
       "Sipmann",
       "emanueloliveira"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/focus": {
+    "modified": "2019-03-23T22:24:13.859Z",
+    "contributors": [
+      "erikseyti",
+      "brunopulis"
     ]
   },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {

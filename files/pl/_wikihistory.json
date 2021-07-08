@@ -2926,26 +2926,6 @@
       "KubaKaszycki"
     ]
   },
-  "Web/API/HTMLOrForeignElement/blur": {
-    "modified": "2019-03-23T23:47:16.796Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "Mgjbot",
-      "Ptak82",
-      "Jan Dudek"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/focus": {
-    "modified": "2019-03-23T23:47:17.621Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "Mgjbot",
-      "Ptak82",
-      "Jan Dudek"
-    ]
-  },
   "Web/API/HTMLSelectElement": {
     "modified": "2020-10-15T22:29:38.928Z",
     "contributors": [
@@ -11122,11 +11102,31 @@
       "Jan Dudek"
     ]
   },
+  "orphaned/Web/API/HTMLOrForeignElement/blur": {
+    "modified": "2019-03-23T23:47:16.796Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "Mgjbot",
+      "Ptak82",
+      "Jan Dudek"
+    ]
+  },
   "orphaned/Web/API/HTMLOrForeignElement/dataset": {
     "modified": "2020-10-15T22:07:00.382Z",
     "contributors": [
       "flakboy",
       "lotny"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/focus": {
+    "modified": "2019-03-23T23:47:17.621Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "Mgjbot",
+      "Ptak82",
+      "Jan Dudek"
     ]
   },
   "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {

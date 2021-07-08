@@ -941,7 +941,7 @@
 /fr/docs/DOM/element.addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/DOM/element.appendChild	/fr/docs/Web/API/Node/appendChild
 /fr/docs/DOM/element.attributes	/fr/docs/Web/API/Element/attributes
-/fr/docs/DOM/element.blur	/fr/docs/Web/API/HTMLOrForeignElement/blur
+/fr/docs/DOM/element.blur	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /fr/docs/DOM/element.childNodes	/fr/docs/Web/API/Node/childNodes
 /fr/docs/DOM/element.classList	/fr/docs/Web/API/Element/classList
 /fr/docs/DOM/element.className	/fr/docs/Web/API/Element/className
@@ -953,7 +953,7 @@
 /fr/docs/DOM/element.dir	/fr/docs/Web/API/HTMLElement/dir
 /fr/docs/DOM/element.dispatchEvent	/fr/docs/Web/API/EventTarget/dispatchEvent
 /fr/docs/DOM/element.firstChild	/fr/docs/Web/API/Node/firstChild
-/fr/docs/DOM/element.focus	/fr/docs/Web/API/HTMLOrForeignElement/focus
+/fr/docs/DOM/element.focus	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /fr/docs/DOM/element.getAttribute	/fr/docs/Web/API/Element/getAttribute
 /fr/docs/DOM/element.getAttributeNS	/fr/docs/Web/API/Element/getAttributeNS
 /fr/docs/DOM/element.getAttributeNode	/fr/docs/Web/API/Element/getAttributeNode
@@ -1102,7 +1102,7 @@
 /fr/docs/DOM:element.addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/DOM:element.appendChild	/fr/docs/Web/API/Node/appendChild
 /fr/docs/DOM:element.attributes	/fr/docs/Web/API/Element/attributes
-/fr/docs/DOM:element.blur	/fr/docs/Web/API/HTMLOrForeignElement/blur
+/fr/docs/DOM:element.blur	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /fr/docs/DOM:element.childNodes	/fr/docs/Web/API/Node/childNodes
 /fr/docs/DOM:element.className	/fr/docs/Web/API/Element/className
 /fr/docs/DOM:element.click	/fr/docs/Web/API/HTMLElement/click
@@ -1113,7 +1113,7 @@
 /fr/docs/DOM:element.dir	/fr/docs/Web/API/HTMLElement/dir
 /fr/docs/DOM:element.dispatchEvent	/fr/docs/Web/API/EventTarget/dispatchEvent
 /fr/docs/DOM:element.firstChild	/fr/docs/Web/API/Node/firstChild
-/fr/docs/DOM:element.focus	/fr/docs/Web/API/HTMLOrForeignElement/focus
+/fr/docs/DOM:element.focus	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /fr/docs/DOM:element.getAttribute	/fr/docs/Web/API/Element/getAttribute
 /fr/docs/DOM:element.getAttributeNS	/fr/docs/Web/API/Element/getAttributeNS
 /fr/docs/DOM:element.getAttributeNode	/fr/docs/Web/API/Element/getAttributeNode
@@ -3684,7 +3684,7 @@
 /fr/docs/Web/API/Element.addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/Element.appendChild	/fr/docs/Web/API/Node/appendChild
 /fr/docs/Web/API/Element.attributes	/fr/docs/Web/API/Element/attributes
-/fr/docs/Web/API/Element.blur	/fr/docs/Web/API/HTMLOrForeignElement/blur
+/fr/docs/Web/API/Element.blur	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /fr/docs/Web/API/Element.childNodes	/fr/docs/Web/API/Node/childNodes
 /fr/docs/Web/API/Element.classList	/fr/docs/Web/API/Element/classList
 /fr/docs/Web/API/Element.className	/fr/docs/Web/API/Element/className
@@ -3695,7 +3695,7 @@
 /fr/docs/Web/API/Element.cloneNode	/fr/docs/Web/API/Node/cloneNode
 /fr/docs/Web/API/Element.dir	/fr/docs/Web/API/HTMLElement/dir
 /fr/docs/Web/API/Element.firstElementChild	/fr/docs/orphaned/Web/API/ParentNode/firstElementChild
-/fr/docs/Web/API/Element.focus	/fr/docs/Web/API/HTMLOrForeignElement/focus
+/fr/docs/Web/API/Element.focus	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /fr/docs/Web/API/Element.getAttribute	/fr/docs/Web/API/Element/getAttribute
 /fr/docs/Web/API/Element.getAttributeNS	/fr/docs/Web/API/Element/getAttributeNS
 /fr/docs/Web/API/Element.getAttributeNode	/fr/docs/Web/API/Element/getAttributeNode
@@ -3787,11 +3787,13 @@
 /fr/docs/Web/API/GlobalFetch	/fr/docs/Web/API/WindowOrWorkerGlobalScope
 /fr/docs/Web/API/GlobalFetch/fetch	/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 /fr/docs/Web/API/HTMLElement/dataset	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
-/fr/docs/Web/API/HTMLElement/focus	/fr/docs/Web/API/HTMLOrForeignElement/focus
+/fr/docs/Web/API/HTMLElement/focus	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /fr/docs/Web/API/HTMLElement/style	/fr/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /fr/docs/Web/API/HTMLElement/tabIndex	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /fr/docs/Web/API/HTMLFormElement/submit_event_	/fr/docs/Web/API/HTMLFormElement/submit_event
+/fr/docs/Web/API/HTMLOrForeignElement/blur	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /fr/docs/Web/API/HTMLOrForeignElement/dataset	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
+/fr/docs/Web/API/HTMLOrForeignElement/focus	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /fr/docs/Web/API/HTMLOrForeignElement/tabIndex	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /fr/docs/Web/API/HTMLTableElement.caption	/fr/docs/Web/API/HTMLTableElement/caption
 /fr/docs/Web/API/HTMLTableElement.insertRow	/fr/docs/Web/API/HTMLTableElement/insertRow

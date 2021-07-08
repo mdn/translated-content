@@ -578,10 +578,12 @@
 /pt-BR/docs/Web/API/Event/Comparativo_entre_Event_Targets	/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets
 /pt-BR/docs/Web/API/Fetch_API/Uso_de_busca_Cross-global	/pt-BR/docs/Web/API/Fetch_API/Cross-global_fetch_usage
 /pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/Web/API/HTMLContentElement/select
-/pt-BR/docs/Web/API/HTMLElement/blur	/pt-BR/docs/Web/API/HTMLOrForeignElement/blur
+/pt-BR/docs/Web/API/HTMLElement/blur	/pt-BR/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /pt-BR/docs/Web/API/HTMLElement/dataset	/pt-BR/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
-/pt-BR/docs/Web/API/HTMLElement/focus	/pt-BR/docs/Web/API/HTMLOrForeignElement/focus
+/pt-BR/docs/Web/API/HTMLElement/focus	/pt-BR/docs/orphaned/Web/API/HTMLOrForeignElement/focus
+/pt-BR/docs/Web/API/HTMLOrForeignElement/blur	/pt-BR/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /pt-BR/docs/Web/API/HTMLOrForeignElement/dataset	/pt-BR/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
+/pt-BR/docs/Web/API/HTMLOrForeignElement/focus	/pt-BR/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
 /pt-BR/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/pt-BR/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
