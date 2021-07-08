@@ -1638,8 +1638,9 @@
 /es/docs/Web/API/Geolocation.getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition
 /es/docs/Web/API/Geolocation.watchPosition	/es/docs/Web/API/Geolocation/watchPosition
 /es/docs/Web/API/GlobalEventHandlers/onunload	/es/docs/Web/API/WindowEventHandlers/onunload
-/es/docs/Web/API/HTMLElement/focus	/es/docs/Web/API/HTMLOrForeignElement/focus
+/es/docs/Web/API/HTMLElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/HTMLElement/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
+/es/docs/Web/API/HTMLOrForeignElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/IDBObjectStore.add	/es/docs/Web/API/IDBObjectStore/add
 /es/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/es/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /es/docs/Web/API/Navigator.getUserMedia	/es/docs/Web/API/Navigator/getUserMedia
@@ -2773,5 +2774,3 @@
 /es/docs/nsISupports:QueryInterface	/es/docs/nsISupports/QueryInterface
 /es/docs/nsISupports:Release	/es/docs/nsISupports/Release
 /es/docs/video	/es/docs/Web/HTML/Element/video
-
-

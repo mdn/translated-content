@@ -361,7 +361,7 @@
 /pl/docs/DOM/element.addEventListener	/pl/docs/Web/API/EventTarget/addEventListener
 /pl/docs/DOM/element.appendChild	/pl/docs/Web/API/Node/appendChild
 /pl/docs/DOM/element.attributes	/pl/docs/Web/API/Element/attributes
-/pl/docs/DOM/element.blur	/pl/docs/Web/API/HTMLOrForeignElement/blur
+/pl/docs/DOM/element.blur	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /pl/docs/DOM/element.childNodes	/pl/docs/Web/API/Node/childNodes
 /pl/docs/DOM/element.className	/pl/docs/Web/API/Element/className
 /pl/docs/DOM/element.click	/pl/docs/Web/API/HTMLElement/click
@@ -372,7 +372,7 @@
 /pl/docs/DOM/element.dir	/pl/docs/Web/API/HTMLElement/dir
 /pl/docs/DOM/element.dispatchEvent	/pl/docs/Web/API/EventTarget/dispatchEvent
 /pl/docs/DOM/element.firstChild	/pl/docs/Web/API/Node/firstChild
-/pl/docs/DOM/element.focus	/pl/docs/Web/API/HTMLOrForeignElement/focus
+/pl/docs/DOM/element.focus	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /pl/docs/DOM/element.getAttribute	/pl/docs/Web/API/Element/getAttribute
 /pl/docs/DOM/element.getAttributeNS	/pl/docs/Web/API/Element/getAttributeNS
 /pl/docs/DOM/element.getAttributeNode	/pl/docs/Web/API/Element/getAttributeNode
@@ -600,7 +600,7 @@
 /pl/docs/DOM:element.addEventListener	/pl/docs/Web/API/EventTarget/addEventListener
 /pl/docs/DOM:element.appendChild	/pl/docs/Web/API/Node/appendChild
 /pl/docs/DOM:element.attributes	/pl/docs/Web/API/Element/attributes
-/pl/docs/DOM:element.blur	/pl/docs/Web/API/HTMLOrForeignElement/blur
+/pl/docs/DOM:element.blur	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /pl/docs/DOM:element.childNodes	/pl/docs/Web/API/Node/childNodes
 /pl/docs/DOM:element.className	/pl/docs/Web/API/Element/className
 /pl/docs/DOM:element.click	/pl/docs/Web/API/HTMLElement/click
@@ -611,7 +611,7 @@
 /pl/docs/DOM:element.dir	/pl/docs/Web/API/HTMLElement/dir
 /pl/docs/DOM:element.dispatchEvent	/pl/docs/Web/API/EventTarget/dispatchEvent
 /pl/docs/DOM:element.firstChild	/pl/docs/Web/API/Node/firstChild
-/pl/docs/DOM:element.focus	/pl/docs/Web/API/HTMLOrForeignElement/focus
+/pl/docs/DOM:element.focus	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /pl/docs/DOM:element.getAttribute	/pl/docs/Web/API/Element/getAttribute
 /pl/docs/DOM:element.getAttributeNS	/pl/docs/Web/API/Element/getAttributeNS
 /pl/docs/DOM:element.getAttributeNode	/pl/docs/Web/API/Element/getAttributeNode
@@ -774,11 +774,11 @@
 /pl/docs/Dokumentacja_Gecko_DOM/Wprowadzenie_do_DOM	/pl/docs/Web/API/Document_Object_Model/Introduction
 /pl/docs/Dokumentacja_Gecko_DOM/document	/pl/docs/Web/API/Document
 /pl/docs/Dokumentacja_Gecko_DOM/element	/pl/docs/Web/API/Element
-/pl/docs/Dokumentacja_Gecko_DOM/element.focus	/pl/docs/Web/API/HTMLOrForeignElement/focus
+/pl/docs/Dokumentacja_Gecko_DOM/element.focus	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /pl/docs/Dokumentacja_Gecko_DOM/element/appendChild	/pl/docs/Web/API/Node/appendChild
-/pl/docs/Dokumentacja_Gecko_DOM/element/blur	/pl/docs/Web/API/HTMLOrForeignElement/blur
+/pl/docs/Dokumentacja_Gecko_DOM/element/blur	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /pl/docs/Dokumentacja_Gecko_DOM/element/cloneNode	/pl/docs/Web/API/Node/cloneNode
-/pl/docs/Dokumentacja_Gecko_DOM/element/focus	/pl/docs/Web/API/HTMLOrForeignElement/focus
+/pl/docs/Dokumentacja_Gecko_DOM/element/focus	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /pl/docs/Dokumentacja_Gecko_DOM/element/getAttribute	/pl/docs/Web/API/Element/getAttribute
 /pl/docs/Dokumentacja_Gecko_DOM/element/setAttribute	/pl/docs/Web/API/Element/setAttribute
 /pl/docs/Dokumentacja_Gecko_DOM/window	/pl/docs/Web/API/Window
@@ -787,11 +787,11 @@
 /pl/docs/Dokumentacja_Gecko_DOM:Wprowadzenie_do_DOM	/pl/docs/Web/API/Document_Object_Model/Introduction
 /pl/docs/Dokumentacja_Gecko_DOM:document	/pl/docs/Web/API/Document
 /pl/docs/Dokumentacja_Gecko_DOM:element	/pl/docs/Web/API/Element
-/pl/docs/Dokumentacja_Gecko_DOM:element.focus	/pl/docs/Web/API/HTMLOrForeignElement/focus
+/pl/docs/Dokumentacja_Gecko_DOM:element.focus	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /pl/docs/Dokumentacja_Gecko_DOM:element:appendChild	/pl/docs/Web/API/Node/appendChild
-/pl/docs/Dokumentacja_Gecko_DOM:element:blur	/pl/docs/Web/API/HTMLOrForeignElement/blur
+/pl/docs/Dokumentacja_Gecko_DOM:element:blur	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /pl/docs/Dokumentacja_Gecko_DOM:element:cloneNode	/pl/docs/Web/API/Node/cloneNode
-/pl/docs/Dokumentacja_Gecko_DOM:element:focus	/pl/docs/Web/API/HTMLOrForeignElement/focus
+/pl/docs/Dokumentacja_Gecko_DOM:element:focus	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /pl/docs/Dokumentacja_Gecko_DOM:element:getAttribute	/pl/docs/Web/API/Element/getAttribute
 /pl/docs/Dokumentacja_Gecko_DOM:element:setAttribute	/pl/docs/Web/API/Element/setAttribute
 /pl/docs/Dokumentacja_Gecko_DOM:window	/pl/docs/Web/API/Window
@@ -1564,14 +1564,14 @@
 /pl/docs/Web/API/DocumentOrShadowRoot/styleSheets	/pl/docs/Web/API/Document/styleSheets
 /pl/docs/Web/API/Element/addEventListener	/pl/docs/Web/API/EventTarget/addEventListener
 /pl/docs/Web/API/Element/appendChild	/pl/docs/Web/API/Node/appendChild
-/pl/docs/Web/API/Element/blur	/pl/docs/Web/API/HTMLOrForeignElement/blur
+/pl/docs/Web/API/Element/blur	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /pl/docs/Web/API/Element/childNodes	/pl/docs/Web/API/Node/childNodes
 /pl/docs/Web/API/Element/click	/pl/docs/Web/API/HTMLElement/click
 /pl/docs/Web/API/Element/clientNode	/pl/docs/Web/API/Node/cloneNode
 /pl/docs/Web/API/Element/dir	/pl/docs/Web/API/HTMLElement/dir
 /pl/docs/Web/API/Element/dispatchEvent	/pl/docs/Web/API/EventTarget/dispatchEvent
 /pl/docs/Web/API/Element/firstChild	/pl/docs/Web/API/Node/firstChild
-/pl/docs/Web/API/Element/focus	/pl/docs/Web/API/HTMLOrForeignElement/focus
+/pl/docs/Web/API/Element/focus	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /pl/docs/Web/API/Element/hasChildNodes	/pl/docs/Web/API/Node/hasChildNodes
 /pl/docs/Web/API/Element/insertBefore	/pl/docs/Web/API/Node/insertBefore
 /pl/docs/Web/API/Element/lang	/pl/docs/Web/API/HTMLElement/lang
@@ -1617,6 +1617,8 @@
 /pl/docs/Web/API/Event/screenY	/pl/docs/Web/API/MouseEvent/screenY
 /pl/docs/Web/API/Event/shiftKey	/pl/docs/Web/API/MouseEvent/shiftKey
 /pl/docs/Web/API/Event/view	/pl/docs/Web/API/UIEvent/view
+/pl/docs/Web/API/HTMLOrForeignElement/blur	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/blur
+/pl/docs/Web/API/HTMLOrForeignElement/focus	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /pl/docs/Web/API/Navigator/appCodeName	/pl/docs/Web/API/NavigatorID/appCodeName
 /pl/docs/Web/API/Navigator/appName	/pl/docs/Web/API/NavigatorID/appName
 /pl/docs/Web/API/Navigator/appVersion	/pl/docs/Web/API/NavigatorID/appVersion
@@ -2579,13 +2581,11 @@
 /pl/docs/Zdarzenia_online_i_offline	/pl/docs/Web/API/NavigatorOnLine/Online_and_offline_events
 /pl/docs/Zmiany_XMLHttpRequest_dla_Gecko_1.8	/pl/docs/Zmiany_w_obiekcie_XMLHttpRequest_w_Gecko_1.8
 /pl/docs/appendChild	/pl/docs/Web/API/Node/appendChild
-/pl/docs/blur	/pl/docs/Web/API/HTMLOrForeignElement/blur
+/pl/docs/blur	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /pl/docs/cloneNode	/pl/docs/Web/API/Node/cloneNode
 /pl/docs/dziesiec_lat_mdn	/pl/docs/MDN/At_ten
 /pl/docs/en	/en-US/
-/pl/docs/focus	/pl/docs/Web/API/HTMLOrForeignElement/focus
+/pl/docs/focus	/pl/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /pl/docs/getAttribute	/pl/docs/Web/API/Element/getAttribute
 /pl/docs/install.rdf	/pl/docs/Manifesty_Instalacji
 /pl/docs/setAttribute	/pl/docs/Web/API/Element/setAttribute
-
-

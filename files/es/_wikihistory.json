@@ -7507,14 +7507,6 @@
       "baldore"
     ]
   },
-  "Web/API/HTMLOrForeignElement/focus": {
-    "modified": "2020-10-15T21:51:27.517Z",
-    "contributors": [
-      "IsraelFloresDGA",
-      "AlePerez92",
-      "jesumv"
-    ]
-  },
   "Web/API/HTMLSelectElement": {
     "modified": "2020-10-15T22:06:34.378Z",
     "contributors": [
@@ -23280,6 +23272,14 @@
       "ultraklon",
       "pipepico",
       "AlePerez92"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/focus": {
+    "modified": "2020-10-15T21:51:27.517Z",
+    "contributors": [
+      "IsraelFloresDGA",
+      "AlePerez92",
+      "jesumv"
     ]
   },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {

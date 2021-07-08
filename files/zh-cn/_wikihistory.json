@@ -15676,24 +15676,6 @@
       "lvgx04"
     ]
   },
-  "Web/API/HTMLOrForeignElement/blur": {
-    "modified": "2019-03-23T22:00:21.147Z",
-    "contributors": [
-      "teoli",
-      "fscholz",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/focus": {
-    "modified": "2020-10-15T21:06:47.253Z",
-    "contributors": [
-      "RainSlide",
-      "slimeball",
-      "teoli",
-      "khalid32",
-      "ziyunfei"
-    ]
-  },
   "Web/API/HTMLParagraphElement": {
     "modified": "2020-11-03T10:28:13.003Z",
     "contributors": [
@@ -49887,6 +49869,14 @@
       "teoli"
     ]
   },
+  "orphaned/Web/API/HTMLOrForeignElement/blur": {
+    "modified": "2019-03-23T22:00:21.147Z",
+    "contributors": [
+      "teoli",
+      "fscholz",
+      "ziyunfei"
+    ]
+  },
   "orphaned/Web/API/HTMLOrForeignElement/dataset": {
     "modified": "2019-08-08T12:52:36.012Z",
     "contributors": [
@@ -49896,6 +49886,16 @@
       "ziyunfei",
       "ReyCG_sub",
       "ReyCG"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/focus": {
+    "modified": "2020-10-15T21:06:47.253Z",
+    "contributors": [
+      "RainSlide",
+      "slimeball",
+      "teoli",
+      "khalid32",
+      "ziyunfei"
     ]
   },
   "orphaned/Web/API/HTMLOrForeignElement/nonce": {

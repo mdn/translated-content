@@ -422,7 +422,7 @@
 /zh-CN/docs/DOM/element	/zh-CN/docs/Web/API/element
 /zh-CN/docs/DOM/element.addEventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
 /zh-CN/docs/DOM/element.attributes	/zh-CN/docs/Web/API/Element/attributes
-/zh-CN/docs/DOM/element.blur	/zh-CN/docs/Web/API/HTMLOrForeignElement/blur
+/zh-CN/docs/DOM/element.blur	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /zh-CN/docs/DOM/element.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/DOM/element.childNodes	/zh-CN/docs/Web/API/Node/childNodes
 /zh-CN/docs/DOM/element.classList	/zh-CN/docs/Web/API/Element/classList
@@ -435,7 +435,7 @@
 /zh-CN/docs/DOM/element.cloneNode	/zh-CN/docs/Web/API/Node/cloneNode
 /zh-CN/docs/DOM/element.contentEditable	/zh-CN/docs/Web/API/HTMLElement/contentEditable
 /zh-CN/docs/DOM/element.dir	/zh-CN/docs/Web/API/HTMLElement/dir
-/zh-CN/docs/DOM/element.focus	/zh-CN/docs/Web/API/HTMLOrForeignElement/focus
+/zh-CN/docs/DOM/element.focus	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /zh-CN/docs/DOM/element.getElementsByTagName	/zh-CN/docs/Web/API/Element/getElementsByTagName
 /zh-CN/docs/DOM/element.hasAttributes	/zh-CN/docs/Web/API/Element/hasAttributes
 /zh-CN/docs/DOM/element.hasChildNodes	/zh-CN/docs/Web/API/Node/hasChildNodes
@@ -1620,12 +1620,12 @@
 /zh-CN/docs/Web/API/GlobalFetch/fetch	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 /zh-CN/docs/Web/API/HTMLAnchorElement/referrer	/zh-CN/docs/Web/API/HTMLAnchorElement/referrerPolicy
 /zh-CN/docs/Web/API/HTMLCanvasElement/捕获流	/zh-CN/docs/Web/API/HTMLCanvasElement/captureStream
-/zh-CN/docs/Web/API/HTMLElement.blur	/zh-CN/docs/Web/API/HTMLOrForeignElement/blur
+/zh-CN/docs/Web/API/HTMLElement.blur	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /zh-CN/docs/Web/API/HTMLElement.click	/zh-CN/docs/Web/API/HTMLElement/click
 /zh-CN/docs/Web/API/HTMLElement.contentEditable	/zh-CN/docs/Web/API/HTMLElement/contentEditable
 /zh-CN/docs/Web/API/HTMLElement.dataset	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /zh-CN/docs/Web/API/HTMLElement.dir	/zh-CN/docs/Web/API/HTMLElement/dir
-/zh-CN/docs/Web/API/HTMLElement.focus	/zh-CN/docs/Web/API/HTMLOrForeignElement/focus
+/zh-CN/docs/Web/API/HTMLElement.focus	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /zh-CN/docs/Web/API/HTMLElement.isContentEditable	/zh-CN/docs/Web/API/HTMLElement/isContentEditable
 /zh-CN/docs/Web/API/HTMLElement.lang	/zh-CN/docs/Web/API/HTMLElement/lang
 /zh-CN/docs/Web/API/HTMLElement.offsetLeft	/zh-CN/docs/Web/API/HTMLElement/offsetLeft
@@ -1635,9 +1635,9 @@
 /zh-CN/docs/Web/API/HTMLElement.style	/zh-CN/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-CN/docs/Web/API/HTMLElement.tabIndex	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /zh-CN/docs/Web/API/HTMLElement.title	/zh-CN/docs/Web/API/HTMLElement/title
-/zh-CN/docs/Web/API/HTMLElement/blur	/zh-CN/docs/Web/API/HTMLOrForeignElement/blur
+/zh-CN/docs/Web/API/HTMLElement/blur	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /zh-CN/docs/Web/API/HTMLElement/dataset	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
-/zh-CN/docs/Web/API/HTMLElement/focus	/zh-CN/docs/Web/API/HTMLOrForeignElement/focus
+/zh-CN/docs/Web/API/HTMLElement/focus	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /zh-CN/docs/Web/API/HTMLElement/forceSpellCheck	/zh-CN/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
 /zh-CN/docs/Web/API/HTMLElement/nonce	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/nonce
 /zh-CN/docs/Web/API/HTMLElement/style	/zh-CN/docs/orphaned/Web/API/ElementCSSInlineStyle/style
@@ -1656,7 +1656,9 @@
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
 /zh-CN/docs/Web/API/HTMLInputElement.mozSetFileNameArray	/zh-CN/docs/conflicting/Web/API/HTMLInputElement
 /zh-CN/docs/Web/API/HTMLInputElement/mozSetFileNameArray	/zh-CN/docs/conflicting/Web/API/HTMLInputElement
+/zh-CN/docs/Web/API/HTMLOrForeignElement/blur	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /zh-CN/docs/Web/API/HTMLOrForeignElement/dataset	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
+/zh-CN/docs/Web/API/HTMLOrForeignElement/focus	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /zh-CN/docs/Web/API/HTMLOrForeignElement/nonce	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/nonce
 /zh-CN/docs/Web/API/HTMLOrForeignElement/tabIndex	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
