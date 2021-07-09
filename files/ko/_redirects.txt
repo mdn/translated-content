@@ -560,7 +560,7 @@
 /ko/docs/New_in_JavaScript_1.8	/ko/docs/Web/JavaScript/New_in_JavaScript/1.8
 /ko/docs/Node_server_without_framework	/ko/docs/Learn/Server-side/Node_server_without_framework
 /ko/docs/Notable_bugs_fixed_in_Firefox_3	/ko/docs/Mozilla/Firefox/Releases/3/Notable_bugs_fixed
-/ko/docs/Online_and_offline_events	/ko/docs/Web/API/NavigatorOnLine/Online_and_offline_events
+/ko/docs/Online_and_offline_events	/ko/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /ko/docs/SVG	/ko/docs/Web/SVG
 /ko/docs/SVG/Tutorial	/ko/docs/Web/SVG/Tutorial
 /ko/docs/SVG:Tutorial	/ko/docs/Web/SVG/Tutorial
@@ -637,6 +637,11 @@
 /ko/docs/Web/API/Navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/Navigator.battery/window.navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/Navigator.connection/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
+/ko/docs/Web/API/NavigatorID	/ko/docs/orphaned/Web/API/NavigatorID
+/ko/docs/Web/API/NavigatorLanguage	/ko/docs/orphaned/Web/API/NavigatorLanguage
+/ko/docs/Web/API/NavigatorLanguage/language	/ko/docs/orphaned/Web/API/NavigatorLanguage/language
+/ko/docs/Web/API/NavigatorOnLine	/ko/docs/orphaned/Web/API/NavigatorOnLine
+/ko/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/ko/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /ko/docs/Web/API/NetworkInformation.connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/NetworkInformation.connection/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/NetworkInformation/connection	/ko/docs/Web/API/Navigator/connection

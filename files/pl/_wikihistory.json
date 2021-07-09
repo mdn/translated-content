@@ -3185,131 +3185,6 @@
       "Flaneur"
     ]
   },
-  "Web/API/NavigatorID/appCodeName": {
-    "modified": "2019-03-23T23:49:13.430Z",
-    "contributors": [
-      "teoli",
-      "xuancanh",
-      "Mgjbot",
-      "Diablownik",
-      "Ptak82"
-    ]
-  },
-  "Web/API/NavigatorID/appName": {
-    "modified": "2019-03-23T23:49:12.926Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "Mgjbot",
-      "Diablownik"
-    ]
-  },
-  "Web/API/NavigatorID/appVersion": {
-    "modified": "2019-03-23T23:49:23.089Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "Mgjbot",
-      "Diablownik",
-      "Internauta1024A"
-    ]
-  },
-  "Web/API/NavigatorID/platform": {
-    "modified": "2019-03-23T23:49:28.729Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "Mgjbot",
-      "Diablownik"
-    ]
-  },
-  "Web/API/NavigatorID/product": {
-    "modified": "2019-03-23T23:49:35.115Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Mgjbot",
-      "Diablownik"
-    ]
-  },
-  "Web/API/NavigatorLanguage": {
-    "modified": "2019-03-23T23:01:34.390Z",
-    "contributors": [
-      "maniekbarty",
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorLanguage/language": {
-    "modified": "2019-03-23T23:49:32.556Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Mgjbot",
-      "Diablownik",
-      "Ptak82"
-    ]
-  },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T23:01:33.822Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-01-16T15:46:42.070Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Ptak82",
-      "Mgjbot",
-      "Flaneur"
-    ]
-  },
-  "Web/API/NavigatorOnLine/onLine": {
-    "modified": "2019-03-23T23:48:52.481Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Mgjbot",
-      "Diablownik",
-      "Ptak82"
-    ]
-  },
-  "Web/API/NavigatorPlugins": {
-    "modified": "2019-03-23T23:01:33.358Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorPlugins/javaEnabled": {
-    "modified": "2019-03-23T23:49:40.467Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "Mgjbot",
-      "Diablownik",
-      "Ptak82"
-    ]
-  },
-  "Web/API/NavigatorPlugins/mimeTypes": {
-    "modified": "2019-03-23T23:49:33.278Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Mgjbot",
-      "Diablownik"
-    ]
-  },
-  "Web/API/NavigatorPlugins/plugins": {
-    "modified": "2019-03-23T23:49:34.992Z",
-    "contributors": [
-      "sheldarr",
-      "teoli",
-      "jsx",
-      "AshfaqHossain",
-      "Mgjbot",
-      "Diablownik"
-    ]
-  },
   "Web/API/Node/appendChild": {
     "modified": "2019-03-24T00:09:45.110Z",
     "contributors": [
@@ -11150,6 +11025,131 @@
       "Mgjbot",
       "Marcoos",
       "Ptak82"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/appCodeName": {
+    "modified": "2019-03-23T23:49:13.430Z",
+    "contributors": [
+      "teoli",
+      "xuancanh",
+      "Mgjbot",
+      "Diablownik",
+      "Ptak82"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/appName": {
+    "modified": "2019-03-23T23:49:12.926Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "Mgjbot",
+      "Diablownik"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/appVersion": {
+    "modified": "2019-03-23T23:49:23.089Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "Mgjbot",
+      "Diablownik",
+      "Internauta1024A"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/platform": {
+    "modified": "2019-03-23T23:49:28.729Z",
+    "contributors": [
+      "teoli",
+      "AshfaqHossain",
+      "Mgjbot",
+      "Diablownik"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/product": {
+    "modified": "2019-03-23T23:49:35.115Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Mgjbot",
+      "Diablownik"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage": {
+    "modified": "2019-03-23T23:01:34.390Z",
+    "contributors": [
+      "maniekbarty",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage/language": {
+    "modified": "2019-03-23T23:49:32.556Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Mgjbot",
+      "Diablownik",
+      "Ptak82"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine": {
+    "modified": "2019-03-23T23:01:33.822Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
+    "modified": "2019-01-16T15:46:42.070Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Ptak82",
+      "Mgjbot",
+      "Flaneur"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/onLine": {
+    "modified": "2019-03-23T23:48:52.481Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Mgjbot",
+      "Diablownik",
+      "Ptak82"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins": {
+    "modified": "2019-03-23T23:01:33.358Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/javaEnabled": {
+    "modified": "2019-03-23T23:49:40.467Z",
+    "contributors": [
+      "teoli",
+      "jsx",
+      "Mgjbot",
+      "Diablownik",
+      "Ptak82"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/mimeTypes": {
+    "modified": "2019-03-23T23:49:33.278Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Mgjbot",
+      "Diablownik"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/plugins": {
+    "modified": "2019-03-23T23:49:34.992Z",
+    "contributors": [
+      "sheldarr",
+      "teoli",
+      "jsx",
+      "AshfaqHossain",
+      "Mgjbot",
+      "Diablownik"
     ]
   },
   "orphaned/Web/API/ParentNode": {

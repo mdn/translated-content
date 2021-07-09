@@ -5808,42 +5808,6 @@
       "dragmove"
     ]
   },
-  "Web/API/NavigatorID": {
-    "modified": "2020-10-15T22:04:17.452Z",
-    "contributors": [
-      "fscholz",
-      "SSJ-unclear"
-    ]
-  },
-  "Web/API/NavigatorLanguage": {
-    "modified": "2020-10-15T21:59:32.837Z",
-    "contributors": [
-      "alattalatta",
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorLanguage/language": {
-    "modified": "2019-03-18T21:46:11.388Z",
-    "contributors": [
-      "yuj25"
-    ]
-  },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2020-10-15T21:59:06.261Z",
-    "contributors": [
-      "alattalatta",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:51:10.400Z",
-    "contributors": [
-      "chrisdavidmills",
-      "teoli",
-      "Jeongkyu",
-      "조경빈"
-    ]
-  },
   "Web/API/NetworkInformation": {
     "modified": "2020-10-15T21:33:00.164Z",
     "contributors": [
@@ -18259,6 +18223,42 @@
       "nacyot",
       "fscholz",
       "JoonghunPark"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID": {
+    "modified": "2020-10-15T22:04:17.452Z",
+    "contributors": [
+      "fscholz",
+      "SSJ-unclear"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage": {
+    "modified": "2020-10-15T21:59:32.837Z",
+    "contributors": [
+      "alattalatta",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage/language": {
+    "modified": "2019-03-18T21:46:11.388Z",
+    "contributors": [
+      "yuj25"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine": {
+    "modified": "2020-10-15T21:59:06.261Z",
+    "contributors": [
+      "alattalatta",
+      "chrisdavidmills"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
+    "modified": "2019-03-23T23:51:10.400Z",
+    "contributors": [
+      "chrisdavidmills",
+      "teoli",
+      "Jeongkyu",
+      "조경빈"
     ]
   },
   "orphaned/Web/API/OffscreenCanvas/toBlob": {

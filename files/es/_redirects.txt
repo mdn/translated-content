@@ -496,7 +496,7 @@
 /es/docs/Errores_notables_corregidos_en_Firefox_3	/es/docs/Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 /es/docs/Estructura_de_directorios_de_código_fuente_de_Mozilla	/es/docs/orphaned/Estructura_de_directorios_de_código_fuente_de_Mozilla
 /es/docs/Etiquetas_audio_y_video_en_Firefox	/es/docs/orphaned/Etiquetas_audio_y_video_en_Firefox
-/es/docs/Eventos_online_y_offline	/es/docs/Web/API/NavigatorOnLine/Online_and_offline_events
+/es/docs/Eventos_online_y_offline	/es/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /es/docs/Extensiones/Actualización_de_extensiones_para_Firefox_4	/es/docs/orphaned/Extensiones/Actualización_de_extensiones_para_Firefox_4
 /es/docs/Extensión_Firebug_(externo)	https://addons.mozilla.org/extensions/moreinfo.php?id=1843&application=firefox
 /es/docs/FAQ_Incrustando_Mozilla	/es/docs/orphaned/FAQ_Incrustando_Mozilla
@@ -1830,9 +1830,16 @@
 /es/docs/Web/API/IndexedDB_API/Conceptos_Basicos_Detras_De_IndexedDB	/es/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /es/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/es/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /es/docs/Web/API/Navigator.getUserMedia	/es/docs/Web/API/Navigator/getUserMedia
+/es/docs/Web/API/NavigatorConcurrentHardware	/es/docs/orphaned/Web/API/NavigatorConcurrentHardware
+/es/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/es/docs/orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency
 /es/docs/Web/API/NavigatorGeolocation	/es/docs/conflicting/Web/API/Geolocation
 /es/docs/Web/API/NavigatorGeolocation/geolocation	/es/docs/Web/API/Navigator/geolocation
-/es/docs/Web/API/NavigatorOnLine/Eventos_online_y_offline	/es/docs/Web/API/NavigatorOnLine/Online_and_offline_events
+/es/docs/Web/API/NavigatorLanguage	/es/docs/orphaned/Web/API/NavigatorLanguage
+/es/docs/Web/API/NavigatorLanguage/language	/es/docs/orphaned/Web/API/NavigatorLanguage/language
+/es/docs/Web/API/NavigatorOnLine	/es/docs/orphaned/Web/API/NavigatorOnLine
+/es/docs/Web/API/NavigatorOnLine/Eventos_online_y_offline	/es/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
+/es/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/es/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
+/es/docs/Web/API/NavigatorOnLine/onLine	/es/docs/orphaned/Web/API/NavigatorOnLine/onLine
 /es/docs/Web/API/Node.nextSibling	/es/docs/Web/API/Node/nextSibling
 /es/docs/Web/API/Node/elementoPadre	/es/docs/Web/API/Node/parentElement
 /es/docs/Web/API/Node/insertarAntes	/es/docs/Web/API/Node/insertBefore

@@ -121,7 +121,7 @@
 /pt-BR/docs/DragDrop/Arrastar_e_Soltar	/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API
 /pt-BR/docs/DragDrop/Drag_and_Drop	/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API
 /pt-BR/docs/DragDrop/Drag_and_Drop/Arrastar_e_soltar_arquivos	/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
-/pt-BR/docs/Eventos_on-line_off-line	/pt-BR/docs/Web/API/NavigatorOnLine/Online_and_offline_events
+/pt-BR/docs/Eventos_on-line_off-line	/pt-BR/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /pt-BR/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/pt-BR/docs/Games/Introduction_to_HTML5_Game_Development
 /pt-BR/docs/Glossario	/pt-BR/docs/Glossary
 /pt-BR/docs/Glossario/404	/pt-BR/docs/Glossary/404
@@ -484,7 +484,7 @@
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Itens_do_menu_de_contexto	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /pt-BR/docs/Mozilla/Firefox/Novas_funcionalidades	/pt-BR/docs/Mozilla/Firefox/Experimental_features
 /pt-BR/docs/Mozilla/Firefox/Releases/3/Zoom_de_página_inteira	/pt-BR/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
-/pt-BR/docs/Online_and_offline_events	/pt-BR/docs/Web/API/NavigatorOnLine/Online_and_offline_events
+/pt-BR/docs/Online_and_offline_events	/pt-BR/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /pt-BR/docs/Projeto:Como_ajudar_com_MDN	/pt-BR/docs/conflicting/MDN/Contribute/Getting_started
 /pt-BR/docs/Projeto:Como_ajudar_com_MDN-redirect-1	/pt-BR/docs/conflicting/MDN/Contribute/Getting_started
 /pt-BR/docs/Projeto:Como_ajudar_com_MDN-redirect-2	/pt-BR/docs/conflicting/MDN/Contribute/Getting_started
@@ -588,7 +588,17 @@
 /pt-BR/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/pt-BR/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /pt-BR/docs/Web/API/Navigator.battery	/pt-BR/docs/Web/API/Navigator/battery
-/pt-BR/docs/Web/API/NavigatorID.platform	/pt-BR/docs/Web/API/NavigatorID/platform
+/pt-BR/docs/Web/API/NavigatorID	/pt-BR/docs/orphaned/Web/API/NavigatorID
+/pt-BR/docs/Web/API/NavigatorID.platform	/pt-BR/docs/orphaned/Web/API/NavigatorID/platform
+/pt-BR/docs/Web/API/NavigatorID/platform	/pt-BR/docs/orphaned/Web/API/NavigatorID/platform
+/pt-BR/docs/Web/API/NavigatorID/userAgent	/pt-BR/docs/orphaned/Web/API/NavigatorID/userAgent
+/pt-BR/docs/Web/API/NavigatorLanguage	/pt-BR/docs/orphaned/Web/API/NavigatorLanguage
+/pt-BR/docs/Web/API/NavigatorLanguage/language	/pt-BR/docs/orphaned/Web/API/NavigatorLanguage/language
+/pt-BR/docs/Web/API/NavigatorOnLine	/pt-BR/docs/orphaned/Web/API/NavigatorOnLine
+/pt-BR/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/pt-BR/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
+/pt-BR/docs/Web/API/NavigatorOnLine/onLine	/pt-BR/docs/orphaned/Web/API/NavigatorOnLine/onLine
+/pt-BR/docs/Web/API/NavigatorPlugins	/pt-BR/docs/orphaned/Web/API/NavigatorPlugins
+/pt-BR/docs/Web/API/NavigatorPlugins/javaEnabled	/pt-BR/docs/orphaned/Web/API/NavigatorPlugins/javaEnabled
 /pt-BR/docs/Web/API/Node.appendChild	/pt-BR/docs/Web/API/Node/appendChild
 /pt-BR/docs/Web/API/Node.childNodes	/pt-BR/docs/Web/API/Node/childNodes
 /pt-BR/docs/Web/API/Node.contains	/pt-BR/docs/Web/API/Node/contains
