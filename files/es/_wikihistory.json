@@ -8001,50 +8001,6 @@
       "mmednik"
     ]
   },
-  "Web/API/NavigatorConcurrentHardware": {
-    "modified": "2020-10-15T22:25:58.692Z"
-  },
-  "Web/API/NavigatorConcurrentHardware/hardwareConcurrency": {
-    "modified": "2020-10-15T22:26:06.271Z",
-    "contributors": [
-      "Gnuxdar"
-    ]
-  },
-  "Web/API/NavigatorLanguage": {
-    "modified": "2019-03-23T22:46:20.556Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorLanguage/language": {
-    "modified": "2019-03-23T22:46:24.341Z",
-    "contributors": [
-      "cesiztel",
-      "jesus9ias"
-    ]
-  },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T22:07:33.991Z",
-    "contributors": [
-      "abbycar"
-    ]
-  },
-  "Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-01-16T15:46:38.836Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Mgjbot",
-      "Nukeador",
-      "RickieesES",
-      "Unixcoder"
-    ]
-  },
-  "Web/API/NavigatorOnLine/onLine": {
-    "modified": "2019-03-23T22:07:34.200Z",
-    "contributors": [
-      "MarkelCuesta"
-    ]
-  },
   "Web/API/Network_Information_API": {
     "modified": "2020-11-17T00:17:37.419Z",
     "contributors": [
@@ -23289,6 +23245,50 @@
       "fscholz",
       "elin3t",
       "sebasmagri"
+    ]
+  },
+  "orphaned/Web/API/NavigatorConcurrentHardware": {
+    "modified": "2020-10-15T22:25:58.692Z"
+  },
+  "orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency": {
+    "modified": "2020-10-15T22:26:06.271Z",
+    "contributors": [
+      "Gnuxdar"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage": {
+    "modified": "2019-03-23T22:46:20.556Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage/language": {
+    "modified": "2019-03-23T22:46:24.341Z",
+    "contributors": [
+      "cesiztel",
+      "jesus9ias"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine": {
+    "modified": "2019-03-23T22:07:33.991Z",
+    "contributors": [
+      "abbycar"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
+    "modified": "2019-01-16T15:46:38.836Z",
+    "contributors": [
+      "chrisdavidmills",
+      "Mgjbot",
+      "Nukeador",
+      "RickieesES",
+      "Unixcoder"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/onLine": {
+    "modified": "2019-03-23T22:07:34.200Z",
+    "contributors": [
+      "MarkelCuesta"
     ]
   },
   "orphaned/Web/API/ParentNode": {

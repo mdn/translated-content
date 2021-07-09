@@ -9716,117 +9716,6 @@
       "AlexAlex"
     ]
   },
-  "Web/API/NavigatorID": {
-    "modified": "2020-10-15T21:36:43.124Z",
-    "contributors": [
-      "fscholz",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/appCodeName": {
-    "modified": "2019-03-23T22:54:11.399Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/appName": {
-    "modified": "2019-03-23T22:54:41.758Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/appVersion": {
-    "modified": "2019-03-23T22:54:32.102Z",
-    "contributors": [
-      "FordSoft",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/platform": {
-    "modified": "2020-10-15T21:36:42.389Z",
-    "contributors": [
-      "mqqza",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/product": {
-    "modified": "2019-03-23T22:54:26.372Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/taintEnabled": {
-    "modified": "2020-10-15T21:36:42.862Z",
-    "contributors": [
-      "fscholz",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/userAgent": {
-    "modified": "2019-05-31T01:04:23.816Z",
-    "contributors": [
-      "Grawl",
-      "patsuckow",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorLanguage": {
-    "modified": "2019-03-23T22:54:36.204Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorLanguage/language": {
-    "modified": "2020-05-02T05:07:32.288Z",
-    "contributors": [
-      "leshkin",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorLanguage/languages": {
-    "modified": "2019-03-23T22:54:22.153Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T22:54:40.457Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorOnLine/onLine": {
-    "modified": "2019-03-23T22:54:19.762Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorPlugins": {
-    "modified": "2019-03-23T22:54:31.545Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorPlugins/javaEnabled": {
-    "modified": "2019-03-23T22:54:23.717Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorPlugins/mimeTypes": {
-    "modified": "2019-03-23T22:54:19.236Z",
-    "contributors": [
-      "nik3402",
-      "torbasow",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorPlugins/plugins": {
-    "modified": "2019-03-23T22:54:18.720Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
   "Web/API/NetworkInformation": {
     "modified": "2019-03-23T22:54:09.237Z",
     "contributors": [
@@ -25324,6 +25213,117 @@
     "modified": "2019-03-23T22:18:51.568Z",
     "contributors": [
       "sosnovskyas"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID": {
+    "modified": "2020-10-15T21:36:43.124Z",
+    "contributors": [
+      "fscholz",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/appCodeName": {
+    "modified": "2019-03-23T22:54:11.399Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/appName": {
+    "modified": "2019-03-23T22:54:41.758Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/appVersion": {
+    "modified": "2019-03-23T22:54:32.102Z",
+    "contributors": [
+      "FordSoft",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/platform": {
+    "modified": "2020-10-15T21:36:42.389Z",
+    "contributors": [
+      "mqqza",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/product": {
+    "modified": "2019-03-23T22:54:26.372Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/taintEnabled": {
+    "modified": "2020-10-15T21:36:42.862Z",
+    "contributors": [
+      "fscholz",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/userAgent": {
+    "modified": "2019-05-31T01:04:23.816Z",
+    "contributors": [
+      "Grawl",
+      "patsuckow",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage": {
+    "modified": "2019-03-23T22:54:36.204Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage/language": {
+    "modified": "2020-05-02T05:07:32.288Z",
+    "contributors": [
+      "leshkin",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage/languages": {
+    "modified": "2019-03-23T22:54:22.153Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine": {
+    "modified": "2019-03-23T22:54:40.457Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/onLine": {
+    "modified": "2019-03-23T22:54:19.762Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins": {
+    "modified": "2019-03-23T22:54:31.545Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/javaEnabled": {
+    "modified": "2019-03-23T22:54:23.717Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/mimeTypes": {
+    "modified": "2019-03-23T22:54:19.236Z",
+    "contributors": [
+      "nik3402",
+      "torbasow",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/plugins": {
+    "modified": "2019-03-23T22:54:18.720Z",
+    "contributors": [
+      "AlexAlex"
     ]
   },
   "orphaned/Web/API/Node/getUserData": {

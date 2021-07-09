@@ -1,0 +1,85 @@
+---
+title: Zdarzenia online i offline
+slug: orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
+tags:
+  - AJAX
+  - DOM
+  - Programowanie_WWW
+  - Wszystkie_kategorie
+translation_of: Web/API/NavigatorOnLine/Online_and_offline_events
+original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
+---
+<p>W programie <a href="pl/Firefox_3_dla_programist%c3%b3w">Firefox 3</a> zaimplementowano obsługę <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#offline">zdarzeń online i offline</a> zdefiniowanych w <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/">specyfikacji WHATWG Web Applications 1.0</a>.
+</p>
+<h3 id="Om.C3.B3wienie" name="Om.C3.B3wienie"> Omówienie </h3>
+<p>Do stworzenia dobrej aplikacji internetowej działającej w trybie offline konieczne jest istnienie sposobu na sprawdzenie, kiedy aplikacja faktycznie znajduje się w trybie offline. W niektórych przypadkach potrzebna jest także możliwość stwierdzenia, czy aplikacja powróciła do stanu „online”. W praktyce sprowadza się to do dwóch wymagań:
+</p>
+<ol><li> Konieczne jest stwierdzenie, kiedy użytkownik przełącza przeglądarkę w tryb online, aby można było przeprowadzić ponowną synchronizację z serwerem. </li><li> Konieczne jest stwierdzenie, kiedy użytkownik przełącza przeglądarkę w tryb offline, aby można było odłożyć wysłanie żądania do serwera na później. </li></ol>
+<p>Zdarzenia online i offline pozwalają na uproszczenie powyższych procedur. </p><p>W aplikacji internetowej może także być konieczne wymuszenie przechowywania określonych dokumentów w pamięci podręcznej zasobów offline. W tym celu w kodzie sekcji <code>HEAD</code> należy wstawić znacznik <code>LINK</code> przedstawiony poniżej:
+</p>
+<pre class="eval"><span class="nowiki">&lt;link rel="offline-resource" href="mój_zasób"&gt;</span>
+</pre>
+<p>Przy przetwarzaniu kodu HTML przez program Firefox w wersji 3 lub nowszej dokumenty wymienione w znaczniku zostaną zapisane w specjalnej pamięci podręcznej zasobów offline.
+</p>
+<h3 id="Interfejs_API" name="Interfejs_API"> Interfejs API </h3>
+<h4 id="navigator.onLine" name="navigator.onLine"> <code>navigator.onLine</code> </h4>
+<p><code><a href="pl/DOM/window.navigator.onLine">navigator.onLine</a></code> to własność, która zwraca wartość <code>true</code> lub <code>false</code> (<code>true</code> dla trybu online, <code>false</code> dla trybu offline). Własność ta jest aktualizowana za każdym razem, gdy użytkownik przełącza przeglądarkę w tryb offline, wybierając odpowiednie polecenie menu (w programie Firefox: Plik -&gt; Pracuj w trybie offline).
+</p><p>Ponadto ta własność powinna być aktualizowana zawsze, gdy w przeglądarce nie można nawiązać połączenia z siecią. Zgodnie ze specyfikacją:
+</p>
+<blockquote>
+Atrybut <code>navigator.onLine</code> musi zwracać wartość false, jeżeli w programie po kliknięciu odsyłacza przez użytkownika lub po wysłaniu przez skrypt żądania do zdalnej witryny nie można połączyć się z siecią (lub wiadomo, że taka próba nie powiedzie się)...
+</blockquote>
+<p>W programie Firefox 2 ta własność jest aktualizowana przy przełączaniu przeglądarki między trybami online i offline oraz przy utracie lub ponownym nawiązaniu połączenia z siecią (dotyczy systemów Windows i Linux).
+</p><p>Własność istnieje w starszych wersjach przeglądarek Firefox i Internet Explorer (obecna specyfikacja została oparta na tych właśnie wcześniejszych implementacjach), można zatem korzystać z niej już teraz. Automatyczne wykrywanie stanu połączenia sieciowego zostało wprowadzone w programie Firefox 2. </p>
+<h4 id="Zdarzenia_.22online.22_i_.22offline.22" name="Zdarzenia_.22online.22_i_.22offline.22"> Zdarzenia "<code>online</code>" i "<code>offline</code>" </h4>
+<p>W programie <a href="pl/Firefox_3">Firefox 3</a> wprowadzono dwa nowe zdarzenia: "<code>online</code>" i "<code>offline</code>". Są one wywoływane w elemencie <code>&lt;body&gt;</code> każdej otwartej strony, gdy przeglądarka jest przełączana między trybem online i offline. Ponadto zdarzenie bąbelkuje od elementu <code>document.body</code>, poprzez element <code>document</code>, aż do elementu <code>window</code>. Żadnego ze zdarzeń nie można anulować (niemożliwe jest zablokowanie możliwości przełączania przeglądarki między trybami online i offline).
+</p><p>Obserwatory (ang. <i>event listeners</i>) tych zdarzeń można zarejestrować na kilka sposobów:
+</p>
+<ul><li> przy użyciu metody <code><a href="pl/DOM/element.addEventListener">addEventListener</a></code> dla elementu <code>window</code>, <code>document</code> lub <code>document.body</code>;
+</li><li> za pomocą własności <code>.ononline</code> lub <code>.onoffline</code> dla elementu <code>document</code> lub <code>document.body</code> przez przypisanie do niej obiektu <code>Function</code> języka JavaScript. (<b>Uwaga:</b> własności <code>window.ononline</code> i <code>window.onoffline</code> nie działają ze względu na zgodność z poprzednimi wersjami);
+</li><li> przez ustawienie atrybutów <code>ononline="..."</code> lub <code>onoffline="..."</code> znacznika <code>&lt;body&gt;</code> w kodzie HTML.
+</li></ul>
+<h3 id="Przyk.C5.82ad" name="Przyk.C5.82ad"> Przykład </h3>
+<p>Dostępny jest <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">prosty przykład zastosowania</a>, który pozwala na sprawdzenie działania zdarzeń.
+<span class="comment">XXX When mochitests for this are created, point to those instead and update this example -nickolay</span>
+</p>
+<pre class="eval"> &lt;!doctype html&gt;
+ &lt;html&gt;
+ &lt;head&gt;
+   &lt;script&gt;
+     function updateOnlineStatus(msg) {
+       var status = document.getElementById("status");
+       var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
+       status.setAttribute("class", condition);
+       var state = document.getElementById("state");
+       state.innerHTML = condition;
+       var log = document.getElementById("log");
+       log.appendChild(document.createTextNode("Zdarzenie: " + msg + "; stan=" + condition + "\n"));
+     }
+     function loaded() {
+       updateOnlineStatus("load");
+       document.body.addEventListener("offline", function () {
+         updateOnlineStatus("offline")
+       }, false);
+       document.body.addEventListener("online", function () {
+         updateOnlineStatus("online")
+       }, false);
+     }
+   &lt;/script&gt;
+   &lt;style&gt;...&lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body onload="loaded()"&gt;
+   &lt;div id="status"&gt;&lt;p id="state"&gt;&lt;/p&gt;&lt;/div&gt;
+   &lt;div id="log"&gt;&lt;/div&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;
+</pre>
+<h3 id="Odsy.C5.82acze" name="Odsy.C5.82acze"> Odsyłacze </h3>
+<ul><li> <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#offline">Sekcja „Zdarzenia online i offline” w specyfikacji WHATWG Web Applications 1.0</a>
+</li><li> <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336359">Opis błędu dotyczącego implementacji zdarzeń online i offline w programie Firefox</a> oraz <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336682">kontynuacja dyskusji</a>
+</li><li> <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">Prosty przykład zastosowania</a>
+</li><li> <a class="external" href="http://ejohn.org/blog/offline-events/">Objaśnienie zdarzeń online i offline</a>
+</li></ul>
+<div class="noinclude">
+</div>
+{{ languages( { "en": "en/Online_and_offline_events", "es": "es/Eventos_online_y_offline", "fr": "fr/\u00c9v\u00e8nements_online_et_offline", "ja": "ja/Online_and_offline_events", "pt": "pt/Eventos_online_e_offline" } ) }}
