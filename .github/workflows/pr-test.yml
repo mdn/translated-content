@@ -22,16 +22,6 @@ jobs:
         # with:
         #   ref: ${{ github.event.pull_request.head.sha }}
 
-      # - name: Debug github.sha
-      #   run: |
-      #     # WAITING for https://github.community/t/how-do-i-get-the-git-diff-compared-to-main/179296
-      #     echo "github.event.pull_request.base.sha:"
-      #     echo ${{ github.event.pull_request.base.sha }}
-      #     echo "github.event.pull_request.head.sha:"
-      #     echo ${{ github.event.pull_request.head.sha }}
-      #     git fetch -n origin ${{ github.event.pull_request.base.sha }}
-      #     git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
-
       - uses: actions/checkout@v2
         with:
           repository: mdn/content
