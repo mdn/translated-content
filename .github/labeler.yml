@@ -1,0 +1,19 @@
+# Add 'repo' label to any root file changes
+repo:
+  - '*'
+
+# Add '@domain/core' label to any change within the 'core' package
+@domain/core:
+  - package/core/*
+  - package/core/**/*
+
+# Add 'test' label to any change to *.spec.js files within the source dir
+test:
+  - src/**/*.spec.js
+
+l10n-de:
+  - files/de/**/*
+
+l10n-zh:
+  - files/zh-cn/**/*
+  - files/zh-tw/**/*
