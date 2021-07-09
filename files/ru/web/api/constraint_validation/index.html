@@ -1,0 +1,128 @@
+---
+title: Constraint validation API
+slug: Web/API/Constraint_validation
+tags:
+  - API
+  - Валидация ограничений
+  - Landing
+  - Reference
+---
+<div>{{apiref()}}</div>
+
+<p><span class="seoSummary">Constraint Validation API позволяет проверять значения, которые пользователи вводят в элементы формы перед отправкой на сервер.</span></p>
+
+<h2 id="Concepts_and_usage">Концепция и использование</h2>
+
+<p>Определённые элементы формы, такие как {{HTMLElement("input")}}, {{HTMLElement("select")}} и {{HTMLElement("textarea")}}, могут ограничивать допустимый формат значений, используя для установки базовых ограничений такие атрибуты, как <code>required</code> и <code>pattern</code>.</p>
+
+<p>Однако, вы можете задать более сложные ограничения или обеспечить более понятные сообщения об ошибках валидации, чем предусмотрены по умолчанию. Это можно сделать с помощью Constraint Validation API.</p>
+
+<div class="note">
+<p><strong>Примечание:</strong> Валидация ограничений на стороне клиента не отменяет необходимости производить валидацию на стороне сервера. Даже при том, что валидация на стороне клиента может предотвратить многие распространённые типы не валидных значений, они всё могут быть отправлены устаревшими браузерами или злоумышленниками, которые пытаются навредить вашему веб-приложению. Следовательно, вам по-прежнему нужно валидировать значения как на стороне клиента, так и на стороне сервера. Валидация на стороне клиента даёт пользователю быструю обратную связь, повышая удобство работы с интерфейсом. Но вы не должны полностью полагаться в вопросе очистки данных, полученных сервером.</p>
+</div>
+
+<p>Валидация ограничений с помощью Constraint Validation API выполняется либо для одного элемента формы, либо на уровне всей формы для элемента {{ HTMLElement("form") }}.</p>
+
+<h2 id="Constraint_validation_interfaces">Интерфейс валидации ограничений</h2>
+
+<dl>
+ <dt><a href="/en-US/docs/Web/API/ValidityState">ValidityState</a></dt>
+ <dd>Интерфейс ValidityState представляет <em>состояния валидации</em>, которые может иметь элемент формы, с учётом определённых им ограничений. Вместе они помогают объяснить, была ли ошибка валидации и почему.</dd>
+ <dt>Событие <a href="/ru/docs/Web/API/HTMLInputElement/invalid_event">invalid</a></dt>
+ <dd>Этот тип события запускается на элементе формы, если элемент не удовлетворяет ограничениям.</dd>
+</dl>
+
+<h3 id="Extensions_to_other_interfaces">Расширения к другим интерфейсам</h3>
+
+<p>Constraint Validation API расширяет перечисленные ниже интерфейсы элементов формы рядом новых свойств и методов (элементы, которые могут иметь атрибут <code>form</code>, указывающий на содержащую их форму):</p>
+
+<ul>
+ <li><code><strong><a href="/ru/docs/Web/API/HTMLButtonElement">HTMLButtonElement</a></strong></code></li>
+ <li><code><strong><a href="/en-US/docs/Web/API/HTMLFieldSetElement">HTMLFieldsetElement</a></strong></code></li>
+ <li><code><strong><a href="/ru/docs/Web/API/HTMLInputElement">HTMLInputElement</a></strong></code></li>
+ <li><code><strong><a href="/en-US/docs/Web/API/HTMLObjectElement">HTMLObjectElement</a></strong></code></li>
+ <li><code><strong><a href="/en-US/docs/Web/API/HTMLOutputElement">HTMLOutputElement</a></strong></code></li>
+ <li><code><strong><a href="/ru/docs/Web/API/HTMLSelectElement">HTMLSelectElement</a></strong></code></li>
+ <li><code><strong><a href="/en-US/docs/Web/API/HTMLTextAreaElement">HTMLTextAreaElement</a></strong></code></li>
+</ul>
+
+<h4 id="Properties">Свойства</h4>
+
+<dl>
+ <dt>{{domxref('HTMLObjectElement.validity', 'validity')}}</dt>
+ <dd>Свойство, доступное только для чтения, которое возвращает объект <code><a href="/en-US/docs/Web/API/ValidityState">ValidityState</a></code>, свойства которого представляют ошибки валидации значения этого элемента.</dd>
+ <dt>{{domxref('HTMLObjectElement.validationMessage','validationMessage')}}</dt>
+ <dd>Доступное только для чтения свойство, которое возвращает пустую строку, если элемент не является кандидатом на участие в валидации ограничений или если значение элемента валидно. Если значение элемента не валидно, оно возвращает локализованное сообщение валидации. Оно отобразится в интерфейсе, если элемент является единственным элементом формы, с проблемой валидности; если кастомное сообщение об ошибке установлено с помощью {{domxref('HTMLObjectElement.setCustomValidity','setCustomValidity()')}}, это будет показано.</dd>
+ <dt>{{domxref('HTMLObjectElement.willValidate', 'willValidate')}}</dt>
+ <dd>Доступное только для чтения логическое свойство, которое возвращает <code>true</code>, если элемент является кандидатом на участие в валидации; и <code>false</code> в противном случае. Элементы с интерфейсом <code>HTMLObjectElement</code> <em>никогда</em> не являются кандидатами на участие в валидации. Другим может быть запрещено участвовать в валидации ограничений в зависимости от конкретных условий.</dd>
+</dl>
+
+<h4 id="Methods">Методы</h4>
+
+<dl>
+ <dt>{{domxref('HTMLObjectElement.checkValidity', 'checkValidity()')}}</dt>
+ <dd>Проверяет значение элемента на соответствие его ограничениям. Если значение не валидно, на элементе запускается событие <a href="/en-US/docs/Web/API/HTMLInputElement/invalid_event">invalid</a> и возвращает <code>false</code>; если значение валидно, возвращает <code>true</code>.</dd>
+ <dt>{{domxref('HTMLFormElement.reportValidity','reportValidity()')}} метод HTMLFormElement</dt>
+ <dd>Проверяет значение элемента на соответствие его ограничениям и сообщает о статусе валидности; если значение не валидно, оно запускает на элементе событие <a href="/ru/docs/Web/API/HTMLInputElement/invalid_event">invalid</a>, возвращает <code>false</code>, а затем сообщает пользователю о статусе валидности любым способом, доступным пользовательскому агенту. Если значение валидно, возвращает <code>true</code>.</dd>
+ <dt>{{domxref('HTMLObjectElement.setCustomValidity','setCustomValidity(<em>message</em>)')}}</dt>
+ <dd>Устанавливает кастомную строку сообщения об ошибке, которое будет показано пользователю при отправке формы, объясняя, почему значение не валидно — когда сообщение установлено, статус меняется на не валидный. Чтобы очистить этот статус, вызовите функцию, передав ей в виде аргумента пустую строку. При этом кастомное сообщение очищается, элемент становится валидным, а сообщение не отображается.</dd>
+</dl>
+
+<h2 id="Examples">Примеры</h2>
+
+<p>Рассмотрим следующую форму:</p>
+
+<pre class="brush: html">&lt;form&gt;
+  &lt;label for="name"&gt;Enter username (upper and lowercase letters): &lt;/label&gt;
+  &lt;input type="text" name="name" id="name" required pattern="[A-Za-z]+"&gt;
+  &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+<p>Если вы попытаетесь отправить форму с пустым полем, или полем, имеющим значение, не соответствующее шаблону в атрибуте <code><a href="/en-US/docs/Web/HTML/Attributes/pattern">pattern</a></code>, базовый функционал валидации HTML-формы приведёт к появлению сообщения об ошибке по умолчанию.</p>
+
+<p>Если вы хотели вместо этого отобразить кастомное сообщение об ошибке, следует использовать JavaScript, как показано ниже:</p>
+
+<pre class="brush: js">const nameInput = document.querySelector('input');
+
+nameInput.addEventListener('input', () =&gt; {
+  nameInput.setCustomValidity('');
+  nameInput.checkValidity();
+});
+
+nameInput.addEventListener('invalid', () =&gt; {
+  if(nameInput.value === '') {
+    nameInput.setCustomValidity('Enter your username!');
+  } else {
+    nameInput.setCustomValidity('Usernames can only contain upper and lowercase letters. Try again!');
+  }
+});</pre>
+
+<p>Пример выглядит так:</p>
+
+<p>{{EmbedLiveSample('Examples')}}</p>
+
+<p>Вкратце:</p>
+
+<ul>
+ <li>Мы проверяем состояние валидности элемента input при каждом изменении его значения, запуская метод <code>checkValidity()</code> через обработчик события <code>input</code>.</li>
+ <li>Если значение не валидно, происходит событие <code>invalid</code>, и запускается обработчик события <code>invalid</code>. Внутри этой функции с помощью блока <code>if()</code> мы выясняем, почему значение является не валидным: из-за того, что оно пустое или потому что не соответствует шаблону, после чего задаём кастомное сообщение об ошибке.</li>
+ <li>В результате, если при нажатии кнопки отправки формы значение input не валидно, отобразится одно из кастомных сообщений об ошибке.</li>
+ <li>Если поле валидно, как и ожидалось, форма будет отправлена. Чтобы это произошло, нужно отменить кастомную валидность, вызвав метод <code>setCustomValidity()</code> с пустой строкой. Поэтому мы делаем это каждый раз, когда происходит событие <code>input</code>. Если вы этого не сделаете, и предварительно была установлена кастомная валидность, input будет зарегистрирован как не валидный, даже если в данный момент он содержат валидные данные.</li>
+</ul>
+
+<div class="notecard note">
+<p><strong>Примечание</strong>: На протяжении многих версий браузер Firefox поддерживал собственный атрибут ошибки <code>x-moz-errormessage</code>, который позволял аналогичным образом устанавливать кастомные сообщения оишбки. Он был удалён в версии 66 (смотрите <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1513890">bug 1513890</a>).</p>
+</div>
+
+<h2 id="Specifications">Спецификации</h2>
+
+{{Specifications("api.ValidityState")}}
+
+<h2 id="See_also">Также смотрите</h2>
+
+<ul>
+ <li><code><a href="/ru/docs/Web/HTML/Element/input">&lt;input&gt;</a></code></li>
+ <li><code><a href="/ru/docs/Web/HTML/Element/select">&lt;select&gt;</a></code></li>
+ <li><code><a href="/en-US/docs/Web/HTML/Element/textarea">&lt;textarea&gt;</a></code></li>
+ <li><code>Свойства {{domxref('ValidityState')}}</code>: {{domxref('validityState.badInput', 'badInput')}}, {{domxref('validityState.customError','customError')}}, {{domxref('validityState.patternMismatch','patternMismatch')}}, {{domxref('validityState.rangeOverflow','rangeOverflow')}}, {{domxref('validityState.rangeUnderflow','rangeUnderflow')}}, {{domxref('validityState.stepMismatch','stepMismatch')}}, {{domxref('validityState.tooLong','tooLong')}}, {{domxref('validityState.tooShort','tooShort')}}, {{domxref('validityState.typeMismatch','typeMismatch')}}, {{domxref('validityState.valid','valid')}}, and {{domxref('validityState.valueMissing','valueMissing')}}.</li>
+</ul>
