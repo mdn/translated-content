@@ -168,25 +168,25 @@ tags:
 
 <ul>
  <li>Если элементу {{ HTMLElement("form") }} задан атрибут {{ htmlattrxref("novalidate", "form") }}, интерактивная валидация ограничений не произойдёт.</li>
- <li>Вызов метода <code>submit()</code> интерфейса <code><a href="/ru/docs/Web/API/HTMLFormElement">HTMLFormElement</a></code> не запускает валидацию ограничений. Другими словами, этот метод отправляет данные формы на сервер, даже если ограничения нарушены. Вместо него вызовите метод <code>click()</code> кнопки submit.</li>
+ <li>Вызов метода <code>submit()</code> интерфейса <code><a href="/ru/docs/Web/API/HTMLFormElement">HTMLFormElement</a></code> не запускает валидацию ограничений. Другими словами, этот метод отправляет данные формы на сервер, даже если ограничения нарушены. Вместо него вызовите метод <code>click()</code> кнопки отправки формы.</li>
 </ul>
 </div>
 
-<h2 id="Complex_constraints_using_the_Constraint_Validation_API">Complex constraints using the Constraint Validation API</h2>
+<h2 id="Complex_constraints_using_the_Constraint_Validation_API">Сложные ограничения с помощью Constraint Validation API</h2>
 
-<p>Using JavaScript and the Constraint API, it is possible to implement more complex constraints, for example, constraints combining several fields, or constraints involving complex calculations.</p>
+<p>С помощью JavaScript и Constraint Validation API можно реализовать более сложные ограничения, например, ограничения, касающиеся сразу нескольких полей или ограничения, включающие сложные вычисления.</p>
 
-<p>Basically, the idea is to trigger JavaScript on some form field event (like <strong>onchange</strong>) to calculate whether the constraint is violated, and then to use the method <code><em>field</em>.setCustomValidity()</code> to set the result of the validation: an empty string means the constraint is satisfied, and any other string means there is an error and this string is the error message to display to the user.</p>
+<p>По сути, идея заключается в том, чтобы при наступлении определённого события поля формы (например, <strong>onchange</strong>) запускать JavaScript, чтобы определить, нарушено ограничение, и затем с помощью метода <code><em>field</em>.setCustomValidity()</code>, задать результат валидации: пустая строка означает, что ограничение соблюдается, а любая другая строка означает, что есть ошибка и эта строка является сообщением об ошибке, которое нужно показать пользователю.</p>
 
-<h3 id="Constraint_combining_several_fields_Postal_code_validation">Constraint combining several fields: Postal code validation</h3>
+<h3 id="Constraint_combining_several_fields_Postal_code_validation">Ограничение, объединяющее несколько полей: Валидация почтового индекса</h3>
 
-<p>The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like <code>D-</code> in Germany, <code>F- </code> in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.</p>
+<p>Формат почтового индекса в разных странах отличается. Мало того, что в большинстве стран может быть дополнительный префик с кодом страны (например, <code>D — </code> в Германии, <code>F — </code> во Франции или Швейцарии), в некоторых странах, почтовые индексы содержат фиксированное количеством цифр; другие, например, Великобритания, имеют ещё более сложную структуру, допускающую в определённых местах ещё и наличие букв.</p>
 
 <div class="note">
-<p><strong>Note:</strong> This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.</p>
+<p><strong>Примечание:</strong> Далее представлена не полная библиотека валидации почтового индекса, а скорее демонстрация ключевых концепций.</p>
 </div>
 
-<p>As an example, we will add a script checking the constraint validation for this simple form:</p>
+<p>В качестве примера мы добавим скрипт, выполняющий валидацию органичений простой формы:</p>
 
 <pre class="brush: html">&lt;form&gt;
     &lt;label for="ZIP"&gt;ZIP : &lt;/label&gt;
@@ -201,127 +201,128 @@ tags:
     &lt;input type="submit" value="Validate"&gt;
 &lt;/form&gt;</pre>
 
-<p>This displays the following form:</p>
+<p>Получим следующую форму:</p>
 
 <p>{{EmbedLiveSample("Constraint_combining_several_fields_Postal_code_validation")}}</p>
 
-<p>First, we write a function checking the constraint itself:</p>
+<p>Сначала запишем функцию, проверяющую само ограничение:</p>
 
 <pre class="brush: js">function checkZIP() {
+  // Для каждой страны определяем шаблон, которому должен следовать почтовый индекс
   // For each country, defines the pattern that the ZIP has to follow
   var constraints = {
-    ch : [ '^(CH-)?\\d{4}$', "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950" ],
-    fr : [ '^(F-)?\\d{5}$' , "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012" ],
-    de : [ '^(D-)?\\d{5}$' , "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345" ],
+    ch : [ '^(CH-)?\\d{4}$', "Индексы Швейцарии должны включать строго 4 цифры: например, CH-1950 или 1950" ],
+    fr : [ '^(F-)?\\d{5}$' , "Индексы Франции должны включать строго 5 цифр: например, F-75012 or 75012" ],
+    de : [ '^(D-)?\\d{5}$' , "Индексы Германии должны включать строго 5 цифр: например, D-12345 or 12345" ],
     nl : [ '^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$',
-                    "Nederland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS" ]
+                    "Индексы Нидерландов должны включать строго 4 цифры, за которыми следуют 2 буквы, кроме SA, SD и SS" ]
   };
 
-  // Read the country id
+  // Прочитать id страны
   var country = document.getElementById("Country").value;
 
-  // Get the NPA field
+  // Получить поле NPA
   var ZIPField = document.getElementById("ZIP");
 
-  // Build the constraint checker
+  // Создать валидатор ограничения
   var constraint = new RegExp(constraints[country][0], "");
     console.log(constraint);
 
-  // Check it!
+  // Валидировать индекс
   if (constraint.test(ZIPField.value)) {
-    // The ZIP follows the constraint, we use the ConstraintAPI to tell it
+    // Индекс соответствует ограничению, мы используем ConstraintAPI, чтобы сообщить об этом
     ZIPField.setCustomValidity("");
   }
   else {
-    // The ZIP doesn't follow the constraint, we use the ConstraintAPI to
-    // give a message about the format required for this country
+    // Индекс не соответствует ограничению , мы используем ConstraintAPI, чтобы
+    // показать сообщение, описывающее формат, требуемый для данной страны
     ZIPField.setCustomValidity(constraints[country][1]);
   }
 }
 </pre>
 
-<p>Then we link it to the <strong>onchange</strong> event for the {{ HTMLElement("select") }} and the <strong>oninput</strong> event for the {{ HTMLElement("input") }}:</p>
+<p>Затем мы связываем его с событием <strong>onchange</strong> для {{ HTMLElement("select") }} и с событием <strong>oninput</strong> для {{ HTMLElement("input") }}:</p>
 
 <pre class="brush: js">window.onload = function () {
     document.getElementById("Country").onchange = checkZIP;
     document.getElementById("ZIP").oninput = checkZIP;
 }</pre>
 
-<p>You can see a <a href="/@api/deki/files/4744/=constraint.html">live example</a> of the postal code validation.</p>
+<p>Вы можете посмотреть <a href="/@api/deki/files/4744/=constraint.html">живой пример</a> валидации индекса.</p>
 
-<h3 id="Limiting_the_size_of_a_file_before_its_upload">Limiting the size of a file before its upload</h3>
+<h3 id="Limiting_the_size_of_a_file_before_its_upload">Ограничение размера загружаемого файла</h3>
 
-<p>Another common constraint is to limit the size of a file to be uploaded. Checking this on the client side before the file is transmitted to the server requires combining the Constraint Validation API, and especially the <code>field.setCustomValidity()</code> method, with another JavaScript API, here the File API.</p>
+<p>Ещё одним распространённым ограничением является лимит размера загружаемых файлов. Данная проверка на стороне клиента перед отправкой на сервер требует сочетания Constraint Validation API и особенно метода <code>field.setCustomValidity()</code> с другим JavaScript API, в данном случае — File API.</p>
 
-<p>Here is the HTML part:</p>
+<p>Вот часть HTML:</p>
 
 <pre class="brush: html">&lt;label for="FS"&gt;Select a file smaller than 75 kB : &lt;/label&gt;
 &lt;input type="file" id="FS"&gt;</pre>
 
-<p>This displays:</p>
+<p>Она отображает:</p>
 
 <p>{{EmbedLiveSample("Limiting_the_size_of_a_file_before_its_upload")}}</p>
 
-<p>The JavaScript reads the file selected, uses the <code>File.size()</code> method to get its size, compares it to the (hard coded) limit, and calls the Constraint API to inform the browser if there is a violation:</p>
+<p>JavaScript считывает выбранный файл, с помощью метода <code>File.size()</code> получает его размер, сравнивает его с лимитом и вызывает Constraint Validation API, чтобы сообщить браузеру о нарушении:</p>
 
 <pre class="brush: js">function checkFileSize() {
   var FS = document.getElementById("FS");
   var files = FS.files;
 
-  // If there is (at least) one file selected
+  // Если выбран хотя бы один файл
   if (files.length &gt; 0) {
-     if (files[0].size &gt; 75 * 1024) { // Check the constraint
-       FS.setCustomValidity("The selected file must not be larger than 75 kB");
+     if (files[0].size &gt; 75 * 1024) { // Проверить ограничение
+       FS.setCustomValidity("Размер файла не должен превышать 75 kB");
        return;
      }
   }
-  // No custom constraint violation
+  // Если нарушения ограничений нет
   FS.setCustomValidity("");
 }</pre>
 
-<p>Finally we hook the method with the correct event:</p>
+<p>Наконец мы связываем метод с нужным событием:</p>
 
 <pre class="brush: js">window.onload = function () {
   document.getElementById("FS").onchange = checkFileSize;
 }</pre>
 
-<p>You can see a <a href="/@api/deki/files/4745/=fileconstraint.html">live example</a> of the File size constraint validation.</p>
+<p><a href="/@api/deki/files/4745/=fileconstraint.html">Живой пример</a> валидации ограничения размера файла.</p>
 
-<h2 id="Visual_styling_of_constraint_validation">Visual styling of constraint validation</h2>
+<h2 id="Visual_styling_of_constraint_validation">Визуальное оформление нарушения ограничений</h2>
 
-<p>Apart from setting constraints, web developers want to control what messages are displayed to the users and how they are styled.</p>
+<p>Помимо установки ограничений, веб-разработчики хотят управлять тем, какие сообщения показываются пользователям и как они оформлены.</p>
 
-<h3 id="Controlling_the_look_of_elements">Controlling the look of elements</h3>
+<h3 id="Controlling_the_look_of_elements">Управление внешним видом элементов</h3>
 
-<p>The look of elements can be controlled via CSS pseudo-classes.</p>
+<p>Изменять внешний вид элементов можно с помощью CSS-псевдоклассов.</p>
 
-<h4 id="required_and_optional_CSS_pseudo-classes">:required and :optional CSS pseudo-classes</h4>
+<h4 id="required_and_optional_CSS_pseudo-classes">CSS-псевдоклассы :required и :optional</h4>
 
-<p>The {{cssxref(':required')}} and {{cssxref(':optional')}} <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> allow writing selectors that match form elements that have the {{ htmlattrxref("required") }} attribute, or that don't have it.</p>
+<p><a href="/ru/docs/Web/CSS/Pseudo-classes">Псевдоклассы</a> {{cssxref(':required')}} и {{cssxref(':optional')}} позволяют писать селекторы, соответствующие элементам формы, которые имеют или не имеют атрибут {{ htmlattrxref("required") }}</p>
 
-<h4 id="placeholder-shown_CSS_pseudo-class">:placeholder-shown CSS pseudo-class</h4>
+<h4 id="placeholder-shown_CSS_pseudo-class">CSS-псевдокласс :placeholder-shown</h4>
 
-<p>See {{cssxref(':placeholder-shown')}}</p>
+<p>Смотрите {{cssxref(':placeholder-shown')}}</p>
 
-<h4 id="valid_invalid_CSS_pseudo-classes">:valid :invalid CSS pseudo-classes</h4>
+<h4 id="valid_invalid_CSS_pseudo-classes">CSS-псевдоклассы :valid и :invalid</h4>
 
-<p>The {{cssxref(':valid')}} and {{cssxref(':invalid')}} <a href="/en-US/docs/Web/CSS/Pseudo-classes">pseudo-classes</a> are used to represent &lt;input&gt; elements whose content validates and fails to validate respectively according to the input's type setting. These classes allow the user to style valid or invalid form elements to make it easier to identify elements that are either formatted correctly or incorrectly.</p>
+<p><a href="/ru/docs/Web/CSS/Pseudo-classes">Псевдоклассы</a> {{cssxref(':valid')}} и {{cssxref(':invalid')}} используются для представления элементов &lt;input&gt;, содержимое которых является валидным или не валидным соответственно. Эти классы позволяют пользователю оформлять валидные или не валидные элементы формы, чтобы облегчить определение элементов, которые имеют корректный или некорректный формат.</p>
 
-<h3 id="Controlling_the_text_of_constraint_violation">Controlling the text of constraint violation</h3>
+<h3 id="Controlling_the_text_of_constraint_violation">Управление текстом нарушения ограничений</h3>
 
-<p>The following items can help with controlling the text of a constraint violation:</p>
+<p>Следующее может помочь с управлением текстом нарушения ограничений:</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Constraint_validation#element.setcustomvalidity(message)">element.setCustomValidity(message)</a> method on the following elements:
+ <li>Метод <a href="/en-US/docs/Web/API/Constraint_validation#element.setcustomvalidity(message)">element.setCustomValidity(message)</a> для элементов:
 
   <ul>
-   <li>{{HTMLElement("fieldset")}}. Note: Setting a custom validity message on fieldset elements will not prevent form submission in most browsers.</li>
+   <li>{{HTMLElement("fieldset")}}. Примечание: Добавление кастомного сообщения валидации на элемент fieldset не предотвращает отправку формы в большинстве браузеров.</li>
    <li>{{HTMLElement("input")}}</li>
    <li>{{HTMLElement("output")}}</li>
    <li>{{HTMLElement("select")}}</li>
-   <li>Submit buttons (created with either a {{HTMLElement("button")}} element with the <code>submit</code> type, or an <code>input</code> element with the {{HTMLElement("input/submit", "submit")}} type. Other types of buttons do not participate in constraint validation.</li>
+   <li>Кнопка отправки формы в виде элемента {{HTMLElement("button")}} или <code>input</code> <code>submit</code> с указанным типом {{HTMLElement("input/submit", "submit")}}. Другие типы кнопок не участвуют в валидации ограничений.</li>
    <li>{{HTMLElement("textarea")}}</li>
   </ul>
  </li>
- <li>The <a href="/en-US/docs/Web/API/ValidityState"><code>ValidityState</code></a> interface describes the object returned by the <a href="/en-US/docs/Web/API/Constraint_validation#validity">validity</a> property of the element types listed above. It represents various ways that an entered value can be invalid. Together, they help explain why an element's value fails to validate, if it's not valid.</li>
+ <li>Интерфейс <a href="/en-US/docs/Web/API/ValidityState"><code>ValidityState</code></a> описывает объект, возвращаемый свойством <a href="/en-US/docs/Web/API/Constraint_validation#validity">validity</a> перечисленных выше типов элементов. Он представляет разные способы определения не валидности значения. Вместе они помогают объяснить, почему значение элемента не проходит валидацию, если оно не валидно.</li>
 </ul>
