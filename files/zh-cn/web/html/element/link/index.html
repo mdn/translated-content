@@ -23,23 +23,23 @@ translation_of: Web/HTML/Element/link
 
 <p>这里有一些你经常遇到的其它类型。例如，这里是一个网站图标的链接：</p>
 
-<pre class="notranslate"><code>&lt;link rel="icon" href="favicon.ico"&gt;</code></pre>
+<pre class="brush: html notranslate"><code>&lt;link rel="icon" href="favicon.ico"&gt;</code></pre>
 
 <p>还有一些其它的与图标相关的<code>rel</code>值，主要用于表示不同移动平台上特殊的图标类型，例如：</p>
 
-<pre class="notranslate"><code>&lt;link rel="apple-touch-icon-precomposed" sizes="114x114"
+<pre class="brush: html notranslate"><code>&lt;link rel="apple-touch-icon-precomposed" sizes="114x114"
       href="apple-icon-114.png" type="image/png"&gt;</code></pre>
 
 <p><code>sizes</code>属性表示图标大小，<code>type</code>属性包含了链接资源的MIME类型。这些属性为浏览器选择最合适的图标提供了有用的提示。</p>
 
 <p>你也可以提供一个媒体类型，或者在<code>media</code>属性内部进行查询；这种资源将只在满足媒体条件的情况下才被加载进来。例如：</p>
 
-<pre class="notranslate"><code>&lt;link href="print.css" rel="stylesheet" media="print"&gt;
+<pre class="brush: html notranslate"><code>&lt;link href="print.css" rel="stylesheet" media="print"&gt;
 &lt;link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)"&gt;</code></pre>
 
 <p><code>&lt;link&gt;</code>也加入了一些新的有意思的性能和安全特性。举例如下：</p>
 
-<pre class="notranslate"><code>&lt;link rel="preload" href="myFont.woff2" as="font"
+<pre class="brush: html notranslate"><code>&lt;link rel="preload" href="myFont.woff2" as="font"
       type="font/woff2" crossorigin="anonymous"&gt;</code></pre>
 
 <p>将<code>rel</code>设定为<code>preload</code>，表示浏览器应该预加载该资源 (更多细节见<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content">使用rel="preload"预加载内容</a>) 。<code>as</code>属性表示获取特定的内容类。<code>crossorigin</code>属性表示该资源是否应该使用一个{{Glossary("CORS")}}请求来获取。</p>
@@ -255,7 +255,7 @@ translation_of: Web/HTML/Element/link
 
 <p>您可以在同一页面上包含指向多个不同图标的链接，浏览器将使用<code>rel</code>和<code>sizes</code> 值作为提示来选择最适合其特定上下文的图标。</p>
 
-<pre class="notranslate"><code>&lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
+<pre class="brush: html notranslate"><code>&lt;!-- third-generation iPad with high-resolution Retina display: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png"&gt;
 &lt;!-- iPhone with high-resolution Retina display: --&gt;
 &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png"&gt;
@@ -270,7 +270,7 @@ translation_of: Web/HTML/Element/link
 
 <p>您可以在<code>media</code>属性中提供媒体类型或查询; 然后，只有在媒体条件为true时，才会加载此资源。 例如：</p>
 
-<pre class="notranslate"><code>&lt;link href="print.css" rel="stylesheet" media="print"&gt;
+<pre class="brush: html notranslate"><code>&lt;link href="print.css" rel="stylesheet" media="print"&gt;
 &lt;link href="mobile.css" rel="stylesheet" media="all"&gt;
 &lt;link href="desktop.css" rel="stylesheet" media="screen and (min-width: 600px)"&gt;
 &lt;link href="highres.css" rel="stylesheet" media="screen and (min-resolution: 300dpi)"&gt;</code></pre>

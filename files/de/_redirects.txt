@@ -445,7 +445,7 @@
 /de/docs/Mozilla/Add-ons/WebExtensions/Beispiele	/de/docs/Mozilla/Add-ons/WebExtensions/Examples
 /de/docs/Mozilla/Add-ons/WebExtensions/Deine_erste_WebErweiterung	/de/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /de/docs/Mozilla/Add-ons/WebExtensions/Deine_zweite_Erweiterung	/de/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-/de/docs/Online_and_offline_events	/de/docs/Web/API/NavigatorOnLine/Online_and_offline_events
+/de/docs/Online_and_offline_events	/de/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /de/docs/OpenSearch_Plugin_für_Firefox_erstellen	/de/docs/Web/OpenSearch
 /de/docs/Plugins/Flash-Aktivierung:_Browser-Vergleich	/de/docs/orphaned/Plugins/Flash_Activation:_Browser_Comparison
 /de/docs/Profilmanager	/de/docs/Profile_Manager
@@ -483,7 +483,16 @@
 /de/docs/Updating_web_applications_for_Firefox_3	/de/docs/Mozilla/Firefox/Releases/3/Updating_web_applications
 /de/docs/Verwenden_des_Cache_beim_Firefox_1.5	/de/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /de/docs/Web/API/AudioContext/decodeAudioData	/de/docs/Web/API/BaseAudioContext/decodeAudioData
+/de/docs/Web/API/Body	/de/docs/orphaned/Web/API/Body
+/de/docs/Web/API/Body/arrayBuffer	/de/docs/orphaned/Web/API/Body/arrayBuffer
+/de/docs/Web/API/Body/blob	/de/docs/orphaned/Web/API/Body/blob
+/de/docs/Web/API/Body/body	/de/docs/orphaned/Web/API/Body/body
+/de/docs/Web/API/Body/bodyUsed	/de/docs/orphaned/Web/API/Body/bodyUsed
+/de/docs/Web/API/Body/formData	/de/docs/orphaned/Web/API/Body/formData
+/de/docs/Web/API/Body/json	/de/docs/orphaned/Web/API/Body/json
+/de/docs/Web/API/Body/text	/de/docs/orphaned/Web/API/Body/text
 /de/docs/Web/API/CSSRule.cssText	/de/docs/Web/API/CSSRule/cssText
+/de/docs/Web/API/ChildNode	/de/docs/orphaned/Web/API/ChildNode
 /de/docs/Web/API/ChildNode/remove	/de/docs/orphaned/Web/API/ChildNode/remove
 /de/docs/Web/API/Element.querySelector	/de/docs/Web/API/Element/querySelector
 /de/docs/Web/API/File/Typ	/de/docs/Web/API/File/type
@@ -494,9 +503,13 @@
 /de/docs/Web/API/LinkStyle	/de/docs/orphaned/Web/API/LinkStyle
 /de/docs/Web/API/MozMobileConnection.selectNetworkAutomatically	/de/docs/Web/API/MozMobileConnection/selectNetworkAutomatically
 /de/docs/Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-handler	/de/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
+/de/docs/Web/API/NavigatorOnLine	/de/docs/orphaned/Web/API/NavigatorOnLine
+/de/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/de/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
+/de/docs/Web/API/NavigatorOnLine/onLine	/de/docs/orphaned/Web/API/NavigatorOnLine/onLine
 /de/docs/Web/API/Node.cloneNode	/de/docs/Web/API/Node/cloneNode
 /de/docs/Web/API/Node/innerText	/de/docs/Web/API/HTMLElement/innerText
 /de/docs/Web/API/Node/setUserData	/de/docs/orphaned/Web/API/Node/setUserData
+/de/docs/Web/API/RenderingContext	/de/docs/orphaned/Web/API/RenderingContext
 /de/docs/Web/API/Vollbild_API	/de/docs/Web/API/Fullscreen_API
 /de/docs/Web/API/WebGL_API/3D-Objekte_mit_WebGL_erstellen	/de/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /de/docs/Web/API/WebGL_API/Animierte_Texturen_in_WebGL	/de/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
@@ -626,6 +639,7 @@
 /de/docs/Web/CSS/none	/de/docs/conflicting/Web/CSS/float
 /de/docs/Web/CSS/normal	/de/docs/conflicting/Web/CSS/font-variant
 /de/docs/Web/CSS/tatsächlicher_Wert	/de/docs/Web/CSS/actual_value
+/de/docs/Web/CSS/transform-function/translateX	/de/docs/orphaned/Web/CSS/transform-function/translateX
 /de/docs/Web/CSS/url	/de/docs/Web/CSS/url()
 /de/docs/Web/CSS/visible	/de/docs/Web/CSS/visibility
 /de/docs/Web/CSS/word-wrap	/de/docs/Web/CSS/overflow-wrap
