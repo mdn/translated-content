@@ -3612,7 +3612,7 @@
 /ja/docs/Tools/Profiler	/ja/docs/conflicting/Tools/Performance
 /ja/docs/Tools/Release_notes	/ja/docs/conflicting/Mozilla/Firefox/Releases
 /ja/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE_clone	/ja/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE
-/ja/docs/Tools/Responsive_Design_Mode_(before_Firefox_52)	/ja/docs/conflicting/Tools/Responsive_Design_Mode
+/ja/docs/Tools/Responsive_Design_Mode_(before_Firefox_52)	/ja/docs/Tools/Responsive_Design_Mode
 /ja/docs/Tools/Responsive_Design_View	/ja/docs/Tools/Responsive_Design_Mode
 /ja/docs/Tools/Using_the_Source_Editor	/ja/docs/conflicting/tools/Keyboard_shortcuts
 /ja/docs/Tools/Web_Console-redirect-1	/ja/docs/Tools/Web_Console
