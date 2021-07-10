@@ -1,0 +1,71 @@
+---
+title: 더하기 할당 (+=)
+slug: Web/JavaScript/Reference/Operators/Addition_assignment
+tags:
+  - Assignment operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
+browser-compat: javascript.operators.addition_assignment
+translation_of: Web/JavaScript/Reference/Operators/Addition_assignment
+---
+
+<div>{{jsSidebar("Operators")}}</div>
+
+<p>
+  더하기 할당 연산자(<code>+=</code>)는 오른쪽 피연산자의 값을 변수에 더한 결과를 다시 변수에 할당합니다. 두 피연산자의
+  타입이 더하기 할당 연산자의 동작을 결정하며, 덧셈 또는 문자열 연결이 가능합니다.
+</p>
+
+<div>{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}</div>
+
+<h2 id="syntax">구문</h2>
+
+<pre class="brush: js">x += y // x = x + y</pre>
+
+<h2 id="examples">예제</h2>
+
+<h3 id="using_addition_assignment">더하기 할당 사용하기</h3>
+
+<pre class="brush: js">
+// foo = 'foo'
+// bar = 5
+// baz = true
+// 위와 같은 변수를 가정할 때
+
+// Number + Number -&gt; 덧셈
+bar += 2 // 7
+
+// Boolean + Number -&gt; 덧셈
+baz += 1 // 2
+
+// Boolean + Boolean -&gt; 덧셈
+baz += false // 1
+
+// Number + String -&gt; 연결
+bar += 'foo' // "5foo"
+
+// String + Boolean -&gt; 연결
+foo += false // "foofalse"
+
+// String + String -&gt; 연결
+foo += 'bar' // "foobar"
+</pre>
+
+<h2 id="specifications">명세</h2>
+
+{{Specifications}}
+
+<h2 id="browser_compatibility">브라우저 호환성</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="see_also">같이 보기</h2>
+
+<ul>
+  <li>
+    <a href="/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment">JavaScript 안내서의 할당 연산자</a>
+  </li>
+  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Addition">더하기 연산자</a></li>
+</ul>

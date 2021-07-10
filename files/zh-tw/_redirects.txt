@@ -143,7 +143,7 @@
 /zh-TW/docs/Firefox_3.5_技術文件	/zh-TW/docs/orphaned/Firefox_3.5_技術文件
 /zh-TW/docs/Firefox_3_CSS_Improvement	/zh-TW/docs/Mozilla/Firefox/Releases/3/Firefox_3_CSS_Improvement
 /zh-TW/docs/Firefox_3_Dom_Improvements	/zh-TW/docs/Mozilla/Firefox/Releases/3/DOM_improvements
-/zh-TW/docs/Firefox_3_Online_and_Offline_Events	/zh-TW/docs/Web/API/NavigatorOnLine/Online_and_offline_events
+/zh-TW/docs/Firefox_3_Online_and_Offline_Events	/zh-TW/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /zh-TW/docs/Firefox_3_Web-based_protocol_handler	/zh-TW/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /zh-TW/docs/Firefox_3_for_developers	/zh-TW/docs/Mozilla/Firefox/Releases/3
 /zh-TW/docs/Firefox_3_supports_Cross-site_XMLHttpRequest	/zh-TW/docs/orphaned/Cross-site_XMLHttpRequest
@@ -579,6 +579,9 @@
 /zh-TW/docs/Web/API/HTMLElement/style	/zh-TW/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /zh-TW/docs/Web/API/HTMLOrForeignElement/dataset	/zh-TW/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
 /zh-TW/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/zh-TW/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
+/zh-TW/docs/Web/API/NavigatorLanguage/language	/zh-TW/docs/orphaned/Web/API/NavigatorLanguage/language
+/zh-TW/docs/Web/API/NavigatorOnLine	/zh-TW/docs/orphaned/Web/API/NavigatorOnLine
+/zh-TW/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/zh-TW/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /zh-TW/docs/Web/API/Node/innerText	/zh-TW/docs/Web/API/HTMLElement/innerText
 /zh-TW/docs/Web/API/NonDocumentTypeChildNode	/zh-TW/docs/conflicting/Web/API/Element
 /zh-TW/docs/Web/API/ParentNode	/zh-TW/docs/orphaned/Web/API/ParentNode
