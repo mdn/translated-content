@@ -769,4 +769,3 @@
 /pt-BR/docs/dez_anos_de_MDN	/pt-BR/docs/MDN/At_ten
 /pt-BR/docs/en	/en-US/
 /pt-BR/docs/mask	/pt-BR/docs/Web/CSS/mask
-
