@@ -57,10 +57,10 @@ original_slug: Web/SVG/Tutoriel/Premiers_pas
    <li>Si le HTML est du XHTML et est distribué avec le type MIME <code>application/xhtml+xml</code>, le SVG peut directement être intégré dans la source XML.</li>
    <li>SI le HTML est du HTML5 et que le navigateur est conforme HTML5, le SVG peut aussi être intégré directement dans les sources. Toutefois, il peut être nécessaire d'effectuer des modifications de syntaxe pour rendre le document compatible aux spécifications HTML5.</li>
    <li>Le document SVG peut être défini avec un élément <code>object</code> :
-    <pre>&lt;object data="image.svg" type="image/svg+xml" /&gt;</pre>
+    <pre class="brush: html">&lt;object data="image.svg" type="image/svg+xml" /&gt;</pre>
    </li>
    <li>De la même manière, un <code>iframe</code> peut être utilisé :
-    <pre>&lt;iframe src="image.svg"&gt;&lt;/iframe&gt;</pre>
+    <pre class="brush: html">&lt;iframe src="image.svg"&gt;&lt;/iframe&gt;</pre>
    </li>
    <li>Une balise <code>img</code> peut également être utilisée.</li>
    <li>Enfin, SVG peut être créé dynamiquement avec du JavaScript et injecté dans le DOM HTML. Ceci permet aux technologies de remplacement pour les navigateurs, qui ne peuvent pas traiter SVG, d'être mises en œuvre. Pour approfondir cette technique, vous pouvez lire <a href="/fr/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction">cette page</a>.</li>
@@ -71,7 +71,7 @@ original_slug: Web/SVG/Tutoriel/Premiers_pas
 
 <h2 id="svg_file_types">Les types de fichiers SVG</h2>
 
-<p>Les fichiers SVG peuvent exister sous deux formes. La première consiste en des fichiers textes traditionnels, contenant des balises SVG. Il est recommandé de nommer ces fichiers avec l'extension ".svg" (toute en minuscules).</p>
+<p>Les fichiers SVG peuvent exister sous deux formes. La première consiste en des fichiers textes traditionnels, contenant des balises SVG. Il est recommandé de nommer ces fichiers avec l'extension ".svg" (tout en minuscules).</p>
 
 <p>Toutefois, les fichiers SVG peuvent atteindre une taille assez importante, suivant l'utilisation qu'on en fait. Une application géographique utilisera ainsi des fichiers SVG plus volumineux, par exemple. Pour ces cas particuliers, la spécification SVG permet l'utilisation de fichiers compressés avec gzip. Il est conseillé d'utiliser l'extension .svgz (toujours tout en minuscules) pour ce type de fichiers. Par contre, il est assez problématique d'utiliser des fichiers SVG compressés avec gzip avec certains user agents quand les fichiers sont distribués à travers un serveur Microsoft IIS. De plus, Firefox ne peut pas charger les fichiers compressés en local. Évitez donc d'utiliser les fichiers compressés, sauf si vous êtes sûr que le serveur Web que vous utilisez puisse les distribuer correctement (voir ci-après).</p>
 
