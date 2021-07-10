@@ -1,0 +1,110 @@
+---
+title: paint()
+slug: orphaned/Web/CSS/paint()
+tags:
+  - CSS
+  - Fonction
+  - Houdini
+  - Reference
+  - Web
+translation_of: Web/CSS/paint()
+original_slug: Web/CSS/paint()
+---
+<div>{{CSSRef}}{{SeeCompatTable}}</div>
+
+<p>La fonction CSS <strong><code>paint()</code></strong> définit une {{cssxref("&lt;image&gt;")}} dont la valeur est générée par un <em>PaintWorklet</em>.</p>
+
+<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+
+<pre class="syntaxbox notranslate">paint(<var>workletName</var>, <var>parameters</var>)</pre>
+
+<h3 id="Paramètres">Paramètres</h3>
+
+<dl>
+ <dt><code><var>workletName</var></code></dt>
+ <dd>Le nom du <em>worklet</em> enregistré.</dd>
+ <dt><code><var>parameters</var></code></dt>
+ <dd>Des paramètres supplémentaires optionnels, passés aux <em>paintWorklet</em>.</dd>
+</dl>
+
+<h2 id="Examples" name="Examples">Exemples</h2>
+
+<p>Il est possible de passer des arguments supplémentaires grâce à la fonction CSS <code>paint()</code>. Dans cet exemple, on passe deux arguments : le premier indiquant si l'arrière-plan est rempli ou si on utilise juste son contour et le second indiquant la largeur de ce contour :</p>
+
+<pre class="brush: html hidden notranslate">&lt;ul&gt;
+    &lt;li&gt;item 1&lt;/li&gt;
+    &lt;li&gt;item 2&lt;/li&gt;
+    &lt;li&gt;item 3&lt;/li&gt;
+    &lt;li&gt;item 4&lt;/li&gt;
+    &lt;li&gt;item 5&lt;/li&gt;
+    &lt;li&gt;item 6&lt;/li&gt;
+    &lt;li&gt;item 7&lt;/li&gt;
+    &lt;li&gt;item 8&lt;/li&gt;
+    &lt;li&gt;item 9&lt;/li&gt;
+    &lt;li&gt;item 10&lt;/li&gt;
+    &lt;li&gt;item 11&lt;/li&gt;
+    &lt;li&gt;item 12&lt;/li&gt;
+    &lt;li&gt;item 13&lt;/li&gt;
+    &lt;li&gt;item 14&lt;/li&gt;
+    &lt;li&gt;item 15&lt;/li&gt;
+    &lt;li&gt;item 16&lt;/li&gt;
+    &lt;li&gt;item 17&lt;/li&gt;
+    &lt;li&gt;item 18&lt;/li&gt;
+    &lt;li&gt;item 19&lt;/li&gt;
+    &lt;li&gt;item 20&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+<pre class="brush: js hidden notranslate">  CSS.paintWorklet.addModule('https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js');
+</pre>
+
+<pre class="brush: css notranslate">li {
+   --boxColor: hsla(55, 90%, 60%, 1.0);
+   background-image: paint(hollowHighlights, stroke, 2px);
+}
+
+li:nth-of-type(3n) {
+   --boxColor: hsla(155, 90%, 60%, 1.0);
+   background-image: paint(hollowHighlights, filled,  3px);
+}
+
+li:nth-of-type(3n+1) {
+   --boxColor: hsla(255, 90%, 60%, 1.0);
+   background-image: paint(hollowHighlights, stroke, 1px);
+}</pre>
+
+<p>On a ici ajouté <a href="/fr/docs/Web/CSS/--*">une propriété personnalisée</a> dans le sélecteur du bloc. Ces propriétés personnalisées peuvent être manipulées par le <em>PaintWorklet</em>.</p>
+
+<p>{{EmbedLiveSample("Examples", 300, 300)}}</p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS Painting API', '#paint-notation', 'Paint Notation')}}</td>
+   <td>{{Spec2('CSS Painting API')}}</td>
+   <td>Définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("css.types.image.paint")}}</p>
+
+<h2 id="See_also" name="See_also">Voir aussi</h2>
+
+<ul>
+ <li>{{domxref('PaintWorklet')}}</li>
+ <li>{{domxref('CSS Painting API')}}</li>
+ <li><a href="/fr/docs/Web/API/CSS_Painting_API/Guide">Utiliser l'API CSS Painting</a></li>
+ <li>{{cssxref("&lt;image&gt;")}}</li>
+ <li>{{domxref("canvas")}}</li>
+</ul>

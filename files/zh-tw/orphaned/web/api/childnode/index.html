@@ -1,0 +1,183 @@
+---
+title: ChildNode
+slug: orphaned/Web/API/ChildNode
+translation_of: Web/API/ChildNode
+original_slug: Web/API/ChildNode
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p><code><strong>childNodes</strong></code> 介面定義了可以擁有父節點之 {{domxref("Node")}} 物件的方法。</p>
+
+<p><code>childNodes</code> 是一個原始的介面，且不能以此建立物件實體。{{domxref("Element")}}、{{domxref("DocumentType")}} 及 {{domxref("CharacterData")}} 物件皆實作了 <code>childNodes</code>。</p>
+
+<h2 id="屬性">屬性</h2>
+
+<p><em>沒有繼承或自有的屬性。</em></p>
+
+<h2 id="方法">方法</h2>
+
+<p><em>沒有繼承的方法。</em></p>
+
+<dl>
+ <dt>{{domxref("childNodes.remove()")}} {{experimental_inline}}</dt>
+ <dd>Removes this <code>childNodes</code> from the children list of its parent.</dd>
+ <dt>{{domxref("childNodes.before()")}} {{experimental_inline}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of this <code>childNodes</code>'s parent, just before this <code>childNodes</code>. {{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.</dd>
+ <dt>{{domxref("childNodes.after()")}} {{experimental_inline}}</dt>
+ <dd>Inserts a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects in the children list of this <code>childNodes</code>'s parent, just after this <code>childNodes</code>. {{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.</dd>
+ <dt>{{domxref("childNodes.replaceWith()")}} {{experimental_inline}}</dt>
+ <dd>Replaces this <code>childNodes</code> in the children list of its parent with a set of {{domxref("Node")}} or {{domxref("DOMString")}} objects. {{domxref("DOMString")}} objects are inserted as equivalent {{domxref("Text")}} nodes.</dd>
+</dl>
+
+<h2 id="規範">規範</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#interface-childnode', 'childNodes')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Split the <code>ElementTraversal</code> interface in {{domxref("ParentNode")}} and <code>childNodes</code>. <code>previousElementSibling</code> and <code>nextElementSibling</code> are now defined on the latter. The {{domxref("CharacterData")}} and {{domxref("DocumentType")}} implemented the new interfaces. Added the <code>remove()</code>, <code>before()</code>, <code>after()</code> and <code>replaceWith()</code> methods.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Element Traversal', '#interface-elementTraversal', 'ElementTraversal')}}</td>
+   <td>{{Spec2('Element Traversal')}}</td>
+   <td>Added the initial definition of its properties to the <code>ElementTraversal</code> pure interface and use it on {{domxref("Element")}}.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p>External on github: <a href="https://github.com/seznam/JAK/blob/master/lib/polyfills/childNode.js">childNode.js</a></p>
+
+<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+
+<p>{{ CompatibilityTable }}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari</th>
+  </tr>
+  <tr>
+   <td>Basic support (on {{domxref("Element")}})</td>
+   <td>{{CompatChrome(1.0)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop(23)}}</td>
+   <td>9.0</td>
+   <td>10.0</td>
+   <td>4.0</td>
+  </tr>
+  <tr>
+   <td>Support on {{domxref("DocumentType")}} and {{domxref("CharacterData")}} {{experimental_inline}}</td>
+   <td>{{CompatChrome(23.0)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop(23)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>16.0</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td><code>remove()</code>{{experimental_inline}}</td>
+   <td>{{CompatChrome(29.0)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop(23)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>16.0</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+  <tr>
+   <td><code>before()</code>, <code>after()</code>, and <code>replaceWith()</code> {{experimental_inline}}</td>
+   <td>{{CompatChrome(54.0)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoDesktop(49)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOpera(39)}}</td>
+   <td>{{CompatNo}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support (on {{domxref("Element")}})</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile(23)}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>10.0</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Support on {{domxref("DocumentType")}} and {{domxref("CharacterData")}} {{experimental_inline}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile(23)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>16.0</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>remove()</code>{{experimental_inline}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile(23)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>16.0</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td><code>before()</code>, <code>after()</code>, and <code>replaceWith()</code> {{experimental_inline}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(54.0)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatGeckoMobile(49)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatOperaMobile(39)}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatChrome(54.0)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="參見">參見</h2>
+
+<ul>
+ <li>The {{domxref("ParentNode")}} pure interface.</li>
+ <li>
+  <div class="syntaxbox">Object types implementing this pure interface: {{domxref("CharacterData")}}, {{domxref("Element")}}, and {{domxref("DocumentType")}}.</div>
+ </li>
+</ul>
