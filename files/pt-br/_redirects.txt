@@ -442,7 +442,6 @@
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Itens_do_menu_de_contexto	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /pt-BR/docs/Mozilla/Firefox/Novas_funcionalidades	/pt-BR/docs/Mozilla/Firefox/Experimental_features
 /pt-BR/docs/Mozilla/Firefox/Releases/3/Zoom_de_página_inteira	/pt-BR/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
-/pt-BR/docs/Online_and_offline_events	/pt-BR/docs/Web/API/NavigatorOnLine/Online_and_offline_events
 /pt-BR/docs/Quirks_Mode_and_Standards_Mode	/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /pt-BR/docs/SVG	/pt-BR/docs/Web/SVG
 /pt-BR/docs/SVG/Element	/pt-BR/docs/Web/SVG/Element
@@ -509,8 +508,6 @@
 /pt-BR/docs/Web/API/Event/Comparativo_entre_Event_Targets	/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets
 /pt-BR/docs/Web/API/Fetch_API/Uso_de_busca_Cross-global	/pt-BR/docs/Web/API/Fetch_API/Cross-global_fetch_usage
 /pt-BR/docs/Web/API/HTMLContentElement/Seletor	/pt-BR/docs/Web/API/HTMLContentElement/select
-/pt-BR/docs/Web/API/HTMLElement/blur	/pt-BR/docs/Web/API/HTMLOrForeignElement/blur
-/pt-BR/docs/Web/API/HTMLElement/focus	/pt-BR/docs/Web/API/HTMLOrForeignElement/focus
 /pt-BR/docs/Web/API/History_API/Exemplo	/pt-BR/docs/Web/API/History_API/Example
 /pt-BR/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/pt-BR/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /pt-BR/docs/Web/API/Navigator.battery	/pt-BR/docs/Web/API/Navigator/battery
