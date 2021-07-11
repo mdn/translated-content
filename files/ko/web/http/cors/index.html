@@ -331,9 +331,19 @@ Content-Type: text/plain
 
 <p>10행에는 <code>http://bar.other</code>의 컨텐츠를 대상으로 하는 쿠키가 포함되어 있습니다. 하지만 17행의 {{HTTPHeader("Access-Control-Allow-Credentials")}}: <code>true</code> 로 응답하지 않으면, 응답은 무시되고 웹 컨텐츠는 제공되지 않습니다.</p>
 
-<h4 id="자격증명_요청_및_와일드카드Credentialed_requests_and_wildcards">자격증명 요청 및 와일드카드(Credentialed requests and wildcards)</h4>
+<h4 id="Preflight_requests_and_credentials">실행 전 요청 및 자격 증명</h4>
 
-<p>credentialed request 에 응답할 때 서버는 <code>Access-Control-Allow-Origin</code> 헤더 "<code>*</code>" 와일드카드를 사용하는 대신에 <strong>반드시</strong> 에 값을 지정해야 합니다.</p>
+<p>CORS 실행 전 요청에는 자격 증명이 포함되지 않아야 합니다. 실행 전 요청에 대한 <em>응답</em>은 <code>Access-Control-Allow-Credentials: true</code>를 지정하여 자격 증명으로 실제 요청을 수행할 수 있음을 나타내야 합니다.</p>
+
+<div class="notecard note">
+  <h4>참고</h4>
+  <p>일부 엔터프라이즈 인증 서비스는 {{SpecName("Fetch","#cors-protocol-and-credentials")}} 사양을 위반하여 실행 전 요청에서 TLS 클라이언트 인증서를 보내도록 요구합니다.</p>
+  <p>Firefox 87에서는 기본 설정을 지정하여 이 비준수 동작을 활성화할 수 있습니다. <code>network.cors_preflight.allow_client_cert</code>을 <code>true</code>로 설정 ({{bug(1511151)}}). Chromium 기반 브라우저는 현재 항상 CORS 실행 전 요청에서 TLS 클라이언트 인증서를 보냅니다(<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=775438">Chrome bug 775438</a>).</p>
+</div>
+
+<h4 id="Credentialed_requests_and_wildcards">자격증명 요청 및 와일드카드(Credentialed requests and wildcards)</h4>
+
+<p>자격 증명 요청에 응답할 때 서버는 <strong>반드시</strong> "<code>*</code>" 와일드카드를 지정하는 대신 <code>Access-Control-Allow-Origin</code> 헤더 값에 출처를 지정해야 합니다.</p>
 
 <p>위 예제의 요청 헤더에 <code>Cookie</code> 헤더가 포함되어 있기 때문에 <code>Access-Control-Allow-Origin</code> 헤더의 값이 "*"인 경우 요청이 실패합니다. 위 요청은 <code>Access-Control-Allow-Origin</code> 헤더가 "<code>*</code>" 와일드 카드가 아니라 "<code>http://foo.example</code>" 본래 주소이기 때문에 자격증명 인식 컨텐츠는 웹 호출 컨텐츠로 리턴됩니다.</p>
 
@@ -343,7 +353,7 @@ Content-Type: text/plain
 
 <p>CORS 응답에 설정된 쿠키에는 일반적인 third-party cookie 정책이 적용됩니다. 위의 예제는 <code>foo.example</code>에서 페이지를 불러지만 20행의 쿠키는 <code>bar.other</code> 가 전송합니다. 때문에 사용자의 브라우저 설정이 모든 third-party cookies를 거부하도록 되어 있다면, 이 쿠키는 저장되지 않습니다.</p>
 
-<h2 id="HTTP_응답_헤더">HTTP 응답 헤더</h2>
+<h2 id="The_HTTP_response_headers">HTTP 응답 헤더</h2>
 
 <p>이 섹션에서는 Cross-Origin 리소스 공유 명세에 정의된 대로 서버가 접근 제어 요청을 위해 보내는 HTTP 응답 헤더가 나열되어 있습니다. The previous section gives an overview of these in action.</p>
 
