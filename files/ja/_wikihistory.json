@@ -48333,21 +48333,6 @@
       "dextra"
     ]
   },
-  "conflicting/Web/API/Document/characterSet": {
-    "modified": "2019-03-23T23:34:04.950Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "jsx",
-      "ethertank"
-    ]
-  },
-  "conflicting/Web/API/Document/createEvent": {
-    "modified": "2019-03-23T22:12:07.747Z",
-    "contributors": [
-      "tanakanakanaka"
-    ]
-  },
   "conflicting/Web/API/DocumentOrShadowRoot": {
     "modified": "2020-10-15T22:15:52.863Z",
     "contributors": [
