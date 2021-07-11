@@ -33,7 +33,7 @@ translation_of: Web/API/HTML_DOM_API/Microtask_guide/In_depth
 <ul>
  <li>全局上下文是为运行代码主体而创建的执行上下文，也就是说它是为那些存在于JavaScript 函数之外的任何代码而创建的。</li>
  <li>每个函数会在执行的时候创建自己的执行上下文。这个上下文就是通常说的 “本地上下文”。</li>
- <li>使用 {{jsxref("eval()")}} 函数也会创建一个新的执行上下文。</li>
+ <li>使用 {{jsxref("Global_Objects/eval", "eval()")}} 函数也会创建一个新的执行上下文。</li>
 </ul>
 
 <p>每一个上下文在本质上都是一种作用域层级。每个代码段开始执行的时候都会创建一个新的上下文来运行它，并且在代码退出的时候销毁掉。看看下面这段 JavaScript 程序：</p>
