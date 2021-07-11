@@ -4207,20 +4207,6 @@
       "Coolcd"
     ]
   },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T22:02:07.853Z",
-    "contributors": [
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:51:04.713Z",
-    "contributors": [
-      "chrisdavidmills",
-      "teoli",
-      "Coolcd"
-    ]
-  },
   "Web/API/Network_Information_API": {
     "modified": "2019-03-23T23:26:00.923Z",
     "contributors": [
@@ -8671,6 +8657,20 @@
       "birdca",
       "foxbrush",
       "thomaschen"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine": {
+    "modified": "2019-03-23T22:02:07.853Z",
+    "contributors": [
+      "chrisdavidmills"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
+    "modified": "2019-03-23T23:51:04.713Z",
+    "contributors": [
+      "chrisdavidmills",
+      "teoli",
+      "Coolcd"
     ]
   },
   "orphaned/Web/API/ParentNode": {

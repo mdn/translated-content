@@ -337,7 +337,6 @@
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
 /ru/docs/Web/API/HTMLAudioElement/Audio()	/ru/docs/Web/API/HTMLAudioElement/Audio
 /ru/docs/Web/API/HTMLElement/invalid	/ru/docs/Web/API/HTMLInputElement/invalid_event
-/ru/docs/Web/API/HTMLElement/nonce	/ru/docs/Web/API/HTMLOrForeignElement/nonce
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/hash	/ru/docs/Web/API/HTMLAnchorElement/hash
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/host	/ru/docs/Web/API/HTMLAnchorElement/host
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/hostname	/ru/docs/Web/API/HTMLAnchorElement/hostname
@@ -351,7 +350,6 @@
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ru/docs/Web/API/HTMLAnchorElement/toString
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/username	/ru/docs/Web/API/HTMLAnchorElement/username
 /ru/docs/Web/API/HTMLImageElement.Image	/ru/docs/Web/API/HTMLImageElement/Image
-/ru/docs/Web/API/MediaTrackConstraints/Эхоподавление	/ru/docs/Web/API/MediaTrackConstraints/echoCancellation
 /ru/docs/Web/API/NetworkInformation/connection	/ru/docs/Web/API/Navigator/connection
 /ru/docs/Web/API/Node.appendChild	/ru/docs/Web/API/Node/appendChild
 /ru/docs/Web/API/Node.contains	/ru/docs/Web/API/Node/contains
@@ -959,4 +957,3 @@
 /ru/docs/Ядро_JavaScript_1.5_Спровчник/Functions/Arrow_functions	/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 /ru/docs/Ядро_JavaScript_1.5_Спровчник/Functions/rest_parameters	/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters
 /ru/docs/Ядро_JavaScript_1.5_Спровчник:Functions	/ru/docs/Web/JavaScript/Reference/Functions
-
