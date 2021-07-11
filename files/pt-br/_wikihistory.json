@@ -5610,6 +5610,28 @@
       "Rogerio-Viana"
     ]
   },
+  "Web/API/HTMLOrForeignElement/blur": {
+    "modified": "2020-10-15T22:12:54.970Z",
+    "contributors": [
+      "salgueiroso"
+    ]
+  },
+  "Web/API/HTMLOrForeignElement/dataset": {
+    "modified": "2020-10-15T21:46:41.594Z",
+    "contributors": [
+      "lago.aaron",
+      "Fernandolrs",
+      "Sipmann",
+      "emanueloliveira"
+    ]
+  },
+  "Web/API/HTMLOrForeignElement/focus": {
+    "modified": "2019-03-23T22:24:13.859Z",
+    "contributors": [
+      "erikseyti",
+      "brunopulis"
+    ]
+  },
   "Web/API/HTMLSelectElement": {
     "modified": "2019-03-18T21:38:12.809Z",
     "contributors": [
@@ -5860,6 +5882,73 @@
     "modified": "2020-10-15T22:27:50.572Z",
     "contributors": [
       "LucasRuy"
+    ]
+  },
+  "Web/API/NavigatorID": {
+    "modified": "2019-03-23T23:01:42.494Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/API/NavigatorID/platform": {
+    "modified": "2020-10-15T21:27:41.688Z",
+    "contributors": [
+      "GarkGarcia",
+      "teoli",
+      "khalid32",
+      "eliezerb"
+    ]
+  },
+  "Web/API/NavigatorID/userAgent": {
+    "modified": "2020-10-15T21:58:19.578Z",
+    "contributors": [
+      "GarkGarcia",
+      "thedjmarcelo"
+    ]
+  },
+  "Web/API/NavigatorLanguage": {
+    "modified": "2019-03-23T22:03:53.998Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/API/NavigatorLanguage/language": {
+    "modified": "2019-03-23T22:03:54.652Z",
+    "contributors": [
+      "klzns"
+    ]
+  },
+  "Web/API/NavigatorOnLine": {
+    "modified": "2019-03-23T22:02:07.133Z",
+    "contributors": [
+      "marciioluucas",
+      "chrisdavidmills"
+    ]
+  },
+  "Web/API/NavigatorOnLine/Online_and_offline_events": {
+    "modified": "2019-03-23T23:39:13.247Z",
+    "contributors": [
+      "chrisdavidmills",
+      "claudiareginadasilvacorrea",
+      "jpalharini"
+    ]
+  },
+  "Web/API/NavigatorOnLine/onLine": {
+    "modified": "2020-10-15T22:15:18.142Z",
+    "contributors": [
+      "renatoluna"
+    ]
+  },
+  "Web/API/NavigatorPlugins": {
+    "modified": "2020-10-15T22:19:29.947Z",
+    "contributors": [
+      "Fernandolrs"
+    ]
+  },
+  "Web/API/NavigatorPlugins/javaEnabled": {
+    "modified": "2020-10-15T22:19:29.661Z",
+    "contributors": [
+      "Fernandolrs"
     ]
   },
   "Web/API/Network_Information_API": {
@@ -16925,28 +17014,6 @@
       "bermarques"
     ]
   },
-  "orphaned/Web/API/HTMLOrForeignElement/blur": {
-    "modified": "2020-10-15T22:12:54.970Z",
-    "contributors": [
-      "salgueiroso"
-    ]
-  },
-  "orphaned/Web/API/HTMLOrForeignElement/dataset": {
-    "modified": "2020-10-15T21:46:41.594Z",
-    "contributors": [
-      "lago.aaron",
-      "Fernandolrs",
-      "Sipmann",
-      "emanueloliveira"
-    ]
-  },
-  "orphaned/Web/API/HTMLOrForeignElement/focus": {
-    "modified": "2019-03-23T22:24:13.859Z",
-    "contributors": [
-      "erikseyti",
-      "brunopulis"
-    ]
-  },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
     "modified": "2020-01-13T04:48:43.968Z",
     "contributors": [
@@ -16956,73 +17023,6 @@
       "camilaavilarinho",
       "guilhermemar",
       "IgorGoncalves"
-    ]
-  },
-  "orphaned/Web/API/NavigatorID": {
-    "modified": "2019-03-23T23:01:42.494Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
-  "orphaned/Web/API/NavigatorID/platform": {
-    "modified": "2020-10-15T21:27:41.688Z",
-    "contributors": [
-      "GarkGarcia",
-      "teoli",
-      "khalid32",
-      "eliezerb"
-    ]
-  },
-  "orphaned/Web/API/NavigatorID/userAgent": {
-    "modified": "2020-10-15T21:58:19.578Z",
-    "contributors": [
-      "GarkGarcia",
-      "thedjmarcelo"
-    ]
-  },
-  "orphaned/Web/API/NavigatorLanguage": {
-    "modified": "2019-03-23T22:03:53.998Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
-  "orphaned/Web/API/NavigatorLanguage/language": {
-    "modified": "2019-03-23T22:03:54.652Z",
-    "contributors": [
-      "klzns"
-    ]
-  },
-  "orphaned/Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T22:02:07.133Z",
-    "contributors": [
-      "marciioluucas",
-      "chrisdavidmills"
-    ]
-  },
-  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:39:13.247Z",
-    "contributors": [
-      "chrisdavidmills",
-      "claudiareginadasilvacorrea",
-      "jpalharini"
-    ]
-  },
-  "orphaned/Web/API/NavigatorOnLine/onLine": {
-    "modified": "2020-10-15T22:15:18.142Z",
-    "contributors": [
-      "renatoluna"
-    ]
-  },
-  "orphaned/Web/API/NavigatorPlugins": {
-    "modified": "2020-10-15T22:19:29.947Z",
-    "contributors": [
-      "Fernandolrs"
-    ]
-  },
-  "orphaned/Web/API/NavigatorPlugins/javaEnabled": {
-    "modified": "2020-10-15T22:19:29.661Z",
-    "contributors": [
-      "Fernandolrs"
     ]
   },
   "orphaned/Web/API/Node/Entendendo_o_uso_do_método_AppendChild-javascript": {

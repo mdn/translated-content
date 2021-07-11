@@ -3695,6 +3695,25 @@
       "petzichen"
     ]
   },
+  "Web/API/NavigatorOnLine": {
+    "modified": "2019-03-23T22:47:26.289Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/API/NavigatorOnLine/Online_and_offline_events": {
+    "modified": "2019-03-23T22:59:48.853Z",
+    "contributors": [
+      "chrisdavidmills",
+      "terabaud"
+    ]
+  },
+  "Web/API/NavigatorOnLine/onLine": {
+    "modified": "2019-03-23T22:47:22.054Z",
+    "contributors": [
+      "TRoskop"
+    ]
+  },
   "Web/API/Node": {
     "modified": "2019-10-07T12:42:22.118Z",
     "contributors": [
@@ -3900,6 +3919,12 @@
       "Nerixyz",
       "jcsahnwaldt",
       "ksm2"
+    ]
+  },
+  "Web/API/RenderingContext": {
+    "modified": "2020-11-02T01:51:10.279Z",
+    "contributors": [
+      "sgadola"
     ]
   },
   "Web/API/Response": {
@@ -14550,35 +14575,10 @@
       "Sebastianz"
     ]
   },
-  "orphaned/Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T22:47:26.289Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
-  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T22:59:48.853Z",
-    "contributors": [
-      "chrisdavidmills",
-      "terabaud"
-    ]
-  },
-  "orphaned/Web/API/NavigatorOnLine/onLine": {
-    "modified": "2019-03-23T22:47:22.054Z",
-    "contributors": [
-      "TRoskop"
-    ]
-  },
   "orphaned/Web/API/Node/setUserData": {
     "modified": "2019-03-23T22:05:46.565Z",
     "contributors": [
       "Nonononoki"
-    ]
-  },
-  "orphaned/Web/API/RenderingContext": {
-    "modified": "2020-11-02T01:51:10.279Z",
-    "contributors": [
-      "sgadola"
     ]
   },
   "orphaned/Web/CSS/:-moz-ui-valid": {
