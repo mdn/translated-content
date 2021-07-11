@@ -3781,7 +3781,7 @@
 /ja/docs/Web/API/Element/currentStyle	/ja/docs/orphaned/Web/API/Element/currentStyle
 /ja/docs/Web/API/Element/name	/ja/docs/conflicting/Web/API
 /ja/docs/Web/API/ElementCSSInlineStyle	/ja/docs/orphaned/Web/API/ElementCSSInlineStyle
-/ja/docs/Web/API/ElementCSSInlineStyle/style /ja/docs/Web/API/HTMLElement/style
+/ja/docs/Web/API/ElementCSSInlineStyle/style	/ja/docs/Web/API/HTMLElement/style
 /ja/docs/Web/API/Event/button	/ja/docs/conflicting/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/conflicting/Web/API/Document/createEvent
 /ja/docs/Web/API/EventHandler	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
