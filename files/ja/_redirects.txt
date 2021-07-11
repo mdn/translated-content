@@ -219,7 +219,7 @@
 /ja/docs/Bugzilla-jp:Guide:Tracking	/ja/docs/orphaned/Bugzilla-jp/Guide/Tracking
 /ja/docs/Bugzilla_(external)	https://bugzilla.mozilla.org/enter_bug.cgi?format=guided
 /ja/docs/Building_a_Mozilla_Distribution	/ja/docs/orphaned/Building_a_Mozilla_Distribution
-/ja/docs/Building_an_Extension	/ja/docs/conflicting/Mozilla/Add-ons
+/ja/docs/Building_an_Extension	/ja/docs/Mozilla/Add-ons
 /ja/docs/CORS_Enabled_Image	/ja/docs/Web/HTML/CORS_enabled_image
 /ja/docs/CSS	/ja/docs/Web/CSS
 /ja/docs/CSS-2_Quick_Reference	/ja/docs/conflicting/Web/CSS
