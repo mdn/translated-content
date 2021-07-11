@@ -68,9 +68,9 @@ browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
 );
 </pre>
 
-<h3 id="Creating_a_subclass">하위 클래스 만들기</h3>
+<h3 id="Creating_a_subclass">서브클래스 만들기</h3>
 
-<p>하위 클래스를 만드는 일반적인 방법은 하위 클래스를 정의하고, 프로토타입을 슈퍼 클래스의 인스턴스로 설정한 다음, 그 인스턴스에 속성을 정의하는 것입니다.
+<p>서브클래스를 만드는 일반적인 방법은 서브클래스를 정의하고, 프로토타입을 슈퍼 클래스의 인스턴스로 설정한 다음, 그 인스턴스에 속성을 정의하는 것입니다.
   이 방법은 게터와 세터의 경우 굉장히 불편합니다. 대신, 다음 코드를 사용하여 프로토타입을 설정할 수 있습니다.
 </p>
 
@@ -82,7 +82,7 @@ function subclass() {}
 subclass.prototype = Object.create(
   superclass.prototype,
   {
-    // 여기에 하위 클래스의 생성자, 매서드, 속성을 정의합니다.
+    // 여기에 서브클래스의 생성자, 매서드, 속성을 정의합니다.
   }
 );
 </pre>
