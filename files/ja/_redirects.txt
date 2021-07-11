@@ -1212,7 +1212,7 @@
 /ja/docs/DOM/DOM_Reference/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM/DOM_Storage	/ja/docs/conflicting/Web/API/Web_Storage_API
 /ja/docs/DOM/DOM_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
-/ja/docs/DOM/DOM_event_reference/compositionstart	/ja/docs/conflicting/Web/API/Element/compositionstart_event
+/ja/docs/DOM/DOM_event_reference/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
 /ja/docs/DOM/DOM_event_reference/input	/ja/docs/Web/API/HTMLElement/input_event
 /ja/docs/DOM/DeviceLightEvent.value	/ja/docs/orphaned/Web/API/DeviceLightEvent/value
 /ja/docs/DOM/Document.querySelector	/ja/docs/Web/API/Document/querySelector
@@ -1268,7 +1268,7 @@
 /ja/docs/DOM/Manipulating_the_browser_history	/ja/docs/Web/API/History_API
 /ja/docs/DOM/MediaQueryList	/ja/docs/Web/API/MediaQueryList
 /ja/docs/DOM/Mozilla_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
-/ja/docs/DOM/Mozilla_event_reference/compositionstart	/ja/docs/conflicting/Web/API/Element/compositionstart_event
+/ja/docs/DOM/Mozilla_event_reference/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
 /ja/docs/DOM/Mozilla_event_reference/input	/ja/docs/Web/API/HTMLElement/input_event
 /ja/docs/DOM/MutationObserver	/ja/docs/Web/API/MutationObserver
 /ja/docs/DOM/Node	/ja/docs/Web/API/Node
@@ -4308,7 +4308,7 @@
 /ja/docs/Web/Events/close_websocket	/ja/docs/Web/API/WebSocket/close_event
 /ja/docs/Web/Events/complete_indexedDB	/ja/docs/Web/API/IDBTransaction/complete_event
 /ja/docs/Web/Events/compositionend	/ja/docs/Web/API/Element/compositionend_event
-/ja/docs/Web/Events/compositionstart	/ja/docs/conflicting/Web/API/Element/compositionstart_event
+/ja/docs/Web/Events/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
 /ja/docs/Web/Events/connect	/ja/docs/Web/API/SharedWorkerGlobalScope/connect_event
 /ja/docs/Web/Events/copy	/ja/docs/Web/API/Element/copy_event
 /ja/docs/Web/Events/cut	/ja/docs/Web/API/Element/cut_event
@@ -4861,7 +4861,7 @@
 /ja/docs/Web/Reference/Events/canplay	/ja/docs/Web/API/HTMLMediaElement/canplay_event
 /ja/docs/Web/Reference/Events/click	/ja/docs/Web/API/Element/click_event
 /ja/docs/Web/Reference/Events/compositionend	/ja/docs/Web/API/Element/compositionend_event
-/ja/docs/Web/Reference/Events/compositionstart	/ja/docs/conflicting/Web/API/Element/compositionstart_event
+/ja/docs/Web/Reference/Events/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
 /ja/docs/Web/Reference/Events/copy	/ja/docs/Web/API/Element/copy_event
 /ja/docs/Web/Reference/Events/cut	/ja/docs/Web/API/Element/cut_event
 /ja/docs/Web/Reference/Events/drag	/ja/docs/Web/API/Document/drag_event
@@ -4962,7 +4962,7 @@
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Resources	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 /ja/docs/Web2/Reference/Events/compositionend	/ja/docs/Web/API/Element/compositionend_event
-/ja/docs/Web2/Reference/Events/compositionstart	/ja/docs/conflicting/Web/API/Element/compositionstart_event
+/ja/docs/Web2/Reference/Events/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
 /ja/docs/Web2/Reference/Events/input	/ja/docs/Web/API/HTMLElement/input_event
 /ja/docs/WebAPI	/ja/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3
 /ja/docs/WebAPI/Battery_Status	/ja/docs/Web/API/Battery_Status_API
