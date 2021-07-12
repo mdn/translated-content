@@ -1406,7 +1406,7 @@
 /ja/docs/DOM/console.log	/ja/docs/Web/API/Console/log
 /ja/docs/DOM/console.time	/ja/docs/Web/API/Console/time
 /ja/docs/DOM/console.timeEnd	/ja/docs/Web/API/Console/timeEnd
-/ja/docs/DOM/dispatchEvent_example	/ja/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events
+/ja/docs/DOM/dispatchEvent_example	/ja/docs/Web/Events/Creating_and_triggering_events
 /ja/docs/DOM/document	/ja/docs/Web/API/Document
 /ja/docs/DOM/document.URL	/ja/docs/Web/API/Document/URL
 /ja/docs/DOM/document.activeElement	/ja/docs/Web/API/Document/activeElement
