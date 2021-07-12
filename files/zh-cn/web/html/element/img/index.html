@@ -86,7 +86,7 @@ translation_of: Web/HTML/Element/img
   <dt><code>use-credentials</code></dt>
   <dd>一个有证书的跨域请求（比如，有 <code>Origin</code> HTTP header）被发送 （比如，cookie, 一份证书，或者 HTTP 基本验证信息）。如果服务器没有给源站发送证书（通过 <code>Access-Control-Allow-Credentials</code> HTTP header），图像将会被污染，且它的使用会受限制。</dd>
  </dl>
- 当用户并未显式使用本属性时，默认不使用 CORS 发起请求（例如，不会向服务器发送<code>原有的</code>HTTP 头部信息），可防止其在 {{HTMLElement('canvas')}} 中的使用。如果无效，默认当做 <code>anonymous</code> 关键字生效。更多信息，请查看 <a href="mailto:hamoda.alhayek@msn.com">CORS 属性设置</a> 。</dd>
+ 当用户并未显式使用本属性时，默认不使用 CORS 发起请求（例如，不会向服务器发送<code>原有的</code>HTTP 头部信息），可防止其在 {{HTMLElement('canvas')}} 中的使用。如果无效，默认当做 <code>anonymous</code> 关键字生效。更多信息，请查看 <a href="/zh-CN/docs/Web/HTML/Attributes/crossorigin">CORS 属性设置</a> 。</dd>
  <dt>{{htmlattrdef("decoding")}}</dt>
  <dd>
  <p>为浏览器提供图像解码方式上的提示。允许的值：</p>
