@@ -4825,7 +4825,7 @@
 /ja/docs/Web/HTTP/Server-Side_Access_Control	/ja/docs/Web/HTTP/CORS
 /ja/docs/Web/HTTP/X-Frame-Options	/ja/docs/Web/HTTP/Headers/X-Frame-Options
 /ja/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness
-/ja/docs/Web/JavaScript/Getting_Started	/ja/docs/conflicting/Learn/Getting_started_with_the_web/JavaScript_basics
+/ja/docs/Web/JavaScript/Getting_Started	/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /ja/docs/Web/JavaScript/Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/Web/JavaScript/Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /ja/docs/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/orphaned/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages
