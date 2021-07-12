@@ -48603,13 +48603,6 @@
       "Taken"
     ]
   },
-  "conflicting/Web/HTTP/Connection_management_in_HTTP_1.x": {
-    "modified": "2019-01-16T15:51:39.110Z",
-    "contributors": [
-      "Kohei",
-      "Mgjbot"
-    ]
-  },
   "conflicting/Web/HTTP/Headers/User-Agent/Firefox": {
     "modified": "2019-03-23T23:58:03.561Z",
     "contributors": [

@@ -2587,7 +2587,7 @@
 /ja/docs/HTTP/Headers	/ja/docs/Web/HTTP/Headers
 /ja/docs/HTTP/Response_codes	/ja/docs/Web/HTTP/Status
 /ja/docs/HTTP/X-Frame-Options	/ja/docs/Web/HTTP/Headers/X-Frame-Options
-/ja/docs/HTTP_Pipelining_FAQ	/ja/docs/conflicting/Web/HTTP/Connection_management_in_HTTP_1.x
+/ja/docs/HTTP_Pipelining_FAQ	/ja/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /ja/docs/HTTP_access_control	/ja/docs/Web/HTTP/CORS
 /ja/docs/Hacking_Mozilla	/ja/docs/conflicting/Mozilla/Developer_guide/How_to_Submit_a_Patch
 /ja/docs/Help_Viewer:Creating_a_Help_Content_Pack	/ja/docs/Help_Viewer/Creating_a_Help_Content_Pack
