@@ -4058,11 +4058,11 @@
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /ja/docs/Web/API/Window/unescape	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/Web/API/Window/vrdisplaydisconnected_event	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
-/ja/docs/Web/API/WindowBase64	/ja/docs/conflicting/Web/API/WindowOrWorkerGlobalScope
+/ja/docs/Web/API/WindowBase64	/ja/docs/Web/API/WindowOrWorkerGlobalScope
 /ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ja/docs/Glossary/Base64
 /ja/docs/Web/API/WindowBase64/atob	/ja/docs/Web/API/WindowOrWorkerGlobalScope/atob
 /ja/docs/Web/API/WindowBase64/btoa	/ja/docs/Web/API/WindowOrWorkerGlobalScope/btoa
-/ja/docs/Web/API/WindowTimers	/ja/docs/conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a
+/ja/docs/Web/API/WindowTimers	/ja/docs/Web/API/WindowOrWorkerGlobalScope
 /ja/docs/Web/API/WindowTimers/clearInterval	/ja/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
 /ja/docs/Web/API/WindowTimers/clearTimeout	/ja/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout
 /ja/docs/Web/API/WindowTimers/setInterval	/ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval

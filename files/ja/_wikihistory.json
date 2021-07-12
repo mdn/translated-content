@@ -48442,18 +48442,6 @@
       "dreissig.jahrhundert"
     ]
   },
-  "conflicting/Web/API/WindowOrWorkerGlobalScope": {
-    "modified": "2019-03-23T23:00:37.972Z",
-    "contributors": [
-      "fscholz"
-    ]
-  },
-  "conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a": {
-    "modified": "2019-03-23T23:00:37.809Z",
-    "contributors": [
-      "fscholz"
-    ]
-  },
   "conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3": {
     "modified": "2019-03-23T23:32:13.721Z",
     "contributors": [
