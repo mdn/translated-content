@@ -683,7 +683,7 @@
 /ja/docs/Code_snippets:Windows	/ja/docs/Code_snippets/Windows
 /ja/docs/Code_snippets:XML	/ja/docs/Code_snippets/XML
 /ja/docs/Components	/ja/docs/orphaned/Components
-/ja/docs/Controlling_DNS_prefetching	/ja/docs/conflicting/Web/HTTP/Headers/X-DNS-Prefetch-Control
+/ja/docs/Controlling_DNS_prefetching	/ja/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
 /ja/docs/Controlling_spell_checking_in_HTML_forms	/ja/docs/Web/HTML/Global_attributes/spellcheck
 /ja/docs/Core_JavaScript_1.5_Guide	/ja/docs/Web/JavaScript/Guide
 /ja/docs/Core_JavaScript_1.5_Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
@@ -2519,10 +2519,10 @@
 /ja/docs/HTML/Global_attributes	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/HTML/HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5
 /ja/docs/HTML/HTML5/Forms_in_HTML5	/ja/docs/orphaned/Learn/HTML/Forms/HTML5_updates
-/ja/docs/HTML/HTML5/HTML5_Tags_List	/ja/docs/conflicting/Web/HTML/Element
+/ja/docs/HTML/HTML5/HTML5_Tags_List	/ja/docs/Web/HTML/Element
 /ja/docs/HTML/HTML5/HTML5_Thematic_Classification	/ja/docs/orphaned/Web/Guide/HTML/HTML5
-/ja/docs/HTML/HTML5/HTML5_element_list	/ja/docs/conflicting/Web/HTML/Element
-/ja/docs/HTML/HTML5/HTML5_element_list-redirect-1	/ja/docs/conflicting/Web/HTML/Element
+/ja/docs/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
+/ja/docs/HTML/HTML5/HTML5_element_list-redirect-1	/ja/docs/Web/HTML/Element
 /ja/docs/HTML/HTML5/HTML5_のフォーム	/ja/docs/Learn/Forms
 /ja/docs/HTML/HTML5/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ja/docs/HTML/HTML_Elements	/ja/docs/Web/HTML/Element
@@ -2587,7 +2587,7 @@
 /ja/docs/HTTP/Headers	/ja/docs/Web/HTTP/Headers
 /ja/docs/HTTP/Response_codes	/ja/docs/Web/HTTP/Status
 /ja/docs/HTTP/X-Frame-Options	/ja/docs/Web/HTTP/Headers/X-Frame-Options
-/ja/docs/HTTP_Pipelining_FAQ	/ja/docs/conflicting/Web/HTTP/Connection_management_in_HTTP_1.x
+/ja/docs/HTTP_Pipelining_FAQ	/ja/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /ja/docs/HTTP_access_control	/ja/docs/Web/HTTP/CORS
 /ja/docs/Hacking_Mozilla	/ja/docs/conflicting/Mozilla/Developer_guide/How_to_Submit_a_Patch
 /ja/docs/Help_Viewer:Creating_a_Help_Content_Pack	/ja/docs/Help_Viewer/Creating_a_Help_Content_Pack
@@ -4671,7 +4671,7 @@
 /ja/docs/Web/Guide/HTML/HTML5/Constraint_validation	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Constraint_validation
 /ja/docs/Web/Guide/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn/Forms
 /ja/docs/Web/Guide/HTML/HTML5/HTML5_Thematic_Classification	/ja/docs/orphaned/Web/Guide/HTML/HTML5
-/ja/docs/Web/Guide/HTML/HTML5/HTML5_element_list	/ja/docs/conflicting/Web/HTML/Element
+/ja/docs/Web/Guide/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
 /ja/docs/Web/Guide/HTML/HTML5/HTML5_のフォーム	/ja/docs/Learn/Forms
 /ja/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ja/docs/Web/Guide/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
@@ -4743,7 +4743,7 @@
 /ja/docs/Web/HTML/HTML5/Constraint_validation	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Constraint_validation
 /ja/docs/Web/HTML/HTML5/Forms_in_HTML5	/ja/docs/orphaned/Learn/HTML/Forms/HTML5_updates
 /ja/docs/Web/HTML/HTML5/HTML5_Thematic_Classification	/ja/docs/orphaned/Web/Guide/HTML/HTML5
-/ja/docs/Web/HTML/HTML5/HTML5_element_list	/ja/docs/conflicting/Web/HTML/Element
+/ja/docs/Web/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
 /ja/docs/Web/HTML/HTML5/HTML5_のフォーム	/ja/docs/Learn/Forms
 /ja/docs/Web/HTML/HTML5/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ja/docs/Web/HTML/HTML_Elements	/ja/docs/Web/HTML/Element

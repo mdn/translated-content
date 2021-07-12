@@ -48585,16 +48585,6 @@
       "Yuuki Takahashi"
     ]
   },
-  "conflicting/Web/HTML/Element": {
-    "modified": "2019-06-25T21:28:01.239Z",
-    "contributors": [
-      "michi-h0623",
-      "mfuji09",
-      "wbamberg",
-      "ethertank",
-      "saneyuki_s"
-    ]
-  },
   "conflicting/Web/HTML/Global_attributes": {
     "modified": "2019-03-18T20:53:18.763Z",
     "contributors": [
@@ -48613,25 +48603,12 @@
       "Taken"
     ]
   },
-  "conflicting/Web/HTTP/Connection_management_in_HTTP_1.x": {
-    "modified": "2019-01-16T15:51:39.110Z",
-    "contributors": [
-      "Kohei",
-      "Mgjbot"
-    ]
-  },
   "conflicting/Web/HTTP/Headers/User-Agent/Firefox": {
     "modified": "2019-03-23T23:58:03.561Z",
     "contributors": [
       "ethertank",
       "Potappo",
       "Kohei"
-    ]
-  },
-  "conflicting/Web/HTTP/Headers/X-DNS-Prefetch-Control": {
-    "modified": "2019-03-24T00:00:27.042Z",
-    "contributors": [
-      "RobinEgg"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat": {
