@@ -10,38 +10,38 @@ translation_of: Web/API/Push_API
 ---
 <p>{{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}</p>
 
-<p><strong>Push API</strong> даёт веб приложениям возможность получать сообщения отправленные с сервера, независимо от того, запущено ли веб приложение в фоне или даже загружено ли оно вообще пользователем. Это позволяет разработчикам посылать асинхронные сообщения и обновления пользователям которые подписались на них, как результат улучшается информированность пользователей о новом контенте</p>
+<p><strong>Push API</strong> даёт веб приложениям возможность получать сообщения, отправленные с сервера, независимо от того, запущено ли веб приложение в фоне или даже загружено ли оно вообще пользователем. Это позволяет разработчикам посылать асинхронные сообщения и обновления пользователям которые подписались на них и как результат — улучшается информированность пользователей о новом контенте.</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: Эта документация охватывает спецификацию W3C Push API ; если вы ищете документацию по запатентованной технологии Firefox OS , <a href="/en-US/docs/Web/API/Simple_Push_API">смотрите здесь</a>.</p>
+<p><strong>Примечание</strong>: Эта документация охватывает спецификацию W3C Push API; если вы ищете документацию по запатентованной технологии Firefox OS , <a href="/en-US/docs/Web/API/Simple_Push_API">смотрите здесь (архивная страница)</a>.</p>
 </div>
 
 <h2 id="Общие_сведения_об_использовании_push_уведомлений">Общие сведения об использовании push уведомлений</h2>
 
 <div class="warning">
-<p><span id="result_box" lang="ru"><span>При внедрении подписки PushManager, жизненно важно защищать запросы от CSRF/XSRF атак в вашем приложении.</span> </span><span lang="ru"><span> </span></span></p>
+<p>При внедрении подписки PushManager, жизненно важно защищать запросы от CSRF/XSRF атак в вашем приложении.</p>
 
-<p><span lang="ru"><span>Дополнительную информацию см. В следующих статьях:</span></span></p>
+<p>Дополнительную информацию см. В следующих статьях:</p>
 
 <ul>
  <li><a href="https://habr.com/post/318748/">Методы защиты от CSRF-атаки</a></li>
- <li><a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">Site Request Forgery (CSRF) Prevention Cheat Sheet</a></li>
- <li><a href="/ru/docs/https://blog.codinghorror.com/preventing-csrf-and-xsrf-attacks/">Preventing CSRF and XSRF Attacks</a></li>
+ <li><a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">Шпаргалка по предотвращению подделки запросов к сайту (CSRF)</a></li>
+ <li><a href="https://blog.codinghorror.com/preventing-csrf-and-xsrf-attacks/">Предотвращение атак CSRF и XSRF</a></li>
 </ul>
 </div>
 
-<p>Для получения push уведомлений приложение должно иметь активный <a href="/en-US/docs/Web/API/ServiceWorker_API">service worker</a>. Когда service worker активен, оно может подписаться на push уведомления используя {{domxref("PushManager.subscribe()")}}.</p>
+<p>Для получения push уведомлений приложение должно иметь активный <a href="/ru/docs/Web/API/Service_Worker_API">service worker</a>. Когда service worker активен, оно может подписаться на push уведомления используя {{domxref("PushManager.subscribe()")}}.</p>
 
-<p>Полученный объект {{domxref("PushSubscription")}} включает в себя всю необходимую информацию, которая может потребоваться приложению чтобы отправить push уведомление: адрес и ключ шифрования, необходимые для отправки данных.</p>
+<p>Полученный объект {{domxref("PushSubscription")}} включает в себя всю необходимую информацию, которая может потребоваться приложению, чтобы отправить push уведомление: адрес и ключ шифрования, необходимые для отправки данных.</p>
 
 <p>Service worker будет запущен для того чтобы обрабатывать входящие push сообщения, которые будут доставлены в {{domxref("ServiceWorkerGlobalScope.onpush")}} обработчик события. Это позволит приложению реагировать на push сообщения, к примеру показывать нотификации через метод {{domxref("ServiceWorkerRegistration.showNotification()")}}.</p>
 
-<p>Каждая подписка уникальна по отношению к service worker. Адрес для подписки это уникальный <a href="http://www.w3.org/TR/capability-urls/">capability URL</a>: всё что нужно чтобы отослать сообщение вашему приложению это адрес. Однако это URL необходимо держать в секрете, иначе любое другое приложение сможет слать push уведомление к вашему приложению.</p>
+<p>Каждая подписка уникальна по отношению к service worker. Адрес для подписки это уникальный <a href="http://www.w3.org/TR/capability-urls/">capability URL</a>: всё что нужно чтобы отослать сообщение вашему приложению это адрес. Однако этот URL необходимо держать в секрете, иначе любое другое приложение сможет слать push уведомление к вашему приложению.</p>
 
 <p>Использование service worker для получения push уведомлений может привести к повышенному потреблению ресурсов, например это может влиять на расход батареи. Во всех браузерах это работает по разному - нет стандарта на этот счёт. К примеру Firefox позволяет лишь ограниченное число уведомлений которое может быть отправлено приложению, а Chrome не имеет таких ограничений, однако обязывает показывать уведомление пользователю каждый раз, чтобы пользователь мог решить хочет он или нет принимать их дальше.</p>
 
 <div class="note">
-<p><strong>Примечание: </strong><span id="result_box" lang="ru"><span>Начиная с Gecko 44, разрешённая квота push-</span></span>уведомлений<span lang="ru"><span> для каждого приложения не увеличивается, в случае если новое уведомление срабатывает когда другое все ещё должна отображаться в течение трёх секунд.</span> <span>Это обрабатывает случаи, когда получены несколько Push </span></span>уведомлений подряд<span lang="ru"><span> и не все генерируют видимое уведомление.</span></span></p>
+<p><strong>Примечание: </strong>Начиная с Gecko 44, разрешённая квота push-уведомлений для каждого приложения не увеличивается, в случае если новое уведомление срабатывает когда другое всё ещё должно отображаться в течение трёх секунд. Это обрабатывает случаи, когда получены несколько Push уведомлений подряд и не все генерируют видимое уведомление.</p>
 </div>
 
 <div class="note">
@@ -63,7 +63,7 @@ translation_of: Web/API/Push_API
 
 <h2 id="Служебный_работник_дополнения">Служебный работник дополнения</h2>
 
-<p>Следующие дополнения к <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> описанные в спецификации Push API, представляют собой первостепенные действия для использования Push сообщений, а также для обработки push событий.</p>
+<p>Следующие дополнения к <a href="/ru/docs/Web/API/Service_Worker_API">Service Worker API</a> описанные в спецификации Push API, представляют собой первостепенные действия для использования Push сообщений, а также для обработки push событий.</p>
 
 <dl>
  <dt>{{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}</dt>
@@ -104,9 +104,9 @@ translation_of: Web/API/Push_API
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
- <li><a href="https://github.com/chrisdavidmills/push-api-demo">Push API Demo</a>, на Github</li>
- <li><a href="http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web">Push Notifications on the Open Web</a>, Matt Gaunt</li>
+ <li><a href="/ru/docs/Web/API/Push_API/Using_the_Push_API">Использование Push API</a></li>
+ <li><a href="https://github.com/chrisdavidmills/push-api-demo">Демонстрация Push API</a>, на Github (стр. 404)</li>
+ <li><a href="http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web">Push-уведомления в открытом Интернете</a>, Matt Gaunt</li>
  <li><a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a></li>
 </ul>
 
