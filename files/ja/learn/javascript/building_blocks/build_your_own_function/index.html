@@ -113,7 +113,7 @@ panel.appendChild(closeBtn);</pre>
 
 <p>最後に、{{domxref("GlobalEventHandlers.onclick")}} イベントハンドラーを使用して、ボタンをクリックするとパネル全体をパネルから削除してメッセージボックスを閉じるようにします。<br>
  <br>
- 簡単に説明すると、<code>onclick</code> ハンドラーはボタン (または実際にはページ上の任意の要素) で使用できるプロパティで、ボタンをクリックしたときに実行するコードを指定する関数に設定できます。後の<a href="https://wiki.developer.mozilla.org/ja/docs/Learn/JavaScript/Building_blocks/Events">イベントの記事</a>で、これらについてさらに詳しく学びます。<code>onclick</code> ハンドラーは、ボタンがクリックされたときに実行されるコードを含む無名関数と等しくなります。関数内の行は {{domxref("Node.removeChild()")}} DOM API関数を使用して、HTML要素の特定の子要素 (この場合は <code>&lt;div&gt;</code> パネル) を削除することを指定します。</p>
+ 簡単に説明すると、<code>onclick</code> ハンドラーはボタン (または実際にはページ上の任意の要素) で使用できるプロパティで、ボタンをクリックしたときに実行するコードを指定する関数に設定できます。後の<a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベントの記事</a>で、これらについてさらに詳しく学びます。<code>onclick</code> ハンドラーは、ボタンがクリックされたときに実行されるコードを含む無名関数と等しくなります。関数内の行は {{domxref("Node.removeChild()")}} DOM API関数を使用して、HTML要素の特定の子要素 (この場合は <code>&lt;div&gt;</code> パネル) を削除することを指定します。</p>
 
 <pre class="brush: js notranslate">closeBtn.onclick = function() {
   panel.parentNode.removeChild(panel);
@@ -238,7 +238,7 @@ displayMessage('Brian: Hi there, how are you today?','chat');</pre>
 
 <h2 id="スキルをテストしよう!">スキルをテストしよう!</h2>
 
-<p>この記事の最後まで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を維持しているか検証するテストを見ることができます— <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">Test your skills: Functions</a>. を見てください。このテストは次の記事でカバーするスキルが必要ですので、試す前にこれを読んでおくとよいでしょう。</p>
+<p>この記事の最後まで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を維持しているか検証するテストを見ることができます— <a href="/ja/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions">Test your skills: Functions</a>. を見てください。このテストは次の記事でカバーするスキルが必要ですので、試す前にこれを読んでおくとよいでしょう。</p>
 
 <h2 id="Conclusion" name="Conclusion">まとめ</h2>
 
