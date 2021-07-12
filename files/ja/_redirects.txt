@@ -2519,10 +2519,10 @@
 /ja/docs/HTML/Global_attributes	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/HTML/HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5
 /ja/docs/HTML/HTML5/Forms_in_HTML5	/ja/docs/orphaned/Learn/HTML/Forms/HTML5_updates
-/ja/docs/HTML/HTML5/HTML5_Tags_List	/ja/docs/conflicting/Web/HTML/Element
+/ja/docs/HTML/HTML5/HTML5_Tags_List	/ja/docs/Web/HTML/Element
 /ja/docs/HTML/HTML5/HTML5_Thematic_Classification	/ja/docs/orphaned/Web/Guide/HTML/HTML5
-/ja/docs/HTML/HTML5/HTML5_element_list	/ja/docs/conflicting/Web/HTML/Element
-/ja/docs/HTML/HTML5/HTML5_element_list-redirect-1	/ja/docs/conflicting/Web/HTML/Element
+/ja/docs/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
+/ja/docs/HTML/HTML5/HTML5_element_list-redirect-1	/ja/docs/Web/HTML/Element
 /ja/docs/HTML/HTML5/HTML5_のフォーム	/ja/docs/Learn/Forms
 /ja/docs/HTML/HTML5/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ja/docs/HTML/HTML_Elements	/ja/docs/Web/HTML/Element
@@ -4671,7 +4671,7 @@
 /ja/docs/Web/Guide/HTML/HTML5/Constraint_validation	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Constraint_validation
 /ja/docs/Web/Guide/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn/Forms
 /ja/docs/Web/Guide/HTML/HTML5/HTML5_Thematic_Classification	/ja/docs/orphaned/Web/Guide/HTML/HTML5
-/ja/docs/Web/Guide/HTML/HTML5/HTML5_element_list	/ja/docs/conflicting/Web/HTML/Element
+/ja/docs/Web/Guide/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
 /ja/docs/Web/Guide/HTML/HTML5/HTML5_のフォーム	/ja/docs/Learn/Forms
 /ja/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ja/docs/Web/Guide/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
@@ -4743,7 +4743,7 @@
 /ja/docs/Web/HTML/HTML5/Constraint_validation	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Constraint_validation
 /ja/docs/Web/HTML/HTML5/Forms_in_HTML5	/ja/docs/orphaned/Learn/HTML/Forms/HTML5_updates
 /ja/docs/Web/HTML/HTML5/HTML5_Thematic_Classification	/ja/docs/orphaned/Web/Guide/HTML/HTML5
-/ja/docs/Web/HTML/HTML5/HTML5_element_list	/ja/docs/conflicting/Web/HTML/Element
+/ja/docs/Web/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
 /ja/docs/Web/HTML/HTML5/HTML5_のフォーム	/ja/docs/Learn/Forms
 /ja/docs/Web/HTML/HTML5/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ja/docs/Web/HTML/HTML_Elements	/ja/docs/Web/HTML/Element
