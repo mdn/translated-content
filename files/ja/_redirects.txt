@@ -271,7 +271,7 @@
 /ja/docs/CSS/:-moz-locale-dir(ltr)	/ja/docs/Web/CSS/:-moz-locale-dir(ltr)
 /ja/docs/CSS/:-moz-locale-dir(rtl)	/ja/docs/Web/CSS/:-moz-locale-dir(rtl)
 /ja/docs/CSS/:-moz-only-whitespace	/ja/docs/Web/CSS/:-moz-only-whitespace
-/ja/docs/CSS/:-moz-placeholder	/ja/docs/conflicting/Web/CSS/:placeholder-shown
+/ja/docs/CSS/:-moz-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/CSS/::after	/ja/docs/Web/CSS/::after
 /ja/docs/CSS/::before	/ja/docs/Web/CSS/::before
 /ja/docs/CSS/::first-letter	/ja/docs/Web/CSS/::first-letter
@@ -628,7 +628,7 @@
 /ja/docs/CSS::-moz-last-node	/ja/docs/Web/CSS/:-moz-last-node
 /ja/docs/CSS::-moz-list-bullet	/ja/docs/Web/CSS/:-moz-list-bullet
 /ja/docs/CSS::-moz-only-whitespace	/ja/docs/Web/CSS/:-moz-only-whitespace
-/ja/docs/CSS::-moz-placeholder	/ja/docs/conflicting/Web/CSS/:placeholder-shown
+/ja/docs/CSS::-moz-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/CSS::default	/ja/docs/Web/CSS/:default
 /ja/docs/CSS:@-moz-document	/ja/docs/Web/CSS/@document
 /ja/docs/CSS:Getting_Started	/ja/docs/Learn/CSS
@@ -4349,7 +4349,7 @@
 /ja/docs/Web/CSS/-ms-high-contrast	/ja/docs/Web/CSS/@media/-ms-high-contrast
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
 /ja/docs/Web/CSS/:-moz-alt-text	/ja/docs/orphaned/Web/CSS/:-moz-alt-text
-/ja/docs/Web/CSS/:-moz-placeholder	/ja/docs/conflicting/Web/CSS/:placeholder-shown
+/ja/docs/Web/CSS/:-moz-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/Web/CSS/:-ms-input-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/Web/CSS/:-webkit-autofill	/ja/docs/Web/CSS/:autofill
 /ja/docs/Web/CSS/::-moz-placeholder	/ja/docs/Web/CSS/::placeholder
