@@ -5245,7 +5245,7 @@
 /ja/docs/Web_Development/Historical_artifacts_to_avoid	/ja/docs/conflicting/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web_Development/Introduction_to_Web_development	/ja/docs/conflicting/Web/Guide/Introduction_to_Web_development
 /ja/docs/Web_Development/Mobile	/ja/docs/Web/Guide/Mobile
-/ja/docs/Web_Development/Mobile/Responsive_design	/ja/docs/conflicting/Web/Progressive_web_apps
+/ja/docs/Web_Development/Mobile/Responsive_design	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web_Development/Writing_forward-compatible_websites	/ja/docs/Web/Guide/Writing_forward-compatible_websites
 /ja/docs/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
 /ja/docs/XForms:API_Reference	/ja/docs/XForms/API_Reference
