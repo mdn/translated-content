@@ -48710,21 +48710,6 @@
       "manji_black"
     ]
   },
-  "conflicting/Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-24T00:04:52.347Z",
-    "contributors": [
-      "ethertank",
-      "Potappo",
-      "Taken",
-      "fscholz",
-      "Marsf",
-      "Level",
-      "Mgjbot",
-      "Okome",
-      "Takenbot",
-      "Kozawa"
-    ]
-  },
   "conflicting/tools/Keyboard_shortcuts": {
     "modified": "2020-07-16T22:34:03.446Z",
     "contributors": [
