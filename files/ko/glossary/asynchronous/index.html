@@ -1,0 +1,39 @@
+---
+title: 비동기
+slug: Glossary/Asynchronous
+tags:
+  - Glossary
+  - Web
+  - WebMechanics
+  - asynchronous
+  - 용어집
+  - 웹
+  - 비동기
+---
+<p><span class="seoSummary"><strong>비동기</strong>는</span> 두 개 이상의 객체나 이벤트가 동시에 존재하지 <strong>않거나</strong> 일어나지 <strong>않는</strong> (<span class="seoSummary">혹은 여러 관련된 일이 이전 일이 끝나기를 기다릴 필요 없이 일어나는) 것을 말합니다.</span> 컴퓨팅에서 "비동기"라는 단어는 크게 두 가지 맥락으로 사용됩니다.</p>
+
+<dl>
+ <dt>네트워킹과 통신</dt>
+ <dd>
+ <p>비동기 통신이란 둘 이상의 참여자 사이에 메시지를 교환하는 방식으로, 수신하는 즉시 메시지를 처리하는 것이 아니라 각 참여자가 편할 때나 가능할 때 처리하는 것을 말합니다. 또한 문제가 발생하면 수신자가 정정을 요청하거나 상황에 맞는 처리를 한다는 이해 하에 확인(acknowledgement)을 기다리지 않고 메시지를 보낼 수 있습니다.</p>
+
+ <p>사람의 경우, 이메일이 비동기식 통신 방법입니다. 이메일을 보내면 받는 사람은 바로 읽고 답장을 보내는게 아니라, 편할 때 답장을 보냅니다. 양쪽이 서로 일정을 맞춰야 하는 것이 아니라, 원할 때 마다 메시지를 주고 받을 수 있습니다.</p>
+
+ <p>소프트웨어가 비동기적으로 통신할 때는, 프로그램이 다른 소프트웨어(예: 서버)에게 요청을 보내고 응답을 기다리는 동안 다른 작업을 계속 할 수 있습니다. 예를 들어 <a href="/en-US/docs/Web/Guide/AJAX">AJAX</a> (Asynchronous JavaScript and {{Glossary("XML")}}) 기술(요즘은 일반적으로 "Ajax"라고 한 단어처럼 지칭하며, 현대 어플리케이션에서는 XML보다 {{Glossary("JSON")}}을 더 많이 사용하지만 그대로 "Ajax"라고 부릅니다)은 {{Glossary("HTTP")}}를 사용하여 서버에 비교적 작은 양의 데이터를 요청하면 결과가 즉시 반환되는 대신 사용 가능할 때 반환되는 매커니즘입니다.</p>
+ </dd>
+ <dt>소프트웨어 설계</dt>
+ <dd>
+ <p>비동기식 소프트웨어 설계는 기존 작업이 끝나기를 기다리지 않고 새로운 작업을 같이 실행할 수 있도록 하는 개념을 확장합니다. 보조 작업이 끝나면 합의된 매커니즘을 사용하여 원래 작업에 알림을 전송하여, 작업이 끝났고 결과(있는 경우)를 사용할 수 있음을 알립니다.</p>
+
+ <p>비동기 소프트웨어를 구현하는 데 사용되는 여러 가지 프로그래밍 기술이 있습니다. 알아보고 싶으시다면 <a href="/en-US/docs/Learn/JavaScript/Asynchronous">비동기 JavaScript</a> 문서를 참조하세요.</p>
+ </dd>
+</dl>
+
+<h2 id="Learn_more">더 알아보기</h2>
+
+<h3 id="Technical_reference">기술 참고서</h3>
+
+<ul>
+ <li><a href="/ko/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data">Fetching data from the server</a> (학습 영역)</li>
+ <li>{{glossary("Synchronous")}}</li>
+</ul>
