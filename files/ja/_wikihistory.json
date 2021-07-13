@@ -48628,13 +48628,6 @@
       "RobinEgg"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf": {
-    "modified": "2019-03-23T23:33:53.946Z",
-    "contributors": [
-      "wbamberg",
-      "ethertank"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance": {
     "modified": "2020-10-15T21:58:31.243Z",
     "contributors": [
@@ -48707,21 +48700,6 @@
       "keiskimu",
       "ethertank",
       "Potappo"
-    ]
-  },
-  "conflicting/Web/SVG/SVG_1.1_Support_in_Firefox": {
-    "modified": "2019-03-24T00:04:52.347Z",
-    "contributors": [
-      "ethertank",
-      "Potappo",
-      "Taken",
-      "fscholz",
-      "Marsf",
-      "Level",
-      "Mgjbot",
-      "Okome",
-      "Takenbot",
-      "Kozawa"
     ]
   },
   "conflicting/tools/Keyboard_shortcuts": {
