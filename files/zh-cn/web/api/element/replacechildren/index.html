@@ -1,24 +1,32 @@
 ---
-title: ParentNode.replaceChildren()
-slug: orphaned/Web/API/ParentNode/replaceChildren
-translation_of: Web/API/ParentNode/replaceChildren
-original_slug: Web/API/ParentNode/replaceChildren
+title: Element.replaceChildren()
+slug: Web/API/Element/replaceChildren
+translation_of: Web/API/Element/replaceChildren
+tags:
+  - API
+  - DOM
+  - Method
+  - Node
+  - Element
+  - Reference
+  - replaceChildren
+browser-compat: api.Element.replaceChildren
 ---
 <div>{{APIRef("DOM")}}{{seecompattable}}</div>
 
-<p><strong><code>ParentNode.replaceChildren()</code></strong> 方法将一个 {{domxref("Node")}} 的后代替换为指定的后代集合。这些新的后代可以为 {{domxref("DOMString")}} 或 {{domxref("Node")}} 对象。</p>
+<p><strong><code>Element.replaceChildren()</code></strong> 方法将一个 {{domxref("Node")}} 的后代替换为指定的后代集合。这些新的后代可以为 {{domxref("DOMString")}} 或 {{domxref("Node")}} 对象。</p>
 
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox notranslate">// [Throws, Unscopable]
-ParentNode.replaceChildren(...<var>nodesOrDOMStrings</var>) // 返回 undefined
+Element.replaceChildren(...<var>nodesOrDOMStrings</var>) // 返回 undefined
 </pre>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><code><var>nodesOrDOMStrings</var></code></dt>
- <dd>一组用于替换 <code>ParentNode</code> 现有后代的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。若没有指定替代对象时，<code>ParentNode</code> 的所有后代都将被清空。</dd>
+ <dd>一组用于替换 <code>Element</code> 现有后代的 {{domxref("Node")}} 或 {{domxref("DOMString")}} 对象。若没有指定替代对象时，<code>Element</code> 的所有后代都将被清空。</dd>
 </dl>
 
 <h3 id="异常">异常</h3>
@@ -139,7 +147,7 @@ noBtn.addEventListener('click', () =&gt; {
    <th scope="col">备注</th>
   </tr>
   <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-parentnode-replacechildren', 'ParentNode.replaceChildren()')}}</td>
+   <td>{{SpecName('DOM WHATWG', '#dom-Element-replacechildren', 'Element.replaceChildren()')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
    <td>Initial definition.</td>
   </tr>
@@ -150,13 +158,13 @@ noBtn.addEventListener('click', () =&gt; {
 
 
 
-<p>{{Compat("api.ParentNode.replaceChildren")}}</p>
+<p>{{Compat("api.Element.replaceChildren")}}</p>
 
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>{{domxref("ParentNode")}} and {{domxref("ChildNode")}}</li>
- <li>{{domxref("ParentNode.prepend()")}}</li>
- <li>{{domxref("ParentNode.append()")}}</li>
+ <li>{{domxref("Element")}} and {{domxref("ChildNode")}}</li>
+ <li>{{domxref("Element.prepend()")}}</li>
+ <li>{{domxref("Element.append()")}}</li>
  <li>{{domxref("NodeList")}}</li>
 </ul>

@@ -1,15 +1,20 @@
 ---
 title: Element.firstElementChild
-slug: orphaned/Web/API/ParentNode/firstElementChild
-translation_of: Web/API/ParentNode/firstElementChild
-original_slug: Web/API/ParentNode/firstElementChild
+slug: Web/API/Element/firstElementChild
+translation_of: Web/API/Element/firstElementChild
+tags:
+  - API
+  - DOM
+  - Element
+  - Property
+browser-compat: api.Element.firstElementChild
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p><strong><code>ParentNode.firstElementChild</code></strong> 只读属性，返回对象的第一个子 {{domxref("元素")}}, 如果没有子元素，则为null。</p>
+<p><strong><code>Element.firstElementChild</code></strong> 只读属性，返回对象的第一个子 {{domxref("元素")}}, 如果没有子元素，则为null。</p>
 
 <div class="note">
-<p><span>他的属性最初是在{{domxref("element遍历")}}纯接口中定义的。由于这个接口包含两组不同的属性，一个针对具有子元素的{{domxref("Node")}}，一个针对子元素的属性，因此它们被移动到两个单独的纯接口中，{{domxref("ParentNode")}}和{{domxref("ChildNode")}}。在本例中，firstElementChild移动到{{domxref("ParentNode")}}。这是一个相当技术性的更改，不应该影响兼容性。</span></p>
+<p><span>他的属性最初是在{{domxref("element遍历")}}纯接口中定义的。由于这个接口包含两组不同的属性，一个针对具有子元素的{{domxref("Node")}}，一个针对子元素的属性，因此它们被移动到两个单独的纯接口中，{{domxref("Element")}}和{{domxref("ChildNode")}}。在本例中，firstElementChild移动到{{domxref("Element")}}。这是一个相当技术性的更改，不应该影响兼容性。</span></p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -65,9 +70,9 @@ console.log(foo.firstElementChild.textContent);
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-parentnode-firstelementchild', 'ParentNode.firstElementChild')}}</td>
+   <td>{{SpecName('DOM WHATWG', '#dom-Element-firstelementchild', 'Element.firstElementChild')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Splitted the <code>ElementTraversal</code>interface in {{domxref("ChildNode")}} and <code>ParentNode</code>. This method is now defined on the latter.<br>
+   <td>Splitted the <code>ElementTraversal</code>interface in {{domxref("ChildNode")}} and <code>Element</code>. This method is now defined on the latter.<br>
     The {{domxref("Document")}} and {{domxref("DocumentFragment")}} implemented the new interfaces.</td>
   </tr>
   <tr>
@@ -82,14 +87,14 @@ console.log(foo.firstElementChild.textContent);
 
 
 
-<p>{{Compat("api.ParentNode.firstElementChild")}}</p>
+<p>{{Compat("api.Element.firstElementChild")}}</p>
 
 <h2 id="参见">参见</h2>
 
-<h2 id="Ed"><a class="button section-edit only-icon" href="https://developer.mozilla.org/zh-CN/docs/Web/API/ParentNode/lastElementChild$edit#参见" rel="nofollow, noindex"><span>Ed</span></a></h2>
+<h2 id="Ed"><a class="button section-edit only-icon" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element/lastElementChild$edit#参见" rel="nofollow, noindex"><span>Ed</span></a></h2>
 
 <ul>
- <li>纯接口 {{domxref("ParentNode")}} 和 {{domxref("ChildNode")}}。</li>
+ <li>纯接口 {{domxref("Element")}} 和 {{domxref("ChildNode")}}。</li>
  <li>
   <div class="syntaxbox">实现了此纯接口的对象类型：{{domxref("Document")}}、{{domxref("Element")}}，和 {{domxref("DocumentFragment")}}。</div>
  </li>

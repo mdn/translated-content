@@ -1,18 +1,19 @@
 ---
-title: ParentNode.append()
-slug: orphaned/Web/API/ParentNode/append
+title: Element.append()
+slug: Web/API/Element/append
+translation_of: Web/API/Element/append
 tags:
   - API
   - DOM
+  - Method
   - Node
-  - ParentNode
+  - Element
   - Reference
-translation_of: Web/API/ParentNode/append
-original_slug: Web/API/ParentNode/append
+browser-compat: api.Element.append
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<div> <strong><code>ParentNode.append</code></strong> 方法在 <code>ParentNode</code>的最后一个子节点之后插入一组 {{domxref("Node")}} 对象或 {{domxref("DOMString")}} 对象。</div>
+<div> <strong><code>Element.append</code></strong> 方法在 <code>Element</code>的最后一个子节点之后插入一组 {{domxref("Node")}} 对象或 {{domxref("DOMString")}} 对象。</div>
 
 <div>被插入的 {{domxref("DOMString")}} 对象等价为 {{domxref("Text")}} 节点。</div>
 
@@ -23,15 +24,15 @@ original_slug: Web/API/ParentNode/append
 <div></div>
 
 <ul>
- <li><code>ParentNode.append()</code>允许追加  {{domxref("DOMString")}} 对象，而<code><font face="Open Sans, Arial, sans-serif"> </font>Node.appendChild()</code> 只接受 {{domxref("Node")}} 对象。</li>
- <li><code>ParentNode.append()</code> <a href="https://repl.it/FgPh/1">没有返回值</a>，而 <code>Node.appendChild()</code> 返回追加的 {{domxref("Node")}} 对象。</li>
- <li><code>ParentNode.append()</code> 可以追加多个节点和字符串，而 <code>Node.appendChild()</code> 只能追加一个节点。</li>
+ <li><code>Element.append()</code>允许追加  {{domxref("DOMString")}} 对象，而<code><font face="Open Sans, Arial, sans-serif"> </font>Node.appendChild()</code> 只接受 {{domxref("Node")}} 对象。</li>
+ <li><code>Element.append()</code> <a href="https://repl.it/FgPh/1">没有返回值</a>，而 <code>Node.appendChild()</code> 返回追加的 {{domxref("Node")}} 对象。</li>
+ <li><code>Element.append()</code> 可以追加多个节点和字符串，而 <code>Node.appendChild()</code> 只能追加一个节点。</li>
 </ul>
 
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox">[Throws, Unscopable]
-void ParentNode.append((Node or DOMString)... nodes);
+void Element.append((Node or DOMString)... nodes);
 </pre>
 
 <h3 id="参数">参数</h3>
@@ -73,7 +74,7 @@ parent.append("Some text", p);
 
 console.log(parent.childNodes); // NodeList [ #text "Some text", &lt;p&gt; ]</pre>
 
-<h3 id="ParentNode.append_方法在_with_语句中不生效"><code>ParentNode.append()</code> 方法在 with 语句中不生效</h3>
+<h3 id="Element.append_方法在_with_语句中不生效"><code>Element.append()</code> 方法在 with 语句中不生效</h3>
 
 <p>为了保证向后兼容，append 方法在 with 语句中会被特殊处理，详情请看 {{jsxref("Symbol.unscopables")}}。</p>
 
@@ -88,7 +89,7 @@ with(parent) {
 
 <p>下面的 Polyfill 只支持到 IE 9  及以上：</p>
 
-<pre class="brush: js">// Source: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/append()/append().md
+<pre class="brush: js">// Source: https://github.com/jserz/js_piece/blob/master/DOM/Element/append()/append().md
 (function (arr) {
   arr.forEach(function (item) {
     if (item.hasOwnProperty('append')) {
@@ -123,7 +124,7 @@ with(parent) {
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-parentnode-append', 'ParentNode.append()')}}</td>
+   <td>{{SpecName('DOM WHATWG', '#dom-Element-append', 'Element.append()')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
    <td>Initial definition.</td>
   </tr>
@@ -134,13 +135,13 @@ with(parent) {
 
 
 
-<p>{{Compat("api.ParentNode.append")}}</p>
+<p>{{Compat("api.Element.append")}}</p>
 
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>{{domxref("ParentNode")}} and {{domxref("ChildNode")}}</li>
- <li>{{domxref("ParentNode.prepend()")}}</li>
+ <li>{{domxref("Element")}} and {{domxref("ChildNode")}}</li>
+ <li>{{domxref("Element.prepend()")}}</li>
  <li>{{domxref("Node.appendChild()")}}</li>
  <li>{{domxref("ChildNode.after()")}}</li>
  <li>{{domxref("NodeList")}}</li>

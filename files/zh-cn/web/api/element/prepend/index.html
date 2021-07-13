@@ -1,25 +1,24 @@
 ---
-title: ParentNode.prepend()
-slug: orphaned/Web/API/ParentNode/prepend
+title: Element.prepend()
+slug: Web/API/Element/prepend
+translation_of: Web/API/Element/prepend
 tags:
   - API
   - DOM
   - Method
   - Node
-  - ParentNode
+  - Element
   - Reference
   - prepend
-  - 方法
-translation_of: Web/API/ParentNode/prepend
-original_slug: Web/API/ParentNode/prepend
+browser-compat: api.Element.prepend
 ---
 <div>{{APIRef("DOM")}}</div>
 
-<p><strong><code>ParentNode.prepend</code></strong> 方法可以在父节点的第一个子节点之前插入一系列{{domxref("Node")}}对象或者{{domxref("DOMString")}}对象。{{domxref("DOMString")}}会被当作{{domxref("Text")}}节点对待（也就是说插入的不是HTML代码）。</p>
+<p><strong><code>Element.prepend</code></strong> 方法可以在父节点的第一个子节点之前插入一系列{{domxref("Node")}}对象或者{{domxref("DOMString")}}对象。{{domxref("DOMString")}}会被当作{{domxref("Text")}}节点对待（也就是说插入的不是HTML代码）。</p>
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox">ParentNode.prepend((Node or DOMString)... nodes);
+<pre class="syntaxbox">Element.prepend((Node or DOMString)... nodes);
 </pre>
 
 <h3 id="参数">参数</h3>
@@ -68,7 +67,7 @@ parent.prepend("Some text", p);
 
 console.log(parent.childNodes); // NodeList [ #text "Some text", &lt;p&gt; ]</pre>
 
-<h3 id="ParentNode.prepend_is_unscopable"><code>ParentNode.prepend()</code> is unscopable</h3>
+<h3 id="Element.prepend_is_unscopable"><code>Element.prepend()</code> is unscopable</h3>
 
 <p><code>prepend()不能在with语句内使用，详情参考</code>{{jsxref("Symbol.unscopables")}}。</p>
 
@@ -83,7 +82,7 @@ with(parent) {
 
 <p>使用下面的代码在IE9或更高版本中模拟<code>prepend()</code>方法：</p>
 
-<pre class="brush: js">// from: https://github.com/jserz/js_piece/blob/master/DOM/ParentNode/prepend()/prepend().md
+<pre class="brush: js">// from: https://github.com/jserz/js_piece/blob/master/DOM/Element/prepend()/prepend().md
 (function (arr) {
     arr.forEach(function (item) {
         item.prepend = item.prepend || function () {
@@ -110,7 +109,7 @@ with(parent) {
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-parentnode-prepend', 'ParentNode.prepend()')}}</td>
+   <td>{{SpecName('DOM WHATWG', '#dom-Element-prepend', 'Element.prepend()')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
    <td>Initial definition.</td>
   </tr>
@@ -121,13 +120,13 @@ with(parent) {
 
 
 
-<p>{{Compat("api.ParentNode.prepend")}}</p>
+<p>{{Compat("api.Element.prepend")}}</p>
 
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li>{{domxref("ParentNode")}} and {{domxref("ChildNode")}}</li>
- <li>{{domxref("ParentNode.append()")}}</li>
+ <li>{{domxref("Element")}} and {{domxref("ChildNode")}}</li>
+ <li>{{domxref("Element.append()")}}</li>
  <li>{{domxref("Node.appendChild()")}}</li>
  <li>{{domxref("Node.insertBefore()")}}</li>
  <li>{{domxref("ChildNode.before()")}}</li>

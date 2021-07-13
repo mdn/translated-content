@@ -1,15 +1,20 @@
 ---
 title: Element.lastElementChild
-slug: orphaned/Web/API/ParentNode/lastElementChild
-translation_of: Web/API/ParentNode/lastElementChild
-original_slug: Web/API/ParentNode/lastElementChild
+slug: Web/API/Element/lastElementChild
+translation_of: Web/API/Element/lastElementChild
+tags:
+  - API
+  - DOM
+  - Element
+  - Property
+browser-compat: api.Element.lastElementChild
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p>只读属性 <code><strong>ParentNode.lastElementChild</strong></code> 返回对象的最后一个子{{domxref("Element", "元素")}}，如果没有子元素，则返回 <code>null</code>。</p>
+<p>只读属性 <code><strong>Element.lastElementChild</strong></code> 返回对象的最后一个子{{domxref("Element", "元素")}}，如果没有子元素，则返回 <code>null</code>。</p>
 
 <div class="note">
-<p>This property was initially defined in the {{domxref("ElementTraversal")}} pure interface. As this interface contained two distinct set of properties, one aimed at {{domxref("Node")}} that have children, one at those that are children, they have been moved into two separate pure interfaces, {{domxref("ParentNode")}} and {{domxref("ChildNode")}}. In this case, <code>lastElementChild</code> moved to {{domxref("ParentNode")}}. This is a fairly technical change that shouldn't affect compatibility.</p>
+<p>This property was initially defined in the {{domxref("ElementTraversal")}} pure interface. As this interface contained two distinct set of properties, one aimed at {{domxref("Node")}} that have children, one at those that are children, they have been moved into two separate pure interfaces, {{domxref("Element")}} and {{domxref("ChildNode")}}. In this case, <code>lastElementChild</code> moved to {{domxref("Element")}}. This is a fairly technical change that shouldn't affect compatibility.</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -65,9 +70,9 @@ console.log(foo.lastElementChild.textContent);
    <th scope="col">备注</th>
   </tr>
   <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-parentnode-lastelementchild', 'ParentNode.lastElementChild')}}</td>
+   <td>{{SpecName('DOM WHATWG', '#dom-Element-lastelementchild', 'Element.lastElementChild')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Splitted the <code>ElementTraversal</code> interface in {{domxref("ChildNode")}} and <code>ParentNode</code>. This method is now defined on the latter.<br>
+   <td>Splitted the <code>ElementTraversal</code> interface in {{domxref("ChildNode")}} and <code>Element</code>. This method is now defined on the latter.<br>
     The {{domxref("Document")}} and {{domxref("DocumentFragment")}} implemented the new interfaces.</td>
   </tr>
   <tr>
@@ -82,12 +87,12 @@ console.log(foo.lastElementChild.textContent);
 
 
 
-<p>{{Compat("api.ParentNode.lastElementChild")}}</p>
+<p>{{Compat("api.Element.lastElementChild")}}</p>
 
 <h2 id="参见">参见</h2>
 
 <ul>
- <li>纯接口 {{domxref("ParentNode")}} 和 {{domxref("ChildNode")}}。</li>
+ <li>纯接口 {{domxref("Element")}} 和 {{domxref("ChildNode")}}。</li>
  <li>
   <div class="syntaxbox">实现了此纯接口的对象类型：{{domxref("Document")}}、{{domxref("Element")}}，和 {{domxref("DocumentFragment")}}。</div>
  </li>
