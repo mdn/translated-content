@@ -5722,7 +5722,7 @@
 /ja/docs/javascript_typed_arrays/Uint16Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint16Array
 /ja/docs/javascript_typed_arrays/Uint32Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/javascript_typed_arrays/Uint8Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
-/ja/docs/lastIndexOf	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
+/ja/docs/lastIndexOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 /ja/docs/method	/ja/docs/Web/API/HTMLFormElement/method
 /ja/docs/mozIStorageService	/ja/docs/orphaned/mozIStorageService
 /ja/docs/mozillaのメール	/ja/docs/Web

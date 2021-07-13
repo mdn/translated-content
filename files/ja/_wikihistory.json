@@ -48628,13 +48628,6 @@
       "RobinEgg"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf": {
-    "modified": "2019-03-23T23:33:53.946Z",
-    "contributors": [
-      "wbamberg",
-      "ethertank"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance": {
     "modified": "2020-10-15T21:58:31.243Z",
     "contributors": [
