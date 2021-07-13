@@ -171,7 +171,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
    <th rowspan="13" scope="row"><code>스피커</code></th>
    <td><code>1</code> <em>(Mono)</em></td>
    <td><code>2</code> <em>(Stereo)</em></td>
-   <td><em>모노에서 스테레오로 업믹스</em>.<br>
+   <td><em>모노에서 스테레오로 업믹스</em><br>
     <code>M</code> 입력 채널이 양 출력 채널 (<code>L</code>와 <code>R</code>)에 대해 사용됩니다.<br>
     <code>output.L = input.M<br>
     output.R = input.M</code></td>
@@ -189,7 +189,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
   <tr>
    <td><code>1</code> <em>(Mono)</em></td>
    <td><code>6</code> <em>(5.1)</em></td>
-   <td><em>모노에서 5.1로 업믹스.</em><br>
+   <td><em>모노에서 5.1로 업믹스</em><br>
     <code>M</code> 입력 채널이 센터 출력 채널 (<code>C</code>)에 대해 사용됩니다. 모든 다른 채널들(<code>L</code>, <code>R</code>, <code>LFE</code>, <code>SL</code>, 그리고 <code>SR</code>)은 작동하지 않습니다.<br>
     <code>output.L = 0<br>
     output.R = 0</code><br>
@@ -208,7 +208,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
   <tr>
    <td><code>2</code> <em>(Stereo)</em></td>
    <td><code>4</code> <em>(Quad)</em></td>
-   <td><em>스테레오에서 quad로 업믹스.</em><br>
+   <td><em>스테레오에서 quad로 업믹스</em><br>
     <code>L</code> 과 <code>R </code> 입력 채널이 각자의 비 서라운드 출력 채널 (<code>L</code> 과 <code>R</code>)에 대해 사용됩니다. 서라운드 출력 채널 (<code>SL</code> 과 <code>SR</code>) 은 작동하지 않습니다.<br>
     <code>output.L = input.L<br>
     output.R = input.R<br>
@@ -264,7 +264,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
   <tr>
    <td><code>6</code> <em>(5.1)</em></td>
    <td><code>2</code> <em>(Stereo)</em></td>
-   <td><em>5.1에서 스테레오로 다운믹스.</em><br>
+   <td><em>5.1에서 스테레오로 다운믹스</em><br>
     중앙 채널 (<code>C</code>)이 각각의 측면 서라운드 채널(<code>SL</code> 또는 <code>SR</code>)과 합계되고 각각의 측면 채널로 믹스됩니다. 두 개의 채널로 다운믹스되었으므로, 더 낮은 파워로 믹스되었습니다: 각각의 경우에 <code>√2/2</code>가 곱해집니다. 서브우퍼 (<code>LFE</code>)  채널은 손실됩니다.<br>
     <code>output.L = input.L + 0.7071 * (input.C + input.SL)<br>
     output.R = input.R </code><code>+ 0.7071 * (input.C + input.SR)</code></td>
@@ -288,13 +288,13 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
    <th rowspan="2" scope="row"><code>discrete</code></th>
    <td>any (<code>x</code>)</td>
    <td><code>x&lt;y</code>인 any (<code>y</code>)</td>
-   <td><em>discrete 채널의 업믹스.</em><br>
+   <td><em>discrete 채널의 업믹스</em><br>
     대응하는 입력 채널을 가지고 있는 각각의 출력 채널을 채웁니다, 즉 같은 인덱스를 가진 입력 채널입니다. 해당하는 입력 채널이 없는 채널은 작동하지 않은 채로 남아있습니다.</td>
   </tr>
   <tr>
    <td>any (<code>x</code>)</td>
    <td><code>x&gt;y</code>인 any (<code>y</code>)</td>
-   <td><em>discrete 채널의 다운믹스.</em><br>
+   <td><em>discrete 채널의 다운믹스</em><br>
     대응하는 입력 채널을 가지고 있는 각각의 출력 채널을 채웁니다, 즉 같은 인덱스를 가진 입력 채널입니다. 해당하는 출력 채널을 가지고 있지 않은 입력 채널은 탈락됩니다.</td>
   </tr>
  </tbody>
