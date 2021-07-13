@@ -7,53 +7,53 @@ tags:
   - Internationalization
   - Intl
   - JavaScript
+  - Localization
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
+browser-compat: javascript.builtins.Intl.DateTimeFormat
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary"><strong><code>Intl.DateTimeFormat</code></strong> オブジェクトは、言語に応じた日付と時刻の書式化を可能にするオブジェクトのためのコンストラクターです。</span></p>
+<p><strong><code>Intl.DateTimeFormat</code></strong> オブジェクトは、言語に応じた日付と時刻の書式化を可能にするオブジェクトのためのコンストラクターです。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/intl-datetimeformat.html")}}</div>
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
-
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+<h2 id="Constructor">コンストラクター</h2>
 
 <dl>
- <dt>{{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}</dt>
- <dd>新しい <code>DateTimeFormat</code> オブジェクトを生成します。</dd>
+	<dt>{{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}</dt>
+	<dd>新しい <code>DateTimeFormat</code> オブジェクトを生成します。</dd>
 </dl>
 
-<h2 id="Static_methods" name="Static_methods">静的メソッド</h2>
+<h2 id="Static_methods">静的メソッド</h2>
 
 <dl>
- <dt>{{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}</dt>
- <dd>指定されたロケールのうち、実行時の既定のロケールにフォールバックせずに対応されるものを配列に収めて返します。</dd>
+	<dt>{{jsxref("Intl/DateTimeFormat/supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}</dt>
+	<dd>指定されたロケールのうち、実行時の既定のロケールにフォールバックせずに対応されるものを配列に収めて返します。</dd>
 </dl>
 
-<h2 id="Instance_methods" name="Instance_methods">インスタンスメソッド</h2>
+<h2 id="Instance_methods">インスタンスメソッド</h2>
 
 <dl>
- <dt>{{jsxref("DateTimeFormat.format", "Intl.DateTimeFormat.prototype.format()")}}</dt>
- <dd>ロケールおよびこの {{jsxref("DateTimeFormat", "DateTimeFormat")}} オブジェクトの書式化オプションに則って日付を書式化するゲッター関数です。</dd>
- <dt>{{jsxref("DateTimeFormat.formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}</dt>
- <dd>オブジェクトの {{jsxref("Array")}} を返し、これは専用のロケールを意識した書式で使用することができる部品内の数値文字列を表します。</dd>
- <dt>{{jsxref("DateTimeFormat.resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}</dt>
- <dd>ローケルを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。</dd>
- <dt>{{jsxref("DateTimeFormat.formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}</dt>
- <dd>このメソッドは2つの <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/">Date</a> を受け取り、 {{jsxref("DateTimeFormat", "DateTimeFormat")}} インスタンスを生成する際に指定されたロケールとオプションに基づいて、最も簡潔な方法で日付の範囲を書式化します。</dd>
- <dt>{{jsxref("DateTimeFormat.formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}</dt>
- <dd>このメソッドは2つの <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/">Date</a> を受け取り、書式化された日付の範囲の各部分を表すロケール固有のトークンを含むオブジェクトの配列を返します。</dd>
+	<dt>{{jsxref("Intl/DateTimeFormat/format", "Intl.DateTimeFormat.prototype.format()")}}</dt>
+	<dd>ロケールおよびこの {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} オブジェクトの書式化オプションに則って日付を書式化するゲッター関数です。</dd>
+	<dt>{{jsxref("Intl/DateTimeFormat/formatToParts", "Intl.DateTimeFormat.prototype.formatToParts()")}}</dt>
+	<dd>オブジェクトの {{jsxref("Array")}} を返し、これは専用のロケールを意識した書式で使用することができる部品内の数値文字列を表します。</dd>
+	<dt>{{jsxref("Intl/DateTimeFormat/resolvedOptions", "Intl.DateTimeFormat.prototype.resolvedOptions()")}}</dt>
+	<dd>ローケルを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。</dd>
+	<dt>{{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}}</dt>
+	<dd>このメソッドは 2 つの <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a> を受け取り、 {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} インスタンスを生成する際に指定されたロケールとオプションに基づいて、最も簡潔な方法で日付の範囲を書式化します。</dd>
+	<dt>{{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}}</dt>
+	<dd>このメソッドは 2 つの <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a> を受け取り、書式化された日付の範囲の各部分を表すロケール固有のトークンを含むオブジェクトの配列を返します。</dd>
 </dl>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="Using_DateTimeFormat" name="Using_DateTimeFormat">DateTimeFormat の使用</h3>
+<h3 id="Using_DateTimeFormat">DateTimeFormat の使用</h3>
 
 <p>基本的に、ロケールを指定せずに使用すると、 <code>DateTimeFormat</code> は既定のロケールとオプションを使用します。</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // toLocaleString without arguments depends on the implementation,
 // the default locale, and the default time zone
@@ -61,11 +61,11 @@ console.log(new Intl.DateTimeFormat().format(date));
 // → "12/19/2012" if run with en-US locale (language) and time zone America/Los_Angeles (UTC-0800)
 </pre>
 
-<h3 id="Using_locales" name="Using_locales">locales の使用</h3>
+<h3 id="Using_locales">locales の使用</h3>
 
 <p>この例では、ローカライズされた日付と時刻の形式のバリエーションの一部示しています。アプリケーションのユーザーインターフェイスで使用される言語のフォーマットを取得するには、 <code>locales</code> 引数を使用して、その言語 (およびおそらくいくつかのフォールバック言語) を指定してください。</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // Results below use the time zone of America/Los_Angeles (UTC-0800, Pacific Standard Time)
 
@@ -96,11 +96,11 @@ console.log(new Intl.DateTimeFormat(['ban', 'id']).format(date));
 // → "19/12/2012"
 </pre>
 
-<h3 id="Using_options" name="Using_options">options の使用</h3>
+<h3 id="Using_options">options の使用</h3>
 
 <p>日付と時刻の書式は <code>options</code> 引数を使用してカスタマイズできます。</p>
 
-<pre class="brush: js notranslate">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
+<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0, 200));
 
 // request a weekday along with a long date
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -123,10 +123,9 @@ console.log(new Intl.DateTimeFormat('en-AU', options).format(date));
 // → "2:00:00 pm AEDT"
 
 // sometimes you want to be very precise
-options.fractionalSecondDigits = 3;
+options.fractionalSecondDigits = 3; //number digits for fraction-of-seconds
 console.log(new Intl.DateTimeFormat('en-AU', options).format(date));
 // → "2:00:00.200 pm AEDT"
-
 
 // sometimes even the US needs 24-hour time
 options = {
@@ -137,7 +136,6 @@ options = {
 };
 console.log(new Intl.DateTimeFormat('en-US', options).format(date));
 // → "12/19/2012, 19:00:00"
-
 
 // to specify options but use the browser's default locale, use 'default'
 console.log(new Intl.DateTimeFormat('default', options).format(date));
@@ -151,7 +149,7 @@ console.log(new Intl.DateTimeFormat('en-US', options).format(date));
 
 <p>The used calendar and numbering formats can also be set independently via <code>options</code> arguments:</p>
 
-<pre class="brush: js notranslate">var options = {calendar: 'chinese', numberingSystem: 'arab'};
+<pre class="brush: js">var options = {calendar: 'chinese', numberingSystem: 'arab'};
 var dateFormat = new Intl.DateTimeFormat('default', options);
 var usedOptions = dateFormat.resolvedOptions();
 
@@ -165,29 +163,20 @@ console.log(usedOptions.timeZone);
 // → "America/New_York" (the users default timezone)
 </pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Polyfill">ポリフィル</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#datetimeformat-objects', 'Intl.DateTimeFormat')}}</td>
-  </tr>
- </tbody>
-</table>
+<p><a href="https://formatjs.io/docs/polyfills/intl-datetimeformat">formatjs Intl.DateTimeFormat polyfill</a></p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<div>
-<p>{{Compat("javascript.builtins.Intl.DateTimeFormat")}}</p>
-</div>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<div>{{Compat}}</div>
+
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li>{{jsxref("Global_Objects/Intl", "Intl")}}</li>
+	<li>{{jsxref("Intl")}}</li>
 </ul>
