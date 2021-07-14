@@ -63,7 +63,7 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <pre class="brush: js">피연산자 연산자</pre>
 
-<p>단한 연산자의 예시로는 <code>x++</code> 또는 <code>++x</code>가 있습니다.</p>
+<p>단항 연산자의 예시로는 <code>x++</code> 또는 <code>++x</code>가 있습니다.</p>
 
 <h3 id="assignment_operators">할당 연산자</h3>
 
@@ -177,7 +177,7 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 <h4 id="return_value_and_chaining">반환 값과 체이닝</h4>
 
 <p>
-  <code>x = y</code>와 같은 할당 역시, 대부분의 표현식처럼 값을 반환합니다. 할당 연산자의 반환 값은 다른 할당 연산자나
+  <code>x = y</code>와 같은 할당 역시 대부분의 표현식처럼 값을 반환합니다. 할당 연산자의 반환 값은 다른 할당 연산자나
   콘솔 기록 등을 통해 가져올 수 있습니다.
 </p>
 
@@ -200,11 +200,11 @@ console.log(x = y) // 또는 반환 값을 직접 기록
   <code>x ?? y</code>의 결과를 반환합니다.
 </p>
 
-<p>논리 할당의 반환 값은 <b>할당 전</b>의 값을 사용한 논리 연산의 결과임에 주의하세요.</p>
+<p>반환 값은 <em>할당 전</em>의 값을 사용한 논리 연산의 결과임에 주의하세요.</p>
 
 <p>
-  할당 표현식 여러 개를 동시에 사용할 경우, 각각의 할당을 <strong>오른쪽에서 왼쪽으로</strong> 평가합니다. 다음과 같은
-  예제를 봐주세요.
+  할당 표현식 여러 개를 체이닝할 경우에는 각각의 할당을 <strong>오른쪽에서 왼쪽으로</strong> 평가합니다. 다음의 예제를
+  봐주세요.
 </p>
 
 <ul>
@@ -545,7 +545,7 @@ var var2 = 4
 </ul>
 
 <p>
-  9의 이진 표현은 1001이고, 15의 이진 표현은 1111입니다. 비트 연산자를 두 값에 적용했을 때의 결과는 다음과 같습니다.
+  예를 들어, 9의 이진 표현은 1001이고, 15의 이진 표현은 1111입니다. 비트 연산자를 이 두 값에 적용했을 때의 결과는 다음과 같습니다.
 </p>
 
 <table class="standard-table">
@@ -795,7 +795,7 @@ var n3 = !"Cat"; // !t returns false
 
 <p>예를 들어,</p>
 
-<pre class="brush: js">console.log('나만의' ' + '문자열'); // 콘솔에 "나만의 문자열"을 기록</pre>
+<pre class="brush: js">console.log('나만의 ' + '문자열'); // 콘솔에 "나만의 문자열"을 기록</pre>
 
 <p>단축 할당 연산자인 <code>+=</code> 또한 문자열을 연결결할 때 사용할 수 있습니다.</p>
 
@@ -1249,8 +1249,8 @@ function validate(obj, lowval, hival) {
 <h4 id="grouping_operator">그룹 연산자</h4>
 
 <p>
-  그룹연산자 <code>()</code>는 표현식 평가의 우선순위를 조절합니다. 예를 들어, 곱하기와 나누기보다 더하기와 빼기 연산을 먼저 수행할
-  수 있습니다.
+  그룹연산자 <code>()</code>는 표현식 평가의 우선순위를 조절합니다. 예를 들어, 곱하기와 나누기보다 더하기와 빼기 연산을
+  먼저 수행할 수 있습니다.
 </p>
 
 <pre class="brush:js">
