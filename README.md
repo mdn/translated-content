@@ -138,10 +138,7 @@ The review teams for each locale are:
   - [@clovislima](https://github.com/clovislima)
 - French (`fr`) content — the [@yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr)
   team, which consists of:
-  - [@nicolas-goudry](https://github.com/nicolas-goudry)
-  - [@JNa0](https://github.com/JNa0)
   - [@tristantheb](https://github.com/tristantheb)
-  - [@LEMIBANDDEXARI](https://github.com/LEMIBANDDEXARI)
   - [@SphinxKnight](https://github.com/SphinxKnight)
 - Japanese (`ja`) content — the [@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
   team, which consists of:
