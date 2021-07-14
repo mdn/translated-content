@@ -183,7 +183,7 @@ e = factorielle(5); // e reçoit la valeur 120
 
 <p>Il existe d'autres façons d'appeler des fonctions. Il existe souvent des cas où une fonction doit être appelée dynamiquement, où le nombre d'arguments peut varier, où le contexte de l'appel d'une fonction doit être créé en fonction d'un objet déterminé lors de l'exécution. Les fonctions sont des objets, en tant que tels, elles possèdent des méthodes (voir la page sur l'objet {{jsxref("Function")}}). L'une d'entre elles, {{jsxref("Function.apply","apply()")}} peut être utilisée pour réaliser le dernier cas de figure (exécution d'une fonction avec un objet déterminé à l'exécution).</p>
 
-<h2 class="deki-transform" id="Portée_d'une_fonction">Portée d'une fonction</h2>
+<h2 id="Portée_d'une_fonction">Portée d'une fonction</h2>
 
 <p>On ne peut pas accéder aux variables définies dans une fonction en dehors de cette fonction : ces variables n'existent que dans la portée de la fonction. En revanche, une fonction peut accéder aux différentes variables et fonctions qui appartiennent à la portée dans laquelle elle est définie. Une fonction définie dans une autre fonction peut également accéder à toutes les variables de la fonction « parente » et à toute autre variable accessible depuis la fonction « parente ».</p>
 

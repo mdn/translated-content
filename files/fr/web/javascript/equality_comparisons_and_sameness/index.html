@@ -51,7 +51,7 @@ original_slug: Web/JavaScript/Les_différents_tests_d_égalité
 
 <p>On notera que pour ces trois opérations, la comparaison s'effectue sur les valeurs des éléments qu'on compare, aucune de ces opérations ne permet de comparer la structure des paramètres. Pour des objets non primitifs, <code>x</code> et <code>y</code> qui ont la même structure mais qui sont des objets distincs, chacune des opérations présentées ci-avant sera évaluée à <code>false</code>.</p>
 
-<h2 id="Légalité_stricte_avec"><a id="stricte" name="stricte">L'égalité stricte avec <code>===</code></a></h2>
+<h2 id="Légalité_stricte_avec">L'égalité stricte avec <code>===</code></h2>
 
 <p>L'égalité stricte compare deux valeurs et teste leur égalité. Aucune des valeurs n'est convertie implicitement en une autre valeur avant que la comparaison soit effectuée. Si les valeurs sont typées différemment, elles sont considérées comme différentes. Si les valeurs sont de même type et ne sont pas des nombres, elles sont considérées égales si elles ont la même valeur. Si les deux valeurs sont des nombres, elles sont égales si elles ont la même valeur et que cette valeur n'est pas NaN ou si l'une vaut +0 et l'autre -0.</p>
 
@@ -73,7 +73,7 @@ console.log(obj === undefined); // false
 
 <p>Ce test d'égalité stricte est presque toujours la meilleure des opérations à considérer pour ces tests. Excepté pour les nombres, la sémantique utilisée est simple : une valeur est uniquement égale à elle-même. En ce qui concerne les nombres, il y a deux cas aux limites à considérer. Le premier cas concerne le nombre zéro positif ou négatif. Cela peut être utile dans la représentation de problèmes mathématiques mais ne constitue pas une différence pour de nombreuses situations : le test d'égalité stricte considère que ce sont les mêmes valeurs. Le second cas concerne la valeur « n'est pas un nombre », <code>NaN</code> (pour « not a number » en anglais) permettant de représenter certaines entités mathématiques : la somme des deux infinis (positif et négatif) par exemple. Le test d'égalité stricte considère que <code>NaN</code> est différent de toutes les valeurs, y compris lui-même. (N.B. : Le seul cas de figure pour lequel on a <code>(x !== x)</code> qui renvoie <code>true</code> est lorsque x vaut <code>NaN</code>.)</p>
 
-<h2 id="Légalité_faible_avec"><a id="faible" name="faible">L'égalité faible avec <code>==</code></a></h2>
+<h2 id="Légalité_faible_avec">L'égalité faible avec <code>==</code></h2>
 
 <p>Le test d'égalité faible compare deux valeurs <em>après</em> les avoir converties en valeurs d'un même type. Une fois converties (la conversion peut s'effectuer pour l'une ou les deux valeurs), la comparaison finale est la même que celle effectuée par <code>===</code>. L'égalité faible est <em>symétrique </em>: <code>A == B</code> aura toujours la même signification que <code>B == A</code> pour toute valeur de A et B.</p>
 
@@ -182,7 +182,7 @@ console.log(obj == undefined);
 
 <p>Certains développeurs considèrent que ce n'est jamais une bonne idée d'utiliser l'égalilté faible. Le résultat d'une comparaison utilisant l'égalité stricte est plus simple à appréhender et à prédire, de plus il n'y a aucune conversion implicite ce qui rend le test plus rapide.</p>
 
-<h2 id="Égalité_de_valeurs"><a id="sameValue" name="sameValue">Égalité de valeurs</a></h2>
+<h2 id="Égalité_de_valeurs">Égalité de valeurs</h2>
 
 <p>L'égalité de valeurs répond à un dernier cas d'utilisation : savoir si deux valeurs sont fonctionnellement identiques pour tout contexte. (Ce cas d'utilisation est un exemple du <a href="https://fr.wikipedia.org/wiki/Principe_de_substitution_de_Liskov">principe de substitution de Liskov</a>). On retrouve ce cas lorsqu'on essaie de changer une propriété immuable :</p>
 
@@ -199,7 +199,7 @@ function attemptMutation(v) {
 
 <p>L'égalité de valeurs peut être testée grâce à la méthode {{jsxref("Object.is")}}.</p>
 
-<h2 id="Égalité_de_valeurs_nulles"><a id="SameValueZero" name="SameValueZero">Égalité de valeurs nulles</a></h2>
+<h2 id="Égalité_de_valeurs_nulles">Égalité de valeurs nulles</h2>
 
 <p>On utilise la même égalité que l'égalité de valeur et on considère que <code>+0</code> et <code>-0</code> sont égaux.</p>
 
