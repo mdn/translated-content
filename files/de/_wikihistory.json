@@ -3355,12 +3355,6 @@
       "marjot"
     ]
   },
-  "Web/API/FullscreenOptions": {
-    "modified": "2020-10-15T22:20:23.450Z",
-    "contributors": [
-      "Gerak842"
-    ]
-  },
   "Web/API/Fullscreen_API": {
     "modified": "2019-07-07T13:00:37.918Z",
     "contributors": [
@@ -14533,6 +14527,12 @@
     "modified": "2020-10-15T22:05:03.102Z",
     "contributors": [
       "sv3m0r"
+    ]
+  },
+  "orphaned/Web/API/FullscreenOptions": {
+    "modified": "2020-10-15T22:20:23.450Z",
+    "contributors": [
+      "Gerak842"
     ]
   },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {

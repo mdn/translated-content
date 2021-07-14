@@ -1592,6 +1592,7 @@
 /zh-CN/docs/Web/API/File.name	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/Web/API/FileReader/中止事件(abort)	/zh-CN/docs/Web/API/FileReader/abort_event
 /zh-CN/docs/Web/API/FormData/删除	/zh-CN/docs/Web/API/FormData/delete
+/zh-CN/docs/Web/API/FullscreenOptions	/zh-CN/docs/orphaned/Web/API/FullscreenOptions
 /zh-CN/docs/Web/API/Fullscreen_API/指南	/zh-CN/docs/Web/API/Fullscreen_API/Guide
 /zh-CN/docs/Web/API/Geolocation/Using_geolocation	/zh-CN/docs/Web/API/Geolocation_API
 /zh-CN/docs/Web/API/GeolocationPosition/获取该位置时的时间戳	/zh-CN/docs/Web/API/GeolocationPosition/timestamp
