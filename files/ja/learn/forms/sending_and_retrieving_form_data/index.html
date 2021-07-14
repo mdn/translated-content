@@ -50,7 +50,7 @@ translation_of: Learn/Forms/Sending_and_retrieving_form_data
 
 <h3 id="The_htmlattrxrefactionform_attribute" name="The_htmlattrxref(actionform)_attribute">action 属性</h3>
 
-<p><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/action">action</a></code> 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Common_questions/What_is_a_URL">URL</a> でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。</p>
+<p><code><a href="/ja/docs/Web/HTML/Attributes/action">action</a></code> 属性は、どこにデータを送信するかを定義します。値は妥当な相対/絶対 <a href="/ja/docs/Learn/Common_questions/What_is_a_URL">URL</a> でなければなりません。この属性が与えられなかった場合は、フォームが含まれているページの URL にデータが送信されます。</p>
 
 <p>この例では、データを絶対 URL の <code>http://</code><code>example.com</code> に送信します。</p>
 
@@ -74,13 +74,13 @@ translation_of: Learn/Forms/Sending_and_retrieving_form_data
 
 <h3 id="The_htmlattrxrefmethodform_attribute" name="The_htmlattrxref(methodform)_attribute">method 属性</h3>
 
-<p><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/method">method</a></code> 属性は、どのようにデータを送信するかを定義します。<a href="/ja/docs/HTTP">HTTP プロトコル</a>はリクエストを実行するための方法をいくつか提供しています。HTML フォームのデータは複数の方法で送信することができます。もっとも一般的なものは <code>GET</code> メソッドと <code>POST</code> メソッドです。</p>
+<p><code><a href="/ja/docs/Web/HTML/Attributes/method">method</a></code> 属性は、どのようにデータを送信するかを定義します。<a href="/ja/docs/HTTP">HTTP プロトコル</a>はリクエストを実行するための方法をいくつか提供しています。HTML フォームのデータは複数の方法で送信することができます。もっとも一般的なものは <code>GET</code> メソッドと <code>POST</code> メソッドです。</p>
 
-<p>これら2つのメソッドの違いを理解するために、一歩戻って <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTTP/Overview">HTTP の動作</a>についてみていきましょう。ウェブ上のリソースにたどり着こうとするたびに、ブラウザーは URL へリクエストを送信します。HTTP リクエストは 2 つの部分で構成されます。ブラウザーの機能に関する包括的なメタデータのセットを持つヘッダーと、指定されたリクエストをサーバーが処理するために必要な情報を持つ本文です。</p>
+<p>これら2つのメソッドの違いを理解するために、一歩戻って <a href="/ja/docs/Web/HTTP/Overview">HTTP の動作</a>についてみていきましょう。ウェブ上のリソースにたどり着こうとするたびに、ブラウザーは URL へリクエストを送信します。HTTP リクエストは 2 つの部分で構成されます。ブラウザーの機能に関する包括的なメタデータのセットを持つヘッダーと、指定されたリクエストをサーバーが処理するために必要な情報を持つ本文です。</p>
 
 <h4 id="The_GET_method" name="The_GET_method">GET メソッド</h4>
 
-<p><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTTP/Methods/GET"><code>GET</code> メソッド</a>は、サーバーに対して指定したリソースを返すよう求めるためにブラウザーが使用するメソッドです。"やあサーバー、このリソースをくれよ。" この場合、ブラウザーは空の本文を送信します。本文が空であるため、フォームをこのメソッドで送信する場合はデータを URL の後に付加します。</p>
+<p><a href="/ja/docs/Web/HTTP/Methods/GET"><code>GET</code> メソッド</a>は、サーバーに対して指定したリソースを返すよう求めるためにブラウザーが使用するメソッドです。"やあサーバー、このリソースをくれよ。" この場合、ブラウザーは空の本文を送信します。本文が空であるため、フォームをこのメソッドで送信する場合はデータを URL の後に付加します。</p>
 
 <p>以下のフォームについて考えてみましょう。</p>
 
@@ -118,7 +118,7 @@ Host: foo.com</pre>
 
 <h4 id="The_POST_method" name="The_POST_method">POST メソッド</h4>
 
-<p><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTTP/Methods/POST"><code>POST</code> メソッド</a>は少し異なります。これは、HTTP リクエストの本文で提供したデータを考慮したレスポンスの要求を、ブラウザーがサーバーに送信するためのメソッドです。"やあサーバー、このデータを見て適切な結果を返してよ。" このメソッドを使用してフォームを送信する場合は、データが HTTP リクエストの本文の後に追加されます。</p>
+<p><a href="/ja/docs/Web/HTTP/Methods/POST"><code>POST</code> メソッド</a>は少し異なります。これは、HTTP リクエストの本文で提供したデータを考慮したレスポンスの要求を、ブラウザーがサーバーに送信するためのメソッドです。"やあサーバー、このデータを見て適切な結果を返してよ。" このメソッドを使用してフォームを送信する場合は、データが HTTP リクエストの本文の後に追加されます。</p>
 
 <p>例を見てみましょう。— これは前述の <code>GET</code> の節で見たものと同じフォームですが、{{htmlattrxref("method","form")}} 属性が <code>post</code> に設定されています。</p>
 
@@ -260,7 +260,7 @@ if __name__ == "__main__":
 <ul>
  <li>ファイルの内容は URL 引数に収めることができないので、{{htmlattrxref("method","form")}} 属性を <code>POST</code> に設定してください。</li>
  <li>データは複数の部分に分かれ、それぞれのファイルや文字列データがフォーム本体に含められているので、{{htmlattrxref("enctype","form")}} の値を <code>multipart/form-data</code> に設定ください。</li>
- <li>ユーザーがアップロードするファイルを選択できるように、1 つ以上の <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code> コントロールを含めてください。</li>
+ <li>ユーザーがアップロードするファイルを選択できるように、1 つ以上の <code><a href="/ja/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code> コントロールを含めてください。</li>
 </ul>
 
 <p>例:</p>
@@ -283,7 +283,7 @@ if __name__ == "__main__":
 
 <p>サーバーにデータを送信するたびに、セキュリティについて考える必要があります。HTML フォームはサーバーに対するもっともよくある攻撃の入口 (攻撃が行われる場所) になります。問題が HTML フォーム自身から発生することはありません — サーバーがどのようにデータを扱うかによります。</p>
 
-<p><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Server-side">server-side</a> の学習トピックの <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Server-side/First_steps/Website_security">Website security</a> の記事では、一般的な攻撃とその防御を詳細に扱っています。そちらへ行って記事を確認し、何が起こり得るかを理解してください。</p>
+<p><a href="/ja/docs/Learn/Server-side">server-side</a> の学習トピックの <a href="/ja/docs/Learn/Server-side/First_steps/Website_security">Website security</a> の記事では、一般的な攻撃とその防御を詳細に扱っています。そちらへ行って記事を確認し、何が起こり得るかを理解してください。</p>
 
 <h3 id="Be_paranoid_Never_trust_your_users" name="Be_paranoid_Never_trust_your_users">疑い深くあれ: ユーザーを信用してはいけません</h3>
 
@@ -292,7 +292,7 @@ if __name__ == "__main__":
 <p>サーバーに来るすべてのデータを確認およびサニタイズしなければなりません。いつでもです。例外はありません。</p>
 
 <ul>
- <li><strong>潜在的に危険な文字をエスケープします。</strong>注意すべき具体的な文字は、データが使用される状況や使用するサーバー基盤に大きく依存しますが、どのサーバー側言語もそのための機能を持っています。注意しておくべきことは、 (<a href="https://wiki.developer.mozilla.org/ja/docs/Learn/JavaScript">JavaScript</a> や <a href="https://en.wikipedia.org/wiki/SQL">SQL</a> コマンドといった)実行可能なコードのようなキャラクターシーケンスです。</li>
+ <li><strong>潜在的に危険な文字をエスケープします。</strong>注意すべき具体的な文字は、データが使用される状況や使用するサーバー基盤に大きく依存しますが、どのサーバー側言語もそのための機能を持っています。注意しておくべきことは、 (<a href="/ja/docs/Learn/JavaScript">JavaScript</a> や <a href="https://en.wikipedia.org/wiki/SQL">SQL</a> コマンドといった)実行可能なコードのようなキャラクターシーケンスです。</li>
  <li><strong>入力データの量を、必要なサイズまでしか受け入れないように制限します。</strong></li>
  <li><strong>アップロードされたファイルをサンドボックス化します。</strong>ファイルを別のサーバーに保管して、別のサブドメインまたはよりよい方法としてまったく別のドメインを通してのみアクセスを許可します。</li>
 </ul>
@@ -323,11 +323,11 @@ if __name__ == "__main__":
  <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Your_first_HTML_form">初めてのフォーム</a></li>
  <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">フォームの構築方法</a></li>
  <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/The_native_form_widgets">ネイティブフォームウィジェット</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/HTML5_input_types" rel="noopener">The HTML5 input types</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Other_form_controls" rel="noopener">Other form controls</a></li>
+ <li><a class="external" href="/ja/docs/Learn/Forms/HTML5_input_types" rel="noopener">The HTML5 input types</a></li>
+ <li><a class="external" href="/ja/docs/Learn/Forms/Other_form_controls" rel="noopener">Other form controls</a></li>
  <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Styling_HTML_forms">フォームへのスタイル設定</a></li>
  <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">フォームへの高度なスタイル設定</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/UI_pseudo-classes" rel="noopener">UI pseudo-classes</a></li>
+ <li><a class="external" href="/ja/docs/Learn/Forms/UI_pseudo-classes" rel="noopener">UI pseudo-classes</a></li>
  <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Data_form_validation">フォームデータの検証</a></li>
  <li><a href="https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
 </ul>
@@ -335,7 +335,7 @@ if __name__ == "__main__":
 <h3 id="Advanced_Topics" name="Advanced_Topics">上級トピック</h3>
 
 <ul>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/How_to_build_custom_form_controls" rel="noopener">カスタムフォームコントロールの作成方法</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Sending_forms_through_JavaScript" rel="noopener">JavaScript によるフォームの送信</a></li>
- <li><a class="external" href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets" rel="noopener">フォームウィジェット向けプロパティ実装状況一覧</a></li>
+ <li><a class="external" href="/ja/docs/Learn/Forms/How_to_build_custom_form_controls" rel="noopener">カスタムフォームコントロールの作成方法</a></li>
+ <li><a class="external" href="/ja/docs/Learn/Forms/Sending_forms_through_JavaScript" rel="noopener">JavaScript によるフォームの送信</a></li>
+ <li><a class="external" href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets" rel="noopener">フォームウィジェット向けプロパティ実装状況一覧</a></li>
 </ul>

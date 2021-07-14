@@ -88,7 +88,7 @@ modules/
 
 <p>しかし、少なくとも今のところは <code>.js</code> を使い続けることにしました。ブラウザでモジュールを正しく動作させるためには、サーバーが <code>text/javascript</code> などの JavaScript MIME タイプを含む <code>Content-Type</code> ヘッダでモジュールを提供していることを確認する必要があります。そうしないと、"The server responded with a non-JavaScript MIME type" のような厳格な MIME タイプチェックエラーが表示され、ブラウザは JavaScript を実行しません。ほとんどのサーバーでは、<code>.js</code> ファイルにはすでに正しい MIME タイプが設定されていますが、<code>.mjs</code> ファイルにはまだ設定されていません。すでに <code>.mjs</code> ファイルを正しく提供しているサーバーには、<a href="https://pages.github.com/">GitHub Pages</a> や Node.js の <code><a href="https://github.com/http-party/http-server#readme">http-server</a></code> などがあります。</p>
 
-<p>これは、すでにそのような環境を使用している場合や、今はまだ使用していないが、何をしているか知っていてアクセスできる場合には問題ありません(つまり、<code>.mjs</code> ファイルに正しい <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> を設定するようにサーバーを設定することができます)。しかし、あなたがファイルを提供しているサーバーを制御できない場合には、混乱を引き起こす可能性があります。</p>
+<p>これは、すでにそのような環境を使用している場合や、今はまだ使用していないが、何をしているか知っていてアクセスできる場合には問題ありません(つまり、<code>.mjs</code> ファイルに正しい <code><a href="/ja/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> を設定するようにサーバーを設定することができます)。しかし、あなたがファイルを提供しているサーバーを制御できない場合には、混乱を引き起こす可能性があります。</p>
 
 <p>この記事では学習と移植性を考慮して、<code>.js</code> を使用することにしました。</p>
 
