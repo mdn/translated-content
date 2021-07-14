@@ -182,10 +182,10 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 </p>
 
 <pre class="brush: js">
-const z = (x = y)  // const z = x = y와 같음
+const z = (x = y);  // const z = x = y와 같음
 
-console.log(z)     // x = y 할당의 반환 값을 기록
-console.log(x = y) // 또는 반환 값을 직접 기록
+console.log(z);     // x = y 할당의 반환 값을 기록
+console.log(x = y); // 또는 반환 값을 직접 기록
 </pre>
 
 <p>
@@ -224,15 +224,15 @@ console.log(x = y) // 또는 반환 값을 직접 기록
 </p>
 
 <pre class="brush: js">
-var foo = ['one', 'two', 'three']
+var foo = ['one', 'two', 'three'];
 
 // 구조 분해 미활용
-var one   = foo[0]
-var two   = foo[1]
-var three = foo[2]
+var one   = foo[0];
+var two   = foo[1];
+var three = foo[2];
 
 // 구조 분해 활용
-var [one, two, three] = foo
+var [one, two, three] = foo;
 </pre>
 
 <h3 id="comparison_operators">비교 연산자</h3>
@@ -249,8 +249,8 @@ var [one, two, three] = foo
 </p>
 
 <pre>
-var var1 = 3
-var var2 = 4
+var var1 = 3;
+var var2 = 4;
 </pre>
 
 <table class="standard-table">
@@ -359,8 +359,8 @@ var var2 = 4
 </p>
 
 <pre class="brush: js">
-1 / 2              // 0.5
-1 / 2 == 1.0 / 2.0 // 참
+1 / 2;              // 0.5
+1 / 2 == 1.0 / 2.0; // 참
 </pre>
 
 <p>
@@ -780,7 +780,7 @@ var n3 = !"Cat"; // !t returns false
 <p>
   참고로 <code>||</code>을 사용한 두 번째 단락 평가의 경우, 최근 코드에서는 새로운
   <a href="/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">널 병합 연산자</a>
-  (<code>??</code>)를 사용할 수도 있습니다. 널 병합 연산자는 첫 번째 연산자가 "<a href="/en-US/docs/Glossary/Nullish"
+  (<code>??</code>)를 사용할 수도 있습니다. 널 병합 연산자는 첫 번째 연산자가 "<a href="/ko/docs/Glossary/Nullish"
     >널과 유사</a
   >"한, 즉 {{jsxref("null")}}이거나 {{jsxref("undefined")}}일 때만 두 번째 피연산자를 반환합니다. <code>''</code>와
   <code>0</code>도 유효한 값이라면 널 병합 연산자가 기본 값을 나타낼 때 더 좋은 선택지입니다.
@@ -848,10 +848,10 @@ var status = (age &gt;= 18) ? "성인" : "미성년자";
 </p>
 
 <pre class="brush: js">
-var x = [0,1,2,3,4,5,6,7,8,9]
-var a = [x, x, x, x, x]
+var x = [0,1,2,3,4,5,6,7,8,9];
+var a = [x, x, x, x, x];
 
-for (var i = 0, j = 9; i &lt;= j; i++, j--)
+for (var i = 0, j = 9; i &lt;= j; i++, j--);
 //                                   ^
   console.log('a[' + i + '][' + j + ']= ' + a[i][j])
 </pre>
@@ -1259,16 +1259,16 @@ var b = 2;
 var c = 3;
 
 // 기본 우선순위에서는
-a + b * c     // 7
+a + b * c;     // 7
 // 이런 순서로 평가함
-a + (b * c)   // 7
+a + (b * c);   // 7
 
 // 우선순위 재정의
 // 곱하기보다 더하기를 먼저 수행
-(a + b) * c   // 9
+(a + b) * c;   // 9
 
 // ...하면 아래와 같음
-a * c + b * c // 9
+a * c + b * c; // 9
 </pre>
 
 <h3 id="left-hand-side_expressions">좌변 표현식</h3>
