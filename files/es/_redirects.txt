@@ -111,7 +111,6 @@
 /es/docs/CSS/list-style-type	/es/docs/Web/CSS/list-style-type
 /es/docs/CSS/margin-right	/es/docs/Web/CSS/margin-right
 /es/docs/CSS/max-height	/es/docs/Web/CSS/max-height
-/es/docs/CSS/max-width	/es/docs/Web/CSS/max-width
 /es/docs/CSS/min-height	/es/docs/Web/CSS/min-height
 /es/docs/CSS/min-width	/es/docs/Web/CSS/min-width
 /es/docs/CSS/none	/es/docs/Web/CSS/float
@@ -185,7 +184,6 @@
 /es/docs/CSS:list-style-type	/es/docs/Web/CSS/list-style-type
 /es/docs/CSS:margin-right	/es/docs/Web/CSS/margin-right
 /es/docs/CSS:max-height	/es/docs/Web/CSS/max-height
-/es/docs/CSS:max-width	/es/docs/Web/CSS/max-width
 /es/docs/CSS:min-height	/es/docs/Web/CSS/min-height
 /es/docs/CSS:min-width	/es/docs/Web/CSS/min-width
 /es/docs/CSS:none	/es/docs/Web/CSS/float
@@ -231,14 +229,12 @@
 /es/docs/DOM/CameraCapabilities.flashModes	/es/docs/Web/API/CameraCapabilities/flashModes
 /es/docs/DOM/CssRule	/es/docs/Web/API/CSSRule
 /es/docs/DOM/CssRule.cssText	/es/docs/Web/API/CSSRule/cssText
-/es/docs/DOM/CssRule.parentStyleSheet	/es/docs/Web/API/CSSRule/parentStyleSheet
 /es/docs/DOM/CssRule.selectorText	/es/docs/Web/API/CSSStyleRule/selectorText
 /es/docs/DOM/Document.styleSheets	/es/docs/Web/API/Document/styleSheets
 /es/docs/DOM/Element.setAttribute	/es/docs/Web/API/Element/setAttribute
 /es/docs/DOM/HTMLAudioElement	/es/docs/Web/API/HTMLAudioElement
 /es/docs/DOM/HTMLTableElement	/es/docs/Web/API/HTMLTableElement
 /es/docs/DOM/Manipulando_el_historial_del_navegador	/es/docs/Web/API/History_API
-/es/docs/DOM/Manipulando_el_historial_del_navegador/Ejemplo	/es/docs/Web/API/History_API/Example
 /es/docs/DOM/Manipulating_the_browser_history	/es/docs/Web/API/History_API
 /es/docs/DOM/MozSocial.closePanel	/es/docs/Web/API/MozSocial/closePanel
 /es/docs/DOM/MozSocial.getAttention	/es/docs/Web/API/MozSocial/getAttention
@@ -327,7 +323,6 @@
 /es/docs/DOM/range	/es/docs/Web/API/Range
 /es/docs/DOM/range.collapsed	/es/docs/Web/API/Range/collapsed
 /es/docs/DOM/range.commonAncestorContainer	/es/docs/Web/API/Range/commonAncestorContainer
-/es/docs/DOM/range.intersectsNode	/es/docs/Web/API/Range/intersectsNode
 /es/docs/DOM/style	/es/docs/Web/API/HTMLStyleElement
 /es/docs/DOM/table	/es/docs/Web/API/HTMLTableElement
 /es/docs/DOM/window	/es/docs/Web/API/Window
@@ -338,7 +333,6 @@
 /es/docs/DOM/window.navigator.registerProtocolHandler	/es/docs/Web/API/Navigator/registerProtocolHandler
 /es/docs/DOM/window.navigator.vibrate	/es/docs/Web/API/Navigator/vibrate
 /es/docs/DOM/window.onload	/es/docs/Web/API/GlobalEventHandlers/onload
-/es/docs/DOM/window.onunload	/es/docs/Web/API/WindowEventHandlers/onunload
 /es/docs/DOM/window.requestAnimationFrame	/es/docs/Web/API/Window/requestAnimationFrame
 /es/docs/DOM:Selection:addRange	/es/docs/Web/API/Selection/addRange
 /es/docs/DOM:Selection:anchorNode	/es/docs/Web/API/Selection/anchorNode
@@ -395,7 +389,6 @@
 /es/docs/DOM:range	/es/docs/Web/API/Range
 /es/docs/DOM:range.collapsed	/es/docs/Web/API/Range/collapsed
 /es/docs/DOM:range.commonAncestorContainer	/es/docs/Web/API/Range/commonAncestorContainer
-/es/docs/DOM:range.intersectsNode	/es/docs/Web/API/Range/intersectsNode
 /es/docs/DOM:selection	/es/docs/Web/API/Selection
 /es/docs/DOM:style	/es/docs/Web/API/HTMLStyleElement
 /es/docs/DOM:table	/es/docs/Web/API/HTMLTableElement
@@ -1243,7 +1236,6 @@
 /es/docs/Learn/Herramientas_y_pruebas/GitHub	/es/docs/Learn/Tools_and_testing/GitHub
 /es/docs/Learn/Herramientas_y_pruebas/Lado-del-cliente_JavaScript_frameworks	/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 /es/docs/Learn/Herramientas_y_pruebas/Lado-del-cliente_JavaScript_frameworks/React_getting_started	/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-/es/docs/Learn/Herramientas_y_pruebas/Lado-del-cliente_JavaScript_frameworks/Vue_primeros_pasos	/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 /es/docs/Learn/Herramientas_y_pruebas/Understanding_client-side_tools	/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools
 /es/docs/Learn/JavaScript/Building_blocks/Bucle_codigo	/es/docs/Learn/JavaScript/Building_blocks/Looping_code
 /es/docs/Learn/JavaScript/Building_blocks/Construyendo_tu_propia_funcion	/es/docs/Learn/JavaScript/Building_blocks/Build_your_own_function
@@ -1554,7 +1546,6 @@
 /es/docs/SVG	/es/docs/Web/SVG
 /es/docs/SVG/Tutorial	/es/docs/Web/SVG/Tutorial
 /es/docs/SVG/Tutorial/Getting_Started	/es/docs/Web/SVG/Tutorial/Getting_Started
-/es/docs/SVG_In_HTML_Introduction	/es/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /es/docs/SVG_en_Firefox	/es/docs/Web/SVG/SVG_1.1_Support_in_Firefox
 /es/docs/Screening_duplicate_bugs	/es/docs/QA/Screening_duplicate_bugs
 /es/docs/Seguridad_en_Firefox_2	/es/docs/Mozilla/Firefox/Releases/2/Security_changes
@@ -1637,7 +1628,6 @@
 /es/docs/Web/API/Geolocation.clearWatch	/es/docs/Web/API/Geolocation/clearWatch
 /es/docs/Web/API/Geolocation.getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition
 /es/docs/Web/API/Geolocation.watchPosition	/es/docs/Web/API/Geolocation/watchPosition
-/es/docs/Web/API/GlobalEventHandlers/onunload	/es/docs/Web/API/WindowEventHandlers/onunload
 /es/docs/Web/API/HTMLElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/HTMLElement/invalid_event	/es/docs/Web/API/HTMLInputElement/invalid_event
 /es/docs/Web/API/HTMLOrForeignElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
@@ -1663,7 +1653,6 @@
 /es/docs/Web/API/Position	/es/docs/Web/API/GeolocationPosition
 /es/docs/Web/API/RandomSource/Obtenervaloresaleatorios	/es/docs/Web/API/Crypto/getRandomValues
 /es/docs/Web/API/SubtleCrypto/encrypt	/es/docs/Web/HTTP/Headers/Digest
-/es/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /es/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Wtilizando_texturas_en_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
@@ -1803,7 +1792,6 @@
 /es/docs/Web/CSS/transform-function/translateZ	/es/docs/Web/CSS/transform-function/translateZ()
 /es/docs/Web/CSS/var	/es/docs/Web/CSS/var()
 /es/docs/Web/Events/DOMContentLoaded	/es/docs/Web/API/Window/DOMContentLoaded_event
-/es/docs/Web/Events/abort	/es/docs/Web/API/HTMLMediaElement/abort_event
 /es/docs/Web/Events/animationend	/es/docs/Web/API/HTMLElement/animationend_event
 /es/docs/Web/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Events/blur	/es/docs/Web/API/Element/blur_event
@@ -1832,7 +1820,6 @@
 /es/docs/Web/Guide/HTML	/es/docs/Learn/HTML
 /es/docs/Web/Guide/HTML/Canvas_tutorial	/es/docs/Web/API/Canvas_API/Tutorial
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Advanced_animations	/es/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
-/es/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors	/es/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations	/es/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Basic_usage	/es/docs/Web/API/Canvas_API/Tutorial/Basic_usage
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Dibujando_formas	/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
@@ -2160,7 +2147,6 @@
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Referencia/Acerca_de	/es/docs/Web/JavaScript/Reference/About
 /es/docs/Web/JavaScript/Referencia/Características_Desaprobadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-/es/docs/Web/JavaScript/Referencia/Características_Desaprobadas/The_legacy_Iterator_protocol	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
 /es/docs/Web/JavaScript/Referencia/Características_Despreciadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Referencia/Classes	/es/docs/Web/JavaScript/Reference/Classes
 /es/docs/Web/JavaScript/Referencia/Classes/Class_fields	/es/docs/Web/JavaScript/Reference/Classes/Public_class_fields
@@ -2256,7 +2242,6 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/getSeconds	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/getTime	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/getUTCFullYear	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/getUTCHours	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCHours
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/now	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/now
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/parse	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/parse
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Date/setFullYear	/es/docs/Web/JavaScript/Reference/Global_Objects/Date/setFullYear
@@ -2327,7 +2312,6 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/exp	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/exp
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/expm1	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/expm1
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/floor	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/floor
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/fround	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/fround
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/hypot	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/hypot
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/log	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/log
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Math/log10	/es/docs/Web/JavaScript/Reference/Global_Objects/Math/log10
@@ -2366,7 +2350,6 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/NumberFormat/format	/es/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object	/es/docs/Web/JavaScript/Reference/Global_Objects/Object
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/__defineGetter__	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/__lookupGetter__	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/assign	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/constructor	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/create	/es/docs/Web/JavaScript/Reference/Global_Objects/Object/create
@@ -2593,7 +2576,6 @@
 /es/docs/Web/Reference/Events	/es/docs/Web/Events
 /es/docs/Web/Reference/Events/DOMContentLoaded	/es/docs/Web/API/Window/DOMContentLoaded_event
 /es/docs/Web/Reference/Events/DOMSubtreeModified	/es/docs/Web/Events/DOMSubtreeModified
-/es/docs/Web/Reference/Events/abort	/es/docs/Web/API/HTMLMediaElement/abort_event
 /es/docs/Web/Reference/Events/animationend	/es/docs/Web/API/HTMLElement/animationend_event
 /es/docs/Web/Reference/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Reference/Events/blur	/es/docs/Web/API/Element/blur_event
@@ -2619,7 +2601,6 @@
 /es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion
 /es/docs/Web/Tutoriales	/es/docs/Web/Tutorials
 /es/docs/Web/WebGL	/es/docs/Web/API/WebGL_API
-/es/docs/Web/WebGL/Animating_objects_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /es/docs/Web/WebGL/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /es/docs/Web/XML/Introducción_a_XML	/es/docs/Web/XML/XML_introduction
 /es/docs/Web/XPath/Ejes	/es/docs/Web/XPath/Axes
@@ -2668,7 +2649,6 @@
 /es/docs/WebAPI/Pointer_Lock	/es/docs/Web/API/Pointer_Lock_API
 /es/docs/WebAPI/Using_geolocation	/es/docs/Web/API/Geolocation_API
 /es/docs/WebGL	/es/docs/Web/API/WebGL_API
-/es/docs/WebGL/Animating_objects_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /es/docs/WebRTC/Introduction	/es/docs/Web/API/WebRTC_API/Session_lifetime
 /es/docs/WebRTC/MediaStream_API	/es/docs/Web/API/Media_Streams_API
 /es/docs/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
