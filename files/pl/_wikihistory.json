@@ -831,12 +831,6 @@
       "cs"
     ]
   },
-  "Learn/Tools_and_testing": {
-    "modified": "2020-07-16T22:38:56.487Z",
-    "contributors": [
-      "chrisdavidmills"
-    ]
-  },
   "MDN": {
     "modified": "2020-02-19T18:16:07.796Z",
     "contributors": [
@@ -956,12 +950,6 @@
     "contributors": [
       "jotes",
       "angie94007",
-      "rebloor"
-    ]
-  },
-  "Mozilla/Add-ons/WebExtensions/API": {
-    "modified": "2020-05-25T16:21:21.207Z",
-    "contributors": [
       "rebloor"
     ]
   },
@@ -1239,13 +1227,6 @@
     "modified": "2020-07-16T22:34:49.477Z",
     "contributors": [
       "kubutekf"
-    ]
-  },
-  "Tools/Performance": {
-    "modified": "2020-07-16T22:36:13.164Z",
-    "contributors": [
-      "jwhitlock",
-      "wbamberg"
     ]
   },
   "Tools/Validators": {
@@ -3455,12 +3436,6 @@
       "Rev"
     ]
   },
-  "Web/API/SpeechRecognition": {
-    "modified": "2020-10-15T22:25:11.426Z",
-    "contributors": [
-      "malarium"
-    ]
-  },
   "Web/API/Stylesheet/disabled": {
     "modified": "2019-03-23T23:45:18.937Z",
     "contributors": [
@@ -4262,13 +4237,6 @@
       "taboritis",
       "Miszau",
       "CreateWWW"
-    ]
-  },
-  "Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout": {
-    "modified": "2019-05-22T06:37:48.964Z",
-    "contributors": [
-      "DominikKowalczyk",
-      "vbert"
     ]
   },
   "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
@@ -5367,12 +5335,6 @@
       "Sullei"
     ]
   },
-  "Web/HTML/Element/Input": {
-    "modified": "2019-03-23T22:58:57.333Z",
-    "contributors": [
-      "pkuczynski"
-    ]
-  },
   "Web/HTML/Element/a": {
     "modified": "2020-10-15T21:11:09.186Z",
     "contributors": [
@@ -5853,13 +5815,6 @@
     "modified": "2019-03-18T21:37:58.840Z",
     "contributors": [
       "Alpha"
-    ]
-  },
-  "Web/HTTP/Headers/Cache-Control": {
-    "modified": "2020-10-15T22:03:23.970Z",
-    "contributors": [
-      "myhau",
-      "stopsopa"
     ]
   },
   "Web/HTTP/Headers/Referrer-Policy": {
