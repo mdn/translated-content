@@ -17,16 +17,16 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 <h2 id="Audio_graphs">오디오 그래프</h2>
 
-<p><a href="/ko/docs/Web/API/Web_Audio_API">Web Audio API</a>는 <a href="/ko/docs/Web/API/AudioContext">오디오 컨텍스트</a>(audio context) 내의 오디오 연산을 다루는 것을 포함하고, <strong>모듈러 라우팅</strong>(modular routing)을 허용하도록 설계되었습니다. 기본적인 오디오 연산은 <strong>오디오 노드</strong>(audio node)와 함께 수행되는데, 이는 <strong>오디오 라우팅 그래프</strong>를 형성하기 위해 함께 연결되어 있습니다. 다른 유형의 채널 레이아웃을 가진 몇몇의 자원(source)들은 심지어 하나의 컨텍스트 내에서 지원됩니다. 이 모듈식의(modular) 디자인은 역동적인 효과를 가진 복잡한 오디오 기능을 만드는 데 있어 유연함을 제공합니다.</p>
+<p><a href="/ko/docs/Web/API/Web_Audio_API">Web Audio API</a>는 <a href="/ko/docs/Web/API/AudioContext">오디오 컨텍스트</a>(audio context) 내의 오디오 연산을 다루는 것을 포함하고, <strong>모듈러 라우팅</strong>(modular routing)을 허용하도록 설계되었습니다. 기본적인 오디오 연산은 <strong>오디오 노드</strong>(audio node)와 함께 수행되는데, 이는 <strong>오디오 라우팅 그래프</strong>를 형성하기 위해 함께 연결되어 있습니다. 다른 유형의 채널 레이아웃을 가진 몇몇의 소스(source)들은 심지어 하나의 컨텍스트 내에서 지원됩니다. 이 모듈식의(modular) 디자인은 역동적인 효과를 가진 복잡한 오디오 기능을 만드는 데 있어 유연함을 제공합니다.</p>
 
-<p>하나 또는 더 많은 자원에서 시작하고, 하나 또는 더 많은 노드를 통과하고, 그리고서 도착지(destination)에서 끝나는 체인(chain)을 형성하며, 오디오 노드는 입력과 출력을 통해 연결되어 있습니다. 그러나, 예를 들어 여러분이 단지 오디오 데이터를 시각화하기를 원한다면 도착지를 반드시 제공할 필요는 없습니다. 웹 오디오의 단순하고, 일반적인 작업 흐름은 다음과 같습니다:</p>
+<p>하나 또는 더 많은 소스에서 시작하고, 하나 또는 더 많은 노드를 통과하고, 그리고서 도착지(destination)에서 끝나는 체인(chain)을 형성하며, 오디오 노드는 입력과 출력을 통해 연결되어 있습니다. 그러나, 예를 들어 여러분이 단지 오디오 데이터를 시각화하기를 원한다면 도착지를 반드시 제공할 필요는 없습니다. 웹 오디오의 단순하고, 일반적인 작업 흐름은 다음과 같습니다:</p>
 
 <ol>
  <li>오디오 컨텍스트를 생성합니다.</li>
- <li>컨텍스트 내에서, 다음과 같이 자원을 생성합니다 — {{HTMLElement("audio")}}, oscillator, 또는 stream.</li>
+ <li>컨텍스트 내에서, 다음과 같이 소스을 생성합니다 — {{HTMLElement("audio")}}, oscillator, 또는 stream.</li>
  <li>효과 노드를 생성하는데, 예를 들자면 reverb, biquad filter, panner, 또는 compressor가 있습니다.</li>
  <li>사용자의 컴퓨터 스피커와 같이, 오디오의 최종 도착지를 선택합니다.</li>
- <li>오디오 자원으로부터 0 또는 더 많은 효과를 거쳐 연결(connection)을 확립하는데, 마지막으로는 앞서 선택된 도착지에서 끝납니다.</li>
+ <li>오디오 소스로부터 0 또는 더 많은 효과를 거쳐 연결(connection)을 확립하는데, 마지막으로는 앞서 선택된 도착지에서 끝납니다.</li>
 </ol>
 
 <div class="notecard note">
@@ -35,13 +35,13 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 <p>한 신호에서 사용 가능한 오디오 채널의 숫자는 종종 숫자 형식으로 표현되는데, 예를 들자면 2.0 또는 5.1과 같습니다. 이것은 <a href="https://en.wikipedia.org/wiki/Surround_sound#Channel_notation">채널 표기법</a>이라고 불립니다. 첫번째 숫자는 신호가 포함하는 전체 주파수 범위 오디오 채널의 숫자입니다. 마침표 뒤의 숫자는 저주파 효과(LFE) 출력에 대해 비축된 채널의 수를 나타냅니다; 이 숫자는 종종 <strong>서브 우퍼</strong>(subwoofer)로 불립니다.</p>
 </div>
 
-<p><img alt="오디오 컨텍스트라고 써진 외부 상자와 자원, 효과, 목적지라고 써진 세 개의 내부 상자를 가진 하나의 간단한 도표. 세 개의 내부 상자는 좌에서 우를 향하는 화살표를 사이에 가지고 있는데, 이는 오디오 정보의 흐름을 나타냅니다." src="webaudioapi_en.svg" style="display: block; margin: 0px auto;"></p>
+<p><img alt="오디오 컨텍스트라고 써진 외부 상자와 소스, 효과, 목적지라고 써진 세 개의 내부 상자를 가진 하나의 간단한 도표. 세 개의 내부 상자는 좌에서 우를 향하는 화살표를 사이에 가지고 있는데, 이는 오디오 정보의 흐름을 나타냅니다." src="webaudioapi_en.svg" style="display: block; margin: 0px auto;"></p>
 
 <p>각각의 입력 또는 출력은 몇몇의 <strong>채널</strong>으로 구성되어 있는데, 이는 특정한 오디오 레이아웃을 나타냅니다. <em>모노</em>, <em>스테레오</em>, <em>quad</em>, <em>5.1</em> 등등을 포함하는, 어떠한 별개의 채널 구조든 지원됩니다.</p>
 
 <p><img alt="입력과 출력 그리고 이 입력/출력 내부의 채널을 통해 연결하는 AudioNode의 능력을 보여줍니다." src="mdn.png"></p>
 
-<p>오디오 자원은 다양한 방법으로 얻어질 수 있습니다:</p>
+<p>오디오 소스는 다양한 방법으로 얻어질 수 있습니다:</p>
 
 <ul>
  <li>소리는 JavaScript에서 (oscillator처럼) 오디오 노드에 의해 직접적으로 생성될 수 있습니다.</li>
@@ -201,7 +201,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
   <tr>
    <td><code>2</code> <em>(Stereo)</em></td>
    <td><code>1</code> <em>(Mono)</em></td>
-   <td><em>스테레오에서 모노로 다운믹스</em>.<br>
+   <td><em>스테레오에서 모노로 다운믹스</em><br>
     양 출력 채널 (<code>L</code> 과 <code>R</code>)은 고유한 출력 채널 (<code>M</code>)을 생산하기 위해 동등하게 결합됩니다.<br>
     <code>output.M = 0.5 * (input.L + input.R)</code></td>
   </tr>
@@ -230,14 +230,14 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
   <tr>
    <td><code>4</code> <em>(Quad)</em></td>
    <td><code>1</code> <em>(Mono)</em></td>
-   <td><em>quad에서 모노로 다운믹스</em>.<br>
+   <td><em>quad에서 모노로 다운믹스</em><br>
     모든 네 개의 입력 채널 (<code>L</code>, <code>R</code>, <code>SL</code>, and <code>SR</code>) 이 고유한 출력 채널 (<code>M</code>)을 생산하기 위해 동등하게 결합됩니다.<br>
     <code>output.M = 0.25 * (input.L + input.R + </code><code>input.SL + input.SR</code><code>)</code></td>
   </tr>
   <tr>
    <td><code>4</code> <em>(Quad)</em></td>
    <td><code>2</code> <em>(Stereo)</em></td>
-   <td><em>quad에서 스테레오로 다운믹스</em>.<br>
+   <td><em>quad에서 스테레오로 다운믹스</em><br>
     왼쪽 입력 채널 (<code>L</code> 과 <code>SL</code>) 둘 다 고유한 왼쪽 출력 채널 (<code>L</code>)을 생산하기 위해 동등하게 결합됩니다. 그리고 유사하게, 오른쪽 입력 채널 (<code>R</code> 과 <code>SR</code>) 둘 다 고유한 오른쪽 출력 채널을 생산하기 위해 동등하게 결합됩니다.<br>
     <code>output.L = 0.5 * (input.L + input.SL</code><code>)</code><br>
     <code>output.R = 0.5 * (input.R + input.SR</code><code>)</code></td>
@@ -320,7 +320,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 </dl>
 
 <div class="note">
-<p><strong>노트</strong>: 더 많은 정보를 보시려면, <a href="/ko/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Web Audio API로 시각화</a> 문서를 참조하세요.</p>
+<p><strong>노트</strong>: 더 많은 정보를 보시려면, <a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Web Audio API로 시각화</a> 문서를 참조하세요.</p>
 </div>
 
 <h2 id="Spatialisations">공간화</h2>
@@ -328,7 +328,7 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 <div>
 <p>(Web Audio API의 {{domxref("PannerNode")}} 와 {{domxref("AudioListener")}} 노드에 의해 다뤄지는) 오디오 공간화는 공간의 어떤 점에서의 오디오 신호의 위치와 행동을 나타내고(model), 청자(listener)가 그 오디오를 들을 수 있게 허용합니다.</p>
 
-<p>panner의 위치는 right-hand 데카르트 좌표 (Cartesian coordinate)로 기술됩니다; 이것의 움직임은 도플러 효과를 생성하는데 필수적인 속도 벡터를 사용하고, 이것의 방향성(directionality)은 방향성 원뿔을 사용합니다. 이 원뿔은 아주 클 수 있는데, 예를 들자면 전방향의 자원(omnidirectional source)에 대한 것일 수 있습니다.</p>
+<p>panner의 위치는 right-hand 데카르트 좌표 (Cartesian coordinate)로 기술됩니다; 이것의 움직임은 도플러 효과를 생성하는데 필수적인 속도 벡터를 사용하고, 이것의 방향성(directionality)은 방향성 원뿔을 사용합니다. 이 원뿔은 아주 클 수 있는데, 예를 들자면 전방향의 소스(omnidirectional source)에 대한 것일 수 있습니다.</p>
 </div>
 
 <p><img alt="PannerNode는 공간 위치와 속도와 주어진 신호에 대한 방향성을 제공합니다." src="pannernode_en.svg"></p>
@@ -340,16 +340,16 @@ var buffer = context.createBuffer(1, 22050, 22050);</pre>
 <p><img alt="AudioListener의 위와 앞의 벡터 위치를 보고 있는데, 위와 앞 벡터는 서로 90°에 있습니다." src="webaudiolistenerreduced.png"></p>
 
 <div class="note">
-<p><strong>노트</strong>: 더 많은 정보를 보시려면, <a href="/ko/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web audio 공간화 기본</a> 문서를 참조하세요.</p>
+<p><strong>노트</strong>: 더 많은 정보를 보시려면, <a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web audio 공간화 기본</a> 문서를 참조하세요.</p>
 </div>
 
 <h2 id="Fan-in_and_Fan-out">팬 인(fan-in)과 팬 아웃(fan-out)</h2>
 
 <p>
-오디오 용어에서, <strong>fan-in</strong>은 {{domxref("ChannelMergerNode")}}가 일련의 모노 입력 자원을 취하고 단일의 다수 채널 신호를 출력하는 과정을 설명합니다:</p>
+오디오 용어에서, <strong>팬 인</strong>은 {{domxref("ChannelMergerNode")}}가 일련의 모노 입력 소스를 취하고 단일의 다수 채널 신호를 출력하는 과정을 설명합니다:</p>
 
 <p><img alt="" src="fanin.svg"></p>
 
-<p><strong>Fan-out</strong>은 반대 과정을 설명하는데, {{domxref("ChannelSplitterNode")}}가 다수 채널 입력 자원을 취하고 다수의 모노 출력 신호를 출력합니다.</p>
+<p><strong>팬 아웃</strong>은 반대 과정을 설명하는데, {{domxref("ChannelSplitterNode")}}가 다수 채널 입력 소스를 취하고 다수의 모노 출력 신호를 출력합니다.</p>
 
 <p><img alt="" src="fanout.svg"></p>
