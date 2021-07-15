@@ -1,50 +1,44 @@
 ---
-title: 더하기 (+)
-slug: Web/JavaScript/Reference/Operators/Addition
+title: 곱하기 (*)
+slug: Web/JavaScript/Reference/Operators/Multiplication
 tags:
   - JavaScript
   - Language feature
   - Operator
   - Reference
-browser-compat: javascript.operators.addition
-translation_of: Web/JavaScript/Reference/Operators/Addition
+browser-compat: javascript.operators.multiplication
+translation_of: Web/JavaScript/Reference/Operators/Multiplication
 ---
 
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>더하기 연산자(<code>+</code>)는 숫자 피연산자의 합을 구하거나, 문자열을 서로 연결합니다.</p>
+<p>곱하기 연산자(<code>*</code>)는 두 연산자의 곱을 구합니다.</p>
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}</div>
+<div>{{EmbedInteractiveExample("pages/js/expressions-multiplication.html")}}</div>
 
 <h2 id="syntax">구문</h2>
 
-<pre class="brush: js">x + y</pre>
+<pre class="brush: js">x * y</pre>
 
 <h2 id="examples">예제</h2>
 
-<h3 id="numeric_addition">덧셈</h3>
+<h3 id="multiplication_using_numbers">곱셈</h3>
 
 <pre class="brush: js">
-// Number + Number -&gt; 덧셈
-1 + 2 // 3
-  
-// Boolean + Number -&gt; 덧셈
-true + 1 // 2
+ 2 * 2     // 4
+-2 * 2     // -4
+</pre>
 
-// Boolean + Boolean -&gt; 덧셈
-false + false // 0</pre>
-
-<h3 id="string_concatenation">문자열 연결</h3>
+<h3 id="multiplication_with_Infinity">Infinity 곱하기</h3>
 
 <pre class="brush: js">
-// String + String -&gt; 연결
-'foo' + 'bar' // "foobar"
+Infinity * 0         // NaN
+Infinity * Infinity  // Infinity
+</pre>
 
-// Number + String -&gt; 연결
-5 + 'foo' // "5foo"
+<h3 id="multiplication_with_non-numbers">숫자가 아닌 경우</h3>
 
-// String + Boolean -&gt; 연결
-'foo' + false // "foofalse"</pre>
+<pre class="brush: js">'foo' * 2 // NaN</pre>
 
 <h2 id="specifications">명세</h2>
 
@@ -57,13 +51,11 @@ false + false // 0</pre>
 <h2 id="see_also">같이 보기</h2>
 
 <ul>
+  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Addition">더하기 연산자</a></li>
   <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Subtraction">빼기 연산자</a></li>
   <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Division">나누기 연산자</a></li>
-  <li><a
-      href="/ko/docs/Web/JavaScript/Reference/Operators/Multiplication">곱하기 연산자</a></li>
   <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Remainder">나머지 연산자</a></li>
-  <li><a
-      href="/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation">거듭제곱 연산자</a></li>
+  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation">거듭제곱 연산자</a></li>
   <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Increment">증가 연산자</a></li>
   <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Decrement">감소 연산자</a></li>
   <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Unary_negation">단항 부정 연산자</a></li>
