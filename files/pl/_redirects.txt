@@ -1465,7 +1465,6 @@
 /pl/docs/Narzędzia/Page_Inspector/How_to	/pl/docs/Tools/Page_Inspector/How_to
 /pl/docs/Narzędzia/Page_Inspector/How_to/Open_the_Inspector	/pl/docs/Tools/Page_Inspector/How_to/Open_the_Inspector
 /pl/docs/Narzędzia/Page_Inspector/Przewodnik_przez_UI	/pl/docs/Tools/Page_Inspector/UI_Tour
-/pl/docs/Narzędzia/Performance	/pl/docs/Tools/Performance
 /pl/docs/Narzędzia/Walidatory	/pl/docs/Tools/Validators
 /pl/docs/Narzędzia/about:debugging	/pl/docs/Tools/about:debugging
 /pl/docs/Narzędzia:Walidatory	/pl/docs/Tools/Validators
@@ -1663,7 +1662,6 @@
 /pl/docs/Web/CSS/@-moz-document	/pl/docs/Web/CSS/@document
 /pl/docs/Web/CSS/CSS_Colors	/pl/docs/Web/CSS/CSS_Color
 /pl/docs/Web/CSS/CSS_Colors/Narzedzie_doboru_kolorow	/pl/docs/Web/CSS/CSS_Colors/Color_picker_tool
-/pl/docs/Web/CSS/CSS_Grid_Layout/Realizacja_typowych_ukladow_za_pomoca_ukladu_siatki_CSS	/pl/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
 /pl/docs/Web/CSS/CSS_Reference	/pl/docs/Web/CSS/Reference
 /pl/docs/Web/CSS/CSS_Reference/Rozszerzenia_Mozilli	/pl/docs/Web/CSS/Mozilla_Extensions
 /pl/docs/Web/CSS/CSS_Selectors/Użycie_pseudoklasy_:target_w_selektorach	/pl/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
