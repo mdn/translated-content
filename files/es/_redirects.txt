@@ -73,7 +73,6 @@
 /es/docs/CSS/border-image	/es/docs/Web/CSS/border-image
 /es/docs/CSS/border-left	/es/docs/Web/CSS/border-left
 /es/docs/CSS/border-left-color	/es/docs/Web/CSS/border-left-color
-/es/docs/CSS/border-radius	/es/docs/Web/CSS/border-radius
 /es/docs/CSS/border-spacing	/es/docs/Web/CSS/border-spacing
 /es/docs/CSS/border-style	/es/docs/Web/CSS/border-style
 /es/docs/CSS/border-width	/es/docs/Web/CSS/border-width
@@ -401,7 +400,6 @@
 /es/docs/Dibujar_texto_usando_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /es/docs/DragDrop/Drag_and_Drop	/es/docs/Web/API/HTML_Drag_and_Drop_API
 /es/docs/DragDrop/Drag_and_Drop/drag_and_drop_archivo	/es/docs/Web/API/HTML_Drag_and_Drop_API/File_drag_and_drop
-/es/docs/DragDrop/Recommended_Drag_Types	/es/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types
 /es/docs/Drawing_text_using_a_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Drawing_text
 /es/docs/EXSLT	/es/docs/Web/EXSLT
 /es/docs/EXSLT/exsl	/es/docs/Web/EXSLT/exsl
@@ -465,7 +463,6 @@
 /es/docs/FUEL:Window	/es/docs/FUEL/Window
 /es/docs/Firefox_1.5	/es/docs/Mozilla/Firefox/Releases/1.5
 /es/docs/Firefox_1.5_para_Desarrolladores	/es/docs/Mozilla/Firefox/Releases/1.5
-/es/docs/Firefox_19_para_desarrolladores	/es/docs/Mozilla/Firefox/Releases/19
 /es/docs/Firefox_2	/es/docs/Mozilla/Firefox/Releases/2
 /es/docs/Firefox_2_para_desarrolladores	/es/docs/Mozilla/Firefox/Releases/2
 /es/docs/Firefox_3.1_para_desarrolladores	/es/docs/Mozilla/Firefox/Releases/3.5
@@ -1026,7 +1023,6 @@
 /es/docs/JavaScript/Referencia/Funciones_globales/decodeURI	/es/docs/Web/JavaScript/Reference/Global_Objects/decodeURI
 /es/docs/JavaScript/Referencia/Funciones_globales/decodeURIComponent	/es/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 /es/docs/JavaScript/Referencia/Funciones_globales/encodeURI	/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURI
-/es/docs/JavaScript/Referencia/Funciones_globales/encodeURIComponent	/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 /es/docs/JavaScript/Referencia/Funciones_globales/eval	/es/docs/Web/JavaScript/Reference/Global_Objects/eval
 /es/docs/JavaScript/Referencia/Funciones_globales/isFinite	/es/docs/Web/JavaScript/Reference/Global_Objects/isFinite
 /es/docs/JavaScript/Referencia/Funciones_globales/isNaN	/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN
@@ -1202,7 +1198,6 @@
 /es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos	/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files
 /es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form	/es/docs/Learn/Forms/How_to_structure_a_web_form
 /es/docs/Learn/HTML/Forms/My_first_HTML_form	/es/docs/Learn/Forms/Your_first_form
-/es/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_controls	/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls
 /es/docs/Learn/HTML/Forms/Prueba_tus_habilidades:_Otros_controles	/es/docs/Learn/Forms/Test_your_skills:_Other_controls
 /es/docs/Learn/HTML/Forms/Prueba_tus_habilidades:_controles_HTML5	/es/docs/Learn/Forms/Test_your_skills:_HTML5_controls
 /es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data	/es/docs/Learn/Forms/Sending_and_retrieving_form_data
@@ -1239,8 +1234,6 @@
 /es/docs/Learn/Herramientas_y_pruebas/Understanding_client-side_tools	/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools
 /es/docs/Learn/JavaScript/Building_blocks/Bucle_codigo	/es/docs/Learn/JavaScript/Building_blocks/Looping_code
 /es/docs/Learn/JavaScript/Building_blocks/Construyendo_tu_propia_funcion	/es/docs/Learn/JavaScript/Building_blocks/Build_your_own_function
-/es/docs/Learn/JavaScript/Building_blocks/Eventos	/es/docs/Learn/JavaScript/Building_blocks/Events
-/es/docs/Learn/JavaScript/Building_blocks/Galeria_de_imagenes	/es/docs/Learn/JavaScript/Building_blocks/Image_gallery
 /es/docs/Learn/JavaScript/Client-side_web_APIs/Introducción	/es/docs/Learn/JavaScript/Client-side_web_APIs/Introduction
 /es/docs/Learn/JavaScript/First_steps/Generador_de_historias_absurdas	/es/docs/Learn/JavaScript/First_steps/Silly_story_generator
 /es/docs/Learn/JavaScript/First_steps/Matemáticas	/es/docs/Learn/JavaScript/First_steps/Math
@@ -1330,7 +1323,6 @@
 /es/docs/Referencia_de_JavaScript_1.5/Funciones_globales/decodeURI	/es/docs/Web/JavaScript/Reference/Global_Objects/decodeURI
 /es/docs/Referencia_de_JavaScript_1.5/Funciones_globales/decodeURIComponent	/es/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 /es/docs/Referencia_de_JavaScript_1.5/Funciones_globales/encodeURI	/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURI
-/es/docs/Referencia_de_JavaScript_1.5/Funciones_globales/encodeURIComponent	/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 /es/docs/Referencia_de_JavaScript_1.5/Funciones_globales/eval	/es/docs/Web/JavaScript/Reference/Global_Objects/eval
 /es/docs/Referencia_de_JavaScript_1.5/Funciones_globales/isFinite	/es/docs/Web/JavaScript/Reference/Global_Objects/isFinite
 /es/docs/Referencia_de_JavaScript_1.5/Funciones_globales/isNaN	/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN
@@ -1459,7 +1451,6 @@
 /es/docs/Referencia_de_JavaScript_1.5:Funciones_globales:decodeURI	/es/docs/Web/JavaScript/Reference/Global_Objects/decodeURI
 /es/docs/Referencia_de_JavaScript_1.5:Funciones_globales:decodeURIComponent	/es/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 /es/docs/Referencia_de_JavaScript_1.5:Funciones_globales:encodeURI	/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURI
-/es/docs/Referencia_de_JavaScript_1.5:Funciones_globales:encodeURIComponent	/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 /es/docs/Referencia_de_JavaScript_1.5:Funciones_globales:eval	/es/docs/Web/JavaScript/Reference/Global_Objects/eval
 /es/docs/Referencia_de_JavaScript_1.5:Funciones_globales:isFinite	/es/docs/Web/JavaScript/Reference/Global_Objects/isFinite
 /es/docs/Referencia_de_JavaScript_1.5:Funciones_globales:isNaN	/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN
@@ -1791,7 +1782,6 @@
 /es/docs/Web/CSS/transform-function/translateY	/es/docs/Web/CSS/transform-function/translateY()
 /es/docs/Web/CSS/transform-function/translateZ	/es/docs/Web/CSS/transform-function/translateZ()
 /es/docs/Web/CSS/var	/es/docs/Web/CSS/var()
-/es/docs/Web/Events/DOMContentLoaded	/es/docs/Web/API/Window/DOMContentLoaded_event
 /es/docs/Web/Events/animationend	/es/docs/Web/API/HTMLElement/animationend_event
 /es/docs/Web/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Events/blur	/es/docs/Web/API/Element/blur_event
@@ -1816,14 +1806,12 @@
 /es/docs/Web/Guide/AJAX/Primeros_Pasos	/es/docs/Web/Guide/AJAX/Getting_Started
 /es/docs/Web/Guide/API/Vibration	/es/docs/Web/API/Vibration_API
 /es/docs/Web/Guide/CSS	/es/docs/Learn/CSS
-/es/docs/Web/Guide/CSS/probando_media_queries	/es/docs/Web/CSS/Media_Queries/Testing_media_queries
 /es/docs/Web/Guide/HTML	/es/docs/Learn/HTML
 /es/docs/Web/Guide/HTML/Canvas_tutorial	/es/docs/Web/API/Canvas_API/Tutorial
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Advanced_animations	/es/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations	/es/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Basic_usage	/es/docs/Web/API/Canvas_API/Tutorial/Basic_usage
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Dibujando_formas	/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
-/es/docs/Web/Guide/HTML/Canvas_tutorial/Hit_regions_and_accessibility	/es/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /es/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form	/es/docs/Learn/Forms/How_to_structure_a_web_form
@@ -1837,7 +1825,6 @@
 /es/docs/Web/Guide/Usando_Objetos_FormData	/es/docs/Web/API/FormData/Using_FormData_Objects
 /es/docs/Web/HTML/Atributos	/es/docs/Web/HTML/Attributes
 /es/docs/Web/HTML/Atributos/accept	/es/docs/Web/HTML/Attributes/accept
-/es/docs/Web/HTML/Atributos/autocomplete	/es/docs/Web/HTML/Attributes/autocomplete
 /es/docs/Web/HTML/Atributos/min	/es/docs/Web/HTML/Attributes/min
 /es/docs/Web/HTML/Atributos/minlength	/es/docs/Web/HTML/Attributes/minlength
 /es/docs/Web/HTML/Atributos/multiple	/es/docs/Web/HTML/Attributes/multiple
@@ -1873,7 +1860,6 @@
 /es/docs/Web/HTML/Elemento/Audio2	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Elemento/Elementos_títulos	/es/docs/Web/HTML/Element/Heading_Elements
 /es/docs/Web/HTML/Elemento/Progreso	/es/docs/Web/HTML/Element/progress
-/es/docs/Web/HTML/Elemento/Shadow	/es/docs/Web/HTML/Element/shadow
 /es/docs/Web/HTML/Elemento/a	/es/docs/Web/HTML/Element/a
 /es/docs/Web/HTML/Elemento/abbr	/es/docs/Web/HTML/Element/abbr
 /es/docs/Web/HTML/Elemento/acronym	/es/docs/Web/HTML/Element/acronym
@@ -2173,7 +2159,6 @@
 /es/docs/Web/JavaScript/Referencia/Funciones_globales/decodeURI	/es/docs/Web/JavaScript/Reference/Global_Objects/decodeURI
 /es/docs/Web/JavaScript/Referencia/Funciones_globales/decodeURIComponent	/es/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 /es/docs/Web/JavaScript/Referencia/Funciones_globales/encodeURI	/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURI
-/es/docs/Web/JavaScript/Referencia/Funciones_globales/encodeURIComponent	/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 /es/docs/Web/JavaScript/Referencia/Funciones_globales/isFinite	/es/docs/Web/JavaScript/Reference/Global_Objects/isFinite
 /es/docs/Web/JavaScript/Referencia/Funciones_globales/isNaN	/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN
 /es/docs/Web/JavaScript/Referencia/Funciones_globales/parseInt	/es/docs/Web/JavaScript/Reference/Global_Objects/parseInt
@@ -2480,7 +2465,6 @@
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/decodeURI	/es/docs/Web/JavaScript/Reference/Global_Objects/decodeURI
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/decodeURIComponent	/es/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/encodeURI	/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURI
-/es/docs/Web/JavaScript/Referencia/Objetos_globales/encodeURIComponent	/es/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/escape	/es/docs/Web/JavaScript/Reference/Global_Objects/escape
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/eval	/es/docs/Web/JavaScript/Reference/Global_Objects/eval
 /es/docs/Web/JavaScript/Referencia/Objetos_globales/isFinite	/es/docs/Web/JavaScript/Reference/Global_Objects/isFinite
@@ -2563,7 +2547,6 @@
 /es/docs/Web/JavaScript/Referencia/Sentencias/try...catch	/es/docs/Web/JavaScript/Reference/Statements/try...catch
 /es/docs/Web/JavaScript/Referencia/Sentencias/var	/es/docs/Web/JavaScript/Reference/Statements/var
 /es/docs/Web/JavaScript/Referencia/Sentencias/while	/es/docs/Web/JavaScript/Reference/Statements/while
-/es/docs/Web/JavaScript/Referencia/Sentencias/with	/es/docs/Web/JavaScript/Reference/Statements/with
 /es/docs/Web/JavaScript/Referencia/template_strings	/es/docs/Web/JavaScript/Reference/Template_literals
 /es/docs/Web/JavaScript/Una_nueva_introducción_a_JavaScript	/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /es/docs/Web/JavaScript/Una_re-introducción_a_JavaScript	/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript
@@ -2574,7 +2557,6 @@
 /es/docs/Web/Performance/mejorando_rendimienot_inicial	/es/docs/Web/Performance/Optimizing_startup_performance
 /es/docs/Web/Progressive_web_apps/Developer_guide/Instalar	/es/docs/Web/Progressive_web_apps/Developer_guide/Installing
 /es/docs/Web/Reference/Events	/es/docs/Web/Events
-/es/docs/Web/Reference/Events/DOMContentLoaded	/es/docs/Web/API/Window/DOMContentLoaded_event
 /es/docs/Web/Reference/Events/DOMSubtreeModified	/es/docs/Web/Events/DOMSubtreeModified
 /es/docs/Web/Reference/Events/animationend	/es/docs/Web/API/HTMLElement/animationend_event
 /es/docs/Web/Reference/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
@@ -2641,7 +2623,6 @@
 /es/docs/Web/XSLT/key	/es/docs/Web/XSLT/Element/key
 /es/docs/Web/XSLT/message	/es/docs/Web/XSLT/Element/message
 /es/docs/Web/XSLT/namespace-alias	/es/docs/Web/XSLT/Element/namespace-alias
-/es/docs/Web/XSLT/number	/es/docs/Web/XSLT/Element/number
 /es/docs/Web/XSLT/otherwise	/es/docs/Web/XSLT/Element/otherwise
 /es/docs/Web/XSLT/when	/es/docs/Web/XSLT/Element/when
 /es/docs/Web/XSLT/with-param	/es/docs/Web/XSLT/Element/with-param
@@ -2724,7 +2705,6 @@
 /es/docs/XSLT/key	/es/docs/Web/XSLT/Element/key
 /es/docs/XSLT/message	/es/docs/Web/XSLT/Element/message
 /es/docs/XSLT/namespace-alias	/es/docs/Web/XSLT/Element/namespace-alias
-/es/docs/XSLT/number	/es/docs/Web/XSLT/Element/number
 /es/docs/XSLT/otherwise	/es/docs/Web/XSLT/Element/otherwise
 /es/docs/XSLT/when	/es/docs/Web/XSLT/Element/when
 /es/docs/XSLT/with-param	/es/docs/Web/XSLT/Element/with-param
@@ -2748,7 +2728,6 @@
 /es/docs/XSLT:key	/es/docs/Web/XSLT/Element/key
 /es/docs/XSLT:message	/es/docs/Web/XSLT/Element/message
 /es/docs/XSLT:namespace-alias	/es/docs/Web/XSLT/Element/namespace-alias
-/es/docs/XSLT:number	/es/docs/Web/XSLT/Element/number
 /es/docs/XSLT:otherwise	/es/docs/Web/XSLT/Element/otherwise
 /es/docs/XSLT:when	/es/docs/Web/XSLT/Element/when
 /es/docs/XSLT:with-param	/es/docs/Web/XSLT/Element/with-param
