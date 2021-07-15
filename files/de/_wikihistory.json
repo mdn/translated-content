@@ -1433,12 +1433,6 @@
       "Strubinator"
     ]
   },
-  "Learn/JavaScript/First_steps/Useful_string_methods": {
-    "modified": "2020-07-16T22:30:45.510Z",
-    "contributors": [
-      "Mugges"
-    ]
-  },
   "Learn/JavaScript/First_steps/What_is_JavaScript": {
     "modified": "2020-09-29T09:38:57.543Z",
     "contributors": [
@@ -1611,15 +1605,6 @@
       "clone"
     ]
   },
-  "MDN/Guidelines": {
-    "modified": "2020-09-30T15:28:44.297Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Jeremie",
-      "Sheppy"
-    ]
-  },
   "MDN/Structures": {
     "modified": "2020-09-30T09:04:48.225Z",
     "contributors": [
@@ -1627,15 +1612,6 @@
       "wbamberg",
       "SphinxKnight",
       "hartmann2012"
-    ]
-  },
-  "MDN/Structures/Compatibility_tables": {
-    "modified": "2020-10-15T22:06:38.248Z",
-    "contributors": [
-      "chrisdavidmills",
-      "thunderhook",
-      "wbamberg",
-      "jogemu"
     ]
   },
   "MDN/Tools": {
@@ -1724,9 +1700,6 @@
       "nw520",
       "matschibatschi"
     ]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/browserAction": {
-    "modified": "2020-10-15T22:26:32.419Z"
   },
   "Mozilla/Add-ons/WebExtensions/API/commands": {
     "modified": "2020-10-15T22:08:08.658Z",
@@ -1857,14 +1830,6 @@
       "fscholz",
       "-=Renegade=-",
       "Doozer"
-    ]
-  },
-  "Mozilla/Firefox/Releases/16": {
-    "modified": "2019-03-23T23:24:48.916Z",
-    "contributors": [
-      "wbamberg",
-      "mrstork",
-      "Micky261"
     ]
   },
   "Mozilla/Firefox/Releases/27": {
@@ -4268,12 +4233,6 @@
       "paul_thomann"
     ]
   },
-  "Web/API/XMLHttpRequest/Using_XMLHttpRequest": {
-    "modified": "2020-10-15T22:34:13.485Z",
-    "contributors": [
-      "Mellbabe"
-    ]
-  },
   "Web/API/notification": {
     "modified": "2019-03-23T22:55:22.604Z",
     "contributors": [
@@ -4337,9 +4296,6 @@
     "contributors": [
       "eminor"
     ]
-  },
-  "Web/Accessibility/Understanding_WCAG": {
-    "modified": "2020-01-27T09:01:40.600Z"
   },
   "Web/CSS": {
     "modified": "2020-12-03T15:50:42.872Z",
@@ -7733,18 +7689,6 @@
       "Timmi"
     ]
   },
-  "Web/HTML/Attributes": {
-    "modified": "2020-08-17T16:24:34.561Z",
-    "contributors": [
-      "Gitti039",
-      "steemit-halloworld",
-      "lkreimann",
-      "schlagi123",
-      "LazerPhil",
-      "Anonymous",
-      "StevenS77"
-    ]
-  },
   "Web/HTML/Block-level_elements": {
     "modified": "2020-05-07T06:16:30.382Z",
     "contributors": [
@@ -8759,12 +8703,6 @@
     "modified": "2020-10-15T21:58:46.872Z",
     "contributors": [
       "timmyRS"
-    ]
-  },
-  "Web/HTTP/Headers/Set-Cookie": {
-    "modified": "2020-12-03T07:50:32.705Z",
-    "contributors": [
-      "hamishwillee"
     ]
   },
   "Web/HTTP/Headers/Tk": {
@@ -11912,14 +11850,6 @@
       "fmsy",
       "BurnerPat",
       "Hendrikto"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Object/defineProperty": {
-    "modified": "2019-07-01T07:52:37.430Z",
-    "contributors": [
-      "JanSchuermannPH",
-      "Univream",
-      "tvormweg"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Object/entries": {
