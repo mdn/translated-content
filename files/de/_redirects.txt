@@ -389,15 +389,11 @@
 /de/docs/Learn/JavaScript/First_steps/lustige_geschichten_generator	/de/docs/Learn/JavaScript/First_steps/Silly_story_generator
 /de/docs/Learn/Server-side/Erste_Schritte	/de/docs/Learn/Server-side/First_steps
 /de/docs/Lokalisierung	/de/docs/Glossary/Localization
-/de/docs/MDN/Contribute/Content	/de/docs/MDN/Guidelines
-/de/docs/MDN/Contribute/Guidelines	/de/docs/MDN/Guidelines
 /de/docs/MDN/Contribute/Structures	/de/docs/MDN/Structures
-/de/docs/MDN/Contribute/Structures/Kompatibilitaets_Tabellen	/de/docs/MDN/Structures/Compatibility_tables
 /de/docs/MDN/Erste_Schritte	/de/docs/MDN/Contribute/Getting_started
 /de/docs/MDN/Feedback	/de/docs/MDN/Contribute/Feedback
 /de/docs/MDN/Kuma	/de/docs/MDN/Yari
 /de/docs/MDN/Kuma/Beheben_von_KumaScript_Fehlern	/de/docs/MDN/Tools/KumaScript/Troubleshooting
-/de/docs/MDN/Structures/Kompatibilitaets_Tabellen	/de/docs/MDN/Structures/Compatibility_tables
 /de/docs/MDN/nutzer_leitfaden	/de/docs/MDN/Tools
 /de/docs/MDN/Über	/de/docs/MDN/About
 /de/docs/MDN_at_ten	/de/docs/MDN/At_ten
