@@ -871,18 +871,11 @@ for (var i = 0, j = 9; i &lt;= j; i++, j--);
 delete object.property;
 delete object[propertyKey];
 delete objectName[index];
-delete property; // with문 안에서만 유효함
 </pre>
 
 <p>
   위의 구문에서, <code>objectName</code>은 객체의 이름이고, <code>property</code>는 객체에 존재하는 속성,
   <code>propertyKey</code>는 존재하는 속성을 가리키는 문자열이나 심볼입니다.
-</p>
-
-<p>
-  네 번째 형태의 경우에는, 전역 객체의 속성을 삭제하는 것이 아니라면
-  <code><a href="/ko/docs/Web/JavaScript/Reference/Statements/with">with</a></code>
-  명령문이 있어야만 유효합니다.
 </p>
 
 <p>
@@ -892,13 +885,9 @@ delete property; // with문 안에서만 유효함
 </p>
 
 <pre class="brush: js">
-x = 42;             // 암시적으로 window에 속성 x를 생성
-var y = 43;
-var myobj = {h: 4}; // 속성 h를 가진 객체를 생성
-
-delete x;           // false 반환 (암시적으로 생성한 경우 삭제 불가)
-delete y;           // false 반환 (var로 선언한 경우 삭제 불가)
 delete Math.PI;     // false 반환 (설정 불가한 속성 삭제 불가)
+
+var myobj = {h: 4};
 delete myobj.h;     // true 반환 (사용자 정의 속성 삭제 가능)
 </pre>
 
