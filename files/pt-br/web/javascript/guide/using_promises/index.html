@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Guide/Usando_promises
 ---
 <div>{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}</div>
 
-<p class="summary">Uma {{jsxref("Promise")}} é um objeto que representa a eventual conclusão ou falha de uma operação assincrona. Como a maioria das pessoas consomem promisses já criadas, este guia explicará o consumo de promisses devolvidas antes de explicar como criá-las.</p>
+<p class="summary">Uma {{jsxref("Promise")}} é um objeto que representa a eventual conclusão ou falha de uma operação assíncrona. Como a maioria das pessoas consomem promises já criadas, este guia explicará o consumo de promises devolvidas antes de explicar como criá-las.</p>
 
 <p>Essencialmente, uma promise é um objeto retornado para o qual você adiciona callbacks, em vez de passar callbacks para uma função.</p>
 
@@ -28,7 +28,7 @@ original_slug: Web/JavaScript/Guide/Usando_promises
 
 <span class="function token">doSomething</span><span class="punctuation token">(</span>successCallback<span class="punctuation token">,</span> failureCallback<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-<p>…funções modernas retornam uma promisse e então você pode adicionar seus callbacks:</p>
+<p>…funções modernas retornam uma promise e então você pode adicionar seus callbacks:</p>
 
 <pre class="brush: js line-numbers language-html language-js"><code class="language-js"><span class="keyword token">const</span> promise <span class="operator token">=</span> <span class="function token">doSomething</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 promise<span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>successCallback<span class="punctuation token">,</span> failureCallback<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
@@ -37,27 +37,27 @@ promise<span class="punctuation token">.</span><span class="function token">then
 
 <pre class="brush: js line-numbers language-html language-js"><code class="language-js"><span class="function token">doSomething</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">then</span><span class="punctuation token">(</span>successCallback<span class="punctuation token">,</span> failureCallback<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-<p>Nós chamamos isso de <em>chamada de função assincrona</em>. Essa convenção tem várias vantagens. Vamos explorar cada uma delas.</p>
+<p>Nós chamamos isso de <em>chamada de função assíncrona</em>. Essa convenção tem várias vantagens. Vamos explorar cada uma delas.</p>
 
 <h2 id="Garantias">Garantias</h2>
 
-<p>Ao contrário dos callbacks com retornos de funções old-style, uma promisse vem com algumas garantias:</p>
+<p>Ao contrário dos callbacks com retornos de funções old-style, uma promise vem com algumas garantias:</p>
 
 <ul>
  <li>Callbacks nunca serão chamados antes da <a href="/en-US/docs/Web/JavaScript/EventLoop#Run-to-completion">conclusão da execução atual</a> do loop de eventos do JavaScript. </li>
- <li>Callbacks adicionadas com .then mesmo <em>depois</em> do sucesso ou falha da operação assincrona, serão chamadas, como acima.</li>
+ <li>Callbacks adicionadas com .then mesmo <em>depois</em> do sucesso ou falha da operação assíncrona, serão chamadas, como acima.</li>
  <li>Multiplos callbacks podem ser adicionados chamando-se .then várias vezes, para serem executados independentemente da ordem de inserção.</li>
 </ul>
 
-<p>Mas o benefício mais imediato da promises é o encadeamento.</p>
+<p>Mas o benefício mais imediato das promises é o encadeamento.</p>
 
 
 
 <h2 id="Encadeamento">Encadeamento</h2>
 
-<p>Uma necessidade comum é executar duas ou mais operações assincronas consecutivas, onde cada operação subsequente começa quando a operação anterior é bem sucedida, com o resultado do passo anterior. Nós conseguimos isso criando uma <em>cadeia de promises</em>.</p>
+<p>Uma necessidade comum é executar duas ou mais operações assíncronas consecutivas, onde cada operação subsequente começa quando a operação anterior é bem sucedida, com o resultado do passo anterior. Nós conseguimos isso criando uma <em>cadeia de promises</em>.</p>
 
-<p>Aqui está a magica: a função <code>then</code> retorna uma nova promise, diferente da original:</p>
+<p>Aqui está a mágica: a função <code>then</code> retorna uma nova promise, diferente da original:</p>
 
 <pre class="brush: js">const promise = doSomething();
 const promise2 = promise.then(successCallback, failureCallback);
@@ -68,11 +68,11 @@ const promise2 = promise.then(successCallback, failureCallback);
 <pre class="brush: js">const promise2 = doSomething().then(successCallback, failureCallback);
 </pre>
 
-<p>Essa segunda promise representa a conclusão não apenas de <code>doSomething()</code>, mas também do <code>successCallback</code> ou <code>failureCallback</code> que você passou, que podem ser outras funções assincronas que retornam uma promise. Quando esse for o caso, quaisquer callbacks adicionados a <code>promise2</code> serão enfileiradas atrás da promise retornada por <code>successCallback</code> ou <code>failureCallback</code>.</p>
+<p>Essa segunda promise representa a conclusão não apenas de <code>doSomething()</code>, mas também do <code>successCallback</code> ou <code>failureCallback</code> que você passou, que podem ser outras funções assíncronas que retornam uma promise. Quando esse for o caso, quaisquer callbacks adicionados a <code>promise2</code> serão enfileiradas atrás da promise retornada por <code>successCallback</code> ou <code>failureCallback</code>.</p>
 
 <p>Basicamente, cada promise representa a completude de outro passo assíncrono na cadeia.</p>
 
-<p>Antigamente, realizar operações assíncronas comuns em uma linha levaria à clássica pirâmide da desgraça :</p>
+<p>Antigamente, realizar operações assíncronas comuns em uma linha levaria à clássica pirâmide da desgraça:</p>
 
 <pre class="brush: js">doSomething(function(result) {
   doSomethingElse(result, function(newResult) {
@@ -112,7 +112,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 <h3 id="Encadeando_depois_de_um_catch">Encadeando depois de um catch</h3>
 
-<p>É possivel encadear <em>depois </em>de uma falha, i.e um <code>catch</code>, isso é muito útil para realizar novas ações mesmo depois de uma falha no encadeamento. Leia o seguinte exemplo: </p>
+<p>É possivel encadear <em>depois </em>de uma falha, i.e um <code>catch</code>. Isso é muito útil para realizar novas ações mesmo depois de uma falha no encadeamento. Leia o seguinte exemplo: </p>
 
 <pre class="brush: js">new Promise((resolve, reject) =&gt; {
     console.log('Initial');
@@ -143,7 +143,7 @@ Do this whatever happened before
 
 <h2 id="Propagação_de_erros">Propagação de erros</h2>
 
-<p>Na pirâmide da desgraça vista anteriormente, você pode se lembrar de ter visto <code>failureCallback</code> três vezes, em comparação a uma única vez no fim da corrente de promessas:</p>
+<p>Na pirâmide da desgraça vista anteriormente, você pode se lembrar de ter visto <code>failureCallback</code> três vezes, em comparação a uma única vez no fim da corrente de promises:</p>
 
 <pre class="brush: js">doSomething()
 .then(result =&gt; doSomethingElse(result))
@@ -152,7 +152,7 @@ Do this whatever happened before
 .catch(failureCallback);
 </pre>
 
-<p>Basicamente, uma corrente de promessas para se houver uma exceção, procurando por catch handlers no lugar. Essa modelagem de código segue bastante a maneira de como o código síncrono funciona:</p>
+<p>Basicamente, uma corrente de promises para se houver uma exceção, procurando por catch handlers no lugar. Essa modelagem de código segue bastante a maneira de como o código síncrono funciona:</p>
 
 <pre class="brush: js">try {
   const result = syncDoSomething();
@@ -178,7 +178,7 @@ Do this whatever happened before
 }
 </pre>
 
-<p>É construído sobre promesas, por exemplo, <code>doSomething()</code> é a mesma função que antes. Leia mais sobre a sintaxe <a href="https://developers.google.com/web/fundamentals/getting-started/primers/async-functions">aqui</a>.</p>
+<p>É construído sobre promises, por exemplo, <code>doSomething()</code> é a mesma função que antes. Leia mais sobre a sintaxe <a href="https://developers.google.com/web/fundamentals/getting-started/primers/async-functions">aqui</a>.</p>
 
 <p>Por pegar todos os erros, até mesmo exceções jogadas(<em>thrown exceptions</em>) e erros de programação, as promises acabam por solucionar uma falha fundamental presente na pirâmide da desgraça dos callbacks. Essa característica é essencial para a composição funcional das operações assíncronas.</p>
 
@@ -186,27 +186,25 @@ Do this whatever happened before
 
 <p>Uma {{jsxref("Promise")}} pode ser criada do zero utilizando o seu construtor. Isto deve ser necessário apenas para o envolvimento de APIs antigas.</p>
 
-<p>Em um mundo ideal, todas as funções assincronas já retornariam promises. Infelizmente, algumas APIs ainda esperam que os retornos de suceso e/ou falha sejam passados da maneira antiga. O exemplo por excelência é o {{domxref("WindowTimers.setTimeout", "setTimeout()")}} function:</p>
+<p>Em um mundo ideal, todas as funções assíncronas já retornariam promises. Infelizmente, algumas APIs ainda esperam que os retornos de sucesso e/ou falha sejam passados da maneira antiga. O exemplo por excelência é o {{domxref("WindowTimers.setTimeout", "setTimeout()")}} function:</p>
 
 <pre class="brush: js">setTimeout(() =&gt; saySomething("10 seconds passed"), 10000);
 </pre>
 
-<p>Misturar chamadas de retorno e promeses de <em>old-style</em> é problemático. Se <code>saySomething</code> falhar ou contiver um erro de programação, nada o captura.</p>
+<p>Misturar chamadas de retorno e promises de <em>old-style</em> é problemático. Se <code>saySomething</code> falhar ou contiver um erro de programação, nada o captura.</p>
 
-<p>Por sorte nós podemos envolve-la em uma promise. É uma boa prática envolver funções problemáticas no menor nivel possível, e nunca chama-las diretamente de novo:</p>
+<p>Por sorte nós podemos envolvê-la em uma promise. É uma boa prática envolver funções problemáticas no menor nivel possível, e nunca chamá-las diretamente de novo:</p>
 
 <pre class="brush: js">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
 
 wait(10000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);
 </pre>
 
-<p>Basically, the promise constructor takes an executor function that lets us resolve or reject a promise manually. Since <code>setTimeout</code> doesn't really fail, we left out reject in this case.</p>
-
-<p>Basicamente, um construtor de promises pega uma função executora que nos deixa resolver ou rejeitar uma promise manualmente. Desde que <code>setTimeout</code> não venha a falhar, nos deixamos a rejeição de fora nesse caso</p>
+<p>Basicamente, um construtor de promises pega uma função executora que nos deixa resolver ou rejeitar uma promise manualmente. Desde que <code>setTimeout</code> não falhe, nós deixamos a rejeição de fora neste caso.</p>
 
 <h2 id="Composição">Composição</h2>
 
-<p>{{jsxref("Promise.resolve()")}} e {{jsxref("Promise.reject()")}} são atalhos para se criar manualmente uma promessa que já foi resolvida ou rejeitada, respectivamente. Isso pode ser útil em algumas situações.</p>
+<p>{{jsxref("Promise.resolve()")}} e {{jsxref("Promise.reject()")}} são atalhos para se criar manualmente uma promise que já foi resolvida ou rejeitada, respectivamente. Isso pode ser útil em algumas situações.</p>
 
 <p>{{jsxref("Promise.all()")}} e {{jsxref("Promise.race()")}} são duas ferramentas de composição para se executar operações assíncronas em paralelo.</p>
 
@@ -215,7 +213,7 @@ wait(10000).then(() =&gt; saySomething("10 seconds")).catch(failureCallback);
 <pre class="brush: js">[func1, func2].reduce((p, f) =&gt; p.then(f), Promise.resolve());
 </pre>
 
-<p>Basicamente reduzimos um vetor de funções assíncronas a uma cadeia de promessas equivalentes a: <code>Promise.resolve().then(func1).then(func2);</code></p>
+<p>Basicamente reduzimos um vetor de funções assíncronas a uma cadeia de promises equivalentes a: <code>Promise.resolve().then(func1).then(func2);</code></p>
 
 <p>Isso também pode ser feito com uma função de composição reutilizável, que é comum em programação funcional:</p>
 
@@ -224,13 +222,13 @@ const composeAsync = (...funcs) =&gt; x =&gt; funcs.reduce(applyAsync, Promise.r
 
 
 
-<p>A função composeAsync aceitará qualquer número de funções como argumentos e retornará uma nova função que aceita um valor incial a ser passado pelo pipeline de composição. Isso é benéfico porque alguma, ou todas as funções, podem ser assíncronas ou síncronas, e é garantido de que serão executadas na ordem correta.</p>
+<p>A função composeAsync aceitará qualquer número de funções como argumentos e retornará uma nova função que aceita um valor inicial a ser passado pelo pipeline de composição. Isso é benéfico porque alguma, ou todas as funções, podem ser assíncronas ou síncronas, e é garantido de que serão executadas na ordem correta.</p>
 
 <pre class="brush: js">const transformData = composeAsync(func1, asyncFunc1, asyncFunc2, func2);
 transformData(data);
 </pre>
 
-<p>No ECMAScript 2017, uma composição sequencial pode ser feita sde forma mais simples com async/await:</p>
+<p>No ECMAScript 2017, uma composição sequencial pode ser feita de forma mais simples com async/await:</p>
 
 <pre class="brush: js">for (const f of [func1, func2]) {
   await f();
@@ -239,15 +237,13 @@ transformData(data);
 
 <h2 id="Cronometragem">Cronometragem</h2>
 
-<p>Para evitar surpresas, funções passadas para <code>then</code> nunca serão chamadas sincronamente, mesmo com uma função ja resolvida:</p>
+<p>Para evitar surpresas, funções passadas para <code>then</code> nunca serão chamadas sincronamente, mesmo com uma função já resolvida:</p>
 
 <pre class="brush: js">Promise.resolve().then(() =&gt; console.log(2));
 console.log(1); // 1, 2
 </pre>
 
-<p>Instead of running immediately, the passed-in function is put on a microtask queue, which means it runs later when the queue is emptied at the end of the current run of the JavaScript event loop, i.e. pretty soon:</p>
-
-<p>Ao invés de rodar imediatamente, a função passada é colocada em uma micro tarefa, o que significa que ela roda depois que a fila estiver vazia no final do atual processo de evento de loop do Javascript, isto é muito em breve</p>
+<p>Ao invés de rodar imediatamente, a função passada é colocada em uma micro tarefa, o que significa que ela roda depois que a fila estiver vazia no final do atual processo de evento de loop do Javascript, ou seja: muito em breve:</p>
 
 <pre class="brush: js">const wait = ms =&gt; new Promise(resolve =&gt; setTimeout(resolve, ms));
 

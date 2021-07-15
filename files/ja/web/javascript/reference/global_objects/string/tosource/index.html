@@ -2,53 +2,54 @@
 title: String.prototype.toSource()
 slug: Web/JavaScript/Reference/Global_Objects/String/toSource
 tags:
-  - JavaScript
-  - Method
-  - Non-standard
-  - Prototype
-  - Reference
-  - String
+- JavaScript
+- Method
+- Non-standard
+- Obsolete
+- Prototype
+- Reference
+- String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+<div>{{JSRef}} {{deprecated_header}}</div>
 
 <p><strong><code>toSource()</code></strong> はそのオブジェクトのソースコードを表す文字列を返します。</p>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+<h2 id="Syntax">構文</h2>
 
-<pre class="syntaxbox"><code>String.toSource()
+<pre class="brush: js"><code>String.toSource()
 <var>str</var>.toSource()
 </code></pre>
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+<h3 id="Return_value">返値</h3>
 
 <p>呼び出し元のオブジェクトのソースコードを表す文字列です。</p>
 
-<h2 id="Description" name="Description">説明</h2>
+<h2 id="Examples">例</h2>
 
-<p><code>toSource()</code> メソッドは以下の値を返します。</p>
+<h3 id="Native_function">ネイティブ関数</h3>
 
-<p>組み込み {{jsxref("String")}} オブジェクトでは、<code>toSource()</code> はソースコードが存在しないことを示す以下の文字列を返します。</p>
+<p>組み込み {{jsxref("String")}} オブジェクトにおいては、<code>toSource()</code> はソースコードが利用不可能なことを示す以下の文字列を返します。</p>
 
 <pre class="brush: js">function String() {
-   [native code]
+    [native code]
 }
 </pre>
 
 <p>{{jsxref("String")}} オブジェクトのインスタンスや、文字列リテラルでは、<code>toSource()</code> はそのソースコードを表す文字列を返します。</p>
 
-<p>このメソッドは、通常、JavaScript によって内部的に呼ばれ、コード中で明示的に呼ばれることはありません。</p>
+<p>このメソッドは、通常、JavaScript によって内部的に呼び出され、コード中で明示的に呼び出されることはありません。</p>
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<p>あらゆる標準仕様に含まれません。JavaScript 1.3 で実装されています。</p>
+<p>どの標準にも含まれていません。 JavaScript 1.3 で実装されました。</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("javascript.builtins.String.toSource")}}</p>
 
-<h2 id="See_also" name="See_also">参照</h2>
+<h2 id="See_also">関連情報</h2>
 
-<p><a href="ja/Core_JavaScript_1.5_Reference/Global_Objects/Object/toSource">Object.prototype.toSource</a></p>
+<ul>
+  <li>{{jsxref("Object.prototype.toSource()")}}</li>
+</ul>

@@ -86,7 +86,7 @@ translation_of: Web/HTML/Element/img
   <dt><code>use-credentials</code></dt>
   <dd>一个有证书的跨域请求（比如，有 <code>Origin</code> HTTP header）被发送 （比如，cookie, 一份证书，或者 HTTP 基本验证信息）。如果服务器没有给源站发送证书（通过 <code>Access-Control-Allow-Credentials</code> HTTP header），图像将会被污染，且它的使用会受限制。</dd>
  </dl>
- 当用户并未显式使用本属性时，默认不使用 CORS 发起请求（例如，不会向服务器发送<code>原有的</code>HTTP 头部信息），可防止其在 {{HTMLElement('canvas')}} 中的使用。如果无效，默认当做 <code>anonymous</code> 关键字生效。更多信息，请查看 <a href="mailto:hamoda.alhayek@msn.com">CORS 属性设置</a> 。</dd>
+ 当用户并未显式使用本属性时，默认不使用 CORS 发起请求（例如，不会向服务器发送<code>原有的</code>HTTP 头部信息），可防止其在 {{HTMLElement('canvas')}} 中的使用。如果无效，默认当做 <code>anonymous</code> 关键字生效。更多信息，请查看 <a href="/zh-CN/docs/Web/HTML/Attributes/crossorigin">CORS 属性设置</a> 。</dd>
  <dt>{{htmlattrdef("decoding")}}</dt>
  <dd>
  <p>为浏览器提供图像解码方式上的提示。允许的值：</p>
@@ -243,7 +243,7 @@ translation_of: Web/HTML/Element/img
 
 <p>下面的示例将图像嵌入到页面中，且包含用于改善可访问性的备用文本。</p>
 
-<pre class="brush: html notranslate">&lt;img src="https://developer.mozilla.org/static/img/favicon144.png"
+<pre class="brush: html notranslate">&lt;img src="favicon144.png"
      alt="MDN logo"&gt;
 </pre>
 
@@ -254,7 +254,7 @@ translation_of: Web/HTML/Element/img
 <p>此示例建立在前一个示例的基础上，展示了如何将图像转换为链接。为做到这一点，将 <code>&lt;img&gt;</code> 标签嵌套在 {{HTMLElement("a")}} 之内。这时，备用文本应当描述链接所指向的资源，就像是文本链接一样。</p>
 
 <pre class="brush: html notranslate">&lt;a href="https://developer.mozilla.org"&gt;
-  &lt;img src="https://developer.mozilla.org/static/img/favicon144.png"
+  &lt;img src="favicon144.png"
        alt="Visit the MDN site"&gt;
 &lt;/a&gt;</pre>
 
@@ -264,9 +264,9 @@ translation_of: Web/HTML/Element/img
 
 <p>在这个例子中，我们包含了一个 <code>srcset</code> 属性，它引用了 MDN 标志高清版本；在高分辨率设备上，它将被优先加载，取代 <code>src</code> 属性中的图像。在支持 <code>srcset</code> 的{{glossary("User agent", "用户代理")}}中，<code>src</code> 属性中的图片被作为 <code>1x</code> 候选项。</p>
 
-<pre class="brush: html notranslate"> &lt;img src="https://developer.mozilla.org/static/img/favicon72.png"
+<pre class="brush: html notranslate"> &lt;img src="favicon72.png"
       alt="MDN logo"
-      srcset="https://developer.mozilla.org/static/img/favicon144.png 2x"&gt;</pre>
+      srcset="favicon144.png 2x"&gt;</pre>
 
 <p>{{EmbedLiveSample("Using_the_srcset_attribute", "100%", "160")}}</p>
 
@@ -274,16 +274,16 @@ translation_of: Web/HTML/Element/img
 
 <p>在支持 <code>srcset</code> 的用户代理中，当使用 <code>w</code> 描述符时，src 属性会被忽略。当匹配了媒体条件 <code>(min-width: 600px)</code> 时，图像将宽 200px，否则宽 50vw（视图宽度的50%）。</p>
 
-<pre class="brush: html notranslate"> &lt;img src="/files/16864/clock-demo-200px.png"
+<pre class="brush: html notranslate"> &lt;img src="clock-demo-200px.png"
       alt="Clock"
-      srcset="/files/16864/clock-demo-200px.png 200w,
-          /files/16797/clock-demo-400px.png 400w"
+      srcset="clock-demo-200px.png 200w,
+          clock-demo-400px.png 400w"
       sizes="(max-width: 600px) 200px, 50vw"&gt;</pre>
 
 <p>{{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}</p>
 
 <div class="blockIndicator note">
-<p>若要看到大小调整的效果，请<a href="https://mdn.mozillademos.org/en-US/docs/Web/HTML/Element/img$samples/Using_the_srcset_and_sizes_attributes">打开单独的页面查看示例</a>，以便拖动窗口，调整内容区域的大小。</p>
+<p>若要看到大小调整的效果，请{{LiveSampleLink('Using_the_srcset_and_sizes_attributes', '打开单独的页面查看示例')}}，以便拖动窗口，调整内容区域的大小。</p>
 </div>
 
 <h2 id="安全与隐私方面的考量">安全与隐私方面的考量</h2>

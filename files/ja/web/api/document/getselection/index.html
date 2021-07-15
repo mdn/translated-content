@@ -1,88 +1,66 @@
 ---
-title: DocumentOrShadowRoot.getSelection()
+title: Document.getSelection()
 slug: Web/API/Document/getSelection
 tags:
   - API
-  - DocumentOrShadowRoot
-  - Doument
+  - Document
   - Method
   - Reference
-  - ShadowRoot
   - getSelection
-  - getSelection()
-  - shadow dom
-translation_of: Web/API/DocumentOrShadowRoot/getSelection
+browser-compat: api.Document.getSelection
+translation_of: Web/API/Document/getSelection
 original_slug: Web/API/DocumentOrShadowRoot/getSelection
 ---
-<div>{{APIRef("DOM")}}{{SeeCompatTable}}</div>
+<div>{{APIRef("DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>getSelection()</code></strong> は {{DOMxRef("DocumentOrShadowRoot")}} インターフェイスのプロパティで、ユーザーが選択したテキストの範囲、またはキャレットの現在位置を表す {{DOMxRef("Selection")}} オブジェクトを返します。</span></p>
+<p><span class="seoSummary"><strong><code>getSelection()</code></strong> は {{DOMxRef("Document")}} インターフェイスのプロパティで、ユーザーが選択したテキストの範囲、またはキャレットの現在位置を表す {{DOMxRef("Selection")}} オブジェクトを返します。</span></p>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+<h2 id="Syntax">構文</h2>
 
-<pre class="syntaxbox">var selection = documentOrShadowRootInstance.getSelection()</pre>
+<pre class="brush: js">getSelection()</pre>
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+<h3 id="Parameters">引数</h3>
 
 <p>なし。</p>
 
-<h3 id="Returns" name="Returns">返値</h3>
+<h3 id="Returns">返値</h3>
 
 <p>{{DOMxRef("Selection")}} オブジェクト。</p>
 
-<h2 id="Example" name="Example">例</h2>
+<h2 id="Example">例</h2>
 
-<pre class="brush:js">function foo() {
-    var selObj = document.getSelection();
-    alert(selObj);
-    var selRange = selObj.getRangeAt(0);
-    // do stuff with the range
-}</pre>
+<h3 id="Getting_a_Selection_object">Selection オブジェクトを取得</h3>
 
-<h2 id="Notes" name="Notes">メモ</h2>
+<pre class="brush:js">
+let selection = document.getSelection();
+let selRange = selection.getRangeAt(0);
+// この範囲に対して何かをする
 
-<h3 id="String_representation_of_the_Selection_object" name="String_representation_of_the_Selection_object">Selection オブジェクトの文字列表現</h3>
+console.log(selection); // Selection オブジェクト
+</pre>
 
-<p>JavaScript では、オブジェクトが string を取る関数 ({{DOMxRef("Window.alert()")}} など) に渡された場合、オブジェクトの {{JSxRef("Object.toString", "toString()")}} メソッドが呼び出され、関数にその返値が渡されます。これにより、プロパティやメソッドを持つ実際のオブジェクトであった場合、他の関数に使われると文字列になって現れることがあります。</p>
+<h3 id="String_representation_of_the_Selection_object">Selection オブジェクトの文字列表現</h3>
 
-<p>上記の例では、 <code>selObj.toString()</code> が呼び出されてから {{DOMxRef("Window.alert()")}} に渡されます。しかし、 JavaScript の <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String" title="JS/String">String</a> のプロパティやメソッド、例えば <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/length" title="JS/String.length">length</a></code> や <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/String/substr" title="JS/String.substr">substr</a></code> が {{DOMxRef("Selection")}} オブジェクトに対して呼び出されると、そのプロパティやメソッドを持っていないため、エラーが発生するか予期しない結果が返ることがあります。 <code>Selection</code> オブジェクトを文字列として扱うには、 <code>toString()</code> メソッドを直接呼び出してください。</p>
+<p>JavaScript では、オブジェクトが文字列を取る関数 ({{DOMxRef("Window.alert()")}} など) に渡された場合、オブジェクトの {{JSxRef("Object.toString", "toString()")}} メソッドが呼び出され、関数にその返値が渡されます。これにより、プロパティやメソッドを持つ実際のオブジェクトであった場合、他の関数に使われると文字列になって現れることがあります。</p>
 
-<pre class="brush:js;gutter:false;">var selectedText = selObj.toString();</pre>
+<pre class="brush:js;">alert(selection);</pre>
 
-<ul>
- <li><code>selObj</code> は <code>Selection</code> オブジェクトです。</li>
- <li><code>selectedText</code> は文字列 (選択中のテキスト) です。</li>
-</ul>
+<p>ただし、すべての関数で自動的に <code>toString()</code> が呼び出されるとは限りません。 <code>Selection</code> オブジェクトを文字列として使用する場合は、 <code>toString()</code> メソッドを直接呼び出してください。</p>
 
-<h3 id="Related_objects" name="Related_objects">関連するオブジェクト</h3>
+<pre class="brush:js;">let selectedText = selection.toString();</pre>
+
+<h2 id="Related_objects">関連するオブジェクト</h2>
 
 <p>{{domxref("Window.getSelection()")}} を呼び出すと、 <code>Document.getSelection()</code> と同等の動作をします。</p>
 
-<p>Firefox において現在は <code>getSelection()</code> は {{htmlelement("input")}} 要素の中では動作しないことに注意してください。 {{domxref("HTMLInputElement.setSelectionRange()")}}) を使用することで回避できます。</p>
+<p>Firefox において現在は <code>getSelection()</code> は {{htmlelement("input")}} 要素の中では動作しないことに注意してください。 {{domxref("HTMLInputElement.setSelectionRange()")}} を使用することで回避できます。</p>
 
 <p><em>selection</em> と <em>focus</em> との違いにも注意してください。 {{domxref("Document.activeElement")}} はフォーカスを持つ要素を返します。</p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Shadow DOM", "#extensions-to-the-documentorshadowroot-mixin", "DocumentOrShadowRoot")}}</td>
-   <td>{{Spec2("Shadow DOM")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<div>
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
-
-<p>{{Compat("api.DocumentOrShadowRoot.getSelection")}}</p>
-</div>
+<p>{{Compat}}</p>

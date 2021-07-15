@@ -2,72 +2,58 @@
 title: Canvas チュートリアル
 slug: Web/API/Canvas_API/Tutorial
 tags:
-  - Canvas tutorial
+  - Canvas
+  - Graphics
+  - Guide
   - HTML
   - HTML5
-  - 'HTML:Canvas'
-  - Tutorials
+  - Intermediate
+  - Web
 translation_of: Web/API/Canvas_API/Tutorial
-translation_of_original: Canvas-tutorial-broken
 ---
-<p><strong><code><a href="/ja/docs/HTML/Canvas" title="HTML/Canvas">&lt;canvas&gt;</a></code></strong> はスクリプト(一般的に <a href="/ja/docs/JavaScript" title="JavaScript">JavaScript</a>) を使って図形を描くために使われる新しい <a href="/ja/docs/HTML" title="HTML">HTML</a> 要素です。例えば、グラフを描く、写真を合成する、または簡単な（または<a href="/ja/docs/A_Basic_RayCaster" title="A_Basic_RayCaster">あまり簡単ではない</a>）アニメーションに使うことができます。右の画像は後でこのチュートリアルの中でみる <code>&lt;canvas&gt;</code> を実際に使った例です。</p>
+<div>{{CanvasSidebar}}</div>
 
-<p><code>&lt;canvas&gt;</code> は Apple によって <a href="http://www.apple.com/jp/macosx/features/dashboard/">Mac OS X の Dashboard</a> のために初めて導入され、後に Safari に実装されました。Firefox 1.5 のような <a href="/ja/docs/Gecko" title="Gecko">Gecko</a> 1.8 ベースのブラウザもこの新しい要素をサポートしてます。<code>&lt;canvas&gt;</code> 要素は HTML 5 としても知られる <a href="http://www.whatwg.org/specs/web-apps/current-work/">WhatWG Web applications 1.0</a> 仕様の一部分です。</p>
+<div><a href="/ja/docs/Web/API/Canvas_API"><img alt="" src="canvas_tut_examples.jpg" style="float: right; margin-left: 10px; margin-right: 10px;"></a></div>
 
-<p>このチュートリアルでは、あなたの HTML ページに <code>&lt;canvas&gt;</code> 要素を導入する方法を説明します。提供された例は、<code>&lt;canvas&gt;</code> で出来ることの、いくつかの明確なアイデアを与え、それをあなた自身で実装できるようにするために使うことができます。</p>
-
-<h2 id="Before_you_start" name="Before_you_start">始める前に</h2>
-
-<p><code>&lt;canvas&gt;</code> を使うことはとても難しいわけではありませんが、<a href="/ja/docs/HTML" title="HTML">HTML</a> と <a href="/ja/docs/JavaScript" title="JavaScript">JavaScript</a> の基本的な理解が必要です。</p>
-
-<p>上述のように、<code>&lt;canvas&gt;</code> 要素は全てのモダンブラウザでサポートされているわけではないため、例を見るには Firefox 1.5 か他の最近の Gecko ベースブラウザ、Opera 9、もしくは最近のバージョンの Safari が必要になるでしょう。</p>
-
-<h2 id="In_this_tutorial" name="In_this_tutorial">このチュートリアルの一覧</h2>
-
-<ol>
- <li><a href="/ja/docs/Web/Guide/HTML/Canvas_tutorial/Basic_usage" title="Canvas_tutorial/Basic_usage">基本的な使いかた</a></li>
- <li><a href="/ja/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes" title="Canvas_tutorial/Drawing_shapes">図形を描く</a></li>
- <li><a href="/ja/docs/Web/Guide/HTML/Canvas_tutorial/Using_images" title="Canvas_tutorial/Using_images">画像を使う</a></li>
- <li><a href="/ja/docs/Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors" title="Canvas_tutorial/Applying_styles_and_colors">スタイルと色を適用する</a></li>
- <li><a href="/ja/docs/Web/Guide/HTML/Canvas_tutorial/Transformations" title="Canvas_tutorial/Transformations">変形</a></li>
- <li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Compositing" title="Canvas_tutorial/Compositing">合成</a></li>
- <li><a href="/ja/docs/Web/Guide/HTML/Canvas_tutorial/Basic_animations" title="Canvas_tutorial/Basic_animations">基本的なアニメーション</a></li>
- <li><a href="/ja/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas" title="Canvas_tutorial/Optimizing_canvas">canvasの最適化</a></li>
-</ol>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ol>
- <li><a href="/ja/docs/HTML/Canvas" title="HTML/Canvas">Canvas トピックのページ</a></li>
- <li><a href="/ja/docs/Drawing_Graphics_with_Canvas" title="Drawing_Graphics_with_Canvas">canvas を使って図形を描く</a></li>
- <li><a href="/ja/docs/tag/Canvas_examples" title="/ja/docs/tag/Canvas_examples">Canvas の実例</a></li>
- <li><a href="/ja/docs/Drawing_text_using_a_canvas" title="Special:Tags?tag=Canvas_text&amp;language=ja">canvas への文字の描画</a></li>
-</ol>
-
-<h3 id="canvas_に関する外部情報（日本語）">canvas に関する外部情報（日本語）</h3>
-
-<ul>
- <li><a href="http://www.html5.jp/canvas/ref.html" title="Canvasリファレンス - HTML5.JP">Canvasリファレンス - HTML5.JP</a></li>
- <li><a href="http://jsdo.it/tag/canvas?search_order=favorite" title="canvas - jsdo.it - Share JavaScript, HTML5 and CSS">canvas - jsdo.it - Share JavaScript, HTML5 and CSS</a></li>
-</ul>
-
-<h3 id="canvas_に関する外部情報（英語）">canvas に関する外部情報（英語）</h3>
-
-<div class="cols-2">
-<ul>
- <li><a href="http://html5tutorial.com" title="http://html5tutorial.com">HTML5 Tutorial</a></li>
- <li><a href="http://developer.apple.com/library/safari/#documentation/AudioVideo/Conceptual/HTML-canvas-guide/AddingText/AddingText.html#//apple_ref/doc/uid/TP40010542-CH6-SW4" title="en/Adding Text to Canvas">Adding Text to Canvas</a></li>
- <li><a href="http://www.canvasdemos.com/" title="Canvas Demos">Canvas Demos - Games, applications, tools and tutorials</a></li>
- <li><a class="link-https" href="https://sites.google.com/site/canvasdraw/" title="https://sites.google.com/site/canvasdraw/">Canvas Drawing Tool</a></li>
- <li><a href="http://canvimation.github.com/" title="http://canvimation.github.com/">Canvas Animation Application</a></li>
- <li><a href="http://billmill.org/static/canvastutorial/" title="http://billmill.org/static/canvastutorial/">interactive canvas tutorial</a></li>
- <li><a href="http://blog.nihilogic.dk/2009/02/html5-canvas-cheat-sheet.html" title="http://blog.nihilogic.dk/2009/02/html5-canvas-cheat-sheet.html">Canvas Cheat Sheet with all attributes and methods</a></li>
- <li><a href="http://visitmix.com/labs/ai2canvas/" title="http://visitmix.com/labs/ai2canvas/">Adobe Illustrator to Canvas plug-in</a></li>
- <li><a href="http://www.html5canvastutorials.com/" title="http://www.html5canvastutorials.com/">HTML5CanvasTutorials</a></li>
- <li><a href="http://html5tutorial.com/how-to-draw-a-point-with-the-canvas-api" title="http://html5tutorial.com/how-to-draw-a-point-with-the-canvas-api">How to draw a point with the Canvas API</a></li>
- <li><a href="http://html5tutorial.com/how-to-draw-n-grade-bezier-curve-with-canvas-api" title="http://html5tutorial.com/how-to-draw-n-grade-bezier-curve-with-canvas-api">How to draw N grade Bézier curves with the Canvas API</a></li>
- <li><a href="http://creativejs.com/2011/08/31-days-of-canvas-tutorials/" title="http://creativejs.com/2011/08/31-days-of-canvas-tutorials/">31 days of canvas tutorials</a></li>
-</ul>
+<div class="summary">
+<p><a href="/ja/docs/Web/HTML/Element/canvas"><strong><code>&lt;canvas&gt;</code></strong></a> 要素は、スクリプト (一般的に <a href="/ja/docs/Glossary/JavaScript">JavaScript</a>) を使って図形を描くために使われる新しい <a href="/ja/docs/Web/HTML">HTML</a> 要素です。例えば、グラフを描く、写真を合成する、または簡単な (または<a href="/ja/docs/Web/API/Canvas_API/A_basic_ray-caster">あまり簡単ではない</a>) アニメーションに使うことができます。このページの画像は後でこのチュートリアルの中でみる <a href="/ja/docs/Web/HTML/Element/canvas"><strong><code>&lt;canvas&gt;</code></strong></a> を実際に使った例です。</p>
 </div>
 
-<div>{{Next("Web/Guide/HTML/Canvas_tutorial/Basic_usage")}}</div>
+<p><span class="seoSummary">このチュートリアルでは、2D グラフィックを描画するために <code>&lt;canvas&gt;</code> 要素を使用する方法を、基礎から説明します。提供する例は、 canvas で出来ることの、いくつかの明確なアイデアと、それを自分自身のコンテンツで作成開始できるようなコードスニペットを提供します。</span></p>
+
+<p>Apple が OS X Dashboard のために WebKit に初めて導入した後、 <code>&lt;canvas&gt;</code> はブラウザーに実装されました。現在は、あらゆる主要ブラウザーが対応しています。</p>
+
+<h2 id="Before_you_start">始める前に</h2>
+
+<p><code>&lt;canvas&gt;</code> を使うことはそれほど難しくはありませんが、<a href="/ja/docs/Web/HTML">HTML</a> と <a href="/ja/docs/Web/JavaScript">JavaScript</a> の基本的な理解が必要です。一部の古いブラウザーは <code>&lt;canvas&gt;</code> 要素をサポートしていませんが、最近のバージョンの主要ブラウザーはすべてサポートしています。canvas の既定のサイズは、300 px × 150 px (幅 × 高さ) です。しかし、HTML の <code>height</code> および <code>width</code> プロパティを使用して、独自のサイズを定義することができます。canvas にグラフィックを描画するためには、JavaScript コンテキストオブジェクトを使用します。このオブジェクトは、グラフィックをその場で生成します。</p>
+
+<h2 id="In_this_tutorial">チュートリアル</h2>
+
+<ul>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Basic_usage">基本的な使い方</a></li>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">図形を描く</a></li>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">スタイルと色を適用する</a></li>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text">文字の描画</a></li>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Using_images">画像を使う</a></li>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Transformations">変形</a></li>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Compositing">合成とクリッピング</a></li>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations">基本的なアニメーション</a></li>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Advanced_animations">高度なアニメーション</a></li>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas">ピクセル操作</a></li>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility">ヒット領域とアクセシビリティ</a></li>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas">canvas を最適化する</a></li>
+	<li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Finale">最後に</a></li>
+</ul>
+
+<h2 id="See_also">関連情報</h2>
+
+<ul>
+	<li><a href="/ja/docs/Web/API/Canvas_API">Canvas トピックのページ</a></li>
+	<li><a href="https://www.html5canvastutorials.com/">HTML5CanvasTutorials</a></li>
+</ul>
+
+<h2 id="A_note_to_contributors">貢献者への注記</h2>
+
+<p>2013 年 6 月 17 日の週に発生した不運な技術的エラーにより、すべての過去の貢献者の属性を含む、このチュートリアルの履歴情報が失われました。この問題についておわびするとともに、この不運な事故を容赦願います。</p>
+
+<div>{{ Next("Web/API/Canvas_API/Tutorial/Basic_usage") }}</div>
