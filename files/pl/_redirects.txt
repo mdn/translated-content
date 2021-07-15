@@ -15,7 +15,6 @@
 /pl/docs/Bugzilla_(link)	https://bugzilla.mozilla.org/enter_bug.cgi?format=guided
 /pl/docs/CSS	/pl/docs/Web/CSS
 /pl/docs/CSS/-moz-appearance	/pl/docs/Web/CSS/appearance
-/pl/docs/CSS/-moz-background-inline-policy	/pl/docs/Web/CSS/box-decoration-break
 /pl/docs/CSS/-moz-background-origin	/pl/docs/Web/CSS/background-origin
 /pl/docs/CSS/-moz-binding	/pl/docs/Web/CSS/-moz-binding
 /pl/docs/CSS/-moz-border-bottom-colors	/pl/docs/Web/CSS/-moz-border-bottom-colors
@@ -152,7 +151,6 @@
 /pl/docs/CSS/word-spacing	/pl/docs/Web/CSS/word-spacing
 /pl/docs/CSS/z-index	/pl/docs/Web/CSS/z-index
 /pl/docs/CSS:-moz-appearance	/pl/docs/Web/CSS/appearance
-/pl/docs/CSS:-moz-background-inline-policy	/pl/docs/Web/CSS/box-decoration-break
 /pl/docs/CSS:-moz-background-origin	/pl/docs/Web/CSS/background-origin
 /pl/docs/CSS:-moz-binding	/pl/docs/Web/CSS/-moz-binding
 /pl/docs/CSS:-moz-border-bottom-colors	/pl/docs/Web/CSS/-moz-border-bottom-colors
@@ -392,10 +390,8 @@
 /pl/docs/DOM/element.namespaceURI	/pl/docs/Web/API/Element/namespaceURI
 /pl/docs/DOM/element.nextSibling	/pl/docs/Web/API/Node/nextSibling
 /pl/docs/DOM/element.nodeName	/pl/docs/Web/API/Node/nodeName
-/pl/docs/DOM/element.nodeType	/pl/docs/Web/API/Node/nodeType
 /pl/docs/DOM/element.nodeValue	/pl/docs/Web/API/Node/nodeValue
 /pl/docs/DOM/element.normalize	/pl/docs/Web/API/Node/normalize
-/pl/docs/DOM/element.offsetHeight	/pl/docs/Web/API/HTMLElement/offsetHeight
 /pl/docs/DOM/element.offsetLeft	/pl/docs/Web/API/HTMLElement/offsetLeft
 /pl/docs/DOM/element.offsetParent	/pl/docs/Web/API/HTMLElement/offsetParent
 /pl/docs/DOM/element.offsetWidth	/pl/docs/Web/API/HTMLElement/offsetWidth
@@ -485,7 +481,6 @@
 /pl/docs/DOM/window.clearInterval	/pl/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
 /pl/docs/DOM/window.clearTimeout	/pl/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout
 /pl/docs/DOM/window.closed	/pl/docs/Web/API/Window/closed
-/pl/docs/DOM/window.content	/pl/docs/Web/API/Window/content
 /pl/docs/DOM/window.controllers	/pl/docs/Web/API/Window/controllers
 /pl/docs/DOM/window.crypto	/pl/docs/Web/API/Window/crypto
 /pl/docs/DOM/window.defaultStatus	/pl/docs/Web/API/Window/defaultStatus
@@ -515,7 +510,6 @@
 /pl/docs/DOM/window.navigator.registerProtocolHandler	/pl/docs/Web/API/Navigator/registerProtocolHandler
 /pl/docs/DOM/window.onload	/pl/docs/Web/API/GlobalEventHandlers/onload
 /pl/docs/DOM/window.open	/pl/docs/Web/API/Window/open
-/pl/docs/DOM/window.openDialog	/pl/docs/Web/API/Window/openDialog
 /pl/docs/DOM/window.opener	/pl/docs/Web/API/Window/opener
 /pl/docs/DOM/window.prompt	/pl/docs/Web/API/Window/prompt
 /pl/docs/DOM/window.resizeBy	/pl/docs/Web/API/Window/resizeBy
@@ -631,10 +625,8 @@
 /pl/docs/DOM:element.namespaceURI	/pl/docs/Web/API/Element/namespaceURI
 /pl/docs/DOM:element.nextSibling	/pl/docs/Web/API/Node/nextSibling
 /pl/docs/DOM:element.nodeName	/pl/docs/Web/API/Node/nodeName
-/pl/docs/DOM:element.nodeType	/pl/docs/Web/API/Node/nodeType
 /pl/docs/DOM:element.nodeValue	/pl/docs/Web/API/Node/nodeValue
 /pl/docs/DOM:element.normalize	/pl/docs/Web/API/Node/normalize
-/pl/docs/DOM:element.offsetHeight	/pl/docs/Web/API/HTMLElement/offsetHeight
 /pl/docs/DOM:element.offsetLeft	/pl/docs/Web/API/HTMLElement/offsetLeft
 /pl/docs/DOM:element.offsetParent	/pl/docs/Web/API/HTMLElement/offsetParent
 /pl/docs/DOM:element.offsetWidth	/pl/docs/Web/API/HTMLElement/offsetWidth
@@ -722,7 +714,6 @@
 /pl/docs/DOM:window	/pl/docs/Web/API/Window
 /pl/docs/DOM:window.alert	/pl/docs/Web/API/Window/alert
 /pl/docs/DOM:window.closed	/pl/docs/Web/API/Window/closed
-/pl/docs/DOM:window.content	/pl/docs/Web/API/Window/content
 /pl/docs/DOM:window.controllers	/pl/docs/Web/API/Window/controllers
 /pl/docs/DOM:window.crypto	/pl/docs/Web/API/Window/crypto
 /pl/docs/DOM:window.defaultStatus	/pl/docs/Web/API/Window/defaultStatus
@@ -752,7 +743,6 @@
 /pl/docs/DOM:window.navigator.registerProtocolHandler	/pl/docs/Web/API/Navigator/registerProtocolHandler
 /pl/docs/DOM:window.onload	/pl/docs/Web/API/GlobalEventHandlers/onload
 /pl/docs/DOM:window.open	/pl/docs/Web/API/Window/open
-/pl/docs/DOM:window.openDialog	/pl/docs/Web/API/Window/openDialog
 /pl/docs/DOM:window.opener	/pl/docs/Web/API/Window/opener
 /pl/docs/DOM:window.prompt	/pl/docs/Web/API/Window/prompt
 /pl/docs/DOM:window.resizeBy	/pl/docs/Web/API/Window/resizeBy
@@ -972,7 +962,6 @@
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Obiekty/String	/pl/docs/Web/JavaScript/Reference/Global_Objects/String
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Obiekty/String/anchor	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Obiekty/String/big	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/big
-/pl/docs/Dokumentacja_języka_JavaScript_1.5/Obiekty/String/blink	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/blink
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Obiekty/String/bold	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/bold
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Obiekty/String/charAt	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Obiekty/String/charCodeAt	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt
@@ -1005,7 +994,6 @@
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_delete	/pl/docs/Web/JavaScript/Reference/Operators/delete
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_function	/pl/docs/Web/JavaScript/Reference/Operators/function
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_in	/pl/docs/Web/JavaScript/Reference/Operators/in
-/pl/docs/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_instanceof	/pl/docs/Web/JavaScript/Reference/Operators/instanceof
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_new	/pl/docs/Web/JavaScript/Reference/Operators/new
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_przecinkowy	/pl/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_typeof	/pl/docs/Web/JavaScript/Reference/Operators/typeof
@@ -1025,10 +1013,8 @@
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Polecenia/import	/pl/docs/Web/JavaScript/Reference/Statements/import
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Polecenia/return	/pl/docs/Web/JavaScript/Reference/Statements/return
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Polecenia/switch	/pl/docs/Web/JavaScript/Reference/Statements/switch
-/pl/docs/Dokumentacja_języka_JavaScript_1.5/Polecenia/throw	/pl/docs/Web/JavaScript/Reference/Statements/throw
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Polecenia/var	/pl/docs/Web/JavaScript/Reference/Statements/var
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Polecenia/while	/pl/docs/Web/JavaScript/Reference/Statements/while
-/pl/docs/Dokumentacja_języka_JavaScript_1.5/Przestarzałe_własności_i_metody	/pl/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Wyrażenia	/pl/docs/Web/JavaScript/Reference/Statements
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Wyrażenia/const	/pl/docs/Web/JavaScript/Reference/Statements/const
 /pl/docs/Dokumentacja_języka_JavaScript_1.5/Własności	/pl/docs/Web/JavaScript/Reference/Global_Objects
@@ -1212,7 +1198,6 @@
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Obiekty:String	/pl/docs/Web/JavaScript/Reference/Global_Objects/String
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Obiekty:String:anchor	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Obiekty:String:big	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/big
-/pl/docs/Dokumentacja_języka_JavaScript_1.5:Obiekty:String:blink	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/blink
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Obiekty:String:bold	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/bold
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Obiekty:String:charAt	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Obiekty:String:charCodeAt	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt
@@ -1245,7 +1230,6 @@
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Operatory:Operatory_specjalne:Operator_delete	/pl/docs/Web/JavaScript/Reference/Operators/delete
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Operatory:Operatory_specjalne:Operator_function	/pl/docs/Web/JavaScript/Reference/Operators/function
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Operatory:Operatory_specjalne:Operator_in	/pl/docs/Web/JavaScript/Reference/Operators/in
-/pl/docs/Dokumentacja_języka_JavaScript_1.5:Operatory:Operatory_specjalne:Operator_instanceof	/pl/docs/Web/JavaScript/Reference/Operators/instanceof
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Operatory:Operatory_specjalne:Operator_new	/pl/docs/Web/JavaScript/Reference/Operators/new
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Operatory:Operatory_specjalne:Operator_przecinkowy	/pl/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Operatory:Operatory_specjalne:Operator_typeof	/pl/docs/Web/JavaScript/Reference/Operators/typeof
@@ -1265,10 +1249,8 @@
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Polecenia:import	/pl/docs/Web/JavaScript/Reference/Statements/import
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Polecenia:return	/pl/docs/Web/JavaScript/Reference/Statements/return
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Polecenia:switch	/pl/docs/Web/JavaScript/Reference/Statements/switch
-/pl/docs/Dokumentacja_języka_JavaScript_1.5:Polecenia:throw	/pl/docs/Web/JavaScript/Reference/Statements/throw
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Polecenia:var	/pl/docs/Web/JavaScript/Reference/Statements/var
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Polecenia:while	/pl/docs/Web/JavaScript/Reference/Statements/while
-/pl/docs/Dokumentacja_języka_JavaScript_1.5:Przestarzałe_własności_i_metody	/pl/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Wyrażenia:const	/pl/docs/Web/JavaScript/Reference/Statements/const
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Własności	/pl/docs/Web/JavaScript/Reference/Global_Objects
 /pl/docs/Dokumentacja_języka_JavaScript_1.5:Własności:Infinity	/pl/docs/Web/JavaScript/Reference/Global_Objects/Infinity
@@ -1299,7 +1281,6 @@
 /pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Stworz_element_Canvas_i_rysuj_na_nim	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 /pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/odbijanie_od_scian	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 /pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/posusz_pilka	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/wykrywanie_kolizji	/pl/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 /pl/docs/Glossary/AOM	/pl/docs/Glossary/Accessibility_tree
 /pl/docs/Glossary/Abstrakcja	/pl/docs/Glossary/Abstraction
 /pl/docs/Glossary/Hipertekst	/pl/docs/Glossary/Hypertext
@@ -1452,7 +1433,6 @@
 /pl/docs/JavaScript/Guide/Obsolete_Pages/Przewodnik_po_języku_JavaScript_1.5/Praca_z_wyrażeniami_regularnymi/Globalne_wyszukiwanie,_wielkość_znaków,_wieloliniowe_wejście	/pl/docs/Web/JavaScript/Guide/Regular_Expressions
 /pl/docs/JavaScript/New_in_JavaScript	/pl/docs/Web/JavaScript/New_in_JavaScript
 /pl/docs/JavaScript/Reference/Global_Objects/Function/toString	/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
-/pl/docs/JavaScript/Typed_arrays	/pl/docs/Web/JavaScript/Typed_arrays
 /pl/docs/Kolumny_CSS3	/pl/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /pl/docs/Learn/CSS/Introduction_to_CSS	/en-US/docs/Learn/CSS/First_steps
 /pl/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
@@ -1464,7 +1444,6 @@
 /pl/docs/Learn/JavaScript/Pierwsze_kroki	/pl/docs/Learn/JavaScript/First_steps
 /pl/docs/Learn/JavaScript/Pierwsze_kroki/A_first_splash	/pl/docs/Learn/JavaScript/First_steps/A_first_splash
 /pl/docs/Learn/JavaScript/Pierwsze_kroki/Co_poszlo_nie_tak	/pl/docs/Learn/JavaScript/First_steps/What_went_wrong
-/pl/docs/Learn/JavaScript/Pierwsze_kroki/Math	/pl/docs/Learn/JavaScript/First_steps/Math
 /pl/docs/Learn/JavaScript/Pierwsze_kroki/What_is_JavaScript	/pl/docs/Learn/JavaScript/First_steps/What_is_JavaScript
 /pl/docs/Learn/JavaScript/Pierwsze_kroki/Zmienne	/pl/docs/Learn/JavaScript/First_steps/Variables
 /pl/docs/Learn/Server-side/Express_Nodejs/Szkolenie_aplikacja_biblioteka	/pl/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
@@ -1472,18 +1451,14 @@
 /pl/docs/Lokalizacja	/pl/docs/Glossary/Localization
 /pl/docs/Lokalizacja_opisu_rozszerzeń	/pl/docs/Lokalizacja_opisu_rozszerzenia
 /pl/docs/MDN/Contribute/Content	/pl/docs/MDN/Guidelines
-/pl/docs/MDN/Contribute/Content/Style_guide	/pl/docs/MDN/Guidelines/Writing_style_guide
 /pl/docs/MDN/Feedback	/pl/docs/MDN/Contribute/Feedback
-/pl/docs/MDN/Guidelines/Style_guide	/pl/docs/MDN/Guidelines/Writing_style_guide
 /pl/docs/MDN/Kuma	/pl/docs/MDN/Yari
-/pl/docs/MDN/User_guide	/pl/docs/MDN/Tools
 /pl/docs/MDN/rozpocznij_mdn	/pl/docs/MDN/Contribute/Getting_started
 /pl/docs/Manifest_Instalacji	/pl/docs/Manifesty_Instalacji
 /pl/docs/Manifesty_Chrome	/pl/docs/Mozilla/Rejestracja_Chrome
 /pl/docs/MathML	/pl/docs/Web/MathML
 /pl/docs/Mozilla/Add-ons/WebExtensions/Twój_pierwszy_WebExtension	/pl/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /pl/docs/Narzędzia	/pl/docs/Tools
-/pl/docs/Narzędzia/Browser_Toolbox	/pl/docs/Tools/Browser_Toolbox
 /pl/docs/Narzędzia/Debugger	/pl/docs/Tools/Debugger
 /pl/docs/Narzędzia/Debugger/How_to	/pl/docs/Tools/Debugger/How_to
 /pl/docs/Narzędzia/Page_Inspector	/pl/docs/Tools/Page_Inspector
@@ -1491,10 +1466,6 @@
 /pl/docs/Narzędzia/Page_Inspector/How_to/Open_the_Inspector	/pl/docs/Tools/Page_Inspector/How_to/Open_the_Inspector
 /pl/docs/Narzędzia/Page_Inspector/Przewodnik_przez_UI	/pl/docs/Tools/Page_Inspector/UI_Tour
 /pl/docs/Narzędzia/Performance	/pl/docs/Tools/Performance
-/pl/docs/Narzędzia/Performance/Flame_Chart	/pl/docs/Tools/Performance/Flame_Chart
-/pl/docs/Narzędzia/Storage_Inspector	/pl/docs/Tools/Storage_Inspector
-/pl/docs/Narzędzia/Tools_Toolbox	/pl/docs/Tools/Tools_Toolbox
-/pl/docs/Narzędzia/View_source	/pl/docs/Tools/View_source
 /pl/docs/Narzędzia/Walidatory	/pl/docs/Tools/Validators
 /pl/docs/Narzędzia/about:debugging	/pl/docs/Tools/about:debugging
 /pl/docs/Narzędzia:Walidatory	/pl/docs/Tools/Validators
@@ -1579,10 +1550,8 @@
 /pl/docs/Web/API/Element/length	/pl/docs/Web/API/NodeList/length
 /pl/docs/Web/API/Element/nextSibling	/pl/docs/Web/API/Node/nextSibling
 /pl/docs/Web/API/Element/nodeName	/pl/docs/Web/API/Node/nodeName
-/pl/docs/Web/API/Element/nodeType	/pl/docs/Web/API/Node/nodeType
 /pl/docs/Web/API/Element/nodeValue	/pl/docs/Web/API/Node/nodeValue
 /pl/docs/Web/API/Element/normalize	/pl/docs/Web/API/Node/normalize
-/pl/docs/Web/API/Element/offsetHeight	/pl/docs/Web/API/HTMLElement/offsetHeight
 /pl/docs/Web/API/Element/offsetLeft	/pl/docs/Web/API/HTMLElement/offsetLeft
 /pl/docs/Web/API/Element/offsetParent	/pl/docs/Web/API/HTMLElement/offsetParent
 /pl/docs/Web/API/Element/offsetWidth	/pl/docs/Web/API/HTMLElement/offsetWidth
@@ -1653,7 +1622,6 @@
 /pl/docs/Web/API/Stylesheet/cssRules	/pl/docs/Web/API/CSSRuleList
 /pl/docs/Web/API/Stylesheet/deleteRule	/pl/docs/Web/API/CSSStyleSheet/deleteRule
 /pl/docs/Web/API/Stylesheet/insertRule	/pl/docs/Web/API/CSSStyleSheet/insertRule
-/pl/docs/Web/API/Uint16Array	/pl/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /pl/docs/Web/API/Window/clearInterval	/pl/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval
 /pl/docs/Web/API/Window/clearTimeout	/pl/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout
 /pl/docs/Web/API/Window/onload	/pl/docs/Web/API/GlobalEventHandlers/onload
@@ -1672,7 +1640,6 @@
 /pl/docs/Web/Bezpieczeństwo/Same-origin_policy	/pl/docs/Web/Security/Same-origin_policy
 /pl/docs/Web/Bezpieczeństwo/Subresource_Integrity	/pl/docs/Web/Security/Subresource_Integrity
 /pl/docs/Web/CSS/-moz-appearance	/pl/docs/Web/CSS/appearance
-/pl/docs/Web/CSS/-moz-background-inline-policy	/pl/docs/Web/CSS/box-decoration-break
 /pl/docs/Web/CSS/-moz-background-origin	/pl/docs/Web/CSS/background-origin
 /pl/docs/Web/CSS/-moz-border-radius	/pl/docs/Web/CSS/border-radius
 /pl/docs/Web/CSS/-moz-border-radius-bottomleft	/pl/docs/Web/CSS/border-bottom-left-radius
@@ -1729,7 +1696,6 @@
 /pl/docs/Web/CSS/transform-function/matrix	/pl/docs/Web/CSS/transform-function/matrix()
 /pl/docs/Web/Dostępność	/pl/docs/Web/Accessibility
 /pl/docs/Web/Dostępność/An_overview_of_accessible_web_applications_and_widgets	/pl/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-/pl/docs/Web/Dostępność/Keyboard-navigable_JavaScript_widgets	/pl/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 /pl/docs/Web/Events/drag	/pl/docs/Web/API/Document/drag_event
 /pl/docs/Web/Guide/AJAX/Na_początek	/pl/docs/Web/Guide/AJAX/Getting_Started
 /pl/docs/Web/Guide/CSS	/pl/docs/Learn/CSS
@@ -1763,10 +1729,8 @@
 /pl/docs/Web/HTML/Elementy/strong	/pl/docs/Web/HTML/Element/strong
 /pl/docs/Web/HTML/Elementy_blokowe	/pl/docs/Web/HTML/Block-level_elements
 /pl/docs/Web/HTML/Elementy_liniowe	/pl/docs/Web/HTML/Inline_elements
-/pl/docs/Web/HTML/Global_attributes/pisownia	/pl/docs/Web/HTML/Global_attributes/spellcheck
 /pl/docs/Web/HTTP/Ciasteczka	/pl/docs/Web/HTTP/Cookies
 /pl/docs/Web/HTTP/HTTP_wiadomosci_ogólne	/pl/docs/Web/HTTP/Overview
-/pl/docs/Web/HTTP/Headers/Data	/pl/docs/Web/HTTP/Headers/Date
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5	/pl/docs/Web/JavaScript/Reference
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Funkcje	/pl/docs/Web/JavaScript/Reference/Global_Objects
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Funkcje/Boolean	/pl/docs/Web/JavaScript/Reference/Global_Objects/Boolean
@@ -1938,7 +1902,6 @@
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Obiekty/String	/pl/docs/Web/JavaScript/Reference/Global_Objects/String
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Obiekty/String/anchor	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Obiekty/String/big	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/big
-/pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Obiekty/String/blink	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/blink
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Obiekty/String/bold	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/bold
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Obiekty/String/charAt	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Obiekty/String/charCodeAt	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt
@@ -1971,7 +1934,6 @@
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_delete	/pl/docs/Web/JavaScript/Reference/Operators/delete
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_function	/pl/docs/Web/JavaScript/Reference/Operators/function
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_in	/pl/docs/Web/JavaScript/Reference/Operators/in
-/pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_instanceof	/pl/docs/Web/JavaScript/Reference/Operators/instanceof
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_new	/pl/docs/Web/JavaScript/Reference/Operators/new
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_przecinkowy	/pl/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Operatory/Operatory_specjalne/Operator_typeof	/pl/docs/Web/JavaScript/Reference/Operators/typeof
@@ -1991,10 +1953,8 @@
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Polecenia/import	/pl/docs/Web/JavaScript/Reference/Statements/import
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Polecenia/return	/pl/docs/Web/JavaScript/Reference/Statements/return
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Polecenia/switch	/pl/docs/Web/JavaScript/Reference/Statements/switch
-/pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Polecenia/throw	/pl/docs/Web/JavaScript/Reference/Statements/throw
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Polecenia/var	/pl/docs/Web/JavaScript/Reference/Statements/var
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Polecenia/while	/pl/docs/Web/JavaScript/Reference/Statements/while
-/pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Przestarzałe_własności_i_metody	/pl/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Wyrażenia	/pl/docs/Web/JavaScript/Reference/Statements
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Wyrażenia/const	/pl/docs/Web/JavaScript/Reference/Statements/const
 /pl/docs/Web/JavaScript/Dokumentacja_języka_JavaScript_1.5/Własności	/pl/docs/Web/JavaScript/Reference/Global_Objects
@@ -2159,7 +2119,6 @@
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Function/displayName	/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Function/length	/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/length
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Function/toString	/pl/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
-/pl/docs/Web/JavaScript/Referencje/Obiekty/Generator	/pl/docs/Web/JavaScript/Reference/Global_Objects/Generator
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Infinity	/pl/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /pl/docs/Web/JavaScript/Referencje/Obiekty/JSON	/pl/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Math	/pl/docs/Web/JavaScript/Reference/Global_Objects/Math
@@ -2239,7 +2198,6 @@
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String	/pl/docs/Web/JavaScript/Reference/Global_Objects/String
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/anchor	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/anchor
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/big	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/big
-/pl/docs/Web/JavaScript/Referencje/Obiekty/String/blink	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/blink
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/bold	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/bold
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/charAt	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/charCodeAt	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt
@@ -2248,10 +2206,8 @@
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/fontcolor	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/fontcolor
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/fontsize	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/fontsize
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/fromCharCode	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode
-/pl/docs/Web/JavaScript/Referencje/Obiekty/String/fromCodePoint	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/italics	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/italics
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/link	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/link
-/pl/docs/Web/JavaScript/Referencje/Obiekty/String/repeat	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/search	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/search
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/slice	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/slice
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/small	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/small
@@ -2267,12 +2223,10 @@
 /pl/docs/Web/JavaScript/Referencje/Obiekty/String/valueOf	/pl/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf
 /pl/docs/Web/JavaScript/Referencje/Obiekty/Symbol	/pl/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 /pl/docs/Web/JavaScript/Referencje/Obiekty/SyntaxError	/pl/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError
-/pl/docs/Web/JavaScript/Referencje/Obiekty/Uint16Array	/pl/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array
 /pl/docs/Web/JavaScript/Referencje/Obiekty/decodeURI	/pl/docs/Web/JavaScript/Reference/Global_Objects/decodeURI
 /pl/docs/Web/JavaScript/Referencje/Obiekty/decodeURIComponent	/pl/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 /pl/docs/Web/JavaScript/Referencje/Obiekty/encodeURI	/pl/docs/Web/JavaScript/Reference/Global_Objects/encodeURI
 /pl/docs/Web/JavaScript/Referencje/Obiekty/encodeURIComponent	/pl/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
-/pl/docs/Web/JavaScript/Referencje/Obiekty/escape	/pl/docs/Web/JavaScript/Reference/Global_Objects/escape
 /pl/docs/Web/JavaScript/Referencje/Obiekty/isFinite	/pl/docs/Web/JavaScript/Reference/Global_Objects/isFinite
 /pl/docs/Web/JavaScript/Referencje/Obiekty/isNaN	/pl/docs/Web/JavaScript/Reference/Global_Objects/isNaN
 /pl/docs/Web/JavaScript/Referencje/Obiekty/null	/pl/docs/Web/JavaScript/Reference/Global_Objects/null
@@ -2287,7 +2241,6 @@
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_delete	/pl/docs/Web/JavaScript/Reference/Operators/delete
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_function	/pl/docs/Web/JavaScript/Reference/Operators/function
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_in	/pl/docs/Web/JavaScript/Reference/Operators/in
-/pl/docs/Web/JavaScript/Referencje/Operatory/Operator_instanceof	/pl/docs/Web/JavaScript/Reference/Operators/instanceof
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_new	/pl/docs/Web/JavaScript/Reference/Operators/new
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_przecinkowy	/pl/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operator_typeof	/pl/docs/Web/JavaScript/Reference/Operators/typeof
@@ -2298,7 +2251,6 @@
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operatory_specjalne/Operator_delete	/pl/docs/Web/JavaScript/Reference/Operators/delete
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operatory_specjalne/Operator_function	/pl/docs/Web/JavaScript/Reference/Operators/function
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operatory_specjalne/Operator_in	/pl/docs/Web/JavaScript/Reference/Operators/in
-/pl/docs/Web/JavaScript/Referencje/Operatory/Operatory_specjalne/Operator_instanceof	/pl/docs/Web/JavaScript/Reference/Operators/instanceof
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operatory_specjalne/Operator_new	/pl/docs/Web/JavaScript/Reference/Operators/new
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operatory_specjalne/Operator_przecinkowy	/pl/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /pl/docs/Web/JavaScript/Referencje/Operatory/Operatory_specjalne/Operator_typeof	/pl/docs/Web/JavaScript/Reference/Operators/typeof
@@ -2309,7 +2261,6 @@
 /pl/docs/Web/JavaScript/Referencje/Operatory/function*	/pl/docs/Web/JavaScript/Reference/Operators/function*
 /pl/docs/Web/JavaScript/Referencje/Operatory/new.target	/pl/docs/Web/JavaScript/Reference/Operators/new.target
 /pl/docs/Web/JavaScript/Referencje/Operatory/super	/pl/docs/Web/JavaScript/Reference/Operators/super
-/pl/docs/Web/JavaScript/Referencje/Operatory/this	/pl/docs/Web/JavaScript/Reference/Operators/this
 /pl/docs/Web/JavaScript/Referencje/Operatory/yield	/pl/docs/Web/JavaScript/Reference/Operators/yield
 /pl/docs/Web/JavaScript/Referencje/Operatory/yield*	/pl/docs/Web/JavaScript/Reference/Operators/yield*
 /pl/docs/Web/JavaScript/Referencje/Polecenia	/pl/docs/Web/JavaScript/Reference/Statements
@@ -2332,10 +2283,8 @@
 /pl/docs/Web/JavaScript/Referencje/Polecenia/import	/pl/docs/Web/JavaScript/Reference/Statements/import
 /pl/docs/Web/JavaScript/Referencje/Polecenia/return	/pl/docs/Web/JavaScript/Reference/Statements/return
 /pl/docs/Web/JavaScript/Referencje/Polecenia/switch	/pl/docs/Web/JavaScript/Reference/Statements/switch
-/pl/docs/Web/JavaScript/Referencje/Polecenia/throw	/pl/docs/Web/JavaScript/Reference/Statements/throw
 /pl/docs/Web/JavaScript/Referencje/Polecenia/var	/pl/docs/Web/JavaScript/Reference/Statements/var
 /pl/docs/Web/JavaScript/Referencje/Polecenia/while	/pl/docs/Web/JavaScript/Reference/Statements/while
-/pl/docs/Web/JavaScript/Referencje/Przestarzałe_własności_i_metody	/pl/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /pl/docs/Web/JavaScript/Referencje/Wyrażenia	/pl/docs/Web/JavaScript/Reference/Statements
 /pl/docs/Web/JavaScript/Referencje/Wyrażenia/const	/pl/docs/Web/JavaScript/Reference/Statements/const
 /pl/docs/Web/JavaScript/Referencje/Własności	/pl/docs/Web/JavaScript/Reference/Global_Objects
@@ -2345,7 +2294,6 @@
 /pl/docs/Web/JavaScript/Referencje/Własnościundefined	/pl/docs/Web/JavaScript/Reference/Global_Objects/undefined
 /pl/docs/Web/JavaScript/Zasoby_języka_JavaScript	/pl/docs/Web/JavaScript/Language_Resources
 /pl/docs/Web/JavaScript/dziedziczenie_lancuch_prototypow	/pl/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
-/pl/docs/Web/JavaScript/typy_oraz_struktury_danych	/pl/docs/Web/JavaScript/Data_structures
 /pl/docs/Web/SVG/Element/okrąg	/pl/docs/Web/SVG/Element/circle
 /pl/docs/Web/SVG/Inne_zasoby	/pl/docs/Web/SVG/Other_Resources
 /pl/docs/Web/SVG/Przewodnik	/pl/docs/Web/SVG/Tutorial
@@ -2436,7 +2384,6 @@
 /pl/docs/Wprowadzenie_do_XMLa	/pl/docs/Web/XML/XML_introduction
 /pl/docs/XHTML	/pl/docs/Glossary/XHTML
 /pl/docs/XMLHttpRequest	/pl/docs/Web/API/XMLHttpRequest
-/pl/docs/XMLHttpRequest/Using_XMLHttpRequest	/pl/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /pl/docs/XML_Introduction	/pl/docs/Web/XML/XML_introduction
 /pl/docs/XPConnect:Podstawy_architektury	/pl/docs/XPConnect/Podstawy_architektury
 /pl/docs/XPath	/pl/docs/Web/XPath
