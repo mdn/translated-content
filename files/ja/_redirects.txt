@@ -4069,6 +4069,7 @@
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/WindowOrWorkerGlobalScope/caches
 /ja/docs/Web/API/XMLHttpRequest/openRequest	/ja/docs/orphaned/Web/API/XMLHttpRequest/openRequest
+/ja/docs/Web/API/XRSessionMode	/ja/docs/orphaned/Web/API/XRSessionMode
 /ja/docs/Web/API/console.dir	/ja/docs/Web/API/Console/dir
 /ja/docs/Web/API/console.log	/ja/docs/Web/API/Console/log
 /ja/docs/Web/API/console.time	/ja/docs/Web/API/Console/time

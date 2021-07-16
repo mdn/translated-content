@@ -25952,12 +25952,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/XRSessionMode": {
-    "modified": "2020-10-24T11:40:22.240Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/XRSystem": {
     "modified": "2020-10-23T14:29:58.403Z",
     "contributors": [
@@ -51779,6 +51773,12 @@
     "modified": "2020-07-29T10:05:34.264Z",
     "contributors": [
       "eltociear"
+    ]
+  },
+  "orphaned/Web/API/XRSessionMode": {
+    "modified": "2020-10-24T11:40:22.240Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "orphaned/Web/CSS/:-moz-alt-text": {
