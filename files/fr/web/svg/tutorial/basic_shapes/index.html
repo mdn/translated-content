@@ -124,9 +124,9 @@ original_slug: Web/SVG/Tutoriel/Formes_de_base
 <pre class="brush: xml"> &lt;polyline points="60 110, 65 120, 70 115, 75 130, 80 125, 85 140, 90 135, 95 150, 100 145"/&gt;
 </pre>
 
-<dl>
+<dl id="def_points">
  <dt>points</dt>
- <dd>Liste des points, chaque pair de nombres correspondant aux coordonnées x et y de chaque point. Chaque position x est séparée de la position y par un espace. Chaque ensemble de coordonnées est séparé du suivant par une virgule.</dd>
+ <dd>Liste des points, chaque pair de nombres (entiers positifs) correspondant aux coordonnées x et y de chaque point. Chaque position x est séparée de la position y par une virgule ou un espace. Chaque point est séparé du suivant par, respectivement, un espace ou une virgule. Exemple : points="100,10 190,78 160,198 40,198 10,78" ou points="100 10,190 78,160 198,40 198,10 78"</dd>
 </dl>
 
 <h4 id="Polygones">Polygones</h4>
@@ -137,7 +137,7 @@ original_slug: Web/SVG/Tutoriel/Formes_de_base
 
 <dl>
  <dt>points</dt>
- <dd>Idem que l'attribut <code>points</code> de l'élément <code>polyline</code>. Liste des points, chaque paire de nombres correspondant aux coordonnées x et y de chaque point. Chaque position x est séparée de la position y par un espace, chaque ensemble de coordonnées est séparé du suivant par une virgule. Une dernière ligne ferme automatiquement la forme en retournant au point de départ.</dd>
+ <dd>Idem que l'attribut <a href="#def_points">points</a> de l'élément <code>polyline</code>.</dd>
 </dl>
 
 <h4 id="Chemins">Chemins</h4>
