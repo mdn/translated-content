@@ -11,7 +11,6 @@
 /de/docs/Barrierefreiheit/ARIA/ARIA_Live_Regionen	/de/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
 /de/docs/Barrierefreiheit/An_overview_of_accessible_web_applications_and_widgets	/de/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /de/docs/Benutzen_des_Zwischenspeichers_in_Firefox_1.5_(caching)	/de/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
-/de/docs/Bug-Entdecken_Leitfaden	/de/docs/Richtlinien_zum_Schreiben_eines_Bugreports
 /de/docs/CSS	/de/docs/Web/CSS
 /de/docs/CSS/-moz-border-radius	/de/docs/Web/CSS/border-radius
 /de/docs/CSS/-moz-border-radius-bottomleft	/de/docs/Web/CSS/border-bottom-left-radius
@@ -195,14 +194,6 @@
 /de/docs/CSS_Referenz	/de/docs/Web/CSS/Reference
 /de/docs/CSS_Referenz/Mozilla_CSS_Erweiterungen	/de/docs/Web/CSS/Mozilla_Extensions
 /de/docs/CSS_in_HTML_einbinden	/de/docs/Web/CSS/@import
-/de/docs/Code_snippets	/de/docs/Codeschnipsel
-/de/docs/Code_snippets/Scrollbar	/de/docs/Codeschnipsel/Scrollbar
-/de/docs/Code_snippets/Windows	/de/docs/Codeschnipsel/Windows
-/de/docs/Creating_a_Skin_for_Firefox	/de/docs/Theme_erstellen
-/de/docs/Creating_a_Skin_for_Firefox/contents.rdf	/de/docs/Theme_erstellen/contents.rdf
-/de/docs/Creating_a_Skin_for_Firefox/install.rdf	/de/docs/Theme_erstellen/install.rdf
-/de/docs/Creating_a_Skin_for_Firefox:contents.rdf	/de/docs/Theme_erstellen/contents.rdf
-/de/docs/Creating_a_Skin_for_Firefox:install.rdf	/de/docs/Theme_erstellen/install.rdf
 /de/docs/DOM	/de/docs/Web/API/Document_Object_Model
 /de/docs/DOM/File.fileName	/de/docs/Web/API/File/fileName
 /de/docs/DOM/File.fileSize	/de/docs/Web/API/File/fileSize
@@ -298,7 +289,6 @@
 /de/docs/HTML:Element:strong	/de/docs/Web/HTML/Element/strong
 /de/docs/HTML:Element:ul	/de/docs/Web/HTML/Element/ul
 /de/docs/HTML:Element:var	/de/docs/Web/HTML/Element/var
-/de/docs/HTTP_Request_Header_setzen	/de/docs/XPCOM/HTTP_Request_Header_setzen
 /de/docs/Hauptseite	/de/docs/Web
 /de/docs/IndexedDB	/de/docs/Web/API/IndexedDB_API
 /de/docs/IndexedDB/Browser_storage_limits_and_eviction_criteria	/de/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
@@ -405,9 +395,6 @@
 /de/docs/Mozilla/Add-ons/WebExtensions/Deine_zweite_Erweiterung	/de/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 /de/docs/Online_and_offline_events	/de/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /de/docs/OpenSearch_Plugin_für_Firefox_erstellen	/de/docs/Web/OpenSearch
-/de/docs/Profilmanager	/de/docs/Profile_Manager
-/de/docs/QA/Stress_Testing	/de/docs/Qualitätssicherung/Stress_Testing
-/de/docs/QA:Stress_Testing	/de/docs/Qualitätssicherung/Stress_Testing
 /de/docs/SVG	/de/docs/Web/SVG
 /de/docs/SVG/Element	/de/docs/Web/SVG/Element
 /de/docs/SVG/Element/animate	/de/docs/Web/SVG/Element/animate
@@ -415,11 +402,6 @@
 /de/docs/SVG/Tutorial	/de/docs/Web/SVG/Tutorial
 /de/docs/SVG/Tutorial/Einführung	/de/docs/Web/SVG/Tutorial/Introduction
 /de/docs/Suche_Plugins	/de/docs/Web/OpenSearch
-/de/docs/Theme_erstellen:Einführung	/de/docs/Theme_erstellen/Einführung
-/de/docs/Theme_erstellen:UUID	/de/docs/Theme_erstellen/UUID
-/de/docs/Theme_erstellen:contents.rdf	/de/docs/Theme_erstellen/contents.rdf
-/de/docs/Theme_erstellen:install.rdf	/de/docs/Theme_erstellen/install.rdf
-/de/docs/Themen	/de/docs/Themes
 /de/docs/Tools/3D_untersuchung	/de/docs/Tools/3D_View
 /de/docs/Tools/Barrierefreiheits_inspektor	/de/docs/Tools/Accessibility_inspector
 /de/docs/Tools/Browser_Werkzeuge	/de/docs/Tools/Browser_Toolbox
@@ -441,7 +423,6 @@
 /de/docs/Web/API/File/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File/Using_files_from_web_applications
 /de/docs/Web/API/FullscreenOptions	/de/docs/orphaned/Web/API/FullscreenOptions
 /de/docs/Web/API/IndexedDB_API/IndexedDB_verwenden	/de/docs/Web/API/IndexedDB_API/Using_IndexedDB
-/de/docs/Web/API/MozMobileConnection.selectNetworkAutomatically	/de/docs/Web/API/MozMobileConnection/selectNetworkAutomatically
 /de/docs/Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-handler	/de/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /de/docs/Web/API/NavigatorOnLine	/de/docs/orphaned/Web/API/NavigatorOnLine
 /de/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/de/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
@@ -819,4 +800,3 @@
 /de/docs/XSLT	/de/docs/Web/XSLT
 /de/docs/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File/Using_files_from_web_applications
 /de/docs/en	/en-US/
-/de/docs/install.rdf	/de/docs/Installationsmanifest
