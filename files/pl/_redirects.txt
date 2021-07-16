@@ -363,7 +363,6 @@
 /pl/docs/DOM/element.childNodes	/pl/docs/Web/API/Node/childNodes
 /pl/docs/DOM/element.className	/pl/docs/Web/API/Element/className
 /pl/docs/DOM/element.click	/pl/docs/Web/API/HTMLElement/click
-/pl/docs/DOM/element.clientHeight	/pl/docs/Web/API/Element/clientHeight
 /pl/docs/DOM/element.clientWidth	/pl/docs/Web/API/Element/clientWidth
 /pl/docs/DOM/element.cloneNode	/pl/docs/Web/API/Node/cloneNode
 /pl/docs/DOM/element.createAttribute	/pl/docs/Web/API/Document/createAttribute
@@ -598,7 +597,6 @@
 /pl/docs/DOM:element.childNodes	/pl/docs/Web/API/Node/childNodes
 /pl/docs/DOM:element.className	/pl/docs/Web/API/Element/className
 /pl/docs/DOM:element.click	/pl/docs/Web/API/HTMLElement/click
-/pl/docs/DOM:element.clientHeight	/pl/docs/Web/API/Element/clientHeight
 /pl/docs/DOM:element.clientWidth	/pl/docs/Web/API/Element/clientWidth
 /pl/docs/DOM:element.cloneNode	/pl/docs/Web/API/Node/cloneNode
 /pl/docs/DOM:element.createAttribute	/pl/docs/Web/API/Document/createAttribute
