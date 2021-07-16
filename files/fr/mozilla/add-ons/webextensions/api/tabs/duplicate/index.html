@@ -16,14 +16,15 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>Duplique un onglet dont l’identifiant est donné.</p>
+<p>Duplique un onglet dont l'identifiant est donné.</p>
 
 <p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox brush:js">var duplicating = browser.tabs.duplicate(
-  tabId              // integer
+  tabId,              // integer
+  duplicateProperties // object optionnel
 )
 </pre>
 
@@ -32,6 +33,18 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 <dl>
  <dt><code>tabId</code></dt>
  <dd><code>integer</code>. L'identifiant de l'onglet à dupliquer.</dd>
+ <dt><code>duplicateProperties</code> <span class="inlineIndicator optional optionalInline">Optional</span></dt>
+ <dd><code>object</code>. Un objet décrivant comment l'onglet est dupliqué. Il contient les propriétés suivantes :</dd>
+ <dd>
+ <dl class="reference-values">
+  <dt><code><var>index</var></code> <span class="inlineIndicator optional optionalInline">Optionnel</span></dt>
+  <dd><code>integer</code>. La position du nouvel onglet dans la fenêtre. La valeur est restreinte à l'intervalle zéro jusqu'au nombre d'onglets dans la fenêtre.</dd>
+  <dt><code><var>active</var></code> <span class="inlineIndicator optional optionalInline">Optionnel</span></dt>
+  <dd>
+  <p><code>boolean</code>. Si l'onglet devient l'onglet actif dans la fenêtre. Cela ne change pas quelle fenêtre a le focus. <code>true</code> par défaut.</p>
+  </dd>
+ </dl>
+ </dd>
 </dl>
 
 <h3 id="valeur_retournée">valeur retournée</h3>
