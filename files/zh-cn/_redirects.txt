@@ -461,9 +461,6 @@
 /zh-CN/docs/DOM/window.navigator.language	/zh-CN/docs/orphaned/Web/API/NavigatorLanguage/language
 /zh-CN/docs/DOM/window.navigator.onLine	/zh-CN/docs/orphaned/Web/API/NavigatorOnLine/onLine
 /zh-CN/docs/DOM/window.navigator.oscpu	/zh-CN/docs/Web/API/Navigator/oscpu
-/zh-CN/docs/DOM/window.navigator.platform	/zh-CN/docs/Web/API/NavigatorID/platform
-/zh-CN/docs/DOM/window.navigator.plugins	/zh-CN/docs/Web/API/NavigatorPlugins/plugins
-/zh-CN/docs/DOM/window.navigator.userAgent	/zh-CN/docs/Web/API/NavigatorID/userAgent
 /zh-CN/docs/DOM/window.navigator.vendor	/zh-CN/docs/Web/API/Navigator/vendor
 /zh-CN/docs/DOM/window.navigator.vendorSub	/zh-CN/docs/Web/API/Navigator/vendorSub
 /zh-CN/docs/DOM/window.onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
@@ -523,7 +520,6 @@
 /zh-CN/docs/Document_Object_Model_(DOM)/window.onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
 /zh-CN/docs/Download_Mozilla_Source_Code	/en-US/docs/Mozilla/Developer_guide/Source_Code/Downloading_Source_Archives
 /zh-CN/docs/Enumerability_and_ownership_of_properties	/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
-/zh-CN/docs/Extension_Frequently_Asked_Questions	/zh-CN/docs/Mozilla/add-ons/Extension_Frequently_Asked_Questions_move
 /zh-CN/docs/Firefox_12_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/12
 /zh-CN/docs/Firefox_14_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/14
 /zh-CN/docs/Firefox_15_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/15
@@ -1380,8 +1376,6 @@
 /zh-CN/docs/Web/API/HTMLElement.offsetTop	/zh-CN/docs/Web/API/HTMLElement/offsetTop
 /zh-CN/docs/Web/API/HTMLElement.offsetWidth	/zh-CN/docs/Web/API/HTMLElement/offsetWidth
 /zh-CN/docs/Web/API/HTMLElement.title	/zh-CN/docs/Web/API/HTMLElement/title
-/zh-CN/docs/Web/API/HTMLElement/blur	/zh-CN/docs/Web/API/HTMLOrForeignElement/blur
-/zh-CN/docs/Web/API/HTMLElement/focus	/zh-CN/docs/Web/API/HTMLOrForeignElement/focus
 /zh-CN/docs/Web/API/HTMLFormElement.elements	/zh-CN/docs/Web/API/HTMLFormElement/elements
 /zh-CN/docs/Web/API/HTMLFormElement.reset	/zh-CN/docs/Web/API/HTMLFormElement/reset
 /zh-CN/docs/Web/API/HTMLFormElement.submit	/zh-CN/docs/Web/API/HTMLFormElement/submit
@@ -1410,16 +1404,6 @@
 /zh-CN/docs/Web/API/Navigator.vendorSub	/zh-CN/docs/Web/API/Navigator/vendorSub
 /zh-CN/docs/Web/API/NavigatorGeolocation.geolocation	/zh-CN/docs/Web/API/Navigator/geolocation
 /zh-CN/docs/Web/API/NavigatorGeolocation/geolocation	/zh-CN/docs/Web/API/Navigator/geolocation
-/zh-CN/docs/Web/API/NavigatorID.appCodeName	/zh-CN/docs/Web/API/NavigatorID/appCodeName
-/zh-CN/docs/Web/API/NavigatorID.appName	/zh-CN/docs/Web/API/NavigatorID/appName
-/zh-CN/docs/Web/API/NavigatorID.appVersion	/zh-CN/docs/Web/API/NavigatorID/appVersion
-/zh-CN/docs/Web/API/NavigatorID.platform	/zh-CN/docs/Web/API/NavigatorID/platform
-/zh-CN/docs/Web/API/NavigatorID.product	/zh-CN/docs/Web/API/NavigatorID/product
-/zh-CN/docs/Web/API/NavigatorID.userAgent	/zh-CN/docs/Web/API/NavigatorID/userAgent
-/zh-CN/docs/Web/API/NavigatorLanguage.language	/zh-CN/docs/Web/API/NavigatorLanguage/language
-/zh-CN/docs/Web/API/NavigatorOnLine.onLine	/zh-CN/docs/Web/API/NavigatorOnLine/onLine
-/zh-CN/docs/Web/API/NavigatorPlugins.javaEnabled	/zh-CN/docs/Web/API/NavigatorPlugins/javaEnabled
-/zh-CN/docs/Web/API/NavigatorPlugins.plugins	/zh-CN/docs/Web/API/NavigatorPlugins/plugins
 /zh-CN/docs/Web/API/Node.appendChild	/zh-CN/docs/Web/API/Node/appendChild
 /zh-CN/docs/Web/API/Node.attributes	/zh-CN/docs/Web/API/Element/attributes
 /zh-CN/docs/Web/API/Node.baseURI	/zh-CN/docs/Web/API/Node/baseURI
