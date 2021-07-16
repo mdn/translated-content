@@ -1,0 +1,40 @@
+---
+title: Worker.onerror
+slug: Web/API/Worker/onerror
+tags:
+  - API
+  - Worker
+  - EventHandler
+  - Property
+  - Reference
+  - Web Workers
+  - Workers
+  - onerror
+browser-compat: api.Worker.onerror
+translation_of: Web/API/Worker/onerror
+---
+<div>{{APIRef("Web Workers API")}}</div>
+
+<p><code><strong>onerror</strong></code> は {{domxref("Worker")}} インターフェイスのプロパティで、 <a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー</a>を表し、 {{event("error")}} イベントが発行されたときに呼び出される関数を表します。</p>
+
+<h2 id="Syntax">構文</h2>
+
+<pre class="brush: js">myWorker.onerror = function(event) { ... };</pre>
+
+<h2 id="Example">例</h2>
+
+<p>以下の例では {{domxref("Worker")}} オブジェクトを {{domxref("Worker.Worker", "Worker()")}} コンストラクターを使用して生成し、結果のオブジェクトに <code>onerror</code> ハンドラーを設定しています。</p>
+
+<pre class="brush: js">var myWorker = new Worker('worker.js');
+
+  myWorker.onerror = function(event) {
+    console.log('There is an error with your worker!');
+}</pre>
+
+<h2 id="Specifications">仕様書</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat}}</p>
