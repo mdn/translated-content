@@ -12,18 +12,18 @@ translation_of: Web/Houdini
 
 <h2 id="Houdini_的优点">Houdini 的优点</h2>
 
-<p>当样式改变时Houdini相比JavaScript<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/ElementCSSInlineStyle/style">.style</a> 的方式能够能够更快的解析。  浏览器在应用脚本中发现的任何样式更新之前，会对CSSOM进行解析--包括布局、绘制和合成过程。此外，对于JavaScript样式更新，布局、绘制和复合过程也会重复进行。Houdini代码不会等待第一个渲染周期完成。相反，它被包含在第一个周期中--创建可渲染的、可理解的样式。Houdini为在JavaScript中使用CSS值提供了一个基于对象的API。</p>
+<p>当样式改变时Houdini相比JavaScript<a href="/zh-CN/docs/Web/API/ElementCSSInlineStyle/style">.style</a> 的方式能够能够更快的解析。  浏览器在应用脚本中发现的任何样式更新之前，会对CSSOM进行解析--包括布局、绘制和合成过程。此外，对于JavaScript样式更新，布局、绘制和复合过程也会重复进行。Houdini代码不会等待第一个渲染周期完成。相反，它被包含在第一个周期中--创建可渲染的、可理解的样式。Houdini为在JavaScript中使用CSS值提供了一个基于对象的API。</p>
 
-<p>Houdini 的 CSS Typed OM 是一个包含类型和方法的 CSS 对象、并且暴露出了作为 JavaScript 对象的值。比起先前基于字符串的，对  <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style">HTMLElement.style</a></code> 进行操作的方案，对 JavaScript 对象进行操作更符合直觉。每个元素和样式表规则都拥有一个样式对应表，该对应表可以通过  <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/StylePropertyMap">StylePropertyMap</a></code> 来获得。</p>
+<p>Houdini 的 CSS Typed OM 是一个包含类型和方法的 CSS 对象、并且暴露出了作为 JavaScript 对象的值。比起先前基于字符串的，对  <code><a href="/zh-CN/docs/Web/API/HTMLElement/style">HTMLElement.style</a></code> 进行操作的方案，对 JavaScript 对象进行操作更符合直觉。每个元素和样式表规则都拥有一个样式对应表，该对应表可以通过  <code><a href="/zh-CN/docs/Web/API/StylePropertyMap">StylePropertyMap</a></code> 来获得。</p>
 
-<p>一个 CSS Houdini 的特性就是  <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Worklet">Worklet</a>。在它的帮助下，你可以通过引入一行 JavaScript 代码来引入配置化的组件，从而创建模块式的 CSS。不依赖任何前置处理器、后置处理器或者 JavaScript 框架。</p>
+<p>一个 CSS Houdini 的特性就是  <a href="/zh-CN/docs/Web/API/Worklet">Worklet</a>。在它的帮助下，你可以通过引入一行 JavaScript 代码来引入配置化的组件，从而创建模块式的 CSS。不依赖任何前置处理器、后置处理器或者 JavaScript 框架。</p>
 
 <pre class="brush: js notranslate">&lt;script&gt;
   CSS.paintWorklet.addModule('csscomponent.js');
 &lt;/script&gt;
 </pre>
 
-<p>以上添加进的模块包含一个  <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code>函数，这个模块是完全通过可配置的 worklets 来注册的。</p>
+<p>以上添加进的模块包含一个  <code><a href="/zh-CN/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code>函数，这个模块是完全通过可配置的 worklets 来注册的。</p>
 
 <p>这个 CSS  <code>paint()</code>  函数的参数包括 worklet 的名字，以及其他可选的参数。worklet 同时能够访问元素的自定义属性：它们不需要作为函数参数传递。</p>
 

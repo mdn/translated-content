@@ -107,7 +107,7 @@ translation_of: Web/HTML/Element/input/hidden
 
 <p>隐藏输入表单还用于存储和提交安全令牌或机密信息，以提高网站的安全性。基本思路是，如果用户填写敏感表格，例如在其银行网站上将某笔款项转入另一个帐户的表格，他们将被提供的密钥和证明他们就是他们所说的真实身份，并且他们使用正确的表单来提交转移请求。</p>
 
-<p>这将阻止恶意用户创建伪造的表单，伪装成银行，然后通过电子邮件将表单发送给毫无戒备心的用户，以诱骗他们将钱转入错误的位置。 这种攻击称为<a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security#Cross-Site_Request_Forgery_(CSRF)">跨站点请求伪造（CSRF）</a>；几乎任何信誉良好的服务器端框架都使用隐藏机密来防止此类攻击。</p>
+<p>这将阻止恶意用户创建伪造的表单，伪装成银行，然后通过电子邮件将表单发送给毫无戒备心的用户，以诱骗他们将钱转入错误的位置。 这种攻击称为<a href="/zh-CN/docs/Learn/Server-side/First_steps/Website_security#Cross-Site_Request_Forgery_(CSRF)">跨站点请求伪造（CSRF）</a>；几乎任何信誉良好的服务器端框架都使用隐藏机密来防止此类攻击。</p>
 
 <div class="note">
 <p>如前所述，将密钥放置在隐藏的输入中并不能使其固有安全性。 密钥的组成和编码已经可以做到这一点。隐藏输入的值是保持它与数据关联性，并在将表单发送到服务器时自动将其包含在内。 您需要使用精心设计的密钥来真正保护您的网站。</p>
