@@ -2909,7 +2909,7 @@
 /ja/docs/JavaScript/Reference/Operators/Bitwise_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/JavaScript/Reference/Operators/Comma_Operator	/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /ja/docs/JavaScript/Reference/Operators/Comma_Operator-redirect-1	/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator
-/ja/docs/JavaScript/Reference/Operators/Comparison_Operators	/ja/docs/conflicting/Web/JavaScript/Reference/Operators
+/ja/docs/JavaScript/Reference/Operators/Comparison_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/JavaScript/Reference/Operators/Conditional_Operator	/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 /ja/docs/JavaScript/Reference/Operators/Logical_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/JavaScript/Reference/Operators/Member_Operators	/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors
@@ -4813,7 +4813,7 @@
 /ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Reference/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Reference/Operators#Assignment_operators
 /ja/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators	/ja/docs/Web/JavaScript/Reference/Operators
-/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/ja/docs/conflicting/Web/JavaScript/Reference/Operators
+/ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Reference/Operators/Member_Operators	/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors
 /ja/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/ja/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
@@ -5409,7 +5409,7 @@
 /ja/docs/dummySlug/Reference/Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/dummySlug/Reference/Operators/Assignment_Operators	/ja/docs/Web/JavaScript/Reference/Operators#Assignment_operators
 /ja/docs/dummySlug/Reference/Operators/Comma_Operator	/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator
-/ja/docs/dummySlug/Reference/Operators/Comparison_Operators	/ja/docs/conflicting/Web/JavaScript/Reference/Operators
+/ja/docs/dummySlug/Reference/Operators/Comparison_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/dummySlug/Reference/Operators/Logical_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/dummySlug/Reference/Operators/Member_Operators	/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors
 /ja/docs/dummySlug/Reference/Operators/Operator_Precedence	/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
