@@ -362,7 +362,6 @@
 /zh-CN/docs/DOM/element	/zh-CN/docs/Web/API/element
 /zh-CN/docs/DOM/element.addEventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
 /zh-CN/docs/DOM/element.attributes	/zh-CN/docs/Web/API/Element/attributes
-/zh-CN/docs/DOM/element.blur	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /zh-CN/docs/DOM/element.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/DOM/element.childNodes	/zh-CN/docs/Web/API/Node/childNodes
 /zh-CN/docs/DOM/element.classList	/zh-CN/docs/Web/API/Element/classList
@@ -375,7 +374,6 @@
 /zh-CN/docs/DOM/element.cloneNode	/zh-CN/docs/Web/API/Node/cloneNode
 /zh-CN/docs/DOM/element.contentEditable	/zh-CN/docs/Web/API/HTMLElement/contentEditable
 /zh-CN/docs/DOM/element.dir	/zh-CN/docs/Web/API/HTMLElement/dir
-/zh-CN/docs/DOM/element.focus	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /zh-CN/docs/DOM/element.getElementsByTagName	/zh-CN/docs/Web/API/Element/getElementsByTagName
 /zh-CN/docs/DOM/element.hasAttributes	/zh-CN/docs/Web/API/Element/hasAttributes
 /zh-CN/docs/DOM/element.hasChildNodes	/zh-CN/docs/Web/API/Node/hasChildNodes
@@ -450,16 +448,10 @@
 /zh-CN/docs/DOM/window.moveTo	/zh-CN/docs/Web/API/Window/moveTo
 /zh-CN/docs/DOM/window.mozAnimationStartTime	/zh-CN/docs/Web/API/Window/mozAnimationStartTIme
 /zh-CN/docs/DOM/window.navigator	/zh-CN/docs/Web/API/Window/navigator
-/zh-CN/docs/DOM/window.navigator.appCodeName	/zh-CN/docs/orphaned/Web/API/NavigatorID/appCodeName
-/zh-CN/docs/DOM/window.navigator.appName	/zh-CN/docs/orphaned/Web/API/NavigatorID/appName
-/zh-CN/docs/DOM/window.navigator.appVersion	/zh-CN/docs/orphaned/Web/API/NavigatorID/appVersion
 /zh-CN/docs/DOM/window.navigator.battery	/zh-CN/docs/Web/API/Navigator/battery
 /zh-CN/docs/DOM/window.navigator.buildID	/zh-CN/docs/Web/API/Navigator/buildID
 /zh-CN/docs/DOM/window.navigator.cookieEnabled	/zh-CN/docs/Web/API/Navigator/cookieEnabled
 /zh-CN/docs/DOM/window.navigator.isLocallyAvailable	/zh-CN/docs/Web/API/Navigator/mozIsLocallyAvailable
-/zh-CN/docs/DOM/window.navigator.javaEnabled	/zh-CN/docs/orphaned/Web/API/NavigatorPlugins/javaEnabled
-/zh-CN/docs/DOM/window.navigator.language	/zh-CN/docs/orphaned/Web/API/NavigatorLanguage/language
-/zh-CN/docs/DOM/window.navigator.onLine	/zh-CN/docs/orphaned/Web/API/NavigatorOnLine/onLine
 /zh-CN/docs/DOM/window.navigator.oscpu	/zh-CN/docs/Web/API/Navigator/oscpu
 /zh-CN/docs/DOM/window.navigator.vendor	/zh-CN/docs/Web/API/Navigator/vendor
 /zh-CN/docs/DOM/window.navigator.vendorSub	/zh-CN/docs/Web/API/Navigator/vendorSub
@@ -1171,7 +1163,6 @@
 /zh-CN/docs/Mozilla_event_reference/transitionend	/zh-CN/docs/Web/API/HTMLElement/transitionend_event
 /zh-CN/docs/Mozilla_event_reference/unload	/zh-CN/docs/Web/API/Window/unload_event
 /zh-CN/docs/Mozilla_event_reference/visibilitychange	/zh-CN/docs/Web/API/Document/visibilitychange_event
-/zh-CN/docs/Online_and_offline_events	/zh-CN/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
 /zh-CN/docs/Other_JavaScript_tools	/zh-CN/docs/Tools
 /zh-CN/docs/Rich-Text_Editing_in_Mozilla	/zh-CN/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 /zh-CN/docs/SVG	/zh-CN/docs/Web/SVG
@@ -1336,7 +1327,6 @@
 /zh-CN/docs/Web/API/File.name	/zh-CN/docs/Web/API/File/name
 /zh-CN/docs/Web/API/FileReader/中止事件(abort)	/zh-CN/docs/Web/API/FileReader/abort_event
 /zh-CN/docs/Web/API/FormData/删除	/zh-CN/docs/Web/API/FormData/delete
-/zh-CN/docs/Web/API/FullscreenOptions	/zh-CN/docs/orphaned/Web/API/FullscreenOptions
 /zh-CN/docs/Web/API/Fullscreen_API/指南	/zh-CN/docs/Web/API/Fullscreen_API/Guide
 /zh-CN/docs/Web/API/Geolocation/Using_geolocation	/zh-CN/docs/Web/API/Geolocation_API
 /zh-CN/docs/Web/API/GeolocationPosition/获取该位置时的时间戳	/zh-CN/docs/Web/API/GeolocationPosition/timestamp
@@ -1364,11 +1354,9 @@
 /zh-CN/docs/Web/API/GlobalFetch/fetch	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 /zh-CN/docs/Web/API/HTMLAnchorElement/referrer	/zh-CN/docs/Web/API/HTMLAnchorElement/referrerPolicy
 /zh-CN/docs/Web/API/HTMLCanvasElement/捕获流	/zh-CN/docs/Web/API/HTMLCanvasElement/captureStream
-/zh-CN/docs/Web/API/HTMLElement.blur	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/blur
 /zh-CN/docs/Web/API/HTMLElement.click	/zh-CN/docs/Web/API/HTMLElement/click
 /zh-CN/docs/Web/API/HTMLElement.contentEditable	/zh-CN/docs/Web/API/HTMLElement/contentEditable
 /zh-CN/docs/Web/API/HTMLElement.dir	/zh-CN/docs/Web/API/HTMLElement/dir
-/zh-CN/docs/Web/API/HTMLElement.focus	/zh-CN/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /zh-CN/docs/Web/API/HTMLElement.isContentEditable	/zh-CN/docs/Web/API/HTMLElement/isContentEditable
 /zh-CN/docs/Web/API/HTMLElement.lang	/zh-CN/docs/Web/API/HTMLElement/lang
 /zh-CN/docs/Web/API/HTMLElement.offsetLeft	/zh-CN/docs/Web/API/HTMLElement/offsetLeft
@@ -1576,7 +1564,6 @@
 /zh-CN/docs/Web/API/WindowBase64/btoa	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/btoa
 /zh-CN/docs/Web/API/WindowTimers	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope
 /zh-CN/docs/Web/API/WindowTimers/clearTimeout	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout
-/zh-CN/docs/Web/API/XDomainRequest	/zh-CN/docs/orphaned/Web/API/XDomainRequest
 /zh-CN/docs/Web/API/XMLDocument.load	/zh-CN/docs/Web/API/XMLDocument/load
 /zh-CN/docs/Web/API/XMLHttpRequest/FormData	/zh-CN/docs/Web/API/FormData
 /zh-CN/docs/Web/API/console.dir	/zh-CN/docs/Web/API/Console/dir
@@ -1970,7 +1957,6 @@
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/require-sri-for	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/sandbox	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/upgrade-insecure-requests	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
-/zh-CN/docs/Web/HTTP/Headers/Index	/zh-CN/docs/orphaned/Web/HTTP/Headers/Index
 /zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /zh-CN/docs/Web/HTTP/Response_codes	/zh-CN/docs/Web/HTTP/Status
 /zh-CN/docs/Web/HTTP/Response_codes/100	/zh-CN/docs/Web/HTTP/Status/100
