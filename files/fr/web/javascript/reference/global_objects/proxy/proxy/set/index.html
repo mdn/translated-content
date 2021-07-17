@@ -36,8 +36,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/set
  <dt><code>valeur</code></dt>
  <dd>La nouvelle valeur à définir pour la propriété.</dd>
  <dt><code>récepteur</code></dt>
- <dd>L'objet intialement visé par l'affectation. Généralement ce sera le proxy lui-même. Le gestionnaire <code>set</code> peut également être appelé indirectement, via la chaîne de prototypes ou d'autres façons.</dd>
- <dd>Par exemple, si on exécute l'instruction <code>obj.nom = "Jean"</code>, et qu'<code>obj</code> n'est pas un proxy ni ne possède de propriété <code>nom</code> mais s'il possède un proxy dans sa chaîne de prototypes, le gestionnaire <code>set</code> sera appelé et <code>obj</code> sera passé en tant que récepteur.</dd>
+ <dd>L'objet intialement visé par l'affectation. Généralement ce sera le proxy lui-même. Le gestionnaire <code>set</code> peut également être appelé indirectement, via la chaîne de prototypes ou d'autres façons. Par exemple, si on exécute l'instruction <code>obj.nom = "Jean"</code>, et qu'<code>obj</code> n'est pas un proxy ni ne possède de propriété <code>nom</code> mais s'il possède un proxy dans sa chaîne de prototypes, le gestionnaire <code>set</code> sera appelé et <code>obj</code> sera passé en tant que récepteur.</dd>
 </dl>
 
 <h3 id="Valeur_de_retour">Valeur de retour</h3>

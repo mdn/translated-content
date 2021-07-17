@@ -71,8 +71,7 @@ p.sum(); // Pair.prototype.sum</pre>
 
 <dl>
  <dt>La forme de l'objet <em>final</em> qui contient la propriété héritée peut être vérifiée.</dt>
- <dd>Dans ce cas, si on teste les formes, cela implique qu'aucun prototype n'a été modifié sur la chaîne. Ainsi, lorsqu'un prototype est modifié, les formes de tous les objets situés sur le long de la chaîne doivent être changées.</dd>
- <dd>
+ <dd>Dans ce cas, si on teste les formes, cela implique qu'aucun prototype n'a été modifié sur la chaîne. Ainsi, lorsqu'un prototype est modifié, les formes de tous les objets situés sur le long de la chaîne doivent être changées.
  <pre class="brush: js">var obj1 = {};
 var obj2 = Object.create(obj1);
 var obj3 = Object.create(obj2);
@@ -82,8 +81,7 @@ var obj3 = Object.create(obj2);
 obj3.__proto__ = {};</pre>
  </dd>
  <dt>La forme de l'objet initial peut être vérifiée.</dt>
- <dd>Chaque objet qui peut hériter d'une propriété via un prototype modifié doit être modifié afin de refléter ces changements.</dd>
- <dd>
+ <dd>Chaque objet qui peut hériter d'une propriété via un prototype modifié doit être modifié afin de refléter ces changements. 
  <pre class="brush: js">var obj1 = {};
 var obj2 = Object.create(obj1);
 var obj3 = Object.create(obj2);
