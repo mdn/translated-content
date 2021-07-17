@@ -56,7 +56,7 @@ translation_of: Web/API/HTMLMediaElement/play
 <p><strong>注意：</strong><code>play()</code> 方法可能会让用户被询问是否给予播放媒体的权限，这可能会使返回的 promise 延迟解决。你应该确保你的代码不需要即时响应。</p>
 </div>
 
-<p>关于自动播放和禁止自动播放的更多深度内容，参见我们的文章 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a>。</p>
+<p>关于自动播放和禁止自动播放的更多深度内容，参见我们的文章 <a href="/zh-CN/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a>。</p>
 
 <h2 id="示例">示例</h2>
 
@@ -86,7 +86,7 @@ function handlePlayButton() {
   }
 }</pre>
 
-<p>在这个例子中，视频的播放由 <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code> <code>playVideo()</code> 函数控制。函数尝试播放视频，如果播放成功，将 <code>playButton</code> 元素的类名称设为 <code>"playing"</code>。如果播放失败，去除 <code>playButton</code> 元素的类名称，恢复其原来的样式。通过监视 <code>play()</code> 返回的 {{jsxref("Promise")}} 是被解决还是被拒绝以保证播放按钮的外观与实际的播放状态相匹配。</p>
+<p>在这个例子中，视频的播放由 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function">async</a></code> <code>playVideo()</code> 函数控制。函数尝试播放视频，如果播放成功，将 <code>playButton</code> 元素的类名称设为 <code>"playing"</code>。如果播放失败，去除 <code>playButton</code> 元素的类名称，恢复其原来的样式。通过监视 <code>play()</code> 返回的 {{jsxref("Promise")}} 是被解决还是被拒绝以保证播放按钮的外观与实际的播放状态相匹配。</p>
 
 <p>上述代码开始执行时，先获取 {{HTMLElement("video")}} 元素和用于切换播放、暂停的 {{HTMLElement("button")}} 元素的引用。在切换按钮上添加 {{event("click")}} 事件的处理程序。最后调用 <code>playVideo()</code> 尝试自动开始播放。</p>
 
@@ -125,10 +125,10 @@ function handlePlayButton() {
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Media">Web media technologies</a></li>
- <li>Learning: <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/zh-CN/docs/Web/Media">Web media technologies</a></li>
+ <li>Learning: <a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
+ <li><a href="/zh-CN/docs/Web/Media/Autoplay_guide">Autoplay guide for media and Web Audio APIs</a></li>
+ <li><a href="/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
 </ul>
 
 <div id="compat-mobile"></div>

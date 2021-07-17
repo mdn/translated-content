@@ -16,7 +16,7 @@ translation_of: Web/API/Touch/target
 
 <h2 id="Summary" name="Summary">概述</h2>
 
-<p>这个属性返回触摸点最初接触的 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/API/Element"><code>Element</code></a>，即使这个触摸点已经移出那个元素的交互区域，甚至移出文档。需要注意的是，如果这个元素在触摸过程中被移除，这个事件仍然会指向它，因此这个事件也不会冒泡到 <code>window</code> 或 <code>document</code> 对象。因此，如果有元素在触摸过程中可能被移除，最佳实践是将触摸事件的监听器绑定到这个元素本身，防止元素被移除后，无法再从它的上一级元素上侦测到从该元素冒泡的事件。</p>
+<p>这个属性返回触摸点最初接触的 <a href="/zh-CN/docs/Web/API/Element"><code>Element</code></a>，即使这个触摸点已经移出那个元素的交互区域，甚至移出文档。需要注意的是，如果这个元素在触摸过程中被移除，这个事件仍然会指向它，因此这个事件也不会冒泡到 <code>window</code> 或 <code>document</code> 对象。因此，如果有元素在触摸过程中可能被移除，最佳实践是将触摸事件的监听器绑定到这个元素本身，防止元素被移除后，无法再从它的上一级元素上侦测到从该元素冒泡的事件。</p>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
 
