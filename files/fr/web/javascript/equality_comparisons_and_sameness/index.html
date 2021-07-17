@@ -439,46 +439,16 @@ function attemptMutation(v) {
 
 <dl>
  <dt><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Négation_unaire"><code>-</code> (négation unaire)</a></dt>
-</dl>
-
-<dl>
  <dd>
  <p>Si on prend l'opposé de <code>0</code>, on aura, bien entendu,<code>-0</code>. Cependant, avec les expressions, cela peut faire que la valeur <code>-0</code> se glisse dans les variables sans qu'on s'en rende compte. Par exemple :</p>
-
  <pre class="brush:js">let forceArrêt = obj.masse * -obj.vitesse</pre>
-
  <p>Si <code>obj.vitesse</code> vaut <code>0</code> (ou est évalué à <code>0</code>), un <code>-0</code> sera introduit, ce qui fera que <code>forceArrêt</code> pourra être négative.</p>
  </dd>
-</dl>
-
-<dl>
- <dt>{{jsxref("Math.atan2")}}<br>
- {{jsxref("Math.ceil")}}<br>
- {{jsxref("Math.pow")}}<br>
- {{jsxref("Math.round")}}</dt>
-</dl>
-
-<dl>
+ <dt>{{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}</dt>
  <dd>Ces méthodes peuvent introduire <code>-0</code> dans une expression lors de leur évaluation, même si <code>-0</code> ne faisait pas partie des paramètres. Par exemple, si on utilise <code>Math.pow()</code> pour élever {{jsxref("Infinity", "-Infinity")}} à une puissance négative, on obtiendra <code>-0</code> pour une puissance impaire. Pour plus de détails, voir la documentation de chaque méthode.</dd>
-</dl>
-
-<dl>
- <dt>{{jsxref("Math.floor")}}<br>
- {{jsxref("Math.max")}}<br>
- {{jsxref("Math.min")}}<br>
- {{jsxref("Math.sin")}}<br>
- {{jsxref("Math.sqrt")}}<br>
- {{jsxref("Math.tan")}}</dt>
-</dl>
-
-<dl>
+ <dt>{{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}</dt>
  <dd>Ces méthodes peuvent renvoyer <code>-0</code> dans certains cas où <code>-0</code> est passé en paramètre. Par exemple, <code>Math.min(-0, +0)</code> fournira <code>-0</code>. Pour plus de détails, voir la documentation de chaque méthode.</dd>
-</dl>
-
-<dl>
- <dt><code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.7E_.28NON_binaire.29">~</a></code></dt>
- <dt><code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.3C.3C_.28d.C3.A9calage_.C3.A0_gauche.29">&lt;&lt;</a></code></dt>
- <dt><code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.3E.3E_.28d.C3.A9calage_.C3.A0_droite_avec_propagation_du_signe.29">&gt;&gt;</a></code></dt>
+ <dt><code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.7E_.28NON_binaire.29">~</a></code>, <code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.3C.3C_.28d.C3.A9calage_.C3.A0_gauche.29">&lt;&lt;</a></code>, <code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.3E.3E_.28d.C3.A9calage_.C3.A0_droite_avec_propagation_du_signe.29">&gt;&gt;</a></code></dt>
  <dd>Chacun de ces opérateurs utilise l'algorithme ToInt32 interne au moteur JavaScript. Étant donné qu'il n'y a qu'une seule représentation pour 0 sur les entiers exprimés avec le type interne sur 32 bits, <code>-0</code> ne sera pas invariant pour deux opérations symétriques : <code>Object.is(~~(-0), -0)</code> et <code>Object.is(-0 &lt;&lt; 2 &gt;&gt; 2, -0)</code> renverront tous les deux <code>false</code>.</dd>
 </dl>
 

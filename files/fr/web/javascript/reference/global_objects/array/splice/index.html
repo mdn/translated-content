@@ -28,16 +28,10 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/splice
  <dd>L'indice à partir duquel commencer à changer le tableau (l'indice du premier élement étant <code>0</code>).</dd>
  <dd>Si sa valeur est supérieure à la longueur du tableau <code><var>array</var>.length</code>, <code>début</code> est ramené à la longueur du tableau <code><var>array</var>.length</code>.</dd>
  <dd>S'il est négatif, le changement commencera d'autant d'éléments à partir de la fin du tableau, c'est à dire à partir de l'index  <code><var>array</var>.length + <var>début</var></code>. Si <code><var>array</var>.length + <var>début</var></code> est inférieur à <code>0</code>, le changement commencera à l'index <code>0</code>.</dd>
-</dl>
-
-<dl>
  <dt><code>nbASupprimer</code></dt>
  <dd>Un entier indiquant le nombre d'anciens éléments à remplacer.<br>
  Si ce paramètre est absent ou si sa valeur est supérieure ou égale à <code>array.length - début</code>, alors les éléments entre <code>début</code> et la fin du tableau seront supprimés.</dd>
  <dd>Si <code>nbASupprimer</code> vaut 0, aucun élément ne sera supprimé. Dans ce cas, il est nécessaire de spécifier au moins un nouvel élément.</dd>
-</dl>
-
-<dl>
  <dt><code>élemN</code></dt>
  <dd>Les éléments à ajouter au tableau à partir de <code>début</code>. Si vous ne spécifiez pas de nouvel élément, les anciens éléments seront simplement supprimés du tableau.</dd>
 </dl>

@@ -76,14 +76,8 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Promise
  <dd>Attend que l'ensemble des promesses aient été acquittées (tenues ou rompues) et renvoie une promesse qui est résolue après que chaque promesse ait été tenue ou rompue. La valeur de résolution de la promesse renvoyée est un tableau dont chaque élément est le résultat des promesses initiales.</dd>
  <dt>{{jsxref("Promise.race", "Promise.race(iterable)")}}</dt>
  <dd>Renvoie une promesse qui est tenue ou rompue dès que l'une des promesses de l'itérable est tenue ou rompue avec la valeur ou la raison correspondante.</dd>
-</dl>
-
-<dl>
  <dt>{{jsxref("Promise.reject", "Promise.reject(raison)")}}</dt>
  <dd>Renvoie un objet <code>Promise</code> qui est rompue avec la raison donnée.</dd>
-</dl>
-
-<dl>
  <dt>{{jsxref("Promise.resolve", "Promise.resolve(valeur)")}}</dt>
  <dd>Renvoie un objet <code>Promise</code> qui est tenue (résolue) avec la valeur donnée. Si la valeur possède une méthode <code>then</code>, la promesse renvoyée « suivra » cette méthode pour arriver dans son état, sinon la promesse renvoyée sera tenue avec la valeur fournie. Généralement, quand on veut savoir si une valeur est une promesse, on utilisera {{jsxref("Promise.resolve","Promise.resolve(valeur)")}} et on travaillera avec la valeur de retour en tant que promesse.</dd>
 </dl>
