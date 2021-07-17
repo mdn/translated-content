@@ -80,7 +80,7 @@ console.log('Voici le Premier truc du mois.'.match(regex)); // null
 
 <h3 id="Assertion_avant_négative">Assertion avant négative</h3>
 
-<p>L'expression rationnelle <code style="font-size: 1rem; letter-spacing: -0.00278rem;">/\d+(?!\.)/</code><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> permettra de rechercher plusieurs chiffres si ceux-ci ne sont pas suivis d'un point décimal. Ainsi, </span><code>/\d+(?!\.)/.exec('3.141')</code> trouvera la sous-chaîne "141" mais pas "3."</p>
+<p>L'expression rationnelle <code>/\d+(?!\.)/</code> permettra de rechercher plusieurs chiffres si ceux-ci ne sont pas suivis d'un point décimal. Ainsi, <code>/\d+(?!\.)/.exec('3.141')</code> trouvera la sous-chaîne "141" mais pas "3."</p>
 
 <pre class="brush: js">console.log(/\d+(?!\.)/g.exec('3.141')); // [ '141', index: 2, input: '3.141' ]
 </pre>

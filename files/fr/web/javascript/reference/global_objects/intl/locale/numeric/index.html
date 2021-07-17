@@ -31,7 +31,7 @@ console.log(numericStr.numeric);
 
 <h3 id="Définir_numeric_via_lobjet_de_configuration_de_linstance">Définir <code>numeric</code> via l'objet de configuration de l'instance</h3>
 
-<p>Le constructeur <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale" title="The Intl.Locale constructor is a standard built-in property of the Intl object."><code>Intl.Locale</code></a> possède un deuxième argument, optionnel, qui est un objet permettant de configurer la locale. Les propriétés de cet objet sont utilisées comme extensions pour la locale ; les clés des propriétés sont les noms des extensions et leurs valeurs sont celles utilisées pour chaque extension. On peut donc utiliser la propriété <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">numeric</span></font> sur cet objet afin de définir le système de numération à utiliser pour cette locale.</p>
+<p>Le constructeur <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale" title="The Intl.Locale constructor is a standard built-in property of the Intl object."><code>Intl.Locale</code></a> possède un deuxième argument, optionnel, qui est un objet permettant de configurer la locale. Les propriétés de cet objet sont utilisées comme extensions pour la locale ; les clés des propriétés sont les noms des extensions et leurs valeurs sont celles utilisées pour chaque extension. On peut donc utiliser la propriété <code>numeric</code> sur cet objet afin de définir le système de numération à utiliser pour cette locale.</p>
 
 <pre class="brush: js">let numericViaObj= new Intl.Locale("en-Latn-US", {numeric: true});
 console.log(us12hour.numeric);

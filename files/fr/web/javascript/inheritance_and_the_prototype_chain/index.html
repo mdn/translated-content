@@ -380,17 +380,17 @@ console.log(g.__proto__.hasOwnProperty('ajoutSommet'));
 
 <p>Voici un tableau avec les quatre outils qui permettent d'étendre une chaîne de prototypes avec chacun leurs avantages et leurs inconvénients. Tous les exemples mentionnés permettent de créer le même objet <code>inst</code> (et affichant donc le même résultat dans la console) mais de façon différente.</p>
 
-<table class="standard-table" style="text-align: top;">
+<table class="standard-table">
  <tbody>
   <tr>
    <td style="width: 1%;">Nom</td>
-   <td style="vertical-align: top; width: 1%;">Exemples</td>
-   <td style="vertical-align: top;">Avantages</td>
+   <td>Exemples</td>
+   <td>Avantages</td>
    <td style="vertical-align: top; width: 60%;">Inconvénients</td>
   </tr>
   <tr>
    <td>Initialisation</td>
-   <td style="vertical-align: top;">
+   <td>
     <pre class="brush: js">
 function toto(){}
 toto.prototype = {
@@ -406,7 +406,7 @@ console.log(inst.truc_prop);
 </pre>
    </td>
    <td style="vertical-align: top;">Prise en charge par l'ensemble des navigateurs. Cette méthode est très rapide, standard et facilement optimisable.</td>
-   <td style="vertical-align: top;">
+   <td>
     <p>Afin d'utiliser cette méthode, il faut que la fonction ait été initialisée. Pendant cette initialisation, le constructeur peut enregistrer des informations uniques qui doivent être générées pour chaque objet.</p>
 
     <p>Toutefois, il est possible que ces informations uniques ne soient générées qu'une seule fois.</p>
@@ -454,7 +454,7 @@ var inst = new truc();
 console.log(inst.toto_prop);
 console.log(inst.truc_prop)</pre>
    </td>
-   <td style="vertical-align: top;">Prise en charge par la majorité des navigateurs actuels. Elle permet de définir directement <code>__proto__</code> en une seule fois et le navigateur peut mieux optimiser l'objet. Elle permet aussi de créer des objets sans prototype avec <code>Object.create(null)</code>.</td>
+   <td>Prise en charge par la majorité des navigateurs actuels. Elle permet de définir directement <code>__proto__</code> en une seule fois et le navigateur peut mieux optimiser l'objet. Elle permet aussi de créer des objets sans prototype avec <code>Object.create(null)</code>.</td>
    <td style="vertical-align: top;">
     <p>Cette méthode n'est pas prise en charge par IE8 et les versions antérieures. Toutefois, Microsoft ayant mis un terme au support des systèmes qui utilisent ces navigateurs, ce ne devrait pas être un problème pour la plupart des navigation.</p>
 
@@ -465,7 +465,7 @@ console.log(inst.truc_prop)</pre>
    <td>
     <p><code>Object.setPrototypeOf()</code></p>
    </td>
-   <td style="vertical-align: top;">
+   <td>
     <pre class="brush: js">
 function toto(){}
 toto.prototype = {
@@ -501,7 +501,7 @@ console.log(inst.toto_prop);
 console.log(inst.truc_prop)</pre>
    </td>
    <td style="vertical-align: top;">Prise en charge par l'ensemble des navigateurs actuels. Elle permet de manipuler dynamiquement le prototype d'un objet et également de rattacher un prototype à un objet qui n'aurait pas de prototype.</td>
-   <td style="vertical-align: top;">Cette méthode devrait être dépréciée et possède des performances faibles. En effet, les moteurs tenteront d'optimiser la connaissance de la structure du prototype et cette méthode viendra à l'enconte de ces hypothèses et certains navigateurs pourront même recompiler le code pour le faire fonctionner selon les spécifications. Cette méthode n'est pas prise en charge par IE8 et les versions antérieures.</td>
+   <td>Cette méthode devrait être dépréciée et possède des performances faibles. En effet, les moteurs tenteront d'optimiser la connaissance de la structure du prototype et cette méthode viendra à l'enconte de ces hypothèses et certains navigateurs pourront même recompiler le code pour le faire fonctionner selon les spécifications. Cette méthode n'est pas prise en charge par IE8 et les versions antérieures.</td>
   </tr>
   <tr>
    <td><code>__proto__</code></td>
@@ -535,8 +535,8 @@ var inst = {
 console.log(inst.toto_prop);
 console.log(inst.truc_prop)</pre>
    </td>
-   <td style="vertical-align: top;">Prise en charge par l'ensemble des navigateurs actuels (y compris IE11 et ultérieurs). Défiinir __proto__ sur quelque chose qui n'est pas un objet échouera silencieusement.</td>
-   <td style="vertical-align: top;">Cette méthode est dépréciée et n'est pas performante car les moteurs tentent d'optimiser les prototypes. Aussi, le modifier ainsi dynamiquement bloque ces optimisations et peut causer la recompilation du code pour qu'il fonctionne selon les spécifications. Cette méthode n'est pas prise en charge par IE10 et les versions antérieures.</td>
+   <td>Prise en charge par l'ensemble des navigateurs actuels (y compris IE11 et ultérieurs). Défiinir __proto__ sur quelque chose qui n'est pas un objet échouera silencieusement.</td>
+   <td>Cette méthode est dépréciée et n'est pas performante car les moteurs tentent d'optimiser les prototypes. Aussi, le modifier ainsi dynamiquement bloque ces optimisations et peut causer la recompilation du code pour qu'il fonctionne selon les spécifications. Cette méthode n'est pas prise en charge par IE10 et les versions antérieures.</td>
   </tr>
  </tbody>
 </table>
