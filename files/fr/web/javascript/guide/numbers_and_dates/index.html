@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Guide/Nombres_et_dates
 
 <p>Les nombres en JavaScript sont implémentés comme des <a href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">nombres sur 64 bits à précision double selon le format IEEE-754</a> qui est un standard pour la représentation des nombres flottants et qui permet d'avoir jusqu'à 16 chiffres significatifs. Le type numérique possède également trois valeurs spéciales symboliques : +{{jsxref("Infinity")}}, -{{jsxref("Infinity")}} et {{jsxref("NaN")}} (pour désigner une valeur qui n'est pas un nombre).</p>
 
-<p>Le format IEEE-754 permet de représenter des valeurs entre ±2<sup>−1022</sup> et ±2<sup>+1023</sup>, ce qui correspond à des valeurs entre ±10<sup>−308</sup> et ±10<sup>+308</sup> avec une précision sur 53 bits. Les nombres entiers compris sur l'intervalle ±2<sup>53 </sup>− 1 peuvent être représentés exactement.</p>
+<p>Le format IEEE-754 permet de représenter des valeurs entre ±2^−1022 et ±2^+1023, ce qui correspond à des valeurs entre ±10^−308 et ±10^+308 avec une précision sur 53 bits. Les nombres entiers compris sur l'intervalle ±2^53 − 1 peuvent être représentés exactement.</p>
 
 <p>Le type {{jsxref("BigInt")}} est une addition récente à JavaScript qui permet de représenter de grands entiers. Toutefois, il n'est pas possible de mélanger les <code>BigInt</code> et les nombres ({{jsxref("Number")}}) dans les mêmes opérations et on ne peut pas utiliser l'objet {{jsxref("Math")}} avec les valeurs <code>BigInt</code>.</p>
 
@@ -124,12 +124,12 @@ var pasUnNombre = Number.NaN;
   </tr>
   <tr>
    <td>{{jsxref("Number.MIN_SAFE_INTEGER")}}</td>
-   <td>Le plus petit entier qu'on puisse représenter en JavaScript. (−2<sup>53</sup> + 1 ou <code>−9007199254740991</code>)</td>
+   <td>Le plus petit entier qu'on puisse représenter en JavaScript. (−2^53 + 1 ou <code>−9007199254740991</code>)</td>
   </tr>
   <tr>
    <td>{{jsxref("Number.MAX_SAFE_INTEGER")}}</td>
    <td>
-    <p>L'entier le plus grand qu'on puisse représenter en JavaScript (+2<sup>53</sup> − 1 ou <code>+9007199254740991</code>)</p>
+    <p>L'entier le plus grand qu'on puisse représenter en JavaScript (+2^53 − 1 ou <code>+9007199254740991</code>)</p>
    </td>
   </tr>
  </tbody>

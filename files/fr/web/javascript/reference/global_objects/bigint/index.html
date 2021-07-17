@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>BigInt</code></strong> est un objet natif qui permet de représenter des nombres entiers supérieurs à 2<sup>53</sup> (la plus grande valeur entière qui puisse être représentée par le type primitif {{jsxref("Number")}}). <code>BigInt</code> peut être utilisé afin de représenter de grands entiers de n'importe quelle taille.</p>
+<p><strong><code>BigInt</code></strong> est un objet natif qui permet de représenter des nombres entiers supérieurs à 2^53 (la plus grande valeur entière qui puisse être représentée par le type primitif {{jsxref("Number")}}). <code>BigInt</code> peut être utilisé afin de représenter de grands entiers de n'importe quelle taille.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note :</strong> BigInt est actuellement une <strong>proposition de niveau 3</strong> pour la <a href="#Spécifications">spécification</a> ECMAScript.</p>
@@ -194,9 +194,9 @@ Boolean(12n)
 
 <dl>
  <dt><strong><code>BigInt.asIntN()</code></strong></dt>
- <dd>Écrète un objet <code>BigInt</code> pour obtenir un entier signé entre -2<sup>largeur-1</sup> et 2<sup>largeur-1</sup>-1</dd>
+ <dd>Écrète un objet <code>BigInt</code> pour obtenir un entier signé entre -2^(largeur-1) et 2^(largeur-1)-1</dd>
  <dt><code>BigInt.asUintN()</code></dt>
- <dd>Écrète un objet <code>BigInt</code> pour obtenir un entier non-signé entre 0 et 2<sup>largeur</sup>-1</dd>
+ <dd>Écrète un objet <code>BigInt</code> pour obtenir un entier non-signé entre 0 et 2^(largeur)-1</dd>
 </dl>
 
 <h2 id="Propriétés">Propriétés</h2>
@@ -218,7 +218,7 @@ Boolean(12n)
 
 <h3 id="Coercition_en_Number">Coercition en <code>Number</code></h3>
 
-<p>Lorsqu'on convertit une valeur <code>BigInt</code> en {{jsxref("Objets_globaux/Number","Number")}}, on perd en précision. Si on effectue des allers-retours entre ces deux types, on ne conservera pas la même valeur. Aussi, il est recommandé d'utiliser uniquement <code>BigInt</code> lorsque les valeurs qu'on manipule seront supérieures à 2<sup>53</sup> et qu'il ne sera pas nécessaire de passer d'un type à l'autre.</p>
+<p>Lorsqu'on convertit une valeur <code>BigInt</code> en {{jsxref("Objets_globaux/Number","Number")}}, on perd en précision. Si on effectue des allers-retours entre ces deux types, on ne conservera pas la même valeur. Aussi, il est recommandé d'utiliser uniquement <code>BigInt</code> lorsque les valeurs qu'on manipule seront supérieures à 2^53 et qu'il ne sera pas nécessaire de passer d'un type à l'autre.</p>
 
 <h3 id="Cryptographie">Cryptographie</h3>
 

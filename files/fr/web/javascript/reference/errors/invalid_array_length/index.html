@@ -27,11 +27,11 @@ RangeError: Invalid array buffer length (Chrome)
 <p>Deux cas de figures peuvent causer cette erreur :</p>
 
 <ul>
- <li>La création d'un tableau {{jsxref("Array")}} ou {{jsxref("ArrayBuffer")}} dont la longueur est négative ou supérieure ou égale à 2<sup>32</sup></li>
- <li>La modification de la propriété {{jsxref("Array.length")}} pour que celle-ci ait une valeur négative ou supérieure ou égale à 2<sup>32</sup>.</li>
+ <li>La création d'un tableau {{jsxref("Array")}} ou {{jsxref("ArrayBuffer")}} dont la longueur est négative ou supérieure ou égale à 2^32</li>
+ <li>La modification de la propriété {{jsxref("Array.length")}} pour que celle-ci ait une valeur négative ou supérieure ou égale à 2^32.</li>
 </ul>
 
-<p>Les tailles des objets <code>Array</code> et <code>ArrayBuffer</code> sont limitées car leurs longueurs (<code>length</code>) sont représentées par des entiers non-signés sur 32 bits. Ces valeurs sont donc nécessairement comprises dans l'intervalle allant de 0 à 2<sup>32</sup>-1.</p>
+<p>Les tailles des objets <code>Array</code> et <code>ArrayBuffer</code> sont limitées car leurs longueurs (<code>length</code>) sont représentées par des entiers non-signés sur 32 bits. Ces valeurs sont donc nécessairement comprises dans l'intervalle allant de 0 à 2^32-1.</p>
 
 <p>Si vous utilisez le constructeur pour <code>Array</code>, il est probable que vous souhaitiez utiliser la notation littérale plutôt que le constructeur. En effet, le premier argument de ce constructeur correspond à la longueur du tableau.</p>
 
