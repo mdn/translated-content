@@ -188,7 +188,7 @@ audioElement.addEventListener('ended', function() {
 });</pre>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: 気づいた方もいるかも知れませんが、音声を再生・停止する<code>play()</code> と <code>pause()</code> メソッドは Web Audio API の一部ではなく、 {{domxref("HTMLMediaElement")}} API の一部です。これらは異なりますが密接に関連しています。</p>
+<p><strong>Note</strong>: 気づいた方もいるかも知れませんが、音声を再生・停止する <code>play()</code> と <code>pause()</code> メソッドは Web Audio API の一部ではなく、 {{domxref("HTMLMediaElement")}} API の一部です。これらは異なりますが密接に関連しています。</p>
 </div>
 
 <p>次に、 {{domxref("BaseAudioContext.createGain")}} を使用して {{domxref("GainNode")}} オブジェクトを作成します。このオブジェクトを使用して音声全体の音量を調整し、スライダーの値が変更される度にオーディオグラフのゲイン（音量）の値を変更する別のイベントハンドラーを作成します。</p>
