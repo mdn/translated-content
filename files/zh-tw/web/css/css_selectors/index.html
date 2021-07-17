@@ -10,23 +10,23 @@ translation_of: Web/CSS/CSS_Selectors
 <h2 id="基本選擇器">基本選擇器</h2>
 
 <dl>
- <dt><a href="/zh-TW/docs/Web/CSS/Universal_selectors">通用選擇器</a><font><font>（</font></font><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors" rel="noopener"><font><font>Universal selector</font></font></a><font><font>）</font></font></dt>
+ <dt><a href="/zh-TW/docs/Web/CSS/Universal_selectors">通用選擇器</a><font><font>（</font></font><a href="/zh-TW/docs/Web/CSS/Universal_selectors" rel="noopener"><font><font>Universal selector</font></font></a><font><font>）</font></font></dt>
  <dd>用以選擇所有元素。（可選）可以將其限制為特定的名稱空間或所有名稱空間。<br>
  <strong>語法:</strong> <code>* ns|* *|*</code><br>
  <strong>範例:</strong> <code>*</code> 套用文檔中所有元素。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/Type_selectors">標籤選擇器</a><font><font>（</font></font><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors" rel="noopener"><font><font>Type selector</font></font></a><font><font>）</font></font></dt>
+ <dt><a href="/zh-TW/docs/Web/CSS/Type_selectors">標籤選擇器</a><font><font>（</font></font><a href="/zh-TW/docs/Web/CSS/Type_selectors" rel="noopener"><font><font>Type selector</font></font></a><font><font>）</font></font></dt>
  <dd>用以選擇所有符合指定標籤的元素。<br>
  <strong>語法:</strong> <code><var>elementname</var></code><br>
  <strong>範例:</strong> <code>input</code> 可選出任一 <a href="/zh-TW/docs/Web/HTML/Element/input">&lt;input&gt;</a> 元素。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/Class_selectors">類別選擇器</a><font><font>（</font></font><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors" rel="noopener"><font><font>Class selector</font></font></a><font><font>）</font></font></dt>
+ <dt><a href="/zh-TW/docs/Web/CSS/Class_selectors">類別選擇器</a><font><font>（</font></font><a href="/zh-TW/docs/Web/CSS/Class_selectors" rel="noopener"><font><font>Class selector</font></font></a><font><font>）</font></font></dt>
  <dd>用以選擇所有符合指定 <code>class</code> 屬性值的元素。<br>
  <strong>語法:</strong> <code>.<var>classname</var></code><br>
  <strong>範例:</strong> <code>.index</code> 可選出任一含有 <code>index</code> 的 class 屬性值之元素。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/ID_selectors">ID選擇器</a><font><font>（</font></font><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors" rel="noopener"><font><font>ID selector</font></font></a><font><font>）</font></font></dt>
+ <dt><a href="/zh-TW/docs/Web/CSS/ID_selectors">ID選擇器</a><font><font>（</font></font><a href="/zh-TW/docs/Web/CSS/ID_selectors" rel="noopener"><font><font>ID selector</font></font></a><font><font>）</font></font></dt>
  <dd>用以選擇指定 <code>id</code> 屬性值的元素。（一個文件中，每個ID屬性都是唯一的。）<br>
  <strong>語法:</strong> <code>#<var>idname</var></code><br>
  <strong>範例:</strong> <code>#toc</code> 會比對含有 ID 是 toc 的元素(可以定義成 <code>id="toc"</code> 或其他類似的定義)。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/Attribute_selectors">屬性選擇器</a><font><font>（</font></font><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" rel="noopener"><font><font>Attribute selector</font></font></a><font><font>）</font></font></dt>
+ <dt><a href="/zh-TW/docs/Web/CSS/Attribute_selectors">屬性選擇器</a><font><font>（</font></font><a href="/zh-TW/docs/Web/CSS/Attribute_selectors" rel="noopener"><font><font>Attribute selector</font></font></a><font><font>）</font></font></dt>
  <dd>用以選擇所有符合指定屬性的元素。<br>
  <strong>語法:</strong> <code>[attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]</code><br>
  <strong>範例:</strong> <code>[autoplay]</code> 將會套用含有 <code>autoplay</code> 屬性的元素。(不論這個屬性的值是什麼)。</dd>
@@ -35,7 +35,7 @@ translation_of: Web/CSS/CSS_Selectors
 <h2 id="分組選擇器">分組選擇器</h2>
 
 <dl>
- <dt>選擇器列表（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Selector_list">Selector list</a>）</dt>
+ <dt>選擇器列表（<a href="/zh-TW/docs/Web/CSS/Selector_list">Selector list</a>）</dt>
  <dd><code>,</code> 用以將不同的選擇器組合起來的一種方法。<br>
  <strong>語法:</strong> <code><var>A</var>, <var>B</var></code><br>
  <strong>範例:</strong> <code>div, span</code> 將同時選擇 <code><a href="/zh-TW/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> 和 <code><a href="/zh-TW/docs/Web/HTML/Element/span">&lt;span&gt;</a></code> 元素。</dd>
@@ -45,23 +45,23 @@ translation_of: Web/CSS/CSS_Selectors
 
 <dl>
  <dt></dt>
- <dt><a href="/zh-TW/docs/Web/CSS/Descendant_combinator">後代選擇器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator">Descendant combinator</a>）</dt>
+ <dt><a href="/zh-TW/docs/Web/CSS/Descendant_combinator">後代選擇器</a>（<a href="/zh-TW/docs/Web/CSS/Descendant_combinator">Descendant combinator</a>）</dt>
  <dd><code> </code> (空格) 用以選擇某個元素後代的元素。<br>
  <strong>語法:</strong> <code><var>A</var> <var>B</var></code><br>
  <strong>範例:</strong> <code>div span</code> 套用所有  <code><a href="/zh-TW/docs/Web/HTML/Element/div">&lt;div&gt;</a></code> 元素內部的所有 <code><a href="/en-US/docs/Web/HTML/Element/span">&lt;span&gt;</a></code> 元素。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/Child_combinator">子代選擇器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator">Child combinator</a>）</dt>
+ <dt><a href="/zh-TW/docs/Web/CSS/Child_combinator">子代選擇器</a>（<a href="/zh-TW/docs/Web/CSS/Child_combinator">Child combinator</a>）</dt>
  <dd><code>&gt;</code> 用以選擇某個元素後代的元素。<br>
  <strong>語法:</strong> <code><var>A</var> &gt; <var>B</var></code>（B元素不可在A元素的其他元素裡）<br>
  <strong>範例:</strong> <code>ul &gt; li</code> 套用所有 <code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code> 元素內部的 <code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code> 子元素。</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/General_sibling_combinator">一般兄弟選擇器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator">General sibling combinator</a>）</dt>
+ <dt><a href="/zh-TW/docs/Web/CSS/General_sibling_combinator">一般兄弟選擇器</a>（<a href="/zh-TW/docs/Web/CSS/General_sibling_combinator">General sibling combinator</a>）</dt>
  <dd><code>~</code> combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.<br>
  <strong>語法:</strong> <code><var>A</var> ~ <var>B</var></code><br>
  <strong>範例:</strong> <code>p ~ span</code> will match all {{HTMLElement("span")}} elements that follow a {{HTMLElement("p")}}, immediately or not.</dd>
- <dt><a href="/zh-TW/docs/Web/CSS/Adjacent_sibling_combinator">相鄰兄弟選擇器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator">Adjacent sibling combinator</a>）</dt>
+ <dt><a href="/zh-TW/docs/Web/CSS/Adjacent_sibling_combinator">相鄰兄弟選擇器</a>（<a href="/zh-TW/docs/Web/CSS/Adjacent_sibling_combinator">Adjacent sibling combinator</a>）</dt>
  <dd><code>+</code> 選擇緊接在後的元素，並共享父元素。<br>
  <strong>語法:</strong> <code><var>A</var> + <var>B</var></code><br>
  <strong>範例:</strong> <code>h2 + p</code> 套用所有 緊接在 <code><a href="/zh-TW/docs/Web/HTML/Element/Heading_Elements">&lt;h2&gt;</a></code> 元素後的 <a href="/zh-TW/docs/Web/HTML/Element/p">&lt;p&gt;</a> 元素，並擁有 <code><a href="/zh-TW/docs/Web/HTML/Element/Heading_Elements">&lt;h2&gt;</a></code> 的父元素。</dd>
- <dt><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Column_combinator">Column combinator</a> {{Experimental_Inline}}</dt>
+ <dt><a href="/zh-TW/docs/Web/CSS/Column_combinator">Column combinator</a> {{Experimental_Inline}}</dt>
  <dd>The <code>||</code> combinator selects nodes which belong to a column.<br>
  <strong>語法:</strong> <code><var>A</var> || <var>B</var></code><br>
  <strong>範例:</strong> <code>col || td</code> will match all {{HTMLElement("td")}} elements that belong to the scope of the {{HTMLElement("col")}}.</dd>
@@ -70,10 +70,10 @@ translation_of: Web/CSS/CSS_Selectors
 <h2 id="偽選擇器">偽選擇器</h2>
 
 <dl>
- <dt><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Pseudo classes</a></dt>
+ <dt><a href="/zh-TW/docs/Web/CSS/Pseudo-classes">Pseudo classes</a></dt>
  <dd>The <code>:</code> pseudo allow the selection of elements based on state information that is not contained in the document tree.<br>
  <strong>範例:</strong> <code>a:visited</code> will match all {{HTMLElement("a")}} elements that have been visited by the user.</dd>
- <dt><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">Pseudo elements</a></dt>
+ <dt><a href="/zh-TW/docs/Web/CSS/Pseudo-elements">Pseudo elements</a></dt>
  <dd>The <code>::</code> pseudo represent entities that are not included in HTML.<br>
  <strong>範例:</strong> <code>p::first-line</code> will match the first line of all {{HTMLElement("p")}} elements.</dd>
 </dl>
@@ -114,10 +114,10 @@ translation_of: Web/CSS/CSS_Selectors
  </tbody>
 </table>
 
-<p>See the <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes#Specifications">pseudo-class</a> and <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements#Specifications">pseudo-element</a> specification tables for details on those.</p>
+<p>See the <a href="/zh-TW/docs/Web/CSS/Pseudo-classes#Specifications">pseudo-class</a> and <a href="/zh-TW/docs/Web/CSS/Pseudo-elements#Specifications">pseudo-element</a> specification tables for details on those.</p>
 
 <h2 id="參見">參見</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Specificity">CSS Specificity</a></li>
+ <li><a href="/zh-TW/docs/Web/CSS/Specificity">CSS Specificity</a></li>
 </ul>
