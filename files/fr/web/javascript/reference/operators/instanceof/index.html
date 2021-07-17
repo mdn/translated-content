@@ -74,9 +74,6 @@ o3 instanceof C; // true car C.prototype fait partie de la chaîne de o3
 
 <p>Ainsi, pour vérifier qu'un <a href="/fr/docs/Web/API/Node">nœud</a> est bien un objet de type <a href="/fr/docs/Web/API/SVGElement">SVGElement</a> dans un autre contexte, on pourra utiliser <code>monNœud instanceof monNœud.documentMaitre.vue.SVGElement</code>.</p>
 
-<div class="note"><strong>Note aux développeurs Mozilla :</strong><br>
-Dans un code utilisant XPCOM, <code>instanceof</code> a un comportement particulier : <code>obj instanceof </code><em><code>xpcomInterface</code></em> (ex : <code>Components.interfaces.nsIFile</code>) appelle <code>obj.QueryInterface(<em>xpcomInterface</em>)</code> et retourne <code>true</code> si QueryInterface réussit. Un effet indésirable à cela est qu'il est possible d'utiliser les propriétés de <em><code>xpcomInterface</code></em> sur <code>obj</code> après un test réussi d'<code>instanceof</code>. Contrairement au JavaScript classique, <code>obj instanceof xpcomInterface </code>fonctionnera comme prévu même si <code>obj</code> appartient à un autre niveau d'organisation (fenêtre, frame, etc.).</div>
-
 <h2 id="Exemples">Exemples</h2>
 
 <h3 id="Démonstration_que_String_et_Date_sont_de_type_Object_et_cas_aux_limites_des_littéraux">Démonstration que <code>String</code> et <code>Date</code> sont de type <code>Object</code> et cas aux limites des littéraux</h3>
