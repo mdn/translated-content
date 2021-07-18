@@ -15123,9 +15123,13 @@
     ]
   },
   "Web/API/FormData/Using_FormData_Objects": {
-    "modified": "2019-04-05T12:43:46.777Z",
+    "modified": "2019-03-23T23:31:20.923Z",
     "contributors": [
-      "silverskyvicto"
+      "dlwe",
+      "yyss",
+      "jgs",
+      "taiyaki32",
+      "ethertank"
     ]
   },
   "Web/API/FormData/append": {
@@ -48273,16 +48277,6 @@
       "fscholz",
       "Hasilt",
       "dextra"
-    ]
-  },
-  "conflicting/Web/API/FormData/Using_FormData_Objects": {
-    "modified": "2019-03-23T23:31:20.923Z",
-    "contributors": [
-      "dlwe",
-      "yyss",
-      "jgs",
-      "taiyaki32",
-      "ethertank"
     ]
   },
   "conflicting/Web/API/GlobalEventHandlers/onclick": {

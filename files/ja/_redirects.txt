@@ -1325,7 +1325,7 @@
 /ja/docs/DOM/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/DOM/XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest
 /ja/docs/DOM/XMLHttpRequest/FormData	/ja/docs/Web/API/FormData
-/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects	/ja/docs/conflicting/Web/API/FormData/Using_FormData_Objects
+/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects	/ja/docs/Web/API/FormData/Using_FormData_Objects
 /ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /ja/docs/DOM/console	/ja/docs/Web/API/console
 /ja/docs/DOM/console.dir	/ja/docs/Web/API/Console/dir
@@ -4438,7 +4438,7 @@
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
 /ja/docs/Web/Guide/Performance/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/ja/docs/Web/API/Page_Visibility_API
-/ja/docs/Web/Guide/Using_FormData_Objects	/ja/docs/conflicting/Web/API/FormData/Using_FormData_Objects
+/ja/docs/Web/Guide/Using_FormData_Objects	/ja/docs/Web/API/FormData/Using_FormData_Objects
 /ja/docs/Web/HTML/CORS_settings_attributes	/ja/docs/Web/HTML/Attributes/crossorigin
 /ja/docs/Web/HTML/Canvas	/ja/docs/Web/API/Canvas_API
 /ja/docs/Web/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
