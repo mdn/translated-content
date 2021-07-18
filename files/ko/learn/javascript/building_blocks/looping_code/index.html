@@ -235,7 +235,7 @@ para.textContent = info;</pre>
 <p>{{ EmbedLiveSample('Hidden_code_2', '100%', 60, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="note">
-<p><strong>노트</strong>: 여러분은 이 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html">예제를 GitHub에서</a> 또한 찾을 수 있습니다 (또한 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html">see it running live</a>).</p>
+<p><strong>참고</strong>: 여러분은 이 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html">예제를 GitHub에서</a> 또한 찾을 수 있습니다 (또한 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html">실제로 작동하는 모습도 볼 수 있습니다</a>).</p>
 </div>
 
 <p>이것은 반복문이 배열 안의 요소들에 대해 반복하고 그 각각의 요소들과 무언가를 하기 위해 쓰였다는 것을 보여줍니다 — 이것은 JavaScript에서 아주 일반적인 패턴입니다. 여기서:</p>
@@ -255,11 +255,11 @@ para.textContent = info;</pre>
 </ol>
 
 <div class="note">
-<p><strong>노트</strong>: 우리는 조건을 <code>i &lt;= cats.length</code>이 아니라 <code>i &lt; cats.length</code>로 만들었는데, 이는 컴퓨터는 카운트를 1부터가 아니라 0부터 세기 때문입니다 — 우리는 <code>i</code>를 0에서 시작했고, <code>i = 4</code>까지 갔습니다 (마지막 배열 원소의 인덱스). 배열에 5개의 원소가 있으므로, <code>cats.length</code>는 5를 반환하지만, 우리는 <code>i = 5</code>까지 가고 싶지는 않습니다. 왜냐하면 이는 마지막 원소에 대해 <code>undefined</code>를 반환할 것이기 때문입니다 (5의 인덱스를 가진 배열 원소는 없습니다). 그래서, 그러므로, 우리는 <code>cats.length</code>과 같은 데까지가 아니라 (<code>i &lt;=</code>), <code>cats.length</code>보다 1 작은 데까지 가기를 원합니다 (<code>i &lt;</code>).</p>
+<p><strong>참고</strong>: 우리는 조건을 <code>i &lt;= cats.length</code>이 아니라 <code>i &lt; cats.length</code>로 만들었는데, 이는 컴퓨터는 카운트를 1부터가 아니라 0부터 세기 때문입니다 — 우리는 <code>i</code>를 0에서 시작했고, <code>i = 4</code>까지 갔습니다 (마지막 배열 원소의 인덱스). 배열에 5개의 원소가 있으므로, <code>cats.length</code>는 5를 반환하지만, 우리는 <code>i = 5</code>까지 가고 싶지는 않습니다. 왜냐하면 이는 마지막 원소에 대해 <code>undefined</code>를 반환할 것이기 때문입니다 (5의 인덱스를 가진 배열 원소는 없습니다). 그래서, 그러므로, 우리는 <code>cats.length</code>과 같은 데까지가 아니라 (<code>i &lt;=</code>), <code>cats.length</code>보다 1 작은 데까지 가기를 원합니다 (<code>i &lt;</code>).</p>
 </div>
 
 <div class="note">
-<p><strong>노트</strong>: 조건에 관련된 일반적인 실수는 "보다 작거나 같다(less than or equal to)" (<code>&lt;=</code>)가 아니라 "동등(equal to)" (<code>===</code>)을 사용하는 것입니다. 만약 우리가 반복문을 <code>i = 5</code>까지 실행하기를 원했다면, 종료 조건은 <code>i &lt;= cats.length</code>일 필요가 있었을 것입니다. 만약 우리가 그것을 <code>i === cats.length</code>에 설정했다면, 첫 반복문 반복에서 <code>i</code>는 <code>5</code>와 같지 않아서, 반복문은 즉시 멈췄을 것이기 때문에 반복문은 전혀 실행되지 않을 것입니다.</p>
+<p><strong>참고</strong>: 조건에 관련된 일반적인 실수는 "보다 작거나 같다(less than or equal to)" (<code>&lt;=</code>)가 아니라 "동등(equal to)" (<code>===</code>)을 사용하는 것입니다. 만약 우리가 반복문을 <code>i = 5</code>까지 실행하기를 원했다면, 종료 조건은 <code>i &lt;= cats.length</code>일 필요가 있었을 것입니다. 만약 우리가 그것을 <code>i === cats.length</code>에 설정했다면, 첫 반복문 반복에서 <code>i</code>는 <code>5</code>와 같지 않아서, 반복문은 즉시 멈췄을 것이기 때문에 반복문은 전혀 실행되지 않을 것입니다.</p>
 </div>
 
 <p>우리는 마지막으로 출력되는 문장이 잘 만들어지지 않았다는 작은 문제를 가지고 있습니다:</p>
@@ -279,7 +279,7 @@ para.textContent = info;</pre>
 }</pre>
 
 <div class="note">
-<p><strong>노트</strong>: 여러분은 이 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html">예제 코드를 Github</a>에서 또한 찾아볼 수 있습니다 (또한 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html">see it running live</a>).</p>
+<p><strong>참고</strong>: 여러분은 이 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html">예제 코드를 Github</a>에서 또한 찾아볼 수 있습니다 (또한 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html">실제로 작동하는 모습도 볼 수 있습니다</a>).</p>
 </div>
 
 <div class="warning">
@@ -387,7 +387,7 @@ btn.addEventListener('click', function() {
 </ol>
 
 <div class="note">
-<p>노트: 여러분은 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html">전체 소스 코드를 GitHub에서</a> 또한 볼 수 있습니다 (또한 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html">see it running live</a>).</p>
+<p>참고: 여러분은 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/contact-search.html">전체 소스 코드를 GitHub에서</a> 또한 볼 수 있습니다 (또한 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html">실제로 작동하는 모습도 볼 수 있습니다</a>).</p>
 </div>
 
 <h2 id="Skipping_iterations_with_continue">Continue로 반복 건너뛰기</h2>
@@ -465,7 +465,7 @@ for (let i = 1; i &lt;= num; i++) {
 </ol>
 
 <div class="note">
-<p><strong>노트</strong>: 여러분은 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html">전체 소스 코드를 GitHub에서</a> 또한 볼 수 있습니다 (또한 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html">see it running live</a>).</p>
+<p><strong>참고</strong>: 여러분은 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html">전체 소스 코드를 GitHub에서</a> 또한 볼 수 있습니다 (또한 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html">실제로 작동하는 모습도 볼 수 있습니다</a>).</p>
 </div>
 
 <h2 id="while_and_do_..._while">while 그리고 do ... while</h2>
@@ -500,7 +500,7 @@ while (i &lt; cats.length) {
 }</pre>
 
 <div class="note">
-<p><strong>노트</strong>: 예상한 대로 이것은 여전히 똑같이 동작합니다 — 여기서 한 번 봐 보세요 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html">running live on GitHub</a> (또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html">전체 소스 코드</a>도 보세요).</p>
+<p><strong>참고</strong>: 예상한 대로 이것은 여전히 똑같이 동작합니다 — 여기서 한 번 봐 보세요 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html">running live on GitHub</a> (또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html">전체 소스 코드</a>도 보세요).</p>
 </div>
 
 <p><a href="/ko/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> 반복문은 많이 비슷하지만 while 구조에 변형을 제공합니다:</p>
@@ -531,7 +531,7 @@ do {
 } while (i &lt; cats.length);</pre>
 
 <div class="note">
-<p><strong>노트</strong>: 다시 말하지만, 이것은 예상한 바와 같이 똑같이 동작합니다 — 한 번 봐 보세요 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html">running live on GitHub</a> (또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">전체 소스 코드</a>도 보세요).</p>
+<p><strong>참고</strong>: 다시 말하지만, 이것은 예상한 바와 같이 똑같이 동작합니다 — 한 번 봐 보세요 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html">running live on GitHub</a> (또한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html">전체 소스 코드</a>도 보세요).</p>
 </div>
 
 <div class="warning">
@@ -562,7 +562,7 @@ do {
 </ul>
 
 <div class="note">
-<p><strong>노트</strong>: 만약 여러분이 반복문을 타이핑하기 시작했다면 (예를 들어 (while(i&gt;=0)), 아직 종료 조건을 입력하지 않았기 때문에 브라우저는 멈출(stuck) 지도 모릅니다. 그러니 조심하세요. 이 문제에 대처하기 위해 코드를 주석에 작성하고, 완성한 이후에 주석을 제거할 수 있습니다.</p>
+<p><strong>참고</strong>: 만약 여러분이 반복문을 타이핑하기 시작했다면 (예를 들어 (while(i&gt;=0)), 아직 종료 조건을 입력하지 않았기 때문에 브라우저는 멈출(stuck) 지도 모릅니다. 그러니 조심하세요. 이 문제에 대처하기 위해 코드를 주석에 작성하고, 완성한 이후에 주석을 제거할 수 있습니다.</p>
 </div>
 
 <p>만약 실수했다면, 언제나 예제를 "Reset" 버튼으로 리셋할 수 있습니다. 만약 정말로 막혔다면, 답을 보기 위해 "Show solution"을 누르세요.</p>
@@ -917,7 +917,7 @@ do {
 <p>우리는, 적어도 시작하는 데, <code>for</code>를 추천합니다. 왜냐하면 이것은 아마도 모든 것을 기억하기 가장 쉽기 때문입니다 — 초기화식, 조건, 증감식 모두가 괄호 안에 깔끔하게 들어가야만 하므로, 이것들이 어디 있는지 보고 여러분이 이것들을 놓치지 않았다는 것을 확인하기 쉽습니다.</p>
 
 <div class="note">
-<p><strong>노트</strong>: 다른 반복문 형태/기능 또한 있는데, 이는 고급/특수한 상황에서 유용하고 이 글의 범위 너머에 있습니다. 만약 반복문을 더 많이 배우고 싶다면, 고급 <a href="/ko/docs/Web/JavaScript/Guide/Loops_and_iteration">반복문과 반복 가이드</a>를 읽어 보세요.</p>
+<p><strong>참고</strong>: 다른 반복문 형태/기능 또한 있는데, 이는 고급/특수한 상황에서 유용하고 이 글의 범위 너머에 있습니다. 만약 반복문을 더 많이 배우고 싶다면, 고급 <a href="/ko/docs/Web/JavaScript/Guide/Loops_and_iteration">반복문과 반복 가이드</a>를 읽어 보세요.</p>
 </div>
 
 <h2 id="Test_your_skills!">실력을 평가해 보세요!</h2>
@@ -930,11 +930,11 @@ do {
 
 <p>만약 뭐든지 이해하지 못한 게 있다면, 자유롭게 이 문서를 다시 읽거나, <a href="/en-US/docs/Learn#contact_us">contact us</a>에서 도움을 요청해 보세요.</p>
 
-<h2 id="See_also">더 보기</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
  <li><a href="/ko/docs/Web/JavaScript/Guide/Loops_and_iteration">반복문과 반복 자세히 알아보기</a></li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/for">for 문 레퍼런스</a></li>
+ <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/for">for 문 참고서</a></li>
  <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/while">while</a> 과 <a href="/ko/docs/Web/JavaScript/Reference/Statements/do...while">do...while</a> 레퍼런스</li>
  <li><a href="/ko/docs/Web/JavaScript/Reference/Statements/break">break</a> 과 <a href="/ko/docs/Web/JavaScript/Reference/Statements/continue">continue</a> 레퍼런스</li>
  <li>
@@ -944,7 +944,7 @@ do {
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}</p>
 
-<h2 id="In_this_module">이 모듈에서는</h2>
+<h2 id="In_this_module">이 과정에서는</h2>
 
 <ul>
  <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/conditionals">판단 내리기 — 조건문</a></li>
