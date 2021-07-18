@@ -13,11 +13,11 @@ original_slug: Web/Events/Creating_and_triggering_events
 ---
 <p>この記事では、 DOM イベントを作成して処理する方法を説明します。このようなイベントは、一般に、ブラウザー自体によって起動されたイベントとは対照的に、<strong>合成イベント</strong>と呼ばれます。</p>
 
-<h2 id="Creating_custom_events" name="Creating_custom_events">カスタムイベントを作成する</h2>
+<h2 id="Creating_custom_events">カスタムイベントを作成する</h2>
 
-<p>イベントは、次のように {{domxref("Event")}} コンストラクターを使用して作成できます。</p>
+<p>イベントは、次のように <a href="/ja/docs/Web/API/Event"><code>Event</code></a> コンストラクターを使用して作成できます。</p>
 
-<pre class="brush: js">var event = new Event('build');
+<pre class="brush: js">const event = new Event('build');
 
 // Listen for the event.
 elem.addEventListener('build', function (e) { /* ... */ }, false);
@@ -25,17 +25,17 @@ elem.addEventListener('build', function (e) { /* ... */ }, false);
 // Dispatch the event.
 elem.dispatchEvent(event);</pre>
 
-<p>上記のコード例は {{domxref("EventTarget.dispatchEvent()")}} メソッドを使用します。</p>
+<p>上記のコード例は <a href="/ja/docs/Web/API/EventTarget/dispatchEvent">EventTarget.dispatchEvent()</a> メソッドを使用します。</p>
 
-<p>このコンストラクターは、ほとんどの最新のブラウザーでサポートされています (Internet Explorer は例外です)。もっと冗長的なアプローチ (Internet Explorer で動作するもの) は、下記の<a href="#The_old-fashioned_way">古い方法</a>を参照して下さい。</p>
+<p>このコンストラクターは、ほとんどの最新のブラウザーでサポートされています (Internet Explorer は例外です)。もっと冗長的なアプローチ (Internet Explorer で動作するもの) は、下記の<a href="#the_old-fashioned_way">古い方法</a>を参照して下さい。</p>
 
-<h3 id="Adding_custom_data_–_CustomEvent" name="Adding_custom_data_–_CustomEvent()">カスタムデータの追加 – CustomEvent()</h3>
+<h3 id="Adding_custom_data_–_CustomEvent">カスタムデータの追加 – CustomEvent()</h3>
 
 <p>イベントオブジェクトにデータを追加するには、<a href="/ja/docs/Web/API/CustomEvent">CustomEvent</a> インターフェイスが存在し、<u><strong>detail</strong></u> プロパティを使用してカスタムデータを渡すことができます。</p>
 
 <p>たとえば、イベントは次のように作成できます。</p>
 
-<pre class="brush: js">var event = new CustomEvent('build', { detail: elem.dataset.time });</pre>
+<pre class="brush: js">const event = new CustomEvent('build', { detail: elem.dataset.time });</pre>
 
 <p>これにより、イベントリスナー内の追加データにアクセスすることができます。</p>
 
@@ -44,12 +44,12 @@ elem.dispatchEvent(event);</pre>
 }
 </pre>
 
-<h3 id="The_old-fashioned_way" name="The_old-fashioned_way">古い方法</h3>
+<h3 id="The_old-fashioned_way">古い方法</h3>
 
 <p>イベントを作成する古いアプローチでは、 Java に触発された API が使用されます。以下に例を示します。</p>
 
 <pre class="brush: js">// イベントの作成
-var event = <a href="/ja/docs/Web/API/Document/createEvent">document.createEvent</a>('Event');
+const event = document.createEvent('Event');
 
 // イベントの名前を 'build' と定義する
 event.initEvent('build', true, true);
@@ -64,7 +64,7 @@ elem.dispatchEvent(event);
 
 </pre>
 
-<h3 id="Event_bubbling" name="Event_bubbling">イベントのバブリング</h3>
+<h3 id="Event_bubbling">イベントのバブリング</h3>
 
 <p>子要素からイベントを起動させ、祖先要素がそれを、任意でデータも、受け取りたい場合がよくあります。</p>
 
@@ -89,7 +89,7 @@ form.addEventListener('awesome', e =&gt; console.log(e.detail.text()));
 textarea.addEventListener('input', e =&gt; e.target.dispatchEvent(eventAwesome));
 </pre>
 
-<h3 id="Creating_and_dispatching_events_dynamically" name="Creating_and_dispatching_events_dynamically">イベントの動的な生成と処理</h3>
+<h3 id="Creating_and_dispatching_events_dynamically">イベントの動的な生成と処理</h3>
 
 <p>要素はまだ作成されていないイベントを待ち受けすることができます。</p>
 
@@ -110,18 +110,19 @@ textarea.addEventListener('input', function() {
 });
 </pre>
 
-<h2 id="Triggering_built-in_events" name="Triggering_built-in_events">ビルトインイベントの起動</h2>
+<h2 id="Triggering_built-in_events">ビルトインイベントの起動</h2>
 
-<p>この例では、 DOM メソッドを使用してチェックボックスでクリック (プログラムでクリックイベントを生成する) をシミュレートする方法を示します。<a class="external" href="http://developer.mozilla.org/samples/domref/dispatchEvent.html">デモを見る</a>。</p>
+<p>この例では、 DOM メソッドを使用してチェックボックスでクリック (プログラムでクリックイベントを生成する) をシミュレートする方法を示します。<a href="https://media.prod.mdn.mozit.cloud/samples/domref/dispatchEvent.html">デモを見る</a>。</p>
 
 <pre class="brush: js">function simulateClick() {
-  var event = new MouseEvent('click', {
+  const event = new MouseEvent('click', {
     view: window,
     bubbles: true,
     cancelable: true
   });
-  var cb = document.getElementById('checkbox');
-  var cancelled = !cb.dispatchEvent(event);
+  const cb = document.getElementById('checkbox');
+  const cancelled = !cb.dispatchEvent(event);
+
   if (cancelled) {
     // A handler called preventDefault.
     alert("cancelled");
@@ -131,7 +132,7 @@ textarea.addEventListener('input', function() {
   }
 }</pre>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li><a href="/ja/docs/Web/API/CustomEvent/CustomEvent">CustomEvent()</a></li>
@@ -143,8 +144,8 @@ textarea.addEventListener('input', function() {
 
 <section id="Quick_links">
   <ul>
-    <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベントへの入門</a></li>
-    <li><a href="/en-US/docs/Web/Events/Event_handlers">Event handlers (overview)(en-US)</a></li>
-    <li><a href="/en-US/docs/Web/Events">イベントリファレンス</a></li>
+    <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></li>
+    <li><a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー (概要)</a></li>
+    <li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li>
   </ul>
 </section>

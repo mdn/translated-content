@@ -24,19 +24,19 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <h2 id="Aperçu_de_lenvironnement_de_développement_Django">Aperçu de l'environnement de développement Django</h2>
 
-<p>Django simplifie le processus de configuration de votre ordinateur pour que vous puissiez rapidement commencer à développer des applications web. Cette section explique ce que vous aurez dans l'environnement de développement, et vous fournit un aperçu de certaines options de configuration et d'installation. Le reste de l'article explique la méthode <em>recommandée </em>pour installer l'environnement de développement Django sur Ubuntu, macOS et Windows, et comment le tester.</p>
+<p>Django simplifie le processus de configuration de votre ordinateur pour que vous puissiez rapidement commencer à développer des applications web. Cette section explique ce que vous aurez dans l'environnement de développement, et vous fournit un aperçu de certaines options de configuration et d'installation. Le reste de l'article explique la méthode <em>recommandée </em>pour installer l'environnement de développement Django sur Ubuntu, macOS et Windows, et comment le tester.</p>
 
 <h3 id="Quest-ce_que_lenvironnement_de_développement_Django">Qu'est-ce que l'environnement de développement Django ?</h3>
 
 <p>L'environnement de développement correspond à une installation de Django sur votre ordinateur local que vous pouvez utiliser pour développer et tester des applications Django avant de les déployer sur un environnement de production.</p>
 
-<p>Le principal outil que fournit Django est un ensemble de scripts Python utilisés pour créer et travailler avec des projets Django, ainsi qu'un simple <em>serveur web de développement </em>que vous pouvez utiliser pour tester en local (i.e. sur votre propre ordinateur, pas sur un serveur web externe) des applications web Django dans votre navigateur web.</p>
+<p>Le principal outil que fournit Django est un ensemble de scripts Python utilisés pour créer et travailler avec des projets Django, ainsi qu'un simple <em>serveur web de développement </em>que vous pouvez utiliser pour tester en local (i.e. sur votre propre ordinateur, pas sur un serveur web externe) des applications web Django dans votre navigateur web.</p>
 
-<p>Il y a plusieurs autres outils annexes, qui font partie de l'environnement de développement, que nous ne couvrirons pas ici. Cela inclut des choses comme un <a href="/en-US/docs/Learn/Common_questions/Available_text_editors">éditeur de texte</a> ou un IDE pour éditer votre code, et un outil de gestion de contrôle de version comme Git pour gérer en toute prudence les différentes versions de votre code. Nous supposerons ici que vous avez déjà un éditeur de texte installé.</p>
+<p>Il y a plusieurs autres outils annexes, qui font partie de l'environnement de développement, que nous ne couvrirons pas ici. Cela inclut des choses comme un <a href="/fr/docs/Learn/Common_questions/Available_text_editors">éditeur de texte</a> ou un IDE pour éditer votre code, et un outil de gestion de contrôle de version comme Git pour gérer en toute prudence les différentes versions de votre code. Nous supposerons ici que vous avez déjà un éditeur de texte installé.</p>
 
-<h3 id="Quelles_sont_les_options_dinstallation_de_Django">Quelles sont les options d'installation de Django ?</h3>
+<h3 id="Quelles_sont_les_options_dinstallation_de_Django">Quelles sont les options d'installation de Django ?</h3>
 
-<p>Django est extrêmement flexible sur sa manière d'être installé et configuré. Django peut-être :</p>
+<p>Django est extrêmement flexible sur sa manière d'être installé et configuré. Django peut-être :</p>
 
 <ul>
  <li>Installé sur divers systèmes d'exploitation.</li>
@@ -45,10 +45,10 @@ translation_of: Learn/Server-side/Django/development_environment
  <li>Lancé depuis l'environnement principal de Python ou depuis des environnements virtuels Python séparés.</li>
 </ul>
 
-<p>Chacune de ces options requiert une configuration et une installation légèrement différente. Les sous-sections ci-dessous vous expliquent différents choix. Dans le reste de l'article, nous vous montrerons comment installer Django sur un nombre restreint de systèmes d'exploitation, et nous supposerons que cette installation aura été suivie pour tout le reste du module.</p>
+<p>Chacune de ces options requiert une configuration et une installation légèrement différente. Les sous-sections ci-dessous vous expliquent différents choix. Dans le reste de l'article, nous vous montrerons comment installer Django sur un nombre restreint de systèmes d'exploitation, et nous supposerons que cette installation aura été suivie pour tout le reste du module.</p>
 
 <div class="note">
-<p><strong>Note</strong>: D'autres options d'installation possibles sont traitées dans la documentation officielle de Django. Les liens vers la <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Server-side/Django/development_environment$translate?tolocale=fr#">documentation appropriée peuvent-être trouvés ci-dessous</a>.</p>
+<p><strong>Note</strong>: D'autres options d'installation possibles sont traitées dans la documentation officielle de Django. Les liens vers la <a href="/fr/docs/Learn/Server-side/Django/development_environment">documentation appropriée peuvent-être trouvés ci-dessous</a>.</p>
 </div>
 
 <h4 id="Quels_systèmes_dexploitation_sont_supportés">Quels systèmes d'exploitation sont supportés ?</h4>
@@ -81,12 +81,12 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <h4 id="Quelle_base_de_données">Quelle base de données ?</h4>
 
-<p>Django supporte quatre bases de données principales (PostgreSQL, MySQL, Oracle et SQLite), et des librairies fournies par la communauté offrent différents niveaux de support pour d'autre bases de données SQL et NoSQL populaires. Nous vous recommandons de choisir la même base de données pour la production et le développement (bien que Django puisse abstraire plusieurs différences entre les bases de données en utilisant son Mapper Relationnel-Objet (ORM), il reste tout de même certains <a href="https://docs.djangoproject.com/en/2.1/ref/databases/">problèmes potentiels</a> qu'il vaut mieux éviter).</p>
+<p>Django supporte quatre bases de données principales (PostgreSQL, MySQL, Oracle et SQLite), et des librairies fournies par la communauté offrent différents niveaux de support pour d'autre bases de données SQL et NoSQL populaires. Nous vous recommandons de choisir la même base de données pour la production et le développement (bien que Django puisse abstraire plusieurs différences entre les bases de données en utilisant son Mapper Relationnel-Objet (ORM), il reste tout de même certains <a href="https://docs.djangoproject.com/en/2.1/ref/databases/">problèmes potentiels</a> qu'il vaut mieux éviter).</p>
 
 <p>Dans cet article (et quasiment tout le module), nous utiliserons la base <em>SQLite</em>, qui sauvegarde ses données dans des fichiers. SQLite a été conçu pour être utilisé comme une base de données légère, mais elle ne peut pas supporter un haut niveau de compétition. Elle est cependant un excellent choix pour des applications qui sont prioritairement en lecture seule.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Django est configuré pour utiliser SQLite par défaut lorsque vous démarrez le projet de votre site web en utilisant les outils standards (<em>django-admin</em>). C'est un très bon choix lorsque vous débutez car elle ne requiert aucune configuration ou installation particulière.</p>
+<p><strong>Note</strong>: Django est configuré pour utiliser SQLite par défaut lorsque vous démarrez le projet de votre site web en utilisant les outils standards (<em>django-admin</em>). C'est un très bon choix lorsque vous débutez car elle ne requiert aucune configuration ou installation particulière.</p>
 </div>
 
 <h4 id="Installation_globale_ou_dans_un_environnement_virtuel_Python">Installation globale ou dans un environnement virtuel Python ?</h4>
@@ -99,13 +99,13 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <p>Si vous installez Django dans l'environnement par défaut/global, vous ne pourrez alors cibler qu'une seule version de Django sur votre machine. Cela peut devenir un problème si vous souhaitez créer de nouveaux sites web (utilisant la dernière version de Django) tout en maintenant d'autres sites web dépendant de versions antérieures.</p>
 
-<p>Ainsi, un développeur Python/Django confirmé lance généralement ses applications Python dans des <em>environnements virtuels Python</em> indépendants. Cela permet d'avoir plusieurs environnements Django sur un seul et même ordinateur. L'équipe de développement de Django elle-même recommande d'utiliser des environnements virtuels Python.</p>
+<p>Ainsi, un développeur Python/Django confirmé lance généralement ses applications Python dans des <em>environnements virtuels Python</em> indépendants. Cela permet d'avoir plusieurs environnements Django sur un seul et même ordinateur. L'équipe de développement de Django elle-même recommande d'utiliser des environnements virtuels Python.</p>
 
 <p>Ce module suppose que vous avez installé Django dans un environnement virtuel, et nous vous montrons comment le faire ci-dessous.</p>
 
 <h2 id="Installer_Python_3">Installer Python 3</h2>
 
-<p>Si vous souhaitez utiliser Django, vous devrez installer Python sur votre système d'exploitation. Si vous utilisez <em>Python 3</em>, vous aurez alors aussi besoin de l'outil <a href="https://pypi.python.org/pypi">Python Package Index</a> — <em>pip3</em> — qui est utilisé pour gérer (installer, mettre à jour, supprimer) les packages/librairies Python qui seront utilisés par Django et vos autres applications Python.</p>
+<p>Si vous souhaitez utiliser Django, vous devrez installer Python sur votre système d'exploitation. Si vous utilisez <em>Python 3</em>, vous aurez alors aussi besoin de l'outil <a href="https://pypi.python.org/pypi">Python Package Index</a> — <em>pip3</em> — qui est utilisé pour gérer (installer, mettre à jour, supprimer) les packages/librairies Python qui seront utilisés par Django et vos autres applications Python.</p>
 
 <p>Cette section décrit brièvement comment vérifier quelle version de Python sont disponibles, et comment installer de nouvelles versions si nécessaire, sur Ubuntu Linux 18.04, macOS et Windows 10.</p>
 
@@ -120,10 +120,9 @@ translation_of: Learn/Server-side/Django/development_environment
 <pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
  Python 3.6.6</span></pre>
 
-<p>Toutefois, l'outil d'Index des Packages Python dont vous aurez besoin pour installer des packages avec Python 3 (y compris Django) n'est <strong>pas </strong>disponible par défaut. Vous pouvez installer pip3 avec le terminal bash avec :</p>
+<p>Toutefois, l'outil d'Index des Packages Python dont vous aurez besoin pour installer des packages avec Python 3 (y compris Django) n'est <strong>pas </strong>disponible par défaut. Vous pouvez installer pip3 avec le terminal bash avec :</p>
 
-<pre class="brush: bash">sudo apt install python3-pip
-</pre>
+<pre class="brush: bash">sudo apt install python3-pip</pre>
 
 <h3 id="macOS">macOS</h3>
 
@@ -132,13 +131,13 @@ translation_of: Learn/Server-side/Django/development_environment
 <pre class="brush: bash"><span style="line-height: 1.5;">python3 -V
  </span>-bash: python3: command not found</pre>
 
-<p>Vous pouvez facilement installer Python 3 (ainsi que l'outil <em>pip3</em>) sur <a href="https://www.python.org/">python.org</a>:</p>
+<p>Vous pouvez facilement installer Python 3 (ainsi que l'outil <em>pip3</em>) sur <a href="https://www.python.org/">python.org</a>:</p>
 
 <ol>
  <li>Téléchargez l'installeur requis :
   <ol>
-   <li>Allez sur <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
-   <li>Sélectionnez le bouton <strong>Download Python 3.7.2</strong> (le numéro de version mineure peut varier).</li>
+   <li>Allez sur <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
+   <li>Sélectionnez le bouton <strong>Download Python 3.7.2</strong> (le numéro de version mineure peut varier).</li>
   </ol>
  </li>
  <li>Localisez le fichier en utilisant le <em>Finder</em>, puis double-cliquez le fichier package. Suivez les consignes d'installation.</li>
@@ -161,8 +160,8 @@ translation_of: Learn/Server-side/Django/development_environment
 <ol>
  <li>Téléchargez l'installeur requis :
   <ol>
-   <li>Allez sur <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
-   <li>Sélectionnez le bouton <strong>Download Python 3.7.2</strong> (le numéro de version mineure peut varier).</li>
+   <li>Allez sur <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
+   <li>Sélectionnez le bouton <strong>Download Python 3.7.2</strong> (le numéro de version mineure peut varier).</li>
   </ol>
  </li>
  <li>Installez Python en double-cliquant sur le fichier télécharger puis en suivant les consignes d'installation</li>
@@ -186,66 +185,64 @@ translation_of: Learn/Server-side/Django/development_environment
 
 <h2 id="Utiliser_Django_dans_un_environnement_virtuel_Python">Utiliser Django dans un environnement virtuel Python</h2>
 
-<p>Les librairies que nous utiliserons pour créer nos environnements virtuels seront <a href="https://virtualenvwrapper.readthedocs.io/en/latest/index.html">virtualenvwrapper</a> (Linux et macOS) et <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a> (Windows), , qui à leur tour utilisent l'outil <a href="https://developer.mozilla.org/en-US/docs/Python/Virtualenv">virtualenv</a>. Les outils d'habillage permettent de créer une interface consistante pour gérer les interfaces sur toutes les plateformes.</p>
+<p>Les librairies que nous utiliserons pour créer nos environnements virtuels seront <a href="https://virtualenvwrapper.readthedocs.io/en/latest/index.html">virtualenvwrapper</a> (Linux et macOS) et <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a> (Windows), , qui à leur tour utilisent l'outil <a href="/fr/docs/Python/Virtualenv">virtualenv</a>. Les outils d'habillage permettent de créer une interface consistante pour gérer les interfaces sur toutes les plateformes.</p>
 
 <h3 id="Installer_lutilitaire_denvironnement_virtuel">Installer l'utilitaire d'environnement virtuel</h3>
 
 <h4 id="Mise_en_place_de_lenvironnement_virtuel_sur_Ubuntu">Mise en place de l'environnement virtuel sur Ubuntu</h4>
 
-<p>Après avoir installé Python et pip vous pouvez installer <em>virtualenvwrapper</em> (qui inclut <em>virtualenv</em>). Le guide d'installation officiel peut être trouvé <a href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html">ici</a>, ou bien vous pouvez suivre les instructions ci-dessous.</p>
+<p>Après avoir installé Python et pip vous pouvez installer <em>virtualenvwrapper</em> (qui inclut <em>virtualenv</em>). Le guide d'installation officiel peut être trouvé <a href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html">ici</a>, ou bien vous pouvez suivre les instructions ci-dessous.</p>
 
-<p>Installer l'outil en utilisant <em>pip3</em>:</p>
+<p>Installer l'outil en utilisant <em>pip3</em>:</p>
 
-<pre class="brush: bash"><code>sudo pip3 install virtualenvwrapper</code></pre>
+<pre class="brush: bash">sudo pip3 install virtualenvwrapper</pre>
 
-<p>Ajoutez ensuite les lignes suivantes à la fin de votre fichier de configuration shell (le fichier caché <strong>.bashrc</strong> dans votre répertoire home). Elles indiquent les endroits où vos environnements virtuels seront installés, l'emplacement de vos projets de développement, et l'emplacement du script installé avec ce package :</p>
+<p>Ajoutez ensuite les lignes suivantes à la fin de votre fichier de configuration shell (le fichier caché <strong>.bashrc</strong> dans votre répertoire home). Elles indiquent les endroits où vos environnements virtuels seront installés, l'emplacement de vos projets de développement, et l'emplacement du script installé avec ce package :</p>
 
-<pre class="brush: bash"><code>export WORKON_HOME=$HOME/.virtualenvs
+<pre class="brush: bash">export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh</code>
-</pre>
+source /usr/local/bin/virtualenvwrapper.sh</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Les variables <code>VIRTUALENVWRAPPER_PYTHON</code> et <code>VIRTUALENVWRAPPER_VIRTUALENV_ARGS </code>pointent vers l'emplacement d'installation par défaut de Python3, et <code>source /usr/local/bin/virtualenvwrapper.sh</code> pointe vers l'emplacement par défaut du script <code>virtualenvwrapper.sh</code>. Si le <em>virtualenv</em> ne fonctionne pas quand vous le testez, vérifiez que Python et le script sont bien aux emplacements attendus (puis modifiez le fichier de configuration en conséquence).<br>
+<p><strong>Note</strong>: Les variables <code>VIRTUALENVWRAPPER_PYTHON</code> et <code>VIRTUALENVWRAPPER_VIRTUALENV_ARGS </code>pointent vers l'emplacement d'installation par défaut de Python3, et <code>source /usr/local/bin/virtualenvwrapper.sh</code> pointe vers l'emplacement par défaut du script <code>virtualenvwrapper.sh</code>. Si le <em>virtualenv</em> ne fonctionne pas quand vous le testez, vérifiez que Python et le script sont bien aux emplacements attendus (puis modifiez le fichier de configuration en conséquence).<br>
  <br>
- Vous pourrez trouver les bons emplacements de votre système en utilisant les commandes <code>which virtualenvwrapper.sh</code> et <code>which python3</code>.</p>
+ Vous pourrez trouver les bons emplacements de votre système en utilisant les commandes <code>which virtualenvwrapper.sh</code> et <code>which python3</code>.</p>
 </div>
 
 <p>Puis relancez le fichier de configuration en exécutant la commande suivante dans votre terminal :</p>
 
-<pre class="brush: bash"><code>source ~/.bashrc</code></pre>
+<pre class="brush: bash">source ~/.bashrc</pre>
 
 <p>Vous devriez alors voir apparaître plusieurs lignes de script semblables à celles ci-dessous :</p>
 
-<pre class="brush: bash"><code>virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
+<pre class="brush: bash">virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/premkproject
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postmkproject
 ...
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/preactivate
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/postactivate
-virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details</code>
-</pre>
+virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/get_env_details</pre>
 
-<p>Vous pouvez maintenant créer un nouvel environnement virtuel avec la commande <code>mkvirtualenv</code>.</p>
+<p>Vous pouvez maintenant créer un nouvel environnement virtuel avec la commande <code>mkvirtualenv</code>.</p>
 
 <h4 id="Mise_en_place_de_lenvironnement_virtuel_sur_macOS">Mise en place de l'environnement virtuel sur macOS</h4>
 
-<p>L'installation de <em>virtualenvwrapper</em> on sur macOS est quasiment identique à celle sur Ubuntu (une fois de plus, vous pouvez suivre les instructions du <a href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html">guide officiel d'installation</a> ou suivre les indications ci-dessous).</p>
+<p>L'installation de <em>virtualenvwrapper</em> on sur macOS est quasiment identique à celle sur Ubuntu (une fois de plus, vous pouvez suivre les instructions du <a href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html">guide officiel d'installation</a> ou suivre les indications ci-dessous).</p>
 
-<p>Installez <em>virtualenvwrapper</em> (ainsi que <em>virtualenv</em>) en utilisant <em>pip</em> comme indiqué ci-dessous.</p>
+<p>Installez <em>virtualenvwrapper</em> (ainsi que <em>virtualenv</em>) en utilisant <em>pip</em> comme indiqué ci-dessous.</p>
 
-<pre class="brush: bash"><code>sudo pip3 install virtualenvwrapper</code></pre>
+<pre class="brush: bash">sudo pip3 install virtualenvwrapper</pre>
 
 <p>Puis ajoutez les lignes suivantes à la fin de votre fichier de configuration shell.</p>
 
-<pre class="brush: bash"><code>export WORKON_HOME=$HOME/.virtualenvs
+<pre class="brush: bash">export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh</code></pre>
+source /usr/local/bin/virtualenvwrapper.sh</pre>
 
 <div class="note">
-<p><strong>Note</strong>: La variable <code>VIRTUALENVWRAPPER_PYTHON</code> pointe vers l'emplacement d'installation par défaut de Python3, et <code>source /usr/local/bin/virtualenvwrapper.sh</code> pointe vers l'emplacement par défaut du script <code>virtualenvwrapper.sh</code>. Si le <em>virtualenv</em> ne fonctionne pas quand vous le testez, vérifiez que Python et le script sont bien aux emplacements attendus (puis modifiez le fichier de configuration en conséquence).</p>
+<p><strong>Note</strong>: La variable <code>VIRTUALENVWRAPPER_PYTHON</code> pointe vers l'emplacement d'installation par défaut de Python3, et <code>source /usr/local/bin/virtualenvwrapper.sh</code> pointe vers l'emplacement par défaut du script <code>virtualenvwrapper.sh</code>. Si le <em>virtualenv</em> ne fonctionne pas quand vous le testez, vérifiez que Python et le script sont bien aux emplacements attendus (puis modifiez le fichier de configuration en conséquence).</p>
 
 <p>Par exemple, une installation test sur macOS a résulté en l'ajout des lignes suivantes dans le fichier startup :</p>
 
@@ -254,51 +251,49 @@ export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/3.
 export PROJECT_HOME=$HOME/Devel
 source /Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh</pre>
 
-<p>Vous pourrez trouver les bons emplacements de votre système en utilisant les commandes <code>which virtualenvwrapper.sh</code> et <code>which python3</code>.</p>
+<p>Vous pourrez trouver les bons emplacements de votre système en utilisant les commandes <code>which virtualenvwrapper.sh</code> et <code>which python3</code>.</p>
 </div>
 
-<p>Ce sont les mêmes lignes que pour Ubuntu, mais le nom du fichier de configuration caché du répertoire home est différent : <strong>.bash_profile</strong> dans votre répertoire home.</p>
+<p>Ce sont les mêmes lignes que pour Ubuntu, mais le nom du fichier de configuration caché du répertoire home est différent : <strong>.bash_profile</strong> dans votre répertoire home.</p>
 
 <div class="note">
 <p><strong>Note</strong>: Si vous n'arrivez pas à trouver le fichier <strong>.bash_profile</strong> depuis le finder, vous pouvez aussi l'ouvrir depuis le terminal en utilisant nano.</p>
 
 <p>La commande sera la suivante :</p>
 
-<pre><code>cd ~  # Naviguer vers le répertoire home
+<pre>>cd ~  # Naviguer vers le répertoire home
 ls -la # Listez le contenu du répertoire. Vous devriez voir .bash_profile.
 nano .bash_profile # Ouvrez le fichier avec l'éditeur de texte nano, depuis le terminal.
 # Allez à la fin du fichier, puis copiez-collez les lignes ci-dessus.
-# Utilisez Ctrl+X pour quitter nano, sélectionnez Y pour sauvegarder le fichier.</code>
-</pre>
+# Utilisez Ctrl+X pour quitter nano, sélectionnez Y pour sauvegarder le fichier.</pre>
 </div>
 
 <p>Puis relancez le fichier de configuration en appelant la ligne suivante depuis le terminal :</p>
 
-<pre class="brush: bash"><code>source ~/.bash_profile</code></pre>
+<pre class="brush: bash">source ~/.bash_profile</pre>
 
-<p>Vous devriez alors voir apparaître plusieurs lignes de script (les mêmes scripts que ceux présents dans l'installation Ubuntu). Vous devriez maintenant pouvoir créer un nouvel environnement virtuel avec la commande <code>mkvirtualenv</code>.</p>
+<p>Vous devriez alors voir apparaître plusieurs lignes de script (les mêmes scripts que ceux présents dans l'installation Ubuntu). Vous devriez maintenant pouvoir créer un nouvel environnement virtuel avec la commande <code>mkvirtualenv</code>.</p>
 
 <h4 id="Mise_en_place_de_lenvironnement_virtuel_sur_Windows_10">Mise en place de l'environnement virtuel sur Windows 10</h4>
 
-<p>Installer <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a> est encore plus simple qu'installer <em>virtualenvwrapper</em> , parce que vous n'avez pas besoin de configurer là où l'outil enregistre les informations de l'environnement virtuel (il y a des valeurs par défaut). Tout ce que vous avez besoin de faire est de lancer la commande suivante depuis l'invite de commande :</p>
+<p>Installer <a href="https://pypi.python.org/pypi/virtualenvwrapper-win">virtualenvwrapper-win</a> est encore plus simple qu'installer <em>virtualenvwrapper</em> , parce que vous n'avez pas besoin de configurer là où l'outil enregistre les informations de l'environnement virtuel (il y a des valeurs par défaut). Tout ce que vous avez besoin de faire est de lancer la commande suivante depuis l'invite de commande :</p>
 
-<pre><code>pip3 install virtualenvwrapper-win</code></pre>
+<pre>pip3 install virtualenvwrapper-win</pre>
 
-<p>Vous pouvez désormais créer un nouvel environnement virtuel avec la commande <code>mkvirtualenv</code></p>
+<p>Vous pouvez désormais créer un nouvel environnement virtuel avec la commande <code>mkvirtualenv</code></p>
 
 <h3 id="Créer_un_environnement_virtuel">Créer un environnement virtuel</h3>
 
-<p>Maintenant que vous avez installé <em>virtualenvwrapper</em> ou <em>virtualenvwrapper-win</em> , travailler avec des environnements virtuels sera une tâche très similaire entre chaque plateforme.</p>
+<p>Maintenant que vous avez installé <em>virtualenvwrapper</em> ou <em>virtualenvwrapper-win</em> , travailler avec des environnements virtuels sera une tâche très similaire entre chaque plateforme.</p>
 
-<p>Vous pouvez désormais créer un nouvel environnement virtuel avec la commande <code>mkvirtualenv</code>. Lors de son exécution, vous pourrez voir l'environnement être configuré (ce que vous verrez changera légèrement en fonction de votre plateforme). Lorsque l'exécution de la commande sera terminée, votre environnement virtuel sera actif — vous pouvez voir au début de la ligne de commande le nom de votre environnement entre parenthèses (nous vous montrons le résultat pour Ubuntu ci-dessous, mais la dernière ligne est similaire sur Windows/macOS).</p>
+<p>Vous pouvez désormais créer un nouvel environnement virtuel avec la commande <code>mkvirtualenv</code>. Lors de son exécution, vous pourrez voir l'environnement être configuré (ce que vous verrez changera légèrement en fonction de votre plateforme). Lorsque l'exécution de la commande sera terminée, votre environnement virtuel sera actif — vous pouvez voir au début de la ligne de commande le nom de votre environnement entre parenthèses (nous vous montrons le résultat pour Ubuntu ci-dessous, mais la dernière ligne est similaire sur Windows/macOS).</p>
 
-<pre><code>$ mkvirtualenv my_django_environment
+<pre>$ mkvirtualenv my_django_environment
 
 Running virtualenv with interpreter /usr/bin/python3
 ...
 virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
-(my_django_environment) ubuntu@ubuntu:~$</code>
-</pre>
+(my_django_environment) ubuntu@ubuntu:~$</pre>
 
 <p>Maintenant que vous êtes dans votre environnement virtuel vous pouvez installer Django et commencer à développer.</p>
 
@@ -311,18 +306,17 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 <p>Il y a quelques commandes que vous devriez connaître (il y en a davantage dans la documentation de l'outil, mais celles-ci sont celles que vous utiliserez le plus souvent) :</p>
 
 <ul>
- <li><code>deactivate</code> — Permet de sortir de l'environnement virtuel Python actuel</li>
- <li><code>workon</code> — Lister tous les environnements virtuels disponibles</li>
- <li><code>workon name_of_environment</code> — Activer l'environnement virtuel spécifié</li>
- <li><code>rmvirtualenv name_of_environment</code> — Supprimer l'environnement virtuel spécifié</li>
+ <li><code>deactivate</code> — Permet de sortir de l'environnement virtuel Python actuel</li>
+ <li><code>workon</code> — Lister tous les environnements virtuels disponibles</li>
+ <li><code>workon name_of_environment</code> — Activer l'environnement virtuel spécifié</li>
+ <li><code>rmvirtualenv name_of_environment</code> — Supprimer l'environnement virtuel spécifié</li>
 </ul>
 
 <h2 id="Installer_Django">Installer Django</h2>
 
-<p>Une fois que vous avez créé votre environnement virtuel, et que vous avez utilisé <code>workon</code> pour y entrer, vous pouvez utiliser <em>pip3 </em>pour installer Django. </p>
+<p>Une fois que vous avez créé votre environnement virtuel, et que vous avez utilisé <code>workon</code> pour y entrer, vous pouvez utiliser <em>pip3 </em>pour installer Django. </p>
 
-<pre class="brush: bash">pip3 install django
-</pre>
+<pre class="brush: bash">pip3 install django</pre>
 
 <p>Vous pouvez tester l'installation de Django en exécutant la commande suivante (celle-ci ne fait que tester le fait que Python puisse trouver le module Django) :</p>
 
@@ -332,8 +326,7 @@ python3 -m django --version
 
 # Windows
 py -3 -m django --version
- 2.1.5
-</pre>
+ 2.1.5</pre>
 
 <div class="note">
 <p><strong>Note</strong>: Si la commande Windows ci-dessus n'indique aucun module Django présent, essayez :</p>
@@ -344,7 +337,7 @@ py -3 -m django --version
 </div>
 
 <div class="warning">
-<p><strong>Important</strong>: Le reste de ce <strong>module </strong>utilise les commandes <em>Linux</em> pour invoquer Python 3 (<code>python3</code>) . . Si vous travaillez sous <em>Windows </em>, remplacez simplement ce préfixe avec : <code>py -3</code></p>
+<p><strong>Important</strong>: Le reste de ce <strong>module </strong>utilise les commandes <em>Linux</em> pour invoquer Python 3 (<code>python3</code>) . . Si vous travaillez sous <em>Windows </em>, remplacez simplement ce préfixe avec : <code>py -3</code></p>
 </div>
 
 <h2 id="Tester_votre_installation">Tester votre installation</h2>
@@ -352,15 +345,14 @@ py -3 -m django --version
 <p>Les tests ci-dessus fonctionnent, mais ne font rien de très divertissant. Un test plus intéressant consiste à créer un projet squelette et de voir si il fonctionne. Pour ce faire, naviguez tout d'abord dans votre invite/terminal de commande à l'endroit où vous désirez stocker vos applications Django. Créez un dossier pour votre site test et placez-vous dedans.</p>
 
 <pre class="brush: bash">mkdir django_test
-cd django_test
-</pre>
+cd django_test</pre>
 
-<p>Vous pouvez ensuite créer un nouveau site squelette intitulé "<em>mytestsite</em>" utilisant l'outil <strong>django-admin</strong> omme montré. Après avoir créé le site, vous pouvez naviguer dans le dossier où vous trouverez le script principal pour gérer vos projets, intitulé <strong>manage.py</strong>.</p>
+<p>Vous pouvez ensuite créer un nouveau site squelette intitulé "<em>mytestsite</em>" utilisant l'outil <strong>django-admin</strong> omme montré. Après avoir créé le site, vous pouvez naviguer dans le dossier où vous trouverez le script principal pour gérer vos projets, intitulé <strong>manage.py</strong>.</p>
 
 <pre class="brush: bash">django-admin startproject mytestsite
 cd mytestsite</pre>
 
-<p>Nous pouvons lancer le <em>serveur web de développement</em> depuis ce dossier en utilisant <strong>manage.py</strong> et la commande <code>runserver</code> command, comme indiqué ci-dessous.</p>
+<p>Nous pouvons lancer le <em>serveur web de développement</em> depuis ce dossier en utilisant <strong>manage.py</strong> et la commande <code>runserver</code> command, comme indiqué ci-dessous.</p>
 
 <pre class="brush: bash">$ python3 manage.py runserver
 Performing system checks...
@@ -377,20 +369,18 @@ Quit the server with CONTROL-C.
 </pre>
 
 <div class="note">
-<p><strong>Note </strong>: La commande ci-dessus montre le résultat de l'exécution sur Linux/macOS. Vous pouvez ignorer les warnings à propos des "15 unapplied migration(s)" à partir de là !</p>
+<p><strong>Note </strong>: La commande ci-dessus montre le résultat de l'exécution sur Linux/macOS. Vous pouvez ignorer les warnings à propos des "15 unapplied migration(s)" à partir de là !</p>
 </div>
 
-<p>Maintenant que votre serveur est lancé, vous pouvez voir le site en naviguant vers l'URL suivante depuis votre navigateur local : <code>http://127.0.0.1:8000/</code>. Vous devriez voir un site ressemblant à celui-ci :<br>
- <img alt="Django Skeleton App Homepage - Django 2.0" src="https://mdn.mozillademos.org/files/16288/Django_Skeleton_Website_Homepage_2_1.png" style="height: 714px; width: 806px;"></p>
+<p>Maintenant que votre serveur est lancé, vous pouvez voir le site en naviguant vers l'URL suivante depuis votre navigateur local : <code>http://127.0.0.1:8000/</code>. Vous devriez voir un site ressemblant à celui-ci :</p>
 
-<ul>
-</ul>
+<p><img alt="Django Skeleton App Homepage - Django 2.0" src="django_skeleton_website_homepage_2_1.png"></p>
 
 <h2 id="Résumé">Résumé</h2>
 
 <p>Vous avez maintenant un environnement de développement Django fonctionnel et opérationnel sur votre ordinateur.</p>
 
-<p>Dans la section test vous avez aussi vu comment créer un nouveau site web Django en utilisant <code>django-admin startproject</code>, et comment aller dessus depuis votre navigateur en utilisant le serveur de développement web (<code>python3 manage.py runserver</code>). Dans le prochain article nous détaillerons ce processus, et créant un application web simple mais complète.</p>
+<p>Dans la section test vous avez aussi vu comment créer un nouveau site web Django en utilisant <code>django-admin startproject</code>, et comment aller dessus depuis votre navigateur en utilisant le serveur de développement web (<code>python3 manage.py runserver</code>). Dans le prochain article nous détaillerons ce processus, et créant un application web simple mais complète.</p>
 
 <h2 id="See_also">See also</h2>
 
@@ -405,19 +395,19 @@ Quit the server with CONTROL-C.
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Introduction">Django introduction</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/development_environment">Setting up a Django development environment</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website">Django Tutorial: The Local Library website</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/skeleton_website">Django Tutorial Part 2: Creating a skeleton website</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Models">Django Tutorial Part 3: Using models</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Admin_site">Django Tutorial Part 4: Django admin site</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Home_page">Django Tutorial Part 5: Creating our home page</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Sessions">Django Tutorial Part 7: Sessions framework</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Authentication">Django Tutorial Part 8: User authentication and permissions</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Forms">Django Tutorial Part 9: Working with forms</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Testing">Django Tutorial Part 10: Testing a Django web application</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/Deployment">Django Tutorial Part 11: Deploying Django to production</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/web_application_security">Django web application security</a></li>
+ <li><a href="/fr/docs/Learn/Server-side/Django/django_assessment_blog">DIY Django mini blog</a></li>
 </ul>

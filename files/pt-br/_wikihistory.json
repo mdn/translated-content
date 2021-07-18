@@ -5265,12 +5265,6 @@
       "welingtonms"
     ]
   },
-  "Web/API/FullscreenOptions": {
-    "modified": "2020-10-15T22:15:52.238Z",
-    "contributors": [
-      "TecladistaProd"
-    ]
-  },
   "Web/API/Gamepad_API": {
     "modified": "2020-10-15T22:23:34.951Z",
     "contributors": [
@@ -16923,6 +16917,12 @@
     "modified": "2020-08-30T22:44:17.906Z",
     "contributors": [
       "bermarques"
+    ]
+  },
+  "orphaned/Web/API/FullscreenOptions": {
+    "modified": "2020-10-15T22:15:52.238Z",
+    "contributors": [
+      "TecladistaProd"
     ]
   },
   "orphaned/Web/API/HTMLOrForeignElement/blur": {

@@ -57,7 +57,7 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
 
 <dl>
  <dt>&lt;host-source&gt;</dt>
- <dd>Des hôtes Internet par leur nom de domaine ou adresse IP, aussi bien qu'un <a href="https://wiki.developer.mozilla.org/en-US/docs/URIs_and_URLs">protocole</a> et/ou un numéro de port. L'adresse du site peut inclure un caractère de remplacement optionnel (l'astérisque <code>'*'</code>), qui ne peut être utilisée que pour indiquer un sous-domaine ou que tous les ports existants sont des sources valides. Vous ne devez pas mettre de guillemets simples.<br>
+ <dd>Des hôtes Internet par leur nom de domaine ou adresse IP, aussi bien qu'un <a href="/fr/docs/URIs_and_URLs">protocole</a> et/ou un numéro de port. L'adresse du site peut inclure un caractère de remplacement optionnel (l'astérisque <code>'*'</code>), qui ne peut être utilisée que pour indiquer un sous-domaine ou que tous les ports existants sont des sources valides. Vous ne devez pas mettre de guillemets simples.<br>
  Exemples :
  <ul>
   <li><code>http://*.example.com</code>: correspondra à toutes les tentatives d'accès pour tous les sous-domaines de example.com via le protocole <code>http:</code>.</li>
@@ -73,9 +73,9 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
  <dd>Un protocole tel que <code>http:</code> or <code>https:</code>. Les deux-points sont nécessaires et vous ne devez pas mettre de guillemets. Vous pouvez aussi spécifier des schémas de données bien que ce ne soit pas recommandé.
  <ul>
   <li><code>data:</code> Autorise <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">les URI <code>data:</code></a> à être utilisées comme source de contenu.<em> Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie et certainement pas pour des scripts.</em></li>
-  <li><code>mediastream:</code> permet aux <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/MediaStream_API">URI <code>mediastream:</code></a> d'être utilisées comme source de contenu.</li>
-  <li><code>blob:</code> permet aux <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Blob">URI <code>blob:</code></a> d'être utilisées comme source de contenu.</li>
-  <li><code>filesystem:</code> Allows <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/FileSystem">URI <code>filesystem:</code></a> d'être utilisées comme source de contenu.</li>
+  <li><code>mediastream:</code> permet aux <a href="/fr/docs/Web/API/MediaStream_API">URI <code>mediastream:</code></a> d'être utilisées comme source de contenu.</li>
+  <li><code>blob:</code> permet aux <a href="/fr/docs/Web/API/Blob">URI <code>blob:</code></a> d'être utilisées comme source de contenu.</li>
+  <li><code>filesystem:</code> Allows <a href="/fr/docs/Web/API/FileSystem">URI <code>filesystem:</code></a> d'être utilisées comme source de contenu.</li>
  </ul>
  </dd>
  <dt><code>'self'</code></dt>
