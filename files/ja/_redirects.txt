@@ -4851,8 +4851,8 @@
 /ja/docs/Web/Manifest/serviceworker	/ja/docs/orphaned/Web/Manifest/serviceworker
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Introduction
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps
-/ja/docs/Web/Reference	/ja/docs/orphaned/Web/Reference
-/ja/docs/Web/Reference/API	/ja/docs/orphaned/Web/Reference/API
+/ja/docs/Web/Reference	/ja/docs/Web
+/ja/docs/Web/Reference/API	/ja/docs/Web/API
 /ja/docs/Web/Reference/Events	/ja/docs/Web/Events
 /ja/docs/Web/Reference/Events/DOMContentLoaded	/ja/docs/Web/API/Window/DOMContentLoaded_event
 /ja/docs/Web/Reference/Events/audiostart	/ja/docs/Web/API/SpeechRecognition/audiostart_event
