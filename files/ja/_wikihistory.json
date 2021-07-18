@@ -51134,13 +51134,6 @@
       "chikoski"
     ]
   },
-  "orphaned/Web/API/Ambient_Light_Events": {
-    "modified": "2020-10-15T21:25:12.532Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
-    ]
-  },
   "orphaned/Web/API/AudioContext/mozAudioChannelType": {
     "modified": "2019-03-23T22:51:59.818Z",
     "contributors": [
@@ -51266,25 +51259,6 @@
       "hamasaki",
       "yyss",
       "Fajrovulpo"
-    ]
-  },
-  "orphaned/Web/API/DeviceLightEvent": {
-    "modified": "2020-10-15T21:33:03.860Z",
-    "contributors": [
-      "mfuji09",
-      "yyss",
-      "dskmori",
-      "YuichiNukiyama",
-      "fscholz"
-    ]
-  },
-  "orphaned/Web/API/DeviceLightEvent/value": {
-    "modified": "2020-10-15T21:22:48.751Z",
-    "contributors": [
-      "YujiSoftware",
-      "fscholz",
-      "khalid32",
-      "ethertank"
     ]
   },
   "orphaned/Web/API/DeviceProximityEvent/max": {
@@ -51744,15 +51718,6 @@
       "khalid32",
       "ethertank",
       "Potappo"
-    ]
-  },
-  "orphaned/Web/API/Window/ondevicelight": {
-    "modified": "2020-10-15T21:22:50.353Z",
-    "contributors": [
-      "YujiSoftware",
-      "teoli",
-      "khalid32",
-      "ethertank"
     ]
   },
   "orphaned/Web/API/Window/ondeviceproximity": {
