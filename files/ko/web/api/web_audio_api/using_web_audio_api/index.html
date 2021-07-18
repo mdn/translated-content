@@ -169,7 +169,7 @@ volumeControl.addEventListener('input', function() {
 </pre>
 
 <div class="note">
-<p><strong>노트</strong>: 노드 객체의 값 (예: <code>GainNode.gain</code>)은 간단한 값이 아닙니다; 실제로는 {{domxref("AudioParam")}} 유형의 객체입니다 — 이것들은 파라미터라고 불립니다. 이것이 우리가 단순히 <code>gain</code>에 직접 값을 설정하기보다, <code>GainNode.gain</code>의 <code>value</code> 프로퍼티를 설정해야만 하는 이유입니다. 예를 들자면, 파라미터에 설정된 기간 동안 사이에 변화하는 특정한 값들의 집합을 전달하는 것을 감안하며, 이는 이것들이 더욱 유연하게 될 수 있게 합니다.</p>
+<p><strong>노트</strong>: 노드 객체의 값 (예: <code>GainNode.gain</code>)은 간단한 값이 아닙니다; 실제로는 {{domxref("AudioParam")}} 유형의 객체입니다 — 이것들은 매개변수라고 불립니다. 이것이 우리가 단순히 <code>gain</code>에 직접 값을 설정하기보다, <code>GainNode.gain</code>의 <code>value</code> 속성을 설정해야만 하는 이유입니다. 예를 들자면, 매개변수에 설정된 기간 동안 사이에 변화하는 특정한 값들의 집합을 전달하는 것을 감안하며, 이는 이것들이 더욱 유연하게 될 수 있게 합니다.</p>
 </div>
 
 <p>좋습니다, 이제 사용자는 트랙의 볼륨을 업데이트할 수 있습니다! gain 노드는 만약 여러분이 무음 기능을 추가하기를 원한다면 사용하기에 완벽한 노드입니다.</p>
