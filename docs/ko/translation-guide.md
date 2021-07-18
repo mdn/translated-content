@@ -187,6 +187,8 @@ EDITOR=code
 | Iterate | 순회 | | | 
 | Listener | 수신기 | 이벤트 수신기 | | 
 | Mixin | 믹스인 | | | 
+| Module | 모듈 | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다. | | 
+| Module | 과정 | 어떠한 교육 과정, 단위에 의한 표현은 '과정'으로 번역한다. (예: In this module) | | 
 | Parameter | 매개변수 | | | 
 | Pending | 대기 | | | 
 | Prototype | 프로토타입 | | | 
