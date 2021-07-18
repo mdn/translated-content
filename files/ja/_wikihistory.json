@@ -48159,12 +48159,6 @@
       "silverskyvicto"
     ]
   },
-  "conflicting/Learn/Getting_started_with_the_web/JavaScript_basics": {
-    "modified": "2019-03-23T23:21:46.830Z",
-    "contributors": [
-      "sunagakazuo"
-    ]
-  },
   "conflicting/Learn/HTML/Howto/Author_fast-loading_HTML_pages": {
     "modified": "2020-07-16T22:22:32.832Z",
     "contributors": [
@@ -48639,31 +48633,6 @@
       "Mgjbot",
       "Yuichirou",
       "electrolysis"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators": {
-    "modified": "2020-10-15T21:04:54.922Z",
-    "contributors": [
-      "tbpgr",
-      "mfuji09",
-      "yokotay",
-      "AkihikoTakeda",
-      "ambi",
-      "yyss",
-      "teoli",
-      "ethertank",
-      "Potappo"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators_f71733c8e7001a29c3ec40d8522a4aca": {
-    "modified": "2020-03-12T19:35:34.796Z",
-    "contributors": [
-      "AkihikoTakeda",
-      "yyss",
-      "teoli",
-      "keiskimu",
-      "ethertank",
-      "Potappo"
     ]
   },
   "conflicting/tools/Keyboard_shortcuts": {
