@@ -81,7 +81,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 <p>이 특별한 요구는 필수적으로 가동 중인데 그 이유는 예기치 않은 사운드는 짜증나고 거슬릴 수 있고, 접근성 문제를 유발할 수 있기 때문입니다. <a href="/ko/docs/Web/Media/Autoplay_guide">미디어와 Web Audio API에 대한 자동 재생 가이드</a> 문서에서 이것에 대해 더 배울 수 있습니다.</p>
 
-<p>우리의 스크립트는 유저의 입력 이벤트 (예를 들자면 재생 버튼의 클릭)에 응답하여 오디오를 재생하므로, 우리는 이상이 없고 자동 재생 방지로부터 문제가 없어야만 합니다. 그러므로, 우리의 재생과 정지 기능을 살펴봄으로써 시작해 봅시다. 우리는 트랙이 재생중일 때 정지 버튼으로 바뀌는 재생 버튼을 가지고 있습니다:</p>
+<p>우리의 스크립트는 사용자의 입력 이벤트 (예를 들자면 재생 버튼의 클릭)에 응답하여 오디오를 재생하므로, 우리는 이상이 없고 자동 재생 방지로부터 문제가 없어야만 합니다. 그러므로, 우리의 재생과 정지 기능을 살펴봄으로써 시작해 봅시다. 우리는 트랙이 재생중일 때 정지 버튼으로 바뀌는 재생 버튼을 가지고 있습니다:</p>
 
 <pre class="brush: html">&lt;button data-playing="false" role="switch" aria-checked="false"&gt;
     &lt;span&gt;Play/Pause&lt;/span&gt;
