@@ -2,17 +2,19 @@
 title: Les tableaux
 slug: Learn/JavaScript/First_steps/Arrays
 tags:
-  - Apprendre
+  - Arrays
   - Article
-  - Codage
-  - Débutants
+  - Beginner
+  - CodingScripting
   - JavaScript
-  - Lier
+  - Join
+  - Learn
   - Pop
   - Push
-  - Tableaux
-  - décalage
-  - séparer
+  - l10n:priority
+  - shift
+  - split
+  - unshift
 translation_of: Learn/JavaScript/First_steps/Arrays
 original_slug: Learn/JavaScript/First_steps/tableaux
 ---
@@ -41,7 +43,7 @@ original_slug: Learn/JavaScript/First_steps/tableaux
 
 <p>Sans tableaux, nous devrions stocker chaque valeur dans une variable séparée, puis appeler le code qui effectue l'affichage ou l'impression, puis ajouter séparément chaque élément. Ce serait plus long à écrire, moins efficace et cela comporterait plus de risques d'erreurs. Si nous avions 10 articles à ajouter à la facture, ce serait déjà assez mauvais, mais qu'en serait-il de 100 articles ou de 1000 ? Nous reviendrons sur cet exemple plus loin dans l'article.</p>
 
-<p>Comme précédemment, initions‑nous aux bases pratiques des tableaux en entrant quelques exemples dans une console JavaScript. En voici une plus bas (vous pouvez aussi <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">ouvrir cette console</a> dans un onglet ou une fenêtre séparés ou utiliser la <a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">console développeur de l'explorateur</a> si vous préférez).</p>
+<p>Comme précédemment, initions‑nous aux bases pratiques des tableaux en entrant quelques exemples dans une console JavaScript. En voici une plus bas (vous pouvez aussi <a href="https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html">ouvrir cette console</a> dans un onglet ou une fenêtre séparés ou utiliser la <a href="/fr/docs/Learn/Common_questions/What_are_browser_developer_tools">console développeur de l'explorateur</a> si vous préférez).</p>
 
 <div class="hidden">
 <h6 id="Hidden_code">Hidden code</h6>
@@ -174,7 +176,7 @@ let random = ['arbre', 795, [0, 1, 2]];</pre>
 
 <h3 id="Accès_aux_éléments_de_tableau_et_modification_de_ceux‑ci">Accès aux éléments de tableau et modification de ceux‑ci</h3>
 
-<p>Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant la notation crochet, de la même façon que nous avons eu <a href="/en-US/Learn/JavaScript/First_steps/Useful_string_methods#Retrieving_a_specific_string_character">accès aux lettres dans une chaîne</a>.</p>
+<p>Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant la notation crochet, de la même façon que nous avons eu <a href="/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character">accès aux lettres dans une chaîne</a>.</p>
 
 <ol>
  <li>Entrez ceci dans la console :
@@ -214,7 +216,7 @@ for (var i = 0; i &lt; sequence.length; i++) {
 <ol>
  <li>Commencer la boucle à l'élément 0 du tableau.</li>
  <li>Arrêter de tourner quand le dernier élément du tableau sera atteint. Cela fonctionne pour n'importe quelle dimension de tableau ; dans notre cas, on sortira de la boucle à l'élément  7 (c'est bon, car le dernier élément — que nous souhaitons que la boucle traite — est le 6).</li>
- <li>Afficher chaque élément sur la console de l'explorateur avec<code> <a href="/en-US/docs/Web/API/Console/log">console.log()</a></code>.</li>
+ <li>Afficher chaque élément sur la console de l'explorateur avec<code> <a href="/fr/docs/Web/API/Console/log">console.log()</a></code>.</li>
 </ol>
 
 <h2 id="Quelques_méthodes_utiles_pour_les_tableaux">Quelques méthodes utiles pour les tableaux</h2>
@@ -306,10 +308,10 @@ removedItem;</pre>
 
 <ol>
  <li>Sous le commentaire <code>// number 1</code> il y a un certain nombre de chaînes de caractères, chacune précise le nom d'un produit et son prix séparé par deux‑points. Placez‑les dans un tableau ; enregistrez‑le sous le nom <code>products</code>.</li>
- <li>Sur la même ligne que le commentaire <code>// number 2</code> se trouve le début d'une boucle. Dans cette ligne nous avons actuellement <code>i &lt;= 0</code>, test conditionnel qui fait que la <a href="/en-US/Learn/JavaScript/First_steps/A_first_splash#Loops"> boucle</a> stoppe immédiatement, car ce test dit « stopper dès que <code>i</code> est inférieur ou égal à 0 » et <code>i</code> part de 0. Remplacez ce test par un qui  n'arrêtera pas la boucle tant que <code>i</code> sera inférieur à la taille du tableau <code>products</code>.</li>
- <li>Au dessous du commentaire <code>// number 3</code> nous voudrions que vous écriviez une ligne de code qui scinde l'élément courant du tableau (<code>nom:prix</code>) en deux éléments distincts, un contenant uniquement le nom, l'autre uniquement le prix. Si vous nous ne savez pas trop comment faire, revoyez l'article relatif aux <a href="/fr/docs/Learn/JavaScript/First_steps/methode_chaine_utile">Méthodes utiles pour les chaînes de caractères</a> pour vous aider, ou même mieux, regardez la section {{anch("Converting between strings and arrays")}} de cet article.</li>
- <li>En plus des lignes de code ci‑dessus, vous aurez aussi à convertir les prix de chaîne de caractères en chiffres. Si vous ne vous souvenez pas comment faire, revoyez le <a href="/fr/docs/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings">premier article à propos des chaînes</a>.</li>
- <li>Il y a une variable nommée <code>total</code> créée et initialisée à la valeur de 0 en tête du code. Dans la boucle (sous <code>// number 4</code>) ajoutez une ligne qui ajoute à ce total le prix de l'article courant  à chaque itération de la boucle, de sorte que à la fin du code le prix total soit correctement inscrit sur l'envoi. Vous pourriez avoir besoin d'un <a href="/en-US/Learn/JavaScript/First_steps/Math#Assignment_operators">opérateur d'assignation</a> pour faire cela ;-).</li>
+ <li>Sur la même ligne que le commentaire <code>// number 2</code> se trouve le début d'une boucle. Dans cette ligne nous avons actuellement <code>i &lt;= 0</code>, test conditionnel qui fait que la <a href="/fr/docs/Learn/JavaScript/First_steps/A_first_splash#loops"> boucle</a> stoppe immédiatement, car ce test dit « stopper dès que <code>i</code> est inférieur ou égal à 0 » et <code>i</code> part de 0. Remplacez ce test par un qui  n'arrêtera pas la boucle tant que <code>i</code> sera inférieur à la taille du tableau <code>products</code>.</li>
+ <li>Au dessous du commentaire <code>// number 3</code> nous voudrions que vous écriviez une ligne de code qui scinde l'élément courant du tableau (<code>nom:prix</code>) en deux éléments distincts, un contenant uniquement le nom, l'autre uniquement le prix. Si vous nous ne savez pas trop comment faire, revoyez l'article relatif aux <a href="/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods">Méthodes utiles pour les chaînes de caractères</a> pour vous aider, ou même mieux, regardez la section {{anch("Converting between strings and arrays")}} de cet article.</li>
+ <li>En plus des lignes de code ci‑dessus, vous aurez aussi à convertir les prix de chaîne de caractères en chiffres. Si vous ne vous souvenez pas comment faire, revoyez le <a href="/fr/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings">premier article à propos des chaînes</a>.</li>
+ <li>Il y a une variable nommée <code>total</code> créée et initialisée à la valeur de 0 en tête du code. Dans la boucle (sous <code>// number 4</code>) ajoutez une ligne qui ajoute à ce total le prix de l'article courant  à chaque itération de la boucle, de sorte que à la fin du code le prix total soit correctement inscrit sur l'envoi. Vous pourriez avoir besoin d'un <a href="/fr/docs/Learn/JavaScript/First_steps/Math#assignment_operators">opérateur d'assignation</a> pour faire cela ;-).</li>
  <li>Nous souhaitons que vous modifiez la ligne au‑dessous de  <code>// number 5</code> de sorte que la variable <code>itemText</code> soit égale à « nom actuel de l'élément — $prix actuel de l'élément », par exemple « Shoes — $23.99 » dans chaque cas, de façon à ce qu'une information correcte soit affichée sur l'envoi. Il s'agit d'une simple concaténation de chaînes de caractères, chose qui doit vous être familière.</li>
 </ol>
 
@@ -494,8 +496,7 @@ window.addEventListener('load', updateCode);
 
 <h2 id="Testez_vos_compétences_!">Testez vos compétences !</h2>
 
-<p><br>
- Vous avez atteint la fin de cet article, mais vous souvenez-vous des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien fixé ces connaissances avant de continuer — voir <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays">Test de compétences : les tableaux</a>.</p>
+<p>Vous avez atteint la fin de cet article, mais vous souvenez-vous des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien fixé ces connaissances avant de continuer — voir <a href="/fr/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays">Test de compétences : les tableaux</a>.</p>
 
 <h2 id="Conclusion">Conclusion</h2>
 
@@ -505,10 +506,8 @@ window.addEventListener('load', updateCode);
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
-
-
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Indexed_collections">Collections indexées</a> — un guide de niveau avancé à propos des tableaux et de leurs cousins, les tableaux typés.</li>
+ <li><a href="/fr/docs/Web/JavaScript/Guide/Indexed_collections">Collections indexées</a> — un guide de niveau avancé à propos des tableaux et de leurs cousins, les tableaux typés.</li>
  <li>{{jsxref("Array")}} — la page de référence de l'objet <code>Array</code> — pour un guide de référence détaillé à propos des fonctionnalités discutées dans cette page, et plus encore.</li>
 </ul>
 
@@ -517,13 +516,13 @@ window.addEventListener('load', updateCode);
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript">What is JavaScript?</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/A_first_splash">A first splash into JavaScript</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables">Storing the information you need — Variables</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math">Basic math in JavaScript — numbers and operators</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings">Handling text — strings in JavaScript</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Silly_story_generator">Assessment: Silly story generator</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript">What is JavaScript?</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/First_steps/A_first_splash">A first splash into JavaScript</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/First_steps/What_went_wrong">What went wrong? Troubleshooting JavaScript</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/First_steps/Variables">Storing the information you need — Variables</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/First_steps/Math">Basic math in JavaScript — numbers and operators</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/First_steps/Strings">Handling text — strings in JavaScript</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods">Useful string methods</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/First_steps/Arrays">Arrays</a></li>
+ <li><a href="/fr/docs/Learn/JavaScript/First_steps/Silly_story_generator">Assessment: Silly story generator</a></li>
 </ul>

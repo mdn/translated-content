@@ -19,13 +19,13 @@ translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 
 <h2 id="Raison">Raison</h2>
 
-<pre class="syntaxbox notranslate"> <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">Raison : la requête CORS n’utilise pas http.</span></span></span></span></pre>
+<pre class="syntaxbox">Raison : la requête CORS n’utilise pas http.</pre>
 
 <h2 id="Quest_ce_qui_na_pas_fonctionné">Qu'est ce qui n'a pas fonctionné ?</h2>
 
 <p>Les requêtes {{Glossary("CORS")}} ne peuvent utiliser que les URL HTTPS, mais l'URL spécifiée par la requête est d'un type différent. Cela se produit souvent si l'URL spécifie un fichier local, en utilisant un URL de la forme <code>file:///</code>.</p>
 
-<p>Pour résoudre ce problème, assurez-vous simplement d'utiliser les URL HTTPS lorsque vous émettez des requêtes impliquant CORS , comme {{domxref("XMLHttpRequest")}}, <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a> APIs, Web Fonts (<code>@font-face</code>), <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">WebGL textures</a>, et des stylesheets XSL.</p>
+<p>Pour résoudre ce problème, assurez-vous simplement d'utiliser les URL HTTPS lorsque vous émettez des requêtes impliquant CORS , comme {{domxref("XMLHttpRequest")}}, <a href="/fr/docs/Web/API/Fetch_API">Fetch</a> APIs, Web Fonts (<code>@font-face</code>), <a href="/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">WebGL textures</a>, et des stylesheets XSL.</p>
 
 <h3 id="Sécurité_des_fichiers_locaux_dans_Firefox_68">Sécurité des fichiers locaux dans Firefox 68</h3>
 
@@ -36,8 +36,8 @@ translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/CORS/Errors">Erreurs liées à CORS</a></li>
+ <li><a href="/fr/docs/Web/HTTP/CORS/Errors">Erreurs liées à CORS</a></li>
  <li>Glossaire: {{Glossary("CORS")}}</li>
- <li><a href="/en-US/docs/Web/HTTP/CORS">Introduction à CORS</a></li>
- <li><a href="/en-US/docs/Learn/Common_questions/What_is_a_URL">C'est quoi une URL?</a></li>
+ <li><a href="/fr/docs/Web/HTTP/CORS">Introduction à CORS</a></li>
+ <li><a href="/fr/docs/Learn/Common_questions/What_is_a_URL">C'est quoi une URL?</a></li>
 </ul>
