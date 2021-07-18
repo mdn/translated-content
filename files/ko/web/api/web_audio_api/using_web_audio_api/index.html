@@ -57,7 +57,7 @@ const audioContext = new AudioContext();
 </pre>
 
 <div class="note">
-<p><strong>노트</strong>: 만약 로딩한 사운드 파일이 다른 도메인에 있다면 <code>crossorigin</code> 어트리뷰트를 사용할 필요가 있습니다; 더 많은 정보를 보시려면 <a href="/ko/docs/Web/HTTP/CORS">Cross Origin Resource Sharing (CORS)</a>를 참조해 보세요.</p>
+<p><strong>참고</strong>: 만약 로딩한 사운드 파일이 다른 도메인에 있다면 <code>crossorigin</code> 특성을 사용할 필요가 있습니다; 더 많은 정보를 보시려면 <a href="/ko/docs/Web/HTTP/CORS">Cross Origin Resource Sharing (CORS)</a>를 참고해 보세요.</p>
 </div>
 
 <p>Web Audio API의 모든 훌륭한 것들을 사용하기 위해서는, 이 요소로부터 소스를 취하고 생성한 컨텍스트로 보낼(pipe) 필요가 있습니다. 운 좋게도 이걸 할 수 있는 메서드가 있습니다 — {{domxref("AudioContext.createMediaElementSource")}}입니다:</p>
