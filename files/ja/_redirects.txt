@@ -3740,7 +3740,7 @@
 /ja/docs/Web/API/RTCIdentityErrorEvent	/ja/docs/orphaned/Web/API/RTCIdentityErrorEvent
 /ja/docs/Web/API/RTCIdentityEvent	/ja/docs/orphaned/Web/API/RTCIdentityEvent
 /ja/docs/Web/API/RTCSessionDescriptionCallback	/ja/docs/orphaned/Web/API/RTCSessionDescriptionCallback
-/ja/docs/Web/API/RandomSource	/ja/docs/conflicting/Web/API/Crypto/getRandomValues
+/ja/docs/Web/API/RandomSource	/ja/docs/Web/API/Crypto/getRandomValues
 /ja/docs/Web/API/RandomSource/getRandomValues	/ja/docs/Web/API/Crypto/getRandomValues
 /ja/docs/Web/API/Range1	/ja/docs/Web/API/Range
 /ja/docs/Web/API/Range1/cloneContents	/ja/docs/Web/API/Range/cloneContents
