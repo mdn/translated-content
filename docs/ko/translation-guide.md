@@ -117,6 +117,7 @@ EDITOR=code
 | Attribute | 특성 | |
 | Boolean | 불리언 | |
 | Class | 클래스 | |
+| Contact us | 문의하기 | |
 | Content(s) | 콘텐츠 | |
 | Context | 맥락 | |
 | Document | 문서 | |
