@@ -65,7 +65,7 @@ f();  // 6
 ];
 
 // 이 문장은 배열을 반환함: [8, 6, 7, 9]
-elements.<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(function(element) {
+elements.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(function(element) {
   return element.length;
 });
 
@@ -75,7 +75,7 @@ elements.map((element) =&gt; {
 }); // [8, 6, 7, 9]
 
 // 파라미터가 하나만 있을 때는 주변 괄호를 생략할 수 있다.
-elements.<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(element =&gt; {
+elements.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(element =&gt; {
   return element.length;
 }); // [8, 6, 7, 9]
 
@@ -87,12 +87,12 @@ elements.map(element =&gt; element.length); // [8, 6, 7, 9]
 // 'length'는 우리가 얻고자 하는 속성에 해당하는 반면,
 // lengthFooBArX'는 변경 가능한 변수의 이름일 뿐이므로
 // 원하는 유효한 변수명으로 변경할 수 있다.
-elements.<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(({ length: lengthFooBArX }) =&gt; lengthFooBArX); // [8, 6, 7, 9]
+elements.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(({ length: lengthFooBArX }) =&gt; lengthFooBArX); // [8, 6, 7, 9]
 
 // destructuring 파라미터 할당도 아래와 같이 작성할 수 있습니다.
 // 이 예에서 정의한 객체내의 'length'에 값을 지정하지 않은 점에 주목하세요. 대신, "length" 변수의
 // 리터럴 이름은 우리가 해당 객체에서 꺼내오고 싶은 속성이름 자체로 사용됩니다.
-elements.<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(({ length }) =&gt; length); // [8, 6, 7, 9] </pre>
+elements.<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map</a>(({ length }) =&gt; length); // [8, 6, 7, 9] </pre>
 
 <h3 id="바인딩_되지_않은_this">바인딩 되지 않은 <code>this</code></h3>
 
