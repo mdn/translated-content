@@ -13,9 +13,7 @@ browser-compat: javascript.builtins.TypeError
 <div>{{JSRef}}</div>
 
 <p>
-  <code><strong>TypeError</strong></code
-  > 객체는 일반적으로 값이 기대하던 자료형이 아니라서 연산을 할 수 없을 때
-  발생하는 오류입니다.
+  <code><strong>TypeError</strong></code> 객체는 일반적으로 값이 기대하던 자료형이 아니라서 연산을 할 수 없을 때 발생하는 오류입니다.
 </p>
 
 <p>다음과 같은 경우 <code>TypeError</code>가 발생할 수 있습니다.</p>
@@ -29,20 +27,20 @@ browser-compat: javascript.builtins.TypeError
   <li>부적절한 방법으로 값을 사용하려고 할 때.</li>
 </ul>
 
-<h2 id="생성자">생성자</h2>
+<h2 id="Constructor">생성자</h2>
 
 <dl>
   <dt>{{jsxref("Global_Objects/TypeError/TypeError", "TypeError()")}}</dt>
   <dd>새로운 <code>TypeError</code> 객체를 생성합니다.</dd>
 </dl>
 
-<h2 id="인스턴스_속성">인스턴스_속성</h2>
+<h2 id="Instance_properties">인스턴스 속성</h2>
 
 <dl>
   <dt>{{jsxref("Error.prototype.message", "TypeError.prototype.message")}}</dt>
   <dd>
     오류 메시지. 비록 ECMA-262에서 {{jsxref("TypeError")}}는 반드시 자체
-    <code>message</code> 속성을 제공해야한다고 명시했지만,
+    <code>message</code> 속성을 제공해야 한다고 명시했지만,
     <a href="/en-US/docs/Mozilla/Projects/SpiderMonkey">SpiderMonkey</a>는
     {{jsxref("Error.prototype.message")}}를 상속합니다.
   </dd>
@@ -57,17 +55,16 @@ browser-compat: javascript.builtins.TypeError
   </dt>
   <dd>오류가 발생한 곳의 줄 위치. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
   <dt>
-    {{jsxref("Error.prototype.columnNumber",
-    "TypeError.prototype.columnNumber")}}
+    {{jsxref("Error.prototype.columnNumber", "TypeError.prototype.columnNumber")}}
   </dt>
   <dd>오류가 발생한 곳의 열 위치. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
   <dt>{{jsxref("Error.prototype.stack", "TypeError.prototype.stack")}}</dt>
   <dd>스택 추적. {{jsxref("Error")}}로부터 상속되었습니다.</dd>
 </dl>
 
-<h2 id="예제">예제</h2>
+<h2 id="Examples">예제</h2>
 
-<h3 id="TypeError_오류를_잡아내기"><code>TypeError</code> 오류를 잡아내기</h3>
+<h3 id="Catching_a_TypeError"><code>TypeError</code> 오류를 잡아내기</h3>
 
 <pre class="brush: js">
 try {
@@ -83,7 +80,7 @@ try {
 }
 </pre>
 
-<h3 id="TypeError_오류를_생성하기"><code>TypeError</code> 오류를 생성하기</h3>
+<h3 id="Creating_a_TypeError"><code>TypeError</code> 오류를 생성하기</h3>
 
 <pre class="brush: js">
 try {
@@ -99,15 +96,15 @@ try {
 }
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
 {{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="같이_보기">같이 보기</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
   <li>{{jsxref("Error")}}</li>

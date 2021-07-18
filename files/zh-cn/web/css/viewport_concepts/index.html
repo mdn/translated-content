@@ -5,11 +5,11 @@ translation_of: Web/CSS/Viewport_concepts
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary">这篇文章阐述了<strong>视口(viewport)</strong>的概念，对 visual viewport 和 布局视口(layout viewport) 进行区分，并让你了解 viewport 的意义是什么，以及它对 CSS, SVG 和移动设备方面的影响。</p>
+<p class="summary">这篇文章阐述了<strong>视口 (viewport) </strong>的概念，对 视觉视口 (visual viewport) 和 布局视口 (layout viewport) 进行区分，并让你了解 viewport 的意义是什么，以及它对 CSS, SVG 和移动设备方面的影响。</p>
 
 <h2 id="什么是_viewport">什么是 viewport ?</h2>
 
-<p>视口(viewport)代表当前可见的计算机图形区域。在 Web 浏览器术语中，通常与浏览器窗口相同，但不包括浏览器的 UI， 菜单栏等——即指你正在浏览的文档的那一部分。</p>
+<p>视口 (viewport) 代表当前可见的计算机图形区域。在 Web 浏览器术语中，通常与浏览器窗口相同，但不包括浏览器的 UI， 菜单栏等——即指你正在浏览的文档的那一部分。</p>
 
 <p>文档，比如这篇文章，可能会非常长。你的 viewport 就是你现在所能见到的所有事物。值得注意的是“什么是视口区域”这个问题，页面中的一些导航菜单也包括在其中。Viewport 的大小取决于屏幕的大小，无论浏览器是否处于全屏模式，是否被用户缩放了。Viewport 外的区域，比如这个文档的<em> See Also</em> 部分，可能需要滚动到其所在的区域才会出现在屏幕上。</p>
 
@@ -38,14 +38,14 @@ window.outerHeight /* 900 */
 <p>下面是一些帮助你查询查询 viewport 大小和其它类似的长度属性的 DOM 属性:</p>
 
 <ul>
- <li>文档的 {{DOMxRef("Element.clientWidth")}} 是指一个文档使用 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel">CSS pixels</a> 单位表示的内部宽度, 包括其 padding (不包括 borders, margins 或垂直滚动条，如果有的话）. <strong>这就是 viewport 的宽度</strong>。</li>
+ <li>文档的 {{DOMxRef("Element.clientWidth")}} 是指一个文档使用 <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel">CSS pixels</a> 单位表示的内部宽度, 包括其 padding (不包括 borders, margins 或垂直滚动条，如果有的话）。<strong>这就是 viewport 的宽度</strong>。</li>
  <li>{{DOMxRef("Window.innerWidth")}} 是用 CSS pixels 单位表示的浏览器窗口 viewport 宽度，包括垂直滚动条，如果渲染了的话。</li>
  <li>{{DOMxRef("Window.outerWidth")}} 是指包括了浏览器外边框的窗口宽度。</li>
 </ul>
 
 <p>在实测中，<code>innerWidth</code> 和 <code>outerWidth</code> 是相同的，但是 <code>outerHeight</code> 比 <code>innerHeight</code> 高100px。这是因为 <code>outerHeight</code> 的测量包括浏览器框架在内，包括了地址栏和书签栏总共 100px 的高度，而浏览器没有左右边框。</p>
 
-<p><code>innerHeight</code> 和 <code>innerWidth</code> 所组成的区域通常被认为是<strong>布局视口(layout viewport)</strong> 。浏览器的框架不被认为是 viewport 的一部分.</p>
+<p><code>innerHeight</code> 和 <code>innerWidth</code> 所组成的区域通常被认为是<strong>布局视口 (layout viewport)</strong>。浏览器的框架不被认为是 viewport 的一部分。</p>
 
 <p>当缩放时， Firefox 和 Chrome 对 <code>innerWidth</code> 和 <code>clientWidth</code> 给出了新的 CSS 像素大小。浏览器对 <code>outerWidth</code> 和 <code>outerHeight</code> 的返回值有差异。Firefox 返回了缩放后的 CSS 像素值，Chrome 返回了默认的像素值：</p>
 
@@ -73,36 +73,36 @@ body &gt; footer {
 
 <p>缩放后，我们得到了 800 * 533 的测量值。头部和尾部仍然固定在窗口的顶部和底部。但是当使用触屏双指缩放或者当动态键盘在手机上弹出的时候呢？</p>
 
-<p>Web 浏览器包含两个 viewport，<strong>布局视口(layout viewport)</strong>和<strong>视觉视口(visual viewport)</strong>。visual viewport 指当前浏览器中可见的部分，并且可以变化。当使用触屏双指缩放，当动态键盘在手机上弹出的时候，或者之前隐藏的地址栏变得可见的时候，visual viewport 缩小了，但是 layout viewport 却保持不变。</p>
+<p>Web 浏览器包含两个 viewport，<strong>布局视口 (layout viewport)</strong> 和<strong>视觉视口 (visual viewport)</strong>。visual viewport 指当前浏览器中可见的部分，并且可以变化。当使用触屏双指缩放，当动态键盘在手机上弹出的时候，或者之前隐藏的地址栏变得可见的时候，visual viewport 缩小了，但是 layout viewport 却保持不变。</p>
 
-<p>我们上面说到的固定的头部和尾部，固定在 layout viewport 的底部和顶部，所以当 visual viewport 缩小的时候,保留在视觉中。当你缩放页面时，布局视口可能不能被全部看到。如果你放大布局视口的中间部分，内容讲在四个方向上扩展。如果你有一个固定的头部和底部，它们依然固定在布局视口的顶部和底部，因此它们可能会在设备屏幕的底部和顶部不可见-视觉视口。视觉视口是布局视口当前的可见部分如果你向下滚动，视觉视口的内容就会改变，并布局视口的底部就会滚动到可视区域。</p>
+<p>我们上面说到的固定的头部和尾部，固定在 layout viewport 的底部和顶部，所以当 visual viewport 缩小的时候,头部和尾部仍保留在视觉中。当你缩放页面时，布局视口可能不能被全部看到。如果你放大布局视口的中间部分，内容将在四个方向上扩展。如果你有一个固定的头部和底部，它们依然固定在布局视口的顶部和底部，因此它们可能会在设备屏幕的底部和顶部不可见-视觉视口。视觉视口是布局视口当前的可见部分如果你向下滚动，视觉视口的内容就会改变，并布局视口的底部就会滚动到可视区域。</p>
 
-<p>T视觉视口是屏幕的可视部分，不包括屏幕键盘，缩放外的区域。视觉视口比布局视口相同或者更小</p>
+<p>视觉视口是屏幕的可视部分，不包括屏幕键盘，缩放外的区域。视觉视口比布局视口相同或者更小</p>
 
-<p>对于一个包含框架，objects或外部svg的页面，两者都有它们自己的window对象，只有最外层的window的视觉视口不同于布局视口。对于包含的文档，视觉视口与布局视口是相同的。</p>
+<p>对于一个包含框架，objects 或外部 svg 的页面，两者都有它们自己的 window 对象，只有最外层的 window 的视觉视口不同于布局视口。对于包含的文档，视觉视口与布局视口是相同的。</p>
 
 <h3 id="CSS">CSS</h3>
 
-<p>在上面描述的布局视口(layout viewport)和视觉视口(visual viewport)不是您将遇到的唯一视口。 在布局视口中完全或部分显示的任何子视口都被视为可视视口。</p>
+<p>在上面描述的布局视口 (layout viewport) 和视觉视口 (visual viewport) 不是您将遇到的唯一视口。 在布局视口中完全或部分显示的任何子视口都被视为可视视口。</p>
 
-<p>我们通常认为宽度和高度的媒体查询是相对于浏览器窗口的宽度和高度而言的。 它们实际上是相对于视口的，即主文档（document）中的窗口（window对象），但它也是嵌套浏览上下文（如对象，iframe和SVG）中元素父级的本身的大小。 在CSS中，我们也有基于视口大小的长度单位。 1vh单位是1%布局视口的高度，vw单位与此类似。</p>
+<p>我们通常认为宽度和高度的媒体查询是相对于浏览器窗口的宽度和高度而言的。 它们实际上是相对于视口的，即主文档（document）中的窗口（window对象），但它也是嵌套浏览上下文（如对象，iframe和SVG）中元素父级的本身的大小。 在CSS中，我们也有基于视口大小的长度单位。 1vh 单位是 1% 布局视口的高度，vw 单位与此类似。</p>
 
 <h4 id="&lt;iframe>"><code>&lt;iframe&gt;</code></h4>
 
 <p>对于一个 <code>iframe</code> 来说，视觉视口是其内部高度和宽度的大小而不是其父文档的大小。你可以为其高度和宽度设置任意数值，但过大的值可能会使 <code>iframe</code> 部分内容超出视口导致超出部分不可见。</p>
 
-<p>在 CSS 中，可以使用相对于视口的长度单位 <code>vh</code> 和 <code>vw</code>。 <code>1vh</code> 意味着值为视口高度的1%，同理 <code>1vw</code> 即值为视口宽度的1%。</p>
+<p>在 CSS 中，可以使用相对于视口的长度单位 <code>vh</code> 和 <code>vw</code>。 1vh 意味着值为视口高度的 1%，同理 1vw 即值为视口宽度的 1%。</p>
 
-<p>需要注意的是，当你在 CSS 中使用 <code>vw</code> 和 <code>vh</code> 设置 <code>iframe</code> 的样式时，<code>1vh</code> 表示的是 <code>iframe</code> 高度的1%，但 <code>1vw</code> 表示的则是 document 宽度的 1%。</p>
+<p>需要注意的是，当你在 CSS 中使用 <code>vw</code> 和 <code>vh</code> 设置 <code>iframe</code> 的样式时，1vh 表示的是 <code>iframe</code> 高度的 1%，但 1vw 表示的则是 document 宽度的 1%。</p>
 
 <pre class="brush: css">iframe {
     width: 50vw;
 }
 </pre>
 
-<p>在上面的例子中，一个 iframe 宽度被设置为 50vw，假设父文档宽度为 1200px，按照上面的规则，它的的实际宽度将会是父文档宽度的 50%，即 600px。在这个例子中，每 1 vw 将折算 6px。如果因为缩放，父文档宽度变为 800px，则 1vw 将代表4px，iframe 的宽度将会是 400px。</p>
+<p>在上面的例子中，一个 <code>iframe</code> 宽度被设置为 50vw，假设父文档宽度为 1200px，按照上面的规则，它的的实际宽度将会是父文档宽度的 50%，即 600px。在这个例子中，每 1vw 将折算 6px。如果因为缩放，父文档宽度变为 800px，则 1vw 将代表 4px，iframe 的宽度将会是 400px。</p>
 
-<p>此外，一个在 iframe 文档内基于宽度的媒体查询将会使用 iframe 的视口宽度进行参照。</p>
+<p>此外，一个在 <code>iframe</code> 文档内基于宽度的媒体查询将会使用 <code>iframe</code> 的视口宽度进行参照。</p>
 
 <pre class="brush: css">@media screen and (min-width: 500px) {
     p {
@@ -110,7 +110,7 @@ body &gt; footer {
     }
 }</pre>
 
-<p>如果上述 CSS 代码块包含于一个 iframe 所指向的一个文档头部，那么当用户放大该文档时，p 标签颜色将变红；当用户不使用缩放时，该样式则不会被应用。</p>
+<p>如果上述 CSS 代码块包含于一个 <code>iframe</code> 所指向的一个文档头部，那么当用户放大该文档时，p 标签颜色将变红；当用户不使用缩放时，该样式则不会被应用。</p>
 
 <h4 id="SVG">SVG</h4>
 
@@ -146,9 +146,9 @@ body &gt; footer {
 
 <p>如果开发者想让移动端浏览器使用屏幕宽度作为视口替换默认的 980px 宽度视口，则可以在 HTML 的头部添加以下标签：</p>
 
-<pre class="brush: html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meta</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>viewport<span class="punctuation token">"</span></span> <span class="attr-name token">content</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>width<span class="punctuation token">=</span>device-width<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html">&lt;meta name="viewport" content="width=device-width"&gt;</pre>
 
-<p>这里 <code>width</code> 属性指的是视口宽度，现在视口的宽度被设置为了设备的屏幕宽度，即文档视口宽度大小与设备宽度大小 100% 对应（转换为 CSS 像素值相同）。除了 width 属性外，还有<code>initial-scale<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font></code><code>maximum-scale<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font>minimum-scale</code>，以及 <code>user-scalable</code> 属性可供设置。这些属性分别设置了文档的初始缩放比例、最大缩放比例、最小缩放比例以及是否允许用户进行缩放操作。但这些属性的默认值已经很好了，开发时可以忽略掉这些属性。</p>
+<p>这里 <code>width</code> 属性指的是视口宽度，现在视口的宽度被设置为了设备的屏幕宽度，即文档视口宽度大小与设备宽度大小 100% 对应（转换为 CSS 像素值相同）。除了 <code>width</code> 属性外，还有<code>initial-scale<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font></code><code>maximum-scale<font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">、</span></font>minimum-scale</code>，以及 <code>user-scalable</code> 属性可供设置。这些属性分别设置了文档的初始缩放比例、最大缩放比例、最小缩放比例以及是否允许用户进行缩放操作。但这些属性的默认值已经很好了，开发时可以忽略掉这些属性。</p>
 
 <h2 id="参照">参照</h2>
 
@@ -156,5 +156,5 @@ body &gt; footer {
  <li><a href="/en-US/docs/Web/CSS/@viewport">@viewport CSS at-rule</a></li>
  <li><a href="/en-US/docs/Web/API/Visual_Viewport_API">Visual Viewport API</a></li>
  <li>{{HTMLElement("meta")}}, specifically <code>&lt;meta name="viewport"&gt;</code></li>
- <li><a href="/en-US/docs/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a></li>
+ <li><a href="/en-US/docs/Web/HTML/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a></li>
 </ul>
