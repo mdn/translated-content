@@ -25952,12 +25952,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/XRSessionMode": {
-    "modified": "2020-10-24T11:40:22.240Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/XRSystem": {
     "modified": "2020-10-23T14:29:58.403Z",
     "contributors": [
@@ -48165,48 +48159,12 @@
       "silverskyvicto"
     ]
   },
-  "conflicting/Learn/CSS/Building_blocks": {
-    "modified": "2019-03-23T23:30:41.701Z",
-    "contributors": [
-      "tyahha",
-      "teoli",
-      "ethertank"
-    ]
-  },
-  "conflicting/Learn/CSS/CSS_layout": {
-    "modified": "2019-03-23T23:30:42.231Z",
-    "contributors": [
-      "teoli",
-      "ethertank"
-    ]
-  },
-  "conflicting/Learn/CSS/Styling_text/Styling_lists": {
-    "modified": "2019-03-23T23:30:43.174Z",
-    "contributors": [
-      "teoli",
-      "ethertank"
-    ]
-  },
-  "conflicting/Learn/Getting_started_with_the_web/JavaScript_basics": {
-    "modified": "2019-03-23T23:21:46.830Z",
-    "contributors": [
-      "sunagakazuo"
-    ]
-  },
   "conflicting/Learn/HTML/Howto/Author_fast-loading_HTML_pages": {
     "modified": "2020-07-16T22:22:32.832Z",
     "contributors": [
       "dskmori",
       "silverskyvicto",
       "mfuji09",
-      "ethertank",
-      "yyss"
-    ]
-  },
-  "conflicting/Learn/HTML/Introduction_to_HTML": {
-    "modified": "2019-03-24T00:14:45.209Z",
-    "contributors": [
-      "SphinxKnight",
       "ethertank",
       "yyss"
     ]
@@ -48675,31 +48633,6 @@
       "Mgjbot",
       "Yuichirou",
       "electrolysis"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators": {
-    "modified": "2020-10-15T21:04:54.922Z",
-    "contributors": [
-      "tbpgr",
-      "mfuji09",
-      "yokotay",
-      "AkihikoTakeda",
-      "ambi",
-      "yyss",
-      "teoli",
-      "ethertank",
-      "Potappo"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Operators_f71733c8e7001a29c3ec40d8522a4aca": {
-    "modified": "2020-03-12T19:35:34.796Z",
-    "contributors": [
-      "AkihikoTakeda",
-      "yyss",
-      "teoli",
-      "keiskimu",
-      "ethertank",
-      "Potappo"
     ]
   },
   "conflicting/tools/Keyboard_shortcuts": {
@@ -51779,6 +51712,12 @@
     "modified": "2020-07-29T10:05:34.264Z",
     "contributors": [
       "eltociear"
+    ]
+  },
+  "orphaned/Web/API/XRSessionMode": {
+    "modified": "2020-10-24T11:40:22.240Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "orphaned/Web/CSS/:-moz-alt-text": {
