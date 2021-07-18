@@ -112,7 +112,7 @@ Thread 2: Task C --&gt; Task D</pre>
 
 <pre class="notranslate">Main thread: Render circles to canvas --&gt; Display alert()</pre>
 
-<p>JavaScript는 이러한 문제를 해결하기 위해 몇 가지 툴을 도입했습니다. <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web workers</a>는 여러 개의 JavaScript 청크를 동시에 실행할 수 있도록 worker라고 불리는 별도의 스레드로 보낼 수 있습니다. 따라서 시간이 오래 걸리는 처리는 woker를 사용해 처리하면 blocking 발생을 막을 수 있습니다..</p>
+<p>JavaScript는 이러한 문제를 해결하기 위해 몇 가지 툴을 도입했습니다. <a href="/ko/docs/Web/API/Web_Workers_API">Web workers</a>는 여러 개의 JavaScript 청크를 동시에 실행할 수 있도록 worker라고 불리는 별도의 스레드로 보낼 수 있습니다. 따라서 시간이 오래 걸리는 처리는 woker를 사용해 처리하면 blocking 발생을 막을 수 있습니다..</p>
 
 <pre class="notranslate">  Main thread: Task A --&gt; Task C
 Worker thread: Expensive task B</pre>

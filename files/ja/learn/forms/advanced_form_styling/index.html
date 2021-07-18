@@ -22,7 +22,7 @@ original_slug: Learn/Forms/Advanced_styling_for_HTML_forms
  <tbody>
   <tr>
    <th scope="row">前提条件:</th>
-   <td>基本的なコンピューターリテラシーと、<a href="https://wiki.developer.mozilla.org/ja/docs/Learn/HTML/Introduction_to_HTML">HTML</a> と <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/CSS/First_steps">CSS</a> の基本的な理解。</td>
+   <td>基本的なコンピューターリテラシーと、<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML</a> と <a href="/ja/docs/Learn/CSS/First_steps">CSS</a> の基本的な理解。</td>
   </tr>
   <tr>
    <th scope="row">目的:</th>
@@ -37,17 +37,17 @@ original_slug: Learn/Forms/Advanced_styling_for_HTML_forms
 
 <ul>
  <li>チェックボックスとラジオボタン</li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code></li>
+ <li><code><a href="/ja/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code></li>
 </ul>
 
 <p><strong>劣悪</strong>: いくつかの要素は CSS でスタイル設定できません。これらが含まれます:</p>
 
 <ul>
  <li>ドロップダウンウィジェットを作成する要素、{{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}}を含む</li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/color">&lt;input type="color"&gt;</a></code></li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>のような日付関連コントロール</li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/range">&lt;input type="range"&gt;</a></code></li>
- <li><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code></li>
+ <li><code><a href="/ja/docs/Web/HTML/Element/input/color">&lt;input type="color"&gt;</a></code></li>
+ <li><code><a href="/ja/docs/Web/HTML/Element/input/datetime-local">&lt;input type="datetime-local"&gt;</a></code>のような日付関連コントロール</li>
+ <li><code><a href="/ja/docs/Web/HTML/Element/input/range">&lt;input type="range"&gt;</a></code></li>
+ <li><code><a href="/ja/docs/Web/HTML/Element/input/file">&lt;input type="file"&gt;</a></code></li>
  <li>{{HTMLElement("progress")}} and {{HTMLElement("meter")}}</li>
 </ul>
 
@@ -105,7 +105,7 @@ original_slug: Learn/Forms/Advanced_styling_for_HTML_forms
 
 <h3 id="Taming_search_boxes" name="Taming_search_boxes">検索ボックスを変更する</h3>
 
-<p><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code> は基本的に単なるテキスト入力のため、なぜ <code>appearance: none;</code> が便利なのでしょうか? 答えは macOS での Chromium ベースのブラウザーでは、検索ボックスはスタイル設定の制限があります — 例えば <code>height</code> や <code>font-size</code> を自在に調整できません。この理由は macOS以外の <a href="https://www.wired.com/2013/04/blink/">Chrome ブラウザーはもう WebKit レンダリングエンジンを使っていません</a> 、これは既定では、いくつかのフォームコントロールで Aqua の見た目が有効です。Aqua が有効だと、いくつかのフォームコントロールは <a href="https://webkit.org/blog/28/buttons/">scalable</a> となりません。</p>
+<p><code><a href="/ja/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code> は基本的に単なるテキスト入力のため、なぜ <code>appearance: none;</code> が便利なのでしょうか? 答えは macOS での Chromium ベースのブラウザーでは、検索ボックスはスタイル設定の制限があります — 例えば <code>height</code> や <code>font-size</code> を自在に調整できません。この理由は macOS以外の <a href="https://www.wired.com/2013/04/blink/">Chrome ブラウザーはもう WebKit レンダリングエンジンを使っていません</a> 、これは既定では、いくつかのフォームコントロールで Aqua の見た目が有効です。Aqua が有効だと、いくつかのフォームコントロールは <a href="https://webkit.org/blog/28/buttons/">scalable</a> となりません。</p>
 
 <p>これは デフォルトの Aqua を無効にする <code>appearance: none;</code>で修正できます:</p>
 
@@ -250,7 +250,7 @@ input[type=checkbox]:disabled {
   color: gray;
 }</pre>
 
-<p>こうした疑似クラスなどは、<a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/UI_pseudo-classes">次の記事</a>で見つけられますが、上記は次のことをしています:</p>
+<p>こうした疑似クラスなどは、<a href="/ja/docs/Learn/Forms/UI_pseudo-classes">次の記事</a>で見つけられますが、上記は次のことをしています:</p>
 
 <ul>
  <li><code>:checked</code> — チェックボックス (やラジオボタン) がチェックされた状態にあります — ユーザーがクリック/有効化しています。</li>
@@ -276,7 +276,7 @@ input[type=checkbox]:disabled {
 
 <h2 id="劣悪な要素に何ができるか">"劣悪な"要素に何ができるか?</h2>
 
-<p>今度は"劣悪な"コントロールに注目しましょう — これは完全にスタイル設定するのが本当に難しいものです。簡単にいうと、これはドロップダウンボックス、<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/color">color</a></code> や <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code> のような複合コントロールタイプ、フィードバック —  {{HTMLElement("progress")}} や {{HTMLElement("meter")}}のような指向性コントロールです。</p>
+<p>今度は"劣悪な"コントロールに注目しましょう — これは完全にスタイル設定するのが本当に難しいものです。簡単にいうと、これはドロップダウンボックス、<code><a href="/ja/docs/Web/HTML/Element/input/color">color</a></code> や <code><a href="/ja/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code> のような複合コントロールタイプ、フィードバック —  {{HTMLElement("progress")}} や {{HTMLElement("meter")}}のような指向性コントロールです。</p>
 
 <p>問題は、要素はブラウザー同士でいろいろな既定の見た目があって、それにスタイル設定できても、内部のいくつかはスタイル設定できないことです。</p>
 
@@ -344,7 +344,7 @@ button {
 <div class="blockIndicator note">
 <p><strong>注記</strong>: 多数のブラウザーで同時にこの例をテストしたい場合、<a href="https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html">live版をここで見つけてください</a> (<a href="https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/ugly-controls.html">ソースコードも見てください</a>)。</p>
 
-<p>また JavaScript をページに追加してコントロール自身の下にあるファイルピッカー自身で選択されたファイルを一覧しているのを心に留めておいてください。これは <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/file#Examples">&lt;input type="file"&gt;</a></code> リファレンスページの例を簡単にしたバージョンです。</p>
+<p>また JavaScript をページに追加してコントロール自身の下にあるファイルピッカー自身で選択されたファイルを一覧しているのを心に留めておいてください。これは <code><a href="/ja/docs/Web/HTML/Element/input/file#Examples">&lt;input type="file"&gt;</a></code> リファレンスページの例を簡単にしたバージョンです。</p>
 </div>
 
 <p>ご覧のとおり、これらをモダンブラウザー全体で均一に見せることはかなりうまくいっています。</p>
@@ -387,7 +387,7 @@ button {
   appearance: none;
 }</pre>
 
-<p>次に生成されたコンテンツを使って独自のアイコンを作成します。コントロールの周りに特別なラッパーを置いていて、その理由は<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/CSS/::before">::before</a></code>/<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/CSS/::after">::after</a></code> が <code>&lt;select&gt;</code> 要素では動作しなしためです (これは生成されたコンテンツが要素がフォーマットするボックスに対し相対的に配置されますが、フォーム入力は置換された要素 — 表示がブラウザーによって生成されて順番に配置されるもの — として動作するので、1 つもないためです):</p>
+<p>次に生成されたコンテンツを使って独自のアイコンを作成します。コントロールの周りに特別なラッパーを置いていて、その理由は<code><a href="/ja/docs/Web/CSS/::before">::before</a></code>/<code><a href="/ja/docs/Web/CSS/::after">::after</a></code> が <code>&lt;select&gt;</code> 要素では動作しなしためです (これは生成されたコンテンツが要素がフォーマットするボックスに対し相対的に配置されますが、フォーム入力は置換された要素 — 表示がブラウザーによって生成されて順番に配置されるもの — として動作するので、1 つもないためです):</p>
 
 <pre class="brush: html notranslate">&lt;div class="select-wrapper"&gt;&lt;select id="select" name="select"&gt;
   &lt;option&gt;Banana&lt;/option&gt;
@@ -409,7 +409,7 @@ button {
   position: absolute;
 }</pre>
 
-<p>2 つ目のもう少し有名な問題は、<code>&lt;select&gt;</code> ボックスをクリックして開いたときに出てくる、オプションを含んだボックスを制御できないことです。オプションが親でセットされたフォントを継承していないのに気づくでしょう。また余白スペースや色のようなものも一貫してセットできません。例えば、Firefox では<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/option">&lt;option&gt;</a></code> 要素に <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/CSS/color">color</a></code> と <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/CSS/background-color">background-color</a></code> を適用できますが、Chrome ではそうなりません。どちらも余白スペース (例 <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/CSS/padding">padding</a></code>)を適用できません。同じことはデータリスト用に出てくるオートコンプリートのリストにも当てはまります。</p>
+<p>2 つ目のもう少し有名な問題は、<code>&lt;select&gt;</code> ボックスをクリックして開いたときに出てくる、オプションを含んだボックスを制御できないことです。オプションが親でセットされたフォントを継承していないのに気づくでしょう。また余白スペースや色のようなものも一貫してセットできません。例えば、Firefox では<code><a href="/ja/docs/Web/HTML/Element/option">&lt;option&gt;</a></code> 要素に <code><a href="/ja/docs/Web/CSS/color">color</a></code> と <code><a href="/ja/docs/Web/CSS/background-color">background-color</a></code> を適用できますが、Chrome ではそうなりません。どちらも余白スペース (例 <code><a href="/ja/docs/Web/CSS/padding">padding</a></code>)を適用できません。同じことはデータリスト用に出てくるオートコンプリートのリストにも当てはまります。</p>
 
 <p>本当にオプションをスタイル設定する必要がある場合、カスタムコントロールを生成するライブラリを使用するか、独自のカスタムコントロールを作成するかのどちらかが必要で、あるいは <code>multiple</code>属性を使う select の場合、これはページ上に出てくるすべてのオプションを作成し、この特殊な問題を避けることができます:</p>
 
@@ -421,17 +421,17 @@ button {
 
 <h3 id="Date_input_types" name="Date_input_types">日付入力タイプ</h3>
 
-<p>日付/時間の入力タイプ (<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code>, <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/time">time</a></code>, <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/week">week</a></code>, <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/month">month</a></code>) にはすべて同じ重大な関連した問題があります。実際のボックスはテキスト入力と同じくスタイル設定が容易であり、デモ内で得たものの見た目は良いです。</p>
+<p>日付/時間の入力タイプ (<code><a href="/ja/docs/Web/HTML/Element/input/datetime-local">datetime-local</a></code>, <code><a href="/ja/docs/Web/HTML/Element/input/time">time</a></code>, <code><a href="/ja/docs/Web/HTML/Element/input/week">week</a></code>, <code><a href="/ja/docs/Web/HTML/Element/input/month">month</a></code>) にはすべて同じ重大な関連した問題があります。実際のボックスはテキスト入力と同じくスタイル設定が容易であり、デモ内で得たものの見た目は良いです。</p>
 
 <p>しかし、コントロールの内部パーツ (例 日付をピックアップするのに使うポップアップカレンダー、値を増減するスピナー) はまったくスタイル設定できず、<code>appearance: none;</code>を使ってスタイルを除去できません。スタイル設定に完全なコントロールが必要な場合、カスタムコントロールを生成するライブラリを使うか、自分で作らねばなりません。</p>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: ここでも<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code> は触れる価値があります — これにも値を増減するスピナーがあるので、同じ問題に悩まさされます。しかし、<code>number</code> タイプを使った場合にデータは簡単に集められて、単に <code>text</code> 入力を (あるいはモバイルブラウザーで数字キーパッドを表示するのに <code>tel</code> を) 代わりに使うのも簡単です</p>
+<p><strong>注</strong>: ここでも<code><a href="/ja/docs/Web/HTML/Element/input/number">&lt;input type="number"&gt;</a></code> は触れる価値があります — これにも値を増減するスピナーがあるので、同じ問題に悩まさされます。しかし、<code>number</code> タイプを使った場合にデータは簡単に集められて、単に <code>text</code> 入力を (あるいはモバイルブラウザーで数字キーパッドを表示するのに <code>tel</code> を) 代わりに使うのも簡単です</p>
 </div>
 
 <h3 id="Range_input_types" name="Range_input_types">Range 入力タイプ</h3>
 
-<p><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/input/range">&lt;input type="range"&gt;</a></code> はスタイル設定が煩わしいです。下記のようなものを使ってデフォルトのスライダートラックを完全に削除してカスタムスタイル (ここでは、薄い赤のトラック)に置き換えます:</p>
+<p><code><a href="/ja/docs/Web/HTML/Element/input/range">&lt;input type="range"&gt;</a></code> はスタイル設定が煩わしいです。下記のようなものを使ってデフォルトのスライダートラックを完全に削除してカスタムスタイル (ここでは、薄い赤のトラック)に置き換えます:</p>
 
 <pre class="brush: css notranslate">input[type="range"] {
   appearance: none;
@@ -490,13 +490,13 @@ label[for="file"]:active {
   box-shadow: inset 1px 1px 3px #ccc;
 }</pre>
 
-<p>上記の CSS スタイル設定の結果は、下記のライブ実行の例で見ることができます (<a href="https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html">styled-file-picker.html</a> のライブと、<a href="https://wiki.developer.mozilla.org/enhttps://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/styled-file-picker.html-US/docs/">ソースコード</a>も見てください)。</p>
+<p>上記の CSS スタイル設定の結果は、下記のライブ実行の例で見ることができます (<a href="https://mdn.github.io/learning-area/html/forms/styling-examples/styled-file-picker.html">styled-file-picker.html</a> のライブと、<a href="https://github.com/mdn/learning-area/blob/master/html/forms/styling-examples/styled-file-picker.html-US/docs/">ソースコード</a>も見てください)。</p>
 
 <p>{{EmbedGHLiveSample("learning-area/html/forms/styling-examples/styled-file-picker.html", '100%', 200)}}</p>
 
 <h3 id="Meters_and_progress_bars" name="Meters_and_progress_bars">メーターとプログレスバー</h3>
 
-<p><code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/meter">&lt;meter&gt;</a></code> と <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/progress">&lt;progress&gt;</a></code> は多くの中で最悪かもしれません。前の例で見たように、希望する幅にだいたい正確に設定できました。しかしそれを超えると、どんな方法でもスタイル設定が本当に難しいです。高さの設定をお互いに、ブラウザー間で一貫して処理できず、背景は色付けできるものの、前面のバーはできず、<code>appearance: none</code> を設定すると良くならず、より悪くなります。</p>
+<p><code><a href="/ja/docs/Web/HTML/Element/meter">&lt;meter&gt;</a></code> と <code><a href="/ja/docs/Web/HTML/Element/progress">&lt;progress&gt;</a></code> は多くの中で最悪かもしれません。前の例で見たように、希望する幅にだいたい正確に設定できました。しかしそれを超えると、どんな方法でもスタイル設定が本当に難しいです。高さの設定をお互いに、ブラウザー間で一貫して処理できず、背景は色付けできるものの、前面のバーはできず、<code>appearance: none</code> を設定すると良くならず、より悪くなります。</p>
 
 <p>スタイル設定を制御したい場合は、この機能のカスタムソリューションを作ったり、<a href="http://kimmobrunfeldt.github.io/progressbar.js/#examples">progressbar.js</a> のようなサードパーティのソリューションを使うのは簡単です。</p>
 
@@ -522,13 +522,13 @@ label[for="file"]:active {
 
 <h2 id="スキルをテストしましょう!">スキルをテストしましょう!</h2>
 
-<p>この記事の最後に到達しましたが、重要な情報を覚えていますか？次に進む前に、この情報を保持しているか検証するテストがあります — <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Test_your_skills:_Advanced_styling">Test your skills: Advanced styling</a> を見てください。心に留めておくこととして、この評価シリーズでの質問は、<a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/UI_pseudo-classes">次の記事</a>の知識も前提していてるので、試す前にその記事に取り組むとよいかもしれません。</p>
+<p>この記事の最後に到達しましたが、重要な情報を覚えていますか？次に進む前に、この情報を保持しているか検証するテストがあります — <a href="/ja/docs/Learn/Forms/Test_your_skills:_Advanced_styling">Test your skills: Advanced styling</a> を見てください。心に留めておくこととして、この評価シリーズでの質問は、<a href="/ja/docs/Learn/Forms/UI_pseudo-classes">次の記事</a>の知識も前提していてるので、試す前にその記事に取り組むとよいかもしれません。</p>
 
 <h2 id="Summary" name="Summary">まとめ</h2>
 
 <p>HTML フォームで CSS を使用するのはまだ困難ですが、しばしばそれらを回避する方法があります。クリーンでユニバーサルな解決方法はありませんが、最新のブラウザーでは新しい可能性があります。今のところ、最良の解決策は、HTML フォームウィジェットに適用されたときに異なるブラウザーが CSS をサポートする方法の詳細を学ぶことです。</p>
 
-<p>このガイドの次の記事では、モダンブラウザーでさまざまな状態のフォームをスタイル設定できるさまざまな <a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/UI_pseudo-classes">UI 疑似クラス</a>を見ていきます。</p>
+<p>このガイドの次の記事では、モダンブラウザーでさまざまな状態のフォームをスタイル設定できるさまざまな <a href="/ja/docs/Learn/Forms/UI_pseudo-classes">UI 疑似クラス</a>を見ていきます。</p>
 
 <p>{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}} </p>
 
@@ -551,7 +551,7 @@ label[for="file"]:active {
 <h3 id="Advanced_Topics" name="Advanced_Topics">Advanced Topics</h3>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href="/ja/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form controls</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
 </ul>

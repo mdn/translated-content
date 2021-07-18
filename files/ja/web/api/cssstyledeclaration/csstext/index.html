@@ -1,0 +1,36 @@
+---
+title: CSSStyleDeclaration.cssText
+slug: Web/API/CSSStyleDeclaration/cssText
+tags:
+  - API
+  - CSSOM
+  - NeedsSpecTable
+  - Reference
+browser-compat: api.CSSStyleDeclaration.cssText
+translation_of: Web/API/CSSStyleDeclaration/cssText
+---
+<div>{{APIRef("CSSOM")}}</div>
+
+<p><span class="seoSummary"><code><strong>cssText</strong></code> は {{domxref("CSSStyleDeclaration")}} インターフェイスのプロパティで、その要素の<strong>インライン</strong>スタイル宣言のみのテキストを返したり設定したりします。</span><strong>スタイルシート</strong>の規則を動的に設定するためには、<a href="/ja/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information">動的なスタイル情報の利用</a>を参照してください。</p>
+
+<p>スタイルシートのスタイル規則である {{domxref("CSSRule.cssText")}} と混同しないようにしてください。</p>
+
+<h2 id="Example">例</h2>
+
+<pre class="brush: html">&lt;span id=&quot;s1&quot; style=&quot;color: red;&quot;&gt;
+  Some text
+&lt;/span&gt;
+
+&lt;script&gt;
+  var elem = document.getElementById(&quot;s1&quot;);
+  alert(elem.style.cssText); // &quot;color: red;&quot;
+&lt;/script&gt;
+</pre>
+
+<h2 id="Specifications">仕様書</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat}}</p>
