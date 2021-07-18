@@ -54,7 +54,7 @@ tags:
 <p>각각의 이용가능한 이벤트들은 <strong>이벤트 핸들러</strong>(event handler)를 가지고 있는데, 이는 이벤트가 발생되면 실행되는 코드 블럭 (보통 여러분과 같은 프로그래머가 만드는 JavaScript 함수)입니다. 그러한 코드 블럭이 이벤트에 응답해서 실행되기 위해 정의되었을 때, 우리는 <strong>이벤트 핸들러를 등록</strong>(register)했다고 말합니다. 알림: 이벤트 핸들러는 때때로 <strong>이벤트 리스너</strong>(event listener)라고 불립니다 — 이것들은 우리의 목적을 위해 꽤 교체할수 있지만, 그러나 엄밀히 말하자면, 그들은 같이 동작합니다. 리스너는 발생되는 이벤트에 대해 듣고, 핸들러는 발생되는 이벤트에 응답해서 실행되는 코드입니다.</p>
 
 <div class="notecard note">
-  <h4>노트</h4>
+  <h4>참고</h4>
   <p>웹 이벤트는 코어 JavaScript 언어의 일부가 아닙니다 — 이것들은 브라우저에 내장된 API의 일부로서 정의됩니다.</p>
 </div>
 
@@ -153,7 +153,7 @@ btn.onclick = bgChange;</pre>
 }</pre>
 
 <div class="notecard note">
-  <h4>노트</h4>
+  <h4>참고</h4>
   <p>여러분은 이 예제에 대한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerattributes.html">전체 소스 코드를</a> Github에서 찾을 수 있습니다 (또한 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventhandlerattributes.html">실제로 작동하는 모습</a>도 보세요).</p>
 </div>
 
@@ -180,7 +180,7 @@ for (let i = 0; i &lt; buttons.length; i++) {
 });</pre>
 
 <div class="notecard note">
-  <h4>노트</h4>
+  <h4>참고</h4>
   <p>프로그래밍 로직을 콘텐츠로부터 분리하는 것은 또한 여러분의 사이트를 검색 엔진에 더욱 친화적으로 만듭니다.</p>
 </div>
 
@@ -258,7 +258,7 @@ element.onclick = function2;
 등등.</pre>
 
 <div class="notecard note">
-  <h4>노트</h4>
+  <h4>참고</h4>
   <p>만약 여러분이 Internet Explorer 8보다 오래된 브라우저를 지원하라고 요청받았다면, 그러한 아주 오래된 브라우저들은 새로운 브라우저들과는 다른 이벤트 모델을 사용하므로, 여러분은 어려움을 만날 지도 모릅니다. 하지만 걱정하지 마세요, 대부분의 JavaScript 라이브러리들은 (예를 들자면 <code>jQuery</code>) 크로스 브라우저 차이를 분리하는 내장 함수들을 가지고 있습니다. 이 배움의 단계에서 이것을 너무 많이는 걱정하지 마세요.</p>
 </div>
 
@@ -279,14 +279,14 @@ element.onclick = function2;
 btn.addEventListener('click', bgChange);</pre>
 
 <div class="notecard note">
-  <h4>노트</h4>
+  <h4>참고</h4>
   <p>여러분은 이 예제에 대한 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html">전체 소스 코드를</a> Github에서 찾을 수 있습니다 (또한 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html">실제로 작동하는 모습</a>도 보세요).</p>
 </div>
 
 <p>여기서 여러분은 우리가 이벤트 객체, <strong>e</strong>를, 함수에 포함하고, 함수에서 배경 색상 스타일을 — 버튼 그 자체인 — <code>e.target</code>에서 설정한 것을 볼 수 있습니다. 이벤트 객체의 <code>target</code> 프로퍼티는 항상 이벤트가 발생된 요소에 대한 참조입니다. 그래서, 이 예제에서, 우리는 무작위의 배경색을 페이지가 아니라, 버튼에 설정했습니다.</p>
 
 <div class="notecard note">
-  <h4>노트</h4>
+  <h4>참고</h4>
   <p>여러분은 이벤트 객체에 대해 여러분이 좋아하는 어떠한 이름이든 사용할 수 있습니다 — 여러분은 단지 이벤트 핸들러 함수 내에서 그것을 참조하기 위해 사용할 수 있는 이름을 선택할 필요가 있습니다. <code>e</code>/<code>evt</code>/<code>event</code>가 가장 일반적으로 개발자들에 의해 사용됩니다. 왜냐하면 짧고 기억하기 쉽기 때문입니다. 일관적인 것은 항상 좋습니다 — 여러분 자신과, 그리고 만약 가능하다면 타인과.</p>
 </div>
 
@@ -400,7 +400,7 @@ form.onsubmit = function(e) {
 <p>{{ EmbedLiveSample('Preventing_default_behavior', '100%', 140, "", "", "hide-codepen-jsfiddle") }}</p>
 
 <div class="notecard note">
-  <h4>노트</h4>
+  <h4>참고</h4>
   <p>전체 코드 소스는 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html">preventdefault-validation.html</a>에서 확인하실 수 있습니다 (또한 여기서 <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html">실제로 작동하는 모습</a>도 보세요).</p>
 </div>
 
@@ -546,7 +546,7 @@ video.onclick = function() {
 </ul>
 
 <div class="notecard note">
-  <h4>노트</h4>
+  <h4>참고</h4>
   <p>버블링과 캡처링, 두 타입의 이벤트 핸들러가 모두 존재하는 경우에, 캡처링 단계가 먼저 실행되고, 이어서 버블링 단계가 실행됩니다.</p>
 </div>
 
@@ -564,12 +564,12 @@ video.onclick = function() {
 <p><a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html">show-video-box.html 소스 코드</a>를 다운받아 직접 고쳐볼 수도 있고, <a href="https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html">show-video-box-fixed.html</a>에서 고쳐진 결과를 볼 수도 있습니다 (또한 여기서 <a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box-fixed.html">소스 코드</a>를 보세요).</p>
 
 <div class="notecard note">
-  <h4>노트</h4>
+  <h4>참고</h4>
   <p>왜 캡처링과 버블링으로 애를 쓰냐구요? 글쎄요, 브라우저들이 지금보다 훨씬 덜 호환되던 옛날의 좋지 못하던 시절에, Netscape는 오직 이벤트 캡처링만을 사용했고, Internet Explorer는 오직 이벤트 버블링만을 사용했습니다. W3C가 이 움직임을 표준화하고 합의에 이르기를 시도하기로 결정했을 때, 그들은 양 쪽을 다 포함하는 이 시스템을 채용하게 되었는데, 이것이 현대 브라우저들이 구현한 것입니다.</p>
 </div>
 
 <div class="notecard note">
-  <h4>노트</h4>
+  <h4>참고</h4>
   <p>위에서 언급했다시피, 기본적으로 모든 이벤트 핸들러는 버블링 단계에 등록되어 있고, 이것은 대부분의 경우 더 타당합니다. 만약 정말로 이벤트를 캡처링 단계에 대신 등록하기를 원한다면, <code><a href="/ko/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>를 사용하고, 옵션인 세 번째 프로퍼티를 <code>true</code>로 설정하여 핸들러를 등록함으로써 그렇게 할 수 있습니다.</p>
 </div>
 
@@ -593,18 +593,18 @@ video.onclick = function() {
 
 <p>만약 뭐든지 이해하지 못한 게 있다면, 자유롭게 이 문서를 다시 읽거나, <a href="https://discourse.mozilla.org/c/mdn/learn">contact us</a>에서 도움을 요청해 보세요.</p>
 
-<h2 id="See_also">더 보기</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
  <li><a href="https://domevents.dev/">domevents.dev</a> — 탐험을 통해 DOM 이벤트 시스템의 움직임에 대한 배울 수 있는 매우 유용한 인터랙티브 놀이터 앱</li>
- <li><a href="/ko/docs/Web/Events">이벤트 레퍼런스</a></li>
+ <li><a href="/ko/docs/Web/Events">이벤트 참고서</a></li>
  <li><a href="https://www.quirksmode.org/js/events_order.html">이벤트 순서</a> (캡처링과 버블링에 대한 논의) — Peter-Paul Koch가 작성한 뛰어나게 상세한 글</li>
  <li><a href="https://www.quirksmode.org/js/events_access.html">이벤트 접근</a> (이벤트 객체에 대한 논의) — Peter-Paul Koch가 작성한 또 다른 뛰어나게 상세한 글</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}</p>
 
-<h2 id="In_this_module">이 모듈에서는</h2>
+<h2 id="In_this_module">이 과정에서는</h2>
 
 <ul>
  <li><a href="/ko/docs/Learn/JavaScript/Building_blocks/conditionals">판단을 만드세요 — 조건문</a></li>
