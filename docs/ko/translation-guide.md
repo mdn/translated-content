@@ -180,8 +180,10 @@ EDITOR=code
 | 용어 | 번역 | 기타 | 참고 링크 |
 | --- | --- | --- | ------ |
 | Argument | 매개변수 | | | 
+| Blocking operation | 블로킹 연산 | | | 
 | Callback | 콜백 | | | 
 | Fulfilled | 이행(함) | | | 
+| Guides (헤딩) | 가이드 | | | 
 | Handler | 처리기 | 이벤트 처리기 | | 
 | Interface | 인터페이스 | | | 
 | Iterate | 순회 | | | 
@@ -189,8 +191,14 @@ EDITOR=code
 | Mixin | 믹스인 | | | 
 | Module | 모듈 | ESM에서 명시하는 모듈의 경우 '모듈'로 변역한다. | | 
 | Module | 과정 | 어떠한 교육 과정, 단위에 의한 표현은 '과정'으로 번역한다. (예: In this module) | | 
+| Non-blocking operation | 논블로킹 연산 | | |
+| Note (안내문구) | 참고	 | | | 
+| Objective (안내문구) | 목표 | | | 
 | Parameter | 매개변수 | | | 
 | Pending | 대기 | | | 
+| Prerequisites | 필요한 사전 지식 | | | 
+| Promise | 프로미스 | | [해당 링크 참고](https://github.com/mdn/translated-content/pull/1081#issuecomment-878333558) | 
+| Promise chaining | 프로미스 체이닝 | | | 
 | Prototype | 프로토타입 | | | 
 | Reject | 거부 | | | 
 | Resolve | 이행 | | | 
