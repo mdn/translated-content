@@ -48279,14 +48279,6 @@
       "dextra"
     ]
   },
-  "conflicting/Web/API/GlobalEventHandlers/onclick": {
-    "modified": "2019-03-23T23:35:38.164Z",
-    "contributors": [
-      "teoli",
-      "jsx",
-      "ethertank"
-    ]
-  },
   "conflicting/Web/API/GlobalEventHandlers/onmousedown": {
     "modified": "2019-03-23T23:29:31.417Z",
     "contributors": [

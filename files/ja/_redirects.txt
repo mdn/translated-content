@@ -1611,7 +1611,7 @@
 /ja/docs/DOM/window.onabort	/ja/docs/Web/API/GlobalEventHandlers/onabort
 /ja/docs/DOM/window.onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/DOM/window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
-/ja/docs/DOM/window.onclick	/ja/docs/conflicting/Web/API/GlobalEventHandlers/onclick
+/ja/docs/DOM/window.onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
 /ja/docs/DOM/window.ondevicelight	/ja/docs/orphaned/Web/API/Window/ondevicelight
 /ja/docs/DOM/window.onhashchange	/ja/docs/Web/API/WindowEventHandlers/onhashchange
 /ja/docs/DOM/window.onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
@@ -3806,7 +3806,7 @@
 /ja/docs/Web/API/Window/onafterprint	/ja/docs/Web/API/WindowEventHandlers/onafterprint
 /ja/docs/Web/API/Window/onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/Web/API/Window/onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
-/ja/docs/Web/API/Window/onclick	/ja/docs/conflicting/Web/API/GlobalEventHandlers/onclick
+/ja/docs/Web/API/Window/onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
 /ja/docs/Web/API/Window/ondevicelight	/ja/docs/orphaned/Web/API/Window/ondevicelight
 /ja/docs/Web/API/Window/ondeviceproximity	/ja/docs/orphaned/Web/API/Window/ondeviceproximity
 /ja/docs/Web/API/Window/onfocus	/ja/docs/Web/API/GlobalEventHandlers/onfocus
@@ -4003,7 +4003,7 @@
 /ja/docs/Web/API/window.onbeforeunload	/ja/docs/Web/API/WindowEventHandlers/onbeforeunload
 /ja/docs/Web/API/window.onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/Web/API/window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
-/ja/docs/Web/API/window.onclick	/ja/docs/conflicting/Web/API/GlobalEventHandlers/onclick
+/ja/docs/Web/API/window.onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
 /ja/docs/Web/API/window.onclose	/ja/docs/Web/API/GlobalEventHandlers/onclose
 /ja/docs/Web/API/window.ondevicelight	/ja/docs/orphaned/Web/API/Window/ondevicelight
 /ja/docs/Web/API/window.onfocus	/ja/docs/Web/API/GlobalEventHandlers/onfocus
