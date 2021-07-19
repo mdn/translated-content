@@ -3908,7 +3908,7 @@
 /ja/docs/Web/API/element.onafterscriptexecute	/ja/docs/Web/API/Document/onafterscriptexecute
 /ja/docs/Web/API/element.onbeforescriptexecute	/ja/docs/Web/API/Document/onbeforescriptexecute
 /ja/docs/Web/API/element.onkeypress	/ja/docs/Web/API/GlobalEventHandlers/onkeypress
-/ja/docs/Web/API/element.onmousedown	/ja/docs/Web/API/GlobalEventhandlers/onmousedown
+/ja/docs/Web/API/element.onmousedown	/ja/docs/Web/API/GlobalEventHandlers/onmousedown
 /ja/docs/Web/API/element.onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
 /ja/docs/Web/API/element.setAttribute	/ja/docs/Web/API/Element/setAttribute
 /ja/docs/Web/API/element.tagName	/ja/docs/Web/API/Element/tagName
