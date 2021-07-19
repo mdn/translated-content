@@ -49453,6 +49453,50 @@
       "AlexChao"
     ]
   },
+  "orphaned/Web/API/ChildNode/after": {
+    "modified": "2020-10-15T21:51:08.472Z",
+    "contributors": [
+      "Ende93",
+      "Cattla"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/before": {
+    "modified": "2019-03-23T22:12:22.842Z",
+    "contributors": [
+      "caoweiju"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/remove": {
+    "modified": "2020-10-15T21:27:27.352Z",
+    "contributors": [
+      "RainSlide",
+      "iSmartSV",
+      "duola8789",
+      "pasturn",
+      "Ende93",
+      "xgqfrms-GitHub",
+      "ceverytime",
+      "teoli",
+      "khalid32",
+      "ziyunfei",
+      "Darrel.Hsu"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/replaceWith": {
+    "modified": "2020-10-15T21:56:06.625Z",
+    "contributors": [
+      "ecnelises",
+      "SphinxKnight",
+      "wzx",
+      "VictorDu"
+    ]
+  },
+  "orphaned/Web/API/DOMLocator": {
+    "modified": "2019-03-23T22:08:16.598Z",
+    "contributors": [
+      "ResJay"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2020-10-15T21:21:28.912Z",
     "contributors": [
@@ -49936,6 +49980,12 @@
     "modified": "2020-10-15T22:29:03.476Z",
     "contributors": [
       "lauhua"
+    ]
+  },
+  "orphaned/Web/API/RenderingContext": {
+    "modified": "2019-03-23T22:53:04.731Z",
+    "contributors": [
+      "ice-i-snow"
     ]
   },
   "orphaned/Web/API/Request/context": {
