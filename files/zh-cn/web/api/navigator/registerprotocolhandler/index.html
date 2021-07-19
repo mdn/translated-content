@@ -35,7 +35,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler
 
 <dl>
  <dt><code>url</code></dt>
- <dd>处理器的URL，string类型。这个字符串应该包含一个"%s"的占位符，其会被将要受理的文档的 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">escaped</a> 链接所替换。这个链接（译者按：指将要受理的文档的 escaped 链接，也就是替换占位符的字符串）可能是一个真实的URL，或者是一个电话号码，邮件地址之类的。</dd>
+ <dd>处理器的URL，string类型。这个字符串应该包含一个"%s"的占位符，其会被将要受理的文档的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">escaped</a> 链接所替换。这个链接（译者按：指将要受理的文档的 escaped 链接，也就是替换占位符的字符串）可能是一个真实的URL，或者是一个电话号码，邮件地址之类的。</dd>
  <dd>
  <div class="note">这个处理器的 URL 必须以 <code>http</code> 或者 <code>https</code> 协议标记作为开头，最好是 <code>https</code> ，以满足一些浏览器出于安全考虑的要求。</div>
  </dd>
@@ -53,7 +53,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler
 
 <ul>
  <li>指定了一个非法的协议标记，例如一个浏览器自身的标记（<code>https:</code>, <code>about:</code> 等）。</li>
- <li>处理器URL的 <a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/Origin">origin</a> 与调用这个API的页面的 origin不匹配。</li>
+ <li>处理器URL的 <a href="/zh-CN/docs/Glossary/Origin">origin</a> 与调用这个API的页面的 origin不匹配。</li>
  <li>浏览器要求这个函数由安全的上下文调用。</li>
  <li>浏览器要求处理器的URL使用 HTTPS 协议。</li>
 </ul>

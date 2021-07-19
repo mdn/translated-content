@@ -15,7 +15,7 @@ original_slug: Learn/HTML/Tables/基礎
   <tr>
    <th scope="row">先備知識:</th>
    <td>
-    <p>HTML的基礎(見<a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML">介紹HTML</a>)</p>
+    <p>HTML的基礎(見<a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML">介紹HTML</a>)</p>
    </td>
   </tr>
   <tr>
@@ -29,13 +29,13 @@ original_slug: Learn/HTML/Tables/基礎
 
 <p>表格是一個由列和欄組成的結構化資料(tabular data)。表格能幫助你快速查看不同資料類型間的關聯值。例如人和年紀、一周當中的某天或是地方游泳池的時間表。</p>
 
-<p><img alt="A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47." src="https://mdn.mozillademos.org/files/14583/numbers-table.png" style="display: block; height: 156px; margin: 0px auto; width: 350px;"></p>
+<p><img alt="A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47." src="numbers-table.png" style="display: block; margin: 0px auto;"></p>
 
-<p><img alt="A swimming timetable showing a sample data table" src="https://mdn.mozillademos.org/files/14587/swimming-timetable.png" style="display: block; height: 301px; margin: 0px auto; width: 794px;"></p>
+<p><img alt="A swimming timetable showing a sample data table" src="swimming-timetable.png" style="display: block; margin: 0px auto;"></p>
 
 <p>表格在人類社會當中被廣泛使用且已經有很久的歷史，如下是美國1800年的人口普查紀錄表格。</p>
 
-<p><img alt="A very old parchment document; the data is not easily readable, but it clearly shows a data table being used." src="https://mdn.mozillademos.org/files/14585/1800-census.jpg" style="display: block; height: 505px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="A very old parchment document; the data is not easily readable, but it clearly shows a data table being used." src="1800-census.jpg" style="display: block; margin: 0px auto;"></p>
 
 <p>這也難怪HTML的開創者要提供一個在網路建立和呈現表格化資料的方法。</p>
 
@@ -184,20 +184,20 @@ original_slug: Learn/HTML/Tables/基礎
 
 <p>你也可以在 <a href="https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html">GitHub </a> 上看看實際範例 ! 而你也許會注意到那裡的表格似乎更容易閱讀。那是因為這裡的表格只有加上很少樣式，而GitHub上的版本卻應用上了更多明顯的CSS 。</p>
 
-<p>需要弄清楚的一點是 : 要讓表格在網頁上有效呈現需要提供紮實的HTML架構和CSS樣式資訊，但將在這個模組中聚焦在HTML的部分。若想瞭解CSS的部分，可以在完成這部分閱讀之後造訪<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables">表格樣式設計</a>的文章。</p>
+<p>需要弄清楚的一點是 : 要讓表格在網頁上有效呈現需要提供紮實的HTML架構和CSS樣式資訊，但將在這個模組中聚焦在HTML的部分。若想瞭解CSS的部分，可以在完成這部分閱讀之後造訪<a href="/zh-TW/docs/Learn/CSS/Building_blocks/Styling_tables">表格樣式設計</a>的文章。</p>
 
 <p>在這個單元裡我們將不會聚焦在CSS上，但是我們提供基本的CSS樣式表讓你做使用，這將會使你製作的表格比起毫無修飾的預設樣式更方便閱讀。你能在這找到<a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css">樣式表</a>，並且你也能找到一個適用於樣式表的<a href="https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html">HTML模版</a> — 他們能一起讓你有個好起點來實驗HTML表格。</p>
 
 <h3 id="當何時你不應該使用HTML表格">當何時你不應該使用HTML表格?</h3>
 
 <p>HTML表格應該被使用在結構化資料(tabular data)上 — 這就是它們被設計的目的。<br>
- 不幸地是，許多人習慣使用HTML表格去排版他們的網頁，例如: 使用一列去當header，一列當做內容欄位，一列當作footer...等等，你能在我們的<a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Accessibility">輔助學習單元</a>裡的<a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML#Page_layouts">頁面輸出</a>發現更多細節以及一個範例。它曾經被這麼使用是因為CSS過去在不同瀏覽器之間的支援程度十分可怕; 如今，已非常少在用表格做排版，但你仍然可能在網路的一些邊邊角角見到。</p>
+ 不幸地是，許多人習慣使用HTML表格去排版他們的網頁，例如: 使用一列去當header，一列當做內容欄位，一列當作footer...等等，你能在我們的<a href="/zh-TW/docs/Learn/Accessibility">輔助學習單元</a>裡的<a href="/zh-TW/docs/Learn/Accessibility/HTML#Page_layouts">頁面輸出</a>發現更多細節以及一個範例。它曾經被這麼使用是因為CSS過去在不同瀏覽器之間的支援程度十分可怕; 如今，已非常少在用表格做排版，但你仍然可能在網路的一些邊邊角角見到。</p>
 
-<p>簡單來說，使用表格排版而非使用<a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout">CSS排版技術</a>是一件很糟的事情。<br>
+<p>簡單來說，使用表格排版而非使用<a href="/zh-TW/docs/Learn/CSS/CSS_layout">CSS排版技術</a>是一件很糟的事情。<br>
  下列是主要原因:</p>
 
 <ol>
- <li><strong>表格排版會減少對視障使用者的輔助 </strong>: 視障者使用的<a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">螢幕閱讀器</a>會翻譯存在於HTML網頁的標籤並對使用者念出內容。由於表格並不是正確的排版工具，並且標示方式遠複雜於CSS排版技術，所以螢幕閱讀器輸出的內容會使他們的使用者感到困惑。</li>
+ <li><strong>表格排版會減少對視障使用者的輔助 </strong>: 視障者使用的<a href="/zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders">螢幕閱讀器</a>會翻譯存在於HTML網頁的標籤並對使用者念出內容。由於表格並不是正確的排版工具，並且標示方式遠複雜於CSS排版技術，所以螢幕閱讀器輸出的內容會使他們的使用者感到困惑。</li>
  <li><strong>表格會產生標籤雜燴(tag soup)</strong>: 就像上面提到的，表格排版通常會比一般適當的輸出技術包含更複雜的標籤結構。這會導致程式碼本身更難撰寫、維護及debug。</li>
  <li><strong>表格不會自適應(automatically responsive)</strong>: 當你使用合適的排版容器(像是{htmlelement("header")}, {{htmlelement("section")}}) 或是 {{htmlelement("div")}}),它們的寬度相對於父層預設為100%，而表格的預設大小是依據它們的內容物，所以當表格樣式要有效的在不同的裝置之間運行時，會需要做額外的測量調整。</li>
 </ol>

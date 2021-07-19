@@ -1,0 +1,58 @@
+---
+title: ValidityState.patternMismatch
+slug: Web/API/ValidityState/patternMismatch
+tags:
+  - API
+  - Constraint Validation API
+  - DOM
+  - Property
+  - Reference
+browser-compat: api.ValidityState.patternMismatch
+---
+<p>{{draft}}Доступное только для чтения свойство <strong><code>patternMismatch</code></strong> объекта  <strong><code><a href="/ru/docs/Web/API/ValidityState">ValidityState</a></code></strong> указывает, соответствует ли значение {{HTMLElement("input")}} шаблону, указанному в атрибуте <code><a href="/ru/docs/Web/HTML/Attributes/pattern">pattern</a></code>.</p>
+
+<p>Если поле поддерживает атрибут <code><a href="/ru/docs/Web/HTML/Attributes/pattern">pattern</a></code>, это значит, что {{HTMLElement("input")}} содержит <code>type</code> {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}} или {{HTMLElement("input/search", "search")}} и в значении атрибута задано валидное регулярное выражение. Если значение не соответствует ограничениям, заданным в <code><a href="/ru/docs/Web/HTML/Attributes/pattern">pattern</a></code>, свойство <code>patternMismatch</code> будет <code>true</code>.</p>
+
+<h2 id="Examples">Примеры</h2>
+
+<p>Учитывая следующее:</p>
+
+<pre class="brush: html">&lt;p&gt;
+ &lt;label&gt;Enter your phone number in the format (123)456-7890
+  (&lt;input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/&gt;)-
+   &lt;input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/&gt; -
+   &lt;input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/&gt;
+ &lt;/label&gt;
+&lt;/p&gt;</pre>
+
+<p>Здесь у нас есть 3 поля для номера телефона северной Америки, помещённых внутрь <code>label</code>. В каждом поле, как определено в атрибуте <code><a href="/ru/docs/Web/HTML/Attributes/pattern">pattern</a></code>, ожидается ввод 3, 3 и 4 символов соответственно.</p>
+
+<p>Если значения слишком длинные, слишком короткие или содержат не цифровые символы, <code>patternMismatch</code> будет <code>true</code>. Если <code>true</code>, элемент соответствует CSS-псевдоклассу{{cssxref(":invalid")}}.</p>
+
+<pre class="brush: css">input:invalid {
+  border: red solid 3px;
+}</pre>
+
+<p>{{EmbedLiveSample("Examples", 300, 40)}}</p>
+
+<p>Обратите внимание, что в данном примере мы получаем значение свойства <code>patternMismatch</code>, а не {{domxref('validityState.tooLong')}} или {{domxref('validityState.tooShort')}}, потому что ограничения заданы именно с помощью атрибута <code>pattern</code>. Если бы вместо него использовались атрибуты <code><a href="/en-US/docs/Web/HTML/Attributes/minlength">minlength</a></code> и <code><a href="/en-US/docs/Web/HTML/Attributes/maxlength">maxlength</a></code>, для валидации можно было использовать {{domxref('validityState.tooLong')}} или {{domxref('validityState.tooShort')}}.</p>
+
+<div class="notecard note">
+<p>Примечание: Если атрибут <code>pattern</code> не используется, поле <code>{{HTMLElement("input/email", "email")}}</code> требует, соответствия значения хотя бы формату <code>x@y</code>, а поле <code>{{HTMLElement("input/url", "url")}}</code> — хотя бы формату <code>x:</code>. Если поле не валидно, свойство {{domxref('validityState.typeMismatch')}} будет <code>true</code>, если не используется атрибут <code>pattern</code>.</p>
+</div>
+
+<h2 id="Specifications">Спецификации</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">Также смотрите</h2>
+
+<ul>
+ <li><a href="/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation">Валидация ограничений</a></li>
+ <li><a href="/ru/docs/Learn/Forms/Form_validation">Формы: Валидация форм</a></li>
+ <li><a href="/ru/docs/Web/JavaScript/Guide/Regular_Expressions">Регулярные выражения</a></li>
+</ul>
