@@ -36,9 +36,8 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/String/split
       <li>Si <code>separator</code> est une chaîne vide (<code>""</code>), la chaîne <code>str</code> est convertie en un tableau de chacun de ses "caractères" UTF-16.</li>
     </ul>
 
-    <div class="notecard warning">
-      <p><b>Attention :</b></p>
-      <p>Lorsque une chaîne vide (<code>""</code>) est utilisée comme séparateur, la chaîne n'est <strong>pas</strong> divisée par des <em>caractères perçus par l'utilisateur</em> (<a href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grappes de graphèmes</a>) ou des caractères unicodes (codepoints), mais par des unités de code UTF-16. Cela détruit les <a href="http://unicode.org/faq/utf_bom.html#utf16-2">paires de substituts</a>. Voir <a href="https://stackoverflow.com/a/34717402">« Comment obtenir une chaîne de caractères vers un tableau de caractères en JavaScript ? » sur StackOverflow</a>.</p>
+    <div class="warning">
+      <p><strong>Attention :</strong> Lorsque une chaîne vide (<code>""</code>) est utilisée comme séparateur, la chaîne n'est <strong>pas</strong> divisée par des <em>caractères perçus par l'utilisateur</em> (<a href="https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries">grappes de graphèmes</a>) ou des caractères unicodes (codepoints), mais par des unités de code UTF-16. Cela détruit les <a href="http://unicode.org/faq/utf_bom.html#utf16-2">paires de substituts</a>. Voir <a href="https://stackoverflow.com/a/34717402">« Comment obtenir une chaîne de caractères vers un tableau de caractères en JavaScript ? » sur StackOverflow</a>.</p>
     </div>
   </dd>
   <dt><code>limit</code> <span class="badge inline optional">Facultatif</span></dt>
@@ -164,7 +163,7 @@ console.log(splits);</pre>
 <h3 id="reversing_a_string_using_split">Inverser une chaîne en utilisant <code>split()</code></h3>
 
 <div class="warning">
-  <p>Ce n'est pas une façon robuste d'inverser une chaîne :</p>
+  <p><strong>Attention :</strong> Ce n'est pas une façon robuste d'inverser une chaîne :</p>
 
   <pre class="brush: js example-bad">const str = 'asdfghjkl'
 const strReverse = str.split('').reverse().join('')

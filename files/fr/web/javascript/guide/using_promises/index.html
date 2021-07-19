@@ -130,7 +130,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 </pre>
 
 <div class="warning">
-<p><strong>Important :</strong> cela implique que les fonctions asynchrones renvoient toutes des promesses, sinon les <em>callbacks</em> ne pourront être chaînés et les erreurs ne seront pas interceptées (les fonctions fléchées ont une valeur de retour implicite si les accolades ne sont pas utilisées : <code>() =&gt; x</code> est synonyme de <code>() =&gt; { return x; }</code>).</p>
+<p><strong>Attention :</strong> cela implique que les fonctions asynchrones renvoient toutes des promesses, sinon les <em>callbacks</em> ne pourront être chaînés et les erreurs ne seront pas interceptées (les fonctions fléchées ont une valeur de retour implicite si les accolades ne sont pas utilisées : <code>() =&gt; x</code> est synonyme de <code>() =&gt; { return x; }</code>).</p>
 </div>
 
 <h3 id="Chaînage_après_un_catch">Chaînage après un catch</h3>

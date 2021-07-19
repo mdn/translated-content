@@ -67,7 +67,7 @@ var args = Array.from(arguments);
 var args = [...arguments];</pre>
 
 <div class="warning">
-<p><strong>Important :</strong> Il est déconseillé d'utiliser <code>slice</code> sur les arguments car cela peut empêcher certaines optimisations des moteurs JavaScript. Pour ce scénario, on peut par exemple construire un nouveau tableau en parcourant l'objet arguments (à ce sujet, voir <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">cette page</a> sur les contraintes d'optimisations liées à V8). Pour cet exemple, on pourra utiliser <code>Array.apply</code> :</p>
+<p><strong>Attention :</strong> Il est déconseillé d'utiliser <code>slice</code> sur les arguments car cela peut empêcher certaines optimisations des moteurs JavaScript. Pour ce scénario, on peut par exemple construire un nouveau tableau en parcourant l'objet arguments (à ce sujet, voir <a href="https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments">cette page</a> sur les contraintes d'optimisations liées à V8). Pour cet exemple, on pourra utiliser <code>Array.apply</code> :</p>
 
 <pre class="brush: js">var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));</pre>
 </div>

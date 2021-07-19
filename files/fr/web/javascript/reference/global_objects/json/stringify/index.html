@@ -288,7 +288,7 @@ console.log(a !== b); // true
 <p>Dans le cas où on souhaite enregistrer un objet créé par l'utilisateur afin de le restorer plus tard (y compris après que le navigateur ait été fermé), on peut utiliser <code>JSON.stringify</code>.</p>
 
 <div class="warning">
-<p>Les fonctions n'ont pas de correspondances en JSON, il ne sera donc pas possible de les enregistrer de cette façon. En revanche, elles peuvent être affichées si elles ont été converties en texte avec la fonction de remplacement. De même, certains objets comme les dates seront transformées en chaîne de caractères après l'utilisation de JSON.parse().</p>
+<p><strong>Attention :</strong> Les fonctions n'ont pas de correspondances en JSON, il ne sera donc pas possible de les enregistrer de cette façon. En revanche, elles peuvent être affichées si elles ont été converties en texte avec la fonction de remplacement. De même, certains objets comme les dates seront transformées en chaîne de caractères après l'utilisation de JSON.parse().</p>
 </div>
 
 <pre class="brush: js">// On crée un objet pour l'exemple

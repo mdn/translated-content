@@ -155,7 +155,6 @@ setTimeout(parallelPromise, 13000); // identique à parallel
 
 <p>Si on souhaite avoir deux tâches qui s'exécutent réellement en parallèle, on pourra utiliser  <code>await Promise.all([job1(), job2()])</code> comme illustré ci-avant avec <code>parallel</code>.</p>
 
-<div class="warning">
 <h4 id="asyncawait_Promise.prototype.then_et_la_gestion_des_erreurs"><code>async</code>/<code>await</code>, <code>Promise.prototype.then()</code> et la gestion des erreurs</h4>
 
 <p>La plupart des fonctions asynchrones peuvent être écrites avec des promesses. Toutefois, les fonctions asynchrones qui utilisent <code>async</code> se prêtent mieux à la gestion des erreurs.</p>
@@ -166,7 +165,6 @@ setTimeout(parallelPromise, 13000); // identique à parallel
 
 <p>Bien entendu, il est toutefois possible d'avoir des fonctions asynchrones (avec <code>async</code>) qui gobent des erreurs involontairement. Si on considère la fonction <code>parallel</code> ci-avant, s'il n'y avait eu aucun <code>await</code> ou <code>return</code> pour le résultat de <code>Promise.all([])</code>, aucune erreur n'aurait été propagée.<br>
  Bien que l'exemple <code>parallelPromise</code> paraisse simple, il ne gère aucune erreur du tout. Il aurait fallu utiliser un <code>return </code><code>Promise.all([])</code> analogue.</p>
-</div>
 
 <h3 id="Réécrire_une_chaîne_de_promesses_avec_une_fonction_asynchrone">Réécrire une chaîne de promesses avec une fonction asynchrone</h3>
 
