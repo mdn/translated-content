@@ -100,7 +100,7 @@ while (true) {
 
 <h2 id="错误处理">错误处理</h2>
 
-<p>当发生错误(例如请求超时或与<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS" title="/en-US/docs/HTTP/Access_control_CORS">HTTP访问控制（CORS）</a>有关的问题), 会生成一个错误事件. 您可以通过在<code>EventSource</code>对象上使用<code>onerror</code>回调来对此采取措施：</p>
+<p>当发生错误(例如请求超时或与<a href="/zh-CN/docs/Web/HTTP/Access_control_CORS" title="/en-US/docs/HTTP/Access_control_CORS">HTTP访问控制（CORS）</a>有关的问题), 会生成一个错误事件. 您可以通过在<code>EventSource</code>对象上使用<code>onerror</code>回调来对此采取措施：</p>
 
 <pre class="notranslate">evtSource.onerror = function(err) {
   console.error("EventSource failed:", err);
@@ -114,7 +114,7 @@ while (true) {
 
 <h2 id="事件流格式">事件流格式</h2>
 
-<p>事件流仅仅是一个简单的文本数据流,文本应该使用 <a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/UTF-8">UTF-8</a> 格式的编码.每条消息后面都由一个空行作为分隔符.以冒号开头的行为注释行,会被忽略.</p>
+<p>事件流仅仅是一个简单的文本数据流,文本应该使用 <a href="/zh-CN/docs/Glossary/UTF-8">UTF-8</a> 格式的编码.每条消息后面都由一个空行作为分隔符.以冒号开头的行为注释行,会被忽略.</p>
 
 <div class="note"><strong>注:</strong>注释行可以用来防止连接超时,服务器可以定期发送一条消息注释行,以保持连接不断.</div>
 

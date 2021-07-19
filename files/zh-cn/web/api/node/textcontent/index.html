@@ -13,7 +13,7 @@ translation_of: Web/API/Node/textContent
 <p>{{domxref ("Node")}} 接口的<strong> </strong><code><strong>textContent</strong></code> 属性表示一个节点及其后代的文本内容。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意:</strong> <code>textContent</code> 和 {{domxref("HTMLElement.innerText")}} 容易混淆，但这两个属性在<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/API/Node/textContent#与_innerText_的区别">重要方面有不同之处</a> 。</p>
+<p><strong>注意:</strong> <code>textContent</code> 和 {{domxref("HTMLElement.innerText")}} 容易混淆，但这两个属性在<a href="/zh-CN/docs/Web/API/Node/textContent#与_innerText_的区别">重要方面有不同之处</a> 。</p>
 </div>
 
 <h2 id="Syntax" name="Syntax">语法</h2>
@@ -30,13 +30,13 @@ translation_of: Web/API/Node/textContent
 <p><code>textContent</code> 的值取决于具体情况：</p>
 
 <ul>
- <li>如果节点是一个 {{domxref("document")}}，或者一个 <a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/Doctype">DOCTYPE</a> ，则 <code>textContent</code> 返回 <code>null</code>。
+ <li>如果节点是一个 {{domxref("document")}}，或者一个 <a href="/zh-CN/docs/Glossary/Doctype">DOCTYPE</a> ，则 <code>textContent</code> 返回 <code>null</code>。
 
   <div class="blockIndicator note">
-  <p>如果你要获取整个文档的文本以及 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/CDATASection">CDATA data</a> ，可以使用 <code><a href="/zh-CN/docs/DOM/document.documentElement" title="DOM/document.documentElement">document.documentElement</a>.textContent</code>。</p>
+  <p>如果你要获取整个文档的文本以及 <a href="/zh-CN/docs/Web/API/CDATASection">CDATA data</a> ，可以使用 <code><a href="/zh-CN/docs/DOM/document.documentElement" title="DOM/document.documentElement">document.documentElement</a>.textContent</code>。</p>
   </div>
  </li>
- <li>如果节点是个 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/CDATASection">CDATA section</a>、注释、<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/ProcessingInstruction">processing instruction</a> 或者 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode">text node</a>，<code>textContent</code> 返回节点内部的文本内容，例如 {{domxref("Node.nodeValue")}}。</li>
+ <li>如果节点是个 <a href="/zh-CN/docs/Web/API/CDATASection">CDATA section</a>、注释、<a href="/zh-CN/docs/Web/API/ProcessingInstruction">processing instruction</a> 或者 <a href="/zh-CN/docs/Web/API/Document/createTextNode">text node</a>，<code>textContent</code> 返回节点内部的文本内容，例如 {{domxref("Node.nodeValue")}}。</li>
  <li>对于其他节点类型，<code>textContent</code> 将所有子节点的 <code>textContent</code> 合并后返回，除了注释和processing instructions。（如果该节点没有子节点的话，返回一个空字符串。）</li>
 </ul>
 
@@ -50,7 +50,7 @@ translation_of: Web/API/Node/textContent
  <li><code>textContent</code> 会获取<em>所有</em>元素的内容，包括 {{HTMLElement("script")}} 和 {{HTMLElement("style")}} 元素，然而 <code>innerText</code><strong> </strong>只展示给人看的元素。</li>
  <li><code>textContent</code> 会返回节点中的每一个元素。相反，<code>innerText</code> 受 CSS 样式的影响，并且不会返回隐藏元素的文本，
   <ul>
-   <li>此外，由于 <code>innerText</code> 受 CSS 样式的影响，它会触发回流（ <a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/Reflow">reflow</a> ）去确保是最新的计算样式。（回流在计算上可能会非常昂贵，因此应尽可能避免。）</li>
+   <li>此外，由于 <code>innerText</code> 受 CSS 样式的影响，它会触发回流（ <a href="/zh-CN/docs/Glossary/Reflow">reflow</a> ）去确保是最新的计算样式。（回流在计算上可能会非常昂贵，因此应尽可能避免。）</li>
   </ul>
  </li>
  <li><font face="Open Sans, Arial, sans-serif">与 </font><code>textContent</code> 不同的是, 在 Internet Explorer (小于和等于 11 的版本) 中对 <code>innerText</code> 进行修改， 不仅会移除当前元素的子节点，而且还会<em>永久性地破坏</em>所有后代文本节点。在之后不可能再次将节点再次插入到任何其他元素或同一元素中。</li>
@@ -60,7 +60,7 @@ translation_of: Web/API/Node/textContent
 
 <p>正如其名称，{{domxref("Element.innerHTML")}} 返回 HTML。通常，为了在元素中检索或写入文本，人们使用 <code>innerHTML</code>。但是，<code>textContent</code> 通常具有更好的性能，因为文本不会被解析为HTML。</p>
 
-<p>此外，使用 <code>textContent</code> 可以防止 <a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">XSS 攻击</a>。</p>
+<p>此外，使用 <code>textContent</code> 可以防止 <a href="/zh-CN/docs/Glossary/Cross-site_scripting">XSS 攻击</a>。</p>
 
 <h2 id="Example" name="Example">例子</h2>
 
