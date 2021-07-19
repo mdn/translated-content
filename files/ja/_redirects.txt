@@ -3813,7 +3813,7 @@
 /ja/docs/Web/API/Window/oninstall	/ja/docs/Web/API/Window/onappinstalled
 /ja/docs/Web/API/Window/onkeydown	/ja/docs/Web/API/GlobalEventHandlers/onkeydown
 /ja/docs/Web/API/Window/onkeyup	/ja/docs/Web/API/GlobalEventHandlers/onkeyup
-/ja/docs/Web/API/Window/onmousedown	/ja/docs/conflicting/Web/API/GlobalEventHandlers/onmousedown
+/ja/docs/Web/API/Window/onmousedown	/ja/docs/Web/API/GlobalEventHandlers/onmousedown
 /ja/docs/Web/API/Window/onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
 /ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/GlobalEventHandlers/onreset
 /ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/GlobalEventHandlers/onresize
@@ -3908,7 +3908,7 @@
 /ja/docs/Web/API/element.onafterscriptexecute	/ja/docs/Web/API/Document/onafterscriptexecute
 /ja/docs/Web/API/element.onbeforescriptexecute	/ja/docs/Web/API/Document/onbeforescriptexecute
 /ja/docs/Web/API/element.onkeypress	/ja/docs/Web/API/GlobalEventHandlers/onkeypress
-/ja/docs/Web/API/element.onmousedown	/ja/docs/Web/API/globalEventhandlers/onmousedown
+/ja/docs/Web/API/element.onmousedown	/ja/docs/Web/API/GlobalEventHandlers/onmousedown
 /ja/docs/Web/API/element.onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
 /ja/docs/Web/API/element.setAttribute	/ja/docs/Web/API/Element/setAttribute
 /ja/docs/Web/API/element.tagName	/ja/docs/Web/API/Element/tagName
@@ -4011,7 +4011,7 @@
 /ja/docs/Web/API/window.onkeydown	/ja/docs/Web/API/GlobalEventHandlers/onkeydown
 /ja/docs/Web/API/window.onkeyup	/ja/docs/Web/API/GlobalEventHandlers/onkeyup
 /ja/docs/Web/API/window.onload	/ja/docs/Web/API/GlobalEventHandlers/onload
-/ja/docs/Web/API/window.onmousedown	/ja/docs/conflicting/Web/API/GlobalEventHandlers/onmousedown
+/ja/docs/Web/API/window.onmousedown	/ja/docs/Web/API/GlobalEventHandlers/onmousedown
 /ja/docs/Web/API/window.onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
 /ja/docs/Web/API/window.onreset	/ja/docs/Web/API/GlobalEventHandlers/onreset
 /ja/docs/Web/API/window.onresize	/ja/docs/Web/API/GlobalEventHandlers/onresize
