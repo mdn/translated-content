@@ -50,7 +50,7 @@ g.next();         // { value: undefined, done: true }
 </pre>
 
 <div class="note">
-<p><strong>Note : </strong>Si <code>done</code> vaut <code>true</code>, <code>return(valeur)</code> renverra la même chose que <code>next()</code> : <code>undefined</code>. Si aucun argument n'est fourni, la propriété <code>value</code> de l'objet renvoyé sera la même qu'avec un appel à <code>.next()</code>. Si un argument est fourni, c'est lui qui sera utilisé comme valeur pour l'attribut <code>value</code> du résultat.</p>
+<p><strong>Note :</strong> Si <code>done</code> vaut <code>true</code>, <code>return(valeur)</code> renverra la même chose que <code>next()</code> : <code>undefined</code>. Si aucun argument n'est fourni, la propriété <code>value</code> de l'objet renvoyé sera la même qu'avec un appel à <code>.next()</code>. Si un argument est fourni, c'est lui qui sera utilisé comme valeur pour l'attribut <code>value</code> du résultat.</p>
 
 <pre class="brush: js">function* gen() {
   yield 1;

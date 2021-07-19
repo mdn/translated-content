@@ -155,9 +155,9 @@ JSON.stringify({x: 2n});
  <li>Si la valeur renvoyée est {{jsxref("undefined")}}, la propriété ne sera pas incluse dans la chaîne JSON.</li>
 </ul>
 
-<div class="note"><strong>Note :</strong> la fonction <code>remplaçant</code> ne peut pas être utilisée pour retirer des valeurs d'un tableau. Si on renvoie <code>undefined</code> ou une fonction, ce sera la valeur <code>null</code> qui sera utilisée.</div>
+<div class="note"><p><strong>Note :</strong> la fonction <code>remplaçant</code> ne peut pas être utilisée pour retirer des valeurs d'un tableau. Si on renvoie <code>undefined</code> ou une fonction, ce sera la valeur <code>null</code> qui sera utilisée.</p></div>
 
-<div class="note"><strong>Note :</strong> Si on souhaite que la fonction <code>remplaçant</code> distingue un objet dont une propriété a un clé qui est « réellement » une chaîne vide, il faudra avoir un compteur pour le nombre d'itération. Si le compteur indique que la première itération est passée, alors il s'agit bien d'un clé avec une chaîne vide.</div>
+<div class="note"><p><strong>Note :</strong> Si on souhaite que la fonction <code>remplaçant</code> distingue un objet dont une propriété a un clé qui est « réellement » une chaîne vide, il faudra avoir un compteur pour le nombre d'itération. Si le compteur indique que la première itération est passée, alors il s'agit bien d'un clé avec une chaîne vide.</p></div>
 
 <h4 id="Exemple_avec_une_fonction">Exemple avec une fonction</h4>
 
@@ -272,8 +272,8 @@ var s = {
 // des caractères Unicode, on utilise donc alert :(
 alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}</pre>
 
-<div class="blockIndicator note">
-<p><strong>Notes :</strong> Les propriétés des objets qui ne sont pas des tableaux ne sont pas transformées en chaînes de caractères selon un ordre particulier. Aussi, l'ordre des données en JSON ne saurait constituer une information utile.</p>
+<div class="note">
+<p><strong>Note :</strong> Les propriétés des objets qui ne sont pas des tableaux ne sont pas transformées en chaînes de caractères selon un ordre particulier. Aussi, l'ordre des données en JSON ne saurait constituer une information utile.</p>
 </div>
 
 <pre class="brush: js">var a = JSON.stringify({toto: "truc", bidule: "machin"});

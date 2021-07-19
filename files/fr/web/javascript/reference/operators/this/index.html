@@ -40,7 +40,7 @@ console.log(window.b); // "MDN"
 console.log(b);        // "MDN"
 </pre>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> Il est également possible d'accéder au contexte global avec la propriété {{jsxref("globalThis")}} quel que soit le contexte utilisé pour l'exécution.</p>
 </div>
 
@@ -73,7 +73,7 @@ f2() === undefined; // true
 
 <p>En mode strict, la valeur de <code>this</code> est conservée (il reste le même) entre le moment de sa définition et l'entrée dans le contexte d'exécution. S'il n'est pas défini, il reste <code>undefined</code>. Il pourrait être défini avec n'importe quelle autre valeur, telle que <code>null</code> ou <code>42</code> ou <code>"Je ne suis pas this"</code>.</p>
 
-<div class="note"><strong>Note :</strong> Dans ce deuxième exemple,<code>this</code> vaut {{jsxref("undefined")}} car <code>f2</code> a été appelé sans « base » (ex. : <code>window.f2()</code>). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet <code>window</code>.</div>
+<div class="note"><p><strong>Note :</strong> Dans ce deuxième exemple,<code>this</code> vaut {{jsxref("undefined")}} car <code>f2</code> a été appelé sans « base » (ex. : <code>window.f2()</code>). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet <code>window</code>.</p></div>
 
 <h3 id="call_et_apply"><code>call</code> et <code>apply</code></h3>
 
