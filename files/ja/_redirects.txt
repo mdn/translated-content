@@ -1891,8 +1891,8 @@
 /ja/docs/DOM:window.window	/ja/docs/Web/API/Window/window
 /ja/docs/DOMParser	/ja/docs/Web/API/DOMParser
 /ja/docs/DOM_Client_Object_Cross-Reference	/ja/docs/Web/API/Document_Object_Model
-/ja/docs/DOM_Client_Object_Cross-Reference/navigator	/ja/docs/conflicting/Web/API/Navigator
-/ja/docs/DOM_Client_Object_Cross-Reference:navigator	/ja/docs/conflicting/Web/API/Navigator
+/ja/docs/DOM_Client_Object_Cross-Reference/navigator	/ja/docs/Web/API/Navigator
+/ja/docs/DOM_Client_Object_Cross-Reference:navigator	/ja/docs/Web/API/Navigator
 /ja/docs/DOM_Implementation_and_Scriptability	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM_Inspector	/ja/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /ja/docs/DOM_Inspector/Internals	/ja/docs/orphaned/Tools/Add-ons/DOM_Inspector/Internals
