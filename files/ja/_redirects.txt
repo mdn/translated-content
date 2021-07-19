@@ -3658,7 +3658,7 @@
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ja/docs/Web/API/LinkStyle	/ja/docs/orphaned/Web/API/LinkStyle
 /ja/docs/Web/API/LocalMediaStream	/ja/docs/orphaned/Web/API/LocalMediaStream
-/ja/docs/Web/API/MediaRecorder_API	/ja/docs/conflicting/Web/API/MediaStream_Recording_API
+/ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator/javaEnabled	/ja/docs/orphaned/Web/API/NavigatorPlugins/javaEnabled
 /ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
