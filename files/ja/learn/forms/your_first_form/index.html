@@ -38,7 +38,7 @@ translation_of: Learn/Forms/Your_first_form
 
 <h2 id="What_are_HTML_forms" name="What_are_HTML_forms">ウェブフォームとは何か?</h2>
 
-<p><strong>ウェブフォーム</strong>とは、ユーザーと ウェブサイトやアプリケーションとの対話の要となるもののひとつです。フォームによって、ユーザーは ウェブサイトへデータを送ることができます。それらのデータはたいてい ウェブサーバーに送られて処理、保存されたり (モジュール後半の<a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Sending_and_retrieving_form_data">サーバーにデータを送る</a>を見てください) 、クライアント側ですぐにインターフェイスを更新する(例えば、リストに他の項目を追加したり、UI の機能を表示/非表示にしたり)こともあります。</p>
+<p><strong>ウェブフォーム</strong>とは、ユーザーと ウェブサイトやアプリケーションとの対話の要となるもののひとつです。フォームによって、ユーザーは ウェブサイトへデータを送ることができます。それらのデータはたいてい ウェブサーバーに送られて処理、保存されたり (モジュール後半の<a href="/ja/docs/Learn/Forms/Sending_and_retrieving_form_data">サーバーにデータを送る</a>を見てください) 、クライアント側ですぐにインターフェイスを更新する(例えば、リストに他の項目を追加したり、UI の機能を表示/非表示にしたり)こともあります。</p>
 
 <p>ウェブフォームは 1 つ以上の<strong>フォームコントロール</strong>(<strong>ウィジェット</strong>ともいいます)と、フォーム全体を構成するのに役立つ追加要素 — よく <strong>HTML フォーム</strong>と呼ばれます — とで作られます。それらのコントロールはテキストフィールド (単一行または複数行)、ドロップダウンボックス、ボタン、チェックボックスあるいはラジオボタンがあります。たいていは {{htmlelement("input")}} 要素を使って作成されますが、その他の要素もあります。</p>
 
@@ -75,7 +75,7 @@ translation_of: Learn/Forms/Your_first_form
 
 &lt;/form&gt;</pre>
 
-<p>これは、フォームを正式に定義します。これは {{HTMLElement("div")}} 要素や {{HTMLElement("p")}} 要素と同様にコンテナ要素ですが、フォームの動作を設定するための固有の属性もサポートします。すべての属性は省略可能ですが、少なくとも <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/action"><code>action</code></a> 属性と <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/method"><code>method</code></a>属性は常に設定することがベストプラクティスであると考えられます。</p>
+<p>これは、フォームを正式に定義します。これは {{HTMLElement("div")}} 要素や {{HTMLElement("p")}} 要素と同様にコンテナ要素ですが、フォームの動作を設定するための固有の属性もサポートします。すべての属性は省略可能ですが、少なくとも <a href="/ja/docs/Web/HTML/Attributes/action"><code>action</code></a> 属性と <a href="/ja/docs/Web/HTML/Attributes/method"><code>method</code></a>属性は常に設定することがベストプラクティスであると考えられます。</p>
 
 <ul>
  <li><code>action</code> 属性は、フォームで収集したデータを送信すべき場所 (URL) を定義します</li>
@@ -119,7 +119,7 @@ translation_of: Learn/Forms/Your_first_form
 
 <p>フォームのコードを上に見えるようなものに更新してください。</p>
 
-<p>{{HTMLelement("li")}} 要素はコードを扱いやすく構造化するとともに、スタイル設定を容易にするため (後述) に置いています。すべての {{HTMLElement("label")}} 要素における、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/for"> <code>for</code> </a> 属性の使い方に注目してください。これは、ラベルとフォームウィジェットを関連付けるための正式な方法です。この属性は、対応するウィジェットの <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/id"><code>id</code></a> を参照します。</p>
+<p>{{HTMLelement("li")}} 要素はコードを扱いやすく構造化するとともに、スタイル設定を容易にするため (後述) に置いています。すべての {{HTMLElement("label")}} 要素における、<a href="/ja/docs/Web/HTML/Attributes/for"> <code>for</code> </a> 属性の使い方に注目してください。これは、ラベルとフォームウィジェットを関連付けるための正式な方法です。この属性は、対応するウィジェットの <a href="/ja/docs/Web/HTML/Attributes/id"><code>id</code></a> を参照します。</p>
 
 <p>これには利点があります — フォームコントロールにラベルを関連付けて、ユーザーがマウス、トラックパッド、タッチデバイスでラベルをクリックすると対応するウィジェットがアクティブになり、スクリーンリーダーのユーザーに読み上げられるアクセシブルな名前が提供されます。この属性の利点をさらに知りたいのでしたら、こちらの記事ですべてを詳しく説明しています: <a href="/ja/docs/HTML/Forms/How_to_structure_an_HTML_form" title="HTML/Forms/How_to_structure_an_HTML_form">HTML フォームの構築方法</a>.</p>
 
@@ -130,7 +130,7 @@ translation_of: Learn/Forms/Your_first_form
  <li>2番目の input では、正しくフォーマットされた E メールアドレスのみを受け付ける単一行として定義された {{HTMLelement("input/email")}} という値を使用しています。この値はベーシックなテキストフィールドを、ユーザーによって入力されたデータをチェックするようにする "知的な" フィールドへと変化させます。またスマートフォンのように動的なキーボードのある端末で、E メールアドレスを入力するのにふさわしいキーボードレイアウト (例えばデフォルトで @ 記号があるもの) が表示されるようにします。フォームの検証について詳しく知りたい場合は、<a href="/ja/docs/HTML/Forms/Data_form_validation" title="HTML/Forms/Data_form_validation">データフォームの検証</a> の記事をご覧ください。</li>
 </ul>
 
-<p>大事なことを言い忘れましたが、<code>&lt;input&gt;</code> と <code>&lt;textarea&gt;&lt;/textarea&gt;</code> の構文に注意してください。これは HTML の変わったことの 1 つです。<code>&lt;input&gt;</code> タグは空要素です。つまり、終了タグは不要です。一方 {{HTMLElement("textarea")}} は空の要素ではないので、適切な終了タグで閉じる必要があります。これは HTML フォームの特定の機能、つまりデフォルト値の定義方法に影響があります。{{HTMLElement("input")}} 要素のデフォルト値を定義するには、次のように <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/value"><code>value</code></a> 属性を使う必要があります。</p>
+<p>大事なことを言い忘れましたが、<code>&lt;input&gt;</code> と <code>&lt;textarea&gt;&lt;/textarea&gt;</code> の構文に注意してください。これは HTML の変わったことの 1 つです。<code>&lt;input&gt;</code> タグは空要素です。つまり、終了タグは不要です。一方 {{HTMLElement("textarea")}} は空の要素ではないので、適切な終了タグで閉じる必要があります。これは HTML フォームの特定の機能、つまりデフォルト値の定義方法に影響があります。{{HTMLElement("input")}} 要素のデフォルト値を定義するには、次のように <a href="/ja/docs/Web/HTML/Attributes/value"><code>value</code></a> 属性を使う必要があります。</p>
 
 <pre class="brush:html; notranslate">&lt;input type="text" value="デフォルトではこの要素にはこの文章が挿入されます" /&gt;</pre>
 
@@ -251,9 +251,9 @@ button {
 
 <h2 id="Sending_the_data_to_your_web_server" name="Sending_the_data_to_your_web_server">データをウェブサーバーに送信する</h2>
 
-<p>最後の、またもっともややこしいであろう部分が、サーバー側でのフォームデータの扱いです。{{HTMLElement("form")}} 要素は  <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/action"><code>action</code></a> 属性と <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/method"><code>method</code></a> 属性により、どこへどのようにデータを送信するかを定義できます。</p>
+<p>最後の、またもっともややこしいであろう部分が、サーバー側でのフォームデータの扱いです。{{HTMLElement("form")}} 要素は  <a href="/ja/docs/Web/HTML/Attributes/action"><code>action</code></a> 属性と <a href="/ja/docs/Web/HTML/Attributes/method"><code>method</code></a> 属性により、どこへどのようにデータを送信するかを定義できます。</p>
 
-<p>フォームコントロールに <a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Attributes/name"><code>name</code></a> をつけます。これらの名前はクライアント側とサーバー側の両側で重要です。ブラウザー側ではそれぞれのデータにどのような名前をつけるかを示すものであり、サーバー側では名前によってそれぞれのデータを扱うことができます。フォームデータは名前/値のペアとしてサーバーに送信されます。</p>
+<p>フォームコントロールに <a href="/ja/docs/Web/HTML/Attributes/name"><code>name</code></a> をつけます。これらの名前はクライアント側とサーバー側の両側で重要です。ブラウザー側ではそれぞれのデータにどのような名前をつけるかを示すものであり、サーバー側では名前によってそれぞれのデータを扱うことができます。フォームデータは名前/値のペアとしてサーバーに送信されます。</p>
 
 <p>データに名前をつけるために、各々のデータを集めるフォームウィジェットの <code>name</code> 属性を使用しなければなりません。ここでもフォームのコードで見てみましょう:</p>
 
@@ -295,11 +295,11 @@ button {
  <li><a href="/ja/docs/Learn/HTML/Forms/Your_first_HTML_form">初めてのフォーム</a></li>
  <li><a href="/ja/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">フォームの構築方法</a></li>
  <li><a href="/ja/docs/Learn/HTML/Forms/The_native_form_widgets">ネイティブフォームウィジェット</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
+ <li><a href="/ja/docs/Learn/Forms/HTML5_input_types">The HTML5 input types</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Other_form_controls">Other form controls</a></li>
  <li><a href="/ja/docs/Learn/HTML/Forms/Styling_HTML_forms">フォームへのスタイル設定</a></li>
  <li><a href="/ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">フォームへの高度なスタイル設定</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
+ <li><a href="/ja/docs/Learn/Forms/UI_pseudo-classes">UI pseudo-classes</a></li>
  <li><a href="/ja/docs/Learn/HTML/Forms/Data_form_validation">フォームデータの検証</a></li>
  <li><a href="/ja/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">フォームデータの送信</a></li>
 </ul>
@@ -307,7 +307,7 @@ button {
 <h3 id="Advanced_Topics" name="Advanced_Topics">上級トピック</h3>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/How_to_build_custom_form_controls">カスタムフォームコントロールの作成方法</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Sending_forms_through_JavaScript">JavaScript によるフォームの送信</a></li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">フォームウィジェット向けプロパティ実装状況一覧</a></li>
+ <li><a href="/ja/docs/Learn/Forms/How_to_build_custom_form_controls">カスタムフォームコントロールの作成方法</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Sending_forms_through_JavaScript">JavaScript によるフォームの送信</a></li>
+ <li><a href="/ja/docs/Learn/Forms/Property_compatibility_table_for_form_widgets">フォームウィジェット向けプロパティ実装状況一覧</a></li>
 </ul>

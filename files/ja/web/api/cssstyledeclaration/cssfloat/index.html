@@ -1,0 +1,47 @@
+---
+title: CSSStyleDeclaration.cssFloat
+slug: Web/API/CSSStyleDeclaration/cssFloat
+tags:
+  - API
+  - CSSOM
+  - CSSStyleDeclaration
+  - Reference
+browser-compat: api.CSSStyleDeclaration.cssFloat
+translation_of: Web/API/CSSStyleDeclaration/cssFloat
+---
+<div>{{APIRef("CSSOM")}}</div>
+
+<p><span class="seoSummary"><code><strong>cssFloat</strong></code> は {{domxref("CSSStyleDeclaration")}} インターフェイスのプロパティで、 {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} を <code>float</code> を引数として呼び出したときの結果を返します。</span></p>
+<p>設定したときは、 {{DOMxRef("CSSStyleDeclaration.setProperty()")}} を <code>float</code> を第一引数、指定された値を第二引数として呼び出します。指定された値は {{cssxref("float")}} プロパティで有効な値でなければなりません。</p>
+
+<h2 id="Syntax">構文</h2>
+
+<pre class="brush: js">var <var>float</var> = <var>CSSStyleDeclaration</var>.cssFloat();
+<var>CSSStyleDeclaration</var>.cssFloat = <var>"right"</var></pre>
+
+<h3>値</h3>
+<p>{{domxref('CSSOMString')}} です。</p>
+
+<h2 id="Example">例</h2>
+
+<p>以下の例では、スタイルシートには、 1 つだけのルール <code>.box</code> に {{cssxref("float")}} プロパティの値が <code>left</code> と設定されています。この値は <code>cssFloat</code> から返されます。次に、 <code>cssFloat</code> を使用して値を "right" に設定し、新しい値を返します。</p>
+
+<pre class="brush: css">.box {
+  float: left;
+  inline-size: 300px;
+}
+</pre>
+
+<pre class="brush: js">let myRules = document.styleSheets[0].cssRules;
+let rule = myRules[0];
+console.log(rule.style.cssFloat); // "left"
+rule.style.cssFloat = "right";
+console.log(rule.style.cssFloat); //right</pre>
+
+<h2 id="Specifications">仕様書</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat}}</p>

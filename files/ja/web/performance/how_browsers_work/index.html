@@ -157,7 +157,7 @@ translation_of: Web/Performance/How_browsers_work
 
 <p>ブラウザーはコンテンツを理解し翻訳する補助機器で使用される<a href="/ja/docs/Learn/Accessibility">アクセシビリティ</a>ツリーも構築します。アクセシビリティオブジェクトモデル (AOM) は補助機器向けの DOM のようなものです。ブラウザーは、DOM が更新されるとアクセシビリティツリーも更新します。アクセシビリティツリーは補助機能それ自体からは変更できません。</p>
 
-<p>AOM が構築されるまで、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">スクリーンリーダー</a>でコンテンツにアクセスできません。</p>
+<p>AOM が構築されるまで、<a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">スクリーンリーダー</a>でコンテンツにアクセスできません。</p>
 
 <h2 id="Render" name="Render">レンダリング</h2>
 
@@ -187,7 +187,7 @@ translation_of: Web/Performance/How_browsers_work
 
 <p>スムーズなスクロールとアニメーションを実現するために、スタイルの計算やリフロー、ペイントなどメインスレッドを占有するすべての処理は、16.67ms 未満で完了する必要があります。2048 x 1536 の解像度を持つ iPad は 3,145,000 を超えるピクセルを持っています。それら大量のピクセルは高速にペイントされなければいけません。２回目以降のペイントを最初のペイントより高速にするため、スクリーンへの描画は一般的に複数のレイヤーに分解されます。この場合にコンポジットが必要になります。</p>
 
-<p>ペイントはペイントツリー内の要素をレイヤーに分解します。コンテンツを GPU (CPU 上のメインスレッドの代わりになる) 上のレイヤーに昇格させることで、ペイントと再ペイントのパフォーマンスを向上します。<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/video">&lt;video&gt;</a></code> や<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code>など、レイヤーを生成する特定のプロパティと要素があります。<a href="https://wiki.developer.mozilla.org/ja/docs/Web/CSS/opacity"><code>opacity</code></a>、3D <code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/CSS/transform">transform</a></code>、<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/CSS/will-change">will-change</a></code>、その他いくつかの CSS プロパティを持つ要素も同様です。これらのノードは、その子孫が上記の理由でそれ自身のレイヤーを必要とするのでなければ、子孫と一緒に自身のレイヤー上に描画されます。</p>
+<p>ペイントはペイントツリー内の要素をレイヤーに分解します。コンテンツを GPU (CPU 上のメインスレッドの代わりになる) 上のレイヤーに昇格させることで、ペイントと再ペイントのパフォーマンスを向上します。<code><a href="/ja/docs/Web/HTML/Element/video">&lt;video&gt;</a></code> や<code><a href="/ja/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code>など、レイヤーを生成する特定のプロパティと要素があります。<a href="/ja/docs/Web/CSS/opacity"><code>opacity</code></a>、3D <code><a href="/ja/docs/Web/CSS/transform">transform</a></code>、<code><a href="/ja/docs/Web/CSS/will-change">will-change</a></code>、その他いくつかの CSS プロパティを持つ要素も同様です。これらのノードは、その子孫が上記の理由でそれ自身のレイヤーを必要とするのでなければ、子孫と一緒に自身のレイヤー上に描画されます。</p>
 
 <p>レイヤーはパフォーマンスを改善しますが、メモリー管理の面ではコストのかかる処理です。そのため、ウェブのパフォーマンス最適化戦略の中で濫用するべきものではありません。</p>
 

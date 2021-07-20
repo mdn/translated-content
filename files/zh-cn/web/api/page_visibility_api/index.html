@@ -42,11 +42,11 @@ translation_of: Web/API/Page_Visibility_API
 
 <ul>
  <li>大多数浏览器不会调用被隐藏的标签页或{{ HTMLElement("iframe") }}框架当中{{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}定义的回调函数，这会提升性能并且延长电池的使用寿命。</li>
- <li>在调用被隐藏的标签页或<code>iframe</code>框架中 {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}等计时器会被加速。 See <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a> for more details.</li>
+ <li>在调用被隐藏的标签页或<code>iframe</code>框架中 {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}等计时器会被加速。 See <a href="/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a> for more details.</li>
  <li>Budget-based background timeout throttling is now available in modern browsers (Firefox 58+, Chrome 57+), placing an additional limit on background timer CPU usage. This operates in a similar way across modern browsers, with the details being as follows:
   <ul>
    <li>In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.</li>
-   <li>Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a>). In Chrome, this value is 10 seconds.</li>
+   <li>Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see <a href="/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a>). In Chrome, this value is 10 seconds.</li>
    <li>Timer tasks are only permitted when the budget is non-negative.</li>
    <li>Once a timer's code has finished running, the duration of time it took to execute is subtracted from its window's timeout budget.</li>
    <li>The budget regenerates at a rate of 10 ms per second, in both Firefox and Chrome.</li>
@@ -58,8 +58,8 @@ translation_of: Web/API/Page_Visibility_API
 
 <ul>
  <li>Tabs which are playing audio are considered foreground and aren’t throttled.</li>
- <li>Tabs running code that's using real-time network connections (<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">WebSockets</a> and <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">WebRTC</a>) go unthrottled in order to avoid closing these connections timing out and getting unexpectedly closed.</li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> processes are also left unthrottled in order to avoid timeouts.</li>
+ <li>Tabs running code that's using real-time network connections (<a href="/zh-CN/docs/Web/API/WebSockets_API">WebSockets</a> and <a href="/zh-CN/docs/Web/API/WebRTC_API">WebRTC</a>) go unthrottled in order to avoid closing these connections timing out and getting unexpectedly closed.</li>
+ <li><a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a> processes are also left unthrottled in order to avoid timeouts.</li>
 </ul>
 
 <h2 id="示例">示例</h2>
