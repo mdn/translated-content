@@ -264,7 +264,7 @@ function drawImageActualSize() {
 <ul>
  <li>当<code>drawImage()</code>需要在{{domxref("HTMLVideoElement")}}工作时，仅当{{domxref("HTMLMediaElement.readyState")}}大于1时<code>drawImage()</code>才能正常工作。</li>
  <li>在绘制，裁剪和/或缩放时，<code>drawImage()</code> 将始终使用CSS像素中源元素的固有尺寸。</li>
- <li><code>drawImage()</code>将忽略图像中的所有EXIF元数据，包括方向。 此行为在iOS设备上尤其麻烦。 您应该自己检测方向并使用<code>rotate()</code>使其正确。</li>
+ <li>大部分情况下<code>drawImage()</code>将忽略图像中的所有EXIF元数据，包括方向。 此行为在iOS设备上尤其麻烦。 您应该自己检测方向并使用<code>rotate()</code>使其正确。某些情况下，<code>drawImage()</code>并不会忽略EXIF元数据，这里需要注意</li>
 </ul>
 
 <h2 id="参见">参见</h2>
