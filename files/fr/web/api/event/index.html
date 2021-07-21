@@ -15,10 +15,10 @@ translation_of: Web/API/Event
 <p>De nombreux éléments DOM peuvent être paramétrés afin d'accepter (« d'écouter ») ces évènements et d'exécuter du code en réaction afin de les traiter (« gérer »). Les gestionnaires d'évènements sont généralement connectés (« attachés ») aux <a href="/fr/docs/Web/HTML/Element">éléments HTML</a> (tels que <code>&lt;button&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, etc.) grâce à la méthode <a href="/fr/docs/Web/API/EventTarget/addEventListener"><code>EventTarget.addEventListener()</code></a> qui remplace les anciens <a href="/fr/docs/Web/HTML/Global_attributes">attributs de gestion d'évènement</a> qui étaient auparavant utilisés en HTML. Avec cette méthode d'ajout plus récente, les gestionnaires peuvent également être déconnectés/détachés si besoin via la méthode <a href="/fr/docs/Web/API/EventTarget/removeEventListener"><code>EventTarget.removeEventListener()</code></a>.</p>
 
 <div class="notecard note">
-<p><strong>Note :</strong> Il est tout à fait d'attacher plusieurs gestionnaires d'évènement à un seul élément, y compris pour la gestion d'un évènement particulier. Ainsi, des modules de code indépendant peuvent attacher leurs gestionnaires de façon indépendante (par exemple, sur une page web, un module de publicité et un autre module d'analyse pourront tout à fait attacher des gestionnaires pour étudier la consultation d'une vidéo).</p>
+<p><strong>Note :</strong> Il est tout à fait possible d'attacher plusieurs gestionnaires d'évènement à un seul élément, y compris pour la gestion d'un évènement particulier. Ainsi, des modules de code indépendant peuvent attacher leurs gestionnaires de façon indépendante (par exemple, sur une page web, un module de publicité et un autre module d'analyse pourront tout à fait attacher des gestionnaires pour étudier la consultation d'une vidéo).</p>
 </div>
 
-<p>Lorsqu'il y a de nombreux éléments imbriqués, chacun ayant ses propres gestionnaires d'évènement, le traitement des évènements peut se révéler compliqué, notamment losqu'un élément parent reçoit le même évènement que ses éléments enfants (par exemple pour des évènements qui se déclenchent sur la surface visuelle de l'élément enfant). Dans ce cas, l'ordre du traitement de ces évènements dépend des paramètres <a href="/fr/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture">de bouillonnement (<i>bubbling</i>) et de capture</a> définis sur chaque gestionnaire ainsi déclenché.</p>
+<p>Lorsqu'il y a de nombreux éléments imbriqués, chacun ayant ses propres gestionnaires d'évènement, le traitement des évènements peut se révéler compliqué, notamment lorsqu'un élément parent reçoit le même évènement que ses éléments enfants (par exemple pour des évènements qui se déclenchent sur la surface visuelle de l'élément enfant). Dans ce cas, l'ordre du traitement de ces évènements dépend des paramètres <a href="/fr/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture">de bouillonnement (<i>bubbling</i>) et de capture</a> définis sur chaque gestionnaire ainsi déclenché.</p>
 
 <h2 id="introduction">Interfaces basées sur Event</h2>
 
@@ -136,7 +136,7 @@ translation_of: Web/API/Event
 
 <dl>
  <dt><a href="/fr/docs/Web/API/Event/composedPath"><code>Event.composedPath()</code></a></dt>
- <dd>Renvoie le chemin de l'évènement (c'est-à-dire les objets pour lesquels des gestionnaires d'évènements seront appelés). Ce chemin n'inclut pas les noeuds des arbres shadow si la racine shadow a été créée avec un <a href="/fr/docs/Web/API/ShadowRoot/mode"><code>ShadowRoot.mode</code></a>.</dd>
+ <dd>Renvoie le chemin de l'évènement (c'est-à-dire les objets pour lesquels des gestionnaires d'évènements seront appelés). Ce chemin n'inclut pas les nœuds des arbres shadow si la racine shadow a été créée avec un <a href="/fr/docs/Web/API/ShadowRoot/mode"><code>ShadowRoot.mode</code></a>.</dd>
  <dt><a href="/fr/docs/Web/API/Event/preventDefault"><code>Event.preventDefault()</code></a></dt>
  <dd>Annule l'évènement (si celui-ci peut être annulé).</dd>
  <dt><a href="/fr/docs/Web/API/Event/stopImmediatePropagation"><code>Event.stopImmediatePropagation</code></a></dt>
