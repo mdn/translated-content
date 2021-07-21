@@ -74,24 +74,27 @@ ul.addEventListener('click', hide, false);
   </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
+<p>{{Compat}}</p>
 
+<h3 id="Compatibility_notes">호환성 참고</h3>
 
-<p>{{Compat("api.Event.target")}}</p>
+<p>IE 6–8에서는 이벤트 모델이 다릅니다. 이벤트 리스너는 비표준 
+  {{domxref('EventTarget.attachEvent()')}} 메서드로 연결됩니다.</p>
 
-<h2 id="Compatibility_notes">Compatibility notes</h2>
+<p>이 모델에서 이벤트 객체는 {{domxref('Event.srcElement')}} 속성 
+  (<code>target</code> 속성 대신)을 가지며 <code>Event.target</code>과 
+  동일한 의미를 갖습니다.</p>
 
-<p>On IE 6-8 the event model is different. Event listeners are attached with the non-standard {{domxref('EventTarget.attachEvent')}} method. In this model, the event object has a {{domxref('Event.srcElement')}} property, instead of the <code>target</code> property, and it has the same semantics as <code>event.target</code>.</p>
-
-<pre class="brush: js notranslate">function hide(e) {
+<pre class="brush: js">function hide(evt) {
   // Support IE6-8
-  var target = e.target || e.srcElement;
+  var target = evt.target || evt.srcElement;
   target.style.visibility = 'hidden';
 }
 </pre>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/Event/Comparison_of_Event_Targets">Comparison of Event Targets</a></li>
