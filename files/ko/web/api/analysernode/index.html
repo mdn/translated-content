@@ -95,7 +95,7 @@ browser-compat: api.AnalyserNode
 
 <h3 id="Basic_usage">기본 사용</h3>
 
-<p>다음의 예제는 <code>AnalyserNode</code>를 생성하기 위한 {{domxref("AudioContext")}}와 반복적으로 시간 영역의 데이터를 수집하고 현재 오디오 입력의 "오실로스코프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} 과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 데모를 확인하세요 (관련된 코드를 보려면 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 라인 128–205</a>를 참고하세요).</p>
+<p>다음의 예제는 <code>AnalyserNode</code>를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 시간 영역의 데이터를 수집하고 현재 오디오 입력의 "오실로스코프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 데모를 확인하세요 (관련된 코드를 보려면 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 라인 128–205</a>를 참고하세요).</p>
 
 <pre class="brush: js">var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
 
