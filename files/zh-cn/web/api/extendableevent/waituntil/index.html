@@ -7,9 +7,9 @@ translation_of: Web/API/ExtendableEvent/waitUntil
 
 <p><code><strong>ExtendableEvent.waitUntil()</strong></code> 方法告诉事件分发器该事件仍在进行。这个方法也可以用于检测进行的任务是否成功。在服务工作线程中，这个方法告诉浏览器事件一直进行，直至 promise 解决，浏览器不应该在事件中的异步操作完成之前终止服务工作线程。</p>
 
-<p>服务工作线程（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope">service workers</a>）中的 {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} 事件使用 <code>waitUntil()</code> 来将服务工作线程保持在 {{domxref("ServiceWorkerRegistration.installing", "installing")}} 阶段。如果传入 <code>waitUntil()</code> 的 promise 被拒绝，则将此次安装视为失败，丢弃这个服务工作线程。这主要用于确保在服务工作线程安装以前，所有依赖的核心缓存都已经成功载入。</p>
+<p>服务工作线程（<a href="/zh-CN/docs/Web/API/ServiceWorkerGlobalScope">service workers</a>）中的 {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} 事件使用 <code>waitUntil()</code> 来将服务工作线程保持在 {{domxref("ServiceWorkerRegistration.installing", "installing")}} 阶段。如果传入 <code>waitUntil()</code> 的 promise 被拒绝，则将此次安装视为失败，丢弃这个服务工作线程。这主要用于确保在服务工作线程安装以前，所有依赖的核心缓存都已经成功载入。</p>
 
-<p>服务工作线程（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope">service workers</a>）中的 {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} 事件使用 <code>waitUntil()</code> 来延迟函数事件，如 <code>fetch</code> 和 <code>push</code>，直至传入 <code>waitUntil()</code> 的 promise 被解决。这让服务工作线程有时间更新数据库架构（database schema）和删除过时缓存（{{domxref("Cache", "caches")}}），让其他事件能在一个完成更新的状态下进行。</p>
+<p>服务工作线程（<a href="/zh-CN/docs/Web/API/ServiceWorkerGlobalScope">service workers</a>）中的 {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}} 事件使用 <code>waitUntil()</code> 来延迟函数事件，如 <code>fetch</code> 和 <code>push</code>，直至传入 <code>waitUntil()</code> 的 promise 被解决。这让服务工作线程有时间更新数据库架构（database schema）和删除过时缓存（{{domxref("Cache", "caches")}}），让其他事件能在一个完成更新的状态下进行。</p>
 
 <p> <code>waitUntil()</code> 方法最初必须在事件回调里调用，在此之后，方法可以被调用多次，直至所有传入的 promise 被解决。</p>
 

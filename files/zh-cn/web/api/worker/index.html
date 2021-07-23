@@ -10,19 +10,19 @@ translation_of: Web/API/Worker
 
 <p>Worker 接口是 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers API </a>的一部分，指的是一种可由脚本创建的后台任务，任务执行中可以向其创建者收发信息。要创建一个 Worker<strong> ，</strong>只须调用 <code>Worker(URL) </code>构造函数，函数参数 `URL` 为指定的脚本。</p>
 
-<p>Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建者<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy">同源</a>（注意：<a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU">Blink</a>暂时不支持嵌套 Worker）。 </p>
+<p>Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建者<a href="/zh-CN/docs/Web/Security/Same-origin_policy">同源</a>（注意：<a href="https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU">Blink</a>暂时不支持嵌套 Worker）。 </p>
 
 <p>需要注意的是，不是所有函数和构造函数(或者说…类)都可以在 Worker 中使用。具体参考页面 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers">Worker 所支持的函数和类</a>。Worker 可以使用 <a class="internal" href="/en/DOM/XMLHttpRequest" title="En/XMLHttpRequest"><code>XMLHttpRequest</code></a> 发送请求，但是请求的<span style="line-height: inherit;">  </span><code style="font-size: 14px; line-height: inherit;">responseXML</code><span style="line-height: inherit;"> 与 </span><code style="font-size: 14px; line-height: inherit;">channel</code><span style="line-height: inherit;"> 两个属性值始终返回</span><span style="line-height: inherit;"> </span><code style="font-size: 14px; line-height: inherit;">null</code> （<code>fetch</code> 仍可正常使用，没有类似的限制）。 </p>
 
 <div class="blockIndicator note">
-<p> 如果你要在火狐浏览器的扩展使用 Worker 访问 <a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/js-ctypes">js-ctypes</a>，应使用 {{ domxref("ChromeWorker") }} 对象来替代。(译者注：这里没有看懂，希望有人能驳正，或添加说明)</p>
+<p> 如果你要在火狐浏览器的扩展使用 Worker 访问 <a href="/zh-CN/docs/Mozilla/js-ctypes">js-ctypes</a>，应使用 {{ domxref("ChromeWorker") }} 对象来替代。(译者注：这里没有看懂，希望有人能驳正，或添加说明)</p>
 </div>
 
 <h2 id="构造函数">构造函数</h2>
 
 <dl>
  <dt>{{domxref("Worker.Worker", "Worker()")}}</dt>
- <dd>创建一个专用Web worker，它只执行URL指定的脚本。使用 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Blob">Blob URL</a> 作为参数亦可。</dd>
+ <dd>创建一个专用Web worker，它只执行URL指定的脚本。使用 <a href="/zh-CN/docs/Web/API/Blob">Blob URL</a> 作为参数亦可。</dd>
 </dl>
 
 <h2 id="属性">属性</h2>

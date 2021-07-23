@@ -12,7 +12,7 @@ translation_of: Tools/Web_Console/Helpers
 <dl>
  <dt><code>$(selector, element)</code></dt>
  <dd>使用 <code>selector</code> 值查找一个CSS选择器，返回 <code>element</code> 元素后代中第一个匹配的节点。如果未指定，则 <code>element</code> 默认为 <code>document</code>。相当于 {{ domxref("document.querySelector()") }} 或者调用该页面的 $ 函数（在它存在的前提下）。</dd>
- <dd>参考 <a href="https://wiki.developer.mozilla.org/en-US/docs/Archive/Add-ons/Code_snippets/QuerySelector">QuerySelector code snippet</a>。</dd>
+ <dd>参考 <a href="/zh-CN/docs/Archive/Add-ons/Code_snippets/QuerySelector">QuerySelector code snippet</a>。</dd>
  <dt><code>$$(selector, element)</code></dt>
  <dd>使用 <code>selector</code> 值查找一个CSS选择器，返回 <code>element</code> 元素后代中所有匹配的节点组成的数组。如果未指定，则 <code>element</code> 默认为 <code>document</code>。它类似于 {{ domxref("document.querySelectorAll()") }}，但是返回值是数组，而不是 {{ domxref("NodeList") }}。</dd>
  <dt><code>$0</code></dt>
@@ -22,23 +22,23 @@ translation_of: Tools/Web_Console/Helpers
  <dt><code>$x(xpath, element, resultType)</code></dt>
  <dd>求出 <code>element</code> 上下文中 <a href="/en-US/docs/XPath">XPath</a>（<code>xpath</code>）表达式的值并返回一个包含所有匹配节点的数组。如果未指定，则 <code>element</code> 默认为 <code>document</code>。<code>resultType</code> 参数指定返回结果的类型，它可能是一个 <a href="https://developer.mozilla.org/en-US/docs/Web/API/XPathResult#Constants">XPathResult constant</a> 类型或者是一个相应的字符串：<code>"number"</code>，<code>"string"</code>，<code>"bool"</code>，<code>"node"</code>，<code>"nodes"</code>；如果未提供该参数，则使用 <code>ANY_TYPE</code>。</dd>
  <dt><code>:block</code></dt>
- <dd>（从Firefox 80版本开始可用）后跟一个未引用的字符串，阻止URL中包含该字符串的请求。在 <strong><a href="https://wiki.developer.mozilla.org/zh-CN/docs/Tools/Network_Monitor">Network Monitor</a> </strong>中，该字符串会显示在 <a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Network_Monitor/request_list#Blocking_specific_URLs">Request Blocking sidebar</a> 中并被选中。如果需要取消阻止，就用 <code>:unblock</code>。</dd>
+ <dd>（从Firefox 80版本开始可用）后跟一个未引用的字符串，阻止URL中包含该字符串的请求。在 <strong><a href="/zh-CN/docs/Tools/Network_Monitor">Network Monitor</a> </strong>中，该字符串会显示在 <a href="/zh-CN/docs/Tools/Network_Monitor/request_list#Blocking_specific_URLs">Request Blocking sidebar</a> 中并被选中。如果需要取消阻止，就用 <code>:unblock</code>。</dd>
  <dt><code>cd()</code> {{deprecated_inline("gecko74")}}</dt>
  <dd>将JavaScript执行上下文切换到该页面上一个不同的iframe框架。该函数接受多种不同方法来确认具体要切换到哪一个框架。</dd>
  <dd>详情请查看 <a href="/en-US/docs/Tools/Web_Console#Working_with_iframes">working with iframes</a>。</dd>
  <dt><code>clear()</code></dt>
  <dd>清除控制台输出区域。</dd>
  <dt><code>clearHistory()</code></dt>
- <dd>就像一个普通的命令行一样，控制台命令行记住你曾经输入的命令（<a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Web_Console#Command_history">remembers the commands you've typed</a>）。使用该函数来清除控制台的键入命令历史记录。</dd>
+ <dd>就像一个普通的命令行一样，控制台命令行记住你曾经输入的命令（<a href="/zh-CN/docs/Tools/Web_Console#Command_history">remembers the commands you've typed</a>）。使用该函数来清除控制台的键入命令历史记录。</dd>
  <dt> <code>copy()</code></dt>
- <dd>将其中的参数部分复制到剪贴板。如果参数是一个字符串，则复制它的字面内容。如果参数是一个DOM节点，则复制它的 <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Element/outerHTML">outerHTML</a></code> 。否则，就针对该参数调用 <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify </a></code>方法，然后将结果复制到剪贴板。</dd>
+ <dd>将其中的参数部分复制到剪贴板。如果参数是一个字符串，则复制它的字面内容。如果参数是一个DOM节点，则复制它的 <code><a href="/zh-CN/docs/Web/API/Element/outerHTML">outerHTML</a></code> 。否则，就针对该参数调用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify">JSON.stringify </a></code>方法，然后将结果复制到剪贴板。</dd>
  <dt><code>help()</code> {{Deprecated_Inline(62)}}</dt>
  <dt><code>:help</code> {{Gecko_MinVersion_Inline(62)}}</dt>
  <dd>显示帮助文本。事实上，在经过一个令人愉快的递归后，会把你带到这个页面。</dd>
  <dt><code>inspect()</code></dt>
- <dd>提供一个对象，为它生成一份 <a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Web_Console/Rich_output">rich output</a>。一旦选择了输出区域中的对象，就可以使用键盘上的箭头按键来浏览对象详情。</dd>
+ <dd>提供一个对象，为它生成一份 <a href="/zh-CN/docs/Tools/Web_Console/Rich_output">rich output</a>。一旦选择了输出区域中的对象，就可以使用键盘上的箭头按键来浏览对象详情。</dd>
  <dt><code>keys()</code></dt>
- <dd>提供一个对象，返回它所有的键（或属性名）。这是 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><code>Object.keys</code></a> 的简写。</dd>
+ <dd>提供一个对象，返回它所有的键（或属性名）。这是 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys"><code>Object.keys</code></a> 的简写。</dd>
  <dt><code>pprint()</code> {{Obsolete_Inline(74)}}</dt>
  <dd>以一种可读的方式格式化指定值。这在转储对象或者数组内容时非常有用。</dd>
  <dt><code>:screenshot</code></dt>
@@ -92,7 +92,7 @@ translation_of: Tools/Web_Console/Helpers
  </table>
  </dd>
  <dt><code>:unblock</code></dt>
- <dd>（从Firefox 80版本开始可用）后跟一个未引用的字符串，取消阻止URL中包含该字符串的请求。在 <strong><a href="https://wiki.developer.mozilla.org/zh-CN/docs/Tools/Network_Monitor">Network Monitor</a> </strong>中，该字符串会被从 <a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Network_Monitor/request_list#Blocking_specific_URLs">Request Blocking sidebar</a> 中移除。如果该字符串之前未被阻止，也不会抛出错误信息。</dd>
+ <dd>（从Firefox 80版本开始可用）后跟一个未引用的字符串，取消阻止URL中包含该字符串的请求。在 <strong><a href="/zh-CN/docs/Tools/Network_Monitor">Network Monitor</a> </strong>中，该字符串会被从 <a href="/zh-CN/docs/Tools/Network_Monitor/request_list#Blocking_specific_URLs">Request Blocking sidebar</a> 中移除。如果该字符串之前未被阻止，也不会抛出错误信息。</dd>
  <dt><code>values()</code></dt>
  <dd>提供一个对象，返回它所有的值。与 <code>keys()</code> 是伙伴函数。</dd>
 </dl>
@@ -103,7 +103,7 @@ translation_of: Tools/Web_Console/Helpers
 
 <dl>
  <dt>temp<em>N</em></dt>
- <dd>查看器中的 <a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Use in Console">Use in Console</a> 选项（选中任意一个元素，右键菜单中有该选项）为节点生成了一个变量例如 <code>temp0</code>，<code>temp1</code>，<code>temp2</code> 等等来引用该节点。</dd>
+ <dd>查看器中的 <a href="/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Use in Console">Use in Console</a> 选项（选中任意一个元素，右键菜单中有该选项）为节点生成了一个变量例如 <code>temp0</code>，<code>temp1</code>，<code>temp2</code> 等等来引用该节点。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -121,5 +121,5 @@ translation_of: Tools/Web_Console/Helpers
 <h2 id="另请参阅">另请参阅</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/API/Console">console</a> </li>
+ <li><a href="/zh-CN/docs/Web/API/Console">console</a> </li>
 </ul>

@@ -114,9 +114,9 @@ original_slug: Web/Progressive_web_apps/添加到主屏幕
 
 <h2 id="A2HS_不提供什么？">A2HS 不提供什么？</h2>
 
-<p>请记住，将应用程序添加到主屏幕时，它只会使该应用程序易于访问，而不会将应用程序的资料和数据下载到您的设备上，也不会使该应用程序脱机使用或类似的操作。为了使应用离线运行，你必须使用 <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> 来离线存储资源，如果需要，还可以使用 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage</a> 或 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a> 来存储其数据。</p>
+<p>请记住，将应用程序添加到主屏幕时，它只会使该应用程序易于访问，而不会将应用程序的资料和数据下载到您的设备上，也不会使该应用程序脱机使用或类似的操作。为了使应用离线运行，你必须使用 <a href="/en-US/docs/Web/API/Service_Worker_API">Service Worker API</a> 来离线存储资源，如果需要，还可以使用 <a href="/zh-CN/docs/Web/API/Web_Storage_API">Web Storage</a> 或 <a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB</a> 来存储其数据。</p>
 
-<p>在示例应用程序中，我们仅使用了一个service worker来存储所有必需的文件。service worker使用<code><a href="https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js">index.js</a></code> 文件中的最终的代码块在网站上注册。然后，我们使用 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Cache">Cache API</a> 缓存网站的所有资产，并使用 <a href="https://github.com/mdn/pwa-examples/blob/master/a2hs/sw.js">sw.js</a> 文件中的代码从缓存而不是网络中为它们提供服务。</p>
+<p>在示例应用程序中，我们仅使用了一个service worker来存储所有必需的文件。service worker使用<code><a href="https://github.com/mdn/pwa-examples/blob/master/a2hs/index.js">index.js</a></code> 文件中的最终的代码块在网站上注册。然后，我们使用 <a href="/zh-CN/docs/Web/API/Cache">Cache API</a> 缓存网站的所有资产，并使用 <a href="https://github.com/mdn/pwa-examples/blob/master/a2hs/sw.js">sw.js</a> 文件中的代码从缓存而不是网络中为它们提供服务。</p>
 
 <h2 id="桌面上的_A2HS">桌面上的_A2HS</h2>
 

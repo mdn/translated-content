@@ -52,7 +52,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
  <li>callbacks 是 Chrome、Edge 和 Opera 使用的扩展 API 的标准</li>
 </ul>
 
-<p>Firefox 还支持 <code>chrome.*</code> 命名空间中的 callbacks 风格的 API，这主要是为了便于从 Chrome <a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">迁移</a>。然而，应该首选使用 promises（以及 <code>browser.*</code> 命名空间），它已被采纳为拟议标准的一部分。它极大地简化了异步事件处理，特别是在需要将事件链接在一起的情况下。</p>
+<p>Firefox 还支持 <code>chrome.*</code> 命名空间中的 callbacks 风格的 API，这主要是为了便于从 Chrome <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension">迁移</a>。然而，应该首选使用 promises（以及 <code>browser.*</code> 命名空间），它已被采纳为拟议标准的一部分。它极大地简化了异步事件处理，特别是在需要将事件链接在一起的情况下。</p>
 
 <div class="blockIndicator note">
 <p>如果你对这两种方法之间的差异不熟悉，可以看一下 <a href="https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee">了解异步 JavaScript: Callbacks、 Promises 和 Async/Await </a>或者 MDN 的 <a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a> 页面。</p>
@@ -99,12 +99,12 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 <p>这四个主要浏览器提供的 API 函数的实现差异可分为三大类:</p>
 
 <ul>
- <li><strong>缺乏对整个功能的支持。</strong>例如，在撰写本文时，Edge 没有提供对<a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/privacy#Browser_compatibility">隐私</a>功能的支持。</li>
+ <li><strong>缺乏对整个功能的支持。</strong>例如，在撰写本文时，Edge 没有提供对<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/privacy#Browser_compatibility">隐私</a>功能的支持。</li>
  <li><strong>缺乏对某些特性的支持。</strong>例如，在撰写本文时，Firefox 不支持 <code>onButtonClicked</code>，而只支持 <code>onShown</code>。</li>
  <li><strong>专有功能，支持特定于浏览器的特性。</strong>例如，在撰写本文时，容器是一个特定于 firefox 的特性，由 <code>contextualidentity</code> 函数支持。</li>
 </ul>
 
-<p>你可以在 <a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Mozilla Developer Network 浏览器对 JavaScript API 页面的支持</a>上找到4个主要浏览器对扩展 API 的支持细节，以及 Firefox for Android 对扩展 API 的支持细节。浏览器兼容性信息也包含在每个函数及其方法、类型和事件的 Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">JavaScript APIs</a> 参考页面中。</p>
+<p>你可以在 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs">Mozilla Developer Network 浏览器对 JavaScript API 页面的支持</a>上找到4个主要浏览器对扩展 API 的支持细节，以及 Firefox for Android 对扩展 API 的支持细节。浏览器兼容性信息也包含在每个函数及其方法、类型和事件的 Mozilla Developer Network <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API">JavaScript APIs</a> 参考页面中。</p>
 
 <h4 id="处理_API_差异">处理 API 差异</h4>
 
@@ -122,7 +122,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展�
 
 <h3 id="Manifest_字段">Manifest 字段</h3>
 
-<p>4个主要浏览器支持的 <code><a href="/zh-CN/docs/https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">manifest.json</a></code> 文件字段的差异大致可分为三类:</p>
+<p>4个主要浏览器支持的 <code><a href="/zh-CN/docs//zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json">manifest.json</a></code> 文件字段的差异大致可分为三类:</p>
 
 <ul>
  <li><strong>扩展信息属性。</strong>例如，在撰写本文时，Firefox 和 Opera 包含和 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#Browser_compatibility">author</a></code> 地位相等的 <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#Browser_compatibility">developer</a></code> 关键字，以获取扩展的开发者和作者的详细信息。</li>

@@ -25,7 +25,7 @@ translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 
 <p>以前 <code>None</code> 是默认值，但最近的浏览器版本将 <code>Lax</code> 作为默认值，以便对某些类型的跨站请求伪造 （{{Glossary("CSRF")}}） 攻击具有相当强的防御能力。</p>
 
-<p>使用 <code>None</code> 时，需在最新的浏览器版本中使用 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Set-Cookie"><code>Secure</code></a> 属性。更多信息见下文。</p>
+<p>使用 <code>None</code> 时，需在最新的浏览器版本中使用 <a href="/zh-CN/docs/Web/HTTP/Headers/Set-Cookie"><code>Secure</code></a> 属性。更多信息见下文。</p>
 
 <h2 id="针对常见警告信息的解决办法">针对常见警告信息的解决办法</h2>
 
@@ -46,7 +46,7 @@ translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 
 <pre class="example-good notranslate">Set-Cookie: flavor=choco; SameSite=None; <strong>Secure</strong></pre>
 
-<p><a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Set-Cookie"><code>Secure</code></a> cookie仅通过HTTPS协议加密发送到服务器。请注意，不安全站点（<code>http:</code>）无法使用 <code>Secure</code> 指令设置cookies。</p>
+<p><a href="/zh-CN/docs/Web/HTTP/Headers/Set-Cookie"><code>Secure</code></a> cookie仅通过HTTPS协议加密发送到服务器。请注意，不安全站点（<code>http:</code>）无法使用 <code>Secure</code> 指令设置cookies。</p>
 
 <h3 id="没有_SameSite_属性的Cookies默认为_SameSiteLax">没有 <code>SameSite</code> 属性的Cookies默认为 <code>SameSite=Lax</code></h3>
 

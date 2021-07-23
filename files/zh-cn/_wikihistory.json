@@ -13895,12 +13895,6 @@
       "peakclown"
     ]
   },
-  "Web/API/FullscreenOptions": {
-    "modified": "2020-10-15T22:20:05.430Z",
-    "contributors": [
-      "xiaoxingchi"
-    ]
-  },
   "Web/API/Fullscreen_API": {
     "modified": "2020-12-01T00:44:56.235Z",
     "contributors": [
@@ -49544,50 +49538,6 @@
       "AlexChao"
     ]
   },
-  "orphaned/Web/API/ChildNode/after": {
-    "modified": "2020-10-15T21:51:08.472Z",
-    "contributors": [
-      "Ende93",
-      "Cattla"
-    ]
-  },
-  "orphaned/Web/API/ChildNode/before": {
-    "modified": "2019-03-23T22:12:22.842Z",
-    "contributors": [
-      "caoweiju"
-    ]
-  },
-  "orphaned/Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:27:27.352Z",
-    "contributors": [
-      "RainSlide",
-      "iSmartSV",
-      "duola8789",
-      "pasturn",
-      "Ende93",
-      "xgqfrms-GitHub",
-      "ceverytime",
-      "teoli",
-      "khalid32",
-      "ziyunfei",
-      "Darrel.Hsu"
-    ]
-  },
-  "orphaned/Web/API/ChildNode/replaceWith": {
-    "modified": "2020-10-15T21:56:06.625Z",
-    "contributors": [
-      "ecnelises",
-      "SphinxKnight",
-      "wzx",
-      "VictorDu"
-    ]
-  },
-  "orphaned/Web/API/DOMLocator": {
-    "modified": "2019-03-23T22:08:16.598Z",
-    "contributors": [
-      "ResJay"
-    ]
-  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2020-10-15T21:21:28.912Z",
     "contributors": [
@@ -49673,6 +49623,12 @@
     "modified": "2019-03-23T22:06:02.004Z",
     "contributors": [
       "wuCrio"
+    ]
+  },
+  "orphaned/Web/API/FullscreenOptions": {
+    "modified": "2020-10-15T22:20:05.430Z",
+    "contributors": [
+      "xiaoxingchi"
     ]
   },
   "orphaned/Web/API/HTMLElement/forceSpellCheck": {
@@ -50065,12 +50021,6 @@
     "modified": "2020-10-15T22:29:03.476Z",
     "contributors": [
       "lauhua"
-    ]
-  },
-  "orphaned/Web/API/RenderingContext": {
-    "modified": "2019-03-23T22:53:04.731Z",
-    "contributors": [
-      "ice-i-snow"
     ]
   },
   "orphaned/Web/API/Request/context": {

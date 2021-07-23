@@ -1,99 +1,82 @@
 ---
-title: SVG
+title: 'SVG: Scalable Vector Graphics'
 slug: Web/SVG
 tags:
   - 2D Graphics
-  - 2D 그래픽
-  - References
+  - Graphics
+  - Icons
+  - Images
+  - Reference
+  - Responsive Design
   - SVG
-  - TopicStub
+  - Scalable Graphics
+  - Scalable Images
+  - Vector Graphics
+  - Web
+  - l10n:priority
 translation_of: Web/SVG
 ---
-<div class="callout-box"><strong><a href="/ko/docs/SVG/Tutorial" title="SVG/Tutorial">시작하기</a></strong><br>
-이 튜토리얼은 SVG를 시작할 수 있도록 도움을 줄 것입니다.</div>
 
-<p><strong>가변 가능한 벡터 그래픽 (SVG)은 </strong>2차원의 벡터 그래픽을 기술하기 위한 <a href="/ko/docs/XML" title="XML">XML</a> 기반 마크업 언어이다.  HTML이 텍스트를 표현하는 것처럼, SVG는 본질적으로 그래픽을 표현한다.</p>
+<div>{{SVGRef}}</div>
 
-<p>SVG는 텍스트 기반의 오픈 웹 표준이다. SVG는 의심할바 없이 CSS, DOM, SMIL 같은 다른 웹 표준과 함께 작동하기 위해서 디자인 되었다.</p>
+<h2 id="getting_started_with_svg">SVG 시작하기</h2>
 
-<p>SVG 이미지들, 그것과 관련된 작동들은 XML <a href="https://wiki.developer.mozilla.org/en-US/docs/XML">XML</a> 텍스트 파일로 정의되어있다. 그렇기에 검색될 수 있고, 색인 가능하고, 스크립트 될 수 있고 압축 가능하다. SVG파일은 추가적으로 어떤 텍스트 에디터에서나 드로잉 소프트웨어에서도 만들어질 수 있다.</p>
+<p>
+  <span class="seoSummary"
+    ><strong>SVG(Scalable Vector Graphics)</strong>는 2차원 <a href="https://w.wiki/3cVf">벡터 그래픽</a>을 서술하는
+    <a href="/ko/docs/Web/XML">XML</a> 기반의 마크업 언어입니다.</span
+  >
+  SVG는 텍스트 기반의 열린 웹 표준 중 하나로, 모든 사이즈에서 깔끔하게 렌더링 되는 이미지를 서술하며
+  <a href="/ko/docs/Web/CSS">CSS</a>, <a href="/ko/docs/Web/API/Document_Object_Model">DOM</a>,
+  <a href="/ko/docs/Web/JavaScript">JavaScript</a>, <a href="/ko/docs/Web/SVG/SVG_animation_with_SMIL">SMIL</a> 등 다른
+  웹 표준과도 잘 동작하도록 설계됐습니다. SVG는 달리 말하자면 <a href="/ko/docs/Web/HTML">HTML</a>과 텍스트의 관계를
+  그래픽에 적용한 것입니다.
+</p>
 
-<div class="cleared row topicpage-table">
-<div class="section">
-<h2 class="Documentation" id="문_서">문 서</h2>
+<p>
+  SVG 이미지와 그 동작 방식은 <a href="/ko/docs/Web/XML">XML</a> 텍스트 파일로 정의합니다. 따라서 검색, 색인, 스크립트
+  적용, 그리고 압축이 가능하며, 그래픽 도구 외에도 아무 텍스트 편집기로 생성 및 편집이 가능합니다.
+</p>
+
+<p>
+  {{Glossary("JPEG")}}와 {{Glossary("PNG")}} 등 고전적인 비트맵 이미지 형식과 비교했을 때, SVG 형식의 벡터 이미지는
+  손실이나 품질 저하 없이 모든 크기에서 렌더링이 가능하며 현지화 역시 그래픽 편집기 없이도 파일 내의 텍스트를 수정해서
+  쉽게 처리할 수 있습니다. 적절한 라이브러리를 함께 사용하면 SVG 파일을 필요에 따라 즉각 현지화하는 것도 가능합니다.
+</p>
+
+<p>SVG는 <a href="https://www.w3.org/">World Wide Web Consortium(W3C)</a>가 1999년부터 개발하고 있습니다.</p>
+
+<p><a href="/ko/docs/Web/SVG/Tutorial">SVG 자습서</a>도 방문해보세요.</p>
+
+<h2 id="documentation">문서</h2>
 
 <dl>
- <dt><a href="/ko/docs/Web/SVG/Element">SVG 요소 레퍼런스</a></dt>
- <dd>SVG 요소들에 대한 상세한 정보를 담고있다.</dd>
- <dt><a href="/ko/docs/Web/SVG/Attribute">SVG 속성 레퍼런스</a></dt>
- <dd>SVG 속성들에 대한 상세한 정보를 담고있다.</dd>
- <dt><a href="/ko/docs/DOM/DOM_Reference#SVG_interfaces">SVG DOM 인터페이스 레퍼런스</a></dt>
- <dd>전체 SVG DOM API에 대한 상세한 정보를 담고있다.</dd>
- <dt><a href="https://developer.mozilla.org/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">HTML 컨텐츠에 SVG 효과 적용하기</a></dt>
- <dd>SVG는 {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}}와 함께 동작한다. SVG를 사용해 일반적인 HTML와 웹애플리케이션을 개선할 수 있다.</dd>
- <dt>Mozilla 에서 SVG</dt>
- <dd>Mozilla에서 어떻게 SVG가 구현되었는지에 대한 참고 자료와 정보를 담고있다.
- <ul>
-  <li><a href="/ko/docs/SVG_in_Firefox">Firefox에서 얼마나 많은 SVG가 구현되었는가?</a></li>
-  <li><a href="/ko/docs/Web/SVG/Tutorial">사용하는 방법 튜토리얼</a></li>
-  <li><a href="/ko/docs/SVG_In_HTML_Introduction">XHTML에서 SVG</a></li>
- </ul>
- </dd>
+  <dt><a href="/ko/docs/Web/SVG/Element">SVG 요소 참고서</a></dt>
+  <dd>각각의 SVG 요소에 대한 세부 정보입니다.</dd>
+  <dt><a href="/ko/docs/Web/SVG/Attribute">SVG 특성 참고서</a></dt>
+  <dd>각각의 SVG 특성에 대한 세부 정보입니다.</dd>
+  <dt><a href="/ko/docs/Web/API/Document_Object_Model#svg_interfaces">SVG DOM 인터페이스 참고서</a></dt>
+  <dd>JavaScript 상호작용을 위한 SVG DOM 인터페이스의 세부 정보입니다.</dd>
+  <dt><a href="/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content">HTML 콘텐츠에 SVG 효과 적용하기</a></dt>
+  <dd>
+    SVG는 {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}}와 사용할 수 있습니다. SVG를 사용해서
+    <a href="/ko/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction">평범한 HTML 페이지나 웹 어플리케이션을 향상하세요</a>.
+  </dd>
 </dl>
 
-<h2 class="Community" id="커뮤니티">커뮤니티</h2>
+<h2 id="tools">도구</h2>
 
 <ul>
- <li>Mozilla 포럼들을 보라. {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}</li>
+  <li><a href="https://github.com/w3c/svgwg/wiki/Testing">SVG 테스트 도구모음</a></li>
+  <li><a href="https://validator.w3.org/#validate_by_input">마크업 검증기</a></li>
 </ul>
 
-<h2 class="Tools" id="도구들">도구들</h2>
+<h2 id="examples">예제</h2>
 
 <ul>
- <li><a href="http://www.w3.org/Graphics/SVG/Test/">SVG 테스트 수트</a></li>
- <li><a href="http://jiggles.w3.org/svgvalidator/">SVG 검증기</a> (더 이상 사용되지 않음)</li>
- <li><a href="/ko/docs/tag/SVG:Tools" title="tag/SVG:Tools">그 외의 도구들</a></li>
- <li>다른 자원들: <a href="/ko/docs/XML">XML</a>, <a href="/ko/docs/CSS">CSS</a>, <a href="/ko/docs/DOM">DOM</a>, <a href="/ko/docs/HTML/Canvas">Canvas</a></li>
+  <li><a href="https://jwatt.org/svg/authoring/">SVG 저작 가이드라인</a></li>
+  <li><a href="/ko/docs/Web/SVG/SVG_as_an_Image">이미지로서의 SVG</a></li>
+  <li><a href="/ko/docs/Web/SVG/SVG_animation_with_SMIL">SMIL을 사용한 SVG 애니메이션</a></li>
+  <li><a href="https://plurib.us/1shot/2007/svg_gallery/">SVG 아트 갤러리</a></li>
+  <li><a href="https://d3js.org">D3</a> (JavaScript를 사용해서 데이터를 HTML, SVG, CSS로 시각화하는 라이브러리)</li>
 </ul>
-</div>
-
-<div class="section">
-<h2 class="Related_Topics" id="예제들">예제들</h2>
-
-<ul>
- <li>Google <a href="http://maps.google.com">Maps</a> (경로 중첩) &amp; <a href="http://docs.google.com">문서들</a> (스프레드시트 차트)</li>
- <li><a href="http://starkravingfinkle.org/projects/demo/svg-bubblemenu-in-html.xml">SVG 버블 메뉴</a></li>
- <li><a href="http://jwatt.org/svg/authoring/">SVG 제작 가이드라인</a></li>
- <li><a href="/ko/docs/Mozilla_SVG_Project">Mozilla SVG 프로젝트</a>의 개요</li>
- <li>SVG와 Mozilla 관련한 <a href="/ko/docs/SVG/FAQ" title="SVG/FAQ">FAQ : 자주 묻는 질문들</a></li>
- <li>SVG Open 2009에 <a href="http://jwatt.org/svg-open-US/docs/2009/slides.xhtml">SVG 와 Mozilla</a>와 관련된 슬라이드와 데모들</li>
- <li><a href="/ko/docs/SVG/SVG_as_an_Image">이미지로서 SVG</a></li>
- <li><a href="/ko/docs/SVG/SVG_animation_with_SMIL">SMIL로 SVG 애니메이션</a></li>
- <li><a href="http://plurib.us/1shot/2007/svg_gallery/">SVG 아트 갤러리</a></li>
- <li>그 외의 예제들 (<a href="http://croczilla.com/bits_and_pieces/svg/samples">SVG 예제 croczilla.com</a>, <a href="http://www.carto.net/papers/svg/samples/">carto.net</a>)</li>
-</ul>
-
-<h3 id="애니메이션과_상호작용들">애니메이션과 상호작용들</h3>
-
-<p>HTML과 마찬가지로 SVG은 도큐먼트 모델(DOM)와 이벤트를 가지고 있으며, JavaScript로 접근할 수 있다. 이를 통해 개발자는 풍부한 애니메이션과 이미지들의 상호작용을 생성할 수 있다.</p>
-
-<ul>
- <li><a href="http://svg-wow.org/">svg-wow.org</a> 에서 몇몇 실제 눈요기 SVG</li>
- <li>SMIL 애니메이션 지원을 확장하기 위한  Firefox 확장 (<a href="http://schepers.cc/grafox/">Grafox</a>) </li>
- <li>상호작용하는 <a href="http://people.mozilla.com/~vladimir/demos/photos.svg">사진</a> 조작</li>
- <li>SVG의 <code>foreignObject를 사용하는 </code><a href="http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/">HTML 변환들</a></li>
-</ul>
-
-<h3 id="매핑_차트_게임_그리고_3D_실험들">매핑, 차트, 게임 그리고 3D 실험들</h3>
-
-<p>While 웹 컨텍스트를 향상히기는 방법으로 작은 SVG는 먼길을 갈 수 있는 동안 여기 많은 SVG 사용법들에 대한 몇몇 예제가 있다..</p>
-
-<ul>
- <li><a href="http://www.codedread.com/yastframe.php">SVG  테트리스</a>와 <a href="http://www.treebuilder.de/svg/connect4.svg">커넥트 4</a></li>
- <li><a href="http://www.carto.net/papers/svg/us_population/index.html">미국 인구 지도</a></li>
- <li><a href="http://www.treebuilder.de/default.asp?file=441875.xml">3D 박스</a> &amp; <a href="http://www.treebuilder.de/default.asp?file=206524.xml">3D 박스들</a></li>
- <li><a href="http://jvectormap.com/">jVectorMap</a> (데이터 시각화를 위해 상호작용하는 Map)</li>
- <li><a href="http://jointjs.com">JointJS</a> (JavaScript 다이어그램 라이브러리)</li>
-</ul>
-</div>
-</div>
