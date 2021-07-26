@@ -268,21 +268,21 @@ DOM 노드에 데이터를 지정하기 위해서 직접 속성을 지정할 수
 
 ### Structured data: JSON
 
-JSON (**J**ava**S**cript **O**bject **N**otation) is a lightweight data-interchange format, derived from JavaScript, but used by many programming languages. JSON builds universal data structures.
+JSON(**J**ava**S**cript **O**bject **N**otation)은 JavaScript에서 파생된 경량 데이터 교환 형식이지만 많은 프로그래밍 언어에서 사용됩니다. JSON은 범용 데이터 구조를 구축합니다.
 
-See [JSON](/en-US/docs/Glossary/JSON) and {{jsxref("JSON")}} for more details.
+세부사항은 [JSON](/ko/docs/Glossary/JSON) 와 {{jsxref("JSON")}} 를 보세요.
 
-### More objects in the standard library
+### 표준 라이브러리의 더 많은 객체
 
-JavaScript has a standard library of built-in objects.
+JavaScript에는 내장 객체의 표준 라이브러리가 있습니다.
 
-Please have a look at the [reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects) to find out about more objects.
+더 많은 객체에 대해 알아보려면 [참조](/ko/docs/Web/JavaScript/Reference/Global_Objects)를  살펴보십시오.
 
-## Determining types using the `typeof` operator
+## `typeof` 연산자를 사용하여 유형 결정
 
-The `typeof` operator can help you to find the type of your variable.
+`typeof` 연산자는 변수의 유형을 찾는 데 도움이 될 수 있습니다.
 
-Please read the [reference page](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) for more details and edge cases.
+자세한 내용과 edge cases에 대한 정보는 [reference page](/ko/docs/Web/JavaScript/Reference/Operators/typeof)를 참고하세요.
 
 ## 같이보기
 
