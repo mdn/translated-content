@@ -32,7 +32,7 @@ JavaScript의 동적인 성질은, 실행시의 오브젝트 구축, 가변 인�
 
 ## 어떠한 JavaScript 구현이 유용한가?
 
-Mozilla 프로젝트는 두 가지 자바스크립트 구현을 제공한다. 최초의 Javascript는 Netscape의 Brendan Eich에 의해 만들었다. 이후 ECMA-262 에디션 5 와 최신 버전을 준수하도록 업데이트되었다. [SpiderMonkey](/en-US/docs/Mozilla/Projects/SpiderMonkey)라는 이름의 엔진은 C/C++로 구현되었다. [Rhino](/en-US/docs/Rhino) 엔진은 주로 Norris Boys(또한 Netscape)가 만들었고 Java로 작성된 Javascript 구현체이다. SpiderMonkey와 마찬가지로 Rhino도 ECMA-262 에디션 5를 준거한다.
+Mozilla 프로젝트는 두 가지 자바스크립트 구현을 제공한다. 최초의 Javascript는 Netscape의 Brendan Eich에 의해 만들었다. 이후 ECMA-262 에디션 5 와 최신 버전을 준수하도록 업데이트되었다. [SpiderMonkey](https://spidermonkey.dev/)라는 이름의 엔진은 C/C++로 구현되었다. [Rhino](https://en.wikipedia.org/wiki/Rhino_(JavaScript_engine)) 엔진은 주로 Norris Boys(또한 Netscape)가 만들었고 Java로 작성된 Javascript 구현체이다. SpiderMonkey와 마찬가지로 Rhino도 ECMA-262 에디션 5를 준거한다.
 
 TraceMonkey (Firefox 3.5), JägerMonkey (Firefox 4) 그리고 IonMonkey와 같은 몇가지 주요한 실시간 최적화는 차츰 SpiderMonkey 자바스크립트 엔진에 추가되었다. 자바스크립트 실행 성능 향상을 위한 작업은 지금도 진행 중이다.
 
@@ -49,10 +49,6 @@ JavaScript 의 또 다른 일반적인 애플리케이션은 (웹) 서버사�
 
 ## JavaScript 자원
 
-- [SpiderMonkey](/ko/docs/Mozilla/Projects/SpiderMonkey)
-  - : 애플리케이션에 임베드하는 방법을 포함하는, C/C++ 엔진(SpiderMonkey)으로 구현된 Mozilla의 JavaScript 구현체에 관한 정보.
-- [Rhino](/ko/docs/Rhino)
-  - : Java(Rhino)로 작성된 자바스크립트 구현체에 관련 정보.
 - [Language resources](/ko/docs/Web/JavaScript/Language_Resources)
   - : 자바스크립트 표준을 출판하기 위한 포인터들.
 - [A re-introduction to JavaScript](/ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
