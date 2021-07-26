@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Guide/Closures
 ---
 {{jsSidebar("Intermediate")}}
 
-클로저는 함수와 함수가 선언된 어휘적 환경의 조합이다. 클로저를 이해하려면 자바스
+**클로저**는 함수와 함수가 선언된 어휘적 환경의 조합이다. 클로저를 이해하려면 자바스
 크립트가 어떻게 변수의 유효범위를 지정하는지(Lexical scoping)를 먼저 이해해야 한
 다.
 
@@ -20,6 +20,7 @@ original_slug: Web/JavaScript/Guide/Closures
 
 다음을 보자:
 
+```js
     function init() {
       var name = "Mozilla"; // name은 init에 의해 생성된 지역 변수이다.
       function displayName() { // displayName() 은 내부 함수이며, 클로저다.
@@ -28,6 +29,7 @@ original_slug: Web/JavaScript/Guide/Closures
       displayName();
     }
     init();
+```
 
 `init()`은 지역 변수 `name`과 함수 `displayName()`을 생성한다. `displayName()`은
 `init()` 안에 정의된 내부 함수이며 `init()` 함수 본문에서만 사용할 수 있다. 여기
@@ -51,6 +53,7 @@ original_slug: Web/JavaScript/Guide/Closures
 
 이제 다음 예제를 보자:
 
+```js
     function makeFunc() {
       var name = "Mozilla";
       function displayName() {
@@ -64,6 +67,7 @@ original_slug: Web/JavaScript/Guide/Closures
     //유효범위의 어휘적 환경을 유지
     myFunc();
     //리턴된 displayName 함수를 실행(name 변수에 접근)
+```
 
 이 코드는 바로 전의 예제와 완전히 동일한 결과가 실행된다. 하지만 흥미로운 차이는
  `displayName()`함수가 실행되기 전에 외부함수인 `makeFunc()`로부터 리턴되어
@@ -85,6 +89,7 @@ original_slug: Web/JavaScript/Guide/Closures
 
 다음은 조금 더 흥미로운 예제인 makeAdder 함수이다:
 
+```js
     function makeAdder(x) {
       var y = 1;
       return function(z) {
@@ -100,19 +105,11 @@ original_slug: Web/JavaScript/Guide/Closures
     console.log(add5(2));  // 107 (x:5 + y:100 + z:2)
     console.log(add10(2)); // 112 (x:10 + y:100 + z:2)
     //함수 실행 시 클로저에 저장된 x, y값에 접근하여 값을 계산
+```
 
-이 예제에서 단일 인자 `x`를 받아서 새 함수를 반환하는 함수
-`makeAdder(x)를 정의했다.` 반환되는 함수는 단일 인자
-<font face="consolas, Liberation Mono, courier, monospace">z</font>를 받아서 x와
-y와 z의 합을 반환한다.
+이 예제에서 단일 인자 `x`를 받아서 새 함수를 반환하는 함수 `makeAdder(x)`를 정의했다. 반환되는 함수는 단일 인자 z를 받아서 x와 y와 z의 합을 반환한다.
 
-본질적으로 `makeAdder`는 함수를 만들어내는 공장이다. 이는 `makeAdder`함수가 특정
-한 값을 인자로 가질 수 있는 함수들을 리턴한다는 것을 의미한다. 위의 예제에서
-`add5, add10` 두 개의 새로운 함수들을 만들기 위해 `makeAdder`함수 공장을 사용했
-다. 하나는 매개변수
-<font face="consolas, Liberation Mono, courier, monospace">x</font>에 5를 더하고
-다른 하나는 매개변수
-<font face="consolas, Liberation Mono, courier, monospace">x</font>에 10을 더한
+본질적으로 `makeAdder`는 함수를 만들어내는 공장이다. 이는 `makeAdder`함수가 특정한 값을 인자로 가질 수 있는 함수들을 리턴한다는 것을 의미한다. 위의 예제에서 `add5, add10` 두 개의 새로운 함수들을 만들기 위해 `makeAdder`함수 공장을 사용했다. 하나는 매개변수 x에 5를 더하고 다른 하나는 매개변수 x에 10을 더한
 다.
 
 `add5`와 `add10`은 둘 다 클로저이다. 이들은 같은 함수 본문 정의를 공유하지만 서
@@ -138,10 +135,10 @@ y와 z의 합을 반환한다.
 백으로 첨부된다: 이벤트에 응답하여 실행되는 단일 함수다.
 
 예를 들면 페이지의 글자 크기를 조정하는 몇 개의 버튼을 추가한다고 가정하자. 이
-작업을 수행하는 한 가지 방법은 body 요소의 font-size를 픽셀 단위로 지정하고 상대
-적인 em 단위를 사용하여 페이지의 다른 요소들의 (예: 헤더) 크기를 설정하는 것이다
+작업을 수행하는 한 가지 방법은 `body` 요소의 font-size를 픽셀 단위로 지정하고 상대
+적인 `em` 단위를 사용하여 페이지의 다른 요소들의 (예: 헤더) 크기를 설정하는 것이다
 .
-
+```css
     body {
       font-family: Helvetica, Arial, sans-serif;
       font-size: 12px;
@@ -154,12 +151,14 @@ y와 z의 합을 반환한다.
     h2 {
       font-size: 1.2em;
     }
+```
 
-우리의 대화식 글자 크기 버튼들은 body 요소의 font-size 속성을 변경할 수 있고 이
+우리의 대화식 글자 크기 버튼들은 `body` 요소의 `font-size` 속성을 변경할 수 있고 이
 런 조정은 상대적 단위들 덕분에 페이지의 다른 요소에 의해 선택된다.
 
 여기 자바스크립트 코드가 있다.
 
+```js
     function makeSizer(size) {
       return function() {
         document.body.style.fontSize = size + 'px';
@@ -169,22 +168,26 @@ y와 z의 합을 반환한다.
     var size12 = makeSizer(12);
     var size14 = makeSizer(14);
     var size16 = makeSizer(16);
+```
 
 `size12`, `size14`, `size16`은 body 요소의 글자 크기를 각각 12, 14, 16 픽셀로 바
 꾸는 함수이다. 이 함수들을 아래처럼 버튼들에(이 경우에는 링크) 연결할 수 있다.
 
+```js
     document.getElementById('size-12').onclick = size12;
     document.getElementById('size-14').onclick = size14;
     document.getElementById('size-16').onclick = size16;
+```
 
-<!---->
-
+```html
     <a href="#" id="size-12">12</a>
     <a href="#" id="size-14">14</a>
     <a href="#" id="size-16">16</a>
+```
 
 {{JSFiddleEmbed("https://jsfiddle.net/vnkuZ/","","200")}}
 
+다음 링크로 실행해보자. [JSFiddle](https://jsfiddle.net/vnkuZ/7726/)
 ## 클로저를 이용해서 프라이빗 메소드 (private method) 흉내내기
 
 자바와 같은 몇몇 언어들은 메소드를 프라이빗으로 선언할 수 있는 기능을 제공한다.
@@ -197,10 +200,9 @@ y와 z의 합을 반환한다.
 불필요한 메소드가 공용 인터페이스를 혼란스럽게 만들지 않도록 한다.
 
 아래 코드는 프라이빗 함수와 변수에 접근하는 퍼블릭 함수를 정의하기 위해 클로저를
-사용하는 방법을 보여준다. 이렇게 클로저를 사용하는 것을
-[모듈 패턴](http://www.google.com/search?q=javascript+module+pattern "http://www.google.com/search?q=javascript+module+pattern")이
-라 한다.
+사용하는 방법을 보여준다. 이렇게 클로저를 사용하는 것을 [모듈 패턴](http://www.google.com/search?q=javascript+module+pattern)이라 한다.
 
+```js
     var counter = (function() {
       var privateCounter = 0;
       function changeBy(val) {
@@ -225,6 +227,7 @@ y와 z의 합을 반환한다.
     console.log(counter.value()); // logs 2
     counter.decrement();
     console.log(counter.value()); // logs 1
+```
 
 이전 예제에서 각 클로저들이 고유한 문법적 환경을 가졌지만 여기서 우리는
 `counter.increment`, `counter.decrement`, `counter.value `세 함수에 의해 공유되
@@ -240,10 +243,11 @@ y와 z의 합을 반환한다.
 유효 범위 덕분에 세 함수 각각 `privateCounter` 변수와 `changeBy` 함수에 접근할
 수 있다.
 
-카운터를 생성하는 익명 함수를 정의하고 그 함수를 즉시 호출하고 결과를 counter 변
-수에 할당하는 것을 알아차렸을 것이다. 이 함수를 별도의 변수 makeCounter 저장하고
+카운터를 생성하는 익명 함수를 정의하고 그 함수를 즉시 호출하고 결과를 `counter` 변
+수에 할당하는 것을 알아차렸을 것이다. 이 함수를 별도의 변수 `makeCounter` 저장하고
 이 변수를 이용해 여러 개의 카운터를 만들 수 있다.
 
+```js
     var makeCounter = function() {
       var privateCounter = 0;
       function changeBy(val) {
@@ -271,14 +275,14 @@ y와 z의 합을 반환한다.
     counter1.decrement();
     alert(counter1.value()); /* 1 */
     alert(counter2.value()); /* 0 */
+```
 
 두 개의 카운터가 어떻게 다른 카운터와 독립성을 유지하는지 주목해보자. 각 클로저
-는 그들 고유의 클로저를 통한 privateCounter 변수의 다른 버전을 참조한다. 각 카운
+는 그들 고유의 클로저를 통한 `privateCounter` 변수의 다른 버전을 참조한다. 각 카운
 터가 호출될 때마다; 하나의 클로저에서 변수 값을 변경해도 다른 클로저의 값에는 영
 향을 주지 않는다.
 
-이런 방식으로 클로저를 사용하여 객체지향 프로그래밍의 정보 은닉과 캡슐화 같은 이
-점들을 얻을 수 있다.
+> **참고:** 이런 방식으로 클로저를 사용하여 객체지향 프로그래밍의 정보 은닉과 캡슐화 같은 이점들을 얻을 수 있다.
 
 ## 클로저 스코프 체인
 
@@ -291,6 +295,7 @@ y와 z의 합을 반환한다.
 따라서, 우리는 클로저에 대해 세가지 범위 모두 접근할 수 있지만, 중첩된 내부 함수
 가 있는 경우 종종 실수를 저지른다. 아래 예제를 확인해보자:
 
+```js
     // 전역 범위 (global scope)
     var e = 10;
     function sum(a){
@@ -328,6 +333,7 @@ y와 z의 합을 반환한다.
     var s2 = s1(3);
     var s3 = s2(4);
     console.log(s3) //log 20
+```
 
 위의 예제를 보면 일련의 중첩된 함수들을 확인할 수 있다. 이 함수들은 전부 외부 함
 수의 스코프에 접근할 수 있다. 그런데 문제는 즉각적인 외부 함수의 스코프만을 추측
@@ -337,17 +343,18 @@ y와 z의 합을 반환한다.
 ## 루프에서 클로저 생성하기: 일반적인 실수
 
 ECMAScript 2015의
-[`let` 키워드](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let "방해")
-소개 전에는 클로저와 관련된 일반적인 문제는 루프 안에서 클로저가 생성되었을 때
+[`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let "방해")
+키워드 소개 전에는 클로저와 관련된 일반적인 문제는 루프 안에서 클로저가 생성되었을 때
 발생한다.다음 예제를 보자.
 
+```html
     <p id="help">Helpful notes will appear here</p>
     <p>E-mail: <input type="text" id="email" name="email"></p>
     <p>Name: <input type="text" id="name" name="name"></p>
     <p>Age: <input type="text" id="age" name="age"></p>
+```
 
-<!---->
-
+```js
     function showHelp(help) {
       document.getElementById('help').innerHTML = help;
     }
@@ -368,25 +375,27 @@ ECMAScript 2015의
     }
 
     setupHelp();
+```
 
 {{JSFiddleEmbed("https://jsfiddle.net/v7gjv/", "", 200)}}
 
-helpText 배열은 세 개의 도움말 힌트를 정의한다. 각 도움말은 문서의 입력 필드의
-ID와 연관된다. 루프를 돌면서 각 입력 필드 ID에 해당하는 엘리먼트의 onfocus 이벤
+`helpText` 배열은 세 개의 도움말 힌트를 정의한다. 각 도움말은 문서의 입력 필드의
+ID와 연관된다. 루프를 돌면서 각 입력 필드 ID에 해당하는 엘리먼트의 `onfocus` 이벤
 트에 관련된 도움말을 보여주는 메소드에 연결한다.
 
 이 코드를 사용하면 제대로 동작하지 않는 것을 알게 된다. 어떤 필드에 포커스를 주
 더라도 나이에 관한 도움말이 표시된다.
 
-onfocus 이벤트에 연결된 함수가 클로저이기 때문이다. 이 클로저는 함수 정의와
-setupHelp 함수 범위에서 캡처된 환경으로 구성된다. 루프에서 세 개의 클로저가 만들
-어졌지만 각 클로저는 값이 변하는 변수가 (item.help) 있는 같은 단일 환경을 공유한
-다. onfocus 콜백이 실행될 때 콜백의 환경에서 item 변수는 (세개의 클로저가 공유한
-다) helpText 리스트의 마지막 요소를 가리키고 있을 것이다.
+`onfocus` 이벤트에 연결된 함수가 클로저이기 때문이다. 이 클로저는 함수 정의와
+`setupHelp` 함수 범위에서 캡처된 환경으로 구성된다. 루프에서 세 개의 클로저가 만들
+어졌지만 각 클로저는 값이 변하는 변수가 (`item.help`) 있는 같은 단일 환경을 공유한
+다. `onfocus` 콜백이 실행될 때 콜백의 환경에서 `item` 변수는 (세개의 클로저가 공유한
+다) `helpText` 리스트의 마지막 요소를 가리키고 있을 것이다.
 
 이 경우 한 가지 해결책은 더 많은 클로저를 사용하는 것이다: 특히 앞에서 설명한 함
 수 팩토리를 사용하는 것이다.
 
+```js
     function showHelp(help) {
       document.getElementById('help').innerHTML = help;
     }
@@ -411,15 +420,17 @@ setupHelp 함수 범위에서 캡처된 환경으로 구성된다. 루프에서 
     }
 
     setupHelp();
+```
 
 {{JSFiddleEmbed("https://jsfiddle.net/v7gjv/1/", "", 300)}}
 
 이것은 예상대로 동작한다. 모두 단일 환경을 공유하는 콜백대신, `makeHelpCallback`
-함수는 각각의 콜백에 새로운 어휘적 환경을 생성한다. 여기서 help는 helpText 배열
+함수는 각각의 콜백에 새로운 어휘적 환경을 생성한다. 여기서 `help`는 `helpText` 배열
 의 해당 문자열을 나타낸다.
 
 익명 클로저를 사용하여 위 코드를 작성하는 또 다른 방법은 다음과 같다.
 
+```js
     function showHelp(help) {
       document.getElementById('help').innerHTML = help;
     }
@@ -442,11 +453,13 @@ setupHelp 함수 범위에서 캡처된 환경으로 구성된다. 루프에서 
     }
 
     setupHelp();
+```
 
 더 많은 클로저를 사용하는 것이 싫다면 ES2015의
 [`let`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/let)
 키워드를 사용할 수 있다.
 
+```js
     function showHelp(help) {
       document.getElementById('help').innerHTML = help;
     }
@@ -467,9 +480,34 @@ setupHelp 함수 범위에서 캡처된 환경으로 구성된다. 루프에서 
     }
 
     setupHelp();
+```
 
-위의 경우 var 대신 let을 사용하여 모든 클로저가 블록 범위 변수를 바인딩할 것이므
+위의 경우 `var` 대신 `let`을 사용하여 모든 클로저가 블록 범위 변수를 바인딩할 것이므
 로 추가적인 클로저를 사용하지 않아도 완벽하게 동작할 것이다.
+
+Another alternative could be to use `forEach()` to iterate over the `helpText` array and attach a listener to each [`<input>`](/en-US/docs/Web/HTML/Element/input "The HTML <input> element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent."), as shown:
+
+```js
+function showHelp(help) {
+  document.getElementById('help').textContent = help;
+}
+
+function setupHelp() {
+  var helpText = [
+      {'id': 'email', 'help': 'Your e-mail address'},
+      {'id': 'name', 'help': 'Your full name'},
+      {'id': 'age', 'help': 'Your age (you must be over 16)'}
+    ];
+
+  helpText.forEach(function(text) {
+    document.getElementById(text.id).onfocus = function() {
+      showHelp(text.help);
+    }
+  });
+}
+
+setupHelp();
+```
 
 ## 성능 관련 고려 사항
 
@@ -483,6 +521,7 @@ setupHelp 함수 범위에서 캡처된 환경으로 구성된다. 루프에서 
 
 비실용적이지만 시범적인 다음 예를 고려하라:
 
+```js
     function MyObject(name, message) {
       this.name = name.toString();
       this.message = message.toString();
@@ -494,9 +533,11 @@ setupHelp 함수 범위에서 캡처된 환경으로 구성된다. 루프에서 
         return this.message;
       };
     }
+```
 
 앞의 코드는 클로저의 이점을 이용하지 않음으로 다음과 같이 다시 쓸 수 있다.
 
+```js
     function MyObject(name, message) {
       this.name = name.toString();
       this.message = message.toString();
@@ -509,10 +550,12 @@ setupHelp 함수 범위에서 캡처된 환경으로 구성된다. 루프에서 
         return this.message;
       }
     };
+```
 
 그러나 프로토타입을 다시 정의하는 것은 권장되지 않음으로 기존 프로토타입에 추가
 하는 다음 예제가 더 좋다.
 
+```js
     function MyObject(name, message) {
       this.name = name.toString();
       this.message = message.toString();
@@ -523,9 +566,11 @@ setupHelp 함수 범위에서 캡처된 환경으로 구성된다. 루프에서 
     MyObject.prototype.getMessage = function() {
       return this.message;
     };
+```
 
 위의 코드는 같은 결과를 가진 더 깨끗한 방법으로 작성할 수도 있다:
 
+```js
     function MyObject(name, message) {
         this.name = name.toString();
         this.message = message.toString();
@@ -538,8 +583,9 @@ setupHelp 함수 범위에서 캡처된 환경으로 구성된다. 루프에서 
             return this.message;
         };
     }).call(MyObject.prototype);
+```
 
 앞의 두 가지 예제에서 상속된 프로토타입은 모든 객체에서 공유될 수 있으며 메소드
 정의는 모든 객체 생성시 발생할 필요가 없다.
-[객체 모델의 세부 사항](/en-US/docs/JavaScript/Guide/Details_of_the_Object_Model "en-US/docs/JavaScript/Guide/Details of the Object Model")을
+[객체 모델의 세부 사항](/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)을
 참고하라.
