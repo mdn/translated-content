@@ -143,7 +143,7 @@ Zero delay는 실제로 0ms 후에 콜백이 시작된다는 의미는 아닙�
 
 이벤트 루프 모델의 무척 재밌는 부분은 다른 언어와 달리 자바스크립트는 결코 Block하지 않는다는 것입니다. I/O 처리는 흔히 이벤트와 콜백으로 처리 됩니다. 그래서 응용프로그램이 [IndexedDB](/ko/docs/Web/API/IndexedDB_API) query 반환을 기다리고 있거나 [XHR](/ko/docs/Web/API/XMLHttpRequest) 요청 반환을 기다릴 때에도 여전히 사용자 입력과 같은 다른 것을을 처리할 수 있습니다.
 
-`alert` 또는 synchronous XHR과 같은 구현 예외가 존재 합니다. 그러나 그것들은 사용되지 않는 것이 좋다라고 여겨집니다. [예외를 위한 예외](http://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311)를 조심하세요 (그러나 보통 구현 버그일뿐 그이상 아무것도 아닙니다).
+`alert` 또는 synchronous XHR과 같은 구현 예외가 존재 합니다. 그러나 그것들은 사용되지 않는 것이 좋다라고 여겨집니다. [예외를 위한 예외](https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311)를 조심하세요 (그러나 보통 구현 버그일뿐 그이상 아무것도 아닙니다).
 
 ## 같이보기
 
