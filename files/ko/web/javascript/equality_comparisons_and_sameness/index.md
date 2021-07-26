@@ -155,7 +155,7 @@ Same-value equality는 {{jsxref("Object.is")}} 메서드로 제공됩니다.
 
 ## 스펙 내 추상적 같음, 엄격한 같음 및 등가
 
-In ES5, the comparison performed by [`==`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) is described in [Section 11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). The [`===`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) comparison is [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in [Section 9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 simply proposes to expose this algorithm through {{jsxref("Object.is")}}.
+In ES5, the comparison performed by [`==`](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) is described in [Section 11.9.3, The Abstract Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.3). The [`===`](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) comparison is [11.9.6, The Strict Equality Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Go look at these. They're brief and readable. Hint: read the strict equality algorithm first.) ES5 also describes, in [Section 9.12, The SameValue Algorithm](https://ecma-international.org/ecma-262/5.1/#sec-9.12) for use internally by the JS engine. It's largely the same as the Strict Equality Algorithm, except that 11.9.6.4 and 9.12.4 differ in handling {{jsxref("Number")}}s. ES2015 simply proposes to expose this algorithm through {{jsxref("Object.is")}}.
 
 We can see that with double and triple equals, with the exception of doing a type check upfront in 11.9.6.1, the Strict Equality Algorithm is a subset of the Abstract Equality Algorithm, because 11.9.6.2–7 correspond to 11.9.3.1.a–f.
 
@@ -202,8 +202,11 @@ In general, the only time {{jsxref("Object.is")}}'s special behavior towards zer
 
 여기 당신 코드에서 그 자체를 드러내기 위해 `-0`과 `+0` 사이의 구별을 일으킬 수도 있는 철저하지 않은(in-exhaustive) 내장 메서드 및 연산자 목록이 있습니다:
 
-<dl><dt><a href="/ko/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29"><code>- (unary negation)</code></a></dt><dd><pre class="brush: js">let stoppingForce = obj.mass * -obj.velocity;</pre><p>If <code>obj.velocity</code> is <code>0</code> (or computes to <code>0</code>), a <code>-0</code> is introduced at that place and propagates out into <code>stoppingForce</code>.</p></dd></dl>
-
+- [-(unary negation)](/ko/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29)
+  - ```js
+    let stoppingForce = obj.mass * -obj.velocity;
+    ```
+    If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.
 - {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
   - : In some cases,it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
 - {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
