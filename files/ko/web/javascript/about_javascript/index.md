@@ -32,21 +32,30 @@ JavaScript의 동적인 성질은, 실행시의 오브젝트 구축, 가변 인�
 
 ## 어떠한 JavaScript 구현이 유용한가?
 
-<p style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; margin: 0px 0px 1.7em; padding-top: 0px;">Mozilla 프로젝트는 두 가지 자바스크립트 구현을 제공한다. 최초의 Javascript는 Netscape의 Brendan Eich에 의해 만들었다. 이후 ECMA-262 에디션 5 와 최신 버전을 준수하도록 업데이트되었다. <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey" title="en-US/docs/SpiderMonkey">SpiderMonkey</a> 라는 이름의 엔진은 C/C++로 구현되었다. <a href="https://developer.mozilla.org/en-US/docs/Rhino" title="en-US/docs/Rhino">Rhino</a> 엔진은 주로 Norris Boys(또한 Netscape)가 만들었고 Java로 작성된 Javascript 구현체이다. SpiderMonkey와 마찬가지로 Rhino도 ECMA-262 에디션 5를 준거한다.</p>
+Mozilla 프로젝트는 두 가지 자바스크립트 구현을 제공한다. 최초의 Javascript는 Netscape의 Brendan Eich에 의해 만들었다. 이후 ECMA-262 에디션 5 와 최신 버전을 준수하도록 업데이트되었다. [SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey)라는 이름의 엔진은 C/C++로 구현되었다. [Rhino](https://developer.mozilla.org/en-US/docs/Rhino) 엔진은 주로 Norris Boys(또한 Netscape)가 만들었고 Java로 작성된 Javascript 구현체이다. SpiderMonkey와 마찬가지로 Rhino도 ECMA-262 에디션 5를 준거한다.
 
-<p style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; margin: 0px 0px 1.7em; padding-top: 0px;">TraceMonkey (Firefox 3.5), JägerMonkey (Firefox 4) 그리고 IonMonkey와 같은 몇가지 주요한 실시간 최적화는 차츰 SpiderMonkey 자바스크립트 엔진에 추가되었다. 자바스크립트 실행 성능 향상을 위한 작업은 지금도 진행 중이다.</p>
+TraceMonkey (Firefox 3.5), JägerMonkey (Firefox 4) 그리고 IonMonkey와 같은 몇가지 주요한 실시간 최적화는 차츰 SpiderMonkey 자바스크립트 엔진에 추가되었다. 자바스크립트 실행 성능 향상을 위한 작업은 지금도 진행 중이다.
 
-<p style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; margin: 0px 0px 1.7em; padding-top: 0px;">위의 구현 이외에도 다음과 같은 다른 인기있는 자바스크립트 엔진이 있다.</p>
+위의 구현 이외에도 다음과 같은 다른 인기있는 자바스크립트 엔진이 있다.
 
-<ul><li style="padding: 0px; margin: 0px 0px 1.7em;">구글의 <a href="https://code.google.com/p/v8/" title="https://code.google.com/p/v8/">V8</a> 은 크롬 브라우저와 최신 버전의 오페라 브라우저에 사용된다. 또 Node.js의 엔진으로 사용된다.</li><li style="padding: 0px; margin: 0px 0px 1.7em;"><a href="https://www.webkit.org/projects/javascript/index.html" title="https://www.webkit.org/projects/javascript/index.html">JavaScriptCore</a> (SquirrelFish/Nitro) 는 Apple 사파리와 같은 일부 WebKit 브라우저에서 사용된다.</li><li style="padding: 0px; margin: 0px 0px 1.7em;"><a href="http://my.opera.com/ODIN/blog/carakan-faq" title="http://my.opera.com/ODIN/blog/carakan-faq">Carakan</a> 는 오페라의 예전 버전안에 있다.</li><li style="padding: 0px; margin: 0px 0px 1.7em;"><a href="http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29" title="http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29">Chakra</a> 엔진은 Internet Explorer에서 사용된다. (상표권 문제를 피하기 위해 공식적으로 "JScript"라고 불린다.)</li></ul>
+- 구글의 [V8](https://code.google.com/p/v8/) 은 크롬 브라우저와 최신 버전의 오페라 브라우저에 사용된다. 또 Node.js의 엔진으로 사용된다.
+- [JavaScriptCore](https://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro) 는 Apple 사파리와 같은 일부 WebKit 브라우저에서 사용된다.
+- [Carakan](http://my.opera.com/ODIN/blog/carakan-faq)는 오페라의 예전 버전안에 있다.
+- [Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) 엔진은 Internet Explorer에서 사용된다. (상표권 문제를 피하기 위해 공식적으로 "JScript"라고 불린다.)
 
-<p style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; margin: 0px 0px 1.7em; padding-top: 0px;">mozilla.org의 각 JavaScript 엔진은, 애플리케이션이 JavaScript를 지원하기 위해 부를 수 있는 공개 API를 공개하고 있다. JavaScript 를 지원하는 가장 일반적인 호스트환경은 웹브라우저이다. 웹 브라우저는 일반적으로 공개 API를 사용하여 <a class="external external-icon" href="http://www.w3.org/DOM/">DOM</a>을 Javascript로 반영하는 <strong>호스트 객체</strong>를 만든다.</p>
+mozilla.org의 각 JavaScript 엔진은, 애플리케이션이 JavaScript를 지원하기 위해 부를 수 있는 공개 API를 공개하고 있다. JavaScript 를 지원하는 가장 일반적인 호스트환경은 웹브라우저이다. 웹 브라우저는 일반적으로 공개 API를 사용하여 [DOM](http://www.w3.org/DOM/)을 Javascript로 반영하는 **호스트 객체**를 만든다.
 
-<p style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; margin: 0px 0px 1.7em; padding-top: 0px;">JavaScript 의 또 다른 일반적인 애플리케이션은 (웹) 서버사이드 스크립팅 언어이다. 자바스크립트 웹 서버는 HTTP 요청 및 응답 객체를 나타내는 호스트 객체를 공개하며 자바 스크립트 프로그램에 의해 조작되어 웹 페이지를 동적으로 생성 할 수 있다. <a href="http://nodejs.org/">Node.js</a>는 이에 대한 대중적인 예이다.</p>
+JavaScript 의 또 다른 일반적인 애플리케이션은 (웹) 서버사이드 스크립팅 언어이다. 자바스크립트 웹 서버는 HTTP 요청 및 응답 객체를 나타내는 호스트 객체를 공개하며 자바 스크립트 프로그램에 의해 조작되어 웹 페이지를 동적으로 생성 할 수 있다. [Node.js](http://nodejs.org/)는 이에 대한 대중적인 예이다.
 
 ## JavaScript 자원
 
-<dl style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; margin: 0px 0px 1.7em; padding-top: 0px;"><dt style="font-weight: bold; font-style: normal;"><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey" title="en-US/docs/SpiderMonkey">SpiderMonkey</a></dt><dd style="padding-left: 15px; margin-bottom: 0.5em; margin-left: 0px;">애플리케이션에 임베드하는 방법을 포함하는, C/C++ 엔진(SpiderMonkey)으로 구현된 Mozilla의 JavaScript 구현체에 관한 정보.</dd><dt style="font-weight: bold; font-style: normal;"><a href="https://developer.mozilla.org/en-US/docs/Rhino" title="en-US/docs/Rhino">Rhino</a></dt><dd style="padding-left: 15px; margin-bottom: 0.5em; margin-left: 0px;">Java(Rhino)로 작성된 자바스크립트 구현체에 관련 정보.</dd><dt style="font-weight: bold; font-style: normal;"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources" title="en-US/docs/JavaScript_Language_Resources">Language resources</a></dt><dd style="padding-left: 15px; margin-bottom: 0.5em; margin-left: 0px;">자바스크립트 표준을 출판하기 위한 포인터들.</dd><dt style="font-weight: bold; font-style: normal;"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript" title="en-US/docs/A_re-introduction_to_JavaScript">A re-introduction to JavaScript</a></dt><dd style="padding-left: 15px; margin-bottom: 0.5em; margin-left: 0px;"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" title="en-US/docs/JavaScript/Guide">자바스크립트 가이드</a>와 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" title="en-US/docs/JavaScript/Reference">자바스크립트 레퍼런스</a>.</dd></dl>
+- [SpiderMonkey](/ko/docs/Mozilla/Projects/SpiderMonkey)
+  - : 애플리케이션에 임베드하는 방법을 포함하는, C/C++ 엔진(SpiderMonkey)으로 구현된 Mozilla의 JavaScript 구현체에 관한 정보.
+- [Rhino](/ko/docs/Rhino)
+  - : Java(Rhino)로 작성된 자바스크립트 구현체에 관련 정보.
+- [Language resources](/ko/docs/Web/JavaScript/Language_Resources)
+  - : 자바스크립트 표준을 출판하기 위한 포인터들.
+- [A re-introduction to JavaScript](/ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+  - : [Javascript 가이드](/ko/docs/Web/JavaScript/Guide)와 [JavaScript reference](/ko/docs/Web/JavaScript/Reference).
 
-JavaScript® 는 미국 및 여러 나라의 Oracle 트레이드마크 또는 등록된 트레이드마크
-입니다.
+JavaScript® 는 미국 및 여러 나라의 Oracle 트레이드마크 또는 등록된 트레이드마크입니다.
