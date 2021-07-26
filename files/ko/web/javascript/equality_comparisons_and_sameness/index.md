@@ -13,7 +13,26 @@ translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
 {{jsSidebar("Intermediate")}}
 
-<div class="summary"><p>ES2015에는 4가지 같음(equality) 알고리즘이 있습니다:</p><ul><li>추상적(abstract) 같음 비교 (<code>==</code>)</li><li>엄격한(strict) 같음 비교 (<code>===</code>): <code>Array.prototype.indexOf</code>, <code>Array.prototype.lastIndexOf</code> 및 <code>case</code> 절 매칭에 쓰임</li><li>등가0(SameValueZero): <code>Map</code> 및 <code>Set</code> 연산뿐만 아니라 <code>%TypedArray%</code> 및 <code>ArrayBuffer</code> 생성자, 그리고 ES2016에 예정된 <code>String.prototype.includes</code>에 쓰임</li><li>등가(SameValue): 그 외 모든 곳에 쓰임</li></ul><p>JavaScript는 3가지 서로 다른 값 비교 연산을 제공합니다:</p><ul><li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity">===</a>를 사용하는 엄격한 같음 (또는 "삼중 등호" 또는 "항등(identity)"),</li><li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality">==</a>를 사용하는 느슨한(loose) 같음 ("이중 등호"),</li><li>그리고 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> (ECMAScript 2015에 새로 들임).</li></ul><p>어느 연산을 쓸 지 그 선택은 당신이 어떤 종류의 비교를 수행하기 위해 찾고 있는 지에 달렸습니다.</p><p> </p><ul><li>이중 equals (<code>==</code>)는 두 가지를 비교할 때 유형 변환을 수행하고 IEEE 754를 준수하기 위해 <code>NaN</code>, <code>-0</code> 및 <code>+0</code>을 특별히 처리합니다 (그래서<code>NaN != NaN</code>이고 <code>-0 == +0</code>입니다);</li><li>트리플 equals (<code>===</code>)는 이중 equals (<code>NaN</code>, <code>-0</code> 및 <code>+0</code>의 특수 처리 포함)와 동일한 비교를 수행하지만 유형 변환은 수행하지 않습니다. 형식이 다른 경우 <code>false</code>가 반환됩니다.</li><li><code>Object.is</code>는 형식 변환을하지 않으며 <code>NaN</code>, <code>-0</code> 및 <code>+0</code>에 대한 특수 처리를 수행하지 않습니다 (특수 숫자 값을 제외하고는 <code>===</code>와 동일한 동작을 제공함).</li></ul><p> </p></div>
+ES2015에는 4가지 같음(equality) 알고리즘이 있습니다:
+
+- 추상적(abstract) 같음 비교 (`==`)
+- 엄격한(strict) 같음 비교 (`===`): `Array.prototype.indexOf`, `Array.prototype.lastIndexOf` 및 `case` 절 매칭에 쓰임
+- 등가0(SameValueZero): `Map` 및 `Set` 연산뿐만 아니라 `%TypedArray%` 및 `ArrayBuffer` 생성자, 그리고 ES2016에 예정된 `String.prototype.includes`에 쓰임
+- 등가(SameValue): 그 외 모든 곳에 쓰임
+
+JavaScript는 3가지 서로 다른 값 비교 연산을 제공합니다:
+
+- [===](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity)를 사용하는 엄격한 같음 (또는 "삼중 등호" 또는 "항등(identity)"),
+- [==](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality)를 사용하는 느슨한(loose) 같음 ("이중 등호"),
+- 그리고 [`Object.is`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/is) (ECMAScript 2015에 새로 들임).
+
+어느 연산을 쓸 지 그 선택은 당신이 어떤 종류의 비교를 수행하기 위해 찾고 있는 지에 달렸습니다.
+
+
+
+- 이중 equals (`==`)는 두 가지를 비교할 때 유형 변환을 수행하고 IEEE 754를 준수하기 위해 `NaN`, `-0` 및 `+0`을 특별히 처리합니다 (그래서`NaN != NaN`이고 `-0 == +0`입니다);
+- 트리플 equals (`===`)는 이중 equals (`NaN`, `-0` 및 `+0`의 특수 처리 포함)와 동일한 비교를 수행하지만 유형 변환은 수행하지 않습니다. 형식이 다른 경우 `false`가 반환됩니다.
+- `Object.is`는 형식 변환을하지 않으며 `NaN`, `-0` 및 `+0`에 대한 특수 처리를 수행하지 않습니다 (특수 숫자 값을 제외하고는 `===`와 동일한 동작을 제공함).
 
 이들 사이의 구분은 모두 원시형(primitive) 처리와 관련이 있습니다. 매개 변수가 구조적, 개념적으로 유사한 지 비교하는 것이 없습니다. 같은 구조를 가지지만 개체 자체가 각각인 비원시형(non-primitive) 개체 x 및 y의 경우 위의 모든 형태(form)는 false로 평가됩니다.
 
@@ -43,125 +62,73 @@ console.log(obj === undefined); // false
 
 ## ==를 사용하는 느슨한 같음
 
-느슨한 같음(loose equality)은 두 값이 같은 지 비교합니다, 두 값을 공통(common) 형으로 변환한 *후*에. 변환 후 (하나 또는 양쪽이 변환을 거칠 수 있음), 최종 같음 비교는 꼭 `===`처럼 수행됩니다. 느슨한 같음은 대칭(_symmetric_)입니다: `A == B`는 `A` 및 `B`가 어떤 값이든 항상 `B == A`와 같은 의미를 갖습니다 (적용된 변환의 순서 말고는).
+The behavior for performing loose equality using `==` is as follows:
 
-같음 비교는 다양한 형의 피연산자에 대해 다음과 같이 수행됩니다:
-
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="row"> </th>
-      <th colspan="7" scope="col" style="text-align: center">피연산자 B</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row"> </th>
-      <td> </td>
-      <td style="text-align: center">Undefined</td>
-      <td style="text-align: center">Null</td>
-      <td style="text-align: center">Number</td>
-      <td style="text-align: center">String</td>
-      <td style="text-align: center">Boolean</td>
-      <td style="text-align: center">Object</td>
-    </tr>
-    <tr>
-      <th colspan="1" rowspan="6" scope="row">피연산자 A</th>
-      <td>Undefined</td>
-      <td style="text-align: center"><code>true</code></td>
-      <td style="text-align: center"><code>true</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-    </tr>
-    <tr>
-      <td>Null</td>
-      <td style="text-align: center"><code>true</code></td>
-      <td style="text-align: center"><code>true</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-    </tr>
-    <tr>
-      <td>Number</td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>A === B</code></td>
-      <td style="text-align: center"><code>A === ToNumber(B)</code></td>
-      <td style="text-align: center"><code>A === ToNumber(B)</code></td>
-      <td style="text-align: center"><code>A == ToPrimitive(B)</code></td>
-    </tr>
-    <tr>
-      <td>String</td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>ToNumber(A) === B</code></td>
-      <td style="text-align: center"><code>A === B</code></td>
-      <td style="text-align: center">
-        <code>ToNumber(A) === ToNumber(B)</code>
-      </td>
-      <td style="text-align: center"><code>A == ToPrimitive(B)</code></td>
-    </tr>
-    <tr>
-      <td>Boolean</td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>ToNumber(A) === B</code></td>
-      <td style="text-align: center">
-        <code>ToNumber(A) === ToNumber(B)</code>
-      </td>
-      <td style="text-align: center"><code>A === B</code></td>
-      <td style="text-align: center">
-        <code>ToNumber(A) == ToPrimitive(B)</code>
-      </td>
-    </tr>
-    <tr>
-      <td>Object</td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>false</code></td>
-      <td style="text-align: center"><code>ToPrimitive(A) == B</code></td>
-      <td style="text-align: center"><code>ToPrimitive(A) == B</code></td>
-      <td style="text-align: center">
-        <code>ToPrimitive(A) == ToNumber(B)</code>
-      </td>
-      <td style="text-align: center"><code>A === B</code></td>
-    </tr>
-  </tbody>
-</table>
-
-위 표에서, `ToNumber(A)`는 비교 전에 그 인수를 숫자로 변환하려고 시도합니다. 그 동작(behavior)은 `+A`(단항 + 연산자)에 해당합니다. `ToPrimitive(A)`는 그 객체 인수를 원시형 값으로 변환하려고 시도합니다, 다양한 순서로 `A`의 `A.toString` 및 `A.valueOf` 메서드 호출을 시도하여.
+- 느슨한 같음(loose equality)은 두 값이 같은 지 비교합니다, 두 값을 공통(common) 형으로 변환한 후에. 변환 후 (하나 또는 양쪽이 변환을 거칠 수 있음), 최종 같음 비교는 꼭 `===`처럼 수행됩니다. 
+- 느슨한 같음은 대칭(_symmetric_)입니다: `A == B`는 `A` 및 `B`가 어떤 값이든 항상 `B == A`와 같은 의미를 갖습니다 (적용된 변환의 순서 말고는).
+- `undefined` and `null` are loosely equal; that is, `undefined == null` is true, and `null == undefined` is true
 
 전통 및 ECMAScript에 따르면, 모든 객체는 `undefined` 및 `null`과 느슨하게 같지 않습니다. 그러나 대부분의 브라우저는 일부 문맥(context)에서 `undefined`값을 모방하는(_emulate_) 것처럼 행동하기 위해 매우 좁은 부류의 객체(특히, 모든 페이지에 대한 `document.all` 객체)에 허용합니다. 느슨한 같음이 그러한 문맥 중 하나입니다: `null == A` 및 `undefined == A`는 A가 `undefined`를 *모방*하는 객체인 경우, 그리고 그 경우에만 true로 평가합니다. 다른 모든 경우에 객체는 결코 `undefined` 또는 `null`과 느슨하게 같지 않습니다.
 
+Loose equality comparisons among other combinations of operand types are performed as shown in the tables below. The following notations are used in the tables:
 
+- `ToNumber(A)` attempts to convert its argument to a number before comparison. Its behavior is equivalent to `+A` (the unary + operator).
+- `ToPrimitive(A)` attempts to convert its object argument to a primitive value, by invoking varying sequences of `A.toString()` and `A.valueOf()` methods on `A`.
+- `ℝ(A)` attempts to convert its argument to an ECMAScript [mathematical value](https://tc39.es/ecma262/#mathematical-value).
+- `StringToBigInt(A)` attempts to convert its argument to a `BigInt` by applying the ECMAScript [`StringToBigInt`](https://tc39.es/ecma262/#sec-stringtobigint) algorithm.
 
-전통적으로 ECMAScript에 따르면 모든 객체는 `undefined` 및 `null`과 느슨하게 같지 않습니다. 그러나 대부분의 브라우저는 일부 문맥(context)에서 정의되지 않은 값(`undefined`)을 모방하는(_emulate_) 것처럼 동작하는 매우 좁은 개체 클래스 (특히 모든 페이지의 `document.all` 개체)를 허용합니다. Loose equality는 다음과 같은 컨텍스트 중 하나입니다. `null == A` 및 `undefined == A`는 `undefined`를 에뮬레이트하는 객체 인 경우에만 true로 평가됩니다. 다른 모든 경우에는 객체가 `undefined`거나 `null`이 될 수 없습니다.
+**number** primitive `A` compared to operand `B`:
+
+| number    | bigint             | string              | boolean             | Object                |
+| --------- | ------------------ | ------------------- | ------------------- | --------------------- |
+| `A === B` | `ℝ(A) equals ℝ(B)` | `A === ToNumber(B)` | `A === ToNumber(B)` | `A == ToPrimitive(B)` |
+
+**bigint** primitive `A` compared to operand `B`:
+
+| number             | bigint    | string                    | boolean            | Object                |
+| ------------------ | --------- | ------------------------- | ------------------ | --------------------- |
+| `ℝ(A) equals ℝ(B)` | `A === B` | `A === StringToBigInt(B)` | `A == ToNumber(B)` | `A == ToPrimitive(B)` |
+
+**string** primitive `A` compared to operand `B`:
+
+| number              | bigint                    | string    | boolean                       | Object                |
+| ------------------- | ------------------------- | --------- | ----------------------------- | --------------------- |
+| `ToNumber(A) === B` | `StringToBigInt(A) === B` | `A === B` | `ToNumber(A) === ToNumber(B)` | `A == ToPrimitive(B)` |
+
+**boolean** primitive `A` compared to operand `B`:
+
+| number              | bigint             | string                        | boolean   | Object                          |
+| ------------------- | ------------------ | ----------------------------- | --------- | ------------------------------- |
+| `ToNumber(A) === B` | `ToNumber(A) == B` | `ToNumber(A) === ToNumber(B)` | `A === B` | `ToNumber(A) == ToPrimitive(B)` |
+
+**Object** `A` compared to operand `B`:
+
+| number                | bigint                | string                | boolean                         | Object    |
+| --------------------- | --------------------- | --------------------- | ------------------------------- | --------- |
+| `ToPrimitive(A) == B` | `ToPrimitive(A) == B` | `ToPrimitive(A) == B` | `ToPrimitive(A) == ToNumber(B)` | `A === B` |
+
+In most cases, using loose equality is discouraged. The result of a comparison using strict equality is easier to predict, and may evaluate more quickly due to the lack of type coercion.
+
+### Example
+
+The following example demonstrates loose equality comparisons involving the number primitive `0`, the bigint primitive `0n`, the string primitive `'0'`, and an object whose `toString()` value is `'0'`.
 
 ```js
-var num = 0;
-var obj = new String("0");
-var str = "0";
-var b = false;
+const num = 0;
+const big = 0n;
+const str = '0';
+const obj = new String('0');
 
-console.log(num == num); // true
-console.log(obj == obj); // true
-console.log(str == str); // true
+console.log(num == str); // true
+console.log(big == num); // true
+console.log(str == big); // true
 
 console.log(num == obj); // true
-console.log(num == str); // true
-console.log(obj == str); // true
-console.log(null == undefined); // true
-
-// 둘 다 false, 드문 경우를 제외하고는
-console.log(obj == null);
-console.log(obj == undefined);
+console.log(big == obj); // true
+console.log(str == obj); // true
 ```
 
 대부분의 경우 느슨한 같음을 사용하는 것은 바람직하지 않습니다. strict equality를 사용한 비교의 결과는 예측하기가 쉽고 형 강제(coercion) 변환이 일어나지 않기에 평가가 빠를 수 있습니다.
-
-
 
 ## Same-value equality
 
@@ -200,34 +167,34 @@ However, this way of thinking about the built-in sameness operators is not a mod
 
 
 
-| x                   | y                   | `==`    | `===`   | `Object.is` | `SameValueZero` |
-| ------------------- | ------------------- | ------- | ------- | ----------- | --------------- |
-| `undefined`         | `undefined`         | `true`  | `true`  | `true`      | `true`          |
-| `null`              | `null`              | `true`  | `true`  | `true`      | `true`          |
-| `true`              | `true`              | `true`  | `true`  | `true`      | `true`          |
-| `false`             | `false`             | `true`  | `true`  | `true`      | `true`          |
-| `'foo'`             | `'foo'`             | `true`  | `true`  | `true`      | `true`          |
-| `0`                 | `0`                 | `true`  | `true`  | `true`      | `true`          |
-| `+0`                | `-0`                | `true`  | `true`  | `false`     | `true`          |
-| `+0`                | `0`                 | `true`  | `true`  | `true`      | `true`          |
-| `-0`                | `0`                 | `true`  | `true`  | `false`     | `true`          |
-| `0`                 | `false`             | `true`  | `false` | `false`     | `false`         |
-| `""`                | `false`             | `true`  | `false` | `false`     | `false`         |
-| `""`                | `0`                 | `true`  | `false` | `false`     | `false`         |
-| `'0'`               | `0`                 | `true`  | `false` | `false`     | `false`         |
-| `'17'`              | `17`                | `true`  | `false` | `false`     | `false`         |
-| `[1, 2]`            | `'1,2'`             | `true`  | `false` | `false`     | `false`         |
-| `new String('foo')` | `'foo'`             | `true`  | `false` | `false`     | `false`         |
-| `null`              | `undefined`         | `true`  | `false` | `false`     | `false`         |
-| `null`              | `false`             | `false` | `false` | `false`     | `false`         |
-| `undefined`         | `false`             | `false` | `false` | `false`     | `false`         |
-| `{ foo: 'bar' }`    | `{ foo: 'bar' }`    | `false` | `false` | `false`     | `false`         |
-| `new String('foo')` | `new String('foo')` | `false` | `false` | `false`     | `false`         |
-| `0`                 | `null`              | `false` | `false` | `false`     | `false`         |
-| `0`                 | `NaN`               | `false` | `false` | `false`     | `false`         |
-| `'foo'`             | `NaN`               | `false` | `false` | `false`     | `false`         |
-| `NaN`               | `NaN`               | `false` | `false` | `true`      | `true`          |
-
+| x                   | y                   | `==`       | `===`      | `Object.is` | `SameValueZero` |
+| ------------------- | ------------------- | ---------- | ---------- | ----------- | --------------- |
+| `undefined`         | `undefined`         | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `null`              | `null`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `true`              | `true`              | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `false`             | `false`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `'foo'`             | `'foo'`             | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `0`                 | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `+0`                | `-0`                | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`       |
+| `+0`                | `0`                 | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `-0`                | `0`                 | `✅ true`  | `✅ true`  | `❌ false`  | `✅ true`       |
+| `0n`                | `-0n`               | `✅ true`  | `✅ true`  | `✅ true`   | `✅ true`       |
+| `0`                 | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `""`                | `false`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `""`                | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `'0'`               | `0`                 | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `'17'`              | `17`                | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `[1, 2]`            | `'1,2'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `new String('foo')` | `'foo'`             | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `null`              | `undefined`         | `✅ true`  | `❌ false` | `❌ false`  | `❌ false`      |
+| `null`              | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `undefined`         | `false`             | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `{ foo: 'bar' }`    | `{ foo: 'bar' }`    | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `new String('foo')` | `new String('foo')` | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `0`                 | `null`              | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `0`                 | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `'foo'`             | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
+| `NaN`               | `NaN`               | `❌ false` | `❌ false` | `✅ true`   | `✅ true`       |
 
 
 ## {{jsxref("Object.is")}} 대신 삼중 등호를 사용하는 경우
