@@ -368,12 +368,98 @@ var SimplePropertyRetriever = {
 
 ## Detection Table
 
-<div style="overflow: auto; width: 100%;"><table><thead><tr><th scope="row"></th><th scope="col"><code>in</code></th><th scope="col"><code>for..in</code></th><th scope="col"><code>obj.hasOwnProperty</code></th><th scope="col"><code>obj.propertyIsEnumerable</code></th><th scope="col"><code>Object.keys</code></th><th scope="col"><code>Object.getOwnPropertyNames</code></th><th scope="col"><code>Object.getOwnPropertyDescriptors</code></th><th scope="col"><code>Reflect.ownKeys()</code></th></tr></thead><tbody><tr><th scope="row">Enumerable</th><td>true</td><td>true</td><td>true</td><td>true</td><td>true</td><td>true</td><td>true</td><td>true</td></tr><tr><th scope="row">Nonenumerable</th><td>true</td><td>false</td><td>true</td><td>false</td><td>false</td><td>true</td><td>true</td><td>true</td></tr><tr><th scope="row">Symbols keys</th><td>true</td><td>false</td><td>true</td><td>true</td><td>false</td><td>false</td><td>true</td><td>true</td></tr><tr><th scope="row">Inherited Enumerable</th><td>true</td><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr><tr><th scope="row">Inherited Nonenumerable</th><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr><tr><th scope="row">Inherited Symbols keys</th><td>true</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td><td>false</td></tr></tbody></table></div>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Enumerable</th>
+      <th>Nonenumerable</th>
+      <th>Symbols keys</th>
+      <th>Inherited Enumerable</th>
+      <th>Inherited Nonenumerable</th>
+      <th>Inherited Symbols keys</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><code>in</code></th>
+      <td>true</td>
+      <td>true</td>
+      <td>true</td>
+      <td>true</td>
+      <td>true</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th><code>for..in</code></th>
+      <td>true</td>
+      <td>false</td>
+      <td>false</td>
+      <td>true</td>
+      <td>false</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <th><code>obj.hasOwnProperty</code></th>
+      <td>true</td>
+      <td>true</td>
+      <td>true</td>
+      <td>false</td>
+      <td>false</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <th><code>obj.propertyIsEnumerable</code></th>
+      <td>true</td>
+      <td>false</td>
+      <td>true</td>
+      <td>false</td>
+      <td>false</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <th><code>Object.keys</code></th>
+      <td>true</td>
+      <td>false</td>
+      <td>false</td>
+      <td>false</td>
+      <td>false</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <th><code>Object.getOwnPropertyNames</code></th>
+      <td>true</td>
+      <td>true</td>
+      <td>false</td>
+      <td>false</td>
+      <td>false</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <th><code>Object.getOwnPropertyDescriptors</code></th>
+      <td>true</td>
+      <td>true</td>
+      <td>true</td>
+      <td>false</td>
+      <td>false</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <th><code>Reflect.ownKeys()</code></th>
+      <td>true</td>
+      <td>true</td>
+      <td>true</td>
+      <td>false</td>
+      <td>false</td>
+      <td>false</td>
+    </tr>
+  </tbody>
+</table>
 
-## See also
+## 같이보기
 
-- [`in`](/en-US/docs/Web/JavaScript/Reference/Operators/in)
-- [`for..in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`in`](/ko/docs/Web/JavaScript/Reference/Operators/in)
+- [`for..in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in)
 - {{jsxref("Object.hasOwnProperty()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}
