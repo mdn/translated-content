@@ -196,62 +196,42 @@ However, this way of thinking about the built-in sameness operators is not a mod
 | `'foo'`             | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
 | `NaN`               | `NaN`               | `❌ false` | `❌ false` | `✅ true`   | `✅ true`       |
 
-
 ## {{jsxref("Object.is")}} 대신 삼중 등호를 사용하는 경우
 
-In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use [`===`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators "/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators") instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to `true`, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.
+In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use [`===`](/ko/docs/Web/JavaScript/Reference/Operators) instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to `true`, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.
 
 여기 당신 코드에서 그 자체를 드러내기 위해 `-0`과 `+0` 사이의 구별을 일으킬 수도 있는 철저하지 않은(in-exhaustive) 내장 메서드 및 연산자 목록이 있습니다:
 
-<dl><dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29"><code>- (unary negation)</code></a><span style="font-size: 1rem; letter-spacing: -0.00278rem;"> </span></dt></dl>
+<dl><dt><a href="/ko/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29"><code>- (unary negation)</code></a></dt><dd><pre class="brush: js">let stoppingForce = obj.mass * -obj.velocity;</pre><p>If <code>obj.velocity</code> is <code>0</code> (or computes to <code>0</code>), a <code>-0</code> is introduced at that place and propagates out into <code>stoppingForce</code>.</p></dd></dl>
 
-    let stoppingForce = obj.mass * -obj.velocity
+- {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
+  - : In some cases,it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
+- {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
+  - : It's possible to get a `-0` return value out of these methods in some cases where a `-0` exists as one of the parameters. E.g., `Math.min(-0, +0)` evaluates to `-0`. Refer to the documentation for the individual methods.
+- [`~`](/en-US/docs/Web/JavaScript/Reference/Operators), [`<<`](/en-US/docs/Web/JavaScript/Reference/Operators), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators)
+  - : Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, `-0` will not survive a round trip after an inverse operation. E.g., both `Object.is(~~(-0), -0)` and `Object.is(-0 << 2 >> 2, -0)` evaluate to `false`.
 
-<dl><dd><p><code>obj.velocity</code>가 <code>0</code>인 (또는 <code>0</code>으로 계산하는) 경우, <code>-0</code>이 그 자리에 소개되고 <code>stoppingForce</code>로 전해집니다. </p></dd><dt>{{jsxref("Math.atan2")}}</dt><dt>{{jsxref("Math.ceil")}}</dt><dt>{{jsxref("Math.pow")}}</dt><dt>{{jsxref("Math.round")}}<span style="font-size: 1rem; letter-spacing: -0.00278rem;"> </span></dt><dd>In some cases,it's possible for a <code>-0</code> to be introduced into an expression as a return value of these methods even when no <code>-0</code> exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to <code>-0</code>. Refer to the documentation for the individual methods. </dd></dl>
+Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.
 
-- {jsxref("Math.floor")}}
+## Caveat: Object.is and NaN
 
-  {{jsxref("Math.max")}}
+The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/ko/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct instances, which don't behave identically in all contexts. For example:
 
-  {{jsxref("Math.min")}}
-
-  {{jsxref("Math.sin")}}
-
-  {{jsxref("Math.sqrt")}}
-
-  {{jsxref("Math.tan")}}<span style="font-size: 1rem; letter-spacing: -0.00278rem;"> </span>
-
-  - : It's possible to get a `-0` return value out of these methods in some cases where a `-0` exists as one of the parameters. E.g., `Math.min(-0, +0)` evaluates to `-0`. Refer to the documentation for the individual methods.
-
-<!---->
-
-- [`~`](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
-
-  [`<<`](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
-
-  [`>>`](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
-
-  - : 이러한 연산자 각각은 내부에서 ToInt32 알고리즘을 사용합니다. 내부 32-bit 정수형에는 0에 대해 한 표현만 있기에, `-0`은 역(inverse) 연산 후 왕복 여행(round trip, 이중 역 연산)에 살아남지 못합니다. 가령, `Object.is(~~(-0), -0)`와 `Object.is(-0 << 2 >> 2, -0)`는 `false`로 평가합니다.
-
-Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.
-
-## Caveat: {{jsxref("Object.is")}} and NaN
-
-The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct instances, which don't behave identically in all contexts. For example:
-
-    var f2b = x => new Uint8Array(new Float64Array([x]).buffer);
-    var b2f = x => new Float64Array(x.buffer)[0];
-    var n = f2b(NaN);
-    n[0] = 1;
-    var nan2 = b2f(n);
-    nan2;
-    // > NaN
-    Object.is(nan2, NaN);
-    // > true
-    f2b(NaN);
-    // > Uint8Array(8) [0, 0, 0, 0, 0, 0, 248,127)
-    f2b(nan2);
-    // > Uint8Array(8) [1, 0, 0, 0, 0, 0, 248,127)
+```js
+var f2b = x => new Uint8Array(new Float64Array([x]).buffer);
+var b2f = x => new Float64Array(x.buffer)[0];
+var n = f2b(NaN);
+n[0] = 1;
+var nan2 = b2f(n);
+nan2;
+// > NaN
+Object.is(nan2, NaN);
+// > true
+f2b(NaN);
+// > Uint8Array(8) [0, 0, 0, 0, 0, 0, 248,127)
+f2b(nan2);
+// > Uint8Array(8) [1, 0, 0, 0, 0, 0, 248,127)
+```
 
 ## 참조
 
