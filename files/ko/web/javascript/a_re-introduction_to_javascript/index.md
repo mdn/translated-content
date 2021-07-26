@@ -45,35 +45,35 @@ JavaScript는 유형 및 연산자, 표준 내장 객체 및 메소드가 있는
 - [부울 (Boolean)](/ko/Web/JavaScript/Reference/Global_Objects/Boolean)
 - [기호 (Symbol)](/ko/Web/JavaScript/Reference/Global_Objects/Symbol)
 - [객체 (Object)](/ko/Web/JavaScript/Reference/Global_Objects/Object)
-
   - [함수 (Function)](/ko/Web/JavaScript/Reference/Global_Objects/Function)
   - [배열 (Array)](/ko/Web/JavaScript/Reference/Global_Objects/Array)
   - [날짜 (Date)](/ko/Web/JavaScript/Reference/Global_Objects/Date)
   - [정규식 (RegExp)](/ko/Web/JavaScript/Reference/Global_Objects/RegExp)
-
 - [널 (Null)](/ko/Web/JavaScript/Reference/Global_Objects/null)
 - [정의되지 않음 (Undefined)](/ko/Web/JavaScript/Reference/Global_Objects/undefined)
 
 그리고 또 몇 가지 [오류](/ko/Web/JavaScript/Reference/Global_Objects/Error) 타입이 내장되어 있습니다. 그렇지만 처음 구조도를 기억하고만 있으면 다른 것들도 아주 쉽게 이해할 수 있을 것입니다.
 
-<h2 id=".EC.88.98_.28Numbers.29" name=".EC.88.98_.28Numbers.29">수 (Numbers)</h2>
+## 수 (Numbers)
 
-설계 명세서에 의하면 JavaScript에서 수는 "이중정밀도 64비트 형식 IEEE 754 값"으로 정의됩니다. 이것은 몇가지 흥미로운 결과를 가져옵니다. JavaScript에는 **정수와 같은 것이 존재하지 않으므로** ({{jsxref("BigInt")}} 제외), 조금 조심해야 합니다. 이 예제를 보세요:
+설계 명세서에 의하면 JavaScript에서 수는 ["이중정밀도 64비트 형식 IEEE 754 값"](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) (numbers between -(2^53 − 1) and 2^53 − 1)으로 정의됩니다. 이것은 몇가지 흥미로운 결과를 가져옵니다. JavaScript에는 **정수와 같은 것이 존재하지 않으므로** ({{jsxref("BigInt")}} 제외), 조금 조심해야 합니다. 이 예제를 보세요:
 
-    console.log(3 / 2);             // 1이 아닌, 1.5
-    console.log(Math.floor(3 / 2)); // 1
+```js
+console.log(3 / 2);             // 1.5, not 1
+console.log(Math.floor(3 / 2)); // 1
+```
 
 *명백한 정수*는 사실 *암묵적으로 실수*입니다.
 
 또한, 다음과 같은 것들을 주의하세요:
 
 ```js
-0.1 + 0.2 = 0.30000000000000004
+0.1 + 0.2 == 0.30000000000000004;
 ```
 
 실제로 정수 값은 32 비트 정수로 처리되며 일부 구현은 32 비트 정수가 아닌 숫자에 유효한 명령어를 수행 할 때까지 이러한 방식으로 저장합니다. 이는 비트 단위 작업에 중요 할 수 있습니다.
 
-덧셈, 뺄셈, 계수 (또는 나머지) 연산을 포함하는 표준 [산술 연산자](ko/Core_JavaScript_1.5_Reference/Operators/Arithmetic_Operators)가 지원됩니다. 또한 앞에서 언급하는 것을 깜박 잊은 고급 수학 함수와 상수를 다루기 위한 [수학(Math)](ko/Core_JavaScript_1.5_Reference/Global_Objects/Math)으로 불리는 내장 객체가 있습니다:
+덧셈, 뺄셈, 계수 (또는 나머지) 연산을 포함하는 표준 [산술 연산자](/ko/Core_JavaScript_1.5_Reference/Operators/Arithmetic_Operators)가 지원됩니다. 또한 앞에서 언급하는 것을 깜박 잊은 고급 수학 함수와 상수를 다루기 위한 [수학(Math)](/ko/Core_JavaScript_1.5_Reference/Global_Objects/Math)으로 불리는 내장 객체가 있습니다:
 
 ```js
 Math.sin(3.5);
@@ -94,7 +94,7 @@ parseInt('010');  //  8
 parseInt('0x10'); // 16
 ```
 
-이 같은 결과는 `{{jsxref("Global_Objects/parseInt", "parseInt()")}}` 함수가 0으로 시작되는 문자열을 8진수로, "0x"로 시작하는 문자열은 16진수로 취급하기 때문에 발생합니다. 16진수 표기법이 그대로 유지됩니다. 8진수는 제거되었습니다.
+이 같은 결과는 {{jsxref("Global_Objects/parseInt", "parseInt()")}} 함수가 0으로 시작되는 문자열을 8진수로, "0x"로 시작하는 문자열은 16진수로 취급하기 때문에 발생합니다. 16진수 표기법이 그대로 유지됩니다. 8진수는 제거되었습니다.
 
 만약 이진수를 정수로 변환하고 싶다면, 밑을 바꾸기만하면 됩니다:
 
@@ -102,9 +102,9 @@ parseInt('0x10'); // 16
 parseInt('11', 2); // 3
 ```
 
-이와 비슷하게, 내장 함수 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}를 사용하여 부동 소수점 숫자를 파싱 할 수 있습니다. {{jsxref("Global_Objects/parseInt", "parseInt()")}}과 달리 parseFloat()는 항상 10진수를 사용합니다.
+이와 비슷하게, 내장 함수 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}를 사용하여 부동 소수점 숫자를 파싱 할 수 있습니다. {{jsxref("Global_Objects/parseInt", "parseInt()")}}과 달리 `parseFloat()`는 항상 10진수를 사용합니다.
 
-단항 연산자 + 를 사용하여 값을 숫자로 변환 할 수도 있습니다:
+단항 연산자 `+` 를 사용하여 값을 숫자로 변환 할 수도 있습니다:
 
 ```js
 + '42';   // 42
@@ -127,7 +127,24 @@ NaN + 5; // NaN
 내장 [`isNaN()`](ko/Core_JavaScript_1.5_Reference/Global_Functions/isNaN) 함수를 사용해서 `NaN` 인지 여부를 검사할 수 있습니다:
 
 ```js
-isNaN(NaN); // true
+Number.isNaN(NaN); // true
+Number.isNaN('hello'); // false
+Number.isNaN('1'); // false
+Number.isNaN(undefined); // false
+Number.isNaN({}); // false
+Number.isNaN([1]) // false
+Number.isNaN([1,2]) // false
+```
+
+But don’t test for `NaN` using the global {{jsxref("Global_Objects/isNaN", "isNaN()")}} function, [which has unintuitive behavior](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior):
+
+```js
+isNaN('hello'); // true
+isNaN('1'); // false
+isNaN(undefined); // true
+isNaN({}); // true
+isNaN([1]) // false
+isNaN([1,2]) // true
 ```
 
 JavaScript는 또 특별한 값 [`Infinity`](ko/Core_JavaScript_1.5_Reference/Global_Properties/Infinity)와 `-Infinity`를 가지고 있습니다:
@@ -145,21 +162,21 @@ isFinite(-Infinity); // false
 isFinite(NaN);       // false
 ```
 
-<div class="note"><p>{{jsxref("Global_Objects/parseInt", "parseInt()")}} 와 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 함수는 숫자로 아닌 문자가 나올때까지 문자열을 파싱하고, 그 지점까지 파싱된 숫자를 반환합니다. 그런데 "+"연산자는 중간에 유효하지 않은 문자가 있으면 그대로 문자열을 <code>NaN</code> 으로 그냥 변환해버립니다. console에서 "10.2abc"를 파싱해보면 어떤점이 다른지 더 쉽게 이해할 수 있습니다.</p></div>
+> **참고:** {{jsxref("Global_Objects/parseInt", "parseInt()")}} 와 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 함수는 숫자로 아닌 문자가 나올때까지 문자열을 파싱하고, 그 지점까지 파싱된 숫자를 반환합니다. 그런데 "+"연산자는 중간에 유효하지 않은 문자가 있으면 그대로 문자열을 `NaN` 으로 그냥 변환해버립니다. console에서 "10.2abc"를 파싱해보면 어떤점이 다른지 더 쉽게 이해할 수 있습니다.
 
-<h2 id=".EB.AC.B8.EC.9E.90.EC.97.B4_.28Strings.29" name=".EB.AC.B8.EC.9E.90.EC.97.B4_.28Strings.29">문자열 (Strings)</h2>
+## 문자열 (Strings)
 
-JavaScript에서 문자열은 [유니코드 문자들](ko/Core_JavaScript_1.5_Guide/Unicode)이 연결되어 만들어진 것입니다. 이는 국제화(i18n, internationalization) 하려하는 누구에게라도 환영받을만한 소식입니다. 좀 더 정확히 말하자면, 각각이 16비트 숫자로 표현된 UTF-16 코드 유닛이 길게 이어져있는 것입니다. 각 유니코드 문자는 1개나 2개의 코드 유닛으로 표현됩니다.
+JavaScript에서 문자열은 [유니코드 문자들](/ko/Core_JavaScript_1.5_Guide/Unicode)이 연결되어 만들어진 것입니다. 이는 국제화(i18n, internationalization) 하려하는 누구에게라도 환영받을만한 소식입니다. 좀 더 정확히 말하자면, 각각이 16비트 숫자로 표현된 UTF-16 코드 유닛이 길게 이어져있는 것입니다. 각 유니코드 문자는 1개나 2개의 코드 유닛으로 표현됩니다.
 
 한 개의 문자를 나타내려면 길이가 1인 문자열을 사용하면 됩니다.
 
-문자열의 길이를 알고싶다면, 해당 문자열의 [`length`](ko/Core_JavaScript_1.5_Reference/Global_Objects/String/length) 속성(해당 객체가 소유하고 있는 성질을 나타내는 값)에 접근하면 됩니다:
+문자열의 길이를 알고싶다면, 해당 문자열의 [`length`](/ko/Core_JavaScript_1.5_Reference/Global_Objects/String/length) 속성(해당 객체가 소유하고 있는 성질을 나타내는 값)에 접근하면 됩니다:
 
 ```js
 'hello'.length; // 5
 ```
 
-우리의 첫 JavaScript 객체입니다! 문자열도 역시 객체로 취급된다고 언급했던적이 있죠? 다음과 같이 [메소드](ko/Core_JavaScript_1.5_Reference/Global_Objects/String#Methods)까지 있는 확실한 녀석입니다:
+우리의 첫 JavaScript 객체입니다! 문자열도 역시 객체로 취급된다고 언급했던적이 있죠? 다음과 같이 [메소드](/ko/Core_JavaScript_1.5_Reference/Global_Objects/String#Methods)까지 있는 확실한 녀석입니다:
 
 ```js
 'hello'.charAt(0); // "h"
@@ -167,7 +184,7 @@ JavaScript에서 문자열은 [유니코드 문자들](ko/Core_JavaScript_1.5_Gu
 'hello'.toUpperCase(); // "HELLO"
 ```
 
-<h2 id=".EC.9D.B4.EC.99.B8.EC.9D.98_.ED.83.80.EC.9E.85.EB.93.A4" name=".EC.9D.B4.EC.99.B8.EC.9D.98_.ED.83.80.EC.9E.85.EB.93.A4">이외의 타입들</h2>
+## 이외의 타입들
 
 JavaScript는 의도적으로 값이 없음을 가리키는 '객체' 타입의 객체인 `null`과 초기화되지 않은 값 — 아직 어떤 값도 주어지않은(할당되지않은) 변수임을 가리키는 '정의되지 않음' 타입의 객체인 `undefined`로 구분됩니다. 값에 대해서 나중에 언급할 것이지만 JavaScript에서 변수에 값을 주지않고 선언하는 것이 가능합니다. 이럴 경우, 변수의 타입은 `undefined`이 되는 것입니다.
 
@@ -187,18 +204,18 @@ Boolean(234); // true
 
 부울 연산자는 `&&` (논리적*와, 그리고* ), `||` (논리적*또는* ), 그리고 `!` (논리적*부정* )이 지원됩니다. 아래에서 다시 언급하겠습니다.
 
-<h2 id=".EB.B3.80.EC.88.98_.28Variables.29" name=".EB.B3.80.EC.88.98_.28Variables.29">변수 (Variables)</h2>
+## 변수 (Variables)
 
 JavaScript에서 새로운 변수는 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let), [`const`](/ko/docs/Web/JavaScript/Reference/Statements/const), [`var`](/ko/docs/Web/HTML/Element/var) 키워드로 선언됩니다.
 
-`let`을 사용하면 블록 유효 범위 변수를 선언 할 수 있습니다. 선언 된 변수는 *변수가 포함 된 함수 블록*에서 사용할 수 있습니다.
+**`let`**을 사용하면 블록 유효 범위 변수를 선언 할 수 있습니다. 선언 된 변수는 *변수가 포함 된 함수 블록*에서 사용할 수 있습니다.
 
 ```js
 let a;
 let name = 'Simon';
 ```
 
-아래는 let으로 선언한 변수가 가지는 유효 범위의 예제입니다.
+아래는 **let**으로 선언한 변수가 가지는 유효 범위의 예제입니다.
 
 ```js
 // myLetVariable는 여기에서 보이지 *않습니다*
@@ -210,21 +227,21 @@ for (let myLetVariable = 0; myLetVariable < 5; myLetVariable++) {
 // myLetVariable는 여기에서 보이지 *않습니다*
 ```
 
-`const`는 값이 변경되지 않는 변수를 선언 할 수 있게 합니다. 변수는 *변수가 선언 된 함수 블록*에서 사용할 수 있습니다.
+**`const`**는 값이 변경되지 않는 변수를 선언 할 수 있게 합니다. 변수는 *변수가 선언 된 함수 블록*에서 사용할 수 있습니다.
 
 ```js
 const Pi = 3.14; // 변수 Pi 설정
 Pi = 1; // 상수로 설정된 변수는 변경 할 수 없기 때문에 애러 발생.
 ```
 
-`var`은 가장 일반적인 변수 선언 키워드입니다. `let`, `const` 키워드가 가지는 제한을 `var`은 갖지 않습니다. 이는 자바스크립트에서 변수를 선언하는 전통적인 유일한 방법이었기 때문입니다. `var` 키워드로 선언 된 변수는 *변수가 선언 된 함수 블록*에서 사용 할 수 있습니다.
+**`var`**은 가장 일반적인 변수 선언 키워드입니다. `let`, `const` 키워드가 가지는 제한을 `var`은 갖지 않습니다. 이는 자바스크립트에서 변수를 선언하는 전통적인 유일한 방법이었기 때문입니다. **`var`** 키워드로 선언 된 변수는 *변수가 선언 된 함수 블록*에서 사용 할 수 있습니다.
 
 ```js
 var a;
 var name = 'Simon';
 ```
 
-var로 선언한 변수의 유효 범위 예제입니다.
+**`var`**로 선언한 변수의 유효 범위 예제입니다.
 
 ```js
 // myVarVariable는 여기에서 사용 할 수 *있습니다*
@@ -240,7 +257,7 @@ for (var myVarVariable = 0; myVarVariable < 5; myVarVariable++) {
 
 자바스크립트와 자바 같은 다른 언어 사이의 중요한 차이점은 자바스크립트는 블록에 범위가 없다는 것입니다. 함수에만 범위가 있습니다. 변수가 복합 문에서 (예를 들어 `if` 제어 구조 내에서) var를 사용하여 정의 된 경우 전체 함수에서 볼 수 있습니다. 그러나 ECMAScript 2015부터 [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let) 및 [`const`](/ko/docs/Web/JavaScript/Reference/Statements/const) 선언을 사용하면 블록 범위 변수를 만들 수 있습니다.
 
-<h2 id=".EC.97.B0.EC.82.B0.EC.9E.90_.28Operators.29" name=".EC.97.B0.EC.82.B0.EC.9E.90_.28Operators.29">연산자 (Operators)</h2>
+## 연산자 (Operators)
 
 JavaScript의 산술 연산자로는 `+`, `-`, `*`, `/`, `%`(나머지 연산자)가 있습니다. 값은 `=` 연산자로 할당할 수 있고, `+=` 와 `-=`처럼 다른 연산자를 같이사용해서 할당할 수 있습니다. 이렇게 쓰인 연산자는 `x = x연산자 y`와 같은 결과를 나타냅니다.
 
@@ -251,7 +268,7 @@ x = x + 5;
 
 `++` 와 `--` 를 각각 점진적인 증가와 감소에 사용할 수 있습니다. 이들은 또한 전처리 또는 후처리 연산자로 사용될 수 있습니다.
 
-[`+` 연산자](ko/Core_JavaScript_1.5_Reference/Operators/String_Operators)는 문자열 이어붙이기도 합니다:
+[`+` 연산자](/ko/Core_JavaScript_1.5_Reference/Operators/String_Operators)는 문자열 이어붙이기도 합니다:
 
 ```js
 'hello' + ' world'; // "hello world"
@@ -266,7 +283,7 @@ x = x + 5;
 
 빈 문자열에 어떤 값을 더하는 것은 해당 값을 문자열로 바꾸는 요령입니다.
 
-JavaScript에서 [비교](ko/Core_JavaScript_1.5_Reference/Operators/Comparison_Operators)는 `<`, `>`, `<=` 와 `>=` 를 통해 가능합니다. 이 연산자들은 문자열과 수 양쪽 모두에서 동작합니다. 상동은 약간 직관성이 떨어지는데 이중 등호 (`==`) 연산자는 서로 다른 타입을 줄 경우 타입 강제 변환을 수행하기 때문에 다음과 같이 때때로 기대하지 않은 결과를 내보내기 때문입니다:
+JavaScript에서 [비교](/ko/Core_JavaScript_1.5_Reference/Operators/Comparison_Operators)는 `<`, `>`, `<=` 와 `>=` 를 통해 가능합니다. 이 연산자들은 문자열과 수 양쪽 모두에서 동작합니다. 상동은 약간 직관성이 떨어지는데 이중 등호 (`==`) 연산자는 서로 다른 타입을 줄 경우 타입 강제 변환을 수행하기 때문에 다음과 같이 때때로 기대하지 않은 결과를 내보내기 때문입니다:
 
 ```js
 123 == '123'; // true
@@ -282,9 +299,9 @@ JavaScript에서 [비교](ko/Core_JavaScript_1.5_Reference/Operators/Comparison_
 
 이와 비슷하게 `!=` 와 `!==` 연산자가 있습니다.
 
-JavaScript는 값을 [비트로 취급하는 연산자](ko/Core_JavaScript_1.5_Reference/Operators/Bitwise_Operators)도 가지고 있습니다. 사용하고 싶을 때 언제라도 사용할 수 있도록 말이죠.
+JavaScript는 값을 [비트로 취급하는 연산자](/ko/Core_JavaScript_1.5_Reference/Operators/Bitwise_Operators)도 가지고 있습니다. 사용하고 싶을 때 언제라도 사용할 수 있도록 말이죠.
 
-<h2 id=".EC.A0.9C.EC.96.B4_.EA.B5.AC.EC.A1.B0" name=".EC.A0.9C.EC.96.B4_.EA.B5.AC.EC.A1.B0">제어 구조</h2>
+## 제어 구조
 
 JavaScript는 C 계열의 다른 언어들과 비슷한 제어 구조를 가지고 있습니다. 조건문은 `if` 와 `else`를 지원하는데, 원하시는대로 얼마든지 중첩 시켜서 사용할 수 있습니다:
 
@@ -313,7 +330,7 @@ do {
 } while (inputIsNotValid(input));
 ```
 
-JavaScript의 `for` 반복문은 C 와 Java의 반복문과 같습니다. 말하자면, 반복문에 필요한 제어 정보를 한 줄에 표현할 수 있다는 이야기지요.
+JavaScript의 [`for`](/ko/docs/Web/JavaScript/Reference/Statements/for) 반복문은 C 와 Java의 반복문과 같습니다. 말하자면, 반복문에 필요한 제어 정보를 한 줄에 표현할 수 있다는 이야기지요.
 
 ```js
 for (var i = 0; i < 5; i++) {
@@ -395,7 +412,7 @@ switch(1 + 3){
 }
 ```
 
-<h2 id=".EA.B0.9D.EC.B2.B4_.28Objects.29" name=".EA.B0.9D.EC.B2.B4_.28Objects.29">객체 (Objects)</h2>
+## 객체 (Objects)
 
 JavaScript 객체는 간단히 이름-값 쌍(name-value pairs)의 모임입니다. 그렇기 때문에, JavaScript의 객체의 모임은 다음과 비슷하다고 할 수 있습니다:
 
@@ -475,22 +492,22 @@ var user = prompt('what is your key?')
 obj[user] = prompt('what is its value?')
 ```
 
-이들은 의미적으로 역시 같습니다. 두번째 방법은 속성의 이름이 실행시간(run-time)에 계산될 수 있는 문자열로 주어집니다. 하지만 이방법을 사용하면 일부 JavaScript엔진과 압축기 최적화(minifier optimizations)를 적용할수 없습니다.또한 [예약된 단어(키워드)](ko/Core_JavaScript_1.5_Reference/Reserved_Words)로 되어있는 이름으로 객체의 속성을 설정하거나 얻어낼 수 있습니다:
+이들은 의미적으로 역시 같습니다. 두번째 방법은 속성의 이름이 실행시간(run-time)에 계산될 수 있는 문자열로 주어집니다. 하지만 이방법을 사용하면 일부 JavaScript엔진과 압축기 최적화(minifier optimizations)를 적용할수 없습니다.또한 [예약된 단어(키워드)](/ko/Core_JavaScript_1.5_Reference/Reserved_Words)로 되어있는 이름으로 객체의 속성을 설정하거나 얻어낼 수 있습니다:
 
 ```js
 obj.for = "Simon"; // 구문 오류, for 가 예약된 단어(키워드)이기 때문에
 obj["for"] = "Simon"; // 정상 동작
 ```
 
-<div class="blockIndicator note"><p>ECMAScript 5 이래로, 예약어는  객체 항목의 이름으로 "덧붙임없이" 사용할수도 있습니다. 이말은 객체 리터럴을 정의할때 따옴표로 "둘러쌀" 필요가 없다는 의미입니다.  ES5 <a href="http://es5.github.io/#x7.6.1">Spec</a>을 참고해 보십시오.</p></div>
+> **참고:** ECMAScript 5 이래로, 예약어는  객체 항목의 이름으로 "덧붙임없이" 사용할수도 있습니다. 이말은 객체 리터럴을 정의할때 따옴표로 "둘러쌀" 필요가 없다는 의미입니다.  ES5 [Spec](http://es5.github.io/#x7.6.1)을 참고해 보십시오.
 
 객체나 프로토타입에 대한 좀더 상세한 내용은 [Object.prototype](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype) 을 참조하십시오. 객체 프로토타입과 객체 프로토타입 체인에 대한 설명은 [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 을 참조하십시오.
 
-<div class="blockIndicator note"><p>ECMAScript 2015 이래로, 객체의 key는 생성시의 대괄호 표기법(bracket notation)으로 정의될수 있습니다. 그냥 <code>var userPhone = {}; userPhone[phoneType] = 12345</code>. 처럼 표기하는 방법 대신 <code>{[phoneType]: 12345}</code> 와 같은 사용법도 가능합니다.</p></div>
+> **Note:** ECMAScript 2015 이래로, 객체의 key는 생성시의 대괄호 표기법(bracket notation)으로 정의될수 있습니다. 그냥 `var userPhone = {}; userPhone[phoneType] = 12345`. 처럼 표기하는 방법 대신 `{[phoneType]: 12345}` 와 같은 사용법도 가능합니다.
 
-<h2 id=".EB.B0.B0.EC.97.B4_.28Arrays.29" name=".EB.B0.B0.EC.97.B4_.28Arrays.29">배열 (Arrays)</h2>
+## 배열 (Arrays)
 
-JavaScript에서 배열은 실제로는 특별한 타입의 객체입니다. (숫자로 나타낸 속성은 자연스럽게 \[] 구문만을 사용해서 접근하게 되므로) 일반 객체와 많이 비슷하게 동작하지만, 이 객체는 '`length`'라는 한가지 마법적인 속성을 가집니다. 이는 항상 배열에서 가장 큰 인덱스보다 하나 더 큰 값으로 존재합니다.
+JavaScript에서 배열은 실제로는 특별한 타입의 객체입니다. (숫자로 나타낸 속성은 자연스럽게 `[]` 구문만을 사용해서 접근하게 되므로) 일반 객체와 많이 비슷하게 동작하지만, 이 객체는 '`length`'라는 한가지 마법적인 속성을 가집니다. 이는 항상 배열에서 가장 큰 인덱스보다 하나 더 큰 값으로 존재합니다.
 
 배열을 생성하는 예전 방법은 다음과 같습니다:
 
@@ -505,9 +522,8 @@ a.length // 3
 한가지 더 편리한 배열 표현 방법은 배열 리터럴을 사용하는 것입니다:
 
 ```js
-> var a = ["dog", "cat", "hen"];
-> a.length
-3
+var a = ['dog', 'cat', 'hen'];
+a.length; // 3
 ```
 
 배열 리터럴 끝에 콤마(",")를 꼬리로 남겨두는 것은 브라우저마다 다르게 처리하므로 그렇게 하지는 마시기 바랍니다.
@@ -515,10 +531,9 @@ a.length // 3
 `array.length` 는 배열에 들어있는 항목의 수를 반드시 반영하지는 않는다는 점을 주의하시기 바랍니다. 다음과 같은 경우를 고려해보겠습니다:
 
 ```js
-> var a = ["dog", "cat", "hen"];
-> a[100] = "fox";
-> a.length
-101
+var a = ['dog', 'cat', 'hen'];
+a[100] = 'fox';
+a.length; // 101
 ```
 
 기억해두세요 - 배열의 length 속성은 최대 인덱스에 하나를 더한 값일 뿐입니다.
@@ -526,8 +541,7 @@ a.length // 3
 존재하지 않는 배열 인덱스를 참조하려고하면 다음과 같이 `undefined` 을 얻게됩니다:
 
 ```js
-> typeof(a[90])
-undefined
+typeof a[90]; // undefined
 ```
 
 `[]` 와 `length`에 관한 위의 사항들을 감안하면 배열을 `for` 반복문으로 처리할 때 다음과 같은 방법으로 처리하실 수 있을 것입니다:
@@ -538,7 +552,7 @@ for (var i = 0; i < a.length; i++) {
 }
 ```
 
-ES2015는 배열과 같은 이터러블 객체를 위해 좀더 간결한 for...of 루프를 소개했습니다.
+ES2015는 배열과 같은 이터러블 객체를 위해 좀더 간결한 [`for`...`of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 루프를 소개했습니다.
 
 ```js
 for (const currentValue of a) {
@@ -546,7 +560,7 @@ for (const currentValue of a) {
 }
 ```
 
-또한 for...in 루프를 이용하여 배열에 루프를 돌릴수도 있지만, 이 방법은 배열 요소를 반복하는게 아니라 배열 인덱스를 반복합니다. 뿐만 아니라, 누군가 `Array.prototype`에 새로운 속성을 추가하면, 그 속성들 또한 이런 루프로 반복됩니다. 따라서 이런 반복 형태는 배열에는 추천되지 않습니다.
+또한 [`for`...`in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 루프를 이용하여 배열에 루프를 돌릴수도 있지만, 이 방법은 배열 요소를 반복하는게 아니라 배열 인덱스를 반복합니다. 뿐만 아니라, 누군가 `Array.prototype`에 새로운 속성을 추가하면, 그 속성들 또한 이런 루프로 반복됩니다. 따라서 이런 반복 형태는 배열에는 추천되지 않습니다.
 
 배열에 대한 또다른 반복방법은 ECMAScript 5에 추가된 [forEach()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) 입니다:
 
@@ -579,7 +593,7 @@ a.push(item);
 | `a.splice(start, delcount[, item1[, ...[, itemN]]])` | 배열의 일부분을 제거하고 다른 항목으로 대체하여 배열을 변경합니다..                  |
 | `a.reverse()`                                        | 배열의 순서를 거꾸로 배열합니다.                                                     |
 
-<h2 id=".ED.95.A8.EC.88.98_.28Functions.29" name=".ED.95.A8.EC.88.98_.28Functions.29">함수 (Functions)</h2>
+## 함수 (Functions)
 
 객체와 마찬가지로, 함수는 JavaScript를 이해하는데 핵심이 되는 컴포넌트입니다. 가장 기본적인 함수의 예는 다음과 같습니다:
 
@@ -606,7 +620,7 @@ add(2, 3, 4); // 5
 // 처음의 두 수가 더해집니다. 4는 무시됨
 ```
 
-이 예는 조금 어리석어 보이지만, 함수는 추가적으로 주어진 매개변수를 함수 내부에서 접근할수 있습니다. 이 객체는 [`arguments`](ko/Core_JavaScript_1.5_Reference/Functions/arguments)라고 하며, 해당 함수에  매개변수로 넘겨진 모든 값을 가지고 있는 배열과 비슷한 객체입니다. 우리가 원하는만큼 값을 취하는 add 함수를 다시 써보겠습니다:
+이 예는 조금 어리석어 보이지만, 함수는 추가적으로 주어진 매개변수를 함수 내부에서 접근할수 있습니다. 이 객체는 [`arguments`](/ko/Core_JavaScript_1.5_Reference/Functions/arguments)라고 하며, 해당 함수에  매개변수로 넘겨진 모든 값을 가지고 있는 배열과 비슷한 객체입니다. 우리가 원하는만큼 값을 취하는 add 함수를 다시 써보겠습니다:
 
 ```js
 function add() {
@@ -648,10 +662,9 @@ function avg(...args) {
 avg(2, 3, 4, 5); // 3.5
 ```
 
-<div class="blockIndicator note"><p>위 코드에서,변수 <strong>args</strong> 는 함수로 전달된  모든 값을 가지고 있습니다.<br><br>rest 파라미터 연산자가 함수 선언의 어느곳에 위치하든 선언 위치<em> 이후</em>에 모든 인자를 저장하는것이며, 이전이 아니라는 것이 중요합니다. 즉 ,<em> function</em> <em>avg(</em><strong>firstValue, </strong><em>...args)</em><strong> </strong>에서 함수로 전달된 첫번째 값은 <strong>firstValue </strong>변수에 저장되며, 남은 변수들은 <strong>args</strong>에 저장됩니다.</p></div>
+위 코드에서,변수 **args** 는 함수로 전달된  모든 값을 가지고 있습니다. rest 파라미터 연산자가 함수 선언의 어느곳에 위치하든 선언 위치 이후에 모든 인자를 저장하는것이며, 이전이 아니라는 것이 중요합니다. 즉 , function avg(**firstValue,**...args)에서 함수로 전달된 첫번째 값은 **firstValue** 변수에 저장되며, 남은 변수들은 **args**에 저장됩니다. 이건 또다른 유용한 언어 특성입니다만 우리를 새로운 문제점으로 인도합니다. `avg()` 함수는 콤마로 구분된 인자목록을 받지만, 배열의 평균을 알고싶은 경우라면요? 함수를 다음과 같이 재작성 하면 됩니다:
 
-이건 또다른 유용한 언어 특성입니다만 우리를 새로운 문제점으로 인도합니다. `avg()` 함수는 콤마로 구분된 인자목록을 받지만, 배열의 평균을 알고싶은 경우라면요? 함수를 다음과 같이 재작성 하면 됩니다 :
-
+```js
     function avgArray(arr) {
       var sum = 0;
       for (var i = 0, j = arr.length; i < j; i++) {
@@ -661,28 +674,32 @@ avg(2, 3, 4, 5); // 3.5
     }
 
     avgArray([2, 3, 4, 5]); // 3.5
+```
 
-하지만 우리가 이미 만든 함수를 다시 사용할 수 있다면 좋을 것입니다. 운이 좋게도 JavaScript는 함수 객체라면 모두 가지게 되는 [`apply()`](ko/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply) 메소드를 사용해서 임의의 매개변수 배열을 함수에 넘겨줄 수 있습니다.
+하지만 우리가 이미 만든 함수를 다시 사용할 수 있다면 좋을 것입니다. 운이 좋게도 JavaScript는 함수 객체라면 모두 가지게 되는 [`apply()`](/ko/Core_JavaScript_1.5_Reference/Global_Objects/Function/apply) 메소드를 사용해서 임의의 매개변수 배열을 함수에 넘겨줄 수 있습니다.
 
 ```js
-> avg.apply(null, [2, 3, 4, 5])
-3.5
+avg.apply(null, [2, 3, 4, 5]); // 3.5
 ```
 
 `apply()의 `두번째 매개변수는 '매개변수들'로 사용하고자 하는 배열입니다. 첫번째 매개변수는 나중에 설명하도록 하겠습니다. 이는 함수가 역시 객체임을 명확히 해주는 사실입니다.
 
-<div class="blockIndicator note"><p>함수 호출시 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator">전개 연산자(spread operator)</a> 를 이용하여 똑같은 결과를 얻을수 있습니다.</p><p>예를 들면: <code>avg(...numbers)</code></p></div>
+함수 호출시 [전개 연산자(spread operator)](/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator) 를 이용하여 똑같은 결과를 얻을수 있습니다. 
+
+예를 들면: `avg(...numbers)`
+
+## 익명 함수
 
 JavaScript는 익명의 함수를 만들 수 있도록 허용하고 있습니다.
 
 ```js
-var avg = function() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
-    }
-    return sum / arguments.length;
-}
+function() {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+};
 ```
 
 이것은 의미적으로 `function avg()` 형식과 같습니다. 이 특징은 매우 강력한데, 일반적인 표현식(expression)을 사용할 수있는 어디에서나 완전한 함수 정의를 넣을 수 있도록 허용하는 것이기 때문입니다. 이 특징은 다양한 요령을 부릴 수 있게합니다. 다음 예는 C에서 블록 유효 범위를 적용 시킨 것 처럼 지역 변수를 "숨기는" 요령을 보여줍니다:
@@ -700,6 +717,32 @@ a; // 4
 b; // 2
 ```
 
+But such an anonymous function isn’t useful in isolation — because without a name, there’s no way to call the function. So in practice, anonymous functions are typically used as arguments to other functions or are made callable by immediately assigning them to a variable that can be used to invoke the function:
+
+```js
+var avg = function() {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+};
+```
+
+That makes the anonymous function invocable by calling `avg()` with some arguments — that is, it’s semantically equivalent to declaring the function using the `function avg()` named-function form.
+
+But there’s a way that anonymous functions can be useful even without ever being assigned to variables or passed as arguments to other functions: JavaScript provides a mechanism for simultaneously declaring and invoking a function using a single expression. It’s called an [Immediately invoked function expression (IIFE)](/en-US/docs/Glossary/IIFE), and the syntax for using it with an anonymous function looks like this:
+
+```js
+(function() {
+  // …
+})();
+```
+
+Further details on IIFEs are out of scope for this introductory article — but a good example of what they’re particularly useful for is in the [Emulating private methods with closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures) section of the [Closures](/en-US/docs/Web/JavaScript/Closures) article.
+
+### 재귀 함수
+
 JavaScript는 재귀적으로 함수를 부를 수 있습니다. 이는 브라우저 DOM 등에서 볼수 있는 트리 구조를 다루는데 유용합니다.
 
 ```js
@@ -715,7 +758,7 @@ function countChars(elm) {
 }
 ```
 
-다음의 예는 익명 함수를 사용함에 있어 잠재적인 문제점을 보여줍니다: 이름이 없으면 어떻게 재귀적으로 부를 수 있을까요? JavaScript는 함수 표현식을 이렇게 이름붙이도록 지원합니다. 이름붙은 IIFEs (Immediately Invoked Function Expressions: 즉시 실행 함수 표현) 를 다음과 같이 사용할 수 있습니다:
+다음의 예는 익명 함수를 사용함에 있어 잠재적인 문제점을 보여줍니다: 이름이 없으면 어떻게 재귀적으로 부를 수 있을까요? JavaScript는 함수 표현식을 이렇게 이름붙이도록 지원합니다. 이름붙은 [IIFEs (Immediately Invoked Function Expressions)](/en-US/docs/Glossary/IIFE) (즉시 실행 함수 표현)를 다음과 같이 사용할 수 있습니다:
 
 ```js
 var charsInBody = (function counter(elm) {
@@ -734,9 +777,9 @@ var charsInBody = (function counter(elm) {
 
 JavaScript 함수는 - JavsScript 내의 다른 모든 것들과 마찬가지로 -  그 자체가 객체이며, 객체 섹션에서 이미 확인한 것처럼, 속성을 추가하거나 변경할수 있다는 점을 명심하십시오
 
-<h2 id=".EC.82.AC.EC.9A.A9.EC.9E.90_.EC.A0.95.EC.9D.98_.EA.B0.9D.EC.B2.B4" name=".EC.82.AC.EC.9A.A9.EC.9E.90_.EC.A0.95.EC.9D.98_.EA.B0.9D.EC.B2.B4">사용자 정의 객체</h2>
+## 사용자 정의 객체
 
-<div class="blockIndicator note"><p>JavaScript에서 객체 지향 프로그래밍에 대한 더 자세한 논의는 <a href="/ko/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript">객체 지향 JavaScript 소개</a>를 참조하십시오.</p></div>
+> **Note:** JavaScript에서 객체 지향 프로그래밍에 대한 더 자세한 논의는 [객체 지향 JavaScript 소개](/ko/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)를 참조하십시오.
 
 고전 객체지향 프로그래밍에서 객체는 데이터와 해당 데이터들을 다루는 메소드의 집합이었습니다. JavaScript는 프로토타입 기반 언어로, C++ 이나 Java에서 발견할 수 있는 class 구문이 없습니다(이런 이유로 class 구문에 익숙한 프로그래머들이 때때로 혼란을 경험합니다). 그 대신, JavaScrip는 function을 class로 사용합니다. 이름과 성을 필드로 가지고 있는 'person' 객체를 고려해보도록 합시다. 이름을 표시하는 두가지 방법이 있을 수 있습니다. 예를 들어, "이름 성" 또는 "성, 이름" 이런 식으로 말이죠. 이전에 다룬 함수와 객체를 사용해서 이를 표현하면 다음과 같습니다:
 
@@ -808,7 +851,7 @@ function Person(first, last) {
 var s = new Person('Simon', 'Willison');
 ```
 
-여기서 [`new`](ko/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator)라는 또다른 키워드를 도입했습니다. `new`는 `this`와 깊게 연관되어 있습니다. 새로운 빈 객체를 만든 다음 지정된 함수를 불러 새로운 객체를 `this` 에 설정합니다. `this`로 지정된 함수는 값을 반환하지 않고 단지 `this` 객체를 수정한다는 것을 명심하세요. `this` 객체를 호출하는 곳으로 반환하는 것은  `new` 입니다. '`new`' 에 의해 호출되도록 설계된 함수는 컨스트럭터 함수라고 불립니다. 일반적으로 이러한 함수의 첫자를 대문자로 써서 `new`로 불릴 컨스트럭터 함수임을 나타냅니다.
+여기서 [`new`](/ko/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator)라는 또다른 키워드를 도입했습니다. `new`는 `this`와 깊게 연관되어 있습니다. 새로운 빈 객체를 만든 다음 지정된 함수를 불러 새로운 객체를 `this` 에 설정합니다. `this`로 지정된 함수는 값을 반환하지 않고 단지 `this` 객체를 수정한다는 것을 명심하세요. `this` 객체를 호출하는 곳으로 반환하는 것은  `new` 입니다. '`new`' 에 의해 호출되도록 설계된 함수는 컨스트럭터 함수라고 불립니다. 일반적으로 이러한 함수의 첫자를 대문자로 써서 `new`로 불릴 컨스트럭터 함수임을 나타냅니다.
 
 개선된 함수는 여전히 `fullName()` 을 단독으로 호출할 때의 함정이 존재합니다.
 
@@ -894,7 +937,7 @@ Person.prototype.toString = function() {
 s.toString(); // "<Person: Simon Willison>"
 ```
 
-`avg.apply()`의 첫번째 매개변수가 null 이었던걸 기억해봅시다. `apply()`에 적용되는 첫번째 인자는 당연히 \``this`'로 간주되는 객체입니다. 여기에 `new` 의 간단한 구현을 보시죠:
+`avg.apply()`의 첫번째 매개변수가 null 이었던걸 기억해봅시다. `apply()`에 적용되는 첫번째 인자는 당연히 '`this`'로 간주되는 객체입니다. 여기에 `new` 의 간단한 구현을 보시죠:
 
 ```js
 function trivialNew(constructor, ...args) {
@@ -908,11 +951,15 @@ function trivialNew(constructor, ...args) {
 
 그러므로 이렇게 호출하는 것은
 
-    var bill = trivialNew(Person, 'William', 'Orange');
+```js
+var bill = trivialNew(Person, 'William', 'Orange');
+```
 
 아래와 거의 동일합니다.
 
-    var bill = new Person('William', 'Orange');
+```js
+var bill = new Person('William', 'Orange');
+```
 
 `apply()` 와 비슷하게 `this`를 다시 설정할 수 있게 하는, [`call`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call)이라는 이름의 자매 함수가 있는데, 인자로 단일 배열이 아니라 확장된 인자 목록을 입력받습니다.
 
@@ -927,7 +974,7 @@ s.lastNameCaps = lastNameCaps;
 s.lastNameCaps();
 ```
 
-<h3 id=".EB.82.B4.EC.9E.A5_.ED.95.A8.EC.88.98" name=".EB.82.B4.EC.9E.A5_.ED.95.A8.EC.88.98">내장 함수 (Inner functions)</h3>
+### 내장 함수 (Inner functions)
 
 다른 함수의 내부에서 JavaScript 함수를 선언할 수 있습니다. 우리는 `makePerson()` 함수 초기 버전에서 이것을 한번 본적이 있습니다. JavaScript에서 중첩 함수(nested functions)의 중요한 세부사항은 부모 함수 범위의 변수에 접근할 수 있다는 사실입니다:
 
@@ -947,7 +994,7 @@ function parentFunc() {
 
 이것은 또한 전역 변수에 대한 유혹을 뿌리칠 수 있는 좋은 대안이 됩니다. 복잡한 코드를 쓸 때, 다양한 함수들간에 값을 공유할 수 있도록 전역 변수를 사용하고 싶어집니다 - 전역 변수는 코드 유지 보수를 어렵게 만듭니다. 중첩 함수는 그 부모 함수의 범위에서 변수를 공유할 수 있으므로, 이 방법을 사용하면 전역 변수 이름공간을 건드리지 않고도 적절한 경우에 함수들을 연동시킬수 있습니다. - '지역 전역'이라고 불러도 괜찮겠네요. 이 기술을 사용할 때는 주의를 요하겠지만, 반드시 알아둬야할 유용한 기술입니다.
 
-<h2 id=".ED.8F.90.ED.8F.AC_.28Closures.29" name=".ED.8F.90.ED.8F.AC_.28Closures.29">클로져 (Closures)</h2>
+## 클로져 (Closures)
 
 클로져 (역자주: 글자 그대로 한국어로 해석하면 닫힌 주머니)는 JavaScript가 제공해야만 하는 가장 막강한 추상 개념으로 우리를 이끕니다 - 하지만 동시에 잠재적으로 가장 혼란스럽기도 합니다. 다음 함수는 무엇을 하는 걸까요?
 
@@ -968,8 +1015,8 @@ add20(7); // ?
 여기서 일어나는 일은 다른 함수의 내에 정의된 어떤 함수가 외부 함수의 변수에 액세스한다는 점에서 앞에 언급한 내장 함수에서 일어나는 일과 매우 비슷합니다. 한가지 다른 점은 외부 함수가 리턴 된다는 점인데, 상식적으로 그것에 들어 있는 변수는 사라진다고 볼 수 있습니다. 하지만 그들은 여전히*존재합니다* - 그렇지 않으면 adder 함수는 동작하지 않겠지요. 게다가, `makeAdder` 지역 변수의 서로 다른 두 "복사본"이 존재합니다 - 하나의 `a`는 5이고, 다른 하나의 `a`는 20이죠. 따라서 해당 함수를 부른 결과는 다음과 같습니다:
 
 ```js
-x(6) // 11을 돌려줌
-y(7) // 27을 돌려줌
+add5(6); // returns 11
+add20(7); // returns 27
 ```
 
 이건 실제로 일어나는 일입니다. JavaScript 함수가 실행될 때는 언제나, '범위' 객체가 생성되어 해당 함수내에서 생성된 지역 변수를 여기에 저장하고 있습니다. 함수 매개변수로서 넘겨진 어떤 변수라도 여기에 초기값으로 저장하고 있습니다. 이것은 모든 전역 변수와 함수가 들어있는 전역 객체와 비슷하지만, 두가지 중요한 차이점이 있습니다. 첫번째로, 함수가 실행될 때마다 새로운 범위 객체가 생성된다는 점과, 두번째로, (브라우저에서 window로 접근가능한) 전역 객체와 달리 범위 객체는 JavaScript 코드에서 직접적으로 액세스할 수 없다는 점입니다. 예를 들자면 현재 범위 객체의 속성에 반복 접근할 수 있는 수단이 없습니다.
@@ -982,7 +1029,7 @@ y(7) // 27을 돌려줌
 
 또한 클로져는 상태를 저장할 수 있도록 허용합니다 - 그렇기 때문에, 객체의 내부에서 자주 사용될 수 있는 것입니다.
 
-<h3 id=".EB.A9.94.EB.AA.A8.EB.A6.AC_.EB.88.84.EC.B6.9C" name=".EB.A9.94.EB.AA.A8.EB.A6.AC_.EB.88.84.EC.B6.9C">메모리 누출</h3>
+### 메모리 누출
 
 클로져의 부작용은 Internet Explorer에서 심각하지는 않지만 쉽게 메모리 누출이 된다는 것입니다. JavaScript는 가비지 컬렉트를 하는 언어 입니다. 객체가 생성됨에 따라서 메모리가 할당되고, 사용하고난 메모리는 더 참조하는 다른 객체가 없을 때 되돌아가는 방식으로 동작하는 언어란 말이죠. 호스트 환경에서 제공되는 객체들은 해당 환경에 의해 다뤄집니다.
 
@@ -1051,6 +1098,9 @@ function addHandler() {
 
 클로져를 피할 수 있는 또다른 좋은 요령은 `window.onunload` 이벤트가 발생하는 동안 순환 참조를 끊는 것입니다. 많은 이벤트 라이브러리가 이렇게 동작합니다. 주의할 것은 그렇게 하도록하면 [Firefox 1.5의 bfcache](ko/Using_Firefox_1.5_caching)를 비활성화 하게 되므로, 별 다른 이유가 없다면 Firefox에서 `unload` listener를 등록해서는 안 된다는 것입니다.
 
-<div class="originaldocinfo"><h2 id=".EC.9B.90.EB.B3.B8_.EB.AC.B8.EC.84.9C_.EC.A0.95.EB.B3.B4" name=".EC.9B.90.EB.B3.B8_.EB.AC.B8.EC.84.9C_.EC.A0.95.EB.B3.B4">원본 문서 정보</h2><ul><li>저자: <a class="external" href="http://simon.incutio.com/">Simon Willison</a></li><li>최근 갱신 날짜: March 7, 2006</li><li>저작권: © 2006 Simon Willison, contributed under the Creative Commons: Attribute-Sharealike 2.0 license.</li><li>추가 정보: For more information about this tutorial (and for links to the original talk's slides), see Simon's <a class="external" href="http://simon.incutio.com/archive/2006/03/07/etech">Etech weblog post</a>.</li></ul></div>
+## 원본 문서 정보
 
-{{ languages( { "en": "en/A_re-introduction_to_JavaScript", "fr": "fr/Une_reintroduction_a_JavaScript", "it": "it/Una_re-introduzione_a_Javascript", "ja": "ja/A_re-introduction_to_JavaScript", "pl": "pl/JavaScript/Na_pocz?tek", "zh-cn": "cn/A_re-introduction_to_JavaScript" } ) }}
+- 저자: [Simon Willison](http://simon.incutio.com/)
+- 최근 갱신 날짜: March 7, 2006
+- 저작권: © 2006 Simon Willison, contributed under the Creative Commons: Attribute-Sharealike 2.0 license.
+- 추가 정보: For more information about this tutorial (and for links to the original talk's slides), see Simon's [Etech weblog post](http://simon.incutio.com/archive/2006/03/07/etech).
