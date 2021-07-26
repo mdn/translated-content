@@ -13,26 +13,22 @@ original_slug: Web/JavaScript/About
 
 ## JavaScript란 무엇인가?
 
-**JavaScript** (줄여서 **JS**)는 일급 함수를 사용하는 가벼운 객체 지
-향 인터프리터 언어이며 웹페이지의 스크립트 언어로 잘 알려져 있지만, 브라우저가
-아닌 환경에서도 많이 사용된다. 프로토타입 기반, 다중 패러다임 스크립트 언어이며,
+**JavaScript** (줄여서 **JS**)는 [일급 함수](https://en.wikipedia.org/wiki/First-class_function)를 사용하는 가벼운 객체 지향 인터프리터 언어이며 웹페이지의 스크립트 언어로 잘 알려져 있지만, 브라우저가
+아닌 환경에서도 많이 사용된다. [프로토타입 기반](https://en.wikipedia.org/wiki/Prototype-based_programming), 다중 패러다임 스크립트 언어이며,
 동적이고 명령어, 객체 지향, 함수 프로그래밍 스타일을 지원한다.
 
 자바스크립트는 클라이언트 측 웹(브라우저)에서 실행 되고, 웹 페이지가 이벤트 발생
 시 어떻게 작동하는 지 디자인 / 프로그래밍할 수 있다. 자바스크립트는 쉽게 배울 수
 있고 강력한 스크립트 언어로 웹 페이지 동작을 제어하는 데 널리 사용된다.
 
-대중적인 오해와 달리, **Javascript는 인터프리트 형태 자바가 아니다.** 간단히 말
-하면, Javascript는 프로토 타입 기반 객체 생성을 지원하는 동적 스크립트 언어이다.
- <span style="line-height: 1.5;">기본적인 문법은  언어 학습에 필요한 새로운 개념
-을 줄이기 위해 Java와 C++의 if문, for와 while문, switch문과 try...catch 구문을
-사용하는 언어구조를 사용하며, 그와 같은 (거의 가까운) 동작을 한다.</span>
+대중적인 오해와 달리, **Javascript는 "인터프리트 형태의 자바"가 아니다.** 간단히 말
+하면, Javascript는 [프로토타입 기반](/ko/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#class-based_vs._prototype-based_languages) 객체 생성을 지원하는 동적 스크립트 언어이다. 기본적인 문법은  언어 학습에 필요한 새로운 개념을 줄이기 위해 Java와 C++의 `if`문, `for`와 `while`문, `switch`문과 `try...catch` 구문을 사용하는 언어구조를 사용하며, 그와 같은 (거의 가까운) 동작을 한다.
 
-<p style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; margin: 0px 0px 1.7em; padding-top: 0px;">Javascript는 <a class="external" href="http://www.instantweb.com/%7Efoldoc/foldoc.cgi?query=procedural&#x26;action=Search">절차지향 (procedural)</a> 언어와  <a class="external" href="http://www.instantweb.com/%7Efoldoc/foldoc.cgi?query=object+oriented&#x26;action=Search">객체지향 (object oriented)</a> 언어 두가지 형태로 만들수 있다. 자바스크립트에서 객체는 실시간으로 빈 객체를 오버라이딩하여 메소드와 프로퍼티를 연결하는 (프로그래밍)방식으로 생성된다. <span style="line-height: 1.5;">C++ 및 Java와 같은 컴파일 언어에서 공통적인 구문 클래스 정의와 반대되는 개념이다. 한번 객체가 생성하면, 비슷한 객체를 생성할 때 프로토타입으로 사용할 수 있다.</span></p>
+Javascript는 [절차지향 (procedural)](http://www.instantweb.com/%7Efoldoc/foldoc.cgi?query=procedural&#x26;action=Search) 언어와 [객체지향 (object oriented)](http://www.instantweb.com/%7Efoldoc/foldoc.cgi?query=object+oriented&#x26;action=Search) 언어 두가지 형태로 만들수 있다. 자바스크립트에서 객체는 **실행 시간에** 빈 객체를 오버라이딩하여 메소드와 프로퍼티를 연결하는 (프로그래밍)방식으로 생성된다. C++ 및 Java와 같은 컴파일 언어에서 공통적인 구문 클래스 정의와 반대되는 개념이다. 한번 객체가 생성하면, 비슷한 객체를 생성할 때 프로토타입으로 사용할 수 있다.
 
-<p style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; margin: 0px 0px 1.7em; padding-top: 0px;">JavaScript의 동적인 성질은, 실행시의 오브젝트 구축, 가변 인수 리스트, 함수 변수, (eval 에 의한)동적 스크립트 작성, (for ... in 에 의한) 오브젝트의 내부참조, 또는 소스코드 복원 (JavaScript 의 프로그램은 함수본체를 소스텍스트에 역컴파일할 수 있다.) 을 포함하고 있다.</p>
+JavaScript의 동적인 성질은, 실행시의 오브젝트 구축, 가변 인수 리스트, 함수 변수, ([`eval`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval)) 에 의한)동적 스크립트 작성, (`for ... in` 에 의한) 오브젝트의 내부참조, 또는 소스코드 복원 (JavaScript 의 프로그램은 함수본체를 소스텍스트에 역컴파일할 수 있다.) 을 포함하고 있다.
 
-<p style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px; margin: 0px 0px 1.7em; padding-top: 0px;">자바스크립트 프로그래밍에 대한 더 자세한 설명은 아래의 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/About#JavaScript_%EC%9E%90%EC%9B%90">자바스크립트 리소스</a> 링크를 참조하면 된다.</p>
+자바스크립트 프로그래밍에 대한 더 자세한 설명은 아래의 [자바스크립트 자원](#JavaScript_자원) 링크를 참조하면 된다.
 
 ## 어떠한 JavaScript 구현이 유용한가?
 
