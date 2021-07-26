@@ -3,11 +3,11 @@ title: JavaScript 재입문하기 (JS ​튜토리얼)
 slug: Web/JavaScript/A_re-introduction_to_JavaScript
 tags:
   - CodingScripting
+  - Guide
   - Intermediate
   - Intro
   - JavaScript
   - Learn
-  - Tutorial
 translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 original_slug: A_re-introduction_to_JavaScript
 ---
@@ -17,42 +17,44 @@ original_slug: A_re-introduction_to_JavaScript
 
 이 이야기를 이해하는데는 이 언어의 역사를 먼저 보는 것이 도움이 됩니다. JavaScript는 1995년 Netscape의 엔지니어 Brendan Eich에 의해 만들어졌고, 1996년 초에 Netscape 2와 함께 처음 릴리즈 되었습니다. 이것은 원래 LiveScript로 불리기로 되어 있었습니다만 Sun Microsystem의 Java 언어의 성공에 편승해보려고 -두 언어 사이의 공통점이 매우 적음에도 불구하고- 불행이 예견된 마케팅 결정에 따라 이름이 바뀌게 됩니다. 이 결정은 역사상 유래가 없는 혼란의 근원이 되어버립니다.
 
-몇 달 후, Microsoft는 IE3와 함께 JScript를 발표했습니다. 이 JScript는 Javascript를 정말 닮았고 호환성이 좋았습니다. 몇 달 뒤에, Netscape는 1997년에 [ECMAScript](/ko/docs/Glossary/ECMAScript) 표준의 첫번째 판이 되는 JavaScript를 유럽 표준화 단체인 [Ecma International](http://www.ecma-international.org/)에 보냅니다. 이 표준은 1999년에 [ECMAScript edition 3](http://www.ecma-international.org/publications/standards/Ecma-262.htm)에 따라 큰 규모의 개정을 거친 후, 유례없이 아주 안정된 상태로 계속 유지되고 있습니다. <span style="line-height: 16.7999992370605px;">4번째 판은 중도 포기되었는데, 언어의 복잡성 증가에 관련한 정치적 문제 때문이었습니다. 이 4번째 판의 많은 파트들은 ECMAScript edition 5 (2009년 12월에 출간)와 6번째 개정판 규격(2015년에 출간)의 근간을 형성하고 있습니다. </span>
+몇 달 후, Microsoft는 IE3와 함께 JScript를 발표했습니다. 이 JScript는 Javascript를 정말 닮았고 호환성이 좋았습니다. 몇 달 뒤에, Netscape는 1997년에 [ECMAScript](/ko/docs/Glossary/ECMAScript) 표준의 첫번째 판이 되는 JavaScript를 유럽 표준화 단체인 [Ecma International](http://www.ecma-international.org/)에 보냅니다. 이 표준은 1999년에 [ECMAScript edition 3](http://www.ecma-international.org/publications/standards/Ecma-262.htm)에 따라 큰 규모의 개정을 거친 후, 유례없이 아주 안정된 상태로 계속 유지되고 있습니다.4번째 판은 중도 포기되었는데, 언어의 복잡성 증가에 관련한 정치적 문제 때문이었습니다. 이 4번째 판의 많은 파트들은 ECMAScript edition 5 (2009년 12월에 출간)와 6번째 개정판 규격(2015년에 출간)의 근간을 형성하고 있습니다.
 
-<div class="note"><p> 이제부터는 ECMAScript를 우리에게 좀 더 친근한 말인 <span style="line-height: 16.7999992370605px;"> "</span>JavaScript"라고 부르겠습니다.</p></div>
+> **Note:** 이제부터는 ECMAScript를 우리에게 좀 더 친근한 말인 "JavaScript"라고 부르겠습니다.
 
 대부분의 프로그래밍 언어와는 달리, JavaScript 언어는 입출력 개념이 없습니다. 이 언어는 호스트 환경 아래에서 스크립트 언어로서 동작하도록 디자인 되어있고, 따라서 외부 세계와 통신하기위해 호스트 환경이 제공하는 메커니즘에 의존합니다. 대부분의 경우 일반적인 호스트 환경은 브라우저이지만 JavaScript 인터프리터는 Adobe Acrobat, Photoshop, SVG images, Yahoo! 위젯 엔진 등의 제품에서도 발견할 수 있고, [node.js](http://nodejs.org/) 와 같은 서버 측 환경에서도 찾을 수 있습니다. 하지만 JavaScript가 사용되는 분야는 계속 더 넓혀지고 있습니다. NoSQL 데이터베이스, [Apache CouchDB](http://couchdb.apache.org/), 임베디드 컴퓨터, GNU/Linux OS의 가장 유명한 GUI 인 [GNOME](http://www.gnome.org/) 과 같은 데스크톱 환경에서도 JavaScript가 사용됩니다.
 
-<h2 id=".EA.B0.9C.EC.9A.94" name=".EA.B0.9C.EC.9A.94">개요</h2>
+## 개요
 
-JavaScript는 유형 및 연산자, 표준 내장 객체 및 메소드가 있는 다중 패러다임, 동적 언어입니다. 구문은 Java 및 C 언어를 기반으로합니다. 이러한 언어의 많은 구조가 JavaScript에도 적용됩니다. JavaScript는 클래스 대신 객체 프로토 타입을 사용하여 객체 지향 프로그래밍을 지원합니다 ([프로토 타입 상속](/ko//docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) 및 ES2015 {{jsxref("Classes")}}). JavaScript는 함수형 프로그래밍도 지원합니다. 함수는 객체이며, 함수는 실행 가능한 코드를 유지하고 다른 객체와 마찬가지로 전달 될 수 있습니다.
+JavaScript는 유형 및 연산자, 표준 내장 객체 및 메소드가 있는 다중 패러다임, 동적 언어입니다. 구문은 Java 및 C 언어를 기반으로합니다. 이러한 언어의 많은 구조가 JavaScript에도 적용됩니다. JavaScript는 클래스 대신 객체 프로토 타입을 사용하여 객체 지향 프로그래밍을 지원합니다 ([프로토 타입 상속](/ko//docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) 및 ES2015 [classes](/ko/docs/Web/JavaScript/Reference/Classes). JavaScript는 함수형 프로그래밍도 지원합니다. 함수는 객체이며, 함수는 실행 가능한 코드를 유지하고 다른 객체와 마찬가지로 전달 될 수 있습니다.
 
 어떤 언어에서라도 기초가 되는 부분인 타입을 살펴보는 것부터 시작해봅시다. JavaScript 프로그램은 값을 다루고 해당 값은 모두 타입을 가지고 있습니다. JavaScript의 타입은 다음과 같습니다:
 
-- [수 (Number)](ko/Web/JavaScript/Reference/Global_Objects/Number)
-- [문자열 (String)](ko/Web/JavaScript/Reference/Global_Objects/String)
-- [부울 (Boolean)](ko/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [함수 (Function)](ko/Web/JavaScript/Reference/Global_Objects/Function)
-- [객체 (Object)](ko/Web/JavaScript/Reference/Global_Objects/Object)
-- [기호 (Symbol)](ko/Web/JavaScript/Reference/Global_Objects/Symbol) (ES2015에 새롭게 추가)
+- [수 (Number)](/ko/Web/JavaScript/Reference/Global_Objects/Number)
+- [BigInt](/ko/docs/Web/JavaScript/Data_structures#bigint_type)
+- [문자열 (String)](/ko/Web/JavaScript/Reference/Global_Objects/String)
+- [부울 (Boolean)](/ko/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [함수 (Function)](/ko/Web/JavaScript/Reference/Global_Objects/Function)
+- [객체 (Object)](/ko/Web/JavaScript/Reference/Global_Objects/Object)
+- [기호 (Symbol)](/ko/Web/JavaScript/Reference/Global_Objects/Symbol) (ES2015에 새롭게 추가)
 
-... 오, 그리고 약간 특별한 타입인 정의되지 않음(Undefined) 과 널(Null) 이 있습니다. 또한 객체의 특별한 종류인 [배열(Array) 객체](ko/Web/JavaScript/Reference/Global_Objects/Array). 그리고 자유롭게 사용할 수 있는 [날짜(Date) 객체](ko/Web/JavaScript/Reference/Global_Objects/Date) 와 [정규식(RegExp) 객체](ko/Web/JavaScript/Reference/Global_Objects/RegExp)가 있습니다. 그리고 기술적으로 정확히 말해 함수(Function)는 단지 객체의 특별한 타입으로 취급됩니다. 따라서 타입 구조도를 정리해보면 다음과 같습니다:
+... 오, 그리고 약간 특별한 타입인 [undefined](/ko/docs/Web/JavaScript/Data_structures#undefined_type) 과 [null](/ko/docs/Web/JavaScript/Data_structures#null_type) 이 있습니다. 또한 객체의 특별한 종류인 [배열(Array) 객체](ko/Web/JavaScript/Reference/Global_Objects/Array). 그리고 자유롭게 사용할 수 있는 [날짜(Date) 객체](ko/Web/JavaScript/Reference/Global_Objects/Date) 와 [정규식(RegExp) 객체](ko/Web/JavaScript/Reference/Global_Objects/RegExp)가 있습니다. 그리고 기술적으로 정확히 말해 함수(Function)는 단지 객체의 특별한 타입으로 취급됩니다. 따라서 타입 구조도를 정리해보면 다음과 같습니다:
 
-- [수 (Number)](ko/Web/JavaScript/Reference/Global_Objects/Number)
-- [문자열 (String)](ko/Web/JavaScript/Reference/Global_Objects/String)
-- [부울 (Boolean)](ko/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [기호 (Symbol)](ko/Web/JavaScript/Reference/Global_Objects/Symbol)
-- [객체 (Object)](ko/Web/JavaScript/Reference/Global_Objects/Object)
+- [수 (Number)](/ko/Web/JavaScript/Reference/Global_Objects/Number)
+- [BigInt](/ko/docs/Web/JavaScript/Data_structures#bigint_type)
+- [문자열 (String)](/ko/Web/JavaScript/Reference/Global_Objects/String)
+- [부울 (Boolean)](/ko/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [기호 (Symbol)](/ko/Web/JavaScript/Reference/Global_Objects/Symbol)
+- [객체 (Object)](/ko/Web/JavaScript/Reference/Global_Objects/Object)
 
-  - [함수 (Function)](ko/Web/JavaScript/Reference/Global_Objects/Function)
-  - [배열 (Array)](ko/Web/JavaScript/Reference/Global_Objects/Array)
-  - [날짜 (Date)](ko/Web/JavaScript/Reference/Global_Objects/Date)
-  - [정규식 (RegExp)](ko/Web/JavaScript/Reference/Global_Objects/RegExp)
+  - [함수 (Function)](/ko/Web/JavaScript/Reference/Global_Objects/Function)
+  - [배열 (Array)](/ko/Web/JavaScript/Reference/Global_Objects/Array)
+  - [날짜 (Date)](/ko/Web/JavaScript/Reference/Global_Objects/Date)
+  - [정규식 (RegExp)](/ko/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-- [널 (Null)](ko/Web/JavaScript/Reference/Global_Objects/null)
-- [정의되지 않음 (Undefined)](ko/Web/JavaScript/Reference/Global_Objects/undefined)
+- [널 (Null)](/ko/Web/JavaScript/Reference/Global_Objects/null)
+- [정의되지 않음 (Undefined)](/ko/Web/JavaScript/Reference/Global_Objects/undefined)
 
-그리고 또 몇 가지 [오류](ko/Web/JavaScript/Reference/Global_Objects/Error) 타입이 내장되어 있습니다. 그렇지만 처음 구조도를 기억하고만 있으면 다른 것들도 아주 쉽게 이해할 수 있을 것입니다.
+그리고 또 몇 가지 [오류](/ko/Web/JavaScript/Reference/Global_Objects/Error) 타입이 내장되어 있습니다. 그렇지만 처음 구조도를 기억하고만 있으면 다른 것들도 아주 쉽게 이해할 수 있을 것입니다.
 
 <h2 id=".EC.88.98_.28Numbers.29" name=".EC.88.98_.28Numbers.29">수 (Numbers)</h2>
 
