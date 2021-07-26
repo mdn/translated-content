@@ -81,7 +81,7 @@ Infinity
 -Infinity
 ```
 
-숫자가 보통 값만으로 표현되긴 하지만, 자바스크립트는 [몇 가지 이진 연산자](/ko/JavaScript/Reference/Operators/Bitwise_Operators "en/JavaScript/Reference/Operators/Bitwise_Operators")도 제공한다. 
+숫자가 보통 값만으로 표현되긴 하지만, 자바스크립트는 [몇 가지 이진 연산자](/ko/docs/JavaScript/Reference/Operators/Bitwise_Operators)도 제공한다. 
 
 > **참고:** 이러한 이진 연산자들은 [비트 마스킹(bit masking)](https://en.wikipedia.org/wiki/Mask_%28computing%29) 기법으로 한 숫자 안에 여러 Boolean 값을 저장하는데도 쓸 수 있다. 일반적으로 이런 방법은 나쁜 방법이지만, 자바스크립트에서는 (Boolean 값의 배열이나 Boolean 값들을 이름있는 속성들로 가지는 객체 같은) Boolean 덩어리를 나타낼 다른 방법이 없다. 비트 마스킹은 또한 코드를 이해하고, 읽고, 유지보수하는데에 있어서 좀 더 어렵게 만드는 경향이 있다. 
 
@@ -116,8 +116,8 @@ A `BigInt` behaves like a `Number` in cases where it is converted to `Boolean`: 
 
 C 같은 언어와는 다르게, 자바스크립트의 문자열은 변경 불가능 (immutable) 하다. 이것은 한 번 문자열이 생성되면, 그 문자열을 수정할 수 없다는걸 의미한다. 그러나 원래 문자열에서 일부가 수정된 다른 문자열을 만드는건 가능하다. 예를 들자면 이렇다.
 
-- 원래 문자열에서 각각의 글자를 추출하거나 [`String.substr()`](/en/JavaScript/Reference/Global_Objects/String/substr "substr")을 사용해서 만든 부분 문자열
-- 접합 연산자 (`+`) 나 [`String.concat()`](/en/JavaScript/Reference/Global_Objects/String/concat "concat") 으로 두 문자열을 합친 문자열
+- 원래 문자열에서 각각의 글자를 추출하거나 [`String.substr()`](/ko/docs/JavaScript/Reference/Global_Objects/String/substr)을 사용해서 만든 부분 문자열
+- 접합 연산자 (`+`) 나 [`String.concat()`](/ko/docs/JavaScript/Reference/Global_Objects/String/concat) 으로 두 문자열을 합친 문자열
 
 #### "문자열의 자료형화"를 조심하라!
 
@@ -125,7 +125,7 @@ C 같은 언어와는 다르게, 자바스크립트의 문자열은 변경 불�
 
 - 접합 연산자로 손쉽게 복잡한 문자열을 만들 수 있다.
 - 문자열은 디버깅이 쉽다 (화면에 출력한 내용이 문자열 변수에 있는 값과 같다)
-- 문자열은 많은 API 에서 사용하는 공통분모이고 ([입력 필드](/ko/DOM/HTMLInputElement), [로컬 스토리지](/ko/Storage)  값, {{ domxref("XMLHttpRequest") }} 요청에서 `responseText`를 사용할 때 등) 그러다보니 문자열만으로 작업하는게 매혹적일 수 있다.
+- 문자열은 많은 API 에서 사용하는 공통분모이고 ([입력 필드](/ko/docs/DOM/HTMLInputElement), [로컬 스토리지](/ko/docs/Storage)  값, {{ domxref("XMLHttpRequest") }} 요청에서 `responseText`를 사용할 때 등) 그러다보니 문자열만으로 작업하는게 매혹적일 수 있다.
 
 규칙만 잘 정의해놓는다면, 어떤 자료구조가 되던 문자열로 표시할 수 있다. 그렇다고 해서 이게 좋은 방법이 되는 건 아니다. 예를 들자면, 구분자로 리스트 자료형을 흉내낼 수 있을 것이다 (하지만 자바스크립트의 배열을 사용하는게 더 알맞을 것이다). 불행하게도, 리스트의 요소중에 구분자가 들어있는 요소가 있다면 리스트는 엉망진창이 될 것이다. 물론 탈출 문자 (escape character) 등을 사용하거나 할 수도 있을 것이다. 하지만 이런 것들은 모두 미리 정해놓은 규칙을 필요로 하고, 덕분에 불필요한 관리 부담을 낳는다.
 
@@ -141,7 +141,7 @@ Symbol 은 ECMAScript 6 에서 추가되었다. Symbol은 **유일**하고 **변
 
 ### 속성 (Properties)
 
-자바스크립트에서, 객체는 속성들을 담고있는 가방 (collection) 으로 볼 수 있다. [객체 리터럴 문법 (object literal syntax)](/ko/JavaScript/Guide/Values,_variables,_and_literals#Object_literals) 으로 제한적으로 몇 가지 속성을 초기화할 수 있고, 그러고 나서 속성들을 추가하거나 제거할 수도 있다. 속성 값은 객체를 포함해 어떠한 자료형도 될 수 있고, 그 덕분에  복잡한 데이터 구조를 형성하는게 가능해진다. 속성은 키 (key) 값으로 식별된다. 키 값은 String 이거나 Symbol 값이다.
+자바스크립트에서, 객체는 속성들을 담고있는 가방 (collection) 으로 볼 수 있다. [객체 리터럴 문법 (object literal syntax)](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals) 으로 제한적으로 몇 가지 속성을 초기화할 수 있고, 그러고 나서 속성들을 추가하거나 제거할 수도 있다. 속성 값은 객체를 포함해 어떠한 자료형도 될 수 있고, 그 덕분에  복잡한 데이터 구조를 형성하는게 가능해진다. 속성은 키 (key) 값으로 식별된다. 키 값은 String 이거나 Symbol 값이다.
 
 두 종류의 객체 속성이 있는데, 이들은 종류에 따라 특성값들을 가질 수 있다. 데이터 (data) 속성과 접근자 (accessor) 속성이 그것이다.
 
@@ -230,15 +230,15 @@ Symbol 은 ECMAScript 6 에서 추가되었다. Symbol은 **유일**하고 **변
 
 ### "Normal" objects, and functions
 
-자바스크립트 오브젝트는 키와 값의 매핑이다. 키는 문자열이고 값은 다른 어떤 값도 될 수 있다. 오브젝트는 [hashmaps](https://en.wikipedia.org/wiki/Hash_table)을 표현하는데 적합하다. 표준이 아닌 [\_\_proto\_\_](/ko/JavaScript/Reference/Global_Objects/Object/proto "__proto__")  슈도 프로퍼티를 사용할 때는 주의하자. 이것을 지원하는 환경에서는 `'__proto__'는 오브젝트의 프로토타입을 의미하므로 이 이름을 키로 사용할 수 없다. 속성을 사용할 수 없다. 문자열의 출처가 분명하지 않을 때(입력 필드의 입력값 등)`주의가 필요하다. [이런 일이 생길 수도 있다](https://productforums.google.com/forum/#!category-topic/docs/documents/0hQWeOvCcHU). 이 때는  [StringMap abstraction](https://code.google.com/p/google-caja/source/browse/trunk/src/com/google/caja/ses/StringMap.js?r=4779) 같은 대안을 사용해보자.함수는 일반 오브젝트에서 호출 가능한 특성을 추가한 오브젝트이다.
+자바스크립트 오브젝트는 키와 값의 매핑이다. 키는 문자열이고 값은 다른 어떤 값도 될 수 있다. 오브젝트는 [hashmaps](https://en.wikipedia.org/wiki/Hash_table)을 표현하는데 적합하다. 표준이 아닌 [\_\_proto\_\_](/ko/docs/JavaScript/Reference/Global_Objects/Object/proto "__proto__")  슈도 프로퍼티를 사용할 때는 주의하자. 이것을 지원하는 환경에서는 `'__proto__'는 오브젝트의 프로토타입을 의미하므로 이 이름을 키로 사용할 수 없다. 속성을 사용할 수 없다. 문자열의 출처가 분명하지 않을 때(입력 필드의 입력값 등)`주의가 필요하다. [이런 일이 생길 수도 있다](https://productforums.google.com/forum/#!category-topic/docs/documents/0hQWeOvCcHU). 이 때는  [StringMap abstraction](https://code.google.com/p/google-caja/source/browse/trunk/src/com/google/caja/ses/StringMap.js?r=4779) 같은 대안을 사용해보자.함수는 일반 오브젝트에서 호출 가능한 특성을 추가한 오브젝트이다.
 
 ### Dates
 
-시간을 나타내려면 [Date utility](/ko/JavaScript/Reference/Global_Objects/Date "en/JavaScript/Reference/Global_Objects/Date")를 사용하자. 최고의 선택이다.
+시간을 나타내려면 [Date utility](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date "en/JavaScript/Reference/Global_Objects/Date")를 사용하자. 최고의 선택이다.
 
 ### Arrays
 
-[배열(Arrays](/ko/JavaScript/Reference/Global_Objects/Array "Array")) 는 정수키를 가지는 일련의 값들을 표현하기 위한 오브젝트이다. 배열 오브젝트에는 길이를 나타내는 'length'란 속성도 있다. 배열은 Array.prototype을 상속받으므로 배열을 다룰 때 편한 [indexOf](/ko/JavaScript/Reference/Global_Objects/Array/indexOf) (배열에서 값 검색)와 [push](/ko/JavaScript/Reference/Global_Objects/Array/push) (새로운 값 추가) 같은 함수를 사용할 수 있다. 배열은 리스트나 집합을 표현하는데 적합하다.
+[배열(Arrays](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array "Array")) 는 정수키를 가지는 일련의 값들을 표현하기 위한 오브젝트이다. 배열 오브젝트에는 길이를 나타내는 'length'란 속성도 있다. 배열은 Array.prototype을 상속받으므로 배열을 다룰 때 편한 [indexOf](/ko/docs/JavaScript/Reference/Global_Objects/Array/indexOf) (배열에서 값 검색)와 [push](/ko/docs/JavaScript/Reference/Global_Objects/Array/push) (새로운 값 추가) 같은 함수를 사용할 수 있다. 배열은 리스트나 집합을 표현하는데 적합하다.
 
 [Typed Arrays](/ko/docs/Web/JavaScript/Typed_arrays)는 ECMAScript 2015에서 JavaScript의 새로운 기능이며 기본 바이너리 데이터 버퍼의 배열과 유사한 보기를 제공합니다. 다음 표는 동등한 C 데이터 유형을 결정하는 데 도움이 됩니다.
 
