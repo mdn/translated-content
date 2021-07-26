@@ -17,23 +17,31 @@ var foo = "bar"; // foo 는 이제 String 임
 var foo = true;  // foo 는 이제 Boolean 임
 ```
 
-## 데이터 타입
+## 데이터 및 구조 유형
 
-최신 ECMAScript 표준은 다음과 같은 7개의 자료형을  정의한다.
+최신 ECMAScript 표준은 9가지 유형을 정의합니다.
 
-- {{Glossary("Primitive", "기본 자료형 (Primitive)")}} 인 여섯가지 데이터 타입
+- [typeof](/ko/docs/Web/JavaScript/Reference/Operators/typeof) 연산자로 확인되는 6가지 [기본](/ko/docs/Glossary/Primitive) **데이터 유형**:
 
-  - {{Glossary("Boolean")}}
-  - {{Glossary("Null")}}
-  - {{Glossary("Undefined")}}
-  - {{Glossary("Number")}}
-  - {{Glossary("String")}}
-  - {{Glossary("Symbol")}} (ECMAScript 6 에 추가됨)
+  - [undefined](/en-US/docs/Glossary/undefined) : `typeof instance === "undefined"`
+  - [Boolean](/en-US/docs/Glossary/Boolean) : `typeof instance === "boolean"`
+  - [Number](/en-US/docs/Glossary/Number) : `typeof instance === "number"`
+  - [String](/en-US/docs/Glossary/String) : `typeof instance === "string"`
+  - [BigInt](/en-US/docs/Glossary/BigInt) : `typeof instance === "bigint"`
+  - [Symbol](/en-US/docs/Glossary/Symbol) : `typeof instance === "symbol"` (ECMAScript 6 에 추가됨)
 
-- 별도로 {{Glossary("Object")}} 도 있음
+## **구조 유형**:
 
-다음 장에서 이 여섯개의 자료형을 사용하는 방법과 자료형을 조합하여 더 복잡한 자료형을 만드는 방법에 대해 알아보자.
+  - [Object](/en-US/docs/Glossary/Object) : `typeof instance === "object"`. **데이터 구조**로 사용되는 모든 [생성된](/ko/docs/Learn/JavaScript/Objects#the_constructor) 개체 인스턴스에 대한 데이터가 아닌 특수한 구조 유형: new {{jsxref("Object")}}, new {{jsxref("Array")}}, new {{jsxref("Map")}}, new {{jsxref("Set")}}, new {{jsxref("WeakMap")}}, new {{jsxref("WeakSet")}}, new {{jsxref("Date")}} 그리고 거의 모든 것이 [new keyword](/en-US/docs/Web/JavaScript/Reference/Operators/new) 로 만들어졌습니다;
+  - [Function](/en-US/docs/Glossary/Function) : 비데이터 구조이지만 `typeof` 연산자에도 값이 나옵니다: `typeof instance === "function"`. 모든 Function 생성자는 Object 생성자에서 파생되지만 이것은 단순히 Functions의 특수 축약형입니다.
 
+- **Structural Root** Primitive:
+
+  - **[null](/en-US/docs/Glossary/Null)** : `typeof instance === "object"`. 값에 대한 추가 사용법이 있는 특수 [기본](/ko/docs/Glossary/Primitive) 유형: 객체가 상속되지 않으면 `null`이 표시됩니다.
+
+`typeof` 연산자 사용의 유일한 가치 있는 목적은 데이터 유형을 확인하는 것임을 명심하십시오. `Object`에서 파생된 Structural Type을 확인하려면 항상 `"object"`를 수신하므로 typeof를 사용하는 것은 무의미합니다. 어떤 종류의 객체를 사용하고 있는지 확인하는 적절한 방법은 instanceof 키워드입니다. 그러나 그런 경우에도 오해가 있을 수 있습니다.
+
+우리가 볼 수 있듯이 거의 동일한 undefined와 null을 제외하고 모든 기본 유형의 의미는 분명합니다. 이것은 시간의 개념이 알고리즘의 목적과 엄격하게 연결되어 있기 때문에 발생합니다. 우리는 아직 존재하지 않거나 더 이상 존재하지 않는 것을 의미할 수 있습니다: **undefined**. 그러나 비어 있는 것으로 존재하는 것을 표현하려면 다른 키워드를 발명해야 합니다. 이것이 **null**이 의미하는 것입니다. 구조적 의미의 시작입니다.
 ## 기본 타입 (Primitive value)
 
 오브젝트를 제외한 모든 값은 변경 불가능한 값 (immutable value) 이다. 예를 들자면, 특히 C 언어와는 다르게도, 문자열은 불변값 (immutable) 이다. 이런 값을 "primitive values" 라고 일컫는다. 아래의  {{ anch("Strings") }} 장에서 더 자세히 설명할 것이다.
