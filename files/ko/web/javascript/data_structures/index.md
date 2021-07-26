@@ -28,7 +28,7 @@ var foo = true;  // foo 는 이제 Boolean 임
 최신 ECMAScript 표준은 다음과 같은 7개의 자료형을  정의한다.
 
 - {{Glossary("Primitive", "기본 자료형 (Primitive)")}}
-  인 여섯가지 데이터 타입
+  인 여섯가지 **데이터 타입**:
 
   - {{Glossary("Boolean")}}
   - {{Glossary("Null")}}
