@@ -211,11 +211,11 @@ tags:
   // Для каждой страны определяем шаблон, которому должен следовать почтовый индекс
   // For each country, defines the pattern that the ZIP has to follow
   var constraints = {
-    ch : [ '^(CH-)?\\d{4}$', "Индексы Швейцарии должны включать строго 4 цифры: например, CH-1950 или 1950" ],
-    fr : [ '^(F-)?\\d{5}$' , "Индексы Франции должны включать строго 5 цифр: например, F-75012 or 75012" ],
-    de : [ '^(D-)?\\d{5}$' , "Индексы Германии должны включать строго 5 цифр: например, D-12345 or 12345" ],
+    ch : [ '^(CH-)?\\d{4}$', "Switzerland ZIPs must have exactly 4 digits: e.g. CH-1950 or 1950" ],
+    fr : [ '^(F-)?\\d{5}$' , "France ZIPs must have exactly 5 digits: e.g. F-75012 or 75012" ],
+    de : [ '^(D-)?\\d{5}$' , "Germany ZIPs must have exactly 5 digits: e.g. D-12345 or 12345" ],
     nl : [ '^(NL-)?\\d{4}\\s*([A-RT-Z][A-Z]|S[BCE-RT-Z])$',
-                    "Индексы Нидерландов должны включать строго 4 цифры, за которыми следуют 2 буквы, кроме SA, SD и SS" ]
+                    "Nederland ZIPs must have exactly 4 digits, followed by 2 letters except SA, SD and SS" ]
   };
 
   // Прочитать id страны
