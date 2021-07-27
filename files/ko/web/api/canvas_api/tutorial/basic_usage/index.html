@@ -55,7 +55,7 @@ original_slug: Web/HTML/Canvas/Tutorial/Basic_usage
 
 <h2 id="렌더링_컨텍스트">렌더링 컨텍스트</h2>
 
-<p>{{HTMLElement("canvas")}} 엘리먼트는 고정 크기의 드로잉 영역을 생성하고 하나 이상의 <strong>렌더링 컨텍스(rendering contexts)</strong>를 노출하여, 출력할 컨텐츠를 생성하고 다루게 됩니다. 본 튜토리얼에서는, 2D 렌더링 컨텍스트를 집중적으로 다룹니다. 다른 컨텍스트는 다른 렌더링 타입을 제공합니다. 예를 들어, <a href="https://developer.mozilla.org/ko/docs/Web/WebGL">WebGL</a>은 <a class="external" href="http://www.khronos.org/opengles/" rel="external" title="http://en.wikipedia.org/wiki/OpenGL_ES">OpenGL ES</a> 을 기반으로 하는 3D 컨텍스트를 사용합니다.</p>
+<p>{{HTMLElement("canvas")}} 엘리먼트는 고정 크기의 드로잉 영역을 생성하고 하나 이상의 <strong>렌더링 컨텍스(rendering contexts)</strong>를 노출하여, 출력할 컨텐츠를 생성하고 다루게 됩니다. 본 튜토리얼에서는, 2D 렌더링 컨텍스트를 집중적으로 다룹니다. 다른 컨텍스트는 다른 렌더링 타입을 제공합니다. 예를 들어, <a href="https://developer.mozilla.org/ko/docs/Web/WebGL">WebGL</a>은 <a class="external" href="http://www.khronos.org/opengles/" rel="external">OpenGL ES</a> 을 기반으로 하는 3D 컨텍스트를 사용합니다.</p>
 
 <p>캔버스는 처음에 비어있습니다. 무언가를 표시하기 위해서, 어떤 스크립트가 랜더링 컨텍스트에 접근하여 그리도록 할 필요가 있습니다. {{HTMLElement("canvas")}} 요소는 {{domxref("HTMLCanvasElement.getContext", "getContext()")}} 메서드를 이용해서, 랜더링 컨텍스트와 (렌더링 컨텍스트의) 그리기 함수들을 사용할 수 있습니다.  getContext() 메서드는 렌더링 컨텍스트 타입을 지정하는 하나의 파라메터를 가집니다. 본 튜토리얼에서 다루고 있는 2D 그래픽의 경우, {{domxref("CanvasRenderingContext2D")}}을 얻기위해 <code>"2d"</code>로 지정합니다.</p>
 
