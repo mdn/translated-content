@@ -28,7 +28,7 @@ translation_of: Web/API/File/Using_files_from_web_applications
 
 <pre class="brush: js">var fichierSelectionne = document.getElementById('input').files[0];</pre>
 
-<p>Pour accèder à un fichier sélectionné en utilisant un sélecteur <a href="http://jquery.com/" title="http://jquery.com/">jQuery</a> :</p>
+<p>Pour accèder à un fichier sélectionné en utilisant un sélecteur <a href="http://jquery.com/">jQuery</a> :</p>
 
 <pre class="brush: js"><code>var </code>fichierSelectionne <code>= $('#input').get(0).files[0];
 
@@ -54,7 +54,7 @@ var </code>fichierSelectionne <code>= $('#input')[0].files[0];</code></pre>
 
 <h3 id="Ajouter_dynamiquement_un_gestionnaire_d'événement_change">Ajouter dynamiquement un gestionnaire d'événement <em>change</em></h3>
 
-<p>Dans le cas où votre champ input a été créé à l'aide d'une bibliothèque JavaScript comme <a class="external" href="http://www.jquery.com/" title="http://www.jquery.com/">jQuery</a>, il vous faudra utiliser la méthode {{ domxref("EventTarget.addEventListener()") }} pour ajouter le gestionnaire d'événement <code>change</code>, comme cela :</p>
+<p>Dans le cas où votre champ input a été créé à l'aide d'une bibliothèque JavaScript comme <a class="external" href="http://www.jquery.com/">jQuery</a>, il vous faudra utiliser la méthode {{ domxref("EventTarget.addEventListener()") }} pour ajouter le gestionnaire d'événement <code>change</code>, comme cela :</p>
 
 <pre class="brush: js">var inputElement = document.getElementById("inputField");
 inputElement.addEventListener("change", handleFiles, false);
@@ -478,7 +478,7 @@ window<span class="punctuation token">.</span>URL<span class="punctuation token"
 
 <ul>
  <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#file-upload-state-%28type=file%29" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected">File upload state</a> (HTML 5 working draft)</li>
- <li><a href="http://www.w3.org/TR/FileAPI/" title="http://www.w3.org/TR/FileAPI/">File API</a></li>
+ <li><a href="http://www.w3.org/TR/FileAPI/">File API</a></li>
 </ul>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
@@ -490,5 +490,5 @@ window<span class="punctuation token">.</span>URL<span class="punctuation token"
  <li><a href="/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest">Utiliser XMLHttpRequest</a></li>
  <li><a href="/en/Extensions/Using_the_DOM_File_API_in_chrome_code" title="en/Extensions/Using the DOM File API in chrome code">Using the DOM File API in chrome code</a></li>
  <li>{{ domxref("XMLHttpRequest") }}</li>
- <li><a class="external" href="http://www.jquery.com/" title="http://www.jquery.com/">jQuery</a> JavaScript library</li>
+ <li><a class="external" href="http://www.jquery.com/">jQuery</a> JavaScript library</li>
 </ul>
