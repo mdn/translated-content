@@ -4,7 +4,7 @@ slug: Mozilla/Firefox/Releases/3.6
 translation_of: Mozilla/Firefox/Releases/3.6
 original_slug: 개발자를_위한_Firefox_3.6
 ---
-<p><a class="external" href="http://www.firefox.com/" title="http://www.firefox.com/">Firefox 3.6</a>은 새로운 웹표준, 향상된 퍼포먼스, 그리고 전체적으로 개선된 사용자와 개발자 경험을 제공합니다. 이 페이지에서는 Firefox 3.6의 새로운 기능을 다루는 링크를 제공합니다.</p>
+<p><a class="external" href="http://www.firefox.com/">Firefox 3.6</a>은 새로운 웹표준, 향상된 퍼포먼스, 그리고 전체적으로 개선된 사용자와 개발자 경험을 제공합니다. 이 페이지에서는 Firefox 3.6의 새로운 기능을 다루는 링크를 제공합니다.</p>
 
 <h2 id="웹사이트와_어플리케이션_개발자를_위하여">웹사이트와 어플리케이션 개발자를 위하여</h2>
 
@@ -22,7 +22,7 @@ original_slug: 개발자를_위한_Firefox_3.6
  <dd>Media features have been added for Mozilla-specific system metrics, so that <a href="/En/CSS/Media_queries" title="En/CSS/Media
     queries">media queries</a> can be used to more safely check on the availability of features such as touch support.</dd>
  <dt><a href="/en/CSS/Scaling_background_images" title="en/CSS/Scaling background images">Scaling background images</a></dt>
- <dd>The <code>background-size </code>property from the <a class="external" href="http://dev.w3.org/csswg/css3-background/" title="http://dev.w3.org/csswg/css3-background/#the-background-size-property">CSS 3 Backgrounds and Borders draft</a> is now supported under the name <a href="/ko/docs/Web/CSS/-moz-background-size" title="The documentation about this has not yet been written; please consider contributing!"><code>-moz-background-size</code></a>.</dd>
+ <dd>The <code>background-size </code>property from the <a class="external" href="http://dev.w3.org/csswg/css3-background/">CSS 3 Backgrounds and Borders draft</a> is now supported under the name <a href="/ko/docs/Web/CSS/-moz-background-size" title="The documentation about this has not yet been written; please consider contributing!"><code>-moz-background-size</code></a>.</dd>
  <dt><a href="/en/About_WOFF" title="en/About WOFF">WOFF font support</a></dt>
  <dd><a href="/ko/docs/Web/CSS/@font-face" title="CSS at-rule 인 @font-face 를 사용하여 웹페이지의 텍스트에 온라인폰트(online fonts)를 적용할 수 있다. @font-face 를 사용하여 웹페이지 제작자가 원하는 폰트를 사용할 수 있게함으로써, 컴퓨터에 설치된 폰트만을 사용해야했던 제약이 없어지게되었다. @font-face at-rule 은 CSS의 top-level에서 뿐 아니라, CSS conditional-group at-rule 안에서도 사용될 수도 있다."><code>@font-face</code></a> now supports the WOFF downloadable font file format.</dd>
  <dt><a href="/en/CSS/pointer-events" title="en/CSS/pointer-events">Pointer events</a></dt>
@@ -32,7 +32,7 @@ original_slug: 개발자를_위한_Firefox_3.6
 <h4 id="다방면의_CSS_변화">다방면의 CSS 변화</h4>
 
 <ul>
- <li>The <a href="/en/CSS/length#Relative_length_units" title="en/CSS/length#Relative length units"><code>rem</code></a> length unit from <a class="external" href="http://www.w3.org/TR/css3-values/#lengths" title="http://www.w3.org/TR/css3-values/#lengths">CSS3 Values and Units</a> is now supported. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=472195" title="FIXED: support css3 root em ('rem' or 're') units">bug 472195</a></li>
+ <li>The <a href="/en/CSS/length#Relative_length_units" title="en/CSS/length#Relative length units"><code>rem</code></a> length unit from <a class="external" href="http://www.w3.org/TR/css3-values/#lengths">CSS3 Values and Units</a> is now supported. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=472195" title="FIXED: support css3 root em ('rem' or 're') units">bug 472195</a></li>
  <li><a href="/ko/docs/Web/CSS/image-rendering" title="image-rendering CSS 프로퍼티는 브라우저의 이미지 스케일링 방식에 대한 힌트를 제공합니다. 이 프로퍼티는 엘리먼트 자신에게 적용시킵니다. 스케일링(크기변경)이 안 된 이미지에게는 적용되지 않습니다."><code>image-rendering</code></a> is supported for images, background images, videos and canvases. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=423756" title="FIXED: Request: Switch for authors to turn on/off bilinear filtering when enlarging images">bug 423756</a></li>
  <li><a href="/ko/docs/Web/CSS/text-align" title="The documentation about this has not yet been written; please consider contributing!"><code>text-align</code></a>:end is now supported. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=299837" title="FIXED: [FIX]add support for text-align: end">bug 299837</a></li>
  <li>DOM changes to elements using the table <a href="/ko/docs/Web/CSS/display" title="The documentation about this has not yet been written; please consider contributing!"><code>display</code></a> types now work much better.</li>
@@ -87,7 +87,7 @@ original_slug: 개발자를_위한_Firefox_3.6
 <h4 id="Miscellaneous_DOM_changes">Miscellaneous DOM changes</h4>
 
 <ul>
- <li>The <code>getBoxObjectFor()</code> method has been <strong>removed</strong>, as it was non-standard and exposed even more non-standard stuff to the web. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=340571" title="FIXED: getBoxObjectFor leaking-onto-the-Web disaster">bug 340571</a>. Also affects <a class="external" href="http://mootools.net/" title="http://mootools.net/">MooTools</a> which uses this call for Gecko detection; this has been fixed in the latest version of MooTools, so be sure to update.</li>
+ <li>The <code>getBoxObjectFor()</code> method has been <strong>removed</strong>, as it was non-standard and exposed even more non-standard stuff to the web. See <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=340571" title="FIXED: getBoxObjectFor leaking-onto-the-Web disaster">bug 340571</a>. Also affects <a class="external" href="http://mootools.net/">MooTools</a> which uses this call for Gecko detection; this has been fixed in the latest version of MooTools, so be sure to update.</li>
  <li>The new <a class="internal" href="/en/DOM/window.mozInnerScreenX" title="en/DOM/window.mozInnerScreenX"><code>mozInnerScreenX</code></a> and <a class="internal" href="/en/DOM/window.mozInnerScreenY" title="en/DOM/window.mozInnerScreenY"><code>mozInnerScreenY</code></a> properties on DOM windows have been added; these return the screen coordinates of the top-left corner of the window's viewport.</li>
  <li>The new <a class="internal" href="/en/DOM/window.mozScreenPixelsPerCSSPixel" title="en/DOM/window.mozScreenPixelsPerCSSPixel"><code>mozScreenPixelsPerCSSPixel</code></a> property, accessible only to chrome, provides a conversion factor between CSS pixels and screen pixels; this value can vary based on the zoom level of the content.</li>
  <li>When the page's URI's document fragment identifier (the part after the "#" (hash) character) changes, a new <code>hashchange</code> event is sent to the page. See <a class="internal" href="/en/DOM/window.onhashchange" title="window.onhashchange">window.onhashchange</a> for more information. <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=385434" title="FIXED: Add support for HTML5 onhashchange (event for named anchor changes)">bug 385434</a></li>
@@ -155,7 +155,7 @@ original_slug: 개발자를_위한_Firefox_3.6
 
 <dl>
  <dt><a href="/en/Themes/Lightweight_themes" title="en/Themes/Lightweight themes">Lightweight themes</a></dt>
- <dd>Firefox 3.6 supports lightweight themes; these are easy-to-create themes that simply apply a background to the top (URL bar and button bar) and bottom (status bar) of browser windows. This is an integration of the existing <a class="external" href="http://www.getpersonas.com/" title="http://www.getpersonas.com/">Personas</a> theme architecture into Firefox.</dd>
+ <dd>Firefox 3.6 supports lightweight themes; these are easy-to-create themes that simply apply a background to the top (URL bar and button bar) and bottom (status bar) of browser windows. This is an integration of the existing <a class="external" href="http://www.getpersonas.com/">Personas</a> theme architecture into Firefox.</dd>
 </dl>
 
 <h3 id="Miscellaneous">Miscellaneous</h3>

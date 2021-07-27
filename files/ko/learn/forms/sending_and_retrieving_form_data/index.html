@@ -147,13 +147,13 @@ print(say, " ", to)</pre>
 
 <h4 id="다른_언어와_프레임_워크">다른 언어와 프레임 워크</h4>
 
-<p> <a href="/en-US/docs/" title="/en-US/docs/">Perl</a>, <a href="/en-US/docs/" title="/en-US/docs/">Java</a>, <a href="http://www.microsoft.com/net" title="http://www.microsoft.com/net">.Net</a>, <a href="/en-US/docs/" title="/en-US/docs/">Ruby</a>등 이와 같은 다른 서버측 기술이 있다. 이중에 최고라고 생각되는 것을 사용하면된다. 즉, 까다로운 일이 될 수 있기 때문에, 직접 기술을 사용하는 것은 매우 드문 일이 있음을 언급하는 것은 가치가있다.(?) <span style="line-height: 1.5;">다음과 같은 폼을 더 쉽게 다루기위해 다음과 같은 좋은 프레임 워크들이 사용된다.</span></p>
+<p> <a href="/en-US/docs/" title="/en-US/docs/">Perl</a>, <a href="/en-US/docs/" title="/en-US/docs/">Java</a>, <a href="http://www.microsoft.com/net">.Net</a>, <a href="/en-US/docs/" title="/en-US/docs/">Ruby</a>등 이와 같은 다른 서버측 기술이 있다. 이중에 최고라고 생각되는 것을 사용하면된다. 즉, 까다로운 일이 될 수 있기 때문에, 직접 기술을 사용하는 것은 매우 드문 일이 있음을 언급하는 것은 가치가있다.(?) <span style="line-height: 1.5;">다음과 같은 폼을 더 쉽게 다루기위해 다음과 같은 좋은 프레임 워크들이 사용된다.</span></p>
 
 <ul>
- <li><a href="http://symfony.com/" rel="external" title="http://symfony.com/">Symfony</a> for PHP</li>
- <li><a href="https://www.djangoproject.com/" rel="external" title="https://www.djangoproject.com/">Django</a> for Python</li>
- <li><a href="http://rubyonrails.org/" rel="external" title="http://rubyonrails.org/">Ruby On Rails</a> for Ruby</li>
- <li><a href="http://grails.org/" rel="external" title="http://grails.org/">Grails</a> for Java</li>
+ <li><a href="http://symfony.com/" rel="external">Symfony</a> for PHP</li>
+ <li><a href="https://www.djangoproject.com/" rel="external">Django</a> for Python</li>
+ <li><a href="http://rubyonrails.org/" rel="external">Ruby On Rails</a> for Ruby</li>
+ <li><a href="http://grails.org/" rel="external">Grails</a> for Java</li>
  <li>etc.</li>
 </ul>
 
@@ -211,15 +211,15 @@ print(say, " ", to)</pre>
 
 <h4 id="SQL_injection">SQL injection</h4>
 
-<p>SQL injection is a type of attack that tries to perform actions on a database used by the target web site. This typically involves sending an SQL request and hopes that the server will execute it (many times when the application server tries to store the data). This is actually <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project" rel="external" title="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">one of the main vector attacks against web sites</a>.</p>
+<p>SQL injection is a type of attack that tries to perform actions on a database used by the target web site. This typically involves sending an SQL request and hopes that the server will execute it (many times when the application server tries to store the data). This is actually <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project" rel="external">one of the main vector attacks against web sites</a>.</p>
 
-<p>The consequences can be terrible, ranging from data loss to access to a whole infrastructure by using privilege escalation. This is a very serious threat and you should never store data sent by a user without performing some sanitization (for example, by using <code><a href="http://www.php.net/manual/en/function.mysql-real-escape-string.php" rel="external" title="http://www.php.net/manual/en/function.mysql-real-escape-string.php">mysql_real_escape_string()</a></code> on a PHP/MySQL infrastructure).</p>
+<p>The consequences can be terrible, ranging from data loss to access to a whole infrastructure by using privilege escalation. This is a very serious threat and you should never store data sent by a user without performing some sanitization (for example, by using <code><a href="http://www.php.net/manual/en/function.mysql-real-escape-string.php" rel="external">mysql_real_escape_string()</a></code> on a PHP/MySQL infrastructure).</p>
 
 <h4 id="HTTP_header_injection_와_email_injection">HTTP header injection 와 email injection</h4>
 
 <p>These kinds of attacks can occur when your application builds HTTP headers or emails based on the data input by a user on a form. These won't directly damage your server or affect your users but are an open door to deeper problems such as session hijacking or phishing attacks.</p>
 
-<p>These attacks are mostly silent, and can turn your server into a <a href="http://en.wikipedia.org/wiki/Zombie_(computer_science)" rel="exernal" title="http://en.wikipedia.org/wiki/Zombie_(computer_science)">zombie</a>.</p>
+<p>These attacks are mostly silent, and can turn your server into a <a href="http://en.wikipedia.org/wiki/Zombie_(computer_science)" rel="exernal">zombie</a>.</p>
 
 <h3 id="Be_paranoid_Never_trust_your_users">Be paranoid: Never trust your users</h3>
 
@@ -244,7 +244,7 @@ print(say, " ", to)</pre>
 <p>If you want to learn more about securing a web application, you can dig into these resources:</p>
 
 <ul>
- <li><a href="https://www.owasp.org/index.php/Main_Page" rel="external" title="https://www.owasp.org/index.php/Main_Page">The Open Web Application Security Project (OWASP)</a></li>
- <li><a href="http://shiflett.org/" rel="external" title="http://shiflett.org/">Chris Shiflett's blog about PHP Security</a></li>
- <li><a href="https://code.google.com/intl/en/edu/security/index.html" rel="external" title="https://code.google.com/intl/en/edu/security/index.html">Learning material from Google</a></li>
+ <li><a href="https://www.owasp.org/index.php/Main_Page" rel="external">The Open Web Application Security Project (OWASP)</a></li>
+ <li><a href="http://shiflett.org/" rel="external">Chris Shiflett's blog about PHP Security</a></li>
+ <li><a href="https://code.google.com/intl/en/edu/security/index.html" rel="external">Learning material from Google</a></li>
 </ul>
