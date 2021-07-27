@@ -241,19 +241,19 @@ window.setTimeout("alert(\"Hello World!\");", 500);
 
 <h3 id="Minimum_maximum_delay_and_timeout_nesting">Minimum/ maximum delay and timeout nesting</h3>
 
-<p><a class="external" href="http://code.google.com/p/chromium/issues/detail?id=792#c10" title="http://code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a> browsers implement <code>setTimeout()</code> "clamping": successive <code>setTimeout()</code> calls with <code>delay</code> smaller than the "minimum delay" limit are forced to use at least the minimum delay. The minimum delay, <code>DOM_MIN_TIMEOUT_VALUE</code>, is 4 ms (stored in a preference in Firefox: <code>dom.min_timeout_value</code>), with a <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> of 5ms.</p>
+<p><a class="external" href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a> browsers implement <code>setTimeout()</code> "clamping": successive <code>setTimeout()</code> calls with <code>delay</code> smaller than the "minimum delay" limit are forced to use at least the minimum delay. The minimum delay, <code>DOM_MIN_TIMEOUT_VALUE</code>, is 4 ms (stored in a preference in Firefox: <code>dom.min_timeout_value</code>), with a <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> of 5ms.</p>
 
 <p>In fact, 4ms is <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">specified by the HTML5 spec</a> and is consistent across browsers released in 2010 and onward. Prior to {{ geckoRelease("5.0") }}, the minimum timeout value for nested timeouts was 10 ms.</p>
 
 <p>In addition to "clamping", the timeout can also fire later when the page (or the OS/browser itself) is busy with other tasks.</p>
 
-<p>To implement a 0 ms timeout in a modern browser, you can use {{ domxref("window.postMessage()") }} as <a class="external" href="http://dbaron.org/log/20100309-faster-timeouts" title="http://dbaron.org/log/20100309-faster-timeouts">described here</a>.</p>
+<p>To implement a 0 ms timeout in a modern browser, you can use {{ domxref("window.postMessage()") }} as <a class="external" href="http://dbaron.org/log/20100309-faster-timeouts">described here</a>.</p>
 
 <p>Browsers including Internet Explorer, Chrome, Safari, and Firefox store the delay as a 32-bit signed Integer internally. This causes an Integer overflow when using delays larger than 2147483647, resulting in the timeout being executed immediately.</p>
 
 <h4 id="Inactive_tabs">Inactive tabs</h4>
 
-<p>In {{ geckoRelease("5.0") }} and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or <a class="external" href="http://crbug.com/66078" title="http://crbug.com/66078">crbug.com/66078</a> for details about this in Chrome.</p>
+<p>In {{ geckoRelease("5.0") }} and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or <a class="external" href="http://crbug.com/66078">crbug.com/66078</a> for details about this in Chrome.</p>
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
@@ -328,7 +328,7 @@ window.setTimeout("alert(\"Hello World!\");", 500);
 
 <h2 id="Specification" name="Specification">Especificación</h2>
 
-<p>Parte del DOM nivel 0, como se especifica en <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#timers" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#timers">HTML5</a>.</p>
+<p>Parte del DOM nivel 0, como se especifica en <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#timers">HTML5</a>.</p>
 
 <h2 id="See_also" name="See_also">Vea también</h2>
 

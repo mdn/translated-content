@@ -30,7 +30,7 @@ original_slug: Web/HTML/Elemento/keygen
   </tr>
   <tr>
    <td>Documento normativo</td>
-   <td><a class="external" href="http://www.w3.org/TR/html5/the-button-element.html#the-keygen-element" title="http://www.w3.org/TR/html5/the-button-element.html # el-keygen-elemento">HTML 5, la sección 4.10.5</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/html5/the-button-element.html#the-keygen-element">HTML 5, la sección 4.10.5</a></td>
   </tr>
  </tbody>
 </table>
@@ -64,7 +64,7 @@ original_slug: Web/HTML/Elemento/keygen
 
 <p>Para las claves DSA, el parámetro <code>keyparams</code> especifica los parámetros DSA PQG que se van a utilizar en el proceso de creación de llaves. El valor del parámetro <code>pqg</code> es en BASE64, DER codificado Dss-Parms como se especifica en el IETF <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc3279.txt">RFC 3279</a> . El usuario puede tener una variedad de tamaños de claves DSA, lo que permite al usuario elegir una de las dimensiones definidas en el estándar DSA.</p>
 
-<p>Para las claves CE, el parámetro <code>keyparams</code> especifica el nombre de la curva elíptica en la que será generada la clave. Normalmente es una cadena de la tabla en <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/security/manager/ssl/src/nsKeygenHandler.cpp?mark=179-185,187-206,208-227,229-256#177" title="http://mxr.mozilla.org/mozilla-central/source/security/manager/ssl/src/nsKeygenHandler.cpp?mark=179-185 ,187-206 ,208-227 ,229-256 # 177">nsKeygenHandler.cpp</a> . (Tenga en cuenta que sólo un subconjunto de las curvas nombradas puede ser compatible con un navegador en particular.) Si la cadena parámetro <code>keyparams</code> no es el nombre de una curva reconocible, entonces una curva se elige de acuerdo a la fortaleza elegida por el usuario (bajo, medio, alto), utilizando la curva llamada " <code>secp384r1</code> " para alto, y la curva llamada" <code>secp256r1</code> " para claves de fuerza mediana. (Nota: la elección de la cantidad de fortalezas, los valores por defecto para cada fuerza, y la interfaz de usuario que el usuario se ofrece una opción, están fuera del alcance de esta especificación.)</p>
+<p>Para las claves CE, el parámetro <code>keyparams</code> especifica el nombre de la curva elíptica en la que será generada la clave. Normalmente es una cadena de la tabla en <a class="external" href="http://mxr.mozilla.org/mozilla-central/source/security/manager/ssl/src/nsKeygenHandler.cpp?mark=179-185,187-206,208-227,229-256#177">nsKeygenHandler.cpp</a> . (Tenga en cuenta que sólo un subconjunto de las curvas nombradas puede ser compatible con un navegador en particular.) Si la cadena parámetro <code>keyparams</code> no es el nombre de una curva reconocible, entonces una curva se elige de acuerdo a la fortaleza elegida por el usuario (bajo, medio, alto), utilizando la curva llamada " <code>secp384r1</code> " para alto, y la curva llamada" <code>secp256r1</code> " para claves de fuerza mediana. (Nota: la elección de la cantidad de fortalezas, los valores por defecto para cada fuerza, y la interfaz de usuario que el usuario se ofrece una opción, están fuera del alcance de esta especificación.)</p>
 
 <p>El elemento <code>keygen</code> sólo es válido dentro de un formulario HTML. Esto causará que algún tipo de selección se presentará al usuario para la selección del tamaño de la clave. La interfaz de usuario para la selección puede ser un menú, botones de radio, o posiblemente algo más. El navegador presentará varias fuerzas posibles. Actualmente, se ofrecen dos fuerzas, alta y media. Si el navegador del usuario está configurado para el soporte de hardware de cifrado (por ejemplo, "tarjetas inteligentes"), también puede dársele la opción al usuario de dónde generar la clave, es decir, si en una tarjeta inteligente o en el software y si se almacenan en el disco.</p>
 
@@ -91,10 +91,10 @@ original_slug: Web/HTML/Elemento/keygen
 <h2 id="Ejemplos">Ejemplos</h2>
 
 <ul>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380749" title="https://bugzilla.mozilla.org/attachment.cgi?id=380749">Sample form with RSA KEYGEN element</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380750" title="https://bugzilla.mozilla.org/attachment.cgi?id=380750">Sample form with DSA KEYGEN element and PQG Parameters</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380751" title="https://bugzilla.mozilla.org/attachment.cgi?id=380751">Sample form with DSA KEYGEN element but no PQG Parameters</a></li>
- <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380752" title="https://bugzilla.mozilla.org/attachment.cgi?id=380752">Sample form with EC KEYGEN element</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380749">Sample form with RSA KEYGEN element</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380750">Sample form with DSA KEYGEN element and PQG Parameters</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380751">Sample form with DSA KEYGEN element but no PQG Parameters</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=380752">Sample form with EC KEYGEN element</a></li>
 </ul>
 
 <h2 id="Compatibilidad_del_navegador">Compatibilidad del navegador</h2>
