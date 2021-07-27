@@ -89,7 +89,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 <p>除了定义对象的属性外，你也可以通过CSS来样式化<code>填充</code>和<code>描边</code>。语法和在html里使用CSS一样，只不过你要把<code>background-color</code>、<code>border</code>改成<code>fill</code>和<code>stroke</code>。注意，不是所有的属性都能用CSS来设置。上色和填充的部分一般是可以用CSS来设置的，比如<code>fill</code>，<code>stroke</code>，<code>stroke-dasharray</code>等，但是不包括下面会提到的渐变和图案等功能。另外，<code>width</code>、<code>height</code>，以及路径的命令等等，都不能用css设置。判断它们能不能用CSS设置还是比较容易的。</p>
 
-<div class="note style-wrap"><a class="external external-icon" href="http://www.w3.org/TR/SVG/propidx.html" title="http://www.w3.org/TR/SVG/propidx.html">SVG规范</a>将属性区分成properties和其他attributes，前者是可以用CSS设置的，后者不能。</div>
+<div class="note style-wrap"><a class="external external-icon" href="http://www.w3.org/TR/SVG/propidx.html">SVG规范</a>将属性区分成properties和其他attributes，前者是可以用CSS设置的，后者不能。</div>
 
 <p>CSS可以利用style属性插入到元素的行间：</p>
 
@@ -121,7 +121,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 <p>你最好读一下CSS教程以便掌握它，一些可以在html里使用的css，在svg里可能无法正常工作，比如<code>before</code>和<code>after</code>伪类。所以这里需要一点经验。</p>
 
-<p>你也可以定义一个外部的样式表，但是要符合<a class="external external-icon" href="http://www.w3.org/TR/xml-stylesheet/" title="http://www.w3.org/TR/xml-stylesheet/">normal XML-stylesheet syntax</a>的CSS规则:</p>
+<p>你也可以定义一个外部的样式表，但是要符合<a class="external external-icon" href="http://www.w3.org/TR/xml-stylesheet/">normal XML-stylesheet syntax</a>的CSS规则:</p>
 
 <pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;?xml-stylesheet type="text/css" href="style.css"?&gt;
