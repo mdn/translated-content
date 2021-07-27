@@ -22,7 +22,7 @@ original_slug: Web/API/File/Zugriff_auf_Dateien_von_Webapplikationen
 
 <pre class="brush: js">var selectedFile = document.getElementById('input').files[0];</pre>
 
-<p>Oder mit einem <a href="http://jquery.com/" title="http://jquery.com/">jQuery</a> Selektor:</p>
+<p>Oder mit einem <a href="http://jquery.com/">jQuery</a> Selektor:</p>
 
 <pre class="brush: js">var selectedFile = $('#input').get(0).files[0];
 
@@ -49,7 +49,7 @@ var selectedFile = $('#input')[0].files[0];</pre>
 
 <h3 id="Dynamisch_einen_Change_Listener_hinzufügen">Dynamisch einen Change Listener hinzufügen</h3>
 
-<p>Wurde das <code>input</code> Feld mit einer JavaScript Bibliothek wie <a class="external" href="http://www.jquery.com/" title="http://www.jquery.com/">jQuery</a> erzeugt, dann muss der event Listener mit {{ domxref("element.addEventListener()") }} hinzugefügt werden:</p>
+<p>Wurde das <code>input</code> Feld mit einer JavaScript Bibliothek wie <a class="external" href="http://www.jquery.com/">jQuery</a> erzeugt, dann muss der event Listener mit {{ domxref("element.addEventListener()") }} hinzugefügt werden:</p>
 
 <pre class="brush: js">var inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFiles, false);
@@ -492,8 +492,8 @@ window.URL.revokeObjectURL(obj_url);</pre>
 <h2 id="Specification" name="Specification">Specifications</h2>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/progress-events/" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected">File upload state</a> (HTML 5 working draft)</li>
- <li><a href="http://www.w3.org/TR/FileAPI/" title="http://www.w3.org/TR/FileAPI/">File API</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/progress-events/">File upload state</a> (HTML 5 working draft)</li>
+ <li><a href="http://www.w3.org/TR/FileAPI/">File API</a></li>
 </ul>
 
 <h2 id="See_also">See also</h2>
@@ -505,5 +505,5 @@ window.URL.revokeObjectURL(obj_url);</pre>
  <li><a href="/en/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="En/Using XMLHttpRequest">Using XMLHttpRequest</a></li>
  <li><a href="/en/Extensions/Using_the_DOM_File_API_in_chrome_code" title="en/Extensions/Using the DOM File API in chrome code">Using the DOM File API in chrome code</a></li>
  <li>{{ domxref("XMLHttpRequest") }}</li>
- <li><a class="external" href="http://www.jquery.com/" title="http://www.jquery.com/">jQuery</a> JavaScript library</li>
+ <li><a class="external" href="http://www.jquery.com/">jQuery</a> JavaScript library</li>
 </ul>

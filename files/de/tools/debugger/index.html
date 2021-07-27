@@ -185,7 +185,7 @@ translation_of: Tools/Debugger
   </tr>
   <tr>
    <td><strong>Show original sources</strong></td>
-   <td>Enabling this option will make the debugger use <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/" title="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source maps</a>, if they are available, to display the original source for code which has been combined, minified, or even compiled to JavaScript from a language like CoffeeScript.</td>
+   <td>Enabling this option will make the debugger use <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source maps</a>, if they are available, to display the original source for code which has been combined, minified, or even compiled to JavaScript from a language like CoffeeScript.</td>
   </tr>
  </tbody>
 </table>
@@ -292,7 +292,7 @@ translation_of: Tools/Debugger
 
 <p>JavaScript-Quellcode wird oft aus mehreren Dateien zusammengefasst und das Ergebnis wird "minified" (komprimiert), um Serverbelastung und Ladezeiten zu optimieren. Immer häufiger ist das geladene JavaScript auch Maschinen-generiert, zum Beispiel aus Sprachen wie CoffeeScript.</p>
 
-<p>Durch die Nutzung von <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/" title="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source maps</a>, kann der Debugger den gerade ausgeführten Code auf JS-Dateien "mappen", die für Menschen bequemer lesbar sind - also die entsprechenden Stellen in den Menschen-lesbaren Dateien anzeigen, was das Debuggen sehr erleichtert.</p>
+<p>Durch die Nutzung von <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">source maps</a>, kann der Debugger den gerade ausgeführten Code auf JS-Dateien "mappen", die für Menschen bequemer lesbar sind - also die entsprechenden Stellen in den Menschen-lesbaren Dateien anzeigen, was das Debuggen sehr erleichtert.</p>
 
 <p>Dazu muss man dem Debugger mitteilen, dass es solche Source maps zum verwendeten Code gibt, indem man in den <a href="#Einstellungen">Debugger-Einstellungen</a> (Zahnrad-Icon oben rechts) auf "Originalquellen anzeigen" klickt ("Show original sources"):<img alt="" src="https://mdn.mozillademos.org/files/5763/debugger-show-original-sources.png" style="display: block; margin-left: auto; margin-right: auto;">Damit das funktioniert, muss man in der Quelldatei eine Mapping-URL in einem Kommentar angegeben haben, der dem Debugger sagt, wo sich die alternativen Dateien befinden. Ein solcher Kommentar in der JavaScript-Datei sollte folgendermaßen aussehen:</p>
 
@@ -358,12 +358,12 @@ translation_of: Tools/Debugger
  <li>chrome://browser/content/devtools/debugger-panes.js</li>
 </ul>
 
-<p>Unglücklicherweise gibt es bis jetzt noch keine API um Ausdrücke im Debug-Bereich auszuwerten oder um Seitenelemente zu markieren die durch Variablen im Debug-Bereich referenziert werden. (Ist im Moment in Arbeit, siehe auch Bug-Meldung <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=653545" title="https://bugzilla.mozilla.org/show_bug.cgi?id=653545">653545</a>.)</p>
+<p>Unglücklicherweise gibt es bis jetzt noch keine API um Ausdrücke im Debug-Bereich auszuwerten oder um Seitenelemente zu markieren die durch Variablen im Debug-Bereich referenziert werden. (Ist im Moment in Arbeit, siehe auch Bug-Meldung <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=653545">653545</a>.)</p>
 
 <h2 id="Siehe_auch">Siehe auch:</h2>
 
 <ul>
  <li><a href="/en-US/docs/Mozilla/Firefox_OS/Debugging" title="/en-US/docs/Mozilla/Firefox_OS/Debugging">Debugging on Firefox OS</a></li>
- <li><a href="https://wiki.mozilla.org/Remote_Debugging_Protocol" title="https://wiki.mozilla.org/Remote_Debugging_Protocol">Remote debugging protocol</a></li>
- <li><a href="https://hacks.mozilla.org/2012/08/remote-debugging-on-firefox-for-android/" title="https://hacks.mozilla.org/2012/08/remote-debugging-on-firefox-for-android/">Remote Debugging on Firefox for Android</a> (blog post)</li>
+ <li><a href="https://wiki.mozilla.org/Remote_Debugging_Protocol">Remote debugging protocol</a></li>
+ <li><a href="https://hacks.mozilla.org/2012/08/remote-debugging-on-firefox-for-android/">Remote Debugging on Firefox for Android</a> (blog post)</li>
 </ul>
