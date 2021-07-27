@@ -30,7 +30,7 @@ var decodedData = window.atob(encodedData); // decode the string
 
 <p>В большинстве браузеров, вызов <code>window.btoa()</code> на Unicode строке выбросит исключение Character Out Of Range (Символ вне допустимого диапазона).</p>
 
-<p>Чтобы избежать этого, воспользуйтесь паттерном, предложенным <a class="external" href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html" title="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johan Sundström</a>:</p>
+<p>Чтобы избежать этого, воспользуйтесь паттерном, предложенным <a class="external" href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johan Sundström</a>:</p>
 
 <pre class="brush:js">function utf8_to_b64(str) {
     return window.btoa(unescape(encodeURIComponent(str)));
