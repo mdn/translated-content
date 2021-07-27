@@ -35,7 +35,7 @@ translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 
 <h2 id="Labeling_with_ARIA" name="Labeling_with_ARIA">ARIA로 라벨링 하기</h2>
 
-<p>HTML {{ HTMLElement("label") }} 요소는 폼 관련 요소로 적당하지만, 많은 폼 컨트롤은 {{ HTMLElement("div") }}나 {{ HTMLElement("span") }}를 사용한 동적인 Javascript 위젯으로 구현되어있습니다. W3C의 <a href="http://www.w3.org/WAI/" title="http://www.w3.org/WAI/">Web Accessibility Initiative</a>에서 만들어진 <a href="https://www.w3.org/WAI/standards-guidelines/aria/" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, <strong>Accessible Rich Internet Applications</strong> 사양은 이러한 경우를 위해 <code><a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby" title="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby">aria-labelledby</a></code> 속성을 제공하고 있습니다.</p>
+<p>HTML {{ HTMLElement("label") }} 요소는 폼 관련 요소로 적당하지만, 많은 폼 컨트롤은 {{ HTMLElement("div") }}나 {{ HTMLElement("span") }}를 사용한 동적인 Javascript 위젯으로 구현되어있습니다. W3C의 <a href="http://www.w3.org/WAI/" title="http://www.w3.org/WAI/">Web Accessibility Initiative</a>에서 만들어진 <a href="https://www.w3.org/WAI/standards-guidelines/aria/" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, <strong>Accessible Rich Internet Applications</strong> 사양은 이러한 경우를 위해 <code><a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby">aria-labelledby</a></code> 속성을 제공하고 있습니다.</p>
 
 <p>아래의 예에서는 순서 없는 리스트를 사용하여 구현한 라디오 버튼 그룹을 보여주고 있습니다. 3행의  {{ HTMLElement("ul") }} 요소에 <code>aria-labelledby</code> 속성에 라디오 그룹의 레이블인 {{ HTMLElement("h3") }} 요소의  <code>id</code>  <code>rg1_label</code>을 설정했습니다. </p>
 
@@ -56,7 +56,7 @@ translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 
 <h2 id="Describing_with_ARIA" name="Describing_with_ARIA">ARIA로 설명하기</h2>
 
-<p>폼 컨트롤을 가끔 label 외에 추가설명이 있는 경우가 있다. ARIA는 <code><a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby" title="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby">aria-describedby</a></code> 속성을 사용하여 설명을 컨트롤과 직접 연관시킵니다. </p>
+<p>폼 컨트롤을 가끔 label 외에 추가설명이 있는 경우가 있다. ARIA는 <code><a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-describedby">aria-describedby</a></code> 속성을 사용하여 설명을 컨트롤과 직접 연관시킵니다. </p>
 
 <p>아래 예제는 {{ HTMLElement("div") }} 안의 문장이  {{ HTMLElement("button") }} 요소를 설명하는 것을 보여줍니다. {{ HTMLElement("button") }}의  <code>aria-describedby</code> 속성은 {{ HTMLElement("div") }}의 <code>id</code>를 참조합니다. </p>
 
@@ -77,8 +77,8 @@ translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 <p>일반적으로 웹 개발자는 필수 필드와 유효하지 않은 필드를 나타내기 위해서 시각적인 방법을 사용합니다. 보조 기술(ATs)은 언제나 표시된 것을 통해서 정보를 추측하지는 않습니다. ARIA 는 폼 컨트롤의 필수나 유효하지 않음을 나타내는 속성을 제공합니다. </p>
 
 <ul>
- <li>AT에 폼을 완료하기 위한 필수요소임을 알리기 위해<strong> <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required" title="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required">aria-required</a></strong> 속성을 폼에 적용할 수 있습니다. </li>
- <li>데이터 필드에 올바르지 않은 데이터가 있는 것을 AT에 알리기 위해<strong> <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid" title="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid">aria-invalid</a></strong> 상태를 적용하는 것으로 사용자는 올바르지 않은 데이터를 입력했다는 것을 알 수 있습니다. </li>
+ <li>AT에 폼을 완료하기 위한 필수요소임을 알리기 위해<strong> <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required">aria-required</a></strong> 속성을 폼에 적용할 수 있습니다. </li>
+ <li>데이터 필드에 올바르지 않은 데이터가 있는 것을 AT에 알리기 위해<strong> <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid">aria-invalid</a></strong> 상태를 적용하는 것으로 사용자는 올바르지 않은 데이터를 입력했다는 것을 알 수 있습니다. </li>
 </ul>
 
 <p>아래의 예제는 세 개의 필드가 있는 간단한 폼을 보여줍니다. 4행과 12행에서는 <code>aria-required</code> 속성이 true(레이블 옆에 별표와 함께)로 설정되어 name과 email 필드가 필수임을 나타냅니다. 두 번째 예제는 email 형식을 검증하고 그 결과에 따라서 email 필드(HTML 12행)의 (요소를 시각적으로 변경하는 것과 함께) <code>aria-invalid</code> 속성을 설정하는 Javascript 스니펫입니다. </p>
@@ -113,4 +113,4 @@ translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 
 <p><a href="/en-US/docs/aria/forms/alerts" title="aria/forms/alerts">ARIA alerts to enhance forms</a> 사용법을 읽으세요.</p>
 
-<p>폼 접근성을위한 ARIA 사용에 대한 자세한 지침은 <a href="http://www.w3.org/TR/wai-aria-practices/" title="http://www.w3.org/TR/wai-aria-practices/">WAI-ARIA Authoring Practices</a> 문서를 참조하세요. </p>
+<p>폼 접근성을위한 ARIA 사용에 대한 자세한 지침은 <a href="http://www.w3.org/TR/wai-aria-practices/">WAI-ARIA Authoring Practices</a> 문서를 참조하세요. </p>
