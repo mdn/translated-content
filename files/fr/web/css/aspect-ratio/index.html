@@ -21,9 +21,9 @@ aspect-ratio: unset;
 
 <dl>
  <dt>{{cssxref("&lt;auto&gt;")}}</dt>
- <dd><a href="/en-US/docs/Web/CSS/Replaced_element">Replaced elements</a> with an intrinsic aspect ratio use <em>that</em> aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.</dd>
+ <dd>Les <a href="/fr/docs/Web/CSS/Replaced_element">éléments remplacés</a> ayant leur propre ratio d'affichage intrinsèque, ils utilisent <em>ce dernier</em>. Sinon, la boîte n'a pas de ratio d'affichage préférentiel. Les calculs de tailles impliquant un ratio d'affichage intrinsèque fonctionnent toujours avec les dimensions de la boîte de contenu.</dd>
  <dt>{{cssxref("&lt;ratio&gt;")}}</dt>
- <dd>The box’s preferred aspect ratio is the specified ratio of <code>width</code> / <code>height</code>. Size calculations involving preferred aspect ratio work with the dimensions of the box specified by <code>box-sizing</code>.</dd>
+ <dd>Le ratio d'affichage préférentiel de la boîte est le ratio spécifié par <code>width</code> / <code>height</code>. Les calculs de tailles impliquant un ratio d'affichage intrinsèque fonctionnent toujours avec les dimensions de la boîte de contenu spécifiées par <code>box-sizing</code>.</dd>
 </dl>
 
 <h2 id="formal_definition">Définition formelle</h2>
@@ -44,7 +44,7 @@ aspect-ratio: 16 / 9;
 
 <h2 id="mapping_width_and_height_to_aspect-ratio">Correspondance entre largeur et hauteur avec aspect-ratio</h2>
 
-<p>Les navigateurs ont ajouté une propriété <code>aspect-ratio</code> interne qui s'applique aux <a href="/fr/docs/Web/CSS/Replaced_element">éléments remplacés</a> et à d'autres éléments liés qui acceptent les attributs <code>width</code> et <code>height</code>. Cela se passe dans la feuille de styles interne UA du navigateur.</p>
+<p>Les navigateurs ont ajouté une propriété <code>aspect-ratio</code> interne qui s'applique aux <a href="/fr/docs/Web/CSS/Replaced_element">éléments remplacés</a> et à d'autres éléments liés qui acceptent les attributs <code>width</code> et <code>height</code>. Cela se passe dans la feuille de styles interne du navigateur.</p>
 
 <p>Sur Firefox, la règle de la feuille de styles interne ressemble à cela :</p>
 
