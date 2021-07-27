@@ -47,39 +47,39 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 <h3 id="WebIDL">WebIDL</h3>
 
-<p><a class="external" href="http://dev.w3.org/2006/webapi/WebIDL/" title="http://dev.w3.org/2006/webapi/WebIDL/">Спецификация WebIDL </a>является связующим звеном между технологиями DOM и ECMAScript.</p>
+<p><a class="external" href="http://dev.w3.org/2006/webapi/WebIDL/">Спецификация WebIDL </a>является связующим звеном между технологиями DOM и ECMAScript.</p>
 
 <h3 id="Ядро_DOM">Ядро DOM</h3>
 
 <p>Объектно-ориентированная модель документа (DOM) это кросс-платформенное, <strong>языково-независимое соглашение</strong> по представлению объектов и взаимодействию с ними в документах HTML, XHTML и XML. Объект в <strong>DOM-дереве</strong> может быть адресован и обработан с помощью своих методов. Ядро Объектно-ориентированной модели документа стандартизируется W3C и определяет языково-независимые интерфейсы, абстрагирующие HTML и XML документы как объекты, и механизмы для управления этой абстракцией. Кроме прочих вещей, опряденных в DOM, можно также найти:</p>
 
 <ul>
- <li>Структуру документа, древовидную модель, и архитектуру событий DOM в <a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html" title="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">ядре DOM</a>: <code>Node</code>, <code>Element</code>, <code>DocumentFragment</code>, <code>Document</code>, <code>DOMImplementation</code>, <code>Event</code>, <code>EventTarget</code>, …</li>
- <li>Менее строгое определение архитектуры событий DOM, также как и определённые <a class="external" href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html" title="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html">события DOM</a>.</li>
- <li>Другие вещи, такие как <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM Traversal</a> и <a class="external" href="http://html5.org/specs/dom-range.html" title="http://html5.org/specs/dom-range.html">DOM Range</a>.</li>
+ <li>Структуру документа, древовидную модель, и архитектуру событий DOM в <a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">ядре DOM</a>: <code>Node</code>, <code>Element</code>, <code>DocumentFragment</code>, <code>Document</code>, <code>DOMImplementation</code>, <code>Event</code>, <code>EventTarget</code>, …</li>
+ <li>Менее строгое определение архитектуры событий DOM, также как и определённые <a class="external" href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html">события DOM</a>.</li>
+ <li>Другие вещи, такие как <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM Traversal</a> и <a class="external" href="http://html5.org/specs/dom-range.html">DOM Range</a>.</li>
 </ul>
 
 <p>С точки зрения ECMAScript, объекты определённые в спецификации DOM называются объектами среды исполнения ("host objects").</p>
 
 <h3 id="HTML_DOM">HTML DOM</h3>
 
-<p><a class="external" href="http://www.whatwg.org/html" title="http://www.whatwg.org/html">HTML</a>, это язык разметки Web, который определён в терминах DOM/ is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the <em>meaning</em> of elements. The HTML DOM includes such things as the <code>className</code> property on HTML elements, or APIs such as {{ domxref("document.body") }}.</p>
+<p><a class="external" href="http://www.whatwg.org/html">HTML</a>, это язык разметки Web, который определён в терминах DOM/ is specified in terms of the DOM. Layered above the abstract concepts defined in DOM Core, HTML also defines the <em>meaning</em> of elements. The HTML DOM includes such things as the <code>className</code> property on HTML elements, or APIs such as {{ domxref("document.body") }}.</p>
 
 <p>The HTML specification also defines restrictions on documents; for example, it requires all children of a <code>ul</code> element, which represents an unordered list, to be <code>li</code> elements, as those represent list items. In general, it also forbids using elements and attributes that aren't defined in a standard.</p>
 
 <h2 id="Другие_API_заслуживающие_внимания">Другие API, заслуживающие внимания</h2>
 
 <ul>
- <li>Функции setTimeout и setInterval впервые были определены в интерфейсе <a class="external" href="http://www.whatwg.org/html/#window" title="http://www.whatwg.org/html/#window">Window</a> в стандарте HTML.</li>
- <li><a class="external" href="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/" title="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/">XMLHttpRequest</a> позволяет отправлять асинхронные HTTP запросы.</li>
+ <li>Функции setTimeout и setInterval впервые были определены в интерфейсе <a class="external" href="http://www.whatwg.org/html/#window">Window</a> в стандарте HTML.</li>
+ <li><a class="external" href="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/">XMLHttpRequest</a> позволяет отправлять асинхронные HTTP запросы.</li>
  <li>Объектная модель <a class="external" href="http://dev.w3.org/csswg/cssom/">CSS</a> абстрагировать CSS-правила как объекты</li>
  <li><a class="external" href="http://www.whatwg.org/specs/web-workers/current-work/">WebWorkers</a> обеспечивает выполнение параллельных вычислений.</li>
  <li><a class="external" href="http://www.whatwg.org/C/#network">WebSockets</a> обеспечивает низкоуровневое двунаправленное соединение.</li>
- <li><a class="external" href="http://www.whatwg.org/html/#2dcontext" title="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context</a> это API для рисования с помощью элемента {{htmlelement("canvas")}}..</li>
+ <li><a class="external" href="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context</a> это API для рисования с помощью элемента {{htmlelement("canvas")}}..</li>
 </ul>
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
-<p>Каждый разработчик сталкивавшийся с DOM понимает как там все <a href="http://ejohn.org/blog/the-dom-is-a-mess/" title="http://ejohn.org/blog/the-dom-is-a-mess/">безнадёжно</a>. Реализация той иной функциональности может отличаться, а следовательно и поведение. Главной причиной этого послужило то, что само описание спецификации DOM, было недостаточно ясным и подробным для разработчиков браузеров. Кроме того разные производители браузеров добавили несовместимые функциональности в своих браузеры или функциональности перекрывающие друг друга (например модель событий в IE). В данный момент консорциум W3C и частично WHATWG пытаются описать детально поведение тех или иных функций, чтобы улучшить совместимость между браузерами. Следуя этой тенденции, можно надеяться что браузеры улучшат свои реализации основываясь на этих спецификациях.</p>
+<p>Каждый разработчик сталкивавшийся с DOM понимает как там все <a href="http://ejohn.org/blog/the-dom-is-a-mess/">безнадёжно</a>. Реализация той иной функциональности может отличаться, а следовательно и поведение. Главной причиной этого послужило то, что само описание спецификации DOM, было недостаточно ясным и подробным для разработчиков браузеров. Кроме того разные производители браузеров добавили несовместимые функциональности в своих браузеры или функциональности перекрывающие друг друга (например модель событий в IE). В данный момент консорциум W3C и частично WHATWG пытаются описать детально поведение тех или иных функций, чтобы улучшить совместимость между браузерами. Следуя этой тенденции, можно надеяться что браузеры улучшат свои реализации основываясь на этих спецификациях.</p>
 
 <p>Наиболее общий, но возможно не самый надёжный способ улучшить кроссбраузерную совместимость это воспользоваться библиотеками JavaScript. Эти библиотеки абстрагируют вас от особенностей реализации DOM в том или ином браузере, и гарантируют, что их API работает одинаково в разных браузерах. Наиболее распространённые из них это <a class="external" href="http://jquery.com/">jQuery</a> и <a class="external" href="http://www.prototypejs.org/">prototype</a>.</p>
