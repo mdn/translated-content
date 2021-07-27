@@ -34,8 +34,6 @@ translation_of: Web/API/Document/keyup_event
 <p><strong><font><font>참고 :</font></font></strong><font><font> 입력 값의 변경에 대응하는 방법을 찾고 있다면 </font></font><a href="/en-US/docs/Web/API/HTMLElement/input_event"><code>input</code><font><font>event를</font></font></a><font><font> 사용해야합니다 </font><font>. </font></font><code>keyup</code><font><font>예를 들어 컨텍스트 메뉴의 텍스트를 텍스트 입력에 붙여 넣는 등의 </font><font>일부 변경 사항은에서 감지 할 수 없습니다 </font><font>.</font></font></p>
 </div>
 
-<p><font><font>Firefox 65부터 </font></font><code>keyup</code><font><font>CJKT 사용자의 브라우저 간 호환성을 개선하기 위해 </font><font>{{domxref ( "Document / keydown_event", "keydown")}} 및 </font><font>이벤트가 이제 IME 작성 중에 실행됩니다 ({{bug (354358)}}, 자세한 내용 </font></font><a href="https://www.fxsitecompat.com/en-CA/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/"><font><font>은 IME 작성 중에 keydown 및 keyup 이벤트가 시작</font></font></a><font><font> 됩니다. </font><font>작성의 </font></font><code>keyup</code><font><font>일부인 </font><font>모든 </font><font>이벤트 </font><font>를 무시하려면 </font><font>다음과 같이 수행하십시오 (229는 </font></font><code>keyCode</code><font><font>IME에 의해 처리 된 이벤트 관련에 </font><font>대한 특수 값 세트입니다 </font><font>).</font></font></p>
-
 <pre class="brush: js notranslate"><font><font>eventTarget.addEventListener ( "keyup", event =&gt; { </font></font><font><font>
   if (event.isComposing || event.keyCode === 229) { </font></font><font><font>
     return; </font></font><font><font>
