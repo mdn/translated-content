@@ -18,7 +18,7 @@ translation_of: Web/CSS/@charset
 <p>在样式表中有多种方法去声明字符编码，浏览器会按照以下顺序尝试下边的方法（一旦找到就停止并得出结果）：</p>
 
 <ol>
- <li>文件的开头的 <a href="http://en.wikipedia.org/wiki/Byte_order_mark" title="http://en.wikipedia.org/wiki/Byte_order_mark">Unicode byte-order</a> 字符值。</li>
+ <li>文件的开头的 <a href="http://en.wikipedia.org/wiki/Byte_order_mark">Unicode byte-order</a> 字符值。</li>
  <li>由Content-Type：HTTP header 中的 charset 属性给出的值或用于提供样式表的协议中的等效值。</li>
  <li><code>CSS </code><a href="https://developer.mozilla.org/zh-CN/docs/CSS/At-rule" title="At-rule">@规则</a>  <code>@charset。</code></li>
  <li>使用参考文档定义的字符编码： {{ HTMLElement("link") }} 元素的 charset 属性。 该方法在 HTML5 标准中已废除，无法使用。</li>

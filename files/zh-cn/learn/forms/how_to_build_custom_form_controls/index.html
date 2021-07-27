@@ -323,7 +323,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
  <li>脚本没有加载。这是最常见的情形，特别是在移动端上，在那些网络非常不可靠的地方。</li>
  <li>脚本是有问题的。你应该总是考虑这种可能性。</li>
  <li>脚本和第三方脚本冲突。这可能会由用户使用的跟踪脚本和一些书签工具引发。</li>
- <li>脚本与一个浏览器的拓展冲突，或者受其影响。 (比如 Firefox 的 <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external" title="https://addons.mozilla.org/fr/firefox/addon/noscript/">NoScript</a> 拓展 或者 Chrome 的 <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external">NotScripts</a> 拓展)。</li>
+ <li>脚本与一个浏览器的拓展冲突，或者受其影响。 (比如 Firefox 的 <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external">NoScript</a> 拓展 或者 Chrome 的 <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external">NotScripts</a> 拓展)。</li>
  <li>用户在使用老旧的浏览器，而且你需要的一些功能没有被支持。当你使用一些最新的 API 时，这种情况会经常发生。</li>
 </ul>
 
@@ -404,7 +404,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 <p>在我们将要构建的代码之中，我们将会使用标准的 DOM API 来完成我们所要做的所有工作。尽管 DOM API 在浏览器中得到了更好支持，但是在旧的浏览器上还是会出现问题。( 特别是非常老的 Internet Explorer）。</p>
 
-<p>如果你想要避免旧浏览器带来的麻烦，这儿有两种解决方案：使用专门的框架，比如 <a href="http://jquery.com/" rel="external" title="http://jquery.com/">jQuery</a>, <a href="https://github.com/julienw/dollardom" rel="external" title="https://github.com/julienw/dollardom">$dom</a>, <a href="http://prototypejs.org/" rel="external" title="http://prototypejs.org/">prototype</a>, <a href="http://dojotoolkit.org/" rel="external" title="http://dojotoolkit.org/">Dojo</a>, <a href="http://yuilibrary.com/" rel="external" title="http://yuilibrary.com/">YUI</a>, 或者类似的框架，或者通过填充你想使用的缺失的特性 （这可以通过条件加载轻松完成——例如使用 <a href="http://yepnopejs.com/" rel="external">yepnope</a> 这样的库。</p>
+<p>如果你想要避免旧浏览器带来的麻烦，这儿有两种解决方案：使用专门的框架，比如 <a href="http://jquery.com/" rel="external" title="http://jquery.com/">jQuery</a>, <a href="https://github.com/julienw/dollardom" rel="external" title="https://github.com/julienw/dollardom">$dom</a>, <a href="http://prototypejs.org/" rel="external" title="http://prototypejs.org/">prototype</a>, <a href="http://dojotoolkit.org/" rel="external" title="http://dojotoolkit.org/">Dojo</a>, <a href="http://yuilibrary.com/" rel="external">YUI</a>, 或者类似的框架，或者通过填充你想使用的缺失的特性 （这可以通过条件加载轻松完成——例如使用 <a href="http://yepnopejs.com/" rel="external">yepnope</a> 这样的库。</p>
 
 <p>我们打算使用的特性如下所示（按照风险程度从高到低排列）：</p>
 
