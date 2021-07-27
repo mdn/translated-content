@@ -1,5 +1,6 @@
-## Translated content
 # Peer Guidelines
+
+## Translated content
 
 ## Policies for community maintenance teams
 
@@ -30,27 +31,31 @@ will be considered inactive, and edits will stop being accepted.
 
 The review teams for each locale are:
 
-- Brazilian Portuguese (`pt-BR`) content — the [@yari-content-pt-br](https://github.com/orgs/mdn/teams/yari-content-pt-br)
+- Brazilian Portuguese (`pt-BR`) content — the
+[@yari-content-pt-br](https://github.com/orgs/mdn/teams/yari-content-pt-br)
   team, which consists of:
   - [@lumigueres](https://github.com/lumigueres)
   - [@josielrocha](https://github.com/josielrocha)
   - [@juliosampaio](https://github.com/juliosampaio)
   - [@clovislima](https://github.com/clovislima)
-- French (`fr`) content — the [@yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr)
+- French (`fr`) content — the
+[@yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr)
   team, which consists of:
   - [@nicolas-goudry](https://github.com/nicolas-goudry)
   - [@JNa0](https://github.com/JNa0)
   - [@tristantheb](https://github.com/tristantheb)
   - [@LEMIBANDDEXARI](https://github.com/LEMIBANDDEXARI)
   - [@SphinxKnight](https://github.com/SphinxKnight)
-- Japanese (`ja`) content — the [@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
+- Japanese (`ja`) content — the
+[@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
   team, which consists of:
   - [@hmatrjp](https://github.com/hmatrjp)
   - [@potappo](https://github.com/potappo)
   - [@dynamis](https://github.com/dynamis)
   - [@kenji-yamasaki](https://github.com/kenji-yamasaki)
   - [@mfuji09](https://github.com/mfuji09)
-- Korea (`ko`) content — the [@yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)
+- Korea (`ko`) content — the
+[@yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)
   team, which consists of:
   - [@yechoi42](https://github.com/yechoi42)
   - [@cos18](https://github.com/cos18)
@@ -59,7 +64,8 @@ The review teams for each locale are:
   - [@nKiNk](https://github.com/nKiNk)
   - [@yujo11](https://github.com/yujo11)
   - [@hochan222](https://github.com/hochan222)
-- Russian (`ru`) content — the [@yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru)
+- Russian (`ru`) content — the
+[@yari-content-ru](https://github.com/orgs/mdn/teams/yari-content-ru)
   team, which consists of:
   - [@armanpwnz](https://github.com/armanpwnz)
   - [@captainspring](https://github.com/captainspring)
@@ -68,7 +74,8 @@ The review teams for each locale are:
   - [@Saionaro](https://github.com/Saionaro)
   - [@sashasushko](https://github.com/sashasushko)
   - [@lex111](https://github.com/lex111)
-- Chinese (`zh-CN` and `zh-TW`) content — the [@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
+- Chinese (`zh-CN` and `zh-TW`) content — the
+[@yari-content-zh](https://github.com/orgs/mdn/teams/yari-content-zh)
   team, which consists of:
   - [@t7yang](https://github.com/t7yang)
   - [@dibery](https://github.com/dibery)
@@ -126,7 +133,8 @@ Please specify which of the following three locales you wish to have unfrozen:
 - German (de)
 - Polish (pl)
 
-NB These are the only frozen locales we will consider - see [The future of MDN localization in this Hacks post](https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/)
+NB These are the only frozen locales we will consider - see
+[The future of MDN localization in this Hacks post](https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/)
 
 ### Your team members
 
@@ -138,21 +146,28 @@ You need to put together a community maintenance team. This requires:
 - A place to discuss this team's localization work. This can be a Telegram
   group, Matrix chat room, or whatever the team thinks is best.
 
-To find out more about our existing teams see [Review teams](#review-teams) above.
+To find out more about our existing teams see [Review teams](#review-teams)
+above.
 
 ### Agree to our terms
 
-Please indicate that you agree to our [Requirements for keeping locales up-to-date](#requirements-for-keeping-locales-up-to-date) above.
+Please indicate that you agree to our
+[Requirements for keeping locales up-to-date](#requirements-for-keeping-locales-up-to-date)
+ above.
 
 ### The team agrees to our CoC and license
 
-Also indicate that your team agrees to adhere by our Code of Conduct and License (see below)
+Also indicate that your team agrees to adhere by our Code of Conduct and License
+(see below)
 
 ### Acceptance
 
-If the application is been successful you can start work on your locale. See the [guidelines for set up in the README]().
+If the application is been successful you can start work on your locale. See the
+ [guidelines for set up in the README](README.md).
 
-You can add your team to the [localizing MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize) page.
+You can add your team to the
+[localizing MDN](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize)
+page.
 
 ## Get in touch
 
