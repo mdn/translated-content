@@ -3,7 +3,7 @@ title: The structured clone algorithm
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 ---
-<p>The structured clone 알고리즘은 복잡한 자바스크립트 객체의 직렬화을 위해서 <a class="external" href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data" title="http://www.w3.org/TR/html5/common-dom-interfaces.html#safe-passing-of-structured-data">HTML5 specification</a>에 의해서 정의된 새로운 알고리즘 입니다. 이것은 순환그래프를 포함하는 객체의 직렬화를 지원하기 때문에 <a href="/en/JSON" title="en/JSON">JSON</a>보다 더 유용합니다. — 객체는 같은 그래프에서 다른객체를 참조하는 객체를 참조할 수 있습니다. 이러한 케이스들에서는 structured clone알고리즘이 아마도 JSON보다 더 효율적일 것입니다.</p>
+<p>The structured clone 알고리즘은 복잡한 자바스크립트 객체의 직렬화을 위해서 <a class="external" href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data">HTML5 specification</a>에 의해서 정의된 새로운 알고리즘 입니다. 이것은 순환그래프를 포함하는 객체의 직렬화를 지원하기 때문에 <a href="/en/JSON" title="en/JSON">JSON</a>보다 더 유용합니다. — 객체는 같은 그래프에서 다른객체를 참조하는 객체를 참조할 수 있습니다. 이러한 케이스들에서는 structured clone알고리즘이 아마도 JSON보다 더 효율적일 것입니다.</p>
 
 <p> 알고리즘은 본질적으로 원본 객체의 모든 필드를 거치고 각 필드의 값들을 새로운 객체로 복제합니다. 만약 필드가 객체를 가졌다면 모든 필드와 그 서브필드가 새로운 객체로 복제될 때 까지 재귀적으로 동작합니다.</p>
 
@@ -145,7 +145,7 @@ translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 <h2 id="See_also">See also</h2>
 
 <ul>
- <li><a class="external" href="http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data" title="http://www.w3.org/TR/html5/common-dom-interfaces.html#safe-passing-of-structured-data">HTML5 Specification: Safe passing of structured data</a></li>
+ <li><a class="external" href="http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data">HTML5 Specification: Safe passing of structured data</a></li>
  <li>{{ domxref("window.history") }}</li>
  <li>{{ domxref("window.postMessage()") }}</li>
  <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
