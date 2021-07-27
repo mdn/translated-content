@@ -159,7 +159,6 @@ You can add your team to the [localizing MDN](https://developer.mozilla.org/en-U
 If you want to ask questions or talk to us about forming a new community
 maintenance team, see [ask for help](https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
 
-
 ---
 
 ### Code of Conduct
@@ -173,9 +172,3 @@ When contributing to the content you agree to license your contributions
 according to [our license](LICENSE.md).
 
 ---
-
-
-
-
-
-

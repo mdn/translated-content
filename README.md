@@ -123,4 +123,3 @@ and read its README file, particularly to learn about [fundamental concepts](htt
 and common actions such as [adding](https://github.com/mdn/content#adding-a-new-document),
 [moving](https://github.com/mdn/content#moving-one-or-more-documents), or
 [deleting](https://github.com/mdn/content#deleting-a-document) documents.
-
