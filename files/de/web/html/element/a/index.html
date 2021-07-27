@@ -66,7 +66,7 @@ translation_of: Web/HTML/Element/a
  <dt>{{htmlattrdef("href")}}</dt>
  <dd>Dieses war das einzige erforderliche Attribut für Anker, die einen Hyperlink definieren, aber es ist nicht länger erforderlich in HTML5. Wird dieses Attribut weggelassen, wird ein Platzhalter-Link erzeugt. Das <code>href</code>-Attribut zeigt das Ziel des Links an, entweder eine URL oder ein URL-Fragment. Ein URL-Fragment ist ein Name dem ein Doppelkreuz (<code>#</code>) vorausgeht, welches ein internes Ziel im aktuellen Dokument (eine <a href="/de/docs/HTML/Global_attributes#attr-id" title="Global attributes#attr-id">ID</a>) festlegt. URLs sind nicht auf Web-(HTTP-)Dokumente beschränkt. Sie können ein beliebiges Protokoll verwenden, das von Browser unterstützt wird. Zum Beispiel <code>file</code>, <code>ftp</code> und <code>mailto</code> funktionieren in den meisten Browsern.
  <div class="note">
- <p><strong>Hinweis:</strong> Sie können das spezielle Fragment „top“ verwenden, um Links zu erzeugen, die zurück zum Anfang der Seite springen. Zum Beispiel: <code>&lt;a href="#top"&gt;Return to top&lt;/a&gt;</code>. <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid" lang="en" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid">Dieses Verhalten ist in HTML5 festgelegt</a>.</p>
+ <p><strong>Hinweis:</strong> Sie können das spezielle Fragment „top“ verwenden, um Links zu erzeugen, die zurück zum Anfang der Seite springen. Zum Beispiel: <code>&lt;a href="#top"&gt;Return to top&lt;/a&gt;</code>. <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#scroll-to-fragid" lang="en">Dieses Verhalten ist in HTML5 festgelegt</a>.</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("media")}} {{HTMLVersionInline(5)}}</dt>
@@ -94,7 +94,7 @@ translation_of: Web/HTML/Element/a
  </ul>
  Verwenden Sie dieses Attribut nur, wenn ein <code>href</code>-Attribut vorhanden ist.</dd>
  <dt>{{htmlattrdef("charset")}} {{obsoleteGeneric("inline","HTML5")}}</dt>
- <dd>Dieses Attribut definiert die Zeichencodierung der verlinkten Datei. Der Wert ist eine durch Leerzeichen und/oder Komma-getrennte Liste von Zeichen-Sets nach der Definition der <a class="external" href="http://tools.ietf.org/html/rfc2045" title="http://tools.ietf.org/html/rfc2045">RFC 2045</a>. Der Standardwert ist ISO-8859-1.
+ <dd>Dieses Attribut definiert die Zeichencodierung der verlinkten Datei. Der Wert ist eine durch Leerzeichen und/oder Komma-getrennte Liste von Zeichen-Sets nach der Definition der <a class="external" href="http://tools.ietf.org/html/rfc2045">RFC 2045</a>. Der Standardwert ist ISO-8859-1.
  <div class="note">
  <p><strong>Verwendungshinweis:</strong> Dieses Attribut ist obsolet in HTML5 und <strong>sollte nicht mehr verwendet werden</strong>. Um denselben Effekt zu erhalten, verwenden Sie den HTTP-Header <code>Content-Type:</code> bei der verlinkten Datei.</p>
  </div>
@@ -152,13 +152,13 @@ translation_of: Web/HTML/Element/a
    </tr>
    <tr>
     <td>Normatives Dokument</td>
-    <td colspan="4"><a class="external" href="http://msdn.microsoft.com/en-us/library/ms533709(VS.85).aspx" title="http://msdn.microsoft.com/en-us/library/ms533709(VS.85).aspx">Microsoft's Data Binding: dataSrc Property (MSDN)</a></td>
+    <td colspan="4"><a class="external" href="http://msdn.microsoft.com/en-us/library/ms533709(VS.85).aspx">Microsoft's Data Binding: dataSrc Property (MSDN)</a></td>
    </tr>
   </tbody>
  </table>
  </dd>
  <dt>{{htmlattrdef("hreflang")}}</dt>
- <dd>Dieses Attribut zeigt die Sprache der verlinkten Datei an. Es ist nur ein Hinweis. Erlaubte Werte sind bestimmt von <a class="external" href="http://www.ietf.org/rfc/bcp/bcp47.txt" title="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a> für HTML5 und von <a class="external" href="http://www.ietf.org/rfc/rfc1766.txt" title="http://www.ietf.org/rfc/rfc1766.txt">RFC1766</a> für HTML4. Verwenden Sie dieses Attribut nur, wenn ein <code>href</code>-Attribut vorhanden ist.</dd>
+ <dd>Dieses Attribut zeigt die Sprache der verlinkten Datei an. Es ist nur ein Hinweis. Erlaubte Werte sind bestimmt von <a class="external" href="http://www.ietf.org/rfc/bcp/bcp47.txt">BCP47</a> für HTML5 und von <a class="external" href="http://www.ietf.org/rfc/rfc1766.txt">RFC1766</a> für HTML4. Verwenden Sie dieses Attribut nur, wenn ein <code>href</code>-Attribut vorhanden ist.</dd>
  <dt>{{htmlattrdef("methods")}} {{Non-standard_inline}}</dt>
  <dd>Der Wert dieses Attributes liefert Informationen über die Funktionen, die an einem Objekt ausgeführt werden können. Die Werte werden üblicherweise vom HTTP bestimmt, wenn es verwendet wird, aber es könnte (für ähnliche Gründe wie für das <code>title</code>-Attribut) nützlich sein, hinweisende Informationen im Voraus im Link einzufügen. Zum Beispiel könnte der Browser einen Link anders anzeigen, je nachdem welche Methoden angegenben sind; etwas, das durchsuchbar ist könnte ein anderes Icon erhalten oder ein Link, der auf eine fremde Seite verweist, könnte mit einem Hinweis, die Seite zu verlassen, angezeigt werden. Dieses Attribut ist weder gut verstanden noch unterstützt, sogar vom definierenden Browser, Internet Explorer 4. <a class="external" href="http://msdn.microsoft.com/en-us/library/ms534168(VS.85).aspx">Methods Property (MSDN)</a></dd>
  <dt>{{htmlattrdef("name")}} nur {{HTMLVersionInline(4)}}, {{obsoleteGeneric("inline","HTML5")}}</dt>

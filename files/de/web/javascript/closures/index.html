@@ -35,7 +35,7 @@ init();</pre>
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/78dg25ax/", "js,result", 250)}}</p>
 
-<p>Dieses <a href="http://jsfiddle.net/xAFs9/3/" title="http://jsfiddle.net/xAFs9/">Code-Beispiel</a> zeigt, dass es funktioniert. Es handelt sich hier um einen lexikalischen Geltungsbereich (<em>lexical</em> <em>scoping</em>), d.h. in JavaScript wird der Geltungsbereich (<em>scope</em>) einer Variablen bestimmt durch ihren Fundort im Quellcode (darum lexikalisch). Und verschachtelte Funktionen haben Zugriff auf Variablen, die im umschließenden Geltungsbereich (<em>outer scope</em>) deklariert werden.</p>
+<p>Dieses <a href="http://jsfiddle.net/xAFs9/3/">Code-Beispiel</a> zeigt, dass es funktioniert. Es handelt sich hier um einen lexikalischen Geltungsbereich (<em>lexical</em> <em>scoping</em>), d.h. in JavaScript wird der Geltungsbereich (<em>scope</em>) einer Variablen bestimmt durch ihren Fundort im Quellcode (darum lexikalisch). Und verschachtelte Funktionen haben Zugriff auf Variablen, die im umschließenden Geltungsbereich (<em>outer scope</em>) deklariert werden.</p>
 
 <h2 id="Closure">Closure</h2>
 
@@ -141,7 +141,7 @@ document.getElementById('size-16').onclick = size16;
 
 <p>Dies ist in JavaScript nicht explizit vorgesehen, aber es kann mit Hilfe von Funtionsabschlüssen nachgebildet werden. Private Methoden sind nicht nur nützlich um den Zugriff auf Code einzuschränken: sie bieten auch ein mächtiges Werkzeug um den globalen Namensraum zu verwalten indem sie weniger wichtige Methoden vor dem öffentlichen Interface verbergen.</p>
 
-<p>Das folgende Beispiel zeigt, wie man ein paar öffentliche Funktionen definiert, welche Zugriff auf private Funktionen und Variablen haben, indem man <em>Closures </em>verwendet. Die ist auch als <a class="external" href="http://www.google.com/search?q=javascript+module+pattern" title="http://www.google.com/search?q=javascript+module+pattern">module pattern</a> bekannt:</p>
+<p>Das folgende Beispiel zeigt, wie man ein paar öffentliche Funktionen definiert, welche Zugriff auf private Funktionen und Variablen haben, indem man <em>Closures </em>verwendet. Die ist auch als <a class="external" href="http://www.google.com/search?q=javascript+module+pattern">module pattern</a> bekannt:</p>
 
 <pre class="brush: js notranslate">var counter = (function() {
   var privateCounter = 0;
