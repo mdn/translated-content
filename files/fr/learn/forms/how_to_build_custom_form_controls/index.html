@@ -734,7 +734,7 @@ window.addEventListener('load', function () {
 
 <p>Nous venons de faire quelque chose qui fonctionne, même si nous sommes loin d'avoir une boîte de sélection avec toutes les fonctionnalités, elle fonctionne parfaitement. Mais ce que nous avons fait n'est rien de plus que de jouer avec les DOM. Elle n'a pas de sémantique réelle, et même si elle ressemble à une boîte de sélection, du point de vue du navigateur, ce n'en est pas une, de sorte que les technologies d'assistance ne pourront pas comprendre que c'est une boîte de sélection. Bref, cette jolie nouvelle boîte de sélection n'est pas accessible !</p>
 
-<p>Heureusement, il existe une solution et elle s'appelle <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a>. ARIA signifie « Accessible Rich Internet Application » et c'est une<a href="http://www.w3.org/TR/wai-aria/" rel="external" title="http://www.w3.org/TR/wai-aria/"> norme W3C </a>spécialement conçue pour ce que nous faisons ici : rendre accessibles les applications web et les widgets personnalisés. Il s'agit essentiellement d'un ensemble d'attributs qui étendent le HTML afin que nous puissions mieux décrire les rôles, les états et les propriétés comme si l'élément que nous venons de concevoir était l'élément natif pour lequel il essaie de passer. L'utilisation de ces attributs est très simple, alors faisons-le.</p>
+<p>Heureusement, il existe une solution et elle s'appelle <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a>. ARIA signifie « Accessible Rich Internet Application » et c'est une<a href="http://www.w3.org/TR/wai-aria/" rel="external"> norme W3C </a>spécialement conçue pour ce que nous faisons ici : rendre accessibles les applications web et les widgets personnalisés. Il s'agit essentiellement d'un ensemble d'attributs qui étendent le HTML afin que nous puissions mieux décrire les rôles, les états et les propriétés comme si l'élément que nous venons de concevoir était l'élément natif pour lequel il essaie de passer. L'utilisation de ces attributs est très simple, alors faisons-le.</p>
 
 <h3 id="L'attribut_role">L'attribut <code>role</code></h3>
 
@@ -786,7 +786,7 @@ window.addEventListener('load', function () {
   highlightOption(select, optionList[index]);
 };</pre>
 
-<p>Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleur ressenti en les testant avec une technique d'assistance comme <a href="http://www.nvda-project.org/" rel="external">NVDA</a> ou <a href="http://www.apple.com/accessibility/voiceover/" rel="external" title="http://www.apple.com/accessibility/voiceover/">VoiceOver</a>) :</p>
+<p>Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleur ressenti en les testant avec une technique d'assistance comme <a href="http://www.nvda-project.org/" rel="external">NVDA</a> ou <a href="http://www.apple.com/accessibility/voiceover/" rel="external">VoiceOver</a>) :</p>
 
 <table>
  <thead>
